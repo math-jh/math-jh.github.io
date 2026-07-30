@@ -217,6 +217,33 @@ def sec_posts(posts):
         drift=p["drift"], has_en=p["has_en"]) for p in unpub_sorted]
 
 
+_RUN_TS_RE = re.compile(r"(\d{4})-(\d{2})-(\d{2})[T ](\d{2}):(\d{2})(?::(\d{2}))?")
+
+
+def _log_runs(path, now, window=86400):
+    """로그의 타임스탬프(local)로 최근 24시간 실행 시각 목록을 만든다.
+    분 단위로 dedupe — 한 실행이 여러 줄을 남겨도 틱 하나."""
+    seen, out = set(), []
+    for ln in tail(path, 2000, maxbytes=500_000):
+        m = _RUN_TS_RE.search(ln)
+        if not m:
+            continue
+        try:
+            ts = time.mktime((int(m.group(1)), int(m.group(2)), int(m.group(3)),
+                              int(m.group(4)), int(m.group(5)), int(m.group(6) or 0),
+                              0, 0, -1))
+        except Exception:
+            continue
+        if now - ts > window or ts > now + 3600:
+            continue
+        key = m.group(0)[:16]
+        if key in seen:
+            continue
+        seen.add(key)
+        out.append(int(ts))
+    return sorted(out)[-300:]
+
+
 def sec_workers():
     now = time.time()
     out = []
@@ -232,6 +259,11 @@ def sec_workers():
             status = "late"
         else:
             status = "ok"
+        # 타임라인용 실측 실행 기록. 타임스탬프 없는 로그(또는 watch 파일)는
+        # 마지막 갱신 시각 하나로 폴백한다.
+        runs = _log_runs(w["log"], now) if w.get("log") else []
+        if not runs and ts is not None and now - ts <= 86400:
+            runs = [int(ts)]
         lines = tail(w["log"], 10) if w.get("log") else []
         # errors=0 / error_count: 0 같은 정상 요약줄을 오탐하지 않도록 좁게 잡는다.
         # quota-gate blocked 는 설계된 스킵이지 오류가 아니다.
@@ -240,7 +272,7 @@ def sec_workers():
                   for ln in lines)
         out.append(dict(key=w["key"], name=w["name"], schedule=w["schedule"],
                         status=status, age=age, last_ts=ts, err=err, tail=lines,
-                        has_log=bool(w.get("log"))))
+                        runs=runs, has_log=bool(w.get("log"))))
     return out
 
 
@@ -373,23 +405,18 @@ def sec_gsc():
 
 
 def sec_git():
-    rc, out, _ = run(["git", "log", "-25", "--pretty=format:%h\x1f%ct\x1f%an\x1f%s"], cwd=ROOT)
+    rc, out, _ = run(["git", "log", "-25", "--pretty=format:%h\x1f%ct\x1f%an\x1f%cn\x1f%s"], cwd=ROOT)
     if rc != 0:
         return []
     rows = []
     for line in out.splitlines():
         try:
-            sha, ts, author, subject = line.split("\x1f")
+            sha, ts, author, committer, subject = line.split("\x1f")
         except ValueError:
             continue
-        if subject.startswith("Auto-mechanical"):
-            kind = "mechanical"
-        elif subject.startswith("Auto-dev"):
-            kind = "dev"
-        elif subject.startswith("Auto:"):
-            kind = "auto"
-        else:
-            kind = "manual"
+        # cron이 올리는 커밋(autopush Auto*·번역 워커·workshop 봇 등)은 git
+        # 정체성 체계상 전부 committer=Claude다. 그 외는 수동.
+        kind = "auto" if committer == "Claude" else "manual"
         rows.append(dict(sha=sha, ts=int(ts), author=author, subject=subject, kind=kind))
     return rows
 

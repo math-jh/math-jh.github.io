@@ -88,6 +88,7 @@ h3{font-family:var(--sans);font-size:.74rem;font-weight:bold;letter-spacing:.12e
 table{width:100%;border-collapse:collapse;font-size:.88rem}
 th{font-family:var(--sans);font-size:.68rem;font-weight:bold;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);text-align:left;padding:0 .7rem .5rem;border-bottom:1px solid var(--rule)}
 td{padding:.7rem;border-bottom:1px solid var(--rule);vertical-align:top}
+td.nowrap{white-space:nowrap}
 tr:last-child td{border-bottom:none}
 td.num,th.num{text-align:right;font-family:var(--mono);font-size:.8rem;font-variant-numeric:tabular-nums;white-space:nowrap}
 #drafts-body td:first-child{min-width:24rem}
@@ -96,7 +97,9 @@ th:first-child,td:first-child{padding-left:0}
 th:last-child,td:last-child{padding-right:0}
 tr.clickable{cursor:pointer}
 tr.clickable:hover td{background:var(--panel)}
-.tbl-scroll{overflow-x:auto}
+.tbl-scroll{overflow-x:auto;margin-bottom:1rem}
+tr.typo-done td{opacity:.42}
+tr.typo-done td:last-child{opacity:1}
 .dot{display:inline-block;width:.45rem;height:.45rem;margin-right:.5rem;vertical-align:.08rem;background:var(--idle)}
 .dot--ok{background:var(--ok)}
 .dot--late{background:var(--warn)}
@@ -135,7 +138,7 @@ select{font-family:var(--sans);font-size:.78rem;color:var(--ink);background:var(
 #wtip.on{opacity:1}
 
 /* ── 로그 ── */
-pre.log{background:var(--code-bg);border:1px solid var(--rule);padding:.8rem .9rem;margin:0;overflow-x:auto;font-family:var(--mono);font-size:.72rem;line-height:1.7;white-space:pre-wrap;word-break:break-word;color:var(--ink)}
+pre.log{background:var(--code-bg);border:1px solid var(--rule);padding:.8rem .9rem;margin:0 0 1.6rem;overflow-x:auto;font-family:var(--mono);font-size:.72rem;line-height:1.7;white-space:pre-wrap;word-break:break-word;color:var(--ink)}
 
 /* ── 파이프라인 ── */
 .pipe{display:grid;gap:.9rem}
@@ -200,18 +203,15 @@ pre.log{background:var(--code-bg);border:1px solid var(--rule);padding:.8rem .9r
 .verdict__h--warn i{background:var(--bad)}
 .verdict__s{font-family:var(--sans);font-size:.8rem;line-height:1.95;color:var(--muted);margin:.9rem 0 0}
 .beats{display:grid;gap:.45rem}
-.beat{display:grid;grid-template-columns:8.6rem 1fr 3rem;gap:.9rem;align-items:center;font-family:var(--sans);font-size:.74rem;color:inherit}
+.beat{display:grid;grid-template-columns:8.6rem 1fr 4.2rem;gap:.9rem;align-items:center;font-family:var(--sans);font-size:.74rem;color:inherit}
 .beat:hover{color:var(--brass)}
-.beat__track{display:flex;gap:2px;height:14px;position:relative}
-.beat__track i{flex:1;background:var(--rule)}
-.beat__track i.on{background:var(--brass)}
-.beat__now{position:absolute;top:-3px;bottom:-3px;width:1px;background:var(--ink);pointer-events:none}
-.beat__age{font-family:var(--mono);font-size:.72rem;color:var(--muted);text-align:right}
-.beats__axis{display:grid;grid-template-columns:8.6rem 1fr 3rem;gap:.9rem;font-family:var(--sans);font-size:.66rem;color:var(--muted);letter-spacing:.06em;margin-top:.5rem}
+.beat__track{position:relative;height:14px;background:var(--rule)}
+.beat__track i{position:absolute;top:0;bottom:0;width:2px;margin-left:-1px;background:var(--brass)}
+.beat__age{font-family:var(--mono);font-size:.72rem;color:var(--muted);text-align:right;white-space:nowrap}
+.beats__axis{display:grid;grid-template-columns:8.6rem 1fr 4.2rem;gap:.9rem;font-family:var(--sans);font-size:.66rem;color:var(--muted);letter-spacing:.06em;margin-top:.5rem}
 .beats__axis div:nth-child(2){display:flex;justify-content:space-between}
 .beats__note{font-family:var(--sans);font-size:.7rem;color:var(--muted);margin:.7rem 0 0;display:flex;gap:1.3rem;flex-wrap:wrap;align-items:center}
-.beats__note i{display:inline-block;width:10px;height:10px;background:var(--brass);margin-right:.35rem;vertical-align:-.05rem}
-.beats__note i.line{width:1px;height:12px;background:var(--ink)}
+.beats__note i{display:inline-block;width:2px;height:10px;background:var(--brass);margin-right:.35rem;vertical-align:-.05rem}
 
 /* ── 테마 드롭다운 — 블로그 _settings-dropdown.scss 와 같은 어두운 패널.
    대시보드는 단일 언어라 언어 항목 없이 테마 3단만. ── */
@@ -255,3 +255,9 @@ pre.log{background:var(--code-bg);border:1px solid var(--rule);padding:.8rem .9r
 
 @media (max-width:1100px){.grid3{grid-template-columns:1fr 1fr}.index{grid-template-columns:1fr 1fr}}
 @media (max-width:820px){.verdict,.cols,.grid3{grid-template-columns:1fr}.index{grid-template-columns:1fr}.mh__stamp{display:none}}
+
+/* ── 스크롤바 — 블로그 관례(_terms-overlay.scss): thin·브래스 thumb·트랙 투명·직각 ── */
+html,.tbl-scroll,pre.log,.modal__box pre{scrollbar-width:thin;scrollbar-color:var(--brass) transparent}
+html::-webkit-scrollbar,.tbl-scroll::-webkit-scrollbar,pre.log::-webkit-scrollbar,.modal__box pre::-webkit-scrollbar{width:7px;height:7px}
+html::-webkit-scrollbar-track,.tbl-scroll::-webkit-scrollbar-track,pre.log::-webkit-scrollbar-track,.modal__box pre::-webkit-scrollbar-track{background:transparent}
+html::-webkit-scrollbar-thumb,.tbl-scroll::-webkit-scrollbar-thumb,pre.log::-webkit-scrollbar-thumb,.modal__box pre::-webkit-scrollbar-thumb{background:var(--brass);border-radius:0}

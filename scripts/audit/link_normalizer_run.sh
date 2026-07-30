@@ -15,8 +15,12 @@ cd "$BLOG"
 JEKYLL_ENV=production /usr/local/bin/bundle exec jekyll build \
   --destination "$DEST" --quiet >/dev/null 2>&1
 
-# Print summary so the cron log captures it.
+# Append the summary line to the tracker history log directly, so manual runs
+# land there too (the dashboard's link_norm worker watches this file). Cron
+# redirects stdout to /dev/null and only stderr into the same log.
 SUMMARY=$(tail -n1 scripts/audit/link-overrides.log 2>/dev/null || true)
-printf '[%s] %s\n' "$(date '+%Y-%m-%d %H:%M:%S')" "$SUMMARY"
+LINE=$(printf '[%s] %s' "$(date '+%Y-%m-%d %H:%M:%S')" "$SUMMARY")
+echo "$LINE" >> scripts/audit/link_normalizer.log
+echo "$LINE"
 
 rm -rf "$DEST"

@@ -40,6 +40,7 @@ import os
 import shutil
 import subprocess
 import sys
+import time
 import urllib.error
 import urllib.request
 from pathlib import Path
@@ -246,7 +247,8 @@ def main() -> int:
 
     DATA_PATH.write_text(_emit_yaml(by_lang), encoding="utf-8")
     total = sum(len(v) for v in by_lang.values())
-    print(f"wrote {total} recent comments to {DATA_PATH}")
+    stamp = time.strftime("%Y-%m-%d %H:%M:%S")
+    print(f"[{stamp}] wrote {total} recent comments to {DATA_PATH}")
     return 0
 
 

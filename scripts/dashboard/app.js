@@ -18,10 +18,11 @@ var state = {
   wSortKey: 'un', wSortDesc: true
 };
 
-var ROUTES = ['workers', 'pipeline', 'drafts', 'weights', 'translation', 'audit', 'index', 'activity'];
-var SECTION_LABEL = { workers: '워커', pipeline: '파이프라인', drafts: '미발행', weights: 'weight 지도', translation: '번역 큐', audit: '감사', index: '색인', activity: '활동' };
+/* 워커·파이프라인은 별도 페이지 없이 개요에서 소화한다 — 워커 행은 로그
+   모달 직결, 파이프라인은 개요 우측 칼럼에 상주. */
+var ROUTES = ['drafts', 'weights', 'translation', 'audit', 'index', 'activity'];
+var SECTION_LABEL = { drafts: '미발행', weights: 'weight 지도', translation: '번역 큐', audit: '감사', index: '색인', activity: '활동' };
 var PAGE_DESC = {
-  workers: 'cron 9개 실행 상태와 로그', pipeline: '초안에서 색인까지 단계별 잔량',
   drafts: '미발행 초안 목록·필터·lint', weights: '카테고리별 weight 눈금자',
   translation: '번역 상태 집계·KO-TYPOS·최근 시도', audit: '링크·frontmatter 감사와 번역 짝 맞춤',
   index: 'GSC 색인 분포와 조치 대상', activity: '커밋·댓글·시스템 상태'
@@ -94,13 +95,13 @@ function row(cells, cls) {
   });
   return tr;
 }
-var KIND = { manual: '수동', auto: '자동', mechanical: '기계적', dev: '개발노트' };
+var KIND = { manual: '수동', auto: '자동' };
 function gitRow(c) {
   return row([
     { text: c.sha, cls: 'mono muted' },
-    { text: KIND[c.kind] || c.kind, cls: 'muted sans' },
+    { text: KIND[c.kind] || c.kind, cls: 'muted sans nowrap' },
     { text: c.subject },
-    { text: ago(c.ts), cls: 'num muted' }
+    { text: ago(c.ts), cls: 'num muted nowrap' }
   ]);
 }
 function badWorkers(d) {
@@ -108,12 +109,6 @@ function badWorkers(d) {
     return w.status === 'stale' || w.status === 'missing' || w.err;
   });
 }
-function lastLine(w) {
-  var t = w.tail || [];
-  for (var i = t.length - 1; i >= 0; i--) if (t[i].trim()) return t[i].trim();
-  return '';
-}
-
 /* ── 모달 ─────────────────────────────────────────────────────────────── */
 function openModal(title, body) {
   document.getElementById('modal-title').textContent = title;
@@ -185,6 +180,10 @@ function themeMenu() {
 }
 
 /* ── 마스트헤드 ───────────────────────────────────────────────────────── */
+function stampText(d) {
+  return new Date(d.ts * 1000).toLocaleString('ko-KR') + ' · ' + ago(d.ts) + ' 수집' +
+    (state.stampErr ? ' (갱신 실패)' : '');
+}
 function masthead(d) {
   var mh = el('div', 'mh'), inner = el('div', 'mh__inner'), nav = el('div', 'mh__nav');
   var title = el('a', 'site-title');
@@ -193,9 +192,7 @@ function masthead(d) {
   title.innerHTML = 'BLACK<span class="site-title__box">BOX</span><span class="site-title__dash">Dashboard</span>';
   nav.appendChild(title);
   nav.appendChild(el('div', 'mh__spacer'));
-  var stamp = el('div', 'mh__stamp' + (state.stampErr ? ' mh__stamp--err' : ''),
-    new Date(d.ts * 1000).toLocaleString('ko-KR') + ' · ' + ago(d.ts) + ' 수집' +
-    (state.stampErr ? ' (갱신 실패)' : ''));
+  var stamp = el('div', 'mh__stamp' + (state.stampErr ? ' mh__stamp--err' : ''), stampText(d));
   nav.appendChild(stamp);
   var rb = el('button', 'mh__btn');
   rb.title = '새로고침'; rb.setAttribute('aria-label', '새로고침');
@@ -219,7 +216,7 @@ function alertsOf(d) {
       level: 'bad',
       text: w.name + ' — ' + (w.status === 'missing' ? '로그 파일 없음'
         : w.err ? '로그에 오류' : '실행이 ' + agoSec(w.age) + ' 넘게 없음'),
-      sub: '워커 페이지에서 로그 확인', to: 'workers'
+      sub: '누르면 로그가 열린다', worker: w.has_log ? w : null
     });
   });
   if (sys.jekyll !== 'active') out.push({ level: 'bad', text: 'Jekyll dev 서버가 ' + sys.jekyll, to: 'activity' });
@@ -254,14 +251,15 @@ function verdict(d) {
   };
 }
 
-/* ── 워커 24시간 히트맵 ───────────────────────────────────────────────── */
-function beatSlots(w) {
-  var on = [], i, s = w.schedule || '';
-  // 시간당 1회 이상( */15, */30, :15 / :45 …)은 24칸 전부.
-  if (s.indexOf('*') >= 0 || /^:\d/.test(s)) { for (i = 0; i < 24; i++) on.push(i); return on; }
-  var m = s.match(/(\d{1,2}):(\d{2})/);
-  if (m) on.push(parseInt(m[1], 10) % 24);
-  return on;
+/* ── 워커 로그 모달 ───────────────────────────────────────────────────── */
+function openWorkerLog(w) {
+  openModal(w.name + ' — 로그', '불러오는 중…');
+  fetch(API + 'log?name=' + encodeURIComponent(w.key) + '&n=300')
+    .then(function (r) { return r.json(); })
+    .then(function (j) {
+      openModal(w.name + ' — ' + j.path, (j.lines || []).join('\n') || '(빈 로그)');
+    })
+    .catch(function (e) { openModal(w.name, '로그를 읽지 못했다: ' + e); });
 }
 
 /* ── 개요 ─────────────────────────────────────────────────────────────── */
@@ -273,26 +271,29 @@ function overview(d) {
   left.innerHTML = '<h1 class="verdict__h' + (v.ok ? '' : ' verdict__h--warn') + '"><i></i>' + esc(v.head) + '</h1>' +
     '<p class="verdict__s">' + esc(v.sub) + '</p>';
   var right = el('div');
-  right.appendChild(el('p', 'panel__t', '24시간 실행'));
+  right.appendChild(el('p', 'panel__t', '최근 24시간 실행 기록'));
   var beats = el('div', 'beats');
-  var now = new Date(), nowFrac = (now.getHours() + now.getMinutes() / 60) / 24 * 100;
-  var nowLabel = ('0' + now.getHours()).slice(-2) + ':' + ('0' + now.getMinutes()).slice(-2);
+  var nowSec = Date.now() / 1000;
   (d.workers || []).forEach(function (w) {
-    var a = el('a', 'beat');
-    a.href = link('workers');
-    var on = beatSlots(w), track = '';
-    for (var i = 0; i < 24; i++) track += '<i class="' + (on.indexOf(i) >= 0 ? 'on' : '') + '"></i>';
-    a.innerHTML = '<span><span class="dot dot--' + w.status + '"></span>' + esc(w.name) + '</span>' +
-      '<span class="beat__track">' + track + '<span class="beat__now" style="left:' + nowFrac + '%"></span></span>' +
-      '<span class="beat__age">' + agoSec(w.age) + '</span>';
+    var a = el('div', 'beat' + (w.has_log ? ' clickable' : ''));
+    var ticks = '';
+    (w.runs || []).forEach(function (ts) {
+      var frac = (1 - (nowSec - ts) / 86400) * 100;
+      if (frac >= 0 && frac <= 100) ticks += '<i style="left:' + frac.toFixed(2) + '%"></i>';
+    });
+    a.innerHTML = '<span><span class="dot dot--' + w.status + '"></span>' + esc(w.name) +
+      (w.err ? '<span class="tag tag--err">로그 오류</span>' : '') + '</span>' +
+      '<span class="beat__track">' + ticks + '</span>' +
+      '<span class="beat__age">' + (w.age == null ? '—' : agoSec(w.age) + ' 전') + '</span>';
+    if (w.has_log) a.onclick = function () { openWorkerLog(w); };
     beats.appendChild(a);
   });
   right.appendChild(beats);
   var ax = el('div', 'beats__axis');
-  ax.innerHTML = '<div></div><div><span>00</span><span>06</span><span>12</span><span>18</span><span>24</span></div><div></div>';
+  ax.innerHTML = '<div></div><div><span>-24h</span><span>-18h</span><span>-12h</span><span>-6h</span><span>지금</span></div><div></div>';
   right.appendChild(ax);
   var note = el('div', 'beats__note');
-  note.innerHTML = '<span><i></i>예정 실행 시각</span><span><i class="line"></i>지금 (' + nowLabel + ')</span><span>행을 누르면 워커 페이지</span>';
+  note.innerHTML = '<span><i></i>실제 실행 (로그 타임스탬프)</span><span>오른쪽 끝이 지금</span><span>행을 누르면 로그 300줄</span>';
   right.appendChild(note);
   vp.appendChild(left); vp.appendChild(right); frag.appendChild(vp);
 
@@ -304,7 +305,7 @@ function overview(d) {
       d: 'ko 가 바뀐 뒤 en 이 따라오지 않은 글' },
     { n: num(g ? g.actionable : null), l: '색인 조치 대상', to: 'index', accent: true,
       d: 'Crawled·Discovered 이면서 미색인' },
-    { n: num(s.published), l: '발행 ko', to: 'pipeline',
+    { n: num(s.published), l: '발행 ko', to: 'weights',
       d: '영문 ' + num(s.en) + '편 (' + pct(s.en, s.published) + '%) · 30일 신규 ' + s.new30d },
     { n: num(d.audit ? d.audit.posts_with_issues : null), l: '링크 이슈 글', to: 'audit',
       d: d.audit ? d.audit.scanned + '편 검사 · ' + ago(d.audit.mtime) + ' 갱신' : 'audit-report.md 없음' },
@@ -328,8 +329,9 @@ function overview(d) {
     var ul = el('ul', 'todo');
     al.forEach(function (a) {
       var li = el('li', a.level === 'bad' ? 'bad' : (a.level === 'warn' ? 'warn' : null));
-      li.innerHTML = '<a href="' + link(a.to) + '">' + esc(a.text) + '</a>' +
+      li.innerHTML = '<a href="' + (a.worker ? 'javascript:void(0)' : link(a.to)) + '">' + esc(a.text) + '</a>' +
         (a.sub ? '<small>' + esc(a.sub) + '</small>' : '');
+      if (a.worker) li.querySelector('a').onclick = function () { openWorkerLog(a.worker); };
       ul.appendChild(li);
     });
     cl.appendChild(ul);
@@ -350,61 +352,7 @@ function overview(d) {
     '<div style="margin-left:auto"><a href="' + link('activity') + '">활동 전체 →</a></div>';
   gp.appendChild(q); frag.appendChild(gp);
 
-  var ip = el('div', 'panel');
-  ip.appendChild(el('p', 'panel__t', '섹션'));
-  var idx = el('div', 'index');
-  var counts = {
-    workers: ((d.workers || []).length - badWorkers(d).length) + '/' + (d.workers || []).length,
-    pipeline: '',
-    drafts: num(s.unpublished),
-    weights: (d.categories || []).length + '개',
-    translation: num(s.drift),
-    audit: num(d.audit ? d.audit.posts_with_issues : null),
-    index: num(g ? g.actionable : null),
-    activity: (d.git || []).length + '커밋'
-  };
-  ROUTES.forEach(function (k) {
-    var a = el('a');
-    a.href = link(k);
-    a.innerHTML = '<span>' + SECTION_LABEL[k] + '</span><i>' + (counts[k] || '') + '</i>';
-    a.title = PAGE_DESC[k];
-    idx.appendChild(a);
-  });
-  ip.appendChild(idx); frag.appendChild(ip);
   return frag;
-}
-
-/* ── 워커 ─────────────────────────────────────────────────────────────── */
-function secWorkers(d) {
-  var ws = d.workers || [], bad = badWorkers(d);
-  var s = secNode('워커', (ws.length - bad.length) + ' / ' + ws.length + ' 정상');
-  s.appendChild(el('p', 'hint', 'cron 주기 대비 로그가 늙으면 지연·정지로 표시된다. 행을 누르면 최근 로그 300줄이 열린다.'));
-  var rows = ws.map(function (w) {
-    var preview = lastLine(w);
-    var tr = row([
-      { html: '<span class="dot dot--' + w.status + '"></span>' + esc(w.name) +
-              (w.err ? '<span class="tag tag--err">로그 오류</span>' : '') },
-      { text: w.schedule, cls: 'muted sans' },
-      { text: agoSec(w.age), cls: 'num' },
-      { html: w.has_log
-          ? '<span class="path">' + esc(preview.slice(0, 160)) + '</span>'
-          : '<span class="muted sans" style="font-size:.74rem">로그 파일 없음</span>' }
-    ], w.has_log ? 'clickable' : null);
-    if (w.has_log) {
-      tr.onclick = function () {
-        openModal(w.name + ' — 로그', '불러오는 중…');
-        fetch(API + 'log?name=' + encodeURIComponent(w.key) + '&n=300')
-          .then(function (r) { return r.json(); })
-          .then(function (j) {
-            openModal(w.name + ' — ' + j.path, (j.lines || []).join('\n') || '(빈 로그)');
-          })
-          .catch(function (e) { openModal(w.name, '로그를 읽지 못했다: ' + e); });
-      };
-    }
-    return tr;
-  });
-  s.appendChild(table(['워커', '주기', { label: '경과', num: true }, '최근 로그'], rows));
-  return s;
 }
 
 /* ── 파이프라인 ───────────────────────────────────────────────────────── */
@@ -629,32 +577,53 @@ function secTranslation(d) {
   var rows = Object.keys(t.by_status).sort().map(function (k) {
     return row([{ text: k, cls: 'mono' }, { text: num(t.by_status[k]), cls: 'num' }]);
   });
-  rows.push(row([{ html: '<strong>재번역 대기 (drift_needed)</strong>' }, { text: num(d.stats.drift), cls: 'num' }]));
+  rows.push(row([{ text: '재번역 대기 (drift_needed)', cls: 'mono' }, { text: num(d.stats.drift), cls: 'num' }]));
   left.appendChild(table(['status', { label: '건수', num: true }], rows));
   var st = t.stats || {};
   left.appendChild(el('p', 'hint', '누적 ' + num(st.total_done) + '편 · 입력 ' + kchars(st.total_in_chars) +
     '자 → 출력 ' + kchars(st.total_out_chars) + '자' +
     (st.total_in_chars ? ' (압축률 ' + pct(st.total_out_chars, st.total_in_chars) + '%)' : '')));
   /* KO-TYPOS — EN 검증기가 번역 중 KO 원문 오타를 교정하며 남긴 지적.
-     다음 재검증 때까지 verdict 에 남으므로, KO 를 고쳤어도 표시가 유지될 수 있다. */
+     다음 재검증 때까지 verdict 에 남으므로, KO 를 고쳤어도 표시가 유지될 수 있다.
+     '수정' 체크는 localStorage 에 (path@verified_at) 키로 저장한다 — 새로고침에도
+     유지되고, 같은 파일이 재검증되어 verified_at 이 바뀌면 체크가 풀린다. */
   var typos = t.ko_typos || [];
+  var doneMap = (function () {
+    try { return JSON.parse(localStorage.getItem('dash-kotypo-done') || '{}'); }
+    catch (e) { return {}; }
+  })();
+  var liveKeys = {};
   left.appendChild(el('h3', null, '한글 오타 지적 (KO-TYPOS) — ' + typos.length + '편'));
   if (typos.length) {
-    left.appendChild(table(['파일', { label: '건수', num: true }, { label: '검증', num: true }],
+    left.appendChild(table(['파일', { label: '건수', num: true }, { label: '검증', num: true }, { label: '수정', num: true }],
       typos.map(function (k) {
+        var key = k.path + '@' + (k.verified_at || '');
+        liveKeys[key] = true;
         var tr = row([
           { html: '<span class="path">' + esc(k.path.replace(/^_posts\//, '')) + '</span>' },
           { text: k.items.length, cls: 'num' },
-          { text: agoIso(k.verified_at), cls: 'num muted' }
-        ], 'clickable');
+          { text: agoIso(k.verified_at), cls: 'num muted' },
+          { html: '<input type="checkbox" class="typo-chk"' + (doneMap[key] ? ' checked' : '') + '>', cls: 'num' }
+        ], 'clickable' + (doneMap[key] ? ' typo-done' : ''));
         tr.onclick = function () {
           openModal('KO-TYPOS — ' + k.path,
             k.items.map(function (x) { return '- ' + x; }).join('\n') +
             '\n\n(검증 ' + (k.verified_at || '—') + ' · KO 를 고친 뒤에도 다음 재검증까지 표시가 남는다)');
         };
+        var chk = tr.querySelector('.typo-chk');
+        chk.onclick = function (e) { e.stopPropagation(); };
+        chk.onchange = function () {
+          if (chk.checked) doneMap[key] = 1; else delete doneMap[key];
+          tr.classList.toggle('typo-done', chk.checked);
+          try { localStorage.setItem('dash-kotypo-done', JSON.stringify(doneMap)); } catch (e) { }
+        };
         return tr;
       })));
-    left.appendChild(el('p', 'hint', '행을 누르면 지적 내용 전체가 열린다. EN 은 이미 교정된 상태다.'));
+    /* 사라진 지적(재검증 통과 등)의 키는 정리한다. */
+    var pruned = {};
+    Object.keys(doneMap).forEach(function (k) { if (liveKeys[k]) pruned[k] = 1; });
+    try { localStorage.setItem('dash-kotypo-done', JSON.stringify(pruned)); } catch (e) { }
+    left.appendChild(el('p', 'hint', '행을 누르면 지적 내용 전체가 열린다. EN 은 이미 교정된 상태다. 수정 체크는 이 브라우저에 저장되며, 재검증으로 검증 시각이 바뀌면 풀린다.'));
   } else {
     left.appendChild(el('p', 'hint', '검증기가 지적한 한글 오타 없음.'));
   }
@@ -745,10 +714,10 @@ function secActivity(d) {
   var sys = d.system || {};
   right.appendChild(el('h3', null, '시스템'));
   right.appendChild(table(['항목', '값'], [
-    row([{ text: 'Jekyll dev 서버' }, { text: sys.jekyll, cls: 'mono' }]),
-    row([{ text: 'Pagefind 색인' }, { text: ago(sys.pagefind_mtime), cls: 'mono' }]),
-    row([{ text: '메모리' }, { html: '<span class="mono">' + esc((sys.mem || '').trim()) + '</span>' }]),
-    row([{ text: 'Claude 쿼터' }, {
+    row([{ text: 'Jekyll dev 서버', cls: 'nowrap' }, { text: sys.jekyll, cls: 'mono' }]),
+    row([{ text: 'Pagefind 색인', cls: 'nowrap' }, { text: ago(sys.pagefind_mtime), cls: 'mono' }]),
+    row([{ text: '메모리', cls: 'nowrap' }, { html: '<span class="mono">' + esc((sys.mem || '').trim()) + '</span>' }]),
+    row([{ text: 'Claude 쿼터', cls: 'nowrap' }, {
       text: sys.quota ? '주간 ' + Math.round(sys.quota.weekly * 100) + '% · 5h ' +
         Math.round(sys.quota.h5 * 100) + '%' : '—', cls: 'mono'
     }])
@@ -774,7 +743,7 @@ function secActivity(d) {
 }
 
 var SECTIONS = {
-  workers: secWorkers, pipeline: secPipeline, drafts: secDrafts, weights: secWeights,
+  drafts: secDrafts, weights: secWeights,
   translation: secTranslation, audit: secAudit, index: secIndex, activity: secActivity
 };
 
@@ -834,3 +803,8 @@ wireModal();
 applyTheme(themeMode());
 load(false);
 setInterval(function () { load(false); }, 60000);
+/* 수집 스탬프의 '몇 초 전'은 렌더 시점에 굳으므로 매초 따로 갱신한다. */
+setInterval(function () {
+  var st = document.querySelector('.mh__stamp');
+  if (st && state.data) st.textContent = stampText(state.data);
+}, 1000);
