@@ -292,3 +292,10 @@ x &= 2\lambda y.
 
 Multiplying the two equations gives $xy = 4\lambda^2 xy$, so either $xy = 0$ or $\lambda^2 = 1/4$. If $xy = 0$, the constraint gives $(\pm 1, 0)$ or $(0, \pm 1)$, and then $f = 0$. If $\lambda = \pm 1/2$, then $y = \pm x$ and the constraint $2x^2 = 1$ gives $x = \pm 1/\sqrt2$, so $f = xy = \pm 1/2$. Therefore, on the unit circle, the maximum value of $f = xy$ is $1/2$ and the minimum value is $-1/2$.
 :::
+
+---
+
+**References**
+
+**[Ste]** J. Stewart, *Calculus*, 8th ed., Cengage Learning, 2016.  
+**[Kim]** 김홍종, *미적분학 1·2*, 제3개정판, 서울대학교출판문화원, 2020.

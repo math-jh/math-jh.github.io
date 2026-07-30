@@ -97,3 +97,9 @@ Consider the field $\mathbb{K}=\mathbb{F}_p(t)$. Then consider the polynomial $u
 :::
 
 In the next post and the one after that, we will see how to exclude such cases from our discussion.
+
+---
+
+**References**
+
+**[Bou]** N. Bourbaki. *Algebra II: Chapters 4–7*. Springer, 2003.

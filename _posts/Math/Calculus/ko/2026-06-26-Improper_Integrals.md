@@ -159,3 +159,10 @@ $$\Gamma(s+1) = \bigl[-x^s e^{-x}\bigr]_0^\infty + s\int_0^\infty x^{s-1}e^{-x} 
 
 이고 $\Gamma(1) = \int_0^\infty e^{-x} \mathop{dx} = 1$이므로 $\Gamma(n) = (n-1)!$이다. 즉 감마함수는 팩토리얼을 실수로 확장한다.
 :::
+
+---
+
+**참고문헌**
+
+**[Ste]** J. Stewart, *Calculus*, 8th ed., Cengage Learning, 2016.  
+**[Kim]** 김홍종, *미적분학 1·2*, 제3개정판, 서울대학교출판문화원, 2020.

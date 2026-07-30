@@ -207,10 +207,7 @@ $$12\rchi(\mathcal{O}_S)=12+2(d-1)(d-2)(d-3)=2d^3-12d^2+22d$$
 
 **참고문헌**
 
-**[Har]** R. Hartshorne, *Algebraic geometry*, Springer, 1977.
-
-**[Ful]** W. Fulton, *Intersection Theory*, Springer, 1984.
-
-**[Hir]** F. Hirzebruch, *Topological Methods in Algebraic Geometry*, Springer, 1966.
-
+**[Hart]** R. Hartshorne, *Algebraic geometry*, Springer, 1977.  
+**[Ful]** W. Fulton, *Intersection Theory*, Springer, 1984.  
+**[Hir]** F. Hirzebruch, *Topological Methods in Algebraic Geometry*, Springer, 1966.  
 **[BHPV]** W. Barth, K. Hulek, C. Peters, A. Van de Ven, *Compact Complex Surfaces*, Springer, 2004.

@@ -166,3 +166,9 @@ Y \text{가 닫힘},\ y_n \in Y &\implies x \in Y
 ## 위상으로의 연결
 
 열린공은 거리공간에 "열린집합"이라는 위상적 구조를 부여하는 출발점이다. 거리공간은 [\[위상수학\] §열린집합](/ko/math/topology/open_sets)에서 공리적으로 도입하는 위상공간의 가장 중요한 예이며, 해석학의 거리 기반 개념들은 위상수학의 더 일반적인 틀 안에 자연스럽게 자리 잡는다.
+
+---
+
+**참고문헌**
+
+**[Rud]** W. Rudin, *Principles of mathematical analysis*, 3rd ed., McGraw-Hill, 1976.

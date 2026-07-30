@@ -222,8 +222,8 @@ $n\geq 1$에 대하여, $S^n$은 $\mathbb{R}^n$에 위상적으로 embedding되�
 
 **참고문헌**
 
-[Hat] A. Hatcher, *Algebraic Topology*. Cambridge University Press, 2002.  
-[Mat] J. Matoušek, *Using the Borsuk–Ulam Theorem*. Springer, 2003.  
-[Mun] J. R. Munkres, *Elements of Algebraic Topology*. Addison-Wesley, 1984.
+**[Hat]** A. Hatcher, *Algebraic Topology*. Cambridge University Press, 2002.  
+**[Mat]** J. Matoušek, *Using the Borsuk–Ulam Theorem*. Springer, 2003.  
+**[Mun]** J. R. Munkres, *Elements of Algebraic Topology*. Addison-Wesley, 1984.
 
 ---

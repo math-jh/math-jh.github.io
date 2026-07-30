@@ -218,3 +218,10 @@ $$\mathbf{r}' \times \mathbf{r}'' = (\sin t,\ -\cos t,\ 1), \qquad \lVert \mathb
 
 and since $\lVert \mathbf{r}'\rVert = \sqrt{2}$, the curvature is $\kappa = \sqrt{2}/(\sqrt{2})^3 = 1/2$, which is constant. Since the speed $v = \sqrt{2}$ is constant, by [Proposition 9](#prop9) the acceleration is purely normal and its magnitude is $\kappa v^2 = (1/2)\cdot 2 = 1$, and indeed $\lVert \mathbf{r}''(t)\rVert = \lVert(-\cos t, -\sin t, 0)\rVert = 1$, which matches.
 :::
+
+---
+
+**References**
+
+**[Ste]** J. Stewart, *Calculus*, 8th ed., Cengage Learning, 2016.  
+**[Kim]** 김홍종, *미적분학 1·2*, 제3개정판, 서울대학교출판문화원, 2020.

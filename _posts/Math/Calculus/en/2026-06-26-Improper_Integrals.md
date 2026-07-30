@@ -157,3 +157,10 @@ $$\Gamma(s+1) = \bigl[-x^s e^{-x}\bigr]_0^\infty + s\int_0^\infty x^{s-1}e^{-x} 
 
 and since $\Gamma(1) = \int_0^\infty e^{-x} \mathop{dx} = 1$ we have $\Gamma(n) = (n-1)!$. Thus the gamma function extends the factorial to real numbers.
 :::
+
+---
+
+**References**
+
+**[Ste]** J. Stewart, *Calculus*, 8th ed., Cengage Learning, 2016.  
+**[Kim]** 김홍종, *미적분학 1·2*, 제3개정판, 서울대학교출판문화원, 2020.

@@ -326,3 +326,10 @@ $$B\otimes_A\kappa(\mathfrak{p})\cong (B/\mathfrak{p}B)_\mathfrak{p}$$
 
 그럼 각각의 $R_l$은 유한차원 $\kappa(z)$-벡터 space이므로 $R_l\otimes_{\kappa(z)}\kappa(y)$ 또한 유한차원 $\kappa(y)$-벡터 space이고, 따라서 Artinian ring이 되어 유한히 많은 prime ideal만을 갖는다. ([\[가환대수학\] §조르단-횔더 정리, ⁋정리 4](/ko/math/commutative_algebra/Jordan-Holder_theorem#thm4)) 이제 $\rho_Y^{-1}(y)$는 유한히 많은 $\Spec (R_l\otimes_{\kappa(z)}\kappa(y))$들로 덮이므로 유한집합이고, 이로써 $\rho_Y$가 quasi-finite임을 안다. 
 :::
+
+---
+
+**참고문헌**
+
+**[Har]** R. Hartshorne, *Algebraic geometry*. Graduate texts in mathematics. Springer, 1977.  
+**[Vak]** R. Vakil, *The rising sea: Foundation of algebraic geometry*. Available [online](https://math.stanford.edu/~vakil/216blog/).

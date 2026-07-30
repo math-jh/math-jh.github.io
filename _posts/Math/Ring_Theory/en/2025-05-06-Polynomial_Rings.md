@@ -426,3 +426,9 @@ More generally, the following holds.
 ::: Proposition 20
 For any $u\in A[[x_i]]_{i\in I}$, $u$ being invertible in $A[[x_i]]_{i\in I}$ is equivalent to the constant term of $u$ being invertible in $A$.
 :::
+
+---
+
+**References**
+
+**[DF]** D. S. Dummit and R. M. Foote, *Abstract algebra*, 3rd ed., Wiley, 2004.

@@ -403,8 +403,8 @@ $$H_k(X\times Y;A)\cong \left( \bigoplus_{p+q=k}H_p(X;A)\otimes_AH_q(Y;A)\right)
 
 **참고문헌**
 
-[Hat] A. Hatcher, *Algebraic Topology*. Cambridge University Press, 2022.  
-[May] J. P. May, *A concise course in algebraic topology*.
+**[Hat]** A. Hatcher, *Algebraic Topology*. Cambridge University Press, 2022.  
+**[May]** J. P. May, *A concise course in algebraic topology*.
 
 ---
 

@@ -179,3 +179,9 @@ Therefore, by the argument after [Lemma 7](#lem7), the following proposition is 
 ::: Proposition 17
 For a function $f:X \rightarrow Y$ between topological spaces, $f$ is continuous at $x\in X$ if and only if for every filter $\mathcal{F}$ converging to $x$, the filter defined by the filter base $f(\mathcal{F})$ converges to $f(x)$.
 :::
+
+---
+
+**References**
+
+**[Bou]** N. Bourbaki, <i>General Topology</i>. Elements of mathematics. Springer, 1995.

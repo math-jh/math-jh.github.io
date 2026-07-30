@@ -324,3 +324,9 @@ $$r = p_1 \cdots p_m = q_1 \cdots q_n$$
 
 와 같이 두 개의 표현이 주어졌다 가정하고, $p_1$부터 순서대로 associate관계에 있는 $q_j$들을 찾아가면 된다. 
 :::
+
+---
+
+**참고문헌**
+
+**[DF]** D. S. Dummit and R. M. Foote, *Abstract algebra*, 3rd ed., Wiley, 2004.

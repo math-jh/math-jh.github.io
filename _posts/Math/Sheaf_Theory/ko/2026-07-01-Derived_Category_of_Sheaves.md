@@ -216,10 +216,7 @@ $$H^0(T^2, \mathbb{Z}) = E_\infty^{0,0} = \mathbb{Z}, \qquad H^1(T^2, \mathbb{Z}
 
 **참고문헌**
 
-**[KS]** M. Kashiwara, P. Schapira, *Sheaves on manifolds*, Springer, 1990.
-
-**[Dim]** A. Dimca, *Sheaves in topology*, Springer, 2004.
-
-**[GM]** S. I. Gelfand, Y. I. Manin, *Methods of homological algebra*, Springer, 2003.
-
+**[KS]** M. Kashiwara, P. Schapira, *Sheaves on manifolds*, Springer, 1990.  
+**[Dim]** A. Dimca, *Sheaves in topology*, Springer, 2004.  
+**[GM]** S. I. Gelfand, Y. I. Manin, *Methods of homological algebra*, Springer, 2003.  
 **[Stacks]** The Stacks Project Authors, *The Stacks Project*, https://stacks.math.columbia.edu.

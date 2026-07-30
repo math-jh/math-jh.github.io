@@ -131,3 +131,9 @@ $$2 = \lvert a_n - a_{n+1}\rvert \leq \lvert a_n - L\rvert + \lvert L - a_{n+1}\
 이 예시는 boundedness가 수렴의 필요조건이지 충분조건이 아님을 보여 준다. Bounded sequence에서 수렴을 끌어내려면 단조성 같은 추가 구조가 필요하다.
 
 이 정리는 [\[미적분학\] §수열의 극한](/ko/math/calculus/sequences)에서 계산적으로 다룬 극한들의 존재를 비로소 정당화한다.
+
+---
+
+**참고문헌**
+
+**[Rud]** W. Rudin, *Principles of mathematical analysis*, 3rd ed., McGraw-Hill, 1976.

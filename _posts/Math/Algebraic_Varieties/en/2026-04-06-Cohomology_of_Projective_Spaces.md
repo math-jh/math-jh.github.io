@@ -388,7 +388,7 @@ is very ample, and setting $n = k + m$ completes the proof.
 
 **References**
 
-**[Har]** R. Hartshorne, *Algebraic Geometry*, Graduate Texts in Mathematics, Springer, 1977.  
+**[Hart]** R. Hartshorne, *Algebraic Geometry*, Graduate Texts in Mathematics, Springer, 1977.  
 **[Bot]** R. Bott, *Homogeneous vector bundles*, Annals of Mathematics, 1957.  
 **[Laz]** R. Lazarsfeld, *Positivity in Algebraic Geometry I*, Ergebnisse der Mathematik, Springer, 2004.  
 **[Mum]** D. Mumford, *Lectures on Curves on an Algebraic Surface*, Annals of Mathematics Studies, Princeton, 1966.

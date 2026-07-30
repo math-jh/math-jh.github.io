@@ -132,8 +132,6 @@ $$\rho^\ast E=\rho'^\ast\pi^\ast E=\rho'^\ast(\gamma_E\oplus\gamma_E^\perp)=\rho
 
 **참고문헌**
 
-**[MS]** J. W. Milnor and J. D. Stasheff, *Characteristic Classes*, Annals of Mathematics Studies 76, Princeton University Press, 1974.
-
-**[BT]** R. Bott and L. W. Tu, *Differential Forms in Algebraic Topology*, Springer, 1982.
-
+**[MS]** J. W. Milnor and J. D. Stasheff, *Characteristic Classes*, Annals of Mathematics Studies 76, Princeton University Press, 1974.  
+**[BT]** R. Bott and L. W. Tu, *Differential Forms in Algebraic Topology*, Springer, 1982.  
 **[Hat]** A. Hatcher, *Vector Bundles and K-Theory*, online notes, 2017.

@@ -111,3 +111,9 @@ $$h(\alpha'\alpha- 1) = \alpha\alpha'\alpha - \alpha = (\alpha'\alpha - 1)\alpha
 
 so $\alpha'\alpha = 1$, and $\alpha'$ is the inverse of $\alpha$.
 :::
+
+---
+
+**References**
+
+**[Bou]** Bourbaki, N. Algebra I. *Elements of Mathematics*. Springer. 1998.

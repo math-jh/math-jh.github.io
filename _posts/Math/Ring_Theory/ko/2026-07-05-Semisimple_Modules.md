@@ -139,6 +139,5 @@ $$T_2\oplus\cdots\oplus T_m\cong\Big(\bigoplus_bT_b\Big)/N\cong\Big(\bigoplus_aS
 
 **참고문헌**
 
-**[DF]** D. S. Dummit and R. M. Foote, *Abstract algebra*, 3rd ed., Wiley, 2004.
-
+**[DF]** D. S. Dummit and R. M. Foote, *Abstract algebra*, 3rd ed., Wiley, 2004.  
 **[Lam]** T. Y. Lam, *A first course in noncommutative rings*, 2nd ed., Graduate Texts in Mathematics 131, Springer, 2001.

@@ -173,6 +173,6 @@ Schubert varieties provide a *cell decomposition* of the Grassmannian. That is, 
 
 **References**
 
-**[Harris]** J. Harris, *Algebraic Geometry: A First Course*, Springer, 1992.  
+**[Har]** J. Harris, *Algebraic Geometry: A First Course*, Springer, 1992.  
 **[GH]** P. Griffiths and J. Harris, *Principles of Algebraic Geometry*, Wiley, 1978.  
 **[Ful]** W. Fulton, *Young Tableaux*, Cambridge University Press

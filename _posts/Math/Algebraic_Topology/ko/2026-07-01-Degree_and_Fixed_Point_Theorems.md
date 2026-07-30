@@ -248,8 +248,8 @@ Degree와 Lefschetz 수의 상호작용을 구면 위에서 구체적으로 살�
 
 **참고문헌**
 
-[Hat] A. Hatcher, *Algebraic Topology*. Cambridge University Press, 2002.  
-[Mil] J. W. Milnor, *Topology from the Differentiable Viewpoint*. Princeton University Press, 1997.  
-[Mun] J. R. Munkres, *Elements of Algebraic Topology*. Addison-Wesley, 1984.
+**[Hat]** A. Hatcher, *Algebraic Topology*. Cambridge University Press, 2002.  
+**[Mil]** J. W. Milnor, *Topology from the Differentiable Viewpoint*. Princeton University Press, 1997.  
+**[Mun]** J. R. Munkres, *Elements of Algebraic Topology*. Addison-Wesley, 1984.
 
 ---

@@ -459,7 +459,7 @@ $$H^2(T^2;\mathbb{Z})=H^1(T^2;\mathbb{Z})\otimes H^1(T^2;\mathbb{Z})\cong \mathb
 
 **참고문헌**
 
-[Hat] A. Hatcher, *Algebraic Topology*. Cambridge University Press, 2022.  
-[May] J. P. May, *A concise course in algebraic topology*.
+**[Hat]** A. Hatcher, *Algebraic Topology*. Cambridge University Press, 2022.  
+**[May]** J. P. May, *A concise course in algebraic topology*.
 
 ---

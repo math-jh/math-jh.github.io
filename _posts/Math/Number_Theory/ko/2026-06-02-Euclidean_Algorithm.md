@@ -214,3 +214,9 @@ $$\begin{aligned}
 :::
 
 Bézout 항등식의 직접적 귀결로, $a$와 $b$가 서로소인 것은 $ax + by = 1$인 정수 $x, y$가 존재하는 것과 동치이다. 또한 위 증명은 추상화하면 "$\mathbb{Z}$의 모든 ideal이 principal ideal"이라는 사실 — 즉 $\mathbb{Z}$가 principal ideal 정역 — 의 구체적 형태이다.
+
+---
+
+**참고문헌**
+
+**[OL]** 오정환·이준복, *기초 정수론*, 경문사, 2012.

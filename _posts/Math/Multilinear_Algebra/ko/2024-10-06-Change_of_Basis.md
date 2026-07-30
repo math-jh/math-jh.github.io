@@ -99,3 +99,8 @@ $$[u]_{\mathcal{C}'}^{\mathcal{B}'}=[\id_N]^\mathcal{C}_{\mathcal{C}'}[u]^\mathc
 
 그럼 위의 [명제 5](#prop5)에서 $M=N$, $\mathcal{B}=\mathcal{C}$, $\mathcal{B}'=\mathcal{C}'$로 두면, $\End_\rMod{A}(M)$의 원소 $u$를 서로 다른 basis를 통해 행렬표현한 것은 서로 similar함임을 안다. 
 
+---
+
+**참고문헌**
+
+**[Bou]** Bourbaki, N. Algebra I. *Elements of Mathematics*. Springer. 1998.

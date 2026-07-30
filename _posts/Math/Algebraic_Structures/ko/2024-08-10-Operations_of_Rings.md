@@ -113,3 +113,9 @@ $$\iota_A: A \hookrightarrow A\otimes B;\quad \alpha\mapsto \alpha\otimes 1$$
 $$\phi(\alpha\otimes \beta)=\phi((\alpha\otimes 1)(1\otimes \beta))=\cdots=\phi_A(\alpha)\phi_B(\beta)$$
 
 를 만족해야 하므로 유일하다는 것을 알 수 있다. 한편, $A\times B$에서 $C$로의 함수 $(\alpha,\beta)\mapsto \phi_A(\alpha)\phi_B(\beta)$가 bilinear이므로, tensor product의 universal property로부터 $\alpha\otimes \beta\mapsto \phi_A(\alpha)\phi_B(\beta)$를 만족하는 ring homomorphism $A\otimes B \rightarrow C$가 존재하게 되고, 이것이 정확히 $\phi$가 된다. 
+
+---
+
+**참고문헌**
+
+**[Bou]** Bourbaki, N. Algebra I. *Elements of Mathematics*. Springer. 1998.

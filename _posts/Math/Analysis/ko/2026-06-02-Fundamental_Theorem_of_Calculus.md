@@ -189,3 +189,9 @@ $$\int_0^1 2x e^{x^2} dx = \int_{0}^{1} e^u du = e - 1$$
 이 되어, 합성과 곱의 형태로 얽혀 있던 적분이 단순한 지수의 적분으로 풀린다.
 
 평가정리는 [\[미적분학\] §적분](/ko/math/calculus/integration)의 치환·부분적분이 의존하던 토대이며, 이제 그 가정들이 모두 엄밀하게 증명되었다.
+
+---
+
+**참고문헌**
+
+**[Rud]** W. Rudin, *Principles of mathematical analysis*, 3rd ed., McGraw-Hill, 1976.

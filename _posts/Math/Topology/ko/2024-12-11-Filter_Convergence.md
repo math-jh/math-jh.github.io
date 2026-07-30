@@ -178,3 +178,9 @@ $$\mathcal{N}(x)\vert_A=\{U\cap A\mid U\in \mathcal{N}(x)\}$$
 ::: 명제 17
 위상공간 사이의 함수 $f:X \rightarrow Y$에 대하여, 함수 $f$가 $x\in X$에서 연속인 것은 $x$로 수렴하는 임의의 filter $\mathcal{F}$에 대하여, filter base $f(\mathcal{F})$가 정의하는 filter가 $f(x)$로 수렴하는 것과 동치이다. 
 :::
+
+---
+
+**참고문헌**
+
+**[Bou]** N. Bourbaki, <i>General Topology</i>. Elements of mathematics. Springer, 1995.

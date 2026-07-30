@@ -131,3 +131,10 @@ Both one-sided derivatives exist and are equal if and only if $f$ is differentia
 :::
 
 This is nothing more than applying the fact that a limit exists only when both one-sided limits agree to the average rate of change. (See [§Limits of Functions](/en/math/calculus/functions_and_limits).) Revisiting the absolute value function $f(x) = \lvert x\rvert$, we have $f'_+(0) = 1$ and $f'_-(0) = -1$; the two differ, so it is immediately confirmed that $f$ is not differentiable at $0$. One-sided derivatives are also used naturally when discussing differentiability at an endpoint of the domain: for example, the behavior of $f(x) = \sqrt x$ at $0$ on the interval $[0, \infty)$ has meaning only through the right-hand derivative.
+
+---
+
+**References**
+
+**[Ste]** J. Stewart, *Calculus*, 8th ed., Cengage Learning, 2016.  
+**[Kim]** 김홍종, *미적분학 1·2*, 제3개정판, 서울대학교출판문화원, 2020.

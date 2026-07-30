@@ -160,4 +160,4 @@ Cohomology class가 일정하다는 가정은 본질적이다. 만일 $[\omega_0
 
 **[MS]** D. McDuff and D. Salamon, *Introduction to Symplectic Topology*, 3rd ed., Oxford University Press, 2017.  
 **[CdS]** A. Cannas da Silva, *Lectures on Symplectic Geometry*, Lecture Notes in Mathematics 1764, Springer, 2008.  
-**[Mos]** J. Moser, *On the volume elements on a manifold*, Trans. Amer. Math. Soc. **120** (1965), 286–294.  
+**[Mos]** J. Moser, *On the volume elements on a manifold*, Trans. Amer. Math. Soc. **120** (1965), 286–294.

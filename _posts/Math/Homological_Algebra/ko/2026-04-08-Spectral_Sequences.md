@@ -212,6 +212,6 @@ $$E_1^{p,q} = H^p_h(K^{\bullet, q})$$
 
 **참고문헌**
 
-**[GM]** S. I. Gelfand, Y. I. Manin, *Methods of homological algebra*, Springer, 2003.
-**[Wei]** C. A. Weibel, *An introduction to homological algebra*, Cambridge University Press, 1994.
+**[GM]** S. I. Gelfand, Y. I. Manin, *Methods of homological algebra*, Springer, 2003.  
+**[Wei]** C. A. Weibel, *An introduction to homological algebra*, Cambridge University Press, 1994.  
 **[God]** R. Godement, *Topologie algébrique et théorie des faisceaux*, Hermann, 1958.

@@ -159,3 +159,10 @@ $$0=\overline{\omega}([w],[w'])=\omega(w,w')\qquad\text{for all $w'\in W$}$$
 :::
 
 Symplectic vector space의 모든 1차원 부분공간은 isotropic subspace이므로, [보조정리 4](#lem4)에 의하여 모든 codimension 1의 부분공간 $W$는 coisotropic subspace이다. 이 공간에 [보조정리 5](#lem5)를 적용하면 우리는 원래의 벡터공간에서 2차원이 줄어든 새로운 symplectic vector space를 얻게 된다.
+
+---
+
+**참고문헌**
+
+**[CdS]** A. Cannas da Silva, *Lectures on Symplectic Geometry*, Lecture Notes in Mathematics 1764, Springer, 2008.  
+**[MS]** D. Mcduff and D. Salamon. *Introduction to symplectic topology*. Oxford graduate texts in mathematics. Oxford University Press, 2017.

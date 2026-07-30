@@ -157,7 +157,7 @@ $$GFGF(x)=GF(x)$$
 ---
 **참고문헌**
 
-**[Bou]** N. Bourbaki, <i>Theory of Sets</i>. Elements of mathematics. Springer Berlin-Heidelberg, 2013.
+**[Bou]** N. Bourbaki, <i>Theory of Sets</i>. Elements of mathematics. Springer Berlin-Heidelberg, 2013.  
 **[Wikipedia]** [Galois connection](https://en.wikipedia.org/wiki/Galois_connection)
 
 ---

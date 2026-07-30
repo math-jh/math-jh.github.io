@@ -243,12 +243,8 @@ $Q$가 Dynkin이면 Tits form은 positive definite이므로 ([정의 6](#def6)) 
 
 **참고문헌**
 
-**[BGP]** I. N. Bernstein, I. M. Gelfand, and V. A. Ponomarev, *Coxeter functors and Gabriel's theorem*, Russian Mathematical Surveys **28** (1973), 17–32.
-
-**[ASS]** I. Assem, D. Simson, and A. Skowroński, *Elements of the representation theory of associative algebras, Volume 1: Techniques of representation theory*, Cambridge University Press, 2006.
-
-**[ARS]** M. Auslander, I. Reiten, and S. O. Smalø, *Representation theory of Artin algebras*, Cambridge University Press, 1995.
-
-**[Br]** M. Brion, *Representations of quivers*, in *Geometric methods in representation theory I*, Société Mathématique de France, 2012.
-
+**[BGP]** I. N. Bernstein, I. M. Gelfand, and V. A. Ponomarev, *Coxeter functors and Gabriel's theorem*, Russian Mathematical Surveys **28** (1973), 17–32.  
+**[ASS]** I. Assem, D. Simson, and A. Skowroński, *Elements of the representation theory of associative algebras, Volume 1: Techniques of representation theory*, Cambridge University Press, 2006.  
+**[ARS]** M. Auslander, I. Reiten, and S. O. Smalø, *Representation theory of Artin algebras*, Cambridge University Press, 1995.  
+**[Br]** M. Brion, *Representations of quivers*, in *Geometric methods in representation theory I*, Société Mathématique de France, 2012.  
 **[DW]** H. Derksen and J. Weyman, *An introduction to quiver representations*, American Mathematical Society, 2017.

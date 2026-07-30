@@ -225,3 +225,9 @@ Uniqueness of the representation also follows now from [\[Ring Theory\] §Semisi
 $$V=V_1^{\oplus r_1}\oplus\cdots\oplus V_k^{\oplus r_k}$$
 
 where the isomorphism classes of the factors and their multiplicities are uniquely determined.
+
+---
+
+**References**
+
+**[FH]** W. Fulton and J. Harris, *Representation theory: a first course*, Springer, 1991.

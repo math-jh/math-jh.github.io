@@ -82,3 +82,10 @@ $X/R$이 locally Euclidean이므로 $X/R$을 Euclidean neighborhood들 $(U_i)_{i
 :::
 
 이 category의 흐름으로만 본다면 우리의 관심은 topological manifold로 한정지어도 충분할 것이나, 특히 cohomology의 곱셈 구조를 다룰 때는 미분다양체에서의 적분의 개념을 떠올리는 것이 더 편하다. 
+
+---
+
+**참고문헌**
+
+**[Lee]** J. M. Lee, *Introduction to Topological Manifolds*, 2nd ed., Springer, 2011.  
+**[Mun]** J. R. Munkres, *Topology*, 2nd ed., Prentice Hall, 2000.

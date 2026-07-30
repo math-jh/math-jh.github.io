@@ -172,3 +172,9 @@ $$M_n = \sup_{0\leq x\leq 1} \lvert x^n - f(x)\rvert = \sup_{0\leq x < 1} x^n = 
 지금까지의 모든 반례는 $M_n = \sup_x \lvert f_n(x) - f(x)\rvert$이 $0$으로 가지 않는다는 한 가지 사실로 통합된다. 연속성이 깨진 [예시 2](#ex2), 적분이 어긋난 [예시 3](#ex3), boundedness를 잃은 [예시 6](#ex6), 연속 극한인데도 봉우리가 커진 [예시 8](#ex8)이 모두 그러했다. 거꾸로, 만약 이 최대 격차가 $0$으로 간다면, 즉 어떤 $N$ 하나로 모든 점에서 $\lvert f_n(x) - f(x)\rvert < \varepsilon$을 동시에 보장할 수 있다면, 위의 병리들은 모두 사라진다. 이것이 점별수렴과 균등수렴을 가르는 결정적 차이이다.
 
 이렇게 점에 무관하게 일정한 수렴을 요구하는 것이 *균등수렴*이며, [§균등수렴](/ko/math/analysis/uniform_convergence)에서 정의한다.
+
+---
+
+**참고문헌**
+
+**[Rud]** W. Rudin, *Principles of mathematical analysis*, 3rd ed., McGraw-Hill, 1976.

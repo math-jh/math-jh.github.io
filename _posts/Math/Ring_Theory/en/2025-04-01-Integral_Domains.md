@@ -322,3 +322,9 @@ $$r = p_1 \cdots p_m = q_1 \cdots q_n$$
 
 are given, and find the $q_j$'s associate to the $p_i$'s in order.
 :::
+
+---
+
+**References**
+
+**[DF]** D. S. Dummit and R. M. Foote, *Abstract algebra*, 3rd ed., Wiley, 2004.

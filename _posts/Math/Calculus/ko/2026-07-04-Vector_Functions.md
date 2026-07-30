@@ -222,3 +222,10 @@ $$\mathbf{r}' \times \mathbf{r}'' = (\sin t,\ -\cos t,\ 1), \qquad \lVert \mathb
 
 이고 $\lVert \mathbf{r}'\rVert = \sqrt{2}$이므로 곡률은 $\kappa = \sqrt{2}/(\sqrt{2})^3 = 1/2$로 일정하다. 속력 $v = \sqrt{2}$가 일정하므로 [명제 9](#prop9)에서 가속도는 법선 성분뿐이고 그 크기는 $\kappa v^2 = (1/2)\cdot 2 = 1$인데, 실제로 $\lVert \mathbf{r}''(t)\rVert = \lVert(-\cos t, -\sin t, 0)\rVert = 1$로 일치한다.
 :::
+
+---
+
+**참고문헌**
+
+**[Ste]** J. Stewart, *Calculus*, 8th ed., Cengage Learning, 2016.  
+**[Kim]** 김홍종, *미적분학 1·2*, 제3개정판, 서울대학교출판문화원, 2020.

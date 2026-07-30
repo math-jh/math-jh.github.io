@@ -243,8 +243,7 @@ $$K(X, Y) = 0 + \langle \mathrm{II}(X, X), \mathrm{II}(Y, Y)\rangle - \lvert \ma
 
 **참고문헌**
 
-**[Lee]** John M. Lee, *Introduction to Riemannian Manifolds*, Graduate Texts in Mathematics, Springer, 2019.
-
+**[Lee]** John M. Lee, *Introduction to Riemannian Manifolds*, Graduate Texts in Mathematics, Springer, 2019.  
 **[dC]** Manfredo P. do Carmo, *Riemannian Geometry*, Birkhäuser, 1992.
 
 ---

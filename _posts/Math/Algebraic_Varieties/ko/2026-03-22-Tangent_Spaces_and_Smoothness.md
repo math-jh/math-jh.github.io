@@ -229,5 +229,5 @@ $$TC_0 X = Z(\y^2)$$
 
 **참고문헌**
 
-**[Har]** J. Harris, *Algebraic Geometry: A First Course*, Springer, 1992.
+**[Har]** J. Harris, *Algebraic Geometry: A First Course*, Springer, 1992.  
 **[Sha]** I. R. Shafarevich, *Basic Algebraic Geometry I: Varieties in Projective Space*, Springer, 2013.

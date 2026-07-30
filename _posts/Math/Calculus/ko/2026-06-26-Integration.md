@@ -307,3 +307,10 @@ $$\frac{\int_a^b f(x)\mu(x) \mathop{dx}}{\int_a^b \mu(x)\mathop{dx}} \in [m, M]$
 :::
 
 만일 $\mu \equiv 1$로 두면 가중 평균값 정리는 [명제 12](#prop12)로 환원되므로, [명제 14](#prop14)는 평균값 정리의 일반화로, 일종의 밀도를 추가하는 것으로 생각할 수 있다.
+
+---
+
+**참고문헌**
+
+**[Ste]** J. Stewart, *Calculus*, 8th ed., Cengage Learning, 2016.  
+**[Kim]** 김홍종, *미적분학 1·2*, 제3개정판, 서울대학교출판문화원, 2020.

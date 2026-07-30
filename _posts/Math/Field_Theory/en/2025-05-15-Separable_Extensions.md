@@ -265,3 +265,9 @@ Fix an appropriate extension of $\mathbb{K}$, and let a subextension $\mathbb{K'
 1. By assumption every element of $\mathbb{L}$ is separable over $\mathbb{K}$, so every element of $\mathbb{K}'(\mathbb{L})$ is separable over $\mathbb{K}'$.
 2. To show this, we must prove that any finite degree subextension $\mathbb{M}/\mathbb{K}$ is étale. First, from the given assumption $\mathbb{M}$ and $\mathbb{K}'$ are linearly disjoint, so $\mathbb{M}_{(\mathbb{K}')}=\mathbb{M}\otimes_\mathbb{K}\mathbb{K}'$ is isomorphic to $\mathbb{K}'(\mathbb{M})$. ([§Algebraic Extensions, ⁋Proposition 10](/en/math/field_theory/algebraic_extensions#prop10)) On the other hand, since $\mathbb{K}'(\mathbb{M})/\mathbb{K}'$ has finite degree, it is étale from the assumption that $\mathbb{L}'/\mathbb{K}'$ is separable. Now since étale morphisms are stable under base change, we obtain the desired result. ([§Étale Algebras, ⁋Corollary 14](/en/math/field_theory/etale_algebras#cor14))
 :::
+
+---
+
+**References**
+
+**[Bou]** N. Bourbaki. *Algebra II: Chapters 4–7*. Springer, 2003.

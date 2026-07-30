@@ -182,4 +182,4 @@ The intersection product in [Proposition 13](#prop13) will be introduced rigorou
 **References**
 
 **[Ful]** W. Fulton, *Intersection Theory*, Springer, 1984.  
-**[Har]** R. Hartshorne, *Algebraic Geometry*, Graduate Texts in Mathematics, Springer, 1977.
+**[Hart]** R. Hartshorne, *Algebraic Geometry*, Graduate Texts in Mathematics, Springer, 1977.

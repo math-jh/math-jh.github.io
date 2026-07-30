@@ -82,3 +82,10 @@ Since $X/R$ is locally Euclidean, we can cover $X/R$ by Euclidean neighborhoods 
 :::
 
 Viewed solely within the flow of this category, our interest might be sufficiently confined to topological manifolds; however, especially when dealing with the multiplicative structure of cohomology, it is more convenient to keep in mind the notion of integration on smooth manifolds.
+
+---
+
+**References**
+
+**[Lee]** J. M. Lee, *Introduction to Topological Manifolds*, 2nd ed., Springer, 2011.  
+**[Mun]** J. R. Munkres, *Topology*, 2nd ed., Prentice Hall, 2000.

@@ -210,8 +210,7 @@ $$\ddot\gamma(t) = -(\cos t)\, p - (\sin t)\, v = -\gamma(t)$$
 
 **참고문헌**
 
-**[Lee]** John M. Lee, *Introduction to Riemannian Manifolds*, Graduate Texts in Mathematics, Springer, 2019.
-
+**[Lee]** John M. Lee, *Introduction to Riemannian Manifolds*, Graduate Texts in Mathematics, Springer, 2019.  
 **[dC]** Manfredo P. do Carmo, *Riemannian Geometry*, Birkhäuser, 1992.
 
 ---

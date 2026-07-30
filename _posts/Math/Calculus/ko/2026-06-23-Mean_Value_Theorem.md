@@ -280,3 +280,10 @@ $$\lim_{x\rightarrow 0} (\sin x)/x$$
 
     이도록 하는 $\xi$가 $x$와 $x_0$ 사이에 존재한다. $x_0$을 $a$에 가깝게 잡으면 그 사이에 놓인 $\xi$도 $a$에 가까워지므로, [정리 18](#thm18)의 가정처럼 $\xi\rightarrow a$에서 우변이 $L$로 수렴한다는 사실로부터, $x_0$을 충분히 $a$에 가깝게 잡으면 좌변의 비율 또한 $L$에 원하는 만큼 가깝게 둘 수 있다. 끝으로 $f(x), g(x)\rightarrow\infty$이므로 $x\rightarrow a$일 때 고정된 두 항 $f(x_0), g(x_0)$의 기여가 사라져 이 비율이 $f(x)/g(x)$와 같은 극한을 가지며, 따라서 $\lim_{x\rightarrow a} f(x)/g(x)=L$이다. 
 :::
+
+---
+
+**참고문헌**
+
+**[Ste]** J. Stewart, *Calculus*, 8th ed., Cengage Learning, 2016.  
+**[Kim]** 김홍종, *미적분학 1·2*, 제3개정판, 서울대학교출판문화원, 2020.

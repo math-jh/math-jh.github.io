@@ -133,3 +133,8 @@ $$X\setminus B\cap A_i=A_i\setminus (B\cap A_i)$$
 $f\vert_{A_i}$가 모두 연속이라 가정하고 $f$가 연속이라는 것만 보이면 충분하다. $Y$의 임의의 닫힌집합 $B$를 택하고, $A=f^{-1}(B)$라 하자. $f\vert_{A_i}$가 모두 연속이므로, $(f\vert_{A_i})^{-1}(B)=A\cap A_i$는 모두 닫힌집합이다. 이로부터 [명제 6](#prop6)을 적용하면 $A$가 닫힌집합임을 알 수 있고, 따라서 $f$는 연속이다.
 :::
 
+---
+
+**참고문헌**
+
+**[Bou]** N. Bourbaki, <i>General Topology</i>. Elements of mathematics. Springer, 1995.

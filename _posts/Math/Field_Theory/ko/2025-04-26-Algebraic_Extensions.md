@@ -262,3 +262,9 @@ Field extension $\mathbb{M}/\mathbb{L}/\mathbb{K}$에 대하여, $\mathbb{M}$이
 
 또한 $\mathbb{K}(A \cup \{x\}) = \mathbb{K}(A)(x)$는 $\mathbb{K}(A)$ 위에서 finite degree를 가진다. $A \subseteq \mathbb{L}$이고, $\mathbb{L}$가 $\mathbb{K}$ 위에서 algebraic이므로 [정리 18](#thm18)에 의해 $\mathbb{K}(A)$는 $\mathbb{K}$ 위에서 finite degree를 가진다. 이로부터 $\mathbb{K}(A \cup \{x\})$는 $\mathbb{K}$ 위에서 finite degree를 가지고, 따라서 $x$가 $\mathbb{K}$에 대해 algebraic이다. 
 :::
+
+---
+
+**참고문헌**
+
+**[Bou]** N. Bourbaki. *Algebra II: Chapters 4–7*. Springer, 2003.

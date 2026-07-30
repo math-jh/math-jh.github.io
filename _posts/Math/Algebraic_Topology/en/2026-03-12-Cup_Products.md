@@ -180,6 +180,6 @@ $$f_\ast(f^\ast\beta\frown\sigma)=\beta\frown f_\ast\sigma$$
 
 **References**
 
-[Hat] A. Hatcher, *Algebraic Topology*. Cambridge University Press, 2022.
+**[Hat]** A. Hatcher, *Algebraic Topology*. Cambridge University Press, 2022.
 
 ---

@@ -209,6 +209,6 @@ In particular, let $K^{p,q}$ be a first quadrant double complex. Then both filtr
 
 **References**
 
-**[GM]** S. I. Gelfand, Y. I. Manin, *Methods of homological algebra*, Springer, 2003.
-**[Wei]** C. A. Weibel, *An introduction to homological algebra*, Cambridge University Press, 1994.
+**[GM]** S. I. Gelfand, Y. I. Manin, *Methods of homological algebra*, Springer, 2003.  
+**[Wei]** C. A. Weibel, *An introduction to homological algebra*, Cambridge University Press, 1994.  
 **[God]** R. Godement, *Topologie algébrique et théorie des faisceaux*, Hermann, 1958.

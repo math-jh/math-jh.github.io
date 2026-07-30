@@ -144,12 +144,8 @@ $$\langle \tau_{a_1}(\alpha_1), \ldots, \tau_{a_n}(\alpha_n) \rangle_{g, \beta}^
 
 **참고문헌**
 
-**[KM]** M. Kontsevich, Yu. Manin, *Gromov-Witten classes, quantum cohomology, and enumerative geometry*, Comm. Math. Phys. **164** (1994), 525--562.
-
-**[LT]** J. Li, G. Tian, *Virtual moduli cycles and Gromov-Witten invariants of algebraic varieties*, J. Amer. Math. Soc. **11** (1998), 119--174.
-
-**[BF]** K. Behrend, B. Fantechi, *The intrinsic normal cone*, Invent. Math. **128** (1997), 45--88.
-
-**[FO]** K. Fukaya, K. Ono, *Arnold conjecture and Gromov-Witten invariant*, Topology **38** (1999), 933--1048.
-
+**[KM]** M. Kontsevich, Yu. Manin, *Gromov-Witten classes, quantum cohomology, and enumerative geometry*, Comm. Math. Phys. **164** (1994), 525--562.  
+**[LT]** J. Li, G. Tian, *Virtual moduli cycles and Gromov-Witten invariants of algebraic varieties*, J. Amer. Math. Soc. **11** (1998), 119--174.  
+**[BF]** K. Behrend, B. Fantechi, *The intrinsic normal cone*, Invent. Math. **128** (1997), 45--88.  
+**[FO]** K. Fukaya, K. Ono, *Arnold conjecture and Gromov-Witten invariant*, Topology **38** (1999), 933--1048.  
 **[MS]** D. McDuff, D. Salamon, *J-holomorphic Curves and Symplectic Topology*, AMS Colloquium Publications **52**, 2nd ed., 2012.

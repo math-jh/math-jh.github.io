@@ -160,3 +160,8 @@ $$\lVert p - y_0 \rVert = \lim_k \lVert p - y_{m_k} \rVert = d(p, K)$$
 이 되어, infimum이 $y_0 \in K$에서 달성된다. $K$가 닫혀 있지 않으면 이 결론이 깨질 수 있다. 가령 $K = (0, 1)$, $p = 0$이면 $d(p, K) = 0$이지만 이를 달성하는 점이 $K$ 안에 없다.
 :::
 
+---
+
+**참고문헌**
+
+**[Rud]** W. Rudin, *Principles of mathematical analysis*, 3rd ed., McGraw-Hill, 1976.

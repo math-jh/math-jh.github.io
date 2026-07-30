@@ -212,3 +212,9 @@ $$\Gal(\mathbb{L}/\mathbb{K})\rightarrow\Gal(\mathbb{M}/\mathbb{K});\qquad \sigm
 
 이제 surjectivity를 보이자. 임의의 $\tau\in\Gal(\mathbb{M}/\mathbb{K})$가 주어졌다 하면, $\tau$를 $\mathbb{M}$에서 $\overline{\mathbb{K}}$로의 $\mathbb{K}$-homomorphism으로 보고 다시 [명제 1](#prop1)을 적용하여 $\tau$를 확장하는 $\overline{\mathbb{K}}$의 $\mathbb{K}$-automorphism $u$를 얻는다. 그럼 $\mathbb{L}/\mathbb{K}$가 quasi-Galois이므로 $u(\mathbb{L})=\mathbb{L}$이고, $\sigma=u\vert_\mathbb{L}$은 $\Gal(\mathbb{L}/\mathbb{K})$의 원소이며 $\sigma\vert_\mathbb{M}=u\vert_\mathbb{M}=\tau$이다.
 :::
+
+---
+
+**참고문헌**
+
+**[Bou]** N. Bourbaki. *Algebra II: Chapters 4–7*. Springer, 2003.

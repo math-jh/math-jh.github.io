@@ -304,3 +304,9 @@ Now if $n \geq 5$, the permutations fixing the elements $\{6, \ldots, n\}$ form 
 :::
 
 Although this corollary is a purely group-theoretic fact, its most famous consequence lies in field theory. The fact that the Galois group of a general polynomial of degree $n \geq 5$ is $S_n$ and that this $S_n$ is not solvable forms the group-theoretic core of the theorem that general equations of degree $5$ or higher cannot be solved by radicals ([\[Field Theory\] §Solvability by Radicals](/en/math/field_theory/solvability_by_radicals)).
+
+---
+
+**References**
+
+**[DF]** D. S. Dummit and R. M. Foote, *Abstract algebra*, 3rd ed., Wiley, 2004.

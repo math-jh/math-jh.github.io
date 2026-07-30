@@ -135,3 +135,9 @@ $$\prod_{i\in I}\interior A_i\subseteq \interior\left(\prod_{i\in I}A_i\right)$$
 
 거꾸로 $x=(x_i)\in\interior\left(\prod A_i\right)$라 하자. 그럼 base를 생각하면 $x\in \prod U_i\subseteq \prod A_i$이도록 하는 열린집합들 $U_i$가 존재한다. 각각의 $j\in I$를 고정하면, 임의의 $y_j\in U_j$에 대하여 $x$의 $j$번째 성분만 $y_j$로 바꾼 원소는 여전히 $\prod U_i$에 속하고 (다른 성분들은 $x_i\in U_i$), 따라서 $\prod A_i$에 속한다. 이 원소의 $j$번째 성분을 읽으면 $y_j\in A_j$이다. 즉 $U_j\subseteq A_j$이고, $U_j$가 열린집합이므로 $x_j\in U_j\subseteq \interior A_j$이다. 이것이 모든 $j$에 대해 성립하므로 $x\in\prod_{i\in I}\interior A_i$이다.
 :::
+
+---
+
+**참고문헌**
+
+**[Bou]** N. Bourbaki, <i>General Topology</i>. Elements of mathematics. Springer, 1995.

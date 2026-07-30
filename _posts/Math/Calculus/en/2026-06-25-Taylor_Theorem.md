@@ -145,3 +145,10 @@ $$\frac{e^x - 1 - x}{x^2} = \frac{x^2/2 + x^3/6 + \cdots}{x^2} = \frac12 + \frac
 
 This is a result that can also be verified by applying l'Hôpital's rule twice; the reason Taylor expansion works is that it retains information about higher-order terms, so even after canceling the denominator with the numerator, information still remains.
 :::
+
+---
+
+**References**
+
+**[Ste]** J. Stewart, *Calculus*, 8th ed., Cengage Learning, 2016.  
+**[Kim]** 김홍종, *미적분학 1·2*, 제3개정판, 서울대학교출판문화원, 2020.

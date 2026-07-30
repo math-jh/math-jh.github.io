@@ -45,7 +45,7 @@ Exponential exact sequence
 
 $$0 \rightarrow \mathbb{Z} \rightarrow \mathcal{O}_X \xrightarrow{f\mapsto e^{2\pi if}} \mathcal{O}_X^{\ast} \rightarrow 0$$
 
-의 long exact sequence는 connecting homomorphism $\delta: H^1(X, \mathcal{O}_X^{\ast}) \rightarrow H^2(X, \mathbb{Z})$를 준다. Line bundle은 transition cocycle $\{g_{\alpha\beta}\} \in H^1(X, \mathcal{O}_X^{\ast})$로 분류되며 ([§선다발과 벡터다발](/ko/math/algebraic_varieties/line_bundles)), $c_1(\mathcal{L}) = \delta([\mathcal{L}])$이 위상적 $c_1$과 일치한다. 한편 section $s$를 국소적으로 $s_\alpha$로 적으면 $s_\alpha = g_{\alpha\beta}s_\beta$이고 $D = \divisor(s)$는 국소방정식 $s_\alpha = 0$으로 주어지므로, $\delta$를 추적하면 $\delta([\mathcal{L}])$이 $D$의 cycle class $[D]$와 일치한다. 다른 section $s'$를 택하면 $s'/s$가 전역 유리함수이므로 $\divisor(s') - \divisor(s) = \divisor(s'/s)$는 principal divisor이고, principal divisor의 cycle class는 $0$이므로 $[D]$는 $s$에 무관하다. 위상적 추적의 자세한 계산은 [Har], [BT]로 미룬다.
+의 long exact sequence는 connecting homomorphism $\delta: H^1(X, \mathcal{O}_X^{\ast}) \rightarrow H^2(X, \mathbb{Z})$를 준다. Line bundle은 transition cocycle $\{g_{\alpha\beta}\} \in H^1(X, \mathcal{O}_X^{\ast})$로 분류되며 ([§선다발과 벡터다발](/ko/math/algebraic_varieties/line_bundles)), $c_1(\mathcal{L}) = \delta([\mathcal{L}])$이 위상적 $c_1$과 일치한다. 한편 section $s$를 국소적으로 $s_\alpha$로 적으면 $s_\alpha = g_{\alpha\beta}s_\beta$이고 $D = \divisor(s)$는 국소방정식 $s_\alpha = 0$으로 주어지므로, $\delta$를 추적하면 $\delta([\mathcal{L}])$이 $D$의 cycle class $[D]$와 일치한다. 다른 section $s'$를 택하면 $s'/s$가 전역 유리함수이므로 $\divisor(s') - \divisor(s) = \divisor(s'/s)$는 principal divisor이고, principal divisor의 cycle class는 $0$이므로 $[D]$는 $s$에 무관하다. 위상적 추적의 자세한 계산은 [Hart], [BT]로 미룬다.
 :::
 
 즉 line bundle의 $c_1$은 임의의 section의 영점 자리이며 그 class는 section 선택에 무관한데, 이것이 Chern class의 기하학적 원형이다. 대수적으로는 이 등식이 $\CH^1(X) = \mathrm{Pic}(X)$에서 성립하고, cycle class map을 거쳐 $H^2(X, \mathbb{Z})$로 보내진 것이 위의 명제이다. 같은 그림이 높은 rank로도 이어진다. Globally generated rank $r$ 다발 $\mathcal{E}$의 generic section $s$는 codimension $r$의 영점자리 $Z(s)$를 가지며 그 class가 top Chern class $c_r(\mathcal{E})$이다. 더 일반적으로 generic section $s_1, \ldots, s_{r-p+1}$을 택하면, 이들이 fiber에서 일차종속이 되는 점들의 자리인 *degeneracy locus*는 codimension $p$의 cycle이고 그 class가 $c_p(\mathcal{E})$이다 ([Ful]). 요컨대 $c_p(\mathcal{E})$는 "$\mathcal{E}$가 $r-p+1$개의 독립 section을 갖지 못하게 하는 obstruction"을 재는 cycle이다.
@@ -209,6 +209,6 @@ $$\rchi_{\mathrm{top}}(X) = \int_X c_2(T_X) = d(d^2 - 4d + 6)$$
 
 **참고문헌**
 
-**[Har]** R. Hartshorne, *Algebraic geometry*, Springer, 1977.  
+**[Hart]** R. Hartshorne, *Algebraic geometry*, Springer, 1977.  
 **[Ful]** W. Fulton, *Intersection theory*, Springer, 1998.  
 **[BT]** R. Bott and L. Tu, *Differential forms in algebraic topology*, Springer, 1982.

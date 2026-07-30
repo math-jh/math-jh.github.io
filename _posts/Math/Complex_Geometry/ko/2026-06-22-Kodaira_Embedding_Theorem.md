@@ -279,12 +279,8 @@ Lattice $\Lambda \subseteq \mathbb{C}^n$에 의한 복소토러스 $T = \mathbb{
 
 **참고문헌**
 
-**[Griffiths–Harris]** P. Griffiths and J. Harris, *Principles of Algebraic Geometry*, Wiley, 1978.
-
-**[Huybrechts]** D. Huybrechts, *Complex Geometry: An Introduction*, Springer, 2005.
-
-**[Wells]** R. O. Wells, *Differential Analysis on Complex Manifolds*, 3rd ed., Springer, 2008.
-
-**[Demailly]** J.-P. Demailly, *Complex Analytic and Differential Geometry*, 2012.
-
+**[Griffiths–Harris]** P. Griffiths and J. Harris, *Principles of Algebraic Geometry*, Wiley, 1978.  
+**[Huybrechts]** D. Huybrechts, *Complex Geometry: An Introduction*, Springer, 2005.  
+**[Wells]** R. O. Wells, *Differential Analysis on Complex Manifolds*, 3rd ed., Springer, 2008.  
+**[Demailly]** J.-P. Demailly, *Complex Analytic and Differential Geometry*, 2012.  
 **[Voisin]** C. Voisin, *Hodge Theory and Complex Algebraic Geometry I*, Cambridge University Press, 2002.

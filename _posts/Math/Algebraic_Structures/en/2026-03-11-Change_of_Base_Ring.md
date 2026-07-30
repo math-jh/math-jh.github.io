@@ -141,4 +141,12 @@ An adjunction $\phi^\ast\dashv\phi_\ast$ exists.
 
 Thus $\phi^\ast:\lMod{B} \rightarrow\lMod{A}$ is both a left adjoint and a right adjoint, and therefore commutes with all limits and colimits.
 
+---
+
+**References**
+
+**[Bou]** Bourbaki, N. Algebra I. *Elements of Mathematics*. Springer. 1998.
+
+---
+
 [^1]: Strictly speaking, in order for the first isomorphism in this formula to make sense, we must use the fact that $$B$$ is an $$(A,\mathbb{Z})$$-bimodule.

@@ -211,3 +211,9 @@ $$\lvert t^j e^{\lambda t}\rvert = t^j e^{(\Real\lambda) t}$$
 Symmetric으로, 어떤 고윳값이 $\Real\lambda > 0$이면 그 모드를 따라 해가 지수적으로 발산하고, 고윳값이 모두 순허수이면 [예시 6](#ex6)처럼 해가 진동하며 bounded로 머문다. 이렇게 평형 $y = 0$의 안정·불안정·중립 거동이 고윳값의 실수부 부호로 한꺼번에 읽힌다.
 
 이렇게 선형 미분방정식의 풀이는 행렬의 고윳값·고유벡터, 곧 선형사상의 spectrum 구조로 완전히 귀착된다 ([\[다중선형대수학\] §행렬과 선형사상](/ko/math/multilinear_algebra/matrices_and_linear_maps)). 미분방정식의 해의 정성적 거동(평형의 stability, 진동, 발산)이 고윳값의 실수부와 허수부로 읽힌다는 사실은 동역학계 이론의 출발점이며, 해석학·선형대수·기하가 만나는 지점이다.
+
+---
+
+**참고문헌**
+
+**[Rud]** W. Rudin, *Principles of mathematical analysis*, 3rd ed., McGraw-Hill, 1976.

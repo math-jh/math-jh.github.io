@@ -275,3 +275,10 @@ L'Hôpital's rule also holds in the following variants.
     
     Choosing $x_0$ close to $a$ forces $\xi$ close to $a$ as well, so under the hypothesis of [Theorem 18](#thm18) the right-hand side converges to $L$ as $\xi \rightarrow a$. Hence by taking $x_0$ sufficiently close to $a$, the left-hand ratio can be made arbitrarily close to $L$. Finally, since $f(x), g(x)\rightarrow\infty$ as $x\rightarrow a$, the fixed terms $f(x_0), g(x_0)$ become negligible, so this ratio has the same limit as $f(x)/g(x)$, and therefore $\lim_{x\rightarrow a} f(x)/g(x)=L$.
 :::
+
+---
+
+**References**
+
+**[Ste]** J. Stewart, *Calculus*, 8th ed., Cengage Learning, 2016.  
+**[Kim]** 김홍종, *미적분학 1·2*, 제3개정판, 서울대학교출판문화원, 2020.

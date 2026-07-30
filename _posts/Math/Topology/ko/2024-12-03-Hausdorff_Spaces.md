@@ -162,6 +162,12 @@ $$x\sim y\iff f(x)=f(y)$$
 에 대하여, quotient space $X/{\sim}$은 Hausdorff이다.
 :::
 
+---
 
+**참고문헌**
+
+**[Bou]** N. Bourbaki, <i>General Topology</i>. Elements of mathematics. Springer, 1995.
+
+---
 
 [^1]: 이는 $x$와 $y$를 각각 포함하는 열린집합들의 모임이 서로 같지 않다는 것과 동치이다. 

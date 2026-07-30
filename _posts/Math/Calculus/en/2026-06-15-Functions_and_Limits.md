@@ -269,3 +269,10 @@ $$x < N\implies\lvert f(x) - L\rvert < \epsilon$$
 For example, $\lim_{x\rightarrow\infty}1/x = 0$, and for rational functions, the leading term dominates the behavior, so $\lim_{x\rightarrow\infty}(2x^2 + 1)/(3x^2 - x) = 2/3$. If such a finite limit $L$ exists, the line $y = L$ becomes a *horizontal asymptote* of the graph.
 
 When direct substitution yields an indeterminate form of the type $0/0$, we can factor or rationalize the numerator to cancel the zero of the denominator, transforming it into a form to which the limit laws apply. The $\lim(\sin x)/x = 1$ from [Example 10](#ex10) is also combined with such algebraic techniques to handle indeterminate forms involving $\sin$.
+
+---
+
+**References**
+
+**[Ste]** J. Stewart, *Calculus*, 8th ed., Cengage Learning, 2016.  
+**[Kim]** 김홍종, *미적분학 1·2*, 제3개정판, 서울대학교출판문화원, 2020.

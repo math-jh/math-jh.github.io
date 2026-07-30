@@ -179,6 +179,6 @@ Schubert variety들은 Grassmannian의 *cell decomposition*을 제공한다. 즉
 
 **참고문헌**
 
-**[Harris]** J. Harris, *Algebraic Geometry: A First Course*, Springer, 1992.  
+**[Har]** J. Harris, *Algebraic Geometry: A First Course*, Springer, 1992.  
 **[GH]** P. Griffiths and J. Harris, *Principles of Algebraic Geometry*, Wiley, 1978.  
 **[Ful]** W. Fulton, *Young Tableaux*, Cambridge University Press

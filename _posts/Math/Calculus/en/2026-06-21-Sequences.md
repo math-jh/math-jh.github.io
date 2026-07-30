@@ -170,3 +170,10 @@ This proposition is more useful when showing that a sequence does *not* converge
 ::: Example 11 (A divergent sequence)
 Consider the sequence $a_n = (-1)^n$. The even subsequence $a_{2k} = 1 \rightarrow 1$ and the odd subsequence $a_{2k-1} = -1 \rightarrow -1$ have different limits, so by [Proposition 10](#prop10), $(a_n)$ diverges.
 :::
+
+---
+
+**References**
+
+**[Ste]** J. Stewart, *Calculus*, 8th ed., Cengage Learning, 2016.  
+**[Kim]** 김홍종, *미적분학 1·2*, 제3개정판, 서울대학교출판문화원, 2020.

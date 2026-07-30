@@ -209,7 +209,7 @@ $\mathcal{L}$이 *ample<sub>풍부한</sub>*이라는 것은 어떤 $m > 0$에 �
 
 **참고문헌**
 
-**[Har]** R. Hartshorne, *Algebraic Geometry*, Graduate Texts in Mathematics, Springer, 1977.  
+**[Hart]** R. Hartshorne, *Algebraic Geometry*, Graduate Texts in Mathematics, Springer, 1977.  
 **[Sha]** I. R. Shafarevich, *Basic Algebraic Geometry I: Varieties in Projective Space*, Springer, 2013.
 
 ---

@@ -113,3 +113,10 @@ $$\mathbf{F}(\mathbf{r}(t))\cdot \mathbf{r}'(t) = (-\sin t, \cos t, 0)\cdot(-\si
 
 이므로 적분값이 $\oint_C = \int_0^{2\pi} dt = 2\pi$로 일치하며, boundary를 공유하는 다른 곡면, 가령 반구를 택하여 계산해도 적분값은 변하지 않는다는 것을 확인할 수 있다.
 :::
+
+---
+
+**참고문헌**
+
+**[Ste]** J. Stewart, *Calculus*, 8th ed., Cengage Learning, 2016.  
+**[Kim]** 김홍종, *미적분학 1·2*, 제3개정판, 서울대학교출판문화원, 2020.

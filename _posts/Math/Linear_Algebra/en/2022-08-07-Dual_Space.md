@@ -256,6 +256,6 @@ It suffices to take $U=W^\ast$ in [Proposition 10](#prop10).
 **References**
 
 **[Lee]** 이인석, *선형대수와 군*, 서울대학교 출판문화원, 2005.  
-**[Bou]** Bourbaki, N. *Algebra I*, Elements of Mathematics. Springer-Verlag Berlin, 1998.  
+**[Bou]** Bourbaki, N. *Algebra I*, Elements of Mathematics. Springer-Verlag Berlin, 1998.
 
 ---

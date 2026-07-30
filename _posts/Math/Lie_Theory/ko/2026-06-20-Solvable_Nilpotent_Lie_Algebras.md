@@ -342,6 +342,6 @@ $$0=\bar V_0\subsetneq\bar V_1\subsetneq\cdots\subsetneq\bar V_{n-1}=\bar V$$
 
 **[Hum]** J. E. Humphreys, *Introduction to Lie algebras and representation theory*, Graduate Texts in Mathematics, Springer, 1972.  
 **[Bou]** N. Bourbaki, *Lie groups and Lie algebras, Chapters 1–3*, Springer, 1989.  
-**[Ser]** J.-P. Serre, *Lie algebras and Lie groups*, Lecture Notes in Mathematics, Springer, 2006.  
+**[Ser]** J.-P. Serre, *Lie algebras and Lie groups*, Lecture Notes in Mathematics, Springer, 2006.
 
 ---

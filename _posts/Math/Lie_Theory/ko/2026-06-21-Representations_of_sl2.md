@@ -211,4 +211,4 @@ $$V(m)\otimes V(n)\cong\bigoplus_{r\in\{m-n,m-n+2,\dots,m+n\}}V(r)=\bigoplus_{k=
 
 **[FH]** W. Fulton and J. Harris, *Representation theory: a first course*, Graduate Texts in Mathematics, Springer, 1991.  
 **[Hum]** J. E. Humphreys, *Introduction to Lie algebras and representation theory*, Graduate Texts in Mathematics, Springer, 1972.  
-**[Kna]** A. W. Knapp, *Lie groups beyond an introduction*, Progress in Mathematics, Birkhäuser, 2002.  
+**[Kna]** A. W. Knapp, *Lie groups beyond an introduction*, Progress in Mathematics, Birkhäuser, 2002.

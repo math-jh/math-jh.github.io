@@ -229,6 +229,6 @@ $$(X\times_S Y)(T)\cong \{(\psi_X, \psi_Y)\in X(T)\times Y(T)\mid \psi_X, \psi_Y
 **[Vak]** R. Vakil, *The rising sea: Foundations of algebraic geometry*. Available [online](https://math.stanford.edu/~vakil/216blog/).  
 **[GD]** A. Grothendieck, J. Dieudonné, *Éléments de géométrie algébrique I*. Springer, 1971.  
 **[Mum]** D. Mumford, *The red book of varieties and schemes*. Lecture notes in mathematics. Springer, 1999.  
-**[EH]** D. Eisenbud, J. Harris, *The geometry of schemes*. Graduate texts in mathematics. Springer, 2000.  
+**[EH]** D. Eisenbud, J. Harris, *The geometry of schemes*. Graduate texts in mathematics. Springer, 2000.
 
 ---

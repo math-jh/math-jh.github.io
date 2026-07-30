@@ -221,10 +221,7 @@ $$0 \rightarrow H^2_c(\mathbb{A}^1) \rightarrow H^2(\mathbb{P}^1) = \mathbb{Z} \
 
 **참고문헌**
 
-**[KS]** M. Kashiwara, P. Schapira, *Sheaves on manifolds*, Springer, 1990.
-
-**[Dim]** A. Dimca, *Sheaves in topology*, Springer, 2004.
-
-**[SGA4]** M. Artin, A. Grothendieck, J.-L. Verdier, *Théorie des topos et cohomologie étale des schémas (SGA 4)*, Springer, 1972–1973.
-
+**[KS]** M. Kashiwara, P. Schapira, *Sheaves on manifolds*, Springer, 1990.  
+**[Dim]** A. Dimca, *Sheaves in topology*, Springer, 2004.  
+**[SGA4]** M. Artin, A. Grothendieck, J.-L. Verdier, *Théorie des topos et cohomologie étale des schémas (SGA 4)*, Springer, 1972–1973.  
 **[Sch]** P. Scholze, *Six-functor formalisms*, lecture notes.

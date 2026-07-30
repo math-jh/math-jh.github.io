@@ -418,10 +418,8 @@ Only (3) requires a small calculation. When we complexify $E_{\mathbb{R}}\otimes
 
 **References**
 
-**[MS]** J. W. Milnor and J. D. Stasheff, *Characteristic Classes*, Annals of Mathematics Studies 76, Princeton University Press, 1974.
-
-**[BT]** R. Bott and L. W. Tu, *Differential Forms in Algebraic Topology*, Springer, 1982.
-
+**[MS]** J. W. Milnor and J. D. Stasheff, *Characteristic Classes*, Annals of Mathematics Studies 76, Princeton University Press, 1974.  
+**[BT]** R. Bott and L. W. Tu, *Differential Forms in Algebraic Topology*, Springer, 1982.  
 **[Hat]** A. Hatcher, *Vector Bundles and K-Theory*, online notes, 2017.
 
 ---

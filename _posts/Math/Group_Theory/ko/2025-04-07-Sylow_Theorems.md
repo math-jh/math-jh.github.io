@@ -273,3 +273,8 @@ $$\lvert A_5\rvert=\frac{5!}{2}=60=2^2\cdot 3\cdot 5$$
 결론적으로 남는 가능성은 $\lvert N\rvert=60$뿐이며, 즉 $N=A_5$이다. 따라서 $A_5$는 simple group이다.
 :::
 
+---
+
+**참고문헌**
+
+**[DF]** D. S. Dummit and R. M. Foote, *Abstract algebra*, 3rd ed., Wiley, 2004.

@@ -158,3 +158,9 @@ $$U(P, f) - L(P, f) = \bigl(U(P_1, f) - L(P_1, f)\bigr) + \bigl(U(P_2, f) - L(P_
 :::
 
 이로써 [\[미적분학\] §적분, ⁋정리 10](/ko/math/calculus/integration#thm10)에서 받아들였던 연속함수의 적분가능성이 완비성에 기초하여 증명되었고, 같은 다르부 틀에서 선형성·구간가법성·단조성도 모두 따라 나왔다.
+
+---
+
+**참고문헌**
+
+**[Rud]** W. Rudin, *Principles of mathematical analysis*, 3rd ed., McGraw-Hill, 1976.

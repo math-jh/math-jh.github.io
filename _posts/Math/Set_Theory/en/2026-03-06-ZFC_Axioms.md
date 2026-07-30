@@ -147,7 +147,7 @@ The ZFC axiom system includes several additional axioms beyond these, which will
 **References**
 
 **[HJJ]** K. Hrbacek, T.J. Jeck, and T. Jech. *Introduction to Set Theory*. Lecture Notes in Pure and Applied Mathematics. M. Dekker, 1978.  
-**[Bou]** N. Bourbaki. *Elements of the History of Mathematics*. Springer, 2013  
+**[Bou]** N. Bourbaki. *Elements of the History of Mathematics*. Springer, 2013
 Wikipedia, [Naive set theory](https://en.wikipedia.org/wiki/Naive_set_theory), [Set-theoretic definition of natural numbers](https://en.wikipedia.org/wiki/Set-theoretic_definition_of_natural_numbers).
 
 ---

@@ -172,3 +172,8 @@ $$\frac{\lvert \sqrt{x} - \sqrt{0} \rvert}{\lvert x - 0\rvert} = \frac{1}{\sqrt{
 
 이어서 어떤 유한한 립시츠 상수로도 묶이지 않는다. 즉 립시츠 연속, 균등연속, 단순 연속은 갈수록 약해지는 세 단계의 조건이며, 컴팩트 정의역 위에서는 가운데 두 조건이 연속과 합쳐진다.
 
+---
+
+**참고문헌**
+
+**[Rud]** W. Rudin, *Principles of mathematical analysis*, 3rd ed., McGraw-Hill, 1976.

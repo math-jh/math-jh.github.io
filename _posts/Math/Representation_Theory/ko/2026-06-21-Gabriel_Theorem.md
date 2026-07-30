@@ -145,12 +145,8 @@ $$M_{[1,2]}=(1,1,0),\quad M_{[2,3]}=(0,1,1),\quad M_{[1,3]}=(1,1,1)$$
 
 **참고문헌**
 
-**[Gab]** P. Gabriel, *Unzerlegbare Darstellungen I*, Manuscripta Mathematica **6** (1972), 71–103.
-
-**[BGP]** I. N. Bernstein, I. M. Gelfand, and V. A. Ponomarev, *Coxeter functors and Gabriel's theorem*, Russian Mathematical Surveys **28** (1973), 17–32.
-
-**[ASS]** I. Assem, D. Simson, and A. Skowroński, *Elements of the representation theory of associative algebras, Volume 1: Techniques of representation theory*, Cambridge University Press, 2006.
-
-**[Br]** M. Brion, *Representations of quivers*, in *Geometric methods in representation theory I*, Société Mathématique de France, 2012.
-
+**[Gab]** P. Gabriel, *Unzerlegbare Darstellungen I*, Manuscripta Mathematica **6** (1972), 71–103.  
+**[BGP]** I. N. Bernstein, I. M. Gelfand, and V. A. Ponomarev, *Coxeter functors and Gabriel's theorem*, Russian Mathematical Surveys **28** (1973), 17–32.  
+**[ASS]** I. Assem, D. Simson, and A. Skowroński, *Elements of the representation theory of associative algebras, Volume 1: Techniques of representation theory*, Cambridge University Press, 2006.  
+**[Br]** M. Brion, *Representations of quivers*, in *Geometric methods in representation theory I*, Société Mathématique de France, 2012.  
 **[DW]** H. Derksen and J. Weyman, *An introduction to quiver representations*, American Mathematical Society, 2017.

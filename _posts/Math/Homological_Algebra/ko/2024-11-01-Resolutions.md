@@ -170,3 +170,9 @@ $$0 \rightarrow P' \rightarrow P \rightarrow P'' \rightarrow 0$$
 
 을 얻게 된다. 이 과정을 반복하여 $P_\bullet$을 얻는다.
 :::
+
+---
+
+**참고문헌**
+
+**[Wei]** C.A. Weibel. *An Introduction to Homological Algebra*. Cambridge Studies in Advanced Mathematics. Cambridge University Press, 1995.

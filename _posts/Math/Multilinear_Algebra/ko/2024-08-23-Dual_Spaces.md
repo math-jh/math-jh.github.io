@@ -140,3 +140,8 @@ $$\langle x,-\rangle: M^\ast \rightarrow A$$
 임의의 free module $M$에 대하여, 위에서 정의한 $M \rightarrow M^{\ast\ast}$는 injective이다. 만일 여기에 더하여, $M$이 finitely generated라면 이 함수는 bijective이다.
 :::
 
+---
+
+**참고문헌**
+
+**[Bou]** Bourbaki, N. Algebra I. *Elements of Mathematics*. Springer. 1998.

@@ -158,3 +158,10 @@ $$s_\alpha^\ast\omega=s_\alpha^\ast(-d\lambda)=-d(s_\alpha^\ast\lambda)=-d\alpha
 ::: 참고 12
 Lagrangian 부분다양체는 symplectic manifold 사이의 morphism까지 포섭한다. 두 symplectic manifold $(M,\omega)$, $(M',\omega')$의 곱 $M\times M'$에 symplectic form $\Omega=\pi^\ast\omega-\pi'^\ast\omega'$ ($\pi,\pi'$는 각 인자로의 projection) 를 주면, diffeomorphism $\varphi:M\rightarrow M'$가 symplectomorphism ([정의 5](#def5)) 인 것은 그 graph $\Gamma_\varphi=\{(m,\varphi(m))\}$가 $(M\times M',\Omega)$의 Lagrangian 부분다양체인 것과 동치이다. 실제로 $j:M\rightarrow M\times M'$, $m\mapsto(m,\varphi(m))$에 대하여 $j^\ast\Omega=j^\ast\pi^\ast\omega-j^\ast\pi'^\ast\omega'=\omega-\varphi^\ast\omega'$이고 $\dim\Gamma_\varphi=\dim M=\tfrac{1}{2}\dim(M\times M')$이므로, $\Gamma_\varphi$가 Lagrangian인 것이 $\varphi^\ast\omega'=\omega$와 동치이기 때문이다. 이처럼 사교 morphism마저 Lagrangian으로 환원되는 현상을 "symplectic 범주의 morphism은 Lagrangian이다"라는 Weinstein의 표어가 요약한다.
 :::
+
+---
+
+**참고문헌**
+
+**[CdS]** A. Cannas da Silva, *Lectures on Symplectic Geometry*, Lecture Notes in Mathematics 1764, Springer, 2008.  
+**[MS]** D. Mcduff and D. Salamon. *Introduction to symplectic topology*. Oxford graduate texts in mathematics. Oxford University Press, 2017.

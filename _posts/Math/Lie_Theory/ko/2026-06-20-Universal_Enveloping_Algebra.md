@@ -287,6 +287,6 @@ $$\Omega=2fe+h+\tfrac{1}{2}h^2$$
 
 **[Bou]** N. Bourbaki, *Lie groups and Lie algebras, Chapters 1–3*, Springer, 1989.  
 **[Dix]** J. Dixmier, *Enveloping algebras*, Graduate Studies in Mathematics, American Mathematical Society, 1996.  
-**[Hum]** J. E. Humphreys, *Introduction to Lie algebras and representation theory*, Graduate Texts in Mathematics, Springer, 1972.  
+**[Hum]** J. E. Humphreys, *Introduction to Lie algebras and representation theory*, Graduate Texts in Mathematics, Springer, 1972.
 
 ---

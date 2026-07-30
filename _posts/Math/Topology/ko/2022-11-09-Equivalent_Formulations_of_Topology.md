@@ -134,3 +134,9 @@ $$\mathcal{F}\vert_A=\{F\cap A\mid F\in \mathcal{F}\}$$
 ::: 정의 8
 만일 위의 상황에서 $\mathcal{F}\vert_A$가 $A$의 filter를 정의한다면, filter $\mathcal{F}$를 $A$의 filter라 부른다. 
 :::
+
+---
+
+**참고문헌**
+
+**[Bou]** N. Bourbaki, <i>General Topology</i>. Elements of mathematics. Springer, 1995.

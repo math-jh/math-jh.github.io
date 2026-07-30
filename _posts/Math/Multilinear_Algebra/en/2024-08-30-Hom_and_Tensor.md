@@ -143,3 +143,9 @@ For any two finitely generated projective $A$-modules $M,N$ and $A$-linear maps 
 
 $$\tr(u\circ v)=\tr(v\circ u)$$
 :::
+
+---
+
+**References**
+
+**[Bou]** Bourbaki, N. Algebra I. *Elements of Mathematics*. Springer. 1998.

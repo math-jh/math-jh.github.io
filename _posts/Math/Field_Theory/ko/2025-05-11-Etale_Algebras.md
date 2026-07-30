@@ -274,3 +274,8 @@ Finite degree commutative $\mathbb{K}$-algebra $A$에 대하여, $[A:\mathbb{K}]
 3. 임의의 extension $\mathbb{K}'/\mathbb{K}$, $\mathbb{K}'$-algebra $A'$에 대하여, $A'$가 $\mathbb{K}$에 대해 étale인 것은 $A'$가 $\mathbb{K}'$에 대해 étale이고 $\mathbb{K}'$가 $\mathbb{K}$에 대해 étale인 것과 동치이다. 
 :::
 
+---
+
+**참고문헌**
+
+**[Bou]** N. Bourbaki. *Algebra II: Chapters 4–7*. Springer, 2003.

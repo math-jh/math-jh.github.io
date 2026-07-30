@@ -375,8 +375,7 @@ $$\chi_{\mathfrak{m},A}(n+1)=\chi_{\mathfrak{m},A}(n)+\binom{n+d-1}{d-1}=\binom{
 
 **참고문헌**
 
-**[AM]** M. F. Atiyah, I. G. Macdonald. *Introduction to Commutative Algebra*. Addison-Wesley, 1969.
-
+**[AM]** M. F. Atiyah, I. G. Macdonald. *Introduction to Commutative Algebra*. Addison-Wesley, 1969.  
 **[Eis]** David Eisenbud. *Commutative Algebra: with a view toward algebraic geometry*. Springer, 1995.
 
 ---

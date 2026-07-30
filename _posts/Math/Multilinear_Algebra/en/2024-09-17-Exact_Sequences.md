@@ -174,3 +174,9 @@ First assume condition 3. Then setting $r=\pr_M\circ\alpha$ gives condition 1, a
 
 For the remaining directions, we assume conditions 1 and 2 respectively and prove condition 3. If condition 1 holds, define $\alpha:L \rightarrow M\oplus N$ by $z\mapsto (r(z), v(z))$; if condition 2 holds, define $\beta: M\oplus N \rightarrow L$ by $(x,y)\mapsto u(x)+s(y)$. Then by [Lemma 9](#lem9) one sees that $\alpha,\beta^{-1}$ define the isomorphism required in condition 3.
 :::
+
+---
+
+**References**
+
+**[Bou]** Bourbaki, N. Algebra I. *Elements of Mathematics*. Springer. 1998.

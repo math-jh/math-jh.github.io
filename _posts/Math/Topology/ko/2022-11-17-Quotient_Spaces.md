@@ -112,7 +112,12 @@ $$A\overset{q}{\longrightarrow}A/(R\vert_A)\overset{\overline{(p\vert_A)}}{\long
 3. $R\vert_A$-saturated인 닫힌집합 $C\subseteq A$은 $R$-saturated인 $X$의 닫힌집합과 $A$의 교집합이다.
 :::
 
+---
 
+**참고문헌**
 
+**[Bou]** N. Bourbaki, <i>General Topology</i>. Elements of mathematics. Springer, 1995.
+
+---
 
 [^1]: [§부분공간]에서와 마찬가지로, **[Mun]**에서는 이를 몫위상의 정의로 삼는다. 

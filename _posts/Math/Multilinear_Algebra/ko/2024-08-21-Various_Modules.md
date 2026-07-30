@@ -185,3 +185,9 @@ Left $A$-module $N$이 *flat module<sub>평탄가군</sub>*이라는 것은 임�
 :::
 
 임의의 free module은 flat이다. 또, module들의 direct sum이 flat인 것과 각각의 summand가 flat인 것이 동치임이 자명하다. 따라서 [명제 4](#prop4)에 의하여 projective module은 항상 flat이다. 그러나 그 역이 항상 성립하는 것은 아니다.
+
+---
+
+**참고문헌**
+
+**[Bou]** Bourbaki, N. Algebra I. *Elements of Mathematics*. Springer. 1998.

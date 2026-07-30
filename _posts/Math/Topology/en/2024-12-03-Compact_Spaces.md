@@ -138,3 +138,9 @@ A topological space $X$ is compact if and only if for every family $\mathcal{A}$
 ::: Proof
 It suffices to take complements.
 :::
+
+---
+
+**References**
+
+**[Bou]** N. Bourbaki, <i>General Topology</i>. Elements of mathematics. Springer, 1995.

@@ -95,3 +95,9 @@ Two $n\times n$ matrices $X, X'$ are called *similar* if there exists a square m
 :::
 
 Then, setting $M=N$, $\mathcal{B}=\mathcal{C}$, and $\mathcal{B}'=\mathcal{C}'$ in [Proposition 5](#prop5) above, we see that the matrix representations of an element $u\in\End_\rMod{A}(M)$ with respect to different bases are similar to one another.
+
+---
+
+**References**
+
+**[Bou]** Bourbaki, N. Algebra I. *Elements of Mathematics*. Springer. 1998.

@@ -160,8 +160,6 @@ $$\left(\frac{h}{1-e^{-h}}\right)^3=\left(1+\frac{h}{2}+\frac{h^2}{12}\right)^3=
 
 **참고문헌**
 
-**[Har]** R. Hartshorne, *Algebraic geometry*, Springer, 1977.
-
-**[Ful]** W. Fulton, *Intersection Theory*, Springer, 1984.
-
+**[Hart]** R. Hartshorne, *Algebraic geometry*, Springer, 1977.  
+**[Ful]** W. Fulton, *Intersection Theory*, Springer, 1984.  
 **[Hir]** F. Hirzebruch, *Topological Methods in Algebraic Geometry*, Springer, 1966.

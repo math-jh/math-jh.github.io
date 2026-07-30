@@ -138,7 +138,7 @@ This set is a closed subvariety of $\mathbb{A}^2 \times \mathbb{P}^1$. The condi
 - At the origin $(0,0)$ of $\mathbb{A}^2$, every point of $\mathbb{P}^1$ is possible.
 
 {% diagram Math/Algebraic_Varieties/Rational_Maps-1.png width="32em" alt="Blowup" %}
-<cap markdown="1">[Har1] p.29. Fig. 3.</cap>
+<cap markdown="1">[Hart] p.29. Fig. 3.</cap>
 
 Concretely, defining the projection $\pi_1: \Bl_{(0,0)} \mathbb{A}^2 \rightarrow \mathbb{A}^2$ by $\pi((x, y), [u : v]) = (x, y)$, the preimage of every point other than the origin is a single point, and the preimage of the origin is $\mathbb{P}^1$. This is called the *exceptional divisor*.
 
@@ -151,6 +151,6 @@ Now consider the rational map $\varphi: \mathbb{A}^2 \dashrightarrow \mathbb{P}^
 
 **References**
 
-**[Har1]** R. Hartshorne, *Algebraic Geometry*, Springer, 1977.  
-**[Har2]** J. Harris, *Algebraic Geometry: A First Course*, Springer, 1992.  
+**[Hart]** R. Hartshorne, *Algebraic Geometry*, Springer, 1977.  
+**[Har]** J. Harris, *Algebraic Geometry: A First Course*, Springer, 1992.  
 **[Sha]** I. R. Shafarevich, *Basic Algebraic Geometry I: Varieties in Projective Space*, Springer, 2013.

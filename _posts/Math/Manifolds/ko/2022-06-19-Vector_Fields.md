@@ -168,6 +168,6 @@ $X\in\mathfrak{X}(M)$이 *complete*라는 것은 모든 $t$에 대하여 $\mathc
 **참고문헌**
 
 **[War]** Frank W. Warner. *Foundations of Differentiable Manifolds and Lie Groups*, Graduate texts in mathematics, Springer, 2013  
-**[Lee]** John M. Lee. *Introduction to Smooth Manifolds*, Graduate texts in mathematics, Springer, 2012  
+**[Lee]** John M. Lee. *Introduction to Smooth Manifolds*, Graduate texts in mathematics, Springer, 2012
 
 ---

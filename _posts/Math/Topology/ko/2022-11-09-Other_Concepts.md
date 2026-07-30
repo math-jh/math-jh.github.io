@@ -142,3 +142,9 @@ $$\partial A=\cl A\setminus\interior A$$
 ::: 증명
 각각의 $U\in\mathcal{B}$마다 원소 $x_U\in U$를 하나씩 뽑아, 이들의 모임을 $D$로 잡으면 된다. 집합 $D$가 dense인 것은 임의의 열린집합 $V$가 주어질 때마다, 이를 $\mathcal{B}$의 원소들의 합집합으로 표현할 수 있고, 이 합집합은 반드시 어떤 $x_U$를 포함해야 하므로 $V\cap D\neq\emptyset$이기 때문에 성립한다.
 :::
+
+---
+
+**참고문헌**
+
+**[Bou]** N. Bourbaki, <i>General Topology</i>. Elements of mathematics. Springer, 1995.

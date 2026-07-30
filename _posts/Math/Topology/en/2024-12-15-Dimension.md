@@ -201,3 +201,9 @@ Now let us show the following proposition.
 ::: Proposition 15
 If there exist two finite dimensional closed subspaces $Y,Z$ of a topological space $X$ such that $X=Y\cup Z$, then their Krull dimensions also satisfy the formula $\dim X=\max(\dim Y,\dim Z)$.
 :::
+
+---
+
+**References**
+
+**[Bou]** N. Bourbaki, <i>General Topology</i>. Elements of mathematics. Springer, 1995.

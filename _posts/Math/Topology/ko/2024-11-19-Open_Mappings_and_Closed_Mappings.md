@@ -93,3 +93,9 @@ $$X \overset{p}{\longrightarrow} X/R \overset{h}{\longrightarrow} f(X)\overset{i
 
 ::: 명제 6
 :::
+
+---
+
+**참고문헌**
+
+**[Bou]** N. Bourbaki, <i>General Topology</i>. Elements of mathematics. Springer, 1995.

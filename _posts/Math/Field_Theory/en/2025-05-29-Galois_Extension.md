@@ -213,3 +213,9 @@ First let us verify that this map is well defined. For any $\sigma\in\Gal(\mathb
 
 We now show surjectivity. Given any $\tau\in\Gal(\mathbb{M}/\mathbb{K})$, regarding $\tau$ as a $\mathbb{K}$-homomorphism from $\mathbb{M}$ to $\overline{\mathbb{K}}$ and applying [Proposition 1](#prop1) again, we obtain a $\mathbb{K}$-automorphism $u$ of $\overline{\mathbb{K}}$ extending $\tau$. Then since $\mathbb{L}/\mathbb{K}$ is quasi-Galois we have $u(\mathbb{L})=\mathbb{L}$, and $\sigma=u\vert_\mathbb{L}$ is an element of $\Gal(\mathbb{L}/\mathbb{K})$ with $\sigma\vert_\mathbb{M}=u\vert_\mathbb{M}=\tau$.
 :::
+
+---
+
+**References**
+
+**[Bou]** N. Bourbaki. *Algebra II: Chapters 4–7*. Springer, 2003.

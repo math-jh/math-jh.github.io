@@ -369,3 +369,10 @@ Birationally equivalent한 두 integral locally Noetherian scheme $X, Y$에 대�
 :::
 
 즉 birational equivalence는 function field를 보존한다. Variety의 경우에는 그 역 또한 성립하는 것을 [\[대수다양체\] §유리사상, ⁋명제 10](/ko/math/algebraic_varieties/rational_maps#prop10)에서 확인하였다. 
+
+---
+
+**참고문헌**
+
+**[Har]** R. Hartshorne, *Algebraic geometry*. Graduate texts in mathematics. Springer, 1977.  
+**[Vak]** R. Vakil, *The rising sea: Foundation of algebraic geometry*. Available [online](https://math.stanford.edu/~vakil/216blog/).

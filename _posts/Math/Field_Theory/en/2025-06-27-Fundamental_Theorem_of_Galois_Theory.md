@@ -36,3 +36,9 @@ For any subextension $\mathbb{M}\in \mathscr{K}$, $\mathbb{L}/\mathbb{M}$ is als
 :::
 ::: Proof
 :::
+
+---
+
+**References**
+
+**[Bou]** N. Bourbaki. *Algebra II: Chapters 4–7*. Springer, 2003.

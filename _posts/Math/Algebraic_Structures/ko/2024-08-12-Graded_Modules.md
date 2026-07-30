@@ -64,3 +64,9 @@ Degree $d$의 graded $A$-homomorphism $u:M \rightarrow N$에 대하여, 다음�
 2. 만일 $d$가 cancellable이라면, $\ker(u)$는 $M$의 graded submodule이다.
 3. $d=0$이라면 canonical bijection $M/\ker(u)\cong\im(u)$는 graded module들 사이의 isomorphism을 정의한다. 
 :::
+
+---
+
+**참고문헌**
+
+**[Bou]** Bourbaki, N. Algebra I. *Elements of Mathematics*. Springer. 1998.

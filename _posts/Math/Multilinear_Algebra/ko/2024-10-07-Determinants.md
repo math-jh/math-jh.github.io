@@ -236,3 +236,9 @@ $$\det(\x-\iota_!u)(1\otimes_Ax)=(\x-\iota_!u)(v(1\otimes_A x))$$
 
 으로 쓸 수 있고 따라서 [명제 7](#prop7)에 의해 원하는 결과를 얻는다.
 :::
+
+---
+
+**참고문헌**
+
+**[Bou]** Bourbaki, N. Algebra I. *Elements of Mathematics*. Springer. 1998.

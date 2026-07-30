@@ -259,10 +259,7 @@ $$H^i(Q,\mathcal{O}_Q(a,b))\cong\bigoplus_{j+k=i}H^j(\mathbb{P}^1,\mathcal{O}_{\
 
 **참고문헌**
 
-**[Har]** R. Hartshorne, *Algebraic geometry*, Springer, 1977.
-
-**[Ful]** W. Fulton, *Intersection Theory*, Springer, 1984.
-
-**[Hir]** F. Hirzebruch, *Topological Methods in Algebraic Geometry*, Springer, 1966.
-
+**[Hart]** R. Hartshorne, *Algebraic geometry*, Springer, 1977.  
+**[Ful]** W. Fulton, *Intersection Theory*, Springer, 1984.  
+**[Hir]** F. Hirzebruch, *Topological Methods in Algebraic Geometry*, Springer, 1966.  
 **[SGA6]** P. Berthelot, A. Grothendieck, L. Illusie, *Séminaire de Géométrie Algébrique du Bois Marie 1966/67 (SGA 6)*, Springer, 1971.

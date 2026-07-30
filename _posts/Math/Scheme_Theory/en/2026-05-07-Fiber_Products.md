@@ -319,3 +319,10 @@ Now let us show that a finite type $\mathbb{K}$-algebra $R$ having only finitely
 
 Then each $R_l$ is a finite-dimensional $\kappa(z)$-vector space, so $R_l\otimes_{\kappa(z)}\kappa(y)$ is also a finite-dimensional $\kappa(y)$-vector space, and hence becomes an Artinian ring having only finitely many prime ideals. ([\[Commutative Algebra\] §The Jordan-Hölder Theorem, ⁋Theorem 4](/en/math/commutative_algebra/Jordan-Holder_theorem#thm4)) Now $\rho_Y^{-1}(y)$ is covered by finitely many $\Spec (R_l\otimes_{\kappa(z)}\kappa(y))$, so it is a finite set, and thus we know that $\rho_Y$ is quasi-finite.
 :::
+
+---
+
+**References**
+
+**[Har]** R. Hartshorne, *Algebraic geometry*. Graduate texts in mathematics. Springer, 1977.  
+**[Vak]** R. Vakil, *The rising sea: Foundation of algebraic geometry*. Available [online](https://math.stanford.edu/~vakil/216blog/).

@@ -112,7 +112,12 @@ In the above decomposition, the following are all equivalent.
 3. A closed set $C\subseteq A$ that is $R\vert_A$-saturated is the intersection of a closed set in $X$ that is $R$-saturated with $A$.
 :::
 
+---
 
+**References**
 
+**[Bou]** N. Bourbaki, <i>General Topology</i>. Elements of mathematics. Springer, 1995.
+
+---
 
 [^1]: Just as in [§Subspaces], **[Mun]** takes this as the definition of the quotient topology.

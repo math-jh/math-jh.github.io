@@ -247,8 +247,7 @@ $$\exp_p(v) = \gamma_v(1) = (\cos r)\, p + \frac{\sin r}{r}\, v, \qquad r = \lVe
 
 **참고문헌**
 
-**[Lee]** John M. Lee, *Introduction to Riemannian Manifolds*, Graduate Texts in Mathematics, Springer, 2019.
-
+**[Lee]** John M. Lee, *Introduction to Riemannian Manifolds*, Graduate Texts in Mathematics, Springer, 2019.  
 **[dC]** Manfredo P. do Carmo, *Riemannian Geometry*, Birkhäuser, 1992.
 
 ---

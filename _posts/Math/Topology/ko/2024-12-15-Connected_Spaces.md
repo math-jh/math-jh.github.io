@@ -217,3 +217,9 @@ $$\lVert\gamma(t')-\gamma(t'')\rVert\leq\lVert\gamma(t')-\gamma(t_0)\rVert+\lVer
 
 인 반면, 두 점의 둘째 성분의 차만 보아도 $\lVert\gamma(t')-\gamma(t'')\rVert\geq 2$이다. 이는 모순이므로, $T$는 connected이지만 path-connected는 아니다.
 :::
+
+---
+
+**참고문헌**
+
+**[Bou]** N. Bourbaki, <i>General Topology</i>. Elements of mathematics. Springer, 1995.

@@ -378,8 +378,8 @@ Of course, using this result together with [Theorem 5](#thm5), one can obtain th
 
 **References**
 
-[Hat] A. Hatcher, *Algebraic Topology*. Cambridge University Press, 2022.  
-[May] J. P. May, *A concise course in algebraic topology*.
+**[Hat]** A. Hatcher, *Algebraic Topology*. Cambridge University Press, 2022.  
+**[May]** J. P. May, *A concise course in algebraic topology*.
 
 ---
 

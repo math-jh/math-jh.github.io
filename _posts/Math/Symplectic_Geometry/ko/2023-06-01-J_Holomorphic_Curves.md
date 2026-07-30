@@ -146,8 +146,6 @@ J-holomorphic curve의 가장 영향력 있는 응용은 [§Gromov-Witten 불변
 
 **참고문헌**
 
-**[Gro85]** M. Gromov, *Pseudo-holomorphic curves in symplectic manifolds*, Invent. Math. **82** (1985), 307--347.
-
-**[MS]** D. McDuff, D. Salamon, *J-holomorphic Curves and Symplectic Topology*, AMS Colloquium Publications **52**, 2nd ed., 2012.
-
+**[Gro85]** M. Gromov, *Pseudo-holomorphic curves in symplectic manifolds*, Invent. Math. **82** (1985), 307--347.  
+**[MS]** D. McDuff, D. Salamon, *J-holomorphic Curves and Symplectic Topology*, AMS Colloquium Publications **52**, 2nd ed., 2012.  
 **[Hum]** C. Hummel, *Gromov's Compactness Theorem for Pseudoholomorphic Curves*, Progr. Math. **151**, Birkhäuser, 1997.

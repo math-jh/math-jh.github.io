@@ -319,4 +319,4 @@ $$e^{W(p)/\hbar}\,\alpha(p)\,\prod_{i=1}^n \int_{\mathbb{R}} e^{e^{2i\theta_i}t_
 **[AD]** M. Audin and M. Damian, *Morse theory and Floer homology*, Universitext, Springer, 2014.  
 **[Hör]** L. Hörmander, *The analysis of linear partial differential operators I*, Grundlehren der Mathematischen Wissenschaften **256**, Springer, 1983.  
 **[AGV]** V. I. Arnold, S. M. Gusein-Zade, and A. N. Varchenko, *Singularities of differentiable maps, Volume II*, Monographs in Mathematics **83**, Birkhäuser, 1988.  
-**[Pha]** F. Pham, *Vanishing homologies and the $n$ variable saddlepoint method*, Proc. Sympos. Pure Math. **40** (1983), 319--333.  
+**[Pha]** F. Pham, *Vanishing homologies and the $n$ variable saddlepoint method*, Proc. Sympos. Pure Math. **40** (1983), 319--333.

@@ -146,7 +146,7 @@ ZFC 공리계에는 이들 외에도 몇몇 공리들이 더 있지만, 이들�
 **참고문헌**
 
 **[HJJ]** K. Hrbacek, T.J. Jeck, and T. Jech. *Introduction to Set Theory*. Lecture Notes in Pure and Applied Mathematics. M. Dekker, 1978.  
-**[Bou]** N. Bourbaki. *Elements of the History of Mathematics*. Springer, 2013  
+**[Bou]** N. Bourbaki. *Elements of the History of Mathematics*. Springer, 2013
 Wikipedia, [Naive set theory](https://en.wikipedia.org/wiki/Naive_set_theory), [Set-theoretic definition of natural numbers](https://en.wikipedia.org/wiki/Set-theoretic_definition_of_natural_numbers).
 
 ---

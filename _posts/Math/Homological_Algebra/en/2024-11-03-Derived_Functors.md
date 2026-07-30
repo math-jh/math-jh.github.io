@@ -157,3 +157,9 @@ $$(R^iF)(A)=H_i(F(I^\bullet)),\qquad\text{$I^\bullet$ an injective resolution of
 :::
 
 Then one can also show that these are universal cohomological $\delta$-functors. The reason we use superscripts, unlike in [Definition 4](#def4), is that these are literally *cohomological* $\delta$-functors, and they arise mainly when dealing with matters related to cohomology.
+
+---
+
+**References**
+
+**[Wei]** C.A. Weibel. *An Introduction to Homological Algebra*. Cambridge Studies in Advanced Mathematics. Cambridge University Press, 1995.

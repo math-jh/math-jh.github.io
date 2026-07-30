@@ -294,4 +294,4 @@ In the next post we will discuss the Kodaira vanishing theorem and see how this 
 
 **[Hart]** R. Hartshorne, *Algebraic Geometry*, Graduate Texts in Mathematics, Springer, 1977.  
 **[BHPV]** W. Barth, K. Hulek, C. Peters, A. Van de Ven, *Compact Complex Surfaces*, Springer, 2004.  
-**[Huyb]** D. Huybrechts, *Lectures on K3 Surfaces*, Cambridge University Press, 2016.
+**[Huy]** D. Huybrechts, *Lectures on K3 Surfaces*, Cambridge University Press, 2016.

@@ -137,6 +137,6 @@ On the other hand, since $(A,\mathcal{T}',\mathcal{A}')$ is a manifold, we can c
 **References**
 
 **[War]** Frank W. Warner. *Foundations of Differentiable Manifolds and Lie Groups*, Graduate texts in mathematics, Springer, 2013  
-**[Lee]** John M. Lee. *Introduction to Smooth Manifolds*, Graduate texts in mathematics, Springer, 2012  
+**[Lee]** John M. Lee. *Introduction to Smooth Manifolds*, Graduate texts in mathematics, Springer, 2012
 
 ---

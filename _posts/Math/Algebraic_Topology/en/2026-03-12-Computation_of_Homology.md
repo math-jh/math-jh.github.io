@@ -270,5 +270,5 @@ In particular, looking at the case $n=1$, we first obtain (1) which was carried 
 
 **References**
 
-[Hat] A. Hatcher, *Algebraic Topology*. Cambridge University Press, 2022.  
-[May] J. P. May, *A concise course in algebraic topology*.
+**[Hat]** A. Hatcher, *Algebraic Topology*. Cambridge University Press, 2022.  
+**[May]** J. P. May, *A concise course in algebraic topology*.

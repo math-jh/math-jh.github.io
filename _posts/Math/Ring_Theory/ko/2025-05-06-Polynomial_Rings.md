@@ -436,3 +436,8 @@ $$(1-\x)\left( \sum_{n=0}^\infty \x^n\right)=1$$
 임의의 $u\in A[[x_i]]_{i\in I}$에 대하여, $u$가 $A[[x_i]]_{i\in I}$에서 invertible인 것과 $u$의 상수항이 $A$에서 invertible인 것이 동치이다. 
 :::
 
+---
+
+**참고문헌**
+
+**[DF]** D. S. Dummit and R. M. Foote, *Abstract algebra*, 3rd ed., Wiley, 2004.

@@ -244,8 +244,6 @@ $$M=1\cdot M=\sum_{i\in Q_0}e_iM=\bigoplus_{i\in Q_0}V_i$$
 
 **참고문헌**
 
-**[ASS]** I. Assem, D. Simson, and A. Skowroński, *Elements of the representation theory of associative algebras, Volume 1: Techniques of representation theory*, Cambridge University Press, 2006.
-
-**[Sch]** R. Schiffler, *Quiver representations*, Springer, 2014.
-
+**[ASS]** I. Assem, D. Simson, and A. Skowroński, *Elements of the representation theory of associative algebras, Volume 1: Techniques of representation theory*, Cambridge University Press, 2006.  
+**[Sch]** R. Schiffler, *Quiver representations*, Springer, 2014.  
 **[DW]** H. Derksen and J. Weyman, *An introduction to quiver representations*, American Mathematical Society, 2017.

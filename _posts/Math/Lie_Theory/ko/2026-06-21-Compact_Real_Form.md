@@ -223,4 +223,4 @@ $\rho$를 $\mathfrak{u}\subseteq\mathfrak{g}$로 제한하면 실 Lie algebra re
 
 **[Kna]** A. W. Knapp, *Lie groups beyond an introduction*, 2nd ed., Progress in Mathematics, Birkhäuser, 2002.  
 **[Hum]** J. E. Humphreys, *Introduction to Lie algebras and representation theory*, Graduate Texts in Mathematics, Springer, 1972.  
-**[Hel]** S. Helgason, *Differential geometry, Lie groups, and symmetric spaces*, Academic Press, 1978.  
+**[Hel]** S. Helgason, *Differential geometry, Lie groups, and symmetric spaces*, Academic Press, 1978.

@@ -277,7 +277,7 @@ $$\Psi(u,v)=u+v,\qquad \Phi(x)=(x,-x)$$
 
 **참고문헌**
 
-[Hat] A. Hatcher, *Algebraic Topology*. Cambridge University Press, 2022.  
-[May] J. P. May, *A concise course in algebraic topology*.
+**[Hat]** A. Hatcher, *Algebraic Topology*. Cambridge University Press, 2022.  
+**[May]** J. P. May, *A concise course in algebraic topology*.
 
 ---

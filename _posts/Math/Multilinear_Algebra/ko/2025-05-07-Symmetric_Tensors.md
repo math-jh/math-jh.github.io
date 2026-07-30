@@ -424,3 +424,9 @@ $$s_\lambda\, s_\mu = \sum_\nu c_{\lambda\mu}^\nu\, s_\nu$$
 
 의 $c_{\lambda\mu}^\nu$를 *Littlewood–Richardson 수*라 부른다. 이 동치성들과 기저·곱셈 규칙의 증명은 Macdonald, *Symmetric Functions and Hall Polynomials* (I장) 또는 Fulton, *Young Tableaux* 를 참조하라.
 :::
+
+---
+
+**참고문헌**
+
+**[Bou]** Bourbaki, N. Algebra I. *Elements of Mathematics*. Springer. 1998.

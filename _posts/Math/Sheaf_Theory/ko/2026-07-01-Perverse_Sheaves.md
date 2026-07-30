@@ -226,12 +226,8 @@ Monodromy가 자명한 특수한 경우 $T = \id$ (상수 sheaf $k_{\Delta^\ast}
 
 **참고문헌**
 
-**[BBD]** A. Beilinson, J. Bernstein, P. Deligne, *Faisceaux pervers*, Astérisque **100**, Société Mathématique de France, 1982.
-
-**[KS]** M. Kashiwara, P. Schapira, *Sheaves on manifolds*, Springer, 1990.
-
-**[dCM]** M. A. de Cataldo, L. Migliorini, *The decomposition theorem, perverse sheaves and the topology of algebraic maps*, Bulletin of the American Mathematical Society **46** (2009).
-
-**[Ach]** P. Achar, *Perverse sheaves and applications to representation theory*, American Mathematical Society, 2021.
-
+**[BBD]** A. Beilinson, J. Bernstein, P. Deligne, *Faisceaux pervers*, Astérisque **100**, Société Mathématique de France, 1982.  
+**[KS]** M. Kashiwara, P. Schapira, *Sheaves on manifolds*, Springer, 1990.  
+**[dCM]** M. A. de Cataldo, L. Migliorini, *The decomposition theorem, perverse sheaves and the topology of algebraic maps*, Bulletin of the American Mathematical Society **46** (2009).  
+**[Ach]** P. Achar, *Perverse sheaves and applications to representation theory*, American Mathematical Society, 2021.  
 **[Dim]** A. Dimca, *Sheaves in topology*, Springer, 2004.

@@ -238,9 +238,9 @@ $$\Aut(E_H/B)\cong N_G(H)/H$$
 
 **참고문헌**
 
-[Hat] A. Hatcher, *Algebraic Topology*. Cambridge University Press, 2022.  
-[May] J. P. May, *A concise course in algebraic topology*.  
-[Mun] James Munkres, *Topology*. Prentice Hall, 2000.  
-[Tao] Terence Tao, [van Kampen's theorem via covering spaces](https://terrytao.wordpress.com/2012/10/28/van-kampens-theorem-via-covering-spaces/).
+**[Hat]** A. Hatcher, *Algebraic Topology*. Cambridge University Press, 2022.  
+**[May]** J. P. May, *A concise course in algebraic topology*.  
+**[Mun]** James Munkres, *Topology*. Prentice Hall, 2000.  
+**[Tao]** Terence Tao, [van Kampen's theorem via covering spaces](https://terrytao.wordpress.com/2012/10/28/van-kampens-theorem-via-covering-spaces/).
 
 ---

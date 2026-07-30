@@ -110,10 +110,7 @@ Toric variety에 대한 Batyrev mirror construction은 조합론적 데이터의
 
 **참고문헌**
 
-**[Bat]** V. V. Batyrev, *Dual polyhedra and mirror symmetry for Calabi-Yau hypersurfaces in toric varieties*, J. Algebraic Geom. **3** (1994), 493--545.
-
-**[CK]** D. A. Cox, S. Katz, *Mirror symmetry and algebraic geometry*, Mathematical Surveys and Monographs **68**, AMS, 1999.
-
-**[CLS]** D. Cox, J. Little, H. Schenck, *Toric Varieties*, Graduate Studies in Mathematics **124**, AMS, 2011.
-
+**[Bat]** V. V. Batyrev, *Dual polyhedra and mirror symmetry for Calabi-Yau hypersurfaces in toric varieties*, J. Algebraic Geom. **3** (1994), 493--545.  
+**[CK]** D. A. Cox, S. Katz, *Mirror symmetry and algebraic geometry*, Mathematical Surveys and Monographs **68**, AMS, 1999.  
+**[CLS]** D. Cox, J. Little, H. Schenck, *Toric Varieties*, Graduate Studies in Mathematics **124**, AMS, 2011.  
 **[Ful]** W. Fulton, *Introduction to Toric Varieties*, Annals of Mathematics Studies **131**, Princeton University Press, 1993.

@@ -273,3 +273,9 @@ Finally, let us exclude the case $\lvert N\rvert=30$. Since $3\mid 30$ and $5\mi
 
 The only remaining possibility is $\lvert N\rvert=60$, that is, $N=A_5$. Therefore $A_5$ is a simple group.
 :::
+
+---
+
+**References**
+
+**[DF]** D. S. Dummit and R. M. Foote, *Abstract algebra*, 3rd ed., Wiley, 2004.

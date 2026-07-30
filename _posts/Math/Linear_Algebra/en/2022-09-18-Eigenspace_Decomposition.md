@@ -336,6 +336,8 @@ also holds on $W_\lambda(A)$ for a similar reason. That is, we can repeat this p
 
 ---
 
+**References**
+
 **[Goc]** M.S. Gockenbach, *Finite-dimensional linear algebra*, Discrete Mathematics and its applications, Taylor&Francis, 2011.  
 **[Lee]** 이인석, *선형대수와 군*, 서울대학교 출판문화원, 2005.
 

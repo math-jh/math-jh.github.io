@@ -169,3 +169,9 @@ and in particular the following diagram
 
 Repeating this process, we obtain $P_\bullet$.
 :::
+
+---
+
+**References**
+
+**[Wei]** C.A. Weibel. *An Introduction to Homological Algebra*. Cambridge Studies in Advanced Mathematics. Cambridge University Press, 1995.

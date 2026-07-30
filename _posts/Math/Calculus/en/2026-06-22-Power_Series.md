@@ -91,3 +91,10 @@ A function $f$ is said to be *analytic* at a point $a$ if it agrees with a power
 :::
 
 By [Definition 5](#def5), an analytic function coincides with its Taylor series. However, the converse is false. The function $f(x) = e^{-1/x^2}$ (with $f(0) = 0$) is smooth on all of $\mathbb{R}$, but all its derivatives at $0$ vanish, so its Taylor series is identically $0$; hence it does not agree with $f$ in any neighborhood of $0$, and $f$ is not analytic at $0$. Thus smoothness does not guarantee analyticity, and whether a Taylor series converges to the function can be determined by examining the remainder term in Taylor's theorem after learning differentiation.
+
+---
+
+**References**
+
+**[Ste]** J. Stewart, *Calculus*, 8th ed., Cengage Learning, 2016.  
+**[Kim]** 김홍종, *미적분학 1·2*, 제3개정판, 서울대학교출판문화원, 2020.

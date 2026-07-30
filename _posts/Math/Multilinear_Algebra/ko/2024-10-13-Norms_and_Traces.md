@@ -112,3 +112,9 @@ $$h(\alpha'\alpha- 1) = \alpha\alpha'\alpha - \alpha = (\alpha'\alpha - 1)\alpha
 
 이므로 $\alpha'\alpha = 1$이 되고, $\alpha'$는 $\alpha$의 inverse가 된다.
 :::
+
+---
+
+**참고문헌**
+
+**[Bou]** Bourbaki, N. Algebra I. *Elements of Mathematics*. Springer. 1998.

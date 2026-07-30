@@ -65,3 +65,9 @@ Let $u:M \rightarrow N$ be a graded $A$-homomorphism of degree $d$. Then the fol
 2. If $d$ is cancellable, then $\ker(u)$ is a graded submodule of $M$.
 3. If $d=0$, then the canonical bijection $M/\ker(u)\cong\im(u)$ defines an isomorphism of graded modules.
 :::
+
+---
+
+**References**
+
+**[Bou]** Bourbaki, N. Algebra I. *Elements of Mathematics*. Springer. 1998.

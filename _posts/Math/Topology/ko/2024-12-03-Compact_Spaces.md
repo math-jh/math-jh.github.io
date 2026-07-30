@@ -137,3 +137,9 @@ $$A_1\cap\cdots\cap A_n$$
 ::: 증명
 여집합을 취하면 충분하다. 
 :::
+
+---
+
+**참고문헌**
+
+**[Bou]** N. Bourbaki, <i>General Topology</i>. Elements of mathematics. Springer, 1995.

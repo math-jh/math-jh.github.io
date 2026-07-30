@@ -125,3 +125,10 @@ $$\mathbf{F} = (-y, x)/(x^2+y^2)$$
 
 from [§Line Integrals, ⁋Example 6](/en/math/calculus/line_integrals#ex6) is irrotational, but its integral around the unit circle centered at the origin was $2\pi$. By [Corollary 4](#cor4), this makes sense only if the domain on which this vector field is defined is not simply connected, and indeed the domain $\mathbb{R}^2\setminus\{0\}$ is not simply connected. Moreover, on any closed curve not enclosing the origin the integral of $\mathbf{F}$ is $0$, so we can also confirm that the only problematic point is the origin where the vector field is undefined.
 :::
+
+---
+
+**References**
+
+**[Ste]** J. Stewart, *Calculus*, 8th ed., Cengage Learning, 2016.  
+**[Kim]** 김홍종, *미적분학 1·2*, 제3개정판, 서울대학교출판문화원, 2020.

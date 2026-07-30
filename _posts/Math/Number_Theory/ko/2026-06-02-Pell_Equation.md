@@ -172,3 +172,9 @@ $$\left\lvert \frac{x}{y} - \sqrt D \right\rvert < \frac{1}{2\sqrt D\,y^2}$$
 :::
 
 정리 3은 펠 방정식의 해가 무한순환군 (자명한 부호를 곱하면 $\mathbb{Z} \times \mathbb{Z}/2\mathbb{Z}$의 구조) 을 이룸을 뜻한다. 이는 실이차체 $\mathbb{Q}(\sqrt D)$의 정수환의 단원군에 관한 디리클레 단원정리의 가장 단순한 경우로, [§가우스 정수와 두 제곱수의 합](/ko/math/number_theory/gaussian_integers)에서 본 단원 $\pm 1, \pm i$가 유한했던 것과 대비된다. 두 글은 함께 대수적 정수론으로 들어가는 두 문 — 허이차체와 실이차체 — 을 보여 준다.
+
+---
+
+**참고문헌**
+
+**[OL]** 오정환·이준복, *기초 정수론*, 경문사, 2012.

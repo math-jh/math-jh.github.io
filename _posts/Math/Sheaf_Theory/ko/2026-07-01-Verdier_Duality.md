@@ -198,10 +198,7 @@ $$0 = H^0_c(V) \rightarrow H^0_c(U) = 0 \rightarrow H^0(\{0\}) = k \xrightarrow{
 
 **참고문헌**
 
-**[KS]** M. Kashiwara, P. Schapira, *Sheaves on manifolds*, Springer, 1990.
-
-**[Iv]** B. Iversen, *Cohomology of sheaves*, Springer, 1986.
-
-**[Dim]** A. Dimca, *Sheaves in topology*, Springer, 2004.
-
+**[KS]** M. Kashiwara, P. Schapira, *Sheaves on manifolds*, Springer, 1990.  
+**[Iv]** B. Iversen, *Cohomology of sheaves*, Springer, 1986.  
+**[Dim]** A. Dimca, *Sheaves in topology*, Springer, 2004.  
 **[Ver]** J.-L. Verdier, *Dualité dans la cohomologie des espaces localement compacts*, Séminaire Bourbaki, 1965–1966.

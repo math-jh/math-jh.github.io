@@ -192,4 +192,4 @@ $(M,\omega)$가 compact connected symplectic manifold이고, torus $T$가 $M$ �
 **[MS]** D. McDuff and D. Salamon, *Introduction to Symplectic Topology*, 3rd ed., Oxford University Press, 2017.  
 **[Ati]** M. F. Atiyah, *Convexity and commuting Hamiltonians*, Bull. London Math. Soc. **14** (1982), 1–15.  
 **[GS]** V. Guillemin and S. Sternberg, *Convexity properties of the moment mapping*, Invent. Math. **67** (1982), 491–513.  
-**[Del]** T. Delzant, *Hamiltoniens périodiques et images convexes de l'application moment*, Bull. Soc. Math. France **116** (1988), 315–339.  
+**[Del]** T. Delzant, *Hamiltoniens périodiques et images convexes de l'application moment*, Bull. Soc. Math. France **116** (1988), 315–339.

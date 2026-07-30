@@ -161,3 +161,9 @@ $$A[\mathfrak{a}t, t^{-1}]=\bigoplus_{n=-\infty}^\infty \mathfrak{a}^nt^n\subset
 ::: 명제 5
 Field $\mathbb{K}$와 $\mathbb{K}$-algebra $A$를 고정하자. 그럼 Rees algebra $A[\mathfrak{a}t, t^{-1}]$은 flat $\mathbb{K}[t]$-module이다. 또, 만일 $\bigcap \mathfrak{a}^i=0$이라면, $1-t s$ ($s\in S$) 꼴의 원소들은 모두 $A[\mathfrak{a}t, t^{-1}]$에서 non-zerodivisor이다. 
 :::
+
+---
+
+**참고문헌**
+
+**[Eis]** David Eisenbud. *Commutative Algebra: with a view toward algebraic geometry*. Springer, 1995.

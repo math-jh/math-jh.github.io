@@ -134,3 +134,9 @@ $$f'_+(a) := \lim_{h \rightarrow 0^+} \frac{f(a+h) - f(a)}{h}, \qquad f'_-(a) :=
 
 이는 양쪽 극한이 일치할 때에만 극한이 존재한다는 사실을 평균변화율에 적용한 것에 지나지 않는다. ([§함수의 극한](/ko/math/calculus/functions_and_limits)) 절댓값함수 $f(x) = \lvert x\rvert$를 다시 보면 $f'_+(0) = 1$, $f'_-(0) = -1$로 둘이 달라 $0$에서 미분 불가능함이 곧바로 확인된다. 한쪽 derivative는 정의역의 끝점에서 미분가능성을 논할 때에도 자연스럽게 쓰이는데, 가령 $[0, \infty)$에서 정의된 $f(x) = \sqrt x$의 $0$에서의 거동은 우미분계수로만 의미를 갖는다.
 
+---
+
+**참고문헌**
+
+**[Ste]** J. Stewart, *Calculus*, 8th ed., Cengage Learning, 2016.  
+**[Kim]** 김홍종, *미적분학 1·2*, 제3개정판, 서울대학교출판문화원, 2020.

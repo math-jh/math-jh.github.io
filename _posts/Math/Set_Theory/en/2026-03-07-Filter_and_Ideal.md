@@ -156,7 +156,7 @@ Through this process, for a Galois connection between ordered sets $A$ and $B$, 
 ---
 **References**
 
-**[Bou]** N. Bourbaki, <i>Theory of Sets</i>. Elements of mathematics. Springer Berlin-Heidelberg, 2013.
+**[Bou]** N. Bourbaki, <i>Theory of Sets</i>. Elements of mathematics. Springer Berlin-Heidelberg, 2013.  
 **[Wikipedia]** [Galois connection](https://en.wikipedia.org/wiki/Galois_connection)
 
 ---

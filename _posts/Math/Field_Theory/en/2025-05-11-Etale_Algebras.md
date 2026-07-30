@@ -272,3 +272,9 @@ The following hold.
 2. For any extension $\mathbb{K}'/\mathbb{K}$, a $\mathbb{K}$-algebra $A$ is étale if and only if $A_{(\mathbb{K}')}$ is étale.
 3. For any extension $\mathbb{K}'/\mathbb{K}$ and any $\mathbb{K}'$-algebra $A'$, $A'$ is étale over $\mathbb{K}$ if and only if $A'$ is étale over $\mathbb{K}'$ and $\mathbb{K}'$ is étale over $\mathbb{K}$.
 :::
+
+---
+
+**References**
+
+**[Bou]** N. Bourbaki. *Algebra II: Chapters 4–7*. Springer, 2003.

@@ -124,8 +124,6 @@ Geometrically, the singular value decomposition $A=U\Sigma V^t$ means that an ar
 
 **References**
 
-**[Goc]** M.S. Gockenbach, *Finite-dimensional linear algebra*, Discrete Mathematics and its applications, Taylor&Francis, 2011.  
-**[TB]** L.N. Trefethen and D. Bau, *Numerical linear algebra*, SIAM, 1997.  
-**[Str]** G. Strang, *Linear algebra and its applications*, 4th ed., Cengage Learning, 2006.
+**[Goc]** M.S. Gockenbach, *Finite-dimensional linear algebra*, Discrete Mathematics and its applications, Taylor&Francis, 2011.
 
 ---

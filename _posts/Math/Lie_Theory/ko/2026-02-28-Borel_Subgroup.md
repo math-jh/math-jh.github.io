@@ -270,8 +270,6 @@ $G_\mathbb{C}=\GL(n;\mathbb{C})$인 경우, Weyl group $W\cong S_n$이고 각 pe
 
 **참고문헌**
 
-**[BtD]** Theodor Bröcker, Tammo tom Dieck, *Representations of Compact Lie Groups*, Graduate texts in mathematics, Springer, 1985.
-
-**[Hum]** James E. Humphreys, *Linear Algebraic Groups*, Graduate texts in mathematics, Springer, 1975.
-
+**[BtD]** Theodor Bröcker, Tammo tom Dieck, *Representations of Compact Lie Groups*, Graduate texts in mathematics, Springer, 1985.  
+**[Hum]** James E. Humphreys, *Linear Algebraic Groups*, Graduate texts in mathematics, Springer, 1975.  
 **[Spr]** T. A. Springer, *Linear Algebraic Groups*, Progress in mathematics, Birkhäuser, 1998.

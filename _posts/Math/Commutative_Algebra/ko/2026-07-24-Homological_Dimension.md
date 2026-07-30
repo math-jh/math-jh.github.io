@@ -291,10 +291,8 @@ Local ring에서 finitely generated module의 projective dimension을 depth와 �
 
 **참고문헌**
 
-**[Eis]** David Eisenbud. *Commutative Algebra: with a view toward algebraic geometry*. Springer, 1995.
-
-**[Mat]** Hideyuki Matsumura. *Commutative Ring Theory*. Cambridge University Press, 1986.
-
+**[Eis]** David Eisenbud. *Commutative Algebra: with a view toward algebraic geometry*. Springer, 1995.  
+**[Mat]** Hideyuki Matsumura. *Commutative Ring Theory*. Cambridge University Press, 1986.  
 **[Wei]** Charles A. Weibel. *An Introduction to Homological Algebra*. Cambridge University Press, 1994.
 
 ---

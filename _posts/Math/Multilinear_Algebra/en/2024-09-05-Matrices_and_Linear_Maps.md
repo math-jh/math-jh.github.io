@@ -174,3 +174,9 @@ $$H=\bigoplus_{(j,i)\in J\times I}\Hom_{\lMod{A}}(M_i,N_j)$$
 Even with this generalization, all the propositions examined above remain valid. In particular, the product of matrices is noteworthy: suppose $I,J$ are both finite, and moreover each $M_i$ and $N_j$ has finite bases $\mathcal{B}_i$, $\mathcal{C}_j$. Then the unions of these bases form bases $\mathcal{B},\mathcal{C}$ of $M$ and $N$ respectively. The matrix representing a linear map $u:M \rightarrow N$ with respect to these bases can be verified to equal the matrix obtained by substituting, for each entry $u_{ji}$ in the above $[u]_J^I$, its matrix representation with respect to the bases $\mathcal{B}_i$, $\mathcal{C}_j$; and this behaves meaningfully under matrix multiplication. That is, for another direct sum $L=\bigoplus_{k\in K} L_k$ and basis $\mathcal{D}=\bigcup \mathcal{D}_k$, writing $v:N \rightarrow L$ in the same manner, the matrix representation of $v\circ u$ with respect to the bases $\mathcal{B}, \mathcal{D}$ is the matrix whose $(k,i)$-entry is the matrix
 
 $$\sum_{j\in J}[v_{kj}]_{\mathcal{D}_k}^{\mathcal{C}_j}[u_{ji}]_{\mathcal{C}_j}^{\mathcal{B}_i}$$
+
+---
+
+**References**
+
+**[Bou]** Bourbaki, N. Algebra I. *Elements of Mathematics*. Springer. 1998.

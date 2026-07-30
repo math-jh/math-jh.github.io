@@ -221,5 +221,5 @@ In general, as discussed in [§Rational Maps, ⁋Example 12](/en/math/algebraic_
 
 **References**
 
-**[Har]** J. Harris, *Algebraic Geometry: A First Course*, Springer, 1992.
+**[Har]** J. Harris, *Algebraic Geometry: A First Course*, Springer, 1992.  
 **[Sha]** I. R. Shafarevich, *Basic Algebraic Geometry I: Varieties in Projective Space*, Springer, 2013.

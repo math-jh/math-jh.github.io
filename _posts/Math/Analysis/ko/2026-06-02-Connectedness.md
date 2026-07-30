@@ -153,3 +153,9 @@ $$S = \{(x, \sin(1/x)) \mid 0 < x \leq 1\} \cup \{(0, y) \mid -1 \leq y \leq 1\}
 으로, $S$는 connected이지만 path-connected는 아니다. 원점 부근의 진동이 점점 빨라져, 세로 선분 위의 점과 곡선 위의 점을 잇는 연속 경로를 만들 수 없기 때문이다.
 
 지금까지의 결과를 종합하면, 실수 위에서는 connected·path-connected·구간이라는 세 성질이 모두 일치하고, 연속함수가 이 성질을 보존하기에 중간값 정리가 따라 나온다.
+
+---
+
+**참고문헌**
+
+**[Rud]** W. Rudin, *Principles of mathematical analysis*, 3rd ed., McGraw-Hill, 1976.

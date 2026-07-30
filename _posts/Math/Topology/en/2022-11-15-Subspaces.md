@@ -131,3 +131,9 @@ Let $X$ be a topological space and let $(A_i)_{i\in I}$ be a collection of subse
 ::: Proof
 It suffices to assume that all the $f\vert_{A_i}$ are continuous and show that $f$ is continuous. Let $B$ be an arbitrary closed set of $Y$ and set $A=f^{-1}(B)$. Since all the $f\vert_{A_i}$ are continuous, $(f\vert_{A_i})^{-1}(B)=A\cap A_i$ are all closed sets. Applying [Proposition 6](#prop6), we see that $A$ is closed, and therefore $f$ is continuous.
 :::
+
+---
+
+**References**
+
+**[Bou]** N. Bourbaki, <i>General Topology</i>. Elements of mathematics. Springer, 1995.

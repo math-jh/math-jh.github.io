@@ -147,3 +147,8 @@ $$\tr(u\circ v)=\tr(v\circ u)$$
 이 성립한다.
 :::
 
+---
+
+**참고문헌**
+
+**[Bou]** Bourbaki, N. Algebra I. *Elements of Mathematics*. Springer. 1998.

@@ -277,12 +277,8 @@ Big quantum product에서 $t \rightarrow 0$의 극한은 small quantum product�
 
 **참고문헌**
 
-**[MS]** D. McDuff, D. Salamon, *J-holomorphic Curves and Symplectic Topology*, AMS Colloquium Publications **52**, 2nd ed., 2012.
-
-**[KM]** M. Kontsevich, Yu. Manin, *Gromov-Witten classes, quantum cohomology, and enumerative geometry*, Comm. Math. Phys. **164** (1994), 525--562.
-
-**[RT]** Y. Ruan, G. Tian, *A mathematical theory of quantum cohomology*, J. Differential Geom. **42** (1995), 259--367.
-
-**[FP]** W. Fulton, R. Pandharipande, *Notes on stable maps and quantum cohomology*, in *Algebraic Geometry — Santa Cruz 1995*, Proc. Sympos. Pure Math. **62**, AMS, 1997, 45--96.
-
+**[MS]** D. McDuff, D. Salamon, *J-holomorphic Curves and Symplectic Topology*, AMS Colloquium Publications **52**, 2nd ed., 2012.  
+**[KM]** M. Kontsevich, Yu. Manin, *Gromov-Witten classes, quantum cohomology, and enumerative geometry*, Comm. Math. Phys. **164** (1994), 525--562.  
+**[RT]** Y. Ruan, G. Tian, *A mathematical theory of quantum cohomology*, J. Differential Geom. **42** (1995), 259--367.  
+**[FP]** W. Fulton, R. Pandharipande, *Notes on stable maps and quantum cohomology*, in *Algebraic Geometry — Santa Cruz 1995*, Proc. Sympos. Pure Math. **62**, AMS, 1997, 45--96.  
 **[CK]** D. A. Cox, S. Katz, *Mirror Symmetry and Algebraic Geometry*, Mathematical Surveys and Monographs **68**, AMS, 1999.

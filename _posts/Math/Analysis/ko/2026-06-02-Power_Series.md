@@ -144,3 +144,9 @@ $$\sum_{n=1}^\infty n x^n = \frac{x}{(1-x)^2} \qquad (\lvert x\rvert < 1)$$
 같은 도구로 $e^x = \sum_{n\geq 0} x^n/n!$ ($R = \infty$) 을 항별 미분하면 첨자를 한 칸 밀어 $(e^x)' = e^x$가 급수 차원에서 회복되고, $\sin, \cos$도 마찬가지여서 기본 도함수 공식이 모두 항별 미분으로 따라 나온다.
 
 해석함수는 실해석학과 복소해석학을 잇는 다리이며, 멱급수를 복소수 변수로 확장하면 한층 강력한 이론이 펼쳐진다. 다음으로는 미분을 여러 변수로 확장하는 [§다변수 미분](/ko/math/analysis/multivariable_differentiation)으로 나아간다.
+
+---
+
+**참고문헌**
+
+**[Rud]** W. Rudin, *Principles of mathematical analysis*, 3rd ed., McGraw-Hill, 1976.

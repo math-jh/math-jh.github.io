@@ -142,8 +142,6 @@ $$K_M(p) = \langle R(e_1, e_2) e_2, e_1\rangle = \langle R'(\varphi_\ast e_1, \v
 
 **참고문헌**
 
-**[dC]** Manfredo P. do Carmo, *Differential Geometry of Curves and Surfaces*, Prentice-Hall, 1976.
-
-**[Lee]** John M. Lee, *Introduction to Riemannian Manifolds*, Graduate Texts in Mathematics, Springer, 2019.
-
+**[dC]** Manfredo P. do Carmo, *Differential Geometry of Curves and Surfaces*, Prentice-Hall, 1976.  
+**[Lee]** John M. Lee, *Introduction to Riemannian Manifolds*, Graduate Texts in Mathematics, Springer, 2019.  
 **[Bri]** F. Brioschi, *Sur quelques formules relatives à la théorie des surfaces*, 1852.

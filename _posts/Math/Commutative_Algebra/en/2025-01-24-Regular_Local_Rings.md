@@ -241,8 +241,7 @@ is a minimal primary decomposition of $0$, then the $\mathfrak{p}_i$ appearing h
 
 **References**
 
-**[Eis]** David Eisenbud. *Commutative Algebra: with a view toward algebraic geometry*. Springer, 1995.
-
+**[Eis]** David Eisenbud. *Commutative Algebra: with a view toward algebraic geometry*. Springer, 1995.  
 **[Stacks]** The Stacks Project Authors. *The Stacks Project*. [https://stacks.math.columbia.edu](https://stacks.math.columbia.edu).
 
 ---

@@ -113,3 +113,10 @@ $$\mathbf{F}(\mathbf{r}(t))\cdot \mathbf{r}'(t) = (-\sin t, \cos t, 0)\cdot(-\si
 
 so the integral is $\oint_C = \int_0^{2\pi} dt = 2\pi$, agreeing with the above, and one can check that choosing a different surface sharing the same boundary, such as a hemisphere, does not change the value.
 :::
+
+---
+
+**References**
+
+**[Ste]** J. Stewart, *Calculus*, 8th ed., Cengage Learning, 2016.  
+**[Kim]** 김홍종, *미적분학 1·2*, 제3개정판, 서울대학교출판문화원, 2020.

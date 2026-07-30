@@ -383,12 +383,8 @@ Schubert varieties $X_w\subseteq G/P$ are generally singular, and their singular
 
 **References**
 
-**[BB]** A. Björner, F. Brenti, *Combinatorics of Coxeter groups*, Graduate Texts in Mathematics **231**, Springer, 2005.
-
-**[Ful]** W. Fulton, *Young tableaux*, London Mathematical Society Student Texts **35**, Cambridge University Press, 1997.
-
-**[Hum]** J. E. Humphreys, *Linear algebraic groups*, Graduate Texts in Mathematics **21**, Springer, 1975.
-
-**[Man]** L. Manivel, *Symmetric functions, Schubert polynomials and degeneracy loci*, SMF/AMS Texts and Monographs **6**, 2001.
-
+**[BB]** A. Björner, F. Brenti, *Combinatorics of Coxeter groups*, Graduate Texts in Mathematics **231**, Springer, 2005.  
+**[Ful]** W. Fulton, *Young tableaux*, London Mathematical Society Student Texts **35**, Cambridge University Press, 1997.  
+**[Hum]** J. E. Humphreys, *Linear algebraic groups*, Graduate Texts in Mathematics **21**, Springer, 1975.  
+**[Man]** L. Manivel, *Symmetric functions, Schubert polynomials and degeneracy loci*, SMF/AMS Texts and Monographs **6**, 2001.  
 **[Spr]** T. A. Springer, *Linear algebraic groups*, Progress in Mathematics **9**, Birkhäuser, 1998.

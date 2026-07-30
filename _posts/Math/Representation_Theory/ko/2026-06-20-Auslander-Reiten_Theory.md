@@ -195,10 +195,7 @@ $$f\in\rad(M,N)\setminus\rad^2(M,N)$$
 
 **참고문헌**
 
-**[ASS]** I. Assem, D. Simson, and A. Skowroński, *Elements of the representation theory of associative algebras, Volume 1: Techniques of representation theory*, Cambridge University Press, 2006.
-
-**[ARS]** M. Auslander, I. Reiten, and S. O. Smalø, *Representation theory of Artin algebras*, Cambridge University Press, 1995.
-
-**[Sch]** R. Schiffler, *Quiver representations*, Springer, 2014.
-
+**[ASS]** I. Assem, D. Simson, and A. Skowroński, *Elements of the representation theory of associative algebras, Volume 1: Techniques of representation theory*, Cambridge University Press, 2006.  
+**[ARS]** M. Auslander, I. Reiten, and S. O. Smalø, *Representation theory of Artin algebras*, Cambridge University Press, 1995.  
+**[Sch]** R. Schiffler, *Quiver representations*, Springer, 2014.  
 **[ASm]** M. Auslander and I. Reiten, *Representation theory of Artin algebras III: Almost split sequences*, Communications in Algebra **3** (1975), 239–294.

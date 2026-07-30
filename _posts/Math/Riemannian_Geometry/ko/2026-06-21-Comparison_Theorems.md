@@ -261,10 +261,8 @@ $\exp_p$가 전단사이므로 임의의 $q \in M$에 대해 $q = \exp_p(v)$인 
 
 **참고문헌**
 
-**[dC]** Manfredo P. do Carmo, *Riemannian Geometry*, Birkhäuser, 1992.
-
-**[CE]** Jeff Cheeger, David G. Ebin, *Comparison Theorems in Riemannian Geometry*, North-Holland, 1975.
-
+**[dC]** Manfredo P. do Carmo, *Riemannian Geometry*, Birkhäuser, 1992.  
+**[CE]** Jeff Cheeger, David G. Ebin, *Comparison Theorems in Riemannian Geometry*, North-Holland, 1975.  
 **[Lee]** John M. Lee, *Introduction to Riemannian Manifolds*, Graduate Texts in Mathematics, Springer, 2019.
 
 ---

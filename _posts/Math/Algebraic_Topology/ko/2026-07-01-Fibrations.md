@@ -300,8 +300,8 @@ $E_2$-page는 밑공간의 cohomology를 fiber의 cohomology를 계수로 삼아
 
 **참고문헌**
 
-[Hat] A. Hatcher, *Algebraic Topology*. Cambridge University Press, 2022.  
-[May] J. P. May, *A concise course in algebraic topology*. University of Chicago Press, 1999.  
-[tD] T. tom Dieck, *Algebraic Topology*. European Mathematical Society, 2008.
+**[Hat]** A. Hatcher, *Algebraic Topology*. Cambridge University Press, 2022.  
+**[May]** J. P. May, *A concise course in algebraic topology*. University of Chicago Press, 1999.  
+**[tD]** T. tom Dieck, *Algebraic Topology*. European Mathematical Society, 2008.
 
 ---

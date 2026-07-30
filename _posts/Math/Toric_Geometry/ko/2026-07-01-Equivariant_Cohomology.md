@@ -247,10 +247,7 @@ $$\Omega_G^\bullet(X)=\big(\mathrm{Sym}(\mathfrak{g}^\ast)\otimes\Omega^\bullet(
 
 **참고문헌**
 
-**[AF]** D. Anderson and W. Fulton, *Equivariant Cohomology in Algebraic Geometry*, Cambridge Studies in Advanced Mathematics 210, Cambridge University Press, 2023.
-
-**[AB]** M. F. Atiyah and R. Bott, *The moment map and equivariant cohomology*, Topology **23** (1984), 1–28.
-
-**[GS]** V. W. Guillemin and S. Sternberg, *Supersymmetry and Equivariant de Rham Theory*, Springer, 1999.
-
+**[AF]** D. Anderson and W. Fulton, *Equivariant Cohomology in Algebraic Geometry*, Cambridge Studies in Advanced Mathematics 210, Cambridge University Press, 2023.  
+**[AB]** M. F. Atiyah and R. Bott, *The moment map and equivariant cohomology*, Topology **23** (1984), 1–28.  
+**[GS]** V. W. Guillemin and S. Sternberg, *Supersymmetry and Equivariant de Rham Theory*, Springer, 1999.  
 **[tD]** T. tom Dieck, *Algebraic Topology*, EMS Textbooks in Mathematics, European Mathematical Society, 2008.

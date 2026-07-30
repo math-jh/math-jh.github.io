@@ -272,3 +272,10 @@ $$x < N\implies\lvert f(x) - L\rvert < \epsilon$$
 가령 $\lim_{x\rightarrow\infty}1/x = 0$이고, 유리함수에서는 최고차항이 그 행동을 지배하여 $\lim_{x\rightarrow\infty}(2x^2 + 1)/(3x^2 - x) = 2/3$이다. 이러한 유한 극한 $L$이 존재하면 직선 $y = L$이 그래프의 *수평점근선<sub>horizontal asymptote</sub>*이 된다.
 
 직접 대입이 $0/0$ 꼴의 부정형을 줄 때는 인수분해나 분자의 유리화 같은 대수적 변형으로 분모의 영점을 약분하여 극한법칙이 적용되는 형태로 바꾸면 된다. [예시 10](#ex10)의 $\lim(\sin x)/x = 1$ 또한 이러한 대수적 정리와 결합하여 $\sin$이 섞인 부정형을 처리하는 데 쓰인다.
+
+---
+
+**참고문헌**
+
+**[Ste]** J. Stewart, *Calculus*, 8th ed., Cengage Learning, 2016.  
+**[Kim]** 김홍종, *미적분학 1·2*, 제3개정판, 서울대학교출판문화원, 2020.

@@ -323,3 +323,9 @@ $$\rchi_{\mathbb{C}[S_3]}=\rchi_0+\rchi_\sgn+2\rchi_\std$$
 .
 
 Furthermore, this is a result consistent with the above discussion that in the regular representation, the multiplicity of each irreducible factor must equal its own dimension.
+
+---
+
+**References**
+
+**[FH]** W. Fulton and J. Harris, *Representation theory: a first course*, Springer, 1991.

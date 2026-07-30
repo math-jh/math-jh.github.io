@@ -156,3 +156,9 @@ $$xy=\sum_{i,j\in I} x_i y_j e_ie_j=\sum_{i,j,k\in I} x_i y_j \gamma_{ij}^k e_k$
 $$(xy)z=\sum_{i,j,k\in I}x_i y_jz_k(e_ie_j)e_k,\qquad x(yz)=\sum_{i,j,k\in I} x_i y_j z_k e_i(e_je_k)$$
 
 이므로 결합법칙이 성립하기 위해서는 basis를 구성하는 원소들 사이의 결합법칙이 성립하는 것만 확인하면 충분하다. 마찬가지 이유로 $E$의 곱셈이 교환법칙을 만족하려면 basis를 구성하는 원소들 사이의 교환법칙이 성립하는 것만 확인하면 충분하다.
+
+---
+
+**참고문헌**
+
+**[Bou]** Bourbaki, N. Algebra I. *Elements of Mathematics*. Springer. 1998.

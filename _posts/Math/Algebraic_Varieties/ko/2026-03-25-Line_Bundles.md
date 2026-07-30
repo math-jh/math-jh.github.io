@@ -389,5 +389,5 @@ $\Gr(1, n+1)$의 각 점은 $\mathbb{A}^{n+1}$의 1차원 부분공간, 즉 원�
 
 **참고문헌**
 
-**[Har]** R. Hartshorne, *Algebraic Geometry*, Graduate Texts in Mathematics, Springer, 1977.  
+**[Hart]** R. Hartshorne, *Algebraic Geometry*, Graduate Texts in Mathematics, Springer, 1977.  
 **[Sha]** I. R. Shafarevich, *Basic Algebraic Geometry I: Varieties in Projective Space*, Springer, 2013.

@@ -184,10 +184,7 @@ $j$-불변량은 natural transformation $\Phi:\underline{M}_{1, 1} \rightarrow \
 
 **참고문헌**
 
-**[GIT]** D. Mumford, J. Fogarty, F. Kirwan, *Geometric invariant theory*, 3rd ed., Springer, 1994.
-
-**[FGA]** B. Fantechi, L. Göttsche, L. Illusie, S. L. Kleiman, N. Nitsure, A. Vistoli, *Fundamental algebraic geometry: Grothendieck's FGA explained*, American Mathematical Society, 2005.
-
-**[HM]** J. Harris, I. Morrison, *Moduli of curves*, Springer, 1998.
-
+**[GIT]** D. Mumford, J. Fogarty, F. Kirwan, *Geometric invariant theory*, 3rd ed., Springer, 1994.  
+**[FGA]** B. Fantechi, L. Göttsche, L. Illusie, S. L. Kleiman, N. Nitsure, A. Vistoli, *Fundamental algebraic geometry: Grothendieck's FGA explained*, American Mathematical Society, 2005.  
+**[HM]** J. Harris, I. Morrison, *Moduli of curves*, Springer, 1998.  
 **[Stacks]** The Stacks Project Authors, *The Stacks Project*, https://stacks.math.columbia.edu.

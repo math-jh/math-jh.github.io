@@ -181,3 +181,9 @@ A left $A$-module $N$ is called a *flat module* if for every injective $A$-linea
 :::
 
 Any free module is flat. Also, it is obvious that a direct sum of modules is flat if and only if each summand is flat. Therefore, by [Proposition 4](#prop4), every projective module is flat. However, the converse does not hold in general.
+
+---
+
+**References**
+
+**[Bou]** Bourbaki, N. Algebra I. *Elements of Mathematics*. Springer. 1998.

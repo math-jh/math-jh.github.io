@@ -302,7 +302,7 @@ More generally, the collection of rational functions defined on a locally Noethe
 **References**
 
 **[Har]** R. Hartshorne, *Algebraic geometry*. Graduate texts in mathematics. Springer, 1977.  
-**[Vak]** R. Vakil, *The rising sea: Foundation of algebraic geometry*. Available [online](https://math.stanford.edu/~vakil/216blog/).  
+**[Vak]** R. Vakil, *The rising sea: Foundation of algebraic geometry*. Available [online](https://math.stanford.edu/~vakil/216blog/).
 
 ---
 [^1]: In this process we used that $X$ has finitely many irreducible components. This ensures that the union of the remaining components is again a closed set, and therefore if these two closed sets do not meet, they become simultaneously open sets, contradicting connectedness.

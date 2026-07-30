@@ -193,4 +193,4 @@ $$\mathbb{C}^{n+1} /\!\!/ S^1=S^{2n+1}/S^1=\mathbb{CP}^n$$
 **[CdS]** A. Cannas da Silva, *Lectures on Symplectic Geometry*, Lecture Notes in Mathematics 1764, Springer, 2008.  
 **[MS]** D. McDuff and D. Salamon, *Introduction to Symplectic Topology*, 3rd ed., Oxford University Press, 2017.  
 **[MW]** J. Marsden and A. Weinstein, *Reduction of symplectic manifolds with symmetry*, Rep. Mathematical Phys. **5** (1974), 121–130.  
-**[Mey]** K. R. Meyer, *Symmetries and integrals in mechanics*, in *Dynamical Systems* (M. M. Peixoto, ed.), Academic Press, 1973, pp. 259–272.  
+**[Mey]** K. R. Meyer, *Symmetries and integrals in mechanics*, in *Dynamical Systems* (M. M. Peixoto, ed.), Academic Press, 1973, pp. 259–272.

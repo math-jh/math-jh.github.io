@@ -128,3 +128,10 @@ $$\oint_C \mathbf{F}\cdot d\mathbf{r} = \int_0^{2\pi} (\sin^2 t + \cos^2 t)\math
 
 By [Theorem 4](#thm4), $\mathbf{F}$ is not a conservative field on this region. The cause is that, although locally this vector field can be represented as the gradient of the polar angle $\theta = \arctan(y/x)$, the polar angle increases by $2\pi$ when going around the origin and therefore cannot be defined as a single-valued function. 
 :::
+
+---
+
+**References**
+
+**[Ste]** J. Stewart, *Calculus*, 8th ed., Cengage Learning, 2016.  
+**[Kim]** 김홍종, *미적분학 1·2*, 제3개정판, 서울대학교출판문화원, 2020.

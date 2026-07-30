@@ -427,10 +427,8 @@ Real vector bundle $E,F\rightarrow B$에 대하여 다음이 성립한다.
 
 **참고문헌**
 
-**[MS]** J. W. Milnor and J. D. Stasheff, *Characteristic Classes*, Annals of Mathematics Studies 76, Princeton University Press, 1974.
-
-**[BT]** R. Bott and L. W. Tu, *Differential Forms in Algebraic Topology*, Springer, 1982.
-
+**[MS]** J. W. Milnor and J. D. Stasheff, *Characteristic Classes*, Annals of Mathematics Studies 76, Princeton University Press, 1974.  
+**[BT]** R. Bott and L. W. Tu, *Differential Forms in Algebraic Topology*, Springer, 1982.  
 **[Hat]** A. Hatcher, *Vector Bundles and K-Theory*, online notes, 2017.
 
 ---

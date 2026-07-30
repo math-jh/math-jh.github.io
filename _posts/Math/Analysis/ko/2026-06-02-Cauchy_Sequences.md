@@ -163,3 +163,9 @@ $$\lvert a_{n+1} - a_n\rvert = \left\lvert \frac{1}{a_n} - \frac{1}{a_{n-1}} \ri
 이처럼 수렴의 *존재*를 먼저 Cauchy 판정법으로 확보한 뒤 극한값을 따로 결정하는 순서는, 점화식이나 급수로 정의된 대상을 다룰 때 거듭 쓰이는 표준적 전략이다.
 
 Cauchy 판정법의 진정한 가치는 극한을 모르고도 수렴을 보일 수 있다는 데 있으며, 이는 [§무한급수](/ko/math/analysis/series)의 수렴 판정에서 곧바로 활용된다. 또한 항들 사이의 거리만으로 정식화되는 Cauchy 조건은 거리만 주어진 일반적 공간으로 그대로 옮겨져, [§거리공간](/ko/math/analysis/metric_spaces)에서 *완비 거리공간*의 정의가 된다.
+
+---
+
+**참고문헌**
+
+**[Rud]** W. Rudin, *Principles of mathematical analysis*, 3rd ed., McGraw-Hill, 1976.

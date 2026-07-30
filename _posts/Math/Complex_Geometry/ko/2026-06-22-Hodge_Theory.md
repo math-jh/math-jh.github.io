@@ -335,12 +335,8 @@ $$
 
 **참고문헌**
 
-**[Huybrechts]** D. Huybrechts, *Complex Geometry: An Introduction*, Springer, 2005.
-
-**[Griffiths–Harris]** P. Griffiths and J. Harris, *Principles of Algebraic Geometry*, Wiley, 1978.
-
-**[Voisin]** C. Voisin, *Hodge Theory and Complex Algebraic Geometry I*, Cambridge University Press, 2002.
-
-**[Wells]** R. O. Wells, *Differential Analysis on Complex Manifolds*, 3rd ed., Springer, 2008.
-
+**[Huybrechts]** D. Huybrechts, *Complex Geometry: An Introduction*, Springer, 2005.  
+**[Griffiths–Harris]** P. Griffiths and J. Harris, *Principles of Algebraic Geometry*, Wiley, 1978.  
+**[Voisin]** C. Voisin, *Hodge Theory and Complex Algebraic Geometry I*, Cambridge University Press, 2002.  
+**[Wells]** R. O. Wells, *Differential Analysis on Complex Manifolds*, 3rd ed., Springer, 2008.  
 **[Warner]** F. W. Warner, *Foundations of Differentiable Manifolds and Lie Groups*, Springer, 1983.

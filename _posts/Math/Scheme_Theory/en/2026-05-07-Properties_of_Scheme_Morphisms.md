@@ -371,3 +371,10 @@ By [Proposition 24](#prop24), there exists a birational map having an isomorphis
 :::
 
 That is, birational equivalence preserves the function field. In the case of varieties, we have already verified in [\[Algebraic Varieties\] §Rational Maps, ⁋Proposition 10](/en/math/algebraic_varieties/rational_maps#prop10) that the converse also holds.
+
+---
+
+**References**
+
+**[Har]** R. Hartshorne, *Algebraic geometry*. Graduate texts in mathematics. Springer, 1977.  
+**[Vak]** R. Vakil, *The rising sea: Foundation of algebraic geometry*. Available [online](https://math.stanford.edu/~vakil/216blog/).

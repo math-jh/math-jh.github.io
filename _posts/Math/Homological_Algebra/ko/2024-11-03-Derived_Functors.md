@@ -164,3 +164,9 @@ $$(R^iF)(A)=H_i(F(I^\bullet)),\qquad\text{$I^\bullet$ an injective resolution of
 :::
 
 그럼 이들이 universal cohomological $\delta$-functor들이라는 것도 알 수 있다. [정의 4](#def4)와 다르게 위첨자를 쓰는 이유는 이들이 말 그대로 *cohomological* $\delta$-functor들로서, 주로 cohomology에 관련된 것들을 다룰 때 나오기 때문이다.
+
+---
+
+**참고문헌**
+
+**[Wei]** C.A. Weibel. *An Introduction to Homological Algebra*. Cambridge Studies in Advanced Mathematics. Cambridge University Press, 1995.

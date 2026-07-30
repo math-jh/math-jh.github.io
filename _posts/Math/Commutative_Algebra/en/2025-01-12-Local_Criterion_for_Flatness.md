@@ -158,3 +158,9 @@ Then the following corollary is almost obvious.
 ::: Proposition 5
 Fix a field $\mathbb{K}$ and a $\mathbb{K}$-algebra $A$. Then the Rees algebra $A[\mathfrak{a}t, t^{-1}]$ is a flat $\mathbb{K}[t]$-module. Moreover, if $\bigcap \mathfrak{a}^i=0$, then every element of the form $1-t s$ ($s\in S$) is a non-zerodivisor in $A[\mathfrak{a}t, t^{-1}]$.
 :::
+
+---
+
+**References**
+
+**[Eis]** David Eisenbud. *Commutative Algebra: with a view toward algebraic geometry*. Springer, 1995.

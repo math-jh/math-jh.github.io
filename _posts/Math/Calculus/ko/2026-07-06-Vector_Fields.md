@@ -87,3 +87,10 @@ $$\curl \mathbf{F} = (\partial_y y - \partial_z(x^2+z),\ \partial_z(2xy) - \part
 
 이러한 $f$는 우선 첫째 성분에 의해 $f_x = 2xy$를 만족해야 하므로, $f = x^2 y + g(y, z)$의 꼴이어야 한다. 이제 이를 $y$에 대해 미분하면 $f_y = x^2 + g_y$이고, 만일 $\mathbf{F}$가 보존장이었다면 이 값이 $\mathbf{F}$의 둘째 성분 $x^2 + z$와 맞아야 하므로 $g_y = z$, 즉 $g = yz + h(z)$여야 한다. 이제 마지막으로 이를 다시 $f$에 넣고 $z$로 미분한 후 계수를 맞춰주면, $f_z = y + h'(z) = y$여야 하므로 $h' = 0$이다. 따라서 $f = x^2 y + yz$가 potential이 될 수 있으며, 실제로 $\mathbf{F} = \nabla f$이 성립한다. 
 :::
+
+---
+
+**참고문헌**
+
+**[Ste]** J. Stewart, *Calculus*, 8th ed., Cengage Learning, 2016.  
+**[Kim]** 김홍종, *미적분학 1·2*, 제3개정판, 서울대학교출판문화원, 2020.

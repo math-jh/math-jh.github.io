@@ -263,3 +263,9 @@ First, by assumption $x$ is algebraic over $\mathbb{L}$. Let $g \in \mathbb{L}[\
 
 Moreover, $\mathbb{K}(A \cup \{x\}) = \mathbb{K}(A)(x)$ has finite degree over $\mathbb{K}(A)$. Since $A \subseteq \mathbb{L}$ and $\mathbb{L}$ is algebraic over $\mathbb{K}$, by [Theorem 18](#thm18) the extension $\mathbb{K}(A)$ has finite degree over $\mathbb{K}$. Hence $\mathbb{K}(A \cup \{x\})$ has finite degree over $\mathbb{K}$, and therefore $x$ is algebraic over $\mathbb{K}$.
 :::
+
+---
+
+**References**
+
+**[Bou]** N. Bourbaki. *Algebra II: Chapters 4–7*. Springer, 2003.

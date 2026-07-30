@@ -274,12 +274,8 @@ $$
 
 **참고문헌**
 
-**[Huybrechts]** D. Huybrechts, *Complex Geometry: An Introduction*, Springer, 2005.
-
-**[Griffiths–Harris]** P. Griffiths and J. Harris, *Principles of Algebraic Geometry*, Wiley, 1978.
-
-**[Moroianu]** A. Moroianu, *Lectures on Kähler Geometry*, Cambridge University Press, 2007.
-
-**[Wells]** R. O. Wells, *Differential Analysis on Complex Manifolds*, 3rd ed., Springer, 2008.
-
+**[Huybrechts]** D. Huybrechts, *Complex Geometry: An Introduction*, Springer, 2005.  
+**[Griffiths–Harris]** P. Griffiths and J. Harris, *Principles of Algebraic Geometry*, Wiley, 1978.  
+**[Moroianu]** A. Moroianu, *Lectures on Kähler Geometry*, Cambridge University Press, 2007.  
+**[Wells]** R. O. Wells, *Differential Analysis on Complex Manifolds*, 3rd ed., Springer, 2008.  
 **[Ballmann]** W. Ballmann, *Lectures on Kähler Manifolds*, European Mathematical Society, 2006.

@@ -325,12 +325,8 @@ $4$차원 구면 $S^4$는 짝수차원이지만 거의 복소구조를 전혀 �
 
 **참고문헌**
 
-**[Huybrechts]** D. Huybrechts, *Complex Geometry: An Introduction*, Springer, 2005.
-
-**[Griffiths–Harris]** P. Griffiths and J. Harris, *Principles of Algebraic Geometry*, Wiley, 1978.
-
-**[Kobayashi–Nomizu]** S. Kobayashi and K. Nomizu, *Foundations of Differential Geometry, Vol. II*, Wiley, 1969.
-
-**[Newlander–Nirenberg]** A. Newlander and L. Nirenberg, *Complex analytic coordinates in almost complex manifolds*, Ann. of Math. **65** (1957), 391–404.
-
+**[Huybrechts]** D. Huybrechts, *Complex Geometry: An Introduction*, Springer, 2005.  
+**[Griffiths–Harris]** P. Griffiths and J. Harris, *Principles of Algebraic Geometry*, Wiley, 1978.  
+**[Kobayashi–Nomizu]** S. Kobayashi and K. Nomizu, *Foundations of Differential Geometry, Vol. II*, Wiley, 1969.  
+**[Newlander–Nirenberg]** A. Newlander and L. Nirenberg, *Complex analytic coordinates in almost complex manifolds*, Ann. of Math. **65** (1957), 391–404.  
 **[Moroianu]** A. Moroianu, *Lectures on Kähler Geometry*, Cambridge University Press, 2007.

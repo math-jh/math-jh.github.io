@@ -218,3 +218,9 @@ $$\lVert\gamma(t')-\gamma(t'')\rVert\leq\lVert\gamma(t')-\gamma(t_0)\rVert+\lVer
 
 whereas looking only at the difference of the second coordinates of the two points gives $\lVert\gamma(t')-\gamma(t'')\rVert\geq 2$. This is a contradiction; therefore $T$ is connected but not path-connected.
 :::
+
+---
+
+**References**
+
+**[Bou]** N. Bourbaki, <i>General Topology</i>. Elements of mathematics. Springer, 1995.

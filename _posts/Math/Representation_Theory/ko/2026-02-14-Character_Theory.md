@@ -296,3 +296,9 @@ $$\rho_{\mathbb{C}[S_3]}(g)=\begin{cases}6&\text{if $g=e$}\\0&\text{otherwise}\e
 $$\rchi_{\mathbb{C}[S_3]}=\rchi_0+\rchi_\sgn+2\rchi_\std$$
 
 임을 확인할 수 있다. 또한 이는 regular representation에서 각각의 irreducible factor의 multiplicity가 자기 자신의 차원과 같아야한다는 위의 논의와도 일치하는 결과이다. 
+
+---
+
+**참고문헌**
+
+**[FH]** W. Fulton and J. Harris, *Representation theory: a first course*, Springer, 1991.

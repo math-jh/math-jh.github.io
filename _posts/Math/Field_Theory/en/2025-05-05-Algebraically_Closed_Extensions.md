@@ -123,3 +123,9 @@ For an algebraic extension $\Omega/\mathbb{K}$ of a field $\mathbb{K}$, the foll
 :::
 
 Therefore, the algebraic closure of $\mathbb{K}$ exists uniquely up to isomorphism. When one or more algebraic extensions of $\mathbb{K}$ are given, we can embed them into a (common) algebraic closure to compare them; in such a situation there is no need to choose a specific algebraic closure of $\mathbb{K}$, so we simply write $\overline{\mathbb{K}}$. After all, when dealing with fields we always treat isomorphic fields as the same, so by a slight abuse we shall think of all algebraic extensions of $\mathbb{K}$ as subextensions of $\overline{\mathbb{K}}$.
+
+---
+
+**References**
+
+**[Bou]** N. Bourbaki. *Algebra II: Chapters 4–7*. Springer, 2003.

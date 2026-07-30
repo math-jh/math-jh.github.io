@@ -304,12 +304,8 @@ $f \in \mathcal{O}(M)$이라 하자. $f$는 holomorphic이므로 연속이고, �
 
 **참고문헌**
 
-**[Griffiths–Harris]** P. Griffiths and J. Harris, *Principles of Algebraic Geometry*, Wiley, 1978.
-
-**[Huybrechts]** D. Huybrechts, *Complex Geometry: An Introduction*, Springer, 2005.
-
-**[Wells]** R. O. Wells, *Differential Analysis on Complex Manifolds*, 3rd ed., Springer, 2008.
-
-**[Kodaira]** K. Kodaira, *Complex Manifolds and Deformation of Complex Structures*, Springer, 1986.
-
+**[Griffiths–Harris]** P. Griffiths and J. Harris, *Principles of Algebraic Geometry*, Wiley, 1978.  
+**[Huybrechts]** D. Huybrechts, *Complex Geometry: An Introduction*, Springer, 2005.  
+**[Wells]** R. O. Wells, *Differential Analysis on Complex Manifolds*, 3rd ed., Springer, 2008.  
+**[Kodaira]** K. Kodaira, *Complex Manifolds and Deformation of Complex Structures*, Springer, 1986.  
 **[Hörmander]** L. Hörmander, *An Introduction to Complex Analysis in Several Variables*, 3rd ed., North-Holland, 1990.

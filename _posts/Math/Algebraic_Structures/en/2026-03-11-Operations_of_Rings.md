@@ -108,3 +108,9 @@ and the similarly defined $\iota_B$ satisfy the universal property of the coprod
 $$\phi(\alpha\otimes \beta)=\phi((\alpha\otimes 1)(1\otimes \beta))=\cdots=\phi_A(\alpha)\phi_B(\beta)$$
 
 so it is unique. On the other hand, since the function $(\alpha,\beta)\mapsto \phi_A(\alpha)\phi_B(\beta)$ from $A\times B$ to $C$ is bilinear, the universal property of the tensor product yields a ring homomorphism $A\otimes B \rightarrow C$ satisfying $\alpha\otimes \beta\mapsto \phi_A(\alpha)\phi_B(\beta)$, and this is exactly $\phi$.
+
+---
+
+**References**
+
+**[Bou]** Bourbaki, N. Algebra I. *Elements of Mathematics*. Springer. 1998.

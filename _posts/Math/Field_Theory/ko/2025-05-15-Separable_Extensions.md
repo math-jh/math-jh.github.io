@@ -265,3 +265,9 @@ $\mathbb{K}$의 적당한 extension을 하나 고정하고, 이 extension의 sub
 1, 가정에 의해 $\mathbb{L}$의 임의의 원소가 $\mathbb{K}$에 대해 separable이므로, $\mathbb{K}'(\mathbb{L})$의 모든 원소가 $\mathbb{K}'$에 대해 separable이다.
 2. 이를 보이기 위해서는 임의의 finite degree subextension $\mathbb{M}/\mathbb{K}$가 étale임을 보여야 한다. 우선 주어진 가정으로부터 $\mathbb{M}$과 $\mathbb{K}'$는 linearly disjoint이고, 따라서 $\mathbb{M}_{(\mathbb{K}')}=\mathbb{M}\otimes_\mathbb{K}\mathbb{K}'$가 $\mathbb{K}'(\mathbb{M})$과 isomorphic하다. ([§대수적 확장, ⁋명제 10](/ko/math/field_theory/algebraic_extensions#prop10)) 한편 $\mathbb{K}'(\mathbb{M})/\mathbb{K}'$는 finite degree이므로, $\mathbb{L}'/\mathbb{K}'$가 separable이라는 가정으로부터 étale이다. 이제 étale morphism은 base change에 대해 stable하므로 원하는 결과를 얻는다. ([§에탈대수, ⁋따름정리 14](/ko/math/field_theory/etale_algebras#cor14))
 :::
+
+---
+
+**참고문헌**
+
+**[Bou]** N. Bourbaki. *Algebra II: Chapters 4–7*. Springer, 2003.

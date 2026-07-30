@@ -130,3 +130,10 @@ $$\oint_C \mathbf{F}\cdot d\mathbf{r} = \int_0^{2\pi} (\sin^2 t + \cos^2 t)\math
 
 이다. [정리 4](#thm4)에 의해 $\mathbf{F}$는 이 영역에서 보존장이 아니다. 이는 국소적으로는 이 벡터장이 편각 $\theta = \arctan(y/x)$의 기울기로 나타낼 수 있지만, 편각이 원점을 돌 때 $2\pi$만큼 불어나 한 값으로 정의되지 못하는 것이 그 원인이다. 
 :::
+
+---
+
+**참고문헌**
+
+**[Ste]** J. Stewart, *Calculus*, 8th ed., Cengage Learning, 2016.  
+**[Kim]** 김홍종, *미적분학 1·2*, 제3개정판, 서울대학교출판문화원, 2020.

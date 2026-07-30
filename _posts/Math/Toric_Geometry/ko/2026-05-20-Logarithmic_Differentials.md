@@ -242,6 +242,5 @@ $$\operatorname{Res}_Y\!\left(\frac{\omega_\Sigma}{f}\right) \in H^0(Y, \omega_Y
 
 **참고문헌**
 
-**[CLS]** D. A. Cox, J. B. Little, H. K. Schenck, *Toric Varieties*, Graduate Studies in Mathematics 124, AMS, 2011. (Chapter 8: differential forms on toric varieties; §8.1–8.2에서 $\Omega^1(\log D)$의 위 trivialization을 자세히 다룬다.)
-
+**[CLS]** D. A. Cox, J. B. Little, H. K. Schenck, *Toric Varieties*, Graduate Studies in Mathematics 124, AMS, 2011. (Chapter 8: differential forms on toric varieties; §8.1–8.2에서 $\Omega^1(\log D)$의 위 trivialization을 자세히 다룬다.)  
 **[Oda]** T. Oda, *Convex Bodies and Algebraic Geometry: An Introduction to the Theory of Toric Varieties*, Springer, 1988.

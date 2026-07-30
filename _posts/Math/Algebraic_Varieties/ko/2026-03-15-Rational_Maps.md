@@ -137,7 +137,7 @@ $$\Bl_{(0,0)} \mathbb{A}^2 = \{((x, y), [u : v]) \in \mathbb{A}^2 \times \mathbb
 - $\mathbb{A}^2$의 원점 $(0,0)$에는 모든 $\mathbb{P}^1$의 점이 존재할 수 있다. 
 
 {% diagram Math/Algebraic_Varieties/Rational_Maps-1.png width="32em" alt="Blowup" %}
-<cap markdown="1">[Har1] p.29. Fig. 3.</cap>
+<cap markdown="1">[Hart] p.29. Fig. 3.</cap>
 
 구체적으로, projection $\pi_1: \Bl_{(0,0)} \mathbb{A}^2 \rightarrow \mathbb{A}^2$를 $\pi((x, y), [u : v]) = (x, y)$로 정의하면, 원점이 아닌 모든 점의 preimage는 한 점이며, 원점의 preimage는 $\mathbb{P}^1$이다. 이를 *exceptional divisor*라 부른다.
 
@@ -150,6 +150,6 @@ $$\Bl_{(0,0)} \mathbb{A}^2 = \{((x, y), [u : v]) \in \mathbb{A}^2 \times \mathbb
 
 **참고문헌**
 
-**[Har1]** R. Hartshorne, *Algebraic Geometry*, Springer, 1977.  
-**[Har2]** J. Harris, *Algebraic Geometry: A First Course*, Springer, 1992.  
+**[Hart]** R. Hartshorne, *Algebraic Geometry*, Springer, 1977.  
+**[Har]** J. Harris, *Algebraic Geometry: A First Course*, Springer, 1992.  
 **[Sha]** I. R. Shafarevich, *Basic Algebraic Geometry I: Varieties in Projective Space*, Springer, 2013.

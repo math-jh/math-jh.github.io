@@ -189,3 +189,9 @@ $$\Hom_A(M\otimes_AN, L)\cong\Hom_A(M,\Hom_A(N,L))\cong\Hom_A(N,\Hom_A(M,L))$$
 :::
 
 특히 위의 식들 (1), (2)가 모두 $A$-module들 사이의 isomorphism이 된다. 또, $(\lMod{A},\otimes_A,A)$이 symmetric monoidal category가 된다는 것을 확인할 수 있다. 
+
+---
+
+**참고문헌**
+
+**[Bou]** Bourbaki, N. Algebra I. *Elements of Mathematics*. Springer. 1998.

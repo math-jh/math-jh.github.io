@@ -197,3 +197,9 @@ $$d(x_n, x^\ast) \leq \frac{\lambda^n}{1 - \lambda} d(x_1, x_0)$$
 이 평가 덕분에 피카르 반복은 단순한 존재 증명의 도구를 넘어, 정해진 오차 안에서 해를 근사하는 실제 계산법이 된다. $Lh$가 작을수록 한 번의 반복으로 오차가 더 크게 줄어든다.
 
 이렇게 contraction 원리는 미분방정식의 초기값 문제를 fixed point 문제로 환원하여, 해의 존재·유일성을 한꺼번에 그리고 구성적으로 확립한다. $f$가 $y$에 대해 선형이면 립시츠 조건이 전역적으로 성립하여 해가 구간 전체로 확장된다([명제 6](#prop6)).
+
+---
+
+**참고문헌**
+
+**[Rud]** W. Rudin, *Principles of mathematical analysis*, 3rd ed., McGraw-Hill, 1976.

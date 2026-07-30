@@ -144,12 +144,8 @@ Higher genus 및 K-theoretic 확장 (Givental, Lee, Okounkov), open/relative GW 
 
 **참고문헌**
 
-**[KM]** M. Kontsevich, Yu. Manin, *Gromov-Witten classes, quantum cohomology, and enumerative geometry*, Comm. Math. Phys. **164** (1994), 525--562.
-
-**[RT]** Y. Ruan, G. Tian, *A mathematical theory of quantum cohomology*, J. Differential Geom. **42** (1995), 259--367.
-
-**[BF]** K. Behrend, B. Fantechi, *The intrinsic normal cone*, Invent. Math. **128** (1997), 45--88.
-
-**[MS]** D. McDuff, D. Salamon, *J-holomorphic Curves and Symplectic Topology*, AMS Colloquium Publications **52**, 2nd ed., 2012.
-
+**[KM]** M. Kontsevich, Yu. Manin, *Gromov-Witten classes, quantum cohomology, and enumerative geometry*, Comm. Math. Phys. **164** (1994), 525--562.  
+**[RT]** Y. Ruan, G. Tian, *A mathematical theory of quantum cohomology*, J. Differential Geom. **42** (1995), 259--367.  
+**[BF]** K. Behrend, B. Fantechi, *The intrinsic normal cone*, Invent. Math. **128** (1997), 45--88.  
+**[MS]** D. McDuff, D. Salamon, *J-holomorphic Curves and Symplectic Topology*, AMS Colloquium Publications **52**, 2nd ed., 2012.  
 **[HKKPTVVZ]** K. Hori, S. Katz, A. Klemm, R. Pandharipande, R. Thomas, C. Vafa, R. Vakil, E. Zaslow, *Mirror Symmetry*, Clay Mathematics Monographs **1**, AMS, 2003.

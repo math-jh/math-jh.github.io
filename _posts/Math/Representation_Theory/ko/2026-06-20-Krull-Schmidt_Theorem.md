@@ -165,10 +165,7 @@ Krull–Schmidt 정리는 indecomposable들의 isomorphism class를 유한차원
 
 **참고문헌**
 
-**[ASS]** I. Assem, D. Simson, and A. Skowroński, *Elements of the representation theory of associative algebras, Volume 1: Techniques of representation theory*, Cambridge University Press, 2006.
-
-**[Sch]** R. Schiffler, *Quiver representations*, Springer, 2014.
-
-**[DW]** H. Derksen and J. Weyman, *An introduction to quiver representations*, American Mathematical Society, 2017.
-
+**[ASS]** I. Assem, D. Simson, and A. Skowroński, *Elements of the representation theory of associative algebras, Volume 1: Techniques of representation theory*, Cambridge University Press, 2006.  
+**[Sch]** R. Schiffler, *Quiver representations*, Springer, 2014.  
+**[DW]** H. Derksen and J. Weyman, *An introduction to quiver representations*, American Mathematical Society, 2017.  
 **[Bass]** H. Bass, *Algebraic K-theory*, W. A. Benjamin, 1968.

@@ -415,3 +415,9 @@ $$s_\lambda\, s_\mu = \sum_\nu c_{\lambda\mu}^\nu\, s_\nu$$
 
 in the expansion of their product in this basis are called *Littlewood–Richardson numbers*. For proofs of these equivalences and the basis/multiplication rules, see Macdonald, *Symmetric Functions and Hall Polynomials* (Chapter I) or Fulton, *Young Tableaux*.
 :::
+
+---
+
+**References**
+
+**[Bou]** Bourbaki, N. Algebra I. *Elements of Mathematics*. Springer. 1998.

@@ -143,5 +143,13 @@ Adjoint $\phi^\ast\dashv\phi_\ast$가 존재한다.
 
 따라서 $\phi^\ast:\lMod{B} \rightarrow\lMod{A}$는 left adjoint이자 right adjoint이고, 따라서 모든 종류의 limit, colimit과 commute한다. 
 
+---
+
+**참고문헌**
+
+**[Bou]** Bourbaki, N. Algebra I. *Elements of Mathematics*. Springer. 1998.
+
+---
+
 [^1]: 엄밀히 말하자면 이 식에서 첫 번째 isomorphism을 말이 되게 하기 위해서는 $$B$$가 $$(A,\mathbb{Z})$$-bimodule이라는 사실을 이용해야 한다.
 

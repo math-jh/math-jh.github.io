@@ -251,7 +251,7 @@ Computing the genus by degree $d$, for degree 3 (cubic) we have $g = \frac{2 \cd
 
 **References**
 
-**[Hart]** R. Hartshorne, *Algebraic Geometry*, Graduate Texts in Mathematics, Springer, 1977.
+**[Hart]** R. Hartshorne, *Algebraic Geometry*, Graduate Texts in Mathematics, Springer, 1977.  
 **[Sha]** I. R. Shafarevich, *Basic Algebraic Geometry I: Varieties in Projective Space*, Springer, 2013.
 
 ---

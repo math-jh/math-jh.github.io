@@ -137,3 +137,9 @@ $$d(x, y) = \begin{cases} 0 & (x = y) \\ 1 & (x \neq y) \end{cases}$$
 :::
 
 이산거리는 열린·닫힌집합의 구조가 표준거리에서 익숙해진 직관과 얼마나 멀어질 수 있는지 보여 주는 극단적 예이며, 위상이 거리의 세부가 아니라 "어떤 집합을 열린집합으로 부를 것인가"라는 선택에 달려 있음을 다시 한번 일깨운다.
+
+---
+
+**참고문헌**
+
+**[Rud]** W. Rudin, *Principles of mathematical analysis*, 3rd ed., McGraw-Hill, 1976.

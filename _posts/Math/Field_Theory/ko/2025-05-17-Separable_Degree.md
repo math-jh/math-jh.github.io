@@ -186,4 +186,8 @@ $$[\mathbb{L}:\mathbb{K}]=[\mathbb{L}:\mathbb{L}_s][\mathbb{L}_s:\mathbb{K}]=[\m
 
 이에 대한 증명들은 거의 동어반복으로, 가령 첫째 결과의 경우 [§대수적 확장, ⁋명제 2](/ko/math/field_theory/algebraic_extensions#prop2)와 [§에탈대수, ⁋명제 12](/ko/math/field_theory/etale_algebras#prop12)로부터 얻어진다. 나머지 결과 또한 비슷한 결과가 extension degree와 separable degree에 대해 각각 성립하므로 inseparable degree에 대해서도 당연하게 성립하게 된다. 
 
+---
 
+**참고문헌**
+
+**[Bou]** N. Bourbaki. *Algebra II: Chapters 4–7*. Springer, 2003.

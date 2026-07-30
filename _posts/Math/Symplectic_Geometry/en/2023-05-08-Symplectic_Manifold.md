@@ -21,3 +21,10 @@ A *symplectic form* $\omega$ on a manifold $M$ is a differential $2$-form such t
 :::
 
 For a symplectic manifold $(M,\omega)$, each tangent space $T_pM$ carries a linear symplectic form $\omega_p$; hence $\dim T_pM$ is even, and therefore $M$ itself must be even-dimensional.
+
+---
+
+**References**
+
+**[CdS]** A. Cannas da Silva, *Lectures on Symplectic Geometry*, Lecture Notes in Mathematics 1764, Springer, 2008.  
+**[MS]** D. Mcduff and D. Salamon. *Introduction to symplectic topology*. Oxford graduate texts in mathematics. Oxford University Press, 2017.

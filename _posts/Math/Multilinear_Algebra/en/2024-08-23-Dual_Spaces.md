@@ -140,3 +140,9 @@ Then the following holds.
 ::: Proposition 8
 For any free module $M$, the map $M \rightarrow M^{\ast\ast}$ defined above is injective. If in addition $M$ is finitely generated, then this map is bijective.
 :::
+
+---
+
+**References**
+
+**[Bou]** Bourbaki, N. Algebra I. *Elements of Mathematics*. Springer. 1998.

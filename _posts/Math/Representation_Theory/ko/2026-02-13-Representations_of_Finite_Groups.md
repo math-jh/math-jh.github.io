@@ -228,3 +228,9 @@ Representation의 유일성 또한 이제 [\[환론\] §Semisimple module, ⁋�
 $$V=V_1^{\oplus r_1}\oplus\cdots\oplus V_k^{\oplus r_k}$$
 
 의 형태로, 인자들의 isomorphism class와 중복도가 유일하도록 나타낼 수 있는 것을 안다. 
+
+---
+
+**참고문헌**
+
+**[FH]** W. Fulton and J. Harris, *Representation theory: a first course*, Springer, 1991.

@@ -87,3 +87,10 @@ so it may be conservative. Let us see whether we can find an $f$ satisfying $\ma
 
 Such an $f$ must first satisfy $f_x = 2xy$ from the first component, so it must be of the form $f = x^2 y + g(y, z)$. Differentiating this with respect to $y$ gives $f_y = x^2 + g_y$, and if $\mathbf{F}$ were conservative, this must match the second component $x^2 + z$ of $\mathbf{F}$, so $g_y = z$, i.e., $g = yz + h(z)$. Finally, substituting this back into $f$ and differentiating with respect to $z$ and matching coefficients, we need $f_z = y + h'(z) = y$, so $h' = 0$. Therefore $f = x^2 y + yz$ can serve as a potential, and indeed $\mathbf{F} = \nabla f$ holds.
 :::
+
+---
+
+**References**
+
+**[Ste]** J. Stewart, *Calculus*, 8th ed., Cengage Learning, 2016.  
+**[Kim]** 김홍종, *미적분학 1·2*, 제3개정판, 서울대학교출판문화원, 2020.

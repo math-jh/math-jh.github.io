@@ -183,12 +183,9 @@ $$\cdots\overset{\cdot\overline{\y}}{\longrightarrow}A\overset{\cdot\overline{\x
 
 **참고문헌**
 
-**[BH]** W. Bruns, J. Herzog. *Cohen-Macaulay Rings*. Cambridge University Press, 1993.
-
-**[Eis]** David Eisenbud. *Commutative Algebra: with a view toward algebraic geometry*. Springer, 1995.
-
-**[Mat]** Hideyuki Matsumura. *Commutative Ring Theory*. Cambridge University Press, 1986.
-
+**[BH]** W. Bruns, J. Herzog. *Cohen-Macaulay Rings*. Cambridge University Press, 1993.  
+**[Eis]** David Eisenbud. *Commutative Algebra: with a view toward algebraic geometry*. Springer, 1995.  
+**[Mat]** Hideyuki Matsumura. *Commutative Ring Theory*. Cambridge University Press, 1986.  
 **[Wei]** Charles A. Weibel. *An Introduction to Homological Algebra*. Cambridge University Press, 1994.
 
 ---

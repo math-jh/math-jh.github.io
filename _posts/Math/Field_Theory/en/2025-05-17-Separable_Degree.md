@@ -186,3 +186,9 @@ Fix an extension $\Omega/\mathbb{K}$, and consider two finite degree subextensio
 :::
 
 The proofs of these are almost tautological; for example, the first result follows from [§Algebraic Extensions, ⁋Proposition 2](/en/math/field_theory/algebraic_extensions#prop2) and [§Étale Algebras, ⁋Proposition 12](/en/math/field_theory/etale_algebras#prop12). The remaining results also hold naturally for the inseparable degree, since analogous results hold for the extension degree and the separable degree.
+
+---
+
+**References**
+
+**[Bou]** N. Bourbaki. *Algebra II: Chapters 4–7*. Springer, 2003.

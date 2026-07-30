@@ -150,3 +150,9 @@ Filtration에 등장하는 유한개의 $\mathfrak{p}$들에 대한 $a_\mathfrak
 :::
 
 증명에서 결정적인 것은 두 가지이다. 하나는 dévissage로 $M$을 $B/\mathfrak{q}$ 꼴의 quotient들로 분해하여 문제를 domain의 경우로 옮기는 것이고, 다른 하나는 [정리 1](#thm1)로 $B$를 $A_{a_0}$ 위의 polynomial ring 위에서 finite하게 만든 뒤 [정리 3](#thm3)의 차원 계산으로 초월차수를 떨어뜨려 귀납을 돌리는 것이다. Free module은 flat이므로 [정리 5](#thm5)는 flatness가 generic하게 성립한다는 진술로도 읽히며, 이 형태가 대수기하에서 finite type morphism이 base의 조밀한 열린집합 위에서 flat이 된다는 사실과 finite type morphism의 image가 constructible이라는 Chevalley의 정리를 준다.
+
+---
+
+**참고문헌**
+
+**[Eis]** David Eisenbud. *Commutative Algebra: with a view toward algebraic geometry*. Springer, 1995.

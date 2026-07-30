@@ -215,3 +215,9 @@ q(a + h) - q(a) &= (a+h)^\top M (a+h) - a^\top M a \\
 :::
 
 미분을 선형사상으로 보는 이 관점은 미분이 가역일 때 함수 자신이 국소적으로 가역이라는 강력한 결론으로 이어진다.
+
+---
+
+**참고문헌**
+
+**[Rud]** W. Rudin, *Principles of mathematical analysis*, 3rd ed., McGraw-Hill, 1976.

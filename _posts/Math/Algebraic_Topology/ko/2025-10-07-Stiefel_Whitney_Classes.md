@@ -321,3 +321,10 @@ $$w_1\in H^1(\Gr(k,\mathbb{R}^\infty);\mathbb{Z}/2),\cdots, w_k\in H^k(\Gr(k,\ma
 $$w_1^{a_1}w_2^{a_2}\cdots w_k^{a_k}$$
 
 에 대응되며 이는 $H^\bullet(\Gr(k,\mathbb{R}^\infty);\mathbb{Z}/2)$의 (무한히 많은) *$\mathbb{Z}/2$-module로서의* generator 중 하나가 되며 이는 앞에서 언급한 Littlewood-Richardson rule에 의해 계산된다. 이제 이들 $w_i$들은 Stiefel-Whitney class가 만족하는 공리들을 모두 만족하며, 이것이 pullback에 의해 보존되는 것으로부터 존재성이 증명된다.
+
+---
+
+**참고문헌**
+
+**[Hat]** A. Hatcher, *Vector Bundles and K-Theory*, online notes, 2017.  
+**[MS]** J. W. Milnor and J. D. Stasheff, *Characteristic Classes*, Annals of Mathematics Studies 76, Princeton University Press, 1974.

@@ -111,3 +111,9 @@ $$A/\mathfrak{a}=\bigoplus_{i\in I}A_i/(\mathfrak{a}\cap A_i).$$
 :::
 
 The proof of this is obvious and hence omitted.
+
+---
+
+**References**
+
+**[Bou]** Bourbaki, N. Algebra I. *Elements of Mathematics*. Springer. 1998.

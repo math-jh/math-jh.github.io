@@ -265,3 +265,9 @@ which is a resolution of $A/(\x_1,\ldots, \x_n)\cong \mathbb{K}$. On the other h
 $$\Tor_i^A(\mathbb{K}, \mathbb{K}) = H_i(K_\bullet \otimes_A \mathbb{K}) = K_i \otimes_A \mathbb{K} \cong \bigwedge\nolimits^i_{\mathbb{K}}(\mathbb{K}^n).$$
 
 This computation is later used to show that the global dimension of the polynomial ring $\mathbb{K}[\x_1, \ldots, \x_n]$ is $n$.
+
+---
+
+**References**
+
+**[Wei]** C.A. Weibel. *An Introduction to Homological Algebra*. Cambridge Studies in Advanced Mathematics. Cambridge University Press, 1995.

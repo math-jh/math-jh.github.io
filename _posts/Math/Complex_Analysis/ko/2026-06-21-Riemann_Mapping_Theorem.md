@@ -242,10 +242,7 @@ Riemann 사상정리는 conformal isomorphism의 존재만을 단언할 뿐, 그
 
 **참고문헌**
 
-**[Ahl]** L.V. Ahlfors, *Complex analysis*, 3rd ed., McGraw–Hill, 1979.
-
-**[Con]** J.B. Conway, *Functions of one complex variable I*, 2nd ed., Graduate Texts in Mathematics 11, Springer, 1978.
-
-**[Rud]** W. Rudin, *Real and complex analysis*, 3rd ed., McGraw–Hill, 1987.
-
+**[Ahl]** L.V. Ahlfors, *Complex analysis*, 3rd ed., McGraw–Hill, 1979.  
+**[Con]** J.B. Conway, *Functions of one complex variable I*, 2nd ed., Graduate Texts in Mathematics 11, Springer, 1978.  
+**[Rud]** W. Rudin, *Real and complex analysis*, 3rd ed., McGraw–Hill, 1987.  
 **[SS]** E.M. Stein, R. Shakarchi, *Complex analysis*, Princeton Lectures in Analysis II, Princeton University Press, 2003.

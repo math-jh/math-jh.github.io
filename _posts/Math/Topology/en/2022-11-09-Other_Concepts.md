@@ -133,3 +133,9 @@ For a base $\mathcal{B}$ of a topological space $X$, there exists a dense subset
 ::: Proof
 For each $U\in\mathcal{B}$, choose an element $x_U\in U$, and let $D$ be the set of these. That $D$ is dense follows because for any open set $V$, we can express it as a union of elements of $\mathcal{B}$, and this union must contain some $x_U$, so $V\cap D\neq\emptyset$.
 :::
+
+---
+
+**References**
+
+**[Bou]** N. Bourbaki, <i>General Topology</i>. Elements of mathematics. Springer, 1995.

@@ -162,6 +162,12 @@ $$x\sim y\iff f(x)=f(y)$$
 is Hausdorff.
 :::
 
+---
 
+**References**
+
+**[Bou]** N. Bourbaki, <i>General Topology</i>. Elements of mathematics. Springer, 1995.
+
+---
 
 [^1]: This is equivalent to saying that the collections of open sets containing $$x$$ and $$y$$ are not the same.

@@ -289,3 +289,10 @@ and by [§Continuous Functions, ⁋Theorem 5](/en/math/calculus/continuity#thm5)
 :::
 
 If we set $\mu \equiv 1$, the weighted mean value theorem reduces to [Proposition 12](#prop12); thus [Proposition 14](#prop14) is a generalization of the mean value theorem, which may be thought of as adding a kind of density.
+
+---
+
+**References**
+
+**[Ste]** J. Stewart, *Calculus*, 8th ed., Cengage Learning, 2016.  
+**[Kim]** 김홍종, *미적분학 1·2*, 제3개정판, 서울대학교출판문화원, 2020.

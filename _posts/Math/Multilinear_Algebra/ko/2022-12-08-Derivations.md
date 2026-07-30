@@ -333,3 +333,8 @@ $${\varepsilon}_{\xi, \zeta} [x, [y,z]_{\varepsilon}]_{\varepsilon} + \varepsilo
 
 이 성립하며, 우리는 이를 *Jacobi identity*라 부른다. 
 
+---
+
+**참고문헌**
+
+**[Bou]** Bourbaki, N. Algebra I. *Elements of Mathematics*. Springer. 1998.

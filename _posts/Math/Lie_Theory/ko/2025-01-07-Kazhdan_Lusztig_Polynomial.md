@@ -207,12 +207,8 @@ KL polynomial은 본 시리즈의 다른 글들과도 직접적으로 연결된�
 
 **참고문헌**
 
-**[KL79]** D. Kazhdan, G. Lusztig, *Representations of Coxeter groups and Hecke algebras*, Invent. Math. **53** (1979), 165–184.
-
-**[KL80]** D. Kazhdan, G. Lusztig, *Schubert varieties and Poincaré duality*, Geometry of the Laplace operator, Proc. Sympos. Pure Math. **36**, AMS, 1980, 185–203.
-
-**[Hum]** J. E. Humphreys, *Reflection groups and Coxeter groups*, Cambridge Studies in Advanced Mathematics **29**, Cambridge University Press, 1990.
-
-**[BB]** A. Björner, F. Brenti, *Combinatorics of Coxeter groups*, Graduate Texts in Mathematics **231**, Springer, 2005.
-
+**[KL79]** D. Kazhdan, G. Lusztig, *Representations of Coxeter groups and Hecke algebras*, Invent. Math. **53** (1979), 165–184.  
+**[KL80]** D. Kazhdan, G. Lusztig, *Schubert varieties and Poincaré duality*, Geometry of the Laplace operator, Proc. Sympos. Pure Math. **36**, AMS, 1980, 185–203.  
+**[Hum]** J. E. Humphreys, *Reflection groups and Coxeter groups*, Cambridge Studies in Advanced Mathematics **29**, Cambridge University Press, 1990.  
+**[BB]** A. Björner, F. Brenti, *Combinatorics of Coxeter groups*, Graduate Texts in Mathematics **231**, Springer, 2005.  
 **[EW]** B. Elias, G. Williamson, *The Hodge theory of Soergel bimodules*, Ann. of Math. (2) **180** (2014), 1089–1136.

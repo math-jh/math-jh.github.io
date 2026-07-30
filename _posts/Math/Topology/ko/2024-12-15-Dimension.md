@@ -256,3 +256,9 @@ $$\{\text{irreducible closed subset of $U$}\} \rightarrow \{\text{irreducible cl
 ::: 명제 16
 만일 위상공간 $X$의 두 유한차원 closed subspace $Y,Z$가 존재하여 $X=Y\cup Z$라면, 이들의 Krull dimension 또한 식 $\dim X=\max(\dim Y,\dim Z)$을 만족한다.
 :::
+
+---
+
+**참고문헌**
+
+**[Bou]** N. Bourbaki, <i>General Topology</i>. Elements of mathematics. Springer, 1995.

@@ -143,3 +143,9 @@ $$\begin{aligned}
 같은 발상이 연속함수 이론의 [§연속함수의 성질, ⁋따름정리 2](/ko/math/analysis/continuous_functions#cor2)에서도 작동한다. Closed bounded 구간 위의 연속함수 $f$가 상한 $S = \sup f$에 임의로 가까운 값을 취하는 점들의 수열 $(x_n)$을 잡으면, 이 수열은 bounded이므로 [정리 4](#thm4)에 의해 수렴하는 부분수열 $x_{n_k} \rightarrow c$를 가진다. 구간이 닫혀 있어 limit point $c$도 구간 안에 있고, $f$의 연속성으로 $f(x_{n_k}) \rightarrow f(c)$이므로 $f(c) = S$가 되어, 상한이 실제로 달성된다. 이처럼 "bounded sequence에서 극한을 추출한다"는 [정리 4](#thm4)의 한 문장이 존재 정리의 골격을 이룬다.
 
 앞서 자유로이 쓴 용어를 정리해 두면, 수렴하는 부분수열의 극한을 *부분수열극한<sub>subsequential limit</sub>* 또는 *집적점<sub>cluster point</sub>*이라 한다.
+
+---
+
+**참고문헌**
+
+**[Rud]** W. Rudin, *Principles of mathematical analysis*, 3rd ed., McGraw-Hill, 1976.

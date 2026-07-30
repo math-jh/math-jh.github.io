@@ -312,3 +312,10 @@ Then $H^\bullet(\Gr(k,\mathbb{R}^\infty);\mathbb{Z}/2)$ is generated as a *polyn
 $$w_1^{a_1}w_2^{a_2}\cdots w_k^{a_k},$$
 
 which becomes one of the (infinitely many) generators of $H^\bullet(\Gr(k,\mathbb{R}^\infty);\mathbb{Z}/2)$ as a *$\mathbb{Z}/2$-module*, and this is computed by the Littlewood-Richardson rule mentioned above. These $w_i$ now satisfy all the axioms that the Stiefel-Whitney class must satisfy, and their existence is proved from the fact that they are preserved under pullback.
+
+---
+
+**References**
+
+**[Hat]** A. Hatcher, *Vector Bundles and K-Theory*, online notes, 2017.  
+**[MS]** J. W. Milnor and J. D. Stasheff, *Characteristic Classes*, Annals of Mathematics Studies 76, Princeton University Press, 1974.

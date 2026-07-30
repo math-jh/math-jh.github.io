@@ -131,6 +131,6 @@ Using the above $C^\infty$ Urysohn lemma in place of the general Urysohn lemma, 
 **References**
 
 **[Lee]** John M. Lee. *Introduction to Smooth Manifolds*, Graduate texts in mathematics, Springer, 2012  
-**[War]** Frank W. Warner. *Foundations of Differentiable Manifolds and Lie Groups*, Graduate texts in mathematics, Springer, 2013    
+**[War]** Frank W. Warner. *Foundations of Differentiable Manifolds and Lie Groups*, Graduate texts in mathematics, Springer, 2013
 
 ---

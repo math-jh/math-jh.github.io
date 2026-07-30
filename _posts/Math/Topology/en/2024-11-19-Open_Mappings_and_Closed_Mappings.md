@@ -94,3 +94,9 @@ We now examine the properties possessed by open mappings and closed mappings, re
 
 ::: Proposition 6
 :::
+
+---
+
+**References**
+
+**[Bou]** N. Bourbaki, <i>General Topology</i>. Elements of mathematics. Springer, 1995.

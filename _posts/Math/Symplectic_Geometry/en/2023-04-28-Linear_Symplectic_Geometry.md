@@ -158,3 +158,10 @@ so by definition $w\in W^\omega$ and therefore $[w]=0$. That is, $\overline{\ome
 :::
 
 Since every 1-dimensional subspace of a symplectic vector space is an isotropic subspace, by [Lemma 4](#lem4) every codimension-1 subspace $W$ is a coisotropic subspace. Applying [Lemma 5](#lem5) to this space, we obtain a new symplectic vector space with dimension reduced by 2 from the original vector space.
+
+---
+
+**References**
+
+**[CdS]** A. Cannas da Silva, *Lectures on Symplectic Geometry*, Lecture Notes in Mathematics 1764, Springer, 2008.  
+**[MS]** D. Mcduff and D. Salamon. *Introduction to symplectic topology*. Oxford graduate texts in mathematics. Oxford University Press, 2017.

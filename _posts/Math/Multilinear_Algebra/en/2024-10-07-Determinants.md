@@ -229,3 +229,9 @@ $$\det(\x-\iota_!u)(1\otimes_Ax)=(\x-\iota_!u)(v(1\otimes_A x)),$$
 
 and therefore we obtain the desired result by [Proposition 7](#prop7).
 :::
+
+---
+
+**References**
+
+**[Bou]** Bourbaki, N. Algebra I. *Elements of Mathematics*. Springer. 1998.

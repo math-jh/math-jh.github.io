@@ -267,8 +267,6 @@ From this cell decomposition one can compute the cohomology of $\GL(n;\mathbb{C}
 
 **References**
 
-**[BtD]** Theodor Bröcker, Tammo tom Dieck, *Representations of Compact Lie Groups*, Graduate texts in mathematics, Springer, 1985.
-
-**[Hum]** James E. Humphreys, *Linear Algebraic Groups*, Graduate texts in mathematics, Springer, 1975.
-
+**[BtD]** Theodor Bröcker, Tammo tom Dieck, *Representations of Compact Lie Groups*, Graduate texts in mathematics, Springer, 1985.  
+**[Hum]** James E. Humphreys, *Linear Algebraic Groups*, Graduate texts in mathematics, Springer, 1975.  
 **[Spr]** T. A. Springer, *Linear Algebraic Groups*, Progress in mathematics, Birkhäuser, 1998.

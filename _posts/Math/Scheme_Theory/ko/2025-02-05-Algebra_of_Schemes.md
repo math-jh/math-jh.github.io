@@ -305,7 +305,7 @@ $$K(X)=\left\{\frac{p(\x_1)+c\x_2}{q(\x_1)+c'\x_2} \mid q(0)\neq0\right\}$$
 **참고문헌**
 
 **[Har]** R. Hartshorne, *Algebraic geometry*. Graduate texts in mathematics. Springer, 1977.  
-**[Vak]** R. Vakil, *The rising sea: Foundation of algebraic geometry*. Available [online](https://math.stanford.edu/~vakil/216blog/).  
+**[Vak]** R. Vakil, *The rising sea: Foundation of algebraic geometry*. Available [online](https://math.stanford.edu/~vakil/216blog/).
 
 ---
 [^1]: 이 과정에서 $X$의 irreducible component들이 유한히 많다는 것을 사용하였다. 이는 나머지 component들의 합집합이 다시 닫힌집합이 되도록 해 주며, 따라서 두 닫힌집합이 서로 만나지 않는다면 이들이 동시에 열린집합이 되어 connectedness에 모순이 되기 때문이다. 

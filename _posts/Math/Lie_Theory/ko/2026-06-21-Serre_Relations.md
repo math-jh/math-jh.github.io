@@ -158,4 +158,4 @@ Serre 정리는 root system 이론과 결합하여 분류를 완성한다. [§�
 **[Hum]** J. E. Humphreys, *Introduction to Lie algebras and representation theory*, Graduate Texts in Mathematics, Springer, 1972.  
 **[Ser]** J.-P. Serre, *Complex semisimple Lie algebras*, Springer, 1987.  
 **[Kac]** V. G. Kac, *Infinite-dimensional Lie algebras*, 3rd ed., Cambridge University Press, 1990.  
-**[Bou]** N. Bourbaki, *Lie groups and Lie algebras, Chapters 4–6*, Springer, 2002.  
+**[Bou]** N. Bourbaki, *Lie groups and Lie algebras, Chapters 4–6*, Springer, 2002.

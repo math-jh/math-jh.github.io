@@ -265,12 +265,9 @@ Cohen--Macaulay 조건은 depth라는 homological 불변량과 차원을 하나�
 
 **참고문헌**
 
-**[AM]** M. F. Atiyah, I. G. Macdonald. *Introduction to Commutative Algebra*. Addison-Wesley, 1969.
-
-**[BH]** W. Bruns, J. Herzog. *Cohen-Macaulay Rings*. Cambridge University Press, 1993.
-
-**[Eis]** David Eisenbud. *Commutative Algebra: with a view toward algebraic geometry*. Springer, 1995.
-
+**[AM]** M. F. Atiyah, I. G. Macdonald. *Introduction to Commutative Algebra*. Addison-Wesley, 1969.  
+**[BH]** W. Bruns, J. Herzog. *Cohen-Macaulay Rings*. Cambridge University Press, 1993.  
+**[Eis]** David Eisenbud. *Commutative Algebra: with a view toward algebraic geometry*. Springer, 1995.  
 **[Mat]** Hideyuki Matsumura. *Commutative Ring Theory*. Cambridge University Press, 1986.
 
 ---

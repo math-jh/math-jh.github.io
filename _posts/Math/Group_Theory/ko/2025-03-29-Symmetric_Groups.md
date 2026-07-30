@@ -222,7 +222,7 @@ $A_5$는 simple이다. 이는 Sylow theorem을 사용하여 조금 더 고상하
 :::
 
 ---
-**Reference**
+**참고문헌**
 
 **[DF]** D.S. Dummit and R.M. Foote. Abstract Algebra. Wiley, 2003.
 

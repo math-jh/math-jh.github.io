@@ -167,7 +167,7 @@ Therefore, we may just as well think of the objects of an arbitrary abelian cate
 **References**
 
 **[Wei]** C.A. Weibel. *An Introduction to Homological Algebra*. Cambridge Studies in Advanced Mathematics. Cambridge University Press, 1995.  
-**[Vak]** R. Vakil, *The rising sea: foundations of algebraic geometry*. 2015. Preprint. [link](http://math.stanford.edu/~vakil/216blog/FOAGnov1817public.pdf)
+**[Vak]** R. Vakil, *The rising sea: foundations of algebraic geometry*. 2015. Preprint. [링크](http://math.stanford.edu/~vakil/216blog/FOAGnov1817public.pdf)
 
 ---
 

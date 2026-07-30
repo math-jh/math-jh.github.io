@@ -316,6 +316,5 @@ $$\mathbb{C}[\mathbb{Z}/n]\cong\mathbb{C}^n$$
 
 **참고문헌**
 
-**[AM]** M. F. Atiyah and I. G. Macdonald, *Introduction to commutative algebra*, Addison-Wesley, 1969.
-
+**[AM]** M. F. Atiyah and I. G. Macdonald, *Introduction to commutative algebra*, Addison-Wesley, 1969.  
 **[FH]** W. Fulton and J. Harris, *Representation theory: a first course*, Springer, 1991.

@@ -564,9 +564,9 @@ This proposition shows that the classification of line bundles reduces to a coho
 
 **References**
 
-**[Har]** R. Hartshorne, *Algebraic geometry*, Graduate Texts in Mathematics, Springer, 1977.
-**[Sha]** I. R. Shafarevich, *Basic Algebraic Geometry I: Varieties in Projective Space*, Springer, 2013.
-**[God]** R. Godement, *Topologie algébrique et théorie des faisceaux*, Hermann, 1958.
+**[Hart]** R. Hartshorne, *Algebraic geometry*, Graduate Texts in Mathematics, Springer, 1977.  
+**[Sha]** I. R. Shafarevich, *Basic Algebraic Geometry I: Varieties in Projective Space*, Springer, 2013.  
+**[God]** R. Godement, *Topologie algébrique et théorie des faisceaux*, Hermann, 1958.  
 **[Wei]** C. A. Weibel, *An Introduction to Homological Algebra*, Cambridge Studies in Advanced Mathematics 38, Cambridge University Press, 1994.
 
 ---

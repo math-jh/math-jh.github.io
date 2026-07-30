@@ -150,3 +150,9 @@ $$\overline{f}(x)=\begin{cases}\ast_2&\text{if $x=\ast_1$}\\f(x)&\text{otherwise
 
 으로 정의한 $\overline{f}:\overline{X}_1 \rightarrow \overline{X}_2$가 연속인 것과 동치이다.
 :::
+
+---
+
+**참고문헌**
+
+**[Bou]** N. Bourbaki, <i>General Topology</i>. Elements of mathematics. Springer, 1995.

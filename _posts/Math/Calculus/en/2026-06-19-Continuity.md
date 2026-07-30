@@ -115,3 +115,10 @@ Suppose $f$ is strictly increasing. That $J$ is an interval follows from the Int
 :::
 
 For instance, $f(x) = x^n$ (for $x \geq 0$, with $n$ a natural number) is continuous and strictly increasing, so its inverse, the $n$th root $\sqrt[n]{x}$, is also continuous. Likewise, the inverse trigonometric functions, which are inverses of suitably restricted trigonometric functions, are all continuous. With this we have assembled the basic properties of continuous functions.
+
+---
+
+**References**
+
+**[Ste]** J. Stewart, *Calculus*, 8th ed., Cengage Learning, 2016.  
+**[Kim]** 김홍종, *미적분학 1·2*, 제3개정판, 서울대학교출판문화원, 2020.

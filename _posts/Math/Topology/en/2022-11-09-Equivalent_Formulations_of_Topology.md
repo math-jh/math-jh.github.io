@@ -135,3 +135,9 @@ does not generally form a filter on $A$. Upon reflection, this is solely because
 ::: Definition 8
 If in the above situation $\mathcal{F}\vert_A$ defines a filter on $A$, we call the filter $\mathcal{F}$ a filter on $A$.
 :::
+
+---
+
+**References**
+
+**[Bou]** N. Bourbaki, <i>General Topology</i>. Elements of mathematics. Springer, 1995.

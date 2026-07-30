@@ -326,3 +326,9 @@ Moreover, the equality of the above corollary can be obtained by verifying it fo
 $${\varepsilon}_{\xi, \zeta} [x, [y,z]_{\varepsilon}]_{\varepsilon} + \varepsilon_{\eta,\xi} [y, [z,x]_{\varepsilon}]_{\varepsilon} + \varepsilon_{\zeta,\eta} [z, [x,y]_{\varepsilon}]_{\varepsilon} = 0$$
 
 holds, and we call this the *Jacobi identity*.
+
+---
+
+**References**
+
+**[Bou]** Bourbaki, N. Algebra I. *Elements of Mathematics*. Springer. 1998.

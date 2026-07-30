@@ -307,12 +307,8 @@ $$\int_{X_\Sigma}\alpha=\sum_{\sigma\in\Sigma(n)}\frac{i_{x_\sigma}^\ast\alpha}{
 
 **참고문헌**
 
-**[AB]** M. F. Atiyah and R. Bott, *The moment map and equivariant cohomology*, Topology **23** (1984), 1–28.
-
-**[BGV]** N. Berline, E. Getzler, and M. Vergne, *Heat Kernels and Dirac Operators*, Grundlehren der mathematischen Wissenschaften 298, Springer, 1992.
-
-**[GS]** V. W. Guillemin and S. Sternberg, *Supersymmetry and Equivariant de Rham Theory*, Springer, 1999.
-
-**[AF]** D. Anderson and W. Fulton, *Equivariant Cohomology in Algebraic Geometry*, Cambridge Studies in Advanced Mathematics 210, Cambridge University Press, 2023.
-
+**[AB]** M. F. Atiyah and R. Bott, *The moment map and equivariant cohomology*, Topology **23** (1984), 1–28.  
+**[BGV]** N. Berline, E. Getzler, and M. Vergne, *Heat Kernels and Dirac Operators*, Grundlehren der mathematischen Wissenschaften 298, Springer, 1992.  
+**[GS]** V. W. Guillemin and S. Sternberg, *Supersymmetry and Equivariant de Rham Theory*, Springer, 1999.  
+**[AF]** D. Anderson and W. Fulton, *Equivariant Cohomology in Algebraic Geometry*, Cambridge Studies in Advanced Mathematics 210, Cambridge University Press, 2023.  
 **[BT]** R. Bott and L. W. Tu, *Differential Forms in Algebraic Topology*, Springer, 1982.

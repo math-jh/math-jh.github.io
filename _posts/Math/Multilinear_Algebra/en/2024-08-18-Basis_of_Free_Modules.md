@@ -141,3 +141,9 @@ Moreover, the conditions for the multiplication on $E$ to satisfy the associativ
 $$(xy)z=\sum_{i,j,k\in I}x_i y_jz_k(e_ie_j)e_k,\qquad x(yz)=\sum_{i,j,k\in I} x_i y_j z_k e_i(e_je_k)$$
 
 Therefore, for associativity to hold it suffices to verify that associativity holds among the elements comprising the basis. For the same reason, for the multiplication on $E$ to satisfy the commutative law it suffices to verify that commutativity holds among the elements comprising the basis.
+
+---
+
+**References**
+
+**[Bou]** Bourbaki, N. Algebra I. *Elements of Mathematics*. Springer. 1998.

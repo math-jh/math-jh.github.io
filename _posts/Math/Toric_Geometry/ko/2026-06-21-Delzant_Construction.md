@@ -217,4 +217,4 @@ $$\Delta_a=\{x\in\mathbb{R}^2\mid x_1\geq0,\ x_2\geq0,\ x_1\leq1,\ x_2\leq h-a x
 **[CdS-T]** A. Cannas da Silva, *Symplectic toric manifolds*, in *Symplectic Geometry of Integrable Hamiltonian Systems*, Advanced Courses in Mathematics CRM Barcelona, Birkhäuser, 2003, pp. 85–173.  
 **[CdS]** A. Cannas da Silva, *Lectures on Symplectic Geometry*, Lecture Notes in Mathematics 1764, Springer, 2008.  
 **[Gui]** V. Guillemin, *Moment Maps and Combinatorial Invariants of Hamiltonian $T^n$-spaces*, Progress in Mathematics 122, Birkhäuser, 1994.  
-**[CLS]** D. Cox, J. Little, H. Schenck, *Toric Varieties*, Graduate Studies in Mathematics, American Mathematical Society, 2011.  
+**[CLS]** D. Cox, J. Little, H. Schenck, *Toric Varieties*, Graduate Studies in Mathematics, American Mathematical Society, 2011.

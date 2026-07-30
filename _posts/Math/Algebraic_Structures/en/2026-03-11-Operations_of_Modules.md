@@ -187,3 +187,9 @@ exists.
 :::
 
 In particular, the formulas (1), (2) above become isomorphisms of $A$-modules. Also, one can check that $(\lMod{A},\otimes_A,A)$ is a symmetric monoidal category.
+
+---
+
+**References**
+
+**[Bou]** Bourbaki, N. Algebra I. *Elements of Mathematics*. Springer. 1998.

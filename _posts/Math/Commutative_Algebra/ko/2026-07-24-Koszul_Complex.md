@@ -296,8 +296,7 @@ $$\Tor_i^A(\kappa,\kappa)\cong \bigwedge\nolimits^i_\kappa(\mathfrak{m}/\mathfra
 
 **참고문헌**
 
-**[Eis]** David Eisenbud. *Commutative Algebra: with a view toward algebraic geometry*. Springer, 1995.
-
+**[Eis]** David Eisenbud. *Commutative Algebra: with a view toward algebraic geometry*. Springer, 1995.  
 **[Mat]** Hideyuki Matsumura. *Commutative Ring Theory*. Cambridge University Press, 1986.
 
 ---

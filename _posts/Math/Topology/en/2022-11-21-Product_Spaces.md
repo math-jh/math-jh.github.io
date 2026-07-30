@@ -122,3 +122,9 @@ $$\prod_{i\in I}\interior A_i\subseteq \interior\left(\prod_{i\in I}A_i\right)$$
 
 Conversely, let $x=(x_i)\in\interior\left(\prod A_i\right)$. Then, thinking of the base, there exist open sets $U_i$ such that $x\in \prod U_i\subseteq \prod A_i$. Fixing each $j\in I$, for arbitrary $y_j\in U_j$, the element obtained by replacing only the $j$-th component of $x$ with $y_j$ still belongs to $\prod U_i$ (the other components satisfy $x_i\in U_i$), and hence to $\prod A_i$. Reading the $j$-th component of this element, we have $y_j\in A_j$. That is, $U_j\subseteq A_j$, and since $U_j$ is open, $x_j\in U_j\subseteq \interior A_j$. Since this holds for every $j$, we have $x\in\prod_{i\in I}\interior A_i$.
 :::
+
+---
+
+**References**
+
+**[Bou]** N. Bourbaki, <i>General Topology</i>. Elements of mathematics. Springer, 1995.

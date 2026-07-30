@@ -98,3 +98,9 @@ $$(0)\subseteq(\x_n)\subseteq(\x_{n-1},\x_n)\subseteq\cdots\subseteq(\x_{d+1},\l
 
 shows that this ideal has height at least $n-d$, and since the quotient ring $B/(\x_{d+1},\ldots, \x_n)\cong\mathbb{K}[\x_1,\ldots, \x_d]$ has dimension $d$ ([§System of Parameters, ⁋Corollary 11](/en/math/commutative_algebra/system_of_parameters#cor11)), the inequality $\dim+\operatorname{ht}\leq n$ shows that the height is at most $n-d$. Therefore $\operatorname{ht}_B(\x_{d+1},\ldots, \x_n)=n-d$, and hence $\operatorname{ht}\mathfrak{p}=n-d=\dim A-\dim A/\mathfrak{p}$.
 :::
+
+---
+
+**References**
+
+**[Eis]** David Eisenbud. *Commutative Algebra: with a view toward algebraic geometry*. Springer, 1995.

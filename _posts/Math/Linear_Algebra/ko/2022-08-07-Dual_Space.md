@@ -257,6 +257,6 @@ $$x\in \bigl(L^\ast(U)\bigr)^\perp\iff (x, L^\ast(\upsilon))=0\text{ for all $\u
 **참고문헌**
 
 **[Lee]** 이인석, *선형대수와 군*, 서울대학교 출판문화원, 2005.  
-**[Bou]** Bourbaki, N. *Algebra I*, Elements of Mathematics. Springer-Verlag Berlin, 1998.  
+**[Bou]** Bourbaki, N. *Algebra I*, Elements of Mathematics. Springer-Verlag Berlin, 1998.
 
 ---

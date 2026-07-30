@@ -180,5 +180,5 @@ $$f_\ast(\alpha \cdot f^\ast \beta) = f_\ast(\alpha) \cdot \beta$$
 
 **참고문헌**
 
-**[Ful]** W. Fulton, *Intersection Theory*, Springer, 1984.
-**[Har]** R. Hartshorne, *Algebraic Geometry*, Graduate Texts in Mathematics, Springer, 1977.
+**[Ful]** W. Fulton, *Intersection Theory*, Springer, 1984.  
+**[Hart]** R. Hartshorne, *Algebraic Geometry*, Graduate Texts in Mathematics, Springer, 1977.

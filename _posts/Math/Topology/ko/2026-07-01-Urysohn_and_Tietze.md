@@ -228,8 +228,6 @@ Urysohn 보조정리로 얻어지는 연속함수는 이후 다양한 국소적 
 
 **참고문헌**
 
-**[Mun]** J. R. Munkres, *Topology*, 2nd ed., Prentice Hall, 2000.
-
-**[Wil]** S. Willard, *General Topology*, Addison-Wesley, 1970.
-
+**[Mun]** J. R. Munkres, *Topology*, 2nd ed., Prentice Hall, 2000.  
+**[Wil]** S. Willard, *General Topology*, Addison-Wesley, 1970.  
 **[Kel]** J. L. Kelley, *General Topology*, Springer, 1975.
