@@ -9,7 +9,7 @@ sidebar:
     nav: "symplectic_geometry-ko"
 
 date: 2023-06-30
-weight: 8
+weight: 11
 
 published: false
 ---

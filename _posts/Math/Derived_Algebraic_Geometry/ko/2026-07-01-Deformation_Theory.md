@@ -99,7 +99,7 @@ $$\Der_k(P,B)=\Hom_B(\Omega_{P/k}\otimes_PB,B)\overset{\overline{d}^\ast}{\longr
 
 ## Naive 여접 복합체와 $T^i$
 
-위의 두 module $I/I^2$와 $\Omega_{P/k}\otimes_PB$, 그리고 그 사이의 $\overline{d}$는 정확히 naive 여접 복합체를 이룬다. [\[다중선형대수학\] §코탄젠트 복합체, ⁋정의 1](/ko/math/multilinear_algebra/cotangent_complex#def1)에서 presentation $p:P\rightarrow B$에 대하여
+위의 두 module $I/I^2$와 $\Omega_{P/k}\otimes_PB$, 그리고 그 사이의 $\overline{d}$는 정확히 naive 여접 복합체를 이룬다. [\[가환대수학\] §코탄젠트 복합체, ⁋정의 1](/ko/math/commutative_algebra/cotangent_complex#def1)에서 presentation $p:P\rightarrow B$에 대하여
 
 $$\operatorname{NL}_{B/k}=\Bigl[I/I^2\overset{\overline{d}}{\longrightarrow}\Omega_{P/k}\otimes_PB\Bigr]$$
 
@@ -107,7 +107,7 @@ $$\operatorname{NL}_{B/k}=\Bigl[I/I^2\overset{\overline{d}}{\longrightarrow}\Ome
 
 $$H_0(\operatorname{NL}_{B/k})\cong\Omega_{B/k},\qquad H_1(\operatorname{NL}_{B/k})=\ker\overline{d}$$
 
-이며 presentation의 선택에 무관함을 보았다 ([§코탄젠트 복합체, ⁋명제 2](/ko/math/multilinear_algebra/cotangent_complex#prop2), [§코탄젠트 복합체, ⁋정리 5](/ko/math/multilinear_algebra/cotangent_complex#thm5)). 앞 절의 분석은 first-order deformation의 모듈라이가 이 복합체를 $B$로 dual한 것의 cohomology로 읽힌다는 것을 시사한다. 이를 정의로 굳힌다.
+이며 presentation의 선택에 무관함을 보았다 ([\[가환대수학\] §코탄젠트 복합체, ⁋명제 2](/ko/math/commutative_algebra/cotangent_complex#prop2), [\[가환대수학\] §코탄젠트 복합체, ⁋정리 5](/ko/math/commutative_algebra/cotangent_complex#thm5)). 앞 절의 분석은 first-order deformation의 모듈라이가 이 복합체를 $B$로 dual한 것의 cohomology로 읽힌다는 것을 시사한다. 이를 정의로 굳힌다.
 
 ::: 정의 5
 $B$-module $M$에 대하여, $\operatorname{NL}_{B/k}$를 $M$으로 dual한 cochain complex
@@ -206,7 +206,7 @@ $$0\longrightarrow I/I^2\overset{\overline{d}}{\longrightarrow}\Omega_{P/k}\otim
 이제 구체적인 singular point들로 위 이론을 검증한다.
 
 ::: 예시 11 (node)
-$B=k[\x,\y]/(\x\y)$를 생각하자. 이는 평면 위 두 직선이 한 점에서 만나는 *node*, 곧 $A_1$ singular point의 coordinate ring이다. Hypersurface이므로 $I=(\x\y)$이 nonzerodivisor로 생성되어 lci이고, [§코탄젠트 복합체, ⁋예시 6](/ko/math/multilinear_algebra/cotangent_complex#ex6)의 계산에서
+$B=k[\x,\y]/(\x\y)$를 생각하자. 이는 평면 위 두 직선이 한 점에서 만나는 *node*, 곧 $A_1$ singular point의 coordinate ring이다. Hypersurface이므로 $I=(\x\y)$이 nonzerodivisor로 생성되어 lci이고, [\[가환대수학\] §코탄젠트 복합체, ⁋예시 6](/ko/math/commutative_algebra/cotangent_complex#ex6)의 계산에서
 
 $$\operatorname{NL}_{B/k}=\Bigl[B\overline{f}\overset{\overline{d}}{\longrightarrow}B d\x\oplus B d\y\Bigr],\qquad\overline{d}(\overline{f})=\y d\x+\x d\y$$
 

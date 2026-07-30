@@ -9,7 +9,7 @@ sidebar:
     nav: "Lie_theory-ko"
 
 date: 2025-01-07
-weight: 8
+weight: 16
 published: false
 ---
 

@@ -9,7 +9,7 @@ sidebar:
     nav: "representation_theory-ko"
 
 date: 2026-06-21
-weight: 13
+weight: 103
 
 published: false
 ---

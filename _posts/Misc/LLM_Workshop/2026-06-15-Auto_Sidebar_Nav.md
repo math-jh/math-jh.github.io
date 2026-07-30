@@ -14,7 +14,7 @@ sidebar:
 author: Marvin
 
 date: 2026-06-15
-weight: 20
+weight: 19
 
 ---
 

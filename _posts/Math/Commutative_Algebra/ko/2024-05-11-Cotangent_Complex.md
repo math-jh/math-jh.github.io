@@ -3,20 +3,20 @@ title: "코탄젠트 복합체"
 description: "켈러 미분의 conormal sequence를 왼쪽으로 연장하는 naive cotangent complex를 정의하고, 그 homology가 표현의 선택과 무관함을 살펴본다."
 excerpt: "Kähler 미분의 cotangent complex로의 확장"
 
-categories: [Math / Multilinear Algebra]
-permalink: /ko/math/multilinear_algebra/cotangent_complex
+categories: [Math / Commutative Algebra]
+permalink: /ko/math/commutative_algebra/cotangent_complex
 sidebar: 
-    nav: "multilinear_algebra-ko"
+    nav: "commutative_algebra-ko"
 
 date: 2024-05-11
 
-weight: 122
+weight: 35
 
 published: false
 
 ---
 
-[§미분가군, ⁋명제 14](/ko/math/multilinear_algebra/differential_modules#prop14)에서 우리는 commutative $A$-algebra들의 surjection $u:E \rightarrow E'$와 그 kernel $\mathfrak{I}$에 대하여, conormal sequence
+[\[다중선형대수학\] §미분가군, ⁋명제 14](/ko/math/multilinear_algebra/differential_modules#prop14)에서 우리는 commutative $A$-algebra들의 surjection $u:E \rightarrow E'$와 그 kernel $\mathfrak{I}$에 대하여, conormal sequence
 
 $$\mathfrak{I}/\mathfrak{I}^2\overset{\overline{d}}{\longrightarrow}\Omega_{E/A}\otimes_EE'\longrightarrow\Omega_{E'/A}\longrightarrow0$$
 
@@ -42,7 +42,7 @@ $$\operatorname{NL}(p)=\Bigl[\,\mathfrak{I}/\mathfrak{I}^2\overset{\overline{d}}
 
 $$H_0\bigl(\operatorname{NL}(p)\bigr)=\coker\overline{d},\qquad H_1\bigl(\operatorname{NL}(p)\bigr)=\ker\overline{d}$$
 
-뿐이다. [§미분가군, ⁋예시 10](/ko/math/multilinear_algebra/differential_modules#ex10)에서 살펴본 것과 같이 $\Omega_{R/A}$는 $d\x_s$들을 basis로 갖는 free $R$-module이므로, $\operatorname{NL}(p)$의 degree $0$ 항은 free $E$-module이다.
+뿐이다. [\[다중선형대수학\] §미분가군, ⁋예시 10](/ko/math/multilinear_algebra/differential_modules#ex10)에서 살펴본 것과 같이 $\Omega_{R/A}$는 $d\x_s$들을 basis로 갖는 free $R$-module이므로, $\operatorname{NL}(p)$의 degree $0$ 항은 free $E$-module이다.
 
 ::: 명제 2
 임의의 presentation $p:R \rightarrow E$에 대하여, canonical isomorphism
@@ -52,7 +52,7 @@ $$H_0\bigl(\operatorname{NL}(p)\bigr)\cong\Omega_{E/A}$$
 이 존재한다.
 :::
 ::: 증명
-[§미분가군, ⁋명제 14](/ko/math/multilinear_algebra/differential_modules#prop14)의 conormal sequence
+[\[다중선형대수학\] §미분가군, ⁋명제 14](/ko/math/multilinear_algebra/differential_modules#prop14)의 conormal sequence
 
 $$\mathfrak{I}/\mathfrak{I}^2\overset{\overline{d}}{\longrightarrow}\Omega_{R/A}\otimes_RE\overset{\Omega_0(p)}{\longrightarrow}\Omega_{E/A}\longrightarrow0$$
 
@@ -98,7 +98,7 @@ $\Omega_{R/A}\otimes_RE$가 $d\x_s\otimes1$들을 basis로 갖는 free $E$-modul
 
 $$h:\Omega_{R/A}\otimes_RE \rightarrow \mathfrak{I}'/\mathfrak{I}'^2;\qquad d\x_s\otimes1\mapsto\overline{\varphi(\x_s)-\psi(\x_s)}$$
 
-이 잘 정의된다. 여기서 $\varphi(\x_s)-\psi(\x_s)\in\mathfrak{I}'$인 것은 [보조정리 3](#lem3)의 증명에서 보았고, $\mathfrak{I}'/\mathfrak{I}'^2$의 $E$-module 구조는 [§미분가군, ⁋명제 14](/ko/math/multilinear_algebra/differential_modules#prop14) 직전의 논의에서와 같다. 이제 $h$가 $\operatorname{NL}(\varphi)-\operatorname{NL}(\psi)$의 chain homotopy임을 보인다.
+이 잘 정의된다. 여기서 $\varphi(\x_s)-\psi(\x_s)\in\mathfrak{I}'$인 것은 [보조정리 3](#lem3)의 증명에서 보았고, $\mathfrak{I}'/\mathfrak{I}'^2$의 $E$-module 구조는 [\[다중선형대수학\] §미분가군, ⁋명제 14](/ko/math/multilinear_algebra/differential_modules#prop14) 직전의 논의에서와 같다. 이제 $h$가 $\operatorname{NL}(\varphi)-\operatorname{NL}(\psi)$의 chain homotopy임을 보인다.
 
 우선 degree $0$에서, generator $d\x_s\otimes 1$에 대하여
 

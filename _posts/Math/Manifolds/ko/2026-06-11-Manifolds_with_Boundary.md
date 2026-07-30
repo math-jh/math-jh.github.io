@@ -9,7 +9,7 @@ sidebar:
     nav: "manifolds-ko"
 
 date: 2026-06-11
-weight: 21
+weight: 18
 
 published: false
 

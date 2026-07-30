@@ -9,7 +9,7 @@ sidebar:
     nav: "algebraic_topology-ko"
 
 date: 2025-10-07
-weight: 10
+weight: 13
 
 
 ---

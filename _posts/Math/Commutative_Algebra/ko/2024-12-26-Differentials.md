@@ -10,7 +10,7 @@ sidebar:
     nav: "commutative_algebra-ko"
 
 date: 2024-12-26
-weight: 100
+weight: 34
 published: false
 
 ---

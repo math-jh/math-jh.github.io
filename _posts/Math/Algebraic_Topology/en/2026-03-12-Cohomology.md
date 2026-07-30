@@ -9,7 +9,7 @@ sidebar:
     nav: "algebraic_topology-en"
 
 date: 2025-09-07
-weight: 6
+weight: 9
 translated_at: 2026-05-30T07:30:03+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-05-30T07:30:03+00:00
