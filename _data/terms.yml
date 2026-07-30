@@ -8612,6 +8612,13 @@ O:
   defs:
   - label: '[위상수학] §위상공간의 기저'
     url: /ko/math/topology/topological_bases
+- id: open_immersion
+  en: open immersion
+  ko: 열린 몰입
+  primary: en
+  defs:
+  - label: '[스킴] §값매김환'
+    url: /ko/math/scheme_theory/valuative_criteria
 - id: open_interval
   en: open interval
   ko: 열린구간
@@ -9601,6 +9608,13 @@ P:
   defs:
   - label: '[선형대수학] §내적공간'
     url: /ko/math/linear_algebra/inner_product_spaces
+- id: projective
+  en: projective
+  ko: 사영사상
+  primary: en
+  defs:
+  - label: '[스킴] §값매김환'
+    url: /ko/math/scheme_theory/valuative_criteria
 - id: projective_algebraic_set
   en: projective algebraic set
   ko: 사영 대수적 집합
@@ -9868,6 +9882,13 @@ Q:
   defs:
   - label: '[호몰로지 대수학] §긴 완전열'
     url: /ko/math/homological_algebra/long_exact_sequence
+- id: quasi-projective
+  en: quasi-projective
+  ko: 준사영사상
+  primary: en
+  defs:
+  - label: '[스킴] §값매김환'
+    url: /ko/math/scheme_theory/valuative_criteria
 - id: quasi-projective_variety
   en: quasi-projective variety
   ko: 준사영다양체
@@ -12893,6 +12914,8 @@ U:
   defs:
   - label: '[위상수학] §고유함수'
     url: /ko/math/topology/proper_maps
+  - label: '[스킴] §값매김환'
+    url: /ko/math/scheme_theory/valuative_criteria
 - id: unobstructed
   en: unobstructed
   ko: 장애 없음
