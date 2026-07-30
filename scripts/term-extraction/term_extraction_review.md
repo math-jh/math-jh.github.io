@@ -5128,3 +5128,11 @@ Decide whether each one is a definition and add it to `_data/terms.yml` (then ru
 ## term_extract_worker 2026-07-30 04:00
 
 - _posts/Math/Ring_Theory/ko/2025-04-01-Integral_Domains.md: 병기 필요 'associate in' — 소스 없음 (KMS exact ✗, 위키 ko ✗)
+
+## term_extract_worker 2026-07-30 10:30
+
+- _posts/Math/Scheme_Theory/ko/2025-02-03-Topology_of_Schemes.md: 병기 필요 'locally' — 소스 없음 (KMS exact ✗, 위키 ko ✗)
+
+## term_extract_worker 2026-07-30 11:30
+
+- _posts/Math/Scheme_Theory/ko/2025-02-18-Closed_Subschemes.md: 병기 필요 'ideal sheaf' — 위키 ko 문서 '아이디얼 층' — 병기형 도출 필요

@@ -1761,6 +1761,13 @@ C:
   defs:
   - label: '[위상수학] §집합의 내부, 폐포, 경계'
     url: /ko/math/topology/other_concepts
+- id: closed_subscheme
+  en: closed subscheme
+  ko: 닫힌 부분스킴
+  primary: en
+  defs:
+  - label: '[스킴] §닫힌 부분스킴'
+    url: /ko/math/scheme_theory/closed_subschemes
 - id: closed_symmetric_monoidal_category
   en: closed symmetric monoidal category
   ko: 닫힌 대칭 모노이드 범주
@@ -4282,6 +4289,13 @@ F:
   defs:
   - label: '[유도대수기하학] §Simplicial 가환환과 animation'
     url: /ko/math/derived_algebraic_geometry/animated_rings
+- id: factorial
+  en: factorial
+  ko: 인수분해스킴
+  primary: en
+  defs:
+  - label: '[스킴] §스킴의 대수구조'
+    url: /ko/math/scheme_theory/algebra_of_schemes
 - id: faithful
   en: faithful
   ko: 충실
