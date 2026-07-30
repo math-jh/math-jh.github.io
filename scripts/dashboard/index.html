@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>블로그 대시보드</title>
+<!-- 대시보드 전용 파비콘 — 사이트 모티프(네이비 타일 + 브래스 네모) 안에 망치.
+     절대경로로 둔다: /dash/ 와 /dash/<섹션> 이 같은 아이콘을 가리키게. -->
+<link rel="icon" type="image/svg+xml" href="/dash/favicon-hammer3.svg">
+<link rel="stylesheet" href="/dash/dashboard.css">
+<script>
+/* pre-paint 테마 적용 — 블로그와 같은 MTHEME 쿠키(auto|light|dark)를 읽는다.
+   로직 원본은 블로그의 _includes/js/theme-core.js. */
+(function () {
+  var m = (document.cookie.split('; ').find(function (c) { return c.indexOf('MTHEME=') === 0; }) || '').slice(7);
+  if (m !== 'light' && m !== 'dark' && m !== 'auto') m = 'auto';
+  var dark = m === 'dark' || (m === 'auto' && window.matchMedia
+    && window.matchMedia('(prefers-color-scheme: dark)').matches);
+  document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+})();
+</script>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead__inner">
+    <a class="masthead__title" href="/">math-jh</a>
+    <span class="masthead__sep">/</span>
+    <a class="masthead__page" href="/dash/">대시보드</a>
+    <nav class="masthead__nav" id="nav"></nav>
+    <button id="theme-btn" class="ghost-btn" title="테마 전환 (블로그와 공유)">auto</button>
+    <button id="refresh-btn" class="ghost-btn">새로고침</button>
+  </div>
+</header>
+
+<main class="wrap">
+  <p class="stamp"><span id="stamp">불러오는 중…</span></p>
+  <div id="view"></div>
+</main>
+
+<div id="modal" class="modal" hidden>
+  <div class="modal__box">
+    <div class="modal__head">
+      <span id="modal-title"></span>
+      <button id="modal-close" class="ghost-btn">닫기</button>
+    </div>
+    <pre id="modal-body"></pre>
+  </div>
+</div>
+
+<script src="/dash/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+# crontab (user junhyeok) 의 keeper 항목 사본 — 재현용.
+# status_dashboard 와 같은 패턴: 응답이 없으면 다시 띄운다 (부팅·크래시 모두 커버,
+# sudo 불필요). 서버는 절대경로로 띄워야 pgrep 패턴과 어긋나지 않는다.
+
+*/5 * * * * /usr/bin/curl -sf -o /dev/null --max-time 5 http://127.0.0.1:8089/api/summary || setsid /usr/bin/python3 /home/junhyeok/math-jh.github.io/scripts/dashboard/server.py >>/home/junhyeok/.local/state/blog_dashboard.log 2>&1 </dev/null &
