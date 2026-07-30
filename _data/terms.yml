@@ -1023,6 +1023,8 @@ B:
   defs:
   - label: '[대수다양체] §유리사상'
     url: /ko/math/algebraic_varieties/rational_maps
+  - label: '[스킴] §스킴 사상의 성질들'
+    url: /ko/math/scheme_theory/properties_of_scheme_morphisms
 - id: birationally_equivalent
   en: birationally equivalent
   ko: 쌍유리 동치
@@ -1030,6 +1032,8 @@ B:
   defs:
   - label: '[대수다양체] §유리사상'
     url: /ko/math/algebraic_varieties/rational_maps
+  - label: '[스킴] §스킴 사상의 성질들'
+    url: /ko/math/scheme_theory/properties_of_scheme_morphisms
 - id: bisection
   en: bisection
   ko: 구간 이분법
@@ -2180,6 +2184,13 @@ C:
   see:
   - label: Elementary symmetric polynomial
     id: elementary_symmetric_polynomial
+- id: complete_intersection
+  en: complete intersection
+  ko: 완전교차
+  primary: en
+  defs:
+  - label: '[스킴] §완전교차'
+    url: /ko/math/scheme_theory/complete_intersections
 - id: complete_linear_system
   en: complete linear system
   ko: 완비 선형계
@@ -2537,6 +2548,13 @@ C:
   defs:
   - label: '[미적분학] §다변수함수와 편미분'
     url: /ko/math/calculus/partial_derivatives
+- id: constructible
+  en: constructible
+  ko: 구성가능
+  primary: en
+  defs:
+  - label: '[스킴] §평탄사상'
+    url: /ko/math/scheme_theory/flat_morphisms
 - id: contact_order
   en: contact order
   ko: 접촉 차수
@@ -4303,6 +4321,13 @@ F:
   defs:
   - label: '[범주론] §함자'
     url: /ko/math/category_theory/functors
+- id: faithfully_flat
+  en: faithfully flat
+  ko: 충실평탄
+  primary: en
+  defs:
+  - label: '[스킴] §평탄사상'
+    url: /ko/math/scheme_theory/flat_morphisms
 - id: family_of_sets
   en: family of sets
   ko: 집합족
@@ -4566,6 +4591,8 @@ F:
   defs:
   - label: '[리만기하학] §리만 곡률'
     url: /ko/math/riemannian_geometry/curvature
+  - label: '[스킴] §평탄사상'
+    url: /ko/math/scheme_theory/flat_morphisms
 - id: flat_module
   en: flat module
   ko: 평탄가군
@@ -5035,6 +5062,13 @@ G:
   defs:
   - label: '[거울대칭] §Givental J-function과 Mirror Theorem'
     url: /ko/math/mirror_symmetry/givental_j_function
+- id: global_complete_intersection
+  en: global complete intersection
+  ko: 대역적 완전교차
+  primary: en
+  defs:
+  - label: '[스킴] §완전교차'
+    url: /ko/math/scheme_theory/complete_intersections
 - id: global_dimension
   en: global dimension
   ko: 대역차원
@@ -7401,6 +7435,13 @@ L:
   defs:
   - label: '[가환대수학] §국소 코호몰로지'
     url: /ko/math/commutative_algebra/local_cohomology
+- id: local_complete_intersection
+  en: local complete intersection
+  ko: 국소 완전교차
+  primary: en
+  defs:
+  - label: '[스킴] §완전교차'
+    url: /ko/math/scheme_theory/complete_intersections
 - id: local_extremum
   en: local extremum
   ko: 극값
@@ -7668,6 +7709,13 @@ L:
     url: /ko/math/group_theory/series_of_groups
   - label: '[리 이론] §가해 Lie algebra와 nilpotent Lie algebra'
     url: /ko/math/lie_theory/solvable_nilpotent_lie_algebras
+- id: lower_semicontinuous
+  en: lower semicontinuous
+  ko: 하반연속
+  primary: en
+  defs:
+  - label: '[스킴] §평탄사상'
+    url: /ko/math/scheme_theory/flat_morphisms#def21
 - id: lower_set
   en: lower set
   ko: 하집합
@@ -9701,6 +9749,13 @@ P:
   see:
   - label: Injective resolution
     id: injective_resolution
+- id: projective_scheme
+  en: projective scheme
+  ko: 사영스킴
+  primary: en
+  defs:
+  - label: '[스킴] §사영공간의 닫힌 부분스킴'
+    url: /ko/math/scheme_theory/closed_subschemes_of_projective_spaces
 - id: projective_system
   en: projective system
   ko: 사영 체계
@@ -10109,6 +10164,8 @@ R:
   defs:
   - label: '[대수다양체] §유리사상'
     url: /ko/math/algebraic_varieties/rational_maps
+  - label: '[스킴] §스킴 사상의 성질들'
+    url: /ko/math/scheme_theory/properties_of_scheme_morphisms
 - id: rationally_equivalent
   en: rationally equivalent
   ko: 유리 동치

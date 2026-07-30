@@ -5136,3 +5136,7 @@ Decide whether each one is a definition and add it to `_data/terms.yml` (then ru
 ## term_extract_worker 2026-07-30 11:30
 
 - _posts/Math/Scheme_Theory/ko/2025-02-18-Closed_Subschemes.md: 병기 필요 'ideal sheaf' — 위키 ko 문서 '아이디얼 층' — 병기형 도출 필요
+
+## term_extract_worker 2026-07-30 12:30
+
+- _posts/Math/Scheme_Theory/ko/2025-02-21-Flat_Morphisms.md: 병기 필요 'upper semicontinuous' — 위키 ko 문서 '반연속 함수' — 병기형 도출 필요
