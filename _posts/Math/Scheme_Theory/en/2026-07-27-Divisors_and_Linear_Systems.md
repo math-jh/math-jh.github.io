@@ -1,6 +1,6 @@
 ---
 title: "Divisors and Linear Systems"
-description: "We define Cartier divisors from closed subschemes cut out locally by a single equation, and define Weil divisors and the divisor class group using valuations at codimension one points on a normal integral scheme, then compare the two divisor theories. We then obtain an isomorphism with the Picard group via the invertible sheaf defined by a Cartier divisor, and discuss linear systems and ample invertible sheaves."
+description: "We define Cartier divisors from closed subschemes cut out locally by one equation, and define Weil divisors and the divisor class group via codimension-one point valuations on a normal integral scheme, then compare the two divisor theories. We then obtain an isomorphism with the Picard group through the invertible sheaf defined by a Cartier divisor, and discuss linear systems and ample invertible sheaves."
 excerpt: "Cartier and Weil divisors, the sheaf O_X(D), linear systems, and ampleness"
 
 categories: [Math / Scheme Theory]
@@ -10,336 +10,335 @@ sidebar:
 
 date: 2026-07-27
 weight: 17
-translated_at: 2026-07-30T03:45:02+00:00
+translated_at: 2026-07-30T07:54:58+00:00
 translation_source: kimi-cli
-last_polished_at: 2026-07-30T03:45:02+00:00
 ---
-[§Quasi-Coherent Sheaves](/en/math/scheme_theory/quasicoherent_sheaves)에서 quasi-coherent sheaf와 invertible sheaf를 정의하였으므로, 우리는 variety 위에서 하던 divisor와 line bundle의 계산을 이제 scheme 위에서 시작할 수 있다. 이 글의 목적은 [\[Algebraic Varieties\] §Divisors](/en/math/algebraic_varieties/divisors), [\[Algebraic Varieties\] §Line Bundles and Vector Bundles](/en/math/algebraic_varieties/line_bundles)와 [\[Algebraic Varieties\] §Linear Systems](/en/math/algebraic_varieties/linear_systems)에서 다루었던 내용들을 scheme의 언어로 올려주는 것이다.
+Having defined quasi-coherent sheaves and invertible sheaves in [§Quasi-Coherent Sheaves](/en/math/scheme_theory/quasicoherent_sheaves), we can now begin the computations of divisors and line bundles on schemes that we previously carried out on varieties. The goal of this post is to translate the material covered in [[Algebraic Varieties] §Divisors](/en/math/algebraic_varieties/divisors), [[Algebraic Varieties] §Line Bundles and Vector Bundles](/en/math/algebraic_varieties/line_bundles), and [[Algebraic Varieties] §Linear Systems](/en/math/algebraic_varieties/linear_systems) into the language of schemes.
 
 ## Cartier Divisors
 
-[\[Algebraic Varieties\] §Divisors](/en/math/algebraic_varieties/divisors)에서는 Weil divisor를 먼저 정의하고 Cartier divisor를 그 후에 살펴보았다. 이는 Cartier divisor가 국소적으로 하나의 방정식으로 잘린다는 조건을 더함으로써 그 대상이 정의되는 공간을 일반화한 것이기 때문이었는데, 덕분에 우리는 singular variety에서 작동하는 divisor theory를 사용할 수 있었다. Scheme은 variety보다 여러 방면으로 일반적인 무대이므로, 우리는 처음부터 Weil divisor를 다루기보다 우리가 주로 사용할 Cartier divisor를 사용하기로 한다.
+In [[Algebraic Varieties] §Divisors](/en/math/algebraic_varieties/divisors), we first defined Weil divisors and then examined Cartier divisors afterward. This was because Cartier divisors generalize the spaces on which the object is defined by imposing the additional condition that they are cut out locally by a single equation, which allowed us to use a divisor theory that works even on singular varieties. Since schemes are more general than varieties in many respects, we will work primarily with Cartier divisors rather than Weil divisors from the outset.
 
 ::: Definition 1
-Closed embedding $\iota: Z \hookrightarrow X$가 *effective Cartier divisor*라는 것은 $X$의 affine open cover $\{U_i=\Spec A_i\}$가 존재하여, 각각의 closed embedding들
+A closed embedding $\iota: Z \hookrightarrow X$ is called an *effective Cartier divisor* if there exists an affine open cover $\{U_i=\Spec A_i\}$ of $X$ such that for each closed embedding
 
 $$\iota\vert^{U_i}:\iota^{-1}(U_i) \rightarrow U_i$$
 
-마다 적당한 non-zerodivisor $s_i\in A_i=\Gamma(U_i, \mathcal{O}_X)$가 존재하여 두 closed embedding $\iota\vert^{U_i}$와 $s_i$의 vanishing scheme $Z(s_i)\hookrightarrow U_i$가 isomorphic한 것이다. ([§Closed Subschemes, ⁋Definition 7](/en/math/scheme_theory/closed_subschemes#def7))
+there is a non-zerodivisor $s_i\in A_i=\Gamma(U_i, \mathcal{O}_X)$ for which the two closed embeddings $\iota\vert^{U_i}$ and the vanishing scheme $Z(s_i)\hookrightarrow U_i$ of $s_i$ are isomorphic. ([§Closed Subschemes, ⁋Definition 7](/en/math/scheme_theory/closed_subschemes#def7))
 :::
 
-정의가 $s_i$에 요구하는 것은 non-zerodivisor라는 것뿐이므로 $Z$는 non-reduced일 수 있다. Algebraic variety에서는 closed subvariety가 언제나 reduced이므로, multiplicity를 담기 위해서는 [\[Algebraic Varieties\] §Divisors, ⁋Definition 1](/en/math/algebraic_varieties/divisors#def1)과 같이 formal sum을 사용하여 형식적으로 정수계수를 붙여주었어야 했다. 이제 $Z$ 자체가 multiplicity를 가지므로 effective인 경우에는 그러한 계수가 필요하지 않다. 가령 $X=\Spec \mathbb{K}[\x]$와 $s=\x^2$에 대하여 $\x^2$이 non-zerodivisor이므로 $Z(s)=\Spec \mathbb{K}[\x]/(\x^2)$은 effective Cartier divisor이며, 이는 원점 하나에 얹힌 non-reduced scheme으로서 multiplicity $2$를 갖는다.
+The definition only requires that $s_i$ be a non-zerodivisor, so $Z$ need not be reduced. In an algebraic variety, a closed subvariety is always reduced, so to record multiplicities we had to attach formal integer coefficients using formal sums as in [[Algebraic Varieties] §Divisors, ⁋Definition 1](/en/math/algebraic_varieties/divisors#def1). Now $Z$ itself carries multiplicity, so no such coefficients are needed in the effective case. For example, for $X=\Spec \mathbb{K}[\x]$ and $s=\x^2$, since $\x^2$ is a non-zerodivisor, $Z(s)=\Spec \mathbb{K}[\x]/(\x^2)$ is an effective Cartier divisor; it is a non-reduced scheme supported at a single point with multiplicity $2$.
 
-위의 정의는 본질적으로 열린집합마다 정의되는 조건으로, cover에 의존하지만 이를 간단히 closed subscheme을 정의하는 ideal sheaf의 성질로 바꿔줄 수 있다. ([§Closed Subschemes, ⁋Definition 5](/en/math/scheme_theory/closed_subschemes#def5))
+The above definition is essentially a condition defined on each open set and depends on the cover, but this can be simply rephrased as a property of the ideal sheaf defining the closed subscheme. ([§Closed Subschemes, ⁋Definition 5](/en/math/scheme_theory/closed_subschemes#def5))
 
 ::: Proposition 2
-Closed embedding $\iota: Z\hookrightarrow X$가 effective Cartier divisor인 것은, 그 ideal sheaf $\mathcal{I}_{Z/X}$가 invertible sheaf인 것과 동치이다. ([§Quasi-Coherent Sheaves, ⁋Definition 12](/en/math/scheme_theory/quasicoherent_sheaves#def12))
+A closed embedding $\iota: Z\hookrightarrow X$ is an effective Cartier divisor if and only if its ideal sheaf $\mathcal{I}_{Z/X}$ is an invertible sheaf. ([§Quasi-Coherent Sheaves, ⁋Definition 12](/en/math/scheme_theory/quasicoherent_sheaves#def12))
 :::
 ::: Proof
-Affine open subset $U=\Spec A$ 위에서 $\iota$를 공역에 대해 제한한 것은 ideal $\mathfrak{a}=\mathcal{I}_{Z/X}(U)$가 정의하는 closed embedding $Z(\mathfrak{a})\hookrightarrow U$이며, 서로 다른 두 ideal은 서로 다른 closed subscheme을 정의한다. ([§Closed Subschemes, ⁋Proposition 3](/en/math/scheme_theory/closed_subschemes#prop3)) 따라서 $\iota\vert^U$가 $Z(s)\hookrightarrow U$와 isomorphic한 것은 $\mathfrak{a}=(s)$인 것과 같다.
+On an affine open subset $U=\Spec A$, the restriction of $\iota$ to the codomain is the closed embedding $Z(\mathfrak{a})\hookrightarrow U$ defined by the ideal $\mathfrak{a}=\mathcal{I}_{Z/X}(U)$, and two different ideals define two different closed subschemes. ([§Closed Subschemes, ⁋Proposition 3](/en/math/scheme_theory/closed_subschemes#prop3)) Hence $\iota\vert^U$ being isomorphic to $Z(s)\hookrightarrow U$ is equivalent to $\mathfrak{a}=(s)$.
 
-이제 $s\in A$에 대하여 $A \rightarrow (s)$, $a\mapsto as$를 생각하자. 이는 언제나 surjective이고 그 kernel이 $\ann(s)$이므로, 이것이 isomorphism인 것과 $s$가 non-zerodivisor인 것은 동치이다. 이제 $\iota$가 effective Cartier divisor라 하고 [Definition 1](#def1)의 affine open cover $\{U_i=\Spec A_i\}$를 택하자. 그럼 $\mathcal{I}_{Z/X}(U_i)=(s_i)\cong A_i$이다. 한편 $\mathcal{I}_{Z/X}$는 quasi-coherent sheaf이고 ([§Quasi-Coherent Sheaves, ⁋Proposition 17](/en/math/scheme_theory/quasicoherent_sheaves#prop17)) quasi-coherence는 affine-local이므로, [§Quasi-Coherent Sheaves, ⁋Theorem 10](/en/math/scheme_theory/quasicoherent_sheaves#thm10)에 의하여 $\mathcal{I}_{Z/X}\vert_{U_i}\cong \widetilde{\mathcal{I}_{Z/X}(U_i)}$이다. 따라서 위의 동형은
+Now consider the map $A \rightarrow (s)$, $a\mapsto as$ for $s\in A$. This is always surjective and its kernel is $\ann(s)$, so this being an isomorphism is equivalent to $s$ being a non-zerodivisor. Now suppose $\iota$ is an effective Cartier divisor and choose the affine open cover $\{U_i=\Spec A_i\}$ from [Definition 1](#def1). Then $\mathcal{I}_{Z/X}(U_i)=(s_i)\cong A_i$. On the other hand, $\mathcal{I}_{Z/X}$ is a quasi-coherent sheaf ([§Quasi-Coherent Sheaves, ⁋Proposition 17](/en/math/scheme_theory/quasicoherent_sheaves#prop17)) and quasi-coherence is affine-local, so by [§Quasi-Coherent Sheaves, ⁋Theorem 10](/en/math/scheme_theory/quasicoherent_sheaves#thm10) we have $\mathcal{I}_{Z/X}\vert_{U_i}\cong \widetilde{\mathcal{I}_{Z/X}(U_i)}$. Therefore the above isomorphism gives
 
-$$\mathcal{I}_{Z/X}\vert_{U_i}\cong \widetilde{(s_i)}\cong \widetilde{A_i}=\mathcal{O}_{U_i}$$
+$$\mathcal{I}_{Z/X}\vert_{U_i}\cong \widetilde{(s_i)}\cong \widetilde{A_i}=\mathcal{O}_{U_i}.$$
 
-를 준다. 즉 $\mathcal{I}_{Z/X}$는 rank $1$의 locally free sheaf이다.
+That is, $\mathcal{I}_{Z/X}$ is a locally free sheaf of rank $1$.
 
-거꾸로 $\mathcal{I}_{Z/X}$가 invertible sheaf라 하자. 임의의 점 $x$에 대하여 $\mathcal{I}_{Z/X}\vert_V\cong \mathcal{O}_V$인 열린근방 $V$를 택하고, $V$ 안에서 $x$를 담는 affine open subset $U=\Spec A$를 택하면 $\mathcal{I}_{Z/X}(U)\cong A$이다. 이 동형에서 $1\in A$의 image를 $s$라 하면 $\mathcal{I}_{Z/X}(U)=(s)$이고 $\ann(s)=0$이므로 $s$는 non-zerodivisor이다. 이러한 $U$들이 $X$를 덮으므로 [Definition 1](#def1)의 조건이 충족된다.
+Conversely, suppose $\mathcal{I}_{Z/X}$ is an invertible sheaf. For any point $x$, choose an open neighborhood $V$ with $\mathcal{I}_{Z/X}\vert_V\cong \mathcal{O}_V$, and then choose an affine open subset $U=\Spec A$ inside $V$ containing $x$; then $\mathcal{I}_{Z/X}(U)\cong A$. Let $s$ be the image of $1\in A$ under this isomorphism; then $\mathcal{I}_{Z/X}(U)=(s)$ and $\ann(s)=0$, so $s$ is a non-zerodivisor. Such $U$'s cover $X$, so the condition of [Definition 1](#def1) is satisfied.
 :::
 
-증명에서 사용한 사상 $A\rightarrow \mathcal{I}_{Z/X}(U)$가 [Definition 1](#def1)의 두 요구를 명확하게 나눠준다. 이 사상이 surjective라는 것은 ideal $\mathcal{I}_{Z/X}(U)$가 $s$ 하나로 생성된다는 것, 곧 $Z$가 $U$ 위에서 방정식 하나로 잘린다는 것을 요구한다. 이 때, 위의 non-zerodivisor 조건은 $\ann(s)=0$가 되며, 이 때 이 사상이 injective가 되어 $\mathcal{I}_{Z/X}\vert_U\cong \mathcal{O}_U$를 얻는다. 만일 이 non-zerodivisor 조건을 뺀다면 각각의 $s_i$는 $A_i$의 임의의 원소로 택할 수 있으며, 이렇게 얻어지는 조건을 *locally principal*이라 부른다. 곧 effective Cartier divisor란 locally principal인 것 가운데 그 국소적인 방정식을 non-zerodivisor로 잡을 수 있는 것이다.
+The map $A\rightarrow \mathcal{I}_{Z/X}(U)$ used in the proof clearly separates the two requirements of [Definition 1](#def1). That this map is surjective means the ideal $\mathcal{I}_{Z/X}(U)$ is generated by a single element $s$, i.e., $Z$ is cut out by a single equation over $U$. In this case, the non-zerodivisor condition above becomes $\ann(s)=0$, and then this map is injective, yielding $\mathcal{I}_{Z/X}\vert_U\cong \mathcal{O}_U$. If we drop this non-zerodivisor condition, then each $s_i$ can be chosen as an arbitrary element of $A_i$, and the resulting condition is called *locally principal*. That is, an effective Cartier divisor is exactly a locally principal subscheme for which the local equations can be taken to be non-zerodivisors.
 
-Effective Cartier divisor의 가장 기본적인 성질은 그 codimension이 언제나 $1$이라는 것이다.
+The most basic property of an effective Cartier divisor is that its codimension is always $1$.
 
 ::: Proposition 3
-Locally Noetherian scheme $X$ 위의 effective Cartier divisor $\iota:Z\hookrightarrow X$에 대하여, $Z$의 모든 irreducible component는 $X$에서 codimension $1$을 갖는다.
+For an effective Cartier divisor $\iota:Z\hookrightarrow X$ on a locally Noetherian scheme $X$, every irreducible component of $Z$ has codimension $1$ in $X$.
 :::
 ::: Proof
-Codimension은 국소적으로 계산되므로, [Definition 1](#def1)의 affine open cover $\{U_i=\Spec A_i\}$ 가운데 하나를 택하여 $Z\cap U_i=Z(s_i)$이고 $s_i\in A_i$가 non-zerodivisor인 경우만 보면 충분하다. $Z$의 irreducible component $W$가 $U_i$와 만난다면 $W\cap U_i$는 $Z(s_i)$의 irreducible component이다. [§Dimension, ⁋Proposition 12](/en/math/scheme_theory/dimension#prop12)에 의하여 $Z(s_i)$의 component는 $U_i$에서 codimension $0$이거나 $1$인데, codimension $0$인 component는 $U_i$ 자신의 irreducible component, 즉 $A_i$의 minimal prime ideal $\mathfrak{p}$에 대응된다. 만일 $W\cap U_i$가 그러한 component라면 $s_i$가 그 위에서 소멸하므로 $s_i\in \mathfrak{p}$이다. 그런데 Noetherian ring에서 non-zerodivisor는 어떠한 minimal prime ideal에도 속하지 않으므로 ([\[Commutative Algebra\] §Associated Primes, ⁋Theorem 7](/en/math/commutative_algebra/associated_primes#thm7)) 이는 $s_i$가 non-zerodivisor라는 가정에 모순이다. 따라서 $W\cap U_i$의 codimension은 $1$이고, [§Dimension, ⁋Proposition 8](/en/math/scheme_theory/dimension#prop8)에 의하여 $W$의 $X$에서의 codimension 또한 $1$이다.
+Since codimension is computed locally, it suffices to take one of the affine open covers $\{U_i=\Spec A_i\}$ from [Definition 1](#def1) and consider the case where $Z\cap U_i=Z(s_i)$ with $s_i\in A_i$ a non-zerodivisor. If an irreducible component $W$ of $Z$ meets $U_i$, then $W\cap U_i$ is an irreducible component of $Z(s_i)$. By [§Dimension, ⁋Proposition 12](/en/math/scheme_theory/dimension#prop12), the components of $Z(s_i)$ have codimension $0$ or $1$ in $U_i$; a component of codimension $0$ corresponds to an irreducible component of $U_i$ itself, i.e., to a minimal prime ideal $\mathfrak{p}$ of $A_i$. If $W\cap U_i$ were such a component, then $s_i$ would vanish on it, so $s_i\in \mathfrak{p}$. However, in a Noetherian ring a non-zerodivisor does not belong to any minimal prime ideal ([[Commutative Algebra] §Associated Primes, ⁋Theorem 7](/en/math/commutative_algebra/associated_primes#thm7)), contradicting the assumption that $s_i$ is a non-zerodivisor. Hence the codimension of $W\cap U_i$ is $1$, and by [§Dimension, ⁋Proposition 8](/en/math/scheme_theory/dimension#prop8) the codimension of $W$ in $X$ is also $1$.
 :::
 
-증명에서 $s_i$가 non-zerodivisor라는 요구가 쓰인 곳은 $s_i$가 $A_i$의 어떠한 minimal prime ideal에도 속하지 않는다는 것뿐이었다. 기하적으로 이는 $s_i$가 $X$의 irreducible component 위에서 통째로 소멸하지 않는다는 것이다. [Definition 1](#def1)에서 이 요구를 덜어내면 방정식 $s_i$가 component 하나를 자르는 대신 그것을 통째로 삼킬 수 있고, 그러면 $Z$는 codimension $1$이 아니라 $X$의 component 자체가 된다. 다음 예시에서 이러한 상황을 확인하자.
+The only place in the proof where the requirement that $s_i$ be a non-zerodivisor was used was to ensure that $s_i$ does not belong to any minimal prime ideal of $A_i$. Geometrically, this means $s_i$ does not vanish entirely on any irreducible component of $X$. If we remove this requirement from [Definition 1](#def1), then the equation $s_i$ can swallow an entire component instead of cutting it, and then $Z$ becomes a component of $X$ itself rather than having codimension $1$. Let us confirm this situation in the following example.
 
 ::: Example 4
-$X=\Spec \mathbb{K}[\x,\y]/(\x\y)$를 평면의 두 좌표축의 합집합이라 하고, $Z=Z(\x)$라 하자. 이는 global section $\x$ 하나의 vanishing scheme이므로, $X$ 자신을 cover로 택하면 $Z\hookrightarrow X$가 locally principal임을 안다.
+Let $X=\Spec \mathbb{K}[\x,\y]/(\x\y)$ be the union of the two coordinate axes in the plane, and let $Z=Z(\x)$. This is the vanishing scheme of the global section $\x$, so taking $X$ itself as the cover, we see that $Z\hookrightarrow X$ is locally principal.
 
-그러나 이는 effective Cartier divisor가 아니다. $\mathbb{K}[\x,\y]/(\x\y,\x)\cong\mathbb{K}[\y]$이므로 $Z$는 $\y$-축이고, 이는 $X$의 두 irreducible component 가운데 하나이므로 $X$에서 codimension $0$을 갖는다. 그런데 [Proposition 3](#prop3)에 의하여 effective Cartier divisor의 irreducible component는 codimension $1$이어야 한다.
+However, this is not an effective Cartier divisor. Since $\mathbb{K}[\x,\y]/(\x\y,\x)\cong\mathbb{K}[\y]$, $Z$ is the $\y$-axis, which is one of the two irreducible components of $X$, so it has codimension $0$ in $X$. But by [Proposition 3](#prop3), every irreducible component of an effective Cartier divisor must have codimension $1$.
 
-대수적으로는 [Proposition 2](#prop2)가 같은 것을 말해준다. 원점을 담는 affine open subset $U=\Spec A$를 어떻게 택하더라도 $U$는 두 좌표축과 모두 만나므로 $A$ 안에서 $\y$는 $0$이 아니고, $\mathcal{I}_{Z/X}(U)$를 생성하는 $\x$는 이를 죽이는 zerodivisor이다. 곧 이 ideal은 결코 free module이 될 수 없다.
+Algebraically, [Proposition 2](#prop2) says the same thing. No matter how we choose an affine open subset $U=\Spec A$ containing the origin, $U$ meets both coordinate axes, so $\y\neq 0$ in $A$, and $\x$, which generates $\mathcal{I}_{Z/X}(U)$, is a zerodivisor killing $\y$. Hence this ideal can never be a free module.
 :::
 
-위의 예시에서 codimension이 예상대로 행동하지 않은 것은 $\x$가 minimal prime ideal에 포함되어 있었기 때문이다. 원소가 non-zerodivisor임을 요구함으로써 우리는 이와 같은 minimal prime ideal 뿐만 아니라 associated prime ideal 전체를 피할 수 있도록 해 주며, 예를 들어 다음의 scheme
+The reason codimension did not behave as expected in the above example was that $\x$ was contained in a minimal prime ideal. By requiring an element to be a non-zerodivisor, we avoid not only such minimal prime ideals but all associated prime ideals. For example, in the scheme
 
 $$A=\mathbb{K}[\x,\y]/(\x^2,\x\y)$$
 
-에서 $(\x^2,\x\y)=(\x)\cap(\x^2,\y)$이므로 $\Ass(A)=\{(\x),(\x,\y)\}$인데, 이는 $\y$-축에 원점이 embedded point로 얹혀 있는 scheme이다. 여기에서 $\y$는 유일한 minimal prime ideal $(\x)$에 속하지 않으므로 $Z(\y)$는 어떠한 component도 삼키지 않고 codimension $1$을 가지지만, $\x\y=0$이고 $\x\neq 0$이므로 $\y$는 zerodivisor이고 $\ann(\y)=(\x)$이다. 따라서 $Z(\y)\hookrightarrow \Spec A$는 codimension $1$이면서도 effective Cartier divisor가 아니며, 이는 [Proposition 3](#prop3)의 역이 일반적으로 성립하지 않는다는 뜻이기도 하다.
+we have $(\x^2,\x\y)=(\x)\cap(\x^2,\y)$, so $\Ass(A)=\{(\x),(\x,\y)\}$; this is the scheme with the origin embedded as an embedded point on the $\y$-axis. Here $\y$ does not belong to the unique minimal prime ideal $(\x)$, so $Z(\y)$ does not swallow any component and has codimension $1$, but $\x\y=0$ and $\x\neq 0$, so $\y$ is a zerodivisor with $\ann(\y)=(\x)$. Therefore $Z(\y)\hookrightarrow \Spec A$ has codimension $1$ but is not an effective Cartier divisor, which also means the converse of [Proposition 3](#prop3) does not hold in general.
 
-두 예시 모두에서 문제가 된 것은 해당하는 점에서의 local ring이 domain조차 아니었다는 것이다. 이러한 상황을 배제하면 [Proposition 3](#prop3)의 역이 성립한다.
+In both examples, the problem was that the local ring at the relevant point was not even a domain. If we exclude this situation, the converse of [Proposition 3](#prop3) holds.
 
 ::: Proposition 5
-Locally Noetherian integral scheme $X$가 factorial이라 하자. ([§Algebra of Schemes, ⁋Definition 7](/en/math/scheme_theory/algebra_of_schemes#def7)) 그럼 codimension $1$인 임의의 integral closed subscheme $\iota:Z\hookrightarrow X$는 effective Cartier divisor이다.
+Let $X$ be a locally Noetherian integral scheme that is factorial. ([§Algebra of Schemes, ⁋Definition 7](/en/math/scheme_theory/algebra_of_schemes#def7)) Then any integral closed subscheme $\iota:Z\hookrightarrow X$ of codimension $1$ is an effective Cartier divisor.
 :::
 ::: Proof
-$X$가 integral이므로 임의의 affine open subset $U=\Spec A$에 대하여 $A$는 Noetherian domain이고, 특히 $A$의 $0$이 아닌 원소는 모두 non-zerodivisor이다.
+Since $X$ is integral, for any affine open subset $U=\Spec A$, the ring $A$ is a Noetherian domain; in particular, every nonzero element of $A$ is a non-zerodivisor.
 
-$Z$와 만나지 않는 점에 대해서는 볼 것이 없다. $Z$가 닫힌집합이므로 그러한 점은 $Z$와 만나지 않는 affine open neighborhood를 가지며, 그 위에서 $Z$는 $Z(1)=\emptyset$이어서 [Definition 1](#def1)의 조건이 $s=1$로 충족되기 때문이다.
+There is nothing to check at points not meeting $Z$. Since $Z$ is a closed set, such a point has an affine open neighborhood disjoint from $Z$, and on it $Z$ is $Z(1)=\emptyset$, so the condition of [Definition 1](#def1) is satisfied with $s=1$.
 
-이제 $z\in Z$를 택하고 $z$를 담는 affine open subset $U=\Spec A$를 잡자. $Z$가 integral이므로 $\mathfrak{p}=\mathcal{I}_{Z/X}(U)$는 prime ideal이며, [§Dimension, ⁋Proposition 8](/en/math/scheme_theory/dimension#prop8)에 의하여 $Z$가 codimension $1$이라는 것은 $\mathfrak{p}$가 codimension $1$이라는 것이다. $z$에 대응하는 prime ideal을 $\mathfrak{q}\supseteq \mathfrak{p}$라 하면 $X$가 factorial이라는 가정에 의하여 $A_\mathfrak{q}=\mathcal{O}_{X,z}$는 Noetherian local UFD이고, $\mathfrak{p}A_\mathfrak{q}$는 codimension $1$인 prime ideal이다. 그럼 [\[Commutative Algebra\] §Homological Criterion for Regularity, ⁋Lemma 8](/en/math/commutative_algebra/homological_criterion_for_regularity#lem8)의 1번에 의하여 $\mathfrak{p}A_\mathfrak{q}$는 principal이다.
+Now choose $z\in Z$ and an affine open subset $U=\Spec A$ containing $z$. Since $Z$ is integral, $\mathfrak{p}=\mathcal{I}_{Z/X}(U)$ is a prime ideal, and by [§Dimension, ⁋Proposition 8](/en/math/scheme_theory/dimension#prop8), $Z$ having codimension $1$ means $\mathfrak{p}$ has codimension $1$. Let $\mathfrak{q}\supseteq \mathfrak{p}$ be the prime ideal corresponding to $z$; then by the factoriality assumption, $A_\mathfrak{q}=\mathcal{O}_{X,z}$ is a Noetherian local UFD, and $\mathfrak{p}A_\mathfrak{q}$ is a prime ideal of codimension $1$. Hence by part 1 of [[Commutative Algebra] §Homological Criterion for Regularity, ⁋Lemma 8](/en/math/commutative_algebra/homological_criterion_for_regularity#lem8), $\mathfrak{p}A_\mathfrak{q}$ is principal.
 
-$\mathfrak{p}A_\mathfrak{q}=(t)$라 하고, $\mathfrak{q}$ 바깥의 원소는 $A_\mathfrak{q}$에서 unit이므로 $t=f/1$이 되도록 $f\in A$를 택하자. $\mathfrak{p}A_\mathfrak{q}\cap A=\mathfrak{p}$이므로 $f\in \mathfrak{p}$이다. 한편 $A$가 Noetherian이므로 $\mathfrak{p}$는 유한개의 원소 $p_1,\ldots, p_n$이 생성하고, 각각의 $p_i/1$이 $(f)A_\mathfrak{q}$에 속하므로 $g_i\notin \mathfrak{q}$가 존재하여 $g_ip_i\in (f)$이다. $g=g_1\cdots g_n$으로 두면 $\mathfrak{q}$가 prime이므로 $g\notin\mathfrak{q}$이고, $A_g$에서 $\mathfrak{p}A_g=(f)$이다.
+Let $\mathfrak{p}A_\mathfrak{q}=(t)$; since elements outside $\mathfrak{q}$ are units in $A_\mathfrak{q}$, choose $f\in A$ so that $t=f/1$. Since $\mathfrak{p}A_\mathfrak{q}\cap A=\mathfrak{p}$, we have $f\in \mathfrak{p}$. On the other hand, since $A$ is Noetherian, $\mathfrak{p}$ is generated by finitely many elements $p_1,\ldots, p_n$, and each $p_i/1$ lies in $(f)A_\mathfrak{q}$, so there exists $g_i\notin \mathfrak{q}$ with $g_ip_i\in (f)$. Setting $g=g_1\cdots g_n$, we have $g\notin\mathfrak{q}$ because $\mathfrak{q}$ is prime, and $\mathfrak{p}A_g=(f)$ in $A_g$.
 
-그럼 $D(g)$는 $z$의 affine open neighborhood로서 그 위에서 $Z$는 $Z(f)$이며, $A_g$가 domain이고 $f\neq 0$이므로 $f$는 non-zerodivisor이다. 이렇게 얻은 열린집합들이 $X$를 덮으므로 [Definition 1](#def1)에 의하여 $\iota$는 effective Cartier divisor이다.
+Then $D(g)$ is an affine open neighborhood of $z$ on which $Z$ is $Z(f)$; since $A_g$ is a domain and $f\neq 0$, $f$ is a non-zerodivisor. The open sets obtained in this way cover $X$, so by [Definition 1](#def1), $\iota$ is an effective Cartier divisor.
 :::
 
-즉, 위의 가정에 대해서는 codimension $1$이라는 위상적인 조건만으로 방정식 하나를 되찾을 수 있으며, 일반적으로 모든 local ring이 regular local ring인 scheme은 factorial이라는 것이 알려져 있으므로 특히 regular한 대상에서 이러한 결과가 성립한다. 일반적으로는 그러한 회복을 기대할 수 없으므로, 우리는 국소적인 방정식 자료 자체를 대상으로 삼아 이들을 한데 모은다. 이 때 각각의 방정식은 $U_i$ 위의 함수일 필요가 없고 겹침 위에서 그 비율만이 통제되며, 아래에서 $K(U)$는 [§Algebra of Schemes, ⁋Definition 12](/en/math/scheme_theory/algebra_of_schemes#def12)의 total quotient ring이다.
+Thus, under the above hypotheses, the topological condition of codimension $1$ alone is enough to recover a single equation, and since it is known that any scheme all of whose local rings are regular local rings is factorial, this result holds in particular for regular objects. In general we cannot expect such a recovery, so we take the local equation data itself as our object and collect them together. Here each equation need not be a function on $U_i$; only its ratio on overlaps is controlled, and below $K(U)$ denotes the total quotient ring of [§Algebra of Schemes, ⁋Definition 12](/en/math/scheme_theory/algebra_of_schemes#def12).
 
 ::: Definition 6
-Locally Noetherian scheme $X$ 위의 *Cartier divisor*란 $X$의 affine open cover $\{U_i\}$와 각각의 $f_i\in K(U_i)^\times$가 이루는 데이터 $\{(U_i,f_i)\}$로, 임의의 $i,j$에 대하여 $f_i/f_j$가 $U_i\cap U_j$ 위에서 $\mathcal{O}_X^\times$의 section인 것이다. 이 때, 두 데이터 $\{(U_i,f_i)\}$와 $\{(V_j,g_j)\}$는 임의의 $i,j$에 대하여 $f_i/g_j$가 $U_i\cap V_j$ 위에서 $\mathcal{O}_X^\times$의 section일 때 같은 Cartier divisor로 본다. 이들은 덧셈
+A *Cartier divisor* on a locally Noetherian scheme $X$ is a datum $\{(U_i,f_i)\}$ consisting of an affine open cover $\{U_i\}$ of $X$ and elements $f_i\in K(U_i)^\times$ such that for any $i,j$, the ratio $f_i/f_j$ is a section of $\mathcal{O}_X^\times$ on $U_i\cap U_j$. Two data $\{(U_i,f_i)\}$ and $\{(V_j,g_j)\}$ represent the same Cartier divisor if for any $i,j$, the ratio $f_i/g_j$ is a section of $\mathcal{O}_X^\times$ on $U_i\cap V_j$. These form a group under addition
 
 $$\{(U_i,f_i)\}+\{(V_j,g_j)\}=\{(W, (f_ig_j)\vert_W)\}$$
 
-을 연산으로 하여 group을 이루며, 여기에서 $W$는 각각의 $U_i\cap V_j$에 포함되는 affine open subset들을 훑는다. 이 group을 $\CaDiv(X)$로 적는다.
+where $W$ ranges over affine open subsets contained in each $U_i\cap V_j$. We denote this group by $\CaDiv(X)$.
 :::
 
-이는 [\[Algebraic Varieties\] §Divisors, ⁋Definition 12](/en/math/algebraic_varieties/divisors#def12)에서 살펴본 것과 같은 정의로, 각각의 $f_i$가 하나의 function field가 아니라 $U_i$마다의 $K(U_i)^\times$에서 온다는 것만이 다르다. 열린집합 $W\subseteq U$의 associated point들은 $U$의 associated point들 가운데 $W$에 속하는 것들이므로 ([§Algebra of Schemes, ⁋Definition 8](/en/math/scheme_theory/algebra_of_schemes#def8)) restriction $K(U)^\times\rightarrow K(W)^\times$가 있으며, 이를 통해 자료를 세분할 수 있으므로 아래에서는 affine이 아닌 cover 위에 적은 자료도 같은 방식으로 읽는다.
+This is the same definition as the one examined in [[Algebraic Varieties] §Divisors, ⁋Definition 12](/en/math/algebraic_varieties/divisors#def12), differing only in that each $f_i$ comes from $K(U_i)^\times$ for its own $U_i$ rather than from a single function field. The associated points of an open subset $W\subseteq U$ are those associated points of $U$ lying in $W$ ([§Algebra of Schemes, ⁋Definition 8](/en/math/scheme_theory/algebra_of_schemes#def8)), so there is a restriction $K(U)^\times\rightarrow K(W)^\times$, and through this we can refine data; hence below we also read data written on covers that are not affine in the same way.
 
-각각의 $f_i$가 모두 $\Gamma(U_i,\mathcal{O}_X)$에 속하는 Cartier divisor를 *effective*라 부르며, 이것이 위의 동치관계와 호환되는 것을 쉽게 확인할 수 있다. $f_i$가 $\Gamma(U_i,\mathcal{O}_X)$에 속하고 $f_i/g_j$가 $U_i\cap V_j$ 위에서 invertible section이라면 $g_j=f_i\cdot(f_i/g_j)^{-1}$ 또한 그 위에서 $\mathcal{O}_X$의 section이고, 이러한 $U_i\cap V_j$들이 $V_j$를 덮으므로 $g_j$ 역시 $\Gamma(V_j,\mathcal{O}_X)$에 속하기 때문이다. 이렇게 대수적으로 정의한 개념이 [Definition 1](#def1)의 것과 일치한다는 것이 $\CaDiv(X)$에 관한 첫 번째 결과이다.
+A Cartier divisor for which each $f_i$ lies in $\Gamma(U_i,\mathcal{O}_X)$ is called *effective*, and one easily checks that this is compatible with the above equivalence relation. If $f_i$ lies in $\Gamma(U_i,\mathcal{O}_X)$ and $f_i/g_j$ is an invertible section on $U_i\cap V_j$, then $g_j=f_i\cdot(f_i/g_j)^{-1}$ is also a section of $\mathcal{O}_X$ there, and since such $U_i\cap V_j$ cover $V_j$, $g_j$ also lies in $\Gamma(V_j,\mathcal{O}_X)$. That this algebraically defined notion coincides with the one in [Definition 1](#def1) is the first result about $\CaDiv(X)$.
 
 ::: Proposition 7
-Locally Noetherian scheme $X$에 대하여, effective Cartier divisor $\iota:Z\hookrightarrow X$들과 $\CaDiv(X)$의 effective한 원소들은 서로 일대일로 대응한다.
+For a locally Noetherian scheme $X$, effective Cartier divisors $\iota:Z\hookrightarrow X$ are in one-to-one correspondence with effective elements of $\CaDiv(X)$.
 :::
 ::: Proof
-Effective한 $D=\{(U_i,f_i)\}$가 주어졌다 하자. $f_i\in \Gamma(U_i,\mathcal{O}_X)$가 $K(U_i)^\times$의 원소라는 것은 $f_i$가 non-zerodivisor라는 것이다. 각 $U_i$ 위에서 ideal $(f_i)$를 생각하면, $f_i/f_j$가 겹침 위에서 unit이므로 이들은 겹침 위에서 같은 ideal sheaf를 정의하고, 따라서 [§Closed Subschemes, ⁋Proposition 6](/en/math/scheme_theory/closed_subschemes#prop6)에 의하여 $X$의 closed subscheme $Z$ 하나로 붙는다. 이 $Z$는 구성에 의하여 [Definition 1](#def1)의 조건을 만족한다.
+Given an effective $D=\{(U_i,f_i)\}$. That $f_i\in \Gamma(U_i,\mathcal{O}_X)$ is an element of $K(U_i)^\times$ means $f_i$ is a non-zerodivisor. Considering the ideal $(f_i)$ on each $U_i$, since $f_i/f_j$ is a unit on the overlap, these define the same ideal sheaf on overlaps, and hence glue to a single closed subscheme $Z$ of $X$ by [§Closed Subschemes, ⁋Proposition 6](/en/math/scheme_theory/closed_subschemes#prop6). This $Z$ satisfies the condition of [Definition 1](#def1) by construction.
 
-거꾸로 effective Cartier divisor $\iota:Z\hookrightarrow X$와 [Definition 1](#def1)의 자료 $\{(U_i,s_i)\}$가 주어졌다 하자. $s_i$가 non-zerodivisor이므로 $s_i\in K(U_i)^\times$이다. 겹침 위에서는 $\mathcal{I}_{Z/X}$가 $s_i$로도 $s_j$로도 생성되므로 각 점에서 $s_i=us_j$인 local unit $u$가 존재하며, 이러한 $u$는 $s_i$와 $s_j$가 non-zerodivisor라는 것에서 유일하게 결정되어 겹침 전체의 section으로 붙는다. 곧 $\{(U_i,s_i)\}$는 effective한 Cartier divisor이다. 두 구성이 서로 역이라는 것은 어느 쪽이든 $\mathcal{I}_{Z/X}$를 국소적으로 생성하는 원소를 주고받는 것이므로 곧바로 확인된다.
+Conversely, given an effective Cartier divisor $\iota:Z\hookrightarrow X$ with data $\{(U_i,s_i)\}$ from [Definition 1](#def1). Since $s_i$ is a non-zerodivisor, $s_i\in K(U_i)^\times$. On overlaps, $\mathcal{I}_{Z/X}$ is generated by both $s_i$ and $s_j$, so at each point there is a local unit $u$ with $s_i=us_j$, and such $u$ is uniquely determined from $s_i$ and $s_j$ being non-zerodivisors and glues to a section over the entire overlap. Hence $\{(U_i,s_i)\}$ is an effective Cartier divisor. That the two constructions are mutual inverses is immediate since either way we are passing back and forth between elements that locally generate $\mathcal{I}_{Z/X}$.
 :::
 
-이로부터 우리는 effective Cartier divisor와 $\CaDiv(X)$의 effective한 원소를 구별하지 않는다. 일반적인 Cartier divisor는 각각의 $U_i$ 위에서 $f_i$를 두 non-zerodivisor의 비로 적을 수 있으므로 국소적으로는 두 effective Cartier divisor의 차이며, 이런 뜻에서 $\CaDiv(X)$는 국소적으로 [Definition 1](#def1)의 closed subscheme들로 생성된다.
+Henceforth we do not distinguish between an effective Cartier divisor and an effective element of $\CaDiv(X)$. A general Cartier divisor can be written locally on each $U_i$ as the ratio of two non-zerodivisors, so it is locally the difference of two effective Cartier divisors; in this sense $\CaDiv(X)$ is generated locally by the closed subschemes of [Definition 1](#def1).
 
-우리는 $f\in K(X)^\times$ 하나가 정의하는 $\{(X,f)\}$ 꼴의 Cartier divisor를 $\divisor(f)$로 적고 *principal divisor*라 부른다. Cartier divisor는 정의에 의해 언제나 국소적으로 함수 하나로 주어지므로, 여기에서 문제가 되는 것은 그 국소적인 자료를 하나의 전역적인 함수로 묶을 수 있는지의 여부이다. 이들이 이루는 subgroup을 $\Prin(X)$라 하면, quotient group
+We write $\divisor(f)$ for the Cartier divisor of the form $\{(X,f)\}$ defined by a single element $f\in K(X)^\times$ and call it a *principal divisor*. By definition a Cartier divisor is always given locally by a single function, so the issue here is whether this local data can be assembled into a single global function. Denoting the subgroup they form by $\Prin(X)$, we define the quotient group
 
 $$\CaCl(X)=\CaDiv(X)/\Prin(X)$$
 
-가 정의되며, 두 Cartier divisor의 차가 principal일 때 이 둘을 *linearly equivalent*라 부른다.
+and call two Cartier divisors *linearly equivalent* if their difference is principal.
 
-## $\mathcal{O}_X(D)$와 Picard group
+## $\mathcal{O}_X(D)$ and the Picard Group
 
-Cartier divisor의 데이터 $\{(U_i,f_i)\}$는 각 조각 위에서 하나의 함수를 지정하고 겹침 위에서 그 비율만을 통제한다. 이는 정확히 invertible sheaf를 local trivialization과 transition function으로 기술하는 방식이므로, 인자에 invertible sheaf를 대응시킬 수 있다. 이 절에서 $X$는 *integral* Noetherian scheme으로 두자. 그럼 generic point에서의 local ring인 $K(X)$가 field이고 임의의 공집합이 아닌 열린집합에 대하여 $\Gamma(V,\mathcal{O}_X)$가 그 subring이므로, 아래에서 우리는 rational function들을 하나의 $K(X)$ 안에서 다룰 수 있다.
+The data $\{(U_i,f_i)\}$ of a Cartier divisor specifies a function on each piece and controls only the ratio on overlaps. This is exactly the way an invertible sheaf is described by local trivializations and transition functions, so we can associate an invertible sheaf to a divisor. In this section we assume $X$ is an *integral* Noetherian scheme. Then the local ring at the generic point, $K(X)$, is a field, and for any non-empty open set we have $\Gamma(V,\mathcal{O}_X)$ as a subring of it; hence below we can treat rational functions inside a single $K(X)$.
 
 ::: Definition 8
-Integral Noetherian scheme $X$와 Cartier divisor $D=\{(U_i,f_i)\}$에 대하여, $X$ 위의 $\mathcal{O}_X$-module $\mathcal{O}_X(D)$를 각각의 공집합이 아닌 열린집합 $V$마다
+For an integral Noetherian scheme $X$ and a Cartier divisor $D=\{(U_i,f_i)\}$, we define the $\mathcal{O}_X$-module $\mathcal{O}_X(D)$ on $X$ by setting, for each non-empty open subset $V$,
 
 $$\Gamma(V,\mathcal{O}_X(D))=\{g\in K(X)\mid gf_i\in \Gamma(V\cap U_i,\mathcal{O}_X)\text{ for all $i$}\}$$
 
-로 정의하고, $\Gamma(\emptyset,\mathcal{O}_X(D))=0$으로 둔다. 여기에서 공집합이 아닌 열린집합들 사이의 restriction map은 $K(X)$의 원소를 그대로 보내는 것이다.
+and $\Gamma(\emptyset,\mathcal{O}_X(D))=0$. Here the restriction maps between non-empty open subsets are given by sending elements of $K(X)$ to themselves.
 :::
 
-이는 우리가 이미 [\[Algebraic Varieties\] §Line Bundles and Vector Bundles, ⁋Definition 17](/en/math/algebraic_varieties/line_bundles#def17)에서 다룬 것으로, 우리는 $f_i/f_j$를 transition function으로 삼아 line bundle을 만들고, 그 section들이 $\divisor(g)+D\geq 0$을 만족하는 rational function들임을 뒤이어 확인하였다. [Definition 8](#def8)도 이 정의와 마찬가지로 sheaf $\mathcal{O}_X(D)$를 정의하는 것으로, 이 때 $\Gamma(V,\mathcal{O}_X(D))$는 $D$가 지정하는 만큼의 pole만을 허용하는 rational function들의 모임이다.
+This is what we already covered in [[Algebraic Varieties] §Line Bundles and Vector Bundles, ⁋Definition 17](/en/math/algebraic_varieties/line_bundles#def17): we constructed a line bundle using $f_i/f_j$ as transition functions and then verified that its sections are the rational functions satisfying $\divisor(g)+D\geq 0$. [Definition 8](#def8) also defines the sheaf $\mathcal{O}_X(D)$ in the same way; here $\Gamma(V,\mathcal{O}_X(D))$ is the collection of rational functions allowing poles only to the extent specified by $D$.
 
-정의의 조건은 각 점의 근방에서 확인되는 조건이므로 $\mathcal{O}_X(D)$는 실제로 $\mathcal{O}_X$의 곱셈에 대해 닫힌 sheaf이다. 또 이 sheaf는 $D$를 나타내는 데이터의 선택에 무관하다. 다른 자료 $\{(V_j,g_j)\}$가 같은 Cartier divisor를 준다면 겹침 위에서 $f_i/g_j$가 invertible section이므로, $gf_i$가 $\mathcal{O}_X$의 section인 것과 $gg_j$가 그러한 것이 각각의 $V\cap U_i\cap V_j$ 위에서 같은 조건이기 때문이다. $D$가 effective이면 $\mathcal{O}_X\subseteq \mathcal{O}_X(D)$이고 $-D$에 대해서는 거꾸로 $D$ 위에서 소멸하는 함수들의 sheaf, 곧 [Proposition 7](#prop7)이 주는 closed subscheme의 ideal sheaf가 된다.
+Since the condition in the definition is checked in a neighborhood of each point, $\mathcal{O}_X(D)$ is indeed a sheaf closed under multiplication by $\mathcal{O}_X$. Moreover this sheaf is independent of the choice of data representing $D$. If another datum $\{(V_j,g_j)\}$ gives the same Cartier divisor, then $f_i/g_j$ is an invertible section on the overlap, so $gf_i$ being a section of $\mathcal{O}_X$ and $gg_j$ being so are the same condition on each $V\cap U_i\cap V_j$. If $D$ is effective then $\mathcal{O}_X\subseteq \mathcal{O}_X(D)$, and for $-D$ we conversely get the sheaf of functions vanishing on $D$, i.e., the ideal sheaf of the closed subscheme given by [Proposition 7](#prop7).
 
 ::: Proposition 9
-Integral Noetherian scheme $X$와 Cartier divisor $D,D'$에 대하여 다음이 성립한다.
+For an integral Noetherian scheme $X$ and Cartier divisors $D,D'$, the following hold.
 
-1. $\mathcal{O}_X(D)$는 invertible sheaf이며, $\mathcal{O}_X(D)\vert_{U_i}$는 $f_i^{-1}$이 생성한다.
-2. $K(X)$ 안에서의 곱셈이 isomorphism $\mathcal{O}_X(D)\otimes_{\mathcal{O}_X}\mathcal{O}_X(D')\cong \mathcal{O}_X(D+D')$를 준다.
-3. $\mathcal{O}_X(D)\cong \mathcal{O}_X$인 것은 $D$가 principal인 것과 동치이다.
+1. $\mathcal{O}_X(D)$ is an invertible sheaf, and $\mathcal{O}_X(D)\vert_{U_i}$ is generated by $f_i^{-1}$.
+2. Multiplication inside $K(X)$ gives an isomorphism $\mathcal{O}_X(D)\otimes_{\mathcal{O}_X}\mathcal{O}_X(D')\cong \mathcal{O}_X(D+D')$.
+3. $\mathcal{O}_X(D)\cong \mathcal{O}_X$ if and only if $D$ is principal.
 :::
 ::: Proof
-1번의 경우, $V\subseteq U_i$인 열린집합에 대하여 $f_j=f_i\cdot(f_j/f_i)$이고 $f_j/f_i$가 $U_i\cap U_j$ 위의 invertible section이므로, $gf_i\in \Gamma(V,\mathcal{O}_X)$이면 자동으로 $gf_j\in\Gamma(V\cap U_j,\mathcal{O}_X)$이다. 따라서
+For (1), for an open subset $V\subseteq U_i$, since $f_j=f_i\cdot(f_j/f_i)$ and $f_j/f_i$ is an invertible section on $U_i\cap U_j$, if $gf_i\in \Gamma(V,\mathcal{O}_X)$ then automatically $gf_j\in\Gamma(V\cap U_j,\mathcal{O}_X)$. Hence
 
 $$\Gamma(V,\mathcal{O}_X(D))=f_i^{-1}\Gamma(V,\mathcal{O}_X)$$
 
-이고, $f_i\in K(X)^\times$이므로 $g\mapsto gf_i$는 $\mathcal{O}_X(D)\vert_{U_i} \rightarrow \mathcal{O}_{U_i}$의 isomorphism이다. 즉 $\mathcal{O}_X(D)$는 rank $1$의 locally free sheaf이다.
+and since $f_i\in K(X)^\times$, the map $g\mapsto gf_i$ is an isomorphism $\mathcal{O}_X(D)\vert_{U_i} \rightarrow \mathcal{O}_{U_i}$. Thus $\mathcal{O}_X(D)$ is a locally free sheaf of rank $1$.
 
-2번의 경우, $D'=\{(V_j,g_j)\}$라 하고 $D+D'$을 $\{(U_i\cap V_j, f_ig_j)\}$로 계산하면 1번에 의하여 세 sheaf는 $U_i\cap V_j$ 위에서 각각 $f_i^{-1}$, $g_j^{-1}$, $(f_ig_j)^{-1}$이 생성하는 자유 module이다. 곱셈 $\mathcal{O}_X(D)\otimes \mathcal{O}_X(D') \rightarrow \mathcal{O}_X(D+D')$은 generator를 generator로 보내므로 각 조각 위에서 isomorphism이고, 따라서 전체에서 isomorphism이다.
+For (2), letting $D'=\{(V_j,g_j)\}$ and computing $D+D'$ as $\{(U_i\cap V_j, f_ig_j)\}$, by (1) the three sheaves are on $U_i\cap V_j$ the free modules generated by $f_i^{-1}$, $g_j^{-1}$, and $(f_ig_j)^{-1}$ respectively. The multiplication map $\mathcal{O}_X(D)\otimes \mathcal{O}_X(D') \rightarrow \mathcal{O}_X(D+D')$ sends generator to generator, so it is an isomorphism on each piece and hence globally.
 
-3번의 경우, $D=\divisor(h)$라면 $\mathcal{O}_X(D)=h^{-1}\mathcal{O}_X\cong \mathcal{O}_X$이다. 거꾸로 isomorphism $\psi:\mathcal{O}_X \rightarrow \mathcal{O}_X(D)$가 주어졌다 하고 $h=\psi(1)\in \Gamma(X,\mathcal{O}_X(D))\subseteq K(X)$라 하자. 그럼 $h$는 각각의 $U_i$ 위에서 $\mathcal{O}_X(D)$를 생성하므로 1번과 비교하면 $h$와 $f_i^{-1}$은 $\mathcal{O}_X^\times$의 section만큼 차이나며, 곧 $f_i/h^{-1}=hf_i$가 $U_i$ 위의 invertible section이다. 따라서 [Definition 6](#def6)의 동치관계에 의하여 $\{(U_i,f_i)\}$와 $\{(X,h^{-1})\}$은 같은 Cartier divisor를 정의하여 $D=\divisor(h^{-1})$이다.
+For (3), if $D=\divisor(h)$ then $\mathcal{O}_X(D)=h^{-1}\mathcal{O}_X\cong \mathcal{O}_X$. Conversely, given an isomorphism $\psi:\mathcal{O}_X \rightarrow \mathcal{O}_X(D)$, let $h=\psi(1)\in \Gamma(X,\mathcal{O}_X(D))\subseteq K(X)$. Then $h$ generates $\mathcal{O}_X(D)$ on each $U_i$, so comparing with (1), $h$ and $f_i^{-1}$ differ by a section of $\mathcal{O}_X^\times$, i.e., $f_i/h^{-1}=hf_i$ is an invertible section on $U_i$. Hence by the equivalence relation of [Definition 6](#def6), $\{(U_i,f_i)\}$ and $\{(X,h^{-1})\}$ define the same Cartier divisor, so $D=\divisor(h^{-1})$.
 :::
 
-위 명제에 의해 대응 $D\mapsto \mathcal{O}_X(D)$는 group homomorphism $\CaDiv(X)\rightarrow\Pic(X)$를 주며, 그 kernel이 곧 $\Prin(X)$가 된다. 따라서 우리는 이 대응의 image가 $\CaCl(X)=\CaDiv(X)/\Prin(X)$와 isomorphic하다는 것을 안다. 다음 정리는 이 결과를 매듭짓는 것으로, 이 대응이 전사이고 따라서 canonical isomorphism $\CaCl(X)\cong \Pic(X)$를 준다는 것을 보여준다.
+By the above proposition, the correspondence $D\mapsto \mathcal{O}_X(D)$ gives a group homomorphism $\CaDiv(X)\rightarrow\Pic(X)$, and its kernel is exactly $\Prin(X)$. Hence we know that its image is isomorphic to $\CaCl(X)=\CaDiv(X)/\Prin(X)$. The following theorem ties this result together, showing that this correspondence is surjective and thus yields a canonical isomorphism $\CaCl(X)\cong \Pic(X)$.
 
 ::: Theorem 10
-Integral Noetherian scheme $X$에 대하여, $D\mapsto \mathcal{O}_X(D)$는 isomorphism $\CaCl(X)\cong\Pic(X)$를 유도한다.
+For an integral Noetherian scheme $X$, the map $D\mapsto \mathcal{O}_X(D)$ induces an isomorphism $\CaCl(X)\cong\Pic(X)$.
 :::
 ::: Proof
-[Proposition 9](#prop9)에 의하여 유도된 homomorphism이 injective이므로 surjectivity만 보이면 된다. Invertible sheaf $\mathcal{L}$과 그 trivialization $\psi_i:\mathcal{O}_{U_i} \rightarrow \mathcal{L}\vert_{U_i}$가 주어졌다 하자. Trivialization은 열린부분집합으로의 제한에서 유지되므로 각각의 $U_i$를 affine open subset들로 덮어 세분하면, 처음부터 $\{U_i\}$가 affine open cover라 가정하여도 된다. 이제 $t_i=\psi_i(1)$을 $\mathcal{L}$의 $U_i$ 위의 generating section이라 하자. 그럼 겹침 위에서 $t_j=g_{ij}t_i$인 $g_{ij}\in \Gamma(U_i\cap U_j,\mathcal{O}_X)^\times$가 유일하게 결정되고, 이들은 $g_{ij}g_{jk}=g_{ik}$를 만족한다.
+By [Proposition 9](#prop9) the induced homomorphism is injective, so it suffices to show surjectivity. Given an invertible sheaf $\mathcal{L}$ and trivializations $\psi_i:\mathcal{O}_{U_i} \rightarrow \mathcal{L}\vert_{U_i}$. Since trivializations are preserved under restriction to open subsets, we may refine by covering each $U_i$ with affine open subsets and assume from the outset that $\{U_i\}$ is an affine open cover. Let $t_i=\psi_i(1)$ be the generating section of $\mathcal{L}$ over $U_i$. Then on overlaps $t_j=g_{ij}t_i$ for uniquely determined $g_{ij}\in \Gamma(U_i\cap U_j,\mathcal{O}_X)^\times$, and these satisfy $g_{ij}g_{jk}=g_{ik}$.
 
-우선 $g_{ii}=1$이고 $g_{ji}=g_{ij}^{-1}$임을 관찰하고, 공집합이 아닌 $U_{i_0}$ 하나를 고정하여 $f_i=g_{ii_0}\in \Gamma(U_i\cap U_{i_0},\mathcal{O}_X)^\times$로 두자. $X$가 integral이므로 이는 $K(X)^\times$의 원소이고, cocycle 조건에서 $U_i\cap U_j\cap U_{i_0}$ 위에서 $f_i/f_j=g_{ii_0}g_{i_0j}=g_{ij}$이다. 그런데 $X$가 irreducible이므로 이 열린집합은 $U_i\cap U_j$의 조밀한 열린부분집합이고, $\Gamma(U_i\cap U_j,\mathcal{O}_X)$가 $K(X)$에 embed되므로 이 등식은 $U_i\cap U_j$ 전체에서 성립한다. 특히 $f_i/f_j$는 겹침 위에서 invertible section이므로 $D=\{(U_i,f_i)\}$는 Cartier divisor이다.
+First observe that $g_{ii}=1$ and $g_{ji}=g_{ij}^{-1}$, fix a non-empty $U_{i_0}$, and set $f_i=g_{ii_0}\in \Gamma(U_i\cap U_{i_0},\mathcal{O}_X)^\times$. Since $X$ is integral, this is an element of $K(X)^\times$, and from the cocycle condition we have $f_i/f_j=g_{ii_0}g_{i_0j}=g_{ij}$ on $U_i\cap U_j\cap U_{i_0}$. But since $X$ is irreducible, this open set is dense in $U_i\cap U_j$, and $\Gamma(U_i\cap U_j,\mathcal{O}_X)$ embeds into $K(X)$, so this equality holds on all of $U_i\cap U_j$. In particular $f_i/f_j$ is an invertible section on the overlap, so $D=\{(U_i,f_i)\}$ is a Cartier divisor.
 
-이제 $\mathcal{O}_X(D)\cong \mathcal{L}$임을 보인다. [Proposition 9](#prop9)에 의하여 $\mathcal{O}_X(D)\vert_{U_i}$는 $f_i^{-1}$이 생성하므로, $V\subseteq U_i$ 위에서 $gf_i\in \Gamma(V,\mathcal{O}_X)$이고
+Now we show $\mathcal{O}_X(D)\cong \mathcal{L}$. By [Proposition 9](#prop9), $\mathcal{O}_X(D)\vert_{U_i}$ is generated by $f_i^{-1}$, so for $V\subseteq U_i$ with $gf_i\in \Gamma(V,\mathcal{O}_X)$, the map
 
 $$\varphi_i:\mathcal{O}_X(D)\vert_{U_i} \rightarrow \mathcal{L}\vert_{U_i};\qquad g\mapsto (gf_i)\cdot t_i$$
 
-는 isomorphism이다. 겹침 위에서 $t_i=g_{ji}t_j$이고 $g_{ji}=f_j/f_i$이므로
+is an isomorphism. On overlaps $t_i=g_{ji}t_j$ and $g_{ji}=f_j/f_i$, so
 
 $$\varphi_i(g)=(gf_i)\cdot\frac{f_j}{f_i}t_j=(gf_j)\cdot t_j=\varphi_j(g)$$
 
-가 되어 이들은 하나의 isomorphism $\mathcal{O}_X(D)\cong\mathcal{L}$로 붙는다.
+and these glue to a single isomorphism $\mathcal{O}_X(D)\cong\mathcal{L}$.
 :::
 
-따라서 integral Noetherian scheme 위에서 invertible sheaf를 다루는 것은 Cartier divisor를 linear equivalence까지만 기억하며 다루는 것과 같으며, variety 수준에서의 같은 대응이 [\[Algebraic Varieties\] §Line Bundles and Vector Bundles, ⁋Proposition 19](/en/math/algebraic_varieties/line_bundles#prop19)이다.
+Thus, on an integral Noetherian scheme, dealing with invertible sheaves is the same as dealing with Cartier divisors up to linear equivalence; the same correspondence at the variety level is [[Algebraic Varieties] §Line Bundles and Vector Bundles, ⁋Proposition 19](/en/math/algebraic_varieties/line_bundles#prop19).
 
 ## Weil Divisors
 
-이제 우리는 linear system을 살펴보기 전에 Weil divisor를 간략하게 살펴본다. 위에서 간략하게 언급했듯, Weil divisor는 Cartier divisor보다 좋은 공간에서만 정의되었었는데, 이를 scheme의 언어에서 어떻게 가져올지가 우리의 첫 번째 논의의 대상이다. 우선 Weil divisor가 정의되기 위해서는 rational function이 각각의 codimension $1$ 부분에서 갖는 zero와 pole의 order를 정의할 수 있어야 하고, 그러려면 그 점에서의 local ring이 discrete valuation ring이어야 한다. 그러나 이 조건이 실제로 어떤 조건인지는 다소 불명확하므로, 우리는 normality를 가정한다. ([§Algebra of Schemes, ⁋Definition 6](/en/math/scheme_theory/algebra_of_schemes#def6)) 그럼 [Lemma 11](#lem11)에서 이 가정이 codimension $1$ 부분에서 local ring을 DVR로 만들어준다는 것을 확인할 것이다.
+Before examining linear systems, we briefly review Weil divisors. As mentioned above, Weil divisors were defined only on better spaces than Cartier divisors, and our first topic is how to carry this over into the language of schemes. For Weil divisors to be defined, we must be able to define the order of zeros and poles of a rational function at each codimension $1$ part, which requires the local ring at that point to be a discrete valuation ring. However, what this condition actually entails is somewhat unclear, so we assume normality. ([§Algebra of Schemes, ⁋Definition 6](/en/math/scheme_theory/algebra_of_schemes#def6)) Then in [Lemma 11](#lem11) we will verify that this assumption makes the local ring a DVR at codimension $1$ parts.
 
-따라서 normal, integral Noetherian scheme $X$를 생각하자. $X$가 integral이므로 임의의 affine open subset은 domain의 spectrum이고, 따라서 $X$의 유일한 associated point는 generic point $\xi$이다. 그럼 [§Algebra of Schemes, ⁋Definition 12](/en/math/scheme_theory/algebra_of_schemes#def12)의 total quotient ring은 [§Properties of Scheme Morphisms, §§Rational Maps](/en/math/scheme_theory/properties_of_scheme_morphisms#유리사상)에서 정의한 function field
+Hence consider a normal, integral Noetherian scheme $X$. Since $X$ is integral, any affine open subset is the spectrum of a domain, so the only associated point of $X$ is the generic point $\xi$. Then the total quotient ring of [§Algebra of Schemes, ⁋Definition 12](/en/math/scheme_theory/algebra_of_schemes#def12) becomes the function field
 
 $$K(X)=\mathcal{O}_{X,\xi}$$
 
-가 되며, 임의의 공집합이 아닌 열린집합 $V$에 대하여 $\Gamma(V,\mathcal{O}_X)$는 $K(X)$의 subring으로 볼 수 있다. 특히 임의의 점 $x$에서의 local ring $\mathcal{O}_{X,x}$ 또한 $K(X)$의 subring이며 그 fraction field는 $K(X)$이다. 또한 이 embedding들이 restriction 및 germ을 취하는 것과 맞아떨어지므로, 등식
+defined in [§Properties of Scheme Morphisms, §§Rational Maps](/en/math/scheme_theory/properties_of_scheme_morphisms#유리사상), and for any non-empty open subset $V$, we can view $\Gamma(V,\mathcal{O}_X)$ as a subring of $K(X)$. In particular, the local ring $\mathcal{O}_{X,x}$ at any point $x$ is also a subring of $K(X)$ and its fraction field is $K(X)$. Moreover, since these embeddings are compatible with taking restrictions and germs, one easily checks that the equality
 
 $$\Gamma(V,\mathcal{O}_X)=\bigcap_{x\in V}\mathcal{O}_{X,x}$$
 
-이 $K(X)$ 안에서 성립함을 쉽게 확인할 수 있다. 즉, rational function이 열린집합 위에서 regular인지를 각 점의 local ring으로 판정할 수 있다.
+holds inside $K(X)$. That is, we can test whether a rational function is regular on an open set by checking at each point's local ring.
 
 ::: Lemma 11
-Normal integral Noetherian scheme $X$에 대하여 다음이 성립한다.
+For a normal integral Noetherian scheme $X$, the following hold.
 
-1. $X$의 codimension $1$ irreducible closed subset $Y$와 그 generic point $\eta$에 대하여, $\mathcal{O}_{X,\eta}$는 discrete valuation ring이다.
-2. 임의의 $f\in K(X)^\times$에 대하여, $f$의 $\mathcal{O}_{X,\eta}$에서의 valuation이 $0$이 아닌 codimension $1$ irreducible closed subset $Y$는 유한히 많다.
+1. For a codimension $1$ irreducible closed subset $Y$ of $X$ and its generic point $\eta$, the local ring $\mathcal{O}_{X,\eta}$ is a discrete valuation ring.
+2. For any $f\in K(X)^\times$, there are only finitely many codimension $1$ irreducible closed subsets $Y$ for which the valuation of $f$ at $\mathcal{O}_{X,\eta}$ is non-zero.
 :::
 ::: Proof
-1번의 경우, $X$가 normal이므로 $R=\mathcal{O}_{X,\eta}$는 normal domain이고 $X$가 locally Noetherian이므로 Noetherian이다. 또한 [§Dimension, ⁋Proposition 8](/en/math/scheme_theory/dimension#prop8)에 의하여 $\dim R=\codim_X Y=1$이므로 $R$의 maximal ideal은 codimension $1$의 prime ideal이다. 한편 [\[Commutative Algebra\] §Regular Local Rings, ⁋Theorem 11](/en/math/commutative_algebra/regular_local_rings#thm11)을 normal domain $R$ 자신에 적용하면 (R1) 조건, 곧 codimension $1$ prime ideal에서의 localization이 discrete valuation ring이라는 것이 성립한다. 이를 $R$의 maximal ideal에 적용하고 $R$이 local ring이라는 것을 쓰면 $R$ 자신이 discrete valuation ring이다.
+For (1), since $X$ is normal, $R=\mathcal{O}_{X,\eta}$ is a normal domain, and since $X$ is locally Noetherian, it is Noetherian. Also, by [§Dimension, ⁋Proposition 8](/en/math/scheme_theory/dimension#prop8) we have $\dim R=\codim_X Y=1$, so the maximal ideal of $R$ is a prime ideal of codimension $1$. On the other hand, applying [[Commutative Algebra] §Regular Local Rings, ⁋Theorem 11](/en/math/commutative_algebra/regular_local_rings#thm11) to the normal domain $R$ itself gives the (R1) condition, i.e., that localization at a codimension $1$ prime ideal is a discrete valuation ring. Applying this to the maximal ideal of $R$ and using that $R$ is a local ring, we conclude that $R$ itself is a discrete valuation ring.
 
-2번을 보이기 위해, $X$의 Noetherian 가정을 사용해 유한히 많은 affine open subset $U_1,\ldots, U_r$이 $X$를 덮는다 하자. 각각의 $Y$는 어떤 $U_k$와 만나며, 그럼 $Y\cap U_k$는 $U_k$의 codimension $1$ irreducible closed subset으로서 같은 generic point $\eta$를 가지므로, 하나의 $U=\Spec A$를 고정하고 그 위에서 유한성을 보이면 충분하다. 여기에서 $A$는 Noetherian domain이고 $\Frac(A)=K(X)$이므로 $f=a/b$인 $a,b\in A\setminus\{0\}$를 택할 수 있다. $Y\cap U$에 대응하는 codimension $1$ prime ideal을 $\mathfrak{p}$라 하면 $\mathcal{O}_{X,\eta}=A_\mathfrak{p}$이고, 만일 $a,b\notin \mathfrak{p}$라면 $a$와 $b$가 모두 $A_\mathfrak{p}$의 unit이므로 $f$의 valuation은 $0$이다. 따라서 valuation이 $0$이 아닌 $\mathfrak{p}$는 $(a)$ 또는 $(b)$를 포함하며, codimension $1$이라는 조건에서 이들은 $(a)$ 또는 $(b)$를 포함하는 minimal prime ideal이다. 그런데 Noetherian ring $A$의 ideal $\mathfrak{a}$에 대하여 $\mathfrak{a}=\ann(A/\mathfrak{a})$이므로, $\mathfrak{a}$를 포함하는 minimal prime ideal은 모두 $\Ass(A/\mathfrak{a})$에 속하고 이 집합은 유한하다. ([\[Commutative Algebra\] §Associated Primes, ⁋Theorem 7](/en/math/commutative_algebra/associated_primes#thm7)의 1번) 따라서 그러한 $\mathfrak{p}$ 또한 유한히 많다.
+To show (2), use the Noetherian hypothesis on $X$ to cover it by finitely many affine open subsets $U_1,\ldots, U_r$. Each $Y$ meets some $U_k$, and then $Y\cap U_k$ is a codimension $1$ irreducible closed subset of $U_k$ with the same generic point $\eta$, so it suffices to fix a single $U=\Spec A$ and show finiteness there. Here $A$ is a Noetherian domain with $\Frac(A)=K(X)$, so we can write $f=a/b$ with $a,b\in A\setminus\{0\}$. Let $\mathfrak{p}$ be the codimension $1$ prime ideal corresponding to $Y\cap U$; then $\mathcal{O}_{X,\eta}=A_\mathfrak{p}$, and if $a,b\notin \mathfrak{p}$ then both $a$ and $b$ are units in $A_\mathfrak{p}$, so the valuation of $f$ is $0$. Hence prime ideals with non-zero valuation contain $(a)$ or $(b)$, and the codimension $1$ condition means they are minimal prime ideals containing $(a)$ or $(b)$. But for an ideal $\mathfrak{a}$ in a Noetherian ring $A$, we have $\mathfrak{a}=\ann(A/\mathfrak{a})$, so the minimal prime ideals containing $\mathfrak{a}$ all belong to $\Ass(A/\mathfrak{a})$, and this set is finite. ([[Commutative Algebra] §Associated Primes, ⁋Theorem 7](/en/math/commutative_algebra/associated_primes#thm7), part 1) Therefore there are only finitely many such $\mathfrak{p}$.
 :::
 
-[Lemma 11](#lem11)의 1번을 만족하는 $Y$와 그 generic point $\eta$에 대하여, DVR $\mathcal{O}_{X, \eta}$의 uniformizer $\pi$를 택하면 임의의 $f\in K(X)^\times$는
+For $Y$ and its generic point $\eta$ satisfying part 1 of [Lemma 11](#lem11), choosing a uniformizer $\pi$ of the DVR $\mathcal{O}_{X, \eta}$ allows us to write any $f\in K(X)^\times$ uniquely as
 
 $$f=\pi^nu,\qquad u\in \mathcal{O}_{X,\eta}^\times$$
 
-꼴로 유일하게 적히며, 이 정수 $n$은 $\pi$의 선택에 무관하다. 이를 $\ord_Y(f)$로 적는다. 두 원소의 곱에서 지수가 더해지므로 $\ord_Y:K(X)^\times \rightarrow \mathbb{Z}$는 group homomorphism이며, 이는 정확히 $\mathcal{O}_{X,\eta}$의 discrete valuation이다.
+and this integer $n$ is independent of the choice of $\pi$. We denote it by $\ord_Y(f)$. Since exponents add under multiplication of two elements, $\ord_Y:K(X)^\times \rightarrow \mathbb{Z}$ is a group homomorphism, which is exactly the discrete valuation of $\mathcal{O}_{X,\eta}$.
 
 ::: Definition 12
-Normal integral Noetherian scheme $X$의 codimension $1$ irreducible closed subset을 *prime divisor*라 부르고, prime divisor들로 생성되는 free abelian group $\Div(X)$의 원소를 $X$의 *Weil divisor*라 부른다. Weil divisor $D=\sum_Y n_YY$가 *effective*라는 것은 모든 $n_Y$가 음이 아닌 것이며, 이를 $D\geq 0$으로 적는다.
+A codimension $1$ irreducible closed subset of a normal integral Noetherian scheme $X$ is called a *prime divisor*, and an element of the free abelian group $\Div(X)$ generated by prime divisors is called a *Weil divisor* on $X$. A Weil divisor $D=\sum_Y n_YY$ is called *effective* if all $n_Y$ are non-negative, and we write this as $D\geq 0$.
 :::
 
-곧 Weil divisor는 codimension $1$짜리 닫힌집합들의 정수계수의 formal sum이며, 각각의 계수는 해당 prime divisor에서 함수가 갖는 zero 또는 pole의 order를 기록한다. 이는 [\[Algebraic Varieties\] §Divisors, ⁋Definition 1](/en/math/algebraic_varieties/divisors#def1)의 Weil divisor를 scheme의 언어로 옮긴 것이며, 이 기록을 실제로 수행하는 것이 다음의 정의이다.
+Thus a Weil divisor is a formal integer linear combination of codimension $1$ closed sets, where each coefficient records the order of zero or pole of a function at the corresponding prime divisor. This is the translation of the Weil divisor of [[Algebraic Varieties] §Divisors, ⁋Definition 1](/en/math/algebraic_varieties/divisors#def1) into the language of schemes, and the following definition actually performs this recording.
 
 ::: Definition 13
-Normal integral Noetherian scheme $X$와 $f\in K(X)^\times$에 대하여,
+For a normal integral Noetherian scheme $X$ and $f\in K(X)^\times$, we again call
 
 $$\divisor(f)=\sum_Y \ord_Y(f)\cdot Y\in \Div(X)$$
 
-를 다시 $f$의 principal divisor라 부른다. 두 Weil divisor $D_1,D_2$가 linearly equivalent라는 것은 적당한 $f\in K(X)^\times$에 대하여 $D_1-D_2=\divisor(f)$인 것이며, quotient group
+the principal divisor of $f$. Two Weil divisors $D_1,D_2$ are linearly equivalent if $D_1-D_2=\divisor(f)$ for some $f\in K(X)^\times$, and the quotient group
 
 $$\Cl(X)=\Div(X)/\{\divisor(f)\mid f\in K(X)^\times\}$$
 
-를 $X$의 *divisor class group*이라 부른다.
+is called the *divisor class group* of $X$.
 :::
 
-[Lemma 11](#lem11)의 둘째 결과가 이 합의 유한성을 보장한다. 또, 각각의 $\ord_Y$가 group homomorphism이므로 $\divisor:K(X)^\times \rightarrow \Div(X)$ 또한 group homomorphism이며, 따라서 principal divisor들은 $\Div(X)$의 subgroup을 이루고 $\Cl(X)$가 잘 정의된다.
+The second result of [Lemma 11](#lem11) guarantees the finiteness of this sum. Also, since each $\ord_Y$ is a group homomorphism, $\divisor:K(X)^\times \rightarrow \Div(X)$ is also a group homomorphism, so principal divisors form a subgroup of $\Div(X)$ and $\Cl(X)$ is well-defined.
 
-이 글의 서두에서 언급하였듯, [\[Algebraic Varieties\] §Divisors](/en/math/algebraic_varieties/divisors)에서 우리는 Weil divisor와 Cartier divisor가 기본적으로는 같은 것이며, Cartier divisor가 Weil divisor보다 조금 더 강한 조건으로 정의되었고, 따라서 더 나쁜 공간에서 정의된다는 점에서만 달랐다. 이 때 이 두 개념이 *기본적으로 같다*는 것은 [\[Algebraic Varieties\] §Divisors, ⁋Proposition 14](/en/math/algebraic_varieties/divisors#prop14)의 결과로, 이 명제의 scheme 버전은 다음과 같다.
+As mentioned in the introduction, in [[Algebraic Varieties] §Divisors](/en/math/algebraic_varieties/divisors) we saw that Weil divisors and Cartier divisors are basically the same thing, with Cartier divisors defined by a slightly stronger condition and hence defined on worse spaces. That these two notions are *basically the same* is the result of [[Algebraic Varieties] §Divisors, ⁋Proposition 14](/en/math/algebraic_varieties/divisors#prop14), and the scheme version of this proposition is as follows.
 
 ::: Proposition 14
-Normal integral Noetherian scheme $X$가 주어졌다 하고, Cartier divisor $\{(U_i, f_i)\}$와 prime divisor $Y$가 주어질 때마다 $Y\cap U_i\neq\emptyset$이도록 하는 $i$를 택하자. 그럼 다음의 식
+Let $X$ be a normal integral Noetherian scheme, and for each Cartier divisor $\{(U_i, f_i)\}$ and prime divisor $Y$, choose $i$ so that $Y\cap U_i\neq\emptyset$. Then the formula
 
 $$\{(U_i,f_i)\}\mapsto \sum_Y \ord_Y(f_i)\cdot Y$$
 
-은 injective group homomorphism $\CaDiv(X) \rightarrow \Div(X)$를 정의하며, principal divisor를 principal divisor로 보낸다. 만일 $X$가 factorial이라면 이는 isomorphism이고, 따라서 $\CaCl(X)\cong \Cl(X)$이다.
+defines an injective group homomorphism $\CaDiv(X) \rightarrow \Div(X)$ sending principal divisors to principal divisors. If $X$ is factorial, this is an isomorphism, and hence $\CaCl(X)\cong \Cl(X)$.
 :::
 ::: Proof
-우선 위의 식이 $i$의 선택에 무관하다. $Y$가 $U_i$와 $U_j$를 모두 만난다면 $Y\cap U_i$와 $Y\cap U_j$는 irreducible space $Y$의 공집합이 아닌 두 열린부분집합이므로 서로 만나며, generic point $\eta$는 $Y$의 공집합이 아닌 모든 열린부분집합에 속하므로 $\eta\in U_i\cap U_j$이다. 그 위에서 $f_i/f_j$가 $\mathcal{O}_X^\times$의 section이므로 $f_i/f_j$는 $\mathcal{O}_{X,\eta}$의 unit이 되어 $\ord_Y(f_i)=\ord_Y(f_j)$이기 때문이다. 또 이 합이 유한합인 것은 [Lemma 11](#lem11)의 2번과 $X$가 유한히 많은 $U_i$로 덮인다는 것에서 따라온다. Cartier divisor의 덧셈이 $f_i$들의 곱이고 각각의 $\ord_Y$가 group homomorphism이므로 이 대응은 group homomorphism이며, $\divisor(f)=\{(X,f)\}$의 image가 [Definition 13](#def13)의 $\divisor(f)$인 것은 정의 그대로이다.
+First, the above formula is independent of the choice of $i$. If $Y$ meets both $U_i$ and $U_j$, then $Y\cap U_i$ and $Y\cap U_j$ are non-empty open subsets of the irreducible space $Y$, so they meet each other, and since the generic point $\eta$ belongs to every non-empty open subset of $Y$, we have $\eta\in U_i\cap U_j$. There $f_i/f_j$ is a section of $\mathcal{O}_X^\times$, so $f_i/f_j$ is a unit in $\mathcal{O}_{X,\eta}$ and thus $\ord_Y(f_i)=\ord_Y(f_j)$. Also, the finiteness of this sum follows from part 2 of [Lemma 11](#lem11) and the fact that $X$ is covered by finitely many $U_i$. Since addition of Cartier divisors is multiplication of the $f_i$'s and each $\ord_Y$ is a group homomorphism, this correspondence is a group homomorphism, and that the image of $\divisor(f)=\{(X,f)\}$ is the $\divisor(f)$ of [Definition 13](#def13) is immediate from the definition.
 
-Injectivity를 보이자. $D=\{(U_i,f_i)\}$의 image가 $0$이라 하면, 각각의 $i$에 대하여 $U_i$와 만나는 모든 prime divisor $Y$에서 $\ord_Y(f_i)=0$이다. 우리는 $f_i$가 $U_i$ 위의 invertible section임을 보인다. 이 절의 처음에서 본 등식 $\Gamma(V,\mathcal{O}_X)=\bigcap_{x\in V}\mathcal{O}_{X,x}$를 $f_i$와 $f_i^{-1}$에 적용하면, 각각의 $x\in U_i$에 대하여 $f_i\in \mathcal{O}_{X,x}^\times$임을 보이면 충분하다.
+For injectivity, suppose the image of $D=\{(U_i,f_i)\}$ is $0$; then for each $i$, $\ord_Y(f_i)=0$ for every prime divisor $Y$ meeting $U_i$. We show that $f_i$ is an invertible section on $U_i$. Applying the equality $\Gamma(V,\mathcal{O}_X)=\bigcap_{x\in V}\mathcal{O}_{X,x}$ seen at the beginning of this section to $f_i$ and $f_i^{-1}$, it suffices to show $f_i\in \mathcal{O}_{X,x}^\times$ for each $x\in U_i$.
 
-$R=\mathcal{O}_{X,x}$는 Noetherian normal local domain이고, $R$의 codimension $1$ prime ideal $\mathfrak{p}$는 $x$를 지나면서 $U_i$와 만나는 prime divisor $Y$에 대응하며 $R_\mathfrak{p}=\mathcal{O}_{X,\eta_Y}$이다. 그럼 [\[Commutative Algebra\] §Regular Local Rings, ⁋Theorem 11](/en/math/commutative_algebra/regular_local_rings#thm11)의 (S2) 조건에 의하여 $R$의 non-zerodivisor가 생성하는 principal ideal의 associated prime은 모두 codimension $1$이므로, [\[Commutative Algebra\] §Regular Local Rings, ⁋Proposition 8](/en/math/commutative_algebra/regular_local_rings#prop8)이 주는 등식
+Let $R=\mathcal{O}_{X,x}$; this is a Noetherian normal local domain. A codimension $1$ prime ideal $\mathfrak{p}$ of $R$ corresponds to a prime divisor $Y$ passing through $x$ and meeting $U_i$, and $R_\mathfrak{p}=\mathcal{O}_{X,\eta_Y}$. Then by the (S2) condition of [[Commutative Algebra] §Regular Local Rings, ⁋Theorem 11](/en/math/commutative_algebra/regular_local_rings#thm11), for a normal domain $R$ the associated primes of a principal ideal generated by a non-zerodivisor all have codimension $1$, so the equality
 
 $$R=\bigcap_{\text{\scriptsize $\mathfrak{p}$ associated to a non-zerodivisor}}R_\mathfrak{p}$$
 
-의 우변은 codimension $1$인 $\mathfrak{p}$들에 대한 교집합을 포함한다. 가정에 의하여 $\ord_Y(f_i)=0$이므로 $f_i$와 $f_i^{-1}$은 모든 codimension $1$ prime ideal에서의 localization에 속하고, 따라서 둘 다 $R$의 원소이므로 $f_i\in R^\times$이다. 곧 모든 $f_i$가 $U_i$ 위의 invertible section이므로, [Definition 6](#def6)의 동치관계에 의하여 $D$는 $\{(U_i,1)\}$과 같은 Cartier divisor, 즉 $\CaDiv(X)$의 항등원이다.
+given by [[Commutative Algebra] §Regular Local Rings, ⁋Proposition 8](/en/math/commutative_algebra/regular_local_rings#prop8) includes the intersection over codimension $1$ primes $\mathfrak{p}$. By assumption $\ord_Y(f_i)=0$, so both $f_i$ and $f_i^{-1}$ belong to the localization at every codimension $1$ prime ideal, and hence both are elements of $R$, so $f_i\in R^\times$. Thus every $f_i$ is an invertible section on $U_i$, and by the equivalence relation of [Definition 6](#def6), $D$ is the same Cartier divisor as $\{(U_i,1)\}$, i.e., the identity in $\CaDiv(X)$.
 
-이제 $X$가 factorial이라 하고 surjectivity를 보인다. Weil divisor $D=\sum_Y n_YY$가 주어졌다 하고 점 $x\in X$를 고정하자. $D$가 유한합이므로 $x$를 지나는 $Y$ 가운데 $n_Y\neq0$인 것은 유한히 많으며, 각각에 대하여 $\mathcal{O}_{X,x}$의 codimension $1$ prime ideal $\mathfrak{p}_Y$가 대응된다. $X$가 factorial이므로 $\mathcal{O}_{X,x}$는 UFD이고, [\[Commutative Algebra\] §Homological Criterion for Regularity, ⁋Lemma 8](/en/math/commutative_algebra/homological_criterion_for_regularity#lem8)의 1번에 의하여 $\mathfrak{p}_Y=(g_Y)$는 principal이다.
+Now suppose $X$ is factorial and show surjectivity. Given a Weil divisor $D=\sum_Y n_YY$ and a point $x\in X$. Since $D$ is a finite sum, there are only finitely many $Y$ passing through $x$ with $n_Y\neq0$, and to each corresponds a codimension $1$ prime ideal $\mathfrak{p}_Y$ of $\mathcal{O}_{X,x}$. Since $X$ is factorial, $\mathcal{O}_{X,x}$ is a UFD, and by part 1 of [[Commutative Algebra] §Homological Criterion for Regularity, ⁋Lemma 8](/en/math/commutative_algebra/homological_criterion_for_regularity#lem8), each $\mathfrak{p}_Y=(g_Y)$ is principal.
 
-$f_x=\prod_Y g_Y^{n_Y}\in K(X)^\times$로 두자. 곱은 $x$를 지나는 유한히 많은 $Y$에 대한 것이다. 그럼 $E=\divisor(f_x)-D$는 유한히 많은 prime divisor들의 합이고, 구성에 의하여 $x$를 지나는 어떤 prime divisor도 $E$에 나타나지 않는다. 실제로 $x$를 지나는 prime divisor $Y'$에 대하여 $\ord_{Y'}(g_Y)$는 $Y'=Y$일 때 $1$이고 그렇지 않으면 $0$인데, 이는 $g_Y$가 $\mathcal{O}_{X,x}$의 prime element로서 $\mathfrak{p}_{Y'}$에 속하는 것이 $\mathfrak{p}_{Y'}=\mathfrak{p}_Y$인 것과 동치이기 때문이다. 따라서 $E$에 나타나는 prime divisor들의 합집합은 $x$를 담지 않는 닫힌집합이며, 그 여집합 $U_x$ 위에서 $\divisor(f_x)$와 $D$는 일치한다.
+Set $f_x=\prod_Y g_Y^{n_Y}\in K(X)^\times$. The product is over the finitely many $Y$ passing through $x$. Then $E=\divisor(f_x)-D$ is a sum of finitely many prime divisors, and by construction no prime divisor passing through $x$ appears in $E$. Indeed, for a prime divisor $Y'$ passing through $x$, $\ord_{Y'}(g_Y)$ is $1$ if $Y'=Y$ and $0$ otherwise, because $g_Y$ being a prime element of $\mathcal{O}_{X,x}$ belonging to $\mathfrak{p}_{Y'}$ is equivalent to $\mathfrak{p}_{Y'}=\mathfrak{p}_Y$. Hence the union of prime divisors appearing in $E$ is a closed set not containing $x$, and on its complement $U_x$, $\divisor(f_x)$ and $D$ agree.
 
-이렇게 얻은 열린집합들을 affine으로 줄여 $X$의 affine open cover $\{U_x\}$를 얻자. 그럼 $\divisor(f_x)$와 $\divisor(f_{x'})$이 모두 $U_x\cap U_{x'}$ 위에서 $D$와 일치하므로 $f_x/f_{x'}$는 겹침과 만나는 모든 prime divisor에서 $\ord$가 $0$이며, 위의 injectivity 논증을 열린집합 $U_x\cap U_{x'}$에 적용하면 이는 $\mathcal{O}_X^\times$의 section이다. 곧 $\{(U_x,f_x)\}$는 Cartier divisor이고 그 image가 $D$이다. 마지막으로 principal divisor들이 서로 대응되므로 quotient 사이의 동형 $\CaCl(X)\cong\Cl(X)$이 유도된다.
+Shrink these open sets to be affine to obtain an affine open cover $\{U_x\}$ of $X$. Then since both $\divisor(f_x)$ and $\divisor(f_{x'})$ agree with $D$ on $U_x\cap U_{x'}$, the ratio $f_x/f_{x'}$ has order $0$ at every prime divisor meeting the overlap, and applying the injectivity argument above to the open subset $U_x\cap U_{x'}$ shows this is a section of $\mathcal{O}_X^\times$. Hence $\{(U_x,f_x)\}$ is a Cartier divisor whose image is $D$. Finally, since principal divisors correspond to each other, an isomorphism $\CaCl(X)\cong\Cl(X)$ on the quotients is induced.
 :::
 
-[Proposition 14](#prop14)의 마지막 주장은 factorial scheme 위에서 두 인자 이론이 일치한다는 것이며, 이는 effective인 경우에 적용되던 [Proposition 5](#prop5)를 임의의 계수로 확장한 것이다. 여기에 [Theorem 10](#thm10)을 합치면 factorial인 경우 $\Cl(X)\cong\CaCl(X)\cong\Pic(X)$를 얻는다. 일반적인 normal scheme 위에서는 $\CaDiv(X)$의 image가 $\Div(X)$의 proper subgroup일 수 있고, 그 차이는 $X$의 singularity가 codimension $1$ 부분을 국소적으로 하나의 방정식으로 자르지 못하는 정도를 잰다.
+The final claim of [Proposition 14](#prop14) is that the two divisor theories agree on a factorial scheme, which extends [Proposition 5](#prop5) from the effective case to arbitrary coefficients. Combining this with [Theorem 10](#thm10), we obtain $\Cl(X)\cong\CaCl(X)\cong\Pic(X)$ in the factorial case. On a general normal scheme, the image of $\CaDiv(X)$ can be a proper subgroup of $\Div(X)$, and the difference measures the extent to which singularities of $X$ prevent a codimension $1$ part from being cut out locally by a single equation.
 
 ## Linear Systems
 
-이제 우리는 [\[Algebraic Varieties\] §Linear Systems](/en/math/algebraic_varieties/linear_systems)의 내용을 빠르게 되짚는다. Divisor $D$가 주어졌을 때 자연스러운 물음은 그 linear equivalence class 안에 어떠한 effective divisor가 들어 있는지이며, [Definition 8](#def8)은 이 물음을 $\mathcal{O}_X(D)$의 global section에 대한 물음으로 바꾸어 준다.
+We now quickly review the content of [[Algebraic Varieties] §Linear Systems](/en/math/algebraic_varieties/linear_systems). Given a divisor $D$, the natural question is which effective divisors lie in its linear equivalence class, and [Definition 8](#def8) turns this question into one about global sections of $\mathcal{O}_X(D)$.
 
 ::: Proposition 15
-Integral Noetherian scheme $X$와 Cartier divisor $D$에 대하여, $0\neq s\in \Gamma(X,\mathcal{O}_X(D))$마다 $D+\divisor(s)$는 effective Cartier divisor이며, 이 대응은 $D$와 linearly equivalent한 effective Cartier divisor 전체로의 surjection이다. 또, 두 section $s,s'$이 같은 divisor를 주는 것은 $s'/s\in \Gamma(X,\mathcal{O}_X)^\times$인 것과 동치이다.
+For an integral Noetherian scheme $X$ and a Cartier divisor $D$, for each $0\neq s\in \Gamma(X,\mathcal{O}_X(D))$ the divisor $D+\divisor(s)$ is an effective Cartier divisor, and this correspondence is a surjection onto all effective Cartier divisors linearly equivalent to $D$. Moreover, two sections $s,s'$ give the same divisor if and only if $s'/s\in \Gamma(X,\mathcal{O}_X)^\times$.
 :::
 ::: Proof
-$D=\{(U_i,f_i)\}$라 하자. $s\in\Gamma(X,\mathcal{O}_X(D))$라는 것은 모든 $i$에 대하여 $sf_i\in \Gamma(U_i,\mathcal{O}_X)$라는 것이고, $D+\divisor(s)=\{(U_i,sf_i)\}$이므로 이는 정확히 $D+\divisor(s)$가 effective라는 것이다. 거꾸로 $D'$이 effective이고 $D'-D=\divisor(h)$라면 $D'=\{(U_i,hf_i)\}$이므로 $hf_i\in\Gamma(U_i,\mathcal{O}_X)$이고, 곧 $h\in \Gamma(X,\mathcal{O}_X(D))$이며 그 image가 $D'$이다.
+Let $D=\{(U_i,f_i)\}$. That $s\in\Gamma(X,\mathcal{O}_X(D))$ means $sf_i\in \Gamma(U_i,\mathcal{O}_X)$ for all $i$, and $D+\divisor(s)=\{(U_i,sf_i)\}$, so this is exactly the statement that $D+\divisor(s)$ is effective. Conversely, if $D'$ is effective and $D'-D=\divisor(h)$, then $D'=\{(U_i,hf_i)\}$, so $hf_i\in\Gamma(U_i,\mathcal{O}_X)$, hence $h\in \Gamma(X,\mathcal{O}_X(D))$ and its image is $D'$.
 
-마지막으로 $D+\divisor(s)=D+\divisor(s')$은 $\divisor(s'/s)=0$과 같고, [Definition 6](#def6)의 동치관계에 의하여 이는 $s'/s$가 각각의 $U_i$ 위에서 $\mathcal{O}_X^\times$의 section인 것, 곧 $s'/s\in \Gamma(X,\mathcal{O}_X)^\times$인 것이다.
+Finally, $D+\divisor(s)=D+\divisor(s')$ is equivalent to $\divisor(s'/s)=0$, and by the equivalence relation of [Definition 6](#def6) this means $s'/s$ is a section of $\mathcal{O}_X^\times$ on each $U_i$, i.e., $s'/s\in \Gamma(X,\mathcal{O}_X)^\times$.
 :::
 
-따라서 $D$와 linearly equivalent한 effective divisor들은 $\Gamma(X,\mathcal{O}_X(D))$의 $0$이 아닌 section들을 $\Gamma(X,\mathcal{O}_X)^\times$의 작용으로 나눈 것과 일대일로 대응한다. $X$가 field $\mathbb{K}$ 위의 scheme이고 $\Gamma(X,\mathcal{O}_X)=\mathbb{K}$인 경우 이 quotient는 벡터공간의 projectivization이 되므로, [\[Algebraic Varieties\] §Linear Systems, ⁋Definition 2](/en/math/algebraic_varieties/linear_systems#def2)를 복원한다.
+Hence effective divisors linearly equivalent to $D$ are in one-to-one correspondence with non-zero sections of $\Gamma(X,\mathcal{O}_X(D))$ modulo the action of $\Gamma(X,\mathcal{O}_X)^\times$. When $X$ is a scheme over a field $\mathbb{K}$ with $\Gamma(X,\mathcal{O}_X)=\mathbb{K}$, this quotient becomes the projectivization of a vector space, recovering [[Algebraic Varieties] §Linear Systems, ⁋Definition 2](/en/math/algebraic_varieties/linear_systems#def2).
 
 ::: Definition 16
-Field $\mathbb{K}$ 위의 integral scheme $X$가 $\Gamma(X,\mathcal{O}_X)=\mathbb{K}$를 만족한다 하자. Invertible sheaf $\mathcal{L}$에 대하여 그 *complete linear system*은
+Let $X$ be an integral scheme over a field $\mathbb{K}$ satisfying $\Gamma(X,\mathcal{O}_X)=\mathbb{K}$. For an invertible sheaf $\mathcal{L}$, its *complete linear system* is
 
 $$\lvert \mathcal{L}\rvert=\mathbb{P}(\Gamma(X,\mathcal{L}))$$
 
-이고, $\mathcal{L}$의 *linear system*이란 부분공간 $V\subseteq \Gamma(X,\mathcal{L})$이 정의하는 $\mathbb{P}(V)\subseteq \lvert\mathcal{L}\rvert$이다.
+and a *linear system* of $\mathcal{L}$ is a $\mathbb{P}(V)\subseteq \lvert\mathcal{L}\rvert$ defined by a subspace $V\subseteq \Gamma(X,\mathcal{L})$.
 :::
 
-[Proposition 15](#prop15)에 의하여 $\mathcal{L}=\mathcal{O}_X(D)$인 경우 $\lvert\mathcal{L}\rvert$은 $D$와 linearly equivalent한 effective divisor들의 집합과 동일시되며, 이 때 이를 $\lvert D\rvert$로도 적는다. Linear system $\mathbb{P}(V)$에 대하여 $V$의 모든 section이 소멸하는 점들의 집합을 그 *base locus*라 부르며, base locus가 공집합인 linear system은 projective space로의 morphism을 주었다. ([\[Algebraic Varieties\] §Linear Systems, ⁋Definition 5](/en/math/algebraic_varieties/linear_systems#def5)) 우리의 마지막 섹션은 이에 대한 것이다.
+By [Proposition 15](#prop15), when $\mathcal{L}=\mathcal{O}_X(D)$, $\lvert\mathcal{L}\rvert$ is identified with the set of effective divisors linearly equivalent to $D$, and we also write this as $\lvert D\rvert$. For a linear system $\mathbb{P}(V)$, the set of points where all sections of $V$ vanish is called its *base locus*, and a linear system with empty base locus gives a morphism to projective space. ([[Algebraic Varieties] §Linear Systems, ⁋Definition 5](/en/math/algebraic_varieties/linear_systems#def5)) Our final section is about this.
 
 ## Ample Invertible Sheaves
 
-$\mathcal{O}_X$-module $\mathcal{F}$가 *globally generated*라는 것은 각 점 $x$에서 stalk $\mathcal{F}_x$가 global section들의 germ으로 $\mathcal{O}_{X,x}$-module로서 생성되는 것이다. 이는 [\[Algebraic Varieties\] §Cohomology of Projective Spaces, ⁋Definition 6](/en/math/algebraic_varieties/cohomology_of_projective_spaces#def6)의 evaluation map이 surjective라는 조건을 scheme 위로 옮긴 것이며, invertible sheaf $\mathcal{L}$의 경우 linear system $\mathbb{P}(V)$의 base locus가 공집합인 것과 $V$의 section들이 $\mathcal{L}$을 globally generate하는 것이 같은 조건이다.
+An $\mathcal{O}_X$-module $\mathcal{F}$ is called *globally generated* if for each point $x$, the stalk $\mathcal{F}_x$ is generated as an $\mathcal{O}_{X,x}$-module by the germs of global sections. This is the scheme-theoretic translation of the condition that the evaluation map is surjective in [[Algebraic Varieties] §Cohomology of Projective Spaces, ⁋Definition 6](/en/math/algebraic_varieties/cohomology_of_projective_spaces#def6), and for an invertible sheaf $\mathcal{L}$, the condition that a linear system $\mathbb{P}(V)$ has empty base locus is the same as the condition that the sections in $V$ globally generate $\mathcal{L}$.
 
-Generating section들은 projective space로의 morphism을 결정한다. Ring $A$ 위의 scheme $X$와 invertible sheaf $\mathcal{L}$, 그리고 이를 globally generate하는 section $s_0,\ldots, s_n\in \Gamma(X,\mathcal{L})$이 주어졌다 하자. 각각의 $i$에 대하여
+Generating sections determine a morphism to projective space. Let $X$ be a scheme over a ring $A$, $\mathcal{L}$ an invertible sheaf on $X$, and $s_0,\ldots, s_n\in \Gamma(X,\mathcal{L})$ sections that globally generate $\mathcal{L}$. For each $i$,
 
 $$X_{s_i}=\{x\in X\mid \text{$(s_i)_x$ generates $\mathcal{L}_x$}\}$$
 
-는 열린집합이다. 이는 $\mathcal{L}$의 trivializing open set 위에서 $s_i$는 하나의 함수에 대응되고, 그 함수가 unit이 되는 점들의 모임은 열린집합이기 때문이다. 또 $s_i$들이 $\mathcal{L}$을 globally generate하므로 $\{X_{s_i}\}$는 $X$의 open cover이며, $X_{s_i}$ 위에서는 $s_i$가 $\mathcal{L}$의 trivialization을 주므로 각각의 $j$에 대하여 $s_j/s_i\in \Gamma(X_{s_i},\mathcal{O}_X)$가 잘 정의된다. 이제 $D_+(\x_i)$는 $\Spec A[\x_0,\ldots,\x_n]_{(\x_i)}$와 isomorphic하므로 ([§Projective Spaces and the Proj Construction, ⁋Theorem 10](/en/math/scheme_theory/projective_schemes#thm10)), ring homomorphism
+is an open set. This is because on a trivializing open set for $\mathcal{L}$, $s_i$ corresponds to a single function, and the set of points where that function is a unit is open. Also, since the $s_i$ globally generate $\mathcal{L}$, $\{X_{s_i}\}$ is an open cover of $X$, and on $X_{s_i}$ the section $s_i$ gives a trivialization of $\mathcal{L}$, so for each $j$ the ratio $s_j/s_i\in \Gamma(X_{s_i},\mathcal{O}_X)$ is well-defined. Now $D_+(\x_i)$ is isomorphic to $\Spec A[\x_0,\ldots,\x_n]_{(\x_i)}$ ([§Projective Spaces and the Proj Construction, ⁋Theorem 10](/en/math/scheme_theory/projective_schemes#thm10)), so the ring homomorphism
 
 $$A[\x_0,\ldots, \x_n]_{(\x_i)} \rightarrow \Gamma(X_{s_i},\mathcal{O}_X);\qquad \frac{\x_j}{\x_i}\mapsto \frac{s_j}{s_i}$$
 
-는 [§Affine Schemes, ⁋Theorem 13](/en/math/scheme_theory/affine_schemes#thm13)에 의하여 morphism $X_{s_i} \rightarrow D_+(\x_i)$를 준다. 교집합 위에서 이 morphism들은 $s_k/s_i=(s_k/s_j)(s_j/s_i)$에 의해 서로 일치하므로, 각각의 $X_{s_i}$를 affine open subset들로 덮어 얻은 $X$의 affine open cover에 [§Morphisms of Schemes, ⁋Proposition 1](/en/math/scheme_theory/morphism_of_schemes#prop1)을 적용하면 이들은 하나의 morphism
+gives a morphism $X_{s_i} \rightarrow D_+(\x_i)$ by [§Affine Schemes, ⁋Theorem 13](/en/math/scheme_theory/affine_schemes#thm13). These morphisms agree on intersections because $s_k/s_i=(s_k/s_j)(s_j/s_i)$, so applying [§Morphisms of Schemes, ⁋Proposition 1](/en/math/scheme_theory/morphism_of_schemes#prop1) to an affine open cover of $X$ obtained by covering each $X_{s_i}$ with affine open subsets, they glue to a single morphism
 
-$$\varphi:X \rightarrow \mathbb{P}^n_A$$
+$$\varphi:X \rightarrow \mathbb{P}^n_A.$$
 
-을 정의한다. 즉, $\mathcal{L}$의 generating section을 택하는 것은 $X$를 projective space 안에서 나타내는 방법을 택하는 것이다.
+That is, choosing generating sections of $\mathcal{L}$ is choosing a way to represent $X$ inside projective space.
 
 ::: Definition 17
-Noetherian ring $A$와 finite type $A$-scheme $X$ 위의 invertible sheaf $\mathcal{L}$이 *very ample*이라는 것은, $\mathcal{L}$을 globally generate하는 유한 개의 section $s_0,\ldots, s_n\in \Gamma(X,\mathcal{L})$이 존재하여 이들이 정의하는 morphism $\varphi:X \rightarrow \mathbb{P}^n_A$가 locally closed embedding인 것이다. ([§Closed Subschemes, ⁋Definition 8](/en/math/scheme_theory/closed_subschemes#def8))
+An invertible sheaf $\mathcal{L}$ on a finite type $A$-scheme $X$ over a Noetherian ring $A$ is called *very ample* if there exist finitely many sections $s_0,\ldots, s_n\in \Gamma(X,\mathcal{L})$ that globally generate $\mathcal{L}$ such that the morphism $\varphi:X \rightarrow \mathbb{P}^n_A$ they define is a locally closed embedding. ([§Closed Subschemes, ⁋Definition 8](/en/math/scheme_theory/closed_subschemes#def8))
 :::
 
-따라서, very ample invertible sheaf는 $X$를 projective space의 subspace로 실현하는 정보로, $X$가 그 자체로 projective space 안에 놓여 있지 않더라도 이를 통해 좌표를 부여할 수 있다.
+Thus a very ample invertible sheaf is the data of realizing $X$ as a subspace of projective space, and even if $X$ is not itself embedded in projective space, we can assign coordinates to it through this.
 
-그러나 일반적으로 $\mathcal{L}$이 globally generated인 것은 강한 조건이다. 예를 들어 section들이 $\mathcal{L}$을 globally generate하지 못하면 $\varphi$ 자체가 정의되지 않는다. 이러한 문제를 해결하기 위해 우리가 사용하던 것은 $\mathcal{L}$을 여러 번 tensor하는 것이다. 곱셈 $\Gamma(X,\mathcal{L})^{\otimes m} \rightarrow \Gamma(X,\mathcal{L}^{\otimes m})$이 $\mathcal{L}$의 section들로부터 $\mathcal{L}^{\otimes m}$의 section을 만들어 주며, 일반적으로 그 image 바깥에도 section이 존재하므로 $m$이 커질수록 다룰 수 있는 section이 많아진다. 가령 $\mathbb{P}^n$ 위에서 $\Gamma(\mathcal{O}(1))$은 일차식들이 이루는 $n+1$차원 공간인 반면 $\Gamma(\mathcal{O}(m))$은 degree $m$ homogeneous polynomial들이 이루는 $\binom{n+m}{n}$차원 공간이다.
+However, in general $\mathcal{L}$ being globally generated is a strong condition. For example, if sections fail to globally generate $\mathcal{L}$, then $\varphi$ itself is not defined. To resolve this issue, we used tensor powers of $\mathcal{L}$. Multiplication $\Gamma(X,\mathcal{L})^{\otimes m} \rightarrow \Gamma(X,\mathcal{L}^{\otimes m})$ produces sections of $\mathcal{L}^{\otimes m}$ from sections of $\mathcal{L}$, and generally there exist sections outside its image as well, so the larger $m$ is, the more sections we have to work with. For example, on $\mathbb{P}^n$, $\Gamma(\mathcal{O}(1))$ is the $(n+1)$-dimensional space of linear forms, while $\Gamma(\mathcal{O}(m))$ is the $\binom{n+m}{n}$-dimensional space of degree $m$ homogeneous polynomials.
 
-그렇다면 $\mathcal{L}^{\otimes m}$이 very ample이 되는 $m>0$이 존재하는지를 물을 수 있고, [\[Algebraic Varieties\] §Linear Systems, ⁋Definition 10](/en/math/algebraic_varieties/linear_systems#def10)은 실제로 이를 ample의 정의로 삼았다. 그러나 이 서술은 ambient projective space를 경유하므로 $X$가 Noetherian ring 위의 finite type scheme이라는 가정 없이는 쓸 수 없다. 우리는 대신 twist가 sheaf를 얼마나 잘 펴는지만을 조건으로 삼아 임의의 Noetherian scheme에서 통하는 정의를 택한다.
+Then we can ask whether there exists $m>0$ such that $\mathcal{L}^{\otimes m}$ is very ample, and [[Algebraic Varieties] §Linear Systems, ⁋Definition 10](/en/math/algebraic_varieties/linear_systems#def10) actually took this as the definition of ample. However, this description passes through an ambient projective space and cannot be used without the assumption that $X$ is a finite type scheme over a Noetherian ring. Instead, we choose a definition that works for arbitrary Noetherian schemes by taking as the condition only how well twisting flattens a sheaf.
 
 ::: Definition 18
-Noetherian scheme $X$ 위의 invertible sheaf $\mathcal{L}$이 *ample*이라는 것은, 임의의 coherent sheaf $\mathcal{F}$에 대하여 ([§Quasi-Coherent Sheaves, ⁋Definition 11](/en/math/scheme_theory/quasicoherent_sheaves#def11)) 적당한 $n_0$가 존재하여 모든 $n\geq n_0$에 대해 $\mathcal{F}\otimes_{\mathcal{O}_X}\mathcal{L}^{\otimes n}$이 globally generated인 것이다.
+An invertible sheaf $\mathcal{L}$ on a Noetherian scheme $X$ is called *ample* if for every coherent sheaf $\mathcal{F}$ ([§Quasi-Coherent Sheaves, ⁋Definition 11](/en/math/scheme_theory/quasicoherent_sheaves#def11)) there exists $n_0$ such that for all $n\geq n_0$, the sheaf $\mathcal{F}\otimes_{\mathcal{O}_X}\mathcal{L}^{\otimes n}$ is globally generated.
 :::
 
-이 정의는 section의 존재만을 요구하며 projective space로의 morphism을 직접 언급하지 않는다. 여기에서 조건을 모든 coherent sheaf에 대하여 요구하는 것이 본질적으로, 만일 $\mathcal{F}=\mathcal{O}_X$만 요구한다면, 즉 $\mathcal{L}^{\otimes n}$이 globally generated라는 조건을 요구한다면 이는 $X$에 대한 정보를 전혀 담지 못한다. 반면 임의의 $\mathcal{F}$들에 대해 이 조건을 요구하면 $\mathcal{L}$의 twist가 $X$ 위의 모든 국소적인 자료를 global section으로 끌어올리는지를 묻게 되며, 이것이 embedding의 존재를 대신할 만큼 강한 조건이 된다. 다음은 이 정의로부터 곧바로 얻어지는 성질들이다.
+This definition only demands the existence of sections and does not directly mention a morphism to projective space. Requiring the condition for all coherent sheaves is essential: if we required it only for $\mathcal{F}=\mathcal{O}_X$, i.e., only that $\mathcal{L}^{\otimes n}$ is globally generated, this would contain no information about $X$ at all. On the other hand, requiring it for arbitrary $\mathcal{F}$ asks whether twisting by $\mathcal{L}$ lifts all local data on $X$ to global sections, and this becomes a condition strong enough to substitute for the existence of an embedding. The following are properties that follow immediately from this definition.
 
 ::: Proposition 19
-Noetherian scheme $X$ 위의 invertible sheaf $\mathcal{L}$에 대하여 다음이 성립한다.
+For an invertible sheaf $\mathcal{L}$ on a Noetherian scheme $X$, the following hold.
 
-1. $X$가 affine이면 $\mathcal{L}$은 언제나 ample이다.
-2. $m\geq 1$에 대하여, $\mathcal{L}$이 ample인 것과 $\mathcal{L}^{\otimes m}$이 ample인 것은 동치이다.
-3. $\mathcal{L}$이 ample이고 invertible sheaf $\mathcal{M}$이 globally generated이면 $\mathcal{L}\otimes_{\mathcal{O}_X}\mathcal{M}$ 또한 ample이다.
+1. If $X$ is affine, then $\mathcal{L}$ is always ample.
+2. For $m\geq 1$, $\mathcal{L}$ is ample if and only if $\mathcal{L}^{\otimes m}$ is ample.
+3. If $\mathcal{L}$ is ample and an invertible sheaf $\mathcal{M}$ is globally generated, then $\mathcal{L}\otimes_{\mathcal{O}_X}\mathcal{M}$ is also ample.
 :::
 ::: Proof
-1번의 경우, $X=\Spec A$라 하고 coherent sheaf $\mathcal{F}$를 택하자. $\mathcal{L}$이 invertible sheaf이므로 $\mathcal{L}^{\otimes n}$은 각 점의 열린근방 위에서 $\mathcal{O}_X$와 동형이고, 따라서 $\mathcal{F}\otimes\mathcal{L}^{\otimes n}$은 그 근방 위에서 $\mathcal{F}$와 동형이다. quasi-coherence는 국소적인 조건이므로 이로부터 $\mathcal{F}\otimes\mathcal{L}^{\otimes n}$은 quasi-coherent sheaf이고, 곧 적당한 $A$-module $M$의 associated sheaf $\widetilde M$이다. ([§Quasi-Coherent Sheaves, ⁋Theorem 10](/en/math/scheme_theory/quasicoherent_sheaves#thm10)) 그런데 $\widetilde M$의 stalk은 $M_\mathfrak{p}$이고 ([§Quasi-Coherent Sheaves, ⁋Proposition 5](/en/math/scheme_theory/quasicoherent_sheaves#prop5)) 이는 global section module $M$의 image로 생성되므로 $\widetilde M$은 globally generated이다. 따라서 $n_0=0$으로 두면 된다.
+For (1), let $X=\Spec A$ and choose a coherent sheaf $\mathcal{F}$. Since $\mathcal{L}$ is invertible, $\mathcal{L}^{\otimes n}$ is isomorphic to $\mathcal{O}_X$ on a neighborhood of each point, so $\mathcal{F}\otimes\mathcal{L}^{\otimes n}$ is isomorphic to $\mathcal{F}$ on that neighborhood. Since quasi-coherence is a local condition, $\mathcal{F}\otimes\mathcal{L}^{\otimes n}$ is a quasi-coherent sheaf, hence the associated sheaf $\widetilde M$ of some $A$-module $M$. ([§Quasi-Coherent Sheaves, ⁋Theorem 10](/en/math/scheme_theory/quasicoherent_sheaves#thm10)) But the stalk of $\widetilde M$ is $M_\mathfrak{p}$ ([§Quasi-Coherent Sheaves, ⁋Proposition 5](/en/math/scheme_theory/quasicoherent_sheaves#prop5)), and this is generated by the image of the global section module $M$, so $\widetilde M$ is globally generated. Hence we can take $n_0=0$.
 
-2번에서 $\mathcal{L}$이 ample이면, coherent sheaf $\mathcal{F}$에 대해 $n_0$를 택하여 $n\geq n_0$마다 $\mathcal{F}\otimes\mathcal{L}^{\otimes n}$이 globally generated이도록 하자. 그럼 $k\geq n_0$에 대하여 $mk\geq n_0$이므로 $\mathcal{F}\otimes(\mathcal{L}^{\otimes m})^{\otimes k}$은 globally generated이다. 거꾸로 $\mathcal{L}^{\otimes m}$이 ample이라 하자. 각각의 $j=0,1,\ldots, m-1$에 대하여 $\mathcal{F}\otimes\mathcal{L}^{\otimes j}$ 또한 coherent sheaf이므로 $k_j$가 존재하여 $k\geq k_j$마다 $\mathcal{F}\otimes\mathcal{L}^{\otimes j}\otimes(\mathcal{L}^{\otimes m})^{\otimes k}$이 globally generated이다. $k_\ast=\max_jk_j$로 두면 $n\geq mk_\ast$인 임의의 $n$은 $n=mk+j$ ($k\geq k_\ast$, $0\leq j<m$)로 적히므로 $\mathcal{F}\otimes\mathcal{L}^{\otimes n}$은 globally generated이다.
+For (2), if $\mathcal{L}$ is ample, choose $n_0$ for a coherent sheaf $\mathcal{F}$ so that $\mathcal{F}\otimes\mathcal{L}^{\otimes n}$ is globally generated for $n\geq n_0$. Then for $k\geq n_0$, we have $mk\geq n_0$, so $\mathcal{F}\otimes(\mathcal{L}^{\otimes m})^{\otimes k}$ is globally generated. Conversely, suppose $\mathcal{L}^{\otimes m}$ is ample. For each $j=0,1,\ldots, m-1$, the sheaf $\mathcal{F}\otimes\mathcal{L}^{\otimes j}$ is also coherent, so there exists $k_j$ such that $\mathcal{F}\otimes\mathcal{L}^{\otimes j}\otimes(\mathcal{L}^{\otimes m})^{\otimes k}$ is globally generated for $k\geq k_j$. Setting $k_\ast=\max_jk_j$, any $n\geq mk_\ast$ can be written as $n=mk+j$ with $k\geq k_\ast$ and $0\leq j<m$, so $\mathcal{F}\otimes\mathcal{L}^{\otimes n}$ is globally generated.
 
-3번을 위해 우선 두 globally generated $\mathcal{O}_X$-module $\mathcal{F},\mathcal{G}$의 tensor product가 다시 globally generated임을 관찰한다. Stalk $(\mathcal{F}\otimes\mathcal{G})_x\cong \mathcal{F}_x\otimes_{\mathcal{O}_{X,x}}\mathcal{G}_x$는 $\mathcal{F}_x$와 $\mathcal{G}_x$의 generator들의 tensor로 생성되고, 이들은 global section들의 germ의 tensor이기 때문이다. 이제 coherent sheaf $\mathcal{F}$에 대하여 $\mathcal{L}$의 ampleness가 주는 $n_0$를 택하면, $n\geq n_0$에 대하여
+For (3), we first observe that the tensor product of two globally generated $\mathcal{O}_X$-modules $\mathcal{F},\mathcal{G}$ is again globally generated. The stalk $(\mathcal{F}\otimes\mathcal{G})_x\cong \mathcal{F}_x\otimes_{\mathcal{O}_{X,x}}\mathcal{G}_x$ is generated by tensors of generators of $\mathcal{F}_x$ and $\mathcal{G}_x$, and these are tensors of germs of global sections. Now for a coherent sheaf $\mathcal{F}$, choose $n_0$ from the ampleness of $\mathcal{L}$; then for $n\geq n_0$,
 
 $$\mathcal{F}\otimes(\mathcal{L}\otimes\mathcal{M})^{\otimes n}\cong(\mathcal{F}\otimes\mathcal{L}^{\otimes n})\otimes\mathcal{M}^{\otimes n}$$
 
-에서 첫째 인자는 globally generated이고 둘째 인자는 globally generated인 sheaf의 tensor power이므로 globally generated이다. 따라서 좌변 또한 globally generated이다.
+where the first factor is globally generated and the second factor is a tensor power of a globally generated sheaf, hence globally generated. Therefore the left-hand side is also globally generated.
 :::
 
-[Proposition 19](#prop19)의 1번에 의하면 affine scheme 위에서는 어떠한 invertible sheaf도 ample이므로, 이 조건은 $X$가 affine일 때 아무런 대상도 걸러내지 못한다. Ampleness가 실제로 대상을 구별하는 것은 $X$가 affine이 아닐 때이며, 특히 $X$가 Noetherian ring $A$ 위에서 projective인 경우 $\mathcal{L}$이 ample인 것과 적당한 $m>0$에 대하여 $\mathcal{L}^{\otimes m}$이 very ample인 것이 동치가 된다.
+By part 1 of [Proposition 19](#prop19), any invertible sheaf on an affine scheme is ample, so this condition filters nothing out when $X$ is affine. Ampleness actually distinguishes objects when $X$ is not affine; in particular, when $X$ is projective over a Noetherian ring $A$, $\mathcal{L}$ being ample is equivalent to $\mathcal{L}^{\otimes m}$ being very ample for some $m>0$.
 
 ---
 
