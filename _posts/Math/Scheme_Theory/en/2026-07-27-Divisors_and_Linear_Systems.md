@@ -10,14 +10,15 @@ sidebar:
 
 date: 2026-07-27
 weight: 17
-translated_at: 2026-07-30T07:54:58+00:00
+translated_at: 2026-07-30T08:15:03+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-07-30T08:15:03+00:00
 ---
-Having defined quasi-coherent sheaves and invertible sheaves in [§Quasi-Coherent Sheaves](/en/math/scheme_theory/quasicoherent_sheaves), we can now begin the computations of divisors and line bundles on schemes that we previously carried out on varieties. The goal of this post is to translate the material covered in [[Algebraic Varieties] §Divisors](/en/math/algebraic_varieties/divisors), [[Algebraic Varieties] §Line Bundles and Vector Bundles](/en/math/algebraic_varieties/line_bundles), and [[Algebraic Varieties] §Linear Systems](/en/math/algebraic_varieties/linear_systems) into the language of schemes.
+Having defined quasi-coherent sheaves and invertible sheaves in [§Quasi-Coherent Sheaves](/en/math/scheme_theory/quasicoherent_sheaves), we can now begin computing divisors and line bundles on schemes, extending what we previously carried out on varieties. The goal of this post is to recast the material from [[Algebraic Varieties] §Divisors](/en/math/algebraic_varieties/divisors), [[Algebraic Varieties] §Line Bundles and Vector Bundles](/en/math/algebraic_varieties/line_bundles), and [[Algebraic Varieties] §Linear Systems](/en/math/algebraic_varieties/linear_systems) into the language of schemes.
 
 ## Cartier Divisors
 
-In [[Algebraic Varieties] §Divisors](/en/math/algebraic_varieties/divisors), we first defined Weil divisors and then examined Cartier divisors afterward. This was because Cartier divisors generalize the spaces on which the object is defined by imposing the additional condition that they are cut out locally by a single equation, which allowed us to use a divisor theory that works even on singular varieties. Since schemes are more general than varieties in many respects, we will work primarily with Cartier divisors rather than Weil divisors from the outset.
+In [[Algebraic Varieties] §Divisors](/en/math/algebraic_varieties/divisors), we defined Weil divisors first and examined Cartier divisors afterward. This was because Cartier divisors generalize the ambient spaces on which the theory operates by imposing the additional condition of being cut out locally by a single equation, thereby furnishing a divisor theory that remains valid on singular varieties. Since schemes are more general than varieties in many respects, we shall work primarily with Cartier divisors rather than Weil divisors from the outset.
 
 ::: Definition 1
 A closed embedding $\iota: Z \hookrightarrow X$ is called an *effective Cartier divisor* if there exists an affine open cover $\{U_i=\Spec A_i\}$ of $X$ such that for each closed embedding
@@ -27,17 +28,17 @@ $$\iota\vert^{U_i}:\iota^{-1}(U_i) \rightarrow U_i$$
 there is a non-zerodivisor $s_i\in A_i=\Gamma(U_i, \mathcal{O}_X)$ for which the two closed embeddings $\iota\vert^{U_i}$ and the vanishing scheme $Z(s_i)\hookrightarrow U_i$ of $s_i$ are isomorphic. ([§Closed Subschemes, ⁋Definition 7](/en/math/scheme_theory/closed_subschemes#def7))
 :::
 
-The definition only requires that $s_i$ be a non-zerodivisor, so $Z$ need not be reduced. In an algebraic variety, a closed subvariety is always reduced, so to record multiplicities we had to attach formal integer coefficients using formal sums as in [[Algebraic Varieties] §Divisors, ⁋Definition 1](/en/math/algebraic_varieties/divisors#def1). Now $Z$ itself carries multiplicity, so no such coefficients are needed in the effective case. For example, for $X=\Spec \mathbb{K}[\x]$ and $s=\x^2$, since $\x^2$ is a non-zerodivisor, $Z(s)=\Spec \mathbb{K}[\x]/(\x^2)$ is an effective Cartier divisor; it is a non-reduced scheme supported at a single point with multiplicity $2$.
+The definition only requires each $s_i$ to be a non-zerodivisor, so $Z$ need not be reduced. In an algebraic variety, every closed subvariety is reduced, so to record multiplicities we had to attach formal integer coefficients using formal sums, as in [[Algebraic Varieties] §Divisors, ⁋Definition 1](/en/math/algebraic_varieties/divisors#def1). Now $Z$ itself carries multiplicity, so no such coefficients are needed in the effective case. For example, for $X=\Spec \mathbb{K}[\x]$ and $s=\x^2$, since $\x^2$ is a non-zerodivisor, $Z(s)=\Spec \mathbb{K}[\x]/(\x^2)$ is an effective Cartier divisor; it is a non-reduced scheme supported at a single point with multiplicity $2$.
 
-The above definition is essentially a condition defined on each open set and depends on the cover, but this can be simply rephrased as a property of the ideal sheaf defining the closed subscheme. ([§Closed Subschemes, ⁋Definition 5](/en/math/scheme_theory/closed_subschemes#def5))
+The above definition is essentially a condition formulated on each open set and depends on the chosen cover, but it can be rephrased simply as a property of the ideal sheaf defining the closed subscheme. ([§Closed Subschemes, ⁋Definition 5](/en/math/scheme_theory/closed_subschemes#def5))
 
 ::: Proposition 2
 A closed embedding $\iota: Z\hookrightarrow X$ is an effective Cartier divisor if and only if its ideal sheaf $\mathcal{I}_{Z/X}$ is an invertible sheaf. ([§Quasi-Coherent Sheaves, ⁋Definition 12](/en/math/scheme_theory/quasicoherent_sheaves#def12))
 :::
 ::: Proof
-On an affine open subset $U=\Spec A$, the restriction of $\iota$ to the codomain is the closed embedding $Z(\mathfrak{a})\hookrightarrow U$ defined by the ideal $\mathfrak{a}=\mathcal{I}_{Z/X}(U)$, and two different ideals define two different closed subschemes. ([§Closed Subschemes, ⁋Proposition 3](/en/math/scheme_theory/closed_subschemes#prop3)) Hence $\iota\vert^U$ being isomorphic to $Z(s)\hookrightarrow U$ is equivalent to $\mathfrak{a}=(s)$.
+On an affine open subset $U=\Spec A$, the restriction of $\iota$ to the codomain is the closed embedding $Z(\mathfrak{a})\hookrightarrow U$ defined by the ideal $\mathfrak{a}=\mathcal{I}_{Z/X}(U)$, and two distinct ideals define two distinct closed subschemes. ([§Closed Subschemes, ⁋Proposition 3](/en/math/scheme_theory/closed_subschemes#prop3)) Hence $\iota\vert^U$ being isomorphic to $Z(s)\hookrightarrow U$ is equivalent to $\mathfrak{a}=(s)$.
 
-Now consider the map $A \rightarrow (s)$, $a\mapsto as$ for $s\in A$. This is always surjective and its kernel is $\ann(s)$, so this being an isomorphism is equivalent to $s$ being a non-zerodivisor. Now suppose $\iota$ is an effective Cartier divisor and choose the affine open cover $\{U_i=\Spec A_i\}$ from [Definition 1](#def1). Then $\mathcal{I}_{Z/X}(U_i)=(s_i)\cong A_i$. On the other hand, $\mathcal{I}_{Z/X}$ is a quasi-coherent sheaf ([§Quasi-Coherent Sheaves, ⁋Proposition 17](/en/math/scheme_theory/quasicoherent_sheaves#prop17)) and quasi-coherence is affine-local, so by [§Quasi-Coherent Sheaves, ⁋Theorem 10](/en/math/scheme_theory/quasicoherent_sheaves#thm10) we have $\mathcal{I}_{Z/X}\vert_{U_i}\cong \widetilde{\mathcal{I}_{Z/X}(U_i)}$. Therefore the above isomorphism gives
+Now consider the map $A \rightarrow (s)$, $a\mapsto as$ for $s\in A$. This is always surjective and its kernel is $\ann(s)$, so this map being an isomorphism is equivalent to $s$ being a non-zerodivisor. Now suppose $\iota$ is an effective Cartier divisor and choose the affine open cover $\{U_i=\Spec A_i\}$ from [Definition 1](#def1). Then $\mathcal{I}_{Z/X}(U_i)=(s_i)\cong A_i$. On the other hand, $\mathcal{I}_{Z/X}$ is a quasi-coherent sheaf ([§Quasi-Coherent Sheaves, ⁋Proposition 17](/en/math/scheme_theory/quasicoherent_sheaves#prop17)) and quasi-coherence is affine-local, so by [§Quasi-Coherent Sheaves, ⁋Theorem 10](/en/math/scheme_theory/quasicoherent_sheaves#thm10) we have $\mathcal{I}_{Z/X}\vert_{U_i}\cong \widetilde{\mathcal{I}_{Z/X}(U_i)}$. Therefore the above isomorphism yields
 
 $$\mathcal{I}_{Z/X}\vert_{U_i}\cong \widetilde{(s_i)}\cong \widetilde{A_i}=\mathcal{O}_{U_i}.$$
 
@@ -57,7 +58,7 @@ For an effective Cartier divisor $\iota:Z\hookrightarrow X$ on a locally Noether
 Since codimension is computed locally, it suffices to take one of the affine open covers $\{U_i=\Spec A_i\}$ from [Definition 1](#def1) and consider the case where $Z\cap U_i=Z(s_i)$ with $s_i\in A_i$ a non-zerodivisor. If an irreducible component $W$ of $Z$ meets $U_i$, then $W\cap U_i$ is an irreducible component of $Z(s_i)$. By [§Dimension, ⁋Proposition 12](/en/math/scheme_theory/dimension#prop12), the components of $Z(s_i)$ have codimension $0$ or $1$ in $U_i$; a component of codimension $0$ corresponds to an irreducible component of $U_i$ itself, i.e., to a minimal prime ideal $\mathfrak{p}$ of $A_i$. If $W\cap U_i$ were such a component, then $s_i$ would vanish on it, so $s_i\in \mathfrak{p}$. However, in a Noetherian ring a non-zerodivisor does not belong to any minimal prime ideal ([[Commutative Algebra] §Associated Primes, ⁋Theorem 7](/en/math/commutative_algebra/associated_primes#thm7)), contradicting the assumption that $s_i$ is a non-zerodivisor. Hence the codimension of $W\cap U_i$ is $1$, and by [§Dimension, ⁋Proposition 8](/en/math/scheme_theory/dimension#prop8) the codimension of $W$ in $X$ is also $1$.
 :::
 
-The only place in the proof where the requirement that $s_i$ be a non-zerodivisor was used was to ensure that $s_i$ does not belong to any minimal prime ideal of $A_i$. Geometrically, this means $s_i$ does not vanish entirely on any irreducible component of $X$. If we remove this requirement from [Definition 1](#def1), then the equation $s_i$ can swallow an entire component instead of cutting it, and then $Z$ becomes a component of $X$ itself rather than having codimension $1$. Let us confirm this situation in the following example.
+The only place in the proof where the requirement that $s_i$ be a non-zerodivisor was used was to ensure that $s_i$ does not belong to any minimal prime ideal of $A_i$. Geometrically, this means $s_i$ does not vanish identically on any irreducible component of $X$. If we remove this requirement from [Definition 1](#def1), then the equation $s_i$ can swallow an entire component instead of cutting it, and then $Z$ becomes a component of $X$ itself rather than having codimension $1$. Let us confirm this situation in the following example.
 
 ::: Example 4
 Let $X=\Spec \mathbb{K}[\x,\y]/(\x\y)$ be the union of the two coordinate axes in the plane, and let $Z=Z(\x)$. This is the vanishing scheme of the global section $\x$, so taking $X$ itself as the cover, we see that $Z\hookrightarrow X$ is locally principal.
@@ -187,7 +188,7 @@ Hence consider a normal, integral Noetherian scheme $X$. Since $X$ is integral, 
 
 $$K(X)=\mathcal{O}_{X,\xi}$$
 
-defined in [§Properties of Scheme Morphisms, §§Rational Maps](/en/math/scheme_theory/properties_of_scheme_morphisms#유리사상), and for any non-empty open subset $V$, we can view $\Gamma(V,\mathcal{O}_X)$ as a subring of $K(X)$. In particular, the local ring $\mathcal{O}_{X,x}$ at any point $x$ is also a subring of $K(X)$ and its fraction field is $K(X)$. Moreover, since these embeddings are compatible with taking restrictions and germs, one easily checks that the equality
+defined in [§Properties of Scheme Morphisms, §§Rational Maps](/en/math/scheme_theory/properties_of_scheme_morphisms#rational-maps), and for any non-empty open subset $V$, we can view $\Gamma(V,\mathcal{O}_X)$ as a subring of $K(X)$. In particular, the local ring $\mathcal{O}_{X,x}$ at any point $x$ is also a subring of $K(X)$ and its fraction field is $K(X)$. Moreover, since these embeddings are compatible with taking restrictions and germs, one easily checks that the equality
 
 $$\Gamma(V,\mathcal{O}_X)=\bigcap_{x\in V}\mathcal{O}_{X,x}$$
 
