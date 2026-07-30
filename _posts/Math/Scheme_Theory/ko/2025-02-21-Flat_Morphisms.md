@@ -412,7 +412,7 @@ Topological space $X$ 위의 함수 $f: X \rightarrow \mathbb{Z}$가 *upper semi
 
 $$\{x\in X\mid f(x)\leq i\}$$
 
-가 $X$의 열린집합인 것이다. 마찬가지로 $f$가 *lower semicontinuous*라는 것은 임의의 $i\in \mathbb{Z}$에 대하여 $\{x\in X\mid f(x)\geq i\}$가 $X$의 열린집합인 것이다.
+가 $X$의 열린집합인 것이다. 마찬가지로 $f$가 *lower semicontinuous<sub>하반연속</sub>*라는 것은 임의의 $i\in \mathbb{Z}$에 대하여 $\{x\in X\mid f(x)\geq i\}$가 $X$의 열린집합인 것이다.
 :::
 
 [예시 9](#ex9)와 [예시 10](#ex10), 그리고 도입부의 예시 모두에서 우리는 flatness의 실패를 측정하는 어떠한 양들이, flatness가 깨지는 점으로 가면서 커지기만 할 뿐 그 반대로는 움직이지 않는다는 것을 확인했는데, 이를 엄밀하게 정의한 것이 바로 이 upper semicontinuity이다. 이러한 양의 대표적인 예시로 다음의 명제를 보자.
