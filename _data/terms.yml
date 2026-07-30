@@ -561,7 +561,7 @@ A:
   - label: '[표현론] §Quiver와 경로대수'
     url: /ko/math/representation_theory/path_algebras
 - id: artinian
-  en: Artinian
+  en: Artinian module
   ko: 아틴가군
   primary: en
   defs:
@@ -1321,7 +1321,7 @@ C:
   - label: '[집합론] §기수들 사이의 연산'
     url: /ko/math/set_theory/operation_of_cardinals
 - id: carmichael_number
-  en: carmichael number
+  en: Carmichael number
   ko: 카마이클 수
   primary: ko
   defs:
@@ -3102,20 +3102,6 @@ D:
     url: /ko/math/field_theory/algebraic_extensions
   - label: '[대수적 위상수학] §사상의 차수와 Brouwer·Lefschetz 고정점 정리'
     url: /ko/math/algebraic_topology/degree_and_fixed_point_theorems
-- id: del-bar_operator
-  en: del-bar operator
-  ko: del-bar 연산자
-  primary: ko
-  defs:
-  - label: '[복소기하학] §Dolbeault 코호몰로지'
-    url: /ko/math/complex_geometry/dolbeault_cohomology
-- id: del_operator
-  en: del operator
-  ko: del 연산자
-  primary: ko
-  defs:
-  - label: '[복소기하학] §Dolbeault 코호몰로지'
-    url: /ko/math/complex_geometry/dolbeault_cohomology
 - id: deleted_neighborhood
   en: deleted neighborhood
   ko: 삭제된 근방
@@ -3189,7 +3175,7 @@ D:
   - label: '[리 이론] §가해 Lie algebra와 nilpotent Lie algebra'
     url: /ko/math/lie_theory/solvable_nilpotent_lie_algebras
 - id: derived_artin_stack
-  en: derived artin stack
+  en: derived Artin stack
   ko: 유도 아틴 스택
   primary: en
   defs:
@@ -5419,6 +5405,8 @@ G:
   ko: 귀진 사상
   primary: en
   defs:
+  - label: '[대수적 위상수학] §벡터다발의 특성류'
+    url: /ko/math/algebraic_topology/characteristic_classes
   - label: '[그로모프-위튼 이론] §Refined Gysin 사상과 moduli의 교차이론'
     url: /ko/math/gromov-witten_theory/refined_gysin
 H:
@@ -5500,7 +5488,7 @@ H:
   - label: '[선형대수학] §복소내적공간'
     url: /ko/math/linear_algebra/complex_inner_product_spaces
 - id: hermitian_line_bundle
-  en: hermitian line bundle
+  en: Hermitian line bundle
   ko: 에르미트 선다발
   primary: en
   defs:
@@ -8410,7 +8398,7 @@ N:
   - label: '[리 이론] §최고 무게 가군'
     url: /ko/math/lie_theory/highest_weight_modules
 - id: negative_pell_equation
-  en: negative pell equation
+  en: negative Pell equation
   ko: 음의 펠 방정식
   primary: ko
   defs:
@@ -8433,7 +8421,7 @@ N:
   - label: '[위상수학] §위상공간의 다른 정의들'
     url: /ko/math/topology/equivalent_formulations_of_topology
 - id: nijenhuis_tensor
-  en: nijenhuis tensor
+  en: Nijenhuis tensor
   ko: 네이엔하위스 텐서
   primary: en
   defs:
@@ -8487,7 +8475,7 @@ N:
   - label: '[사교기하학] §Stable maps의 moduli space'
     url: /ko/math/symplectic_geometry/stable_maps
 - id: noetherian
-  en: Noetherian
+  en: Noetherian module
   ko: 뇌터가군
   primary: en
   defs:
@@ -9072,8 +9060,8 @@ P:
   - label: '[유도대수기하학] §Shifted symplectic 구조'
     url: /ko/math/derived_algebraic_geometry/shifted_symplectic_structures
 - id: p_q_-form
-  en: (p,q)-form
-  ko: (p,q)-형식
+  en: $(p,q)$-form
+  ko: $(p,q)$-형식
   primary: en
   defs:
   - label: '[복소기하학] §거의 복소구조'
@@ -9179,6 +9167,20 @@ P:
   defs:
   - label: '[집합론] §함수들 사이의 연산'
     url: /ko/math/set_theory/operation_of_functions
+- id: del-bar_operator
+  en: $\bar{\partial}$-operator
+  ko: $\bar{\partial}$-연산자
+  primary: ko
+  defs:
+  - label: '[복소기하학] §Dolbeault 코호몰로지'
+    url: /ko/math/complex_geometry/dolbeault_cohomology
+- id: del_operator
+  en: $\partial$-operator
+  ko: $\partial$-연산자
+  primary: ko
+  defs:
+  - label: '[복소기하학] §Dolbeault 코호몰로지'
+    url: /ko/math/complex_geometry/dolbeault_cohomology
 - id: partial_product
   en: partial product
   ko: 부분곱
@@ -9261,7 +9263,7 @@ P:
   - label: '[집합론] §서수와 정렬집합'
     url: /ko/math/set_theory/ordinals
 - id: pell_s_equation
-  en: 'pell''s equation'
+  en: 'Pell''s equation'
   ko: 펠 방정식
   primary: ko
   defs:
@@ -9320,7 +9322,7 @@ P:
   - label: '[선형대수학] §행렬식의 존재성과 유일성'
     url: /ko/math/linear_algebra/existence_and_uniqueness_of_determinant
 - id: perverse_t-structure
-  en: perverse t-structure
+  en: perverse $t$-structure
   ko: ''
   primary: en
   defs:
@@ -9975,7 +9977,7 @@ P:
     url: /ko/math/topology/presheaves
 Q:
 - id: qr_decomposition
-  en: qr decomposition
+  en: QR decomposition
   ko: QR 분해
   primary: ko
   defs:
@@ -9996,7 +9998,7 @@ Q:
   - label: '[정수론] §이차 잉여'
     url: /ko/math/number_theory/quadratic_residues
 - id: quadratic_relation
-  en: Quadratic relation
+  en: quadratic relation
   ko: 이차 관계식
   primary: en
   defs:
@@ -10118,7 +10120,7 @@ Q:
   - label: '[대수적 구조] §대수'
     url: /ko/math/algebraic_structures/algebras
 - id: quotient_bundle
-  en: Quotient bundle
+  en: quotient bundle
   ko: 몫다발
   primary: en
   defs:
@@ -10183,7 +10185,7 @@ R:
   - label: '[위상수학] §하우스도르프 공간'
     url: /ko/math/topology/Hausdorff_spaces
 - id: r-polynomial
-  en: R-polynomial
+  en: $R$-polynomial
   ko: $R$-다항식
   primary: en
   defs:
@@ -10248,7 +10250,7 @@ R:
   - label: Nullity
     id: nullity
 - id: rank_r_vector_bundle
-  en: rank r vector bundle
+  en: rank $r$ vector bundle
   ko: 랭크 $r$ 벡터다발
   primary: en
   defs:
@@ -10957,7 +10959,7 @@ R:
     url: /ko/math/lie_theory/root_systems
 - id: root_of_unity
   en: root of unity
-  ko: Moivre 공식의 한 특수한 경우인 $$n$$제곱근 $$1$$, 곧 *단위근
+  ko: 단위근
   primary: en
   defs:
   - label: '[복소해석학] §복소수와 복소평면'
@@ -11406,7 +11408,7 @@ S:
   - label: Long exact sequence
     id: long_exact_sequence
 - id: sieve_of_eratosthenes
-  en: sieve of eratosthenes
+  en: sieve of Eratosthenes
   ko: 에라토스테네스의 체
   primary: ko
   defs:
@@ -11644,24 +11646,24 @@ S:
   - label: '[미분다양체] §음함수 정리'
     url: /ko/math/manifolds/implicit_function_theorem
 - id: slice_category_over_a
-  en: slice category over A
-  ko: A 위에서의 조각 범주
+  en: slice category over $A$
+  ko: $A$ 위에서의 조각 범주
   primary: en
   defs:
   - label: '[범주론] §범주'
     url: /ko/math/category_theory/categories
   see:
-  - label: Slice category under A
+  - label: Slice category under $A$
     id: slice_category_under_a
 - id: slice_category_under_a
-  en: slice category under A
-  ko: A 위에서의 쌍대 조각 범주
+  en: slice category under $A$
+  ko: $A$ 위에서의 쌍대 조각 범주
   primary: en
   defs:
   - label: '[범주론] §범주'
     url: /ko/math/category_theory/categories
   see:
-  - label: Slice category over A
+  - label: Slice category over $A$
     id: slice_category_over_a
 - id: small_category
   en: small category
@@ -12593,7 +12595,7 @@ T:
   - label: '[리만기하학] §Theorema Egregium'
     url: /ko/math/riemannian_geometry/theorema_egregium
 - id: tits_form
-  en: tits form
+  en: Tits form
   ko: 티츠 형식
   primary: en
   defs:
@@ -12832,7 +12834,7 @@ T:
   - label: '[정수론] §펠 방정식'
     url: /ko/math/number_theory/pell_equation
 - id: triangulated_category
-  en: Triangulated category
+  en: triangulated category
   ko: 삼각 분할 범주
   primary: en
   defs:
@@ -13423,7 +13425,7 @@ W:
   - label: Cartier divisor
     id: cartier_divisor
 - id: weingarten_map
-  en: weingarten map
+  en: Weingarten map
   ko: Weingarten 사상
   primary: ko
   defs:
