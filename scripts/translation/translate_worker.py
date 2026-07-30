@@ -93,6 +93,11 @@ FAIL_RETRY_AFTER_SEC  = 24 * 3600
 POLISH_INTERVAL_SEC   = 14 * 24 * 3600       # (unused) polish is now one-time; see Phase 3
 GIT_DRIFT_MARGIN_SEC  = 60                   # (unused) drift is now opt-in via `drift_needed: true`
 TRUNCATION_RATIO      = 0.60                 # min output/reference body length; below → fail
+# EN 본문(수식·<sub> 제외)에 허용되는 최대 한글 문자수. 정상 코퍼스 최대는 19자
+# (참고문헌의 한국어 서지 — 이인석 <선형대수와 군> 등)이고, 산문 한 문단만 미번역돼도
+# 100자를 훌쩍 넘는다. 2026-07-30 Divisors_and_Linear_Systems 사고(엔진이 헤딩·라벨만
+# 영어화하고 산문 전체를 원문 복사 — 7052자 잔존)가 구조 게이트를 전부 통과한 뒤 신설.
+HANGUL_RESIDUE_MAX    = 80
 
 # Local helper (label fix/audit)
 sys.path.insert(0, str(SCRIPT_DIR))
@@ -693,6 +698,7 @@ Conversion rules for the body:
 - Same math delimiters as the KO body: EN must have exactly as many `$$...$$` display spans AND exactly as many `$...$` inline spans as KO. None downgraded, none promoted, none added/dropped/split/merged.
 - Every `:::` opener from KO appears in EN with the label translated but the SAME derived anchor: the kind→prefix mapping (정의→def, 명제→prop, 정리→thm, 보조정리→lem, 따름정리→cor, 예시→ex, 참고→rmk) plus the unchanged number, and every `::: misc … {#id}` keeps its `{#id}` intact. The `:::` fence lines have the same count and order as KO; no Korean kind word survives on any opener.
 - No Korean labels remain (정의, 명제, 정리, 보조정리, 따름정리, 예시, 참고, 증명, 참고문헌).
+- **No Korean prose remains anywhere.** Every Korean sentence and paragraph is translated into English. Translating only headings, labels, and links while copying Korean paragraphs verbatim is a FAILED translation and will be rejected. The only Hangul allowed in the output is inside verbatim bibliography entries (e.g. a Korean book title).
 - The body ends at the final content line — do not truncate mid-sentence.
 - Output begins with the first body character (no leading `---` or blank lines).
 
@@ -733,6 +739,7 @@ Given the Korean source body (for meaning reference) and the current English tra
 - Same math delimiters as the KO body — as many `$$...$$` display spans and as many `$...$` inline spans; none downgraded, none promoted.
 - Every `:::` opener present with its derived anchor (kind→prefix + N) unchanged and every `::: misc … {#id}` intact; `:::` line count and order match the KO source.
 - No Korean labels remain (정의, 명제, 정리, 보조정리, 따름정리, 예시, 참고, 증명, 참고문헌).
+- No Korean prose remains — every sentence of the output is English (verbatim bibliography entries excepted).
 - Output is body only — no frontmatter or `---` lines.
 
 # Style anchors
@@ -981,6 +988,46 @@ def validate_translation(
                 f"polish output body {len(out_body)}c < 85% of en_current "
                 f"{len(en_body)}c — polish truncation suspected"
             )
+
+    # Residual Korean prose: a lazy engine can pass every structural gate below
+    # by returning the KO body near-verbatim (headings/labels translated, prose
+    # copied — the copy has identical math profile, box ids, and length, and the
+    # worker's own post-processing anglicizes labels and /ko/ paths, so nothing
+    # structural is left to fail). Count Hangul in the body outside math spans
+    # and <sub> glosses; the small allowance covers legitimate uses (Korean
+    # bibliography entries, mentions of Korean terminology).
+    prose = re.sub(r"<sub>.*?</sub>", "", out_body, flags=re.DOTALL)
+    prose = re.sub(r"\$\$.*?\$\$", "", prose, flags=re.DOTALL)
+    prose = re.sub(r"\$[^$\n]*\$", "", prose)
+    hangul = re.findall(r"[가-힣]", prose)
+    if len(hangul) > HANGUL_RESIDUE_MAX:
+        sample = "".join(hangul[:20])
+        return (
+            f"{len(hangul)} Hangul chars in body (max {HANGUL_RESIDUE_MAX}) — "
+            f"untranslated prose suspected, e.g. {sample!r}"
+        )
+    if hangul:
+        # Sub-threshold residue is accepted (may be a legitimate bibliography
+        # entry or Korean-terminology mention) but always surfaced for human
+        # review — warnings containing "Hangul" bypass the verdict-safe
+        # telegram suppression and set needs_review on the state entry.
+        sample = "".join(hangul[:20])
+        warnings.append(
+            f"{len(hangul)} Hangul chars in body (≤{HANGUL_RESIDUE_MAX}, "
+            f"needs review) — e.g. {sample!r}"
+        )
+
+    # Korean anchors on /en/ links: the KO source's section anchors are Hangul
+    # slugs; the mechanical /ko/→/en/ rewrite keeps them, but EN pages have
+    # English heading slugs, so the anchor 404s. The correct EN slug needs the
+    # target page, which the engine cannot see — warn (telegram) instead of
+    # failing, and fix by hand.
+    ko_anchors = re.findall(r"\]\(/en/[^)\s#]*#[^)\s]*[가-힣][^)\s]*\)", out_body)
+    if ko_anchors:
+        warnings.append(
+            f"{len(ko_anchors)} Hangul anchor(s) on /en/ links, "
+            f"e.g. {ko_anchors[0]!r}"
+        )
 
     # Math block count: WARN ONLY. Strip <sub>...</sub> first (bilingual glosses
     # are dropped per translation rules, which legitimately reduces the count).
@@ -1668,6 +1715,11 @@ def cmd_status(state: dict) -> int:
     print(f"  cumulative chars: input={stats.get('total_in_chars', 0):,}, "
           f"output={stats.get('total_out_chars', 0):,}")
     print(f"  total translated:  {stats.get('total_done', 0)}")
+    review = sorted(k for k, e in files.items() if e.get("needs_review"))
+    if review:
+        print(f"  needs review (Hangul residue/anchor): {len(review)}")
+        for k in review:
+            print(f"    - {k}")
     return 0
 
 
@@ -2139,17 +2191,27 @@ def main() -> int:
             state["files"][key]["lossy_retry_count"] = len(lossy_history)
         if verdict_text:
             state["files"][key]["verify_verdict"] = verdict_text[:4000]
+        hangul_warns = [w for w in warnings if "Hangul" in w]
+        if hangul_warns:
+            # 사용자 확인 전까지 남는 마커 — 임계 미만 한글 잔존·한글 앵커는
+            # 정오 판단에 사람이 필요하다. 확인 후 손으로 지운다.
+            state["files"][key]["needs_review"] = hangul_warns
 
         if warnings:
-            # Suppress telegram on VERDICT: safe — math-count mismatch is the only
-            # current warning source, and "safe" means the divergence is rephrasing.
-            # minor / lossy / verify-failed still notify.
+            # Suppress telegram only when the verdict is safe AND every warning
+            # is a math-count mismatch ("safe" means the divergence is
+            # rephrasing). Hangul warnings (residual prose, Korean anchors)
+            # always notify — they need human review regardless of the math
+            # verdict. minor / lossy / verify-failed still notify.
             verdict_safe = bool(
                 verdict_text
                 and re.search(r"^VERDICT:\s*safe\b",
                               verdict_text, re.MULTILINE | re.IGNORECASE)
             )
-            if verdict_safe:
+            only_math = all(
+                w.startswith("math block count mismatch") for w in warnings
+            )
+            if verdict_safe and only_math:
                 log(f"VERIFY ({key}): safe verdict — telegram suppressed")
             else:
                 body_lines = [key, f"→ {en_path.relative_to(BLOG_ROOT)}", ""]

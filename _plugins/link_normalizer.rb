@@ -20,11 +20,16 @@
 #
 # Resolution rules:
 #   - title:    target post's frontmatter title
-#   - category: navigation.yml category-{ko,en} display name
+#   - category: categories.yml subjects display name (ko field / EN key tail)
 #               — OMITTED if source and target are in the same category
 #   - label:    `<ins id="…">**Label N**</ins>` text in the target post
 #   - §§ H2:    `## …` heading text in the target post (slug match)
+#   - footnote: `[^N]:` definitions in the target post (#fn:N anchors);
+#               the author's ", footnote N" / ", 각주 N" tail is kept verbatim
 #   - in-doc:   look up label / H2 in the *source* doc itself
+#
+# Fenced code blocks and inline code spans are masked out before rewriting,
+# so links quoted inside code are never normalized or logged.
 #
 # Every override is logged to `scripts/audit/link-overrides.log` (gitignored,
 # truncated at the start of each build). Each entry is a single-line JSON
@@ -47,6 +52,9 @@
 #   title-drift            — target page title, category name, or section
 #                            name changed; source displays stale text.
 #                            Worth fixing in source.
+#   title-drift/footnote-stripped — the `#fn:N` footnote no longer exists in
+#                            the target, so the ", footnote N" tail was
+#                            stripped. Source cites a removed footnote.
 #   anchor-dropped         — target anchor (#prop8 etc.) no longer exists;
 #                            the `⁋Label N` tail was stripped. Source has
 #                            a broken anchor.
@@ -66,13 +74,15 @@ module LinkNormalizer
   H2_RE = /^##(?!#)\s+(.+?)\s*$/
 
   class Maps
-    attr_reader :title_by_url, :label_by_anchor, :h2_by_anchor, :category_by_lang
+    attr_reader :title_by_url, :label_by_anchor, :h2_by_anchor, :category_by_lang,
+                :footnote_anchors
 
     def initialize(site)
       @title_by_url = {}
       @label_by_anchor = {}
       @h2_by_anchor = {}
       @category_by_lang = { "ko" => {}, "en" => {} }
+      @footnote_anchors = {}
 
       site.posts.docs.each do |doc|
         next unless doc.url =~ %r{\A/(ko|en)/}
@@ -88,6 +98,9 @@ module LinkNormalizer
           text = h2[0].strip
           slug = kramdown_slug(text)
           @h2_by_anchor["#{url}##{slug}"] = text
+        end
+        body.scan(/^[ \t]{0,3}\[\^([^\]\s]+)\]:/) do |name|
+          @footnote_anchors["#{url}#fn:#{name[0]}"] = true
         end
       end
 
@@ -116,23 +129,19 @@ module LinkNormalizer
 
     private
 
+    # Category display names come from _data/categories.yml `subjects`
+    # (the category master file): key tail after " / " is the EN name, the
+    # `ko` field is the KO name. URL slug = EN name with non-alphanumerics
+    # collapsed to "_" (e.g. "Gromov-Witten Theory" → gromov_witten_theory).
     def build_category_map(site)
-      nav = site.data["navigation"] || {}
-      %w[category-ko category-en].each do |key|
-        sections = nav[key]
-        next unless sections.is_a?(Array)
-        lang = key.split("-").last
-        sections.each do |section|
-          children = (section.is_a?(Hash) ? section["children"] : nil) || []
-          children.each do |cat|
-            next unless cat.is_a?(Hash)
-            url = cat["url"].to_s.sub(%r{\A/?}, "").sub(%r{/\z}, "")
-            next if url.empty?
-            slug = url.split("/").last
-            title = (cat["title"] || "").to_s.strip
-            @category_by_lang[lang][slug] = title unless title.empty?
-          end
-        end
+      subjects = (site.data["categories"] || {})["subjects"] || {}
+      subjects.each do |key, meta|
+        en_name = key.to_s.split(" / ").last.to_s.strip
+        next if en_name.empty?
+        slug = en_name.downcase.gsub(/[^a-z0-9]+/, "_").gsub(/\A_|_\z/, "")
+        @category_by_lang["en"][slug] = en_name
+        ko_name = meta.is_a?(Hash) ? (meta["ko"] || "").to_s.strip : ""
+        @category_by_lang["ko"][slug] = ko_name unless ko_name.empty?
       end
     end
   end
@@ -163,9 +172,9 @@ module LinkNormalizer
       c_sec, c_tail = split_tail(c_rest)
 
       if o_tail && c_tail.nil?
-        # Footnote / 각주 references look like an anchor-drop but really
-        # the plugin just doesn't track footnote anchors (#fn:N). Tag them
-        # separately so they're not confused with broken anchors.
+        # Existing footnotes keep their tail (canonical_external checks the
+        # footnote map), so reaching here means the #fn:N footnote is gone
+        # from the target. Tag separately from label/H2 anchor breaks.
         return "title-drift/footnote-stripped" if o_tail =~ /\A(footnote|각주)\b/i
         return "anchor-dropped"
       end
@@ -222,11 +231,47 @@ module LinkNormalizer
       m ? m[1] : nil
     end
 
+    MASK_RE = /\x00LNMASK(\d+)\x00/
+
+    # Replace fenced code blocks (whole lines) and inline code spans with
+    # NUL-delimited placeholders so LINK_RE never sees code content.
+    # Returns [masked_content, stash]; undo with unmask_code.
+    def mask_code(content)
+      stash = []
+      out = +""
+      fence = nil
+      content.each_line do |line|
+        opens = line.match(/\A[ \t]{0,3}(`{3,}|~{3,})/)
+        if fence || opens
+          nl = line.end_with?("\n") ? "\n" : ""
+          stash << line.chomp("\n")
+          out << "\x00LNMASK#{stash.size - 1}\x00#{nl}"
+          if fence
+            fence = nil if line.chomp =~ /\A[ \t]{0,3}(`{3,}|~{3,})[ \t]*\z/ &&
+                           line.lstrip[0] == fence
+          else
+            fence = opens[1][0]
+          end
+        else
+          out << line.gsub(/`[^`\n]+`/) do |code|
+            stash << code
+            "\x00LNMASK#{stash.size - 1}\x00"
+          end
+        end
+      end
+      [out, stash]
+    end
+
+    def unmask_code(content, stash)
+      content.gsub(MASK_RE) { stash[Regexp.last_match(1).to_i] }
+    end
+
     # Returns [new_content, diffs]
     def normalize(content, source_path, source_url)
       source_cat = category_slug_from_url(source_url)
       source_url_norm = Maps.normalize_url(source_url)
       diffs = []
+      content, stash = mask_code(content)
       new_content = content.gsub(LINK_RE) do |match|
         display = Regexp.last_match(1)
         url = Regexp.last_match(2)
@@ -244,7 +289,7 @@ module LinkNormalizer
           match
         end
       end
-      [new_content, diffs]
+      [unmask_code(new_content, stash), diffs]
     end
 
     def canonical_display(display, url, source_cat, source_url)
@@ -308,6 +353,14 @@ module LinkNormalizer
       elsif has_label && label_text
         pieces << target_title if pieces.empty?
         pieces[-1] = "#{pieces[-1]}, ⁋#{label_text}"
+      elsif anchor&.start_with?("fn:") && maps.footnote_anchors["#{url_path}##{anchor}"]
+        # Existing footnote: keep the author's ", footnote N" / ", 각주 N"
+        # tail verbatim (there is no canonical text to enrich it with).
+        fn_tail = display[/,\s*(?:footnote|각주)\b[^,]*\z/i]
+        if fn_tail
+          pieces << target_title if pieces.empty?
+          pieces[-1] = "#{pieces[-1]}#{fn_tail}"
+        end
       end
       pieces.empty? ? nil : pieces.join(" ")
     end
