@@ -904,10 +904,10 @@ B:
   ko: 기저공간
   primary: en
   defs:
-  - label: '[미분다양체] §접다발과 여접다발'
-    url: /ko/math/manifolds/tangent_and_cotangent_bundles
   - label: '[대수적 위상수학] §호모토피의 계산'
     url: /ko/math/algebraic_topology/fibrations
+  - label: '[미분다양체] §접다발과 여접다발'
+    url: /ko/math/manifolds/tangent_and_cotangent_bundles
 - id: basepoint-free
   en: basepoint-free
   ko: 기저점 없음
@@ -1626,10 +1626,10 @@ C:
   ko: 슈발레 기저
   primary: en
   defs:
-  - label: '[리 이론] §콤팩트 실형식'
-    url: /ko/math/lie_theory/compact_real_form
   - label: '[리 이론] §Serre 관계식'
     url: /ko/math/lie_theory/serre_relations
+  - label: '[리 이론] §콤팩트 실형식'
+    url: /ko/math/lie_theory/compact_real_form
 - id: chevalley_serre_presentation
   en: Chevalley–Serre presentation
   ko: 슈발레-세르 표시
@@ -3094,14 +3094,14 @@ D:
   ko: 차수
   primary: en
   defs:
-  - label: '[대수다양체] §사영공간의 코호몰로지'
-    url: /ko/math/algebraic_varieties/cohomology_of_projective_spaces
   - label: '[선형대수학] §부분공간'
     url: /ko/math/linear_algebra/subspaces
   - label: '[체론] §대수적 확장'
     url: /ko/math/field_theory/algebraic_extensions
   - label: '[대수적 위상수학] §사상의 차수와 Brouwer·Lefschetz 고정점 정리'
     url: /ko/math/algebraic_topology/degree_and_fixed_point_theorems
+  - label: '[대수다양체] §사영공간의 코호몰로지'
+    url: /ko/math/algebraic_varieties/cohomology_of_projective_spaces
 - id: deleted_neighborhood
   en: deleted neighborhood
   ko: 삭제된 근방
@@ -4400,10 +4400,10 @@ F:
   ko: 올
   primary: en
   defs:
-  - label: '[스킴] §올곱'
-    url: /ko/math/scheme_theory/fiber_products
   - label: '[대수적 위상수학] §호모토피의 계산'
     url: /ko/math/algebraic_topology/fibrations
+  - label: '[스킴] §올곱'
+    url: /ko/math/scheme_theory/fiber_products
 - id: fiber_bundle
   en: fiber bundle
   ko: 올다발
@@ -8286,10 +8286,10 @@ M:
   defs:
   - label: '[선형대수학] §특성다항식'
     url: /ko/math/linear_algebra/characteristic_polynomial
-  - label: '[리 이론] §최고 무게 가군'
-    url: /ko/math/lie_theory/highest_weight_modules
   - label: '[가환대수학] §힐베르트-사무엘 함수'
     url: /ko/math/commutative_algebra/hilbert-samuel_function
+  - label: '[리 이론] §최고 무게 가군'
+    url: /ko/math/lie_theory/highest_weight_modules
 - id: musical_isomorphism
   en: musical isomorphism
   ko: 음악 동형사상
@@ -8345,8 +8345,8 @@ N:
   ko: ''
   primary: en
   defs:
-  - label: '[다중선형대수학] §코탄젠트 복합체'
-    url: /ko/math/multilinear_algebra/cotangent_complex
+  - label: '[가환대수학] §코탄젠트 복합체'
+    url: /ko/math/commutative_algebra/cotangent_complex
 - id: natural_isomorphism
   en: natural isomorphism
   ko: 자연동형변환
@@ -9545,8 +9545,8 @@ P:
   defs:
   - label: '[대수적 구조] §반군, 모노이드, 군'
     url: /ko/math/algebraic_structures/groups
-  - label: '[다중선형대수학] §코탄젠트 복합체'
-    url: /ko/math/multilinear_algebra/cotangent_complex
+  - label: '[가환대수학] §코탄젠트 복합체'
+    url: /ko/math/commutative_algebra/cotangent_complex
 - id: presheaf
   en: presheaf
   ko: 준층
@@ -10196,12 +10196,12 @@ R:
   ko: 근기
   primary: en
   defs:
+  - label: '[선형대수학] §쌍선형형식'
+    url: /ko/math/linear_algebra/bilinear_form
   - label: '[가환대수학] §국소화의 성질들'
     url: /ko/math/commutative_algebra/properties_of_localization
   - label: '[리 이론] §가해 Lie algebra와 nilpotent Lie algebra'
     url: /ko/math/lie_theory/solvable_nilpotent_lie_algebras
-  - label: '[선형대수학] §쌍선형형식'
-    url: /ko/math/linear_algebra/bilinear_form
   see:
   - label: Nilradical
     id: nilradical
@@ -12698,10 +12698,10 @@ T:
   ko: 전체공간
   primary: en
   defs:
-  - label: '[미분다양체] §접다발과 여접다발'
-    url: /ko/math/manifolds/tangent_and_cotangent_bundles
   - label: '[대수적 위상수학] §호모토피의 계산'
     url: /ko/math/algebraic_topology/fibrations
+  - label: '[미분다양체] §접다발과 여접다발'
+    url: /ko/math/manifolds/tangent_and_cotangent_bundles
 - id: totally_disconnected
   en: totally disconnected
   ko: 전비연결
