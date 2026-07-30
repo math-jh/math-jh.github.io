@@ -187,13 +187,13 @@ Finally we need the notion of *prime ideal* that we defined in [\[Algebraic Stru
 An ideal $\mathfrak{p}\subsetneq A$ of a ring $A$ is called a *prime ideal* if, whenever $ab\in \mathfrak{p}$, then necessarily $a\in \mathfrak{p}$ or $b\in \mathfrak{p}$ holds.
 :::
 
-Then we can refine the fourth result of [\[Algebraic Structures\] §Quotient Rings, Ring Homomorphisms, ⁋Theorem 3](/en/math/algebraic_structures/quotient_rings#thm3) to obtain the following.
+Then we can refine the fourth result of [\[Algebraic Structures\] §Quotient Rings and Ring Homomorphisms, ⁋Theorem 3](/en/math/algebraic_structures/quotient_rings#thm3) to obtain the following.
 
 ::: Proposition 11
 For any ideal $\mathfrak{a}$ of a ring $A$, there is a one-to-one correspondence between prime ideals of $A/\mathfrak{a}$ and prime ideals of $A$ containing $\mathfrak{a}$.
 :::
 ::: Proof
-By the third result of [\[Algebraic Structures\] §Quotient Rings, Ring Homomorphisms, ⁋Theorem 3](/en/math/algebraic_structures/quotient_rings#thm3), for $\mathfrak{a}\subseteq \mathfrak{p}\subseteq A$ we have
+By the third result of [\[Algebraic Structures\] §Quotient Rings and Ring Homomorphisms, ⁋Theorem 3](/en/math/algebraic_structures/quotient_rings#thm3), for $\mathfrak{a}\subseteq \mathfrak{p}\subseteq A$ we have
 
 $$A/\mathfrak{p}\cong \frac{A/\mathfrak{a}}{\mathfrak{p}/\mathfrak{a}}$$
 
@@ -233,7 +233,7 @@ A finitely generated $A$-algebra $B$ over a Noetherian ring $A$ is Noetherian.
 ::: Proof
 Since $B$ is a finitely generated $A$-algebra, there exists a surjective ring homomorphism $A[\x_1,\ldots,\x_n]\rightarrow B$ for a suitable $n$. That is, $B\cong A[\x_1,\ldots,\x_n]/I$ for some ideal $I$. Applying [Theorem 12](#thm12) repeatedly, we know that $A[\x_1,\ldots,\x_n]$ is Noetherian.
 
-Now it suffices to show that a quotient of a Noetherian ring is Noetherian. By [\[Algebraic Structures\] §Quotient Rings, Ring Homomorphisms, ⁋Theorem 3](/en/math/algebraic_structures/quotient_rings#thm3), the ideals of $B$ are in one-to-one correspondence with the ideals of $A[\x_1,\ldots,\x_n]$ containing $I$, preserving inclusion. Thus any ascending chain of ideals of $B$ gives an ascending chain of ideals of $A[\x_1,\ldots,\x_n]$, and the latter stabilizes by the noetherianness of $A[\x_1,\ldots,\x_n]$, so the former also stabilizes. Regarding the ring $B$ as a $B$-module over itself, its submodules are exactly the ideals of $B$, so by [Theorem 3](#thm3) the ring $B$ is Noetherian.
+Now it suffices to show that a quotient of a Noetherian ring is Noetherian. By [\[Algebraic Structures\] §Quotient Rings and Ring Homomorphisms, ⁋Theorem 3](/en/math/algebraic_structures/quotient_rings#thm3), the ideals of $B$ are in one-to-one correspondence with the ideals of $A[\x_1,\ldots,\x_n]$ containing $I$, preserving inclusion. Thus any ascending chain of ideals of $B$ gives an ascending chain of ideals of $A[\x_1,\ldots,\x_n]$, and the latter stabilizes by the noetherianness of $A[\x_1,\ldots,\x_n]$, so the former also stabilizes. Regarding the ring $B$ as a $B$-module over itself, its submodules are exactly the ideals of $B$, so by [Theorem 3](#thm3) the ring $B$ is Noetherian.
 :::
 
 ---

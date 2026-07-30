@@ -34,7 +34,7 @@ Let $\mathcal{C}$ be a collection of subsets of a set $X$ satisfying the followi
 Then there exists a unique topology $\mathcal{T}$ whose open sets are the complements of the elements of $\mathcal{C}$.
 :::
 ::: Proof
-This is immediate from the following De Morgan laws ([\[Set Theory\] §Unions and Intersections, ⁋Proposition 8](/en/math/set_theory/union_and_intersection#prop8))
+This is immediate from the following De Morgan laws ([\[Set Theory\] §Union and Intersection, ⁋Proposition 8 (De Morgan's law)](/en/math/set_theory/union_and_intersection#prop8))
 
 $$\left(\bigcap A_i\right)^c=\bigcup A_i^c,\quad\left(\bigcup A_i\right)^c=\bigcap A_i^c$$
 :::

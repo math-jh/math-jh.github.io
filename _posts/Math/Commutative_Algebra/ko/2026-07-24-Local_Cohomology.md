@@ -199,7 +199,7 @@ $$H_\mathfrak{a}^{i+1}(M)\cong H_\mathfrak{a}^i(M'),\qquad H^{i+1}(\check{C}(x;M
 Noetherian ring $A$와 $r$개의 원소로 생성되는 ideal $\mathfrak{a}=(x_1,\ldots,x_r)$, 그리고 임의의 $A$-module $M$에 대하여 $i>r$에서 $H_\mathfrak{a}^i(M)=0$이다. 특히 Noetherian local ring $(A,\mathfrak{m})$과 임의의 $A$-module $M$에 대하여 $i>\dim A$에서 $H_\mathfrak{m}^i(M)=0$이다.
 :::
 ::: 증명
-첫째 주장은 [정리 8](#thm8)과 $j>r$에서 $\check{C}(x)^j=0$인 것으로부터 자명하다. 둘째 주장의 경우, $d=\dim A$로 두면 [§매개계, ⁋따름정리 1](/ko/math/commutative_algebra/system_of_parameters#cor1)에 의하여 $d$개의 원소 $y_1,\ldots,y_d\in\mathfrak{m}$이 존재하여 충분히 큰 $n$에서 $\mathfrak{m}^n\subseteq\mathfrak{q}=(y_1,\ldots,y_d)$이도록 할 수 있고, 이는 [§매개계, ⁋명제--정의 3](/ko/math/commutative_algebra/system_of_parameters#prop-def3)의 셋째 조건이므로 $\mathfrak{q}$는 parameter ideal이며 같은 명제의 둘째 조건에 의하여 $\sqrt{\mathfrak{q}}=\mathfrak{m}$이다. 그럼 [명제 4](#prop4)의 둘째 결과에 의하여 $H_\mathfrak{m}^i=H_\mathfrak{q}^i$이고, $\mathfrak{q}$가 $d$개의 원소로 생성되므로 첫째 주장에 의하여 $i>d$에서 $H_\mathfrak{m}^i(M)=H_\mathfrak{q}^i(M)=0$이다.
+첫째 주장은 [정리 8](#thm8)과 $j>r$에서 $\check{C}(x)^j=0$인 것으로부터 자명하다. 둘째 주장의 경우, $d=\dim A$로 두면 [§매개계, ⁋따름정리 1](/ko/math/commutative_algebra/system_of_parameters#cor1)에 의하여 $d$개의 원소 $y_1,\ldots,y_d\in\mathfrak{m}$이 존재하여 충분히 큰 $n$에서 $\mathfrak{m}^n\subseteq\mathfrak{q}=(y_1,\ldots,y_d)$이도록 할 수 있고, 이는 [§매개계, ⁋명제–정의 3](/ko/math/commutative_algebra/system_of_parameters#prop-def3)의 셋째 조건이므로 $\mathfrak{q}$는 parameter ideal이며 같은 명제의 둘째 조건에 의하여 $\sqrt{\mathfrak{q}}=\mathfrak{m}$이다. 그럼 [명제 4](#prop4)의 둘째 결과에 의하여 $H_\mathfrak{m}^i=H_\mathfrak{q}^i$이고, $\mathfrak{q}$가 $d$개의 원소로 생성되므로 첫째 주장에 의하여 $i>d$에서 $H_\mathfrak{m}^i(M)=H_\mathfrak{q}^i(M)=0$이다.
 :::
 
 이 따름정리의 둘째 소멸 상한 $\dim A$는 다음 절에서 finitely generated module $M$에 대하여 $\dim M$으로 개선된다.

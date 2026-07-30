@@ -14,7 +14,7 @@ translated_at: 2026-07-11T05:00:02+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-07-11T05:00:02+00:00
 ---
-We now examine the tools that let us compute homology in practice. Directly calculating the homology of an arbitrary space from the definition is almost impossible, so we must develop machinery that breaks large spaces into smaller pieces and reconstructs the homology of the whole from those of the parts. The most intuitive situation is that of [§Covering Spaces, ⁋Theorem 13](/en/math/algebraic_topology/covering_spaces#thm13), where we saw that the functor $\pi_1:\Top \rightarrow \Grp$ preserves colimits. The abelianization functor $\ab:\Grp \rightarrow \Ab$ is the left adjoint of the forgetful functor $U:\Ab \rightarrow \Grp$ ([\[Algebraic Structures\] §Abelian Groups, ⁋Proposition 7](/en/math/algebraic_structures/abelian_groups#prop7)), and left adjoints preserve colimits ([\[Category Theory\] §Adjoints, ⁋Theorem 9](/en/math/category_theory/adjoints#thm9)); the first homology functor $H_1:\Top \rightarrow \Ab$ is their composite. Indeed, the map $\pi_1(X)\rightarrow H_1(X)$ sending a loop $\gamma$ to a singular $1$-simplex is well-defined (loops in the same homotopy class give the same homology class, and a homotopy supplies the difference as a boundary of $2$-simplices), and its kernel is exactly the commutator subgroup $[\pi_1(X),\pi_1(X)]$, so we obtain $H_1(X)\cong\pi_1(X)^\ab$. Hence $H_1$ also preserves colimits. In particular, as in [§Covering Spaces, ⁋Corollary 14](/en/math/algebraic_topology/covering_spaces#cor14), suppose a topological space $X$ is the union of two connected open subsets $U,V$. Then in the category $\Ab$, the pushout of two abelian groups is given by the coequalizer of their direct sum, so the following isomorphism
+We now examine the tools that let us compute homology in practice. Directly calculating the homology of an arbitrary space from the definition is almost impossible, so we must develop machinery that breaks large spaces into smaller pieces and reconstructs the homology of the whole from those of the parts. The most intuitive situation is that of [§Covering Spaces, ⁋Theorem 13](/en/math/algebraic_topology/covering_spaces#thm13), where we saw that the functor $\pi_1:\Top \rightarrow \Grp$ preserves colimits. The abelianization functor $\ab:\Grp \rightarrow \Ab$ is the left adjoint of the forgetful functor $U:\Ab \rightarrow \Grp$ ([\[Algebraic Structures\] §Abelian Groups, ⁋Proposition 7](/en/math/algebraic_structures/abelian_groups#prop7)), and left adjoints preserve colimits ([\[Category Theory\] §Adjoint Functors, ⁋Theorem 9](/en/math/category_theory/adjoints#thm9)); the first homology functor $H_1:\Top \rightarrow \Ab$ is their composite. Indeed, the map $\pi_1(X)\rightarrow H_1(X)$ sending a loop $\gamma$ to a singular $1$-simplex is well-defined (loops in the same homotopy class give the same homology class, and a homotopy supplies the difference as a boundary of $2$-simplices), and its kernel is exactly the commutator subgroup $[\pi_1(X),\pi_1(X)]$, so we obtain $H_1(X)\cong\pi_1(X)^\ab$. Hence $H_1$ also preserves colimits. In particular, as in [§Covering Spaces, ⁋Corollary 14](/en/math/algebraic_topology/covering_spaces#cor14), suppose a topological space $X$ is the union of two connected open subsets $U,V$. Then in the category $\Ab$, the pushout of two abelian groups is given by the coequalizer of their direct sum, so the following isomorphism
 
 $$H_1(X)=H_1(U\cup V)\cong \frac{H_1(U)\oplus H_1(V)}{\left\langle (f(x),-g(x))\mid x\in H_1(U\cap V)\right\rangle}\tag{1}$$
 
@@ -74,7 +74,7 @@ Suppose a good pair $(X,A)$ is given, and let $U$ be an open set satisfying the 
 
 {% diagram Math/Algebraic_Topology/Computation_of_Homology-2.svg width="27.21em" alt="3*3_diagram" %}
 
-each row is exact and the first two columns are also exact, so by [\[Homological Algebra\] §Diagram Chasing, ⁋Corollary 7](/en/math/homological_algebra/diagram_chasing#cor7) we obtain a short exact sequence of chain complexes
+each row is exact and the first two columns are also exact, so by [\[Homological Algebra\] §Diagram chasing, ⁋Corollary 7 (The 3×3 lemma)](/en/math/homological_algebra/diagram_chasing#cor7) we obtain a short exact sequence of chain complexes
 
 $$0\rightarrow C_\bullet(U,A)\rightarrow C_\bullet(X,A)\rightarrow C_\bullet(X,U)\rightarrow 0$$
 
@@ -112,7 +112,7 @@ At this point, the left vertical map $H_k(X\setminus A, U\setminus A)\rightarrow
 
 $$H_k(X,A)\cong H_k(X/A,[A])\tag{2}$$
 
-On the other hand, by [§Homology, ⁋Proposition 11](/en/math/algebraic_topology/homology#prop11) and [\[Homological Algebra\] §Diagram Chasing, ⁋Corollary 2 (The five lemma)](/en/math/homological_algebra/diagram_chasing#cor2), for any space $X$ and a point $x\in X$, the following long exact sequence
+On the other hand, by [§Homology, ⁋Proposition 11](/en/math/algebraic_topology/homology#prop11) and [\[Homological Algebra\] §Diagram chasing, ⁋Corollary 2 (The five lemma)](/en/math/homological_algebra/diagram_chasing#cor2), for any space $X$ and a point $x\in X$, the following long exact sequence
 
 $$\begin{aligned}\cdots &\rightarrow H_k(x)\rightarrow H_k(X)\rightarrow H_k(X,x) \rightarrow H_{k-1}(x)\rightarrow\cdots \\\cdots&\rightarrow H_1(x)\rightarrow H_1(X) \rightarrow H_1(X,x) \rightarrow H_0(x) \rightarrow H_0(X)\rightarrow H_0(X,x)\rightarrow 0\end{aligned}$$
 
@@ -152,7 +152,7 @@ exists, and similarly the following canonical homomorphisms
 
 $$H_\bullet^\Delta(A)\rightarrow H_\bullet(A),\qquad H_\bullet^\Delta(X,A)\rightarrow H_\bullet(X,A)$$
 
-exist. Then by [\[Homological Algebra\] §Long Exact Sequences, ⁋Proposition 2](/en/math/homological_algebra/long_exact_sequence#prop2), these define the following commutative diagram:
+exist. Then by [\[Homological Algebra\] §Long Exact Sequence, ⁋Proposition 2](/en/math/homological_algebra/long_exact_sequence#prop2), these define the following commutative diagram:
 
 {% diagram Math/Algebraic_Topology/Computation_of_Homology-5.svg width="35.64em" alt="functoriality" %}
 

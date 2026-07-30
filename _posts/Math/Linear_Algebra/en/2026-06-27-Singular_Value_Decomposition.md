@@ -57,7 +57,7 @@ Then for $1\leq i,j\leq r$,
 
 $$\langle u_i,u_j\rangle=\frac{1}{\sigma_i\sigma_j}\langle Av_i,Av_j\rangle=\frac{1}{\sigma_i\sigma_j}\langle A^tAv_i,v_j\rangle=\frac{\sigma_i^2}{\sigma_i\sigma_j}\langle v_i,v_j\rangle=\frac{\sigma_i}{\sigma_j}\delta_{ij}=\delta_{ij}$$
 
-so $\{u_1,\ldots, u_r\}$ is an orthonormal set in $\mathbb{R}^m$. We can extend this to obtain an orthonormal basis $\{u_1,\ldots, u_m\}$ of $\mathbb{R}^m$. ([§Inner Product Spaces, §§Orthonormal Basis](/en/math/linear_algebra/inner_product_spaces#정규직교기저))
+so $\{u_1,\ldots, u_r\}$ is an orthonormal set in $\mathbb{R}^m$. We can extend this to obtain an orthonormal basis $\{u_1,\ldots, u_m\}$ of $\mathbb{R}^m$. ([§Inner Product Spaces, §§Orthonormal Bases](/en/math/linear_algebra/inner_product_spaces#orthonormal-bases))
 
 On the other hand, for $r<i\leq n$,
 

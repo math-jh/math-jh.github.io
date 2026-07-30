@@ -14,7 +14,7 @@ translated_at: 2026-07-05T22:00:03+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-07-05T22:00:03+00:00
 ---
-What we ultimately want to study is the calculus of general functions $\mathbb{R}^m\rightarrow\mathbb{R}^n$. We have prepared for this by first raising the dimension of the codomain in [§Curves and Vector Functions](/en/math/calculus/vector_functions), and then raising the dimension of the domain from [§Multivariable Functions and Partial Derivatives](/en/math/calculus/partial_derivatives) onward. Now we combine both directions and begin the general case in which both the domain and codomain are multidimensional. In particular, the most natural object of interest is the case where the dimensions of the domain and codomain are equal, namely $\mathbb{R}^n\rightarrow\mathbb{R}^n$; such a function takes an $n$-dimensional vector and returns an $n$-dimensional vector.
+What we ultimately want to study is the calculus of general functions $\mathbb{R}^m\rightarrow\mathbb{R}^n$. We have prepared for this by first raising the dimension of the codomain in [§Curves and Vector-Valued Functions](/en/math/calculus/vector_functions), and then raising the dimension of the domain from [§Multivariable Functions and Partial Derivatives](/en/math/calculus/partial_derivatives) onward. Now we combine both directions and begin the general case in which both the domain and codomain are multidimensional. In particular, the most natural object of interest is the case where the dimensions of the domain and codomain are equal, namely $\mathbb{R}^n\rightarrow\mathbb{R}^n$; such a function takes an $n$-dimensional vector and returns an $n$-dimensional vector.
 
 ## Vector Fields
 

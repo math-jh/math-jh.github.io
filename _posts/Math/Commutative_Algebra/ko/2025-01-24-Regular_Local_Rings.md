@@ -15,7 +15,7 @@ weight: 18
 
 ## 정칙국소환
 
-[§매개계, ⁋명제--정의 3](/ko/math/commutative_algebra/system_of_parameters#prop-def3)을 생각하면, regular local ring $(A, \mathfrak{m})$에서 $\mathfrak{m}$을 생성하는 $d=\dim A$개의 원소들 $a_1,\ldots, a_d$는 $A$의 system of parameters가 되는 것이 자명하다. 이를 *regular system of parameters*라 부른다. 
+[§매개계, ⁋명제–정의 3](/ko/math/commutative_algebra/system_of_parameters#prop-def3)을 생각하면, regular local ring $(A, \mathfrak{m})$에서 $\mathfrak{m}$을 생성하는 $d=\dim A$개의 원소들 $a_1,\ldots, a_d$는 $A$의 system of parameters가 되는 것이 자명하다. 이를 *regular system of parameters*라 부른다. 
 
 ::: 따름정리 1
 Regular local ring은 integral domain이다. 

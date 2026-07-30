@@ -16,11 +16,11 @@ last_polished_at: 2026-07-14T10:00:02+00:00
 ---
 We previously examined the Riemann–Roch theorem for curves. In essence, the Riemann–Roch theorem computes the Euler characteristic in terms of other numerical quantities, and although we could generalize it to arbitrary dimension, in this post we shall only discuss the generalization to surfaces.
 
-Revisiting the Riemann–Roch formula on a curve $C$ ([§Riemann–Roch Theorem for Curves, ⁋Proposition 3](/en/math/algebraic_varieties/riemann_roch_theorem#prop3))
+Revisiting the Riemann–Roch formula on a curve $C$ ([§The Riemann–Roch Theorem for Curves, ⁋Proposition 3](/en/math/algebraic_varieties/riemann_roch_theorem#prop3))
 
 $$\ell(D) - \ell(K_C - D) = \deg D + 1 - g$$
 
-we see that the left-hand side is essentially the Euler characteristic of $\mathcal{O}_C(D)$, and [§Riemann–Roch Theorem for Curves, ⁋Lemma 2](/en/math/algebraic_varieties/riemann_roch_theorem#lem2) guarantees that this side consists of only two terms. However, when we now generalize this to surfaces, the dimension of the base space increases by one, so additional terms will appear; correspondingly, the right-hand side will also acquire additional terms.
+we see that the left-hand side is essentially the Euler characteristic of $\mathcal{O}_C(D)$, and [§The Riemann–Roch Theorem for Curves, ⁋Lemma 2](/en/math/algebraic_varieties/riemann_roch_theorem#lem2) guarantees that this side consists of only two terms. However, when we now generalize this to surfaces, the dimension of the base space increases by one, so additional terms will appear; correspondingly, the right-hand side will also acquire additional terms.
 
 Intuitively, the term $\deg D$ appearing on the right-hand side of the above formula can be thought of as a linear term, but in the process of generalizing to surfaces we must also consider additional *quadratic terms* $D\cdot D$, $D\cdot K_S$, and so on. These quantities encode how two divisors intersect on a surface, and they arise because divisors on a curve—namely points—generally do not meet inside the curve, whereas divisors on a surface—namely curves—typically intersect in finitely many points inside the surface.
 
@@ -81,7 +81,7 @@ holds.
 :::
 
 ::: Proof
-By the adjunction formula from [§Canonical Bundle, ⁋Proposition 9](/en/math/algebraic_varieties/canonical_bundle#prop9),
+By the adjunction formula from [§Canonical Line Bundle, ⁋Proposition 9](/en/math/algebraic_varieties/canonical_bundle#prop9),
 
 $$\omega_D \cong (\omega_S \otimes \mathcal{O}_S(D))\vert_D$$
 
@@ -89,7 +89,7 @@ holds. Taking degrees of both sides gives
 
 $$\deg(\omega_D) = \deg(\omega_S\vert_D) + \deg(\mathcal{O}_D(D))$$
 
-We previously derived from the result of [§Riemann–Roch Theorem for Curves, ⁋Proposition 3](/en/math/algebraic_varieties/riemann_roch_theorem#prop3) that $\deg(\omega_D)=2g-2$, and it remains only to interpret the two terms on the right-hand side as intersection numbers. First, $\omega_S\vert_D$ is the canonical bundle restricted to $D$, which measures the intersection number of $D$ with the canonical divisor $K_S$. Specifically, since $K_S$ is the divisor corresponding to $\omega_S$, the degree of $\omega_S\vert_D$ equals the number of points that $K_S$ occupies on $D$, namely $D \cdot K_S$. Similarly, $\mathcal{O}_D(D)$ corresponds to the normal bundle $\mathcal{N}_{D/S}$, which measures the extent to which $D$ meets itself inside $S$. The degree of this bundle coincides with the self-intersection number $D^2$ of $D$. Combining these yields
+We previously derived from the result of [§The Riemann–Roch Theorem for Curves, ⁋Proposition 3](/en/math/algebraic_varieties/riemann_roch_theorem#prop3) that $\deg(\omega_D)=2g-2$, and it remains only to interpret the two terms on the right-hand side as intersection numbers. First, $\omega_S\vert_D$ is the canonical bundle restricted to $D$, which measures the intersection number of $D$ with the canonical divisor $K_S$. Specifically, since $K_S$ is the divisor corresponding to $\omega_S$, the degree of $\omega_S\vert_D$ equals the number of points that $K_S$ occupies on $D$, namely $D \cdot K_S$. Similarly, $\mathcal{O}_D(D)$ corresponds to the normal bundle $\mathcal{N}_{D/S}$, which measures the extent to which $D$ meets itself inside $S$. The degree of this bundle coincides with the self-intersection number $D^2$ of $D$. Combining these yields
 
 $$2g(D) - 2 = D \cdot K_S + D^2$$
 
@@ -114,7 +114,7 @@ and the additivity of the Euler characteristic, we obtain
 
 $$\rchi(\mathcal{O}_S(D)) = \rchi(\mathcal{O}_S) + \rchi(\mathcal{O}_D(D)).$$
 
-Now, since $\mathcal{O}_D(D)$ is a line bundle defined on $D$, by [§Riemann–Roch Theorem for Curves, ⁋Proposition 3](/en/math/algebraic_varieties/riemann_roch_theorem#prop3),
+Now, since $\mathcal{O}_D(D)$ is a line bundle defined on $D$, by [§The Riemann–Roch Theorem for Curves, ⁋Proposition 3](/en/math/algebraic_varieties/riemann_roch_theorem#prop3),
 
 $$\rchi(\mathcal{O}_D(D)) = D^2 + 1 - g(D).$$
 
@@ -130,7 +130,7 @@ Therefore, we obtain
 
 $$\rchi(\mathcal{O}_S(D)) = \rchi(\mathcal{O}_S) + \frac{1}{2}D \cdot (D - K_S).$$
 
-Now we must generalize this to an arbitrary divisor $D$. First, fix an ample divisor $H$ on $S$. Then by [§Cohomology of Projective Spaces, ⁋Proposition 4](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop4), for sufficiently large $n$,
+Now we must generalize this to an arbitrary divisor $D$. First, fix an ample divisor $H$ on $S$. Then by [§Cohomology of Projective Space, ⁋Proposition 4 (Serre Vanishing)](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop4), for sufficiently large $n$,
 
 $$H^1(S, \mathcal{O}_S(D + nH)) = H^2(S, \mathcal{O}_S(D + nH)) = 0.$$
 
@@ -151,15 +151,15 @@ Fixing the hyperplane class $H$ on $\mathbb{P}^2$, we know that
 
 $$K_{\mathbb{P}^2} = -3H, \qquad \rchi(\mathcal{O}_{\mathbb{P}^2}) = 1$$
 
-([§Canonical Bundle, ⁋Proposition 7](/en/math/algebraic_varieties/canonical_bundle#prop7), [§Cohomology of Projective Spaces, ⁋Corollary 3](/en/math/algebraic_varieties/cohomology_of_projective_spaces#cor3)). Since any two lines in $\mathbb{P}^2$ generally meet at a single point, the self-intersection number of $H$ is $1$, and therefore for any divisor $D = dH$ we have
+([§Canonical Line Bundle, ⁋Proposition 7 (Euler Exact Sequence)](/en/math/algebraic_varieties/canonical_bundle#prop7), [§Cohomology of Projective Space, ⁋Corollary 3](/en/math/algebraic_varieties/cohomology_of_projective_spaces#cor3)). Since any two lines in $\mathbb{P}^2$ generally meet at a single point, the self-intersection number of $H$ is $1$, and therefore for any divisor $D = dH$ we have
 
 $$\rchi(\mathcal{O}_{\mathbb{P}^2}(d)) = \frac{1}{2}dH \cdot (dH + 3H) + 1 = \frac{1}{2}d(d+3) + 1$$
 
-This identity is indeed a consequence of [§Cohomology of Projective Spaces, ⁋Corollary 3](/en/math/algebraic_varieties/cohomology_of_projective_spaces#cor3). In particular, for $d \ge 0$ we know that $h^0 = \binom{d+2}{2}$ and $h^1 = h^2 = 0$, which provides a direct example of the vanishing of $h^1, h^2$ mentioned above.
+This identity is indeed a consequence of [§Cohomology of Projective Space, ⁋Corollary 3](/en/math/algebraic_varieties/cohomology_of_projective_spaces#cor3). In particular, for $d \ge 0$ we know that $h^0 = \binom{d+2}{2}$ and $h^1 = h^2 = 0$, which provides a direct example of the vanishing of $h^1, h^2$ mentioned above.
 :::
 
 ::: Example 6 (Blow-up of $\mathbb{P}^2$)
-Now we consider the blow-up $\pi: \widetilde{\mathbb{P}}^2 \rightarrow \mathbb{P}^2$ of $\mathbb{P}^2$ at a point $p$. By [§Canonical Bundle, ⁋Proposition 12](/en/math/algebraic_varieties/canonical_bundle#prop12), the canonical bundle is given by the formula
+Now we consider the blow-up $\pi: \widetilde{\mathbb{P}}^2 \rightarrow \mathbb{P}^2$ of $\mathbb{P}^2$ at a point $p$. By [§Canonical Line Bundle, ⁋Proposition 12 (Canonical bundle of a blow-up)](/en/math/algebraic_varieties/canonical_bundle#prop12), the canonical bundle is given by the formula
 
 $$K_{\widetilde{\mathbb{P}}^2} = \pi^\ast K_{\mathbb{P}^2} + E = -3H + E$$
 
@@ -228,7 +228,7 @@ Fix a smooth projective surface $S$ and an ample divisor $H$. If a divisor $D$ s
 :::
 
 ::: Proof
-First assume $D^2 > 0$. Using [§Cohomology of Projective Spaces, ⁋Proposition 10](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop10), we can arrange that $H_n = D + nH$ is very ample. Then
+First assume $D^2 > 0$. Using [§Cohomology of Projective Space, ⁋Proposition 10](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop10), we can arrange that $H_n = D + nH$ is very ample. Then
 
 $$D \cdot H_n = D^2 + n(D \cdot H) = D^2 > 0$$
 
@@ -284,7 +284,7 @@ $$P_m(S) = h^0(S, \omega_S^{\otimes m})$$
 
 :::
 
-Here $\omega_S$ is the canonical bundle defined in [§Canonical Bundle, ⁋Definition 5](/en/math/algebraic_varieties/canonical_bundle#def5). In particular, when $m = 1$, we have $P_1(S) = h^0(\omega_S) = p_g(S)$, the geometric genus; the sequence of plurigenera $\{P_m(S)\}_{m \ge 1}$ can be thought of as an extension of this in a certain sense. It is an important invariant that determines the birational equivalence class of a surface.
+Here $\omega_S$ is the canonical bundle defined in [§Canonical Line Bundle, ⁋Definition 5](/en/math/algebraic_varieties/canonical_bundle#def5). In particular, when $m = 1$, we have $P_1(S) = h^0(\omega_S) = p_g(S)$, the geometric genus; the sequence of plurigenera $\{P_m(S)\}_{m \ge 1}$ can be thought of as an extension of this in a certain sense. It is an important invariant that determines the birational equivalence class of a surface.
 
 In the next post we will discuss the Kodaira vanishing theorem and see how this theorem is used in the computation of plurigenera and the classification of surfaces.
 

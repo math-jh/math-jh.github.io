@@ -25,7 +25,7 @@ weight: 35
 
 ## `[dev]` 태그와 기계 게이트
 
-수정일 계산에서 기계적 커밋을 빼는 장치는 [지난 글](/ko/llm_workshop/lastmod_skip)에서 `[lastmod-skip]` 마커 하나로 만들어졌었다. 이번에 그 목록이 배열로 늘었다.
+수정일 계산에서 기계적 커밋을 빼는 장치는 [수정일에서 기계적 커밋 빼기](/ko/llm_workshop/lastmod_skip)에서 `[lastmod-skip]` 마커 하나로 만들어졌었다. 이번에 그 목록이 배열로 늘었다.
 
 ```ruby
 SKIP_MARKERS = ["[lastmod-skip]", "[dev]"].freeze

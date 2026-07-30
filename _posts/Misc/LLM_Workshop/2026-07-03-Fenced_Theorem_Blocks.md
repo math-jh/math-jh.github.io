@@ -108,7 +108,7 @@ id          = "#{prefix}#{number}"    # thm2
 
 ## 번역 워커에 가르치기
 
-이 블로그는 한국어 글을 [번역 워커](/ko/llm_workshop/translation_worker)가 영어로 옮긴다. 워커는 그동안 정리 박스를 HTML 구조로 알고 있었으니, 새 문법을 가르쳐야 했다. 규칙은 단순하다 — `:::` 줄은 개수도 순서도 그대로 두고, 여는 줄의 라벨만 번역한다.
+이 블로그는 한국어 글을 [자동 번역 워커](/ko/llm_workshop/translation_worker)가 영어로 옮긴다. 워커는 그동안 정리 박스를 HTML 구조로 알고 있었으니, 새 문법을 가르쳐야 했다. 규칙은 단순하다 — `:::` 줄은 개수도 순서도 그대로 두고, 여는 줄의 라벨만 번역한다.
 
 ```text
 ::: 정리 2 (Thom isomorphism)   →   ::: Theorem 2 (Thom isomorphism)

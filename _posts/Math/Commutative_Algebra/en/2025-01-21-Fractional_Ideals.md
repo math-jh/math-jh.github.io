@@ -26,7 +26,7 @@ For a ring $A$, an $A$-module $M$ is called *invertible* if $M$ is finitely gene
 
 For a prime ideal $\mathfrak{p}$ and a maximal ideal $\mathfrak{m}$ containing $\mathfrak{p}$, if $A_\mathfrak{m}\cong M_\mathfrak{m}$ then we would have $A_\mathfrak{p}\cong M_\mathfrak{p}$; hence it suffices to check the above condition only for maximal ideals.
 
-Now define $M^\ast=\Hom_A(M,A)$. Since $A$ is commutative, $\Hom_A(M, A)$ is again an $A$-module, and moreover the trace map $M^\ast\otimes M \rightarrow A$ exists. ([\[Multilinear Algebra\] §Hom and Tensor Products, ⁋Definition 6](/en/math/multilinear_algebra/hom_and_tensor#def6))
+Now define $M^\ast=\Hom_A(M,A)$. Since $A$ is commutative, $\Hom_A(M, A)$ is again an $A$-module, and moreover the trace map $M^\ast\otimes M \rightarrow A$ exists. ([\[Multilinear Algebra\] §Hom and the Tensor Product, ⁋Definition 6](/en/math/multilinear_algebra/hom_and_tensor#def6))
 
 ::: Definition 2
 Let $A$ be a ring and let $K$ be the total ring of fractions of $A$. Then an $A$-submodule $\mathfrak{A}$ of $K$ is called a *fractional ideal* of $A$ if there exists a nonzero element $a\in A$ such that $a \mathfrak{A}\subseteq A$.

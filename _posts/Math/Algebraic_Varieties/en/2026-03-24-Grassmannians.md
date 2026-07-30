@@ -76,7 +76,7 @@ The *Plücker embedding* $\iota: \Gr(k, V) \rightarrow \mathbb{P}(\bigwedge^k V)
 
 $$\iota(W) = [v_1 \wedge v_2 \wedge \cdots \wedge v_k]$$
 
-([\[Multilinear Algebra\] §Tensor Algebras, ⁋Definition 10](/en/math/multilinear_algebra/tensor_algebras#def10))
+([\[Multilinear Algebra\] §Tensor Algebra, ⁋Definition 10](/en/math/multilinear_algebra/tensor_algebras#def10))
 :::
 
 We then have the following.

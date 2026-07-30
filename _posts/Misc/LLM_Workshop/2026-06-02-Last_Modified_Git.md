@@ -85,7 +85,7 @@ end
 ```
 {: data-filename=".github/workflows/deploy.yml"}
 
-애초에 이런 커스텀 `_plugins/*.rb`가 빌드에서 도는 것 자체가, 빌드를 [GitHub Actions로 옮긴](/ko/llm_workshop/jekyll4_pagefind) 덕이다. GitHub Pages의 기본 빌드는 임의 플러그인을 허용하지 않으니, 이 훅도 그 이전이었다면 존재할 수 없었다.
+애초에 이런 커스텀 `_plugins/*.rb`가 빌드에서 도는 것 자체가, 빌드를 [Jekyll 4와 Pagefind 검색](/ko/llm_workshop/jekyll4_pagefind) 덕이다. GitHub Pages의 기본 빌드는 임의 플러그인을 허용하지 않으니, 이 훅도 그 이전이었다면 존재할 수 없었다.
 
 ## 정리
 

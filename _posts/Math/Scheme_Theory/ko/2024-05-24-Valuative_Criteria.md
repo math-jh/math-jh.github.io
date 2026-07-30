@@ -13,7 +13,7 @@ weight: 15
 
 ---
 
-이번 글에서 우리는 separated morphism과 proper morphism을 정의한다. 우리는 앞선 글들에서 open subscheme을 정의하였고 ([§스킴, ⁋정의 4](/ko/math/scheme_theory/schemes#def4)), closed embedding과 그로부터 얻어지는 closed subscheme, 그리고 ideal sheaf를 살펴보았다. ([§닫힌 부분스킴, ⁋정의 2](/ko/math/scheme_theory/closed_subschemes#def2), [⁋정의 5](/ko/math/scheme_theory/closed_subschemes#def5)) 여기에 다음의 개념들을 더한다.
+이번 글에서 우리는 separated morphism과 proper morphism을 정의한다. 우리는 앞선 글들에서 open subscheme을 정의하였고 ([§스킴, ⁋정의 4](/ko/math/scheme_theory/schemes#def4)), closed embedding과 그로부터 얻어지는 closed subscheme, 그리고 ideal sheaf를 살펴보았다. ([§닫힌 부분스킴, ⁋정의 2](/ko/math/scheme_theory/closed_subschemes#def2), [닫힌 부분스킴, ⁋정의 5](/ko/math/scheme_theory/closed_subschemes#def5)) 여기에 다음의 개념들을 더한다.
 
 ::: 정의 1
 Scheme morphism $\varphi: X \rightarrow Y$가 주어졌다 하자.

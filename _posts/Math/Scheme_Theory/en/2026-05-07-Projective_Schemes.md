@@ -100,7 +100,7 @@ holds.
 
 That is, in order to describe $\mathbb{P}^n$ in a manner similar to the spectrum, we should not view $\mathbb{A}^{n+1}$ simply as the spectrum of the ring $\mathbb{K}[\x_0,\ldots, \x_n]$, but rather add degree information to make it a *graded* ring, and look at the zero loci of *homogeneous* elements rather than arbitrary elements. Then, thinking of [[Algebraic Structures] §Graded Rings, ⁋Proposition 6](/en/math/algebraic_structures/graded_rings#prop6), our interest should also be in *homogeneous* ideals.
 
-In the remainder of this post we follow the process of taking $\Proj$ of a graded ring to obtain a scheme. The $\Proj$ of an arbitrary graded ring is not necessarily a projective scheme. For example, if $A_\bullet=\mathbb{K}[\x_1,\x_2,\ldots]$, then $\Proj A_\bullet$ is not even quasi-compact, so the name projective scheme is defined separately with a finitely generated condition in [§Closed Subschemes of Projective Spaces, ⁋Definition 7](/en/math/scheme_theory/closed_subschemes_of_projective_spaces#def7). For this we fix some notation.
+In the remainder of this post we follow the process of taking $\Proj$ of a graded ring to obtain a scheme. The $\Proj$ of an arbitrary graded ring is not necessarily a projective scheme. For example, if $A_\bullet=\mathbb{K}[\x_1,\x_2,\ldots]$, then $\Proj A_\bullet$ is not even quasi-compact, so the name projective scheme is defined separately with a finitely generated condition in [§Closed Subschemes of Projective Space, ⁋Definition 7](/en/math/scheme_theory/closed_subschemes_of_projective_spaces#def7). For this we fix some notation.
 
 ::: remark Remark {#rmk}
 Unless stated otherwise, a graded ring is always assumed to be $\mathbb{N}_{\geq0}$-graded. That is, the ring of interest is always of the form
@@ -134,7 +134,7 @@ Let a graded ring $A_\bullet$ be given. For a homogeneous ideal $\mathfrak{a}$ o
 $$Z_+(\mathfrak{a})=\{\mathfrak{p}\in\Proj A_\bullet\mid \mathfrak{a}\subseteq \mathfrak{p}\}$$
 :::
 
-Then using the third result of [[Commutative Algebra] §Localization of Graded Rings, ⁋Lemma 2](/en/math/commutative_algebra/localization_of_graded_rings#lem2), we can show the following lemma, similar to [§Spectrums, ⁋Lemma 6](/en/math/scheme_theory/spectrums#lem6) and [§Spectrums, ⁋Proposition 5](/en/math/scheme_theory/spectrums#prop5).
+Then using the third result of [[Commutative Algebra] §Localization of Graded Rings, ⁋Lemma 2](/en/math/commutative_algebra/localization_of_graded_rings#lem2), we can show the following lemma, similar to [§The Spectrum, ⁋Lemma 6](/en/math/scheme_theory/spectrums#lem6) and [§The Spectrum, ⁋Proposition 5](/en/math/scheme_theory/spectrums#prop5).
 
 ::: Lemma 3
 For a graded ring $A_\bullet$, the following hold.
@@ -360,7 +360,7 @@ so the cocycle condition holds. Therefore by [§Schemes, ⁋Lemma 9](/en/math/sc
 Finally, let us verify that the underlying topological space of $X$ is $\Proj A_\bullet$. [Lemma 8](#lem8) gives homeomorphisms $\psi_f: D_+(f) \rightarrow \Spec A_{(f)}=X_f$, and as checked in the proof of [Lemma 9](#lem9), $\psi_f$ sends $D_+(fg)$ onto $X_{fg}=D(\theta_{f,g})$. Moreover, for any $\mathfrak{p}\in D_+(fg)$ the preimage of $\mathfrak{p}A_{fg}\cap A_{(fg)}$ under $\rho_{f,fg}$ is $\mathfrak{p}A_f\cap A_{(f)}$ ([[Commutative Algebra] §Localization, ⁋Proposition 8](/en/math/commutative_algebra/localization#prop8)), so $\psi_f$ and $\psi_g$ are compatible with $\varphi_{fg}$. That is, $\psi_g=\varphi_{fg}\circ\psi_f$ holds on $D_+(fg)$. On the other hand, as observed above the $D_+(f)$ cover $\Proj A_\bullet$, so gluing the $\psi_f$ we obtain a homeomorphism between the underlying topological space of $X$ and $\Proj A_\bullet$. Through this $\Proj A_\bullet$ acquires a scheme structure, and by the uniqueness in [§Schemes, ⁋Lemma 9](/en/math/scheme_theory/schemes#lem9) this scheme structure is unique.
 :::
 
-In particular, since $\Proj A_\bullet$ is a locally ringed space, for any $\mathfrak{p}\in \Proj A_\bullet$ the stalk $\mathcal{O}_{\Proj A_\bullet,\mathfrak{p}}$ is a local ring. But since $\mathfrak{p}$ can be put into a suitable affine open neighborhood anyway, we can show the following by essentially the same procedure as [§Affine Schemes, ⁋Lemma 8](/en/math/scheme_theory/affine_schemes#lem8).
+In particular, since $\Proj A_\bullet$ is a locally ringed space, for any $\mathfrak{p}\in \Proj A_\bullet$ the stalk $\mathcal{O}_{\Proj A_\bullet,\mathfrak{p}}$ is a local ring. But since $\mathfrak{p}$ can be put into a suitable affine open neighborhood anyway, we can show the following by essentially the same procedure as [§Affine Scheme, ⁋Lemma 8](/en/math/scheme_theory/affine_schemes#lem8).
 
 ::: Lemma 11
 For a graded ring $A_\bullet$ and any $\mathfrak{p}\in \Proj A_\bullet$, there exists an isomorphism
@@ -368,7 +368,7 @@ For a graded ring $A_\bullet$ and any $\mathfrak{p}\in \Proj A_\bullet$, there e
 $$\mathcal{O}_{\Proj A_\bullet,\mathfrak{p}}\cong A_{(\mathfrak{p})}$$
 :::
 ::: Proof
-Since $\mathfrak{p}\in \Proj A_\bullet$, we have $A_+\not\subseteq \mathfrak{p}$, and therefore there exists a homogeneous element $f$ of $A_+$ not belonging to $\mathfrak{p}$. Let $d=\deg f\geq 1$. Then $\mathfrak{p}\in D_+(f)$, and by [Theorem 10](#thm10), $D_+(f)$ is an open subscheme of $\Proj A_\bullet$ isomorphic to $\Spec A_{(f)}$. Since the stalk of an open subscheme equals the stalk of the original scheme, for the point $\mathfrak{q}=\mathfrak{p}A_f\cap A_{(f)}$ to which [Lemma 8](#lem8) sends $\mathfrak{p}$, from [§Affine Schemes, ⁋Lemma 8](/en/math/scheme_theory/affine_schemes#lem8) we obtain
+Since $\mathfrak{p}\in \Proj A_\bullet$, we have $A_+\not\subseteq \mathfrak{p}$, and therefore there exists a homogeneous element $f$ of $A_+$ not belonging to $\mathfrak{p}$. Let $d=\deg f\geq 1$. Then $\mathfrak{p}\in D_+(f)$, and by [Theorem 10](#thm10), $D_+(f)$ is an open subscheme of $\Proj A_\bullet$ isomorphic to $\Spec A_{(f)}$. Since the stalk of an open subscheme equals the stalk of the original scheme, for the point $\mathfrak{q}=\mathfrak{p}A_f\cap A_{(f)}$ to which [Lemma 8](#lem8) sends $\mathfrak{p}$, from [§Affine Scheme, ⁋Lemma 8](/en/math/scheme_theory/affine_schemes#lem8) we obtain
 
 $$\mathcal{O}_{\Proj A_\bullet,\mathfrak{p}}\cong \mathcal{O}_{\Spec A_{(f)},\mathfrak{q}}\cong (A_{(f)})_\mathfrak{q}$$
 

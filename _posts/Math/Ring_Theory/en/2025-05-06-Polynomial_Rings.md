@@ -223,7 +223,7 @@ is the unique polynomial of degree less than $n$ satisfying $u(a_i)=b_i$ for eac
 Uniqueness is trivial by the above argument, and it remains only to verify that substituting each $a_i$ into $u$ yields the value $b_i$.
 :::
 
-On the other hand, one useful method for finding multiple roots is to differentiate the given polynomial. We can define algebraically what a derivation is ([\[Multilinear Algebra\] §Derivations](/en/math/multilinear_algebra/derivations)), but in this post we define $D: A[\x] \rightarrow A[\x]$ by the formula
+On the other hand, one useful method for finding multiple roots is to differentiate the given polynomial. We can define algebraically what a derivation is ([\[Multilinear Algebra\] §Differentiation](/en/math/multilinear_algebra/derivations)), but in this post we define $D: A[\x] \rightarrow A[\x]$ by the formula
 
 $$D:\left(u(\x)=\sum_{i=0}^n a_i\x^i\right)\mapsto \left((Du)(\x)=\sum_{i=1}^n i.a_i\x^{i-1}\right)\tag{$\ast$}$$
 
@@ -235,7 +235,7 @@ The only property we will use in the remaining discussion is the Leibniz rule
 
 $$D(uv)=(Du)v+u(Dv)$$
 
-which in [\[Multilinear Algebra\] §Derivations](/en/math/multilinear_algebra/derivations) is the definition of a derivation, but if we accept the formula ($\ast$) as a definition, it can be verified by direct computation.
+which in [\[Multilinear Algebra\] §Differentiation](/en/math/multilinear_algebra/derivations) is the definition of a derivation, but if we accept the formula ($\ast$) as a definition, it can be verified by direct computation.
 
 ::: Proposition 11
 For any polynomial $u \in A[\x]$, a necessary and sufficient condition for a root $a \in A$ of $u$ to be a simple root is that $a$ is not a root of $Du$.

@@ -62,7 +62,7 @@ $$\dim A/\mathfrak{p} + \codim \mathfrak{p} = \dim A$$
 holds.
 :::
 ::: Proof
-As we saw in [§Krull Dimension](/en/math/commutative_algebra/Krull_dimension), in general we have $\dim A/\mathfrak{p} + \codim \mathfrak{p} \le \dim A$. Thus it suffices to prove the reverse inequality.
+As we saw in [§Dimension](/en/math/commutative_algebra/Krull_dimension), in general we have $\dim A/\mathfrak{p} + \codim \mathfrak{p} \le \dim A$. Thus it suffices to prove the reverse inequality.
 
 Let $d = \dim A$ and $h = \codim \mathfrak{p}$. By [Corollary 3](#cor3), a regular system of parameters $x_1, \ldots, x_d$ is an $A$-sequence contained in $\mathfrak{m}$. In general, when a $d$-dimensional Noetherian local ring $(A,\mathfrak{m})$ has an $A$-sequence of $d$ elements inside $\mathfrak{m}$, we call $A$ a *Cohen–Macaulay local ring*; thus every regular local ring is a Cohen–Macaulay local ring. Therefore it suffices to prove the following two claims by induction on $d$.
 
@@ -115,7 +115,7 @@ Let $(A, \mathfrak{m})$ be a one-dimensional regular local ring, and let $m$ be 
 $$x=a m^k\qquad \text{$k\in \mathbb{Z}$, $a$ a unit of $A$}$$
 :::
 ::: Proof
-First, $A$ is an integral domain by [Corollary 1](#cor1). Now by [§Blowup Algebra, ⁋Corollary 8](/en/math/commutative_algebra/blowup_algebra#cor8), we have $\bigcap \mathfrak{m}^i=0$, so for any nonzero $x\in A$ there are only finitely many indices $i$ with $x\in \mathfrak{m}^i$. Let $k$ be the largest of these; then from $x\in \mathfrak{m}^k=(m^k)$ there exists $a\in A$ such that $x=am^k$. By the maximality of $k$, the element $a$ is a unit of $A$.
+First, $A$ is an integral domain by [Corollary 1](#cor1). Now by [§Blowup Algebras, ⁋Corollary 8 (Krull intersection theorem)](/en/math/commutative_algebra/blowup_algebra#cor8), we have $\bigcap \mathfrak{m}^i=0$, so for any nonzero $x\in A$ there are only finitely many indices $i$ with $x\in \mathfrak{m}^i$. Let $k$ be the largest of these; then from $x\in \mathfrak{m}^k=(m^k)$ there exists $a\in A$ such that $x=am^k$. By the maximality of $k$, the element $a$ is a unit of $A$.
 
 Now given any element $x$ of $\Frac(A)$, write $x=x_1/x_2$. By the above argument,
 
@@ -234,7 +234,7 @@ Conversely, assume that conditions R1 and S2 hold. Then first, $A$ is a reduced 
 
 $$0=\bigcap \mathfrak{q}_i,\qquad\text{$\mathfrak{q}_i$ a $\mathfrak{p}_i$-primary ideal}$$
 
-is a minimal primary decomposition of $0$, then the $\mathfrak{p}_i$ appearing here are all codimension $0$ ideals by condition S2, and their localizations are fields by condition R1. Therefore we can apply [Proposition 8](#prop8), and applying [§Jordan–Hölder Theorem, ⁋Theorem 5](/en/math/commutative_algebra/Jordan-Holder_theorem#thm5) yields the desired result.
+is a minimal primary decomposition of $0$, then the $\mathfrak{p}_i$ appearing here are all codimension $0$ ideals by condition S2, and their localizations are fields by condition R1. Therefore we can apply [Proposition 8](#prop8), and applying [§The Jordan-Hölder Theorem, ⁋Theorem 5](/en/math/commutative_algebra/Jordan-Holder_theorem#thm5) yields the desired result.
 :::
 
 ---

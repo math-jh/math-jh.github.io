@@ -174,7 +174,7 @@ is a well-defined bijection, and it is natural in the sense that it is compatibl
 ::: Proof
 That $[f]\mapsto f^\ast \E G$ does not depend on the choice of representative for $[f]$ is by [Theorem 5](#thm5). We briefly examine that this is a bijection.
 
-First, suppose a principal $G$-bundle $P$ over $X$ is given. Since $X$ is paracompact, by [\[Topology\] §Compactness, ⁋Theorem 27](/en/math/topology/compactness#thm27) we can take together an open cover $\{U_i\}$ trivializing $P$ and a locally finite partition of unity $\{\rho_i\}$ subordinate to it. The trivialization over each $U_i$ gives a $G$-equivariant map $\psi_i:p^{-1}(U_i)\rightarrow G$, so
+First, suppose a principal $G$-bundle $P$ over $X$ is given. Since $X$ is paracompact, by [\[Topology\] §Compactness and Paracompactness, ⁋Theorem 27](/en/math/topology/compactness#thm27) we can take together an open cover $\{U_i\}$ trivializing $P$ and a locally finite partition of unity $\{\rho_i\}$ subordinate to it. The trivialization over each $U_i$ gives a $G$-equivariant map $\psi_i:p^{-1}(U_i)\rightarrow G$, so
 
 $$\widetilde{f}:P\rightarrow \E G,\qquad y\mapsto \sum_i \rho_i(p(y))\psi_i(y)$$
 

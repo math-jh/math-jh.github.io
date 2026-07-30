@@ -127,7 +127,7 @@ so we obtain the desired result.
 
 ## Matrix Representations and Trace
 
-Previously we defined the trace of a linear map in [§Hom and Tensor Products, ⁋Definition 6](/en/math/multilinear_algebra/hom_and_tensor#def6). Now, for any $n\times n$ matrix $X$, we define the trace of $X$ by
+Previously we defined the trace of a linear map in [§Hom and the Tensor Product, ⁋Definition 6](/en/math/multilinear_algebra/hom_and_tensor#def6). Now, for any $n\times n$ matrix $X$, we define the trace of $X$ by
 
 $$\tr(X)=\sum_{i=1}^n x_{ii}$$
 

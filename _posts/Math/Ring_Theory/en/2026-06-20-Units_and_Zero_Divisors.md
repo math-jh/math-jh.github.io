@@ -119,7 +119,7 @@ $$(a+n\mathbb{Z})(n/d+n\mathbb{Z})=a\cdot(n/d)+n\mathbb{Z}=(a/d)n+n\mathbb{Z}=0+
 
 Hence every nonzero element of $\mathbb{Z}/n\mathbb{Z}$ is either a unit or a zero divisor, and this classification again illustrates [Theorem 5](#thm5).
 
-In particular, when $n=p$ is prime, the integers $1,\ldots,p-1$ are all coprime to $p$, so $(\mathbb{Z}/p\mathbb{Z})^\times=\mathbb{Z}/p\mathbb{Z}\setminus\{0+p\mathbb{Z}\}$ and $\mathbb{Z}/p\mathbb{Z}$ is a finite integral domain with no zero divisors. By [Corollary 6](#cor6) it is a field, namely the *prime field* $\mathbb{F}_p$ with $p$ elements ([\[Field Theory\] §Fields, §§Prime Fields](/en/math/field_theory/fields#소체)).
+In particular, when $n=p$ is prime, the integers $1,\ldots,p-1$ are all coprime to $p$, so $(\mathbb{Z}/p\mathbb{Z})^\times=\mathbb{Z}/p\mathbb{Z}\setminus\{0+p\mathbb{Z}\}$ and $\mathbb{Z}/p\mathbb{Z}$ is a finite integral domain with no zero divisors. By [Corollary 6](#cor6) it is a field, namely the *prime field* $\mathbb{F}_p$ with $p$ elements ([\[Field Theory\] §Fields, §§Prime Fields](/en/math/field_theory/fields#prime-fields)).
 :::
 
 Meanwhile, the unit group of a product ring is determined componentwise, because multiplication in a product ring is computed componentwise.

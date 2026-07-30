@@ -82,7 +82,7 @@ $$\int_a^b f = F(b) = G(b) + C = G(b) - G(a)$$
 
 The difference $G(b) - G(a)$ is commonly written as $\bigl[G(x)\bigr]_a^b$. Thanks to this theorem, the computation of a definite integral is reduced to the problem of finding a primitive rather than taking the limit of Riemann sums. For example, $\int_0^1 x^2\mathop{dx} = \bigl[x^3/3\bigr]_0^1 = 1/3$ agrees with the value obtained laboriously via Riemann sums in [§Integration](/en/math/calculus/integration), but here it is obtained by an entirely different calculation: substituting the endpoints into the primitive.
 
-In particular, [Theorem 1](#thm1) combines with [§Differentiation Rules, ⁋Theorem 4](/en/math/calculus/differentiation_rules#thm4) when the upper or lower limit of integration depends on a variable. If the upper limit is a function $g(x)$, letting $F(u) = \int_a^u f$ gives $\int_a^{g(x)} f = F(g(x))$, and since $F'(u) = f(u)$, the chain rule yields $\frac{d}{dx}\int_a^{g(x)} f(t)\mathop{dt} = f(g(x))g'(x)$. If both limits are variable, split the interval into two parts and apply the result to each side.
+In particular, [Theorem 1](#thm1) combines with [§Differentiation, ⁋Theorem 4 (Chain Rule)](/en/math/calculus/differentiation_rules#thm4) when the upper or lower limit of integration depends on a variable. If the upper limit is a function $g(x)$, letting $F(u) = \int_a^u f$ gives $\int_a^{g(x)} f = F(g(x))$, and since $F'(u) = f(u)$, the chain rule yields $\frac{d}{dx}\int_a^{g(x)} f(t)\mathop{dt} = f(g(x))g'(x)$. If both limits are variable, split the interval into two parts and apply the result to each side.
 
 ::: Proposition 5 (Leibniz rule)
 If $f$ is continuous and $g, h$ are differentiable, then

@@ -41,7 +41,7 @@ $$\mathcal{O}_X(U)\hookrightarrow\prod_{x\in U} \mathcal{O}_{X,x}$$
 we can verify that $\mathcal{O}_X(U)$ is reduced.
 :::
 
-From this we see that reducedness is a stalk-local property. ([§Topology of Schemes, ⁋Proposition 16](/en/math/scheme_theory/topology_of_schemes#prop16)) Also, since it is easy to show that if a ring $A$ is reduced then its localization is also reduced, we can show that the spectrum of a reduced ring is reduced.
+From this we see that reducedness is a stalk-local property. ([§The Topological Structure of Schemes, ⁋Proposition 16](/en/math/scheme_theory/topology_of_schemes#prop16)) Also, since it is easy to show that if a ring $A$ is reduced then its localization is also reduced, we can show that the spectrum of a reduced ring is reduced.
 
 Similarly, the spectrum of an integral domain is an integral scheme. This is not difficult to show directly, but in [Proposition 4](#prop4) we prove that a scheme $X$ is integral if and only if $X$ is an irreducible, reduced scheme. Then the spectrum $\Spec A$ of an integral domain $A$ is
 
@@ -93,7 +93,7 @@ $$D_V(f)=\{x\in V\mid f_x\not\in \mathfrak{m}_x\}$$
 in $V$, we have $D_V(f)=D_U(f)\cap V$, and for this to be empty, $f\vert_V$ must be a nilpotent element of $\mathcal{O}_X(V)$. But $\mathcal{O}_X(V)$ is an integral domain by the claim above, so from this we know that $f\vert_V=0$ must hold, and since this holds for any open affine subset $V$ of $U$, we must have $f=0$.
 :::
 
-On the other hand, looking at [§Topology of Schemes, ⁋Example 6](/en/math/scheme_theory/topology_of_schemes#ex6), we know that the irreducibility of an arbitrary scheme $X$ cannot be determined by looking at stalks alone. For example, $Z(\x(\x-1))$ splits into two components, so points in each component do not know about points in the other component. Therefore, integrality also cannot be determined by looking at stalks alone.
+On the other hand, looking at [§The Topological Structure of Schemes, ⁋Example 6](/en/math/scheme_theory/topology_of_schemes#ex6), we know that the irreducibility of an arbitrary scheme $X$ cannot be determined by looking at stalks alone. For example, $Z(\x(\x-1))$ splits into two components, so points in each component do not know about points in the other component. Therefore, integrality also cannot be determined by looking at stalks alone.
 
 However, if $X$ were a *connected* scheme, the irreducible components would necessarily meet at some point, and by looking at the stalk at this point we might be able to determine irreducibility. The following proposition is a rigorous formulation of this idea.
 
@@ -113,7 +113,7 @@ is the decomposition of $X$ into irreducible components, then for a fixed $i$, t
 
 $$X_1\cap \Spec A_i,\quad X_2\cap \Spec A_i,\quad\ldots,\quad X_s\cap \Spec A_i$$
 
-that are nonempty become the irreducible components of $\Spec A_i$. Now by [§Spectra, ⁋Proposition 16](/en/math/scheme_theory/spectrums#prop16), each of these defines a minimal prime ideal $\mathfrak{q}_j=I(X_j)$ and conversely any minimal prime ideal of $A_i$ uniquely determines an irreducible component $X_j\cap \Spec A_i$.
+that are nonempty become the irreducible components of $\Spec A_i$. Now by [§The Spectrum, ⁋Proposition 16](/en/math/scheme_theory/spectrums#prop16), each of these defines a minimal prime ideal $\mathfrak{q}_j=I(X_j)$ and conversely any minimal prime ideal of $A_i$ uniquely determines an irreducible component $X_j\cap \Spec A_i$.
 
 On the other hand, if $s=1$ then $X$ is already irreducible so there is nothing to prove. Therefore suppose $s\geq 2$ and consider the two closed sets in the irreducible decomposition ($\ast$)
 
@@ -129,7 +129,7 @@ Now from the preceding argument, $\Spec A_i\cap X_1$ has generic point $\mathfra
 The key logic in the above proof can be summarized as follows:
 
 1. Since $X$ is connected, if we decompose $X$ into irreducible components then each irreducible component must meet another irreducible component[^1]
-2. Let $x$ be a point where two irreducible components meet; then any open neighborhood of $x$ will contain the generic point of each irreducible component ([§Spectra, ⁋Proposition 16](/en/math/scheme_theory/spectrums#prop16)),
+2. Let $x$ be a point where two irreducible components meet; then any open neighborhood of $x$ will contain the generic point of each irreducible component ([§The Spectrum, ⁋Proposition 16](/en/math/scheme_theory/spectrums#prop16)),
 3. Therefore these generic points survive in the stalk $\mathcal{O}_{X,x}$ at $x$, but this is impossible since $\mathcal{O}_{X,x}$ is an integral domain.
 
 We examine this property of generic points at the end of this post.
@@ -156,11 +156,11 @@ Therefore any factorial scheme is a normal scheme. Also, since the localization 
 
 ## Associated Primes
 
-By [§Spectra, ⁋Corollary 17](/en/math/scheme_theory/spectrums#cor17), we know that there is a one-to-one correspondence between the irreducible components of a scheme $X=\Spec A$ and the minimal prime ideals of the ring $A$. This was used importantly in [Proposition 5](#prop5) above.
+By [§The Spectrum, ⁋Corollary 17](/en/math/scheme_theory/spectrums#cor17), we know that there is a one-to-one correspondence between the irreducible components of a scheme $X=\Spec A$ and the minimal prime ideals of the ring $A$. This was used importantly in [Proposition 5](#prop5) above.
 
 On the other hand, algebraically, the minimal prime ideals of a Noetherian ring $A$ are always associated prime ideals. This can be verified by applying [\[Commutative Algebra\] §Associated Primes, ⁋Theorem 7](/en/math/commutative_algebra/associated_primes#thm7) to $A$ viewed as a module over itself, since $\ann A=\{0\}$. The Noetherian hypothesis is essential; for example, $A=\mathbb{K}[\x_1,\x_2,\ldots]/(\x_1^2,\x_2^2,\ldots)$ has a unique prime ideal $\mathfrak{m}=(\x_1,\x_2,\ldots)$, but any nonzero element of $A$ uses only finitely many variables, so for an unused $\x_j$ we have $\x_jf\neq 0$ and thus $\ann(f)=\mathfrak{m}$ is impossible, hence $\Ass(A)=\emptyset$.
 
-However, associated prime ideals contain more information than minimal primes. For a Noetherian ring $A$, by the second result of [\[Commutative Algebra\] §Associated Primes, ⁋Theorem 7](/en/math/commutative_algebra/associated_primes#thm7), the union of the associated primes of $A$ is exactly the set of zero-divisors of $A$ together with $0$. For example, in the case of $Z(\x\y)$ seen in [§Topology of Schemes, ⁋Example 6](/en/math/scheme_theory/topology_of_schemes#ex6), the zero-divisors $\x,\y$ were functions that become $0$ on different irreducible components respectively, and their zero-divisor relation is already completely explained by the minimal primes $(\x),(\y)$, which are the generic points of the two components. However, as we will see in [Example 11](#ex11) below, this is not always the case, and associated points capture even the locations of zero-divisors that are missed by minimal primes, that is, the generic points of irreducible components.
+However, associated prime ideals contain more information than minimal primes. For a Noetherian ring $A$, by the second result of [\[Commutative Algebra\] §Associated Primes, ⁋Theorem 7](/en/math/commutative_algebra/associated_primes#thm7), the union of the associated primes of $A$ is exactly the set of zero-divisors of $A$ together with $0$. For example, in the case of $Z(\x\y)$ seen in [§The Topological Structure of Schemes, ⁋Example 6](/en/math/scheme_theory/topology_of_schemes#ex6), the zero-divisors $\x,\y$ were functions that become $0$ on different irreducible components respectively, and their zero-divisor relation is already completely explained by the minimal primes $(\x),(\y)$, which are the generic points of the two components. However, as we will see in [Example 11](#ex11) below, this is not always the case, and associated points capture even the locations of zero-divisors that are missed by minimal primes, that is, the generic points of irreducible components.
 
 ::: Definition 8
 For a locally Noetherian scheme $X$, a point $x$ and an affine open neighborhood $U\cong \Spec A$ of $x$, we say that $x$ is an *associated point* of $X$ if the prime ideal $\mathfrak{p}_x\subseteq A$ corresponding to $x$ is an associated prime ideal of $A$.
@@ -216,7 +216,7 @@ used in the above proof, we can see that the associated point $\mathfrak{p}=\ann
 Therefore, to see an example of an embedded point, we must look at the case where $A$ is not an integral domain, and thus $\ann(f)$ is neither $0$ nor $A$.
 
 ::: Example 11
-Consider the affine scheme $X=\Spec \mathbb{K}[\x_1,\x_2]/(\x_2^2, \x_1\x_2)$. Then by [§Spectra, ⁋Proposition 9](/en/math/scheme_theory/spectrums#prop9), as a set $X=Z(\x_2^2,\x_1\x_2)$, and since $\sqrt{(\x_2^2,\x_1\x_2)}=(\x_2)$, this is $Z(\x_2)$, that is, the $\x_1$-axis $\Spec\mathbb{K}[\x_1]$.
+Consider the affine scheme $X=\Spec \mathbb{K}[\x_1,\x_2]/(\x_2^2, \x_1\x_2)$. Then by [§The Spectrum, ⁋Proposition 9](/en/math/scheme_theory/spectrums#prop9), as a set $X=Z(\x_2^2,\x_1\x_2)$, and since $\sqrt{(\x_2^2,\x_1\x_2)}=(\x_2)$, this is $Z(\x_2)$, that is, the $\x_1$-axis $\Spec\mathbb{K}[\x_1]$.
 
 Now let us find the associated points directly in the form $\ann(f)$ according to [Proposition 10](#prop10). Any element of the ring $A=\mathbb{K}[\x_1,\x_2]/(\x_2^2,\x_1\x_2)$ can be written uniquely in the form
 
@@ -240,7 +240,7 @@ $$fg=p(\x_1)q(\x_1)+\bigl(dp(0)+cq(0)\bigr)\x_2$$
 
 so if $p=0$ and $c\neq 0$, then $\ann(f)$ is the set of $g$ satisfying $q(0)=0$, that is, $(\x_1,\x_2)$; if $p\neq 0$ and $p(0)=0$, then $q=0$ is forced and $\ann(f)=(\x_2)$; and if $p(0)\neq 0$, then both $q=0$ and $d=0$ are forced and $\ann(f)=0$. That is, the prime ideals obtained as annihilators of nonzero elements are only $(\x_2)$ and $(\x_1,\x_2)$.
 
-Unlike $Z(\x\y)$ in [§Topology of Schemes, ⁋Example 6](/en/math/scheme_theory/topology_of_schemes#ex6), note that this zero-divisor relation does not come from the product of two irreducible components. Specifically, the side $\x_2\in \ann(\x_1)$ is data already visible at the generic point $(\x_2)$, but the side $\x_1\in \ann(\x_2)$ is, as $\supp(\x_2)=Z(\ann(\x_2))=\{(\x_1,\x_2)\}$ shows, the fact that $\x_2$ vanishes everywhere except the origin, and is therefore captured as an associated prime only at the embedded point.
+Unlike $Z(\x\y)$ in [§The Topological Structure of Schemes, ⁋Example 6](/en/math/scheme_theory/topology_of_schemes#ex6), note that this zero-divisor relation does not come from the product of two irreducible components. Specifically, the side $\x_2\in \ann(\x_1)$ is data already visible at the generic point $(\x_2)$, but the side $\x_1\in \ann(\x_2)$ is, as $\supp(\x_2)=Z(\ann(\x_2))=\{(\x_1,\x_2)\}$ shows, the fact that $\x_2$ vanishes everywhere except the origin, and is therefore captured as an associated prime only at the embedded point.
 :::
 
 ## Rational Functions
@@ -267,11 +267,11 @@ $$\mathfrak{p}=\ann(f),\qquad \supp(f)=Z(\mathfrak{p})$$
 
 there exists a nonzero function $f\in \Gamma(X, \mathcal{O}_X)$ satisfying this, and this satisfies the condition of [Definition 12](#def12), so the pair $(X, f)$ defines some nonzero rational function along ($\ast$).
 
-Now consider an open subset $U$ missing this associated point $\mathfrak{p}$. Then $Z(\mathfrak{p})$ is an irreducible closed subset having $\mathfrak{p}$ as its generic point ([§Spectra, ⁋Proposition 16](/en/math/scheme_theory/spectrums#prop16)), so any nonempty open subset of $Z(\mathfrak{p})$ always contains $\mathfrak{p}$, and therefore we know that we must have $U\cap Z(\mathfrak{p})=\emptyset$. That is, the germs of $f$ at all points contained in such an open subset $U$, in particular at the associated points contained in $U$, must be $0$. The problem is that if we allow such an open subset $U$ as a domain of definition for a rational function, then by the injectivity of ($\ast$) above, $f$ becomes indistinguishable from $0$.
+Now consider an open subset $U$ missing this associated point $\mathfrak{p}$. Then $Z(\mathfrak{p})$ is an irreducible closed subset having $\mathfrak{p}$ as its generic point ([§The Spectrum, ⁋Proposition 16](/en/math/scheme_theory/spectrums#prop16)), so any nonempty open subset of $Z(\mathfrak{p})$ always contains $\mathfrak{p}$, and therefore we know that we must have $U\cap Z(\mathfrak{p})=\emptyset$. That is, the germs of $f$ at all points contained in such an open subset $U$, in particular at the associated points contained in $U$, must be $0$. The problem is that if we allow such an open subset $U$ as a domain of definition for a rational function, then by the injectivity of ($\ast$) above, $f$ becomes indistinguishable from $0$.
 
 Looking at the simplest example of a generic point, when $\mathfrak{p}$ is the generic point of some irreducible component $C$, we have $Z(\mathfrak{p})=C$, so if $f$ is not defined at this point, that is, intuitively if it has a pole at this point, the above argument means that $U$ misses the entire component $C$ and thus $f\vert_U=0$. Similarly, when $\mathfrak{p}$ is an embedded point, $Z(\mathfrak{p})$ becomes a smaller closed set rather than an entire component, but such a loss still occurs.
 
-For example, consider $Z(\x\y)=\Spec \mathbb{K}[\x,\y]/(\x\y)$ from [§Topology of Schemes, ⁋Example 6](/en/math/scheme_theory/topology_of_schemes#ex6). This scheme has two irreducible components, the $y$-axis $Z(\x)$ and the $x$-axis $Z(\y)$, whose generic points are $(\x)$ and $(\y)$ respectively. Also, since $\ann(\y)=(\x)$, the function $f$ obtained from the result of [Proposition 10](#prop10) is precisely $\y$, and indeed $\supp(\y)=Z(\x)$ shows that this gives the entire $y$-axis. Now if we consider an open subset $U=D(\x)$ that excludes this generic point $(\x)$, then from $\x\y=0$,
+For example, consider $Z(\x\y)=\Spec \mathbb{K}[\x,\y]/(\x\y)$ from [§The Topological Structure of Schemes, ⁋Example 6](/en/math/scheme_theory/topology_of_schemes#ex6). This scheme has two irreducible components, the $y$-axis $Z(\x)$ and the $x$-axis $Z(\y)$, whose generic points are $(\x)$ and $(\y)$ respectively. Also, since $\ann(\y)=(\x)$, the function $f$ obtained from the result of [Proposition 10](#prop10) is precisely $\y$, and indeed $\supp(\y)=Z(\x)$ shows that this gives the entire $y$-axis. Now if we consider an open subset $U=D(\x)$ that excludes this generic point $(\x)$, then from $\x\y=0$,
 
 $$\y=\x^{-1}(\x\y)=0\qquad\text{in $A_\x$}$$
 
@@ -282,7 +282,7 @@ Let us examine what rational functions on $X=\Spec \mathbb{K}[\x_1,\x_2]/(\x_2^2
 
 $$(\x_2)\cup(\x_1,\x_2)=(\x_1,\x_2)$$
 
-so a non-zerodivisor is exactly an element that does not vanish at the origin, that is, of the form $s=q(\x_1)+c'\x_2$ for $q$ satisfying $q(0)\ne0$. Such an $s$ does not belong to either of the two associated primes $(\x_2),(\x_1,\x_2)$, so $D(s)$ contains both associated points of $X$ and becomes a valid domain of definition satisfying the condition of [Definition 12](#def12), and by [§Affine Schemes, ⁋Lemma 6](/en/math/scheme_theory/affine_schemes#lem6) the functions on it are given by $A_s$.
+so a non-zerodivisor is exactly an element that does not vanish at the origin, that is, of the form $s=q(\x_1)+c'\x_2$ for $q$ satisfying $q(0)\ne0$. Such an $s$ does not belong to either of the two associated primes $(\x_2),(\x_1,\x_2)$, so $D(s)$ contains both associated points of $X$ and becomes a valid domain of definition satisfying the condition of [Definition 12](#def12), and by [§Affine Scheme, ⁋Lemma 6](/en/math/scheme_theory/affine_schemes#lem6) the functions on it are given by $A_s$.
 
 Our claim is that looking only at the rational functions defined on this domain $D(s)$, they already give all rational functions on $X$. For this, suppose an arbitrary domain of definition $U$ is given, and let $X\setminus U=Z(I)$. Then since $U$ must contain associated points, for this there must exist an element of $I$ that does not vanish at the origin, that is, an element not contained in the ideal $(\x_1,\x_2)$. Such an element is exactly the non-zerodivisor $s$ examined above, and from $s\in I$ we obtain $D(s)\subseteq U$. That is, any domain of definition always contains such a $D(s)$ inside it, and through this we can restrict a function defined on $U$ to $D(s)$, and since $D(s)$ already contains all associated points, by the injectivity of ($\ast$) this restriction preserves distinct functions on $U$ as distinct on $D(s)$. Moreover, for the same reason, ($\ast$) for $U$ decomposes as the composition of this restriction and ($\ast$) for $D(s)$, so restricting a function on $U$ to $D(s)$ does not change its image, that is, the rational function it defines.
 

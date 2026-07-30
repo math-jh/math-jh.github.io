@@ -159,7 +159,7 @@ First, drawing the given situation in a diagram, we obtain the following.
 
 {% diagram Math/Homological_Algebra/Resolutions-9.svg width="20.34em" alt="horseshoe-initial" %}
 
-Now from the condition that $P_0''$ is projective, we can define $P_0'' \rightarrow A$. On the other hand, $P_0' \rightarrow A$ is already given as the composition of $i_A$ and $\epsilon'$, so taking their direct sum we obtain $\epsilon:P_0 \rightarrow A$. Then from [§Diagram Chasing, ⁋Lemma 5](/en/math/homological_algebra/diagram_chasing#lem5) we obtain the following diagram
+Now from the condition that $P_0''$ is projective, we can define $P_0'' \rightarrow A$. On the other hand, $P_0' \rightarrow A$ is already given as the composition of $i_A$ and $\epsilon'$, so taking their direct sum we obtain $\epsilon:P_0 \rightarrow A$. Then from [§Diagram chasing, ⁋Lemma 5](/en/math/homological_algebra/diagram_chasing#lem5) we obtain the following diagram
 
 {% diagram Math/Homological_Algebra/Resolutions-10.svg width="20.84em" alt="horseshoe-induction" %}
 

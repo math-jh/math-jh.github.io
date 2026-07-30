@@ -43,7 +43,7 @@ $\dim A = d$라 하자. 그럼 system of parameters $x_1, \ldots, x_d \in \mathf
 
 이제 다음을 정의한다. 
 
-::: definition 명제--정의 3 {#prop-def3}
+::: definition 명제–정의 3 {#prop-def3}
 $(A,\mathfrak{m})$이 Krull dimension $d$의 local Noetherian ring이라 하자. 그럼 $A$의 원소들의 family $a_1,\ldots, a_d$, 그리고 $\mathfrak{a}=(a_1,\ldots, a_d)$에 대하여, 다음이 모두 동치이다.
 
 1. $\mathfrak{m}$이 $\mathfrak{a}$를 포함하는 prime ideal들 중 minimal하다.
@@ -107,7 +107,7 @@ Noetherian local ring $(A,\mathfrak{m})$과 그 ideal $\mathfrak{a}$, 그리고 
 3. $\dim M$은 $d$개의 원소로 생성되는 $M$의 parameter가 존재하도록 하는 자연수 $d$ 중 가장 작은 것이다. 
 :::
 ::: 증명
-1. 우선 $\mathfrak{a}$가 $M$의 parameter ideal이라 가정하자. 그럼 [명제--정의 3](#prop-def3) 직후에 살펴본 논증에 의하여 $\mathfrak{m}$의 충분히 큰 거듭제곱이 항상 $M/\mathfrak{a}M$을 annihilate하는 것을 알고, 이와 [보조정리 4](#lem4)을 종합하면
+1. 우선 $\mathfrak{a}$가 $M$의 parameter ideal이라 가정하자. 그럼 [명제–정의 3](#prop-def3) 직후에 살펴본 논증에 의하여 $\mathfrak{m}$의 충분히 큰 거듭제곱이 항상 $M/\mathfrak{a}M$을 annihilate하는 것을 알고, 이와 [보조정리 4](#lem4)을 종합하면
     
     $$\mathfrak{m}\subseteq \sqrt{\ann(M/\mathfrak{a}M)}=\sqrt{\mathfrak{a}+\ann(M)}$$
 

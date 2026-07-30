@@ -173,12 +173,12 @@ and since $\deg D=0$ and $\ell(0)=1$, we find $\ell(K_C)=g$. Substituting $D=K_C
 
 $$\ell(K_C)-\ell(0)=\deg K_C +1-g,$$
 
-from which we recover the computation $\deg(K_C)=2g-2$ from [§Canonical Bundle, ⁋Example 10](/en/math/algebraic_varieties/canonical_bundle#ex10). In that example the degree-genus formula was invoked as a well-known fact to obtain $\deg(K_C)$ (and historically this is the more natural route), but shortly we will see in [Proposition 7](#prop7) that the degree-genus formula is in fact a special case of the Riemann–Roch theorem.
+from which we recover the computation $\deg(K_C)=2g-2$ from [§Canonical Line Bundle, ⁋Example 10](/en/math/algebraic_varieties/canonical_bundle#ex10). In that example the degree-genus formula was invoked as a well-known fact to obtain $\deg(K_C)$ (and historically this is the more natural route), but shortly we will see in [Proposition 7](#prop7) that the degree-genus formula is in fact a special case of the Riemann–Roch theorem.
 
 In any case, summarizing the computations so far, we may think of $\ell(D)$ as the dimension of the complete linear system of $D$, and $\ell(K_C - D)$ as a correction term that $K_C$ imposes on $D$, which disappears for large degree and reflects geometric information of $K_C$ for small degree.
 
 ::: Example 4
-**$\mathbb{P}^1$**: The genus of $\mathbb{P}^1$ is $g = 0$, and the canonical divisor is $K_{\mathbb{P}^1} = -2H$ ([§Canonical Bundle, ⁋Example 8](/en/math/algebraic_varieties/canonical_bundle#ex8)). On the other hand, in [§Line Bundles and Vector Bundles, ⁋Example 12](/en/math/algebraic_varieties/line_bundles#ex12) we showed that the global sections of $\mathcal{O}_{\mathbb{P}^1}(d)$ are the homogeneous polynomials of degree $d$, so we know that
+**$\mathbb{P}^1$**: The genus of $\mathbb{P}^1$ is $g = 0$, and the canonical divisor is $K_{\mathbb{P}^1} = -2H$ ([§Canonical Line Bundle, ⁋Example 8](/en/math/algebraic_varieties/canonical_bundle#ex8)). On the other hand, in [§Line Bundles and Vector Bundles, ⁋Example 12](/en/math/algebraic_varieties/line_bundles#ex12) we showed that the global sections of $\mathcal{O}_{\mathbb{P}^1}(d)$ are the homogeneous polynomials of degree $d$, so we know that
 
 $$\ell(dH) = d+1 \quad (d \ge 0), \qquad \ell(dH) = 0 \quad (d < 0)$$
 
@@ -225,7 +225,7 @@ Now let us examine the behavior of the morphism $\varphi_{K_C} : C \rightarrow \
 
 ## Degree-genus formula
 
-In [§Canonical Bundle, ⁋Example 10](/en/math/algebraic_varieties/canonical_bundle#ex10) we asserted the following proposition as a well-known fact to show that $\deg K_C=2g-2$, but now we can give a rigorous proof. Note, however, that this proceeds in exactly the opposite direction to that example: there the adjunction formula and degree-genus formula were used to prove $\deg K_C=2g-2$, whereas now we derive the degree-genus formula from $\deg K_C=2g-2$ together with the adjunction formula. The degree of $K_C$ was already obtained from Riemann–Roch before [Example 4](#ex4) (without using the degree-genus formula).
+In [§Canonical Line Bundle, ⁋Example 10](/en/math/algebraic_varieties/canonical_bundle#ex10) we asserted the following proposition as a well-known fact to show that $\deg K_C=2g-2$, but now we can give a rigorous proof. Note, however, that this proceeds in exactly the opposite direction to that example: there the adjunction formula and degree-genus formula were used to prove $\deg K_C=2g-2$, whereas now we derive the degree-genus formula from $\deg K_C=2g-2$ together with the adjunction formula. The degree of $K_C$ was already obtained from Riemann–Roch before [Example 4](#ex4) (without using the degree-genus formula).
 
 ::: Proposition 7 (Degree-genus formula)
 For a smooth plane curve $C \subseteq \mathbb{P}^2$ of degree $d$,
@@ -236,7 +236,7 @@ holds.
 :::
 
 ::: Proof
-By the adjunction formula ([§Canonical Bundle, ⁋Proposition 9](/en/math/algebraic_varieties/canonical_bundle#prop9)), $K_C = (K_{\mathbb{P}^2} + C)\vert_C = (d-3)H\vert_C$. Therefore $\deg K_C = d(d-3)$, and substituting this into $\deg K_C = 2g - 2$ yields
+By the adjunction formula ([§Canonical Line Bundle, ⁋Proposition 9](/en/math/algebraic_varieties/canonical_bundle#prop9)), $K_C = (K_{\mathbb{P}^2} + C)\vert_C = (d-3)H\vert_C$. Therefore $\deg K_C = d(d-3)$, and substituting this into $\deg K_C = 2g - 2$ yields
 
 $$d(d-3) = 2g - 2 \implies g = \frac{d(d-3) + 2}{2} = \frac{(d-1)(d-2)}{2}.$$
 :::

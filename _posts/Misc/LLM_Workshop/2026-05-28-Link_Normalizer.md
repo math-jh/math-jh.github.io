@@ -35,7 +35,7 @@ weight: 12
 
 사용자는 (b)를 택했다. 이유는 단순한데, 소스는 사람이 쓴 흔적이 남아있어야 하고 (어떤 표기를 의도했는지가 곧 컨텍스트이다), 그것을 자동 스크립트로 매번 덮어쓰면 git diff가 의도 없는 변화로 흐려진다. 빌드 산물은 어차피 매번 새로 만들어지는 것이니 거기서 정리하는 게 자연스럽다.
 
-(b)가 가능해진 것 자체가 [Jekyll 4로 옮긴](/ko/llm_workshop/jekyll4_pagefind) 부수효과였다. GitHub Pages의 기본 빌드는 보안상 사용자 플러그인을 실행하지 않아서, `_plugins/` 안에 뭘 넣어도 무시되었다. 빌드를 GitHub Actions로 가져온 뒤로는 우리 Jekyll 위에서 우리 플러그인이 돈다.
+(b)가 가능해진 것 자체가 [Jekyll 4와 Pagefind 검색](/ko/llm_workshop/jekyll4_pagefind) 부수효과였다. GitHub Pages의 기본 빌드는 보안상 사용자 플러그인을 실행하지 않아서, `_plugins/` 안에 뭘 넣어도 무시되었다. 빌드를 GitHub Actions로 가져온 뒤로는 우리 Jekyll 위에서 우리 플러그인이 돈다.
 
 ## 작동 방식
 

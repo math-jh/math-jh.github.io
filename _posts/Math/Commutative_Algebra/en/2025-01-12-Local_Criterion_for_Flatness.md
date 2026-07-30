@@ -82,7 +82,7 @@ we see that what we must show is $\Tor_1^A(A/(\mathfrak{a}+\mathfrak{m}^t), M)=0
 
 Now $A/(\mathfrak{a}+\mathfrak{m}^t)$ is annihilated by $\mathfrak{m}^t$, and since $\mathfrak{m}^t$ is finitely generated, it follows that $A/(\mathfrak{a}+\mathfrak{m}^t)$ has finite length. Hence, if we show more generally that $\Tor_1^A(N, M)=0$ for every $A$-module $N$ of finite length, we obtain the desired conclusion.
 
-We proceed by induction on length. If $N$ has length $1$, then by the discussion after [§The Jordan–Hölder Theorem, ⁋Definition 1](/en/math/commutative_algebra/Jordan-Holder_theorem#def1) we must have $N=A/\mathfrak{m}$, and thus $\Tor_1^A(N, M)=0$ is exactly the hypothesis of the theorem. Choose an $A$-module $N$ of finite length and any proper submodule $N'$ of $N$. Applying the $\Tor$ long exact sequence to
+We proceed by induction on length. If $N$ has length $1$, then by the discussion after [§The Jordan-Hölder Theorem, ⁋Definition 1](/en/math/commutative_algebra/Jordan-Holder_theorem#def1) we must have $N=A/\mathfrak{m}$, and thus $\Tor_1^A(N, M)=0$ is exactly the hypothesis of the theorem. Choose an $A$-module $N$ of finite length and any proper submodule $N'$ of $N$. Applying the $\Tor$ long exact sequence to
 
 $$0 \rightarrow N' \rightarrow N \rightarrow N/N' \rightarrow 0$$
 

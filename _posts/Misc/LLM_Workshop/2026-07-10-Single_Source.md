@@ -52,7 +52,7 @@ weight: 27
 
 ## 하나의 출처와 파생
 
-박스 어휘의 단일 출처는 [정리 박스 플러그인](/ko/llm_workshop/fenced_theorem_blocks)의 `KIND_MAP` 상수로 정했다. 그 플러그인이 이미 박스 어휘를 소유하고 있으니 자연스러운 자리다. `:site, :post_read` 훅이 거기서 파생한 뷰를 `site.data`로 내보낸다.
+박스 어휘의 단일 출처는 [정리 박스를 fenced-div로](/ko/llm_workshop/fenced_theorem_blocks)의 `KIND_MAP` 상수로 정했다. 그 플러그인이 이미 박스 어휘를 소유하고 있으니 자연스러운 자리다. `:site, :post_read` 훅이 거기서 파생한 뷰를 `site.data`로 내보낸다.
 
 ```ruby
 Jekyll::Hooks.register :site, :post_read do |site|

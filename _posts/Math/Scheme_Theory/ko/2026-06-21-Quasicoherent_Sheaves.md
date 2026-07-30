@@ -257,7 +257,7 @@ Scheme morphism $\varphi:X \rightarrow Y$가 주어졌다 하자.
     으로 주어지는 $X$ 위의 $\mathcal{O}_X$-module이다. 여기에서 $\varphi^{-1}$은 [\[위상수학\] §층, ⁋정의 10](/ko/math/topology/sheaves#def10)의 inverse image sheaf이다.
 :::
 
-두 연산 모두 affine 위에서는 module의 친숙한 연산으로 환원된다. $\varphi$가 affine scheme들 사이의 morphism $\Spec B \rightarrow \Spec A$, 즉 ring homomorphism $\phi:A \rightarrow B$로부터 온다면, $A$-module $M$의 pullback은 extension of scalars $\widetilde{M\otimes_A B}$이고 $B$-module $N$의 pushforward는 restriction of scalars $\widetilde{\phi^\ast N}$이다. ([\[대수적 구조\] §스칼라의 변환, ⁋정의 1](/ko/math/algebraic_structures/change_of_base_ring#def1), [⁋정의 3](/ko/math/algebraic_structures/change_of_base_ring#def3)) 그럼 [\[대수적 구조\] §스칼라의 변환, ⁋명제 6](/ko/math/algebraic_structures/change_of_base_ring#prop6)의 adjoint $\phi_!\dashv \phi^\ast$가 그대로 $\varphi^\ast\dashv \varphi_\ast$로 옮겨진다.
+두 연산 모두 affine 위에서는 module의 친숙한 연산으로 환원된다. $\varphi$가 affine scheme들 사이의 morphism $\Spec B \rightarrow \Spec A$, 즉 ring homomorphism $\phi:A \rightarrow B$로부터 온다면, $A$-module $M$의 pullback은 extension of scalars $\widetilde{M\otimes_A B}$이고 $B$-module $N$의 pushforward는 restriction of scalars $\widetilde{\phi^\ast N}$이다. ([\[대수적 구조\] §스칼라의 변환, ⁋정의 1](/ko/math/algebraic_structures/change_of_base_ring#def1), [스칼라의 변환, ⁋정의 3](/ko/math/algebraic_structures/change_of_base_ring#def3)) 그럼 [\[대수적 구조\] §스칼라의 변환, ⁋명제 6](/ko/math/algebraic_structures/change_of_base_ring#prop6)의 adjoint $\phi_!\dashv \phi^\ast$가 그대로 $\varphi^\ast\dashv \varphi_\ast$로 옮겨진다.
 
 이제 자연스러운 질문은 이 두 연산이 quasi-coherence를 보존하는가이며, 이에 대한 대답은 두 연산에 따라 갈린다. 즉 pullback의 경우는 항상 보존되지만, pushforward의 경우는 추가 조건이 필요하다. 직관적으로 이는 quasi-coherence가 affine chart 위에서는 free $\mathcal{O}_X$-module의 presentation 
 

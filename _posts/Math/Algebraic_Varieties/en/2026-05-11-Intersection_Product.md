@@ -40,20 +40,20 @@ $$\mathcal{O}_{\mathbb{A}^2, 0} / (\y, \y - \x^2) = \mathcal{O}_{\mathbb{A}^2, 0
 and this quotient is a 2-dimensional $\mathbb{K}$-vector space with basis $\{1, \x\}$. Hence $i_0(V, W) = 2$. This agrees with the fact that the curve $W$ is tangent to $V$ with order 2 at $\x=0$. More generally, for $V=\{ \y = 0\}$ and $W=\{\y = \x^n\}$ we have $i_0(V, W) = n$.
 :::
 
-The above is an example of two 1-dimensional subvarieties meeting in dimension 2, which we already briefly introduced in [§Riemann–Roch Theorem on Surfaces, ⁋Definition 1](/en/math/algebraic_varieties/riemann_roch_surfaces#def1). In that post we introduced the notion of transversal intersection, which we now define formally.
+The above is an example of two 1-dimensional subvarieties meeting in dimension 2, which we already briefly introduced in [§The Riemann–Roch Theorem for Surfaces, ⁋Definition 1](/en/math/algebraic_varieties/riemann_roch_surfaces#def1). In that post we introduced the notion of transversal intersection, which we now define formally.
 
 ::: Definition 3
 Two varieties $V, W \subseteq \mathbb{A}^n$ *intersect transversely* at a point $p \in V \cap W$ if the sum of their tangent spaces fills the whole space.
 :::
 
-Then the following two propositions are natural generalizations of [§Riemann–Roch Theorem on Surfaces, ⁋Proposition 2](/en/math/algebraic_varieties/riemann_roch_surfaces#prop2).
+Then the following two propositions are natural generalizations of [§The Riemann–Roch Theorem for Surfaces, ⁋Proposition 2](/en/math/algebraic_varieties/riemann_roch_surfaces#prop2).
 
 ::: Proposition 4
 Intersection multiplicity satisfies the following conditions.
 
 1. For any $p$ and $V,W$, we always have $0\leq i_p(V,W)<\infty$, and $i_p(V,W)=0$ holds exactly when $p\not\in V\cap W$.
 2. $V,W$ intersect transversely at $p$ if and only if $i_p(V,W)=1$.
-3. $i_p$ satisfies all the conditions of [§Riemann–Roch Theorem on Surfaces, ⁋Proposition 2](/en/math/algebraic_varieties/riemann_roch_surfaces#prop2).
+3. $i_p$ satisfies all the conditions of [§The Riemann–Roch Theorem for Surfaces, ⁋Proposition 2](/en/math/algebraic_varieties/riemann_roch_surfaces#prop2).
 :::
 
 ## Definition of Intersection Product

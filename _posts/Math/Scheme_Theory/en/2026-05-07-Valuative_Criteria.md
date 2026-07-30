@@ -14,13 +14,13 @@ translated_at: 2026-07-27T19:45:02+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-07-27T19:45:02+00:00
 ---
-In this post we define separated morphisms and proper morphisms. In previous posts we defined open subschemes ([§Schemes, ⁋Definition 4](/en/math/scheme_theory/schemes#def4)), examined closed embeddings, the closed subschemes obtained from them, and ideal sheaves ([§Closed Subschemes, ⁋Definition 2](/en/math/scheme_theory/closed_subschemes#def2), [⁋Definition 5](/en/math/scheme_theory/closed_subschemes#def5)). We now add the following concepts.
+In this post we define separated morphisms and proper morphisms. In previous posts we defined open subschemes ([§Schemes, ⁋Definition 4](/en/math/scheme_theory/schemes#def4)), examined closed embeddings, the closed subschemes obtained from them, and ideal sheaves ([§Closed Subschemes, ⁋Definition 2](/en/math/scheme_theory/closed_subschemes#def2), [Closed Subschemes, ⁋Definition 5](/en/math/scheme_theory/closed_subschemes#def5)). We now add the following concepts.
 
 ::: Definition 1
 Let a scheme morphism $\varphi: X \rightarrow Y$ be given.
 
 1. If $\varphi$ induces an isomorphism between open subschemes of $X$ and $Y$, we call $\varphi$ an *open immersion*.
-2. We say $\varphi$ is *projective* if for some suitable $n$, $\varphi$ can be factored as a composition of a closed embedding and a projection $X\hookrightarrow \mathbb{P}^n_Y \rightarrow Y$. ([§Projective Spaces and the Proj Construction](/en/math/scheme_theory/projective_schemes))
+2. We say $\varphi$ is *projective* if for some suitable $n$, $\varphi$ can be factored as a composition of a closed embedding and a projection $X\hookrightarrow \mathbb{P}^n_Y \rightarrow Y$. ([§Projective Schemes](/en/math/scheme_theory/projective_schemes))
 3. We say $\varphi$ is *quasi-projective* if it can be factored as a composition of a suitable open immersion $X \rightarrow X'$ and a projective morphism $X' \rightarrow Y$.
 :::
 
@@ -39,13 +39,13 @@ the only nontrivial open subset of $\Spec A$ is
 
 $$D(\pi)=\Spec A\setminus Z(\mathfrak{m})=\{(0)\}.$$
 
-Then by [§Affine Schemes, ⁋Lemma 6](/en/math/scheme_theory/affine_schemes#lem6),
+Then by [§Affine Scheme, ⁋Lemma 6](/en/math/scheme_theory/affine_schemes#lem6),
 
 $$\mathcal{O}(D(\pi))\cong A_\pi\cong K.$$
 
 Of course $\mathcal{O}(\Spec A)\cong A$.
 
-Meanwhile, the two points of $\Spec A$ can be examined geometrically through their residue fields. Using [§Affine Schemes, ⁋Lemma 8](/en/math/scheme_theory/affine_schemes#lem8),
+Meanwhile, the two points of $\Spec A$ can be examined geometrically through their residue fields. Using [§Affine Scheme, ⁋Lemma 8](/en/math/scheme_theory/affine_schemes#lem8),
 
 $$\mathcal{O}_{(0)}\cong A_{(0)}\cong K,\qquad \mathcal{O}_\mathfrak{m}\cong A_\mathfrak{m}$$
 
@@ -144,7 +144,7 @@ $$Z=\Spec A\times_{X\times_YX}X \longrightarrow \Spec A$$
 
 is also a closed embedding. That closed embeddings are stable under base change is obtained affine-locally from the fact that a base change of $B \rightarrow B/\mathfrak{b}$ is $C \rightarrow C\otimes_B(B/\mathfrak{b})\cong C/\mathfrak{b}C$, which remains surjective. ([§Closed Subschemes, ⁋Proposition 3](/en/math/scheme_theory/closed_subschemes#prop3))
 
-Meanwhile $p_1\circ h\circ j=g_1\circ j=u$ and $p_2\circ h\circ j=g_2\circ j=u$, and $p_1\circ \Delta\circ u=u$ and $p_2\circ\Delta\circ u=u$, so by uniqueness in the universal property $h\circ j=\Delta\circ u$. Therefore $j$ factors through the pullback $Z$, and in particular the image of $Z \rightarrow \Spec A$ is a closed set containing the image of $j$, i.e., the zero ideal $(0)$ of $A$. Since $A$ is a domain, $(0)$ is the generic point of $\Spec A$ ([§Topological Properties of Schemes, ⁋Example 5](/en/math/scheme_theory/topology_of_schemes#ex5)), and hence the only closed subset of $\Spec A$ containing $(0)$ is $\Spec A$ itself. Then $Z$ is of the form $\Spec(A/\mathfrak{a})$ for some ideal $\mathfrak{a}\subseteq A$ as a closed subscheme of $\Spec A$ ([§Closed Subschemes, ⁋Proposition 3](/en/math/scheme_theory/closed_subschemes#prop3)), and that its image is all of $\Spec A$ means that $\mathfrak{a}$ is contained in every prime ideal of $A$, i.e.,
+Meanwhile $p_1\circ h\circ j=g_1\circ j=u$ and $p_2\circ h\circ j=g_2\circ j=u$, and $p_1\circ \Delta\circ u=u$ and $p_2\circ\Delta\circ u=u$, so by uniqueness in the universal property $h\circ j=\Delta\circ u$. Therefore $j$ factors through the pullback $Z$, and in particular the image of $Z \rightarrow \Spec A$ is a closed set containing the image of $j$, i.e., the zero ideal $(0)$ of $A$. Since $A$ is a domain, $(0)$ is the generic point of $\Spec A$ ([§The Topological Structure of Schemes, ⁋Example 5](/en/math/scheme_theory/topology_of_schemes#ex5)), and hence the only closed subset of $\Spec A$ containing $(0)$ is $\Spec A$ itself. Then $Z$ is of the form $\Spec(A/\mathfrak{a})$ for some ideal $\mathfrak{a}\subseteq A$ as a closed subscheme of $\Spec A$ ([§Closed Subschemes, ⁋Proposition 3](/en/math/scheme_theory/closed_subschemes#prop3)), and that its image is all of $\Spec A$ means that $\mathfrak{a}$ is contained in every prime ideal of $A$, i.e.,
 
 $$\mathfrak{a}\subseteq \mathfrak{N}(A)=(0).$$
 
@@ -156,11 +156,11 @@ so $g_1=g_2$. In this direction the assumption that $X$ is Noetherian is not use
 
 Conversely, assume that for any square there exists at most one lifting. By [Proposition 4](#prop4) it suffices to show that $\Delta(X)$ is a closed subset of $X\times_YX$.
 
-First we observe that every point of $\cl(\Delta(X))$ is a specialization of some point of $\Delta(X)$. Since $X$ is a Noetherian scheme, it is also Noetherian as a topological space ([§Topological Properties of Schemes, ⁋Definition 14](/en/math/scheme_theory/topology_of_schemes#def14)), and thus has finitely many irreducible components $X_1,\ldots, X_r$. ([\[Topology\] §Dimension, ⁋Proposition 13](/en/math/topology/dimension#prop13)) Each $X_i$ is an irreducible closed subset, so it has a generic point $\eta_i$ ([§Spectra, ⁋Proposition 16](/en/math/scheme_theory/spectrums#prop16)), and $X=\bigcup_{i=1}^r\cl(\{\eta_i\})$. Now since $\Delta$ is continuous, $\Delta(X)\subseteq \bigcup_{i=1}^r \cl(\{\Delta(\eta_i)\})$ and the right-hand side is a finite union hence closed; conversely each $\Delta(\eta_i)$ belongs to $\Delta(X)$, so we obtain
+First we observe that every point of $\cl(\Delta(X))$ is a specialization of some point of $\Delta(X)$. Since $X$ is a Noetherian scheme, it is also Noetherian as a topological space ([§The Topological Structure of Schemes, ⁋Definition 14](/en/math/scheme_theory/topology_of_schemes#def14)), and thus has finitely many irreducible components $X_1,\ldots, X_r$. ([\[Topology\] §Dimension, ⁋Proposition 13](/en/math/topology/dimension#prop13)) Each $X_i$ is an irreducible closed subset, so it has a generic point $\eta_i$ ([§The Spectrum, ⁋Proposition 16](/en/math/scheme_theory/spectrums#prop16)), and $X=\bigcup_{i=1}^r\cl(\{\eta_i\})$. Now since $\Delta$ is continuous, $\Delta(X)\subseteq \bigcup_{i=1}^r \cl(\{\Delta(\eta_i)\})$ and the right-hand side is a finite union hence closed; conversely each $\Delta(\eta_i)$ belongs to $\Delta(X)$, so we obtain
 
 $$\cl(\Delta(X))=\bigcup_{i=1}^r\cl(\{\Delta(\eta_i)\}).$$
 
-That is, any point of $\cl(\Delta(X))$ is a specialization of some $\Delta(\eta_i)\in \Delta(X)$. ([§Topological Properties of Schemes, ⁋Definition 2](/en/math/scheme_theory/topology_of_schemes#def2)) Therefore if we show that $\Delta(X)$ is closed under specialization, then $\Delta(X)=\cl(\Delta(X))$ and the proof is complete.
+That is, any point of $\cl(\Delta(X))$ is a specialization of some $\Delta(\eta_i)\in \Delta(X)$. ([§The Topological Structure of Schemes, ⁋Definition 2](/en/math/scheme_theory/topology_of_schemes#def2)) Therefore if we show that $\Delta(X)$ is closed under specialization, then $\Delta(X)=\cl(\Delta(X))$ and the proof is complete.
 
 Let $\xi=\Delta(x)\in \Delta(X)$ and $\eta\in\cl(\{\xi\})$. Giving the reduced scheme structure to the closed set $T=\cl(\{\xi\})$ ([§Closed Subschemes, ⁋Definition 14](/en/math/scheme_theory/closed_subschemes#def14)), $T$ is an integral scheme with generic point $\xi$. Choose an affine open subset $\Spec B\subseteq T$ containing $\eta$. Since a generic point belongs to every nonempty open set, $\Spec B$ also contains $\xi$, and $B$ is a domain with $\xi$ corresponding to the zero ideal of $B$, so
 

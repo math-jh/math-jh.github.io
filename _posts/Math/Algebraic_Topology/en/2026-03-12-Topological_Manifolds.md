@@ -43,7 +43,7 @@ An open subspace $U$ of an $m$-manifold $M$ is again an $m$-manifold. Indeed, if
 
 $$\mathcal{B}_U=\left\{B\cap U\mid B\in \mathcal{B}\right\}$$
 
-is a base for $U$, so $U$ is second-countable; a subspace of a Hausdorff space is always Hausdorff ([\[Topology\] §Hausdorff Spaces, §§Subspaces and Products of Hausdorff Spaces](/en/math/topology/Hausdorff_spaces#하우스도르프-공간의-부분공간과-곱)); and if $x\in U$ is arbitrary, then by the assumption that $M$ is locally Euclidean we can choose an open neighborhood $V$ of $x$ in $M$ such that $V$ is homeomorphic to an open subset of $\mathbb{R}^m$, whence $U\cap V$ is an open neighborhood of $x$ in $U$ homeomorphic to an open subset of $\mathbb{R}^m$.
+is a base for $U$, so $U$ is second-countable; a subspace of a Hausdorff space is always Hausdorff ([\[Topology\] §Hausdorff Spaces, §§Subspaces and Products of Hausdorff Spaces](/en/math/topology/Hausdorff_spaces#subspaces-and-products-of-hausdorff-spaces)); and if $x\in U$ is arbitrary, then by the assumption that $M$ is locally Euclidean we can choose an open neighborhood $V$ of $x$ in $M$ such that $V$ is homeomorphic to an open subset of $\mathbb{R}^m$, whence $U\cap V$ is an open neighborhood of $x$ in $U$ homeomorphic to an open subset of $\mathbb{R}^m$.
 :::
 
 Similarly, the set in [\[Topology\] §Hausdorff Spaces, ⁋Corollary 7](/en/math/topology/Hausdorff_spaces#cor7) also yields an example of a topological manifold as follows.
@@ -72,7 +72,7 @@ $$\mathcal{B}=\left\{B_1\times B_2\mid B_i\in \mathcal{B}_i\right\}$$
 is a basis for $M_1\times M_2$, so $M_1\times M_2$ is second countable; the product of Hausdorff spaces is Hausdorff ([\[Topology\] §Hausdorff Spaces, ⁋Proposition 8](/en/math/topology/Hausdorff_spaces#prop8)); and for any $(x_1,x_2)\in M_1\times M_2$, if $U_i$ is a Euclidean neighborhood of $x_i$ in $M_i$, then $U_1\times U_2$ is a Euclidean neighborhood of $(x_1,x_2)$ in $M_1\times M_2$.
 :::
 
-Finally, the general construction we examine is the quotient space. However, as we saw in [\[Topology\] §Hausdorff Spaces, §§Quotient Spaces of Hausdorff Spaces](/en/math/topology/Hausdorff_spaces#하우스도르프-공간의-몫공간), an arbitrary quotient of a Hausdorff space need not be Hausdorff. Moreover, there is no guarantee that the quotient of a Euclidean space is Euclidean, so to show that a quotient space is a topological manifold one must verify the Hausdorff and locally Euclidean conditions separately. On the other hand, second countability follows from the locally Euclidean condition.
+Finally, the general construction we examine is the quotient space. However, as we saw in [\[Topology\] §Hausdorff Spaces, §§Quotient Spaces of Hausdorff Spaces](/en/math/topology/Hausdorff_spaces#quotient-spaces-of-hausdorff-spaces), an arbitrary quotient of a Hausdorff space need not be Hausdorff. Moreover, there is no guarantee that the quotient of a Euclidean space is Euclidean, so to show that a quotient space is a topological manifold one must verify the Hausdorff and locally Euclidean conditions separately. On the other hand, second countability follows from the locally Euclidean condition.
 
 ::: Proposition 6
 For a quotient map $X \rightarrow X/R$, suppose $X$ is second-countable and $X/R$ is locally Euclidean. Then $X/R$ is second countable.

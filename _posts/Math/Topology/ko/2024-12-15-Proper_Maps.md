@@ -86,7 +86,7 @@ $$((g\circ f)\times\id_Y)\circ\Gamma_f=\Gamma_g\circ f$$
 
 ## 옹골성과 보편닫힌사상
 
-아직까지는 이 정의가 옹골성과 관련되어 있는 부분이 보이지 않는데, 이 절에서는 이들 사이의 관계를 살펴본다. 그 전에 [§옹골성, ⁋보조정리 1](/ko/math/topology/compactness#lem1)을 사용하기 위해 filter에 대한 이야기를 조금 해야한다. 
+아직까지는 이 정의가 옹골성과 관련되어 있는 부분이 보이지 않는데, 이 절에서는 이들 사이의 관계를 살펴본다. 그 전에 [§Compactness와 paracompactness, ⁋보조정리 1](/ko/math/topology/compactness#lem1)을 사용하기 위해 filter에 대한 이야기를 조금 해야한다. 
 
 임의의 위상공간 $X$와 그 위의 임의의 filter $\mathcal{F}$가 주어졌다 하자. $X$에 한 점을 추가하여 만든 집합 $X'=X\cup \{\ast_X\}$을 생각하고, 이 위의 filter
 

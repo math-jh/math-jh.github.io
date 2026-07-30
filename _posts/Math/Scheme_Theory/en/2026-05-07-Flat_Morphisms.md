@@ -169,12 +169,12 @@ is the same. Setting $t=\x\y$, the coordinate ring is isomorphic to the integral
 In short, what flatness controls is not whether fibers become singular, but whether fibers continue with their size maintained.
 :::
 
-In the families we have seen so far, the fibers were all curves in $\mathbb{A}^2$, so points at infinity were missing. To include these as well, it is natural to cut the curves inside $\mathbb{P}^2$. ([§Projective Spaces and the Proj Construction](/en/math/scheme_theory/projective_schemes)) Then $X$ is no longer affine, so flatness must be checked on each affine chart.
+In the families we have seen so far, the fibers were all curves in $\mathbb{A}^2$, so points at infinity were missing. To include these as well, it is natural to cut the curves inside $\mathbb{P}^2$. ([§Projective Schemes](/en/math/scheme_theory/projective_schemes)) Then $X$ is no longer affine, so flatness must be checked on each affine chart.
 
 ::: Example 8
 Consider the graded ring $A_\bullet=\mathbb{K}[t][\x,\y,\z]$ graded by the degree in $\x,\y,\z$. Here $t$ has degree $0$, so the base ring is $A_0=\mathbb{K}[t]$. Computing charts, $A_{(\x)}=\mathbb{K}[t][\y/\x,\z/\x]$ so $D_+(\x)$ is $\mathbb{A}^2_{\mathbb{K}[t]}$, and since $t$ has degree $0$ it survives localization. Patching the three charts, $\Proj A_\bullet$ becomes $\mathbb{P}^2\times_\mathbb{K}\mathbb{A}^1_\mathbb{K}$, and since $A_0\subseteq A_{(f)}$ for all $f$, these patch together to give the structure morphism $\Proj A_\bullet \rightarrow \mathbb{A}^1_\mathbb{K}$.
 
-Now consider $\x\z-t\y^2$; since $\x\z$ and $t\y^2$ are both degree $2$ in $\x,\y,\z$, this is a homogeneous element. Here too the fact that $t$ has degree $0$ is used. Therefore $(\x\z-t\y^2)$ is a homogeneous ideal, and by [§Closed Subschemes of Projective Spaces, ⁋Proposition 1](/en/math/scheme_theory/closed_subschemes_of_projective_spaces#prop1),
+Now consider $\x\z-t\y^2$; since $\x\z$ and $t\y^2$ are both degree $2$ in $\x,\y,\z$, this is a homogeneous element. Here too the fact that $t$ has degree $0$ is used. Therefore $(\x\z-t\y^2)$ is a homogeneous ideal, and by [§Closed Subschemes of Projective Space, ⁋Proposition 1](/en/math/scheme_theory/closed_subschemes_of_projective_spaces#prop1),
 
 $$X=\Proj A_\bullet/(\x\z-t\y^2)$$
 
@@ -209,7 +209,7 @@ That is, every point of the affine line except the origin, which is the target o
 That this is not flat is because $(0,1)\neq 0$ while $t\cdot (0,1)=0$, so $t$ is a zerodivisor in $B$. ([Proposition 5](#prop5)) Since $X$ is reduced, we obtain the same conclusion from [Corollary 6](#cor6) as well, because the isolated point among the two components cannot dominate $\mathbb{A}^1_\mathbb{K}$.
 :::
 
-The last example is the case where what is trapped is an embedded point ([§Algebra of Schemes, ⁋Definition 9](/en/math/scheme_theory/algebra_of_schemes#def9)); this time neither the dimension nor the number of points changes, but the length of the fiber differs. ([[Commutative Algebra] §Jordan-Hölder Theorem, ⁋Definition 2](/en/math/commutative_algebra/Jordan-Holder_theorem#def2))
+The last example is the case where what is trapped is an embedded point ([§Algebraic Structure of Schemes, ⁋Definition 9](/en/math/scheme_theory/algebra_of_schemes#def9)); this time neither the dimension nor the number of points changes, but the length of the fiber differs. ([[Commutative Algebra] §Jordan-Hölder Theorem, ⁋Definition 2](/en/math/commutative_algebra/Jordan-Holder_theorem#def2))
 
 ::: Example 10
 Consider the scheme morphism
@@ -233,7 +233,7 @@ Now in the remaining part of the article we examine further geometric properties
 Let $Y$ be a Noetherian integral scheme and $\varphi: X \rightarrow Y$ a finite type morphism. Then there exists a dense open subset $U$ of $Y$ such that $\varphi\rvert^U: \varphi^{-1}(U) \rightarrow U$ is flat.
 :::
 ::: Proof
-Since $Y$ is irreducible, every nonempty open subset of $Y$ is dense. Therefore it suffices to fix one affine open $V=\Spec A$ of $Y$ and find $U$ inside it. Since $Y$ is an integral scheme, $A=\mathcal{O}_Y(V)$ is an integral domain, and since an affine open of a Noetherian scheme is the spectrum of a Noetherian ring, $A$ is also a Noetherian ring. ([§Topology of Schemes, ⁋Lemma 13](/en/math/scheme_theory/topology_of_schemes#lem13))
+Since $Y$ is irreducible, every nonempty open subset of $Y$ is dense. Therefore it suffices to fix one affine open $V=\Spec A$ of $Y$ and find $U$ inside it. Since $Y$ is an integral scheme, $A=\mathcal{O}_Y(V)$ is an integral domain, and since an affine open of a Noetherian scheme is the spectrum of a Noetherian ring, $A$ is also a Noetherian ring. ([§The Topological Structure of Schemes, ⁋Lemma 13](/en/math/scheme_theory/topology_of_schemes#lem13))
 
 On the other hand, since $\varphi$ is of finite type, $\varphi^{-1}(V)$ is covered by finitely many affine opens $\Spec B_1,\ldots, \Spec B_k$ ([§Properties of Scheme Morphisms, ⁋Definition 14](/en/math/scheme_theory/properties_of_scheme_morphisms#def14)), and each $B_i$ is a finite type $A$-algebra. Applying [[Commutative Algebra] §Noether Normalization, ⁋Theorem 5](/en/math/commutative_algebra/noether_normalization#thm5) to $M=B_i$, there exists $0\neq a_i\in A$ such that $(B_i)_{a_i}$ is a free $A_{a_i}$-module. Setting $a=a_1\cdots a_k$, each $(B_i)_a$ is a localization of the free module $(B_i)_{a_i}$ and hence remains a free $A_a$-module, and since free modules are flat, by [Lemma 2](#lem2)
 
@@ -260,9 +260,9 @@ This affine case is resolved by Noetherian induction on closed subsets of $Y$. F
 
 > The image of any finite type morphism of the form $\Spec C \rightarrow Z$ is a constructible subset of $Y$.
 
-Since $A$ is Noetherian, $Y=\Spec A$ is a Noetherian space ([§Topology of Schemes, ⁋Proposition 7](/en/math/scheme_theory/topology_of_schemes#prop7)), and we can use Noetherian induction on it. ([[Topology] §Dimension, ⁋Proposition 14](/en/math/topology/dimension#prop14)) That is, assuming $P(Z)$ holds for every proper closed subset $Z\subsetneq Y$, we show $P(Y)$.
+Since $A$ is Noetherian, $Y=\Spec A$ is a Noetherian space ([§The Topological Structure of Schemes, ⁋Proposition 7](/en/math/scheme_theory/topology_of_schemes#prop7)), and we can use Noetherian induction on it. ([[Topology] §Dimension, ⁋Proposition 14](/en/math/topology/dimension#prop14)) That is, assuming $P(Z)$ holds for every proper closed subset $Z\subsetneq Y$, we show $P(Y)$.
 
-First, for the nilradical $\mathfrak{N}=\mathfrak{N}(A)$ of $A$, since $\mathfrak{N}B$ is a nilpotent ideal of $B$, $\Spec B/\mathfrak{N}B$ and $\Spec B$ have the same underlying topological space, and the same holds for $\Spec A/\mathfrak{N}$ and $\Spec A$. ([§Dimension, §§Dimension of Schemes](/en/math/scheme_theory/dimension#스킴의-차원)) Therefore, if necessary we may replace $A$ by $A/\mathfrak{N}$ and $B$ by $B/\mathfrak{N}B$ to assume $A$ is reduced.
+First, for the nilradical $\mathfrak{N}=\mathfrak{N}(A)$ of $A$, since $\mathfrak{N}B$ is a nilpotent ideal of $B$, $\Spec B/\mathfrak{N}B$ and $\Spec B$ have the same underlying topological space, and the same holds for $\Spec A/\mathfrak{N}$ and $\Spec A$. ([§Dimension, §§Dimension of Schemes](/en/math/scheme_theory/dimension#dimension-of-schemes)) Therefore, if necessary we may replace $A$ by $A/\mathfrak{N}$ and $B$ by $B/\mathfrak{N}B$ to assume $A$ is reduced.
 
 Now let $\mathfrak{p}_1,\ldots, \mathfrak{p}_k$ be the minimal primes of $A$. Then since any prime ideal always contains some minimal prime, $Y=\bigcup_j V(\mathfrak{p}_j)$. If $k\geq 2$, each $V(\mathfrak{p}_j)$ is a proper closed subset of $Y$ and
 
@@ -373,7 +373,7 @@ Another geometric property of flat morphisms is that they send open sets to open
 For a Noetherian scheme $Y$ and a flat finite type morphism $\varphi: X \rightarrow Y$, $\varphi$ is an open map. That is, for any open set $U\subseteq X$, $\varphi(U)$ is an open subset of $Y$.
 :::
 ::: Proof
-Since $Y$ is Noetherian and $\varphi$ is of finite type, each affine open covering $X$ is the spectrum of a finite type algebra over a Noetherian ring and hence Noetherian by [[Commutative Algebra] §Basic Notions, ⁋Theorem 12](/en/math/commutative_algebra/basic_notions#thm12), and since $\varphi$ is quasi-compact, $X$ is also quasi-compact. That is, $X$ is a Noetherian scheme in the sense of [§Topology of Schemes, ⁋Definition 14](/en/math/scheme_theory/topology_of_schemes#def14), and in particular is Noetherian as a topological space. Then an open set $U\subseteq X$ is again Noetherian by [[Topology] §Dimension, ⁋Proposition 13](/en/math/topology/dimension#prop13), and hence quasi-compact by [[Topology] §Dimension, ⁋Proposition 12](/en/math/topology/dimension#prop12), and since the inclusion of an open subscheme is flat ([Example 4](#ex4)), by [Proposition 3](#prop3) the composition $\varphi\vert_U: U \rightarrow Y$ is also flat and of finite type. Therefore it suffices to show the case $U=X$ from the start, i.e. that $\varphi(X)$ is open.
+Since $Y$ is Noetherian and $\varphi$ is of finite type, each affine open covering $X$ is the spectrum of a finite type algebra over a Noetherian ring and hence Noetherian by [[Commutative Algebra] §Basic Notions, ⁋Theorem 12](/en/math/commutative_algebra/basic_notions#thm12), and since $\varphi$ is quasi-compact, $X$ is also quasi-compact. That is, $X$ is a Noetherian scheme in the sense of [§The Topological Structure of Schemes, ⁋Definition 14](/en/math/scheme_theory/topology_of_schemes#def14), and in particular is Noetherian as a topological space. Then an open set $U\subseteq X$ is again Noetherian by [[Topology] §Dimension, ⁋Proposition 13](/en/math/topology/dimension#prop13), and hence quasi-compact by [[Topology] §Dimension, ⁋Proposition 12](/en/math/topology/dimension#prop12), and since the inclusion of an open subscheme is flat ([Example 4](#ex4)), by [Proposition 3](#prop3) the composition $\varphi\vert_U: U \rightarrow Y$ is also flat and of finite type. Therefore it suffices to show the case $U=X$ from the start, i.e. that $\varphi(X)$ is open.
 
 By [Theorem 13](#thm13), $\varphi(X)$ is constructible. Also, given $y\in \varphi(X)$ and its generization $y'$, choosing $x$ with $\varphi(x)=y$ and applying [Proposition 16](#prop16) gives $x'$ with $\varphi(x')=y'$, so $y'\in \varphi(X)$. That is, $\varphi(X)$ is closed under generization. Now from [Lemma 14](#lem14) we obtain that $\varphi(X)$ is open.
 :::

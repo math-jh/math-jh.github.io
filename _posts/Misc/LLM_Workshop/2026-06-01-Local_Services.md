@@ -131,7 +131,7 @@ IdP가 붙은 다음엔 호스트네임마다 **Self-hosted Access 애플리케�
 
 화면에 모인 것들:
 
-- **LLM 할당량** — Claude·Kimi·MiMo 세 모델을 카드 하나로 접어두고, 펼치면 5시간·7일 사용량 막대와 리셋까지 남은 일수, MiMo는 쿠키 만료 여부까지 보인다. 이 숫자는 [HUD](/ko/llm_workshop/hud_display)가 긁어 두는 quota JSON을 그대로 읽는다.
+- **LLM 할당량** — Claude·Kimi·MiMo 세 모델을 카드 하나로 접어두고, 펼치면 5시간·7일 사용량 막대와 리셋까지 남은 일수, MiMo는 쿠키 만료 여부까지 보인다. 이 숫자는 [에이전트 모니터링 HUD](/ko/llm_workshop/hud_display)가 긁어 두는 quota JSON을 그대로 읽는다.
 - **시스템** — CPU·온도·메모리·네트워크. 온도와 CPU는 서버가 48칸짜리 링버퍼에 쌓아 sparkline으로 그리고 짧은 간격으로 갱신한다. CPU/메모리 카드를 누르면 상위 프로세스 목록으로 뒤집힌다.
 - **블로그** — 색인율(색인된 URL 수 / 전체)과, 번역·용어추출·댓글·감사 로그의 신선도.
 - **서비스** — Jekyll, Agent Display, Hermes, Homebridge, 그리고 director/researcher/verifier/reporter 넷으로 나뉜 Research Cron. 각자 살아있는지를 점 하나로 요약하고, 한 role이라도 24시간 넘게 안 돌면 그룹 전체에 경고가 뜬다.

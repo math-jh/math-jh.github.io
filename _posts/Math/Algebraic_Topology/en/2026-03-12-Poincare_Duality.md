@@ -277,7 +277,7 @@ made from such $s_K$ satisfy compatibility with respect to the direct system, an
 
 $$i^\ast\alpha\frown s_{K'}=\alpha\frown i_\ast s_{K'}$$
 
-holds by [§Cup Products, ⁋Proposition 6](/en/math/algebraic_topology/cup_products#prop6), and by the uniqueness in [Lemma 8](#lem8), $i_\ast s_{K'}=s_K$, so we know that this defines the homomorphism $H_c^p(M;A)\rightarrow H_{n-p}(M;A)$ well.
+holds by [§Cup Product, ⁋Proposition 6 (Projection formula)](/en/math/algebraic_topology/cup_products#prop6), and by the uniqueness in [Lemma 8](#lem8), $i_\ast s_{K'}=s_K$, so we know that this defines the homomorphism $H_c^p(M;A)\rightarrow H_{n-p}(M;A)$ well.
 
 Our claim is that this homomorphism $D_M:H_c^p(M;A)\rightarrow H_{n-p}(M;A)$ is an isomorphism, and to show this we use induction via the Mayer–Vietoris sequence, just as in the proof of [Lemma 8](#lem8).
 
@@ -303,7 +303,7 @@ and then applying excision and taking limits, we obtain the following commutativ
 
 {% diagram Math/Algebraic_Topology/Poincare_Duality-4.svg width="38.08em" alt="MVseq_duality" %}
 
-and the induction is completed by the inductive process and [\[Homological Algebra\] §Diagram Chasing, ⁋Corollary 2 (The five lemma)](/en/math/homological_algebra/diagram_chasing#cor2).
+and the induction is completed by the inductive process and [\[Homological Algebra\] §Diagram chasing, ⁋Corollary 2 (The five lemma)](/en/math/homological_algebra/diagram_chasing#cor2).
 
 However, since we do not assume that $M$ is compact, a slight additional argument is needed. First, suppose $M$ is the union of a nested family of open subsets
 

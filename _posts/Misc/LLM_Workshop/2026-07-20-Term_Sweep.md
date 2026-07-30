@@ -63,7 +63,7 @@ weight: 31
 
 > 그 매핑이 거기가 아니라 _data/terms.yml로 병합하고 그걸 source of truth로 써야지.
 
-[단일 소스 원칙](/ko/llm_workshop/single_source)을 정리한 지 열흘 만에 같은 실수를 반복한 셈이다. terms.yml의 `primary` 필드(en/ko)가 유일한 정본이 되었고, 문맥 조건부 판정("작용"은 명사로만, "극한"은 categorical limit일 때만 영어)은 `note` 필드로 들어갔다. 이후의 모든 도구는 이 파일 하나만 읽는다.
+[흩어진 목록을 한 곳으로](/ko/llm_workshop/single_source)을 정리한 지 열흘 만에 같은 실수를 반복한 셈이다. terms.yml의 `primary` 필드(en/ko)가 유일한 정본이 되었고, 문맥 조건부 판정("작용"은 명사로만, "극한"은 categorical limit일 때만 영어)은 `note` 필드로 들어갔다. 이후의 모든 도구는 이 파일 하나만 읽는다.
 
 ## 첫 번째 실행기: 서브에이전트 함대, 그리고 24시간
 

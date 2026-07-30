@@ -18,7 +18,7 @@ The structure sheaf $\mathcal{O}_X$ of a scheme $X$ is itself a sheaf of rings, 
 
 ## $\mathcal{O}_X$-module
 
-First, we define sheaves of modules on a general ringed space $(X, \mathcal{O}_X)$ ([§Affine Schemes, ⁋Definition 1](/en/math/scheme_theory/affine_schemes#def1)).
+First, we define sheaves of modules on a general ringed space $(X, \mathcal{O}_X)$ ([§Affine Scheme, ⁋Definition 1](/en/math/scheme_theory/affine_schemes#def1)).
 
 ::: Definition 1
 An abelian group sheaf $\mathcal{F}$ on a ringed space $(X, \mathcal{O}_X)$ is called an *$\mathcal{O}_X$-module* if, for every open set $U$, $\mathcal{F}(U)$ carries the structure of an $\mathcal{O}_X(U)$-module, and this module structure is compatible with the restriction maps. That is, for $V\subseteq U$ and $a\in \mathcal{O}_X(U)$, $s\in \mathcal{F}(U)$, we have
@@ -50,23 +50,23 @@ Thus, although $\mathcal{O}_X$-modules share many formal properties with ordinar
 
 ## Associated sheaf on an affine scheme
 
-Now fix an affine scheme $\Spec A$, and suppose an $A$-module $M$ is given. We wish to construct an $\mathcal{O}_{\Spec A}$-module on $\Spec A$ from $M$. The construction is modeled directly on that of the structure sheaf $\mathcal{O}_{\Spec A}$: just as the structure sheaf is given by the localization $A_f$ on a principal open set $D(f)$, we attach the module localization $M_f=S_f^{-1}M$ in the same way. ([§Affine Schemes, ⁋Lemma 6](/en/math/scheme_theory/affine_schemes#lem6))
+Now fix an affine scheme $\Spec A$, and suppose an $A$-module $M$ is given. We wish to construct an $\mathcal{O}_{\Spec A}$-module on $\Spec A$ from $M$. The construction is modeled directly on that of the structure sheaf $\mathcal{O}_{\Spec A}$: just as the structure sheaf is given by the localization $A_f$ on a principal open set $D(f)$, we attach the module localization $M_f=S_f^{-1}M$ in the same way. ([§Affine Scheme, ⁋Lemma 6](/en/math/scheme_theory/affine_schemes#lem6))
 
 ::: Lemma 3
 For an $A$-module $M$, define on the base $\{D(f)\}_{f\in A}$ of $\Spec A$
 
 $$\widetilde M(D(f))=M_f$$
 
-and define the restriction map for $D(f)\subseteq D(g)$ to be the canonical localization map $M_g \rightarrow M_f$. Then these data satisfy the two conditions of [§Affine Schemes, ⁋Lemma 6](/en/math/scheme_theory/affine_schemes#lem6), so they extend uniquely to a sheaf on $\Spec A$, and this sheaf is an $\mathcal{O}_{\Spec A}$-module.
+and define the restriction map for $D(f)\subseteq D(g)$ to be the canonical localization map $M_g \rightarrow M_f$. Then these data satisfy the two conditions of [§Affine Scheme, ⁋Lemma 6](/en/math/scheme_theory/affine_schemes#lem6), so they extend uniquely to a sheaf on $\Spec A$, and this sheaf is an $\mathcal{O}_{\Spec A}$-module.
 :::
 ::: Proof
-First, we verify that the restriction map is well defined when $D(f)\subseteq D(g)$. By the same argument as in [§Affine Schemes, ⁋Lemma 5](/en/math/scheme_theory/affine_schemes#lem5), the inclusion $D(f)\subseteq D(g)$ is equivalent to the image of $g$ being a unit in $A_f$, so by the universal property of $A_g$ the map $M_g=M\otimes_A A_g \rightarrow M\otimes_A A_f=M_f$ is uniquely determined. That this map satisfies the restriction condition of [\[Topology\] §Presheaves, ⁋Definition 2](/en/math/topology/presheaves#def2) is immediate from the functoriality of localization.
+First, we verify that the restriction map is well defined when $D(f)\subseteq D(g)$. By the same argument as in [§Affine Scheme, ⁋Lemma 5](/en/math/scheme_theory/affine_schemes#lem5), the inclusion $D(f)\subseteq D(g)$ is equivalent to the image of $g$ being a unit in $A_f$, so by the universal property of $A_g$ the map $M_g=M\otimes_A A_g \rightarrow M\otimes_A A_f=M_f$ is uniquely determined. That this map satisfies the restriction condition of [\[Topology\] §Presheaves, ⁋Definition 2](/en/math/topology/presheaves#def2) is immediate from the functoriality of localization.
 
-We now verify the two sheaf conditions of [§Affine Schemes, ⁋Lemma 6](/en/math/scheme_theory/affine_schemes#lem6). The proof follows that of [§Affine Schemes, ⁋Lemma 6](/en/math/scheme_theory/affine_schemes#lem6) verbatim, except reading the ring $A$ as the module $M$. Concretely, fix $\Spec A=\bigcup_{i\in I}D(f_i)$. For separation, suppose an element $s\in M$ is zero in every $M_{f_i}$; then for each $i$ there exists $m_i$ such that $f_i^{m_i}s=0$, and from $\Spec A=\bigcup D(f_i^{m_i})$ we obtain $a_i\in A$ with $1=\sum a_i f_i^{m_i}$, so
+We now verify the two sheaf conditions of [§Affine Scheme, ⁋Lemma 6](/en/math/scheme_theory/affine_schemes#lem6). The proof follows that of [§Affine Scheme, ⁋Lemma 6](/en/math/scheme_theory/affine_schemes#lem6) verbatim, except reading the ring $A$ as the module $M$. Concretely, fix $\Spec A=\bigcup_{i\in I}D(f_i)$. For separation, suppose an element $s\in M$ is zero in every $M_{f_i}$; then for each $i$ there exists $m_i$ such that $f_i^{m_i}s=0$, and from $\Spec A=\bigcup D(f_i^{m_i})$ we obtain $a_i\in A$ with $1=\sum a_i f_i^{m_i}$, so
 
 $$s=\Bigl(\sum_i a_if_i^{m_i}\Bigr)s=\sum_i a_i(f_i^{m_i}s)=0$$
 
-For gluing, if sections $s_i=a_i/f_i^{m_i}\in M_{f_i}$ given on each $D(f_i)$ agree on overlaps, then as in the proof of [§Affine Schemes, ⁋Lemma 6](/en/math/scheme_theory/affine_schemes#lem6) we use a partition of unity of the form $1=\sum b_i a_i f_i^{Nm_i+m_i}$ to check that $s=\sum b_i a_i f_i^{Nm_i}\in M$ restricts to $s_i$ on every $D(f_i)$. Apart from replacing the multiplication in $A$ by the scalar action on $M$, all calculations are identical.
+For gluing, if sections $s_i=a_i/f_i^{m_i}\in M_{f_i}$ given on each $D(f_i)$ agree on overlaps, then as in the proof of [§Affine Scheme, ⁋Lemma 6](/en/math/scheme_theory/affine_schemes#lem6) we use a partition of unity of the form $1=\sum b_i a_i f_i^{Nm_i+m_i}$ to check that $s=\sum b_i a_i f_i^{Nm_i}\in M$ restricts to $s_i$ on every $D(f_i)$. Apart from replacing the multiplication in $A$ by the scalar action on $M$, all calculations are identical.
 
 Finally, each $\widetilde M(D(f))=M_f$ is a module over $\mathcal{O}_{\Spec A}(D(f))=A_f$, and since the restriction maps are compatible with the scalar action, $\widetilde M$ is an $\mathcal{O}_{\Spec A}$-module.
 :::
@@ -75,7 +75,7 @@ Finally, each $\widetilde M(D(f))=M_f$ is a module over $\mathcal{O}_{\Spec A}(D
 For an $A$-module $M$, the $\mathcal{O}_{\Spec A}$-module $\widetilde M$ on $\Spec A$ defined in [Lemma 3](#lem3) is called the *associated sheaf* of $M$.
 :::
 
-By definition, $\widetilde A=\mathcal{O}_{\Spec A}$, and the global sections of $\widetilde M$ are $\widetilde M(\Spec A)=\widetilde M(D(1))=M_1=M$. The following proposition shows that the associated sheaf enjoys the same local properties as the structure sheaf; it is the module version of [§Affine Schemes, ⁋Lemma 8](/en/math/scheme_theory/affine_schemes#lem8).
+By definition, $\widetilde A=\mathcal{O}_{\Spec A}$, and the global sections of $\widetilde M$ are $\widetilde M(\Spec A)=\widetilde M(D(1))=M_1=M$. The following proposition shows that the associated sheaf enjoys the same local properties as the structure sheaf; it is the module version of [§Affine Scheme, ⁋Lemma 8](/en/math/scheme_theory/affine_schemes#lem8).
 
 ::: Proposition 5
 For an $A$-module $M$, the following hold.
@@ -84,11 +84,11 @@ For an $A$-module $M$, the following hold.
 2. For any $f\in A$, we have $\widetilde M\vert_{D(f)}\cong \widetilde{M_f}$. Here the right-hand side is the associated sheaf of the $A_f$-module $M_f$ on $\Spec A_f\cong D(f)$.
 :::
 ::: Proof
-For the first result, since the $D(f)$ form a base for $\Spec A$ ([\[Topology\] §Bases of Topological Spaces, ⁋Proposition 5](/en/math/topology/topological_bases#prop5)), we have
+For the first result, since the $D(f)$ form a base for $\Spec A$ ([\[Topology\] §Bases of a Topological Space, ⁋Proposition 5](/en/math/topology/topological_bases#prop5)), we have
 
 $$\widetilde M_\mathfrak{p}=\varinjlim_{D(f)\ni \mathfrak{p}}\widetilde M(D(f))=\varinjlim_{f\not\in \mathfrak{p}}M_f$$
 
-On the other hand, exactly as in the proof of [§Affine Schemes, ⁋Lemma 8](/en/math/scheme_theory/affine_schemes#lem8) where $\varinjlim_{f\not\in \mathfrak{p}}A_f\cong A_\mathfrak{p}$ was shown, the universal properties of localization and direct limit yield $\varinjlim_{f\not\in \mathfrak{p}}M_f\cong M_\mathfrak{p}$.
+On the other hand, exactly as in the proof of [§Affine Scheme, ⁋Lemma 8](/en/math/scheme_theory/affine_schemes#lem8) where $\varinjlim_{f\not\in \mathfrak{p}}A_f\cong A_\mathfrak{p}$ was shown, the universal properties of localization and direct limit yield $\varinjlim_{f\not\in \mathfrak{p}}M_f\cong M_\mathfrak{p}$.
 
 For the second result, [§Schemes, ⁋Lemma 2](/en/math/scheme_theory/schemes#lem2) gives $D(f)\cong \Spec A_f$, and under this isomorphism the principal open sets of $\Spec A_f$ are of the form $D(fg)$ for $g\in A$. Then
 
@@ -256,7 +256,7 @@ Let a scheme morphism $\varphi:X \rightarrow Y$ be given.
     Here $\varphi^{-1}$ is the inverse image sheaf of [\[Topology\] §Sheaves, ⁋Definition 10](/en/math/topology/sheaves#def10).
 :::
 
-Both operations reduce on affines to familiar operations on modules. If $\varphi$ comes from a morphism $\Spec B \rightarrow \Spec A$ between affine schemes, that is, from a ring homomorphism $\phi:A \rightarrow B$, then the pullback of an $A$-module $M$ is the extension of scalars $\widetilde{M\otimes_A B}$, and the pushforward of a $B$-module $N$ is the restriction of scalars $\widetilde{\phi^\ast N}$. ([\[Algebraic Structures\] §Change of Base Ring, ⁋Definition 1](/en/math/algebraic_structures/change_of_base_ring#def1), [⁋Definition 3](/en/math/algebraic_structures/change_of_base_ring#def3)) Then the adjunction $\phi_!\dashv \phi^\ast$ of [\[Algebraic Structures\] §Change of Base Ring, ⁋Proposition 6](/en/math/algebraic_structures/change_of_base_ring#prop6) translates directly into $\varphi^\ast\dashv \varphi_\ast$.
+Both operations reduce on affines to familiar operations on modules. If $\varphi$ comes from a morphism $\Spec B \rightarrow \Spec A$ between affine schemes, that is, from a ring homomorphism $\phi:A \rightarrow B$, then the pullback of an $A$-module $M$ is the extension of scalars $\widetilde{M\otimes_A B}$, and the pushforward of a $B$-module $N$ is the restriction of scalars $\widetilde{\phi^\ast N}$. ([\[Algebraic Structures\] §Change of Base Ring, ⁋Definition 1](/en/math/algebraic_structures/change_of_base_ring#def1), [Change of Base Ring, ⁋Definition 3](/en/math/algebraic_structures/change_of_base_ring#def3)) Then the adjunction $\phi_!\dashv \phi^\ast$ of [\[Algebraic Structures\] §Change of Base Ring, ⁋Proposition 6](/en/math/algebraic_structures/change_of_base_ring#prop6) translates directly into $\varphi^\ast\dashv \varphi_\ast$.
 
 The natural question now is whether these two operations preserve quasi-coherence, and the answer differs between the two. Pullback always preserves quasi-coherence, but pushforward requires additional conditions. Intuitively, this is because quasi-coherence on an affine chart arises from a presentation of the form
 
@@ -268,7 +268,7 @@ as a free $\mathcal{O}_X$-module; since $\varphi^\ast$ is a left adjoint, it pre
 For a scheme morphism $\varphi:X \rightarrow Y$ and a quasi-coherent sheaf $\mathcal{G}$ on $Y$, the pullback $\varphi^\ast \mathcal{G}$ is a quasi-coherent sheaf on $X$.
 :::
 ::: Proof
-Since quasi-coherence is an affine-local property ([Theorem 10](#thm10)), it suffices to treat the case $X=\Spec B$, $Y=\Spec A$. Then $\varphi$ comes from a ring homomorphism $\phi:A \rightarrow B$ ([§Affine Schemes, ⁋Proposition 11](/en/math/scheme_theory/affine_schemes#prop11)), and there exists an $A$-module $M$ with $\mathcal{G}=\widetilde M$ ([Theorem 9](#thm9)).
+Since quasi-coherence is an affine-local property ([Theorem 10](#thm10)), it suffices to treat the case $X=\Spec B$, $Y=\Spec A$. Then $\varphi$ comes from a ring homomorphism $\phi:A \rightarrow B$ ([§Affine Scheme, ⁋Proposition 11](/en/math/scheme_theory/affine_schemes#prop11)), and there exists an $A$-module $M$ with $\mathcal{G}=\widetilde M$ ([Theorem 9](#thm9)).
 
 We claim $\varphi^\ast \widetilde M\cong \widetilde{M\otimes_A B}$. To show this, we compare stalks. For any $\mathfrak{q}\in \Spec B$ and $\mathfrak{p}=\phi^{-1}(\mathfrak{q})$, since inverse image and tensor product commute with stalks,
 
@@ -289,7 +289,7 @@ For a quasi-compact and quasi-separated scheme morphism $\varphi:X \rightarrow Y
 ::: Proof
 Since quasi-coherence is an affine-local property ([Theorem 10](#thm10)), it suffices to consider the case $Y=\Spec A$. Since $\varphi$ is quasi-compact, $X$ is covered by finitely many affine open subsets $U_i=\Spec B_i$ ($i=1,\ldots, n$). Also, since $\varphi$ is quasi-separated, each intersection $U_i\cap U_j$ is again covered by finitely many affine opens $U_{ijk}=\Spec C_{ijk}$.
 
-Now let $M=\Gamma(X, \mathcal{F})=\varphi_\ast \mathcal{F}(\Spec A)$; we show $\varphi_\ast \mathcal{F}\cong \widetilde M$. For this, we must verify $\varphi_\ast \mathcal{F}(D(g))\cong M_g$ for each $D(g)\subseteq \Spec A$. By definition, $\varphi_\ast \mathcal{F}(D(g))=\mathcal{F}(\varphi^{-1}(D(g)))$, and by the sheaf condition ([§Affine Schemes, ⁋Lemma 6](/en/math/scheme_theory/affine_schemes#lem6) and the general sheaf axiom for sheaves) we obtain the equalizer
+Now let $M=\Gamma(X, \mathcal{F})=\varphi_\ast \mathcal{F}(\Spec A)$; we show $\varphi_\ast \mathcal{F}\cong \widetilde M$. For this, we must verify $\varphi_\ast \mathcal{F}(D(g))\cong M_g$ for each $D(g)\subseteq \Spec A$. By definition, $\varphi_\ast \mathcal{F}(D(g))=\mathcal{F}(\varphi^{-1}(D(g)))$, and by the sheaf condition ([§Affine Scheme, ⁋Lemma 6](/en/math/scheme_theory/affine_schemes#lem6) and the general sheaf axiom for sheaves) we obtain the equalizer
 
 $$\mathcal{F}(\varphi^{-1}(D(g)))=\ker\Bigl(\prod_i \mathcal{F}(U_i\cap \varphi^{-1}(D(g))) \rightrightarrows \prod_{i,j,k}\mathcal{F}(U_{ijk}\cap \varphi^{-1}(D(g)))\Bigr)$$
 
@@ -314,7 +314,7 @@ The most important application of the fact that pushforward preserves quasi-cohe
 For a closed embedding $\iota:Z \rightarrow X$ ([§Closed Subschemes, ⁋Definition 2](/en/math/scheme_theory/closed_subschemes#def2)), both $\iota_\ast \mathcal{O}_Z$ and the ideal sheaf $\mathcal{I}_{Z/X}$ are quasi-coherent sheaves on $X$.
 :::
 ::: Proof
-Among the three hypotheses of [Theorem 16](#thm16), the fact that $\mathcal{O}_Z$ is a quasi-coherent sheaf on $Z$ follows immediately from $\mathcal{O}_Z\vert_{\Spec B}=\widetilde B$ on each affine open subset $\Spec B\subseteq Z$. Hence we only need to verify that $\iota$ is quasi-compact and quasi-separated. Fix an affine open subset $U\cong \Spec A$ of $X$ and let $W=\iota^{-1}(U)$. Since $\iota$ is a continuous map that is a homeomorphism between $Z$ and a closed subset of $X$, $W$ is homeomorphic to the closed subset $C=\iota(Z)\cap U$ of $U$. But an affine scheme is quasi-compact ([§Spectra, ⁋Lemma 12](/en/math/scheme_theory/spectrums#lem12)), and a closed subset of a quasi-compact space is quasi-compact, so $W$ is also quasi-compact. That is, $\iota$ is a quasi-compact morphism. ([§Properties of Scheme Morphisms, ⁋Definition 2](/en/math/scheme_theory/properties_of_scheme_morphisms#def2))
+Among the three hypotheses of [Theorem 16](#thm16), the fact that $\mathcal{O}_Z$ is a quasi-coherent sheaf on $Z$ follows immediately from $\mathcal{O}_Z\vert_{\Spec B}=\widetilde B$ on each affine open subset $\Spec B\subseteq Z$. Hence we only need to verify that $\iota$ is quasi-compact and quasi-separated. Fix an affine open subset $U\cong \Spec A$ of $X$ and let $W=\iota^{-1}(U)$. Since $\iota$ is a continuous map that is a homeomorphism between $Z$ and a closed subset of $X$, $W$ is homeomorphic to the closed subset $C=\iota(Z)\cap U$ of $U$. But an affine scheme is quasi-compact ([§The Spectrum, ⁋Lemma 12](/en/math/scheme_theory/spectrums#lem12)), and a closed subset of a quasi-compact space is quasi-compact, so $W$ is also quasi-compact. That is, $\iota$ is a quasi-compact morphism. ([§Properties of Scheme Morphisms, ⁋Definition 2](/en/math/scheme_theory/properties_of_scheme_morphisms#def2))
 
 Quasi-separatedness is also checked from the topology of $C$ alone. Since $\{D(f)\}_{f\in A}$ is a base for $U$, any open subset of $C$ is a union of sets of the form $C\cap D(f)$, and each $C\cap D(f)$ is a closed subset of $D(f)\cong \Spec A_f$ which is quasi-compact, hence quasi-compact. Thus any quasi-compact open subset of $C$ can be written as a finite union of such $C\cap D(f)$, and the intersection of two such sets is a finite union of sets of the form $C\cap D(f)\cap D(g)=C\cap D(fg)$, which is again quasi-compact. That is, $W$ is a quasi-separated scheme, and since $U$ was an arbitrary affine open subset, $\iota$ is a quasi-separated morphism. ([§Properties of Scheme Morphisms, ⁋Definition 5](/en/math/scheme_theory/properties_of_scheme_morphisms#def5)) By [Theorem 16](#thm16), $\iota_\ast \mathcal{O}_Z$ is a quasi-coherent sheaf on $X$.
 

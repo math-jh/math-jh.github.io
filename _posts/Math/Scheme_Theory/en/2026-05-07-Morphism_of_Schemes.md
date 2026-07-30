@@ -14,7 +14,7 @@ translated_at: 2026-07-27T00:45:02+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-07-27T00:45:02+00:00
 ---
-By definition, $\Sch$ is a full subcategory of $\LRS$. ([§Schemes, ⁋Definition 1](/en/math/scheme_theory/schemes#def1)) That is, given two schemes $X,Y$, a scheme morphism from $X$ to $Y$ is given by a continuous map $\varphi: X \rightarrow Y$ and a morphism $\varphi^\sharp: \mathcal{O}_Y \rightarrow \varphi_\ast \mathcal{O}_X$ of structure sheaves, where $\varphi^\sharp$ must become a local homomorphism upon restriction to each stalk. ([§Affine Schemes, ⁋Definition 2](/en/math/scheme_theory/affine_schemes#def2))
+By definition, $\Sch$ is a full subcategory of $\LRS$. ([§Schemes, ⁋Definition 1](/en/math/scheme_theory/schemes#def1)) That is, given two schemes $X,Y$, a scheme morphism from $X$ to $Y$ is given by a continuous map $\varphi: X \rightarrow Y$ and a morphism $\varphi^\sharp: \mathcal{O}_Y \rightarrow \varphi_\ast \mathcal{O}_X$ of structure sheaves, where $\varphi^\sharp$ must become a local homomorphism upon restriction to each stalk. ([§Affine Scheme, ⁋Definition 2](/en/math/scheme_theory/affine_schemes#def2))
 
 Thus a scheme morphism $f:X \rightarrow Y$ is fundamentally an object we have already defined. In the next post we will examine properties of scheme morphisms; before that, we present four ways to understand them.
 
@@ -40,7 +40,7 @@ For the first claim, for any open subset $W\subseteq V$, the maps
 
 $$\mathcal{O}_Y(W) \rightarrow \varphi_\ast \mathcal{O}_X(W)=\mathcal{O}_X(\varphi^{-1}(W)) \rightarrow \mathcal{O}_X(\varphi^{-1}(W)\cap U)$$
 
-obtained by composing $\varphi^\sharp(W):\mathcal{O}_Y(W)\rightarrow\varphi_\ast \mathcal{O}_X(W)$ with the restriction to $U$ define the sheaf morphism $\mathcal{O}_Y\vert_V \rightarrow ((\varphi\vert_U)\vert^V)_\ast(\mathcal{O}_X\vert_U)$ that we must examine. The map this induces on the stalk at any $x\in U$ is determined by germs alone, so it coincides with $\mathcal{O}_{Y,\varphi(x)} \rightarrow \mathcal{O}_{X,x}$ induced by the original $\varphi$, and hence is a local homomorphism. Thus $(\varphi\vert_U)\vert^V$ is a morphism of $\LRS$, and since $U$ and $V$ are affine schemes, by [§Affine Schemes, ⁋Proposition 11](/en/math/scheme_theory/affine_schemes#prop11) it is induced from a unique ring homomorphism $B \rightarrow A$.
+obtained by composing $\varphi^\sharp(W):\mathcal{O}_Y(W)\rightarrow\varphi_\ast \mathcal{O}_X(W)$ with the restriction to $U$ define the sheaf morphism $\mathcal{O}_Y\vert_V \rightarrow ((\varphi\vert_U)\vert^V)_\ast(\mathcal{O}_X\vert_U)$ that we must examine. The map this induces on the stalk at any $x\in U$ is determined by germs alone, so it coincides with $\mathcal{O}_{Y,\varphi(x)} \rightarrow \mathcal{O}_{X,x}$ induced by the original $\varphi$, and hence is a local homomorphism. Thus $(\varphi\vert_U)\vert^V$ is a morphism of $\LRS$, and since $U$ and $V$ are affine schemes, by [§Affine Scheme, ⁋Proposition 11](/en/math/scheme_theory/affine_schemes#prop11) it is induced from a unique ring homomorphism $B \rightarrow A$.
 
 For the second claim, by the gluing condition the continuous maps $\varphi_i: U_i \rightarrow V_i\hookrightarrow Y$ agree on overlaps, so by [[Topology] §Presheaves, ⁋Lemma 1](/en/math/topology/presheaves#lem1) they glue to a continuous map $\varphi: X \rightarrow Y$. We now define the sheaf morphism $\varphi^\sharp$. Given an open subset $W\subseteq Y$ and $s\in \mathcal{O}_Y(W)$, consider the sections
 
@@ -49,14 +49,14 @@ $$s_i:=\varphi_i^\sharp(W)(s)\in \mathcal{O}_X(\varphi^{-1}(W)\cap U_i).$$
 These also agree on overlaps for the same reason, and since $\{\varphi^{-1}(W)\cap U_i\}$ is an open covering of $\varphi^{-1}(W)$, the two conditions of [[Topology] §Sheaves, ⁋Definition 1](/en/math/topology/sheaves#def1) yield a unique glued section $s'\in \mathcal{O}_X(\varphi^{-1}(W))$. Defining $\varphi^\sharp(W): s\mapsto s'$, compatibility with restriction maps can be checked on each $U_i$, and the map induced by $\varphi^\sharp$ on the stalk at $x\in U_i$ coincides with that induced by $\varphi_i^\sharp$, so it is a local homomorphism. Hence $\varphi$ is a scheme morphism, and since the condition $(\varphi\vert_{U_i})\vert^{V_i}=\varphi_i$ completely determines $\varphi$, such a morphism is unique.
 :::
 
-The first claim is nothing more than applying the fact from [§Affine Schemes, ⁋Proposition 11](/en/math/scheme_theory/affine_schemes#prop11) that $\AffSch$ is a full subcategory of $\LRS$ to the local picture of a scheme morphism. However, one must be careful: the gluing condition in the second claim is not expressed as a condition between ring homomorphisms. When $V_i\neq V_k$, we cannot compare $\varphi_i$ and $\varphi_k$ within a single affine scheme, so we must compare them inside $Y$; moreover $U_i\cap U_k$ is generally not an affine scheme. Thus the data given for gluing scheme morphisms are ring homomorphisms, but the condition determining whether they glue is not.
+The first claim is nothing more than applying the fact from [§Affine Scheme, ⁋Proposition 11](/en/math/scheme_theory/affine_schemes#prop11) that $\AffSch$ is a full subcategory of $\LRS$ to the local picture of a scheme morphism. However, one must be careful: the gluing condition in the second claim is not expressed as a condition between ring homomorphisms. When $V_i\neq V_k$, we cannot compare $\varphi_i$ and $\varphi_k$ within a single affine scheme, so we must compare them inside $Y$; moreover $U_i\cap U_k$ is generally not an affine scheme. Thus the data given for gluing scheme morphisms are ring homomorphisms, but the condition determining whether they glue is not.
 
 ::: Example 2
 As an example of a scheme morphism that is not a morphism between affine schemes, for $n\geq 1$ consider the map
 
 $$\varphi:\mathbb{A}_\mathbb{K}^{n+1}\setminus \{0\} \rightarrow \mathbb{P}^n_\mathbb{K}$$
 
-that first appeared for motivation in [§Projective Space and the Proj Construction, §§Projective Space](/en/math/scheme_theory/projective_schemes#사영공간). This formula was traditionally used to construct projective space, but it did not appear in [§Projective Space and the Proj Construction, ⁋Example 12](/en/math/scheme_theory/projective_schemes#ex12) when the traditional projective space was translated into the language of schemes. This morphism of course satisfies the formula
+that first appeared for motivation in [§Projective Schemes, §§Projective Space](/en/math/scheme_theory/projective_schemes#projective-space). This formula was traditionally used to construct projective space, but it did not appear in [§Projective Schemes, ⁋Example 12](/en/math/scheme_theory/projective_schemes#ex12) when the traditional projective space was translated into the language of schemes. This morphism of course satisfies the formula
 
 $$(x_0,\ldots, x_n)\mapsto [x_0:\cdots:x_n],$$
 
@@ -66,7 +66,7 @@ To define $\varphi$ as a scheme morphism, consider the affine open subscheme of 
 
 $$D_+(\x_i)\cong \Spec \mathbb{K}[\x_0,\ldots, \x_n]_{(\x_i)}\cong \Spec \mathbb{K}[\x_{0/i},\ldots, \x_{n/i}]/(\x_{i/i}-1).$$
 
-([§Projective Space and the Proj Construction, ⁋Example 12](/en/math/scheme_theory/projective_schemes#ex12)) Also consider the affine space
+([§Projective Schemes, ⁋Example 12](/en/math/scheme_theory/projective_schemes#ex12)) Also consider the affine space
 
 $$\mathbb{A}^{n+1}_\mathbb{K}=\Spec \mathbb{K}[\x_0,\ldots, \x_n].$$
 
@@ -78,7 +78,7 @@ and $D(\x_i)\cong \Spec \mathbb{K}[\x_0,\ldots, \x_n]_{\x_i}$. Now for each $i$,
 
 $$\phi_i:\mathbb{K}[\x_{0/i},\ldots, \x_{n/i}]\rightarrow\mathbb{K}[\x_0,\ldots, \x_n]_{\x_i};\qquad \x_{k/i}\mapsto  \frac{\x_k}{\x_i}$$
 
-defines, by the first isomorphism theorem, a morphism $\varphi_i$ between affine schemes that gives the desired morphism. That these satisfy the conditions of [Proposition 1](#prop1) can also be checked by a brief computation. Now borrowing the notation from [§Projective Space and the Proj Construction, §§Projective Space](/en/math/scheme_theory/projective_schemes#사영공간) again, on each $D(\x_i)$ these are given by the formula
+defines, by the first isomorphism theorem, a morphism $\varphi_i$ between affine schemes that gives the desired morphism. That these satisfy the conditions of [Proposition 1](#prop1) can also be checked by a brief computation. Now borrowing the notation from [§Projective Schemes, §§Projective Space](/en/math/scheme_theory/projective_schemes#projective-space) again, on each $D(\x_i)$ these are given by the formula
 
 $$(x_0,\ldots, x_n) \rightarrow \left[\frac{x_0}{x_i}:\cdots:\frac{x_{i-1}}{x_i}:1:\frac{x_{i+1}}{x_i}:\cdots:\frac{x_n}{x_i} \right],$$
 
@@ -111,7 +111,7 @@ Then via this structure morphism we may regard $\mathbb{A}^n_\mathbb{K}$ as a $\
 $$\mathbb{A}^n_\mathbb{K}=\Spec \mathbb{K}[\x_1,\ldots, \x_n] \rightarrow \Spec \mathbb{K}.$$
 :::
 
-As above, when $S$ is an affine scheme $S=\Spec A$, it is common to call an $S$-scheme an $A$-scheme by a slight abuse of language. Then by [§Affine Schemes, ⁋Theorem 13](/en/math/scheme_theory/affine_schemes#thm13), fixing an arbitrary ring $A$ and giving a scheme $X$ an $A$-scheme structure is precisely the same as
+As above, when $S$ is an affine scheme $S=\Spec A$, it is common to call an $S$-scheme an $A$-scheme by a slight abuse of language. Then by [§Affine Scheme, ⁋Theorem 13](/en/math/scheme_theory/affine_schemes#thm13), fixing an arbitrary ring $A$ and giving a scheme $X$ an $A$-scheme structure is precisely the same as
 
 $$\Hom_\Sch(X, \Spec A)=\Hom_\LRS(X, \Spec A)\cong \Hom_\cRing(A, \Gamma(X, \mathcal{O}_X)).$$
 
@@ -176,7 +176,7 @@ $$\begin{aligned}\{\text{points $(x_1,\ldots, x_n)\in \mathbb{K}^n$}\}&\rightarr
 As above, if $X$ is of the form $\Spec A$, we simply call this an $A$-point. The usefulness of this concept can also be seen in the following example.
 
 ::: Example 8
-Consider the $\mathbb{Z}$-scheme $X=\Spec\mathbb{Z}[\x_1,\ldots, \x_n]/(f_1,\ldots, f_r)$ defined by integer-coefficient polynomials $f_1,\ldots, f_r\in\mathbb{Z}[\x_1,\ldots, \x_n]$. Then by [§Affine Schemes, ⁋Theorem 13](/en/math/scheme_theory/affine_schemes#thm13), a $\mathbb{Q}$-point $\Spec\phi: \Spec \mathbb{Q}\rightarrow X$ of $X$ corresponds to a ring homomorphism $\phi:\mathbb{Z}[\x_1,\ldots, \x_n]/(f_1,\ldots, f_r)\rightarrow\mathbb{Q}$, and since $\phi$ is canonically given over $\mathbb{Z}$, this is again in bijection with the rational solutions $(x_1,\ldots, x_n)\in\mathbb{Q}^n$ of
+Consider the $\mathbb{Z}$-scheme $X=\Spec\mathbb{Z}[\x_1,\ldots, \x_n]/(f_1,\ldots, f_r)$ defined by integer-coefficient polynomials $f_1,\ldots, f_r\in\mathbb{Z}[\x_1,\ldots, \x_n]$. Then by [§Affine Scheme, ⁋Theorem 13](/en/math/scheme_theory/affine_schemes#thm13), a $\mathbb{Q}$-point $\Spec\phi: \Spec \mathbb{Q}\rightarrow X$ of $X$ corresponds to a ring homomorphism $\phi:\mathbb{Z}[\x_1,\ldots, \x_n]/(f_1,\ldots, f_r)\rightarrow\mathbb{Q}$, and since $\phi$ is canonically given over $\mathbb{Z}$, this is again in bijection with the rational solutions $(x_1,\ldots, x_n)\in\mathbb{Q}^n$ of
 
 $$f_1(x_1,\ldots, x_n)=\cdots=f_r(x_1,\ldots, x_n)=0.$$
 

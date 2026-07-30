@@ -78,7 +78,7 @@ Now suppose a $C^\infty$ function $F:M\rightarrow N$ is given. Then the linear m
 
 $$\bigwedge({dF}_p^\ast):\bigwedge(T_{F(p)}^\ast N)\rightarrow\bigwedge(T_p^\ast M).$$
 
-([\[Multilinear Algebra\] §Tensor Algebras, ⁋Definition 10](/en/math/multilinear_algebra/tensor_algebras#def10)) Let $F^\ast$ denote the linear map $\Omega^\ast(N)\rightarrow\Omega^\ast(M)$ obtained by assigning $\bigwedge({dF}_p^\ast)$ to each point $p$. That is, for any $\omega\in\Omega^\ast(N)$,
+([\[Multilinear Algebra\] §Tensor Algebra, ⁋Definition 10](/en/math/multilinear_algebra/tensor_algebras#def10)) Let $F^\ast$ denote the linear map $\Omega^\ast(N)\rightarrow\Omega^\ast(M)$ obtained by assigning $\bigwedge({dF}_p^\ast)$ to each point $p$. That is, for any $\omega\in\Omega^\ast(N)$,
 
 $$(F^\ast\omega)_p=\bigwedge({dF}_p^\ast)(\omega_{F(p)}).$$
 

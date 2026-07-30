@@ -44,7 +44,7 @@ Under the assumption that the interval is connected, the constant of integration
 
 ## Properties and Examples of Indefinite Integrals
 
-Meanwhile, in [§Differentiation Rules](/en/math/calculus/differentiation_rules) we examined the derivatives of various functions, and because indefinite integration is the reverse of differentiation, we can derive integration formulas from them. Before doing so, let us establish the linearity of the indefinite integral.
+Meanwhile, in [§Differentiation](/en/math/calculus/differentiation_rules) we examined the derivatives of various functions, and because indefinite integration is the reverse of differentiation, we can derive integration formulas from them. Before doing so, let us establish the linearity of the indefinite integral.
 
 ::: Proposition 3 (Linearity of the Indefinite Integral)
 If $f$ and $g$ have antiderivatives and $a, b$ are constants, then
@@ -53,14 +53,14 @@ $$\int \bigl(a f(x) + b g(x)\bigr)\mathop{dx} = a\int f(x)\mathop{dx} + b\int g(
 :::
 
 ::: Proof
-Let $F$ and $G$ be antiderivatives of $f$ and $g$, respectively. Then by [§Derivatives, ⁋Proposition 4](/en/math/calculus/derivatives#prop4),
+Let $F$ and $G$ be antiderivatives of $f$ and $g$, respectively. Then by [§Differentiation and Derivatives, ⁋Proposition 4](/en/math/calculus/derivatives#prop4),
 
 $$(aF + bG)' = aF' + bG' = af + bg,$$
 
 so $aF + bG$ is an antiderivative of $af + bg$.
 :::
 
-Now, reversing the derivative formulas from [§Differentiation Rules](/en/math/calculus/differentiation_rules), we obtain the following basic formulas. That is, differentiating the right-hand side of each formula yields the integrand.
+Now, reversing the derivative formulas from [§Differentiation](/en/math/calculus/differentiation_rules), we obtain the following basic formulas. That is, differentiating the right-hand side of each formula yields the integrand.
 
 $$\int x^r\mathop{dx} = \frac{x^{r+1}}{r+1} + C\ (r \neq -1), \qquad \int \frac{1}{x}\mathop{dx} = \ln\lvert x\rvert + C,$$
 
@@ -74,7 +74,7 @@ $$\tan^2 x = \sec^2 x - 1$$
 
 or splitting the fraction $(x^2+1)/x$ into $x + 1/x$ so that each term matches the formulas above.
 
-In particular, the two especially useful techniques of substitution and integration by parts are, respectively, the reversals of [§Differentiation Rules, ⁋Theorem 4](/en/math/calculus/differentiation_rules#thm4) and [§Differentiation Rules, ⁋Proposition 3](/en/math/calculus/differentiation_rules#prop3).
+In particular, the two especially useful techniques of substitution and integration by parts are, respectively, the reversals of [§Differentiation, ⁋Theorem 4 (Chain Rule)](/en/math/calculus/differentiation_rules#thm4) and [§Differentiation, ⁋Proposition 3 (Product Rule)](/en/math/calculus/differentiation_rules#prop3).
 
 ::: Theorem 4 (Integration by Substitution)
 If $g$ is differentiable and $f$ is continuous, then
@@ -83,7 +83,7 @@ $$\int f(g(x)) g'(x) \mathop{dx} = \int f(u) \mathop{du} \quad (u = g(x)).$$
 :::
 
 ::: Proof
-Let $F$ be an antiderivative of $f$. Then by [§Differentiation Rules, ⁋Theorem 4](/en/math/calculus/differentiation_rules#thm4),
+Let $F$ be an antiderivative of $f$. Then by [§Differentiation, ⁋Theorem 4 (Chain Rule)](/en/math/calculus/differentiation_rules#thm4),
 
 $$\frac{d}{\mathop{dx}}F(g(x)) = F'(g(x))g'(x) = f(g(x))g'(x),$$
 
@@ -105,7 +105,7 @@ $$\int u v' \mathop{dx} = uv - \int u' v \mathop{dx}.$$
 :::
 
 ::: Proof
-By [§Differentiation Rules, ⁋Proposition 3](/en/math/calculus/differentiation_rules#prop3), $(uv)' = u'v + uv'$, so $uv' = (uv)' - u'v$. Integrating both sides, we obtain the claim from $\int (uv)' \mathop{dx} = uv$.
+By [§Differentiation, ⁋Proposition 3 (Product Rule)](/en/math/calculus/differentiation_rules#prop3), $(uv)' = u'v + uv'$, so $uv' = (uv)' - u'v$. Integrating both sides, we obtain the claim from $\int (uv)' \mathop{dx} = uv$.
 :::
 
 The key is to choose $u$ as the factor that simplifies upon differentiation and $v'$ as the factor that can be integrated. For example, $\int x e^x \mathop{dx}$ with $u = x$ gives $xe^x - e^x + C$; for functions like logarithms or inverse trigonometric functions whose derivatives are actually simpler, we place them in the $u$ slot with $v' = 1$ (so $\int \ln x \mathop{dx} = x\ln x - x + C$). Sometimes integration by parts does not simplify the integrand but returns it to itself; in that case we treat the original integral as an unknown and solve algebraically.

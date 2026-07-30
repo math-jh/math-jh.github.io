@@ -22,7 +22,7 @@ weight: 29
 관련 파일: [`scripts/translation/translate_worker.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/translation/translate_worker.py)
 {: .notice--info}
 
-[번역 워커](/ko/llm_workshop/translation_worker)는 30분마다 한 번씩 한글 글 한 편을 골라 영어로 옮긴다. 그 구조에서 정작 불안정할 것 같은 부분, 그러니까 LLM이 본문을 번역하는 대목은 오히려 조용했다. 사흘에 걸쳐 계속 어긋난 것은 그 LLM을 감싸고 있는 결정적 코드 쪽이었다. 무엇을 다시 번역할지 고르고, 결과가 성한지 검사하고, 커밋 제목을 붙이는 부분이다. 전부 같은 종류의 실수였다. 코드가 제 상태를 잘못 알고 있었다.
+[자동 번역 워커](/ko/llm_workshop/translation_worker)는 30분마다 한 번씩 한글 글 한 편을 골라 영어로 옮긴다. 그 구조에서 정작 불안정할 것 같은 부분, 그러니까 LLM이 본문을 번역하는 대목은 오히려 조용했다. 사흘에 걸쳐 계속 어긋난 것은 그 LLM을 감싸고 있는 결정적 코드 쪽이었다. 무엇을 다시 번역할지 고르고, 결과가 성한지 검사하고, 커밋 제목을 붙이는 부분이다. 전부 같은 종류의 실수였다. 코드가 제 상태를 잘못 알고 있었다.
 
 ## 26시간 동안 큐를 막은 글
 

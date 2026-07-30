@@ -72,6 +72,6 @@ AAAA  2606:50c0:8003::153
 
 도메인 이전의 가장 큰 목적이었다 — 새 property라면 sitemap report가 frozen 상태에서 벗어나지 않을까. 결과는 아직 모른다. 글을 쓰는 시점에서 새 property의 sitemap 상태는 "submitted, pending"이고, 옛 property가 1.5년째 머무는 상태와 글자 그대로 같다. 며칠 더 지나봐야 알 일이다. 같은 GitHub Pages 호스팅 위에서 도메인만 다르므로, internal flag가 호스트 단위인지 사이트 단위인지에 따라 결과가 갈릴 것이다. 어느 쪽이든 통제할 수 없는 변수이다.
 
-그래도 잃은 것은 거의 없다. 사이트는 더 짧은 주소를 갖게 됐고, SSL 인증서는 GitHub이 발급한 것으로 붙었고, 옛 주소는 모든 트래픽을 새 주소로 301-리다이렉트한다. 그리고 평행하게 도는 [Indexing API 자동화](/ko/llm_workshop/gsc_indexing)는 도메인 이전과 무관하게 계속 새 URL들을 큐에 푸시하고 있다. 그러니 sitemap이 안 풀려도 인덱싱 자체는 진행된다 — 단지 GSC의 sitemap 화면이 계속 frozen으로 보일 뿐이다.
+그래도 잃은 것은 거의 없다. 사이트는 더 짧은 주소를 갖게 됐고, SSL 인증서는 GitHub이 발급한 것으로 붙었고, 옛 주소는 모든 트래픽을 새 주소로 301-리다이렉트한다. 그리고 평행하게 도는 [Sitemap 없이 색인하기](/ko/llm_workshop/gsc_indexing)는 도메인 이전과 무관하게 계속 새 URL들을 큐에 푸시하고 있다. 그러니 sitemap이 안 풀려도 인덱싱 자체는 진행된다 — 단지 GSC의 sitemap 화면이 계속 frozen으로 보일 뿐이다.
 
 결과를 알지 못한 채 다른 작업으로 넘어가는 데 점점 익숙해지고 있다. 그게 좋은 일인지는 잘 모르겠다.

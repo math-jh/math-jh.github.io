@@ -91,7 +91,7 @@ That is, for homogeneous elements $\alpha\in H^p(X;A),\beta\in H^q(X;A),\gamma\i
 - (Associativity) $(\alpha\smile\beta)\smile\gamma=\alpha\smile(\beta\smile\gamma)$
 - (Graded commutativity) $\alpha\smile\beta=(-1)^{pq}\beta\smile\alpha$
 
-To prove this, we naturally apply [§Acyclic models theorem](/en/math/algebraic_topology/acyclic_models_theorem#thm3) to functors from $\Top^2$ (or $\Top^3$) to $\Ch_{\geq 0}(\lMod{A})$.
+To prove this, we naturally apply [§Acyclic Models Theorem](/en/math/algebraic_topology/acyclic_models_theorem#thm3) to functors from $\Top^2$ (or $\Top^3$) to $\Ch_{\geq 0}(\lMod{A})$.
 
 ## Functoriality of the Cup Product
 
@@ -166,7 +166,7 @@ $$\frown:H^p(X;A)\otimes H_{p+q}(X;A) \rightarrow H_q(X;A)$$
 is called the *cap product*.
 :::
 
-Thus $\frown$ takes a homology chain of degree $p+q$ and a cohomology class of degree $p$, pairs the degree $p$ part of the homology chain with the cohomology class via the Kronecker pairing, and then multiplies the resulting scalar with the remaining degree $q$ homology chain. Although this definition may appear contrived at first, the uniqueness in [§Acyclic models theorem](/en/math/algebraic_topology/acyclic_models_theorem#thm3) guarantees that it is the only definition that behaves coherently. Moreover, from this description one recognizes that the cap product is precisely the operation corresponding to the interior product.
+Thus $\frown$ takes a homology chain of degree $p+q$ and a cohomology class of degree $p$, pairs the degree $p$ part of the homology chain with the cohomology class via the Kronecker pairing, and then multiplies the resulting scalar with the remaining degree $q$ homology chain. Although this definition may appear contrived at first, the uniqueness in [§Acyclic Models Theorem](/en/math/algebraic_topology/acyclic_models_theorem#thm3) guarantees that it is the only definition that behaves coherently. Moreover, from this description one recognizes that the cap product is precisely the operation corresponding to the interior product.
 
 The following then holds.
 

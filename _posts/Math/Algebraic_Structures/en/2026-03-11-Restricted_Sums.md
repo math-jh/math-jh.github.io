@@ -14,11 +14,11 @@ translated_at: 2026-06-24T00:30:02+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-06-24T00:30:02+00:00
 ---
-Previously, we verified in [§Direct Products of Groups](/en/math/algebraic_structures/direct_products) that arbitrary products exist in $\Grp$, and in [§Group Homomorphisms](/en/math/algebraic_structures/group_homomorphisms) that every morphism in $\Grp$ has an equalizer. Thus, by the argument following [[Category Theory] §Limits, ⁋Example 7](/en/math/category_theory/limits#ex7), $\Grp$ is a complete category.
+Previously, we verified in [§Direct Product of Groups](/en/math/algebraic_structures/direct_products) that arbitrary products exist in $\Grp$, and in [§Group Homomorphisms](/en/math/algebraic_structures/group_homomorphisms) that every morphism in $\Grp$ has an equalizer. Thus, by the argument following [[Category Theory] §Limits, ⁋Example 7](/en/math/category_theory/limits#ex7), $\Grp$ is a complete category.
 
 On the other hand, every morphism in $\Grp$ has a coequalizer ([§Isomorphism Theorems, ⁋Proposition 8](/en/math/algebraic_structures/isomorphism_theorems#prop8)). Therefore, if $\Grp$ has arbitrary coproducts, it is a cocomplete category, and hence a bicomplete category.
 
-However, as in [§Direct Products of Groups, ⁋Lemma 1](/en/math/algebraic_structures/direct_products#lem1), it is not at all obvious how to put a group structure on the coproduct $\coprod G_i$ in $\Set$ ([[Set Theory] §Sum of Sets, ⁋Proposition 5](/en/math/set_theory/sum_of_sets#prop5)).
+However, as in [§Direct Product of Groups, ⁋Lemma 1](/en/math/algebraic_structures/direct_products#lem1), it is not at all obvious how to put a group structure on the coproduct $\coprod G_i$ in $\Set$ ([[Set Theory] §Sum of Sets, ⁋Proposition 5](/en/math/set_theory/sum_of_sets#prop5)).
 
 In this post, we first show that the category of abelian groups has coproducts. In the next post, by a different method, we show that a group satisfying the universal property of the coproduct exists for <em>arbitrary</em> groups as well.
 

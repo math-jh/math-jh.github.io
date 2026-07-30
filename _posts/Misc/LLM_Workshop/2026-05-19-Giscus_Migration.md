@@ -21,7 +21,7 @@ weight: 15
 관련 파일: [`_config.yml`](https://github.com/math-jh/math-jh.github.io/blob/main/_config.yml), [`_includes/comments-providers/giscus.html`](https://github.com/math-jh/math-jh.github.io/blob/main/_includes/comments-providers/giscus.html), [`scripts/comments/fetch_recent_comments.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/comments/fetch_recent_comments.py)
 {: .notice--info}
 
-이 블로그의 댓글 시스템은 오랫동안 Disqus였다 — 2022년에 [Blog Development 카테고리의 댓글 글](/ko/misc/blog_development/comments_1) 두 편이 그 셋업을 적었고, 그 후로 손댈 일이 거의 없었다. 한 달에 댓글이 한두 건 도착하는 블로그라 시스템을 바꿀 동기도 약했다.
+이 블로그의 댓글 시스템은 오랫동안 Disqus였다 — 2022년에 [댓글 기능 추가 (1)](/ko/misc/blog_development/comments_1) 두 편이 그 셋업을 적었고, 그 후로 손댈 일이 거의 없었다. 한 달에 댓글이 한두 건 도착하는 블로그라 시스템을 바꿀 동기도 약했다.
 
 옮기게 된 동기는 사소한 불편들의 합이었다. 우선 Disqus 무료 plan은 댓글 영역 위/아래로 광고를 보여주는데, 수학 글 아래에 옷 광고가 떠 있는 것은 어울리지 않는다. 그 다음으로, Disqus의 GDPR 트래커 동의 배너가 페이지를 처음 열 때 잠깐 시야를 가린다. 한 번이면 괜찮은데, 시크릿 창에서는 페이지를 열 때마다 다시 나타난다.
 
@@ -65,7 +65,7 @@ comments:
 
 ## 최근 댓글 사이드바
 
-여기까지가 1차 동기 — Disqus 광고와 GDPR 배너 제거 — 의 마무리다. 2차 동기는 *최근 댓글들을 블로그 사이드바에 띄우기*였고, 사용자에게는 이 부분이 Giscus로 옮긴 진짜 이유였다. [최근 글과 최근 댓글을 사이드바에 띄우는 작업](/ko/llm_workshop/recents_sidebar)은 이 마이그레이션을 전제로 하고, 그 작업이 간단했던 것은 Giscus의 데이터가 곧 우리 저장소의 데이터이기 때문이다.
+여기까지가 1차 동기 — Disqus 광고와 GDPR 배너 제거 — 의 마무리다. 2차 동기는 *최근 댓글들을 블로그 사이드바에 띄우기*였고, 사용자에게는 이 부분이 Giscus로 옮긴 진짜 이유였다. [사이드바 최근 글·댓글](/ko/llm_workshop/recents_sidebar)은 이 마이그레이션을 전제로 하고, 그 작업이 간단했던 것은 Giscus의 데이터가 곧 우리 저장소의 데이터이기 때문이다.
 
 `scripts/comments/fetch_recent_comments.py`는 15분에 한 번 GitHub GraphQL API에서 최근 업데이트된 discussion 30개를 가져오고, 각 discussion에서 가장 최근 댓글 한 건을 추려 `_data/recent_comments.yml`에 쓴다. 인증은 `gh auth token`을 쓴다 — 사용자가 이미 GitHub CLI로 로그인되어 있어 토큰을 그대로 가져다 쓸 수 있다.
 

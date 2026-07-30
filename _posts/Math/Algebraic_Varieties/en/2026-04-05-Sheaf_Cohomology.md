@@ -16,7 +16,7 @@ last_polished_at: 2026-07-11T07:30:02+00:00
 ---
 We have seen that line bundles can be used to define various invariants. For example, in [§Line Bundles and Vector Bundles](/en/math/algebraic_varieties/line_bundles) we defined the global section space $\Gamma(X, \mathcal{L})$ of a line bundle $\mathcal{L}$. In particular, in [§Linear Systems, ⁋Definition 9](/en/math/algebraic_varieties/linear_systems#def9) we observed that this dimension plays a crucial role in determining the dimension of the complete linear system, and hence the projective embedding of the variety.
 
-So far we have mainly used the language of line bundles for geometric intuition, but as we saw right after [§Canonical Bundle, ⁋Definition 1](/en/math/algebraic_varieties/canonical_bundle#def1), thinking in terms of the section sheaf of a line bundle means that this can fundamentally be recast in the language of sheaves. In this post we define the notion of sheaf cohomology.
+So far we have mainly used the language of line bundles for geometric intuition, but as we saw right after [§Canonical Line Bundle, ⁋Definition 1](/en/math/algebraic_varieties/canonical_bundle#def1), thinking in terms of the section sheaf of a line bundle means that this can fundamentally be recast in the language of sheaves. In this post we define the notion of sheaf cohomology.
 
 ## Definition as a Derived Functor
 
@@ -26,7 +26,7 @@ However, if global sections were our only concern, there would be no need to thi
 
 $$\Gamma(X, -): \QCoh(X) \rightarrow \Vect_\mathbb{K}; \qquad \mathcal{F} \mapsto \mathcal{F}(X)$$
 
-When we defined quasi-coherent sheaves in [§Canonical Bundle, ⁋Definition 1](/en/math/algebraic_varieties/canonical_bundle#def1), our motivation was that the category $\Bun(X)$ of vector bundles is not an abelian category, so we wanted to consider a larger category that includes kernels and cokernels. From this perspective, it is not surprising that $\QCoh(X)$ becomes an abelian category. [^1]
+When we defined quasi-coherent sheaves in [§Canonical Line Bundle, ⁋Definition 1](/en/math/algebraic_varieties/canonical_bundle#def1), our motivation was that the category $\Bun(X)$ of vector bundles is not an abelian category, so we wanted to consider a larger category that includes kernels and cokernels. From this perspective, it is not surprising that $\QCoh(X)$ becomes an abelian category. [^1]
 
 If $\Gamma(X,-)$ did not lose any information, it would have to be an exact functor. That is, given a short exact sequence of (quasi-coherent) sheaves
 
@@ -44,7 +44,7 @@ is not guaranteed in general. For a concrete example, consider the Euler sequenc
 
 $$0 \rightarrow \Omega^1_{\mathbb{P}^n} \rightarrow \mathcal{O}_{\mathbb{P}^n}(-1)^{\oplus(n+1)} \rightarrow \mathcal{O}_{\mathbb{P}^n} \rightarrow 0$$
 
-([§Canonical Bundle, ⁋Proposition 7](/en/math/algebraic_varieties/canonical_bundle#prop7)). Applying $\Gamma(\mathbb{P}^n, -)$ to this short exact sequence gives
+([§Canonical Line Bundle, ⁋Proposition 7 (Euler Exact Sequence)](/en/math/algebraic_varieties/canonical_bundle#prop7)). Applying $\Gamma(\mathbb{P}^n, -)$ to this short exact sequence gives
 
 $$0 \rightarrow \Gamma(\mathbb{P}^n, \Omega^1_{\mathbb{P}^n}) \rightarrow \Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n}(-1)^{\oplus(n+1)}) \rightarrow \Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n})$$
 
@@ -54,19 +54,19 @@ $$\Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n}(-1)^{\oplus(n+1)}) = 0$$
 
 while $\Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n})=\mathbb{K}$, so surjectivity on the right cannot hold.
 
-The standard way to resolve this is to consider the right derived functor. ([[Homological Algebra] §Derived Functors, ⁋Definition 9](/en/math/homological_algebra/derived_functors#def9)). Specifically, since $\lMod{A}$ has enough injectives, we can show that $\QCoh(X)$ also has enough injective objects, so any quasi-coherent sheaf $\mathcal{F}$ always has an injective resolution $\mathcal{I}^\bullet$, and from this we can define sheaf cohomology via
+The standard way to resolve this is to consider the right derived functor. ([[Homological Algebra] §Derived Functors, ⁋Definition 9](/en/math/homological_algebra/derived_functors#def9)). Specifically, the category $\Sh(X)$ of sheaves of abelian groups on $X$ can be shown to have enough injectives by taking injective objects stalk-wise and then sheafifying, so any sheaf $\mathcal{F}$ always has an injective resolution $\mathcal{I}^\bullet$, and from this we can define sheaf cohomology via
 
 $$0 \rightarrow \Gamma(X, \mathcal{I}^0) \rightarrow \Gamma(X, \mathcal{I}^1) \rightarrow \Gamma(X, \mathcal{I}^2) \rightarrow \cdots$$
 
 ::: Definition 1
-For a quasi-coherent sheaf $\mathcal{F}$ on a variety $X$, we define the $i$th *sheaf cohomology* $H^i(X, \mathcal{F})$ as
+For a sheaf $\mathcal{F}$ on a variety $X$, we define the $i$th *sheaf cohomology* $H^i(X, \mathcal{F})$ as
 
 $$H^i(X, \mathcal{F}) = \frac{\ker(\Gamma(X, \mathcal{I}^i) \rightarrow \Gamma(X, \mathcal{I}^{i+1}))}{\im(\Gamma(X, \mathcal{I}^{i-1}) \rightarrow \Gamma(X, \mathcal{I}^i))}$$
 
-where $\mathcal{I}^\bullet$ is an injective resolution of $\mathcal{F}$.
+where $\mathcal{I}^\bullet$ is an injective resolution of $\mathcal{F}$ in $\Sh(X)$.
 :::
 
-More generally, for any sheaf on $X$, one can show that $\Sh(X)$ has enough injectives by taking injective objects stalk-wise and then sheafifying, but our primary interest is always in quasi-coherent sheaves, so we restrict our attention to the category $\QCoh(X)$.
+Our primary interest is always in quasi-coherent sheaves, but we take resolutions in $\Sh(X)$ rather than in $\QCoh(X)$. The reason is that taking them in $\QCoh(X)$ would leave nothing to measure on affines: if $A$ is the coordinate ring of an affine variety $X$, then $\QCoh(X)$ is equivalent to $\lMod{A}$ and $\Gamma(X, -)$ is the inverse of that equivalence, hence exact, so the higher derived functors defined that way vanish on affines simply by unwinding the definition. [Proposition 12](#prop12) below has content precisely because it measures in the much larger $\Sh(X)$, and the flasque sheaves and the Godement resolution that we treat later are not quasi-coherent either, so they only make sense inside this larger category.
 
 That this is independent of the choice of $\mathcal{I}^\bullet$, and so on, all follow from standard arguments in homological algebra.
 
@@ -104,7 +104,7 @@ $$(d\alpha)_{i_0 \cdots i_{p+1}} = \sum_{k=0}^{p+1} (-1)^k \alpha_{i_0 \cdots \h
 where $\hat{i_k}$ means omitting the index $i_k$.
 :::
 
-As with sheaf cohomology, this definition makes sense for arbitrary sheaves, but we are mainly concerned with $\QCoh(X)$.
+As with sheaf cohomology, this definition also makes sense for arbitrary sheaves, and our primary interest remains $\QCoh(X)$.
 
 For this definition to be well-defined, that is, for $\check{C}^\bullet(\mathcal{U}, \mathcal{F})$ to actually be a complex, the coboundary map must actually be a coboundary map: we need $d^2=0$. This can be verified directly by expanding the above formula and checking the sign differences. In conclusion, $\check{C}^\bullet(\mathcal{U}, \mathcal{F})$ is a cochain complex, and thus we can define the following.
 
@@ -257,7 +257,7 @@ Then the only obstacle to our intuition is how demanding this acyclicity conditi
 For a quasi-coherent sheaf $\mathcal{F} = \widetilde{M}$ on an affine variety $X$, $H^i(X, \mathcal{F}) = 0$ holds for all $i > 0$.
 :::
 
-The proof of this is that if we let $A$ be the coordinate ring of $X$ and find an injective resolution $I^\bullet$ of $M$ in the category $\lMod{A}$, this gives $\widetilde{I^\bullet}$ (which is a resolution in $\QCoh(X)$), and the sheaf given by an injective module is always flasque and hence acyclic.
+The proof of this is that if we let $A$ be the coordinate ring of $X$ and find an injective resolution $I^\bullet$ of $M$ in the category $\lMod{A}$, this gives a resolution $\widetilde{I^\bullet}$ by sheaves on $X$, and the sheaf given by an injective module is always flasque and hence acyclic.
 
 Now consider an arbitrary variety $X$ and a quasi-coherent sheaf $\mathcal{F}$ defined on it, and suppose an affine open cover $\mathcal{U}$ of $X$ is given. Then for these data to satisfy the hypotheses of [Theorem 11](#thm11), every finite intersection of $\mathcal{U}$ must again be affine. If the diagonal
 
@@ -558,7 +558,7 @@ and thus the map $\check{H}^1(\mathcal{U}, \mathcal{O}_X^\times) \rightarrow \Pi
 Conversely, any line bundle $\mathcal{L}$ is represented by transition functions $g_{ij}$ on an appropriate open cover $\mathcal{U}$ by [§Line Bundles and Vector Bundles, ⁋Definition 1](/en/math/algebraic_varieties/line_bundles#def1), and these form a Čech 1-cocycle. Since a line bundle isomorphism corresponds exactly to the equivalence relation by coboundaries, the kernel of this map consists of coboundaries. Therefore $\check{H}^1(\mathcal{U}, \mathcal{O}_X^\times) \rightarrow \Pic(X)$ is injective. Now taking the direct limit gives $\check{H}^1(X, \mathcal{O}_X^\times) \cong \Pic(X)$.
 :::
 
-This proposition shows that the classification of line bundles reduces to a cohomology computation. That is, the problem of classifying elements of $\Pic(X)$ becomes the problem of classifying $\mathcal{O}_X^\times$-valued Čech 1-cocycles, which is encouraging in that it is at least amenable to explicit computation. In the next post [§Cohomology of Projective Spaces](/en/math/algebraic_varieties/cohomology_of_projective_spaces) we compute the cohomology of the line bundle $\mathcal{O}(d)$ on $\mathbb{P}^n$.
+This proposition shows that the classification of line bundles reduces to a cohomology computation. That is, the problem of classifying elements of $\Pic(X)$ becomes the problem of classifying $\mathcal{O}_X^\times$-valued Čech 1-cocycles, which is encouraging in that it is at least amenable to explicit computation. In the next post [§Cohomology of Projective Space](/en/math/algebraic_varieties/cohomology_of_projective_spaces) we compute the cohomology of the line bundle $\mathcal{O}(d)$ on $\mathbb{P}^n$.
 
 ---
 

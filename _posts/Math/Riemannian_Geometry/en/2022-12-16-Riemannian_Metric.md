@@ -22,7 +22,7 @@ $$\bigwedge\nolimits(T^\ast M)\cong\bigoplus_{k=0}^n\bigwedge\nolimits^k(T^\ast 
 
 using exterior algebra in [\[Manifolds\] §Differential Forms](/en/math/manifolds/differential_forms), and defined a smooth section of this bundle as a differential form. The same construction works with the symmetric algebra; unlike the exterior case, the case $k=2$ is of particular interest. This is because the elements of $\mathcal{S}^2(T^\ast M)$ that arise when $k=2$ define symmetric bilinear forms on $TM$.
 
-Fix a point $p\in M$. Then $g_p$ is an element of $\mathcal{S}^2(T^\ast_pM)$. By the same argument we verified after [\[Manifolds\] §Differential Forms, ⁋Definition 1](/en/math/manifolds/differential_forms#def1), we see that $\mathcal{S}^2(T^\ast_pM)\cong(\mathcal{S}^2(T_pM))^\ast$, and by [\[Multilinear Algebra\] §Tensor Algebras, ⁋Proposition 11](/en/math/multilinear_algebra/tensor_algebras#prop11), we may regard $g_p$ as a symmetric multilinear map from $T_pM\times T_pM$ to $\mathbb{R}$. Hence, provided we impose an appropriate non-degeneracy condition on $g_p$, we may view it as an inner product on $T_pM$. ([\[Linear Algebra\] §Inner Product Spaces, ⁋Definition 1](/en/math/linear_algebra/inner_product_spaces#def1))
+Fix a point $p\in M$. Then $g_p$ is an element of $\mathcal{S}^2(T^\ast_pM)$. By the same argument we verified after [\[Manifolds\] §Differential Forms, ⁋Definition 1](/en/math/manifolds/differential_forms#def1), we see that $\mathcal{S}^2(T^\ast_pM)\cong(\mathcal{S}^2(T_pM))^\ast$, and by [\[Multilinear Algebra\] §Tensor Algebra, ⁋Proposition 11](/en/math/multilinear_algebra/tensor_algebras#prop11), we may regard $g_p$ as a symmetric multilinear map from $T_pM\times T_pM$ to $\mathbb{R}$. Hence, provided we impose an appropriate non-degeneracy condition on $g_p$, we may view it as an inner product on $T_pM$. ([\[Linear Algebra\] §Inner Product Spaces, ⁋Definition 1](/en/math/linear_algebra/inner_product_spaces#def1))
 
 ::: Definition 1
 A *Riemannian metric* on a manifold $M$ is a smooth section $g\in\Gamma(\mathcal{S}^2(T^\ast M))$ that is positive-definite in the following sense.
@@ -48,7 +48,7 @@ is also an inner product. Moreover, if $g$ is an inner product and $\alpha$ is a
 
 ## Musical Isomorphism
 
-From an algebraic standpoint, one of the most useful consequences of a non-degenerate pairing is that it induces an isomorphism between $V$ and its dual space $V^\ast$. ([\[Linear Algebra\] §Bilinear Forms, §§Non-Degenerate Bilinear Forms](/en/math/linear_algebra/bilinear_form#non-degenerate-bilinear-forms)) Likewise, if a Riemannian metric $g$ is given, then $g$ induces an isomorphism between the bundles $TM$ and $T^\ast M$ via the formula
+From an algebraic standpoint, one of the most useful consequences of a non-degenerate pairing is that it induces an isomorphism between $V$ and its dual space $V^\ast$. ([\[Linear Algebra\] §Bilinear Forms, §§Non-degenerate Bilinear Forms](/en/math/linear_algebra/bilinear_form#non-degenerate-bilinear-forms)) Likewise, if a Riemannian metric $g$ is given, then $g$ induces an isomorphism between the bundles $TM$ and $T^\ast M$ via the formula
 
 $$\tilde{g}:T_pM\rightarrow T_p^\ast M;\qquad(p,v)\mapsto (p,\langle v,-\rangle)\tag{1}$$
 
