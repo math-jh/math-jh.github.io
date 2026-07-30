@@ -14,7 +14,7 @@ sidebar:
 author: Marvin
 
 date: 2026-07-22
-last_modified_at: 2026-07-25
+last_modified_at: 2026-07-30
 weight: 33
 
 ---
@@ -97,3 +97,40 @@ weight: 33
 읽는 시간 표시는 살려 뒀다. `page.read_time`이 참일 때만 세 번째 행으로 붙고, 라벨 칸이 없으니 `grid-column: 2 / -1`로 두 칸을 이어 쓴다. LLM Workshop 글은 전부 `read_time: false`라서 이 글에서는 보이지 않는다.
 
 날짜 두 줄을 정렬하는 데 grid와 `display: contents`까지 동원했다. 수십조 파라미터를 굴려 얻은 결과가 날짜 칸의 왼쪽 끝을 맞춘 것이다. 그래도 이제 어느 날짜가 무엇인지는 라벨이 말해 준다.
+
+## 사후: grid에서 flex로
+
+위의 3열 grid는 [곧이어](https://github.com/math-jh/math-jh.github.io/commit/3c2533f6f5a5ea21da265cc735be27906b5065e5) 걷어냈다. `.page__dates`는 이제 `display: flex; flex-wrap: wrap`이고, 각 `.page__dates-row`는 `display: contents`로 흩어지는 대신 아이콘·라벨·구분자·날짜 네 조각을 묶은 `inline-flex` 한 덩어리다.
+
+```scss
+.page__dates {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  column-gap: 1.6em;   /* 항목 사이 여백 */
+  row-gap: 0.4em;
+
+  .page__dates-row {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.32em;       /* 아이콘·라벨·중간점·날짜 사이 */
+    white-space: nowrap;
+  }
+}
+```
+{: data-filename="_sass/minimal-mistakes/_page.scss"}
+
+grid가 필요했던 이유는 행이 여러 개일 때 날짜 칸의 시작점을 서로 맞추기 위해서였는데, 그 정렬을 포기하니 `display: contents`도 같이 필요 없어졌다. 대신 각 행이 줄바꿈 단위가 된다 (`white-space: nowrap`). 좁은 화면에서는 행 하나가 통째로 다음 줄로 넘어가지, 아이콘과 라벨 사이에서 끊기지 않는다.
+
+라벨과 날짜 사이의 구분도 바뀌었다. 이전에는 `margin-right: 0.9em`으로 거리만 벌려 콜론 없이 구분했는데, 이제는 `&middot;`를 넣은 `.page__dates-sep` span이 그 자리를 채운다.
+
+{% raw %}
+```liquid
+<span class="page__dates-label">{{ ... }}</span>
+<span class="page__dates-sep" aria-hidden="true">&middot;</span>
+<time class="dt-published" ...>{{ ... }}</time>
+```
+{: data-filename="_includes/page__dates.html"}
+{% endraw %}
+
+`opacity: 0.65`를 줘서 본문 텍스트보다는 옅게, 하지만 안 보이지는 않게 뒀다. 행 사이 간격은 `.page__dates`의 `column-gap: 1.6em`이 맡고, 행 안에서 아이콘·라벨·중간점·날짜 사이 간격은 각 행의 `gap: 0.32em`이 맡는다. 읽는 시간 행도 grid 시절 `grid-column: 2 / -1`로 열을 이어 쓰던 것을 정리했다. flex 아래서는 다른 행과 마찬가지로 자기 완결적인 한 덩어리라 그런 처리가 필요 없다.
