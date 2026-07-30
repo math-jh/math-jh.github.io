@@ -54,21 +54,19 @@ $$\Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n}(-1)^{\oplus(n+1)}) = 0$$
 
 이지만, $\Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n})=\mathbb{K}$이므로 오른쪽 부분의 surjectivity가 성립할 수 없다.
 
-이를 해결하기 위한 표준적인 방법은 right derived functor를 생각하는 것이다. ([\[호몰로지 대수학\] §유도함자, ⁋정의 9](/ko/math/homological_algebra/derived_functors#def9)). 구체적으로, $\lMod{A}$는 enough injective를 가지므로, 이들을 이어붙여 $\QCoh(X)$도 충분한 injective object가 존재하는 것을 보일 수 있으므로 임의의 quasi-coherent sheaf $\mathcal{F}$는 항상 injective resolution $\mathcal{I}^\bullet$을 가지고, 이로부터 다음의
+이를 해결하기 위한 표준적인 방법은 right derived functor를 생각하는 것이다. ([\[호몰로지 대수학\] §유도함자, ⁋정의 9](/ko/math/homological_algebra/derived_functors#def9)). 구체적으로, $X$ 위의 abelian group들의 sheaf들이 이루는 category $\Sh(X)$는 stalk별로 injective object를 잡은 후 sheafification을 취해주면 enough injective를 갖는다는 것을 보일 수 있으므로 임의의 sheaf $\mathcal{F}$는 항상 injective resolution $\mathcal{I}^\bullet$을 가지고, 이로부터 다음의
 
 $$0 \rightarrow \Gamma(X, \mathcal{I}^0) \rightarrow \Gamma(X, \mathcal{I}^1) \rightarrow \Gamma(X, \mathcal{I}^2) \rightarrow \cdots$$
 
 를 통해 다음의 sheaf cohomology를 정의할 수 있다.
 
 ::: 정의 1
-Variety $X$ 위의 quasi-coherent sheaf $\mathcal{F}$에 대하여, $i$번째 *sheaf cohomology* $H^i(X, \mathcal{F})$를
+Variety $X$ 위의 sheaf $\mathcal{F}$에 대하여, $i$번째 *sheaf cohomology* $H^i(X, \mathcal{F})$를
 
 $$H^i(X, \mathcal{F}) = \frac{\ker(\Gamma(X, \mathcal{I}^i) \rightarrow \Gamma(X, \mathcal{I}^{i+1}))}{\im(\Gamma(X, \mathcal{I}^{i-1}) \rightarrow \Gamma(X, \mathcal{I}^i))}$$
 
-으로 정의한다. 여기서 $\mathcal{I}^\bullet$은 $\mathcal{F}$의 injective resolution이다.
+으로 정의한다. 여기서 $\mathcal{I}^\bullet$은 $\Sh(X)$에서의 $\mathcal{F}$의 injective resolution이다.
 :::
-
-더 일반적으로, $X$ 위의 임의의 sheaf에 대해서도 stalk별로 injective object를 잡은 후 sheafification을 취해주면 $\Sh(X)$가 enough injective를 갖는다는 것을 보일 수 있으나, 우리의 주된 관심은 항상 quasi-coherent sheaf 뿐이므로 category $\QCoh(X)$로 우리의 관심을 제한한다.
 
 이것이 $\mathcal{I}^\bullet$의 선택에 무관한 것 등등은 모두 homological algebra의 표준적인 논증으로부터 따라온다.
 
@@ -105,8 +103,6 @@ $$(d\alpha)_{i_0 \cdots i_{p+1}} = \sum_{k=0}^{p+1} (-1)^k \alpha_{i_0 \cdots \h
 
 으로 정의된다. 여기서 $\hat{i_k}$는 index $i_k$를 생략한다는 의미이다.
 :::
-
-Sheaf cohomology에서와 마찬가지로, 이 정의는 임의의 sheaf에 대해서도 말이 되지만, 우리는 주로 $\QCoh(X)$만을 신경쓴다.
 
 이 정의가 잘 정의되기 위해서는, 즉, $\check{C}^\bullet(\mathcal{U}, \mathcal{F})$이 실제로 complex가 되기 위해서는 coboundary map이 실제로 coboundary map이 되어야 한다. 즉 $d^2=0$이어야 한다. 이는 위의 식을 전개해보면 부호 차이로부터 직접 확인할 수 있다. 결론적으로 $\check{C}^\bullet(\mathcal{U}, \mathcal{F})$는 cochain complex이며, 따라서 다음을 정의할 수 있다.
 
@@ -267,7 +263,7 @@ $$\check{H}^n(\mathcal{U}, \mathcal{F}) \cong H^n(X, \mathcal{F})$$
 Affine variety $X$ 위의 quasi-coherent sheaf $\mathcal{F} = \widetilde{M}$에 대하여, $H^i(X, \mathcal{F}) = 0$이 모든 $i > 0$에 대해 성립한다.
 :::
 
-이에 대한 증명은, $X$의 coordinate ring을 $A$라 할 때, $\lMod{A}$ category에서 $M$의 injective resolution $I^\bullet$을 찾으면 이것이 ($\QCoh(X)$에서의 resolution인) $\widetilde{I^\bullet}$을 주며, 이 때 injective module이 주는 sheaf는 항상 flasque이고, 따라서 acyclic이기 때문이다.
+이에 대한 증명은, $X$의 coordinate ring을 $A$라 할 때, $\lMod{A}$ category에서 $M$의 injective resolution $I^\bullet$을 찾으면 이것이 $X$ 위의 sheaf들의 resolution $\widetilde{I^\bullet}$을 주며, 이 때 injective module이 주는 sheaf는 항상 flasque이고, 따라서 acyclic이기 때문이다.
 
 이제 임의의 variety $X$와 그 위에 정의된 quasi-coherent sheaf $\mathcal{F}$를 생각하고, $X$의 affine open cover $\mathcal{U}$가 주어졌다 하자. 그럼 이들 데이터가 [정리 11](#thm11)의 전제조건을 만족하기 위해서는 $\mathcal{U}$의 임의의 유한한 교집합이 다시 affine이어야 하는 것이다. 만일, diagonal
 
@@ -581,9 +577,9 @@ $$g_{ij}^{\mathcal{M}} \cdot \varphi_j(v) = g_{ij}^{\mathcal{M}} h_j^{-1} v = h_
 
 **참고문헌**
 
-**[Har]** R. Hartshorne, *Algebraic geometry*, Graduate Texts in Mathematics, Springer, 1977.
-**[Sha]** I. R. Shafarevich, *Basic Algebraic Geometry I: Varieties in Projective Space*, Springer, 2013.
-**[God]** R. Godement, *Topologie algébrique et théorie des faisceaux*, Hermann, 1958.
+**[Hart]** R. Hartshorne, *Algebraic geometry*, Graduate Texts in Mathematics, Springer, 1977.  
+**[Sha]** I. R. Shafarevich, *Basic Algebraic Geometry I: Varieties in Projective Space*, Springer, 2013.  
+**[God]** R. Godement, *Topologie algébrique et théorie des faisceaux*, Hermann, 1958.  
 **[Wei]** C. A. Weibel, *An Introduction to Homological Algebra*, Cambridge Studies in Advanced Mathematics 38, Cambridge University Press, 1994.
 
 ---

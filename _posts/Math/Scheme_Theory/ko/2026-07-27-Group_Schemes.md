@@ -194,7 +194,7 @@ $$r_{R'}(G(\varphi)(g))\circ(\id_V\otimes\varphi)=(\id_V\otimes\varphi)\circ r_R
 이 정의에서 $r_R(g)$는 $R$-선형 automorphism이므로, representation은 $V$의 $k$-구조를 계수확장한 모든 층위에서 동시에 주어진 작용이다. 이를 하나의 대수적 데이터로 압축한 것이 comodule이다.
 
 ::: 정의 10
-Hopf $k$-algebra $A$에 대하여, $A$-*comodule*이란 $k$-module $V$와 $k$-linear map $\rho: V \rightarrow V\otimes_kA$로서 다음 두 조건을 만족하는 것이다.
+Hopf $k$-algebra $A$에 대하여, $A$-*comodule<sub>쌍대모듈</sub>*이란 $k$-module $V$와 $k$-linear map $\rho: V \rightarrow V\otimes_kA$로서 다음 두 조건을 만족하는 것이다.
 
 1. $(\rho\otimes\id_A)\circ\rho=(\id_V\otimes\Delta)\circ\rho$.
 2. 동일시 $V\otimes_kk\cong V$ 아래에서 $(\id_V\otimes\epsilon)\circ\rho=\id_V$.
@@ -370,3 +370,10 @@ $S$ 위의 $G$-torsor $P$에 대하여 다음이 성립한다.
 :::
 
 [예시 19](#ex19)의 둘째 경우는 $\mathbb{G}_m$-torsor가 invertible sheaf와 같은 정보를 담고 있음을 시사한다. 그럼 자연스러운 다음 질문은 주어진 $S$와 $G$에 대하여 $G$-torsor 전체를 분류하는 것인데, [명제 17](#prop17)이 말해주듯 자명하지 않은 torsor의 존재는 대역적인 절단의 부재라는 형태의 장애이므로, 이 분류는 cohomology의 문제가 된다. 또 하나의 길은 torsor들을 개별적으로 세는 대신 그들이 이루는 groupoid를 그대로 하나의 기하학적 대상으로 삼는 것이며, field $k$ 위에서 $\mathbb{G}_m$-torsor를 분류하는 $[\Spec k/\mathbb{G}_m]$과 같은 quotient stack이 그렇게 얻어지는 대상으로서 stack 이론의 출발점이 된다.
+
+---
+
+**참고문헌**
+
+**[Har]** R. Hartshorne, *Algebraic geometry*. Graduate texts in mathematics. Springer, 1977.  
+**[Vak]** R. Vakil, *The rising sea: Foundation of algebraic geometry*. Available [online](https://math.stanford.edu/~vakil/216blog/).
