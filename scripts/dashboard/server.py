@@ -9,8 +9,10 @@ nginx(4000)의 /dash/ location이 여기로 proxy_pass 한다 — Jekyll을 거�
     GET /api/summary        대시보드 전체 데이터 (45s 캐시)
     GET /api/log?name=<key> 워커 로그 tail (기본 200줄)
     GET /api/lint?path=<p>  단일 글에 md_lint.py CLI 실행 (발행 준비도)
+    GET/POST /api/kotypo    KO-TYPOS '수정' 체크 상태 (전체 map 교체 방식)
 
-읽기 전용 — 레포에 아무것도 쓰지 않는다.
+레포에는 아무것도 쓰지 않는다 — 유일한 쓰기는 kotypo 체크 상태로,
+~/.local/state/blog_dashboard_kotypo.json 에 저장된다.
 """
 import json
 import os
@@ -31,6 +33,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 # exclude 에 scripts 가 있어 이 디렉토리를 빌드에 포함하지 않는다.
 ROOT = os.path.dirname(os.path.dirname(HERE))
 STATE = os.path.expanduser("~/.local/state")
+KOTYPO_STATE = f"{STATE}/blog_dashboard_kotypo.json"
 QUOTA = os.path.expanduser("~/Projects/hud-display/state/claude_quota.json")
 PORT = int(os.environ.get("BLOG_DASH_PORT", "8089"))
 CACHE_TTL = 45
@@ -560,6 +563,13 @@ class Handler(BaseHTTPRequestHandler):
             except OSError:
                 return self._send(404, "not found", "text/plain; charset=utf-8")
 
+        if path == "/api/kotypo":
+            try:
+                with open(KOTYPO_STATE, encoding="utf-8") as f:
+                    return self._send(200, f.read().strip() or "{}")
+            except OSError:
+                return self._send(200, "{}")
+
         if path == "/api/summary":
             if q.get("fresh"):
                 _cache["ts"] = 0
@@ -588,6 +598,28 @@ class Handler(BaseHTTPRequestHandler):
                 {"path": rel, "rc": rc, "out": out, "err": err}, ensure_ascii=False))
 
         return self._send(404, "not found", "text/plain; charset=utf-8")
+
+    def do_POST(self):
+        path = urllib.parse.urlparse(self.path).path.rstrip("/")
+        if path != "/api/kotypo":
+            return self._send(404, "not found", "text/plain; charset=utf-8")
+        # 클라이언트가 전체 map 을 보내 통째로 교체한다 (키 (path@verified_at) → 1).
+        try:
+            n = int(self.headers.get("Content-Length") or 0)
+            if not 0 <= n <= 100_000:
+                raise ValueError
+            data = json.loads(self.rfile.read(n).decode("utf-8") or "{}")
+            if not isinstance(data, dict) or len(data) > 1000 \
+                    or any(not isinstance(k, str) or len(k) > 400 for k in data):
+                raise ValueError
+        except Exception:
+            return self._send(400, json.dumps({"error": "bad body"}))
+        clean = {k: 1 for k in data}
+        tmp = f"{KOTYPO_STATE}.tmp"
+        with open(tmp, "w", encoding="utf-8") as f:
+            json.dump(clean, f, ensure_ascii=False)
+        os.replace(tmp, KOTYPO_STATE)
+        return self._send(200, json.dumps({"ok": True, "n": len(clean)}))
 
 
 def main():

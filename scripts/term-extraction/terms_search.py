@@ -15,7 +15,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from terms_common import (  # noqa: E402
-    TERMS_PATH, chunk_field, chunk_id, dedup_key, split_file,
+    TERMS_PATH, chunk_field, chunk_id, dedup_key, ko_forms, split_file,
 )
 
 
@@ -29,8 +29,8 @@ def search(q: str, exact: bool = False) -> list[tuple[str, str]]:
     out = []
     for letter, chunks in _load().items():
         for c in chunks:
-            fields = [chunk_id(c), chunk_field(c, "en") or "",
-                      chunk_field(c, "ko") or ""]
+            fields = [chunk_id(c), chunk_field(c, "en") or ""]
+            fields += ko_forms(chunk_field(c, "ko"))
             keys = [dedup_key(f) for f in fields if f]
             if exact:
                 if qd in keys:
@@ -47,8 +47,8 @@ def by_dedup(term: str) -> str | None:
         return None
     for _, chunks in _load().items():
         for c in chunks:
-            if qd in (dedup_key(chunk_field(c, "en") or ""),
-                      dedup_key(chunk_field(c, "ko") or "")):
+            if qd in {dedup_key(chunk_field(c, "en") or "")} | {
+                    dedup_key(f) for f in ko_forms(chunk_field(c, "ko"))}:
                 return c
     return None
 

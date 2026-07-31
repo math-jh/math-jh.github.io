@@ -385,10 +385,24 @@ class Issue:
         return (self.code, self.msg)
 
 
-# ko_short: 표제어가 부분열로 커버하지 못하는 단축 파생형 목록 (예: 자기동형사상
-# 의 "자기동형"). md_lint 가 폐용어 감시에 파생해 쓴다 (이중 SoT 감사 [10]-별칭,
-# 2026-07-22 — 예전엔 md_lint._DEPR_EXTRA 수동 목록).
-ENTRY_KEYS = {"id", "en", "ko", "ko_short", "primary", "note", "defs", "refs", "see"}
+# alias: 조판에 뜨지 않는 기계 검사용 한국어 이형 목록 (단축 파생형 "자기동형",
+# 띄어쓰기 이형 "사영 공간" 등). ko 는 조판에 뜨는 대표형 하나이고, md_lint 가
+# 폐용어 감시에 두 쪽을 함께 쓴다 (이중 SoT 감사 [10]-별칭, 2026-07-22).
+# ko 는 쉼표로 구분된 복수 대표형을 담을 수 있다 (예: `ko: 단면, 절단` — 한국어형
+# 자체가 둘인 경우로, 색인 페이지에도 둘 다 뜬다). 첫 형이 병기·라벨에 쓰는
+# 대표형이고, 검사·중복판정은 전 형을 본다. alias 는 조판에 뜨지 않는 이형이다.
+
+
+def ko_forms(v) -> list[str]:
+    return [s.strip() for s in str(v or "").split(",") if s.strip()]
+
+
+def ko_primary(v) -> str:
+    f = ko_forms(v)
+    return f[0] if f else ""
+
+
+ENTRY_KEYS = {"id", "en", "ko", "alias", "primary", "note", "defs", "refs", "see"}
 REF_KEYS = {"label", "url"}
 SEE_KEYS = {"label", "id", "lang"}
 

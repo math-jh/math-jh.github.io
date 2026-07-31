@@ -73,7 +73,8 @@ sys.path.insert(0, str(SCRIPT_DIR))
 
 from terms_common import (  # noqa: E402
     GEN_ED_DIRS, TERMS_PATH, category_ko_maps, chunk_field, chunk_id, dedup_key,
-    insert_sorted, join_file, letter_of, permalink_map, semantic_checks,
+    insert_sorted, join_file, ko_primary, letter_of, permalink_map,
+    semantic_checks,
     slugify_id, split_file, url_slug, yaml_quote,
 )
 from term_extract_worker import (  # noqa: E402
@@ -264,7 +265,7 @@ def build_yml_map() -> tuple[dict[str, str], list[str], dict[str, list[str]]]:
     for letter, chunks in groups.items():
         for c in chunks:
             en = chunk_field(c, "en") or ""
-            ko = chunk_field(c, "ko") or ""
+            ko = ko_primary(chunk_field(c, "ko"))
             k = dedup_key(en)
             if k and ko:
                 out[k] = ko

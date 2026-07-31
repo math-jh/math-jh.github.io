@@ -55,6 +55,7 @@ sys.path.insert(0, str(SCRIPT_DIR))
 
 from terms_common import (  # noqa: E402
     GEN_ED_CATS, TERMS_PATH, category_ko_maps, chunk_field, chunk_id,
+    ko_forms, ko_primary,
     dedup_key, insert_sorted, join_file, letter_of, normalize_proper_case,
     permalink_map, semantic_checks, slugify_id, split_file, url_slug,
     yaml_quote,
@@ -242,8 +243,11 @@ def entry_index(groups: dict[str, list[str]]) -> dict[str, tuple[str, int]]:
     idx = {}
     for letter, chunks in groups.items():
         for i, c in enumerate(chunks):
-            for f in ("en", "ko"):
-                k = dedup_key(chunk_field(c, f) or "")
+            # ko 는 쉼표로 구분된 복수 한국어형을 담을 수 있으므로 이형마다 건다
+            forms = [chunk_field(c, "en") or ""]
+            forms += ko_forms(chunk_field(c, "ko"))
+            for f in forms:
+                k = dedup_key(f)
                 if k:
                     idx.setdefault(k, (letter, i))
     return idx
@@ -303,7 +307,7 @@ def see_tuple(chunk: str) -> tuple[str, str, str]:
     en = chunk_field(chunk, "en") or ""
     ko = chunk_field(chunk, "ko") or ""
     prim = chunk_field(chunk, "primary") or "en"
-    label = ko if prim == "ko" else (en[:1].upper() + en[1:])
+    label = ko_primary(ko) if prim == "ko" else (en[:1].upper() + en[1:])
     return chunk_id(chunk), label, prim
 
 
@@ -455,7 +459,7 @@ def process_post(rel: str, kind: str, dry: bool) -> list[str]:
                 # 정식 거처 — entry의 확립된 ko로 병기하고 defs에 추가한다.
                 _lt, _pos = idx[gk]
                 _chunk = groups[_lt][_pos]
-                _eko = (chunk_field(_chunk, "ko") or "").strip()
+                _eko = ko_primary(chunk_field(_chunk, "ko"))
                 if _gen_ed_promotion(_chunk, _my_cat) and _eko:
                     gloss_todo.append((occ, _eko, (_lt, _pos)))
                 continue

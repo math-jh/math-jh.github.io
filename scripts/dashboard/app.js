@@ -14,6 +14,7 @@ var DRAFT_PAGE = 20;
 var state = {
   data: null,
   stampErr: false,
+  kotypoDone: {},
   draftCat: '', draftSort: 'mtime', draftLimit: DRAFT_PAGE,
   wSortKey: 'un', wSortDesc: true
 };
@@ -608,13 +609,17 @@ function secTranslation(d) {
     (st.total_in_chars ? ' (압축률 ' + pct(st.total_out_chars, st.total_in_chars) + '%)' : '')));
   /* KO-TYPOS — EN 검증기가 번역 중 KO 원문 오타를 교정하며 남긴 지적.
      다음 재검증 때까지 verdict 에 남으므로, KO 를 고쳤어도 표시가 유지될 수 있다.
-     '수정' 체크는 localStorage 에 (path@verified_at) 키로 저장한다 — 새로고침에도
-     유지되고, 같은 파일이 재검증되어 verified_at 이 바뀌면 체크가 풀린다. */
+     '수정' 체크는 (path@verified_at) 키로 서버(/api/kotypo → ~/.local/state)에
+     저장한다 — 기기가 바뀌어도 유지되고, 재검증으로 verified_at 이 바뀌면 풀린다. */
   var typos = t.ko_typos || [];
-  var doneMap = (function () {
-    try { return JSON.parse(localStorage.getItem('dash-kotypo-done') || '{}'); }
-    catch (e) { return {}; }
-  })();
+  var doneMap = state.kotypoDone;
+  function saveDone() {
+    fetch(API + 'kotypo', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(doneMap)
+    }).catch(function () { });
+  }
   var liveKeys = {};
   left.appendChild(el('h3', null, '한글 오타 지적 (KO-TYPOS) — ' + typos.length + '편'));
   if (typos.length) {
@@ -638,15 +643,17 @@ function secTranslation(d) {
         chk.onchange = function () {
           if (chk.checked) doneMap[key] = 1; else delete doneMap[key];
           tr.classList.toggle('typo-done', chk.checked);
-          try { localStorage.setItem('dash-kotypo-done', JSON.stringify(doneMap)); } catch (e) { }
+          saveDone();
         };
         return tr;
       })));
     /* 사라진 지적(재검증 통과 등)의 키는 정리한다. */
-    var pruned = {};
-    Object.keys(doneMap).forEach(function (k) { if (liveKeys[k]) pruned[k] = 1; });
-    try { localStorage.setItem('dash-kotypo-done', JSON.stringify(pruned)); } catch (e) { }
-    left.appendChild(el('p', 'hint', '행을 누르면 지적 내용 전체가 열린다. EN 은 이미 교정된 상태다. 수정 체크는 이 브라우저에 저장되며, 재검증으로 검증 시각이 바뀌면 풀린다.'));
+    var stale = Object.keys(doneMap).filter(function (k) { return !liveKeys[k]; });
+    if (stale.length) {
+      stale.forEach(function (k) { delete doneMap[k]; });
+      saveDone();
+    }
+    left.appendChild(el('p', 'hint', '행을 누르면 지적 내용 전체가 열린다. EN 은 이미 교정된 상태다. 수정 체크는 서버에 저장돼 기기 간 공유되며, 재검증으로 검증 시각이 바뀌면 풀린다.'));
   } else {
     left.appendChild(el('p', 'hint', '검증기가 지적한 한글 오타 없음.'));
   }
@@ -800,10 +807,29 @@ function render() {
 }
 
 function load(fresh) {
-  fetch(API + 'summary' + (fresh ? '?fresh=1' : ''))
-    .then(function (r) { return r.json(); })
-    .then(function (d) {
-      state.data = d;
+  Promise.all([
+    fetch(API + 'summary' + (fresh ? '?fresh=1' : '')).then(function (r) { return r.json(); }),
+    /* KO-TYPOS 수정 체크 — 서버(~/.local/state)에 저장돼 기기 간 공유된다.
+       읽기 실패는 치명적이지 않으니 마지막으로 아는 값으로 계속 간다. */
+    fetch(API + 'kotypo').then(function (r) { return r.json(); })
+      .catch(function () { return state.kotypoDone; })
+  ])
+    .then(function (rs) {
+      state.data = rs[0];
+      state.kotypoDone = rs[1] || {};
+      /* 구 저장소(localStorage) 1회 이전 — 서버 도입 전 체크를 살린다. */
+      try {
+        var old = JSON.parse(localStorage.getItem('dash-kotypo-done') || '{}');
+        if (Object.keys(old).length) {
+          Object.keys(old).forEach(function (k) { state.kotypoDone[k] = 1; });
+          localStorage.removeItem('dash-kotypo-done');
+          fetch(API + 'kotypo', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(state.kotypoDone)
+          }).catch(function () { });
+        }
+      } catch (e) { }
       state.stampErr = false;
       render();
     })

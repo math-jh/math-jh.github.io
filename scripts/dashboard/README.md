@@ -35,6 +35,7 @@
 | `/api/summary` | 전 섹션 데이터 한 덩이 (45초 캐시, `?fresh=1` 로 무효화) |
 | `/api/log?name=<key>` | 워커 로그 tail |
 | `/api/lint?path=<repo상대경로>` | 글 하나에 `.claude/hooks/md_lint.py` CLI 실행 |
+| `/api/kotypo` (GET/POST) | KO-TYPOS '수정' 체크 상태 — POST 는 전체 map 교체, `~/.local/state/blog_dashboard_kotypo.json` 에 저장 (서버의 유일한 쓰기) |
 
 데이터 출처: `_posts` frontmatter 스캔, `scripts/translation/translation_state.json`,
 각 워커 로그, `scripts/audit/audit-report.md`,
