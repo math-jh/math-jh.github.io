@@ -4372,7 +4372,9 @@ E:
   alias:
   - 연장
   primary: en
-  note: '명사형(체의 확장)만 extension. 동사형 ''확장한다/확장되는''은 한글 유지'
+  note: '명사형(체의 확장)만 extension. 동사형 ''확장한다/확장되는''은 한글 유지.
+    단 alias ''연장''(section·함수를 더 넓은 곳으로 늘리는 뜻)은 명사형 extension,
+    동사형 extend하다/extend되다로 모두 영어'
   defs:
   - label: '[집합론] §함수'
     url: /ko/math/set_theory/functions

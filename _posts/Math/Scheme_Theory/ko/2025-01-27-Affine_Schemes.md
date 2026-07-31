@@ -98,9 +98,9 @@ $$\frac{h}{1}\frac{a}{f^n}=1\qquad\text{in $S_f^{-1}A$}$$
 
 $$\overline{\epsilon_f}: S(f)^{-1}A \rightarrow S_f^{-1}A,\qquad \overline{\epsilon(f)}: S_f^{-1}A \rightarrow S(f)^{-1}A$$
 
-이 각각 $\overline{\epsilon_f}\circ\epsilon(f)=\epsilon_f$와 $\overline{\epsilon(f)}\circ\epsilon_f=\epsilon(f)$를 만족하도록 유일하게 존재한다. 그럼 두 합성 $\overline{\epsilon(f)}\circ\overline{\epsilon_f}$와 $\overline{\epsilon_f}\circ\overline{\epsilon(f)}$는 각각 $\epsilon(f)$와 $\epsilon_f$를 연장하므로, 같은 유일성에 의하여 항등사상이다. 즉 이 둘은 서로의 역함수이며, 이로부터 주장의 isomorphism을 얻는다. 
+이 각각 $\overline{\epsilon_f}\circ\epsilon(f)=\epsilon_f$와 $\overline{\epsilon(f)}\circ\epsilon_f=\epsilon(f)$를 만족하도록 유일하게 존재한다. 그럼 두 합성 $\overline{\epsilon(f)}\circ\overline{\epsilon_f}$와 $\overline{\epsilon_f}\circ\overline{\epsilon(f)}$는 각각 $\epsilon(f)$와 $\epsilon_f$를 extend하므로, 같은 유일성에 의하여 항등사상이다. 즉 이 둘은 서로의 역함수이며, 이로부터 주장의 isomorphism을 얻는다. 
 
-이제 $S(g)\subseteq S(f)$라 하자. 그럼 $S(g)$의 원소들은 $\epsilon(f)$와 $\epsilon_f$ 모두에 의하여 unit으로 옮겨지고, $S_g\subseteq S(g)$이므로 다시 [\[가환대수학\] §국소화, ⁋명제 6](/ko/math/commutative_algebra/localization#prop6)에 의하여 $\epsilon(f)$와 $\epsilon_f$를 각각 연장하는 두 사상
+이제 $S(g)\subseteq S(f)$라 하자. 그럼 $S(g)$의 원소들은 $\epsilon(f)$와 $\epsilon_f$ 모두에 의하여 unit으로 옮겨지고, $S_g\subseteq S(g)$이므로 다시 [\[가환대수학\] §국소화, ⁋명제 6](/ko/math/commutative_algebra/localization#prop6)에 의하여 $\epsilon(f)$와 $\epsilon_f$를 각각 extend하는 두 사상
 
 $$\widehat{\epsilon(f)}:S(g)^{-1}A \rightarrow S(f)^{-1}A,\qquad \widecheck{\epsilon_f}: S_g^{-1}A \rightarrow S_f^{-1}A$$
 
@@ -277,7 +277,7 @@ $$(\Spec\phi)^\sharp_\mathfrak{q}:\mathcal{O}_{\Spec A, (\Spec \phi)(\mathfrak{q
 
 이 local homomorphism이면 된다. 그런데 $(\Spec \phi)(\mathfrak{q})=\phi^{-1}(\mathfrak{q})$이고, 따라서 [보조정리 8](#lem8)에 의하여 $(\Spec\phi)^\sharp_\mathfrak{q}$는 $A_{\phi^{-1}(\mathfrak{q})}$에서 $B_{\mathfrak{q}}$로의 ring homomorphism이며 이는 $A_{\phi^{-1}(\mathfrak{q})}$의 유일한 maximal ideal $\phi^{-1}(\mathfrak{q})A_{\phi^{-1}(\mathfrak{q})}$를 $B_\mathfrak{q}$의 유일한 maximal ideal $\mathfrak{q}B_\mathfrak{q}$로 보낸다. 
 
-마지막으로 functoriality를 확인하자. 점 사이의 사상에 대해서는 이미 [§스펙트럼, ⁋명제 2](/ko/math/scheme_theory/spectrums#prop2)에서 확인하였으므로 structure sheaf 쪽만 보면 된다. $\phi=\id_A$인 경우 위의 구성은 각각의 $D(f)$마다 $\epsilon_f$를 연장하는 유일한 사상 $A_f \rightarrow A_f$를 주고 이는 항등사상이므로, $\Spec(\id_A)=\id$이다. 또 두 ring homomorphism $\phi: A \rightarrow B$와 $\psi: B \rightarrow C$에 대하여, $\Spec(\psi\circ\phi)^\sharp(D(f))$는 합성 $A \rightarrow C \rightarrow C_{\psi(\phi(f))}$를 확장하는 유일한 사상이고 합성 $A_f \rightarrow B_{\phi(f)} \rightarrow C_{\psi(\phi(f))}$ 또한 같은 사상을 확장하므로, 유일성에 의하여 이 둘은 같다. 두 sheaf morphism이 base 위에서 일치하므로 $\Spec(\psi\circ\phi)=(\Spec\phi)\circ(\Spec\psi)$이다. 
+마지막으로 functoriality를 확인하자. 점 사이의 사상에 대해서는 이미 [§스펙트럼, ⁋명제 2](/ko/math/scheme_theory/spectrums#prop2)에서 확인하였으므로 structure sheaf 쪽만 보면 된다. $\phi=\id_A$인 경우 위의 구성은 각각의 $D(f)$마다 $\epsilon_f$를 extend하는 유일한 사상 $A_f \rightarrow A_f$를 주고 이는 항등사상이므로, $\Spec(\id_A)=\id$이다. 또 두 ring homomorphism $\phi: A \rightarrow B$와 $\psi: B \rightarrow C$에 대하여, $\Spec(\psi\circ\phi)^\sharp(D(f))$는 합성 $A \rightarrow C \rightarrow C_{\psi(\phi(f))}$를 확장하는 유일한 사상이고 합성 $A_f \rightarrow B_{\phi(f)} \rightarrow C_{\psi(\phi(f))}$ 또한 같은 사상을 확장하므로, 유일성에 의하여 이 둘은 같다. 두 sheaf morphism이 base 위에서 일치하므로 $\Spec(\psi\circ\phi)=(\Spec\phi)\circ(\Spec\psi)$이다. 
 :::
 
 ## 아핀스킴
