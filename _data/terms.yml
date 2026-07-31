@@ -428,6 +428,13 @@ A:
   defs:
   - label: '[선형대수학] §행렬식'
     url: /ko/math/linear_algebra/determinant
+- id: amalgamation
+  en: amalgamation
+  ko: 접합
+  primary: en
+  defs:
+  - label: '[스택] §Grothendieck 위상과 site'
+    url: /ko/math/stacks/grothendieck_topology
 - id: amitsur_complex
   en: amitsur complex
   ko: Amitsur 복합체
@@ -1305,6 +1312,13 @@ C:
   defs:
   - label: '[집합론] §동치관계'
     url: /ko/math/set_theory/equivalence_relations
+- id: canonical_topology
+  en: canonical topology
+  ko: 표준 위상
+  primary: en
+  defs:
+  - label: '[스택] §Grothendieck 위상과 site'
+    url: /ko/math/stacks/grothendieck_topology
 - id: cap_product
   en: cap product
   ko: 교적
@@ -1842,6 +1856,13 @@ C:
 - id: coarse_moduli_functor
   en: coarse moduli functor
   ko: 성긴 모듈라이 함자
+  primary: en
+  defs:
+  - label: '[스택] §Moduli 문제: fine moduli와 coarse moduli'
+    url: /ko/math/stacks/moduli_problems
+- id: coarse_moduli_space
+  en: coarse moduli space
+  ko: 성긴 모듈라이 공간
   primary: en
   defs:
   - label: '[스택] §Moduli 문제: fine moduli와 coarse moduli'
@@ -2871,6 +2892,13 @@ C:
   see:
   - label: Covering space
     id: covering_space
+- id: covering_family
+  en: covering family
+  ko: 덮개족
+  primary: en
+  defs:
+  - label: '[스택] §Grothendieck 위상과 site'
+    url: /ko/math/stacks/grothendieck_topology
 - id: covering_map
   en: covering map
   ko: 피복 사상
@@ -2878,6 +2906,13 @@ C:
   defs:
   - label: '[대수적 위상수학] §피복공간'
     url: /ko/math/algebraic_topology/covering_spaces
+- id: covering_sieve
+  en: covering sieve
+  ko: 덮개 체
+  primary: en
+  defs:
+  - label: '[스택] §Grothendieck 위상과 site'
+    url: /ko/math/stacks/grothendieck_topology
 - id: covering_space
   en: covering space
   ko: 피복공간
@@ -3587,6 +3622,13 @@ D:
   defs:
   - label: '[해석학] §연결성과 중간값 정리'
     url: /ko/math/analysis/connectedness
+- id: discrete_groupoid
+  en: discrete groupoid
+  ko: 이산 준군
+  primary: en
+  defs:
+  - label: '[스택] §Fibered category와 stack'
+    url: /ko/math/stacks/fibered_categories_and_stacks
 - id: discrete_metric
   en: discrete metric
   ko: 이산거리
@@ -3904,6 +3946,8 @@ E:
   defs:
   - label: '[대수다양체] §인자'
     url: /ko/math/algebraic_varieties/divisors
+  - label: '[스택] §Fibered category와 stack'
+    url: /ko/math/stacks/fibered_categories_and_stacks
 - id: effective_cartier_divisor
   en: effective Cartier divisor
   ko: 유효 카르티에 인자
@@ -4450,6 +4494,8 @@ F:
     url: /ko/math/algebraic_topology/fibrations
   - label: '[스킴] §올곱'
     url: /ko/math/scheme_theory/fiber_products
+  - label: '[스택] §Fibered category와 stack'
+    url: /ko/math/stacks/fibered_categories_and_stacks
 - id: fiber_bundle
   en: fiber bundle
   ko: 올다발
@@ -4520,6 +4566,13 @@ F:
   defs:
   - label: '[위상수학] §Initial topology와 final topology'
     url: /ko/math/topology/initial_and_final_topology
+- id: fine_moduli_space
+  en: fine moduli space
+  ko: 섬세한 모듈라이 공간
+  primary: en
+  defs:
+  - label: '[스택] §Moduli 문제: fine moduli와 coarse moduli'
+    url: /ko/math/stacks/moduli_problems
 - id: fine_sheaf
   en: fine sheaf
   ko: 미세층
@@ -5385,6 +5438,13 @@ G:
 - id: grothendieck_pretopology
   en: Grothendieck pretopology
   ko: 그로텐디크 준위상
+  primary: en
+  defs:
+  - label: '[스택] §Grothendieck 위상과 site'
+    url: /ko/math/stacks/grothendieck_topology
+- id: grothendieck_topos
+  en: Grothendieck topos
+  ko: 그로텐디크 토포스
   primary: en
   defs:
   - label: '[스택] §Grothendieck 위상과 site'
@@ -6710,6 +6770,13 @@ I:
   defs:
   - label: '[대수적 위상수학] §피복공간'
     url: /ko/math/algebraic_topology/covering_spaces
+- id: isotrivial
+  en: isotrivial
+  ko: 등질
+  primary: ko
+  defs:
+  - label: '[스택] §Moduli 문제: fine moduli와 coarse moduli'
+    url: /ko/math/stacks/moduli_problems
 - id: isotropic
   en: isotropic
   ko: 등방적
@@ -7927,6 +7994,13 @@ M:
   defs:
   - label: '[호몰로지 대수학] §긴 완전열'
     url: /ko/math/homological_algebra/long_exact_sequence
+- id: matching_family
+  en: matching family
+  ko: 정합족
+  primary: en
+  defs:
+  - label: '[스택] §Grothendieck 위상과 site'
+    url: /ko/math/stacks/grothendieck_topology
 - id: matrix
   en: matrix
   ko: 행렬
@@ -8150,6 +8224,13 @@ M:
   en: moduli functor
   ko: 모듈라이 함자
   primary: en
+  defs:
+  - label: '[스택] §Moduli 문제: fine moduli와 coarse moduli'
+    url: /ko/math/stacks/moduli_problems
+- id: moduli_problem
+  en: moduli problem
+  ko: moduli 문제
+  primary: ko
   defs:
   - label: '[스택] §Moduli 문제: fine moduli와 coarse moduli'
     url: /ko/math/stacks/moduli_problems
@@ -9656,6 +9737,13 @@ P:
   defs:
   - label: '[그로모프-위튼 이론] §안정사상 moduli의 대수적 구성'
     url: /ko/math/gromov-witten_theory/moduli_of_stable_maps
+- id: prestack
+  en: prestack
+  ko: 준스택
+  primary: en
+  defs:
+  - label: '[스택] §Fibered category와 stack'
+    url: /ko/math/stacks/fibered_categories_and_stacks
 - id: primary_decomposition
   en: primary decomposition
   ko: 으뜸분해
@@ -10025,6 +10113,13 @@ P:
   defs:
   - label: '[리만기하학] §리만 계량'
     url: /ko/math/riemannian_geometry/Riemannian_metric
+- id: pseudofunctor
+  en: pseudofunctor
+  ko: 유사함자
+  primary: en
+  defs:
+  - label: '[스택] §Fibered category와 stack'
+    url: /ko/math/stacks/fibered_categories_and_stacks
 - id: pseudoholomorphic
   en: pseudoholomorphic
   ko: 유사정칙
@@ -11361,6 +11456,13 @@ S:
   defs:
   - label: '[위상수학] §하우스도르프 공간'
     url: /ko/math/topology/Hausdorff_spaces
+- id: separated_presheaf
+  en: separated presheaf
+  ko: 분리 준층
+  primary: en
+  defs:
+  - label: '[스택] §Grothendieck 위상과 site'
+    url: /ko/math/stacks/grothendieck_topology
 - id: separation_axiom
   en: separation axiom
   ko: 분리공리
@@ -11447,6 +11549,8 @@ S:
   defs:
   - label: '[위상수학] §층'
     url: /ko/math/topology/sheaves
+  - label: '[스택] §Grothendieck 위상과 site'
+    url: /ko/math/stacks/grothendieck_topology
   see:
   - label: Presheaf
     id: presheaf
@@ -11504,6 +11608,13 @@ S:
   see:
   - label: Long exact sequence
     id: long_exact_sequence
+- id: sieve
+  en: sieve
+  ko: 체
+  primary: ko
+  defs:
+  - label: '[스택] §Grothendieck 위상과 site'
+    url: /ko/math/stacks/grothendieck_topology
 - id: sieve_of_eratosthenes
   en: sieve of Eratosthenes
   ko: 에라토스테네스의 체
@@ -11714,6 +11825,13 @@ S:
   defs:
   - label: '[표현론] §반사 함자'
     url: /ko/math/representation_theory/reflection_functors
+- id: site
+  en: site
+  ko: 사이트
+  primary: en
+  defs:
+  - label: '[스택] §Grothendieck 위상과 site'
+    url: /ko/math/stacks/grothendieck_topology
 - id: six-functor_formalism
   en: six-functor formalism
   ko: 여섯 함자 형식
@@ -11971,6 +12089,13 @@ S:
   defs:
   - label: '[그로모프-위튼 이론] §안정사상 moduli의 대수적 구성'
     url: /ko/math/gromov-witten_theory/moduli_of_stable_maps
+- id: stack
+  en: stack
+  ko: 스택
+  primary: en
+  defs:
+  - label: '[스택] §Fibered category와 stack'
+    url: /ko/math/stacks/fibered_categories_and_stacks
 - id: stalk
   en: stalk
   ko: 줄기
@@ -12168,6 +12293,13 @@ S:
   defs:
   - label: '[위상수학] §위상공간의 기저'
     url: /ko/math/topology/topological_bases
+- id: subcanonical
+  en: subcanonical
+  ko: 준표준
+  primary: en
+  defs:
+  - label: '[스택] §Grothendieck 위상과 site'
+    url: /ko/math/stacks/grothendieck_topology
 - id: subcategory
   en: subcategory
   ko: 부분카테고리
@@ -13234,6 +13366,13 @@ U:
   defs:
   - label: '[리 이론] §보편 포락 대수'
     url: /ko/math/lie_theory/universal_enveloping_algebra
+- id: universal_family
+  en: universal family
+  ko: 보편 족
+  primary: ko
+  defs:
+  - label: '[스택] §Moduli 문제: fine moduli와 coarse moduli'
+    url: /ko/math/stacks/moduli_problems
 - id: universal_property
   en: universal property
   ko: 보편성질
