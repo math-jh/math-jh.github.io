@@ -90,18 +90,18 @@ $$e_i\cdot(ae_i)=(e_ia)e_i=(ae_i)e_i=ae_i^2=ae_i$$
 
 ## 중심멱등원과 곱분해
 
-위의 [명제 4](#prop4) 이후의 논증에 의해 우리는 complete set of central orthogonal idempotents가 ring의 direct product를 준다는 것을 안다. 다음 명제는 여기서 한 발 더 나아가, 이 complete set이 정확하게 ring의 direct product decomposition이라는 것을 보여준다. 
+위의 논증으로 우리는 각 $Ae_i$가 $e_i$를 항등원으로 갖는 ring이고 $A$가 이들의 direct sum임을 안다. 다음 정리는 이 direct sum이 실은 ring의 direct product이며, 나아가 이러한 decomposition이 central한 complete set과 일대일대응함을 보여준다. 
 
 ::: 정리 5
 Ring $A$에 대하여 다음 두 데이터 사이에 일대일대응이 존재한다.
 
 1. $A$의 central한 orthogonal idempotent의 complete set $\{e_1,\ldots, e_n\}$.
-2. $A$를 $n$개의 two-sided ideal의 direct sum $A=\mathfrak{a}_1\oplus\cdots\oplus\mathfrak{a}_n$으로 쓰는 decomposition.
+2. $A$를 $n$개의 two-sided ideal의 direct product $A=\mathfrak{a}_1\times\cdots\times\mathfrak{a}_n$으로 쓰는 decomposition.
 
-이 대응에서 $\mathfrak{a}_i=Ae_i$이며, direct sum $A=\mathfrak{a}_1\oplus\cdots\oplus\mathfrak{a}_n$은 ring의 direct product decomposition $A\cong\prod_{i=1}^n \mathfrak{a}_i$으로 생각한다.
+이 대응은 $\mathfrak{a}_i=Ae_i$로 주어진다.
 :::
 ::: 증명
-우선 첫째 데이터가 주어졌다 하자. $\mathfrak{a}_i:=Ae_i$로 두면 [명제 4](#prop4)가 곧바로 둘째 데이터의 direct sum을 준다. 즉 각 $\mathfrak{a}_i$는 two-sided ideal이고 $A=\mathfrak{a}_1\oplus\cdots\oplus\mathfrak{a}_n$은 left module로서의 direct sum이다. 따라서 남은 것은 이 direct sum이 실은 ring의 곱분해라는 것이다. Morphism
+우선 첫째 데이터가 주어졌다 하자. $\mathfrak{a}_i:=Ae_i$로 두면 [명제 4](#prop4)에 의해 각 $\mathfrak{a}_i$는 two-sided ideal이고 $A=\mathfrak{a}_1\oplus\cdots\oplus\mathfrak{a}_n$은 left module로서의 direct sum이다. 따라서 남은 것은 이 direct sum이 ring의 곱분해이기도 하다는 것이다. Morphism
 
 $$\varphi:A\longrightarrow \prod_{i=1}^n Ae_i,\qquad \varphi(x)=(xe_1,\ldots, xe_n)$$
 
@@ -111,7 +111,7 @@ $$\varphi(x)\varphi(y)=(xe_1\cdot ye_1,\ldots, xe_n\cdot ye_n)=(xye_1,\ldots, xy
 
 에서 곱셈도 보존한다. 여기서 각 성분의 곱 $xe_i\cdot ye_i=xy e_i^2=xye_i$를 사용하였으며, 이는 $e_i$의 centrality에 의해 $e_iy=ye_i$이기 때문이다. 또 $\varphi(1)=(e_1,\ldots, e_n)$이고 각 $e_i$가 $Ae_i$의 항등원이므로 $\varphi$는 ring homomorphism이다. $\varphi$가 isomorphic함은 [명제 4](#prop4)의 direct sum 분해가 곧 $x\mapsto (xe_1,\ldots, xe_n)$의 단사성과 전사성을 주기 때문이다. 즉 $\varphi(x)=0$이면 모든 $xe_i=0$이고 $x=\sum xe_i=0$이며, 임의의 $(a_1e_1,\ldots, a_ne_n)$은 $x=a_1e_1+\cdots+a_ne_n$의 image이다.
 
-$(2)\Rightarrow(1)$. 거꾸로 $A=\mathfrak{a}_1\oplus\cdots\oplus\mathfrak{a}_n$이 two-sided ideal들의 direct sum이라 하자. 항등원을 이 분해에 따라
+$(2)\Rightarrow(1)$. 거꾸로 둘째 데이터가 주어졌다 하자. 곱분해는 특히 덧셈에 대한 direct sum $A=\mathfrak{a}_1\oplus\cdots\oplus\mathfrak{a}_n$을 주므로, 항등원을 이 분해에 따라
 
 $$1=e_1+\cdots+e_n,\qquad e_i\in\mathfrak{a}_i$$
 

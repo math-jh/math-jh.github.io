@@ -306,11 +306,34 @@ Here finiteness was essentially used to commute the product with localization, a
 
 The quasi-compact and quasi-separated hypotheses in [Theorem 16](#thm16) are essential. For instance, for a morphism that requires gluing infinitely many affines, computing sections on $\varphi^{-1}(D(g))$ may involve infinite products, breaking the commutation with localization. However, morphisms between Noetherian schemes, and in particular morphisms between affine schemes, always satisfy these conditions, so in practice pushforward preserves quasi-coherence in most commonly encountered situations.
 
+Finally, we examine how pushforward interacts with tensor products. In general $\varphi_\ast$ does not preserve tensor products, but if one of the two factors is pulled back from a locally free sheaf on the base, that factor can be pulled out of $\varphi_\ast$.
+
+::: Proposition 17 (Projection formula)
+For a scheme morphism $\varphi:X \rightarrow Y$, a quasi-coherent sheaf $\mathcal{F}$ on $X$, and a finite rank locally free sheaf $\mathcal{L}$ on $Y$ ([Definition 12](#def12)), there is an isomorphism
+
+$$\varphi_\ast(\mathcal{F}\otimes_{\mathcal{O}_X}\varphi^\ast \mathcal{L})\cong \varphi_\ast \mathcal{F}\otimes_{\mathcal{O}_Y}\mathcal{L}$$
+:::
+::: Proof
+We first construct a natural morphism for an arbitrary $\mathcal{O}_Y$-module $\mathcal{L}$. The pullback of [Definition 14](#def14) is the composition of $\varphi^{-1}$ with base change to $\mathcal{O}_X$, hence commutes with tensor products, so together with the counit $\varepsilon:\varphi^\ast\varphi_\ast \mathcal{F} \rightarrow \mathcal{F}$ of the adjunction $\varphi^\ast\dashv \varphi_\ast$ we obtain
+
+$$\varphi^\ast(\varphi_\ast \mathcal{F}\otimes \mathcal{L})\cong \varphi^\ast\varphi_\ast \mathcal{F}\otimes \varphi^\ast \mathcal{L}\xrightarrow{\varepsilon\otimes\id}\mathcal{F}\otimes \varphi^\ast \mathcal{L}$$
+
+The adjoint of this morphism is the desired $\theta:\varphi_\ast \mathcal{F}\otimes \mathcal{L} \rightarrow \varphi_\ast(\mathcal{F}\otimes \varphi^\ast \mathcal{L})$, and the construction is natural in $\mathcal{L}$.
+
+We now show that $\theta$ is an isomorphism when $\mathcal{L}$ is finite rank locally free. Pushforward commutes with restriction to open subsets of the base, that is, $\varphi_\ast \mathcal{G}\vert_V$ is the pushforward along $\varphi^{-1}(V) \rightarrow V$, so it suffices to check the isomorphism on open sets covering $Y$. By hypothesis the open sets $V$ with $\mathcal{L}\vert_V\cong \mathcal{O}_V^{\oplus r}$ cover $Y$, and on such $V$ we have $\varphi^\ast \mathcal{L}\cong \mathcal{O}^{\oplus r}$. On the other hand, tensor products commute with finite direct sums, and $\varphi_\ast$, being a right adjoint, commutes with finite products and hence with finite direct sums. ([\[Category Theory\] §Adjoint Functors, ⁋Theorem 9](/en/math/category_theory/adjoints#thm9)) Therefore both sides restrict on $V$ to $(\varphi_\ast \mathcal{F}\vert_V)^{\oplus r}$, and by naturality of $\theta$, under this identification $\theta$ is the direct sum of $r$ copies of the identity. Hence $\theta$ is an isomorphism on each $V$, and therefore an isomorphism.
+:::
+
+What [Proposition 17](#prop17) says is that $\varphi_\ast$ is not merely an operation at the level of abelian sheaves but respects the $\mathcal{O}_Y$-module structure. This is the algebro-geometric version of the identity
+
+$$\pi_!(\pi^\ast\alpha\smile\beta)=\alpha\smile\pi_!\beta$$
+
+given by the Gysin homomorphism $\pi_!$ in [\[Algebraic Topology\] §Characteristic Classes of Vector Bundles](/en/math/algebraic_topology/characteristic_classes), and both come from the common idea that whatever is pulled back from the base comes out of the pushforward.
+
 ## Ideal sheaf and closed subscheme
 
 The most important application of the fact that pushforward preserves quasi-coherence is the ideal sheaf determined by a closed subscheme. An ideal $\mathfrak{a}\subseteq A$ of an affine scheme $\Spec A$ is itself an $A$-module, so we can define its associated sheaf $\widetilde{\mathfrak{a}}$, and this is a subsheaf of $\mathcal{O}_{\Spec A}=\widetilde A$. For a general scheme $X$, the ideal sheaf $\mathcal{I}_{Z/X}=\ker\iota^\sharp$ defined by a closed embedding $\iota:Z \rightarrow X$ also gives an ideal on each affine open subset ([§Closed Subschemes, ⁋Definition 5](/en/math/scheme_theory/closed_subschemes#def5)), but whether these ideals are compatible under localization so that they glue into a single associated sheaf is a separate question. The localization condition required for gluing in [§Closed Subschemes, ⁋Proposition 6](/en/math/scheme_theory/closed_subschemes#prop6) is precisely quasi-coherence, so what needs to be checked is that $\mathcal{I}_{Z/X}$ is a quasi-coherent sheaf. This follows as an application of [Theorem 16](#thm16).
 
-::: Proposition 17
+::: Proposition 18
 For a closed embedding $\iota:Z \rightarrow X$ ([§Closed Subschemes, ⁋Definition 2](/en/math/scheme_theory/closed_subschemes#def2)), both $\iota_\ast \mathcal{O}_Z$ and the ideal sheaf $\mathcal{I}_{Z/X}$ are quasi-coherent sheaves on $X$.
 :::
 ::: Proof

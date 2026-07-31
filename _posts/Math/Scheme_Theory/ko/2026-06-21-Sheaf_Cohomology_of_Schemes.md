@@ -167,7 +167,7 @@ $$(\iota_\ast\mathcal{F})(D_+(\x_{i_0}\cdots\x_{i_p}))=\mathcal{F}\bigl(\iota^{-
 Field $\mathbb{K}$ 위의 Noetherian projective scheme $X$와 그 위의 coherent sheaf $\mathcal{F}$에 대하여, 각 $H^i(X, \mathcal{F})$은 유한차원 $\mathbb{K}$-벡터공간이며, 충분히 큰 $i$에 대해서는 $0$이다.
 :::
 ::: 증명
-위의 isomorphism $(\ast)$에 의하여 quasi-coherent sheaf $\iota_\ast\mathcal{F}$이 ([§준연접층, ⁋정리 16](/ko/math/scheme_theory/quasicoherent_sheaves#thm16)) $\mathbb{P}^n$ 위의 coherent sheaf임만 확인하면 $X=\mathbb{P}^n_{\mathbb{K}}$이라 가정해도 된다. 이를 위해서는 finite type 조건만 affine-local하게 체크하면 되는데, 이는 $\iota$가 closed immersion이므로 각 chart 위에서 $\iota_\ast\mathcal{F}$은 $A$-algebra $A/I$ 위의 finitely generated module을 $A$-module로 본 것이고, $A \rightarrow A/I$가 전사이므로 $A/I$ 위의 generator를 $A$로 들어올리면 같은 원소들이 $A$ 위에서도 생성하여 이는 다시 finitely generated $A$-module이기 때문이다.
+위의 isomorphism $(\ast)$에 의하여 quasi-coherent sheaf $\iota_\ast\mathcal{F}$이 ([§준연접층, ⁋정리 16](/ko/math/scheme_theory/quasicoherent_sheaves#thm16)) $\mathbb{P}^n$ 위의 coherent sheaf임만 확인하면 $X=\mathbb{P}^n_{\mathbb{K}}$이라 가정해도 된다. 이를 위해서는 finite type 조건만 affine-local하게 체크하면 되는데, 이는 $\iota$가 closed immersion이므로 각 chart 위에서 $\iota_\ast\mathcal{F}$은 $A$-algebra $A/I$ 위의 finitely generated module을 $A$-module로 본 것이고, $A \rightarrow A/I$가 전사이므로 $A/I$ 위의 generator를 $A$로 들어올리면 같은 원소들이 $A$ 위에서도 생성하기 때문이다.
 
 따라서 $\mathbb{P}^n$ 위의 coherent sheaf $\mathcal{F}$에 대한 명제만 보이면 충분하다. 우선 충분히 큰 cohomological dimension $i>n$에서 $H^i=0$인데, 이는 $\mathbb{P}^n$이 $n+1$개의 열린집합으로 덮이므로 그 Čech complex 단계에서 이미 이 항들이 $0$이기 때문이다. 
 
@@ -175,18 +175,18 @@ Field $\mathbb{K}$ 위의 Noetherian projective scheme $X$와 그 위의 coheren
 
 $$\mathcal{O}_{\mathbb{P}^n}^{\oplus r} \twoheadrightarrow \mathcal{F}(d)$$
 
-을 주고, 이를 $\mathcal{O}(-d)$로 twist하면 $\mathcal{O}(-d)^{\oplus r}\twoheadrightarrow\mathcal{F}$을 얻는다. $\mathbb{P}^n$이 Noetherian이므로 각 affine chart 위에서 finitely generated module의 submodule은 다시 finitely generated이고 ([\[가환대수학\] §기본 개념들, ⁋정리 3](/ko/math/commutative_algebra/basic_notions#thm3)), 따라서 그 kernel $\mathcal{G}$ 또한 finite type, 곧 coherent sheaf이다. 그럼 coherent sheaf들의 short exact sequence
+을 주고, 이를 $\mathcal{O}(-d)$로 twist하면 $\mathcal{O}(-d)^{\oplus r}\twoheadrightarrow\mathcal{F}$을 얻는다. $\mathbb{P}^n$이 Noetherian이므로 각 affine chart 위에서 finitely generated module의 submodule은 다시 finitely generated이고 ([\[가환대수학\] §기본 개념들, ⁋정리 3](/ko/math/commutative_algebra/basic_notions#thm3)), 따라서 그 kernel $\mathcal{K}$ 또한 finite type, 곧 coherent sheaf이다. 그럼 coherent sheaf들의 short exact sequence
 
-$$0 \rightarrow \mathcal{G} \rightarrow \mathcal{O}(-d)^{\oplus r} \rightarrow \mathcal{F} \rightarrow 0$$
+$$0 \rightarrow \mathcal{K} \rightarrow \mathcal{O}(-d)^{\oplus r} \rightarrow \mathcal{F} \rightarrow 0$$
 
 의 long exact sequence에서
 
-$$H^i(\mathbb{P}^n, \mathcal{O}(-d)^{\oplus r}) \rightarrow H^i(\mathbb{P}^n, \mathcal{F}) \rightarrow H^{i+1}(\mathbb{P}^n, \mathcal{G})$$
+$$H^i(\mathbb{P}^n, \mathcal{O}(-d)^{\oplus r}) \rightarrow H^i(\mathbb{P}^n, \mathcal{F}) \rightarrow H^{i+1}(\mathbb{P}^n, \mathcal{K})$$
 
 을 보면, 좌변은 [정리 6](#thm6)에 의하여 유한차원이고, 우변은 귀납가정에 의하여 유한차원이므로, 가운데 항 $H^i(\mathbb{P}^n, \mathcal{F})$ 또한 유한차원이다. 
 :::
 
-위 증명은 coherent sheaf를 충분히 twist하여 globally generated로 만든 뒤 free sheaf로 덮는 것을 유일한 도구로 삼았고, 유한차원성은 그 과정에서 [정리 6](#thm6)이 주는 유한성이 long exact sequence를 따라 옮겨간 결과였다. 그런데 [정리 6](#thm6)이 주는 것은 유한성만이 아니라 $d\gg0$에서 $\mathcal{O}(d)$의 higher cohomology가 아예 소멸한다는 것이므로, 같은 논증을 소멸 쪽으로 따라가면 임의의 coherent sheaf에 대해서도 충분히 twist한 뒤에는 higher cohomology가 사라지리라 기대할 수 있다. 이것이 다음의 정리이다.
+위 증명의 핵심적인 논증은 coherent sheaf를 충분히 twist하여 globally generated로 만든 뒤, 이를 free sheaf로 덮는 것이다. 그럼 이로부터 $\mathbb{P}^n$의 cohomology의 유한성이 long exact seqeunce를 따라 옮겨가서 정리의 주장을 주었다. 그런데 [정리 6](#thm6)은 모든 차수에서 cohomology가 finite dimension이라는 것 뿐만 아니라, 높은 차수의 cohomology는 아예 소멸한다는 것까지 보여주므로, 이 방향으로 논증을 전개하면 다음 결과를 얻는다. 
 
 ::: 정리 8 (Serre Vanishing)
 Field $\mathbb{K}$ 위의 Noetherian projective scheme $X$와 closed immersion $X\hookrightarrow\mathbb{P}^n_\mathbb{K}$이 주는 very ample line bundle $\mathcal{O}_X(1)$ ([§인자와 선형계, ⁋정의 17](/ko/math/scheme_theory/divisors_and_linear_systems#def17)), 그리고 coherent sheaf $\mathcal{F}$에 대하여, 충분히 큰 $d\gg 0$에 대해
@@ -196,9 +196,41 @@ $$H^i(X, \mathcal{F}(d))=0 \qquad (i>0)$$
 이 성립한다. 더욱이 이러한 $d$에 대해 $\mathcal{F}(d)$은 globally generated이다.
 :::
 ::: 증명
-[정리 7](#thm7)에서와 같이 $(\ast)$에 의하여 $X=\mathbb{P}^n_{\mathbb{K}}$이고 $\mathcal{O}_X(1)=\mathcal{O}(1)$인 경우로 환원한다. 여기에서 twist와의 호환 $\iota_\ast(\mathcal{F}(d))\cong(\iota_\ast\mathcal{F})(d)$ 또한 필요한데, 이는 $\mathcal{O}_X(1)=\iota^\ast\mathcal{O}(1)$이므로 projection formula에서 따라온다.
+[정리 7](#thm7)에서와 같이 $(\ast)$에 의하여 $X=\mathbb{P}^n_{\mathbb{K}}$이고 $\mathcal{O}_X(1)=\mathcal{O}(1)$인 경우로 환원할 수 있다. 명제가 twisting을 포함하므로, 이를 위해 추가로 필요한 등식은 
 
-먼저 $\mathcal{F}(d)$이 $d\gg0$에서 globally generated임을 본다. $S=\mathbb{K}[\x_0,\ldots, \x_n]$로 두고 graded $S$-module $\Gamma_\ast(\mathcal{F})=\bigoplus_{m\in\mathbb{Z}}\Gamma(\mathbb{P}^n, \mathcal{F}(m))$을 생각하면, 각 표준 affine $D_+(\x_j)$ 위에서 $\Gamma(D_+(\x_j), \mathcal{F})$은 degree $0$ localization $\Gamma_\ast(\mathcal{F})_{(\x_j)}$이다. 이 등식에서 자명하지 않은 것은 $D_+(\x_j)$ 위의 절단이 모두 global twisted section에서 온다는 것인데, 이는 절단을 연장하는 다음의 논증에서 얻어진다. 절단 $s\in\Gamma(D_+(\x_j), \mathcal{F})$과 다른 chart $D_+(\x_i)$에 대하여, $D_+(\x_i\x_j)$는 $D_+(\x_i)$에서 $\x_j/\x_i$를 뒤집어 얻어지므로 $s$의 restriction은 $\Gamma(D_+(\x_i), \mathcal{F})$의 원소를 $(\x_j/\x_i)^{e}$로 나눈 꼴이고, 따라서 $\x_j^{e}s$는 $D_+(\x_i)$ 위로 연장된다. 유한 개의 $i$에 대해 지수의 최댓값을 취하고 겹침에서 생기는 차를 다시 $\x_j$의 거듭제곱으로 죽이면 ($\mathbb{P}^n$이 Noetherian이므로 유한 번이면 된다) 충분히 큰 $e$에 대해 $\x_j^es$가 $\Gamma(\mathbb{P}^n, \mathcal{F}(e))$의 원소로 붙는다. 그럼 $\Gamma_\ast(\mathcal{F})_{(\x_j)}$은 $S_{(\x_j)}$ 위의 finitely generated module이므로, 각 generator를 $m_k/\x_j^{e_k}$ 꼴로 적고 $d_0=\max_{j,k}e_k$로 두면, $\x_j^{d_0-e_k}$를 곱한 $m_k\cdot\x_j^{d_0-e_k}\in\Gamma(\mathbb{P}^n, \mathcal{F}(d_0))$들이 $D_+(\x_j)$ 위에서 $\mathcal{F}(d_0)$의 stalk를 생성한다. $j$에 대해 최댓값을 취하면 $\mathcal{F}(d_0)$이 globally generated이고, $d\geq d_0$이면 $\mathcal{F}(d)=\mathcal{F}(d_0)\otimes\mathcal{O}(d-d_0)$ 또한 globally generated이다.
+$$\iota_\ast(\mathcal{F}(d))\cong(\iota_\ast\mathcal{F})(d)$$ 
+
+이며 이는 $\mathcal{O}_X(1)=\iota^\ast\mathcal{O}(1)$이므로 [§준연접층, ⁋명제 17](/ko/math/scheme_theory/quasicoherent_sheaves#prop17)으로부터 바로 따라나온다.
+
+먼저 $\mathcal{F}(d)$이 $d\gg0$에서 globally generated임을 보이자. $S_\bullet=\mathbb{K}[\x_0,\ldots, \x_n]$로 두고 graded $S_\bullet$-module 
+
+$$\Gamma_\ast(\mathcal{F})=\bigoplus_{m\in\mathbb{Z}}\Gamma(\mathbb{P}^n, \mathcal{F}(m))$$
+
+을 생각하자. 우리는 우선 각 standard affine chart 위에서의 등식
+
+$$\Gamma(D_+(\x_j), \mathcal{F})=\Gamma_\ast(\mathcal{F})_{(\x_j)}$$
+
+을 보인다. 즉, $D_+(\x_j)$ 위의 section이 모두 global twisted section에서 온다는 것을 보여야 하며, 이는 $D_+(\x_i)$ 위의 임의의 section이 주어졌을 때, $\x_j$의 충분히 큰 거듭제곱을 곱하면 이것이 $\mathbb{P}^n$의 global section으로부터 나온다는 것이다. 
+
+이 연장은 chart마다 따로 확인한 뒤 붙이는 방식으로 얻어진다. 표기를 줄여 $U_i=D_+(\x_i)$로 적자. $s\in\Gamma(U_j, \mathcal{F})$를 고정하고 각각의 $i$를 보면, $U_i\cap U_j$는 $U_i=\Spec S_{(\x_i)}$에서 $\x_j/\x_i$를 뒤집어 얻어지는 principal open set이므로 [§준연접층, ⁋명제 5](/ko/math/scheme_theory/quasicoherent_sheaves#prop5)로부터 
+
+$$\Gamma(U_i\cap U_j, \mathcal{F})=\Gamma(U_i, \mathcal{F})_{\x_j/\x_i}$$
+
+를 얻는다. 즉 $s\vert_{U_i\cap U_j}$는 적당한 $e_i\geq0$과 $t_i\in\Gamma(U_i, \mathcal{F})$에 대하여 $t_i\vert_{U_i\cap U_j}$를 $(\x_j/\x_i)^{e_i}$로 나눈 것이고, 따라서 양변에 $\x_i^{e_i}(\x_j/\x_i)^{e_i}=\x_j^{e_i}$를 곱하면
+
+$$\x_j^{e_i}\cdot s\vert_{U_i\cap U_j}=(\x_i^{e_i}t_i)\vert_{U_i\cap U_j}$$
+
+가 된다. 그럼 이 식의 양변은 $\mathcal{F}(e_i)$의 section이고, 우변은 $U_i$ 전체에서 정의된 section $\x_i^{e_i}t_i\in\Gamma(U_i, \mathcal{F}(e_i))$를 제한한 것이며 따라서 $x_j^{e_i}s$가 $U_i$ 위로 extend된다. 이제 이러한 chart는 유한개이므로, $e=\max e_i$로 두고 
+
+$$u_i=\x_j^{e-e_i}\x_i^{e_i}t_i\in\Gamma(U_i, \mathcal{F}(e))$$
+
+로 두면 모든 $i$에 대하여 $u_i\vert_{U_i\cap U_j}=\x_j^es\vert_{U_i\cap U_j}$이다. 남는 것은 서로 다른 두 chart에서 얻은 $u_i$와 $u_{i'}$이 $U_i\cap U_{i'}$ 위에서 일치하는지, 즉 cocycle condition인데, 이들의 차는 $U_i\cap U_{i'}\cap U_j$ 위에서 $0$이고 이 열린집합 또한 $U_i\cap U_{i'}$에서 $\x_j$의 비를 뒤집어 얻어지므로, 위와 같은 localization 등식에 의하여 $\x_j$의 적당한 거듭제곱이 그 차를 소멸시킨다. 다시 이러한 쌍들이 유한개이므로, 충분히 큰 공통된 정수 $f$를 잡으면 $\x_j^fu_i$들이 서로 일치하여 하나의 $t\in\Gamma(\mathbb{P}^n, \mathcal{F}(e+f))$로 붙으며, $t\vert_{U_j}=\x_j^{e+f}s$이 되어 위의 등식이 성립한다.
+
+이제 우변의 $\Gamma_\ast(\mathcal{F})_{(\x_j)}$은 $S_{(\x_j)}$ 위의 finitely generated module이므로, 각각의 chart마다 그 generator들을 
+
+$$m_{jk}/\x_j^{e_{jk}}\qquad m_{jk}\in\Gamma(\mathbb{P}^n, \mathcal{F}(e_{jk}))$$
+
+꼴로 적을 수 있다. Chart도 generator도 유한개이므로 $d_0=\max_{j,k}e_{jk}$가 잘 정의되며, 그럼 $\x_j^{d_0-e_{jk}}$를 곱한 $m_{jk}\x_j^{d_0-e_{jk}}\in\Gamma(\mathbb{P}^n, \mathcal{F}(d_0))$들이 각각의 $D_+(\x_j)$ 위에서 $\mathcal{F}(d_0)$의 stalk를 생성한다. 이 chart들이 $\mathbb{P}^n$을 덮으므로 $\mathcal{F}(d_0)$은 globally generated이며, $d\geq d_0$이면 $\mathcal{F}(d)=\mathcal{F}(d_0)\otimes\mathcal{O}(d-d_0)$ 또한 globally generated이다.
 
 이제 vanishing을 $i$에 대한 내림차순 귀납으로 본다. $i>n$에서는 [정리 7](#thm7)의 cohomological dimension에 의해 $H^i=0$이다. 임의의 $i\geq1$에 대하여, globally generated 성질로부터 surjection $\mathcal{O}^{\oplus r}\twoheadrightarrow\mathcal{F}(d_0)$을 잡고 kernel $\mathcal{K}$를 coherent sheaf로 하여 short exact sequence
 
@@ -225,10 +257,10 @@ $$H^i(\mathbb{P}^n, \mathcal{O}(d-d_0)^{\oplus r}) \rightarrow H^i(\mathbb{P}^n,
 Field $\mathbb{K}$ 위의 Noetherian projective scheme $X$ 위의 very ample invertible sheaf $\mathcal{L}$은 ample이다. ([§인자와 선형계, ⁋정의 18](/ko/math/scheme_theory/divisors_and_linear_systems#def18))
 :::
 ::: 증명
-$\mathcal{L}$이 very ample이므로 이를 globally generate하는 유한 개의 절단이 locally closed embedding $\iota:X \rightarrow \mathbb{P}^N_\mathbb{K}$를 정의하고 $\mathcal{L}\cong\iota^\ast\mathcal{O}(1)$이다. $X$가 $\mathbb{K}$ 위에서 projective이므로 $\iota(X)$는 닫힌집합이며 ([§값매김환, ⁋따름정리 16](/ko/math/scheme_theory/valuative_criteria#cor16)), 따라서 $\iota$는 closed immersion이다. 그럼 $\mathcal{L}$은 [정리 8](#thm8)에서 $\mathcal{O}_X(1)$이 맡은 역할을 그대로 할 수 있으므로, 임의의 coherent sheaf $\mathcal{F}$에 대하여 충분히 큰 모든 $d$에서 $\mathcal{F}\otimes\mathcal{L}^{\otimes d}$은 globally generated이다. 이것이 ampleness의 정의이다.
+$\mathcal{L}$이 very ample이므로 이를 globally generate하는 유한 개의 section이 locally closed embedding $\iota:X \rightarrow \mathbb{P}^N_\mathbb{K}$를 정의하고 $\mathcal{L}\cong\iota^\ast\mathcal{O}(1)$이다. $X$가 $\mathbb{K}$ 위에서 projective이므로 $\iota(X)$는 닫힌집합이며 ([§값매김환, ⁋따름정리 16](/ko/math/scheme_theory/valuative_criteria#cor16)), 따라서 $\iota$는 closed immersion이다. 그럼 $\mathcal{L}$은 [정리 8](#thm8)에서 $\mathcal{O}_X(1)$이 맡은 역할을 그대로 할 수 있으므로, 임의의 coherent sheaf $\mathcal{F}$에 대하여 충분히 큰 모든 $d$에서 $\mathcal{F}\otimes\mathcal{L}^{\otimes d}$은 globally generated이다. 이것이 ampleness의 정의이다.
 :::
 
-역방향은 그대로 성립하지 않는다. Ample invertible sheaf는 절단이 부족하여 embedding을 주지 못할 수 있고, 이를 해소하려면 여러 번 tensor하여 절단을 늘려야 한다. 다음 정리는 그것이 언제나 가능함을 말해준다.
+역방향은 그대로 성립하지 않는다. Ample invertible sheaf는 section이 부족하여 embedding을 주지 못할 수 있고, 이를 해소하려면 여러 번 tensor하여 section을 늘려야 한다. 다음 정리는 그것이 언제나 가능함을 말해준다.
 
 ::: 정리 10
 Field $\mathbb{K}$ 위의 Noetherian projective scheme $X$ 위의 invertible sheaf $\mathcal{L}$에 대하여, $\mathcal{L}$이 ample인 것과 적당한 $m>0$에 대하여 $\mathcal{L}^{\otimes m}$이 very ample인 것은 서로 동치이다.
@@ -236,13 +268,13 @@ Field $\mathbb{K}$ 위의 Noetherian projective scheme $X$ 위의 invertible she
 ::: 증명
 $\mathcal{L}^{\otimes m}$이 very ample이라 하자. [따름정리 9](#cor9)에 의하여 $\mathcal{L}^{\otimes m}$은 ample이고, [§인자와 선형계, ⁋명제 19](/ko/math/scheme_theory/divisors_and_linear_systems#prop19)의 2번에 의하여 $\mathcal{L}$ 또한 ample이다.
 
-거꾸로 $\mathcal{L}$이 ample이라 하자. Closed point $x\in X$를 고정하고, $\mathcal{L}$이 trivialize되는 affine open neighborhood $U\ni x$를 잡자. $Y=X\setminus U$에 reduced closed subscheme 구조를 주어 그 ideal sheaf $\mathcal{I}_Y$를 생각하면 이는 coherent sheaf이므로, ampleness에 의하여 적당한 $n>0$에 대해 $\mathcal{I}_Y\otimes\mathcal{L}^{\otimes n}$은 globally generated이다. $x\notin Y$이므로 $(\mathcal{I}_Y)_x=\mathcal{O}_{X,x}$이고, 따라서 $x$에서 소멸하지 않는 절단 $s\in\Gamma(X, \mathcal{I}_Y\otimes\mathcal{L}^{\otimes n})\subseteq\Gamma(X, \mathcal{L}^{\otimes n})$이 존재한다. 이 $s$는 $Y$ 위에서 소멸하므로 $s$가 stalk를 생성하는 점들의 열린집합 $X_s$는 ([§인자와 선형계, §§Ample invertible sheaf](/ko/math/scheme_theory/divisors_and_linear_systems#ample-invertible-sheaf)) $U$에 포함되고, $U$ 위에서 $\mathcal{L}^{\otimes n}$을 trivialize하면 $s$는 함수 $f\in\Gamma(U, \mathcal{O}_X)$에 대응하여 $X_s=D(f)$는 affine이다.
+거꾸로 $\mathcal{L}$이 ample이라 하자. Closed point $x\in X$를 고정하고, $\mathcal{L}$이 trivialize되는 affine open neighborhood $U\ni x$를 잡자. $Y=X\setminus U$에 reduced closed subscheme 구조를 주어 그 ideal sheaf $\mathcal{I}_Y$를 생각하면 이는 coherent sheaf이므로, ampleness에 의하여 적당한 $n>0$에 대해 $\mathcal{I}_Y\otimes\mathcal{L}^{\otimes n}$은 globally generated이다. $x\notin Y$이므로 $(\mathcal{I}_Y)_x=\mathcal{O}_{X,x}$이고, 따라서 $x$에서 소멸하지 않는 section $s\in\Gamma(X, \mathcal{I}_Y\otimes\mathcal{L}^{\otimes n})\subseteq\Gamma(X, \mathcal{L}^{\otimes n})$이 존재한다. 이 $s$는 $Y$ 위에서 소멸하므로 $s$가 stalk를 생성하는 점들의 열린집합 $X_s$는 ([§인자와 선형계, §§Ample invertible sheaf](/ko/math/scheme_theory/divisors_and_linear_systems#ample-invertible-sheaf)) $U$에 포함되고, $U$ 위에서 $\mathcal{L}^{\otimes n}$을 trivialize하면 $s$는 함수 $f\in\Gamma(U, \mathcal{O}_X)$에 대응하여 $X_s=D(f)$는 affine이다.
 
 $X$가 $\mathbb{K}$ 위에서 finite type이므로 각 affine chart의 coordinate ring은 Jacobson ring이고 ([\[가환대수학\] §영점정리, ⁋정리 4](/ko/math/commutative_algebra/nullstellensatz#thm4)), 따라서 $X$의 공집합이 아닌 닫힌집합은 언제나 $X$의 closed point를 포함한다. 곧 closed point들에서 얻은 위의 열린집합들의 합집합은 여집합이 closed point를 갖지 않는 닫힌집합이라 $X$ 전체이며, $X$가 quasi-compact이므로 그 가운데 유한 개 $X_{s_1},\ldots, X_{s_k}$만으로도 $X$를 덮는다. 여기에서 $s_i\in\Gamma(X, \mathcal{L}^{\otimes n_i})$라 하고 $m$을 $n_i$들의 최소공배수라 하자. 임의의 $e\geq1$에 대해 $X_{s^e}=X_s$이므로 $s_i$를 $s_i^{m/n_i}$로 바꾸면 cover를 유지한 채 모든 $i$에 대해 $s_i\in\Gamma(X, \mathcal{L}^{\otimes m})$이라 가정할 수 있다. 또 $X$가 $\mathbb{K}$ 위에서 finite type이므로 각각의 $B_i=\Gamma(X_{s_i}, \mathcal{O}_X)$는 finitely generated $\mathbb{K}$-대수이고, 그 generator $b_{i1},\ldots, b_{ir_i}$를 택하자.
 
-이제 충분히 큰 공통의 $N$에 대하여 $s_i^Nb_{ij}$가 $X$ 전체의 절단 $t_{ij}\in\Gamma(X, \mathcal{L}^{\otimes mN})$으로 연장됨을 본다. $\mathcal{L}^{\otimes m}$이 trivialize되는 유한 개의 affine open subset $V_1,\ldots, V_p$로 $X$를 덮고 각각의 $V_l=\Spec A_l$ 위에서 trivialization을 하나 고정하면, $s_i$는 함수 $g_l\in A_l$에 대응하고 $X_{s_i}\cap V_l=D(g_l)$이다. 그럼 $b_{ij}$의 $D(g_l)$로의 restriction은 $(A_l)_{g_l}$의 원소이므로 $g_l$의 충분히 큰 거듭제곱을 곱하면 $A_l$의 원소가 되고, 유한 개의 $l$과 $j$에 대해 지수의 최댓값 $N_0$을 취하면 각각의 $V_l$ 위에서 $s_i^{N_0}b_{ij}$가 $\mathcal{L}^{\otimes mN_0}$의 절단으로 연장된다. 서로 다른 두 chart 위의 연장은 $X_{s_i}\cap V_l\cap V_{l'}$ 위에서 일치하므로, 남은 것은 그 차를 겹침 전체에서 죽이는 일이다. $X$가 Noetherian이라 $V_l\cap V_{l'}$은 유한 개의 affine open subset $\Spec C$로 덮이는데, 그 각각의 위에서 $\mathcal{L}^{\otimes mN_0}$을 trivialize하면 두 연장의 차는 $C$의 원소 $h$가 되고 $s_i$에 대응하는 함수 $g\in C$에 대해 $h$의 $D(g)$로의 restriction이 $0$이므로 $C_g$에서 $h=0$, 곧 적당한 지수 $c$에 대해 $g^ch=0$이다. 이러한 유한 개의 지수의 최댓값을 $N_0$에 더해 $N$으로 두면 $s_i^Nb_{ij}$의 chart별 연장들이 모든 겹침 위에서 일치하고, 따라서 이들이 붙어 원하는 global section $t_{ij}\in\Gamma(X, \mathcal{L}^{\otimes mN})$을 준다.
+이제 충분히 큰 공통의 $N$에 대하여 $s_i^Nb_{ij}$가 $X$ 전체의 section $t_{ij}\in\Gamma(X, \mathcal{L}^{\otimes mN})$으로 연장됨을 본다. $\mathcal{L}^{\otimes m}$이 trivialize되는 유한 개의 affine open subset $V_1,\ldots, V_p$로 $X$를 덮고 각각의 $V_l=\Spec A_l$ 위에서 trivialization을 하나 고정하면, $s_i$는 함수 $g_l\in A_l$에 대응하고 $X_{s_i}\cap V_l=D(g_l)$이다. 그럼 $b_{ij}$의 $D(g_l)$로의 restriction은 $(A_l)_{g_l}$의 원소이므로 $g_l$의 충분히 큰 거듭제곱을 곱하면 $A_l$의 원소가 되고, 유한 개의 $l$과 $j$에 대해 지수의 최댓값 $N_0$을 취하면 각각의 $V_l$ 위에서 $s_i^{N_0}b_{ij}$가 $\mathcal{L}^{\otimes mN_0}$의 section으로 연장된다. 서로 다른 두 chart 위의 연장은 $X_{s_i}\cap V_l\cap V_{l'}$ 위에서 일치하므로, 남은 것은 그 차를 겹침 전체에서 죽이는 일이다. $X$가 Noetherian이라 $V_l\cap V_{l'}$은 유한 개의 affine open subset $\Spec C$로 덮이는데, 그 각각의 위에서 $\mathcal{L}^{\otimes mN_0}$을 trivialize하면 두 연장의 차는 $C$의 원소 $h$가 되고 $s_i$에 대응하는 함수 $g\in C$에 대해 $h$의 $D(g)$로의 restriction이 $0$이므로 $C_g$에서 $h=0$, 곧 적당한 지수 $c$에 대해 $g^ch=0$이다. 이러한 유한 개의 지수의 최댓값을 $N_0$에 더해 $N$으로 두면 $s_i^Nb_{ij}$의 chart별 연장들이 모든 겹침 위에서 일치하고, 따라서 이들이 붙어 원하는 global section $t_{ij}\in\Gamma(X, \mathcal{L}^{\otimes mN})$을 준다.
 
-이제 절단들 $s_1^N,\ldots, s_k^N$과 $t_{ij}$들을 함께 생각하자. $X_{s_i^N}=X_{s_i}$들이 $X$를 덮으므로 이들은 $\mathcal{L}^{\otimes mN}$을 globally generate하고, 따라서 morphism $\varphi:X \rightarrow \mathbb{P}^M_\mathbb{K}$를 정의한다. ([§인자와 선형계, §§Ample invertible sheaf](/ko/math/scheme_theory/divisors_and_linear_systems#ample-invertible-sheaf)) $s_i^N$에 대응하는 좌표가 소멸하지 않는 standard chart를 $V_i\subseteq\mathbb{P}^M_\mathbb{K}$라 하면 $\varphi^{-1}(V_i)=X_{s_i}$이고, $\varphi$의 구성에 의하여 $\varphi\vert_{X_{s_i}}:X_{s_i} \rightarrow V_i$는 좌표를 $t_{ij}/s_i^N=b_{ij}$로 보내는 ring homomorphism에 대응한다. $b_{ij}$들이 $B_i$를 생성하므로 이 homomorphism은 surjective이고, 따라서 $\varphi\vert_{X_{s_i}}$는 closed immersion이다. ([§아핀스킴, ⁋정리 13](/ko/math/scheme_theory/affine_schemes#thm13), [§닫힌 부분스킴, ⁋명제 3](/ko/math/scheme_theory/closed_subschemes#prop3)) Closed immersion인 것은 target에 대해 국소적인 조건이므로 $\varphi$는 열린집합 $\bigcup_iV_i$ 위로의 closed immersion, 곧 locally closed embedding이며 $\mathcal{L}^{\otimes mN}\cong\varphi^\ast\mathcal{O}(1)$은 very ample이다.
+이제 section들 $s_1^N,\ldots, s_k^N$과 $t_{ij}$들을 함께 생각하자. $X_{s_i^N}=X_{s_i}$들이 $X$를 덮으므로 이들은 $\mathcal{L}^{\otimes mN}$을 globally generate하고, 따라서 morphism $\varphi:X \rightarrow \mathbb{P}^M_\mathbb{K}$를 정의한다. ([§인자와 선형계, §§Ample invertible sheaf](/ko/math/scheme_theory/divisors_and_linear_systems#ample-invertible-sheaf)) $s_i^N$에 대응하는 좌표가 소멸하지 않는 standard chart를 $V_i\subseteq\mathbb{P}^M_\mathbb{K}$라 하면 $\varphi^{-1}(V_i)=X_{s_i}$이고, $\varphi$의 구성에 의하여 $\varphi\vert_{X_{s_i}}:X_{s_i} \rightarrow V_i$는 좌표를 $t_{ij}/s_i^N=b_{ij}$로 보내는 ring homomorphism에 대응한다. $b_{ij}$들이 $B_i$를 생성하므로 이 homomorphism은 surjective이고, 따라서 $\varphi\vert_{X_{s_i}}$는 closed immersion이다. ([§아핀스킴, ⁋정리 13](/ko/math/scheme_theory/affine_schemes#thm13), [§닫힌 부분스킴, ⁋명제 3](/ko/math/scheme_theory/closed_subschemes#prop3)) Closed immersion인 것은 target에 대해 국소적인 조건이므로 $\varphi$는 열린집합 $\bigcup_iV_i$ 위로의 closed immersion, 곧 locally closed embedding이며 $\mathcal{L}^{\otimes mN}\cong\varphi^\ast\mathcal{O}(1)$은 very ample이다.
 :::
 
 [정리 10](#thm10)은 ampleness가 $\mathcal{L}$ 하나가 아니라 그 거듭제곱들이 함께 결정하는 성질임을 다시 확인해 준다. 실제로 [§인자와 선형계, ⁋명제 19](/ko/math/scheme_theory/divisors_and_linear_systems#prop19)의 2번은 ampleness가 거듭제곱을 취하여도 변하지 않는다고 말하는데, very ampleness는 그렇지 않으므로 두 개념 사이의 간극은 정확히 이 거듭제곱만큼이다. 이제 [정리 8](#thm8)과 합치면 ampleness를 cohomology만으로 읽어낼 수 있다.
@@ -264,7 +296,7 @@ $$H^i\bigl(X, \mathcal{F}\otimes\mathcal{L}^{\otimes q}\otimes(\mathcal{L}^{\oti
 
 $$\Gamma(X, \mathcal{F}\otimes\mathcal{L}^{\otimes n}) \longrightarrow (\mathcal{F}\otimes\mathcal{L}^{\otimes n})_P\otimes_{\mathcal{O}_{X,P}}\kappa(P) \longrightarrow 0$$
 
-이 exact이다. Stalk $(\mathcal{F}\otimes\mathcal{L}^{\otimes n})_P$는 Noetherian local ring $\mathcal{O}_{X,P}$ 위의 finitely generated module이므로, [\[가환대수학\] §정수적 확장, ⁋보조정리 8](/ko/math/commutative_algebra/integral_extension#lem8)의 2번에 의하여 유한 개의 global section의 germ이 이 stalk를 생성한다. 그 절단들이 정의하는 $\mathcal{O}_X^{\oplus c} \rightarrow \mathcal{F}\otimes\mathcal{L}^{\otimes n}$의 cokernel은 coherent sheaf이고 그 stalk가 $P$에서 $0$이므로, coherent sheaf의 support가 닫혀 있다는 것에서 $P$의 어떤 열린근방 위에서 $\mathcal{F}\otimes\mathcal{L}^{\otimes n}$은 globally generated이다.
+이 exact이다. Stalk $(\mathcal{F}\otimes\mathcal{L}^{\otimes n})_P$는 Noetherian local ring $\mathcal{O}_{X,P}$ 위의 finitely generated module이므로, [\[가환대수학\] §정수적 확장, ⁋보조정리 8](/ko/math/commutative_algebra/integral_extension#lem8)의 2번에 의하여 유한 개의 global section의 germ이 이 stalk를 생성한다. 그 section들이 정의하는 $\mathcal{O}_X^{\oplus c} \rightarrow \mathcal{F}\otimes\mathcal{L}^{\otimes n}$의 cokernel은 coherent sheaf이고 그 stalk가 $P$에서 $0$이므로, coherent sheaf의 support가 닫혀 있다는 것에서 $P$의 어떤 열린근방 위에서 $\mathcal{F}\otimes\mathcal{L}^{\otimes n}$은 globally generated이다.
 
 이 논증은 $n\geq n_1$인 모든 $n$에서 성립하되 열린근방이 $n$에 따라 달라지므로, 이를 하나로 묶어야 한다. 위의 논증을 $\mathcal{F}=\mathcal{O}_X$에 적용하면 적당한 $m\geq1$이 존재하여 $\mathcal{L}^{\otimes m}$과 $\mathcal{L}^{\otimes(m+1)}$이 모두 $P$에서 global section들로 생성되므로, 두 열린근방의 교집합 $W$ 위에서 둘 다 globally generated이다. Globally generated인 두 module의 tensor product는 stalk의 generator들의 tensor를 보면 다시 globally generated이므로, $a,b\geq0$에 대하여 $\mathcal{L}^{\otimes(am+b(m+1))}$은 $W$ 위에서 globally generated이다. $m$과 $m+1$이 서로소이므로 $k\geq m^2$인 모든 정수 $k$가 $am+b(m+1)$의 꼴로 적히고, 곧 $W$ 위에서는 $k\geq m^2$인 모든 $k$에 대해 $\mathcal{L}^{\otimes k}$이 globally generated이다. 한편 $\mathcal{F}$ 자신에 대해 $n_2\geq n_1$을 하나 택하면 $\mathcal{F}\otimes\mathcal{L}^{\otimes n_2}$은 $P$의 어떤 열린근방 $V$ 위에서 globally generated이므로, $W\cap V$ 위에서는 $n\geq n_2+m^2$인 모든 $n$에 대해
 
@@ -275,7 +307,7 @@ $$\mathcal{F}\otimes\mathcal{L}^{\otimes n}\cong(\mathcal{F}\otimes\mathcal{L}^{
 마지막으로 $X$가 $\mathbb{K}$ 위에서 finite type이므로 각 affine chart의 coordinate ring은 Jacobson ring이고 ([\[가환대수학\] §영점정리, ⁋정리 4](/ko/math/commutative_algebra/nullstellensatz#thm4)), 따라서 $X$의 공집합 아닌 닫힌집합은 언제나 $X$의 closed point를 포함한다. 곧 closed point들에서 얻은 위의 열린근방들은 $X$ 전체를 덮으며, $X$가 quasi-compact이므로 유한 개 $P_1,\ldots, P_r$의 것만으로 덮인다. 각각에 대응하는 하한들의 최댓값을 $n_0$로 두면 $n\geq n_0$마다 $\mathcal{F}\otimes\mathcal{L}^{\otimes n}$은 $X$ 전체에서 globally generated이므로 $\mathcal{L}$은 ample이다.
 :::
 
-[정리 11](#thm11)의 2번은 사영공간으로의 embedding을 전혀 언급하지 않으므로, 구체적인 절단을 다루지 않고도 line bundle의 양성을 확인할 수 있는 도구가 된다. 소멸을 요구한 것은 $i>0$ 전체이지만 증명에서 실제로 쓰인 것은 $H^1$의 소멸뿐이며, 이는 $H^1$이 절단의 확장을 막는 유일한 장애물이라는 사실의 반영이다.
+[정리 11](#thm11)의 2번은 사영공간으로의 embedding을 전혀 언급하지 않으므로, 구체적인 section을 다루지 않고도 line bundle의 양성을 확인할 수 있는 도구가 된다. 소멸을 요구한 것은 $i>0$ 전체이지만 증명에서 실제로 쓰인 것은 $H^1$의 소멸뿐이며, 이는 $H^1$이 section의 확장을 막는 유일한 장애물이라는 사실의 반영이다.
 
 ## Euler characteristic과 Hilbert polynomial
 

@@ -302,16 +302,41 @@ $$\mathcal{F}(U_i\cap \varphi^{-1}(D(g)))=(N_i)_g\cong \mathcal{F}(U_i)\otimes_A
 
 $$\mathcal{F}(\varphi^{-1}(D(g)))\cong \ker\Bigl(\prod_i N_i \rightrightarrows \prod_{i,j,k}\mathcal{F}(U_{ijk})\Bigr)\otimes_A A_g=M\otimes_A A_g=M_g$$
 
-를 얻는다. 여기에서 유한성은 곱과 localization을 교환하는 데 본질적으로 사용되었으며, 이것이 quasi-compactness와 quasi-separatedness가 필요한 이유이다. 따라서 $\varphi_\ast \mathcal{F}(D(g))\cong M_g$가 모든 $g$에 대해 성립하므로 $\varphi_\ast \mathcal{F}\cong \widetilde M$이고, 이는 quasi-coherent sheaf이다.
+를 얻는다. 여기에서 유한성은 곱과 localization이 commute하는 데 본질적으로 사용되었으며, 이것이 quasi-compactness와 quasi-separatedness가 필요한 이유이다. 따라서 $\varphi_\ast \mathcal{F}(D(g))\cong M_g$가 모든 $g$에 대해 성립하므로 $\varphi_\ast \mathcal{F}\cong \widetilde M$이고, 이는 quasi-coherent sheaf이다.
 :::
 
-[정리 16](#thm16)의 quasi-compact, quasi-separated 조건은 본질적이다. 가령 무한히 많은 affine을 붙여야 하는 morphism에서는 $\varphi^{-1}(D(g))$ 위의 section을 계산할 때 무한 곱이 등장하여 localization과의 교환이 깨질 수 있다. 다만 Noetherian scheme들 사이의 morphism이나, 특히 affine scheme들 사이의 morphism은 항상 이 조건을 만족하므로, 실용적으로 자주 마주치는 상황에서는 pushforward가 quasi-coherence를 보존한다.
+[정리 16](#thm16)의 quasi-compact, quasi-separated 조건은 본질적이다. 가령 무한히 많은 affine을 붙여야 하는 morphism에서는 $\varphi^{-1}(D(g))$ 위의 section을 계산할 때 무한 곱이 등장하여 localization과 commute하지 않을 수 있다. 다만 Noetherian scheme들 사이의 morphism이나, 특히 affine scheme들 사이의 morphism은 항상 이 조건을 만족하므로, 실용적으로 자주 마주치는 상황에서는 pushforward가 quasi-coherence를 보존한다.
+
+마지막으로 pushforward가 tensor product와 어떻게 호환되는지를 본다. 일반적으로 $\varphi_\ast$는 tensor product를 보존하지 않지만, 두 인자 가운데 하나가 base 위의 locally free sheaf를 당겨온 것이라면 그 인자를 $\varphi_\ast$ 밖으로 빼낼 수 있다.
+
+::: 명제 17 (Projection formula)
+Scheme morphism $\varphi:X \rightarrow Y$와 $X$ 위의 quasi-coherent sheaf $\mathcal{F}$, 그리고 $Y$ 위의 finite rank locally free sheaf $\mathcal{L}$에 대하여 ([정의 12](#def12)) isomorphism
+
+$$\varphi_\ast(\mathcal{F}\otimes_{\mathcal{O}_X}\varphi^\ast \mathcal{L})\cong \varphi_\ast \mathcal{F}\otimes_{\mathcal{O}_Y}\mathcal{L}$$
+
+이 성립한다.
+:::
+::: 증명
+먼저 임의의 $\mathcal{O}_Y$-module $\mathcal{L}$에 대하여 자연스러운 사상을 만든다. [정의 14](#def14)의 pullback은 $\varphi^{-1}$과 $\mathcal{O}_X$로의 base change의 합성이므로 tensor product와 commute하며, 따라서 adjunction $\varphi^\ast\dashv \varphi_\ast$의 counit $\varepsilon:\varphi^\ast\varphi_\ast \mathcal{F} \rightarrow \mathcal{F}$과 함께
+
+$$\varphi^\ast(\varphi_\ast \mathcal{F}\otimes \mathcal{L})\cong \varphi^\ast\varphi_\ast \mathcal{F}\otimes \varphi^\ast \mathcal{L}\xrightarrow{\varepsilon\otimes\id}\mathcal{F}\otimes \varphi^\ast \mathcal{L}$$
+
+를 얻는다. 이 사상의 adjoint가 우리가 원하는 $\theta:\varphi_\ast \mathcal{F}\otimes \mathcal{L} \rightarrow \varphi_\ast(\mathcal{F}\otimes \varphi^\ast \mathcal{L})$이며, 이는 $\mathcal{L}$의 선택에 대해 natural하다.
+
+이제 $\mathcal{L}$이 finite rank locally free일 때 $\theta$가 isomorphism임을 보인다. Pushforward는 base의 열린집합으로의 제한과 commute하므로, 곧 $\varphi_\ast \mathcal{G}\vert_V$는 $\varphi^{-1}(V) \rightarrow V$에 대한 pushforward이므로, isomorphism 여부는 $Y$를 덮는 열린집합들 위에서 확인하면 충분하다. 가정에 의하여 $\mathcal{L}\vert_V\cong \mathcal{O}_V^{\oplus r}$인 열린집합 $V$들이 $Y$를 덮고, 이러한 $V$ 위에서 $\varphi^\ast \mathcal{L}\cong \mathcal{O}^{\oplus r}$이다. 한편 tensor product는 finite direct sum과 commute하고, $\varphi_\ast$ 또한 right adjoint로서 finite product와 commute하므로 finite direct sum과 commute한다. ([\[범주론\] §수반함자, ⁋정리 9](/ko/math/category_theory/adjoints#thm9)) 따라서 $V$ 위에서 양변은 모두 $(\varphi_\ast \mathcal{F}\vert_V)^{\oplus r}$이고, $\theta$의 naturality에 의하여 이 identification 아래에서 $\theta$는 항등사상 $r$개의 direct sum이다. 곧 $\theta$는 각 $V$ 위에서 isomorphism이므로 isomorphism이다.
+:::
+
+[명제 17](#prop17)이 말하는 것은 $\varphi_\ast$가 abelian sheaf 수준의 연산에 그치지 않고 $\mathcal{O}_Y$-module 구조를 존중한다는 것이다. 이는 [\[대수적 위상수학\] §벡터다발의 특성류](/ko/math/algebraic_topology/characteristic_classes)에서 Gysin homomorphism $\pi_!$가 주는 등식
+
+$$\pi_!(\pi^\ast\alpha\smile\beta)=\alpha\smile\pi_!\beta$$
+
+의 대수기하 버전이며, 이들은 모두 base에서 당겨온 것은 pushforward 밖으로 빠져나온다는 공통된 아이디어로부터 오는 것이다.
 
 ## Ideal sheaf와 closed subscheme
 
 Pushforward가 quasi-coherence를 보존한다는 사실의 가장 중요한 응용은 closed subscheme이 결정하는 ideal sheaf이다. Affine scheme $\Spec A$의 ideal $\mathfrak{a}\subseteq A$는 그 자체로 $A$-module이므로 associated sheaf $\widetilde{\mathfrak{a}}$를 정의하고, 이는 $\mathcal{O}_{\Spec A}=\widetilde A$의 subsheaf이다. 일반적인 scheme $X$의 closed embedding $\iota:Z \rightarrow X$가 정의하는 ideal sheaf $\mathcal{I}_{Z/X}=\ker\iota^\sharp$ 또한 각각의 affine open subset 위에서 ideal을 주지만 ([§닫힌 부분스킴, ⁋정의 5](/ko/math/scheme_theory/closed_subschemes#def5)), 이 ideal들이 localization과 호환되어 하나의 associated sheaf로 붙는지는 별개의 문제이다. [§닫힌 부분스킴, ⁋명제 6](/ko/math/scheme_theory/closed_subschemes#prop6)이 gluing을 위해 요구한 localization 조건이 바로 quasi-coherence이므로, 확인해야 할 것은 $\mathcal{I}_{Z/X}$가 quasi-coherent sheaf라는 것이다. 이는 [정리 16](#thm16)의 응용으로 얻어진다.
 
-::: 명제 17
+::: 명제 18
 Closed embedding $\iota:Z \rightarrow X$에 대하여 ([§닫힌 부분스킴, ⁋정의 2](/ko/math/scheme_theory/closed_subschemes#def2)), $\iota_\ast \mathcal{O}_Z$와 ideal sheaf $\mathcal{I}_{Z/X}$는 모두 $X$ 위의 quasi-coherent sheaf이다.
 :::
 ::: 증명
@@ -326,7 +351,7 @@ $$0 \rightarrow \ker\phi \rightarrow A \rightarrow \im\phi \rightarrow 0,\qquad 
 에 [명제 6](#prop6)을 적용하면 $\widetilde{\im\phi} \rightarrow \widetilde N$이 injective이고 $\widetilde{\ker\phi}=\ker(\widetilde A \rightarrow \widetilde{\im\phi})$이므로, 결국 $\ker\widetilde\phi=\widetilde{\ker\phi}$를 얻는다. 즉 $\mathcal{I}_{Z/X}\vert_U\cong \widetilde{\ker\phi}$는 associated sheaf이고, 이로부터 $\mathcal{I}_{Z/X}$는 quasi-coherent sheaf이다.
 :::
 
-이로써 $X$의 closed subscheme들은 $\mathcal{O}_X$의 quasi-coherent ideal sheaf, 곧 $\mathcal{O}_X$의 quasi-coherent 부분 $\mathcal{O}_X$-module과 정확히 대응한다. 한 방향은 [명제 17](#prop17)이 주며, 거꾸로 그러한 $\mathcal{I}$가 주어지면 각각의 affine open subset $\Spec A$에 대하여 $\mathcal{I}(\Spec A)$는 $A$의 ideal이고 [정리 10](#thm10)과 [보조정리 3](#lem3)에 의하여 $\mathcal{I}(D(f))\cong \mathcal{I}(\Spec A)_f$가 성립하므로, [§닫힌 부분스킴, ⁋명제 6](/ko/math/scheme_theory/closed_subschemes#prop6)에 의하여 $\mathcal{I}$는 $X$의 유일한 closed subscheme을 유도한다. 이 대응은 affine 위에서 ideal $\mathfrak{a}\subseteq A$와 quotient $A/\mathfrak{a}$ 사이의 대응에 다름 아니다. 또한 [명제 17](#prop17)은 [§닫힌 부분스킴, ⁋명제 3](/ko/math/scheme_theory/closed_subschemes#prop3)의 증명에서 증명 없이 사용한 사실이기도 하다. 
+이로써 $X$의 closed subscheme들은 $\mathcal{O}_X$의 quasi-coherent ideal sheaf, 곧 $\mathcal{O}_X$의 quasi-coherent 부분 $\mathcal{O}_X$-module과 정확히 대응한다. 한 방향은 [명제 18](#prop18)이 주며, 거꾸로 그러한 $\mathcal{I}$가 주어지면 각각의 affine open subset $\Spec A$에 대하여 $\mathcal{I}(\Spec A)$는 $A$의 ideal이고 [정리 10](#thm10)과 [보조정리 3](#lem3)에 의하여 $\mathcal{I}(D(f))\cong \mathcal{I}(\Spec A)_f$가 성립하므로, [§닫힌 부분스킴, ⁋명제 6](/ko/math/scheme_theory/closed_subschemes#prop6)에 의하여 $\mathcal{I}$는 $X$의 유일한 closed subscheme을 유도한다. 이 대응은 affine 위에서 ideal $\mathfrak{a}\subseteq A$와 quotient $A/\mathfrak{a}$ 사이의 대응에 다름 아니다. 또한 [명제 18](#prop18)은 [§닫힌 부분스킴, ⁋명제 3](/ko/math/scheme_theory/closed_subschemes#prop3)의 증명에서 증명 없이 사용한 사실이기도 하다. 
 
 ---
 
