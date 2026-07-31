@@ -5159,3 +5159,7 @@ Decide whether each one is a definition and add it to `_data/terms.yml` (then ru
 ## term_extract_worker 2026-07-31 12:30
 
 - _posts/Math/Stacks/ko/2026-07-01-Fibered_Categories_and_Stacks.md: 병기 필요 'principal    -bundle' — 위키 ko 문서 '본 촬영' — 병기형 도출 필요
+
+## term_extract_worker 2026-07-31 16:30
+
+- _posts/Math/Symplectic_Geometry/ko/2023-06-10-Stable_Maps_Moduli.md: 병기 필요 'Genus    ,    -marked,        -class stable map' — 위키 ko 문서 '구름' — 병기형 도출 필요

@@ -3164,6 +3164,8 @@ D:
     url: /ko/math/algebraic_topology/degree_and_fixed_point_theorems
   - label: '[대수다양체] §사영공간의 코호몰로지'
     url: /ko/math/algebraic_varieties/cohomology_of_projective_spaces
+  - label: '[사교기하학] §양자 코호몰로지'
+    url: /ko/math/symplectic_geometry/quantum_cohomology
 - id: deleted_neighborhood
   en: deleted neighborhood
   ko: 삭제된 근방
@@ -8865,6 +8867,13 @@ N:
   defs:
   - label: '[유도대수기하학] §Simplicial 가환환과 animation'
     url: /ko/math/derived_algebraic_geometry/animated_rings
+- id: novikov_ring
+  en: Novikov ring
+  ko: 노비코프 환
+  primary: en
+  defs:
+  - label: '[사교기하학] §양자 코호몰로지'
+    url: /ko/math/symplectic_geometry/quantum_cohomology
 - id: novikov_variable
   en: Novikov variable
   ko: 노비코프 변수
@@ -11946,6 +11955,13 @@ S:
   defs:
   - label: '[범주론] §범주'
     url: /ko/math/category_theory/categories
+- id: small_quantum_cohomology_ring
+  en: small quantum cohomology ring
+  ko: 작은 양자 코호몰로지 환
+  primary: en
+  defs:
+  - label: '[사교기하학] §양자 코호몰로지'
+    url: /ko/math/symplectic_geometry/quantum_cohomology
 - id: small_quantum_product
   en: small quantum product
   ko: 작은 양자 곱
@@ -12134,6 +12150,13 @@ S:
   defs:
   - label: '[대수적 구조] §군의 작용'
     url: /ko/math/algebraic_structures/group_actions
+- id: stable
+  en: stable
+  ko: 안정
+  primary: en
+  defs:
+  - label: '[사교기하학] §Stable maps의 moduli space'
+    url: /ko/math/symplectic_geometry/stable_maps
 - id: stable_map
   en: stable map
   ko: 안정사상
