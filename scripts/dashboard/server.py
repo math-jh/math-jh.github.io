@@ -20,6 +20,12 @@ import time
 import urllib.parse
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
+# cron(keeper/@reboot)에서 기동되면 user-session 버스 환경이 없어
+# `systemctl --user`가 실패한다 — 기동 경로와 무관하게 동작하도록 보충.
+_RUNTIME_DIR = f"/run/user/{os.getuid()}"
+os.environ.setdefault("XDG_RUNTIME_DIR", _RUNTIME_DIR)
+os.environ.setdefault("DBUS_SESSION_BUS_ADDRESS", f"unix:path={_RUNTIME_DIR}/bus")
+
 HERE = os.path.dirname(os.path.abspath(__file__))
 # scripts/dashboard/ 안에 살므로 두 단계 위가 레포 루트다. Jekyll 은 _config 의
 # exclude 에 scripts 가 있어 이 디렉토리를 빌드에 포함하지 않는다.

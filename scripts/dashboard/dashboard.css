@@ -227,6 +227,12 @@ pre.log{background:var(--code-bg);border:1px solid var(--rule);padding:.8rem .9r
 .theme-menu li.active{color:#fff}
 .theme-menu li .check{color:#a9874a;visibility:hidden;font-size:16px}
 .theme-menu li.active .check{visibility:visible}
+.theme-menu li .caret{color:#a9874a;font-size:18px;transition:transform .15s}
+.theme-menu li.open .caret{transform:rotate(90deg)}
+.theme-menu li .go{color:#a9874a;font-size:16px}
+.settings-submenu{display:none;list-style:none;margin:0;padding:0;background:#1c1c1c;border-top:1px solid #3a3a3a;border-bottom:1px solid #3a3a3a}
+.settings-submenu.show{display:block}
+.settings-submenu li{padding-left:26px}
 
 /* ── 지표 ── */
 .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-bottom:1.4rem}

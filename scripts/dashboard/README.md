@@ -51,7 +51,9 @@
   같은 오리진에서 재사용한다 (nginx 4000 이 Jekyll `_site` 를 서빙하므로 도달 가능).
 - nginx 가 `/dash/` 접두사를 벗겨 보내므로 `server.py` 가 보는 경로에는 접두사가 없다.
 - 테마는 블로그와 같은 `MTHEME` 쿠키(auto|light|dark)를 공유한다. FOUC 방지용 pre-paint
-  스크립트가 index.html head 에 있다.
+  스크립트가 index.html head 에 있다. 테마 선택은 마스트헤드 설정 메뉴(tune 아이콘,
+  블로그 masthead 와 같은 꼴에서 언어만 뺀 것 — 테마 서브메뉴 + 블로그 링크) 안에 있고,
+  워드마크 클릭은 대시보드 개요(`#`)로 온다.
 - **ko/en 짝은 날짜 접두사를 뗀 slug 로 맞춘다.** en 파일은 번역 시점 날짜를 달고
   생성돼 ko 와 파일명이 다르다.
 - `_posts/Misc/**` 는 `ko/en` 하위 폴더 없이 평평한 단일 언어다.

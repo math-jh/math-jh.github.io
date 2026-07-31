@@ -147,33 +147,47 @@ if (window.matchMedia) {
 document.addEventListener('click', function () {
   var m = document.querySelector('.theme-menu.show');
   if (m) m.classList.remove('show');
+  var s = document.querySelector('.settings-submenu.show');
+  if (s) s.classList.remove('show');
+  var p = document.querySelector('.theme-menu li.open');
+  if (p) p.classList.remove('open');
 });
 
-var THEME_ICON = { auto: 'brightness_auto', light: 'light_mode', dark: 'dark_mode' };
-function themeMenu() {
+/* 블로그 masthead 설정 메뉴와 같은 꼴(언어 제외): 테마 ▸ 3단 서브메뉴 + 블로그 링크 */
+function settingsMenu() {
   var box = el('div', 'mh__menu');
   var btn = el('button', 'mh__btn');
-  btn.title = '테마'; btn.setAttribute('aria-label', '테마');
-  function btnIcon(m) {
-    btn.innerHTML = '<i class="material-icons">' + THEME_ICON[m] +
-      '</i><i class="material-icons dropdown-arrow">arrow_drop_down</i>';
-  }
-  btnIcon(themeMode());
+  btn.title = '설정'; btn.setAttribute('aria-label', '설정');
+  btn.innerHTML = '<i class="material-icons">tune</i>' +
+    '<i class="material-icons dropdown-arrow">arrow_drop_down</i>';
   var ul = el('ul', 'theme-menu');
+
+  var parent = el('li');
+  parent.innerHTML = '<span>테마</span><i class="material-icons caret">chevron_right</i>';
+  var sub = el('ul', 'settings-submenu');
   [['auto', '자동'], ['light', '라이트'], ['dark', '다크']].forEach(function (m) {
     var li = el('li', themeMode() === m[0] ? 'active' : null);
     li.innerHTML = '<span>' + m[1] + '</span><i class="material-icons check">done</i>';
     li.onclick = function (e) {
       e.stopPropagation();
       applyTheme(m[0], true);
-      [].forEach.call(ul.children, function (x, i) {
+      [].forEach.call(sub.children, function (x, i) {
         x.className = i === ['auto', 'light', 'dark'].indexOf(m[0]) ? 'active' : '';
       });
-      btnIcon(m[0]);
-      ul.classList.remove('show');
     };
-    ul.appendChild(li);
+    sub.appendChild(li);
   });
+  parent.onclick = function (e) {
+    e.stopPropagation();
+    sub.classList.toggle('show');
+    parent.classList.toggle('open');
+  };
+
+  var blog = el('li');
+  blog.innerHTML = '<span>블로그</span><i class="material-icons go">arrow_forward</i>';
+  blog.onclick = function () { location.href = '/'; };
+
+  ul.appendChild(parent); ul.appendChild(sub); ul.appendChild(blog);
   btn.onclick = function (e) { e.stopPropagation(); ul.classList.toggle('show'); };
   box.appendChild(btn); box.appendChild(ul);
   return box;
@@ -187,8 +201,8 @@ function stampText(d) {
 function masthead(d) {
   var mh = el('div', 'mh'), inner = el('div', 'mh__inner'), nav = el('div', 'mh__nav');
   var title = el('a', 'site-title');
-  title.href = '/';
-  title.title = '블로그 홈으로';
+  title.href = '#';
+  title.title = '대시보드 홈으로';
   title.innerHTML = 'BLACK<span class="site-title__box">BOX</span><span class="site-title__dash">Dashboard</span>';
   nav.appendChild(title);
   nav.appendChild(el('div', 'mh__spacer'));
@@ -203,7 +217,7 @@ function masthead(d) {
     load(true);
   };
   nav.appendChild(rb);
-  nav.appendChild(themeMenu());
+  nav.appendChild(settingsMenu());
   inner.appendChild(nav); mh.appendChild(inner);
   return mh;
 }
