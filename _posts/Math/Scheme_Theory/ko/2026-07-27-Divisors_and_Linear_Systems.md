@@ -37,7 +37,7 @@ Closed embedding $\iota: Z\hookrightarrow X$가 effective Cartier divisor인 것
 ::: 증명
 Affine open subset $U=\Spec A$ 위에서 $\iota$를 공역에 대해 제한한 것은 ideal $\mathfrak{a}=\mathcal{I}_{Z/X}(U)$가 정의하는 closed embedding $Z(\mathfrak{a})\hookrightarrow U$이며, 서로 다른 두 ideal은 서로 다른 closed subscheme을 정의한다. ([§닫힌 부분스킴, ⁋명제 3](/ko/math/scheme_theory/closed_subschemes#prop3)) 따라서 $\iota\vert^U$가 $Z(s)\hookrightarrow U$와 isomorphic한 것은 $\mathfrak{a}=(s)$인 것과 같다.
 
-이제 $s\in A$에 대하여 $A \rightarrow (s)$, $a\mapsto as$를 생각하자. 이는 언제나 surjective이고 그 kernel이 $\ann(s)$이므로, 이것이 isomorphism인 것과 $s$가 non-zerodivisor인 것은 동치이다. 이제 $\iota$가 effective Cartier divisor라 하고 [정의 1](#def1)의 affine open cover $\{U_i=\Spec A_i\}$를 택하자. 그럼 $\mathcal{I}_{Z/X}(U_i)=(s_i)\cong A_i$이다. 한편 $\mathcal{I}_{Z/X}$는 quasi-coherent sheaf이고 ([§준연접층, ⁋명제 17](/ko/math/scheme_theory/quasicoherent_sheaves#prop17)) quasi-coherence는 affine-local이므로, [§준연접층, ⁋정리 10](/ko/math/scheme_theory/quasicoherent_sheaves#thm10)에 의하여 $\mathcal{I}_{Z/X}\vert_{U_i}\cong \widetilde{\mathcal{I}_{Z/X}(U_i)}$이다. 따라서 위의 동형은
+이제 $s\in A$에 대하여 $A \rightarrow (s)$, $a\mapsto as$를 생각하자. 이는 언제나 surjective이고 그 kernel이 $\ann(s)$이므로, 이것이 isomorphism인 것과 $s$가 non-zerodivisor인 것은 동치이다. 이제 $\iota$가 effective Cartier divisor라 하고 [정의 1](#def1)의 affine open cover $\{U_i=\Spec A_i\}$를 택하자. 그럼 $\mathcal{I}_{Z/X}(U_i)=(s_i)\cong A_i$이다. 한편 $\mathcal{I}_{Z/X}$는 quasi-coherent sheaf이고 ([§준연접층, ⁋명제 18](/ko/math/scheme_theory/quasicoherent_sheaves#prop18)) quasi-coherence는 affine-local이므로, [§준연접층, ⁋정리 10](/ko/math/scheme_theory/quasicoherent_sheaves#thm10)에 의하여 $\mathcal{I}_{Z/X}\vert_{U_i}\cong \widetilde{\mathcal{I}_{Z/X}(U_i)}$이다. 따라서 위의 동형은
 
 $$\mathcal{I}_{Z/X}\vert_{U_i}\cong \widetilde{(s_i)}\cong \widetilde{A_i}=\mathcal{O}_{U_i}$$
 

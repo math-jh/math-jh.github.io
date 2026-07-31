@@ -113,7 +113,7 @@ The opposite direction is not formal. Assume $\varphi$ is a closed embedding, fi
 
 $$\left((\varphi_\ast \mathcal{O}_X)(\Spec B)\right)_f \rightarrow (\varphi_\ast \mathcal{O}_X)(D(f))$$
 
-is an isomorphism. This is a condition of exactly the same form as the localization condition required for ideals in [Proposition 6](#prop6), but since we do not yet know whether $\varphi$ is an affine morphism, we cannot obtain this with the tools we have. Therefore we will only assert this fact without proof, and complete the remaining argument with the tools we already have. This fact is proved by [§Quasi-coherent Sheaves, ⁋Proposition 17](/en/math/scheme_theory/quasicoherent_sheaves#prop17) as the quasi-coherence of $\varphi_\ast \mathcal{O}_X$.
+is an isomorphism. This is a condition of exactly the same form as the localization condition required for ideals in [Proposition 6](#prop6), but since we do not yet know whether $\varphi$ is an affine morphism, we cannot obtain this with the tools we have. Therefore we will only assert this fact without proof, and complete the remaining argument with the tools we already have. This fact is proved by [§Quasi-coherent Sheaves, ⁋Proposition 18](/en/math/scheme_theory/quasicoherent_sheaves#prop18) as the quasi-coherence of $\varphi_\ast \mathcal{O}_X$.
 
 Set $C=(\varphi_\ast \mathcal{O}_X)(V)=\Gamma(W, \mathcal{O}_W)$ and $\beta=\varphi^\sharp(V): B \rightarrow C$. Then since the $D(f)$ form a base for $V$, repeating the argument of [§Affine Scheme, ⁋Lemma 8](/en/math/scheme_theory/affine_schemes#lem8) verbatim, from the above fact we obtain for any $\mathfrak{q}\in V$
 

@@ -112,7 +112,7 @@ $$(B_i)_\mathfrak{q} \rightarrow (A_i)_\mathfrak{p}\cong (B_i/\mathfrak{b}_i)_\m
 
 $$\left((\varphi_\ast \mathcal{O}_X)(\Spec B)\right)_f \rightarrow (\varphi_\ast \mathcal{O}_X)(D(f))$$
 
-이 isomorphism이라는 사실이다. 이는 [명제 6](#prop6)에서 ideal들에 요구했던 localization 조건과 정확히 같은 형태의 조건이지만, 지금은 $\varphi$가 affine morphism인지조차 모르는 상황이므로 이를 우리가 가진 도구만으로 얻을 수는 없다. 따라서 우리는 이 사실을 증명 없이 주장하기만 하고, 나머지 논증은 우리가 이미 가진 도구들로 완결하기로 한다. 이 사실은 [§준연접층, ⁋명제 17](/ko/math/scheme_theory/quasicoherent_sheaves#prop17)이 $\varphi_\ast \mathcal{O}_X$의 quasi-coherence로 증명한다.
+이 isomorphism이라는 사실이다. 이는 [명제 6](#prop6)에서 ideal들에 요구했던 localization 조건과 정확히 같은 형태의 조건이지만, 지금은 $\varphi$가 affine morphism인지조차 모르는 상황이므로 이를 우리가 가진 도구만으로 얻을 수는 없다. 따라서 우리는 이 사실을 증명 없이 주장하기만 하고, 나머지 논증은 우리가 이미 가진 도구들로 완결하기로 한다. 이 사실은 [§준연접층, ⁋명제 18](/ko/math/scheme_theory/quasicoherent_sheaves#prop18)이 $\varphi_\ast \mathcal{O}_X$의 quasi-coherence로 증명한다.
 
 $C=(\varphi_\ast \mathcal{O}_X)(V)=\Gamma(W, \mathcal{O}_W)$라 두고 $\beta=\varphi^\sharp(V): B \rightarrow C$라 하자. 그럼 $D(f)$들이 $V$의 base를 이루므로 [§아핀스킴, ⁋보조정리 8](/ko/math/scheme_theory/affine_schemes#lem8)의 논증을 그대로 반복하여, 위의 사실로부터 임의의 $\mathfrak{q}\in V$에 대하여
 
