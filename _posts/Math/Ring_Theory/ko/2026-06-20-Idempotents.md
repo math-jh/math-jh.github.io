@@ -141,20 +141,22 @@ $$E_{ii}^2=E_{ii},\qquad E_{ii}E_{jj}=0\ (i\neq j),\qquad E_{11}+\cdots+E_{nn}=I
 
 $$\Mat_n(A)=\Mat_n(A)E_{11}\oplus\cdots\oplus \Mat_n(A)E_{nn}$$
 
-을 얻는데, 여기서 $\Mat_n(A)E_{ii}$는 $i$번째 열에만 성분이 있는 행렬들의 집합이다.
+을 얻는데, 여기서 $\Mat_n(A)E_{ii}$는 $i$번째 열에만 성분이 있는 행렬들의 집합이 된다.
 
 주의할 것은 $n\geq 2$이면 $E_{ii}$는 central이 아니라는 것이다. 가령 $n=2$에서 
 
 $$E_{11}E_{12}=E_{12}\neq 0=E_{12}E_{11}$$
 
-이므로 $E_{11}$은 $E_{12}$와 commute하지 않는다. 따라서 이 분해는 ring의 direct product decomposition을 주지 않으며, 실제로 $A$가 division ring이면 $\Mat_n(A)$는 nontrivial two-sided ideal을 갖지 않아 곱으로 분해되지 않는다. 즉 $\Mat_n(A)$의 유일한 central idempotent는 $0$과 $I$뿐이다.
+이므로 $E_{11}$은 $E_{12}$와 commute하지 않는다. 따라서 이 분해는 ring의 direct product decomposition을 주지 않는다.
 
-진짜 direct product decomposition은 block 구조에서 나온다. $n=n_1+\cdots+n_r$로 분할하고, 대각선을 따라 처음 $n_1\times n_1$ block, 다음 $n_2\times n_2$ block 식으로 놓인 block-diagonal 행렬들만 모은 subring
+실제로 $\Mat_n(A)$의 central idempotent를 직접 찾을 수 있다. 행렬 $M$이 모든 matrix unit과 commute한다 하면, $E_{kl}M$과 $ME_{kl}$의 $(i,j)$ 성분을 비교하여 $\delta_{ik}M_{lj}=M_{ik}\delta_{lj}$를 얻는다. 여기에 $i=k$를 넣으면 $j\neq l$일 때 $M_{lj}=0$이고 $M_{ll}=M_{kk}$이므로 $M$은 $cI$ 꼴이며, $M$이 scalar 행렬 $aI$와도 commute해야 하므로 $c\in Z(A)$이다. 따라서 $\Mat_n(A)$의 central idempotent는 $A$의 central idempotent $c$에 대한 $cI$들이고, 특히 $A$가 division ring이면 $A$의 idempotent가 $0,1$뿐이므로 $\Mat_n(A)$의 central idempotent는 $0$과 $I$뿐이다.
+:::
+
+한편 idempotent가 central인지는 그것을 어느 ring 안에서 보느냐에 달렸다. $n=n_1+\cdots+n_r$로 분할하고, 대각선을 따라 처음 $n_1\times n_1$ block, 다음 $n_2\times n_2$ block 식으로 놓인 block-diagonal 행렬들만 모은 subring
 
 $$B=\left\{\diag(M_1,\ldots, M_r)\mid M_k\in \Mat_{n_k}(A)\right\}\cong\prod_{k=1}^r \Mat_{n_k}(A)$$
 
-을 보자. $B$ 안에서 $k$번째 block에만 항등행렬을 놓은 원소 $P_k$는 $B$의 central idempotent이며, $\{P_1,\ldots, P_r\}$은 [정리 5](#thm5)의 의미에서 direct product decomposition $B\cong\prod \Mat_{n_k}(A)$에 대응하는 central complete set이다. $P_k$들은 $B$ 안에서는 central이지만 더 큰 ring $\Mat_n(A)$ 안에서는 그렇지 않다.
-:::
+안에서, $k$번째 block에만 항등행렬을 놓은 원소 $P_k$는 central이어서 [정리 5](#thm5)의 대응에 따라 이 direct product decomposition을 준다. 그러나 이 $P_k$가 위의 예시 ring $\Mat_n(A)$ 안에서는 central이 아닌 것을 확인할 수 있다.
 
 ## 중국인의 나머지정리와의 연결
 
