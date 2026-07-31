@@ -185,7 +185,7 @@ $$0 \rightarrow \mathcal{F}(\Spec A) \rightarrow \prod_i \mathcal{F}(D(h_i)) \ri
 
 [정리 9](#thm9)는 affine scheme 위에서 quasi-coherent sheaf를 다루는 것이 곧 module을 다루는 것과 같음을 말해준다. 즉 $\Spec A$ 위의 모든 quasi-coherent sheaf는 그 global section module $M=\Gamma(\Spec A, \mathcal{F})$으로 완전히 복원되며, 이 대응은 [명제 6](#prop6)의 exactness와 위에서 언급한 tensor product와의 호환성을 통해 module의 대수와 sheaf의 대수를 일치시킨다.
 
-## quasi-coherence의 affine-local 성질
+## Quasi-coherence의 affine-local 성질
 
 [정의 8](#def8)이 요구하는 것은 각 점마다 적절한 affine open neighborhood를 하나 찾아 그 위에서 associated sheaf임을 확인하는 것뿐이다. 그런데 다음 정리가 보여주듯 이 조건은 훨씬 강한 성질, 곧 $X$의 임의의 affine open subset 위에서 associated sheaf가 된다는 것을 함의한다. 이러한 의미에서 quasi-coherence는 affine-local property이다.
 

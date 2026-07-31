@@ -1522,7 +1522,7 @@ C:
   ko: 중심 멱등원
   primary: en
   defs:
-  - label: '[환론] §Idempotent과 곱분해'
+  - label: '[환론] §멱등원과 곱분해'
     url: /ko/math/ring_theory/idempotents
 - id: chain_complex
   en: chain complex
@@ -3058,6 +3058,13 @@ C:
   - label: '[미적분학] §다중적분'
     url: /ko/math/calculus/multiple_integrals
 D:
+- id: darboux_coordinates
+  en: Darboux coordinates
+  ko: Darboux 좌표
+  primary: ko
+  defs:
+  - label: '[사교기하학] §Darboux 정리'
+    url: /ko/math/symplectic_geometry/darboux_theorem
 - id: de_Morgan's_law
   en: de Morgan's law
   ko: 드 모르간 법칙
@@ -5000,6 +5007,13 @@ F:
   defs:
   - label: '[리만기하학] §레비-치비타 접속'
     url: /ko/math/riemannian_geometry/Levi-Civita_connection
+- id: fundamental_vector_field
+  en: fundamental vector field
+  ko: 기본 벡터장
+  primary: en
+  defs:
+  - label: '[사교기하학] §운동량 사상'
+    url: /ko/math/symplectic_geometry/moment_map
 G:
 - id: g_-invariant
   en: $G$-invariant
@@ -5536,6 +5550,13 @@ H:
   defs:
   - label: '[사교기하학] §고전역학'
     url: /ko/math/symplectic_geometry/classical_mechanics
+- id: hamiltonian_action
+  en: Hamiltonian action
+  ko: 해밀턴 작용
+  primary: en
+  defs:
+  - label: '[사교기하학] §운동량 사상'
+    url: /ko/math/symplectic_geometry/moment_map
 - id: hamiltonian_vector_field
   en: Hamiltonian vector field
   ko: 해밀턴 벡터장
@@ -6029,7 +6050,7 @@ I:
   ko: 멱등원
   primary: en
   defs:
-  - label: '[환론] §Idempotent과 곱분해'
+  - label: '[환론] §멱등원과 곱분해'
     url: /ko/math/ring_theory/idempotents
 - id: identity_element
   en: identity element
@@ -8263,6 +8284,20 @@ M:
     url: /ko/math/number_theory/congruences
   - label: '[복소해석학] §복소수와 복소평면'
     url: /ko/math/complex_analysis/complex_numbers
+- id: moment_map
+  en: moment map
+  ko: 운동량 사상
+  primary: ko
+  defs:
+  - label: '[사교기하학] §운동량 사상'
+    url: /ko/math/symplectic_geometry/moment_map
+- id: moment_polytope
+  en: moment polytope
+  ko: 운동량 다면체
+  primary: ko
+  defs:
+  - label: '[사교기하학] §운동량 사상'
+    url: /ko/math/symplectic_geometry/moment_map
 - id: monodromy_functor
   en: monodromy functor
   ko: ''
@@ -8405,6 +8440,13 @@ M:
   defs:
   - label: '[사교기하학] §Morse 이론과 stationary phase 근사'
     url: /ko/math/symplectic_geometry/morse_stationary_phase
+- id: moser_s_method
+  en: 'moser''s method'
+  ko: Moser의 방법
+  primary: ko
+  defs:
+  - label: '[사교기하학] §Darboux 정리'
+    url: /ko/math/symplectic_geometry/darboux_theorem
 - id: multilinear_map
   en: multilinear map
   ko: 다중선형사상
@@ -9205,7 +9247,7 @@ O:
   defs:
   - label: '[미적분학] §곡선과 벡터함수'
     url: /ko/math/calculus/vector_functions
-  - label: '[환론] §Idempotent과 곱분해'
+  - label: '[환론] §멱등원과 곱분해'
     url: /ko/math/ring_theory/idempotents
   - label: '[다중선형대수학] §쌍대공간'
     url: /ko/math/multilinear_algebra/dual_spaces
@@ -10614,6 +10656,13 @@ R:
   defs:
   - label: '[스킴] §스킴의 대수구조'
     url: /ko/math/scheme_theory/algebra_of_schemes
+- id: reduced_space
+  en: reduced space
+  ko: 축약공간
+  primary: ko
+  defs:
+  - label: '[사교기하학] §사교 축약'
+    url: /ko/math/symplectic_geometry/symplectic_reduction
 - id: reducible
   en: reducible
   ko: 가약
@@ -12679,6 +12728,13 @@ S:
   defs:
   - label: '[사교기하학] §사교다양체'
     url: /ko/math/symplectic_geometry/symplectic_manifold
+- id: symplectic_reduction
+  en: symplectic reduction
+  ko: 사교 축약
+  primary: ko
+  defs:
+  - label: '[사교기하학] §사교 축약'
+    url: /ko/math/symplectic_geometry/symplectic_reduction
 - id: symplectic_subspace
   en: symplectic subspace
   ko: 사교 부분공간
@@ -12686,6 +12742,13 @@ S:
   defs:
   - label: '[사교기하학] §사교벡터공간'
     url: /ko/math/symplectic_geometry/linear_symplectic_geometry
+- id: symplectic_toric_manifold
+  en: symplectic toric manifold
+  ko: 사교 토릭 다양체
+  primary: en
+  defs:
+  - label: '[사교기하학] §운동량 사상'
+    url: /ko/math/symplectic_geometry/moment_map
 - id: symplectic_vector_space
   en: symplectic vector space
   ko: 사교벡터공간
@@ -13177,7 +13240,7 @@ T:
   ko: 자명한
   primary: en
   defs:
-  - label: '[환론] §Idempotent과 곱분해'
+  - label: '[환론] §멱등원과 곱분해'
     url: /ko/math/ring_theory/idempotents
 - id: trivial_extension
   en: trivial extension

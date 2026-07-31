@@ -16,7 +16,7 @@ published: false
 
 ---
 
-[§Semisimple module](/ko/math/ring_theory/semisimple_modules)에서 우리는 simple module들의 직합으로 분해되는 module을 다루었다. 이 글에서는 그 개념을 ring 자신에 적용한다. Ring $R$을 자기 자신 위의 left module로 보아 semisimple이 되는 ring이 semisimple ring인데, 이는 그 위의 모든 module이 semisimple인 ring과 정확히 일치하며, module 이론이 완전히 분해되는 ring이라 할 수 있다. 이 글의 목표는 이러한 ring의 완전한 분류인 Artin-Wedderburn 정리이다. Semisimple ring은 division ring 위의 행렬환 유한개의 곱과 정확히 같으며, 이 분해는 본질적으로 유일하다. [§나눗셈환, ⁋보조정리 10](/ko/math/ring_theory/division_rings#lem10)가 여기 등장하는 division ring의 출처이고, [§Idempotent과 곱분해, ⁋정리 5](/ko/math/ring_theory/idempotents#thm5)의 central idempotent 기계가 곱분해를 담당한다.
+[§Semisimple module](/ko/math/ring_theory/semisimple_modules)에서 우리는 simple module들의 직합으로 분해되는 module을 다루었다. 이 글에서는 그 개념을 ring 자신에 적용한다. Ring $R$을 자기 자신 위의 left module로 보아 semisimple이 되는 ring이 semisimple ring인데, 이는 그 위의 모든 module이 semisimple인 ring과 정확히 일치하며, module 이론이 완전히 분해되는 ring이라 할 수 있다. 이 글의 목표는 이러한 ring의 완전한 분류인 Artin-Wedderburn 정리이다. Semisimple ring은 division ring 위의 행렬환 유한개의 곱과 정확히 같으며, 이 분해는 본질적으로 유일하다. [§나눗셈환, ⁋보조정리 10](/ko/math/ring_theory/division_rings#lem10)가 여기 등장하는 division ring의 출처이고, [§멱등원과 곱분해, ⁋정리 5](/ko/math/ring_theory/idempotents#thm5)의 central idempotent 기계가 곱분해를 담당한다.
 
 이 글에서도 ring은 항등원을 갖는, 가환이라 가정하지 않는 ring이며, module은 언제나 left module이다.
 
@@ -139,7 +139,7 @@ $R=R_1\times\cdots\times R_k$라 하고, $e_i\in R$를 $i$번째 성분만 $1$�
 2. 각 $R_i$가 semisimple ring이면 $R$도 semisimple ring이다.
 :::
 ::: 증명
-$e_i$들이 central orthogonal idempotent의 complete set임은 성분별 계산으로 바로 확인되며, 이 상황은 [§Idempotent과 곱분해, ⁋정리 5](/ko/math/ring_theory/idempotents#thm5)의 곱분해에 대응하는 것이다. 임의의 $m\in M$은 $m=\sum_ie_im$으로 쓰이고, $x\in e_iM\cap\sum_{j\neq i}e_jM$이면 $e_jM$ 위에서 $e_i$가 $e_ie_j=0$으로 작용하므로 $x=e_ix=0$이다. 따라서 $M=\bigoplus_ie_iM$이다. $e_iM$ 위에서 $e_j$ ($j\neq i$) 성분은 $0$으로 작용하므로 $R$의 작용은 $i$번째 성분 $R_i$를 통해서만 이루어지고, 부분집합이 $R$-submodule인 것과 $R_i$-submodule인 것이 같아진다. Simple module의 분류는 이로부터 바로 따라온다. $M$이 simple이면 분해 $M=\bigoplus_ie_iM$의 인자 중 정확히 하나만 nonzero이고 그것이 simple $R_i$-module이며, 역도 마찬가지이다.
+$e_i$들이 central orthogonal idempotent의 complete set임은 성분별 계산으로 바로 확인되며, 이 상황은 [§멱등원과 곱분해, ⁋정리 5](/ko/math/ring_theory/idempotents#thm5)의 곱분해에 대응하는 것이다. 임의의 $m\in M$은 $m=\sum_ie_im$으로 쓰이고, $x\in e_iM\cap\sum_{j\neq i}e_jM$이면 $e_jM$ 위에서 $e_i$가 $e_ie_j=0$으로 작용하므로 $x=e_ix=0$이다. 따라서 $M=\bigoplus_ie_iM$이다. $e_iM$ 위에서 $e_j$ ($j\neq i$) 성분은 $0$으로 작용하므로 $R$의 작용은 $i$번째 성분 $R_i$를 통해서만 이루어지고, 부분집합이 $R$-submodule인 것과 $R_i$-submodule인 것이 같아진다. Simple module의 분류는 이로부터 바로 따라온다. $M$이 simple이면 분해 $M=\bigoplus_ie_iM$의 인자 중 정확히 하나만 nonzero이고 그것이 simple $R_i$-module이며, 역도 마찬가지이다.
 
 2의 경우, left regular module의 분해 $R=\bigoplus_iRe_i$에서 $Re_i$는 1에 의해 $R_i$의 regular module과 같은 submodule 구조를 가지므로, $R_i$가 semisimple ring이면 $Re_i$는 simple $R$-submodule들의 직합이다. 따라서 $R$이 simple left ideal들의 직합이 되어 semisimple ring이다.
 :::
@@ -180,7 +180,7 @@ $$E_i\cong\End_R(W_i)^{\mathrm{op}}\cong\End_R(S_i)^{\mathrm{op}}=\Delta_i^{\mat
 이다. 따라서 division ring들도 isomorphism을 무시하면 유일하다.
 :::
 
-증명이 보여 주듯 분해의 각 인자는 canonical한 대상이다. 실제로 존재 방향의 분해에서 isotypic component $R_{S_i}\cong S_i^{n_i}$들은 two-sided ideal인데, 임의의 $r\in R$에 대한 오른쪽 곱셈이 left module endomorphism이고 [§Semisimple module, ⁋명제 8](/ko/math/ring_theory/semisimple_modules#prop8)에 의해 endomorphism이 isotypic component를 보존하기 때문이다. 따라서 $R=\bigoplus_iR_{S_i}$는 two-sided ideal들의 직합이고, [§Idempotent과 곱분해, ⁋정리 5](/ko/math/ring_theory/idempotents#thm5)에 의해 central idempotent의 complete set과 ring의 곱분해가 대응된다. 이 central idempotent들이 정확히 [정리 11](#thm11)의 곱분해에서 각 인자의 항등원이다.
+증명이 보여 주듯 분해의 각 인자는 canonical한 대상이다. 실제로 존재 방향의 분해에서 isotypic component $R_{S_i}\cong S_i^{n_i}$들은 two-sided ideal인데, 임의의 $r\in R$에 대한 오른쪽 곱셈이 left module endomorphism이고 [§Semisimple module, ⁋명제 8](/ko/math/ring_theory/semisimple_modules#prop8)에 의해 endomorphism이 isotypic component를 보존하기 때문이다. 따라서 $R=\bigoplus_iR_{S_i}$는 two-sided ideal들의 직합이고, [§멱등원과 곱분해, ⁋정리 5](/ko/math/ring_theory/idempotents#thm5)에 의해 central idempotent의 complete set과 ring의 곱분해가 대응된다. 이 central idempotent들이 정확히 [정리 11](#thm11)의 곱분해에서 각 인자의 항등원이다.
 
 ::: 따름정리 12
 $R\cong\prod_{i=1}^k\Mat_{n_i}(D_i)$가 semisimple ring이라 하자. 그럼 simple left $R$-module은 isomorphism을 무시하면 정확히 $V_1,\ldots,V_k$ ($V_i=D_i^{n_i}$)뿐이고, 임의의 left $R$-module은 이들의 복사본들의 직합이다.
