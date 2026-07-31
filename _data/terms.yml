@@ -7534,6 +7534,13 @@ L:
   defs:
   - label: '[위상수학] §옹골성과 필터의 수렴'
     url: /ko/math/topology/filter_convergence
+- id: lindelöf
+  en: lindelöf
+  ko: 린델뢰프
+  primary: en
+  defs:
+  - label: '[위상수학] §옹골성과 필터의 수렴'
+    url: /ko/math/topology/filter_convergence
 - id: line_bundle
   en: line bundle
   ko: 선다발
@@ -8996,6 +9003,13 @@ O:
   defs:
   - label: '[미분다양체] §벡터장'
     url: /ko/math/manifolds/vector_fields
+- id: one-point_compactification
+  en: one-point compactification
+  ko: 일점 옹골화
+  primary: en
+  defs:
+  - label: '[위상수학] §Compactness와 paracompactness'
+    url: /ko/math/topology/compactness
 - id: open_ball
   en: open ball
   ko: 열린공
@@ -9651,6 +9665,13 @@ P:
     url: /ko/math/algebraic_varieties/affine_varieties
   - label: '[스킴] §스펙트럼'
     url: /ko/math/scheme_theory/spectrums
+- id: point-finite
+  en: point-finite
+  ko: 점별유한
+  primary: en
+  defs:
+  - label: '[위상수학] §Compactness와 paracompactness'
+    url: /ko/math/topology/compactness
 - id: pointwise_convergence
   en: pointwise convergence
   ko: 점별수렴
@@ -10708,6 +10729,8 @@ R:
     url: /ko/math/analysis/riemann_integral
   - label: '[대수다양체] §층 코호몰로지'
     url: /ko/math/algebraic_varieties/sheaf_cohomology
+  - label: '[위상수학] §Compactness와 paracompactness'
+    url: /ko/math/topology/compactness
 - id: reflection
   en: reflection
   ko: 반사
@@ -12505,6 +12528,13 @@ S:
   defs:
   - label: '[군론] §군의 열'
     url: /ko/math/group_theory/series_of_groups
+- id: subordinate
+  en: subordinate
+  ko: $(U_i)$에 종속된
+  primary: en
+  defs:
+  - label: '[위상수학] §Compactness와 paracompactness'
+    url: /ko/math/topology/compactness
 - id: subrepresentation
   en: subrepresentation
   ko: 부분표현
@@ -12613,6 +12643,8 @@ S:
     url: /ko/math/algebraic_structures/abelian_groups
   - label: '[스킴] §스킴'
     url: /ko/math/scheme_theory/schemes
+  - label: '[위상수학] §Compactness와 paracompactness'
+    url: /ko/math/topology/compactness
 - id: supremum
   en: supremum (least upper bound)
   ko: 상한 (최소상계)

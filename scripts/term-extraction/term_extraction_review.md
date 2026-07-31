@@ -5163,3 +5163,7 @@ Decide whether each one is a definition and add it to `_data/terms.yml` (then ru
 ## term_extract_worker 2026-07-31 16:30
 
 - _posts/Math/Symplectic_Geometry/ko/2023-06-10-Stable_Maps_Moduli.md: 병기 필요 'Genus    ,    -marked,        -class stable map' — 위키 ko 문서 '구름' — 병기형 도출 필요
+
+## term_extract_worker 2026-08-01 02:30
+
+- _posts/Math/Topology/ko/2024-12-03-Hausdorff_Spaces.md: 병기 필요 'perfectly      -space' — 소스 없음 (KMS exact ✗, 위키 ko ✗)
