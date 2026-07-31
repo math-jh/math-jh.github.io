@@ -52,7 +52,7 @@ Critical point $p$가 *non-degenerate<sub>비퇴화</sub>*라는 것은 $\operat
 Non-degenerate critical point $p$에서 $\operatorname{Hess}_p(f)$의 signature는 좌표 변환에 대한 불변량이다. 양의 eigenvalue의 개수와 음의 eigenvalue의 개수가 좌표 선택에 의존하지 않으므로 다음 정의가 의미를 가진다.
 
 ::: 정의 4
-Non-degenerate critical point $p$의 *Morse index<sub>모스 지수</sub>* $\lambda_p$는 $\operatorname{Hess}_p(f)$의 음의 eigenvalue의 개수이다. 또 $\operatorname{Hess}_p(f)$의 *signature* $\sigma_p$는 양의 eigenvalue의 개수에서 음의 eigenvalue의 개수를 뺀 값이다. 즉 $n=\dim M$일 때
+Non-degenerate critical point $p$의 *Morse index<sub>모스 지수</sub>* $\lambda_p$는 $\operatorname{Hess}_p(f)$의 음의 eigenvalue의 개수이다. 또 $\operatorname{Hess}_p(f)$의 *signature<sub>부호수</sub>* $\sigma_p$는 양의 eigenvalue의 개수에서 음의 eigenvalue의 개수를 뺀 값이다. 즉 $n=\dim M$일 때
 
 $$\sigma_p = n - 2\lambda_p$$
 

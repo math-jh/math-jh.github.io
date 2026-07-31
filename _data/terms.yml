@@ -2964,6 +2964,8 @@ C:
     url: /ko/math/calculus/mean_value_theorem
   - label: '[복소해석학] §등각사상과 Möbius 변환'
     url: /ko/math/complex_analysis/conformal_maps
+  - label: '[사교기하학] §Morse 이론과 stationary phase 근사'
+    url: /ko/math/symplectic_geometry/morse_stationary_phase
 - id: cross_product
   en: cross product
   ko: 외적
@@ -4064,6 +4066,8 @@ E:
   defs:
   - label: '[리만기하학] §측지선'
     url: /ko/math/riemannian_geometry/geodesics
+  - label: '[사교기하학] §J-holomorphic curves'
+    url: /ko/math/symplectic_geometry/j_holomorphic_curves
 - id: enough_injective
   en: enough injective
   ko: 충분한 단사 대상
@@ -7068,6 +7072,13 @@ L:
     url: /ko/math/linear_algebra/bilinear_form
   - label: '[유도대수기하학] §Shifted symplectic 구조'
     url: /ko/math/derived_algebraic_geometry/shifted_symplectic_structures
+- id: lagrangian_submanifold
+  en: Lagrangian submanifold
+  ko: 라그랑지안 부분다양체
+  primary: en
+  defs:
+  - label: '[사교기하학] §사교다양체'
+    url: /ko/math/symplectic_geometry/symplectic_manifold
 - id: lagrangian_subspace
   en: Lagrangian subspace
   ko: 라그랑지안 부분공간
@@ -7203,6 +7214,13 @@ L:
   defs:
   - label: '[복소기하학] §Hodge 이론'
     url: /ko/math/complex_geometry/hodge_theory
+- id: lefschetz_thimble
+  en: Lefschetz thimble
+  ko: 레프셰츠 팀블
+  primary: en
+  defs:
+  - label: '[사교기하학] §Morse 이론과 stationary phase 근사'
+    url: /ko/math/symplectic_geometry/morse_stationary_phase
 - id: left_a_-module
   en: left $A$-module
   ko: 왼쪽 $A$-가군
@@ -8371,6 +8389,20 @@ M:
   defs:
   - label: '[스킴] §스킴 사상의 성질들'
     url: /ko/math/scheme_theory/properties_of_scheme_morphisms
+- id: morse_function
+  en: Morse function
+  ko: 모스 함수
+  primary: en
+  defs:
+  - label: '[사교기하학] §Morse 이론과 stationary phase 근사'
+    url: /ko/math/symplectic_geometry/morse_stationary_phase
+- id: morse_index
+  en: Morse index
+  ko: 모스 지수
+  primary: en
+  defs:
+  - label: '[사교기하학] §Morse 이론과 stationary phase 근사'
+    url: /ko/math/symplectic_geometry/morse_stationary_phase
 - id: multilinear_map
   en: multilinear map
   ko: 다중선형사상
@@ -8681,6 +8713,8 @@ N:
     url: /ko/math/linear_algebra/bilinear_form
   - label: '[유도대수기하학] §Shifted symplectic 구조'
     url: /ko/math/derived_algebraic_geometry/shifted_symplectic_structures#def4
+  - label: '[사교기하학] §Morse 이론과 stationary phase 근사'
+    url: /ko/math/symplectic_geometry/morse_stationary_phase
 - id: nonexpansive_map
   en: nonexpansive map
   ko: 비확장사상
@@ -9199,6 +9233,13 @@ O:
   defs:
   - label: '[선형대수학] §내적공간'
     url: /ko/math/linear_algebra/inner_product_spaces
+- id: oscillating_integral
+  en: oscillating integral
+  ko: 진동적분
+  primary: en
+  defs:
+  - label: '[사교기하학] §Morse 이론과 stationary phase 근사'
+    url: /ko/math/symplectic_geometry/morse_stationary_phase
 - id: outward
   en: outward
   ko: 바깥 방향
@@ -9562,6 +9603,13 @@ P:
   defs:
   - label: '[해석학] §함수열과 점별수렴'
     url: /ko/math/analysis/sequences_of_functions
+- id: poisson_bracket
+  en: poisson bracket
+  ko: Poisson 괄호
+  primary: ko
+  defs:
+  - label: '[사교기하학] §사교다양체'
+    url: /ko/math/symplectic_geometry/symplectic_manifold
 - id: polar_form
   en: polar form
   ko: 극형식
@@ -11199,6 +11247,8 @@ S:
   defs:
   - label: '[미적분학] §다변수함수와 편미분'
     url: /ko/math/calculus/partial_derivatives
+  - label: '[사교기하학] §Morse 이론과 stationary phase 근사'
+    url: /ko/math/symplectic_geometry/morse_stationary_phase
 - id: saturated
   en: saturated
   ko: 포화된
@@ -11636,6 +11686,8 @@ S:
   defs:
   - label: '[선형대수학] §이차형식과 실베스터 관성법칙'
     url: /ko/math/linear_algebra/quadratic_forms
+  - label: '[사교기하학] §Morse 이론과 stationary phase 근사'
+    url: /ko/math/symplectic_geometry/morse_stationary_phase#def4
 - id: similar
   en: similar
   ko: 닮은 행렬
