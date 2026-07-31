@@ -122,7 +122,7 @@ $$q^n-1=(q-1)+\sum_{x}\frac{q^n-1}{q^{d(x)}-1}\tag{$\ast$}$$
 
 의 형태가 되며, 여기서 합의 각 $d(x)$는 $n$의 진약수이다.
 
-이제 $n\geq 2$라 가정하고 모순을 얻자. Cyclotomic polynomial $\Phi_n(\x)$는 $q^n-1$을 나누며, 각 진약수 $d=d(x)<n$에 대해 $\frac{q^n-1}{q^d-1}$도 나눈다. 따라서, 위의 $(\ast)$에서 $\Phi_n(q)$는 반드시 $q-1$도 나눠야 한다. 즉 $\Phi_n(q)\mid q-1$이고 $q-1\geq 1$이므로 $\lvert\Phi_n(q)\rvert\leq q-1$이다. 그러나 [명제 4](#prop4)에 의해 $n\geq 2$이면 $\lvert\Phi_n(q)\rvert>q-1$이므로 모순이다.
+이제 $n\geq 2$라 가정하고 모순을 얻자. Cyclotomic polynomial $\Phi_n(q)$는 $q^n-1$을 나누며, 각 진약수 $d=d(x)<n$에 대해 $\frac{q^n-1}{q^d-1}$도 나눈다. 따라서, 위의 $(\ast)$에서 $\Phi_n(q)$는 반드시 $q-1$도 나눠야 한다. 즉 $\Phi_n(q)\mid q-1$이고 $q-1\geq 1$이므로 $\lvert\Phi_n(q)\rvert\leq q-1$이다. 그러나 [명제 4](#prop4)에 의해 $n\geq 2$이면 $\lvert\Phi_n(q)\rvert>q-1$이므로 모순이다.
 :::
 
 이 정리의 첫 번째 결과는 finite integral domain에 대한 결과를 다시 확인하는 것이다.
