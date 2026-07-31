@@ -237,7 +237,7 @@ $$\rho_q(ux)=uxq=u\rho_q(x)\qquad(u\in\mathbb{C})$$
 
 이므로 $\rho_q$는 $\mathbb{C}$-linear map, 즉 $\End_{\mathbb{C}}(\mathbb{H})$의 원소이고, $\rho_q=0$이면 $q=\rho_q(1)=0$이므로 $q\mapsto\rho_q$는 단사이다. 결합법칙에 의해 $\rho_{qq'}=\rho_{q'}\circ\rho_q$이므로 이 대응은 곱의 순서를 뒤집지만, 좌표를 행벡터로 적어 $\mathbb{C}$-linear map을 오른쪽에서 곱하는 행렬 $M_q$로 나타내면 순서가 한 번 더 뒤집히므로
 
-$$\mathbb{H}\longrightarrow\Mat_2(\mathbb{C}),\qquad q\longmapsto M_q$$
+$$\mathbb{H}\rightarrow\Mat_2(\mathbb{C});\quad q\mapsto M_q$$
 
 는 단사 ring homomorphism이다. 이때 $M_q$의 두 행은 각각 $\rho_q(1)$과 $\rho_q(j)$의 좌표이며, [정의 7](#def7)의 관계식에서 $ji=-ij$이므로 임의의 $u\in\mathbb{C}$에 대하여 $ju=\bar uj$가 성립함을 이용하면 $\rho_q(1)=q=z+wj$와
 

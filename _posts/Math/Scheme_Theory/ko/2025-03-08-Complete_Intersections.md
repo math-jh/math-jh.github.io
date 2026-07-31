@@ -158,11 +158,11 @@ $$P_{\mathcal{O}_X}(t)=\sum_{J\subseteq\{1,\ldots, k\}}(-1)^{\lvert J\rvert}\bin
 이다. 더욱이 $\dim X=n-k$이며 $\deg X=d_1\cdots d_k$이다.
 :::
 ::: 증명
-[명제 7](#prop7)의 exact sequence에 invertible sheaf $\mathcal{O}(t)$를 tensor하여도 exactness가 유지되고, closed embedding에 대하여 $(\iota_\ast\mathcal{O}_X)\otimes\mathcal{O}(t)\cong \iota_\ast(\mathcal{O}_X(t))$이며 cohomology가 $\iota_\ast$ 아래에서 보존된다. ([§스킴의 층 코호몰로지, ⁋정리 7](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#thm7) 직전의 관찰) 따라서 $\rchi(X,\mathcal{O}_X(t))=\rchi(\mathbb{P}^n,\iota_\ast\mathcal{O}_X(t))$이고, [§스킴의 층 코호몰로지, ⁋명제 13](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#prop13)의 2번을 이 유한 exact sequence에 적용한 뒤 [§스킴의 층 코호몰로지, ⁋따름정리 14](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#cor14)로 각 항을 계산하면
+[명제 7](#prop7)의 exact sequence에 invertible sheaf $\mathcal{O}(t)$를 tensor하여도 exactness가 유지되고, closed embedding에 대하여 $(\iota_\ast\mathcal{O}_X)\otimes\mathcal{O}(t)\cong \iota_\ast(\mathcal{O}_X(t))$이며 cohomology가 $\iota_\ast$ 아래에서 보존된다. ([§스킴의 층 코호몰로지, ⁋정리 8](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#thm8) 직전의 관찰) 따라서 $\rchi(X,\mathcal{O}_X(t))=\rchi(\mathbb{P}^n,\iota_\ast\mathcal{O}_X(t))$이고, [§스킴의 층 코호몰로지, ⁋명제 14](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#prop14)의 2번을 이 유한 exact sequence에 적용한 뒤 [§스킴의 층 코호몰로지, ⁋따름정리 15](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#cor15)로 각 항을 계산하면
 
 $$\rchi(X,\mathcal{O}_X(t))=\sum_{j=0}^k(-1)^j\sum_{\lvert J\rvert=j}\rchi\bigl(\mathbb{P}^n,\mathcal{O}(t-d_J)\bigr)=\sum_J(-1)^{\lvert J\rvert}\binom{n+t-d_J}{n}$$
 
-을 얻는다. [§스킴의 층 코호몰로지, ⁋정리 15](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#thm15)에 의하여 좌변은 $P_{\mathcal{O}_X}(t)$이다.
+을 얻는다. [§스킴의 층 코호몰로지, ⁋정리 16](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#thm16)에 의하여 좌변은 $P_{\mathcal{O}_X}(t)$이다.
 
 남은 것은 이 다항식의 degree와 최고차항 계수를 읽는 일이다. 우선 degree $m\geq 1$이고 최고차항 계수가 $c\neq 0$인 다항식 $p$와 $d>0$에 대하여, $p(t)-p(t-d)$는 degree $m-1$이고 그 최고차항 계수는 $cmd$이다. 실제로 $c\bigl(t^m-(t-d)^m\bigr)$에서 $t^m$ 항이 소거되어 $cmdt^{m-1}$이 남고, $p$의 나머지 항들이 기여하는 것은 degree $m-2$ 이하이기 때문이다. 또 $p$가 상수이면 $p(t)-p(t-d)=0$이다.
 
@@ -170,25 +170,25 @@ $p_0(t)=\binom{n+t}{n}$으로 두고 $p_i(t)=p_{i-1}(t)-p_{i-1}(t-d_i)$로 정�
 
 $$p_i(t)=\sum_{J\subseteq\{1,\ldots, i\}}(-1)^{\lvert J\rvert}\binom{n+t-d_J}{n}$$
 
-이므로 $p_k$가 위에서 얻은 다항식이다. 여기에서 $p_0$은 degree $n$이고 최고차항 계수가 $1/n!$이다. 만일 $k>n$이라면 위의 관찰에 의하여 $p_n$은 상수이고 $p_{n+1}=0$이므로 $p_k=0$인데, $X\neq\emptyset$이라 $\mathcal{O}_X\neq 0$이므로 [§스킴의 층 코호몰로지, ⁋정리 15](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#thm15)에 의하여 $P_{\mathcal{O}_X}$의 degree는 $\dim X\geq 0$이 되어 모순이다. 따라서 $k\leq n$이다.
+이므로 $p_k$가 위에서 얻은 다항식이다. 여기에서 $p_0$은 degree $n$이고 최고차항 계수가 $1/n!$이다. 만일 $k>n$이라면 위의 관찰에 의하여 $p_n$은 상수이고 $p_{n+1}=0$이므로 $p_k=0$인데, $X\neq\emptyset$이라 $\mathcal{O}_X\neq 0$이므로 [§스킴의 층 코호몰로지, ⁋정리 16](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#thm16)에 의하여 $P_{\mathcal{O}_X}$의 degree는 $\dim X\geq 0$이 되어 모순이다. 따라서 $k\leq n$이다.
 
 그럼 $i=1,\ldots, k$의 각 단계에서 $p_{i-1}$의 degree $n-i+1$이 $1$ 이상이므로 위의 관찰을 그대로 적용할 수 있고, $p_i$는 degree $n-i$이며 그 최고차항 계수는
 
 $$\frac{1}{n!}\cdot nd_1\cdot (n-1)d_2\cdots (n-i+1)d_i=\frac{d_1\cdots d_i}{(n-i)!}$$
 
-이다. $r=n-k$로 두면 $P_{\mathcal{O}_X}$는 degree $r$이고 최고차항 계수는 $d_1\cdots d_k/r!$이므로, 다시 [§스킴의 층 코호몰로지, ⁋정리 15](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#thm15)에 의하여 $\dim X=r=n-k$이고 [§스킴의 층 코호몰로지, ⁋정의 16](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#def16)에 의하여 $\deg X=r!\cdot d_1\cdots d_k/r!=d_1\cdots d_k$이다.
+이다. $r=n-k$로 두면 $P_{\mathcal{O}_X}$는 degree $r$이고 최고차항 계수는 $d_1\cdots d_k/r!$이므로, 다시 [§스킴의 층 코호몰로지, ⁋정리 16](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#thm16)에 의하여 $\dim X=r=n-k$이고 [§스킴의 층 코호몰로지, ⁋정의 17](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#def17)에 의하여 $\deg X=r!\cdot d_1\cdots d_k/r!=d_1\cdots d_k$이다.
 :::
 
-$k=1$인 경우 [따름정리 8](#cor8)은 degree $e$의 hypersurface가 $\deg X=e$를 갖는다는 것으로, 이는 [§스킴의 층 코호몰로지, ⁋정의 16](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#def16) 이후에 직접 계산한 것과 같다. 일반적인 $k$에 대해서는 이것이 Bézout 정리의 가장 단순한 형태로, 서로 regular sequence를 이루는 방정식들이 잘라내는 대상의 degree가 방정식들의 degree의 곱이라는 것이다. 이 강한 수치적 제약은 어떤 부분스킴이 global complete intersection이 될 수 없는 이유를 곧바로 준다.
+$k=1$인 경우 [따름정리 8](#cor8)은 degree $e$의 hypersurface가 $\deg X=e$를 갖는다는 것으로, 이는 [§스킴의 층 코호몰로지, ⁋정의 17](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#def17) 이후에 직접 계산한 것과 같다. 일반적인 $k$에 대해서는 이것이 Bézout 정리의 가장 단순한 형태로, 서로 regular sequence를 이루는 방정식들이 잘라내는 대상의 degree가 방정식들의 degree의 곱이라는 것이다. 이 강한 수치적 제약은 어떤 부분스킴이 global complete intersection이 될 수 없는 이유를 곧바로 준다.
 
 ::: 예시 9
 1. $\mathbb{P}^3_\mathbb{K}=\Proj S$ 안에서 $S$-regular sequence를 이루는 두 quadric $f_1,f_2$가 잘라내는 $X=V_+(f_1,f_2)$를 생각하자. 그러한 quadric은 실제로 존재하는데, 가령 $f_1=\x_0\x_1$과 $f_2=\x_2\x_3$이 그러하다. $S$는 UFD이고 이 두 원소는 서로소이므로, $f_2g\in (f_1)$이면 $f_1$이 $g$를 나누어 $f_2$가 $S/(f_1)$에서 non-zerodivisor이기 때문이다. 이제 $n=3$, $k=2$, $d_1=d_2=2$이므로 [따름정리 8](#cor8)에 의하여
 
 	$$P_{\mathcal{O}_X}(t)=\binom{3+t}{3}-2\binom{1+t}{3}+\binom{t-1}{3}=\frac{(t+3)(t+2)(t+1)-2(t+1)t(t-1)+(t-1)(t-2)(t-3)}{6}=4t$$
 
-	이다. 곧 $\dim X=1$이고 $\deg X=1!\cdot 4=4$이며, arithmetic genus는 $p_a(X)=(-1)^1\bigl(P_{\mathcal{O}_X}(0)-1\bigr)=1$이다. ([§스킴의 층 코호몰로지, ⁋정의 16](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#def16)) 두 quadric이 일반적인 위치에 있을 때 얻어지는 것이 고전적인 elliptic quartic curve이며, 위의 $f_1=\x_0\x_1$, $f_2=\x_2\x_3$의 경우 $X$는 네 직선 $V_+(\x_0,\x_2)$, $V_+(\x_0,\x_3)$, $V_+(\x_1,\x_3)$, $V_+(\x_1,\x_2)$의 합집합으로서, 나열한 순서로 이웃한 것끼리만 한 점에서 만나고 마주보는 두 직선은 만나지 않는다. 이 퇴화된 경우도 위와 같은 수치적 불변량을 갖는다.
+	이다. 곧 $\dim X=1$이고 $\deg X=1!\cdot 4=4$이며, arithmetic genus는 $p_a(X)=(-1)^1\bigl(P_{\mathcal{O}_X}(0)-1\bigr)=1$이다. ([§스킴의 층 코호몰로지, ⁋정의 17](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#def17)) 두 quadric이 일반적인 위치에 있을 때 얻어지는 것이 고전적인 elliptic quartic curve이며, 위의 $f_1=\x_0\x_1$, $f_2=\x_2\x_3$의 경우 $X$는 네 직선 $V_+(\x_0,\x_2)$, $V_+(\x_0,\x_3)$, $V_+(\x_1,\x_3)$, $V_+(\x_1,\x_2)$의 합집합으로서, 나열한 순서로 이웃한 것끼리만 한 점에서 만나고 마주보는 두 직선은 만나지 않는다. 이 퇴화된 경우도 위와 같은 수치적 불변량을 갖는다.
 
-2. $\mathbb{P}^3_\mathbb{K}$의 twisted cubic $C$, 곧 $\mathbb{P}^1=\Proj \mathbb{K}[\y_0,\y_1]$ 위의 invertible sheaf $\mathcal{O}_{\mathbb{P}^1}(3)$과 이를 globally generate하는 절단 $\y_0^3, \y_0^2\y_1, \y_0\y_1^2, \y_1^3$이 정의하는 morphism $\varphi:\mathbb{P}^1 \rightarrow \mathbb{P}^3_\mathbb{K}$의 image를 생각하자. ([§인자와 선형계, §§Ample invertible sheaf](/ko/math/scheme_theory/divisors_and_linear_systems#ample-invertible-sheaf)) 각각의 표준 chart $D_+(\x_j)$에 대하여 $\varphi^{-1}(D_+(\x_j))$은 $j=0$이면 $D_+(\y_0)=\Spec\mathbb{K}[\y_1/\y_0]$, $j=3$이면 $D_+(\y_1)=\Spec\mathbb{K}[\y_0/\y_1]$, 그 밖에는 $D_+(\y_0\y_1)=\Spec\mathbb{K}[\y_0/\y_1,\y_1/\y_0]$이고, 대응하는 ring homomorphism $\x_i/\x_j\mapsto \y_0^{3-i}\y_1^i/\y_0^{3-j}\y_1^j$의 image는 차례로 $\y_1/\y_0$, $\y_0/\y_1$, 그리고 이 둘 모두를 담으므로 언제나 surjective이다. 표준 chart들은 $\mathbb{P}^3_\mathbb{K}$의 affine open cover를 이루고, [§닫힌 부분스킴, ⁋명제 3](/ko/math/scheme_theory/closed_subschemes#prop3)의 증명은 이 조건을 하나의 affine open cover 위에서 확인하면 충분함을 보였으므로 $\varphi$는 closed embedding이다. 따라서 $C\cong\mathbb{P}^1$이며 $\mathcal{O}_C(1)=\varphi^\ast\mathcal{O}(1)\cong \mathcal{O}_{\mathbb{P}^1}(3)$이다. 그럼 [§스킴의 층 코호몰로지, ⁋정리 15](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#thm15)와 [§스킴의 층 코호몰로지, ⁋따름정리 14](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#cor14)에 의하여
+2. $\mathbb{P}^3_\mathbb{K}$의 twisted cubic $C$, 곧 $\mathbb{P}^1=\Proj \mathbb{K}[\y_0,\y_1]$ 위의 invertible sheaf $\mathcal{O}_{\mathbb{P}^1}(3)$과 이를 globally generate하는 절단 $\y_0^3, \y_0^2\y_1, \y_0\y_1^2, \y_1^3$이 정의하는 morphism $\varphi:\mathbb{P}^1 \rightarrow \mathbb{P}^3_\mathbb{K}$의 image를 생각하자. ([§인자와 선형계, §§Ample invertible sheaf](/ko/math/scheme_theory/divisors_and_linear_systems#ample-invertible-sheaf)) 각각의 표준 chart $D_+(\x_j)$에 대하여 $\varphi^{-1}(D_+(\x_j))$은 $j=0$이면 $D_+(\y_0)=\Spec\mathbb{K}[\y_1/\y_0]$, $j=3$이면 $D_+(\y_1)=\Spec\mathbb{K}[\y_0/\y_1]$, 그 밖에는 $D_+(\y_0\y_1)=\Spec\mathbb{K}[\y_0/\y_1,\y_1/\y_0]$이고, 대응하는 ring homomorphism $\x_i/\x_j\mapsto \y_0^{3-i}\y_1^i/\y_0^{3-j}\y_1^j$의 image는 차례로 $\y_1/\y_0$, $\y_0/\y_1$, 그리고 이 둘 모두를 담으므로 언제나 surjective이다. 표준 chart들은 $\mathbb{P}^3_\mathbb{K}$의 affine open cover를 이루고, [§닫힌 부분스킴, ⁋명제 3](/ko/math/scheme_theory/closed_subschemes#prop3)의 증명은 이 조건을 하나의 affine open cover 위에서 확인하면 충분함을 보였으므로 $\varphi$는 closed embedding이다. 따라서 $C\cong\mathbb{P}^1$이며 $\mathcal{O}_C(1)=\varphi^\ast\mathcal{O}(1)\cong \mathcal{O}_{\mathbb{P}^1}(3)$이다. 그럼 [§스킴의 층 코호몰로지, ⁋정리 16](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#thm16)와 [§스킴의 층 코호몰로지, ⁋따름정리 15](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#cor15)에 의하여
 
 	$$P_{\mathcal{O}_C}(t)=\rchi\bigl(\mathbb{P}^1,\mathcal{O}_{\mathbb{P}^1}(3t)\bigr)=\binom{1+3t}{1}=3t+1$$
 

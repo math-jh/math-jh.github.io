@@ -749,7 +749,7 @@ A:
 - id: automorphism
   en: automorphism
   ko: 자기동형사상
-  ko_short: [자기동형]
+  alias: [자기동형]
   primary: en
   defs:
   - label: '[대수적 구조] §군의 작용'
@@ -2456,7 +2456,7 @@ C:
 - id: comultiplication
   en: comultiplication
   ko: 쌍대곱셈
-  ko_short: [쌍대곱]
+  alias: [쌍대곱]
   primary: en
   defs:
   - label: '[범주론] §모노이드 대상'
@@ -4369,6 +4369,8 @@ E:
 - id: extension
   en: extension
   ko: 확장
+  alias:
+  - 연장
   primary: en
   note: '명사형(체의 확장)만 extension. 동사형 ''확장한다/확장되는''은 한글 유지'
   defs:
@@ -8574,7 +8576,7 @@ N:
 - id: natural_isomorphism
   en: natural isomorphism
   ko: 자연동형변환
-  ko_short: [자연동형]
+  alias: [자연동형]
   primary: en
   defs:
   - label: '[범주론] §자연변환'
@@ -10139,6 +10141,17 @@ P:
   defs:
   - label: '[스킴] §사영공간의 닫힌 부분스킴'
     url: /ko/math/scheme_theory/closed_subschemes_of_projective_spaces
+- id: projective_space
+  en: projective space
+  ko: 사영공간
+  alias:
+  - 사영 공간
+  primary: en
+  defs:
+  - label: '[대수다양체] §사영다양체'
+    url: /ko/math/algebraic_varieties/projective_varieties
+  - label: '[스킴] §사영공간과 Proj 구성'
+    url: /ko/math/scheme_theory/projective_schemes
 - id: projective_system
   en: projective system
   ko: 사영 체계
@@ -11392,9 +11405,8 @@ S:
     url: /ko/math/riemannian_geometry/second_fundamental_form
 - id: section
   en: section
-  ko: 단면
+  ko: 단면, 절단
   primary: en
-  note: '기하학 section 의미만. 단면곡률(sectional curvature)의 단면은 무관'
   defs:
   - label: '[집합론] §이항관계'
     url: /ko/math/set_theory/binary_relation

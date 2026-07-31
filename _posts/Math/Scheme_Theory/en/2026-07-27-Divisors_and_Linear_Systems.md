@@ -304,6 +304,8 @@ $$\varphi:X \rightarrow \mathbb{P}^n_A.$$
 
 That is, choosing generating sections of $\mathcal{L}$ is choosing a way to represent $X$ inside projective space.
 
+Here $\mathcal{L}$ itself is recovered from $\varphi$: we have $\mathcal{L}\cong \varphi^\ast\mathcal{O}(1)$, and this isomorphism sends $s_i$ to $\varphi^\ast\x_i$. Indeed $\x_i$ generates $\mathcal{O}(1)$ on $D_+(\x_i)$ and $\varphi$ maps $X_{s_i}$ into $D_+(\x_i)$, so $\varphi^\ast\x_i$ trivializes $\varphi^\ast\mathcal{O}(1)$ on $X_{s_i}$, while $s_i$ trivializes $\mathcal{L}$ on the same open set. On the overlap $X_{s_i}\cap X_{s_j}$ the transition functions of the two trivializations are $s_j/s_i$ and $\varphi^\ast(\x_j/\x_i)$ respectively, and the construction of $\varphi$ made these two equal, so the isomorphisms on the $X_{s_i}$ given by $s_i\mapsto \varphi^\ast\x_i$ agree on overlaps and glue to an isomorphism on all of $X$.
+
 ::: Definition 17
 An invertible sheaf $\mathcal{L}$ on a finite type $A$-scheme $X$ over a Noetherian ring $A$ is called *very ample* if there exist finitely many sections $s_0,\ldots, s_n\in \Gamma(X,\mathcal{L})$ that globally generate $\mathcal{L}$ such that the morphism $\varphi:X \rightarrow \mathbb{P}^n_A$ they define is a locally closed embedding. ([§Closed Subschemes, ⁋Definition 8](/en/math/scheme_theory/closed_subschemes#def8))
 :::

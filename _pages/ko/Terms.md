@@ -29,7 +29,7 @@ close_button: false
     <h2 class="term-index__letter"><span>{{ pair[0] }}</span></h2>
     <ul class="term-index__list">
       {%- for t in pair[1] %}
-      <li class="term-index__entry{% unless t.defs or t.refs %} term-index__entry--bare{% endunless %}" id="{{ t.id }}" data-search="{{ t.en | remove: '$' | downcase }} {{ t.ko | remove: '$' }}">
+      <li class="term-index__entry{% unless t.defs or t.refs %} term-index__entry--bare{% endunless %}" id="{{ t.id }}" data-search="{{ t.en | remove: '$' | downcase }} {{ t.ko | remove: '$' }}{% if t.alias %} {{ t.alias | join: ' ' | remove: '$' }}{% endif %}">
         <span class="term-index__t">
           {%- if t.primary == "ko" -%}
           <span class="term-index__alt">{{ t.en }} · </span><b class="term-index__term">{{ t.ko }}</b>

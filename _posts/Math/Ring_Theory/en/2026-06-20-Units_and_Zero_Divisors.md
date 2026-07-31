@@ -136,7 +136,7 @@ Multiplication in $A$ is componentwise and the identity is $(1,\ldots,1)$. If $a
 
 Conversely, if each $a_i$ is a unit, then $b=(a_1^{-1},\ldots,a_n^{-1})$ satisfies $ab=ba=(1,\ldots,1)$, so $a$ is a unit. Therefore $a\in A^\times$ is equivalent to each $a_i\in A_i^\times$, and the map
 
-$$A^\times\longrightarrow A_1^\times\times\cdots\times A_n^\times,\qquad (a_1,\ldots,a_n)\longmapsto(a_1,\ldots,a_n)$$
+$$A^\times\rightarrow A_1^\times\times\cdots\times A_n^\times;\quad (a_1,\ldots,a_n)\mapsto(a_1,\ldots,a_n)$$
 
 is a well-defined bijection by the above equivalence; since multiplication is componentwise, it is a group homomorphism, hence an isomorphism.
 :::

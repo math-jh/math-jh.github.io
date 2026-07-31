@@ -303,6 +303,8 @@ $$\varphi:X \rightarrow \mathbb{P}^n_A$$
 
 을 정의한다. 즉, $\mathcal{L}$의 generating section을 택하는 것은 $X$를 projective space 안에서 나타내는 방법을 택하는 것이다.
 
+이 때 $\mathcal{L}$ 자신은 $\varphi$로부터 되찾아진다. 곧 $\mathcal{L}\cong \varphi^\ast\mathcal{O}(1)$이며 이 isomorphism이 $s_i$를 $\varphi^\ast\x_i$로 보낸다. 실제로 $\x_i$는 $D_+(\x_i)$ 위에서 $\mathcal{O}(1)$을 생성하고 $\varphi$는 $X_{s_i}$를 $D_+(\x_i)$ 안으로 보내므로 $\varphi^\ast\x_i$는 $X_{s_i}$ 위에서 $\varphi^\ast\mathcal{O}(1)$을 trivialize하며, $s_i$는 같은 열린집합 위에서 $\mathcal{L}$을 trivialize한다. 겹침 $X_{s_i}\cap X_{s_j}$ 위에서 두 trivialization의 transition function은 각각 $s_j/s_i$와 $\varphi^\ast(\x_j/\x_i)$인데 $\varphi$의 구성이 이 둘을 같게 두었으므로, $s_i\mapsto \varphi^\ast\x_i$가 주는 각 $X_{s_i}$ 위의 isomorphism들이 겹침 위에서 일치하여 $X$ 전체의 isomorphism으로 붙는다.
+
 ::: 정의 17
 Noetherian ring $A$와 finite type $A$-scheme $X$ 위의 invertible sheaf $\mathcal{L}$이 *very ample*이라는 것은, $\mathcal{L}$을 globally generate하는 유한 개의 section $s_0,\ldots, s_n\in \Gamma(X,\mathcal{L})$이 존재하여 이들이 정의하는 morphism $\varphi:X \rightarrow \mathbb{P}^n_A$가 locally closed embedding인 것이다. ([§닫힌 부분스킴, ⁋정의 8](/ko/math/scheme_theory/closed_subschemes#def8))
 :::

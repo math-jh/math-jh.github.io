@@ -101,51 +101,59 @@ Ring $A$에 대하여 다음 두 데이터 사이에 일대일대응이 존재�
 이 대응은 $\mathfrak{a}_i=Ae_i$로 주어진다.
 :::
 ::: 증명
-우선 첫째 데이터가 주어졌다 하자. $\mathfrak{a}_i:=Ae_i$로 두면 [명제 4](#prop4)에 의해 각 $\mathfrak{a}_i$는 two-sided ideal이고 $A=\mathfrak{a}_1\oplus\cdots\oplus\mathfrak{a}_n$은 left module로서의 direct sum이다. 따라서 남은 것은 이 direct sum이 ring의 곱분해이기도 하다는 것이다. Morphism
+우선 첫째 데이터가 주어졌다 하자. 위의 대응이 주는대로 $\mathfrak{a}_i:=Ae_i$로 두면 [명제 4](#prop4)에 의해 각 $\mathfrak{a}_i$는 two-sided ideal이고 $A=\mathfrak{a}_1\oplus\cdots\oplus\mathfrak{a}_n$은 left module로서의 direct sum이다. 따라서 남은 것은 이 direct sum이 ring의 direct product이기도 하다는 것이다. Morphism
 
-$$\varphi:A\longrightarrow \prod_{i=1}^n Ae_i,\qquad \varphi(x)=(xe_1,\ldots, xe_n)$$
+$$\varphi:A\rightarrow \prod_{i=1}^n Ae_i;\quad x\mapsto (xe_1,\ldots, xe_n)$$
 
 을 생각하자. 이는 덧셈을 보존하며, $e_i$가 central이고 orthogonal하므로
 
 $$\varphi(x)\varphi(y)=(xe_1\cdot ye_1,\ldots, xe_n\cdot ye_n)=(xye_1,\ldots, xye_n)=\varphi(xy)$$
 
-에서 곱셈도 보존한다. 여기서 각 성분의 곱 $xe_i\cdot ye_i=xy e_i^2=xye_i$를 사용하였으며, 이는 $e_i$의 centrality에 의해 $e_iy=ye_i$이기 때문이다. 또 $\varphi(1)=(e_1,\ldots, e_n)$이고 각 $e_i$가 $Ae_i$의 항등원이므로 $\varphi$는 ring homomorphism이다. $\varphi$가 isomorphic함은 [명제 4](#prop4)의 direct sum 분해가 곧 $x\mapsto (xe_1,\ldots, xe_n)$의 단사성과 전사성을 주기 때문이다. 즉 $\varphi(x)=0$이면 모든 $xe_i=0$이고 $x=\sum xe_i=0$이며, 임의의 $(a_1e_1,\ldots, a_ne_n)$은 $x=a_1e_1+\cdots+a_ne_n$의 image이다.
+에서 곱셈도 보존한다. 또 $\varphi(1)=(e_1,\ldots, e_n)$이고 각 $e_i$가 $Ae_i$의 항등원이므로 $\varphi$는 ring homomorphism이다. 이것이 isomorphism이 되는 이유는 [명제 4](#prop4)의 direct sum decomposition이 isomorphism이기 때문이다. 
 
-$(2)\Rightarrow(1)$. 거꾸로 둘째 데이터가 주어졌다 하자. 곱분해는 특히 덧셈에 대한 direct sum $A=\mathfrak{a}_1\oplus\cdots\oplus\mathfrak{a}_n$을 주므로, 항등원을 이 분해에 따라
+거꾸로 둘째 데이터가 주어졌다 하자. Direct product decomposition은 특히 덧셈에 대한 direct sum $A=\mathfrak{a}_1\oplus\cdots\oplus\mathfrak{a}_n$을 주므로, 항등원을 이 분해에 따라
 
 $$1=e_1+\cdots+e_n,\qquad e_i\in\mathfrak{a}_i$$
 
-로 유일하게 쓴다. 임의의 $x\in\mathfrak{a}_j$에 대하여 $\mathfrak{a}_i$가 ideal이므로 $xe_i\in\mathfrak{a}_i$이고, 또
+로 유일하게 쓸 수 있다. 임의의 $x\in\mathfrak{a}_j$에 대하여 $\mathfrak{a}_i$가 ideal이므로 $xe_i\in\mathfrak{a}_i$이고, 이로부터 $x$의 분해
 
 $$x=x\cdot 1=xe_1+\cdots+xe_n$$
 
-인데 좌변 $x\in\mathfrak{a}_j$를 direct sum 분해의 유일성과 비교하면 $xe_j=x$이고 $i\neq j$에 대해 $xe_i=0$이다. 같은 논증을 $1\cdot x$에 적용하면 $e_jx=x$, $e_ix=0\ (i\neq j)$도 얻는다. 특히 $x=e_j\in\mathfrak{a}_j$를 대입하면 $e_j^2=e_j$이고 $i\neq j$에 대해 $e_ie_j=e_je_i=0$이다. 즉 $\{e_1,\ldots, e_n\}$은 orthogonal idempotent의 complete set이다. Centrality는 다음과 같이 확인된다. 임의의 $y\in A$를 $y=y_1+\cdots+y_n$ ($y_i\in\mathfrak{a}_i$)로 쓰면 위에서 $y_ie_j$는 $i=j$일 때 $y_i$, 아닐 때 $0$이므로 $ye_j=y_j=e_jy$이다. 따라서 각 $e_j$는 모든 $y$와 commute하며 central이다.
+를 얻으며 이는 유일하다. 특히 $x=e_i$를 대입하면 $e_i^2=e_i$이고, 모든 $i\neq j$에 대해 $e_i e_j=0$임을 얻을 수 있고, 비슷하게 $e_i$를 오른쪽에서 곱하면 $e_je_i=0$임도 알 수 있다. 즉 $\{e_1,\ldots, e_n\}$은 orthogonal idempotent의 complete set이다. 이제 보여야 할 것 중 남은 것은 오직 centrality 뿐이다. 임의의 $y\in A$를 
 
-두 구성은 서로 역이다. $(1)$에서 출발해 $\mathfrak{a}_i=Ae_i$를 만들고 다시 그 항등원을 취하면 $Ae_i$의 항등원이 $e_i$임은 [명제 4](#prop4) 뒤에서 확인하였으므로 원래의 $e_i$로 돌아온다. 반대로 $(2)$의 분해에서 $e_i$를 얻은 뒤 $Ae_i$를 만들면, 위에서 $\mathfrak{a}_i$의 모든 원소 $x$가 $x=xe_i\in Ae_i$를 만족하고 거꾸로 $Ae_i\subseteq\mathfrak{a}_i$이므로 $Ae_i=\mathfrak{a}_i$이다. 따라서 대응은 일대일이다.
+$$y=y_1+\cdots+y_n,\qquad y_i\in\mathfrak{a}_i$$
+
+로 쓰면 위에서 $y_ie_j$는 $i=j$일 때 $y_i$, 아닐 때 $0$이며 $e_jy_i$도 마찬가지이므로 $ye_j=y_j=e_jy$이다. 따라서 각 $e_j$는 모든 $y$와 commute하며 central이다.
+
+어렵지 않게 이 두 구성이 서로의 역함수임을 확인할 수 있으며, 따라서 이 대응은 일대일이다.
 :::
 
-이 정리는 ring의 곱분해를 다루는 일이 곧 central idempotent를 다루는 일과 같음을 말한다. 곱분해가 더 이상 쪼개지지 않는다는 것은 nontrivial central idempotent가 존재하지 않는다는 것, 즉 $0$과 $1$만이 유일한 central idempotent라는 것과 같다. 이러한 ring을 *connected* 혹은 *indecomposable*하다고 부른다. [예시 2](#ex2)에서 $\mathbb{Z}/4\mathbb{Z}$가 trivial idempotent만 가졌던 것은 이 ring이 더 이상 곱으로 분해되지 않음을 반영한다.
+[정리 5](#thm5)에 의해, ring이 nontrivial한 central idempotent를 갖지 않는 것은 그것이 두 nonzero ring의 곱으로 쪼개지지 않는 것과 동치이다. 이러한 ring을 *connected* 혹은 *indecomposable*하다고 부른다.
 
-가환환의 경우 모든 idempotent가 자동으로 central이므로, 정리의 대응은 단순히 "orthogonal idempotent의 complete set ↔ 곱분해"가 된다. Noncommutative한 경우에는 centrality 조건이 본질적이다. 다음 예시는 centrality가 빠지면 곱분해 대신 module 분해만 남음을 보여준다.
+다음 예시는 특히 centrality 조건이 빠졌을 때 일어나는 일을 보여준다. 이 경우, [정리 5](#thm5)는 그 자체로 적용할 수 없지만, 여전히 module로서의 decomposition은 [명제 4](#prop4)에 의해 보장된다.
 
 ::: 예시 6
-Ring $R$에 대하여 $n\times n$ matrix ring $A=M_n(R)$을 생각하자. $E_{ij}$를 $(i,j)$ 성분이 $1$이고 나머지가 $0$인 matrix unit이라 하면, 대각 성분들 $E_{11},\ldots, E_{nn}$은
+Ring $A$에 대하여 $n\times n$ matrix ring $\Mat_n(A)$를 생각하자. $E_{ij}$를 $(i,j)$ 성분이 $1$이고 나머지가 $0$인 matrix unit이라 하면, 대각 성분들 $E_{11},\ldots, E_{nn}$은
 
 $$E_{ii}^2=E_{ii},\qquad E_{ii}E_{jj}=0\ (i\neq j),\qquad E_{11}+\cdots+E_{nn}=I$$
 
 를 만족하므로 orthogonal idempotent의 complete set이다. 따라서 [명제 4](#prop4)에 의해 left module 분해
 
-$$M_n(R)=M_n(R)E_{11}\oplus\cdots\oplus M_n(R)E_{nn}$$
+$$\Mat_n(A)=\Mat_n(A)E_{11}\oplus\cdots\oplus \Mat_n(A)E_{nn}$$
 
-을 얻는데, $M_n(R)E_{ii}$는 $i$번째 열에만 성분이 있는 행렬들의 집합이다.
+을 얻는데, 여기서 $\Mat_n(A)E_{ii}$는 $i$번째 열에만 성분이 있는 행렬들의 집합이다.
 
-그러나 $n\geq 2$이면 $E_{ii}$는 central이 아니다. 가령 $n=2$에서 $E_{11}E_{12}=E_{12}$이지만 $E_{12}E_{11}=0$이므로 $E_{11}$은 $E_{12}$와 commute하지 않는다. 따라서 이 분해는 ring의 곱분해를 주지 않으며, 실제로 $R$이 division ring이면 $M_n(R)$은 nontrivial two-sided ideal을 갖지 않아 곱으로 분해되지 않는다. 즉 $M_n(R)$의 유일한 central idempotent는 $0$과 $I$뿐이다.
+주의할 것은 $n\geq 2$이면 $E_{ii}$는 central이 아니라는 것이다. 가령 $n=2$에서 
 
-진짜 곱분해는 block 구조에서 나온다. $n=n_1+\cdots+n_r$로 분할하고, 대각선을 따라 처음 $n_1\times n_1$ block, 다음 $n_2\times n_2$ block 식으로 놓인 block-diagonal 행렬들만 모은 subring
+$$E_{11}E_{12}=E_{12}\neq 0=E_{12}E_{11}$$
 
-$$B=\left\{\diag(M_1,\ldots, M_r)\mid M_k\in M_{n_k}(R)\right\}\cong\prod_{k=1}^r M_{n_k}(R)$$
+이므로 $E_{11}$은 $E_{12}$와 commute하지 않는다. 따라서 이 분해는 ring의 direct product decomposition을 주지 않으며, 실제로 $A$가 division ring이면 $\Mat_n(A)$는 nontrivial two-sided ideal을 갖지 않아 곱으로 분해되지 않는다. 즉 $\Mat_n(A)$의 유일한 central idempotent는 $0$과 $I$뿐이다.
 
-을 보자. $B$ 안에서 $k$번째 block에만 항등행렬을 놓은 원소 $P_k$는 $B$의 central idempotent이며, $\{P_1,\ldots, P_r\}$은 [정리 5](#thm5)의 의미에서 곱분해 $B\cong\prod M_{n_k}(R)$에 대응하는 central complete set이다. $P_k$들은 $B$ 안에서는 central이지만 더 큰 ring $M_n(R)$ 안에서는 그렇지 않다.
+진짜 direct product decomposition은 block 구조에서 나온다. $n=n_1+\cdots+n_r$로 분할하고, 대각선을 따라 처음 $n_1\times n_1$ block, 다음 $n_2\times n_2$ block 식으로 놓인 block-diagonal 행렬들만 모은 subring
+
+$$B=\left\{\diag(M_1,\ldots, M_r)\mid M_k\in \Mat_{n_k}(A)\right\}\cong\prod_{k=1}^r \Mat_{n_k}(A)$$
+
+을 보자. $B$ 안에서 $k$번째 block에만 항등행렬을 놓은 원소 $P_k$는 $B$의 central idempotent이며, $\{P_1,\ldots, P_r\}$은 [정리 5](#thm5)의 의미에서 direct product decomposition $B\cong\prod \Mat_{n_k}(A)$에 대응하는 central complete set이다. $P_k$들은 $B$ 안에서는 central이지만 더 큰 ring $\Mat_n(A)$ 안에서는 그렇지 않다.
 :::
 
 ## 중국인의 나머지정리와의 연결
@@ -176,11 +184,11 @@ $$a=ae_i+a(1-e_i)=a(1-e_i)\in A(1-e_i)$$
 
 이다.
 
-$(3)\Rightarrow(1)$. [정리 5](#thm5)에 의해 central한 complete set $\{e_1,\ldots, e_n\}$은 ring isomorphism $x\mapsto (xe_1,\ldots, xe_n)$으로 주어지는 곱분해 $A\cong\prod_i Ae_i$를 준다. 한편 각 $i$에 대하여 morphism
+$(3)\Rightarrow(1)$. [정리 5](#thm5)에 의해 central한 complete set $\{e_1,\ldots, e_n\}$은 ring isomorphism $x\mapsto (xe_1,\ldots, xe_n)$으로 주어지는 direct product decomposition $A\cong\prod_i Ae_i$를 준다. 한편 각 $i$에 대하여 morphism
 
-$$A\longrightarrow Ae_i,\qquad a\longmapsto ae_i$$
+$$A\rightarrow Ae_i;\quad a\mapsto ae_i$$
 
-는 전사이고, $ae_i=0$이면 $a=a(1-e_i)$이며 거꾸로 $a(1-e_i)e_i=0$이므로 그 kernel은 $A(1-e_i)=\mathfrak{a}_i$이다. 따라서 $A/\mathfrak{a}_i\cong Ae_i$이며, 이 동형이 $x+\mathfrak{a}_i\mapsto xe_i$로 주어지므로 위의 곱분해와 합성하면 정확히 $\pi$를 얻는다. 그러므로 $\pi$는 isomorphism이다.
+는 전사이고, $ae_i=0$이면 $a=a(1-e_i)$이며 거꾸로 $a(1-e_i)e_i=0$이므로 그 kernel은 $A(1-e_i)=\mathfrak{a}_i$이다. 따라서 $A/\mathfrak{a}_i\cong Ae_i$이며, 이 동형이 $x+\mathfrak{a}_i\mapsto xe_i$로 주어지므로 위의 direct product decomposition과 합성하면 정확히 $\pi$를 얻는다. 그러므로 $\pi$는 isomorphism이다.
 :::
 
 이 정리는 [정리 5](#thm5)의 대응을 ideal 쪽 자료로 옮겨 놓은 것이다. Pairwise comaximal이고 교차가 $0$인 ideal들이 주어지는 것, $A$가 ring들의 곱으로 분해되는 것, 그리고 $A$가 central한 orthogonal idempotent의 complete set을 갖는 것이 모두 같은 자료이며, 이 대응에서 $i$번째 인자 $A/\mathfrak{a}_i\cong Ae_i$의 항등원이 곧 $e_i$이다.
@@ -200,7 +208,7 @@ $$\mathbb{Z}/n\mathbb{Z}\cong\prod_{k=1}^r\mathbb{Z}/p_k^{a_k}\mathbb{Z}$$
 마지막으로, 곱으로 더 쪼갤 수 없는 경우와의 대비를 명시해 둔다.
 
 ::: 참고 9
-[예시 8](#ex8)의 분해에서 각 인수는 소수의 거듭제곱 $p_k^{a_k}$의 quotient이다. $\mathbb{Z}/p^a\mathbb{Z}$는 $0,1$ 외의 idempotent를 갖지 않는데, 이는 $x^2\equiv x\ (\mathrm{mod}\ p^a)$가 $x(x-1)\equiv 0\ (\mathrm{mod}\ p^a)$와 같고, $x$와 $x-1$이 서로소라 $p^a$이 둘 중 하나만을 나누어야 하기 때문이다. 따라서 $\mathbb{Z}/p^a\mathbb{Z}$는 [정리 5](#thm5)의 의미에서 indecomposable하며, 소인수분해에 따른 곱분해는 더 이상 쪼갤 수 없는 가장 미세한 분해이다. 이는 [예시 2](#ex2)에서 $\mathbb{Z}/4\mathbb{Z}$가 trivial idempotent만 가졌던 관찰의 일반화이다.
+[예시 8](#ex8)의 분해에서 각 인수는 소수의 거듭제곱 $p_k^{a_k}$의 quotient이다. $\mathbb{Z}/p^a\mathbb{Z}$는 $0,1$ 외의 idempotent를 갖지 않는데, 이는 $x^2\equiv x\ (\mathrm{mod}\ p^a)$가 $x(x-1)\equiv 0\ (\mathrm{mod}\ p^a)$와 같고, $x$와 $x-1$이 서로소라 $p^a$이 둘 중 하나만을 나누어야 하기 때문이다. 따라서 $\mathbb{Z}/p^a\mathbb{Z}$는 [정리 5](#thm5)의 의미에서 indecomposable하며, 소인수분해에 따른 direct product decomposition은 더 이상 쪼갤 수 없는 가장 미세한 분해이다. 이는 [예시 2](#ex2)에서 $\mathbb{Z}/4\mathbb{Z}$가 trivial idempotent만 가졌던 관찰의 일반화이다.
 :::
 
 ---

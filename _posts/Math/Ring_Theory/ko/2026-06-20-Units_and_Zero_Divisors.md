@@ -135,7 +135,7 @@ $A$의 곱셈은 성분별로 이루어지고 항등원은 $(1,\ldots,1)$이다.
 
 거꾸로 각 $a_i$가 unit이면 $b=(a_1^{-1},\ldots,a_n^{-1})$이 $ab=ba=(1,\ldots,1)$을 만족하므로 $a$가 unit이다. 따라서 $a\in A^\times$인 것과 각 $a_i\in A_i^\times$인 것이 동치이며, morphism
 
-$$A^\times\longrightarrow A_1^\times\times\cdots\times A_n^\times,\qquad (a_1,\ldots,a_n)\longmapsto(a_1,\ldots,a_n)$$
+$$A^\times\rightarrow A_1^\times\times\cdots\times A_n^\times;\quad (a_1,\ldots,a_n)\mapsto(a_1,\ldots,a_n)$$
 
 은 위의 동치에 의해 잘 정의된 전단사이고, 곱셈이 성분별이므로 group homomorphism이 되어 isomorphism을 정의한다.
 :::

@@ -33,7 +33,7 @@ $$I_n=\begin{pmatrix}1&0&\cdots&0\\0&1&\cdots&0\\\vdots&\vdots&\ddots&\vdots\\0&
 as is readily verified.
 :::
 
-$M_n(A)$ has the canonical basis $(E_{ij})$, and the structure constants with respect to this basis are given by
+$\Mat_n(A)$ has the canonical basis $(E_{ij})$, and the structure constants with respect to this basis are given by
 
 $$E_{ij}E_{hk}=\delta_{jh}E_{ik}$$
 

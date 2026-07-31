@@ -236,7 +236,7 @@ $$\rho_q(ux)=uxq=u\rho_q(x)\qquad(u\in\mathbb{C})$$
 
 so $\rho_q$ is a $\mathbb{C}$-linear map, i.e. an element of $\End_{\mathbb{C}}(\mathbb{H})$, and if $\rho_q=0$ then $q=\rho_q(1)=0$, so $q\mapsto\rho_q$ is injective. By associativity, $\rho_{qq'}=\rho_{q'}\circ\rho_q$, so this correspondence reverses the order of multiplication, but if we write coordinates as row vectors and represent a $\mathbb{C}$-linear map by a matrix $M_q$ acting by right multiplication, the order is reversed once more, so
 
-$$\mathbb{H}\longrightarrow\Mat_2(\mathbb{C}),\qquad q\longmapsto M_q$$
+$$\mathbb{H}\rightarrow\Mat_2(\mathbb{C});\quad q\mapsto M_q$$
 
 is an injective ring homomorphism. Here the two rows of $M_q$ are the coordinates of $\rho_q(1)$ and $\rho_q(j)$, and using from the relations of [Definition 7](#def7) that $ji=-ij$, so that $ju=\bar uj$ holds for any $u\in\mathbb{C}$, we obtain from $\rho_q(1)=q=z+wj$ and
 

@@ -265,7 +265,7 @@ Algebraically closed field $k$ 위의 $n$차원 integral projective scheme $X$�
 
 $$H^i(X, \mathcal{E})\cong H^{n-i}\bigl(X, \omega_X\otimes_{\mathcal{O}_X}\mathcal{E}^\vee\bigr)^\ast$$
 
-이 존재한다. 여기에서 $\mathcal{E}^\vee=\sHom_{\mathcal{O}_X}(\mathcal{E}, \mathcal{O}_X)$이고, $(-)^\ast$는 유한차원 $k$-벡터공간의 쌍대이다. ([§스킴의 층 코호몰로지, ⁋정리 7](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#thm7))
+이 존재한다. 여기에서 $\mathcal{E}^\vee=\sHom_{\mathcal{O}_X}(\mathcal{E}, \mathcal{O}_X)$이고, $(-)^\ast$는 유한차원 $k$-벡터공간의 쌍대이다. ([§스킴의 층 코호몰로지, ⁋정리 8](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#thm8))
 :::
 
 이 정리의 증명은 trace map의 구성과 그 normalization, 그리고 finite morphism을 따라 duality를 옮기는 논증을 요구하여 이 글의 범위를 넘어서므로, [\[대수다양체\] §세르 쌍대성](/ko/math/algebraic_varieties/serre_duality)에 위임한다. 그곳에서는 먼저 $\mathbb{P}^n$ 위에서 isomorphism $H^n(\mathbb{P}^n, \omega_{\mathbb{P}^n})\cong k$이 정하는 trace map과 cup product로 pairing을 만들어 그것이 perfect pairing임을 보이고 ([\[대수다양체\] §세르 쌍대성, ⁋명제 2](/ko/math/algebraic_varieties/serre_duality#prop2)), 이어서 finite surjective morphism $X \rightarrow \mathbb{P}^n$을 따라 이를 일반의 $X$로 옮긴다. 이 morphism은 Noether normalization의 사영 판, 곧 일반적 위치의 linear projection에서 오는 것이며, affine 판인 [§차원, ⁋정리 9](/ko/math/scheme_theory/dimension#thm9)가 직접 주는 것은 아니다. 우리가 여기에서 가져다 쓰는 것은 그 결과인 isomorphism 자체이다.

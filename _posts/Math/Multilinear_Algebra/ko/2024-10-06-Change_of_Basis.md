@@ -32,7 +32,7 @@ $$I_n=\begin{pmatrix}1&0&\cdots&0\\0&1&\cdots&0\\\vdots&\vdots&\ddots&\vdots\\0&
 임을 확인할 수 있다. 
 :::
 
-$M_n(A)$는 canonical basis $(E_{ij})$를 갖는데, 이들에 대해 structure constant를 생각해보면 다음 식
+$\Mat_n(A)$는 canonical basis $(E_{ij})$를 갖는데, 이들에 대해 structure constant를 생각해보면 다음 식
 
 $$E_{ij}E_{hk}=\delta_{jh}E_{ik}$$
 
