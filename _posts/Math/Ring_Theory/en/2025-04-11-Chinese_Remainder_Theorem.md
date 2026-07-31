@@ -10,14 +10,15 @@ sidebar:
 
 date: 2025-04-11
 weight: 3
-translated_at: 2026-07-31T08:45:03+00:00
+translated_at: 2026-07-31T09:15:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-07-31T09:15:02+00:00
 ---
 The Chinese remainder theorem is a classical result in number theory, and its essence is the ring isomorphism
 
 $$\mathbb{Z}/mn\mathbb{Z}\cong \mathbb{Z}/m\mathbb{Z}\times \mathbb{Z}/n\mathbb{Z},\qquad \text{$m,n$ coprime}$$
 
-([\[Number Theory\] §Chinese Remainder Theorem, ⁋Theorem 1](/en/math/number_theory/chinese_remainder_theorem#thm1)). In other words, the remainder of any integer upon division by $mn$ can be determined completely once we know its remainders modulo $m$ and modulo $n$, and the goal of this post is to extend this to an arbitrary ring $A$.
+([\[Number Theory\] §Chinese Remainder Theorem, ⁋Theorem 1](/en/math/number_theory/chinese_remainder_theorem#thm1)). In other words, the remainder of any integer upon division by $mn$ is completely determined once we know its remainders modulo $m$ and modulo $n$, and the goal of this post is to extend this to an arbitrary ring $A$.
 
 To put it briefly, this generalization first replaces $m\mathbb{Z}$ and $n\mathbb{Z}$ by ideals of the ring $A$, and understands $mn\mathbb{Z}$ as the intersection of these two ideals. However, this generalization does not work for arbitrary ideals; a condition corresponding to $m,n$ being coprime is also necessary. The corresponding condition on ideals is *comaximal*, and then the generalized theorem in ring theory states that for pairwise comaximal ideals $\mathfrak{a}_i$, the ring isomorphism
 
@@ -65,7 +66,7 @@ $$a_1b_1+\cdots a_nb_n + a_1'c_1+\cdots +a_m'c_m\in \mathfrak{a}\mathfrak{b}+\ma
 since the $b_i$'s and $c_i$'s are all elements of $\mathfrak{b}+\mathfrak{c}$, the above element is an element of $\mathfrak{a}(\mathfrak{b}+\mathfrak{c})$. The right distributive law can be proved similarly.
 :::
 
-For any two two-sided ideals $\mathfrak{a},\mathfrak{b}$, since the two equalities
+For any two two-sided ideals $\mathfrak{a},\mathfrak{b}$, since the two inclusions
 
 $$\mathfrak{a}\mathfrak{b}\subseteq \mathfrak{a}A\subseteq \mathfrak{a},\quad \mathfrak{a}\mathfrak{b}\subseteq A \mathfrak{b}\subseteq \mathfrak{b}$$
 
