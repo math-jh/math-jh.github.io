@@ -44,9 +44,10 @@
 
 ## 손볼 때 알아야 할 것
 
-- **재기동은 `./restart.sh` 로만.** `pgrep -f dashboard/server.py` 를 셸 명령줄에 직접
-  쓰면 그 명령줄까지 패턴에 걸려 자기 자신을 죽인다 (겪은 사고: 구 프로세스 생존 +
-  신 프로세스 포트 충돌사). 실행은 절대경로로 — keeper cron 과 패턴을 맞춘다.
+- **재기동은 `./restart.sh` 로만.** 즉석 `pgrep -f`/`pkill -f` 는 부분 문자열 매치라
+  경로를 언급만 한 셸까지 잡는다 — restart.sh 의 앵커된 패턴
+  (`^/usr/bin/python3 [^ ]*/dashboard/server\.py$`)을 쓰는 이유. 서버 기동은
+  절대경로 `/usr/bin/python3` 이어야 이 패턴·keeper cron 과 맞는다.
 - **자산·API 참조는 절대경로(`/dash/…`, `/assets/…`)여야 한다.** 구 상세 경로에서
   상대경로가 다른 디렉토리로 풀린다. 폰트·아이콘은 블로그 자산(`/assets/css/fonts/`)을
   같은 오리진에서 재사용한다 (nginx 4000 이 Jekyll `_site` 를 서빙하므로 도달 가능).
