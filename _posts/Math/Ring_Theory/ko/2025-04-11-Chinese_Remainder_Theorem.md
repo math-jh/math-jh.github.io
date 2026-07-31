@@ -1,7 +1,7 @@
 ---
 title: "중국인의 나머지정리"
-description: "정수의 합동 문제에서 출발해 comaximal ideal 조건으로 일반화한 중국인의 나머지정리를 증명한다. 가환환에서 pairwise comaximal ideal의 교차가 곱과 같아진다는 사실을 핵심 도구로 쓰며, 곱분해와 중심 idempotent 분해의 대응까지 다룬다."
-excerpt: "Comaximal ideal에 대한 중국인의 나머지정리와 중심 idempotent 분해"
+description: "정수의 합동 문제에서 출발해 comaximal ideal 조건으로 일반화한 중국인의 나머지정리를 증명한다. 가환환에서 pairwise comaximal ideal의 교차가 곱과 같아진다는 사실을 핵심 도구로 쓰며, 비가환환에서 교차가 모든 순서의 곱의 합으로 나타나는 형태까지 다룬다."
+excerpt: "Comaximal ideal에 대한 중국인의 나머지정리"
 
 categories: [Math / Ring Theory]
 permalink: /ko/math/ring_theory/chinese_remainder_theorem
@@ -10,6 +10,7 @@ sidebar:
 
 date: 2025-04-11
 weight: 3
+
 
 ---
 
@@ -173,44 +174,13 @@ $$A/\mathfrak{a}_1\cdots \mathfrak{a}_n\cong\prod_{i=1}^n A/\mathfrak{a}_i$$
 
 도입부에서 언급한 정수 버전은 $A=\mathbb{Z}$인 특수한 경우이다. 즉, pairwise coprime인 $n_1,\ldots, n_r$에 대해 $\mathfrak{a}_i=n_i \mathbb{Z}$라 하고 $n=n_1\cdots n_r$이라 두면, 서로소 조건이 곧 comaximal 조건 $\mathfrak{a}_i+\mathfrak{a}_j=\mathbb{Z}$이 되므로 위 명제는 isomorphism $\mathbb{Z}/n \mathbb{Z}\cong\prod \mathbb{Z}/n_i \mathbb{Z}$을 준다. 
 
-한편, [명제 6](#prop6)의 isomorphism $A\cong\prod A/\mathfrak{a}_i$는 ring $A$가 더 작은 ring들의 곱으로 쪼개진다는 강한 사실로, 이는 다음의 동치명제를 통해 깔끔하게 표현할 수 있다. 
-
-::: 명제 7
-Ring $A$와 그 center $Z(A)$, 그리고 two-sided ideal들 $\mathfrak{a}_1,\ldots, \mathfrak{a}_n$이 주어졌다 하자. 다음이 모두 동치이다.
-
-1. 위에서 정의한 $\pi:A \rightarrow \prod A/\mathfrak{a}_i$가 isomorphism이다.
-2. 모든 $i\neq j$에 대하여 $\mathfrak{a}_i+\mathfrak{a}_j=A$이고 $\bigcap \mathfrak{a}_i=0$이다.
-3. $Z(A)$의 원소들 $e_1,\ldots, e_n$이 존재하여 $\sum e_i=1$이며, 모든 $i$에 대하여 $e_i^2=e_i$, 모든 $i\neq j$에 대하여 $e_ie_j=0$이 성립하고, 모든 $i$에 대해 $\mathfrak{a}_i=A(1-e_i)$이다.
-:::
-::: 증명
-우선 처음 두 조건이 동치임은 [명제 6](#prop6)의 결과이다. 이제 둘째 조건을 가정하고 셋째 조건을 보이자. [명제 6](#prop6) 증명에서 힌트를 얻어, $\prod A/\mathfrak{a}_i$에서 $i$번째 성분만 $1+\mathfrak{a}_i$이고 나머지는 모두 $0$인 원소를 $\bar{e}_i$라 하자. 그럼 
-
-$$\sum\bar{e}_i=\bar{1},\qquad \bar{e}_i^2=\bar{e}_i,\qquad \bar{e}_i\bar{e}_j=0$$
-
-이 성립한다. 또, 각 성분이 quotient ring $A/\mathfrak{a}_i$의 항등원 또는 $0$이므로 $\bar{e}_i$가 $\prod A/\mathfrak{a}_i$의 center에 속하는 것도 자명하다. 이제 $e_i:=\pi^{-1}(\bar{e}_i)$라 두면 이들이 셋째 조건의 모든 등식들을 만족하는 것은 위의 식으로부터 자명하다. 등식 $\mathfrak{a}_i=A(1-e_i)$의 경우, $a\in\mathfrak{a}_i$라 하면 $a=ae_i+a(1-e_i)$인데, $ae_i$의 모든 성분이 $0$이 되어 $ae_i\in\bigcap\mathfrak{a}_i=0$이므로 $a=a(1-e_i)\in A(1-e_i)$이다. 반대로 $\bar{e}_i$의 $i$번째 성분이 $1+\mathfrak{a}_i$이므로 $1-e_i\in\mathfrak{a}_i$이고, 따라서 $A(1-e_i)\subseteq\mathfrak{a}_i$이다. 그러므로 $\mathfrak{a}_i=A(1-e_i)$이다.
-
-마지막으로 셋째 조건을 가정하고 첫째 조건을 보이자. 우선 우리는 $A=\bigoplus_i Ae_i$임을 보인다. 이는 우선 임의의 $a\in A$에 대하여
-
-$$a=a\cdot 1=a\sum_i e_i=\sum_i ae_i$$
-
-이고, 만일 $x\in Ae_i\cap\sum_{j\neq i}Ae_j$라면 $x$는 $ae_i$꼴인 동시에 $\sum_{j\neq i} a_j e_j$ 꼴이며, 이를 만족할 수 있는 $x$는 $0$뿐이므로 이것이 direct sum을 준다는 것에서 얻어진다. 이제 $e_i\in Z(A)$이므로 각 $Ae_i$는 항등원 $e_i$를 갖는 ring이며, morphism 
-
-$$A\rightarrow Ae_i;\qquad a\mapsto ae_i$$
-
-는 전사이고 그 kernel은 $A(1-e_i)=\mathfrak{a}_i$이므로 $A/\mathfrak{a}_i\cong Ae_i$이다. 이를 합치면, [\[대수적 구조\] §환의 곱, 쌍대곱, 텐서곱, ⁋정의 3](/ko/math/algebraic_structures/operations_of_rings#def3)에서 정의한 direct sum이 유한 지표에서는 direct product와 같으므로 
-
-$$\bigoplus_{i=1}^n A/\mathfrak{a}_i\cong \prod_{i=1}^n A/\mathfrak{a}_i\cong\prod_{i=1}^n Ae_i\cong A$$
-
-이며, 이 합성이 원래의 $\pi$와 일치하므로 $\pi$는 isomorphism이다.
-:::
-
-추가로, 만일 $A$가 commutative이면 [명제 5](#prop5)에 의하여 $\bigcap\mathfrak{a}_i=\mathfrak{a}_1\cdots\mathfrak{a}_n$이므로, 둘째 조건의 $\bigcap\mathfrak{a}_i=0$은 $\mathfrak{a}_1\cdots\mathfrak{a}_n=0$으로 바꾸어 써도 같다. 
+$\bigcap\mathfrak{a}_i=0$일 때 얻어지는 isomorphism $A\cong\prod A/\mathfrak{a}_i$는 ring $A$가 더 작은 ring들의 곱으로 쪼개진다는 강한 사실이다. 이 조건은 $A$가 commutative인 경우 [명제 5](#prop5)에 의하여 $\mathfrak{a}_1\cdots\mathfrak{a}_n=0$으로 바꾸어 써도 같다. 
 
 ## 비가환의 경우
 
 [명제 5](#prop5)에서 commutative라는 가정은 교집합 $\mathfrak{b}_1\cap\cdots\cap\mathfrak{b}_n$이 단일한 곱 $\mathfrak{b}_1\cdots\mathfrak{b}_n$으로 떨어지는 것을 보장하기 위해 쓰였다. 이를 가정하지 않으면 여러 순서의 곱이 서로 다른 ideal이 될 수 있어, 교집합은 그 모든 순서의 곱을 더한 symmetric sum으로 나타나며, 다음 명제가 그 일반화된 버전을 준다.
 
-::: 명제 8
+::: 명제 7
 Ring $A$의 two-sided ideal들 $\mathfrak{b}_1,\ldots, \mathfrak{b}_n$이 pairwise comaximal이라 하자. 그럼
 
 $$\mathfrak{b}_1\cap \cdots\cap \mathfrak{b}_n=\sum_{\sigma\in S_n} \mathfrak{b}_{\sigma(1)}\cdots \mathfrak{b}_{\sigma(n)}$$
@@ -237,7 +207,7 @@ $$\left(\sum_{\sigma\in S_{n-1}}\mathfrak{b}_{\sigma(1)}\cdots\mathfrak{b}_{\sig
 이며, 우변의 각 항이 $\sum_{\sigma\in S_n}\mathfrak{b}_{\sigma(1)}\cdots\mathfrak{b}_{\sigma(n)}$에 포함되므로 원하는 역포함을 얻는다.
 :::
 
-[명제 6](#prop6)의 kernel $\bigcap_i\mathfrak{a}_i$에 [명제 8](#prop8)을 적용하면, non-commutative case에서의 중국인의 나머지정리 역시
+[명제 6](#prop6)의 kernel $\bigcap_i\mathfrak{a}_i$에 [명제 7](#prop7)을 적용하면, non-commutative case에서의 중국인의 나머지정리 역시
 
 $$A\Big/\left(\sum_{\sigma\in S_n}\mathfrak{a}_{\sigma(1)}\cdots\mathfrak{a}_{\sigma(n)}\right)\cong \prod_{i=1}^n A/\mathfrak{a}_i$$
 
