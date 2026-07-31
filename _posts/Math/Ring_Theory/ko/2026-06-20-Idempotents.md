@@ -1,5 +1,5 @@
 ---
-title: "Idempotent과 곱분해"
+title: "멱등원과 곱분해"
 description: "Idempotent과 orthogonal idempotent의 complete set을 정의하고, central idempotent이 환의 곱분해와 일대일대응함을 증명한 뒤, 이를 일반 환에서의 중국인의 나머지정리와 연결한다."
 excerpt: "Central idempotent과 환의 곱분해, 그리고 일반 환에서의 중국인의 나머지정리"
 
@@ -19,7 +19,7 @@ published: false
 
 이 글에서는 이러한 idempotent들을 공식적으로 정의하고, central idempotent의 complete orthogonal set이 ring의 direct product 분해와 일대일대응함을 증명한 뒤, 이로부터 일반 ring에서의 중국인의 나머지정리가 어떻게 복원되는지 살펴본다. 
 
-## Idempotent
+## 멱등원
 
 우선 다음을 정의한다. 
 
@@ -48,62 +48,60 @@ Ring $A=\mathbb{Z}/6\mathbb{Z}$의 idempotent는 $0,1,3,4$인 것을 간단한 �
 ::: 정의 3
 Ring $A$의 idempotent들 $e_1,\ldots, e_n$이 다음 두 조건
 
-$$e_1+\cdots+e_n=1,\qquad e_ie_j=0\quad\text{for $i\neq j$}$$$
+$$e_1+\cdots+e_n=1,\qquad e_ie_j=0\quad\text{for $i\neq j$}$$
 
 을 모두 만족하면, $\{e_1,\ldots, e_n\}$을 *orthogonal idempotent의 complete set<sub>완전 직교 멱등원</sub>*이라 한다. 만일 각 $e_i$가 모두 central이면 이를 *central*한 complete set이라 한다.
 :::
 
-가장 단순한 complete set은 $n=1$일 때의 $\{1\}$이며, [예시 2](#ex2)의 $\{3,4\}\subseteq\mathbb{Z}/6\mathbb{Z}$는 $n=2$인 central complete set의 예이다.
-
-하나의 idempotent $e$가 주어지면 $\{e,1-e\}$는 언제나 orthogonal idempotent의 complete set이 된다. 따라서 complete set은 idempotent를 여러 조각으로 분할하는 일반화로 볼 수 있다. 이제 이 분할이 ring을 어떻게 쪼개는지 살펴본다.
+가장 단순한 complete set은 $n=1$일 때의 $\{1\}$이며, [예시 2](#ex2)에서 $\mathbb{Z}/6\mathbb{Z}$의 $\{0,1\}$과 $\{3,4\}$는 $n=2$인 central complete set의 예이다. 더 일반적으로, 하나의 idempotent $e$가 주어지면 $\{e,1-e\}$는 언제나 orthogonal idempotent의 complete set이 된다. 따라서 complete set은 idempotent를 여러 조각으로 분할하는 일반화로 볼 수 있다. 이제 이 분할이 ring을 어떻게 쪼개는지 살펴본다.
 
 ::: 명제 4
-$\{e_1,\ldots, e_n\}$이 ring $A$의 orthogonal idempotent의 complete set이라 하자. 그럼 left $A$-module로서의 분해
+Ring $A$와 $A$의 complete set of orthogonal idempotents $\{e_1,\ldots, e_n\}$이 주어졌다 하자. 그럼 left $A$-module로서의 분해
 
 $$A=Ae_1\oplus\cdots\oplus Ae_n$$
 
-이 성립한다. 더욱이 각 $e_i$가 central이면 각 $Ae_i$는 $A$의 two-sided ideal이고, 이 때 $e_je_i=0\ (i\neq j)$ 또한 성립한다.
+이 성립한다. 뿐만 아니라, 만일 각 $e_i$가 central이면 각 $Ae_i$는 $A$의 two-sided ideal이 된다.
 :::
 ::: 증명
 임의의 $x\in A$에 대하여, $e_1+\cdots+e_n=1$로부터
 
 $$x=x\cdot 1=xe_1+\cdots+xe_n$$
 
-이고 각 $xe_i\in Ae_i$이므로 $A=Ae_1+\cdots+Ae_n$이다. 합이 direct sum임을 보이기 위해, 어떤 원소가 두 가지 방식으로 표현된다 하자. 즉 $a_1e_1+\cdots+a_ne_n=0$이라 하자 (단 $a_i\in A$). 이 식의 오른쪽에 $e_j$를 곱하면, $i\neq j$에 대해 $e_ie_j=0$이고 $e_j^2=e_j$이므로
+이고 각 $xe_i\in Ae_i$이므로 $A=Ae_1+\cdots+Ae_n$이다. 따라서 보여야 할 것은 이 합이 direct sum이라는 것이다. 
+
+이를 위해, 어떤 원소가 두 가지 방식으로 표현된다 하자. 즉 $a_1e_1+\cdots+a_ne_n=0$이라 하자. 그럼 이 식의 오른쪽에 $e_j$를 곱하면, $i\neq j$에 대해 $e_ie_j=0$이고 $e_j^2=e_j$이므로
 
 $$0=(a_1e_1+\cdots+a_ne_n)e_j=\sum_{i=1}^n a_i(e_ie_j)=a_je_j$$
 
-를 얻는다. 즉 $j$번째 성분 $a_je_j$가 $0$이다. 모든 $j$에 대해 이것이 성립하므로 표현은 유일하며, 합은 direct sum이다.
+를 얻는다. 즉 $j$번째 성분 $a_je_j$가 $0$이 되며, 이것이 모든 $j$에 대해 성립하므로 주어진 합은 direct sum이다.
 
-이제 각 $e_i$가 central이라 하자. $Ae_i$가 left ideal임은 정의상 자명하다. Right ideal임을 보이려면 임의의 $ae_i\in Ae_i$와 $x\in A$에 대해 $(ae_i)x\in Ae_i$임을 확인하면 되는데, $e_i$가 central이므로
+이제 마지막 부분을 보이기 위해 각 $e_i$가 central이라 하자. 그럼 $Ae_i$가 left ideal임은 정의상 자명하므로 right ideal임을 보이면 충분하다. 이를 위해서는 임의의 $ae_i\in Ae_i$와 $x\in A$에 대해 $(ae_i)x\in Ae_i$임을 확인하면 되는데, $e_i$가 central이므로
 
 $$(ae_i)x=a(e_ix)=a(xe_i)=(ax)e_i\in Ae_i$$
 
-이다. 따라서 $Ae_i$는 two-sided ideal이다. 마지막으로 $e_i$가 central이면 $i\neq j$일 때 $e_je_i=e_ie_j=0$이므로 나머지 직교 조건도 성립한다.
+가 되어 $Ae_i$는 two-sided ideal이다. 
 :::
 
-명제의 첫 부분은 idempotent가 일반적이라면 left module 수준의 분해까지만 보장함을 말한다. 분해 $A=Ae_1\oplus\cdots\oplus Ae_n$은 $A$를 그 위의 left module로 본 direct sum이며, 각 $Ae_i$가 ring의 ideal이 되려면 centrality가 필요하다. 이 차이가 곧 module 분해와 ring의 곱분해를 가르는 지점이다.
-
-각 $e_i$가 central일 때 $Ae_i$는 그 자체로 ring의 구조를 갖는다. $Ae_i$는 $A$의 곱셈을 물려받되, 그 항등원은 $1$이 아니라 $e_i$이다. 실제로 임의의 $ae_i\in Ae_i$에 대해 $e_i$가 idempotent이고 central이므로
+각 $e_i$가 central일 때 $Ae_i$는 그 자체로 ring의 구조를 갖는다. 특히 $Ae_i$는 항등원을 가지며, 그 항등원은 $e_i$이다. 실제로 임의의 $ae_i\in Ae_i$에 대해 $e_i$가 idempotent이고 central이므로
 
 $$e_i\cdot(ae_i)=(e_ia)e_i=(ae_i)e_i=ae_i^2=ae_i$$
 
-이고 마찬가지로 $(ae_i)\cdot e_i=ae_i$이다. 즉 $e_i$는 $Ae_i$의 양쪽 항등원으로 작동한다. 이것이 다음 정리에서 곱분해의 각 성분이 되는 ring들이다.
+이고 마찬가지로 $(ae_i)\cdot e_i=ae_i$이다. 
 
-## Central idempotent과 곱분해
+## 중심멱등원과 곱분해
 
-이제 central한 complete set이 ring의 direct product 분해와 정확히 대응함을 보인다. Ring $A$가 ring들 $A_1,\ldots, A_n$의 direct product $A\cong A_1\times\cdots\times A_n$으로 쓰인다는 것은, 성분별 덧셈과 곱셈을 갖는 product ring $\prod A_i$로의 ring isomorphism이 존재함을 뜻한다.
+위의 [명제 4](#prop4) 이후의 논증에 의해 우리는 complete set of central orthogonal idempotents가 ring의 direct product를 준다는 것을 안다. 다음 명제는 여기서 한 발 더 나아가, 이 complete set이 정확하게 ring의 direct product decomposition이라는 것을 보여준다. 
 
 ::: 정리 5
-Ring $A$에 대하여 다음 두 자료 사이에 일대일대응이 존재한다.
+Ring $A$에 대하여 다음 두 데이터 사이에 일대일대응이 존재한다.
 
 1. $A$의 central한 orthogonal idempotent의 complete set $\{e_1,\ldots, e_n\}$.
-2. $A$를 $n$개의 nonzero two-sided ideal의 direct sum $A=\mathfrak{a}_1\oplus\cdots\oplus\mathfrak{a}_n$으로 쓰는 분해. 단, 이는 ring의 direct product 분해 $A\cong\prod_{i=1}^n \mathfrak{a}_i$를 준다.
+2. $A$를 $n$개의 two-sided ideal의 direct sum $A=\mathfrak{a}_1\oplus\cdots\oplus\mathfrak{a}_n$으로 쓰는 decomposition.
 
-이 대응에서 $\mathfrak{a}_i=Ae_i$이고, 거꾸로 $e_i$는 분해 $1=e_1+\cdots+e_n$의 $i$번째 성분, 즉 $\mathfrak{a}_i$의 항등원이다.
+이 대응에서 $\mathfrak{a}_i=Ae_i$이며, direct sum $A=\mathfrak{a}_1\oplus\cdots\oplus\mathfrak{a}_n$은 ring의 direct product decomposition $A\cong\prod_{i=1}^n \mathfrak{a}_i$으로 생각한다.
 :::
 ::: 증명
-$(1)\Rightarrow(2)$. Central한 complete set $\{e_1,\ldots, e_n\}$이 주어졌다 하자. [명제 4](#prop4)에 의해 $\mathfrak{a}_i:=Ae_i$는 two-sided ideal이고 $A=\mathfrak{a}_1\oplus\cdots\oplus\mathfrak{a}_n$은 left module로서의 direct sum이다. Morphism
+우선 첫째 데이터가 주어졌다 하자. $\mathfrak{a}_i:=Ae_i$로 두면 [명제 4](#prop4)가 곧바로 둘째 데이터의 direct sum을 준다. 즉 각 $\mathfrak{a}_i$는 two-sided ideal이고 $A=\mathfrak{a}_1\oplus\cdots\oplus\mathfrak{a}_n$은 left module로서의 direct sum이다. 따라서 남은 것은 이 direct sum이 실은 ring의 곱분해라는 것이다. Morphism
 
 $$\varphi:A\longrightarrow \prod_{i=1}^n Ae_i,\qquad \varphi(x)=(xe_1,\ldots, xe_n)$$
 
@@ -113,7 +111,7 @@ $$\varphi(x)\varphi(y)=(xe_1\cdot ye_1,\ldots, xe_n\cdot ye_n)=(xye_1,\ldots, xy
 
 에서 곱셈도 보존한다. 여기서 각 성분의 곱 $xe_i\cdot ye_i=xy e_i^2=xye_i$를 사용하였으며, 이는 $e_i$의 centrality에 의해 $e_iy=ye_i$이기 때문이다. 또 $\varphi(1)=(e_1,\ldots, e_n)$이고 각 $e_i$가 $Ae_i$의 항등원이므로 $\varphi$는 ring homomorphism이다. $\varphi$가 isomorphic함은 [명제 4](#prop4)의 direct sum 분해가 곧 $x\mapsto (xe_1,\ldots, xe_n)$의 단사성과 전사성을 주기 때문이다. 즉 $\varphi(x)=0$이면 모든 $xe_i=0$이고 $x=\sum xe_i=0$이며, 임의의 $(a_1e_1,\ldots, a_ne_n)$은 $x=a_1e_1+\cdots+a_ne_n$의 image이다.
 
-$(2)\Rightarrow(1)$. 거꾸로 $A=\mathfrak{a}_1\oplus\cdots\oplus\mathfrak{a}_n$이 nonzero two-sided ideal들의 direct sum이라 하자. 항등원을 이 분해에 따라
+$(2)\Rightarrow(1)$. 거꾸로 $A=\mathfrak{a}_1\oplus\cdots\oplus\mathfrak{a}_n$이 two-sided ideal들의 direct sum이라 하자. 항등원을 이 분해에 따라
 
 $$1=e_1+\cdots+e_n,\qquad e_i\in\mathfrak{a}_i$$
 
