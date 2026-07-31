@@ -5150,3 +5150,8 @@ Decide whether each one is a definition and add it to `_data/terms.yml` (then ru
 - _posts/Math/Scheme_Theory/ko/2026-07-27-Group_Schemes.md: 병기 필요 'closed subgroup scheme' — 위키 ko 문서 '선형 대수군' — 병기형 도출 필요
 - _posts/Math/Scheme_Theory/ko/2026-07-27-Group_Schemes.md: 병기 필요 'antipode' — 소스 없음 (KMS exact ✗, 위키 ko ✗)
 - _posts/Math/Scheme_Theory/ko/2026-07-27-Group_Schemes.md: 병기 필요 'linear representation' — 위키 ko 문서 '표현론 (수학)' — 병기형 도출 필요
+
+## term_extract_worker 2026-07-31 10:30
+
+- _posts/Math/Sheaf_Theory/ko/2026-07-01-Perverse_Sheaves.md: 병기 필요 'intersection cohomology sheaf' — 위키 ko 문서 '층 코호몰로지' — 병기형 도출 필요
+- _posts/Math/Sheaf_Theory/ko/2026-07-01-Perverse_Sheaves.md: 병기 필요 'IC sheaf' — 소스 없음 (KMS exact ✗, 위키 ko ✗)

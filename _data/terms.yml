@@ -347,6 +347,13 @@ A:
   see:
   - label: Geometric multiplicity
     id: geometric_multiplicity
+- id: algebraic_space
+  en: algebraic space
+  ko: 대수적 공간
+  primary: en
+  defs:
+  - label: '[스택] §대수적 stack과 quotient stack'
+    url: /ko/math/stacks/algebraic_stacks
 - id: algebraic_torus
   en: algebraic torus
   ko: 대수적 토러스
@@ -560,6 +567,13 @@ A:
   defs:
   - label: '[표현론] §Quiver와 경로대수'
     url: /ko/math/representation_theory/path_algebras
+- id: artin_stack
+  en: Artin stack
+  ko: 아틴 스택
+  primary: en
+  defs:
+  - label: '[스택] §대수적 stack과 quotient stack'
+    url: /ko/math/stacks/algebraic_stacks
 - id: artinian
   en: Artinian module
   ko: 아틴가군
@@ -695,6 +709,8 @@ A:
   defs:
   - label: '[미분다양체] §미분다양체'
     url: /ko/math/manifolds/smooth_manifolds
+  - label: '[스택] §대수적 stack과 quotient stack'
+    url: /ko/math/stacks/algebraic_stacks
 - id: augmentation_map
   en: augmentation map
   ko: 첨가 사상
@@ -2143,6 +2159,13 @@ C:
   defs:
   - label: '[대수적 위상수학] §푸앵카레 쌍대성'
     url: /ko/math/algebraic_topology/Poincare_duality
+- id: compactly_supported_cohomology
+  en: compactly supported cohomology
+  ko: 콤팩트 지지 코호몰로지
+  primary: en
+  defs:
+  - label: '[층론] §고유 받음과 여섯 함자'
+    url: /ko/math/sheaf_theory/six_functors
 - id: companion_matrix
   en: companion matrix
   ko: 동반행렬
@@ -2592,6 +2615,8 @@ C:
   defs:
   - label: '[스킴] §평탄사상'
     url: /ko/math/scheme_theory/flat_morphisms
+  - label: '[층론] §Verdier 쌍대성'
+    url: /ko/math/sheaf_theory/verdier_duality
 - id: contact_order
   en: contact order
   ko: 접촉 차수
@@ -3850,6 +3875,13 @@ D:
   defs:
   - label: '[표현론] §Auslander–Reiten 이론'
     url: /ko/math/representation_theory/auslander_reiten
+- id: dualizing_complex
+  en: dualizing complex
+  ko: 쌍대화 복합체
+  primary: en
+  defs:
+  - label: '[층론] §Verdier 쌍대성'
+    url: /ko/math/sheaf_theory/verdier_duality
 - id: dubrovin_connection
   en: Dubrovin connection
   ko: 두브로빈 접속
@@ -4235,6 +4267,13 @@ E:
     id: short_exact_sequence
   - label: Long exact sequence
     id: long_exact_sequence
+- id: exceptional_inverse_image
+  en: exceptional inverse image
+  ko: 예외 역상
+  primary: ko
+  defs:
+  - label: '[층론] §고유 받음과 여섯 함자'
+    url: /ko/math/sheaf_theory/six_functors
 - id: exceptional_set
   en: exceptional set
   ko: 예외집합
@@ -4345,6 +4384,13 @@ E:
   - label: '[리만기하학] §제2기본형식'
     url: /ko/math/riemannian_geometry/second_fundamental_form
 F:
+- id: 2-fiber_product
+  en: 2-fiber product
+  ko: 2-올곱
+  primary: en
+  defs:
+  - label: '[스택] §대수적 stack과 quotient stack'
+    url: /ko/math/stacks/algebraic_stacks
 - id: face
   en: face
   ko: 면
@@ -5466,6 +5512,13 @@ H:
   defs:
   - label: '[위상수학] §하우스도르프 공간'
     url: /ko/math/topology/Hausdorff_spaces
+- id: heart
+  en: heart
+  ko: 심장
+  primary: en
+  defs:
+  - label: '[층론] §Perverse 층'
+    url: /ko/math/sheaf_theory/perverse_sheaves
 - id: height
   en: height
   ko: 높이
@@ -6348,6 +6401,13 @@ I:
   defs:
   - label: '[미분다양체] §경계가 있는 다양체'
     url: /ko/math/manifolds/manifolds_with_boundary
+- id: intermediate_extension
+  en: intermediate extension
+  ko: 중간 연장
+  primary: en
+  defs:
+  - label: '[층론] §Perverse 층'
+    url: /ko/math/sheaf_theory/perverse_sheaves
 - id: internal_hom
   en: internal $\Hom$
   ko: 내부 $\Hom$
@@ -8079,6 +8139,13 @@ M:
   defs:
   - label: '[대수적 구조] §가군'
     url: /ko/math/algebraic_structures/modules
+- id: module_pullback
+  en: module pullback
+  ko: 가군 당김
+  primary: en
+  defs:
+  - label: '[층론] §층의 유도 범주와 유도 functor'
+    url: /ko/math/sheaf_theory/derived_category_of_sheaves
 - id: moduli_functor
   en: moduli functor
   ko: 모듈라이 함자
@@ -8390,6 +8457,13 @@ N:
   defs:
   - label: '[범주론] §자연변환'
     url: /ko/math/category_theory/natural_transformations
+- id: nearby_cycle
+  en: nearby cycle
+  ko: 근방 cycle
+  primary: ko
+  defs:
+  - label: '[층론] §Perverse 층'
+    url: /ko/math/sheaf_theory/perverse_sheaves
 - id: negative_nilpotent_subalgebra
   en: negative nilpotent subalgebra
   ko: 음의 멱영 부분대수
@@ -9321,6 +9395,13 @@ P:
   defs:
   - label: '[선형대수학] §행렬식의 존재성과 유일성'
     url: /ko/math/linear_algebra/existence_and_uniqueness_of_determinant
+- id: perverse_sheaf
+  en: perverse sheaf
+  ko: perverse 층
+  primary: en
+  defs:
+  - label: '[층론] §Perverse 층'
+    url: /ko/math/sheaf_theory/perverse_sheaves
 - id: perverse_t-structure
   en: perverse $t$-structure
   ko: ''
@@ -9888,6 +9969,13 @@ P:
   see:
   - label: Affine variety
     id: affine_variety
+- id: proper_direct_image
+  en: proper direct image
+  ko: 고유 받음
+  primary: ko
+  defs:
+  - label: '[층론] §고유 받음과 여섯 함자'
+    url: /ko/math/sheaf_theory/six_functors
 - id: proper_map
   en: proper map
   ko: 고유함수
@@ -10169,6 +10257,13 @@ Q:
     url: /ko/math/linear_algebra/quotient_space
   - label: '[위상수학] §몫공간'
     url: /ko/math/topology/quotient_spaces
+- id: quotient_stack
+  en: quotient stack
+  ko: 몫 스택
+  primary: en
+  defs:
+  - label: '[스택] §대수적 stack과 quotient stack'
+    url: /ko/math/stacks/algebraic_stacks
 R:
 - id: r_0_-space
   en: $R_0$-space
@@ -10615,6 +10710,8 @@ R:
   defs:
   - label: '[스킴] §점함자'
     url: /ko/math/scheme_theory/functor_of_points
+  - label: '[스택] §대수적 stack과 quotient stack'
+    url: /ko/math/stacks/algebraic_stacks
 - id: representable_functor
   en: representable functor
   ko: 표현 가능한 함자
@@ -11617,6 +11714,13 @@ S:
   defs:
   - label: '[표현론] §반사 함자'
     url: /ko/math/representation_theory/reflection_functors
+- id: six-functor_formalism
+  en: six-functor formalism
+  ko: 여섯 함자 형식
+  primary: en
+  defs:
+  - label: '[층론] §고유 받음과 여섯 함자'
+    url: /ko/math/sheaf_theory/six_functors
 - id: skeletal_category
   en: skeletal category
   ko: 뼈대 카테고리
@@ -11932,6 +12036,13 @@ S:
     url: /ko/math/algebraic_topology/stiefel_whitney_classes
   - label: '[대수적 위상수학] §벡터다발의 특성류'
     url: /ko/math/algebraic_topology/characteristic_classes
+- id: stratification
+  en: stratification
+  ko: 층화
+  primary: en
+  defs:
+  - label: '[층론] §Verdier 쌍대성'
+    url: /ko/math/sheaf_theory/verdier_duality
 - id: strict_order
   en: strict order
   ko: 순순서
@@ -12432,6 +12543,13 @@ T:
   defs:
   - label: '[위상수학] §하우스도르프 공간'
     url: /ko/math/topology/Hausdorff_spaces
+- id: t-structure
+  en: t-structure
+  ko: t-구조
+  primary: en
+  defs:
+  - label: '[층론] §Perverse 층'
+    url: /ko/math/sheaf_theory/perverse_sheaves
 - id: tangent_bundle
   en: tangent bundle
   ko: 접다발
@@ -13214,6 +13332,13 @@ V:
     url: /ko/math/commutative_algebra/regular_local_rings
   - label: '[가환대수학] §인자'
     url: /ko/math/commutative_algebra/divisors
+- id: vanishing_cycle
+  en: vanishing cycle
+  ko: 소멸 cycle
+  primary: ko
+  defs:
+  - label: '[층론] §Perverse 층'
+    url: /ko/math/sheaf_theory/perverse_sheaves
 - id: vanishing_scheme
   en: vanishing scheme
   ko: 영점 스킴
@@ -13306,6 +13431,20 @@ V:
 - id: verdier_dual
   en: Verdier dual
   ko: 베르디에 쌍대
+  primary: en
+  defs:
+  - label: '[층론] §Verdier 쌍대성'
+    url: /ko/math/sheaf_theory/verdier_duality
+- id: verdier_dual_functor
+  en: verdier dual functor
+  ko: Verdier 쌍대 함자
+  primary: en
+  defs:
+  - label: '[층론] §Verdier 쌍대성'
+    url: /ko/math/sheaf_theory/verdier_duality
+- id: verdier_duality
+  en: verdier duality
+  ko: Verdier 쌍대성
   primary: en
   defs:
   - label: '[층론] §Verdier 쌍대성'
