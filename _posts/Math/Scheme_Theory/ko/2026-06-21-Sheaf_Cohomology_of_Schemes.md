@@ -107,24 +107,34 @@ $$\check H^p(\mathcal{U}, \mathcal{F})\cong H^p(X, \mathcal{F})$$
 이제 affine covering에 대한 Čech 계산을 사용하여 projective space 위의 line bundle $\mathcal{O}(d)$의 cohomology를 scheme 수준에서 다룬다. Ring $A$ 위의 projective space를 *graded* ring $A[\x_0,\ldots, \x_n]$을 사용하여 $\mathbb{P}^n_A=\Proj A[\x_0,\ldots, \x_n]$로 정의했듯, ([§사영공간과 Proj 구성, ⁋정의 1](/ko/math/scheme_theory/projective_schemes#def1)), 우선 $\mathcal{O}(d)$를 graded module의 언어로 정의해야 한다. 
 
 ::: 정의 5
-$S=A[\x_0,\ldots, \x_n]$을 standard grading을 가진 graded ring이라 하고, $S(d)$를 $S(d)_m=S_{d+m}$으로 grading을 옮긴 graded $S$-module이라 하자. 그럼 standard affine cover $\mathcal{U}=\{D_+(\x_i)\}$ 위에서 각각의 $D_+(\x_i)=\Spec S_{(\x_i)}$에
+Standard grading이 주어진 $S_\bullet=A[\x_0,\ldots, \x_n]$가 주어졌다 하고, $S(d)$를 $S_\bullet$의 degree $d$-shift, 즉
 
-$$\mathcal{O}(d)(D_+(\x_i))=\bigl(S(d)_{\x_i}\bigr)_0=\x_i^d\cdot S_{(\x_i)}$$
+$$S(d)_m=S_{d+m}$$
 
-을 대응시키고, 겹치는 부분 위에서 자연스러운 identification으로 붙여 얻는 $\mathbb{P}^n_A$ 위의 invertible sheaf를 *twisting sheaf<sub>꼬임층</sub>* $\mathcal{O}(d)$라 부른다.
+으로 degree가 주어진 graded $S_\bullet$-module이라 하자. 그럼 $\mathbb{P}_A^n=\Proj S_\bullet$의 standard affine cover 
+
+$$\mathcal{U}=\{D_+(\x_i)=\Spec S_{(\x_i)}\}$$
+
+의 각각의 chart 위에서, localization $S(d)_{\x_i}$의 degree $0$ 부분
+
+$$M_i=\bigl(S(d)_{\x_i}\bigr)_0=\x_i^d\cdot S_{(\x_i)}$$
+
+을 $S_{(\x_i)}$-module로 보아 정의한 associated sheaf $\widetilde{M_i}$를 정의하고, 이들이 겹치는 부분 위에서 자연스러운 identification을 통해 붙여 얻는 $\mathbb{P}^n_A$ 위의 quasi-coherent sheaf를 *twisting sheaf<sub>꼬임층</sub>* $\mathcal{O}(d)$라 부른다.
 :::
 
-여기에서 $S_{(\x_i)}$은 $S_{\x_i}$의 degree $0$ 부분이며, $\x_i^d\cdot S_{(\x_i)}$은 $S_{\x_i}$ 안에서 degree $d$인 원소들의 모임이다.
+[\[대수다양체\] §선다발과 벡터다발, ⁋예시 12](/ko/math/algebraic_varieties/line_bundles#ex12)에서 우리는 $\x_i\neq 0$인 standard open set $U_i$마다 trivialization $\phi_i(s)=s\cdot\x_i^{-d}$을 지정하고, 겹치는 부분에서 두 trivialization을 비교해 얻는 transition function $(\x_i/\x_j)^d$들을 데이터로 삼아 $\mathcal{O}(d)$를 기술하였다. 이 기술에서 $U_i$ 위의 section들이 이루는 공간은 $\x_i^d\cdot\mathcal{O}(U_i)$였다.
 
-Grading을 옮긴다는 것이 무엇을 하는지 짚어두자. $S(d)$는 $S$-module로서는 $S$ 자신과 다르지 않으므로, affine scheme 위에서라면 이 조작은 아무런 정보도 주지 않는다. $\Spec$은 grading을 보지 않기 때문이다. 반면 $\Proj$의 각 chart는 localization $S_{\x_i}$ 전체가 아니라 그 degree $0$ 부분만을 함수로 채택하므로 ([§사영공간과 Proj 구성, ⁋정리 10](/ko/math/scheme_theory/projective_schemes#thm10)), 어느 원소가 section으로 살아남는지는 전적으로 grading에 달려 있다. $S(d)$의 degree $0$ 부분은 원래 grading에서 degree $d$였던 원소들이므로, $\mathcal{O}(d)$란 곧 degree $d$인 원소들을 층으로 모아 놓은 것이다.
+위의 [정의 5](#def5)는 이 마지막 공간 자체를 사용해 이를 다시 정의한 것으로, $D_+(\x_i)$의 coordinate ring $S_{(\x_i)}$ 위의 module $M_i=\x_i^d\cdot S_{(\x_i)}$를 직접 사용한 것이다. 이 두 데이터가 동일하다는 것은 [§준연접층, ⁋정의 4](/ko/math/scheme_theory/quasicoherent_sheaves#def4)을 사용하여, [정의 5](#def5)에서의 section이 정확히 $\mathcal{O}(d)(D_+(\x_i))=M_i$으로 나온다는 것을 확인하면 된다.
 
-이것이 필요한 이유는 degree $d$의 homogeneous polynomial $f$가 $\mathbb{P}^n_A$ 위의 함수가 아니기 때문이다. 좌표를 $\lambda$배 하면 $f$의 값이 $\lambda^d$배가 되므로 $f$는 점 하나에 값 하나를 정해주지 못한다. 그러나 $D_+(\x_i)$ 위에서는 $\x_i$가 가역이므로 $f/\x_i^d$는 degree $0$이 되어 함수가 되고, 정의 5의 $\x_i^d\cdot S_{(\x_i)}$은 이 나눗셈을 되돌려 놓은 것, 곧 $\x_i^d$를 basis로 삼은 trivialization이다. 같은 section을 $\x_i^d$로 적은 함수와 $\x_j^d$로 적은 함수는 $D_+(\x_i\x_j)$ 위에서 $(\x_j/\x_i)^d$배만큼 차이가 나므로 이것이 $\mathcal{O}(d)$의 transition function이며, $d$가 이 지수에 그대로 나타나는 것이 grading을 옮긴 효과의 전부이다.
+[\[대수다양체\] §선다발과 벡터다발, ⁋예시 12](/ko/math/algebraic_varieties/line_bundles#ex12)에서 살펴보았듯, 본질적으로 이 sheaf의 section은 
 
-붙이기가 잘 정의되는 것도 이 기술에서 곧바로 따라온다. $D_+(\x_i\x_j)=\Spec S_{(\x_i\x_j)}$ 위의 section은 $S_{\x_i\x_j}$의 degree $d$ 부분이고, 이는 $\x_i^d\cdot S_{(\x_i\x_j)}$로도 $\x_j^d\cdot S_{(\x_i\x_j)}$로도 적히며, $(\x_j/\x_i)^d$가 $S_{(\x_i\x_j)}$의 unit이므로 두 기술은 같은 module을 준다. 즉 두 chart의 section을 겹치는 부분으로 제한하면 애초에 하나의 module 안에 들어가고, 겹치는 부분 위에서의 identification은 그 안에서의 등식일 뿐이다. 세 chart의 교집합에서도 마찬가지로 $S_{\x_i\x_j\x_k}$의 degree $d$ 부분 안에서의 등식이 되므로 cocycle 조건은 확인할 것도 없이 성립한다.
+$S(d)$는 $S$-module로서는 $S$ 자신과 다르지 않으므로 $\Spec$은 이 grading 조작을 보지 못하지만, $\Proj$의 각 chart는 $S_{\x_i}$ 전체가 아니라 그 degree $0$ 부분만을 함수로 채택하므로 ([§사영공간과 Proj 구성, ⁋정리 10](/ko/math/scheme_theory/projective_schemes#thm10)), 어느 원소가 section으로 살아남는지는 전적으로 grading에 달려 있다. $S(d)$의 degree $0$ 부분은 원래 grading에서 degree $d$였던 원소들이므로, $\mathcal{O}(d)$란 degree $d$인 원소들을 층으로 모아 놓은 것이다.
 
-이를 affine cone의 언어로 읽으면, degree란 원점을 지나는 직선을 따라 좌표를 상수배할 때 원소가 반응하는 지수이다. ([§사영공간과 Proj 구성](/ko/math/scheme_theory/projective_schemes)) Degree $0$인 원소만이 각 직선 위에서 상수이므로 $\mathbb{P}^n_A$ 위의 함수로 내려오고, degree $d$인 원소는 $\lambda^d$로 반응하므로 함수로는 내려오지 못한다. $\mathcal{O}(d)$는 이들이 내려오는 line bundle을 $d$마다 하나씩 마련한 것이다.
+이러한 조작이 필요한 이유는 degree $d$의 homogeneous polynomial $f$가 $\mathbb{P}^n_A$ 위의 함수가 아니기 때문이다. 좌표를 $\lambda$배 하면 $f$의 값이 $\lambda^d$배가 되어 $f$는 점 하나에 값 하나를 정해주지 못하고, $\x_i$가 가역인 $D_+(\x_i)$ 위에서 $f/\x_i^d$로 나누어야 degree $0$인 함수가 된다. [정의 5](#def5)의 $M_i=\x_i^d\cdot S_{(\x_i)}$은 이 나눗셈을 되돌려 놓은 것, 곧 $\x_i^d$를 basis로 삼은 위 trivialization의 section space이다. 실제로 $D_+(\x_i\x_j)$ 위에서 하나의 section을 두 chart의 basis로 각각 $\x_i^df_i=\x_j^df_j$로 적으면 $f_j=(\x_i/\x_j)^df_i$가 되어 위의 transition function이 그대로 나온다.
 
-각 chart 위에서 $\mathcal{O}(d)\vert_{D_+(\x_i)}$은 $\x_i^d$를 generator로 하는 자유 $S_{(\x_i)}$-module이므로 rank $1$ free이고, 따라서 $\mathcal{O}(d)$는 invertible sheaf이다. ([§준연접층, ⁋정의 12](/ko/math/scheme_theory/quasicoherent_sheaves#def12)) $d=0$인 경우 $\mathcal{O}(0)=\mathcal{O}_{\mathbb{P}^n_A}$이고, $\mathcal{O}(d)\otimes\mathcal{O}(e)\cong\mathcal{O}(d+e)$가 성립하므로 $\mathcal{O}(d)\cong\mathcal{O}(1)^{\otimes d}$이다. 이 정의는 [\[대수다양체\] §사영공간의 코호몰로지](/ko/math/algebraic_varieties/cohomology_of_projective_spaces)에서 variety 위의 $\mathcal{O}(d)$를 chart별 section으로 기술한 것과 정확히 일치한다.
+붙이기가 잘 정의되는 것도 이 기술에서 곧바로 따라온다. 두 chart의 교집합 $D_+(\x_i)\cap D_+(\x_j)=D_+(\x_i\x_j)$는 $\Spec S_{(\x_i)}$ 안에서 $\x_j/\x_i$가 정의하는 principal open set이므로 ([§사영공간과 Proj 구성, ⁋보조정리 9](/ko/math/scheme_theory/projective_schemes#lem9)), [§준연접층, ⁋명제 5](/ko/math/scheme_theory/quasicoherent_sheaves#prop5)에 의하여 $\widetilde{M_i}$의 이 위로의 restriction은 $M_i$를 $\x_j/\x_i$에서 localize한 module의 associated sheaf이다. 그 module은 $\x_i^d\cdot S_{(\x_i\x_j)}$, 곧 $S_{\x_i\x_j}$의 degree $d$ 부분인데, $(\x_j/\x_i)^d$가 $S_{(\x_i\x_j)}$의 unit이므로 이는 $\x_j^d\cdot S_{(\x_i\x_j)}$로도 적힌다. 즉 $\widetilde{M_i}$와 $\widetilde{M_j}$는 겹치는 부분 위에서 같은 module의 associated sheaf로 제한되고, identification은 그 하나의 module 안에서의 등식일 뿐이다. 세 chart의 교집합에서도 마찬가지로 $S_{\x_i\x_j\x_k}$의 degree $d$ 부분 안에서의 등식이 되므로 cocycle 조건은 확인할 것도 없이 성립한다.
+
+각 chart 위에서 $\mathcal{O}(d)\vert_{D_+(\x_i)}$은 $\x_i^d$를 generator로 하는 자유 $S_{(\x_i)}$-module이므로 rank $1$ free이고, 따라서 $\mathcal{O}(d)$는 invertible sheaf이다. ([§준연접층, ⁋정의 12](/ko/math/scheme_theory/quasicoherent_sheaves#def12)) $d=0$인 경우 $\mathcal{O}(0)=\mathcal{O}_{\mathbb{P}^n_A}$이고, $\mathcal{O}(d)\otimes\mathcal{O}(e)\cong\mathcal{O}(d+e)$가 성립하므로 $\mathcal{O}(d)\cong\mathcal{O}(1)^{\otimes d}$이다.
 
 이제 cohomology를 계산한다. $\mathbb{P}^n_A$은 separated이므로 [따름정리 4](#cor4)에 의해 standard affine cover에 대한 Čech complex를 계산하면 충분하다. 그 결과는 variety의 경우와 형태가 동일하다.
 

@@ -161,9 +161,9 @@ $$\phi_i\colon \mathcal{O}(d)\vert_{U_i} \xrightarrow{\sim} \mathcal{O}_{U_i}, \
 
 $$\mathcal{O}(d)(U_i) = \x_i^d \cdot \mathcal{O}(U_i) = \x_i^d\mathbb{K}[\x_0/\x_i, \ldots, \widehat{\x_i/\x_i}, \ldots, \x_n/\x_i]$$
 
-임을 안다. 이제 $U_i \cap U_j$에서 두 trivialization을 비교하면 transition function을 도출할 수 있다. 즉, transition function $\phi_i \circ \phi_j^{-1}\colon \mathcal{O}_{U_j}\vert_{U_i \cap U_j} \rightarrow \mathcal{O}_{U_i}\vert_{U_i \cap U_j}$는
+임을 안다. 이제 $U_i \cap U_j$에서 두 trivialization을 비교하면 transition function을 도출할 수 있다. 즉, transition function $\phi_j \circ \phi_i^{-1}\colon \mathcal{O}_{U_i}\vert_{U_i \cap U_j} \rightarrow \mathcal{O}_{U_j}\vert_{U_i \cap U_j}$는
 
-$$\phi_i \circ \phi_j^{-1}(f) = (\x_i/\x_j)^d \cdot f$$
+$$\phi_j \circ \phi_i^{-1}(f) = (\x_i/\x_j)^d \cdot f$$
 
 이므로, $g_{ij} = (\x_i/\x_j)^d$를 얻는다. 더 구체적으로, 각 점 $x \in U_i \cap U_j$와 그 점에서의 fiber $v \in \mathcal{O}_{\mathbb{P}^n}(d)_x \cong \mathbb{A}^1$에 대하여,
 
@@ -201,7 +201,7 @@ Tautological bundle $\mathcal{O}_{\mathbb{P}^n}(-1)$은 위 [예시 12](#ex12)�
 :::
 
 ::: 증명
-Standard open cover $U_i = \{x \mid x_i \ne 0\}$ 위에서 $\mathcal{O}_{\mathbb{P}^n}(-1)$의 local trivialization을 구성하자. 임의의 $(x, v) \in \mathcal{O}_{\mathbb{P}^n}(-1)$에 대해 $v = \lambda x$ ($\lambda \in \mathbb{K}$)로 쓸 수 있으므로, $\phi_i(x, v) = (x, v_i)$로 정의하면 $\phi_i: \pi^{-1}(U_i) \rightarrow U_i \times \mathbb{A}^1$이 된다. 역사상은 $\phi_i^{-1}(x, t) = (x, (t/x_i)\, x)$이다. $U_i \cap U_j$에서의 transition function은 $\phi_j \circ \phi_i^{-1}(x, t) = (x, t x_j / x_i)$에서 $g_{ij}(x) = x_j/x_i$를 얻는다. 이는 $\mathcal{O}_{\mathbb{P}^n}(1)$의 transition function $x_i/x_j$의 inverse이다.
+Standard open cover $U_i = \{x \mid x_i \ne 0\}$ 위에서 $\mathcal{O}_{\mathbb{P}^n}(-1)$의 local trivialization을 구성하자. 임의의 $(x, v) \in \mathcal{O}_{\mathbb{P}^n}(-1)$에 대해 $v = \lambda x$ ($\lambda \in \mathbb{K}$)로 쓸 수 있으므로, $\phi_i(x, v) = (x, v_i)$로 정의하면 $\phi_i: \pi^{-1}(U_i) \rightarrow U_i \times \mathbb{A}^1$이 된다. 역사상은 $\phi_i^{-1}(x, t) = (x, (t/x_i)x)$이다. $U_i \cap U_j$에서의 transition function은 $\phi_j \circ \phi_i^{-1}(x, t) = (x, t x_j / x_i)$에서 $g_{ij}(x) = x_j/x_i$를 얻는다. 이는 $\mathcal{O}_{\mathbb{P}^n}(1)$의 transition function $x_i/x_j$의 inverse이다.
 :::
 
 특히 $\mathbb{P}^1$의 경우에서 $\mathcal{O}(-1)$을 살펴보면 위에서 직관적으로 설명한 <em-ko>꼬임</em-ko>의 의미가 훨씬 명확하다. $\mathbb{A}^2\setminus \{0\}$에서 $\mathbb{P}^1$을 만드는 과정은 우선, $\mathbb{A}^2\setminus\{0\}$을 radial projection을 통해 단위원으로 만든 후, 단위원의 antipodal point들을 identify하는 것으로 생각할 수 있는데, 이 과정에서 반대방향의 두 벡터가 identify되는 일, 즉 fiber가 꼬이는 일이 발생하기 때문이다. 이러한 꼬임을 보는 방법 중 하나는 line bundle $\mathcal{L}$의 section을 보는 것이다. 
@@ -219,9 +219,9 @@ $$\Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n}(-1)) = 0$$
 
 이다. 이를 확인하기 위해 [예시 12](#ex12)에 의해 $\mathcal{O}(-1)(U_i) = \x_i^{-1} \cdot \mathbb{K}[\x_0/\x_i, \ldots, \widehat{\x_i/\x_i}, \ldots, \x_n/\x_i]$이고, trivialization은 $\phi_i(s) = s \cdot \x_i$로 주어진다. 따라서 trivialized section $\phi_i(s) \in \mathcal{O}(U_i) = \mathbb{K}[\x_0/\x_i, \ldots, \x_n/\x_i]$이며, $U_i \cap U_j$에서 cocycle condition에 의해
 
-$$\phi_j(s) = (\x_j/\x_i)\, \phi_i(s)$$
+$$\phi_j(s) = (\x_j/\x_i)\phi_i(s)$$
 
-를 만족해야 한다. 그런데 $\phi_i(s) \in \mathbb{K}[\x_0/\x_i, \ldots, \widehat{\x_i/\x_i}, \ldots, \x_n/\x_i]$에는 $\x_i/\x_j$ 항이 포함될 수 없으므로, $(\x_j/\x_i)\, \phi_i(s)$가 $\mathcal{O}(U_j) = \mathbb{K}[\x_0/\x_j, \ldots, \widehat{\x_j/\x_j}, \ldots, \x_n/\x_j]$에 속하려면 $\phi_i(s) = 0$이어야 한다. 따라서 $s = 0$이다. 
+를 만족해야 한다. 그런데 $\phi_i(s) \in \mathbb{K}[\x_0/\x_i, \ldots, \widehat{\x_i/\x_i}, \ldots, \x_n/\x_i]$에는 $\x_i/\x_j$ 항이 포함될 수 없으므로, $(\x_j/\x_i)\phi_i(s)$가 $\mathcal{O}(U_j) = \mathbb{K}[\x_0/\x_j, \ldots, \widehat{\x_j/\x_j}, \ldots, \x_n/\x_j]$에 속하려면 $\phi_i(s) = 0$이어야 한다. 따라서 $s = 0$이다. 
 :::
 
 이 명제는 tautological bundle의 <em-ko>꼬임</em-ko>을 section의 관점에서 보여준다. 가령, $\Gamma(\mathbb{P}^1, \mathcal{O}(-1))=0$이라는 사실은 특히 모든 $x\in \mathbb{P}^1$마다 fiber의 1을 대응시키는 "상수함수" 또한 존재하지 않는다는 것을 의미한다. 이는, 위의 기하학적 관점에서 보면, $\mathbb{P}^1$을 한 바퀴를 돌아왔을 때 원래의 1이 아니라 (예를 들면) $-1$이 되어있기 때문이다.

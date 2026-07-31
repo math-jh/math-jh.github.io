@@ -15,43 +15,45 @@ published: false
 
 ---
 
-앞선 글에서 ([§중국인의 나머지정리, ⁋명제 6](/ko/math/ring_theory/chinese_remainder_theorem#prop6)) 우리는 pairwise comaximal two-sided ideal들에 대해 ring이 quotient ring들의 곱으로 분해됨을 보았다. 그 글의 마지막에서는 ([§중국인의 나머지정리, ⁋명제 7](/ko/math/ring_theory/chinese_remainder_theorem#prop7)) 이러한 곱분해가 ring의 center에 놓인 특정한 원소들, 즉 idempotent들로 기술된다는 사실이 짧게 언급되었다. 이 글에서는 그 원소들을 본격적으로 다룬다. 우리는 idempotent의 성질을 정리하고, central idempotent의 complete orthogonal set이 ring의 direct product 분해와 일대일대응함을 증명한 뒤, 이로부터 일반 ring에서의 중국인의 나머지정리를 다시 조명한다.
+앞서 [§중국인의 나머지정리, ⁋명제 6](/ko/math/ring_theory/chinese_remainder_theorem#prop6)에서 우리는 pairwise comaximal two-sided ideal들이 주어진 ring을 quotient ring들의 곱으로 분해한다는 것을 보았다. 그 분해에서 각 인자를 골라내는 역할을 한 것은 $i$번째 성분만 $1$이고 나머지가 $0$인 원소였으며, 이러한 원소는 ring의 center에 놓인 *idempotent*로 특징지어진다. 
 
-별도의 언급이 없는 한 $A$는 항등원 $1\neq 0$을 갖는 ring이며, commutativity는 가정하지 않는다. 가환성이 필요한 곳에서는 그때그때 명시한다.
+이 글에서는 이러한 idempotent들을 공식적으로 정의하고, central idempotent의 complete orthogonal set이 ring의 direct product 분해와 일대일대응함을 증명한 뒤, 이로부터 일반 ring에서의 중국인의 나머지정리가 어떻게 복원되는지 살펴본다. 
 
 ## Idempotent
 
+우선 다음을 정의한다. 
+
 ::: 정의 1
-Ring $A$의 원소 $e\in A$가 $e^2=e$를 만족하면 이를 *idempotent<sub>멱등원</sub>*라 한다. 두 idempotent $e,f$가 $ef=fe=0$을 만족하면 이들이 *orthogonal<sub>직교</sub>*하다고 한다. 또, idempotent $e$가 $A$의 center $Z(A)=\{c\in A\mid cx=xc\text{ for all }x\in A\}$에 속하면 이를 *central idempotent<sub>중심 멱등원</sub>*라 한다.
+Ring $A$의 원소 $e\in A$가 $e^2=e$를 만족하면 이를 *idempotent<sub>멱등원</sub>*라 한다. 두 idempotent $e,f$가 $ef=fe=0$을 만족하면 이들이 *orthogonal<sub>직교</sub>*하다고 한다. 또, idempotent $e$가 $A$의 center $Z(A)$에 속하면 이를 *central idempotent<sub>중심 멱등원</sub>*라 한다.
 :::
 
-임의의 ring은 두 idempotent $0$과 $1$을 가지며, 이 둘은 항상 central이다. 이들을 *trivial<sub>자명한</sub>* idempotent이라 부른다. Idempotent $e$가 주어지면 $1-e$ 또한 idempotent인데, 이는
+임의의 ring은 항상 두 idempotent $0$과 $1$을 가지며, 이 둘은 항상 central이다. 이들을 *trivial<sub>자명한</sub>* idempotent이라 부른다. Idempotent $e$가 주어지면 $1-e$ 또한 idempotent인데, 이는
 
 $$(1-e)^2=1-2e+e^2=1-2e+e=1-e$$
 
-로부터 따라온다. 더욱이 $e(1-e)=e-e^2=0$이고 $(1-e)e=e-e^2=0$이므로 $e$와 $1-e$는 서로 orthogonal하다. 우리는 $e$를 *complementary idempotent* $1-e$와 짝지어 다룰 것이며, $e$가 central인 것과 $1-e$가 central인 것은 동치이다.
+이기 때문이다. 뿐만 아니라, 
+
+$$e(1-e)=e-e^2=0,\qquad (1-e)e=e-e^2=0$$
+
+이므로 $e$와 $1-e$는 서로 orthogonal하다. 우리는 $e$를 *complementary idempotent* $1-e$와 짝지어 다룰 것이며, $e$가 central인 것과 $1-e$가 central인 것은 동치이다.
 
 ::: 예시 2
-Ring $A=\mathbb{Z}/6\mathbb{Z}$를 보자. 이 ring에서 $x^2=x$를 만족하는 원소는 $0,1,3,4$인데, 가령 $3^2=9=3$, $4^2=16=4$이다. 한편 $3+4=7=1$이고 $3\cdot 4=12=0$이므로, $3$과 $4$는 서로 complementary한 orthogonal idempotent이며 그 합은 $1$이다. $A$가 commutative이므로 이 둘은 자동으로 central이다.
-
-반면 $\mathbb{Z}/4\mathbb{Z}$에서는 $x^2=x$를 푸는 원소가 $0,1$뿐이다. 즉 trivial idempotent만 존재한다.
+Ring $A=\mathbb{Z}/6\mathbb{Z}$의 idempotent는 $0,1,3,4$인 것을 간단한 계산으로 확인할 수 있으며, 여기서 $3,4$가 서로 complementary하고, $0,1$이 서로 complementary한 것을 확인할 수 있다. 뿐만 아니라, $A$는 commutative이므로 이들 네 idempotent들은 자동으로 central idempotent가 된다. 반면 $\mathbb{Z}/4\mathbb{Z}$에서는 $x^2=x$를 푸는 원소가 $0,1$뿐이므로, 이 ring은 trivial idempotent만 가진다.
 :::
-
-위의 두 ring의 대비는 우연이 아니다. $6=2\cdot 3$은 서로 다른 소수의 곱이라 $\mathbb{Z}/6\mathbb{Z}$가 두 ring의 곱으로 쪼개지는 반면, $4=2^2$는 소수의 거듭제곱이라 더 쪼개지지 않는다. 이 현상이 idempotent의 존재로 정확히 포착된다는 것이 이 글의 주제이며, 우리는 이를 [정리 5](#thm5)와 [예시 8](#ex8)에서 명확히 한다.
 
 ## Complete set of orthogonal idempotents
 
-여러 개의 idempotent를 한꺼번에 다루기 위해 다음 개념을 도입한다.
+이제 우리는 여러 개의 idempotent를 한꺼번에 다루기 위해 다음 개념을 도입한다.
 
 ::: 정의 3
-Ring $A$의 원소들 $e_1,\ldots, e_n$이 다음 세 조건
+Ring $A$의 idempotent들 $e_1,\ldots, e_n$이 다음 두 조건
 
-$$e_i^2=e_i\ (\text{모든 }i),\qquad e_ie_j=0\ (i\neq j),\qquad e_1+\cdots+e_n=1$$
+$$e_1+\cdots+e_n=1,\qquad e_ie_j=0\quad\text{for $i\neq j$}$$$
 
-을 모두 만족하면, $\{e_1,\ldots, e_n\}$을 *orthogonal idempotent의 complete set<sub>완전 직교 멱등원 모임</sub>*이라 한다. 만일 각 $e_i$가 모두 central이면 이를 *central*한 complete set이라 한다.
+을 모두 만족하면, $\{e_1,\ldots, e_n\}$을 *orthogonal idempotent의 complete set<sub>완전 직교 멱등원</sub>*이라 한다. 만일 각 $e_i$가 모두 central이면 이를 *central*한 complete set이라 한다.
 :::
 
-조건에서 $i\neq j$일 때 $e_ie_j=0$만을 요구하였으나, 사실 $e_je_i=0$도 자동으로 따라온다. 이는 아래 [명제 4](#prop4)의 증명 과정에서 확인된다. 가장 단순한 complete set은 $n=1$일 때의 $\{1\}$이며, [예시 2](#ex2)의 $\{3,4\}\subseteq\mathbb{Z}/6\mathbb{Z}$는 $n=2$인 central complete set의 예이다.
+가장 단순한 complete set은 $n=1$일 때의 $\{1\}$이며, [예시 2](#ex2)의 $\{3,4\}\subseteq\mathbb{Z}/6\mathbb{Z}$는 $n=2$인 central complete set의 예이다.
 
 하나의 idempotent $e$가 주어지면 $\{e,1-e\}$는 언제나 orthogonal idempotent의 complete set이 된다. 따라서 complete set은 idempotent를 여러 조각으로 분할하는 일반화로 볼 수 있다. 이제 이 분할이 ring을 어떻게 쪼개는지 살펴본다.
 
@@ -150,39 +152,49 @@ $$B=\left\{\diag(M_1,\ldots, M_r)\mid M_k\in M_{n_k}(R)\right\}\cong\prod_{k=1}^
 
 ## 중국인의 나머지정리와의 연결
 
-이제 앞선 글의 중국인의 나머지정리를 idempotent의 관점에서 다시 본다. 핵심은 pairwise comaximal 조건이 product ring의 자연스러운 idempotent들을 $A$ 안으로 끌어온다는 것이다.
+이제 앞선 글의 중국인의 나머지정리를 idempotent의 관점에서 다시 본다. 핵심은 pairwise comaximal 조건이 product ring의 자연스러운 idempotent들을 $A$ 안으로 끌어온다는 것이다. 여기서 $\pi:A\rightarrow\prod_{i=1}^n A/\mathfrak{a}_i$는 각 quotient로의 projection이 유도하는 morphism $x\mapsto (x+\mathfrak{a}_1,\ldots, x+\mathfrak{a}_n)$을 뜻한다.
 
 ::: 정리 7
-Ring $A$와 그 two-sided ideal들 $\mathfrak{a}_1,\ldots, \mathfrak{a}_n$이 주어졌다 하고, $i\neq j$에 대해 항상 $\mathfrak{a}_i+\mathfrak{a}_j=A$ (즉 pairwise comaximal)라 하자. 그럼 자연스러운 morphism
+Ring $A$와 그 two-sided ideal들 $\mathfrak{a}_1,\ldots, \mathfrak{a}_n$이 주어졌다 하자. 다음이 모두 동치이다.
 
-$$\pi:A\longrightarrow\prod_{i=1}^n A/\mathfrak{a}_i,\qquad \pi(x)=(x+\mathfrak{a}_1,\ldots, x+\mathfrak{a}_n)$$
-
-은 전사이고 그 kernel은 $\bigcap_{i=1}^n\mathfrak{a}_i$이다. 따라서 ring isomorphism
-
-$$\frac{A}{\bigcap_{i=1}^n\mathfrak{a}_i}\cong\prod_{i=1}^n A/\mathfrak{a}_i$$
-
-가 존재한다. 특히 $\bigcap_{i=1}^n\mathfrak{a}_i=0$이면 $A\cong\prod_{i=1}^n A/\mathfrak{a}_i$이다.
+1. $\pi:A\rightarrow\prod_{i=1}^n A/\mathfrak{a}_i$가 isomorphism이다.
+2. 모든 $i\neq j$에 대하여 $\mathfrak{a}_i+\mathfrak{a}_j=A$이고 $\bigcap_i\mathfrak{a}_i=0$이다.
+3. $A$의 central한 orthogonal idempotent의 complete set $\{e_1,\ldots, e_n\}$이 존재하여 모든 $i$에 대해 $\mathfrak{a}_i=A(1-e_i)$이다.
 :::
 ::: 증명
-이는 앞선 글에서 ([§중국인의 나머지정리, ⁋명제 6](/ko/math/ring_theory/chinese_remainder_theorem#prop6)) 증명되었다. 간략히 다시 적으면, $\ker\pi=\bigcap\mathfrak{a}_i$임은 정의에서 곧바로 따라오고, 전사성은 각 $i$에 대하여 $e_i\equiv 1\pmod{\mathfrak{a}_i}$, $e_i\equiv 0\pmod{\mathfrak{a}_j}$ ($j\ne i$)인 원소를 pairwise comaximal 조건 $1=u_{ij}+v_{ij}$로부터 $e_i=\prod_{j\ne i}v_{ij}$로 명시적으로 만든 뒤 $x=\sum_i x_ie_i$로 목표값을 맞추는 방식으로 얻어진다. 마지막의 isomorphism은 first isomorphism theorem의 직접적 귀결이다.
-:::
+$(1)\Rightarrow(2)$. $\pi$가 isomorphism이면 $\bigcap_i\mathfrak{a}_i=\ker\pi=0$이다. 또 $i\neq j$를 고정하고, $i$번째 성분이 $1+\mathfrak{a}_i$이며 나머지 성분이 모두 $0$인 원소의 preimage를 $x\in A$라 하자. 그럼 $j$번째 성분에서 $x\in\mathfrak{a}_j$이고 $i$번째 성분에서 $1-x\in\mathfrak{a}_i$이므로
 
-이 정리가 [정리 5](#thm5)의 곱분해를 어떻게 만들어내는지 살펴보자. $\bigcap\mathfrak{a}_i=0$이라 가정하면 $\pi:A\xrightarrow{\sim}\prod A/\mathfrak{a}_i$는 ring isomorphism이다. Product ring $\prod A/\mathfrak{a}_i$에는 자연스러운 central complete set이 있는데, 바로 $i$번째 성분만 $1$이고 나머지가 $0$인 원소
+$$1=(1-x)+x\in\mathfrak{a}_i+\mathfrak{a}_j$$
+
+이고, 따라서 $\mathfrak{a}_i+\mathfrak{a}_j=A$이다.
+
+$(2)\Rightarrow(3)$. Pairwise comaximal 조건과 $\bigcap_i\mathfrak{a}_i=\ker\pi=0$으로부터 [§중국인의 나머지정리, ⁋명제 6](/ko/math/ring_theory/chinese_remainder_theorem#prop6)에 의해 $\pi$는 isomorphism이다. Product ring $\prod_i A/\mathfrak{a}_i$에서 $i$번째 성분만 $1+\mathfrak{a}_i$이고 나머지가 $0$인 원소
 
 $$\bar e_i=(0,\ldots, 0,\underset{i}{1},0,\ldots, 0)$$
 
-들이다. 이들이 $\prod A/\mathfrak{a}_i$의 central한 orthogonal idempotent의 complete set임은 성분별로 확인된다. $\pi$가 동형이므로 $e_i:=\pi^{-1}(\bar e_i)$는 $A$의 central한 orthogonal idempotent의 complete set을 이루고, [정리 5](#thm5)의 대응에 따라 분해 $A\cong\prod Ae_i$를 준다. 이 때 $Ae_i\cong A/\mathfrak{a}_i$이며, 실제로 $\mathfrak{a}_i=\ker(A\rightarrow A/\mathfrak{a}_i)$는 $\pi$ 아래에서 $i$번째 성분이 $0$인 부분, 즉 $A(1-e_i)$에 대응한다. 이는 앞선 글의 [§중국인의 나머지정리, ⁋명제 7](/ko/math/ring_theory/chinese_remainder_theorem#prop7)에서 $\mathfrak{a}_i=A(1-e_i)$로 기술된 idempotent들이 바로 위의 $e_i$임을 말해 준다.
+들을 생각하면, 성분별 계산으로 이들이 central한 orthogonal idempotent의 complete set을 이룸을 알 수 있다. $\pi$가 ring isomorphism이므로 $e_i:=\pi^{-1}(\bar e_i)$ 또한 $A$의 central한 orthogonal idempotent의 complete set이다. 등식 $\mathfrak{a}_i=A(1-e_i)$를 확인하자. $\bar e_i$의 $i$번째 성분이 $1+\mathfrak{a}_i$이므로 $1-e_i\in\mathfrak{a}_i$이고, $\mathfrak{a}_i$가 ideal이므로 $A(1-e_i)\subseteq\mathfrak{a}_i$이다. 거꾸로 $a\in\mathfrak{a}_i$라 하면 $\pi(a)$의 $i$번째 성분이 $0$이고 $\bar e_i$는 $i$번째 성분을 제외한 모든 성분이 $0$이므로 $\pi(ae_i)=\pi(a)\bar e_i=0$이며, $\pi$가 단사이므로 $ae_i=0$이다. 따라서
 
-요약하면, pairwise comaximal이고 $\bigcap\mathfrak{a}_i=0$인 ideal들이 주어지는 것은 $A$가 곱으로 분해되는 것과 같고, 이는 다시 $A$가 central한 orthogonal idempotent의 complete set을 갖는 것과 같다. 중국인의 나머지정리는 이 세 관점을 하나로 묶는 다리이다.
+$$a=ae_i+a(1-e_i)=a(1-e_i)\in A(1-e_i)$$
+
+이다.
+
+$(3)\Rightarrow(1)$. [정리 5](#thm5)에 의해 central한 complete set $\{e_1,\ldots, e_n\}$은 ring isomorphism $x\mapsto (xe_1,\ldots, xe_n)$으로 주어지는 곱분해 $A\cong\prod_i Ae_i$를 준다. 한편 각 $i$에 대하여 morphism
+
+$$A\longrightarrow Ae_i,\qquad a\longmapsto ae_i$$
+
+는 전사이고, $ae_i=0$이면 $a=a(1-e_i)$이며 거꾸로 $a(1-e_i)e_i=0$이므로 그 kernel은 $A(1-e_i)=\mathfrak{a}_i$이다. 따라서 $A/\mathfrak{a}_i\cong Ae_i$이며, 이 동형이 $x+\mathfrak{a}_i\mapsto xe_i$로 주어지므로 위의 곱분해와 합성하면 정확히 $\pi$를 얻는다. 그러므로 $\pi$는 isomorphism이다.
+:::
+
+이 정리는 [정리 5](#thm5)의 대응을 ideal 쪽 자료로 옮겨 놓은 것이다. Pairwise comaximal이고 교차가 $0$인 ideal들이 주어지는 것, $A$가 ring들의 곱으로 분해되는 것, 그리고 $A$가 central한 orthogonal idempotent의 complete set을 갖는 것이 모두 같은 자료이며, 이 대응에서 $i$번째 인자 $A/\mathfrak{a}_i\cong Ae_i$의 항등원이 곧 $e_i$이다.
 
 이를 가장 친숙한 경우인 정수환에 적용해 보자.
 
 ::: 예시 8
-$A=\mathbb{Z}$를 보고, $n\geq 2$의 소인수분해를 $n=p_1^{a_1}\cdots p_r^{a_r}$ (서로 다른 소수 $p_k$)이라 하자. $\mathfrak{a}_k=p_k^{a_k}\mathbb{Z}$로 두면, 서로 다른 $k,l$에 대해 $p_k^{a_k}$와 $p_l^{a_l}$이 서로소이므로 적당한 정수 $u,v$가 존재하여 $up_k^{a_k}+vp_l^{a_l}=1$이고, 따라서 $\mathfrak{a}_k+\mathfrak{a}_l=\mathbb{Z}$로 pairwise comaximal이다. 또 $\bigcap_k\mathfrak{a}_k=\lcm(p_1^{a_1},\ldots, p_r^{a_r})\mathbb{Z}=n\mathbb{Z}$이다. [정리 7](#thm7)을 quotient ring $\mathbb{Z}/n\mathbb{Z}$에 적용하면 ring isomorphism
+$n\geq 2$의 소인수분해를 $n=p_1^{a_1}\cdots p_r^{a_r}$ (서로 다른 소수 $p_k$)이라 하고, $A=\mathbb{Z}/n\mathbb{Z}$의 ideal들 $\mathfrak{a}_k=p_k^{a_k}\mathbb{Z}/n\mathbb{Z}$를 생각하자. $\mathbb{Z}$ 안에서 $p_k^{a_k}\mathbb{Z}$들은 pairwise comaximal이고 그 교차가 $n\mathbb{Z}$이므로, $A$ 안에서 $\mathfrak{a}_k$들은 pairwise comaximal이고 $\bigcap_k\mathfrak{a}_k=0$이다. 따라서 [정리 7](#thm7)이 적용되어 고전적인 중국인의 나머지정리
 
 $$\mathbb{Z}/n\mathbb{Z}\cong\prod_{k=1}^r\mathbb{Z}/p_k^{a_k}\mathbb{Z}$$
 
-을 얻는다. 이것이 고전적인 중국인의 나머지정리이다.
+와 함께, 이 분해에 대응하는 $\mathbb{Z}/n\mathbb{Z}$의 central한 orthogonal idempotent의 complete set을 얻는다.
 
 구체적으로 $n=6=2\cdot 3$인 경우를 보면 $\mathbb{Z}/6\mathbb{Z}\cong\mathbb{Z}/2\mathbb{Z}\times\mathbb{Z}/3\mathbb{Z}$이다. Product ring $\mathbb{Z}/2\mathbb{Z}\times\mathbb{Z}/3\mathbb{Z}$의 두 idempotent $\bar e_1=(1,0)$, $\bar e_2=(0,1)$을 isomorphism으로 끌어오면, $\mathbb{Z}/6\mathbb{Z}$에서 $(1,0)$에 대응하는 원소는 $3$, $(0,1)$에 대응하는 원소는 $4$이다. 실제로 $3\equiv 1\ (\mathrm{mod}\ 2)$, $3\equiv 0\ (\mathrm{mod}\ 3)$이고 $4\equiv 0\ (\mathrm{mod}\ 2)$, $4\equiv 1\ (\mathrm{mod}\ 3)$이다. 이는 [예시 2](#ex2)에서 손으로 찾은 idempotent $3,4$와 정확히 일치한다.
 :::

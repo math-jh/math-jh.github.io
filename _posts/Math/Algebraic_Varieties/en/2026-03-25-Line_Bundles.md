@@ -161,9 +161,9 @@ From this, we know that the section space has the form
 
 $$\mathcal{O}(d)(U_i) = \x_i^d \cdot \mathcal{O}(U_i) = \x_i^d\mathbb{K}[\x_0/\x_i, \ldots, \widehat{\x_i/\x_i}, \ldots, \x_n/\x_i]$$
 
-Now comparing the two trivializations on $U_i \cap U_j$, we can derive the transition function. That is, the transition function $\phi_i \circ \phi_j^{-1}\colon \mathcal{O}_{U_j}\vert_{U_i \cap U_j} \rightarrow \mathcal{O}_{U_i}\vert_{U_i \cap U_j}$ is
+Now comparing the two trivializations on $U_i \cap U_j$, we can derive the transition function. That is, the transition function $\phi_j \circ \phi_i^{-1}\colon \mathcal{O}_{U_i}\vert_{U_i \cap U_j} \rightarrow \mathcal{O}_{U_j}\vert_{U_i \cap U_j}$ is
 
-$$\phi_i \circ \phi_j^{-1}(f) = (\x_i/\x_j)^d \cdot f$$
+$$\phi_j \circ \phi_i^{-1}(f) = (\x_i/\x_j)^d \cdot f$$
 
 so we obtain $g_{ij} = (\x_i/\x_j)^d$. More concretely, for each point $x \in U_i \cap U_j$ and its fiber $v \in \mathcal{O}_{\mathbb{P}^n}(d)_x \cong \mathbb{A}^1$,
 
@@ -199,7 +199,7 @@ The tautological bundle $\mathcal{O}_{\mathbb{P}^n}(-1)$ is the dual of $\mathca
 :::
 
 ::: Proof
-Let us construct a local trivialization of $\mathcal{O}_{\mathbb{P}^n}(-1)$ on the standard open cover $U_i = \{x \mid x_i \ne 0\}$. For any $(x, v) \in \mathcal{O}_{\mathbb{P}^n}(-1)$, we can write $v = \lambda x$ ($\lambda \in \mathbb{K}$), so defining $\phi_i(x, v) = (x, v_i)$ gives $\phi_i: \pi^{-1}(U_i) \rightarrow U_i \times \mathbb{A}^1$. The inverse is $\phi_i^{-1}(x, t) = (x, (t/x_i)\, x)$. The transition function on $U_i \cap U_j$ is obtained from $\phi_j \circ \phi_i^{-1}(x, t) = (x, t x_j / x_i)$ as $g_{ij}(x) = x_j/x_i$. This is the inverse of the transition function $x_i/x_j$ of $\mathcal{O}_{\mathbb{P}^n}(1)$.
+Let us construct a local trivialization of $\mathcal{O}_{\mathbb{P}^n}(-1)$ on the standard open cover $U_i = \{x \mid x_i \ne 0\}$. For any $(x, v) \in \mathcal{O}_{\mathbb{P}^n}(-1)$, we can write $v = \lambda x$ ($\lambda \in \mathbb{K}$), so defining $\phi_i(x, v) = (x, v_i)$ gives $\phi_i: \pi^{-1}(U_i) \rightarrow U_i \times \mathbb{A}^1$. The inverse is $\phi_i^{-1}(x, t) = (x, (t/x_i)x)$. The transition function on $U_i \cap U_j$ is obtained from $\phi_j \circ \phi_i^{-1}(x, t) = (x, t x_j / x_i)$ as $g_{ij}(x) = x_j/x_i$. This is the inverse of the transition function $x_i/x_j$ of $\mathcal{O}_{\mathbb{P}^n}(1)$.
 :::
 
 In particular, examining $\mathcal{O}(-1)$ on $\mathbb{P}^1$ makes the meaning of the intuitive *twist* explained above much clearer. The process of making $\mathbb{P}^1$ from $\mathbb{A}^2\setminus \{0\}$ can be thought of as first mapping $\mathbb{A}^2\setminus\{0\}$ to the unit circle via radial projection, and then identifying antipodal points of the unit circle; during this process, vectors in opposite directions are identified, which causes the fibers to twist. One way to see this twist is to look at sections of the line bundle $\mathcal{L}$.
@@ -217,9 +217,9 @@ $$\Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n}(-1)) = 0$$
 
 To verify this, by [Example 12](#ex12) we have $\mathcal{O}(-1)(U_i) = \x_i^{-1} \cdot \mathbb{K}[\x_0/\x_i, \ldots, \widehat{\x_i/\x_i}, \ldots, \x_n/\x_i]$, and the trivialization is given by $\phi_i(s) = s \cdot \x_i$. Therefore the trivialized section $\phi_i(s) \in \mathcal{O}(U_i) = \mathbb{K}[\x_0/\x_i, \ldots, \x_n/\x_i]$, and on $U_i \cap U_j$ the cocycle condition requires
 
-$$\phi_j(s) = (\x_j/\x_i)\, \phi_i(s)$$
+$$\phi_j(s) = (\x_j/\x_i)\phi_i(s)$$
 
-However, since $\phi_i(s) \in \mathbb{K}[\x_0/\x_i, \ldots, \widehat{\x_i/\x_i}, \ldots, \x_n/\x_i]$ cannot contain a term $\x_i/\x_j$, for $(\x_j/\x_i)\, \phi_i(s)$ to lie in $\mathcal{O}(U_j) = \mathbb{K}[\x_0/\x_j, \ldots, \widehat{\x_j/\x_j}, \ldots, \x_n/\x_j]$ we must have $\phi_i(s) = 0$. Therefore $s = 0$.
+However, since $\phi_i(s) \in \mathbb{K}[\x_0/\x_i, \ldots, \widehat{\x_i/\x_i}, \ldots, \x_n/\x_i]$ cannot contain a term $\x_i/\x_j$, for $(\x_j/\x_i)\phi_i(s)$ to lie in $\mathcal{O}(U_j) = \mathbb{K}[\x_0/\x_j, \ldots, \widehat{\x_j/\x_j}, \ldots, \x_n/\x_j]$ we must have $\phi_i(s) = 0$. Therefore $s = 0$.
 :::
 
 This proposition shows the *twist* of the tautological bundle from the viewpoint of sections. For example, the fact that $\Gamma(\mathbb{P}^1, \mathcal{O}(-1))=0$ means in particular that there is no "constant function" assigning the element 1 of the fiber to every $x\in \mathbb{P}^1$. From the geometric perspective above, this is because when we go around $\mathbb{P}^1$ once, the original 1 becomes (for example) $-1$.
