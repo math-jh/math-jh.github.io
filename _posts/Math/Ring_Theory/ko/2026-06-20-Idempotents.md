@@ -128,7 +128,7 @@ $$y=y_1+\cdots+y_n,\qquad y_i\in\mathfrak{a}_i$$
 어렵지 않게 이 두 구성이 서로의 역함수임을 확인할 수 있으며, 따라서 이 대응은 일대일이다.
 :::
 
-[정리 5](#thm5)에 의해, ring이 nontrivial한 central idempotent를 갖지 않는 것은 그것이 두 nonzero ring의 곱으로 쪼개지지 않는 것과 동치이다. 이러한 ring을 *connected* 혹은 *indecomposable*하다고 부른다.
+[정리 5](#thm5)에 의해, ring이 nontrivial한 central idempotent를 갖지 않는 것은 그것이 두 nonzero ring의 곱으로 쪼개지지 않는 것과 동치이다. 이러한 ring을 *connected* 혹은 *indecomposable*하다고 부른다. 가령 division ring $A$는 언제나 indecomposable하다. 만일 $A$가 두 nonzero ring의 곱으로 쪼개진다면 각 인자의 항등원에 해당하는 $(1,0)$과 $(0,1)$이 모두 nonzero이면서 그 곱이 $0$이 되어 $A$가 zero divisor를 갖게 되기 때문이다.
 
 다음 예시는 특히 centrality 조건이 빠졌을 때 일어나는 일을 보여준다. 이 경우, [정리 5](#thm5)는 그 자체로 적용할 수 없지만, 여전히 module로서의 decomposition은 [명제 4](#prop4)에 의해 보장된다.
 
@@ -149,18 +149,30 @@ $$E_{11}E_{12}=E_{12}\neq 0=E_{12}E_{11}$$
 
 이므로 $E_{11}$은 $E_{12}$와 commute하지 않는다. 따라서 이 분해는 ring의 direct product decomposition을 주지 않는다.
 
-실제로 $\Mat_n(A)$의 central idempotent를 직접 찾을 수 있다. 행렬 $M$이 모든 matrix unit과 commute한다 하면, $E_{kl}M$과 $ME_{kl}$의 $(i,j)$ 성분을 비교하여 $\delta_{ik}M_{lj}=M_{ik}\delta_{lj}$를 얻는다. 여기에 $i=k$를 넣으면 $j\neq l$일 때 $M_{lj}=0$이고 $M_{ll}=M_{kk}$이므로 $M$은 $cI$ 꼴이며, $M$이 scalar 행렬 $aI$와도 commute해야 하므로 $c\in Z(A)$이다. 따라서 $\Mat_n(A)$의 central idempotent는 $A$의 central idempotent $c$에 대한 $cI$들이고, 특히 $A$가 division ring이면 $A$의 idempotent가 $0,1$뿐이므로 $\Mat_n(A)$의 central idempotent는 $0$과 $I$뿐이다.
+실제로 임의의 ring $A$에 대하여, $\Mat_n(A)$의 central idempotent는 일반적으로 $c\in Z(A)$에 의한 스칼라곱 행렬 $cI$ 뿐이라는 것을 직접 보일 수 있다. 행렬 $M$이 모든 matrix unit과 commute한다고 하면,
+
+$$(E_{kl}M)_{i,j}=\delta_{ik}M_{lj},\qquad (ME_{kl})_{i,j}=M_{ik}\delta_{lj}$$
+
+가 서로 같아야 함을 안다. 이제 $i=k$일 경우를 보자. 그럼
+
+$$M_{lj}=M_{kk}\delta_{lj}$$
+
+이므로, $j\neq l$이라면 $M_{lj}=0$이고, $j=l$인 곳에서는 $M_{ll}=M_{kk}$이므로 $M$은 $cI$의 꼴이어야 하는 것을 안다. 한편 이러한 $M$은 matrix unit들 뿐만 아니라 $aI$ 꼴의 행렬과도 commute해야 하므로, 이 계수 $c$가 $A$의 center $Z(A)$에 속해야 한다. 특히 만일 $A$가 division ring이면 $A$의 idempotent가 $0,1$뿐이므로 $\Mat_n(A)$의 central idempotent는 $0$과 $I$뿐이다.
 :::
 
 한편 idempotent가 central인지는 그것을 어느 ring 안에서 보느냐에 달렸다. $n=n_1+\cdots+n_r$로 분할하고, 대각선을 따라 처음 $n_1\times n_1$ block, 다음 $n_2\times n_2$ block 식으로 놓인 block-diagonal 행렬들만 모은 subring
 
 $$B=\left\{\diag(M_1,\ldots, M_r)\mid M_k\in \Mat_{n_k}(A)\right\}\cong\prod_{k=1}^r \Mat_{n_k}(A)$$
 
-안에서, $k$번째 block에만 항등행렬을 놓은 원소 $P_k$는 central이어서 [정리 5](#thm5)의 대응에 따라 이 direct product decomposition을 준다. 그러나 이 $P_k$가 위의 예시 ring $\Mat_n(A)$ 안에서는 central이 아닌 것을 확인할 수 있다.
+안에서, $k$번째 block에만 항등행렬을 놓은 원소 $P_k$는 central이어서 [정리 5](#thm5)의 대응에 따라 이 direct product decomposition을 준다. 그러나 이 $P_k$가 위의 예시 ring $\Mat_n(A)$ 안에서는 central이 아닌 것을 이미 확인하였다. 
 
 ## 중국인의 나머지정리와의 연결
 
-이제 앞선 글의 중국인의 나머지정리를 idempotent의 관점에서 다시 본다. 핵심은 pairwise comaximal 조건이 product ring의 자연스러운 idempotent들을 $A$ 안으로 끌어온다는 것이다. 여기서 $\pi:A\rightarrow\prod_{i=1}^n A/\mathfrak{a}_i$는 각 quotient로의 projection이 유도하는 morphism $x\mapsto (x+\mathfrak{a}_1,\ldots, x+\mathfrak{a}_n)$을 뜻한다.
+한편, 우리는 [정리 5](#thm5) 이전에 이미 주어진 ring을 direct product로 분해하는 방법을 살펴본 적이 있다. ([§중국인의 나머지정리, ⁋명제 6](/ko/math/ring_theory/chinese_remainder_theorem#prop6)) 이 두 결과는 독립적인 것이 아니며, 우리는 글의 남은 부분에서 이들 둘의 관계를 살펴본다. 핵심은 pairwise comaximal 조건이 product ring의 자연스러운 idempotent들을 $A$ 안으로 끌어온다는 것으로, 다음 정리에서 $\pi:A\rightarrow\prod_{i=1}^n A/\mathfrak{a}_i$는 각 quotient로의 projection이 유도하는 morphism 
+
+$$x\mapsto (x+\mathfrak{a}_1,\ldots, x+\mathfrak{a}_n)$$
+
+을 뜻한다.
 
 ::: 정리 7
 Ring $A$와 그 two-sided ideal들 $\mathfrak{a}_1,\ldots, \mathfrak{a}_n$이 주어졌다 하자. 다음이 모두 동치이다.
