@@ -10,8 +10,9 @@ sidebar:
 
 date: 2024-08-18
 weight: 3
-translated_at: 2026-08-01T12:45:04+00:00
+translated_at: 2026-08-01T13:15:04+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-08-01T13:15:04+00:00
 ---
 For any set $X$, we observed that the free $A$-module defined by $X$ is given by the expression
 
