@@ -175,7 +175,7 @@ $W'$를 $W$의 orthogonal complement로 잡으면, $W'$ 또한 $G$-invariant sub
 
 $$\Rep_\mathbb{C}(G)\cong \lMod{\mathbb{C}[G]}$$
 
-을 살펴보았다. 그럼 [따름정리 7](#cor7)이 주장하는 것은 임의의 유한차원 $G$-representation $V$는 항상 *semisimple* $\mathbb{C}[G]$-module이라는 것이다 ([\[환론\] §Semisimple module, ⁋정의 1](/ko/math/ring_theory/semisimple_modules#def1)). 따라서 $\mathbb{C}[G]$는 그 자체를 regular representation으로 보면 [따름정리 7](#cor7)에 의해 semisimple module이므로 Artinian semisimple ring이 되며, [\[환론\] §Artin-Wedderburn 정리, ⁋정리 11](/ko/math/ring_theory/artin_wedderburn#thm11)에 의하여 simple module들로의 decomposition
+을 살펴보았다. 그럼 [따름정리 7](#cor7)이 주장하는 것은 임의의 유한차원 $G$-representation $V$는 항상 *semisimple* $\mathbb{C}[G]$-module이라는 것이다 ([\[환론\] §Semisimple module, ⁋정의 2](/ko/math/ring_theory/semisimple_modules#def2)). 따라서 $\mathbb{C}[G]$는 그 자체를 regular representation으로 보면 [따름정리 7](#cor7)에 의해 semisimple module이므로 Artinian semisimple ring이 되며, [\[환론\] §Artin-Wedderburn 정리, ⁋정리 11](/ko/math/ring_theory/artin_wedderburn#thm11)에 의하여 simple module들로의 decomposition
 
 $$\mathbb{C}[G]\cong \bigoplus_{i=1}^r \Mat_{n_i}(\mathbb{C})\tag{1}$$
 
@@ -221,9 +221,9 @@ $$\Hom_G(W, V)=\Hom_G\left(W, \bigoplus V_j\right)\cong \bigoplus \Hom_G(W, V_j)
 위의 함수에 의한 $W\in\Irr(G, \mathbb{C})$의 image를 $V$의 *$W$-isotypical summand*라 부르고, $\Hom_G(W, V)$를 $W$의 *multiplicity*라 부른다. 
 :::
 
-이 정의는 일반론과 일치한다. $d_W$의 image는 $W$와 isomorphic한 $V$의 simple submodule들이 생성하는 부분공간이므로 정확히 [\[환론\] §Semisimple module, ⁋정의 7](/ko/math/ring_theory/semisimple_modules#def7)의 $W$-isotypic component이고, [같은 글, ⁋명제 8](/ko/math/ring_theory/semisimple_modules#prop8)에 의해 이 분해는 irreducible decomposition의 선택과 무관하게 canonical하다.
+이 정의는 일반론과 일치한다. $d_W$의 image는 $W$와 isomorphic한 $V$의 simple submodule들이 생성하는 부분공간이므로 정확히 [\[환론\] §Semisimple module, ⁋정의 8](/ko/math/ring_theory/semisimple_modules#def8)의 $W$-isotypic component이고, [같은 글, ⁋명제 9](/ko/math/ring_theory/semisimple_modules#prop9)에 의해 이 분해는 irreducible decomposition의 선택과 무관하게 canonical하다.
 
-Representation의 유일성 또한 이제 [\[환론\] §Semisimple module, ⁋명제 9](/ko/math/ring_theory/semisimple_modules#prop9)로부터 얻어진다. 즉, 우리는 임의의 representation $V$가 주어졌을 때 이를 다음의 decomposition
+Representation의 유일성 또한 이제 [\[환론\] §Semisimple module, ⁋명제 10](/ko/math/ring_theory/semisimple_modules#prop10)로부터 얻어진다. 즉, 우리는 임의의 representation $V$가 주어졌을 때 이를 다음의 decomposition
 
 $$V=V_1^{\oplus r_1}\oplus\cdots\oplus V_k^{\oplus r_k}$$
 

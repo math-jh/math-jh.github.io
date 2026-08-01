@@ -5268,6 +5268,11 @@ G:
   defs:
   - label: '[표현론] §유한군의 표현론'
     url: /ko/math/representation_theory/representations_of_finite_groups
+  see:
+  - label: $G$-module
+    id: g_-module
+  - label: Group
+    id: group
 - id: g_-module
   en: $G$-module
   ko: $G$-가군
@@ -5275,6 +5280,13 @@ G:
   defs:
   - label: '[호몰로지 대수학] §군 코호몰로지'
     url: /ko/math/homological_algebra/group_cohomology
+  see:
+  - label: Group
+    id: group
+  - label: Representation
+    id: representation
+  - label: Group algebra
+    id: group_algebra
 - id: galois
   en: Galois
   ko: 갈루아
@@ -5282,6 +5294,13 @@ G:
   defs:
   - label: '[체론] §갈루아 확장'
     url: /ko/math/field_theory/galois_extension
+  see:
+  - label: Galois connection
+    id: Galois_connection
+  - label: Galois correspondence
+    id: Galois_correspondence
+  - label: Galois group
+    id: galois_group
 - id: Galois_connection
   en: Galois connection
   ko: 갈루아 연결
@@ -5289,6 +5308,11 @@ G:
   defs:
   - label: '[집합론] §필터와 아이디얼, 갈루아 대응'
     url: /ko/math/set_theory/filter_and_ideal
+  see:
+  - label: Galois
+    id: galois
+  - label: Galois correspondence
+    id: Galois_correspondence
 - id: Galois_correspondence
   en: Galois correspondence
   ko: 갈루아 대응
@@ -5796,6 +5820,9 @@ H:
   defs:
   - label: '[미분다양체] §경계가 있는 다양체'
     url: /ko/math/manifolds/manifolds_with_boundary
+  see:
+  - label: Hyperplane
+    id: hyperplane
 - id: hamiltonian
   en: Hamiltonian
   ko: 해밀토니안
@@ -5803,6 +5830,9 @@ H:
   defs:
   - label: '[사교기하학] §고전역학'
     url: /ko/math/symplectic_geometry/classical_mechanics
+  see:
+  - label: Symplectic form
+    id: symplectic_form
 - id: hamiltonian_action
   en: Hamiltonian action
   ko: 해밀턴 작용
@@ -5810,6 +5840,9 @@ H:
   defs:
   - label: '[사교기하학] §운동량 사상'
     url: /ko/math/symplectic_geometry/moment_map
+  see:
+  - label: Hamiltonian
+    id: hamiltonian
 - id: hamiltonian_vector_field
   en: Hamiltonian vector field
   ko: 해밀턴 벡터장
@@ -5817,6 +5850,14 @@ H:
   defs:
   - label: '[사교기하학] §사교다양체'
     url: /ko/math/symplectic_geometry/symplectic_manifold
+  see:
+  - label: Hamiltonian
+    id: hamiltonian
+  - label: Symplectic form
+    id: symplectic_form
+  - label: 벡터장
+    lang: ko
+    id: vector_field
 - id: harmonic_conjugate
   en: harmonic conjugate
   ko: 조화켤레
@@ -5824,6 +5865,9 @@ H:
   defs:
   - label: '[복소해석학] §복소정칙함수'
     url: /ko/math/complex_analysis/holomorphic_functions
+  see:
+  - label: Holomorphic function
+    id: holomorphic_function
 - id: harmonic_form
   en: harmonic form
   ko: 조화형식
@@ -5831,6 +5875,12 @@ H:
   defs:
   - label: '[복소기하학] §Hodge 이론'
     url: /ko/math/complex_geometry/hodge_theory
+  see:
+  - label: Hodge–de Rham Laplacian
+    id: hodge_de_rham_laplacian
+  - label: Laplace 연산자
+    lang: ko
+    id: laplacian
 - id: harmonic_function
   en: harmonic function
   ko: 조화함수
@@ -5838,6 +5888,10 @@ H:
   defs:
   - label: '[복소해석학] §복소정칙함수'
     url: /ko/math/complex_analysis/holomorphic_functions
+  see:
+  - label: Laplace 연산자
+    lang: ko
+    id: laplacian
 - id: hartogs_number
   en: Hartogs number
   ko: 하르톡스 수

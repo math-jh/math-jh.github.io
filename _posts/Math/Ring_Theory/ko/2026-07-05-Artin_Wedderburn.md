@@ -26,7 +26,7 @@ published: false
 Ring $R$을 자기 자신 위의 left module로 보았을 때 semisimple이면, 즉 $R$이 simple left ideal들의 직합이면 $R$을 *semisimple ring<sub>반단순환</sub>*이라 부른다.
 :::
 
-Left regular module $R$의 submodule은 정확히 $R$의 left ideal이므로, 이 정의는 [§Semisimple module, ⁋정의 1](/ko/math/ring_theory/semisimple_modules#def1)을 regular module에 적용한 것이다. 정의가 left module 구조를 사용하므로 좌우 비대칭해 보이지만, 구조 정리를 거치면 이 선택이 무관하다는 것이 드러난다 ([참고 13](#rmk13)).
+Left regular module $R$의 submodule은 정확히 $R$의 left ideal이므로, 이 정의는 [§Semisimple module, ⁋정의 2](/ko/math/ring_theory/semisimple_modules#def2)을 regular module에 적용한 것이다. 정의가 left module 구조를 사용하므로 좌우 비대칭해 보이지만, 구조 정리를 거치면 이 선택이 무관하다는 것이 드러난다 ([참고 13](#rmk13)).
 
 Ring 하나의 성질처럼 보이는 이 정의는 사실 그 위의 module 이론 전체를 결정한다.
 
@@ -34,7 +34,7 @@ Ring 하나의 성질처럼 보이는 이 정의는 사실 그 위의 module 이
 Ring $R$에 대하여, $R$이 semisimple ring인 것은 모든 left $R$-module이 semisimple인 것과 동치이다.
 :::
 ::: 증명
-모든 module이 semisimple이라면 특히 regular module $R$이 semisimple이다. 거꾸로 $R$이 semisimple ring이라 하자. 임의의 index 집합 $I$에 대하여 free module $R^{(I)}$는 $R$의 복사본들의 직합이고, 각 복사본이 simple submodule들의 합이므로 $R^{(I)}$ 또한 simple submodule들의 합이다. 따라서 [§Semisimple module, ⁋정리 4](/ko/math/ring_theory/semisimple_modules#thm4)에 의해 $R^{(I)}$는 semisimple이다. 이제 임의의 module $M$은 generator들을 택하면 적당한 전사 $R^{(I)}\rightarrow M$을 가지므로 semisimple module의 quotient이고, [§Semisimple module, ⁋따름정리 5](/ko/math/ring_theory/semisimple_modules#cor5)에 의해 semisimple이다.
+모든 module이 semisimple이라면 특히 regular module $R$이 semisimple이다. 거꾸로 $R$이 semisimple ring이라 하자. 임의의 index 집합 $I$에 대하여 free module $R^{(I)}$는 $R$의 복사본들의 직합이고, 각 복사본이 simple submodule들의 합이므로 $R^{(I)}$ 또한 simple submodule들의 합이다. 따라서 [§Semisimple module, ⁋정리 5](/ko/math/ring_theory/semisimple_modules#thm5)에 의해 $R^{(I)}$는 semisimple이다. 이제 임의의 module $M$은 generator들을 택하면 적당한 전사 $R^{(I)}\rightarrow M$을 가지므로 semisimple module의 quotient이고, [§Semisimple module, ⁋따름정리 6](/ko/math/ring_theory/semisimple_modules#cor6)에 의해 semisimple이다.
 :::
 
 ::: 명제 3
@@ -173,14 +173,14 @@ $$R\cong\prod_{i=1}^k\Mat_{n_i}(\Delta_i)^{\mathrm{op}}\cong\prod_{i=1}^k\Mat_{n
 
 이고, $D_i=\Delta_i^{\mathrm{op}}$는 division ring이므로 원하는 분해를 얻는다.
 
-유일성을 보이자. $R\cong\prod_{j=1}^l\Mat_{m_j}(E_j)$가 임의의 그러한 분해라 하고 $W_j=E_j^{m_j}$를 $j$번째 성분을 통한 left $R$-module로 보자. [명제 5](#prop5)에 의해 각 $W_j$는 simple이고 $j$번째 인자의 regular module이 $W_j^{m_j}$와 isomorphic하므로, left module로서 $R\cong\bigoplus_jW_j^{m_j}$이다. 또 [명제 10](#prop10)의 1에 의해 $W_j$들은 서로 다른 성분에 속하므로 pairwise non-isomorphic하다. 그럼 [§Semisimple module, ⁋명제 9](/ko/math/ring_theory/semisimple_modules#prop9)에 의해 두 분해 $\bigoplus_iS_i^{n_i}\cong\bigoplus_jW_j^{m_j}$의 자료가 일치한다. 즉 $l=k$이고 재배열 후 $W_i\cong S_i$, $m_i=n_i$이다. 마지막으로 [명제 10](#prop10)의 1에 의해 $\End_R(W_i)=\End_{\Mat_{m_i}(E_i)}(E_i^{m_i})$이고 [명제 6](#prop6)에 의해 이는 $E_i^{\mathrm{op}}$와 isomorphic하므로
+유일성을 보이자. $R\cong\prod_{j=1}^l\Mat_{m_j}(E_j)$가 임의의 그러한 분해라 하고 $W_j=E_j^{m_j}$를 $j$번째 성분을 통한 left $R$-module로 보자. [명제 5](#prop5)에 의해 각 $W_j$는 simple이고 $j$번째 인자의 regular module이 $W_j^{m_j}$와 isomorphic하므로, left module로서 $R\cong\bigoplus_jW_j^{m_j}$이다. 또 [명제 10](#prop10)의 1에 의해 $W_j$들은 서로 다른 성분에 속하므로 pairwise non-isomorphic하다. 그럼 [§Semisimple module, ⁋명제 10](/ko/math/ring_theory/semisimple_modules#prop10)에 의해 두 분해 $\bigoplus_iS_i^{n_i}\cong\bigoplus_jW_j^{m_j}$의 자료가 일치한다. 즉 $l=k$이고 재배열 후 $W_i\cong S_i$, $m_i=n_i$이다. 마지막으로 [명제 10](#prop10)의 1에 의해 $\End_R(W_i)=\End_{\Mat_{m_i}(E_i)}(E_i^{m_i})$이고 [명제 6](#prop6)에 의해 이는 $E_i^{\mathrm{op}}$와 isomorphic하므로
 
 $$E_i\cong\End_R(W_i)^{\mathrm{op}}\cong\End_R(S_i)^{\mathrm{op}}=\Delta_i^{\mathrm{op}}=D_i$$
 
 이다. 따라서 division ring들도 isomorphism을 무시하면 유일하다.
 :::
 
-증명이 보여 주듯 분해의 각 인자는 canonical한 대상이다. 실제로 존재 방향의 분해에서 isotypic component $R_{S_i}\cong S_i^{n_i}$들은 two-sided ideal인데, 임의의 $r\in R$에 대한 오른쪽 곱셈이 left module endomorphism이고 [§Semisimple module, ⁋명제 8](/ko/math/ring_theory/semisimple_modules#prop8)에 의해 endomorphism이 isotypic component를 보존하기 때문이다. 따라서 $R=\bigoplus_iR_{S_i}$는 two-sided ideal들의 직합이고, [§멱등원과 곱분해, ⁋정리 5](/ko/math/ring_theory/idempotents#thm5)에 의해 central idempotent의 complete set과 ring의 direct product decomposition이 대응된다. 이 central idempotent들이 정확히 [정리 11](#thm11)의 direct product decomposition에서 각 인자의 항등원이다.
+증명이 보여 주듯 분해의 각 인자는 canonical한 대상이다. 실제로 존재 방향의 분해에서 isotypic component $R_{S_i}\cong S_i^{n_i}$들은 two-sided ideal인데, 임의의 $r\in R$에 대한 오른쪽 곱셈이 left module endomorphism이고 [§Semisimple module, ⁋명제 9](/ko/math/ring_theory/semisimple_modules#prop9)에 의해 endomorphism이 isotypic component를 보존하기 때문이다. 따라서 $R=\bigoplus_iR_{S_i}$는 two-sided ideal들의 직합이고, [§멱등원과 곱분해, ⁋정리 5](/ko/math/ring_theory/idempotents#thm5)에 의해 central idempotent의 complete set과 ring의 direct product decomposition이 대응된다. 이 central idempotent들이 정확히 [정리 11](#thm11)의 direct product decomposition에서 각 인자의 항등원이다.
 
 ::: 따름정리 12
 $R\cong\prod_{i=1}^k\Mat_{n_i}(D_i)$가 semisimple ring이라 하자. 그럼 simple left $R$-module은 isomorphism을 무시하면 정확히 $V_1,\ldots,V_k$ ($V_i=D_i^{n_i}$)뿐이고, 임의의 left $R$-module은 이들의 복사본들의 직합이다.
