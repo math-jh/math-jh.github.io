@@ -90,6 +90,58 @@ $$\Omega_{\varphi/\phi}': \varphi_!\Omega_{E/A}=\Omega_{E/A}\otimes_EE' \rightar
 
 이 존재한다.  
 
+이 functoriality가 주는 가장 기본적인 결과는 Kähler differential module이 localization과 맞아떨어진다는 것이다.
+
+::: 명제 5
+$A$-algebra $E$와 $E$의 multiplicative subset $S$가 주어졌다 하고 ([§국소화, ⁋정의 3](/ko/math/commutative_algebra/localization#def3)), canonical homomorphism $\varphi:E \rightarrow S^{-1}E$를 통해 $S^{-1}E$를 $A$-algebra로 보자. 그럼 [명제 4](#prop4)가 주는 $S^{-1}E$-linear homomorphism
+
+$$\Omega_{\varphi/\id_A}':\Omega_{E/A}\otimes_ES^{-1}E \longrightarrow \Omega_{S^{-1}E/A}$$
+
+은 isomorphism이다.
+:::
+::: 증명
+임의의 $S^{-1}E$-module $M$에 대하여 $\varphi$를 따라 restrict하는 map
+
+$$\varphi^\ast:\Der_A(S^{-1}E, M) \longrightarrow \Der_A(E, M)$$
+
+이 bijection임을 보인다. $M$이 $S^{-1}E$-module이므로 $S$의 원소들은 $M$ 위에서 가역인 action을 주며, 아래에서 $M$의 원소를 $S$의 원소로 나누는 것은 이 action의 역을 뜻한다.
+
+$D\in\Der_A(S^{-1}E, M)$와 $x\in E$, $s\in S$에 대하여 $x=s(x/s)$에 Leibniz 법칙을 적용하면 $D(x)=sD(x/s)+(x/s)D(s)$이므로
+
+$$D(x/s)=\bigl(D(x)-(x/s)D(s)\bigr)/s$$
+
+이고, 곧 $D$는 $E$ 위에서의 값으로 결정되어 $\varphi^\ast$는 단사이다. 전사성을 위해서는 $D\in\Der_A(E, M)$가 주어졌을 때 위의 식을 정의로 삼아 $\widetilde D(x/s)=\bigl(D(x)-(x/s)D(s)\bigr)/s$로 두면 된다. 이것이 well-defined임을 보이기 위해 $x/s=y/t$라 하면 적당한 $u\in S$가 $u(tx-sy)=0$을 만족하므로 ([§국소화, ⁋정의 4](/ko/math/commutative_algebra/localization#def4)), 여기에 $D$를 적용하여
+
+$$utD(x)+uxD(t)+txD(u)=usD(y)+uyD(s)+syD(u)$$
+
+를 얻는다. $S^{-1}E$ 안에서는 $tx=sy$이므로 양변의 마지막 항이 서로 같고, 남은 것을 $u$로 나누면
+
+$$tD(x)+xD(t)=sD(y)+yD(s)$$
+
+가 된다. 한편 $tx=sy$로부터 $tx/s=y$와 $sy/t=x$이므로, 이 등식은 양변을 $st$로 나눈
+
+$$\bigl(D(x)-(x/s)D(s)\bigr)/s=\bigl(D(y)-(y/t)D(t)\bigr)/t$$
+
+와 같은 것이며, 따라서 $\widetilde D$는 well-defined이다. 이것이 $A$-linear라는 것은 정의에서 바로 따라나오고, Leibniz 법칙은
+
+$$\begin{aligned}
+\widetilde D\Bigl(\frac{xy}{st}\Bigr)&=\frac{D(xy)}{st}-\frac{xy}{(st)^2}D(st)\\
+&=\frac{xD(y)+yD(x)}{st}-\frac{xy}{(st)^2}\bigl(sD(t)+tD(s)\bigr)\\
+&=\frac{x}{s}\Bigl(\frac{D(y)}{t}-\frac{y}{t^2}D(t)\Bigr)+\frac{y}{t}\Bigl(\frac{D(x)}{s}-\frac{x}{s^2}D(s)\Bigr)\\
+&=\frac{x}{s}\widetilde D\Bigl(\frac{y}{t}\Bigr)+\frac{y}{t}\widetilde D\Bigl(\frac{x}{s}\Bigr)
+\end{aligned}$$
+
+로 확인된다. 또 $D(1)=D(1\cdot 1)=2D(1)$에서 $D(1)=0$이므로 $\widetilde D(x/1)=D(x)$이고, 곧 $\varphi^\ast\widetilde D=D$이다.
+
+이제 $\varphi^\ast$가 $M$에 대하여 natural한 bijection이므로, 여기에 [보조정리 2](#lem2)와 [\[대수적 구조\] §스칼라의 변환, ⁋명제 6](/ko/math/algebraic_structures/change_of_base_ring#prop6)의 adjunction을 결합하면 임의의 $S^{-1}E$-module $M$에 대하여
+
+$$\Hom_{S^{-1}E}\bigl(\Omega_{E/A}\otimes_ES^{-1}E, M\bigr)\cong\Hom_E(\Omega_{E/A}, M)\cong\Der_A(E, M)\cong\Der_A(S^{-1}E, M)\cong\Hom_{S^{-1}E}\bigl(\Omega_{S^{-1}E/A}, M\bigr)$$
+
+이 성립하고 이 대응들은 모두 $M$에 대하여 natural하다. 즉 두 $S^{-1}E$-module이 같은 functor를 표현하므로 이들은 canonical하게 isomorphic하며, 이 isomorphism을 generator $dx\otimes 1$ 위에서 따라가면 $dx\otimes 1\mapsto d\varphi(x)$이 되어 이것이 [명제 4](#prop4)가 준 $\Omega_{\varphi/\id_A}'$임을 안다.
+:::
+
+특히 $S^{-1}E$의 universal derivation은 $E$의 것으로부터 $d(x/s)=(sdx-xds)/s^2$으로 얻어진다.
+
 ## Fundamental sequences
 
 특별히 $\phi:A \rightarrow A'$를 $\id_A:A \rightarrow A$로 두자. 그럼 위에서 만든 $E'$-linear homomorphism은 오직 $A$-linear map $\varphi:E \rightarrow E'$에만 의존하며, 다음의 꼴
@@ -102,7 +154,7 @@ $$d_{E'/E}=E' \overset{d_{E'/A}}{\longrightarrow}\Omega_{E'/A}\overset{\Omega_\v
 
 과 동일하다. 
 
-::: 명제 5 (Cotangent sequence)
+::: 명제 6 (Cotangent sequence)
 $E'$-linear map들의 sequence
 
 $$\Omega_{E/A}\otimes_EE'\overset{\Omega_{\varphi/A}'}{\longrightarrow}\Omega_{E'/A}\overset{\Omega_\varphi}{\longrightarrow}\Omega_{E'/E} \longrightarrow 0$$
@@ -145,7 +197,7 @@ $$\bar{d}:K/K^2 \rightarrow \Omega_{E/A}\otimes_EE'$$
 
 을 얻는다.
 
-::: 명제 6
+::: 명제 7
 위와 같은 상황에서, 다음의 sequence
 
 $$K/K^2 \overset{\bar{d}}{\longrightarrow}\Omega_{E/A}\otimes_EE' \rightarrow\Omega_{E'/A} \longrightarrow 0$$
@@ -153,7 +205,7 @@ $$K/K^2 \overset{\bar{d}}{\longrightarrow}\Omega_{E/A}\otimes_EE' \rightarrow\Om
 는 exact이다. 
 :::
 ::: 증명
-가운데 map은 [명제 5](#prop5)에서의 $\Omega_{\varphi/A}'$이다. $N'$을 $\bar{d}$의 image로 생성되는 $\Omega_{E/A}\otimes_EE'$의 $E'$-submodule이라 하고, $C'=(\Omega_{E/A}\otimes_EE')/N'$과 quotient map $\pi:\Omega_{E/A}\otimes_EE' \rightarrow C'$를 생각하자.
+가운데 map은 [명제 6](#prop6)에서의 $\Omega_{\varphi/A}'$이다. $N'$을 $\bar{d}$의 image로 생성되는 $\Omega_{E/A}\otimes_EE'$의 $E'$-submodule이라 하고, $C'=(\Omega_{E/A}\otimes_EE')/N'$과 quotient map $\pi:\Omega_{E/A}\otimes_EE' \rightarrow C'$를 생각하자.
 
 우선 $\Omega_{\varphi/A}'$가 surjective인 것을 보이자. $\varphi$가 surjective이므로 $\Omega_{E'/A}$의 임의의 generator는 $x\in E$에 대하여 $d_{E'/A}\varphi(x)$의 꼴로 쓸 수 있고, 이는 $\Omega_{\varphi/A}'(d_{E/A}x\otimes 1)$과 같기 때문이다.
 

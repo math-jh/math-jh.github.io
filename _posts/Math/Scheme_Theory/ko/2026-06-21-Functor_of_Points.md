@@ -19,7 +19,7 @@ drift_needed: true
 
 $$h_X=\Hom_\Sch(-,X): \Sch^\op \rightarrow \Set$$
 
-로 보는 것이다. [§스킴 사이의 사상, ⁋정의 9](/ko/math/scheme_theory/morphism_of_schemes#def9)에서 우리는 이 functor를 $X$의 functor of points라 부르기로 약속하였다. 우리는 이 functor가 $X$를 isomorphism까지 완전히 결정한다는 것을 Yoneda 보조정리를 통해 확인하고, 이러한 functorial한 관점이 affine space, projective space, Grassmannian, fiber product 등을 다룰 때 어떻게 자연스러운 언어를 제공하는지를 살펴본다.
+로 보는 것이다. 이 functor는 [§스킴 사이의 사상, ⁋정의 9](/ko/math/scheme_theory/morphism_of_schemes#def9)에서 $X$의 functor of points라 부르기로 이미 약속하였다. 우리는 이 functor가 $X$를 isomorphism까지 완전히 결정한다는 것을 Yoneda 보조정리를 통해 확인하고, 이러한 functorial한 관점이 affine space, projective space, Grassmannian, fiber product 등을 다룰 때 어떻게 자연스러운 언어를 제공하는지를 살펴본다.
 
 ## Functor of points
 
@@ -165,7 +165,7 @@ $$\mathbb{G}_m(T)\cong \Gamma(T, \mathcal{O}_T)^\times$$
 $\mathbb{Z}[\x, \x^{-1}]=\mathbb{Z}[\x]_\x$이므로, ring homomorphism $\mathbb{Z}[\x, \x^{-1}] \rightarrow \Gamma(T, \mathcal{O}_T)$은 $\x$의 image $a$가 가역인 것들과 일대일대응한다. 실제로 localization의 universal property에 의하여 $\mathbb{Z}[\x]_\x$에서 나가는 ring homomorphism은 $\x$의 image를 가역원으로 보내는 $\mathbb{Z}[\x] \rightarrow \Gamma(T, \mathcal{O}_T)$들과 정확히 대응하고, [명제 5](#prop5)에서 본 것처럼 이는 가역원 $a\in \Gamma(T, \mathcal{O}_T)^\times$를 하나 고르는 것이다. 
 :::
 
-이제 affine이 아닌 scheme의 대표적인 예로 projective space $\mathbb{P}^n$의 functor of points를 살펴보자. 고전적으로 $\mathbb{P}^n$의 점은 homogeneous coordinates $[x_0:\cdots:x_n]$, 즉 영이 아닌 $(n+1)$-tuple을 전체 scaling으로 동일시한 것이다. 이미 [§스킴 사이의 사상, ⁋예시 5](/ko/math/scheme_theory/morphism_of_schemes#ex5)에서 우리는 ring $A$ 위의 scheme $X$와 함수 $f_0,\ldots, f_n\in \Gamma(X, \mathcal{O}_X)$이 적절한 조건을 만족할 때 morphism $X \rightarrow \mathbb{P}^n_A$이 얻어지는 것을 보았다. Functorial한 관점은 이 구성을 정확한 표현으로 만든다. 우선 line bundle을 다루어야 한다. Scheme $T$ 위의 rank $1$ locally free $\mathcal{O}_T$-module, 곧 invertible sheaf는 [§준연접층, ⁋정의 12](/ko/math/scheme_theory/quasicoherent_sheaves#def12)에서 정의하였고 이것이 line bundle에 대응한다는 것도 그곳에서 확인하였으므로, 여기에서는 그 절단에 관한 다음 개념만을 약속한다. 
+이제 affine이 아닌 scheme의 대표적인 예로 projective space $\mathbb{P}^n$의 functor of points를 살펴보자. 고전적으로 $\mathbb{P}^n$의 점은 homogeneous coordinates $[x_0:\cdots:x_n]$, 즉 영이 아닌 $(n+1)$-tuple을 전체 scaling으로 동일시한 것이다. 이미 [§스킴 사이의 사상, ⁋예시 5](/ko/math/scheme_theory/morphism_of_schemes#ex5)에서 우리는 ring $A$ 위의 scheme $X$와 함수 $f_0,\ldots, f_n\in \Gamma(X, \mathcal{O}_X)$이 적절한 조건을 만족할 때 morphism $X \rightarrow \mathbb{P}^n_A$이 얻어지는 것을 보았다. Functorial한 관점은 이 구성을 정확한 표현으로 만든다. 우선 line bundle을 다루어야 한다. Scheme $T$ 위의 rank $1$ locally free $\mathcal{O}_T$-module, 곧 invertible sheaf가 line bundle에 대응한다는 것은 [§준연접층, ⁋정의 12](/ko/math/scheme_theory/quasicoherent_sheaves#def12)에서 확인하였으므로, 여기에서는 그 절단에 관한 다음 개념만을 약속한다. 
 
 ::: 정의 8
 Scheme $T$ 위의 line bundle $\mathcal{L}$의 절단 $s_0,\ldots, s_n\in \Gamma(T, \mathcal{L})$이 $\mathcal{L}$을 *globally generate<sub>전역생성</sub>*한다는 것은, 각각의 점 $t\in T$에서 stalk $\mathcal{L}_t$이 germ $(s_0)_t,\ldots, (s_n)_t$로 $\mathcal{O}_{T,t}$-module로서 생성되는 것이다. 두 데이터 $(\mathcal{L}, s_0,\ldots, s_n)$과 $(\mathcal{L}', s_0',\ldots, s_n')$이 *isomorphic*하다는 것은, $\mathcal{O}_T$-module isomorphism $\psi:\mathcal{L} \rightarrow \mathcal{L}'$이 존재하여 각각의 $i$에 대하여 $\psi(s_i)=s_i'$인 것이다. 

@@ -15,19 +15,17 @@ published: false
 drift_needed: true
 ---
 
-Algebraic variety나 manifold 위에서 differential form은 tangent space와 그 쌍대를 통해 기하학을 해석학적으로 다루는 도구이다. Scheme의 세계에서는 좌표나 극한을 직접 쓸 수 없으므로, 미분을 순수하게 대수적으로 정의해야 한다. 그 출발점은 Kähler 미분 module로, 이는 Leibniz rule을 만족하는 도분 가운데 가장 보편적인 것을 표현한다. ([\[가환대수학\] §미분, ⁋정의 3](/ko/math/commutative_algebra/differentials#def3)) 이번 글에서는 우선 affine 수준에서 Kähler 미분 module과 그에 딸린 두 exact sequence를 상기한 뒤, 이를 scheme morphism $f:X \rightarrow S$에 대해 sheaf로 옮긴 *cotangent sheaf* $\Omega_{X/S}$를 정의한다. 이 sheaf는 affine 위에서 Kähler 미분 module의 associated sheaf를 붙인 것이자, 동시에 대각선 morphism의 conormal로도 얻어진다. 이로부터 tangent sheaf와 Zariski tangent space, 그리고 affine space와 projective space 위의 미분층의 구조를 살펴보고, 마지막으로 $\Omega_{X/k}$가 locally free일 때 그 top exterior power로 얻어지는 canonical sheaf $\omega_X$를 정의하여 사영공간에서 계산한 뒤 Serre duality를 진술한다.
+이제 우리는 미분의 개념을 정의한다. Algebraic variety나 scheme 위에서는 해석학적인 극한이 존재하지 않으므로, 이를 정의하기 위해서는 순수하게 대수적인 방식을 택해야 하며 그 출발점은 가환대수학에서 구성한 Kähler differential module이다. 이 글에서는 이를 scheme morphism의 cotangent sheaf로 붙이고, tangent sheaf와 Zariski tangent space, affine space와 projective space에서의 계산을 거쳐 canonical sheaf의 정의와 Serre duality의 진술까지 정리한다.
 
-## Kähler 미분 가군과 완전열
+## Kähler differential module과 exact sequence
 
-먼저 affine 수준에서의 미분을 상기한다. Ring $A$와 $A$-algebra $B$에 대하여, $B$의 $A$에 대한 *Kähler differential module* $\Omega_{B/A}$와 *universal $A$-derivation* $d:B \rightarrow \Omega_{B/A}$가 정의된다. ([\[가환대수학\] §미분, ⁋정의 3](/ko/math/commutative_algebra/differentials#def3)) 이는 $A$-derivation들의 functor $\Der_A(B, -)$를 표현하는 $B$-module로서, 임의의 $B$-module $M$에 대하여 자연스러운 isomorphism
+먼저 affine 수준의 대수적인 도구들을 상기한다. Ring $A$와 $A$-algebra $B$에 대하여, $B$의 $A$에 대한 *Kähler differential module* $\Omega_{B/A}$와 *universal $A$-derivation* $d:B \rightarrow \Omega_{B/A}$가 정의된다. ([\[가환대수학\] §미분, ⁋정의 3](/ko/math/commutative_algebra/differentials#def3)) 이는 $A$-derivation들의 functor $\Der_A(B, -)$를 표현하는 $B$-module로서, 임의의 $B$-module $M$에 대하여 natural isomorphism
 
 $$\Der_A(B, M)\cong \Hom_B(\Omega_{B/A}, M)$$
 
-이 성립한다. ([\[가환대수학\] §미분, ⁋보조정리 2](/ko/math/commutative_algebra/differentials#lem2)) 즉 $\Omega_{B/A}$는 원소들 $db$ ($b\in B$)로 생성되며, $d(xy)=xdy+ydx$와 $A$-선형성을 relation으로 가지는 $B$-module이다.
+을 통해 characterize된다. ([\[가환대수학\] §미분, ⁋보조정리 2](/ko/math/commutative_algebra/differentials#lem2)) 즉, $\Omega_{B/A}$는 원소들 $db$로 생성되며, 라이프니츠 법칙 $d(xy)=xdy+ydx$과 $A$-linearity를 relation으로 가지는 $B$-module이다. 이것이 가지는 핵심적인 두 개의 exact sequence들은 다음과 같다. 
 
-Scheme morphism으로 옮기기에 앞서, $\Omega$가 ring의 합성과 quotient에 대해 가지는 두 가지 functorial한 exact sequence를 정리해 둔다. 이들은 이후 cotangent sheaf의 국소적 거동을 통제하는 핵심 도구이다. 첫째는 ring들의 합성 $A \rightarrow B \rightarrow C$에 대한 추이 exact sequence이다.
-
-::: 명제 1 (추이 exact sequence)
+::: 명제 1 (Cotangent exact sequence)
 $A$-algebra $B$와 $B$-algebra $C$가 주어졌다 하자. 합성 $A \rightarrow B \rightarrow C$를 통해 $C$를 $A$-algebra로 보면, $C$-module들의 sequence
 
 $$\Omega_{B/A}\otimes_BC \longrightarrow \Omega_{C/A} \longrightarrow \Omega_{C/B} \longrightarrow 0$$
@@ -35,10 +33,10 @@ $$\Omega_{B/A}\otimes_BC \longrightarrow \Omega_{C/A} \longrightarrow \Omega_{C/
 은 exact이다.
 :::
 ::: 증명
-이는 [\[가환대수학\] §미분, ⁋명제 5](/ko/math/commutative_algebra/differentials#prop5)에서 $E=B$, $E'=C$, 그리고 base ring을 $A$로 두어 얻어지는 cotangent sequence 그 자체이다. 첫째 morphism은 universal derivation $d_{C/A}$를 $B$에서 온 원소들로 제한하여 base change한 $\Omega'_{\varphi/A}:\Omega_{B/A}\otimes_BC \rightarrow \Omega_{C/A}$이며, 둘째 morphism은 functoriality로 유도되는 $\Omega_\varphi:\Omega_{C/A} \rightarrow \Omega_{C/B}$이다. 인용한 명제에 의하여 이 sequence는 exact이다.
+이 exact sequence는 정확히 [\[가환대수학\] §미분, ⁋명제 6](/ko/math/commutative_algebra/differentials#prop6)에서 $E=B$, $E'=C$, 그리고 base ring을 $A$로 두어 얻어지는 cotangent sequence이다. 
 :::
 
-이 exact sequence는 미분이 "두 단계의 확장"을 어떻게 누적하는지를 보여준다. $\Omega_{C/B}$는 $B$에서 온 좌표를 상수로 본 미분이므로, $\Omega_{C/A}$에서 $B$ 방향의 미분 $\Omega_{B/A}\otimes_BC$의 image를 quotient한 것이 $\Omega_{C/B}$가 된다. 둘째는 $C$가 $B$의 quotient로 주어질 때의 exact sequence로, conormal exact sequence라 불린다.
+$\Omega_{C/B}$는 $B$에서 온 좌표를 상수로 본 미분이므로, 이 exact sequence는 $\Omega_{C/A}$에서 $B$ 방향의 미분 $\Omega_{B/A}\otimes_BC$의 image를 quotient한 것이 $\Omega_{C/B}$라는 것을 말한다. 남은 하나의 exact sequence는 다음과 같다.
 
 ::: 명제 2 (Conormal exact sequence)
 $A$-algebra $B$의 ideal $\mathfrak{a}$에 대하여 $C=B/\mathfrak{a}$라 하자. 그럼 $C$-module들의 sequence
@@ -48,40 +46,40 @@ $$\mathfrak{a}/\mathfrak{a}^2 \overset{\bar{d}}{\longrightarrow} \Omega_{B/A}\ot
 은 exact이며, 첫째 morphism $\bar{d}$는 $f+\mathfrak{a}^2\mapsto df\otimes 1$로 주어진다.
 :::
 ::: 증명
-Surjection $\varphi:B \rightarrow C=B/\mathfrak{a}$에 [\[가환대수학\] §미분, ⁋명제 6](/ko/math/commutative_algebra/differentials#prop6)을 적용하면, $K=\ker\varphi=\mathfrak{a}$이므로 주어진 sequence를 그대로 얻는다. 첫째 morphism $\bar{d}:\mathfrak{a}/\mathfrak{a}^2 \rightarrow \Omega_{B/A}\otimes_BC$는 $d_{B/A}\vert_\mathfrak{a}$를 base change한 뒤 $\mathfrak{a}^2$을 kernel에 포함시켜 유도한 것으로, 인용한 명제의 증명에서 보았듯 $f+\mathfrak{a}^2\mapsto df\otimes 1$로 주어진다.
+Surjection $\varphi:B \rightarrow C=B/\mathfrak{a}$에 [\[가환대수학\] §미분, ⁋명제 7](/ko/math/commutative_algebra/differentials#prop7)을 적용하면 된다.
 :::
 
-여기서 $C=B/\mathfrak{a}$를 closed subscheme으로 생각하면, $\mathfrak{a}/\mathfrak{a}^2$은 그 *conormal module*에 해당한다. 즉 $\mathfrak{a}$가 정의하는 부분다양체의 법선 방향을 ideal의 일차항 $\mathfrak{a}/\mathfrak{a}^2$이 담고 있으며, conormal exact sequence는 부분다양체 위의 미분 $\Omega_{C/A}$를 ambient의 미분 $\Omega_{B/A}\otimes_BC$에서 법선 방향을 잘라내어 얻는다는 것을 말한다. 이 두 exact sequence는 모두 $\otimes_B C$나 quotient에 대해 자연스러우므로, affine open에서 affine open으로 제한하더라도 그대로 유지되며, 이것이 다음 절에서 미분층을 gluing할 수 있게 하는 형식적 근거이다.
+여기서 $\mathfrak{a}/\mathfrak{a}^2$을 $C$의 *conormal module*이라 부르는데, 이 이름은 $\Spec C$를 $\Spec B$의 closed subscheme으로 보는 관점에서 온 것으로, 다음 절에서 conormal sheaf로 옮겨지며 기하학적 의미를 얻는다.
 
 ## Cotangent sheaf
 
-이제 scheme morphism $f:X \rightarrow S$에 대해 미분을 sheaf로 정의한다. 직관적으로 $\Omega_{X/S}$는 각 affine open 위에서 Kähler 미분 module의 associated sheaf $\widetilde{\Omega_{B/A}}$이어야 하며, 이를 모든 affine open에 걸쳐 자연스럽게 붙인 것이다. 다만 단순히 붙이는 것만으로는 well-defined임이 자명하지 않으므로, 대각선 morphism을 이용한 좌표 독립적인 정의를 함께 제시하고 둘이 일치함을 본다. 먼저 affine 위에서의 국소 모형을 명시한다.
+이제 우리는 scheme morphism $f:X \rightarrow S$에 대해 미분을 sheaf $\Omega_{X/S}$로 정의한다. 우리는 이미 이것의 대수적인 모델, 즉 Kähler differential module을 가지고 있으므로 이를 어떻게 정의해야 할지는 명백하다. 즉, 국소적으로 이 scheme morphism이 ring homomorphism $A\rightarrow B$에서 온다면, 그 Kähler differential module $\Omega_{B/A}$의 associated sheaf $\widetilde{\Omega_{B/A}}$를 생각한 후, 이를 모든 affine open에 대해 붙여주면 된다. 
 
-$S=\Spec A$, $X=\Spec B$이고 $f$가 ring homomorphism $A \rightarrow B$로부터 올 때, $\Omega_{B/A}$는 $B$-module이므로 associated sheaf $\widetilde{\Omega_{B/A}}$를 정의한다. ([§준연접층, ⁋정의 4](/ko/math/scheme_theory/quasicoherent_sheaves#def4)) 이 associated sheaf는 affine open을 더 작은 principal open으로 줄여도 호환되는데, 임의의 $g\in B$에 대하여 localization과 Kähler 미분이 commute하므로
+이를 위해 필요한 것은 이 associated sheaf는 affine open을 더 작은 principal open으로 줄여도 호환된다는 것으로, 임의의 $g\in B$에 대하여 localization과 Kähler 미분이 commute하므로 ([\[가환대수학\] §미분, ⁋명제 5](/ko/math/commutative_algebra/differentials#prop5))
 
 $$\Omega_{B_g/A}\cong (\Omega_{B/A})_g$$
 
-이고, 따라서 [§준연접층, ⁋명제 5](/ko/math/scheme_theory/quasicoherent_sheaves#prop5)에 의하여 $\widetilde{\Omega_{B/A}}\vert_{D(g)}\cong \widetilde{\Omega_{B_g/A}}$가 성립한다. 이렇듯 국소 모형들이 restriction에 대해 일관되므로, 이들을 붙여 $X$ 전체 위의 quasi-coherent sheaf를 얻는다. 좌표에 의존하지 않는 정의는 대각선 morphism을 통한 것이다.
+이고, 따라서 [§준연접층, ⁋명제 5](/ko/math/scheme_theory/quasicoherent_sheaves#prop5)에 의하여 $\widetilde{\Omega_{B/A}}\vert_{D(g)}\cong \widetilde{\Omega_{B_g/A}}$가 성립한다. Base 쪽을 줄이는 것도 마찬가지인데, $h\in A$에 대하여 $\Omega_{A_h/A}\cong\Omega_{A/A}\otimes_AA_h=0$이므로 cotangent sequence가 ([\[가환대수학\] §미분, ⁋명제 6](/ko/math/commutative_algebra/differentials#prop6)) $\Omega_{B/A}\cong\Omega_{B/A_h}$를 주기 때문이다. 여기에 $\Omega$의 functoriality를 ([\[가환대수학\] §미분, ⁋명제 4](/ko/math/commutative_algebra/differentials#prop4)) 더하면, 두 chart가 겹치는 부분을 양쪽에서 principal인 열린집합들로 덮어 local model들을 canonical하게 identify할 수 있고 이 identification들은 triple intersection 위에서 cocycle condition을 만족한다. 곧 아래의 대응은 $X$ 위의 sheaf를 유일하게 결정한다. ([\[위상수학\] §층, ⁋명제 8](/ko/math/topology/sheaves#prop8))
 
 ::: 정의 3
-Scheme morphism $f:X \rightarrow S$에 대하여, [§값매김환, ⁋정의 3](/ko/math/scheme_theory/valuative_criteria#def3)의 대각선 morphism $\Delta:X \rightarrow X\times_SX$을 생각하자. $\Delta$의 image의 ideal sheaf를 $\mathcal{I}$라 할 때, $X$ 위의 *cotangent sheaf<sub>여접층</sub>* 혹은 *sheaf of relative differentials<sub>상대 미분층</sub>* $\Omega_{X/S}$를 conormal sheaf
+Scheme morphism $f:X \rightarrow S$에 대하여, $X$ 위의 *cotangent sheaf<sub>여접층</sub>* 혹은 *sheaf of relative differentials<sub>상대 미분층</sub>* $\Omega_{X/S}$를, $f(U)\subseteq V$인 affine open subset들 $U=\Spec B\subseteq X$와 $V=\Spec A\subseteq S$마다
 
-$$\Omega_{X/S}=\Delta^\ast\bigl(\mathcal{I}/\mathcal{I}^2\bigr)$$
+$$\Omega_{X/S}\vert_U=\widetilde{\Omega_{B/A}}$$
 
-로 정의한다. 여기에서 $\Delta^\ast$는 pullback이다. ([§준연접층, ⁋정의 14](/ko/math/scheme_theory/quasicoherent_sheaves#def14))
+로 두어 얻어지는 $\mathcal{O}_X$-module로 정의한다. ([§준연접층, ⁋정의 4](/ko/math/scheme_theory/quasicoherent_sheaves#def4))
 :::
 
-이 정의에서 $\mathcal{I}/\mathcal{I}^2$은 $\Delta(X)$ 위의 sheaf로 볼 수 있고, $\Delta$가 $X$를 그 image와 동일시하므로 $\Delta^\ast$를 통해 $X$ 위의 sheaf로 끌어온 것이다. 대각선의 ideal sheaf를 conormal로 취하는 것은 affine 수준에서 $B\otimes_AB \rightarrow B$의 kernel $\mathfrak{a}$를 $\mathfrak{a}/\mathfrak{a}^2$로 보는 것에 대응하며, 다음 명제가 이 좌표 독립적 정의와 앞서의 국소 모형이 일치함을 보장한다.
+이러한 $U$들이 $X$의 base를 이루므로 이 대응이 $\Omega_{X/S}$를 결정하며, 각 chart 위에서 associated sheaf이므로 $\Omega_{X/S}$는 quasi-coherent sheaf이다. ([§준연접층, ⁋정리 10](/ko/math/scheme_theory/quasicoherent_sheaves#thm10)) 이 정의는 계산에 곧바로 쓸 수 있는 대신 chart의 선택을 거쳐 가므로, 좌표에 의존하지 않는 묘사를 함께 두는 것이 좋다. 이는 대각선 morphism으로부터 얻어진다.
 
 ::: 명제 4
-Scheme morphism $f:X \rightarrow S$에 대하여, $\Omega_{X/S}$는 $X$ 위의 quasi-coherent sheaf이다. 더욱이 $U=\Spec B\subseteq X$와 $V=\Spec A\subseteq S$가 $f(U)\subseteq V$인 affine open subset들이면
+Scheme morphism $f:X \rightarrow S$에 대하여, [§값매김환, ⁋정의 3](/ko/math/scheme_theory/valuative_criteria#def3)의 대각선 morphism $\Delta:X \rightarrow X\times_SX$을 생각하고 $\Delta$의 image의 ideal sheaf를 $\mathcal{I}$라 하자. 그럼 conormal sheaf와의 isomorphism
 
-$$\Omega_{X/S}\vert_U\cong \widetilde{\Omega_{B/A}}$$
+$$\Omega_{X/S}\cong\Delta^\ast\bigl(\mathcal{I}/\mathcal{I}^2\bigr)$$
 
-가 성립한다.
+가 성립한다. 여기에서 $\Delta^\ast$는 pullback이다. ([§준연접층, ⁋정의 14](/ko/math/scheme_theory/quasicoherent_sheaves#def14))
 :::
 ::: 증명
-먼저 affine morphism $f:\Spec B \rightarrow \Spec A$의 경우에 [정의 3](#def3)을 계산한다. 이 경우 $X\times_SX=\Spec(B\otimes_AB)$이고 ([§올곱, ⁋보조정리 2](/ko/math/scheme_theory/fiber_products#lem2)), 대각선 morphism $\Delta$는 곱사상 $\mu:B\otimes_AB \rightarrow B$, $b\otimes b'\mapsto bb'$로부터 온다. $\mathfrak{a}=\ker\mu$라 하면 $\Delta$의 image의 ideal sheaf는 $\widetilde{\mathfrak{a}}$이고, [§준연접층, ⁋명제 6](/ko/math/scheme_theory/quasicoherent_sheaves#prop6)의 exactness로부터 $\mathcal{I}/\mathcal{I}^2\cong \widetilde{\mathfrak{a}/\mathfrak{a}^2}$이다.
+양변 모두 affine chart 위에서의 값으로 결정되므로, [정의 3](#def3)의 $U$와 $V$ 위에서 두 sheaf가 canonical하게 identify됨을 보이면 된다. 먼저 affine morphism $f:\Spec B \rightarrow \Spec A$의 경우에 $\Delta^\ast(\mathcal{I}/\mathcal{I}^2)$을 계산한다. 이 경우 $X\times_SX=\Spec(B\otimes_AB)$이고 ([§올곱, ⁋보조정리 2](/ko/math/scheme_theory/fiber_products#lem2)), 대각선 morphism $\Delta$는 곱사상 $\mu:B\otimes_AB \rightarrow B$, $b\otimes b'\mapsto bb'$로부터 온다. $\mathfrak{a}=\ker\mu$라 하면 $\Delta$의 image의 ideal sheaf는 $\widetilde{\mathfrak{a}}$이고, [§준연접층, ⁋명제 6](/ko/math/scheme_theory/quasicoherent_sheaves#prop6)의 exactness로부터 $\mathcal{I}/\mathcal{I}^2\cong \widetilde{\mathfrak{a}/\mathfrak{a}^2}$이다.
 
 이제 $B$-module로서
 
@@ -96,22 +94,28 @@ $$\begin{aligned}
 
 이 성립하므로 ($\mathfrak{a}/\mathfrak{a}^2$ 위에서 $b\otimes 1$과 $1\otimes b$가 같은 action을 하므로) $\delta$는 $A$-derivation이다. 따라서 universal property에 의하여 $\Omega_{B/A} \rightarrow \mathfrak{a}/\mathfrak{a}^2$이 유도되고, 두 morphism이 서로 역임은 generator 위에서 확인된다. ($db\mapsto \delta(b)\mapsto db$이고 $\mathfrak{a}/\mathfrak{a}^2$은 $\delta(b)$들로 생성된다.) 그러므로
 
-$$\Omega_{\Spec B/\Spec A}=\Delta^\ast\widetilde{\mathfrak{a}/\mathfrak{a}^2}\cong \widetilde{\mathfrak{a}/\mathfrak{a}^2}\cong \widetilde{\Omega_{B/A}}$$
+$$\Delta^\ast\widetilde{\mathfrak{a}/\mathfrak{a}^2}\cong \widetilde{\mathfrak{a}/\mathfrak{a}^2}\cong \widetilde{\Omega_{B/A}}$$
 
-이고, 특히 affine 위에서 $\Omega_{X/S}$는 associated sheaf이므로 quasi-coherent sheaf이다. ($\Delta^\ast$는 $\Delta$가 closed immersion일 때 $\Delta(X)$ 위의 sheaf를 그 위에서 동일시하여 끌어오는 것이므로 module은 그대로 $\mathfrak{a}/\mathfrak{a}^2$이다.)
+이고, 이는 [정의 3](#def3)이 준 값과 같다. 첫 isomorphism에서 $\Delta^\ast$는 closed immersion $\Delta$가 $X$를 $\Delta(X)$와 동일시하며 그 위의 sheaf를 끌어오는 것이므로, module 수준에서는 $\mathfrak{a}/\mathfrak{a}^2$이 그대로 유지된다.
 
-일반적인 $f$의 경우, $U=\Spec B\subseteq X$와 $V=\Spec A\subseteq S$가 $f(U)\subseteq V$인 affine open이면 $\Delta(U)\subseteq U\times_VU$이고 이는 $X\times_SX$의 open subset이다. 대각선의 ideal sheaf를 이 open 위로 제한하면 다시 곱사상 $B\otimes_AB \rightarrow B$의 kernel이 되므로, 위의 계산에 의하여 $\Omega_{X/S}\vert_U\cong \widetilde{\Omega_{B/A}}$이다. 이러한 affine open들이 $X$를 덮고, 그 위에서 associated sheaf이므로 $\Omega_{X/S}$는 quasi-coherent sheaf이다. ([§준연접층, ⁋정리 10](/ko/math/scheme_theory/quasicoherent_sheaves#thm10))
+일반적인 $f$의 경우, $U=\Spec B\subseteq X$와 $V=\Spec A\subseteq S$가 $f(U)\subseteq V$인 affine open이면 $\Delta(U)\subseteq U\times_VU$이고 이는 $X\times_SX$의 open subset이다. 대각선의 ideal sheaf를 이 open 위로 제한하면 다시 곱사상 $B\otimes_AB \rightarrow B$의 kernel이 되므로, 위의 계산이 그대로 적용되어 $\Delta^\ast(\mathcal{I}/\mathcal{I}^2)\vert_U\cong \widetilde{\Omega_{B/A}}=\Omega_{X/S}\vert_U$이다. 이 identification은 universal derivation으로부터 canonical하게 만들어진 것이므로 chart를 줄이거나 바꾸어도 서로 일치하며, 따라서 하나의 global isomorphism으로 붙는다.
 :::
 
-따라서 cotangent sheaf는 두 정의가 일치하며, 실용적으로는 [명제 4](#prop4)에 따라 affine open 위에서 $\widetilde{\Omega_{B/A}}$로 계산하면 된다. 앞 절의 두 exact sequence도 associated sheaf functor의 exactness를 통해 sheaf 수준으로 곧바로 옮겨진다. 가령 scheme morphism들의 합성 $X \rightarrow Y \rightarrow S$에 대하여, 각 affine open 위에서 [명제 1](#prop1)을 associated sheaf로 옮기면 $\mathcal{O}_X$-module층들의 exact sequence
+여기에서 $\mathcal{I}/\mathcal{I}^2$은 $\Delta(X)$ 위의 sheaf로 볼 수 있고, $\Delta$가 $X$를 그 image와 동일시하므로 $\Delta^\ast$를 통해 $X$ 위의 sheaf로 끌어온 것이다. [명제 4](#prop4)가 좌표에 의존하지 않는 묘사를 주지만, 실제 계산은 여전히 [정의 3](#def3)에 따라 affine open 위에서 $\widetilde{\Omega_{B/A}}$로 하면 된다.
+
+앞 절의 두 exact sequence도 associated sheaf functor의 exactness를 통해 sheaf 수준으로 곧바로 옮겨진다. Scheme morphism들의 합성 $X \rightarrow Y \rightarrow S$와 그 첫 morphism $g: X \rightarrow Y$에 대하여, 각 affine open 위에서 [명제 1](#prop1)을 associated sheaf로 옮기면 $\mathcal{O}_X$-module층들의 exact sequence
 
 $$g^\ast\Omega_{Y/S} \longrightarrow \Omega_{X/S} \longrightarrow \Omega_{X/Y} \longrightarrow 0$$
 
-을 얻으며 (단 $g:X \rightarrow Y$), closed subscheme $X\hookrightarrow Y$가 ideal sheaf $\mathcal{J}$로 주어질 때 [명제 2](#prop2)를 옮기면 conormal exact sequence
+을 얻으며, closed subscheme $Z\hookrightarrow Y$가 ideal sheaf $\mathcal{J}$로 주어질 때 [명제 2](#prop2)를 옮기면 conormal exact sequence
 
-$$\mathcal{J}/\mathcal{J}^2 \longrightarrow \Omega_{Y/S}\vert_X \longrightarrow \Omega_{X/S} \longrightarrow 0$$
+$$\mathcal{J}/\mathcal{J}^2 \longrightarrow \Omega_{Y/S}\vert_Z \longrightarrow \Omega_{Z/S} \longrightarrow 0$$
 
-을 얻는다. 이 두 exact sequence는 미분층을 실제로 계산하는 표준 도구이다.
+을 얻는다. 이 두 exact sequence는 미분층을 실제로 계산하는 표준 도구이며, scheme의 언어로 적고 나면 각각이 무엇을 말하는지도 드러난다.
+
+첫째 exact sequence를 읽기 위해서는 아래첨자에 적힌 상대성이 무엇을 뜻하는지를 먼저 보아야 한다. 우리는 $f:X \rightarrow S$를 $S$로 parametrize된 family로 읽으며 ([§스킴 사이의 사상, ⁋예시 10](/ko/math/scheme_theory/morphism_of_schemes#ex10)), 이 family의 $s\in S$ 위에서의 fiber는 fiber product $X\times_S\Spec\kappa(s)$로 정의된다. ([§올곱, ⁋정의 12](/ko/math/scheme_theory/fiber_products#def12)) 그런데 $\Omega_{X/S}$가 $S$에서 온 함수를 상수로 보는 것은 정확히 base 방향을 지운다는 뜻이므로, $\Omega_{X/S}$가 기록하는 것은 이 fiber를 따르는 방향의 미분이다. 그럼 $X \rightarrow Y$의 fiber가 $X \rightarrow S$의 fiber 안에 들어 있으므로 $Y$ 위에서 잰 fiber 방향은 $S$ 위에서 잰 것보다 좁고, 첫째 exact sequence는 그 차이가 정확히 $Y$에서 끌어온 미분 $g^\ast\Omega_{Y/S}$의 image라고 말한다. 가령 $S=\Spec k$, $Y=\mathbb{A}^1_k$, $X=\mathbb{A}^2_k$이고 $g$가 첫 좌표로의 projection이면, $\Omega_{X/S}$는 $d\x$와 $d\y$를 기저로 가지는 반면 $g$의 fiber는 $\x$가 고정된 수직선이라 $\Omega_{X/Y}$에는 $d\y$만 남으며, 지워진 $d\x$가 정확히 $g^\ast\Omega_{Y/S}$에서 온 부분이다.
+
+둘째 exact sequence에서 $\mathcal{J}/\mathcal{J}^2$은 $Z$의 conormal sheaf이고, 그 dual이 $Z$가 $Y$ 안에서 가지는 normal bundle에 해당한다. 앞 절에서 본 $\mathfrak{a}^2$의 소멸은 $\mathcal{J} \rightarrow \Omega_{Y/S}\vert_Z$가 보는 것이 $Z$를 잘라내는 방정식 자체가 아니라 $Z$를 따라 취한 그 일차항이라는 뜻인데, 이것이 무엇인지는 국소적으로 보면 분명하다. $S=\Spec A$, $Y=\Spec A[\x_1,\ldots, \x_n]$이고 $\mathcal{J}$가 $f_1,\ldots, f_r$로 생성되면 $\Omega_{Y/S}\vert_Z$는 $d\x_1,\ldots, d\x_n$을 기저로 가지고 $f_j\mapsto\sum_i(\partial f_j/\partial \x_i)d\x_i$이므로, 이 morphism을 그 기저로 적은 행렬이 곧 Jacobian $(\partial f_j/\partial \x_i)$이다. 따라서 conormal exact sequence는 $Z$ 위의 미분을 ambient의 미분 $\Omega_{Y/S}\vert_Z$에서 방정식들의 미분이 생성하는 부분, 곧 $Z$에 수직인 방향을 quotient하여 얻는다는 말이 되며, 한 점에서 이를 쌍대화하면 tangent space가 방정식들의 differential의 kernel로 주어진다는 [\[대수다양체\] §접공간과 매끄러움, ⁋명제 2](/ko/math/algebraic_varieties/tangent_spaces_and_smoothness#prop2)의 묘사로 돌아온다.
 
 ## Tangent sheaf와 Zariski 접공간
 
@@ -139,7 +143,7 @@ $$T_xX=\bigl(\Omega_{X/k}\otimes_{\mathcal{O}_X}\kappa(x)\bigr)^\vee=\Hom_{\kapp
 
 이 정의는 local ring의 maximal ideal을 통한 친숙한 묘사와 일치한다. $x$가 residue field $\kappa(x)=k$를 가지는 점, 곧 $k$-rational point이고 $(\mathcal{O}_{X,x}, \mathfrak{m}_x)$가 그 local ring일 때, conormal exact sequence를 stalk에서 분석하면 $\Omega_{X/k}\otimes \kappa(x)\cong \mathfrak{m}_x/\mathfrak{m}_x^2$이 성립한다. 따라서 Zariski tangent space는 $(\mathfrak{m}_x/\mathfrak{m}_x^2)^\vee$, 즉 cotangent space $\mathfrak{m}_x/\mathfrak{m}_x^2$의 쌍대이다. 한 점에서의 차원 $\dim_{\kappa(x)}T_xX$가 그 점의 국소적 차원 $\dim \mathcal{O}_{X,x}$과 같은지 여부가 그 점이 nonsingular한지를 가르는 기준이 되며, 일반적으로는 $\dim_{\kappa(x)}T_xX\geq \dim \mathcal{O}_{X,x}$이다.
 
-Regular local ring의 cotangent space $\mathfrak{m}/\mathfrak{m}^2$이 정확히 차원만큼의 dimension을 가진다는 사실은 ([\[가환대수학\] §정칙국소환](/ko/math/commutative_algebra/regular_local_rings)) 이 부등식이 등호가 되는 경우와 직접 연결된다. 모든 점에서 등호가 성립하여 $\Omega_{X/k}$가 locally free가 되는 경우가 smoothness에 해당하지만, $\Omega$의 국소자유성과 regularity의 정확한 관계는 별도의 논의를 요한다.
+Regular local ring의 cotangent space $\mathfrak{m}/\mathfrak{m}^2$이 정확히 차원만큼의 dimension을 가진다는 사실은 ([\[가환대수학\] §정칙국소환](/ko/math/commutative_algebra/regular_local_rings)) 이 부등식이 등호가 되는 경우와 직접 연결된다. 모든 점에서 등호가 성립하여 $\Omega_{X/k}$가 locally free가 되는 경우가 smoothness에 해당하지만, $\Omega$의 국소자유성과 regularity의 정확한 관계는 별도의 논의를 요한다. 이 글에서 필요한 만큼은 [§§Canonical sheaf](#canonical-sheaf)에서 돌아온다.
 
 ## Affine space와 사영공간의 미분층
 
@@ -153,7 +157,7 @@ $$\Omega_{\mathbb{A}^n_S/S}\cong \mathcal{O}_{\mathbb{A}^n_S}^{\oplus n}$$
 이며, $d\x_1,\ldots, d\x_n$을 기저로 가진다.
 :::
 ::: 증명
-문제가 $S$ 위에서 국소적이므로 $S=\Spec A$인 경우만 보이면 충분하다. 이 때 $\mathbb{A}^n_S=\Spec A[\x_1,\ldots, \x_n]$이고 $B=A[\x_1,\ldots, \x_n]$이라 하자. [명제 4](#prop4)에 의하여 $\Omega_{\mathbb{A}^n_S/S}\cong \widetilde{\Omega_{B/A}}$이므로 $\Omega_{B/A}$가 $d\x_1,\ldots, d\x_n$을 기저로 하는 자유 $B$-module임을 보이면 된다.
+문제가 $S$ 위에서 국소적이므로 $S=\Spec A$인 경우만 보이면 충분하다. 이 때 $\mathbb{A}^n_S=\Spec A[\x_1,\ldots, \x_n]$이고 $B=A[\x_1,\ldots, \x_n]$이라 하자. [정의 3](#def3)에 의하여 $\Omega_{\mathbb{A}^n_S/S}\cong \widetilde{\Omega_{B/A}}$이므로 $\Omega_{B/A}$가 $d\x_1,\ldots, d\x_n$을 기저로 하는 자유 $B$-module임을 보이면 된다.
 
 $\Omega_{B/A}$는 정의에 의하여 원소들 $df$ ($f\in B$)로 생성되는데, $d$가 $A$-derivation이므로 임의의 다항식 $f$에 대하여 chain rule
 
@@ -189,7 +193,7 @@ Euler exact sequence는 projective space 위의 미분기하를 떠받치는 가
 
 Cotangent sheaf가 locally free일 때, 그 top exterior power는 rank $1$의 sheaf, 곧 invertible sheaf가 된다. 이렇게 얻어지는 단 하나의 invertible sheaf가 $X$의 기하를 상당 부분 통제하며, variety의 세계에서 이는 cotangent bundle의 top exterior power로 정의한 canonical line bundle에 해당한다. ([\[대수다양체\] §표준선다발, ⁋정의 5](/ko/math/algebraic_varieties/canonical_bundle#def5)) Scheme 위에서도 같은 구성이 그대로 작동하므로, 먼저 sheaf의 exterior power를 정리해 둔다.
 
-$\mathcal{O}_X$-module층 $\mathcal{F}$와 정수 $r\geq 0$에 대하여, 각 열린집합 $U$에 $\mathcal{O}_X(U)$-module의 exterior power $\bigwedge^r_{\mathcal{O}_X(U)}\bigl(\mathcal{F}(U)\bigr)$를 대응시키는 presheaf의 sheafification을 $\bigwedge^r\mathcal{F}$로 적는다. ([\[다중선형대수학\] §텐서대수, ⁋정의 10](/ko/math/multilinear_algebra/tensor_algebras#def10)) Exterior power는 scalar 확장과 commute하므로 ([\[다중선형대수학\] §텐서대수, ⁋명제 14](/ko/math/multilinear_algebra/tensor_algebras#prop14)), 특히 $A$-module $M$과 $g\in A$에 대하여 $\bigl(\bigwedge^rM\bigr)_g\cong \bigwedge^r(M_g)$이다. 여기에서와 아래에서 인용하는 exterior algebra의 성질들은 인용처에서 characteristic이 $2$가 아니라는 가정 아래 놓인 alternating map의 논의 뒤에 서술되어 있으나, $\bigwedge$가 ideal $\langle x\otimes x\rangle$에 의한 quotient로 정의된 덕에 characteristic과 무관하게 성립하므로 임의의 $\mathcal{O}_X(U)$에 그대로 적용된다. 따라서 $U=\Spec A$ 위에서 $\mathcal{F}\vert_U\cong\widetilde M$이면 국소 모형들이 restriction과 호환되어
+$\mathcal{O}_X$-module층 $\mathcal{F}$와 정수 $r\geq 0$에 대하여, 각 열린집합 $U$에 $\mathcal{O}_X(U)$-module의 exterior power $\bigwedge^r_{\mathcal{O}_X(U)}\bigl(\mathcal{F}(U)\bigr)$를 대응시키는 presheaf의 sheafification을 $\bigwedge^r\mathcal{F}$로 적는다. ([\[다중선형대수학\] §텐서대수, ⁋정의 10](/ko/math/multilinear_algebra/tensor_algebras#def10)) Exterior power는 scalar 확장과 commute하므로 ([\[다중선형대수학\] §텐서대수, ⁋명제 14](/ko/math/multilinear_algebra/tensor_algebras#prop14)), 특히 $A$-module $M$과 $g\in A$에 대하여 $\bigl(\bigwedge^rM\bigr)_g\cong \bigwedge^r(M_g)$이다. 여기에서와 아래에서 인용하는 exterior algebra의 성질들은 $\bigwedge$가 ideal $\langle x\otimes x\rangle$에 의한 quotient로 정의된 덕에 characteristic과 무관하게 성립하므로, 임의의 $\mathcal{O}_X(U)$에 그대로 적용된다. 따라서 $U=\Spec A$ 위에서 $\mathcal{F}\vert_U\cong\widetilde M$이면 국소 모형들이 restriction과 호환되어
 
 $$\bigl(\bigwedge\nolimits^r\mathcal{F}\bigr)\big\vert_U\cong \widetilde{\bigwedge\nolimits^rM}$$
 
@@ -205,7 +209,11 @@ $$\omega_X=\bigwedge\nolimits^n\Omega_{X/k}=\det\Omega_{X/k}$$
 로 정의한다.
 :::
 
-앞의 관찰에 의하여 $\omega_X$는 invertible sheaf이다. 더 일반적으로 scheme morphism $f:X \rightarrow S$에 대하여 $\Omega_{X/S}$가 rank $n$의 locally free sheaf일 때 relative canonical sheaf $\omega_{X/S}=\det\Omega_{X/S}$를 같은 식으로 정의하며, $S=\Spec k$인 경우가 위의 정의이다. $\Omega_{X/k}$의 국소자유성이라는 가정은 [정의 6](#def6) 이후에 언급한 nonsingularity 조건과 맞닿아 있으나, 둘의 정확한 관계는 그곳에서 유보해 둔 대로 $k$와 $X$에 대한 추가 가정을 요구한다. $k$가 algebraically closed이고 $X$가 $k$ 위의 irreducible한 separated finite type scheme인 경우에는, $\Omega_{X/k}$가 locally free sheaf인 것이 $X$의 모든 closed point $x$에서 $\dim_{\kappa(x)}T_xX=\dim\mathcal{O}_{X,x}$가 성립하는 것과 동치이며 그 때 rank $n$은 $X$의 차원과 일치한다. ([§차원, ⁋정의 1](/ko/math/scheme_theory/dimension#def1)) 여기에서 점을 closed point로 제한하는 것은 필수적인데, 가령 $X=\mathbb{A}^1_k$의 generic point $\eta$에서는 $\Omega_{X/k}$가 자유임에도 $\Omega_{X/k}\otimes\kappa(\eta)\cong\Omega_{k(\x)/k}$가 $1$차원인 반면 $\dim\mathcal{O}_{X,\eta}=0$이기 때문이다. 또 $k$가 perfect가 아니면 rank와 차원의 일치 자체가 깨지는데, $k=\mathbb{F}_p(\x)$ 위의 $X=\Spec k(\x^{1/p})$는 차원이 $0$인 regular scheme이지만 $\Omega_{X/k}$는 rank $1$의 자유 sheaf이다. 반대로 $\Omega_{X/k}$가 locally free가 아니면 top exterior power가 invertible sheaf가 되지 않으므로 위의 정의는 그대로 쓰이지 않으며, 그러한 scheme까지 포괄하려면 *dualizing sheaf*를 따로 도입해야 한다.
+앞의 관찰에 의하여 $\omega_X$는 invertible sheaf이다. 더 일반적으로 scheme morphism $f:X \rightarrow S$에 대하여 $\Omega_{X/S}$가 rank $n$의 locally free sheaf일 때 relative canonical sheaf $\omega_{X/S}=\det\Omega_{X/S}$를 같은 식으로 정의하며, $S=\Spec k$인 경우가 위의 정의이다.
+
+$\Omega_{X/k}$의 국소자유성이라는 가정은 [정의 6](#def6) 이후에 유보해 둔 nonsingularity와의 관계가 작동하는 지점이다. $k$가 algebraically closed이고 $X$가 $k$ 위의 irreducible한 separated finite type scheme이면, $\Omega_{X/k}$가 locally free sheaf인 것은 $X$의 모든 closed point $x$에서 $\dim_{\kappa(x)}T_xX=\dim\mathcal{O}_{X,x}$가 성립하는 것과 동치이며, 그 때 rank $n$은 $X$의 차원과 일치한다. ([§차원, ⁋정의 1](/ko/math/scheme_theory/dimension#def1)) 여기에서 점을 closed point로 제한하는 것은 필수적이다. 가령 $X=\mathbb{A}^1_k$의 generic point $\eta$에서는 $\Omega_{X/k}$가 자유임에도 $\Omega_{X/k}\otimes\kappa(\eta)\cong\Omega_{k(\x)/k}$는 $1$차원이고 $\dim\mathcal{O}_{X,\eta}=0$이다.
+
+$k$에 대한 가정도 덜어낼 수 없다. $k$가 perfect가 아니면 rank와 차원의 일치부터 깨지는데, 가령 $k=\mathbb{F}_p(\x)$ 위의 $X=\Spec k(\x^{1/p})$는 차원이 $0$인 regular scheme이지만 $\Omega_{X/k}$는 rank $1$의 자유 sheaf이다. 반대로 $\Omega_{X/k}$가 locally free가 아니면 top exterior power가 invertible sheaf가 되지 않으므로 [정의 9](#def9)는 그대로 쓰이지 않으며, 그러한 scheme까지 포괄하려면 *dualizing sheaf*를 따로 도입해야 한다.
 
 Canonical sheaf를 실제로 계산할 때 쓰는 도구는 determinant가 short exact sequence를 따라 tensor product로 분해된다는 사실이다.
 
@@ -221,7 +229,7 @@ $$\det\mathcal{E}\cong \det\mathcal{E}'\otimes_{\mathcal{O}_X}\det\mathcal{E}''$
 이 존재한다.
 :::
 ::: 증명
-먼저 rank를 확인한다. $\mathcal{E}''$이 locally free이므로 각 점은 $\mathcal{E}''\vert_U\cong\mathcal{O}_U^{\oplus s}$이고 $\mathcal{E}'\vert_U\cong\mathcal{O}_U^{\oplus r}$인 열린근방 $U$를 가진다. Sheaf의 surjection은 stalk에서만 전사이므로 기저 section들의 lift를 얻으려면 $U$를 한 번 더 줄여야 하는데, 기저가 유한하므로 각 기저 section이 $\mathcal{E}$의 section으로 올라가는 더 작은 열린근방을 유한 번 교차하면 된다. 그렇게 줄인 $U$ 위에서 $\mathcal{E}''\vert_U$의 기저 section들을 $\mathcal{E}\vert_U$로 들어올리면 surjection $\mathcal{E}\vert_U \rightarrow \mathcal{E}''\vert_U$의 splitting을 얻으므로 $\mathcal{E}\vert_U\cong\mathcal{E}'\vert_U\oplus\mathcal{O}_U^{\oplus s}\cong\mathcal{O}_U^{\oplus(r+s)}$이고, 따라서 $\mathcal{E}$는 rank $r+s$의 locally free sheaf이다.
+먼저 rank를 확인한다. $\mathcal{E}''$이 locally free이므로 각 점은 $\mathcal{E}''\vert_U\cong\mathcal{O}_U^{\oplus s}$이고 $\mathcal{E}'\vert_U\cong\mathcal{O}_U^{\oplus r}$인 열린근방 $U$를 가진다. Sheaf의 surjection이 보장하는 것은 stalk 수준의 전사뿐이므로, $\mathcal{E}''\vert_U$의 각 기저 section을 $\mathcal{E}$의 section으로 들어올리려면 $U$를 더 줄여야 한다. 기저가 유한하므로, 각 section이 올라가는 열린근방들을 교차하여 그러한 $U$를 다시 얻는다. 그렇게 줄인 $U$ 위에서 $\mathcal{E}''\vert_U$의 기저 section들을 $\mathcal{E}\vert_U$로 들어올리면 surjection $\mathcal{E}\vert_U \rightarrow \mathcal{E}''\vert_U$의 splitting을 얻으므로 $\mathcal{E}\vert_U\cong\mathcal{E}'\vert_U\oplus\mathcal{O}_U^{\oplus s}\cong\mathcal{O}_U^{\oplus(r+s)}$이고, 따라서 $\mathcal{E}$는 rank $r+s$의 locally free sheaf이다.
 
 이제 morphism
 
@@ -231,7 +239,7 @@ $$\varphi:\det\mathcal{E}'\otimes_{\mathcal{O}_X}\det\mathcal{E}'' \longrightarr
 
 $$\varphi\bigl(\omega'\otimes(\bar t_1\wedge\cdots\wedge\bar t_s)\bigr)=\omega'\wedge t_1\wedge\cdots\wedge t_s$$
 
-로 정의한다. 여기에서 좌변의 $\omega'$은 inclusion $\mathcal{E}'\hookrightarrow\mathcal{E}$가 유도하는 $\det\mathcal{E}' \rightarrow \bigwedge^r\mathcal{E}$를 통해 옮긴 section을 뜻한다. 이 값은 lift의 선택에 무관한데, 두 lift의 차는 $\mathcal{E}'$의 section이므로 $t_i$를 $t_i+a_i$ ($a_i\in\mathcal{E}'(V)$)로 바꿀 때 생기는 차이가 적어도 하나의 $a_i$를 인수로 가지는 항들의 합이고, 위의 국소 splitting에서 $\omega'$이 $\mathcal{E}'\vert_V$의 기저 $f_1,\ldots, f_r$에 대해 $f_1\wedge\cdots\wedge f_r$의 배수인 반면 $a_i$는 $f_j$들의 $\mathcal{O}_V$-일차결합이므로, 그러한 항은 어떤 $f_j$를 두 번 포함하여 $0$이 되기 때문이다. 그러므로 국소적으로 정의된 $\varphi$들은 겹치는 부분에서 일치하며 전역적인 morphism으로 붙는다.
+로 정의한다. 여기에서 좌변의 $\omega'$은 inclusion $\mathcal{E}'\hookrightarrow\mathcal{E}$가 유도하는 $\det\mathcal{E}' \rightarrow \bigwedge^r\mathcal{E}$를 통해 옮긴 section을 뜻한다. 이 값은 lift의 선택에 무관하다. 두 lift의 차가 $\mathcal{E}'$의 section이므로, $t_i$를 $t_i+a_i$ ($a_i\in\mathcal{E}'(V)$)로 바꿀 때 생기는 차이는 적어도 하나의 $a_i$를 인수로 가지는 항들의 합이다. 그런데 국소 splitting 위에서 $\omega'$은 $\mathcal{E}'\vert_V$의 기저 $f_1,\ldots, f_r$에 대한 $f_1\wedge\cdots\wedge f_r$의 배수이고 $a_i$는 $f_j$들의 $\mathcal{O}_V$-일차결합이므로, 그러한 항은 어떤 $f_j$를 두 번 포함하여 소멸한다. 그러므로 국소적으로 정의된 $\varphi$들은 겹치는 부분에서 일치하며 전역적인 morphism으로 붙는다.
 
 $\varphi$가 isomorphism임은 국소적으로 확인하면 충분하다. 위의 $U$ 위에서 $\mathcal{E}'\vert_U$의 기저를 $f_1,\ldots, f_r$이라 하고 $\mathcal{E}''\vert_U$의 기저 $\bar g_1,\ldots, \bar g_s$의 lift를 $g_1,\ldots, g_s$라 하면, splitting에 의하여 $f_1,\ldots, f_r, g_1,\ldots, g_s$는 $\mathcal{E}\vert_U$의 기저이다. [\[다중선형대수학\] §텐서대수, ⁋명제 13](/ko/math/multilinear_algebra/tensor_algebras#prop13)에 의하여 $\det\mathcal{E}\vert_U$는 $f_1\wedge\cdots\wedge f_r\wedge g_1\wedge\cdots\wedge g_s$를 기저로 하는 rank $1$ 자유 sheaf이고, 마찬가지로 $(\det\mathcal{E}'\otimes\det\mathcal{E}'')\vert_U$는 $(f_1\wedge\cdots\wedge f_r)\otimes(\bar g_1\wedge\cdots\wedge\bar g_s)$를 기저로 한다. $\varphi$는 후자의 기저를 전자의 기저로 보내므로 $U$ 위에서 isomorphism이며, 따라서 전역적으로도 isomorphism이다.
 :::
@@ -268,7 +276,7 @@ $$H^i(X, \mathcal{E})\cong H^{n-i}\bigl(X, \omega_X\otimes_{\mathcal{O}_X}\mathc
 이 존재한다. 여기에서 $\mathcal{E}^\vee=\sHom_{\mathcal{O}_X}(\mathcal{E}, \mathcal{O}_X)$이고, $(-)^\ast$는 유한차원 $k$-벡터공간의 쌍대이다. ([§스킴의 층 코호몰로지, ⁋정리 8](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#thm8))
 :::
 
-이 정리의 증명은 trace map의 구성과 그 normalization, 그리고 finite morphism을 따라 duality를 옮기는 논증을 요구하여 이 글의 범위를 넘어서므로, [\[대수다양체\] §세르 쌍대성](/ko/math/algebraic_varieties/serre_duality)에 위임한다. 그곳에서는 먼저 $\mathbb{P}^n$ 위에서 isomorphism $H^n(\mathbb{P}^n, \omega_{\mathbb{P}^n})\cong k$이 정하는 trace map과 cup product로 pairing을 만들어 그것이 perfect pairing임을 보이고 ([\[대수다양체\] §세르 쌍대성, ⁋명제 2](/ko/math/algebraic_varieties/serre_duality#prop2)), 이어서 finite surjective morphism $X \rightarrow \mathbb{P}^n$을 따라 이를 일반의 $X$로 옮긴다. 이 morphism은 Noether normalization의 사영 판, 곧 일반적 위치의 linear projection에서 오는 것이며, affine 판인 [§차원, ⁋정리 9](/ko/math/scheme_theory/dimension#thm9)가 직접 주는 것은 아니다. 우리가 여기에서 가져다 쓰는 것은 그 결과인 isomorphism 자체이다.
+이 정리의 증명은 trace map의 구성과 그 normalization, 그리고 finite morphism을 따라 duality를 옮기는 논증을 요구하여 이 글의 범위를 넘어서므로, [\[대수다양체\] §세르 쌍대성](/ko/math/algebraic_varieties/serre_duality)에 위임한다. 그곳에서는 먼저 $\mathbb{P}^n$ 위에서 isomorphism $H^n(\mathbb{P}^n, \omega_{\mathbb{P}^n})\cong k$이 정하는 trace map과 cup product로 pairing을 만들어 그것이 perfect pairing임을 보이고 ([\[대수다양체\] §세르 쌍대성, ⁋명제 2](/ko/math/algebraic_varieties/serre_duality#prop2)), 이어서 finite surjective morphism $X \rightarrow \mathbb{P}^n$을 따라 이를 일반의 $X$로 옮긴다. 이 morphism은 일반적 위치의 linear projection, 곧 Noether normalization의 사영 판에서 온다 (affine 판인 [§차원, ⁋정리 9](/ko/math/scheme_theory/dimension#thm9)와는 별개의 진술이다). 우리가 여기에서 가져다 쓰는 것은 그 결과인 duality isomorphism 자체이다.
 
 $X=\mathbb{P}^n$과 $\mathcal{E}=\mathcal{O}(d)$인 경우에 [정리 12](#thm12)가 주장하는 바는 [예시 11](#ex11)에 의하여 isomorphism $H^i(\mathbb{P}^n, \mathcal{O}(d))\cong H^{n-i}(\mathbb{P}^n, \mathcal{O}(-d-n-1))^\ast$이며, 이는 이미 계산된 cohomology와 일치한다. 실제로 $i=0$이고 $d\geq 0$이면 좌변은 degree $d$의 homogeneous polynomial들이 이루는 $\binom{n+d}{n}$차원 공간이고, 우변의 $H^n(\mathbb{P}^n, \mathcal{O}(-d-n-1))$은 $\x_0^{-1},\ldots, \x_n^{-1}$들의 degree $d$ 부분이므로 역시 $\binom{n+d}{n}$차원이다. ([§스킴의 층 코호몰로지, ⁋정리 6](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#thm6))
 
