@@ -103,7 +103,7 @@ $$u(e_i)=\sum_{j\in J}x_{ji}f_j,\qquad u'(e'_{i'})=\sum_{j'\in J'}x'_{j'i'}f'_{j
 
 이고, 따라서
 
-$$(u\otimes u')(e_i\otimes e'_{i'})=u(e_i)\otimes u'(e'_{i'})=\sum_{(j,j')\in J\times J'}x_{ji}x'_{j'i'}\,(f_j\otimes f'_{j'})$$
+$$(u\otimes u')(e_i\otimes e'_{i'})=u(e_i)\otimes u'(e'_{i'})=\sum_{(j,j')\in J\times J'}x_{ji}x'_{j'i'}(f_j\otimes f'_{j'})$$
 
 이다. [보조정리 3](#lem3)에 의해 $(f_j\otimes f'_{j'})$들이 $L\otimes_AL'$의 basis이므로, $[u\otimes u']_{\mathcal{C}\otimes\mathcal{C}'}^{\mathcal{B}\otimes\mathcal{B}'}$의 $\bigl((j,j'),(i,i')\bigr)$ 성분은 $x_{ji}x'_{j'i'}$이고, 이는 정확히 $[u]_\mathcal{C}^\mathcal{B}\otimes[u']_{\mathcal{C}'}^{\mathcal{B}'}$의 해당 성분이다.
 :::

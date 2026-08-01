@@ -3483,8 +3483,6 @@ D:
   ko: 유도 tensor product
   primary: ko
   defs:
-  - label: '[다중선형대수학] §행렬의 텐서곱'
-    url: /ko/math/multilinear_algebra/tensor_product_of_matrices
   - label: '[유도대수기하학] §Simplicial 가환환과 animation'
     url: /ko/math/derived_algebraic_geometry/animated_rings
 - id: descendant_gromov-witten_invariant
@@ -4101,10 +4099,10 @@ E:
   defs:
   - label: '[대수다양체] §인자'
     url: /ko/math/algebraic_varieties/divisors
-  - label: '[스택] §Fibered category와 stack'
-    url: /ko/math/stacks/fibered_categories_and_stacks
   - label: '[토릭 기하학] §Delzant 구성'
     url: /ko/math/toric_geometry/delzant_construction
+  - label: '[스택] §Fibered category와 stack'
+    url: /ko/math/stacks/fibered_categories_and_stacks
 - id: effective_cartier_divisor
   en: effective Cartier divisor
   ko: 유효 카르티에 인자
@@ -8474,6 +8472,10 @@ M:
   defs:
   - label: '[미적분학] §테일러 정리'
     url: /ko/math/calculus/taylor_theorem
+  see:
+  - label: $n$차 테일러 다항식
+    lang: ko
+    id: taylor_polynomial
 - id: magma
   en: magma
   ko: 마그마
@@ -8481,6 +8483,12 @@ M:
   defs:
   - label: '[대수적 구조] §대수적 구조'
     url: /ko/math/algebraic_structures/algebraic_structures
+  see:
+  - label: 결합법칙을 만족하는 마그마
+    lang: ko
+    id: associative_magma
+  - label: Opposite magma
+    id: opposite_magma
 - id: magma_homomorphism
   en: magma homomorphism
   ko: 마그마 준동형사상
@@ -8488,6 +8496,9 @@ M:
   defs:
   - label: '[대수적 구조] §대수적 구조'
     url: /ko/math/algebraic_structures/algebraic_structures
+  see:
+  - label: Monoid homomorphism
+    id: monoid_homomorphism
 - id: manifold_with_boundary
   en: manifold with boundary
   ko: $m$차원의 경계가 있는 manifold
@@ -8495,6 +8506,12 @@ M:
   defs:
   - label: '[미분다양체] §경계가 있는 다양체'
     url: /ko/math/manifolds/manifolds_with_boundary
+  see:
+  - label: Topological manifold
+    id: topological_manifold
+  - label: 미분다양체
+    lang: ko
+    id: differentiable_manifold
 - id: mapping_cone
   en: mapping cone
   ko: 사상뿔
@@ -8502,6 +8519,13 @@ M:
   defs:
   - label: '[호몰로지 대수학] §긴 완전열'
     url: /ko/math/homological_algebra/long_exact_sequence
+  see:
+  - label: Chain complex
+    id: chain_complex
+  - label: Chain map
+    id: chain_map
+  - label: Homology
+    id: homology
 - id: matching_family
   en: matching family
   ko: 정합족
@@ -8516,6 +8540,10 @@ M:
   defs:
   - label: '[선형대수학] §행렬'
     url: /ko/math/linear_algebra/matrices
+  see:
+  - label: 선형사상
+    lang: ko
+    id: linear_map
 - id: matrix_exponential
   en: matrix exponential
   ko: 행렬지수
@@ -9010,6 +9038,11 @@ N:
   defs:
   - label: '[유도대수기하학] §Shifted symplectic 구조'
     url: /ko/math/derived_algebraic_geometry/shifted_symplectic_structures
+  see:
+  - label: Symplectic form
+    id: symplectic_form
+  - label: Symplectic manifold
+    id: symplectic_manifold
 - id: n_-th_homology
   en: $n$-th homology
   ko: $n$번째 호몰로지
@@ -9017,6 +9050,9 @@ N:
   defs:
   - label: '[호몰로지 대수학] §호몰로지'
     url: /ko/math/homological_algebra/homology
+  see:
+  - label: Cohomology group
+    id: cohomology_group
 - id: n_-th_homotopy_group
   en: $n$-th homotopy group
   ko: $n$번째 호모토피 군
@@ -9024,6 +9060,11 @@ N:
   defs:
   - label: '[대수적 위상수학] §호모토피의 계산'
     url: /ko/math/algebraic_topology/fibrations
+  see:
+  - label: Homotopy
+    id: homotopy
+  - label: Fundamental groupoid
+    id: fundamental_groupoid
 - id: n_-th_root_of_unity
   en: $n$-th root of unity
   ko: 1의 $n$제곱근
@@ -9031,6 +9072,13 @@ N:
   defs:
   - label: '[체론] §거듭제곱근 가해성'
     url: /ko/math/field_theory/solvability_by_radicals
+  see:
+  - label: Root of unity
+    id: root_of_unity
+  - label: Primitive $n$-th root of unity
+    id: primitive_n_-th_root_of_unity
+  - label: Cyclotomic field
+    id: cyclotomic_field
 - id: naive_cotangent_complex
   en: naive cotangent complex
   ko: ''
@@ -9038,6 +9086,13 @@ N:
   defs:
   - label: '[가환대수학] §코탄젠트 복합체'
     url: /ko/math/commutative_algebra/cotangent_complex
+  see:
+  - label: 여접 복합체
+    lang: ko
+    id: cotangent_complex
+  - label: 상대 여접 복합체
+    lang: ko
+    id: relative_cotangent_complex
 - id: natural_isomorphism
   en: natural isomorphism
   ko: 자연동형변환
