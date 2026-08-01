@@ -10,10 +10,11 @@ sidebar:
 
 date: 2026-06-20
 weight: 6
-translated_at: 2026-08-01T11:45:04+00:00
+translated_at: 2026-08-01T12:15:04+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-08-01T12:15:04+00:00
 ---
-Previously, in [§Chinese Remainder Theorem, ⁋Proposition 6](/en/math/ring_theory/chinese_remainder_theorem#prop6), we saw that pairwise comaximal two-sided ideals decompose a given ring into a product of quotient rings. In that decomposition, the elements that picked out each factor were those whose $i$th component is $1$ and the rest are $0$, and such elements are characterized as *idempotents* lying in the center of the ring.
+Previously, in [§Chinese Remainder Theorem, ⁋Proposition 6](/en/math/ring_theory/chinese_remainder_theorem#prop6), we saw that pairwise comaximal two-sided ideals decompose a given ring into a product of quotient rings. In that decomposition, the elements selecting each factor were those whose $i$th component is $1$ and the rest are $0$, and such elements are characterized as *idempotents* lying in the center of the ring.
 
 In this post, we formally define these idempotents, prove that a complete set of central orthogonal idempotents is in bijection with a direct product decomposition of the ring, and then examine how the general Chinese remainder theorem is recovered from this.
 
@@ -36,7 +37,7 @@ $$e(1-e)=e-e^2=0,\qquad (1-e)e=e-e^2=0$$
 so $e$ and $1-e$ are orthogonal. We will treat $e$ paired with its *complementary idempotent* $1-e$, and $e$ being central is equivalent to $1-e$ being central.
 
 ::: Example 2
-By a simple calculation, one can check that the idempotents of the ring $A=\mathbb{Z}/6\mathbb{Z}$ are $0,1,3,4$, and here $3,4$ are complementary to each other, while $0,1$ are complementary to each other. Moreover, since $A$ is commutative, these four idempotents are automatically central idempotents. On the other hand, in $\mathbb{Z}/4\mathbb{Z}$ the only elements satisfying $x^2=x$ are $0,1$, so this ring has only trivial idempotents.
+By a simple calculation, one can check that the idempotents of the ring $A=\mathbb{Z}/6\mathbb{Z}$ are $0,1,3,4$; here $3$ and $4$ are complementary, as are $0$ and $1$. Moreover, since $A$ is commutative, these four idempotents are automatically central. On the other hand, in $\mathbb{Z}/4\mathbb{Z}$ the only elements satisfying $x^2=x$ are $0,1$, so this ring has only trivial idempotents.
 :::
 
 ## Complete set of orthogonal idempotents
