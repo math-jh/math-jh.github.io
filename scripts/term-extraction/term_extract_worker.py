@@ -10,7 +10,7 @@ semantic_checks 비악화)를 통과해야만 원자적으로 쓴다. 실패는 
 격리(3회 → 7일 quarantine + 텔레그램).
 
 틱마다 (cron :00/:30) 글 하나:
-  선정 (스크립트만, LLM 무관 — 매칭 없으면 조용히 종료):
+  선정 (스크립트만, LLM 무관 — 매칭 없어도 로그 한 줄은 남긴다):
     0. 한 번도 안 돌린 글 (path 순)          — published:false 포함
     1. 마지막 검사 후 translation worker 가 재번역한 글 (재번역 = 한때
        drift_needed = 내용 변경 = 새 용어 가능성↑), 오래된 번역부터
@@ -761,6 +761,7 @@ def audit_letter(state: dict, dry: bool) -> list[str]:
     tmp = TERMS_PATH.with_suffix(".tmp")
     tmp.write_text(new_text, encoding="utf-8")
     tmp.replace(TERMS_PATH)
+    log(f"감사 {letter}: " + " · ".join(changes) + f" (다음 {nxt})")
     return [f"감사({letter}) " + c for c in changes]
 
 
@@ -813,7 +814,12 @@ def main() -> int:
                 save_state(state)
                 if ch:
                     send_telegram("[용어 추출] " + " · ".join(ch))
-        return 0  # 조용히
+        else:
+            # 할 일이 없어도 한 줄은 남긴다 — 대시보드가 이 로그의 mtime 으로
+            # 워커 생존을 판정하므로(2.5×30분), 조용히 끝내면 정상 동작 중에
+            # '안 돎'으로 표시된다.
+            log("대상 없음 (감사는 짝수 시각)")
+        return 0
 
     log(f"선정({kind}): {rel}")
     ps = state["posts"].setdefault(rel, {})
