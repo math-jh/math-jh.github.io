@@ -1,7 +1,7 @@
 ---
-title: "Basis"
-description: "We extend the notions of linear independence and basis from vector spaces to modules, and show that every module is isomorphic to a quotient of a free module."
-excerpt: "Definition of free modules, basis, and the universal property"
+title: "Bases"
+description: "We extend the notions of linear independence and basis from vector spaces to modules over a ring, and show that every module is a quotient of a free module."
+excerpt: "Definition of free modules, bases, and the universal property"
 
 categories: [Math / Multilinear Algebra]
 permalink: /en/math/multilinear_algebra/basis_of_free_modules
@@ -10,23 +10,21 @@ sidebar:
 
 date: 2024-08-18
 weight: 3
-published: false
-translated_at: 2026-06-01T14:30:05+00:00
+translated_at: 2026-08-01T12:45:04+00:00
 translation_source: kimi-cli
-last_polished_at: 2026-06-01T14:30:05+00:00
 ---
-For an arbitrary set $X$, we saw that the free $A$-module defined by $X$ is given by the formula
+For any set $X$, we observed that the free $A$-module defined by $X$ is given by the expression
 
 $$F(X)=\bigoplus_{x\in X} A$$
 
-([\[Algebraic Structures\] §Direct Products, Direct Sums, and Tensor Products of Modules, ⁋Proposition 3](/en/math/algebraic_structures/operations_of_modules#prop3)). In this post we examine the properties of free $A$-modules in more detail.
+([Algebraic Structures] §Direct Products, Direct Sums, and Tensor Products of Modules, ⁋Proposition 3](/en/math/algebraic_structures/operations_of_modules#prop3)). In this post, we examine the properties of free $A$-modules in more detail.
 
 ## Basis
 
-Now let an arbitrary $A$-module $M$ be given, and let a family $(x_i)_{i\in I}$ of elements of $M$ be given. If we define a function $e:I \rightarrow M$ by $e(i)=x_i$, then by the adjunction $F\dashv U$ there exists a unique $A$-linear map $\varepsilon:F(I) \rightarrow M$. If $(x_i)_{i\in I}$ is a generating set of $M$, then $\varepsilon$ must be surjective, and the converse also holds. In this spirit we make the following definition.
+Now let an arbitrary $A$-module $M$ be given, and let a family $(x_i)_{i\in I}$ of elements of $M$ be given. If we define the function $e:I \rightarrow M$ by $e(i)=x_i$, then by the adjunction $F\dashv U$ there exists a unique $A$-linear map $\varepsilon:F(I) \rightarrow M$. If $(x_i)_{i\in I}$ was a generating set of $M$, then $\varepsilon$ must be surjective, and the converse also holds. In a similar context, we make the following definition.
 
 ::: Definition 1
-Let an arbitrary $A$-module $M$ and a family $(x_i)_{i\in I}$ of elements of $M$ be given. With respect to the $A$-linear map $\varepsilon:F(I) \rightarrow M$ defined above, we define the following.
+Let an arbitrary $A$-module $M$ and a family $(x_i)_{i\in I}$ of elements of $M$ be given. For the $A$-linear map $\varepsilon:F(I) \rightarrow M$ defined above, we define the following.
 
 1. The family $(x_i)_{i\in I}$ is a *free family* if $\varepsilon$ is injective.
 2. The family $(x_i)_{i\in I}$ *generates* $M$ if $\varepsilon$ is surjective.
@@ -35,24 +33,24 @@ Let an arbitrary $A$-module $M$ and a family $(x_i)_{i\in I}$ of elements of $M$
 A family that is not a free family is called a *related family*.
 :::
 
-A free family generalizes the notion of linear independence in vector spaces. That is, if $A$ is a field and $M$ is a vector space over $A$, then a family $(x_i)_{i\in I}$ of elements of $M$ being a free family is equivalent to the $x_i$ being linearly independent. ([\[Linear Algebra\] §Basis of a Vector Space, ⁋Definition 5](/en/math/linear_algebra/basis#def5)) From this perspective, the elements of a related family are said to be *linearly dependent*.
+A free family generalizes the notion of linear independence in vector spaces. That is, if $A$ is a field and $M$ is a vector space over $A$, then a family $(x_i)_{i\in I}$ of elements of $M$ being a free family is equivalent to the $x_i$ being linearly independent. ([Linear Algebra] §Bases of Vector Spaces, ⁋Definition 5](/en/math/linear_algebra/basis#def5)) From this perspective, the elements of a related family are said to be *linearly dependent*.
 
-On the other hand, any $A$-module $M$ always has a generating set, since at minimum the collection of all elements of $M$ generates $M$. From this we obtain the following.
+On the other hand, any $A$-module $M$ always has a spanning set. This is because at the very least, collecting all elements of $M$ generates $M$. From this we obtain the following.
 
 ::: Proposition 2
 Any $A$-module $M$ is isomorphic to a quotient of a suitable free $A$-module.
 :::
 ::: Proof
-For an arbitrary $A$-module $M$, let $X$ be a generating set of $M$. Then there exists a surjective $A$-linear map $\varepsilon:F(X) \rightarrow M$. Since the kernel of $\varepsilon$ is an $A$-module, we have $M\cong F(X)/\ker\varepsilon$.
+For any $A$-module $M$, let $X$ be a spanning set of $M$. Then there exists a surjective $A$-linear map $\varepsilon:F(X) \rightarrow M$. In this case, since the kernel of $\varepsilon$ is a submodule of $F(X)$, we have $M\cong F(X)/\ker\varepsilon$.
 :::
 
-That $M$ is a finitely generated $A$-module is equivalent to being able to choose such a family to be finite, and in this case the free $A$-module in the above proof can also be chosen to have a finite basis. As a more special case we define the following.
+That $M$ is a finitely generated $A$-module is equivalent to being able to choose such a family to be finite, and in this case the free $A$-module in the above proof can also be chosen to have a finite basis. As a more special case, we define the following.
 
 ::: Definition 3
-An $A$-module $M$ is *monogenous* if it is generated by a single element $x$ as an $A$-module.
+An $A$-module $M$ is called *monogenous* if $M$ is generated by a single element $x$ as an $A$-module.
 :::
 
-It should be noted that $x$ need not be a free element. That is, there may exist some $\alpha\neq 0$ such that $\alpha x=0$, and this is a point that differs from what was treated in [\[Linear Algebra\]]().
+The point to note is that $x$ need not be a free element. That is, there may exist some $\alpha\neq 0$ such that $\alpha x=0$, and this is a point of difference from what was treated in [Linear Algebra](/en/linear_algebra/).
 
 ## Invariant Basis Number
 
@@ -62,65 +60,80 @@ First we prove the following general proposition.
 Let $M=\bigoplus_{i\in I} N_i$, let $I$ be an infinite set, and let $N_i\neq 0$. Then for any generating set $X$ of $M$, we have $\card X\geq \card I$.
 :::
 ::: Proof
+For each $x\in X$, let $S(x)\subseteq I$ be the set of indices of the nonzero components when $x$ is expressed as an element of the direct sum. By the definition of direct sum, each $S(x)$ is a finite set.
+
+First we show that $I=\bigcup_{x\in X}S(x)$. If some $i_0\in I$ does not belong to any $S(x)$, then all elements of $X$ have $0$ as their $i_0$-th component, and hence any linear combination of elements of $X$ also has this property. However, since $N_{i_0}\neq 0$, there exists an element of $M$ whose $i_0$-th component is not $0$, which contradicts the assumption that $X$ generates $M$.
+
+Next, $X$ must be an infinite set. Otherwise, $I=\bigcup_{x\in X}S(x)$ would be a finite union of finite sets and hence finite, contradicting the assumption that $I$ is infinite.
+
+Finally we show $\card I\leq\card X$. For each $i\in I$, choose one $x(i)\in X$ such that $i\in S(x(i))$, and for each $x\in X$ choose an injection $\nu_x$ from the finite set $S(x)$ to $\mathbb{N}$. Then the function
+
+$$I \rightarrow X\times\mathbb{N};\qquad i\mapsto \bigl(x(i),\nu_{x(i)}(i)\bigr)$$
+
+is an injection. Indeed, if $\bigl(x(i),\nu_{x(i)}(i)\bigr)=\bigl(x(j),\nu_{x(j)}(j)\bigr)$, then first $x(i)=x(j)$, and letting this be $x$, we have $\nu_x(i)=\nu_x(j)$, and by the injectivity of $\nu_x$ we get $i=j$. Therefore
+
+$$\card I\leq \card(X\times\mathbb{N})=\card X\cdot\aleph_0\leq \card X$$
+
+and the last inequality follows from the fact that $X$ is an infinite set and [Set Theory] §Natural Numbers and Infinite Sets, ⁋Corollary 16](/en/math/set_theory/natural_numbers#cor16).
 :::
 
-In the situation of [Definition 3](#def3), any element of $M$ can be written in the form $\alpha x$ for a suitable $\alpha\in A$. Therefore in such a case we also denote $M$ by $Ax$. Using this notation, for any $A$-module $M$ and a family $(x_i)_{i\in I}$ of its elements,
+In the situation of [Definition 3](#def3), any element of $M$ can be written in the form $\alpha x$ for suitable $\alpha\in A$. Therefore in such a case we also denote $M$ by $Ax$. Using this notation, for any $A$-module $M$ and any family $(x_i)_{i\in I}$ of its elements,
 
 - $(x_i)_{i\in I}$ being a generating family of $M$ is equivalent to $M=\sum_{i\in I}Ax_i$.
 - $(x_i)_{i\in I}$ being a basis of $M$ is equivalent to the above sum $\sum_{i\in I}Ax_i$ being a direct sum and each $x_i$ being a free element.
 
-Restricting [Proposition 4](#prop4) to the case where each $N_i$ is monogenous and a free element, we see that if a free $A$-module $M$ has an infinite basis, then all bases of $M$ have the same cardinality. However, this need not hold when $M$ has a finite basis.
+Through this, if we restrict [Proposition 4](#prop4) to the case where each $N_i$ is a monogenous module generated by a free element, we know that when $A\neq 0$, all bases of a free $A$-module $M$ with an infinite basis have the same cardinality. However, this does not always hold in the case where $M$ has a finite basis.
 
 ::: Definition 5
-For an arbitrary ring $A$, if $A^m\cong A^n$ is always equivalent to $m=n$, then we say that $A$ satisfies the *invariant basis number property*.
+For any ring $A$, if $A^m\cong A^n$ is always equivalent to $m=n$, we say that $A$ satisfies the *invariant basis number property*.
 :::
 
-For example, $A=0$ does not satisfy this property, because $0^m\cong 0^n$ for any $m,n$.
+For example, $A=0$ does not satisfy this property, since $0^m\cong 0^n$ for any $m,n$.
 
-By [\[Linear Algebra\] §Dimension of Vector Spaces, ⁋Lemma 2](/en/math/linear_algebra/dimension#lem2), any field has the invariant basis number property. Using this, we can show the following more general proposition.
+By [Linear Algebra] §Dimension of Vector Spaces, ⁋Lemma 2](/en/math/linear_algebra/dimension#lem2), any field has the invariant basis number property. Using this, we can show the following more general proposition.
 
 ::: Proposition 6
-Let $A$ be a ring for which there exist a suitable field $\mathbb{K}$ and a homomorphism $\phi: A \rightarrow \mathbb{K}$. Then $A$ has the IBN property.
+Let $A$ be a ring, and suppose there exist a suitable field $\mathbb{K}$ and a homomorphism $\phi: A \rightarrow \mathbb{K}$. Then $A$ has the IBN property.
 :::
 ::: Proof
 Let an arbitrary free $A$-module $M$ be given. Then there exists an isomorphism
 
 $$M\cong \bigoplus_{i\in I} Ax_i$$
 
-and each of the $x_i$ is a free element. On the other hand, since $\phi^\ast:\lMod{A} \rightarrow \mathbb{K}$ is a left adjoint, the following formula
+and each of the $x_i$ is a free element. On the other hand, since $\phi_!:\lMod{A} \rightarrow \lMod{\mathbb{K}}$ is a left adjoint, the following identity holds:
 
-$$\phi^\ast M\cong\phi^\ast\left(\bigoplus_{i\in I} Ax_i\right)\cong \bigoplus_{i\in I}\phi^\ast Ax_i$$
+$$\phi_! M\cong\phi_!\left(\bigoplus_{i\in I} Ax_i\right)\cong \bigoplus_{i\in I}\phi_! Ax_i$$
 
-holds. ([\[Algebraic Structures\] §Change of Base Ring, ⁋Proposition 7](/en/math/algebraic_structures/change_of_base_ring#prop7)) Moreover, from the fact that $x_i$ is a free element we have $Ax_i\cong A$, and since $\phi^\ast A\cong \mathbb{K}$, we obtain $\phi^\ast M\cong \bigoplus_{i\in I}\mathbb{K}$. Now applying [\[Linear Algebra\] §Dimension of Vector Spaces, ⁋Lemma 2](/en/math/linear_algebra/dimension#lem2) gives the desired result.
+([Algebraic Structures] §Change of Scalars, ⁋Proposition 6](/en/math/algebraic_structures/change_of_base_ring#prop6)) Also, from the fact that $x_i$ is a free element we have $Ax_i\cong A$, and since $\phi_! A\cong \mathbb{K}$, we get $\phi_! M\cong \bigoplus_{i\in I}\mathbb{K}$. Now applying [Linear Algebra] §Dimension of Vector Spaces, ⁋Lemma 2](/en/math/linear_algebra/dimension#lem2) gives the desired result.
 :::
 
-In [\[Linear Algebra\] §Infinite-Dimensional Vector Spaces<sup>†</sup>, ⁋Theorem 4](/en/math/linear_algebra/infinite_dimensional_vector_space#thm4) we did not use the property that $\mathbb{K}$ is commutative, so the above proposition also holds more generally if we replace $\mathbb{K}$ by a division ring $D$. On the other hand, any commutative ring admits the canonical map $A \rightarrow \Frac A$, so it always has the IBN property.
+The proof of [Linear Algebra] §Dimension of Vector Spaces, ⁋Lemma 2](/en/math/linear_algebra/dimension#lem2) uses only the fact that nonzero scalars are invertible, not the property that $\mathbb{K}$ is commutative, so the above proposition also holds more generally if we replace $\mathbb{K}$ with a division ring $D$. On the other hand, any nonzero commutative ring $A$ has a maximal ideal $\mathfrak{m}$ by [Algebraic Structures] §Definition of Rings, ⁋Theorem 10](/en/math/algebraic_structures/rings#thm10), so there exists a homomorphism $A \rightarrow A/\mathfrak{m}$ to a field, and hence $A$ has the IBN property.
 
 ::: Definition 7
-Let a ring $A$ satisfy IBN. Then for any free $A$-module $M$, the size of a basis of $M$ is called the *rank* of $M$.
+Suppose a ring $A$ satisfies IBN. Then for any free $A$-module $M$, the size of a basis of $M$ is called the *rank* of $M$.
 :::
 
-For convenience, when a basis $(x_i)_{i\in I}$ of $M$ is given, we denote the free module $F(I)$ obtained from it by $A^{\oplus I}$, and in particular if $I$ is a finite set we also denote it by $A^m$. These notations present a notational problem if used when there is no guarantee that $A$ has the IBN property, but we overlook this with a slight abuse of notation.
+For convenience, when a basis $(x_i)_{i\in I}$ of $M$ is given, we denote the free module $F(I)$ obtained from it by $A^{\oplus I}$, and in particular if $I$ is a finite set we also denote it by $A^m$. These notations have notational issues when used without the guarantee that $A$ has the IBN property, but we turn a blind eye to this slight abuse of notation.
 
-One of the important properties of a basis is that the values of a linear map at the elements of a basis completely determine the map. To verify this, fix a free $A$-module $M$ and let $(x_i)_{i\in I}$ be a basis of $M$. That is, the function $e: i\mapsto x_i$ between sets induces an $A$-module isomorphism $\varepsilon:F(I)\cong M$. On the other hand, let another $A$-module $N$ be given, and suppose a family $(y_i)_{i\in I}$ of elements of $N$ is given. Then the function $e': i\mapsto y_i$ induces $\varepsilon': F(I) \rightarrow N$. Hence there exists a unique $A$-linear map $u:M \rightarrow N$ satisfying $u(x_i)=y_i$, and explicitly this is given by $u=\varepsilon'\circ\varepsilon^{-1}$.
+One of the important properties of a basis is that the values of a function on the elements of a basis completely determine a linear map. To verify this, fix a free $A$-module $M$ and let $(x_i)_{i\in I}$ be a basis of $M$. That is, the function $e_i: i\mapsto x_i$ between sets induces an $A$-module isomorphism $\varepsilon:F(I)\cong M$. On the other hand, let another $A$-module $N$ be given, and let a family $(y_i)_{i\in I}$ of elements of $N$ be given; then the functions $e_i': i\mapsto y_i$ induce $\varepsilon': F(I) \rightarrow N$. Then there exists a unique $A$-linear map $u:M \rightarrow N$ satisfying $u(x_i)=y_i$, and explicitly this can be written as $u=\varepsilon'\circ\varepsilon^{-1}$.
 
 ## Basis of an Algebra
 
-Now let us look at bases of algebras. In the [Linear Algebra](/en/linear_algebra) category our main interest is in $A$-modules, but when we examine the endomorphism algebra of a fixed $A$-module we are led to consider $A$-algebras.
+Now let us examine the basis of an algebra. In the [Multilinear Algebra](/en/multilinear_algebra/) category, although our main objects of interest are $A$-modules, when we examine the endomorphism algebra of a fixed $A$-module we think of $A$-algebras.
 
-Recall that when we discussed $A$-algebras earlier, we always assumed that $A$ is commutative.
+Recall that when we discussed $A$-algebras, we always assumed that $A$ is commutative.
 
 ::: Definition 8
-For an arbitrary $A$-algebra $E$, a basis of $E$ means a basis of $E$ regarded as an $A$-module.
+For any $A$-algebra $E$, a basis of $E$ means a basis of $E$ regarded as an $A$-module.
 :::
 
-It should be noted that while a basis of $E$ is minimal when generating $E$ as an $A$-module, a smaller set may suffice to generate it as an $A$-algebra. For example, to generate the polynomial algebra $A[\x]$ as an $A$-module we need the elements $1,\x,\x^2,\cdots$, but to generate it as an $A$-algebra it is enough to have only $1$ and $\x$.
+The point to be careful about is that while a basis of $E$ is minimal for generating $E$ as an $A$-module, a smaller set may suffice for generating $E$ as an $A$-algebra. For example, to generate the polynomial algebra $A[\x]$ as an $A$-module we need the elements $1,\x,\x^2,\cdots$, but to generate it as an $A$-algebra, $1$ and $\x$ alone suffice.
 
-In any case, a basis $(e_i)_{i\in I}$ of $E$ still contains all the information about $E$; in particular, the multiplication defined on $E$ can be described using the basis elements. For any $i,j\in I$, since $e_ie_j$ is also an element of $E$, it can be expressed as the sum
+Nevertheless, a basis $(e_i)_{i\in I}$ of $E$ still contains all information about $E$; in particular, the multiplication defined on $E$ can be described using bases. For any $i,j\in I$, since $e_ie_j$ is also an element of $E$, it can be expressed as the following sum:
 
 $$e_ie_j=\sum_{k\in I} \gamma_{ij}^k e_k$$
 
-Here, for each fixed $i,j$, there are only finitely many $k$ such that $\gamma_{ij}^k\neq 0$ in the family $(\gamma_{ij}^k)_{i,j,k\in I}$.
+Here, for each fixed $i,j$, there are only finitely many $k$ with $\gamma_{ij}^k\neq 0$.
 
 ::: Definition 9
 The family $(\gamma_{ij}^k)_{i,j,k\in I}$ defined above is called the *structure constants* of $E$.
@@ -130,17 +143,17 @@ Then for any $x,y\in E$, writing them using the basis $(e_i)$ as
 
 $$x=\sum_{i\in I} x_i e_i,\qquad y=\sum_{j\in I} y_j e_j$$
 
-we have
+we can write
 
 $$xy=\sum_{i,j\in I} x_i y_j e_ie_j=\sum_{i,j,k\in I} x_i y_j \gamma_{ij}^k e_k$$
 
-Conversely, if a family $(\gamma_{ij}^k)_{i,j,k\in I}$ satisfying the finiteness condition explained above is given, then we can endow an arbitrary $A$-module $E$ with an $A$-algebra structure via this data.
+Conversely, if a family $(\gamma_{ij}^k)_{i,j,k\in I}$ satisfying the finiteness condition described above is given, we can endow the free $A$-module $E$ with basis $(e_i)_{i\in I}$ with an $A$-algebra structure through this.
 
-Moreover, the conditions for the multiplication on $E$ to satisfy the associative and commutative laws can also be expressed using the basis. Expressing $x,y,z$ using the basis as above and then writing out $(xy)z$ and $x(yz)$, we obtain
+Moreover, the conditions for the multiplication of $E$ to satisfy associativity and commutativity can also be expressed using the basis. Expressing $x,y,z$ using the basis as above and computing $(xy)z$ and $x(yz)$ respectively, we get
 
 $$(xy)z=\sum_{i,j,k\in I}x_i y_jz_k(e_ie_j)e_k,\qquad x(yz)=\sum_{i,j,k\in I} x_i y_j z_k e_i(e_je_k)$$
 
-Therefore, for associativity to hold it suffices to verify that associativity holds among the elements comprising the basis. For the same reason, for the multiplication on $E$ to satisfy the commutative law it suffices to verify that commutativity holds among the elements comprising the basis.
+so for associativity to hold, it suffices to verify associativity among the elements constituting the basis. For the same reason, for the multiplication of $E$ to satisfy commutativity, it suffices to verify commutativity among the elements constituting the basis.
 
 ---
 
