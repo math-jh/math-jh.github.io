@@ -11,7 +11,6 @@ sidebar:
 date: 2026-06-21
 weight: 18
 
-published: false
 drift_needed: true
 ---
 
@@ -50,7 +49,7 @@ $$0 \rightarrow H^0(X, \mathcal{F}') \rightarrow H^0(X, \mathcal{F}) \rightarrow
 $\Gamma(X, -)$는 left exact functor이고 $\Sh(X)$는 enough injective를 가지므로, right derived functor가 정의하는 $\delta$-functor의 long exact sequence가 그대로 성립한다.
 :::
 
-## 아핀공간의 코호몰로지
+## 아핀스킴의 코호몰로지
 
 한편 우리는 [\[대수다양체\] §층 코호몰로지](/ko/math/algebraic_varieties/sheaf_cohomology)에서 Čech cohomology 또한 도입하였는데, 이는 사실 위상공간 수준의 정의이므로 scheme 위에서도 아무것도 바꿀 필요 없이 그대로 작동한다. 해당 글에서와 마찬가지로, sheaf cohomology의 정의는 [정의 1](#def1)이 그 본질을 정확히 담고 있지만, 이를 실제로 사용하기 위해서는 Čech cohomology로 옮겨오는 것이 보통이다. 이를 가능하게 했던 결과는 [\[대수다양체\] §층 코호몰로지, ⁋명제 12](/ko/math/algebraic_varieties/sheaf_cohomology#prop12)로, affine variety 위에서 quasi-coherent sheaf의 higher cohomology가 소멸한다는 결과였다. 이 명제의 scheme 버전은 다음과 같다. 
 
@@ -83,7 +82,7 @@ $$I\longrightarrow\widetilde I(U)\longrightarrow H^1_{\mathfrak{a}}(I)\longright
 이 성립하는데, 여기서 $H^i_{\mathfrak{a}}(M)=\varinjlim_n\Ext^i_A(A/\mathfrak{a}^n,M)$이다. $I$가 injective이므로 모든 $n$에서 $\Ext^1_A(A/\mathfrak{a}^n,I)=0$이어서 $H^1_{\mathfrak{a}}(I)=0$이고, 따라서 위 restriction이 surjective이다. 그럼 임의의 두 열린집합 $V\subseteq U$에 대하여 $I \rightarrow \widetilde I(V)$이 $\widetilde I(U)$를 지나 인수분해되므로 $\widetilde I(U) \rightarrow \widetilde I(V)$ 또한 surjective이고, 곧 $\widetilde I$은 flasque이다.
 :::
 
-[정리 3](#thm3)에서 Noetherian 가정은 증명의 편의를 위한 것으로, 실은 그 결과는 임의의 ring $A$에 대하여 성립한다. 다만 이는 이 글의 범위를 벗어나므로 증명은 싣지 않고, 아래에서 임의의 ring 위의 projective space를 다룰 때에만 이 일반적인 형태를 사용한다.
+[정리 3](#thm3)에서 Noetherian 가정은 증명의 편의를 위한 것으로, 실은 그 결과는 임의의 ring $A$에 대하여 성립한다. 다만 이는 이 글의 범위를 벗어나므로 증명은 싣지 않고, Noetherian 가정 없이 진술되는 아래의 [따름정리 4](#cor4)와 임의의 ring 위의 projective space를 다루는 [정리 6](#thm6)에서만 이 일반적인 형태를 사용한다.
 
 어쨌든 이 정리의 핵심은 affine scheme이 cohomology의 관점에서 <em-ko>단순한</em-ko> 공간이라는 것이다. 즉 affine 위에서는 quasi-coherent sheaf의 정보가 모두 $H^0$, 곧 그 global section module에 담겨 있으며, higher cohomology는 어떠한 새로운 정보도 주지 않는다. 이는 위상공간이 Čech cohomology의 관점에서 contractible한 것에 대응하는 대수기하학적 현상이다.
 
@@ -193,7 +192,7 @@ $$u_i=\x_j^{e-e_i}\x_i^{e_i}t_i\in\Gamma(U_i, \mathcal{F}(e))$$
 
 로 두면 모든 $i$에 대하여 $u_i\vert_{U_i\cap U_j}=\x_j^es\vert_{U_i\cap U_j}$이다. 남는 것은 서로 다른 두 chart에서 얻은 $u_i$와 $u_{i'}$이 $U_i\cap U_{i'}$ 위에서 일치하는지, 즉 cocycle condition인데, 이들의 차는 $U_i\cap U_{i'}\cap U_j$ 위에서 $0$이고 이 열린집합 또한 $U_i\cap U_{i'}$에서 $\x_j$의 비를 뒤집어 얻어지므로, 위와 같은 localization 등식에 의하여 $\x_j$의 적당한 거듭제곱이 그 차를 소멸시킨다. 다시 이러한 쌍들이 유한개이므로, 충분히 큰 공통된 정수 $f$를 잡으면 $\x_j^fu_i$들이 서로 일치하여 하나의 $t\in\Gamma(\mathbb{P}^n, \mathcal{F}(e+f))$로 붙으며, $t\vert_{U_j}=\x_j^{e+f}s$이 된다.
 
-거꾸로 $t\in\Gamma(\mathbb{P}^n, \mathcal{F}(m))$에 대한 $t/\x_j^m$이 $U_j$ 위에서 $0$이라 하자. 그럼 각각의 $i$에 대하여 $t\vert_{U_i}$의 $U_i\cap U_j$로의 제한이 $0$이므로, 위의 localization 등식에 의하여 $(\x_j/\x_i)^{q_i}t\vert_{U_i}=0$인 $q_i$가 존재한다. Chart가 유한개이므로 $q=\max q_i$로 두면 $\x_j^qt=0$이고, 따라서 $t/\x_j^m$은 $\Gamma_\ast(\mathcal{F})_{(\x_j)}$에서 이미 $0$이다. 이로써 위의 등식이 성립한다.
+거꾸로 $t\in\Gamma(\mathbb{P}^n, \mathcal{F}(m))$에 대한 $t/\x_j^m$이 $U_j$ 위에서 $0$이라 하자. 그럼 각각의 $i$에 대하여 $t\vert_{U_i}$의 $U_i\cap U_j$로의 restriction이 $0$이므로, 위의 localization 등식에 의하여 $(\x_j/\x_i)^{q_i}t\vert_{U_i}=0$인 $q_i$가 존재한다. Chart가 유한개이므로 $q=\max q_i$로 두면 $\x_j^qt=0$이고, 따라서 $t/\x_j^m$은 $\Gamma_\ast(\mathcal{F})_{(\x_j)}$에서 이미 $0$이다. 이로써 위의 등식이 성립한다.
 
 이제 우변의 $\Gamma_\ast(\mathcal{F})_{(\x_j)}$은 $S_{(\x_j)}$ 위의 finitely generated module이므로, 각각의 chart마다 그 generator들을
 
@@ -258,7 +257,7 @@ $$H^i(\mathbb{P}^n, \mathcal{O}(d-d_0)^{\oplus r}) \rightarrow H^i(\mathbb{P}^n,
 을 보자. 좌변은 [정리 6](#thm6)에 의하여 $d-d_0\gg0$이고 $i>0$이면 $0$이다. 우변은 귀납 가정을 $\mathcal{K}$에 적용한 것으로, $i+1$에서의 vanishing이 충분히 큰 twist에 대해 성립한다. 따라서 $d$가 이 둘을 모두 $0$으로 만들만큼 크다면 가운데 항 $H^i(\mathbb{P}^n, \mathcal{F}(d))$이 소멸한다. 이제 $i$가 $1$부터 $n$까지 유한하므로, 모든 $i>0$에 대한 vanishing을 동시에 보장하는 공통의 $d_1$을 잡을 수 있고, $d\geq d_1$에서 $H^i(\mathbb{P}^n, \mathcal{F}(d))=0$ ($i>0$)이다.
 :::
 
-이는 [\[대수다양체\] §사영공간의 코호몰로지, ⁋명제 4](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop4)의 Serre vanishing을 scheme 수준으로 옮긴 것이다. 함께 얻은 global generation은 임의의 coherent sheaf를 free sheaf의 quotient로 적을 수 있게 해 주므로, 이를 되풀이하면 free sheaf들에 의한 resolution을 얻는다.
+이는 [\[대수다양체\] §사영공간의 코호몰로지, ⁋명제 4](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop4)의 Serre vanishing을 scheme 수준으로 옮긴 것이다. 함께 얻은 global generation은 임의의 coherent sheaf를 $\mathcal{O}(-d)$들의 finite direct sum의 quotient로 적을 수 있게 해 주므로, 이를 되풀이하면 이러한 sheaf들에 의한 resolution을 얻는다.
 
 ## Ampleness의 코호몰로지 판정
 
@@ -289,13 +288,13 @@ $$\varphi\vert_{X_{s_i}}: X_{s_i} \rightarrow D_+(\x_i)$$
 
 따라서 우리의 첫 번째 목표는 $\mathcal{L}^{\otimes k}$을 globally generate하는 section들 가운데, $X_{s_i}$들이 모두 affine이도록 하는 것들을 찾는 것이다. 이를 위해 우리는 각각의 closed point $x\in X$마다 $x$를 품으면서 affine인 $X_s$를 하나씩 만들 것이다. 우선 $x$를 포함하는 $\mathcal{L}$의 trivializing open affine neighborhood $U$를 택하자. 만일 적당한 section $s$가 $X_s\subseteq U$를 만족한다면 $X_s$가 affine인 것은 $X_s$를 $U$ 안에서 함수 $s$가 정의하는 principal open set으로 보면 바로 얻어지므로, 우리가 찾아야 할 $s$는 $x$에서 non-vanishing이면서 $Y=X\setminus U$에서는 identically zero인 section이다.  
 
-이를 위해 $Y$에 reduced closed subscheme 구조를 준 후, 그 ideal sheaf $\mathcal{I}_Y$를 생각하자. 이는 $\mathcal{O}_X \rightarrow \iota_\ast\mathcal{O}_Y$의 kernel이므로 quasi-coherent이고, 각각의 affine chart $\Spec A$ 위에서는 $A$의 ideal에 대응한다. 그런데 $X$가 Noetherian이라 $A$ 또한 그러하여 이 ideal이 finitely generated이므로 ([\[가환대수학\] §기본 개념들, ⁋정리 3](/ko/math/commutative_algebra/basic_notions#thm3)), $\mathcal{I}_Y$는 coherent sheaf이다. 따라서, $\mathcal{L}$의 ampleness로부터 적당한 $n>0$에 대해 $\mathcal{I}_Y\otimes\mathcal{L}^{\otimes n}$이 globally generated임을 안다. 이 때, $x\not\in Y$이므로  $(\mathcal{I}_Y)_x=\mathcal{O}_{X,x}$이고, 따라서 $x$에서 소멸하지 않는 section $s\in\Gamma(X, \mathcal{I}_Y\otimes\mathcal{L}^{\otimes n})\subseteq\Gamma(X, \mathcal{L}^{\otimes n})$이 존재하고, 이로부터 각각의 closed point마다 이를 포함하는 affine open set $X_s$를 택할 수 있다. 뿐만 아니라, $X$가 $\mathbb{K}$ 위에서 finite type이므로 각 affine chart의 coordinate ring은 Jacobson ring이고 ([\[가환대수학\] §영점정리, ⁋정리 4](/ko/math/commutative_algebra/nullstellensatz#thm4)), 따라서 $X$의 공집합이 아닌 닫힌집합은 언제나 $X$의 closed point를 포함한다. 즉, closed point들에서 얻은 위의 열린집합들의 합집합은 여집합이 closed point를 갖지 않는 닫힌집합이라 $X$ 전체이며, $X$가 quasi-compact이므로 그 가운데 유한 개 $X_{s_1},\ldots, X_{s_k}$만으로도 $X$를 덮는다. 다만 이들은 각각 $s_i\in\Gamma(X, \mathcal{L}^{\otimes n_i})$로 지수가 서로 다른 sheaf에서 얻어졌으므로, 함께 하나의 morphism을 정의하려면 같은 sheaf의 section이 되도록 지수를 이들의 최소공배수 $m$으로 맞추고, $s_i$들을 $s_i^{m/n_i}$으로 바꾸어 $s_i\in \Gamma(X, \mathcal{L}^{\otimes m})$이도록 해야 하며, 이 과정은 임의의 $e\geq1$에 대해 $X_{s^e}=X_s$이므로 정당화된다. 
+이를 위해 $Y$에 reduced closed subscheme 구조를 준 후, 그 ideal sheaf $\mathcal{I}_Y$를 생각하자. 이는 $\mathcal{O}_X \rightarrow \iota_\ast\mathcal{O}_Y$의 kernel이므로 quasi-coherent이고, 각각의 affine chart $\Spec A$ 위에서는 $A$의 ideal에 대응한다. 그런데 $X$가 Noetherian이라 $A$ 또한 그러하여 이 ideal이 finitely generated이므로 ([\[가환대수학\] §기본 개념들, ⁋정리 3](/ko/math/commutative_algebra/basic_notions#thm3)), $\mathcal{I}_Y$는 coherent sheaf이다. 따라서, $\mathcal{L}$의 ampleness로부터 적당한 $n>0$에 대해 $\mathcal{I}_Y\otimes\mathcal{L}^{\otimes n}$이 globally generated임을 안다. 이 때, $x\not\in Y$이므로  $(\mathcal{I}_Y)_x=\mathcal{O}_{X,x}$이고, 따라서 $x$에서 소멸하지 않는 section $s\in\Gamma(X, \mathcal{I}_Y\otimes\mathcal{L}^{\otimes n})\subseteq\Gamma(X, \mathcal{L}^{\otimes n})$이 존재하고, 이로부터 각각의 closed point마다 이를 포함하는 affine open set $X_s$를 택할 수 있다. 뿐만 아니라, $X$가 $\mathbb{K}$ 위에서 finite type이므로 각 affine chart의 coordinate ring은 Jacobson ring이고 ([\[가환대수학\] §영점정리, ⁋정리 4](/ko/math/commutative_algebra/nullstellensatz#thm4)), 따라서 $X$의 공집합이 아닌 닫힌집합은 언제나 $X$의 closed point를 포함한다. 즉, closed point들에서 얻은 위의 열린집합들의 합집합은 여집합이 closed point를 갖지 않는 닫힌집합이라 $X$ 전체이며, $X$가 quasi-compact이므로 그 가운데 유한 개 $X_{s_1},\ldots, X_{s_q}$만으로도 $X$를 덮는다. 다만 이들은 각각 $s_i\in\Gamma(X, \mathcal{L}^{\otimes n_i})$로 지수가 서로 다른 sheaf에서 얻어졌으므로, 함께 하나의 morphism을 정의하려면 같은 sheaf의 section이 되도록 지수를 이들의 최소공배수 $m$으로 맞추고, $s_i$들을 $s_i^{m/n_i}$으로 바꾸어 $s_i\in \Gamma(X, \mathcal{L}^{\otimes m})$이도록 해야 하며, 이 과정은 임의의 $e\geq1$에 대해 $X_{s^e}=X_s$이므로 정당화된다. 
 
 이제  $X_{s_i}$가 affine이고 $X$가 $\mathbb{K}$ 위에서 finite type이므로 각각의 $B_i=\Gamma(X_{s_i}, \mathcal{O}_X)$는 finitely generated $\mathbb{K}$-algebra이며, 그 generator $b_{i1},\ldots, b_{ir_i}$들을 택할 수 있다. 이제 우리의 주장은 
 
 $$b_{ij}=t_{ij}/s_i^N, \qquad t_{ij}\in\Gamma(X, \mathcal{L}^{\otimes mN})$$
 
-이 성립하도록 하는 공통의 $N$과 global section $t_{ij}$들이 존재하여, $s_1^N,\ldots, s_k^N$들과 $t_{ij}$들이 $\mathcal{L}^{\otimes mN}$을 globally generate하도록 할 수 있다는 것이다. 만일 이것이 성립한다면, 이들이 $s_i^N$의 chart 위에서 주는 ratio 중 $t_{ij}/s_i^N=b_{ij}$가 있으므로 우리가 원하는 전사성, 즉 affine scheme으로 제한했을 때 $\varphi$가 closed immersion이 된다는 사실이 증명될 것이다. 
+이 성립하도록 하는 공통의 $N$과 global section $t_{ij}$들이 존재하여, $s_1^N,\ldots, s_q^N$들과 $t_{ij}$들이 $\mathcal{L}^{\otimes mN}$을 globally generate하도록 할 수 있다는 것이다. 만일 이것이 성립한다면, 이들이 $s_i^N$의 chart 위에서 주는 ratio 중 $t_{ij}/s_i^N=b_{ij}$가 있으므로 우리가 원하는 전사성, 즉 affine scheme으로 제한했을 때 $\varphi$가 closed immersion이 된다는 사실이 증명될 것이다. 이 때 확인하는 chart는 $s_i^N$에 대응하는 것들뿐이지만 $X_{s_i}$들이 $X$를 덮으므로, 이는 $\varphi$가 이 chart들의 합집합으로의 closed immersion, 곧 locally closed embedding이라는 뜻이다. 
 
 이를 위해 $\mathcal{L}^{\otimes m}$의 trivializing affine open cover $V_1,\ldots, V_p$를 택하고 각각의 $V_l=\Spec A_l$ 위에서 trivialization을 하나 고정하면, $s_i$는 함수 $g_{il}\in A_l$에 대응하고 $X_{s_i}\cap V_l=D(g_{il})$이다. 그럼 $X_{s_i}$ 위의 함수들 $b_{ij}$의 $D(g_{il})$로의 restriction은 $(A_l)_{g_{il}}$의 원소이므로, $g_{il}$의 적당한 거듭제곱을 곱하면 $A_l$의 원소가 되며, 이때의 지수는 $i$와 $j$, $l$에 대해 유한 개이므로 그 최댓값 $N_0$을 취하면 모든 $l$에 대해 $s_i^{N_0}b_{ij}$가 $V_l$ 위에서 $\mathcal{L}^{\otimes mN_0}$의 section으로 extend되도록 할 수 있다. 이제 남은 것은 이들을 붙여 global section $t_{ij}$로 만들 수 있다는 것을 보이는 것이다. 
 
@@ -433,7 +432,7 @@ $$\rchi(\mathcal{F}(d))=P_\mathcal{F}(d)$$
 
 이제 증명의 전체 구도는 [정리 8](#thm8)과 [정리 9](#thm9)의 증명에서 쓴 dévissage와 같아서, short exact sequence
 
-$$0 \rightarrow \mathcal{F}(-1) \rightarrow \mathcal{F} \rightarrow \mathcal{F}'' \rightarrow 0$$
+$$0 \rightarrow \mathcal{F}(-1) \rightarrow \mathcal{F} \rightarrow \mathcal{F}'' \rightarrow 0\tag{$\ast\ast$}$$
 
 를 만들어 원하는 성질을 이를 따라 옮기는 것이다. 여기서 $\mathcal{F}(-1) \rightarrow \mathcal{F}$은 homogeneous coordinate ring $S_\bullet=\mathbb{K}[\x_0,\ldots, \x_n]$의 degree $1$ 원소 $\ell\in S_1$을 곱하는 morphism이고, $\mathcal{F}''$은 그 cokernel으로, 직관적으로 이는 $\mathcal{F}$를 hyperplane $V_+(\ell)$ 위로 제한한 것, 곧 $\mathcal{F}$의 hyperplane section이다. 다른 점은 앞선 정리들의 증명이 coherent sheaf를 free sheaf로 덮은 후 long exact sequence 계산으로 귀납을 돌렸다면, 우리는 [명제 14](#prop14)의 additivity를 사용하여 support의 차원 $r=\dim\supp \mathcal{F}$에 대한 귀납을 돌린다는 것이다. 
 
@@ -441,25 +440,25 @@ $$0 \rightarrow \mathcal{F}(-1) \rightarrow \mathcal{F} \rightarrow \mathcal{F}'
 
 $\mathcal{F}=0$이면 모든 cohomology가 소멸하므로 정리 자체가 자명하다. 따라서 $\mathcal{F}\neq0$이라 하자. 각각의 chart $D_+(\x_j)=\Spec S_{(\x_j)}$ 위에서 $\mathcal{F}$는 finitely generated module $M_j$에 대응하며 ([§준연접층, ⁋정리 10](/ko/math/scheme_theory/quasicoherent_sheaves#thm10), [§준연접층, ⁋정의 11](/ko/math/scheme_theory/quasicoherent_sheaves#def11)), 각각의 $\Ass M_j$는 유한집합이다. ([\[가환대수학\] §동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)의 1번) 이들에 대응하는 $\mathbb{P}^n$의 점을 모두 모으면 유한 개이고, 각각은 irrelevant ideal을 포함하지 않는 homogeneous prime ideal $\mathfrak{p}_1,\ldots, \mathfrak{p}_t\subseteq S$를 준다. $\mathfrak{p}_k$가 homogeneous이므로, 만일 $S_1\subseteq\mathfrak{p}_k$이면 $\mathfrak{p}_k$가 irrelevant ideal을 포함하게 되고, 따라서 각각의 $\mathfrak{p}_k\cap S_1$은 $S_1$의 진부분공간이다. 한편 $\mathbb{K}$가 무한체이므로 벡터공간 $S_1$은 유한 개의 진부분공간의 합집합이 될 수 없고, 따라서 어떠한 $\mathfrak{p}_k$에도 속하지 않는 $\ell\in S_1$이 존재한다.
 
-이제 $\ell$을 곱하는 morphism $\mathcal{F}(-1) \rightarrow \mathcal{F}$을 주며, chart $D_+(\x_j)$ 위에서 이는 $M_j$ 위의 $\ell/\x_j$ 배이다. $M_j$의 각 associated prime은 $D_+(\x_j)$에 놓인 어떤 $\mathfrak{p}_k$가 [§사영공간과 Proj 구성, ⁋보조정리 8](/ko/math/scheme_theory/projective_schemes#lem8)의 대응으로 주는 prime $\mathfrak{p}_kS_{\x_j}\cap S_{(\x_j)}$인데, 만일 $\ell/\x_j$가 이러한 prime에 속한다면 $\ell=\x_j\cdot(\ell/\x_j)$이 $\mathfrak{p}_kS_{\x_j}\cap S=\mathfrak{p}_k$에 속하게 되어 $\ell$의 선택에 모순이다. 따라서 $\ell/\x_j$는 $M_j$의 어떠한 associated prime에도 속하지 않아 $M_j$의 zerodivisor가 아니고 ([\[가환대수학\] §동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)의 2번), 이 morphism은 injective이다. 그 cokernel을 $\mathcal{F}''$이라 하면 각각의 $d$에 대해 short exact sequence
+이렇게 택한 $\ell$이 피하는 것은 $S$의 homogeneous prime $\mathfrak{p}_k$들인 반면, short exact sequence 단사성을 막는 것은 각 chart 위에서의 associated prime들이므로, 우리는 이 조건을 [§사영공간과 Proj 구성, ⁋보조정리 8](/ko/math/scheme_theory/projective_schemes#lem8)의 대응을 따라 $S_{(\x_j)}$ 쪽으로 옮겨야 한다. $\ell$을 곱하는 morphism $\mathcal{F}(-1) \rightarrow \mathcal{F}$을 chart $D_+(\x_j)$ 위에서 보면, 이는 $M_j$의 각 원소에 $\ell/\x_j$을 곱하는 것으로 작용한다. 우리의 주장은 이 원소 $\ell/\x_j$가 $M_j$의 zerodivisor가 아니고 따라서 단사성이 보장된다는 것으로, 이를 위해서는 $\ell/\x_j$가 $M_j$의 어떠한 associated prime에도 속하지 않는다는 것을 보여야 한다. ([\[가환대수학\] §동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)의 2번) 실제로 $M_j$의 각 associated prime은 $D_+(\x_j)$에 놓인 어떤 $\mathfrak{p}_k$가 이 대응으로 주는 prime $\mathfrak{p}_kS_{\x_j}\cap S_{(\x_j)}$인데, 만일 $\ell/\x_j$가 이러한 prime에 속한다면 $\ell=\x_j\cdot(\ell/\x_j)$이 $\mathfrak{p}_kS_{\x_j}\cap S=\mathfrak{p}_k$에 속하게 되어 $\ell$의 선택에 모순이다. 따라서 이 morphism은 injective이다. 그 cokernel을 $\mathcal{F}''$이라 하면 각각의 $d$에 대해 short exact sequence
 
 $$0 \rightarrow \mathcal{F}(d-1) \rightarrow \mathcal{F}(d) \rightarrow \mathcal{F}''(d) \rightarrow 0$$
 
 을 얻고, $\supp\mathcal{F}''=\supp\mathcal{F}\cap V_+(\ell)$이다. 실제로 점 $\mathfrak{p}$에서의 stalk를 보면 $\mathcal{F}''_\mathfrak{p}=\mathcal{F}_\mathfrak{p}/\ell\mathcal{F}_\mathfrak{p}$인데, $\ell\notin\mathfrak{p}$이면 $\ell$이 local ring의 unit이라 이것이 $0$이고, $\ell\in\mathfrak{p}$이면서 $\mathcal{F}_\mathfrak{p}\neq0$이면 [\[가환대수학\] §정수적 확장, ⁋보조정리 8](/ko/math/commutative_algebra/integral_extension#lem8)의 1번에 의하여 $\mathcal{F}_\mathfrak{p}/\ell\mathcal{F}_\mathfrak{p}\neq0$이기 때문이다.
 
-Minimal prime은 언제나 associated prime이므로 $\ell$은 $\supp\mathcal{F}$의 어떠한 irreducible component 위에서도 항등적으로 소멸하지 않는다. 각각의 component $Z$에 reduced 구조를 주고 그 교집합의 차원을 재어 보자. $Z$가 irreducible이고 $\mathbb{K}$ 위에서 finite type이므로 $Z$와 만나는 각각의 chart에 대하여 $Z\cap D_+(\x_j)=\Spec A_j$의 $A_j$는 finitely generated $\mathbb{K}$-대수인 integral domain이고 그 fraction field는 chart와 무관하게 $Z$의 function field이다. 따라서 [§차원, ⁋명제 10](/ko/math/scheme_theory/dimension#prop10)에 의하여 $\dim A_j$는 모든 chart에서 같으며, [§차원, ⁋명제 2](/ko/math/scheme_theory/dimension#prop2)에 의하여 이 공통값이 $\dim Z$이다.
+이제 예고한대로 나머지는 이렇게 얻어진 short exact sequence ($\ast\ast$)를 사용하여, 차원에 대한 귀납법을 적용하는 것이다. 이를 위해서는 우선 hyperplane section이 실제로 support의 차원을 정확히 하나 떨어뜨린다는 것을 보여야 한다. Minimal prime은 언제나 associated prime이므로 $\ell$은 $\supp\mathcal{F}$의 어떠한 irreducible component 위에서도 항등적으로 소멸하지 않는다. 각각의 component $Z$에 reduced 구조를 주고 그 교집합의 차원을 재어 보면, $Z$가 irreducible이고 $\mathbb{K}$ 위에서 finite type이므로 $Z$와 만나는 각각의 chart에 대하여 $Z\cap D_+(\x_j)=\Spec A_j$의 $A_j$는 finitely generated $\mathbb{K}$-algebra인 integral domain이고 그 fraction field는 chart와 무관하게 $Z$의 function field이다. 즉, [§차원, ⁋명제 10](/ko/math/scheme_theory/dimension#prop10)에 의하여 $\dim A_j$는 모든 chart에서 같으며, [§차원, ⁋명제 2](/ko/math/scheme_theory/dimension#prop2)에 의하여 이 공통값이 $\dim Z$이다. $\dim Z=0$인 경우 $Z$는 한 점이고 그 위에서 $\ell$이 소멸하지 않으므로 $Z\cap V_+(\ell)=\emptyset$이며, 거꾸로 $Z\cap V_+(\ell)= \emptyset$이라면 반드시 $\dim Z=0$이어야 한다. 이는 $Z$는 affine scheme $D_+(\ell)$의 closed subscheme으로서 affine인데, 그 coordinate ring은 [정리 8](#thm8)에 의하여 유한차원 $\mathbb{K}$-벡터공간이자 $Z$의 integrality에 의해 integral domain이므로 [\[체론\] §대수적 확장, ⁋명제 3](/ko/math/field_theory/algebraic_extensions#prop3)에 의하여 field이기 때문이다. 따라서 만일 $\dim Z\geq 1$이라면 $Z\cap V_+(\ell)$가 공집합이 아니고, 따라서 이 집합의 한 점을 포함하는 chart $D_+(\x_j)$를 택하면 $\ell/\x_j\in A_j$는 $0$이 아니고 그 점에서 소멸하므로 unit도 아니어서, [§차원, ⁋명제 11](/ko/math/scheme_theory/dimension#prop11)에 의하여 
 
-$\dim Z=0$인 경우 $Z$는 한 점이고 그 위에서 $\ell$이 소멸하지 않으므로 $Z\cap V_+(\ell)=\emptyset$이다. $\dim Z\geq1$인 경우에는 거꾸로 $Z\cap V_+(\ell)\neq\emptyset$인데, 만일 만나지 않는다면 $Z$는 affine scheme $D_+(\ell)$의 closed subscheme이 되어 affine이고, 그럼 $A=\Gamma(Z, \mathcal{O}_Z)$는 [정리 8](#thm8)에 의하여 유한차원 $\mathbb{K}$-벡터공간이면서 $Z$가 integral이므로 integral domain인데, $0\neq a\in A$마다 곱하기 $a$가 단사인 $\mathbb{K}$-선형사상이라 유한차원성에 의하여 전사이므로 $A$가 field가 되어 $\dim Z=0$이기 때문이다. 그럼 $Z\cap V_+(\ell)$의 한 점을 포함하는 chart $D_+(\x_j)$를 택하면 $\ell/\x_j\in A_j$는 위에서 본 대로 $0$이 아니고 그 점에서 소멸하므로 unit도 아니어서, [§차원, ⁋명제 11](/ko/math/scheme_theory/dimension#prop11)에 의하여 $\dim\bigl(Z\cap V_+(\ell)\cap D_+(\x_j)\bigr)=\dim A_j-1=\dim Z-1$이다. $Z\cap V_+(\ell)$과 만나는 모든 chart에서 같은 값이 얻어지므로 [§차원, ⁋명제 2](/ko/math/scheme_theory/dimension#prop2)에 의하여 $\dim(Z\cap V_+(\ell))=\dim Z-1$이다.
+$$\dim\bigl(Z\cap V_+(\ell)\cap D_+(\x_j)\bigr)=\dim A_j-1=\dim Z-1$$
 
-따라서 $r=0$이면 모든 component가 $V_+(\ell)$과 만나지 않아 $\mathcal{F}''=0$이고, $r\geq1$이면 차원이 $r$인 component에서 $r-1$이 얻어져 $\dim\supp\mathcal{F}''=r-1$이다.
+이다. 이 값은 $Z\cap V_+(\ell)$과 만나는 모든 chart에서 동일하므로 [§차원, ⁋명제 2](/ko/math/scheme_theory/dimension#prop2)에 의하여 $\dim(Z\cap V_+(\ell))=\dim Z-1$이다. 즉, 만일 $r=0$이면 모든 component가 $V_+(\ell)$과 만나지 않아 $\mathcal{F}''=0$이고, $r\geq1$이면 차원이 $r$인 component에서 $r-1$이 얻어져 $\dim\supp\mathcal{F}''=r-1$이다.
 
-귀납적 가정에 의하여 $\rchi(\mathcal{F}''(d))$는 모든 $d$에서 어떤 numerical polynomial $Q$와 일치하며, $r=0$이면 $Q=0$이고 $r\geq1$이면 $\deg Q=r-1$이다. [명제 14](#prop14)의 1번에 의하여 모든 정수 $d$에 대해 $\rchi(\mathcal{F}(d))-\rchi(\mathcal{F}(d-1))=Q(d)$이므로, $g(d)=\rchi(\mathcal{F}(d))$로 두면 $g(d+1)-g(d)=Q(d+1)$은 numerical polynomial이다. 그럼 [\[가환대수학\] §힐베르트-사무엘 함수, ⁋보조정리 2](/ko/math/commutative_algebra/hilbert-samuel_function#lem2)의 둘째 결과에 의하여 충분히 큰 $d$에서 $g$와 일치하는 numerical polynomial $P$가 존재하고, $Q\neq0$이면 $\deg P=\deg Q+1$이다. 충분히 큰 $d$에서는 $P(d+1)-P(d)=g(d+1)-g(d)=Q(d+1)$이므로 이 등식은 다항식으로서도 성립한다. 그럼 $d$를 하나씩 내리며
+이제 실제로 귀납법을 돌린다. 우선 $r=0$인 경우를 보자. 이 경우 $\mathcal{F}''=0$이므로 ($\ast\ast$)를 $d$만큼 twist한 short exact sequence는 isomorphism $\mathcal{F}(d-1)\cong\mathcal{F}(d)$를 주고, 따라서 $g(d)=\rchi(\mathcal{F}(d))$로 두면 $g$는 $d$에 무관한 상수이다. 이 상수를 $P$라 하면 $P$는 모든 정수 $d$에서 $\rchi(\mathcal{F}(d))=P(d)$를 만족하는 numerical polynomial이다. 또, [정리 9](#thm9)에 의하여 충분히 큰 $d$에서 $\mathcal{F}(d)$이 globally generated이며 $\mathcal{F}\neq0$이므로 $\Gamma(X, \mathcal{F}(d))\neq0$이고, 곧 마지막 주장에 의하여 $P>0$이므로 $\deg P=0=r$이다.
+
+이제 $r\geq1$이라 하고, support의 차원이 $r-1$인 경우에 대하여 정리가 성립한다고 가정하자. 위에서 본 대로 $\dim\supp\mathcal{F}''=r-1$이고 특히 $\mathcal{F}''\neq0$이므로, 귀납적 가정에 의하여 $\rchi(\mathcal{F}''(d))$는 모든 $d$에서 어떤 numerical polynomial $Q$와 일치하며 $\deg Q=r-1$이다. [명제 14](#prop14)의 1번에 의하여 모든 정수 $d$에 대해 $g(d)-g(d-1)=Q(d)$이므로 $g(d+1)-g(d)=Q(d+1)$은 numerical polynomial이고, 그럼 [\[가환대수학\] §힐베르트-사무엘 함수, ⁋보조정리 2](/ko/math/commutative_algebra/hilbert-samuel_function#lem2)의 둘째 결과에 의하여 충분히 큰 $d$에서 $g$와 일치하는 numerical polynomial $P$가 존재한다. 이때 $\deg Q=r-1\geq0$에서 $Q\neq0$이므로 $\deg P=\deg Q+1=r$이다. 충분히 큰 $d$에서는 $P(d+1)-P(d)=g(d+1)-g(d)=Q(d+1)$이므로 이 등식은 다항식으로서도 성립하고, 따라서 $d$를 하나씩 내리며
 
 $$g(d)=g(d+1)-Q(d+1)=P(d+1)-Q(d+1)=P(d)$$
 
-를 얻어, $g$와 $P$는 모든 정수에서 일치한다.
-
-남은 것은 degree이다. $r\geq1$이면 $\deg P=\deg Q+1=r$이다. $r=0$이면 $Q=0$이므로 $P$는 상수이고, [정리 9](#thm9)에 의하여 충분히 큰 $d$에서 $\mathcal{F}(d)$이 globally generated이며 $\mathcal{F}\neq0$이므로 $\Gamma(X, \mathcal{F}(d))\neq0$이다. 곧 마지막 주장에 의하여 $P>0$이고 $\deg P=0=r$이다.
+를 얻어 $g$와 $P$는 모든 정수에서 일치한다.
 :::
 
 이 다항식 $P_\mathcal{F}$를 $\mathcal{F}$의 *Hilbert polynomial<sub>힐베르트 다항식</sub>*이라 부른다. [따름정리 15](#cor15)는 $\mathcal{F}=\mathcal{O}_{\mathbb{P}^n}$인 경우로서 $P_{\mathcal{O}_{\mathbb{P}^n}}(t)=\binom{n+t}{n}$이고 그 degree는 $\dim\mathbb{P}^n=n$이다. [정리 16](#thm16)의 마지막 주장은 이 다항식이 충분히 큰 degree에서는 $\mathcal{F}(d)$의 global section이 이루는 공간의 차원을 재고 있음을 말해주며, 이것이 고전적으로 homogeneous coordinate ring의 Hilbert function을 통해 Hilbert polynomial을 도입하던 관점과 이어지는 지점이다. ([\[가환대수학\] §힐베르트-사무엘 함수, ⁋정의 4](/ko/math/commutative_algebra/hilbert-samuel_function#def4)) 특히 $\mathcal{F}=\mathcal{O}_X$인 경우 이 다항식은 $X$ 자신의 불변량이 된다.
@@ -472,17 +471,17 @@ $$\deg X=r!\cdot a_r$$
 로 정의하고, $X$의 *arithmetic genus<sub>산술종수</sub>*를 $p_a(X)=(-1)^r\bigl(P_{\mathcal{O}_X}(0)-1\bigr)$로 정의한다.
 :::
 
-$\supp\mathcal{O}_X=X$이므로 [정리 16](#thm16)에 의하여 $P_{\mathcal{O}_X}$의 degree는 정확히 $r$이고, 충분히 큰 $d$에서 $P_{\mathcal{O}_X}(d)=\dim_\mathbb{K}\Gamma(X, \mathcal{O}_X(d))>0$이므로 $a_r$은 양수이다. 또 numerical polynomial을 이항계수들의 정수계수 결합으로 적으면 ([\[가환대수학\] §힐베르트-사무엘 함수, ⁋보조정리 2](/ko/math/commutative_algebra/hilbert-samuel_function#lem2)의 첫째 결과) 최고차항 계수에 $r!$을 곱한 값이 정수임을 알 수 있다. 곧 $\deg X$는 양의 정수이다. 한편 $P_{\mathcal{O}_X}(0)=\rchi(\mathcal{O}_X)$이므로 arithmetic genus는 structure sheaf의 Euler characteristic을 다시 적은 것이며, 부호 $(-1)^r$은 곡선의 경우 $p_a=1-\rchi(\mathcal{O}_X)$가 되도록 맞춘 것이다.
+여기서 $\supp\mathcal{O}_X=X$이므로 [정리 16](#thm16)에 의하여 $P_{\mathcal{O}_X}$는 $r$차식이고, 충분히 큰 $d$에서 $P_{\mathcal{O}_X}(d)=\dim_\mathbb{K}\Gamma(X, \mathcal{O}_X(d))>0$이므로 $a_r$은 양수이다. 또 numerical polynomial을 이항계수들의 정수계수 결합으로 적으면 ([\[가환대수학\] §힐베르트-사무엘 함수, ⁋보조정리 2](/ko/math/commutative_algebra/hilbert-samuel_function#lem2)의 첫째 결과) 최고차항 계수에 $r!$을 곱한 값이 정수임을 알 수 있다. 즉, $\deg X$는 양의 정수이다. 한편 $P_{\mathcal{O}_X}(0)=\rchi(\mathcal{O}_X)$이므로 arithmetic genus는 structure sheaf의 Euler characteristic을 다시 적은 것이며, 부호 $(-1)^r$은 곡선의 경우 우리가 이미 알고 있는 정의 $p_a=1-\rchi(\mathcal{O}_X)$가 되도록 맞춘 것이다.
 
-가장 단순한 예시는 projective space 자신이다. [따름정리 15](#cor15)에서 $P_{\mathcal{O}_{\mathbb{P}^n}}(t)=\binom{n+t}{n}$이므로 최고차항 계수는 $1/n!$이고 따라서 $\deg\mathbb{P}^n_\mathbb{K}=1$이며, $P_{\mathcal{O}_{\mathbb{P}^n}}(0)=1$에서 $p_a(\mathbb{P}^n_\mathbb{K})=0$이다. 다음으로 $n\geq1$이라 하고, positive degree $e$의 nonzero homogeneous polynomial $f$가 정의하는 hypersurface $X=V_+(f)\subseteq\mathbb{P}^n_\mathbb{K}$를 보자. ([§사영공간의 닫힌 부분스킴, ⁋예시 2](/ko/math/scheme_theory/closed_subschemes_of_projective_spaces#ex2)) $f$는 많아야 하나의 $j$에 대해서만 $\x_j^e$의 상수배일 수 있으므로, $n\geq1$에 의하여 $f$가 $\x_j^e$의 상수배가 아닌 chart $D_+(\x_j)$가 존재한다. 이 chart 위에서 $X$는 dehomogenization $f/\x_j^e$의 zero set인데, 이 원소가 $0$도 unit도 아니므로 그 zero set은 공집합이 아니고, 곧 $X$는 공집합이 아닌 closed subscheme이어서 [정의 17](#def17)을 적용할 수 있다. $\mathbb{K}[\x_0,\ldots, \x_n]$가 integral domain이므로 곱하기 $f$는 각 chart 위에서 injective이고, 따라서 short exact sequence
+가장 단순한 예시는 projective space 자신이다. [따름정리 15](#cor15)에서 $P_{\mathcal{O}_{\mathbb{P}^n}}(t)=\binom{n+t}{n}$이므로 최고차항 계수는 $1/n!$이고 따라서 $\deg\mathbb{P}^n_\mathbb{K}=1$이며, $P_{\mathcal{O}_{\mathbb{P}^n}}(0)=1$에서 $p_a(\mathbb{P}^n_\mathbb{K})=0$이다. 이보다 덜 자명한 예시로 positive degree $e$의 nonzero homogeneous polynomial $f$가 정의하는 hypersurface $X=V_+(f)\subseteq\mathbb{P}^n_\mathbb{K}$를 보자. $f$는 많아야 하나의 $j$에 대해서만 $\x_j^e$의 상수배일 수 있으므로, $n\geq1$이라면 $f$가 $\x_j^e$의 상수배가 아닌 chart $D_+(\x_j)$가 반드시 존재한다. 이 chart 위에서 $X$는 dehomogenization $f/\x_j^e$의 zero set인데, 이 원소가 $0$도 unit도 아니므로 그 zero set은 공집합이 아니고, 곧 $X$는 공집합이 아닌 closed subscheme이어서 [정의 17](#def17)을 적용할 수 있다. 이를 따라가보면 $\mathbb{K}[\x_0,\ldots, \x_n]$가 integral domain이므로 곱하기 $f$는 각 chart 위에서 injective이고, 따라서 short exact sequence
 
 $$0 \rightarrow \mathcal{O}_{\mathbb{P}^n}(-e)\overset{\times f}{\longrightarrow}\mathcal{O}_{\mathbb{P}^n} \rightarrow \mathcal{O}_X \rightarrow 0$$
 
-을 얻는다. 이를 $\mathcal{O}(d)$로 twist한 뒤 [명제 14](#prop14)의 1번과 [따름정리 15](#cor15)를 적용하면
+가 존재하며 이를 $\mathcal{O}(d)$로 twist한 뒤 [명제 14](#prop14)의 1번과 [따름정리 15](#cor15)를 적용하면
 
 $$P_{\mathcal{O}_X}(t)=\binom{n+t}{n}-\binom{n+t-e}{n}$$
 
-이다. 우변에서 $t^n$의 항은 소거되고 $t^{n-1}$의 계수는 $e/(n-1)!$이 남으므로, $\dim X=n-1$과 함께 $\deg X=e$를 얻는다. 곧 hypersurface의 degree가 정의 다항식의 degree라는 고전적인 사실이 Hilbert polynomial의 언어로 다시 얻어진다.
+이다. 우변에서 $t^n$의 항은 소거되고 $t^{n-1}$의 계수는 $e/(n-1)!$이 남으므로, $\dim X=n-1$과 함께 $\deg X=e$를 얻는다. 즉, $\mathbb{P}^n$의 hypersurface의 degree는 이를 정의하는 다항식의 차수라는 고전적인 사실이 Hilbert polynomial의 언어로 다시 얻어진다.
 
 ---
 

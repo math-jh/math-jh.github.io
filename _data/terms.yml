@@ -7334,6 +7334,9 @@ K:
   defs:
   - label: '[대수적 위상수학] §호몰로지'
     url: /ko/math/algebraic_topology/homology
+  see:
+  - label: Singular $k$-simplex
+    id: singular_k_-simplex
 - id: mathbb_k_-vector_space
   en: $\mathbb{K}$-vector space
   ko: $\mathbb{K}$-벡터공간
@@ -7348,6 +7351,17 @@ K:
   defs:
   - label: '[복소기하학] §Kähler 다양체'
     url: /ko/math/complex_geometry/kahler_manifolds
+  see:
+  - label: Kähler form
+    id: kähler_form
+  - label: Kähler manifold
+    id: kähler_manifold
+  - label: Integral Kähler class
+    id: integral_kähler_class
+  - label: Integral Kähler form
+    id: integral_kähler_form
+  - label: Kähler metric
+    id: kähler_metric
 - id: kähler_differential_module
   en: Kähler differential module
   ko: 캘러 미분가군
@@ -7355,6 +7369,16 @@ K:
   defs:
   - label: '[가환대수학] §미분'
     url: /ko/math/commutative_algebra/differentials
+  see:
+  - label: Differential form
+    id: differential_form
+  - label: Cotangent sheaf
+    id: cotangent_sheaf
+  - label: Exterior derivative
+    id: exterior_derivative
+  - label: 여접 복합체
+    lang: ko
+    id: cotangent_complex
 - id: kähler_form
   en: Kähler form
   ko: 켈러 형식
@@ -7463,6 +7487,10 @@ L:
   defs:
   - label: '[복소기하학] §Hodge 이론'
     url: /ko/math/complex_geometry/hodge_theory
+  see:
+  - label: 내적공간
+    lang: ko
+    id: inner_product_space
 - id: lagrange_multiplier
   en: Lagrange multiplier
   ko: 라그랑주 승수
@@ -7470,6 +7498,10 @@ L:
   defs:
   - label: '[미적분학] §다변수함수와 편미분'
     url: /ko/math/calculus/partial_derivatives
+  see:
+  - label: 제약극값
+    lang: ko
+    id: constrained_extremum
 - id: lagrangian_morphism
   en: Lagrangian morphism
   ko: Lagrangian 사상
@@ -7479,6 +7511,11 @@ L:
     url: /ko/math/linear_algebra/bilinear_form
   - label: '[유도대수기하학] §Shifted symplectic 구조'
     url: /ko/math/derived_algebraic_geometry/shifted_symplectic_structures
+  see:
+  - label: Lagrangian submanifold
+    id: lagrangian_submanifold
+  - label: Symplectic form
+    id: symplectic_form
 - id: lagrangian_submanifold
   en: Lagrangian submanifold
   ko: 라그랑지안 부분다양체
@@ -7486,6 +7523,11 @@ L:
   defs:
   - label: '[사교기하학] §사교다양체'
     url: /ko/math/symplectic_geometry/symplectic_manifold
+  see:
+  - label: Symplectic manifold
+    id: symplectic_manifold
+  - label: Symplectic form
+    id: symplectic_form
 - id: lagrangian_subspace
   en: Lagrangian subspace
   ko: 라그랑지안 부분공간
@@ -7493,6 +7535,9 @@ L:
   defs:
   - label: '[사교기하학] §사교벡터공간'
     url: /ko/math/symplectic_geometry/linear_symplectic_geometry
+  see:
+  - label: Symplectic vector space
+    id: symplectic_vector_space
 - id: landau-ginzburg_model
   en: Landau-Ginzburg model
   ko: 란다우-긴즈부르크 모델
@@ -7500,6 +7545,9 @@ L:
   defs:
   - label: '[거울대칭] §거울대칭 개요'
     url: /ko/math/mirror_symmetry/overview
+  see:
+  - label: Gromov-Witten potential
+    id: gromov-witten_potential
 - id: langlands_dual_group
   en: langlands dual group
   ko: 랭글랜즈 쌍대군
@@ -7514,6 +7562,10 @@ L:
   defs:
   - label: '[복소해석학] §복소정칙함수'
     url: /ko/math/complex_analysis/holomorphic_functions
+  see:
+  - label: $\partial$-연산자
+    lang: ko
+    id: del_operator
 - id: lattice
   en: lattice
   ko: 격자
@@ -7525,6 +7577,9 @@ L:
     url: /ko/math/complex_geometry/complex_manifolds
   - label: '[토릭 기하학] §아핀 토릭 다양체'
     url: /ko/math/toric_geometry/affine_toric_varieties
+  see:
+  - label: Ordered set
+    id: ordered_set
 - id: lattice_polytope
   en: lattice polytope
   ko: 격자 다면체
