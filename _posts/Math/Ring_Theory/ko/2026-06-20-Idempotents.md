@@ -11,8 +11,6 @@ sidebar:
 date: 2026-06-20
 weight: 6
 
-published: false
-
 ---
 
 앞서 [§중국인의 나머지정리, ⁋명제 6](/ko/math/ring_theory/chinese_remainder_theorem#prop6)에서 우리는 pairwise comaximal two-sided ideal들이 주어진 ring을 quotient ring들의 곱으로 분해한다는 것을 보았다. 그 분해에서 각 인자를 골라내는 역할을 한 것은 $i$번째 성분만 $1$이고 나머지가 $0$인 원소였으며, 이러한 원소는 ring의 center에 놓인 *idempotent*로 특징지어진다. 
@@ -119,13 +117,13 @@ $$1=e_1+\cdots+e_n,\qquad e_i\in\mathfrak{a}_i$$
 
 $$x=x\cdot 1=xe_1+\cdots+xe_n$$
 
-를 얻으며 이는 유일하다. 특히 $x=e_i$를 대입하면 $e_i^2=e_i$이고, 모든 $i\neq j$에 대해 $e_i e_j=0$임을 얻을 수 있고, 비슷하게 $e_i$를 오른쪽에서 곱하면 $e_je_i=0$임도 알 수 있다. 즉 $\{e_1,\ldots, e_n\}$은 orthogonal idempotent의 complete set이다. 이제 보여야 할 것 중 남은 것은 오직 centrality 뿐이다. 임의의 $y\in A$를 
+를 얻으며 이는 유일하다. 그런데 $x\in\mathfrak{a}_j$의 분해는 $j$번째 성분만 $x$이고 나머지가 $0$인 것이므로, 이 유일성에서 $xe_j=x$이고 $i\neq j$에 대해 $xe_i=0$이다. 특히 $x=e_j$를 대입하면 $e_j^2=e_j$이고, 모든 $i\neq j$에 대해 $e_je_i=0$임을 얻는다. 즉 $\{e_1,\ldots, e_n\}$은 orthogonal idempotent의 complete set이다. 이제 보여야 할 것 중 남은 것은 오직 centrality 뿐이다. 임의의 $y\in A$를 
 
 $$y=y_1+\cdots+y_n,\qquad y_i\in\mathfrak{a}_i$$
 
 로 쓰면 위에서 $y_ie_j$는 $i=j$일 때 $y_i$, 아닐 때 $0$이며 $e_jy_i$도 마찬가지이므로 $ye_j=y_j=e_jy$이다. 따라서 각 $e_j$는 모든 $y$와 commute하며 central이다.
 
-어렵지 않게 이 두 구성이 서로의 역함수임을 확인할 수 있으며, 따라서 이 대응은 일대일이다.
+마지막으로 이 두 구성이 서로의 역함수임을 확인하자. 첫째 데이터에서 출발하여 $\mathfrak{a}_i=Ae_i$로 두면 $1=e_1+\cdots+e_n$이 이 분해에 따른 $1$의 유일한 표현이므로, 둘째 구성이 돌려주는 idempotent는 다시 $e_i$이다. 거꾸로 둘째 데이터에서 출발하면 $e_i\in\mathfrak{a}_i$에서 $Ae_i\subseteq\mathfrak{a}_i$이고, 위에서 얻은 등식 $x=xe_i$가 임의의 $x\in\mathfrak{a}_i$에 대해 역포함을 주므로 $\mathfrak{a}_i=Ae_i$이다. 따라서 이 대응은 일대일이다.
 :::
 
 [정리 5](#thm5)에 의해, ring이 nontrivial한 central idempotent를 갖지 않는 것은 그것이 두 nonzero ring의 곱으로 쪼개지지 않는 것과 동치이다. 이러한 ring을 *connected* 혹은 *indecomposable*하다고 부른다. 가령 division ring $A$는 언제나 indecomposable하다. 만일 $A$가 두 nonzero ring의 곱으로 쪼개진다면 각 인자의 항등원에 해당하는 $(1,0)$과 $(0,1)$이 모두 nonzero이면서 그 곱이 $0$이 되어 $A$가 zero divisor를 갖게 되기 때문이다.
@@ -149,7 +147,7 @@ $$E_{11}E_{12}=E_{12}\neq 0=E_{12}E_{11}$$
 
 이므로 $E_{11}$은 $E_{12}$와 commute하지 않는다. 따라서 이 분해는 ring의 direct product decomposition을 주지 않는다.
 
-실제로 임의의 ring $A$에 대하여, $\Mat_n(A)$의 central idempotent는 일반적으로 $c\in Z(A)$에 의한 스칼라곱 행렬 $cI$ 뿐이라는 것을 직접 보일 수 있다. 행렬 $M$이 모든 matrix unit과 commute한다고 하면,
+실제로 임의의 ring $A$에 대하여 $\Mat_n(A)$의 center를 직접 계산할 수 있다. 행렬 $M$이 모든 matrix unit과 commute한다고 하면,
 
 $$(E_{kl}M)_{i,j}=\delta_{ik}M_{lj},\qquad (ME_{kl})_{i,j}=M_{ik}\delta_{lj}$$
 
@@ -157,7 +155,11 @@ $$(E_{kl}M)_{i,j}=\delta_{ik}M_{lj},\qquad (ME_{kl})_{i,j}=M_{ik}\delta_{lj}$$
 
 $$M_{lj}=M_{kk}\delta_{lj}$$
 
-이므로, $j\neq l$이라면 $M_{lj}=0$이고, $j=l$인 곳에서는 $M_{ll}=M_{kk}$이므로 $M$은 $cI$의 꼴이어야 하는 것을 안다. 한편 이러한 $M$은 matrix unit들 뿐만 아니라 $aI$ 꼴의 행렬과도 commute해야 하므로, 이 계수 $c$가 $A$의 center $Z(A)$에 속해야 한다. 특히 만일 $A$가 division ring이면 $A$의 idempotent가 $0,1$뿐이므로 $\Mat_n(A)$의 central idempotent는 $0$과 $I$뿐이다.
+이므로, $j\neq l$이라면 $M_{lj}=0$이고, $j=l$인 곳에서는 $M_{ll}=M_{kk}$이므로 $M$은 $cI$의 꼴이어야 하는 것을 안다. 한편 이러한 $M$은 matrix unit들 뿐만 아니라 $aI$ 꼴의 행렬과도 commute해야 하므로, 이 계수 $c$가 $A$의 center $Z(A)$에 속해야 한다. 거꾸로 $c\in Z(A)$이면 임의의 $M$에 대해 $(cIM)_{i,j}=cM_{i,j}=M_{i,j}c=(McI)_{i,j}$이므로 $cI$는 모든 행렬과 commute하며, 따라서
+
+$$Z(\Mat_n(A))=\{cI\mid c\in Z(A)\}$$
+
+이다. 이제 $(cI)^2=c^2I$이므로 $\Mat_n(A)$의 central idempotent는 $c^2=c$인 $c\in Z(A)$에 대한 $cI$들이고, 이는 곧 $A$의 central idempotent들을 그대로 $\Mat_n(A)$에 옮겨준 것이다. 특히 만일 $A$가 division ring이면 $A$의 central idempotent가 $0,1$뿐이므로 $\Mat_n(A)$의 central idempotent는 $0$과 $I$뿐이다.
 :::
 
 한편 idempotent가 central인지는 그것을 어느 ring 안에서 보느냐에 달렸다. $n=n_1+\cdots+n_r$로 분할하고, 대각선을 따라 처음 $n_1\times n_1$ block, 다음 $n_2\times n_2$ block 식으로 놓인 block-diagonal 행렬들만 모은 subring
@@ -182,30 +184,28 @@ Ring $A$와 그 two-sided ideal들 $\mathfrak{a}_1,\ldots, \mathfrak{a}_n$이 �
 3. $A$의 central한 orthogonal idempotent의 complete set $\{e_1,\ldots, e_n\}$이 존재하여 모든 $i$에 대해 $\mathfrak{a}_i=A(1-e_i)$이다.
 :::
 ::: 증명
-$(1)\Rightarrow(2)$. $\pi$가 isomorphism이면 $\bigcap_i\mathfrak{a}_i=\ker\pi=0$이다. 또 $i\neq j$를 고정하고, $i$번째 성분이 $1+\mathfrak{a}_i$이며 나머지 성분이 모두 $0$인 원소의 preimage를 $x\in A$라 하자. 그럼 $j$번째 성분에서 $x\in\mathfrak{a}_j$이고 $i$번째 성분에서 $1-x\in\mathfrak{a}_i$이므로
+우선 첫째 조건을 가정하고 둘째 조건을 보이자. 만일 $\pi$가 isomorphism이면 $\bigcap_i\mathfrak{a}_i=\ker\pi=0$이다. 또, 고정된 pair $i\neq j$에 대하여 $i$번째 성분이 $1+\mathfrak{a}_i$이며 나머지 성분이 모두 $0$인 원소의 preimage를 $e_i\in A$라 하자. 그럼 $j$번째 성분에서 $e_i\in\mathfrak{a}_j$이고 $i$번째 성분에서 $1-e_i\in\mathfrak{a}_i$이므로
 
-$$1=(1-x)+x\in\mathfrak{a}_i+\mathfrak{a}_j$$
+$$1=(1-e_i)+e_i\in\mathfrak{a}_i+\mathfrak{a}_j$$
 
 이고, 따라서 $\mathfrak{a}_i+\mathfrak{a}_j=A$이다.
 
-$(2)\Rightarrow(3)$. Pairwise comaximal 조건과 $\bigcap_i\mathfrak{a}_i=\ker\pi=0$으로부터 [§중국인의 나머지정리, ⁋명제 6](/ko/math/ring_theory/chinese_remainder_theorem#prop6)에 의해 $\pi$는 isomorphism이다. Product ring $\prod_i A/\mathfrak{a}_i$에서 $i$번째 성분만 $1+\mathfrak{a}_i$이고 나머지가 $0$인 원소
+이제 둘째 조건을 가정하고 셋째 조건을 보이자. Pairwise comaximal 조건과 $\bigcap_i\mathfrak{a}_i=\ker\pi=0$으로부터 [§중국인의 나머지정리, ⁋명제 6](/ko/math/ring_theory/chinese_remainder_theorem#prop6)에 의해 $\pi$는 isomorphism이다. Product ring $\prod_i A/\mathfrak{a}_i$에서 $i$번째 성분만 $1+\mathfrak{a}_i$이고 나머지가 $0$인 원소
 
-$$\bar e_i=(0,\ldots, 0,\underset{i}{1},0,\ldots, 0)$$
+$$\bar e_i=(0,\ldots, 0,1,0,\ldots, 0)$$
 
-들을 생각하면, 성분별 계산으로 이들이 central한 orthogonal idempotent의 complete set을 이룸을 알 수 있다. $\pi$가 ring isomorphism이므로 $e_i:=\pi^{-1}(\bar e_i)$ 또한 $A$의 central한 orthogonal idempotent의 complete set이다. 등식 $\mathfrak{a}_i=A(1-e_i)$를 확인하자. $\bar e_i$의 $i$번째 성분이 $1+\mathfrak{a}_i$이므로 $1-e_i\in\mathfrak{a}_i$이고, $\mathfrak{a}_i$가 ideal이므로 $A(1-e_i)\subseteq\mathfrak{a}_i$이다. 거꾸로 $a\in\mathfrak{a}_i$라 하면 $\pi(a)$의 $i$번째 성분이 $0$이고 $\bar e_i$는 $i$번째 성분을 제외한 모든 성분이 $0$이므로 $\pi(ae_i)=\pi(a)\bar e_i=0$이며, $\pi$가 단사이므로 $ae_i=0$이다. 따라서
+들을 생각하면, 성분별 계산으로 이들이 central한 orthogonal idempotent의 complete set을 이룸을 알 수 있으며 $\pi$가 ring isomorphism이므로 $e_i:=\pi^{-1}(\bar e_i)$ 또한 $A$의 central한 orthogonal idempotent의 complete set이다. 남은 것은 등식 $\mathfrak{a}_i=A(1-e_i)$으로, $\bar e_i$의 $i$번째 성분이 $1+\mathfrak{a}_i$이므로 $1-e_i\in\mathfrak{a}_i$이고, $\mathfrak{a}_i$가 ideal이므로 $A(1-e_i)\subseteq\mathfrak{a}_i$임은 자명하다. 거꾸로 $a\in\mathfrak{a}_i$라 하면 $\pi(a)$의 $i$번째 성분이 $0$이고 $\bar e_i$는 $i$번째 성분을 제외한 모든 성분이 $0$이므로 $\pi(ae_i)=\pi(a)\bar e_i=0$이며, $\pi$가 단사이므로 $ae_i=0$이다. 따라서
 
 $$a=ae_i+a(1-e_i)=a(1-e_i)\in A(1-e_i)$$
 
 이다.
 
-$(3)\Rightarrow(1)$. [정리 5](#thm5)에 의해 central한 complete set $\{e_1,\ldots, e_n\}$은 ring isomorphism $x\mapsto (xe_1,\ldots, xe_n)$으로 주어지는 direct product decomposition $A\cong\prod_i Ae_i$를 준다. 한편 각 $i$에 대하여 morphism
+마지막으로 셋째 조건을 가정하고 첫째 조건을 보이자. [정리 5](#thm5)에 의해 central한 complete set $\{e_1,\ldots, e_n\}$은 ring isomorphism $x\mapsto (xe_1,\ldots, xe_n)$으로 주어지는 direct product decomposition $A\cong\prod_i Ae_i$를 준다. 한편 각 $i$에 대하여 morphism
 
 $$A\rightarrow Ae_i;\quad a\mapsto ae_i$$
 
-는 전사이고, $ae_i=0$이면 $a=a(1-e_i)$이며 거꾸로 $a(1-e_i)e_i=0$이므로 그 kernel은 $A(1-e_i)=\mathfrak{a}_i$이다. 따라서 $A/\mathfrak{a}_i\cong Ae_i$이며, 이 동형이 $x+\mathfrak{a}_i\mapsto xe_i$로 주어지므로 위의 direct product decomposition과 합성하면 정확히 $\pi$를 얻는다. 그러므로 $\pi$는 isomorphism이다.
+는 자명하게 전사이고, $ae_i=0$이면 $a=a(1-e_i)$이며 거꾸로 $a(1-e_i)e_i=0$이므로 그 kernel은 $A(1-e_i)=\mathfrak{a}_i$이다. 따라서 $A/\mathfrak{a}_i\cong Ae_i$이며, 이 isomorphism이 $x+\mathfrak{a}_i\mapsto xe_i$로 주어지므로 위의 direct product decomposition과 합성하면 정확히 $\pi$를 얻는다. 그러므로 $\pi$는 isomorphism이다.
 :::
-
-이 정리는 [정리 5](#thm5)의 대응을 ideal 쪽 자료로 옮겨 놓은 것이다. Pairwise comaximal이고 교차가 $0$인 ideal들이 주어지는 것, $A$가 ring들의 곱으로 분해되는 것, 그리고 $A$가 central한 orthogonal idempotent의 complete set을 갖는 것이 모두 같은 자료이며, 이 대응에서 $i$번째 인자 $A/\mathfrak{a}_i\cong Ae_i$의 항등원이 곧 $e_i$이다.
 
 이를 가장 친숙한 경우인 정수환에 적용해 보자.
 
@@ -217,12 +217,8 @@ $$\mathbb{Z}/n\mathbb{Z}\cong\prod_{k=1}^r\mathbb{Z}/p_k^{a_k}\mathbb{Z}$$
 와 함께, 이 분해에 대응하는 $\mathbb{Z}/n\mathbb{Z}$의 central한 orthogonal idempotent의 complete set을 얻는다.
 
 구체적으로 $n=6=2\cdot 3$인 경우를 보면 $\mathbb{Z}/6\mathbb{Z}\cong\mathbb{Z}/2\mathbb{Z}\times\mathbb{Z}/3\mathbb{Z}$이다. Product ring $\mathbb{Z}/2\mathbb{Z}\times\mathbb{Z}/3\mathbb{Z}$의 두 idempotent $\bar e_1=(1,0)$, $\bar e_2=(0,1)$을 isomorphism으로 끌어오면, $\mathbb{Z}/6\mathbb{Z}$에서 $(1,0)$에 대응하는 원소는 $3$, $(0,1)$에 대응하는 원소는 $4$이다. 실제로 $3\equiv 1\ (\mathrm{mod}\ 2)$, $3\equiv 0\ (\mathrm{mod}\ 3)$이고 $4\equiv 0\ (\mathrm{mod}\ 2)$, $4\equiv 1\ (\mathrm{mod}\ 3)$이다. 이는 [예시 2](#ex2)에서 손으로 찾은 idempotent $3,4$와 정확히 일치한다.
-:::
 
-마지막으로, 곱으로 더 쪼갤 수 없는 경우와의 대비를 명시해 둔다.
-
-::: 참고 9
-[예시 8](#ex8)의 분해에서 각 인수는 소수의 거듭제곱 $p_k^{a_k}$의 quotient이다. $\mathbb{Z}/p^a\mathbb{Z}$는 $0,1$ 외의 idempotent를 갖지 않는데, 이는 $x^2\equiv x\ (\mathrm{mod}\ p^a)$가 $x(x-1)\equiv 0\ (\mathrm{mod}\ p^a)$와 같고, $x$와 $x-1$이 서로소라 $p^a$이 둘 중 하나만을 나누어야 하기 때문이다. 따라서 $\mathbb{Z}/p^a\mathbb{Z}$는 [정리 5](#thm5)의 의미에서 indecomposable하며, 소인수분해에 따른 direct product decomposition은 더 이상 쪼갤 수 없는 가장 미세한 분해이다. 이는 [예시 2](#ex2)에서 $\mathbb{Z}/4\mathbb{Z}$가 trivial idempotent만 가졌던 관찰의 일반화이다.
+한편 소수 $p$와 $a\geq 1$에 대하여 $\mathbb{Z}/p^a\mathbb{Z}$는 $0,1$ 외의 idempotent를 갖지 않는다. 이는 $x^2\equiv x\ (\mathrm{mod}\ p^a)$가 $x(x-1)\equiv 0\ (\mathrm{mod}\ p^a)$와 같고, $x$와 $x-1$이 서로소라 $p^a$이 둘 중 하나만을 나누어야 하기 때문이다. 따라서 위 분해의 각 인수는 [정리 5](#thm5)의 의미에서 indecomposable하며, 소인수분해에 따른 direct product decomposition은 더 이상 쪼갤 수 없는 가장 미세한 분해이다. [예시 2](#ex2)에서 $\mathbb{Z}/4\mathbb{Z}$가 trivial idempotent만 가졌던 것이 그 특수한 경우이다.
 :::
 
 ---
