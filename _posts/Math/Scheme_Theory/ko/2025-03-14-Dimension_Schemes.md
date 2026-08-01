@@ -271,10 +271,10 @@ $$\codim_XW=\dim\mathcal{O}_{X,w}=\dim\mathcal{O}_{U,w}=\codim_U(W\cap U)$$
 
 $\codim_XW=0$인 것은 $W$가 $X$ 자신의 irreducible component라는 것, 곧 $f$가 그 component 위에서 항등적으로 소멸한다는 것과 같다. 따라서 $f$가 $X$의 어떤 irreducible component 위에서도 항등적으로 소멸하지 않는다면 $Z(f)$의 모든 component는 codimension이 정확히 $1$이 되며, 이것이 [명제 11](#prop11)에서 $A$가 integral domain이고 $f$가 nonzero라는 가정이 하던 역할이다.
 
-한편 지금까지의 결과들을 조합하면 finitely generated $\mathbb{K}$-대수의 차원이 계수의 확대에 대해 변하지 않는다는 것 또한 얻어진다. 이는 주어진 문제를 무한체 위의 문제로 바꾸어 놓고 논증하는 환원에서 쓰인다.
+한편 지금까지의 결과들을 조합하면 finitely generated $\mathbb{K}$-algebra의 차원이 계수의 확대에 대해 변하지 않는다는 것 또한 얻어진다. 
 
 ::: 명제 13
-Field $\mathbb{K}$의 확대 $\mathbb{L}\supseteq\mathbb{K}$와 finitely generated $\mathbb{K}$-algebra $A$에 대하여
+Field $\mathbb{K}$의 extension $\mathbb{K}\hookrightarrow \mathbb{L}$과 finitely generated $\mathbb{K}$-algebra $A$에 대하여
 
 $$\dim\Spec(A\otimes_\mathbb{K}\mathbb{L})=\dim\Spec A$$
 
