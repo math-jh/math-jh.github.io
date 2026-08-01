@@ -9474,6 +9474,11 @@ O:
   defs:
   - label: '[스킴] §준연접층'
     url: /ko/math/scheme_theory/quasicoherent_sheaves
+  see:
+  - label: Coherent sheaf
+    id: coherent_sheaf
+  - label: Quasi-coherent sheaf
+    id: quasi-coherent_sheaf
 - id: object
   en: object
   ko: 대상
@@ -9514,6 +9519,11 @@ O:
   defs:
   - label: '[미분다양체] §벡터장'
     url: /ko/math/manifolds/vector_fields
+  see:
+  - label: Lie group
+    id: lie_group
+  - label: Algebraic group
+    id: algebraic_group
 - id: one-point_compactification
   en: one-point compactification
   ko: 일점 옹골화
@@ -9521,6 +9531,11 @@ O:
   defs:
   - label: '[위상수학] §Compactness와 paracompactness'
     url: /ko/math/topology/compactness
+  see:
+  - label: Alexandroff compactification
+    id: alexandroff_compactification
+  - label: Compactification
+    id: compactification
 - id: open_ball
   en: open ball
   ko: 열린공
@@ -9528,6 +9543,10 @@ O:
   defs:
   - label: '[해석학] §거리공간'
     url: /ko/math/analysis/metric_spaces
+  see:
+  - label: 거리공간
+    lang: ko
+    id: metric_space
 - id: open_cover
   en: open cover
   ko: 열린덮개
@@ -9537,6 +9556,9 @@ O:
     url: /ko/math/analysis/compactness
   - label: '[대수다양체] §층 코호몰로지'
     url: /ko/math/algebraic_varieties/sheaf_cohomology
+  see:
+  - label: Compact
+    id: compact
 - id: open_covering
   en: open covering
   ko: 열린덮개
@@ -9544,6 +9566,9 @@ O:
   defs:
   - label: '[위상수학] §위상공간의 기저'
     url: /ko/math/topology/topological_bases
+  see:
+  - label: Open cover
+    id: open_cover
 - id: open_immersion
   en: open immersion
   ko: 열린 몰입
@@ -9551,6 +9576,9 @@ O:
   defs:
   - label: '[스킴] §값매김환'
     url: /ko/math/scheme_theory/valuative_criteria
+  see:
+  - label: Open subscheme
+    id: open_subscheme
 - id: open_interval
   en: open interval
   ko: 열린구간
@@ -9835,6 +9863,9 @@ P:
   defs:
   - label: '[유도대수기하학] §Shifted symplectic 구조'
     url: /ko/math/derived_algebraic_geometry/shifted_symplectic_structures
+  see:
+  - label: Differential form
+    id: differential_form
 - id: p_q_-form
   en: $(p,q)$-form
   ko: $(p,q)$-형식
@@ -9842,6 +9873,13 @@ P:
   defs:
   - label: '[복소기하학] §거의 복소구조'
     url: /ko/math/complex_geometry/almost_complex_structures
+  see:
+  - label: Dolbeault complex
+    id: dolbeault_complex
+  - label: Dolbeault cohomology
+    id: dolbeault_cohomology
+  - label: Holomorphic $p$-form
+    id: holomorphic_p_-form
 - id: pairing
   en: pairing
   ko: 짝지음
@@ -9849,6 +9887,11 @@ P:
   defs:
   - label: '[선형대수학] §쌍대공간'
     url: /ko/math/linear_algebra/dual_space
+  see:
+  - label: Bilinear form
+    id: bilinear_form
+  - label: Dual pairing
+    id: dual_pairing
 - id: pairwise_comaximal
   en: pairwise comaximal
   ko: 쌍마다 공최대
@@ -9873,6 +9916,9 @@ P:
   defs:
   - label: '[리 이론] §Bruhat decomposition'
     url: /ko/math/lie_theory/bruhat_decomposition
+  see:
+  - label: Borel subgroup
+    id: borel_subgroup
 - id: paracompact
   en: paracompact
   ko: 파라콤팩트
@@ -9887,6 +9933,9 @@ P:
   defs:
   - label: '[리만기하학] §레비-치비타 접속'
     url: /ko/math/riemannian_geometry/Levi-Civita_connection
+  see:
+  - label: Parallel transport
+    id: parallel_transport
 - id: parallel_transport
   en: parallel transport
   ko: 평행 운반
@@ -9894,6 +9943,11 @@ P:
   defs:
   - label: '[리만기하학] §레비-치비타 접속'
     url: /ko/math/riemannian_geometry/Levi-Civita_connection
+  see:
+  - label: Connection
+    id: connection
+  - label: Covariant derivative
+    id: covariant_derivative
 - id: parallelizable
   en: parallelizable
   ko: 평행적
