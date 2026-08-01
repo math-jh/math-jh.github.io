@@ -6336,6 +6336,9 @@ I:
   defs:
   - label: '[대수적 구조] §등급가군'
     url: /ko/math/algebraic_structures/graded_modules
+  see:
+  - label: Graded ring
+    id: graded_ring
 - id: i_-th_coordinate
   en: $i$-th coordinate
   ko: $i$번째 좌표
@@ -6357,6 +6360,8 @@ I:
   see:
   - label: Subring
     id: subring
+  - label: Ideal quotient
+    id: ideal_quotient
 - id: ideal_quotient
   en: ideal quotient
   ko: 아이디얼 몫
@@ -6416,6 +6421,10 @@ I:
   defs:
   - label: '[복소해석학] §복소수와 복소평면'
     url: /ko/math/complex_analysis/complex_numbers
+  see:
+  - label: 복소수
+    lang: ko
+    id: complex_number
 - id: immersion
   en: immersion
   ko: 몰입
@@ -6457,6 +6466,13 @@ I:
   defs:
   - label: '[집합론] §단조함수'
     url: /ko/math/set_theory/monotone_functions
+  see:
+  - label: 감소
+    lang: ko
+    id: decreasing
+  - label: 단조함수
+    lang: ko
+    id: monotone_function
 - id: increasing_function
   en: increasing function
   ko: 증가함수
@@ -6464,6 +6480,10 @@ I:
   defs:
   - label: '[집합론] §단조함수'
     url: /ko/math/set_theory/monotone_functions
+  see:
+  - label: 감소함수
+    lang: ko
+    id: decreasing_function
 - id: indecomposable
   en: indecomposable
   ko: 분해불가능
@@ -6478,6 +6498,10 @@ I:
   defs:
   - label: '[미적분학] §적분'
     url: /ko/math/calculus/integration
+  see:
+  - label: 원시함수
+    lang: ko
+    id: antiderivative
 - id: index
   en: index
   ko: 인덱스
@@ -6487,6 +6511,9 @@ I:
     url: /ko/math/algebraic_structures/quotient_groups
   - label: '[정수론] §원시근'
     url: /ko/math/number_theory/primitive_roots
+  see:
+  - label: Index form
+    id: index_form
 - id: index_form
   en: index form
   ko: 지표형식
@@ -6538,6 +6565,10 @@ I:
   defs:
   - label: '[집합론] §자연수와 무한집합'
     url: /ko/math/set_theory/natural_numbers
+  see:
+  - label: 유한
+    lang: ko
+    id: finite
 - id: infinite_series
   en: infinite series
   ko: 무한급수
@@ -6545,6 +6576,10 @@ I:
   defs:
   - label: '[해석학] §무한급수'
     url: /ko/math/analysis/series
+  see:
+  - label: 점근분수
+    lang: ko
+    id: convergent
 - id: infinitesimal_deformation
   en: infinitesimal deformation
   ko: 무한소 변형
@@ -7168,6 +7203,14 @@ J:
   defs:
   - label: '[사교기하학] §J-holomorphic curves'
     url: /ko/math/symplectic_geometry/j_holomorphic_curves
+  see:
+  - label: Pseudoholomorphic
+    id: pseudoholomorphic
+  - label: 거의 복소구조
+    lang: ko
+    id: almost_complex_structure
+  - label: Symplectic manifold
+    id: symplectic_manifold
 - id: j_-invariance
   en: $J$-invariance
   ko: $J$-불변성
@@ -7182,6 +7225,14 @@ J:
   defs:
   - label: '[리만기하학] §비교 정리'
     url: /ko/math/riemannian_geometry/comparison_theorems
+  see:
+  - label: Jacobi field
+    id: jacobi_field
+  - label: 측지선 방정식
+    lang: ko
+    id: geodesic_equation
+  - label: Riemannian manifold
+    id: riemannian_manifold
 - id: jacobi_field
   en: Jacobi field
   ko: 야코비 장
@@ -7189,6 +7240,14 @@ J:
   defs:
   - label: '[리만기하학] §비교 정리'
     url: /ko/math/riemannian_geometry/comparison_theorems
+  see:
+  - label: Jacobi equation
+    id: jacobi_equation
+  - label: Conjugate point
+    id: conjugate_point
+  - label: 측지선
+    lang: ko
+    id: geodesic
 - id: jacobi_matrix
   en: Jacobi matrix
   ko: 야코비 행렬
@@ -7203,6 +7262,10 @@ J:
   defs:
   - label: '[정수론] §이차 상호법칙'
     url: /ko/math/number_theory/quadratic_reciprocity
+  see:
+  - label: 르장드르 기호
+    lang: ko
+    id: legendre_symbol
 - id: jacobson_radical
   en: Jacobson radical
   ko: 제이콥슨 근기
