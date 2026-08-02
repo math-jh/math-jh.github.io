@@ -14629,6 +14629,9 @@ W:
   defs:
   - label: '[리 이론] §원환면의 작용'
     url: /ko/math/lie_theory/torus_action#def4
+  see:
+  - label: Highest weight vector
+    id: highest_weight_vector
 - id: weight_decomposition
   en: weight decomposition
   ko: 무게 분해
@@ -14669,6 +14672,8 @@ W:
   see:
   - label: Cartier divisor
     id: cartier_divisor
+  - label: Principal divisor
+    id: principal_divisor
 - id: weingarten_map
   en: Weingarten map
   ko: Weingarten 사상
@@ -14676,6 +14681,11 @@ W:
   defs:
   - label: '[리만기하학] §제2기본형식'
     url: /ko/math/riemannian_geometry/second_fundamental_form
+  see:
+  - label: Shape operator
+    id: shape_operator
+  - label: Principal curvature
+    id: principal_curvature
 - id: well-ordering
   en: well-ordering
   ko: 정렬순서
@@ -14690,6 +14700,11 @@ W:
   defs:
   - label: '[리 이론] §Weyl 지표 공식'
     url: /ko/math/lie_theory/weyl_character_formula
+  see:
+  - label: Weyl group
+    id: weyl_group
+  - label: Root system
+    id: root_system
 - id: weyl_group
   en: Weyl group
   ko: 바일 군
@@ -14697,6 +14712,11 @@ W:
   defs:
   - label: '[리 이론] §원환면의 작용'
     url: /ko/math/lie_theory/torus_action
+  see:
+  - label: Root system
+    id: root_system
+  - label: Coxeter group
+    id: coxeter_group
 - id: weyl_vector
   en: Weyl vector
   ko: 바일 벡터
@@ -14704,6 +14724,11 @@ W:
   defs:
   - label: '[리 이론] §Weyl 지표 공식'
     url: /ko/math/lie_theory/weyl_character_formula
+  see:
+  - label: Weyl group
+    id: weyl_group
+  - label: Root system
+    id: root_system
 - id: whitney_sum_formula
   en: Whitney sum formula
   ko: 휘트니 합 공식
@@ -14733,6 +14758,13 @@ Z:
   defs:
   - label: '[대수다양체] §접공간과 매끄러움'
     url: /ko/math/algebraic_varieties/tangent_spaces_and_smoothness
+  see:
+  - label: Tangent space
+    id: tangent_space
+  - label: Zariski topology
+    id: zariski_topology
+  - label: Scheme
+    id: scheme
 - id: zariski_topology
   en: Zariski topology
   ko: 자리스키 위상
@@ -14742,6 +14774,16 @@ Z:
     url: /ko/math/algebraic_varieties/affine_varieties
   - label: '[스킴] §스펙트럼'
     url: /ko/math/scheme_theory/spectrums
+  see:
+  - label: 위상
+    lang: ko
+    id: topology
+  - label: Scheme
+    id: scheme
+  - label: Spectrum
+    id: spectrum
+  - label: Prime ideal
+    id: prime_ideal
 - id: zero_map
   en: zero map
   ko: 영사상
@@ -14749,6 +14791,14 @@ Z:
   defs:
   - label: '[범주론] §아벨 카테고리'
     url: /ko/math/category_theory/abelian_categories
+  see:
+  - label: 선형사상
+    lang: ko
+    id: linear_map
+  - label: Kernel
+    id: kernel
+  - label: Image
+    id: image
 - id: zerodivisor
   en: zerodivisor
   ko: 영인자
