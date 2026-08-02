@@ -5167,3 +5167,7 @@ Decide whether each one is a definition and add it to `_data/terms.yml` (then ru
 ## term_extract_worker 2026-08-01 02:30
 
 - _posts/Math/Topology/ko/2024-12-03-Hausdorff_Spaces.md: 병기 필요 'perfectly      -space' — 소스 없음 (KMS exact ✗, 위키 ko ✗)
+
+## term_extract_worker 2026-08-03 06:01
+
+- _posts/Math/Algebraic_Structures/ko/2021-09-08-Group_Homomorphisms.md: 주요 용어 'equalizer' ko 미상 — 보류
