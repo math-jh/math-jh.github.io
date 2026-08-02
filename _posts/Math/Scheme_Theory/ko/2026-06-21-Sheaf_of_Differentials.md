@@ -77,11 +77,12 @@ $$\Omega_{A_h/A}\otimes_{A_h}B \longrightarrow \Omega_{B/A} \longrightarrow \Ome
 
 이제 $\varphi(U)\subseteq V$인 affine open subset들 $U=\Spec B\subseteq X$와 $V=\Spec A\subseteq S$마다 정의된 local model $\widetilde{\Omega_{B/A}}$를 이어붙여야 한다. 이러한 모양의 gluing은 [§올곱, ⁋정리 8](/ko/math/scheme_theory/fiber_products#thm8)에서 fiber product를 구성할 때 이미 거쳤으며, 그곳에서도 factor 쪽과 base 쪽의 축소를 각각 확인한 뒤 조각들을 이어붙였다. 
 
-국소 모형이 chart를 줄여도 호환된다는 것부터 확인하자. $U$를 principal open $D(g)$ ($g\in B$)로 줄이면 [명제 3](#prop3)의 첫째 주장이
+이제 실제 gluing argument는 다음과 같다. 우선 $U$를 principal open $D(g)$ ($g\in B$)로 줄이면 [명제 3](#prop3)의 첫째 주장이
 
 $$\Omega_{B_g/A}\cong (\Omega_{B/A})_g$$
 
-를 주므로, [§준연접층, ⁋명제 5](/ko/math/scheme_theory/quasicoherent_sheaves#prop5)에 의하여 $\widetilde{\Omega_{B/A}}\vert_{D(g)}\cong \widetilde{\Omega_{B_g/A}}$가 성립한다. Base 쪽을 줄이는 것도 마찬가지인데, $V$를 $\varphi(U)\subseteq D(h)$인 principal open $D(h)=\Spec A_h$ ($h\in A$)로 바꾸면 $h$의 image가 $B$의 어떤 prime ideal에도 속하지 않아 가역이므로, [명제 3](#prop3)의 둘째 주장에 의하여 $\Omega_{B/A}\cong\Omega_{B/A_h}$가 되어 국소 모형이 변하지 않기 때문이다. 이들이 모두 functoriality에서 온 canonical한 isomorphism이므로, 두 chart가 겹치는 부분을 양쪽에서 principal인 열린집합들로 덮어 국소 모형들을 canonical하게 identify할 수 있고 이 identification들은 triple intersection 위에서 cocycle condition을 만족한다. 곧 아래의 대응은 $X$ 위의 sheaf를 유일하게 결정한다. ([\[위상수학\] §층, ⁋명제 8](/ko/math/topology/sheaves#prop8))
+를 주므로, [§준연접층, ⁋명제 5](/ko/math/scheme_theory/quasicoherent_sheaves#prop5)에 의하여 $\widetilde{\Omega_{B/A}}\vert_{D(g)}\cong \widetilde{\Omega_{B_g/A}}$가 성립한다. Base 쪽을 줄이는 것도 마찬가지인데, $V$를 $\varphi(U)\subseteq D(h)$인 principal open $D(h)=\Spec A_h$ ($h\in A$)로 바꾸면 $h$의 image가 $B$의 어떤 prime ideal에도 속하지 않아 가역이므로, [명제 3](#prop3)의 둘째 주장에 의하여 $\Omega_{B/A}\cong\Omega_{B/A_h}$가 되어 local model이 변하지 않기 때문이다. 이들이 모두 functoriality에서 온 canonical한 isomorphism이므로, 두 chart가 겹치는 부분을 양쪽에서 principal인 열린집합들로 덮어 local model들을 canonical하게 identify할 수 있고 이 identification들은 triple intersection 위에서 cocycle condition을 만족한다. 곧 아래의 대응은 $X$ 위의 sheaf를 유일하게 결정한다. ([\[위상수학\] §층, ⁋명제 8](/ko/math/topology/sheaves#prop8))
+
 ::: 정의 4
 Scheme morphism $f:X \rightarrow S$에 대하여, $X$ 위의 *cotangent sheaf<sub>여접층</sub>* 혹은 *sheaf of relative differentials<sub>상대 미분층</sub>* $\Omega_{X/S}$를, $f(U)\subseteq V$인 affine open subset들 $U=\Spec B\subseteq X$와 $V=\Spec A\subseteq S$마다
 
