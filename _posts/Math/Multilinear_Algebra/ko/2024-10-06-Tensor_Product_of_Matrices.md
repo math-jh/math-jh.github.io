@@ -11,8 +11,6 @@ sidebar:
 date: 2024-10-06
 weight: 9
 
-published: false
-
 ---
 
 [§행렬과 선형사상](/ko/math/multilinear_algebra/matrices_and_linear_maps)에서 우리는 free $A$-module들 사이의 linear map을 행렬로 표현하였고, linear map들의 합성이 행렬의 곱셈에 대응된다는 것을 살펴보았다. 한편 linear map들에 대해 우리가 할 수 있는 또 다른 연산으로 tensor product가 있으므로, 이 연산이 행렬표현의 단계에서 어떤 행렬 연산으로 나타나는지 묻는 것이 자연스럽다. 이번 글에서는 그 답인 행렬의 tensor product, 즉 Kronecker product를 살펴본다. 이번 글에서 $A$는 항상 commutative ring이다.
@@ -81,13 +79,11 @@ $$(X\otimes X')_{(j,j'),(i,i')}=x_{ji}x'_{j'i'}$$
 으로 정의된 $(J\times J')\times (I\times I')$ 행렬이다.
 :::
 
-특별히 $I,J,I',J'$가 유한집합 $\{1,\ldots,m\}$ 꼴이라 하고 $I\times I'$, $J\times J'$에 사전식 순서를 주면, $X\otimes X'$은 $X$의 각 성분 $x_{ji}$ 자리에 블록 $x_{ji}X'$을 채워넣은 블록행렬
+특별히 $I,J,I',J'$가 유한집합 $\{1,\ldots,m\}$ 꼴이라 하고 $I\times I'$, $J\times J'$에 lexicographic order를 주면, $X\otimes X'$은 $X$의 각 성분 $x_{ji}$ 자리에 블록 $x_{ji}X'$을 채워넣은 블록행렬
 
 $$X\otimes X'=\begin{pmatrix}x_{11}X'&x_{12}X'&\cdots\\x_{21}X'&x_{22}X'&\cdots\\\vdots&\vdots&\ddots\end{pmatrix}$$
 
-이 된다. 이것이 Kronecker product의 표준적인 표기이다.
-
-이 연산이 실제로 linear map들의 tensor product를 구현한다.
+이 되며, 이것이 Kronecker product의 표준적인 표기이다. 이 연산이 실제로 linear map들의 tensor product를 구현한다는 것을 보자.
 
 ::: 명제 5
 Free $A$-module들 $M,M',L,L'$의 basis $\mathcal{B}=(e_i)_{i\in I}$, $\mathcal{B}'=(e'_{i'})_{i'\in I'}$, $\mathcal{C}=(f_j)_{j\in J}$, $\mathcal{C}'=(f'_{j'})_{j'\in J'}$와 linear map들 $u:M \rightarrow L$, $u':M' \rightarrow L'$에 대하여 다음 식
@@ -107,6 +103,8 @@ $$(u\otimes u')(e_i\otimes e'_{i'})=u(e_i)\otimes u'(e'_{i'})=\sum_{(j,j')\in J\
 
 이다. [보조정리 3](#lem3)에 의해 $(f_j\otimes f'_{j'})$들이 $L\otimes_AL'$의 basis이므로, $[u\otimes u']_{\mathcal{C}\otimes\mathcal{C}'}^{\mathcal{B}\otimes\mathcal{B}'}$의 $\bigl((j,j'),(i,i')\bigr)$ 성분은 $x_{ji}x'_{j'i'}$이고, 이는 정확히 $[u]_\mathcal{C}^\mathcal{B}\otimes[u']_{\mathcal{C}'}^{\mathcal{B}'}$의 해당 성분이다.
 :::
+
+즉 [정의 4](#def4)는 [정의 1](#def1)이 만드는 linear map의 행렬표현이다. 
 
 ## 텐서곱의 성질
 
@@ -168,4 +166,3 @@ $$\tr(X\otimes X')=\sum_{(i,i')\in I\times I'}(X\otimes X')_{(i,i'),(i,i')}=\sum
 
 **[Bou]** Bourbaki, N. Algebra I. *Elements of Mathematics*. Springer. 1998.  
 
----

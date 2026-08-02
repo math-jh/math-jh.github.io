@@ -1,6 +1,6 @@
 ---
 title: "제곱근확대체"
-description: "갈루아 이론의 기본 아이디어를 제곱근확대체의 예시를 통해 소개한다. 성질이 좋은 수체의 확대에서 다항식의 근들을 바꾸는 작용으로 갈루아 군을 정의하는 과정을 다룬다."
+description: "Characteristic exponent가 p인 field extension에서 p-radical 원소와 그 height를 정의하고, 이들의 minimal polynomial을 결정한다. 이어 p-radical closure와 perfect closure의 존재성과 유일성을 다룬다."
 excerpt: "Radical extension의 정의와 Galois theory에서의 역할"
 
 categories: [Math / Field Theory]
@@ -15,13 +15,13 @@ published: false
 
 ---
 
-우리가 살펴볼 Galois 이론의 큰 테마를 아주 간단한 예시에서 살펴보자. 가령 $\mathbb{Q}$의 degree $4$ extension $\mathbb{Q}(\sqrt{2}, \sqrt{3})$을 생각하면, $\mathbb{Q}$로부터 새로 추가되는 원소들인 $\sqrt{2}$와 $\sqrt{3}$은 각각 유리수계수의 minimal polynomial들
+우리가 살펴볼 Galois theory의 큰 테마를 아주 간단한 예시에서 살펴보자. 가령 $\mathbb{Q}$의 degree $4$ extension $\mathbb{Q}(\sqrt{2}, \sqrt{3})$을 생각하면, $\mathbb{Q}$로부터 새로 추가되는 원소들인 $\sqrt{2}$와 $\sqrt{3}$은 각각 유리수계수의 minimal polynomial들
 
 $$\x^2-2,\qquad \x^2-3$$
 
 으로부터 나오는 것이다. 그런데 이 두 다항식을 각각 살펴보면, 이들은 각각 두 개의 root $\pm \sqrt{2}$, $\pm\sqrt{3}$을 가지는 다항식이며 이를 $\mathbb{Q}$에서는 algebraic한 방식으로 구별할 방법이 없다. 따라서 이들 root를 서로 바꾸는 action (혹은 $\mathbb{Q}(\sqrt{2},\sqrt{3})$의 $\mathbb{Q}$-automorphism)을 생각하면, 즉 permutation group $S_2\times S_2$를 생각하면 이것은 $S_4$의 subgroup이다. 
 
-이와 같은 방식으로 우리는 다항식이 주어질 때마다 적절한 Galois group을 정의해줄 수 있고, 이들을 보는 것이 $\mathbb{Q}$의 extension들을 분류해줄 수 있다는 것이 Galois 이론의 철학이다. 
+이와 같은 방식으로 우리는 다항식이 주어질 때마다 적절한 Galois group을 정의해줄 수 있고, 이들을 보는 것이 $\mathbb{Q}$의 extension들을 분류해줄 수 있다는 것이 Galois theory의 철학이다. 
 
 그러나 이러한 철학을 바탕으로 생각했을 때, 가령 minimal polynomial이 중근을 갖는다면 permutation action을 정의하기가 상당히 껄끄러워질 것이다. 이는 $\mathbb{Q}$에서는 기우이지만, 어떠한 경우에는 이러한 일이 실제로 일어날 수도 있다. 
 
@@ -38,7 +38,7 @@ Field extension $\mathbb{L}/\mathbb{K}$에 대하여, $x\in \mathbb{L}$이 *$p$-
 만일 $p=1$이라면 위의 정의는 별 의미가 없으며, 이번 글에서 나올 나머지 내용들 또한 마찬가지이다. 즉, 본질적으로 이번 글의 내용은 모두 characteristic $p$의 field에 대한 것이라 보아도 된다. 
 
 ::: 명제 2
-Field extension $\mathbb{L}/\mathbb{K}$와 $p$-radical element $x\in \mathbb{K}$ of height $e$를 고정하자. 그럼 $a=x^{p^e}\in \mathbb{K}$에 대하여, $x$의 minimal polynomial은
+Field extension $\mathbb{L}/\mathbb{K}$와 $p$-radical element $x\in \mathbb{L}$ of height $e$를 고정하자. 그럼 $a=x^{p^e}\in \mathbb{K}$에 대하여, $x$의 minimal polynomial은
 
 $$\x^{p^e}-a\in \mathbb{K}[\x]$$
 
