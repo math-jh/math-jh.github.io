@@ -227,7 +227,7 @@ Looking at these three cases, there are two interesting things. First, although 
 
 ## Generic Flatness and Chevalley's Theorem
 
-Now in the remaining part of the article we examine further geometric properties of flat morphisms. For this, two preparations are needed, and this section is for them. Both of these preparations can be proved using [[Commutative Algebra] §Noether Normalization, ⁋Theorem 5](/en/math/commutative_algebra/noether_normalization#thm5).
+Now in the remaining part of the article we examine further geometric properties of flat morphisms. For this, two preparations are needed, and this section is for them. Both of these preparations can be proved using [[Commutative Algebra] §Noether Normalization, ⁋Theorem 6](/en/math/commutative_algebra/noether_normalization#thm6).
 
 ::: Proposition 11 (Generic flatness)
 Let $Y$ be a Noetherian integral scheme and $\varphi: X \rightarrow Y$ a finite type morphism. Then there exists a dense open subset $U$ of $Y$ such that $\varphi\rvert^U: \varphi^{-1}(U) \rightarrow U$ is flat.
@@ -235,7 +235,7 @@ Let $Y$ be a Noetherian integral scheme and $\varphi: X \rightarrow Y$ a finite 
 ::: Proof
 Since $Y$ is irreducible, every nonempty open subset of $Y$ is dense. Therefore it suffices to fix one affine open $V=\Spec A$ of $Y$ and find $U$ inside it. Since $Y$ is an integral scheme, $A=\mathcal{O}_Y(V)$ is an integral domain, and since an affine open of a Noetherian scheme is the spectrum of a Noetherian ring, $A$ is also a Noetherian ring. ([§The Topological Structure of Schemes, ⁋Lemma 13](/en/math/scheme_theory/topology_of_schemes#lem13))
 
-On the other hand, since $\varphi$ is of finite type, $\varphi^{-1}(V)$ is covered by finitely many affine opens $\Spec B_1,\ldots, \Spec B_k$ ([§Properties of Scheme Morphisms, ⁋Definition 14](/en/math/scheme_theory/properties_of_scheme_morphisms#def14)), and each $B_i$ is a finite type $A$-algebra. Applying [[Commutative Algebra] §Noether Normalization, ⁋Theorem 5](/en/math/commutative_algebra/noether_normalization#thm5) to $M=B_i$, there exists $0\neq a_i\in A$ such that $(B_i)_{a_i}$ is a free $A_{a_i}$-module. Setting $a=a_1\cdots a_k$, each $(B_i)_a$ is a localization of the free module $(B_i)_{a_i}$ and hence remains a free $A_a$-module, and since free modules are flat, by [Lemma 2](#lem2)
+On the other hand, since $\varphi$ is of finite type, $\varphi^{-1}(V)$ is covered by finitely many affine opens $\Spec B_1,\ldots, \Spec B_k$ ([§Properties of Scheme Morphisms, ⁋Definition 14](/en/math/scheme_theory/properties_of_scheme_morphisms#def14)), and each $B_i$ is a finite type $A$-algebra. Applying [[Commutative Algebra] §Noether Normalization, ⁋Theorem 6](/en/math/commutative_algebra/noether_normalization#thm6) to $M=B_i$, there exists $0\neq a_i\in A$ such that $(B_i)_{a_i}$ is a free $A_{a_i}$-module. Setting $a=a_1\cdots a_k$, each $(B_i)_a$ is a localization of the free module $(B_i)_{a_i}$ and hence remains a free $A_a$-module, and since free modules are flat, by [Lemma 2](#lem2)
 
 $$\Spec (B_i)_a \longrightarrow \Spec A_a=D(a)$$
 
@@ -270,7 +270,7 @@ $$\varphi(X)=\bigcup_{j=1}^k \varphi\big(X\times_Y V(\mathfrak{p}_j)\big)$$
 
 where each base change $X\times_YV(\mathfrak{p}_j)=\Spec (B\otimes_AA/\mathfrak{p}_j) \rightarrow V(\mathfrak{p}_j)$ is still affine and of finite type, so by the induction hypothesis $P(V(\mathfrak{p}_j))$ each term is constructible and hence $\varphi(X)$ is constructible. Therefore it suffices to consider only the case $k=1$, i.e. $A$ is an integral domain.
 
-The case $B=0$ is trivial, so assume $B\neq 0$. Then by [[Commutative Algebra] §Noether Normalization, ⁋Theorem 5](/en/math/commutative_algebra/noether_normalization#thm5), there exists $0\neq a\in A$ such that $B_a$ is a free $A_a$-module. The case where $a$ is a unit is likewise trivial, so assume $a$ is a non-unit. In this case, since $A$ is an integral domain, $V(a)$ is a proper closed subset of $Y$.
+The case $B=0$ is trivial, so assume $B\neq 0$. Then by [[Commutative Algebra] §Noether Normalization, ⁋Theorem 6](/en/math/commutative_algebra/noether_normalization#thm6), there exists $0\neq a\in A$ such that $B_a$ is a free $A_a$-module. The case where $a$ is a unit is likewise trivial, so assume $a$ is a non-unit. In this case, since $A$ is an integral domain, $V(a)$ is a proper closed subset of $Y$.
 
 First, if $B_a=0$, this means $\phi(a)$ is nilpotent in $B$, so $\phi(a)$ belongs to every prime ideal of $B$. Therefore $\varphi(X)\subseteq V(a)$, and $\varphi(X)$ equals the image of the base change $X\times_YV(a) \rightarrow V(a)$, so it is constructible by the induction hypothesis $P(V(a))$.
 

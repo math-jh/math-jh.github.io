@@ -9084,8 +9084,8 @@ N:
   ko: ''
   primary: en
   defs:
-  - label: '[가환대수학] §코탄젠트 복합체'
-    url: /ko/math/commutative_algebra/cotangent_complex
+  - label: '[가환대수학] §미분'
+    url: /ko/math/commutative_algebra/differentials
   see:
   - label: 여접 복합체
     lang: ko
@@ -10400,8 +10400,8 @@ P:
   defs:
   - label: '[대수적 구조] §반군, 모노이드, 군'
     url: /ko/math/algebraic_structures/groups
-  - label: '[가환대수학] §코탄젠트 복합체'
-    url: /ko/math/commutative_algebra/cotangent_complex
+  - label: '[가환대수학] §미분'
+    url: /ko/math/commutative_algebra/differentials
 - id: presheaf
   en: presheaf
   ko: 준층
@@ -14106,6 +14106,11 @@ U:
   defs:
   - label: '[집합론] §필터와 아이디얼, 갈루아 대응'
     url: /ko/math/set_theory/filter_and_ideal
+  see:
+  - label: Filter
+    id: filter
+  - label: Prime ideal
+    id: prime_ideal
 - id: unary_relation
   en: unary relation
   ko: 단항관계
@@ -14113,6 +14118,10 @@ U:
   defs:
   - label: '[집합론] §동치관계의 예시들'
     url: /ko/math/set_theory/examples_of_equivalence
+  see:
+  - label: 이항관계
+    lang: ko
+    id: binary_relation
 - id: uniform_convergence
   en: uniform convergence
   ko: 균등수렴
@@ -14120,6 +14129,13 @@ U:
   defs:
   - label: '[해석학] §균등수렴'
     url: /ko/math/analysis/uniform_convergence
+  see:
+  - label: 균등연속
+    lang: ko
+    id: uniformly_continuous
+  - label: 점별수렴
+    lang: ko
+    id: pointwise_convergence
 - id: uniformizer
   en: uniformizer
   ko: 균등화원
@@ -14127,6 +14143,11 @@ U:
   defs:
   - label: '[가환대수학] §인자'
     url: /ko/math/commutative_algebra/divisors
+  see:
+  - label: Discrete valuation ring
+    id: discrete_valuation_ring
+  - label: Uniformizing parameter
+    id: uniformizing_parameter
 - id: uniformizing_parameter
   en: uniformizing parameter
   ko: 균등화원
@@ -14134,6 +14155,11 @@ U:
   defs:
   - label: '[가환대수학] §인자'
     url: /ko/math/commutative_algebra/divisors
+  see:
+  - label: Uniformizer
+    id: uniformizer
+  - label: Discrete valuation ring
+    id: discrete_valuation_ring
 - id: uniformly_bounded
   en: uniformly bounded
   ko: 균등유계
@@ -14141,6 +14167,9 @@ U:
   defs:
   - label: '[해석학] §함수열과 점별수렴'
     url: /ko/math/analysis/sequences_of_functions
+  see:
+  - label: Bounded
+    id: bounded
 - id: uniformly_cauchy
   en: uniformly Cauchy
   ko: 균등 Cauchy
@@ -14366,6 +14395,11 @@ V:
   defs:
   - label: '[가환대수학] §정칙국소환'
     url: /ko/math/commutative_algebra/regular_local_rings
+  see:
+  - label: Valuation ring
+    id: valuation_ring
+  - label: Discrete valuation ring
+    id: discrete_valuation_ring
 - id: valuation_ring
   en: valuation ring
   ko: 값매김환
@@ -14375,6 +14409,11 @@ V:
     url: /ko/math/commutative_algebra/regular_local_rings
   - label: '[가환대수학] §인자'
     url: /ko/math/commutative_algebra/divisors
+  see:
+  - label: Valuation
+    id: valuation
+  - label: Discrete valuation ring
+    id: discrete_valuation_ring
 - id: vanishing_cycle
   en: vanishing cycle
   ko: 소멸 cycle
@@ -14382,6 +14421,10 @@ V:
   defs:
   - label: '[층론] §Perverse 층'
     url: /ko/math/sheaf_theory/perverse_sheaves
+  see:
+  - label: 근방 cycle
+    lang: ko
+    id: nearby_cycle
 - id: vanishing_scheme
   en: vanishing scheme
   ko: 영점 스킴
@@ -14410,6 +14453,11 @@ V:
   defs:
   - label: '[대수다양체] §아핀다양체'
     url: /ko/math/algebraic_varieties/affine_varieties
+  see:
+  - label: Algebraic variety
+    id: algebraic_variety
+  - label: Scheme
+    id: scheme
 - id: vector
   en: vector
   ko: 벡터
@@ -14417,6 +14465,12 @@ V:
   defs:
   - label: '[선형대수학] §벡터공간'
     url: /ko/math/linear_algebra/vector_spaces
+  see:
+  - label: 벡터공간
+    lang: ko
+    id: vector_space
+  - label: Tangent vector
+    id: tangent_vector
 - id: vector_bundle
   en: vector bundle
   ko: 벡터다발
@@ -14424,6 +14478,9 @@ V:
   defs:
   - label: '[미분다양체] §접다발과 여접다발'
     url: /ko/math/manifolds/tangent_and_cotangent_bundles
+  see:
+  - label: Fiber bundle
+    id: fiber_bundle
 - id: vector_field
   en: vector field
   ko: 벡터장

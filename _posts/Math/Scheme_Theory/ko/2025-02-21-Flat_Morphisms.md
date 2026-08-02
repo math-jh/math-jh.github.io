@@ -225,7 +225,7 @@ $$X=\Spec \mathbb{K}[t,\x]/(\x^2, t\x) \longrightarrow \mathbb{A}^1_\mathbb{K}$$
 
 ## Generic flatness와 Chevalley의 정리
 
-이제 우리는 글의 남은 부분에서 flat morphism의 기하학적 성질들을 더 살펴본다. 이를 위해서는 두 가지의 준비가 필요하며, 이 섹션은 이들을 위한 것이다. 이 두 준비물은 모두 [\[가환대수학\] §뇌터 정규화, ⁋정리 5](/ko/math/commutative_algebra/noether_normalization#thm5)를 사용하여 증명할 수 있다.
+이제 우리는 글의 남은 부분에서 flat morphism의 기하학적 성질들을 더 살펴본다. 이를 위해서는 두 가지의 준비가 필요하며, 이 섹션은 이들을 위한 것이다. 이 두 준비물은 모두 [\[가환대수학\] §뇌터 정규화, ⁋정리 6](/ko/math/commutative_algebra/noether_normalization#thm6)를 사용하여 증명할 수 있다.
 
 ::: 명제 11 (Generic flatness)
 Noetherian integral scheme $Y$와 finite type morphism $\varphi: X \rightarrow Y$가 주어졌다 하자. 그럼 $Y$의 dense open subset $U$가 존재하여 $\varphi\rvert^U: \varphi^{-1}(U) \rightarrow U$가 flat이다.
@@ -233,7 +233,7 @@ Noetherian integral scheme $Y$와 finite type morphism $\varphi: X \rightarrow Y
 ::: 증명
 $Y$가 irreducible이므로 $Y$의 공집합이 아닌 열린집합은 모두 dense이다. 따라서 $Y$의 affine open $V=\Spec A$를 하나 고정하고 그 안에서 $U$를 찾으면 충분하다. $Y$가 integral scheme이므로 $A=\mathcal{O}_Y(V)$는 integral domain이고, Noetherian scheme의 affine open은 Noetherian ring의 spectrum이므로 $A$는 Noetherian ring이기도 하다. ([§스킴의 위상구조, ⁋보조정리 13](/ko/math/scheme_theory/topology_of_schemes#lem13))
 
-한편, $\varphi$가 finite type이므로 $\varphi^{-1}(V)$는 유한개의 affine open $\Spec B_1,\ldots, \Spec B_k$로 덮이고 ([§스킴 사상의 성질들, ⁋정의 14](/ko/math/scheme_theory/properties_of_scheme_morphisms#def14)), 각 $B_i$는 finite type $A$-algebra이다. [\[가환대수학\] §뇌터 정규화, ⁋정리 5](/ko/math/commutative_algebra/noether_normalization#thm5)를 $M=B_i$에 적용하면 $0\neq a_i\in A$가 존재하여 $(B_i)_{a_i}$가 free $A_{a_i}$-module이다. $a=a_1\cdots a_k$로 두면 각 $(B_i)_a$는 free module $(B_i)_{a_i}$의 localization이므로 여전히 free $A_a$-module이고, free module은 flat하므로 [보조정리 2](#lem2)에 의하여
+한편, $\varphi$가 finite type이므로 $\varphi^{-1}(V)$는 유한개의 affine open $\Spec B_1,\ldots, \Spec B_k$로 덮이고 ([§스킴 사상의 성질들, ⁋정의 14](/ko/math/scheme_theory/properties_of_scheme_morphisms#def14)), 각 $B_i$는 finite type $A$-algebra이다. [\[가환대수학\] §뇌터 정규화, ⁋정리 6](/ko/math/commutative_algebra/noether_normalization#thm6)를 $M=B_i$에 적용하면 $0\neq a_i\in A$가 존재하여 $(B_i)_{a_i}$가 free $A_{a_i}$-module이다. $a=a_1\cdots a_k$로 두면 각 $(B_i)_a$는 free module $(B_i)_{a_i}$의 localization이므로 여전히 free $A_a$-module이고, free module은 flat하므로 [보조정리 2](#lem2)에 의하여
 
 $$\Spec (B_i)_a \longrightarrow \Spec A_a=D(a)$$
 
@@ -268,7 +268,7 @@ $$\varphi(X)=\bigcup_{j=1}^k \varphi\big(X\times_Y V(\mathfrak{p}_j)\big)$$
 
 인데, 각 base change $X\times_YV(\mathfrak{p}_j)=\Spec (B\otimes_AA/\mathfrak{p}_j) \rightarrow V(\mathfrak{p}_j)$는 여전히 affine이고 finite type이므로 Noetherian induction의 귀납가정 $P(V(\mathfrak{p}_j))$에 의하여 각 항이 constructible이고 따라서 $\varphi(X)$도 constructible이다. 그러므로 $k=1$, 즉 $A$가 integral domain인 경우만 고려해도 충분하다.
 
-$B=0$인 경우는 자명하므로 $B\neq 0$이라 하자. 그럼 [\[가환대수학\] §뇌터 정규화, ⁋정리 5](/ko/math/commutative_algebra/noether_normalization#thm5)에 의해 $0\neq a\in A$가 존재하여 $B_a$가 free $A_a$-module이다. $a$가 unit인 경우는 마찬가지로 자명하므로,  $a$가 non-unit이라 하자. 이 경우 $A$가 integral domain이므로 $V(a)$는 $Y$의 진부분 닫힌집합이다. 
+$B=0$인 경우는 자명하므로 $B\neq 0$이라 하자. 그럼 [\[가환대수학\] §뇌터 정규화, ⁋정리 6](/ko/math/commutative_algebra/noether_normalization#thm6)에 의해 $0\neq a\in A$가 존재하여 $B_a$가 free $A_a$-module이다. $a$가 unit인 경우는 마찬가지로 자명하므로,  $a$가 non-unit이라 하자. 이 경우 $A$가 integral domain이므로 $V(a)$는 $Y$의 진부분 닫힌집합이다. 
 
 우선 만일 $B_a=0$인 경우, 이는 $\phi(a)$가 $B$에서 nilpotent라는 뜻이므로 $\phi(a)$는 $B$의 모든 prime ideal에 속한다. 따라서 $\varphi(X)\subseteq V(a)$이고, $\varphi(X)$는 base change $X\times_YV(a) \rightarrow V(a)$의 image와 같으므로 귀납가정 $P(V(a))$에 의하여 constructible이다.
 

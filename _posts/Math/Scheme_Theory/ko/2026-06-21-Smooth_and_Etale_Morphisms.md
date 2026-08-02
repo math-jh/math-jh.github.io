@@ -15,7 +15,7 @@ published: false
 drift_needed: true
 ---
 
-미분기하에서 submersion과 covering map은 smooth morphism 가운데 각각 fiber가 양의 차원을 가지는 경우와 이산적인 경우에 해당한다. 대수기하에서 이 두 개념의 유사물이 *smooth* morphism과 *étale* morphism이며, 둘을 함께 묶는 약한 조건이 *unramified* morphism이다. 이들은 모두 fiber가 base 위에서 균일하게 regular임을 요구하므로, flatness와 ([§평탄사상, ⁋정의 1](/ko/math/scheme_theory/flat_morphisms#def1)) cotangent sheaf의 ([§Kähler 미분과 여접층, ⁋정의 3](/ko/math/scheme_theory/sheaf_of_differentials#def3)) 국소자유성을 조합하여 정의된다. 이 글에서는 먼저 unramified morphism을 cotangent sheaf의 소멸로 정의하고 대각선 morphism을 통한 특징을 제시한 뒤, smooth morphism을 flat이면서 geometric fiber가 regular인 morphism으로 정의하고 그 Jacobian 판정을 본다. 이어서 étale morphism을 두 개념의 교집합으로 도입하고 standard étale 모형과 예시를 살펴본 다음, 세 개념을 통일적으로 다루는 square-zero 확대에 대한 무한소 lifting 판정으로 마무리한다.
+미분기하에서 submersion과 covering map은 smooth morphism 가운데 각각 fiber가 양의 차원을 가지는 경우와 이산적인 경우에 해당한다. 대수기하에서 이 두 개념의 유사물이 *smooth* morphism과 *étale* morphism이며, 둘을 함께 묶는 약한 조건이 *unramified* morphism이다. 이들은 모두 fiber가 base 위에서 균일하게 regular임을 요구하므로, flatness와 ([§평탄사상, ⁋정의 1](/ko/math/scheme_theory/flat_morphisms#def1)) cotangent sheaf의 ([§Kähler 미분과 여접층, ⁋정의 4](/ko/math/scheme_theory/sheaf_of_differentials#def4)) 국소자유성을 조합하여 정의된다. 이 글에서는 먼저 unramified morphism을 cotangent sheaf의 소멸로 정의하고 대각선 morphism을 통한 특징을 제시한 뒤, smooth morphism을 flat이면서 geometric fiber가 regular인 morphism으로 정의하고 그 Jacobian 판정을 본다. 이어서 étale morphism을 두 개념의 교집합으로 도입하고 standard étale 모형과 예시를 살펴본 다음, 세 개념을 통일적으로 다루는 square-zero 확대에 대한 무한소 lifting 판정으로 마무리한다.
 
 우리는 이 글 전체에서 morphism이 *locally of finite presentation*임을 기본 가정으로 둔다. Locally Noetherian base 위에서는 이것이 locally of finite type과 일치하므로, 독자는 Noetherian 맥락에서 후자로 읽어도 무방하다.
 
@@ -31,7 +31,7 @@ $$\Omega_{X/S}=0$$
 인 것이다.
 :::
 
-이 정의는 affine 위에서 곧바로 계산된다. $S=\Spec A$, $X=\Spec B$이면 $\Omega_{X/S}=\widetilde{\Omega_{B/A}}$이므로 ([§Kähler 미분과 여접층, ⁋정의 3](/ko/math/scheme_theory/sheaf_of_differentials#def3)), $f$가 unramified한 것은 Kähler 미분 module $\Omega_{B/A}$가 영인 것과 동치이다. 가령 field 확대 $K \subseteq L$이 separable algebraic이면 $\Omega_{L/K}=0$이고, 따라서 $\Spec L \rightarrow \Spec K$는 unramified하다. 반대로 characteristic $p$에서 $L=K(t^{1/p})$와 같은 inseparable 확대는 $\Omega_{L/K}\neq 0$을 주어 unramified하지 않다.
+이 정의는 affine 위에서 곧바로 계산된다. $S=\Spec A$, $X=\Spec B$이면 $\Omega_{X/S}=\widetilde{\Omega_{B/A}}$이므로 ([§Kähler 미분과 여접층, ⁋정의 4](/ko/math/scheme_theory/sheaf_of_differentials#def4)), $f$가 unramified한 것은 Kähler 미분 module $\Omega_{B/A}$가 영인 것과 동치이다. 가령 field 확대 $K \subseteq L$이 separable algebraic이면 $\Omega_{L/K}=0$이고, 따라서 $\Spec L \rightarrow \Spec K$는 unramified하다. 반대로 characteristic $p$에서 $L=K(t^{1/p})$와 같은 inseparable 확대는 $\Omega_{L/K}\neq 0$을 주어 unramified하지 않다.
 
 Unramified 조건은 대각선 morphism을 통해 좌표 독립적으로 표현된다. Cotangent sheaf 자체가 대각선의 conormal로 정의되므로, 그 소멸은 대각선이 열린 부분scheme이 되는 것과 직접 연결된다.
 
@@ -44,7 +44,7 @@ Locally of finite presentation인 morphism $f:X \rightarrow S$에 대하여 다�
 ::: 증명
 $\Delta_f$는 항상 immersion, 즉 어떤 열린 부분scheme 위로의 closed immersion이다. 따라서 $\Delta_f$가 open immersion인 것은 그 closed immersion 성분이 isomorphic, 곧 그 image의 ideal sheaf $\mathcal{I}$가 영인 것과 동치이다.
 
-문제는 affine 위에서 국소적이므로 $S=\Spec A$, $X=\Spec B$로 두자. 이 때 $X\times_SX=\Spec(B\otimes_AB)$이고 $\Delta_f$는 곱사상 $\mu:B\otimes_AB \rightarrow B$로부터 온다. $\mathfrak{a}=\ker\mu$라 하면, [§Kähler 미분과 여접층, ⁋명제 4](/ko/math/scheme_theory/sheaf_of_differentials#prop4)의 증명에서 보았듯 $\mathfrak{a}/\mathfrak{a}^2\cong \Omega_{B/A}$이다.
+문제는 affine 위에서 국소적이므로 $S=\Spec A$, $X=\Spec B$로 두자. 이 때 $X\times_SX=\Spec(B\otimes_AB)$이고 $\Delta_f$는 곱사상 $\mu:B\otimes_AB \rightarrow B$로부터 온다. $\mathfrak{a}=\ker\mu$라 하면, [§Kähler 미분과 여접층, ⁋명제 5](/ko/math/scheme_theory/sheaf_of_differentials#prop5)의 증명에서 보았듯 $\mathfrak{a}/\mathfrak{a}^2\cong \Omega_{B/A}$이다.
 
 이제 $\Omega_{B/A}=0$, 곧 $\mathfrak{a}=\mathfrak{a}^2$임을 가정하자. $B$가 $A$ 위에서 finite presentation이므로 $B\otimes_AB$ 위에서 $\mathfrak{a}$는 finitely generated이고, Nakayama 보조정리의 행렬식 형태에 의하여 $\mathfrak{a}=\mathfrak{a}^2$이면 어떤 $e\in \mathfrak{a}$가 존재하여 $e^2=e$이고 $\mathfrak{a}=(e)$이다. 그럼 $1-e$가 $\mu$의 image를 trivialize하는 idempotent가 되어, $\Delta_f$의 image는 $D(1-e)$ 위에서 열린 동시에 닫힌 부분scheme으로 실현된다. 따라서 $\Delta_f$는 open immersion이다.
 
@@ -83,7 +83,7 @@ Locally of finite presentation인 morphism $f:X \rightarrow S$에 대하여 다�
 ::: 증명
 문제가 국소적이므로 $S=\Spec A$, $X=\Spec B$이고 한 점 $x$에 해당하는 prime $\mathfrak{p}\subseteq B$ 근방에서 작업한다. $s=f(x)$에 해당하는 prime을 $\mathfrak{q}\subseteq A$라 하자.
 
-먼저 $f$가 smooth하다고 가정한다. Geometric fiber $X_{\bar s}$가 regular이고 flat하므로, fiber 위에서 cotangent sheaf의 거동을 본다. Field $k=\overline{\kappa(s)}$ 위의 regular scheme $X_{\bar s}$의 점 $\bar x$에서, Zariski tangent space의 ([§Kähler 미분과 여접층, ⁋정의 6](/ko/math/scheme_theory/sheaf_of_differentials#def6)) 차원은 국소차원과 같다. 즉
+먼저 $f$가 smooth하다고 가정한다. Geometric fiber $X_{\bar s}$가 regular이고 flat하므로, fiber 위에서 cotangent sheaf의 거동을 본다. Field $k=\overline{\kappa(s)}$ 위의 regular scheme $X_{\bar s}$의 점 $\bar x$에서, Zariski tangent space의 ([§Kähler 미분과 여접층, ⁋정의 7](/ko/math/scheme_theory/sheaf_of_differentials#def7)) 차원은 국소차원과 같다. 즉
 
 $$\dim_{\kappa(\bar x)}\bigl(\Omega_{X_{\bar s}/k}\otimes \kappa(\bar x)\bigr)=\dim \mathcal{O}_{X_{\bar s},\bar x}=\dim_{\bar x}X_{\bar s}$$
 
@@ -94,7 +94,7 @@ $$\dim_{\kappa(\bar x)}\bigl(\Omega_{X_{\bar s}/k}\otimes \kappa(\bar x)\bigr)=\
 역으로 두 번째 조건을 가정하자. $\Omega_{X/S}$가 국소자유이고 그 rank가 fiber 차원과 같으면, 각 geometric fiber $X_{\bar s}$ 위에서 $\Omega_{X_{\bar s}/k}$도 국소자유이며 그 rank가 fiber의 차원과 일치한다. 이는 $X_{\bar s}$의 모든 점에서 Zariski tangent space 차원이 국소차원과 같다는 것이고, $X_{\bar s}$가 finite type over a field이므로 그 점은 regular이다. (algebraically closed field 위에서 tangent space 차원과 국소차원이 일치하면 그 local ring은 regular이다.) 따라서 geometric fiber가 regular이고, 가정에 의해 $f$가 flat이므로 $f$는 smooth하다.
 :::
 
-이 동치성에 의하여 smooth morphism은 fiber다발처럼 다룰 수 있다. $\Omega_{X/S}$가 rank $r$의 locally free sheaf라는 것은 $X$가 국소적으로 $S$ 위의 $r$차원 affine space처럼 보인다는 직관을 정확히 표현한다. 실제로 가장 기본적인 예는 affine space로의 projection이며, $\mathbb{A}^r_S \rightarrow S$는 flat하고 $\Omega_{\mathbb{A}^r_S/S}\cong \mathcal{O}^{\oplus r}$이므로 ([§Kähler 미분과 여접층, ⁋명제 7](/ko/math/scheme_theory/sheaf_of_differentials#prop7)) 상대차원 $r$의 smooth morphism이다.
+이 동치성에 의하여 smooth morphism은 fiber다발처럼 다룰 수 있다. $\Omega_{X/S}$가 rank $r$의 locally free sheaf라는 것은 $X$가 국소적으로 $S$ 위의 $r$차원 affine space처럼 보인다는 직관을 정확히 표현한다. 실제로 가장 기본적인 예는 affine space로의 projection이며, $\mathbb{A}^r_S \rightarrow S$는 flat하고 $\Omega_{\mathbb{A}^r_S/S}\cong \mathcal{O}^{\oplus r}$이므로 ([§Kähler 미분과 여접층, ⁋명제 8](/ko/math/scheme_theory/sheaf_of_differentials#prop8)) 상대차원 $r$의 smooth morphism이다.
 
 일반적인 smooth morphism은 국소적으로 affine space 안에서 Jacobian이 최대 rank를 가지는 방정식들로 잘린 것으로 기술된다. 이것이 미분기하의 implicit function theorem에 대응하는 대수적 판정이며, smooth 여부를 좌표 계산으로 확인하게 해 준다.
 
@@ -114,7 +114,7 @@ $$J=\Bigl(\frac{\partial f_i}{\partial \x_j}\Bigr)_{\substack{1\leq i\leq r\\ 1\
 
 $$\mathfrak{a}/\mathfrak{a}^2 \overset{\bar d}{\longrightarrow} \Omega_{P/A}\otimes_PB \longrightarrow \Omega_{B/A} \longrightarrow 0$$
 
-이며, $\Omega_{P/A}\otimes_PB$는 $d\x_1,\ldots, d\x_n$을 기저로 하는 rank $n$의 자유 $B$-module이다. ([§Kähler 미분과 여접층, ⁋명제 7](/ko/math/scheme_theory/sheaf_of_differentials#prop7)) Morphism $\bar d$는 $f_i+\mathfrak{a}^2\mapsto df_i=\sum_j(\partial f_i/\partial \x_j)d\x_j$로 주어진다. 한편 $\mathfrak{a}$가 $f_1,\ldots, f_r$로 생성되므로 $e_i\mapsto f_i+\mathfrak{a}^2$은 전사사상 $\varphi:B^{\oplus r} \rightarrow \mathfrak{a}/\mathfrak{a}^2$을 정의하며, 합성 $\bar d\circ\varphi$를 $e_i$와 $d\x_j$ 기저에 대하여 표현한 행렬이 정확히 Jacobian $J$의 transpose이다.
+이며, $\Omega_{P/A}\otimes_PB$는 $d\x_1,\ldots, d\x_n$을 기저로 하는 rank $n$의 자유 $B$-module이다. ([§Kähler 미분과 여접층, ⁋명제 8](/ko/math/scheme_theory/sheaf_of_differentials#prop8)) Morphism $\bar d$는 $f_i+\mathfrak{a}^2\mapsto df_i=\sum_j(\partial f_i/\partial \x_j)d\x_j$로 주어진다. 한편 $\mathfrak{a}$가 $f_1,\ldots, f_r$로 생성되므로 $e_i\mapsto f_i+\mathfrak{a}^2$은 전사사상 $\varphi:B^{\oplus r} \rightarrow \mathfrak{a}/\mathfrak{a}^2$을 정의하며, 합성 $\bar d\circ\varphi$를 $e_i$와 $d\x_j$ 기저에 대하여 표현한 행렬이 정확히 Jacobian $J$의 transpose이다.
 
 이 행렬 표현으로부터 첫 번째 목표인 국소자유성이 얻어진다. 가정에 의하여 $J$의 어떤 $r\times r$ 소행렬식 $g$가 $x$에서 영이 아니다. $D(g)=\Spec B_g$ 위에서는 해당 부분행렬이 가역이므로, 그 $r$개 좌표로의 projection과 $(\bar d\circ\varphi)_g$의 합성이 $B_g^{\oplus r}$의 가역 endomorphism이 되어 $(\bar d\circ\varphi)_g$는 split injection이다. 특히 $\varphi_g$는 단사이고 이미 전사였으므로 동형이며, 따라서 $(\mathfrak{a}/\mathfrak{a}^2)_g$는 rank $r$의 자유 module이고 $\bar d_g$는 자유 module 사이의 split injection이다. 그럼 그 cokernel $\Omega_{B/A}\otimes_BB_g$는 $B_g^{\oplus n}$의 direct summand이므로, $\Omega_{B/A}$는 $D(g)$ 위에서 rank $n-r$의 국소자유이다.
 
@@ -210,7 +210,7 @@ Locally of finite presentation인 morphism $f:X \rightarrow S$가 주어졌다 �
 
 $$D(bb')=g(b)g(b')-g'(b)g'(b')=g(b)D(b')+D(b)g'(b')\equiv g_0(b)D(b')+D(b)g_0(b')\pmod{\mathfrak{b}^2}$$
 
-이고, $\mathfrak{b}^2=0$이므로 이는 정확히 Leibniz rule이다. 따라서 두 lifting의 차이는 $\Der_A(B, \mathfrak{b})\cong \Hom_B(\Omega_{B/A}, \mathfrak{b})$의 원소들과 일대일 대응한다. ([§Kähler 미분과 여접층, ⁋정의 3](/ko/math/scheme_theory/sheaf_of_differentials#def3)에서 $\Omega_{X/S}=\widetilde{\Omega_{B/A}}$이고, derivation의 표현성에 의한다.)
+이고, $\mathfrak{b}^2=0$이므로 이는 정확히 Leibniz rule이다. 따라서 두 lifting의 차이는 $\Der_A(B, \mathfrak{b})\cong \Hom_B(\Omega_{B/A}, \mathfrak{b})$의 원소들과 일대일 대응한다. ([§Kähler 미분과 여접층, ⁋정의 4](/ko/math/scheme_theory/sheaf_of_differentials#def4)에서 $\Omega_{X/S}=\widetilde{\Omega_{B/A}}$이고, derivation의 표현성에 의한다.)
 
 이로부터 (2)를 얻는다. $f$가 unramified하면 $\Omega_{B/A}=0$이므로 $\Hom_B(\Omega_{B/A}, \mathfrak{b})=0$이고, 따라서 두 lifting의 차이가 항상 영, 곧 lifting은 많아야 하나이다. 역으로 lifting이 항상 많아야 하나이면, $T_0=X$, $T=X[\epsilon]$를 $\Omega_{X/S}$의 dual로 만든 표준 square-zero 확대로 택하여 두 자명한 lifting이 일치해야 함을 보이면 $\Der_A(B, \Omega_{B/A})$의 항등원이 영이 되어 $\Omega_{B/A}=0$이 강제된다. 따라서 $f$는 unramified하다.
 
