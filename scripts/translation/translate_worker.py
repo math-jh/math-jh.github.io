@@ -2430,8 +2430,35 @@ def main() -> int:
         stats["total_in_chars"]  = stats.get("total_in_chars",  0) + in_chars
         stats["total_out_chars"] = stats.get("total_out_chars", 0) + out_chars
         save_state(state)
+
+        # ── 섹션(§§) 앵커 게이트: 결정론 검증+수리 (section_anchor_gate.py) ──
+        # 커밋 전에 EN 파일을 in-place 수리해 같은 커밋에 싣는다. 게이트 실패는
+        # 번역을 죽이지 않는다 — 커밋은 진행하고 사람 몫만 텔레그램으로 넘긴다.
+        try:
+            from section_anchor_gate import run_gate, sweep_target
+            gres = run_gate(en_path, ko_path, apply=True, mdlint=True)
+            for ln in gres.log_lines:
+                log(f"GATE ({key}): {ln}")
+            if gres.fails or gres.mdlint_lines:
+                _notify_telegram(
+                    f"[translate-worker] section-anchor gate: {reason}",
+                    "\n".join([key, ""]
+                              + [f"• FAIL {x}" for x in gres.fails]
+                              + [f"• md_lint {x}" for x in gres.mdlint_lines]))
+        except Exception as e:
+            log(f"GATE exception (non-fatal): {e!r}")
+
         log(f"DONE: {en_path.relative_to(BLOG_ROOT)} (in={in_chars}c, out={out_chars}c)")
         commit_translation(ko_path, en_path, reason)
+
+        # 이 글을 가리키던 유보(EN 미번역 대상) 섹션 앵커의 자가 치유. 수리된
+        # 형제 파일은 커밋하지 않는다 — 워킹트리에 남아 다음 autopush 가 가져간다.
+        try:
+            sres = sweep_target(en_path, apply=True)
+            for ln in sres.log_lines:
+                log(f"SWEEP ({key}): {ln}")
+        except Exception as e:
+            log(f"SWEEP exception (non-fatal): {e!r}")
         return 0
     finally:
         release_lock()
