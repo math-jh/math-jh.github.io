@@ -83,15 +83,15 @@ Locally of finite presentation인 morphism $f:X \rightarrow S$에 대하여 다�
 ::: 증명
 문제가 국소적이므로 $S=\Spec A$, $X=\Spec B$이고 한 점 $x$에 해당하는 prime $\mathfrak{p}\subseteq B$ 근방에서 작업한다. $s=f(x)$에 해당하는 prime을 $\mathfrak{q}\subseteq A$라 하자.
 
-먼저 $f$가 smooth하다고 가정한다. Geometric fiber $X_{\bar s}$가 regular이고 flat하므로, fiber 위에서 cotangent sheaf의 거동을 본다. Field $k=\overline{\kappa(s)}$ 위의 regular scheme $X_{\bar s}$의 점 $\bar x$에서, Zariski tangent space의 ([§Kähler 미분과 여접층, ⁋정의 8](/ko/math/scheme_theory/sheaf_of_differentials#def8)) 차원은 국소차원과 같다. 즉
+먼저 $f$가 smooth하다고 가정한다. Geometric fiber $X_{\bar s}$가 regular이고 flat하므로, fiber 위에서 cotangent sheaf의 거동을 본다. Field $\mathbb{K}=\overline{\kappa(s)}$ 위의 regular scheme $X_{\bar s}$의 점 $\bar x$에서, Zariski tangent space의 ([§Kähler 미분과 여접층, ⁋정의 8](/ko/math/scheme_theory/sheaf_of_differentials#def8)) 차원은 국소차원과 같다. 즉
 
-$$\dim_{\kappa(\bar x)}\bigl(\Omega_{X_{\bar s}/k}\otimes \kappa(\bar x)\bigr)=\dim \mathcal{O}_{X_{\bar s},\bar x}=\dim_{\bar x}X_{\bar s}$$
+$$\dim_{\kappa(\bar x)}\bigl(\Omega_{X_{\bar s}/\mathbb{K}}\otimes \kappa(\bar x)\bigr)=\dim \mathcal{O}_{X_{\bar s},\bar x}=\dim_{\bar x}X_{\bar s}$$
 
-이다. 이는 정확히 regular local ring의 cotangent space $\mathfrak{m}/\mathfrak{m}^2$이 차원만큼의 dimension을 가진다는 사실이다. ([\[가환대수학\] §정칙국소환](/ko/math/commutative_algebra/regular_local_rings)의 regular local ring은 그 정의상 $\mathfrak{m}$이 $\dim$개의 원소로 생성되며, 이는 $\dim\mathfrak{m}/\mathfrak{m}^2=\dim$과 동치이다.) Cotangent sheaf는 base change와 commute하므로 $\Omega_{X_{\bar s}/k}=\Omega_{X/S}\otimes_S k$이고, 따라서 $\Omega_{X/S}\otimes \kappa(\bar x)$의 차원이 fiber 차원과 같다.
+이다. 이는 정확히 regular local ring의 cotangent space $\mathfrak{m}/\mathfrak{m}^2$이 차원만큼의 dimension을 가진다는 사실이다. ([\[가환대수학\] §정칙국소환](/ko/math/commutative_algebra/regular_local_rings)의 regular local ring은 그 정의상 $\mathfrak{m}$이 $\dim$개의 원소로 생성되며, 이는 $\dim\mathfrak{m}/\mathfrak{m}^2=\dim$과 동치이다.) Cotangent sheaf는 base change와 commute하므로 $\Omega_{X_{\bar s}/\mathbb{K}}=\Omega_{X/S}\otimes_S \mathbb{K}$이고, 따라서 $\Omega_{X/S}\otimes \kappa(\bar x)$의 차원이 fiber 차원과 같다.
 
 이제 flatness와 결합한다. $f$가 flat이고 fiber 위에서 $\Omega$의 fiber 차원이 일정하므로, 유한표시 module에 대한 국소자유성 판정에 의하여 $\Omega_{X/S}$는 $\mathfrak{p}$ 근방에서 그 차원만큼의 rank를 가지는 locally free sheaf이다. 구체적으로 $\Omega_{B/A}$는 finitely presented $B$-module이고, $f$가 flat이고 모든 fiber에서 $\dim_{\kappa(x)}\Omega_{B/A}\otimes\kappa(x)$가 일정하므로 $\Omega_{B/A}$는 projective module, 곧 국소자유이다 (유한표시·flat module의 fiber rank가 국소상수이면 국소자유, Stacks 00NX). 그 rank가 fiber 차원과 같음은 위 계산에서 따른다.
 
-역으로 두 번째 조건을 가정하자. $\Omega_{X/S}$가 국소자유이고 그 rank가 fiber 차원과 같으면, 각 geometric fiber $X_{\bar s}$ 위에서 $\Omega_{X_{\bar s}/k}$도 국소자유이며 그 rank가 fiber의 차원과 일치한다. 이는 $X_{\bar s}$의 모든 점에서 Zariski tangent space 차원이 국소차원과 같다는 것이고, $X_{\bar s}$가 finite type over a field이므로 그 점은 regular이다. (algebraically closed field 위에서 tangent space 차원과 국소차원이 일치하면 그 local ring은 regular이다.) 따라서 geometric fiber가 regular이고, 가정에 의해 $f$가 flat이므로 $f$는 smooth하다.
+역으로 두 번째 조건을 가정하자. $\Omega_{X/S}$가 국소자유이고 그 rank가 fiber 차원과 같으면, 각 geometric fiber $X_{\bar s}$ 위에서 $\Omega_{X_{\bar s}/\mathbb{K}}$도 국소자유이며 그 rank가 fiber의 차원과 일치한다. 이는 $X_{\bar s}$의 모든 점에서 Zariski tangent space 차원이 국소차원과 같다는 것이고, $X_{\bar s}$가 finite type over a field이므로 그 점은 regular이다. (algebraically closed field 위에서 tangent space 차원과 국소차원이 일치하면 그 local ring은 regular이다.) 따라서 geometric fiber가 regular이고, 가정에 의해 $f$가 flat이므로 $f$는 smooth하다.
 :::
 
 이 동치성에 의하여 smooth morphism은 fiber다발처럼 다룰 수 있다. $\Omega_{X/S}$가 rank $r$의 locally free sheaf라는 것은 $X$가 국소적으로 $S$ 위의 $r$차원 affine space처럼 보인다는 직관을 정확히 표현한다. 실제로 가장 기본적인 예는 affine space로의 projection이며, $\mathbb{A}^r_S \rightarrow S$는 flat하고 $\Omega_{\mathbb{A}^r_S/S}\cong \mathcal{O}^{\oplus r}$이므로 ([§Kähler 미분과 여접층, ⁋명제 9](/ko/math/scheme_theory/sheaf_of_differentials#prop9)) 상대차원 $r$의 smooth morphism이다.
@@ -146,7 +146,7 @@ $$0 \longrightarrow \mathfrak{a}/\mathfrak{a}^2 \overset{\bar d}{\longrightarrow
 역으로 위의 sequence가 split short exact이라 하자. 그럼 $\mathfrak{a}/\mathfrak{a}^2$과 $\Omega_{B/A}$는 모두 rank $n$의 자유 module $\Omega_{P/A}\otimes_PB$의 direct summand이므로 finitely generated projective이다. 한 점 $x\in X$에 대응하는 prime을 $\mathfrak{q}\subseteq B$, 그 preimage를 $\mathfrak{p}\subseteq P$라 하고 자유 module $(\mathfrak{a}/\mathfrak{a}^2)_{\mathfrak{q}}$의 rank를 $c$라 하자. 그 기저를 $\mathfrak{a}$의 원소들 $f_1,\ldots, f_c$의 class로 택하면 $\mathfrak{a}_{\mathfrak{p}}=(f_1,\ldots, f_c)_{\mathfrak{p}}+\mathfrak{a}_{\mathfrak{p}}^2$이고, $f$가 유한표시라 $\mathfrak{a}$가 finitely generated이므로 Nakayama 보조정리에 의하여 ([\[가환대수학\] §정수적 확장, ⁋보조정리 8](/ko/math/commutative_algebra/integral_extension#lem8)) $\mathfrak{a}_{\mathfrak{p}}=(f_1,\ldots, f_c)_{\mathfrak{p}}$이다. 그럼 어떤 $g\notin\mathfrak{p}$에 대하여 $\mathfrak{a}_g=(f_1,\ldots, f_c)_g$이므로, $X$는 $x$의 근방에서 $X'=\Spec\bigl(P/(f_1,\ldots, f_c)\bigr)$과 열린 부분scheme으로서 일치한다. 한편 split injection은 임의의 base change 뒤에도 단사이므로 $\bar d\otimes\kappa(x)$가 단사이고, 이를 기저 $\overline{f_1},\ldots, \overline{f_c}$와 $d\x_1,\ldots, d\x_n$에 대하여 표현한 행렬이 $x$에서 계산한 Jacobian $(\partial f_i/\partial \x_j)$의 transpose이므로 그 rank는 $c$이다. 따라서 [정리 5](#thm5)에 의하여 $X' \rightarrow S$는 $x$의 어떤 근방에서 smooth하고, 그 근방에서 $X$와 $X'$이 일치하므로 $f$는 $x$에서 smooth하다. $x$가 임의였으므로 $f$는 smooth하다.
 :::
 
-Affine 위에서는 언제나 이러한 closed immersion을 택할 수 있고 smoothness는 국소적인 성질이므로, 위의 판정은 임의의 $f$에 대하여 국소적으로 적용된다. 또한 $\bar d$의 kernel은 표현의 선택에 무관한 불변량 $H_1(\operatorname{NL}_{B/A})$이므로, [명제 6](#prop6)은 smoothness를 이 $H_1$의 소멸과 $H_0(\operatorname{NL}_{B/A})\cong\Omega_{B/A}$의 projectivity로 옮겨 적은 것이기도 하다. 다만 단사성만으로는 smooth가 되지 않는다. 가령 $B=k[\x,\y]/(\x\y)$에서 $\mathfrak{a}=(\x\y)$는 nonzerodivisor로 생성되어 $\mathfrak{a}/\mathfrak{a}^2$가 rank $1$의 자유 module이고 $\bar d(\overline{\x\y})=\y d\x+\x d\y$를 죽이는 원소는 $(\x)\cap(\y)=0$에 속하므로 $\bar d$는 단사이다. 그러나 원점에서 $\bar d$를 residue field로 내린 것은 영이 되어 그 image가 direct summand를 이루지 못하며, 실제로 $X$는 원점에서 singular하다.
+Affine 위에서는 언제나 이러한 closed immersion을 택할 수 있고 smoothness는 국소적인 성질이므로, 위의 판정은 임의의 $f$에 대하여 국소적으로 적용된다. 또한 $\bar d$의 kernel은 표현의 선택에 무관한 불변량 $H_1(\operatorname{NL}_{B/A})$이므로, [명제 6](#prop6)은 smoothness를 이 $H_1$의 소멸과 $H_0(\operatorname{NL}_{B/A})\cong\Omega_{B/A}$의 projectivity로 옮겨 적은 것이기도 하다. 다만 단사성만으로는 smooth가 되지 않는다. 가령 $B=\mathbb{K}[\x,\y]/(\x\y)$에서 $\mathfrak{a}=(\x\y)$는 nonzerodivisor로 생성되어 $\mathfrak{a}/\mathfrak{a}^2$가 rank $1$의 자유 module이고 $\bar d(\overline{\x\y})=\y d\x+\x d\y$를 죽이는 원소는 $(\x)\cap(\y)=0$에 속하므로 $\bar d$는 단사이다. 그러나 원점에서 $\bar d$를 residue field로 내린 것은 영이 되어 그 image가 direct summand를 이루지 못하며, 실제로 $X$는 원점에서 singular하다.
 
 이렇듯 conormal sequence의 왼쪽 끝에서의 exactness의 실패는 smoothness의 실패를 재는 양이고, naive cotangent complex는 그 sequence를 왼쪽으로 한 항 연장하여 이를 담은 것이다. 이 연장을 모든 degree로 밀고 나가 $\Omega$를 왼쪽으로 유도한 것이 Quillen과 André의 cotangent complex이며, 그 위에서는 [§Kähler 미분과 여접층, ⁋명제 1](/ko/math/scheme_theory/sheaf_of_differentials#prop1)의 추이 sequence 또한 오른쪽에서만 exact한 sequence가 아니라 왼쪽으로 이어지는 long exact sequence로 연장된다.
 
@@ -172,7 +172,7 @@ Locally of finite presentation인 morphism $f:X \rightarrow S$에 대하여 다�
 
 (1) $\Rightarrow$ (2)는 정의에 포함되어 있다. $f$가 étale하면 smooth하므로 flat하고, unramified하다.
 
-(2) $\Rightarrow$ (1)을 보이려면 $f$가 flat하고 unramified할 때 geometric fiber가 regular임을 보이면 된다. Unramified 가정에 의하여 $\Omega_{X/S}=0$이고, 따라서 임의의 geometric fiber $X_{\bar s}$ 위에서도 base change와 commute하는 cotangent sheaf가 $\Omega_{X_{\bar s}/k}=0$이다. $X_{\bar s}$는 algebraically closed field $k=\overline{\kappa(s)}$ 위의 finite type scheme이고, 그 위에서 $\Omega=0$이라는 것은 모든 점에서 Zariski tangent space가 영, 곧 국소차원이 $0$이라는 뜻이다. 따라서 $X_{\bar s}$는 $k$의 유한 분리가능 확대들의 곱의 spectrum, 곧 reduced $0$차원 scheme이며 특히 regular이다. 그러므로 $f$는 flat하고 geometric fiber가 regular이므로 smooth하며, $\Omega_{X/S}=0$이므로 unramified, 곧 étale하다.
+(2) $\Rightarrow$ (1)을 보이려면 $f$가 flat하고 unramified할 때 geometric fiber가 regular임을 보이면 된다. Unramified 가정에 의하여 $\Omega_{X/S}=0$이고, 따라서 임의의 geometric fiber $X_{\bar s}$ 위에서도 base change와 commute하는 cotangent sheaf가 $\Omega_{X_{\bar s}/\mathbb{K}}=0$이다. $X_{\bar s}$는 algebraically closed field $\mathbb{K}=\overline{\kappa(s)}$ 위의 finite type scheme이고, 그 위에서 $\Omega=0$이라는 것은 모든 점에서 Zariski tangent space가 영, 곧 국소차원이 $0$이라는 뜻이다. 따라서 $X_{\bar s}$는 $\mathbb{K}$의 유한 분리가능 확대들의 곱의 spectrum, 곧 reduced $0$차원 scheme이며 특히 regular이다. 그러므로 $f$는 flat하고 geometric fiber가 regular이므로 smooth하며, $\Omega_{X/S}=0$이므로 unramified, 곧 étale하다.
 :::
 
 이 명제에 의하여 étale morphism은 "flat한 unramified morphism"이라는 가장 간결한 형태로 다룰 수 있으며, 상대차원 $0$이라는 점에서 covering map의 대수적 대응물이다. Étale morphism은 국소적으로 표준적인 모형을 가진다. 이것이 미분기하에서 covering map이 국소적으로 trivial sheet들의 합집합으로 보이는 것에 대응한다.
@@ -192,15 +192,15 @@ Separable algebraic field 확대 $K \subseteq L$에 대하여 $\Spec L \rightarr
 :::
 
 ::: 예시 11
-Field $k$ 위의 곱셈군 $\mathbb{G}_m=\Spec k[t, t^{-1}]$에서 자기 자신으로의 $n$제곱 morphism
+Field $\mathbb{K}$ 위의 곱셈군 $\mathbb{G}_m=\Spec \mathbb{K}[t, t^{-1}]$에서 자기 자신으로의 $n$제곱 morphism
 
 $$[n]:\mathbb{G}_m \longrightarrow \mathbb{G}_m,\qquad t\longmapsto t^n$$
 
-을 생각하자. 이는 ring homomorphism $k[s, s^{-1}] \rightarrow k[t, t^{-1}]$, $s\mapsto t^n$으로부터 온다. 상대미분은 $d(t^n)=n t^{n-1}dt$로 생성되므로
+을 생각하자. 이는 ring homomorphism $\mathbb{K}[s, s^{-1}] \rightarrow \mathbb{K}[t, t^{-1}]$, $s\mapsto t^n$으로부터 온다. 상대미분은 $d(t^n)=n t^{n-1}dt$로 생성되므로
 
-$$\Omega_{\mathbb{G}_m/\mathbb{G}_m}\cong k[t, t^{-1}]/(nt^{n-1})$$
+$$\Omega_{\mathbb{G}_m/\mathbb{G}_m}\cong \mathbb{K}[t, t^{-1}]/(nt^{n-1})$$
 
-이다. $t$가 가역이므로 이 module은 $k[t, t^{-1}]/(n)$과 같다. 따라서 $\operatorname{char}k\nmid n$이면 $n$이 가역이어서 $\Omega=0$이고, $[n]$은 flat하므로 ($k[t,t^{-1}]$이 $s\mapsto t^n$ 아래 자유 module이다) étale하다. 반면 $\operatorname{char}k=p$가 $n$을 나누면 $\Omega\neq 0$이 되어 $[n]$은 unramified하지 않고, $p$에서 ramification이 일어난다. 이는 characteristic $p$에서 Frobenius가 분기를 일으키는 현상의 가장 단순한 사례이다.
+이다. $t$가 가역이므로 이 module은 $\mathbb{K}[t, t^{-1}]/(n)$과 같다. 따라서 $\operatorname{char}\mathbb{K}\nmid n$이면 $n$이 가역이어서 $\Omega=0$이고, $[n]$은 flat하므로 ($\mathbb{K}[t, t^{-1}]$이 $s\mapsto t^n$ 아래 자유 module이다) étale하다. 반면 $\operatorname{char}\mathbb{K}=p$가 $n$을 나누면 $\Omega\neq 0$이 되어 $[n]$은 unramified하지 않고, $p$에서 ramification이 일어난다. 이는 characteristic $p$에서 Frobenius가 분기를 일으키는 현상의 가장 단순한 사례이다.
 :::
 
 위 두 예시는 étale morphism이 "분기 없는 covering"이라는 직관을 구체화한다. Separable 확대와 characteristic을 나누지 않는 거듭제곱 morphism은 fiber가 분기 없이 균일하게 갈라지는 반면, inseparable 확대나 characteristic을 나누는 거듭제곱에서는 fiber가 무너지며 unramified 조건이 깨진다.

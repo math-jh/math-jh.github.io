@@ -79,7 +79,7 @@ $$(G\times_SG)(T)=G(T)\times_{S(T)}G(T)=G(T)\times G(T)$$
 
 $$\GL_n=\Spec \mathbb{Z}[\x_{11},\ldots,\x_{nn},\z]/(\z\det-1)$$
 
-로 적을 수 있는데 $\z\det-1$의 $\z$에 대한 편미분이 $\det$이고 이 ring에서 $\det$은 가역이므로, [§매끄러운 사상과 étale 사상, ⁋정리 5](/ko/math/scheme_theory/smooth_and_etale_morphisms#thm5)에 의하여 $\GL_n \rightarrow \Spec \mathbb{Z}$는 상대차원 $n^2$의 smooth morphism이다. $n=1$인 경우가 곧 $\mathbb{G}_m$이다. $\SL_n$의 경우 $\det-1$의 $\x_{ij}$에 대한 편미분은 $(i,j)$ 성분의 cofactor $C_{ij}$이고 $\sum_j\x_{ij}C_{ij}=\det=1$이므로 어느 점의 residue field에서도 이들이 모두 소멸할 수 없어, 같은 판정에 의하여 상대차원 $n^2-1$의 smooth morphism이다. 반면 $\mu_n$은 $n$이 가역이 아닌 점 위에서 smooth하지 않다. Characteristic $p$가 $n$을 나누는 field $k$ 위에서 $n=p^am$이라 적으면 $\x^n-1=(\x^m-1)^{p^a}$이므로 fiber $\Spec k[\x]/(\x^n-1)$가 $0$이 아닌 nilpotent $\x^m-1$을 가지며 이는 $k$의 algebraic closure로 base change한 뒤에도 그러하다. 그런데 [\[가환대수학\] §정칙국소환, ⁋따름정리 1](/ko/math/commutative_algebra/regular_local_rings#cor1)에 의하여 regular local ring은 integral domain이므로, 이 nilpotent가 살아남는 점에서의 local ring은 regular일 수 없다. ([§매끄러운 사상과 étale 사상, ⁋정의 3](/ko/math/scheme_theory/smooth_and_etale_morphisms#def3))
+로 적을 수 있는데 $\z\det-1$의 $\z$에 대한 편미분이 $\det$이고 이 ring에서 $\det$은 가역이므로, [§매끄러운 사상과 étale 사상, ⁋정리 5](/ko/math/scheme_theory/smooth_and_etale_morphisms#thm5)에 의하여 $\GL_n \rightarrow \Spec \mathbb{Z}$는 상대차원 $n^2$의 smooth morphism이다. $n=1$인 경우가 곧 $\mathbb{G}_m$이다. $\SL_n$의 경우 $\det-1$의 $\x_{ij}$에 대한 편미분은 $(i,j)$ 성분의 cofactor $C_{ij}$이고 $\sum_j\x_{ij}C_{ij}=\det=1$이므로 어느 점의 residue field에서도 이들이 모두 소멸할 수 없어, 같은 판정에 의하여 상대차원 $n^2-1$의 smooth morphism이다. 반면 $\mu_n$은 $n$이 가역이 아닌 점 위에서 smooth하지 않다. Characteristic $p$가 $n$을 나누는 field $\mathbb{K}$ 위에서 $n=p^am$이라 적으면 $\x^n-1=(\x^m-1)^{p^a}$이므로 fiber $\Spec \mathbb{K}[\x]/(\x^n-1)$가 $0$이 아닌 nilpotent $\x^m-1$을 가지며 이는 $\mathbb{K}$의 algebraic closure로 base change한 뒤에도 그러하다. 그런데 [\[가환대수학\] §정칙국소환, ⁋따름정리 1](/ko/math/commutative_algebra/regular_local_rings#cor1)에 의하여 regular local ring은 integral domain이므로, 이 nilpotent가 살아남는 점에서의 local ring은 regular일 수 없다. ([§매끄러운 사상과 étale 사상, ⁋정의 3](/ko/math/scheme_theory/smooth_and_etale_morphisms#def3))
 
 ## Subgroup scheme과 kernel
 
@@ -125,37 +125,37 @@ $$\ker[n]=\Spec\left(\mathbb{Z}[\x,\x^{-1}]\otimes_{\mathbb{Z}[\y,\y^{-1}]}\math
 이제 base가 affine이고 group scheme 자신도 affine인 경우를 본다. 이 경우 $\Spec$이 ring과 affine scheme 사이의 반대동치를 주므로, [명제 2](#prop2)의 세 morphism $m, i, e$는 coordinate ring 위의 세 사상으로 뒤집혀 나타나고 group의 공리는 그 dual 조건이 된다. 이렇게 얻어지는 대수적 구조가 Hopf algebra이다.
 
 ::: 정의 6
-Ring $k$에 대하여, commutative $k$-algebra $A$와 $k$-algebra homomorphism
+Ring $\mathbb{K}$에 대하여, commutative $\mathbb{K}$-algebra $A$와 $\mathbb{K}$-algebra homomorphism
 
-$$\Delta: A \rightarrow A\otimes_kA,\qquad \epsilon: A \rightarrow k,\qquad \iota: A \rightarrow A$$
+$$\Delta: A \rightarrow A\otimes_\mathbb{K}A,\qquad \epsilon: A \rightarrow \mathbb{K},\qquad \iota: A \rightarrow A$$
 
-의 데이터 $(A, \Delta, \epsilon, \iota)$가 *Hopf algebra<sub>호프 대수</sub>*라는 것은 다음 세 조건이 성립하는 것이다. 아래에서 $\mu: A\otimes_kA \rightarrow A$는 곱셈이고 $\eta: k \rightarrow A$는 구조사상이다.
+의 데이터 $(A, \Delta, \epsilon, \iota)$가 *Hopf algebra<sub>호프 대수</sub>*라는 것은 다음 세 조건이 성립하는 것이다. 아래에서 $\mu: A\otimes_\mathbb{K}A \rightarrow A$는 곱셈이고 $\eta: \mathbb{K} \rightarrow A$는 구조사상이다.
 
 1. (Coassociativity) $(\Delta\otimes\id_A)\circ\Delta=(\id_A\otimes\Delta)\circ\Delta$.
-2. (Counit) 동일시 $k\otimes_kA\cong A\cong A\otimes_kk$ 아래에서 $(\epsilon\otimes\id_A)\circ\Delta=\id_A=(\id_A\otimes\epsilon)\circ\Delta$.
+2. (Counit) 동일시 $\mathbb{K}\otimes_\mathbb{K}A\cong A\cong A\otimes_\mathbb{K}\mathbb{K}$ 아래에서 $(\epsilon\otimes\id_A)\circ\Delta=\id_A=(\id_A\otimes\epsilon)\circ\Delta$.
 3. (Antipode) $\mu\circ(\iota\otimes\id_A)\circ\Delta=\eta\circ\epsilon=\mu\circ(\id_A\otimes\iota)\circ\Delta$.
 
-이 때 $\Delta$를 *comultiplication*, $\epsilon$을 *counit*, $\iota$를 *antipode*라 부른다. 두 Hopf $k$-algebra 사이의 *homomorphism*은 $k$-algebra homomorphism $f: A \rightarrow B$로서 $\Delta_B\circ f=(f\otimes f)\circ\Delta_A$, $\epsilon_B\circ f=\epsilon_A$, $f\circ\iota_A=\iota_B\circ f$를 만족하는 것이다.
+이 때 $\Delta$를 *comultiplication*, $\epsilon$을 *counit*, $\iota$를 *antipode*라 부른다. 두 Hopf $\mathbb{K}$-algebra 사이의 *homomorphism*은 $\mathbb{K}$-algebra homomorphism $f: A \rightarrow B$로서 $\Delta_B\circ f=(f\otimes f)\circ\Delta_A$, $\epsilon_B\circ f=\epsilon_A$, $f\circ\iota_A=\iota_B\circ f$를 만족하는 것이다.
 :::
 
-세 조건은 각각 결합법칙·항등원·역원의 dual이며, 이는 [\[범주론\] §모노이드 대상, ⁋정의 7](/ko/math/category_theory/monoid_objects#def7)의 Hopf monoid를 monoidal category $(\rMod{k},\otimes_k, k)$에서 구현한 것이다. ([\[범주론\] §모노이드 대상, ⁋예시 8](/ko/math/category_theory/monoid_objects#ex8)) 문헌의 일반적인 정의는 $A$의 commutativity를 요구하지 않으며, 그 경우 antipode는 algebra homomorphism이 아니라 anti-homomorphism이 된다. 우리는 affine group scheme의 coordinate ring만을 다루므로 처음부터 commutative인 경우로 제한하였고, 이 제한 아래에서 antipode가 $k$-algebra homomorphism이 되는 것이다. 또 문헌에서는 antipode를 $S$로 적는 것이 관례이나, 여기에서는 base scheme의 기호와 겹치지 않도록 $\iota$를 쓴다.
+세 조건은 각각 결합법칙·항등원·역원의 dual이며, 이는 [\[범주론\] §모노이드 대상, ⁋정의 7](/ko/math/category_theory/monoid_objects#def7)의 Hopf monoid를 monoidal category $(\rMod{\mathbb{K}},\otimes_\mathbb{K}, \mathbb{K})$에서 구현한 것이다. ([\[범주론\] §모노이드 대상, ⁋예시 8](/ko/math/category_theory/monoid_objects#ex8)) 문헌의 일반적인 정의는 $A$의 commutativity를 요구하지 않으며, 그 경우 antipode는 algebra homomorphism이 아니라 anti-homomorphism이 된다. 우리는 affine group scheme의 coordinate ring만을 다루므로 처음부터 commutative인 경우로 제한하였고, 이 제한 아래에서 antipode가 $\mathbb{K}$-algebra homomorphism이 되는 것이다. 또 문헌에서는 antipode를 $S$로 적는 것이 관례이나, 여기에서는 base scheme의 기호와 겹치지 않도록 $\iota$를 쓴다.
 
 ::: 정리 7
-Ring $k$에 대하여, $\Spec$은 [정의 6](#def6)의 Hopf $k$-algebra들의 category와 $\Spec k$ 위의 affine group scheme들의 category 사이의 anti-equivalence를 준다. 이 대응 아래에서 $\Delta, \epsilon, \iota$는 각각 $m, e, i$에 대응한다.
+Ring $\mathbb{K}$에 대하여, $\Spec$은 [정의 6](#def6)의 Hopf $\mathbb{K}$-algebra들의 category와 $\Spec \mathbb{K}$ 위의 affine group scheme들의 category 사이의 anti-equivalence를 준다. 이 대응 아래에서 $\Delta, \epsilon, \iota$는 각각 $m, e, i$에 대응한다.
 :::
 ::: 증명
-[§아핀스킴, ⁋정리 13](/ko/math/scheme_theory/affine_schemes#thm13)의 adjunction을 affine scheme으로 제한하면 동치 $\AffSch\simeq \cRing^\op$를 얻으며, $\Spec k$ 위의 affine scheme들과 $k$-algebra들 사이에서도 마찬가지이다. 이 동치는 $\Spec k$ 위의 fiber product를 tensor product로 옮기고 ([§올곱, ⁋보조정리 2](/ko/math/scheme_theory/fiber_products#lem2)), terminal object $\Spec k$를 $k$로 옮긴다. 곧 $A$를 commutative $k$-algebra라 할 때
+[§아핀스킴, ⁋정리 13](/ko/math/scheme_theory/affine_schemes#thm13)의 adjunction을 affine scheme으로 제한하면 동치 $\AffSch\simeq \cRing^\op$를 얻으며, $\Spec \mathbb{K}$ 위의 affine scheme들과 $\mathbb{K}$-algebra들 사이에서도 마찬가지이다. 이 동치는 $\Spec \mathbb{K}$ 위의 fiber product를 tensor product로 옮기고 ([§올곱, ⁋보조정리 2](/ko/math/scheme_theory/fiber_products#lem2)), terminal object $\Spec \mathbb{K}$를 $\mathbb{K}$로 옮긴다. 곧 $A$를 commutative $\mathbb{K}$-algebra라 할 때
 
-$$\Spec A\times_{\Spec k}\Spec A=\Spec(A\otimes_kA),\qquad \Spec A\times_{\Spec k}\Spec A\times_{\Spec k}\Spec A=\Spec (A\otimes_kA\otimes_kA)$$
+$$\Spec A\times_{\Spec \mathbb{K}}\Spec A=\Spec(A\otimes_\mathbb{K}A),\qquad \Spec A\times_{\Spec \mathbb{K}}\Spec A\times_{\Spec \mathbb{K}}\Spec A=\Spec (A\otimes_\mathbb{K}A\otimes_\mathbb{K}A)$$
 
 이다.
 
-따라서 [명제 2](#prop2)의 데이터 $m: \Spec A\times_{\Spec k}\Spec A \rightarrow \Spec A$, $e:\Spec k \rightarrow \Spec A$, $i:\Spec A \rightarrow \Spec A$를 주는 것은 $k$-algebra homomorphism $\Delta: A \rightarrow A\otimes_kA$, $\epsilon: A \rightarrow k$, $\iota: A \rightarrow A$를 주는 것과 정확히 같다. 남은 것은 세 조건의 대응인데, 동치가 합성과 항등사상을 보존하므로 등식이 등식으로 옮겨간다. 결합법칙 $m\circ(m\times\id)=m\circ(\id\times m)$은 $(\Delta\otimes\id_A)\circ\Delta=(\id_A\otimes\Delta)\circ\Delta$이 되고, 항등원 조건은 counit 조건이 되며, 역원 조건에서는 $(i,\id_G)$가 $a\otimes b\mapsto \iota(a)b$, 곧 $\mu\circ(\iota\otimes\id_A)$에 대응하고 $e\circ\pi$가 $\eta\circ\epsilon$에 대응하여 antipode 조건이 된다.
+따라서 [명제 2](#prop2)의 데이터 $m: \Spec A\times_{\Spec \mathbb{K}}\Spec A \rightarrow \Spec A$, $e:\Spec \mathbb{K} \rightarrow \Spec A$, $i:\Spec A \rightarrow \Spec A$를 주는 것은 $\mathbb{K}$-algebra homomorphism $\Delta: A \rightarrow A\otimes_\mathbb{K}A$, $\epsilon: A \rightarrow \mathbb{K}$, $\iota: A \rightarrow A$를 주는 것과 정확히 같다. 남은 것은 세 조건의 대응인데, 동치가 합성과 항등사상을 보존하므로 등식이 등식으로 옮겨간다. 결합법칙 $m\circ(m\times\id)=m\circ(\id\times m)$은 $(\Delta\otimes\id_A)\circ\Delta=(\id_A\otimes\Delta)\circ\Delta$이 되고, 항등원 조건은 counit 조건이 되며, 역원 조건에서는 $(i,\id_G)$가 $a\otimes b\mapsto \iota(a)b$, 곧 $\mu\circ(\iota\otimes\id_A)$에 대응하고 $e\circ\pi$가 $\eta\circ\epsilon$에 대응하여 antipode 조건이 된다.
 
-마지막으로 morphism의 대응을 본다. Group scheme homomorphism은 각각의 $T$에서 $G(T) \rightarrow H(T)$가 group homomorphism이 되는 morphism이고, group homomorphism은 항등원과 역원을 자동으로 보존하므로 이는 $m$, $e$, $i$ 모두와 commute하는 $\Spec k$ 위의 morphism과 같다. 위의 동치가 이 세 조건을 뒤집으면 $\Delta$, $\epsilon$, $\iota$ 모두와 commute하는 $k$-algebra homomorphism, 곧 [정의 6](#def6)의 Hopf algebra homomorphism이 된다.
+마지막으로 morphism의 대응을 본다. Group scheme homomorphism은 각각의 $T$에서 $G(T) \rightarrow H(T)$가 group homomorphism이 되는 morphism이고, group homomorphism은 항등원과 역원을 자동으로 보존하므로 이는 $m$, $e$, $i$ 모두와 commute하는 $\Spec \mathbb{K}$ 위의 morphism과 같다. 위의 동치가 이 세 조건을 뒤집으면 $\Delta$, $\epsilon$, $\iota$ 모두와 commute하는 $\mathbb{K}$-algebra homomorphism, 곧 [정의 6](#def6)의 Hopf algebra homomorphism이 된다.
 :::
 
-[정리 7](#thm7)에 의하여 affine group scheme $G=\Spec A$의 $R$-point들의 group 구조는 $A$의 Hopf 구조로 명시된다. 곧 $G(R)=\Hom_{k\text{-alg}}(A, R)$ 위에서 곱셈은 $g\ast h=\mu_R\circ(g\otimes h)\circ\Delta$, 항등원은 $\eta_R\circ\epsilon$, 역원은 $g\mapsto g\circ\iota$로 주어진다. 이 공식들은 다음 절에서 representation을 comodule로 번역할 때 그대로 쓰인다.
+[정리 7](#thm7)에 의하여 affine group scheme $G=\Spec A$의 $R$-point들의 group 구조는 $A$의 Hopf 구조로 명시된다. 곧 $G(R)=\Hom_{\mathbb{K}\text{-alg}}(A, R)$ 위에서 곱셈은 $g\ast h=\mu_R\circ(g\otimes h)\circ\Delta$, 항등원은 $\eta_R\circ\epsilon$, 역원은 $g\mapsto g\circ\iota$로 주어진다. 이 공식들은 다음 절에서 representation을 comodule로 번역할 때 그대로 쓰인다.
 
 ::: 예시 8
 [예시 3](#ex3)의 group scheme들의 Hopf 구조는 다음과 같다. 각 경우 $\Delta$와 $\epsilon$은 generator에서의 값으로 결정된다.
@@ -173,52 +173,52 @@ $$\Spec A\times_{\Spec k}\Spec A=\Spec(A\otimes_kA),\qquad \Spec A\times_{\Spec 
    이며, $\iota(\x_{ij})$는 역행렬 $(\x_{ab})^{-1}$의 $(i,j)$ 성분, 곧 Cramer 공식이 주는 adjugate 행렬의 해당 성분을 $\det$으로 나눈 것이다. $\Delta$의 식은 행렬 곱셈 $(MN)_{ij}=\sum_lM_{il}N_{lj}$를 좌표함수 $\x_{ij}$에 대해 dual하게 읽은 것이다.
 :::
 
-[예시 8](#ex8)에서 반복적으로 나타나는 두 형태의 원소가 있다. $\Delta(u)=u\otimes u$이고 $\epsilon(u)=1$인 원소를 *group-like*라 부르고, $\Delta(u)=u\otimes 1+1\otimes u$이고 $\epsilon(u)=0$인 원소를 *primitive*라 부른다. Group-like 원소는 antipode 조건을 적용하면 $\iota(u)u=1$이므로 자동으로 가역이고, 따라서 [정리 7](#thm7)에 의하여 affine group scheme $G=\Spec A$의 coordinate ring의 group-like 원소는 $k[\y,\y^{-1}] \rightarrow A$ 꼴의 Hopf algebra homomorphism, 곧 group scheme homomorphism $G \rightarrow \mathbb{G}_m$과 일대일대응하고, primitive 원소는 같은 이유로 $G \rightarrow \mathbb{G}_a$와 일대일대응한다. 곧 $\mathbb{G}_m$과 $\mathbb{G}_a$로 가는 homomorphism을 찾는 일이 coordinate ring 안에서 이 두 종류의 원소를 찾는 순수하게 대수적인 문제로 바뀌며, 이 계산이 [명제 14](#prop14)에서 두 무한소 group scheme을 구별하는 데 쓰인다.
+[예시 8](#ex8)에서 반복적으로 나타나는 두 형태의 원소가 있다. $\Delta(u)=u\otimes u$이고 $\epsilon(u)=1$인 원소를 *group-like*라 부르고, $\Delta(u)=u\otimes 1+1\otimes u$이고 $\epsilon(u)=0$인 원소를 *primitive*라 부른다. Group-like 원소는 antipode 조건을 적용하면 $\iota(u)u=1$이므로 자동으로 가역이고, 따라서 [정리 7](#thm7)에 의하여 affine group scheme $G=\Spec A$의 coordinate ring의 group-like 원소는 $\mathbb{K}[\y,\y^{-1}] \rightarrow A$ 꼴의 Hopf algebra homomorphism, 곧 group scheme homomorphism $G \rightarrow \mathbb{G}_m$과 일대일대응하고, primitive 원소는 같은 이유로 $G \rightarrow \mathbb{G}_a$와 일대일대응한다. 곧 $\mathbb{G}_m$과 $\mathbb{G}_a$로 가는 homomorphism을 찾는 일이 coordinate ring 안에서 이 두 종류의 원소를 찾는 순수하게 대수적인 문제로 바뀌며, 이 계산이 [명제 14](#prop14)에서 두 무한소 group scheme을 구별하는 데 쓰인다.
 
 ## Comodule과 representation
 
-Group의 representation은 벡터공간 위의 선형작용이다. Group scheme의 경우 이를 functorial하게 요구하면, 곧 각 $R$-point가 $R$-계수로 확장된 module 위에 작용하도록 요구하면, affine group scheme의 coordinate ring이 가진 Hopf 구조 덕분에 이 데이터가 하나의 $k$-linear map으로 압축된다.
+Group의 representation은 벡터공간 위의 선형작용이다. Group scheme의 경우 이를 functorial하게 요구하면, 곧 각 $R$-point가 $R$-계수로 확장된 module 위에 작용하도록 요구하면, affine group scheme의 coordinate ring이 가진 Hopf 구조 덕분에 이 데이터가 하나의 $\mathbb{K}$-linear map으로 압축된다.
 
 ::: 정의 9
-Ring $k$ 위의 affine group scheme $G$와 $k$-module $V$에 대하여, $G$의 $V$ 위로의 *linear representation*이란 각각의 $k$-algebra $R$마다 group homomorphism
+Ring $\mathbb{K}$ 위의 affine group scheme $G$와 $\mathbb{K}$-module $V$에 대하여, $G$의 $V$ 위로의 *linear representation*이란 각각의 $\mathbb{K}$-algebra $R$마다 group homomorphism
 
-$$r_R: G(R) \rightarrow \Aut_R(V\otimes_kR)$$
+$$r_R: G(R) \rightarrow \Aut_R(V\otimes_\mathbb{K}R)$$
 
-이 주어지고 이것이 $R$에 대해 자연스러운 것이다. 곧 임의의 $k$-algebra homomorphism $\varphi: R \rightarrow R'$과 $g\in G(R)$에 대하여
+이 주어지고 이것이 $R$에 대해 자연스러운 것이다. 곧 임의의 $\mathbb{K}$-algebra homomorphism $\varphi: R \rightarrow R'$과 $g\in G(R)$에 대하여
 
 $$r_{R'}(G(\varphi)(g))\circ(\id_V\otimes\varphi)=(\id_V\otimes\varphi)\circ r_R(g)$$
 
-이 성립하는 것이다. 두 representation $(V, r)$과 $(W, r')$ 사이의 *morphism*은 $k$-linear map $u: V \rightarrow W$로서, 각각의 $R$과 $g\in G(R)$에 대하여 $r'_R(g)\circ(u\otimes\id_R)=(u\otimes\id_R)\circ r_R(g)$인 것이다.
+이 성립하는 것이다. 두 representation $(V, r)$과 $(W, r')$ 사이의 *morphism*은 $\mathbb{K}$-linear map $u: V \rightarrow W$로서, 각각의 $R$과 $g\in G(R)$에 대하여 $r'_R(g)\circ(u\otimes\id_R)=(u\otimes\id_R)\circ r_R(g)$인 것이다.
 :::
 
-이 정의에서 $r_R(g)$는 $R$-선형 automorphism이므로, representation은 $V$의 $k$-구조를 계수확장한 모든 층위에서 동시에 주어진 작용이다. 이를 하나의 대수적 데이터로 압축한 것이 comodule이다.
+이 정의에서 $r_R(g)$는 $R$-선형 automorphism이므로, representation은 $V$의 $\mathbb{K}$-구조를 계수확장한 모든 층위에서 동시에 주어진 작용이다. 이를 하나의 대수적 데이터로 압축한 것이 comodule이다.
 
 ::: 정의 10
-Hopf $k$-algebra $A$에 대하여, $A$-*comodule<sub>쌍대모듈</sub>*이란 $k$-module $V$와 $k$-linear map $\rho: V \rightarrow V\otimes_kA$로서 다음 두 조건을 만족하는 것이다.
+Hopf $\mathbb{K}$-algebra $A$에 대하여, $A$-*comodule<sub>쌍대모듈</sub>*이란 $\mathbb{K}$-module $V$와 $\mathbb{K}$-linear map $\rho: V \rightarrow V\otimes_\mathbb{K}A$로서 다음 두 조건을 만족하는 것이다.
 
 1. $(\rho\otimes\id_A)\circ\rho=(\id_V\otimes\Delta)\circ\rho$.
-2. 동일시 $V\otimes_kk\cong V$ 아래에서 $(\id_V\otimes\epsilon)\circ\rho=\id_V$.
+2. 동일시 $V\otimes_\mathbb{K}\mathbb{K}\cong V$ 아래에서 $(\id_V\otimes\epsilon)\circ\rho=\id_V$.
 
-두 comodule 사이의 *morphism*은 $k$-linear map $u: V \rightarrow W$로서 $\rho_W\circ u=(u\otimes\id_A)\circ\rho_V$인 것이다.
+두 comodule 사이의 *morphism*은 $\mathbb{K}$-linear map $u: V \rightarrow W$로서 $\rho_W\circ u=(u\otimes\id_A)\circ\rho_V$인 것이다.
 :::
 
 두 조건은 [정의 6](#def6)의 coassociativity와 counit 조건을 $V$가 받아들이는 형태로 옮긴 것이며, $V=A$이고 $\rho=\Delta$인 경우가 자명한 예이다. 다음 정리가 두 개념이 같은 데이터임을 말해준다.
 
 ::: 정리 11
-Ring $k$ 위의 affine group scheme $G=\Spec A$와 $k$-module $V$에 대하여, $G$의 $V$ 위로의 linear representation과 $V$ 위의 $A$-comodule 구조는 서로 일대일대응한다. 이 대응은 morphism까지 보존하여 두 category의 동치를 준다.
+Ring $\mathbb{K}$ 위의 affine group scheme $G=\Spec A$와 $\mathbb{K}$-module $V$에 대하여, $G$의 $V$ 위로의 linear representation과 $V$ 위의 $A$-comodule 구조는 서로 일대일대응한다. 이 대응은 morphism까지 보존하여 두 category의 동치를 준다.
 :::
 ::: 증명
-[§아핀스킴, ⁋정리 13](/ko/math/scheme_theory/affine_schemes#thm13)에 의하여 $G(R)=\Hom_{k\text{-alg}}(A, R)$이고, [정리 7](#thm7) 직후에 적은 대로 그 group 구조는 $g\ast h=\mu_R\circ(g\otimes h)\circ\Delta$, 항등원 $\eta_R\circ\epsilon$, 역원 $g\circ\iota$로 주어진다.
+[§아핀스킴, ⁋정리 13](/ko/math/scheme_theory/affine_schemes#thm13)에 의하여 $G(R)=\Hom_{\mathbb{K}\text{-alg}}(A, R)$이고, [정리 7](#thm7) 직후에 적은 대로 그 group 구조는 $g\ast h=\mu_R\circ(g\otimes h)\circ\Delta$, 항등원 $\eta_R\circ\epsilon$, 역원 $g\circ\iota$로 주어진다.
 
-Representation $\{r_R\}$이 주어졌다 하자. $R=A$로 두고 universal element $\id_A\in G(A)$를 택하여 $\sigma=r_A(\id_A)\in \Aut_A(V\otimes_kA)$라 하고,
+Representation $\{r_R\}$이 주어졌다 하자. $R=A$로 두고 universal element $\id_A\in G(A)$를 택하여 $\sigma=r_A(\id_A)\in \Aut_A(V\otimes_\mathbb{K}A)$라 하고,
 
-$$\rho: V \rightarrow V\otimes_kA;\qquad \rho(v)=\sigma(v\otimes 1)$$
+$$\rho: V \rightarrow V\otimes_\mathbb{K}A;\qquad \rho(v)=\sigma(v\otimes 1)$$
 
-로 정의한다. 임의의 $g\in G(R)$은 $k$-algebra homomorphism $g: A \rightarrow R$이고 $G(g)(\id_A)=g$이므로, [정의 9](#def9)의 자연스러움을 $\varphi=g$에 적용하여
+로 정의한다. 임의의 $g\in G(R)$은 $\mathbb{K}$-algebra homomorphism $g: A \rightarrow R$이고 $G(g)(\id_A)=g$이므로, [정의 9](#def9)의 자연스러움을 $\varphi=g$에 적용하여
 
 $$r_R(g)(v\otimes 1)=r_R(g)\left((\id_V\otimes g)(v\otimes 1)\right)=(\id_V\otimes g)(\sigma(v\otimes 1))=(\id_V\otimes g)(\rho(v))\tag{$\ast$}$$
 
-를 얻는다. 곧 representation 전체가 $\rho$ 하나로 복원된다. 이제 $(\ast)$에 $R=k$, $g=\epsilon$을 대입하면 좌변은 $G(k)$의 항등원에서의 값이므로 $v$이고, 따라서 $(\id_V\otimes\epsilon)\circ\rho=\id_V$이다. 또 $R=A\otimes_kA$로 두고 $p_1(a)=a\otimes 1$, $p_2(a)=1\otimes a$라 하면 $p_1\ast p_2=\mu_{A\otimes A}\circ(p_1\otimes p_2)\circ\Delta=\Delta$이므로 $r(p_1\ast p_2)=r(p_1)\circ r(p_2)$이고, 양변을 $v\otimes 1$에 적용하여 $(\ast)$로 계산하면 좌변은 $(\id_V\otimes\Delta)(\rho(v))$이며 우변은 $(\rho\otimes\id_A)(\rho(v))$이다. 여기에서 우변의 계산에는 $r(p_1)$이 $A\otimes_kA$-선형이라는 것과 $r(p_1)(w\otimes 1)=(\id_V\otimes p_1)(\rho(w))$이라는 것을 함께 썼다. 따라서 $\rho$는 comodule 구조이다.
+를 얻는다. 곧 representation 전체가 $\rho$ 하나로 복원된다. 이제 $(\ast)$에 $R=\mathbb{K}$, $g=\epsilon$을 대입하면 좌변은 $G(\mathbb{K})$의 항등원에서의 값이므로 $v$이고, 따라서 $(\id_V\otimes\epsilon)\circ\rho=\id_V$이다. 또 $R=A\otimes_\mathbb{K}A$로 두고 $p_1(a)=a\otimes 1$, $p_2(a)=1\otimes a$라 하면 $p_1\ast p_2=\mu_{A\otimes A}\circ(p_1\otimes p_2)\circ\Delta=\Delta$이므로 $r(p_1\ast p_2)=r(p_1)\circ r(p_2)$이고, 양변을 $v\otimes 1$에 적용하여 $(\ast)$로 계산하면 좌변은 $(\id_V\otimes\Delta)(\rho(v))$이며 우변은 $(\rho\otimes\id_A)(\rho(v))$이다. 여기에서 우변의 계산에는 $r(p_1)$이 $A\otimes_\mathbb{K}A$-선형이라는 것과 $r(p_1)(w\otimes 1)=(\id_V\otimes p_1)(\rho(w))$이라는 것을 함께 썼다. 따라서 $\rho$는 comodule 구조이다.
 
 거꾸로 comodule 구조 $\rho$가 주어졌다 하면, $(\ast)$의 우변으로 $r_R(g)$를 정의하고 $R$-선형으로 확장한다. $\rho(v)=\sum_iv_i\otimes a_i$로 적고 $\tau=\id_V\otimes(\mu_R\circ(g\otimes h))$라 두자. 그럼 $g, h\in G(R)$에 대하여
 
@@ -231,11 +231,11 @@ r_R(g)\left(r_R(h)(v\otimes 1)\right)&=\sum_ir_R(g)(v_i\otimes 1)h(a_i)=\sum_i(\
 
 $$\tau\left((\id_V\otimes\Delta)(\rho(v))\right)=\sum_iv_i\otimes(g\ast h)(a_i)=(\id_V\otimes(g\ast h))(\rho(v))=r_R(g\ast h)(v\otimes 1)$$
 
-을 얻는다. 따라서 coassociativity $(\rho\otimes\id_A)\circ\rho=(\id_V\otimes\Delta)\circ\rho$에 의하여 $r_R(g)\circ r_R(h)=r_R(g\ast h)$이다. 또 counit 조건에서 $r_R(\eta_R\circ\epsilon)=\id$인데, $G(R)$이 group이고 그 역원이 $g\circ\iota$이므로 $g\ast(g\circ\iota)$와 $(g\circ\iota)\ast g$가 모두 항등원 $\eta_R\circ\epsilon$이다. 따라서 $r_R(g)\circ r_R(g\circ\iota)$와 $r_R(g\circ\iota)\circ r_R(g)$가 모두 $\id$이 되어 $r_R(g)$는 가역이다. 자연스러움은 $k$-algebra homomorphism $\varphi: R \rightarrow R'$에 대하여
+을 얻는다. 따라서 coassociativity $(\rho\otimes\id_A)\circ\rho=(\id_V\otimes\Delta)\circ\rho$에 의하여 $r_R(g)\circ r_R(h)=r_R(g\ast h)$이다. 또 counit 조건에서 $r_R(\eta_R\circ\epsilon)=\id$인데, $G(R)$이 group이고 그 역원이 $g\circ\iota$이므로 $g\ast(g\circ\iota)$와 $(g\circ\iota)\ast g$가 모두 항등원 $\eta_R\circ\epsilon$이다. 따라서 $r_R(g)\circ r_R(g\circ\iota)$와 $r_R(g\circ\iota)\circ r_R(g)$가 모두 $\id$이 되어 $r_R(g)$는 가역이다. 자연스러움은 $\mathbb{K}$-algebra homomorphism $\varphi: R \rightarrow R'$에 대하여
 
 $$r_{R'}(\varphi\circ g)(v\otimes 1)=(\id_V\otimes(\varphi\circ g))(\rho(v))=(\id_V\otimes\varphi)\left((\id_V\otimes g)(\rho(v))\right)=(\id_V\otimes\varphi)\left(r_R(g)(v\otimes 1)\right)$$
 
-이 성립하고, 양변을 $x\in V\otimes_kR$의 함수 $F$로 볼 때 둘 모두 가법적이며 임의의 $c\in R$에 대하여 $F(cx)=\varphi(c)F(x)$를 만족하는데 $V\otimes_kR$가 $R$-module로서 $v\otimes 1$ 꼴의 원소들로 생성되므로, 그러한 원소들에서의 일치가 $V\otimes_kR$ 전체에서의 일치를 주기 때문이다.
+이 성립하고, 양변을 $x\in V\otimes_\mathbb{K}R$의 함수 $F$로 볼 때 둘 모두 가법적이며 임의의 $c\in R$에 대하여 $F(cx)=\varphi(c)F(x)$를 만족하는데 $V\otimes_\mathbb{K}R$가 $R$-module로서 $v\otimes 1$ 꼴의 원소들로 생성되므로, 그러한 원소들에서의 일치가 $V\otimes_\mathbb{K}R$ 전체에서의 일치를 주기 때문이다.
 
 두 구성이 서로 역인 것은 $(\ast)$가 양방향에서 같은 식이기 때문이다. 마지막으로 $u: V \rightarrow W$가 각 $r_R$과 commute하는 것은 $(\ast)$에 의해 $\rho_W\circ u=(u\otimes\id_A)\circ\rho_V$와 동치이므로, 대응은 morphism까지 보존한다.
 :::
@@ -243,11 +243,11 @@ $$r_{R'}(\varphi\circ g)(v\otimes 1)=(\id_V\otimes(\varphi\circ g))(\rho(v))=(\i
 [정리 11](#thm11)은 affine group scheme의 표현론이 순수하게 대수적인 comodule의 이론으로 번역됨을 말한다. 가장 기본적인 경우를 계산해두자.
 
 ::: 예시 12
-$k$ 위의 $\mathbb{G}_m=\Spec k[\x,\x^{-1}]$에 대하여, $\mathbb{G}_m$의 $V$ 위로의 representation은 $V$의 $\mathbb{Z}$-grading
+$\mathbb{K}$ 위의 $\mathbb{G}_m=\Spec \mathbb{K}[\x,\x^{-1}]$에 대하여, $\mathbb{G}_m$의 $V$ 위로의 representation은 $V$의 $\mathbb{Z}$-grading
 
 $$V=\bigoplus_{n\in \mathbb{Z}}V_n$$
 
-과 일대일대응한다. 실제로 $\rho(v)=\sum_n\rho_n(v)\otimes\x^n$으로 적으면 ($\rho_n: V \rightarrow V$는 $k$-linear이고 각 $v$에 대해 유한히 많은 $n$을 제외하면 $0$이다), $\epsilon(\x^n)=1$이므로 counit 조건은 $\sum_n\rho_n=\id_V$이 되고, $\Delta(\x^n)=\x^n\otimes\x^n$이므로 coassociativity는 $\rho_m\circ\rho_n=0$ ($m\neq n$)과 $\rho_n\circ\rho_n=\rho_n$이 된다. 곧 $\{\rho_n\}$은 합이 항등사상인 직교 idempotent들이고, $V_n=\rho_n(V)$로 두면 $V=\bigoplus_nV_n$이다. 거꾸로 grading이 주어지면 $\rho(v)=\sum_nv_n\otimes\x^n$이 comodule 구조를 준다. $(\ast)$를 통해 대응하는 representation은, $u\in \mathbb{G}_m(R)=R^\times$가 $V_n\otimes_kR$ 위에 $u^n$배로 작용하는 것이다.
+과 일대일대응한다. 실제로 $\rho(v)=\sum_n\rho_n(v)\otimes\x^n$으로 적으면 ($\rho_n: V \rightarrow V$는 $\mathbb{K}$-linear이고 각 $v$에 대해 유한히 많은 $n$을 제외하면 $0$이다), $\epsilon(\x^n)=1$이므로 counit 조건은 $\sum_n\rho_n=\id_V$이 되고, $\Delta(\x^n)=\x^n\otimes\x^n$이므로 coassociativity는 $\rho_m\circ\rho_n=0$ ($m\neq n$)과 $\rho_n\circ\rho_n=\rho_n$이 된다. 곧 $\{\rho_n\}$은 합이 항등사상인 직교 idempotent들이고, $V_n=\rho_n(V)$로 두면 $V=\bigoplus_nV_n$이다. 거꾸로 grading이 주어지면 $\rho(v)=\sum_nv_n\otimes\x^n$이 comodule 구조를 준다. $(\ast)$를 통해 대응하는 representation은, $u\in \mathbb{G}_m(R)=R^\times$가 $V_n\otimes_\mathbb{K}R$ 위에 $u^n$배로 작용하는 것이다.
 :::
 
 [예시 12](#ex12)의 $V_n$을 weight $n$의 부분이라 부르며, 이 분해는 torus의 작용을 다룰 때 표준적인 도구가 된다. Torus $\mathbb{G}_m^r$의 경우 같은 계산을 반복하면 grading이 $\mathbb{Z}^r$에 의해 매겨지며, 그 각각의 성분이 torus의 한 character에 대응한다.
@@ -257,24 +257,24 @@ $$V=\bigoplus_{n\in \mathbb{Z}}V_n$$
 지금까지의 예시는 모두 고전적인 algebraic group의 scheme 판본이었다. 그러나 scheme의 언어는 그보다 넓어서, 위상공간으로는 한 점이지만 자명하지 않은 group scheme을 허용한다. 이러한 대상은 characteristic $p$에서 자연스럽게 나타나며, variety의 언어로는 전혀 포착되지 않는다.
 
 ::: 예시 13
-$k$를 characteristic $p>0$의 field라 하자.
+$\mathbb{K}$를 characteristic $p>0$의 field라 하자.
 
-1. $\mu_p=\Spec k[\x]/(\x^p-1)$을 생각하자. Characteristic $p$에서 $\x^p-1=(\x-1)^p$이므로 이 ring은 nilpotent를 가지며, 따라서 $\mu_p$는 reduced scheme이 아니다. ([§스킴의 대수구조, ⁋정의 1](/ko/math/scheme_theory/algebra_of_schemes#def1)) 위상공간으로서 $\mu_p$는 한 점 $(\x-1)$뿐이고, $\mu_p(k)=\{a\in k\mid a^p=1\}=\{1\}$이므로 $k$-point로는 항등원 하나밖에 보이지 않는다.
+1. $\mu_p=\Spec \mathbb{K}[\x]/(\x^p-1)$을 생각하자. Characteristic $p$에서 $\x^p-1=(\x-1)^p$이므로 이 ring은 nilpotent를 가지며, 따라서 $\mu_p$는 reduced scheme이 아니다. ([§스킴의 대수구조, ⁋정의 1](/ko/math/scheme_theory/algebra_of_schemes#def1)) 위상공간으로서 $\mu_p$는 한 점 $(\x-1)$뿐이고, $\mu_p(\mathbb{K})=\{a\in \mathbb{K}\mid a^p=1\}=\{1\}$이므로 $\mathbb{K}$-point로는 항등원 하나밖에 보이지 않는다.
 
-2. Characteristic $p$에서 $\Frob: \mathbb{G}_a \rightarrow \mathbb{G}_a$를 각각의 $k$-algebra $R$에서 $a\mapsto a^p$로 정의하면, $(a+b)^p=a^p+b^p$이므로 이는 group scheme homomorphism이다. 그 kernel
+2. Characteristic $p$에서 $\Frob: \mathbb{G}_a \rightarrow \mathbb{G}_a$를 각각의 $\mathbb{K}$-algebra $R$에서 $a\mapsto a^p$로 정의하면, $(a+b)^p=a^p+b^p$이므로 이는 group scheme homomorphism이다. 그 kernel
 
-   $$\alpha_p=\ker \Frob=\Spec k[\x]/(\x^p)$$
+   $$\alpha_p=\ker \Frob=\Spec \mathbb{K}[\x]/(\x^p)$$
 
-   은 $\alpha_p(R)=\{a\in R\mid a^p=0\}$을 만족하는 group scheme이며 ([명제 5](#prop5)), 역시 위상공간으로는 한 점이고 reduced가 아니다. 그 Hopf 구조는 $\mathbb{G}_a$에서 유도되어 $\Delta(\x)=\x\otimes 1+1\otimes\x$, $\epsilon(\x)=0$, $\iota(\x)=-\x$이다. Characteristic $p$에서 $(\x\otimes 1+1\otimes\x)^p=\x^p\otimes 1+1\otimes\x^p$이므로 이 $\Delta$가 $k[\x]/(\x^p)$에서 잘 정의된다.
+   은 $\alpha_p(R)=\{a\in R\mid a^p=0\}$을 만족하는 group scheme이며 ([명제 5](#prop5)), 역시 위상공간으로는 한 점이고 reduced가 아니다. 그 Hopf 구조는 $\mathbb{G}_a$에서 유도되어 $\Delta(\x)=\x\otimes 1+1\otimes\x$, $\epsilon(\x)=0$, $\iota(\x)=-\x$이다. Characteristic $p$에서 $(\x\otimes 1+1\otimes\x)^p=\x^p\otimes 1+1\otimes\x^p$이므로 이 $\Delta$가 $\mathbb{K}[\x]/(\x^p)$에서 잘 정의된다.
 :::
 
-두 group scheme은 각각 $\mathbb{G}_m$과 $\mathbb{G}_a$ 안에 무한소로 들어앉아 있으며, 밑에 깔린 scheme으로는 서로 구별되지 않는다. 실제로 $\t=\x-1$로 치환하면 $k[\x]/(\x^p-1)=k[\t]/(\t^p)$이므로 $\mu_p$와 $\alpha_p$는 $k$-scheme으로서 isomorphic하다. 그럼에도 group 구조는 다르다.
+두 group scheme은 각각 $\mathbb{G}_m$과 $\mathbb{G}_a$ 안에 무한소로 들어앉아 있으며, 밑에 깔린 scheme으로는 서로 구별되지 않는다. 실제로 $\t=\x-1$로 치환하면 $\mathbb{K}[\x]/(\x^p-1)=\mathbb{K}[\t]/(\t^p)$이므로 $\mu_p$와 $\alpha_p$는 $\mathbb{K}$-scheme으로서 isomorphic하다. 그럼에도 group 구조는 다르다.
 
 ::: 명제 14
-$k$가 characteristic $p>0$의 field이면 $k$ 위의 group scheme homomorphism $\alpha_p \rightarrow \mathbb{G}_m$은 자명한 것 하나뿐이다. 따라서 $\mu_p$와 $\alpha_p$는 group scheme으로서 isomorphic하지 않다.
+$\mathbb{K}$가 characteristic $p>0$의 field이면 $\mathbb{K}$ 위의 group scheme homomorphism $\alpha_p \rightarrow \mathbb{G}_m$은 자명한 것 하나뿐이다. 따라서 $\mu_p$와 $\alpha_p$는 group scheme으로서 isomorphic하지 않다.
 :::
 ::: 증명
-$\mathbb{G}_m=\Spec k[\y,\y^{-1}]$으로 적자. [정리 7](#thm7)에 의하여 group scheme homomorphism $\alpha_p \rightarrow \mathbb{G}_m$은 Hopf algebra homomorphism $k[\y,\y^{-1}] \rightarrow k[\x]/(\x^p)$와 대응하고, 이러한 사상은 $\y$의 image $u$에 의해 결정된다. $\mathbb{G}_m$의 Hopf 구조가 $\Delta(\y)=\y\otimes\y$, $\epsilon(\y)=1$이므로 ([예시 8](#ex8)), 조건은 $u$가 가역이고
+$\mathbb{G}_m=\Spec \mathbb{K}[\y,\y^{-1}]$으로 적자. [정리 7](#thm7)에 의하여 group scheme homomorphism $\alpha_p \rightarrow \mathbb{G}_m$은 Hopf algebra homomorphism $\mathbb{K}[\y,\y^{-1}] \rightarrow \mathbb{K}[\x]/(\x^p)$와 대응하고, 이러한 사상은 $\y$의 image $u$에 의해 결정된다. $\mathbb{G}_m$의 Hopf 구조가 $\Delta(\y)=\y\otimes\y$, $\epsilon(\y)=1$이므로 ([예시 8](#ex8)), 조건은 $u$가 가역이고
 
 $$\Delta(u)=u\otimes u,\qquad \epsilon(u)=1$$
 
@@ -282,13 +282,13 @@ $$\Delta(u)=u\otimes u,\qquad \epsilon(u)=1$$
 
 $$\Delta(u)=\sum_{i=0}^{p-1}a_i\sum_{j=0}^i\binom{i}{j}\x^j\otimes \x^{i-j}$$
 
-이고, $\{\x^j\otimes\x^l\}_{0\leq j,l\leq p-1}$이 $k[\x]/(\x^p)\otimes_kk[\x]/(\x^p)$의 기저이므로 $\Delta(u)=u\otimes u$는 다음 두 조건과 동치이다. 첫째로 $j+l\leq p-1$인 경우
+이고, $\{\x^j\otimes\x^l\}_{0\leq j,l\leq p-1}$이 $\mathbb{K}[\x]/(\x^p)\otimes_\mathbb{K}\mathbb{K}[\x]/(\x^p)$의 기저이므로 $\Delta(u)=u\otimes u$는 다음 두 조건과 동치이다. 첫째로 $j+l\leq p-1$인 경우
 
 $$\binom{j+l}{j}a_{j+l}=a_ja_l$$
 
-이고, 둘째로 $j+l\geq p$이면서 $j, l\leq p-1$인 경우 $a_ja_l=0$이다. 첫째 조건에서 $j=1$, $l=i-1$로 두면 $1\leq i\leq p-1$마다 $ia_i=a_1a_{i-1}$인데, 이 범위에서 $i$는 $k$에서 가역이므로 귀납적으로 $a_i=a_1^i/i!$을 얻는다. 한편 $p\geq 2$이므로 $2(p-1)\geq p$이고, 둘째 조건에 $j=l=p-1$을 대입하면 $a_{p-1}^2=0$, 곧 $a_{p-1}=0$이다. 따라서 $a_1^{p-1}/(p-1)!=0$이므로 $a_1=0$이고, 다시 $a_i=a_1^i/i!$에 의해 $i\geq 1$인 모든 $a_i$가 $0$이다. 곧 $u=1$이며 이는 자명한 homomorphism이다.
+이고, 둘째로 $j+l\geq p$이면서 $j, l\leq p-1$인 경우 $a_ja_l=0$이다. 첫째 조건에서 $j=1$, $l=i-1$로 두면 $1\leq i\leq p-1$마다 $ia_i=a_1a_{i-1}$인데, 이 범위에서 $i$는 $\mathbb{K}$에서 가역이므로 귀납적으로 $a_i=a_1^i/i!$을 얻는다. 한편 $p\geq 2$이므로 $2(p-1)\geq p$이고, 둘째 조건에 $j=l=p-1$을 대입하면 $a_{p-1}^2=0$, 곧 $a_{p-1}=0$이다. 따라서 $a_1^{p-1}/(p-1)!=0$이므로 $a_1=0$이고, 다시 $a_i=a_1^i/i!$에 의해 $i\geq 1$인 모든 $a_i$가 $0$이다. 곧 $u=1$이며 이는 자명한 homomorphism이다.
 
-한편 $\mu_p$는 $\mathbb{G}_m$의 closed subgroup scheme이므로 그 포함사상은 $\mu_p \rightarrow \mathbb{G}_m$의 homomorphism이고, 이는 $\y\mapsto \x$에 대응하는데 $k[\x]/(\x^p-1)$에서 $\x\neq 1$이므로 자명하지 않다. 만일 $\mu_p\cong \alpha_p$이었다면 $\mathbb{G}_m$으로 가는 homomorphism들의 두 집합이 일대일대응하였을 것이므로 모순이다.
+한편 $\mu_p$는 $\mathbb{G}_m$의 closed subgroup scheme이므로 그 포함사상은 $\mu_p \rightarrow \mathbb{G}_m$의 homomorphism이고, 이는 $\y\mapsto \x$에 대응하는데 $\mathbb{K}[\x]/(\x^p-1)$에서 $\x\neq 1$이므로 자명하지 않다. 만일 $\mu_p\cong \alpha_p$이었다면 $\mathbb{G}_m$으로 가는 homomorphism들의 두 집합이 일대일대응하였을 것이므로 모순이다.
 :::
 
 [명제 14](#prop14)는 group scheme의 정보가 밑에 깔린 scheme에 담기지 않는다는 것을 분명히 보여준다. Characteristic $0$의 field 위에서는 finite type group scheme이 항상 smooth라는 Cartier의 정리가 있어 이러한 현상이 일어나지 않지만, characteristic $p$에서는 $\mu_p$나 $\alpha_p$ 같은 무한소 대상이 필연적으로 나타나며 이들을 다룰 수 있다는 것이 scheme 언어의 실질적인 이득이다.
@@ -369,7 +369,7 @@ $S$ 위의 $G$-torsor $P$에 대하여 다음이 성립한다.
 2. Scheme $S$ 위의 invertible sheaf $\mathcal{L}$에 대하여 ([§준연접층, ⁋정의 12](/ko/math/scheme_theory/quasicoherent_sheaves#def12)), $\mathcal{L}$을 자명화하는 open cover $\{U_i\}$와 transition unit $g_{ij}\in \Gamma(U_i\cap U_j, \mathcal{O}_S^\times)$를 택하자. 이들은 $\mathcal{L}\vert_{U_i}\cong \mathcal{O}_{U_i}$인 자명화들 사이의 좌표변환이므로 $U_i\cap U_j\cap U_k$ 위에서 $g_{ij}g_{jk}=g_{ik}$를 만족한다. 그럼 $\mathbb{G}_{m}\times_SU_i$들을 겹침 위에서 $(t, u)\mapsto (g_{ij}(u)t, u)$로 붙이면 이 등식이 [§스킴, ⁋보조정리 9](/ko/math/scheme_theory/schemes#lem9)의 cocycle condition을 그대로 주므로 $S$-scheme $P_\mathcal{L}$을 얻으며, 왼쪽 곱셈이 이 접합과 commute하므로 $P_\mathcal{L}$은 $\mathbb{G}_m$-torsor가 된다. Zariski open cover는 fppf covering이고 [정의 16](#def16)의 두 조건은 모두 국소적으로 확인되기 때문이다. 이 torsor의 절단은 $s_i\in \Gamma(U_i,\mathcal{O}_S^\times)$들로서 $s_i=g_{ij}s_j$를 만족하는 것, 곧 어디에서도 사라지지 않는 $\mathcal{L}$의 global section이므로, [명제 17](#prop17)에 의하여 $P_\mathcal{L}$이 자명한 것과 $\mathcal{L}\cong \mathcal{O}_S$인 것이 동치이다.
 :::
 
-[예시 19](#ex19)의 둘째 경우는 $\mathbb{G}_m$-torsor가 invertible sheaf와 같은 정보를 담고 있음을 시사한다. 그럼 자연스러운 다음 질문은 주어진 $S$와 $G$에 대하여 $G$-torsor 전체를 분류하는 것인데, [명제 17](#prop17)이 말해주듯 자명하지 않은 torsor의 존재는 대역적인 절단의 부재라는 형태의 장애이므로, 이 분류는 cohomology의 문제가 된다. 또 하나의 길은 torsor들을 개별적으로 세는 대신 그들이 이루는 groupoid를 그대로 하나의 기하학적 대상으로 삼는 것이며, field $k$ 위에서 $\mathbb{G}_m$-torsor를 분류하는 $[\Spec k/\mathbb{G}_m]$과 같은 quotient stack이 그렇게 얻어지는 대상으로서 stack 이론의 출발점이 된다.
+[예시 19](#ex19)의 둘째 경우는 $\mathbb{G}_m$-torsor가 invertible sheaf와 같은 정보를 담고 있음을 시사한다. 그럼 자연스러운 다음 질문은 주어진 $S$와 $G$에 대하여 $G$-torsor 전체를 분류하는 것인데, [명제 17](#prop17)이 말해주듯 자명하지 않은 torsor의 존재는 대역적인 절단의 부재라는 형태의 장애이므로, 이 분류는 cohomology의 문제가 된다. 또 하나의 길은 torsor들을 개별적으로 세는 대신 그들이 이루는 groupoid를 그대로 하나의 기하학적 대상으로 삼는 것이며, field $\mathbb{K}$ 위에서 $\mathbb{G}_m$-torsor를 분류하는 $[\Spec \mathbb{K}/\mathbb{G}_m]$과 같은 quotient stack이 그렇게 얻어지는 대상으로서 stack 이론의 출발점이 된다.
 
 ---
 

@@ -151,7 +151,7 @@ Finally, let us compute the trace. Even for a square matrix $X=(x_{ji})$ indexed
 $$\tr(X\otimes X')=\sum_{(i,i')\in I\times I'}(X\otimes X')_{(i,i'),(i,i')}=\sum_{i\in I}\sum_{i'\in I'}x_{ii}x'_{i'i'}=\left(\sum_{i\in I}x_{ii}\right)\left(\sum_{i'\in I'}x'_{i'i'}\right)=\tr(X)\tr(X').$$
 :::
 
-To read the third property at the level of linear maps, we require $L=M$ and $L'=M'$ to be finitely generated free $A$-modules, with $u\in\End_\rMod{A}(M)$ and $u'\in\End_\rMod{A}(M')$, and we must choose a single basis $\mathcal{B}$ for $M$ and $\mathcal{B}'$ for $M'$. Then $u\otimes u'\in\End_\rMod{A}(M\otimes_AM')$, and combining the fact that the trace is independent of the choice of matrix representation with [Proposition 5](#prop5), we obtain $\tr(u\otimes u')=\tr(u)\tr(u')$. ([§Matrices and Linear Maps, §§Matrix Representation and Trace](/en/math/multilinear_algebra/matrices_and_linear_maps#행렬표현과-trace))
+To read the third property at the level of linear maps, we require $L=M$ and $L'=M'$ to be finitely generated free $A$-modules, with $u\in\End_\rMod{A}(M)$ and $u'\in\End_\rMod{A}(M')$, and we must choose a single basis $\mathcal{B}$ for $M$ and $\mathcal{B}'$ for $M'$. Then $u\otimes u'\in\End_\rMod{A}(M\otimes_AM')$, and combining the fact that the trace is independent of the choice of matrix representation with [Proposition 5](#prop5), we obtain $\tr(u\otimes u')=\tr(u)\tr(u')$. ([§Matrices and Linear Maps, §§Matrix Representations and Trace](/en/math/multilinear_algebra/matrices_and_linear_maps#matrix-representations-and-trace))
 
 ---
 
