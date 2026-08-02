@@ -4279,6 +4279,8 @@ E:
   see:
   - label: Cohomology
     id: cohomology
+  - label: Homology
+    id: homology
 - id: elementary_row_operation
   en: elementary row operation
   ko: 기본행연산
@@ -4309,6 +4311,9 @@ E:
     url: /ko/math/complex_geometry/complex_manifolds
   - label: '[대수다양체] §대수적 군'
     url: /ko/math/algebraic_varieties/algebraic_groups
+  see:
+  - label: Hyperelliptic curve
+    id: hyperelliptic_curve
 - id: embedded_point
   en: embedded point
   ko: 매장점
@@ -4326,6 +4331,10 @@ E:
   defs:
   - label: '[미분다양체] §부분다양체와 역함수 정리'
     url: /ko/math/manifolds/submanifolds
+  see:
+  - label: 부분다양체
+    lang: ko
+    id: submanifold
 - id: embedding
   en: embedding
   ko: 매장
@@ -4333,6 +4342,9 @@ E:
   defs:
   - label: '[미분다양체] §부분다양체와 역함수 정리'
     url: /ko/math/manifolds/submanifolds
+  see:
+  - label: Immersion
+    id: immersion
 - id: empty_set
   en: empty set
   ko: 공집합
@@ -4347,6 +4359,9 @@ E:
   defs:
   - label: '[범주론] §범주'
     url: /ko/math/category_theory/categories
+  see:
+  - label: Automorphism
+    id: automorphism
 - id: endomorphism_monoid
   en: endomorphism monoid
   ko: 자기준동형사상 모노이드
@@ -4354,6 +4369,9 @@ E:
   defs:
   - label: '[범주론] §범주'
     url: /ko/math/category_theory/categories
+  see:
+  - label: Automorphism group
+    id: automorphism_group
 - id: energy
   en: energy
   ko: 에너지
@@ -4370,6 +4388,9 @@ E:
   defs:
   - label: '[호몰로지 대수학] §분해'
     url: /ko/math/homological_algebra/resolutions
+  see:
+  - label: Injective object
+    id: injective_object
 - id: enough_projective
   en: enough projective
   ko: 충분한 사영 대상
@@ -4377,6 +4398,9 @@ E:
   defs:
   - label: '[호몰로지 대수학] §분해'
     url: /ko/math/homological_algebra/resolutions
+  see:
+  - label: Projective object
+    id: projective_object
 - id: entire_function
   en: entire function
   ko: 전해석함수
@@ -4384,6 +4408,9 @@ E:
   defs:
   - label: '[복소해석학] §복소정칙함수'
     url: /ko/math/complex_analysis/holomorphic_functions
+  see:
+  - label: Holomorphic function
+    id: holomorphic_function
 - id: epimorphism
   en: epimorphism
   ko: ''
@@ -4401,6 +4428,9 @@ E:
   defs:
   - label: '[집합론] §기수'
     url: /ko/math/set_theory/cardinals
+  see:
+  - label: Cardinal
+    id: cardinal
 - id: equivalence_class
   en: equivalence class
   ko: 동치류
@@ -4775,6 +4805,11 @@ F:
   defs:
   - label: '[스택] §대수적 stack과 quotient stack'
     url: /ko/math/stacks/algebraic_stacks
+  see:
+  - label: Pullback
+    id: pullback
+  - label: Cartesian product
+    id: cartesian_product
 - id: face
   en: face
   ko: 면
@@ -4785,6 +4820,8 @@ F:
   see:
   - label: Simplicial object
     id: simplicial_object
+  - label: Face map
+    id: face_map
 - id: face_map
   en: face map
   ko: 면 사상
@@ -4796,6 +4833,10 @@ F:
   see:
   - label: Simplicial object
     id: simplicial_object
+  - label: Face
+    id: face
+  - label: Degeneracy map
+    id: degeneracy_map
 - id: factorial
   en: factorial
   ko: 인수분해스킴
@@ -4810,6 +4851,9 @@ F:
   defs:
   - label: '[범주론] §함자'
     url: /ko/math/category_theory/functors
+  see:
+  - label: Full
+    id: full
 - id: faithfully_flat
   en: faithfully flat
   ko: 충실평탄
@@ -4851,6 +4895,8 @@ F:
   see:
   - label: Fiber bundle
     id: fiber_bundle
+  - label: Base space
+    id: base_space
 - id: fiber_bundle
   en: fiber bundle
   ko: 올다발
@@ -4861,6 +4907,8 @@ F:
   see:
   - label: Fiber
     id: fiber
+  - label: Vector bundle
+    id: vector_bundle
 - id: fibration
   en: fibration
   ko: 올림
@@ -4871,6 +4919,8 @@ F:
   see:
   - label: Fiber bundle
     id: fiber_bundle
+  - label: Homotopy lifting property
+    id: homotopy_lifting_property
 - id: field
   en: field
   ko: 체
@@ -4887,6 +4937,8 @@ F:
     id: division_ring
   - label: Integral domain
     id: integral_domain
+  - label: Algebraically closed field
+    id: algebraically_closed_field
 - id: field_of_fractions
   en: field of fractions
   ko: 분수체
