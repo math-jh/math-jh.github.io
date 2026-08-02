@@ -12021,6 +12021,9 @@ S:
   defs:
   - label: '[리 이론] §Bruhat decomposition'
     url: /ko/math/lie_theory/bruhat_decomposition
+  see:
+  - label: Schubert variety
+    id: schubert_variety
 - id: schubert_variety
   en: Schubert variety
   ko: 슈베르트 다양체
@@ -12031,6 +12034,8 @@ S:
   see:
   - label: Schur polynomial
     id: schur_polynomial
+  - label: Schubert cell
+    id: schubert_cell
 - id: schur_polynomial
   en: Schur polynomial
   ko: 슈어 다항식
@@ -12052,6 +12057,9 @@ S:
   defs:
   - label: '[리만기하학] §접속'
     url: /ko/math/riemannian_geometry/connection
+  see:
+  - label: Covariant derivative
+    id: covariant_derivative
 - id: second_fundamental_form
   en: second fundamental form
   ko: 제2기본형식
@@ -12059,6 +12067,9 @@ S:
   defs:
   - label: '[리만기하학] §제2기본형식'
     url: /ko/math/riemannian_geometry/second_fundamental_form
+  see:
+  - label: Shape operator
+    id: shape_operator
 - id: section
   en: section
   ko: 단면, 절단
@@ -12101,6 +12112,9 @@ S:
   defs:
   - label: '[군론] §군의 확장'
     url: /ko/math/group_theory/extensions
+  see:
+  - label: Direct product
+    id: direct_product
 - id: semi-locally_simply_connected
   en: semi-locally simply connected
   ko: 반국소 단순연결
@@ -12125,6 +12139,9 @@ S:
   defs:
   - label: '[토릭 기하학] §아핀 토릭 다양체'
     url: /ko/math/toric_geometry/affine_toric_varieties
+  see:
+  - label: Group algebra
+    id: group_algebra
 - id: semilocal_ring
   en: semilocal ring
   ko: 반국소환
@@ -12132,6 +12149,9 @@ S:
   defs:
   - label: '[가환대수학] §정수적 확장'
     url: /ko/math/commutative_algebra/integral_extension
+  see:
+  - label: Local ring
+    id: local_ring
 - id: semisimple
   en: semisimple
   ko: 반단순
@@ -12146,6 +12166,9 @@ S:
   defs:
   - label: '[환론] §Semisimple module'
     url: /ko/math/ring_theory/semisimple_modules
+  see:
+  - label: Simple module
+    id: simple_module
 - id: semisimple_part
   en: semisimple part
   ko: 반단순 부분
@@ -12160,6 +12183,9 @@ S:
   defs:
   - label: '[환론] §Artin-Wedderburn 정리'
     url: /ko/math/ring_theory/artin_wedderburn
+  see:
+  - label: Semisimple
+    id: semisimple
 - id: semistable
   en: semistable
   ko: 반안정
@@ -12174,6 +12200,9 @@ S:
   defs:
   - label: '[체론] §분리가능차수'
     url: /ko/math/field_theory/separable_degree
+  see:
+  - label: Algebraic closure
+    id: algebraic_closure
 - id: separable_degree
   en: separable degree
   ko: 분리가능차수
@@ -13476,6 +13505,11 @@ T:
   defs:
   - label: '[위상수학] §하우스도르프 공간'
     url: /ko/math/topology/Hausdorff_spaces
+  see:
+  - label: $T_1$-space
+    id: t_1_-space
+  - label: $T_2$-space
+    id: t_2_-space
 - id: t_1_-space
   en: $T_1$-space
   ko: $T_1$-공간
@@ -13483,6 +13517,11 @@ T:
   defs:
   - label: '[위상수학] §하우스도르프 공간'
     url: /ko/math/topology/Hausdorff_spaces
+  see:
+  - label: $T_0$-space
+    id: t_0_-space
+  - label: $T_2$-space
+    id: t_2_-space
 - id: t_2_-space
   en: $T_2$-space
   ko: $T_2$-공간
@@ -13490,6 +13529,13 @@ T:
   defs:
   - label: '[위상수학] §하우스도르프 공간'
     url: /ko/math/topology/Hausdorff_spaces
+  see:
+  - label: $T_1$-space
+    id: t_1_-space
+  - label: $T_3$-space
+    id: t_3_-space
+  - label: Hausdorff space
+    id: hausdorff_space
 - id: t_2_frac_1_2_-space
   en: $T_{2\frac{1}{2}}$-space
   ko: $T_{2\frac{1}{2}}$-공간
@@ -13497,6 +13543,11 @@ T:
   defs:
   - label: '[위상수학] §하우스도르프 공간'
     url: /ko/math/topology/Hausdorff_spaces
+  see:
+  - label: $T_2$-space
+    id: t_2_-space
+  - label: $T_3$-space
+    id: t_3_-space
 - id: t_3_-space
   en: $T_3$-space
   ko: $T_3$-공간
@@ -13504,6 +13555,9 @@ T:
   defs:
   - label: '[위상수학] §하우스도르프 공간'
     url: /ko/math/topology/Hausdorff_spaces
+  see:
+  - label: $T_2$-space
+    id: t_2_-space
 - id: t_4_-space
   en: $T_4$-space
   ko: $T_4$-공간
