@@ -3310,6 +3310,8 @@ D:
     url: /ko/math/algebraic_varieties/cohomology_of_projective_spaces
   - label: '[사교기하학] §양자 코호몰로지'
     url: /ko/math/symplectic_geometry/quantum_cohomology
+  - label: '[스킴] §스킴의 층 코호몰로지'
+    url: /ko/math/scheme_theory/sheaf_cohomology_of_schemes
 - id: deleted_neighborhood
   en: deleted neighborhood
   ko: 삭제된 근방
@@ -4447,6 +4449,8 @@ E:
   defs:
   - label: '[대수다양체] §사영공간의 코호몰로지'
     url: /ko/math/algebraic_varieties/cohomology_of_projective_spaces
+  - label: '[스킴] §스킴의 층 코호몰로지'
+    url: /ko/math/scheme_theory/sheaf_cohomology_of_schemes
 - id: euler_class
   en: Euler class
   ko: 오일러 특성류
@@ -12366,6 +12370,8 @@ S:
   defs:
   - label: '[대수다양체] §층 코호몰로지'
     url: /ko/math/algebraic_varieties/sheaf_cohomology
+  - label: '[스킴] §스킴의 층 코호몰로지'
+    url: /ko/math/scheme_theory/sheaf_cohomology_of_schemes
 - id: sheaf_hom
   en: sheaf Hom
   ko: 층 $\Hom$

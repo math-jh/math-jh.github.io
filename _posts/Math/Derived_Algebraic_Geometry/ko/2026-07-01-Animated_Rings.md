@@ -143,7 +143,7 @@ $$\pi_\ast\bigl(k\otimes_{k[x]}^{\mathbb{L}}k\bigr)\cong\Lambda_k[\varepsilon],\
 
 ## 완전한 여접 복합체
 
-이제 목표였던 여접 복합체를 구성한다. Naive 여접 복합체는 $B$를 polynomial algebra의 quotient로 한 번 표현한 뒤 conormal sequence의 두 항을 취한 것이었다 ([\[가환대수학\] §미분, ⁋정의 9](/ko/math/commutative_algebra/differentials#def9)). 완전한 여접 복합체는 그 "한 번의 표현"을 simplicial 자유 분해로 승격하여, Kähler 미분을 각 항에서 취한 뒤 normalize한다.
+이제 목표였던 여접 복합체를 구성한다. Naive 여접 복합체는 $B$를 polynomial algebra의 quotient로 한 번 표현한 뒤 conormal sequence의 두 항을 취한 것이었다 ([\[가환대수학\] §미분, ⁋정의 10](/ko/math/commutative_algebra/differentials#def10)). 완전한 여접 복합체는 그 "한 번의 표현"을 simplicial 자유 분해로 승격하여, Kähler 미분을 각 항에서 취한 뒤 normalize한다.
 
 ::: 정의 10
 $A$-algebra $B$에 대하여, 각 항 $P_n$이 polynomial $A$-algebra이고 약한 동치 $P_\bullet\overset{\sim}{\rightarrow}B$를 이루는 free simplicial 분해를 택하자 (곧 $\pi_0(P_\bullet)=B$, $\pi_{>0}(P_\bullet)=0$). 이때 $B$의 $A$ 위에서의 *cotangent complex<sub>여접 복합체</sub>* $L_{B/A}$는 각 항의 Kähler 미분을 $B$로 base change한 simplicial $B$-module
@@ -165,9 +165,9 @@ $$H_0(L_{B/A})\cong\Omega_{B/A}$$
 $$\tau_{\leq1}L_{B/A}\simeq\operatorname{NL}_{B/A}$$
 :::
 ::: 증명
-무관성은 두 free simplicial 분해 사이에 언제나 세 번째 공통 정련이 존재하고, [\[가환대수학\] §미분, ⁋정리 13](/ko/math/commutative_algebra/differentials#thm13)이 각 단계에서 준 homotopy 무관성을 simplicial degree 전체에 걸쳐 정합적으로 이어 붙임으로써 나온다. 곧 $L_{B/A}$는 abelianization functor의 왼쪽 유도 functor (nonabelian derived functor)로서 잘 정의되며, cofibrant 분해의 선택에 무관하다.
+무관성은 두 free simplicial 분해 사이에 언제나 세 번째 공통 정련이 존재하고, [\[가환대수학\] §미분, ⁋정리 14](/ko/math/commutative_algebra/differentials#thm14)이 각 단계에서 준 homotopy 무관성을 simplicial degree 전체에 걸쳐 정합적으로 이어 붙임으로써 나온다. 곧 $L_{B/A}$는 abelianization functor의 왼쪽 유도 functor (nonabelian derived functor)로서 잘 정의되며, cofibrant 분해의 선택에 무관하다.
 
-$H_0$의 계산은 다음과 같다. $\Omega_{P_\bullet/A}\otimes_{P_\bullet}B$의 normalization 복합체에서 $H_0$은 $\Omega_{P_0/A}\otimes_{P_0}B$를 두 face의 image로 quotient한 것인데, $P_0\rightarrow B$가 전사이고 $P_1$이 relation들을 준다는 점에서 이는 정확히 conormal sequence의 cokernel, 곧 [\[가환대수학\] §미분, ⁋명제 10](/ko/math/commutative_algebra/differentials#prop10)에서와 같은 $\Omega_{B/A}$이다. 마지막으로 $P_\bullet$의 처음 두 항 $P_1\rightrightarrows P_0\rightarrow B$만 남겨 절단하면 그로부터 얻는 두 항 복합체가 $\operatorname{NL}_{B/A}$의 정의와 일치하므로 $\tau_{\leq1}L_{B/A}\simeq\operatorname{NL}_{B/A}$이다. 완전한 논증은 ([Qui], [Ill], [Stacks, Cotangent Complex])에 있다.
+$H_0$의 계산은 다음과 같다. $\Omega_{P_\bullet/A}\otimes_{P_\bullet}B$의 normalization 복합체에서 $H_0$은 $\Omega_{P_0/A}\otimes_{P_0}B$를 두 face의 image로 quotient한 것인데, $P_0\rightarrow B$가 전사이고 $P_1$이 relation들을 준다는 점에서 이는 정확히 conormal sequence의 cokernel, 곧 [\[가환대수학\] §미분, ⁋명제 11](/ko/math/commutative_algebra/differentials#prop11)에서와 같은 $\Omega_{B/A}$이다. 마지막으로 $P_\bullet$의 처음 두 항 $P_1\rightrightarrows P_0\rightarrow B$만 남겨 절단하면 그로부터 얻는 두 항 복합체가 $\operatorname{NL}_{B/A}$의 정의와 일치하므로 $\tau_{\leq1}L_{B/A}\simeq\operatorname{NL}_{B/A}$이다. 완전한 논증은 ([Qui], [Ill], [Stacks, Cotangent Complex])에 있다.
 :::
 
 곧 완전한 여접 복합체는 naive 여접 복합체의 정보를 낮은 degree에서 그대로 담으면서, 그 위에 higher homology를 얹은 대상이다. 이 higher homology가 있어야만 비로소 변형이론이 요구했던 추이 삼각형이 성립한다.
