@@ -2285,6 +2285,13 @@ C:
   defs:
   - label: '[대수적 구조] §대수적 구조'
     url: /ko/math/algebraic_structures/algebraic_structures
+- id: commutativity
+  en: commutativity
+  ko: 교환성
+  primary: en
+  defs:
+  - label: '[대수적 구조] §대수적 구조'
+    url: /ko/math/algebraic_structures/algebraic_structures
 - id: commutator
   en: commutator
   ko: 교환자
@@ -3401,10 +3408,10 @@ D:
     url: /ko/math/algebraic_topology/degree_and_fixed_point_theorems
   - label: '[대수다양체] §사영공간의 코호몰로지'
     url: /ko/math/algebraic_varieties/cohomology_of_projective_spaces
-  - label: '[사교기하학] §양자 코호몰로지'
-    url: /ko/math/symplectic_geometry/quantum_cohomology
   - label: '[스킴] §스킴의 층 코호몰로지'
     url: /ko/math/scheme_theory/sheaf_cohomology_of_schemes
+  - label: '[사교기하학] §양자 코호몰로지'
+    url: /ko/math/symplectic_geometry/quantum_cohomology
 - id: deleted_neighborhood
   en: deleted neighborhood
   ko: 삭제된 근방
@@ -3592,10 +3599,10 @@ D:
   ko: 유도 tensor product
   primary: ko
   defs:
-  - label: '[유도대수기하학] §Simplicial 가환환과 animation'
-    url: /ko/math/derived_algebraic_geometry/animated_rings
   - label: '[다중선형대수학] §행렬의 텐서곱'
     url: /ko/math/multilinear_algebra/tensor_product_of_matrices
+  - label: '[유도대수기하학] §Simplicial 가환환과 animation'
+    url: /ko/math/derived_algebraic_geometry/animated_rings
 - id: descendant_gromov-witten_invariant
   en: descendant Gromov-Witten invariant
   ko: ''
@@ -6555,6 +6562,8 @@ I:
   see:
   - label: Graded ring
     id: graded_ring
+  - label: Graded submodule
+    id: graded_submodule
 - id: i_-th_coordinate
   en: $i$-th coordinate
   ko: $i$번째 좌표
@@ -6623,6 +6632,8 @@ I:
   see:
   - label: Preimage
     id: preimage
+  - label: Kernel
+    id: kernel
 - id: imaginary_part
   en: imaginary part
   ko: 허수부
@@ -6796,6 +6807,9 @@ I:
   - label: 점근분수
     lang: ko
     id: convergent
+  - label: 절대수렴
+    lang: ko
+    id: absolutely_convergent
 - id: infinitesimal_deformation
   en: infinitesimal deformation
   ko: 무한소 변형
@@ -6817,6 +6831,9 @@ I:
   defs:
   - label: '[복소기하학] §Kähler 다양체'
     url: /ko/math/complex_geometry/kahler_manifolds
+  see:
+  - label: Homogeneous coordinates
+    id: homogeneous_coordinates
 - id: initial_object
   en: initial object
   ko: 시작 대상
@@ -6879,6 +6896,9 @@ I:
   defs:
   - label: '[가환대수학] §호몰로지 차원'
     url: /ko/math/commutative_algebra/homological_dimension
+  see:
+  - label: Projective dimension
+    id: projective_dimension
 - id: injective_limit
   en: injective limit
   ko: 귀납적 극한
@@ -6908,6 +6928,9 @@ I:
     url: /ko/math/homological_algebra/resolutions
   - label: '[대수다양체] §층 코호몰로지'
     url: /ko/math/algebraic_varieties/sheaf_cohomology
+  see:
+  - label: Projective object
+    id: projective_object
 - id: injective_resolution
   en: injective resolution
   ko: 단사 분해
@@ -6943,6 +6966,11 @@ I:
     url: /ko/math/linear_algebra/bilinear_form
   - label: '[선형대수학] §내적공간'
     url: /ko/math/linear_algebra/inner_product_spaces
+  see:
+  - label: Bilinear form
+    id: bilinear_form
+  - label: Hermitian inner product
+    id: hermitian_inner_product
 - id: inner_product_space
   en: inner product space
   ko: 내적공간
@@ -6987,6 +7015,11 @@ I:
   defs:
   - label: '[대수적 구조] §분수체'
     url: /ko/math/algebraic_structures/field_of_fractions
+  see:
+  - label: Principal ideal domain
+    id: principal_ideal_domain
+  - label: Unique factorization domain
+    id: unique_factorization_domain
 - id: integral_extension
   en: integral extension
   ko: 정수적 확장
