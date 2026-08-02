@@ -1398,6 +1398,8 @@ C:
   see:
   - label: Complex algebraic variety
     id: complex_algebraic_variety
+  - label: Kähler manifold
+    id: kähler_manifold
 - id: canonical_bundle
   en: canonical bundle
   ko: 표준다발
@@ -1405,6 +1407,11 @@ C:
   defs:
   - label: '[대수다양체] §표준선다발'
     url: /ko/math/algebraic_varieties/canonical_bundle
+  see:
+  - label: Canonical divisor
+    id: canonical_divisor
+  - label: Canonical line bundle
+    id: canonical_line_bundle
 - id: canonical_decomposition
   en: canonical decomposition
   ko: 표준분해
@@ -1412,6 +1419,9 @@ C:
   defs:
   - label: '[집합론] §동치관계의 예시들'
     url: /ko/math/set_theory/examples_of_equivalence
+  see:
+  - label: Jordan canonical form
+    id: jordan_canonical_form
 - id: canonical_divisor
   en: canonical divisor
   ko: 표준 인자
@@ -1419,6 +1429,11 @@ C:
   defs:
   - label: '[대수다양체] §표준선다발'
     url: /ko/math/algebraic_varieties/canonical_bundle
+  see:
+  - label: Canonical bundle
+    id: canonical_bundle
+  - label: Canonical line bundle
+    id: canonical_line_bundle
 - id: canonical_filtration
   en: canonical filtration
   ko: 표준 여과
@@ -1433,6 +1448,9 @@ C:
   defs:
   - label: '[거울대칭] §가우스-마닌 접속'
     url: /ko/math/mirror_symmetry/gauss-manin_connection
+  see:
+  - label: Canonical divisor
+    id: canonical_divisor
 - id: canonical_injection
   en: canonical injection
   ko: 포함관계로부터 유도된 단사함수
@@ -1452,6 +1470,11 @@ C:
   defs:
   - label: '[대수다양체] §표준선다발'
     url: /ko/math/algebraic_varieties/canonical_bundle
+  see:
+  - label: Canonical bundle
+    id: canonical_bundle
+  - label: Canonical divisor
+    id: canonical_divisor
 - id: canonical_projection
   en: canonical projection
   ko: 동치관계로부터 유도된 전사함수
@@ -1473,6 +1496,9 @@ C:
   defs:
   - label: '[대수적 위상수학] §합곱'
     url: /ko/math/algebraic_topology/cup_products
+  see:
+  - label: Cup product
+    id: cup_product
 - id: cardinal
   en: cardinal
   ko: 기수
@@ -3296,6 +3322,9 @@ D:
   - label: 단조함수
     lang: ko
     id: monotone_function
+  - label: 증가함수
+    lang: ko
+    id: increasing_function
 - id: dedekind_domain
   en: Dedekind domain
   ko: 데데킨트 정역
@@ -3306,6 +3335,10 @@ D:
   see:
   - label: Principal ideal domain
     id: principal_ideal_domain
+  - label: Integral domain
+    id: integral_domain
+  - label: Unique factorization domain
+    id: unique_factorization_domain
 - id: defective
   en: defective
   ko: 결손
@@ -3320,6 +3353,9 @@ D:
   defs:
   - label: '[유도대수기하학] §변형이론과 여접 복합체'
     url: /ko/math/derived_algebraic_geometry/deformation_theory
+  see:
+  - label: First-order deformation
+    id: first-order_deformation
 - id: deformation_retract
   en: deformation retract
   ko: 변형 수축
@@ -3350,6 +3386,8 @@ D:
   see:
   - label: Simplicial object
     id: simplicial_object
+  - label: Simplicial set
+    id: simplicial_set
 - id: degree
   en: degree
   ko: 차수
@@ -3381,6 +3419,11 @@ D:
   defs:
   - label: '[스택] §대수적 stack과 quotient stack'
     url: /ko/math/stacks/algebraic_stacks
+  see:
+  - label: Artin stack
+    id: artin_stack
+  - label: Moduli functor
+    id: moduli_functor
 - id: delta_functor
   en: delta functor
   ko: 델타 함자
@@ -3388,6 +3431,11 @@ D:
   defs:
   - label: '[호몰로지 대수학] §유도함자'
     url: /ko/math/homological_algebra/derived_functors
+  see:
+  - label: Derived functor
+    id: derived_functor
+  - label: Homological $\delta$-functor
+    id: homological_delta_-functor
 - id: delzant_polytope
   en: delzant polytope
   ko: Delzant 다면체
@@ -3395,6 +3443,10 @@ D:
   defs:
   - label: '[토릭 기하학] §Delzant 구성'
     url: /ko/math/toric_geometry/delzant_construction
+  see:
+  - label: 운동량 다면체
+    lang: ko
+    id: moment_polytope
 - id: dense
   en: dense
   ko: 조밀
