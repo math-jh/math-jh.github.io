@@ -100,11 +100,34 @@ $$(0)\subseteq(\x_n)\subseteq(\x_{n-1},\x_n)\subseteq\cdots\subseteq(\x_{d+1},\l
 은 이 ideal의 height가 적어도 $n-d$임을 보여주며, 몫환 $B/(\x_{d+1},\ldots, \x_n)\cong\mathbb{K}[\x_1,\ldots, \x_d]$가 $d$차원이므로 ([§매개계, ⁋따름정리 11](/ko/math/commutative_algebra/system_of_parameters#cor11)) 부등식 $\dim+\operatorname{ht}\leq n$으로 height는 기껏해야 $n-d$이다. 따라서 $\operatorname{ht}_B(\x_{d+1},\ldots, \x_n)=n-d$이며, 결국 $\operatorname{ht}\mathfrak{p}=n-d=\dim A-\dim A/\mathfrak{p}$이다.
 :::
 
+한편 [정리 1](#thm1)이 주는 polynomial subring은 계수의 확대와 잘 호환되므로, finitely generated $\mathbb{K}$-algebra의 차원이 계수체를 키워도 변하지 않는다는 것 또한 얻어진다.
+
+::: 명제 5
+Field $\mathbb{K}$의 extension $\mathbb{K}\hookrightarrow \mathbb{L}$과 finitely generated $\mathbb{K}$-algebra $A$에 대하여 다음의 식
+
+$$\dim(A\otimes_\mathbb{K}\mathbb{L})=\dim A$$
+
+이 성립한다.
+:::
+::: 증명
+$d=\dim A$라 하고, [정리 1](#thm1)을 ideal의 chain 없이 적용하여 $A$의 subring $B\cong\mathbb{K}[\x_1,\ldots, \x_d]$를 $A$가 finitely generated $B$-module이도록 택하자. 이제 $\mathbb{L}$은 $\mathbb{K}$-vector space이므로 free $\mathbb{K}$-module이고 따라서 flat이므로 ([\[다중선형대수학\] §사영가군, 단사가군, 평탄가군, ⁋정의 7](/ko/math/multilinear_algebra/various_modules#def7)), inclusion $B\hookrightarrow A$에 $-\otimes_\mathbb{K}\mathbb{L}$을 적용하여 얻어지는 ring homomorphism
+
+$$B\otimes_\mathbb{K}\mathbb{L} \rightarrow A\otimes_\mathbb{K}\mathbb{L}$$
+
+또한 injective이다. 여기서 $B\otimes_\mathbb{K}\mathbb{L}\cong\mathbb{L}[\x_1,\ldots, \x_d]$이고, $A$를 $B$-module로서 생성하는 원소들 $a_1,\ldots, a_r$에 대하여 $a_i\otimes 1$들이 $A\otimes_\mathbb{K}\mathbb{L}$을 $B\otimes_\mathbb{K}\mathbb{L}$-module로서 생성하므로, 이 injection은 finite이고 따라서 integral extension이다. ([§정수적 확장, ⁋보조정리 4](/ko/math/commutative_algebra/integral_extension#lem4))
+
+그런데 integral homomorphism은 차원을 보존하므로 ([§차원, ⁋명제 4](/ko/math/commutative_algebra/Krull_dimension#prop4)) 다음의 식
+
+$$\dim(A\otimes_\mathbb{K}\mathbb{L})=\dim\mathbb{L}[\x_1,\ldots, \x_d]=d$$
+
+을 얻으며, 여기서 마지막 등식은 [§매개계, ⁋따름정리 11](/ko/math/commutative_algebra/system_of_parameters#cor11)이다.
+:::
+
 ## 제네릭 자유성
 
 지금까지는 base가 field인 상황을 다루었다. 이를 Noetherian integral domain $A$로 넓히면 finite type $A$-algebra $B$와 그 위의 finitely generated module $M$이 $A$-module로서 free일 이유는 없다. 그러나 $A$의 $0$이 아닌 원소 하나를 뒤집는 것만으로 언제나 free로 만들 수 있다는 것이 다음의 결과이며, localization $A_a$가 $A$와 같은 field of fractions를 가지므로 이는 free성이 generic하게 성립한다는 뜻이다.
 
-::: 정리 5 (Grothendieck의 generic freeness)
+::: 정리 6 (Grothendieck의 generic freeness)
 Noetherian integral domain $A$와 finite type $A$-algebra $B$, 그리고 finitely generated $B$-module $M$이 주어졌다 하자. 그럼 $0$이 아닌 $a\in A$가 존재하여 $M_a$가 free $A_a$-module이 된다.
 :::
 ::: 증명
@@ -149,7 +172,7 @@ $$\dim\big((C/\mathfrak{p})\otimes_{A_{a_0}}K\big)<d$$
 Filtration에 등장하는 유한개의 $\mathfrak{p}$들에 대한 $a_\mathfrak{p}$와 $a_0$의 곱을 $a$로 두면 $B_a=(B_{a_0})_a$는 free $A_a$-module이다.
 :::
 
-증명에서 결정적인 것은 두 가지이다. 하나는 dévissage로 $M$을 $B/\mathfrak{q}$ 꼴의 quotient들로 분해하여 문제를 domain의 경우로 옮기는 것이고, 다른 하나는 [정리 1](#thm1)로 $B$를 $A_{a_0}$ 위의 polynomial ring 위에서 finite하게 만든 뒤 [정리 3](#thm3)의 차원 계산으로 초월차수를 떨어뜨려 귀납을 돌리는 것이다. Free module은 flat이므로 [정리 5](#thm5)는 flatness가 generic하게 성립한다는 진술로도 읽히며, 이 형태가 대수기하에서 finite type morphism이 base의 조밀한 열린집합 위에서 flat이 된다는 사실과 finite type morphism의 image가 constructible이라는 Chevalley의 정리를 준다.
+증명에서 결정적인 것은 두 가지이다. 하나는 dévissage로 $M$을 $B/\mathfrak{q}$ 꼴의 quotient들로 분해하여 문제를 domain의 경우로 옮기는 것이고, 다른 하나는 [정리 1](#thm1)로 $B$를 $A_{a_0}$ 위의 polynomial ring 위에서 finite하게 만든 뒤 [정리 3](#thm3)의 차원 계산으로 초월차수를 떨어뜨려 귀납을 돌리는 것이다. Free module은 flat이므로 [정리 6](#thm6)은 flatness가 generic하게 성립한다는 진술로도 읽히며, 이 형태가 대수기하에서 finite type morphism이 base의 조밀한 열린집합 위에서 flat이 된다는 사실과 finite type morphism의 image가 constructible이라는 Chevalley의 정리를 준다.
 
 ---
 

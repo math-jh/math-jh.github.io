@@ -99,6 +99,27 @@ $$(0)\subseteq(\x_n)\subseteq(\x_{n-1},\x_n)\subseteq\cdots\subseteq(\x_{d+1},\l
 shows that this ideal has height at least $n-d$, and since the quotient ring $B/(\x_{d+1},\ldots, \x_n)\cong\mathbb{K}[\x_1,\ldots, \x_d]$ has dimension $d$ ([§System of Parameters, ⁋Corollary 11](/en/math/commutative_algebra/system_of_parameters#cor11)), the inequality $\dim+\operatorname{ht}\leq n$ shows that the height is at most $n-d$. Therefore $\operatorname{ht}_B(\x_{d+1},\ldots, \x_n)=n-d$, and hence $\operatorname{ht}\mathfrak{p}=n-d=\dim A-\dim A/\mathfrak{p}$.
 :::
 
+On the other hand, the polynomial subring provided by [Theorem 1](#thm1) is compatible with enlarging the coefficients, which also yields that the dimension of a finitely generated $\mathbb{K}$-algebra does not change when the coefficient field is enlarged.
+
+::: Proposition 5
+For an extension $\mathbb{K}\hookrightarrow \mathbb{L}$ of a field $\mathbb{K}$ and a finitely generated $\mathbb{K}$-algebra $A$, the following holds.
+
+$$\dim(A\otimes_\mathbb{K}\mathbb{L})=\dim A$$
+:::
+::: Proof
+Set $d=\dim A$ and apply [Theorem 1](#thm1) with no chain of ideals to choose a subring $B\cong\mathbb{K}[\x_1,\ldots, \x_d]$ of $A$ such that $A$ is a finitely generated $B$-module. Now $\mathbb{L}$ is a $\mathbb{K}$-vector space and hence a free $\mathbb{K}$-module, so it is flat ([\[Multilinear Algebra\] §Projective, Injective, and Flat Modules, ⁋Definition 7](/en/math/multilinear_algebra/various_modules#def7)), and therefore the ring homomorphism
+
+$$B\otimes_\mathbb{K}\mathbb{L} \rightarrow A\otimes_\mathbb{K}\mathbb{L}$$
+
+obtained by applying $-\otimes_\mathbb{K}\mathbb{L}$ to the inclusion $B\hookrightarrow A$ is again injective. Here $B\otimes_\mathbb{K}\mathbb{L}\cong\mathbb{L}[\x_1,\ldots, \x_d]$, and if $a_1,\ldots, a_r$ generate $A$ as a $B$-module then the elements $a_i\otimes 1$ generate $A\otimes_\mathbb{K}\mathbb{L}$ as a $B\otimes_\mathbb{K}\mathbb{L}$-module, so this injection is finite and hence an integral extension. ([§Integral Extensions, ⁋Lemma 4](/en/math/commutative_algebra/integral_extension#lem4))
+
+But integral homomorphisms preserve dimension ([§Dimension, ⁋Proposition 4](/en/math/commutative_algebra/Krull_dimension#prop4)), so we obtain
+
+$$\dim(A\otimes_\mathbb{K}\mathbb{L})=\dim\mathbb{L}[\x_1,\ldots, \x_d]=d$$
+
+where the last equality is [§System of Parameters, ⁋Corollary 11](/en/math/commutative_algebra/system_of_parameters#cor11).
+:::
+
 ---
 
 **References**
