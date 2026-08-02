@@ -17,7 +17,7 @@ published: false
 
 [§행렬과 선형사상](/ko/math/multilinear_algebra/matrices_and_linear_maps)에서 우리는 free $A$-module들 사이의 linear map을 행렬로 표현하였고, linear map들의 합성이 행렬의 곱셈에 대응된다는 것을 살펴보았다. 한편 linear map들에 대해 우리가 할 수 있는 또 다른 연산으로 tensor product가 있으므로, 이 연산이 행렬표현의 단계에서 어떤 행렬 연산으로 나타나는지 묻는 것이 자연스럽다. 이번 글에서는 그 답인 행렬의 tensor product, 즉 Kronecker product를 살펴본다. 이번 글에서 $A$는 항상 commutative ring이다.
 
-## 선형사상의 tensor product
+## 선형사상의 텐서곱
 
 네 개의 $A$-module $M,M',L,L'$과 linear map들 $u:M \rightarrow L$, $u':M' \rightarrow L'$이 주어졌다 하자. 그럼 함수
 
@@ -50,7 +50,7 @@ $$\bigl((u\otimes u')\circ(v\otimes v')\bigr)(y\otimes y')=(u\otimes u')\bigl(v(
 이고, $(\id_M\otimes\id_{M'})(x\otimes x')=x\otimes x'$이다.
 :::
 
-## tensor product의 기저
+## 텐서곱의 기저
 
 행렬표현을 위해서는 $M\otimes_AM'$의 basis가 필요하다.
 
@@ -69,7 +69,7 @@ $$M\otimes_AM'\cong\left(\bigoplus_{i\in I}A\right)\otimes_AM'\cong\bigoplus_{i\
 이다. 여기서 $A\otimes_AA\cong A$는 곱셈 $a\otimes b\mapsto ab$로 주어지는 isomorphism이다. 이 isomorphism들의 합성을 추적하면 $e_i\otimes e'_{i'}$는 정확히 $(i,i')$번째 성분의 $1$로 옮겨지므로, $(e_i\otimes e'_{i'})_{(i,i')\in I\times I'}$는 $M\otimes_AM'$의 basis이다.
 :::
 
-## 행렬의 tensor product
+## 행렬의 텐서곱
 
 이제 행렬의 단계에서 tensor product에 대응하는 연산을 정의하자. [§행렬, ⁋정의 1](/ko/math/multilinear_algebra/matrices#def1)에서 행렬의 index를 임의의 집합으로 허용해 두었으므로, 다음 정의는 자연스럽다.
 
@@ -108,7 +108,7 @@ $$(u\otimes u')(e_i\otimes e'_{i'})=u(e_i)\otimes u'(e'_{i'})=\sum_{(j,j')\in J\
 이다. [보조정리 3](#lem3)에 의해 $(f_j\otimes f'_{j'})$들이 $L\otimes_AL'$의 basis이므로, $[u\otimes u']_{\mathcal{C}\otimes\mathcal{C}'}^{\mathcal{B}\otimes\mathcal{B}'}$의 $\bigl((j,j'),(i,i')\bigr)$ 성분은 $x_{ji}x'_{j'i'}$이고, 이는 정확히 $[u]_\mathcal{C}^\mathcal{B}\otimes[u']_{\mathcal{C}'}^{\mathcal{B}'}$의 해당 성분이다.
 :::
 
-## tensor product의 성질
+## 텐서곱의 성질
 
 행렬의 tensor product의 기본 성질들을 살펴보자. 가장 중요한 것은 행렬의 곱셈과의 호환성으로, *mixed product property*라 부르기도 한다.
 
@@ -143,20 +143,24 @@ $$\bigl((X\otimes X')^t\bigr)_{(i,i'),(j,j')}=(X\otimes X')_{(j,j'),(i,i')}=x_{j
 
 이다.
 
-둘째 주장을 보이자. 단위행렬들에 대하여 $E_I\otimes E_{I'}=E_{I\times I'}$인 것은 정의로부터 자명하다. 그럼 [명제 6](#prop6)에 의하여
+둘째 주장을 보이자. $\lvert I\rvert=n$, $\lvert I'\rvert=m$이라 하면 $\lvert I\times I'\rvert=nm$이고, 항등행렬들의 성분을 비교하면
 
-$$(X\otimes X')(X^{-1}\otimes X'^{-1})=(XX^{-1})\otimes(X'X'^{-1})=E_I\otimes E_{I'}=E_{I\times I'}$$
+$$(I_n\otimes I_m)_{(j,j'),(i,i')}=\delta_{ji}\delta_{j'i'}=\delta_{(j,j'),(i,i')}$$
+
+이므로 $I_n\otimes I_m=I_{nm}$이다. 그럼 [명제 6](#prop6)에 의하여
+
+$$(X\otimes X')(X^{-1}\otimes X'^{-1})=(XX^{-1})\otimes(X'X'^{-1})=I_n\otimes I_m=I_{nm}$$
 
 이고, 반대 방향의 곱도 마찬가지이다.
 
-마지막으로 trace를 계산하면
+마지막으로 trace를 계산하자. 유한집합 $I$로 index된 정사각행렬 $X=(x_{ji})$에 대해서도 그 trace를 $\tr(X)=\sum_{i\in I}x_{ii}$로 정의하면
 
 $$\tr(X\otimes X')=\sum_{(i,i')\in I\times I'}(X\otimes X')_{(i,i'),(i,i')}=\sum_{i\in I}\sum_{i'\in I'}x_{ii}x'_{i'i'}=\left(\sum_{i\in I}x_{ii}\right)\left(\sum_{i'\in I'}x'_{i'i'}\right)=\tr(X)\tr(X')$$
 
 이다.
 :::
 
-셋째 성질은 linear map의 단계에서 보면 $\tr(u\otimes u')=\tr(u)\tr(u')$이라는 것으로, trace가 행렬표현의 선택에 의존하지 않는다는 사실과 [명제 5](#prop5)를 결합한 것이다 ([§행렬과 선형사상, §§행렬표현과 trace](/ko/math/multilinear_algebra/matrices_and_linear_maps)).
+셋째 성질을 linear map의 단계에서 읽으려면 $L=M$, $L'=M'$이 finitely generated free $A$-module이고 $u\in\End_\rMod{A}(M)$, $u'\in\End_\rMod{A}(M')$이며, 각각에 대해 하나의 basis $\mathcal{B}$, $\mathcal{B}'$만을 택해야 한다. 이 경우 $u\otimes u'\in\End_\rMod{A}(M\otimes_AM')$이고, trace가 행렬표현의 선택에 의존하지 않는다는 사실과 [명제 5](#prop5)를 결합하면 $\tr(u\otimes u')=\tr(u)\tr(u')$을 얻는다. ([§행렬과 선형사상, §§행렬표현과 trace](/ko/math/multilinear_algebra/matrices_and_linear_maps#행렬표현과-trace))
 
 ---
 
