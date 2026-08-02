@@ -51,6 +51,10 @@ POSTS_ROOT  = BLOG_ROOT / "_posts" / "Math"
 SCRIPT_DIR  = Path(__file__).resolve().parent
 STATE_PATH  = SCRIPT_DIR / "translation_state.json"
 LOCK_PATH   = Path("/tmp/translate-worker.lock")
+# 검증 실패 시 엔진 출력과 조립본을 떨어뜨리는 곳. 한 줄짜리 에러 메시지만으로는
+# 엔진 truncation 과 "마커가 줄 시작이 아닌 위치에 놓임" 을 구별할 수 없다.
+# /tmp 는 tmpfs(RAM) 이므로 ext4 인 /var/tmp 를 쓴다.
+FAIL_DUMP_DIR = Path("/var/tmp/translate-fail")
 
 # ---------------------------------------------------------------------------
 # Kimi CLI
@@ -64,8 +68,18 @@ KIMI_BIN              = shutil.which("kimi") or str(Path.home() / ".local/bin/ki
 # No-tools agent + empty MCP for the single-shot verify/audit call (see call_kimi).
 VERIFY_AGENT_FILE     = str(SCRIPT_DIR / "verify-agent.yaml")
 VERIFY_MCP_FILE       = str(SCRIPT_DIR / "verify-mcp.json")
-KIMI_TIMEOUT_SEC      = 1500                 # 25min — large posts (>30KB) often need >15min
+KIMI_TIMEOUT_SEC      = 3600                 # 60min — 70KB+ 글은 25분으로 부족하다. cron 은
+                                             # 30분 주기지만 acquire_lock 이 겹침을 막으므로
+                                             # 한 번의 호출이 여러 tick 을 넘겨도 안전하다.
 MAX_TRANSLATE_ATTEMPTS = 3                   # re-translate on LOSSY verify verdict, up to N tries
+
+# 큰 글은 조각내어 번역한다. 엔진의 출력 예산은 32K 토큰이고 그 안에 EN 본문이
+# 통째로 들어가야 하는데, KO 본문이 이 한계에 가까워지면 모델이 형식을 잃고
+# "KO 인용 → EN" 대역 워크시트를 뱉다가 예산을 소진하며 잘린다 (2026-08-02
+# Sheaf_Cohomology_of_Schemes, KO 본문 53,978c → 출력 100,470c 중간 절단).
+# 조각 경계는 `:::` 박스 경계(_split_regions)라 정리 박스를 가르지 않는다.
+FULL_CHUNK_THRESHOLD  = 24_000               # 이 KO 본문 길이(자)를 넘으면 분할
+MAX_CHUNK_CHARS       = 12_000               # 조각 하나에 담을 KO 본문 목표치
 
 # Claude verify. 2026-07-20부터 `claude -p --model haiku` 직접 호출 (구독
 # 과금 확인됨). 옛 tmux 상주 세션 경로(verify_session.sh, .done 폴링)는
@@ -710,6 +724,27 @@ def build_prompt(ko_body: str) -> str:
     return INSTRUCTIONS + "\n\n" + ko_body
 
 
+_CHUNK_NOTE = """# Fragment mode
+
+The text below is fragment {idx} of {total} of a single post body, cut at
+theorem-box boundaries. Translate the whole fragment.
+
+- The fragment may begin or end mid-section. That is expected. Do not add an
+  introduction, a recap, a transition, or a closing sentence, and do not
+  mention the split.
+- Keep every label number exactly as it appears; numbering continues across
+  fragments and you cannot see the others.
+- Do not restate these rules, do not quote the Korean back, do not narrate your
+  work. The response must be the translated fragment and nothing else.
+
+Now translate the fragment below."""
+
+
+def build_chunk_prompt(ko_chunk: str, idx: int, total: int) -> str:
+    return (INSTRUCTIONS + "\n\n"
+            + _CHUNK_NOTE.format(idx=idx, total=total) + "\n\n" + ko_chunk)
+
+
 # ---------------------------------------------------------------------------
 # References isolation
 # ---------------------------------------------------------------------------
@@ -722,7 +757,22 @@ def build_prompt(ko_body: str) -> str:
 
 REFS_SENTINEL = "@@REFERENCES@@"
 _REFS_MARK_RE  = re.compile(r"^\*\*(참고문헌|References)\*\*[ \t]*$", re.M)
+_REFS_SENTINEL_LINE_RE = re.compile(
+    r"^[ \t]*" + re.escape(REFS_SENTINEL) + r"[ \t]*$", re.M)
 _REFS_ENTRY_RE = re.compile(r"^\s*(\*\*\[[^\]]+\]\*\*|\[[^\]^]+\][ (])")
+
+
+def dump_failure(ko_path: Path, err: str, *, engine_out: str, assembled: str) -> None:
+    """검증 실패의 증거를 FAIL_DUMP_DIR 에 남긴다 (엔진 출력 / 조립본 / 에러)."""
+    try:
+        FAIL_DUMP_DIR.mkdir(parents=True, exist_ok=True)
+        stem = ko_path.stem
+        (FAIL_DUMP_DIR / f"{stem}.engine.md").write_text(engine_out, encoding="utf-8")
+        (FAIL_DUMP_DIR / f"{stem}.assembled.md").write_text(assembled, encoding="utf-8")
+        (FAIL_DUMP_DIR / f"{stem}.error.txt").write_text(err + "\n", encoding="utf-8")
+        log(f"failure dump: {FAIL_DUMP_DIR}/{stem}.*")
+    except Exception as e:                       # 덤프 실패가 번역 실패를 가리면 안 된다
+        log(f"failure dump skipped: {e!r}")
 
 
 def extract_refs_block(body: str) -> Tuple[str, Optional[str]]:
@@ -746,16 +796,29 @@ def extract_refs_block(body: str) -> Tuple[str, Optional[str]]:
 
 
 def reattach_refs_block(body: str, ko_refs: Optional[str]) -> str:
-    """sentinel 자리에 KO refs 블록을 마커만 영어화해 재부착한다."""
-    n = body.count(REFS_SENTINEL)
+    """sentinel 자리에 KO refs 블록을 마커만 영어화해 재부착한다.
+
+    sentinel 은 <em>줄을 독차지한</em> 것만 인정한다. 문장 안에 박힌 것을 그대로
+    치환하면 `**References**` 가 줄 시작에 오지 않아 마커 정규식에 걸리지 않고,
+    검증은 "참고문헌 없음"이라는 엉뚱한 이름으로 실패한다 (2026-08-02: 엔진이
+    지시사항을 복창하며 만든 ``- `@@REFERENCES@@` preserved verbatim`` 줄이
+    유일한 출현이었던 사례). 여기서 먼저 죽는 편이 진단에 낫다.
+    """
+    n_raw = body.count(REFS_SENTINEL)
+    matches = list(_REFS_SENTINEL_LINE_RE.finditer(body))
     if ko_refs is None:
-        if n:
+        if n_raw:
             raise RuntimeError("refs sentinel appeared but KO has no references block")
         return body
-    if n != 1:
-        raise RuntimeError(f"refs sentinel count {n} != 1 — engine dropped or duplicated it")
+    if len(matches) != 1:
+        raise RuntimeError(
+            f"refs sentinel: {len(matches)} standalone line(s) / {n_raw} raw "
+            f"occurrence(s), expected exactly 1 of each — engine dropped, "
+            f"duplicated, or inlined it"
+        )
     en_refs = _REFS_MARK_RE.sub("**References**", ko_refs, count=1)
-    return body.replace(REFS_SENTINEL, en_refs)
+    m = matches[0]
+    return body[: m.start()] + en_refs + body[m.end() :]
 
 
 POLISH_INSTRUCTIONS = """You are polishing the BODY of an existing English translation of a Korean math blog post. Frontmatter has been stripped and is handled separately by a script. Output ONLY the polished body. No frontmatter, no `---` lines, no explanation, no code fences, no preamble.
@@ -1001,6 +1064,17 @@ def _fm_top_keys(text: str) -> set[str]:
     return keys
 
 
+def _strip_math_and_glosses(body: str) -> str:
+    """한글 잔류를 세기 전에 수식 span 과 `<sub>` 병기를 걷어낸다.
+
+    수식 안의 `\\text{한글}` 과 병기용 gloss 는 정상적인 한글이므로 세면 안 된다.
+    참고문헌 블록(한국어 서지를 인용할 수 있다)은 호출자가 이미 제외한다.
+    """
+    prose = re.sub(r"<sub>.*?</sub>", "", body, flags=re.DOTALL)
+    prose = re.sub(r"\$\$.*?\$\$", "", prose, flags=re.DOTALL)
+    return re.sub(r"\$[^$\n]*\$", "", prose)
+
+
 def validate_translation(
     translated: str,
     *,
@@ -1045,6 +1119,20 @@ def validate_translation(
     # invented entries.
     _, ko_refs_blk = extract_refs_block(_body_after_frontmatter(ko_content).strip())
     en_wo_refs, en_refs_blk = extract_refs_block(out_body)
+
+    # 한글 잔류 검사가 참고문헌 대조보다 먼저다. 엔진이 번역 대신 KO 를 인용한
+    # 대역 워크시트를 내놓으면 참고문헌 마커도 함께 망가지는데, 참고문헌 검사가
+    # 먼저 return 하면 "참고문헌 없음"이라는 지엽적인 이름으로 보고되어 진짜
+    # 실패(번역이 아예 안 됨)를 가린다.
+    prose = _strip_math_and_glosses(en_wo_refs)
+    hangul = re.findall(r"[가-힣]", prose)
+    if len(hangul) > HANGUL_RESIDUE_MAX:
+        sample = "".join(hangul[:20])
+        return (
+            f"{len(hangul)} Hangul chars in body (max {HANGUL_RESIDUE_MAX}) — "
+            f"untranslated prose suspected, e.g. {sample!r}"
+        )
+
     if en_refs_blk is not None and ko_refs_blk is None:
         return "references section present in EN but absent in KO — invented references"
     if ko_refs_blk is not None and en_refs_blk is None:
@@ -1059,20 +1147,9 @@ def validate_translation(
     # by returning the KO body near-verbatim (headings/labels translated, prose
     # copied — the copy has identical math profile, box ids, and length, and the
     # worker's own post-processing anglicizes labels and /ko/ paths, so nothing
-    # structural is left to fail). Count Hangul in the body outside math spans,
-    # <sub> glosses, and the references block (verbatim by construction, may
-    # legitimately cite Korean books); the small allowance covers mentions of
-    # Korean terminology in prose.
-    prose = re.sub(r"<sub>.*?</sub>", "", en_wo_refs, flags=re.DOTALL)
-    prose = re.sub(r"\$\$.*?\$\$", "", prose, flags=re.DOTALL)
-    prose = re.sub(r"\$[^$\n]*\$", "", prose)
-    hangul = re.findall(r"[가-힣]", prose)
-    if len(hangul) > HANGUL_RESIDUE_MAX:
-        sample = "".join(hangul[:20])
-        return (
-            f"{len(hangul)} Hangul chars in body (max {HANGUL_RESIDUE_MAX}) — "
-            f"untranslated prose suspected, e.g. {sample!r}"
-        )
+    # structural is left to fail). The hard-fail threshold is checked above,
+    # before the references comparison; what remains here is the sub-threshold
+    # warning.
     if hangul:
         # Sub-threshold residue is accepted (may be a legitimate bibliography
         # entry or Korean-terminology mention) but always surfaced for human
@@ -1222,6 +1299,41 @@ def call_kimi(prompt: str, *, thinking: bool = False,
     return out
 
 
+def _group_regions(regions, max_chars: int) -> list:
+    """연속한 region 들을 max_chars 이하의 조각으로 묶는다.
+
+    region 은 본문의 연속된 slice 이므로 한 묶음 안의 텍스트를 이어 붙이면 원문이
+    그대로 나온다. 혼자서 max_chars 를 넘는 region 은 쪼개지 않고 그대로 한 조각이
+    된다 — 정리 박스 하나를 두 호출에 걸쳐 자르면 `:::` 짝이 깨진다.
+    """
+    batches: list = []
+    cur: list = []
+    cur_len = 0
+    for _rid, text in regions:
+        if cur and cur_len + len(text) > max_chars:
+            batches.append("".join(cur))
+            cur, cur_len = [], 0
+        cur.append(text)
+        cur_len += len(text)
+    if cur:
+        batches.append("".join(cur))
+    return [b for b in batches if b.strip()]
+
+
+def translate_body_chunked(ko_body: str) -> Tuple[str, int]:
+    """큰 본문을 조각내어 번역하고 이어 붙인다. 반환은 (EN 본문, 프롬프트 총 길이)."""
+    batches = _group_regions(_split_regions(ko_body), MAX_CHUNK_CHARS)
+    outs: list = []
+    prompt_chars = 0
+    log(f"chunked translation: ko body {len(ko_body)}c → {len(batches)} chunk(s)")
+    for i, chunk in enumerate(batches, start=1):
+        prompt = build_chunk_prompt(chunk, i, len(batches))
+        prompt_chars += len(prompt)
+        log(f"  chunk {i}/{len(batches)}: ko {len(chunk)}c")
+        outs.append(call_kimi(prompt).strip())
+    return "\n\n".join(o for o in outs if o) + "\n", prompt_chars
+
+
 def translate(
     ko_path: Path,
     translated_at_iso: str,
@@ -1278,9 +1390,15 @@ def translate(
     if reason == "polish" and en_current_body.strip():
         en_current_body, _ = extract_refs_block(en_current_body)
         prompt = build_polish_prompt(ko_body, en_current_body)
+        en_body = call_kimi(prompt)
+        prompt_chars = len(prompt)
+    elif len(ko_body) > FULL_CHUNK_THRESHOLD:
+        en_body, prompt_chars = translate_body_chunked(ko_body)
     else:
         prompt = build_prompt(ko_body)
-    en_body = call_kimi(prompt)
+        en_body = call_kimi(prompt)
+        prompt_chars = len(prompt)
+    engine_out = en_body                         # 검증 실패 시 덤프용 원본
 
     # ---- Step 3: body post-processing ----
     en_body, _n_fixed = label_fix(en_body)
@@ -1313,8 +1431,9 @@ def translate(
         en_current=en_current, warnings=warnings,
     )
     if err:
+        dump_failure(ko_path, err, engine_out=engine_out, assembled=translated)
         raise RuntimeError(f"validation failed: {err}")
-    return translated, len(prompt), len(translated)
+    return translated, prompt_chars, len(translated)
 
 
 HERMES_BIN = shutil.which("hermes") or str(Path.home() / ".local/bin/hermes")
@@ -2245,8 +2364,11 @@ def main() -> int:
                 log(f"LOSSY verdict persisted after {MAX_TRANSLATE_ATTEMPTS} attempts — accepting last")
 
         en_path.write_text(translated, encoding="utf-8")
-        if reason == "drift":
-            clear_drift_flag(ko_path)   # consume the opt-in flag; don't re-drift
+        if reason in ("pending", "drift"):
+            # consume the opt-in flag; don't re-drift. pending 도 지운다 — 방금
+            # 현재 KO 로부터 EN 을 만들었으므로 drift 는 이미 해소된 상태이고,
+            # 남겨 두면 다음 tick 이 같은 글을 통째로 재번역한다.
+            clear_drift_flag(ko_path)
         state["files"][key] = {
             "status": "done",
             "last_attempt_ts": time.time(),
