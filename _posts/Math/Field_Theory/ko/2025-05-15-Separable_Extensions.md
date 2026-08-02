@@ -73,10 +73,10 @@ $$A\cong \mathfrak{a}\oplus\mathfrak{m}\cong \mathbb{K}\times A/\mathfrak{a}$$
 으로 적을 수 있다. 이제 $\Omega$가 right exact functor이므로 ([\[다중선형대수학\] §미분가군, ⁋명제 13](/ko/math/multilinear_algebra/differential_modules#prop13)) $\Omega_{(A/\mathfrak{a})/\mathbb{K}}$는 $\Omega_{A/\mathbb{K}}=0$의 quotient가 되어 $0$이다. 따라서, $A/\mathfrak{a}$는 귀납적 가정에 의하여 diagonalizable이고, 이를 $\mathbb{K}$와 곱한 $A$ 또한 마찬가지이다. 
 :::
 
-앞서 우리는 [§제곱근확대체, ⁋예시 9](/ko/math/field_theory/radical_extensions#ex9)에서 Galois 이론을 전개할 때 문제가 될 수 있는 상황을 살펴보았었는데, 이 예시를 바탕으로 [정리 3](#thm3)을 살펴보자. 
+앞서 우리는 [§순수비분리확대체, ⁋예시 9](/ko/math/field_theory/purely_inseparable_extensions#ex9)에서 Galois 이론을 전개할 때 문제가 될 수 있는 상황을 살펴보았었는데, 이 예시를 바탕으로 [정리 3](#thm3)을 살펴보자. 
 
 ::: 예시 4
-좋은 경우는, [§제곱근확대체](/ko/math/field_theory/radical_extensions)의 서두에서 살펴보았듯, $\mathbb{Q}(\sqrt{2})/\mathbb{Q}$가 있다. 우리는 [\[다중선형대수학\] §미분가군, ⁋예시 10](/ko/math/multilinear_algebra/differential_modules#ex10)의 계산으로부터, $\Omega_{\mathbb{Q}[\x]/\mathbb{Q}}$는 $d\x$로 생성되는 free $\mathbb{Q}[\x]$-module임을 안다. 한편 $\mathbb{Q}[\x]$의 ideal $\mathfrak{I}=(\x^2-2)$를 생각하면 [\[다중선형대수학\] §미분가군, ⁋명제 14](/ko/math/multilinear_algebra/differential_modules#prop14)로부터 다음의 exact sequence
+좋은 경우는, [§순수비분리확대체](/ko/math/field_theory/purely_inseparable_extensions)의 서두에서 살펴보았듯, $\mathbb{Q}(\sqrt{2})/\mathbb{Q}$가 있다. 우리는 [\[다중선형대수학\] §미분가군, ⁋예시 10](/ko/math/multilinear_algebra/differential_modules#ex10)의 계산으로부터, $\Omega_{\mathbb{Q}[\x]/\mathbb{Q}}$는 $d\x$로 생성되는 free $\mathbb{Q}[\x]$-module임을 안다. 한편 $\mathbb{Q}[\x]$의 ideal $\mathfrak{I}=(\x^2-2)$를 생각하면 [\[다중선형대수학\] §미분가군, ⁋명제 14](/ko/math/multilinear_algebra/differential_modules#prop14)로부터 다음의 exact sequence
 
 $$\mathfrak{I}/\mathfrak{I}^2\overset{\overline{d}}{\longrightarrow}\Omega_{\mathbb{Q}[\x]/\mathbb{Q}}\otimes_\mathbb{Q}\mathbb{Q}(\sqrt{2})\overset{\Omega_0(u)}{\longrightarrow}\Omega_{\mathbb{Q}(\sqrt{2})/\mathbb{Q}}\longrightarrow 0$$
 
@@ -86,7 +86,7 @@ $$0=d(2)=d((\sqrt{2})^2)=2\sqrt{2}d(\sqrt{2})$$
 
 와 $2\sqrt{2}$가 $\mathbb{Q}(\sqrt{2})$에서 invertible이라는 사실로부터 $d(\sqrt{2})=0$이어야 하고 따라서 $\Omega_{\mathbb{Q}(\sqrt{2})/\mathbb{Q}}=0$이어야 함을 안다. 
 
-반면 [§제곱근확대체, ⁋예시 9](/ko/math/field_theory/radical_extensions#ex9)에서 살펴본 $\mathbb{K}=\mathbb{F}_p(t)$의 algebraic extension $\mathbb{K}(t^{1/p})=\mathbb{K}[\x]/(\x^p-t)$에서는 위의 계산이 틀어지게 되는데, 위의 계산과 마찬가지로 $\Omega_{\mathbb{K}(t^{1/p})/\mathbb{K}}$는 $d(t^{1/p})$로 생성되는 $\mathbb{K}(t^{1/p})$-module이지만, 다음의 계산
+반면 [§순수비분리확대체, ⁋예시 9](/ko/math/field_theory/purely_inseparable_extensions#ex9)에서 살펴본 $\mathbb{K}=\mathbb{F}_p(t)$의 algebraic extension $\mathbb{K}(t^{1/p})=\mathbb{K}[\x]/(\x^p-t)$에서는 위의 계산이 틀어지게 되는데, 위의 계산과 마찬가지로 $\Omega_{\mathbb{K}(t^{1/p})/\mathbb{K}}$는 $d(t^{1/p})$로 생성되는 $\mathbb{K}(t^{1/p})$-module이지만, 다음의 계산
 
 $$0=d(t)=d((t^{1/p})^p)=p(t^{1/p})^{p-1}d(t^{1/p})$$
 
@@ -152,7 +152,7 @@ Field $\mathbb{K}$가 perfect인 것과 임의의 algebraic extension $\mathbb{L
 ::: 증명
 임의의 algebraic extension $\mathbb{L}/\mathbb{K}$는 그 자체로 finite degree reduced $\mathbb{K}$-algebra이므로, 만일 $\mathbb{K}$가 perfect라면 한쪽 주장은 [보조정리 6](#lem6)으로부터 자명하다. 따라서 반대방향만 보이면 충분하다.
 
-결론에 반하여 $\mathbb{K}$가 perfect가 아니라 가정하고, 따라서 characteristic $p\neq 0$을 갖는다 하자. 그럼 $\mathbb{K}$가 perfect가 아니라는 가정으로부터 (algebraic closure $\overline{\mathbb{K}}/\mathbb{K}$ 안에서의 relative) $p$-radical extension $\mathbb{K}(a)/\mathbb{K}$를 생각할 수 있다. 한편, embedding $\mathbb{K}\hookrightarrow\overline{\mathbb{K}}$로부터 얻어지는 $\mathbb{K}(a)\rightarrow\overline{\mathbb{K}}$는 [§제곱근확대체, ⁋명제 6](/ko/math/field_theory/radical_extensions#prop6)에 의하여 유일하다. 다르게 말하면, 집합 $\Hom_{\Alg{\mathbb{K}}}(\mathbb{K}(a), \overline{\mathbb{K}})$는 singleton이며 따라서 
+결론에 반하여 $\mathbb{K}$가 perfect가 아니라 가정하고, 따라서 characteristic $p\neq 0$을 갖는다 하자. 그럼 $\mathbb{K}$가 perfect가 아니라는 가정으로부터 (algebraic closure $\overline{\mathbb{K}}/\mathbb{K}$ 안에서의 relative) $p$-radical extension $\mathbb{K}(a)/\mathbb{K}$를 생각할 수 있다. 한편, embedding $\mathbb{K}\hookrightarrow\overline{\mathbb{K}}$로부터 얻어지는 $\mathbb{K}(a)\rightarrow\overline{\mathbb{K}}$는 [§순수비분리확대체, ⁋명제 6](/ko/math/field_theory/purely_inseparable_extensions#prop6)에 의하여 유일하다. 다르게 말하면, 집합 $\Hom_{\Alg{\mathbb{K}}}(\mathbb{K}(a), \overline{\mathbb{K}})$는 singleton이며 따라서 
 
 $$1=[\mathbb{K}(a):\mathbb{K}]_s\lneq [\mathbb{K}(a):\mathbb{K}]=p^e$$
 

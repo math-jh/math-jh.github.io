@@ -1,6 +1,6 @@
 ---
 title: "분리가능차수"
-description: "분리가능차수의 개념을 소개하며, 특성 p를 갖는 체 위의 대수적 확대에서 제곱근확대체와 분리가능확대체의 관계를 étale 대수의 조건을 통해 살펴본다."
+description: "분리가능차수의 개념을 소개하며, 특성 p를 갖는 체 위의 대수적 확대에서 순수비분리확대체와 분리가능확대체의 관계를 étale 대수의 조건을 통해 살펴본다."
 excerpt: "Separable degree와 inseparable degree의 분해"
 
 categories: [Math / Field Theory]
@@ -13,7 +13,7 @@ weight: 7
 
 ---
 
-## 제곱근확대체
+## 순수비분리확대체
 
 우리가 생각할 수 있는 가장 separable하지 않은 extension은, 당연히, $p$-radical extension이다. 이러한 이유로 $p$-radical extension은 종종 *purely inseparable extension*이라 부르기도 한다. 이번 글에서는 우선, $p$-radical extension과 separable extension의 관계에 대해 살펴보고, 이를 separable degree를 사용하여 설명할 것이다. 
 
@@ -151,7 +151,7 @@ Field $\mathbb{K}$의 algebraic closure $\overline{\mathbb{K}}$를 고정하자.
 위와 같은 상황에서, $[\mathbb{L}:\mathbb{K}]_s=[\mathbb{L}_s:\mathbb{K}]$이다.
 :::
 ::: 증명
-정의에 의해 $[\mathbb{L}:\mathbb{K}]_s$는 $\mathbb{K}$의 algebraic closure $\overline{\mathbb{K}}$에 대하여, $\mathbb{L}$에서 $\overline{\mathbb{K}}$로의 $\mathbb{K}$-algebra homomorphism들의 갯수로 정의된다. 그런데 $\overline{\mathbb{K}}$는 algebraically closed field이므로 perfect field이고, 따라서 [§제곱근확대체, ⁋명제 6](/ko/math/field_theory/radical_extensions#prop6)으로부터 임의의 $\mathbb{K}$-algebra homomorphism $\mathbb{L} \rightarrow \overline{\mathbb{K}}$이 주어질 때마다 유일한 $\mathbb{L}_s\rightarrow \overline{\mathbb{K}}$이 정의되며 거꾸로 $\mathbb{K}$-algebra homomorphism $\mathbb{L}_s \rightarrow \overline{\mathbb{K}}$이 주어질 때마다 이를 $\mathbb{L}$로 제한하여 $\mathbb{L}\rightarrow\overline{\mathbb{K}}$를 얻을 수 있다. 이로부터 등식 
+정의에 의해 $[\mathbb{L}:\mathbb{K}]_s$는 $\mathbb{K}$의 algebraic closure $\overline{\mathbb{K}}$에 대하여, $\mathbb{L}$에서 $\overline{\mathbb{K}}$로의 $\mathbb{K}$-algebra homomorphism들의 갯수로 정의된다. 그런데 $\overline{\mathbb{K}}$는 algebraically closed field이므로 perfect field이고, 따라서 [§순수비분리확대체, ⁋명제 6](/ko/math/field_theory/purely_inseparable_extensions#prop6)으로부터 임의의 $\mathbb{K}$-algebra homomorphism $\mathbb{L} \rightarrow \overline{\mathbb{K}}$이 주어질 때마다 유일한 $\mathbb{L}_s\rightarrow \overline{\mathbb{K}}$이 정의되며 거꾸로 $\mathbb{K}$-algebra homomorphism $\mathbb{L}_s \rightarrow \overline{\mathbb{K}}$이 주어질 때마다 이를 $\mathbb{L}$로 제한하여 $\mathbb{L}\rightarrow\overline{\mathbb{K}}$를 얻을 수 있다. 이로부터 등식 
 
 $$[\mathbb{L}:\mathbb{K}]_s=[\mathbb{L}_s:\mathbb{K}]_s$$
 

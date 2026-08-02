@@ -6113,8 +6113,8 @@ H:
   ko: 높이
   primary: en
   defs:
-  - label: '[체론] §제곱근확대체'
-    url: /ko/math/field_theory/radical_extensions
+  - label: '[체론] §순수비분리확대체'
+    url: /ko/math/field_theory/purely_inseparable_extensions
 - id: hermitian_form
   en: Hermitian form
   ko: 에르미트 형식

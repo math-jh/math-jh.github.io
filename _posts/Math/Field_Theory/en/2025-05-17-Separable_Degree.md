@@ -14,7 +14,7 @@ translated_at: 2026-06-26T18:00:02+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-06-26T18:00:02+00:00
 ---
-## Radical Extensions
+## Purely Inseparable Extensions
 
 The most inseparable extension one can conceive is, of course, a $p$-radical extension. For this reason, a $p$-radical extension is often called a *purely inseparable extension*. In this post, we first examine the relationship between $p$-radical extensions and separable extensions, and then describe it using the separable degree.
 
@@ -152,7 +152,7 @@ By [Theorem 6](#thm6), any finite degree extension $\mathbb{L}/\mathbb{K}$ can b
 In the above situation, $[\mathbb{L}:\mathbb{K}]_s=[\mathbb{L}_s:\mathbb{K}]$.
 :::
 ::: Proof
-By definition, $[\mathbb{L}:\mathbb{K}]_s$ is the number of $\mathbb{K}$-algebra homomorphisms from $\mathbb{L}$ to $\overline{\mathbb{K}}$, where $\overline{\mathbb{K}}$ is an algebraic closure of $\mathbb{K}$. Since $\overline{\mathbb{K}}$ is an algebraically closed field, it is a perfect field, and therefore by [§Radical Extensions, ⁋Proposition 6](/en/math/field_theory/radical_extensions#prop6), for any given $\mathbb{K}$-algebra homomorphism $\mathbb{L} \rightarrow \overline{\mathbb{K}}$ there is a unique extension $\mathbb{L}_s\rightarrow \overline{\mathbb{K}}$, and conversely, for any given $\mathbb{K}$-algebra homomorphism $\mathbb{L}_s \rightarrow \overline{\mathbb{K}}$ we can restrict it to $\mathbb{L}$ to obtain $\mathbb{L}\rightarrow\overline{\mathbb{K}}$. From this we obtain the equality
+By definition, $[\mathbb{L}:\mathbb{K}]_s$ is the number of $\mathbb{K}$-algebra homomorphisms from $\mathbb{L}$ to $\overline{\mathbb{K}}$, where $\overline{\mathbb{K}}$ is an algebraic closure of $\mathbb{K}$. Since $\overline{\mathbb{K}}$ is an algebraically closed field, it is a perfect field, and therefore by [§Purely Inseparable Extensions, ⁋Proposition 6](/en/math/field_theory/purely_inseparable_extensions#prop6), for any given $\mathbb{K}$-algebra homomorphism $\mathbb{L} \rightarrow \overline{\mathbb{K}}$ there is a unique extension $\mathbb{L}_s\rightarrow \overline{\mathbb{K}}$, and conversely, for any given $\mathbb{K}$-algebra homomorphism $\mathbb{L}_s \rightarrow \overline{\mathbb{K}}$ we can restrict it to $\mathbb{L}$ to obtain $\mathbb{L}\rightarrow\overline{\mathbb{K}}$. From this we obtain the equality
 
 $$[\mathbb{L}:\mathbb{K}]_s=[\mathbb{L}_s:\mathbb{K}]_s$$
 

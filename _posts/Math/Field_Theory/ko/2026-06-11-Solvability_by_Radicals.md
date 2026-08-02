@@ -15,7 +15,7 @@ published: false
 
 ---
 
-[§제곱근확대체](/ko/math/field_theory/radical_extensions)의 서두에서 우리는 다항식의 root들을 서로 바꾸는 action으로 group을 만들고, 이 group을 통해 extension들을 분류하겠다는 Galois 이론의 철학을 언급했었다. [§갈루아 이론의 기본정리](/ko/math/field_theory/fundamental_theorem_of_galois_theory)로 이 철학이 완성되었으므로, 이제 우리는 Galois 이론의 역사적인 출발점이었던 질문에 답할 수 있다. 어떤 다항식의 root를 사칙연산과 거듭제곱근만으로 표현할 수 있는가?
+[§순수비분리확대체](/ko/math/field_theory/purely_inseparable_extensions)의 서두에서 우리는 다항식의 root들을 서로 바꾸는 action으로 group을 만들고, 이 group을 통해 extension들을 분류하겠다는 Galois 이론의 철학을 언급했었다. [§갈루아 이론의 기본정리](/ko/math/field_theory/fundamental_theorem_of_galois_theory)로 이 철학이 완성되었으므로, 이제 우리는 Galois 이론의 역사적인 출발점이었던 질문에 답할 수 있다. 어떤 다항식의 root를 사칙연산과 거듭제곱근만으로 표현할 수 있는가?
 
 ::: remark 참고 {#rmk}
 이번 글에서 모든 field는 characteristic $0$을 갖는다. 그럼 characteristic exponent가 $1$이므로 Frobenius endomorphism이 identity가 되어 모든 field가 perfect이고, 따라서 [§분리가능확대체, ⁋명제 9](/ko/math/field_theory/separable_extensions#prop9)에 의하여 모든 algebraic extension이 separable이다. 특히 임의의 quasi-Galois extension이 Galois extension이다. Characteristic $p$에서의 가해성 이론은 separability와 관련된 추가적인 논의를 필요로 하므로 여기서는 다루지 않는다.
@@ -110,7 +110,7 @@ $$\mathbb{K}=\mathbb{K}_0\subseteq\mathbb{K}_1\subseteq\cdots\subseteq\mathbb{K}
 즉 $f$가 거듭제곱근으로 풀린다는 것은, $f$의 모든 root를 $\mathbb{K}$의 원소들로부터 시작하여 사칙연산과 거듭제곱근을 유한 번 취하는 것으로 표현할 수 있다는 것이다.
 
 ::: 참고 7
-여기서의 radical tower는 [§제곱근확대체](/ko/math/field_theory/radical_extensions)의 $p$-radical extension과는 별개의 개념이다. 후자는 characteristic $p$에서 Frobenius와 관련된 inseparability를 다루는 개념이고, 전자는 임의의 거듭제곱근을 추가하는 조작이다. 영문 문헌에서 둘 모두 radical이라는 단어를 사용하므로 주의해야 한다.
+여기서의 radical tower는 [§순수비분리확대체](/ko/math/field_theory/purely_inseparable_extensions)의 $p$-radical extension과는 별개의 개념이다. 후자는 characteristic $p$에서 Frobenius와 관련된 inseparability를 다루는 개념이고, 전자는 임의의 거듭제곱근을 추가하는 조작이다. 영문 문헌에서 둘 모두 radical이라는 단어를 사용하므로 주의해야 한다.
 :::
 
 다음의 군론적 보조정리들을 준비하자. 가해군의 정의와 기본 성질은 [\[군론\] §군의 열](/ko/math/group_theory/series_of_groups)에서 가져온다.
