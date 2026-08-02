@@ -10,14 +10,15 @@ sidebar:
 
 date: 2025-05-15
 weight: 4
-translated_at: 2026-08-02T17:45:04+00:00
+translated_at: 2026-08-02T18:15:03+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-08-02T18:15:03+00:00
 ---
 Let us examine the overarching theme of Galois theory through a very simple example. Consider the degree $4$ extension $\mathbb{Q}(\sqrt{2}, \sqrt{3})$ of $\mathbb{Q}$: the newly adjoined elements $\sqrt{2}$ and $\sqrt{3}$ arise from their minimal polynomials over $\mathbb{Q}$,
 
 $$\x^2-2,\qquad \x^2-3.$$
 
-However, looking at each of these polynomials individually, they each have two roots $\pm \sqrt{2}$ and $\pm\sqrt{3}$, and there is no algebraic way to distinguish these roots within $\mathbb{Q}$. Thus, if we consider the action that permutes these roots (or equivalently, the $\mathbb{Q}$-automorphisms of $\mathbb{Q}(\sqrt{2},\sqrt{3})$), namely the permutation group $S_2\times S_2$, this is a subgroup of $S_4$.
+However, each of these polynomials has two roots, $\pm\sqrt{2}$ and $\pm\sqrt{3}$, and there is no algebraic way to distinguish these roots within $\mathbb{Q}$. Thus, if we consider the action that permutes these roots (or equivalently, the $\mathbb{Q}$-automorphisms of $\mathbb{Q}(\sqrt{2},\sqrt{3})$), namely the permutation group $S_2\times S_2$, this is a subgroup of $S_4$.
 
 In this manner, whenever a polynomial is given we can define an appropriate Galois group, and the philosophy of Galois theory is that studying these groups allows us to classify extensions of $\mathbb{Q}$.
 
@@ -75,7 +76,7 @@ Now suppose $e\geq 1$, and assume that $a=b^p$ for some $b\in\mathbb{K}$. Then $
 The following definition would have been natural even immediately after [Definition 1](#def1).
 
 ::: Definition 4
-A field extension $\mathbb{L}/\mathbb{K}$ is called *$p$-radical* if every element of $\mathbb{L}$ is $p$-radical. If there exists an integer $e$ such that $x^{p^e}\in \mathbb{K}$ holds for *every* element $x\in \mathbb{L}$, then the smallest such $e$ is called the *height* of $\mathbb{L}$.
+A field extension $\mathbb{L}/\mathbb{K}$ is called *$p$-radical* if every element of $\mathbb{L}$ is $p$-radical. If there exists an integer $e$ such that $x^{p^e}\in \mathbb{K}$ holds for <em>every</em> element $x\in \mathbb{L}$, then the smallest such $e$ is called the *height* of $\mathbb{L}$.
 :::
 
 Thus the height of $\mathbb{L}/\mathbb{K}$, if defined, can be thought of as the maximum of the heights of the elements of $\mathbb{L}$. Also, by [Proposition 2](#prop2), any $p$-radical extension is naturally an algebraic extension.
