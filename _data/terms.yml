@@ -10870,6 +10870,10 @@ Q:
   defs:
   - label: '[선형대수학] §복소내적공간'
     url: /ko/math/linear_algebra/complex_inner_product_spaces
+  see:
+  - label: Gram-Schmidt 과정
+    lang: ko
+    id: Gram-Schmidt_process
 - id: quadratic_form
   en: quadratic form
   ko: 이차형식
@@ -10877,6 +10881,9 @@ Q:
   defs:
   - label: '[선형대수학] §이차형식과 실베스터 관성법칙'
     url: /ko/math/linear_algebra/quadratic_forms
+  see:
+  - label: Bilinear form
+    id: bilinear_form
 - id: quadratic_non-residue
   en: quadratic non-residue
   ko: 이차 비잉여
@@ -10884,6 +10891,13 @@ Q:
   defs:
   - label: '[정수론] §이차 잉여'
     url: /ko/math/number_theory/quadratic_residues
+  see:
+  - label: 이차 잉여
+    lang: ko
+    id: quadratic_residue
+  - label: 르장드르 기호
+    lang: ko
+    id: legendre_symbol
 - id: quadratic_relation
   en: quadratic relation
   ko: 이차 관계식
@@ -10898,6 +10912,13 @@ Q:
   defs:
   - label: '[정수론] §이차 잉여'
     url: /ko/math/number_theory/quadratic_residues
+  see:
+  - label: 이차 비잉여
+    lang: ko
+    id: quadratic_non-residue
+  - label: 르장드르 기호
+    lang: ko
+    id: legendre_symbol
 - id: quasi-coherent_sheaf
   en: quasi-coherent sheaf
   ko: 준연접층
@@ -10946,6 +10967,11 @@ Q:
   defs:
   - label: '[호몰로지 대수학] §긴 완전열'
     url: /ko/math/homological_algebra/long_exact_sequence
+  see:
+  - label: Quasi-isomorphism
+    id: quasi-isomorphism
+  - label: Chain complex
+    id: chain_complex
 - id: quasi-isomorphism
   en: quasi-isomorphism
   ko: ''
@@ -10953,6 +10979,11 @@ Q:
   defs:
   - label: '[호몰로지 대수학] §긴 완전열'
     url: /ko/math/homological_algebra/long_exact_sequence
+  see:
+  - label: Quasi-isomorphic
+    id: quasi-isomorphic
+  - label: Chain complex
+    id: chain_complex
 - id: quasi-projective
   en: quasi-projective
   ko: 준사영사상
@@ -11101,6 +11132,8 @@ R:
     id: nilradical
   - label: Jacobson radical
     id: jacobson_radical
+  - label: Radical ideal
+    id: radical_ideal
 - id: radical_ideal
   en: radical ideal
   ko: 근기아이디얼
@@ -11108,6 +11141,9 @@ R:
   defs:
   - label: '[가환대수학] §영점정리'
     url: /ko/math/commutative_algebra/nullstellensatz
+  see:
+  - label: Radical
+    id: radical
 - id: radical_tower
   en: radical tower
   ko: 거듭제곱근 탑
@@ -11122,6 +11158,10 @@ R:
   defs:
   - label: '[미적분학] §멱급수'
     url: /ko/math/calculus/power_series
+  see:
+  - label: 멱급수
+    lang: ko
+    id: power_series
 - id: ramification
   en: ramification
   ko: 분기
@@ -11150,6 +11190,11 @@ R:
   defs:
   - label: '[대수다양체] §선다발과 벡터다발'
     url: /ko/math/algebraic_varieties/line_bundles
+  see:
+  - label: Rank
+    id: rank
+  - label: Vector bundle
+    id: vector_bundle
 - id: rational
   en: rational
   ko: 유리
@@ -11166,6 +11211,9 @@ R:
     url: /ko/math/algebraic_varieties/rational_maps
   - label: '[스킴] §스킴의 대수구조'
     url: /ko/math/scheme_theory/algebra_of_schemes
+  see:
+  - label: Rational map
+    id: rational_map
 - id: rational_map
   en: rational map
   ko: 유리사상
@@ -11175,6 +11223,10 @@ R:
     url: /ko/math/algebraic_varieties/rational_maps
   - label: '[스킴] §스킴 사상의 성질들'
     url: /ko/math/scheme_theory/properties_of_scheme_morphisms
+  see:
+  - label: 유리함수
+    lang: ko
+    id: rational_function
 - id: rationally_equivalent
   en: rationally equivalent
   ko: 유리 동치
@@ -11196,6 +11248,13 @@ R:
   defs:
   - label: '[복소해석학] §복소수와 복소평면'
     url: /ko/math/complex_analysis/complex_numbers
+  see:
+  - label: 허수부
+    lang: ko
+    id: imaginary_part
+  - label: 복소켤레
+    lang: ko
+    id: complex_conjugate
 - id: recursion_theorem
   en: recursion theorem
   ko: 재귀정리
@@ -11223,6 +11282,9 @@ R:
   defs:
   - label: '[리 이론] §Bruhat decomposition'
     url: /ko/math/lie_theory/bruhat_decomposition
+  see:
+  - label: Coxeter group
+    id: coxeter_group
 - id: reduced_residue_class
   en: reduced residue class
   ko: 기약잉여류
