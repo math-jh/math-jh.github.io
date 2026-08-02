@@ -11,8 +11,6 @@ sidebar:
 date: 2025-03-14
 weight: 13
 
-published: false
-drift_needed: true
 
 
 ---
@@ -270,25 +268,6 @@ $$\codim_XW=\dim\mathcal{O}_{X,w}=\dim\mathcal{O}_{U,w}=\codim_U(W\cap U)$$
 :::
 
 $\codim_XW=0$인 것은 $W$가 $X$ 자신의 irreducible component라는 것, 곧 $f$가 그 component 위에서 항등적으로 소멸한다는 것과 같다. 따라서 $f$가 $X$의 어떤 irreducible component 위에서도 항등적으로 소멸하지 않는다면 $Z(f)$의 모든 component는 codimension이 정확히 $1$이 되며, 이것이 [명제 11](#prop11)에서 $A$가 integral domain이고 $f$가 nonzero라는 가정이 하던 역할이다.
-
-한편 지금까지의 결과들을 조합하면 finitely generated $\mathbb{K}$-algebra의 차원이 계수의 확대에 대해 변하지 않는다는 것 또한 얻어진다. 
-
-::: 명제 13
-Field $\mathbb{K}$의 extension $\mathbb{K}\hookrightarrow \mathbb{L}$과 finitely generated $\mathbb{K}$-algebra $A$에 대하여
-
-$$\dim\Spec(A\otimes_\mathbb{K}\mathbb{L})=\dim\Spec A$$
-
-이 성립한다.
-:::
-::: 증명
-우리의 계획은 차원을 보존하는 ring homomorphism들을 extension 이전에 잡아 두고, 이들이 base change 후에도 차원을 보존함을 확인하는 것이다. 우리가 사용할 [정리 9](#thm9)는 integral domain에 대한 결과이므로, 먼저 $A$를 domain들로 쪼개는 것부터 시작한다. $A$의 minimal prime들을 $\mathfrak{p}_1,\ldots, \mathfrak{p}_s$라 하면 $A \rightarrow \prod_kA/\mathfrak{p}_k$의 kernel은 nilradical이고 그 image 위에서 $\prod_kA/\mathfrak{p}_k$는 integral인데, nilpotent는 spectrum을 바꾸지 않고 integral extension은 차원을 보존하므로 ([명제 5](#prop5)) $\dim\Spec A=\max_k\dim\Spec A/\mathfrak{p}_k$이다. $\mathbb{L}$이 $\mathbb{K}$ 위에서 flat이므로 이 ring homomorphism은 base change 후에도 nilpotent kernel과 integral image를 유지하여, 같은 등식이 $A\otimes_\mathbb{K}\mathbb{L}$에 대해서도 성립한다.
-
-이제 각각의 $A/\mathfrak{p}_k$는 finitely generated $\mathbb{K}$-대수인 integral domain이므로 [정리 9](#thm9)를 적용하여 injective한 finite ring homomorphism $\mathbb{K}[x_1,\ldots, x_{n_k}]\hookrightarrow A/\mathfrak{p}_k$를 얻을 수 있고, [명제 5](#prop5)와 [명제 10](#prop10)에 의하여 $n_k=\dim\Spec A/\mathfrak{p}_k$이다. 이를 $\mathbb{L}$로 base change한 $\mathbb{L}[x_1,\ldots, x_{n_k}] \rightarrow (A/\mathfrak{p}_k)\otimes_\mathbb{K}\mathbb{L}$ 또한 flatness에 의하여 injective이고 generator가 그대로 남아 finite이므로, 다시 [명제 5](#prop5)와 [명제 10](#prop10)에 의하여
-
-$$\dim\Spec\bigl((A/\mathfrak{p}_k)\otimes_\mathbb{K}\mathbb{L}\bigr)=\dim\Spec\mathbb{L}[x_1,\ldots, x_{n_k}]=n_k$$
-
-이다. 곧 $\dim\Spec(A\otimes_\mathbb{K}\mathbb{L})=\max_kn_k=\dim\Spec A$이다.
-:::
 
 ---
 
