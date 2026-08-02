@@ -37,7 +37,7 @@ $$\Omega_{B/A}\otimes_BC \rightarrow \Omega_{C/A} \rightarrow \Omega_{C/B} \righ
 은 exact이다.
 :::
 ::: 증명
-이 exact sequence는 정확히 [\[가환대수학\] §미분, ⁋명제 6](/ko/math/commutative_algebra/differentials#prop6)에서 $E=B$, $E'=C$, 그리고 base ring을 $A$로 두어 얻어지는 cotangent sequence이다. 
+이 exact sequence는 정확히 [\[가환대수학\] §미분, ⁋명제 8](/ko/math/commutative_algebra/differentials#prop8)에서 $E=B$, $E'=C$, 그리고 base ring을 $A$로 두어 얻어지는 cotangent sequence이다. 
 :::
 
 남은 하나의 exact sequence는 다음과 같다.
@@ -50,14 +50,14 @@ $$\mathfrak{a}/\mathfrak{a}^2 \overset{\bar{d}}{\longrightarrow} \Omega_{B/A}\ot
 은 exact이며, 첫째 morphism $\bar{d}$는 $f+\mathfrak{a}^2\mapsto df\otimes 1$로 주어진다.
 :::
 ::: 증명
-Surjection $\varphi:B \rightarrow C=B/\mathfrak{a}$에 [\[가환대수학\] §미분, ⁋명제 7](/ko/math/commutative_algebra/differentials#prop7)을 적용하면 된다.
+Surjection $\varphi:B \rightarrow C=B/\mathfrak{a}$에 [\[가환대수학\] §미분, ⁋명제 9](/ko/math/commutative_algebra/differentials#prop9)를 적용하면 된다.
 :::
 
 여기서 $\mathfrak{a}/\mathfrak{a}^2$을 $C$의 *conormal module*이라 부른다.
 
 위에서 언급한 것과 같이, 우리는 이들을 이어붙여 scheme morphism에 대한 Kähler differential을 정의해야 한다. 이는 본질적으로 base와 fiber쪽 각각을 affine으로 줄여야하므로, 우리는 이들 각각에 대한 gluing 조건이 필요하다. 
 
-위에서 정의한 $\Omega$는 ring homomorphism들의 commutative square에 대하여 functorial하므로 ([\[가환대수학\] §미분, ⁋명제 5](/ko/math/commutative_algebra/differentials#prop5)), $A$-algebra homomorphism $B \rightarrow B'$는 canonical한 $B'$-linear map $\Omega_{B/A}\otimes_BB' \rightarrow \Omega_{B'/A}$를 유도하고 base의 변화 $A \rightarrow A'$는 canonical $B$-module homomorphism $\Omega_{B/A} \rightarrow \Omega_{B/A'}$를 유도한다. Gluing을 위해 필요한 것은 이들 canonical map들이 isomorphism이 되는 다음 경우들이다.
+위에서 정의한 $\Omega$는 ring homomorphism들의 commutative square에 대하여 functorial하므로 ([\[가환대수학\] §미분, ⁋명제 6](/ko/math/commutative_algebra/differentials#prop6)), $A$-algebra homomorphism $B \rightarrow B'$는 canonical한 $B'$-linear map $\Omega_{B/A}\otimes_BB' \rightarrow \Omega_{B'/A}$를 유도하고 base의 변화 $A \rightarrow A'$는 canonical $B$-module homomorphism $\Omega_{B/A} \rightarrow \Omega_{B/A'}$를 유도한다. Gluing을 위해 필요한 것은 이들 canonical map들이 isomorphism이 되는 다음 경우들이다.
 
 ::: 명제 3
 $A$-algebra $B$에 대하여 다음이 성립한다.
@@ -66,7 +66,7 @@ $A$-algebra $B$에 대하여 다음이 성립한다.
 2. $h\in A$의 image가 $B$에서 가역이어서 $B$를 $A_h$-algebra로 볼 수 있다면, canonical map은 isomorphism $\Omega_{B/A}\cong\Omega_{B/A_h}$를 준다.
 :::
 ::: 증명
-첫째 주장은 multiplicative subset $S=\{1, g, g^2,\ldots\}$에 대한 [\[가환대수학\] §미분, ⁋명제 6](/ko/math/commutative_algebra/differentials#prop6)이다. 그 진술의 좌변 $\Omega_{B/A}\otimes_BB_g$가 $(\Omega_{B/A})_g$와 같기 때문이다. ([\[가환대수학\] §국소화의 성질들, ⁋보조정리 1](/ko/math/commutative_algebra/properties_of_localization#lem1))
+첫째 주장은 multiplicative subset $S=\{1, g, g^2,\ldots\}$에 대한 [\[가환대수학\] §미분, ⁋명제 7](/ko/math/commutative_algebra/differentials#prop7)이다. 그 진술의 좌변 $\Omega_{B/A}\otimes_BB_g$가 $(\Omega_{B/A})_g$와 같기 때문이다. ([\[가환대수학\] §국소화의 성질들, ⁋보조정리 1](/ko/math/commutative_algebra/properties_of_localization#lem1))
 
 둘째 주장을 위해 [명제 1](#prop1)을 $A$-algebra $A_h$와 $A_h$-algebra $B$에 적용하면 $B$-module들의 exact sequence
 
@@ -81,7 +81,7 @@ $$\Omega_{A_h/A}\otimes_{A_h}B \longrightarrow \Omega_{B/A} \longrightarrow \Ome
 
 $$\Omega_{B_g/A}\cong (\Omega_{B/A})_g$$
 
-를 주므로, [§준연접층, ⁋명제 5](/ko/math/scheme_theory/quasicoherent_sheaves#prop5)에 의하여 $\widetilde{\Omega_{B/A}}\vert_{D(g)}\cong \widetilde{\Omega_{B_g/A}}$가 성립한다. Base 쪽을 줄이는 것도 마찬가지인데, $V$를 $\varphi(U)\subseteq D(h)$인 principal open $D(h)=\Spec A_h$ ($h\in A$)로 바꾸면 $h$의 image가 $B$의 어떤 prime ideal에도 속하지 않아 가역이므로, [명제 3](#prop3)의 둘째 주장에 의하여 $\Omega_{B/A}\cong\Omega_{B/A_h}$가 되어 local model이 변하지 않기 때문이다. 이들이 모두 functoriality에서 온 canonical한 isomorphism이므로, 두 chart가 겹치는 부분을 양쪽에서 principal인 열린집합들로 덮어 local model들을 canonical하게 identify할 수 있고 이 identification들은 triple intersection 위에서 cocycle condition을 만족한다. 곧 아래의 대응은 $X$ 위의 sheaf를 유일하게 결정한다. ([\[위상수학\] §층, ⁋명제 8](/ko/math/topology/sheaves#prop8))
+를 주므로, [§준연접층, ⁋명제 5](/ko/math/scheme_theory/quasicoherent_sheaves#prop5)에 의하여 $\widetilde{\Omega_{B/A}}\vert_{D(g)}\cong \widetilde{\Omega_{B_g/A}}$가 성립한다. Base 쪽을 줄이는 것도 마찬가지로, $V$를 $\varphi(U)\subseteq D(h)$인 principal open $D(h)=\Spec A_h$ ($h\in A$)로 바꾸면 $h$의 image가 $B$의 어떤 prime ideal에도 속하지 않아 가역이므로, [명제 3](#prop3)의 둘째 주장에 의하여 $\Omega_{B/A}\cong\Omega_{B/A_h}$가 되어 local model이 변하지 않기 때문이다. 이들이 모두 functoriality에서 온 canonical한 isomorphism이므로, 두 chart가 겹치는 부분을 양쪽에서 principal인 열린집합들로 덮어 local model들을 canonical하게 identify할 수 있고 이 identification들은 triple intersection 위에서 cocycle condition을 만족한다. 즉 다음 정의가 $X$ 위의 sheaf를 유일하게 결정한다. ([\[위상수학\] §층, ⁋명제 8](/ko/math/topology/sheaves#prop8))
 
 ::: 정의 4
 Scheme morphism $f:X \rightarrow S$에 대하여, $X$ 위의 *cotangent sheaf<sub>여접층</sub>* 혹은 *sheaf of relative differentials<sub>상대 미분층</sub>* $\Omega_{X/S}$를, $f(U)\subseteq V$인 affine open subset들 $U=\Spec B\subseteq X$와 $V=\Spec A\subseteq S$마다
@@ -91,7 +91,29 @@ $$\Omega_{X/S}\vert_U=\widetilde{\Omega_{B/A}}$$
 로 두어 얻어지는 $\mathcal{O}_X$-module로 정의한다. ([§준연접층, ⁋정의 4](/ko/math/scheme_theory/quasicoherent_sheaves#def4))
 :::
 
-이러한 $U$들이 $X$의 base를 이루므로 이 대응이 $\Omega_{X/S}$를 결정하며, 각 chart 위에서 associated sheaf이므로 $\Omega_{X/S}$는 quasi-coherent sheaf이다. ([§준연접층, ⁋정리 10](/ko/math/scheme_theory/quasicoherent_sheaves#thm10)) 이 정의는 계산에 곧바로 쓸 수 있는 대신 chart의 선택을 거쳐 가므로, 좌표에 의존하지 않는 묘사를 함께 두는 것이 좋다. 이는 대각선 morphism으로부터 얻어진다.
+이렇게 정의된 $\Omega_{X/S}$가 무엇을 재는지는 $f$를 $S$로 parametrize된 family로 볼 때 드러난다. ([§스킴 사이의 사상, ⁋예시 10](/ko/math/scheme_theory/morphism_of_schemes#ex10)) 국소 모형 $\Omega_{B/A}$에서 $A$의 원소들은 상수 취급을 받아 $da=0$이므로, base 쪽에서 온 좌표의 미분은 모두 사라지고 fiber 쪽 좌표의 미분만 남는다. 점 $s\in S$에서의 fiber를 $X_s=X\times_S\Spec\kappa(s)$라 하고 ([§올곱, ⁋정의 12](/ko/math/scheme_theory/fiber_products#def12)) canonical morphism을 $\iota:X_s \rightarrow X$라 하면, 이 직관은
+
+$$\iota^\ast\Omega_{X/S}\cong\Omega_{X_s/\kappa(s)}$$
+
+라는 등식으로 정확해진다. 곧 $\Omega_{X/S}$를 한 fiber 위로 제한한 것은 그 fiber 자신의 cotangent sheaf이며, $\Omega_{X/S}$는 fiber마다의 미분을 $S$ 전체에 걸쳐 한꺼번에 모아둔 것이다.
+
+Affine 위에서 이는 $A$-algebra $B$와 $A$-algebra $A'$에 대한 base change
+
+$$\Omega_{(B\otimes_AA')/A'}\cong\Omega_{B/A}\otimes_B(B\otimes_AA')$$
+
+이며, $A'=\kappa(s)$인 경우가 위의 등식이다. 이를 확인하기 위해 $B'=B\otimes_AA'$라 두면, $A'$-derivation $D:B' \rightarrow M$을 $B$ 위로 제한하는 것은 임의의 $B'$-module $M$에 대하여 $\Der_{A'}(B', M)\cong\Der_A(B, M)$을 준다. 임의의 $A$-derivation $D_0:B \rightarrow M$이 Leibniz 법칙에 의하여 $b\otimes a'\mapsto a'D_0(b)$로 유일하게 연장되기 때문이다. 그런데 좌변은 $\Hom_{B'}(\Omega_{B'/A'}, M)$이고 우변은 $\Hom_B(\Omega_{B/A}, M)$, 곧 extension of scalars의 adjunction에 의하여 $\Hom_{B'}(\Omega_{B/A}\otimes_BB', M)$이므로 ([\[가환대수학\] §미분, ⁋보조정리 2](/ko/math/commutative_algebra/differentials#lem2), [\[대수적 구조\] §스칼라의 변환, ⁋명제 6](/ko/math/algebraic_structures/change_of_base_ring#prop6)), 두 $B'$-module이 같은 functor를 표현하여 canonical하게 isomorphic하다.
+
+가장 단순한 예는 좌표가 base와 fiber로 갈라지는 경우이다. $S=\Spec k[\x]$와 $X=\Spec k[\x, \y]$에 대하여 $f$가 첫 좌표로의 projection이면 $\Omega_{X/S}$는 $d\y$를 기저로 하는 rank $1$의 free module이고 ([\[가환대수학\] §미분, ⁋명제 5](/ko/math/commutative_algebra/differentials#prop5)), 사라진 $d\x$는 base에서 온 좌표의 미분이다. 각 fiber가 $\y$를 좌표로 가지는 affine line이므로 남은 $d\y$가 정확히 fiber의 미분이다.
+
+Family가 자명하지 않을 때에는 $\Omega_{X/S}$가 fiber의 기하까지 기록한다. $A=k[t]$와 $B=k[t, \x, \y]/(\x\y-t)$에 대하여 $f:X=\Spec B \rightarrow S=\Spec A$를 생각하자. 관계식이 $t=\x\y$를 주므로 $B\cong k[\x, \y]$이고 $X$ 자체는 affine plane이지만, $\Omega_{X/S}$가 보는 것은 $X$가 아니라 $f$의 fiber들이다. 실제로 $A[\x, \y]$의 ideal $(\x\y-t)$에 [명제 2](#prop2)를 적용하면 $\Omega_{B/A}$는 $d\x$와 $d\y$로 생성되고, $t\in A$에서 $dt=0$이므로 관계식은 $\bar{d}(\x\y-t)=\x d\y+\y d\x$ 하나뿐이어서
+
+$$\Omega_{B/A}\cong\bigl(Bd\x\oplus Bd\y\bigr)/(\x d\y+\y d\x)$$
+
+이다. $a\in k$가 $0$이 아닐 때 $t=a$ 위의 fiber $X_a$는 쌍곡선 $\x\y=a$이고, 그 위에서는 $\x$가 가역이어서 관계식이 $d\y=-(\y/\x)d\x$로 풀리므로 $\Omega_{X_a/k}$는 $d\x$를 기저로 하는 rank $1$의 free module이다. 반면 $t=0$ 위의 fiber $X_0$는 두 직선 $\x\y=0$이며, 원점에 대응하는 점 $p$에서는 $\x$와 $\y$가 모두 $\mathfrak{m}_p$에 속하여 관계식이 소멸하므로 $\Omega_{X/S}\otimes\kappa(p)$는 $d\x$와 $d\y$가 생성하는 $2$차원 vector space가 된다. 곧 $\Omega_{X/S}$의 각 점에서의 rank는 두 직선이 만나는 점에서만 $1$에서 $2$로 뛰며, 이는 $X$ 위에서 $k$에 대한 미분만을 취한 $\Omega_{X/k}$가 rank $2$의 free module이라는 사실에서는 보이지 않는 정보이다.
+
+이 정의는 계산에 곧바로 쓸 수 있지만, 그 정의에 chart의 선택이 필요하다. 좌표에 의존하지 않는 묘사는 이미 대수적인 수준에서 한 번 얻어졌는데, [\[가환대수학\] §미분, ⁋명제 4](/ko/math/commutative_algebra/differentials#prop4)가 곱셈사상 $m:B\otimes_AB \rightarrow B$의 kernel $\mathfrak{I}$에 대하여 canonical isomorphism $\mathfrak{I}/\mathfrak{I}^2\cong\Omega_{B/A}$를 주기 때문이다.
+
+이 묘사는 그 자체로 기하학적인 뜻을 가진다. $\Spec(B\otimes_AB)$는 $\Spec B$의 $\Spec A$ 위에서의 fiber product이고 ([§올곱, ⁋보조정리 2](/ko/math/scheme_theory/fiber_products#lem2)), 이 때 $m$에 대응되는 것은 대각선 morphism이므로 $\mathfrak{I}$는 대각선의 ideal이며 $\mathfrak{I}/\mathfrak{I}^2$은 그 conormal module이다. 곧 [\[가환대수학\] §미분, ⁋명제 4](/ko/math/commutative_algebra/differentials#prop4)는 대각선의 1차 근방에서 미분을 읽어낸 것이었고, 이를 scheme 위로 옮기면 chart를 고르지 않는 $\Omega_{X/S}$의 묘사를 얻는다. 
 
 ::: 명제 5
 Scheme morphism $f:X \rightarrow S$에 대하여, [§값매김환, ⁋정의 3](/ko/math/scheme_theory/valuative_criteria#def3)의 대각선 morphism $\Delta:X \rightarrow X\times_SX$을 생각하고 $\Delta$의 image의 ideal sheaf를 $\mathcal{I}$라 하자. 그럼 conormal sheaf와의 isomorphism
@@ -125,19 +147,19 @@ $$\Delta^\ast\widetilde{\mathfrak{a}/\mathfrak{a}^2}\cong \widetilde{\mathfrak{a
 
 여기에서 $\mathcal{I}/\mathcal{I}^2$은 $\Delta(X)$ 위의 sheaf로 볼 수 있고, $\Delta$가 $X$를 그 image와 동일시하므로 $\Delta^\ast$를 통해 $X$ 위의 sheaf로 끌어온 것이다. [명제 5](#prop5)가 좌표에 의존하지 않는 묘사를 주지만, 실제 계산은 여전히 [정의 4](#def4)에 따라 affine open 위에서 $\widetilde{\Omega_{B/A}}$로 하면 된다.
 
-앞 절의 두 exact sequence도 associated sheaf functor의 exactness를 통해 sheaf 수준으로 곧바로 옮겨진다. Scheme morphism들의 합성 $X \rightarrow Y \rightarrow S$와 그 첫 morphism $g: X \rightarrow Y$에 대하여, 각 affine open 위에서 [명제 1](#prop1)을 associated sheaf로 옮기면 $\mathcal{O}_X$-module들의 exact sequence
+앞 절의 두 exact sequence도 associated sheaf functor의 exactness를 통해 sheaf 수준으로 곧바로 옮겨진다. Scheme morphism들의 합성 $X \rightarrow S' \rightarrow S$와 그 첫 morphism $g: X \rightarrow S'$에 대하여, 각 affine open 위에서 [명제 1](#prop1)을 associated sheaf로 옮기면 $\mathcal{O}_X$-module들의 exact sequence
 
-$$g^\ast\Omega_{Y/S} \longrightarrow \Omega_{X/S} \longrightarrow \Omega_{X/Y} \longrightarrow 0$$
+$$g^\ast\Omega_{S'/S} \rightarrow \Omega_{X/S} \rightarrow \Omega_{X/S'} \rightarrow 0$$
 
 을 얻으며, closed subscheme $Z\hookrightarrow Y$가 ideal sheaf $\mathcal{J}$로 주어질 때 [명제 2](#prop2)를 옮기면 conormal exact sequence
 
-$$\mathcal{J}/\mathcal{J}^2 \longrightarrow \Omega_{Y/S}\vert_Z \longrightarrow \Omega_{Z/S} \longrightarrow 0$$
+$$\mathcal{J}/\mathcal{J}^2 \rightarrow \Omega_{Y/S}\vert_Z \rightarrow \Omega_{Z/S} \rightarrow 0$$
 
-을 얻는다. 이 두 exact sequence는 미분층을 실제로 계산하는 표준 도구이며, scheme의 언어로 적고 나면 각각이 무엇을 말하는지도 드러난다.
+을 얻는다. 
 
-첫째 exact sequence를 읽기 위해서는 아래첨자에 적힌 상대성이 무엇을 뜻하는지를 먼저 보아야 한다. 우리는 $f:X \rightarrow S$를 $S$로 parametrize된 family로 읽으며 ([§스킴 사이의 사상, ⁋예시 10](/ko/math/scheme_theory/morphism_of_schemes#ex10)), 이 family의 $s\in S$ 위에서의 fiber는 fiber product $X\times_S\Spec\kappa(s)$로 정의된다. ([§올곱, ⁋정의 12](/ko/math/scheme_theory/fiber_products#def12)) 그런데 $\Omega_{X/S}$가 $S$에서 온 함수를 상수로 보는 것은 정확히 base 방향을 지운다는 뜻이므로, $\Omega_{X/S}$가 기록하는 것은 이 fiber를 따르는 방향의 미분이다. 그럼 $X \rightarrow Y$의 fiber가 $X \rightarrow S$의 fiber 안에 들어 있으므로 $Y$ 위에서 잰 fiber 방향은 $S$ 위에서 잰 것보다 좁고, 첫째 exact sequence는 그 차이가 정확히 $Y$에서 끌어온 미분 $g^\ast\Omega_{Y/S}$의 image라고 말한다. 가령 $S=\Spec k$, $Y=\mathbb{A}^1_k$, $X=\mathbb{A}^2_k$이고 $g$가 첫 좌표로의 projection이면, $\Omega_{X/S}$는 $d\x$와 $d\y$를 기저로 가지는 반면 $g$의 fiber는 $\x$가 고정된 수직선이라 $\Omega_{X/Y}$에는 $d\y$만 남으며, 지워진 $d\x$가 정확히 $g^\ast\Omega_{Y/S}$에서 온 부분이다.
+이 두 exact sequence는 미분층을 계산하는 표준 도구이므로, 위에서 이들을 도입하며 소개한 대수적 직관을 기하적으로 옮겨보자. 첫째 exact sequence는 같은 $X$를 두 개의 base 위의 family로 볼 때 fiber 방향이 어떻게 달라지는지를 잰다. $X \rightarrow S'$의 fiber는 $X \rightarrow S$의 fiber 안에 들어 있으므로 $S'$ 위에서 재는 방향이 더 좁고, 따라서 $\Omega_{X/S'}$는 $\Omega_{X/S}$의 quotient이며 지워지는 부분이 $S'$이 $S$ 위에서 움직이는 방향, 곧 $g^\ast\Omega_{S'/S}$의 image이다. 앞서 본 projection $\Spec k[\x, \y] \rightarrow \Spec k[\x]$를 $g$로 두고 $S=\Spec k$로 잡으면, $\Omega_{X/S}$의 기저 $d\x$와 $d\y$ 가운데 $g$의 fiber를 따르는 $d\y$만 $\Omega_{X/S'}$에 남고 지워진 $d\x$가 $g^\ast\Omega_{S'/S}$에서 온 부분이다.
 
-둘째 exact sequence에서 $\mathcal{J}/\mathcal{J}^2$은 $Z$의 conormal sheaf이고, 그 dual이 $Z$가 $Y$ 안에서 가지는 normal bundle에 해당한다. 앞 절에서 본 $\mathfrak{a}^2$의 소멸은 $\mathcal{J} \rightarrow \Omega_{Y/S}\vert_Z$가 보는 것이 $Z$를 잘라내는 방정식 자체가 아니라 $Z$를 따라 취한 그 일차항이라는 뜻인데, 이것이 무엇인지는 국소적으로 보면 분명하다. $S=\Spec A$, $Y=\Spec A[\x_1,\ldots, \x_n]$이고 $\mathcal{J}$가 $f_1,\ldots, f_r$로 생성되면 $\Omega_{Y/S}\vert_Z$는 $d\x_1,\ldots, d\x_n$을 기저로 가지고 $f_j\mapsto\sum_i(\partial f_j/\partial \x_i)d\x_i$이므로, 이 morphism을 그 기저로 적은 행렬이 곧 Jacobian $(\partial f_j/\partial \x_i)$이다. 따라서 conormal exact sequence는 $Z$ 위의 미분을 ambient의 미분 $\Omega_{Y/S}\vert_Z$에서 방정식들의 미분이 생성하는 부분, 곧 $Z$에 수직인 방향을 quotient하여 얻는다는 말이 되며, 한 점에서 이를 쌍대화하면 tangent space가 방정식들의 differential의 kernel로 주어진다는 [\[대수다양체\] §접공간과 매끄러움, ⁋명제 2](/ko/math/algebraic_varieties/tangent_spaces_and_smoothness#prop2)의 묘사로 돌아온다.
+둘째 exact sequence에서 $\mathcal{J}/\mathcal{J}^2$은 $Z$의 conormal sheaf이고, 그 dual이 $Z$가 $Y$ 안에서 가지는 normal bundle에 해당한다. $S=\Spec A$, $Y=\Spec A[\x_1,\ldots, \x_n]$이고 $\mathcal{J}$가 $f_1,\ldots, f_r$로 생성되면 $\Omega_{Y/S}\vert_Z$가 $d\x_1,\ldots, d\x_n$을 기저로 가지고 $\bar{d}$가 $f_j\mapsto\sum_i(\partial f_j/\partial \x_i)d\x_i$이므로, 이 morphism을 그 기저로 적은 행렬이 곧 Jacobian $(\partial f_j/\partial \x_i)$이다. 즉 $Z$ 위의 미분은 ambient의 미분에서 방정식들의 미분이 생성하는 부분, 곧 $Z$에 수직인 방향을 quotient하여 얻어지며, 한 점에서 이를 쌍대화하면 [\[대수다양체\] §접공간과 매끄러움, ⁋명제 2](/ko/math/algebraic_varieties/tangent_spaces_and_smoothness#prop2)의 묘사로 돌아온다.
 
 ## Tangent sheaf와 Zariski 접공간
 

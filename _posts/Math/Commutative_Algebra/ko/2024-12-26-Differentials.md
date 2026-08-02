@@ -63,9 +63,24 @@ $$\text{$d(xy)=x\,dy+y\,dx$ for all $x,y\in E$},\qquad \text{$d(ax+by)=a\,dx+b\,
 을 주어 만들어지는 $E$-module이며, 이를 $\Omega_{E/A}$로 표기한다. 이 때, $f\mapsto df$로 정의되는 $A$-linear derivation $d:E \rightarrow \Omega_{E/A}$를 *universal $A$-derivation<sub>보편 $A$-미분</sub>*이라 적는다. 
 :::
 
-그럼 $\Omega_{E/A}$가 [보조정리 2](#lem2)의 universal property를 만족하는 것을 쉽게 확인할 수 있다. 가장 기본적인 경우인 polynomial algebra 위에서 이 module은 좌표들의 differential이 이루는 free module이 된다.
+그럼 $\Omega_{E/A}$가 [보조정리 2](#lem2)의 universal property를 만족하는 것을 쉽게 확인할 수 있다.
+
+한편 우리는 같은 module을 이미 다른 방식으로 만든 적이 있다. [\[다중선형대수학\] §미분가군, ⁋정의 9](/ko/math/multilinear_algebra/differential_modules#def9)에서는 곱셈사상 $m:E\otimes_AE \rightarrow E$의 kernel $\mathfrak{I}$를 잡아 $E$-module $\mathfrak{I}/\mathfrak{I}^2$을 $A$-differential들의 module로 정의하고, $x\mapsto (x\otimes1-1\otimes x)+\mathfrak{I}^2$이 universal $A$-derivation의 역할을 한다는 것을 보였다. Generator와 relation을 직접 적어 만든 [정의 3](#def3)과는 출발점이 다르지만, 두 구성은 canonical하게 일치한다.
 
 ::: 명제 4
+$A$-algebra $E$에 대하여, 곱셈사상 $m:E\otimes_AE \rightarrow E$의 kernel을 $\mathfrak{I}$라 하자. 그럼 $(x\otimes1-1\otimes x)+\mathfrak{I}^2$을 $dx$로 보내는 canonical isomorphism
+
+$$\mathfrak{I}/\mathfrak{I}^2\cong\Omega_{E/A}$$
+
+이 존재한다.
+:::
+::: 증명
+[\[다중선형대수학\] §미분가군, ⁋명제 8](/ko/math/multilinear_algebra/differential_modules#prop8)에 의하여 임의의 $E$-module $M$에 대하여 natural isomorphism $\Hom_E(\mathfrak{I}/\mathfrak{I}^2, M)\cong\Der_A(E, M)$이 성립하고, [보조정리 2](#lem2)에 의하여 $\Omega_{E/A}$ 또한 같은 functor를 표현한다. 즉 두 $E$-module이 $\lMod{E}$ 위의 같은 functor를 표현하므로 이들은 canonical하게 isomorphic하며, 이 isomorphism은 양쪽의 universal $A$-derivation을 서로 옮긴다. 따라서 각각의 $x\in E$에 대하여 $(x\otimes1-1\otimes x)+\mathfrak{I}^2$이 $dx$로 옮겨진다.
+:::
+
+가장 기본적인 경우인 polynomial algebra 위에서 이 module은 좌표들의 differential이 이루는 free module이 된다.
+
+::: 명제 5
 집합 $S$에 대한 polynomial algebra $R=A[\x_s]_{s\in S}$에 대하여, $\Omega_{R/A}$는 $\{d\x_s\}_{s\in S}$를 기저로 하는 free $R$-module이며, 임의의 $f\in R$에 대하여
 
 $$df=\sum_{s\in S}\frac{\partial f}{\partial \x_s}d\x_s$$
@@ -80,7 +95,7 @@ $$df=\sum_{s\in S}\frac{\partial f}{\partial \x_s}d\x_s$$
 
 이는 $M$이 free $A$-module인 경우의 symmetric algebra $\S(M)$에 대한 계산과 같은 것이다. ([\[다중선형대수학\] §미분가군, ⁋예시 10](/ko/math/multilinear_algebra/differential_modules#ex10)) 뿐만 아니라, $\Omega_{E/A}$를 $A$-algebra $A \rightarrow E$를 받아 $\Omega_{E/A}$를 내놓는 functor처럼 생각하면, 다음과 같은 종류의 functoriality 또한 성립한다.
 
-::: 명제 5
+::: 명제 6
 다음의 ring homomorphism들의 commutative diagram
 
 {% diagram Math/Commutative_Algebra/Differentials-1.svg width="6.30em" alt="setup" %}
@@ -99,7 +114,7 @@ $d_{E'/A'}\circ \phi$가 $A$-derivation이므로 [보조정리 2](#lem2)에 의�
 
 $$\Hom_{E'}(\varphi_! \Omega_{E/A},\Omega_{E'/A'})\cong\Hom_E(\Omega_{E/A}, \varphi^\ast\Omega_{E'/A'})$$
 
-이 성립한다. 그럼 위의 [명제 5](#prop5)에서 얻어지는 $\Omega_{E/A} \rightarrow \Omega_{E'/A'}$는 엄밀히 이야기하자면 $\Omega_{E/A} \rightarrow \varphi^\ast\Omega_{E'/A'}$이므로, 이에 해당하는 유일한 $E'$-linear homomorphism
+이 성립한다. 그럼 위의 [명제 6](#prop6)에서 얻어지는 $\Omega_{E/A} \rightarrow \Omega_{E'/A'}$는 엄밀히 이야기하자면 $\Omega_{E/A} \rightarrow \varphi^\ast\Omega_{E'/A'}$이므로, 이에 해당하는 유일한 $E'$-linear homomorphism
 
 $$\Omega_{\varphi/\phi}': \varphi_!\Omega_{E/A}=\Omega_{E/A}\otimes_EE' \rightarrow \Omega_{E'/A'}$$
 
@@ -107,8 +122,8 @@ $$\Omega_{\varphi/\phi}': \varphi_!\Omega_{E/A}=\Omega_{E/A}\otimes_EE' \rightar
 
 이 functoriality가 주는 가장 기본적인 결과는 Kähler differential module이 localization과 맞아떨어진다는 것이다.
 
-::: 명제 6
-$A$-algebra $E$와 $E$의 multiplicative subset $S$가 주어졌다 하고 ([§국소화, ⁋정의 3](/ko/math/commutative_algebra/localization#def3)), canonical homomorphism $\varphi:E \rightarrow S^{-1}E$를 통해 $S^{-1}E$를 $A$-algebra로 보자. 그럼 [명제 5](#prop5)가 주는 $S^{-1}E$-linear homomorphism
+::: 명제 7
+$A$-algebra $E$와 $E$의 multiplicative subset $S$가 주어졌다 하고 ([§국소화, ⁋정의 3](/ko/math/commutative_algebra/localization#def3)), canonical homomorphism $\varphi:E \rightarrow S^{-1}E$를 통해 $S^{-1}E$를 $A$-algebra로 보자. 그럼 [명제 6](#prop6)가 주는 $S^{-1}E$-linear homomorphism
 
 $$\Omega_{\varphi/\id_A}':\Omega_{E/A}\otimes_ES^{-1}E \longrightarrow \Omega_{S^{-1}E/A}$$
 
@@ -152,7 +167,7 @@ $$\begin{aligned}
 
 $$\Hom_{S^{-1}E}\bigl(\Omega_{E/A}\otimes_ES^{-1}E, M\bigr)\cong\Hom_E(\Omega_{E/A}, M)\cong\Der_A(E, M)\cong\Der_A(S^{-1}E, M)\cong\Hom_{S^{-1}E}\bigl(\Omega_{S^{-1}E/A}, M\bigr)$$
 
-이 성립하고 이 대응들은 모두 $M$에 대하여 natural하다. 즉 두 $S^{-1}E$-module이 같은 functor를 표현하므로 이들은 canonical하게 isomorphic하며, 이 isomorphism을 generator $dx\otimes 1$ 위에서 따라가면 $dx\otimes 1\mapsto d\varphi(x)$이 되어 이것이 [명제 5](#prop5)가 준 $\Omega_{\varphi/\id_A}'$임을 안다.
+이 성립하고 이 대응들은 모두 $M$에 대하여 natural하다. 즉 두 $S^{-1}E$-module이 같은 functor를 표현하므로 이들은 canonical하게 isomorphic하며, 이 isomorphism을 generator $dx\otimes 1$ 위에서 따라가면 $dx\otimes 1\mapsto d\varphi(x)$이 되어 이것이 [명제 6](#prop6)가 준 $\Omega_{\varphi/\id_A}'$임을 안다.
 :::
 
 특히 $S^{-1}E$의 universal derivation은 $E$의 것으로부터 $d(x/s)=(sdx-xds)/s^2$으로 얻어진다.
@@ -169,7 +184,7 @@ $$d_{E'/E}=E' \overset{d_{E'/A}}{\longrightarrow}\Omega_{E'/A}\overset{\Omega_\v
 
 과 동일하다. 
 
-::: 명제 7 (Cotangent sequence)
+::: 명제 8 (Cotangent sequence)
 $E'$-linear map들의 sequence
 
 $$\Omega_{E/A}\otimes_EE'\overset{\Omega_{\varphi/A}'}{\longrightarrow}\Omega_{E'/A}\overset{\Omega_\varphi}{\longrightarrow}\Omega_{E'/E} \longrightarrow 0$$
@@ -212,7 +227,7 @@ $$\bar{d}:K/K^2 \rightarrow \Omega_{E/A}\otimes_EE'$$
 
 을 얻는다.
 
-::: 명제 8
+::: 명제 9
 위와 같은 상황에서, 다음의 sequence
 
 $$K/K^2 \overset{\bar{d}}{\longrightarrow}\Omega_{E/A}\otimes_EE' \rightarrow\Omega_{E'/A} \longrightarrow 0$$
@@ -220,7 +235,7 @@ $$K/K^2 \overset{\bar{d}}{\longrightarrow}\Omega_{E/A}\otimes_EE' \rightarrow\Om
 는 exact이다. 
 :::
 ::: 증명
-가운데 map은 [명제 7](#prop7)에서의 $\Omega_{\varphi/A}'$이다. $N'$을 $\bar{d}$의 image로 생성되는 $\Omega_{E/A}\otimes_EE'$의 $E'$-submodule이라 하고, $C'=(\Omega_{E/A}\otimes_EE')/N'$과 quotient map $\pi:\Omega_{E/A}\otimes_EE' \rightarrow C'$를 생각하자.
+가운데 map은 [명제 8](#prop8)에서의 $\Omega_{\varphi/A}'$이다. $N'$을 $\bar{d}$의 image로 생성되는 $\Omega_{E/A}\otimes_EE'$의 $E'$-submodule이라 하고, $C'=(\Omega_{E/A}\otimes_EE')/N'$과 quotient map $\pi:\Omega_{E/A}\otimes_EE' \rightarrow C'$를 생각하자.
 
 우선 $\Omega_{\varphi/A}'$가 surjective인 것을 보이자. $\varphi$가 surjective이므로 $\Omega_{E'/A}$의 임의의 generator는 $x\in E$에 대하여 $d_{E'/A}\varphi(x)$의 꼴로 쓸 수 있고, 이는 $\Omega_{\varphi/A}'(d_{E/A}x\otimes 1)$과 같기 때문이다.
 
@@ -241,15 +256,15 @@ $$\pi(d_{E/A}x\otimes 1)\overset{\psi'}{\longmapsto}d_{E'/A}\varphi(x)\overset{\
 
 ## Naive cotangent complex
 
-[명제 8](#prop8)의 conormal sequence는 오른쪽 끝에서만 exact이며, 일반적으로 $\bar{d}$는 injective가 아니다. 자연스러운 질문은 $\bar{d}$의 kernel이 어떤 의미를 갖는지, 그리고 이 sequence를 왼쪽으로 연장할 수 있는지이다. 이 절에서는 이 질문에 대한 첫 번째 답인 *naive cotangent complex*를 살펴본다.
+[명제 9](#prop9)의 conormal sequence는 오른쪽 끝에서만 exact이며, 일반적으로 $\bar{d}$는 injective가 아니다. 자연스러운 질문은 $\bar{d}$의 kernel이 어떤 의미를 갖는지, 그리고 이 sequence를 왼쪽으로 연장할 수 있는지이다. 이 절에서는 이 질문에 대한 첫 번째 답인 *naive cotangent complex*를 살펴본다.
 
 핵심 아이디어는 $E$를 가장 다루기 쉬운 algebra, 즉 polynomial algebra의 quotient로 표현하는 것이다. $E$의 spanning set $(t_s)_{s\in S}$를 아무거나 택하면 (가령 $E$ 전체), [\[대수적 구조\] §대수, ⁋명제 8](/ko/math/algebraic_structures/algebras#prop8)의 adjunction에 의하여 $\x_s\mapsto t_s$로 정의되는 surjective $A$-algebra homomorphism
 
 $$p: R=A[\x_s]_{s\in S}\longrightarrow E$$
 
-가 존재한다. 이러한 $p$를 $E$의 *presentation<sub>표현</sub>*이라 부르고, $\mathfrak{I}=\ker p$라 적자. 그럼 [명제 8](#prop8)을 $\varphi=p$, 곧 $E$를 $R$로 $E'$을 $E$로 두어 적용할 수 있으며, 그 conormal sequence의 왼쪽 두 항이 다음의 complex를 이룬다.
+가 존재한다. 이러한 $p$를 $E$의 *presentation<sub>표현</sub>*이라 부르고, $\mathfrak{I}=\ker p$라 적자. 그럼 [명제 9](#prop9)을 $\varphi=p$, 곧 $E$를 $R$로 $E'$을 $E$로 두어 적용할 수 있으며, 그 conormal sequence의 왼쪽 두 항이 다음의 complex를 이룬다.
 
-::: 정의 9
+::: 정의 10
 Presentation $p:R \rightarrow E$에 대하여, $p$의 *naive cotangent complex* $\operatorname{NL}(p)$는 conormal sequence의 왼쪽 두 항으로 이루어진 $E$-module들의 two-term complex
 
 $$\operatorname{NL}(p)=\Bigl[\mathfrak{I}/\mathfrak{I}^2\overset{\bar{d}}{\longrightarrow}\Omega_{R/A}\otimes_RE\Bigr]$$
@@ -261,9 +276,9 @@ $$\operatorname{NL}(p)=\Bigl[\mathfrak{I}/\mathfrak{I}^2\overset{\bar{d}}{\longr
 
 $$H_0\bigl(\operatorname{NL}(p)\bigr)=\coker\bar{d},\qquad H_1\bigl(\operatorname{NL}(p)\bigr)=\ker\bar{d}$$
 
-뿐이다. [명제 4](#prop4)에 의하여 $\Omega_{R/A}$는 $d\x_s$들을 기저로 갖는 free $R$-module이므로, $\operatorname{NL}(p)$의 degree $0$ 항은 free $E$-module이다.
+뿐이다. [명제 5](#prop5)에 의하여 $\Omega_{R/A}$는 $d\x_s$들을 기저로 갖는 free $R$-module이므로, $\operatorname{NL}(p)$의 degree $0$ 항은 free $E$-module이다.
 
-::: 명제 10
+::: 명제 11
 임의의 presentation $p:R \rightarrow E$에 대하여, canonical isomorphism
 
 $$H_0\bigl(\operatorname{NL}(p)\bigr)\cong\Omega_{E/A}$$
@@ -271,7 +286,7 @@ $$H_0\bigl(\operatorname{NL}(p)\bigr)\cong\Omega_{E/A}$$
 이 존재한다.
 :::
 ::: 증명
-[명제 8](#prop8)의 conormal sequence
+[명제 9](#prop9)의 conormal sequence
 
 $$\mathfrak{I}/\mathfrak{I}^2\overset{\bar{d}}{\longrightarrow}\Omega_{R/A}\otimes_RE\overset{\Omega_{p/A}'}{\longrightarrow}\Omega_{E/A}\longrightarrow0$$
 
@@ -286,9 +301,9 @@ $$\mathfrak{I}/\mathfrak{I}^2\overset{\bar{d}}{\longrightarrow}\Omega_{R/A}\otim
 
 $$\operatorname{NL}(\varphi):\operatorname{NL}(p) \rightarrow \operatorname{NL}(p');\qquad \overline{f}\mapsto\overline{\varphi(f)},\quad d\x_s\otimes1\mapsto d\varphi(\x_s)\otimes1$$
 
-을 유도한다. 사각형이 commute하는 것은 [명제 4](#prop4)가 주는 식 $d\varphi(f)=\sum_s\varphi(\partial f/\partial\x_s)d\varphi(\x_s)$로부터 확인된다.
+을 유도한다. 사각형이 commute하는 것은 [명제 5](#prop5)가 주는 식 $d\varphi(f)=\sum_s\varphi(\partial f/\partial\x_s)d\varphi(\x_s)$로부터 확인된다.
 
-::: 보조정리 11
+::: 보조정리 12
 위의 상황에서, $p'\circ\varphi=p=p'\circ\psi$를 만족하는 두 $A$-algebra homomorphism $\varphi,\psi:R \rightarrow R'$이 주어졌다 하자. 그럼 임의의 $f\in R$에 대하여 다음의 식
 
 $$\varphi(f)-\psi(f)\equiv\sum_{s\in S}\varphi\left(\frac{\partial f}{\partial \x_s}\right)\bigl(\varphi(\x_s)-\psi(\x_s)\bigr)\pmod{\mathfrak{I}'^2}$$
@@ -309,15 +324,15 @@ $$\varphi(fg)-\psi(fg)\equiv\varphi(f)\beta+\varphi(g)\alpha\pmod{\mathfrak{I}'^
 이다. 이제 $f,g\in P$라는 가정을 $\alpha,\beta$에 대입하고 Leibniz rule $\partial(fg)/\partial\x_s=f(\partial g/\partial\x_s)+g(\partial f/\partial\x_s)$를 사용하면, $\mathfrak{I}'$의 원소들끼리의 곱이 $\mathfrak{I}'^2$에서 사라진다는 것으로부터 $fg\in P$를 얻는다.
 :::
 
-::: 명제 12
-[보조정리 11](#lem11)의 상황에서, 두 morphism $\operatorname{NL}(\varphi),\operatorname{NL}(\psi):\operatorname{NL}(p) \rightarrow \operatorname{NL}(p')$은 chain homotopic이다. 특히 이들이 유도하는 homology의 morphism들은 일치한다.
+::: 명제 13
+[보조정리 12](#lem12)의 상황에서, 두 morphism $\operatorname{NL}(\varphi),\operatorname{NL}(\psi):\operatorname{NL}(p) \rightarrow \operatorname{NL}(p')$은 chain homotopic이다. 특히 이들이 유도하는 homology의 morphism들은 일치한다.
 :::
 ::: 증명
 $\Omega_{R/A}\otimes_RE$가 $d\x_s\otimes1$들을 기저로 갖는 free $E$-module이므로, $E$-linear map
 
 $$h:\Omega_{R/A}\otimes_RE \rightarrow \mathfrak{I}'/\mathfrak{I}'^2;\qquad d\x_s\otimes1\mapsto\overline{\varphi(\x_s)-\psi(\x_s)}$$
 
-이 잘 정의된다. 여기서 $\varphi(\x_s)-\psi(\x_s)\in\mathfrak{I}'$인 것은 [보조정리 11](#lem11)의 증명에서 보았고, $\mathfrak{I}'$가 $\mathfrak{I}'/\mathfrak{I}'^2$을 annihilate하므로 $\mathfrak{I}'/\mathfrak{I}'^2$은 $E=R'/\mathfrak{I}'$-module이다. 이제 $h$가 $\operatorname{NL}(\varphi)-\operatorname{NL}(\psi)$의 chain homotopy임을 보인다.
+이 잘 정의된다. 여기서 $\varphi(\x_s)-\psi(\x_s)\in\mathfrak{I}'$인 것은 [보조정리 12](#lem12)의 증명에서 보았고, $\mathfrak{I}'$가 $\mathfrak{I}'/\mathfrak{I}'^2$을 annihilate하므로 $\mathfrak{I}'/\mathfrak{I}'^2$은 $E=R'/\mathfrak{I}'$-module이다. 이제 $h$가 $\operatorname{NL}(\varphi)-\operatorname{NL}(\psi)$의 chain homotopy임을 보인다.
 
 우선 degree $0$에서, generator $d\x_s\otimes 1$에 대하여
 
@@ -327,10 +342,10 @@ $$\bar{d}'\bigl(h(d\x_s\otimes1)\bigr)=d\bigl(\varphi(\x_s)-\psi(\x_s)\bigr)\oti
 
 $$h\bigl(\bar{d}(\overline{f})\bigr)=\sum_sp\left(\frac{\partial f}{\partial\x_s}\right)\cdot\overline{\varphi(\x_s)-\psi(\x_s)}=\overline{\sum_s\varphi\left(\frac{\partial f}{\partial\x_s}\right)\bigl(\varphi(\x_s)-\psi(\x_s)\bigr)}$$
 
-이다. 마지막 등식은 $\mathfrak{I}'/\mathfrak{I}'^2$ 위에서 $E=R'/\mathfrak{I}'$의 action이 $p'$를 통해 주어지고 $p'\circ\varphi=p$이기 때문이다. 그럼 [보조정리 11](#lem11)에 의하여 이는 $\overline{\varphi(f)-\psi(f)}=\bigl(\operatorname{NL}(\varphi)-\operatorname{NL}(\psi)\bigr)(\overline{f})$와 같다. 따라서 $h$는 chain homotopy이고, chain homotopic한 morphism들이 같은 homology morphism을 유도하는 것은 [\[호몰로지 대수학\] §호몰로지](/ko/math/homological_algebra/homology)에서 살펴보았다.
+이다. 마지막 등식은 $\mathfrak{I}'/\mathfrak{I}'^2$ 위에서 $E=R'/\mathfrak{I}'$의 action이 $p'$를 통해 주어지고 $p'\circ\varphi=p$이기 때문이다. 그럼 [보조정리 12](#lem12)에 의하여 이는 $\overline{\varphi(f)-\psi(f)}=\bigl(\operatorname{NL}(\varphi)-\operatorname{NL}(\psi)\bigr)(\overline{f})$와 같다. 따라서 $h$는 chain homotopy이고, chain homotopic한 morphism들이 같은 homology morphism을 유도하는 것은 [\[호몰로지 대수학\] §호몰로지](/ko/math/homological_algebra/homology)에서 살펴보았다.
 :::
 
-::: 정리 13
+::: 정리 14
 두 presentation $p:R \rightarrow E$, $p':R' \rightarrow E$에 대하여, complex들 $\operatorname{NL}(p)$와 $\operatorname{NL}(p')$은 homotopy equivalent이다. 특히 canonical isomorphism
 
 $$H_i\bigl(\operatorname{NL}(p)\bigr)\cong H_i\bigl(\operatorname{NL}(p')\bigr),\qquad i=0,1$$
@@ -338,11 +353,11 @@ $$H_i\bigl(\operatorname{NL}(p)\bigr)\cong H_i\bigl(\operatorname{NL}(p')\bigr),
 이 존재한다.
 :::
 ::: 증명
-위에서 살펴본 것과 같이 $p'\circ\varphi=p$이도록 하는 $\varphi:R \rightarrow R'$과 $p\circ\varphi'=p'$이도록 하는 $\varphi':R' \rightarrow R$을 택하자. 그럼 $\varphi'\circ\varphi$와 $\id_R$은 모두 $p\circ(\varphi'\circ\varphi)=p=p\circ\id_R$을 만족하므로 [명제 12](#prop12)에 의하여
+위에서 살펴본 것과 같이 $p'\circ\varphi=p$이도록 하는 $\varphi:R \rightarrow R'$과 $p\circ\varphi'=p'$이도록 하는 $\varphi':R' \rightarrow R$을 택하자. 그럼 $\varphi'\circ\varphi$와 $\id_R$은 모두 $p\circ(\varphi'\circ\varphi)=p=p\circ\id_R$을 만족하므로 [명제 13](#prop13)에 의하여
 
 $$\operatorname{NL}(\varphi')\circ\operatorname{NL}(\varphi)=\operatorname{NL}(\varphi'\circ\varphi)\simeq\operatorname{NL}(\id_R)=\id_{\operatorname{NL}(p)}$$
 
-이고, symmetrically $\operatorname{NL}(\varphi)\circ\operatorname{NL}(\varphi')\simeq\id_{\operatorname{NL}(p')}$이다. 즉 $\operatorname{NL}(\varphi)$는 homotopy equivalence이고, homology에 isomorphism을 유도한다. 이 isomorphism이 canonical한 것은, $\varphi$의 다른 선택이 [명제 12](#prop12)에 의해 같은 homology morphism을 유도하기 때문이다.
+이고, symmetrically $\operatorname{NL}(\varphi)\circ\operatorname{NL}(\varphi')\simeq\id_{\operatorname{NL}(p')}$이다. 즉 $\operatorname{NL}(\varphi)$는 homotopy equivalence이고, homology에 isomorphism을 유도한다. 이 isomorphism이 canonical한 것은, $\varphi$의 다른 선택이 [명제 13](#prop13)에 의해 같은 homology morphism을 유도하기 때문이다.
 :::
 
 따라서 우리는 presentation의 선택을 잊고, homotopy equivalence를 무시한다는 단서 하에 $\operatorname{NL}_{E/A}$라 적을 수 있다. 그 homology
@@ -351,7 +366,7 @@ $$H_0(\operatorname{NL}_{E/A})\cong\Omega_{E/A},\qquad H_1(\operatorname{NL}_{E/
 
 는 $A$-algebra $E$의 invariant가 된다. $H_1$이 측정하는 것이 무엇인지 다음 예시에서 살펴보자.
 
-::: 예시 14
+::: 예시 15
 하나의 다항식으로 표현되는 algebra $E=A[\x]/(f)$를 생각하자. 여기서 $f$는 $A[\x]$의 nonzerodivisor라 가정한다. Presentation $p:R=A[\x] \rightarrow E$에 대하여 $\mathfrak{I}=(f)$이고, $f$가 nonzerodivisor이므로 $\mathfrak{I}/\mathfrak{I}^2$는 $\overline{f}$를 기저로 갖는 free $E$-module이다. 실제로 $af\in(f^2)$라면 $af=bf^2$로부터 $a=bf\in(f)$이다. 따라서
 
 $$\operatorname{NL}_{E/A}=\Bigl[E\overline{f}\overset{\bar{d}}{\longrightarrow}Ed\x\Bigr],\qquad \bar{d}(\overline{f})=\overline{Df}d\x$$
@@ -363,7 +378,7 @@ $$H_0(\operatorname{NL}_{E/A})=\Omega_{E/A}\cong E/(\overline{Df}),\qquad H_1(\o
 이다. 가령 $A=\mathbb{K}$가 characteristic이 $2$가 아닌 field이고 $f=\x^2$이라면 $\overline{Df}=2\overline{\x}$이므로 $H_1\cong\ann_E(2\overline{\x})=(\overline{\x})\neq0$이다. 반면 $f$와 $Df$가 $A[\x]$에서 서로소인 경우, 즉 $f$가 separable polynomial인 경우에는 $\overline{Df}$가 $E$의 unit이 되어 $H_0=H_1=0$이다. 즉 $H_1$은 $\Omega_{E/A}$만으로는 보이지 않는, presentation의 relation들이 갖는 중복도에 대한 정보를 담고 있다.
 :::
 
-::: 참고 15
+::: 참고 16
 Naive cotangent complex는 이름 그대로 더 정교한 대상의 그림자이다. Quillen과 André는 polynomial algebra에 의한 한 번의 presentation 대신 simplicial resolution을 사용하여, 모든 degree에서 homology를 갖는 *cotangent complex* $L_{E/A}$를 정의하였다. 이 complex의 degree $0,1$ 부분이 정확히 위에서 정의한 $\operatorname{NL}_{E/A}$이다. 이러한 homotopy 이론적인 구성은 이 category의 범위를 벗어나므로, 여기서는 두 항짜리 절단인 $\operatorname{NL}_{E/A}$로 만족하기로 한다.
 :::
 
