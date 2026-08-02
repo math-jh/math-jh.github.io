@@ -43,6 +43,8 @@ A:
     id: a_-algebra_homomorphism
   - label: Associative $A$-algebra
     id: associative_a_-algebra
+  - label: Commutative $A$-algebra
+    id: commutative_a_-algebra
 - id: a_-algebra_homomorphism
   en: $A$-algebra homomorphism
   ko: $A$-대수 준동형사상
@@ -60,6 +62,10 @@ A:
   defs:
   - label: '[정수론] §나눗셈과 최대공약수'
     url: /ko/math/number_theory/divisibility
+  see:
+  - label: 최대공약수
+    lang: ko
+    id: greatest_common_divisor
 - id: mathfrak_a_-filtration
   en: $\mathfrak{a}$-filtration
   ko: $\mathfrak{a}$-여과
@@ -67,6 +73,11 @@ A:
   defs:
   - label: '[가환대수학] §부풀림 대수'
     url: /ko/math/commutative_algebra/blowup_algebra
+  see:
+  - label: Associated graded ring
+    id: associated_graded_ring
+  - label: Associated graded module
+    id: associated_graded_module
 - id: a_priori_error_estimate
   en: a priori error estimate
   ko: 선험적 오차 평가
@@ -104,6 +115,8 @@ A:
   see:
   - label: Abelian category
     id: abelian_category
+  - label: Abelian group
+    id: abelian_group
 - id: abelian_category
   en: abelian category
   ko: 아벨 카테고리
@@ -144,6 +157,9 @@ A:
   defs:
   - label: '[대수적 구조] §가환군'
     url: /ko/math/algebraic_structures/abelian_groups
+  see:
+  - label: Abelian group
+    id: abelian_group
 - id: absolutely_convergent
   en: absolutely convergent
   ko: 절대수렴
@@ -224,6 +240,9 @@ A:
   defs:
   - label: '[리 이론] §가해 Lie algebra와 nilpotent Lie algebra'
     url: /ko/math/lie_theory/solvable_nilpotent_lie_algebras
+  see:
+  - label: Lie algebra
+    id: lie_algebra
 - id: adjunction
   en: adjunction
   ko: 수반쌍
@@ -231,6 +250,11 @@ A:
   defs:
   - label: '[범주론] §수반함자'
     url: /ko/math/category_theory/adjoints
+  see:
+  - label: Left adjoint
+    id: left_adjoint
+  - label: Right adjoint
+    id: right_adjoint
 - id: admissible_sink_sequence
   en: admissible sink sequence
   ko: 허용 싱크 나열
@@ -987,6 +1011,9 @@ B:
     url: /ko/math/algebraic_topology/fibrations
   - label: '[미분다양체] §접다발과 여접다발'
     url: /ko/math/manifolds/tangent_and_cotangent_bundles
+  see:
+  - label: Fiber bundle
+    id: fiber_bundle
 - id: basepoint-free
   en: basepoint-free
   ko: 기저점 없음
@@ -1017,6 +1044,12 @@ B:
     url: /ko/math/linear_algebra/basis
   - label: '[다중선형대수학] §기저'
     url: /ko/math/multilinear_algebra/basis_of_free_modules
+  see:
+  - label: 벡터공간
+    lang: ko
+    id: vector_space
+  - label: Dual basis
+    id: dual_basis
 - id: bifunctor
   en: bifunctor
   ko: 쌍함자
@@ -1024,6 +1057,9 @@ B:
   defs:
   - label: '[범주론] §함자'
     url: /ko/math/category_theory/functors
+  see:
+  - label: Functor
+    id: functor
 - id: big_givental_j_-function
   en: big Givental $J$-function
   ko: 큰 기벤탈 $J$-함수
@@ -1031,6 +1067,9 @@ B:
   defs:
   - label: '[거울대칭] §Givental J-function과 Mirror Theorem'
     url: /ko/math/mirror_symmetry/givental_j_function
+  see:
+  - label: Givental $J$-function
+    id: givental_j_-function
 - id: big_quantum_product
   en: big quantum product
   ko: 큰 양자 곱
@@ -1038,6 +1077,9 @@ B:
   defs:
   - label: '[사교기하학] §Gromov-Witten 불변량'
     url: /ko/math/symplectic_geometry/gromov_witten
+  see:
+  - label: Small quantum product
+    id: small_quantum_product
 - id: biholomorphic
   en: biholomorphic
   ko: 쌍정칙
@@ -1045,6 +1087,9 @@ B:
   defs:
   - label: '[복소기하학] §복소다양체'
     url: /ko/math/complex_geometry/complex_manifolds
+  see:
+  - label: Holomorphic function
+    id: holomorphic_function
 - id: biholomorphism
   en: biholomorphism
   ko: 쌍정칙사상
@@ -1075,6 +1120,9 @@ B:
     url: /ko/math/linear_algebra/dual_space
   - label: '[대수적 구조] §가환군'
     url: /ko/math/algebraic_structures/abelian_groups
+  see:
+  - label: Tensor product
+    id: tensor_product
 - id: bilinear_form
   en: bilinear form
   ko: 쌍선형형식
@@ -1084,6 +1132,13 @@ B:
     url: /ko/math/linear_algebra/dual_space
   - label: '[선형대수학] §쌍선형형식'
     url: /ko/math/linear_algebra/bilinear_form
+  see:
+  - label: 이차형식
+    lang: ko
+    id: quadratic_form
+  - label: 내적
+    lang: ko
+    id: inner_product
 - id: bimonoid
   en: bimonoid
   ko: 쌍모노이드
