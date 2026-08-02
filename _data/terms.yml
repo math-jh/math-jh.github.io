@@ -14972,6 +14972,8 @@ Z:
   defs:
   - label: '[대수다양체] §접공간과 매끄러움'
     url: /ko/math/algebraic_varieties/tangent_spaces_and_smoothness
+  - label: '[스킴] §Kähler 미분과 여접층'
+    url: /ko/math/scheme_theory/sheaf_of_differentials
   see:
   - label: Tangent space
     id: tangent_space
