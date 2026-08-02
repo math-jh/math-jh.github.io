@@ -10,8 +10,9 @@ sidebar:
 
 date: 2025-03-14
 weight: 13
-translated_at: 2026-08-02T04:46:27+00:00
+translated_at: 2026-08-02T04:49:24+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-08-02T04:49:24+00:00
 ---
 ## Dimension of Schemes
 
@@ -21,29 +22,29 @@ We now define the dimension of a scheme.
 The *dimension* of a scheme $X$ is defined as the Krull dimension of the topological space $X$. ([[Topology] §Dimension, ⁋Definition 10](/en/math/topology/dimension#def10))
 :::
 
-Then from the Galois correspondence of [[Spectrums] §Spectrum, ⁋Proposition 16](/en/math/scheme_theory/spectrums#prop16), we know that the dimension of $\Spec A$ as a scheme equals the dimension of $A$ as a ring. ([[Commutative Algebra] §Dimension, ⁋Definition 1](/en/math/commutative_algebra/Krull_dimension#def1)) Moreover, by definition one can show that $\Spec A$ and $\Spec A/\mathfrak{N}(A)$ are homeomorphic, so $\dim A=\dim A/\mathfrak{N}(A)$ holds. That is, reducedness does not affect dimension.
+From the Galois correspondence of [[Spectrums] §Spectrum, ⁋Proposition 16](/en/math/scheme_theory/spectrums#prop16), we know that the dimension of $\Spec A$ as a scheme equals the dimension of $A$ as a ring. ([[Commutative Algebra] §Dimension, ⁋Definition 1](/en/math/commutative_algebra/Krull_dimension#def1)) Moreover, by definition one can show that $\Spec A$ and $\Spec A/\mathfrak{N}(A)$ are homeomorphic, so $\dim A=\dim A/\mathfrak{N}(A)$ holds. That is, reducedness does not affect dimension.
 
-On the other hand, for the same reason as [[Topology] §Dimension, ⁋Proposition 15](/en/math/topology/dimension#prop15), the following holds.
+On the other hand, by the same reasoning as in [[Topology] §Dimension, ⁋Proposition 15](/en/math/topology/dimension#prop15), the following holds.
 
 ::: Proposition 2
-For any scheme $X$ and integer $n\geq 0$, the condition $\dim X=n$ is equivalent to the existence of an affine open covering $(U_i)$ of $X$ such that $\dim U_i\leq n$ for all $U_i$, and equality holds for at least one $i$.
+For any scheme $X$ and integer $n\geq 0$, the condition $\dim X=n$ is equivalent to the existence of an affine open covering $(U_i)$ of $X$ such that $\dim U_i\leq n$ for all $U_i$, with equality holding for at least one $i$.
 :::
 ::: Proof
 For any chain of irreducible closed subsets of $X$
 
 $$Y_0\subsetneq Y_1\subsetneq\cdots\subsetneq Y_r$$
 
-the generic point $\eta_0$ of the smallest term $Y_0$ is a point of $X$, so it belongs to some $U_i$ by the covering $(U_i)$. Then since every term of the chain meets $U_i$, considering the inclusion-preserving bijection of [[Topology] §Dimension, ⁋Proposition 15](/en/math/topology/dimension#prop15), it corresponds to a chain of the same length inside $U_i$. Conversely, any chain in $U_i$ lifts to $X$ by taking closure, so $\dim X\geq\dim U_i$, and therefore $\dim X=\sup_i\dim U_i$, which is equivalent to the condition of the proposition.
+the generic point $\eta_0$ of the smallest term $Y_0$ is a point of $X$, so it belongs to some $U_i$ by the covering $(U_i)$. Since every term of the chain meets $U_i$, considering the inclusion-preserving bijection of [[Topology] §Dimension, ⁋Proposition 15](/en/math/topology/dimension#prop15), it corresponds to a chain of the same length inside $U_i$. Conversely, any chain in $U_i$ lifts to $X$ by taking closures, so $\dim X\geq\dim U_i$, and therefore $\dim X=\sup_i\dim U_i$, which is equivalent to the condition of the proposition.
 :::
 
-What the proof actually gave us is $\dim X=\sup_i\dim U_i$, and without the assumption that $\dim X$ is finite, there may not exist an $i$ for which equality holds. For example, $X=\coprod_{d\geq 0}\mathbb{A}^d_\mathbb{K}$ is infinite-dimensional, but each affine open subset meets only finitely many components, so all are finite-dimensional.
+What the proof actually yields is $\dim X=\sup_i\dim U_i$, and without the assumption that $\dim X$ is finite, there may not exist an $i$ for which equality holds. For example, $X=\coprod_{d\geq 0}\mathbb{A}^d_\mathbb{K}$ is infinite-dimensional, but each affine open subset meets only finitely many components, so all are finite-dimensional.
 
 On the other hand, we saw in [[Properties of Scheme Morphisms] §Properties of Scheme Morphisms, ⁋Proposition 15](/en/math/scheme_theory/properties_of_scheme_morphisms#prop15) that a finite morphism is an integral morphism of finite type, and in [[Fiber Products] §Fiber Products, ⁋Proposition 15](/en/math/scheme_theory/fiber_products#prop15) that any finite morphism is quasi-finite. In general, there exist integral morphisms that are not of finite type, so until now we have not been able to say anything about the fibers of integral morphisms.
 
 ::: Example 3
-For example, consider the algebraic closure $\overline{\mathbb{Q}}$ of $\mathbb{Q}$. Any element of $\overline{\mathbb{Q}}$ is algebraic over $\mathbb{Q}$, hence integral, and therefore $\mathbb{Q} \rightarrow \overline{\mathbb{Q}}$ is an integral extension, from which the scheme morphism $\varphi:\Spec \overline{\mathbb{Q}} \rightarrow \Spec \mathbb{Q}$ is also an integral morphism.
+For example, consider the algebraic closure $\overline{\mathbb{Q}}$ of $\mathbb{Q}$. Every element of $\overline{\mathbb{Q}}$ is algebraic over $\mathbb{Q}$, hence integral, and therefore $\mathbb{Q} \rightarrow \overline{\mathbb{Q}}$ is an integral extension, from which the scheme morphism $\varphi:\Spec \overline{\mathbb{Q}} \rightarrow \Spec \mathbb{Q}$ is also an integral morphism.
 
-Now base changing $\varphi$ along $\Spec\overline{\mathbb{Q}}\rightarrow\Spec\mathbb{Q}$, we obtain the following pullback diagram
+Now base change $\varphi$ along $\Spec\overline{\mathbb{Q}}\rightarrow\Spec\mathbb{Q}$ to obtain the following pullback diagram
 
 {% diagram Math/Scheme_Theory/Dimension_Schemes-1.svg width="13.60em" alt="pullback" %}
 
@@ -72,9 +73,9 @@ and $\x^2+1$ factors in $\mathbb{C}$ as a product of two linear terms $\x^2+1=(\
 
 $$\frac{\mathbb{C}[\x]}{((\x-i)(\x+i))}\cong\frac{\mathbb{C}[\x]}{(\x-i)}\times\frac{\mathbb{C}[\x]}{(\x+i)}\cong\mathbb{C}\times\mathbb{C}$$
 
-Thinking in the language of the Galois group examined in the example above, this appears because the two factors $\mathbb{C}[\x]/(\x-i)$ and $\mathbb{C}[\x]/(\x+i)$ of this decomposition correspond to the two elements of $\mathbb{C}\rightarrow \mathbb{C}$ fixing $\mathbb{R}$, that is, the two elements of $\Gal(\mathbb{C}/\mathbb{R})$, and the same thing happens in [Example 3](#ex3) for $\mathbb{Q}\rightarrow \overline{\mathbb{Q}}$. The only difference is that since $\Gal(\overline{\mathbb{Q}}/\mathbb{Q})$ is infinite, the fiber consists of infinitely many points rather than two.
+Thinking in the language of the Galois group examined in the example above, this decomposition arises because the two factors $\mathbb{C}[\x]/(\x-i)$ and $\mathbb{C}[\x]/(\x+i)$ correspond to the two automorphisms of $\mathbb{C}\rightarrow \mathbb{C}$ fixing $\mathbb{R}$, that is, the two elements of $\Gal(\mathbb{C}/\mathbb{R})$, and the same phenomenon occurs in [Example 3](#ex3) for $\mathbb{Q}\rightarrow \overline{\mathbb{Q}}$. The only difference is that since $\Gal(\overline{\mathbb{Q}}/\mathbb{Q})$ is infinite, the fiber consists of infinitely many points rather than two.
 
-Nevertheless, this example suggests some kind of finiteness for the fibers of an integral morphism: for example, since $\Gal(\overline{\mathbb{Q}}/\mathbb{Q})$ is a profinite group ([[Field Theory] §Properties of Galois Groups, ⁋Proposition 5](/en/math/field_theory/properties_of_galois_extensions#prop5)), it becomes $0$-dimensional. This is a fact that holds for any integral morphism.
+Nevertheless, this example suggests some kind of finiteness for the fibers of an integral morphism: for example, since $\Gal(\overline{\mathbb{Q}}/\mathbb{Q})$ is a profinite group ([[Field Theory] §Properties of Galois Groups, ⁋Proposition 5](/en/math/field_theory/properties_of_galois_extensions#prop5)), it is $0$-dimensional. This is a fact that holds for any integral morphism.
 
 ::: Proposition 4
 Any nonempty fiber of an integral morphism $\varphi: X \rightarrow Y$ is always $0$-dimensional.
@@ -95,9 +96,9 @@ $$\mathfrak{q}_1\subsetneq \mathfrak{q}_2$$
 This is the result of [[Commutative Algebra] §Integral Extensions and Ideals, ⁋Corollary 4](/en/math/commutative_algebra/lying_over_and_going_up#cor4).
 :::
 
-Geometrically, this proposition shows that each fiber of an integral morphism does not have positive dimension.
+Geometrically, this proposition shows that each fiber of an integral morphism has no positive dimension.
 
-The [[Commutative Algebra] §Integral Extensions and Ideals, ⁋Corollary 4](/en/math/commutative_algebra/lying_over_and_going_up#cor4) used in the proof of the above proposition also holds for any integral extension $A\hookrightarrow B$. By this, contracting a prime ideal chain of $B$ to $A$ remains strict, so $\dim B\leq\dim A$, and conversely by the lying over and going up of [[Commutative Algebra] §Integral Extensions and Ideals, ⁋Proposition 1](/en/math/commutative_algebra/lying_over_and_going_up#prop1), a prime ideal chain of $A$ lifts to $B$, so $\dim A\leq\dim B$. Therefore more generally the following holds.
+The [[Commutative Algebra] §Integral Extensions and Ideals, ⁋Corollary 4](/en/math/commutative_algebra/lying_over_and_going_up#cor4) used in the proof of the above proposition also holds for any integral extension $A\hookrightarrow B$. By this, contracting a prime ideal chain of $B$ to $A$ remains strict, so $\dim B\leq\dim A$, and conversely by lying over and going up from [[Commutative Algebra] §Integral Extensions and Ideals, ⁋Proposition 1](/en/math/commutative_algebra/lying_over_and_going_up#prop1), a prime ideal chain of $A$ lifts to $B$, so $\dim A\leq\dim B$. Therefore more generally the following holds.
 
 ::: Proposition 5
 For any integral extension $\phi:A \rightarrow B$,
