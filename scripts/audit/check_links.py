@@ -67,6 +67,8 @@ SITE_ROOT = Path(__file__).resolve().parent.parent.parent
 POSTS_DIR = SITE_ROOT / "_posts"
 PAGES_DIR = SITE_ROOT / "_pages"
 ASSETS_DIR = SITE_ROOT / "assets"
+DATA_DIR = SITE_ROOT / "_data"
+SUBJECT_PAGE_PLUGIN = SITE_ROOT / "_plugins" / "hide_empty_subject_pages.rb"
 
 # Filename "2024-08-18-Weighted_Categories.md" -> ("2024-08-18", "Weighted_Categories")
 POST_NAME_RE = re.compile(r"^(\d{4}-\d{2}-\d{2})-(.+)\.md$")
@@ -232,6 +234,87 @@ def collect_page_permalinks() -> Dict[str, Path]:
         pl = fm.get("permalink")
         if isinstance(pl, str):
             mapping[pl.rstrip("/")] = md
+    return mapping
+
+
+def _load_yaml(path: Path) -> Dict[str, Any]:
+    """Read a ``_data`` YAML file with the same parser policy as frontmatter."""
+    try:
+        text = path.read_text(encoding="utf-8")
+    except Exception:
+        return {}
+    if _HAS_YAML:
+        try:
+            loaded = _yaml.safe_load(text)
+            return loaded if isinstance(loaded, dict) else {}
+        except Exception:
+            pass
+    return _parse_minimal_yaml(text)
+
+
+def _subject_slug(category: str) -> str:
+    """Mirror ``HideEmptySubjectPages.slug_for``.
+
+    Take the segment after the last ``" / "``, lowercase it and turn spaces
+    into underscores.  Hyphens are left alone, so "Math / Gromov-Witten
+    Theory" becomes "gromov-witten_theory".
+    """
+    return category.split(" / ")[-1].strip().lower().replace(" ", "_")
+
+
+def _category_names(fm: Dict[str, Any]) -> List[str]:
+    """Frontmatter ``categories`` as a list, whichever parser produced it."""
+    value = fm.get("categories")
+    if isinstance(value, list):
+        return [str(item).strip() for item in value]
+    if isinstance(value, str):
+        inner = value.strip()
+        if inner.startswith("[") and inner.endswith("]"):
+            inner = inner[1:-1]
+        return [_strip_quotes(part) for part in inner.split(",") if part.strip()]
+    return []
+
+
+def collect_subject_home_permalinks() -> Dict[str, Path]:
+    """Map every generated Math subject home to the plugin that emits it.
+
+    Math subject homes have no file on disk — ``hide_empty_subject_pages.rb``
+    generates them at build time from ``_data/categories.yml`` — so scanning
+    ``_posts``/``_pages`` permalinks alone reports every link to
+    ``/ko/set_theory`` and its siblings as broken.  The plugin skips a home
+    whose category has no post in that language, and ``published: false``
+    drafts are already out of ``site.posts``, so we apply both conditions to
+    match what production actually serves.  (Misc subject homes stay physical
+    files under ``_pages`` and are picked up by ``collect_page_permalinks``.)
+    """
+    subjects = _load_yaml(DATA_DIR / "categories.yml").get("subjects")
+    if not isinstance(subjects, dict):
+        return {}
+
+    langs_with_posts: Dict[str, set] = defaultdict(set)
+    for md in POSTS_DIR.rglob("*.md"):
+        try:
+            text = md.read_text(encoding="utf-8")
+        except Exception:
+            continue
+        fm, _ = parse_frontmatter(text)
+        if str(fm.get("published", "true")).strip().lower() == "false":
+            continue
+        permalink = fm.get("permalink")
+        if not isinstance(permalink, str):
+            continue
+        lang = next((l for l in ("ko", "en") if permalink.startswith(f"/{l}/")), None)
+        if lang is None:
+            continue
+        for category in _category_names(fm):
+            langs_with_posts[category].add(lang)
+
+    mapping: Dict[str, Path] = {}
+    for raw_name in subjects:
+        category = _strip_quotes(str(raw_name))
+        slug = _subject_slug(category)
+        for lang in langs_with_posts.get(category, ()):
+            mapping[f"/{lang}/{slug}"] = SUBJECT_PAGE_PLUGIN
     return mapping
 
 
@@ -604,6 +687,7 @@ def main(argv: Optional[List[str]] = None) -> int:
 
     post_permalinks = collect_post_permalinks()
     page_permalinks = collect_page_permalinks()
+    page_permalinks.update(collect_subject_home_permalinks())
 
     audits: List[PostAudit] = []
     for md in iter_posts(args.category):
