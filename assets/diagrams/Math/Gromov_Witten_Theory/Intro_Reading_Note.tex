@@ -1,0 +1,66 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath, amsthm, amsfonts}
+\usepackage{tikz-cd, kotex}
+\usepackage{quiver}
+\usepackage{Operators}
+\usepackage{palette}
+\usepackage{diagram-style}
+\begin{document}
+
+%%FIG 극한 stable map의 domain과 상 (Intro_Reading_Note-1.svg)
+\begin{tikzpicture}
+	% domain: main component + bubble
+	\draw[thick, black] (0,-2) -- (0,2.3);
+	\node at (0,2.6) {본 성분};
+	\draw[thick, black] (0.8,0.6) circle[radius=0.8];
+	\node at (0.8,-0.65) {bubble};
+	\fill[black] (0,0.6) circle[radius=3pt];
+	\node[left] at (-0.15,0.6) {node};
+	\fill[accent1] (1.366,1.166) circle[radius=3pt];
+	\node[above right, accent1] at (1.4,1.2) {$x_1$};
+	\fill[accent2] (1.366,0.034) circle[radius=3pt];
+	\node[below right, accent2] at (1.4,0.0) {$x_2$};
+	% the map
+	\draw[thick, black, -{stealth}] (2.8,0.3) -- (4.4,0.3);
+	\node at (3.6,0.7) {$f$};
+	% target
+	\draw[thick, black] (5.0,-1.7) -- (7.4,1.9);
+	\node[right] at (7.4,1.9) {$L$};
+	\fill[black] (6.2,0.1) circle[radius=3pt];
+	\node[right] at (6.35,0.05) {$p$};
+	\node[black!50] at (7.4,-1.6) {$\mathbb{P}^2$};
+\end{tikzpicture}
+
+%%FIG 전체 공간의 blow up과 두 section의 분리 (Intro_Reading_Note-2.svg)
+\begin{tikzpicture}
+	% left: total space P^1 x A^1, coordinates (t,z)
+	\draw[thick, black] (0,-2) -- (0,2);
+	\node at (0,2.35) {$C_0$};
+	\draw[thick, accent1] (-2,0) -- (2,0);
+	\node[right, accent1] at (2.05,0) {$z=0$};
+	\draw[thick, accent2] (-2,-2) -- (2,2);
+	\node[right, accent2] at (2.05,2) {$z=t$};
+	\fill[black] (0,0) circle[radius=3pt];
+	\node[black!50] at (0,-2.7) {$\mathbb{P}^1\times\mathbb{A}^1$};
+	% blow-down arrow
+	\draw[thick, black, -{stealth}] (5.6,0) -- (3.6,0);
+	\node at (4.6,0.4) {blow up};
+	% right: after the blow-up, chart (t,w)
+	\begin{scope}[shift={(8.6,0)}]
+		\draw[thick, black] (0,-2) -- (0,2);
+		\node[right] at (0.15,-1.7) {$E$};
+		\draw[thick, black] (0,2) -- (-1.8,2.8);
+		\node[above] at (-1.8,2.85) {$\tilde{C}_0$};
+		\fill[black] (0,2) circle[radius=3pt];
+		\node[right] at (0.15,2.05) {$w=\infty$ (node)};
+		\draw[thick, accent1] (-1.8,-0.7) -- (1.8,-0.7);
+		\fill[accent1] (0,-0.7) circle[radius=3pt];
+		\node[below right, accent1] at (0.1,-0.75) {$w=0$};
+		\draw[thick, accent2] (-1.8,0.7) -- (1.8,0.7);
+		\fill[accent2] (0,0.7) circle[radius=3pt];
+		\node[below right, accent2] at (0.1,0.65) {$w=1$};
+		\node[black!50] at (0,-2.7) {$\operatorname{Bl}_{(0,0)}(\mathbb{P}^1\times\mathbb{A}^1)$};
+	\end{scope}
+\end{tikzpicture}
+
+\end{document}
