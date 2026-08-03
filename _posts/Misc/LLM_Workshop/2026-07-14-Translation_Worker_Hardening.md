@@ -14,7 +14,7 @@ sidebar:
 author: Marvin
 
 date: 2026-07-14
-last_modified_at: 2026-07-26
+last_modified_at: 2026-08-03
 weight: 28
 
 ---
@@ -113,3 +113,56 @@ else:
 {: data-filename="scripts/translation/translate_worker.py"}
 
 엔진 교체는 하루를 갔다. [다음 날 커밋](https://github.com/math-jh/math-jh.github.io/commit/37a128cabe5c37d7aae64e5b5b4ccf5b1d7623c4)에서 GLM 해지와 함께 기본값이 다시 `kimi`로 돌아왔고, `glm` 분기는 claudeglm 바이너리가 제거된 채 참고용으로만 남았다. 결국 이 커밋에서 살아남은 것은 엔진이 아니라 구조다. tmux 우회 철거는 남았고, 백엔드 분기는 다음 교체 때 쓰라고 남았고, GLM은 떠났다.
+
+## 24,000자 경계와 조각 번역
+
+[한 커밋](https://github.com/math-jh/math-jh.github.io/commit/dd68b29464c242abcb810f8e7e9a5eab20b13e64)이 `Sheaf_Cohomology_of_Schemes` 한 편으로 시작됐다. KO 본문 53,978자를 단발로 넘겼더니, 엔진이 100,470자를 뱉다가 중간에서 잘렸다. 원인은 엔진의 출력 예산이 32K 토큰으로 고정돼 있다는 것이다. KO 본문이 이 한계에 가까워지면 모델은 형식을 잃고 "KO 원문 인용 → EN"을 문단마다 반복하는 대역 워크시트를 쓰기 시작하고, 그 상태로 예산을 다 쓰면 문장 중간에서 끊긴다.
+
+고친 방법은 큰 글을 조각내어 따로 번역한 뒤 이어 붙이는 것이다. 조각 경계는 새로 만들지 않고, drift 증분 번역이 이미 쓰고 있던 `_split_regions`를 그대로 빌렸다. `:::` 정리 박스 여는 줄마다 잘라 `(region_id, region_text)` 목록을 만드는 함수라, 이 경계로 나누면 정리 박스 하나가 두 호출에 걸쳐 잘리는 일이 없다. 리전을 12,000자 목표치로 묶는 `_group_regions`는 혼자서 이미 그 길이를 넘는 리전(긴 정리 박스 하나)은 쪼개지 않고 통째로 한 조각에 둔다.
+
+```python
+def _group_regions(regions, max_chars: int) -> list:
+    batches: list = []
+    cur: list = []
+    cur_len = 0
+    for _rid, text in regions:
+        if cur and cur_len + len(text) > max_chars:
+            batches.append("".join(cur))
+            cur, cur_len = [], 0
+        cur.append(text)
+        cur_len += len(text)
+    if cur:
+        batches.append("".join(cur))
+    return [b for b in batches if b.strip()]
+```
+{: data-filename="scripts/translation/translate_worker.py"}
+
+조각마다 붙는 프롬프트는 원래 지시문 뒤에 "이건 전체 중 {idx}/{total} 조각이니 도입부·요약·전환 문장 없이 조각 자체만 번역하고, 분할 사실을 언급하지 말고, 라벨 번호는 다른 조각을 못 보더라도 그대로 이어 붙여라"를 덧붙인 것이다. 24,000자를 넘는 KO 본문에만 이 경로를 타고, 그 아래는 기존처럼 단발 호출이다. 같은 커밋에 `KIMI_TIMEOUT_SEC`도 1500초에서 3600초로 늘었다. 70KB가 넘는 글은 25분으로도 부족했던 탓인데, `acquire_lock`이 겹침을 막아주므로 한 번의 호출이 cron의 30분 주기를 넘겨도 안전하다.
+
+## 참고문헌 마커를 놓친 자리
+
+같은 글을 진단하다가 두 가지가 더 나왔다. 하나는 검사 순서다. 검증기는 한글 잔류 검사(번역이 실제로 됐는지)보다 참고문헌 대조를 먼저 돌리고 있었다. 대역 워크시트를 뱉는 실패는 참고문헌 마커까지 함께 망가뜨리므로, 참고문헌 검사가 먼저 `return`하면 "참고문헌 없음"이라는 지엽적인 이름이 진짜 원인(번역이 아예 안 됨)을 가렸다. 두 검사의 순서를 뒤집어 한글 잔류 검사를 앞에 뒀다.
+
+다른 하나는 sentinel 매칭이다. `reattach_refs_block`은 참고문헌 자리를 `@@REFERENCES@@`로 비워뒀다가 번역이 끝나면 그 자리에 영문 마커를 되붙이는데, 기존 코드는 `body.count(REFS_SENTINEL)`로 등장 횟수만 셌다. 이 사례에서 엔진이 지시사항을 복창하며 `` - `@@REFERENCES@@` preserved verbatim `` 같은 줄을 만들었고, 그 안에 박힌 sentinel이 유일한 등장이었다. 카운트는 1이라 통과했지만, `body.replace(REFS_SENTINEL, en_refs)`가 그 자리에 참고문헌 블록을 밀어 넣으면서 `**References**`가 줄 시작이 아닌 문장 중간에 놓였다. 고친 sentinel 정규식은 줄을 독차지한 경우만 인정하고, 위치 기반으로 잘라 붙인다.
+
+```python
+def reattach_refs_block(body: str, ko_refs: Optional[str]) -> str:
+    n_raw = body.count(REFS_SENTINEL)
+    matches = list(_REFS_SENTINEL_LINE_RE.finditer(body))
+    if ko_refs is None:
+        if n_raw:
+            raise RuntimeError("refs sentinel appeared but KO has no references block")
+        return body
+    if len(matches) != 1:
+        raise RuntimeError(
+            f"refs sentinel: {len(matches)} standalone line(s) / {n_raw} raw "
+            f"occurrence(s), expected exactly 1 of each — engine dropped, "
+            f"duplicated, or inlined it"
+        )
+    en_refs = _REFS_MARK_RE.sub("**References**", ko_refs, count=1)
+    m = matches[0]
+    return body[: m.start()] + en_refs + body[m.end() :]
+```
+{: data-filename="scripts/translation/translate_worker.py"}
+
+진단에 걸린 시간 자체가 문제이기도 했다. 실패는 한 줄짜리 예외 메시지로만 남고, 그걸 만든 엔진 출력과 조립된 본문은 사라졌다. 그래서 검증에 실패하면 엔진 원본, 조립본, 에러를 `/var/tmp/translate-fail/`에 덤프하는 `dump_failure`를 붙였다. `/tmp`는 이 Pi에서 tmpfs라 재부팅에 날아가므로 ext4인 `/var/tmp`를 골랐다. 다음에 같은 종류의 실패가 나면, 한 줄 메시지로 원인을 추측하는 대신 그 파일들을 열어보면 된다.
