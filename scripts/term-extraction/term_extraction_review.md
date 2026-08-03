@@ -5171,3 +5171,13 @@ Decide whether each one is a definition and add it to `_data/terms.yml` (then ru
 ## term_extract_worker 2026-08-03 06:01
 
 - _posts/Math/Algebraic_Structures/ko/2021-09-08-Group_Homomorphisms.md: 주요 용어 'equalizer' ko 미상 — 보류
+
+## term_extract_worker 2026-08-03 18:01
+
+- _posts/Math/Algebraic_Topology/ko/2025-07-05-Topological_Manifolds.md: 병기 필요 'locally Euclidean of dimension' — 소스 없음 (KMS exact ✗, 위키 ko ✗)
+- _posts/Math/Algebraic_Topology/ko/2025-07-05-Topological_Manifolds.md: 병기 필요 'topological manifold of dimension' — 소스 없음 (KMS exact ✗, 위키 ko ✗)
+
+## term_extract_worker 2026-08-03 19:01
+
+- _posts/Math/Algebraic_Topology/ko/2025-07-27-Covering_Spaces.md: 주요 용어 'monodromy' ko 미상 — 보류
+- _posts/Math/Algebraic_Topology/ko/2025-07-27-Covering_Spaces.md: 주요 용어 'Deck transformation' ko 미상 — 보류
