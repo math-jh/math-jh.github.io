@@ -1810,6 +1810,13 @@ C:
     url: /ko/math/linear_algebra/bilinear_form
   - label: '[체론] §체'
     url: /ko/math/field_theory/fields
+- id: characteristic_class
+  en: characteristic class
+  ko: 특성류
+  primary: ko
+  defs:
+  - label: '[대수적 위상수학] §벡터다발의 특성류'
+    url: /ko/math/algebraic_topology/characteristic_classes
 - id: characteristic_function
   en: characteristic function
   ko: 특성함수
@@ -5017,6 +5024,8 @@ F:
   defs:
   - label: '[대수적 위상수학] §벡터다발의 특성류'
     url: /ko/math/algebraic_topology/characteristic_classes
+  - label: '[대수적 위상수학] §슈티펠-휘트니 특성류'
+    url: /ko/math/algebraic_topology/stiefel_whitney_classes
   see:
   - label: Fiber
     id: fiber
@@ -6145,6 +6154,13 @@ G:
     url: /ko/math/algebraic_topology/characteristic_classes
   - label: '[그로모프-위튼 이론] §Refined Gysin 사상과 moduli의 교차이론'
     url: /ko/math/gromov-witten_theory/refined_gysin
+- id: gysin_sequence
+  en: Gysin sequence
+  ko: 가신 완전열
+  primary: en
+  defs:
+  - label: '[대수적 위상수학] §벡터다발의 특성류'
+    url: /ko/math/algebraic_topology/characteristic_classes
 H:
 - id: half-space
   en: half-space
@@ -14236,6 +14252,13 @@ T:
   defs:
   - label: '[리만기하학] §Theorema Egregium'
     url: /ko/math/riemannian_geometry/theorema_egregium
+- id: thom_class
+  en: Thom class
+  ko: 톰 클래스
+  primary: en
+  defs:
+  - label: '[대수적 위상수학] §벡터다발의 특성류'
+    url: /ko/math/algebraic_topology/characteristic_classes
 - id: tits_form
   en: Tits form
   ko: 티츠 형식
