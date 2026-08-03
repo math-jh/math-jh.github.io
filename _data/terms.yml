@@ -1153,6 +1153,13 @@ B:
   - label: 내적
     lang: ko
     id: inner_product
+- id: bilinear_map
+  en: bilinear map
+  ko: 이중선형 사상
+  primary: en
+  defs:
+  - label: '[다중선형대수학] §미분'
+    url: /ko/math/multilinear_algebra/derivations
 - id: bimonoid
   en: bimonoid
   ko: 쌍모노이드
@@ -2308,6 +2315,13 @@ C:
   defs:
   - label: '[대수적 구조] §대수적 구조'
     url: /ko/math/algebraic_structures/algebraic_structures
+- id: commutative_monoid
+  en: commutative monoid
+  ko: 가환 모노이드
+  primary: en
+  defs:
+  - label: '[대수적 구조] §반군, 모노이드, 군'
+    url: /ko/math/algebraic_structures/groups
 - id: commutative_ring
   en: commutative ring
   ko: 가환환
@@ -3640,6 +3654,8 @@ D:
     url: /ko/math/multilinear_algebra/tensor_product_of_matrices
   - label: '[유도대수기하학] §Simplicial 가환환과 animation'
     url: /ko/math/derived_algebraic_geometry/animated_rings
+  - label: '[대수적 구조] §가환군'
+    url: /ko/math/algebraic_structures/abelian_groups
 - id: descendant_gromov-witten_invariant
   en: descendant Gromov-Witten invariant
   ko: ''
@@ -10597,6 +10613,13 @@ P:
   defs:
   - label: '[대수적 구조] §대수'
     url: /ko/math/algebraic_structures/algebras
+- id: polynomial_ring
+  en: polynomial ring
+  ko: 다항식환
+  primary: en
+  defs:
+  - label: '[가환대수학] §기본 개념들'
+    url: /ko/math/commutative_algebra/basic_notions
 - id: pontryagin_class
   en: Pontryagin class
   ko: 폰트랴긴 특성류
