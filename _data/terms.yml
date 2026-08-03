@@ -11375,6 +11375,13 @@ Q:
   see:
   - label: Quotient space
     id: quotient_space
+- id: quotient_ring
+  en: quotient ring
+  ko: 몫환
+  primary: en
+  defs:
+  - label: '[대수적 구조] §몫환, 환 동형사상'
+    url: /ko/math/algebraic_structures/quotient_rings
 - id: quotient_set
   en: quotient set
   ko: 몫집합
