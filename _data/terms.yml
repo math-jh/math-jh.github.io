@@ -191,6 +191,13 @@ A:
   defs:
   - label: '[대수다양체] §층 코호몰로지'
     url: /ko/math/algebraic_varieties/sheaf_cohomology
+- id: acyclic_models_theorem
+  en: acyclic models theorem
+  ko: 비순환 모델 정리
+  primary: en
+  defs:
+  - label: '[대수적 위상수학] §Acyclic models theorem'
+    url: /ko/math/algebraic_topology/acyclic_models_theorem
 - id: acyclic_on_mathcal_m
   en: acyclic on $\mathcal{M}$
   ko: $\mathcal{M}$ 위에서 비순환
@@ -348,6 +355,13 @@ A:
   defs:
   - label: '[대수다양체] §아핀다양체'
     url: /ko/math/algebraic_varieties/affine_varieties
+- id: alexander-whitney_map
+  en: Alexander-Whitney map
+  ko: 알렉산더-휘트니 사상
+  primary: en
+  defs:
+  - label: '[대수적 위상수학] §합곱'
+    url: /ko/math/algebraic_topology/cup_products
 - id: alexandroff_compactification
   en: Alexandroff compactification
   ko: 알렉산드로프 콤팩트화
@@ -3336,6 +3350,13 @@ D:
   defs:
   - label: '[집합론] §합집합과 교집합'
     url: /ko/math/set_theory/union_and_intersection
+- id: de_rham_cohomology
+  en: de Rham cohomology
+  ko: 드람 코호몰로지
+  primary: en
+  defs:
+  - label: '[대수적 위상수학] §코호몰로지'
+    url: /ko/math/algebraic_topology/cohomology
 - id: de_rham_cohomology_group
   en: de Rham cohomology group
   ko: 드람 코호몰로지 군
@@ -7865,6 +7886,13 @@ K:
     url: /ko/math/commutative_algebra/Krull_dimension
   - label: '[위상수학] §차원'
     url: /ko/math/topology/dimension
+- id: künneth_formula
+  en: Künneth formula
+  ko: 퀴네트 공식
+  primary: en
+  defs:
+  - label: '[대수적 위상수학] §코호몰로지'
+    url: /ko/math/algebraic_topology/cohomology
 L:
 - id: l_2_-inner_product
   en: $L^2$-inner product
@@ -10639,6 +10667,13 @@ P:
   defs:
   - label: '[스택] §Grothendieck 위상과 site'
     url: /ko/math/stacks/grothendieck_topology
+- id: poincaré_duality
+  en: Poincaré duality
+  ko: 푸앵카레 쌍대성
+  primary: en
+  defs:
+  - label: '[대수적 위상수학] §푸앵카레 쌍대성'
+    url: /ko/math/algebraic_topology/Poincare_duality
 - id: point
   en: point
   ko: 점

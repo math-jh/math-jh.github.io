@@ -5181,3 +5181,9 @@ Decide whether each one is a definition and add it to `_data/terms.yml` (then ru
 
 - _posts/Math/Algebraic_Topology/ko/2025-07-27-Covering_Spaces.md: 주요 용어 'monodromy' ko 미상 — 보류
 - _posts/Math/Algebraic_Topology/ko/2025-07-27-Covering_Spaces.md: 주요 용어 'Deck transformation' ko 미상 — 보류
+
+## term_extract_worker 2026-08-03 20:01
+
+- _posts/Math/Algebraic_Topology/ko/2025-09-07-Cohomology.md: 주요 용어 'Ext' ko 미상 — 보류
+- _posts/Math/Algebraic_Topology/ko/2025-09-07-Cohomology.md: 주요 용어 'Tor' ko 미상 — 보류
+- _posts/Math/Algebraic_Topology/ko/2025-09-07-Cohomology.md: 주요 용어 'Eilenberg-Zilber' ko 미상 — 보류
