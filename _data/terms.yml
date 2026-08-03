@@ -355,6 +355,13 @@ A:
   defs:
   - label: '[위상수학] §Compactness와 paracompactness'
     url: /ko/math/topology/compactness
+- id: algebra
+  en: algebra
+  ko: 대수
+  primary: en
+  defs:
+  - label: '[대수적 구조] §대수적 구조'
+    url: /ko/math/algebraic_structures/algebraic_structures
 - id: algebraic
   en: algebraic
   ko: 대수적
@@ -3656,6 +3663,8 @@ D:
     url: /ko/math/derived_algebraic_geometry/animated_rings
   - label: '[대수적 구조] §가환군'
     url: /ko/math/algebraic_structures/abelian_groups
+  - label: '[대수적 구조] §대수의 직접곱, 직합, 텐서곱'
+    url: /ko/math/algebraic_structures/operations_of_algebras
 - id: descendant_gromov-witten_invariant
   en: descendant Gromov-Witten invariant
   ko: ''
@@ -5872,6 +5881,13 @@ G:
   defs:
   - label: '[대수적 구조] §등급환'
     url: /ko/math/algebraic_structures/graded_rings
+- id: graded_module
+  en: graded module
+  ko: 등급가군
+  primary: en
+  defs:
+  - label: '[대수적 구조] §등급가군'
+    url: /ko/math/algebraic_structures/graded_modules
 - id: graded_ring
   en: graded ring
   ko: 등급환
@@ -12856,6 +12872,13 @@ S:
   defs:
   - label: '[복소해석학] §멱급수와 해석성'
     url: /ko/math/complex_analysis/power_series_and_analyticity
+- id: simplex
+  en: simplex
+  ko: 심플렉스
+  primary: en
+  defs:
+  - label: '[대수적 위상수학] §호몰로지'
+    url: /ko/math/algebraic_topology/homology
 - id: simplicial_homology
   en: simplicial homology
   ko: ''
