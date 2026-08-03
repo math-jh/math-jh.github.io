@@ -5187,3 +5187,7 @@ Decide whether each one is a definition and add it to `_data/terms.yml` (then ru
 - _posts/Math/Algebraic_Topology/ko/2025-09-07-Cohomology.md: 주요 용어 'Ext' ko 미상 — 보류
 - _posts/Math/Algebraic_Topology/ko/2025-09-07-Cohomology.md: 주요 용어 'Tor' ko 미상 — 보류
 - _posts/Math/Algebraic_Topology/ko/2025-09-07-Cohomology.md: 주요 용어 'Eilenberg-Zilber' ko 미상 — 보류
+
+## term_extract_worker 2026-08-04 03:31
+
+- _posts/Math/Algebraic_Varieties/ko/2026-03-15-Rational_Maps.md: 주요 용어 'blow-up' ko 미상 — 보류

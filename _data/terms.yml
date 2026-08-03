@@ -341,6 +341,13 @@ A:
   defs:
   - label: '[스킴] §아핀스킴'
     url: /ko/math/scheme_theory/affine_schemes
+- id: affine_space
+  en: affine space
+  ko: 아핀공간
+  primary: en
+  defs:
+  - label: '[대수다양체] §아핀다양체'
+    url: /ko/math/algebraic_varieties/affine_varieties
 - id: affine_toric_variety
   en: affine toric variety
   ko: 아핀 토릭 다양체
@@ -1213,6 +1220,13 @@ B:
   defs:
   - label: '[집합론] §이항관계'
     url: /ko/math/set_theory/binary_relation
+- id: birational_equivalence
+  en: birational equivalence
+  ko: 쌍유리 동치
+  primary: en
+  defs:
+  - label: '[대수다양체] §유리사상'
+    url: /ko/math/algebraic_varieties/rational_maps
 - id: birational_map
   en: birational map
   ko: 쌍유리 사상
@@ -5480,6 +5494,13 @@ F:
   defs:
   - label: '[집합론] §함수'
     url: /ko/math/set_theory/functions
+- id: function_field
+  en: function field
+  ko: 함수체
+  primary: en
+  defs:
+  - label: '[대수다양체] §유리사상'
+    url: /ko/math/algebraic_varieties/rational_maps
 - id: functional
   en: functional
   ko: 범함수
@@ -14453,6 +14474,13 @@ T:
   defs:
   - label: '[다중선형대수학] §Hom과 텐서곱'
     url: /ko/math/multilinear_algebra/hom_and_tensor
+- id: transcendence_degree
+  en: transcendence degree
+  ko: 초월차수
+  primary: en
+  defs:
+  - label: '[대수다양체] §차원'
+    url: /ko/math/algebraic_varieties/dimension
 - id: transcendental
   en: transcendental
   ko: 초월적
