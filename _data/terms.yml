@@ -233,6 +233,13 @@ A:
   defs:
   - label: '[선형대수학] §내적공간'
     url: /ko/math/linear_algebra/inner_product_spaces
+- id: adjoint_functor
+  en: adjoint functor
+  ko: 수반 함자
+  primary: en
+  defs:
+  - label: '[범주론] §수반함자'
+    url: /ko/math/category_theory/adjoints
 - id: adjoint_representation
   en: adjoint representation
   ko: 수반 표현
@@ -1697,6 +1704,8 @@ C:
   defs:
   - label: '[대수적 구조] §군의 작용'
     url: /ko/math/algebraic_structures/group_actions
+  - label: '[대수적 구조] §환의 정의'
+    url: /ko/math/algebraic_structures/rings
 - id: central_extension
   en: central extension
   ko: 중심확장
@@ -2145,6 +2154,13 @@ C:
   see:
   - label: Domain
     id: domain
+- id: coequalizer
+  en: coequalizer
+  ko: 여핵
+  primary: en
+  defs:
+  - label: '[범주론] §극한'
+    url: /ko/math/category_theory/limits
 - id: coextension_of_scalar
   en: coextension of scalar
   ko: 스칼라의 쌍대확장
@@ -2292,6 +2308,13 @@ C:
   defs:
   - label: '[대수적 구조] §대수적 구조'
     url: /ko/math/algebraic_structures/algebraic_structures
+- id: commutative_ring
+  en: commutative ring
+  ko: 가환환
+  primary: en
+  defs:
+  - label: '[대수적 구조] §환의 정의'
+    url: /ko/math/algebraic_structures/rings
 - id: commutativity
   en: commutativity
   ko: 교환성
@@ -2999,6 +3022,13 @@ C:
   defs:
   - label: '[정수론] §나눗셈과 최대공약수'
     url: /ko/math/number_theory/divisibility
+- id: coproduct
+  en: coproduct
+  ko: 쌍대곱
+  primary: en
+  defs:
+  - label: '[대수적 구조] §가환군'
+    url: /ko/math/algebraic_structures/abelian_groups
 - id: coset
   en: coset
   ko: 잉여류
@@ -5304,6 +5334,13 @@ F:
   defs:
   - label: '[대수적 위상수학] §Acyclic models theorem'
     url: /ko/math/algebraic_topology/acyclic_models_theorem
+- id: free_product
+  en: free product
+  ko: 자유곱
+  primary: en
+  defs:
+  - label: '[대수적 구조] §자유곱'
+    url: /ko/math/algebraic_structures/free_products
 - id: frobenius_algebra
   en: Frobenius algebra
   ko: 프로베니우스 대수
@@ -5973,6 +6010,13 @@ G:
   defs:
   - label: '[호몰로지 대수학] §군 코호몰로지'
     url: /ko/math/homological_algebra/group_cohomology
+- id: group_homomorphism
+  en: group homomorphism
+  ko: 군 준동형
+  primary: en
+  defs:
+  - label: '[대수적 구조] §군 준동형사상'
+    url: /ko/math/algebraic_structures/group_homomorphisms
 - id: group_object
   en: group object
   ko: 군 대상
@@ -11593,6 +11637,13 @@ R:
   defs:
   - label: '[사교기하학] §사교 축약'
     url: /ko/math/symplectic_geometry/symplectic_reduction
+- id: reduced_word
+  en: reduced word
+  ko: 기약어
+  primary: en
+  defs:
+  - label: '[대수적 구조] §자유곱'
+    url: /ko/math/algebraic_structures/free_products
 - id: reducible
   en: reducible
   ko: 가약
