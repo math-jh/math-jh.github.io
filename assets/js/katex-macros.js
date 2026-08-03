@@ -209,6 +209,7 @@ window.KATEX_MACROS = {
     "\\Tr":"\\operatorname{Tr}",
     "\\tr":"\\mathrm{tr}",
     "\\trdeg":"\\operatorname{trdeg}",
+    "\\vdim":"\\operatorname{vdim}",
     "\\vol":"\\operatorname{vol}",
     "\\Zar":"\\mathrm{Zar}",
     // Lie groups and Lie algebras
@@ -217,6 +218,7 @@ window.KATEX_MACROS = {
     "\\Lie":"\\operatorname{Lie}",
     "\\Omat":"\\operatorname{O}",
     "\\omat":"\\mathfrak{o}",
+    "\\PGL":"\\operatorname{PGL}",
     "\\SL":"\\operatorname{SL}",
     "\\sl":"\\mathfrak{sl}",
     "\\SO":"\\operatorname{SO}",
