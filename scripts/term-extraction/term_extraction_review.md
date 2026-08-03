@@ -5191,3 +5191,7 @@ Decide whether each one is a definition and add it to `_data/terms.yml` (then ru
 ## term_extract_worker 2026-08-04 03:31
 
 - _posts/Math/Algebraic_Varieties/ko/2026-03-15-Rational_Maps.md: 주요 용어 'blow-up' ko 미상 — 보류
+
+## term_extract_worker 2026-08-04 06:31
+
+- _posts/Math/Algebraic_Varieties/ko/2026-03-29-Canonical_Bundle.md: 주요 용어 'blow-up' ko 미상 — 보류

@@ -4306,6 +4306,13 @@ D:
   defs:
   - label: '[층론] §Verdier 쌍대성'
     url: /ko/math/sheaf_theory/verdier_duality
+- id: dualizing_sheaf
+  en: dualizing sheaf
+  ko: 쌍대화 층
+  primary: en
+  defs:
+  - label: '[대수다양체] §표준선다발'
+    url: /ko/math/algebraic_varieties/canonical_bundle
 - id: dubrovin_connection
   en: Dubrovin connection
   ko: 두브로빈 접속
@@ -4344,6 +4351,13 @@ E:
   see:
   - label: Cartier divisor
     id: cartier_divisor
+- id: effective_divisor
+  en: effective divisor
+  ko: 유효 인자
+  primary: en
+  defs:
+  - label: '[스킴] §인자와 선형계'
+    url: /ko/math/scheme_theory/divisors_and_linear_systems
 - id: eigenspace
   en: eigenspace
   ko: 고유공간
@@ -6081,6 +6095,13 @@ G:
   defs:
   - label: '[사교기하학] §양자 코호몰로지'
     url: /ko/math/symplectic_geometry/quantum_cohomology
+- id: grothendieck_duality
+  en: Grothendieck duality
+  ko: 그로텐디크 쌍대성
+  primary: en
+  defs:
+  - label: '[대수다양체] §세르 쌍대성'
+    url: /ko/math/algebraic_varieties/serre_duality
 - id: Grothendieck_group
   en: Grothendieck group
   ko: 그로텐디크 군
@@ -10657,6 +10678,13 @@ P:
   defs:
   - label: '[그로모프-위튼 이론] §Perfect obstruction theory와 virtual fundamental class'
     url: /ko/math/gromov-witten_theory/perfect_obstruction_theory
+- id: perfect_pairing
+  en: perfect pairing
+  ko: 완전 쌍대
+  primary: en
+  defs:
+  - label: '[선형대수학] §쌍대공간'
+    url: /ko/math/linear_algebra/dual_space
 - id: perfect_ring
   en: perfect ring
   ko: 완전환
