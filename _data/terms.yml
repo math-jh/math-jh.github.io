@@ -5327,6 +5327,13 @@ F:
   defs:
   - label: '[리 이론] §Serre 관계식'
     url: /ko/math/lie_theory/serre_relations
+- id: free_module
+  en: free module
+  ko: 자유 가군
+  primary: en
+  defs:
+  - label: '[대수적 구조] §가군의 직접곱과 직합, 텐서곱'
+    url: /ko/math/algebraic_structures/operations_of_modules
 - id: free_on_mathcal_m
   en: free on $\mathcal{M}$
   ko: $\mathcal{M}$ 위에서 자유
