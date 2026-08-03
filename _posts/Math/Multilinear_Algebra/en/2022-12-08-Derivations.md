@@ -1,6 +1,6 @@
 ---
-title: "Differentiation"
-description: "This post covers the notion of differentiation defined over a graded algebra, developing sign rules via a commutation factor and the Leibniz rule for products."
+title: "Derivations"
+description: "This post covers the notion of a derivation defined over a graded algebra, developing sign rules via a commutation factor and the Leibniz rule for products."
 excerpt: "Differential modules"
 
 categories: [Math / Multilinear Algebra]

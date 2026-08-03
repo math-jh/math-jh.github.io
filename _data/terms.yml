@@ -3706,14 +3706,14 @@ D:
   ko: 유도 tensor product
   primary: ko
   defs:
-  - label: '[다중선형대수학] §행렬의 텐서곱'
-    url: /ko/math/multilinear_algebra/tensor_product_of_matrices
-  - label: '[유도대수기하학] §Simplicial 가환환과 animation'
-    url: /ko/math/derived_algebraic_geometry/animated_rings
   - label: '[대수적 구조] §가환군'
     url: /ko/math/algebraic_structures/abelian_groups
   - label: '[대수적 구조] §대수의 직접곱, 직합, 텐서곱'
     url: /ko/math/algebraic_structures/operations_of_algebras
+  - label: '[다중선형대수학] §행렬의 텐서곱'
+    url: /ko/math/multilinear_algebra/tensor_product_of_matrices
+  - label: '[유도대수기하학] §Simplicial 가환환과 animation'
+    url: /ko/math/derived_algebraic_geometry/animated_rings
 - id: descendant_gromov-witten_invariant
   en: descendant Gromov-Witten invariant
   ko: ''
@@ -5036,10 +5036,10 @@ F:
   ko: 올다발
   primary: en
   defs:
-  - label: '[대수적 위상수학] §벡터다발의 특성류'
-    url: /ko/math/algebraic_topology/characteristic_classes
   - label: '[대수적 위상수학] §슈티펠-휘트니 특성류'
     url: /ko/math/algebraic_topology/stiefel_whitney_classes
+  - label: '[대수적 위상수학] §벡터다발의 특성류'
+    url: /ko/math/algebraic_topology/characteristic_classes
   see:
   - label: Fiber
     id: fiber
@@ -7045,6 +7045,13 @@ I:
   see:
   - label: Homogeneous coordinates
     id: homogeneous_coordinates
+- id: initial_ideal
+  en: initial ideal
+  ko: 초기 아이디얼
+  primary: en
+  defs:
+  - label: '[가환대수학] §완비화의 성질들'
+    url: /ko/math/commutative_algebra/properties_of_completion
 - id: initial_object
   en: initial object
   ko: 시작 대상
@@ -7726,6 +7733,13 @@ J:
   - label: 르장드르 기호
     lang: ko
     id: legendre_symbol
+- id: jacobian_matrix
+  en: Jacobian matrix
+  ko: 야코비 행렬
+  primary: ko
+  defs:
+  - label: '[해석학] §다변수 미분'
+    url: /ko/math/analysis/multivariable_differentiation
 - id: jacobson_radical
   en: Jacobson radical
   ko: 제이콥슨 근기
@@ -8478,6 +8492,13 @@ L:
   defs:
   - label: '[해석학] §미분방정식의 존재성과 유일성'
     url: /ko/math/analysis/existence_uniqueness_ode
+- id: linear_equivalence
+  en: linear equivalence
+  ko: 선형동치
+  primary: en
+  defs:
+  - label: '[대수다양체] §인자'
+    url: /ko/math/algebraic_varieties/divisors
 - id: linear_fractional_transformation
   en: linear fractional transformation
   ko: 일차분수변환
@@ -8515,6 +8536,13 @@ L:
     url: /ko/math/linear_algebra/linear_map
   - label: '[선형대수학] §가우스 소거법'
     url: /ko/math/linear_algebra/Gaussian_elimination
+- id: linear_subspace
+  en: linear subspace
+  ko: 선형 부분공간
+  primary: en
+  defs:
+  - label: '[대수다양체] §차원'
+    url: /ko/math/algebraic_varieties/dimension
 - id: linear_system
   en: linear system
   ko: 선형계
@@ -15375,6 +15403,13 @@ Z:
     id: spectrum
   - label: Prime ideal
     id: prime_ideal
+- id: zero
+  en: zero
+  ko: 영점
+  primary: en
+  defs:
+  - label: '[대수적 구조] §반군, 모노이드, 군'
+    url: /ko/math/algebraic_structures/groups
 - id: zero_map
   en: zero map
   ko: 영사상
