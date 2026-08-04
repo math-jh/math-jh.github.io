@@ -150,6 +150,13 @@ A:
   see:
   - label: Presheaf
     id: presheaf
+- id: abelian_surface
+  en: abelian surface
+  ko: 아벨 곡면
+  primary: en
+  defs:
+  - label: '[대수다양체] §K3 Surfaces'
+    url: /ko/math/algebraic_varieties/k3_surfaces
 - id: abelianization
   en: abelianization
   ko: 아벨화
@@ -408,6 +415,13 @@ A:
   see:
   - label: Transcendental extension
     id: transcendental_extension
+- id: algebraic_geometry
+  en: algebraic geometry
+  ko: 대수기하학
+  primary: en
+  defs:
+  - label: '[대수다양체] §아핀다양체'
+    url: /ko/math/algebraic_varieties/affine_varieties
 - id: algebraic_group
   en: algebraic group
   ko: 대수적 군
@@ -442,6 +456,13 @@ A:
   defs:
   - label: '[스택] §대수적 stack과 quotient stack'
     url: /ko/math/stacks/algebraic_stacks
+- id: algebraic_surface
+  en: algebraic surface
+  ko: 대수곡면
+  primary: en
+  defs:
+  - label: '[대수다양체] §사영공간의 코호몰로지'
+    url: /ko/math/algebraic_varieties/cohomology_of_projective_spaces
 - id: algebraic_torus
   en: algebraic torus
   ko: 대수적 토러스
@@ -5803,6 +5824,13 @@ G:
   see:
   - label: Specialization
     id: specialization
+- id: genus
+  en: genus
+  ko: 종수
+  primary: en
+  defs:
+  - label: '[대수다양체] §표준선다발'
+    url: /ko/math/algebraic_varieties/canonical_bundle
 - id: genus_g_n_-point_degree_beta_gromov-witten_invariant
   en: Genus $g$, $n$-point, degree $\beta$ Gromov-Witten invariant
   ko: 그로모프-위튼 불변량
@@ -6463,6 +6491,20 @@ H:
   defs:
   - label: '[복소기하학] §Hodge 이론'
     url: /ko/math/complex_geometry/hodge_theory
+- id: hodge_diamond
+  en: Hodge diamond
+  ko: 호지 다이아몬드
+  primary: en
+  defs:
+  - label: '[대수다양체] §K3 Surfaces'
+    url: /ko/math/algebraic_varieties/k3_surfaces
+- id: hodge_index_theorem
+  en: Hodge index theorem
+  ko: 호지 지표 정리
+  primary: en
+  defs:
+  - label: '[대수다양체] §곡면에서의 리만-로흐 정리'
+    url: /ko/math/algebraic_varieties/riemann_roch_surfaces
 - id: hodge_number
   en: Hodge number
   ko: 호지 수
@@ -7827,6 +7869,13 @@ J:
   - label: '[미적분학] §연속함수'
     url: /ko/math/calculus/continuity
 K:
+- id: k3_surface
+  en: K3 surface
+  ko: K3 곡면
+  primary: en
+  defs:
+  - label: '[대수다양체] §K3 Surfaces'
+    url: /ko/math/algebraic_varieties/k3_surfaces
 - id: k_-simplex
   en: $k$-simplex
   ko: $k$-심플렉스, $k$-단체
@@ -7979,6 +8028,13 @@ K:
     url: /ko/math/commutative_algebra/Krull_dimension
   - label: '[위상수학] §차원'
     url: /ko/math/topology/dimension
+- id: kummer_surface
+  en: Kummer surface
+  ko: 쿰머 곡면
+  primary: en
+  defs:
+  - label: '[대수다양체] §K3 Surfaces'
+    url: /ko/math/algebraic_varieties/k3_surfaces
 - id: künneth_formula
   en: Künneth formula
   ko: 퀴네트 공식
@@ -10774,6 +10830,13 @@ P:
   defs:
   - label: '[대수다양체] §그라스만 다양체'
     url: /ko/math/algebraic_varieties/grassmannians
+- id: plurigenus
+  en: plurigenus
+  ko: 다중 종수
+  primary: en
+  defs:
+  - label: '[대수다양체] §곡면에서의 리만-로흐 정리'
+    url: /ko/math/algebraic_varieties/riemann_roch_surfaces
 - id: plus_construction
   en: plus construction
   ko: plus 구성
@@ -11505,6 +11568,13 @@ Q:
   - label: 르장드르 기호
     lang: ko
     id: legendre_symbol
+- id: quartic_surface
+  en: quartic surface
+  ko: 4차 곡면
+  primary: en
+  defs:
+  - label: '[대수다양체] §K3 Surfaces'
+    url: /ko/math/algebraic_varieties/k3_surfaces
 - id: quasi-coherent_sheaf
   en: quasi-coherent sheaf
   ko: 준연접층
@@ -12336,6 +12406,13 @@ R:
 - id: riemann_roch_dimension
   en: Riemann–Roch dimension
   ko: 리만-로흐 차원
+  primary: en
+  defs:
+  - label: '[대수다양체] §곡선에서의 리만-로흐 정리'
+    url: /ko/math/algebraic_varieties/riemann_roch_theorem
+- id: riemann-roch_theorem
+  en: Riemann-Roch theorem
+  ko: 리만-로흐 정리
   primary: en
   defs:
   - label: '[대수다양체] §곡선에서의 리만-로흐 정리'
@@ -14378,6 +14455,13 @@ T:
   defs:
   - label: '[표현론] §반사 함자'
     url: /ko/math/representation_theory/reflection_functors
+- id: todd_class
+  en: Todd class
+  ko: 토드 클래스
+  primary: en
+  defs:
+  - label: '[대수다양체] §Todd Class'
+    url: /ko/math/algebraic_varieties/todd_class
 - id: topological_invariant
   en: topological invariant
   ko: 위상적 불변량
