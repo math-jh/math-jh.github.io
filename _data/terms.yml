@@ -167,6 +167,13 @@ A:
   see:
   - label: Abelian group
     id: abelian_group
+- id: absolute_convergence
+  en: absolute convergence
+  ko: 절대수렴
+  primary: ko
+  defs:
+  - label: '[미적분학] §무한급수'
+    url: /ko/math/calculus/series
 - id: absolute_value
   en: absolute value
   ko: 절댓값
@@ -1414,6 +1421,13 @@ B:
   defs:
   - label: '[집합론] §순서집합의 원소들'
     url: /ko/math/set_theory/elements_in_ordered_set
+- id: bounded_function
+  en: bounded function
+  ko: 유계함수
+  primary: en
+  defs:
+  - label: '[해석학] §Riemann 적분'
+    url: /ko/math/analysis/riemann_integral
 - id: bounded_sequence
   en: bounded sequence
   ko: 유계수열
@@ -2156,6 +2170,8 @@ C:
   defs:
   - label: '[위상수학] §집합의 내부, 폐포, 경계'
     url: /ko/math/topology/other_concepts
+  - label: '[해석학] §열린집합과 닫힌집합'
+    url: /ko/math/analysis/open_and_closed_sets
 - id: closed_subscheme
   en: closed subscheme
   ko: 닫힌 부분스킴
@@ -3055,6 +3071,8 @@ C:
   defs:
   - label: '[위상수학] §연속함수'
     url: /ko/math/topology/continuous_functions
+  - label: '[해석학] §함수의 극한과 연속'
+    url: /ko/math/analysis/limits_and_continuity
 - id: continuous_function
   en: continuous function
   ko: 연속함수
@@ -3072,6 +3090,13 @@ C:
   defs:
   - label: '[범주론] §극한'
     url: /ko/math/category_theory/limits
+- id: continuously_differentiable
+  en: continuously differentiable
+  ko: 연속미분가능
+  primary: ko
+  defs:
+  - label: '[해석학] §다변수 미분'
+    url: /ko/math/analysis/multivariable_differentiation
 - id: continuum_hypothesis
   en: continuum hypothesis
   ko: 연속체가설
@@ -3506,6 +3531,13 @@ D:
   see:
   - label: Symplectic manifold
     id: symplectic_manifold
+- id: darboux_sum
+  en: Darboux sum
+  ko: 다르부 합
+  primary: en
+  defs:
+  - label: '[해석학] §Riemann 적분'
+    url: /ko/math/analysis/riemann_integral
 - id: de_Morgan's_law
   en: de Morgan's law
   ko: 드 모르간 법칙
@@ -5122,6 +5154,13 @@ E:
   defs:
   - label: '[미분다양체] §미분형식'
     url: /ko/math/manifolds/differential_forms
+- id: extremum
+  en: extremum
+  ko: 극값
+  primary: ko
+  defs:
+  - label: '[미적분학] §평균값 정리'
+    url: /ko/math/calculus/mean_value_theorem
 - id: extrinsic
   en: extrinsic
   ko: 외재적
@@ -5213,6 +5252,13 @@ F:
   see:
   - label: Toric variety
     id: toric_variety
+- id: fermat_s_theorem
+  en: 'Fermat''s theorem'
+  ko: 페르마 정리
+  primary: en
+  defs:
+  - label: '[미적분학] §평균값 정리'
+    url: /ko/math/calculus/mean_value_theorem
 - id: fiber
   en: fiber
   ko: 올
@@ -8329,6 +8375,13 @@ L:
   - label: 내적공간
     lang: ko
     id: inner_product_space
+- id: l_hôpital_s_rule
+  en: 'L''Hôpital''s rule'
+  ko: 로피탈 법칙
+  primary: en
+  defs:
+  - label: '[해석학] §평균값 정리와 테일러 정리'
+    url: /ko/math/analysis/mean_value_theorem
 - id: lagrange_multiplier
   en: Lagrange multiplier
   ko: 라그랑주 승수
@@ -8812,6 +8865,13 @@ L:
     url: /ko/math/category_theory/limits
   - label: '[해석학] §수열의 수렴'
     url: /ko/math/analysis/convergence_of_sequences
+- id: limit_function
+  en: limit function
+  ko: 극한함수
+  primary: ko
+  defs:
+  - label: '[해석학] §함수열과 점별수렴'
+    url: /ko/math/analysis/sequences_of_functions
 - id: limit_ordinal
   en: limit ordinal
   ko: 극한서수
@@ -8831,6 +8891,8 @@ L:
     url: /ko/math/topology/other_concepts
   - label: '[위상수학] §옹골성과 필터의 수렴'
     url: /ko/math/topology/filter_convergence
+  - label: '[해석학] §함수의 극한과 연속'
+    url: /ko/math/analysis/limits_and_continuity
 - id: limit_point_compact
   en: limit point compact
   ko: 극한점 옹골
@@ -8992,6 +9054,13 @@ L:
     url: /ko/math/analysis/continuous_functions
   - label: '[해석학] §미분방정식의 존재성과 유일성'
     url: /ko/math/analysis/existence_uniqueness_ode
+- id: lipschitz_continuity
+  en: Lipschitz continuity
+  ko: 립시츠 연속
+  primary: ko
+  defs:
+  - label: '[해석학] §연속함수의 성질'
+    url: /ko/math/analysis/continuous_functions
 - id: lipschitz_continuous
   en: Lipschitz continuous
   ko: 립시츠 연속
@@ -9521,6 +9590,13 @@ M:
   defs:
   - label: '[리만기하학] §제2기본형식'
     url: /ko/math/riemannian_geometry/second_fundamental_form
+- id: mean_value_theorem
+  en: mean value theorem
+  ko: 평균값 정리
+  primary: ko
+  defs:
+  - label: '[미적분학] §평균값 정리'
+    url: /ko/math/calculus/mean_value_theorem
 - id: meet
   en: meet
   ko: 만남
@@ -9800,6 +9876,20 @@ M:
 - id: monotone_sequence
   en: monotone sequence
   ko: 단조수열
+  primary: ko
+  defs:
+  - label: '[해석학] §수열의 수렴'
+    url: /ko/math/analysis/convergence_of_sequences
+- id: monotonic_function
+  en: monotonic function
+  ko: 단조함수
+  primary: ko
+  defs:
+  - label: '[집합론] §단조함수'
+    url: /ko/math/set_theory/monotone_functions
+- id: monotonicity
+  en: monotonicity
+  ko: 단조성
   primary: ko
   defs:
   - label: '[해석학] §수열의 수렴'
@@ -10578,6 +10668,8 @@ O:
   defs:
   - label: '[위상수학] §열린집합'
     url: /ko/math/topology/open_sets
+  - label: '[해석학] §열린집합과 닫힌집합'
+    url: /ko/math/analysis/open_and_closed_sets
   see:
   - label: Closed set
     id: closed_set
@@ -12222,6 +12314,13 @@ R:
     id: rank
   - label: Vector bundle
     id: vector_bundle
+- id: ratio_test
+  en: ratio test
+  ko: 비판정
+  primary: ko
+  defs:
+  - label: '[미적분학] §무한급수'
+    url: /ko/math/calculus/series
 - id: rational
   en: rational
   ko: 유리
@@ -12972,6 +13071,13 @@ R:
   see:
   - label: Locally ringed space
     id: locally_ringed_space
+- id: rolle_s_theorem
+  en: 'Rolle''s theorem'
+  ko: 롤의 정리
+  primary: ko
+  defs:
+  - label: '[미적분학] §평균값 정리'
+    url: /ko/math/calculus/mean_value_theorem
 - id: root
   en: root
   ko: 근
@@ -12993,6 +13099,13 @@ R:
   defs:
   - label: '[리 이론] §근계'
     url: /ko/math/lie_theory/root_systems
+- id: root_test
+  en: root test
+  ko: 근판정
+  primary: ko
+  defs:
+  - label: '[미적분학] §무한급수'
+    url: /ko/math/calculus/series
 - id: row_echelon_matrix
   en: row échelon matrix
   ko: 행사다리꼴행렬
@@ -14770,6 +14883,20 @@ T:
   defs:
   - label: '[미적분학] §테일러 정리'
     url: /ko/math/calculus/taylor_theorem
+- id: taylor_s_theorem
+  en: 'Taylor''s theorem'
+  ko: 테일러 정리
+  primary: ko
+  defs:
+  - label: '[미적분학] §테일러 정리'
+    url: /ko/math/calculus/taylor_theorem
+- id: taylor_series
+  en: Taylor series
+  ko: 테일러 급수
+  primary: ko
+  defs:
+  - label: '[미적분학] §테일러 정리'
+    url: /ko/math/calculus/taylor_theorem
 - id: telescoping_series
   en: telescoping series
   ko: 망원급수
@@ -14809,6 +14936,13 @@ T:
     url: /ko/math/algebraic_structures/operations_of_algebras
   - label: '[다중선형대수학] §텐서대수'
     url: /ko/math/multilinear_algebra/tensor_algebras
+- id: term-by-term_differentiation
+  en: term-by-term differentiation
+  ko: 항별 미분
+  primary: ko
+  defs:
+  - label: '[해석학] §함수열과 점별수렴'
+    url: /ko/math/analysis/sequences_of_functions
 - id: terminal_object
   en: terminal object
   ko: 끝 대상

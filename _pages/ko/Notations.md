@@ -29,7 +29,7 @@ published: false
     <p class="term-index__sublabel">관례 문자</p>
     <ul class="term-index__list">
       {%- for n in g.conventions %}
-      <li class="term-index__entry{% unless n.defs and n.defs != empty %} term-index__entry--bare{% endunless %}" data-search="{{ n.symbol | remove: '\' | downcase }} {{ n.meaning | remove: '$' | downcase }}">
+      <li class="term-index__entry{% unless n.defs and n.defs != empty %} term-index__entry--bare{% endunless %}" data-search="{{ n.symbol | remove: '\' | downcase | escape }} {{ n.meaning | remove: '$' | downcase | escape }}">
         <span class="term-index__t">
           <b class="term-index__term">${{ n.symbol }}$</b><span class="term-index__alt"> · {{ n.meaning }}</span>
         </span><span class="term-index__lead"></span>
@@ -47,7 +47,7 @@ published: false
     {%- endif %}
     <ul class="term-index__list">
       {%- for n in g.items %}
-      <li class="term-index__entry{% unless n.defs and n.defs != empty %} term-index__entry--bare{% endunless %}" data-search="{{ n.symbol | remove: '\' | downcase }} {{ n.meaning | remove: '$' | downcase }}">
+      <li class="term-index__entry{% unless n.defs and n.defs != empty %} term-index__entry--bare{% endunless %}" data-search="{{ n.symbol | remove: '\' | downcase | escape }} {{ n.meaning | remove: '$' | downcase | escape }}">
         <span class="term-index__t">
           <b class="term-index__term">${{ n.symbol }}$</b><span class="term-index__alt"> · {{ n.meaning }}</span>
         </span><span class="term-index__lead"></span>
