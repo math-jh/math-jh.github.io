@@ -9936,6 +9936,13 @@ M:
   defs:
   - label: '[집합론] §단조함수'
     url: /ko/math/set_theory/monotone_functions
+- id: monotone_convergence
+  en: monotone convergence
+  ko: 단조수렴
+  primary: ko
+  defs:
+  - label: '[해석학] §수열의 수렴'
+    url: /ko/math/analysis/convergence_of_sequences
 - id: monotone_convergence_theorem
   en: monotone convergence theorem
   ko: 단조수렴정리
@@ -10196,6 +10203,13 @@ N:
   - label: 상대 여접 복합체
     lang: ko
     id: relative_cotangent_complex
+- id: natural_constant
+  en: natural constant
+  ko: 자연상수
+  primary: ko
+  defs:
+  - label: '[미적분학] §수열의 극한'
+    url: /ko/math/calculus/sequences
 - id: natural_isomorphism
   en: natural isomorphism
   ko: 자연동형변환
