@@ -1955,7 +1955,7 @@
   title: 다중선형대수학
   conventions:
   - symbol: A
-    meaning: 가환환
+    meaning: ring
     defs:
     - label: §환의 정의
       url: /ko/math/algebraic_structures/rings
@@ -2425,7 +2425,7 @@
   title: 가환대수학
   conventions:
   - symbol: A, B
-    meaning: 가환환
+    meaning: commutative ring
     defs:
     - label: §환의 정의
       url: /ko/math/algebraic_structures/rings
