@@ -1120,6 +1120,13 @@ B:
     id: vector_space
   - label: Dual basis
     id: dual_basis
+- id: bézout_theorem
+  en: Bézout theorem
+  ko: 베주 정리
+  primary: en
+  defs:
+  - label: '[대수다양체] §베주 정리'
+    url: /ko/math/algebraic_varieties/bezout_theorem
 - id: bifunctor
   en: bifunctor
   ko: 쌍함자
@@ -3353,6 +3360,13 @@ C:
   defs:
   - label: '[복소기하학] §Kodaira 매장정리'
     url: /ko/math/complex_geometry/kodaira_embedding_theorem
+- id: curve
+  en: curve
+  ko: 곡선
+  primary: ko
+  defs:
+  - label: '[대수다양체] §아핀다양체'
+    url: /ko/math/algebraic_varieties/affine_varieties
 - id: cusp
   en: cusp
   ko: 첨점
