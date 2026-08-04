@@ -70,7 +70,11 @@ $A$-algebra $B$에 대하여 다음이 성립한다.
 
 $$\Omega_{A_h/A}\otimes_{A_h}B \longrightarrow \Omega_{B/A} \longrightarrow \Omega_{B/A_h} \longrightarrow 0$$
 
-을 얻는다. 그런데 universal derivation $d:A \rightarrow \Omega_{A/A}$는 Leibniz 법칙으로부터 $d1=d(1\cdot 1)=2d1$, 곧 $d1=0$을 만족하고 $A$-linear이므로 임의의 $a\in A$에 대하여 $da=a\cdot d1=0$이며, 따라서 $\Omega_{A/A}=0$이다. 여기에 첫째 주장을 $B=A$와 $g=h$에 대하여 적용하면 $\Omega_{A_h/A}\cong(\Omega_{A/A})_h=0$이므로 위 sequence의 첫 항이 소멸하고, 남은 $\Omega_{B/A} \rightarrow \Omega_{B/A_h}$는 전사이면서 kernel이 $0$, 곧 isomorphism이다.
+을 얻는다. 그런데 universal derivation $d:A \rightarrow \Omega_{A/A}$는 Leibniz 법칙으로부터 
+
+$$d(1)=d(1\cdot 1)=2d(1),$$
+
+즉 $d(1)=0$을 만족하고 $A$-linear이므로 임의의 $a\in A$에 대하여 $da=a\cdot d(1)=0$이며, 따라서 $\Omega_{A/A}=0$이다. 여기에 첫째 주장을 $B=A$와 $g=h$에 대하여 적용하면 $\Omega_{A_h/A}\cong(\Omega_{A/A})_h=0$이므로 위 sequence의 첫 항이 소멸하고, 남은 $\Omega_{B/A} \rightarrow \Omega_{B/A_h}$가 isomorphism이다.
 :::
 
 이제 $\varphi(U)\subseteq V$인 affine open subset들 $U=\Spec B\subseteq X$와 $V=\Spec A\subseteq S$마다 정의된 local model $\widetilde{\Omega_{B/A}}$를 이어붙여야 한다. 이러한 모양의 gluing은 [§올곱, ⁋정리 8](/ko/math/scheme_theory/fiber_products#thm8)에서 fiber product를 구성할 때 이미 거쳤으며, 그곳에서도 factor 쪽과 base 쪽의 축소를 각각 확인한 뒤 조각들을 이어붙였다. 
