@@ -167,6 +167,13 @@ A:
   see:
   - label: Abelian group
     id: abelian_group
+- id: absolute_value
+  en: absolute value
+  ko: 절댓값
+  primary: ko
+  defs:
+  - label: '[미적분학] §미분과 도함수'
+    url: /ko/math/calculus/derivatives
 - id: absolutely_convergent
   en: absolutely convergent
   ko: 절대수렴
@@ -1865,6 +1872,13 @@ C:
     url: /ko/math/category_theory/abelian_categories
   - label: '[호몰로지 대수학] §호몰로지'
     url: /ko/math/homological_algebra/homology
+- id: chain_rule
+  en: chain rule
+  ko: 연쇄법칙
+  primary: ko
+  defs:
+  - label: '[미적분학] §미분법'
+    url: /ko/math/calculus/differentiation_rules
 - id: change-of-basis_matrix
   en: change-of-basis matrix
   ko: 기저변환행렬
@@ -3185,6 +3199,13 @@ C:
   defs:
   - label: '[대수다양체] §아핀다양체'
     url: /ko/math/algebraic_varieties/affine_varieties
+- id: coordinate_transformation
+  en: coordinate transformation
+  ko: 좌표변환
+  primary: ko
+  defs:
+  - label: '[미적분학] §다변수함수와 편미분'
+    url: /ko/math/calculus/partial_derivatives
 - id: coprimary_submodule
   en: coprimary submodule
   ko: 쌍대으뜸부분가군
@@ -3966,6 +3987,20 @@ D:
   defs:
   - label: '[미분다양체] §미분사상'
     url: /ko/math/manifolds/differentials
+- id: difference_quotient
+  en: difference quotient
+  ko: 차분몫
+  primary: en
+  defs:
+  - label: '[해석학] §미분'
+    url: /ko/math/analysis/differentiation
+- id: differentiability
+  en: differentiability
+  ko: 미분가능성
+  primary: ko
+  defs:
+  - label: '[미적분학] §미분과 도함수'
+    url: /ko/math/calculus/derivatives
 - id: differentiable
   en: differentiable
   ko: 미분가능
@@ -3996,6 +4031,13 @@ D:
   defs:
   - label: '[미분다양체] §미분사상'
     url: /ko/math/manifolds/differentials
+- id: differential_equation
+  en: differential equation
+  ko: 미분방정식
+  primary: ko
+  defs:
+  - label: '[해석학] §미분방정식의 존재성과 유일성'
+    url: /ko/math/analysis/existence_uniqueness_ode
 - id: differential_form
   en: differential form
   ko: 미분형식
@@ -4017,6 +4059,13 @@ D:
   defs:
   - label: '[미분다양체] §미분형식'
     url: /ko/math/manifolds/differential_forms
+- id: differentiation
+  en: differentiation
+  ko: 미분
+  primary: ko
+  defs:
+  - label: '[해석학] §미분'
+    url: /ko/math/analysis/differentiation
 - id: dihedral_group
   en: dihedral group
   ko: 이면군
@@ -7081,6 +7130,13 @@ I:
   defs:
   - label: '[미적분학] §미분법'
     url: /ko/math/calculus/differentiation_rules
+- id: implicit_function_theorem
+  en: implicit function theorem
+  ko: 음함수 정리
+  primary: ko
+  defs:
+  - label: '[해석학] §다변수 미분'
+    url: /ko/math/analysis/multivariable_differentiation
 - id: improper_integral
   en: improper integral
   ko: 이상적분
@@ -7429,6 +7485,13 @@ I:
     id: principal_ideal_domain
   - label: Unique factorization domain
     id: unique_factorization_domain
+- id: integral_equation
+  en: integral equation
+  ko: 적분방정식
+  primary: en
+  defs:
+  - label: '[해석학] §미분방정식의 존재성과 유일성'
+    url: /ko/math/analysis/existence_uniqueness_ode
 - id: integral_extension
   en: integral extension
   ko: 정수적 확장
@@ -7478,6 +7541,13 @@ I:
   defs:
   - label: '[해석학] §미적분의 기본정리'
     url: /ko/math/analysis/fundamental_theorem_of_calculus
+- id: integration_by_parts
+  en: integration by parts
+  ko: 부분적분
+  primary: ko
+  defs:
+  - label: '[미적분학] §적분'
+    url: /ko/math/calculus/integration
 - id: interior
   en: interior
   ko: 내부
@@ -7624,6 +7694,20 @@ I:
   defs:
   - label: '[선형대수학] §가환군과 체'
     url: /ko/math/linear_algebra/fields
+- id: inverse_function
+  en: inverse function
+  ko: 역함수
+  primary: ko
+  defs:
+  - label: '[미적분학] §연속함수'
+    url: /ko/math/calculus/continuity
+- id: inverse_function_theorem
+  en: inverse function theorem
+  ko: 역함수 정리
+  primary: ko
+  defs:
+  - label: '[해석학] §다변수 미분'
+    url: /ko/math/analysis/multivariable_differentiation
 - id: inverse_image_sheaf
   en: inverse image sheaf
   ko: 역상층
@@ -7945,6 +8029,13 @@ J:
   - label: 르장드르 기호
     lang: ko
     id: legendre_symbol
+- id: jacobian
+  en: Jacobian
+  ko: 야코비안
+  primary: en
+  defs:
+  - label: '[미분다양체] §미분사상'
+    url: /ko/math/manifolds/differentials
 - id: jacobian_matrix
   en: Jacobian matrix
   ko: 야코비 행렬
@@ -8895,6 +8986,15 @@ L:
 - id: lipschitz_constant
   en: Lipschitz constant
   ko: 립시츠 상수
+  primary: ko
+  defs:
+  - label: '[해석학] §연속함수의 성질'
+    url: /ko/math/analysis/continuous_functions
+  - label: '[해석학] §미분방정식의 존재성과 유일성'
+    url: /ko/math/analysis/existence_uniqueness_ode
+- id: lipschitz_continuous
+  en: Lipschitz continuous
+  ko: 립시츠 연속
   primary: ko
   defs:
   - label: '[해석학] §연속함수의 성질'
@@ -11520,6 +11620,13 @@ P:
   defs:
   - label: '[대수적 구조] §대수적 구조'
     url: /ko/math/algebraic_structures/algebraic_structures
+- id: product_rule
+  en: product rule
+  ko: 곱의 미분법
+  primary: ko
+  defs:
+  - label: '[미적분학] §미분법'
+    url: /ko/math/calculus/differentiation_rules
 - id: product_topology
   en: product topology
   ko: 곱 위상
@@ -11981,6 +12088,13 @@ Q:
   defs:
   - label: '[대수적 구조] §몫환, 환 동형사상'
     url: /ko/math/algebraic_structures/quotient_rings
+- id: quotient_rule
+  en: quotient rule
+  ko: 몫의 미분법
+  primary: en
+  defs:
+  - label: '[미적분학] §미분법'
+    url: /ko/math/calculus/differentiation_rules
 - id: quotient_set
   en: quotient set
   ko: 몫집합
