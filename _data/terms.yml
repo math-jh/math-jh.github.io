@@ -669,6 +669,13 @@ A:
   defs:
   - label: '[미적분학] §곡선과 벡터함수'
     url: /ko/math/calculus/vector_functions
+- id: archimedean_property
+  en: Archimedean property
+  ko: 아르키메데스 성질
+  primary: en
+  defs:
+  - label: '[해석학] §실수의 완비성'
+    url: /ko/math/analysis/completeness_of_reals
 - id: argument
   en: argument
   ko: 편각
@@ -1403,6 +1410,13 @@ B:
 - id: bounded_sequence
   en: bounded sequence
   ko: 유계수열
+  primary: en
+  defs:
+  - label: '[해석학] §수열의 수렴'
+    url: /ko/math/analysis/convergence_of_sequences
+- id: boundedness
+  en: boundedness
+  ko: 유계성
   primary: en
   defs:
   - label: '[해석학] §수열의 수렴'
@@ -3013,6 +3027,13 @@ C:
   defs:
   - label: '[정수론] §연분수'
     url: /ko/math/number_theory/continued_fractions
+- id: continuity
+  en: continuity
+  ko: 연속성
+  primary: ko
+  defs:
+  - label: '[해석학] §함수의 극한과 연속'
+    url: /ko/math/analysis/limits_and_continuity
 - id: continuous
   en: continuous
   ko: 연속
@@ -3505,6 +3526,13 @@ D:
     id: differential_form
   - label: Exterior derivative
     id: exterior_derivative
+- id: decimal_expansion
+  en: decimal expansion
+  ko: 십진 전개
+  primary: en
+  defs:
+  - label: '[해석학] §실수의 완비성'
+    url: /ko/math/analysis/completeness_of_reals
 - id: decreasing
   en: decreasing
   ko: 감소
@@ -3675,6 +3703,13 @@ D:
   defs:
   - label: '[위상수학] §집합의 내부, 폐포, 경계'
     url: /ko/math/topology/other_concepts
+- id: density
+  en: density
+  ko: 조밀성
+  primary: en
+  defs:
+  - label: '[해석학] §실수의 완비성'
+    url: /ko/math/analysis/completeness_of_reals
 - id: depth
   en: depth
   ko: 깊이
@@ -7474,6 +7509,13 @@ I:
   defs:
   - label: '[층론] §Perverse 층'
     url: /ko/math/sheaf_theory/perverse_sheaves
+- id: intermediate_value_theorem
+  en: intermediate value theorem
+  ko: 중간값 정리
+  primary: ko
+  defs:
+  - label: '[해석학] §연결성과 중간값 정리'
+    url: /ko/math/analysis/connectedness
 - id: internal_hom
   en: internal $\Hom$
   ko: 내부 $\Hom$
@@ -9634,6 +9676,13 @@ M:
   defs:
   - label: '[집합론] §단조함수'
     url: /ko/math/set_theory/monotone_functions
+- id: monotone_convergence_theorem
+  en: monotone convergence theorem
+  ko: 단조수렴정리
+  primary: ko
+  defs:
+  - label: '[해석학] §수열의 수렴'
+    url: /ko/math/analysis/convergence_of_sequences
 - id: monotone_function
   en: monotone function
   ko: 단조함수
@@ -9960,6 +10009,13 @@ N:
   defs:
   - label: '[해석학] §부분수열과 Bolzano–Weierstrass 정리'
     url: /ko/math/analysis/bolzano_weierstrass
+- id: nested_interval_theorem
+  en: nested interval theorem
+  ko: 중첩구간정리
+  primary: en
+  defs:
+  - label: '[해석학] §실수의 완비성'
+    url: /ko/math/analysis/completeness_of_reals
 - id: nijenhuis_tensor
   en: Nijenhuis tensor
   ko: 네이엔하위스 텐서
@@ -13190,6 +13246,13 @@ S:
     url: /ko/math/analysis/convergence_of_sequences
   - label: '[위상수학] §하우스도르프 공간'
     url: /ko/math/topology/Hausdorff_spaces
+- id: sequential_compactness
+  en: sequential compactness
+  ko: 점렬컴팩트성
+  primary: ko
+  defs:
+  - label: '[해석학] §컴팩트성'
+    url: /ko/math/analysis/compactness
 - id: sequentially_compact
   en: sequentially compact
   ko: 점렬컴팩트
@@ -13796,6 +13859,13 @@ S:
   defs:
   - label: '[다중선형대수학] §기저변환'
     url: /ko/math/multilinear_algebra/change_of_basis
+- id: square_root
+  en: square root
+  ko: 제곱근
+  primary: ko
+  defs:
+  - label: '[해석학] §실수의 완비성'
+    url: /ko/math/analysis/completeness_of_reals
 - id: square-zero_extension
   en: square-zero extension
   ko: 제곱영 확대
@@ -13803,6 +13873,13 @@ S:
   defs:
   - label: '[유도대수기하학] §변형이론과 여접 복합체'
     url: /ko/math/derived_algebraic_geometry/deformation_theory
+- id: squeeze_theorem
+  en: squeeze theorem
+  ko: 조임정리
+  primary: ko
+  defs:
+  - label: '[미적분학] §수열의 극한'
+    url: /ko/math/calculus/sequences
 - id: stability
   en: stability
   ko: 안정성
@@ -15072,6 +15149,13 @@ U:
   - label: 이항관계
     lang: ko
     id: binary_relation
+- id: uniform_continuity
+  en: uniform continuity
+  ko: 균등연속성
+  primary: ko
+  defs:
+  - label: '[해석학] §연속함수의 성질'
+    url: /ko/math/analysis/continuous_functions
 - id: uniform_convergence
   en: uniform convergence
   ko: 균등수렴
