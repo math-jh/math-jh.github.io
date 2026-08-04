@@ -7932,6 +7932,9 @@ K:
   defs:
   - label: '[대수다양체] §K3 Surfaces'
     url: /ko/math/algebraic_varieties/k3_surfaces
+  see:
+  - label: Kummer surface
+    id: kummer_surface
 - id: k_-simplex
   en: $k$-simplex
   ko: $k$-심플렉스, $k$-단체
@@ -7942,6 +7945,8 @@ K:
   see:
   - label: Singular $k$-simplex
     id: singular_k_-simplex
+  - label: Singular homology
+    id: singular_homology
 - id: mathbb_k_-vector_space
   en: $\mathbb{K}$-vector space
   ko: $\mathbb{K}$-벡터공간
@@ -7949,6 +7954,13 @@ K:
   defs:
   - label: '[선형대수학] §벡터공간'
     url: /ko/math/linear_algebra/vector_spaces
+  see:
+  - label: 벡터공간
+    lang: ko
+    id: vector_space
+  - label: 선형사상
+    lang: ko
+    id: linear_map
 - id: kähler_class
   en: Kähler class
   ko: 켈러 류
@@ -7967,6 +7979,8 @@ K:
     id: integral_kähler_form
   - label: Kähler metric
     id: kähler_metric
+  - label: Ample line bundle
+    id: ample_line_bundle
 - id: kähler_differential_module
   en: Kähler differential module
   ko: 캘러 미분가군
@@ -7991,6 +8005,9 @@ K:
   defs:
   - label: '[복소기하학] §Kähler 다양체'
     url: /ko/math/complex_geometry/kahler_manifolds
+  see:
+  - label: Symplectic form
+    id: symplectic_form
 - id: kähler_manifold
   en: Kähler manifold
   ko: 켈러 다양체
@@ -7998,6 +8015,11 @@ K:
   defs:
   - label: '[복소기하학] §Kähler 다양체'
     url: /ko/math/complex_geometry/kahler_manifolds
+  see:
+  - label: Complex manifold
+    id: complex_manifold
+  - label: Symplectic manifold
+    id: symplectic_manifold
 - id: kähler_metric
   en: Kähler metric
   ko: 켈러 계량
@@ -8005,6 +8027,9 @@ K:
   defs:
   - label: '[복소기하학] §Kähler 다양체'
     url: /ko/math/complex_geometry/kahler_manifolds
+  see:
+  - label: Hermitian metric
+    id: hermitian_metric
 - id: kähler_potential
   en: Kähler potential
   ko: 켈러 퍼텐셜
@@ -8033,6 +8058,9 @@ K:
   defs:
   - label: '[리 이론] §근계'
     url: /ko/math/lie_theory/root_systems
+  see:
+  - label: Lie algebra
+    id: lie_algebra
 - id: kodaira_dimension
   en: Kodaira dimension
   ko: 고다이라 차원
@@ -8154,6 +8182,8 @@ L:
     id: symplectic_manifold
   - label: Symplectic form
     id: symplectic_form
+  - label: Isotropic subspace
+    id: isotropic_subspace
 - id: lagrangian_subspace
   en: Lagrangian subspace
   ko: 라그랑지안 부분공간
@@ -8164,6 +8194,8 @@ L:
   see:
   - label: Symplectic vector space
     id: symplectic_vector_space
+  - label: Isotropic subspace
+    id: isotropic_subspace
 - id: landau-ginzburg_model
   en: Landau-Ginzburg model
   ko: 란다우-긴즈부르크 모델
@@ -8213,6 +8245,9 @@ L:
   defs:
   - label: '[토릭 기하학] §파노 다양체'
     url: /ko/math/toric_geometry/reflexive_polytope_fano
+  see:
+  - label: Lattice
+    id: lattice
 - id: Laurent_series
   en: Laurent series
   ko: 로랑 급수
@@ -8222,6 +8257,10 @@ L:
     url: /ko/math/complex_analysis/isolated_singularities
   - label: '[대수다양체] §사영공간의 코호몰로지'
     url: /ko/math/algebraic_varieties/cohomology_of_projective_spaces
+  see:
+  - label: 멱급수
+    lang: ko
+    id: power_series
 - id: leading_coefficient
   en: leading coefficient
   ko: 선행계수
@@ -8229,6 +8268,10 @@ L:
   defs:
   - label: '[선형대수학] §가우스 소거법'
     url: /ko/math/linear_algebra/Gaussian_elimination
+  see:
+  - label: 최고차항
+    lang: ko
+    id: leading_term
 - id: leading_term
   en: leading term
   ko: 최고차항
@@ -8236,6 +8279,10 @@ L:
   defs:
   - label: '[선형대수학] §부분공간'
     url: /ko/math/linear_algebra/subspaces
+  see:
+  - label: 선행계수
+    lang: ko
+    id: leading_coefficient
 - id: least
   en: least
   ko: 최소
@@ -8243,6 +8290,9 @@ L:
   defs:
   - label: '[집합론] §순서집합의 원소들'
     url: /ko/math/set_theory/elements_in_ordered_set
+  see:
+  - label: Greatest
+    id: greatest
 - id: least_common_multiple
   en: least common multiple
   ko: 최소공배수
@@ -8250,6 +8300,10 @@ L:
   defs:
   - label: '[정수론] §나눗셈과 최대공약수'
     url: /ko/math/number_theory/divisibility
+  see:
+  - label: 최대공약수
+    lang: ko
+    id: greatest_common_divisor
 - id: least_element
   en: least element
   ko: 최소원소
@@ -8260,6 +8314,8 @@ L:
   see:
   - label: Minimal element
     id: minimal_element
+  - label: Greatest element
+    id: greatest_element
 - id: least_squares___method
   en: least squares method
   ko: 최소제곱법
@@ -8267,6 +8323,9 @@ L:
   defs:
   - label: '[선형대수학] §최소제곱법'
     url: /ko/math/linear_algebra/least_squares_method
+  see:
+  - label: Moore-Penrose pseudoinverse
+    id: moore-penrose_pseudoinverse
 - id: least_upper_bound
   en: least upper bound
   ko: 최소상계
