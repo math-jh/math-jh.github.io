@@ -276,6 +276,13 @@ A:
     id: left_adjoint
   - label: Right adjoint
     id: right_adjoint
+- id: adjunction_formula
+  en: adjunction formula
+  ko: 수반 공식
+  primary: en
+  defs:
+  - label: '[대수다양체] §곡선에서의 리만-로흐 정리'
+    url: /ko/math/algebraic_varieties/riemann_roch_theorem
 - id: admissible_sink_sequence
   en: admissible sink sequence
   ko: 허용 싱크 나열
@@ -556,6 +563,13 @@ A:
   ko: 풍부한
   primary: en
   note: 'ample (divisor·line bundle) 의미일 때만 영어. 일상 형용사(풍부한 예시·구조·대칭성 등)는 한글 유지'
+  defs:
+  - label: '[대수다양체] §선형계'
+    url: /ko/math/algebraic_varieties/linear_systems
+- id: ample_line_bundle
+  en: ample line bundle
+  ko: 충분 선다발
+  primary: en
   defs:
   - label: '[대수다양체] §선형계'
     url: /ko/math/algebraic_varieties/linear_systems
@@ -1280,6 +1294,13 @@ B:
   defs:
   - label: '[선형대수학] §행렬'
     url: /ko/math/linear_algebra/matrices
+- id: blow-up
+  en: blow-up
+  ko: 블로우업
+  primary: en
+  defs:
+  - label: '[대수다양체] §유리사상'
+    url: /ko/math/algebraic_varieties/rational_maps
 - id: blowup_algebra
   en: blowup algebra
   ko: 부풀림 대수
@@ -5866,6 +5887,13 @@ G:
   defs:
   - label: '[리만기하학] §측지선'
     url: /ko/math/riemannian_geometry/geodesics
+- id: geometric_genus
+  en: geometric genus
+  ko: 기하적 genus
+  primary: en
+  defs:
+  - label: '[대수다양체] §Noether Formula'
+    url: /ko/math/algebraic_varieties/noether_formula
 - id: geometric_multiplicity
   en: geometric multiplicity
   ko: 기하적 중복도
@@ -7425,6 +7453,13 @@ I:
   defs:
   - label: '[대수다양체] §곡면에서의 리만-로흐 정리'
     url: /ko/math/algebraic_varieties/riemann_roch_surfaces
+- id: intersection_product
+  en: intersection product
+  ko: 교차 곱
+  primary: en
+  defs:
+  - label: '[대수다양체] §교차곱'
+    url: /ko/math/algebraic_varieties/intersection_product
 - id: interval
   en: interval
   ko: 구간
@@ -7605,6 +7640,13 @@ I:
     url: /ko/math/representation_theory/representations_of_finite_groups
   - label: '[리 이론] §sl₂의 표현론'
     url: /ko/math/lie_theory/representations_of_sl2
+- id: irregularity
+  en: irregularity
+  ko: 불규칙성
+  primary: en
+  defs:
+  - label: '[대수다양체] §Noether Formula'
+    url: /ko/math/algebraic_varieties/noether_formula
 - id: irrelevant_ideal
   en: irrelevant ideal
   ko: 무관 아이디얼
@@ -7980,6 +8022,13 @@ K:
 - id: kodaira_dimension
   en: Kodaira dimension
   ko: 고다이라 차원
+  primary: en
+  defs:
+  - label: '[대수다양체] §고다이라 소멸정리'
+    url: /ko/math/algebraic_varieties/kodaira_vanishing
+- id: kodaira_vanishing
+  en: Kodaira vanishing
+  ko: 고다이라 소멸정리
   primary: en
   defs:
   - label: '[대수다양체] §고다이라 소멸정리'
@@ -9542,6 +9591,13 @@ M:
   defs:
   - label: '[사교기하학] §Darboux 정리'
     url: /ko/math/symplectic_geometry/darboux_theorem
+- id: moving_lemma
+  en: moving lemma
+  ko: 이동 보조정리
+  primary: en
+  defs:
+  - label: '[대수다양체] §교차곱'
+    url: /ko/math/algebraic_varieties/intersection_product
 - id: multilinear_map
   en: multilinear map
   ko: 다중선형사상
@@ -9827,6 +9883,13 @@ N:
   defs:
   - label: '[사교기하학] §Stable maps의 moduli space'
     url: /ko/math/symplectic_geometry/stable_maps
+- id: noether_formula
+  en: Noether formula
+  ko: Noether 공식
+  primary: en
+  defs:
+  - label: '[대수다양체] §Noether Formula'
+    url: /ko/math/algebraic_varieties/noether_formula
 - id: noetherian
   en: Noetherian module
   ko: 뇌터가군
@@ -11865,6 +11928,13 @@ R:
   defs:
   - label: '[토릭 기하학] §Delzant 구성'
     url: /ko/math/toric_geometry/delzant_construction
+- id: rational_equivalence
+  en: rational equivalence
+  ko: 유리 동치
+  primary: en
+  defs:
+  - label: '[대수다양체] §저우 군'
+    url: /ko/math/algebraic_varieties/chow_groups
 - id: rational_function
   en: rational function
   ko: 유리함수
@@ -12789,6 +12859,13 @@ S:
   defs:
   - label: '[선형대수학] §스펙트럼 정리'
     url: /ko/math/linear_algebra/spectral_theorem
+- id: self-intersection_number
+  en: self-intersection number
+  ko: 자기교차수
+  primary: en
+  defs:
+  - label: '[대수다양체] §곡면에서의 리만-로흐 정리'
+    url: /ko/math/algebraic_varieties/riemann_roch_surfaces
 - id: semi-direct_product
   en: semi-direct product
   ko: 반직접곱
