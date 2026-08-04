@@ -860,6 +860,13 @@ A:
     id: order_relation
   - label: Antisymmetric
     id: antisymmetric
+- id: asymptote
+  en: asymptote
+  ko: 점근선
+  primary: en
+  defs:
+  - label: '[미적분학] §함수의 극한'
+    url: /ko/math/calculus/functions_and_limits
 - id: atlas
   en: atlas
   ko: 좌표첩
@@ -2182,10 +2189,10 @@ C:
   ko: 닫힌집합
   primary: ko
   defs:
-  - label: '[위상수학] §집합의 내부, 폐포, 경계'
-    url: /ko/math/topology/other_concepts
   - label: '[해석학] §열린집합과 닫힌집합'
     url: /ko/math/analysis/open_and_closed_sets
+  - label: '[위상수학] §집합의 내부, 폐포, 경계'
+    url: /ko/math/topology/other_concepts
 - id: closed_subscheme
   en: closed subscheme
   ko: 닫힌 부분스킴
@@ -2541,10 +2548,10 @@ C:
   ko: 옹골
   primary: en
   defs:
-  - label: '[위상수학] §옹골공간'
-    url: /ko/math/topology/compact_spaces
   - label: '[해석학] §컴팩트성'
     url: /ko/math/analysis/compactness
+  - label: '[위상수학] §옹골공간'
+    url: /ko/math/topology/compact_spaces
   see:
   - label: Locally compact
     id: locally_compact
@@ -2863,6 +2870,13 @@ C:
   defs:
   - label: '[정수론] §소수와 산술의 기본정리'
     url: /ko/math/number_theory/primes
+- id: composite_function
+  en: composite function
+  ko: 합성함수
+  primary: ko
+  defs:
+  - label: '[미적분학] §연속함수'
+    url: /ko/math/calculus/continuity
 - id: composition
   en: composition
   ko: 합성
@@ -3090,10 +3104,10 @@ C:
   ko: 연속
   primary: ko
   defs:
-  - label: '[위상수학] §연속함수'
-    url: /ko/math/topology/continuous_functions
   - label: '[해석학] §함수의 극한과 연속'
     url: /ko/math/analysis/limits_and_continuity
+  - label: '[위상수학] §연속함수'
+    url: /ko/math/topology/continuous_functions
 - id: continuous_function
   en: continuous function
   ko: 연속함수
@@ -4241,6 +4255,13 @@ D:
   defs:
   - label: '[해석학] §연결성과 중간값 정리'
     url: /ko/math/analysis/connectedness
+- id: discontinuity
+  en: discontinuity
+  ko: 불연속
+  primary: ko
+  defs:
+  - label: '[미적분학] §함수의 극한'
+    url: /ko/math/calculus/functions_and_limits
 - id: discrete_groupoid
   en: discrete groupoid
   ko: 이산 준군
@@ -4907,6 +4928,13 @@ E:
     url: /ko/math/analysis/sequences_of_functions
 - id: essential
   en: essential
+  ko: 본질적 불연속
+  primary: en
+  defs:
+  - label: '[미적분학] §연속함수'
+    url: /ko/math/calculus/continuity
+- id: essential_discontinuity
+  en: essential discontinuity
   ko: 본질적 불연속
   primary: en
   defs:
@@ -7275,6 +7303,13 @@ I:
   - label: 원시함수
     lang: ko
     id: antiderivative
+- id: indeterminate_form
+  en: indeterminate form
+  ko: 부정형
+  primary: ko
+  defs:
+  - label: '[미적분학] §함수의 극한'
+    url: /ko/math/calculus/functions_and_limits
 - id: index
   en: index
   ko: 인덱스
@@ -8196,6 +8231,13 @@ J:
     url: /ko/math/calculus/functions_and_limits
   - label: '[미적분학] §연속함수'
     url: /ko/math/calculus/continuity
+- id: jump_discontinuity
+  en: jump discontinuity
+  ko: 도약 불연속
+  primary: en
+  defs:
+  - label: '[미적분학] §연속함수'
+    url: /ko/math/calculus/continuity
 K:
 - id: k3_surface
   en: K3 surface
@@ -8929,12 +8971,12 @@ L:
   ko: 극한점
   primary: en
   defs:
+  - label: '[해석학] §함수의 극한과 연속'
+    url: /ko/math/analysis/limits_and_continuity
   - label: '[위상수학] §집합의 내부, 폐포, 경계'
     url: /ko/math/topology/other_concepts
   - label: '[위상수학] §옹골성과 필터의 수렴'
     url: /ko/math/topology/filter_convergence
-  - label: '[해석학] §함수의 극한과 연속'
-    url: /ko/math/analysis/limits_and_continuity
 - id: limit_point_compact
   en: limit point compact
   ko: 극한점 옹골
@@ -10708,10 +10750,10 @@ O:
   ko: 열린집합
   primary: ko
   defs:
-  - label: '[위상수학] §열린집합'
-    url: /ko/math/topology/open_sets
   - label: '[해석학] §열린집합과 닫힌집합'
     url: /ko/math/analysis/open_and_closed_sets
+  - label: '[위상수학] §열린집합'
+    url: /ko/math/topology/open_sets
   see:
   - label: Closed set
     id: closed_set
@@ -11388,6 +11430,13 @@ P:
   defs:
   - label: '[복소해석학] §고립특이점과 Laurent 급수'
     url: /ko/math/complex_analysis/isolated_singularities
+- id: polynomial
+  en: polynomial
+  ko: 다항함수
+  primary: en
+  defs:
+  - label: '[대수적 구조] §등급환'
+    url: /ko/math/algebraic_structures/graded_rings
 - id: polynomial_algebra
   en: polynomial algebra
   ko: 다항식 대수
@@ -11395,6 +11444,13 @@ P:
   defs:
   - label: '[대수적 구조] §대수'
     url: /ko/math/algebraic_structures/algebras
+- id: polynomial_function
+  en: polynomial function
+  ko: 다항함수
+  primary: ko
+  defs:
+  - label: '[미적분학] §함수의 극한'
+    url: /ko/math/calculus/functions_and_limits
 - id: polynomial_ring
   en: polynomial ring
   ko: 다항식환
@@ -12750,6 +12806,13 @@ R:
     url: /ko/math/number_theory/divisibility
 - id: removable
   en: removable
+  ko: 제거가능 불연속
+  primary: en
+  defs:
+  - label: '[미적분학] §연속함수'
+    url: /ko/math/calculus/continuity
+- id: removable_discontinuity
+  en: removable discontinuity
   ko: 제거가능 불연속
   primary: en
   defs:
@@ -14330,6 +14393,8 @@ S:
   defs:
   - label: '[집합론] §단조함수'
     url: /ko/math/set_theory/monotone_functions
+  - label: '[미적분학] §연속함수'
+    url: /ko/math/calculus/continuity
 - id: strictly_monotone_function
   en: strictly monotone function
   ko: 순단조함수
@@ -15325,6 +15390,13 @@ T:
   defs:
   - label: '[호몰로지 대수학] §유도카테고리'
     url: /ko/math/homological_algebra/derived_categories
+- id: trigonometric_function
+  en: trigonometric function
+  ko: 삼각함수
+  primary: ko
+  defs:
+  - label: '[미적분학] §함수의 극한'
+    url: /ko/math/calculus/functions_and_limits
 - id: triple_integral
   en: triple integral
   ko: 삼중적분
