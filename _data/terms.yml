@@ -558,6 +558,13 @@ A:
   defs:
   - label: '[선형대수학] §행렬식'
     url: /ko/math/linear_algebra/determinant
+- id: alternating_series
+  en: alternating series
+  ko: 교대급수
+  primary: ko
+  defs:
+  - label: '[미적분학] §무한급수'
+    url: /ko/math/calculus/series
 - id: amalgamation
   en: amalgamation
   ko: 접합
@@ -905,6 +912,13 @@ A:
   defs:
   - label: '[범주론] §범주'
     url: /ko/math/category_theory/categories
+- id: average_rate_of_change
+  en: average rate of change
+  ko: 평균변화율
+  primary: ko
+  defs:
+  - label: '[미적분학] §미분과 도함수'
+    url: /ko/math/calculus/derivatives
 - id: axiom
   en: axiom
   ko: 공리
@@ -2599,6 +2613,13 @@ C:
   defs:
   - label: '[집합론] §유향집합'
     url: /ko/math/set_theory/directed_set
+- id: comparison_test
+  en: comparison test
+  ko: 비교판정
+  primary: ko
+  defs:
+  - label: '[미적분학] §무한급수'
+    url: /ko/math/calculus/series
 - id: compatible
   en: compatible
   ko: 양립할 수 있는
@@ -5745,6 +5766,13 @@ F:
   defs:
   - label: '[대수다양체] §유리사상'
     url: /ko/math/algebraic_varieties/rational_maps
+- id: function_series
+  en: function series
+  ko: 함수항급수
+  primary: en
+  defs:
+  - label: '[해석학] §균등수렴'
+    url: /ko/math/analysis/uniform_convergence
 - id: functional
   en: functional
   ko: 범함수
@@ -6099,6 +6127,13 @@ G:
   defs:
   - label: '[토릭 기하학] §Cox 구성과 GIT quotient'
     url: /ko/math/toric_geometry/cox_construction
+- id: geometric_series
+  en: geometric series
+  ko: 기하급수
+  primary: ko
+  defs:
+  - label: '[미적분학] §무한급수'
+    url: /ko/math/calculus/series
 - id: germ
   en: germ
   ko: 싹
@@ -6656,6 +6691,13 @@ H:
     url: /ko/math/calculus/partial_derivatives
   - label: '[리만기하학] §접속'
     url: /ko/math/riemannian_geometry/connection
+- id: higher-order_derivative
+  en: higher-order derivative
+  ko: 고계도함수
+  primary: en
+  defs:
+  - label: '[해석학] §평균값 정리와 테일러 정리'
+    url: /ko/math/analysis/mean_value_theorem
 - id: highest_weight
   en: highest weight
   ko: 최고무게
@@ -14555,6 +14597,13 @@ S:
   see:
   - label: Infimum (greatest lower bound)
     id: infimum
+- id: supremum_norm
+  en: supremum norm
+  ko: 상한노름
+  primary: ko
+  defs:
+  - label: '[해석학] §균등수렴'
+    url: /ko/math/analysis/uniform_convergence
 - id: surface_area
   en: surface area
   ko: 곡면넓이
@@ -14822,6 +14871,13 @@ T:
   defs:
   - label: '[미분다양체] §미분사상의 예시들'
     url: /ko/math/manifolds/examples_of_differentials
+- id: tangent_line
+  en: tangent line
+  ko: 접선
+  primary: ko
+  defs:
+  - label: '[미적분학] §미분과 도함수'
+    url: /ko/math/calculus/derivatives
 - id: tangent_sheaf
   en: tangent sheaf
   ko: 접층
