@@ -69,4 +69,30 @@
 	S \arrow[r, "\Delta"'] & S\times S
 \end{tikzcd}
 
+%%FIG comb 곡선: Y에 잠긴 internal 성분과 지정된 접촉 중복도의 external 성분들 (Intro_Reading_Note-4.svg)
+\begin{tikzpicture}
+	% Y: the hypersurface, drawn as a line inside ambient X
+	\draw[thick, black] (-0.6,0) -- (0.4,0);
+	\draw[thick, black] (6.4,0) -- (7.4,0);
+	\node[right] at (7.4,0) {$Y$};
+	% spine: the internal component, mapped into Y, carrying x_k
+	\draw[very thick, accent1] (0.4,0) -- (6.4,0);
+	\node[accent1] at (3.4,-1.3) {internal component $\subset Y$};
+	% teeth: external components, attached at anonymous nodes (not marked points)
+	\draw[thick, black] (1.3,0) .. controls (1.0,0.8) and (1.5,1.4) .. (1.2,2.2);
+	\draw[thick, black] (3.5,0) .. controls (3.8,0.8) and (3.3,1.4) .. (3.6,2.2);
+	\draw[thick, black] (5.5,0) .. controls (5.2,0.8) and (5.7,1.4) .. (5.4,2.2);
+	\node at (3.4,2.6) {external components};
+	\fill[black] (1.3,0) circle[radius=3pt];
+	\fill[black] (3.5,0) circle[radius=3pt];
+	\fill[black] (5.5,0) circle[radius=3pt];
+	\node[below] at (1.3,-0.15) {$m^{(1)}$};
+	\node[below] at (3.5,-0.15) {$m^{(2)}$};
+	\node[below] at (5.5,-0.15) {$m^{(3)}$};
+	% x_k: a marked point on the spine, away from the nodes
+	\fill[accent2] (2.4,0) circle[radius=3pt];
+	\node[below, accent2] at (2.4,-0.15) {$x_k$};
+	\node[black!50] at (7.2,2.4) {$X$};
+\end{tikzpicture}
+
 \end{document}
