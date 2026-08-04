@@ -1294,6 +1294,13 @@ B:
   defs:
   - label: '[해석학] §부분수열과 Bolzano–Weierstrass 정리'
     url: /ko/math/analysis/bolzano_weierstrass
+- id: bisection_method
+  en: bisection method
+  ko: 이분법
+  primary: en
+  defs:
+  - label: '[해석학] §부분수열과 Bolzano–Weierstrass 정리'
+    url: /ko/math/analysis/bolzano_weierstrass
 - id: block_matrix
   en: block matrix
   ko: 블록행렬
@@ -1393,6 +1400,13 @@ B:
   defs:
   - label: '[집합론] §순서집합의 원소들'
     url: /ko/math/set_theory/elements_in_ordered_set
+- id: bounded_sequence
+  en: bounded sequence
+  ko: 유계수열
+  primary: en
+  defs:
+  - label: '[해석학] §수열의 수렴'
+    url: /ko/math/analysis/convergence_of_sequences
 - id: braid_relation
   en: braid relation
   ko: 꼬임 관계식
@@ -2471,6 +2485,8 @@ C:
   defs:
   - label: '[위상수학] §옹골공간'
     url: /ko/math/topology/compact_spaces
+  - label: '[해석학] §컴팩트성'
+    url: /ko/math/analysis/compactness
   see:
   - label: Locally compact
     id: locally_compact
@@ -2518,6 +2534,13 @@ C:
   defs:
   - label: '[층론] §고유 받음과 여섯 함자'
     url: /ko/math/sheaf_theory/six_functors
+- id: compactness
+  en: compactness
+  ko: 컴팩트성
+  primary: en
+  defs:
+  - label: '[해석학] §컴팩트성'
+    url: /ko/math/analysis/compactness
 - id: companion_matrix
   en: companion matrix
   ko: 동반행렬
@@ -2673,6 +2696,13 @@ C:
   defs:
   - label: '[위상수학] §하우스도르프 공간'
     url: /ko/math/topology/Hausdorff_spaces
+- id: completeness
+  en: completeness
+  ko: 완비성
+  primary: ko
+  defs:
+  - label: '[해석학] §실수의 완비성'
+    url: /ko/math/analysis/completeness_of_reals
 - id: completion
   en: completion
   ko: 완비화
@@ -3056,6 +3086,13 @@ C:
   defs:
   - label: '[해석학] §Cauchy 수열과 완비성'
     url: /ko/math/analysis/cauchy_sequences
+- id: contractive_sequence
+  en: contractive sequence
+  ko: 수축수열
+  primary: en
+  defs:
+  - label: '[해석학] §Cauchy 수열과 완비성'
+    url: /ko/math/analysis/cauchy_sequences
 - id: contravariant_functor
   en: contravariant functor
   ko: 반변함자
@@ -3074,6 +3111,13 @@ C:
     url: /ko/math/topology/Hausdorff_spaces
   - label: '[위상수학] §옹골성과 필터의 수렴'
     url: /ko/math/topology/filter_convergence
+- id: convergence
+  en: convergence
+  ko: 수렴
+  primary: ko
+  defs:
+  - label: '[해석학] §수열의 수렴'
+    url: /ko/math/analysis/convergence_of_sequences
 - id: convergent
   en: convergent
   ko: 점근분수
@@ -6355,6 +6399,13 @@ H:
     id: laplacian
   - label: Holomorphic function
     id: holomorphic_function
+- id: harmonic_series
+  en: harmonic series
+  ko: 조화급수
+  primary: ko
+  defs:
+  - label: '[해석학] §무한급수'
+    url: /ko/math/analysis/series
 - id: hartogs_number
   en: Hartogs number
   ko: 하르톡스 수
@@ -9902,6 +9953,13 @@ N:
   defs:
   - label: '[위상수학] §위상공간의 다른 정의들'
     url: /ko/math/topology/equivalent_formulations_of_topology
+- id: nested_interval_property
+  en: nested interval property
+  ko: 구간축소정리
+  primary: en
+  defs:
+  - label: '[해석학] §부분수열과 Bolzano–Weierstrass 정리'
+    url: /ko/math/analysis/bolzano_weierstrass
 - id: nijenhuis_tensor
   en: Nijenhuis tensor
   ko: 네이엔하위스 텐서
@@ -14851,6 +14909,13 @@ T:
   defs:
   - label: '[군론] §대칭군'
     url: /ko/math/group_theory/symmetric_groups
+- id: triangle_inequality
+  en: triangle inequality
+  ko: 삼각부등식
+  primary: ko
+  defs:
+  - label: '[해석학] §수열의 수렴'
+    url: /ko/math/analysis/convergence_of_sequences
 - id: triangular_decomposition
   en: triangular decomposition
   ko: 삼각 분해
