@@ -668,6 +668,11 @@ def find_next_target(state: dict) -> Optional[Tuple[Path, Path, str]]:
 # ---------------------------------------------------------------------------
 # Prompt
 # ---------------------------------------------------------------------------
+# 아래 프롬프트가 지켜야 하는 규칙의 source of truth 는
+# `.claude/guidelines/GUIDELINE-Translation.md` 다 (구분자 verbatim 보존, `:::`
+# 라벨→앵커 유도, 한영 병기 처리, validate_translation 불변식). 문서를 런타임에
+# 읽어 붙이지 않고 여기에 영어로 풀어 둔 것은 엔진에 주는 지시가 예시·반례까지
+# 포함한 튜닝된 형태여야 하기 때문이다. 규칙을 바꿀 때는 양쪽을 같이 고칠 것.
 
 INSTRUCTIONS = """You translate the BODY of a Korean math blog post (Jekyll markdown) into natural, idiomatic English. The input is the body content only — frontmatter has already been stripped and is handled separately by a script. Output ONLY the translated body. No frontmatter, no `---` lines, no explanation, no code fences, no preamble.
 
