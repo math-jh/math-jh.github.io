@@ -126,25 +126,25 @@ $$\mathfrak{a}/\mathfrak{a}^2 \overset{\bar{d}}{\longrightarrow} \Omega_{A[\x, \
 
 $$\Omega_{B/A}\cong\bigl(Bd\x\oplus Bd\y\bigr)/(\x d\y+\y d\x)$$
 
-이다. 그럼 각 fiber 위에서 이 관계식이 어떻게 풀리는지를 보면 된다. $t=a$ 위에서는 $\x$가 가역이므로 관계식이 $d\y=-(\y/\x)d\x$가 되어, $\Omega_{X_a/\mathbb{K}}$는 $d\x$를 기저로 하는 rank $1$의 free module이다. 반면 $X_0$ 위에서는 원점이 아닌 점 $q$마다 $\x$와 $\y$ 가운데 하나가 $\mathfrak{m}_q$ 밖에 있어 관계식이 $\kappa(q)$ 위에서 자명하지 않고 따라서 $\Omega_{X/S}\otimes\kappa(q)$가 $1$차원이지만, 두 직선이 만나는 원점 $p$에서는 $\x$와 $\y$가 모두 $\mathfrak{m}_p$에 속하여 관계식이 소멸하므로 $\Omega_{X/S}\otimes\kappa(p)$는 $d\x$와 $d\y$가 생성하는 $2$차원 vector space가 된다. 곧 $\Omega_{X/S}$의 각 점에서의 rank는 두 직선이 만나는 점에서만 $1$에서 $2$로 뛰며, 이는 $X$ 위에서 $\mathbb{K}$에 대한 미분만을 취한 $\Omega_{X/\mathbb{K}}$가 rank $2$의 free module이라는 사실에서는 보이지 않는 정보이다.
+이다. 그럼 각 fiber 위에서 이 관계식이 어떻게 풀리는지를 볼 수 있다. 우선 $t=a$ 위에서는 $\x$가 가역이므로 관계식이 $d\y=-(\y/\x)d\x$가 되어, $\Omega_{X_a/\mathbb{K}}$는 $d\x$를 기저로 하는 rank $1$의 free module이다. 반면 원점에서의 fiber $X_0$ 위에서는 상황이 조금 달라지는데, 이 경우 (원점이 아닌) $x$ 축 위에 있는 점 $q$는 $\mathfrak{m}_q$가 $\x$를 포함하지 않고, 거꾸로 $y$축 위에 있는 점 $q$는 $\mathfrak{m}_q$가 $\y$를 포함하지 않으므로 이 경우 모두 관계식이 $\kappa(q)$ 위에서 자명하지 않다. 즉, $\Omega_{X/S}\otimes\kappa(q)$가 $1$차원이 된다. 두 직선이 만나는 원점 $p$에서는 $\x$와 $\y$가 모두 $\mathfrak{m}_p$에 속하여 위의 관계식이 소멸하므로 $\Omega_{X/S}\otimes\kappa(p)$는 $d\x$와 $d\y$가 생성하는 $2$차원 vector space가 된다. 곧 $\Omega_{X/S}$의 각 점에서의 rank는 두 직선이 만나는 점에서만 $1$에서 $2$로 뛰며, 이는 $X$ 위에서 $\mathbb{K}$에 대한 미분만을 취한 $\Omega_{X/\mathbb{K}}$가 rank $2$의 free module이라는 사실에서는 보이지 않는 정보이다.
 
-이 정의는 계산에 곧바로 쓸 수 있지만, 그 정의에 chart의 선택이 필요하다. 좌표에 의존하지 않는 묘사는 이미 대수적인 수준에서 얻어졌는데, [\[가환대수학\] §미분, ⁋명제 4](/ko/math/commutative_algebra/differentials#prop4)가 곱셈사상 $m:B\otimes_AB \rightarrow B$의 kernel $\mathfrak{I}$에 대하여 canonical isomorphism $\mathfrak{I}/\mathfrak{I}^2\cong\Omega_{B/A}$를 주기 때문이다. 여기에서 $\Spec(B\otimes_AB)$는 $\Spec B$의 $\Spec A$ 위에서의 fiber product이고 ([§올곱, ⁋보조정리 2](/ko/math/scheme_theory/fiber_products#lem2)) $m$에 대응되는 것은 대각선 morphism이므로, $\mathfrak{I}$는 대각선의 ideal이고 $\mathfrak{I}/\mathfrak{I}^2$은 그 conormal module이다. 곧 대각선의 1차 근방에서 미분을 읽어낸 것이며, 이를 scheme 위로 옮기면 chart를 고르지 않는 $\Omega_{X/S}$의 묘사를 얻는다. 
+위의 정의는 계산에 곧바로 쓸 수 있지만, 그 정의에 chart의 선택이 필요하다. 좌표에 의존하지 않는 묘사는 이미 대수적인 수준에서 얻어졌는데, [\[가환대수학\] §미분, ⁋명제 4](/ko/math/commutative_algebra/differentials#prop4)가 multiplication $m:B\otimes_AB \rightarrow B$의 kernel $\mathfrak{I}$에 대하여 canonical isomorphism $\mathfrak{I}/\mathfrak{I}^2\cong\Omega_{B/A}$를 주기 때문이다. 이를 기하적으로 번역하면 $\Spec(B\otimes_AB)$는 $\Spec B$의 $\Spec A$ 위에서의 fiber product이고 ([§올곱, ⁋보조정리 2](/ko/math/scheme_theory/fiber_products#lem2)) $m$에 대응되는 것은 diagonal morphism $\Delta$이므로, $\mathfrak{I}$는 $\Delta$의 ideal이고 $\mathfrak{I}/\mathfrak{I}^2$은 그 conormal module이다. 곧 $\Delta$의 1차 근방에서 미분을 읽어낸 것이며, 이를 scheme 위로 옮기면 chart를 고르지 않는 $\Omega_{X/S}$의 묘사를 얻는다. 
 
 ::: 명제 6
-Scheme morphism $\varphi:X \rightarrow S$에 대하여, [§값매김환, ⁋정의 3](/ko/math/scheme_theory/valuative_criteria#def3)의 대각선 morphism $\Delta:X \rightarrow X\times_SX$을 생각하고 $\Delta$의 image의 ideal sheaf를 $\mathcal{I}$라 하자. 그럼 conormal sheaf와의 isomorphism
+Separated morphism ([§값매김환, ⁋정의 3](/ko/math/scheme_theory/valuative_criteria#def3)) $\varphi:X \rightarrow S$에 대하여, diagonal morphism $\Delta:X \rightarrow X\times_SX$은 closed embedding이므로 그 image는 $X\times_SX$의 closed subscheme을 정의한다. 이 closed subscheme의 ideal sheaf를 $\mathcal{I}$라 할 때, conormal sheaf와의 isomorphism
 
 $$\Omega_{X/S}\cong\Delta^\ast\bigl(\mathcal{I}/\mathcal{I}^2\bigr)$$
 
 가 성립한다. 여기에서 $\Delta^\ast$는 pullback이다. ([§준연접층, ⁋정의 14](/ko/math/scheme_theory/quasicoherent_sheaves#def14))
 :::
 ::: 증명
-양변 모두 affine chart 위에서의 값으로 결정되므로, [정의 4](#def4)의 $U$와 $V$ 위에서 두 sheaf가 canonical하게 identify됨을 보이면 된다. 먼저 affine morphism $\varphi:\Spec B \rightarrow \Spec A$의 경우에 $\Delta^\ast(\mathcal{I}/\mathcal{I}^2)$을 계산한다. 이 경우 $X\times_SX=\Spec(B\otimes_AB)$이고 ([§올곱, ⁋보조정리 2](/ko/math/scheme_theory/fiber_products#lem2)), 대각선 morphism $\Delta$는 곱사상 $\mu:B\otimes_AB \rightarrow B$, $b\otimes b'\mapsto bb'$로부터 온다. $\mathfrak{a}=\ker\mu$라 하면 $\Delta$의 image의 ideal sheaf는 $\widetilde{\mathfrak{a}}$이고, [§준연접층, ⁋명제 6](/ko/math/scheme_theory/quasicoherent_sheaves#prop6)의 exactness로부터 $\mathcal{I}/\mathcal{I}^2\cong \widetilde{\mathfrak{a}/\mathfrak{a}^2}$이다.
+양변 모두 affine chart 위에서의 값으로 결정되므로, 위에서 $\Omega_{X/S}$를 정의했을 때와 마찬가지로 affine open chart $U,V$를 잡고 그 위에서 두 sheaf가 canonical하게 identify된다는 것을 보이면 충분하다. 먼저 affine morphism $\varphi:\Spec B \rightarrow \Spec A$의 경우에 $\Delta^\ast(\mathcal{I}/\mathcal{I}^2)$을 계산한다. 위에서 살펴보았듯, 이 경우 $X\times_SX=\Spec(B\otimes_AB)$이고, diagonal morphism $\Delta$는 multiplication $m:B\otimes_AB \rightarrow B$, $b\otimes b'\mapsto bb'$로부터 온다. 이제 $\mathfrak{a}=\ker m$라 하면 $\Delta$의 image의 ideal sheaf는 $\widetilde{\mathfrak{a}}$이고, [§준연접층, ⁋명제 6](/ko/math/scheme_theory/quasicoherent_sheaves#prop6)의 exactness로부터 $\mathcal{I}/\mathcal{I}^2\cong \widetilde{\mathfrak{a}/\mathfrak{a}^2}$이다.
 
 이제 $B$-module로서
 
 $$\mathfrak{a}/\mathfrak{a}^2\cong \Omega_{B/A}$$
 
-임을 보인다. Morphism $\mathfrak{a}/\mathfrak{a}^2 \rightarrow \Omega_{B/A}$를 $b\otimes 1-1\otimes b\mapsto db$로 정의하고, 역사상 $\Omega_{B/A} \rightarrow \mathfrak{a}/\mathfrak{a}^2$을 universal derivation으로부터 얻는다. 구체적으로 $\delta:B \rightarrow \mathfrak{a}/\mathfrak{a}^2$를 $\delta(b)=(b\otimes 1-1\otimes b)+\mathfrak{a}^2$로 정의하면, 임의의 $b, b'\in B$에 대하여 $B\otimes_AB$ 안에서
+임을 보인다. 이를 위해 morphism $\mathfrak{a}/\mathfrak{a}^2 \rightarrow \Omega_{B/A}$를 $b\otimes 1-1\otimes b\mapsto db$로 정의하고, 역사상 $\Omega_{B/A} \rightarrow \mathfrak{a}/\mathfrak{a}^2$을 universal derivation으로부터 얻는다. 구체적으로 $\delta:B \rightarrow \mathfrak{a}/\mathfrak{a}^2$를 $\delta(b)=(b\otimes 1-1\otimes b)+\mathfrak{a}^2$로 정의하면, 임의의 $b, b'\in B$에 대하여 $B\otimes_AB$ 안에서
 
 $$\begin{aligned}
 (bb'\otimes 1-1\otimes bb')&=(b\otimes 1-1\otimes b)(1\otimes b')+(b'\otimes 1-1\otimes b')(b\otimes 1)\\
@@ -157,7 +157,7 @@ $$\Delta^\ast\widetilde{\mathfrak{a}/\mathfrak{a}^2}\cong \widetilde{\mathfrak{a
 
 이고, 이는 [정의 4](#def4)이 준 값과 같다. 첫 isomorphism에서 $\Delta^\ast$는 closed immersion $\Delta$가 $X$를 $\Delta(X)$와 동일시하며 그 위의 sheaf를 끌어오는 것이므로, module 수준에서는 $\mathfrak{a}/\mathfrak{a}^2$이 그대로 유지된다.
 
-일반적인 $\varphi$의 경우, $U=\Spec B\subseteq X$와 $V=\Spec A\subseteq S$가 $\varphi(U)\subseteq V$인 affine open이면 $\Delta(U)\subseteq U\times_VU$이고 이는 $X\times_SX$의 open subset이다. 대각선의 ideal sheaf를 이 open 위로 제한하면 다시 곱사상 $B\otimes_AB \rightarrow B$의 kernel이 되므로, 위의 계산이 그대로 적용되어 $\Delta^\ast(\mathcal{I}/\mathcal{I}^2)\vert_U\cong \widetilde{\Omega_{B/A}}=\Omega_{X/S}\vert_U$이다. 이 identification은 universal derivation으로부터 canonical하게 만들어진 것이므로 chart를 줄이거나 바꾸어도 서로 일치하며, 따라서 하나의 global isomorphism으로 붙는다.
+일반적인 $\varphi$의 경우, $U=\Spec B\subseteq X$와 $V=\Spec A\subseteq S$가 $\varphi(U)\subseteq V$인 affine open이면 $\Delta(U)\subseteq U\times_VU$이고 이는 $X\times_SX$의 open subset이다. Diagonal의 ideal sheaf를 이 open 위로 제한하면 다시 multiplication $B\otimes_AB \rightarrow B$의 kernel이 되므로, 위의 계산이 그대로 적용되어 $\Delta^\ast(\mathcal{I}/\mathcal{I}^2)\vert_U\cong \widetilde{\Omega_{B/A}}=\Omega_{X/S}\vert_U$이다. 이 identification은 universal derivation으로부터 canonical하게 만들어진 것이므로 chart를 줄이거나 바꾸어도 서로 일치하며, 따라서 하나의 global isomorphism으로 붙는다.
 :::
 
 여기에서 $\mathcal{I}/\mathcal{I}^2$은 $\Delta(X)$ 위의 sheaf로 볼 수 있고, $\Delta$가 $X$를 그 image와 동일시하므로 $\Delta^\ast$를 통해 $X$ 위의 sheaf로 끌어온 것이다. [명제 6](#prop6)이 좌표에 의존하지 않는 묘사를 주지만, 실제 계산은 여전히 [정의 4](#def4)에 따라 affine open 위에서 $\widetilde{\Omega_{B/A}}$로 하면 된다.
