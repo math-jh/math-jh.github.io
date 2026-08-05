@@ -103,7 +103,11 @@ $$\Omega_{B'/A'}\cong\Omega_{B/A}\otimes_BB'$$
 이 성립한다.
 :::
 ::: 증명
-임의의 $B'$-module $M$에 대하여, $A'$-derivation $D:B' \rightarrow M$을 $B$ 위로 제한하면 $A$-derivation $B \rightarrow M$을 얻는다. 거꾸로 임의의 $A$-derivation $D_0:B \rightarrow M$은 Leibniz 법칙에 의하여 $b\otimes a'\mapsto a'D_0(b)$로 유일하게 연장되므로, 이 제한은 $\Der_{A'}(B', M)\cong\Der_A(B, M)$을 준다. 그런데 좌변은 $\Hom_{B'}(\Omega_{B'/A'}, M)$이고 우변은 $\Hom_B(\Omega_{B/A}, M)$, 곧 extension of scalars의 adjunction에 의하여 $\Hom_{B'}(\Omega_{B/A}\otimes_BB', M)$이므로 ([\[가환대수학\] §미분, ⁋보조정리 2](/ko/math/commutative_algebra/differentials#lem2), [\[대수적 구조\] §스칼라의 변환, ⁋명제 6](/ko/math/algebraic_structures/change_of_base_ring#prop6)), 두 $B'$-module이 같은 functor를 표현하여 canonical하게 isomorphic하다.
+임의의 $B'$-module $M$에 대하여, $A'$-derivation $D:B' \rightarrow M$을 $B$ 위로 제한하면 $A$-derivation $B \rightarrow M$을 얻는다. 거꾸로 임의의 $A$-derivation $D_0:B \rightarrow M$은 Leibniz 법칙에 의하여 $b\otimes a'\mapsto a'D_0(b)$로 유일하게 확장되므로, 이 제한은 $\Der_{A'}(B', M)\cong\Der_A(B, M)$을 준다. 그런데 [\[가환대수학\] §미분, ⁋보조정리 2](/ko/math/commutative_algebra/differentials#lem2)에 의하여 이 isomorphism의 좌변은 $\Hom_{B'}(\Omega_{B'/A'}, M)$이고, 우변은 
+
+$$\Hom_B(\Omega_{B/A}, M)\cong$\Hom_{B'}(\Omega_{B/A}\otimes_BB', M)$$
+
+이므로 ([\[대수적 구조\] §스칼라의 변환, ⁋명제 6](/ko/math/algebraic_structures/change_of_base_ring#prop6)), 두 $B'$-module이 같은 functor를 표현하여 canonical하게 isomorphic하다.
 :::
 
 양변이 affine open 위의 값으로 결정되고 그 identification이 universal derivation에서 오는 canonical한 것이므로, 이 isomorphism은 scheme 수준으로 붙는다. 즉 morphism $S' \rightarrow S$에 대하여 $X'=X\times_SS'$와 projection $p:X' \rightarrow X$를 두면 $\Omega_{X'/S'}\cong p^\ast\Omega_{X/S}$가 성립한다. 특히 점 $s\in S$에 대하여 $S'=\Spec\kappa(s)$로 두면 $X'$은 $s$ 위의 fiber $X_s$이므로 ([§올곱, ⁋정의 12](/ko/math/scheme_theory/fiber_products#def12)), 이 fiber가 $X$로 들어가는 canonical morphism을 $\iota:X_s \rightarrow X$라 할 때

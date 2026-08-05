@@ -2908,6 +2908,13 @@ C:
   defs:
   - label: '[미적분학] §평균값 정리'
     url: /ko/math/calculus/mean_value_theorem
+- id: conditional_convergence
+  en: conditional convergence
+  ko: 조건수렴
+  primary: ko
+  defs:
+  - label: '[해석학] §무한급수'
+    url: /ko/math/analysis/series
 - id: conditionally_convergent
   en: conditionally convergent
   ko: 조건수렴
@@ -8466,6 +8473,13 @@ L:
   defs:
   - label: '[해석학] §평균값 정리와 테일러 정리'
     url: /ko/math/analysis/mean_value_theorem
+- id: l_hôpital_s_theorem
+  en: 'L''Hôpital''s Theorem'
+  ko: 로피탈 정리
+  primary: ko
+  defs:
+  - label: '[미적분학] §평균값 정리'
+    url: /ko/math/calculus/mean_value_theorem
 - id: lagrange_multiplier
   en: Lagrange multiplier
   ko: 라그랑주 승수
@@ -13347,6 +13361,13 @@ S:
   see:
   - label: Covariant derivative
     id: covariant_derivative
+- id: second_derivative
+  en: second derivative
+  ko: 이계도함수
+  primary: ko
+  defs:
+  - label: '[미적분학] §미분과 도함수'
+    url: /ko/math/calculus/derivatives
 - id: second_fundamental_form
   en: second fundamental form
   ko: 제2기본형식
@@ -15028,6 +15049,13 @@ T:
 - id: taylor_series
   en: Taylor series
   ko: 테일러 급수
+  primary: ko
+  defs:
+  - label: '[미적분학] §테일러 정리'
+    url: /ko/math/calculus/taylor_theorem
+- id: taylor_theorem
+  en: Taylor theorem
+  ko: 테일러 정리
   primary: ko
   defs:
   - label: '[미적분학] §테일러 정리'
