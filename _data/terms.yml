@@ -1848,6 +1848,13 @@ C:
     url: /ko/math/commutative_algebra/completion
   - label: '[해석학] §Cauchy 수열과 완비성'
     url: /ko/math/analysis/cauchy_sequences
+- id: cayley-hamilton_theorem
+  en: Cayley-Hamilton theorem
+  ko: 케일리-해밀턴 정리
+  primary: ko
+  defs:
+  - label: '[선형대수학] §최소다항식'
+    url: /ko/math/linear_algebra/minimal_polynomial
 - id: cech_cohomology
   en: Čech cohomology
   ko: 체흐 코호몰로지
@@ -7717,6 +7724,13 @@ I:
   see:
   - label: Algebraic
     id: algebraic
+- id: integral_closure
+  en: integral closure
+  ko: 정수적 폐포
+  primary: en
+  defs:
+  - label: '[가환대수학] §정수적 확장'
+    url: /ko/math/commutative_algebra/integral_extension
 - id: integral_domain
   en: integral domain
   ko: 정역
@@ -10359,6 +10373,13 @@ N:
   - label: 상대 여접 복합체
     lang: ko
     id: relative_cotangent_complex
+- id: nakayama_lemma
+  en: Nakayama lemma
+  ko: 나카야마 보조정리
+  primary: en
+  defs:
+  - label: '[가환대수학] §정수적 확장'
+    url: /ko/math/commutative_algebra/integral_extension
 - id: natural_constant
   en: natural constant
   ko: 자연상수
@@ -10533,6 +10554,13 @@ N:
   see:
   - label: Artinian
     id: artinian
+- id: noetherian_ring
+  en: Noetherian ring
+  ko: 뇌더환
+  primary: en
+  defs:
+  - label: '[가환대수학] §기본 개념들'
+    url: /ko/math/commutative_algebra/basic_notions
 - id: noetherian_scheme
   en: Noetherian scheme
   ko: 뇌터스킴
