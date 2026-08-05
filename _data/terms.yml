@@ -2452,6 +2452,13 @@ C:
   see:
   - label: Kernel
     id: kernel
+- id: colimit
+  en: colimit
+  ko: 여극한
+  primary: en
+  defs:
+  - label: '[범주론] §극한'
+    url: /ko/math/category_theory/limits
 - id: comaximal
   en: comaximal
   ko: 공최대
@@ -2936,6 +2943,13 @@ C:
   defs:
   - label: '[해석학] §무한급수'
     url: /ko/math/analysis/series
+- id: cone
+  en: cone
+  ko: 뿔
+  primary: en
+  defs:
+  - label: '[대수다양체] §사영다양체'
+    url: /ko/math/algebraic_varieties/projective_varieties
 - id: conformal
   en: conformal
   ko: 등각
@@ -4855,6 +4869,13 @@ E:
   see:
   - label: Monomorphism
     id: monomorphism
+- id: equalizer
+  en: equalizer
+  ko: 동등화자
+  primary: en
+  defs:
+  - label: '[범주론] §극한'
+    url: /ko/math/category_theory/limits
 - id: equipotent
   en: equipotent
   ko: 대등
@@ -4875,6 +4896,13 @@ E:
   see:
   - label: Partition
     id: partition
+- id: equivalence_of_categories
+  en: equivalence of categories
+  ko: 동등
+  primary: ko
+  defs:
+  - label: '[범주론] §자연변환'
+    url: /ko/math/category_theory/natural_transformations
 - id: equivalence_of_category
   en: equivalence of category
   ko: 동등함자
@@ -5373,6 +5401,13 @@ F:
     id: fiber
   - label: Vector bundle
     id: vector_bundle
+- id: fiber_product
+  en: fiber product
+  ko: 섬유곱
+  primary: en
+  defs:
+  - label: '[범주론] §극한'
+    url: /ko/math/category_theory/limits
 - id: fibration
   en: fibration
   ko: 올림
@@ -5648,6 +5683,13 @@ F:
   defs:
   - label: '[미적분학] §면적분과 선속'
     url: /ko/math/calculus/surface_integrals
+- id: forgetful_functor
+  en: forgetful functor
+  ko: 망각 함자
+  primary: en
+  defs:
+  - label: '[범주론] §수반함자'
+    url: /ko/math/category_theory/adjoints
 - id: formal_adjoint
   en: formal adjoint
   ko: 형식 수반작용소
@@ -5729,6 +5771,13 @@ F:
   defs:
   - label: '[다중선형대수학] §기저'
     url: /ko/math/multilinear_algebra/basis_of_free_modules
+- id: free_functor
+  en: free functor
+  ko: 자유 함자
+  primary: en
+  defs:
+  - label: '[범주론] §수반함자'
+    url: /ko/math/category_theory/adjoints
 - id: free_group
   en: free group
   ko: 자유군
