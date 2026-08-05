@@ -17,17 +17,17 @@ published: false
 이제 우리는 Galois extension이 무엇인지 정의할 준비가 되었지만, 그 전에 우선 다음의 명제를 살펴본다. 
 
 ::: 명제 1
-Algebraic extension $\mathbb{L}$과 inclusion $u:\mathbb{L}\rightarrow \overline{\mathbb{K}}$를 생각하자. 
+Algebraic extension $\mathbb{L}/\mathbb{K}$과 injective $\mathbb{K}$-homomorphism $u:\mathbb{L}\rightarrow \overline{\mathbb{K}}$를 생각하자. 
 
 1. 만일 $u(\mathbb{L})\subseteq \mathbb{L}$이라면 $u$는 $\mathbb{L}$에서 $\mathbb{L}$로의 $\mathbb{K}$-automorphism이다. 
 2. $u$를 확장하는 $\overline{\mathbb{K}}$의 $\mathbb{K}$-automorphism이 존재한다. 
 :::
 ::: 증명
-1. 임의의 $x\in E$에 대하여, $x$의 minimal polynomial $f$가 주어졌다 하자. 집합 $\Phi$를 $\mathbb{L}$ 안에서의 $f$의 root들의 모임이라 하면 $\Phi$는 유한집합이다. 뿐만 아니라, 만일 $\alpha\in\Phi$라 하면 
+1. 임의의 $x\in \mathbb{L}$에 대하여, $x$의 minimal polynomial $f$가 주어졌다 하자. 집합 $\Phi$를 $\mathbb{L}$ 안에서의 $f$의 root들의 모임이라 하면 $\Phi$는 유한집합이다. 뿐만 아니라, 만일 $\alpha\in\Phi$라 하면 
 
     $$0=u(0)=u(f(\alpha))=f(u(\alpha))$$
     
-    이므로 $u(\Phi)\subseteq\Phi$가 성립한다. 그런데 $u$는 zero map이 아니므로 injective이고 ([§체, ⁋명제 2](/ko/math/field_theory/fields#prop2)), 따라서 $u$는 $\Phi$에서 $\Phi$로의 bijection이다. 따라서 $x\in\Phi=u(\Phi)\subseteq u(E)$이고 이로부터 $u(E)=E$이다.
+    이므로 $u(\Phi)\subseteq\Phi$가 성립한다. 그런데 $u$는 zero map이 아니므로 injective이고 ([§체, ⁋명제 2](/ko/math/field_theory/fields#prop2)), 따라서 $u$는 $\Phi$에서 $\Phi$로의 bijection이다. 따라서 $x\in\Phi=u(\Phi)\subseteq u(\mathbb{L})$이고 이로부터 $u(\mathbb{L})=\mathbb{L}$이다.
 
 2. $\overline{\mathbb{K}}$는 $u(\mathbb{L})$과 $\mathbb{L}$의 algebraic closure이므로 [§대수적 폐포, ⁋정리 5](/ko/math/field_theory/algebraically_closed_extensions#thm5)의 universal property로부터 원하는 결과를 얻는다. 
 :::
