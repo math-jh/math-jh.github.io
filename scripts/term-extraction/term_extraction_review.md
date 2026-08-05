@@ -5205,3 +5205,13 @@ Decide whether each one is a definition and add it to `_data/terms.yml` (then ru
 - _posts/Math/Commutative_Algebra/ko/2024-10-20-Lying_Over_and_Going_Up.md: 주요 용어 'lying over' ko 미상 — 보류
 - _posts/Math/Commutative_Algebra/ko/2024-10-20-Lying_Over_and_Going_Up.md: 주요 용어 'going up' ko 미상 — 보류
 - _posts/Math/Commutative_Algebra/ko/2024-10-20-Lying_Over_and_Going_Up.md: 주요 용어 'going down' ko 미상 — 보류
+
+## term_extract_worker 2026-08-06 00:31
+
+- _posts/Math/Commutative_Algebra/ko/2024-10-22-Jordan-Holder_Theorem.md: 주요 용어 'Artinian' ko 미상 — 보류
+- _posts/Math/Commutative_Algebra/ko/2024-10-22-Jordan-Holder_Theorem.md: 주요 용어 'Noetherian' ko 미상 — 보류
+- _posts/Math/Commutative_Algebra/ko/2024-10-22-Jordan-Holder_Theorem.md: 주요 용어 'Jordan-Hölder' ko 미상 — 보류
+
+## term_extract_worker 2026-08-06 01:01
+
+- _posts/Math/Commutative_Algebra/ko/2024-10-23-Localization_of_Graded_Rings.md: 주요 용어 'multiplicative subset' ko 미상 — 보류
