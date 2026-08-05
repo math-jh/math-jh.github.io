@@ -36,7 +36,7 @@ Algebraic extension $\mathbb{L}/\mathbb{K}$과 injective $\mathbb{K}$-homomorphi
 우리의 목적은 고정된 field $\mathbb{K}$의 algebraic extension들을 모두 살펴보는 것이며, 더 정확히는 algebraic extension들의 equivalence class들을 보는 것이다.  
 
 ::: 정의 2
-Field $\mathbb{K}$의 algebraic closure $\overline{\mathbb{K}}$ 안에서의 두 algebraic extension $\mathbb{L}$, $\mathbb{M}$에 대하여, $u(\mathbb{L})=\mathbb{M}$이도록 하는 $\mathbb{K}$-automorphism $u:\overline{\mathbb{K}}\rightarrow \overline{\mathbb{K}}$이 존재한다면 이들이 *conjugate<sub>켤레</sub>*한다고 말한다. 특히 두 원소 $x,y\in\overline{\mathbb{K}}$이 *conjugate*이라는 것은 적당한 $\mathbb{K}$-automorphism $u: \overline{\mathbb{K}}\rightarrow \overline{\mathbb{K}}$이 존재하여 $u(x)=y$인 것이다. 
+Field $\mathbb{K}$의 algebraic closure $\overline{\mathbb{K}}$ 안에서의 두 algebraic extension $\mathbb{L}$, $\mathbb{M}$에 대하여, $u(\mathbb{L})=\mathbb{M}$이도록 하는 $\mathbb{K}$-automorphism $u:\overline{\mathbb{K}}\rightarrow \overline{\mathbb{K}}$이 존재한다면 이들이 *conjugate<sub>켤레</sub>*한다고 말한다. 두 원소 $x,y\in\overline{\mathbb{K}}$이 *conjugate*이라는 것은 적당한 $\mathbb{K}$-automorphism $u: \overline{\mathbb{K}}\rightarrow \overline{\mathbb{K}}$이 존재하여 $u(x)=y$인 것이다. 
 :::
 
 [명제 1](#prop1)에 의하여, 만일 $\mathbb{M}$과 $\mathbb{L}$이 $\mathbb{K}$-isomorphic한 extension이라면 이들은 conjugate extension들이며, 정의에 의해 conjugate extension들은 isomorphic하다. 뿐만 아니라 다음이 성립한다. 
@@ -62,7 +62,7 @@ $$\mathbb{K}(x)\cong \mathbb{K}[\x]/(f)\cong \mathbb{K}(y)$$
 이고, $\mathbb{K}[\x]/(f)$에서 출발하는 두 isomorphism이 $\x$의 class를 각각 $x$와 $y$로 보내므로 이들을 합성하면 $x$를 $y$로 보내는 $\mathbb{K}$-isomorphism $\mathbb{K}(x)\rightarrow \mathbb{K}(y)$를 얻는다. 즉 셋째 조건은 둘째 조건을 함의한다. 마지막으로 둘째 조건을 가정하면 [명제 1](#prop1)로부터 $v$를 확장하는 $\mathbb{K}$-isomorphism $u:\overline{\mathbb{K}}\rightarrow\overline{\mathbb{K}}$이 존재하고 따라서 $x$, $y$가 conjugate이다. 
 :::
 
-이로부터 만일 degree $n$의 algebraic element $x\in \overline{\mathbb{K}}$가 주어졌다면, $x$와 conjugate인 원소들은 반드시 $x$의 minimal polynomial의 root이고 따라서 이러한 원소는 많아야 $n$개 뿐임을 안다. 뿐만 아니라, 여기에서 $x$와 conjugate한 원소가 $n$개 <em-ko>미만</em-ko>인 것은 정확하게 $x$의 minimal polynomial이 separable하지 않은 것과 동치이다. 즉, $\overline{\mathbb{K}}$의 $\mathbb{K}$-automorphism들의 group을 $\Aut_\mathbb{K}(\overline{\mathbb{K}})$라 하고 $\Aut_\mathbb{K}\overline{\mathbb{K}}$가 $\overline{\mathbb{K}}$에 자연스러운 방식으로 act할 때, 이 action에 의해 fix되는 원소들의 모임 $\overline{\mathbb{K}}^{\Aut_{\mathbb{K}}(\overline{\mathbb{K}})}$은 정확히 $\mathbb{K}^{p^{-\infty}}$와 같다. 여기에서 $p$는 $\mathbb{K}$의 characteristic exponent이며, 따라서 $\ch(\mathbb{K})=0$인 경우 위의 모임은 $\mathbb{K}$ 자기 자신이다. 
+이로부터 만일 degree $n$의 algebraic element $x\in \overline{\mathbb{K}}$가 주어졌다면, $x$와 conjugate인 원소들은 반드시 $x$의 minimal polynomial의 root이고 따라서 이러한 원소는 많아야 $n$개 뿐임을 안다. 뿐만 아니라, 여기에서 $x$와 conjugate한 원소가 $n$개 <em-ko>미만</em-ko>인 것은 정확하게 $x$의 minimal polynomial이 separable하지 않은 것과 동치이다. 즉, $\overline{\mathbb{K}}$의 $\mathbb{K}$-automorphism들의 group을 $\Aut_\mathbb{K}(\overline{\mathbb{K}})$라 하고 $\Aut_\mathbb{K}\overline{\mathbb{K}}$가 $\overline{\mathbb{K}}$에 자연스러운 방식으로 act할 때, 이 action에 의해 fix되는 원소들의 모임 $\overline{\mathbb{K}}^{\Aut_{\mathbb{K}}(\overline{\mathbb{K}})}$은 정확히 $\mathbb{K}^{p^{-\infty}}$와 같다. 여기에서 $p$는 $\mathbb{K}$의 characteristic exponent이며, 따라서 $\ch(\mathbb{K})=0$인 경우 이 모임은 $\mathbb{K}$ 자기 자신이다. 
 
 ## 갈루아 확장
 

@@ -174,15 +174,19 @@ $$\psi^\ast\Omega_{S'/S} \rightarrow \Omega_{X/S} \rightarrow \Omega_{X/S'} \rig
 
 $$\mathcal{J}/\mathcal{J}^2 \rightarrow \Omega_{Y/S}\vert_Z \rightarrow \Omega_{Z/S} \rightarrow 0$$
 
-을 얻는다. 
+을 얻는다. 여기에서 첫 항의 $\mathcal{J}/\mathcal{J}^2$는 inclusion $\iota: Z\hookrightarrow Y$를 통해 $Y$ 위의 sheaf를 $Z$로 옮겨온 것으로, 이는 [§닫힌 부분스킴, ⁋정의 5](/ko/math/scheme_theory/closed_subschemes#def5)에 의해 $\mathcal{O}_Y/\mathcal{J}\cong iota_\ast \mathcal{O}_Z$이고, $\mathcal{J}$가 quotient $\mathcal{J}/\mathcal{J}^2$를 소멸시키므로 $\iota$를 통해 $\mathcal{J}/\mathcal{J^2}$를 $Z$로 옮겨오기 때문에 가능하다. 실제로 affine open subset $\Spec B\subseteq Y$와 그 image를 담는 $\Spec A\subseteq S$, 그리고 $\mathfrak{a}=\mathcal{J}(\Spec B)$와 $C=B/\mathfrak{a}$에 대하여 세 항은 각각 $\mathfrak{a}/\mathfrak{a}^2$과 $\Omega_{B/A}\otimes_BC$, $\Omega_{C/A}$의 associated sheaf가 되어 [명제 2](#prop2)의 sequence로 돌아간다. 
 
-이 두 exact sequence는 미분층을 계산하는 표준 도구이므로, 위에서 이들을 도입하며 소개한 대수적 직관을 기하적으로 옮겨보자. 첫째 exact sequence는 같은 $X$를 두 개의 base 위의 family로 볼 때 fiber 방향이 어떻게 달라지는지를 잰다. $X \rightarrow S'$의 fiber는 $X \rightarrow S$의 fiber 안에 들어 있으므로 $S'$ 위에서 재는 방향이 더 좁고, 따라서 $\Omega_{X/S'}$는 $\Omega_{X/S}$의 quotient이며 지워지는 부분이 $S'$이 $S$ 위에서 움직이는 방향, 곧 $\psi^\ast\Omega_{S'/S}$의 image이다. 앞서 본 projection $\Spec \mathbb{K}[\x, \y] \rightarrow \Spec \mathbb{K}[\x]$를 $\psi$로 두고 $S=\Spec \mathbb{K}$로 잡으면, $\Omega_{X/S}$의 기저 $d\x$와 $d\y$ 가운데 $\psi$의 fiber를 따르는 $d\y$만 $\Omega_{X/S'}$에 남고 지워진 $d\x$가 $\psi^\ast\Omega_{S'/S}$에서 온 부분이다.
+이 두 exact sequence는 미분층을 계산하는 표준 도구이므로, 위에서 이들을 도입하며 소개한 대수적 직관을 기하적으로 옮겨보자. 우리는 이미 $\Omega_{X/S}$가 base 방향을 고정한 채 fiber 방향만 함수로 생각하여 진행하는 미분이었다. 첫째 exact sequence를 살펴보기 위해 우선 $S'\rightarrow S$가 $s'$를 $s$로 보낸다 하면 $X_{s'}$는 항상 $X_s$에 속한다. 즉, 이 상황에서는 $S'$ 위에서 재는 방향이 더 좁으며 따라서 $\Omega_{X/S'}$가 $\Omega_{X/S}$의 quotient로 주어지며 이 때 지워지는 부분이 정확히 $$
+
+
+
+는 같은 $X$를 두 개의 다른 base 위의 family로 볼 때 fiber 방향이 어떻게 달라지는지를 재는 것이다. $X \rightarrow S'$의 fiber는 $X \rightarrow S$의 fiber 안에 들어 있으므로 $S'$ 위에서 재는 방향이 더 좁고, 따라서 $\Omega_{X/S'}$는 $\Omega_{X/S}$의 quotient이며 지워지는 부분이 $S'$이 $S$ 위에서 움직이는 방향, 곧 $\psi^\ast\Omega_{S'/S}$의 image이다. 앞서 본 projection $\Spec \mathbb{K}[\x, \y] \rightarrow \Spec \mathbb{K}[\x]$를 $\psi$로 두고 $S=\Spec \mathbb{K}$로 잡으면, $\Omega_{X/S}$의 기저 $d\x$와 $d\y$ 가운데 $\psi$의 fiber를 따르는 $d\y$만 $\Omega_{X/S'}$에 남고 지워진 $d\x$가 $\psi^\ast\Omega_{S'/S}$에서 온 부분이다.
 
 둘째 exact sequence에서 $\mathcal{J}/\mathcal{J}^2$은 $Z$의 conormal sheaf이고, 그 dual이 $Z$가 $Y$ 안에서 가지는 normal bundle에 해당한다. $S=\Spec A$, $Y=\Spec A[\x_1,\ldots, \x_n]$이고 $\mathcal{J}$가 $f_1,\ldots, f_r$로 생성되면 $\Omega_{Y/S}\vert_Z$가 $d\x_1,\ldots, d\x_n$을 기저로 가지고 $\bar{d}$가 $f_j\mapsto\sum_i(\partial f_j/\partial \x_i)d\x_i$이므로, 이 morphism을 그 기저로 적은 행렬이 곧 Jacobian $(\partial f_j/\partial \x_i)$이다. 즉 $Z$ 위의 미분은 ambient의 미분에서 방정식들의 미분이 생성하는 부분, 곧 $Z$에 수직인 방향을 quotient하여 얻어지며, 한 점에서 이를 쌍대화하면 [\[대수다양체\] §접공간과 매끄러움, ⁋명제 2](/ko/math/algebraic_varieties/tangent_spaces_and_smoothness#prop2)의 묘사로 돌아온다.
 
 ## Tangent sheaf와 Zariski 접공간
 
-Cotangent sheaf의 쌍대를 취하면 tangent vector들의 sheaf를 얻는다. 이는 variety 위에서 tangent bundle에 해당하는 대수기하학적 대상이다.
+Cotangent sheaf의 쌍대를 취하면 tangent vector들의 sheaf를 얻는다. 이는 variety 위에서 tangent bundle에 해당하는 대상이다.
 
 ::: 정의 7
 Scheme morphism $\varphi:X \rightarrow S$에 대하여, $X$의 *tangent sheaf<sub>접층</sub>*를
