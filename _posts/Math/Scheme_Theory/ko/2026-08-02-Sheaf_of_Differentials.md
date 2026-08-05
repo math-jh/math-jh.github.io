@@ -196,19 +196,27 @@ $$\mathcal{T}_{X/S}=\sHom_{\mathcal{O}_X}(\Omega_{X/S}, \mathcal{O}_X)$$
 
 $$\mathcal{T}_{X/S}(X)\cong \Der_A(B, B)$$
 
-를 얻는다. ([\[가환대수학\] §미분, ⁋보조정리 2](/ko/math/commutative_algebra/differentials#lem2)) 같은 계산을 principal open $D(g)$ 위에서 반복하면 [명제 3](#prop3)의 첫째 주장에 의하여 $\Der_A(B_g, B_g)$가 나오므로, $\mathcal{T}_{X/S}$는 $B$의 $A$-derivation들을 국소적으로 모아 놓은 sheaf이며 이들을 붙이면 일반적인 경우 또한 얻는다.
+를 얻는다. ([\[가환대수학\] §미분, ⁋보조정리 2](/ko/math/commutative_algebra/differentials#lem2)) 같은 계산을 principal open $D(g)$ 위에서 반복하면 [명제 3](#prop3)의 첫째 주장에 의하여 $\Der_A(B_g, B_g)$가 나오므로, $\mathcal{T}_{X/S}$는 $B$의 $A$-derivation들을 국소적으로 모아 놓은 sheaf이며 이들을 붙이면 일반적인 경우 또한 얻는다. 
 
 $\Omega_{B/A}$는 정의에 의해 $1$차 differential form에 해당한다. 그럼 위에서 정의한 $\Der_A(B,B)$는 이것의 dual, 즉 tangent vector에 해당하는 것이다. 구체적으로 임의의 함수 $b\in B$가 주어졌을 때, $\Der_A(B,B)$의 원소 $D$는 그 미분값 $D(b)$를 주며, universal property 아래에서 이 대응은 $db\mapsto D(b)$로 정해지는 $B$-linear map $\Omega_{B/A} \rightarrow B$와 같은 것이다. ([\[가환대수학\] §미분, ⁋보조정리 2](/ko/math/commutative_algebra/differentials#lem2)) 즉 $\Der_A(B, B)$는 정의상 $\Omega_{B/A}$의 dual module $\Hom_B(\Omega_{B/A}, B)$이고, 두 module 사이에는 $B$-bilinear pairing
 
 $$\langle -, -\rangle:\Omega_{B/A}\times \Der_A(B, B) \rightarrow B; \qquad \langle db, D\rangle=D(b)$$
 
-이 존재한다.. $\Omega_{B/A}$가 $db$ 꼴의 원소들로 생성되므로 이 pairing은 위의 식만으로 결정되며, $D$를 고정하고 $b$를 움직이면 $D$가 정하는 방향으로 함수들을 미분하는 연산을 얻고 거꾸로 $b$를 고정하고 $D$를 움직이면 $db$가 각 방향마다 $b$의 변화율을 대응시키는 함수가 된다. 이는 미분다양체 위에서 벡터장이 함수에 그 도함수를 대응시키고 $1$차 differential form이 벡터장을 대입받아 함수를 내놓는 것과 같은 구조이다.
+이 존재한다. 이 때 $\Omega_{B/A}$가 $db$ 꼴의 원소들로 생성되므로 이 pairing은 위의 식만으로 결정되며, $D$를 고정하고 $b$를 움직이면 $D$가 정하는 방향으로 함수들을 미분하는 연산을 얻고 거꾸로 $b$를 고정하고 $D$를 움직이면 $db$가 각 방향마다 $b$의 변화율을 대응시키는 함수가 된다. 이는 미분다양체 위에서 벡터장이 함수에 그 도함수를 대응시키고 $1$차 differential form이 벡터장을 대입받아 함수를 내놓는 것과 같은 구조이다. 이 pairing이 dual basis를 주는 모습은 $B=A[\x_1,\ldots, \x_n]$에서 곧바로 보인다. 이 경우 $\Omega_{B/A}$는 $d\x_1,\ldots, d\x_n$을 기저로 하는 free module이고 ([\[가환대수학\] §미분, ⁋명제 5](/ko/math/commutative_algebra/differentials#prop5)), $A$-derivation $D$는 $A$-linearity와 Leibniz 법칙에 의하여 $\x_i$에서의 값 $D(\x_i)$들로 완전히 결정되며 이들을 dual basis를 사용하여 적으면 $D=\sum_iD(\x_i)\partial/\partial \x_i$로 적힌다.
 
-이 pairing이 dual basis를 주는 모습은 $B=A[\x_1,\ldots, \x_n]$에서 곧바로 보인다. 이 경우 $\Omega_{B/A}$는 $d\x_1,\ldots, d\x_n$을 기저로 하는 free module이고 ([\[가환대수학\] §미분, ⁋명제 5](/ko/math/commutative_algebra/differentials#prop5)), $A$-derivation $D$는 $A$-linearity와 Leibniz 법칙에 의하여 $\x_i$에서의 값 $D(\x_i)$들로 완전히 결정되어 $D=\sum_iD(\x_i)\partial/\partial \x_i$로 적힌다. 곧 $\Der_A(B, B)$ 또한 $\partial/\partial \x_1,\ldots, \partial/\partial \x_n$을 기저로 하는 rank $n$의 free module이며, $\langle d\x_i, \partial/\partial \x_j\rangle=\delta_{ij}$이므로 두 기저는 서로의 dual basis이다. 일반적인 원소에 대해서는 $\langle \sum_ic_id\x_i, \sum_jb_j\partial/\partial \x_j\rangle=\sum_ib_ic_i$가 되어, 익숙한 $1$차 differential form과 벡터장의 pairing을 그대로 돌려준다.
+한편 $\Omega_{B/A}$가 free module일 때에는 이렇게 두 module이 서로의 dual이 되지만, 일반적으로는 dual을 취하며 정보가 사라진다. 앞서 본 $A=\mathbb{K}[t]$와 $B=\mathbb{K}[t, \x, \y]/(\x\y-t)$의 경우 $A$-derivation은 $t$를 죽여야 하므로 $\x D(\y)+\y D(\x)=0$을 만족해야 하고, $B\cong \mathbb{K}[\x, \y]$에서 이 방정식의 해는 $w\in B$에 대한 $D(\x)=\x w$와 $D(\y)=-\y w$뿐이다. 즉 $\Der_A(B, B)$는 $\x\partial/\partial \x-\y\partial/\partial \y$를 기저로 하는 rank $1$의 free module로, 원점에서 rank가 $2$로 뛰던 $\Omega_{B/A}$와 달리 어디에서나 rank가 $1$이다. 그러므로 $\mathcal{T}_{X/S}$에서 $\Omega_{X/S}$를 되찾을 수는 없으며, universal property 등의 형식적인 정의 뿐만 아니라 이러한 정보의 차이가 cotangent sheaf를 더 자연스러운 것으로 만든다. 
 
-$\Omega_{B/A}$가 free module일 때에는 이렇게 두 module이 서로의 dual이 되지만, 일반적으로는 dual을 취하며 정보가 사라진다. 앞서 본 $A=\mathbb{K}[t]$와 $B=\mathbb{K}[t, \x, \y]/(\x\y-t)$의 경우 $A$-derivation은 $t$를 죽여야 하므로 $\x D(\y)+\y D(\x)=0$을 만족해야 하고, $B\cong \mathbb{K}[\x, \y]$에서 이 방정식의 해는 $w\in B$에 대한 $D(\x)=\x w$와 $D(\y)=-\y w$뿐이다. 즉 $\Der_A(B, B)$는 $\x\partial/\partial \x-\y\partial/\partial \y$를 기저로 하는 rank $1$의 free module로, 원점에서 rank가 $2$로 뛰던 $\Omega_{B/A}$와 달리 어디에서나 rank가 $1$이다. 그러므로 $\mathcal{T}_{X/S}$에서 $\Omega_{X/S}$를 되찾을 수는 없으며, 두 sheaf가 서로의 dual이 되는 것은 $\Omega_{X/S}$가 locally free인 경우에 한한다. ([§준연접층, ⁋정의 12](/ko/math/scheme_theory/quasicoherent_sheaves#def12))
+이 때문에 한 점에서의 tangent space를 계산할 때도 주의가 필요하다. $\mathbb{K}$-scheme $X$의 점 $x$에 대하여, residue field를 $\kappa(x)$라 하면 ([§스킴, ⁋정의 5](/ko/math/scheme_theory/schemes#def5)) cotangent sheaf의 fiber $\Omega_{X/\mathbb{K}}\otimes_{\mathcal{O}_X}\kappa(x)$를 생각할 수 있다. Dual을 먼저 취한 후 fiber를 취하여 얻어지는 fiber
 
-한 점에서의 tangent space는 cotangent sheaf의 fiber를 residue field 위에서 쌍대화하여 얻는다. Field $\mathbb{K}$ 위의 scheme $X$의 점 $x$에 대하여, residue field를 $\kappa(x)$라 하면 ([§스킴, ⁋정의 5](/ko/math/scheme_theory/schemes#def5)) cotangent sheaf의 fiber $\Omega_{X/\mathbb{K}}\otimes_{\mathcal{O}_X}\kappa(x)$가 정의된다.
+$$\mathcal{T}_{X/\mathbb{K}}\otimes_{\mathcal{O}_X}\kappa(x)$$
+
+를 생각하면, canonical map 
+
+$$\mathcal{T}_{X/\mathbb{K}}\otimes_{\mathcal{O}_X}\kappa(x) \rightarrow \bigl(\Omega_{X/\mathbb{K}}\otimes_{\mathcal{O}_X}\kappa(x)\bigr)^\vee$$
+
+은 항상 존재하며 $\Omega_{X/\mathbb{K}}$가 $x$ 근방에서 locally free이면 이는 isomorphism이지만, 일반적으로 이는 단사도 전사도 아니다. 앞서 본 $\x\y=t$의 family가 그 차이를 보여주는데, $\mathcal{T}_{X/S}$는 $\x\partial/\partial \x-\y\partial/\partial \y$가 생성하는 rank $1$의 free module이라 원점 $p$에서의 fiber가 $1$차원이지만, 이 derivation 자체가 $p$에서 소멸하므로 위의 canonical map은 zero map이 되고, 반면 $\Omega_{X/S}\otimes\kappa(p)$의 dual은 fiber $X_0$의 원점에서의 tangent space인 $2$차원 vector space이다. 
+
+따라서 이 두 정의 중 올바른 것은 다음의 정의이다.
 
 ::: 정의 8
 Field $\mathbb{K}$ 위의 scheme $X$와 그 점 $x\in X$에 대하여, $x$에서의 *Zariski tangent space<sub>자리스키 접공간</sub>*를
@@ -220,21 +228,19 @@ $$T_xX=\bigl(\Omega_{X/\mathbb{K}}\otimes_{\mathcal{O}_X}\kappa(x)\bigr)^\vee=\H
 
 이 정의는 local ring의 maximal ideal을 통한 친숙한 묘사와 일치한다. $x$가 residue field $\kappa(x)=\mathbb{K}$를 가지는 점, 곧 $\mathbb{K}$-rational point이고 $(\mathcal{O}_{X,x}, \mathfrak{m}_x)$가 그 local ring일 때, conormal exact sequence를 stalk에서 분석하면 $\Omega_{X/\mathbb{K}}\otimes \kappa(x)\cong \mathfrak{m}_x/\mathfrak{m}_x^2$이 성립한다. 따라서 Zariski tangent space는 $(\mathfrak{m}_x/\mathfrak{m}_x^2)^\vee$, 즉 cotangent space $\mathfrak{m}_x/\mathfrak{m}_x^2$의 쌍대이다. 한 점에서의 차원 $\dim_{\kappa(x)}T_xX$가 그 점의 국소적 차원 $\dim \mathcal{O}_{X,x}$과 같은지 여부가 그 점이 nonsingular한지를 가르는 기준이 되며, 일반적으로는 $\dim_{\kappa(x)}T_xX\geq \dim \mathcal{O}_{X,x}$이다.
 
-Regular local ring의 cotangent space $\mathfrak{m}/\mathfrak{m}^2$이 정확히 차원만큼의 dimension을 가진다는 사실은 ([\[가환대수학\] §정칙국소환](/ko/math/commutative_algebra/regular_local_rings)) 이 부등식이 등호가 되는 경우와 직접 연결된다. 모든 점에서 등호가 성립하여 $\Omega_{X/\mathbb{K}}$가 locally free가 되는 경우가 smoothness에 해당하지만, $\Omega$의 국소자유성과 regularity의 정확한 관계는 별도의 논의를 요한다. 이 글에서 필요한 만큼은 [§§Canonical sheaf](#canonical-sheaf)에서 돌아온다.
+## 아핀공간과 사영공간의 미분층
 
-## Affine space와 사영공간의 미분층
-
-미분층의 가장 기본적인 예시는 affine space이며, 이는 polynomial ring의 미분이 자유 module임을 그대로 옮긴 것이다.
+우선 우리의 가장 단순한 예시는 다음과 같다. 
 
 ::: 명제 9
-임의의 scheme $S$에 대하여, affine space $\mathbb{A}^n_S$의 cotangent sheaf $\Omega_{\mathbb{A}^n_S/S}$는 rank $n$의 free sheaf
+Ring $A$에 대하여, affine space $\mathbb{A}^n_A=\Spec A[\x_1,\ldots, \x_n]$의 cotangent sheaf $\Omega_{\mathbb{A}^n_A/A}$는 rank $n$의 free sheaf
 
-$$\Omega_{\mathbb{A}^n_S/S}\cong \mathcal{O}_{\mathbb{A}^n_S}^{\oplus n}$$
+$$\Omega_{\mathbb{A}^n_A/A}\cong \mathcal{O}_{\mathbb{A}^n_A}^{\oplus n}$$
 
 이며, $d\x_1,\ldots, d\x_n$을 기저로 가진다.
 :::
 ::: 증명
-문제가 $S$ 위에서 국소적이므로 $S=\Spec A$인 경우만 보이면 충분하다. 이 때 $\mathbb{A}^n_S=\Spec A[\x_1,\ldots, \x_n]$이고 $B=A[\x_1,\ldots, \x_n]$이라 하자. [정의 4](#def4)에 의하여 $\Omega_{\mathbb{A}^n_S/S}\cong \widetilde{\Omega_{B/A}}$이므로 $\Omega_{B/A}$가 $d\x_1,\ldots, d\x_n$을 기저로 하는 자유 $B$-module임을 보이면 된다.
+$B=A[\x_1,\ldots, \x_n]$이라 하자. [정의 4](#def4)에 의하여 $\Omega_{\mathbb{A}^n_A/A}\cong \widetilde{\Omega_{B/A}}$이므로 $\Omega_{B/A}$가 $d\x_1,\ldots, d\x_n$을 기저로 하는 free $B$-module임을 보이면 된다.
 
 $\Omega_{B/A}$는 정의에 의하여 원소들 $df$ ($f\in B$)로 생성되는데, $d$가 $A$-derivation이므로 임의의 다항식 $f$에 대하여 chain rule
 
@@ -243,25 +249,31 @@ $$df=\sum_{i=1}^n\frac{\partial f}{\partial \x_i}d\x_i$$
 가 성립한다. 따라서 $\Omega_{B/A}$는 $d\x_1,\ldots, d\x_n$으로 생성된다. 한편 이들이 $B$ 위에서 일차독립임을 보이기 위해, 각 $j$에 대하여 $j$번째 편미분 $\partial/\partial \x_j:B \rightarrow B$가 $A$-derivation임을 이용한다. 이는 universal property에 의하여 $B$-linear map $\partial_j:\Omega_{B/A} \rightarrow B$를 유도하며 $\partial_j(d\x_i)=\delta_{ij}$이므로, $\sum_i b_i d\x_i=0$이면 $\partial_j$를 적용하여 $b_j=0$을 얻는다. 그러므로 $d\x_1,\ldots, d\x_n$은 자유 기저이고 $\Omega_{B/A}\cong B^{\oplus n}$이다.
 :::
 
+Base가 affine이 아니어도 사정은 같다. 임의의 scheme $S$는 유일한 방식으로 $\Spec \mathbb{Z}$ 위의 scheme이므로, $S$ 위의 relative affine space를 base change
+
+$$\mathbb{A}^n_S=\Spec \mathbb{Z}[\x_1,\ldots, \x_n]\times_{\Spec \mathbb{Z}}S$$
+
+로 정의할 수 있고 ([§올곱, ⁋정리 8](/ko/math/scheme_theory/fiber_products#thm8)), $S$의 affine open subset $\Spec A$ 위에서 이것이 주는 것은 $\mathbb{A}^n_A$이다. ([§올곱, ⁋예시 9](/ko/math/scheme_theory/fiber_products#ex9)) 그런데 [정의 4](#def4)에 의하여 cotangent sheaf는 base의 affine open subset마다의 국소 모형으로 결정되므로, 각 chart에 위의 명제를 적용하면 $\Omega_{\mathbb{A}^n_S/S}\cong \mathcal{O}_{\mathbb{A}^n_S}^{\oplus n}$을 얻는다.
+
 이렇듯 affine space 위에서 미분층은 좌표함수의 미분이 자유 기저를 이루는 trivial bundle이다. Projective space로 넘어가면 상황이 더 흥미로워지는데, $\mathbb{P}^n$의 cotangent sheaf는 자유롭지 않지만 twisting sheaf들 사이의 short exact sequence, 곧 Euler exact sequence로 표현된다.
 
 ::: 정리 10 (Euler exact sequence)
-Field $\mathbb{K}$ 위의 projective space $\mathbb{P}^n=\mathbb{P}^n_\mathbb{K}$에 대하여, $\mathcal{O}_{\mathbb{P}^n}$-module들의 short exact sequence
+Ring $A$ 위의 projective space $\mathbb{P}^n_A=\Proj A[\x_0,\ldots, \x_n]$에 대하여 ([§사영공간과 Proj 구성, ⁋정의 1](/ko/math/scheme_theory/projective_schemes#def1)), $\mathcal{O}_{\mathbb{P}^n_A}$-module들의 short exact sequence
 
-$$0 \longrightarrow \Omega_{\mathbb{P}^n/\mathbb{K}} \longrightarrow \mathcal{O}_{\mathbb{P}^n}(-1)^{\oplus(n+1)} \longrightarrow \mathcal{O}_{\mathbb{P}^n} \longrightarrow 0$$
+$$0 \longrightarrow \Omega_{\mathbb{P}^n_A/A} \longrightarrow \mathcal{O}_{\mathbb{P}^n_A}(-1)^{\oplus(n+1)} \longrightarrow \mathcal{O}_{\mathbb{P}^n_A} \longrightarrow 0$$
 
 이 존재한다.
 :::
 ::: 증명
-$\mathbb{P}^n=\Proj A_\bullet$, $A_\bullet=\mathbb{K}[\x_0,\ldots, \x_n]$이라 하고 ([§사영공간과 Proj 구성, ⁋예시 12](/ko/math/scheme_theory/projective_schemes#ex12)) 표준 affine open $U_i=D_+(\x_i)$ 위에서 작업한다. $U_i$ 위에서 좌표는 $y^{(i)}_j=\x_j/\x_i$ ($j\neq i$)이며, $\Omega_{\mathbb{P}^n/\mathbb{K}}\vert_{U_i}$는 [명제 9](#prop9)에 의하여 $d y^{(i)}_j$ ($j\neq i$)를 자유 기저로 하는 rank $n$의 자유 sheaf이다.
+이하 $\mathbb{P}^n=\mathbb{P}^n_A$로 줄여 적고 표준 affine open $U_i=D_+(\x_i)$ 위에서 작업한다. [§사영공간과 Proj 구성, ⁋정리 10](/ko/math/scheme_theory/projective_schemes#thm10)에 의하여 $U_i$는 $\x_j/\x_i$ ($j\neq i$)들을 좌표로 하는 $A$ 위의 affine space $\mathbb{A}^n_A$이므로, 이들을 $y^{(i)}_j=\x_j/\x_i$로 적으면 $\Omega_{\mathbb{P}^n/A}\vert_{U_i}$는 [명제 9](#prop9)에 의하여 $dy^{(i)}_j$ ($j\neq i$)를 자유 기저로 하는 rank $n$의 자유 sheaf이다.
 
 오른쪽 morphism $\mathcal{O}(-1)^{\oplus(n+1)} \rightarrow \mathcal{O}$를 정의하자. $\mathcal{O}(-1)^{\oplus(n+1)}$의 standard basis를 $e_0,\ldots, e_n$이라 할 때, 이 morphism을 $e_j\mapsto \x_j$로 정의한다. 여기에서 $\x_j$는 $\mathcal{O}(-1) \rightarrow \mathcal{O}$, 곧 $\mathcal{O} \rightarrow \mathcal{O}(1)$의 전역 section으로서 $\mathcal{O}(-1)$을 $\mathcal{O}$로 보내는 곱이다. 각 $U_i$ 위에서 $\x_i$가 가역이므로 이 morphism은 surjective이다.
 
-이제 kernel을 계산하여 그것이 $\Omega_{\mathbb{P}^n/\mathbb{K}}$임을 보인다. $U_i$ 위에서 $\mathcal{O}(-1)$을 $\x_i^{-1}$로 trivialize하면 위 morphism은 $(a_0,\ldots, a_n)\mapsto \sum_j a_j (\x_j/\x_i)$로 주어지고, 그 kernel은 $\sum_j a_j d(\x_j/\x_i)=0$를 만족하는 관계와 동일한 rank $n$의 자유 module이 된다. 구체적으로 morphism $\Omega_{\mathbb{P}^n/\mathbb{K}}\vert_{U_i} \rightarrow \mathcal{O}(-1)^{\oplus(n+1)}\vert_{U_i}$을
+이제 kernel을 계산하여 그것이 $\Omega_{\mathbb{P}^n/A}$임을 보인다. $U_i$ 위에서 $\mathcal{O}(-1)$을 $\x_i^{-1}$로 trivialize하면 위 morphism은 $(a_0,\ldots, a_n)\mapsto \sum_j a_j (\x_j/\x_i)$로 주어지고, 그 kernel은 $\sum_j a_j d(\x_j/\x_i)=0$를 만족하는 관계와 동일한 rank $n$의 자유 module이 된다. 구체적으로 morphism $\Omega_{\mathbb{P}^n/A}\vert_{U_i} \rightarrow \mathcal{O}(-1)^{\oplus(n+1)}\vert_{U_i}$을
 
 $$d\Bigl(\frac{\x_j}{\x_i}\Bigr)\longmapsto \frac{1}{\x_i}\Bigl(e_j-\frac{\x_j}{\x_i}e_i\Bigr)$$
 
-로 정의하면, 이 morphism의 image는 정확히 $\sum_j \x_j(\cdot)=0$의 kernel과 일치한다. 이 국소적 정의는 $U_i\cap U_j$ 위에서 좌표 변환과 호환되어 ($d(\x_l/\x_i)$와 $d(\x_l/\x_j)$의 변환이 $\x_i, \x_j$의 곱으로 상쇄되므로) 전역적인 morphism $\Omega_{\mathbb{P}^n/\mathbb{K}} \rightarrow \mathcal{O}(-1)^{\oplus(n+1)}$로 붙는다. 따라서 주어진 sequence는 각 $U_i$ 위에서 exact이고, exactness는 국소적 성질이므로 전역적으로 short exact sequence를 이룬다.
+로 정의하면, 이 morphism의 image는 정확히 $\sum_j \x_j(\cdot)=0$의 kernel과 일치한다. 이 국소적 정의는 $U_i\cap U_j$ 위에서 좌표 변환과 호환되어 ($d(\x_l/\x_i)$와 $d(\x_l/\x_j)$의 변환이 $\x_i, \x_j$의 곱으로 상쇄되므로) 전역적인 morphism $\Omega_{\mathbb{P}^n/A} \rightarrow \mathcal{O}(-1)^{\oplus(n+1)}$로 붙는다. 따라서 주어진 sequence는 각 $U_i$ 위에서 exact이고, exactness는 국소적 성질이므로 전역적으로 short exact sequence를 이룬다.
 :::
 
 Euler exact sequence는 projective space 위의 미분기하를 떠받치는 가장 기본적인 관계이다. 가령 tangent sheaf $\mathcal{T}_{\mathbb{P}^n}$은 Euler exact sequence를 쌍대화한 $0 \rightarrow \mathcal{O} \rightarrow \mathcal{O}(1)^{\oplus(n+1)} \rightarrow \mathcal{T}_{\mathbb{P}^n} \rightarrow 0$로 주어지며, 다음 절에서는 같은 exact sequence의 determinant를 취하여 $\mathbb{P}^n$의 canonical sheaf를 계산한다.
@@ -324,7 +336,7 @@ $\varphi$가 isomorphism임은 국소적으로 확인하면 충분하다. 위의
 이를 Euler exact sequence에 적용하면 projective space의 canonical sheaf가 곧바로 계산된다.
 
 ::: 예시 13
-Field $\mathbb{K}$ 위의 projective space $\mathbb{P}^n$을 생각하자. [정리 10](#thm10)의 증명에서 보았듯 $\Omega_{\mathbb{P}^n/\mathbb{K}}$는 각 $U_i=D_+(\x_i)$ 위에서 $dy^{(i)}_j$ ($j\neq i$)를 기저로 하는 rank $n$의 자유 sheaf이므로 locally free이고, 따라서 $\omega_{\mathbb{P}^n}$이 정의된다. Euler exact sequence의 세 항 $\Omega_{\mathbb{P}^n/\mathbb{K}}$, $\mathcal{O}(-1)^{\oplus(n+1)}$, $\mathcal{O}_{\mathbb{P}^n}$의 rank는 각각 $n$, $n+1$, $1$이므로, [명제 12](#prop12)에 의하여
+Field $\mathbb{K}$ 위의 projective space $\mathbb{P}^n$을 생각하자. [정리 10](#thm10)을 $A=\mathbb{K}$에 적용하면 Euler exact sequence를 얻으며, 그 증명에서 보았듯 $\Omega_{\mathbb{P}^n/\mathbb{K}}$는 각 $U_i=D_+(\x_i)$ 위에서 $dy^{(i)}_j$ ($j\neq i$)를 기저로 하는 rank $n$의 자유 sheaf이므로 locally free이고, 따라서 $\omega_{\mathbb{P}^n}$이 정의된다. Euler exact sequence의 세 항 $\Omega_{\mathbb{P}^n/\mathbb{K}}$, $\mathcal{O}(-1)^{\oplus(n+1)}$, $\mathcal{O}_{\mathbb{P}^n}$의 rank는 각각 $n$, $n+1$, $1$이므로, [명제 12](#prop12)에 의하여
 
 $$\det\bigl(\mathcal{O}(-1)^{\oplus(n+1)}\bigr)\cong \omega_{\mathbb{P}^n}\otimes_{\mathcal{O}_{\mathbb{P}^n}}\det\mathcal{O}_{\mathbb{P}^n}\cong\omega_{\mathbb{P}^n}$$
 
