@@ -1923,6 +1923,13 @@ C:
     url: /ko/math/linear_algebra/ftla
   - label: '[다중선형대수학] §기저변환'
     url: /ko/math/multilinear_algebra/change_of_basis
+- id: change_of_variables
+  en: change of variables
+  ko: 변수변환
+  primary: ko
+  defs:
+  - label: '[미적분학] §다중적분'
+    url: /ko/math/calculus/multiple_integrals
 - id: character
   en: character
   ko: 지표
@@ -6039,6 +6046,13 @@ G:
   defs:
   - label: '[정수론] §가우스 정수와 두 제곱수의 합'
     url: /ko/math/number_theory/gaussian_integers
+- id: gaussian_integral
+  en: Gaussian integral
+  ko: 가우스 적분
+  primary: en
+  defs:
+  - label: '[미적분학] §다중적분'
+    url: /ko/math/calculus/multiple_integrals
 - id: general_linear_group
   en: general linear group
   ko: 일반선형군
@@ -8012,6 +8026,13 @@ I:
   defs:
   - label: '[토릭 기하학] §Cox 구성과 GIT quotient'
     url: /ko/math/toric_geometry/cox_construction
+- id: irrotational
+  en: irrotational
+  ko: 무회전
+  primary: ko
+  defs:
+  - label: '[미적분학] §벡터장'
+    url: /ko/math/calculus/vector_fields
 - id: isolated
   en: isolated
   ko: 고립된
@@ -11481,6 +11502,13 @@ P:
   defs:
   - label: '[사교기하학] §사교다양체'
     url: /ko/math/symplectic_geometry/symplectic_manifold
+- id: polar_coordinates
+  en: polar coordinates
+  ko: 극좌표
+  primary: ko
+  defs:
+  - label: '[미적분학] §다변수함수와 편미분'
+    url: /ko/math/calculus/partial_derivatives
 - id: polar_form
   en: polar form
   ko: 극형식
@@ -13349,6 +13377,13 @@ S:
   defs:
   - label: '[선형대수학] §벡터공간'
     url: /ko/math/linear_algebra/vector_spaces
+- id: scalar_field
+  en: scalar field
+  ko: 스칼라장
+  primary: en
+  defs:
+  - label: '[미적분학] §벡터장'
+    url: /ko/math/calculus/vector_fields
 - id: scheme
   en: scheme
   ko: 스킴
@@ -16007,6 +16042,13 @@ V:
     url: /ko/math/calculus/vector_fields
   - label: '[미분다양체] §벡터장'
     url: /ko/math/manifolds/vector_fields
+- id: vector_function
+  en: vector function
+  ko: 벡터함수
+  primary: ko
+  defs:
+  - label: '[미적분학] §곡선과 벡터함수'
+    url: /ko/math/calculus/vector_functions
 - id: vector_space
   en: vector space
   ko: 벡터공간
