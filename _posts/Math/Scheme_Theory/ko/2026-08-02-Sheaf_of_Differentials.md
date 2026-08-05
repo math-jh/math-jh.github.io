@@ -114,7 +114,7 @@ $$\Hom_B(\Omega_{B/A}, M)\cong\Hom_{B'}(\Omega_{B/A}\otimes_BB', M)$$
 
 $$\iota^\ast\Omega_{X/S}\cong\Omega_{X_s/\kappa(s)}$$
 
-를 얻는다. 가장 단순한 예로 $S=\Spec \mathbb{K}[\x]$와 $X=\Spec \mathbb{K}[\x, \y]$에 대하여 $\varphi$를 첫 좌표로의 projection이라 하면, $\Omega_{X/S}$는 $d\y$를 기저로 하는 rank $1$의 free module이다. ([\[가환대수학\] §미분, ⁋명제 5](/ko/math/commutative_algebra/differentials#prop5))
+를 얻는다. 가장 단순한 예로 $S=\Spec \mathbb{K}[\x]$와 $X=\Spec \mathbb{K}[\x, \y]$에 대하여 첫 좌표로의 projection $X \rightarrow S$를 생각하면, $\Omega_{X/S}$는 $d\y$를 기저로 하는 rank $1$의 free module이다. ([\[가환대수학\] §미분, ⁋명제 5](/ko/math/commutative_algebra/differentials#prop5))
 
 Family가 자명하지 않을 때에는 $\Omega_{X/S}$가 fiber의 기하까지 기록한다. $A=\mathbb{K}[t]$와 $B=\mathbb{K}[t, \x, \y]/(\x\y-t)$에 대하여 $\varphi:X=\Spec B \rightarrow S=\Spec A$를 생각하자. 그럼 관계식이 $t=\x\y$를 주므로 $B\cong \mathbb{K}[\x, \y]$이고 $X$ 자체는 affine plane이다. 그러나 이를 제대로 보기 위해서는 $\varphi$가 $X$를 어떻게 family로 만드는지 보는 것이 좋다. 구체적으로  $a\in \mathbb{K}$가 $0$이 아닐 때 $t=a$ 위의 fiber $X_a$는 쌍곡선 $\x\y=a$이지만, $t=0$ 위의 fiber $X_0$는 이것이 degenerate하여 두 직선 $\x\y=0$이 된다. 
 
@@ -176,17 +176,13 @@ $$\mathcal{J}/\mathcal{J}^2 \rightarrow \Omega_{Y/S}\vert_Z \rightarrow \Omega_{
 
 을 얻는다. 여기에서 첫 항의 $\mathcal{J}/\mathcal{J}^2$는 inclusion $\iota: Z\hookrightarrow Y$를 통해 $Y$ 위의 sheaf를 $Z$로 옮겨온 것으로, 이는 [§닫힌 부분스킴, ⁋정의 5](/ko/math/scheme_theory/closed_subschemes#def5)에 의해 $\mathcal{O}_Y/\mathcal{J}\cong iota_\ast \mathcal{O}_Z$이고, $\mathcal{J}$가 quotient $\mathcal{J}/\mathcal{J}^2$를 소멸시키므로 $\iota$를 통해 $\mathcal{J}/\mathcal{J^2}$를 $Z$로 옮겨오기 때문에 가능하다. 실제로 affine open subset $\Spec B\subseteq Y$와 그 image를 담는 $\Spec A\subseteq S$, 그리고 $\mathfrak{a}=\mathcal{J}(\Spec B)$와 $C=B/\mathfrak{a}$에 대하여 세 항은 각각 $\mathfrak{a}/\mathfrak{a}^2$과 $\Omega_{B/A}\otimes_BC$, $\Omega_{C/A}$의 associated sheaf가 되어 [명제 2](#prop2)의 sequence로 돌아간다. 
 
-이 두 exact sequence는 미분층을 계산하는 표준 도구이므로, 위에서 이들을 도입하며 소개한 대수적 직관을 기하적으로 옮겨보자. 우리는 이미 $\Omega_{X/S}$가 base 방향을 고정한 채 fiber 방향만 함수로 생각하여 진행하는 미분이었다. 첫째 exact sequence를 살펴보기 위해 우선 $S'\rightarrow S$가 $s'$를 $s$로 보낸다 하면 $X_{s'}$는 항상 $X_s$에 속한다. 즉, 이 상황에서는 $S'$ 위에서 재는 방향이 더 좁으며 따라서 $\Omega_{X/S'}$가 $\Omega_{X/S}$의 quotient로 주어지며 이 때 지워지는 부분이 정확히 $$
+이 두 exact sequence는 미분층을 계산하는 표준 도구이므로, 위에서 이들을 도입하며 소개한 대수적 직관을 기하적으로 옮겨보자. 우리는 이미 $\Omega_{X/S}$가 base 방향을 고정한 채 fiber 방향만 함수로 생각하여 진행하는 미분이었다. 첫째 exact sequence를 살펴보기 위해 우선 $S'\rightarrow S$가 $s'$를 $s$로 보낸다 하면 $X_{s'}$는 항상 $X_s$에 속한다. 즉, 이 상황에서는 $S'$ 위에서 재는 방향이 더 좁으며 따라서 $\Omega_{X/S'}$가 $\Omega_{X/S}$의 quotient로 주어지며 이 때 지워지는 부분이 정확히 $\psi^\ast \Omega_{S'/S}$이다. 간단한 경우로 앞서 살펴봤던 projection $\Spec \mathbb{K}[\x, \y] \rightarrow \Spec \mathbb{K}[\x]$를 $\psi$로 두고 $S=\Spec \mathbb{K}$로 잡으면, $\Omega_{X/S}$의 기저 $d\x$와 $d\y$ 가운데 $\psi$의 fiber를 따르는 $d\y$만 $\Omega_{X/S'}$에 남고 지워진 $d\x$가 $\psi^\ast\Omega_{S'/S}$에서 온 부분이다.
 
-
-
-는 같은 $X$를 두 개의 다른 base 위의 family로 볼 때 fiber 방향이 어떻게 달라지는지를 재는 것이다. $X \rightarrow S'$의 fiber는 $X \rightarrow S$의 fiber 안에 들어 있으므로 $S'$ 위에서 재는 방향이 더 좁고, 따라서 $\Omega_{X/S'}$는 $\Omega_{X/S}$의 quotient이며 지워지는 부분이 $S'$이 $S$ 위에서 움직이는 방향, 곧 $\psi^\ast\Omega_{S'/S}$의 image이다. 앞서 본 projection $\Spec \mathbb{K}[\x, \y] \rightarrow \Spec \mathbb{K}[\x]$를 $\psi$로 두고 $S=\Spec \mathbb{K}$로 잡으면, $\Omega_{X/S}$의 기저 $d\x$와 $d\y$ 가운데 $\psi$의 fiber를 따르는 $d\y$만 $\Omega_{X/S'}$에 남고 지워진 $d\x$가 $\psi^\ast\Omega_{S'/S}$에서 온 부분이다.
-
-둘째 exact sequence에서 $\mathcal{J}/\mathcal{J}^2$은 $Z$의 conormal sheaf이고, 그 dual이 $Z$가 $Y$ 안에서 가지는 normal bundle에 해당한다. $S=\Spec A$, $Y=\Spec A[\x_1,\ldots, \x_n]$이고 $\mathcal{J}$가 $f_1,\ldots, f_r$로 생성되면 $\Omega_{Y/S}\vert_Z$가 $d\x_1,\ldots, d\x_n$을 기저로 가지고 $\bar{d}$가 $f_j\mapsto\sum_i(\partial f_j/\partial \x_i)d\x_i$이므로, 이 morphism을 그 기저로 적은 행렬이 곧 Jacobian $(\partial f_j/\partial \x_i)$이다. 즉 $Z$ 위의 미분은 ambient의 미분에서 방정식들의 미분이 생성하는 부분, 곧 $Z$에 수직인 방향을 quotient하여 얻어지며, 한 점에서 이를 쌍대화하면 [\[대수다양체\] §접공간과 매끄러움, ⁋명제 2](/ko/math/algebraic_varieties/tangent_spaces_and_smoothness#prop2)의 묘사로 돌아온다.
+둘째 exact sequence에서 $\mathcal{J}/\mathcal{J}^2$은 $Z$의 conormal sheaf이고, 그 dual이 $Z$가 $Y$ 안에서 가지는 normal bundle에 해당한다. $S=\Spec A$, $Y=\Spec A[\x_1,\ldots, \x_n]$이고 $\mathcal{J}$가 $f_1,\ldots, f_r$로 생성되면 $\Omega_{Y/S}\vert_Z$가 $d\x_1,\ldots, d\x_n$을 기저로 가지고 $\bar{d}$가 $f_j\mapsto\sum_i(\partial f_j/\partial \x_i)d\x_i$이므로, 이 morphism을 그 기저로 적은 행렬이 곧 Jacobian $(\partial f_j/\partial \x_i)$이다. 즉 $Z$ 위의 미분은 ambient의 미분에서 방정식들의 미분이 생성하는 부분, 곧 $Z$에 수직인 방향을 quotient하여 얻어지며, 한 점에서 이를 dualize하면 [\[대수다양체\] §접공간과 매끄러움, ⁋명제 2](/ko/math/algebraic_varieties/tangent_spaces_and_smoothness#prop2)의 묘사로 돌아온다.
 
 ## Tangent sheaf와 Zariski 접공간
 
-Cotangent sheaf의 쌍대를 취하면 tangent vector들의 sheaf를 얻는다. 이는 variety 위에서 tangent bundle에 해당하는 대상이다.
+Cotangent sheaf의 dual를 취하면 tangent vector들의 sheaf를 얻는다. 이는 variety 위에서 tangent bundle에 해당하는 대상이다.
 
 ::: 정의 7
 Scheme morphism $\varphi:X \rightarrow S$에 대하여, $X$의 *tangent sheaf<sub>접층</sub>*를
@@ -196,7 +192,21 @@ $$\mathcal{T}_{X/S}=\sHom_{\mathcal{O}_X}(\Omega_{X/S}, \mathcal{O}_X)$$
 로 정의한다. ([§준연접층, ⁋정의 2](/ko/math/scheme_theory/quasicoherent_sheaves#def2))
 :::
 
-$\Omega_{X/S}$가 affine open 위에서 $\widetilde{\Omega_{B/A}}$이므로, 같은 open 위에서 $\mathcal{T}_{X/S}$의 section은 $\Hom_B(\Omega_{B/A}, B)\cong \Der_A(B, B)$, 즉 $B$의 $A$-derivation들이다. 따라서 tangent sheaf의 section은 미분 연산자, 곧 벡터장에 해당한다. $\Omega_{X/S}$가 locally free일 때 $\mathcal{T}_{X/S}$는 그 dual locally free sheaf이지만 ([§준연접층, ⁋정의 12](/ko/math/scheme_theory/quasicoherent_sheaves#def12)), 일반적으로는 $\sHom$이 정확한 쌍대를 주지 않을 수 있으므로 두 sheaf가 서로의 dual이 되는 것은 locally free인 경우에 한한다.
+이 정의가 하는 일을 보기 위해 다시 affine case를 보자. $X=\Spec B$와 $S=\Spec A$에 대하여 [정의 4](#def4)는 $\Omega_{X/S}=\widetilde{\Omega_{B/A}}$를 준다. 이것으로 만들어진 $\sHom$의 global section은 $\mathcal{O}_X$-module homomorphism들이므로, $\mathcal{T}_{X/S}$의 global section은 $\Hom_{\mathcal{O}_X}(\widetilde{\Omega_{B/A}}, \widetilde B)\cong\Hom_B(\Omega_{B/A}, B)$이고 ([§준연접층, ⁋정리 7](/ko/math/scheme_theory/quasicoherent_sheaves#thm7)), 따라서 정의로부터
+
+$$\mathcal{T}_{X/S}(X)\cong \Der_A(B, B)$$
+
+를 얻는다. ([\[가환대수학\] §미분, ⁋보조정리 2](/ko/math/commutative_algebra/differentials#lem2)) 같은 계산을 principal open $D(g)$ 위에서 반복하면 [명제 3](#prop3)의 첫째 주장에 의하여 $\Der_A(B_g, B_g)$가 나오므로, $\mathcal{T}_{X/S}$는 $B$의 $A$-derivation들을 국소적으로 모아 놓은 sheaf이며 이들을 붙이면 일반적인 경우 또한 얻는다.
+
+$\Omega_{B/A}$는 정의에 의해 $1$차 differential form에 해당한다. 그럼 위에서 정의한 $\Der_A(B,B)$는 이것의 dual, 즉 tangent vector에 해당하는 것이다. 구체적으로 임의의 함수 $b\in B$가 주어졌을 때, $\Der_A(B,B)$의 원소 $D$는 그 미분값 $D(b)$를 주며, universal property 아래에서 이 대응은 $db\mapsto D(b)$로 정해지는 $B$-linear map $\Omega_{B/A} \rightarrow B$와 같은 것이다. ([\[가환대수학\] §미분, ⁋보조정리 2](/ko/math/commutative_algebra/differentials#lem2)) 즉 $\Der_A(B, B)$는 정의상 $\Omega_{B/A}$의 dual module $\Hom_B(\Omega_{B/A}, B)$이고, 두 module 사이에는 $B$-bilinear pairing
+
+$$\langle -, -\rangle:\Omega_{B/A}\times \Der_A(B, B) \rightarrow B; \qquad \langle db, D\rangle=D(b)$$
+
+이 존재한다.. $\Omega_{B/A}$가 $db$ 꼴의 원소들로 생성되므로 이 pairing은 위의 식만으로 결정되며, $D$를 고정하고 $b$를 움직이면 $D$가 정하는 방향으로 함수들을 미분하는 연산을 얻고 거꾸로 $b$를 고정하고 $D$를 움직이면 $db$가 각 방향마다 $b$의 변화율을 대응시키는 함수가 된다. 이는 미분다양체 위에서 벡터장이 함수에 그 도함수를 대응시키고 $1$차 differential form이 벡터장을 대입받아 함수를 내놓는 것과 같은 구조이다.
+
+이 pairing이 dual basis를 주는 모습은 $B=A[\x_1,\ldots, \x_n]$에서 곧바로 보인다. 이 경우 $\Omega_{B/A}$는 $d\x_1,\ldots, d\x_n$을 기저로 하는 free module이고 ([\[가환대수학\] §미분, ⁋명제 5](/ko/math/commutative_algebra/differentials#prop5)), $A$-derivation $D$는 $A$-linearity와 Leibniz 법칙에 의하여 $\x_i$에서의 값 $D(\x_i)$들로 완전히 결정되어 $D=\sum_iD(\x_i)\partial/\partial \x_i$로 적힌다. 곧 $\Der_A(B, B)$ 또한 $\partial/\partial \x_1,\ldots, \partial/\partial \x_n$을 기저로 하는 rank $n$의 free module이며, $\langle d\x_i, \partial/\partial \x_j\rangle=\delta_{ij}$이므로 두 기저는 서로의 dual basis이다. 일반적인 원소에 대해서는 $\langle \sum_ic_id\x_i, \sum_jb_j\partial/\partial \x_j\rangle=\sum_ib_ic_i$가 되어, 익숙한 $1$차 differential form과 벡터장의 pairing을 그대로 돌려준다.
+
+$\Omega_{B/A}$가 free module일 때에는 이렇게 두 module이 서로의 dual이 되지만, 일반적으로는 dual을 취하며 정보가 사라진다. 앞서 본 $A=\mathbb{K}[t]$와 $B=\mathbb{K}[t, \x, \y]/(\x\y-t)$의 경우 $A$-derivation은 $t$를 죽여야 하므로 $\x D(\y)+\y D(\x)=0$을 만족해야 하고, $B\cong \mathbb{K}[\x, \y]$에서 이 방정식의 해는 $w\in B$에 대한 $D(\x)=\x w$와 $D(\y)=-\y w$뿐이다. 즉 $\Der_A(B, B)$는 $\x\partial/\partial \x-\y\partial/\partial \y$를 기저로 하는 rank $1$의 free module로, 원점에서 rank가 $2$로 뛰던 $\Omega_{B/A}$와 달리 어디에서나 rank가 $1$이다. 그러므로 $\mathcal{T}_{X/S}$에서 $\Omega_{X/S}$를 되찾을 수는 없으며, 두 sheaf가 서로의 dual이 되는 것은 $\Omega_{X/S}$가 locally free인 경우에 한한다. ([§준연접층, ⁋정의 12](/ko/math/scheme_theory/quasicoherent_sheaves#def12))
 
 한 점에서의 tangent space는 cotangent sheaf의 fiber를 residue field 위에서 쌍대화하여 얻는다. Field $\mathbb{K}$ 위의 scheme $X$의 점 $x$에 대하여, residue field를 $\kappa(x)$라 하면 ([§스킴, ⁋정의 5](/ko/math/scheme_theory/schemes#def5)) cotangent sheaf의 fiber $\Omega_{X/\mathbb{K}}\otimes_{\mathcal{O}_X}\kappa(x)$가 정의된다.
 
