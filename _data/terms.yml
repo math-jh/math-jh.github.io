@@ -794,6 +794,13 @@ A:
   defs:
   - label: '[스킴] §스킴의 대수구조'
     url: /ko/math/scheme_theory/algebra_of_schemes
+- id: associated_prime
+  en: associated prime
+  ko: 동반소 아이디얼
+  primary: en
+  defs:
+  - label: '[가환대수학] §동반소아이디얼'
+    url: /ko/math/commutative_algebra/associated_primes
 - id: associated_prime_ideal
   en: associated prime ideal
   ko: 동반소아이디얼
@@ -5492,6 +5499,13 @@ F:
   defs:
   - label: '[호몰로지 대수학] §스펙트럼 열'
     url: /ko/math/homological_algebra/spectral_sequences
+- id: filtration
+  en: filtration
+  ko: 여과
+  primary: en
+  defs:
+  - label: '[대수적 위상수학] §호몰로지의 계산'
+    url: /ko/math/algebraic_topology/computation_of_homology
 - id: final_topology
   en: final topology
   ko: 종 위상
@@ -7543,6 +7557,13 @@ I:
   see:
   - label: Homogeneous coordinates
     id: homogeneous_coordinates
+- id: initial_form
+  en: initial form
+  ko: 초기형
+  primary: en
+  defs:
+  - label: '[가환대수학] §부풀림 대수'
+    url: /ko/math/commutative_algebra/blowup_algebra
 - id: initial_ideal
   en: initial ideal
   ko: 초기 아이디얼
@@ -7799,6 +7820,13 @@ I:
   defs:
   - label: '[해석학] §미적분의 기본정리'
     url: /ko/math/analysis/fundamental_theorem_of_calculus
+- id: integrally_closed
+  en: integrally closed
+  ko: 정수종결
+  primary: en
+  defs:
+  - label: '[가환대수학] §정수적 확장과 아이디얼'
+    url: /ko/math/commutative_algebra/lying_over_and_going_up
 - id: integrand
   en: integrand
   ko: 피적분함수
