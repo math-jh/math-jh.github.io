@@ -2376,6 +2376,13 @@ C:
   defs:
   - label: '[선형대수학] §행렬식의 존재성과 유일성'
     url: /ko/math/linear_algebra/existence_and_uniqueness_of_determinant
+- id: coherence_condition
+  en: coherence condition
+  ko: 일관성 조건
+  primary: en
+  defs:
+  - label: '[범주론] §모노이드 범주'
+    url: /ko/math/category_theory/monoidal_categories
 - id: coherent_module
   en: coherent module
   ko: 연접가군

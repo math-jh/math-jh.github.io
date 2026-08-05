@@ -166,9 +166,9 @@ $$\Delta^\ast\widetilde{\mathfrak{a}/\mathfrak{a}^2}\cong \widetilde{\mathfrak{a
 
 위의 증명에서 보듯이 $\mathcal{I}/\mathcal{I}^2$은 $\Delta(X)$ 위의 sheaf로서, $\Delta$가 $X$를 그 image와 동일시하므로 $\Delta^\ast$를 통해 $X$ 위의 sheaf로 끌어온 것으로, 실제 계산을 할 때 우리는 [정의 4](#def4)에 따라 affine open 위에서 $\widetilde{\Omega_{B/A}}$로 하겠지만 위의 명제가 이 sheaf의 좌표에 의존하지 않는 묘사를 준다. 
 
-앞 절의 두 exact sequence도 associated sheaf functor의 exactness를 통해 sheaf 수준으로 곧바로 옮겨진다. ([§준연접층, ⁋명제 6](/ko/math/scheme_theory/quasicoherent_sheaves#prop6)) Scheme morphism들의 합성 $X \rightarrow S' \rightarrow S$와 그 첫 morphism $g: X \rightarrow S'$에 대하여, 각 affine open 위에서 [명제 1](#prop1)을 associated sheaf로 옮기면 $\mathcal{O}_X$-module들의 exact sequence
+앞 절의 두 exact sequence도 associated sheaf functor의 exactness를 통해 sheaf 수준으로 곧바로 옮겨진다. ([§준연접층, ⁋명제 6](/ko/math/scheme_theory/quasicoherent_sheaves#prop6)) Scheme morphism들의 합성 $X \rightarrow S' \rightarrow S$와 그 첫 morphism $\psi: X \rightarrow S'$에 대하여, 각 affine open 위에서 [명제 1](#prop1)을 associated sheaf로 옮기면 $\mathcal{O}_X$-module들의 exact sequence
 
-$$g^\ast\Omega_{S'/S} \rightarrow \Omega_{X/S} \rightarrow \Omega_{X/S'} \rightarrow 0$$
+$$\psi^\ast\Omega_{S'/S} \rightarrow \Omega_{X/S} \rightarrow \Omega_{X/S'} \rightarrow 0$$
 
 을 얻으며, closed subscheme $Z\hookrightarrow Y$가 ideal sheaf $\mathcal{J}$로 주어질 때 [명제 2](#prop2)를 옮기면 conormal exact sequence
 
@@ -176,7 +176,7 @@ $$\mathcal{J}/\mathcal{J}^2 \rightarrow \Omega_{Y/S}\vert_Z \rightarrow \Omega_{
 
 을 얻는다. 
 
-이 두 exact sequence는 미분층을 계산하는 표준 도구이므로, 위에서 이들을 도입하며 소개한 대수적 직관을 기하적으로 옮겨보자. 첫째 exact sequence는 같은 $X$를 두 개의 base 위의 family로 볼 때 fiber 방향이 어떻게 달라지는지를 잰다. $X \rightarrow S'$의 fiber는 $X \rightarrow S$의 fiber 안에 들어 있으므로 $S'$ 위에서 재는 방향이 더 좁고, 따라서 $\Omega_{X/S'}$는 $\Omega_{X/S}$의 quotient이며 지워지는 부분이 $S'$이 $S$ 위에서 움직이는 방향, 곧 $g^\ast\Omega_{S'/S}$의 image이다. 앞서 본 projection $\Spec \mathbb{K}[\x, \y] \rightarrow \Spec \mathbb{K}[\x]$를 $g$로 두고 $S=\Spec \mathbb{K}$로 잡으면, $\Omega_{X/S}$의 기저 $d\x$와 $d\y$ 가운데 $g$의 fiber를 따르는 $d\y$만 $\Omega_{X/S'}$에 남고 지워진 $d\x$가 $g^\ast\Omega_{S'/S}$에서 온 부분이다.
+이 두 exact sequence는 미분층을 계산하는 표준 도구이므로, 위에서 이들을 도입하며 소개한 대수적 직관을 기하적으로 옮겨보자. 첫째 exact sequence는 같은 $X$를 두 개의 base 위의 family로 볼 때 fiber 방향이 어떻게 달라지는지를 잰다. $X \rightarrow S'$의 fiber는 $X \rightarrow S$의 fiber 안에 들어 있으므로 $S'$ 위에서 재는 방향이 더 좁고, 따라서 $\Omega_{X/S'}$는 $\Omega_{X/S}$의 quotient이며 지워지는 부분이 $S'$이 $S$ 위에서 움직이는 방향, 곧 $\psi^\ast\Omega_{S'/S}$의 image이다. 앞서 본 projection $\Spec \mathbb{K}[\x, \y] \rightarrow \Spec \mathbb{K}[\x]$를 $\psi$로 두고 $S=\Spec \mathbb{K}$로 잡으면, $\Omega_{X/S}$의 기저 $d\x$와 $d\y$ 가운데 $\psi$의 fiber를 따르는 $d\y$만 $\Omega_{X/S'}$에 남고 지워진 $d\x$가 $\psi^\ast\Omega_{S'/S}$에서 온 부분이다.
 
 둘째 exact sequence에서 $\mathcal{J}/\mathcal{J}^2$은 $Z$의 conormal sheaf이고, 그 dual이 $Z$가 $Y$ 안에서 가지는 normal bundle에 해당한다. $S=\Spec A$, $Y=\Spec A[\x_1,\ldots, \x_n]$이고 $\mathcal{J}$가 $f_1,\ldots, f_r$로 생성되면 $\Omega_{Y/S}\vert_Z$가 $d\x_1,\ldots, d\x_n$을 기저로 가지고 $\bar{d}$가 $f_j\mapsto\sum_i(\partial f_j/\partial \x_i)d\x_i$이므로, 이 morphism을 그 기저로 적은 행렬이 곧 Jacobian $(\partial f_j/\partial \x_i)$이다. 즉 $Z$ 위의 미분은 ambient의 미분에서 방정식들의 미분이 생성하는 부분, 곧 $Z$에 수직인 방향을 quotient하여 얻어지며, 한 점에서 이를 쌍대화하면 [\[대수다양체\] §접공간과 매끄러움, ⁋명제 2](/ko/math/algebraic_varieties/tangent_spaces_and_smoothness#prop2)의 묘사로 돌아온다.
 
