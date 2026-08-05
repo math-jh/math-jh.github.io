@@ -144,25 +144,29 @@ $$\Omega_{X/S}\cong\Delta^\ast\bigl(\mathcal{I}/\mathcal{I}^2\bigr)$$
 
 $$\mathfrak{a}/\mathfrak{a}^2\cong \Omega_{B/A}$$
 
-임을 보인다. 이를 위해 morphism $\mathfrak{a}/\mathfrak{a}^2 \rightarrow \Omega_{B/A}$를 $b\otimes 1-1\otimes b\mapsto db$로 정의하고, 역사상 $\Omega_{B/A} \rightarrow \mathfrak{a}/\mathfrak{a}^2$을 universal derivation으로부터 얻는다. 구체적으로 $\delta:B \rightarrow \mathfrak{a}/\mathfrak{a}^2$를 $\delta(b)=(b\otimes 1-1\otimes b)+\mathfrak{a}^2$로 정의하면, 임의의 $b, b'\in B$에 대하여 $B\otimes_AB$ 안에서
+임을 보이자. 이를 위해 morphism
+
+$$\mathfrak{a}/\mathfrak{a}^2 \rightarrow \Omega_{B/A}:\qquad b\otimes 1-1\otimes b\mapsto db$$
+
+을 정의하자. 한편 $\delta:B \rightarrow \mathfrak{a}/\mathfrak{a}^2$를 $\delta(b)=(b\otimes 1-1\otimes b)+\mathfrak{a}^2$로 정의하면, 임의의 $b, b'\in B$에 대하여 $B\otimes_AB$ 안에서
 
 $$\begin{aligned}
 (bb'\otimes 1-1\otimes bb')&=(b\otimes 1-1\otimes b)(1\otimes b')+(b'\otimes 1-1\otimes b')(b\otimes 1)\\
 &\equiv b'(b\otimes 1-1\otimes b)+b(b'\otimes 1-1\otimes b')\pmod{\mathfrak{a}^2}
 \end{aligned}$$
 
-이 성립하므로 ($\mathfrak{a}/\mathfrak{a}^2$ 위에서 $b\otimes 1$과 $1\otimes b$가 같은 action을 하므로) $\delta$는 $A$-derivation이다. 따라서 universal property에 의하여 $\Omega_{B/A} \rightarrow \mathfrak{a}/\mathfrak{a}^2$이 유도되고, 두 morphism이 서로 역임은 generator 위에서 확인된다. ($db\mapsto \delta(b)\mapsto db$이고 $\mathfrak{a}/\mathfrak{a}^2$은 $\delta(b)$들로 생성된다.) 그러므로
+이 성립하므로 $\delta$는 $A$-derivation이다. 따라서 universal property에 의하여 $\Omega_{B/A} \rightarrow \mathfrak{a}/\mathfrak{a}^2$이 유도되고, 이들 들이  서로 역임은 generator 위에서 확인된다. 즉 한편 pullback $\Delta^\ast$는 closed immersion $\Delta$가 $X$를 $\Delta(X)$와 동일시하며 그 위의 sheaf를 끌어오는 것이므로, 이로부터 다음의 isomorphism
 
 $$\Delta^\ast\widetilde{\mathfrak{a}/\mathfrak{a}^2}\cong \widetilde{\mathfrak{a}/\mathfrak{a}^2}\cong \widetilde{\Omega_{B/A}}$$
 
-이고, 이는 [정의 4](#def4)이 준 값과 같다. 첫 isomorphism에서 $\Delta^\ast$는 closed immersion $\Delta$가 $X$를 $\Delta(X)$와 동일시하며 그 위의 sheaf를 끌어오는 것이므로, module 수준에서는 $\mathfrak{a}/\mathfrak{a}^2$이 그대로 유지된다.
+을 얻는다. 
 
 일반적인 $\varphi$의 경우, $U=\Spec B\subseteq X$와 $V=\Spec A\subseteq S$가 $\varphi(U)\subseteq V$인 affine open이면 $\Delta(U)\subseteq U\times_VU$이고 이는 $X\times_SX$의 open subset이다. Diagonal의 ideal sheaf를 이 open 위로 제한하면 다시 multiplication $B\otimes_AB \rightarrow B$의 kernel이 되므로, 위의 계산이 그대로 적용되어 $\Delta^\ast(\mathcal{I}/\mathcal{I}^2)\vert_U\cong \widetilde{\Omega_{B/A}}=\Omega_{X/S}\vert_U$이다. 이 identification은 universal derivation으로부터 canonical하게 만들어진 것이므로 chart를 줄이거나 바꾸어도 서로 일치하며, 따라서 하나의 global isomorphism으로 붙는다.
 :::
 
-여기에서 $\mathcal{I}/\mathcal{I}^2$은 $\Delta(X)$ 위의 sheaf로 볼 수 있고, $\Delta$가 $X$를 그 image와 동일시하므로 $\Delta^\ast$를 통해 $X$ 위의 sheaf로 끌어온 것이다. [명제 6](#prop6)이 좌표에 의존하지 않는 묘사를 주지만, 실제 계산은 여전히 [정의 4](#def4)에 따라 affine open 위에서 $\widetilde{\Omega_{B/A}}$로 하면 된다.
+위의 증명에서 보듯이 $\mathcal{I}/\mathcal{I}^2$은 $\Delta(X)$ 위의 sheaf로서, $\Delta$가 $X$를 그 image와 동일시하므로 $\Delta^\ast$를 통해 $X$ 위의 sheaf로 끌어온 것으로, 실제 계산을 할 때 우리는 [정의 4](#def4)에 따라 affine open 위에서 $\widetilde{\Omega_{B/A}}$로 하겠지만 위의 명제가 이 sheaf의 좌표에 의존하지 않는 묘사를 준다. 
 
-앞 절의 두 exact sequence도 associated sheaf functor의 exactness를 통해 sheaf 수준으로 곧바로 옮겨진다. Scheme morphism들의 합성 $X \rightarrow S' \rightarrow S$와 그 첫 morphism $g: X \rightarrow S'$에 대하여, 각 affine open 위에서 [명제 1](#prop1)을 associated sheaf로 옮기면 $\mathcal{O}_X$-module들의 exact sequence
+앞 절의 두 exact sequence도 associated sheaf functor의 exactness를 통해 sheaf 수준으로 곧바로 옮겨진다. ([§준연접층, ⁋명제 6](/ko/math/scheme_theory/quasicoherent_sheaves#prop6)) Scheme morphism들의 합성 $X \rightarrow S' \rightarrow S$와 그 첫 morphism $g: X \rightarrow S'$에 대하여, 각 affine open 위에서 [명제 1](#prop1)을 associated sheaf로 옮기면 $\mathcal{O}_X$-module들의 exact sequence
 
 $$g^\ast\Omega_{S'/S} \rightarrow \Omega_{X/S} \rightarrow \Omega_{X/S'} \rightarrow 0$$
 
