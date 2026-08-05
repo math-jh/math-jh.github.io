@@ -7258,10 +7258,10 @@ H:
   primary: en
   note: 'Calculus 카테고리 글에서는 한글 ''초평면'' 유지'
   defs:
-  - label: '[대수다양체] §사영공간의 코호몰로지'
-    url: /ko/math/algebraic_varieties/cohomology_of_projective_spaces
   - label: '[미적분학] §다변수함수와 편미분'
     url: /ko/math/calculus/partial_derivatives
+  - label: '[대수다양체] §사영공간의 코호몰로지'
+    url: /ko/math/algebraic_varieties/cohomology_of_projective_spaces
   see:
   - label: Hypersurface
     id: hypersurface
@@ -8077,6 +8077,13 @@ I:
   defs:
   - label: '[선형대수학] §행렬'
     url: /ko/math/linear_algebra/matrices
+- id: invertible_module
+  en: invertible module
+  ko: 가역가군
+  primary: en
+  defs:
+  - label: '[가환대수학] §분수아이디얼'
+    url: /ko/math/commutative_algebra/fractional_ideals
 - id: invertible_sheaf
   en: invertible sheaf
   ko: 가역층
@@ -10422,6 +10429,13 @@ N:
   defs:
   - label: '[가환대수학] §정수적 확장'
     url: /ko/math/commutative_algebra/integral_extension
+- id: nakayama_s_lemma
+  en: 'Nakayama''s lemma'
+  ko: Nakayama 보조정리
+  primary: en
+  defs:
+  - label: '[가환대수학] §매개계'
+    url: /ko/math/commutative_algebra/system_of_parameters
 - id: natural_constant
   en: natural constant
   ko: 자연상수
@@ -14680,10 +14694,10 @@ S:
   ko: 순단조
   primary: ko
   defs:
-  - label: '[집합론] §단조함수'
-    url: /ko/math/set_theory/monotone_functions
   - label: '[미적분학] §연속함수'
     url: /ko/math/calculus/continuity
+  - label: '[집합론] §단조함수'
+    url: /ko/math/set_theory/monotone_functions
 - id: strictly_monotone_function
   en: strictly monotone function
   ko: 순단조함수
