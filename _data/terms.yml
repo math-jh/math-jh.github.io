@@ -711,6 +711,13 @@ A:
   defs:
   - label: '[복소해석학] §복소수와 복소평면'
     url: /ko/math/complex_analysis/complex_numbers
+- id: argument_principle
+  en: argument principle
+  ko: 편각원리
+  primary: ko
+  defs:
+  - label: '[복소해석학] §편각원리와 Rouché 정리'
+    url: /ko/math/complex_analysis/argument_principle
 - id: arithmetic_function
   en: arithmetic function
   ko: 산술적 함수
@@ -2080,6 +2087,13 @@ C:
   defs:
   - label: '[집합론] §선택공리'
     url: /ko/math/set_theory/axiom_of_choice
+- id: chordal_metric
+  en: chordal metric
+  ko: 현거리
+  primary: ko
+  defs:
+  - label: '[복소해석학] §복소수와 복소평면'
+    url: /ko/math/complex_analysis/complex_numbers
 - id: chow_group
   en: Chow group
   ko: 저우 군
@@ -3636,6 +3650,13 @@ D:
   defs:
   - label: '[해석학] §Riemann 적분'
     url: /ko/math/analysis/riemann_integral
+- id: de_moivre_s_formula
+  en: 'de Moivre''s formula'
+  ko: de Moivre 공식
+  primary: en
+  defs:
+  - label: '[복소해석학] §복소수와 복소평면'
+    url: /ko/math/complex_analysis/complex_numbers
 - id: de_Morgan's_law
   en: de Morgan's law
   ko: 드 모르간 법칙
@@ -4405,6 +4426,13 @@ D:
   defs:
   - label: '[대수적 위상수학] §벡터다발의 특성류'
     url: /ko/math/algebraic_topology/characteristic_classes
+- id: distance
+  en: distance
+  ko: 거리
+  primary: ko
+  defs:
+  - label: '[복소해석학] §복소수와 복소평면'
+    url: /ko/math/complex_analysis/complex_numbers
 - id: distinguished_triangle
   en: Distinguished triangle
   ko: ''
@@ -5209,6 +5237,13 @@ E:
   defs:
   - label: '[리만기하학] §지수사상'
     url: /ko/math/riemannian_geometry/exponential_map
+- id: extended_complex_plane
+  en: extended complex plane
+  ko: 확장복소평면
+  primary: ko
+  defs:
+  - label: '[복소해석학] §복소수와 복소평면'
+    url: /ko/math/complex_analysis/complex_numbers
 - id: extended_euclidean_algorithm
   en: extended Euclidean algorithm
   ko: 확장 유클리드 호제법
@@ -9914,6 +9949,13 @@ M:
   defs:
   - label: '[복소해석학] §편각원리와 Rouché 정리'
     url: /ko/math/complex_analysis/argument_principle
+- id: meromorphic_function
+  en: meromorphic function
+  ko: 유리형함수
+  primary: ko
+  defs:
+  - label: '[복소해석학] §복소수와 복소평면'
+    url: /ko/math/complex_analysis/complex_numbers
 - id: mertens_constant
   en: Mertens constant
   ko: 메르텐스 상수
@@ -10916,6 +10958,8 @@ O:
   defs:
   - label: '[위상수학] §Compactness와 paracompactness'
     url: /ko/math/topology/compactness
+  - label: '[복소해석학] §복소수와 복소평면'
+    url: /ko/math/complex_analysis/complex_numbers
   see:
   - label: Alexandroff compactification
     id: alexandroff_compactification
@@ -13267,6 +13311,13 @@ R:
   defs:
   - label: '[대수다양체] §곡선에서의 리만-로흐 정리'
     url: /ko/math/algebraic_varieties/riemann_roch_theorem
+- id: riemann_sphere
+  en: Riemann sphere
+  ko: Riemann 구면
+  primary: ko
+  defs:
+  - label: '[복소해석학] §복소수와 복소평면'
+    url: /ko/math/complex_analysis/complex_numbers
 - id: riemann_sum
   en: Riemann sum
   ko: 리만 합
@@ -13486,6 +13537,13 @@ R:
   defs:
   - label: '[미적분학] §무한급수'
     url: /ko/math/calculus/series
+- id: rouché_theorem
+  en: Rouché theorem
+  ko: Rouché 정리
+  primary: ko
+  defs:
+  - label: '[복소해석학] §편각원리와 Rouché 정리'
+    url: /ko/math/complex_analysis/argument_principle
 - id: row_echelon_matrix
   en: row échelon matrix
   ko: 행사다리꼴행렬
@@ -14607,6 +14665,13 @@ S:
   defs:
   - label: '[복소해석학] §Cauchy 정리'
     url: /ko/math/complex_analysis/cauchy_theorem
+- id: stereographic_projection
+  en: stereographic projection
+  ko: 입체사영
+  primary: en
+  defs:
+  - label: '[복소해석학] §복소수와 복소평면'
+    url: /ko/math/complex_analysis/complex_numbers
 - id: stiefel-whitney_class
   en: Stiefel-Whitney class
   ko: 슈티펠-휘트니 특성류
