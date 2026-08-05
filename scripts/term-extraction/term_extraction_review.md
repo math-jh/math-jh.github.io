@@ -5215,3 +5215,11 @@ Decide whether each one is a definition and add it to `_data/terms.yml` (then ru
 ## term_extract_worker 2026-08-06 01:01
 
 - _posts/Math/Commutative_Algebra/ko/2024-10-23-Localization_of_Graded_Rings.md: 주요 용어 'multiplicative subset' ko 미상 — 보류
+
+## term_extract_worker 2026-08-06 02:31
+
+- _posts/Math/Commutative_Algebra/ko/2024-12-26-Differentials.md: 주요 용어 'conormal sequence' ko 미상 — 보류
+
+## term_extract_worker 2026-08-06 03:01
+
+- _posts/Math/Commutative_Algebra/ko/2025-01-12-Local_Criterion_for_Flatness.md: 주요 용어 'Tor' ko 미상 — 보류

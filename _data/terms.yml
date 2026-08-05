@@ -749,6 +749,13 @@ A:
   see:
   - label: Noetherian
     id: noetherian
+- id: artinian_ring
+  en: Artinian ring
+  ko: Artinian 환
+  primary: en
+  defs:
+  - label: '[가환대수학] §조르단-횔더 정리'
+    url: /ko/math/commutative_algebra/Jordan-Holder_theorem
 - id: ascending_chain_condition
   en: ascending chain condition
   ko: 오름사슬조건
@@ -5732,6 +5739,13 @@ F:
   defs:
   - label: '[리 이론] §Weyl 지표 공식'
     url: /ko/math/lie_theory/weyl_character_formula
+- id: formal_power_series
+  en: formal power series
+  ko: 형식 멱급수
+  primary: en
+  defs:
+  - label: '[환론] §다항식환'
+    url: /ko/math/ring_theory/polynomial_rings
 - id: four_fundamental_subspaces
   en: four fundamental subspaces
   ko: 네 개의 기본공간들
@@ -14986,6 +15000,13 @@ S:
   defs:
   - label: '[군론] §실로우 정리'
     url: /ko/math/group_theory/Sylow_theorems
+- id: symbolic_power
+  en: symbolic power
+  ko: 기호적 거듭제곱
+  primary: en
+  defs:
+  - label: '[가환대수학] §차원'
+    url: /ko/math/commutative_algebra/Krull_dimension
 - id: symmetor
   en: symmetor
   ko: 대칭자
@@ -15984,6 +16005,13 @@ U:
   defs:
   - label: '[호몰로지 대수학] §유도함자'
     url: /ko/math/homological_algebra/derived_functors
+- id: universal_derivation
+  en: universal derivation
+  ko: 보편 미분
+  primary: en
+  defs:
+  - label: '[스킴] §Kähler 미분과 여접층'
+    url: /ko/math/scheme_theory/sheaf_of_differentials
 - id: universal_element
   en: universal element
   ko: 보편 원소
