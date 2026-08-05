@@ -50,7 +50,7 @@ $$\mathfrak{a}/\mathfrak{a}^2 \overset{\bar{d}}{\longrightarrow} \Omega_{B/A}\ot
 은 exact이며, 첫째 morphism $\bar{d}$는 $f+\mathfrak{a}^2\mapsto df\otimes 1$로 주어진다.
 :::
 ::: 증명
-Surjection $\varphi:B \rightarrow C=B/\mathfrak{a}$에 [\[가환대수학\] §미분, ⁋명제 9](/ko/math/commutative_algebra/differentials#prop9)를 적용하면 된다.
+Surjection $\phi:B \rightarrow C=B/\mathfrak{a}$에 [\[가환대수학\] §미분, ⁋명제 9](/ko/math/commutative_algebra/differentials#prop9)를 적용하면 된다.
 :::
 
 위에서 언급한 것과 같이, 우리는 이들을 이어붙여 scheme morphism에 대한 Kähler differential을 정의해야 한다. 이는 본질적으로 base와 fiber쪽 각각을 affine으로 줄여야하므로, 우리는 이들 각각에 대한 gluing 조건이 필요하다. 
@@ -155,7 +155,7 @@ $$\begin{aligned}
 &\equiv b'(b\otimes 1-1\otimes b)+b(b'\otimes 1-1\otimes b')\pmod{\mathfrak{a}^2}
 \end{aligned}$$
 
-이 성립하므로 $\delta$는 $A$-derivation이다. 따라서 universal property에 의하여 $\Omega_{B/A} \rightarrow \mathfrak{a}/\mathfrak{a}^2$이 유도되고, 이들 들이  서로 역임은 generator 위에서 확인된다. 즉 한편 pullback $\Delta^\ast$는 closed immersion $\Delta$가 $X$를 $\Delta(X)$와 동일시하며 그 위의 sheaf를 끌어오는 것이므로, 이로부터 다음의 isomorphism
+이 성립하므로 $\delta$는 $A$-derivation이다. 따라서 universal property에 의하여 $\Omega_{B/A} \rightarrow \mathfrak{a}/\mathfrak{a}^2$이 유도되고, 이들 들이  서로 역임은 generator 위에서 확인된다. 한편 pullback $\Delta^\ast$는 closed immersion $\Delta$가 $X$를 $\Delta(X)$와 동일시하며 그 위의 sheaf를 끌어오는 것이므로, 이로부터 다음의 isomorphism
 
 $$\Delta^\ast\widetilde{\mathfrak{a}/\mathfrak{a}^2}\cong \widetilde{\mathfrak{a}/\mathfrak{a}^2}\cong \widetilde{\Omega_{B/A}}$$
 
@@ -164,7 +164,7 @@ $$\Delta^\ast\widetilde{\mathfrak{a}/\mathfrak{a}^2}\cong \widetilde{\mathfrak{a
 일반적인 $\varphi$의 경우, $U=\Spec B\subseteq X$와 $V=\Spec A\subseteq S$가 $\varphi(U)\subseteq V$인 affine open이면 $\Delta(U)\subseteq U\times_VU$이고 이는 $X\times_SX$의 open subset이다. Diagonal의 ideal sheaf를 이 open 위로 제한하면 다시 multiplication $B\otimes_AB \rightarrow B$의 kernel이 되므로, 위의 계산이 그대로 적용되어 $\Delta^\ast(\mathcal{I}/\mathcal{I}^2)\vert_U\cong \widetilde{\Omega_{B/A}}=\Omega_{X/S}\vert_U$이다. 이 identification은 universal derivation으로부터 canonical하게 만들어진 것이므로 chart를 줄이거나 바꾸어도 서로 일치하며, 따라서 하나의 global isomorphism으로 붙는다.
 :::
 
-위의 증명에서 보듯이 $\mathcal{I}/\mathcal{I}^2$은 $\Delta(X)$ 위의 sheaf로서, $\Delta$가 $X$를 그 image와 동일시하므로 $\Delta^\ast$를 통해 $X$ 위의 sheaf로 끌어온 것으로, 실제 계산을 할 때 우리는 [정의 4](#def4)에 따라 affine open 위에서 $\widetilde{\Omega_{B/A}}$로 하겠지만 위의 명제가 이 sheaf의 좌표에 의존하지 않는 묘사를 준다. 
+위의 증명에서 보듯이 $\mathcal{I}/\mathcal{I}^2$은 $\Delta(X)$ 위의 sheaf로서, $\Delta$가 $X$를 그 image와 동일시하므로 $\Delta^\ast$를 통해 $X$ 위의 sheaf로 끌어온 것으로, 실제 계산을 할 때 우리는 [정의 4](#def4)에 따라 affine open 위에서 $\widetilde{\Omega_{B/A}}$로 계산하겠지만 위의 명제가 이 sheaf의 좌표에 의존하지 않는 묘사를 준다. 
 
 앞 절의 두 exact sequence도 associated sheaf functor의 exactness를 통해 sheaf 수준으로 곧바로 옮겨진다. ([§준연접층, ⁋명제 6](/ko/math/scheme_theory/quasicoherent_sheaves#prop6)) Scheme morphism들의 합성 $X \rightarrow S' \rightarrow S$와 그 첫 morphism $\psi: X \rightarrow S'$에 대하여, 각 affine open 위에서 [명제 1](#prop1)을 associated sheaf로 옮기면 $\mathcal{O}_X$-module들의 exact sequence
 
@@ -226,7 +226,7 @@ $$T_xX=\bigl(\Omega_{X/\mathbb{K}}\otimes_{\mathcal{O}_X}\kappa(x)\bigr)^\vee=\H
 로 정의한다.
 :::
 
-이 정의는 local ring의 maximal ideal을 통한 친숙한 묘사와 일치한다. $x$가 residue field $\kappa(x)=\mathbb{K}$를 가지는 점, 곧 $\mathbb{K}$-rational point이고 $(\mathcal{O}_{X,x}, \mathfrak{m}_x)$가 그 local ring일 때, conormal exact sequence를 stalk에서 분석하면 $\Omega_{X/\mathbb{K}}\otimes \kappa(x)\cong \mathfrak{m}_x/\mathfrak{m}_x^2$이 성립한다. 따라서 Zariski tangent space는 $(\mathfrak{m}_x/\mathfrak{m}_x^2)^\vee$, 즉 cotangent space $\mathfrak{m}_x/\mathfrak{m}_x^2$의 쌍대이다. 한 점에서의 차원 $\dim_{\kappa(x)}T_xX$가 그 점의 국소적 차원 $\dim \mathcal{O}_{X,x}$과 같은지 여부가 그 점이 nonsingular한지를 가르는 기준이 되며, 일반적으로는 $\dim_{\kappa(x)}T_xX\geq \dim \mathcal{O}_{X,x}$이다.
+이 정의는 local ring의 maximal ideal을 통한 친숙한 묘사와 일치한다. $x$가 residue field $\kappa(x)=\mathbb{K}$를 가지는 점, 곧 $\mathbb{K}$-rational point이고 $(\mathcal{O}_{X,x}, \mathfrak{m}_x)$가 그 local ring이라 하자. Conormal exact sequence를 stalk에서 분석하면 canonical map $\mathfrak{m}_x/\mathfrak{m}_x^2 \rightarrow \Omega_{X/\mathbb{K}}\otimes\kappa(x)$가 전사임을 얻는데, 이 sequence는 왼쪽에서 exact일 이유가 없으므로 단사성은 다른 곳에서 와야 한다. 그것을 주는 것이 $\mathbb{K}$-rational이라는 가정으로, 이 경우 $\mathcal{O}_{X,x} \rightarrow \kappa(x)=\mathbb{K}$가 $\mathbb{K}$-algebra homomorphism으로서 갈라지므로 $f\mapsto (f-\bar f)+\mathfrak{m}_x^2$가 $\mathbb{K}$-derivation이 되어 위 map의 역을 유도하고, 따라서 $\Omega_{X/\mathbb{K}}\otimes \kappa(x)\cong \mathfrak{m}_x/\mathfrak{m}_x^2$이 성립한다. 그럼 Zariski tangent space는 $(\mathfrak{m}_x/\mathfrak{m}_x^2)^\vee$, 즉 cotangent space $\mathfrak{m}_x/\mathfrak{m}_x^2$의 쌍대이다. 한 점에서의 차원 $\dim_{\kappa(x)}T_xX$가 그 점의 국소적 차원 $\dim \mathcal{O}_{X,x}$과 같은지 여부가 그 점이 nonsingular한지를 가르는 기준이 되며, $\mathcal{O}_{X,x}$가 Noetherian이면 일반적으로 $\dim_{\kappa(x)}T_xX\geq \dim \mathcal{O}_{X,x}$이다.
 
 ## 아핀공간과 사영공간의 미분층
 
@@ -265,15 +265,15 @@ $$0 \longrightarrow \Omega_{\mathbb{P}^n_A/A} \longrightarrow \mathcal{O}_{\math
 이 존재한다.
 :::
 ::: 증명
-이하 $\mathbb{P}^n=\mathbb{P}^n_A$로 줄여 적고 표준 affine open $U_i=D_+(\x_i)$ 위에서 작업한다. [§사영공간과 Proj 구성, ⁋정리 10](/ko/math/scheme_theory/projective_schemes#thm10)에 의하여 $U_i$는 $\x_j/\x_i$ ($j\neq i$)들을 좌표로 하는 $A$ 위의 affine space $\mathbb{A}^n_A$이므로, 이들을 $y^{(i)}_j=\x_j/\x_i$로 적으면 $\Omega_{\mathbb{P}^n/A}\vert_{U_i}$는 [명제 9](#prop9)에 의하여 $dy^{(i)}_j$ ($j\neq i$)를 자유 기저로 하는 rank $n$의 자유 sheaf이다.
+이하 $\mathbb{P}^n=\mathbb{P}^n_A$로 줄여 적고 표준 affine open $U_i=D_+(\x_i)$ 위에서 작업한다. [§사영공간과 Proj 구성, ⁋정리 10](/ko/math/scheme_theory/projective_schemes#thm10)이 $U_i\cong \Spec A[\x_0,\ldots, \x_n]_{(\x_i)}$를 주고 [\[가환대수학\] §등급환의 국소화, ⁋명제 6](/ko/math/commutative_algebra/localization_of_graded_rings#prop6)이 이 ring을 $\x_j/\x_i$ ($j\neq i$)를 좌표로 하는 $n$변수 polynomial ring과 동일시하므로, $U_i$는 $A$ 위의 affine space $\mathbb{A}^n_A$이다. 이 좌표들을 $\y^{(i)}_j=\x_j/\x_i$로 적으면 $\Omega_{\mathbb{P}^n/A}\vert_{U_i}$는 [명제 9](#prop9)에 의하여 $d\y^{(i)}_j$ ($j\neq i$)를 자유 기저로 하는 rank $n$의 자유 sheaf이다.
 
-오른쪽 morphism $\mathcal{O}(-1)^{\oplus(n+1)} \rightarrow \mathcal{O}$를 정의하자. $\mathcal{O}(-1)^{\oplus(n+1)}$의 standard basis를 $e_0,\ldots, e_n$이라 할 때, 이 morphism을 $e_j\mapsto \x_j$로 정의한다. 여기에서 $\x_j$는 $\mathcal{O}(-1) \rightarrow \mathcal{O}$, 곧 $\mathcal{O} \rightarrow \mathcal{O}(1)$의 전역 section으로서 $\mathcal{O}(-1)$을 $\mathcal{O}$로 보내는 곱이다. 각 $U_i$ 위에서 $\x_i$가 가역이므로 이 morphism은 surjective이다.
+오른쪽 morphism $\mathcal{O}(-1)^{\oplus(n+1)} \rightarrow \mathcal{O}$를 정의하자. $\mathcal{O}(-1)^{\oplus(n+1)}$의 standard basis를 $e_0,\ldots, e_n$이라 할 때, 이 morphism을 $e_j\mapsto \x_j$로 정의한다. 여기에서 $\x_j$는 $\mathcal{O}(1)$의 전역 section이고, 이것과의 곱이 $\mathcal{O}(-1) \rightarrow \mathcal{O}$를 준다. 각 $U_i$ 위에서 $\x_i$가 가역이므로 이 morphism은 surjective이다.
 
-이제 kernel을 계산하여 그것이 $\Omega_{\mathbb{P}^n/A}$임을 보인다. $U_i$ 위에서 $\mathcal{O}(-1)$을 $\x_i^{-1}$로 trivialize하면 위 morphism은 $(a_0,\ldots, a_n)\mapsto \sum_j a_j (\x_j/\x_i)$로 주어지고, 그 kernel은 $\sum_j a_j d(\x_j/\x_i)=0$를 만족하는 관계와 동일한 rank $n$의 자유 module이 된다. 구체적으로 morphism $\Omega_{\mathbb{P}^n/A}\vert_{U_i} \rightarrow \mathcal{O}(-1)^{\oplus(n+1)}\vert_{U_i}$을
+이제 kernel을 계산하여 그것이 $\Omega_{\mathbb{P}^n/A}$임을 보인다. $U_i$ 위에서 $\mathcal{O}(-1)$을 $\x_i^{-1}$로 trivialize하면 위 morphism은 $(a_0,\ldots, a_n)\mapsto \sum_j a_j (\x_j/\x_i)$로 주어지므로, 그 kernel은 $\sum_j a_j(\x_j/\x_i)=0$을 만족하는 $(a_0,\ldots, a_n)$들로 이루어진다. 이 식에서 $a_i$의 계수가 $1$이라 $a_i$는 나머지 성분들이 결정하며, 따라서 kernel은 $j\neq i$인 $a_j$들이 자유롭게 움직이는 rank $n$의 자유 module이다. 구체적으로 morphism $\Omega_{\mathbb{P}^n/A}\vert_{U_i} \rightarrow \mathcal{O}(-1)^{\oplus(n+1)}\vert_{U_i}$을
 
 $$d\Bigl(\frac{\x_j}{\x_i}\Bigr)\longmapsto \frac{1}{\x_i}\Bigl(e_j-\frac{\x_j}{\x_i}e_i\Bigr)$$
 
-로 정의하면, 이 morphism의 image는 정확히 $\sum_j \x_j(\cdot)=0$의 kernel과 일치한다. 이 국소적 정의는 $U_i\cap U_j$ 위에서 좌표 변환과 호환되어 ($d(\x_l/\x_i)$와 $d(\x_l/\x_j)$의 변환이 $\x_i, \x_j$의 곱으로 상쇄되므로) 전역적인 morphism $\Omega_{\mathbb{P}^n/A} \rightarrow \mathcal{O}(-1)^{\oplus(n+1)}$로 붙는다. 따라서 주어진 sequence는 각 $U_i$ 위에서 exact이고, exactness는 국소적 성질이므로 전역적으로 short exact sequence를 이룬다.
+로 정의하면, 우변에 오른쪽 morphism을 적용한 값이 $\x_i^{-1}(\x_j-(\x_j/\x_i)\x_i)=0$이므로 이 대응의 image는 위에서 계산한 kernel 안에 있고, 양쪽 모두 $j\neq i$로 첨자가 매겨진 rank $n$의 자유 module이며 기저가 기저로 옮겨지므로 image가 정확히 kernel과 일치한다. 이 국소적 정의는 $U_i\cap U_k$ 위에서 좌표 변환과 호환된다. 실제로 $\x_l/\x_i=(\x_l/\x_k)(\x_k/\x_i)$와 $d(\x_k/\x_i)=-(\x_k/\x_i)^2d(\x_i/\x_k)$를 써서 $d(\x_l/\x_i)$를 $U_k$ 쪽 기저로 전개한 뒤 위의 대응을 적용하면 $e_k$ 항이 상쇄되어 $\x_i^{-2}(\x_ie_l-\x_le_i)$를 얻으므로, $U_i$ 쪽 값과 같다. 그러므로 이들은 전역적인 morphism $\Omega_{\mathbb{P}^n/A} \rightarrow \mathcal{O}(-1)^{\oplus(n+1)}$로 붙는다. 따라서 주어진 sequence는 각 $U_i$ 위에서 exact이고, exactness는 국소적 성질이므로 전역적으로 short exact sequence를 이룬다.
 :::
 
 Euler exact sequence는 projective space 위의 미분기하를 떠받치는 가장 기본적인 관계이다. 가령 tangent sheaf $\mathcal{T}_{\mathbb{P}^n}$은 Euler exact sequence를 쌍대화한 $0 \rightarrow \mathcal{O} \rightarrow \mathcal{O}(1)^{\oplus(n+1)} \rightarrow \mathcal{T}_{\mathbb{P}^n} \rightarrow 0$로 주어지며, 다음 절에서는 같은 exact sequence의 determinant를 취하여 $\mathbb{P}^n$의 canonical sheaf를 계산한다.
@@ -298,11 +298,11 @@ $$\omega_X=\bigwedge\nolimits^n\Omega_{X/\mathbb{K}}=\det\Omega_{X/\mathbb{K}}$$
 로 정의한다.
 :::
 
-앞의 관찰에 의하여 $\omega_X$는 invertible sheaf이다. 더 일반적으로 scheme morphism $\varphi:X \rightarrow S$에 대하여 $\Omega_{X/S}$가 rank $n$의 locally free sheaf일 때 relative canonical sheaf $\omega_{X/S}=\det\Omega_{X/S}$를 같은 식으로 정의하며, $S=\Spec \mathbb{K}$인 경우가 위의 정의이다.
+앞의 관찰에 의하여 $\omega_X$는 invertible sheaf이다. 더 일반적으로 scheme morphism $\varphi:X \rightarrow S$에 대하여 $\Omega_{X/S}$가 rank $n$의 locally free sheaf일 때 *relative canonical sheaf* $\omega_{X/S}=\det\Omega_{X/S}$를 같은 식으로 정의하며, $S=\Spec \mathbb{K}$인 경우가 위의 정의이다.
 
-$\Omega_{X/\mathbb{K}}$의 국소자유성이라는 가정은 [정의 8](#def8) 이후에 유보해 둔 nonsingularity와의 관계가 작동하는 지점이다. $\mathbb{K}$가 algebraically closed이고 $X$가 $\mathbb{K}$ 위의 irreducible한 separated finite type scheme이면, $\Omega_{X/\mathbb{K}}$가 locally free sheaf인 것은 $X$의 모든 closed point $x$에서 $\dim_{\kappa(x)}T_xX=\dim\mathcal{O}_{X,x}$가 성립하는 것과 동치이며, 그 때 rank $n$은 $X$의 차원과 일치한다. ([§차원, ⁋정의 1](/ko/math/scheme_theory/dimension#def1)) 여기에서 점을 closed point로 제한하는 것은 필수적이다. 가령 $X=\mathbb{A}^1_\mathbb{K}$의 generic point $\eta$에서는 $\Omega_{X/\mathbb{K}}$가 자유임에도 $\Omega_{X/\mathbb{K}}\otimes\kappa(\eta)\cong\Omega_{\mathbb{K}(\x)/\mathbb{K}}$는 $1$차원이고 $\dim\mathcal{O}_{X,\eta}=0$이다.
+$\Omega_{X/\mathbb{K}}$의 국소자유성이라는 가정은 [정의 8](#def8) 뒤에서 언급한 nonsingularity와의 관계가 작동하는 지점이다. $\mathbb{K}$가 algebraically closed이고 $X$가 $\mathbb{K}$ 위의 irreducible한 separated finite type scheme이면, $\Omega_{X/\mathbb{K}}$가 rank $n=\dim X$의 locally free sheaf인 것은 $X$의 모든 closed point $x$에서 $\dim_{\kappa(x)}T_xX=\dim\mathcal{O}_{X,x}$가 성립하는 것과 동치이다. ([§차원, ⁋정의 1](/ko/math/scheme_theory/dimension#def1)) 여기에서 rank를 차원으로 못박는 것과 점을 closed point로 제한하는 것은 모두 필수적이다. 앞의 것을 빼면 characteristic $p>0$에서 $X=\Spec \mathbb{K}[\x]/(\x^p)$가 반례가 되는데, 이는 irreducible한 separated finite type scheme이고 $d(\x^p)=p\x^{p-1}d\x=0$이라 $\Omega_{X/\mathbb{K}}$가 $d\x$를 기저로 하는 rank $1$의 자유 sheaf이지만, $X$의 유일한 점 $x$에서 $\dim\mathcal{O}_{X,x}=0$이고 $\dim_\mathbb{K}T_xX=1$이다. 뒤의 것을 빼면 $X=\mathbb{A}^1_\mathbb{K}$의 generic point $\eta$가 반례가 되며, 여기에서는 $\Omega_{X/\mathbb{K}}$가 자유임에도 $\Omega_{X/\mathbb{K}}\otimes\kappa(\eta)\cong\Omega_{\mathbb{K}(\x)/\mathbb{K}}$는 $1$차원이고 $\dim\mathcal{O}_{X,\eta}=0$이다.
 
-$\mathbb{K}$에 대한 가정도 덜어낼 수 없다. $\mathbb{K}$가 perfect가 아니면 rank와 차원의 일치부터 깨지는데, 가령 $\mathbb{K}=\mathbb{F}_p(\x)$ 위의 $X=\Spec \mathbb{K}(\x^{1/p})$는 차원이 $0$인 regular scheme이지만 $\Omega_{X/\mathbb{K}}$는 rank $1$의 자유 sheaf이다. 반대로 $\Omega_{X/\mathbb{K}}$가 locally free가 아니면 top exterior power가 invertible sheaf가 되지 않으므로 [정의 11](#def11)은 그대로 쓰이지 않으며, 그러한 scheme까지 포괄하려면 *dualizing sheaf*를 따로 도입해야 한다.
+$\mathbb{K}$에 대한 가정도 덜어낼 수 없다. $\mathbb{K}$가 perfect가 아니면 rank와 차원의 일치부터 깨지는데, 가령 $\mathbb{K}=\mathbb{F}_p(\x)$ 위의 $X=\Spec \mathbb{K}(\x^{1/p})$는 차원이 $0$인 regular scheme이지만 $\Omega_{X/\mathbb{K}}$는 rank $1$의 자유 sheaf이다. 반대로 $\Omega_{X/\mathbb{K}}$가 locally free가 아니면 rank가 일정하지 않아 top exterior power를 고를 근거부터 없으므로 [정의 11](#def11)은 그대로 쓰이지 않으며, 그러한 scheme까지 포괄하려면 *dualizing sheaf*를 따로 도입해야 한다.
 
 Canonical sheaf를 실제로 계산할 때 쓰는 도구는 determinant가 short exact sequence를 따라 tensor product로 분해된다는 사실이다.
 
@@ -324,11 +324,11 @@ $$\det\mathcal{E}\cong \det\mathcal{E}'\otimes_{\mathcal{O}_X}\det\mathcal{E}''$
 
 $$\varphi:\det\mathcal{E}'\otimes_{\mathcal{O}_X}\det\mathcal{E}'' \longrightarrow \det\mathcal{E}$$
 
-를 구성한다. 열린집합 $V$ 위의 section $\omega'\in(\det\mathcal{E}')(V)$과 $\bar t_1\wedge\cdots\wedge\bar t_s\in(\det\mathcal{E}'')(V)$이 주어졌을 때, $V$를 충분히 줄여 각 $\bar t_i$를 $t_i\in\mathcal{E}(V)$로 들어올린 뒤
+를 구성한다. 열린집합 $V$ 위의 section $\alpha\in(\det\mathcal{E}')(V)$과 $\bar t_1\wedge\cdots\wedge\bar t_s\in(\det\mathcal{E}'')(V)$이 주어졌을 때, $V$를 충분히 줄여 각 $\bar t_i$를 $t_i\in\mathcal{E}(V)$로 들어올린 뒤
 
-$$\varphi\bigl(\omega'\otimes(\bar t_1\wedge\cdots\wedge\bar t_s)\bigr)=\omega'\wedge t_1\wedge\cdots\wedge t_s$$
+$$\varphi\bigl(\alpha\otimes(\bar t_1\wedge\cdots\wedge\bar t_s)\bigr)=\alpha\wedge t_1\wedge\cdots\wedge t_s$$
 
-로 정의한다. 여기에서 좌변의 $\omega'$은 inclusion $\mathcal{E}'\hookrightarrow\mathcal{E}$가 유도하는 $\det\mathcal{E}' \rightarrow \bigwedge^r\mathcal{E}$를 통해 옮긴 section을 뜻한다. 이 값은 lift의 선택에 무관하다. 두 lift의 차가 $\mathcal{E}'$의 section이므로, $t_i$를 $t_i+a_i$ ($a_i\in\mathcal{E}'(V)$)로 바꿀 때 생기는 차이는 적어도 하나의 $a_i$를 인수로 가지는 항들의 합이다. 그런데 국소 splitting 위에서 $\omega'$은 $\mathcal{E}'\vert_V$의 기저 $f_1,\ldots, f_r$에 대한 $f_1\wedge\cdots\wedge f_r$의 배수이고 $a_i$는 $f_j$들의 $\mathcal{O}_V$-일차결합이므로, 그러한 항은 어떤 $f_j$를 두 번 포함하여 소멸한다. 그러므로 국소적으로 정의된 $\varphi$들은 겹치는 부분에서 일치하며 전역적인 morphism으로 붙는다.
+로 정의한다. 여기에서 우변의 $\alpha$는 inclusion $\mathcal{E}'\hookrightarrow\mathcal{E}$가 유도하는 $\det\mathcal{E}' \rightarrow \bigwedge^r\mathcal{E}$를 통해 옮긴 section을 뜻한다. 이 값은 lift의 선택에 무관하다. 두 lift의 차가 $\mathcal{E}'$의 section이므로, $t_i$를 $t_i+a_i$ ($a_i\in\mathcal{E}'(V)$)로 바꿀 때 생기는 차이는 적어도 하나의 $a_i$를 인수로 가지는 항들의 합이다. 그런데 국소 splitting 위에서 $\alpha$는 $\mathcal{E}'\vert_V$의 기저 $f_1,\ldots, f_r$에 대한 $f_1\wedge\cdots\wedge f_r$의 배수이고 $a_i$는 $f_j$들의 $\mathcal{O}_V$-일차결합이므로, 그러한 항은 어떤 $f_j$를 두 번 포함하여 소멸한다. 그러므로 국소적으로 정의된 $\varphi$들은 겹치는 부분에서 일치하며 전역적인 morphism으로 붙는다.
 
 $\varphi$가 isomorphism임은 국소적으로 확인하면 충분하다. 위의 $U$ 위에서 $\mathcal{E}'\vert_U$의 기저를 $f_1,\ldots, f_r$이라 하고 $\mathcal{E}''\vert_U$의 기저 $\bar g_1,\ldots, \bar g_s$의 lift를 $g_1,\ldots, g_s$라 하면, splitting에 의하여 $f_1,\ldots, f_r, g_1,\ldots, g_s$는 $\mathcal{E}\vert_U$의 기저이다. [\[다중선형대수학\] §텐서대수, ⁋명제 13](/ko/math/multilinear_algebra/tensor_algebras#prop13)에 의하여 $\det\mathcal{E}\vert_U$는 $f_1\wedge\cdots\wedge f_r\wedge g_1\wedge\cdots\wedge g_s$를 기저로 하는 rank $1$ 자유 sheaf이고, 마찬가지로 $(\det\mathcal{E}'\otimes\det\mathcal{E}'')\vert_U$는 $(f_1\wedge\cdots\wedge f_r)\otimes(\bar g_1\wedge\cdots\wedge\bar g_s)$를 기저로 한다. $\varphi$는 후자의 기저를 전자의 기저로 보내므로 $U$ 위에서 isomorphism이며, 따라서 전역적으로도 isomorphism이다.
 :::
@@ -336,7 +336,7 @@ $\varphi$가 isomorphism임은 국소적으로 확인하면 충분하다. 위의
 이를 Euler exact sequence에 적용하면 projective space의 canonical sheaf가 곧바로 계산된다.
 
 ::: 예시 13
-Field $\mathbb{K}$ 위의 projective space $\mathbb{P}^n$을 생각하자. [정리 10](#thm10)을 $A=\mathbb{K}$에 적용하면 Euler exact sequence를 얻으며, 그 증명에서 보았듯 $\Omega_{\mathbb{P}^n/\mathbb{K}}$는 각 $U_i=D_+(\x_i)$ 위에서 $dy^{(i)}_j$ ($j\neq i$)를 기저로 하는 rank $n$의 자유 sheaf이므로 locally free이고, 따라서 $\omega_{\mathbb{P}^n}$이 정의된다. Euler exact sequence의 세 항 $\Omega_{\mathbb{P}^n/\mathbb{K}}$, $\mathcal{O}(-1)^{\oplus(n+1)}$, $\mathcal{O}_{\mathbb{P}^n}$의 rank는 각각 $n$, $n+1$, $1$이므로, [명제 12](#prop12)에 의하여
+Field $\mathbb{K}$ 위의 projective space $\mathbb{P}^n$을 생각하자. [정리 10](#thm10)을 $A=\mathbb{K}$에 적용하면 Euler exact sequence를 얻으며, 그 증명에서 보았듯 $\Omega_{\mathbb{P}^n/\mathbb{K}}$는 각 $U_i=D_+(\x_i)$ 위에서 $d\y^{(i)}_j$ ($j\neq i$)를 기저로 하는 rank $n$의 자유 sheaf이므로 locally free이고, 따라서 $\omega_{\mathbb{P}^n}$이 정의된다. Euler exact sequence의 세 항 $\Omega_{\mathbb{P}^n/\mathbb{K}}$, $\mathcal{O}(-1)^{\oplus(n+1)}$, $\mathcal{O}_{\mathbb{P}^n}$의 rank는 각각 $n$, $n+1$, $1$이므로, [명제 12](#prop12)에 의하여
 
 $$\det\bigl(\mathcal{O}(-1)^{\oplus(n+1)}\bigr)\cong \omega_{\mathbb{P}^n}\otimes_{\mathcal{O}_{\mathbb{P}^n}}\det\mathcal{O}_{\mathbb{P}^n}\cong\omega_{\mathbb{P}^n}$$
 
@@ -367,7 +367,7 @@ $$H^i(X, \mathcal{E})\cong H^{n-i}\bigl(X, \omega_X\otimes_{\mathcal{O}_X}\mathc
 
 이 정리의 증명은 trace map의 구성과 그 normalization, 그리고 finite morphism을 따라 duality를 옮기는 논증을 요구하여 이 글의 범위를 넘어서므로, [\[대수다양체\] §세르 쌍대성](/ko/math/algebraic_varieties/serre_duality)에 위임한다. 그곳에서는 먼저 $\mathbb{P}^n$ 위에서 isomorphism $H^n(\mathbb{P}^n, \omega_{\mathbb{P}^n})\cong \mathbb{K}$이 정하는 trace map과 cup product로 pairing을 만들어 그것이 perfect pairing임을 보이고 ([\[대수다양체\] §세르 쌍대성, ⁋명제 2](/ko/math/algebraic_varieties/serre_duality#prop2)), 이어서 finite surjective morphism $X \rightarrow \mathbb{P}^n$을 따라 이를 일반의 $X$로 옮긴다. 이 morphism은 일반적 위치의 linear projection, 곧 projective Noether normalization에서 온다 (affine 판인 [§차원, ⁋정리 9](/ko/math/scheme_theory/dimension#thm9)와는 별개의 진술이다). 우리가 여기에서 가져다 쓰는 것은 그 결과인 duality isomorphism 자체이다.
 
-$X=\mathbb{P}^n$과 $\mathcal{E}=\mathcal{O}(d)$인 경우에 [정리 14](#thm14)가 주장하는 바는 [예시 13](#ex13)에 의하여 isomorphism $H^i(\mathbb{P}^n, \mathcal{O}(d))\cong H^{n-i}(\mathbb{P}^n, \mathcal{O}(-d-n-1))^\ast$이며, 이는 이미 계산된 cohomology와 일치한다. 실제로 $i=0$이고 $d\geq 0$이면 좌변은 degree $d$의 homogeneous polynomial들이 이루는 $\binom{n+d}{n}$차원 공간이고, 우변의 $H^n(\mathbb{P}^n, \mathcal{O}(-d-n-1))$은 $\x_0^{-1},\ldots, \x_n^{-1}$들의 degree $d$ 부분이므로 역시 $\binom{n+d}{n}$차원이다. ([§스킴의 층 코호몰로지, ⁋정리 6](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#thm6))
+$X=\mathbb{P}^n$과 $\mathcal{E}=\mathcal{O}(d)$인 경우에 [정리 14](#thm14)가 주장하는 바는 [예시 13](#ex13)에 의하여 isomorphism $H^i(\mathbb{P}^n, \mathcal{O}(d))\cong H^{n-i}(\mathbb{P}^n, \mathcal{O}(-d-n-1))^\ast$이며, 이는 이미 계산된 cohomology와 일치한다. 실제로 $i=0$이고 $d\geq 0$이면 좌변은 degree $d$의 homogeneous polynomial들이 이루는 $\binom{n+d}{n}$차원 공간이고, 우변의 $H^n(\mathbb{P}^n, \mathcal{O}(-d-n-1))$은 지수가 모두 음인 monomial 가운데 degree가 $-d-n-1$인 것들이 이루는 공간, 곧 $(\x_0\cdots\x_n)^{-1}$에 $\x_0^{-1},\ldots, \x_n^{-1}$들의 degree $d$ monomial을 곱한 것들이 이루는 공간이므로 역시 $\binom{n+d}{n}$차원이다. ([§스킴의 층 코호몰로지, ⁋정리 6](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#thm6))
 
 ---
 
