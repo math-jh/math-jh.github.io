@@ -697,6 +697,13 @@ A:
   defs:
   - label: '[해석학] §실수의 완비성'
     url: /ko/math/analysis/completeness_of_reals
+- id: area_element
+  en: area element
+  ko: 면적원소
+  primary: en
+  defs:
+  - label: '[미적분학] §면적분과 선속'
+    url: /ko/math/calculus/surface_integrals
 - id: argument
   en: argument
   ko: 편각
@@ -4386,6 +4393,13 @@ D:
   defs:
   - label: '[미적분학] §벡터장'
     url: /ko/math/calculus/vector_fields
+- id: divergence_theorem
+  en: Divergence Theorem
+  ko: 발산정리
+  primary: ko
+  defs:
+  - label: '[미적분학] §발산정리와 스토크스 정리'
+    url: /ko/math/calculus/divergence_and_stokes
 - id: diverges
   en: diverges
   ko: 발산
@@ -6437,6 +6451,13 @@ G:
   defs:
   - label: '[집합론] §순서집합의 원소들'
     url: /ko/math/set_theory/elements_in_ordered_set
+- id: green_s_theorem
+  en: 'Green''s theorem'
+  ko: 그린 정리
+  primary: ko
+  defs:
+  - label: '[미적분학] §그린 정리'
+    url: /ko/math/calculus/greens_theorem
 - id: gromov-witten_potential
   en: Gromov-Witten potential
   ko: 그로모프-위튼 퍼텐셜
@@ -10632,6 +10653,13 @@ N:
   defs:
   - label: '[대수적 구조] §몫군'
     url: /ko/math/algebraic_structures/quotient_groups
+- id: normal_vector
+  en: normal vector
+  ko: 법선벡터
+  primary: en
+  defs:
+  - label: '[미적분학] §곡선과 벡터함수'
+    url: /ko/math/calculus/vector_functions
 - id: normalization
   en: normalization
   ko: 정규화
@@ -14448,6 +14476,13 @@ S:
     url: /ko/math/algebraic_topology/stiefel_whitney_classes
   - label: '[대수적 위상수학] §벡터다발의 특성류'
     url: /ko/math/algebraic_topology/characteristic_classes
+- id: stokes_theorem
+  en: 'Stokes'' theorem'
+  ko: 스토크스 정리
+  primary: ko
+  defs:
+  - label: '[미적분학] §발산정리와 스토크스 정리'
+    url: /ko/math/calculus/divergence_and_stokes
 - id: stratification
   en: stratification
   ko: 층화
