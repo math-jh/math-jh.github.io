@@ -3683,6 +3683,13 @@ D:
   defs:
   - label: '[해석학] §선형 미분방정식계'
     url: /ko/math/analysis/linear_ode
+- id: definite_integral
+  en: definite integral
+  ko: 정적분
+  primary: ko
+  defs:
+  - label: '[미적분학] §적분'
+    url: /ko/math/calculus/integration
 - id: deformation
   en: deformation
   ko: 변형
@@ -5871,6 +5878,13 @@ F:
   defs:
   - label: '[정수론] §펠 방정식'
     url: /ko/math/number_theory/pell_equation
+- id: fundamental_theorem_of_calculus
+  en: Fundamental Theorem of Calculus
+  ko: 미적분의 기본정리
+  primary: ko
+  defs:
+  - label: '[미적분학] §미적분의 기본정리'
+    url: /ko/math/calculus/fundamental_theorem_of_calculus
 - id: fundamental_theorem_of_linear_algebra
   en: fundamental theorem of linear algebra
   ko: 선형대수학의 기본정리
@@ -5979,6 +5993,13 @@ G:
     id: Galois_correspondence
   - label: Algebraic extension
     id: algebraic_extension
+- id: gamma_function
+  en: gamma function
+  ko: 감마함수
+  primary: en
+  defs:
+  - label: '[미적분학] §이상적분'
+    url: /ko/math/calculus/improper_integrals
 - id: gauss_curvature
   en: Gauss curvature
   ko: Gauss 곡률
@@ -7113,6 +7134,8 @@ H:
   defs:
   - label: '[대수다양체] §사영공간의 코호몰로지'
     url: /ko/math/algebraic_varieties/cohomology_of_projective_spaces
+  - label: '[미적분학] §다변수함수와 편미분'
+    url: /ko/math/calculus/partial_derivatives
   see:
   - label: Hypersurface
     id: hypersurface
@@ -7671,9 +7694,23 @@ I:
   defs:
   - label: '[해석학] §미적분의 기본정리'
     url: /ko/math/analysis/fundamental_theorem_of_calculus
+- id: integrand
+  en: integrand
+  ko: 피적분함수
+  primary: ko
+  defs:
+  - label: '[미적분학] §적분'
+    url: /ko/math/calculus/integration
 - id: integration_by_parts
   en: integration by parts
   ko: 부분적분
+  primary: ko
+  defs:
+  - label: '[미적분학] §적분'
+    url: /ko/math/calculus/integration
+- id: integration_constant
+  en: integration constant
+  ko: 적분상수
   primary: ko
   defs:
   - label: '[미적분학] §적분'
@@ -8857,6 +8894,13 @@ L:
   defs:
   - label: '[정수론] §이차 잉여'
     url: /ko/math/number_theory/quadratic_residues
+- id: leibniz_rule
+  en: Leibniz rule
+  ko: 라이프니츠 규칙
+  primary: en
+  defs:
+  - label: '[미적분학] §미적분의 기본정리'
+    url: /ko/math/calculus/fundamental_theorem_of_calculus
 - id: length
   en: length
   ko: 길이
@@ -11542,6 +11586,13 @@ P:
   defs:
   - label: '[미적분학] §벡터장'
     url: /ko/math/calculus/vector_fields
+- id: power_function
+  en: power function
+  ko: 거듭제곱함수
+  primary: en
+  defs:
+  - label: '[미적분학] §이상적분'
+    url: /ko/math/calculus/improper_integrals
 - id: power_series
   en: power series
   ko: 멱급수
@@ -13970,6 +14021,13 @@ S:
   defs:
   - label: '[선형대수학] §특이값 분해'
     url: /ko/math/linear_algebra/singular_value_decomposition
+- id: singularity
+  en: singularity
+  ko: 특이점
+  primary: en
+  defs:
+  - label: '[복소해석학] §고립특이점과 Laurent 급수'
+    url: /ko/math/complex_analysis/isolated_singularities
 - id: sink
   en: sink
   ko: 들임 꼭짓점
@@ -14624,6 +14682,13 @@ S:
   defs:
   - label: '[위상수학] §부분공간'
     url: /ko/math/topology/subspaces
+- id: substitution
+  en: substitution
+  ko: 치환
+  primary: ko
+  defs:
+  - label: '[미적분학] §적분'
+    url: /ko/math/calculus/integration
 - id: successor
   en: successor
   ko: 따름
