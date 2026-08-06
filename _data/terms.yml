@@ -3027,6 +3027,13 @@ C:
   defs:
   - label: '[복소해석학] §등각사상과 Möbius 변환'
     url: /ko/math/complex_analysis/conformal_maps
+- id: conformal_equivalence
+  en: conformal equivalence
+  ko: 등각동형
+  primary: ko
+  defs:
+  - label: '[복소해석학] §등각사상과 Möbius 변환'
+    url: /ko/math/complex_analysis/conformal_maps
 - id: conformal_isomorphism
   en: conformal isomorphism
   ko: 등각동형사상
@@ -7413,6 +7420,13 @@ I:
   see:
   - label: Function
     id: function
+- id: identity_theorem
+  en: identity theorem
+  ko: 일치정리
+  primary: ko
+  defs:
+  - label: '[복소해석학] §영점과 일치정리'
+    url: /ko/math/complex_analysis/zeros_and_identity_theorem
 - id: image
   en: image
   ko: 상
@@ -9956,6 +9970,13 @@ M:
   defs:
   - label: '[해석학] §실수의 완비성'
     url: /ko/math/analysis/completeness_of_reals
+- id: maximum_modulus_principle
+  en: maximum modulus principle
+  ko: 최대절댓값 원리
+  primary: ko
+  defs:
+  - label: '[복소해석학] §영점과 일치정리'
+    url: /ko/math/complex_analysis/zeros_and_identity_theorem
 - id: mayer-vietoris_sequence
   en: Mayer-Vietoris sequence
   ko: 마이어-비에토리스 수열
@@ -10635,6 +10656,13 @@ N:
   defs:
   - label: '[해석학] §실수의 완비성'
     url: /ko/math/analysis/completeness_of_reals
+- id: newlander_nirenberg_theorem
+  en: Newlander–Nirenberg theorem
+  ko: Newlander–Nirenberg 정리
+  primary: en
+  defs:
+  - label: '[복소기하학] §거의 복소구조'
+    url: /ko/math/complex_geometry/almost_complex_structures
 - id: nijenhuis_tensor
   en: Nijenhuis tensor
   ko: 네이엔하위스 텐서
@@ -13285,6 +13313,13 @@ R:
     url: /ko/math/commutative_algebra/localization
   - label: '[스킴] §스킴'
     url: /ko/math/scheme_theory/schemes
+- id: residue_theorem
+  en: residue theorem
+  ko: 유수정리
+  primary: ko
+  defs:
+  - label: '[복소해석학] §유수정리'
+    url: /ko/math/complex_analysis/residue_theorem
 - id: restricted_sum
   en: restricted sum
   ko: 제한합
@@ -13721,6 +13756,13 @@ S:
   defs:
   - label: '[다중선형대수학] §대칭텐서'
     url: /ko/math/multilinear_algebra/symmetric_tensors
+- id: schwarz_lemma
+  en: Schwarz lemma
+  ko: Schwarz 보조정리
+  primary: ko
+  defs:
+  - label: '[복소해석학] §등각사상과 Möbius 변환'
+    url: /ko/math/complex_analysis/conformal_maps
 - id: second_countable
   en: second countable
   ko: 제2 가산
