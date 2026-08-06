@@ -249,13 +249,13 @@ $$df=\sum_{i=1}^n\frac{\partial f}{\partial \x_i}d\x_i$$
 가 성립한다. 따라서 $\Omega_{B/A}$는 $d\x_1,\ldots, d\x_n$으로 생성된다. 한편 이들이 $B$ 위에서 일차독립임을 보이기 위해, 각 $j$에 대하여 $j$번째 편미분 $\partial/\partial \x_j:B \rightarrow B$가 $A$-derivation임을 이용한다. 이는 universal property에 의하여 $B$-linear map $\partial_j:\Omega_{B/A} \rightarrow B$를 유도하며 $\partial_j(d\x_i)=\delta_{ij}$이므로, $\sum_i b_i d\x_i=0$이면 $\partial_j$를 적용하여 $b_j=0$을 얻는다. 그러므로 $d\x_1,\ldots, d\x_n$은 자유 기저이고 $\Omega_{B/A}\cong B^{\oplus n}$이다.
 :::
 
-Base가 affine이 아니어도 사정은 같다. 임의의 scheme $S$는 유일한 방식으로 $\Spec \mathbb{Z}$ 위의 scheme이므로, $S$ 위의 relative affine space를 base change
+Base가 affine이 아니어도 마찬가지의 결과가 성립한다. 임의의 scheme $S$는 유일한 방식으로 $\Spec \mathbb{Z}$ 위의 scheme이므로, $S$ 위의 *relative affine space*를 base change
 
 $$\mathbb{A}^n_S=\Spec \mathbb{Z}[\x_1,\ldots, \x_n]\times_{\Spec \mathbb{Z}}S$$
 
-로 정의할 수 있고 ([§올곱, ⁋정리 8](/ko/math/scheme_theory/fiber_products#thm8)), $S$의 affine open subset $\Spec A$ 위에서 이것이 주는 것은 $\mathbb{A}^n_A$이다. ([§올곱, ⁋예시 9](/ko/math/scheme_theory/fiber_products#ex9)) 그런데 [정의 4](#def4)에 의하여 cotangent sheaf는 base의 affine open subset마다의 국소 모형으로 결정되므로, 각 chart에 위의 명제를 적용하면 $\Omega_{\mathbb{A}^n_S/S}\cong \mathcal{O}_{\mathbb{A}^n_S}^{\oplus n}$을 얻는다.
+로 정의할 수 있고, 그럼 $S$의 affine open subset $\Spec A$ 위에서 이것이 주는 것은 $\mathbb{A}^n_A$이다. ([§올곱, ⁋예시 9](/ko/math/scheme_theory/fiber_products#ex9)) 그런데 [정의 4](#def4)에 의하여 cotangent sheaf는 base의 affine open subset마다의 local model로 결정되므로, 각 chart에 위의 명제를 적용하면 $\Omega_{\mathbb{A}^n_S/S}\cong \mathcal{O}_{\mathbb{A}^n_S}^{\oplus n}$을 얻는다.
 
-이렇듯 affine space 위에서 미분층은 좌표함수의 미분이 자유 기저를 이루는 trivial bundle이다. Projective space로 넘어가면 상황이 더 흥미로워지는데, $\mathbb{P}^n$의 cotangent sheaf는 자유롭지 않지만 twisting sheaf들 사이의 short exact sequence, 곧 Euler exact sequence로 표현된다.
+즉, affine space 위에서 differential sheaf는 좌표함수의 미분이 basis를 이루는 trivial bundle이다. Projective space로 넘어가면 상황이 더 흥미로워지는데, $\mathbb{P}^n$의 cotangent sheaf는 더 이상 free는 아니지만 twisting sheaf들 사이의 short exact sequence, 곧 Euler exact sequence로 표현된다.
 
 ::: 정리 10 (Euler exact sequence)
 Ring $A$ 위의 projective space $\mathbb{P}^n_A=\Proj A[\x_0,\ldots, \x_n]$에 대하여 ([§사영공간과 Proj 구성, ⁋정의 1](/ko/math/scheme_theory/projective_schemes#def1)), $\mathcal{O}_{\mathbb{P}^n_A}$-module들의 short exact sequence
@@ -265,7 +265,7 @@ $$0 \longrightarrow \Omega_{\mathbb{P}^n_A/A} \longrightarrow \mathcal{O}_{\math
 이 존재한다.
 :::
 ::: 증명
-이하 $\mathbb{P}^n=\mathbb{P}^n_A$로 줄여 적고 표준 affine open $U_i=D_+(\x_i)$ 위에서 작업한다. [§사영공간과 Proj 구성, ⁋정리 10](/ko/math/scheme_theory/projective_schemes#thm10)이 $U_i\cong \Spec A[\x_0,\ldots, \x_n]_{(\x_i)}$를 주고 [\[가환대수학\] §등급환의 국소화, ⁋명제 6](/ko/math/commutative_algebra/localization_of_graded_rings#prop6)이 이 ring을 $\x_j/\x_i$ ($j\neq i$)를 좌표로 하는 $n$변수 polynomial ring과 동일시하므로, $U_i$는 $A$ 위의 affine space $\mathbb{A}^n_A$이다. 이 좌표들을 $\y^{(i)}_j=\x_j/\x_i$로 적으면 $\Omega_{\mathbb{P}^n/A}\vert_{U_i}$는 [명제 9](#prop9)에 의하여 $d\y^{(i)}_j$ ($j\neq i$)를 자유 기저로 하는 rank $n$의 자유 sheaf이다.
+표기의 편의를 위해 $\mathbb{P}^n=\mathbb{P}^n_A$로 줄여 적고 standard affine open $U_i=D_+(\x_i)\cong \Spec A[\x_0,\ldots, \x_n]_{(\x_i)}$ 위에서 작업한다. 여기에 [\[가환대수학\] §등급환의 국소화, ⁋명제 6](/ko/math/commutative_algebra/localization_of_graded_rings#prop6)을 $f=\x_i$에 대하여 적용하면, degree $k$의 homogeneous element $g$를 $g/\x_i^k$로 보내는 $A$-algebra homomorphism이 isomorphism $A[\x_0,\ldots, \x_n]/(\x_i-1)\cong A[\x_0,\ldots, \x_n]_{(\x_i)}$을 유도한다. 좌변은 $\x_i$에 $1$을 대입하여 얻는 $n$변수 polynomial ring이고 그 변수 $\x_j$ ($j\neq i$)가 우변에서 $\x_j/\x_i$로 옮겨가므로, $U_i$는 이들을 좌표로 하는 $A$ 위의 affine space $\mathbb{A}^n_A$이다. 이 좌표들을 $\y^{(i)}_j=\x_j/\x_i$로 적으면 $\Omega_{\mathbb{P}^n/A}\vert_{U_i}$는 [명제 9](#prop9)에 의하여 $d\y^{(i)}_j$ ($j\neq i$)를 자유 기저로 하는 rank $n$의 자유 sheaf이다.
 
 오른쪽 morphism $\mathcal{O}(-1)^{\oplus(n+1)} \rightarrow \mathcal{O}$를 정의하자. $\mathcal{O}(-1)^{\oplus(n+1)}$의 standard basis를 $e_0,\ldots, e_n$이라 할 때, 이 morphism을 $e_j\mapsto \x_j$로 정의한다. 여기에서 $\x_j$는 $\mathcal{O}(1)$의 전역 section이고, 이것과의 곱이 $\mathcal{O}(-1) \rightarrow \mathcal{O}$를 준다. 각 $U_i$ 위에서 $\x_i$가 가역이므로 이 morphism은 surjective이다.
 
@@ -275,6 +275,12 @@ $$d\Bigl(\frac{\x_j}{\x_i}\Bigr)\longmapsto \frac{1}{\x_i}\Bigl(e_j-\frac{\x_j}{
 
 로 정의하면, 우변에 오른쪽 morphism을 적용한 값이 $\x_i^{-1}(\x_j-(\x_j/\x_i)\x_i)=0$이므로 이 대응의 image는 위에서 계산한 kernel 안에 있고, 양쪽 모두 $j\neq i$로 첨자가 매겨진 rank $n$의 자유 module이며 기저가 기저로 옮겨지므로 image가 정확히 kernel과 일치한다. 이 국소적 정의는 $U_i\cap U_k$ 위에서 좌표 변환과 호환된다. 실제로 $\x_l/\x_i=(\x_l/\x_k)(\x_k/\x_i)$와 $d(\x_k/\x_i)=-(\x_k/\x_i)^2d(\x_i/\x_k)$를 써서 $d(\x_l/\x_i)$를 $U_k$ 쪽 기저로 전개한 뒤 위의 대응을 적용하면 $e_k$ 항이 상쇄되어 $\x_i^{-2}(\x_ie_l-\x_le_i)$를 얻으므로, $U_i$ 쪽 값과 같다. 그러므로 이들은 전역적인 morphism $\Omega_{\mathbb{P}^n/A} \rightarrow \mathcal{O}(-1)^{\oplus(n+1)}$로 붙는다. 따라서 주어진 sequence는 각 $U_i$ 위에서 exact이고, exactness는 국소적 성질이므로 전역적으로 short exact sequence를 이룬다.
 :::
+
+[명제 9](#prop9)에서와 같이 base를 임의의 scheme으로 올릴 수도 있다. $\mathbb{P}^n_S=\mathbb{P}^n_\mathbb{Z}\times_{\Spec \mathbb{Z}}S$와 그 projection $\pi:\mathbb{P}^n_S \rightarrow \mathbb{P}^n_\mathbb{Z}$에 대하여 $\mathcal{O}_{\mathbb{P}^n_S}(d)=\pi^\ast\mathcal{O}_{\mathbb{P}^n_\mathbb{Z}}(d)$로 정의하면, 각 chart 위의 generator $\x_i^d$와 transition function $(\x_i/\x_j)^d$가 그대로 옮겨가므로 이는 base가 affine일 때 [§스킴의 층 코호몰로지, ⁋정의 5](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#def5)의 twisting sheaf와 일치한다. 또 [명제 5](#prop5)에 의하여 $\Omega_{\mathbb{P}^n_S/S}\cong\pi^\ast\Omega_{\mathbb{P}^n_\mathbb{Z}/\mathbb{Z}}$이다. 한편 [정리 10](#thm10)을 $A=\mathbb{Z}$에 적용하여 얻는 sequence는 세 항이 모두 locally free이고 quotient가 $\mathcal{O}_{\mathbb{P}^n_\mathbb{Z}}$이므로 국소적으로 split하고, 국소적으로 split인 sequence의 pullback은 다시 split이어서 exactness가 보존된다. 따라서 $\pi^\ast$를 취하면 임의의 scheme $S$에 대하여 Euler exact sequence
+
+$$0 \longrightarrow \Omega_{\mathbb{P}^n_S/S} \longrightarrow \mathcal{O}_{\mathbb{P}^n_S}(-1)^{\oplus(n+1)} \longrightarrow \mathcal{O}_{\mathbb{P}^n_S} \longrightarrow 0$$
+
+을 얻는다.
 
 Euler exact sequence는 projective space 위의 미분기하를 떠받치는 가장 기본적인 관계이다. 가령 tangent sheaf $\mathcal{T}_{\mathbb{P}^n}$은 Euler exact sequence를 쌍대화한 $0 \rightarrow \mathcal{O} \rightarrow \mathcal{O}(1)^{\oplus(n+1)} \rightarrow \mathcal{T}_{\mathbb{P}^n} \rightarrow 0$로 주어지며, 다음 절에서는 같은 exact sequence의 determinant를 취하여 $\mathbb{P}^n$의 canonical sheaf를 계산한다.
 

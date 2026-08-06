@@ -21,24 +21,24 @@ drift_needed: true
 
 Galois extension $\mathbb{L}/\mathbb{K}$이 주어졌다 하고, $\Gal(\mathbb{L}/\mathbb{K})$이 이 extension의 Galois group이라 하자. Galois group은 어쨌든 집합 $\mathbb{L}$에서 $\mathbb{L}$로 가는 함수들의 모임이므로 우리는 $\mathbb{L}$에서 $\mathbb{L}$로의 함수들의 모임 $\Fun(\mathbb{L},\mathbb{L})=\mathbb{L}^\mathbb{L}$에 위상구조를 준다면 이 집합의 부분집합으로서 $\Gal(\mathbb{L}/\mathbb{K})$에 위상구조를 줄 수 있다. ([\[위상수학\] §부분공간, ⁋정의 1](/ko/math/topology/subspaces#def1)) 
 
-이를 위해 $\mathbb{L}$ 위에 discrete topology를 부여하자. ([\[위상수학\] §열린집합, ⁋예시 2](/ko/math/topology/open_sets#ex2)) 우리는 [\[위상수학\] §곱공간](/ko/math/topology/product_spaces)의 결과로부터 이 집합의 subbase는 다음과 같은 꼴
+이를 위해 $\mathbb{L}$ 위에 discrete topology를 부여하자. ([\[위상수학\] §열린집합, ⁋예시 2](/ko/math/topology/open_sets#ex2)) 그럼 [\[위상수학\] §곱공간, ⁋정의 1](/ko/math/topology/product_spaces#def1) 이후의 논의에 의하여 projection $\pr_x:\mathbb{L}^\mathbb{L}\rightarrow\mathbb{L}$들에 대한 $\pr_x^{-1}(U)$꼴의 집합들이 $\mathbb{L}^\mathbb{L}$의 subbase를 이루며, $\mathbb{L}$이 discrete이므로 여기에서 $U$를 한원소집합으로 제한하여도 여전히 subbase를 얻는다. 즉 우리는 이 집합의 subbase는 다음과 같은 꼴
 
 $$U_{x,y}=\left\{\sigma\mid\sigma(x)=y \right\}$$
 
-로 쓸 수 있는 집합들의 모임임을 알고 있으므로, $\Gal(\mathbb{L}/\mathbb{K})$에 subspace topology를 부여하면 임의의 $\sigma\in\Gal(\mathbb{L}/\mathbb{K})$에 대하여 다음과 같은 형태
+로 쓸 수 있는 집합들의 모임임을 알고 있으므로, 이것의 subspace로서 $\Gal(\mathbb{L}/\mathbb{K})$을 보면, 임의의 $\sigma\in\Gal(\mathbb{L}/\mathbb{K})$에 대하여 다음과 같은 형태
 
 $$U_{x_1,\ldots,x_n}=\left\{\tau\in\Gal(\mathbb{L}/\mathbb{K})\mid \text{$\tau(x_i)=\sigma(x_i)$ for all $i$}\right\}$$
 
 의 집합들의 모임이 $\sigma$에서의 local base임을 안다. ([\[위상수학\] §위상공간의 기저, ⁋정의 4](/ko/math/topology/topological_bases#def4)) 
 
-한편 위의 조건을 만족하는 함수들은 $\mathbb{L}$의 finite subextension $\mathbb{M}=\mathbb{K}(x_1,\ldots,x_n )$으로 제한했을 때 $\sigma$와 일치하는 함수들이며, 거꾸로 임의의 finite subextension $\mathbb{M}/\mathbb{K}$은 이러한 방식으로 $\sigma$의 local base의 원소를 하나 정의한다. 즉 $\Lambda$를 extension $\mathbb{L}/\mathbb{K}$의 *finite* subextension들의 모임이라 하고 임의의 $\mathbb{M}/\mathbb{K}\in \Lambda$와 임의의 $\sigma\in \Gal(\mathbb{L}/\mathbb{K})$에 대하여, $\Gal(\mathbb{L}/\mathbb{K})$의 부분집합 $U_\mathbb{M}(\sigma)$를 다음의 식 
+한편 위의 조건을 만족하는 함수들은 $\mathbb{L}$의 finite subextension $\mathbb{M}=\mathbb{K}(x_1,\ldots,x_n )$으로 제한했을 때 $\sigma$와 일치하는 함수들이며, 거꾸로 임의의 finite subextension $\mathbb{M}/\mathbb{K}$은 이러한 방식으로 $\sigma$의 local base의 원소를 하나 정의한다. 즉 $\Sub^{\fin}(\mathbb{L}/\mathbb{K})$를 extension $\mathbb{L}/\mathbb{K}$의 *finite* subextension들의 모임이라 하고 임의의 $\mathbb{M}/\mathbb{K}\in \Sub^{\fin}(\mathbb{L}/\mathbb{K})$와 임의의 $\sigma\in \Gal(\mathbb{L}/\mathbb{K})$에 대하여, $\Gal(\mathbb{L}/\mathbb{K})$의 부분집합 $U_\mathbb{M}(\sigma)$를 다음의 식 
 
 $$U_\mathbb{M}(\sigma)=\left\{\tau\in \Gal(\mathbb{L}/\mathbb{K})\mid \sigma\vert_\mathbb{M}=\tau\vert_\mathbb{M}\right\}$$
 
-으로 정의하면 이 집합은 $\sigma$의 local base의 원소가 되며, 이들을 모아둔 $(U_\mathbb{M}(\sigma))_{\mathbb{M}\in\Lambda}$가 정확히 $\sigma$에서의 local base이다. 이렇게 얻어지는 $\Gal(\mathbb{L}/\mathbb{K})$의 위상구조를 *Krull topology*라 부른다.
+으로 정의하면 이 집합은 $\sigma$의 local base의 원소가 되며, 이들을 모아둔 $(U_\mathbb{M}(\sigma))_{\mathbb{M}\in\Sub^{\fin}(\mathbb{L}/\mathbb{K})}$가 정확히 $\sigma$에서의 local base이다. 이렇게 얻어지는 $\Gal(\mathbb{L}/\mathbb{K})$의 위상구조를 *Krull topology*라 부른다.
   
 ::: 예시 1
-특별히 $\mathbb{L}/\mathbb{K}$이 finite degree Galois extension인 경우를 생각하자. 그럼 [§갈루아 확장, ⁋정의 12](/ko/math/field_theory/galois_extension#def12) 이후의 논의로부터 우리는 $\Gal(\mathbb{L}/\mathbb{K})$이 유한집합인 것을 안다. 한편 위의 local base로부터, $\mathbb{L}/\mathbb{K}$이 finite degree이므로 $\mathbb{L}/\mathbb{K}$가 이미 $\Lambda$의 원소이고 따라서
+특별히 $\mathbb{L}/\mathbb{K}$이 finite degree Galois extension인 경우를 생각하자. 그럼 [§갈루아 확장, ⁋정의 12](/ko/math/field_theory/galois_extension#def12) 이후의 논의로부터 우리는 $\Gal(\mathbb{L}/\mathbb{K})$이 유한집합인 것을 안다. 한편 위의 local base로부터, $\mathbb{L}/\mathbb{K}$이 finite degree이므로 $\mathbb{L}/\mathbb{K}$가 이미 $\Sub^{\fin}(\mathbb{L}/\mathbb{K})$의 원소이고 따라서
 
 $$U_\mathbb{L}(\sigma)=\left\{\tau\in\Gal(\mathbb{L}/\mathbb{K})\mid \sigma\vert_\mathbb{L}=\tau\vert_\mathbb{L}\right\}=\left\{\sigma\right\}$$
 
@@ -86,7 +86,7 @@ $$U_\mathbb{M}(\id_\mathbb{L})\subseteq U_\mathbb{N}(\id_\mathbb{L})\iff \mathbb
 
 이 성립한다. 오른쪽에서 왼쪽은 정의에서 바로 나오고, 왼쪽에서 오른쪽은 $\mathbb{N}=\mathbb{L}^{\Gal(\mathbb{L}/\mathbb{N})}\subseteq\mathbb{L}^{\Gal(\mathbb{L}/\mathbb{M})}=\mathbb{M}$에서 나온다. 
 
-이제 finite degree *Galois* extension들의 모임 $\Lambda'$를 생각하면 [§갈루아 확장, ⁋명제 11](/ko/math/field_theory/galois_extension#prop11)에 의해 이것이 $\Lambda$의 cofinal subset임을 안다. 즉 $(U_\mathbb{M}(\id_\mathbb{L}))_{\mathbb{M}\in\Lambda'}$도 $\id_\mathbb{L}$의 local base이다. 그럼 임의의 $\mathbb{M}\in \Lambda'$에 대하여 [§갈루아 확장, ⁋명제 13](/ko/math/field_theory/galois_extension#prop13)에서 살펴보았던 restriction homomorphism $\rho:\Gal(\mathbb{L}/\mathbb{K})\rightarrow\Gal(\mathbb{M}/\mathbb{K})$을 생각하면, $\mathbb{M}$의 임의의 finite degree subextension은 $\mathbb{L}$의 finite degree subextension이기도 하므로 이 restriction homomorphism은 위에서 정의한 위상구조에 대하여 연속이다. 이와 같은 상황에서 $\rho$는 $\Gal(\mathbb{L}/\mathbb{K})$에서 finite discrete space $\Gal(\mathbb{M}/\mathbb{K})$로의 연속함수이므로 ([예시 1](#ex1)), $\ker\rho$는 $\Gal(\mathbb{L}/\mathbb{K})$의 closed subgroup이다. 그런데 정의에 의해 
+이제 finite degree *Galois* subextension들의 모임 $\Sub^{\fin,\gal}(\mathbb{L}/\mathbb{K})$를 생각하면 [§갈루아 확장, ⁋명제 11](/ko/math/field_theory/galois_extension#prop11)에 의해 이것이 $\Sub^{\fin}(\mathbb{L}/\mathbb{K})$의 cofinal subset임을 안다. 즉 $(U_\mathbb{M}(\id_\mathbb{L}))_{\mathbb{M}\in\Sub^{\fin,\gal}(\mathbb{L}/\mathbb{K})}$도 $\id_\mathbb{L}$의 local base이다. 그럼 임의의 $\mathbb{M}\in \Sub^{\fin,\gal}(\mathbb{L}/\mathbb{K})$에 대하여 [§갈루아 확장, ⁋명제 13](/ko/math/field_theory/galois_extension#prop13)에서 살펴보았던 restriction homomorphism $\rho:\Gal(\mathbb{L}/\mathbb{K})\rightarrow\Gal(\mathbb{M}/\mathbb{K})$을 생각하면, $\mathbb{M}$의 임의의 finite degree subextension은 $\mathbb{L}$의 finite degree subextension이기도 하므로 이 restriction homomorphism은 위에서 정의한 위상구조에 대하여 연속이다. 이와 같은 상황에서 $\rho$는 $\Gal(\mathbb{L}/\mathbb{K})$에서 finite discrete space $\Gal(\mathbb{M}/\mathbb{K})$로의 연속함수이므로 ([예시 1](#ex1)), $\ker\rho$는 $\Gal(\mathbb{L}/\mathbb{K})$의 closed subgroup이다. 그런데 정의에 의해 
 
 $$\sigma\in\ker\rho\iff \sigma\vert_\mathbb{M}=\id\vert_\mathbb{M}\iff\sigma\in U_\mathbb{M}(\id_\mathbb{L})$$
 
@@ -95,12 +95,12 @@ $$\sigma\in\ker\rho\iff \sigma\vert_\mathbb{M}=\id\vert_\mathbb{M}\iff\sigma\in 
 ::: 명제 3
 위의 상황에서 다음의 식 
 
-$$\{\id_\mathbb{L}\}=\bigcap_{\mathbb{M}\in \Lambda'}U_\mathbb{M}(\id_\mathbb{L})$$
+$$\{\id_\mathbb{L}\}=\bigcap_{\mathbb{M}\in \Sub^{\fin,\gal}(\mathbb{L}/\mathbb{K})}U_\mathbb{M}(\id_\mathbb{L})$$
 
 이 성립한다.
 :::
 ::: 증명
-임의의 $\sigma\in \Gal(\mathbb{L}/\mathbb{K})$이 주어졌다 하자. 만일 $\sigma\neq\id_\mathbb{L}$이라면 $\sigma(x)\neq x$이도록 하는 $x\in \mathbb{L}$이 존재한다. 그럼 $\mathbb{M}=\mathbb{K}(x)$으로 잡으면 $\sigma\not\in U_\mathbb{M}(\id_\mathbb{L})$이 성립한다. 이제 앞서 살펴본 것과 같이 $\Lambda'$이 $\Lambda$의 cofinal subset이므로 원하는 결과를 얻는다.
+임의의 $\sigma\in \Gal(\mathbb{L}/\mathbb{K})$이 주어졌다 하자. 만일 $\sigma\neq\id_\mathbb{L}$이라면 $\sigma(x)\neq x$이도록 하는 $x\in \mathbb{L}$이 존재한다. 그럼 $\mathbb{M}=\mathbb{K}(x)$으로 잡으면 $\sigma\not\in U_\mathbb{M}(\id_\mathbb{L})$이 성립한다. 이제 앞서 살펴본 것과 같이 $\Sub^{\fin,\gal}(\mathbb{L}/\mathbb{K})$가 $\Sub^{\fin}(\mathbb{L}/\mathbb{K})$의 cofinal subset이므로 원하는 결과를 얻는다.
 :::
 
 따라서, 이 명제의 결과에 의해 $\id_\mathbb{L}$을 포함하는 connected component는 $\left\{\id_\mathbb{L}\right\}$이다. 한편 [명제 2](#prop2)에 의하여 임의의 $\sigma$에 의한 left translation은 homeomorphism이므로 임의의 점을 포함하는 connected component 또한 한 점이고, 이로부터 $\Gal(\mathbb{L}/\mathbb{K})$이 totally disconnected space임을 안다. ([\[위상수학\] §연결공간, ⁋정의 7](/ko/math/topology/connected_spaces#def7)) 뿐만 아니라 다음이 성립한다.
@@ -155,7 +155,7 @@ $$\lambda_i:\Gal(\mathbb{L}/\mathbb{K})\rightarrow\Gal(\mathbb{L}_i/\mathbb{K})$
 우선 $\lambda(\sigma)$가 항등원이라면 임의의 $i$에 대하여 $\sigma\vert_{\mathbb{L}_i}=\id_{\mathbb{L}_i}$이고, $\mathbb{L}=\bigcup_i\mathbb{L}_i$이므로 $\sigma=\id_\mathbb{L}$이다. 즉 $\lambda$는 단사이다. 이제 $(\sigma_i)\in\varprojlim\Gal(\mathbb{L}_i/\mathbb{K})$이 주어졌다 하고, $x\in \mathbb{L}_i$에 대하여 $\sigma(x)=\sigma_i(x)$로 정의하자. 만일 $x$가 $\mathbb{L}_i$와 $\mathbb{L}_j$에 모두 속한다면 $\mathbb{L}_i\cup\mathbb{L}_j\subseteq \mathbb{L}_k$인 $k$를 잡을 때 $\sigma_i(x)=\rho_{ik}(\sigma_k)(x)=\sigma_k(x)$이고 같은 이유로 $\sigma_j(x)=\sigma_k(x)$이므로 $\sigma$가 잘 정의되며, $\mathbb{L}$의 임의의 두 원소 또한 하나의 $\mathbb{L}_k$에 함께 속하므로 $\sigma$는 $\mathbb{K}$를 fix하는 field homomorphism이다. 한편 $\rho_{ij}$들이 homomorphism이므로 $(\sigma_i^{-1})$ 또한 $\varprojlim\Gal(\mathbb{L}_i/\mathbb{K})$의 원소이고, 같은 방식으로 얻어지는 함수가 $\sigma$의 역함수가 된다. 즉 $\sigma\in\Gal(\mathbb{L}/\mathbb{K})$이며 $\lambda(\sigma)=(\sigma_i)$이므로 $\lambda$는 전사이다.
 :::
 
-특히 finite degree Galois subextension들의 family $\Lambda'$은 이 명제의 조건을 만족한다. $\Lambda'$의 두 원소의 compositum은 [§갈루아 확장, ⁋명제 10](/ko/math/field_theory/galois_extension#prop10)에 의해 다시 finite degree Galois subextension이고, $\mathbb{L}$의 임의의 원소 $x$는 $\mathbb{K}(x)$를 포함하는 $\Lambda'$의 원소에 속하기 때문이다. 즉 임의의 Galois extension의 Galois group은 유한한 group들의 inverse limit, 곧 *profinite group*이다. 
+특히 finite degree Galois subextension들의 family $\Sub^{\fin,\gal}(\mathbb{L}/\mathbb{K})$는 이 명제의 조건을 만족한다. 이 family의 두 원소의 compositum은 [§갈루아 확장, ⁋명제 10](/ko/math/field_theory/galois_extension#prop10)에 의해 다시 finite degree Galois subextension이고, $\mathbb{L}$의 임의의 원소 $x$는 $\mathbb{K}(x)$를 포함하는 $\Sub^{\fin,\gal}(\mathbb{L}/\mathbb{K})$의 원소에 속하기 때문이다. 즉 임의의 Galois extension의 Galois group은 유한한 group들의 inverse limit, 곧 *profinite group*이다. 
 
 ## 갈루아 코호몰로지
 

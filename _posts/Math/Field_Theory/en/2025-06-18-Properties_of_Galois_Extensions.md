@@ -21,7 +21,7 @@ We have previously defined Galois extensions and Galois groups. The central resu
 
 Let $\mathbb{L}/\mathbb{K}$ be a Galois extension, and let $\Gal(\mathbb{L}/\mathbb{K})$ denote its Galois group. Since the Galois group is a collection of functions from $\mathbb{L}$ to $\mathbb{L}$, if we equip the set of all such functions $\Fun(\mathbb{L},\mathbb{L})=\mathbb{L}^\mathbb{L}$ with a topology, then we can induce a topology on $\Gal(\mathbb{L}/\mathbb{K})$ as a subset of this set. ([[Topology] §Subspaces, ⁋Definition 1](/en/math/topology/subspaces#def1))
 
-To this end, we give $\mathbb{L}$ the discrete topology. ([[Topology] §Open Sets, ⁋Example 2](/en/math/topology/open_sets#ex2)) From the results of [[Topology] §Product Spaces](/en/math/topology/product_spaces), we know that a subbase for this set consists of sets of the form
+To this end, we give $\mathbb{L}$ the discrete topology. ([[Topology] §Open Sets, ⁋Example 2](/en/math/topology/open_sets#ex2)) Then by the discussion following [[Topology] §Product Spaces, ⁋Definition 1](/en/math/topology/product_spaces#def1), the sets of the form $\pr_x^{-1}(U)$ for the projections $\pr_x:\mathbb{L}^\mathbb{L}\rightarrow\mathbb{L}$ form a subbase of $\mathbb{L}^\mathbb{L}$, and since $\mathbb{L}$ is discrete, we still obtain a subbase when we restrict $U$ to singletons. That is, we know that a subbase for this set consists of sets of the form
 
 $$U_{x,y}=\left\{\sigma\mid\sigma(x)=y \right\}$$
 
@@ -31,14 +31,14 @@ $$U_{x_1,\ldots,x_n}=\left\{\tau\in\Gal(\mathbb{L}/\mathbb{K})\mid \text{$\tau(x
 
 forms a local base at $\sigma$. ([[Topology] §Bases of Topological Spaces, ⁋Definition 4](/en/math/topology/topological_bases#def4))
 
-On the other hand, the functions satisfying the above condition are precisely those that agree with $\sigma$ when restricted to a finite subextension $\mathbb{M}=\mathbb{L}(x_1,\ldots,x_n )$ of $\mathbb{L}$; conversely, any finite subextension $\mathbb{M}/\mathbb{K}$ defines an element of the local base at $\sigma$ in this manner. That is, letting $\Lambda$ be the collection of *finite* subextensions of $\mathbb{L}/\mathbb{K}$, and for any $\mathbb{M}/\mathbb{K}\in \Lambda$ and any $\sigma\in \Gal(\mathbb{L}/\mathbb{K})$, defining the subset $U_\mathbb{M}(\sigma)$ of $\Gal(\mathbb{L}/\mathbb{K})$ by the formula
+On the other hand, the functions satisfying the above condition are precisely those that agree with $\sigma$ when restricted to a finite subextension $\mathbb{M}=\mathbb{K}(x_1,\ldots,x_n )$ of $\mathbb{L}$; conversely, any finite subextension $\mathbb{M}/\mathbb{K}$ defines an element of the local base at $\sigma$ in this manner. That is, letting $\Sub^{\fin}(\mathbb{L}/\mathbb{K})$ be the collection of *finite* subextensions of $\mathbb{L}/\mathbb{K}$, and for any $\mathbb{M}/\mathbb{K}\in \Sub^{\fin}(\mathbb{L}/\mathbb{K})$ and any $\sigma\in \Gal(\mathbb{L}/\mathbb{K})$, defining the subset $U_\mathbb{M}(\sigma)$ of $\Gal(\mathbb{L}/\mathbb{K})$ by the formula
 
 $$U_\mathbb{M}(\sigma)=\left\{\tau\in \Gal(\mathbb{L}/\mathbb{K})\mid \sigma\vert_\mathbb{M}=\tau\vert_\mathbb{M}\right\}$$
 
-this set becomes an element of the local base at $\sigma$, and the collection $(U_\mathbb{M}(\sigma))_{\sigma\in\Lambda}$ is exactly the local base at $\sigma$.
+this set becomes an element of the local base at $\sigma$, and the collection $(U_\mathbb{M}(\sigma))_{\mathbb{M}\in\Sub^{\fin}(\mathbb{L}/\mathbb{K})}$ is exactly the local base at $\sigma$.
 
 ::: Example 1
-Let us consider the special case where $\mathbb{L}/\mathbb{K}$ is a finite degree Galois extension. Then from the discussion following [§Galois Extensions, ⁋Definition 12](/en/math/field_theory/galois_extension#def12), we know that $\Gal(\mathbb{L}/\mathbb{K})$ is a finite set. On the other hand, from the local base above, since $\mathbb{L}/\mathbb{K}$ is of finite degree, $\mathbb{L}/\mathbb{K}$ is already an element of $\Lambda$, and therefore
+Let us consider the special case where $\mathbb{L}/\mathbb{K}$ is a finite degree Galois extension. Then from the discussion following [§Galois Extensions, ⁋Definition 12](/en/math/field_theory/galois_extension#def12), we know that $\Gal(\mathbb{L}/\mathbb{K})$ is a finite set. On the other hand, from the local base above, since $\mathbb{L}/\mathbb{K}$ is of finite degree, $\mathbb{L}/\mathbb{K}$ is already an element of $\Sub^{\fin}(\mathbb{L}/\mathbb{K})$, and therefore
 
 $$U_\mathbb{L}(\sigma)=\left\{\tau\in\Gal(\mathbb{L}/\mathbb{K})\mid \sigma\vert_\mathbb{L}=\tau\vert_\mathbb{L}\right\}=\left\{\sigma\right\}$$
 
@@ -86,7 +86,7 @@ $$U_\mathbb{M}(\id_\mathbb{L})=\Gal(\mathbb{L}/\mathbb{M})$$
 
 Here, the inclusion on the right is simply obtained by viewing an $\mathbb{M}$-automorphism as a $\mathbb{K}$-automorphism, and moreover we know that the topology defined on $\Gal(\mathbb{L}/\mathbb{M})$ is exactly the same as that on $U_\mathbb{M}(\id_\mathbb{L})$.
 
-Now considering the collection $\Lambda'$ of finite degree *Galois* extensions, by [§Galois Extensions, ⁋Proposition 11](/en/math/field_theory/galois_extension#prop11) we know that this is a cofinal subset of $\Lambda$. That is, $(U_\mathbb{M}(\id_\mathbb{L}))_{\mathbb{M}\in\Lambda}$ is also a local base at $\id_\mathbb{L}$. Then for any $\mathbb{M}\in \Lambda'$, considering the restriction homomorphism $\rho:\Gal(\mathbb{L}/\mathbb{K})\rightarrow\Gal(\mathbb{M}/\mathbb{K})$ examined in [§Galois Extensions, ⁋Proposition 13](/en/math/field_theory/galois_extension#prop13), since any finite degree subextension of $\mathbb{M}$ is also a finite degree subextension of $\mathbb{L}$, this restriction homomorphism is continuous with respect to the topology defined above. In this situation, $\rho$ is a continuous function from $\Gal(\mathbb{L}/\mathbb{K})$ to the finite discrete space $\Gal(\mathbb{M}/\mathbb{K})$ ([Example 1](#ex1)), so $\ker\rho$ is a closed subgroup of $\Gal(\mathbb{L}/\mathbb{K})$. However, by definition
+Now considering the collection $\Sub^{\fin,\gal}(\mathbb{L}/\mathbb{K})$ of finite degree *Galois* subextensions, by [§Galois Extensions, ⁋Proposition 11](/en/math/field_theory/galois_extension#prop11) we know that this is a cofinal subset of $\Sub^{\fin}(\mathbb{L}/\mathbb{K})$. That is, $(U_\mathbb{M}(\id_\mathbb{L}))_{\mathbb{M}\in\Sub^{\fin,\gal}(\mathbb{L}/\mathbb{K})}$ is also a local base at $\id_\mathbb{L}$. Then for any $\mathbb{M}\in \Sub^{\fin,\gal}(\mathbb{L}/\mathbb{K})$, considering the restriction homomorphism $\rho:\Gal(\mathbb{L}/\mathbb{K})\rightarrow\Gal(\mathbb{M}/\mathbb{K})$ examined in [§Galois Extensions, ⁋Proposition 13](/en/math/field_theory/galois_extension#prop13), since any finite degree subextension of $\mathbb{M}$ is also a finite degree subextension of $\mathbb{L}$, this restriction homomorphism is continuous with respect to the topology defined above. In this situation, $\rho$ is a continuous function from $\Gal(\mathbb{L}/\mathbb{K})$ to the finite discrete space $\Gal(\mathbb{M}/\mathbb{K})$ ([Example 1](#ex1)), so $\ker\rho$ is a closed subgroup of $\Gal(\mathbb{L}/\mathbb{K})$. However, by definition
 
 $$\sigma\in\ker\rho\iff \sigma\vert_\mathbb{M}=\id\vert_\mathbb{M}\iff\sigma\in U_\mathbb{M}(\id_\mathbb{L})$$
 
@@ -95,12 +95,12 @@ so each $U_\mathbb{M}(\id_\mathbb{L})$ is clopen. On the other hand, any clopen 
 ::: Proposition 3
 In the above situation, the formula
 
-$$\{\id_\mathbb{L}\}=\bigcap_{\mathbb{M}\in \Lambda'}U_\mathbb{M}(\id_\mathbb{L})$$
+$$\{\id_\mathbb{L}\}=\bigcap_{\mathbb{M}\in \Sub^{\fin,\gal}(\mathbb{L}/\mathbb{K})}U_\mathbb{M}(\id_\mathbb{L})$$
 
 holds.
 :::
 ::: Proof
-Let an arbitrary $\sigma\in \Gal(\mathbb{L}/\mathbb{K})$ be given. If $\sigma\neq\id_\mathbb{L}$, then there exists $x\in \mathbb{L}$ such that $\sigma(x)\neq x$. Then taking $\mathbb{M}=\mathbb{K}(x)$, we have $\sigma\not\in U_\mathbb{M}(\id_\mathbb{L})$. Now, as examined earlier, since $\Lambda'$ is a cofinal subset of $\Lambda$, we obtain the desired result.
+Let an arbitrary $\sigma\in \Gal(\mathbb{L}/\mathbb{K})$ be given. If $\sigma\neq\id_\mathbb{L}$, then there exists $x\in \mathbb{L}$ such that $\sigma(x)\neq x$. Then taking $\mathbb{M}=\mathbb{K}(x)$, we have $\sigma\not\in U_\mathbb{M}(\id_\mathbb{L})$. Now, as examined earlier, since $\Sub^{\fin,\gal}(\mathbb{L}/\mathbb{K})$ is a cofinal subset of $\Sub^{\fin}(\mathbb{L}/\mathbb{K})$, we obtain the desired result.
 :::
 
 Therefore, by the result of this proposition, the connected component containing $\id_\mathbb{L}$ is $\left\{\id_\mathbb{L}\right\}$, and from this we know that $\Gal(\mathbb{L}/\mathbb{K})$ is a totally disconnected space. ([[Topology] §Connected Spaces, ⁋Definition 7](/en/math/topology/connected_spaces#def7)) Moreover, the following holds.
@@ -153,7 +153,7 @@ The $\lambda$ defined above is an isomorphism of topological groups.
 By [Proposition 3](#prop3), each $\Gal(\mathbb{L}_i/\mathbb{K})$ is Hausdorff, and since products and subspaces of Hausdorff spaces are again Hausdorff, their inverse limit $\varprojlim \Gal(\mathbb{L}_i/\mathbb{K})$ is also Hausdorff. On the other hand, since $\Gal(\mathbb{L}/\mathbb{K})$ is compact by [Proposition 4](#prop4), by [[Topology] §Compact Spaces, ⁋Proposition 9](/en/math/topology/compact_spaces#prop9) it suffices to show that $\lambda$ is bijective, which is almost obvious from $\mathbb{L}= \bigcup \mathbb{L}_i$.
 :::
 
-In particular, this proposition applies well to the family $\Lambda'$.
+In particular, this proposition applies well to the family $\Sub^{\fin,\gal}(\mathbb{L}/\mathbb{K})$.
 
 ## Galois Cohomology
 
