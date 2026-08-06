@@ -407,8 +407,9 @@ $cat-color: hsl(var(--cat-hue, 220), var(--cat-sat, 26%), calc(var(--cat-l, 50) 
   }
 }
 
-/* AI-author notice — smart_toy icon + text (mockup look) */
-.ai-author-notice {
+/* Icon + text notices (mockup look): AI author, post under revision */
+.ai-author-notice,
+.revising-notice {
   display: -webkit-box;
   display: flex;
   -webkit-box-align: center;

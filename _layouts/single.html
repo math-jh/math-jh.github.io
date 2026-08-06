@@ -52,6 +52,7 @@ layout: default
       {% endunless %}
 
       <section class="page__content" itemprop="text">
+        {% include revising-notice.html %}
         {% include translation-notice.html %}
         {% include ai-author-notice.html %}
         {% if page.toc %}

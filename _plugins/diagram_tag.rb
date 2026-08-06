@@ -20,6 +20,11 @@ module Jekyll
       Math/Algebraic_Topology/Poincare_Duality-5.svg
     ].freeze
 
+    # 개정 중인 글은 CI에서 과거 판본으로 되돌려 빌드되고(scripts/ci/freeze_revising_posts.py),
+    # 그때 내용이 달라진 자산은 frozen/<sha8>/ 아래 전용 사본으로 떠서 참조가 바뀐다.
+    # 예외 목록 조회는 원래 경로 기준이어야 하므로 이 접두사를 떼고 본다.
+    FROZEN_PREFIX = %r{\Afrozen/[0-9a-f]{8}/}
+
     def initialize(tag_name, markup, tokens)
       super
       m = markup.strip.match(/\A(\S+)\s*(.*)\z/m)
@@ -38,7 +43,7 @@ module Jekyll
       style = width ? %( style="width:#{width}") : ''
       alt = @attrs['alt'].to_s
 
-      if @path.end_with?('.png') || EXCEPTIONS.include?(@path)
+      if @path.end_with?('.png') || EXCEPTIONS.include?(@path.sub(FROZEN_PREFIX, ''))
         return %(<img src="/assets/images/#{@path}" alt="#{attr_escape(alt)}" class="invert align-center"#{style} />)
       end
 
