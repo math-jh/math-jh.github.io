@@ -12,76 +12,17 @@ import os
 import re
 import sys
 
+sys.path.insert(0, "/home/junhyeok/math-jh.github.io/scripts/term-extraction")
 sys.path.insert(0, "/home/junhyeok/math-jh.github.io/.claude/hooks")
 import md_lint  # noqa: E402
 
 ROOT = "/home/junhyeok/math-jh.github.io"
 TIER1, GUARD = md_lint._DEPR
 
-# ── 영어 최종 단어의 음역 끝소리 분류: V(받침무) / C(받침유) / L(ㄹ) ──────────
-OVERRIDE = {
-    # josa_check 확정 사전
-    "above": "V", "action": "C", "algebra": "V", "automorphism": "C",
-    "basis": "V", "below": "V", "bound": "V", "bounded": "V", "bundle": "L",
-    "center": "V", "class": "V", "closed": "V", "closure": "V",
-    "cohomology": "V", "commutator": "V", "commute": "V", "completion": "C",
-    "comultiplication": "C", "correspondence": "V", "coset": "C",
-    "countable": "L", "cover": "V", "covering": "C", "derivative": "V",
-    "diffeomorphism": "C", "domain": "C", "duality": "V", "embedding": "C",
-    "endomorphism": "C", "equivalent": "V", "extension": "C", "field": "V",
-    "form": "C", "fractions": "V", "frame": "C", "full": "L", "function": "C",
-    "functor": "V", "generated": "V", "group": "C", "homeomorphism": "C",
-    "homology": "V", "homomorphism": "C", "ideal": "L", "irreducible": "L",
-    "isomorphic": "C", "isomorphism": "C", "kernel": "L", "lemma": "V",
-    "limit": "C",  # 블로그 코퍼스 '리밋' (C형 79:0) — 리미트 아님
-    "magma": "V", "mapping": "C", "matrix": "V", "module": "L",
-    "point": "V", "polynomial": "L", "preimage": "V", "product": "V",
-    "projection": "C", "pseudoinverse": "V", "quasi-isomorphism": "C",
-    "quotient": "V", "regular": "V", "representation": "C", "resolution": "C",
-    "ring": "C", "section": "C", "sequence": "V", "set": "C", "sheaf": "V",
-    "similar": "V", "smooth": "V", "space": "V", "spectrum": "C",
-    "subalgebra": "V", "subgroup": "C", "subring": "C", "successor": "V",
-    "sum": "C", "symmetric": "C", "tensor": "V", "transformation": "C",
-    "transitive": "V", "variety": "V", "vector": "V",
-    # 자주 나오는 신규
-    "trace": "V", "index": "V", "galois": "V", "regularity": "V",
-    "homotopy": "V", "localization": "C", "normalization": "C",
-    "hyperplane": "C", "component": "V", "metric": "C", "plane": "C",
-    "cone": "C", "complement": "V", "disjoint": "V", "type": "C",
-    "map": "C", "cube": "V", "lattice": "V", "hypersurface": "V",
-    "series": "V", "condition": "C", "unity": "V", "element": "V",
-    "subset": "C", "manifold": "V", "polytope": "C",
-    "scheme": "C", "subscheme": "C", "counit": "C", "unit": "C",
-    "split": "C",  # 스플릿 (받침 ㅅ)
-    "coordinates": "V", "constant": "V", "axiom": "C", "flow": "V",
-    "number": "V", "multiplicity": "V", "operator": "V", "reflexive": "V",
-    "transcendental": "L", "finer": "V", "diagonalizable": "L",
-    "nullity": "V", "asymmetric": "C", "integral": "L", "functional": "L",
-    "nondegenerate": "V", "codimension": "C", "subrepresentation": "C",
-    "subrepresentations": "V", "submodule": "L", "submanifold": "V",
-}
-
-
-def ending_class(final):
-    w = re.sub(r"[^a-z-]", "", final.lower())
-    if w in OVERRIDE:
-        return OVERRIDE[w]
-    # 접미 규칙 (음역 기준)
-    for suf, cls in (("tion", "C"), ("sion", "C"), ("ism", "C"), ("ing", "C"),
-                     ("ment", "V"), ("ne", "C"), ("le", "L"), ("l", "L"),
-                     ("m", "C"), ("n", "C"), ("ng", "C"), ("p", "C"),
-                     ("b", "C"), ("k", "C"), ("c", "C"), ("g", "V"),
-                     ("ce", "V"), ("se", "V"), ("ss", "V"), ("s", "V"),
-                     ("x", "V"), ("z", "V"),
-                     # 단모음+t 는 받침 ㅅ (셋/킷/풋), 자음군+t 는 트 (포인트)
-                     ("et", "C"), ("at", "C"), ("ot", "C"), ("ut", "C"),
-                     ("t", "V"), ("d", "V"),
-                     ("r", "V"), ("y", "V"), ("a", "V"), ("e", "V"),
-                     ("i", "V"), ("o", "V"), ("u", "V"), ("w", "V"),
-                     ("f", "V"), ("h", "V"), ("v", "V")):
-        if w.endswith(suf):
-            return cls
-    return None
+# ── 영어 최종 단어의 음역 끝소리 분류 ────────────────────────────────────────
+# 단일 출처는 josa.py (cmudict 발음 + 외래어 표기법). 예전에는 이 파일과
+# josa_check.py 가 137개짜리 손유지 표를 각자 복사해 들고 있었다.
+from josa import ending_class, confident_class  # noqa: E402
 
 
 CLS = {}   # ko형 → (en형, 끝소리 class)
@@ -319,11 +260,16 @@ def sweep_line(line, stats, ambig, path, ln):
 
 
 # ── 기존 영어 용어의 조사 오류 수리 (class은 → class는 등) ───────────────────
-# 저자가 이미 쓴 조사를 고치는 패스이므로, 음역이 손으로 확정된(OVERRIDE)
-# 단어 전체에 적용한다 (tier1 유도 금지 — 조건부·단축 매핑의 영어형(bounded·
+# 저자가 이미 쓴 조사를 고치는 패스이므로, 음역이 사전으로 확정된(고신뢰
+# 경로) 단어 전체에 적용한다 (tier1 유도 금지 — 조건부·단축 매핑의 영어형(bounded·
 # preimage 등)도 스윕이 도입했으므로 수리 대상이다). 규칙 추정 분류는 신규
 # 치환에만 쓴다 (polytope 사례).
-FINALS = dict(OVERRIDE)
+FINALS = {}
+for _en in TIER1.values():
+    _f = re.sub(r"[^A-Za-z-]", "", _en.split()[-1])
+    _c = confident_class(_f) if len(_f) >= 3 else None
+    if _c:
+        FINALS[_f.lower()] = _c
 JOSA_FIX = []
 for fw, cls in FINALS.items():
     esc = "(?i:" + re.escape(fw) + ")"
