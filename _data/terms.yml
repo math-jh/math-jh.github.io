@@ -157,6 +157,13 @@ A:
   defs:
   - label: '[대수다양체] §K3 Surfaces'
     url: /ko/math/algebraic_varieties/k3_surfaces
+- id: abelian_variety
+  en: abelian variety
+  ko: 아벨 다양체
+  primary: en
+  defs:
+  - label: '[복소기하학] §Kodaira 매장정리'
+    url: /ko/math/complex_geometry/kodaira_embedding_theorem
 - id: abelianization
   en: abelianization
   ko: 아벨화
@@ -611,6 +618,13 @@ A:
 - id: animated_commutative_ring
   en: animated commutative ring
   ko: 애니메이트 가환환
+  primary: en
+  defs:
+  - label: '[유도대수기하학] §Simplicial 가환환과 animation'
+    url: /ko/math/derived_algebraic_geometry/animated_rings
+- id: animated_ring
+  en: animated ring
+  ko: 애니메이트 환
   primary: en
   defs:
   - label: '[유도대수기하학] §Simplicial 가환환과 animation'
@@ -3832,6 +3846,13 @@ D:
   see:
   - label: Homotopy equivalence
     id: homotopy_equivalence
+- id: deformation_theory
+  en: deformation theory
+  ko: 변형이론
+  primary: ko
+  defs:
+  - label: '[유도대수기하학] §변형이론과 여접 복합체'
+    url: /ko/math/derived_algebraic_geometry/deformation_theory
 - id: degeneracy_map
   en: degeneracy map
   ko: 퇴화 사상
@@ -7029,6 +7050,13 @@ H:
   defs:
   - label: '[대수다양체] §곡면에서의 리만-로흐 정리'
     url: /ko/math/algebraic_varieties/riemann_roch_surfaces
+- id: hodge_manifold
+  en: Hodge manifold
+  ko: 호지 다양체
+  primary: en
+  defs:
+  - label: '[복소기하학] §Kodaira 매장정리'
+    url: /ko/math/complex_geometry/kodaira_embedding_theorem
 - id: hodge_number
   en: Hodge number
   ko: 호지 수
@@ -7047,6 +7075,13 @@ H:
   en: Hodge subspace
   ko: Hodge 부분공간
   primary: ko
+  defs:
+  - label: '[복소기하학] §Hodge 이론'
+    url: /ko/math/complex_geometry/hodge_theory
+- id: hodge_theory
+  en: Hodge theory
+  ko: 호지 이론
+  primary: en
   defs:
   - label: '[복소기하학] §Hodge 이론'
     url: /ko/math/complex_geometry/hodge_theory
@@ -8584,6 +8619,13 @@ K:
     id: kähler_metric
   - label: Ample line bundle
     id: ample_line_bundle
+- id: kähler_differential
+  en: Kähler differential
+  ko: Kähler 미분
+  primary: en
+  defs:
+  - label: '[스킴] §Kähler 미분과 여접층'
+    url: /ko/math/scheme_theory/sheaf_of_differentials
 - id: kähler_differential_module
   en: Kähler differential module
   ko: 캘러 미분가군
@@ -13390,6 +13432,13 @@ R:
   defs:
   - label: '[리 이론] §Richardson variety와 Peterson variety'
     url: /ko/math/lie_theory/richardson_peterson_variety
+- id: riemann_bilinear_relations
+  en: Riemann bilinear relations
+  ko: 리만 쌍선형 관계
+  primary: en
+  defs:
+  - label: '[복소기하학] §Kodaira 매장정리'
+    url: /ko/math/complex_geometry/kodaira_embedding_theorem
 - id: riemann_curvature_tensor
   en: Riemann curvature tensor
   ko: Riemann 곡률 텐서

@@ -5223,3 +5223,7 @@ Decide whether each one is a definition and add it to `_data/terms.yml` (then ru
 ## term_extract_worker 2026-08-06 03:01
 
 - _posts/Math/Commutative_Algebra/ko/2025-01-12-Local_Criterion_for_Flatness.md: 주요 용어 'Tor' ko 미상 — 보류
+
+## term_extract_worker 2026-08-06 17:31
+
+- _posts/Math/Derived_Algebraic_Geometry/ko/2026-07-01-Animated_Rings.md: 주요 용어 'Tor' ko 미상 — 보류
