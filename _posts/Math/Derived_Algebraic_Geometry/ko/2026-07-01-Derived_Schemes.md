@@ -56,7 +56,7 @@ Localization $R\mapsto R[1/f]$는 $\operatorname{Ani}$에서 유도 localization
 *derived scheme<sub>유도 스킴</sub>*이란, 위상공간 $X$와 그 위의 animated commutative ring의 sheaf $\mathcal{O}_X$의 쌍 $(X,\mathcal{O}_X)$으로서, 임의의 점 $x\in X$가 열린근방 $U$를 가져 $(U,\mathcal{O}_X\vert_U)$이 어떤 animated ring $R$의 affine derived scheme $\Spec R$과 동치가 되는 것을 뜻한다. Derived scheme 사이의 morphism은 국소적으로 ring이 얹힌 공간으로서의 morphism, 곧 연속사상 $f:X\rightarrow Y$과 sheaf의 morphism $f^\sharp:\mathcal{O}_Y\rightarrow f_\ast\mathcal{O}_X$의 쌍으로 정의한다. Derived scheme들의 $\infty$-범주를 $\mathrm{dSch}$로 적는다.
 :::
 
-정의는 고전적 scheme의 정의와 글자 그대로 평행하며, 유일한 차이는 structure sheaf의 값이 가환환이 아니라 animated 가환환이라는 것이다. ([\[스킴\] §스킴, ⁋정의 1](/ko/math/scheme_theory/schemes#def1)) 국소 모형이 $\Spec R$이므로, derived scheme의 밑공간은 국소적으로 $\Spec \pi_0(R)$의 위상을 가지며, 이들을 이어붙인 고전적 scheme이 자연스럽게 딸려 나온다. 이것을 truncation이라 부른다.
+정의는 고전적 scheme의 정의와 글자 그대로 평행하며, 유일한 차이는 structure sheaf의 값이 commutative ring이 아니라 animated commutative ring이라는 것이다. ([\[스킴\] §스킴, ⁋정의 1](/ko/math/scheme_theory/schemes#def1)) 국소 모형이 $\Spec R$이므로, derived scheme의 밑공간은 국소적으로 $\Spec \pi_0(R)$의 위상을 가지며, 이들을 이어붙인 고전적 scheme이 자연스럽게 딸려 나온다. 이것을 truncation이라 부른다.
 
 ::: 명제 4
 Derived scheme $X=(X,\mathcal{O}_X)$에 대하여, 쌍

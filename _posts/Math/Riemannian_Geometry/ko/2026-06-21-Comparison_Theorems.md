@@ -210,7 +210,7 @@ $M$의 universal cover $\pi : \tilde M \rightarrow M$를 생각하자. $\tilde M
 반대쪽 부호, 즉 sectional curvature가 어디서도 양이 아닌 경우를 다룬다. 이때는 Jacobi field가 발산만 할 뿐 다시 소멸하지 못하므로 conjugate point가 없고, 그 결과 exponential map이 어디서도 critical point를 갖지 않아 전역 diffeomorphic이 된다. 먼저 conjugate point의 부재를 보인다.
 
 ::: 보조정리 10
-$(M, g)$의 모든 단면곡률이 $K \le 0$이라 하자. 그럼 임의의 측지선 $\gamma$ 위에는 conjugate point가 없다. 동치로, $p \in M$의 임의의 점에서 $\exp_p$는 정의역의 모든 점에서 nonsingular (미분이 가역) 이다.
+$(M, g)$의 모든 sectional curvature가 $K \le 0$이라 하자. 그럼 임의의 측지선 $\gamma$ 위에는 conjugate point가 없다. 동치로, $p \in M$의 임의의 점에서 $\exp_p$는 정의역의 모든 점에서 nonsingular (미분이 가역) 이다.
 :::
 
 ::: 증명
@@ -222,7 +222,7 @@ $$f'(t) = 2\langle D_t J, J\rangle, \qquad f''(t) = 2\langle D_t^2 J, J\rangle +
 
 $$f''(t) = 2\lVert D_t J\rVert^2 - 2\langle R(J, \dot\gamma)\dot\gamma,\, J\rangle$$
 
-이다. $J$가 $\dot\gamma$에 수직인 부분만 따져도 되는데 (Jacobi equation은 $\dot\gamma$ 방향 성분과 수직 성분으로 분해되고 $\dot\gamma$ 방향 성분은 conjugate point를 만들지 않는다), 수직인 $J$에 대해 단면곡률의 정의 [정의 1](#def1)에서
+이다. $J$가 $\dot\gamma$에 수직인 부분만 따져도 되는데 (Jacobi equation은 $\dot\gamma$ 방향 성분과 수직 성분으로 분해되고 $\dot\gamma$ 방향 성분은 conjugate point를 만들지 않는다), 수직인 $J$에 대해 sectional curvature의 정의 [정의 1](#def1)에서
 
 $$\langle R(J, \dot\gamma)\dot\gamma,\, J\rangle = K(J, \dot\gamma)\,\bigl(\lVert J\rVert^2 \lVert\dot\gamma\rVert^2 - \langle J, \dot\gamma\rangle^2\bigr) = K(J, \dot\gamma)\,\lVert J\rVert^2 \lVert\dot\gamma\rVert^2 \le 0$$
 
@@ -235,10 +235,10 @@ $$f''(t) = 2\lVert D_t J\rVert^2 - 2\langle R(J, \dot\gamma)\dot\gamma, J\rangle
 Conjugate point가 없다는 것은 [정의 5](#def5) 다음 문단에서 본 동치성에 의해 $(d\exp_p)_{tv}$가 모든 $tv$에서 가역, 즉 $\exp_p$가 정의역 전체에서 nonsingular임과 같다.
 :::
 
-이제 단면곡률이 비양인 완비 단순연결 manifold의 전역 구조를 결정한다. $\exp_p$가 nonsingular일 뿐 아니라 전역 diffeomorphic임을 보이는 것이 관건이며, 단순연결성이 그 도약을 가능하게 한다.
+이제 sectional curvature가 비양인 완비 단순연결 manifold의 전역 구조를 결정한다. $\exp_p$가 nonsingular일 뿐 아니라 전역 diffeomorphic임을 보이는 것이 관건이며, 단순연결성이 그 도약을 가능하게 한다.
 
 ::: 정리 11 (Cartan–Hadamard)
-$(M, g)$가 $n$차원 complete, 단순연결 Riemannian manifold이고 모든 단면곡률이 $K \le 0$이라 하자. 그럼 임의의 점 $p \in M$에서 exponential map
+$(M, g)$가 $n$차원 complete, 단순연결 Riemannian manifold이고 모든 sectional curvature가 $K \le 0$이라 하자. 그럼 임의의 점 $p \in M$에서 exponential map
 
 $$\exp_p : T_p M \rightarrow M$$
 
@@ -255,7 +255,7 @@ $M$이 complete이므로 Hopf-Rinow 정리에 의해 모든 측지선이 $\mathb
 $\exp_p$가 전단사이므로 임의의 $q \in M$에 대해 $q = \exp_p(v)$인 $v$가 유일하게 존재하고, 그 측지선 $\gamma_v$가 $p$와 $q$를 잇는 유일한 측지선이다. [§지수사상, ⁋정리 9](/ko/math/riemannian_geometry/exponential_map#thm9)가 함의하듯 $\exp_p$가 diffeomorphic인 영역에서 방사 측지선은 길이를 최소화하므로, 이 유일한 측지선이 $p$와 $q$ 사이의 최단 곡선이다.
 :::
 
-[정리 11](#thm11)은 단면곡률이 비양인 단순연결 완비 manifold가 위상적으로 가장 단순한 manifold, 즉 $\mathbb{R}^n$임을 말한다. 이런 manifold를 *Cartan–Hadamard manifold*라 부르며, 유클리드 공간 $\mathbb{R}^n$ ($K \equiv 0$)과 hyperbolic space $\mathbb{H}^n$ ($K \equiv -1$)이 대표적인 예이다. 두 정리를 나란히 놓으면 곡률의 부호가 전역 위상에 미치는 영향이 선명하다. Ricci curvature의 양의 하한은 manifold를 콤팩트하게 닫아 fundamental group을 유한하게 만들고, 단면곡률의 비양성은 단순연결인 경우 manifold를 콤팩트성과 정반대인 $\mathbb{R}^n$으로 완전히 펼친다. 단면곡률의 부호가 [명제 4](#prop4) 뒤에서 본 Jacobi field의 수렴·발산 양상을 통해 측지선 다발의 거동을 지배하고, 그 거동이 다시 전역 구조로 번역되는 것이다.
+[정리 11](#thm11)은 sectional curvature가 비양인 단순연결 완비 manifold가 위상적으로 가장 단순한 manifold, 즉 $\mathbb{R}^n$임을 말한다. 이런 manifold를 *Cartan–Hadamard manifold*라 부르며, 유클리드 공간 $\mathbb{R}^n$ ($K \equiv 0$)과 hyperbolic space $\mathbb{H}^n$ ($K \equiv -1$)이 대표적인 예이다. 두 정리를 나란히 놓으면 곡률의 부호가 전역 위상에 미치는 영향이 선명하다. Ricci curvature의 양의 하한은 manifold를 콤팩트하게 닫아 fundamental group을 유한하게 만들고, sectional curvature의 비양성은 단순연결인 경우 manifold를 콤팩트성과 정반대인 $\mathbb{R}^n$으로 완전히 펼친다. Sectional curvature의 부호가 [명제 4](#prop4) 뒤에서 본 Jacobi field의 수렴·발산 양상을 통해 측지선 다발의 거동을 지배하고, 그 거동이 다시 전역 구조로 번역되는 것이다.
 
 ---
 

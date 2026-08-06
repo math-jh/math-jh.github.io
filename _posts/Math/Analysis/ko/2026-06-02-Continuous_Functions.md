@@ -137,7 +137,7 @@ $$\lvert f(x_n) - f(x_n') \rvert = \lvert n - (n+1) \rvert = 1$$
 
 $$\lvert g(x_n) - g(x_n') \rvert = \Bigl(n + \frac1n\Bigr)^2 - n^2 = 2 + \frac{1}{n^2} > 2$$
 
-이어서 $\varepsilon = 2$가 좌절된다. 여기서는 정의역이 bounded가 아니어서 컴팩트성이 깨진다.
+이어서 $\varepsilon = 2$가 좌절된다. 여기서는 정의역이 bounded가 아니어서 compactness가 깨진다.
 :::
 
 반대로 정의역을 컴팩트하게 제한하면 [정리 4](#thm4)가 균등연속을 보장한다. 같은 $x^2$이라도 닫힌구간 $[0, R]$ 위에서는 $x, x' \in [0, R]$에 대해

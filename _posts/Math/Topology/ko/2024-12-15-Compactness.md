@@ -187,7 +187,7 @@ $$(\mathbb{R}^n)^+\cong S^n$$
 이 성립하며 무한원점 $\infty$가 북극 $N$에 대응한다. 특히 $(\mathbb{R})^+$은 원 $S^1$이다.
 :::
 
-Discrete space의 일점 옹골화는 수렴하는 점열이라는 매우 구체적인 그림을 준다.
+Discrete space의 one-point compactification은 수렴하는 점열이라는 매우 구체적인 그림을 준다.
 
 ::: 예시 15
 자연수 집합 $\mathbb{N}=\{1,2,3,\ldots\}$에 discrete topology를 주자. 이는 discrete space로서 LCH이므로 [정리 11](#thm11)에 의하여 $\mathbb{N}^+$은 compact Hausdorff space이다. Discrete space에서 compact인 부분집합은 유한집합뿐이므로, $\mathbb{N}^+$에서 $\infty$의 열린근방은 유한집합의 여집합, 곧 $\infty$를 품는 cofinite set이다. 이는 정확히 $\mathbb{N}$의 점열이 $\infty$로 수렴한다는 것이 그 점열이 임의의 유한집합을 결국 벗어난다는 것과 같음을 뜻한다.
@@ -201,7 +201,7 @@ $$f:\mathbb{N}^+\rightarrow\mathbb{R},\qquad f(n)=\frac1n\quad(n\in\mathbb{N}),\
 
 ## 완전정칙성
 
-일점 옹골화는 존재론적 도구에 그치지 않고 LCH space의 내적 성질을 규명하는 데에도 쓰인다. Compact Hausdorff space는 normal이므로 ([§옹골공간, ⁋명제 7](/ko/math/topology/compact_spaces#prop7)) Urysohn 보조정리를 통해 풍부한 연속함수를 지니는데, 이 성질이 열린 부분공간을 거쳐 LCH space로 유전됨을 보인다.
+One-point compactification은 존재론적 도구에 그치지 않고 LCH space의 내적 성질을 규명하는 데에도 쓰인다. Compact Hausdorff space는 normal이므로 ([§옹골공간, ⁋명제 7](/ko/math/topology/compact_spaces#prop7)) Urysohn 보조정리를 통해 풍부한 연속함수를 지니는데, 이 성질이 열린 부분공간을 거쳐 LCH space로 유전됨을 보인다.
 
 ::: 따름정리 16
 임의의 LCH space는 completely regular이다. 따라서 임의의 LCH space는 Tychonoff space이다. ([§하우스도르프 공간, ⁋정의 3](/ko/math/topology/Hausdorff_spaces#def3))

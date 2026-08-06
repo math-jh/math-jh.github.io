@@ -133,7 +133,7 @@ $$s_k(\underline\dim V)_k=\dim_k V_k-\Bigl(2\dim_k V_k-\sum_{\alpha:\,i\rightarr
 이 되는데, 정리하면 $\sum_{\alpha:i\rightarrow k}\dim_k V_{s(\alpha)}-\dim_k V_k$로 위에서 구한 $\dim_k W_k$와 같다. 따라서 $\underline\dim(S_k^+ V)=s_k(\underline\dim V)$이다.
 :::
 
-명제 7에서 simple representation $S_k$를 제외해야 하는 이유는 분명하다. $V=S_k$이면 $V_{\mathrm{in}}$은 $0\rightarrow V_k$ (들어오는 화살표 쪽 공간이 모두 $0$) 이므로 전사가 아니고, 실제로 $S_k^+ S_k=0$이 되어 dimension vector가 보존되지 않는다. 반면 $s_k(e_k)=-e_k$는 음의 좌표를 가져 어떤 representation의 dimension vector도 될 수 없다. 이 한 예외를 제외하면 $S_k^+$는 indecomposable을 indecomposable로 보내며 dimension vector 위에서 정확히 $s_k$로 작용한다.
+명제 7에서 simple representation $S_k$를 제외해야 하는 이유는 분명하다. $V=S_k$이면 $V_{\mathrm{in}}$은 $0\rightarrow V_k$ (들어오는 arrow 쪽 공간이 모두 $0$) 이므로 전사가 아니고, 실제로 $S_k^+ S_k=0$이 되어 dimension vector가 보존되지 않는다. 반면 $s_k(e_k)=-e_k$는 음의 좌표를 가져 어떤 representation의 dimension vector도 될 수 없다. 이 한 예외를 제외하면 $S_k^+$는 indecomposable을 indecomposable로 보내며 dimension vector 위에서 정확히 $s_k$로 작용한다.
 
 ## 두 functor의 quasi-inverse 관계
 
@@ -174,7 +174,7 @@ $$C^+=S_{k_n}^+\cdots S_{k_2}^+ S_{k_1}^+:\Rep(Q)\longrightarrow\Rep(Q)$$
 로 정의한다. Symmetric으로 admissible source sequence를 따라 $S^-$들을 합성하여 $C^-:\Rep(Q)\rightarrow\Rep(Q)$를 정의한다.
 :::
 
-각 vertex를 정확히 한 번씩 sink로 만들어 모든 인접 화살표를 뒤집으므로, 모든 vertex를 거치고 나면 $\sigma_{k_n}\cdots\sigma_{k_1}Q=Q$가 되어 $C^+$는 $\Rep(Q)$를 자기 자신으로 보낸다. Admissible sink sequence는 $Q$에 oriented cycle이 없으므로 항상 존재한다. 매 단계에서 sink를 하나 골라 제거하는 방식으로 위상정렬을 하면 되기 때문이다. 서로 다른 admissible sink sequence는 다른 functor를 줄 수 있으나, dimension vector 위에서는 모두 같은 변환, 곧 Weyl group의 ([\[리 이론\] §근계, ⁋정의 17](/ko/math/lie_theory/root_systems#def17)) *Coxeter element* $c=s_{k_n}\cdots s_{k_1}$로 작용한다.
+각 vertex를 정확히 한 번씩 sink로 만들어 모든 인접 arrow를 뒤집으므로, 모든 vertex를 거치고 나면 $\sigma_{k_n}\cdots\sigma_{k_1}Q=Q$가 되어 $C^+$는 $\Rep(Q)$를 자기 자신으로 보낸다. Admissible sink sequence는 $Q$에 oriented cycle이 없으므로 항상 존재한다. 매 단계에서 sink를 하나 골라 제거하는 방식으로 위상정렬을 하면 되기 때문이다. 서로 다른 admissible sink sequence는 다른 functor를 줄 수 있으나, dimension vector 위에서는 모두 같은 변환, 곧 Weyl group의 ([\[리 이론\] §근계, ⁋정의 17](/ko/math/lie_theory/root_systems#def17)) *Coxeter element* $c=s_{k_n}\cdots s_{k_1}$로 작용한다.
 
 ::: 명제 10
 $(k_1,\ldots,k_n)$이 admissible sink sequence이고 $V$가 $Q$의 indecomposable representation이라 하자. $C^+ V\neq 0$이면

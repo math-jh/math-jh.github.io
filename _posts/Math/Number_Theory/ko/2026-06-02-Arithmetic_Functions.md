@@ -135,10 +135,10 @@ $$\begin{aligned}
 &= \Bigl(\sum_{a \mid m} f(a)\,g\!\left(\frac{m}{a}\right)\Bigr)\Bigl(\sum_{b \mid n} f(b)\,g\!\left(\frac{n}{b}\right)\Bigr) = (f \ast g)(m)\,(f \ast g)(n)
 \end{aligned}$$
 
-이다. 또 $f, g$가 항등적으로 $0$이 아니므로 $(f\ast g)(1) = f(1)g(1) = 1 \neq 0$이어서 $f \ast g$는 항등적 $0$이 아니다. 따라서 곱셈적이다.
+이다. 또 $f, g$가 항등적으로 $0$이 아니므로 $(f\ast g)(1) = f(1)g(1) = 1 \neq 0$이어서 $f \ast g$는 항등적 $0$이 아니다. 따라서 multiplicative가다.
 :::
 
-명제 9는 곱셈적 함수가 합성곱 아래 닫혀 있음을 말한다. $\mathbf{1}$과 $\id$가 곱셈적이므로 $\tau = \mathbf{1}\ast\mathbf{1}$과 $\sigma = \mathbf{1}\ast\id$이 곱셈적임이 예시 2와 별개로 곧장 따라 나오고, $\mathbf{1}$의 역원 $\mu$ 역시 곱셈적임을 같은 틀에서 재확인할 수 있다. 더 일반적으로 $\id_k(n) = n^k$로 두면 $\sigma_k = \mathbf{1}\ast\id_k$, 즉 $\sigma_k(n) = \sum_{d \mid n} d^k$이 곱셈적이며, $k = 0$이면 $\tau$, $k = 1$이면 $\sigma$가 된다.
+명제 9는 multiplicative 함수가 합성곱 아래 닫혀 있음을 말한다. $\mathbf{1}$과 $\id$가 multiplicative가므로 $\tau = \mathbf{1}\ast\mathbf{1}$과 $\sigma = \mathbf{1}\ast\id$이 multiplicative임이 예시 2와 별개로 곧장 따라 나오고, $\mathbf{1}$의 역원 $\mu$ 역시 multiplicative임을 같은 틀에서 재확인할 수 있다. 더 일반적으로 $\id_k(n) = n^k$로 두면 $\sigma_k = \mathbf{1}\ast\id_k$, 즉 $\sigma_k(n) = \sum_{d \mid n} d^k$이 multiplicative가며, $k = 0$이면 $\tau$, $k = 1$이면 $\sigma$가 된다.
 
 ## 예시와 계산
 
@@ -159,7 +159,7 @@ $$\begin{aligned}
 다음으로 뫼비우스 반전을 적용해 약수합으로 정의된 함수를 풀어내는 전형적인 계산을 본다.
 
 ::: 예시 11
-$g(n) = \sum_{d \mid n} \tau(d)$로 정의된 함수를 $\tau$로 되돌려 보자. 정의에 따라 $g = \mathbf{1}\ast\tau = \mathbf{1}\ast\mathbf{1}\ast\mathbf{1}$이므로 $g$는 곱셈적이고 소수 거듭제곱에서
+$g(n) = \sum_{d \mid n} \tau(d)$로 정의된 함수를 $\tau$로 되돌려 보자. 정의에 따라 $g = \mathbf{1}\ast\tau = \mathbf{1}\ast\mathbf{1}\ast\mathbf{1}$이므로 $g$는 multiplicative가고 소수 거듭제곱에서
 
 $$g(p^e) = \sum_{j=0}^{e}\tau(p^j) = \sum_{j=0}^{e}(j+1) = \frac{(e+1)(e+2)}{2} = \binom{e+2}{2}$$
 
@@ -186,7 +186,7 @@ $$M(1),\dots,M(10) = 1,\,0,\,-1,\,-1,\,-2,\,-1,\,-2,\,-2,\,-2,\,-1$$
 
 이 예시들은 곱셈성·합성곱·반전이라는 세 도구가 어떻게 맞물려 한 함수의 값을 다른 함수의 값으로 번역하는지를 보여 준다.
 
-곱셈적 함수와 디리클레 합성곱은 소수의 분포를 함수의 언어로 다루는 해석적 정수론의 대수적 골격을 이룬다. 이들을 생성함수 $\sum_n f(n) n^{-s}$로 부호화한 디리클레 급수는 리만 제타 함수와 만나며, 그 해석적 성질은 [§소수의 무한성과 분포, ⁋참고 3](/ko/math/number_theory/distribution_of_primes#rmk3)에서 언급한 소수 정리로 이어진다.
+Multiplicative 함수와 디리클레 합성곱은 소수의 분포를 함수의 언어로 다루는 해석적 정수론의 대수적 골격을 이룬다. 이들을 생성함수 $\sum_n f(n) n^{-s}$로 부호화한 디리클레 급수는 리만 제타 함수와 만나며, 그 해석적 성질은 [§소수의 무한성과 분포, ⁋참고 3](/ko/math/number_theory/distribution_of_primes#rmk3)에서 언급한 소수 정리로 이어진다.
 
 ---
 

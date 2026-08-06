@@ -179,7 +179,7 @@ $$0\rightarrow M_{[3,3]}\rightarrow M_{[2,3]}\rightarrow M_{[2,2]}\rightarrow 0.
 
 {% diagram Math/Representation_Theory/Auslander-Reiten_Theory-2.svg width="22.72em" alt="A3 Auslander-Reiten quiver" %}
 
-여기서 각 화살표는 $M_{[i,j]}$에서 한 끝을 늘이거나 줄이는 inclusion·quotient에 해당하는 irreducible morphism이다. 가장 아래 행 $M_{[3,3]},M_{[2,2]},M_{[1,1]}$과 가운데 행 $M_{[2,3]},M_{[1,2]}$ 위에서 $\tau$는 각각 한 칸씩 왼쪽으로 옮기는 대응 $\tau M_{[2,2]}=M_{[3,3]}$, $\tau M_{[1,1]}=M_{[2,2]}$, $\tau M_{[1,2]}=M_{[2,3]}$으로 나타나고, 맨 위의 $M_{[1,3]}=I_3$은 injective이므로 $\tau$의 정의역에 들지 않는다. 이 quiver는 type $A_3$의 Dynkin diagram 모양을 따른다.
+여기서 각 arrow는 $M_{[i,j]}$에서 한 끝을 늘이거나 줄이는 inclusion·quotient에 해당하는 irreducible morphism이다. 가장 아래 행 $M_{[3,3]},M_{[2,2]},M_{[1,1]}$과 가운데 행 $M_{[2,3]},M_{[1,2]}$ 위에서 $\tau$는 각각 한 칸씩 왼쪽으로 옮기는 대응 $\tau M_{[2,2]}=M_{[3,3]}$, $\tau M_{[1,1]}=M_{[2,2]}$, $\tau M_{[1,2]}=M_{[2,3]}$으로 나타나고, 맨 위의 $M_{[1,3]}=I_3$은 injective이므로 $\tau$의 정의역에 들지 않는다. 이 quiver는 type $A_3$의 Dynkin diagram 모양을 따른다.
 :::
 
 
@@ -188,7 +188,7 @@ Irreducible morphism은 module category의 *radical*로도 특징지어진다. $
 
 $$f\in\rad(M,N)\setminus\rad^2(M,N)$$
 
-인 것과 동치이다. 따라서 $\Irr(M,N)=\rad(M,N)/\rad^2(M,N)$의 차원이 Auslander–Reiten quiver에서 $M\rightarrow N$ 화살표의 multiplicity(valuation)를 준다. 이 관점에서 almost split sequence는 $\rad/\rad^2$ 수준의 정보를 short exact sequence로 묶어 낸 것이며, 이것이 [정의 8](#def8)의 quiver가 module category의 morphism 구조를 충실히 반영하는 이유이다.
+인 것과 동치이다. 따라서 $\Irr(M,N)=\rad(M,N)/\rad^2(M,N)$의 차원이 Auslander–Reiten quiver에서 $M\rightarrow N$ arrow의 multiplicity(valuation)를 준다. 이 관점에서 almost split sequence는 $\rad/\rad^2$ 수준의 정보를 short exact sequence로 묶어 낸 것이며, 이것이 [정의 8](#def8)의 quiver가 module category의 morphism 구조를 충실히 반영하는 이유이다.
 :::
 
 ---

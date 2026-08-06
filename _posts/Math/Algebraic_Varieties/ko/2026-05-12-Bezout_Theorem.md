@@ -15,7 +15,7 @@ revising: true
 
 ---
 
-우리는 이번 글에서 대수기하학의 고전적인 정리인 베주 정리를 소개한다. 직관적으로, 평면 위의 두 곡선 $C,D$가 주어졌다 하자. 그럼 $C$와 $D$가 만나는 교점의 개수는 이들의 degree에 의족하는데, 가령 평면 위에서 정의된 이차곡선 $\y=x^2$과 직선은 일반적으로 두 점에서 만난다. 베주 정리는 이를 일반화한 결과이다.
+우리는 이번 글에서 algebraic geometry의 고전적인 정리인 Bézout theorem을 소개한다. 직관적으로, 평면 위의 두 곡선 $C,D$가 주어졌다 하자. 그럼 $C$와 $D$가 만나는 교점의 개수는 이들의 degree에 의족하는데, 가령 평면 위에서 정의된 이차곡선 $\y=x^2$과 직선은 일반적으로 두 점에서 만난다. Bézout theorem은 이를 일반화한 결과이다.
 
 ::: 명제 1 (Bézout)
 Algebraically closed field 위에서 정의된 $\mathbb{P}^n$ 안에서, degree $d_1, \ldots, d_n$의 hypersurface $H_1, \ldots, H_n$이 공통 성분을 갖지 않는다면
@@ -140,7 +140,7 @@ $$\deg(V \cap W) \leq \deg(V) \cdot \deg(W)$$
 $\mathbb{P}^3$ 안의 두 이차곡면(quadric surface) $Q_1, Q_2$를 생각하자. 각각 degree 2이므로 proper intersection을 가질 때 교차 $Q_1 \cap Q_2$는 차원 1, degree 4인 곡선이다. 구체적으로, $Q_1 = Z(\x_0\x_3 - \x_1\x_2)$와 $Q_2 = Z(\x_0\x_2 - \x_1\x_3)$를 잡으면 교차는 네 개의 직선(line)으로 분해되며, 이들의 degree 합은 여전히 4이다.
 :::
 
-명제 6의 증명은 Chow ring을 통한 교차이론의 일반론에 의존한다. 자세한 내용은 [§교차곱](/ko/math/algebraic_varieties/intersection_product)을 참조하라. [§차원, ⁋예시 14](/ko/math/algebraic_varieties/dimension#ex14)의 부등식이 성분의 codimension에 대한 것으로 다시 나타난다.
+명제 6의 증명은 Chow ring을 통한 intersection theory의 일반론에 의존한다. 자세한 내용은 [§교차곱](/ko/math/algebraic_varieties/intersection_product)을 참조하라. [§차원, ⁋예시 14](/ko/math/algebraic_varieties/dimension#ex14)의 부등식이 성분의 codimension에 대한 것으로 다시 나타난다.
 
 ## 응용
 

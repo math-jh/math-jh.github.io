@@ -81,7 +81,7 @@ $$R(X, Y)(fZ) = f \cdot R(X, Y) Z$$
 
 ## Path-dependence와의 관계
 
-[예시 1](#ex1)의 직관에 맞춰, 곡률 텐서를 작은 loop 위의 평행 운반 holonomy의 *무한소 generator*로 해석할 수 있다. 정확한 진술은 다음과 같다.
+[예시 1](#ex1)의 직관에 맞춰, 곡률 텐서를 작은 loop 위의 parallel transport holonomy의 *무한소 generator*로 해석할 수 있다. 정확한 진술은 다음과 같다.
 
 ::: 명제 4
 점 $p \in M$과 두 벡터 $X_p, Y_p \in T_p M$에 대해, $\epsilon \rightarrow 0$의 극한에서 다음이 성립한다. $X_p, Y_p$가 펼치는 (적절한 좌표계에서의) 면적 $\epsilon^2$의 작은 평행사변형 loop $\partial D_\epsilon$를 따른 parallel transport $P_{\partial D_\epsilon} : T_p M \rightarrow T_p M$는 임의의 $Z_p \in T_p M$에 대해
@@ -91,7 +91,7 @@ $$P_{\partial D_\epsilon}(Z_p) = Z_p - \epsilon^2 R(X_p, Y_p) Z_p + O(\epsilon^3
 을 만족한다. 즉 $R(X_p, Y_p)$는 $X_p, Y_p$ 방향의 무한소 loop holonomy의 *generator* (의 음수배)이다.
 :::
 
-증명은 평행 운반 ODE를 $\epsilon$에 대해 두 단계 전개하는 표준적인 계산이며 [Lee, Theorem 7.3] 등에 자세히 다루어져 있다. 더 큰 disk $D$에 대해서는 *non-abelian Stokes* 형태로
+증명은 parallel transport ODE를 $\epsilon$에 대해 두 단계 전개하는 표준적인 계산이며 [Lee, Theorem 7.3] 등에 자세히 다루어져 있다. 더 큰 disk $D$에 대해서는 *non-abelian Stokes* 형태로
 
 $$P_{\partial D} \approx \exp\left(-\int_D R\right) \in \GL(T_p M)$$
 

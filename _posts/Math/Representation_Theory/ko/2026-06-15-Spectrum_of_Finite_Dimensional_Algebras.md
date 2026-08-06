@@ -224,12 +224,12 @@ $k$가 algebraically closed이고 $A$가 유한차원 commutative $k$-algebra이
 
 **(3) $\Rightarrow$ (4).** $A\cong k^N$의 regular representation을 생각하자. $k^N$에서 곱셈은 성분별이므로 표준 basis $\{\varepsilon_1,\ldots,\varepsilon_N\}$ (각 $\varepsilon_i$는 $i$번째 성분만 $1$) 에 대하여 임의의 $a=(a_1,\ldots,a_N)$의 곱셈연산자 $M_a$는 $M_a\varepsilon_i=a_i\varepsilon_i$로 작용한다. 즉 모든 $M_a$가 이 공통 basis에 대해 동시에 대각행렬이므로 regular representation은 동시대각화 가능하다.
 
-**(4) $\Rightarrow$ (1).** 정규표현이 동시대각화 가능하다 하자. 그럼 각 $M_a$가 대각화 가능하므로 nilpotent가 아닌 한 $0$이 아닌 고유값을 가지며, 특히 어떤 $a$에 대해 $M_a$가 nilpotent라면 $M_a=0$이다. [명제 2](#prop2)에 의해 $a\mapsto M_a$가 injective이므로 $M_a=0$은 $a=0$을 뜻한다. 따라서 $a^n=0$이면 $M_a^n=M_{a^n}=0$이고 $M_a$가 nilpotent이므로 $M_a=0$, 곧 $a=0$이다. 따라서 $A$는 reduced이다.
+**(4) $\Rightarrow$ (1).** regular representation이 동시대각화 가능하다 하자. 그럼 각 $M_a$가 대각화 가능하므로 nilpotent가 아닌 한 $0$이 아닌 고유값을 가지며, 특히 어떤 $a$에 대해 $M_a$가 nilpotent라면 $M_a=0$이다. [명제 2](#prop2)에 의해 $a\mapsto M_a$가 injective이므로 $M_a=0$은 $a=0$을 뜻한다. 따라서 $a^n=0$이면 $M_a^n=M_{a^n}=0$이고 $M_a$가 nilpotent이므로 $M_a=0$, 곧 $a=0$이다. 따라서 $A$는 reduced이다.
 
 마지막 주장은 (3)의 증명에서 본 대각화에서 $\varepsilon_i$가 $e_{\chi}$에 해당하고 $M_a e_\chi=\chi(a)e_\chi$임을 관찰하면 된다. 실제로 일반적인 경우에도 [따름정리 9](#cor9)의 idempotent $e_\chi$에 대하여 $a\,e_\chi\in A_\chi$이고 $a\,e_\chi=\chi(a)e_\chi+N_a(e_\chi)$인데, reduced인 경우 $N_a=0$이므로 $M_a e_\chi=\chi(a)e_\chi$이다.
 :::
 
-명제 11은 reduced인 가환대수가 정확히 정규표현이 동시대각화되는 경우, 곧 각 블록이 $1\times 1$로 떨어지는 경우임을 말해 준다. 이 경우 character의 개수는 차원과 정확히 같고, idempotent $e_\chi$들이 공통 고유벡터들의 basis를 이룬다. 일반적인 경우와의 차이는 오직 nilpotent 부분 $\mathfrak{n}_\chi$의 존재 여부이다.
+명제 11은 reduced인 가환대수가 정확히 regular representation이 동시대각화되는 경우, 곧 각 블록이 $1\times 1$로 떨어지는 경우임을 말해 준다. 이 경우 character의 개수는 차원과 정확히 같고, idempotent $e_\chi$들이 공통 고유벡터들의 basis를 이룬다. 일반적인 경우와의 차이는 오직 nilpotent 부분 $\mathfrak{n}_\chi$의 존재 여부이다.
 
 ## Spectrum
 
@@ -273,7 +273,7 @@ $$A\cong\prod_{i=1}^r k[\x]/\bigl((\x-c_i)^{m_i}\bigr)$$
 
 이고, 각 인수 $A_i=k[\x]/((\x-c_i)^{m_i})$은 차원 $m_i$의 local algebra로 그 maximal ideal은 $(\x-c_i)$의 image가 생성하는 nilpotent ideal이다. $A$의 character는 각 인수에서 $\x\mapsto c_i$로 평가하는 것들, 곧 root $\{c_1,\ldots,c_r\}$과 일대일로 대응하며, 이것이 정확히 $\MaxSpec A$이다.
 
-정규표현의 입장에서 $M_\x:A\rightarrow A$는 $\x$의 곱셈연산자이고, basis $\{1,\x,\ldots,\x^{n-1}\}$에 대하여 $p$의 companion matrix로 표현된다. 그 고유값은 $p$의 root $c_1,\ldots,c_r$이며, 이는 [정리 8](#thm8)이 말하는 $\{\chi(\x)\}$과 정확히 일치한다. 점 $c_i$의 multiplicity는 $\dim A_i=m_i$, 곧 root의 중복도이다. 따라서 $A$가 reduced인 것은 모든 $m_i=1$인 것, 곧 $p$가 squarefree인 것과 동치이고, 이 경우 $A\cong k^n$이며 $M_\x$는 대각화 가능하다.
+Regular representation의 입장에서 $M_\x:A\rightarrow A$는 $\x$의 곱셈연산자이고, basis $\{1,\x,\ldots,\x^{n-1}\}$에 대하여 $p$의 companion matrix로 표현된다. 그 고유값은 $p$의 root $c_1,\ldots,c_r$이며, 이는 [정리 8](#thm8)이 말하는 $\{\chi(\x)\}$과 정확히 일치한다. 점 $c_i$의 multiplicity는 $\dim A_i=m_i$, 곧 root의 중복도이다. 따라서 $A$가 reduced인 것은 모든 $m_i=1$인 것, 곧 $p$가 squarefree인 것과 동치이고, 이 경우 $A\cong k^n$이며 $M_\x$는 대각화 가능하다.
 :::
 
 위 예시의 가장 작은 비자명한 경우들을 따로 떼어 보면 reduced와 non-reduced의 대비가 분명해진다.
@@ -303,14 +303,14 @@ $$\mathbb{C}[\mathbb{Z}/n]\cong\mathbb{C}[\sigma]/(\sigma^n-1)$$
 
 $$\mathbb{C}[\mathbb{Z}/n]\cong\mathbb{C}^n$$
 
-이며 reduced이다. 그 $n$개의 character는 각각 $\sigma\mapsto\zeta^j$ ($0\leq j<n$) 로 주어지는데, 이는 정확히 $\mathbb{Z}/n$의 $1$차원 representation들, 곧 [§표현의 지표](/ko/math/representation_theory/character_theory)의 의미에서의 $\mathbb{Z}/n$의 (trace) character들이다. 즉 abelian group의 경우 두 종류의 character가 일치하며 ([참고 5](#rmk5)), 정규표현의 동시대각화는 group의 character 분해를 그대로 재현한다.
+이며 reduced이다. 그 $n$개의 character는 각각 $\sigma\mapsto\zeta^j$ ($0\leq j<n$) 로 주어지는데, 이는 정확히 $\mathbb{Z}/n$의 $1$차원 representation들, 곧 [§표현의 지표](/ko/math/representation_theory/character_theory)의 의미에서의 $\mathbb{Z}/n$의 (trace) character들이다. 즉 abelian group의 경우 두 종류의 character가 일치하며 ([참고 5](#rmk5)), regular representation의 동시대각화는 group의 character 분해를 그대로 재현한다.
 :::
 
 ## 비가환 방향과 응용
 
-지금까지 우리는 commutativity를 본질적으로 사용하여, 정규표현의 모든 블록이 하나의 character로 색인되는 simultaneous generalized eigenspace로 떨어진다는 것을 보았다. Commutativity를 떼면 그림은 더 풍부해진다. Semisimple algebra의 일반론에 따르면, algebraically closed field 위의 유한차원 semisimple algebra는 matrix algebra들의 곱 $\prod_i\Mat_{n_i}(k)$으로 분해된다. 우리가 다룬 commutative reduced인 경우는 모든 $n_i=1$인, 곧 모든 블록이 $1\times 1$인 가장 단순한 구석에 해당한다. 한편 $\operatorname{char}k\nmid\lvert G\rvert$인 경우 Maschke의 정리에 의해 group algebra $k[G]$가 semisimple이 되고 ([§유한군의 표현론, ⁋따름정리 7](/ko/math/representation_theory/representations_of_finite_groups#cor7)), 이로부터 유한군의 표현론이 회복된다. $G$가 abelian이면 $k[G]$가 commutative이므로 모든 irreducible representation이 $1$차원이고, 이는 [예시 16](#ex16)에서 본 것처럼 우리의 commutative 이론으로 완전히 설명된다.
+지금까지 우리는 commutativity를 본질적으로 사용하여, regular representation의 모든 블록이 하나의 character로 색인되는 simultaneous generalized eigenspace로 떨어진다는 것을 보았다. Commutativity를 떼면 그림은 더 풍부해진다. Semisimple algebra의 일반론에 따르면, algebraically closed field 위의 유한차원 semisimple algebra는 matrix algebra들의 곱 $\prod_i\Mat_{n_i}(k)$으로 분해된다. 우리가 다룬 commutative reduced인 경우는 모든 $n_i=1$인, 곧 모든 블록이 $1\times 1$인 가장 단순한 구석에 해당한다. 한편 $\operatorname{char}k\nmid\lvert G\rvert$인 경우 Maschke의 정리에 의해 group algebra $k[G]$가 semisimple이 되고 ([§유한군의 표현론, ⁋따름정리 7](/ko/math/representation_theory/representations_of_finite_groups#cor7)), 이로부터 유한군의 표현론이 회복된다. $G$가 abelian이면 $k[G]$가 commutative이므로 모든 irreducible representation이 $1$차원이고, 이는 [예시 16](#ex16)에서 본 것처럼 우리의 commutative 이론으로 완전히 설명된다.
 
-이 사전은 표현론 바깥에서도 같은 모습으로 나타난다. 예컨대 적당히 localize한 유한차원 가환 양자 cohomology ring의 maximal spectrum은 유한개의 점으로 이루어지며, 그 점들은 양자 곱셈 연산자들의 동시 고유값에 해당한다. 이는 정규표현의 simultaneous generalized eigenspace 분해라는 우리의 이야기가 그대로 적용되는 한 사례이다.
+이 사전은 표현론 바깥에서도 같은 모습으로 나타난다. 예컨대 적당히 localize한 유한차원 가환 양자 cohomology ring의 maximal spectrum은 유한개의 점으로 이루어지며, 그 점들은 양자 곱셈 연산자들의 동시 고유값에 해당한다. 이는 regular representation의 simultaneous generalized eigenspace 분해라는 우리의 이야기가 그대로 적용되는 한 사례이다.
 
 ---
 
