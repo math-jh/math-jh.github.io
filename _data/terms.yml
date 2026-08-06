@@ -127,6 +127,13 @@ A:
   see:
   - label: Additive category
     id: additive_category
+- id: abelian_extension
+  en: abelian extension
+  ko: 아벨 확대
+  primary: en
+  defs:
+  - label: '[체론] §원분확대'
+    url: /ko/math/field_theory/cyclotomic_extensions
 - id: abelian_group
   en: abelian group
   ko: 가환군
@@ -6745,6 +6752,13 @@ G:
   defs:
   - label: '[미적분학] §그린 정리'
     url: /ko/math/calculus/greens_theorem
+- id: gromov-witten_invariant
+  en: Gromov-Witten invariant
+  ko: Gromov-Witten 불변량
+  primary: en
+  defs:
+  - label: '[그로모프-위튼 이론] §Gromov-Witten 불변량과 공리계: 대수적 관점'
+    url: /ko/math/gromov-witten_theory/gw_invariants_axioms
 - id: gromov-witten_potential
   en: Gromov-Witten potential
   ko: 그로모프-위튼 퍼텐셜
@@ -8178,6 +8192,13 @@ I:
 - id: intersection_product
   en: intersection product
   ko: 교차 곱
+  primary: en
+  defs:
+  - label: '[대수다양체] §교차곱'
+    url: /ko/math/algebraic_varieties/intersection_product
+- id: intersection_theory
+  en: intersection theory
+  ko: 교차이론
   primary: en
   defs:
   - label: '[대수다양체] §교차곱'
@@ -10072,6 +10093,13 @@ M:
   defs:
   - label: '[유도대수기하학] §Shifted symplectic 구조'
     url: /ko/math/derived_algebraic_geometry/shifted_symplectic_structures
+- id: marked_point
+  en: marked point
+  ko: 표시된 점
+  primary: en
+  defs:
+  - label: '[그로모프-위튼 이론] §안정사상 moduli의 대수적 구성'
+    url: /ko/math/gromov-witten_theory/moduli_of_stable_maps
 - id: matching_family
   en: matching family
   ko: 정합족
@@ -10302,6 +10330,13 @@ M:
   defs:
   - label: '[선형대수학] §최소제곱법'
     url: /ko/math/linear_algebra/least_squares_method
+- id: mirror_symmetry
+  en: mirror symmetry
+  ko: 거울 대칭
+  primary: en
+  defs:
+  - label: '[거울대칭] §거울대칭 개요'
+    url: /ko/math/mirror_symmetry/overview
 - id: möbius_function
   en: Möbius function
   ko: 뫼비우스 함수
@@ -10348,6 +10383,13 @@ M:
   en: moduli problem
   ko: moduli 문제
   primary: ko
+  defs:
+  - label: '[스택] §Moduli 문제: fine moduli와 coarse moduli'
+    url: /ko/math/stacks/moduli_problems
+- id: moduli_space
+  en: moduli space
+  ko: 모듈라이 공간
+  primary: en
   defs:
   - label: '[스택] §Moduli 문제: fine moduli와 coarse moduli'
     url: /ko/math/stacks/moduli_problems
@@ -12723,6 +12765,13 @@ Q:
   - label: 르장드르 기호
     lang: ko
     id: legendre_symbol
+- id: quantum_cohomology
+  en: quantum cohomology
+  ko: 양자 코호몰로지
+  primary: en
+  defs:
+  - label: '[그로모프-위튼 이론] §Gromov-Witten 불변량과 공리계: 대수적 관점'
+    url: /ko/math/gromov-witten_theory/gw_invariants_axioms
 - id: quartic_surface
   en: quartic surface
   ko: 4차 곡면
@@ -16777,6 +16826,20 @@ V:
   defs:
   - label: '[그로모프-위튼 이론] §안정사상 moduli의 대수적 구성'
     url: /ko/math/gromov-witten_theory/moduli_of_stable_maps
+- id: virtual_cycle
+  en: virtual cycle
+  ko: 가상류
+  primary: ko
+  defs:
+  - label: '[그로모프-위튼 이론] §Perfect obstruction theory와 virtual fundamental class'
+    url: /ko/math/gromov-witten_theory/perfect_obstruction_theory
+- id: virtual_fundamental_class
+  en: virtual fundamental class
+  ko: 가상 기본류
+  primary: en
+  defs:
+  - label: '[그로모프-위튼 이론] §Perfect obstruction theory와 virtual fundamental class'
+    url: /ko/math/gromov-witten_theory/perfect_obstruction_theory
 - id: virtual_relative_dimension
   en: virtual relative dimension
   ko: virtual 상대차원
@@ -16785,6 +16848,13 @@ V:
   - label: '[유도대수기하학] §Derived scheme과 derived stack'
     url: /ko/math/derived_algebraic_geometry/derived_schemes
 W:
+- id: wdvv_equation
+  en: WDVV equation
+  ko: WDVV 방정식
+  primary: en
+  defs:
+  - label: '[그로모프-위튼 이론] §Gromov-Witten 불변량과 공리계: 대수적 관점'
+    url: /ko/math/gromov-witten_theory/gw_invariants_axioms
 - id: weak_direct_product
   en: weak direct product
   ko: 약한 직접곱
