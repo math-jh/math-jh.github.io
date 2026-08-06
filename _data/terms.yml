@@ -2345,6 +2345,13 @@ C:
   see:
   - label: Finer
     id: finer
+- id: coboundary
+  en: coboundary
+  ko: 코바운더리
+  primary: en
+  defs:
+  - label: '[호몰로지 대수학] §호몰로지'
+    url: /ko/math/homological_algebra/homology
 - id: coboundary_map
   en: coboundary map
   ko: 여경계 사상
@@ -3681,6 +3688,13 @@ C:
   defs:
   - label: '[호몰로지 대수학] §호몰로지'
     url: /ko/math/homological_algebra/homology
+- id: cyclic_group
+  en: cyclic group
+  ko: 순환군
+  primary: en
+  defs:
+  - label: '[군론] §군의 열'
+    url: /ko/math/group_theory/series_of_groups
 - id: cyclotomic_extension
   en: cyclotomic extension
   ko: 원분확대
@@ -6222,6 +6236,13 @@ G:
     id: Galois_correspondence
   - label: Galois group
     id: galois_group
+- id: galois_cohomology
+  en: Galois cohomology
+  ko: 갈루아 코호몰로지
+  primary: en
+  defs:
+  - label: '[호몰로지 대수학] §군 코호몰로지'
+    url: /ko/math/homological_algebra/group_cohomology
 - id: Galois_connection
   en: Galois connection
   ko: 갈루아 연결
@@ -6252,6 +6273,13 @@ G:
     id: galois
   - label: Galois group
     id: galois_group
+- id: galois_extension
+  en: Galois extension
+  ko: 갈루아 확대
+  primary: en
+  defs:
+  - label: '[체론] §갈루아 확장'
+    url: /ko/math/field_theory/galois_extension
 - id: galois_group
   en: Galois group
   ko: 갈루아 군
@@ -8855,6 +8883,13 @@ K:
     url: /ko/math/commutative_algebra/Krull_dimension
   - label: '[위상수학] §차원'
     url: /ko/math/topology/dimension
+- id: krull_topology
+  en: Krull topology
+  ko: 크룰 위상
+  primary: en
+  defs:
+  - label: '[체론] §갈루아 군의 성질들'
+    url: /ko/math/field_theory/properties_of_galois_extensions
 - id: kummer_surface
   en: Kummer surface
   ko: 쿰머 곡면
@@ -12383,6 +12418,13 @@ P:
   defs:
   - label: '[위상수학] §곱공간'
     url: /ko/math/topology/product_spaces
+- id: profinite_group
+  en: profinite group
+  ko: 프로유한 군
+  primary: en
+  defs:
+  - label: '[체론] §갈루아 군의 성질들'
+    url: /ko/math/field_theory/properties_of_galois_extensions
 - id: projection
   en: projection
   ko: 사영
@@ -12719,6 +12761,13 @@ Q:
   defs:
   - label: '[스킴] §스킴 사상의 성질들'
     url: /ko/math/scheme_theory/properties_of_scheme_morphisms
+- id: quasi-galois
+  en: quasi-Galois
+  ko: 준갈루아
+  primary: en
+  defs:
+  - label: '[체론] §갈루아 확장'
+    url: /ko/math/field_theory/galois_extension
 - id: quasi-galois_extension
   en: quasi-Galois extension
   ko: 준갈루아확대
@@ -14088,6 +14137,13 @@ S:
   defs:
   - label: '[토릭 기하학] §Cox 구성과 GIT quotient'
     url: /ko/math/toric_geometry/cox_construction
+- id: separable
+  en: separable
+  ko: 분리가능
+  primary: en
+  defs:
+  - label: '[체론] §분리가능확대체'
+    url: /ko/math/field_theory/separable_extensions
 - id: separable_algebraic_closure
   en: separable algebraic closure
   ko: 분리가능폐포
@@ -14708,6 +14764,13 @@ S:
   defs:
   - label: '[체론] §거듭제곱근 가해성'
     url: /ko/math/field_theory/solvability_by_radicals
+- id: solvable_group
+  en: solvable group
+  ko: 가해군
+  primary: en
+  defs:
+  - label: '[군론] §군의 열'
+    url: /ko/math/group_theory/series_of_groups
 - id: source
   en: source
   ko: 소스
@@ -14795,6 +14858,13 @@ S:
 - id: splitting_extension
   en: splitting extension
   ko: 분해확대체
+  primary: en
+  defs:
+  - label: '[체론] §대수적 폐포'
+    url: /ko/math/field_theory/algebraically_closed_extensions
+- id: splitting_field
+  en: splitting field
+  ko: 분해체
   primary: en
   defs:
   - label: '[체론] §대수적 폐포'
@@ -15104,6 +15174,13 @@ S:
   defs:
   - label: '[범주론] §범주'
     url: /ko/math/category_theory/categories
+- id: subextension
+  en: subextension
+  ko: 부분확장
+  primary: en
+  defs:
+  - label: '[체론] §대수적 확장'
+    url: /ko/math/field_theory/algebraic_extensions
 - id: subgroup
   en: subgroup
   ko: 부분군
@@ -15780,6 +15857,13 @@ T:
   defs:
   - label: '[대수다양체] §Todd Class'
     url: /ko/math/algebraic_varieties/todd_class
+- id: topological_group
+  en: topological group
+  ko: 위상 군
+  primary: en
+  defs:
+  - label: '[리 이론] §리 군'
+    url: /ko/math/lie_theory/Lie_groups
 - id: topological_invariant
   en: topological invariant
   ko: 위상적 불변량
