@@ -2854,6 +2854,13 @@ C:
   defs:
   - label: '[층론] §Perverse 층'
     url: /ko/math/sheaf_theory/perverse_sheaves
+- id: complex_analysis
+  en: complex analysis
+  ko: 복소해석학
+  primary: en
+  defs:
+  - label: '[복소해석학] §복소수와 복소평면'
+    url: /ko/math/complex_analysis/complex_numbers
 - id: complex_conjugate
   en: complex conjugate
   ko: 복소켤레
@@ -2882,6 +2889,20 @@ C:
   defs:
   - label: '[선형대수학] §복소내적공간'
     url: /ko/math/linear_algebra/complex_inner_product_spaces
+- id: complex_integration
+  en: complex integration
+  ko: 복소적분
+  primary: ko
+  defs:
+  - label: '[복소해석학] §복소적분'
+    url: /ko/math/complex_analysis/complex_integration
+- id: complex_logarithm
+  en: complex logarithm
+  ko: 복소로그함수
+  primary: en
+  defs:
+  - label: '[복소해석학] §복소수와 복소평면'
+    url: /ko/math/complex_analysis/complex_numbers
 - id: complex_manifold
   en: complex manifold
   ko: 복소다양체
@@ -6025,6 +6046,13 @@ F:
   defs:
   - label: '[정수론] §펠 방정식'
     url: /ko/math/number_theory/pell_equation
+- id: fundamental_theorem_of_algebra
+  en: fundamental theorem of algebra
+  ko: 대수학의 기본정리
+  primary: ko
+  defs:
+  - label: '[복소해석학] §Cauchy 적분공식'
+    url: /ko/math/complex_analysis/cauchy_integral_formula
 - id: fundamental_theorem_of_calculus
   en: Fundamental Theorem of Calculus
   ko: 미적분의 기본정리
@@ -9376,6 +9404,13 @@ L:
     url: /ko/math/linear_algebra/basis
   - label: '[미분다양체] §벡터장'
     url: /ko/math/manifolds/vector_fields
+- id: liouville_s_theorem
+  en: 'Liouville''s theorem'
+  ko: Liouville 정리
+  primary: ko
+  defs:
+  - label: '[복소해석학] §Cauchy 적분공식'
+    url: /ko/math/complex_analysis/cauchy_integral_formula
 - id: lipschitz_condition
   en: Lipschitz condition
   ko: 립시츠 조건
@@ -9928,6 +9963,13 @@ M:
   defs:
   - label: '[리만기하학] §제2기본형식'
     url: /ko/math/riemannian_geometry/second_fundamental_form
+- id: mean_value_property
+  en: mean value property
+  ko: 평균값 성질
+  primary: ko
+  defs:
+  - label: '[복소해석학] §Cauchy 적분공식'
+    url: /ko/math/complex_analysis/cauchy_integral_formula
 - id: mean_value_theorem
   en: mean value theorem
   ko: 평균값 정리
@@ -10258,6 +10300,13 @@ M:
   see:
   - label: Pseudoinverse
     id: pseudoinverse
+- id: morera_s_theorem
+  en: 'Morera''s theorem'
+  ko: Morera 정리
+  primary: ko
+  defs:
+  - label: '[복소해석학] §Cauchy 적분공식'
+    url: /ko/math/complex_analysis/cauchy_integral_formula
 - id: morphism
   en: morphism
   ko: 사상
@@ -10879,6 +10928,8 @@ N:
   defs:
   - label: '[대수적 위상수학] §호모토피'
     url: /ko/math/algebraic_topology/homotopy
+  - label: '[복소해석학] §Cauchy 정리'
+    url: /ko/math/complex_analysis/cauchy_theorem
 - id: nullity
   en: nullity
   ko: 영공간의 차원
@@ -11994,6 +12045,13 @@ P:
   defs:
   - label: '[복소기하학] §Hodge 이론'
     url: /ko/math/complex_geometry/hodge_theory
+- id: primitive_function
+  en: primitive function
+  ko: 원시함수
+  primary: ko
+  defs:
+  - label: '[미적분학] §적분'
+    url: /ko/math/calculus/integration
 - id: primitive_n_-th_root_of_unity
   en: primitive $n$-th root of unity
   ko: 1의 원시 $n$제곱근
