@@ -32,20 +32,21 @@ $$(a\cdot s)\vert_V=(a\vert_V)\cdot (s\vert_V)$$
 한편, 일반적인 module 위에서의 선형대수적 연산들은 $\mathcal{O}_X$-module에 그대로 옮겨진다.
 
 ::: 정의 2
-두 $\mathcal{O}_X$-module $\mathcal{F}, \mathcal{G}$에 대하여,
+두 $\mathcal{O}_X$-module $\mathcal{F}, \mathcal{G}$와 정수 $r\geq 0$에 대하여,
 
 1. *Direct sum* $\mathcal{F}\oplus \mathcal{G}$는 열린집합마다 $U\mapsto \mathcal{F}(U)\oplus \mathcal{G}(U)$로 주어지는 $\mathcal{O}_X$-module이다.
 2. *Tensor product* $\mathcal{F}\otimes_{\mathcal{O}_X}\mathcal{G}$는 presheaf $U\mapsto \mathcal{F}(U)\otimes_{\mathcal{O}_X(U)}\mathcal{G}(U)$의 sheafification이다.
 3. *Sheaf Hom<sub>층 $\Hom$</sub>* $\sHom_{\mathcal{O}_X}(\mathcal{F}, \mathcal{G})$는 열린집합마다 $U\mapsto \Hom_{\mathcal{O}_X\vert_U}(\mathcal{F}\vert_U, \mathcal{G}\vert_U)$로 주어지는 $\mathcal{O}_X$-module이다.
+4. *Exterior power* $\bigwedge^r\mathcal{F}$는 presheaf $U\mapsto \bigwedge^r_{\mathcal{O}_X(U)}\bigl(\mathcal{F}(U)\bigr)$의 sheafification이다. ([\[다중선형대수학\] §텐서대수, ⁋정의 10](/ko/math/multilinear_algebra/tensor_algebras#def10))
 :::
 
 위에서 direct sum과 sheaf Hom의 경우는 열린집합마다의 대응이 곧바로 sheaf를 이루지만, tensor product의 경우 presheaf 
 
 $$U\mapsto \mathcal{F}(U)\otimes_{\mathcal{O}_X(U)}\mathcal{G}(U)$$
 
-가 sheaf 조건을 만족하지 않을 수 있어 sheafification으로 정의하였다. ([\[위상수학\] §준층, ⁋정의 2](/ko/math/topology/presheaves#def2)) Sheaf Hom $\sHom_{\mathcal{O}_X}(\mathcal{F}, \mathcal{G})$의 global section은 $\Hom_{\mathcal{O}_X}(\mathcal{F}, \mathcal{G})$이며, 특히 $\sHom_{\mathcal{O}_X}(\mathcal{O}_X, \mathcal{F})\cong \mathcal{F}$가 성립한다.
+가 sheaf 조건을 만족하지 않을 수 있어 sheafification으로 정의하였다. ([\[위상수학\] §준층, ⁋정의 2](/ko/math/topology/presheaves#def2)) Exterior power도 같은 이유로 sheafification이 필요하다. Sheaf Hom $\sHom_{\mathcal{O}_X}(\mathcal{F}, \mathcal{G})$의 global section은 $\Hom_{\mathcal{O}_X}(\mathcal{F}, \mathcal{G})$이며, 특히 $\sHom_{\mathcal{O}_X}(\mathcal{O}_X, \mathcal{F})\cong \mathcal{F}$가 성립한다.
 
-이렇듯 $\mathcal{O}_X$-module은 일반적인 module과 비슷한 형식적 성질을 가지지만, 그 자체로는 너무 일반적이어서 affine 위에서 대수적인 정보로 환원되지 않는다. 우리가 실제로 다루고자 하는 것은 affine 위에서 module로부터 직접 만들어지는 sheaf들이다.
+[정의 2](#def2)의 목록들은 앞으로 쓰게 될 것들일 뿐, module 위의 선형대수적 구성은 어느 것이나 같은 방식으로 옮겨진다. 곧 각 열린집합에서 $\mathcal{O}_X(U)$-module에 그 구성을 적용한 뒤, 얻어진 presheaf가 sheaf가 아니면 sheafification을 취하면 된다. 가령 tensor power $\mathcal{F}^{\otimes r}$과 symmetric power $\Sym^r\mathcal{F}$, 그리고 이들을 모두 모은 tensor algebra $\T(\mathcal{F})$와 symmetric algebra $\S(\mathcal{F})$, exterior algebra $\bigwedge\mathcal{F}$가 그러하며 ([\[다중선형대수학\] §텐서대수, ⁋정의 1](/ko/math/multilinear_algebra/tensor_algebras#def1)), 임의의 첨자집합에 대한 direct sum과 direct product도 마찬가지이다. 이렇듯 $\mathcal{O}_X$-module은 일반적인 module과 비슷한 형식적 성질을 가지지만, 그 자체로는 너무 일반적이어서 affine 위에서 대수적인 정보로 환원되지 않는다. 우리가 실제로 다루고자 하는 것은 affine 위에서 module로부터 직접 만들어지는 sheaf들이다.
 
 ## Affine scheme 위의 associated sheaf
 
@@ -241,6 +242,14 @@ $$(\mathcal{L}\otimes_{\mathcal{O}_X}\mathcal{L}^\vee)\vert_U\cong \mathcal{O}_U
 :::
 
 따라서 invertible sheaf들은 tensor product를 연산으로 하여 group을 이루며, 항등원은 $\mathcal{O}_X$, $\mathcal{L}$의 역원은 $\mathcal{L}^\vee$이다. 이는 [\[대수다양체\] §선다발과 벡터다발, ⁋정의 9](/ko/math/algebraic_varieties/line_bundles#def9)에서 정의한 Picard group $\Pic(X)$의 scheme 버전이다.
+
+Invertible sheaf를 얻는 가장 중요한 방법 중 하나는 locally free sheaf에 exterior power를 취하는 것이다. 우선 exterior power는 base change와 commute하므로 ([\[다중선형대수학\] §텐서대수, ⁋명제 14](/ko/math/multilinear_algebra/tensor_algebras#prop14)) $A$-module $M$과 $g\in A$에 대하여 $\bigl(\bigwedge^rM\bigr)_g\cong \bigwedge^r(M_g)$이고, 따라서 $U=\Spec A$ 위에서 $\mathcal{F}\vert_U\cong \widetilde M$이면 local model들이 restriction과 호환되어
+
+$$\bigl(\bigwedge\nolimits^r\mathcal{F}\bigr)\big\vert_U\cong \widetilde{\bigwedge\nolimits^rM}$$
+
+이 성립한다. ([명제 5](#prop5)) 그러므로 quasi-coherent sheaf의 exterior power는 다시 quasi-coherent sheaf이다. 
+
+특히 $\mathcal{E}$가 rank $n$의 locally free sheaf이면, $\mathcal{E}\vert_U\cong \mathcal{O}_U^{\oplus n}$인 열린집합 $U$ 위에서 $\bigwedge^r\mathcal{E}\vert_U$는 basis $e_1,\ldots, e_n$으로부터 만들어지는 $e_J$ ($\lvert J\rvert=r$)들을 basis로 가지므로 ([\[다중선형대수학\] §텐서대수, ⁋명제 13](/ko/math/multilinear_algebra/tensor_algebras#prop13)) rank $\binom{n}{r}$ free sheaf이다. 즉 $\bigwedge^r\mathcal{E}$는 다시 locally free sheaf이며, $r=n$인 경우에는 rank $1$, 곧 invertible sheaf가 된다. 이 마지막 경우를 $\mathcal{E}$의 *determinant*라 부르고 $\det\mathcal{E}=\bigwedge^n\mathcal{E}$로 적는다. 그러므로 rank $n$의 locally free sheaf는 그 determinant를 통해 $\Pic(X)$의 원소를 하나 정한다.
 
 ## Pullback과 pushforward
 

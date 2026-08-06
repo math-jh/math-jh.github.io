@@ -33,18 +33,21 @@ In other words, an $\mathcal{O}_X$-module is one for which scalar multiplication
 Meanwhile, the standard linear-algebraic operations on general modules carry over directly to $\mathcal{O}_X$-modules.
 
 ::: Definition 2
-For two $\mathcal{O}_X$-modules $\mathcal{F}, \mathcal{G}$,
+For two $\mathcal{O}_X$-modules $\mathcal{F}, \mathcal{G}$ and an integer $r\geq 0$,
 
 1. The *direct sum* $\mathcal{F}\oplus \mathcal{G}$ is the $\mathcal{O}_X$-module given by $U\mapsto \mathcal{F}(U)\oplus \mathcal{G}(U)$ on each open set.
 2. The *tensor product* $\mathcal{F}\otimes_{\mathcal{O}_X}\mathcal{G}$ is the sheafification of the presheaf $U\mapsto \mathcal{F}(U)\otimes_{\mathcal{O}_X(U)}\mathcal{G}(U)$.
 3. The *sheaf Hom* $\sHom_{\mathcal{O}_X}(\mathcal{F}, \mathcal{G})$ is the $\mathcal{O}_X$-module given by $U\mapsto \Hom_{\mathcal{O}_X\vert_U}(\mathcal{F}\vert_U, \mathcal{G}\vert_U)$ on each open set.
+4. The *exterior power* $\bigwedge^r\mathcal{F}$ is the sheafification of the presheaf $U\mapsto \bigwedge^r_{\mathcal{O}_X(U)}\bigl(\mathcal{F}(U)\bigr)$. ([\[Multilinear Algebra\] §Tensor Algebra, ⁋Definition 10](/en/math/multilinear_algebra/tensor_algebras#def10))
 :::
 
 In the above, for the direct sum and sheaf Hom, the assignment on each open set immediately forms a sheaf, but for the tensor product the presheaf
 
 $$U\mapsto \mathcal{F}(U)\otimes_{\mathcal{O}_X(U)}\mathcal{G}(U)$$
 
-may fail to satisfy the sheaf condition, so it is defined via sheafification. ([\[Topology\] §Presheaves, ⁋Definition 2](/en/math/topology/presheaves#def2)) The global sections of the sheaf Hom $\sHom_{\mathcal{O}_X}(\mathcal{F}, \mathcal{G})$ are $\Hom_{\mathcal{O}_X}(\mathcal{F}, \mathcal{G})$, and in particular we have $\sHom_{\mathcal{O}_X}(\mathcal{O}_X, \mathcal{F})\cong \mathcal{F}$.
+may fail to satisfy the sheaf condition, so it is defined via sheafification. ([\[Topology\] §Presheaves, ⁋Definition 2](/en/math/topology/presheaves#def2)) The exterior power requires sheafification for the same reason. The global sections of the sheaf Hom $\sHom_{\mathcal{O}_X}(\mathcal{F}, \mathcal{G})$ are $\Hom_{\mathcal{O}_X}(\mathcal{F}, \mathcal{G})$, and in particular we have $\sHom_{\mathcal{O}_X}(\mathcal{O}_X, \mathcal{F})\cong \mathcal{F}$.
+
+The items in [Definition 2](#def2) are merely the ones we shall use; any linear-algebraic construction on modules carries over in the same way. That is, one applies the construction to the $\mathcal{O}_X(U)$-module on each open set, and takes the sheafification if the resulting presheaf is not a sheaf. For instance, this is the case for the tensor power $\mathcal{F}^{\otimes r}$ and the symmetric power $\Sym^r\mathcal{F}$, as well as for the tensor algebra $\T(\mathcal{F})$, the symmetric algebra $\S(\mathcal{F})$ and the exterior algebra $\bigwedge\mathcal{F}$ assembled from them ([\[Multilinear Algebra\] §Tensor Algebra, ⁋Definition 1](/en/math/multilinear_algebra/tensor_algebras#def1)), and likewise for direct sums and direct products over an arbitrary index set.
 
 Thus, although $\mathcal{O}_X$-modules share many formal properties with ordinary modules, they are too general in themselves to be reduced to algebraic information on an affine. What we actually want to handle are the sheaves constructed directly from modules on an affine.
 
@@ -240,6 +243,14 @@ and since these local isomorphisms arise from the naturally defined evaluation m
 :::
 
 Hence the invertible sheaves form a group under tensor product, with identity $\mathcal{O}_X$ and inverse of $\mathcal{L}$ given by $\mathcal{L}^\vee$. This is the scheme version of the Picard group $\Pic(X)$ defined in [\[Algebraic Varieties\] §Line Bundles and Vector Bundles, ⁋Definition 9](/en/math/algebraic_varieties/line_bundles#def9).
+
+The most important way of obtaining an invertible sheaf is to take the exterior power of a locally free sheaf. First, the exterior power commutes with base change ([\[Multilinear Algebra\] §Tensor Algebra, ⁋Proposition 14](/en/math/multilinear_algebra/tensor_algebras#prop14)), so for an $A$-module $M$ and $g\in A$ we have $\bigl(\bigwedge^rM\bigr)_g\cong \bigwedge^r(M_g)$; hence if $\mathcal{F}\vert_U\cong \widetilde M$ on $U=\Spec A$, the local models are compatible with restriction and
+
+$$\bigl(\bigwedge\nolimits^r\mathcal{F}\bigr)\big\vert_U\cong \widetilde{\bigwedge\nolimits^rM}$$
+
+holds. ([Proposition 5](#prop5)) Therefore the exterior power of a quasi-coherent sheaf is again a quasi-coherent sheaf. Here the properties of exterior algebras that we cite hold independently of the characteristic, since $\bigwedge$ is defined as a quotient by the ideal $\langle x\otimes x\rangle$, and so they apply verbatim over an arbitrary $\mathcal{O}_X(U)$.
+
+In particular, if $\mathcal{E}$ is a locally free sheaf of rank $n$, then on an open set $U$ with $\mathcal{E}\vert_U\cong \mathcal{O}_U^{\oplus n}$, the sheaf $\bigwedge^r\mathcal{E}\vert_U$ has as a basis the elements $e_J$ ($\lvert J\rvert=r$) built from a basis $e_1,\ldots, e_n$ ([\[Multilinear Algebra\] §Tensor Algebra, ⁋Proposition 13](/en/math/multilinear_algebra/tensor_algebras#prop13)), hence is a free sheaf of rank $\binom{n}{r}$. That is, $\bigwedge^r\mathcal{E}$ is again a locally free sheaf, and for $r=n$ it has rank $1$, that is, it is an invertible sheaf. In this last case we call it the *determinant* of $\mathcal{E}$ and write $\det\mathcal{E}=\bigwedge^n\mathcal{E}$. Consequently a locally free sheaf of rank $n$ determines an element of $\Pic(X)$ through its determinant.
 
 ## Pullback and pushforward
 
