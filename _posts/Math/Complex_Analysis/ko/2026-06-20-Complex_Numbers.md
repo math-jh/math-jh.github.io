@@ -15,7 +15,7 @@ weight: 1
 published: false
 ---
 
-복소해석학은 복소수 위에서 정의된 함수의 미분과 적분을 다룬다. 실해석학과 달리 복소미분가능성은 매우 강한 조건이어서, 한 번 미분가능한 함수가 자동으로 무한히 미분가능하고 멱급수로 전개되는 등 풍부한 구조가 따라 나온다. 이 모든 이론의 무대가 되는 것이 복소수 전체의 집합 $\mathbb{C}$이며, 이 글에서는 $\mathbb{C}$를 대수적 대상(field)로, 또 기하적·위상적 대상(평면과 거리공간)으로 정비한다. 복소수의 field 구조 자체는 선형대수학에서 이미 다루었으므로 ([\[선형대수학\] §가환군과 체, ⁋예시 4](/ko/math/linear_algebra/fields#ex4)) 여기서 다시 구성하지 않고, 절댓값·켤레·극형식이라는 추가 구조와 그로부터 따라 나오는 해석학적 성질에 집중한다.
+Complex analysis는 복소수 위에서 정의된 함수의 미분과 적분을 다룬다. 실해석학과 달리 복소미분가능성은 매우 강한 조건이어서, 한 번 미분가능한 함수가 자동으로 무한히 미분가능하고 멱급수로 전개되는 등 풍부한 구조가 따라 나온다. 이 모든 이론의 무대가 되는 것이 복소수 전체의 집합 $\mathbb{C}$이며, 이 글에서는 $\mathbb{C}$를 대수적 대상(field)로, 또 기하적·위상적 대상(평면과 거리공간)으로 정비한다. 복소수의 field 구조 자체는 선형대수학에서 이미 다루었으므로 ([\[선형대수학\] §가환군과 체, ⁋예시 4](/ko/math/linear_algebra/fields#ex4)) 여기서 다시 구성하지 않고, 절댓값·켤레·극형식이라는 추가 구조와 그로부터 따라 나오는 해석학적 성질에 집중한다.
 
 ## 체 ℂ와 그 위의 대수적 구조
 
@@ -119,7 +119,7 @@ $$z = r(\cos\theta + i\sin\theta) = re^{i\theta}$$
 로 적히며, 이를 $z$의 *극형식<sub>polar form</sub>*이라 한다. 여기서 $\theta$를 $z$의 *편각<sub>argument</sub>*이라 하고 $\arg z$로 적는다.
 :::
 
-편각은 $2\pi$의 정수배를 더해도 같은 복소수를 주므로 유일하게 결정되지 않는다. 곧 $\arg z$는 $2\pi$를 법으로 하여서만 정해진다. 이 다가성은 복소로그함수와 거듭제곱근을 다룰 때 본질적인 역할을 하지만, 여기서는 곱셈의 기하적 해석에 집중한다. Euler 공식과 지수법칙 $e^{i\theta}e^{i\varphi} = e^{i(\theta + \varphi)}$ (이는 삼각함수의 덧셈정리와 동치이다) 로부터 곱셈이 극형식에서 어떻게 작동하는지가 곧바로 나온다.
+편각은 $2\pi$의 정수배를 더해도 같은 복소수를 주므로 유일하게 결정되지 않는다. 곧 $\arg z$는 $2\pi$를 법으로 하여서만 정해진다. 이 다가성은 complex logarithm과 거듭제곱근을 다룰 때 본질적인 역할을 하지만, 여기서는 곱셈의 기하적 해석에 집중한다. Euler 공식과 지수법칙 $e^{i\theta}e^{i\varphi} = e^{i(\theta + \varphi)}$ (이는 삼각함수의 덧셈정리와 동치이다) 로부터 곱셈이 극형식에서 어떻게 작동하는지가 곧바로 나온다.
 
 ::: 명제 6
 $z = re^{i\theta}$, $w = se^{i\varphi}$ ($r, s > 0$) 이면
@@ -169,11 +169,11 @@ $$(\cos\theta + i\sin\theta)^{n+1} = (\cos\theta + i\sin\theta)^n(\cos\theta + i
 이제 $w = se^{i\varphi}$가 $w^n = z$를 만족한다고 하자. 절댓값을 비교하면 $s^n = r$이므로 $s = r^{1/n}$ (양의 실수 제곱근) 이다. 편각을 비교하면 $n\varphi \equiv \theta \pmod{2\pi}$, 곧 어떤 정수 $k$에 대해 $n\varphi = \theta + 2\pi k$이므로 $\varphi = (\theta + 2\pi k)/n$이다. $k$와 $k + n$은 편각을 $2\pi$만큼 차이 나게 하여 같은 복소수를 주므로, 서로 다른 근은 $k = 0, 1, \ldots, n-1$에서 나오는 $n$개뿐이다.
 :::
 
-de Moivre 공식의 한 특수한 경우인 $n$제곱근 $1$, 곧 *단위근<sub>root of unity</sub>*은 $z = 1$에 위 공식을 적용한 $\exp(2\pi i k/n)$ ($k = 0, \ldots, n-1$) 이며, 복소평면에서 단위원에 내접하는 정 $n$각형의 꼭짓점을 이룬다. 이 기하적 그림은 복소수의 곱셈 구조가 평면의 대칭성과 직결됨을 보여 주는 가장 단순한 예이다.
+de Moivre 공식의 한 특수한 경우인 $n$제곱근 $1$, 곧 *root of unity<sub>단위근</sub>*는 $z = 1$에 위 공식을 적용한 $\exp(2\pi i k/n)$ ($k = 0, \ldots, n-1$) 이며, 복소평면에서 단위원에 내접하는 정 $n$각형의 꼭짓점을 이룬다. 이 기하적 그림은 복소수의 곱셈 구조가 평면의 대칭성과 직결됨을 보여 주는 가장 단순한 예이다.
 
 ## 거리공간으로서의 ℂ
 
-절댓값은 복소평면에 거리를 부여하여 $\mathbb{C}$를 해석학의 무대로 만든다. 이 거리는 본질적으로 $\mathbb{R}^2$의 유클리드 거리와 같으며, 따라서 $\mathbb{R}^2$에서 확립한 완비성과 컴팩트성이 그대로 옮겨 온다.
+절댓값은 복소평면에 거리를 부여하여 $\mathbb{C}$를 해석학의 무대로 만든다. 이 거리는 본질적으로 $\mathbb{R}^2$의 유클리드 거리와 같으며, 따라서 $\mathbb{R}^2$에서 확립한 완비성과 compactness가 그대로 옮겨 온다.
 
 ::: 정의 8
 두 복소수 $z, w$에 대하여 그 *거리<sub>distance</sub>*를
@@ -211,7 +211,7 @@ $(\mathbb{C}, d)$는 완비 거리공간이다. 곧 $\mathbb{C}$의 모든 Cauch
 $z_n = a_n + b_n i$가 $\mathbb{C}$에서 Cauchy라 하자. 좌표별 부등식 $\lvert a_m - a_n\rvert \leq \lvert z_m - z_n\rvert$과 $\lvert b_m - b_n\rvert \leq \lvert z_m - z_n\rvert$에 의해 두 실수열 $(a_n)$, $(b_n)$도 각각 Cauchy이다. [\[해석학\] §Cauchy 수열과 완비성, ⁋정리 4](/ko/math/analysis/cauchy_sequences#thm4)에 의해 $a_n \rightarrow a$, $b_n \rightarrow b$인 실수 $a, b$가 존재한다. 그러면 명제 9에 의해 $z_n \rightarrow a + bi \in \mathbb{C}$이다. 따라서 임의의 Cauchy 점열이 $\mathbb{C}$ 안에서 수렴하므로 $(\mathbb{C}, d)$는 완비이다.
 :::
 
-이는 $\mathbb{R}^2$가 완비라는 사실 ([\[해석학\] §거리공간](/ko/math/analysis/metric_spaces)에서 좌표별 논증으로 언급된 것) 의 한 표현이기도 하다. 완비성은 멱급수의 수렴, 적분의 존재, 부동점 논증 등 복소해석학의 거의 모든 존재 정리가 의지하는 토대이다. 컴팩트성 또한 같은 동일시를 통해 그대로 따라 나온다.
+이는 $\mathbb{R}^2$가 완비라는 사실 ([\[해석학\] §거리공간](/ko/math/analysis/metric_spaces)에서 좌표별 논증으로 언급된 것) 의 한 표현이기도 하다. 완비성은 멱급수의 수렴, 적분의 존재, 부동점 논증 등 complex analysis의 거의 모든 존재 정리가 의지하는 토대이다. 컴팩트성 또한 같은 동일시를 통해 그대로 따라 나온다.
 
 ::: 정리 11 (ℂ의 Bolzano–Weierstrass / Heine–Borel)
 $\mathbb{C}$의 부분집합 $K$가 점렬컴팩트인 것은 $K$가 닫혀 있고 bounded인 것과 동치이다. 특히 $\mathbb{C}$의 임의의 bounded 점열은 수렴하는 부분수열을 가진다.
@@ -223,7 +223,7 @@ $\mathbb{C}$의 부분집합 $K$가 점렬컴팩트인 것은 $K$가 닫혀 있�
 뒷부분은 다음과 같이도 직접 볼 수 있다. $(z_n)$이 bounded, 곧 모든 $n$에서 $\lvert z_n\rvert \leq M$이라 하자. $z_n = a_n + b_n i$로 적으면 $\lvert a_n\rvert, \lvert b_n\rvert \leq \lvert z_n\rvert \leq M$이므로 두 실수열이 bounded이다. 먼저 $(a_n)$에 [\[해석학\] §부분수열과 Bolzano–Weierstrass 정리, ⁋정리 4](/ko/math/analysis/bolzano_weierstrass#thm4)를 적용하여 $a_{n_k} \rightarrow a$인 부분수열을 뽑고, 그 부분수열 위에서 $(b_{n_k})$가 여전히 bounded이므로 다시 Bolzano–Weierstrass를 적용하여 $b_{n_{k_j}} \rightarrow b$인 부분수열을 뽑는다. 이 부분수열 위에서 두 좌표가 동시에 수렴하므로 명제 9에 의해 $z_{n_{k_j}} \rightarrow a + bi$이다.
 :::
 
-따라서 닫힌 원판 $\overline{B}(z_0, R) = \{z \in \mathbb{C} : \lvert z - z_0\rvert \leq R\}$이나 원 $\{z : \lvert z\rvert = 1\}$ 같은 집합은 컴팩트이고, 반면 열린 원판이나 $\mathbb{C}$ 전체는 컴팩트가 아니다. 이 컴팩트성은 곧 연속함수가 컴팩트집합 위에서 최댓값을 가진다는 결과로 이어져, 최대절댓값원리나 Liouville 정리 같은 복소해석학의 정리들이 서는 발판이 된다.
+따라서 닫힌 원판 $\overline{B}(z_0, R) = \{z \in \mathbb{C} : \lvert z - z_0\rvert \leq R\}$이나 원 $\{z : \lvert z\rvert = 1\}$ 같은 집합은 컴팩트이고, 반면 열린 원판이나 $\mathbb{C}$ 전체는 컴팩트가 아니다. 이 컴팩트성은 곧 연속함수가 컴팩트집합 위에서 최댓값을 가진다는 결과로 이어져, 최대절댓값원리나 Liouville 정리 같은 complex analysis의 정리들이 서는 발판이 된다.
 
 ::: 예시 12 (등비점열의 수렴과 발산)
 복소수 $z$에 대해 점열 $(z^n)$의 거동은 절댓값 $\lvert z\rvert$로 완전히 결정된다. 명제 4에 의해 $\lvert z^n\rvert = \lvert z\rvert^n$이므로, $\lvert z\rvert < 1$이면
@@ -235,7 +235,7 @@ $$\lvert z^n - 0\rvert = \lvert z\rvert^n \rightarrow 0$$
 
 ## 확장복소평면과 Riemann 구면
 
-복소해석학에서는 함수가 무한대로 발산하는 양상을 한 점 $\infty$를 덧붙여 다루는 것이 편리하다. 이렇게 얻는 *확장복소평면*은 평면에 점 하나를 더한 집합에 그치지 않고, 입체사영을 통해 구면이라는 컴팩트한 기하적 대상과 동일시된다.
+Complex analysis에서는 함수가 무한대로 발산하는 양상을 한 점 $\infty$를 덧붙여 다루는 것이 편리하다. 이렇게 얻는 *확장복소평면*은 평면에 점 하나를 더한 집합에 그치지 않고, 입체사영을 통해 구면이라는 컴팩트한 기하적 대상과 동일시된다.
 
 ::: 정의 13
 복소평면에 형식적 기호 $\infty$를 하나 덧붙인 집합 $\widehat{\mathbb{C}} = \mathbb{C} \cup \{\infty\}$을 *확장복소평면<sub>extended complex plane</sub>* 혹은 *Riemann 구면<sub>Riemann sphere</sub>*이라 한다.

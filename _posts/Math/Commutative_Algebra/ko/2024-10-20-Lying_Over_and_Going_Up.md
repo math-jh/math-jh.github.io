@@ -92,7 +92,7 @@ Integral extension $A\hookrightarrow B$에서 $A$가 integrally closed domain이
 ::: 증명
 $B$가 domain이므로 $B\hookrightarrow B_{\mathfrak{q}_2}$이고, 이와 $A\hookrightarrow B$를 합성하여 ring extension $A\hookrightarrow B_{\mathfrak{q}_2}$를 얻는다. [명제 1](#prop1)의 증명에서 쓰인 것과 같은 논증으로, $\mathfrak{p}_1 B_{\mathfrak{q}_2}\cap A\subseteq\mathfrak{p}_1$을 보이면 $\mathfrak{p}_1$ 위에 lying over하는 $B_{\mathfrak{q}_2}$의 prime ideal이 존재한다. 이는 $B$의 $\mathfrak{q}_2$에 포함된 prime ideal $\mathfrak{q}_1$에 해당하므로 원하는 결과를 얻는다.
 
-$a\in\mathfrak{p}_1 B_{\mathfrak{q}_2}\cap A$라 하자. $a=p/s$ ($p\in\mathfrak{p}_1 B$, $s\in B\setminus\mathfrak{q}_2$)로 쓰고 $a\neq 0$이라 가정하자. [보조정리 5](#lem5)에 의해 $p$의 minimal polynomial $f=\x^n+c_{n-1}\x^{n-1}+\cdots+c_0$는 모든 $c_i\in\mathfrak{p}_1$을 만족한다. 한편 $a\in A\subseteq K$이고 $p=as$이므로, $f$에 치환 $\x\mapsto a\x$을 하고 정규화한 다항식
+$a\in\mathfrak{p}_1 B_{\mathfrak{q}_2}\cap A$라 하자. $a=p/s$ ($p\in\mathfrak{p}_1 B$, $s\in B\setminus\mathfrak{q}_2$)로 쓰고 $a\neq 0$이라 가정하자. [보조정리 5](#lem5)에 의해 $p$의 minimal polynomial $f=\x^n+c_{n-1}\x^{n-1}+\cdots+c_0$는 모든 $c_i\in\mathfrak{p}_1$을 만족한다. 한편 $a\in A\subseteq K$이고 $p=as$이므로, $f$에 치환 $\x\mapsto a\x$을 하고 normalization한 다항식
 
 $$\frac{1}{a^n}f(a\x)=\x^n+\frac{c_{n-1}}{a}\x^{n-1}+\cdots+\frac{c_0}{a^n}$$
 

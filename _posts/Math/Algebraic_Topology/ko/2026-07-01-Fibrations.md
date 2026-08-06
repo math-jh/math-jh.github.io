@@ -62,7 +62,7 @@ Covering space에 대한 우리의 논의에서 가장 핵심적인 성질은 pa
 연속함수 $p:E\rightarrow B$가 공간 $X$에 대하여 *homotopy lifting property<sub>호모토피 올림 성질</sub>* (줄여서 HLP) 를 갖는다는 것은, 다음의 조건이 성립하는 것이다. 임의의 homotopy $g:X\times I\rightarrow B$와, $g_0=g\vert_{X\times\{0\}}$의 lifting $\widetilde{g}_0:X\rightarrow E$ (즉 $p\circ\widetilde{g}_0=g_0$) 가 주어질 때마다, $g$ 전체의 lifting $\widetilde{G}:X\times I\rightarrow E$가 존재하여 $p\circ\widetilde{G}=g$이고 $\widetilde{G}\vert_{X\times\{0\}}=\widetilde{g}_0$이도록 할 수 있다.
 :::
 
-정의의 조건은 다음의 diagram에서 아래 삼각형을 채우는 점선 화살표 $\widetilde{G}$의 존재로 요약된다. 위쪽 삼각형은 초기 조건 $\widetilde{G}\vert_{X\times\{0\}}=\widetilde{g}_0$을, 아래쪽 삼각형은 lifting 조건 $p\circ\widetilde{G}=g$을 나타낸다.
+정의의 조건은 다음의 diagram에서 아래 삼각형을 채우는 점선 arrow $\widetilde{G}$의 존재로 요약된다. 위쪽 삼각형은 초기 조건 $\widetilde{G}\vert_{X\times\{0\}}=\widetilde{g}_0$을, 아래쪽 삼각형은 lifting 조건 $p\circ\widetilde{G}=g$을 나타낸다.
 
 {% diagram Math/Algebraic_Topology/Fibrations-1.svg width="8.72em" alt="lifting_square" %}
 

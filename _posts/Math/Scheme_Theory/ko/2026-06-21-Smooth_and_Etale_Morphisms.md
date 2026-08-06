@@ -192,7 +192,7 @@ Separable algebraic field 확대 $K \subseteq L$에 대하여 $\Spec L \rightarr
 :::
 
 ::: 예시 11
-Field $\mathbb{K}$ 위의 곱셈군 $\mathbb{G}_m=\Spec \mathbb{K}[t, t^{-1}]$에서 자기 자신으로의 $n$제곱 morphism
+Field $\mathbb{K}$ 위의 multiplicative group $\mathbb{G}_m=\Spec \mathbb{K}[t, t^{-1}]$에서 자기 자신으로의 $n$제곱 morphism
 
 $$[n]:\mathbb{G}_m \longrightarrow \mathbb{G}_m,\qquad t\longmapsto t^n$$
 
@@ -233,7 +233,7 @@ $$D(bb')=g(b)g(b')-g'(b)g'(b')=g(b)D(b')+D(b)g'(b')\equiv g_0(b)D(b')+D(b)g_0(b'
 
 이로부터 (2)를 얻는다. $f$가 unramified하면 $\Omega_{B/A}=0$이므로 $\Hom_B(\Omega_{B/A}, \mathfrak{b})=0$이고, 따라서 두 lifting의 차이가 항상 영, 곧 lifting은 많아야 하나이다. 역으로 lifting이 항상 많아야 하나이면, $T_0=X$, $T=X[\epsilon]$를 $\Omega_{X/S}$의 dual로 만든 표준 square-zero 확대로 택하여 두 자명한 lifting이 일치해야 함을 보이면 $\Der_A(B, \Omega_{B/A})$의 항등원이 영이 되어 $\Omega_{B/A}=0$이 강제된다. 따라서 $f$는 unramified하다.
 
-(1)을 보인다. $f$가 smooth하다 하자. Lifting의 obstruction은 다음과 같이 분석된다. $g_0^\sharp:B \rightarrow R_0$이 주어졌을 때 이를 $B \rightarrow R$로 들어올리려면, $B$의 generator의 image를 $R$로 임의로 올린 뒤 그것이 $B$의 relation을 만족하도록 $\mathfrak{b}$ 안에서 수정해야 한다. 이 수정의 가능 여부가 $\Omega_{B/A}$의 국소자유성으로 통제된다. $B$를 $P=A[\x_i]$의 quotient $P/\mathfrak{a}$로 표시하면, $P \rightarrow R$로의 lifting은 자유 다항식환이므로 항상 존재하고, 그것이 $\mathfrak{a}$를 $0$으로 보내도록 $\Hom(\mathfrak{a}/\mathfrak{a}^2, \mathfrak{b})$ 안에서 수정 가능한지가 문제이다. Smooth 가정에서 conormal exact sequence
+(1)을 보인다. $f$가 smooth하다 하자. Lifting의 obstruction은 다음과 같이 분석된다. $g_0^\sharp:B \rightarrow R_0$이 주어졌을 때 이를 $B \rightarrow R$로 들어올리려면, $B$의 generator의 image를 $R$로 임의로 올린 뒤 그것이 $B$의 relation을 만족하도록 $\mathfrak{b}$ 안에서 수정해야 한다. 이 수정의 가능 여부가 $\Omega_{B/A}$의 국소자유성으로 통제된다. $B$를 $P=A[\x_i]$의 quotient $P/\mathfrak{a}$로 표시하면, $P \rightarrow R$로의 lifting은 자유 polynomial ring이므로 항상 존재하고, 그것이 $\mathfrak{a}$를 $0$으로 보내도록 $\Hom(\mathfrak{a}/\mathfrak{a}^2, \mathfrak{b})$ 안에서 수정 가능한지가 문제이다. Smooth 가정에서 conormal exact sequence
 
 $$\mathfrak{a}/\mathfrak{a}^2 \rightarrow \Omega_{P/A}\otimes B \rightarrow \Omega_{B/A} \rightarrow 0$$
 
@@ -242,7 +242,7 @@ $$\mathfrak{a}/\mathfrak{a}^2 \rightarrow \Omega_{P/A}\otimes B \rightarrow \Ome
 역으로 모든 square-zero 확대에 대하여 lifting이 존재한다 하자. 이 lifting property를 $T_0=X$ 위의 conormal 확대 $\Spec(P/\mathfrak{a}^2)$에 항등사상 $g_0=\id_X$와 함께 적용하면 $P/\mathfrak{a}^2 \rightarrow B$의 $A$-대수 section을 얻고, 이로부터 conormal exact sequence $\mathfrak{a}/\mathfrak{a}^2 \rightarrow \Omega_{P/A}\otimes B \rightarrow \Omega_{B/A} \rightarrow 0$의 좌측 morphism이 split injection이 된다. 그러므로 [명제 6](#prop6)에 의하여 $f$는 smooth하다.
 :::
 
-이 판정은 세 개념을 한 그림 안에 통합한다. 무한소 변형 $T_0\hookrightarrow T$를 따라 $X$로의 morphism을 항상 적분할 수 있으면 smooth, 그 적분이 많아야 한 가지 방법으로만 가능하면 unramified, 정확히 한 가지로 가능하면 étale이다. 특히 étale morphism의 lifting이 유일하다는 것은 covering map 위에서 경로를 들어올리는 방법이 유일하다는 위상적 사실의 대수적 대응이며, 이것이 étale morphism이 대수기하에서 분기 없는 covering과 기본군 이론의 토대가 되는 이유이다.
+이 판정은 세 개념을 한 그림 안에 통합한다. 무한소 변형 $T_0\hookrightarrow T$를 따라 $X$로의 morphism을 항상 적분할 수 있으면 smooth, 그 적분이 많아야 한 가지 방법으로만 가능하면 unramified, 정확히 한 가지로 가능하면 étale이다. 특히 étale morphism의 lifting이 유일하다는 것은 covering map 위에서 경로를 들어올리는 방법이 유일하다는 위상적 사실의 대수적 대응이며, 이것이 étale morphism이 대수기하에서 분기 없는 covering과 fundamental group 이론의 토대가 되는 이유이다.
 
 세 조건은 모두 base change와 합성에 대해 안정적이다. Smooth morphism의 base change는 다시 smooth하고, smooth morphism들의 합성도 smooth하며, unramified와 étale에 대해서도 마찬가지이다. 이는 위 lifting 판정이 순수하게 morphism 도식의 성질로 표현되어 있어 base change와 합성 아래에서 그대로 보존되기 때문이다.
 

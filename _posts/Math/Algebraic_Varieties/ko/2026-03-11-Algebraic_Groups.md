@@ -15,7 +15,7 @@ drift_needed: true
 
 ---
 
-우리는 수학적 대상이 다른 대상에 작용하는 많은 예시들을 알고 있다. 대수적으로 가장 중요한 예시는 벡터공간 위에 작용하는 group일 것이며, 기하적으로는 Lie group action이 있다. 대수기하학은 algebraic한 대상들에 기하학적인 의미를 부여하므로, 이 두 관점은 group 구조와 variety 구조를 동시에 갖는 대상에서 하나로 합쳐진다. 이번 글에서 base field $\mathbb{K}$는 언제나 algebraically closed라 가정한다.
+우리는 수학적 대상이 다른 대상에 작용하는 많은 예시들을 알고 있다. 대수적으로 가장 중요한 예시는 벡터공간 위에 작용하는 group일 것이며, 기하적으로는 Lie group action이 있다. Algebraic geometry는 algebraic한 대상들에 기하학적인 의미를 부여하므로, 이 두 관점은 group 구조와 variety 구조를 동시에 갖는 대상에서 하나로 합쳐진다. 이번 글에서 base field $\mathbb{K}$는 언제나 algebraically closed라 가정한다.
 
 ## 대수적 군의 정의
 

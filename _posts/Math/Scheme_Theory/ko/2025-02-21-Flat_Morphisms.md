@@ -46,7 +46,7 @@ $$0 \longrightarrow A \xrightarrow{\ \times t\ } A \longrightarrow \kappa(0) \lo
 
 Fiber를 취하는 것은 base change이고 affine에서 base change는 tensor product이므로, 일반적인 $X=\Spec B$와 $S=\Spec A$에 대해서도 $s\in S$에서의 fiber는 $\Spec (B\otimes_A\kappa(s))$이다. 더 일반적으로 family를 base를 따라 옮기는 연산은 언제나 functor $-\otimes_AB$이며, 위에서 본 대로 이 functor는 exact일 필요가 없으므로 이 때도 비슷한 문제가 일어난다. 즉, 우리가 family에 우선적으로 바라는 조건은 정확히 $-\otimes_AB$가 exact functor인 것, 즉 flatness이다. 
 
-Flat module의 정의와 그 기본 판정법들은 본질적으로 [\[다중선형대수학\] §사영가군, 단사가군, 평탄가군, ⁋정의 7](/ko/math/multilinear_algebra/various_modules#def7)과 [\[가환대수학\] §평탄성](/ko/math/commutative_algebra/flatness)에서 살펴본 기계들이다. 대수기하학의 많은 부분들이 그러하듯 flatness 또한 이 기계가 어떻게 만들어졌는지보다는, scheme의 언어에서 이것이 어떠한 방식으로 돌아가는지가 중요하다.
+Flat module의 정의와 그 기본 판정법들은 본질적으로 [\[다중선형대수학\] §사영가군, 단사가군, 평탄가군, ⁋정의 7](/ko/math/multilinear_algebra/various_modules#def7)과 [\[가환대수학\] §평탄성](/ko/math/commutative_algebra/flatness)에서 살펴본 기계들이다. Algebraic geometry의 많은 부분들이 그러하듯 flatness 또한 이 기계가 어떻게 만들어졌는지보다는, scheme의 언어에서 이것이 어떠한 방식으로 돌아가는지가 중요하다.
 
 > The concept of flatness is a riddle that comes out of algebra, but which technically is the answer to many prayers. - Mumford
 

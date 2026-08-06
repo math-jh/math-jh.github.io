@@ -20,7 +20,7 @@ Semisimple Lie algebra $\mathfrak{g}$의 표현론은 그 첫 번째 근본 정�
 
 ## 표현의 Casimir element
 
-$\sl_2$의 경우 Casimir element는 보편 포락 대수의 central element $\Omega=ef+fe+\tfrac{1}{2}h^2$로 직접 주어졌다 ([§보편 포락 대수, ⁋예시 12](/ko/math/lie_theory/universal_enveloping_algebra#ex12)). 일반적인 semisimple Lie algebra에서는 이러한 명시적 공식 대신, representation이 결정하는 nondegenerate invariant bilinear form의 dual basis를 통해 같은 종류의 원소를 구성한다. 먼저 그 bilinear form을 정한다.
+$\sl_2$의 경우 Casimir element는 보편 포락 대수의 central element $\Omega=ef+fe+h^2/2$로 직접 주어졌다 ([§보편 포락 대수, ⁋예시 12](/ko/math/lie_theory/universal_enveloping_algebra#ex12)). 일반적인 semisimple Lie algebra에서는 이러한 명시적 공식 대신, representation이 결정하는 nondegenerate invariant bilinear form의 dual basis를 통해 같은 종류의 원소를 구성한다. 먼저 그 bilinear form을 정한다.
 
 Representation $\rho:\mathfrak{g}\rightarrow\gl(V)$가 주어지면 ([§보편 포락 대수, ⁋명제 4](/ko/math/lie_theory/universal_enveloping_algebra#prop4) 이후의 논의), $V$ 위의 endomorphism들의 trace를 통해 $\mathfrak{g}$ 위에 bilinear form
 
@@ -63,7 +63,7 @@ $$\tr\bigl(\rho(c_\rho)\bigr)=\sum_{i=1}^{n}\tr\bigl(\rho(x_i)\rho(x^i)\bigr)=\s
 
 를 얻는다.
 
-Basis 독립성과 $\rho(\mathfrak{g})$와의 교환성을 보이기 위해, $x\in\mathfrak{g}$를 고정하고 그 adjoint action을 두 dual basis로 전개한다. $[x,x_i]=\sum_j a_{ij}x_j$, $[x,x^i]=\sum_j b_{ij}x^j$로 쓰면, $\beta$의 invariance에서
+Basis 독립성과 $\rho(\mathfrak{g})$와의 commutativity를 보이기 위해, $x\in\mathfrak{g}$를 고정하고 그 adjoint action을 두 dual basis로 전개한다. $[x,x_i]=\sum_j a_{ij}x_j$, $[x,x^i]=\sum_j b_{ij}x^j$로 쓰면, $\beta$의 invariance에서
 
 $$a_{ik}=\beta\bigl([x,x_i],x^k\bigr)=-\beta\bigl(x_i,[x,x^k]\bigr)=-b_{ki}$$
 
@@ -83,7 +83,7 @@ Basis 독립성은 다음과 같이 본다. $\rho(c_\rho)$를 다른 basis $(y_i
 $\rho(c_\rho)$가 $\rho(\mathfrak{g})$ 전체와 교환한다는 것은, $V$ 위의 모든 $\mathfrak{g}$-subrepresentation이 $\rho(c_\rho)$에 대해 불변이고 $\rho(c_\rho)$가 $\mathfrak{g}$-equivariant라는 뜻이다. 따라서 $V$가 irreducible이면 Schur의 보조정리에 의해 $\rho(c_\rho)$는 스칼라로 작용하며, 그 스칼라는 trace를 차원으로 나눈 $\dim\mathfrak{g}/\dim V$로 결정된다. 특히 $V\neq 0$인 irreducible representation에서 이 스칼라는 $\dim\mathfrak{g}/\dim V\neq 0$이므로 $\rho(c_\rho)$는 가역이다. 이 가역성이 다음 절에서 exact sequence를 분할하는 데에 결정적으로 쓰인다.
 
 ::: 참고 4
-$\rho$가 faithful이 아닐 때에는 $\ker\rho\neq 0$이고, 위 trace 계산에서 $\dim\mathfrak{g}$ 대신 faithful한 quotient $\mathfrak{g}/\ker\rho$의 차원이 나타난다. 이 경우에도 $\mathfrak{g}/\ker\rho$ 위의 trace form으로 같은 구성을 하거나, 혹은 항상 nondegenerate인 Killing form $\kappa$를 $\beta$ 대신 사용하여 Casimir element를 정의할 수 있다. 어느 경우든 [명제 3](#prop3)의 교환성과 trace의 비자명성($\tr\rho(c_\rho)\neq 0$ 단 $\rho(\mathfrak{g})\neq 0$)이 유지되며, 아래의 정리는 그 두 성질만을 사용한다.
+$\rho$가 faithful이 아닐 때에는 $\ker\rho\neq 0$이고, 위 trace 계산에서 $\dim\mathfrak{g}$ 대신 faithful한 quotient $\mathfrak{g}/\ker\rho$의 차원이 나타난다. 이 경우에도 $\mathfrak{g}/\ker\rho$ 위의 trace form으로 같은 구성을 하거나, 혹은 항상 nondegenerate인 Killing form $\kappa$를 $\beta$ 대신 사용하여 Casimir element를 정의할 수 있다. 어느 경우든 [명제 3](#prop3)의 commutativity와 trace의 비자명성($\tr\rho(c_\rho)\neq 0$ 단 $\rho(\mathfrak{g})\neq 0$)이 유지되며, 아래의 정리는 그 두 성질만을 사용한다.
 :::
 
 ## 1차원 몫의 분할과 Whitehead 보조정리

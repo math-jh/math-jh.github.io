@@ -190,7 +190,7 @@ $$E_2^{p,q} = H^p(Y, R^q f_\ast \mathcal{F}) \Rightarrow H^{p+q}(X, \mathcal{F})
 원 $S^1$ 위의 constant sheaf $\mathbb{Z}_{S^1}$의 cohomology를 구하고, 이로부터 torus $T^2 = S^1 \times S^1$의 cohomology를 Leray spectral sequence로 복원한다.
 :::
 
-먼저 $a: S^1 \rightarrow \{\ast\}$에 대한 $R\Gamma(S^1, \mathbb{Z}_{S^1}) = Ra_\ast \mathbb{Z}_{S^1}$을 계산한다. $S^1$을 두 호 $U, V$로 덮자. 각각은 열린 구간과 위상동형이고 $U \cap V$는 서로소인 두 호 $W_1 \sqcup W_2$이며, $U$, $V$, $W_1$, $W_2$는 모두 가축이라 그 위에서 $\mathbb{Z}$ 계수 cohomology가 degree $0$에 집중된다. 이 covering에 대한 Čech complex를 적으면 ([\[대수다양체\] §층 코호몰로지, ⁋정의 3](/ko/math/algebraic_varieties/sheaf_cohomology#def3))
+먼저 $a: S^1 \rightarrow \{\ast\}$에 대한 $R\Gamma(S^1, \mathbb{Z}_{S^1}) = Ra_\ast \mathbb{Z}_{S^1}$을 계산한다. $S^1$을 두 호 $U, V$로 덮자. 각각은 열린 구간과 homeomorphic이고 $U \cap V$는 서로소인 두 호 $W_1 \sqcup W_2$이며, $U$, $V$, $W_1$, $W_2$는 모두 가축이라 그 위에서 $\mathbb{Z}$ 계수 cohomology가 degree $0$에 집중된다. 이 covering에 대한 Čech complex를 적으면 ([\[대수다양체\] §층 코호몰로지, ⁋정의 3](/ko/math/algebraic_varieties/sheaf_cohomology#def3))
 $$\check{C}^0 = \mathbb{Z}_U \oplus \mathbb{Z}_V = \mathbb{Z}^2, \qquad \check{C}^1 = \mathbb{Z}_{W_1} \oplus \mathbb{Z}_{W_2} = \mathbb{Z}^2$$
 이고 그 이상은 $0$이다. Coboundary $d: \mathbb{Z}^2 \rightarrow \mathbb{Z}^2$는 $(s_U, s_V) \mapsto (s_V - s_U, s_V - s_U)$로, $W_1$과 $W_2$ 두 성분에서 같은 차 $s_V - s_U$를 준다. 따라서
 $$\ker d = \{(s_U, s_V)\mid s_U = s_V\} \cong \mathbb{Z}, \qquad \coker d = \mathbb{Z}^2 / \{(t, t)\mid t \in \mathbb{Z}\} \cong \mathbb{Z}$$

@@ -18,7 +18,7 @@ published: false
 
 [§고유 받음과 여섯 함자](/ko/math/sheaf_theory/six_functors)에서 우리는 compact support를 따르는 고유 받음 $Rf_!$과 그 오른쪽 수반인 예외 역상 $f^!$을 도입하여, $Rf_\ast$, $Lf^\ast$, $\otimes^L$, $R\mathcal{H}om$과 함께 여섯 functor 형식을 완성하였다. 그 글의 도입부에서 예고하였듯이, 이 형식을 세운 가장 큰 동기는 비콤팩트 공간과 singular point를 가진 공간에까지 Poincaré duality를 확장하는 데 있다. 이 글에서 우리는 그 확장을 완성하는 정리, 곧 *Verdier duality<sub>Verdier 쌍대성</sub>*를 진술하고 증명한다.
 
-고전적인 Poincaré duality는 방향지어진 closed $n$차원 manifold $M$에 대해 $H^p(M) \cong H_{n-p}(M)$이라는 cohomology와 homology 사이의 동형으로 나타나며, 그 boundary를 가진 형태인 Poincaré–Lefschetz duality는 compact support를 허용하여 비콤팩트 manifold로 일부 확장된다. 그러나 이 고전적 진술은 두 방향에서 한계를 가진다. 첫째, 그것은 상수 계수 또는 국소계 계수에 대해서만 진술되며 임의의 sheaf complex의 cohomology를 다루지 못한다. 둘째, 그것은 manifold, 즉 모든 점이 $\mathbb{R}^n$과 국소적으로 위상동형인 공간에 대해서만 성립하며, singular point를 가진 공간에서는 그대로 무너진다. Verdier duality는 이 두 한계를 한꺼번에 해소한다. 그 핵심은 manifold의 fundamental class가 떠맡던 역할을 한 점으로의 morphism $a_X: X \rightarrow \{\ast\}$에 대한 $f^!$이 대신하도록 만드는 것이다. $a_X^!$이 상수 sheaf에 주는 값을 *dualizing complex*라 부르고, 이것을 축으로 한 내부 Hom이 duality를 매개한다.
+고전적인 Poincaré duality는 방향지어진 closed $n$차원 manifold $M$에 대해 $H^p(M) \cong H_{n-p}(M)$이라는 cohomology와 homology 사이의 동형으로 나타나며, 그 boundary를 가진 형태인 Poincaré–Lefschetz duality는 compact support를 허용하여 비콤팩트 manifold로 일부 확장된다. 그러나 이 고전적 진술은 두 방향에서 한계를 가진다. 첫째, 그것은 상수 계수 또는 국소계 계수에 대해서만 진술되며 임의의 sheaf complex의 cohomology를 다루지 못한다. 둘째, 그것은 manifold, 즉 모든 점이 $\mathbb{R}^n$과 국소적으로 homeomorphic인 공간에 대해서만 성립하며, singular point를 가진 공간에서는 그대로 무너진다. Verdier duality는 이 두 한계를 한꺼번에 해소한다. 그 핵심은 manifold의 fundamental class가 떠맡던 역할을 한 점으로의 morphism $a_X: X \rightarrow \{\ast\}$에 대한 $f^!$이 대신하도록 만드는 것이다. $a_X^!$이 상수 sheaf에 주는 값을 *dualizing complex*라 부르고, 이것을 축으로 한 내부 Hom이 duality를 매개한다.
 
 이 글 전체에서 공간과 morphism에 대한 가정은 [§고유 받음과 여섯 함자](/ko/math/sheaf_theory/six_functors)와 같다. 즉 위상공간은 locally compact Hausdorff이고 유한한 cohomological dimension을 가지며, morphism은 separated인 연속함수로 한정한다. 계수로는, 별도의 언급이 없으면 고정된 field $k$를 택하여 $\mathcal{O}_X = k_X$인 sheaf of $k$-vector space를 다룬다. 이는 앞 글이 $\mathbb{Z}$ 계수로 진술한 것과 다른 선택인데, field 위에서는 dual $(-)^\vee = R\mathcal{H}om(-, k)$이 higher Ext 항을 만들지 않아 duality가 cohomology 차원에서 군더더기 없이 진술되기 때문이다. $\mathbb{Z}$ 계수에서의 보정은 적절한 곳에서 언급한다.
 
@@ -171,7 +171,7 @@ Verdier duality 자체는 [정리 4](#thm4)에서 보았듯 manifold 가정 없�
 ::: 예시 10
 복소 평면곡선의 node $X = \{(x, y) \in \mathbb{C}^2 \mid xy = 0\}$를 생각하자. 이는 두 복소직선 $\{x = 0\}$과 $\{y = 0\}$이 원점 $0$에서 만나는 공간으로, 실 $2$차원이며 $0$을 제외하면 매끄럽다. 우리는 dualizing complex $\omega_X$의 원점에서의 stalk cohomology가
 $$\mathcal{H}^{-2}(\omega_X)_0 \cong k^2, \qquad \mathcal{H}^{-1}(\omega_X)_0 \cong k$$
-임을 보인다. 이는 $2$차원 다양체라면 가졌을 $\omega \cong k_X[2]$의 stalk, 즉 $\mathcal{H}^{-2} \cong k$, $\mathcal{H}^{-1} \cong 0$과 다르다.
+임을 보인다. 이는 $2$차원 variety라면 가졌을 $\omega \cong k_X[2]$의 stalk, 즉 $\mathcal{H}^{-2} \cong k$, $\mathcal{H}^{-1} \cong 0$과 다르다.
 :::
 
 계산은 [명제 3](#prop3)에 기반한 국소적 묘사에서 출발한다. Dualizing complex의 stalk는 작은 열린근방의 duality로 표현되는데, [명제 3](#prop3)에 의해 열린근방 $U \ni 0$ 위에서 $\omega_X\vert_U = \omega_U$이므로
@@ -188,7 +188,7 @@ $$\cdots \rightarrow H^q_c(V) \rightarrow H^q_c(U) \rightarrow H^q(\{0\}) \right
 $$0 = H^0_c(V) \rightarrow H^0_c(U) = 0 \rightarrow H^0(\{0\}) = k \xrightarrow{\delta} H^1_c(V) = k^2 \rightarrow H^1_c(U) \rightarrow H^1(\{0\}) = 0$$
 에서 연결 사상 $\delta$가 단사이고, $H^1_c(U) = \coker\delta \cong k^2 / k \cong k$이다. 한편 $q \geq 1$ 부분에서 $H^1(\{0\}) = 0 \rightarrow H^2_c(V) = k^2 \rightarrow H^2_c(U) \rightarrow H^2(\{0\}) = 0$이므로 $H^2_c(U) \cong k^2$이다. 정리하면 $H^1_c(U, k) \cong k$, $H^2_c(U, k) \cong k^2$이고 그 외는 $0$이다. (검산으로 compactly supported Euler characteristic은 $\chi_c(U) = \chi_c(V) + \chi_c(\{0\})$에서 $\chi_c(S^1 \times \mathbb{R}) = 0$이므로 $\chi_c(U) = 0 + 1 = 1$이고, $-\dim H^1_c + \dim H^2_c = -1 + 2 = 1$과 일치한다.)
 
-이제 stalk 공식 $\mathcal{H}^j(\omega_X)_0 \cong H^{-j}_c(U, k)^\vee$에 대입하면 $\mathcal{H}^{-2}(\omega_X)_0 \cong H^2_c(U)^\vee \cong k^2$, $\mathcal{H}^{-1}(\omega_X)_0 \cong H^1_c(U)^\vee \cong k$을 얻어 [예시 10](#ex10)의 주장이 확인된다. 최고차 stalk $\mathcal{H}^{-2}(\omega_X)_0 \cong k^2$의 차원 $2$는 node를 지나는 국소 분지(branch)의 수와 정확히 일치하며, $0$이어야 할 $\mathcal{H}^{-1}(\omega_X)_0$에 추가로 나타나는 $k$가 singular point가 만들어 내는 잉여 항이다. Smooth한 다양체였다면 [정리 9](#thm9)에 의해 $\omega_X$이 한 degree에 집중되었을 것이나, node에서는 두 degree에 퍼진다.
+이제 stalk 공식 $\mathcal{H}^j(\omega_X)_0 \cong H^{-j}_c(U, k)^\vee$에 대입하면 $\mathcal{H}^{-2}(\omega_X)_0 \cong H^2_c(U)^\vee \cong k^2$, $\mathcal{H}^{-1}(\omega_X)_0 \cong H^1_c(U)^\vee \cong k$을 얻어 [예시 10](#ex10)의 주장이 확인된다. 최고차 stalk $\mathcal{H}^{-2}(\omega_X)_0 \cong k^2$의 차원 $2$는 node를 지나는 국소 분지(branch)의 수와 정확히 일치하며, $0$이어야 할 $\mathcal{H}^{-1}(\omega_X)_0$에 추가로 나타나는 $k$가 singular point가 만들어 내는 잉여 항이다. Smooth한 variety였다면 [정리 9](#thm9)에 의해 $\omega_X$이 한 degree에 집중되었을 것이나, node에서는 두 degree에 퍼진다.
 
 ::: 참고 11
 [예시 10](#ex10)이 보여 주는 현상은 특이공간의 cohomology 이론을 다시 설계해야 할 필요를 시사한다. $\omega_X$가 shift된 상수 sheaf가 아니므로 $\mathbf{D}_X k_X = \omega_X \not\cong k_X[n]$이고, 따라서 [정리 9](#thm9)의 유도가 무너져 통상적 cohomology $H^\bullet(X)$은 더 이상 Poincaré duality를 만족하지 않는다. 이를 복구하려면 $k_X$를 대신할, 그 자체로 self-dual에 가까운 constructible complex를 찾아야 한다. 그러한 complex를 stratification에 적합한 "중간" 받음과 절단으로 구성하여 특이공간에서 Poincaré duality를 회복하는 것이 intersection cohomology와 그 sheaf 차원 정식화의 출발점이며, 이는 constructible complex의 추가 구조를 다룬 뒤에 본격적으로 전개된다.

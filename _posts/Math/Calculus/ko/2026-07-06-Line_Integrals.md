@@ -18,7 +18,7 @@ weight: 17
 ## 선적분
 
 ::: 정의 1
-$C^1$ 곡선 $\mathbf{r}\colon [a, b] \rightarrow \mathbb{R}^n$ 위에서 연속인 스칼라장 $f$의 *선적분<sub>line integral</sub>*은
+$C^1$ 곡선 $\mathbf{r}\colon [a, b] \rightarrow \mathbb{R}^n$ 위에서 연속인 scalar field $f$의 *선적분<sub>line integral</sub>*은
 
 $$\int_C f\mathop{ds} = \int_a^b f(\mathbf{r}(t))\lvert \mathbf{r}'(t)\rvert \mathop{dt}$$
 

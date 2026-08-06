@@ -145,7 +145,7 @@ $$
 에 quotient topology를 주면, $T$는 콤팩트 topological manifold이며 복소차원 $n$의 complex manifold 구조를 가진다.
 :::
 
-복소구조는 다음과 같이 얻는다. Quotient map $\pi : \mathbb{C}^n \rightarrow T$는 국소 homeomorphism이다. 충분히 작은 열린집합 $V \subseteq \mathbb{C}^n$을 잡아 $\pi\vert_V$가 그 상 $U = \pi(V)$ 위로의 위상동형이 되게 하고, $\varphi = (\pi\vert_V)^{-1} : U \rightarrow V$를 차트로 삼는다. 이런 차트 둘 $\varphi, \varphi'$의 transition function을 보면, 두 국소 preimage는 같은 $T$의 점을 덮으므로 차이가 항상 $\Lambda$의 한 원소만큼의 평행이동
+복소구조는 다음과 같이 얻는다. Quotient map $\pi : \mathbb{C}^n \rightarrow T$는 국소 homeomorphism이다. 충분히 작은 열린집합 $V \subseteq \mathbb{C}^n$을 잡아 $\pi\vert_V$가 그 상 $U = \pi(V)$ 위로의 homeomorphism이 되게 하고, $\varphi = (\pi\vert_V)^{-1} : U \rightarrow V$를 차트로 삼는다. 이런 차트 둘 $\varphi, \varphi'$의 transition function을 보면, 두 국소 preimage는 같은 $T$의 점을 덮으므로 차이가 항상 $\Lambda$의 한 원소만큼의 평행이동
 
 $$
 z \longmapsto z + \lambda, \qquad \lambda \in \Lambda
@@ -177,10 +177,10 @@ $$
 w = \frac{z_0}{z_1} = \frac{1}{z}, \qquad z \in \mathbb{C}^\ast
 $$
 
-이다. $\mathbb{C}^\ast$에서 $z \mapsto 1/z$는 holomorphic이므로 이는 holomorphic atlas이다. 위상적으로 $\mathbb{CP}^1$은 $\mathbb{C}$에 한 점 ($[0:1]$에 해당하는 $z = \infty$) 을 더한 것으로, $2$차원 구면 $S^2$와 위상동형이다. 이것이 확장복소평면 $\widehat{\mathbb{C}}$의 ([\[복소해석학\] §복소수와 복소평면, ⁋정의 13](/ko/math/complex_analysis/complex_numbers#def13)) complex manifold 구조이며, *Riemann 구면*이라 부른다.
+이다. $\mathbb{C}^\ast$에서 $z \mapsto 1/z$는 holomorphic이므로 이는 holomorphic atlas이다. 위상적으로 $\mathbb{CP}^1$은 $\mathbb{C}$에 한 점 ($[0:1]$에 해당하는 $z = \infty$) 을 더한 것으로, $2$차원 구면 $S^2$와 homeomorphic이다. 이것이 확장복소평면 $\widehat{\mathbb{C}}$의 ([\[복소해석학\] §복소수와 복소평면, ⁋정의 13](/ko/math/complex_analysis/complex_numbers#def13)) complex manifold 구조이며, *Riemann 구면*이라 부른다.
 :::
 
-마지막으로, 가장 풍부한 예시의 출처는 projective 대수기하학이다. $\mathbb{CP}^N$ 안의 smooth projective algebraic variety, 곧 homogeneous 다항식들의 공통 영점집합으로 정의되고 매끄러움 조건 (Jacobian의 최대 계수) 을 만족하는 부분집합은, 자연스럽게 complex manifold 구조를 물려받는다. 음함수 정리의 holomorphic 버전이 국소적으로 그러한 영점집합을 $\mathbb{C}^k$의 그래프로 펴주기 때문이다. 이렇게 얻는 complex manifold는 정의상 projective이며 따라서 algebraic하다. 앞서 본 복소토러스의 예와 합치면, 콤팩트 complex manifold의 세계는 projective인 것 (대수적) 과 non-projective인 것 (비대수적) 으로 갈린다. 어느 쪽인지를 가르는 기준을 추구하는 것이 복소기하학의 한 주된 동력이다.
+마지막으로, 가장 풍부한 예시의 출처는 projective algebraic geometry가다. $\mathbb{CP}^N$ 안의 smooth projective algebraic variety, 곧 homogeneous 다항식들의 공통 영점집합으로 정의되고 매끄러움 조건 (Jacobian의 최대 계수) 을 만족하는 부분집합은, 자연스럽게 complex manifold 구조를 물려받는다. 음함수 정리의 holomorphic 버전이 국소적으로 그러한 영점집합을 $\mathbb{C}^k$의 그래프로 펴주기 때문이다. 이렇게 얻는 complex manifold는 정의상 projective이며 따라서 algebraic하다. 앞서 본 복소토러스의 예와 합치면, 콤팩트 complex manifold의 세계는 projective인 것 (대수적) 과 non-projective인 것 (비대수적) 으로 갈린다. 어느 쪽인지를 가르는 기준을 추구하는 것이 복소기하학의 한 주된 동력이다.
 
 ## 복소정칙접공간
 
@@ -245,7 +245,7 @@ $$
 Complex manifold가 smooth manifold와 결정적으로 갈라지는 지점이 holomorphic function의 강성이다. 한 변수 holomorphic function의 최대절대값 원리가 여러 변수, 나아가 manifold 위로 올라가면, 콤팩트성 아래에서 holomorphic function이 상수밖에 없다는 강력한 결론을 낳는다. 먼저 국소판 최대원리를 정리한다.
 
 ::: 명제 12 (여러 변수 최대절대값 원리)
-$U \subseteq \mathbb{C}^n$이 connected 열린집합이고 $f : U \rightarrow \mathbb{C}$가 holomorphic이라 하자. $\lvert f \rvert$가 어떤 내부점 $a \in U$에서 국소 최댓값을 가지면, $f$는 $U$에서 상수이다.
+$U \subseteq \mathbb{C}^n$이 connected 열린집합이고 $f : U \rightarrow \mathbb{C}$가 holomorphic이라 하자. $\lvert f \rvert$가 어떤 interior point $a \in U$에서 국소 최댓값을 가지면, $f$는 $U$에서 상수이다.
 :::
 
 ::: 증명
@@ -255,7 +255,7 @@ $$
 \ell_v(\zeta) = a + \zeta v, \qquad v \in \mathbb{C}^n,\ \zeta \in \mathbb{C}
 $$
 
-을 생각하면, $\zeta$가 $0$ 근방에서 움직일 때 $g_v(\zeta) = f(a + \zeta v)$는 한 변수 holomorphic function이다 (holomorphic morphism $\zeta \mapsto a + \zeta v$와 $f$의 합성). $\lvert f \rvert$가 $a$에서 국소 최댓값을 가지므로, 공 $B(a, \varepsilon) \subseteq U$를 충분히 작게 잡아 그 위에서 $\lvert f \rvert \leq \lvert f(a) \rvert$가 되게 할 수 있다. 단위벡터 $v$ ($\lvert v \rvert = 1$) 에 대하여 $g_v(\zeta) = f(a + \zeta v)$는 원판 $\lvert \zeta \rvert < \varepsilon$에서 정의된 한 변수 holomorphic function이고, 그 위에서 $\lvert g_v(\zeta) \rvert \leq \lvert f(a) \rvert = \lvert g_v(0) \rvert$이므로 $\lvert g_v \rvert$가 내부점 $\zeta = 0$에서 최댓값을 가진다. 한 변수 최대절대값 원리에 의해 $g_v$는 원판 $\lvert \zeta \rvert < \varepsilon$ 전체에서 상수 $f(a)$이다. 이제 임의의 $b \in B(a, \varepsilon)$에 대하여, $b \neq a$이면 $v = (b - a)/\lvert b - a \rvert$, $\zeta_0 = \lvert b - a \rvert < \varepsilon$로 두어 $f(b) = g_v(\zeta_0) = f(a)$이고 $b = a$이면 자명하므로, $f$는 공 $B(a, \varepsilon)$ 전체에서 상수값 $f(a)$를 가진다.
+을 생각하면, $\zeta$가 $0$ 근방에서 움직일 때 $g_v(\zeta) = f(a + \zeta v)$는 한 변수 holomorphic function이다 (holomorphic morphism $\zeta \mapsto a + \zeta v$와 $f$의 합성). $\lvert f \rvert$가 $a$에서 국소 최댓값을 가지므로, 공 $B(a, \varepsilon) \subseteq U$를 충분히 작게 잡아 그 위에서 $\lvert f \rvert \leq \lvert f(a) \rvert$가 되게 할 수 있다. 단위벡터 $v$ ($\lvert v \rvert = 1$) 에 대하여 $g_v(\zeta) = f(a + \zeta v)$는 원판 $\lvert \zeta \rvert < \varepsilon$에서 정의된 한 변수 holomorphic function이고, 그 위에서 $\lvert g_v(\zeta) \rvert \leq \lvert f(a) \rvert = \lvert g_v(0) \rvert$이므로 $\lvert g_v \rvert$가 interior point $\zeta = 0$에서 최댓값을 가진다. 한 변수 최대절대값 원리에 의해 $g_v$는 원판 $\lvert \zeta \rvert < \varepsilon$ 전체에서 상수 $f(a)$이다. 이제 임의의 $b \in B(a, \varepsilon)$에 대하여, $b \neq a$이면 $v = (b - a)/\lvert b - a \rvert$, $\zeta_0 = \lvert b - a \rvert < \varepsilon$로 두어 $f(b) = g_v(\zeta_0) = f(a)$이고 $b = a$이면 자명하므로, $f$는 공 $B(a, \varepsilon)$ 전체에서 상수값 $f(a)$를 가진다.
 
 이제 $f$가 $a$ 근방에서 상수이면 $U$ 전체에서 상수임을 보인다. 집합
 
@@ -281,7 +281,7 @@ $$
 
 를 둔다. $S$는 정의상 열려 있다. $S$가 닫혀 있음과 비어 있지 않음을 보이면, $M$의 연결성으로 $S = M$이 되어 결론이 따른다.
 
-먼저 $S \neq \emptyset$을 보인다. $\lvert f \rvert$가 $p$에서 전역 최댓값을 가지므로, $p$를 포함하는 차트 $(U, \varphi)$를 잡아 $U$를 connected로 택하면, $g = f \circ \varphi^{-1} : \varphi(U) \rightarrow \mathbb{C}$는 holomorphic이고 $\lvert g \rvert$가 내부점 $\varphi(p)$에서 (적어도 국소) 최댓값을 가진다. [명제 12](#prop12)에 의해 $g$는 connected 열린집합 $\varphi(U)$에서 상수이므로 $f$는 $U$에서 상수이고, 따라서 $p \in S$이다.
+먼저 $S \neq \emptyset$을 보인다. $\lvert f \rvert$가 $p$에서 전역 최댓값을 가지므로, $p$를 포함하는 차트 $(U, \varphi)$를 잡아 $U$를 connected로 택하면, $g = f \circ \varphi^{-1} : \varphi(U) \rightarrow \mathbb{C}$는 holomorphic이고 $\lvert g \rvert$가 interior point $\varphi(p)$에서 (적어도 국소) 최댓값을 가진다. [명제 12](#prop12)에 의해 $g$는 connected 열린집합 $\varphi(U)$에서 상수이므로 $f$는 $U$에서 상수이고, 따라서 $p \in S$이다.
 
 다음으로 $S$가 닫혀 있음을 보인다. $q_0 \in M$이 $S$의 limit point라 하자. $q_0$를 포함하는 connected 차트 $(V, \psi)$를 잡으면 $h = f \circ \psi^{-1} : \psi(V) \rightarrow \mathbb{C}$는 holomorphic이다. $S$의 한 점 $q_1 \in V \cap S$가 존재하고, $f$는 $q_1$의 근방에서 상수 $c = f(q_1)$이다. 그러면 $h - c$는 $\psi(V)$의 한 열린 부분집합 ($q_1$의 근방의 상) 에서 항등적으로 $0$이다. [명제 12](#prop12)의 증명에서 쓴 해석성 논법에 의해, holomorphic function $h - c$가 connected 열린집합 $\psi(V)$의 어떤 열린 부분집합에서 소멸하면 $\psi(V)$ 전체에서 소멸한다. 따라서 $f \equiv c$가 $V$에서 성립하고, 특히 $q_0$의 근방에서 $f$가 상수이므로 $q_0 \in S$이다.
 

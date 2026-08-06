@@ -17,7 +17,7 @@ drift_needed: true
 
 [§호몰로지 차원, ⁋명제 13](/ko/math/commutative_algebra/homological_dimension#prop13)에서 우리는 $d$차원 regular local ring의 global dimension이 정확히 $d$라는 것을 보였고, [§Auslander-Buchsbaum 공식](/ko/math/commutative_algebra/auslander_buchsbaum_formula)의 말미에서는 이 명제의 역이 성립한다는 것을 예고하였다. 이 글은 그 약속을 이행한다. 곧 Noetherian local ring $(A,\mathfrak{m},\kappa)$에 대하여 $\operatorname{gldim}A<\infty$이기만 하면 $A$는 regular local ring이며, 사실은 module 하나, 즉 residue field $\kappa$의 projective dimension이 유한하다는 조건만으로도 충분하다. 이것이 Auslander--Buchsbaum--Serre 정리이다.
 
-Regular local ring이라는 개념은 본래 $\mathfrak{m}$의 generator 개수를 세는 조건으로 정의되었지만 ([§차원, ⁋정의 12](/ko/math/commutative_algebra/Krull_dimension#def12)), 이 정리는 그 조건을 free resolution의 언어로 완전히 다시 적는다. 이러한 관점 전환의 위력은 정의만으로는 접근하기 어려웠던 성질들이 형식적인 논증으로 얻어진다는 데에 있다. 우리는 그 대표적인 예로 regular local ring의 localization이 다시 regular local ring이라는 사실과 다항식환이 모든 prime ideal에서 regular라는 사실을 증명하고, 글의 후반부에서는 이 관점의 더 깊은 귀결인 Auslander--Buchsbaum 정리, 곧 임의의 regular local ring이 unique factorization domain이라는 정리를 증명한다.
+Regular local ring이라는 개념은 본래 $\mathfrak{m}$의 generator 개수를 세는 조건으로 정의되었지만 ([§차원, ⁋정의 12](/ko/math/commutative_algebra/Krull_dimension#def12)), 이 정리는 그 조건을 free resolution의 언어로 완전히 다시 적는다. 이러한 관점 전환의 위력은 정의만으로는 접근하기 어려웠던 성질들이 형식적인 논증으로 얻어진다는 데에 있다. 우리는 그 대표적인 예로 regular local ring의 localization이 다시 regular local ring이라는 사실과 polynomial ring이 모든 prime ideal에서 regular라는 사실을 증명하고, 글의 후반부에서는 이 관점의 더 깊은 귀결인 Auslander--Buchsbaum 정리, 곧 임의의 regular local ring이 unique factorization domain이라는 정리를 증명한다.
 
 ## Auslander-Buchsbaum-Serre 정리
 

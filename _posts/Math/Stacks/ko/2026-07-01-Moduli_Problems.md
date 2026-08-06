@@ -42,10 +42,10 @@ $$\underline{M}:\Sch^\op \rightarrow \Set,\qquad \underline{M}(T)=\obj \mathcal{
 
 ## Fine moduli space와 보편 족
 
-이상적인 답은 moduli 문제를 표현하는 scheme이다. 곧 isomorphism class들이 한 scheme $M$의 점들과 일대일대응할 뿐 아니라, $M$ 위에 단 하나의 "보편 족"이 놓여 있어 임의의 족이 그것의 pullback으로 유일하게 얻어지는 상황이다. 이를 functor의 언어로 옮기면 표현가능성이 된다.
+이상적인 답은 moduli 문제를 표현하는 scheme이다. 곧 isomorphism class들이 한 scheme $M$의 점들과 일대일대응할 뿐 아니라, $M$ 위에 단 하나의 "보편 족"이 놓여 있어 임의의 족이 그것의 pullback으로 유일하게 얻어지는 상황이다. 이를 functor의 언어로 옮기면 representability가 된다.
 
 ::: 정의 2
-Moduli 문제의 set-값 moduli functor $\underline{M}:\Sch^\op \rightarrow \Set$가 scheme $M$에 의하여 *표현가능*할 때, 곧 natural isomorphism
+Moduli 문제의 set-값 moduli functor $\underline{M}:\Sch^\op \rightarrow \Set$가 scheme $M$에 의하여 *representable*할 때, 곧 natural isomorphism
 
 $$\underline{M}\cong \Hom_{\Sch}(-, M)$$
 
@@ -60,7 +60,7 @@ $$\mathcal{U}\in \underline{M}(M)$$
 
 $$X\cong f_X^\ast \mathcal{U}$$
 
-을 만족하는 유일한 morphism이다. 곧 $M$ 위의 모든 족은 보편 족을 끌어당겨 단 한 가지 방식으로 얻어지며, $f_X$을 $X$의 *classifying morphism*이라 부른다. 표현가능성은 또한 $\underline{M}$의 category of elements가 initial object $(M, \mathcal{U})$을 가진다는 것과 동치이고 ([\[범주론\] §표현가능한 함자, ⁋명제 8](/ko/math/category_theory/representable_functors#prop8)), 따라서 fine moduli space는 존재할 경우 유일한 동형을 통해 유일하게 결정된다.
+을 만족하는 유일한 morphism이다. 곧 $M$ 위의 모든 족은 보편 족을 끌어당겨 단 한 가지 방식으로 얻어지며, $f_X$을 $X$의 *classifying morphism*이라 부른다. Representability는 또한 $\underline{M}$의 category of elements가 initial object $(M, \mathcal{U})$을 가진다는 것과 동치이고 ([\[범주론\] §표현가능한 함자, ⁋명제 8](/ko/math/category_theory/representable_functors#prop8)), 따라서 fine moduli space는 존재할 경우 유일한 동형을 통해 유일하게 결정된다.
 
 Fine moduli가 실제로 존재하는 비자명한 예는 분류 대상에 충분한 강성 자료, 곧 rigidify하는 추가 구조를 얹은 경우에서 나온다. Projective space와 Grassmannian이 대표적이다.
 
@@ -68,7 +68,7 @@ Fine moduli가 실제로 존재하는 비자명한 예는 분류 대상에 충�
 Projective space $\mathbb{P}^n$은 다음 moduli 문제의 fine moduli space이다. $T$ 위의 족을, $T$ 위의 line bundle $\mathcal{L}$과 이를 globally generate하는 $n+1$개의 절단 $s_0,\ldots, s_n\in \Gamma(T, \mathcal{L})$의 자료 $(\mathcal{L}, s_0,\ldots, s_n)$의 isomorphism class로 정의한다. 여기에서 두 자료가 isomorphic이라는 것은 절단들을 옮기는 line bundle의 동형이 존재하는 것이다. 이 functor는 $\mathbb{P}^n$에 의하여 표현되며, 보편 족은 twisting sheaf $\mathcal{O}_{\mathbb{P}^n}(1)$과 그 좌표절단 $\x_0,\ldots, \x_n$이다. ([\[스킴\] §점함자, ⁋정리 9](/ko/math/scheme_theory/functor_of_points#thm9))
 :::
 
-이 예에서 결정적인 것은, 분류되는 자료 $(\mathcal{L}, s_0,\ldots, s_n)$이 비자명한 automorphism을 가지지 않는다는 점이다. Line bundle $\mathcal{L}$ 자체는 곱셈 $\mathbb{G}_m$만큼의 automorphism을 가지지만, globally generate하는 절단들을 고정하면 그 절단을 보존하는 line bundle automorphism은 항등사상뿐이다. 절단이라는 강성 자료가 automorphism을 죽인 덕분에 set-값 functor가 곧바로 표현가능해진 것이며, 이것이 fine moduli가 존재하는 전형적인 구조이다.
+이 예에서 결정적인 것은, 분류되는 자료 $(\mathcal{L}, s_0,\ldots, s_n)$이 비자명한 automorphism을 가지지 않는다는 점이다. Line bundle $\mathcal{L}$ 자체는 곱셈 $\mathbb{G}_m$만큼의 automorphism을 가지지만, globally generate하는 절단들을 고정하면 그 절단을 보존하는 line bundle automorphism은 항등사상뿐이다. 절단이라는 강성 자료가 automorphism을 죽인 덕분에 set-값 functor가 곧바로 representable해진 것이며, 이것이 fine moduli가 존재하는 전형적인 구조이다.
 
 ::: 예시 4 (Grassmannian)
 Grassmannian $\Gr(k, n)$은 다음 moduli 문제의 fine moduli space이다. $T$ 위의 족을, 자명한 다발의 rank $k$ locally free quotient bundle
@@ -82,7 +82,7 @@ $$\mathcal{O}_T^n\twoheadrightarrow \mathcal{Q},\qquad \mathcal{Q}\text{ is loca
 
 ## Automorphism으로 인한 장애
 
-앞 절의 예들이 작동한 까닭이 강성에 있었다면, 강성이 깨진 문제, 곧 분류 대상이 비자명한 automorphism을 본질적으로 가지는 문제에서는 fine moduli가 어떻게 되는지를 물어야 한다. 결론은 부정적이다. 비자명한 automorphism은 isomorphism class가 같으면서도 서로 다른 *비자명한 등질 족*을 만들어내며, 이것이 표현가능성을 정면으로 막는다.
+앞 절의 예들이 작동한 까닭이 강성에 있었다면, 강성이 깨진 문제, 곧 분류 대상이 비자명한 automorphism을 본질적으로 가지는 문제에서는 fine moduli가 어떻게 되는지를 물어야 한다. 결론은 부정적이다. 비자명한 automorphism은 isomorphism class가 같으면서도 서로 다른 *비자명한 등질 족*을 만들어내며, 이것이 representability를 정면으로 막는다.
 
 핵심은 다음 관찰이다. Fine moduli space가 존재한다면 set-값 moduli functor $\underline{M}$은 representable functor $\Hom_\Sch(-, M)$과 isomorphic이고, representable functor는 fpqc 위상(따라서 그보다 거친 étale·Zariski 위상)에 대한 sheaf이다. 이는 faithfully flat descent의 표준적 귀결로, affine한 $M=\Spec R$의 경우 전역절단 presheaf $T\mapsto \Gamma(T, \mathcal{O}_T)$이 fpqc sheaf라는 [\[스킴\] §충실평탄 하강, ⁋정리 9](/ko/math/scheme_theory/faithfully_flat_descent#thm9)로부터 $\Hom_\Sch(-, \Spec R)=\Hom_{\mathrm{Ring}}(R, \Gamma(-, \mathcal{O}))$을 통해 따라오고, 일반적인 $M$은 affine open으로 덮어 접합하여 얻는다. 즉 한 scheme으로 가는 morphism들은 covering 위에서 정합적으로 주어지면 유일하게 이어 붙는다. 그러므로 $\underline{M}$이 sheaf가 아니면 fine moduli는 존재할 수 없다. 비자명한 automorphism은 정확히 이 sheaf 조건의 분리성, 곧 "covering 위에서 같은 족은 원래 같다"는 부분을 깨뜨린다.
 
@@ -96,7 +96,7 @@ $$\underline{M}(T) \rightarrow \underline{M}(S)$$
 
 이 단사인 것이다.
 
-이제 가정의 두 족 $X$과 $E\times T$을 $\underline{M}(T)$의 원소로 본다. $S$로 끌어당기면 $X\times_T S\cong E\times S\cong (E\times T)\times_T S$이므로, 두 isomorphism class는 $\underline{M}(S)$에서 같은 원소로 보내진다. 그러나 가정에 의하여 $X$과 $E\times T$은 $T$ 위에서 isomorphic이 아니므로 $\underline{M}(T)$에서 서로 다른 원소이다. 이는 restriction map $\underline{M}(T) \rightarrow \underline{M}(S)$의 단사성에 모순이다. 따라서 $\underline{M}$은 분리된 presheaf조차 될 수 없고, 표현가능할 수 없으므로 fine moduli space는 존재하지 않는다.
+이제 가정의 두 족 $X$과 $E\times T$을 $\underline{M}(T)$의 원소로 본다. $S$로 끌어당기면 $X\times_T S\cong E\times S\cong (E\times T)\times_T S$이므로, 두 isomorphism class는 $\underline{M}(S)$에서 같은 원소로 보내진다. 그러나 가정에 의하여 $X$과 $E\times T$은 $T$ 위에서 isomorphic이 아니므로 $\underline{M}(T)$에서 서로 다른 원소이다. 이는 restriction map $\underline{M}(T) \rightarrow \underline{M}(S)$의 단사성에 모순이다. 따라서 $\underline{M}$은 분리된 presheaf조차 될 수 없고, representable할 수 없으므로 fine moduli space는 존재하지 않는다.
 :::
 
 명제 5의 가정에 등장하는 비자명한 등질 족은, 분류 대상 $E$이 비자명한 automorphism group $\Aut(E)$을 가질 때 그 group의 비자명한 torsor로부터 만들어진다. Order $d$의 automorphism $\sigma\in \Aut(E)$과 degree $d$의 cyclic étale covering $S \rightarrow T$이 (곧 비자명한 $\mathbb{Z}/d$-torsor, [§Fibered category와 stack, ⁋정의 18](/ko/math/stacks/fibered_categories_and_stacks#def18)) 주어지면, $\mathbb{Z}/d$을 $E$에는 $\sigma$로 $S$에는 deck transformation으로 대각작용시켜 얻는 quotient

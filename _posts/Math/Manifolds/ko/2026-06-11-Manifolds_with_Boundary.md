@@ -35,11 +35,11 @@ $$\partial\mathbb{H}^m=\left\{x\in \mathbb{H}^m\mid x^m=0\right\},\qquad \interi
 부분집합 $A\subseteq\mathbb{R}^m$ 위에서 정의된 함수 $f:A \rightarrow \mathbb{R}^n$이 *$C^\infty$*라는 것은, 각각의 $p\in A$마다 $p$의 ($\mathbb{R}^m$에서의) 열린근방 $W$와 $C^\infty$ 함수 $\tilde{f}:W \rightarrow \mathbb{R}^n$이 존재하여 $\tilde{f}\vert_{W\cap A}=f\vert_{W\cap A}$이 성립하는 것이다.
 :::
 
-즉 국소적으로 열린집합 위의 $C^\infty$ 함수로 확장되는 함수를 $C^\infty$라 부르는 것이다. $A$가 열린집합이라면 이는 기존의 정의와 일치한다. 한편 $A=\mathbb{H}^m$의 열린집합이고 $p\in\partial\mathbb{H}^m$인 경우, $f$의 편미분 $\partial f/\partial x^i(p)$들은 확장 $\tilde{f}$의 선택과 무관하게 잘 정의되는데, 이는 $p$ 근방에서 $W\cap A$가 $p$로 수렴하는 점렬들을 모든 방향에 대해 충분히 담고 있어 $\tilde f$의 일계도함수들이 $W\cap A$ 위의 값들로 결정되기 때문이다. 실제로 $i<m$ 방향의 편미분은 $\partial\mathbb{H}^m$ 방향의 차분몫의 극한으로, $i=m$ 방향의 편미분은 한쪽 극한
+즉 국소적으로 열린집합 위의 $C^\infty$ 함수로 확장되는 함수를 $C^\infty$라 부르는 것이다. $A$가 열린집합이라면 이는 기존의 정의와 일치한다. 한편 $A=\mathbb{H}^m$의 열린집합이고 $p\in\partial\mathbb{H}^m$인 경우, $f$의 편미분 $\partial f/\partial x^i(p)$들은 확장 $\tilde{f}$의 선택과 무관하게 잘 정의되는데, 이는 $p$ 근방에서 $W\cap A$가 $p$로 수렴하는 점렬들을 모든 방향에 대해 충분히 담고 있어 $\tilde f$의 일계도함수들이 $W\cap A$ 위의 값들로 결정되기 때문이다. 실제로 $i<m$ 방향의 편미분은 $\partial\mathbb{H}^m$ 방향의 difference quotient의 극한으로, $i=m$ 방향의 편미분은 한쪽 극한
 
 $$\frac{\partial f}{\partial x^m}(p)=\lim_{t\rightarrow0^+}\frac{f(p+te_m)-f(p)}{t}$$
 
-으로 계산된다. 고계도함수들도 마찬가지이다.
+으로 계산된다. Higher-order derivative들도 마찬가지이다.
 
 ## 경계가 있는 다양체
 
@@ -49,7 +49,7 @@ Second countable Hausdorff space $M$이 *$m$차원의 경계가 있는 manifold<
 1. $U_\alpha$들은 $M$의 open covering이고, 각각의 $\varphi_\alpha$는 $U_\alpha$에서 $\mathbb{H}^m$의 열린집합으로의 homeomorphism이다.
 2. 임의의 $\alpha,\beta$에 대하여, transition $\varphi_\beta\circ\varphi_\alpha^{-1}:\varphi_\alpha(U_\alpha\cap U_\beta) \rightarrow \varphi_\beta(U_\alpha\cap U_\beta)$는 [정의 1](#def1)의 의미에서 $C^\infty$이다.
 
-이 때 점 $p\in M$이 *경계점<sub>boundary point</sub>*이라는 것은 어떤 chart $\varphi_\alpha$에 대하여 $\varphi_\alpha(p)\in\partial\mathbb{H}^m$인 것이고, 그렇지 않은 점들을 *내부점<sub>interior point</sub>*이라 부른다. 경계점들의 모임을 $\partial M$, 내부점들의 모임을 $\interior M$이라 적는다.
+이 때 점 $p\in M$이 *경계점<sub>boundary point</sub>*이라는 것은 어떤 chart $\varphi_\alpha$에 대하여 $\varphi_\alpha(p)\in\partial\mathbb{H}^m$인 것이고, 그렇지 않은 점들을 *interior point<sub>interior point</sub>*이라 부른다. 경계점들의 모임을 $\partial M$, interior point들의 모임을 $\interior M$이라 적는다.
 :::
 
 [§미분다양체](/ko/math/manifolds/smooth_manifolds)에서와 마찬가지로 atlas를 maximal한 것으로 키워 미분구조를 생각한다. $\interior\mathbb{H}^m$이 $\mathbb{R}^m$의 열린집합이므로, $\partial M=\emptyset$인 경우 위의 정의는 기존의 manifold의 정의와 일치한다.
@@ -78,7 +78,7 @@ $m$차원의 경계가 있는 manifold $M$에 대하여 다음이 성립한다.
 2. $\partial M$은 $M$의 닫힌집합이고, chart들 $(U_\alpha\cap\partial M, (\varphi_\alpha^1,\ldots,\varphi_\alpha^{m-1})\vert_{\partial M})$에 대하여 ($\partial$ 없는) $(m-1)$차원 manifold이다.
 :::
 ::: 증명
-우선 첫째 주장을 보이자. $p\in\interior M$이라 하면 chart $(U,\varphi)$에 대해 $\varphi(p)\in\interior\mathbb{H}^m$이고, $\interior\mathbb{H}^m$이 $\mathbb{H}^m$에서 열린집합이므로 $U'=\varphi^{-1}(\interior\mathbb{H}^m\cap\varphi(U))$는 $p$의 열린근방이다. [명제 3](#prop3)에 의해 $U'$의 모든 점이 내부점이므로 $\interior M$은 열린집합이고, 이러한 $(U',\varphi\vert_{U'})$들은 $\mathbb{R}^m$의 열린집합으로 가는 chart들이므로 $\interior M$은 $m$차원 manifold이다.
+우선 첫째 주장을 보이자. $p\in\interior M$이라 하면 chart $(U,\varphi)$에 대해 $\varphi(p)\in\interior\mathbb{H}^m$이고, $\interior\mathbb{H}^m$이 $\mathbb{H}^m$에서 열린집합이므로 $U'=\varphi^{-1}(\interior\mathbb{H}^m\cap\varphi(U))$는 $p$의 열린근방이다. [명제 3](#prop3)에 의해 $U'$의 모든 점이 interior point가므로 $\interior M$은 열린집합이고, 이러한 $(U',\varphi\vert_{U'})$들은 $\mathbb{R}^m$의 열린집합으로 가는 chart들이므로 $\interior M$은 $m$차원 manifold이다.
 
 이제 둘째 주장을 보이자. $\partial M$은 열린집합 $\interior M$의 여집합이므로 닫힌집합이다. Chart $(U,\varphi)$에 대하여 [명제 3](#prop3)에 의해 $\varphi(U\cap\partial M)=\varphi(U)\cap\partial\mathbb{H}^m$이고, $\partial\mathbb{H}^m$을 $\mathbb{R}^{m-1}$과 identify하면 이는 $\mathbb{R}^{m-1}$의 열린집합이다. 따라서 $(\varphi^1,\ldots,\varphi^{m-1})\vert_{U\cap\partial M}$은 $U\cap\partial M$에서 $\mathbb{R}^{m-1}$의 열린집합으로의 homeomorphism이고, 이들의 transition은 $M$의 transition들의 restriction이므로 $C^\infty$이다. $\partial M$이 $M$의 subspace로서 Hausdorff이고 second countable인 것은 자명하므로 $\partial M$은 $(m-1)$차원 manifold이다.
 :::
@@ -101,7 +101,7 @@ $$x\mapsto \bigl(\theta(x/\lvert x\rvert),\,1-\lvert x\rvert\bigr)$$
 경계점 $p\in\partial M$에서의 tangent vector $v=\sum_{i=1}^ma^i\,\partial/\partial x^i\vert_p$가 *outward<sub>바깥 방향</sub>*라는 것은 $a^m<0$인 것이고, *inward<sub>안쪽 방향</sub>*라는 것은 $a^m>0$인 것이다.
 :::
 
-이 정의가 의미를 가지려면 $a^m$의 부호가 chart의 선택과 무관해야 하고, 이는 다음 보조정리로부터 나온다. 이 보조정리는 아래에서 유도된 향을 정의할 때도 핵심적으로 사용된다.
+이 정의가 의미를 가지려면 $a^m$의 부호가 chart의 선택과 무관해야 하고, 이는 다음 보조정리로부터 나온다. 이 보조정리는 아래에서 induced orientation을 정의할 때도 핵심적으로 사용된다.
 
 ::: 보조정리 7
 두 chart $(U,x)$, $(V,y)$와 경계점 $p\in U\cap V\cap \partial M$에 대하여, transition $\tau=y\circ x^{-1}$는 점 $x(p)$에서 다음을 만족한다.
@@ -150,7 +150,7 @@ $$\det\bigl[-e_m\ e_1\ \cdots\ e_{m-1}\bigr]=(-1)^m$$
 ::: 정의 9
 Oriented manifold with boundary $M$ ($m\geq 2$)에 대하여, $\partial M$의 *유도된 향<sub>induced orientation</sub>*은 [명제 8](#prop8)의 atlas가 주는 orientation에 $(-1)^m$을 곱한 것, 즉 $m$이 짝수라면 그 atlas 자신이 positively oriented이고 $m$이 홀수라면 그 atlas의 첫 좌표의 부호를 바꾼 것이 positively oriented이도록 하는 orientation이다.
 
-$m=1$인 경우 $\partial M$은 $0$차원 manifold, 즉 점들의 모임이고, 이 때 orientation은 각 점에 부호 $\pm1$을 주는 것으로 정의한다. 유도된 향은 outward vector가 $T_pM$의 orientation에 대해 positively oriented인 점 $p$에 $+1$을, 그렇지 않은 점에 $-1$을 주는 것이다.
+$m=1$인 경우 $\partial M$은 $0$차원 manifold, 즉 점들의 모임이고, 이 때 orientation은 각 점에 부호 $\pm1$을 주는 것으로 정의한다. Induced orientation은 outward vector가 $T_pM$의 orientation에 대해 positively oriented인 점 $p$에 $+1$을, 그렇지 않은 점에 $-1$을 주는 것이다.
 :::
 
 ::: 참고 10

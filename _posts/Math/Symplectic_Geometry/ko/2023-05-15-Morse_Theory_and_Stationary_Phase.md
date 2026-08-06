@@ -15,7 +15,7 @@ published: false
 
 ---
 
-해석학과 기하학의 여러 응용에서 다음 형태의 진동적분
+해석학과 기하학의 여러 응용에서 다음 형태의 oscillating integral
 
 $$\mathcal{I}(z) = \int_\gamma e^{W(x)/z}\,\omega$$
 
@@ -90,7 +90,7 @@ $$f_i(x) = \sum_{j=1}^n x_j h_{ij}(x)$$
 
 $$f(x) = \sum_{i,j} x_i x_j h_{ij}(x)$$
 
-이다. $h_{ij}$를 $\tfrac12(h_{ij}+h_{ji})$로 대체해도 합은 변하지 않으므로 $h_{ij}$가 대칭이라 가정해도 좋다. 한편 양변을 두 번 미분하여 원점에서 평가하면 $h_{ij}(0)=\tfrac12 (\partial^2 f/\partial x_i\partial x_j)(0)$이므로, $H(x)=[h_{ij}(x)]$는 원점에서 nondegenerate하고 대칭인 행렬 값 smooth function이다.
+이다. $h_{ij}$를 $(h_{ij}+h_{ji})/2$로 대체해도 합은 변하지 않으므로 $h_{ij}$가 대칭이라 가정해도 좋다. 한편 양변을 두 번 미분하여 원점에서 평가하면 $h_{ij}(0)=(\partial^2 f/\partial x_i\partial x_j)(0)/2$이므로, $H(x)=[h_{ij}(x)]$는 원점에서 nondegenerate하고 대칭인 행렬 값 smooth function이다.
 
 이제 비퇴화 대칭행렬은 *국소적으로* 표준형으로 정렬할 수 있다는 사실을 사용한다. 구체적으로, 원점 근방의 대칭행렬 $H(x)$에 대하여 smooth하게 정해지는 가역행렬 $Q(x)$가 존재하여
 
@@ -141,7 +141,7 @@ $$\sum_p (-1)^{\lambda_p} = \chi(T^2) = 0$$
 
 ## Stationary phase 근사
 
-Morse lemma의 첫 번째 응용은 진동적분의 점근전개이다. Smooth amplitude $a\in C_c^\infty(M)$과 smooth phase $\phi:M\rightarrow\mathbb{R}$이 주어졌을 때, 우리는 다음의 *oscillating integral<sub>진동적분</sub>*
+Morse lemma의 첫 번째 응용은 oscillating integral의 점근전개이다. Smooth amplitude $a\in C_c^\infty(M)$과 smooth phase $\phi:M\rightarrow\mathbb{R}$이 주어졌을 때, 우리는 다음의 *oscillating integral<sub>oscillating integral</sub>*
 
 $$I(\hbar) = \int_M e^{i\phi(x)/\hbar}\,a(x)\,dx$$
 
@@ -166,13 +166,13 @@ $$X\bigl(e^{i\phi/\hbar}\bigr) = \frac{i}{\hbar}(X\phi)e^{i\phi/\hbar} = \frac{i
 
 **2단계 (Morse lemma에 의한 표준화).** [정리 6](#thm6)을 $\phi$에 적용하면 $p$ 근방에서 좌표 $y=(y_1,\ldots,y_n)$이 존재하여
 
-$$\phi(y) = \phi(p) - y_1^2 - \cdots - y_{\lambda_p}^2 + y_{\lambda_p+1}^2 + \cdots + y_n^2 = \phi(p) + \tfrac12 Q(y)$$
+$$\phi(y) = \phi(p) - y_1^2 - \cdots - y_{\lambda_p}^2 + y_{\lambda_p+1}^2 + \cdots + y_n^2 = \phi(p) + \frac12 Q(y)$$
 
 이라 할 수 있다. 여기서 $Q(y)=\sum_i 2\epsilon_i y_i^2$이며 $\epsilon_i\in\{-1,+1\}$이다. 좌표변환의 Jacobian을 $J(y)$라 하고 $\tilde a(y)=a(y)J(y)$로 두면
 
 $$I(\hbar) = e^{i\phi(p)/\hbar}\int_{\mathbb{R}^n} e^{iQ(y)/(2\hbar)}\,\tilde a(y)\,dy$$
 
-로 환원된다 (extension은 0으로). 이제 문제는 *Gaussian 형태의 진동적분*
+로 환원된다 (extension은 0으로). 이제 문제는 *Gaussian 형태의 oscillating integral*
 
 $$J(\hbar) = \int_{\mathbb{R}^n} e^{i\sum_i \epsilon_i y_i^2/\hbar}\,\tilde a(y)\,dy$$
 
@@ -199,7 +199,7 @@ $$I(\hbar) = (2\pi\hbar)^{n/2}\,\frac{e^{i\phi(p)/\hbar}\,e^{i\pi\sigma_p/4}}{\s
 을 얻는다. 1단계의 partition of unity에 의해 여러 critical point가 있는 일반적인 경우 위 leading term이 각 점에서 합산되어 원하는 공식이 성립한다.
 :::
 
-[정리 10](#thm10)의 본질은 다음과 같이 요약된다. 진동적분의 $\hbar\rightarrow 0$ 점근은 *critical point의 국소 데이터*인 (1) critical value $\phi(p)$, (2) Hessian의 determinant 절댓값, (3) Hessian의 signature, 그리고 (4) amplitude의 critical point에서의 값으로 완전히 결정된다. Signature가 위상 인자 $e^{i\pi\sigma_p/4}$로 나타나는 것은 Fresnel 적분의 부호별 위상회전이 누적된 결과이며, 이는 *Maslov index*가 등장하는 가장 단순한 정황이기도 하다.
+[정리 10](#thm10)의 본질은 다음과 같이 요약된다. Oscillating integral의 $\hbar\rightarrow 0$ 점근은 *critical point의 국소 데이터*인 (1) critical value $\phi(p)$, (2) Hessian의 determinant 절댓값, (3) Hessian의 signature, 그리고 (4) amplitude의 critical point에서의 값으로 완전히 결정된다. Signature가 위상 인자 $e^{i\pi\sigma_p/4}$로 나타나는 것은 Fresnel 적분의 부호별 위상회전이 누적된 결과이며, 이는 *Maslov index*가 등장하는 가장 단순한 정황이기도 하다.
 
 ::: 참고 11
 위 정리는 leading order만을 진술하였으나, 동일한 방법은 모든 차수의 점근전개를 제공한다. 즉
@@ -237,7 +237,7 @@ $$\int_{\mathbb{R}^2} e^{ixy/\hbar}\,a(x,y)\,dx\,dy = 2\pi\hbar\,a(0,0) + O(\hba
 
 지금까지 우리는 phase function이 *실가*라고 가정하였다. 그러나 응용에서 마주치는 phase는 holomorphic function인 경우가 많고 (가령 singularity theory의 versal family 등), 이 경우 적분 contour 자체를 신중하게 선택해야 한다. 이 선택을 Morse 이론으로부터 자연스럽게 얻어내는 구성이 *Lefschetz thimble*이다.
 
-$X$가 complex manifold이고 $W:X\rightarrow\mathbb{C}$가 holomorphic function이라 하자. 형식적으로 우리는 진동적분
+$X$가 complex manifold이고 $W:X\rightarrow\mathbb{C}$가 holomorphic function이라 하자. 형식적으로 우리는 oscillating integral
 
 $$\int_\Gamma e^{W(x)/\hbar}\,\omega$$
 
@@ -264,7 +264,7 @@ Holomorphic function $W: U \rightarrow \mathbb{C}$ ($U \subseteq \mathbb{C}^n$ o
 :::
 
 ::: 증명
-1차원 ($n=1$) 경우 직접 계산. $W(x) = W(p) + \tfrac{a}{2}(x-p)^2 + O(\lvert x-p\rvert^3)$ ($a \in \mathbb{C}^\ast$가 complex Hessian)으로 쓰고, $b := a/\hbar = b_1 + i b_2$, $x - p = u + iv$ ($u, v \in \mathbb{R}$)로 두면
+1차원 ($n=1$) 경우 직접 계산. $W(x) = W(p) + a(x-p)^2/2 + O(\lvert x-p\rvert^3)$ ($a \in \mathbb{C}^\ast$가 complex Hessian)으로 쓰고, $b := a/\hbar = b_1 + i b_2$, $x - p = u + iv$ ($u, v \in \mathbb{R}$)로 두면
 
 $$\operatorname{Re}\!\left(\frac{W(x) - W(p)}{\hbar}\right) = \frac{1}{2}\bigl[b_1(u^2 - v^2) - 2 b_2 uv\bigr] + O(\lvert x - p\rvert^3).$$
 
@@ -274,7 +274,7 @@ $$\operatorname{Hess}_p(h) = -\begin{pmatrix} b_1 & -b_2 \\ -b_2 & -b_1 \end{pma
 
 이고, determinant $= -(b_1^2 + b_2^2) = -\lvert b\rvert^2 < 0$. 음의 determinant는 signature $(1, 1)$, 즉 Morse index $1 = n$을 의미한다.
 
-$n$차원의 경우 [정리 6](#thm6)의 복소 버전 (holomorphic Morse lemma)에 의해 적당한 좌표에서 $W = W(p) + \tfrac{1}{2}\sum_{i=1}^n z_i^2$로 쓸 수 있고, 위 1차원 계산이 각 $z_i$-direction에 독립적으로 적용되어 signature $(n, n)$, Morse index $n$.
+$n$차원의 경우 [정리 6](#thm6)의 복소 버전 (holomorphic Morse lemma)에 의해 적당한 좌표에서 $W = W(p) + \left(\sum_{i=1}^n z_i^2\right)/2$로 쓸 수 있고, 위 1차원 계산이 각 $z_i$-direction에 독립적으로 적용되어 signature $(n, n)$, Morse index $n$.
 :::
 
 기하적으로는 complex 구조 $J$ (즉 $i$를 곱하는 operator)가 $\operatorname{Hess}_p(h)$의 양·음 eigenspace를 서로 swap한다는 사실 ($HJ = -JH$, anti-$J$-invariance)로 해석할 수 있으며, 이는 두 eigenspace의 차원이 자동으로 $n$씩 split됨을 강제한다. Holomorphic이라는 가정이 real-valued Morse function이 항상 *saddle* (index $n$)만 갖도록 만들어, real Morse 이론의 "극대점 (index $2n$)"이나 "극소점 (index $0$)" 타입은 holomorphic setting에서 존재할 수 없다.
@@ -300,7 +300,7 @@ $$\int_{\Gamma_p} e^{W(x)/\hbar}\,\omega = (2\pi\hbar)^{n/2}\,\frac{e^{W(p)/\hba
 ::: 증명
 $p$ 근방에서 holomorphic Morse lemma (즉 [정리 6](#thm6)의 복소 버전)에 의해 holomorphic 좌표 $z=(z_1,\ldots,z_n)$이 존재하여
 
-$$W(z) = W(p) + \tfrac12\sum_{i=1}^n z_i^2$$
+$$W(z) = W(p) + \frac12\sum_{i=1}^n z_i^2$$
 
 이라 할 수 있다. 그럼 $\Gamma_p$는 이 좌표에서 $z_i = e^{i\theta_i}t_i$ ($t_i\in\mathbb{R}$)의 꼴로 적당한 위상 $\theta_i$들을 따라 잡은 실 $n$차원 submanifold가 되며, 위상 $\theta_i$는 정확히 적분이 수렴하도록 결정된다. 이 좌표에서 적분은 Gaussian integral
 

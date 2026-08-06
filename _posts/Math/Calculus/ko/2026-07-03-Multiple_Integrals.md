@@ -19,7 +19,7 @@ weight: 15
 한 변수 정적분이 구간 위의 함수값을 더한 것이었듯, 다변수에서는 영역 위의 함수값을 더한다. $\mathbb{R}^n$의 closed 상자부터 시작하자.
 
 ::: 정의 1
-Closed 상자 $R = [a_1,b_1]\times\cdots\times[a_n,b_n]\subseteq \mathbb{R}^n$ 위의 유계함수 $f$에 대하여, $R$을 작은 상자들(부피 $\Delta V$)로 분할하고 각 조각에서 표본점 $\mathbf{x}^\ast$을 택해 만든 리만 합
+Closed 상자 $R = [a_1,b_1]\times\cdots\times[a_n,b_n]\subseteq \mathbb{R}^n$ 위의 bounded function $f$에 대하여, $R$을 작은 상자들(부피 $\Delta V$)로 분할하고 각 조각에서 표본점 $\mathbf{x}^\ast$을 택해 만든 리만 합
 
 $$\sum f(\mathbf{x}^\ast) \Delta V$$
 
@@ -125,7 +125,7 @@ $$\iint_D e^{-(x^2+y^2)} \mathop{dA} = \int_0^{2\pi} \int_0^1 e^{-r^2} r \mathop
 인데, $e^{-r^2} r$의 부정적분이 $-e^{-r^2}/2$로 명시적으로 주어지므로 이 계산을 완료할 수 있다. 
 :::
 
-위의 예시를 이용하면, 우리는 하나의 변수로 풀리지 않던 가우스 적분의 값을 구할 수 있다.
+위의 예시를 이용하면, 우리는 하나의 변수로 풀리지 않던 Gaussian integral의 값을 구할 수 있다.
 
 ::: 예시 6 (가우스 적분)
 적분 $I = \int_{-\infty}^{\infty} e^{-x^2} \mathop{dx}$의 값을 구하자. 이 값의 제곱 $I^2$을 두 개의 독립 변수에 대한 적분으로 보면

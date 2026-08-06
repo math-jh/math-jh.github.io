@@ -77,7 +77,7 @@ $$F=\{(x,y)\mid (y=f(x))\wedge(x\in A)\}$$
 
 이 *commutative diagram<sub>가환그림</sub>*이라는 것은 $h(x)=(f\circ g)(x)$가 모든 $x$에 대해 성립함을 의미한다. 이 상황을 간략하게 $h=f\circ g$라고 표현하기도 하는데, 이 표기는 $H=F\circ G$가 성립한다는 것 뿐만 아니라 양변의 source와 target 또한 모두 일치한다는 것을 내포한다.
 
-한편 diagram을 다룰 때, 화살표를 통해 명시적으로 표현되지 않았더라도 각각의 대상 $A$마다 $A$에서 $A$로의 함수 $\id_A$가 그려져 있는 것으로 생각한다. 따라서 위의 삼각형이 commute한다는 것은 엄밀하게 이야기하자면 $h=f\circ g$ 뿐만 아니라 
+한편 diagram을 다룰 때, arrow를 통해 명시적으로 표현되지 않았더라도 각각의 대상 $A$마다 $A$에서 $A$로의 함수 $\id_A$가 그려져 있는 것으로 생각한다. 따라서 위의 삼각형이 commute한다는 것은 엄밀하게 이야기하자면 $h=f\circ g$ 뿐만 아니라 
 
 $${\id_B}\circ h=f\circ g,\qquad h\circ{\id_C}=f\circ{\id_A}\circ g,\quad\cdots$$
 

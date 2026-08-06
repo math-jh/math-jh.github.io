@@ -45,7 +45,7 @@ $$T_s^{-1} = q^{-1} T_s + (q^{-1} - 1)$$
 으로 명시적으로 주어진다. 보다 일반적으로, 임의의 $w \in W$에 대해 $T_w$는 가역이고 $T_w^{-1} = T_{s_{i_\ell}}^{-1} \cdots T_{s_{i_1}}^{-1}$로 표현된다.
 
 ::: 참고 2
-Quadratic relation $T_s^2 = (q-1)T_s + q$는 $q = 1$일 때 $T_s^2 = 1$로 환원되며, 이 경우 $H$는 group algebra $\mathbb{Z}[W]$가 된다. 즉 Hecke algebra는 $\mathbb{Z}[W]$의 1-parameter 변형으로 이해할 수 있다. 한편 일부 문헌은 $q^{1/2}$ 대신 변수 $v$를 도입하여 $q = v^2$로 두거나, generator를 $\widetilde{T}_s = q^{-1/2} T_s$로 재정규화하여 quadratic relation을 $\widetilde{T}_s^2 = (q^{1/2} - q^{-1/2}) \widetilde{T}_s + 1$로 대칭화하기도 한다. 이러한 표기의 차이는 본질적인 수학적 내용에 영향을 주지 않는다.
+Quadratic relation $T_s^2 = (q-1)T_s + q$는 $q = 1$일 때 $T_s^2 = 1$로 환원되며, 이 경우 $H$는 group algebra $\mathbb{Z}[W]$가 된다. 즉 Hecke algebra는 $\mathbb{Z}[W]$의 1-parameter 변형으로 이해할 수 있다. 한편 일부 문헌은 $q^{1/2}$ 대신 변수 $v$를 도입하여 $q = v^2$로 두거나, generator를 $\widetilde{T}_s = q^{-1/2} T_s$로 재normalize하여 quadratic relation을 $\widetilde{T}_s^2 = (q^{1/2} - q^{-1/2}) \widetilde{T}_s + 1$로 대칭화하기도 한다. 이러한 표기의 차이는 본질적인 수학적 내용에 영향을 주지 않는다.
 :::
 
 ## Bar involution
@@ -83,7 +83,7 @@ $$\begin{aligned}
 
    $$C_w = q^{-\ell(w)/2} \sum_{v \le w} P_{v, w}(q)\, T_v$$
 
-   가 성립하며, $P_{w, w} = 1$이고 $v < w$에 대해 $\deg P_{v, w} \le \tfrac{1}{2}(\ell(w) - \ell(v) - 1)$이다.
+   가 성립하며, $P_{w, w} = 1$이고 $v < w$에 대해 $\deg P_{v, w} \le (\ell(w) - \ell(v) - 1)/2$이다.
 
 이 때 $P_{v, w}(q)$를 $v, w$에 대한 *Kazhdan–Lusztig polynomial*이라 부른다.
 :::
@@ -102,7 +102,7 @@ $$C_s := q^{-1/2}(T_s - q) = q^{-1/2} T_s - q^{1/2}$$
 
 $$C_s \cdot C_{sw} = C_w + \sum_{\substack{z < w \\ sz < z}} \mu(z, sw)\, C_z$$
 
-의 꼴이 성립하도록 정수 $\mu(z, sw) \in \mathbb{Z}$를 유일하게 결정할 수 있는데, 여기서 $\mu(z, sw)$는 $P_{z, sw}(q)$의 maximum-degree (즉 $\tfrac{1}{2}(\ell(sw) - \ell(z) - 1)$ 차) 계수로 주어진다. 이로부터 $C_w$를
+의 꼴이 성립하도록 정수 $\mu(z, sw) \in \mathbb{Z}$를 유일하게 결정할 수 있는데, 여기서 $\mu(z, sw)$는 $P_{z, sw}(q)$의 maximum-degree (즉 $(\ell(sw) - \ell(z) - 1)/2$ 차) 계수로 주어진다. 이로부터 $C_w$를
 
 $$C_w = C_s \cdot C_{sw} - \sum_{\substack{z < w \\ sz < z}} \mu(z, sw)\, C_z$$
 

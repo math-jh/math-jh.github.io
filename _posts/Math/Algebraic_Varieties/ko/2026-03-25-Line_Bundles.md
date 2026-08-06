@@ -383,7 +383,7 @@ $\Gr(1, n+1) = \mathbb{P}^n$에서 tautological bundle $S$는 $\mathcal{O}_{\mat
 $\Gr(1, n+1)$의 각 점은 $\mathbb{A}^{n+1}$의 1차원 부분공간, 즉 원점을 지나는 직선이다. 이는 정확히 $\mathbb{P}^n$의 점에 해당한다. Tautological bundle $S$의 각 fiber는 이 직선 그 자체이므로, 이는 [정의 13](#def13)에서 정의한 $\mathcal{O}_{\mathbb{P}^n}(-1)$과 동일하다.
 :::
 
-이 명제는 Grassmannian의 tautological bundle이 사영공간에서는 익숙한 $\mathcal{O}(-1)$으로 귀결됨을 보여준다. Quotient bundle $Q$의 경우, $\Gr(1, n+1) = \mathbb{P}^n$에서 rank $n$이며, 이는 tangent bundle $\mathcal{T}_{\mathbb{P}^n}$과 밀접한 관계가 있다. 실제로 $\mathcal{T}_{\mathbb{P}^n} \cong \Hom(S, Q) \cong S^\vee \otimes Q$가 성립한다.
+이 명제는 Grassmannian의 tautological bundle이 projective space에서는 익숙한 $\mathcal{O}(-1)$으로 귀결됨을 보여준다. Quotient bundle $Q$의 경우, $\Gr(1, n+1) = \mathbb{P}^n$에서 rank $n$이며, 이는 tangent bundle $\mathcal{T}_{\mathbb{P}^n}$과 밀접한 관계가 있다. 실제로 $\mathcal{T}_{\mathbb{P}^n} \cong \Hom(S, Q) \cong S^\vee \otimes Q$가 성립한다.
 
 ---
 

@@ -46,7 +46,7 @@ $$Z_1 - Z_2 = \sum_j \divisor(f_j)$$
 을 만족하는 것이다. 이를 $Z_1 \sim_{\text{rat}} Z_2$로 표기한다.
 :::
 
-즉, divisor class group을 정의할 때와 마찬가지로 우리는 principal divisor만큼의 차이만 나는 divisor를 같은 것으로 볼 것이다. 이 동치관계는 이전 [§인자, ⁋정의 9](/ko/math/algebraic_varieties/divisors#def9) 직후에 설명한 직관과 동일하게, homotopy의 개념을 대수기하학으로 옮겨온 것으로 생각할 수 있다.
+즉, divisor class group을 정의할 때와 마찬가지로 우리는 principal divisor만큼의 차이만 나는 divisor를 같은 것으로 볼 것이다. 이 동치관계는 이전 [§인자, ⁋정의 9](/ko/math/algebraic_varieties/divisors#def9) 직후에 설명한 직관과 동일하게, homotopy의 개념을 algebraic geometry로 옮겨온 것으로 생각할 수 있다.
 
 그럼 다음 명제가 성립한다. 
 
@@ -70,7 +70,7 @@ Codimension $k$ Chow group은 $\CH^k(X) = \CH_{n-k}(X)$로 정의하고, 위에�
 
 대수위상에서 homology 및 cohomology는 임의의 연속함수에 대해 functoriality를 갖지만, Chow group은 그렇지 않다. Chow group은 **proper morphism**에 대해서만 pushforward functoriality를, **flat morphism**에 대해서만 pullback functoriality를 갖는다. 
 
-우선 두 variety 사이의 morphism $f: X \rightarrow Y$가 *proper morphism*이라는 것은 대략적으로 compact map의 대수기하적 analogue라 할 수 있다. ([\[스킴\] §값매김환, ⁋정의 9](/ko/math/scheme_theory/valuative_criteria#def9)) 다소 주의할 것은, compactness의 경우 대수기하학에서는 잘 작동하지 않으므로 이를 곧바로 옮겨올 수는 없다는 것이다. 직관은 compact map의 fiber와 image가 무한대로 새어나가지 않듯이 proper morphism 또한 그러하다는 것이며, 특히 중요한 것은 이 fiber를 묘사하는 데 유한 개의 좌표만 추가적으로 필요하다는 것이다. ([\[스킴\] §스킴 사상의 성질들, ⁋예시 16](/ko/math/scheme_theory/properties_of_scheme_morphisms#ex16)) 이 때 필요한 좌표의 개수는 function field의 extension degree $[\mathbb{K}(V):\mathbb{K}(f(V))]$으로 계산되며, 이는 $V$와 $f(V)$가 같은 차원일 때 정의된다. 편의상
+우선 두 variety 사이의 morphism $f: X \rightarrow Y$가 *proper morphism*이라는 것은 대략적으로 compact map의 대수기하적 analogue라 할 수 있다. ([\[스킴\] §값매김환, ⁋정의 9](/ko/math/scheme_theory/valuative_criteria#def9)) 다소 주의할 것은, compactness의 경우 algebraic geometry에서는 잘 작동하지 않으므로 이를 곧바로 옮겨올 수는 없다는 것이다. 직관은 compact map의 fiber와 image가 무한대로 새어나가지 않듯이 proper morphism 또한 그러하다는 것이며, 특히 중요한 것은 이 fiber를 묘사하는 데 유한 개의 좌표만 추가적으로 필요하다는 것이다. ([\[스킴\] §스킴 사상의 성질들, ⁋예시 16](/ko/math/scheme_theory/properties_of_scheme_morphisms#ex16)) 이 때 필요한 좌표의 개수는 function field의 extension degree $[\mathbb{K}(V):\mathbb{K}(f(V))]$으로 계산되며, 이는 $V$와 $f(V)$가 같은 차원일 때 정의된다. 편의상
 
 $$\deg(V/f(V))=\begin{cases}[\mathbb{K}(V):\mathbb{K}(f(V))]&\text{if $\dim f(V)=\dim V$,}\\ 0&\text{if $\dim f(V)<\dim V$}\end{cases}$$
 

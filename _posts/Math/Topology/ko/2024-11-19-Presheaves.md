@@ -37,7 +37,7 @@ $$f_i\vert_{A_i\cap A_j}=f_j\vert_{A_i\cap A_j}\qquad\text{for all $i,j$}$$
 
 수학, 특히 기하학의 많은 부분에서 살펴보는 구조들은 위상공간 위에 추가적인 데이터가 주어진 구조이다. 이들을 위해서는 위와 같은 과정을 다루는 도구가 필요하다. 
 
-Category $\Open(X)$를 ordered set $(\mathcal{T}, \subseteq)$를 category로 본 것으로 정의하자. 즉, 이들의 대상들은 열린집합들이며, $U\subseteq V$일 때마다 화살표 $U\hookrightarrow V$가 유일하게 존재한다.
+Category $\Open(X)$를 ordered set $(\mathcal{T}, \subseteq)$를 category로 본 것으로 정의하자. 즉, 이들의 대상들은 열린집합들이며, $U\subseteq V$일 때마다 arrow $U\hookrightarrow V$가 유일하게 존재한다.
 
 ::: 정의 2
 위상공간 $X$에 대하여, contravariant functor $\mathcal{F}:\Open(X)^\op \rightarrow \Set$을 $X$ 위에 정의된 집합들의 *presheaf<sub>준층</sub>*라 부른다.

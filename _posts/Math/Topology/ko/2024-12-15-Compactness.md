@@ -78,7 +78,7 @@ $K$는 compact Hausdorff space이므로 regular space이다. ([§옹골공간, �
 이제 $W=P\cap U$라 두자. $P$는 $K$에서 열린집합이고 $U$는 $X$의 열린집합이며 $U\subseteq K$이므로 $W$는 $X$에서 열린집합이고 $x\in W$이다. $W\subseteq U\subseteq K$이고 $K$는 $X$의 닫힌집합이므로 ([§옹골공간, ⁋따름정리 5](/ko/math/topology/compact_spaces#cor5)) $\cl(W)\subseteq K$이다. 따라서 $\cl(W)=\cl(W)\cap K=\cl_K(W)\subseteq\cl_K(P)\subseteq V$이다. 끝으로 $\cl(W)$는 compact 집합 $K$의 닫힌 부분집합이므로 compact이다. ([§옹골공간, ⁋보조정리 3](/ko/math/topology/compact_spaces#lem3)) 이로써 둘째 조건이 성립한다.
 :::
 
-[명제 4](#prop4)의 둘째 조건은 LCH space에서 각 점이 compact closure를 갖는 열린집합들로 이루어진 neighborhood basis를 가진다는 것으로 읽을 수 있다. 이는 앞으로 국소적 논증을 펼칠 때마다 반복적으로 사용되며, 일점 옹골화의 Hausdorff성을 판정할 때에도 핵심적인 역할을 한다. 또한 이 성질로부터 임의의 LCH space가 regular임이 곧바로 따르는데, 점 $x$와 이를 포함하지 않는 닫힌집합 $C$가 주어지면 $V=X\setminus C$에 둘째 조건을 적용하여 얻은 $W$와 $X\setminus\cl(W)$가 $x$와 $C$를 분리하기 때문이다.
+[명제 4](#prop4)의 둘째 조건은 LCH space에서 각 점이 compact closure를 갖는 열린집합들로 이루어진 neighborhood basis를 가진다는 것으로 읽을 수 있다. 이는 앞으로 국소적 논증을 펼칠 때마다 반복적으로 사용되며, one-point compactification의 Hausdorff성을 판정할 때에도 핵심적인 역할을 한다. 또한 이 성질로부터 임의의 LCH space가 regular임이 곧바로 따르는데, 점 $x$와 이를 포함하지 않는 닫힌집합 $C$가 주어지면 $V=X\setminus C$에 둘째 조건을 적용하여 얻은 $W$와 $X\setminus\cl(W)$가 $x$와 $C$를 분리하기 때문이다.
 
 가장 기본적인 예로 Euclidean space $\mathbb{R}^n$이 LCH임을 들 수 있다. 임의의 점 $x$에 대하여 닫힌 공 $\{y:\lVert y-x\rVert\leq 1\}$은 Heine–Borel 정리에 의해 compact이고 열린 공을 품으므로 $x$의 compact neighborhood를 이루며, $\mathbb{R}^n$이 Hausdorff임은 이미 알고 있다. 마찬가지로 임의의 discrete space도 LCH인데, 각 점 $x$에 대하여 한원소집합 $\{x\}$이 열린 유한집합으로서 compact neighborhood가 되고 discrete space는 Hausdorff이기 때문이다. 조금 덜 자명한 예는 topological manifold이다.
 
@@ -128,7 +128,7 @@ $X$는 $X$의 열린집합이므로 [정의 8](#def8)의 첫째 종류로서 $X^
 $\{\infty\}=X^+\setminus X$는 열린집합 $X$의 여집합이므로 닫힌집합이다. $X$가 조밀하다는 것은 $\infty\in\cl(X)$인 것, 곧 $\infty$의 임의의 열린근방이 $X$와 만나는 것과 같다. $\infty$를 품는 열린집합은 반드시 둘째 종류 $X^+\setminus C$이며, 이것이 $X$와 만나는 것은 $X\setminus C\neq\emptyset$, 곧 $C\neq X$인 것과 같다. 따라서 $X$가 조밀하지 않을 필요충분조건은 어떤 compact인 닫힌집합 $C$에 대해 $C=X$인 것, 곧 $X$ 자신이 compact인 것이다.
 :::
 
-$X$가 compact인 경우에는 $X$ 자체가 compact이며 닫힌집합이므로 $\{\infty\}=X^+\setminus X$가 열린집합이 되어 $\infty$가 isolated point가 된다. 이 경우 $X^+$는 $X$에 isolated point 하나를 덧붙인 것에 지나지 않아 흥미롭지 않다. 일점 옹골화가 본래 의도한 역할을 하는 것은 $X$가 compact가 아닐 때이며, 이때 $\infty$는 $X$ 바깥으로 달아나는 모든 방향의 limit point 노릇을 한다.
+$X$가 compact인 경우에는 $X$ 자체가 compact이며 닫힌집합이므로 $\{\infty\}=X^+\setminus X$가 열린집합이 되어 $\infty$가 isolated point가 된다. 이 경우 $X^+$는 $X$에 isolated point 하나를 덧붙인 것에 지나지 않아 흥미롭지 않다. One-point compactification이 본래 의도한 역할을 하는 것은 $X$가 compact가 아닐 때이며, 이때 $\infty$는 $X$ 바깥으로 달아나는 모든 방향의 limit point 노릇을 한다.
 
 ::: 정리 10
 임의의 위상공간 $X$에 대하여 $X^+$는 compact이다.
@@ -139,7 +139,7 @@ $X^+$의 임의의 open covering $(O_i)_{i\in I}$이 주어졌다 하자. $\inft
 
 ## Hausdorff 판정과 보편성
 
-일점 옹골화는 어떤 공간에 대해서도 compact 공간을 낳지만, 그 결과가 다시 Hausdorff가 되는지는 별개의 문제이다. 예컨대 $\mathbb{Q}^+$은 compact이지만 Hausdorff가 아니다. 다음 정리는 $X^+$가 Hausdorff가 되는 조건이 정확히 앞서 정의한 국소적 옹골성임을 밝힌다.
+One-point compactification은 어떤 공간에 대해서도 compact 공간을 낳지만, 그 결과가 다시 Hausdorff가 되는지는 별개의 문제이다. 예컨대 $\mathbb{Q}^+$은 compact이지만 Hausdorff가 아니다. 다음 정리는 $X^+$가 Hausdorff가 되는 조건이 정확히 앞서 정의한 국소적 옹골성임을 밝힌다.
 
 ::: 정리 11
 위상공간 $X$에 대하여 $X^+$가 Hausdorff space일 필요충분조건은 $X$가 LCH space인 것이다.
@@ -163,17 +163,17 @@ $\varphi$를 통해 $X$와 $Y\setminus\{p\}$을 동일시하고, $X$를 $Y$의 �
 그러므로 $p$를 $\infty$와 동일시하는 집합 사이의 대응 $h:X^+\rightarrow Y$는 열린집합을 열린집합으로, 그 역도 마찬가지로 대응시키는 전단사이며, 따라서 homeomorphism이다. $h$는 $X$ 위에서 $\varphi$와 일치하고 $\infty$를 $p$로 보내야 하므로 유일하다.
 :::
 
-[정리 12](#thm12)은 LCH space $X$에 한 점을 더해 compact Hausdorff space를 만드는 방법이 위상동형을 무시하면 오직 하나뿐임을 말한다. 이것이 Alexandroff 정리의 유일성 부분을 보편성의 언어로 서술한 것이다. 이 유일성 덕분에 우리는 이후 $X^+$를 그 구체적 구성과 무관하게 다룰 수 있고, 실제 계산에서는 임의의 편리한 compact Hausdorff model을 골라 $X^+$와 동일시하면 된다.
+[정리 12](#thm12)은 LCH space $X$에 한 점을 더해 compact Hausdorff space를 만드는 방법이 homeomorphism을 무시하면 오직 하나뿐임을 말한다. 이것이 Alexandroff 정리의 유일성 부분을 보편성의 언어로 서술한 것이다. 이 유일성 덕분에 우리는 이후 $X^+$를 그 구체적 구성과 무관하게 다룰 수 있고, 실제 계산에서는 임의의 편리한 compact Hausdorff model을 골라 $X^+$와 동일시하면 된다.
 
 {% diagram Math/Topology/Locally_Compact_Spaces-1.svg width="6.23em" alt="일점 옹골화의 보편성" %}
 
 ::: 참고 13
-일점 옹골화는 Hausdorff 옹골화 가운데 가장 작은 것으로 특징지어진다. Compact가 아닌 LCH space $X$의 *Hausdorff 옹골화*란 $X$를 조밀한 부분공간으로 품는 compact Hausdorff space를 말하는데, 이러한 임의의 옹골화에서 출발하여 $X$ 바깥의 점들을 모두 하나로 뭉개면 $X^+$로 향하는 연속인 전사가 유일하게 얻어진다. 이 사실의 증명에는 LCH space가 Hausdorff space에 조밀하게 매장되면 항상 열린 부분공간이 된다는 관찰이 필요하며, 자세한 논증은 표준적인 문헌을 따른다. **[Mun]** 반대편 극단에는 완전정칙 공간이 가질 수 있는 가장 큰 Hausdorff 옹골화인 *Stone–Čech compactification*이 있으나, 이는 별도의 구성을 요구하므로 여기에서는 이름만 언급한다.
+One-point compactification은 Hausdorff 옹골화 가운데 가장 작은 것으로 특징지어진다. Compact가 아닌 LCH space $X$의 *Hausdorff 옹골화*란 $X$를 조밀한 부분공간으로 품는 compact Hausdorff space를 말하는데, 이러한 임의의 옹골화에서 출발하여 $X$ 바깥의 점들을 모두 하나로 뭉개면 $X^+$로 향하는 연속인 전사가 유일하게 얻어진다. 이 사실의 증명에는 LCH space가 Hausdorff space에 조밀하게 매장되면 항상 열린 부분공간이 된다는 관찰이 필요하며, 자세한 논증은 표준적인 문헌을 따른다. **[Mun]** 반대편 극단에는 완전정칙 공간이 가질 수 있는 가장 큰 Hausdorff 옹골화인 *Stone–Čech compactification*이 있으나, 이는 별도의 구성을 요구하므로 여기에서는 이름만 언급한다.
 :::
 
 ## 일점 옹골화의 예
 
-가장 익숙한 예는 Euclidean space의 일점 옹골화가 구면이 된다는 사실이다.
+가장 익숙한 예는 Euclidean space의 one-point compactification이 구면이 된다는 사실이다.
 
 ::: 예시 14
 $n$-구면 $S^n=\{x\in\mathbb{R}^{n+1}:\lVert x\rVert=1\}$의 북극 $N=(0,\ldots,0,1)$을 생각하자. Stereographic projection
@@ -196,7 +196,7 @@ Discrete space의 일점 옹골화는 수렴하는 점열이라는 매우 구체
 
 $$f:\mathbb{N}^+\rightarrow\mathbb{R},\qquad f(n)=\frac1n\quad(n\in\mathbb{N}),\qquad f(\infty)=0$$
 
-을 생각하면, $f$는 $\mathbb{N}^+$과 $\{0\}\cup\{1/n\mid n\geq 1\}$ 사이의 전단사이다. 각 $n\in\mathbb{N}$은 $\mathbb{N}^+$에서 isolated point이고 그 상 $1/n$도 $\{0\}\cup\{1/n\}$에서 isolated point이며, $\infty$의 cofinite 근방이 $0$의 근방으로 옮겨지므로 $f$는 연속이다. 정의역이 compact이고 공역이 Hausdorff이므로 [§옹골공간, ⁋명제 9](/ko/math/topology/compact_spaces#prop9)에 의하여 $f$는 homeomorphism이다. 즉 $\mathbb{N}^+$은 하나의 limit point를 지닌 수렴하는 점열과 위상동형이다.
+을 생각하면, $f$는 $\mathbb{N}^+$과 $\{0\}\cup\{1/n\mid n\geq 1\}$ 사이의 전단사이다. 각 $n\in\mathbb{N}$은 $\mathbb{N}^+$에서 isolated point이고 그 상 $1/n$도 $\{0\}\cup\{1/n\}$에서 isolated point이며, $\infty$의 cofinite 근방이 $0$의 근방으로 옮겨지므로 $f$는 연속이다. 정의역이 compact이고 공역이 Hausdorff이므로 [§옹골공간, ⁋명제 9](/ko/math/topology/compact_spaces#prop9)에 의하여 $f$는 homeomorphism이다. 즉 $\mathbb{N}^+$은 하나의 limit point를 지닌 수렴하는 점열과 homeomorphic이다.
 :::
 
 ## 완전정칙성

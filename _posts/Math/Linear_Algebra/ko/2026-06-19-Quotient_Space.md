@@ -35,7 +35,7 @@ $$v+W=\{v+w\mid w\in W\}$$
 을 $v$를 포함하는 $W$의 *coset<sub>잉여류</sub>*라 부른다.
 :::
 
-정의에서 coset $v+W$은 $v$와의 차이가 $W$에 속하는 벡터들, 즉 도입부에서 $V/W$ 안에서 $v$와 같게 취급하기로 한 벡터들을 모두 모은 집합이다. 이는 집합론에서 다루는 equivalence class의 한 예시이지만 ([\[집합론\] §동치관계, ⁋정의 4](/ko/math/set_theory/equivalence_relations#def4)), 우리에게 필요한 것은 위의 도입에서 주장한, 두 coset이 같은지를 대표원의 차이로 판정하는 다음 사실 뿐이다.
+정의에서 coset $v+W$은 $v$와의 차이가 $W$에 속하는 벡터들, 즉 도입부에서 $V/W$ 안에서 $v$와 같게 취급하기로 한 벡터들을 모두 모은 집합이다. 이는 집합론에서 다루는 equivalence class의 한 예시이지만 ([\[집합론\] §동치관계, ⁋정의 4](/ko/math/set_theory/equivalence_relations#def4)), 우리에게 필요한 것은 위의 도입에서 주장한, 두 coset이 같은지를 representative의 차이로 판정하는 다음 사실 뿐이다.
 
 ::: 보조정리 2
 $\mathbb{K}$-벡터공간 $V$와 그 부분공간 $W\leq V$, 그리고 임의의 두 벡터 $v,v'\in V$에 대하여, 다음의 동치
@@ -64,7 +64,7 @@ $$(v+W)+(v'+W)=(v+v')+W,\qquad \alpha(v+W)=(\alpha v)+W$$
 으로 정의한다. 이 때, 임의의 $v\in V$를 $v+W$로 보내는 linear map $p: V\rightarrow V/W$를 *natural projection<sub>자연사영</sub>*이라 부른다. 
 :::
 
-위의 정의에서 덧셈과 스칼라곱은 coset을 대표하는 벡터 $v$를 통해 기술되었으므로, 이들이 대표원의 선택과 무관하게 잘 정의되는지를 확인해야 한다. 즉, $v+W=v_1+W$이고 $v'+W=v_1'+W$라면 
+위의 정의에서 덧셈과 스칼라곱은 coset을 대표하는 벡터 $v$를 통해 기술되었으므로, 이들이 representative의 선택과 무관하게 잘 정의되는지를 확인해야 한다. 즉, $v+W=v_1+W$이고 $v'+W=v_1'+W$라면 
 
 $$(v+v')+W=(v_1+v_1')+W,\qquad (\alpha v)+W=(\alpha v_1)+W$$
 
@@ -166,7 +166,7 @@ $$\bar L(v+W)=L(v)$$
 
 $$L(v)-L(v')=L(v-v')=0$$
 
-이고 따라서 $L(v)=L(v')$이다. 즉 $\bar L(v+W)$의 값은 대표원의 선택과 무관하다. $\bar L$이 linear인 것은 
+이고 따라서 $L(v)=L(v')$이다. 즉 $\bar L(v+W)$의 값은 representative의 선택과 무관하다. $\bar L$이 linear인 것은 
 
 $$\bar L\bigl(\alpha(v+W)+(v'+W)\bigr)=\bar L\bigl((\alpha v+v')+W\bigr)=L(\alpha v+v')=\alpha L(v)+L(v')=\alpha\bar L(v+W)+\bar L(v'+W)$$
 

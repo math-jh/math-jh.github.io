@@ -162,7 +162,7 @@ $R$이 동치관계라면 집합으로써 *quotient set* $A/R$이 잘 정의된�
 
 $$[x]\mathbin{\tiny\char"2606}[y]=[x\star y]$$
 
-이다. 그러나 이 식이 의미를 갖기 위해서는, equivalence class $[x]$의 대표원소를 $x$ 대신 $x'$로 택하더라도 $[x]\mathbin{\tiny\char"2606}[y]$의 값이 잘 정의되어야 한다. 즉, 다음의 식
+이다. 그러나 이 식이 의미를 갖기 위해서는, equivalence class $[x]$의 representative를 $x$ 대신 $x'$로 택하더라도 $[x]\mathbin{\tiny\char"2606}[y]$의 값이 잘 정의되어야 한다. 즉, 다음의 식
 
 $$[x\star y]=[x]\mathbin{\tiny\char"2606}[y]=[x'\star y]$$
 
@@ -170,7 +170,7 @@ $$[x\star y]=[x]\mathbin{\tiny\char"2606}[y]=[x'\star y]$$
 
 $$x'\star y\equiv x\star y\mod R$$
 
-로 바꾸어 쓸 수 있고, 앞선 정의를 따르자면 이는 정확히 $R$이 연산과 *right* compatible해야 한다는 의미다. 마찬가지 논리로, $[y]$의 대표원소의 선택에도 연산 $\mathbin{\tiny\char"2606}$의 값이 변하지 않아야 하므로 $R$은 연산과 *left* compatible이어야 한다.
+로 바꾸어 쓸 수 있고, 앞선 정의를 따르자면 이는 정확히 $R$이 연산과 *right* compatible해야 한다는 의미다. 마찬가지 논리로, $[y]$의 representative의 선택에도 연산 $\mathbin{\tiny\char"2606}$의 값이 변하지 않아야 하므로 $R$은 연산과 *left* compatible이어야 한다.
 
 이를 정리하여 다음의 정의를 얻는다.
 

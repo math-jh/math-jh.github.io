@@ -24,7 +24,7 @@ $$\mathbb{Z}/mn\mathbb{Z}\cong \mathbb{Z}/m\mathbb{Z}\times \mathbb{Z}/n\mathbb{
 
 $$A\Big/\Big(\bigcap_i \mathfrak{a}_i\Big)\cong \prod_i A/\mathfrak{a}_i$$
 
-가 성립한다는 형태이고, $A$가 가환환이라면 뒤에 보일 등식 $\bigcap_i\mathfrak{a}_i=\mathfrak{a}_1\cdots\mathfrak{a}_n$에 의해 $A/\mathfrak{a}_1\cdots\mathfrak{a}_n\cong\prod_i A/\mathfrak{a}_i$로도 쓸 수 있다.
+가 성립한다는 형태이고, $A$가 commutative ring이라면 뒤에 보일 등식 $\bigcap_i\mathfrak{a}_i=\mathfrak{a}_1\cdots\mathfrak{a}_n$에 의해 $A/\mathfrak{a}_1\cdots\mathfrak{a}_n\cong\prod_i A/\mathfrak{a}_i$로도 쓸 수 있다.
 
 ## Ideal의 곱
 
@@ -185,7 +185,7 @@ Ring $A$의 two-sided ideal들 $\mathfrak{b}_1,\ldots, \mathfrak{b}_n$이 pairwi
 
 $$\mathfrak{b}_1\cap \cdots\cap \mathfrak{b}_n=\sum_{\sigma\in S_n} \mathfrak{b}_{\sigma(1)}\cdots \mathfrak{b}_{\sigma(n)}$$
 
-이 성립한다. 특히 $A$가 가환환이면 모든 순서의 곱이 같아지므로 [명제 5](#prop5)를 회복한다.
+이 성립한다. 특히 $A$가 commutative ring이면 모든 순서의 곱이 같아지므로 [명제 5](#prop5)를 회복한다.
 :::
 ::: 증명
 [명제 5](#prop5)와 마찬가지로 귀납법으로 증명한다. 항상 $\sum_{\sigma\in S_n}\mathfrak{b}_{\sigma(1)}\cdots\mathfrak{b}_{\sigma(n)}\subseteq\mathfrak{b}_1\cap\cdots\cap\mathfrak{b}_n$이므로 역포함만 보이면 된다.

@@ -105,7 +105,7 @@ $$\hat y=A(A^tA)^{-1}A^ty$$
 The matrix $P=A(A^tA)^{-1}A^t$ appearing here represents the orthogonal projection onto $\im A$.
 
 ::: Example 4
-Returning to [Example 2](#ex2), let us compute the error with respect to the approximating function directly. Since $x=(\tfrac{3}{2},\tfrac{7}{6})$, we have
+Returning to [Example 2](#ex2), let us compute the error with respect to the approximating function directly. Since $x=(3/2,7/6)$, we have
 
 $$\hat y=Ax=\begin{pmatrix}0&1\\ 1&1\\ 2&1\end{pmatrix}\begin{pmatrix}3/2\\ 7/6\end{pmatrix}=\begin{pmatrix}7/6\\ 8/3\\ 25/6\end{pmatrix}$$
 
@@ -115,7 +115,7 @@ $$y-\hat y=\begin{pmatrix}1\\ 3\\ 4\end{pmatrix}-\begin{pmatrix}7/6\\ 8/3\\ 25/6
 
 Taking the inner product of this error with each of the two columns $(0,1,2)$ and $(1,1,1)$ of $A$ gives
 
-$$0\cdot\left(-\tfrac{1}{6}\right)+1\cdot\tfrac{1}{3}+2\cdot\left(-\tfrac{1}{6}\right)=0,\qquad -\tfrac{1}{6}+\tfrac{1}{3}-\tfrac{1}{6}=0$$
+$$0\cdot\left(-\frac{1}{6}\right)+1\cdot\frac{1}{3}+2\cdot\left(-\frac{1}{6}\right)=0,\qquad -\frac{1}{6}+\frac{1}{3}-\frac{1}{6}=0$$
 
 so we can verify that the error is perpendicular to $\im A$. At this time, the error is $\lVert y-\hat y\rVert^2=\frac{1}{36}(1+4+1)=\frac{1}{6}$, which quantitatively represents the degree to which the given three points fail to be collinear.
 :::

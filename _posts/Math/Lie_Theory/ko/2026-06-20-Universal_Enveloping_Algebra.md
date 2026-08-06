@@ -261,7 +261,7 @@ $$f^a\,h^b\,e^c,\qquad a,b,c\geq 0$$
 ::: 예시 12
 $U(\sl_2)$의 원소
 
-$$\Omega=ef+fe+\tfrac{1}{2}h^2$$
+$$\Omega=ef+fe+\frac{1}{2}h^2$$
 
 를 *Casimir element*라 부른다. 이 원소는 $U(\sl_2)$의 center에 속한다. 곧 $\Omega e=e\Omega$, $\Omega f=f\Omega$, $\Omega h=h\Omega$이 모두 성립한다.
 :::
@@ -269,15 +269,15 @@ $$\Omega=ef+fe+\tfrac{1}{2}h^2$$
 실제로 $\Omega$가 $e$와 commute함을 확인해 보자. 관계식 $[e,f]=h$, $[h,e]=2e$를 사용하면 $U(\sl_2)$ 안에서
 
 $$\begin{aligned}
-[\Omega,e]&=[ef,e]+[fe,e]+\tfrac{1}{2}[h^2,e]\\
-&=e[f,e]+[fe,e]+\tfrac{1}{2}\bigl(h[h,e]+[h,e]h\bigr)\\
-&=-eh+\bigl(f[e,e]+[f,e]e\bigr)+\tfrac{1}{2}\bigl(2he+2eh\bigr)\\
+[\Omega,e]&=[ef,e]+[fe,e]+\frac{1}{2}[h^2,e]\\
+&=e[f,e]+[fe,e]+\frac{1}{2}\bigl(h[h,e]+[h,e]h\bigr)\\
+&=-eh+\bigl(f[e,e]+[f,e]e\bigr)+\frac{1}{2}\bigl(2he+2eh\bigr)\\
 &=-eh-he+he+eh=0
 \end{aligned}$$
 
 을 얻는다. 여기에서 $[ef,e]=e[f,e]+[e,e]f=e(-h)=-eh$, $[fe,e]=[f,e]e=-he$, 그리고 $[h^2,e]=h[h,e]+[h,e]h=2he+2eh$를 사용하였다. 같은 방식으로 $[\Omega,f]=0$과 $[\Omega,h]=0$도 확인되며, $e,f,h$가 $U(\sl_2)$를 생성하므로 $\Omega$는 center에 속한다. PBW 기저의 관점에서 $\Omega$는 정렬 단항식들의 일차결합
 
-$$\Omega=2fe+h+\tfrac{1}{2}h^2$$
+$$\Omega=2fe+h+\frac{1}{2}h^2$$
 
 으로 다시 쓸 수 있는데, 이는 $ef=fe+h$를 사용해 $ef+fe=2fe+h$로 정렬한 것이다. 이 Casimir element는 $\sl_2$의 유한차원 representation 분류에서 각 irreducible representation 위에 스칼라로 작용하여, representation을 구별하는 불변량의 역할을 한다. ([§근계, ⁋정의 8](/ko/math/lie_theory/root_systems#def8))
 

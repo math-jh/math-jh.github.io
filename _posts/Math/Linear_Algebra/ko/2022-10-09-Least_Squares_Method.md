@@ -107,7 +107,7 @@ $$\hat y=A(A^tA)^{-1}A^ty$$
 로 주어진다. 여기서 등장한 행렬 $P=A(A^tA)^{-1}A^t$은 $\im A$로의 정사영을 나타낸다. 
 
 ::: 예시 4
-[예시 2](#ex2)로 돌아가 근사함수와의 오차를 직접 구해보자. $x=(\tfrac{3}{2},\tfrac{7}{6})$이었으므로 
+[예시 2](#ex2)로 돌아가 근사함수와의 오차를 직접 구해보자. $x=(3/2,7/6)$이었으므로 
 
 $$\hat y=Ax=\begin{pmatrix}0&1\\ 1&1\\ 2&1\end{pmatrix}\begin{pmatrix}3/2\\ 7/6\end{pmatrix}=\begin{pmatrix}7/6\\ 8/3\\ 25/6\end{pmatrix}$$
 
@@ -117,7 +117,7 @@ $$y-\hat y=\begin{pmatrix}1\\ 3\\ 4\end{pmatrix}-\begin{pmatrix}7/6\\ 8/3\\ 25/6
 
 이다. 이 오차를 $A$의 두 열 $(0,1,2)$와 $(1,1,1)$ 각각과 내적하면 
 
-$$0\cdot\left(-\tfrac{1}{6}\right)+1\cdot\tfrac{1}{3}+2\cdot\left(-\tfrac{1}{6}\right)=0,\qquad -\tfrac{1}{6}+\tfrac{1}{3}-\tfrac{1}{6}=0$$
+$$0\cdot\left(-\frac{1}{6}\right)+1\cdot\frac{1}{3}+2\cdot\left(-\frac{1}{6}\right)=0,\qquad -\frac{1}{6}+\frac{1}{3}-\frac{1}{6}=0$$
 
 이 되어 오차가 $\im A$에 수직임을 확인할 수 있다. 이 때, 오차는 $\lVert y-\hat y\rVert^2=\frac{1}{36}(1+4+1)=\frac{1}{6}$이며, 이는 주어진 세 점이 한 직선 위에 있지 않은 정도를 정량적으로 나타낸다. 
 :::

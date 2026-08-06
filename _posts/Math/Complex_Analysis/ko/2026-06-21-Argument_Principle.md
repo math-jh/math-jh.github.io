@@ -50,7 +50,7 @@ $$\frac{f'(z)}{f(z)} = \frac{k}{z - z_0} + \frac{\varphi'(z)}{\varphi(z)}$$
 이다. $\varphi$이 $z_0$에서 holomorphic이고 $\varphi(z_0) \neq 0$이므로 $\varphi'/\varphi$은 $z_0$에서 holomorphic이고, 따라서 위 식의 둘째 항은 $z_0$에서 holomorphic이다. 그러므로 $f'/f$의 $z_0$에서의 주부는 $k/(z - z_0)$뿐이며, 이는 $f'/f$이 $z_0$에서 유수 $k$인 단순극을 가짐을 뜻한다 ([§유수정리, ⁋정의 1](/ko/math/complex_analysis/residue_theorem#def1)). 곧 $\operatorname{Res}_{z = z_0}(f'/f) = k = \operatorname{ord}_{z_0} f$이다.
 :::
 
-보조정리 2의 핵심은 로그미분 $f'/f = (\log f)'$이 곱셈적 구조를 덧셈적 구조로 바꾼다는 데 있다. 인수 $(z - z_0)^k$은 $f'/f$에 $k/(z - z_0)$이라는 항을 내놓고, $0$이 아닌 인수 $\varphi$은 holomorphic한 기여만 하므로 흔적을 남기지 않는다. 그 결과 $f'/f$의 유수가 정확히 부호 있는 order를 읽어 낸다. 영점은 양의 유수로, 극은 음의 유수로 나타나므로, 이를 한 경로 안에서 합하면 영점 수와 극 수의 차가 나온다. 이것이 편각원리이다.
+보조정리 2의 핵심은 로그미분 $f'/f = (\log f)'$이 multiplicative 구조를 덧셈적 구조로 바꾼다는 데 있다. 인수 $(z - z_0)^k$은 $f'/f$에 $k/(z - z_0)$이라는 항을 내놓고, $0$이 아닌 인수 $\varphi$은 holomorphic한 기여만 하므로 흔적을 남기지 않는다. 그 결과 $f'/f$의 유수가 정확히 부호 있는 order를 읽어 낸다. 영점은 양의 유수로, 극은 음의 유수로 나타나므로, 이를 한 경로 안에서 합하면 영점 수와 극 수의 차가 나온다. 이것이 편각원리이다.
 
 ::: 정리 3 (편각원리)
 $\Omega \subseteq \mathbb{C}$가 단순연결 영역이고 $f$가 $\Omega$에서 유리형이며 항등적으로 $0$이 아니라 하자. $\gamma$이 $\Omega$ 안의 양의 방향 simple closed 곡선이고 그 자취 위에 $f$의 영점도 극도 없다고 하자. 그러면
@@ -179,7 +179,7 @@ $U \subseteq \Omega$이 열려 있다고 하고, $w_0 \in f(U)$을 임의로 잡
 
 $$D(w_0, \varepsilon) \subseteq f(U)$$
 
-이고, $w_0 \in f(U)$이 임의였으므로 $f(U)$의 모든 점이 내부점이다. 곧 $f(U)$이 열려 있다.
+이고, $w_0 \in f(U)$이 임의였으므로 $f(U)$의 모든 점이 interior point가다. 곧 $f(U)$이 열려 있다.
 :::
 
 Open mapping 정리는 holomorphic function의 image가 결코 찌부러질 수 없음을 말한다. 실변수의 smooth 함수는 가령 상수가 아니면서도 image가 한 구간으로 닫혀 있을 수 있지만, 비상수 holomorphic function의 image에는 그런 일이 없어 항상 열린집합으로 퍼진다. 이 정리에서 두 가지 중요한 귀결이 곧장 나온다. 하나는 단사 holomorphic function의 역사상이 자동으로 holomorphic이 된다는 사실이고, 다른 하나는 최대절댓값 원리의 새로운 증명이다. 먼저 역사상의 holomorphicity를 본다.
@@ -197,7 +197,7 @@ $f$이 단사이고 비상수이므로 (단사함수는 상수일 수 없다) op
 
 다음으로 $f$의 도함수가 어디서도 $0$이 아님을 본다. 만일 어떤 $z_0$에서 $f'(z_0) = 0$이면 $f - f(z_0)$이 $z_0$에서 order $m \geq 2$인 영점을 가지므로, 정리 7에 의해 $f$이 $z_0$의 구멍 뚫린 근방에서 어떤 값 $w$을 $m \geq 2$번 취하여 단사성에 어긋난다. 따라서 모든 $z \in \Omega$에서 $f'(z) \neq 0$이다.
 
-이제 $f^{-1}$의 복소미분가능성을 보인다. $w_0 \in \Omega'$을 고정하고 $z_0 = f^{-1}(w_0)$이라 하자. $w \rightarrow w_0$이면 $f^{-1}$의 연속성에서 $z = f^{-1}(w) \rightarrow z_0$이고, 단사성에서 $w \neq w_0$이면 $z \neq z_0$이다. 차분몫을 정리하면
+이제 $f^{-1}$의 복소미분가능성을 보인다. $w_0 \in \Omega'$을 고정하고 $z_0 = f^{-1}(w_0)$이라 하자. $w \rightarrow w_0$이면 $f^{-1}$의 연속성에서 $z = f^{-1}(w) \rightarrow z_0$이고, 단사성에서 $w \neq w_0$이면 $z \neq z_0$이다. Difference quotient를 정리하면
 
 $$\frac{f^{-1}(w) - f^{-1}(w_0)}{w - w_0} = \frac{z - z_0}{f(z) - f(z_0)} = \left(\frac{f(z) - f(z_0)}{z - z_0}\right)^{-1}$$
 

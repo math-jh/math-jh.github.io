@@ -136,7 +136,7 @@ $$\max_{z \in \overline{\Omega}}\lvert f(z)\rvert = \max_{z \in \partial\Omega}\
 ::: 증명
 $\overline{\Omega}$이 bounded이고 닫혀 있으므로 콤팩트이고, $\lvert f\rvert$가 그 위에서 연속이므로 어떤 점 $z_\ast \in \overline{\Omega}$에서 최댓값 $M = \lvert f(z_\ast)\rvert$에 이른다. 만일 $z_\ast \in \partial\Omega$이면 최댓값이 boundary에서 달성되어 증명이 끝난다.
 
-그렇지 않고 $z_\ast \in \Omega$이라 하자. 그러면 $\lvert f\rvert$가 $\overline{\Omega}$ 전체의 최댓값을 내부점 $z_\ast$에서 가지므로 특히 $z_\ast$에서 국소적 최댓값에 이르고, 최대절댓값 원리 ([정리 5](#thm5)) 에 의해 $f$는 connected 집합 $\Omega$에서 상수이다. $f$가 $\overline{\Omega}$에서 연속이므로 $\overline{\Omega}$ 전체에서도 같은 상수이고, 따라서 $\lvert f\rvert$가 $\partial\Omega$ 위에서도 같은 값 $M$을 가진다 (bounded domain의 boundary는 공집합이 아니다). 어느 경우든 최댓값은 boundary에서 달성된다.
+그렇지 않고 $z_\ast \in \Omega$이라 하자. 그러면 $\lvert f\rvert$가 $\overline{\Omega}$ 전체의 최댓값을 interior point $z_\ast$에서 가지므로 특히 $z_\ast$에서 국소적 최댓값에 이르고, 최대절댓값 원리 ([정리 5](#thm5)) 에 의해 $f$는 connected 집합 $\Omega$에서 상수이다. $f$가 $\overline{\Omega}$에서 연속이므로 $\overline{\Omega}$ 전체에서도 같은 상수이고, 따라서 $\lvert f\rvert$가 $\partial\Omega$ 위에서도 같은 값 $M$을 가진다 (bounded domain의 boundary는 공집합이 아니다). 어느 경우든 최댓값은 boundary에서 달성된다.
 :::
 
 따름정리 6은 holomorphic function의 절댓값을 추정하는 데 자주 쓰인다. 영역 안에서 $\lvert f\rvert$의 크기를 가늠하려면 boundary에서의 크기만 통제하면 충분하다. 가령 한 영역에서 holomorphic이고 boundary에서 절댓값이 $1$을 넘지 않는 함수는 영역 interior에서도 절댓값이 $1$을 넘지 않는다. 이 관찰이 다음 절의 Schwarz 보조정리에서 결정적으로 쓰인다.
@@ -165,7 +165,7 @@ $$\lvert g(z)\rvert \leq 1, \qquad z \in \mathbb{D}$$
 
 이다. 곧 모든 $z \in \mathbb{D}$에서 $\lvert f(z)\rvert = \lvert z\rvert\,\lvert g(z)\rvert \leq \lvert z\rvert$이고, $z = 0$에서 $\lvert f'(0)\rvert = \lvert g(0)\rvert \leq 1$이다. 이로써 (1)이 증명된다.
 
-(2)를 위해 등호의 경우를 본다. 어떤 $z_0 \neq 0$에서 $\lvert f(z_0)\rvert = \lvert z_0\rvert$이면 $\lvert g(z_0)\rvert = 1$이고, $\lvert f'(0)\rvert = 1$이면 $\lvert g(0)\rvert = 1$이다. 어느 경우든 $\mathbb{D}$ 안의 한 점에서 $\lvert g\rvert$가 그 상한 $1$에 이르므로, $\lvert g\rvert$가 내부점에서 최댓값 $1$을 가진다. 최대절댓값 원리 ([정리 5](#thm5)) 에 의해 $g$는 connected 영역 $\mathbb{D}$에서 상수이고, 그 절댓값이 $1$이므로 $g(z) \equiv \lambda$ ($\lvert\lambda\rvert = 1$) 이다. 따라서 $f(z) = \lambda z$이다.
+(2)를 위해 등호의 경우를 본다. 어떤 $z_0 \neq 0$에서 $\lvert f(z_0)\rvert = \lvert z_0\rvert$이면 $\lvert g(z_0)\rvert = 1$이고, $\lvert f'(0)\rvert = 1$이면 $\lvert g(0)\rvert = 1$이다. 어느 경우든 $\mathbb{D}$ 안의 한 점에서 $\lvert g\rvert$가 그 상한 $1$에 이르므로, $\lvert g\rvert$가 interior point에서 최댓값 $1$을 가진다. 최대절댓값 원리 ([정리 5](#thm5)) 에 의해 $g$는 connected 영역 $\mathbb{D}$에서 상수이고, 그 절댓값이 $1$이므로 $g(z) \equiv \lambda$ ($\lvert\lambda\rvert = 1$) 이다. 따라서 $f(z) = \lambda z$이다.
 :::
 
 Schwarz 보조정리는 원점을 고정하는 단위원판의 자기사상이 원점 근방에서 항등사상보다 더 빠르게 자랄 수 없음을 말한다. $\lvert f(z)\rvert \leq \lvert z\rvert$은 각 점에서 함수값이 원점에 더 가까워짐을, $\lvert f'(0)\rvert \leq 1$은 원점에서의 확대율이 $1$을 넘지 못함을 뜻한다. 등호의 경우가 회전 $f(z) = \lambda z$뿐이라는 두 번째 진술은 이 부등식이 비상수 자기사상에 대해서는 결코 포화되지 않는 엄격한 부등식임을 말해 준다. 이 보조정리는 단위원판의 holomorphic automorphism을 분류하는 출발점이 되며, 그로부터 단위원판 위의 자연스러운 거리인 쌍곡거리가 holomorphic 사상에 의해 늘어나지 않는다는 사실로 이어진다.

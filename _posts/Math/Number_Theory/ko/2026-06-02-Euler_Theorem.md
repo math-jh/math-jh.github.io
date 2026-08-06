@@ -46,7 +46,7 @@ $n = p$가 소수이면 $\varphi(p) = p - 1$이므로 오일러 정리는 페르
 
 ## φ의 곱셈성과 공식
 
-$\varphi$를 실제로 계산하려면 그것이 곱셈적임을 알면 된다.
+$\varphi$를 실제로 계산하려면 그것이 multiplicative임을 알면 된다.
 
 ::: 명제 3
 $\gcd(m, n) = 1$이면 $\varphi(mn) = \varphi(m)\varphi(n)$이다.
@@ -70,8 +70,8 @@ $$\varphi(n) = n\prod_{p \mid n}\left(1 - \frac1p\right)$$
 $\varphi(360)$을 구하자. $360 = 2^3\cdot 3^2\cdot 5$이므로 공식에 대입하면
 
 $$\begin{aligned}
-\varphi(360) &= 360\left(1 - \tfrac12\right)\left(1 - \tfrac13\right)\left(1 - \tfrac15\right) \\
-&= 360\cdot\tfrac12\cdot\tfrac23\cdot\tfrac45 \\
+\varphi(360) &= 360\left(1 - \frac12\right)\left(1 - \frac13\right)\left(1 - \frac15\right) \\
+&= 360\cdot\frac12\cdot\frac23\cdot\frac45 \\
 &= 96
 \end{aligned}$$
 
@@ -93,7 +93,7 @@ $$7^{222} = (7^4)^{55}\cdot 7^2 \equiv 1^{55}\cdot 49 \equiv 9 \pmod{10}$$
 지수가 다시 거듭제곱으로 주어질 때에는 이 환원을 두 단계로 반복한다. 바깥 법에서는 지수를 법 $\varphi(n)$으로 줄이고, 그 지수를 계산할 때 다시 안쪽 법 $\varphi(n)$에서 오일러 정리를 적용하는 식이다.
 
 ::: 예시 6 (지수가 거듭제곱일 때)
-$3^{3^{100}}$을 $100$으로 나눈 나머지를 구하자. $\gcd(3, 100) = 1$이고 $\varphi(100) = 100\left(1 - \tfrac12\right)\left(1 - \tfrac15\right) = 40$이므로 $3^{40} \equiv 1 \pmod{100}$이다. 따라서 지수 $3^{100}$을 법 $40$으로 줄여야 한다. 다시 $\gcd(3, 40) = 1$이고 $\varphi(40) = 40\left(1 - \tfrac12\right)\left(1 - \tfrac15\right) = 16$이므로
+$3^{3^{100}}$을 $100$으로 나눈 나머지를 구하자. $\gcd(3, 100) = 1$이고 $\varphi(100) = 100\left(1 - 1/2\right)\left(1 - 1/5\right) = 40$이므로 $3^{40} \equiv 1 \pmod{100}$이다. 따라서 지수 $3^{100}$을 법 $40$으로 줄여야 한다. 다시 $\gcd(3, 40) = 1$이고 $\varphi(40) = 40\left(1 - 1/2\right)\left(1 - 1/5\right) = 16$이므로
 
 $$3^{100} = 3^{16\cdot 6 + 4} \equiv (3^{16})^6\cdot 3^4 \equiv 3^4 = 81 \equiv 1 \pmod{40}$$
 
@@ -142,8 +142,8 @@ $$\sum_{d \mid n} \varphi(d) = n$$
 $1$부터 $n$까지의 정수를 분모를 $n$으로 한 분수 $\frac{1}{n}, \frac{2}{n}, \ldots, \frac{n}{n}$로 보고, 각 분수를 기약분수로 약분하자. 약분된 분모는 모두 $n$의 약수이고, 분모가 $d$인 기약분수 $\frac{a}{d}$는 $1 \leq a \leq d$이면서 $\gcd(a, d) = 1$인 것이므로 정확히 $\varphi(d)$개이다. 따라서
 
 $$\begin{aligned}
-n &= \#\left\{\tfrac{1}{n}, \tfrac{2}{n}, \ldots, \tfrac{n}{n}\right\} \\
-&= \sum_{d \mid n} \#\left\{\tfrac{a}{d} \mid 1 \leq a \leq d,\ \gcd(a, d) = 1\right\} \\
+n &= \#\left\{\frac{1}{n}, \frac{2}{n}, \ldots, \frac{n}{n}\right\} \\
+&= \sum_{d \mid n} \#\left\{\frac{a}{d} \mid 1 \leq a \leq d,\ \gcd(a, d) = 1\right\} \\
 &= \sum_{d \mid n} \varphi(d)
 \end{aligned}$$
 

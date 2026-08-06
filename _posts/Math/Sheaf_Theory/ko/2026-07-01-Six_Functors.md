@@ -54,7 +54,7 @@ $$(R^q f_\ast \mathcal{F})_y \cong H^q(f^{-1}(y), \mathcal{F}\vert_{f^{-1}(y)})$
 $$\varinjlim_V H^q(f^{-1}(V), \mathcal{F}) \cong H^q(f^{-1}(y), \mathcal{F}\vert_{f^{-1}(y)})$$
 가 성립한다. 이로써 stalk 공식이 증명된다.
 
-일반적인 cartesian square에 대해서는 양변에 $y' \in Y'$에서 stalk를 취한다. 우변 $Rf'_\ast (g')^{-1}\mathcal{F}$의 stalk는 방금의 공식에 의해 $f'^{-1}(y') = f^{-1}(g(y'))$ 위의 cohomology이고, 좌변 $g^{-1}Rf_\ast \mathcal{F}$의 stalk는 $(Rf_\ast \mathcal{F})_{g(y')}$이므로 다시 같은 fiber 위의 cohomology이다. Fiber product의 정의에 의해 두 fiber가 위상동형이므로 두 stalk가 일치하고, 이 동형이 자연스러움을 확인하면 된다. 자세한 논증은 [KS]의 Proposition 2.6.7을 따른다.
+일반적인 cartesian square에 대해서는 양변에 $y' \in Y'$에서 stalk를 취한다. 우변 $Rf'_\ast (g')^{-1}\mathcal{F}$의 stalk는 방금의 공식에 의해 $f'^{-1}(y') = f^{-1}(g(y'))$ 위의 cohomology이고, 좌변 $g^{-1}Rf_\ast \mathcal{F}$의 stalk는 $(Rf_\ast \mathcal{F})_{g(y')}$이므로 다시 같은 fiber 위의 cohomology이다. Fiber product의 정의에 의해 두 fiber가 homeomorphic이므로 두 stalk가 일치하고, 이 동형이 자연스러움을 확인하면 된다. 자세한 논증은 [KS]의 Proposition 2.6.7을 따른다.
 :::
 
 Stalk 공식은 proper map에 대해서는 $Rf_\ast$를 fiber 위의 통상적 cohomology로 점별로 읽을 수 있음을 말한다. 이는 비proper map에서는 성립하지 않으며, 바로 이 fiber별 읽기 가능성이 고유 받음을 base change에 대해 잘 행동하게 만드는 근원이다. 이제 이 정리를 이용해 [정의 1](#def1)이 compactification의 선택에 무관함을 본다.
@@ -102,7 +102,7 @@ $$\Hom_{D(\Sh(Y))}(Rf_! \mathcal{F}^\bullet, \mathcal{G}^\bullet) \cong \Hom_{D(
 
 $f^!$의 존재는 자명하지 않다. 오른쪽 수반이 존재하려면 $Rf_!$이 임의의 직합을 보존해야 하는데, $j_!$과 $Rp_\ast$(유한 cohomological dimension을 가진 proper $p$에 대한)가 모두 직합을 보존하므로 $Rf_!$도 그러하다. $\Sh(X)$가 Grothendieck abelian category이므로 그 derived category $D(\Sh(X))$는 well generated triangulated category이고, 이 경우의 Brown representability에 의해 직합을 보존하는 exact functor는 오른쪽 수반을 가진다. 따라서 $f^!$이 존재한다. 유계 derived category에 한정할 때에는 Kashiwara와 Schapira가 $Rf_!$의 유한 cohomological amplitude를 이용해 명시적 kernel로 $f^!$을 구성하였으며 ([KS], §3.1), 추상적 형식의 차원에서는 Scholze의 정리가 같은 결과를 준다 ([Sch]). 어느 구성에서나 $f^!$은 [정의 6](#def6)의 adjunction으로 유일하게 결정된다.
 
-$f^!$은 일반적으로 $f^{-1}$과 전혀 다른 functor이다. 그러나 $f$가 적당히 smooth 경우, 두 functor는 fiber 차원만큼의 shift와 orientation에 의한 비틀림을 빼면 일치한다. 이것이 Poincaré–Verdier duality의 국소적 형태이다.
+$f^!$은 일반적으로 $f^{-1}$과 전혀 다른 functor이다. 그러나 $f$가 적당히 smooth 경우, 두 functor는 fiber 차원만큼의 shift와 orientation에 의한 torsion을 빼면 일치한다. 이것이 Poincaré–Verdier duality의 국소적 형태이다.
 
 ::: 정리 7 (smooth 경우)
 $f: X \rightarrow Y$가 fiber가 $d$차원 topological manifold인 topological submersion이라 하자. 그럼 rank $1$인 $\mathbb{Z}$-local system $\operatorname{or}_{X/Y}$ (상대 orientation sheaf)가 존재하여 임의의 $\mathcal{G}^\bullet \in D(\Sh(Y))$에 대해 자연스러운 동형
@@ -110,7 +110,7 @@ $$f^! \mathcal{G}^\bullet \cong f^{-1}\mathcal{G}^\bullet \otimes \operatorname{
 이 성립한다. 특히 $f$의 fiber가 orientable하게 일관되게 방향지어지면 $\operatorname{or}_{X/Y} \cong \mathbb{Z}_X$이고 $f^! \mathcal{G}^\bullet \cong f^{-1}\mathcal{G}^\bullet[d]$이다.
 :::
 ::: 증명
-문제는 국소적이므로 $Y$ 위에서 $f$가 사영 $\mathbb{R}^d \times Y \rightarrow Y$인 경우로 환원되고, 다시 $Y = \{\ast\}$, 즉 $a: \mathbb{R}^d \rightarrow \{\ast\}$의 경우로 환원된다. 이때 $a^! \mathbb{Z}$는 정의상 $Ra_!$의 오른쪽 수반이 상수 sheaf에 주는 값이며, $Ra_! \mathbb{Z}_{\mathbb{R}^d} = R\Gamma_c(\mathbb{R}^d, \mathbb{Z})$가 degree $d$에 집중되어 $\mathbb{Z}[-d]$임을 ([예시 12](#ex12)에서 직접 계산한다) 이용하면, adjunction에 의해 $a^! \mathbb{Z} \cong \mathbb{Z}[d]$를 얻는다. $\mathbb{R}^d$는 표준적으로 방향지어지므로 orientation 비틀림이 자명하다. 일반적인 manifold fiber에서는 국소 chart를 이어 붙일 때 방향의 부호가 rank $1$ local system $\operatorname{or}_{X/Y}$로 누적되며, 이를 통해 위의 국소 동형이 대역적 동형으로 정돈된다. 자세한 논증은 [KS]의 Proposition 3.3.2를 따른다.
+문제는 국소적이므로 $Y$ 위에서 $f$가 사영 $\mathbb{R}^d \times Y \rightarrow Y$인 경우로 환원되고, 다시 $Y = \{\ast\}$, 즉 $a: \mathbb{R}^d \rightarrow \{\ast\}$의 경우로 환원된다. 이때 $a^! \mathbb{Z}$는 정의상 $Ra_!$의 오른쪽 수반이 상수 sheaf에 주는 값이며, $Ra_! \mathbb{Z}_{\mathbb{R}^d} = R\Gamma_c(\mathbb{R}^d, \mathbb{Z})$가 degree $d$에 집중되어 $\mathbb{Z}[-d]$임을 ([예시 12](#ex12)에서 직접 계산한다) 이용하면, adjunction에 의해 $a^! \mathbb{Z} \cong \mathbb{Z}[d]$를 얻는다. $\mathbb{R}^d$는 표준적으로 방향지어지므로 orientation torsion이 자명하다. 일반적인 manifold fiber에서는 국소 chart를 이어 붙일 때 방향의 부호가 rank $1$ local system $\operatorname{or}_{X/Y}$로 누적되며, 이를 통해 위의 국소 동형이 대역적 동형으로 정돈된다. 자세한 논증은 [KS]의 Proposition 3.3.2를 따른다.
 :::
 
 $Y = \{\ast\}$이고 $X$가 $d$차원 manifold인 특수한 경우, $\omega_X := a_X^! \mathbb{Z} \cong \operatorname{or}_X[d]$를 $X$의 *dualizing complex*라 부른다. $X$가 orientable하면 $\omega_X \cong \mathbb{Z}_X[d]$이며, 이 동형이 곧 manifold의 Poincaré duality를 sheaf 차원에서 진술하는 형태이다. 일반적인 (manifold가 아닐 수 있는) 공간에 대해서도 $\omega_X = a_X^! \mathbb{Z}$가 정의되어 dualizing complex의 역할을 하며, 이를 이용한 $R\Hom(-, \omega_X)$ 형태의 duality가 Verdier duality이다.
@@ -121,7 +121,7 @@ Complex manifold의 경우를 별도로 언급할 필요가 있다. $f$가 복�
 
 이제 여섯 functor가 모두 갖추어졌다. Continuous map $f: X \rightarrow Y$에 대한 네 개의 functor $Lf^\ast = f^{-1}$, $Rf_\ast$, $Rf_!$, $f^!$과, 각 공간 $X$ 위에서 내부적으로 정의되는 두 개의 functor $\otimes^L$, $R\Hom$이 그것이다. 이들 사이의 가장 기본적인 관계는 두 쌍의 adjunction이다. 첫째 쌍 $(Lf^\ast, Rf_\ast)$은 [§층의 유도 범주와 유도 함자, ⁋정리 9](/ko/math/sheaf_theory/derived_category_of_sheaves#thm9)에서 이미 확립하였고, 둘째 쌍 $(Rf_!, f^!)$은 [정의 6](#def6)에서 정의에 의해 성립한다. 각 공간 위의 내부 adjunction $(- \otimes^L \mathcal{G}, R\Hom(\mathcal{G}, -))$은 [§층의 유도 범주와 유도 함자, ⁋명제 8](/ko/math/sheaf_theory/derived_category_of_sheaves#prop8)의 derived tensor-hom adjunction이다.
 
-여섯 함자 형식의 위력은 이 functor들이 서로 다른 공간 사이를 오갈 때 호환되는 방식, 즉 base change와 projection formula에서 드러난다. 먼저 고유 받음이 임의의 base change와 교환한다는 것을 본다. 이것이 [정리 2](#thm2)를 비proper map까지 확장한 형태이며, $Rf_!$을 도입한 가장 큰 보상이다.
+Six-functor formalism의 위력은 이 functor들이 서로 다른 공간 사이를 오갈 때 호환되는 방식, 즉 base change와 projection formula에서 드러난다. 먼저 고유 받음이 임의의 base change와 교환한다는 것을 본다. 이것이 [정리 2](#thm2)를 비proper map까지 확장한 형태이며, $Rf_!$을 도입한 가장 큰 보상이다.
 
 ::: 정리 8 (고유 받음의 base change)
 [정리 2](#thm2)와 같은 cartesian square $X' = X \times_Y Y'$가 사영 $g': X' \rightarrow X$, $f': X' \rightarrow Y'$와 함께 주어졌다 하자. $f$가 compactifiable이면 $f'$도 그러하며, 임의의 연속함수 $g$에 대해 자연스러운 동형
@@ -155,7 +155,7 @@ Projection formula는 $f^!$에 대한 형태로도 옮겨 쓸 수 있다. 두 ad
 
 ## 열린-닫힌 분해와 recollement
 
-여섯 함자 형식이 가장 구체적으로 드러나는 상황은 공간을 열린 부분과 닫힌 부분으로 쪼갤 때이다. $X$의 닫힌 부분공간 $i: Z \hookrightarrow X$와 그 보충집합인 열린 부분공간 $j: U = X \setminus Z \hookrightarrow X$를 생각하자. Closed embedding $i$는 proper이므로 [따름정리 4](#cor4)에 의해 $i_! = i_\ast$이고, open embedding $j$에 대해서는 extension by zero $j_!$과 통상적 받음 $Rj_\ast$이 모두 있다. 이 morphism들이 만들어 내는 functor들은 두 개의 distinguished triangle로 엮인다.
+Six-functor formalism이 가장 구체적으로 드러나는 상황은 공간을 열린 부분과 닫힌 부분으로 쪼갤 때이다. $X$의 닫힌 부분공간 $i: Z \hookrightarrow X$와 그 보충집합인 열린 부분공간 $j: U = X \setminus Z \hookrightarrow X$를 생각하자. Closed embedding $i$는 proper이므로 [따름정리 4](#cor4)에 의해 $i_! = i_\ast$이고, open embedding $j$에 대해서는 extension by zero $j_!$과 통상적 받음 $Rj_\ast$이 모두 있다. 이 morphism들이 만들어 내는 functor들은 두 개의 distinguished triangle로 엮인다.
 
 ::: 정리 10 (recollement triangle)
 위의 열린-닫힌 분해에서 임의의 $\mathcal{F}^\bullet \in D(\Sh(X))$에 대해 다음 두 distinguished triangle이 $D(\Sh(X))$ 안에서 자연스럽게 존재한다.

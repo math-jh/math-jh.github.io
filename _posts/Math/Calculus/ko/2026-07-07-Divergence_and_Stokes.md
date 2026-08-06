@@ -19,7 +19,7 @@ weight: 20
 우선 우리는 발산정리를 보인다. 이는 $2$차원 boundary로 둘러싸인 $3$차원 공간의 적분에 대한 정리이다. 
 
 ::: 정리 1 (발산정리)
-$E$가 조각마다 smooth한 closed 곡면 $\partial E$로 둘러싸인 공간의 입체이고 $\mathbf{F}$가 $E$를 포함하는 열린집합에서 $C^1$ 벡터장이면, $\partial E$를 바깥 방향으로 잡을 때
+$E$가 조각마다 smooth한 closed 곡면 $\partial E$로 둘러싸인 공간의 입체이고 $\mathbf{F}$가 $E$를 포함하는 열린집합에서 $C^1$ 벡터장이면, $\partial E$를 outward로 잡을 때
 
 $$\iint_{\partial E} \mathbf{F} \cdot d\mathbf{S} = \iiint_E \divergence \mathbf{F}\mathop{dV}$$
 

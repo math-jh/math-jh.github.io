@@ -64,7 +64,7 @@ $$[x+\mathfrak{a},\,y+\mathfrak{a}]=[x,y]+\mathfrak{a}$$
 으로 정의되는 연산은 잘 정의된 Lie bracket이며, 이로써 $\mathfrak{g}/\mathfrak{a}$는 Lie algebra가 된다. 또한 quotient map $\pi:\mathfrak{g}\rightarrow\mathfrak{g}/\mathfrak{a}$는 surjective homomorphism이고, $\ker\pi=\mathfrak{a}$이다.
 :::
 ::: 증명
-연산이 대표원의 선택과 무관함을 보인다. $x'=x+a$, $y'=y+b$ ($a,b\in\mathfrak{a}$)라 하면
+연산이 representative의 선택과 무관함을 보인다. $x'=x+a$, $y'=y+b$ ($a,b\in\mathfrak{a}$)라 하면
 
 $$[x',y']=[x+a,\,y+b]=[x,y]+[x,b]+[a,y]+[a,b]$$
 
@@ -265,7 +265,7 @@ $$\mathfrak{g}^{m+1}=[\mathfrak{g},\mathfrak{g}^{m}]\subseteq[\mathfrak{g},Z(\ma
 
 Engel의 정리가 임의의 체에서 성립하는 것과 달리, solvable Lie algebra에 대한 동시 상삼각화는 기반 체에 대한 제약을 요구한다. Lie의 정리는 $k$가 대수적으로 닫혀 있고 characteristic이 $0$일 때, solvable Lie algebra of endomorphisms가 공통 eigenvector를 가짐을 보인다. Characteristic $0$이라는 가정은 아래 [보조정리 19](#lem19)의 증명에서 어떤 정수로 나누는 단계에 본질적으로 쓰이며, 양의 characteristic에서는 정리가 성립하지 않는 반례가 알려져 있다.
 
-증명의 핵심은 ideal에 대한 공통 eigenvalue가 정의하는 eigenspace가 전체 Lie algebra의 action에 의해 보존된다는 다음 불변성 보조정리이다.
+증명의 핵심은 ideal에 대한 공통 eigenvalue가 정의하는 eigenspace가 전체 Lie algebra의 action에 의해 보존된다는 다음 invariance 보조정리이다.
 
 ::: 보조정리 19
 $k$가 대수적으로 닫힌 characteristic $0$의 체이고, $V$가 $0$이 아닌 유한차원 $k$-벡터공간, $\mathfrak{g}\subseteq\mathfrak{gl}(V)$가 subalgebra라 하자. $\mathfrak{a}\subseteq\mathfrak{g}$가 ideal이고 $\lambda:\mathfrak{a}\rightarrow k$가 linear functional일 때,

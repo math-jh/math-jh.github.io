@@ -338,11 +338,11 @@ $$u=\frac{h^d}{f^m},\qquad v=\frac{h^e}{g^m}$$
 
 $$u^e=\frac{h^{de}}{f^{me}}=\left(\frac{g^d}{f^e}\right)^m\cdot\frac{h^{de}}{g^{md}}=\rho_{f,fg}(\theta_{f,g})^mv^d$$
 
-이고 $\rho_{f,fg}(\theta_{f,g})$는 unit이다. 따라서 $u^e$와 $v^d$는 unit 배만큼만 차이나고, $\Spec A_{(fg)}$에서 $D(u)=D(v)$이며 $A_{(fg)}$를 $u$에서 국소화한 것과 $v$에서 국소화한 것은 같은 ring이다. 즉 $\varphi_{fg}$는 $X_{fg}\cap X_{fh}$를 $X_{gf}\cap X_{gh}$ 위로 옮기며, 이 restriction은 ring homomorphism
+이고 $\rho_{f,fg}(\theta_{f,g})$는 unit이다. 따라서 $u^e$와 $v^d$는 unit 배만큼만 차이나고, $\Spec A_{(fg)}$에서 $D(u)=D(v)$이며 $A_{(fg)}$를 $u$에서 localization한 것과 $v$에서 localization한 것은 같은 ring이다. 즉 $\varphi_{fg}$는 $X_{fg}\cap X_{fh}$를 $X_{gf}\cap X_{gh}$ 위로 옮기며, 이 restriction은 ring homomorphism
 
 $$\alpha:(A_{(g)})_{\theta_{g,fh}} \rightarrow (A_{(f)})_{\theta_{f,gh}}$$
 
-의 spectrum이다. 여기에서 $\alpha$는 $\Phi_{f,g}^{-1}\circ\Phi_{g,f}$를 국소화하여 얻어진다. 그럼 합성
+의 spectrum이다. 여기에서 $\alpha$는 $\Phi_{f,g}^{-1}\circ\Phi_{g,f}$를 localize하여 얻어진다. 그럼 합성
 
 $$\tau: A_{(fg)}\overset{\Phi_{f,g}^{-1}}{\longrightarrow}(A_{(f)})_{\theta_{f,g}} \longrightarrow (A_{(f)})_{\theta_{f,gh}}\overset{\Psi_f}{\longrightarrow} A_{(fgh)}$$
 
@@ -423,7 +423,7 @@ $$wx=\frac{t^da}{f^{\deg t+n}}=0$$
 이제 마지막으로 우리는 맨 처음 motivation을 위해 살펴본 projective space를 대수기하의 언어로 (거의) 완전하게 옮겨본다.
 
 ::: 예시 12
-대수기하학에서, $\mathbb{P}^n_\mathbb{K}$는 다음의 식
+Algebraic geometry에서, $\mathbb{P}^n_\mathbb{K}$는 다음의 식
 
 $$\mathbb{P}^n_\mathbb{K}=\Proj \mathbb{K}[\x_0,\ldots, \x_n]$$
 

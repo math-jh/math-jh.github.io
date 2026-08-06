@@ -124,7 +124,7 @@ $$\int_c^b f(x) \mathop{dx} = \int_{1/(b-c)}^\infty \frac{f(c + 1/u)}{u^2} \math
 
 로 무한구간 적분이 된다. 곱해진 $u^{-2} > 0$은 부등식과 절댓값을 보존하므로 [명제 3](#prop3)과 [명제 4](#prop4)가 특이적분의 수렴 판정에도 그대로 성립한다.
 
-이 판정들이 실제로 쓰이려면 비교할 표준 함수가 있어야 하는데, 그 역할은 거의 항상 거듭제곱함수나 지수함수 $e^{-x}$가 맡는다. 그중 거듭제곱함수의 적분은 수렴과 발산을 가르는 (거의) sharp한 경계를 보여 준다.
+이 판정들이 실제로 쓰이려면 비교할 표준 함수가 있어야 하는데, 그 역할은 거의 항상 power function나 지수함수 $e^{-x}$가 맡는다. 그중 power function의 적분은 수렴과 발산을 가르는 (거의) sharp한 경계를 보여 준다.
 
 ::: 예시 5 (p-적분)
 거듭제곱의 이상적분은 무한구간과 singular point에서 정확히 반대의 경계를 보인다. 무한구간 $\int_1^{\infty} x^{-p} \mathop{dx}$는 $p > 1$에서 수렴하고 $p \leq 1$에서 발산하는 반면, singular point를 포함하는 $\int_0^1 x^{-p} \mathop{dx}$는 거꾸로 $p < 1$에서 수렴하고 $p \geq 1$에서 발산한다. 이 계산은 둘 다 같은 원시함수에서 나오는데, $p \neq 1$이면
@@ -157,7 +157,7 @@ $$\Gamma(s) = \int_0^\infty x^{s-1}e^{-x} \mathop{dx}$$
 
 $$\Gamma(s+1) = \bigl[-x^s e^{-x}\bigr]_0^\infty + s\int_0^\infty x^{s-1}e^{-x} \mathop{dx} = s \Gamma(s)$$
 
-이고 $\Gamma(1) = \int_0^\infty e^{-x} \mathop{dx} = 1$이므로 $\Gamma(n) = (n-1)!$이다. 즉 감마함수는 팩토리얼을 실수로 확장한다.
+이고 $\Gamma(1) = \int_0^\infty e^{-x} \mathop{dx} = 1$이므로 $\Gamma(n) = (n-1)!$이다. 즉 gamma function은 팩토리얼을 실수로 확장한다.
 :::
 
 ---

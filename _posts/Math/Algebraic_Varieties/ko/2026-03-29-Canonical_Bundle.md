@@ -206,7 +206,7 @@ $$0\rightarrow \mathcal{T}_D\rightarrow \mathcal{T}_X\vert_D\rightarrow \mathcal
 
 $$0 \rightarrow \mathcal{I}_D/\mathcal{I}_D^2\rightarrow \Omega_X^1\vert_D\rightarrow \Omega_D^1\rightarrow 0$$
 
-을 확인하여 얻어진다. 여기서 첫째 화살표는 $f\mapsto df$로 주어진다. 이 short exact sequence에 top exterior power를 취하면 다음을 얻는다.
+을 확인하여 얻어진다. 여기서 첫째 arrow는 $f\mapsto df$로 주어진다. 이 short exact sequence에 top exterior power를 취하면 다음을 얻는다.
 
 ::: 명제 9
 (Adjunction Formula) Smooth variety $X$의 smooth divisor $D$에 대해

@@ -13,7 +13,7 @@ weight: 1
 
 ---
 
-대수기하학에서 우리의 목표는 다항식으로 정의되는 기하적 대상들을 연구하는 것이다. 구체적으로, field $\mathbb{K}$와 자연수 $n$이 주어졌을 때, 우리는 다음의 식
+Algebraic geometry에서 우리의 목표는 다항식으로 정의되는 기하적 대상들을 연구하는 것이다. 구체적으로, field $\mathbb{K}$와 자연수 $n$이 주어졌을 때, 우리는 다음의 식
 
 $$Z(f)= \{(x_1, \ldots, x_n) \in \mathbb{A}^n \mid f(x_1, \ldots, x_n) = 0\},\qquad f\in \mathbb{K}[\x_1,\ldots, \x_n]$$
 

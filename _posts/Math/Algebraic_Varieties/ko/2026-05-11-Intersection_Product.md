@@ -19,7 +19,7 @@ weight: 20
 다음 정의는 한 점 $p$ 근방에서 두 variety $V,W$의 intersection이 무엇인지 보여준다. 정의에 의해 이는 점 $p$ 근방에서 일어나는 일이므로, affine chart를 택한 후 ambient space를 $\mathbb{A}^n$으로 두고 정의해도 충분하다. 
 
 ::: 정의 1
-아핀공간 $\mathbb{A}^n$의 점 $p$에서 두 variety $V, W$의 *intersection multiplicity<sub>교차 중복도</sub>* $i_p(V, W)$를 다음의 식
+Affine space $\mathbb{A}^n$의 점 $p$에서 두 variety $V, W$의 *intersection multiplicity<sub>교차 중복도</sub>* $i_p(V, W)$를 다음의 식
 
 $$i_p(V, W) = \dim_{\mathbb{K}} \mathcal{O}_{\mathbb{A}^n, p} / (I(V) + I(W))$$
 

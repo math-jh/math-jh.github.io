@@ -44,7 +44,7 @@ $\mathbb{C}$ 위의 Lie algebra $\mathfrak{g}$ 위에서 *conjugation<sub>켤레
 3. $\tau$는 bracket을 보존한다. 곧 $\tau([x,y])=[\tau x,\tau y]$이다.
 :::
 
-Conjugation $\tau$가 주어지면 그 fixed point set $\mathfrak{g}^{\tau}=\{x\in\mathfrak{g}\mid\tau x=x\}$은 $\mathbb{R}$ 위의 Lie subalgebra가 되고, $\tau$가 conjugate-linear involution이라는 데에서 $\mathfrak{g}=\mathfrak{g}^{\tau}\oplus i\mathfrak{g}^{\tau}$로 분해된다. 임의의 $x\in\mathfrak{g}$에 대하여 $\tfrac12(x+\tau x)$는 $\tau$-고정, $\tfrac1{2i}(x-\tau x)$도 $\tau$-고정이고 $x=\tfrac12(x+\tau x)+i\cdot\tfrac1{2i}(x-\tau x)$이기 때문이다. 따라서 $\mathfrak{g}^{\tau}$는 $\mathfrak{g}$의 real form이며, 역으로 real form $\mathfrak{g}_0\subseteq\mathfrak{g}$가 주어지면 $\mathfrak{g}=\mathfrak{g}_0\oplus i\mathfrak{g}_0$ 위에서 $\tau(x+iy)=x-iy$ ($x,y\in\mathfrak{g}_0$)로 정의된 conjugation이 $\mathfrak{g}_0$를 fixed point set으로 갖는다. 이로써 real form과 conjugation은 일대일로 대응한다.
+Conjugation $\tau$가 주어지면 그 fixed point set $\mathfrak{g}^{\tau}=\{x\in\mathfrak{g}\mid\tau x=x\}$은 $\mathbb{R}$ 위의 Lie subalgebra가 되고, $\tau$가 conjugate-linear involution이라는 데에서 $\mathfrak{g}=\mathfrak{g}^{\tau}\oplus i\mathfrak{g}^{\tau}$로 분해된다. 임의의 $x\in\mathfrak{g}$에 대하여 $(x+\tau x)/2$는 $\tau$-고정, $(x-\tau x)/(2i)$도 $\tau$-고정이고 $x=(x+\tau x)/2+i\cdot(x-\tau x)/(2i)$이기 때문이다. 따라서 $\mathfrak{g}^{\tau}$는 $\mathfrak{g}$의 real form이며, 역으로 real form $\mathfrak{g}_0\subseteq\mathfrak{g}$가 주어지면 $\mathfrak{g}=\mathfrak{g}_0\oplus i\mathfrak{g}_0$ 위에서 $\tau(x+iy)=x-iy$ ($x,y\in\mathfrak{g}_0$)로 정의된 conjugation이 $\mathfrak{g}_0$를 fixed point set으로 갖는다. 이로써 real form과 conjugation은 일대일로 대응한다.
 
 ::: 명제 3
 $\mathfrak{g}_0$가 복소 Lie algebra $\mathfrak{g}$의 real form이고 $\kappa_0,\kappa$가 각각 $\mathfrak{g}_0,\mathfrak{g}$의 Killing form이면, $\kappa$를 $\mathfrak{g}_0\times\mathfrak{g}_0$로 제한한 것은 $\kappa_0$와 같다. 특히 $\mathfrak{g}$의 Killing form은 $\mathfrak{g}_0$의 Killing form의 $\mathbb{C}$-bilinear extension이다.
@@ -164,15 +164,15 @@ $$H_\tau([x,y],z)=-\kappa([x,y],\tau z)=-\kappa(y,[\,\tau z,x\,])=\kappa(y,[x,\t
 이고, 이는 $\ad x$가 $H_\tau$에 대해 skew-Hermitian, 곧 $(\ad x)^\ast=-\ad x$임을 뜻한다. $x\in i\mathfrak{u}$이면 $\tau x=-x$이므로 같은 계산에서 부호가 한 번 더 뒤집혀 $(\ad x)^\ast=\ad x$, 곧 Hermitian이다.
 :::
 
-이 명제는 compact real form이 $\mathfrak{g}$ 위에 $\Ad(U)$-불변 inner product를 제공한다는 위 동기를 Hermitian form의 형태로 정밀화한 것으로, 두 compact form의 conjugation $\tau_1,\tau_2$를 비교하는 표준 논법의 출발점이 된다. $\theta=\tau_1\tau_2$가 $\mathfrak{g}$의 automorphism이고 $H_{\tau_1}$에 대해 양의 정부호 자기수반 작용소가 되므로, 그 실 거듭제곱 $\theta^t$를 통해 $\tau_2$를 $\tau_1$로 연속적으로 옮기는 $\mathfrak{g}$의 automorphism을 만들 수 있다. 우리는 이 표준적 사실의 결론만을 정리로 기록한다.
+이 명제는 compact real form이 $\mathfrak{g}$ 위에 $\Ad(U)$-불변 inner product를 제공한다는 위 동기를 Hermitian form의 형태로 정밀화한 것으로, 두 compact form의 conjugation $\tau_1,\tau_2$를 비교하는 표준 논법의 출발점이 된다. $\theta=\tau_1\tau_2$가 $\mathfrak{g}$의 automorphism이고 $H_{\tau_1}$에 대해 양의 정부호 self-adjoint 작용소가 되므로, 그 실 거듭제곱 $\theta^t$를 통해 $\tau_2$를 $\tau_1$로 연속적으로 옮기는 $\mathfrak{g}$의 automorphism을 만들 수 있다. 우리는 이 표준적 사실의 결론만을 정리로 기록한다.
 
 ::: 정리 9
 복소 semisimple Lie algebra $\mathfrak{g}$의 두 compact real form $\mathfrak{u}_1,\mathfrak{u}_2$에 대하여, $\varphi(\mathfrak{u}_1)=\mathfrak{u}_2$를 만족하는 automorphism $\varphi\in\Aut(\mathfrak{g})$가 존재한다. 특히 $\mathfrak{u}_1$과 $\mathfrak{u}_2$는 $\mathbb{R}$ 위의 Lie algebra로서 isomorphic하다. 곧 $\mathfrak{g}$의 compact real form은 동형을 제외하고 유일하다.
 :::
 ::: 증명
-$\tau_1,\tau_2$를 각각 $\mathfrak{u}_1,\mathfrak{u}_2$에 대응하는 conjugation이라 하고, $H=H_{\tau_1}$을 [명제 8](#prop8)의 양의 정부호 Hermitian form이라 하자. $\theta=\tau_1\tau_2$는 두 conjugate-linear involution의 합성이므로 $\mathfrak{g}$의 ($\mathbb{C}$-선형) automorphism이다. $\theta$가 $H$에 대해 양의 정부호 자기수반임을 보인다. $\tau_1$이 $H$에 대해 등거리적 conjugate-linear involution이라는 데에서 $\tau_1^\ast=\tau_1$ 꼴의 관계가 성립하고, $\theta$의 자기수반성은 $N=\theta^\ast\theta$가 양의 정부호 자기수반 automorphism임을 준다. 실제로는 $\theta$ 자신이 $H$에 대해 양의 정부호 자기수반이 되도록 $\tau_1,\tau_2$를 잡을 수 있으며, 이는 표준적 계산이다.
+$\tau_1,\tau_2$를 각각 $\mathfrak{u}_1,\mathfrak{u}_2$에 대응하는 conjugation이라 하고, $H=H_{\tau_1}$을 [명제 8](#prop8)의 양의 정부호 Hermitian form이라 하자. $\theta=\tau_1\tau_2$는 두 conjugate-linear involution의 합성이므로 $\mathfrak{g}$의 ($\mathbb{C}$-선형) automorphism이다. $\theta$가 $H$에 대해 양의 정부호 자기수반임을 보인다. $\tau_1$이 $H$에 대해 등거리적 conjugate-linear involution이라는 데에서 $\tau_1^\ast=\tau_1$ 꼴의 관계가 성립하고, $\theta$의 self-adjointness는 $N=\theta^\ast\theta$가 양의 정부호 자기수반 automorphism임을 준다. 실제로는 $\theta$ 자신이 $H$에 대해 양의 정부호 자기수반이 되도록 $\tau_1,\tau_2$를 잡을 수 있으며, 이는 표준적 계산이다.
 
-$\theta$가 양의 정부호 자기수반 automorphism이므로, spectrum 분해를 통해 실수 $t$에 대한 거듭제곱 $\theta^t$가 잘 정의되고 각 $\theta^t$ 역시 $\mathfrak{g}$의 automorphism이다 ($\theta$가 automorphism이고 그 고유공간 분해가 bracket과 호환되기 때문이다). $\varphi=\theta^{-1/2}$로 두면, $\theta\tau_1=\tau_1\theta^{-1}$ (따라서 실수 거듭제곱에 대해 $\theta^t\tau_1=\tau_1\theta^{-t}$) 이라는 관계로부터 $\varphi\tau_1\varphi^{-1}=\theta^{-1/2}\tau_1\theta^{1/2}=\tau_1\theta=\tau_2$임이 따른다 ($\theta=\tau_1\tau_2$에서 $\tau_1\theta=\tau_2$이므로). Conjugation을 옮기는 automorphism은 그 fixed point set인 real form을 옮기므로
+$\theta$가 양의 정부호 self-adjoint automorphism이므로, spectrum 분해를 통해 실수 $t$에 대한 거듭제곱 $\theta^t$가 잘 정의되고 각 $\theta^t$ 역시 $\mathfrak{g}$의 automorphism이다 ($\theta$가 automorphism이고 그 고유공간 분해가 bracket과 호환되기 때문이다). $\varphi=\theta^{-1/2}$로 두면, $\theta\tau_1=\tau_1\theta^{-1}$ (따라서 실수 거듭제곱에 대해 $\theta^t\tau_1=\tau_1\theta^{-t}$) 이라는 관계로부터 $\varphi\tau_1\varphi^{-1}=\theta^{-1/2}\tau_1\theta^{1/2}=\tau_1\theta=\tau_2$임이 따른다 ($\theta=\tau_1\tau_2$에서 $\tau_1\theta=\tau_2$이므로). Conjugation을 옮기는 automorphism은 그 fixed point set인 real form을 옮기므로
 
 $$\varphi(\mathfrak{u}_1)=\varphi(\mathfrak{g}^{\tau_1})=\mathfrak{g}^{\varphi\tau_1\varphi^{-1}}=\mathfrak{g}^{\tau_2}=\mathfrak{u}_2$$
 

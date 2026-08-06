@@ -23,7 +23,7 @@ published: false
 :::
 
 ::: 명제 2
-Norm은 곱셈적이다: $N(\alpha\beta) = N(\alpha)N(\beta)$. 따라서 $\alpha$가 $\mathbb{Z}[i]$의 가역원(단원)인 것은 $N(\alpha) = 1$인 것과 동치이며, 단원은 $\pm 1, \pm i$의 넷뿐이다.
+Norm은 multiplicative가다: $N(\alpha\beta) = N(\alpha)N(\beta)$. 따라서 $\alpha$가 $\mathbb{Z}[i]$의 가역원(단원)인 것은 $N(\alpha) = 1$인 것과 동치이며, 단원은 $\pm 1, \pm i$의 넷뿐이다.
 :::
 
 ::: 증명
@@ -39,9 +39,9 @@ $\mathbb{Z}[i]$는 Euclidean domain이다. 즉 임의의 $\alpha, \beta \in \mat
 :::
 
 ::: 증명
-복소수 $\alpha/\beta = u + vi$ ($u, v \in \mathbb{Q}$) 에 대해 가장 가까운 정수 $m, n$ ($\lvert u - m\rvert \leq \tfrac12$, $\lvert v - n\rvert \leq \tfrac12$) 을 잡고 $\kappa = m + ni$로 두자. $\rho = \alpha - \beta\kappa$로 두면
+복소수 $\alpha/\beta = u + vi$ ($u, v \in \mathbb{Q}$) 에 대해 가장 가까운 정수 $m, n$ ($\lvert u - m\rvert \leq 1/2$, $\lvert v - n\rvert \leq 1/2$) 을 잡고 $\kappa = m + ni$로 두자. $\rho = \alpha - \beta\kappa$로 두면
 
-$$N(\rho) = N(\beta)\,N\!\left(\frac{\alpha}{\beta} - \kappa\right) = N(\beta)\bigl((u-m)^2 + (v-n)^2\bigr) \leq N(\beta)\left(\tfrac14 + \tfrac14\right) = \tfrac12 N(\beta) < N(\beta)$$
+$$N(\rho) = N(\beta)\,N\!\left(\frac{\alpha}{\beta} - \kappa\right) = N(\beta)\bigl((u-m)^2 + (v-n)^2\bigr) \leq N(\beta)\left(\frac14 + \frac14\right) = \frac12 N(\beta) < N(\beta)$$
 
 이다. 유클리드 나눗셈이 성립하면 $\mathbb{Z}$에서와 똑같은 논증으로 ([§유클리드 호제법과 Bézout 항등식](/ko/math/number_theory/euclidean_algorithm), [§소수와 산술의 기본정리](/ko/math/number_theory/primes)) 최대공약수·Bézout·유일인수분해가 모두 따라온다.
 :::
@@ -57,7 +57,7 @@ $$N(\rho) = N(\beta)\,N\!\left(\frac{\alpha}{\beta} - \kappa\right) = N(\beta)\b
 ::: 증명
 $p \equiv 3 \pmod 4$이면, $x^2 + y^2 \equiv 0 \pmod p$에서 $p \nmid x$라면 $(xy^{-1})^2 \equiv -1 \pmod p$가 되어 $-1$이 이차 잉여여야 하는데, $\left(\frac{-1}{p}\right) = (-1)^{(p-1)/2} = -1$이므로 불가능하다. ([§이차 잉여, ⁋따름정리 5](/ko/math/number_theory/quadratic_residues#cor5)) 따라서 $p \mid x, p\mid y$이고 $x^2 + y^2$은 $p^2$의 배수가 되어 $p$와 같을 수 없다.
 
-$p \equiv 1 \pmod 4$이면 $\left(\frac{-1}{p}\right) = 1$이므로 $m^2 \equiv -1 \pmod p$인 $m$이 있다. 그러면 $p \mid m^2 + 1 = (m+i)(m-i)$이지만, $p$는 $\tfrac{m\pm i}{p} = \tfrac{m}{p} \pm \tfrac1p i \notin \mathbb{Z}[i]$이므로 $m + i$도 $m - i$도 나누지 못한다. 즉 $p$는 $\mathbb{Z}[i]$에서 소수가 아니어서 $p = \pi\overline{\pi}$로 비단원 인수분해되고, norm을 취하면 $p^2 = N(\pi)^2$에서 $N(\pi) = p$, 곧 $\pi = x + yi$에 대해 $p = x^2 + y^2$이다.
+$p \equiv 1 \pmod 4$이면 $\left(\frac{-1}{p}\right) = 1$이므로 $m^2 \equiv -1 \pmod p$인 $m$이 있다. 그러면 $p \mid m^2 + 1 = (m+i)(m-i)$이지만, $p$는 $(m\pm i)/p = m/p \pm i/p \notin \mathbb{Z}[i]$이므로 $m + i$도 $m - i$도 나누지 못한다. 즉 $p$는 $\mathbb{Z}[i]$에서 소수가 아니어서 $p = \pi\overline{\pi}$로 비단원 인수분해되고, norm을 취하면 $p^2 = N(\pi)^2$에서 $N(\pi) = p$, 곧 $\pi = x + yi$에 대해 $p = x^2 + y^2$이다.
 :::
 
 여기서 $p = 2 = 1^2 + 1^2$은 특별하다. $2 = -i(1+i)^2$이므로 $2$의 norm $N(1+i) = 2$인 인수 $1+i$가 단원을 곱한 차이로 자기 켤레와 같아지는, 이른바 *분기<sub>ramification</sub>*가 일어나는 유일한 소수이다. 이제 이러한 거동을 모든 소수에 대해 분류하여 $\mathbb{Z}[i]$의 소수(가우스 소수)가 무엇인지 완전히 기술하자.
@@ -86,7 +86,7 @@ $$\begin{aligned}
 $p = 2$이면 $2 = (1+i)(1-i) = -i(1+i)^2$이고 $N(1+i) = 2$는 소수이므로 $1+i$는 가우스 소수이며, $1 - i = -i(1+i)$는 그 단원배이다. $p \equiv 3 \pmod 4$이면 정리 4에서 보았듯 $p$는 두 제곱수의 합이 아니어서 $N(\pi) = p$인 $\pi$가 없고, 만약 $p = \alpha\beta$가 비단원 분해라면 $p^2 = N(\alpha)N(\beta)$에서 $N(\alpha) = p$가 강제되어 모순이므로 $p$ 자체가 가우스 소수이다 (norm $p^2$). $p \equiv 1 \pmod 4$이면 정리 4에서 $p = \pi\overline{\pi}$, $N(\pi) = p$이고, $N(\pi)$가 소수이므로 $\pi$는 가우스 소수이다. 끝으로 $\pi$와 $\overline{\pi}$가 단원배가 아님을 본다. $\pi = a + bi$ ($a^2 + b^2 = p$) 라 두고 $\overline{\pi} = u\pi$인 단원 $u \in \{1, -1, i, -i\}$가 있다고 가정하자. $u = \pm 1$이면 $a - bi = \pm(a + bi)$에서 $b = 0$ 또는 $a = 0$이 되어 $p = a^2$ 또는 $p = b^2$이 완전제곱수가 되고, $u = \pm i$이면 $a = \mp b$가 되어 $p = a^2 + b^2 = 2a^2$이 짝수가 된다. 어느 경우도 홀수 소수 $p$에 대해서는 성립할 수 없으므로, 둘은 단원배가 아니다.
 :::
 
-이 분류로 임의의 가우스 정수의 소인수분해를 norm을 단서 삼아 실제로 계산할 수 있다. Norm이 곱셈적이므로, $\alpha$를 인수분해하려면 먼저 정수 $N(\alpha)$를 인수분해하고 각 유리소인수에 대응하는 가우스 소수를 골라내면 된다.
+이 분류로 임의의 가우스 정수의 소인수분해를 norm을 단서 삼아 실제로 계산할 수 있다. Norm이 multiplicative가므로, $\alpha$를 인수분해하려면 먼저 정수 $N(\alpha)$를 인수분해하고 각 유리소인수에 대응하는 가우스 소수를 골라내면 된다.
 
 ## 예시와 계산
 
@@ -131,7 +131,7 @@ $$\begin{aligned}
 n = N(\alpha) &= 2^{a}\prod_{p \equiv 1} p^{b_p} \prod_{p \equiv 3} (p^2)^{c_p}
 \end{aligned}$$
 
-꼴이 되어, $p \equiv 3$인 소수는 모두 짝수 지수로만 나타난다. 역으로 $n = 2^a \prod_{p\equiv 1} p^{b_p}\prod_{p\equiv 3} p^{2c_p}$이면, $2 = N(1+i)$, $p = N(\pi_p)$ ($p \equiv 1$), $p^2 = N(p)$ ($p \equiv 3$) 이므로 각 인수가 어떤 가우스 정수의 norm이고, norm이 곱셈적이므로 그 곱 $n$도 norm, 곧 두 제곱수의 합이다.
+꼴이 되어, $p \equiv 3$인 소수는 모두 짝수 지수로만 나타난다. 역으로 $n = 2^a \prod_{p\equiv 1} p^{b_p}\prod_{p\equiv 3} p^{2c_p}$이면, $2 = N(1+i)$, $p = N(\pi_p)$ ($p \equiv 1$), $p^2 = N(p)$ ($p \equiv 3$) 이므로 각 인수가 어떤 가우스 정수의 norm이고, norm이 multiplicative가므로 그 곱 $n$도 norm, 곧 두 제곱수의 합이다.
 :::
 
 ::: 예시 9 (판정법의 적용)

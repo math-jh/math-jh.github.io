@@ -15,7 +15,7 @@ weight: 5
 
 ---
 
-기하학에서 차원은 가장 기본적인 불변량 중 하나이다. 대수기하학에서도 차원은 마찬가지로 중요하며, 이를 정의하는 여러 가지 동등한 방법이 존재한다. 이 글에서 우리는 variety의 차원을 정의하는 여러 방법을 살펴본다. 
+기하학에서 차원은 가장 기본적인 불변량 중 하나이다. Algebraic geometry에서도 차원은 마찬가지로 중요하며, 이를 정의하는 여러 가지 동등한 방법이 존재한다. 이 글에서 우리는 variety의 차원을 정의하는 여러 방법을 살펴본다. 
 
 ## 위상공간으로서의 차원
 
@@ -94,10 +94,10 @@ $$\dim \mathbb{K}[\x_1, \ldots, \x_n]/(f) = \dim \mathbb{K}[\x_1, \ldots, \x_n] 
 
 ## 함수체를 통한 차원
 
-차원을 정의하는 또 다른 방법은 함수체를 사용하는 것이다. 함수체 $\mathbb{K}(X)$는 variety의 generic point에서의 정보를 담고 있으며, birational invariant이기도 하다. 다음 명제 또한 대수적인 사실로부터 유도된다.
+차원을 정의하는 또 다른 방법은 function field를 사용하는 것이다. Function field $\mathbb{K}(X)$는 variety의 generic point에서의 정보를 담고 있으며, birational invariant이기도 하다. 다음 명제 또한 대수적인 사실로부터 유도된다.
 
 ::: 명제 7
-Variety $X$의 차원은 함수체 $\mathbb{K}(X)$의 $\mathbb{K}$ 위에서의 transcendence degree와 같다.
+Variety $X$의 차원은 function field $\mathbb{K}(X)$의 $\mathbb{K}$ 위에서의 transcendence degree와 같다.
 :::
 
 ::: 예시 8

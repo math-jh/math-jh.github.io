@@ -310,7 +310,7 @@ $2$차원 구면 $S^2$는 complex manifold $\mathbb{CP}^1$의 바탕 smooth mani
 적분불가능성이 처음 본격적으로 나타나는 것은 $S^6$이다.
 
 ::: 예시 15 ($S^6$의 octonion 거의 복소구조)
-$6$차원 구면 $S^6$는 거의 복소구조를 가진다. 이를 octonion $\mathbb{O}$의 곱셈으로부터 다음과 같이 구성한다. $\mathbb{O}$의 순허수부 $\Img \mathbb{O} \cong \mathbb{R}^7$ 안의 단위구면이 $S^6$이고, 점 $p \in S^6$에서의 tangent space $T_p S^6$은 $p$에 직교하는 $\Img \mathbb{O}$의 부분공간이다. 여기서 $J_p(v) = p \cdot v$ (octonion 곱) 로 정의하면 $J_p^2(v) = p \cdot (p \cdot v) = -v$가 octonion 항등식에서 따라오므로 $J_p^2 = -\id$이고, $J$는 거의 복소구조이다. 그러나 이 표준 거의 복소구조는 *적분불가능*하다. 곧 $N_J \neq 0$이며, 직접 계산으로 octonion의 비결합성이 정확히 $N_J$의 비소멸로 나타남을 확인할 수 있다. 한편 $S^6$ 위에 (이 $J$와는 다른) 적분가능 거의 복소구조, 곧 complex manifold 구조가 아예 존재하는가 하는 물음은 오랫동안 미해결 문제로 남아 있다.
+$6$차원 구면 $S^6$는 거의 복소구조를 가진다. 이를 octonion $\mathbb{O}$의 곱셈으로부터 다음과 같이 구성한다. $\mathbb{O}$의 순허수부 $\Img \mathbb{O} \cong \mathbb{R}^7$ 안의 단위구면이 $S^6$이고, 점 $p \in S^6$에서의 tangent space $T_p S^6$은 $p$에 직교하는 $\Img \mathbb{O}$의 부분공간이다. 여기서 $J_p(v) = p \cdot v$ (octonion 곱) 로 정의하면 $J_p^2(v) = p \cdot (p \cdot v) = -v$가 octonion 항등식에서 따라오므로 $J_p^2 = -\id$이고, $J$는 거의 복소구조이다. 그러나 이 표준 거의 복소구조는 *적분불가능*하다. 곧 $N_J \neq 0$이며, 직접 계산으로 octonion의 non-associativity가 정확히 $N_J$의 비소멸로 나타남을 확인할 수 있다. 한편 $S^6$ 위에 (이 $J$와는 다른) 적분가능 거의 복소구조, 곧 complex manifold 구조가 아예 존재하는가 하는 물음은 오랫동안 미해결 문제로 남아 있다.
 :::
 
 마지막으로 거의 복소구조의 존재 자체가 위상적 제약을 받는다는 사실을 짚는다. 짝수차원은 명제 2에 따라 필요조건이지만 충분하지 않다.

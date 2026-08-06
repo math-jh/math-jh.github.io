@@ -74,22 +74,22 @@ $$h\cdot v=\mu v,\qquad e\cdot v=0$$
 다음 명제는 highest weight vector 하나에서 출발해 $f$를 반복 적용하여 얻는 사슬의 작용을 완전히 기술한다.
 
 ::: 명제 4
-$v_0$이 weight $\mu$의 highest weight vector라 하고, $j\geq 0$에 대하여 $v_j=\tfrac{1}{j!}f^j\cdot v_0$, $v_{-1}=0$으로 두자. 그럼 각 $j\geq 0$에 대하여
+$v_0$이 weight $\mu$의 highest weight vector라 하고, $j\geq 0$에 대하여 $v_j=f^j\cdot v_0/j!$, $v_{-1}=0$으로 두자. 그럼 각 $j\geq 0$에 대하여
 
 $$h\cdot v_j=(\mu-2j)v_j,\qquad f\cdot v_j=(j+1)v_{j+1},\qquad e\cdot v_j=(\mu-j+1)v_{j-1}$$
 
 이 성립한다.
 :::
 ::: 증명
-$v_j$는 $f^j\cdot v_0$의 스칼라배이므로 [명제 2](#prop2)에 의하여 $v_j\in V_{\mu-2j}$, 곧 $h\cdot v_j=(\mu-2j)v_j$이다. 또 $f\cdot v_j=f\cdot\tfrac{1}{j!}f^j\cdot v_0=\tfrac{j+1}{(j+1)!}f^{j+1}\cdot v_0=(j+1)v_{j+1}$이다.
+$v_j$는 $f^j\cdot v_0$의 스칼라배이므로 [명제 2](#prop2)에 의하여 $v_j\in V_{\mu-2j}$, 곧 $h\cdot v_j=(\mu-2j)v_j$이다. 또 $f\cdot v_j=f\cdot f^j\cdot v_0/j!=(j+1)f^{j+1}\cdot v_0/(j+1)!=(j+1)v_{j+1}$이다.
 
 $e$에 대한 식은 $j$에 대한 귀납법으로 보인다. $j=0$인 경우 $v_{-1}=0$이고 $e\cdot v_0=0$이므로 성립한다. 식이 $j$에 대해 성립한다고 가정하면, $ef=fe+[e,f]=fe+h$를 사용하여
 
 $$\begin{aligned}
-e\cdot v_{j+1}&=e\cdot\tfrac{1}{j+1}f\cdot v_j=\tfrac{1}{j+1}(fe+h)\cdot v_j\\
-&=\tfrac{1}{j+1}\bigl(f\cdot((\mu-j+1)v_{j-1})+(\mu-2j)v_j\bigr)\\
-&=\tfrac{1}{j+1}\bigl((\mu-j+1)\cdot j\,v_j+(\mu-2j)v_j\bigr)\\
-&=\tfrac{1}{j+1}\bigl(j\mu-j^2+j+\mu-2j\bigr)v_j=(\mu-j)v_j
+e\cdot v_{j+1}&=e\cdot\frac{1}{j+1}f\cdot v_j=\frac{1}{j+1}(fe+h)\cdot v_j\\
+&=\frac{1}{j+1}\bigl(f\cdot((\mu-j+1)v_{j-1})+(\mu-2j)v_j\bigr)\\
+&=\frac{1}{j+1}\bigl((\mu-j+1)\cdot j\,v_j+(\mu-2j)v_j\bigr)\\
+&=\frac{1}{j+1}\bigl(j\mu-j^2+j+\mu-2j\bigr)v_j=(\mu-j)v_j
 \end{aligned}$$
 
 을 얻는데, 이는 $j$를 $j+1$로 바꾼 식 $e\cdot v_{j+1}=(\mu-(j+1)+1)v_j$와 일치한다. 여기에서 $f\cdot v_{j-1}=j\,v_j$를 사용하였다.
@@ -133,18 +133,18 @@ $$ef\cdot v_j=(j+1)\,e\cdot v_{j+1}=(j+1)(n-j)v_j,\qquad fe\cdot v_j=(n-j+1)\,f\
 Irreducible representation의 분류는 임의의 representation을 irreducible representation들로 분해할 수 있을 때에 비로소 완결된 그림을 준다. $\SL(2;\mathbb{C})$는 compact가 아니므로 invariant inner product를 적분으로 평균내는 unitarian trick을 직접 쓸 수 없고, 따라서 완전가약성은 별도의 논증을 요구한다. 우리는 [§보편 포락 대수, ⁋예시 12](/ko/math/lie_theory/universal_enveloping_algebra#ex12)에서 정의된 Casimir element를 사용한다.
 
 ::: 정의 7
-$\sl_2$-representation $V$ 위에서, [§보편 포락 대수, ⁋예시 12](/ko/math/lie_theory/universal_enveloping_algebra#ex12)의 Casimir element $\Omega=ef+fe+\tfrac{1}{2}h^2$가 정의하는 연산자
+$\sl_2$-representation $V$ 위에서, [§보편 포락 대수, ⁋예시 12](/ko/math/lie_theory/universal_enveloping_algebra#ex12)의 Casimir element $\Omega=ef+fe+h^2/2$가 정의하는 연산자
 
-$$C=e\circ f+f\circ e+\tfrac{1}{2}h\circ h:V\rightarrow V$$
+$$C=e\circ f+f\circ e+\frac{1}{2}h\circ h:V\rightarrow V$$
 
 을 $V$ 위의 *Casimir operator<sub>카시미르 연산자</sub>*라 부른다.
 :::
 
 $\Omega$가 $U(\sl_2)$의 중심에 속하므로 ([§보편 포락 대수, ⁋예시 12](/ko/math/lie_theory/universal_enveloping_algebra#ex12)), $C$는 $h,e,f$의 작용 모두와 가환이다. 곧 $C$는 $\sl_2$-equivariant한 자기준동형이며, Schur의 보조정리의 정신에 따라 irreducible representation 위에서는 스칼라로 작용한다. 실제로 $V(n)$의 highest weight vector $v_0$ 위에서 $e\cdot v_0=0$을 사용하면
 
-$$C\cdot v_0=ef\cdot v_0+fe\cdot v_0+\tfrac{1}{2}h^2\cdot v_0=(fe+h)\cdot v_0+0+\tfrac{1}{2}n^2v_0=n\,v_0+\tfrac{1}{2}n^2v_0=\tfrac{1}{2}n(n+2)v_0$$
+$$C\cdot v_0=ef\cdot v_0+fe\cdot v_0+\frac{1}{2}h^2\cdot v_0=(fe+h)\cdot v_0+0+\frac{1}{2}n^2v_0=n\,v_0+\frac{1}{2}n^2v_0=\frac{1}{2}n(n+2)v_0$$
 
-이므로, $C$는 $V(n)$ 위에서 스칼라 $\tfrac{1}{2}n(n+2)$로 작용한다. 여기에서 $ef\cdot v_0=(fe+[e,f])\cdot v_0=(fe+h)\cdot v_0$이고 $fe\cdot v_0=0$, $h\cdot v_0=nv_0$을 사용하였다. 이 스칼라는 $n\geq 0$에 대해 서로 다른 값을 가지므로 $C$의 고윳값은 representation을 구별한다.
+이므로, $C$는 $V(n)$ 위에서 스칼라 $n(n+2)/2$로 작용한다. 여기에서 $ef\cdot v_0=(fe+[e,f])\cdot v_0=(fe+h)\cdot v_0$이고 $fe\cdot v_0=0$, $h\cdot v_0=nv_0$을 사용하였다. 이 스칼라는 $n\geq 0$에 대해 서로 다른 값을 가지므로 $C$의 고윳값은 representation을 구별한다.
 
 완전가약성 증명의 핵심은 representation이 short exact sequence로 쪼개질 때, 그 exact sequence가 항상 분리됨을 보이는 것이다. 다음 보조정리가 그 출발점이다.
 
@@ -154,7 +154,7 @@ $0\rightarrow W\rightarrow V\rightarrow\mathbb{C}\rightarrow 0$이 $\sl_2$-repre
 ::: 증명
 $\dim W$에 대한 귀납법으로 보인다. $W$가 $0$이 아닌 진부분 subrepresentation $W'$을 가지면, 몫 $V/W'$은 $0\rightarrow W/W'\rightarrow V/W'\rightarrow\mathbb{C}\rightarrow 0$을 이루고 $\dim(W/W')<\dim W$이므로 귀납 가정에 의해 분리되어, $V/W'$ 안에 $\mathbb{C}$로 사상되는 $1$차원 subrepresentation $\widetilde U/W'$이 있다. 이제 $0\rightarrow W'\rightarrow\widetilde U\rightarrow\mathbb{C}\rightarrow 0$은 $\dim W'<\dim W$이므로 다시 귀납 가정으로 분리되어, $\widetilde U$ 안에 $\mathbb{C}$로 사상되는 $1$차원 subrepresentation $L$이 있다. $L$은 $V\rightarrow\mathbb{C}$로 동형으로 사상되므로 $V=W\oplus L$이다.
 
-따라서 $W$가 기약인 경우만 보이면 된다. $W=V(0)$이 자명한 representation이면 $V$는 $2$차원이고 $\sl_2$가 $V$ 위에서 nilpotent하게만 작용하므로 ($h,e,f$의 모든 commutator가 자명한 $1$차원 몫과 부분 위에서 $0$이 되어 작용 전체가 strictly upper-triangular), $[e,f]=h$의 trace를 비교하면 $h$의 작용이 $0$이고 작용이 분리되어 $V\cong W\oplus\mathbb{C}$이다. $W=V(n)$이 $n\geq 1$인 기약인 경우, $V$ 위의 Casimir operator $C$를 생각한다. $C$는 자명한 representation $\mathbb{C}=V(0)$ 위에서 $\tfrac{1}{2}\cdot0\cdot2=0$으로, $W=V(n)$ 위에서 $\tfrac{1}{2}n(n+2)\neq 0$으로 작용한다. $C$가 $\sl_2$의 작용과 가환이므로 $\ker C$는 $V$의 subrepresentation이다. Exact sequence에서 $V/W\cong\mathbb{C}$ 위에서 $C$가 $0$이므로 $C(V)\subseteq W$이고, $W$ 위에서 $C$가 가역 스칼라이므로 $C\colon V\rightarrow W$는 전사이며 $\ker C$는 $1$차원이다. $\ker C\cap W=0$이므로 $V=W\oplus\ker C$가 $\sl_2$-불변 분해이다.
+따라서 $W$가 기약인 경우만 보이면 된다. $W=V(0)$이 자명한 representation이면 $V$는 $2$차원이고 $\sl_2$가 $V$ 위에서 nilpotent하게만 작용하므로 ($h,e,f$의 모든 commutator가 자명한 $1$차원 몫과 부분 위에서 $0$이 되어 작용 전체가 strictly upper-triangular), $[e,f]=h$의 trace를 비교하면 $h$의 작용이 $0$이고 작용이 분리되어 $V\cong W\oplus\mathbb{C}$이다. $W=V(n)$이 $n\geq 1$인 기약인 경우, $V$ 위의 Casimir operator $C$를 생각한다. $C$는 자명한 representation $\mathbb{C}=V(0)$ 위에서 $0$으로, $W=V(n)$ 위에서 $n(n+2)/2\neq 0$으로 작용한다. $C$가 $\sl_2$의 작용과 가환이므로 $\ker C$는 $V$의 subrepresentation이다. Exact sequence에서 $V/W\cong\mathbb{C}$ 위에서 $C$가 $0$이므로 $C(V)\subseteq W$이고, $W$ 위에서 $C$가 가역 스칼라이므로 $C\colon V\rightarrow W$는 전사이며 $\ker C$는 $1$차원이다. $\ker C\cap W=0$이므로 $V=W\oplus\ker C$가 $\sl_2$-불변 분해이다.
 :::
 
 이제 일반적인 short exact sequence로 넘어간다. 보조정리 8의 자명한 몫이라는 제약을 $\Hom$ 공간을 도입하여 제거한다.

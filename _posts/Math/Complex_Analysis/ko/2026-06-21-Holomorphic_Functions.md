@@ -157,7 +157,7 @@ $$\frac{\partial f}{\partial z} = \frac{1}{2}\left(\frac{\partial f}{\partial x}
 으로 정의하고, 각각 $\partial_z f$, $\partial_{\bar{z}} f$로도 적는다. 여기서 $\partial_x f$, $\partial_y f$는 $f$를 두 실변수 $x, y$의 (복소숫값) 함수로 본 편미분이다.
 :::
 
-이 정의는 $\partial_z$가 $z = x + iy$, $\partial_{\bar{z}}$가 $\bar{z} = x - iy$에 대한 "도함수"처럼 행동하도록 고안된 것이다. 실제로 형식적으로 $x = (z + \bar{z})/2$, $y = (z - \bar{z})/(2i)$로 두고 연쇄법칙을 적용하면 위 두 연산자가 나온다. 표기의 정당성은 다음 항등식들로 확인되는데, $\partial_z z = 1$, $\partial_z \bar{z} = 0$, $\partial_{\bar{z}} z = 0$, $\partial_{\bar{z}} \bar{z} = 1$이 성립한다. 가령 $z = x + iy$에 대해 $\partial_{\bar z} z = \tfrac12(\partial_x + i\partial_y)(x + iy) = \tfrac12(1 + i\cdot i) = 0$이다. 이 표기로 Cauchy–Riemann 방정식은 단 하나의 등식이 된다.
+이 정의는 $\partial_z$가 $z = x + iy$, $\partial_{\bar{z}}$가 $\bar{z} = x - iy$에 대한 "도함수"처럼 행동하도록 고안된 것이다. 실제로 형식적으로 $x = (z + \bar{z})/2$, $y = (z - \bar{z})/(2i)$로 두고 연쇄법칙을 적용하면 위 두 연산자가 나온다. 표기의 정당성은 다음 항등식들로 확인되는데, $\partial_z z = 1$, $\partial_z \bar{z} = 0$, $\partial_{\bar{z}} z = 0$, $\partial_{\bar{z}} \bar{z} = 1$이 성립한다. 가령 $z = x + iy$에 대해 $\partial_{\bar z} z = (\partial_x + i\partial_y)(x + iy)/2 = (1 + i\cdot i)/2 = 0$이다. 이 표기로 Cauchy–Riemann 방정식은 단 하나의 등식이 된다.
 
 ::: 명제 8
 $f = u + iv$가 $z_0$에서 실미분가능하다고 하자. 그러면 $z_0$에서 Cauchy–Riemann 방정식이 성립하는 것은
@@ -176,7 +176,7 @@ $$\frac{\partial f}{\partial \bar{z}} = \frac{1}{2}\left( (u_x + i v_x) + i(u_y 
 
 $$\frac{\partial f}{\partial z} = \frac{1}{2}\left( (u_x + i v_x) - i(u_y + i v_y) \right) = \frac{1}{2}\bigl( (u_x + v_y) + i(v_x - u_y) \bigr)$$
 
-인데, Cauchy–Riemann 방정식이 성립하면 $v_y = u_x$, $u_y = -v_x$이므로 우변이 $\tfrac12(2u_x + i\,2v_x) = u_x + i v_x$가 되어, 정리 5의 도함수 공식에 의해 $f'(z_0) = u_x + i v_x = \partial_z f(z_0)$이다.
+인데, Cauchy–Riemann 방정식이 성립하면 $v_y = u_x$, $u_y = -v_x$이므로 우변이 $(2u_x + i\,2v_x)/2 = u_x + i v_x$가 되어, 정리 5의 도함수 공식에 의해 $f'(z_0) = u_x + i v_x = \partial_z f(z_0)$이다.
 :::
 
 명제 8은 holomorphicity를 "$f$가 $\bar{z}$에 의존하지 않는다"로 해석하게 해 준다. 형식적으로 $\partial_{\bar z} f = 0$은 $f$가 $\bar{z}$에 무관하게 $z$만의 함수임을 뜻하며, holomorphic function이 곧 "$z$만의 함수"라는 직관을 정당화한다. 이 관점에서 예시 4의 $f(z) = \bar{z}$는 $\partial_{\bar z}\bar z = 1 \neq 0$이라 어디에서도 holomorphic이 아님이 즉시 보인다. 또 holomorphic function의 도함수가 $\partial_z f$로 주어지므로, 실무에서는 $f$를 $z$로 적고 평범하게 미분하면 도함수가 나온다. 가령 $f(z) = z^2$이면 $\partial_z f = 2z$, $\partial_{\bar z} f = 0$이다.
@@ -237,7 +237,7 @@ $$e^{iz} = \cos z + i\sin z$$
 
 ## 조화함수
 
-Holomorphic function의 실수부와 허수부는 단지 smooth한 실함수가 아니라, 평면의 Laplace 방정식을 만족하는 조화함수라는 더 강한 구조를 가진다. 이 사실은 복소해석학과 평면의 potential 이론을 잇는 다리가 된다. 이 절에서는 holomorphic function이 두 번 복소미분가능하다는 사실, 곧 $u, v$가 $C^2$급이라는 사실을 받아들이고 출발한다. 이는 적분 이론에서 증명되는 holomorphic function의 무한미분가능성의 한 귀결이다.
+Holomorphic function의 실수부와 허수부는 단지 smooth한 실함수가 아니라, 평면의 Laplace 방정식을 만족하는 조화함수라는 더 강한 구조를 가진다. 이 사실은 complex analysis와 평면의 potential 이론을 잇는 다리가 된다. 이 절에서는 holomorphic function이 두 번 복소미분가능하다는 사실, 곧 $u, v$가 $C^2$급이라는 사실을 받아들이고 출발한다. 이는 적분 이론에서 증명되는 holomorphic function의 무한미분가능성의 한 귀결이다.
 
 ::: 정의 11
 열린집합 $\Omega \subseteq \mathbb{R}^2$ 위의 $C^2$급 실숫값 함수 $u$가 *조화함수<sub>harmonic function</sub>*라는 것은 $\Omega$에서 *Laplace 방정식*

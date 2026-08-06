@@ -74,12 +74,12 @@ Scheme morphism $\varphi:X \rightarrow Y$에 대하여, 두 개의 $\id_X$가 fi
 
 {% diagram Math/Scheme_Theory/Valuative_Criteria-1.svg width="13.58em" alt="diagonal_morphism" %}
 
-의 점선 화살표 $\Delta: X \rightarrow X \times_Y X$를 $\varphi$의 *diagonal morphism<sub>대각사상</sub>*이라 부른다. ([§올곱, ⁋정의 1](/ko/math/scheme_theory/fiber_products#def1)) 만일 $\Delta$가 closed embedding이라면 $\varphi$를 *separated<sub>분리사상</sub>*라 부르고, $X$가 $Y$에 대해 *separated*라 부른다. 만일 $X$가 $\Spec \mathbb{Z}$에 대해 separated이면, $X$를 간단히 *separated* scheme이라 부른다.
+의 점선 arrow $\Delta: X \rightarrow X \times_Y X$를 $\varphi$의 *diagonal morphism<sub>대각사상</sub>*이라 부른다. ([§올곱, ⁋정의 1](/ko/math/scheme_theory/fiber_products#def1)) 만일 $\Delta$가 closed embedding이라면 $\varphi$를 *separated<sub>분리사상</sub>*라 부르고, $X$가 $Y$에 대해 *separated*라 부른다. 만일 $X$가 $\Spec \mathbb{Z}$에 대해 separated이면, $X$를 간단히 *separated* scheme이라 부른다.
 :::
 
 어느 morphism의 diagonal인지를 밝혀야 할 때에는 $\Delta$ 대신 $\Delta_{X/Y}$로 적는다. 정의로부터 두 projection $p_1,p_2: X\times_YX \rightarrow X$에 대해 $p_1\circ\Delta=p_2\circ\Delta=\id_X$인 것은 자명하다. 또, $\Delta$는 단사이고 $p_1$을 $\Delta(X)$로 제한한 것이 $\Delta$의 연속인 역함수를 주므로, $\Delta$는 언제나 $\Delta(X)$ 위로의 homeomorphism이다. 따라서 $\Delta$가 closed embedding인지를 묻는 것은, $\Delta(X)$가 닫혀 있는지와 $X$의 함수들이 모두 $X\times_YX$의 함수를 제한하여 얻어지는지를 묻는 것이 된다. ([§닫힌 부분스킴, ⁋정의 2](/ko/math/scheme_theory/closed_subschemes#def2))
 
-위에서 설명한 것과 같이 대수기하학에서는 separatedness가 Hausdorff를 대체하는 성질이라 생각한다. 위상공간 $T$가 Hausdorff인 것이 $T\times T$ 안에서 대각선이 닫혀 있는 것과 동치였음을 떠올리면 ([\[위상수학\] §하우스도르프 공간, ⁋보조정리 5](/ko/math/topology/Hausdorff_spaces#lem5)) 다음 명제를 기대하는 것이 자연스럽다. 
+위에서 설명한 것과 같이 algebraic geometry에서는 separatedness가 Hausdorff를 대체하는 성질이라 생각한다. 위상공간 $T$가 Hausdorff인 것이 $T\times T$ 안에서 대각선이 닫혀 있는 것과 동치였음을 떠올리면 ([\[위상수학\] §하우스도르프 공간, ⁋보조정리 5](/ko/math/topology/Hausdorff_spaces#lem5)) 다음 명제를 기대하는 것이 자연스럽다. 
 
 ::: 명제 4
 $\varphi:X \rightarrow Y$가 separated인 것과, diagonal morphism $\Delta: X \rightarrow X\times_YX$에 의한 $X$의 image가 닫힌집합인 것이 동치이다.

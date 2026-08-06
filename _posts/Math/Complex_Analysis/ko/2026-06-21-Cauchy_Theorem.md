@@ -14,7 +14,7 @@ weight: 4
 published: false
 ---
 
-복소적분 이론은 ([§복소적분](/ko/math/complex_analysis/complex_integration)) 원시함수를 갖는 함수의 closed 경로 적분이 $0$임을 알려 주었지만, 원시함수의 존재 자체는 손으로 확인해야 하는 별개의 문제로 남겨 두었다. Cauchy 정리는 이 빈틈을 메운다. Holomorphicity라는 국소적 미분 조건만으로 closed 경로 적분의 소멸이라는 전역적 결론이 따라 나온다는 것이 그 내용이며, 복소해석학의 거의 모든 깊은 정리가 이 한 사실에서 갈라져 나온다. 출발점은 Goursat의 정리로, holomorphic function의 삼각형 boundary 적분이 $0$임을 도함수의 연속성조차 가정하지 않고 순수하게 적분의 어림만으로 증명한다. 여기에서 볼록한 영역 위 원시함수의 구성이 따라 나오고, 영역의 위상을 들여오면 적분이 경로의 연속적 변형에 무관하다는 homotopy 불변성으로 확장된다. 끝으로 closed 경로가 한 점을 몇 번 감는지를 세는 회전수를 정의하여, 적분과 위상을 잇는 다리를 놓는다.
+복소적분 이론은 ([§복소적분](/ko/math/complex_analysis/complex_integration)) 원시함수를 갖는 함수의 closed 경로 적분이 $0$임을 알려 주었지만, 원시함수의 존재 자체는 손으로 확인해야 하는 별개의 문제로 남겨 두었다. Cauchy 정리는 이 빈틈을 메운다. Holomorphicity라는 국소적 미분 조건만으로 closed 경로 적분의 소멸이라는 전역적 결론이 따라 나온다는 것이 그 내용이며, complex analysis의 거의 모든 깊은 정리가 이 한 사실에서 갈라져 나온다. 출발점은 Goursat의 정리로, holomorphic function의 삼각형 boundary 적분이 $0$임을 도함수의 연속성조차 가정하지 않고 순수하게 적분의 어림만으로 증명한다. 여기에서 볼록한 영역 위 원시함수의 구성이 따라 나오고, 영역의 위상을 들여오면 적분이 경로의 연속적 변형에 무관하다는 homotopy 불변성으로 확장된다. 끝으로 closed 경로가 한 점을 몇 번 감는지를 세는 회전수를 정의하여, 적분과 위상을 잇는 다리를 놓는다.
 
 ## Goursat 정리
 
@@ -35,7 +35,7 @@ $$\oint_{\partial T} f(z)\,dz = 0$$
 
 $$\oint_{\partial T} f\,dz = \sum_{j=1}^{4} \oint_{\partial T_j} f\,dz$$
 
-이다. 삼각부등식에 의해 적어도 한 $j$에 대해 $\bigl\lvert \oint_{\partial T_j} f\,dz \bigr\rvert \geq \tfrac14 I$이며, 그러한 삼각형 하나를 골라 $T^{(1)}$이라 한다.
+이다. 삼각부등식에 의해 적어도 한 $j$에 대해 $\bigl\lvert \oint_{\partial T_j} f\,dz \bigr\rvert \geq I/4$이며, 그러한 삼각형 하나를 골라 $T^{(1)}$이라 한다.
 
 **반복.** 같은 이등분을 되풀이하면, 삼각형의 감소열 $T^{(0)} \supseteq T^{(1)} \supseteq T^{(2)} \supseteq \cdots$이 얻어지고 각 단계에서
 
@@ -51,7 +51,7 @@ $$\mathrm{length}(\partial T^{(n)}) = \frac{L}{2^n}, \qquad \operatorname{diam}(
 
 $$f(z) = f(z_0) + f'(z_0)(z - z_0) + r(z), \qquad \lvert r(z)\rvert \leq \varepsilon\,\lvert z - z_0\rvert$$
 
-이다 (이는 차분비의 극한 정의를 풀어 쓴 것이다). $n$이 충분히 크면 $\operatorname{diam}(T^{(n)}) = d/2^n < \delta$이므로 $T^{(n)}$ 전체가 $z_0$의 $\delta$-근방에 들어간다. 그런데 일차다항식 $z \mapsto f(z_0) + f'(z_0)(z - z_0)$은 평면 전체에서 원시함수 $f(z_0)z + \tfrac12 f'(z_0)(z - z_0)^2$을 가지므로, closed 경로 $\partial T^{(n)}$에서의 적분이 $0$이다 ([§복소적분, ⁋따름정리 9](/ko/math/complex_analysis/complex_integration#cor9)). 따라서
+이다 (이는 차분비의 극한 정의를 풀어 쓴 것이다). $n$이 충분히 크면 $\operatorname{diam}(T^{(n)}) = d/2^n < \delta$이므로 $T^{(n)}$ 전체가 $z_0$의 $\delta$-근방에 들어간다. 그런데 일차다항식 $z \mapsto f(z_0) + f'(z_0)(z - z_0)$은 평면 전체에서 원시함수 $f(z_0)z + f'(z_0)(z - z_0)^2/2$을 가지므로, closed 경로 $\partial T^{(n)}$에서의 적분이 $0$이다 ([§복소적분, ⁋따름정리 9](/ko/math/complex_analysis/complex_integration#cor9)). 따라서
 
 $$\oint_{\partial T^{(n)}} f\,dz = \oint_{\partial T^{(n)}} r(z)\,dz$$
 
@@ -61,7 +61,7 @@ $$\left\lvert \oint_{\partial T^{(n)}} f\,dz \right\rvert \leq \varepsilon\,\fra
 
 이다.
 
-**결론.** 두 어림을 합치면 $\tfrac{1}{4^n} I \leq \tfrac{1}{4^n}\varepsilon dL$, 곧 $I \leq \varepsilon dL$이다. $\varepsilon > 0$이 임의였고 $d, L$은 고정된 상수이므로 $I = 0$, 곧 $\oint_{\partial T} f\,dz = 0$이다.
+**결론.** 두 어림을 합치면 $I/4^n \leq \varepsilon dL/4^n$, 곧 $I \leq \varepsilon dL$이다. $\varepsilon > 0$이 임의였고 $d, L$은 고정된 상수이므로 $I = 0$, 곧 $\oint_{\partial T} f\,dz = 0$이다.
 :::
 
 Goursat 정리의 증명은 holomorphicity를 오직 한 점 $z_0$에서의 일차 근사로만 사용한다는 점에서 인상적이다. 적분을 잘게 쪼개면 각 조각 위에서 $f$가 거의 일차함수처럼 보이고, 일차함수는 원시함수를 가지므로 그 조각의 기여가 무시할 만큼 작아진다. 둘레와 직경이 각각 $2^{-n}$로 줄어 그 곱이 $4^{-n}$로 줄고, 이것이 적분값의 하한 $4^{-n}I$와 정확히 같은 비율로 상쇄되어 $I = 0$을 강제한다. 이 정리에서 삼각형을 직사각형이나 다른 다각형으로 바꿔도 같은 증명이 통하며, 실제로 다각형 영역을 삼각형으로 분할하면 임의의 다각형 boundary로 즉시 확장된다.

@@ -17,7 +17,7 @@ weight: 4
 
 ## 닫힌집합
 
-[§집합의 내부, 폐포, 경계, ⁋명제 2](/ko/math/topology/other_concepts#prop2)에 의하여, 집합 $X$ 위에 <em-ko>어떠한 집합이 닫힌 집합인지</em-ko>를 알려주는 집합들의 모임 $\mathcal{C}$를 정의하는 것으로 $X$에 위상구조를 줄 수 있다. 이는 원래의 정의와 거의 다르지 않지만, 특히 대수기하학에서 Zariski topology를 정의할 때 유용하게 사용할 수 있다.
+[§집합의 내부, 폐포, 경계, ⁋명제 2](/ko/math/topology/other_concepts#prop2)에 의하여, 집합 $X$ 위에 <em-ko>어떠한 집합이 닫힌 집합인지</em-ko>를 알려주는 집합들의 모임 $\mathcal{C}$를 정의하는 것으로 $X$에 위상구조를 줄 수 있다. 이는 원래의 정의와 거의 다르지 않지만, 특히 algebraic geometry에서 Zariski topology를 정의할 때 유용하게 사용할 수 있다.
 
 ## Closure axiom
 

@@ -147,7 +147,7 @@ $$(x,y)\mapsto f(x),\quad (x,y)\mapsto y$$
 
 $$\prod_{j\in I} A_j,\qquad A_j=\begin{cases}A_i&i=j\\\{x_j\}&\text{otherwise}\end{cases}$$
 
-으로 정의된 $\prod A_j$는 $X_i$와 위상동형인 $X$의 부분집합이다. 
+으로 정의된 $\prod A_j$는 $X_i$와 homeomorphic인 $X$의 부분집합이다. 
 :::
 
 ## 하우스도르프 공간의 몫공간

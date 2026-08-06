@@ -76,7 +76,7 @@ $$\rchi(S)=2(1-g)$$
 
 로 주어진다는 사실을 잘 알고 있다. 이 때 Euler characteristic은 triangulation을 사용하여 꼭짓점 수 $V$, 모서리 수 $E$, 면 수 $F$를 사용하여 $V-E+F$로 생각할 수도 있고[^1], 혹은 Gauss-Bonnet 정리 등의 미분기하적 도구를 사용하여 정의된 것으로 생각해도 된다. 
 
-대수기하학에서 우리는 보편적으로 underlying field $\mathbb{K}$가 복소수인 것으로 생각하므로, 위에서의 genus $g$ compact Riemann surface는 대수기하 관점에서는 1차원 곡선 $C_S$에 불과하다. 이 때, 대수기하적 관점에서의 Euler characteristic은 따라서 위의 식 ($2$)에 $D=0$을 대입한
+Algebraic geometry에서 우리는 보편적으로 underlying field $\mathbb{K}$가 복소수인 것으로 생각하므로, 위에서의 genus $g$ compact Riemann surface는 대수기하 관점에서는 1차원 곡선 $C_S$에 불과하다. 이 때, 대수기하적 관점에서의 Euler characteristic은 따라서 위의 식 ($2$)에 $D=0$을 대입한
 
 $$\rchi(\mathcal{O}_{C_S})=h^0(C_S, \mathcal{O}_{C_S})-h^1(C_S, \mathcal{O}_{C_S})$$
 

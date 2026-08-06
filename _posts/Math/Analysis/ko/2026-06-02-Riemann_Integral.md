@@ -70,7 +70,7 @@ $[a,b]$에서 연속인 함수는 Riemann 적분가능하다.
 :::
 
 ::: 증명
-$f$는 컴팩트구간 $[a,b]$에서 연속이므로 균등연속이다 ([§연속함수의 성질, ⁋정리 4](/ko/math/analysis/continuous_functions#thm4)). 임의의 $\varepsilon > 0$에 대해, 균등연속성으로 $\lvert x - y\rvert < \delta$이면 $\lvert f(x) - f(y)\rvert < \varepsilon/(b - a)$이게 하는 $\delta$가 있다. Mesh가 $\delta$ 미만인 분할 $P$를 잡으면, 각 부분구간에서 $f$가 (컴팩트성으로) 최댓값과 최솟값을 가지므로 $M_i - m_i \leq \varepsilon/(b-a)$이고
+$f$는 컴팩트구간 $[a,b]$에서 연속이므로 균등연속이다 ([§연속함수의 성질, ⁋정리 4](/ko/math/analysis/continuous_functions#thm4)). 임의의 $\varepsilon > 0$에 대해, 균등연속성으로 $\lvert x - y\rvert < \delta$이면 $\lvert f(x) - f(y)\rvert < \varepsilon/(b - a)$이게 하는 $\delta$가 있다. Mesh가 $\delta$ 미만인 분할 $P$를 잡으면, 각 부분구간에서 $f$가 (compactness로) 최댓값과 최솟값을 가지므로 $M_i - m_i \leq \varepsilon/(b-a)$이고
 
 $$U(P, f) - L(P, f) = \sum_i (M_i - m_i)\Delta x_i \leq \frac{\varepsilon}{b-a}\sum_i \Delta x_i = \varepsilon$$
 
@@ -121,7 +121,7 @@ U(P_n, f) - L(P_n, f) &= \sum_{i=1}^n \bigl(f(x_i) - f(x_{i-1})\bigr) \frac{b-a}
 
 ## 적분의 기본 성질
 
-마지막으로, 적분이 기댓대로 행동함을 보이는 구조적 성질들을 다르부 합에서 직접 끌어낸다.
+마지막으로, 적분이 기댓대로 행동함을 보이는 구조적 성질들을 Darboux sum에서 직접 끌어낸다.
 
 ::: 명제 7 (선형성과 단조성)
 $f, g$가 $[a,b]$에서 적분가능하면 $f + g$와 $cf$ ($c \in \mathbb{R}$) 도 적분가능하고
@@ -150,7 +150,7 @@ $$\int_a^b f = \int_a^c f + \int_c^b f$$
 :::
 
 ::: 증명
-분할에 점 $c$를 추가해도 세분이 다르부 합을 나쁘게 만들지 않으므로, 적분가능성을 따질 때 $c$를 분점으로 포함하는 분할만 고려해도 된다. 그런 분할 $P$는 $[a,c]$의 분할 $P_1$과 $[c,b]$의 분할 $P_2$로 갈라지고
+분할에 점 $c$를 추가해도 세분이 Darboux sum을 나쁘게 만들지 않으므로, 적분가능성을 따질 때 $c$를 분점으로 포함하는 분할만 고려해도 된다. 그런 분할 $P$는 $[a,c]$의 분할 $P_1$과 $[c,b]$의 분할 $P_2$로 갈라지고
 
 $$U(P, f) - L(P, f) = \bigl(U(P_1, f) - L(P_1, f)\bigr) + \bigl(U(P_2, f) - L(P_2, f)\bigr)$$
 

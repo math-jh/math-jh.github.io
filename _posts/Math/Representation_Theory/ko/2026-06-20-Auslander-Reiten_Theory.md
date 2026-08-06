@@ -43,7 +43,7 @@ $f$가 retraction인 경우도 symmetric이다. Right inverse $g:N\rightarrow M$
 역으로 $f$가 isomorphism이면 $f$ 자신이 section이자 retraction이므로 조건 (1)이 깨진다. 따라서 indecomposable 사이에서 조건 (1)은 $f$가 isomorphism이 아니라는 것과 같다.
 :::
 
-명제 2는 indecomposable 사이의 morphism을 다룰 때 irreducible morphism의 조건 (1)을 "isomorphism이 아니다"로 단순화할 수 있게 해 준다. 따라서 indecomposable $M,N$에 대하여 irreducible morphism $f:M\rightarrow N$이란, isomorphism이 아니면서 임의의 분해 $f=gh$에서 $h$가 split mono이거나 $g$가 split epi인 nonzero morphism이다. 이러한 morphism들이 module category에서 "한 칸 떨어진" 가장 가까운 이웃 사이의 morphism을 나타내며, Auslander–Reiten quiver의 화살표가 된다.
+명제 2는 indecomposable 사이의 morphism을 다룰 때 irreducible morphism의 조건 (1)을 "isomorphism이 아니다"로 단순화할 수 있게 해 준다. 따라서 indecomposable $M,N$에 대하여 irreducible morphism $f:M\rightarrow N$이란, isomorphism이 아니면서 임의의 분해 $f=gh$에서 $h$가 split mono이거나 $g$가 split epi인 nonzero morphism이다. 이러한 morphism들이 module category에서 "한 칸 떨어진" 가장 가까운 이웃 사이의 morphism을 나타내며, Auslander–Reiten quiver의 arrow가 된다.
 
 ## Almost split sequence
 
@@ -87,7 +87,7 @@ $$\theta^{-1}=\id_B+(f\rho)+(f\rho)^2+\cdots+(f\rho)^n$$
 이 $\theta=\id_B-f\rho$의 역이 되어 $\theta=\varphi\psi$가 automorphism이다. Symmetric으로, $g'\psi\varphi=g'$와 $f'$의 단사성을 이용하여 같은 논법을 $\psi\varphi\in\End_A(B')$에 적용하면 $\psi\varphi$ 또한 automorphism이다. 따라서 $\varphi,\psi$는 서로 역인 isomorphism이다. 끝으로 $g\varphi=g'$로부터 $\varphi$가 두 열의 오른쪽 사각형을 commute하게 하고, $\im f=\ker g$, $\im f'=\ker g'$가 $\varphi$ 아래에서 대응하므로 $\varphi f$가 $\im f'$로 들어가 $A\xrightarrow{\sim}A'$를 유도한다. 이로써 세 수직사상이 모두 isomorphism인 exact sequence의 동형을 얻는다.
 :::
 
-명제 4의 유일성은 almost split sequence를 $C$의 불변량으로 만든다. 곧 non-projective indecomposable $C$ 하나에 대하여 그것으로 끝나는 almost split sequence가 (존재한다면) 본질적으로 하나뿐이므로, 시작점 $A$와 중간항 $B$가 $C$로부터 결정된다. 이 시작점 $A$를 $C$로부터 구성하는 표준적인 방법이 다음 절의 *AR translate*이며, 존재성 자체는 [정리 7](#thm7)에서 다룬다. 한편 $g:B\rightarrow C$가 right almost split이고 $B=\bigoplus_i B_i$를 indecomposable 분해라 하면, 각 합성 $B_i\hookrightarrow B\xrightarrow{g}C$가 irreducible morphism이 됨을 보일 수 있고, 이것이 [정의 8](#def8)에서 Auslander–Reiten quiver의 화살표 $B_i\rightarrow C$를 정의하는 근거가 된다.
+명제 4의 유일성은 almost split sequence를 $C$의 불변량으로 만든다. 곧 non-projective indecomposable $C$ 하나에 대하여 그것으로 끝나는 almost split sequence가 (존재한다면) 본질적으로 하나뿐이므로, 시작점 $A$와 중간항 $B$가 $C$로부터 결정된다. 이 시작점 $A$를 $C$로부터 구성하는 표준적인 방법이 다음 절의 *AR translate*이며, 존재성 자체는 [정리 7](#thm7)에서 다룬다. 한편 $g:B\rightarrow C$가 right almost split이고 $B=\bigoplus_i B_i$를 indecomposable 분해라 하면, 각 합성 $B_i\hookrightarrow B\xrightarrow{g}C$가 irreducible morphism이 됨을 보일 수 있고, 이것이 [정의 8](#def8)에서 Auslander–Reiten quiver의 arrow $B_i\rightarrow C$를 정의하는 근거가 된다.
 
 ## Transpose와 AR translate
 
@@ -148,15 +148,15 @@ $$0\longrightarrow \tau C\xrightarrow{\ f\ }B\xrightarrow{\ g\ }C\longrightarrow
 존재성을 전제로 하면, 시작점이 $\tau C$임은 다음과 같이 정리된다. Almost split sequence는 $\Ext_A^1(C,A')$의 원소이며, 그것이 almost split이라는 조건이 $A'\cong\D\Tr C$를 강제한다. 한편 [명제 4](#prop4)의 유일성은 존재성과 독립적으로 성립하므로, 일단 almost split sequence가 존재하면 그것은 $C$로부터 유일하게 결정되고 그 시작점은 $\tau C$로 확정된다. 두 번째 진술은 $\D$를 통한 left–right 대칭과 $\tau^{-1}=\Tr\D$로부터 첫 번째와 symmetric으로 따라온다.
 :::
 
-정리 7은 module category $\operatorname{mod} A$의 거의 모든 morphism 구조를 $\tau$와 almost split sequence로 조직화한다. Non-projective indecomposable $C$마다 almost split sequence $0\rightarrow\tau C\rightarrow B\rightarrow C\rightarrow 0$이 하나씩 대응하고, 그 중간항 $B$의 indecomposable 분해가 $C$의 이웃들을 결정한다. Projective indecomposable $P$는 almost split sequence의 끝점이 될 수 없지만, 대신 $\rad P\hookrightarrow P$ ($\rad P$는 $P$의 radical, 곧 maximal submodule들의 교집합)가 right almost split morphism의 역할을 하여 quiver에서 $P$로 들어오는 화살표를 결정한다. 이로써 모든 indecomposable과 그 사이의 irreducible morphism이 하나의 조합론적 자료로 묶이며, 이를 정리한 것이 다음의 Auslander–Reiten quiver이다.
+정리 7은 module category $\operatorname{mod} A$의 거의 모든 morphism 구조를 $\tau$와 almost split sequence로 조직화한다. Non-projective indecomposable $C$마다 almost split sequence $0\rightarrow\tau C\rightarrow B\rightarrow C\rightarrow 0$이 하나씩 대응하고, 그 중간항 $B$의 indecomposable 분해가 $C$의 이웃들을 결정한다. Projective indecomposable $P$는 almost split sequence의 끝점이 될 수 없지만, 대신 $\rad P\hookrightarrow P$ ($\rad P$는 $P$의 radical, 곧 maximal submodule들의 교집합)가 right almost split morphism의 역할을 하여 quiver에서 $P$로 들어오는 arrow를 결정한다. 이로써 모든 indecomposable과 그 사이의 irreducible morphism이 하나의 조합론적 자료로 묶이며, 이를 정리한 것이 다음의 Auslander–Reiten quiver이다.
 
 ## Auslander–Reiten quiver
 
 ::: 정의 8
-유한차원 대수 $A$의 *Auslander–Reiten quiver* $\Gamma_A$는 다음의 quiver이다. Vertex는 indecomposable $A$-module들의 isomorphism class이다. 두 indecomposable $M,N$에 대하여, irreducible morphism $M\rightarrow N$이 존재할 때 vertex $[M]$에서 $[N]$으로 화살표를 하나 그린다. (보다 정밀하게는 화살표에 $\Irr(M,N)=\rad(M,N)/\rad^2(M,N)$의 차원을 valuation으로 붙이나, $k$가 algebraically closed이고 $A=kQ$가 acyclic이면 모든 valuation이 $1$이다.) 또한 $\tau$가 정의되는 non-projective vertex $[C]$마다 점선 $[C]\dashrightarrow[\tau C]$를 그려 AR translate를 기록한다.
+유한차원 대수 $A$의 *Auslander–Reiten quiver* $\Gamma_A$는 다음의 quiver이다. Vertex는 indecomposable $A$-module들의 isomorphism class이다. 두 indecomposable $M,N$에 대하여, irreducible morphism $M\rightarrow N$이 존재할 때 vertex $[M]$에서 $[N]$으로 arrow를 하나 그린다. (보다 정밀하게는 arrow에 $\Irr(M,N)=\rad(M,N)/\rad^2(M,N)$의 차원을 valuation으로 붙이나, $k$가 algebraically closed이고 $A=kQ$가 acyclic이면 모든 valuation이 $1$이다.) 또한 $\tau$가 정의되는 non-projective vertex $[C]$마다 점선 $[C]\dashrightarrow[\tau C]$를 그려 AR translate를 기록한다.
 :::
 
-Auslander–Reiten quiver는 정리 7이 보장하는 구조를 그래프로 압축한 것이다. 각 almost split sequence $0\rightarrow\tau C\rightarrow\bigoplus_i B_i\rightarrow C\rightarrow 0$은 quiver 안에서 *mesh*라 불리는 diagram, 곧 $\tau C$에서 각 $B_i$로 향하는 화살표들과 각 $B_i$에서 $C$로 향하는 화살표들로 이루어진 평행사변형 모양을 이룬다. 이 mesh 구조 덕분에 $\Gamma_A$의 한 부분을 알면 $\tau$를 따라 나머지를 복원할 수 있으며, representation-finite 대수의 경우 $\Gamma_A$는 유한 그래프로서 module category 전체를 담는다. 구체적인 모양을 선형 $A_3$ quiver에서 계산한다.
+Auslander–Reiten quiver는 정리 7이 보장하는 구조를 그래프로 압축한 것이다. 각 almost split sequence $0\rightarrow\tau C\rightarrow\bigoplus_i B_i\rightarrow C\rightarrow 0$은 quiver 안에서 *mesh*라 불리는 diagram, 곧 $\tau C$에서 각 $B_i$로 향하는 arrow들과 각 $B_i$에서 $C$로 향하는 arrow들로 이루어진 평행사변형 모양을 이룬다. 이 mesh 구조 덕분에 $\Gamma_A$의 한 부분을 알면 $\tau$를 따라 나머지를 복원할 수 있으며, representation-finite 대수의 경우 $\Gamma_A$는 유한 그래프로서 module category 전체를 담는다. 구체적인 모양을 선형 $A_3$ quiver에서 계산한다.
 
 ::: 예시 9
 선형 $A_3$ quiver $1\xrightarrow{\alpha}2\xrightarrow{\beta}3$ ([§Quiver와 경로대수, ⁋예시 6](/ko/math/representation_theory/path_algebras#ex6)) 를 생각하자. 이 quiver의 indecomposable representation은 정확히 여섯 개이며, 각 $1\leq i\leq j\leq 3$에 대하여 vertex $i,i+1,\ldots,j$에 $k$를, 그 사이의 arrow에 $\id_k$를, 나머지에 $0$을 둔 representation $M_{[i,j]}$로 주어진다. 이를 dimension vector $(\dim V_1,\dim V_2,\dim V_3)$로 적으면
@@ -175,7 +175,7 @@ $$0\rightarrow M_{[2,3]}\rightarrow M_{[1,3]}\oplus M_{[2,2]}\rightarrow M_{[1,2
 
 $$0\rightarrow M_{[3,3]}\rightarrow M_{[2,3]}\rightarrow M_{[2,2]}\rightarrow 0.$$
 
-각 열이 dimension vector를 보존함을 확인할 수 있다. 가령 둘째 열에서 $(0,1,1)+(1,1,0)=(1,2,1)=(1,1,1)+(0,1,0)$이다. 이로부터 AR translate는 $\tau M_{[1,1]}=M_{[2,2]}$, $\tau M_{[1,2]}=M_{[2,3]}$, $\tau M_{[2,2]}=M_{[3,3]}$이다. 화살표를 모으면 Auslander–Reiten quiver $\Gamma_{kQ}$는 다음 모양이 된다.
+각 열이 dimension vector를 보존함을 확인할 수 있다. 가령 둘째 열에서 $(0,1,1)+(1,1,0)=(1,2,1)=(1,1,1)+(0,1,0)$이다. 이로부터 AR translate는 $\tau M_{[1,1]}=M_{[2,2]}$, $\tau M_{[1,2]}=M_{[2,3]}$, $\tau M_{[2,2]}=M_{[3,3]}$이다. Arrow를 모으면 Auslander–Reiten quiver $\Gamma_{kQ}$는 다음 모양이 된다.
 
 {% diagram Math/Representation_Theory/Auslander-Reiten_Theory-2.svg width="22.72em" alt="A3 Auslander-Reiten quiver" %}
 

@@ -97,7 +97,7 @@ $$\frac{d}{dx}\int_{h(x)}^{g(x)} f(t)\mathop{dt} = f(g(x))g'(x) - f(h(x))h'(x)$$
 :::
 
 ::: 증명
-임의의 고정점 $c$를 잡아 [§적분, ⁋명제 11](/ko/math/calculus/integration#prop11)의 구간가법성으로 적분을 둘로 나눈다.
+임의의 fixed point $c$를 잡아 [§적분, ⁋명제 11](/ko/math/calculus/integration#prop11)의 구간가법성으로 적분을 둘로 나눈다.
 
 $$\int_{h(x)}^{g(x)} f(t)\mathop{dt} = \int_c^{g(x)} f(t)\mathop{dt} - \int_c^{h(x)} f(t)\mathop{dt}$$
 

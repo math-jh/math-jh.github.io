@@ -14,7 +14,7 @@ weight: 11
 published: false
 ---
 
-Holomorphic function의 미분이 한 점에서 평면을 회전·확대하는 닮음변환이라는 사실은 ([§복소정칙함수, ⁋정리 5](/ko/math/complex_analysis/holomorphic_functions#thm5)) 이미 holomorphicity의 대수적 핵심으로 드러난 바 있다. 회전·확대는 길이의 비를 바꿀 수는 있어도 두 방향이 이루는 각은 건드리지 못하므로, 도함수가 $0$이 아닌 holomorphic function은 곡선들이 만나는 각을 크기와 방향까지 보존한다. 이렇게 각을 보존하는 사상을 등각사상이라 하며, 복소해석학을 평면기하의 변환이론으로 읽는 관점이 여기서 시작된다. 이 글에서는 먼저 holomorphicity와 등각성이 본질적으로 같은 조건임을 밝히고, 가장 단순하면서도 가장 풍부한 등각사상의 모임인 Möbius 변환을 다룬다. Möbius 변환은 확장복소평면 ([§복소수와 복소평면, ⁋정의 13](/ko/math/complex_analysis/complex_numbers#def13)) 전체의 holomorphic automorphism을 이루며, 원과 직선을 원과 직선으로 보내고 교차비라는 양을 불변으로 남긴다. 끝으로 이를 단위원판과 상반평면의 automorphism을 분류하는 데 적용한다.
+Holomorphic function의 미분이 한 점에서 평면을 회전·확대하는 닮음변환이라는 사실은 ([§복소정칙함수, ⁋정리 5](/ko/math/complex_analysis/holomorphic_functions#thm5)) 이미 holomorphicity의 대수적 핵심으로 드러난 바 있다. 회전·확대는 길이의 비를 바꿀 수는 있어도 두 방향이 이루는 각은 건드리지 못하므로, 도함수가 $0$이 아닌 holomorphic function은 곡선들이 만나는 각을 크기와 방향까지 보존한다. 이렇게 각을 보존하는 사상을 등각사상이라 하며, complex analysis를 평면기하의 변환이론으로 읽는 관점이 여기서 시작된다. 이 글에서는 먼저 holomorphicity와 등각성이 본질적으로 같은 조건임을 밝히고, 가장 단순하면서도 가장 풍부한 등각사상의 모임인 Möbius 변환을 다룬다. Möbius 변환은 확장복소평면 ([§복소수와 복소평면, ⁋정의 13](/ko/math/complex_analysis/complex_numbers#def13)) 전체의 holomorphic automorphism을 이루며, 원과 직선을 원과 직선으로 보내고 교차비라는 양을 불변으로 남긴다. 끝으로 이를 단위원판과 상반평면의 automorphism을 분류하는 데 적용한다.
 
 ## 등각성
 
@@ -58,7 +58,7 @@ $\Omega \subseteq \mathbb{C}$가 열려 있고 $f : \Omega \rightarrow \mathbb{C
 어떤 $z_0 \in \Omega$에서 $f'(z_0) = 0$이라 가정하고 모순을 이끈다. $w_0 = f(z_0)$이라 두면 함수 $g(z) = f(z) - w_0$은 $z_0$에서 영점을 가지는데, $g'(z_0) = f'(z_0) = 0$이므로 그 영점의 order $m$은 $m \geq 2$이다 ([§영점과 일치정리, ⁋명제 2](/ko/math/complex_analysis/zeros_and_identity_theorem#prop2)의 인수분해에서 첫 비영 계수가 $m \geq 2$차이므로). 한편 비상수 holomorphic function이 order $m$인 영점 근방에서 국소적으로 $m$겹 covering처럼 행동한다는 사실에 의하면, $w_0$에 충분히 가까운 $0$이 아닌 모든 값 $w$에 대해 방정식 $g(z) = w - w_0$, 곧 $f(z) = w$이 $z_0$의 작은 구멍낸 근방 안에서 서로 다른 $m$개의 해를 가진다. $m \geq 2$이므로 이는 $z_0$ 근방에서 $f$가 같은 값을 두 번 이상 취함을 뜻하여 $f$의 단사성에 어긋난다. 따라서 모든 점에서 $f'(z) \neq 0$이고, 명제 2에 의해 $f$는 등각사상이다.
 :::
 
-명제 3은 order $m$인 영점 근방에서 holomorphic function이 $m$겹으로 값을 취한다는 국소적 사상정리를 이용한다. 이 사실 자체는 영점의 order와 편각원리에서 따라 나오며, 비상수 holomorphic function이 open mapping이라는 명제와 같은 뿌리를 가진다. 명제 3이 말하는 바는, holomorphic인 전단사사상이 곧 conformal isomorphism이라는 것이다. 두 영역 사이의 holomorphic 전단사사상의 존재 여부를 묻는 등각동치 문제가 복소해석학의 한 중심 주제가 되는 까닭이 여기에 있다. 이제 그러한 사상의 가장 기본적인 공급원을 살핀다.
+명제 3은 order $m$인 영점 근방에서 holomorphic function이 $m$겹으로 값을 취한다는 국소적 사상정리를 이용한다. 이 사실 자체는 영점의 order와 편각원리에서 따라 나오며, 비상수 holomorphic function이 open mapping이라는 명제와 같은 뿌리를 가진다. 명제 3이 말하는 바는, holomorphic인 전단사사상이 곧 conformal isomorphism이라는 것이다. 두 영역 사이의 holomorphic 전단사사상의 존재 여부를 묻는 등각동치 문제가 complex analysis의 한 중심 주제가 되는 까닭이 여기에 있다. 이제 그러한 사상의 가장 기본적인 공급원을 살핀다.
 
 ## Möbius 변환
 
@@ -140,7 +140,7 @@ $$A + \overline{B}\,\bar w + B\,w + C\,\lvert w\rvert^2 = 0, \qquad \text{곧}\q
 이 된다. 이는 다시 $(\ast)$ 꼴이며 ($A, C$의 역할과 $B, \overline B$의 역할이 바뀌었을 뿐이고, 판별식 $\lvert B\rvert^2 > CA = AC$은 그대로이다), 따라서 inversion도 원-직선을 원-직선으로 보낸다. 세 기본 변환이 모두 $(\ast)$ 꼴을 보존하므로 그 합성인 임의의 Möbius 변환도 그러하다.
 :::
 
-정리 7은 원과 직선을 한데 묶어 다루는 관점이 Möbius 변환에 본질적임을 보여 준다. $\widehat{\mathbb{C}}$에서는 직선이 $\infty$를 지나는 "원"으로 자연스럽게 편입되므로, 원-직선이란 곧 Riemann 구면 위의 (입체사영을 통한) 진짜 원에 대응한다. Inversion이 직선을 원으로 또는 원을 직선으로 바꿀 수 있음에 유의해야 한다. 가령 원점을 지나는 직선은 $A = C = 0$인 경우인데, inversion 후 방정식에서 상수항이 $A = 0$으로 남아 여전히 직선이지만, 원점을 지나지 않는 직선 ($A = 0$, $C \neq 0$) 은 inversion 후 $C\lvert w\rvert^2$ 항이 살아나 원이 된다.
+정리 7은 원과 직선을 한데 묶어 다루는 관점이 Möbius 변환에 본질적임을 보여 준다. $\widehat{\mathbb{C}}$에서는 직선이 $\infty$를 지나는 "원"으로 자연스럽게 편입되므로, 원-직선이란 곧 Riemann 구면 위의 (stereographic projection을 통한) 진짜 원에 대응한다. Inversion이 직선을 원으로 또는 원을 직선으로 바꿀 수 있음에 유의해야 한다. 가령 원점을 지나는 직선은 $A = C = 0$인 경우인데, inversion 후 방정식에서 상수항이 $A = 0$으로 남아 여전히 직선이지만, 원점을 지나지 않는 직선 ($A = 0$, $C \neq 0$) 은 inversion 후 $C\lvert w\rvert^2$ 항이 살아나 원이 된다.
 
 ## 교차비와 세 점 결정
 
@@ -154,7 +154,7 @@ $$(z_1, z_2; z_3, z_4) = \frac{(z_1 - z_3)(z_2 - z_4)}{(z_1 - z_4)(z_2 - z_3)}$$
 로 정의한다. 네 점 가운데 하나가 $\infty$이면, 그 점이 들어간 두 차의 비를 $1$로 두어 얻는 극한값으로 정의한다.
 :::
 
-가령 $z_4 = \infty$이면 위 정의에서 $(z_2 - z_4)/(z_1 - z_4) \rightarrow 1$이므로 $(z_1, z_2; z_3, \infty) = (z_1 - z_3)/(z_2 - z_3)$이다. 교차비는 네 점의 순서에 의존하며, 우리는 위의 순서 약속을 고정해 쓴다. 이 양의 결정적 성질은 Möbius 변환에 대한 불변성이다.
+가령 $z_4 = \infty$이면 위 정의에서 $(z_2 - z_4)/(z_1 - z_4) \rightarrow 1$이므로 $(z_1, z_2; z_3, \infty) = (z_1 - z_3)/(z_2 - z_3)$이다. 교차비는 네 점의 순서에 의존하며, 우리는 위의 순서 약속을 고정해 쓴다. 이 양의 결정적 성질은 Möbius 변환에 대한 invariance가다.
 
 ::: 명제 9
 임의의 Möbius 변환 $T$와 $\widehat{\mathbb{C}}$의 서로 다른 네 점 $z_1, z_2, z_3, z_4$에 대하여
@@ -176,7 +176,7 @@ $$\frac{(Tz_1 - Tz_3)(Tz_2 - Tz_4)}{(Tz_1 - Tz_4)(Tz_2 - Tz_3)} = \frac{\frac{(z
 이다. 분모의 좌표 곱 $z_1 z_2 z_3 z_4$이 분자·분모에서 똑같이 나타나 상쇄되고, 각 차의 부호 반전 $z_j - z_i = -(z_i - z_j)$이 분자와 분모에서 두 번씩 일어나 상쇄되었다. $\infty$가 끼는 경우는 정의 8의 극한 약속과 양립하도록 같은 계산이 극한으로 이어진다. 세 기본 변환이 모두 교차비를 보존하므로 그 합성인 $T$도 보존한다.
 :::
 
-명제 9의 불변성은 Möbius 변환이 세 점으로 결정된다는 다음 정리로 곧장 이어진다. 서로 다른 세 점을 서로 다른 세 점으로 보내는 변환이 정확히 하나라는 이 사실은, 교차비를 매개로 그 변환을 명시적으로 적게까지 해 준다.
+명제 9의 invariance는 Möbius 변환이 세 점으로 결정된다는 다음 정리로 곧장 이어진다. 서로 다른 세 점을 서로 다른 세 점으로 보내는 변환이 정확히 하나라는 이 사실은, 교차비를 매개로 그 변환을 명시적으로 적게까지 해 준다.
 
 ::: 정리 10 (세 점 결정)
 $\widehat{\mathbb{C}}$의 서로 다른 세 점 $z_1, z_2, z_3$과 서로 다른 세 점 $w_1, w_2, w_3$이 주어지면, $T(z_i) = w_i$ ($i = 1, 2, 3$) 인 Möbius 변환 $T$가 유일하게 존재한다.

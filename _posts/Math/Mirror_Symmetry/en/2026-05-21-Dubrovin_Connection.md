@@ -51,7 +51,7 @@ Here $\mathcal{C}_\alpha$ is the endomorphism $\partial_\alpha\circ-$ defined ab
 
 $$\nabla^z_{\partial_z} = \partial_z - \frac{1}{z^2}E\circ(-) + \frac{1}{z}\mu$$
 
-Here $E$ is the Euler vector field ([§Frobenius Manifolds, ⁋Definition 5](/en/math/mirror_symmetry/frobenius_manifold#def5)), and $\mu$ is the *grading operator*, defined by $\mu(\partial_\alpha) = (d_\alpha - d/2)\, \partial_\alpha$ from the half-degree $d_\alpha = \tfrac{1}{2}\deg\sigma^\alpha$ of the cohomology class $\sigma^\alpha$ corresponding to the flat coordinate $t^\alpha$ and the conformal dimension $d$.
+Here $E$ is the Euler vector field ([§Frobenius Manifolds, ⁋Definition 5](/en/math/mirror_symmetry/frobenius_manifold#def5)), and $\mu$ is the *grading operator*, defined by $\mu(\partial_\alpha) = (d_\alpha - d/2)\, \partial_\alpha$ from the half-degree $d_\alpha = (\deg\sigma^\alpha)/2$ of the cohomology class $\sigma^\alpha$ corresponding to the flat coordinate $t^\alpha$ and the conformal dimension $d$.
 :::
 
 Recall that in [§Frobenius Manifolds, ⁋Definition 5](/en/math/mirror_symmetry/frobenius_manifold#def5), when defining a Frobenius manifold, we introduced $E$ to encode the grading structure of the Frobenius algebra at each point. Specifically,

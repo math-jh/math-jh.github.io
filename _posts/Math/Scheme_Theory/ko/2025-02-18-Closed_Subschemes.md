@@ -118,7 +118,7 @@ $C=(\varphi_\ast \mathcal{O}_X)(V)=\Gamma(W, \mathcal{O}_W)$라 두고 $\beta=\v
 
 $$(\varphi_\ast \mathcal{O}_X)_\mathfrak{q}\cong C_\mathfrak{q}$$
 
-를 얻는다. 여기에서 $C_\mathfrak{q}$는 $B$-module $C$를 $\mathfrak{q}$에서 국소화한 것이고, 이 isomorphism은 restriction map들로부터 유도된 것이다.
+를 얻는다. 여기에서 $C_\mathfrak{q}$는 $B$-module $C$를 $\mathfrak{q}$에서 localization한 것이고, 이 isomorphism은 restriction map들로부터 유도된 것이다.
 
 첫째로 $\beta$는 surjective이다. 실제로 $\varphi^\sharp$이 surjective이므로 [\[위상수학\] §층, ⁋명제 15](/ko/math/topology/sheaves#prop15)에 의하여 각각의 $\mathfrak{q}$에서 stalk 사이의 morphism $B_\mathfrak{q} \rightarrow C_\mathfrak{q}$가 surjective이고, 이는 $B$-module homomorphism $\beta$의 localization이므로 [\[가환대수학\] §국소화의 성질들, ⁋명제 4](/ko/math/commutative_algebra/properties_of_localization#prop4)에 의하여 $\beta$가 surjective이다. 따라서 $\mathfrak{b}=\ker\beta$라 하면 $C\cong B/\mathfrak{b}$이다.
 

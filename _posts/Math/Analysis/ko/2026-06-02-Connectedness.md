@@ -16,7 +16,7 @@ drift_needed: true
 published: false
 ---
 
-[§연속함수의 성질](/ko/math/analysis/continuous_functions)에서 연속함수가 컴팩트성을 보존함을 보았다. 연속함수가 보존하는 또 하나의 근본 성질이 연결성이며, 이로부터 [\[미적분학\] §연속함수](/ko/math/calculus/continuity)에서 도구로 받아들였던 중간값 정리가 엄밀하게 따라 나온다.
+[§연속함수의 성질](/ko/math/analysis/continuous_functions)에서 연속함수가 compactness를 보존함을 보았다. 연속함수가 보존하는 또 하나의 근본 성질이 연결성이며, 이로부터 [\[미적분학\] §연속함수](/ko/math/calculus/continuity)에서 도구로 받아들였던 중간값 정리가 엄밀하게 따라 나온다.
 
 ## 연결집합
 
@@ -69,7 +69,7 @@ Connected component는 [명제 3](#prop3)에 의해 그 자체로 connected이�
 
 ## 연결성의 보존과 중간값 정리
 
-컴팩트성과 마찬가지로 연결성도 연속함수가 보존하는 위상적 성질이다 ([§연속함수의 성질](/ko/math/analysis/continuous_functions)에서 컴팩트성의 보존을 보았다). 핵심 착상은, 상에서의 분할이 있다면 preimage를 취해 정의역에서의 분할을 만들 수 있다는 점이다. Preimage가 열린집합을 열린집합으로 되돌린다는 사실 — 곧 연속성의 위상적 특징화 — 이 그대로 동력이 된다.
+Compactness와 마찬가지로 연결성도 연속함수가 보존하는 위상적 성질이다 ([§연속함수의 성질](/ko/math/analysis/continuous_functions)에서 compactness의 보존을 보았다). 핵심 착상은, 상에서의 분할이 있다면 preimage를 취해 정의역에서의 분할을 만들 수 있다는 점이다. Preimage가 열린집합을 열린집합으로 되돌린다는 사실 — 곧 연속성의 위상적 특징화 — 이 그대로 동력이 된다.
 
 ::: 정리 5
 $f : X \rightarrow Y$가 연속이고 $E \subseteq X$가 connected이면, 상 $f(E)$도 connected이다.
@@ -146,7 +146,7 @@ U \cap V \cap \gamma([0,1]) &\subseteq U \cap V \cap E = \emptyset
 이므로 $U, V$가 연결집합 $\gamma([0,1])$을 분할하게 되어 모순이다. 따라서 $E$는 connected이다.
 :::
 
-[명제 9](#prop9)는 연결성을 보이는 실용적인 방법을 준다. 어떤 집합이 connected임을 직접 보이려면 분할이 없음을 보여야 하지만, 두 점을 잇는 경로를 명시적으로 구성하는 편이 종종 더 쉽다. 가령 $\mathbb{R}^n$의 볼록집합 $E$는 임의의 두 점 $x, y$에 대해 선분 $\gamma(t) = (1-t)x + ty$가 $E$ 안에 있어 path-connected이고, 따라서 connected이다. 한편 그 역이 성립하지 않는 고전적 예는 위상수학자의 사인곡선
+[명제 9](#prop9)는 연결성을 보이는 실용적인 방법을 준다. 어떤 집합이 connected임을 직접 보이려면 분할이 없음을 보여야 하지만, 두 점을 잇는 경로를 명시적으로 구성하는 편이 종종 더 쉽다. 가령 $\mathbb{R}^n$의 볼록집합 $E$는 임의의 두 점 $x, y$에 대해 선분 $\gamma(t) = (1-t)x + ty$가 $E$ 안에 있어 path-connected이고, 따라서 connected이다. 한편 그 역이 성립하지 않는 고전적 예는 topologist's sine curve
 
 $$S = \{(x, \sin(1/x)) \mid 0 < x \leq 1\} \cup \{(0, y) \mid -1 \leq y \leq 1\}$$
 

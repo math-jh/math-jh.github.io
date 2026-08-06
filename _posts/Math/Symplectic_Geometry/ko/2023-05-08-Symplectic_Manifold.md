@@ -12,6 +12,7 @@ date: 2023-05-08
 weight: 3
 
 published: false
+revising: true
 
 drift_needed: true
 
@@ -123,15 +124,15 @@ $$\{f,g\}=\omega(X_f,X_g)$$
 선형 사교기하에서 Lagrangian subspace가 차지하던 위치를 ([§사교벡터공간, ⁋정의 3](/ko/math/symplectic_geometry/linear_symplectic_geometry#def3)) manifold 수준으로 끌어올린 것이 Lagrangian 부분다양체이다. 이는 사교기하에서 가장 중요한 부분다양체의 종류이다.
 
 ::: 정의 9
-$2n$차원 symplectic manifold $(M,\omega)$의 부분다양체 $L\subseteq M$이 *Lagrangian submanifold<sub>라그랑지안 부분다양체</sub>*라는 것은, 포함사상 $\iota:L\hookrightarrow M$에 대하여 $\iota^\ast\omega=0$이고 $\dim L=n=\tfrac{1}{2}\dim M$인 것이다.
+$2n$차원 symplectic manifold $(M,\omega)$의 부분다양체 $L\subseteq M$이 *Lagrangian submanifold<sub>라그랑지안 부분다양체</sub>*라는 것은, 포함사상 $\iota:L\hookrightarrow M$에 대하여 $\iota^\ast\omega=0$이고 $\dim L=n=(\dim M)/2$인 것이다.
 :::
 
 조건 $\iota^\ast\omega=0$은 각 점 $p\in L$에서 tangent space $T_pL\subseteq T_pM$ 위로 $\omega_p$가 항등적으로 $0$이라는 뜻, 곧 $T_pL$이 isotropic subspace라는 뜻이다. 여기에 차원조건이 더해지면 [§사교벡터공간, ⁋보조정리 4](/ko/math/symplectic_geometry/linear_symplectic_geometry#lem4)에 의하여 $T_pL$이 각 점에서 Lagrangian subspace가 된다. 곧 Lagrangian 부분다양체란 tangent space가 점마다 Lagrangian subspace인 부분다양체이다.
 
 ::: 예시 10
-1. 곡면, 곧 $2$차원 symplectic manifold 위의 임의의 smooth한 곡선 (1차원 부분다양체) 은 Lagrangian이다. $1$차원 공간 위에서 반대칭 $2$-form은 항상 $0$이므로 $\iota^\ast\omega=0$이 자동이고, $\dim=1=\tfrac{1}{2}\cdot 2$이기 때문이다.
+1. 곡면, 곧 $2$차원 symplectic manifold 위의 임의의 smooth한 곡선 (1차원 부분다양체) 은 Lagrangian이다. $1$차원 공간 위에서 반대칭 $2$-form은 항상 $0$이므로 $\iota^\ast\omega=0$이 자동이고, $\dim=1=(1/2)\cdot 2$이기 때문이다.
 
-2. Cotangent bundle $T^\ast Q$ ([예시 2](#ex2)) 의 각 fiber $T_q^\ast Q$는 Lagrangian이다. 국소좌표에서 fiber는 $\{q=\text{const}\}$이고 그 tangent space는 $\partial/\partial p_i$들로 생성되는데, $\omega=\sum_i dq_i\wedge dp_i$를 이 위로 제한하면 모든 $dq_i$가 소멸하여 $0$이 된다. 차원도 $n=\tfrac{1}{2}\dim T^\ast Q$이다.
+2. Cotangent bundle $T^\ast Q$ ([예시 2](#ex2)) 의 각 fiber $T_q^\ast Q$는 Lagrangian이다. 국소좌표에서 fiber는 $\{q=\text{const}\}$이고 그 tangent space는 $\partial/\partial p_i$들로 생성되는데, $\omega=\sum_i dq_i\wedge dp_i$를 이 위로 제한하면 모든 $dq_i$가 소멸하여 $0$이 된다. 차원도 $n=(\dim T^\ast Q)/2$이다.
 :::
 
 Cotangent bundle에서는 base $Q$ 방향으로 누운 Lagrangian 부분다양체들이 $1$-form과 정확히 대응하며, 그 가운데 Lagrangian이 되는 것은 closed form뿐이다.
@@ -152,11 +153,11 @@ $$(s_\alpha^\ast\lambda)(\xi)=\lambda_{(q,\alpha_q)}\bigl(ds_\alpha(\xi)\bigr)=\
 
 $$s_\alpha^\ast\omega=s_\alpha^\ast(-d\lambda)=-d(s_\alpha^\ast\lambda)=-d\alpha$$
 
-이다. $s_\alpha$가 $Q$와 $\Gamma_\alpha$ 사이의 diffeomorphism이므로 $\Gamma_\alpha$ 위로의 $\omega$의 restriction이 $0$인 것은 $s_\alpha^\ast\omega=0$, 곧 $d\alpha=0$과 동치이다. 한편 $\dim\Gamma_\alpha=\dim Q=n=\tfrac{1}{2}\dim T^\ast Q$는 언제나 성립하므로, $\Gamma_\alpha$가 Lagrangian인 것은 정확히 $\alpha$가 closed form인 것과 동치이다. $\alpha=0$이면 $d\alpha=0$이므로 zero section $\Gamma_0\cong Q$는 Lagrangian이다.
+이다. $s_\alpha$가 $Q$와 $\Gamma_\alpha$ 사이의 diffeomorphism이므로 $\Gamma_\alpha$ 위로의 $\omega$의 restriction이 $0$인 것은 $s_\alpha^\ast\omega=0$, 곧 $d\alpha=0$과 동치이다. 한편 $\dim\Gamma_\alpha=\dim Q=n=(\dim T^\ast Q)/2$는 언제나 성립하므로, $\Gamma_\alpha$가 Lagrangian인 것은 정확히 $\alpha$가 closed form인 것과 동치이다. $\alpha=0$이면 $d\alpha=0$이므로 zero section $\Gamma_0\cong Q$는 Lagrangian이다.
 :::
 
 ::: 참고 12
-Lagrangian 부분다양체는 symplectic manifold 사이의 morphism까지 포섭한다. 두 symplectic manifold $(M,\omega)$, $(M',\omega')$의 곱 $M\times M'$에 symplectic form $\Omega=\pi^\ast\omega-\pi'^\ast\omega'$ ($\pi,\pi'$는 각 인자로의 projection) 를 주면, diffeomorphism $\varphi:M\rightarrow M'$가 symplectomorphism ([정의 5](#def5)) 인 것은 그 graph $\Gamma_\varphi=\{(m,\varphi(m))\}$가 $(M\times M',\Omega)$의 Lagrangian 부분다양체인 것과 동치이다. 실제로 $j:M\rightarrow M\times M'$, $m\mapsto(m,\varphi(m))$에 대하여 $j^\ast\Omega=j^\ast\pi^\ast\omega-j^\ast\pi'^\ast\omega'=\omega-\varphi^\ast\omega'$이고 $\dim\Gamma_\varphi=\dim M=\tfrac{1}{2}\dim(M\times M')$이므로, $\Gamma_\varphi$가 Lagrangian인 것이 $\varphi^\ast\omega'=\omega$와 동치이기 때문이다. 이처럼 사교 morphism마저 Lagrangian으로 환원되는 현상을 "symplectic 범주의 morphism은 Lagrangian이다"라는 Weinstein의 표어가 요약한다.
+Lagrangian 부분다양체는 symplectic manifold 사이의 morphism까지 포섭한다. 두 symplectic manifold $(M,\omega)$, $(M',\omega')$의 곱 $M\times M'$에 symplectic form $\Omega=\pi^\ast\omega-\pi'^\ast\omega'$ ($\pi,\pi'$는 각 인자로의 projection) 를 주면, diffeomorphism $\varphi:M\rightarrow M'$가 symplectomorphism ([정의 5](#def5)) 인 것은 그 graph $\Gamma_\varphi=\{(m,\varphi(m))\}$가 $(M\times M',\Omega)$의 Lagrangian 부분다양체인 것과 동치이다. 실제로 $j:M\rightarrow M\times M'$, $m\mapsto(m,\varphi(m))$에 대하여 $j^\ast\Omega=j^\ast\pi^\ast\omega-j^\ast\pi'^\ast\omega'=\omega-\varphi^\ast\omega'$이고 $\dim\Gamma_\varphi=\dim M=(\dim(M\times M'))/2$이므로, $\Gamma_\varphi$가 Lagrangian인 것이 $\varphi^\ast\omega'=\omega$와 동치이기 때문이다. 이처럼 사교 morphism마저 Lagrangian으로 환원되는 현상을 "symplectic 범주의 morphism은 Lagrangian이다"라는 Weinstein의 표어가 요약한다.
 :::
 
 ---

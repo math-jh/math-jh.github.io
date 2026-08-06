@@ -276,7 +276,7 @@ $$i:U\rightarrow X,\quad j:V\rightarrow X,\quad k:U\cap V\rightarrow U,\quad l:U
 
 ## 사슬복합체의 텐서곱
 
-Mayer-Vietoris sequence를 사용하면 큰 공간의 작은 부분공간들의 homology 혹은 cohomology로부터 큰 공간의 homology, cohomology를 계산할 수 있다. 한편 우리는 두 공간 $X,Y$를 곱하여 더 큰 공간 $X\times Y$를 만들 수도 있는데, 퀴네트 공식은 이러한 곱공간의 homology와 cohomology를 계산하는 데에 도움을 준다. 이를 위해서는 우선 두 chain complex $C_\bullet$, $D_\bullet$이 주어졌을 때 이들의 tensor product를 정의해야 한다.
+Mayer-Vietoris sequence를 사용하면 큰 공간의 작은 부분공간들의 homology 혹은 cohomology로부터 큰 공간의 homology, cohomology를 계산할 수 있다. 한편 우리는 두 공간 $X,Y$를 곱하여 더 큰 공간 $X\times Y$를 만들 수도 있는데, Künneth formula는 이러한 곱공간의 homology와 cohomology를 계산하는 데에 도움을 준다. 이를 위해서는 우선 두 chain complex $C_\bullet$, $D_\bullet$이 주어졌을 때 이들의 tensor product를 정의해야 한다.
 
 ::: 정의 7
 Ring $A$와 $A$-module들의 chain complex $C_\bullet,D_\bullet$이 주어졌다 하자. 그럼 이들의 *tensor product* $(C\otimes D)_\bullet$은 각각의 $k$에 대하여
@@ -292,7 +292,7 @@ $$\partial(x,y)=(\partial^Cx,y)+(-1)^{\deg(x)}(x,\partial^Dy)$$
 
 즉, $(C\otimes D)_\bullet$은 $(p,q)$ 성분이 $C_p\otimes D_q$이고, horizontal differential이 $\partial^C\otimes\id_D$, vertical differential이 $\id_C\otimes \partial^D$로 주어지는 double complex의 total complex라 할 수 있다. ([§호몰로지, ⁋정의 5](/ko/math/homological_algebra/homology#def5))
 
-그럼 퀴네트 공식의 대수적인 내용은 다음 보조정리에 담겨있다.
+그럼 Künneth formula의 대수적인 내용은 다음 보조정리에 담겨있다.
 
 ::: 보조정리 8
 Principal ideal doamin $A$와 $A$-module들의 chain complex $C_\bullet$, $D_\bullet$이 주어졌다 하고 $C_\bullet$이 free $A$-module들의 chain complex라 하자. 그럼 임의의 $k$에 대하여 다음의 short exact sequence
@@ -310,7 +310,7 @@ $$H_k(C\otimes D)\cong \left( \bigoplus_{p+q=k}H_p(C)\otimes_AH_q(D)\right)\oplu
 
 $$0 \rightarrow Z_p(C) \rightarrow C_p\rightarrow B_{p-1}(C)\rightarrow 0$$
 
-를 생각하면, $B_{p-1}(C)$와 $Z_p(C)$는 free $A$-module $C_{p-1},C_p$의 submodule이고 $A$가 principal ideal domain이므로 이들은 다시 free $A$-module이다. 따라서 이 short exact sequence에 $D_q$를 텐서곱하여 얻어지는 다음의 short exact sequence
+를 생각하면, $B_{p-1}(C)$와 $Z_p(C)$는 free $A$-module $C_{p-1},C_p$의 submodule이고 $A$가 principal ideal domain이므로 이들은 다시 free $A$-module이다. 따라서 이 short exact sequence에 $D_q$를 tensor product하여 얻어지는 다음의 short exact sequence
 
 $$0\rightarrow Z_p(C)\otimes D_q \rightarrow C_p\otimes D_q \rightarrow B_{p-1}(C)\otimes D_q\rightarrow 0$$
 
@@ -397,7 +397,7 @@ $$H_k(X\times Y;A)\cong \left( \bigoplus_{p+q=k}H_p(X;A)\otimes_AH_q(Y;A)\right)
 이 존재한다.
 :::
 
-물론, 이 결과와 [정리 5](#thm5)를 사용하면 cohomology 버전의 퀴네트 공식을 얻을 수 있다.
+물론, 이 결과와 [정리 5](#thm5)를 사용하면 cohomology 버전의 Künneth formula를 얻을 수 있다.
 
 --- 
 

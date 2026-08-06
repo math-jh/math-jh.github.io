@@ -49,7 +49,7 @@ $$\nabla^z_{\partial_\alpha} = \partial_\alpha + \frac{1}{z}\, \mathcal{C}_\alph
 
 $$\nabla^z_{\partial_z} = \partial_z - \frac{1}{z^2}E\circ(-) + \frac{1}{z}\mu$$
 
-으로 주어진다. 여기서 $E$는 [§프로베니우스 다양체, ⁋정의 5](/ko/math/mirror_symmetry/frobenius_manifold#def5)의 Euler vector field이고, $\mu$는 *grading operator<sub>등급 연산자</sub>*로, flat coordinate $t^\alpha$에 대응하는 cohomology class $\sigma^\alpha$의 절반 degree $d_\alpha = \tfrac{1}{2}\deg\sigma^\alpha$와 conformal dimension $d$로부터 $\mu(\partial_\alpha) = (d_\alpha - d/2)\, \partial_\alpha$로 정의된다.
+으로 주어진다. 여기서 $E$는 [§프로베니우스 다양체, ⁋정의 5](/ko/math/mirror_symmetry/frobenius_manifold#def5)의 Euler vector field이고, $\mu$는 *grading operator<sub>등급 연산자</sub>*로, flat coordinate $t^\alpha$에 대응하는 cohomology class $\sigma^\alpha$의 절반 degree $d_\alpha = (\deg\sigma^\alpha)/2$와 conformal dimension $d$로부터 $\mu(\partial_\alpha) = (d_\alpha - d/2)\, \partial_\alpha$로 정의된다.
 :::
 
 앞서 [§프로베니우스 다양체, ⁋정의 5](/ko/math/mirror_symmetry/frobenius_manifold#def5)에서 Frobenius manifold를 정의할 때, 각 점에서의 Frobenius algebra의 grading structure를 담기 위해 $E$를 도입했던 것을 기억하자. 구체적으로, 

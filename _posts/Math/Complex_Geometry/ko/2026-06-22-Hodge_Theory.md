@@ -22,7 +22,7 @@ $$
 
 가 일반 complex manifold에서는 성립하지 않으며, 그것이 성립하려면 추가 기하구조가 필요함을 예고하였다. 그 추가 구조가 바로 Kähler 조건 $d\omega = 0$이며 ([§Kähler 다양체, ⁋정의 3](/ko/math/complex_geometry/kahler_manifolds#def3)), 거기서 따라오는 [§Kähler 다양체, ⁋정리 12](/ko/math/complex_geometry/kahler_manifolds#thm12)가 위 분해를 콤팩트 Kähler manifold에서 정확히 성립하게 만든다. 이 분해와 그에 동반하는 대칭을 규명하는 것이 Hodge 이론이며, 그것이 콤팩트 Kähler manifold의 위상에 부과하는 제약이 이 글의 주제이다.
 
-핵심 발상은 cohomology class마다 표준 대표원을 고르는 것이다. de Rham cohomology class $[\alpha] \in H^k_{\mathrm{dR}}(X)$는 $\alpha + d\beta$ 꼴의 닫힌형식 전체로 이루어진 affine 공간이며, 그 가운데 어느 하나를 본받아 류 전체를 다룰 자연스러운 방법이 없다. 그러나 Riemannian metric을 도입하면 형식들에 길이가 생기고, 각 류에서 $L^2$-norm을 최소화하는 유일한 대표원을 고를 수 있다. 이 최소 대표원이 *조화형식<sub>harmonic form</sub>*이며, Laplace 작용소의 kernel로 특징지어진다. 조화형식들의 공간 $\mathcal{H}^k$가 cohomology를 그대로 실현한다는 것이 Hodge 정리이고, Kähler 조건 아래에서 $\mathcal{H}^k$가 $(p,q)$-degree로 쪼개진다는 것이 Hodge 분해이다.
+핵심 발상은 cohomology class마다 표준 representative를 고르는 것이다. de Rham cohomology class $[\alpha] \in H^k_{\mathrm{dR}}(X)$는 $\alpha + d\beta$ 꼴의 닫힌형식 전체로 이루어진 affine 공간이며, 그 가운데 어느 하나를 본받아 류 전체를 다룰 자연스러운 방법이 없다. 그러나 Riemannian metric을 도입하면 형식들에 길이가 생기고, 각 류에서 $L^2$-norm을 최소화하는 유일한 representative를 고를 수 있다. 이 최소 representative가 *조화형식<sub>harmonic form</sub>*이며, Laplace 작용소의 kernel로 특징지어진다. 조화형식들의 공간 $\mathcal{H}^k$가 cohomology를 그대로 실현한다는 것이 Hodge 정리이고, Kähler 조건 아래에서 $\mathcal{H}^k$가 $(p,q)$-degree로 쪼개진다는 것이 Hodge 분해이다.
 
 ## Hodge star와 수반작용소
 
@@ -86,7 +86,7 @@ $$
 로 적는다.
 :::
 
-작용소 $\Delta_d$는 degree를 보존하는 이차 미분작용소이며, $d$와 $d^\ast$가 서로 수반이므로 $L^2$-내적에 대해 자기수반이다. 곧 $(\Delta_d\alpha, \beta) = (\alpha, \Delta_d\beta)$이다. 조화형식은 단순히 $\Delta_d$로 죽는 형식인데, 콤팩트성 덕분에 이 조건이 훨씬 강한 조건과 동치가 된다.
+작용소 $\Delta_d$는 degree를 보존하는 이차 미분작용소이며, $d$와 $d^\ast$가 서로 수반이므로 $L^2$-내적에 대해 self-adjoint가다. 곧 $(\Delta_d\alpha, \beta) = (\alpha, \Delta_d\beta)$이다. 조화형식은 단순히 $\Delta_d$로 죽는 형식인데, 콤팩트성 덕분에 이 조건이 훨씬 강한 조건과 동치가 된다.
 
 ::: 명제 5
 콤팩트 지향 Riemannian manifold $M$ 위의 $k$-형식 $\alpha$에 대하여 다음이 동치이다.
@@ -107,7 +107,7 @@ $$
 이다. 두 항이 모두 음이 아닌 실수인데 그 합이 $0$이므로 각각 $0$이고, $L^2$-내적이 양의 정부호이므로 $d\alpha = 0$, $d^\ast\alpha = 0$이 따라온다.
 :::
 
-이 동치는 조화형식이 닫힌형식임을 보장한다. 조화형식은 $d\alpha = 0$이므로 cohomology class $[\alpha] \in H^k_{\mathrm{dR}}(M)$를 정의하며, 동시에 $d^\ast\alpha = 0$이라는 추가 조건이 그 류 안에서 $\alpha$를 특별한 위치에 놓는다. 닫힌형식 $\alpha + d\beta$ 가운데 $\alpha$가 조화라는 것은 그것이 같은 류 안에서 $L^2$-norm을 최소화한다는 것과 같다. $\lVert \alpha + d\beta \rVert^2 = \lVert \alpha \rVert^2 + 2(\alpha, d\beta) + \lVert d\beta \rVert^2 = \lVert \alpha \rVert^2 + 2(d^\ast\alpha, \beta) + \lVert d\beta \rVert^2 = \lVert \alpha \rVert^2 + \lVert d\beta \rVert^2 \geq \lVert \alpha \rVert^2$이기 때문이다 (여기서 $d^\ast\alpha = 0$을 썼다). 곧 조화 대표원은 각 류에서 가장 짧은 형식이다.
+이 동치는 조화형식이 닫힌형식임을 보장한다. 조화형식은 $d\alpha = 0$이므로 cohomology class $[\alpha] \in H^k_{\mathrm{dR}}(M)$를 정의하며, 동시에 $d^\ast\alpha = 0$이라는 추가 조건이 그 류 안에서 $\alpha$를 특별한 위치에 놓는다. 닫힌형식 $\alpha + d\beta$ 가운데 $\alpha$가 조화라는 것은 그것이 같은 류 안에서 $L^2$-norm을 최소화한다는 것과 같다. $\lVert \alpha + d\beta \rVert^2 = \lVert \alpha \rVert^2 + 2(\alpha, d\beta) + \lVert d\beta \rVert^2 = \lVert \alpha \rVert^2 + 2(d^\ast\alpha, \beta) + \lVert d\beta \rVert^2 = \lVert \alpha \rVert^2 + \lVert d\beta \rVert^2 \geq \lVert \alpha \rVert^2$이기 때문이다 (여기서 $d^\ast\alpha = 0$을 썼다). 곧 조화 representative는 각 류에서 가장 짧은 형식이다.
 
 ## Hodge 정리
 
@@ -120,7 +120,7 @@ $$
 \Omega^k(M) = \mathcal{H}^k(M) \oplus d\,\Omega^{k-1}(M) \oplus d^\ast\,\Omega^{k+1}(M)
 $$
 
-이 성립한다. 따라서 각 de Rham cohomology class는 유일한 조화 대표원을 가지며, 표준적인 동형
+이 성립한다. 따라서 각 de Rham cohomology class는 유일한 조화 representative를 가지며, 표준적인 동형
 
 $$
 H^k_{\mathrm{dR}}(M, \mathbb{R}) \cong \mathcal{H}^k(M)
@@ -132,7 +132,7 @@ $$
 ::: 증명
 분해 자체는 타원작용소 이론의 결과이므로 그 핵심 입력만 인용하고, 거기서 cohomology와의 동형을 끌어내는 부분을 증명한다.
 
-작용소 $\Delta_d$는 콤팩트 manifold 위의 자기수반 이차 타원작용소이다. 타원성은 그 주표상 $\sigma(\Delta_d)(\xi) = -\lvert \xi \rvert^2 \cdot \id$이 $\xi \neq 0$에서 가역이라는 데서 나오며, 콤팩트 manifold 위 자기수반 타원작용소에 대한 일반론(Fredholm 이론과 elliptic regularity)이 다음을 준다. Kernel $\mathcal{H}^k = \ker\Delta_d$는 유한차원이고, $L^2$-직교분해 $\Omega^k = \ker\Delta_d \oplus \Img\Delta_d$가 성립하며, $\Img\Delta_d = \Img(d d^\ast + d^\ast d)$이다. 여기까지가 인용하는 해석적 사실이다.
+작용소 $\Delta_d$는 콤팩트 manifold 위의 self-adjoint 이차 타원작용소이다. 타원성은 그 주표상 $\sigma(\Delta_d)(\xi) = -\lvert \xi \rvert^2 \cdot \id$이 $\xi \neq 0$에서 가역이라는 데서 나오며, 콤팩트 manifold 위 self-adjoint 타원작용소에 대한 일반론(Fredholm 이론과 elliptic regularity)이 다음을 준다. Kernel $\mathcal{H}^k = \ker\Delta_d$는 유한차원이고, $L^2$-직교분해 $\Omega^k = \ker\Delta_d \oplus \Img\Delta_d$가 성립하며, $\Img\Delta_d = \Img(d d^\ast + d^\ast d)$이다. 여기까지가 인용하는 해석적 사실이다.
 
 이제 $\Img\Delta_d = d\,\Omega^{k-1} \oplus d^\ast\,\Omega^{k+1}$임을 본다. 포함 $\supseteq$의 직교성부터 본다. $d\eta$와 $d^\ast\zeta$의 내적은 $(d\eta, d^\ast\zeta) = (d d\eta, \zeta) = 0$이므로 두 부분공간은 직교한다. 또 $\Delta_d\gamma = d(d^\ast\gamma) + d^\ast(d\gamma) \in d\,\Omega^{k-1} + d^\ast\,\Omega^{k+1}$이므로 $\Img\Delta_d \subseteq d\,\Omega^{k-1} \oplus d^\ast\,\Omega^{k+1}$이다. 역으로 $d\eta$를 분해의 셋째 직교성으로 본다. $d\eta$는 $\mathcal{H}^k$와 직교한다 (조화 $\alpha$에 대해 $(d\eta, \alpha) = (\eta, d^\ast\alpha) = 0$, [명제 5](#prop5)). 마찬가지로 $d^\ast\zeta$도 $\mathcal{H}^k$와 직교한다 ($(d^\ast\zeta, \alpha) = (\zeta, d\alpha) = 0$). 따라서 $d\,\Omega^{k-1} \oplus d^\ast\,\Omega^{k+1} \subseteq (\mathcal{H}^k)^\perp = \Img\Delta_d$이고, 위 포함과 합쳐 등식이 성립한다. 이로써
 

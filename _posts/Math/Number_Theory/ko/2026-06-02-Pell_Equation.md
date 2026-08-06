@@ -24,7 +24,7 @@ published: false
 방정식 $x^2 - Dy^2 = 1$을 *펠 방정식<sub>Pell's equation</sub>*이라 한다. $x = \pm 1, y = 0$인 해를 *자명한 해*라 한다.
 :::
 
-수 $\alpha = x + y\sqrt{D}$ ($x, y \in \mathbb{Z}$) 들이 이루는 ring $\mathbb{Z}[\sqrt D]$에서 *norm*을 $N(\alpha) = (x + y\sqrt D)(x - y\sqrt D) = x^2 - Dy^2$으로 정의하면, 펠 방정식의 해는 정확히 $N(\alpha) = 1$인 원소이다. Norm은 곱셈적이므로 — $N(\alpha\beta) = N(\alpha)N(\beta)$ — 해들의 곱도 다시 해이다. 이것이 해의 구조를 지배한다.
+수 $\alpha = x + y\sqrt{D}$ ($x, y \in \mathbb{Z}$) 들이 이루는 ring $\mathbb{Z}[\sqrt D]$에서 *norm*을 $N(\alpha) = (x + y\sqrt D)(x - y\sqrt D) = x^2 - Dy^2$으로 정의하면, 펠 방정식의 해는 정확히 $N(\alpha) = 1$인 원소이다. Norm은 multiplicative가므로 — $N(\alpha\beta) = N(\alpha)N(\beta)$ — 해들의 곱도 다시 해이다. 이것이 해의 구조를 지배한다.
 
 ## 기본해의 존재
 
@@ -35,7 +35,7 @@ published: false
 :::
 
 ::: 증명
-[§연분수, ⁋정리 3](/ko/math/number_theory/continued_fractions#thm3)에 의해 $\left\lvert \sqrt D - \dfrac{p}{q}\right\rvert < \dfrac{1}{q^2}$인 유리수가 무한히 많다. 이런 $p, q$에 대해 $\lvert p^2 - Dq^2\rvert = \lvert p - q\sqrt D\rvert\,\lvert p + q\sqrt D\rvert < \dfrac1q\cdot(2q\sqrt D + 1)$이 bounded이므로, $p^2 - Dq^2$이 같은 값 $k$를 갖는 해가 무한히 많다. 그중 $p, q$가 법 $\lvert k\rvert$에 대해 같은 coset인 두 해 $\alpha_1, \alpha_2$를 고르면, 비 $\alpha_1/\alpha_2$가 norm $1$인 자명하지 않은 정수해 $\mathbb{Z}[\sqrt D]$의 원소를 준다. 실제로 $\sqrt D$의 순환연분수의 한 주기에서 나오는 점근분수가 기본해를 직접 산출한다.
+[§연분수, ⁋정리 3](/ko/math/number_theory/continued_fractions#thm3)에 의해 $\left\lvert \sqrt D - \dfrac{p}{q}\right\rvert < \dfrac{1}{q^2}$인 유리수가 무한히 많다. 이런 $p, q$에 대해 $\lvert p^2 - Dq^2\rvert = \lvert p - q\sqrt D\rvert\,\lvert p + q\sqrt D\rvert < \dfrac1q\cdot(2q\sqrt D + 1)$이 bounded이므로, $p^2 - Dq^2$이 같은 값 $k$를 갖는 해가 무한히 많다. 그중 $p, q$가 법 $\lvert k\rvert$에 대해 같은 coset인 두 해 $\alpha_1, \alpha_2$를 고르면, 비 $\alpha_1/\alpha_2$가 norm $1$인 자명하지 않은 정수해 $\mathbb{Z}[\sqrt D]$의 원소를 준다. 실제로 $\sqrt D$의 순환연분수의 한 주기에서 나오는 점근분수가 fundamental solution을 직접 산출한다.
 :::
 
 자명하지 않은 양의 해 중 $x + y\sqrt D$가 가장 작은 것을 *기본해<sub>fundamental solution</sub>* $\varepsilon_1 = x_1 + y_1\sqrt D$라 한다.
@@ -43,7 +43,7 @@ published: false
 ## 모든 해의 구조
 
 ::: 정리 3
-$\varepsilon_1 = x_1 + y_1\sqrt D$을 기본해라 하면, $x^2 - Dy^2 = 1$의 모든 양의 해 $x_n + y_n\sqrt D$은
+$\varepsilon_1 = x_1 + y_1\sqrt D$을 fundamental solution이라 하면, $x^2 - Dy^2 = 1$의 모든 양의 해 $x_n + y_n\sqrt D$은
 
 $$x_n + y_n\sqrt D = (x_1 + y_1\sqrt D)^n \qquad (n = 1, 2, 3, \ldots)$$
 
@@ -51,16 +51,16 @@ $$x_n + y_n\sqrt D = (x_1 + y_1\sqrt D)^n \qquad (n = 1, 2, 3, \ldots)$$
 :::
 
 ::: 증명
-Norm의 곱셈성으로 $N(\varepsilon_1^n) = N(\varepsilon_1)^n = 1$이므로 각 $\varepsilon_1^n$은 해이다. 거꾸로 $\beta = x + y\sqrt D > 1$이 어떤 해인데 $\varepsilon_1^n$ 꼴이 아니라면, $\varepsilon_1^n \leq \beta < \varepsilon_1^{n+1}$인 $n$을 잡을 수 있고 $1 \leq \beta\varepsilon_1^{-n} < \varepsilon_1$이다. $\beta\varepsilon_1^{-n}$도 norm $1$의 해인데 $1$보다 작은 자명하지 않은 해가 되어 기본해의 최소성에 모순이다 (또는 $1$이어서 $\beta = \varepsilon_1^n$). 따라서 모든 양의 해가 거듭제곱으로 소진된다.
+Norm의 곱셈성으로 $N(\varepsilon_1^n) = N(\varepsilon_1)^n = 1$이므로 각 $\varepsilon_1^n$은 해이다. 거꾸로 $\beta = x + y\sqrt D > 1$이 어떤 해인데 $\varepsilon_1^n$ 꼴이 아니라면, $\varepsilon_1^n \leq \beta < \varepsilon_1^{n+1}$인 $n$을 잡을 수 있고 $1 \leq \beta\varepsilon_1^{-n} < \varepsilon_1$이다. $\beta\varepsilon_1^{-n}$도 norm $1$의 해인데 $1$보다 작은 자명하지 않은 해가 되어 fundamental solution의 최소성에 모순이다 (또는 $1$이어서 $\beta = \varepsilon_1^n$). 따라서 모든 양의 해가 거듭제곱으로 소진된다.
 :::
 
 ::: 예시 4
-$D = 2$이면 $\sqrt 2 = [1; \overline{2}]$의 점근분수 $3/2$에서 기본해 $\varepsilon_1 = 3 + 2\sqrt2$ ($3^2 - 2\cdot 2^2 = 1$) 을 얻는다. 거듭제곱하면 $\varepsilon_1^2 = 17 + 12\sqrt2$ ($17^2 - 2\cdot 12^2 = 1$), $\varepsilon_1^3 = 99 + 70\sqrt2$로 해가 줄줄이 나온다.
+$D = 2$이면 $\sqrt 2 = [1; \overline{2}]$의 점근분수 $3/2$에서 fundamental solution $\varepsilon_1 = 3 + 2\sqrt2$ ($3^2 - 2\cdot 2^2 = 1$) 을 얻는다. 거듭제곱하면 $\varepsilon_1^2 = 17 + 12\sqrt2$ ($17^2 - 2\cdot 12^2 = 1$), $\varepsilon_1^3 = 99 + 70\sqrt2$로 해가 줄줄이 나온다.
 :::
 
 ## 해의 점화식
 
-정리 3은 모든 해를 기본해의 거듭제곱으로 기술하지만, 실제 계산에서는 거듭제곱을 직접 펼치기보다 이웃한 해를 잇는 점화식을 쓰는 편이 편리하다. 곱셈 $\varepsilon_1^{n+1} = \varepsilon_1 \cdot \varepsilon_1^{n}$을 좌표로 풀어 쓰면 다음을 얻는다.
+정리 3은 모든 해를 fundamental solution의 거듭제곱으로 기술하지만, 실제 계산에서는 거듭제곱을 직접 펼치기보다 이웃한 해를 잇는 점화식을 쓰는 편이 편리하다. 곱셈 $\varepsilon_1^{n+1} = \varepsilon_1 \cdot \varepsilon_1^{n}$을 좌표로 풀어 쓰면 다음을 얻는다.
 
 ::: 명제 5
 기본해를 $\varepsilon_1 = x_1 + y_1\sqrt D$, $n$번째 양의 해를 $x_n + y_n\sqrt D = \varepsilon_1^{\,n}$이라 하면
@@ -144,11 +144,11 @@ $$\eta^2 = (1 + \sqrt2)^2 = 3 + 2\sqrt2 = \varepsilon_1$$
 펠 방정식은 순수한 호기심의 대상에 그치지 않고 여러 고전적 문제에서 자연스럽게 출현한다. 두 가지 전형적인 예를 살펴본다.
 
 ::: 예시 10 (삼각수이면서 제곱수)
-$T_m = \tfrac{m(m+1)}2$를 $m$번째 *삼각수<sub>triangular number</sub>*라 한다. $T_m = k^2$인 $m, k$를 찾는 문제는 펠 방정식으로 환원된다. 양변에 $8$을 곱해 정리하면
+$T_m = m(m+1)/2$를 $m$번째 *삼각수<sub>triangular number</sub>*라 한다. $T_m = k^2$인 $m, k$를 찾는 문제는 펠 방정식으로 환원된다. 양변에 $8$을 곱해 정리하면
 
 $$8 T_m + 1 = 4m^2 + 4m + 1 = (2m+1)^2$$
 
-이므로 $T_m = k^2$은 $(2m+1)^2 - 8k^2 = 1$과 동치이다. 여기서 $x = 2m+1$, $y = k$로 두면 이는 $x^2 - 8y^2 = 1$, 곧 $D = 8$의 펠 방정식이다 (그 기본해는 예시 7에서 본 $(3, 1)$이다). 따라서 $D = 8$ 펠 방정식의 양의 해 $(x, y)$ 중 $x$가 홀수인 것마다 $m = \tfrac{x-1}2$, $k = y$가 하나의 삼각제곱수를 준다. 명제 5의 점화식을 $D = 8$, $(x_1, y_1) = (3, 1)$에 적용하면 $x_{n+1} = 3x_n + 8y_n$, $y_{n+1} = x_n + 3y_n$이고, $x$는 $3 \rightarrow 17 \rightarrow 99 \rightarrow \cdots$로 항상 홀수를 유지하므로
+이므로 $T_m = k^2$은 $(2m+1)^2 - 8k^2 = 1$과 동치이다. 여기서 $x = 2m+1$, $y = k$로 두면 이는 $x^2 - 8y^2 = 1$, 곧 $D = 8$의 펠 방정식이다 (그 기본해는 예시 7에서 본 $(3, 1)$이다). 따라서 $D = 8$ 펠 방정식의 양의 해 $(x, y)$ 중 $x$가 홀수인 것마다 $m = (x-1)/2$, $k = y$가 하나의 삼각제곱수를 준다. 명제 5의 점화식을 $D = 8$, $(x_1, y_1) = (3, 1)$에 적용하면 $x_{n+1} = 3x_n + 8y_n$, $y_{n+1} = x_n + 3y_n$이고, $x$는 $3 \rightarrow 17 \rightarrow 99 \rightarrow \cdots$로 항상 홀수를 유지하므로
 
 $$\begin{aligned}
 (x, y) = (3, 1) &\implies (m, k) = (1, 1), \quad T_1 = 1 = 1^2, \\
@@ -156,7 +156,7 @@ $$\begin{aligned}
 (x, y) = (99, 35) &\implies (m, k) = (49, 35), \quad T_{49} = 1225 = 35^2
 \end{aligned}$$
 
-처럼 삼각수이면서 동시에 제곱수인 수가 무한히 많음을 얻는다. 여기서 등장하는 $x$값 $3, 17, 99, \ldots$이 예시 6의 $D = 2$ 해의 $x$좌표와 정확히 일치하는 것은 우연이 아니다. $x^2 - 8y^2 = 1$이면 $x^2 - 2(2y)^2 = 1$이므로 $D = 8$의 해 $(x, y)$는 곧바로 $D = 2$의 해 $(x, 2y)$를 주고, 거꾸로 $D = 2$의 해는 $x^2 = 1 + 2y^2$에서 $x$가 홀수, 따라서 $y^2 = \tfrac{x^2 - 1}2$이 짝수여서 $y$가 짝수임이 강제되어 $y = 2k$ 꼴로 되돌아온다. 두 방정식의 양의 해가 이렇게 일대일로 대응하기에 예시 6의 $(3, 2), (17, 12), (99, 70)$과 위의 $(3, 1), (17, 6), (99, 35)$이 같은 삼각제곱수를 가리킨다.
+처럼 삼각수이면서 동시에 제곱수인 수가 무한히 많음을 얻는다. 여기서 등장하는 $x$값 $3, 17, 99, \ldots$이 예시 6의 $D = 2$ 해의 $x$좌표와 정확히 일치하는 것은 우연이 아니다. $x^2 - 8y^2 = 1$이면 $x^2 - 2(2y)^2 = 1$이므로 $D = 8$의 해 $(x, y)$는 곧바로 $D = 2$의 해 $(x, 2y)$를 주고, 거꾸로 $D = 2$의 해는 $x^2 = 1 + 2y^2$에서 $x$가 홀수, 따라서 $y^2 = (x^2 - 1)/2$이 짝수여서 $y$가 짝수임이 강제되어 $y = 2k$ 꼴로 되돌아온다. 두 방정식의 양의 해가 이렇게 일대일로 대응하기에 예시 6의 $(3, 2), (17, 12), (99, 70)$과 위의 $(3, 1), (17, 6), (99, 35)$이 같은 삼각제곱수를 가리킨다.
 :::
 
 ::: 예시 11 ($\sqrt D$의 근사)
@@ -168,10 +168,10 @@ $$\frac{x}{y} - \sqrt D = \frac{x - y\sqrt D}{y} = \frac{x^2 - D y^2}{y(x + y\sq
 
 $$\left\lvert \frac{x}{y} - \sqrt D \right\rvert < \frac{1}{2\sqrt D\,y^2}$$
 
-이다. 따라서 해 $(x_n, y_n)$의 비 $x_n/y_n$은 $\sqrt D$로 매우 빠르게 (오차가 $y_n^{-2}$ 규모로) 수렴한다. $D = 2$의 경우 $\tfrac32, \tfrac{17}{12}, \tfrac{99}{70}, \tfrac{577}{408}$이 차례로 $\sqrt2 = 1.41421356\ldots$에 접근하며, $\tfrac{577}{408} = 1.41421568\ldots$은 이미 소수점 아래 다섯 자리까지 정확하다.
+이다. 따라서 해 $(x_n, y_n)$의 비 $x_n/y_n$은 $\sqrt D$로 매우 빠르게 (오차가 $y_n^{-2}$ 규모로) 수렴한다. $D = 2$의 경우 $3/2, 17/12, 99/70, 577/408$이 차례로 $\sqrt2 = 1.41421356\ldots$에 접근하며, $577/408 = 1.41421568\ldots$은 이미 소수점 아래 다섯 자리까지 정확하다.
 :::
 
-정리 3은 펠 방정식의 해가 무한순환군 (자명한 부호를 곱하면 $\mathbb{Z} \times \mathbb{Z}/2\mathbb{Z}$의 구조) 을 이룸을 뜻한다. 이는 실이차체 $\mathbb{Q}(\sqrt D)$의 정수환의 단원군에 관한 디리클레 단원정리의 가장 단순한 경우로, [§가우스 정수와 두 제곱수의 합](/ko/math/number_theory/gaussian_integers)에서 본 단원 $\pm 1, \pm i$가 유한했던 것과 대비된다. 두 글은 함께 대수적 정수론으로 들어가는 두 문 — 허이차체와 실이차체 — 을 보여 준다.
+정리 3은 펠 방정식의 해가 infinite cyclic group (자명한 부호를 곱하면 $\mathbb{Z} \times \mathbb{Z}/2\mathbb{Z}$의 구조) 을 이룸을 뜻한다. 이는 실이차체 $\mathbb{Q}(\sqrt D)$의 정수환의 단원군에 관한 디리클레 단원정리의 가장 단순한 경우로, [§가우스 정수와 두 제곱수의 합](/ko/math/number_theory/gaussian_integers)에서 본 단원 $\pm 1, \pm i$가 유한했던 것과 대비된다. 두 글은 함께 대수적 정수론으로 들어가는 두 문 — 허이차체와 실이차체 — 을 보여 준다.
 
 ---
 

@@ -331,7 +331,7 @@ $$\mathbb{C}^n=L_1\oplus\cdots\oplus L_n$$
 
 $$c(E)\vert_{\B T}=\prod_{i=1}^n(1+t_i);\qquad c_i\vert_{\B T}=e_i(t_1,\ldots,t_n)$$
 
-을 얻는다. 여기서 $e_i$는 $i$번째 elementary symmetric polynomial이며, $\lvert t_i\rvert=2$이므로 $\lvert c_i\rvert=2i$이다. 이제 남은 것은 $H^\bullet(\B\Umat(n);\mathbb{Z})\rightarrow H^\bullet(\B T;\mathbb{Z})=\mathbb{Z}[t_1,\ldots,t_n]$이 단사이고 그 image가 Weyl group $S_n$의 invariant ring $\mathbb{Z}[t_1,\ldots,t_n]^{S_n}$이라는 것으로, 정수계수 대칭다항식은 elementary symmetric polynomial들이 자유롭게 생성하므로 $\mathbb{Z}[t_1,\ldots,t_n]^{S_n}=\mathbb{Z}[e_1,\ldots,e_n]=\mathbb{Z}[c_1,\ldots,c_n]$이고, 결국 $\B\Umat(n)$의 cohomology는 따름정리 12의 다항식환에서 $S_n$-대칭인 부분만 남긴 것이다. 자세한 계산은 [MS]로 넘긴다.
+을 얻는다. 여기서 $e_i$는 $i$번째 elementary symmetric polynomial이며, $\lvert t_i\rvert=2$이므로 $\lvert c_i\rvert=2i$이다. 이제 남은 것은 $H^\bullet(\B\Umat(n);\mathbb{Z})\rightarrow H^\bullet(\B T;\mathbb{Z})=\mathbb{Z}[t_1,\ldots,t_n]$이 단사이고 그 image가 Weyl group $S_n$의 invariant ring $\mathbb{Z}[t_1,\ldots,t_n]^{S_n}$이라는 것으로, 정수계수 대칭다항식은 elementary symmetric polynomial들이 자유롭게 생성하므로 $\mathbb{Z}[t_1,\ldots,t_n]^{S_n}=\mathbb{Z}[e_1,\ldots,e_n]=\mathbb{Z}[c_1,\ldots,c_n]$이고, 결국 $\B\Umat(n)$의 cohomology는 따름정리 12의 polynomial ring에서 $S_n$-대칭인 부분만 남긴 것이다. 자세한 계산은 [MS]로 넘긴다.
 :::
 
 이렇게 $\B\Umat(n)$의 cohomology가 Chern class들의 다항식 전부로 이루어지므로, complex vector bundle의 모든 특성류는 Chern class의 다항식이다. 같은 방식으로 $H^\bullet(\B\Omat(n);\mathbb{Z}/2)=\mathbb{Z}/2[w_1,\ldots,w_n]$이 Stiefel–Whitney class를, oriented bundle에 대해서는 $\B\SO(n)$이 Euler class를 준다. 한 공간 $X$ 대신 $G$-작용을 갖는 공간을 다룰 때, $\B G$와 그 위에서의 homotopy quotient는 이 cohomology를 base로 삼는 equivariant cohomology의 토대가 된다.

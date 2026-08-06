@@ -68,10 +68,10 @@ $$\mathrm{pt}_G=EG\times_G\mathrm{pt}=EG/G=BG$$
 
 (2) 유일한 $G$-equivariant morphism $X\rightarrow\mathrm{pt}$가 유도하는 morphism이 바로 $\pi:X_G\rightarrow\mathrm{pt}_G=BG$이다. 그 pullback $\pi^\ast:H^\bullet(BG)\rightarrow H^\bullet(X_G)=H_G^\bullet(X)$은 ring homomorphism이며, 이를 통해 $H_G^\bullet(X)$은 $H^\bullet(BG)$-algebra가 된다.
 
-(3) $EG$의 한 점 $e_0$을 고정하면, 그 image $b_0=[e_0]\in BG$ 위의 fiber는 $\pi^{-1}(b_0)=\{[e_0,x]\mid x\in X\}$이고, $x\mapsto[e_0,x]$가 $X$와 이 fiber 사이의 위상동형을 준다. 이 포함 $\iota:X\hookrightarrow X_G$의 pullback $\iota^\ast:H_G^\bullet(X)\rightarrow H^\bullet(X)$이 restriction이다. $EG$가 path-connected이므로 $e_0$의 선택을 바꾸어도 $\iota$의 homotopy class, 따라서 $\iota^\ast$는 변하지 않는다.
+(3) $EG$의 한 점 $e_0$을 고정하면, 그 image $b_0=[e_0]\in BG$ 위의 fiber는 $\pi^{-1}(b_0)=\{[e_0,x]\mid x\in X\}$이고, $x\mapsto[e_0,x]$가 $X$와 이 fiber 사이의 homeomorphism을 준다. 이 포함 $\iota:X\hookrightarrow X_G$의 pullback $\iota^\ast:H_G^\bullet(X)\rightarrow H^\bullet(X)$이 restriction이다. $EG$가 path-connected이므로 $e_0$의 선택을 바꾸어도 $\iota$의 homotopy class, 따라서 $\iota^\ast$는 변하지 않는다.
 :::
 
-성질 (2)는 equivariant cohomology가 단순한 $R$-module이 아니라 항상 $H^\bullet(BG)$ 위의 algebra라는, 이 이론의 가장 중요한 구조적 특징을 말한다. 이 base ring $H^\bullet(BG)=H_G^\bullet(\mathrm{pt})$이 작용의 정보를 담는 좌표 역할을 하며, 이후 torus의 경우 이것이 character lattice 위의 다항식환으로 구체화된다. 성질 (3)의 restriction $\iota^\ast$은 작용을 잊고 보통의 cohomology로 내려가는 morphism이며, $H^\bullet(BG)$의 양의 degree 부분을 $0$으로 보내는 augmentation과 호환된다.
+성질 (2)는 equivariant cohomology가 단순한 $R$-module이 아니라 항상 $H^\bullet(BG)$ 위의 algebra라는, 이 이론의 가장 중요한 구조적 특징을 말한다. 이 base ring $H^\bullet(BG)=H_G^\bullet(\mathrm{pt})$이 작용의 정보를 담는 좌표 역할을 하며, 이후 torus의 경우 이것이 character lattice 위의 polynomial ring으로 구체화된다. 성질 (3)의 restriction $\iota^\ast$은 작용을 잊고 보통의 cohomology로 내려가는 morphism이며, $H^\bullet(BG)$의 양의 degree 부분을 $0$으로 보내는 augmentation과 호환된다.
 
 작용이 free일 때 equivariant cohomology가 orbit space의 cohomology로 환원된다는, 도입부에서 요구한 성질을 이제 증명한다.
 
@@ -91,7 +91,7 @@ $$q:X_G=EG\times_G X\rightarrow X/G,\qquad [e,x]\mapsto Gx$$
 
 $$q^{-1}(U)=EG\times_G(U\times G)\cong U\times EG$$
 
-이다. 마지막 동형은 $[e,(u,g)]\mapsto(u,e\cdot g)$로 주어지며 ($G$가 두 번째 성분에서 simply transitive하게 작용하므로 잘 정의된 위상동형이다), 따라서 $q:X_G\rightarrow X/G$는 fiber $EG$를 갖는 fiber bundle이다. $EG$가 contractible이므로 이 bundle은 fiber가 contractible하다. Contractible fiber를 갖는 fiber bundle은 Dold의 정리에 의해 paracompact base 위에서 homotopy equivalence이므로 ([tD] §6), $q$는 homotopy equivalence이고
+이다. 마지막 동형은 $[e,(u,g)]\mapsto(u,e\cdot g)$로 주어지며 ($G$가 두 번째 성분에서 simply transitive하게 작용하므로 잘 정의된 homeomorphism이다), 따라서 $q:X_G\rightarrow X/G$는 fiber $EG$를 갖는 fiber bundle이다. $EG$가 contractible이므로 이 bundle은 fiber가 contractible하다. Contractible fiber를 갖는 fiber bundle은 Dold의 정리에 의해 paracompact base 위에서 homotopy equivalence이므로 ([tD] §6), $q$는 homotopy equivalence이고
 
 $$H_G^\bullet(X)=H^\bullet(X_G)\xrightarrow[\cong]{q^\ast}H^\bullet(X/G)$$
 
@@ -140,7 +140,7 @@ $$0=c_r\big(\pi^\ast E\otimes\mathcal{O}(1)\big)=\prod_{i=1}^r(x_i-h)$$
 이고, 전체 부호 $(-1)^r$을 정리하면 진술한 관계식을 얻는다. Free 기저 $1,h,\ldots,h^{r-1}$은 Leray–Hirsch 정리에서 나온다. 한 fiber로 제한하면 $\mathcal{O}(-1)$은 $\mathbb{P}^{r-1}$ 위의 tautological line bundle로 제한되어 $h$는 hyperplane class의 음수가 되고, 따라서 $1,h,\ldots,h^{r-1}$이 fiber $\mathbb{P}^{r-1}$의 cohomology의 기저로 제한된다. Leray–Hirsch 정리에 의해 이들은 $H^\bullet(\mathbb{P}(E))$의 free $H^\bullet(B)$-기저를 이룬다. 자세한 내용은 [tD]의 §16, §19를 따른다.
 :::
 
-이 정리에서 $E$가 일반적인 vector bundle일 때는 관계식이 $E$의 Chern class들로 쓰이지만, 우리가 다룰 torus의 경우 $E$가 항상 character에 대응하는 line bundle들의 직합으로 나타나므로 위의 분해된 형태로 충분하다. 이제 $h$를 $H^\bullet(B)$-계수 다항식환의 변수로 보면, $H^\bullet(\mathbb{P}(E))$은 $h$에 대해 $r$차의 monic 다항식 하나를 법으로 하는 quotient임을 알 수 있다.
+이 정리에서 $E$가 일반적인 vector bundle일 때는 관계식이 $E$의 Chern class들로 쓰이지만, 우리가 다룰 torus의 경우 $E$가 항상 character에 대응하는 line bundle들의 직합으로 나타나므로 위의 분해된 형태로 충분하다. 이제 $h$를 $H^\bullet(B)$-계수 polynomial ring의 변수로 보면, $H^\bullet(\mathbb{P}(E))$은 $h$에 대해 $r$차의 monic 다항식 하나를 법으로 하는 quotient임을 알 수 있다.
 
 ## 예시: 회전하는 2-구면
 

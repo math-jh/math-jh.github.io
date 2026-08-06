@@ -18,21 +18,21 @@ published: false
 
 고전적 대수기하는 가환환을 국소적 재료로 삼아 affine scheme을 만들고, 이들을 이어붙여 scheme을 세운다. ([\[스킴\] §스킴, ⁋정의 1](/ko/math/scheme_theory/schemes#def1)) 이 이어붙이기가 낳는 가장 중요한 구성 가운데 하나가 올곱, 곧 두 부분다양체의 교차이다. 그러나 고전적 교차는 두 variety가 횡단적(transverse)일 때에만 올바른 답을 준다. 횡단적이지 않으면, 가령 서로 접하거나 예상보다 큰 차원에서 겹치면, scheme으로서의 교차 $\Spec(B\otimes_AC)$는 excess intersection을 놓치고 중복도나 초과 차원을 뭉갠다. 이 결함의 뿌리는 tensor product $\otimes$이 non-exact하다는 데 있으며, 우리는 이미 이를 유도 tensor product $\otimes^{\mathbb{L}}$으로 교정하는 법을 보았다. ([§Simplicial 가환환과 animation, ⁋명제 8](/ko/math/derived_algebraic_geometry/animated_rings#prop8))
 
-이 글의 목표는 그 국소적 교정을 대역적 기하로 승격하는 것이다. 곧 우리는 animated 가환환을 국소 재료로 삼아 *derived scheme*을 이어붙이고, 그 위에서 올곱이 자동으로 유도 올곱 $X\times_Z^hY$이 되도록 한다. 이렇게 하면 고전적으로 비횡단적이거나 초과 차원인 교차조차 올바른 virtual 차원과 virtual 중복도를 나른다. 이어서 우리는 animated ring 위의 functor로서 derived stack을 정의하고, 여접 복합체 $L_X$와 접복합체 $T_X$를 대역화하며, quasi-smooth morphism과 그것이 주는 virtual 구조를 확립한다. 이하에서 $k$는 field이고, 별다른 언급이 없으면 모든 것은 $k$ 위에서 생각한다. Animated 가환환들의 $\infty$-범주를 $\operatorname{Ani}=\operatorname{Ani}(\mathrm{CRing}_k)$로 ([§Simplicial 가환환과 animation, ⁋정의 4](/ko/math/derived_algebraic_geometry/animated_rings#def4)), $\infty$-groupoid들, 곧 space들의 $\infty$-범주를 $\mathcal{S}$로 적는다.
+이 글의 목표는 그 국소적 교정을 대역적 기하로 승격하는 것이다. 곧 우리는 animated commutative ring을 국소 재료로 삼아 *derived scheme*을 이어붙이고, 그 위에서 올곱이 자동으로 유도 올곱 $X\times_Z^hY$이 되도록 한다. 이렇게 하면 고전적으로 비횡단적이거나 초과 차원인 교차조차 올바른 virtual 차원과 virtual 중복도를 나른다. 이어서 우리는 animated ring 위의 functor로서 derived stack을 정의하고, 여접 복합체 $L_X$와 접복합체 $T_X$를 대역화하며, quasi-smooth morphism과 그것이 주는 virtual 구조를 확립한다. 이하에서 $k$는 field이고, 별다른 언급이 없으면 모든 것은 $k$ 위에서 생각한다. Animated commutative ring들의 $\infty$-범주를 $\operatorname{Ani}=\operatorname{Ani}(\mathrm{CRing}_k)$로 ([§Simplicial commutative ring과 animation, ⁋정의 4](/ko/math/derived_algebraic_geometry/animated_rings#def4)), $\infty$-groupoid들, 곧 space들의 $\infty$-범주를 $\mathcal{S}$로 적는다.
 
 ## Affine derived scheme과 derived Spec
 
-고전적 affine scheme은 가환환 $A$에 반변적으로 대응하는 $\Spec A$였고, 그 본질은 점functor $h_{\Spec A}=\Hom(-,A)$가 test scheme 위에서 어떻게 보이는가에 있었다. ([\[스킴\] §스킴 사이의 사상, ⁋정의 9](/ko/math/scheme_theory/morphism_of_schemes#def9)) Derived 세계에서 우리는 이 그림을 그대로 옮기되, 가환환을 animated 가환환으로, 집합값 functor를 space값 functor로 바꾼다.
+고전적 affine scheme은 commutative ring $A$에 반변적으로 대응하는 $\Spec A$였고, 그 본질은 점functor $h_{\Spec A}=\Hom(-,A)$가 test scheme 위에서 어떻게 보이는가에 있었다. ([\[스킴\] §스킴 사이의 사상, ⁋정의 9](/ko/math/scheme_theory/morphism_of_schemes#def9)) Derived 세계에서 우리는 이 그림을 그대로 옮기되, commutative ring을 animated commutative ring으로, 집합값 functor를 space값 functor로 바꾼다.
 
 ::: 정의 1
-Animated 가환환 $R\in \operatorname{Ani}$에 대하여, 그 *affine derived scheme* $\Spec R$은 $\operatorname{Ani}^\op$의 대상으로서의 $R$이며, 그 *점functor*는
+Animated commutative ring $R\in \operatorname{Ani}$에 대하여, 그 *affine derived scheme* $\Spec R$은 $\operatorname{Ani}^\op$의 대상으로서의 $R$이며, 그 *점functor*는
 
 $$h_{\Spec R}=\operatorname{Map}_{\operatorname{Ani}}(R,-):\operatorname{Ani}\longrightarrow \mathcal{S}$$
 
 로 주어지는, animated ring 위의 space값 functor이다. 여기서 $\operatorname{Map}_{\operatorname{Ani}}(R,S)$은 $\operatorname{Ani}$의 mapping space이다. Affine derived scheme들의 $\infty$-범주를 $\mathrm{dAff}=\operatorname{Ani}^\op$로 적는다.
 :::
 
-곧 $\Spec$은 정의상 반변 동치 $\operatorname{Ani}\overset{\sim}{\rightarrow}\mathrm{dAff}^\op$이며, 이는 고전적 반변 동치 "가환환 $\leftrightarrow$ affine scheme"의 유도 판본이다. 이 대상에 위상공간과 structure sheaf를 입히는 방식은 고전적인 경우와 평행하다. Animated ring $R$의 밑에 깔린 고전적 ring은 $\pi_0(R)$이므로 ([§Simplicial 가환환과 animation, ⁋명제 6](/ko/math/derived_algebraic_geometry/animated_rings#prop6)), $\Spec R$의 밑공간은 고전적 spectrum $\lvert\Spec R\rvert=\Spec \pi_0(R)$의 위상공간으로 두고, 그 위에 각 basic open $D(f)$ ($f\in \pi_0(R)$)에서 localization $R[1/f]$를 값으로 갖는 animated ring의 sheaf $\mathcal{O}_{\Spec R}$을 얹는다.
+곧 $\Spec$은 정의상 반변 동치 $\operatorname{Ani}\overset{\sim}{\rightarrow}\mathrm{dAff}^\op$이며, 이는 고전적 반변 동치 "commutative ring $\leftrightarrow$ affine scheme"의 유도 판본이다. 이 대상에 위상공간과 structure sheaf를 입히는 방식은 고전적인 경우와 평행하다. Animated ring $R$의 밑에 깔린 고전적 ring은 $\pi_0(R)$이므로 ([§Simplicial commutative ring과 animation, ⁋명제 6](/ko/math/derived_algebraic_geometry/animated_rings#prop6)), $\Spec R$의 밑공간은 고전적 spectrum $\lvert\Spec R\rvert=\Spec \pi_0(R)$의 위상공간으로 두고, 그 위에 각 basic open $D(f)$ ($f\in \pi_0(R)$)에서 localization $R[1/f]$를 값으로 갖는 animated ring의 sheaf $\mathcal{O}_{\Spec R}$을 얹는다.
 
 ::: 명제 2
 Animated ring $R$에 대하여, 위상공간 $\lvert\Spec R\rvert=\Spec \pi_0(R)$ 위에 animated ring의 sheaf $\mathcal{O}_{\Spec R}$이 존재하여 다음을 만족한다.
@@ -53,7 +53,7 @@ Localization $R\mapsto R[1/f]$는 $\operatorname{Ani}$에서 유도 localization
 고전적 scheme이 affine scheme으로 국소적으로 덮인 locally ringed space였듯, derived scheme은 affine derived scheme으로 국소적으로 덮인, animated ring의 sheaf를 가진 공간이다.
 
 ::: 정의 3
-*derived scheme<sub>유도 스킴</sub>*이란, 위상공간 $X$와 그 위의 animated 가환환의 sheaf $\mathcal{O}_X$의 쌍 $(X,\mathcal{O}_X)$으로서, 임의의 점 $x\in X$가 열린근방 $U$를 가져 $(U,\mathcal{O}_X\vert_U)$이 어떤 animated ring $R$의 affine derived scheme $\Spec R$과 동치가 되는 것을 뜻한다. Derived scheme 사이의 morphism은 국소적으로 ring이 얹힌 공간으로서의 morphism, 곧 연속사상 $f:X\rightarrow Y$과 sheaf의 morphism $f^\sharp:\mathcal{O}_Y\rightarrow f_\ast\mathcal{O}_X$의 쌍으로 정의한다. Derived scheme들의 $\infty$-범주를 $\mathrm{dSch}$로 적는다.
+*derived scheme<sub>유도 스킴</sub>*이란, 위상공간 $X$와 그 위의 animated commutative ring의 sheaf $\mathcal{O}_X$의 쌍 $(X,\mathcal{O}_X)$으로서, 임의의 점 $x\in X$가 열린근방 $U$를 가져 $(U,\mathcal{O}_X\vert_U)$이 어떤 animated ring $R$의 affine derived scheme $\Spec R$과 동치가 되는 것을 뜻한다. Derived scheme 사이의 morphism은 국소적으로 ring이 얹힌 공간으로서의 morphism, 곧 연속사상 $f:X\rightarrow Y$과 sheaf의 morphism $f^\sharp:\mathcal{O}_Y\rightarrow f_\ast\mathcal{O}_X$의 쌍으로 정의한다. Derived scheme들의 $\infty$-범주를 $\mathrm{dSch}$로 적는다.
 :::
 
 정의는 고전적 scheme의 정의와 글자 그대로 평행하며, 유일한 차이는 structure sheaf의 값이 가환환이 아니라 animated 가환환이라는 것이다. ([\[스킴\] §스킴, ⁋정의 1](/ko/math/scheme_theory/schemes#def1)) 국소 모형이 $\Spec R$이므로, derived scheme의 밑공간은 국소적으로 $\Spec \pi_0(R)$의 위상을 가지며, 이들을 이어붙인 고전적 scheme이 자연스럽게 딸려 나온다. 이것을 truncation이라 부른다.
@@ -89,7 +89,7 @@ $$\pi_n\bigl(k\otimes_{k[\x]}^{\mathbb{L}}k\bigr)=\Tor_n^{k[\x]}(k,k)=\begin{cas
 
 ## Derived stack
 
-Scheme을 점functor로 바라보면 그것은 $\Sch^\op\rightarrow \Set$의 표현가능 functor였고, stack은 그 집합값을 groupoid값으로 넓히고 하강 조건을 부과하여 얻어졌다. Derived 세계에서 우리는 이 두 단계를 동시에 유도화한다. 밑범주를 animated ring으로, 값을 space로 바꾸고, 하강을 $\infty$-범주적 하강, 곧 hyperdescent로 요구하는 것이다.
+Scheme을 점functor로 바라보면 그것은 $\Sch^\op\rightarrow \Set$의 representable functor였고, stack은 그 집합값을 groupoid값으로 넓히고 하강 조건을 부과하여 얻어졌다. Derived 세계에서 우리는 이 두 단계를 동시에 유도화한다. 밑범주를 animated ring으로, 값을 space로 바꾸고, 하강을 $\infty$-범주적 하강, 곧 hyperdescent로 요구하는 것이다.
 
 ::: 정의 6
 *derived prestack*이란 $\infty$-functor $F:\operatorname{Ani}\rightarrow \mathcal{S}$이다. Derived prestack $F$이 *derived stack<sub>유도 스택</sub>*이라는 것은, animated ring $R$의 임의의 étale covering $\{R\rightarrow R_i\}$과 그 Čech nerve $R_\bullet$에 대하여 자연스러운 morphism
@@ -99,7 +99,7 @@ $$F(R)\overset{\sim}{\longrightarrow}\lim_{[n]\in \Delta}F(R_n)$$
 이 동치인 것, 곧 $F$이 étale 위상에 대하여 hyperdescent를 만족하는 것을 뜻한다. Derived stack들의 $\infty$-범주를 $\mathrm{dSt}$로 적는다.
 :::
 
-여기서 limit은 cosimplicial diagram 위의 homotopy limit이며, 이것이 고전적 stack의 하강 조건, 곧 두 겹 겹침에서의 cocycle 조건을 모든 degree의 겹침으로 정합적으로 확장한 것이다. ([\[Stacks\] §Grothendieck 위상과 site, ⁋예시 8](/ko/math/stacks/grothendieck_topology#ex8)와 [\[Stacks\] §Grothendieck 위상과 site, ⁋정의 10](/ko/math/stacks/grothendieck_topology#def10)의 site 위 sheaf 조건을 space값으로 승격한 것이다.) 값을 truncated groupoid로 제한하고 밑을 discrete ring으로 제한하면 고전적 stack의 정의가 정확히 되살아난다. Fpqc 위상이 준표준이어서 표현가능 functor가 모두 sheaf였듯 ([\[Stacks\] §Grothendieck 위상과 site, ⁋정리 17](/ko/math/stacks/grothendieck_topology#thm17)), affine derived scheme의 점functor는 자동으로 derived stack이며, 이로써 $\mathrm{dSch}$이 $\mathrm{dSt}$에 완전 충실하게 들어간다.
+여기서 limit은 cosimplicial diagram 위의 homotopy limit이며, 이것이 고전적 stack의 하강 조건, 곧 두 겹 겹침에서의 cocycle 조건을 모든 degree의 겹침으로 정합적으로 확장한 것이다. ([\[Stacks\] §Grothendieck 위상과 site, ⁋예시 8](/ko/math/stacks/grothendieck_topology#ex8)와 [\[Stacks\] §Grothendieck 위상과 site, ⁋정의 10](/ko/math/stacks/grothendieck_topology#def10)의 site 위 sheaf 조건을 space값으로 승격한 것이다.) 값을 truncated groupoid로 제한하고 밑을 discrete ring으로 제한하면 고전적 stack의 정의가 정확히 되살아난다. Fpqc 위상이 subcanonical이어서 표현가능 functor가 모두 sheaf였듯 ([\[Stacks\] §Grothendieck 위상과 site, ⁋정리 17](/ko/math/stacks/grothendieck_topology#thm17)), affine derived scheme의 점functor는 자동으로 derived stack이며, 이로써 $\mathrm{dSch}$이 $\mathrm{dSt}$에 완전 충실하게 들어간다.
 
 ::: 명제 7
 Yoneda embedding $X\mapsto \operatorname{Map}_{\mathrm{dSch}}(-,X)\vert_{\mathrm{dAff}}$은 완전 충실한 포함 $\mathrm{dSch}\hookrightarrow \mathrm{dSt}$을 주며, derived scheme과 (뒤에서 정의할) geometric derived stack에 대하여 truncation functor $t_0$이 이들의 밑에 깔린 고전적 scheme·algebraic stack을 준다. 특히 고전적 algebraic stack은 discrete ring 위에서 truncated groupoid값을 갖는 derived stack으로서 $\mathrm{dSt}$에 완전 충실하게 들어간다.
@@ -111,7 +111,7 @@ Yoneda embedding $X\mapsto \operatorname{Map}_{\mathrm{dSch}}(-,X)\vert_{\mathrm
 Derived stack 가운데 기하를 논할 수 있는 부류는 고전적 경우와 마찬가지로 atlas로 가려낸다. 다만 atlas의 source가 derived scheme이고, 차원·매끄러움은 유도 판본으로 읽는다.
 
 ::: 정의 8
-Derived stack $\mathcal{X}$이 *geometric* (또는 *derived Artin stack<sub>유도 아틴 스택</sub>*)이라는 것은, 그 대각선이 표현가능하고, derived scheme $U$으로부터의 smooth 전사 morphism $u:U\rightarrow \mathcal{X}$, 곧 *atlas*가 존재하는 것을 뜻한다. Atlas를 étale 전사로 잡을 수 있으면 $\mathcal{X}$을 *derived Deligne–Mumford stack*이라 부른다.
+Derived stack $\mathcal{X}$이 *geometric* (또는 *derived Artin stack<sub>유도 아틴 스택</sub>*)이라는 것은, 그 대각선이 representable하고, derived scheme $U$으로부터의 smooth 전사 morphism $u:U\rightarrow \mathcal{X}$, 곧 *atlas*가 존재하는 것을 뜻한다. Atlas를 étale 전사로 잡을 수 있으면 $\mathcal{X}$을 *derived Deligne–Mumford stack*이라 부른다.
 :::
 
 이는 고전적 algebraic stack의 정의를 derived scheme을 국소 모형으로 삼아 옮긴 것이다. ([\[Stacks\] §대수적 stack과 quotient stack, ⁋정의 6](/ko/math/stacks/algebraic_stacks#def6)) 여기서 morphism $u:U\rightarrow \mathcal{X}$의 smooth·étale 성질은 뒤에서 여접 복합체로 특징짓는데, 곧 상대 여접 복합체 $L_u$이 degree $0$에 집중된 국소자유 sheaf인 경우가 smooth이다. Atlas가 있으면 $\mathcal{X}$의 truncation $t_0(\mathcal{X})$은 atlas의 truncation $t_0(U)$을 atlas로 갖는 고전적 algebraic stack이 되어, geometric derived stack이 고전적 algebraic stack 위에 얹힌 유도 두께임이 다시 확인된다. 가장 기본적인 예는 고전적 stack 자체가 discrete derived stack으로 들어앉는 경우이다.
@@ -146,10 +146,10 @@ $$f^\ast L_{Y/Z}\longrightarrow L_{X/Z}\longrightarrow L_{X/Y}\longrightarrow f^
 2. (base change) derived scheme의 유도 올곱 $X'=X\times_Y^hY'$과 그 projection $g:X'\rightarrow X$에 대하여 $L_{X'/Y'}\simeq g^\ast L_{X/Y}$이다.
 :::
 ::: 증명
-두 성질은 모두 affine 국소적이며, 그 국소 형태가 각각 [§Simplicial 가환환과 animation, ⁋정리 12](/ko/math/derived_algebraic_geometry/animated_rings#thm12)과, 유도 tensor product에 대한 base change 불변성이다. Affine 국소적으로 $X=\Spec B$, $Y=\Spec A$, $Y'=\Spec A'$이면 $X'=\Spec(B\otimes_A^{\mathbb{L}}A')$이고, 여접 복합체가 유도 tensor product와 교환하여 $L_{(B\otimes_A^{\mathbb{L}}A')/A'}\simeq L_{B/A}\otimes_B^{\mathbb{L}}(B\otimes_A^{\mathbb{L}}A')$이 됨은 free simplicial 분해를 base change하여 직접 확인된다. 이 국소 동형들이 [정의 10](#def10)의 접착과 호환되므로 대역적으로 성립한다. 자세한 논증은 ([Ill], [Lur, SAG])에 있다.
+두 성질은 모두 affine 국소적이며, 그 국소 형태가 각각 [§Simplicial 가환환과 animation, ⁋정리 12](/ko/math/derived_algebraic_geometry/animated_rings#thm12)과, 유도 tensor product에 대한 base change invariance가다. Affine 국소적으로 $X=\Spec B$, $Y=\Spec A$, $Y'=\Spec A'$이면 $X'=\Spec(B\otimes_A^{\mathbb{L}}A')$이고, 여접 복합체가 유도 tensor product와 교환하여 $L_{(B\otimes_A^{\mathbb{L}}A')/A'}\simeq L_{B/A}\otimes_B^{\mathbb{L}}(B\otimes_A^{\mathbb{L}}A')$이 됨은 free simplicial 분해를 base change하여 직접 확인된다. 이 국소 동형들이 [정의 10](#def10)의 접착과 호환되므로 대역적으로 성립한다. 자세한 논증은 ([Ill], [Lur, SAG])에 있다.
 :::
 
-추이 삼각형과 base change는 여접 복합체를 계산 가능한 대상으로 만들며, 특히 base change 불변성은 유도 올곱 위의 여접 복합체가 원래 morphism의 여접 복합체를 그대로 물려받음을 말한다. 이 두 성질이 다음 절에서 quasi-smooth morphism이 유도 올곱에 대하여 닫혀 있음을 보장한다.
+추이 삼각형과 base change는 여접 복합체를 계산 가능한 대상으로 만들며, 특히 base change invariance는 유도 올곱 위의 여접 복합체가 원래 morphism의 여접 복합체를 그대로 물려받음을 말한다. 이 두 성질이 다음 절에서 quasi-smooth morphism이 유도 올곱에 대하여 닫혀 있음을 보장한다.
 
 ## Quasi-smooth 사상과 virtual 차원
 
@@ -295,7 +295,7 @@ $$\pi_0=k[\x]=\mathcal{O}_V,\qquad \pi_1=k[\x]\cong N_{V/\mathbb{A}^2}\quad(\tex
 을 준다. 이제 $t_0=V$은 차원 $1$이라 virtual 차원 $1+1-2=0$을 초과하며, 그 초과 차원 $1$이 $\pi_1=\mathcal{O}_V$으로 정확히 기록된다. Virtual class는 $[V\times_{\mathbb{A}^2}^hV]^{\mathrm{vir}}=e(N_{V/\mathbb{A}^2})\cap[V]$, 곧 normal bundle의 Euler class인데, $\mathbb{A}^2$ 안에서 $V$의 normal bundle이 자명하여 $e(N_{V/\mathbb{A}^2})=0$이므로 $V\cdot V=0$이다. 이는 곡선이 affine 평면 안에서 자기 자신으로부터 자유롭게 이동할 수 있어 self-intersection number가 $0$이라는 고전적 사실의 유도적 실현이며, [예시 5](#ex5)의 점 차원 현상이 곡선 차원에서 반복된 것이다.
 :::
 
-이 세 예시는 유도 올곱이 세 가지 초과 현상을 하나의 언어로 붙듦을 보여준다. [예시 5](#ex5)의 낮은 차원에서의 음의 virtual 차원, [예시 17](#ex17)의 regular sequence 실패가 낳는 higher homotopy, 그리고 [예시 18](#ex18)의 자기교차의 초과 차원이 그것이다. 고전적 올곱이 $\pi_0$만 보아 이 정보들을 잃던 자리에서, animated ring을 이어붙여 세운 derived scheme과 그 위의 유도 올곱은 virtual 차원과 virtual class를 통해 교차의 참된 기하를 복원한다. 이것이 derived algebraic geometry가 고전 교차이론에 주는 가장 직접적인 기여이다.
+이 세 예시는 유도 올곱이 세 가지 초과 현상을 하나의 언어로 붙듦을 보여준다. [예시 5](#ex5)의 낮은 차원에서의 음의 virtual 차원, [예시 17](#ex17)의 regular sequence 실패가 낳는 higher homotopy, 그리고 [예시 18](#ex18)의 자기교차의 초과 차원이 그것이다. 고전적 올곱이 $\pi_0$만 보아 이 정보들을 잃던 자리에서, animated ring을 이어붙여 세운 derived scheme과 그 위의 유도 올곱은 virtual 차원과 virtual class를 통해 교차의 참된 기하를 복원한다. 이것이 derived algebraic geometry가 고전 intersection theory에 주는 가장 직접적인 기여이다.
 
 ---
 

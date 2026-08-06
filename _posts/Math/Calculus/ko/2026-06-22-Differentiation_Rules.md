@@ -113,7 +113,7 @@ $$\frac{g(f(a+h)) - g(f(a))}{h} = \varphi(f(a+h)) \frac{f(a+h) - f(a)}{h}$$
 이고, $h \rightarrow 0$일 때 $f$의 연속성으로 $\varphi(f(a+h)) \rightarrow \varphi(b) = g'(b)$이며 둘째 인자는 $f'(a)$로 수렴하므로, 극한은 $g'(f(a))f'(a)$이다.
 :::
 
-이제 몫의 미분법은 곱의 미분법과 연쇄법칙의 따름정리로 따라온다.
+이제 quotient rule은 곱의 미분법과 연쇄법칙의 따름정리로 따라온다.
 
 ::: 따름정리 5 (몫의 미분법)
 $f, g$가 $a$에서 미분가능하고 $g(a) \neq 0$이면 $f/g$도 $a$에서 미분가능하고

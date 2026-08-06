@@ -184,7 +184,7 @@ $$\left\lvert \int_{C_R} f(z)e^{iaz}\,dz\right\rvert \leq M(R)\,R\cdot 2\cdot\fr
 이다.
 :::
 
-보조정리 6의 핵심은 $\sin\theta \geq 2\theta/\pi$라는 부등식으로 지수 감소를 끌어내어, 적분 $\int_0^\pi e^{-aR\sin\theta}\,d\theta$이 $R$에 반비례하여 작아짐을 보인 데 있다. 이 $1/R$ 인자가 $C_R$의 길이에서 오는 $R$ 인자와 상쇄되어, $\lvert f\rvert$이 단지 $0$으로 가기만 하면 ($\lvert f\rvert \sim 1/R^2$일 필요 없이) 적분이 소멸한다. 덕분에 진동적분에서는 degree 조건이 $\deg Q \geq \deg P + 1$로 약화된다. 이를 Fourier 변환형 적분에 적용한다.
+보조정리 6의 핵심은 $\sin\theta \geq 2\theta/\pi$라는 부등식으로 지수 감소를 끌어내어, 적분 $\int_0^\pi e^{-aR\sin\theta}\,d\theta$이 $R$에 반비례하여 작아짐을 보인 데 있다. 이 $1/R$ 인자가 $C_R$의 길이에서 오는 $R$ 인자와 상쇄되어, $\lvert f\rvert$이 단지 $0$으로 가기만 하면 ($\lvert f\rvert \sim 1/R^2$일 필요 없이) 적분이 소멸한다. 덕분에 oscillating integral에서는 degree 조건이 $\deg Q \geq \deg P + 1$로 약화된다. 이를 Fourier 변환형 적분에 적용한다.
 
 ::: 예시 7 (Fourier 적분)
 적분 $\displaystyle\int_{-\infty}^{\infty}\frac{\cos x}{x^2 + 1}\,dx$를 계산한다. $\cos x = \Real(e^{ix})$이므로 복소화하여 $f(z) = \dfrac{e^{iz}}{z^2 + 1}$을 상반평면 반원 경로에서 적분한다. 분모 $z^2 + 1 = (z - i)(z + i)$의 영점 가운데 상반평면에 있는 것은 $z = i$ 하나이고, 이는 단순극이다. 명제 3의 단순극 공식으로
@@ -209,13 +209,13 @@ $$\cos\theta = \frac{1}{2}\Bigl(z + \frac{1}{z}\Bigr), \qquad \sin\theta = \frac
 
 이며,
 
-$$\int_0^{2\pi} R(\cos\theta, \sin\theta)\,d\theta = \oint_{\lvert z\rvert = 1} R\Bigl(\tfrac{1}{2}(z + z^{-1}),\, \tfrac{1}{2i}(z - z^{-1})\Bigr)\frac{dz}{iz} = 2\pi i\sum_{\lvert z_j\rvert < 1}\operatorname{Res}_{z = z_j} F$$
+$$\int_0^{2\pi} R(\cos\theta, \sin\theta)\,d\theta = \oint_{\lvert z\rvert = 1} R\Bigl(\frac{1}{2}(z + z^{-1}),\, \frac{1}{2i}(z - z^{-1})\Bigr)\frac{dz}{iz} = 2\pi i\sum_{\lvert z_j\rvert < 1}\operatorname{Res}_{z = z_j} F$$
 
 이다. 여기서 $F(z)$은 가운데 적분의 피적분함수이고, 합은 단위원판 안의 극 전체에 걸친다.
 :::
 
 ::: 증명
-$\theta$가 $0$부터 $2\pi$까지 증가하면 $z = e^{i\theta}$이 단위원을 반시계방향으로 정확히 한 번 돈다. Euler 공식 ([§복소정칙함수, ⁋정의 10](/ko/math/complex_analysis/holomorphic_functions#def10)) 에서 $e^{i\theta} = \cos\theta + i\sin\theta$이고 $e^{-i\theta} = \cos\theta - i\sin\theta$이므로, 두 식을 더하고 빼면 $\cos\theta = \tfrac12(e^{i\theta} + e^{-i\theta}) = \tfrac12(z + z^{-1})$, $\sin\theta = \tfrac{1}{2i}(e^{i\theta} - e^{-i\theta}) = \tfrac{1}{2i}(z - z^{-1})$이다. 또 $dz = ie^{i\theta}\,d\theta = iz\,d\theta$이므로 $d\theta = dz/(iz)$이다.
+$\theta$가 $0$부터 $2\pi$까지 증가하면 $z = e^{i\theta}$이 단위원을 반시계방향으로 정확히 한 번 돈다. Euler 공식 ([§복소정칙함수, ⁋정의 10](/ko/math/complex_analysis/holomorphic_functions#def10)) 에서 $e^{i\theta} = \cos\theta + i\sin\theta$이고 $e^{-i\theta} = \cos\theta - i\sin\theta$이므로, 두 식을 더하고 빼면 $\cos\theta = (e^{i\theta} + e^{-i\theta})/2 = (z + z^{-1})/2$, $\sin\theta = (e^{i\theta} - e^{-i\theta})/(2i) = (z - z^{-1})/(2i)$이다. 또 $dz = ie^{i\theta}\,d\theta = iz\,d\theta$이므로 $d\theta = dz/(iz)$이다.
 
 이 치환을 적분에 대입하면 실수 적분이 단위원 $\lvert z\rvert = 1$을 따른 복소적분으로 바뀌고, 피적분함수 $F(z) = R(\cdots)/(iz)$은 $z$의 유리함수이다. 가정에서 $R$의 분모가 $[0, 2\pi]$의 $\theta$에 대해 사라지지 않으므로 $F$은 단위원 위 ($\lvert z\rvert = 1$) 에 극을 갖지 않고, 따라서 유한 개의 극이 단위원판 안팎에 흩어져 있다. 단위원이 안쪽 극을 각각 한 번 감으므로 유수정리 (정리 2) 에 의해 적분이 $2\pi i$ 곱하기 단위원판 안 극들의 유수 합이다.
 :::
@@ -223,9 +223,9 @@ $\theta$가 $0$부터 $2\pi$까지 증가하면 $z = e^{i\theta}$이 단위원�
 명제 8은 삼각적분을 기계적으로 유수 계산으로 바꾼다. 치환 뒤 남는 일은 피적분함수 $F(z)$의 극 가운데 어느 것이 단위원판 $\lvert z\rvert < 1$ 안에 있는지 가려내고 그 유수를 더하는 것뿐이다. 분모가 $z$의 이차식이면 두 root의 곱이 상수항으로 주어지므로, 보통 한 root만 원판 안에 들어와 계산이 단순극 하나로 끝난다.
 
 ::: 예시 9 (삼각적분)
-$a > 1$일 때 $\displaystyle\int_0^{2\pi}\frac{d\theta}{a + \cos\theta}$를 구한다. $z = e^{i\theta}$로 치환하면 $\cos\theta = \tfrac12(z + z^{-1})$, $d\theta = dz/(iz)$이므로
+$a > 1$일 때 $\displaystyle\int_0^{2\pi}\frac{d\theta}{a + \cos\theta}$를 구한다. $z = e^{i\theta}$로 치환하면 $\cos\theta = (z + z^{-1})/2$, $d\theta = dz/(iz)$이므로
 
-$$\int_0^{2\pi}\frac{d\theta}{a + \cos\theta} = \oint_{\lvert z\rvert = 1}\frac{1}{a + \tfrac12(z + z^{-1})}\frac{dz}{iz} = \oint_{\lvert z\rvert = 1}\frac{2}{i}\frac{dz}{z^2 + 2az + 1}$$
+$$\int_0^{2\pi}\frac{d\theta}{a + \cos\theta} = \oint_{\lvert z\rvert = 1}\frac{1}{a + \frac12(z + z^{-1})}\frac{dz}{iz} = \oint_{\lvert z\rvert = 1}\frac{2}{i}\frac{dz}{z^2 + 2az + 1}$$
 
 이다. 분모 $z^2 + 2az + 1$의 root는 $z_\pm = -a \pm \sqrt{a^2 - 1}$이고, 두 root의 곱은 $z_+ z_- = 1$이다. $a > 1$이므로 $z_+ = -a + \sqrt{a^2 - 1}$은 $\lvert z_+\rvert < 1$로 단위원판 안에 있고 $z_- = -a - \sqrt{a^2 - 1}$은 밖에 있다. 따라서 $F(z) = \dfrac{2}{i}\dfrac{1}{(z - z_+)(z - z_-)}$의 단위원판 안 극은 단순극 $z_+$ 하나뿐이고, 그 유수는
 
@@ -261,11 +261,11 @@ $$\operatorname{Res}_{z = n} g_f = f(n)\operatorname{Res}_{z = n}\pi\cot\pi z = 
 
 이다.
 
-이제 한 변이 $N + \tfrac12$인 정사각형 경로 $\Gamma_N$을 잡는다. 곧 꼭짓점이 $(\pm(N+\tfrac12), \pm(N+\tfrac12))$인 정사각형의 boundary를 반시계방향으로 도는 경로이다. 이 경로 위에서 $\lvert\cot\pi z\rvert$이 $N$에 무관한 상수 $C$로 유계임이 알려져 있다 (변마다 $\sin\pi z$의 절댓값이 아래로 유계이기 때문이다). $N$을 충분히 크게 잡으면 $\Gamma_N$ 안에 정수 $-N, \dots, N$과 $f$의 모든 극이 들어가므로, 유수정리 (정리 2) 에 의해
+이제 한 변이 $N + 1/2$인 정사각형 경로 $\Gamma_N$을 잡는다. 곧 꼭짓점이 $(\pm(N+1/2), \pm(N+1/2))$인 정사각형의 boundary를 반시계방향으로 도는 경로이다. 이 경로 위에서 $\lvert\cot\pi z\rvert$이 $N$에 무관한 상수 $C$로 유계임이 알려져 있다 (변마다 $\sin\pi z$의 절댓값이 아래로 유계이기 때문이다). $N$을 충분히 크게 잡으면 $\Gamma_N$ 안에 정수 $-N, \dots, N$과 $f$의 모든 극이 들어가므로, 유수정리 (정리 2) 에 의해
 
 $$\frac{1}{2\pi i}\oint_{\Gamma_N} \pi\cot(\pi z)f(z)\,dz = \sum_{n = -N}^{N} f(n) + \sum_{j}\operatorname{Res}_{z = z_j}\Bigl[\pi\cot(\pi z)f(z)\Bigr]$$
 
-이다. 왼쪽 적분을 어림한다. Degree 조건에서 큰 $\lvert z\rvert$에 대해 $\lvert f(z)\rvert \leq A/\lvert z\rvert^2$이고 $\Gamma_N$ 위에서 $\lvert z\rvert \geq N + \tfrac12$이므로, $\Gamma_N$의 둘레가 $4(2N + 1)$임과 함께 ML 부등식 ([§복소적분, ⁋명제 6](/ko/math/complex_analysis/complex_integration#prop6)) 으로
+이다. 왼쪽 적분을 어림한다. Degree 조건에서 큰 $\lvert z\rvert$에 대해 $\lvert f(z)\rvert \leq A/\lvert z\rvert^2$이고 $\Gamma_N$ 위에서 $\lvert z\rvert \geq N + 1/2$이므로, $\Gamma_N$의 둘레가 $4(2N + 1)$임과 함께 ML 부등식 ([§복소적분, ⁋명제 6](/ko/math/complex_analysis/complex_integration#prop6)) 으로
 
 $$\left\lvert\oint_{\Gamma_N}\pi\cot(\pi z)f(z)\,dz\right\rvert \leq \pi C\cdot\frac{A}{(N + \frac12)^2}\cdot 4(2N + 1) \xrightarrow[N \rightarrow \infty]{} 0$$
 
@@ -276,7 +276,7 @@ $$0 = \sum_{n=-\infty}^{\infty} f(n) + \sum_{j}\operatorname{Res}_{z = z_j}\Bigl
 이 되어 주장하는 등식을 얻는다.
 :::
 
-명제 10은 무한급수의 합을 유한개의 유수 계산으로 환원한다. 급수의 항이 한 유리함수 $f$에서 $f(n)$으로 나오기만 하면, $f$의 극이라는 유한집합에서의 유수만 구하면 합이 닫힌 형태로 결정된다. 정사각형 경로를 쓰는 것은 그 위에서 $\cot\pi z$이 균등하게 유계여서 적분이 소멸하기 때문이며, 정수에 걸리지 않도록 변을 반정수 $N + \tfrac12$에 두는 것이 요령이다. 이 공식의 가장 유명한 응용이 Basel 문제이다.
+명제 10은 무한급수의 합을 유한개의 유수 계산으로 환원한다. 급수의 항이 한 유리함수 $f$에서 $f(n)$으로 나오기만 하면, $f$의 극이라는 유한집합에서의 유수만 구하면 합이 닫힌 형태로 결정된다. 정사각형 경로를 쓰는 것은 그 위에서 $\cot\pi z$이 균등하게 유계여서 적분이 소멸하기 때문이며, 정수에 걸리지 않도록 변을 반정수 $N + 1/2$에 두는 것이 요령이다. 이 공식의 가장 유명한 응용이 Basel 문제이다.
 
 ::: 예시 11 (Basel 문제)
 $\displaystyle\sum_{n=1}^{\infty}\frac{1}{n^2} = \frac{\pi^2}{6}$임을 보인다. $f(z) = 1/z^2$은 degree 조건을 만족하지만 극 $z = 0$이 정수라 명제 10을 곧장 쓸 수 없으므로, 원점을 따로 다룬다. 정사각형 경로 $\Gamma_N$ 안에서 $g(z) = \pi\cot(\pi z)/z^2$의 극은 정수 $z = n$ ($n \neq 0$) 들과 원점이며, 명제 10의 증명과 같은 어림으로 $N \rightarrow \infty$에서 $\oint_{\Gamma_N} g\,dz \rightarrow 0$이다. 따라서 모든 극에서의 유수 합이 $0$이다.

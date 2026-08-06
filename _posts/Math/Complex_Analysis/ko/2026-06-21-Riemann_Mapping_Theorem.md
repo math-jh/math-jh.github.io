@@ -14,7 +14,7 @@ weight: 12
 published: false
 ---
 
-두 영역 사이에 holomorphic bijection이 존재하는지, 곧 두 영역이 conformal equivalence인지를 묻는 문제는 복소해석학의 한 중심에 놓인다. Holomorphic bijection은 도함수가 어디서도 소멸하지 않아 conformal map이 되므로 ([§등각사상과 Möbius 변환, ⁋명제 3](/ko/math/complex_analysis/conformal_maps#prop3)), 한 영역 위의 holomorphic 함수론 전체가 conformal isomorphism을 통해 다른 영역으로 고스란히 옮겨진다. 그런데 등각동형의 후보가 될 수 있는 영역은 놀랍도록 적다. Riemann 사상정리는 $\mathbb{C}$ 전체가 아닌 단순연결 열린집합이라면, 그 모양이 아무리 복잡하더라도 예외 없이 단위원판과 등각동형임을 단언한다. 곧 위상적 조건인 단순연결성 하나만으로 등각형 분류가 끝나며, $\mathbb{C}$와 그 진부분집합이라는 단 두 개의 등각동형류만 남는다. 이 글은 그 증명을 전개한다. 핵심 도구는 국소적으로 bounded인 holomorphic function 족이 정규족을 이룬다는 Montel 정리이며, 이를 써서 단위원판으로 가는 단사 holomorphic 사상 가운데 한 점에서 도함수의 절댓값을 최대화하는 극값사상을 추출하고, 그 극값성이 사상을 전사로 강제함을 보인다. 단사성은 Hurwitz 정리가 보장한다.
+두 영역 사이에 holomorphic bijection이 존재하는지, 곧 두 영역이 conformal equivalence인지를 묻는 문제는 complex analysis의 한 중심에 놓인다. Holomorphic bijection은 도함수가 어디서도 소멸하지 않아 conformal map이 되므로 ([§등각사상과 Möbius 변환, ⁋명제 3](/ko/math/complex_analysis/conformal_maps#prop3)), 한 영역 위의 holomorphic 함수론 전체가 conformal isomorphism을 통해 다른 영역으로 고스란히 옮겨진다. 그런데 등각동형의 후보가 될 수 있는 영역은 놀랍도록 적다. Riemann 사상정리는 $\mathbb{C}$ 전체가 아닌 단순연결 열린집합이라면, 그 모양이 아무리 복잡하더라도 예외 없이 단위원판과 등각동형임을 단언한다. 곧 위상적 조건인 단순연결성 하나만으로 등각형 분류가 끝나며, $\mathbb{C}$와 그 진부분집합이라는 단 두 개의 등각동형류만 남는다. 이 글은 그 증명을 전개한다. 핵심 도구는 국소적으로 bounded인 holomorphic function 족이 정규족을 이룬다는 Montel 정리이며, 이를 써서 단위원판으로 가는 단사 holomorphic 사상 가운데 한 점에서 도함수의 절댓값을 최대화하는 극값사상을 추출하고, 그 극값성이 사상을 전사로 강제함을 보인다. 단사성은 Hurwitz 정리가 보장한다.
 
 ## 정규족과 Montel 정리
 
@@ -24,7 +24,7 @@ published: false
 열린집합 $\Omega \subseteq \mathbb{C}$ 위의 holomorphic function들의 모임 $\mathcal{F}$가 *normal family<sub>정규족</sub>*라는 것은, $\mathcal{F}$의 임의의 함수열 $(f_n)$이 $\Omega$의 모든 콤팩트 부분집합 위에서 균등수렴하는 부분열 $(f_{n_k})$을 가지는 것을 뜻한다. 그 극한함수가 $\mathcal{F}$에 속할 것까지는 요구하지 않는다.
 :::
 
-콤팩트 집합 위에서의 균등수렴을 보통 *국소균등수렴<sub>locally uniform convergence</sub>*이라 부르며, 이는 $\Omega$의 각 점이 그 위에서 균등수렴이 일어나는 근방을 가진다는 조건과 같다. Holomorphic function 열이 이렇게 국소균등수렴하면 그 극한도 holomorphic이므로, 정규족의 함수열에서 뽑은 부분열의 극한은 언제나 $\Omega$ 위의 holomorphic function이 된다. 정규족의 정의 자체는 추상적이어서 어떤 족이 정규족인지 가려내는 판정법이 필요한데, 그 가장 강력한 형태가 Montel 정리이다. 그것은 함수값이 콤팩트 집합마다 bounded라는 단순한 조건만으로 정규성을 이끌어 낸다. 증명의 두 축은 도함수의 유계성에서 나오는 동등연속성과, 가산조밀집합 위에서의 대각선논법이다. 먼저 유계성이 도함수의 유계성으로, 곧 동등연속성으로 옮겨짐을 본다.
+콤팩트 집합 위에서의 균등수렴을 보통 *국소균등수렴<sub>locally uniform convergence</sub>*이라 부르며, 이는 $\Omega$의 각 점이 그 위에서 균등수렴이 일어나는 근방을 가진다는 조건과 같다. Holomorphic function 열이 이렇게 국소균등수렴하면 그 극한도 holomorphic이므로, 정규족의 함수열에서 뽑은 부분열의 극한은 언제나 $\Omega$ 위의 holomorphic function이 된다. 정규족의 정의 자체는 추상적이어서 어떤 족이 정규족인지 가려내는 판정법이 필요한데, 그 가장 강력한 형태가 Montel 정리이다. 그것은 함수값이 콤팩트 집합마다 bounded라는 단순한 조건만으로 정규성을 이끌어 낸다. 증명의 두 축은 도함수의 boundedness에서 나오는 동등연속성과, 가산조밀집합 위에서의 대각선논법이다. 먼저 boundedness가 도함수의 boundedness로, 곧 동등연속성으로 옮겨짐을 본다.
 
 ::: 보조정리 2 (국소유계족의 동등연속성)
 $\mathcal{F}$가 열린집합 $\Omega \subseteq \mathbb{C}$ 위의 holomorphic function 족이고 $\Omega$의 각 콤팩트 부분집합 위에서 *국소유계<sub>locally bounded</sub>*하다고 하자. 곧 임의의 콤팩트 집합 $K \subseteq \Omega$에 대하여 어떤 상수 $M_K$가 있어 모든 $f \in \mathcal{F}$과 $z \in K$에서 $\lvert f(z)\rvert \leq M_K$이다. 그러면 $\mathcal{F}$은 $\Omega$의 각 콤팩트 부분집합 위에서 동등연속이다. 곧 임의의 콤팩트 집합 $K \subseteq \Omega$과 $\varepsilon > 0$에 대하여 어떤 $\delta > 0$이 있어, $z, w \in K$이고 $\lvert z - w\rvert < \delta$이면 모든 $f \in \mathcal{F}$에서 $\lvert f(z) - f(w)\rvert < \varepsilon$이다.
@@ -48,7 +48,7 @@ $$\lvert f(z) - f(w)\rvert \leq \frac{\lvert z - w\rvert}{2\pi}\cdot\frac{M}{2r^
 이다. 이 어림은 $f \in \mathcal{F}$에 무관한 상수 $M/r$만을 담으므로, 주어진 $\varepsilon > 0$에 대해 $\delta = \min(r, r\varepsilon/M)$으로 두면 $z, w \in K$이고 $\lvert z - w\rvert < \delta$일 때 모든 $f \in \mathcal{F}$에서 $\lvert f(z) - f(w)\rvert \leq (M/r)\lvert z - w\rvert < \varepsilon$이다. 곧 $\mathcal{F}$이 $K$ 위에서 동등연속이다.
 :::
 
-보조정리 2의 요점은 holomorphic function의 도함수가 함숫값으로 제어된다는 데 있다. 실변수의 유계함수족은 얼마든지 가파르게 진동할 수 있어 동등연속성을 기대할 수 없지만, holomorphic function은 Cauchy 적분공식을 통해 한 점에서의 미분이 주위 원 위의 값들의 평균으로 표현되므로, 값이 bounded이면 그 변화율도 자동으로 bounded가 된다. 이 동등연속성이 Arzelà–Ascoli 형 논증과 결합하면 곧장 정규성을 준다.
+보조정리 2의 요점은 holomorphic function의 도함수가 함숫값으로 제어된다는 데 있다. 실변수의 bounded function family는 얼마든지 가파르게 진동할 수 있어 동등연속성을 기대할 수 없지만, holomorphic function은 Cauchy 적분공식을 통해 한 점에서의 미분이 주위 원 위의 값들의 평균으로 표현되므로, 값이 bounded이면 그 변화율도 자동으로 bounded가 된다. 이 동등연속성이 Arzelà–Ascoli 형 논증과 결합하면 곧장 정규성을 준다.
 
 ::: 정리 3 (Montel)
 $\mathcal{F}$가 열린집합 $\Omega \subseteq \mathbb{C}$ 위의 holomorphic function 족이고 $\Omega$의 각 콤팩트 부분집합 위에서 국소유계하다고 하자. 그러면 $\mathcal{F}$은 정규족이다.
@@ -68,7 +68,7 @@ $$\lvert g_n(z) - g_m(z)\rvert \leq \lvert g_n(z) - g_n(w_{j_i})\rvert + \lvert 
 이다. 첫째와 셋째 항은 동등연속성에서, 둘째 항은 유한 개 점에서의 Cauchy 성질에서 나왔다. 이 어림이 $z \in K$에 무관한 $N$으로 성립하므로, $(g_n)$은 $K$ 위에서 균등 Cauchy 수열이고, $\mathbb{C}$의 완비성에 의해 $K$ 위에서 균등수렴한다. $K$이 임의의 콤팩트 집합이었으므로 $(g_n)$은 $\Omega$의 모든 콤팩트 부분집합 위에서 균등수렴한다. 따라서 $\mathcal{F}$은 정규족이다.
 :::
 
-Montel 정리는 holomorphic function 족에 대한 콤팩트성 판정을 함숫값의 유계성이라는 검증하기 쉬운 조건으로 환원한다. 단위원판으로 가는 사상들은 그 값이 절댓값 $1$ 이하로 한꺼번에 bounded이므로 자동으로 국소유계하고, 따라서 Montel 정리에 의해 정규족을 이룬다. 이것이 증명에서 극값사상을 추출할 때 쓰는 콤팩트성의 원천이다. 한편 극한사상이 다시 단사임을 보장하려면 단사 holomorphic function 열의 극한에 관한 사실이 필요한데, 그것이 Hurwitz 정리이다.
+Montel 정리는 holomorphic function 족에 대한 콤팩트성 판정을 함숫값의 boundedness라는 검증하기 쉬운 조건으로 환원한다. 단위원판으로 가는 사상들은 그 값이 절댓값 $1$ 이하로 한꺼번에 bounded이므로 자동으로 국소유계하고, 따라서 Montel 정리에 의해 정규족을 이룬다. 이것이 증명에서 극값사상을 추출할 때 쓰는 콤팩트성의 원천이다. 한편 극한사상이 다시 단사임을 보장하려면 단사 holomorphic function 열의 극한에 관한 사실이 필요한데, 그것이 Hurwitz 정리이다.
 
 ## Hurwitz 정리
 
@@ -147,7 +147,7 @@ $\Omega \neq \mathbb{C}$이므로 $a \notin \Omega$인 점 $a$을 택한다. 그
 
 $$\varphi(z)^2 = z - a \qquad (z \in \Omega)$$
 
-이다 (단순연결 영역에서 영점 없는 holomorphic function은 holomorphic 로그를 가지므로, $\varphi = \exp(\tfrac{1}{2}\log(z - a))$으로 제곱근이 정의된다).
+이다 (단순연결 영역에서 영점 없는 holomorphic function은 holomorphic 로그를 가지므로, $\varphi = \exp(\log(z - a)/2)$으로 제곱근이 정의된다).
 
 먼저 $\varphi$이 단사임을 본다. $\varphi(z_1) = \varphi(z_2)$이면 양변을 제곱하여 $z_1 - a = z_2 - a$, 곧 $z_1 = z_2$이다. 또 $\varphi$은 더 강한 성질을 가진다. $\varphi(z_1) = -\varphi(z_2)$이어도 양변을 제곱하면 $z_1 = z_2$이 되어 $\varphi(z_1) = -\varphi(z_1)$, 곧 $\varphi(z_1) = 0$인데, $\varphi(z_1)^2 = z_1 - a \neq 0$이라 이는 불가능하다. 따라서 $\varphi$의 image $\varphi(\Omega)$은 어떤 점 $w$을 포함하면 $-w$은 포함하지 않는다.
 
@@ -233,10 +233,10 @@ $$f'(z_0) = e^{-i\vartheta}f^\ast{}'(z_0) = e^{-i\vartheta}\lvert f^\ast{}'(z_0)
 이라 $f'(z_0) > 0$이다. 따라서 normalization 조건을 만족하는 holomorphic 전단사사상 $f : \Omega \rightarrow \mathbb{D}$이 존재하고, 이미 보인 유일성과 합쳐 정리 6이 증명된다. $\Omega$이 $\mathbb{D}$와 등각동형이라는 결론은 holomorphic 전단사사상 $f$이 등각사상이라는 사실 ([§등각사상과 Möbius 변환, ⁋명제 3](/ko/math/complex_analysis/conformal_maps#prop3)) 에서 곧장 따라 나온다.
 
 ::: 참고 9 (경계 거동)
-Riemann 사상정리는 conformal isomorphism의 존재만을 단언할 뿐, 그 사상이 영역의 boundary까지 연속적으로 확장되는지는 말하지 않는다. Boundary가 충분히 좋은 경우, 가령 $\partial\Omega$이 Jordan 곡선이면 사상이 closure $\overline{\Omega}$에서 $\overline{\mathbb{D}}$로의 위상동형으로 확장된다는 것이 Carathéodory의 정리이지만, 일반적인 단순연결 영역에서는 boundary가 프랙탈처럼 거칠어 그러한 extension이 성립하지 않을 수 있다. 본문의 변분적 증명은 interior에서의 등각동형만을 다루므로 boundary 거동과는 무관하게 작동한다.
+Riemann 사상정리는 conformal isomorphism의 존재만을 단언할 뿐, 그 사상이 영역의 boundary까지 연속적으로 확장되는지는 말하지 않는다. Boundary가 충분히 좋은 경우, 가령 $\partial\Omega$이 Jordan 곡선이면 사상이 closure $\overline{\Omega}$에서 $\overline{\mathbb{D}}$로의 homeomorphism으로 확장된다는 것이 Carathéodory의 정리이지만, 일반적인 단순연결 영역에서는 boundary가 프랙탈처럼 거칠어 그러한 extension이 성립하지 않을 수 있다. 본문의 변분적 증명은 interior에서의 등각동형만을 다루므로 boundary 거동과는 무관하게 작동한다.
 :::
 
-참고 9가 강조하듯, 정리의 내용은 철저히 영역 interior에 관한 것이다. 단순연결성이라는 위상적 가정만으로 interior의 등각형이 단위원판 하나로 통일된다는 사실은, 복소해석학에서 위상과 등각기하가 맞물리는 가장 깊은 지점 가운데 하나이다. 단순연결이 아닌 영역에서는 사정이 전혀 달라, 가령 환형 영역들은 그 안팎 반지름의 비라는 등각불변량으로 서로 구별되어 단 하나의 표준영역으로 환원되지 않는다.
+참고 9가 강조하듯, 정리의 내용은 철저히 영역 interior에 관한 것이다. 단순연결성이라는 위상적 가정만으로 interior의 등각형이 단위원판 하나로 통일된다는 사실은, complex analysis에서 위상과 등각기하가 맞물리는 가장 깊은 지점 가운데 하나이다. 단순연결이 아닌 영역에서는 사정이 전혀 달라, 가령 환형 영역들은 그 안팎 반지름의 비라는 등각불변량으로 서로 구별되어 단 하나의 표준영역으로 환원되지 않는다.
 
 ---
 

@@ -133,7 +133,7 @@ $$\ann(M)^n\subseteq\operatorname{Fitt}_0(M)\subseteq\ann(M)$$
 ::: 증명
 $M$의 presentation $A^m\overset{\varphi}{\to}A^n\to M\to0$을 generator $g_1,\ldots,g_n$과 함께 고정하자. $\operatorname{Fitt}_0(M)=I_n(\varphi)$는 $\varphi$의 $n$개의 열을 골라 만든 $n\times n$ 부분행렬 $\psi$들의 행렬식으로 생성된다.
 
-먼저 $\operatorname{Fitt}_0(M)\subseteq\ann(M)$을 보인다. 이러한 $\psi=(\psi_{il})$의 각 열은 $\varphi$의 열, 곧 relation이므로 각각의 $l$에서 $\sum_i\psi_{il}g_i=0$이다. 행벡터 $g=(g_1,\ldots,g_n)$으로 적으면 이는 $g\psi=0$을 뜻한다. 가환환 위의 정사각행렬 $\psi$에 대하여 $\psi\operatorname{adj}(\psi)=(\det\psi)I$를 만족하는 수반행렬<sub>adjugate</sub> $\operatorname{adj}(\psi)$이 존재하므로 ([\[다중선형대수학\] §행렬식, ⁋명제 9](/ko/math/multilinear_algebra/determinants#prop9)의 증명에서 이 항등식을 확인하였다), 오른쪽에 $\operatorname{adj}(\psi)$를 곱하면
+먼저 $\operatorname{Fitt}_0(M)\subseteq\ann(M)$을 보인다. 이러한 $\psi=(\psi_{il})$의 각 열은 $\varphi$의 열, 곧 relation이므로 각각의 $l$에서 $\sum_i\psi_{il}g_i=0$이다. 행벡터 $g=(g_1,\ldots,g_n)$으로 적으면 이는 $g\psi=0$을 뜻한다. Commutative ring 위의 정사각행렬 $\psi$에 대하여 $\psi\operatorname{adj}(\psi)=(\det\psi)I$를 만족하는 수반행렬<sub>adjugate</sub> $\operatorname{adj}(\psi)$이 존재하므로 ([\[다중선형대수학\] §행렬식, ⁋명제 9](/ko/math/multilinear_algebra/determinants#prop9)의 증명에서 이 항등식을 확인하였다), 오른쪽에 $\operatorname{adj}(\psi)$를 곱하면
 
 $$0=g\psi\operatorname{adj}(\psi)=(\det\psi)g$$
 

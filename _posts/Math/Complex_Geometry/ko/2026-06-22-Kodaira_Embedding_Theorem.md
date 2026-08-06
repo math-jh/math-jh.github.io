@@ -14,7 +14,7 @@ weight: 6
 published: false
 ---
 
-콤팩트 Kähler manifold는 복소·리만·사교의 세 구조를 한 몸에 갖춘 풍부한 대상이지만 ([§Kähler 다양체, ⁋정의 3](/ko/math/complex_geometry/kahler_manifolds#def3)), 그 자체로는 대수기하의 대상이 아니다. 모든 smooth한 projective variety가 Kähler manifold임은 보았으나 ([§Kähler 다양체, ⁋명제 9](/ko/math/complex_geometry/kahler_manifolds#prop9)), 그 역, 곧 어떤 콤팩트 complex manifold가 사영공간 $\mathbb{CP}^N$ 안으로 holomorphic 매장되어 projective variety가 되는가는 전혀 자명하지 않다. 복소토러스 가운데 일부만 사영적이고 ([§복소다양체, ⁋예시 7](/ko/math/complex_geometry/complex_manifolds#ex7)) 나머지는 Kähler이면서도 사영공간에 결코 들어가지 못한다는 사실이, 이 물음이 진짜 내용을 담고 있음을 말해 준다. 이 글의 주제는 그 판정을 완전히 해결하는 Kodaira의 정리이다. 답은 한 줄로 요약된다. 콤팩트 complex manifold가 사영적인 것은 그 위에 *양의 line bundle*이 존재하는 것과 동치이다.
+콤팩트 Kähler manifold는 복소·리만·사교의 세 구조를 한 몸에 갖춘 풍부한 대상이지만 ([§Kähler 다양체, ⁋정의 3](/ko/math/complex_geometry/kahler_manifolds#def3)), 그 자체로는 대수기하의 대상이 아니다. 모든 smooth한 projective variety가 Kähler manifold임은 보았으나 ([§Kähler 다양체, ⁋명제 9](/ko/math/complex_geometry/kahler_manifolds#prop9)), 그 역, 곧 어떤 콤팩트 complex manifold가 projective space $\mathbb{CP}^N$ 안으로 holomorphic 매장되어 projective variety가 되는가는 전혀 자명하지 않다. 복소토러스 가운데 일부만 사영적이고 ([§복소다양체, ⁋예시 7](/ko/math/complex_geometry/complex_manifolds#ex7)) 나머지는 Kähler이면서도 projective space에 결코 들어가지 못한다는 사실이, 이 물음이 진짜 내용을 담고 있음을 말해 준다. 이 글의 주제는 그 판정을 완전히 해결하는 Kodaira의 정리이다. 답은 한 줄로 요약된다. 콤팩트 complex manifold가 사영적인 것은 그 위에 *양의 line bundle*이 존재하는 것과 동치이다.
 
 양의 line bundle이란 holomorphic line bundle 가운데 그 곡률이 Kähler 형식이 되는 것을 말한다. 곧 사영성이라는 대역적·대수적 성질이, line bundle에 얹은 계량의 곡률이라는 국소·미분기하적 양정치성으로 환원된다. 이 환원을 가능하게 하는 두 기둥이 있다. 하나는 양의 line bundle 위에서 고차 cohomology가 사라진다는 Kodaira 소멸정리이고, 다른 하나는 그 소멸을 충분히 큰 거듭제곱 $L^{\otimes k}$에 반복 적용하여 전역 section이 점을 분리하고 tangent vector를 분리하도록 만드는 embedding 논법이다. 우리는 먼저 line bundle 위의 Hermitian 계량과 Chern connection에서 곡률과 제1 Chern 류를 세우고, 양의 line bundle을 정의한 뒤, Kodaira 소멸정리와 매장정리를 차례로 서술하며, 마지막으로 정수 Kähler 류를 가진 manifold가 사영적이라는 따름정리와 그 예시들을 다룬다.
 
@@ -76,7 +76,7 @@ $$
 \Theta = \partial\bar\partial\varphi = -\partial\bar\partial\log h(e, e)
 $$
 
-로 정의되는 대역적 $2$-형식이라 한다. 이는 순허수 $(1,1)$-형식이며 (실함수 $\varphi$에 대해 $\overline{\partial\bar\partial\varphi} = -\partial\bar\partial\varphi$이므로), 여기에 $\frac{i}{2\pi}$를 곱해 실형식으로 normalize한 $L$의 *first Chern form<sub>제1 Chern 형식</sub>*을
+로 정의되는 대역적 $2$-형식이라 한다. 이는 순허수 $(1,1)$-형식이며 (실함수 $\varphi$에 대해 $\overline{\partial\bar\partial\varphi} = -\partial\bar\partial\varphi$이므로), 여기에 $\frac{i}{2\pi}$를 곱해 real form으로 normalize한 $L$의 *first Chern form<sub>제1 Chern 형식</sub>*을
 
 $$
 c_1(L, h) = \frac{i}{2\pi}\,\Theta
@@ -123,10 +123,10 @@ $$
 (2) ⟺ (3)을 본다. $\omega = \frac{i}{2\pi}\Theta(L, h)$는 [정의 3](#def3) 직후에 본 바와 같이 closed 실 $(1,1)$-형식이다 ($\Theta = \partial\bar\partial\varphi$이므로 $d\omega = 0$). 따라서 $\omega$가 양정치라는 조건은, closed 실 $(1,1)$-형식이 양정치라는 것, 곧 그것이 정의하는 Hermitian 계량 $g_{j\bar{k}} = \varphi_{j\bar{k}}$가 Riemannian metric이고 그 기본형식이 $\omega$인 것과 같다. 닫힘과 양정치를 모두 갖춘 실 $(1,1)$-형식은 정확히 Kähler 형식이므로 ([§Kähler 다양체, ⁋정의 3](/ko/math/complex_geometry/kahler_manifolds#def3)), (2)와 (3)은 동치이다. 곧 $L$이 양이라는 것은 그 곡률을 Kähler 형식으로 만드는 계량이 존재한다는 것과 같다.
 :::
 
-이 명제가 양의 line bundle과 Kähler 기하를 잇는 다리이다. 양의 line bundle을 갖는 콤팩트 complex manifold는 자동으로 Kähler manifold이며, 그 Kähler 류는 $H^2(X, \mathbb{Z})$ 안에 놓이는 정수류이다. 거꾸로 이 정수성이 매장정리의 핵심이다. 정수 Kähler 류는 어떤 line bundle의 제1 Chern 류로 실현되고, 그 line bundle이 바로 사영매장을 만들어 내는 양의 line bundle이 된다. 가장 단순한 예는 복소사영공간의 hyperplane bundle이다.
+이 명제가 양의 line bundle과 Kähler 기하를 잇는 다리이다. 양의 line bundle을 갖는 콤팩트 complex manifold는 자동으로 Kähler manifold이며, 그 Kähler 류는 $H^2(X, \mathbb{Z})$ 안에 놓이는 정수류이다. 거꾸로 이 정수성이 매장정리의 핵심이다. 정수 Kähler 류는 어떤 line bundle의 제1 Chern 류로 실현되고, 그 line bundle이 바로 사영매장을 만들어 내는 양의 line bundle이 된다. 가장 단순한 예는 complex projective space의 hyperplane bundle이다.
 
 ::: 예시 6 ($\mathbb{CP}^n$의 $\mathcal{O}(1)$)
-복소사영공간 $\mathbb{CP}^n$ ([§복소다양체, ⁋예시 6](/ko/math/complex_geometry/complex_manifolds#ex6)) 위의 hyperplane bundle $\mathcal{O}(1)$을 ([\[대수다양체\] §선다발과 벡터다발, ⁋예시 12](/ko/math/algebraic_varieties/line_bundles#ex12)) 생각하자. 그 쌍대인 tautological bundle $\mathcal{O}(-1)$에 표준 Hermitian 계량 $h([z])(v, v) = \lVert v \rVert^2$ ($v \in \mathcal{O}(-1)_{[z]} \subseteq \mathbb{C}^{n+1}$이 직선 위의 벡터) 를 주면, 그 쌍대계량을 $\mathcal{O}(1)$에 얹었을 때 곡률 형식이
+Complex projective space $\mathbb{CP}^n$ ([§복소다양체, ⁋예시 6](/ko/math/complex_geometry/complex_manifolds#ex6)) 위의 hyperplane bundle $\mathcal{O}(1)$을 ([\[대수다양체\] §선다발과 벡터다발, ⁋예시 12](/ko/math/algebraic_varieties/line_bundles#ex12)) 생각하자. 그 쌍대인 tautological bundle $\mathcal{O}(-1)$에 표준 Hermitian 계량 $h([z])(v, v) = \lVert v \rVert^2$ ($v \in \mathcal{O}(-1)_{[z]} \subseteq \mathbb{C}^{n+1}$이 직선 위의 벡터) 를 주면, 그 쌍대계량을 $\mathcal{O}(1)$에 얹었을 때 곡률 형식이
 
 $$
 \frac{i}{2\pi}\Theta(\mathcal{O}(1), h) = \omega_{\mathrm{FS}}
@@ -242,7 +242,7 @@ $X$가 정수 Kähler 류 $[\omega] \in H^2(X, \mathbb{Z})$를 갖는다고 하�
 이 따름정리가 Kodaira 정리의 가장 쓰기 좋은 형태이다. 콤팩트 complex manifold가 사영적인지를 묻는 대신, 그 위에 정수 Kähler 류가 있는지만 확인하면 된다. 그런데 사영적이라는 결론에는 아직 미세한 간격이 있다. Embedding $X \hookrightarrow \mathbb{CP}^N$이 주는 것은 $X$가 $\mathbb{CP}^N$의 closed 복소 *해석적* 부분다양체라는 것이지, 곧바로 다항식으로 정의되는 대수적 부분다양체라는 것은 아니다. 이 간격을 메우는 것이 Chow의 정리이다.
 
 ::: 정리 12 (Chow)
-복소사영공간 $\mathbb{CP}^N$의 closed 복소 해석적 부분집합은 모두 algebraic하다. 곧 유한 개의 homogeneous polynomial의 공통 영점으로 주어진다. 따라서 $\mathbb{CP}^N$에 holomorphic embedding된 콤팩트 complex manifold는 smooth한 projective algebraic variety이다.
+Complex projective space $\mathbb{CP}^N$의 closed 복소 해석적 부분집합은 모두 algebraic하다. 곧 유한 개의 homogeneous polynomial의 공통 영점으로 주어진다. 따라서 $\mathbb{CP}^N$에 holomorphic embedding된 콤팩트 complex manifold는 smooth한 projective algebraic variety이다.
 :::
 
 ::: 증명
@@ -253,7 +253,7 @@ Chow 정리와 매장정리를 합치면 결론이 깔끔해진다. Hodge manifo
 
 ## 예시
 
-Kodaira 판정의 힘은 사영성과 비사영성을 가르는 구체적인 예에서 드러난다. 가장 먼저 보았던 복소사영공간은 자명한 양의 예이다.
+Kodaira 판정의 힘은 사영성과 비사영성을 가르는 구체적인 예에서 드러난다. 가장 먼저 보았던 complex projective space는 자명한 양의 예이다.
 
 ::: 예시 13 ($\mathbb{CP}^n$과 그 부분다양체)
 [예시 6](#ex6)에서 $\mathbb{CP}^n$은 양의 line bundle $\mathcal{O}(1)$을 가지므로 [정리 9](#thm9)에 의해 사영적이다. 이는 동어반복에 가깝지만, 그 부분다양체로 가면 내용이 생긴다. $\mathbb{CP}^n$의 smooth closed 복소 부분다양체 $Y$는 $\mathcal{O}(1)\vert_Y$를 양의 line bundle로 물려받으므로 ([§Kähler 다양체, ⁋명제 9](/ko/math/complex_geometry/kahler_manifolds#prop9)), 다시 사영적이다. 곧 사영공간의 smooth 해석적 부분다양체는 전부 projective algebraic variety이며, 이는 Chow 정리 ([정리 12](#thm12)) 의 한 특수경우이기도 하다.

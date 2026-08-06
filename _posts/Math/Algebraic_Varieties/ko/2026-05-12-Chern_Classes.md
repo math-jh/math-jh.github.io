@@ -14,7 +14,7 @@ published: false
 
 ---
 
-Vector bundle은 대수기하학에서 기하적 대상을 다루는 핵심 도구이며, 이번 글에서는 주어진 vector bundle이 얼마나 뒤틀려 있는지를 재는 *Chern class*를 정의한다. 이는 complex vector bundle에 대해 정의되는 위상적·기하학적 불변량으로, 우리는 대수위상에서는 이를 Gysin sequence를 타고 내려오는 방식을 취했지만 ([\[대수적 위상수학\] §벡터다발의 특성류, ⁋정의 6](/ko/math/algebraic_topology/characteristic_classes#def6)) 이번 글에서는 공리적인 접근으로 시작한다. 모든 논의는 적당한 base space $X$ 위의 complex vector bundle에 대해 이루어지며, cohomology는 $H^\bullet(X, \mathbb{Z})$를 사용한다. Cohomology convention상 $k$차 Chern class가 $2k$차 cohomology에 들어감을 기억하자.
+Vector bundle은 algebraic geometry에서 기하적 대상을 다루는 핵심 도구이며, 이번 글에서는 주어진 vector bundle이 얼마나 뒤틀려 있는지를 재는 *Chern class*를 정의한다. 이는 complex vector bundle에 대해 정의되는 위상적·기하학적 불변량으로, 우리는 대수위상에서는 이를 Gysin sequence를 타고 내려오는 방식을 취했지만 ([\[대수적 위상수학\] §벡터다발의 특성류, ⁋정의 6](/ko/math/algebraic_topology/characteristic_classes#def6)) 이번 글에서는 공리적인 접근으로 시작한다. 모든 논의는 적당한 base space $X$ 위의 complex vector bundle에 대해 이루어지며, cohomology는 $H^\bullet(X, \mathbb{Z})$를 사용한다. Cohomology convention상 $k$차 Chern class가 $2k$차 cohomology에 들어감을 기억하자.
 
 ## 천 특성류의 공리
 

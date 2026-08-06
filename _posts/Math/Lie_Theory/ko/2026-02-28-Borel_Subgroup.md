@@ -24,7 +24,7 @@ Root system $\Phi$와 simple root들의 모임 $\Delta=\{\alpha_1,\ldots,\alpha_
 
 1. 각 simple root $\alpha_i$에 대해 하나의 vertex를 둔다.
 2. 두 vertex $\alpha_i$, $\alpha_j$ ($i\neq j$) 사이에 $\lvert\langle\alpha_i,\alpha_j\rangle\rvert$개의 edge를 둔다.
-3. 만일 $\lvert\alpha_i\rvert\neq\lvert\alpha_j\rvert$라면, 더 긴 root를 향하는 화살표를 edge에 추가한다.
+3. 만일 $\lvert\alpha_i\rvert\neq\lvert\alpha_j\rvert$라면, 더 긴 root를 향하는 arrow를 edge에 추가한다.
 :::
 
 Cartan matrix $A=(a_{ij})$에서 $a_{ij}=\langle\alpha_i,\alpha_j\rangle$이므로, Dynkin diagram은 Cartan matrix의 정보를 그래프로 표현한 것이라 생각할 수 있다. [§근계](/ko/math/lie_theory/root_systems)에서 살펴본 것과 같이 $a_{ij}\leq 0$이고 $a_{ij}=0$인 것은 $a_{ji}=0$인 것과 동치이므로, edge의 개수는 대칭적으로 결정된다. 또한 $a_{ij}\in\{0,-1,-2,-3\}$이므로 두 vertex 사이의 edge는 최대 3개이다.
@@ -34,7 +34,7 @@ Cartan matrix $A=(a_{ij})$에서 $a_{ij}=\langle\alpha_i,\alpha_j\rangle$이므�
 
 $$(\alpha_i,\alpha_j)=\begin{cases}2 & i=j\\ -1 & \lvert i-j\rvert=1\\ 0 & \text{otherwise}\end{cases}$$
 
-이므로 $\langle\alpha_i,\alpha_j\rangle$은 $i=j$일 때 $2$, $\lvert i-j\rvert=1$일 때 $-1$, 그 외에는 $0$이다. 따라서 Dynkin diagram은 $n$개의 vertex가 chain으로 연결된 형태이며, 모든 root의 길이가 같으므로 화살표는 없다.
+이므로 $\langle\alpha_i,\alpha_j\rangle$은 $i=j$일 때 $2$, $\lvert i-j\rvert=1$일 때 $-1$, 그 외에는 $0$이다. 따라서 Dynkin diagram은 $n$개의 vertex가 chain으로 연결된 형태이며, 모든 root의 길이가 같으므로 arrow는 없다.
 :::
 
 Dynkin diagram의 핵심 성질은 다음과 같다.
@@ -87,8 +87,8 @@ Irreducible root system의 Dynkin diagram은 다음 type들 중 하나이다.
 
 1. **Classical types:**
    - $A_n$ ($n\geq 1$): $n$개의 vertex가 chain으로 연결
-   - $B_n$ ($n\geq 2$): $A_n$의 한쪽 끝에 double edge와 화살표 추가
-   - $C_n$ ($n\geq 2$): $A_n$의 한쪽 끝에 double edge와 반대 방향 화살표 추가
+   - $B_n$ ($n\geq 2$): $A_n$의 한쪽 끝에 double edge와 arrow 추가
+   - $C_n$ ($n\geq 2$): $A_n$의 한쪽 끝에 double edge와 반대 방향 arrow 추가
    - $D_n$ ($n\geq 4$): $A_{n-1}$의 한쪽 끝에서 분기
 
 2. **Exceptional types:**

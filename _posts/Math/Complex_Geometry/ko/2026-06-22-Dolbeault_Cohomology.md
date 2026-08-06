@@ -104,7 +104,7 @@ $$
 
 {% diagram Math/Complex_Geometry/Dolbeault_Cohomology-1.svg width="13.45em" alt="Dolbeault 이중복합체의 (p,q) 격자 한 조각: 가로 del, 세로 del-bar 화살표와 반가환 사각형" %}
 
-각 $p$를 고정하고 $q$만 변화시키면, 세로 방향 화살표들만 모아 $\bar\partial^2 = 0$인 복합체를 얻는다. 이것이 Dolbeault 복합체이다.
+각 $p$를 고정하고 $q$만 변화시키면, 세로 방향 arrow들만 모아 $\bar\partial^2 = 0$인 복합체를 얻는다. 이것이 Dolbeault 복합체이다.
 
 ## Dolbeault 코호몰로지
 

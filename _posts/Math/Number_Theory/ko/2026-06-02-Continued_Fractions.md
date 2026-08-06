@@ -70,8 +70,8 @@ $$[a_0; a_1, \ldots, a_{k-1}, t] = \frac{t\,p_{k-1} + p_{k-2}}{t\,q_{k-1} + q_{k
 
 $$\begin{aligned}
 [a_0; \ldots, a_{k-1}, a_k]
-&= \left[a_0; \ldots, a_{k-1} + \tfrac{1}{a_k}\right]
-= \frac{\left(a_{k-1} + \tfrac{1}{a_k}\right)p_{k-2} + p_{k-3}}{\left(a_{k-1} + \tfrac{1}{a_k}\right)q_{k-2} + q_{k-3}} \\
+&= \left[a_0; \ldots, a_{k-1} + \frac{1}{a_k}\right]
+= \frac{\left(a_{k-1} + \frac{1}{a_k}\right)p_{k-2} + p_{k-3}}{\left(a_{k-1} + \frac{1}{a_k}\right)q_{k-2} + q_{k-3}} \\
 &= \frac{a_k\left(a_{k-1}p_{k-2} + p_{k-3}\right) + p_{k-2}}{a_k\left(a_{k-1}q_{k-2} + q_{k-3}\right) + q_{k-2}}
 = \frac{a_k\,p_{k-1} + p_{k-2}}{a_k\,q_{k-1} + q_{k-2}}
 = \frac{p_k}{q_k}
@@ -133,7 +133,7 @@ $$\left\lvert x - \frac{p_k}{q_k}\right\rvert = \frac{1}{q_k\,(x_{k+1}'\,q_k + q
 순환이 이차무리수를 함의함은 다음과 같이 본다. 전개가 어느 지점부터 주기 $\ell$로 반복되면, 반복이 시작되는 complete quotient $y = [\overline{a_m; a_{m+1}, \ldots, a_{m+\ell-1}}]$는 자기 자신을 다시 부르므로 $y = \dfrac{\alpha y + \beta}{\gamma y + \delta}$ 꼴의 일차분수방정식을 만족하고, 이를 정리하면 $y$에 관한 정수계수 이차방정식이 된다. 따라서 $y$는 이차무리수이고, $x$는 $y$의 유리계수 일차분수식이므로 역시 이차무리수이다. 역방향 — 이차무리수의 전개가 순환한다는 것 — 은 complete quotient들의 계수가 bounded range에 머물러 결국 같은 값이 되풀이됨을 보이는, 다소 긴 논증을 요한다.
 
 ::: 예시 5
-$\sqrt{2} = [1; 2, 2, 2, \ldots] = [1; \overline{2}]$이다. 실제로 $\sqrt 2 = 1 + (\sqrt 2 - 1)$이고 $\dfrac{1}{\sqrt2 - 1} = \sqrt 2 + 1 = 2 + (\sqrt 2 - 1)$이 같은 꼴로 되풀이된다. 점근분수는 $\tfrac11, \tfrac32, \tfrac75, \tfrac{17}{12}, \ldots$로 $\sqrt2$에 빠르게 수렴한다.
+$\sqrt{2} = [1; 2, 2, 2, \ldots] = [1; \overline{2}]$이다. 실제로 $\sqrt 2 = 1 + (\sqrt 2 - 1)$이고 $\dfrac{1}{\sqrt2 - 1} = \sqrt 2 + 1 = 2 + (\sqrt 2 - 1)$이 같은 꼴로 되풀이된다. 점근분수는 $1/1, 3/2, 7/5, 17/12, \ldots$로 $\sqrt2$에 빠르게 수렴한다.
 :::
 
 ## 예시와 계산

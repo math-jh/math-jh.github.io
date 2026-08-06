@@ -113,7 +113,7 @@ $$\mathbb{K}=\mathbb{K}_0\subseteq\mathbb{K}_1\subseteq\cdots\subseteq\mathbb{K}
 여기서의 radical tower는 [§순수비분리확대체](/ko/math/field_theory/purely_inseparable_extensions)의 $p$-radical extension과는 별개의 개념이다. 후자는 characteristic $p$에서 Frobenius와 관련된 inseparability를 다루는 개념이고, 전자는 임의의 거듭제곱근을 추가하는 조작이다. 영문 문헌에서 둘 모두 radical이라는 단어를 사용하므로 주의해야 한다.
 :::
 
-다음의 군론적 보조정리들을 준비하자. 가해군의 정의와 기본 성질은 [\[군론\] §군의 열](/ko/math/group_theory/series_of_groups)에서 가져온다.
+다음의 군론적 보조정리들을 준비하자. Solvable group의 정의와 기본 성질은 [\[군론\] §군의 열](/ko/math/group_theory/series_of_groups)에서 가져온다.
 
 ::: 보조정리 8
 Solvable group의 subgroup과 quotient group은 solvable이다.

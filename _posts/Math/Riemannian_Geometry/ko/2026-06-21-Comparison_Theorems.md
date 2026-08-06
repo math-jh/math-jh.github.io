@@ -18,7 +18,7 @@ published: false
 
 ## 단면곡률과 Ricci curvature
 
-곡률 텐서 $R$은 $(1, 3)$-tensor로서 정보가 많지만, 비교 정리에서 부호를 통제하는 대상은 그로부터 얻는 두 개의 스칼라·이차형식 형태의 곡률이다. 먼저 한 평면에 대응하는 단면곡률을 정의한다.
+곡률 텐서 $R$은 $(1, 3)$-tensor로서 정보가 많지만, 비교 정리에서 부호를 통제하는 대상은 그로부터 얻는 두 개의 스칼라·이차형식 형태의 곡률이다. 먼저 한 평면에 대응하는 sectional curvature를 정의한다.
 
 ::: 정의 1
 Riemannian manifold $(M, g)$의 점 $p$와 $T_p M$의 일차독립인 두 벡터 $u, v$에 대해, 이들이 펼치는 평면 $\Pi = \span\{u, v\}$의 *sectional curvature<sub>단면곡률</sub>*를
@@ -30,7 +30,7 @@ $$K(u, v) = \frac{\langle R(u, v) v,\, u\rangle}{\langle u, u\rangle \langle v, 
 
 분모는 $u, v$가 펼치는 평행사변형의 넓이의 제곱으로, $u, v$가 일차독립일 때 양수이다. [§리만 곡률, ⁋명제 5](/ko/math/riemannian_geometry/curvature#prop5)의 대칭성을 사용하면 $K(u, v)$가 평면 $\Pi$에만 의존하고 그 안의 basis $\{u, v\}$의 선택과 무관함을 확인할 수 있으므로, $K$를 $2$-평면들의 함수 $K(\Pi)$로 보아도 된다. 특히 $u, v$가 정규직교이면 분모가 $1$이 되어 $K(u, v) = \langle R(u, v) v, u\rangle$이다. $2$차원 manifold에서는 평면이 tangent space 자신 하나뿐이므로 $K$가 점마다 하나의 수가 되며, 이것이 고전적인 Gauss curvature와 일치한다.
 
-Ricci curvature는 단면곡률을 한 방향에 대해 평균낸 것으로, Bonnet–Myers에서 가정으로 쓰이는 곡률이다.
+Ricci curvature는 sectional curvature를 한 방향에 대해 평균낸 것으로, Bonnet–Myers에서 가정으로 쓰이는 곡률이다.
 
 ::: 정의 2
 Riemannian manifold $(M, g)$의 점 $p$와 단위 벡터 $v \in T_p M$에 대해, *Ricci curvature<sub>리치 곡률</sub>* $\operatorname{Ric}(v, v)$를
@@ -40,7 +40,7 @@ $$\operatorname{Ric}(v, v) = \sum_{i=1}^{n-1} \langle R(e_i, v) v,\, e_i\rangle$
 로 정의한다. 여기서 $(e_1, \ldots, e_{n-1}, v)$는 $T_p M$의 orthonormal basis이다.
 :::
 
-이 합은 orthonormal basis의 선택과 무관하며, $v$에 수직인 $e_i$들이 펼치는 평면들의 단면곡률의 합 $\sum_{i=1}^{n-1} K(e_i, v)$과 같다. 일반의 벡터에 대해서는 $\operatorname{Ric}$을 쌍선형·대칭으로 확장하여 $(0, 2)$-tensor로 본다. $\operatorname{Ric}(v, v) \ge (n-1)k$라는 조건은 $v$에 수직인 $n-1$개 방향의 단면곡률 평균이 $k$ 이상이라는 뜻으로, 단면곡률을 점별로 모두 통제하는 것보다 약한 가정이다. 이 약한 가정만으로 전역 결과를 얻는 것이 Bonnet–Myers 정리의 강점이다.
+이 합은 orthonormal basis의 선택과 무관하며, $v$에 수직인 $e_i$들이 펼치는 평면들의 sectional curvature의 합 $\sum_{i=1}^{n-1} K(e_i, v)$과 같다. 일반의 벡터에 대해서는 $\operatorname{Ric}$을 쌍선형·대칭으로 확장하여 $(0, 2)$-tensor로 본다. $\operatorname{Ric}(v, v) \ge (n-1)k$라는 조건은 $v$에 수직인 $n-1$개 방향의 sectional curvature 평균이 $k$ 이상이라는 뜻으로, sectional curvature를 점별로 모두 통제하는 것보다 약한 가정이다. 이 약한 가정만으로 전역 결과를 얻는 것이 Bonnet–Myers 정리의 강점이다.
 
 ## Jacobi field
 
@@ -89,7 +89,7 @@ $$\ddot J^i(t) + \sum_{j} a^i_j(t)\, J^j(t) = 0, \qquad a^i_j(t) = \langle R(E_j
 라는 선형 이계 상미분방정식 시스템이 되며, 그 계수 $a^i_j$는 $t$에 대해 매끄럽다. 선형 상미분방정식의 표준 이론에 의해 초기조건 $J^i(t_0)$, $\dot J^i(t_0)$를 주면 해가 $[a, b]$ 전체에서 유일하게 존재하며, 초기자료 $(J(t_0), D_t J(t_0)) \in T_{\gamma(t_0)} M \times T_{\gamma(t_0)} M$이 $2n$차원을 이루므로 Jacobi field들의 공간도 $2n$차원이다.
 :::
 
-[명제 4](#prop4)는 Jacobi field를 "이웃한 측지선들이 $\gamma$로부터 무한소로 벌어지는 속도"로 해석하게 한다. 곡률이 이 벌어짐을 통제하는 방식이 Jacobi equation에 직접 나타난다. $R(J, \dot\gamma)\dot\gamma$의 부호가 음이면 (단면곡률이 음이면) 방정식은 $\ddot J = (\text{양})\, J$ 꼴이 되어 해가 지수적으로 발산하므로 측지선들이 빠르게 벌어지고, 부호가 양이면 (단면곡률이 양이면) $\ddot J = -(\text{양})\, J$ 꼴의 진동 방정식이 되어 벌어졌던 측지선들이 다시 모인다. 이 두 양상이 각각 Cartan–Hadamard와 Bonnet–Myers의 기하학적 뿌리이다.
+[명제 4](#prop4)는 Jacobi field를 "이웃한 측지선들이 $\gamma$로부터 무한소로 벌어지는 속도"로 해석하게 한다. 곡률이 이 벌어짐을 통제하는 방식이 Jacobi equation에 직접 나타난다. $R(J, \dot\gamma)\dot\gamma$의 부호가 음이면 (sectional curvature가 음이면) 방정식은 $\ddot J = (\text{양})\, J$ 꼴이 되어 해가 지수적으로 발산하므로 측지선들이 빠르게 벌어지고, 부호가 양이면 (sectional curvature가 양이면) $\ddot J = -(\text{양})\, J$ 꼴의 진동 방정식이 되어 벌어졌던 측지선들이 다시 모인다. 이 두 양상이 각각 Cartan–Hadamard와 Bonnet–Myers의 기하학적 뿌리이다.
 
 측지선을 따라 두 점에서 변분장이 동시에 소멸하는 비자명한 Jacobi field가 있으면, 그 두 점은 측지선을 따라 이웃 측지선들이 다시 한 점으로 모이는 위치이다. 이를 다음과 같이 부른다.
 
@@ -191,7 +191,7 @@ $$(n-1)\,\frac{L}{2}\Bigl( \frac{\pi^2}{L^2} - k \Bigr)$$
 $p, q$가 임의였으므로 $\operatorname{diam}(M) \le \pi/\sqrt{k} < \infty$이다. Complete이고 metrically bounded인 manifold는 Hopf-Rinow 정리에 의해 closed metrically bounded 집합이 콤팩트이므로 $M = \bar B(p, \pi/\sqrt{k})$ 자신이 콤팩트하다.
 :::
 
-Bonnet–Myers 정리에서 직경의 상한 $\pi/\sqrt{k}$는 sharp이다. 반지름 $1/\sqrt{k}$의 둥근 구면 $S^n$은 모든 단면곡률이 $k$이므로 $\operatorname{Ric} = (n-1)k$를 등호로 만족하고, 그 직경이 정확히 $\pi/\sqrt{k}$이다. 콤팩트성으로부터 fundamental group에 대한 다음 결과가 곧바로 따라온다.
+Bonnet–Myers 정리에서 직경의 상한 $\pi/\sqrt{k}$는 sharp이다. 반지름 $1/\sqrt{k}$의 둥근 구면 $S^n$은 모든 sectional curvature가 $k$이므로 $\operatorname{Ric} = (n-1)k$를 등호로 만족하고, 그 직경이 정확히 $\pi/\sqrt{k}$이다. 콤팩트성으로부터 fundamental group에 대한 다음 결과가 곧바로 따라온다.
 
 ::: 따름정리 9
 [정리 8](#thm8)의 가정 아래에서 $M$의 fundamental group $\pi_1(M)$은 유한군이다.
@@ -207,7 +207,7 @@ $M$의 universal cover $\pi : \tilde M \rightarrow M$를 생각하자. $\tilde M
 
 ## Cartan–Hadamard 정리
 
-반대쪽 부호, 즉 단면곡률이 어디서도 양이 아닌 경우를 다룬다. 이때는 Jacobi field가 발산만 할 뿐 다시 소멸하지 못하므로 conjugate point가 없고, 그 결과 exponential map이 어디서도 critical point를 갖지 않아 전역 diffeomorphic이 된다. 먼저 conjugate point의 부재를 보인다.
+반대쪽 부호, 즉 sectional curvature가 어디서도 양이 아닌 경우를 다룬다. 이때는 Jacobi field가 발산만 할 뿐 다시 소멸하지 못하므로 conjugate point가 없고, 그 결과 exponential map이 어디서도 critical point를 갖지 않아 전역 diffeomorphic이 된다. 먼저 conjugate point의 부재를 보인다.
 
 ::: 보조정리 10
 $(M, g)$의 모든 단면곡률이 $K \le 0$이라 하자. 그럼 임의의 측지선 $\gamma$ 위에는 conjugate point가 없다. 동치로, $p \in M$의 임의의 점에서 $\exp_p$는 정의역의 모든 점에서 nonsingular (미분이 가역) 이다.

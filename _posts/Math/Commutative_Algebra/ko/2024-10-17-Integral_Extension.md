@@ -115,7 +115,7 @@ $$J(A)=\bigcap_\text{\scriptsize$\mathfrak{m}$ maximal} \mathfrak{m}$$
 
 으로 정의한다.
 
-나카야마 보조정리를 증명하기 위해서는 우선 다음의 보조정리를 먼저 증명해야 한다.
+Nakayama lemma를 증명하기 위해서는 우선 다음의 보조정리를 먼저 증명해야 한다.
 
 ::: 보조정리 7
 Finitely generated $A$-module $M$과 $A$의 ideal $\mathfrak{a}$가 $\mathfrak{a}M=M$을 만족한다 하자. 그럼 적당한 $a\in \mathfrak{a}$가 존재하여 $(1-a)M=0$이다.
@@ -132,7 +132,7 @@ $$(1+p_1+\cdots+p_n)M=0$$
 이고 $a=-(p_1+\cdots+p_n)$으로 두면 원하는 결과를 얻는다. 
 :::
 
-이제 드디어 나카야마 보조정리를 말할 수 있다. 
+이제 드디어 Nakayama lemma를 말할 수 있다. 
 
 ::: 보조정리 8 (Nakayama)
 $A$의 Jacobson radical $J(A)$에 속하는 ideal $\mathfrak{a}$가 주어졌다 하고, $M$이 finitely generated $A$-module이라 하자. 그럼 다음이 성립한다.

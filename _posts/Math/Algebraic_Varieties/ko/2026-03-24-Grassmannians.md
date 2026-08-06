@@ -13,7 +13,7 @@ weight: 7
 
 ---
 
-우리는 특수한 variety를 하나 소개하며 대수기하학의 기본적인 연구대상들에 대한 소개를 마무리한다. 
+우리는 특수한 variety를 하나 소개하며 algebraic geometry의 기본적인 연구대상들에 대한 소개를 마무리한다. 
 
 정의에 의해 projective space $\mathbb{P}^n$은 $\mathbb{A}^{n+1}$의 직선들의 공간이다. 이번 글에서 소개할 Grassmannian은 이를 일반화한 것으로, $\mathbb{A}^n$의 $k$차원 linear subspace들의 공간이다. 
 

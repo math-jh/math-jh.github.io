@@ -146,7 +146,7 @@ Cox ring $S$는 polynomial ring이므로 특히 UFD이다. 이로써 toric varie
 
 $$0 \longrightarrow M \longrightarrow \bigoplus_{\rho \in \Sigma(1)} \mathbb{Z} \cdot D_\rho \longrightarrow \Cl(X_\Sigma) \longrightarrow 0$$
 
-로부터 얻어짐을 확인하였다 (첫 번째 화살표는 [§토러스 인자와 선다발, ⁋명제 3](/ko/math/toric_geometry/toric_divisors#prop3)에 의해 $m \mapsto \sum_\rho \langle m, u_\rho \rangle D_\rho$). 이 exact sequence에 $\Hom_\mathbb{Z}(-, \mathbb{C}^\ast)$를 적용하면
+로부터 얻어짐을 확인하였다 (첫 번째 arrow는 [§토러스 인자와 선다발, ⁋명제 3](/ko/math/toric_geometry/toric_divisors#prop3)에 의해 $m \mapsto \sum_\rho \langle m, u_\rho \rangle D_\rho$). 이 exact sequence에 $\Hom_\mathbb{Z}(-, \mathbb{C}^\ast)$를 적용하면
 
 $$1 \longrightarrow G \longrightarrow (\mathbb{C}^\ast)^{\Sigma(1)} \longrightarrow T_N \longrightarrow 1$$
 

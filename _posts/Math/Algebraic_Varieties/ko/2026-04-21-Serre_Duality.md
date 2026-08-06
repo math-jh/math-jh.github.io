@@ -21,7 +21,7 @@ $$H^k(M;R)\times H^{n-k}(M;R)\rightarrow R$$
 
 을 사용했으며, 이를 통해 [\[대수적 위상수학\] §푸앵카레 쌍대성, ⁋정리 11](/ko/math/algebraic_topology/Poincare_duality#thm11)와 같은 결과를 얻었다. 더 구체적으로, 이 pairing은 cap product와 fundamental class $[M] \in H_n(M;R)$를 통해 구성되므로 위상수학에서 duality의 원천은 orientation class $[M]$이라 할 수 있다. 
 
-이번 글에서 우리는 대수기하학 버전의 duality인 Serre duality를 살펴본다. 
+이번 글에서 우리는 algebraic geometry 버전의 duality인 Serre duality를 살펴본다. 
 
 ## 사영공간에서의 세르 쌍대성
 

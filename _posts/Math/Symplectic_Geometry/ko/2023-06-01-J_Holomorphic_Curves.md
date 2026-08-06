@@ -58,7 +58,7 @@ $$g_J(v, w) := \omega(v, J w)$$
 ::: 정의 4
 Almost complex manifold $(M, J)$와 Riemann surface $(\Sigma, j)$에 대해, smooth map $u: \Sigma \rightarrow M$이 *J-holomorphic<sub>$J$-정칙</sub>* (또는 *pseudoholomorphic<sub>유사정칙</sub>*) 이라 함은 nonlinear *Cauchy-Riemann equation<sub>코시-리만 방정식</sub>*
 
-$$\bar\partial_J u := \tfrac{1}{2}\big(du + J \circ du \circ j\big) = 0$$
+$$\bar\partial_J u := \frac{1}{2}\big(du + J \circ du \circ j\big) = 0$$
 
 을 만족함을 말한다. 등가적으로, $u$의 differential $du: T\Sigma \rightarrow TM$이 $J$-linear, 즉 $du \circ j = J \circ du$를 만족함을 말한다.
 :::

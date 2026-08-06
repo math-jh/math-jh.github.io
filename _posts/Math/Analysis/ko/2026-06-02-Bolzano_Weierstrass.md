@@ -16,7 +16,7 @@ drift_needed: true
 published: false
 ---
 
-[§수열의 수렴](/ko/math/analysis/convergence_of_sequences)의 [§수열의 수렴, ⁋정리 7](/ko/math/analysis/convergence_of_sequences#thm7)는 단조수열에만 적용된다. 그러나 bounded이지만 단조가 아닌 수열, 가령 $a_n = (-1)^n$은 수렴하지 않는다. 이런 수열에서도 "수렴하는 부분만 뽑아낼" 수 있다는 것이 Bolzano–Weierstrass 정리이며, 이것이 해석학에서 컴팩트성을 떠받치는 핵심 도구이다.
+[§수열의 수렴](/ko/math/analysis/convergence_of_sequences)의 [§수열의 수렴, ⁋정리 7](/ko/math/analysis/convergence_of_sequences#thm7)는 단조수열에만 적용된다. 그러나 bounded이지만 단조가 아닌 수열, 가령 $a_n = (-1)^n$은 수렴하지 않는다. 이런 수열에서도 "수렴하는 부분만 뽑아낼" 수 있다는 것이 Bolzano–Weierstrass 정리이며, 이것이 해석학에서 compactness를 떠받치는 핵심 도구이다.
 
 ## 부분수열
 
@@ -96,7 +96,7 @@ $$\begin{aligned}
 
 ## 구간 이분법에 의한 증명
 
-[보조정리 3](#lem3)을 거치지 않고 [정리 4](#thm4)를 직접 증명하는 또 하나의 표준적 방법이 *구간 이분법<sub>bisection</sub>*이다. Bounded sequence를 가두는 구간을 반씩 잘라 가며 항이 무한히 많은 쪽을 택하는 이 방법은 컴팩트성 증명에서 되풀이되는 기법이므로 따로 정리해 둔다.
+[보조정리 3](#lem3)을 거치지 않고 [정리 4](#thm4)를 직접 증명하는 또 하나의 표준적 방법이 *구간 이분법<sub>bisection</sub>*이다. Bounded sequence를 가두는 구간을 반씩 잘라 가며 항이 무한히 많은 쪽을 택하는 이 방법은 compactness 증명에서 되풀이되는 기법이므로 따로 정리해 둔다.
 
 ::: 명제 7 (Bolzano–Weierstrass의 이분법 증명)
 Bounded인 실수열은 수렴하는 부분수열을 가진다 ([정리 4](#thm4)의 다른 증명).
@@ -111,7 +111,7 @@ $$I_0 \supseteq I_1 \supseteq I_2 \supseteq \cdots, \qquad \length(I_j) = \frac{
 
 $$a_{n_j} \in I_j \qquad (j = 1, 2, 3, \dots).$$
 
-구간의 길이가 $0$으로 가므로, 구간축소정리에 의해 모든 $I_j$에 공통으로 들어 있는 점 $L$이 유일하게 존재한다. 이때 $a_{n_j}$와 $L$이 모두 $I_j$ 안에 있으므로
+구간의 길이가 $0$으로 가므로, nested interval property에 의해 모든 $I_j$에 공통으로 들어 있는 점 $L$이 유일하게 존재한다. 이때 $a_{n_j}$와 $L$이 모두 $I_j$ 안에 있으므로
 
 $$\begin{aligned}
 \lvert a_{n_j} - L\rvert
@@ -122,7 +122,7 @@ $$\begin{aligned}
 이고, 따라서 $a_{n_j} \rightarrow L$이다. 즉 $(a_{n_j})$가 수렴하는 부분수열이다.
 :::
 
-두 증명은 모두 실수의 완비성을 본질적으로 사용한다. [보조정리 3](#lem3)을 거치는 증명은 단조수렴정리를, 이분법 증명은 구간축소정리를 쓰는데, 이 둘은 모두 상한 성질과 동치인 완비성의 표현들이다. 어느 길을 택하든 유리수 위에서는 정리가 성립하지 않는다. 가령 $\sqrt{2}$로 수렴하는 bounded 유리수열은 $\mathbb{Q}$ 안에서 수렴하는 부분수열을 갖지 못한다.
+두 증명은 모두 실수의 완비성을 본질적으로 사용한다. [보조정리 3](#lem3)을 거치는 증명은 단조수렴정리를, 이분법 증명은 nested interval property를 쓰는데, 이 둘은 모두 상한 성질과 동치인 완비성의 표현들이다. 어느 길을 택하든 유리수 위에서는 정리가 성립하지 않는다. 가령 $\sqrt{2}$로 수렴하는 bounded 유리수열은 $\mathbb{Q}$ 안에서 수렴하는 부분수열을 갖지 못한다.
 
 ## 응용
 

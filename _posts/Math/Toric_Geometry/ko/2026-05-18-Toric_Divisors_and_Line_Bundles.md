@@ -84,7 +84,7 @@ Fan $\Sigma$의 ray들 $\Sigma(1)$이 $N_\mathbb{R}$를 span한다고 가정하�
 
 $$0 \longrightarrow M \longrightarrow \Div_T(X_\Sigma) \longrightarrow \Cl(X_\Sigma) \longrightarrow 0.$$
 
-여기서 첫 번째 화살표는 $m \mapsto \divisor(\rchi^m)$이고, 두 번째 화살표는 $D \mapsto [D]$이다.
+여기서 첫 번째 arrow는 $m \mapsto \divisor(\rchi^m)$이고, 두 번째 arrow는 $D \mapsto [D]$이다.
 :::
 
 ::: 증명
@@ -207,13 +207,13 @@ Toric variety $X_\Sigma$에 대해 다음이 성립한다.
 
     {% diagram Math/Toric_Geometry/Toric_Divisors_and_Line_Bundles-1.svg width="32.02em" alt="Pic-to-cl-com.diag" %}
 
-    여기서 세로 화살표들은 inclusion을 나타낸다.
+    여기서 세로 arrow들은 inclusion을 나타낸다.
 :::
 
 ::: 증명
 (1) 일반적인 algebraic variety에서 Cartier divisor의 group $\CaDiv(X)$는 line bundle들의 group과 동형이며, principal divisor들로의 quotient가 Picard group을 준다. Toric variety에서 torus-invariant Cartier divisor만으로도 모든 linear equivalence class를 대표할 수 있으므로, $\Pic(X_\Sigma) \cong \CaDiv_T(X_\Sigma) / M$이 성립한다.
 
-(2) $M \rightarrow \Div_T(X_\Sigma)$의 image $\divisor(\rchi^m)$은 principal divisor이므로 자동으로 Cartier이며, 따라서 이 화살표는 $M \rightarrow \CaDiv_T(X_\Sigma)$로 factor된다. 결과적으로 commutative diagram의 좌측 두 column은 동일한 $M$이고, quotient $\Pic(X_\Sigma) = \CaDiv_T(X_\Sigma)/M$이 $\Cl(X_\Sigma) = \Div_T(X_\Sigma)/M$의 subgroup으로 자연스럽게 들어간다. Injectivity는 $\CaDiv_T(X_\Sigma) \hookrightarrow \Div_T(X_\Sigma)$가 injective이고 두 quotient가 동일한 $M$의 image로 나눈 것이라는 사실로부터 따라 나온다.
+(2) $M \rightarrow \Div_T(X_\Sigma)$의 image $\divisor(\rchi^m)$은 principal divisor이므로 자동으로 Cartier이며, 따라서 이 arrow는 $M \rightarrow \CaDiv_T(X_\Sigma)$로 factor된다. 결과적으로 commutative diagram의 좌측 두 column은 동일한 $M$이고, quotient $\Pic(X_\Sigma) = \CaDiv_T(X_\Sigma)/M$이 $\Cl(X_\Sigma) = \Div_T(X_\Sigma)/M$의 subgroup으로 자연스럽게 들어간다. Injectivity는 $\CaDiv_T(X_\Sigma) \hookrightarrow \Div_T(X_\Sigma)$가 injective이고 두 quotient가 동일한 $M$의 image로 나눈 것이라는 사실로부터 따라 나온다.
 :::
 
 Toric variety의 Picard group은 piecewise linear function의 언어로 명시적으로 기술될 수 있다. $\PL(\Sigma, M)$에서 globally linear한 것들, 즉 전역적으로 하나의 $m \in M$에 의해 $\psi(v) = \langle m, v \rangle$로 주어지는 함수들을 quotient하면 Picard group을 얻는다. 이는 toric variety의 조합론적 불변량을 계산하는 강력한 방법을 제공한다.
@@ -225,7 +225,7 @@ $\mathbb{P}^n$을 정의하는 fan의 ray들은 $v_0 = -e_1 - \cdots - e_n$, $v_
 
 $$D_0 = \{\x_0 = 0\}, \quad D_1 = \{\x_1 = 0\}, \quad \ldots, \quad D_n = \{\x_n = 0\}$$
 
-에 대응한다. 이들은 각각 $\mathbb{P}^n$의 hyperplane divisor이고, 우리는 기본적인 대수기하학으로부터 이들이 하나의 *hyperplane class*를 결정한다는 것을 안다. 편의상 그 representative로 $H = D_0$을 택하자. 
+에 대응한다. 이들은 각각 $\mathbb{P}^n$의 hyperplane divisor이고, 우리는 기본적인 algebraic geometry로부터 이들이 하나의 *hyperplane class*를 결정한다는 것을 안다. 편의상 그 representative로 $H = D_0$을 택하자. 
 
 $H$에 대응하는 piecewise linear function $\psi_H$를 계산해 보자. [§토릭 다양체의 정의, ⁋예시 10](/ko/math/toric_geometry/toric_varieties#ex10)의 monomial map convention $(t_1, \ldots, t_n) \mapsto [1 : t_1 : \cdots : t_n]$ 하에서 $t_i = \x_i/\x_0$이므로, 각 affine chart에서 $H = \{\x_0 = 0\}$의 local equation은
 

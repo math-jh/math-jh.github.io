@@ -22,10 +22,10 @@ published: false
 양의 정수에서 정의된 함수를 *산술적 함수<sub>arithmetic function</sub>*라 한다. 산술적 함수 $f$가 항등적으로 $0$은 아니면서 $\gcd(m, n) = 1$일 때마다 $f(mn) = f(m)f(n)$을 만족하면 *곱셈적<sub>multiplicative</sub>*이라 한다.
 :::
 
-곱셈적 함수는 $f(1) = 1$을 만족하며, 소수 거듭제곱에서의 값으로 완전히 결정된다: $n = \prod p_i^{e_i}$이면 $f(n) = \prod f(p_i^{e_i})$이다. $\varphi$는 곱셈적 함수의 한 예였다.
+Multiplicative 함수는 $f(1) = 1$을 만족하며, 소수 거듭제곱에서의 값으로 완전히 결정된다: $n = \prod p_i^{e_i}$이면 $f(n) = \prod f(p_i^{e_i})$이다. $\varphi$는 multiplicative 함수의 한 예였다.
 
 ::: 예시 2
-약수의 개수 $\tau(n) = \sum_{d \mid n} 1$과 약수의 합 $\sigma(n) = \sum_{d\mid n} d$은 곱셈적이다. 소수 거듭제곱에서 $\tau(p^e) = e + 1$, $\sigma(p^e) = 1 + p + \cdots + p^e = \dfrac{p^{e+1} - 1}{p - 1}$이므로, 일반적으로
+약수의 개수 $\tau(n) = \sum_{d \mid n} 1$과 약수의 합 $\sigma(n) = \sum_{d\mid n} d$은 multiplicative가다. 소수 거듭제곱에서 $\tau(p^e) = e + 1$, $\sigma(p^e) = 1 + p + \cdots + p^e = \dfrac{p^{e+1} - 1}{p - 1}$이므로, 일반적으로
 
 $$\tau(n) = \prod_i (e_i + 1), \qquad \sigma(n) = \prod_i \frac{p_i^{e_i + 1} - 1}{p_i - 1}$$
 
@@ -51,7 +51,7 @@ $$(f \ast g)(n) = \sum_{d \mid n} f(d)\, g\!\left(\frac{n}{d}\right)$$
 :::
 
 ::: 명제 5
-$\mu$는 곱셈적이며, $n > 1$이면 $\sum_{d \mid n} \mu(d) = 0$이다. 즉 $\mathbf{1} \ast \mu = \varepsilon$이다.
+$\mu$는 multiplicative가며, $n > 1$이면 $\sum_{d \mid n} \mu(d) = 0$이다. 즉 $\mathbf{1} \ast \mu = \varepsilon$이다.
 :::
 
 ::: 증명
@@ -82,7 +82,7 @@ $$g(n) = \sum_{d \mid n} f(d) \quad\Longleftrightarrow\quad f(n) = \sum_{d \mid 
 약수에 걸친 $\varphi$의 합은 $\sum_{d \mid n}\varphi(d) = n$이다. 실제로 $1$부터 $n$까지의 각 정수 $m$을 $\gcd(m, n) = n/d$에 따라 분류하면, $\gcd(m,n) = n/d$인 $m$의 개수가 $\varphi(d)$이므로 전체 합이 $n$이 된다. 이 관계 $\mathbf{1}\ast\varphi = \id$에 뫼비우스 반전을 적용하면 $\varphi = \mu \ast \id$, 즉 $\varphi(n) = \sum_{d\mid n}\mu(d)\,\dfrac{n}{d}$이라는 $\varphi$의 또 다른 공식을 얻는다.
 :::
 
-마지막 식을 곱셈성과 결합하면 $\varphi$의 곱공식이 다시 나온다. $\varphi = \mu \ast \id$가 곱셈적 함수 두 개의 합성곱이므로 (아래 [명제 9](#prop9)) 곱셈적이고, 소수 거듭제곱에서
+마지막 식을 곱셈성과 결합하면 $\varphi$의 곱공식이 다시 나온다. $\varphi = \mu \ast \id$가 multiplicative 함수 두 개의 합성곱이므로 (아래 [명제 9](#prop9)) multiplicative가고, 소수 거듭제곱에서
 
 $$\varphi(p^e) = \sum_{j=0}^{e}\mu(p^j)\,p^{e-j} = \mu(1)\,p^e + \mu(p)\,p^{e-1} = p^e - p^{e-1} = p^{e-1}(p-1)$$
 
@@ -94,7 +94,7 @@ $$\varphi(n) = \prod_i p_i^{e_i - 1}(p_i - 1) = n\prod_{p \mid n}\Bigl(1 - \frac
 
 ## 합성곱의 대수적 구조
 
-디리클레 합성곱이 단순한 표기 약식이 아니라 풍부한 대수 구조를 갖는다는 점이 뫼비우스 반전을 떠받친다. 산술적 함수 전체의 모임 위에서 덧셈과 합성곱은 가환환을 이루며, 그 단위원이 $\varepsilon$이다.
+디리클레 합성곱이 단순한 표기 약식이 아니라 풍부한 대수 구조를 갖는다는 점이 뫼비우스 반전을 떠받친다. 산술적 함수 전체의 모임 위에서 덧셈과 합성곱은 commutative ring을 이루며, 그 단위원이 $\varepsilon$이다.
 
 ::: 명제 8
 디리클레 합성곱은 가환적·결합적이며 $\varepsilon$을 단위원으로 갖는다. 즉 임의의 산술적 함수 $f, g, h$에 대해 $f \ast g = g \ast f$, $(f \ast g)\ast h = f \ast (g \ast h)$, $f \ast \varepsilon = f$이다.
@@ -105,12 +105,12 @@ $$\varphi(n) = \prod_i p_i^{e_i - 1}(p_i - 1) = n\prod_{p \mid n}\Bigl(1 - \frac
 
 $$(f \ast g)(n) = \sum_{d \mid n} f(d)\,g\!\left(\frac{n}{d}\right) = \sum_{d' \mid n} f\!\left(\frac{n}{d'}\right)g(d') = (g \ast f)(n).$$
 
-결합성은 양변을 약수 셋에 걸친 symmetric 삼중합으로 펼치면 드러난다:
+Associativity는 양변을 약수 셋에 걸친 symmetric 삼중합으로 펼치면 드러난다:
 
 $$\begin{aligned}
-\bigl((f \ast g)\ast h\bigr)(n) &= \sum_{d \mid n}\Bigl(\sum_{e \mid d} f(e)\,g\!\left(\tfrac{d}{e}\right)\Bigr) h\!\left(\frac{n}{d}\right) \\
+\bigl((f \ast g)\ast h\bigr)(n) &= \sum_{d \mid n}\Bigl(\sum_{e \mid d} f(e)\,g\!\left(\frac{d}{e}\right)\Bigr) h\!\left(\frac{n}{d}\right) \\
 &= \sum_{abc = n} f(a)\,g(b)\,h(c) \\
-&= \sum_{d \mid n} f\!\left(\frac{n}{d}\right)\Bigl(\sum_{e \mid d} g(e)\,h\!\left(\tfrac{d}{e}\right)\Bigr) = \bigl(f \ast (g \ast h)\bigr)(n),
+&= \sum_{d \mid n} f\!\left(\frac{n}{d}\right)\Bigl(\sum_{e \mid d} g(e)\,h\!\left(\frac{d}{e}\right)\Bigr) = \bigl(f \ast (g \ast h)\bigr)(n),
 \end{aligned}$$
 
 여기서 가운데 합은 $abc = n$을 만족하는 양의 정수 순서쌍 $(a, b, c)$ 전체에 걸친 것이다. 끝으로 $\varepsilon$은 $d = n$인 항만 살아남으므로 $(f \ast \varepsilon)(n) = \sum_{d \mid n} f(d)\,\varepsilon(n/d) = f(n)$이다.
@@ -123,7 +123,7 @@ $$f^{-1}(n) = -\frac{1}{f(1)}\sum_{\substack{d \mid n \\ d < n}} f\!\left(\frac{
 라는 점화식으로 차례차례 결정된다. 명제 5의 $\mathbf{1}\ast\mu = \varepsilon$은 정확히 $\mathbf{1}$의 역원이 $\mu$라는 진술이며, 이렇게 보면 뫼비우스 반전은 "$\mathbf{1}$로 곱한 것을 $\mu$로 나누어 되돌린다"는 군 이론적 상투구의 한 사례에 지나지 않는다.
 
 ::: 명제 9
-산술적 함수 $f, g$가 모두 곱셈적이면 $f \ast g$도 곱셈적이다.
+산술적 함수 $f, g$가 모두 multiplicative가면 $f \ast g$도 multiplicative가다.
 :::
 
 ::: 증명
@@ -132,7 +132,7 @@ $\gcd(m, n) = 1$이라 하자. $mn$의 각 약수 $d$는 $d = ab$ ($a \mid m$, $
 $$\begin{aligned}
 (f \ast g)(mn) &= \sum_{d \mid mn} f(d)\,g\!\left(\frac{mn}{d}\right) = \sum_{a \mid m}\sum_{b \mid n} f(ab)\,g\!\left(\frac{m}{a}\cdot\frac{n}{b}\right) \\
 &= \sum_{a \mid m}\sum_{b \mid n} f(a)f(b)\,g\!\left(\frac{m}{a}\right) g\!\left(\frac{n}{b}\right) \\
-&= \Bigl(\sum_{a \mid m} f(a)\,g\!\left(\tfrac{m}{a}\right)\Bigr)\Bigl(\sum_{b \mid n} f(b)\,g\!\left(\tfrac{n}{b}\right)\Bigr) = (f \ast g)(m)\,(f \ast g)(n)
+&= \Bigl(\sum_{a \mid m} f(a)\,g\!\left(\frac{m}{a}\right)\Bigr)\Bigl(\sum_{b \mid n} f(b)\,g\!\left(\frac{n}{b}\right)\Bigr) = (f \ast g)(m)\,(f \ast g)(n)
 \end{aligned}$$
 
 이다. 또 $f, g$가 항등적으로 $0$이 아니므로 $(f\ast g)(1) = f(1)g(1) = 1 \neq 0$이어서 $f \ast g$는 항등적 $0$이 아니다. 따라서 곱셈적이다.
@@ -150,7 +150,7 @@ $n = 360 = 2^3 \cdot 3^2 \cdot 5$에 대해 곱셈성을 이용하면
 $$\begin{aligned}
 \tau(360) &= (3+1)(2+1)(1+1) = 4\cdot 3\cdot 2 = 24, \\
 \sigma(360) &= \frac{2^4 - 1}{2-1}\cdot\frac{3^3 - 1}{3-1}\cdot\frac{5^2 - 1}{5-1} = 15\cdot 13\cdot 6 = 1170, \\
-\varphi(360) &= 360\Bigl(1 - \tfrac12\Bigr)\Bigl(1 - \tfrac13\Bigr)\Bigl(1 - \tfrac15\Bigr) = 360\cdot\frac12\cdot\frac23\cdot\frac45 = 96
+\varphi(360) &= 360\Bigl(1 - \frac12\Bigr)\Bigl(1 - \frac13\Bigr)\Bigl(1 - \frac15\Bigr) = 360\cdot\frac12\cdot\frac23\cdot\frac45 = 96
 \end{aligned}$$
 
 이다. $360$이 어떤 소수의 제곱으로 나누어떨어지므로 $\mu(360) = 0$이고, 약수에 걸친 합 $\sum_{d \mid 360}\varphi(d) = 360$ (예시 7) 역시 곱셈성으로 인수마다 $\sum_{j}\varphi(p^j) = p^e$임을 확인하면 즉시 따라온다.

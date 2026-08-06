@@ -13,7 +13,7 @@ weight: 3
 
 ---
 
-[§아핀다양체](/ko/math/algebraic_varieties/affine_varieties)와 [§사영다양체](/ko/math/algebraic_varieties/projective_varieties)에서 우리는 각각 아핀공간과 사영공간의 부분집합으로 정의되는 기하적 대상들을 살펴보았다. 그러나 대수기하학에서 가장 자연스러운 대상들은 이 둘을 모두 포함하는 더 큰 범주에 속한다. 이 절에서 우리는 *quasi-projective variety*를 정의하고, 이것이 affine variety와 projective variety를 모두 포함함을 보인다. 또 quasi-projective variety들 사이의 morphism을 정의하고 이들이 기존의 개념들과 맞아떨어짐을 보인다. 
+[§아핀다양체](/ko/math/algebraic_varieties/affine_varieties)와 [§사영다양체](/ko/math/algebraic_varieties/projective_varieties)에서 우리는 각각 아핀공간과 사영공간의 부분집합으로 정의되는 기하적 대상들을 살펴보았다. 그러나 algebraic geometry에서 가장 자연스러운 대상들은 이 둘을 모두 포함하는 더 큰 범주에 속한다. 이 절에서 우리는 *quasi-projective variety*를 정의하고, 이것이 affine variety와 projective variety를 모두 포함함을 보인다. 또 quasi-projective variety들 사이의 morphism을 정의하고 이들이 기존의 개념들과 맞아떨어짐을 보인다. 
 
 ## Quasi-projective variety의 정의
 

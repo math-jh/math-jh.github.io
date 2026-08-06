@@ -205,10 +205,10 @@ $$A/\mathfrak{p}\cong \frac{A/\mathfrak{a}}{\mathfrak{p}/\mathfrak{a}}$$
 
 ## Hilbert 기저 정리
 
-지금까지 우리는 Noetherian module의 기본 성질을 살펴보았다. 우리가 다루게 될 ring들은 대개 다항식환이나 그 quotient의 꼴이므로, Noetherian성이 다항식환을 취하는 연산에 대해 보존되는지를 아는 것이 중요하다. 이는 Hilbert가 증명한 고전적인 결과이다.
+지금까지 우리는 Noetherian module의 기본 성질을 살펴보았다. 우리가 다루게 될 ring들은 대개 polynomial ring이나 그 quotient의 꼴이므로, Noetherian성이 polynomial ring을 취하는 연산에 대해 보존되는지를 아는 것이 중요하다. 이는 Hilbert가 증명한 고전적인 결과이다.
 
 ::: 정리 12 (Hilbert basis theorem)
-Noetherian ring $A$에 대하여, 다항식환 $A[\x]$ 또한 Noetherian이다.
+Noetherian ring $A$에 대하여, polynomial ring $A[\x]$ 또한 Noetherian이다.
 :::
 ::: 증명
 [정리 3](#thm3)에 의하여 $A[\x]$의 임의의 ideal $I$가 finitely generated임을 보이면 충분하다. 각 정수 $n\geq 0$에 대하여, $I$에 속하는 degree $n$의 다항식들의 leading coefficient들과 $0$을 모은 집합을 $\mathfrak{a}_n$이라 하자.
@@ -228,7 +228,7 @@ $$f-\sum_j \lambda_j \x^{d-N} f_{N,j}\in I$$
 또한 degree가 $d$보다 작다. 두 경우 모두 빼낸 다항식은 $\{f_{n,j}\}$들의 $A[\x]$-linear combination이므로, induction 가정에 의해 위의 차가 $\{f_{n,j}\}$들로 생성되고, 따라서 $f$ 자신도 그러하다. ($f=0$인 경우는 자명하다.) 그러므로 $I$는 finitely generated이다.
 :::
 
-특히 이를 반복하여 적용하면 다항식환 $A[\x_1,\ldots,\x_n]=A[\x_1,\ldots,\x_{n-1}][\x_n]$ 또한 Noetherian임을 알 수 있고, 이로부터 다음을 얻는다.
+특히 이를 반복하여 적용하면 polynomial ring $A[\x_1,\ldots,\x_n]=A[\x_1,\ldots,\x_{n-1}][\x_n]$ 또한 Noetherian임을 알 수 있고, 이로부터 다음을 얻는다.
 
 ::: 따름정리 13
 Noetherian ring $A$ 위의 finitely generated $A$-algebra $B$는 Noetherian이다.

@@ -16,7 +16,7 @@ published: false
 
 ---
 
-앞 글에서 torus $T=(S^1)^n$이 작용하는 공간의 equivariant cohomology $H_T^\bullet(X)$이 항상 $H_T^\bullet(\mathrm{pt})=\mathbb{Q}[t_1,\ldots,t_n]$ 위의 algebra이며, fixed point로의 restriction이 그 구조를 거의 결정한다는 현상을 보았다. ([§동변 코호몰로지, ⁋예시 6](/ko/math/toric_geometry/equivariant_cohomology#ex6)) 이 글의 목표는 그 "거의"를 정확한 정리로 바꾸는 것이다. 곧 $H_T^\bullet(\mathrm{pt})$의 $0$이 아닌 원소들을 모두 가역으로 만들면 (다항식환의 field of fractions로 넘어가면) $H_T^\bullet(X)$이 fixed locus $X^T$의 equivariant cohomology와 동형이 됨을 보인다. 이것이 Atiyah–Bott와 Berline–Vergne의 *localization theorem*이며, 그 즉각적 귀결로 콤팩트 variety 위의 equivariant 적분이 fixed point 각각에서의 국소적 기여의 유한합으로 계산된다는 Atiyah–Bott–Berline–Vergne 공식을 얻는다.
+앞 글에서 torus $T=(S^1)^n$이 작용하는 공간의 equivariant cohomology $H_T^\bullet(X)$이 항상 $H_T^\bullet(\mathrm{pt})=\mathbb{Q}[t_1,\ldots,t_n]$ 위의 algebra이며, fixed point로의 restriction이 그 구조를 거의 결정한다는 현상을 보았다. ([§동변 코호몰로지, ⁋예시 6](/ko/math/toric_geometry/equivariant_cohomology#ex6)) 이 글의 목표는 그 "거의"를 정확한 정리로 바꾸는 것이다. 곧 $H_T^\bullet(\mathrm{pt})$의 $0$이 아닌 원소들을 모두 가역으로 만들면 (polynomial ring의 field of fractions로 넘어가면) $H_T^\bullet(X)$이 fixed locus $X^T$의 equivariant cohomology와 동형이 됨을 보인다. 이것이 Atiyah–Bott와 Berline–Vergne의 *localization theorem*이며, 그 즉각적 귀결로 콤팩트 variety 위의 equivariant 적분이 fixed point 각각에서의 국소적 기여의 유한합으로 계산된다는 Atiyah–Bott–Berline–Vergne 공식을 얻는다.
 
 이 글 전체에서 $T=(S^1)^n$은 $n$차원 torus, $M$은 $T$가 매끄럽게 작용하는 콤팩트 oriented smooth variety이며, 계수는 $\mathbb{Q}$로 둔다. 그럼 $T$가 connected이므로 작용은 방향을 보존하고, base ring을
 
@@ -169,7 +169,7 @@ $$\alpha=\sum_F j_{F\ast}\left(\frac{i_F^\ast\alpha}{e_T(N_F)}\right)\quad\text{
 
 ## Atiyah–Bott–Berline–Vergne 적분 공식
 
-Localization 정리에 동변 적분을 결합하면, $M$ 전체에서의 적분이 fixed component 각각에서의 국소 적분의 합으로 분해된다.
+Localization 정리에 equivariant integration을 결합하면, $M$ 전체에서의 적분이 fixed component 각각에서의 국소 적분의 합으로 분해된다.
 
 ::: 정리 8 (ABBV 적분 공식)
 $\alpha\in H_T^\bullet(M)$에 대하여
@@ -179,7 +179,7 @@ $$\int_M\alpha=\sum_F\int_F\frac{i_F^\ast\alpha}{e_T(N_F)}$$
 이 $\mathrm{Frac}(R)$ 안에서 성립한다. 여기서 합은 fixed locus $M^T$의 connected 성분 $F$ 전체에 대한 것이다. 특히 좌변은 $R$의 원소이고 우변은 fixed point에서의 데이터만으로 계산된다.
 :::
 ::: 증명
-[정리 7](#thm7)의 등식 $\alpha=\sum_F j_{F\ast}\big(i_F^\ast\alpha/e_T(N_F)\big)$을 $H_T^\bullet(M)_{\mathrm{loc}}$ 안에서 잡고, $\mathrm{Frac}(R)$-선형으로 확장한 동변 적분 $\int_M$을 양변에 적용한다. [명제 5](#prop5)의 함자성 $\int_M\circ j_{F\ast}=\int_F$로부터
+[정리 7](#thm7)의 등식 $\alpha=\sum_F j_{F\ast}\big(i_F^\ast\alpha/e_T(N_F)\big)$을 $H_T^\bullet(M)_{\mathrm{loc}}$ 안에서 잡고, $\mathrm{Frac}(R)$-선형으로 확장한 equivariant integration $\int_M$을 양변에 적용한다. [명제 5](#prop5)의 함자성 $\int_M\circ j_{F\ast}=\int_F$로부터
 
 $$\int_M\alpha=\sum_F\int_M j_{F\ast}\left(\frac{i_F^\ast\alpha}{e_T(N_F)}\right)=\sum_F\int_F\frac{i_F^\ast\alpha}{e_T(N_F)}$$
 
@@ -209,7 +209,7 @@ $$\int_M e_T(TM)=\sum_{p}\frac{e_T(N_p)}{e_T(N_p)}=\sum_p 1=\#M^T$$
 이다. 한편 $\int_M e_T(TM)$은 degree $2m-2m=0$의 $R$-원소, 곧 상수이며, $t_i=0$으로 보내면 보통의 적분 $\int_M e(TM)$가 된다. 보통의 Euler class를 fundamental class 위에서 평가한 값이 Euler characteristic $\chi(M)$이므로 ([\[대수적 위상수학\] §벡터다발의 특성류, ⁋명제 4](/ko/math/algebraic_topology/characteristic_classes#prop4)의 tangent bundle에 대한 Poincaré–Hopf 해석) $\int_M e_T(TM)=\chi(M)$이고, 따라서 $\chi(M)=\#M^T$이다. 양의 차원 성분이 있는 일반적 경우에는 각 성분에서 $i_F^\ast e_T(TM)=e_T(TF)\smile e_T(N_F)$이므로 ($TM\vert_F=TF\oplus N_F$에 대한 Whitney 합 공식) ABBV의 피적분은 $e_T(TF)\smile e_T(N_F)/e_T(N_F)=e_T(TF)$이고, $T$가 $F$ 위에서 자명하게 작용하므로 $\int_F e_T(TF)=\int_F e(TF)=\chi(F)$가 되어 $\chi(M)=\sum_F\chi(F)$를 얻는다.
 :::
 
-곧 Atiyah–Bott–Berline–Vergne 공식은 위상적 불변량인 Euler characteristic을 "fixed point를 세는" 조합적 양으로 바꾸어 주며, 이는 콤팩트 Lie group 작용에 대한 고전적인 결과를 동변 적분의 특수한 경우로 회수한다.
+곧 Atiyah–Bott–Berline–Vergne 공식은 위상적 불변량인 Euler characteristic을 "fixed point를 세는" 조합적 양으로 바꾸어 주며, 이는 콤팩트 Lie group 작용에 대한 고전적인 결과를 equivariant integration의 특수한 경우로 회수한다.
 
 ## 예시: 사영공간
 

@@ -35,10 +35,10 @@ Weight lattice $P$의 *group ring<sub>군환</sub>* $\mathbb{Z}[P]$는 형식기
 
 $$e^\mu\cdot e^\nu=e^{\mu+\nu},\qquad e^0=1$$
 
-로 정한 가환환이다. 곧 $\mathbb{Z}[P]$의 일반적인 원소는 유한합 $\sum_\mu c_\mu e^\mu$ ($c_\mu\in\mathbb{Z}$, 유한 개를 빼고 $c_\mu=0$)이다.
+로 정한 commutative ring이다. 곧 $\mathbb{Z}[P]$의 일반적인 원소는 유한합 $\sum_\mu c_\mu e^\mu$ ($c_\mu\in\mathbb{Z}$, 유한 개를 빼고 $c_\mu=0$)이다.
 :::
 
-기호 $e^\mu$는 단지 lattice 원소 $\mu$를 곱셈군의 원소로 옮긴 형식적 지수일 뿐이며, $\mathbb{Z}[P]$는 추상적으로 Laurent 다항식환 $\mathbb{Z}[x_1^{\pm 1},\ldots,x_l^{\pm 1}]$과 동형이다. 여기에서 $x_i=e^{\varpi_i}$는 lattice $P$의 basis, 곧 fundamental weight들에 대응한다. Weyl group $W$는 $\mathfrak{h}^\ast$ 위에 작용하고 $P$를 보존하므로 $w\cdot e^\mu=e^{w\mu}$로 $\mathbb{Z}[P]$ 위에 ring automorphism으로 작용한다. 이 $W$-작용이 character 공식의 분자와 분모를 떠받치는 대칭이다.
+기호 $e^\mu$는 단지 lattice 원소 $\mu$를 multiplicative group의 원소로 옮긴 형식적 지수일 뿐이며, $\mathbb{Z}[P]$는 추상적으로 Laurent 다항식환 $\mathbb{Z}[x_1^{\pm 1},\ldots,x_l^{\pm 1}]$과 동형이다. 여기에서 $x_i=e^{\varpi_i}$는 lattice $P$의 basis, 곧 fundamental weight들에 대응한다. Weyl group $W$는 $\mathfrak{h}^\ast$ 위에 작용하고 $P$를 보존하므로 $w\cdot e^\mu=e^{w\mu}$로 $\mathbb{Z}[P]$ 위에 ring automorphism으로 작용한다. 이 $W$-작용이 character 공식의 분자와 분모를 떠받치는 대칭이다.
 
 ::: 정의 2
 유한차원 representation $V$의 weight 분해 $V=\bigoplus_{\mu}V_\mu$에 대하여, $V$의 *formal character<sub>형식 지표</sub>*는 $\mathbb{Z}[P]$의 원소
@@ -64,7 +64,7 @@ $$\varepsilon(\mathrm{ch}\,V)=\sum_\mu\dim V_\mu=\dim V$$
 $\mathbb{Z}[P]$의 *completion<sub>완비화</sub>* $\widehat{\mathbb{Z}[P]}$는 유한 개의 weight $\lambda_1,\ldots,\lambda_r$이 존재하여 그 support가 $\bigcup_i(\lambda_i-Q^+)$ 안에 들어가는 형식합 $\sum_\mu c_\mu e^\mu$들의 집합이다. 여기에서 $Q^+=\sum_{\alpha\in\Phi^+}\mathbb{Z}_{\geq 0}\,\alpha$는 positive root들의 음이 아닌 정수 결합으로 이루어진 cone이다.
 :::
 
-이 support 조건 아래에서는 곱셈 $\bigl(\sum_\mu c_\mu e^\mu\bigr)\bigl(\sum_\nu d_\nu e^\nu\bigr)=\sum_\xi\bigl(\sum_{\mu+\nu=\xi}c_\mu d_\nu\bigr)e^\xi$의 각 계수가 유한합으로 잘 정의되므로 $\widehat{\mathbb{Z}[P]}$는 가환환이 되고 $\mathbb{Z}[P]$를 subring으로 포함한다. Weight가 highest weight $\mu$에서 positive root들을 빼서만 얻어지는 highest weight module의 formal character는 정확히 이 ring 안에서 닫힌 형태를 갖는다.
+이 support 조건 아래에서는 곱셈 $\bigl(\sum_\mu c_\mu e^\mu\bigr)\bigl(\sum_\nu d_\nu e^\nu\bigr)=\sum_\xi\bigl(\sum_{\mu+\nu=\xi}c_\mu d_\nu\bigr)e^\xi$의 각 계수가 유한합으로 잘 정의되므로 $\widehat{\mathbb{Z}[P]}$는 commutative ring이 되고 $\mathbb{Z}[P]$를 subring으로 포함한다. Weight가 highest weight $\mu$에서 positive root들을 빼서만 얻어지는 highest weight module의 formal character는 정확히 이 ring 안에서 닫힌 형태를 갖는다.
 
 ## Verma module의 형식 지표
 
@@ -214,7 +214,7 @@ $$F_t(\mathrm{ch}\,L(\lambda))=\frac{\sum_{w}(-1)^{\ell(w)}e^{t\langle w(\lambda
 
 $$\sum_{w\in W}(-1)^{\ell(w)}e^{t\langle\mu,w\rho^\vee\rangle}=\prod_{\alpha\in\Phi^+}\Bigl(e^{t\langle\mu,\alpha^\vee\rangle/2}-e^{-t\langle\mu,\alpha^\vee\rangle/2}\Bigr)$$
 
-를 쓴다. 이는 $\rho^\vee=\tfrac12\sum_{\alpha>0}\alpha^\vee$를 이용한 coroot 쪽 Weyl denominator 항등식 ([명제 7](#prop7)의 dual) 이다. $\langle w(\lambda+\rho),\rho^\vee\rangle=\langle\lambda+\rho,w^{-1}\rho^\vee\rangle$이므로 분자는 이 항등식의 $\mu=\lambda+\rho$ 경우의 좌변, 분모는 $\mu=\rho$ 경우의 좌변이다. 따라서
+를 쓴다. 이는 $\rho^\vee=\left(\sum_{\alpha>0}\alpha^\vee\right)/2$를 이용한 coroot 쪽 Weyl denominator 항등식 ([명제 7](#prop7)의 dual) 이다. $\langle w(\lambda+\rho),\rho^\vee\rangle=\langle\lambda+\rho,w^{-1}\rho^\vee\rangle$이므로 분자는 이 항등식의 $\mu=\lambda+\rho$ 경우의 좌변, 분모는 $\mu=\rho$ 경우의 좌변이다. 따라서
 
 $$F_t(\mathrm{ch}\,L(\lambda))=\frac{\prod_{\alpha>0}\bigl(e^{t\langle\lambda+\rho,\alpha^\vee\rangle/2}-e^{-t\langle\lambda+\rho,\alpha^\vee\rangle/2}\bigr)}{\prod_{\alpha>0}\bigl(e^{t\langle\rho,\alpha^\vee\rangle/2}-e^{-t\langle\rho,\alpha^\vee\rangle/2}\bigr)}$$
 
@@ -232,7 +232,7 @@ $$F_t(\mathrm{ch}\,L(\lambda))\longrightarrow\prod_{\alpha\in\Phi^+}\frac{\langl
 가장 작은 두 경우에서 두 공식을 검산한다. 먼저 $\sl_2$에서는 모든 양이 한 변수로 적힌다.
 
 ::: 예시 11
-$\mathfrak{g}=\sl_2$에서 positive root는 $\alpha$ 하나뿐이고 Weyl group은 $W=\{e,s_\alpha\}$, $\ell(s_\alpha)=1$이다. Fundamental weight $\varpi$로 $\alpha=2\varpi$이고 $\rho=\tfrac12\alpha=\varpi$이다. Dominant integral weight를 $\lambda=m\varpi$ ($m\in\mathbb{Z}_{\geq 0}$)이라 하면 $\lambda+\rho=(m+1)\varpi$이다. 형식기호를 $x=e^{\varpi}$로 적으면 $e^{w(\lambda+\rho)}$는 $w=e$에서 $x^{m+1}$, $w=s_\alpha$에서 $x^{-(m+1)}$이고 마찬가지로 분모는 $x-x^{-1}$이다. [정리 9](#thm9)는
+$\mathfrak{g}=\sl_2$에서 positive root는 $\alpha$ 하나뿐이고 Weyl group은 $W=\{e,s_\alpha\}$, $\ell(s_\alpha)=1$이다. Fundamental weight $\varpi$로 $\alpha=2\varpi$이고 $\rho=\alpha/2=\varpi$이다. Dominant integral weight를 $\lambda=m\varpi$ ($m\in\mathbb{Z}_{\geq 0}$)이라 하면 $\lambda+\rho=(m+1)\varpi$이다. 형식기호를 $x=e^{\varpi}$로 적으면 $e^{w(\lambda+\rho)}$는 $w=e$에서 $x^{m+1}$, $w=s_\alpha$에서 $x^{-(m+1)}$이고 마찬가지로 분모는 $x-x^{-1}$이다. [정리 9](#thm9)는
 
 $$\mathrm{ch}\,L(m\varpi)=\frac{x^{m+1}-x^{-(m+1)}}{x-x^{-1}}=x^m+x^{m-2}+\cdots+x^{-m}$$
 

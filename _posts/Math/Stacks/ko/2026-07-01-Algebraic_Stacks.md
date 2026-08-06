@@ -18,9 +18,9 @@ published: false
 
 Site $(\Sch, \mathrm{fppf})$ 위의 stack은 faithfully flat descent를 groupoid 값 functor로 끌어올린 대상이다. ([§Fibered category와 stack, ⁋정의 13](/ko/math/stacks/fibered_categories_and_stacks#def13)) 그러나 이 정의에는 기하가 전혀 들어 있지 않다. Stack은 순수하게 범주론적·위상적 조건만으로 정의되었고, 그 결과 어떤 stack은 scheme이나 algebraic space처럼 점·차원·매끄러움을 논할 수 있는 기하학적 대상인 반면, 다른 stack은 그러한 구조를 전혀 갖지 못한다. 이 글의 목표는 "기하학적인" stack을 가려내는 것이다. 즉 우리는 모든 stack 가운데 scheme으로 국소적으로 근사되며 그 위에서 morphism의 차원·flatness·매끄러움 따위를 정의할 수 있는 부류를 분리하고자 한다.
 
-이를 위한 두 조건은 다음과 같다. 첫째, stack $\mathcal{X}$의 *대각선* $\Delta:\mathcal{X} \rightarrow \mathcal{X}\times_S \mathcal{X}$이 표현가능해야 한다. 이는 두 대상을 잇는 isomorphism들이 이루는 $\operatorname{\underline{Isom}}$이 scheme(보다 정확히는 algebraic space)이라는 것과 동치이며, 따라서 두 점을 비교하는 일이 통상적인 기하의 범위 안에서 이루어짐을 보장한다. 둘째, scheme으로부터의 smooth 전사 $U \rightarrow \mathcal{X}$, 곧 *atlas*가 존재해야 한다. Atlas는 위상공간이 좌표근방으로 덮이듯 stack을 scheme으로 덮으며, stack 위의 기하학적 성질을 atlas 위에서 검사할 수 있게 한다. 이 두 조건을 만족하는 stack이 *대수적 stack*이며, atlas를 étale하게 잡을 수 있는 경우가 *Deligne–Mumford stack*이다.
+이를 위한 두 조건은 다음과 같다. 첫째, stack $\mathcal{X}$의 *대각선* $\Delta:\mathcal{X} \rightarrow \mathcal{X}\times_S \mathcal{X}$이 representable해야 한다. 이는 두 대상을 잇는 isomorphism들이 이루는 $\operatorname{\underline{Isom}}$이 scheme(보다 정확히는 algebraic space)이라는 것과 동치이며, 따라서 두 점을 비교하는 일이 통상적인 기하의 범위 안에서 이루어짐을 보장한다. 둘째, scheme으로부터의 smooth 전사 $U \rightarrow \mathcal{X}$, 곧 *atlas*가 존재해야 한다. Atlas는 위상공간이 좌표근방으로 덮이듯 stack을 scheme으로 덮으며, stack 위의 기하학적 성질을 atlas 위에서 검사할 수 있게 한다. 이 두 조건을 만족하는 stack이 *대수적 stack*이며, atlas를 étale하게 잡을 수 있는 경우가 *Deligne–Mumford stack*이다.
 
-이 글에서는 먼저 stack 사이의 2-fiber product와 표현가능 morphism을 정의하고, 대각선의 역할을 설명한 뒤, 대수적 stack과 Deligne–Mumford stack을 정의한다. 이어 algebraic group $G$의 작용으로부터 quotient stack $[X/G]$과 분류 stack $\mathbf{B}G=[\ast/G]$을 구성하고, 이들이 실제로 대수적 stack임을 atlas $X \rightarrow [X/G]$과 그 groupoid presentation $X\times G\rightrightarrows X$을 통해 증명한다. 마지막으로 $\mathbf{B}\mathbb{G}_m$, $\mathbf{B}(\mathbb{Z}/n)$, $[\mathbb{A}^1/\mathbb{G}_m]$, 그리고 타원곡선의 moduli $\mathcal{M}_{1,1}$을 예로 다룬다.
+이 글에서는 먼저 stack 사이의 2-fiber product와 representable morphism을 정의하고, 대각선의 역할을 설명한 뒤, 대수적 stack과 Deligne–Mumford stack을 정의한다. 이어 algebraic group $G$의 작용으로부터 quotient stack $[X/G]$과 분류 stack $\mathbf{B}G=[\ast/G]$을 구성하고, 이들이 실제로 대수적 stack임을 atlas $X \rightarrow [X/G]$과 그 groupoid presentation $X\times G\rightrightarrows X$을 통해 증명한다. 마지막으로 $\mathbf{B}\mathbb{G}_m$, $\mathbf{B}(\mathbb{Z}/n)$, $[\mathbb{A}^1/\mathbb{G}_m]$, 그리고 타원곡선의 moduli $\mathcal{M}_{1,1}$을 예로 다룬다.
 
 ## Stack의 올곱
 
@@ -51,15 +51,15 @@ Stack 조건을 본다. Covering $\{T_i \rightarrow T\}$ 위의 $\mathcal{W}$의
 
 ## 표현가능 사상과 대수적 공간
 
-Stack을 기하학적으로 만드는 첫 단계는 그 morphism 가운데 "scheme적인" 것을 가려내는 일이다. Morphism $f:\mathcal{X} \rightarrow \mathcal{Y}$이 표현가능하다는 것은, $\mathcal{Y}$의 임의의 scheme 값 점을 따라 $f$를 base change하면 통상적인 기하학적 대상이 나온다는 뜻이다.
+Stack을 기하학적으로 만드는 첫 단계는 그 morphism 가운데 "scheme적인" 것을 가려내는 일이다. Morphism $f:\mathcal{X} \rightarrow \mathcal{Y}$이 representable하다는 것은, $\mathcal{Y}$의 임의의 scheme 값 점을 따라 $f$를 base change하면 통상적인 기하학적 대상이 나온다는 뜻이다.
 
 ::: 정의 3
 Stack의 morphism $f:\mathcal{X} \rightarrow \mathcal{Y}$이 *표현가능<sub>representable</sub>*하다는 것은, 임의의 scheme $T$과 morphism $T \rightarrow \mathcal{Y}$ (즉 $y\in \mathcal{Y}(T)$)에 대하여 fiber product $\mathcal{X}\times_\mathcal{Y}T$이 algebraic space인 것이다 ([정의 4](#def4)). Scheme(또는 algebraic space)의 morphism에 대한 성질 $P$가 base change에 대하여 안정적이고 target에 대하여 fppf-국소적일 때, 표현가능 morphism $f$이 *성질 $P$을 가진다*는 것은 모든 그러한 base change $\mathcal{X}\times_\mathcal{Y}T \rightarrow T$이 algebraic space의 morphism으로서 $P$을 만족하는 것이다.
 :::
 
-이 정의는 $f$의 기하학적 성질(매끄러움, étale, flat, 전사, 분리, 유한 등)을 전부 algebraic space의 morphism에 대한 통상적 성질로 환원한다. 가령 표현가능 morphism $f$이 *smooth surjective*라는 것은 모든 base change $\mathcal{X}\times_\mathcal{Y}T \rightarrow T$이 smooth하고 전사인 것이다. ([\[스킴\] §매끄러운 사상과 étale 사상, ⁋정의 3](/ko/math/scheme_theory/smooth_and_etale_morphisms#def3)) Target에 대한 fppf-국소성 덕분에, 뒤에서 보듯 이러한 성질은 단 하나의 좋은 base change(atlas를 따른 것)에서 검사해도 충분하다.
+이 정의는 $f$의 기하학적 성질(매끄러움, étale, flat, 전사, 분리, 유한 등)을 전부 algebraic space의 morphism에 대한 통상적 성질로 환원한다. 가령 representable morphism $f$이 *smooth surjective*라는 것은 모든 base change $\mathcal{X}\times_\mathcal{Y}T \rightarrow T$이 smooth하고 전사인 것이다. ([\[스킴\] §매끄러운 사상과 étale 사상, ⁋정의 3](/ko/math/scheme_theory/smooth_and_etale_morphisms#def3)) Target에 대한 fppf-국소성 덕분에, 뒤에서 보듯 이러한 성질은 단 하나의 좋은 base change(atlas를 따른 것)에서 검사해도 충분하다.
 
-표현가능성의 target이 되는 algebraic space는 scheme보다 약간 넓은 부류로, scheme을 étale 동치관계로 나눈 quotient이다. Scheme의 fppf quotient가 항상 scheme이 되지는 않지만 étale 동치관계에 의한 quotient는 algebraic space의 범위 안에 머무르며, 이 부류는 scheme과 거의 같은 기하를 누리면서 하강에 대해 닫혀 있다.
+Representability의 target이 되는 algebraic space는 scheme보다 약간 넓은 부류로, scheme을 étale 동치관계로 나눈 quotient이다. Scheme의 fppf quotient가 항상 scheme이 되지는 않지만 étale 동치관계에 의한 quotient는 algebraic space의 범위 안에 머무르며, 이 부류는 scheme과 거의 같은 기하를 누리면서 하강에 대해 닫혀 있다.
 
 ::: 정의 4
 Site $(\Sch, \mathrm{\acute{e}t})$ ([§Grothendieck 위상과 site, ⁋예시 8](/ko/math/stacks/grothendieck_topology#ex8)) 위의 sheaf $F:\Sch^\op \rightarrow \Set$이 *algebraic space<sub>대수적 공간</sub>*라는 것은 다음 두 조건을 만족하는 것이다.
@@ -143,7 +143,7 @@ DM stack과 Artin stack의 차이는 정확히 이 stabilizer가 양의 차원�
 
 $[X/G]$의 한 점 $(P, \varphi)$은 "$T$ 위에서 $G$만큼 비틀린 채 $X$로 사상하는 자료"이다. Torsor $P$이 자명한 경우, 곧 $P=G\times_S T$(left translation 작용)인 경우 equivariant morphism $\varphi: G\times_S T \rightarrow X$은 $\varphi(g, t)=g\cdot \varphi(e, t)$으로 단위절단에서의 값 $a:=\varphi(e, -): T \rightarrow X$에 의해 완전히 결정된다. 즉 자명한 torsor 위의 자료는 단순히 $X$의 한 점 $a\in X(T)$과 같다. 이 관찰이 atlas의 출발점이다. 한편 $\mathbf{B}G$은 $X=S$이라 equivariant morphism이 유일하므로 $\mathbf{B}G(T)$은 정확히 $T$ 위의 $G$-torsor들의 groupoid이고, 그 automorphism은 $G(T)$이다. $\mathbf{B}G$이 고전적으로 위상공간의 classifying space $BG$이 맡던 역할, 곧 $G$-bundle을 분류하는 보편 대상의 역할을 대수기하에서 수행한다.
 
-[§Fibered category와 stack, ⁋정리 19](/ko/math/stacks/fibered_categories_and_stacks#thm19)에서 $\mathbf{B}\mathbb{G}_m$이 stack임을 line bundle 하강으로 보았듯, $[X/G]$이 stack임은 torsor와 equivariant morphism이 모두 fppf covering을 따라 하강한다는 사실에서 따른다. Torsor는 fppf-국소적으로 자명하고 그 하강 자료가 effective하며, equivariant morphism은 $X$로의 morphism이므로 표현가능 sheaf의 절단으로서 하강한다. 우리는 이 stack 성질을 전제하고 ([명제 2](#prop2)과 같은 성분별 하강 논증이 그대로 적용된다) 곧바로 대수성으로 나아간다. 먼저 atlas를 구성한다.
+[§Fibered category와 stack, ⁋정리 19](/ko/math/stacks/fibered_categories_and_stacks#thm19)에서 $\mathbf{B}\mathbb{G}_m$이 stack임을 line bundle 하강으로 보았듯, $[X/G]$이 stack임은 torsor와 equivariant morphism이 모두 fppf covering을 따라 하강한다는 사실에서 따른다. Torsor는 fppf-국소적으로 자명하고 그 descent datum이 effective하며, equivariant morphism은 $X$로의 morphism이므로 표현가능 sheaf의 절단으로서 하강한다. 우리는 이 stack 성질을 전제하고 ([명제 2](#prop2)과 같은 성분별 하강 논증이 그대로 적용된다) 곧바로 대수성으로 나아간다. 먼저 atlas를 구성한다.
 
 ::: 명제 9
 Morphism $\pi: X \rightarrow [X/G]$을, $T$-점 $a\in X(T)$에 자명한 torsor와 그것이 결정하는 equivariant morphism을 대응시키는 것으로 정의하면, 곧
@@ -153,7 +153,7 @@ $$\pi(a)=\bigl(G\times_S T,\ \varphi_a\bigr),\qquad \varphi_a(g, t)=g\cdot a(t),
 이는 stack의 morphism이며 sheaf의 epimorphism, 곧 전사이다.
 :::
 ::: 증명
-$\pi$이 함자적임은 $a$의 base change가 자명 torsor의 base change와 호환됨에서 따른다. $\pi$이 전사임을 본다. 임의의 $(P, \varphi)\in [X/G](T)$에 대하여, $P$은 $G$-torsor이므로 fppf covering $\{T_i \rightarrow T\}$ 위에서 자명해진다. ([§Fibered category와 stack, ⁋정의 18](/ko/math/stacks/fibered_categories_and_stacks#def18)의 국소 비공 조건) 곧 각 $T_i$ 위에서 절단 $s_i\in P(T_i)$이 존재하여 $g\mapsto g\cdot s_i$이 $G\times_S T_i\xrightarrow{\sim}P\vert_{T_i}$을 준다. 이 자명화 아래 $(P, \varphi)\vert_{T_i}$은 $a_i:=\varphi(s_i)\in X(T_i)$이 결정하는 $\pi(a_i)$과 동형이다. 따라서 $(P, \varphi)$은 covering $\{T_i \rightarrow T\}$ 위에서 $\pi$의 image에 국소적으로 들어가며, 이는 sheaf의 epimorphism의 정의 그대로이다. 그러므로 $\pi$은 전사이다.
+$\pi$이 함자적임은 $a$의 base change가 자명 torsor의 base change와 호환됨에서 따른다. $\pi$이 전사임을 본다. 임의의 $(P, \varphi)\in [X/G](T)$에 대하여, $P$은 $G$-torsor이므로 fppf covering $\{T_i \rightarrow T\}$ 위에서 자명해진다. ([§Fibered category와 stack, ⁋정의 18](/ko/math/stacks/fibered_categories_and_stacks#def18)의 국소 비공 조건) 곧 각 $T_i$ 위에서 절단 $s_i\in P(T_i)$이 존재하여 $g\mapsto g\cdot s_i$이 $G\times_S T_i\xrightarrow{\sim}P\vert_{T_i}$을 준다. 이 trivialization 아래 $(P, \varphi)\vert_{T_i}$은 $a_i:=\varphi(s_i)\in X(T_i)$이 결정하는 $\pi(a_i)$과 동형이다. 따라서 $(P, \varphi)$은 covering $\{T_i \rightarrow T\}$ 위에서 $\pi$의 image에 국소적으로 들어가며, 이는 sheaf의 epimorphism의 정의 그대로이다. 그러므로 $\pi$은 전사이다.
 :::
 
 [명제 9](#prop9)의 $\pi$이 atlas의 후보이다. 그것이 표현가능하고 smooth함을 보이려면 그 base change를 계산해야 하는데, 가장 중요한 것이 $\pi$ 자신을 따른 base change, 곧 $X\times_{[X/G]}X$이다. 이 계산이 quotient stack의 groupoid presentation을 드러낸다.

@@ -22,7 +22,7 @@ weight: 16
 영역 $D \subseteq \mathbb{R}^n$의 각 점 $\mathbf{x}$에 벡터 $\mathbf{F}(\mathbf{x}) \in \mathbb{R}^n$을 대응시키는 함수 $\mathbf{F}\colon D \rightarrow \mathbb{R}^n$을 *벡터장<sub>vector field</sub>*이라 한다. 평면에서는 $\mathbf{F}(x,y) = (P(x,y), Q(x,y))$, 공간에서는 $\mathbf{F}(x,y,z) = (P, Q, R)$로 적고, 각 성분 $P, Q, R$가 $C^1$이면 $\mathbf{F}$를 $C^1$ 벡터장이라 한다.
 :::
 
-벡터장은 각 점에 그 점에서 출발하는 화살표를 꽂은 그림으로 이해하는 것이 가장 직관적이다. 가령, 유체의 흐름이라면 각 점에서의 유속을 표현한 것은 벡터장을 이룬다. 우리는 이미 이런 대상을 하나 알고 있다. ([§다변수함수와 편미분, ⁋정의 2](/ko/math/calculus/partial_derivatives#def2))
+벡터장은 각 점에 그 점에서 출발하는 arrow를 꽂은 그림으로 이해하는 것이 가장 직관적이다. 가령, 유체의 흐름이라면 각 점에서의 유속을 표현한 것은 벡터장을 이룬다. 우리는 이미 이런 대상을 하나 알고 있다. ([§다변수함수와 편미분, ⁋정의 2](/ko/math/calculus/partial_derivatives#def2))
 
 ::: 정의 2
 $C^1$ 스칼라함수 $f$의 기울기 $\nabla f = (\partial f/\partial x_1, \ldots, \partial f/\partial x_n)$로 주어지는 벡터장을 $f$의 *기울기장<sub>gradient field</sub>*이라 한다. 어떤 스칼라함수 $f$에 대해 $\mathbf{F} = \nabla f$로 쓸 수 있는 벡터장 $\mathbf{F}$를 *보존장<sub>conservative field</sub>*이라 하고, 그 $f$를 $\mathbf{F}$의 *potential<sub>퍼텐셜</sub>*이라 한다.
@@ -33,7 +33,7 @@ $C^1$ 스칼라함수 $f$의 기울기 $\nabla f = (\partial f/\partial x_1, \ld
 한편, 모든 벡터장이 보존장은 아니므로, 주어진 $\mathbf{F}$가 어떤 $f$의 기울기인지를 판정하는 것이 중심 문제가 된다. 이러한 판정에 쓰이는 연산이 다음의 정의에 있는 연산들로, 특히 $\curl$을 정의하기 위해서는 외적이 필요하므로 우리는 별수없이 $3$차원으로 내려와야 한다. 
 
 ::: 정의 3
-$C^1$ 벡터장 $\mathbf{F} = (P, Q, R)$의 *발산<sub>divergence</sub>*은 스칼라장
+$C^1$ 벡터장 $\mathbf{F} = (P, Q, R)$의 *발산<sub>divergence</sub>*은 scalar field
 
 $$\divergence \mathbf{F} = \nabla \cdot \mathbf{F} = \frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z}$$
 

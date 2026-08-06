@@ -20,7 +20,7 @@ published: false
 
 ## 곡면의 Gauss 곡률
 
-[§제2기본형식, ⁋명제 5](/ko/math/riemannian_geometry/second_fundamental_form#prop5)에서 보았듯 shape operator $S$는 $T_p M$ 위의 self-adjoint 선형사상이므로 실수 고윳값 $k_1, k_2$를 가지며 직교대각화된다. 이 고윳값들이 $\nu$ 방향의 principal curvature이다. 곡면이 주변 공간 안에서 휘는 정도를 한 수로 요약하는 가장 자연스러운 방법은 이 두 주곡률의 곱을 취하는 것이며, 이것이 Gauss 곡률이다.
+[§제2기본형식, ⁋명제 5](/ko/math/riemannian_geometry/second_fundamental_form#prop5)에서 보았듯 shape operator $S$는 $T_p M$ 위의 self-adjoint 선형사상이므로 실수 고윳값 $k_1, k_2$를 가지며 직교대각화된다. 이 고윳값들이 $\nu$ 방향의 principal curvature이다. 곡면이 주변 공간 안에서 휘는 정도를 한 수로 요약하는 가장 자연스러운 방법은 이 두 principal curvature의 곱을 취하는 것이며, 이것이 Gauss 곡률이다.
 
 ::: 정의 1
 곡면 $M \subseteq \mathbb{R}^3$의 점 $p$에서, 단위 법벡터 $\nu$에 대응하는 shape operator $S$의 두 principal curvature를 $k_1, k_2$라 하자. $p$에서의 *Gauss 곡률<sub>Gauss curvature</sub>* $K$는
@@ -30,7 +30,7 @@ $$K := \det S = k_1 k_2$$
 로 정의된다.
 :::
 
-행렬식은 기저 선택에 무관하므로 $K$는 well-defined이다. 법벡터 $\nu$를 반대 방향 $-\nu$로 바꾸면 [§제2기본형식, ⁋정의 4](/ko/math/riemannian_geometry/second_fundamental_form#def4)의 정의에서 $S$가 $-S$로 바뀌어 두 주곡률이 모두 부호를 바꾸므로, 그 곱인 $K$는 법벡터의 방향 선택에 무관하다. 이는 평균곡률 $\tr S = k_1 + k_2$가 법선 방향에 따라 부호를 바꾸는 것과 대조된다. $K > 0$인 점에서는 두 주곡률이 같은 부호여서 곡면이 한쪽으로 볼록하게 휘고 (구면, 타원면), $K < 0$인 점에서는 두 주곡률이 반대 부호여서 안장 모양을 이루며 (쌍곡포물면), $K = 0$인 점에서는 적어도 한 방향으로 곡면이 직선처럼 펴진다 (원기둥, 평면).
+행렬식은 기저 선택에 무관하므로 $K$는 well-defined이다. 법벡터 $\nu$를 반대 방향 $-\nu$로 바꾸면 [§제2기본형식, ⁋정의 4](/ko/math/riemannian_geometry/second_fundamental_form#def4)의 정의에서 $S$가 $-S$로 바뀌어 두 principal curvature가 모두 부호를 바꾸므로, 그 곱인 $K$는 법벡터의 방향 선택에 무관하다. 이는 평균곡률 $\tr S = k_1 + k_2$가 법선 방향에 따라 부호를 바꾸는 것과 대조된다. $K > 0$인 점에서는 두 principal curvature가 같은 부호여서 곡면이 한쪽으로 볼록하게 휘고 (구면, 타원면), $K < 0$인 점에서는 두 principal curvature가 반대 부호여서 안장 모양을 이루며 (쌍곡포물면), $K = 0$인 점에서는 적어도 한 방향으로 곡면이 직선처럼 펴진다 (원기둥, 평면).
 
 Gauss 곡률을 두 기본형식의 좌표 표현으로 적으면 고전적 곡면론의 공식을 얻는다. 곡면의 국소 매개화 $\mathbf{x}(u, v)$를 잡고, 제1기본형식 $g$와 [§제2기본형식, ⁋정의 2](/ko/math/riemannian_geometry/second_fundamental_form#def2)의 제2기본형식 $\mathrm{II}$의 성분을
 
@@ -99,7 +99,7 @@ $$\langle R(e_1, e_2) e_2, e_1\rangle = K$$
 ::: 참고 4
 [정리 3](#thm3)의 우변이 제1기본형식만으로 적힌다는 사실은 좌표 공식으로도 명시할 수 있다. 곡률 텐서 $R$의 성분은 제1기본형식 $E, F, G$와 그 1·2계 편미분으로 이루어진 Christoffel 기호로 표현되므로, Gauss 곡률은 $E, F, G$와 그 편미분만의 함수가 된다. 이를 명시적으로 적은 것이 *Brioschi 공식<sub>Brioschi formula</sub>*
 
-$$K = \frac{\det \begin{pmatrix} -\tfrac12 E_{vv} + F_{uv} - \tfrac12 G_{uu} & \tfrac12 E_u & F_u - \tfrac12 E_v \\ F_v - \tfrac12 G_u & E & F \\ \tfrac12 G_v & F & G \end{pmatrix} - \det \begin{pmatrix} 0 & \tfrac12 E_v & \tfrac12 G_u \\ \tfrac12 E_v & E & F \\ \tfrac12 G_u & F & G \end{pmatrix}}{(EG - F^2)^2}$$
+$$K = \frac{\det \begin{pmatrix} -\frac12 E_{vv} + F_{uv} - \frac12 G_{uu} & \frac12 E_u & F_u - \frac12 E_v \\ F_v - \frac12 G_u & E & F \\ \frac12 G_v & F & G \end{pmatrix} - \det \begin{pmatrix} 0 & \frac12 E_v & \frac12 G_u \\ \frac12 E_v & E & F \\ \frac12 G_u & F & G \end{pmatrix}}{(EG - F^2)^2}$$
 
 이다. 우변에 제2기본형식 $L, M, N$이 전혀 나타나지 않는다는 점이 Theorema Egregium을 좌표 차원에서 다시 확인해 준다. 직교 매개화 ($F = 0$)에서는 이 식이 훨씬 간단해져
 
@@ -136,7 +136,7 @@ $$K_M(p) = \langle R(e_1, e_2) e_2, e_1\rangle = \langle R'(\varphi_\ast e_1, \v
 
 [따름정리 6](#cor6)은 지도제작이 본질적으로 안고 있는 왜곡의 수학적 근원이다. 구면인 지구의 한 조각을 평면 지도 위에 옮기는 어떤 방법도 모든 거리를 동시에 보존할 수는 없으며, 따라서 면적, 각도, 거리 가운데 적어도 하나는 반드시 왜곡된다. Mercator 도법은 각도를 보존하는 대신 고위도의 면적을 크게 부풀리고, 정적 도법은 면적을 보존하는 대신 모양을 일그러뜨린다. 어느 경우에도 Gauss 곡률 $1$과 $0$의 불일치를 등거리로 메울 수는 없기 때문에 완벽한 평면 지도는 존재하지 않는다.
 
-반대로 Gauss 곡률이 $0$인 곡면은 평면으로 펼칠 수 있다. 원기둥과 원뿔은 한 주곡률이 $0$이어서 $K \equiv 0$이고, 실제로 종이를 휘어 만들 수 있으므로 평면의 일부와 국소 등거리이다. 이런 곡면을 *developable surface<sub>전개가능 곡면</sub>*라 부른다. Theorema Egregium은 이처럼 어떤 곡면이 평면으로 전개 가능한지를 외재적 모양이 아니라 내재적 곡률 $K$가 가른다는 사실을 분명히 한다.
+반대로 Gauss 곡률이 $0$인 곡면은 평면으로 펼칠 수 있다. 원기둥과 원뿔은 한 principal curvature가 $0$이어서 $K \equiv 0$이고, 실제로 종이를 휘어 만들 수 있으므로 평면의 일부와 국소 등거리이다. 이런 곡면을 *developable surface<sub>전개가능 곡면</sub>*라 부른다. Theorema Egregium은 이처럼 어떤 곡면이 평면으로 전개 가능한지를 외재적 모양이 아니라 내재적 곡률 $K$가 가른다는 사실을 분명히 한다.
 
 ---
 

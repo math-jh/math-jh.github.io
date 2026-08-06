@@ -14,7 +14,7 @@ weight: 103
 published: false
 ---
 
-유한차원 representation을 분류하는 문제는 indecomposable들을 찾는 문제로 환원되며 ([§Krull–Schmidt 정리, ⁋정리 6](/ko/math/representation_theory/krull_schmidt#thm6)), 같은 quiver라도 arrow의 방향을 바꾸면 그 indecomposable들의 모임이 어떻게 달라지는지를 묻는 것은 자연스럽다. *Reflection functor*는 이 물음에 답하는 도구이다. Quiver $Q$의 한 vertex $k$가 모든 화살표를 받기만 하는 *sink*이거나 내보내기만 하는 *source*일 때, 그 vertex에 인접한 화살표를 모두 뒤집어 새 quiver $\sigma_k Q$를 얻고, 동시에 representation을 $\Rep(Q)$에서 $\Rep(\sigma_k Q)$로 옮기는 functor $S_k^+$ 또는 $S_k^-$를 구성한다. 핵심은 이 조작이 dimension vector 위에서 정확히 root lattice의 simple reflection $s_k$로 작용한다는 것이며, 이로써 quiver의 representation 이론과 root system의 조합론이 직접 연결된다. 이 연결은 Gabriel 정리, 곧 representation-finite quiver가 정확히 type $A$, $D$, $E$의 Dynkin quiver임을 밝히는 정리의 핵심 도구가 된다.
+유한차원 representation을 분류하는 문제는 indecomposable들을 찾는 문제로 환원되며 ([§Krull–Schmidt 정리, ⁋정리 6](/ko/math/representation_theory/krull_schmidt#thm6)), 같은 quiver라도 arrow의 방향을 바꾸면 그 indecomposable들의 모임이 어떻게 달라지는지를 묻는 것은 자연스럽다. *Reflection functor*는 이 물음에 답하는 도구이다. Quiver $Q$의 한 vertex $k$가 모든 arrow를 받기만 하는 *sink*이거나 내보내기만 하는 *source*일 때, 그 vertex에 인접한 arrow를 모두 뒤집어 새 quiver $\sigma_k Q$를 얻고, 동시에 representation을 $\Rep(Q)$에서 $\Rep(\sigma_k Q)$로 옮기는 functor $S_k^+$ 또는 $S_k^-$를 구성한다. 핵심은 이 조작이 dimension vector 위에서 정확히 root lattice의 simple reflection $s_k$로 작용한다는 것이며, 이로써 quiver의 representation 이론과 root system의 조합론이 직접 연결된다. 이 연결은 Gabriel 정리, 곧 representation-finite quiver가 정확히 type $A$, $D$, $E$의 Dynkin quiver임을 밝히는 정리의 핵심 도구가 된다.
 
 이 글에서 $k$는 field를 가리키고 (vertex를 가리킬 때는 문맥에서 구별된다), $Q=(Q_0,Q_1,s,t)$는 oriented cycle을 가지지 않는 유한 quiver이며 ([§Quiver와 경로대수, ⁋정의 1](/ko/math/representation_theory/path_algebras#def1)), representation이라 하면 유한차원 representation을 뜻한다 ([§Quiver와 경로대수, ⁋정의 9](/ko/math/representation_theory/path_algebras#def9)). Root system과 그 위의 reflection, root lattice의 일반론은 [\[리 이론\] §근계](/ko/math/lie_theory/root_systems)를 따른다.
 
@@ -26,17 +26,17 @@ published: false
 Quiver $Q$의 vertex $k\in Q_0$가 *sink<sub>들임 꼭짓점</sub>*이라는 것은 $s(\alpha)=k$인 arrow $\alpha\in Q_1$이 하나도 없는 것이다. 곧 $k$에 인접한 모든 arrow가 $k$를 target으로 가진다. Symmetric으로 $k$가 *source<sub>냄 꼭짓점</sub>*라는 것은 $t(\alpha)=k$인 arrow가 하나도 없는 것이다. 곧 $k$에 인접한 모든 arrow가 $k$를 source로 가진다.
 :::
 
-Vertex $k$가 sink이면 $k$로 들어오는 arrow들만 있고, source이면 $k$에서 나가는 arrow들만 있다. $Q$에 oriented cycle이 없으므로 적어도 하나의 sink와 하나의 source가 항상 존재한다. 임의의 vertex가 sink일 필요는 없으나, 반사 functor는 sink 또는 source인 vertex에서만 정의된다. 이제 그러한 vertex에서 인접한 화살표를 모두 뒤집는 조작을 정의한다.
+Vertex $k$가 sink이면 $k$로 들어오는 arrow들만 있고, source이면 $k$에서 나가는 arrow들만 있다. $Q$에 oriented cycle이 없으므로 적어도 하나의 sink와 하나의 source가 항상 존재한다. 임의의 vertex가 sink일 필요는 없으나, 반사 functor는 sink 또는 source인 vertex에서만 정의된다. 이제 그러한 vertex에서 인접한 arrow를 모두 뒤집는 조작을 정의한다.
 
 ::: 정의 2
 Quiver $Q$와 vertex $k\in Q_0$에 대하여, $k$에서의 *반사<sub>reflection</sub>* $\sigma_k Q$는 같은 vertex 집합 $Q_0$를 가지며, arrow 집합은 $k$에 인접하지 않은 arrow는 그대로 두고 $k$에 인접한 각 arrow $\alpha$의 방향만 뒤집어 얻는 quiver이다. 곧 $\alpha:i\rightarrow k$는 $\bar\alpha:k\rightarrow i$로, $\alpha:k\rightarrow j$는 $\bar\alpha:j\rightarrow k$로 바꾼다.
 :::
 
-$k$가 $Q$에서 sink이면, $k$에 인접한 arrow는 모두 $k$로 들어오므로 반사 후에는 모두 $k$에서 나가게 되어 $k$는 $\sigma_k Q$에서 source가 된다. Symmetric으로 $k$가 $Q$에서 source이면 $\sigma_k Q$에서는 sink가 된다. $Q$에 oriented cycle이 없고 $k$가 sink 또는 source인 한, 한 vertex의 인접 화살표만 뒤집는 이 조작은 oriented cycle을 만들지 않으므로 $\sigma_k Q$도 다시 oriented cycle을 가지지 않는다.
+$k$가 $Q$에서 sink이면, $k$에 인접한 arrow는 모두 $k$로 들어오므로 반사 후에는 모두 $k$에서 나가게 되어 $k$는 $\sigma_k Q$에서 source가 된다. Symmetric으로 $k$가 $Q$에서 source이면 $\sigma_k Q$에서는 sink가 된다. $Q$에 oriented cycle이 없고 $k$가 sink 또는 source인 한, 한 vertex의 인접 arrow만 뒤집는 이 조작은 oriented cycle을 만들지 않으므로 $\sigma_k Q$도 다시 oriented cycle을 가지지 않는다.
 
 ## Sink에서의 reflection functor
 
-이제 sink $k$에서 representation을 옮기는 functor를 구성한다. 발상은 다음과 같다. $k$가 sink이면 $k$로 들어오는 화살표들이 정보를 $V_k$로 모으는데, 이 모음 morphism의 *kernel*이 $V_k$가 채 담아내지 못한 부분을 측정한다. 새 representation에서는 이 kernel을 vertex $k$ 위의 공간으로 삼고, 뒤집힌 화살표들이 이 kernel에서 각 $V_i$로 자연스럽게 사상되도록 한다.
+이제 sink $k$에서 representation을 옮기는 functor를 구성한다. 발상은 다음과 같다. $k$가 sink이면 $k$로 들어오는 arrow들이 정보를 $V_k$로 모으는데, 이 모음 morphism의 *kernel*이 $V_k$가 채 담아내지 못한 부분을 측정한다. 새 representation에서는 이 kernel을 vertex $k$ 위의 공간으로 삼고, 뒤집힌 arrow들이 이 kernel에서 각 $V_i$로 자연스럽게 사상되도록 한다.
 
 ::: 정의 3
 $k$가 $Q$의 sink라 하고, $V=(V_i,V_\alpha)$를 $Q$의 representation이라 하자. $k$로 들어오는 arrow들 $\alpha:i\rightarrow k$ (이때 $i=s(\alpha)$) 로부터 morphism
@@ -54,7 +54,7 @@ $$W_{\bar\alpha}:W_k\hookrightarrow\bigoplus_{\alpha:\,i\rightarrow k}V_{s(\alph
 곧 $W_k$를 direct sum에 포함한 뒤 $\alpha$-성분으로 사영하는 morphism을 둔다. Morphism $f=(f_i):V\rightarrow V'$에 대해서는 $i\neq k$에서 $(S_k^+ f)_i=f_i$로 두고, vertex $k$에서는 $f$가 $V_{\mathrm{in}}$과 $V'_{\mathrm{in}}$을 교환시키므로 direct sum 위의 morphism $\bigoplus_\alpha f_{s(\alpha)}$가 kernel을 kernel로 보내는 것으로부터 유도되는 restriction morphism $(S_k^+ f)_k:W_k\rightarrow W'_k$를 둔다.
 :::
 
-$W_k$는 $\bigoplus_\alpha V_{s(\alpha)}$의 부분공간이고, 뒤집힌 화살표 $\bar\alpha$의 action $W_{\bar\alpha}$는 이 부분공간을 $\alpha$-좌표로 읽어 낸 것이다. 따라서 $S_k^+ V$는 $\sigma_k Q$의 올바른 representation이다. $\sigma_k Q$에서 $k$는 source이므로, $k$에서 나가는 화살표 $\bar\alpha:k\rightarrow s(\alpha)$들에 morphism을 배정하는 것이 마땅하며 위 정의가 바로 그것이다. Morphism에 대한 정의가 잘 됨은 다음을 보면 된다. $f:V\rightarrow V'$가 morphism이면 각 $\alpha:i\rightarrow k$에 대하여 $f_k\circ V_\alpha=V'_\alpha\circ f_{s(\alpha)}$이므로, direct sum 위의 morphism $F=\bigoplus_\alpha f_{s(\alpha)}$이 $V'_{\mathrm{in}}\circ F=f_k\circ V_{\mathrm{in}}$을 만족한다. 따라서 $F$는 $\ker V_{\mathrm{in}}$을 $\ker V'_{\mathrm{in}}$ 안으로 보내고, 그 restriction이 $(S_k^+ f)_k$이다.
+$W_k$는 $\bigoplus_\alpha V_{s(\alpha)}$의 부분공간이고, 뒤집힌 arrow $\bar\alpha$의 action $W_{\bar\alpha}$는 이 부분공간을 $\alpha$-좌표로 읽어 낸 것이다. 따라서 $S_k^+ V$는 $\sigma_k Q$의 올바른 representation이다. $\sigma_k Q$에서 $k$는 source이므로, $k$에서 나가는 arrow $\bar\alpha:k\rightarrow s(\alpha)$들에 morphism을 배정하는 것이 마땅하며 위 정의가 바로 그것이다. Morphism에 대한 정의가 잘 됨은 다음을 보면 된다. $f:V\rightarrow V'$가 morphism이면 각 $\alpha:i\rightarrow k$에 대하여 $f_k\circ V_\alpha=V'_\alpha\circ f_{s(\alpha)}$이므로, direct sum 위의 morphism $F=\bigoplus_\alpha f_{s(\alpha)}$이 $V'_{\mathrm{in}}\circ F=f_k\circ V_{\mathrm{in}}$을 만족한다. 따라서 $F$는 $\ker V_{\mathrm{in}}$을 $\ker V'_{\mathrm{in}}$ 안으로 보내고, 그 restriction이 $(S_k^+ f)_k$이다.
 
 $S_k^+$가 functor임은 kernel로의 restriction이 합성과 항등사상을 보존한다는 사실에서 곧바로 따라온다. 다음 예시는 가장 단순한 경우에서 이 functor가 무엇을 하는지를 보여 준다.
 
@@ -84,7 +84,7 @@ $$W_{\bar\alpha}:V_{t(\alpha)}\xrightarrow{\ \iota_\alpha\ }\bigoplus_{\alpha:\,
 곧 $\alpha$-성분으로의 포함과 cokernel로의 projection의 합성을 둔다. Morphism에 대해서는 $S_k^+$와 symmetric으로 cokernel로 내려가는 유도사상을 둔다.
 :::
 
-$\sigma_k Q$에서 source였던 $k$는 sink가 되며, 이번에는 $k$로 들어오는 화살표들에 morphism을 배정해야 한다. 정의의 $W_{\bar\alpha}:V_{t(\alpha)}\rightarrow W_k$가 바로 그 morphism이다. $S_k^+$가 kernel을 취해 정보를 "되돌려 받았다"면, $S_k^-$는 cokernel을 취해 "내보내고 남은" 부분을 vertex $k$ 위에 둔다. 두 구성이 서로 쌍대이며, 다음 절에서 이들이 dimension vector 위에서 같은 reflection을 일으키고 서로 거의 역임을 본다.
+$\sigma_k Q$에서 source였던 $k$는 sink가 되며, 이번에는 $k$로 들어오는 arrow들에 morphism을 배정해야 한다. 정의의 $W_{\bar\alpha}:V_{t(\alpha)}\rightarrow W_k$가 바로 그 morphism이다. $S_k^+$가 kernel을 취해 정보를 "되돌려 받았다"면, $S_k^-$는 cokernel을 취해 "내보내고 남은" 부분을 vertex $k$ 위에 둔다. 두 구성이 서로 쌍대이며, 다음 절에서 이들이 dimension vector 위에서 같은 reflection을 일으키고 서로 거의 역임을 본다.
 
 ## Dimension vector와 simple reflection
 
@@ -213,7 +213,7 @@ Preprojective indecomposable은 $C^+$를 거듭하면 결국 $0$이 되므로, $
 Reflection $s_k$는 Tits form을 보존한다. 곧 임의의 $d\in\mathbb{Z}^n$에 대하여 $q(s_k(d))=q(d)$이다. 특히 admissible sink sequence가 주는 Coxeter element $c$도 $q$를 보존한다.
 :::
 ::: 증명
-Tits form $q(d)=\langle d,d\rangle$은 대칭화 $(d,e)=\langle d,e\rangle+\langle e,d\rangle$에 대하여 $q(d)=\tfrac12(d,d)$를 만족하므로, $q$를 보존하는 것과 symmetric form $(-,-)$을 보존하는 것이 동치이다. Reflection $s_k(d)=d-(d,e_k)e_k$는 $(e_k,e_k)=2$인 vector $e_k$에 대한 reflection이므로, 임의의 $d$에 대하여
+Tits form $q(d)=\langle d,d\rangle$은 대칭화 $(d,e)=\langle d,e\rangle+\langle e,d\rangle$에 대하여 $q(d)=(d,d)/2$를 만족하므로, $q$를 보존하는 것과 symmetric form $(-,-)$을 보존하는 것이 동치이다. Reflection $s_k(d)=d-(d,e_k)e_k$는 $(e_k,e_k)=2$인 vector $e_k$에 대한 reflection이므로, 임의의 $d$에 대하여
 
 $$(s_k(d),s_k(d))=(d,d)-2(d,e_k)(e_k,d)+(d,e_k)^2(e_k,e_k)=(d,d)-2(d,e_k)^2+2(d,e_k)^2=(d,d)$$
 

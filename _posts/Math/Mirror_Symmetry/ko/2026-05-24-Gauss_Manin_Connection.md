@@ -24,7 +24,7 @@ $$r = \rank\,\operatorname{Pic}(X) = \dim_\mathbb{C} H^2(X; \mathbb{C})$$
 
 로 주어졌다. 우리는 이 위에 oscillating integral을 정의하기 위해 우선 holomorphic volume form $\omega$를 정의한다.
 
-일반적으로 compact (대수기하학에서는 complete) 공간에서는 form이 non-vanishing일 수 없으므로, volume form을 얻기 위해 우리는 이러한 점들을 임의로 제거해주어야 한다. 즉, $\check{X}$를 어떤 smooth projective variety $Y$의 open subset $\check{X} = Y \setminus D$로 본 후, $Y$의 divisor $D$를 $\mathcal{K}_Y$의 rational section의 bad locus를 정확히 흡수하는 divisor로 고르는 것이다. 구체적으로 anti-canonical class $-K_Y$의 effective representative $D \geq 0$ (즉 $D \sim -K_Y$)를 잡으면 $\mathcal{K}_Y \otimes \mathcal{O}_Y(D) \cong \mathcal{O}_Y$가 trivial이 되어 nowhere-vanishing global section
+일반적으로 compact (algebraic geometry에서는 complete) 공간에서는 form이 non-vanishing일 수 없으므로, volume form을 얻기 위해 우리는 이러한 점들을 임의로 제거해주어야 한다. 즉, $\check{X}$를 어떤 smooth projective variety $Y$의 open subset $\check{X} = Y \setminus D$로 본 후, $Y$의 divisor $D$를 $\mathcal{K}_Y$의 rational section의 bad locus를 정확히 흡수하는 divisor로 고르는 것이다. 구체적으로 anti-canonical class $-K_Y$의 effective representative $D \geq 0$ (즉 $D \sim -K_Y$)를 잡으면 $\mathcal{K}_Y \otimes \mathcal{O}_Y(D) \cong \mathcal{O}_Y$가 trivial이 되어 nowhere-vanishing global section
 
 $$\Omega\in H^0(Y, \mathcal{K}_Y\otimes \mathcal{O}_Y(D))$$
 
@@ -251,7 +251,7 @@ $$(z\partial_q)\bigl(qz\partial_q\bigr)^n\,\mathcal{I}^0_p = \mathcal{I}^0_p$$
 
 으로, A-side $J$-function이 만족하는 hypergeometric ODE와 동일하다. State phase asymptotic의 경우, $x_\zeta$에서 $\partial_i\partial_j W_q$는 대각 $2/x_\zeta$, 비대각 $1/x_\zeta$ ($\mathbf{1} := (1,\ldots,1)^\top$)이므로
 
-$$\Hess_{x_\zeta}(W_q) = \tfrac{1}{x_\zeta}\bigl(I_n + \mathbf{1}\mathbf{1}^\top\bigr),\qquad \det \Hess_{x_\zeta}(W_q) = (n+1)\,(\zeta\,q^{1/(n+1)})^{-n}$$
+$$\Hess_{x_\zeta}(W_q) = \frac{1}{x_\zeta}\bigl(I_n + \mathbf{1}\mathbf{1}^\top\bigr),\qquad \det \Hess_{x_\zeta}(W_q) = (n+1)\,(\zeta\,q^{1/(n+1)})^{-n}$$
 
 이고 critical value $W_q(x_\zeta) = (n+1)\,\zeta\,q^{1/(n+1)}$이므로 [명제 3](#prop3)에 의해
 

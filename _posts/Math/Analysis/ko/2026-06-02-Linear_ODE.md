@@ -74,7 +74,7 @@ $$\left\lVert \frac{A^k}{k!}\right\rVert \leq \frac{\lVert A\rVert^k}{k!}$$
 
 $$e^{A + B} = e^A e^B$$
 
-가 성립한다. 일반적으로는 $AB \neq BA$이면 이 등식이 깨진다. 이 사실에서 $e^A$가 항상 가역이며 그 역이 $e^{-A}$임이 따라 나오는데, $A$와 $-A$는 언제나 교환하므로 $e^A e^{-A} = e^{A - A} = e^0 = I$이기 때문이다. 또 한 매개변수족 $t \mapsto e^{tA}$는 $e^{(s+t)A} = e^{sA}e^{tA}$를 만족해 가역행렬들의 곱셈군 안에서 일매개변수subgroup을 이룬다.
+가 성립한다. 일반적으로는 $AB \neq BA$이면 이 등식이 깨진다. 이 사실에서 $e^A$가 항상 가역이며 그 역이 $e^{-A}$임이 따라 나오는데, $A$와 $-A$는 언제나 교환하므로 $e^A e^{-A} = e^{A - A} = e^0 = I$이기 때문이다. 또 한 매개변수족 $t \mapsto e^{tA}$는 $e^{(s+t)A} = e^{sA}e^{tA}$를 만족해 가역행렬들의 multiplicative group 안에서 일매개변수subgroup을 이룬다.
 
 행렬지수를 멱급수로 항별 미분하면
 

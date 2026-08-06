@@ -128,7 +128,7 @@ $$\operatorname{Perv}(\{\ast\}) \cong \operatorname{Vec}^{fd}_k$$
 
 ## IC 층과 intermediate extension
 
-[정리 7](#thm7)에 의해 $\operatorname{Perv}(X)$은 유한 길이의 abelian 범주이므로, Jordan–Hölder 의미에서 그 simple 대상이 모든 perverse sheaf의 구성 벽돌이 된다. 우리는 이 simple 대상을 명시적으로 구성한다. 그 도구는 열린 부분 위의 perverse sheaf를 전체로 "중간만큼" 연장하는 functor이다. 두 극단적 연장인 $j_!$과 $Rj_\ast$은 일반적으로 perverse sheaf를 perverse sheaf로 보내지 않지만, 그 perverse cohomology 사이의 자연 morphism의 image를 취하면 perverse sheaf가 되며 이것이 중간 연장이다.
+[정리 7](#thm7)에 의해 $\operatorname{Perv}(X)$은 유한 길이의 abelian 범주이므로, Jordan–Hölder 의미에서 그 simple 대상이 모든 perverse sheaf의 구성 벽돌이 된다. 우리는 이 simple 대상을 명시적으로 구성한다. 그 도구는 열린 부분 위의 perverse sheaf를 전체로 "중간만큼" 연장하는 functor이다. 두 극단적 연장인 $j_!$과 $Rj_\ast$은 일반적으로 perverse sheaf를 perverse sheaf로 보내지 않지만, 그 perverse cohomology 사이의 자연 morphism의 image를 취하면 perverse sheaf가 되며 이것이 intermediate extension이다.
 
 ::: 정의 10
 Open embedding $j: U \hookrightarrow X$와 perverse sheaf $\mathcal{F} \in \operatorname{Perv}(U)$에 대해, 표준 morphism $j_! \mathcal{F} \rightarrow Rj_\ast \mathcal{F}$에 perverse cohomology ${}^{p}\mathcal{H}^0$을 적용하여 얻는 $\operatorname{Perv}(X)$ 안의 morphism의 image

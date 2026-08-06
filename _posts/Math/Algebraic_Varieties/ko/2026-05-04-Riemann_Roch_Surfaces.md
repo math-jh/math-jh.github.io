@@ -39,7 +39,7 @@ $$C \cdot D = \rchi(\mathcal{O}_S(C + D)) - \rchi(\mathcal{O}_S(C)) - \rchi(\mat
 
 $$0 \rightarrow \mathcal{O} \xrightarrow{(t,-s)} \mathcal{O}(C) \oplus \mathcal{O}(D) \xrightarrow{(s,t)} \mathcal{O}(C+D) \rightarrow \mathcal{O}_{C \cap D} \rightarrow 0$$
 
-여기서 첫 번째 화살표는 $h \mapsto (ht, -hs)$, 두 번째 화살표는 $(f, g) \mapsto fs + gt$이고, 마지막 화살표는 $\mathcal{O}(C+D)$에서 $C \cap D$ 위로의 자연스러운 restriction map이다. 그럼 Euler characteristic의 additivity에 의하여
+여기서 첫 번째 arrow는 $h \mapsto (ht, -hs)$, 두 번째 arrow는 $(f, g) \mapsto fs + gt$이고, 마지막 arrow는 $\mathcal{O}(C+D)$에서 $C \cap D$ 위로의 자연스러운 restriction map이다. 그럼 Euler characteristic의 additivity에 의하여
 
 $$C \cdot D = \rchi(\mathcal{O}_{C \cap D})$$
 

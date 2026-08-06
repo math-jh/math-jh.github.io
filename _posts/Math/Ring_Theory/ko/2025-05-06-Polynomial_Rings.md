@@ -352,7 +352,7 @@ UFD $A$에 대하여, $A[\x]$의 $0$이 아닌 원소를 $u(\x)$라 하고, $u(\
 
 ## 유리식환
 
-이제 우리는 다항식환의 변형인 유리식환과 멱급수환을 정의한다. 앞서 [명제 4](#prop4)에서 우리는 임의의 field $\mathbb{K}$에 대하여, $\mathbb{K}[\x_i]_{i\in I}$는 integral domain이라는 것을 증명하였다. 따라서 $\mathbb{K}[\x_i]_{i\in I}$의 field of fraction이 잘 정의된다.
+이제 우리는 polynomial ring의 변형인 유리식환과 멱급수환을 정의한다. 앞서 [명제 4](#prop4)에서 우리는 임의의 field $\mathbb{K}$에 대하여, $\mathbb{K}[\x_i]_{i\in I}$는 integral domain이라는 것을 증명하였다. 따라서 $\mathbb{K}[\x_i]_{i\in I}$의 field of fraction이 잘 정의된다.
 
 ::: 정의 17
 Field $\mathbb{K}$ 위에 정의된 polynomial ring $\mathbb{K}[\x_i]_{i\in I}$의 field of fraction을 *field of rational functions<sub>유리함수체</sub>*라 부르고 $\mathbb{K}(\x_i)_{i\in I}$으로 적는다. 
@@ -401,7 +401,7 @@ $$\deg(u/v)=\deg(u)-\deg(v)$$
 
 ## 멱급수환
 
-멱급수환은 다항식환의 또 다른 변형으로, 우리는 이제 단항식들의 무한합
+멱급수환은 polynomial ring의 또 다른 변형으로, 우리는 이제 단항식들의 무한합
 
 $$u(\x)=\sum_{\nu\in \mathbb{N}^{(I)}} a_\nu \x^\nu,\qquad\text{$a_\nu$ need not satisfy finiteness condition}$$
 

@@ -151,7 +151,7 @@ $$\check{H}^p(X, \mathcal{F}) = \varinjlim_{\mathcal{U}} \check{H}^p(\mathcal{U}
 
 위의 논증을 더 간단히 설명하자면, open cover를 점점 더 세밀하게 잡으며 추가되는 cohomology data를 모두 합쳐 이를 $\check{H}(X, \mathcal{F})$로 정의하겠다는 의미이다.
 
-일반적으로 [정의 7](#def7)의 $\check{H}^p(X, \mathcal{F})$와 [정의 1](#def1)의 $H^p(X, \mathcal{F})$가 isomorphic하다는 것은 보장되지 않지만, 다행히 대수기하학에서 등장하는 대부분의 sheaf에 대해서는 둘이 일치한다. 이를 보이기 위해서는 다소 기술적인 것들이 필요하다.
+일반적으로 [정의 7](#def7)의 $\check{H}^p(X, \mathcal{F})$와 [정의 1](#def1)의 $H^p(X, \mathcal{F})$가 isomorphic하다는 것은 보장되지 않지만, 다행히 algebraic geometry에서 등장하는 대부분의 sheaf에 대해서는 둘이 일치한다. 이를 보이기 위해서는 다소 기술적인 것들이 필요하다.
 
 ::: 정의 8
 Variety $X$ 위의 sheaf $\mathcal{F}$에 대하여, 다음을 정의한다.
@@ -552,7 +552,7 @@ $\mathcal{F}$의 Godement resolution $\mathcal{G}^\bullet(\mathcal{F})$을 잡�
 
 앞서 우리는 line bundle이 transition function $g_{ij} \in \mathcal{O}_X^\times(U_i \cap U_j)$들로 결정된다는 것을 보았다 ([§선다발과 벡터다발, ⁋명제 2](/ko/math/algebraic_varieties/line_bundles#prop2)). Transition function들은 cocycle condition $g_{ij}g_{jk} = g_{ik}$을 만족하는데, 이는 multiplicative notation으로 쓴 Čech 1-cocycle condition에 정확히 해당한다. 또한 line bundle의 isomorphism은 각 $U_i$ 위에서의 함수 $h_i \in \mathcal{O}_X^\times(U_i)$에 의해 $g_{ij} \mapsto h_i g_{ij} h_j^{-1}$로 transition function이 변하는 것이므로, 이 역시 Čech 1-coboundary에 의한 동치관계와 일치한다. 즉, line bundle의 isomorphism class는 $\check{H}^1(X, \mathcal{O}_X^\times)$의 원소와 자연스럽게 대응된다.
 
-이 관찰을 엄밀하게 정리하면 다음을 얻는다. 여기서 주의할 점은 $\mathcal{O}_X^\times$가 곱셈적 구조를 갖는 sheaf of (abelian) groups이므로, Čech cohomology에서 coboundary 관계가 덧셈적이 아닌 곱셈적으로 표현된다는 것이다. 구체적으로 1-coboundary는 $(g_{ij}) = (h_i \cdot h_j^{-1})$의 꼴이다.
+이 관찰을 엄밀하게 정리하면 다음을 얻는다. 여기서 주의할 점은 $\mathcal{O}_X^\times$가 multiplicative 구조를 갖는 sheaf of (abelian) groups이므로, Čech cohomology에서 coboundary 관계가 덧셈적이 아닌 multiplicative로 표현된다는 것이다. 구체적으로 1-coboundary는 $(g_{ij}) = (h_i \cdot h_j^{-1})$의 꼴이다.
 
 ::: 명제 22
 $\check{H}^1(X, \mathcal{O}_X^\times) \cong \Pic(X)$이다.

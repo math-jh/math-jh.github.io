@@ -35,7 +35,7 @@ $$\cl(\{\mathfrak{m}\})=ZI(\{\mathfrak{m}\})=ZIZ(\mathfrak{m})=Z(\mathfrak{m})=\
 
 그럼 정의에 의하여, $x$가 $C$의 generic point라면 임의의 점 $y\in C$와 그 열린근방 $U$에 대하여 $U$는 항상 $x$를 포함한다. 따라서 generic point는 $C$의 모든 점에 가까운 점으로 생각할 수 있다.
 
-이를 더욱 기하적으로 설명하면 다음과 같다. 예를 들어 $\mathbb{A}^n=\Spec\mathbb{K}[\x_1,\ldots, \x_n]$을 보자. 그럼 classical한 대수기하학에서 우리는 적당한 함수 $f$의 zero locus $Z(f)$가 $\mathbb{A}^n_\text{classical}$의 subscheme을 이룬다는 것을 안다. 
+이를 더욱 기하적으로 설명하면 다음과 같다. 예를 들어 $\mathbb{A}^n=\Spec\mathbb{K}[\x_1,\ldots, \x_n]$을 보자. 그럼 classical한 algebraic geometry에서 우리는 적당한 함수 $f$의 zero locus $Z(f)$가 $\mathbb{A}^n_\text{classical}$의 subscheme을 이룬다는 것을 안다. 
 
 논리 전개의 편의상 $f$가 prime element여서, $f$가 생성하는 ideal $\mathfrak{p}_f=(f)$가 prime ideal이라 하자. 그럼 $\mathfrak{p}_f$는 우선 정의에 의해 $\mathbb{A}^n$의 (closed일 필요는 없는) 점이며, 바로 이 점이 $f$가 정의하는 closed subscheme의 generic point이다. 이 점은 $Z(f)$의 대부분의 정보를 담고 있는데, 가령 $Z(f)$에 포함된 (classical한) 점들을 얻기 위해서는 $\mathfrak{p}_f$에 closure를 취하여 $Z(f)$를 얻은 후 maximal ideal들만 택하면 되고, 대수적으로는 $\mathfrak{p}_f$를 포함하는 maximal ideal들을 모두 가져오면 된다. 
 

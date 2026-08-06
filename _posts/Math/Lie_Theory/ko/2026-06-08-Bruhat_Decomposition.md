@@ -116,7 +116,7 @@ $$U_w=\prod_{\substack{\gamma\in\Phi^+\\ w^{-1}\gamma\in\Phi^-}}U_\gamma$$
 
 곱에 등장하는 root의 개수는 $\ell(w)$이므로, $U_w$는 affine space $\mathbb{A}^{\ell(w)}$와 isomorphic하다. 즉 $U_w$는 "$w^{-1}$이 negative root로 보내는 positive root들"만 모은 unipotent subgroup이며, 그 차원이 곧 length이다 ($\ell(w^{-1})=\ell(w)$).
 
-이하에서 $BwB$나 곱 $uwb$처럼 $w\in W$를 행렬로 직접 다룰 때는, $N_G(T)$ 안의 대표원 하나를 고른 것으로 본다. 서로 다른 대표원은 $T\subseteq B$만큼만 차이나므로 double coset $BwB$와 그 coset $BwB/B$는 대표원 선택과 무관하다.
+이하에서 $BwB$나 곱 $uwb$처럼 $w\in W$를 행렬로 직접 다룰 때는, $N_G(T)$ 안의 representative 하나를 고른 것으로 본다. 서로 다른 representative는 $T\subseteq B$만큼만 차이나므로 double coset $BwB$와 그 coset $BwB/B$는 representative 선택과 무관하다.
 
 ::: 명제 6
 각 $w\in W$에 대하여, product map
@@ -152,7 +152,7 @@ $$g=\begin{pmatrix}a&b\\c&d\end{pmatrix}\in\GL_2(\mathbb{C})$$
 
 의 형태이며, 여기서 $c=0$이면 $g$는 이미 upper triangular이므로 $g\in B=BeB$, 즉 $g$는 identity에 해당하는 cell에 들어간다. 다른 원소를 살펴보자. 만일 $c\neq 0$이면
 
-$$\begin{pmatrix}a&b\\c&d\end{pmatrix}=\begin{pmatrix}1&a/c\\0&1\end{pmatrix}\begin{pmatrix}0&1\\1&0\end{pmatrix}\begin{pmatrix}c&d\\0&\tfrac{bc-ad}{c}\end{pmatrix}\in BsB$$
+$$\begin{pmatrix}a&b\\c&d\end{pmatrix}=\begin{pmatrix}1&a/c\\0&1\end{pmatrix}\begin{pmatrix}0&1\\1&0\end{pmatrix}\begin{pmatrix}c&d\\0&\frac{bc-ad}{c}\end{pmatrix}\in BsB$$
 
 이고, 따라서 $\GL_2(\mathbb{C})$의 cell은 upper triangle matrix들과 그렇지 않은 부분으로 나뉘게 된다. 
 
@@ -206,7 +206,7 @@ $$P_I=BW_IB=\bigsqcup_{w\in W_I}BwB$$
 $P_I=BW_IB$는 $G$의 connected closed subgroup이며, Levi decomposition $P_I=L_I\ltimes U_I$를 갖는다. 여기서 Levi factor $L_I$는 $T$와 $I$에 속한 root들의 root space로 생성되는 reductive group이고, unipotent radical $U_I$는 $I$에 속하지 않은 positive root들의 root space로 생성된다.
 :::
 ::: 증명
-$B=U\rtimes T$이고 $W_I\subseteq W$이므로 $P_I$는 $B$와 $W_I$의 대표원소들로 생성되는 subgroup이다. $W_I$의 각 원소 $w$에 대해 $BwB$는 locally closed이고, 정리 5의 disjointness로부터 이들의 union $P_I$는 well-defined subgroup이자 closed subset이다. Root space 차원에서 보면 $\mathfrak{p}_I$는 $\mathfrak{b}$에 $I$가 생성하는 negative root들의 root space를 더한 것으로, 이를 reductive part $\mathfrak{l}_I$ (양·음 root가 짝지어진 부분)와 nilpotent part $\mathfrak{u}_I$ (나머지 positive root)로 가르면 위의 Levi decomposition을 얻는다. 따라서 $P_I$는 connected closed subgroup이다.
+$B=U\rtimes T$이고 $W_I\subseteq W$이므로 $P_I$는 $B$와 $W_I$의 representative들로 생성되는 subgroup이다. $W_I$의 각 원소 $w$에 대해 $BwB$는 locally closed이고, 정리 5의 disjointness로부터 이들의 union $P_I$는 well-defined subgroup이자 closed subset이다. Root space 차원에서 보면 $\mathfrak{p}_I$는 $\mathfrak{b}$에 $I$가 생성하는 negative root들의 root space를 더한 것으로, 이를 reductive part $\mathfrak{l}_I$ (양·음 root가 짝지어진 부분)와 nilpotent part $\mathfrak{u}_I$ (나머지 positive root)로 가르면 위의 Levi decomposition을 얻는다. 따라서 $P_I$는 connected closed subgroup이다.
 :::
 
 [명제 10](#prop10)의 Levi decomposition은 Borel subgroup의 분해 $B=U\rtimes T$를 한 단계 키운 것으로 보면 자연스럽다. 즉, $B$가 torus $T$와 위쪽 unipotent $U$의 두 정보로 구성되었듯, $P_I$는 더 큰 reductive part $L_I$와 그 위의 unipotent $U_I$의 semidirect product이다. $I$에 속한 root들은 positive root와 negative root가 짝을 이뤄 살아남아 ($T$를 maximal torus로 갖는) reductive group $L_I$를 이루고, $I$ 밖의 positive root들은 짝이 없어 nilpotent radical $U_I$를 이룬다. 특히 $L_I$의 Weyl group은 정확히 $W_I$로, 바로 아래에서 $W$를 quotient하게 될 그 subgroup이다.
@@ -228,7 +228,7 @@ $$W^I=\{w\in W\mid\ell(ws_i)>\ell(w)\text{ for all }\alpha_i\in I\}$$
 $W_I$는 유한군이므로 coset $wW_I$ 안에서 길이가 최소인 원소 $w^I$가 존재한다. 임의의 $\alpha_i\in I$에 대하여 $w^Is_i$ 역시 같은 coset에 속하므로 $\ell(w^Is_i)\geq\ell(w^I)$이고, Coxeter group에서 $\ell(w^Is_i)=\ell(w^I)\pm1$이므로 $\ell(w^Is_i)=\ell(w^I)+1$, 즉 $w^I\in W^I$이다. 분해의 유일성과 길이의 가산성 $\ell(w)=\ell(w^I)+\ell(w_I)$는 Coxeter group의 parabolic factorization 정리이다. (\[BB\] 참조) 이로부터 $W^I$의 각 원소가 서로 다른 coset을 대표하므로 $W^I\rightarrow W/W_I$는 bijection이다.
 :::
 
-이제 minimal length 대표원소를 사용하여 $G/P_I$의 cell decomposition을 얻는다. 핵심은 projection $G/B\rightarrow G/P_I$ 아래에서 같은 $W_I$-coset에 속한 Bruhat cell들이 하나로 뭉치고, 각 coset에서 살아남는 대표원소가 바로 $W^I$의 원소라는 점이다.
+이제 minimal length representative를 사용하여 $G/P_I$의 cell decomposition을 얻는다. 핵심은 projection $G/B\rightarrow G/P_I$ 아래에서 같은 $W_I$-coset에 속한 Bruhat cell들이 하나로 뭉치고, 각 coset에서 살아남는 representative가 바로 $W^I$의 원소라는 점이다.
 
 ::: 정리 13 (Generalized Bruhat decomposition)
 $P=P_I$를 standard parabolic subgroup이라 하면 다음이 성립한다.
@@ -297,7 +297,7 @@ $$0\subseteq V_1\subseteq \cdots \subseteq V_m\subseteq \mathbb{C}^n,\qquad \dim
 
 $$W^{P_2}=\{1234,\,1324,\,1423,\,2314,\,2413,\,3412\}$$
 
-의 여섯 개이다. 각 대표원소의 길이는 [예시 4](#ex4)에서처럼 inversion을 세어
+의 여섯 개이다. 각 representative의 길이는 [예시 4](#ex4)에서처럼 inversion을 세어
 
 $$\ell(1234)=0,\quad\ell(1324)=1,\quad\ell(1423)=\ell(2314)=2,\quad\ell(2413)=3,\quad\ell(3412)=4$$
 
@@ -377,7 +377,7 @@ $$X_{2413}=\{V\in\Gr(2,4)\mid\dim(V\cap E_2)\ge1\},$$
 Maximal torus $T\subseteq B$의 $G/P$ 위 작용에 대하여, fixed point는 정확히 coordinate point $wP$ ($w\in W^P$)들이며, 각 Bruhat cell $X_w^\circ$마다 하나씩 들어 있다.
 :::
 ::: 증명
-우선 각 coordinate point가 fixed point이다. $w$의 대표원소 $\dot w\in N_G(T)$에 대하여 $\dot w^{-1}t\dot w\in T\subseteq P$이므로 $t\cdot\dot wP=\dot w(\dot w^{-1}t\dot w)P=\dot wP$이기 때문이다. 역으로 fixed point $x$를 잡으면, Bruhat 분해에 의해 $x$는 어떤 cell $X_w^\circ=BwP/P$에 속하고, $T\subseteq B$이므로 각 cell은 $T$-stable이다. 그런데 cell의 좌표화 $X_w^\circ\cong\mathbb{A}^{\ell(w)}$에서 $T$는 각 좌표를 nontrivial character로 scale한다. Type $A$에서는 이를 [예시 15](#ex15)의 행렬 좌표에서 직접 볼 수 있는데, $t=\diag(t_1,\ldots,t_n)$는 pivot이 열 $p$인 행의 자유 성분 (열 $b$ 자리)을 $t_bt_p^{-1}$배 한다 (각 행을 $t$로 옮긴 뒤 pivot을 다시 $1$로 정규화하면 된다). 일반형에서는 cell이 root subgroup들의 곱 $\prod_\alpha U_\alpha$로 좌표화되고 $T$-conjugation이 각 $U_\alpha\cong\mathbb{G}_a$ 위에 root $\alpha$로 작용한다 ([Spr] 참조). 어느 쪽이든 모든 character가 nontrivial하므로, 좌표가 모두 $0$인 원점, 곧 $wP$만이 그 cell의 fixed point이다.
+우선 각 coordinate point가 fixed point이다. $w$의 대표원소 $\dot w\in N_G(T)$에 대하여 $\dot w^{-1}t\dot w\in T\subseteq P$이므로 $t\cdot\dot wP=\dot w(\dot w^{-1}t\dot w)P=\dot wP$이기 때문이다. 역으로 fixed point $x$를 잡으면, Bruhat 분해에 의해 $x$는 어떤 cell $X_w^\circ=BwP/P$에 속하고, $T\subseteq B$이므로 각 cell은 $T$-stable이다. 그런데 cell의 좌표화 $X_w^\circ\cong\mathbb{A}^{\ell(w)}$에서 $T$는 각 좌표를 nontrivial character로 scale한다. Type $A$에서는 이를 [예시 15](#ex15)의 행렬 좌표에서 직접 볼 수 있는데, $t=\diag(t_1,\ldots,t_n)$는 pivot이 열 $p$인 행의 자유 성분 (열 $b$ 자리)을 $t_bt_p^{-1}$배 한다 (각 행을 $t$로 옮긴 뒤 pivot을 다시 $1$로 normalize하면 된다). 일반형에서는 cell이 root subgroup들의 곱 $\prod_\alpha U_\alpha$로 좌표화되고 $T$-conjugation이 각 $U_\alpha\cong\mathbb{G}_a$ 위에 root $\alpha$로 작용한다 ([Spr] 참조). 어느 쪽이든 모든 character가 nontrivial하므로, 좌표가 모두 $0$인 원점, 곧 $wP$만이 그 cell의 fixed point이다.
 :::
 
 특히 fixed point의 개수는 $\lvert W^P\rvert$로 유한하다. $\Gr(2,4)$에서는 [예시 15](#ex15)의 여섯 coordinate flag가 그 전부이며, complete flag variety $\Fl_n$에서는 좌표 flag $E^w_\bullet$ ($w\in S_n$)들 $n!$개가 전부이다.

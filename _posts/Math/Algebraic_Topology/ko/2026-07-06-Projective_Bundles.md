@@ -59,7 +59,7 @@ Trivializing open들의 교집합은 다시 trivializing open이므로, $B$가 �
 
 계수를 $\mathbb{Z}$로 두었지만, 위의 증명은 fiber의 cohomology가 free module이 되는 임의의 PID 계수에 대하여 그대로 성립한다. 조건의 핵심은 fiber의 cohomology가 전역적인 class로 "펼쳐진다"는 것으로, 이 때 전공간의 cohomology는 밑공간의 cohomology를 coefficient ring으로 삼아 fiber의 cohomology를 그대로 복제한 모양이 된다. 아래에서 이 정리는 밑공간이 무한차원인 경우 ($\CP^\infty$ 등) 에도 쓰이므로 일반 판본이 실제로 필요하다.
 
-개념적으로 [정리 1](#thm1)은 [§호모토피의 계산, ⁋정리 15](/ko/math/algebraic_topology/fibrations#thm15)이 degenerate하는 특수한 경우이다. 전역 class $a_j$은 $H^\bullet(E)$에서 오므로 fiber 방향 열의 permanent cycle이고, 이들이 $H^\bullet(F)$ 전체를 생성하므로 곱 구조에 의해 모든 미분이 소멸하며, 동시에 그 존재가 $\pi_1(B)$의 $H^\bullet(F)$ 위 action을 자명하게 만들어 $E_2^{p,q}=H^p(B)\otimes H^q(F)$이 비틀림 없이 성립한다. 따라서 $E_2=E_\infty$가 되어 위의 결론이 그대로 따라온다. 우리가 택한 Mayer–Vietoris 증명은 이 spectral sequence를 경유하지 않고 같은 결론에 이르는 초등적인 우회로이며, 그런 만큼 국소계수계에 얽힌 미묘함도 자연스럽게 비켜간다.
+개념적으로 [정리 1](#thm1)은 [§호모토피의 계산, ⁋정리 15](/ko/math/algebraic_topology/fibrations#thm15)이 degenerate하는 특수한 경우이다. 전역 class $a_j$은 $H^\bullet(E)$에서 오므로 fiber 방향 열의 permanent cycle이고, 이들이 $H^\bullet(F)$ 전체를 생성하므로 곱 구조에 의해 모든 미분이 소멸하며, 동시에 그 존재가 $\pi_1(B)$의 $H^\bullet(F)$ 위 action을 자명하게 만들어 $E_2^{p,q}=H^p(B)\otimes H^q(F)$이 torsion 없이 성립한다. 따라서 $E_2=E_\infty$가 되어 위의 결론이 그대로 따라온다. 우리가 택한 Mayer–Vietoris 증명은 이 spectral sequence를 경유하지 않고 같은 결론에 이르는 초등적인 우회로이며, 그런 만큼 국소계수계에 얽힌 미묘함도 자연스럽게 비켜간다.
 
 ## 사영다발의 코호몰로지
 

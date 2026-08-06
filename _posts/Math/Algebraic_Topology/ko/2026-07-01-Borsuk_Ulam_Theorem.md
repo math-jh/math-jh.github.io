@@ -103,7 +103,7 @@ F(\theta+1)&=F\bigl((\theta+\frac12)+\frac12\bigr)=F(\theta+\frac12)+\frac12+q\\
 $n\geq 1$에 대하여, 임의의 antipodal 연속 자기사상 $f:S^n\rightarrow S^n$의 degree $\deg f$는 홀수이다.
 :::
 ::: 증명
-$n$에 대한 귀납법을 사용한다. 기저 단계 $n=1$은 [보조정리 4](#lem4)에서 이미 확립하였다. 이제 $n\geq 2$라 하고, 한 차원 낮은 구에서 antipodal 자기사상의 degree가 홀수라는 것을 가정한다. 일반 단계의 증명은 antipode에 의한 quotient space, 곧 실사영공간 $\RP^n=S^n/(x\sim-x)$을 매개로 진행되며, 여기에서는 그 골격만 제시하고 세부는 [Hat]의 §2.B와 [Mat]에 넘긴다.
+$n$에 대한 귀납법을 사용한다. 기저 단계 $n=1$은 [보조정리 4](#lem4)에서 이미 확립하였다. 이제 $n\geq 2$라 하고, 한 차원 낮은 구에서 antipodal 자기사상의 degree가 홀수라는 것을 가정한다. 일반 단계의 증명은 antipode에 의한 quotient space, 곧 real projective space $\RP^n=S^n/(x\sim-x)$을 매개로 진행되며, 여기에서는 그 골격만 제시하고 세부는 [Hat]의 §2.B와 [Mat]에 넘긴다.
 
 첫째, $f$가 antipodal이면 $f(-x)=-f(x)$이므로 이중피복 $p:S^n\rightarrow\RP^n$의 quotient 위에 유도된 연속함수 $\bar f:\RP^n\rightarrow\RP^n$이 $p\circ f=\bar f\circ p$를 만족하며 잘 정의된다.
 
@@ -124,7 +124,7 @@ $n\geq 1$에 대하여, antipodal map $g:S^n\rightarrow S^{n-1}$은 존재하지
 ::: 증명
 Antipodal map $g:S^n\rightarrow S^{n-1}$이 존재한다고 가정하자. $S^{n-1}$을 $S^n$의 적도, 곧 마지막 좌표가 $0$인 점들의 집합으로 보는 포함사상 $\iota:S^{n-1}\hookrightarrow S^n$을 생각하면, $\iota(-y)=-\iota(y)$이므로 합성 $\iota\circ g:S^n\rightarrow S^n$은 다시 antipodal 자기사상이다. 그런데 이 합성의 image는 적도에 놓여 있어 북극과 남극을 포함하지 않으므로, $\iota\circ g$는 전사가 아니다.
 
-전사가 아닌 자기사상은 어떤 점 $q$를 image에서 빠뜨리므로 그 image가 $S^n\setminus\{q\}$에 담긴다. $S^n\setminus\{q\}$은 stereographic projection에 의해 $\mathbb{R}^n$과 homeomorphic한 contractible 공간이므로, $\iota\circ g$는 한 점을 거쳐 인수분해되어 상수사상과 homotopic하다. 따라서 그 degree는 [§사상의 차수와 Brouwer·Lefschetz 고정점 정리, ⁋명제 3](/ko/math/algebraic_topology/degree_and_fixed_point_theorems#prop3)의 homotopy 불변성과 상수사상의 degree가 $0$이라는 사실에 의하여 $\deg(\iota\circ g)=0$이다. 그러나 $\iota\circ g$는 antipodal이므로 [정리 5](#thm5)에 의하여 그 degree가 홀수여야 하고, 이는 $0$과 모순이다. 그러므로 그러한 $g$는 존재하지 않는다.
+전사가 아닌 자기사상은 어떤 점 $q$를 image에서 빠뜨리므로 그 image가 $S^n\setminus\{q\}$에 담긴다. $S^n\setminus\{q\}$은 stereographic projection에 의해 $\mathbb{R}^n$과 homeomorphic한 contractible 공간이므로, $\iota\circ g$는 한 점을 거쳐 인수분해되어 상수사상과 homotopic하다. 따라서 그 degree는 [§사상의 차수와 Brouwer·Lefschetz 고정점 정리, ⁋명제 3](/ko/math/algebraic_topology/degree_and_fixed_point_theorems#prop3)의 homotopy invariance와 상수사상의 degree가 $0$이라는 사실에 의하여 $\deg(\iota\circ g)=0$이다. 그러나 $\iota\circ g$는 antipodal이므로 [정리 5](#thm5)에 의하여 그 degree가 홀수여야 하고, 이는 $0$과 모순이다. 그러므로 그러한 $g$는 존재하지 않는다.
 
 이로써 [정리 2](#thm2)의 (2)가 성립하고, [명제 3](#prop3)에 의하여 (1)도 성립하며, (3)은 [정리 5](#thm5) 그 자체이다.
 :::

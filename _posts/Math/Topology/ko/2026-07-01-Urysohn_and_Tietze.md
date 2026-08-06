@@ -205,7 +205,7 @@ $$U_n'=U_n\setminus\bigcup_{k=1}^n\cl(V_k),\qquad V_n'=V_n\setminus\bigcup_{k=1}
 
 $$\rho((x_n),(y_n))=\sum_{n=1}^\infty\frac{\lvert x_n-y_n\rvert}{2^n}$$
 
-이 정의하는 거리로 metrizable이며, metric space의 부분공간은 다시 metric space이므로, $X$가 $[0,1]^{\mathbb{N}}$의 부분공간과 위상동형임을 보이면 충분하다.
+이 정의하는 거리로 metrizable이며, metric space의 부분공간은 다시 metric space이므로, $X$가 $[0,1]^{\mathbb{N}}$의 부분공간과 homeomorphic임을 보이면 충분하다.
 
 먼저 $X$는 [보조정리 8](#lem8)에 의해 normal이므로 [정리 2](#thm2)를 사용할 수 있다. $X$의 countable base $\{B_n\}_{n\geq 1}$을 고정하고, $\cl(B_m)\subseteq B_n$을 만족하는 순서쌍 $(m,n)$마다 [정리 2](#thm2)를 서로소인 두 닫힌집합 $\cl(B_m)$과 $X\setminus B_n$에 적용하여, $\cl(B_m)$에서 $1$의 값을, $X\setminus B_n$에서 $0$의 값을 갖는 연속함수를 하나씩 얻는다. 이러한 순서쌍은 가산 개이므로 이렇게 얻은 함수들을 $f_1,f_2,\ldots$로 나열할 수 있다.
 

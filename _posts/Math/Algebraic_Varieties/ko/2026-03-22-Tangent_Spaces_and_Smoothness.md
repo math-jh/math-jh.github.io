@@ -14,7 +14,7 @@ weight: 6
 
 ---
 
-미분기하학에서와 마찬가지로 대수기하학에서도 tangent space는 variety의 국소적 구조를 이해하는 핵심 도구이다.
+미분기하학에서와 마찬가지로 algebraic geometry에서도 tangent space는 variety의 국소적 구조를 이해하는 핵심 도구이다.
 
 ## 접공간의 정의
 
@@ -93,7 +93,7 @@ $$T_x X = \ker(J_x) = \{v \in \mathbb{K}^n \mid J_x v = 0\}$$
 
 ## 매끄러운 점과 특이점
 
-미분기하학에서, 임의의 점에서의 tangent space의 차원은 항상 manifold의 차원과 같았다. 그러나 이는 manifold의 정의가 다소 빡빡하기 때문으로, 대수기하학에서는 단 하나의 다항식으로 정의되는 affine variety마저 (고전적인 그림에서) manifold가 아닐 수 있다. ([예시 6](#ex6), [예시 7](#ex7)) 그럼에도 불구하고, tangent space의 차원과 variety의 차원이 아무런 관계가 없는 것은 아니다.
+미분기하학에서, 임의의 점에서의 tangent space의 차원은 항상 manifold의 차원과 같았다. 그러나 이는 manifold의 정의가 다소 빡빡하기 때문으로, algebraic geometry에서는 단 하나의 다항식으로 정의되는 affine variety마저 (고전적인 그림에서) manifold가 아닐 수 있다. ([예시 6](#ex6), [예시 7](#ex7)) 그럼에도 불구하고, tangent space의 차원과 variety의 차원이 아무런 관계가 없는 것은 아니다.
 
 ::: 명제 4
 Irreducible variety $X$의 임의의 점 $x$에 대해 $\dim T_x X \ge \dim X$이다.

@@ -151,7 +151,7 @@ $$g=\begin{pmatrix}a&b\\c&d\end{pmatrix}\in\GL_2(\mathbb{C})$$
 
 and if $c=0$ then $g$ is already upper triangular, so $g\in B=BeB$, i.e. $g$ lies in the cell corresponding to the identity. Consider the other elements. If $c\neq 0$ then
 
-$$\begin{pmatrix}a&b\\c&d\end{pmatrix}=\begin{pmatrix}1&a/c\\0&1\end{pmatrix}\begin{pmatrix}0&1\\1&0\end{pmatrix}\begin{pmatrix}c&d\\0&\tfrac{bc-ad}{c}\end{pmatrix}\in BsB$$
+$$\begin{pmatrix}a&b\\c&d\end{pmatrix}=\begin{pmatrix}1&a/c\\0&1\end{pmatrix}\begin{pmatrix}0&1\\1&0\end{pmatrix}\begin{pmatrix}c&d\\0&\frac{bc-ad}{c}\end{pmatrix}\in BsB$$
 
 and therefore the cells of $\GL_2(\mathbb{C})$ are divided into upper triangular matrices and the rest.
 

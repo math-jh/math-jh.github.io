@@ -48,7 +48,7 @@ $\Delta$가 reflexive이므로 $\Delta^\circ$는 정의에 의해 lattice polyto
 
 ## 파노 다양체
 
-대수기하학에서 *Fano variety*는 anticanonical divisor $-K_X$가 ample인 normal projective variety $X$를 의미한다. 여기서 canonical divisor $K_X$는 canonical bundle에 대응하는 divisor class이며 ([\[대수다양체\] §표준선다발, ⁋정의 6](/ko/math/algebraic_varieties/canonical_bundle#def6)), $-K_X$는 그 역원이다. 만약 $-K_X$가 추가로 Cartier divisor라면 $X$를 *Gorenstein Fano variety*라 부른다. Toric variety의 맥락에서 이 조건은 매우 명시적인 조합론적 조건으로 번역된다.
+Algebraic geometry에서 *Fano variety*는 anticanonical divisor $-K_X$가 ample인 normal projective variety $X$를 의미한다. 여기서 canonical divisor $K_X$는 canonical bundle에 대응하는 divisor class이며 ([\[대수다양체\] §표준선다발, ⁋정의 6](/ko/math/algebraic_varieties/canonical_bundle#def6)), $-K_X$는 그 역원이다. 만약 $-K_X$가 추가로 Cartier divisor라면 $X$를 *Gorenstein Fano variety*라 부른다. Toric variety의 맥락에서 이 조건은 매우 명시적인 조합론적 조건으로 번역된다.
 
 [§토릭 다양체의 정의, ⁋명제 8](/ko/math/toric_geometry/toric_varieties#prop8)에서 보았듯, lattice polytope $P \subseteq M_{\mathbb{R}}$이 주어지면 이것이 정의하는 normal fan $\Sigma_P$을 통해 projective toric variety $X_P = X_{\Sigma_P}$를 구성할 수 있다. 이제 $P = \Delta$가 reflexive polytope라고 가정하자.
 

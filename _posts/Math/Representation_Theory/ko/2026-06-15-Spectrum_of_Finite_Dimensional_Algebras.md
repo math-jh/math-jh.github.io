@@ -15,7 +15,7 @@ published: false
 
 ---
 
-앞선 두 글에서 우리는 finite group $G$의 representation을 group algebra $\mathbb{C}[G]$ 위의 module로 보아 분석하였다. 이번 글에서 우리는 대상을 group algebra가 아니라 임의의 유한차원 가환대수로 바꾸어, 대수 그 자체가 자기 위에 곱셈으로 작용하는 *정규표현*을 분석한다. 핵심적인 관찰은 다음의 세 가지 대상이 본질적으로 같다는 것이다. 첫째, 대수에서 ground field로 가는 algebra homomorphism인 *character*; 둘째, 정규표현이 정의하는 연산자들의 *동시 고유값*; 셋째, 대수의 *spectrum*을 이루는 점들. 우리는 이 사전을 정확히 서술하고 증명한다.
+앞선 두 글에서 우리는 finite group $G$의 representation을 group algebra $\mathbb{C}[G]$ 위의 module로 보아 분석하였다. 이번 글에서 우리는 대상을 group algebra가 아니라 임의의 유한차원 가환대수로 바꾸어, 대수 그 자체가 자기 위에 곱셈으로 작용하는 *regular representation*을 분석한다. 핵심적인 관찰은 다음의 세 가지 대상이 본질적으로 같다는 것이다. 첫째, 대수에서 ground field로 가는 algebra homomorphism인 *character*; 둘째, regular representation이 정의하는 연산자들의 *동시 고유값*; 셋째, 대수의 *spectrum*을 이루는 점들. 우리는 이 사전을 정확히 서술하고 증명한다.
 
 이 글에서 $k$는 field이고, $A$는 유한차원 unital $k$-algebra를 가리킨다. 차원은 항상 $k$ 위에서의 차원 $\dim=\dim_k$이며, 주된 결과를 다룰 때에는 $A$가 commutative이고 $k$가 algebraically closed임을 명시적으로 가정한다. $A$-algebra의 일반론은 [\[대수적 구조\] §대수](/ko/math/algebraic_structures/algebras)에서 다룬 것을 따르며, 특히 algebra homomorphism은 곱셈과 스칼라곱, 그리고 항등원을 보존하는 morphism을 뜻한다.
 
@@ -31,7 +31,7 @@ $$M_a(x)=ax$$
 으로 정의한다. 이 때 $a\mapsto M_a$로 주어지는 representation $A\rightarrow \End_k(A)$를 $A$의 *정규표현<sub>regular representation</sub>*이라 부른다.
 :::
 
-여기서 $\End_k(A)$는 $A$를 단순히 유한차원 $k$-벡터공간으로 보았을 때의 $k$-선형 endomorphism들이 이루는 대수이다. 정규표현이 실제로 representation, 곧 unital algebra homomorphism이라는 것을 먼저 확인하자.
+여기서 $\End_k(A)$는 $A$를 단순히 유한차원 $k$-벡터공간으로 보았을 때의 $k$-선형 endomorphism들이 이루는 대수이다. Regular representation이 실제로 representation, 곧 unital algebra homomorphism이라는 것을 먼저 확인하자.
 
 ::: 명제 2
 대응 $a\mapsto M_a$는 injective unital $k$-algebra homomorphism $A\hookrightarrow \End_k(A)$이다.
@@ -205,7 +205,7 @@ $$A\longrightarrow \prod_\chi A_\chi;\qquad x\longmapsto (e_\chi x)_\chi$$
 대수 $A$가 *reduced<sub>감약</sub>*라는 것은 $A$의 nonzero nilpotent 원소가 존재하지 않는 것, 곧 $a^n=0$이면 $a=0$인 것이다.
 :::
 
-Reduced라는 조건은 정리 8의 분해에서 nilpotent 부분이 완전히 사라지는 것과 동치이며, 이는 다시 정규표현이 동시대각화 가능하다는 선형대수학적 조건과 같다.
+Reduced라는 조건은 정리 8의 분해에서 nilpotent 부분이 완전히 사라지는 것과 동치이며, 이는 다시 regular representation이 동시대각화 가능하다는 선형대수학적 조건과 같다.
 
 ::: 명제 11
 $k$가 algebraically closed이고 $A$가 유한차원 commutative $k$-algebra이며 $N=\dim A$라 하자. 다음 네 조건이 동치이다.
@@ -213,7 +213,7 @@ $k$가 algebraically closed이고 $A$가 유한차원 commutative $k$-algebra이
 1. $A$는 reduced이다.
 2. 모든 character $\chi$에 대하여 $A_\chi=k\,e_\chi$, 곧 $\mathfrak{n}_\chi=0$이다.
 3. Character의 개수가 정확히 $N$이며, $A\cong k^N$이다.
-4. 정규표현 $\{M_a\}_{a\in A}$이 동시대각화 가능하다.
+4. Regular representation $\{M_a\}_{a\in A}$이 동시대각화 가능하다.
 
 이 때 각 idempotent $e_\chi$는 모든 $M_a$의 공통 고유벡터이며 $M_a e_\chi=\chi(a)e_\chi$를 만족한다.
 :::
@@ -222,7 +222,7 @@ $k$가 algebraically closed이고 $A$가 유한차원 commutative $k$-algebra이
 
 **(2) $\Rightarrow$ (3).** $A_\chi=k\,e_\chi$이면 $\dim A_\chi=1$이므로 [따름정리 9](#cor9)의 $\dim A=\sum_\chi\dim A_\chi$로부터 character의 개수는 $\sum_\chi 1=\dim A=N$이다. 또 $A\cong\prod_\chi A_\chi\cong\prod_\chi k=k^N$이다.
 
-**(3) $\Rightarrow$ (4).** $A\cong k^N$의 정규표현을 생각하자. $k^N$에서 곱셈은 성분별이므로 표준 basis $\{\varepsilon_1,\ldots,\varepsilon_N\}$ (각 $\varepsilon_i$는 $i$번째 성분만 $1$) 에 대하여 임의의 $a=(a_1,\ldots,a_N)$의 곱셈연산자 $M_a$는 $M_a\varepsilon_i=a_i\varepsilon_i$로 작용한다. 즉 모든 $M_a$가 이 공통 basis에 대해 동시에 대각행렬이므로 정규표현은 동시대각화 가능하다.
+**(3) $\Rightarrow$ (4).** $A\cong k^N$의 regular representation을 생각하자. $k^N$에서 곱셈은 성분별이므로 표준 basis $\{\varepsilon_1,\ldots,\varepsilon_N\}$ (각 $\varepsilon_i$는 $i$번째 성분만 $1$) 에 대하여 임의의 $a=(a_1,\ldots,a_N)$의 곱셈연산자 $M_a$는 $M_a\varepsilon_i=a_i\varepsilon_i$로 작용한다. 즉 모든 $M_a$가 이 공통 basis에 대해 동시에 대각행렬이므로 regular representation은 동시대각화 가능하다.
 
 **(4) $\Rightarrow$ (1).** 정규표현이 동시대각화 가능하다 하자. 그럼 각 $M_a$가 대각화 가능하므로 nilpotent가 아닌 한 $0$이 아닌 고유값을 가지며, 특히 어떤 $a$에 대해 $M_a$가 nilpotent라면 $M_a=0$이다. [명제 2](#prop2)에 의해 $a\mapsto M_a$가 injective이므로 $M_a=0$은 $a=0$을 뜻한다. 따라서 $a^n=0$이면 $M_a^n=M_{a^n}=0$이고 $M_a$가 nilpotent이므로 $M_a=0$, 곧 $a=0$이다. 따라서 $A$는 reduced이다.
 

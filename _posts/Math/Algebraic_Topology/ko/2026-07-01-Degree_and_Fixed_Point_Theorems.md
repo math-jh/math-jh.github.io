@@ -47,7 +47,7 @@ $$\widetilde{H}_k(S^n)\cong\widetilde{H}_{k-1}(U\cap V)\cong\widetilde{H}_{k-1}(
 을 준다. 귀납가정에 의하여 우변은 $k-1=n-1$, 곧 $k=n$일 때 $\mathbb{Z}$이고 그 밖에서는 $0$이므로 원하는 결과를 얻는다.
 :::
 
-증명의 귀납 단계는 $S^n$의 최고차 homology를 한 차원 낮은 구의 최고차 homology로 되돌린다. 이 반복적 isomorphism $\widetilde{H}_n(S^n)\cong\widetilde{H}_{n-1}(S^{n-1})\cong\cdots\cong\widetilde{H}_0(S^0)\cong\mathbb{Z}$을 따라 $\widetilde{H}_0(S^0)$의 한 generator를 끌어올린 것을 $H_n(S^n)$의 한 generator로 택할 수 있으며, 우리는 이를 $[S^n]$으로 적고 $S^n$의 *fundamental class<sub>기본류</sub>*라 부른다. 이후의 논의에서 중요한 것은 이 generator의 구체적인 모습이 아니라 $H_n(S^n)$이 정확히 무한순환군이라는 사실뿐이다.
+증명의 귀납 단계는 $S^n$의 최고차 homology를 한 차원 낮은 구의 최고차 homology로 되돌린다. 이 반복적 isomorphism $\widetilde{H}_n(S^n)\cong\widetilde{H}_{n-1}(S^{n-1})\cong\cdots\cong\widetilde{H}_0(S^0)\cong\mathbb{Z}$을 따라 $\widetilde{H}_0(S^0)$의 한 generator를 끌어올린 것을 $H_n(S^n)$의 한 generator로 택할 수 있으며, 우리는 이를 $[S^n]$으로 적고 $S^n$의 *fundamental class<sub>기본류</sub>*라 부른다. 이후의 논의에서 중요한 것은 이 generator의 구체적인 모습이 아니라 $H_n(S^n)$이 정확히 infinite cyclic group이라는 사실뿐이다.
 
 ::: 정의 2
 $n\geq 1$에 대하여, 연속함수 $f:S^n\rightarrow S^n$을 생각하자. 유도된 준동형 $f_\ast=H_n(f):H_n(S^n)\rightarrow H_n(S^n)$은 $H_n(S^n)\cong\mathbb{Z}$ 위에서 어떤 정수를 곱하는 것이므로, 유일한 정수 $d$가 존재하여
@@ -143,7 +143,7 @@ Brouwer 정리는 $D^{n+1}$이 convex하고 콤팩트하다는 위상적 성질�
 
 ## Hairy ball 정리
 
-이제 degree의 homotopy 불변성을 벡터장 문제에 적용한다. 구 $S^n$ 위의 tangent vector field란, 각 점 $x\in S^n$에 그 점에서의 tangent space의 벡터, 곧 $x$와 수직인 벡터 $v(x)\in\mathbb{R}^{n+1}$을 연속적으로 대응시키는 것이다. "어디서도 $0$이 아닌" tangent vector field가 존재하는가라는 물음은 구를 빗질하여 가마 없이 매끈하게 눕힐 수 있는가라는 직관적 물음과 같으며, 그 답은 오직 degree에 의해 결정된다.
+이제 degree의 homotopy invariance를 벡터장 문제에 적용한다. 구 $S^n$ 위의 tangent vector field란, 각 점 $x\in S^n$에 그 점에서의 tangent space의 벡터, 곧 $x$와 수직인 벡터 $v(x)\in\mathbb{R}^{n+1}$을 연속적으로 대응시키는 것이다. "어디서도 $0$이 아닌" tangent vector field가 존재하는가라는 물음은 구를 빗질하여 가마 없이 매끈하게 눕힐 수 있는가라는 직관적 물음과 같으며, 그 답은 오직 degree에 의해 결정된다.
 
 ::: 정리 8 (Hairy ball 정리)
 $S^n$ 위에 어디서도 $0$이 아닌 연속 tangent vector field가 존재할 필요충분조건은 $n$이 홀수인 것이다.
@@ -208,7 +208,7 @@ $$\sum_i(-1)^i\operatorname{tr}(\varphi_i:C_i\rightarrow C_i)=\sum_i(-1)^i\opera
 
 $$L(g)=\sum_i(-1)^i\operatorname{tr}(g_\ast:H_i\rightarrow H_i)=\sum_i(-1)^i\operatorname{tr}(g_\#:C_i\rightarrow C_i)=0$$
 
-을 얻는다. 그런데 $g$는 $f$와 homotopic하므로 $L$의 homotopy 불변성에 의하여 $L(f)=L(g)=0$이다. 이로써 대우가 증명된다.
+을 얻는다. 그런데 $g$는 $f$와 homotopic하므로 $L$의 homotopy invariance에 의하여 $L(f)=L(g)=0$이다. 이로써 대우가 증명된다.
 :::
 
 증명에서 두 개의 trace, 곧 눈에 보이지 않는 homology 준위의 trace와 조합적으로 계산 가능한 chain 준위의 trace를 이어붙이는 Hopf trace formula가 결정적 역할을 한다. Fixed point의 부재를 chain 준위의 trace가 $0$이라는 조합적 진술로 번역하고, 그것을 다시 homology 준위의 정보인 $L(f)$로 되돌리는 것이 논증의 전부이다. 이제 이 정리로부터 Brouwer 정리가 특수한 경우로 따라 나옴을 확인한다.
@@ -221,7 +221,7 @@ $X$가 contractible하면 한 점과 같은 homology를 가지므로 ([§호몰�
 
 $$L(f)=(-1)^0\cdot 1=1\neq 0$$
 
-이므로 [정리 10](#thm10)에 의하여 $f$는 fixed point를 갖는다. 특히 $D^{n+1}$은 convex하여 contractible하고 삼각형화가능한 콤팩트 공간이므로 ($n+1$-simplex와 위상동형이다), 임의의 $f:D^{n+1}\rightarrow D^{n+1}$이 fixed point를 가진다는 [정리 7](#thm7)의 Brouwer 정리를 얻는다.
+이므로 [정리 10](#thm10)에 의하여 $f$는 fixed point를 갖는다. 특히 $D^{n+1}$은 convex하여 contractible하고 삼각형화가능한 콤팩트 공간이므로 ($n+1$-simplex와 homeomorphic이다), 임의의 $f:D^{n+1}\rightarrow D^{n+1}$이 fixed point를 가진다는 [정리 7](#thm7)의 Brouwer 정리를 얻는다.
 :::
 
 ## 예시

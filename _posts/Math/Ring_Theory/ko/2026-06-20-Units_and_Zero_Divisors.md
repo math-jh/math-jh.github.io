@@ -14,7 +14,7 @@ weight: 1
 
 ---
 
-이 글에서 우리는 ring의 곱셈 구조에서 가장 기본적인 두 부류의 원소, 즉 곱셈에 대한 역원을 갖는 *unit*과, 곱하여 $0$을 만드는 짝을 갖는 *zero divisor*를 정리한다. 이 두 개념은 이미 여러 곳에서 암묵적으로 쓰였다. Integral domain은 zero divisor가 없는 가환환으로 정의되었고 ([\[대수적 구조\] §분수체, ⁋정의 5](/ko/math/algebraic_structures/field_of_fractions#def5)), field는 모든 nonzero 원소가 unit인 division ring이었다 ([\[대수적 구조\] §분수체, ⁋정의 3](/ko/math/algebraic_structures/field_of_fractions#def3)). 여기서는 unit을 본격적으로 정의하여 그 모임이 group을 이룸을 확인하고, unit과 zero divisor가 서로 배타적임을 보인 뒤, 유한가환환에서는 zero divisor가 아닌 모든 원소가 자동으로 unit이 된다는 사실을 증명한다. 그 직접적 귀결로 유한 integral domain이 field임을 얻는다.
+이 글에서 우리는 ring의 곱셈 구조에서 가장 기본적인 두 부류의 원소, 즉 곱셈에 대한 역원을 갖는 *unit*과, 곱하여 $0$을 만드는 짝을 갖는 *zero divisor*를 정리한다. 이 두 개념은 이미 여러 곳에서 암묵적으로 쓰였다. Integral domain은 zero divisor가 없는 commutative ring으로 정의되었고 ([\[대수적 구조\] §분수체, ⁋정의 5](/ko/math/algebraic_structures/field_of_fractions#def5)), field는 모든 nonzero 원소가 unit인 division ring이었다 ([\[대수적 구조\] §분수체, ⁋정의 3](/ko/math/algebraic_structures/field_of_fractions#def3)). 여기서는 unit을 본격적으로 정의하여 그 모임이 group을 이룸을 확인하고, unit과 zero divisor가 서로 배타적임을 보인 뒤, 유한commutative ring에서는 zero divisor가 아닌 모든 원소가 자동으로 unit이 된다는 사실을 증명한다. 그 직접적 귀결로 유한 integral domain이 field임을 얻는다.
 
 별도의 언급이 없는 한 $A$는 항등원 $1\neq 0$을 갖는 ring이며, commutativity는 필요한 곳에서 그때그때 명시한다.
 
