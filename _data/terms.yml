@@ -5328,6 +5328,13 @@ E:
   defs:
   - label: '[토릭 기하학] §Cox 구성과 GIT quotient'
     url: /ko/math/toric_geometry/cox_construction
+- id: excess_intersection
+  en: excess intersection
+  ko: 초과 교차
+  primary: en
+  defs:
+  - label: '[대수다양체] §Hirzebruch-Riemann-Roch'
+    url: /ko/math/algebraic_varieties/hirzebruch_riemann_roch
 - id: excision_theorem
   en: excision theorem
   ko: 절제 정리
@@ -9903,6 +9910,13 @@ L:
   defs:
   - label: '[그로모프-위튼 이론] §Log structure와 log smooth curve'
     url: /ko/math/gromov-witten_theory/log_structures
+- id: log_smooth
+  en: log smooth
+  ko: 로그 매끄러운
+  primary: en
+  defs:
+  - label: '[그로모프-위튼 이론] §Log structure와 log smooth curve'
+    url: /ko/math/gromov-witten_theory/log_structures
 - id: log_smooth_curve
   en: log smooth curve
   ko: 로그 매끄러운 곡선
@@ -10927,6 +10941,13 @@ N:
   defs:
   - label: '[가환대수학] §정수적 확장'
     url: /ko/math/commutative_algebra/integral_extension
+- id: nodal_curve
+  en: nodal curve
+  ko: 노드 곡선
+  primary: en
+  defs:
+  - label: '[대수다양체] §접공간과 매끄러움'
+    url: /ko/math/algebraic_varieties/tangent_spaces_and_smoothness
 - id: node
   en: node
   ko: 노드
@@ -11178,10 +11199,10 @@ N:
   ko: 영호모토픽
   primary: en
   defs:
-  - label: '[대수적 위상수학] §호모토피'
-    url: /ko/math/algebraic_topology/homotopy
   - label: '[복소해석학] §Cauchy 정리'
     url: /ko/math/complex_analysis/cauchy_theorem
+  - label: '[대수적 위상수학] §호모토피'
+    url: /ko/math/algebraic_topology/homotopy
 - id: nullity
   en: nullity
   ko: 영공간의 차원
@@ -11259,10 +11280,10 @@ O:
   ko: 일점 옹골화
   primary: en
   defs:
-  - label: '[위상수학] §Compactness와 paracompactness'
-    url: /ko/math/topology/compactness
   - label: '[복소해석학] §복소수와 복소평면'
     url: /ko/math/complex_analysis/complex_numbers
+  - label: '[위상수학] §Compactness와 paracompactness'
+    url: /ko/math/topology/compactness
   see:
   - label: Alexandroff compactification
     id: alexandroff_compactification
@@ -14477,6 +14498,13 @@ S:
     url: /ko/math/commutative_algebra/Jordan-Holder_theorem
   - label: '[리 이론] §근계'
     url: /ko/math/lie_theory/root_systems
+- id: simple_group
+  en: simple group
+  ko: 단순군
+  primary: en
+  defs:
+  - label: '[군론] §실로우 정리'
+    url: /ko/math/group_theory/Sylow_theorems
 - id: simple_module
   en: simple module
   ko: 단순가군
@@ -16829,6 +16857,13 @@ V:
 - id: virtual_cycle
   en: virtual cycle
   ko: 가상류
+  primary: ko
+  defs:
+  - label: '[그로모프-위튼 이론] §Perfect obstruction theory와 virtual fundamental class'
+    url: /ko/math/gromov-witten_theory/perfect_obstruction_theory
+- id: virtual_dimension
+  en: virtual dimension
+  ko: 기대 차원
   primary: ko
   defs:
   - label: '[그로모프-위튼 이론] §Perfect obstruction theory와 virtual fundamental class'

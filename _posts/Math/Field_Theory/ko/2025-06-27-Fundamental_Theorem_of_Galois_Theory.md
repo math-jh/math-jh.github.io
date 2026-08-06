@@ -12,19 +12,20 @@ sidebar:
 date: 2025-06-27
 weight: 10
 published: false
+revising: true
 
 ---
 
 우리는 이제 드디어 Galois 이론의 기본정리를 증명할 수 있다. 
 
 ::: 정리 1
-Field $\mathbb{K}$의 Galois extension $\mathbb{L}/\mathbb{K}$와 그 Galois group $\Gamma=\Gal(\mathbb{L}/\mathbb{K})$을 생각하자. $\Sub(\mathbb{L}/\mathbb{K})$를 $\mathbb{L}$의 subextension들의 모임이라 하고, $\Sub^{\cl}(\Gamma)$를 $\Gamma$의 closed subgroup들의 모임이라 하면 $\Sub(\mathbb{L}/\mathbb{K})$와 $\Sub^{\cl}(\Gamma)$ 사이의 두 함수
+Field $\mathbb{K}$의 Galois extension $\mathbb{L}/\mathbb{K}$와 그 Galois group $\Gamma=\Gal(\mathbb{L}/\mathbb{K})$을 생각하자. $\Ext(\mathbb{L}/\mathbb{K})$를 $\mathbb{L}$의 subextension들의 모임이라 하고, $\SubGrp_{\cl}(\Gamma)$를 $\Gamma$의 closed subgroup들의 모임이라 하면 $\Ext(\mathbb{L}/\mathbb{K})$와 $\SubGrp_{\cl}(\Gamma)$ 사이의 두 함수
 
-$$k:\Sub^{\cl}(\Gamma)\rightarrow\Sub(\mathbb{L}/\mathbb{K});\qquad G\mapsto k(G)\text{ the field of invariants of $G$}$$
+$$k:\SubGrp_{\cl}(\Gamma)\rightarrow\Ext(\mathbb{L}/\mathbb{K});\qquad G\mapsto k(G)\text{ the field of invariants of $G$}$$
 
 그리고 
 
-$$g:\Sub(\mathbb{L}/\mathbb{K})\rightarrow\Sub^{\cl}(\Gamma);\qquad \mathbb{M}\mapsto g(\mathbb{M})\text{ the group of $\mathbb{M}$-automorphisms of $L$}$$
+$$g:\Ext(\mathbb{L}/\mathbb{K})\rightarrow\SubGrp_{\cl}(\Gamma);\qquad \mathbb{M}\mapsto g(\mathbb{M})\text{ the group of $\mathbb{M}$-automorphisms of $L$}$$
 
 을 생각하면 이들은 서로의 inverse이다. 
 :::
@@ -32,7 +33,7 @@ $$g:\Sub(\mathbb{L}/\mathbb{K})\rightarrow\Sub^{\cl}(\Gamma);\qquad \mathbb{M}\m
 이를 증명하기 위해 다음과 같이 두 단계로 나누어 증명한다. 
 
 ::: 보조정리 2
-임의의 subextension $\mathbb{M}\in \Sub(\mathbb{L}/\mathbb{K})$에 대하여, $\mathbb{L}/\mathbb{M}$ 또한 Galois extension이다. 이 때, $\mathbb{M}$-automorphism을 $\mathbb{K}$-automorphism으로 보아 Galois group $\Gal(\mathbb{L}/\mathbb{M})$을 $\Gal(\mathbb{L}/\mathbb{K})$의 subgroup으로 보면, 이는 $\Gal(\mathbb{L}/\mathbb{K})$의 *closed* subgroup이며 따라서 $g$가 잘 정의된다. 
+임의의 subextension $\mathbb{M}\in \Ext(\mathbb{L}/\mathbb{K})$에 대하여, $\mathbb{L}/\mathbb{M}$ 또한 Galois extension이다. 이 때, $\mathbb{M}$-automorphism을 $\mathbb{K}$-automorphism으로 보아 Galois group $\Gal(\mathbb{L}/\mathbb{M})$을 $\Gal(\mathbb{L}/\mathbb{K})$의 subgroup으로 보면, 이는 $\Gal(\mathbb{L}/\mathbb{K})$의 *closed* subgroup이며 따라서 $g$가 잘 정의된다. 
 :::
 ::: 증명
 우선 $\mathbb{L}/\mathbb{M}$이 Galois extension임을 보이자. $\mathbb{L}/\mathbb{K}$가 algebraic이므로 $\mathbb{L}/\mathbb{M}$도 algebraic이다. 임의의 $x\in \mathbb{L}$에 대하여, $x$의 $\mathbb{K}$에 대한 minimal polynomial을 $f$, $\mathbb{M}$에 대한 minimal polynomial을 $g$라 하자. $f$는 $\mathbb{M}[\x]$의 원소이기도 하고 $f(x)=0$이므로 $g$는 $f$를 나눈다. ([§대수적 확장, ⁋정리 15](/ko/math/field_theory/algebraic_extensions#thm15)) 그런데 $\mathbb{L}/\mathbb{K}$가 Galois이므로 [§갈루아 확장, ⁋정리 8](/ko/math/field_theory/galois_extension#thm8)의 셋째 조건에 의하여 $f$는 $\mathbb{L}[\x]$에서 서로 다른 일차식들의 곱으로 쪼개지고, 따라서 그 약수인 $g$ 또한 그러하다. 즉 $\mathbb{L}/\mathbb{M}$은 같은 정리의 셋째 조건을 만족하므로 Galois extension이다.
@@ -72,11 +73,11 @@ $$\sum_{j=1}^{m+1}(\tau\sigma_i)(x_j)\tau(c_j)=0,\qquad i=1,\ldots,m$$
 이제 [정리 1](#thm1)을 증명할 수 있다.
 
 ::: 증명 (정리 1)
-[보조정리 2](#lem2)에 의하여 $g$가 잘 정의되고, $k$의 경우 $G$의 원소들이 모두 $\mathbb{K}$를 고정하므로 invariant들의 field $k(G)$는 $\mathbb{K}$를 포함하는 $\mathbb{L}$의 subfield, 곧 $\Sub(\mathbb{L}/\mathbb{K})$의 원소이다.
+[보조정리 2](#lem2)에 의하여 $g$가 잘 정의되고, $k$의 경우 $G$의 원소들이 모두 $\mathbb{K}$를 고정하므로 invariant들의 field $k(G)$는 $\mathbb{K}$를 포함하는 $\mathbb{L}$의 subfield, 곧 $\Ext(\mathbb{L}/\mathbb{K})$의 원소이다.
 
-우선 $k\circ g=\id_{\Sub(\mathbb{L}/\mathbb{K})}$를 보이자. 임의의 $\mathbb{M}\in\Sub(\mathbb{L}/\mathbb{K})$에 대하여 [보조정리 2](#lem2)에 의해 $\mathbb{L}/\mathbb{M}$은 Galois extension이고, 따라서 [§갈루아 확장, ⁋정리 8](/ko/math/field_theory/galois_extension#thm8)의 첫째 조건에 의하여 $\Gal(\mathbb{L}/\mathbb{M})$-invariant element들은 모두 $\mathbb{M}$의 원소이다. 거꾸로 $\mathbb{M}$의 원소들이 $\Gal(\mathbb{L}/\mathbb{M})$에 의해 고정되는 것은 자명하므로 $k(g(\mathbb{M}))=\mathbb{M}$이다.
+우선 $k\circ g=\id_{\Ext(\mathbb{L}/\mathbb{K})}$를 보이자. 임의의 $\mathbb{M}\in\Ext(\mathbb{L}/\mathbb{K})$에 대하여 [보조정리 2](#lem2)에 의해 $\mathbb{L}/\mathbb{M}$은 Galois extension이고, 따라서 [§갈루아 확장, ⁋정리 8](/ko/math/field_theory/galois_extension#thm8)의 첫째 조건에 의하여 $\Gal(\mathbb{L}/\mathbb{M})$-invariant element들은 모두 $\mathbb{M}$의 원소이다. 거꾸로 $\mathbb{M}$의 원소들이 $\Gal(\mathbb{L}/\mathbb{M})$에 의해 고정되는 것은 자명하므로 $k(g(\mathbb{M}))=\mathbb{M}$이다.
 
-이제 $g\circ k=\id_{\Sub^{\cl}(\Gamma)}$를 보여야 한다. Closed subgroup $G\in\Sub^{\cl}(\Gamma)$에 대하여 $\mathbb{M}=k(G)$로 두고 $G'=g(\mathbb{M})=\Gal(\mathbb{L}/\mathbb{M})$이라 하자. $G$의 원소들은 정의에 의해 $\mathbb{M}$을 고정하므로 $G\subseteq G'$이다. 우리의 주장은 $G$가 $G'$에서 dense하다는 것이다.
+이제 $g\circ k=\id_{\SubGrp_{\cl}(\Gamma)}$를 보여야 한다. Closed subgroup $G\in\SubGrp_{\cl}(\Gamma)$에 대하여 $\mathbb{M}=k(G)$로 두고 $G'=g(\mathbb{M})=\Gal(\mathbb{L}/\mathbb{M})$이라 하자. $G$의 원소들은 정의에 의해 $\mathbb{M}$을 고정하므로 $G\subseteq G'$이다. 우리의 주장은 $G$가 $G'$에서 dense하다는 것이다.
 
 이를 위해 임의의 $\sigma\in G'$와, $\sigma$의 $\Gal(\mathbb{L}/\mathbb{K})$에서의 기본근방 $U_{\mathbb{M}_0}(\sigma)$가 주어졌다 하자. 여기서 $\mathbb{M}_0$는 $\mathbb{L}/\mathbb{K}$의 finite subextension이다. 그럼 $\mathbb{M}(\mathbb{M}_0)$는 $\mathbb{M}$의 finite degree extension이므로, [§갈루아 확장, ⁋명제 11](/ko/math/field_theory/galois_extension#prop11)을 Galois extension $\mathbb{L}/\mathbb{M}$에 적용하면 $\mathbb{M}(\mathbb{M}_0)$를 포함하는 finite degree Galois subextension $\mathbb{N}/\mathbb{M}$이 존재한다.
 
@@ -102,7 +103,7 @@ $$\card H\leq \card \Gal(\mathbb{N}/\mathbb{M})=[\mathbb{N}:\mathbb{M}]\leq \car
 기본정리의 두 번째 부분은 이 대응 하에서 normal subgroup이 무엇에 대응되는지를 알려준다.
 
 ::: 따름정리 4
-[정리 1](#thm1)의 상황에서, closed subgroup $H\in\Sub^{\cl}(\Gamma)$가 $\Gal(\mathbb{L}/\mathbb{K})$의 normal subgroup인 것과 $\mathbb{M}=k(H)$가 $\mathbb{K}$의 Galois extension인 것이 동치이다. 이 경우 restriction은 group isomorphism
+[정리 1](#thm1)의 상황에서, closed subgroup $H\in\SubGrp_{\cl}(\Gamma)$가 $\Gal(\mathbb{L}/\mathbb{K})$의 normal subgroup인 것과 $\mathbb{M}=k(H)$가 $\mathbb{K}$의 Galois extension인 것이 동치이다. 이 경우 restriction은 group isomorphism
 
 $$\Gal(\mathbb{L}/\mathbb{K})/H\cong \Gal(\mathbb{M}/\mathbb{K})$$
 

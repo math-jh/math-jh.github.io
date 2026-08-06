@@ -5227,3 +5227,7 @@ Decide whether each one is a definition and add it to `_data/terms.yml` (then ru
 ## term_extract_worker 2026-08-06 17:31
 
 - _posts/Math/Derived_Algebraic_Geometry/ko/2026-07-01-Animated_Rings.md: 주요 용어 'Tor' ko 미상 — 보류
+
+## term_extract_worker 2026-08-07 02:31
+
+- _posts/Math/Gromov_Witten_Theory/ko/2026-07-10-Log_Stable_Maps.md: 주요 용어 'expanded degeneration' ko 미상 — 보류

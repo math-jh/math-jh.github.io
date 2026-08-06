@@ -298,25 +298,15 @@ $$\frac{\x_l}{\x_i}=\frac{\x_l}{\x_k}\cdot\frac{\x_k}{\x_i},\qquad d\Bigl(\frac{
 
 $$0 \rightarrow \Omega_{\mathbb{P}^n_\mathbb{Z}/\mathbb{Z}} \rightarrow \mathcal{O}_{\mathbb{P}^n_\mathbb{Z}}(-1)^{\oplus(n+1)} \rightarrow \mathcal{O}_{\mathbb{P}^n_\mathbb{Z}} \rightarrow 0$$
 
-는 세 항이 모두 locally free이고 quotient가 $\mathcal{O}_{\mathbb{P}^n_\mathbb{Z}}$이므로 국소적으로 split하고, 국소적으로 split인 sequence의 pullback은 다시 split이어서 exactness가 보존된다. 여기에서 $\Omega_{\mathbb{P}^n_\mathbb{Z}/\mathbb{Z}}$가 각 $U_i$ 위에서 rank $n$의 free sheaf인 것과 $\mathcal{O}(-1)$이 invertible sheaf인 것은 [정리 10](#thm10)의 증명에서 확인한 것이고, splitting은 quotient의 generator $1$을 그 증명에서 계산한 $\x_i^{-1}e_i$로 들어올려 얻는다. 따라서 $\pi^\ast$를 취하면 임의의 scheme $S$에 대하여 Euler exact sequence
+를 생각하면, 우리는 이미 위의 증명에서 $\Omega_{\mathbb{P}^n_\mathbb{Z}/\mathbb{Z}}$가 각 $U_i$ 위에서 rank $n$ free sheaf인 것을 확인하였고, 나머지 두 개의 sheaf 또한 locally free한 것이 자명하며, 특히 마지막 $\mathcal{O}_{\mathbb{P}^n_\mathbb{Z}}$의 경우 free이므로 projective이며 ([\[다중선형대수학\] §사영가군, 단사가군, 평탄가군, ⁋명제 4](/ko/math/multilinear_algebra/various_modules#prop4)), 따라서 각 $U_i$ 위에서 이 sequence는 split한다. ([\[다중선형대수학\] §완전열, ⁋명제 10](/ko/math/multilinear_algebra/exact_sequences#prop10)) 그런데 split exact sequence는 additive functor가 보존하고 exactness는 local property이므로, $\pi^\ast$를 취하면 임의의 scheme $S$에 대하여 Euler exact sequence
 
 $$0 \rightarrow \Omega_{\mathbb{P}^n_S/S} \rightarrow \mathcal{O}_{\mathbb{P}^n_S}(-1)^{\oplus(n+1)} \rightarrow \mathcal{O}_{\mathbb{P}^n_S} \rightarrow 0$$
 
 을 얻는다.
 
-Euler exact sequence는 projective space 위의 미분기하를 떠받치는 가장 기본적인 관계이다. 가령 tangent sheaf $\mathcal{T}_{\mathbb{P}^n}$은 Euler exact sequence를 쌍대화한 $0 \rightarrow \mathcal{O} \rightarrow \mathcal{O}(1)^{\oplus(n+1)} \rightarrow \mathcal{T}_{\mathbb{P}^n} \rightarrow 0$로 주어진다.
-
 ## Canonical sheaf
 
-Cotangent sheaf가 locally free일 때, 그 top exterior power는 rank $1$의 sheaf, 곧 invertible sheaf가 된다. 이렇게 얻어지는 단 하나의 invertible sheaf가 $X$의 기하를 상당 부분 통제하며, variety의 세계에서 이는 cotangent bundle의 top exterior power로 정의한 canonical line bundle에 해당한다. ([\[대수다양체\] §표준선다발, ⁋정의 5](/ko/math/algebraic_varieties/canonical_bundle#def5)) Scheme 위에서도 같은 구성이 그대로 작동하므로, 먼저 sheaf의 exterior power를 정리해 둔다.
-
-$\mathcal{O}_X$-module $\mathcal{F}$와 정수 $r\geq 0$에 대하여, 각 열린집합 $U$에 $\mathcal{O}_X(U)$-module의 exterior power $\bigwedge^r_{\mathcal{O}_X(U)}\bigl(\mathcal{F}(U)\bigr)$를 대응시키는 presheaf의 sheafification을 $\bigwedge^r\mathcal{F}$로 적는다. ([\[다중선형대수학\] §텐서대수, ⁋정의 10](/ko/math/multilinear_algebra/tensor_algebras#def10)) Exterior power는 base change와 commute하므로 ([\[다중선형대수학\] §텐서대수, ⁋명제 14](/ko/math/multilinear_algebra/tensor_algebras#prop14)), 특히 $A$-module $M$과 $g\in A$에 대하여 $\bigl(\bigwedge^rM\bigr)_g\cong \bigwedge^r(M_g)$이다. 여기에서와 아래에서 인용하는 exterior algebra의 성질들은 $\bigwedge$가 ideal $\langle x\otimes x\rangle$에 의한 quotient로 정의된 덕에 characteristic과 무관하게 성립하므로, 임의의 $\mathcal{O}_X(U)$에 그대로 적용된다. 따라서 $U=\Spec A$ 위에서 $\mathcal{F}\vert_U\cong\widetilde M$이면 국소 모형들이 restriction과 호환되어
-
-$$\bigl(\bigwedge\nolimits^r\mathcal{F}\bigr)\big\vert_U\cong \widetilde{\bigwedge\nolimits^rM}$$
-
-이 성립하고 ([§준연접층, ⁋명제 5](/ko/math/scheme_theory/quasicoherent_sheaves#prop5)), 그러므로 quasi-coherent sheaf의 exterior power는 다시 quasi-coherent sheaf이다.
-
-특히 $\mathcal{E}$가 rank $n$의 locally free sheaf이면 ([§준연접층, ⁋정의 12](/ko/math/scheme_theory/quasicoherent_sheaves#def12)), $\mathcal{E}\vert_U\cong\mathcal{O}_U^{\oplus n}$인 열린집합 $U$ 위에서 $\bigwedge^r\mathcal{E}\vert_U$는 기저 $e_1,\ldots, e_n$으로부터 만들어지는 $e_J$ ($\lvert J\rvert=r$)들을 기저로 가지므로 ([\[다중선형대수학\] §텐서대수, ⁋명제 13](/ko/math/multilinear_algebra/tensor_algebras#prop13)) rank $\binom{n}{r}$의 자유 sheaf이다. 즉 $\bigwedge^r\mathcal{E}$는 다시 locally free sheaf이며, $r=n$인 경우에는 rank $1$, 곧 invertible sheaf가 된다. 이 마지막 경우를 $\mathcal{E}$의 *determinant*라 부르고 $\det\mathcal{E}=\bigwedge^n\mathcal{E}$로 적는다.
+Cotangent sheaf가 locally free일 때, 그 top exterior power는 rank $1$의 sheaf, 곧 invertible sheaf가 된다. 이렇게 얻어지는 단 하나의 invertible sheaf가 $X$의 기하를 상당 부분 통제하며, variety의 세계에서 이는 cotangent bundle의 top exterior power로 정의한 canonical line bundle에 해당한다. ([\[대수다양체\] §표준선다발, ⁋정의 5](/ko/math/algebraic_varieties/canonical_bundle#def5)) 우리는 scheme의 경우에도 이미 $\mathcal{O}_X$-module의 exterior power $\bigwedge^r\mathcal{F}$를 열린집합마다의 exterior power를 sheafification하여 정의하였고 ([§준연접층, ⁋정의 2](/ko/math/scheme_theory/quasicoherent_sheaves#def2)), 이것이 quasi-coherence를 보존하며 rank $n$의 locally free sheaf $\mathcal{E}$에 대하여 $\bigwedge^r\mathcal{E}$가 rank $\binom{n}{r}$의 locally free sheaf임을 보았다. 특히 $r=n$인 경우의 determinant $\det\mathcal{E}=\bigwedge^n\mathcal{E}$는 invertible sheaf이다. ([§준연접층, §§Locally free sheaf와 invertible sheaf](/ko/math/scheme_theory/quasicoherent_sheaves#locally-free-sheaf와-invertible-sheaf))
 
 ::: 정의 11
 Field $\mathbb{K}$ 위의 scheme $X$에 대하여 cotangent sheaf $\Omega_{X/\mathbb{K}}$가 rank $n$의 locally free sheaf라 하자. 그럼 $X$의 *canonical sheaf* $\omega_X$를 top exterior power
@@ -326,11 +316,7 @@ $$\omega_X=\bigwedge\nolimits^n\Omega_{X/\mathbb{K}}=\det\Omega_{X/\mathbb{K}}$$
 로 정의한다.
 :::
 
-앞의 관찰에 의하여 $\omega_X$는 invertible sheaf이다. 더 일반적으로 scheme morphism $\varphi:X \rightarrow S$에 대하여 $\Omega_{X/S}$가 rank $n$의 locally free sheaf일 때 *relative canonical sheaf* $\omega_{X/S}=\det\Omega_{X/S}$를 같은 식으로 정의하며, $S=\Spec \mathbb{K}$인 경우가 위의 정의이다.
-
-$\Omega_{X/\mathbb{K}}$의 국소자유성이라는 가정은 [정의 8](#def8) 뒤에서 언급한 nonsingularity와의 관계가 작동하는 지점이다. $\mathbb{K}$가 algebraically closed이고 $X$가 $\mathbb{K}$ 위의 irreducible한 separated finite type scheme이면, $\Omega_{X/\mathbb{K}}$가 rank $n=\dim X$의 locally free sheaf인 것은 $X$의 모든 closed point $x$에서 $\dim_{\kappa(x)}T_xX=\dim\mathcal{O}_{X,x}$가 성립하는 것과 동치이다. ([§차원, ⁋정의 1](/ko/math/scheme_theory/dimension#def1)) 여기에서 rank를 차원으로 못박는 것과 점을 closed point로 제한하는 것은 모두 필수적이다. 앞의 것을 빼면 characteristic $p>0$에서 $X=\Spec \mathbb{K}[\x]/(\x^p)$가 반례가 되는데, 이는 irreducible한 separated finite type scheme이고 $d(\x^p)=p\x^{p-1}d\x=0$이라 $\Omega_{X/\mathbb{K}}$가 $d\x$를 기저로 하는 rank $1$의 자유 sheaf이지만, $X$의 유일한 점 $x$에서 $\dim\mathcal{O}_{X,x}=0$이고 $\dim_\mathbb{K}T_xX=1$이다. 뒤의 것을 빼면 $X=\mathbb{A}^1_\mathbb{K}$의 generic point $\eta$가 반례가 되며, 여기에서는 $\Omega_{X/\mathbb{K}}$가 자유임에도 $\Omega_{X/\mathbb{K}}\otimes\kappa(\eta)\cong\Omega_{\mathbb{K}(\x)/\mathbb{K}}$는 $1$차원이고 $\dim\mathcal{O}_{X,\eta}=0$이다.
-
-$\mathbb{K}$에 대한 가정도 덜어낼 수 없다. $\mathbb{K}$가 perfect가 아니면 rank와 차원의 일치부터 깨지는데, 가령 $\mathbb{K}=\mathbb{F}_p(\x)$ 위의 $X=\Spec \mathbb{K}(\x^{1/p})$는 차원이 $0$인 regular scheme이지만 $\Omega_{X/\mathbb{K}}$는 rank $1$의 자유 sheaf이다. 반대로 $\Omega_{X/\mathbb{K}}$가 locally free가 아니면 rank가 일정하지 않아 top exterior power를 고를 근거부터 없으므로 [정의 11](#def11)은 그대로 쓰이지 않으며, 그러한 scheme까지 포괄하려면 *dualizing sheaf*를 따로 도입해야 한다.
+앞의 관찰에 의하여 $\omega_X$는 invertible sheaf이다. 더 일반적으로 scheme morphism $\varphi:X \rightarrow S$에 대하여 $\Omega_{X/S}$가 rank $n$의 locally free sheaf일 때 *relative canonical sheaf* $\omega_{X/S}=\det\Omega_{X/S}$를 같은 식으로 정의하며, $S=\Spec \mathbb{K}$인 경우가 위와 같이 absolute case이다. 
 
 Canonical sheaf를 실제로 계산할 때 쓰는 도구는 determinant가 short exact sequence를 따라 tensor product로 분해된다는 사실이다.
 
@@ -368,15 +354,7 @@ Field $\mathbb{K}$ 위의 projective space $\mathbb{P}^n$을 생각하자. [정�
 
 $$\det\bigl(\mathcal{O}(-1)^{\oplus(n+1)}\bigr)\cong \omega_{\mathbb{P}^n}\otimes_{\mathcal{O}_{\mathbb{P}^n}}\det\mathcal{O}_{\mathbb{P}^n}\cong\omega_{\mathbb{P}^n}$$
 
-이 성립한다. 좌변을 계산하기 위해 $\mathcal{O}(-1)\vert_{U_i}$의 generator $\x_i^{-1}$을 택하고 ([§스킴의 층 코호몰로지, ⁋정의 5](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#def5)) $\mathcal{O}(-1)^{\oplus(n+1)}$의 standard basis를 $e_0,\ldots, e_n$이라 하면, $\det(\mathcal{O}(-1)^{\oplus(n+1)})\vert_{U_i}$는
-
-$$(\x_i^{-1}e_0)\wedge\cdots\wedge(\x_i^{-1}e_n)=\x_i^{-n-1}(e_0\wedge\cdots\wedge e_n)$$
-
-을 generator로 가진다. $U_i\cap U_j$ 위에서 $U_i$ 쪽 generator는 $U_j$ 쪽 generator의 $(\x_j/\x_i)^{n+1}$배이고, $\mathcal{O}(-n-1)$의 국소 generator $\x_i^{-n-1}$과 $\x_j^{-n-1}$ 사이에도 같은 관계가 성립한다. 즉 두 invertible sheaf는 같은 gluing 자료로 주어지므로
-
-$$\det\bigl(\mathcal{O}(-1)^{\oplus(n+1)}\bigr)\cong\mathcal{O}(-1)^{\otimes(n+1)}\cong\mathcal{O}_{\mathbb{P}^n}(-n-1)$$
-
-이고, 결국
+이 성립한다. 같은 명제를 direct sum에 반복 적용하면 좌변은 $\mathcal{O}(-1)^{\otimes(n+1)}$이고, $\mathcal{O}(d)$의 transition function이 $(\x_i/\x_j)^d$이므로 ([§스킴의 층 코호몰로지, ⁋정의 5](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#def5) 뒤의 기술) 이는 $\mathcal{O}_{\mathbb{P}^n}(-n-1)$이다. 그러므로
 
 $$\omega_{\mathbb{P}^n}\cong\mathcal{O}_{\mathbb{P}^n}(-n-1)$$
 
@@ -393,9 +371,13 @@ $$H^i(X, \mathcal{E})\cong H^{n-i}\bigl(X, \omega_X\otimes_{\mathcal{O}_X}\mathc
 이 존재한다. 여기에서 $\mathcal{E}^\vee=\sHom_{\mathcal{O}_X}(\mathcal{E}, \mathcal{O}_X)$이고, $(-)^\ast$는 유한차원 $\mathbb{K}$-벡터공간의 쌍대이다. ([§스킴의 층 코호몰로지, ⁋정리 8](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#thm8))
 :::
 
-이 정리의 증명은 trace map의 구성과 그 normalization, 그리고 finite morphism을 따라 duality를 옮기는 논증을 요구하여 이 글의 범위를 넘어서므로, [\[대수다양체\] §세르 쌍대성](/ko/math/algebraic_varieties/serre_duality)에 위임한다. 그곳에서는 먼저 $\mathbb{P}^n$ 위에서 isomorphism $H^n(\mathbb{P}^n, \omega_{\mathbb{P}^n})\cong \mathbb{K}$이 정하는 trace map과 cup product로 pairing을 만들어 그것이 perfect pairing임을 보이고 ([\[대수다양체\] §세르 쌍대성, ⁋명제 2](/ko/math/algebraic_varieties/serre_duality#prop2)), 이어서 finite surjective morphism $X \rightarrow \mathbb{P}^n$을 따라 이를 일반의 $X$로 옮긴다. 이 morphism은 일반적 위치의 linear projection, 곧 projective Noether normalization에서 온다 (affine 판인 [§차원, ⁋정리 9](/ko/math/scheme_theory/dimension#thm9)와는 별개의 진술이다). 우리가 여기에서 가져다 쓰는 것은 그 결과인 duality isomorphism 자체이다.
+이 정리의 증명은 $\mathbb{P}^n$ 위에서 trace map과 cup product로 만든 pairing이 perfect pairing임을 보인 뒤 이를 finite surjective morphism을 따라 일반의 $X$로 옮기는 논증을 요구하여 이 글의 범위를 넘어서므로 [\[대수다양체\] §세르 쌍대성, ⁋명제 2](/ko/math/algebraic_varieties/serre_duality#prop2)에 위임하기로 한다. 
 
-$X=\mathbb{P}^n$과 $\mathcal{E}=\mathcal{O}(d)$인 경우에 [정리 14](#thm14)가 주장하는 바는 [예시 13](#ex13)에 의하여 isomorphism $H^i(\mathbb{P}^n, \mathcal{O}(d))\cong H^{n-i}(\mathbb{P}^n, \mathcal{O}(-d-n-1))^\ast$이며, 이는 이미 계산된 cohomology와 일치한다. 실제로 $i=0$이고 $d\geq 0$이면 좌변은 degree $d$의 homogeneous polynomial들이 이루는 $\binom{n+d}{n}$차원 공간이고, 우변의 $H^n(\mathbb{P}^n, \mathcal{O}(-d-n-1))$은 지수가 모두 음인 monomial 가운데 degree가 $-d-n-1$인 것들이 이루는 공간, 곧 $(\x_0\cdots\x_n)^{-1}$에 $\x_0^{-1},\ldots, \x_n^{-1}$들의 degree $d$ monomial을 곱한 것들이 이루는 공간이므로 역시 $\binom{n+d}{n}$차원이다. ([§스킴의 층 코호몰로지, ⁋정리 6](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#thm6))
+위의 논의에서 우리는 $\Omega_{X/\mathbb{K}}$가 locally free이기를 요구하였는데, 만일 이것이 성립하지 않는다면 rank가 일정하지 않아 top exterior power를 고를 근거부터가 없어지게 된다. 우리는 보편적으로 $\mathbb{K}=\mathbb{C}$인 경우를 다루므로 크게 상관은 없지만, $\mathbb{K}$가 perfect field가 아니라면 이 또한 정의를 흔들게 된다. 이와 같은 종류의 일반화 또한 [\[대수다양체\] §세르 쌍대성, §§세르 쌍대성의 일반화](/ko/math/algebraic_varieties/serre_duality#세르-쌍대성의-일반화)에서 이미 다룬 것으로, 이 경우 정리의 isomorphism을 $\Ext$로 끌어올리고 별도의 dualizing sheaf를 도입했어야 했다. 
+
+[정리 14](#thm14)와 [정의 11](#def11)이 함께 요구하는 $\Omega_{X/\mathbb{K}}$의 국소자유성은 nonsingularity를 달리 적은 것이다. $\mathbb{K}$가 algebraically closed이고 $X$가 $\mathbb{K}$ 위의 irreducible한 separated finite type scheme이면, $\Omega_{X/\mathbb{K}}$가 rank $n=\dim X$의 locally free sheaf인 것은 $X$의 모든 closed point $x$에서 $\dim_{\kappa(x)}T_xX=\dim\mathcal{O}_{X,x}$가 성립하는 것과 동치이다. ([§차원, ⁋정의 1](/ko/math/scheme_theory/dimension#def1)) 이 동치는 [§매끄러운 사상과 étale 사상, ⁋정리 4](/ko/math/scheme_theory/smooth_and_etale_morphisms#thm4)에서 상대적인 형태로 증명할 것이므로, 여기에서는 결과만을 가져다 쓴다. 그 진술에서 rank를 차원으로 못박는 것과 점을 closed point로 제한하는 것은 모두 필수적이다. 앞의 것을 빼면 characteristic $p>0$에서 $X=\Spec \mathbb{K}[\x]/(\x^p)$가 반례가 되는데, 이는 irreducible한 separated finite type scheme이고 $d(\x^p)=p\x^{p-1}d\x=0$이라 $\Omega_{X/\mathbb{K}}$가 $d\x$를 기저로 하는 rank $1$의 자유 sheaf이지만, $X$의 유일한 점 $x$에서 $\dim\mathcal{O}_{X,x}=0$이고 $\dim_\mathbb{K}T_xX=1$이다. 뒤의 것을 빼면 $X=\mathbb{A}^1_\mathbb{K}$의 generic point $\eta$가 반례가 되며, 여기에서는 $\Omega_{X/\mathbb{K}}$가 자유임에도 $\Omega_{X/\mathbb{K}}\otimes\kappa(\eta)\cong\Omega_{\mathbb{K}(\x)/\mathbb{K}}$는 $1$차원이고 $\dim\mathcal{O}_{X,\eta}=0$이다.
+
+$\mathbb{K}$에 대한 가정도 덜어낼 수 없다. $\mathbb{K}$가 perfect가 아니면 rank와 차원의 일치부터 깨지는데, 가령 $\mathbb{K}=\mathbb{F}_p(\x)$ 위의 $X=\Spec \mathbb{K}(\x^{1/p})$는 차원이 $0$인 regular scheme이지만 $\Omega_{X/\mathbb{K}}$는 rank $1$의 자유 sheaf이다. 반대로 $\Omega_{X/\mathbb{K}}$가 locally free가 아니면 rank가 일정하지 않아 top exterior power를 고를 근거부터 없으므로 [정의 11](#def11)이 그대로 쓰이지 않으며, [정리 14](#thm14) 또한 $\omega_X$를 $\Ext$가 정하는 dualizing sheaf로 바꾸어야 살아남는다. $\mathcal{E}$를 임의의 coherent sheaf로 넓히는 것까지 포함한 이 방향의 일반화는  다루었다.
 
 ---
 
