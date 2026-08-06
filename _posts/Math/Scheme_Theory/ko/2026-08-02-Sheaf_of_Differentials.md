@@ -45,7 +45,7 @@ $$\Omega_{B/A}\otimes_BC \rightarrow \Omega_{C/A} \rightarrow \Omega_{C/B} \righ
 ::: 명제 2 (Conormal exact sequence)
 $A$-algebra $B$의 ideal $\mathfrak{a}$에 대하여 $C=B/\mathfrak{a}$라 하자. 그럼 $C$-module들의 sequence
 
-$$\mathfrak{a}/\mathfrak{a}^2 \overset{\bar{d}}{\longrightarrow} \Omega_{B/A}\otimes_BC \longrightarrow \Omega_{C/A} \longrightarrow 0$$
+$$\mathfrak{a}/\mathfrak{a}^2 \overset{\bar{d}}{\rightarrow} \Omega_{B/A}\otimes_BC \rightarrow \Omega_{C/A} \rightarrow 0$$
 
 은 exact이며, 첫째 morphism $\bar{d}$는 $f+\mathfrak{a}^2\mapsto df\otimes 1$로 주어진다.
 :::
@@ -68,7 +68,7 @@ $A$-algebra $B$에 대하여 다음이 성립한다.
 
 둘째 주장을 위해 [명제 1](#prop1)을 $A$-algebra $A_h$와 $A_h$-algebra $B$에 적용하면 $B$-module들의 exact sequence
 
-$$\Omega_{A_h/A}\otimes_{A_h}B \longrightarrow \Omega_{B/A} \longrightarrow \Omega_{B/A_h} \longrightarrow 0$$
+$$\Omega_{A_h/A}\otimes_{A_h}B \rightarrow \Omega_{B/A} \rightarrow \Omega_{B/A_h} \rightarrow 0$$
 
 을 얻는다. 그런데 universal derivation $d:A \rightarrow \Omega_{A/A}$는 Leibniz 법칙으로부터 
 
@@ -120,7 +120,7 @@ Family가 자명하지 않을 때에는 $\Omega_{X/S}$가 fiber의 기하까지 
 
 이제 이들이 $\Omega_{X/S}$에 어떻게 나타나는지 보자. $B$는 $A[\x, \y]$를 ideal $\mathfrak{a}=(\x\y-t)$로 나눈 것이므로, [명제 2](#prop2)를 $A$-algebra $A[\x, \y]$와 그 ideal $\mathfrak{a}$에 적용하면 $B$-module들의 exact sequence
 
-$$\mathfrak{a}/\mathfrak{a}^2 \overset{\bar{d}}{\longrightarrow} \Omega_{A[\x, \y]/A}\otimes_{A[\x, \y]}B \longrightarrow \Omega_{B/A} \longrightarrow 0$$
+$$\mathfrak{a}/\mathfrak{a}^2 \overset{\bar{d}}{\rightarrow} \Omega_{A[\x, \y]/A}\otimes_{A[\x, \y]}B \rightarrow \Omega_{B/A} \rightarrow 0$$
 
 을 얻는다. 가운데 항의 $\Omega_{A[\x, \y]/A}$는 $d\x$와 $d\y$를 기저로 하는 free module이므로 ([\[가환대수학\] §미분, ⁋명제 5](/ko/math/commutative_algebra/differentials#prop5)) 이 항은 $Bd\x\oplus Bd\y$이고, $\mathfrak{a}$가 $\x\y-t$ 하나로 생성되므로 그 quotient $\mathfrak{a}/\mathfrak{a}^2$ 역시 마찬가지이다. 이제 $t\in A$에서 $dt=0$임을 쓰면 $\bar{d}(\x\y-t)=\x d\y+\y d\x$이므로, 관계식은 이것 하나뿐이며
 
@@ -260,7 +260,7 @@ $$\mathbb{A}^n_S=\Spec \mathbb{Z}[\x_1,\ldots, \x_n]\times_{\Spec \mathbb{Z}}S$$
 ::: 정리 10 (Euler exact sequence)
 Ring $A$ 위의 projective space $\mathbb{P}^n_A=\Proj A[\x_0,\ldots, \x_n]$에 대하여 ([§사영공간과 Proj 구성, ⁋정의 1](/ko/math/scheme_theory/projective_schemes#def1)), $\mathcal{O}_{\mathbb{P}^n_A}$-module들의 short exact sequence
 
-$$0 \longrightarrow \Omega_{\mathbb{P}^n_A/A} \longrightarrow \mathcal{O}_{\mathbb{P}^n_A}(-1)^{\oplus(n+1)} \longrightarrow \mathcal{O}_{\mathbb{P}^n_A} \longrightarrow 0$$
+$$0 \rightarrow \Omega_{\mathbb{P}^n_A/A} \rightarrow \mathcal{O}_{\mathbb{P}^n_A}(-1)^{\oplus(n+1)} \rightarrow \mathcal{O}_{\mathbb{P}^n_A} \rightarrow 0$$
 
 이 존재한다.
 :::
@@ -287,12 +287,20 @@ $$d\Bigl(\frac{\x_j}{\x_i}\Bigr)\longmapsto \frac{1}{\x_i}\Bigl(e_j-\frac{\x_j}{
 
 $$\frac{1}{\x_i}\left(\x_j-\frac{\x_j}{\x_i}\x_i\right)=0$$
 
-이므로 그 image는 방금 계산한 kernel 안에 있다. 또 양쪽 모두 $j\neq i$로 첨자가 매겨진 rank $n$ free module이고 basis가 basis로 옮겨지므로, 위 morphism의 image가 정확히 ($\ast$)의 kernel과 일치한다. 이렇게 국소적으로 정의한 morphism들은 $U_i\cap U_k$ 위에서 서로 일치하는데, 실제로 두 식 $\x_l/\x_i=(\x_l/\x_k)(\x_k/\x_i)$와 $d(\x_k/\x_i)=-(\x_k/\x_i)^2d(\x_i/\x_k)$를 써서 $d(\x_l/\x_i)$를 $U_k$ 쪽 기저로 전개한 뒤 위의 대응을 적용하면 $e_k$ 항이 상쇄되어 $\x_i^{-2}(\x_ie_l-\x_le_i)$를 얻으므로, $U_i$ 쪽 값과 같다. 그러므로 이들은 전역적인 morphism $\Omega_{\mathbb{P}^n/A} \rightarrow \mathcal{O}(-1)^{\oplus(n+1)}$로 붙는다. 따라서 주어진 sequence는 각 $U_i$ 위에서 exact이고, exactness는 local property이므로 전역적으로 short exact sequence를 이룬다.
+이므로 그 image는 방금 계산한 kernel 안에 있다. 또 양쪽 모두 $j\neq i$로 첨자가 매겨진 rank $n$ free module이고 basis가 basis로 옮겨지므로, 위 morphism의 image가 정확히 ($\ast$)의 kernel과 일치한다. 이렇게 국소적으로 정의한 morphism들은 $U_i\cap U_k$ 위에서 서로 일치하는데, 실제로 두 식 
+
+$$\frac{\x_l}{\x_i}=\frac{\x_l}{\x_k}\cdot\frac{\x_k}{\x_i},\qquad d\Bigl(\frac{\x_k}{\x_i}\Bigr)=-\Bigl(\frac{\x_k}{\x_i}\Bigr)^2d\Bigl(\frac{\x_i}{\x_k}\Bigr)$$
+
+를 써서 $d(\x_l/\x_i)$를 $U_k$ 쪽 기저로 전개한 뒤 위의 대응을 적용하면 $e_k$ 항이 상쇄되어 $\x_i^{-2}(\x_ie_l-\x_le_i)$를 얻으므로, $U_i$ 쪽 값과 같다. 그러므로 이들은 global한 morphism $\Omega_{\mathbb{P}^n/A} \rightarrow \mathcal{O}(-1)^{\oplus(n+1)}$로 붙어서 exact sequence를 만들고, exactness는 local property이므로 이들이 sheaf의 short exact sequence를 이룬다.
 :::
 
-[명제 9](#prop9)에서와 같이 base를 임의의 scheme으로 올릴 수도 있다. $\mathbb{P}^n_S=\mathbb{P}^n_\mathbb{Z}\times_{\Spec \mathbb{Z}}S$와 그 projection $\pi:\mathbb{P}^n_S \rightarrow \mathbb{P}^n_\mathbb{Z}$에 대하여 $\mathcal{O}_{\mathbb{P}^n_S}(d)=\pi^\ast\mathcal{O}_{\mathbb{P}^n_\mathbb{Z}}(d)$로 정의하면, 각 chart 위의 generator $\x_i^d$와 transition function $(\x_i/\x_j)^d$가 그대로 옮겨간다. 특히 이는 base가 affine일 때에는 [§스킴의 층 코호몰로지, ⁋정의 5](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#def5)의 twisting sheaf와 일치하며, 또 [명제 5](#prop5)에 의하여 $\Omega_{\mathbb{P}^n_S/S}\cong\pi^\ast\Omega_{\mathbb{P}^n_\mathbb{Z}/\mathbb{Z}}$이다. 한편 [정리 10](#thm10)을 $A=\mathbb{Z}$에 적용하여 얻는 sequence는 세 항이 모두 locally free이고 quotient가 $\mathcal{O}_{\mathbb{P}^n_\mathbb{Z}}$이므로 국소적으로 split하고, 국소적으로 split인 sequence의 pullback은 다시 split이어서 exactness가 보존된다. 따라서 $\pi^\ast$를 취하면 임의의 scheme $S$에 대하여 Euler exact sequence
+[명제 9](#prop9)에서와 같이 base를 임의의 scheme으로 올릴 수도 있다. $\mathbb{P}^n_S=\mathbb{P}^n_\mathbb{Z}\times_{\Spec \mathbb{Z}}S$와 그 projection $\pi:\mathbb{P}^n_S \rightarrow \mathbb{P}^n_\mathbb{Z}$에 대하여 $\mathcal{O}_{\mathbb{P}^n_S}(d)=\pi^\ast\mathcal{O}_{\mathbb{P}^n_\mathbb{Z}}(d)$로 정의하면, 각 chart 위의 generator $\x_i^d$와 transition function $(\x_i/\x_j)^d$가 그대로 옮겨간다. 특히 이는 base가 affine일 때에는 [§스킴의 층 코호몰로지, ⁋정의 5](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#def5)의 twisting sheaf와 일치하며, 또 [명제 5](#prop5)에 의하여 $\Omega_{\mathbb{P}^n_S/S}\cong\pi^\ast\Omega_{\mathbb{P}^n_\mathbb{Z}/\mathbb{Z}}$이다. 한편 [정리 10](#thm10)을 $A=\mathbb{Z}$에 적용하여 얻는 sequence
 
-$$0 \longrightarrow \Omega_{\mathbb{P}^n_S/S} \longrightarrow \mathcal{O}_{\mathbb{P}^n_S}(-1)^{\oplus(n+1)} \longrightarrow \mathcal{O}_{\mathbb{P}^n_S} \longrightarrow 0$$
+$$0 \rightarrow \Omega_{\mathbb{P}^n_\mathbb{Z}/\mathbb{Z}} \rightarrow \mathcal{O}_{\mathbb{P}^n_\mathbb{Z}}(-1)^{\oplus(n+1)} \rightarrow \mathcal{O}_{\mathbb{P}^n_\mathbb{Z}} \rightarrow 0$$
+
+는 세 항이 모두 locally free이고 quotient가 $\mathcal{O}_{\mathbb{P}^n_\mathbb{Z}}$이므로 국소적으로 split하고, 국소적으로 split인 sequence의 pullback은 다시 split이어서 exactness가 보존된다. 여기에서 $\Omega_{\mathbb{P}^n_\mathbb{Z}/\mathbb{Z}}$가 각 $U_i$ 위에서 rank $n$의 free sheaf인 것과 $\mathcal{O}(-1)$이 invertible sheaf인 것은 [정리 10](#thm10)의 증명에서 확인한 것이고, splitting은 quotient의 generator $1$을 그 증명에서 계산한 $\x_i^{-1}e_i$로 들어올려 얻는다. 따라서 $\pi^\ast$를 취하면 임의의 scheme $S$에 대하여 Euler exact sequence
+
+$$0 \rightarrow \Omega_{\mathbb{P}^n_S/S} \rightarrow \mathcal{O}_{\mathbb{P}^n_S}(-1)^{\oplus(n+1)} \rightarrow \mathcal{O}_{\mathbb{P}^n_S} \rightarrow 0$$
 
 을 얻는다.
 
@@ -329,7 +337,7 @@ Canonical sheaf를 실제로 계산할 때 쓰는 도구는 determinant가 short
 ::: 명제 12
 Scheme $X$ 위의 locally free sheaf들의 short exact sequence
 
-$$0 \longrightarrow \mathcal{E}' \longrightarrow \mathcal{E} \longrightarrow \mathcal{E}'' \longrightarrow 0$$
+$$0 \rightarrow \mathcal{E}' \rightarrow \mathcal{E} \rightarrow \mathcal{E}'' \rightarrow 0$$
 
 이 주어지고 $\mathcal{E}'$과 $\mathcal{E}''$의 rank가 각각 $r$과 $s$라 하자. 그럼 $\mathcal{E}$는 rank $r+s$의 locally free sheaf이며, isomorphism
 
@@ -342,7 +350,7 @@ $$\det\mathcal{E}\cong \det\mathcal{E}'\otimes_{\mathcal{O}_X}\det\mathcal{E}''$
 
 이제 morphism
 
-$$\varphi:\det\mathcal{E}'\otimes_{\mathcal{O}_X}\det\mathcal{E}'' \longrightarrow \det\mathcal{E}$$
+$$\varphi:\det\mathcal{E}'\otimes_{\mathcal{O}_X}\det\mathcal{E}'' \rightarrow \det\mathcal{E}$$
 
 를 구성한다. 열린집합 $V$ 위의 section $\alpha\in(\det\mathcal{E}')(V)$과 $\bar t_1\wedge\cdots\wedge\bar t_s\in(\det\mathcal{E}'')(V)$이 주어졌을 때, $V$를 충분히 줄여 각 $\bar t_i$를 $t_i\in\mathcal{E}(V)$로 들어올린 뒤
 
