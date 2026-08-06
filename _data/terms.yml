@@ -1605,6 +1605,13 @@ C:
   see:
   - label: $C^k$-differentiable manifold
     id: c_k_-differentiable_manifold
+- id: calabi-yau
+  en: Calabi-Yau
+  ko: 카라비-야우
+  primary: en
+  defs:
+  - label: '[거울대칭] §거울대칭 개요'
+    url: /ko/math/mirror_symmetry/overview
 - id: calabi-yau_variety
   en: Calabi-yau variety
   ko: 칼라비-야우 다양체
@@ -2226,6 +2233,13 @@ C:
   defs:
   - label: '[스킴] §닫힌 부분스킴'
     url: /ko/math/scheme_theory/closed_subschemes
+- id: closed_form
+  en: closed form
+  ko: 닫힌 형식
+  primary: en
+  defs:
+  - label: '[사교기하학] §사교다양체'
+    url: /ko/math/symplectic_geometry/symplectic_manifold
 - id: closed_interval
   en: closed interval
   ko: 닫힌구간
@@ -5802,6 +5816,13 @@ F:
   see:
   - label: Projective module
     id: projective_module
+- id: flatness
+  en: flatness
+  ko: 평탄성
+  primary: en
+  defs:
+  - label: '[가환대수학] §평탄성'
+    url: /ko/math/commutative_algebra/flatness
 - id: flux
   en: flux
   ko: 선속
@@ -6203,6 +6224,13 @@ G:
     id: Galois_correspondence
   - label: Algebraic extension
     id: algebraic_extension
+- id: galois_theory
+  en: Galois theory
+  ko: 갈루아 이론
+  primary: en
+  defs:
+  - label: '[체론] §갈루아 이론의 기본정리'
+    url: /ko/math/field_theory/fundamental_theorem_of_galois_theory
 - id: gamma_function
   en: gamma function
   ko: 감마함수
@@ -9939,6 +9967,13 @@ M:
     id: chain_map
   - label: Homology
     id: homology
+- id: mapping_stack
+  en: mapping stack
+  ko: 매핑 스택
+  primary: en
+  defs:
+  - label: '[유도대수기하학] §Shifted symplectic 구조'
+    url: /ko/math/derived_algebraic_geometry/shifted_symplectic_structures
 - id: matching_family
   en: matching family
   ko: 정합족
@@ -15305,6 +15340,13 @@ S:
   defs:
   - label: '[다중선형대수학] §대칭텐서'
     url: /ko/math/multilinear_algebra/symmetric_tensors
+- id: symplectic
+  en: symplectic
+  ko: 싱플렉틱
+  primary: en
+  defs:
+  - label: '[사교기하학] §고전역학'
+    url: /ko/math/symplectic_geometry/classical_mechanics
 - id: symplectic_complement
   en: symplectic complement
   ko: 사교 여공간
@@ -16567,6 +16609,13 @@ V:
   defs:
   - label: '[복소기하학] §Kodaira 매장정리'
     url: /ko/math/complex_geometry/kodaira_embedding_theorem
+- id: virtual_class
+  en: virtual class
+  ko: 가상 클래스
+  primary: en
+  defs:
+  - label: '[그로모프-위튼 이론] §안정사상 moduli의 대수적 구성'
+    url: /ko/math/gromov-witten_theory/moduli_of_stable_maps
 - id: virtual_relative_dimension
   en: virtual relative dimension
   ko: virtual 상대차원
