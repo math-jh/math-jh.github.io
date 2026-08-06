@@ -4236,6 +4236,13 @@ D:
   defs:
   - label: '[집합론] §함수'
     url: /ko/math/set_theory/functions
+- id: diagram_chasing
+  en: diagram chasing
+  ko: 다이어그램 추적
+  primary: en
+  defs:
+  - label: '[호몰로지 대수학] §Diagram chasing'
+    url: /ko/math/homological_algebra/diagram_chasing
 - id: diffeomorphic
   en: diffeomorphic
   ko: 미분동형
