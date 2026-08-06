@@ -265,11 +265,21 @@ $$0 \longrightarrow \Omega_{\mathbb{P}^n_A/A} \longrightarrow \mathcal{O}_{\math
 이 존재한다.
 :::
 ::: 증명
-표기의 편의를 위해 $\mathbb{P}^n=\mathbb{P}^n_A$로 줄여 적고 standard affine open $U_i=D_+(\x_i)\cong \Spec A[\x_0,\ldots, \x_n]_{(\x_i)}$ 위에서 작업한다. 여기에 [\[가환대수학\] §등급환의 국소화, ⁋명제 6](/ko/math/commutative_algebra/localization_of_graded_rings#prop6)을 $f=\x_i$에 대하여 적용하면, degree $k$의 homogeneous element $g$를 $g/\x_i^k$로 보내는 $A$-algebra homomorphism이 isomorphism $A[\x_0,\ldots, \x_n]/(\x_i-1)\cong A[\x_0,\ldots, \x_n]_{(\x_i)}$을 유도한다. 좌변은 $\x_i$에 $1$을 대입하여 얻는 $n$변수 polynomial ring이고 그 변수 $\x_j$ ($j\neq i$)가 우변에서 $\x_j/\x_i$로 옮겨가므로, $U_i$는 이들을 좌표로 하는 $A$ 위의 affine space $\mathbb{A}^n_A$이다. 이 좌표들을 $\y^{(i)}_j=\x_j/\x_i$로 적으면 $\Omega_{\mathbb{P}^n/A}\vert_{U_i}$는 [명제 9](#prop9)에 의하여 $d\y^{(i)}_j$ ($j\neq i$)를 자유 기저로 하는 rank $n$의 자유 sheaf이다.
+표기의 편의를 위해 $\mathbb{P}^n=\mathbb{P}^n_A$로 줄여 적고 standard affine open $U_i=D_+(\x_i)\cong \Spec A[\x_0,\ldots, \x_n]_{(\x_i)}$ 위에서 작업한다. 이 coordinate ring은 $\y^{(i)}_j=\x_j/\x_i$ ($j\neq i$)를 변수로 하는 $n$변수 polynomial ring이므로 $U_i$는 $A$ 위의 affine space $\mathbb{A}^n_A$이고, 따라서 $\Omega_{\mathbb{P}^n/A}\vert_{U_i}$는 [명제 9](#prop9)에 의하여 $d\y^{(i)}_j$ ($j\neq i$)를 basis로 하는 rank $n$ free sheaf이다.
 
-오른쪽 morphism $\mathcal{O}(-1)^{\oplus(n+1)} \rightarrow \mathcal{O}$를 정의하자. $\mathcal{O}(-1)^{\oplus(n+1)}$의 standard basis를 $e_0,\ldots, e_n$이라 할 때, 이 morphism을 $e_j\mapsto \x_j$로 정의한다. 여기에서 $\x_j$는 $\mathcal{O}(1)$의 전역 section이고, 이것과의 곱이 $\mathcal{O}(-1) \rightarrow \mathcal{O}$를 준다. 각 $U_i$ 위에서 $\x_i$가 가역이므로 이 morphism은 surjective이다.
+우선 morphism $\mathcal{O}(-1)^{\oplus(n+1)} \rightarrow \mathcal{O}$를 정의하자. $\mathcal{O}(-1)$의 section에 $\x_i$를 곱하면 $\mathcal{O}$로 가게 되며, 이러한 방식으로 다음의 morphism
 
-이제 kernel을 계산하여 그것이 $\Omega_{\mathbb{P}^n/A}$임을 보인다. $U_i$ 위에서 $\mathcal{O}(-1)$을 $\x_i^{-1}$로 trivialize하면 위 morphism은 $(a_0,\ldots, a_n)\mapsto \sum_j a_j (\x_j/\x_i)$로 주어지므로, 그 kernel은 $\sum_j a_j(\x_j/\x_i)=0$을 만족하는 $(a_0,\ldots, a_n)$들로 이루어진다. 이 식에서 $a_i$의 계수가 $1$이라 $a_i$는 나머지 성분들이 결정하며, 따라서 kernel은 $j\neq i$인 $a_j$들이 자유롭게 움직이는 rank $n$의 자유 module이다. 구체적으로 morphism $\Omega_{\mathbb{P}^n/A}\vert_{U_i} \rightarrow \mathcal{O}(-1)^{\oplus(n+1)}\vert_{U_i}$을
+$$\mathcal{O}_{\mathbb{P}^n_A}^{\oplus n+1]\rightarrow \mathcal{O}_{\mathbb{P}^n_A};\qquad (s_0, \ldots, s_n)=\sum_{i=0}^n s_ie_i\mapsto \sum_{i=0}^n s_i \x_i$$
+
+을 생각하면 각각의 $U_i$ 위에서 $\x_i^{-1}e_i$가 $1$로 옮겨가므로 이는 surjective이다.
+
+이제 exact sequence를 완성하기 위해 kernel을 계산하자. 각각의 $U_i$ 위에서 $\mathcal{O}(-1)$을 $\x_i^{-1}$로 trivialize하면 위 morphism은 
+
+$$(a_0,\ldots, a_n)\mapsto \sum_j a_j (\x_j/\x_i)$$
+
+로 주어지므로, 그 kernel은 $\sum_j a_j(\x_j/\x_i)=0$을 만족하는 $(a_0,\ldots, a_n)$들로 이루어진다. 이 때, $i$번째 성분은 $\x_i/\x_i=1$이므로 
+
+이 식에서 $a_i$의 계수가 $1$이라 $a_i$는 나머지 성분들이 결정하며, 따라서 kernel은 $j\neq i$인 $a_j$들이 자유롭게 움직이는 rank $n$의 자유 module이다. 구체적으로 morphism $\Omega_{\mathbb{P}^n/A}\vert_{U_i} \rightarrow \mathcal{O}(-1)^{\oplus(n+1)}\vert_{U_i}$을
 
 $$d\Bigl(\frac{\x_j}{\x_i}\Bigr)\longmapsto \frac{1}{\x_i}\Bigl(e_j-\frac{\x_j}{\x_i}e_i\Bigr)$$
 
