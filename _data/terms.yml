@@ -433,6 +433,13 @@ A:
   defs:
   - label: '[체론] §대수적 폐포'
     url: /ko/math/field_theory/algebraically_closed_extensions
+- id: algebraic_element
+  en: algebraic element
+  ko: 대수적 원소
+  primary: en
+  defs:
+  - label: '[체론] §대수적 확장'
+    url: /ko/math/field_theory/algebraic_extensions
 - id: algebraic_extension
   en: algebraic extension
   ko: 대수적 확장
@@ -2989,6 +2996,13 @@ C:
   defs:
   - label: '[정수론] §소수와 산술의 기본정리'
     url: /ko/math/number_theory/primes
+- id: composite_field
+  en: composite field
+  ko: 합성체
+  primary: en
+  defs:
+  - label: '[체론] §대수적 확장'
+    url: /ko/math/field_theory/algebraic_extensions
 - id: composite_function
   en: composite function
   ko: 합성함수
@@ -5150,6 +5164,13 @@ E:
   defs:
   - label: '[스킴] §매끄러운 사상과 étale 사상'
     url: /ko/math/scheme_theory/smooth_and_etale_morphisms
+- id: étale_algebra
+  en: 'étale algebra'
+  ko: 에탈대수
+  primary: en
+  defs:
+  - label: '[체론] §에탈대수'
+    url: /ko/math/field_theory/etale_algebras
 - id: euclidean_algorithm
   en: Euclidean algorithm
   ko: 유클리드 호제법
@@ -5344,6 +5365,13 @@ E:
     url: /ko/math/group_theory/extensions
   - label: '[가환대수학] §정수적 확장'
     url: /ko/math/commutative_algebra/integral_extension
+- id: extension_degree
+  en: extension degree
+  ko: 확대 차수
+  primary: en
+  defs:
+  - label: '[체론] §분리가능차수'
+    url: /ko/math/field_theory/separable_degree
 - id: extension_of_scalar
   en: extension of scalar
   ko: 스칼라의 확장
@@ -5571,6 +5599,13 @@ F:
     id: integral_domain
   - label: Algebraically closed field
     id: algebraically_closed_field
+- id: field_extension
+  en: field extension
+  ko: 체 확장
+  primary: en
+  defs:
+  - label: '[체론] §대수적 확장'
+    url: /ko/math/field_theory/algebraic_extensions
 - id: field_of_fractions
   en: field of fractions
   ko: 분수체
@@ -5668,6 +5703,13 @@ F:
   defs:
   - label: '[위상수학] §차원'
     url: /ko/math/topology/dimension
+- id: finite_extension
+  en: finite extension
+  ko: 유한 확장
+  primary: en
+  defs:
+  - label: '[체론] §대수적 확장'
+    url: /ko/math/field_theory/algebraic_extensions
 - id: finite_homomorphism
   en: finite homomorphism
   ko: 유한 준동형사상
@@ -7878,6 +7920,20 @@ I:
     url: /ko/math/linear_algebra/bilinear_form
   - label: '[선형대수학] §내적공간'
     url: /ko/math/linear_algebra/inner_product_spaces
+- id: inseparable_degree
+  en: inseparable degree
+  ko: 비분리가능차수
+  primary: en
+  defs:
+  - label: '[체론] §분리가능차수'
+    url: /ko/math/field_theory/separable_degree
+- id: inseparable_extension
+  en: inseparable extension
+  ko: 비분리확대
+  primary: en
+  defs:
+  - label: '[체론] §순수비분리확대체'
+    url: /ko/math/field_theory/purely_inseparable_extensions
 - id: integrable
   en: integrable
   ko: 적분가능
@@ -8290,6 +8346,13 @@ I:
   defs:
   - label: '[리 이론] §최고 무게 가군'
     url: /ko/math/lie_theory/highest_weight_modules
+- id: irreducible_polynomial
+  en: irreducible polynomial
+  ko: 기약 다항식
+  primary: en
+  defs:
+  - label: '[환론] §다항식환'
+    url: /ko/math/ring_theory/polynomial_rings
 - id: irreducible_representation
   en: irreducible representation
   ko: 기약표현
@@ -12157,6 +12220,13 @@ P:
   defs:
   - label: '[복소기하학] §Hodge 이론'
     url: /ko/math/complex_geometry/hodge_theory
+- id: primitive_element
+  en: primitive element
+  ko: 원시원소
+  primary: en
+  defs:
+  - label: '[체론] §분리가능확대체'
+    url: /ko/math/field_theory/separable_extensions
 - id: primitive_function
   en: primitive function
   ko: 원시함수
@@ -12540,6 +12610,13 @@ P:
   defs:
   - label: '[스택] §Grothendieck 위상과 site'
     url: /ko/math/stacks/grothendieck_topology
+- id: purely_inseparable_extension
+  en: purely inseparable extension
+  ko: 순수비분리확대
+  primary: en
+  defs:
+  - label: '[체론] §순수비분리확대체'
+    url: /ko/math/field_theory/purely_inseparable_extensions
 - id: pushforward
   en: pushforward
   ko: 밂
