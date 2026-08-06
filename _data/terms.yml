@@ -1876,6 +1876,13 @@ C:
   defs:
   - label: '[선형대수학] §최소다항식'
     url: /ko/math/linear_algebra/minimal_polynomial
+- id: cayley_transformation
+  en: Cayley transformation
+  ko: Cayley 변환
+  primary: ko
+  defs:
+  - label: '[복소해석학] §등각사상과 Möbius 변환'
+    url: /ko/math/complex_analysis/conformal_maps
 - id: cech_cohomology
   en: Čech cohomology
   ko: 체흐 코호몰로지
@@ -16086,6 +16093,13 @@ U:
     url: /ko/math/category_theory/monoid_objects#def1
   - label: '[환론] §가역원과 영인자'
     url: /ko/math/ring_theory/units_and_zero_divisors
+- id: unit_disk
+  en: unit disk
+  ko: 단위원판
+  primary: ko
+  defs:
+  - label: '[해석학] §열린집합과 닫힌집합'
+    url: /ko/math/analysis/open_and_closed_sets
 - id: unit_group
   en: unit group
   ko: 가역원군
@@ -16217,6 +16231,13 @@ U:
   see:
   - label: Lower bound
     id: lower_bound
+- id: upper_half-plane
+  en: upper half-plane
+  ko: 상반평면
+  primary: ko
+  defs:
+  - label: '[복소해석학] §유수정리'
+    url: /ko/math/complex_analysis/residue_theorem
 - id: upper_set
   en: upper set
   ko: 상집합
