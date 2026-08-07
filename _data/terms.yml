@@ -1550,6 +1550,20 @@ B:
   defs:
   - label: '[리만기하학] §Theorema Egregium'
     url: /ko/math/riemannian_geometry/theorema_egregium
+- id: bruhat_decomposition
+  en: Bruhat decomposition
+  ko: 브루아 분해
+  primary: en
+  defs:
+  - label: '[리 이론] §Bruhat decomposition'
+    url: /ko/math/lie_theory/bruhat_decomposition
+- id: bruhat_order
+  en: Bruhat order
+  ko: 브루아 순서
+  primary: en
+  defs:
+  - label: '[리 이론] §Bruhat decomposition'
+    url: /ko/math/lie_theory/bruhat_decomposition
 - id: bundle_map
   en: bundle map
   ko: 벡터다발 준동형사상
@@ -1775,6 +1789,13 @@ C:
   defs:
   - label: '[정수론] §페르마 소정리'
     url: /ko/math/number_theory/fermat_little_theorem
+- id: cartan_decomposition
+  en: Cartan decomposition
+  ko: 카르탕 분해
+  primary: en
+  defs:
+  - label: '[리 이론] §원환면의 작용'
+    url: /ko/math/lie_theory/torus_action
 - id: cartan-eilenberg_resolution
   en: Cartan-Eilenberg resolution
   ko: 카르탕-아일렌베르크 분해
@@ -3132,6 +3153,13 @@ C:
   defs:
   - label: '[정수론] §합동식'
     url: /ko/math/number_theory/congruences
+- id: conjugacy_class
+  en: conjugacy class
+  ko: 켤레류
+  primary: en
+  defs:
+  - label: '[군론] §대칭군'
+    url: /ko/math/group_theory/symmetric_groups
 - id: conjugate
   en: conjugate
   ko: 켤레
@@ -7025,6 +7053,13 @@ H:
   see:
   - label: T-structure
     id: t-structure
+- id: hecke_algebra
+  en: Hecke algebra
+  ko: 헤케 대수
+  primary: en
+  defs:
+  - label: '[리 이론] §Kazhdan–Lusztig polynomial'
+    url: /ko/math/lie_theory/kazhdan_lusztig
 - id: height
   en: height
   ko: 높이
@@ -8196,6 +8231,13 @@ I:
     url: /ko/math/set_theory/zfc_axioms
   - label: '[집합론] §합집합과 교집합'
     url: /ko/math/set_theory/union_and_intersection
+- id: intersection_cohomology
+  en: intersection cohomology
+  ko: 교차 코호몰로지
+  primary: en
+  defs:
+  - label: '[층론] §Perverse 층'
+    url: /ko/math/sheaf_theory/perverse_sheaves
 - id: intersection_form
   en: intersection form
   ko: 교차 형식
@@ -16068,6 +16110,13 @@ T:
   defs:
   - label: '[리만기하학] §레비-치비타 접속'
     url: /ko/math/riemannian_geometry/Levi-Civita_connection
+- id: torus
+  en: torus
+  ko: 원환면
+  primary: en
+  defs:
+  - label: '[리 이론] §리 군'
+    url: /ko/math/lie_theory/Lie_groups
 - id: torus-invariant_prime_divisor
   en: torus-invariant prime divisor
   ko: 토러스 불변 소인자
