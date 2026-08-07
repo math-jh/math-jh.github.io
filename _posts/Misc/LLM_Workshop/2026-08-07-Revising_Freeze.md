@@ -20,9 +20,9 @@ weight: 37
 관련 파일: [`scripts/ci/freeze_revising_posts.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/ci/freeze_revising_posts.py), [`_includes/revising-notice.html`](https://github.com/math-jh/math-jh.github.io/blob/main/_includes/revising-notice.html), [`.github/workflows/build-deploy.yml`](https://github.com/math-jh/math-jh.github.io/blob/main/.github/workflows/build-deploy.yml)
 {: .notice--info}
 
-발행된 글을 고칠 때의 기존 규약은 `published: false` + `revising: true` + `drift_needed: true` 세 플래그를 함께 켜는 것이었다. 문제는 `published: false` 하나만으로도 그 글이 프로덕션에서 통째로 사라진다는 점이다. URL은 404가 되고, 그 글을 가리키던 인바운드 링크와 사이트맵, 검색 색인이 개정이 끝날 때까지 함께 깨진다. 이 간극을 없애는 방향이 사용자에게서 떨어졌다. 개정 중인 글도 완전히 내리지는 말고, 마지막으로 정상 발행 상태였던 판본을 프로덕션에 그대로 띄워두자는 것.
+발행된 글을 고칠 때의 기존 규약은 `published: false` + `revising: true` + `drift_needed: true` 세 플래그를 함께 켜는 것이었다. 문제는 `published: false` 하나만으로도 그 글이 프로덕션에서 통째로 사라진다는 점이다. URL은 404가 되고, 그 글을 가리키던 인바운드 링크와 사이트맵, 검색 색인이 개정이 끝날 때까지 함께 깨진다. 사용자는 이 간극을 없애자고 했다. 개정 중인 글도 완전히 내리지는 말고, 마지막으로 정상 발행 상태였던 판본을 프로덕션에 그대로 띄워두자는 것.
 
-## 동결 대상과 판정
+## 마지막으로 멀쩡했던 판본 찾기
 
 `scripts/ci/freeze_revising_posts.py`는 CI 체크아웃에서만 돈다. `_posts` 전체를 훑어 frontmatter에 `revising: true`가 있는 글을 추린 뒤, 그중 `published: false`가 없는 것은 즉시 fatal 처리한다. `revising: true`인데 `published: false`가 빠졌다는 것은 작업 중인 원고가 그대로 배포된다는 뜻이라 빌드를 막아야 한다.
 
@@ -45,7 +45,7 @@ def last_healthy(path: str):
 
 되돌리는 범위는 본문뿐이다. 레이아웃·SCSS·사이드바 같은 사이트 전역 요소는 최신 상태를 그대로 따라간다. 빌드된 `_site` 스냅샷을 재활용하는 대신 blob을 복원해서 처음부터 다시 빌드하는 이유가 이것이다.
 
-## 자산의 별도 사본
+## ko·en이 공유하는 그림은 제자리에서 되돌릴 수 없다
 
 본문만 과거로 돌리는 것으로는 부족하다. 다이어그램 SVG와 이미지는 `assets/images/Math/<Category>/<Article>-1.svg`처럼 글 제목으로 경로가 고정되어 있고, ko/en 두 언어판이 같은 파일을 공유한다. 이 경로를 제자리에서 과거 버전으로 되돌리면, 한쪽 언어만 개정 중이어도 발행 중인 반대쪽 언어의 그림까지 함께 과거로 끌려간다.
 
@@ -83,7 +83,7 @@ if @path.end_with?('.png') || EXCEPTIONS.include?(@path.sub(FROZEN_PREFIX, ''))
 ```
 {: data-filename="_plugins/diagram_tag.rb"}
 
-## 날짜와 알림
+## 과거 본문에 오늘 날짜가 찍히는 문제
 
 본문은 과거 판본인데, 파일의 git 로그를 그대로 읽는 `last_modified_git` 플러그인은 이를 "오늘 수정됨"으로 표시해버린다. 그래서 frontmatter에 `last_modified_at`이 없는 경우엔 healthy 커밋의 시각을 그 자리에 주입한다. 이미 값이 있으면 건드리지 않는다.
 
@@ -103,17 +103,35 @@ if @path.end_with?('.png') || EXCEPTIONS.include?(@path.sub(FROZEN_PREFIX, ''))
 
 `revising_snapshot`은 동결 스크립트가 판본 날짜로 채우는 필드다. 프로덕션 빌드는 이 값을 갖고 있으니 "이 글은 YYYY-MM-DD 시점의 판본입니다" 식으로 날짜를 넣어 보여주고, `--unpublished`로 띄우는 dev 서버는 워킹트리를 그대로 서빙해 `revising_snapshot`이 없으니 날짜 없는 문구로 대체된다. 같은 include가 두 서버에서 다른 문구를 내는 것은 이 필드 하나의 유무로 갈린다.
 
-## CI 배치와 안전장치
+## 썸네일 생성 뒤에 뒀다가 빌드를 두 번 죽인 자리
 
-동결 스텝은 `.github/workflows/build-deploy.yml`에서 썸네일 생성 다음, `jekyll build` 바로 앞에 들어간다.
+`--apply`는 워킹트리가 clean할 때만 동작한다. 로컬에서 실수로 돌려 개정 중인 원고를 지워버리는 사고를 막는 가드이고, CI 체크아웃은 매번 clean하게 시작하니 걸릴 일이 없다고 봤다.
+
+그렇지 않았다. 동결 스텝을 처음에는 `jekyll build` 바로 앞에 뒀는데, 그 자리는 홈 타일 썸네일을 굽는 스텝 다음이다. 그 스텝은 `_data/hues.yml`에서 JPEG를 매번 새로 만들어낸다. 가드가 본 것은 그 결과였다.
+
+```
+freeze: --apply 는 clean 워킹트리에서만 동작한다. 커밋되지 않은 변경:
+ M assets/images/Pages/Thumbnails/Files/Commutative_Algebra.jpeg
+ M assets/images/Pages/Thumbnails/Files/Homological_Algebra.jpeg
+ M assets/images/Pages/Thumbnails/Files/Linear_Algebra.jpeg
+```
+
+build가 exit 1로 죽고 deploy는 skip됐다. 같은 이유로 두 번 연속 실패한 뒤에 두 군데를 고쳤다. 동결은 git 이력만 있으면 되는 작업이라 스텝을 Checkout 바로 다음으로 올렸고, 가드의 검사 범위는 `_posts`로 좁혔다.
 
 ```yaml
+- name: Checkout
+  uses: actions/checkout@v7
+  with:
+    fetch-depth: 0
+
 - name: Freeze posts under revision
   run: python3 scripts/ci/freeze_revising_posts.py --apply
 ```
 {: data-filename=".github/workflows/build-deploy.yml"}
 
-`--apply`는 워킹트리가 clean할 때만 동작한다. CI 체크아웃은 매번 clean한 상태로 시작하니 걸릴 일이 없지만, 로컬에서 실수로 돌려 개정 중인 원고를 지워버리는 사고를 막기 위한 가드다. `FREEZE_ALLOW_DIRTY=1`로 끌 수는 있는데, 버려도 되는 사본에서 동작만 확인할 때 쓰는 용도지 정상적인 경로는 아니다.
+가드가 지키려던 것은 커밋되지 않은 원고이지 자산이 아니었다. 자산 쪽은 빌드가 파일을 만들어내니 언제든 dirty일 수 있고, 스크립트가 자산에 쓰는 것은 `frozen/` 아래 새 경로뿐이라 덮어쓸 것도 없다. 범위를 좁히는 쪽이 스텝 순서와 무관하게 성립한다.
+
+`FREEZE_ALLOW_DIRTY=1`로 가드를 끌 수는 있는데, 버려도 되는 사본에서 동작만 확인할 때 쓰는 용도지 정상적인 경로는 아니다.
 
 ## 결과
 
