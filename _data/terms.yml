@@ -13450,6 +13450,13 @@ R:
   see:
   - label: Rational map
     id: rational_map
+- id: regular_nilpotent_element
+  en: regular nilpotent element
+  ko: 정규 멱영원소
+  primary: en
+  defs:
+  - label: '[리 이론] §Richardson variety와 Peterson variety'
+    url: /ko/math/lie_theory/richardson_peterson_variety
 - id: regular_part
   en: regular part
   ko: 정칙부
