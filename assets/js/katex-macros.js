@@ -111,6 +111,7 @@ window.KATEX_MACROS = {
     "\\divergence":"\\operatorname{div}",
     "\\divisor":"\\operatorname{div}",
     "\\dom":"\\operatorname{dom}",
+    "\\dd":"\\mathop{d#1}",
     "\\dR":"\\mathrm{dR}",
     "\\E":"\\mathopen{E}",
     "\\End":"\\operatorname{End}",
