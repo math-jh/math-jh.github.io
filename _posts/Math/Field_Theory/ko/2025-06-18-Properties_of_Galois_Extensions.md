@@ -39,11 +39,11 @@ $$U_\mathbb{M}(\sigma)=\left\{\tau\in \Gal(\mathbb{L}/\mathbb{K})\mid \sigma\ver
 으로 정의하면 이 집합은 $\sigma$의 local base의 원소가 되며, 이들을 모아둔 $(U_\mathbb{M}(\sigma))_{\mathbb{M}\in\Ext_{\fin}(\mathbb{L}/\mathbb{K})}$가 정확히 $\sigma$에서의 local base이다. 이렇게 얻어지는 $\Gal(\mathbb{L}/\mathbb{K})$의 위상구조를 *Krull topology*라 부른다.
   
 ::: 예시 1
-특별히 $\mathbb{L}/\mathbb{K}$이 finite degree Galois extension인 경우를 생각하자. 그럼 [§갈루아 확장, ⁋정의 12](/ko/math/field_theory/galois_extension#def12) 이후의 논의로부터 우리는 $\Gal(\mathbb{L}/\mathbb{K})$이 유한집합인 것을 안다. 한편 위의 local base로부터, $\mathbb{L}/\mathbb{K}$이 finite degree이므로 $\mathbb{L}/\mathbb{K}$가 이미 $\Ext_{\fin}(\mathbb{L}/\mathbb{K})$의 원소이고 따라서
+특별히 $\mathbb{L}/\mathbb{K}$이 finite degree Galois extension인 경우를 생각하자. 그럼 [§갈루아 확장, ⁋정의 12](/ko/math/field_theory/galois_extension#def12) 이후의 논의로부터 우리는 $\Gal(\mathbb{L}/\mathbb{K})$이 유한집합인 것을 안다. 한편 $\mathbb{L}/\mathbb{K}$이 finite degree이므로 $\mathbb{L}/\mathbb{K}$ 자기 자신이 이미 $\Ext_{\fin}(\mathbb{L}/\mathbb{K})$의 원소이고 따라서 임의의 $\sigma\in \Gal(\mathbb{L}/\mathbb{K})$에 대하여
 
 $$U_\mathbb{L}(\sigma)=\left\{\tau\in\Gal(\mathbb{L}/\mathbb{K})\mid \sigma\vert_\mathbb{L}=\tau\vert_\mathbb{L}\right\}=\left\{\sigma\right\}$$
 
-이므로 이 경우 $\Gal(\mathbb{L}/\mathbb{K})$는 discrete topology가 주어진 집합이 된다. 
+가 위에서 살펴본 $\sigma$의 local base의 원소이다. 즉 한원소집합 $\left\{\sigma\right\}$가 열린집합이므로 이 경우 $\Gal(\mathbb{L}/\mathbb{K})$는 discrete topology가 주어진 집합이 된다. 
 :::
 
 한편, 위와 같이 정의한 위상공간 $\Gal(\mathbb{L}/\mathbb{K})$는 원래 $\mathbb{K}$-automorphism들의 합성을 연산으로 갖는 group이며, 이 때 함수들의 합성이 이 위상구조와 잘 어울리는 것을 어렵지 않게 보일 수 있다. 
