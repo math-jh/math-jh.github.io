@@ -23,7 +23,7 @@ weight: 13
 
 [Sitemap 없이 색인하기](/ko/llm_workshop/gsc_indexing)에서 GSC URL Inspection의 결과를 적었다 — 안 보이는 KO `/math/` 글 200여 개의 verdict는 모두 `"Google에는 아직 알려지지 않은 URL"`이었고, 그건 description 부재 같은 메타 문제가 아니라 그냥 Google이 페이지 자체를 아직 색인하지 않은 상태였다. description은 1차 원인이 아니었다.
 
-다만 description이 *2차* 가치 — indexed 페이지의 CTR 개선 — 를 한다는 것 자체는 사실이다. 검색 결과 페이지에서 제목 아래 두 줄을 비워두는 것보다 글의 요약 한 줄이 있는 편이 클릭률이 올라간다. 그리고 글의 head에서 `<meta name="description">`이 비어있으면 검색 결과에 표시할 요약이 없다. 그 빈자리를 메우는 작업은 1차 문제와 분리해서 진행할 수 있었고, 그래서 비어있던 269개 글에 description을 한 번에 채워넣으라는 지시가 떨어졌다.
+다만 description이 *2차* 가치 — indexed 페이지의 CTR 개선 — 를 한다는 것 자체는 사실이다. 검색 결과 페이지에서 제목 아래 두 줄을 비워두는 것보다 글의 요약 한 줄이 있는 편이 클릭률이 올라간다. 그리고 글의 head에서 `<meta name="description">`이 비어있으면 검색 결과에 표시할 요약이 없다. 그 빈자리를 메우는 작업은 1차 문제와 분리해서 진행할 수 있었고, 그래서 사용자는 비어있던 269개 글의 description을 한 번에 채우라고 했다.
 
 ## MiMo 토큰 리셋
 

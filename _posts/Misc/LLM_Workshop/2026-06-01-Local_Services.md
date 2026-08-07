@@ -22,9 +22,9 @@ weight: 16
 
 > 지금 도메인 샀는데, 하는게 github pages 주소 리디렉션밖에 없는게 아쉬워. 다르게 사용할만한거 있어?
 
-같은 Raspberry Pi 5 위에서 이미 여러 로컬 서비스가 돌고 있었다 — hermes 웹 UI, HUD 류의 내부 페이지들, 그리고 새로 만들 상태 대시보드. 전부 `127.0.0.1`에 묶인 채 집 안에서만 보이는 것들이었다. 이것들을 `*.math-jh.com` 서브도메인으로 끌어올리되, 아무나 들어오게 두지는 않는다 — 들어올 수 있는 건 사용자 본인 하나뿐. 그 방향이 사용자에게서 떨어졌다.
+같은 Raspberry Pi 5 위에서 이미 여러 로컬 서비스가 돌고 있었다 — hermes 웹 UI, HUD 류의 내부 페이지들, 그리고 새로 만들 상태 대시보드. 전부 `127.0.0.1`에 묶인 채 집 안에서만 보이는 것들이었다. 이것들을 `*.math-jh.com` 서브도메인으로 끌어올리되, 아무나 들어오게 두지는 않는다. 들어올 수 있는 건 사용자 본인 하나뿐이어야 한다는 것이 사용자가 건 조건이었다.
 
-수십조 파라미터쯤 되는 모델을 두고 포트포워딩 설정을 들여다보는 밤이 시작됐다.
+포트포워딩 설정을 들여다보는 밤이 시작됐다.
 
 ## 구조
 
@@ -48,7 +48,7 @@ Pi는 집 공유기 뒤 NAT 안에 있다. 바깥에서 직접 들어올 수 있
 
 ## cloudflared 설치
 
-`cloudflared`를 설치하는 방법은 두 가지였다 — 홈 디렉토리에 바이너리를 받아 두거나, apt로 시스템 패키지로 까는 것. 사용자가 처음에 `~/.local/bin`에 받아둔 걸 확인하고, 그건 지우고 apt 쪽으로 가자는 지시가 떨어졌다.
+`cloudflared`를 설치하는 방법은 두 가지였다 — 홈 디렉토리에 바이너리를 받아 두거나, apt로 시스템 패키지로 까는 것. 사용자가 처음에 `~/.local/bin`에 받아둔 걸 확인하고는, 그건 지우고 apt 쪽으로 가자고 했다.
 
 이유는 권한이다. 터널을 systemd 서비스로 root가 돌리게 되는데, 그 바이너리가 사용자 홈에 있으면 — 그리고 같은 홈에서 `junhyeok`으로 도는 hermes 에이전트가 그 파일을 쓸 수 있으면 — root 서비스의 실행 파일을 비-root가 갈아치울 수 있다는 권한 상승 냄새가 난다. apt로 깐 `/usr/bin/cloudflared`는 root 소유이고 자동 업데이트도 따라온다.
 
@@ -90,7 +90,7 @@ Zero Trust → Networks → Connectors → 해당 터널로 들어가면 탭이 
 
 게이트는 구글 로그인으로 잡았다. 사용자가 OTP 이메일 방식과 구글 로그인을 두고 후자로 가겠다고 정했다.
 
-Cloudflare Zero Trust의 팀 도메인은 `falling-salad-3bb6.cloudflareaccess.com`이다. 구글을 IdP로 붙이려면 GCP 쪽에 OAuth 클라이언트가 필요한데, 색인 자동화에 쓰던 `math-jh-indexing` 프로젝트에 섞지 말고 **별도 프로젝트로 분리하자**는 지시가 떨어졌다. `math-jh-access`라는 프로젝트를 새로 파고 거기에 OAuth Web 클라이언트를 만들었다.
+Cloudflare Zero Trust의 팀 도메인은 `falling-salad-3bb6.cloudflareaccess.com`이다. 구글을 IdP로 붙이려면 GCP 쪽에 OAuth 클라이언트가 필요한데, 사용자는 색인 자동화에 쓰던 `math-jh-indexing` 프로젝트에 섞지 말고 **별도 프로젝트로 분리하자**고 했다. `math-jh-access`라는 프로젝트를 새로 파고 거기에 OAuth Web 클라이언트를 만들었다.
 
 - consent screen은 External, 본인 이메일을 Test user로 등록 (게시 안 한 앱이라 등록된 테스트 유저만 로그인 가능)
 - redirect URI는 `https://falling-salad-3bb6.cloudflareaccess.com/cdn-cgi/access/callback` 하나

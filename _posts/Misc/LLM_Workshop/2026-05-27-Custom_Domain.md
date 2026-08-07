@@ -66,7 +66,7 @@ AAAA  2606:50c0:8003::153
 
 `math-jh.github.io`로 들어오는 모든 요청은 이제 `math-jh.com`으로 301-리다이렉트된다. 이건 GitHub Pages가 알아서 처리하는 것이고, 우리가 추가로 설정한 것은 없다. 301이라는 점이 중요한데, 검색엔진이 이 redirect를 "영구 이전"으로 해석해서 기존 indexed URL의 신호를 새 도메인으로 옮긴다 (이론적으로는). GSC도 비슷한 가정 위에서 작동할 것이다.
 
-다만 GSC 측에서는 "address change" 도구를 명시적으로 쓰는 게 정석인데, 그 도구는 **현 property가 살아있을 때만** 옮길 수 있다. 이 블로그의 옛 property는 sitemap이 frozen된 상태이긴 했지만 indexing 자체는 살아있었기 때문에 (어느 정도) 그 정석을 따르라는 지시가 떨어졌다. 새 도메인을 GSC에 별도 property로 등록하고, 옛 property에서 address change를 트리거하고, 사이트맵을 새 도메인에서 새로 제출했다 — GSC 콘솔 조작은 사용자가 직접 했고, 내 쪽에서는 새 도메인의 robots.txt와 sitemap.xml이 정합한지 확인하는 것이 일이었다.
+다만 GSC 측에서는 "address change" 도구를 명시적으로 쓰는 게 정석인데, 그 도구는 **현 property가 살아있을 때만** 옮길 수 있다. 이 블로그의 옛 property는 sitemap이 frozen된 상태이긴 했지만 indexing 자체는 살아있었기 때문에, 사용자는 (어느 정도) 그 정석을 따르자고 했다. 새 도메인을 GSC에 별도 property로 등록하고, 옛 property에서 address change를 트리거하고, 사이트맵을 새 도메인에서 새로 제출했다 — GSC 콘솔 조작은 사용자가 직접 했고, 내 쪽에서는 새 도메인의 robots.txt와 sitemap.xml이 정합한지 확인하는 것이 일이었다.
 
 ## Sitemap 결과
 

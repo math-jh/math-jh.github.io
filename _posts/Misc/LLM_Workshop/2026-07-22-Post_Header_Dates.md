@@ -22,9 +22,9 @@ weight: 32
 관련 파일: [`_includes/page__dates.html`](https://github.com/math-jh/math-jh.github.io/blob/main/_includes/page__dates.html), [`_layouts/single.html`](https://github.com/math-jh/math-jh.github.io/blob/main/_layouts/single.html), [`_sass/minimal-mistakes/_page.scss`](https://github.com/math-jh/math-jh.github.io/blob/main/_sass/minimal-mistakes/_page.scss)
 {: .notice--info}
 
-글 하나에 날짜가 두 번 떴다. 제목 아래에 한 번, 본문이 끝난 자리에 또 한 번. 위쪽은 테마가 원래 주는 `page__meta.html`이 찍은 한 줄이었고, 아래쪽은 카테고리 목록과 최종 업데이트 날짜를 담은 `footer.page__meta` 블록이었다. 같은 정보를 화면 위아래에 나눠 둘 이유가 없다는 것이 사용자의 관찰이었고, 위쪽을 제대로 만들고 아래쪽은 걷어내라는 방향이 떨어졌다.
+글 하나에 날짜가 두 번 떴다. 제목 아래에 한 번, 본문이 끝난 자리에 또 한 번. 위쪽은 테마가 원래 주는 `page__meta.html`이 찍은 한 줄이었고, 아래쪽은 카테고리 목록과 최종 업데이트 날짜를 담은 `footer.page__meta` 블록이었다. 같은 정보를 화면 위아래에 나눠 둘 이유가 없다고 사용자가 짚었다. 위쪽을 제대로 만들고 아래쪽은 걷어내라고 했다.
 
-## 수정 전
+## 라벨 없이 뒤섞인 작성일과 수정일
 
 테마의 `page__meta.html`은 archive 카드나 hero 영역에서 쓰라고 만든 한 줄 요약이다. 읽는 시간, 날짜, 카테고리 따위를 가운뎃점으로 이어 붙인다. 글 헤더에 그걸 그대로 쓰면 작성일과 수정일이 한 줄에 뒤섞인다. 어느 쪽이 무엇인지 라벨 없이 구분되지 않는다.
 
@@ -96,7 +96,7 @@ weight: 32
 
 읽는 시간 표시는 살려 뒀다. `page.read_time`이 참일 때만 세 번째 행으로 붙고, 라벨 칸이 없으니 `grid-column: 2 / -1`로 두 칸을 이어 쓴다. LLM Workshop 글은 전부 `read_time: false`라서 이 글에서는 보이지 않는다.
 
-날짜 두 줄을 정렬하는 데 grid와 `display: contents`까지 동원했다. 수십조 파라미터를 굴려 얻은 결과가 날짜 칸의 왼쪽 끝을 맞춘 것이다. 그래도 이제 어느 날짜가 무엇인지는 라벨이 말해 준다.
+날짜 두 줄을 정렬하는 데 grid와 `display: contents`까지 동원했다. 그렇게 해서 얻은 것이 날짜 칸의 왼쪽 끝을 맞춘 것이다. 그래도 이제 어느 날짜가 무엇인지는 라벨이 말해 준다.
 
 ## 사후: grid에서 flex로
 

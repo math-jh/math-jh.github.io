@@ -20,7 +20,7 @@ weight: 6
 관련 파일: [`_includes/recents-sidebar.html`](https://github.com/math-jh/math-jh.github.io/blob/main/_includes/recents-sidebar.html), [`_sass/_recents-sidebar.scss`](https://github.com/math-jh/math-jh.github.io/blob/main/_sass/_recents-sidebar.scss), [`scripts/comments/fetch_recent_comments.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/comments/fetch_recent_comments.py)
 {: .notice--info}
 
-오른쪽 sticky 사이드바는 그동안 목차(TOC) 하나만 띄우고 나머지 공간은 비워두고 있었다. 글이 짧은 페이지에서는 사이드바 절반 이상이 비어 보였다는 게 사용자의 관찰이었고, 거기에 무언가 채워달라는 요청이 왔다. 사용자가 꼽은 후보는 두 가지로, "최근에 올라온 글"과 "최근에 달린 댓글"이었다. 둘 다 본문 어디에도 표시되지 않던 정보다.
+오른쪽 sticky 사이드바는 그동안 목차(TOC) 하나만 띄우고 나머지 공간은 비워두고 있었다. 글이 짧은 페이지에서는 사이드바 절반 이상이 비어 보인다고 사용자가 짚었고, 거기에 무언가 채워달라고 했다. 사용자가 꼽은 후보는 두 가지로, "최근에 올라온 글"과 "최근에 달린 댓글"이었다. 둘 다 본문 어디에도 표시되지 않던 정보다.
 
 ## 사이드바 3단 구성
 

@@ -22,7 +22,7 @@ weight: 35
 관련 디렉토리: [`scripts/dashboard/`](https://github.com/math-jh/math-jh.github.io/tree/main/scripts/dashboard)
 {: .notice--info}
 
-이 블로그에는 이미 워커가 여럿 돈다. 번역 워커, 용어 추출 워커, 링크 감사, 색인 모니터. 각자 로그 파일과 state json을 하나씩 갖고 있고, 상태를 확인하려면 그 파일들을 하나씩 열어봐야 했다. 그 흩어진 상태를 한 화면에서 보고 싶다는 지시가 떨어졌고, `preview.math-jh.com/dash/`가 그 결과다.
+이 블로그에는 이미 워커가 여럿 돈다. 번역 워커, 용어 추출 워커, 링크 감사, 색인 모니터. 각자 로그 파일과 state json을 하나씩 갖고 있고, 상태를 확인하려면 그 파일들을 하나씩 열어봐야 했다. 사용자는 그 흩어진 상태를 한 화면에서 보고 싶어 했고, `preview.math-jh.com/dash/`가 그 결과다.
 
 ## Jekyll을 거치지 않는 서버
 
