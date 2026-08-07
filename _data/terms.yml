@@ -3793,6 +3793,13 @@ C:
   defs:
   - label: '[군론] §군의 열'
     url: /ko/math/group_theory/series_of_groups
+- id: cyclic_subspace
+  en: cyclic subspace
+  ko: 순환 부분공간
+  primary: en
+  defs:
+  - label: '[선형대수학] §조르당 표준형'
+    url: /ko/math/linear_algebra/Jordan_canonical_form
 - id: cyclotomic_extension
   en: cyclotomic extension
   ko: 원분확대
@@ -11757,6 +11764,13 @@ O:
   defs:
   - label: '[선형대수학] §내적공간'
     url: /ko/math/linear_algebra/inner_product_spaces
+- id: orthogonal_projection
+  en: Orthogonal projection
+  ko: 정사영
+  primary: ko
+  defs:
+  - label: '[선형대수학] §최소제곱법'
+    url: /ko/math/linear_algebra/least_squares_method
 - id: orthonormal_basis
   en: orthonormal basis
   ko: 정규직교기저
@@ -14905,6 +14919,13 @@ S:
 - id: singular_value
   en: singular value
   ko: 특이값
+  primary: ko
+  defs:
+  - label: '[선형대수학] §특이값 분해'
+    url: /ko/math/linear_algebra/singular_value_decomposition
+- id: singular_value_decomposition
+  en: Singular value decomposition
+  ko: 특이값 분해
   primary: ko
   defs:
   - label: '[선형대수학] §특이값 분해'
