@@ -23,6 +23,14 @@ jobs:
         with:
           fetch-depth: 0   # full history so jekyll-last-modified-at reads real commit dates
 
+      # 개정 중인 글(`published: false` + `revising: true`)을 마지막으로 발행 상태였던
+      # 판본으로 되돌린다. 되돌리지 않으면 개정 기간 내내 그 URL이 404가 되어 인바운드
+      # 링크·사이트맵·검색 색인이 함께 깨진다. 고쳐 쓰는 대상은 이 체크아웃뿐이다.
+      # 체크아웃 직후에 두는 이유: 뒤의 썸네일 생성이 assets/ 를 건드려 워킹트리를
+      # 더럽히므로, 그 전에 git 이력 기준으로 복원을 끝내야 한다.
+      - name: Freeze posts under revision
+        run: python3 scripts/ci/freeze_revising_posts.py --apply
+
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
@@ -55,12 +63,6 @@ jobs:
       # so _site picks them up. (Tiles no longer need to live in the repo.)
       - name: Generate subject thumbnails
         run: node scripts/generate-thumbnails.js
-
-      # 개정 중인 글(`published: false` + `revising: true`)을 마지막으로 발행 상태였던
-      # 판본으로 되돌린다. 되돌리지 않으면 개정 기간 내내 그 URL이 404가 되어 인바운드
-      # 링크·사이트맵·검색 색인이 함께 깨진다. 고쳐 쓰는 대상은 이 체크아웃뿐이다.
-      - name: Freeze posts under revision
-        run: python3 scripts/ci/freeze_revising_posts.py --apply
 
       - name: Jekyll build
         run: bundle exec jekyll build

@@ -31,7 +31,7 @@ frontmatter에는 `revising_snapshot`(판본 날짜, 글 상단 알림에 노출
     scripts/ci/freeze_revising_posts.py            # dry-run 보고만
     scripts/ci/freeze_revising_posts.py --apply    # 워킹트리를 실제로 고쳐씀 (CI 전용)
 
-`--apply`는 워킹트리가 clean할 때만 동작한다. 로컬에서 실수로 돌려 개정 중인 원고를
+`--apply`는 `_posts`가 clean할 때만 동작한다. 로컬에서 실수로 돌려 개정 중인 원고를
 날리는 사고를 막기 위한 것이며, CI 체크아웃은 항상 clean이라 걸리지 않는다.
 (`FREEZE_ALLOW_DIRTY=1`로 이 검사를 끌 수 있지만, 버려도 되는 사본에서 동작을 확인할
 때만 쓴다.)
@@ -163,10 +163,13 @@ def main() -> int:
     ap.add_argument("--apply", action="store_true", help="워킹트리를 실제로 고쳐쓴다 (CI 전용)")
     args = ap.parse_args()
 
+    # 검사 범위는 `_posts`뿐이다. 이 가드가 지키려는 것은 커밋되지 않은 원고이고,
+    # 자산 쪽은 빌드가 생성하는 파일(썸네일 등)이 있어 언제든 dirty일 수 있다.
+    # 스크립트가 자산에 쓰는 것은 frozen/ 아래 새 경로뿐이라 덮어쓸 위험이 없다.
     if args.apply and not os.environ.get("FREEZE_ALLOW_DIRTY"):
-        dirty = git("status", "--porcelain", "--", "_posts", "assets")
+        dirty = git("status", "--porcelain", "--", "_posts")
         if dirty and dirty.strip():
-            print("freeze: --apply 는 clean 워킹트리에서만 동작한다. 커밋되지 않은 변경:", file=sys.stderr)
+            print("freeze: --apply 는 _posts가 clean할 때만 동작한다. 커밋되지 않은 변경:", file=sys.stderr)
             print(dirty, file=sys.stderr)
             return 1
 
