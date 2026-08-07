@@ -35,44 +35,37 @@ $$Z(s_1,\ldots, s_k)=Z(s_1)\cap \cdots\cap Z(s_k)$$
 
 으로 정확히 실현된다. 각 affine open 위에서 $(s_1,\ldots, s_k)=\sum_{i=1}^k(s_i)$이기 때문이다.
 
-우리가 이러한 방식으로 잘리는 closed subscheme에 대해 기대하는 것 중 하나는 codimension이다. 즉 만일 주어진 vanishing scheme이 $k$개의  ;방정식으로 잘린다면 그 codimension이 $k$가 될 것이라 기대하는 것이 자연스럽다. 그러나 이는 일반적으로 성립하지 않는다. 가령 $\mathbb{A}^3_\mathbb{K}=\Spec\mathbb{K}[\x,\y,\z]$에서 $Z(\x\y, \x\z)$는 두 개의 방정식으로 잘리는 closed subscheme이므로 그 codimension이 $2$임을 기대하겠지만, 실제로 이 scheme을 분석해보면 이 scheme은 두 irreducible component $Z(\x)$와 $Z(\y,\z)$를 갖고, 이들 각각의 codimension은 $1$과 $2$이다. 
+우리가 이러한 방식으로 잘리는 closed subscheme에 대해 기대하는 것 중 하나는 codimension이다. 즉 만일 주어진 vanishing scheme이 $k$개의 방정식으로 잘린다면 그 codimension이 $k$가 될 것이라 기대하는 것이 자연스럽다. 그러나 이는 일반적으로 성립하지 않는다. 가령 $\mathbb{A}^3_\mathbb{K}=\Spec\mathbb{K}[\x,\y,\z]$에서 $Z(\x\y, \x\z)$는 두 개의 방정식으로 잘리는 closed subscheme이므로 그 codimension이 $2$임을 기대하겠지만, 실제로 이 scheme을 분석해보면 이 scheme은 두 irreducible component $Z(\x)$와 $Z(\y,\z)$를 갖고, 이들 각각의 codimension은 $1$과 $2$이다. 
 
+직관적으로 이는 $\mathbb{K}[\x,\y,\z]$에서 첫 번째 방정식 $\x\y=0$을 이용해 잘라낸 closed subscheme $Z(\x\y)$를 생각하면 이 subscheme은 두 개의 component $Z(\x)$, $Z(\y)$를 갖는데, 이 중 $Z(\x)$ 위에서는 두 번째 방정식 $\x\z$가 이미 항등적으로 소멸하므로 $Z(\x,\x\z)$를 생각해봐야 이미 더 잘라낼 것이 없어 $Z(\x)$이고, 둘째 성분 $Z(\y)$에서만 $Z(\y,\x\z)$가 의미가 생기며, 실제로 이 성분에서의 값을 계산하면
 
-첫 번째 방정식이 잘라낸 $Z(\x\y)$의 두 component 가운데 $Z(\x)$ 위에서는 두 번째 방정식 $\x\z$가 항등적으로 소멸하여, 그곳에서는 더 깎아낼 것이 남아 있지 않기 때문이다. 대수적으로 이는 $\mathbb{K}[\x,\y,\z]/(\x\y)$에서 $\y\neq 0$이면서 $\x\z\cdot\y=0$이라는 것, 곧 $\x\z$가 zerodivisor라는 것이다. 각각의 방정식이 앞의 것들을 지난 뒤에도 여전히 non-zerodivisor일 것을 요구하면 이런 일이 일어나지 않으며, 이것이 *regular sequence* 조건이다.
+$$Z(\y,\x\z)=Z(\y)\cap (Z(\x)\cup Z(\z))=Z(\x,\y)\cup Z(\y,\z)$$
 
-이제 우리의 관심은 주어진 section들이 무엇을 잘라내는가가 아니라, 거꾸로 주어진 closed subscheme이 이러한 방식으로 잘리는가에 있다. 다만 이를 전역적으로 요구하면 너무 강한 조건이 되므로 ([참고 4](#rmk4)) chart마다 요구한다.
+이며 이들 중 $Z(\x,\y)$는 이미 첫째 성분 $Z(\x)$에 담겨있으므로 유효하게 남는 것은 $Z(\y,\z)$ 뿐이라 위의 묘사를 얻는다. 이에 해당하는 대수적인 설명은 첫째 방정식이 잘라낸 closed subscheme의 coordinate ring $\mathbb{K}[\x,\y,\z]/(\x\y)$ 안에서 $\y\neq 0$이면서 $\x\z\cdot\y=0$이라는 것, 곧 $\x\z$가 zerodivisor라는 것이다. 따라서 이를 해결하기 위해서는 각각의 방정식이 앞선 방정식들을 지난 후에도 여전히 non-zerodivisor일 것을 요구하면 된다. ([\[가환대수학\] §정칙국소환, ⁋정의 2](/ko/math/commutative_algebra/regular_local_rings#def2))
 
 ::: 정의 1
-Locally Noetherian scheme $X$의 closed embedding $\iota:Z\hookrightarrow X$가 codimension $k$의 *complete intersection<sub>완전교차</sub>*, 혹은 codimension $k$의 *regular embedding*이라는 것은 $X$의 affine open cover $\{U_i=\Spec A_i\}$가 존재하여, 각각의 $U_i$에 대해 $Z\cap U_i=\emptyset$이거나, $Z\cap U_i=Z(s_{i,1},\ldots, s_{i,k})$이고 $(s_{i,1},\ldots, s_{i,k})$가 [\[가환대수학\] §정칙국소환, ⁋정의 2](/ko/math/commutative_algebra/regular_local_rings#def2)의 의미에서 $A_i$-regular sequence인 것이다.
+Locally Noetherian scheme $X$의 closed embedding $\iota:Z\hookrightarrow X$가 codimension $k$의 *local complete intersection<sub>국소 완전교차</sub>*, 혹은 codimension $k$의 *regular embedding*이라는 것은 $X$의 affine open cover $\{U_i=\Spec A_i\}$가 존재하여, 각각의 $U_i$에 대해 $Z\cap U_i=\emptyset$이거나, $Z\cap U_i=Z(s_{i,1},\ldots, s_{i,k})$이고 $(s_{i,1},\ldots, s_{i,k})$가 $A_i$-regular sequence인 것이다.
 :::
 
-[정의 1](#def1)이 $Z$와 만나지 않는 chart를 따로 허용하는 것은 그러한 chart 위에서는 regular sequence를 요구할 수 없기 때문이다. Regular sequence는 자신이 생성하는 ideal이 proper일 것을 요구하는데 $Z\cap U_i=\emptyset$이면 그 ideal은 $A_i$ 전체이고, 반면 $Z$가 닫힌집합인 이상 $Z$와 만나지 않는 열린집합은 얼마든지 cover에 섞여 들어올 수 있다. 또 엄밀히는 [정의 1](#def1)의 성질이 국소적으로만 regular sequence를 요구하므로 *local complete intersection<sub>국소 완전교차</sub>*이라 부르는 것이 정확하다. 한편 locally Noetherian scheme 위에서 $k=1$의 complete intersection은 정확히 [§인자와 선형계, ⁋정의 1](/ko/math/scheme_theory/divisors_and_linear_systems#def1)의 effective Cartier divisor이다. 길이 $1$의 regular sequence란 그저 $(s)$가 proper이도록 하는 non-zerodivisor $s$이고, $Z\cap U_i=\emptyset$인 chart 위에서는 $Z\cap U_i=Z(1)$이므로 non-zerodivisor $s_i=1$이 그 정의의 조건을 충족시키기 때문이다.
+일반적으로 regular sequence의 조건은 원소를 나열하는 순서에 의존했던 것을 기억하자. ([\[가환대수학\] §정칙국소환, ⁋정의 2](/ko/math/commutative_algebra/regular_local_rings#def2)) 그러나 이 의존성은 [정의 1](#def1)에는 남지 않는데, $\mathfrak{p}$가 $(s_{i,1},\ldots, s_{i,k})$를 포함하는 $A_i$의 prime ideal이라면 localization이 exact이므로 $(s_{i,1},\ldots, s_{i,k})$는 $(A_i)_\mathfrak{p}$-regular sequence이고, Noetherian local ring에서는 maximal ideal에 속하는 regular sequence를 임의로 재배열하여도 다시 regular sequence가 되기 때문이다. ([\[가환대수학\] §코쥴 복합체, ⁋따름정리 10](/ko/math/commutative_algebra/koszul_complex#cor10)) 
 
-Regular sequence라는 조건 자체는 원소를 나열하는 순서에 의존하며, 순서를 바꾸면 실제로 깨지는 예가 있다. ([\[가환대수학\] §코쥴 복합체, ⁋예시 11](/ko/math/commutative_algebra/koszul_complex#ex11)) 그러나 이 의존성은 [정의 1](#def1)에는 남지 않는다. $\mathfrak{p}$가 $(s_{i,1},\ldots, s_{i,k})$를 포함하는 $A_i$의 prime ideal이라면 localization이 exact이므로 $(s_{i,1},\ldots, s_{i,k})$는 $(A_i)_\mathfrak{p}$-regular sequence이고, Noetherian local ring에서는 maximal ideal에 속하는 regular sequence를 임의로 재배열하여도 다시 regular sequence가 되므로 ([\[가환대수학\] §코쥴 복합체, ⁋따름정리 10](/ko/math/commutative_algebra/koszul_complex#cor10)) 재배열한 열 또한 $Z\cap U_i$의 모든 점에서 regular sequence이기 때문이다. 앞에서 $Z(s_1,\ldots, s_k)$가 순서에 무관하다고 한 것은 정의하는 ideal이 순서에 무관하다는 것이었던 반면, 여기에서 확인한 것은 [정의 1](#def1)이 부과하는 조건 자체가 순서에 무관하다는 것이다.
-
-[정의 1](#def1)은 자르는 방정식의 개수 $k$를 codimension이라 부르고 있지만, 아직 그 이름을 정당화한 것은 없다. 한쪽 방향은 조건 없이 성립하는데, $k$개의 원소가 생성하는 ideal을 포함하는 minimal prime의 codimension은 언제나 $k$ 이하이기 때문이다. ([\[가환대수학\] §차원, ⁋정리 7](/ko/math/commutative_algebra/Krull_dimension#thm7)) 따라서 실제로 보여야 할 것은 codimension이 $k$보다 작아지지 않는다는 것이다.
+이제 이를 도입하기 전 우리의 직관을 정당화하자. 한쪽 방향은 조건 없이 성립하는데, $k$개의 원소가 생성하는 ideal을 포함하는 minimal prime의 codimension은 언제나 $k$ 이하이기 때문이다. ([\[가환대수학\] §차원, ⁋정리 7](/ko/math/commutative_algebra/Krull_dimension#thm7)) 따라서 실제로 보여야 할 것은 codimension이 $k$보다 작아지지 않는다는 것이다.
 
 ::: 명제 2
 Codimension $k$의 complete intersection $\iota:Z\hookrightarrow X$의 모든 irreducible component는 $X$에서 codimension $k$를 갖는다.
 :::
 ::: 증명
-Codimension은 국소적으로 계산되므로, $Z$의 irreducible component $W$를 고정하고 [정의 1](#def1)의 cover 가운데 $W$와 만나는 $U_i$를 택하자. 그러한 $U_i$에 대해서는 $Z\cap U_i\neq\emptyset$이므로 [정의 1](#def1)의 두 대안 가운데 뒤의 것이 성립하며, 따라서 $X=\Spec A$, $Z=Z(s_1,\ldots, s_k)$이고 $(s_1,\ldots, s_k)$가 $A$-regular sequence인 경우만 보면 충분하다. $W$에 대응되는 $A$의 prime ideal을 $\mathfrak{p}$라 하면 $\mathfrak{p}$는 $A/(s_1,\ldots, s_k)$의 minimal prime이므로 
+$Z$의 irreducible component $W$를 고정하고 [정의 1](#def1)의 cover 가운데 $W$와 만나는 $U=\Spec A$를 택하자. 그럼 $Z\cap U\neq\emptyset$이므로 [정의 1](#def1)에 의하여 적당한 $A$-regular sequence $s_1,\ldots, s_k$가 $Z\cap U=Z(s_1,\ldots, s_k)$를 만족하며, $X$가 locally Noetherian이므로 $A$는 Noetherian ring이다. ([§스킴 사상의 성질들, ⁋명제 6](/ko/math/scheme_theory/properties_of_scheme_morphisms#prop6)의 증명) $W$의 generic point는 $W$의 공집합이 아닌 열린집합에 언제나 속하므로 $U$ 안에 있으며, [\[위상수학\] §차원, ⁋명제 15](/ko/math/topology/dimension#prop15)의 대응에 의하여 $W\cap U$는 $Z\cap U$의 irreducible component이다. 따라서 이 generic point에 대응되는 $A$의 prime ideal을 $\mathfrak{p}$라 하면 $\mathfrak{p}$는 $A/(s_1,\ldots, s_k)$의 minimal prime이므로 
 
 $$\dim A_\mathfrak{p}/(s_1,\ldots, s_k)=\dim\bigl(A/(s_1,\ldots, s_k)\bigr)_\mathfrak{p}=0$$
 
 이다. 한편 [§차원, ⁋명제 8](/ko/math/scheme_theory/dimension#prop8)에 의하여 $\codim_X W=\dim A_\mathfrak{p}$이므로, $\dim A_\mathfrak{p}=k$임을 보이면 된다. 
 
-이를 위해 다음 사실을 보인다.
+이제 $\mathfrak{p}$가 $(s_1,\ldots, s_k)$를 포함하므로 $(s_1,\ldots, s_k)A_\mathfrak{p}$는 proper이고, localization이 exact이라 non-zerodivisor를 보존하므로 $(s_1,\ldots, s_k)$는 $A_\mathfrak{p}$-regular sequence이다. 곧 $M_i=A_\mathfrak{p}/(s_1,\ldots, s_i)$로 두면 각각의 $M_i$는 $0$이 아닌 finitely generated $A_\mathfrak{p}$-module이고, $s_{i+1}\in \mathfrak{p}A_\mathfrak{p}$이며 곱하기 $s_{i+1}$이 $M_i$ 위에서 injective이고 $M_i/s_{i+1}M_i=M_{i+1}$이다. 따라서 [\[가환대수학\] §Depth, ⁋명제 9](/ko/math/commutative_algebra/depth#prop9)에 의하여 $\dim M_{i+1}=\dim M_i-1$이고, 이를 $i=0,1,\ldots, k-1$에 차례로 적용하면 
 
-> Noetherian local ring $(R,\mathfrak{m})$의 non-zerodivisor $s\in\mathfrak{m}$에 대하여 $\dim R/(s)\leq\dim R-1$이다.
+$$0=\dim A_\mathfrak{p}/(s_1,\ldots, s_k)=\dim A_\mathfrak{p}-k$$
 
-[§차원, ⁋명제 12](/ko/math/scheme_theory/dimension#prop12)을 $\Spec R$에 적용하면 $V(s)$의 모든 component는 codimension $0$ 또는 $1$이고, $s$가 non-zerodivisor이므로 ([\[가환대수학\] §동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)) $s$는 어떠한 minimal prime에도 속하지 않아 codimension $0$인 component는 없다. 즉 $V(s)$의 각 component $W$마다 $W$를 진부분집합으로 담는 irreducible closed subset이 존재하며, $W$ 안의 chain을 그것으로 한 칸 늘일 수 있으므로 $\dim W\leq \dim R-1$이다. 그럼 $\dim R/(s)$는 이러한 $\dim W$들의 최댓값이므로 원하는 부등식을 얻는다. 등호까지 주장하려면 $\dim R/\mathfrak{q}+\codim\mathfrak{q}=\dim R$ 꼴의 차원 공식이 필요하고 이는 일반적인 Noetherian local ring에서 성립하지 않으나, 이하에서는 부등식만을 사용한다.
-
-이제 $(s_1,\ldots, s_k)$가 $A$-regular sequence이므로 localization $A_\mathfrak{p}$에서도 regular sequence이며 (localization은 non-zerodivisor를 보존한다), 각 $s_{i+1}$은 $A_\mathfrak{p}/(s_1,\ldots, s_i)$의 non-zerodivisor이다. 위 사실을 $i=0,1,\ldots, k-1$에 차례로 적용하면 
-
-$$0=\dim A_\mathfrak{p}/(s_1,\ldots, s_k)\leq\dim A_\mathfrak{p}-k$$
-
-를 얻으므로 $\dim A_\mathfrak{p}\geq k$이다. 반대 방향의 부등식은 $\mathfrak{p}$가 $k$개의 원소로 생성되는 ideal을 포함하는 minimal prime이라는 것으로부터 나오는데, [\[가환대수학\] §차원, ⁋정리 7](/ko/math/commutative_algebra/Krull_dimension#thm7)에 의하여 $\codim\mathfrak{p}\leq k$이고 이것이 $\dim A_\mathfrak{p}$이기 때문이다. 따라서 $\dim A_\mathfrak{p}=k$, 즉 $\codim_X W=k$이다.
+를 얻으므로 $\dim A_\mathfrak{p}=k$, 즉 $\codim_X W=k$이다.
 :::
 
 ::: 예시 3
