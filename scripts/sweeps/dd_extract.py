@@ -87,6 +87,10 @@ def operand(body, i):
     위첨자는 포함하지 않는다 ((dx)^2 와 dx^2 의 뜻이 갈리므로).
     """
     j = i + 1
+    # `d \y_k` 처럼 손으로 띄워 둔 경우도 미분이다. 공백은 흡수해 버린다
+    # (매크로가 간격을 넣으므로 수동 간격은 필요 없다).
+    while j < len(body) and body[j] in ' \t':
+        j += 1
     if j >= len(body):
         return None
     c = body[j]
@@ -149,9 +153,17 @@ def balanced(s, i, op, cl):
 def classify(body, i, end):
     """AUTO / AMBIG / SKIP 중 하나."""
     before = body[:i]
-    after = body[i + 1:i + 18]
+    after = body[i + 1:i + 18].lstrip(' \t')
     if before[-1:] in ('^', '_'):
         return 'SKIP', '^d / _d (지수·첨자)'
+    # `\bar d` 처럼 d 자체가 악센트 매크로의 인자인 경우. 치환하면 \bar 의 인자가
+    # \dd 로 바뀌어 수식이 깨진다 (KaTeX 게이트가 실제로 잡아낸 사례).
+    if not os.environ.get('DD_NO_ACCENT_SKIP') and re.search(r'\\(?:%s)\s*$' % ACCENT, before):
+        return 'SKIP', '악센트의 인자인 d (\\bar d 등)'
+    # `d d^\ast` (라플라시안 dd*+d*d) 에서 피연산자가 홑 d 로 잡히면
+    # \dd{d}^\ast 가 되어 (dd)^* 로 뜻이 바뀐다. 피연산자가 d 하나면 손대지 않는다.
+    if end is not None and body[i + 1:end].strip() == 'd':
+        return 'SKIP', '피연산자가 홑 d (d d^\\ast 등)'
     if re.match(NOTDIFF, after):
         return 'SKIP', 'd + 관계·이항 매크로'
     if re.match(r'[A-Za-z]{2,}', after):
@@ -217,8 +229,8 @@ def scan(path):
                 continue
             out.append(dict(kind=kind, file=path, line=lineno(a + i),
                             start=a + i, end=a + end,
-                            old=body[i:end], new='\\dd{%s}' % body[i + 1:end],
-                            display=disp, reason=reason,
+                            old=body[i:end], new='\\dd{%s}' % body[i + 1:end].strip(),
+                            display=disp, reason=reason, _op=body[i + 1:end].strip(),
                             context=body[max(0, i - 30):min(len(body), end + 30)]))
     return out
 
@@ -245,8 +257,15 @@ def main():
                     break
                 outer['kind'] = 'NESTED'
                 inner['kind'] = 'NESTED'
+    # id 는 내용 해시로 준다. 순번을 쓰면 추출 규칙을 한 번만 고쳐도 뒤쪽 id 가
+    # 전부 밀려 이미 받아 둔 판정이 통째로 무효가 된다 (실제로 겪음).
+    import hashlib
     for n, r in enumerate(rows):
-        r['id'] = 'c%05d' % n
+        if os.environ.get('DD_SEQ_IDS'):
+            r['id'] = 'c%05d' % n
+        else:
+            key = f"{r['file']}|{r['start']}|{r['old']}".encode()
+            r['id'] = 'd' + hashlib.sha1(key).hexdigest()[:10]
     fh = open(a.out, 'w', encoding='utf-8') if a.out else sys.stdout
     for r in rows:
         fh.write(json.dumps(r, ensure_ascii=False) + '\n')
