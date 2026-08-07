@@ -202,11 +202,11 @@ $$\mathfrak{g}=\mathfrak{t}\oplus\mathfrak{f}$$
 
 한편 임의의 $X\in\mathfrak{t}$와 $Y\in\mathfrak{f}$에 대하여, $q$의 $(eT,t)$에서의 differential은 다음과 같이 계산된다. 방향 $X$에 대하여, 즉 $T$ 방향으로의 변화를 생각하면
 
-$$d q_{(eT,t)}(X,0)=\frac{d}{d\epsilon}\bigg\vert_{\epsilon=0}q(eT, t\exp(\epsilon X))=\frac{d}{d\epsilon}\bigg\vert_{\epsilon=0}t\exp(\epsilon X)=X$$
+$$\dd{q_{(eT,t)}}(X,0)=\frac{d}{\dd{\epsilon}}\bigg\vert_{\epsilon=0}q(eT, t\exp(\epsilon X))=\frac{d}{\dd{\epsilon}}\bigg\vert_{\epsilon=0}t\exp(\epsilon X)=X$$
 
 이다. 여기서 $T$가 abelian이므로 $t$와 $\exp(\epsilon X)$가 commute함을 사용하였다. 다음으로 방향 $Y$에 대하여, 즉 $G/T$ 방향으로의 변화를 생각하면
 
-$$d q_{(eT,t)}(0,Y)=\frac{d}{d\epsilon}\bigg\vert_{\epsilon=0}q(\exp(\epsilon Y)T, t)=\frac{d}{d\epsilon}\bigg\vert_{\epsilon=0}\exp(\epsilon Y)t\exp(-\epsilon Y)$$
+$$\dd{q_{(eT,t)}}(0,Y)=\frac{d}{\dd{\epsilon}}\bigg\vert_{\epsilon=0}q(\exp(\epsilon Y)T, t)=\frac{d}{\dd{\epsilon}}\bigg\vert_{\epsilon=0}\exp(\epsilon Y)t\exp(-\epsilon Y)$$
 
 이다. 이제 $t=\exp(H)$ ($H\in\mathfrak{t}$)로 쓰면,
 
@@ -214,29 +214,29 @@ $$\exp(\epsilon Y)t\exp(-\epsilon Y)=\exp(\epsilon Y)\exp(H)\exp(-\epsilon Y)=\e
 
 이고, 따라서
 
-$$\frac{d}{d\epsilon}\bigg\vert_{\epsilon=0}\exp(\epsilon Y)t\exp(-\epsilon Y)=\frac{d}{d\epsilon}\bigg\vert_{\epsilon=0}\exp(H+\epsilon[Y,H])=\exp(H)\cdot [Y,H]$$
+$$\frac{d}{\dd{\epsilon}}\bigg\vert_{\epsilon=0}\exp(\epsilon Y)t\exp(-\epsilon Y)=\frac{d}{\dd{\epsilon}}\bigg\vert_{\epsilon=0}\exp(H+\epsilon[Y,H])=\exp(H)\cdot [Y,H]$$
 
 이다. 여기서 $\mathfrak{t}$가 abelian이므로 $[Y,H]\in\mathfrak{f}$이고, $\exp(H)=t$이므로 이는 $t\cdot(\Ad_t^{-1}(Y)-Y)$로 쓸 수 있다. 정리하면, 적절한 identification 하에서
 
-$$d q_{(eT,t)}=\begin{pmatrix} I & 0 \\ 0 & \Ad_t^{-1}\vert_\mathfrak{f}-I \end{pmatrix}$$
+$$\dd{q_{(eT,t)}}=\begin{pmatrix} I & 0 \\ 0 & \Ad_t^{-1}\vert_\mathfrak{f}-I \end{pmatrix}$$
 
 이다. 여기서 첫 번째 block은 $\mathfrak{t}$ 방향, 두 번째 block은 $\mathfrak{f}$ 방향에 해당한다.
 
 이제 $\Ad_t^{-1}\vert_\mathfrak{f}-I$가 가역이며, 모든 preimage에서 sign이 맞아떨어짐을 보인다. 만약 $(\Ad_t^{-1}-I)Y=0$인 $Y\in\mathfrak{f}$가 존재한다면, $\Ad_t(Y)=Y$이다. 그럼 임의의 정수 $m$에 대하여 $\Ad_{t^m}(Y)=Y$이고, $t$가 generator라는 가정으로부터 모든 $s\in T$에 대하여 $\Ad_s(Y)=Y$이다. 이제 임의의 $H\in\mathfrak{t}$에 대하여,
 
-$$[H,Y]=\frac{d}{d\epsilon}\bigg\vert_{\epsilon=0}\Ad_{\exp(\epsilon H)}(Y)=0$$
+$$[H,Y]=\frac{d}{\dd{\epsilon}}\bigg\vert_{\epsilon=0}\Ad_{\exp(\epsilon H)}(Y)=0$$
 
 이므로 $Y$는 $\mathfrak{t}$의 모든 원소와 commute한다. 그런데 $\mathfrak{t}$는 maximal abelian subalgebra이므로 $Y\in\mathfrak{t}$이고, 따라서 $Y\in\mathfrak{f}\cap\mathfrak{t}=\{0\}$이다. 즉 $\Ad_t^{-1}\vert_\mathfrak{f}-I$는 가역이다.
 
-마지막으로, $q^{-1}(t)$의 모든 점에서 $dq$의 determinant가 같은 부호를 갖는지 확인하자. 임의의 $w\in W$를 택하고 이를 $x\in N$이 represent한다 하자. 그럼 $q(xT,x^{-1}tx)=t$이므로 $(xT, x^{-1}tx)\in q^{-1}(t)$이다. 이 점에서의 differential을 계산하기 위해, $q$의 정의로부터
+마지막으로, $q^{-1}(t)$의 모든 점에서 $\dd{q}$의 determinant가 같은 부호를 갖는지 확인하자. 임의의 $w\in W$를 택하고 이를 $x\in N$이 represent한다 하자. 그럼 $q(xT,x^{-1}tx)=t$이므로 $(xT, x^{-1}tx)\in q^{-1}(t)$이다. 이 점에서의 differential을 계산하기 위해, $q$의 정의로부터
 
 $$q(gT, s)=gsg^{-1}$$
 
 이므로, left translation by $x$와 conjugation by $x$를 고려하면
 
-$$d q_{(xT, x^{-1}tx)}=\Ad_x\circ d q_{(eT, t)}\circ (\text{left translation})$$
+$$\dd{q_{(xT, x^{-1}tx)}}=\Ad_x\circ \dd{q_{(eT, t)}}\circ (\text{left translation})$$
 
-이다. 특히 $\Ad_x\vert_\mathfrak{f}$와 $\Ad_x\vert_\mathfrak{t}$는 모두 determinant가 $1$인 linear map이며 (전자는 orthogonal map이므로, 후자는 $x\in N$이므로 $\Ad_x$가 $\mathfrak{t}$를 보존하므로), 따라서 $d q_{(xT, x^{-1}tx)}$의 determinant는 $d q_{(eT,t)}$의 determinant와 같다.
+이다. 특히 $\Ad_x\vert_\mathfrak{f}$와 $\Ad_x\vert_\mathfrak{t}$는 모두 determinant가 $1$인 linear map이며 (전자는 orthogonal map이므로, 후자는 $x\in N$이므로 $\Ad_x$가 $\mathfrak{t}$를 보존하므로), 따라서 $\dd{q_{(xT, x^{-1}tx)}}$의 determinant는 $\dd{q_{(eT,t)}}$의 determinant와 같다.
 
 한편 $\det(\Ad_t^{-1}\vert_\mathfrak{f}-I)$는 $w\cdot t$에 대해서도 동일하다. 실제로
 
@@ -244,7 +244,7 @@ $$\Ad_{wt^{-1}w^{-1}}\vert_\mathfrak{f}-I=\Ad_w\circ(\Ad_t^{-1}\vert_\mathfrak{f
 
 이므로, 이 두 operator는 similar하고 따라서 같은 determinant를 갖는다.
 
-이상에서 $t$는 $q$의 regular value이고, $q^{-1}(t)$의 원소 개수는 $\lvert W\rvert$이며, 모든 preimage 점에서 $dq$의 determinant는 같은 부호를 갖는다는 것을 확인하였다. 따라서 적절한 orientation 선택 하에서 $\deg q=\lvert W\rvert$이다.
+이상에서 $t$는 $q$의 regular value이고, $q^{-1}(t)$의 원소 개수는 $\lvert W\rvert$이며, 모든 preimage 점에서 $\dd{q}$의 determinant는 같은 부호를 갖는다는 것을 확인하였다. 따라서 적절한 orientation 선택 하에서 $\deg q=\lvert W\rvert$이다.
 :::
 
 위에서 언급한 것과 같이, 이 보조정리로부터 이 섹션의 핵심적인 내용이 바로 따라나온다.

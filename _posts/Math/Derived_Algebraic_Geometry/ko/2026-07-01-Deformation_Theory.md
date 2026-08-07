@@ -208,7 +208,7 @@ $$0\longrightarrow I/I^2\overset{\overline{d}}{\longrightarrow}\Omega_{P/k}\otim
 ::: 예시 11 (node)
 $B=k[\x,\y]/(\x\y)$를 생각하자. 이는 평면 위 두 직선이 한 점에서 만나는 *node*, 곧 $A_1$ singular point의 coordinate ring이다. Hypersurface이므로 $I=(\x\y)$이 nonzerodivisor로 생성되어 lci이고, [\[가환대수학\] §미분, ⁋예시 15](/ko/math/commutative_algebra/differentials#ex15)의 계산에서
 
-$$\operatorname{NL}_{B/k}=\Bigl[B\overline{f}\overset{\overline{d}}{\longrightarrow}B d\x\oplus B d\y\Bigr],\qquad\overline{d}(\overline{f})=\y d\x+\x d\y$$
+$$\operatorname{NL}_{B/k}=\Bigl[B\overline{f}\overset{\overline{d}}{\longrightarrow}B \dd{\x}\oplus B \dd{\y}\Bigr],\qquad\overline{d}(\overline{f})=\y \dd{\x}+\x \dd{\y}$$
 
 이다 ($f=\x\y$, $\partial f/\partial\x=\y$, $\partial f/\partial\y=\x$). 이를 dual하면 $\overline{d}^\ast:B^2\rightarrow B$, $(b_1,b_2)\mapsto b_1\y+b_2\x$이므로
 
@@ -228,7 +228,7 @@ $f_1=\x\y$, $f_2=\y\z$, $f_3=\z\x$라 하면, $\overline{d}:I/I^2\rightarrow B^3
 
 $$\overline{d}(\overline{f_1})=(\y,\x,0),\quad\overline{d}(\overline{f_2})=(0,\z,\y),\quad\overline{d}(\overline{f_3})=(\z,0,\x)$$
 
-으로 주어진다 ($B^3=B d\x\oplus B d\y\oplus B d\z$). 이제 원소 $\x\cdot\overline{f_2}\in I/I^2$을 보자. $B$ 위에서 $\x\z=\x\y=0$이므로
+으로 주어진다 ($B^3=B \dd{\x}\oplus B \dd{\y}\oplus B \dd{\z}$). 이제 원소 $\x\cdot\overline{f_2}\in I/I^2$을 보자. $B$ 위에서 $\x\z=\x\y=0$이므로
 
 $$\overline{d}(\x\cdot\overline{f_2})=\x\cdot(0,\z,\y)=(0,\x\z,\x\y)=(0,0,0)$$
 

@@ -141,7 +141,7 @@ $$\cdots\rightarrow 0\rightarrow 0\rightarrow 0\rightarrow\cdots$$
 에서, $f_n-g_n=d_{n+1}^Dh_n+h_{n-1}d_n^C$가 성립하도록 하는 $h_n:C_n\rightarrow D_{n+1}$의 모임이다. 만일 $f,g$ 사이의 chain homotopy가 존재한다면, $f$와 $g$가 *homotopic*한 chain map이라 부른다. 
 :::
 
-만일 어떤 chain map $f$에 대하여, $f=dh+hd$를 만족하는 $h$가 존재한다면, $h$를 $f$와 $0$ 사이의 chain homotopy로 볼 수 있다. 따라서 이와 같은 $h$가 존재할 경우 $f$를 *null homotopic*하다 부른다. 
+만일 어떤 chain map $f$에 대하여, $f=\dd{h}+hd$를 만족하는 $h$가 존재한다면, $h$를 $f$와 $0$ 사이의 chain homotopy로 볼 수 있다. 따라서 이와 같은 $h$가 존재할 경우 $f$를 *null homotopic*하다 부른다. 
 
 ::: 명제 6
 두 homotopic chain map $f,g:C\rightarrow D$는 homology들 위에서 같은 함수를 유도한다.

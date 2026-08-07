@@ -95,7 +95,7 @@ $\Delta$의 한 꼭짓점 $p$을 택하면, simple 조건에 의해 $p$에서 �
 
 ## 사교 축약에 의한 구성
 
-이제 [\[사교기하학\] §운동량 사상, ⁋예시 8](/ko/math/symplectic_geometry/moment_map#ex8)의 $\mathbb{C}^d$ 위 표준 Hamiltonian torus action에서 출발한다. $\mathbb{C}^d$에 좌표 $z_k=x_k+iy_k$와 symplectic form $\omega_0=\sum_{k=1}^d dx_k\wedge dy_k$을 주고, $\mathbb{T}^d$이 성분별 회전
+이제 [\[사교기하학\] §운동량 사상, ⁋예시 8](/ko/math/symplectic_geometry/moment_map#ex8)의 $\mathbb{C}^d$ 위 표준 Hamiltonian torus action에서 출발한다. $\mathbb{C}^d$에 좌표 $z_k=x_k+iy_k$와 symplectic form $\omega_0=\sum_{k=1}^d \dd{x_k}\wedge \dd{y_k}$을 주고, $\mathbb{T}^d$이 성분별 회전
 
 $$(t_1,\ldots,t_d)\cdot(z_1,\ldots,z_d)=(e^{2\pi it_1}z_1,\ldots,e^{2\pi it_d}z_d)$$
 

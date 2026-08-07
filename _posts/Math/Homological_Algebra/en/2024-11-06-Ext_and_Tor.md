@@ -229,9 +229,9 @@ Finally we define the following.
 Let a commutative ring $A$, a free $A$-module $F$ of rank $n$, and an $A$-linear map $\varphi : F \rightarrow A$ be given. Then the *Koszul complex* $K(\varphi)_\bullet$ is the exterior algebra $K=\bigwedge F$ equipped with a chain complex structure as follows:
 
 1. For each $i$, $K_i = \bigwedge\nolimits^i F$.
-2. For each $i$, $d_i: K_i \rightarrow K_{i-1}$ is a graded derivation of degree $-1$ uniquely determined by the formula $d(f) = \varphi(f)$ and the Leibniz rule
+2. For each $i$, $d_i: K_i \rightarrow K_{i-1}$ is a graded derivation of degree $-1$ uniquely determined by the formula $\dd{(f)} = \varphi(f)$ and the Leibniz rule
 
-    $$d(\xi \wedge \eta) = d(\xi) \wedge \eta + (-1)^{\degree(\xi)} \, \xi \wedge d(\eta)$$
+    $$\dd{(\xi \wedge \eta)} = \dd{(\xi)} \wedge \eta + (-1)^{\degree(\xi)} \, \xi \wedge \dd{(\eta)}$$
 :::
 
 Defining the augmentation map $\epsilon: K_0=A\rightarrow A/\im\varphi$ as the canonical projection, we can regard $K(\varphi)_\bullet$ as a resolution of $A/\im\varphi$. For convenience, fix a basis $e_1, \ldots, e_n$ of $F$ and set $\x_i = \varphi(e_i)$; then $\im\varphi = (\x_1, \ldots, \x_n)$, so we also write this as $K_\bullet(\x_1, \ldots, \x_n)$.

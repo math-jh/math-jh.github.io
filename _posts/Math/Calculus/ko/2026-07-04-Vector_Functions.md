@@ -134,23 +134,23 @@ $$\sum_k \lVert \mathbf{r}(t_k) - \mathbf{r}(t_{k-1})\rVert$$
 ::: 정의 5
 일급곡선 $\mathbf{r}\colon [a, b] \rightarrow \mathbb{R}^n$의 *arc length<sub>호의 길이</sub>*는
 
-$$L = \int_a^b \lVert \mathbf{r}'(t)\rVert \mathop{dt}$$
+$$L = \int_a^b \lVert \mathbf{r}'(t)\rVert \dd{t}$$
 
 이다.
 :::
 
 피적분함수 $\lVert \mathbf{r}'(t)\rVert$는 연속이므로 적분가능하다 ([§적분, ⁋정리 10](/ko/math/calculus/integration#thm10)). 이제 시작점에서 잰 arc length
 
-$$s(t) = \int_a^t \lVert \mathbf{r}'(\tau)\rVert \mathop{d\tau}$$
+$$s(t) = \int_a^t \lVert \mathbf{r}'(\tau)\rVert \dd{\tau}$$
 
 를 *arc length<sub>호의 길이</sub>*라 하며, 미적분의 기본정리에 의해 $s'(t) = \lVert \mathbf{r}'(t)\rVert > 0$이므로 $s$는 증가함수이고, $t$를 $s$로 풀어 곡선을 arc length로 다시 매개화할 수 있다.
 
 ::: 명제 6
-곡선을 arc length $s$로 매개화하면 단위속력이다. 즉 $\lVert d\mathbf{r}/ds\rVert = 1$이다.
+곡선을 arc length $s$로 매개화하면 단위속력이다. 즉 $\lVert d\mathbf{r}/\dd{s}\rVert = 1$이다.
 :::
 
 ::: 증명
-연쇄법칙으로 $d\mathbf{r}/\mathop{dt} = (d\mathbf{r}/ds)(ds/\mathop{dt})$이고 $ds/\mathop{dt} = \lVert \mathbf{r}'(t)\rVert = \lVert d\mathbf{r}/\mathop{dt}\rVert$이므로, $\lVert d\mathbf{r}/ds\rVert = \lVert d\mathbf{r}/\mathop{dt}\rVert / (ds/\mathop{dt}) = 1$이다.
+연쇄법칙으로 $d\mathbf{r}/\dd{t} = (d\mathbf{r}/\dd{s})(\dd{s}/\dd{t})$이고 $\dd{s}/\dd{t} = \lVert \mathbf{r}'(t)\rVert = \lVert d\mathbf{r}/\dd{t}\rVert$이므로, $\lVert d\mathbf{r}/\dd{s}\rVert = \lVert d\mathbf{r}/\dd{t}\rVert / (\dd{s}/\dd{t}) = 1$이다.
 :::
 
 이렇게 얻어지는 parametrization을 *arc length parametrization*이라 부른다. 
@@ -162,16 +162,16 @@ $$s(t) = \int_a^t \lVert \mathbf{r}'(\tau)\rVert \mathop{d\tau}$$
 ::: 정의 7
 이급정칙곡선의 *곡률<sub>curvature</sub>*은 단위접선벡터가 arc length에 대해 변하는 비율의 크기
 
-$$\kappa = \left\lVert \frac{d\mathbf{T}}{ds}\right\rVert$$
+$$\kappa = \left\lVert \frac{d\mathbf{T}}{\dd{s}}\right\rVert$$
 
-이다. $d\mathbf{T}/ds \neq 0$일 때 그 방향의 단위벡터 
+이다. $d\mathbf{T}/\dd{s} \neq 0$일 때 그 방향의 단위벡터 
 
-$$\mathbf{N} = \frac{d\mathbf{T}/ds}{\lVert d\mathbf{T}/ds\rVert}$$
+$$\mathbf{N} = \frac{d\mathbf{T}/\dd{s}}{\lVert d\mathbf{T}/\dd{s}\rVert}$$
 
 를 *단위법선벡터<sub>unit normal vector</sub>*라 한다.
 :::
 
-[명제 6](#prop6)에 의해 $\mathbf{T} = d\mathbf{r}/ds$는 단위벡터인 것에 주목하자. 그럼 [명제 3](#prop3) 직후에 살펴본, 길이가 일정한 벡터의 변화율은 그 벡터에 수직이라는 앞의 관찰에 의해 $d\mathbf{T}/ds \perp \mathbf{T}$이다. 즉, 단위법선벡터 $\mathbf{N}$은 항상 접선에 수직이며, 곡선이 휘어 들어가는 안쪽을 가리킨다. 
+[명제 6](#prop6)에 의해 $\mathbf{T} = d\mathbf{r}/\dd{s}$는 단위벡터인 것에 주목하자. 그럼 [명제 3](#prop3) 직후에 살펴본, 길이가 일정한 벡터의 변화율은 그 벡터에 수직이라는 앞의 관찰에 의해 $d\mathbf{T}/\dd{s} \perp \mathbf{T}$이다. 즉, 단위법선벡터 $\mathbf{N}$은 항상 접선에 수직이며, 곡선이 휘어 들어가는 안쪽을 가리킨다. 
 
 위의 정의는 일반적인 $n$차원 공간 안에서의 곡선에 대한 것이지만, $3$차원 공간에서는 외적을 사용하면 이를 더 편하게 계산할 수 있다. 특히, 다음 공식은 arc length parametrization 없이 바로 적용 가능하므로 훨씬 편하다.
 
@@ -188,11 +188,11 @@ $$\kappa = \frac{\lvert f''\rvert}{(1 + f'^2)^{3/2}}$$
 :::
 
 ::: 증명
-$v = \lVert \mathbf{r}'\rVert = ds/\mathop{dt}$로 두면 $\mathbf{r}' = v\mathbf{T}$이다. 곱의 미분법에 의해
+$v = \lVert \mathbf{r}'\rVert = \dd{s}/\dd{t}$로 두면 $\mathbf{r}' = v\mathbf{T}$이다. 곱의 미분법에 의해
 
 $$\mathbf{r}'' = v'\mathbf{T} + v\mathbf{T}'(t)$$
 
-이고, 연쇄법칙 $\mathbf{T}'(t) = (d\mathbf{T}/ds)v$와 $\lVert d\mathbf{T}/ds\rVert = \kappa$에서 $\mathbf{T}'(t) = \kappa v\mathbf{N}$이다. 따라서
+이고, 연쇄법칙 $\mathbf{T}'(t) = (d\mathbf{T}/\dd{s})v$와 $\lVert d\mathbf{T}/\dd{s}\rVert = \kappa$에서 $\mathbf{T}'(t) = \kappa v\mathbf{N}$이다. 따라서
 
 $$\mathbf{r}' \times \mathbf{r}'' = (v\mathbf{T}) \times (v'\mathbf{T} + \kappa v^2\mathbf{N}) = v^3 \kappa(\mathbf{T} \times \mathbf{N})$$
 
@@ -208,12 +208,12 @@ $$\lVert \mathbf{r}' \times \mathbf{r}''\rVert = v^3 \kappa = \lVert \mathbf{r}'
 ::: 명제 9 (가속도의 분해)
 이급정칙곡선의 가속도는 
 
-$$\mathbf{r}'' = \frac{dv}{\mathop{dt}}\mathbf{T} + \kappa v^2\mathbf{N}$$
+$$\mathbf{r}'' = \frac{\dd{v}}{\dd{t}}\mathbf{T} + \kappa v^2\mathbf{N}$$
 
 으로 분해된다. 여기서 $v = \lVert \mathbf{r}'\rVert$는 속력이다.
 :::
 
-접선 성분 $dv/\mathop{dt}$는 속력이 변하는 정도를 알려주고, 법선 성분 $\kappa v^2$은 방향이 휘는 정도를 알려준다. 등속운동이면 $dv/\mathop{dt} = 0$이라 가속도는 순전히 법선 방향, 곧 구심가속도뿐이고 그 크기는 $\kappa v^2$이다. 
+접선 성분 $\dd{v}/\dd{t}$는 속력이 변하는 정도를 알려주고, 법선 성분 $\kappa v^2$은 방향이 휘는 정도를 알려준다. 등속운동이면 $\dd{v}/\dd{t} = 0$이라 가속도는 순전히 법선 방향, 곧 구심가속도뿐이고 그 크기는 $\kappa v^2$이다. 
 
 ::: 예시 10 (나선)
 나선 $\mathbf{r}(t) = (\cos t, \sin t, t)$에 대해 $\mathbf{r}'(t) = (-\sin t, \cos t, 1)$, $\mathbf{r}''(t) = (-\cos t, -\sin t, 0)$이다. 외적은

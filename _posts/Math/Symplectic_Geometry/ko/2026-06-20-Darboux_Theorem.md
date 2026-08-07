@@ -21,23 +21,23 @@ published: false
 
 ## Poincaré lemma
 
-Moser의 방법은 $\omega-\omega_0$가 exact라는 사실, 즉 적당한 $1$-form $\alpha$에 대하여 $\omega-\omega_0=d\alpha$임을 필요로 한다. 한 점 근방의 작은 공으로 정의역을 제한하면 closed form은 언제나 exact가 되는데, 이것이 Poincaré lemma이다. ([\[대수적 위상수학\] §코호몰로지](/ko/math/algebraic_topology/cohomology)) 우리의 증명에서는 단순히 $d\alpha=\omega-\omega_0$인 $\alpha$가 존재한다는 것뿐 아니라, 그 $\alpha$를 중심점에서 사라지도록 택할 수 있다는 정밀한 형태가 필요하다. 이를 위해 명시적인 homotopy operator를 구성한다.
+Moser의 방법은 $\omega-\omega_0$가 exact라는 사실, 즉 적당한 $1$-form $\alpha$에 대하여 $\omega-\omega_0=\dd{\alpha}$임을 필요로 한다. 한 점 근방의 작은 공으로 정의역을 제한하면 closed form은 언제나 exact가 되는데, 이것이 Poincaré lemma이다. ([\[대수적 위상수학\] §코호몰로지](/ko/math/algebraic_topology/cohomology)) 우리의 증명에서는 단순히 $\dd{\alpha}=\omega-\omega_0$인 $\alpha$가 존재한다는 것뿐 아니라, 그 $\alpha$를 중심점에서 사라지도록 택할 수 있다는 정밀한 형태가 필요하다. 이를 위해 명시적인 homotopy operator를 구성한다.
 
 ::: 보조정리 1
-원점 $0$을 포함하는 볼록열린집합 $U\subseteq\mathbb{R}^m$ 위에서 정의된 closed $k$-form $\beta$ ($k\geq 1$)에 대하여, $U$ 위의 $(k-1)$-form $\alpha$가 존재하여 $d\alpha=\beta$를 만족한다. 더욱이 $\beta_0=0$이면, 즉 $\beta$가 원점에서 사라지면, 위의 $\alpha$를 $\alpha_0=0$이도록 택할 수 있다.
+원점 $0$을 포함하는 볼록열린집합 $U\subseteq\mathbb{R}^m$ 위에서 정의된 closed $k$-form $\beta$ ($k\geq 1$)에 대하여, $U$ 위의 $(k-1)$-form $\alpha$가 존재하여 $\dd{\alpha}=\beta$를 만족한다. 더욱이 $\beta_0=0$이면, 즉 $\beta$가 원점에서 사라지면, 위의 $\alpha$를 $\alpha_0=0$이도록 택할 수 있다.
 :::
 ::: 증명
-$U$가 원점에 대해 볼록이므로, 각 $t\in[0,1]$에 대하여 scaling map $\psi_t(x)=tx$는 $U$를 $U$ 안으로 보낸다. $\psi_1=\id_U$이고 $\psi_0$은 상수사상 $x\mapsto 0$이다. 이 homotopy를 따라 $k$-form들에 작용하는 operator $h:\Omega^k(U)\rightarrow\Omega^{k-1}(U)$를 다음과 같이 정의한다. $x\in U$에서 생성벡터장 $V_t$를 $\frac{d}{dt}\psi_t(x)=x=V_t(\psi_t(x))$로 두면 $V_t(y)=y/t$이며, 우리는
+$U$가 원점에 대해 볼록이므로, 각 $t\in[0,1]$에 대하여 scaling map $\psi_t(x)=tx$는 $U$를 $U$ 안으로 보낸다. $\psi_1=\id_U$이고 $\psi_0$은 상수사상 $x\mapsto 0$이다. 이 homotopy를 따라 $k$-form들에 작용하는 operator $h:\Omega^k(U)\rightarrow\Omega^{k-1}(U)$를 다음과 같이 정의한다. $x\in U$에서 생성벡터장 $V_t$를 $\frac{d}{\dd{t}}\psi_t(x)=x=V_t(\psi_t(x))$로 두면 $V_t(y)=y/t$이며, 우리는
 
-$$(h\beta)_x(v_1,\ldots,v_{k-1})=\int_0^1 \bigl(\iota_{V_t}(\psi_t^\ast\beta)\bigr)_x(v_1,\ldots,v_{k-1})\,dt=\int_0^1 t^{k-1}\beta_{tx}(x,v_1,\ldots,v_{k-1})\,dt$$
+$$(h\beta)_x(v_1,\ldots,v_{k-1})=\int_0^1 \bigl(\iota_{V_t}(\psi_t^\ast\beta)\bigr)_x(v_1,\ldots,v_{k-1})\dd{t}=\int_0^1 t^{k-1}\beta_{tx}(x,v_1,\ldots,v_{k-1})\dd{t}$$
 
 으로 둔다. 마지막 등식은 $\psi_t^\ast\beta$를 풀어 쓰고 $\iota_{V_t}$를 적용하여 $t$의 거듭제곱을 모은 것이다. 표준적인 계산에 의하여 이 operator는 chain homotopy 항등식
 
-$$d(h\beta)+h(d\beta)=\psi_1^\ast\beta-\psi_0^\ast\beta$$
+$$\dd{(h\beta)}+h(\dd{\beta})=\psi_1^\ast\beta-\psi_0^\ast\beta$$
 
-를 만족한다. ([\[미분다양체\] §리 미분, ⁋명제 4](/ko/math/manifolds/Lie_derivative#prop4)의 Cartan 공식 $\mathcal{L}_{V_t}=d\iota_{V_t}+\iota_{V_t}d$를 적분한 것이다.) 이제 $\beta$가 closed이므로 $d\beta=0$이고, $k\geq 1$이므로 $\psi_0^\ast\beta=0$이다. 따라서 $\alpha=h\beta$로 두면
+를 만족한다. ([\[미분다양체\] §리 미분, ⁋명제 4](/ko/math/manifolds/Lie_derivative#prop4)의 Cartan 공식 $\mathcal{L}_{V_t}=\dd{\iota_{V_t}}+\iota_{V_t}d$를 적분한 것이다.) 이제 $\beta$가 closed이므로 $\dd{\beta}=0$이고, $k\geq 1$이므로 $\psi_0^\ast\beta=0$이다. 따라서 $\alpha=h\beta$로 두면
 
-$$d\alpha=d(h\beta)=\psi_1^\ast\beta=\beta$$
+$$\dd{\alpha}=\dd{(h\beta)}=\psi_1^\ast\beta=\beta$$
 
 를 얻는다.
 
@@ -55,7 +55,7 @@ $(M,\omega)$가 $2n$차원 symplectic manifold라 하자. 그럼 임의의 점 $
 
 $$\varphi^\ast\omega_0=\omega\vert_U$$
 
-가 성립한다. 여기서 $\omega_0=\sum_{i=1}^n dx_i\wedge dy_i$은 $\mathbb{R}^{2n}$의 canonical symplectic form이다. 즉 $U$에서 좌표 $(x_1,\ldots,x_n,y_1,\ldots,y_n)$을 적당히 택하면 $\omega=\sum_{i=1}^n dx_i\wedge dy_i$로 적힌다.
+가 성립한다. 여기서 $\omega_0=\sum_{i=1}^n \dd{x_i}\wedge \dd{y_i}$은 $\mathbb{R}^{2n}$의 canonical symplectic form이다. 즉 $U$에서 좌표 $(x_1,\ldots,x_n,y_1,\ldots,y_n)$을 적당히 택하면 $\omega=\sum_{i=1}^n \dd{x_i}\wedge \dd{y_i}$로 적힌다.
 :::
 ::: 증명
 문제가 국소적이므로, 우선 $p$ 근방의 임의의 좌표계를 잡아 상황을 $\mathbb{R}^{2n}$의 원점 $0$ 근방에서의 문제로 옮긴다. 즉 $0$의 열린근방 위에서 symplectic form $\omega$가 주어졌고 $p$가 $0$에 대응한다고 가정해도 좋으며, 우리의 목표는 $0$ 근방에서 정의된 diffeomorphism $\varphi$로 $0$을 고정하고 $\varphi^\ast\omega_0=\omega$를 만족하는 것을 찾는 것이다.
@@ -70,7 +70,7 @@ $$\omega\vert_0=\omega_0\vert_0\qquad\text{(원점 }0\text{에서)}$$
 
 $$\omega_t=\omega_0+t(\omega-\omega_0)=(1-t)\omega_0+t\omega,\qquad t\in[0,1]$$
 
-으로 정의한다. 각 $\omega_t$는 closed인 두 form의 일차결합이므로 $d\omega_t=0$이다. 한편 nondegeneracy를 살펴보자. 원점에서는 $\omega\vert_0=\omega_0\vert_0$이므로 모든 $t$에 대해
+으로 정의한다. 각 $\omega_t$는 closed인 두 form의 일차결합이므로 $\dd{\omega_t}=0$이다. 한편 nondegeneracy를 살펴보자. 원점에서는 $\omega\vert_0=\omega_0\vert_0$이므로 모든 $t$에 대해
 
 $$\omega_t\vert_0=(1-t)\,\omega_0\vert_0+t\,\omega\vert_0=\omega_0\vert_0$$
 
@@ -78,7 +78,7 @@ $$\omega_t\vert_0=(1-t)\,\omega_0\vert_0+t\,\omega\vert_0=\omega_0\vert_0$$
 
 **3단계 ($\alpha$의 선택).** $\omega-\omega_0$은 $B$ 위에서 closed이고, $B$가 볼록이므로 [보조정리 1](#lem1)에 의하여 $1$-form $\alpha$가 존재하여
 
-$$d\alpha=\omega-\omega_0$$
+$$\dd{\alpha}=\omega-\omega_0$$
 
 을 만족한다. 더욱이 1단계에 의하여 $\omega-\omega_0$은 원점에서 사라지므로, [보조정리 1](#lem1)의 정밀한 형태에 의해 $\alpha_0=0$이도록 택할 수 있다.
 
@@ -88,23 +88,23 @@ $$\iota_{X_t}\omega_t=-\alpha\tag{$\ast$}$$
 
 으로 유일하게 정의할 수 있다. 원점에서는 $\alpha_0=0$이므로 $\iota_{(X_t)_0}(\omega_t)_0=0$이고, $(\omega_t)_0$이 nondegenerate이므로 $(X_t)_0=0$이다. 즉 원점은 모든 $t$에 대해 $X_t$의 영점이다.
 
-이제 $X_t$의 흐름 $\phi_t$, 즉 $\phi_0=\id$이고 $\frac{d}{dt}\phi_t(x)=X_t(\phi_t(x))$를 만족하는 isotopy를 생각한다. 일반적으로 시간의존 벡터장의 흐름은 짧은 시간 동안만 정의될 수 있으나, 원점이 $X_t$의 영점이므로 흐름은 원점을 고정하며, 흐름의 정의역에 대한 연속의존성에 의하여 ([\[미분다양체\] §벡터장, ⁋정리 6](/ko/math/manifolds/vector_fields#thm6)) 원점의 충분히 작은 열린근방 $U\subseteq B$가 존재하여 $\phi_t$가 모든 $t\in[0,1]$에 대해 $U$ 위에서 정의되고 $\phi_t(U)\subseteq B$이도록 할 수 있다.
+이제 $X_t$의 흐름 $\phi_t$, 즉 $\phi_0=\id$이고 $\frac{d}{\dd{t}}\phi_t(x)=X_t(\phi_t(x))$를 만족하는 isotopy를 생각한다. 일반적으로 시간의존 벡터장의 흐름은 짧은 시간 동안만 정의될 수 있으나, 원점이 $X_t$의 영점이므로 흐름은 원점을 고정하며, 흐름의 정의역에 대한 연속의존성에 의하여 ([\[미분다양체\] §벡터장, ⁋정리 6](/ko/math/manifolds/vector_fields#thm6)) 원점의 충분히 작은 열린근방 $U\subseteq B$가 존재하여 $\phi_t$가 모든 $t\in[0,1]$에 대해 $U$ 위에서 정의되고 $\phi_t(U)\subseteq B$이도록 할 수 있다.
 
 **5단계 (Cartan 공식 계산).** $U$ 위에서 $\phi_t^\ast\omega_t$가 $t$에 무관하게 일정함을 보인다. $t$에 대해 미분하면
 
-$$\frac{d}{dt}(\phi_t^\ast\omega_t)=\phi_t^\ast\left(\mathcal{L}_{X_t}\omega_t+\frac{d\omega_t}{dt}\right)$$
+$$\frac{d}{\dd{t}}(\phi_t^\ast\omega_t)=\phi_t^\ast\left(\mathcal{L}_{X_t}\omega_t+\frac{\dd{\omega_t}}{\dd{t}}\right)$$
 
-이다. 여기서 첫째 항은 흐름에 의한 pullback의 시간미분이 Lie derivative로 주어진다는 사실에서, 둘째 항은 $\omega_t$ 자체가 $t$에 의존하는 부분에서 나온다. 이제 [\[미분다양체\] §리 미분, ⁋명제 4](/ko/math/manifolds/Lie_derivative#prop4)의 Cartan 공식 $\mathcal{L}_{X_t}=d\iota_{X_t}+\iota_{X_t}d$를 적용하고, $\omega_t$가 closed이므로 $\iota_{X_t}(d\omega_t)=0$임과 $\frac{d\omega_t}{dt}=\omega-\omega_0=d\alpha$임을 쓰면
+이다. 여기서 첫째 항은 흐름에 의한 pullback의 시간미분이 Lie derivative로 주어진다는 사실에서, 둘째 항은 $\omega_t$ 자체가 $t$에 의존하는 부분에서 나온다. 이제 [\[미분다양체\] §리 미분, ⁋명제 4](/ko/math/manifolds/Lie_derivative#prop4)의 Cartan 공식 $\mathcal{L}_{X_t}=\dd{\iota_{X_t}}+\iota_{X_t}d$를 적용하고, $\omega_t$가 closed이므로 $\iota_{X_t}(\dd{\omega_t})=0$임과 $\frac{\dd{\omega_t}}{\dd{t}}=\omega-\omega_0=\dd{\alpha}$임을 쓰면
 
 $$\begin{aligned}
-\mathcal{L}_{X_t}\omega_t+\frac{d\omega_t}{dt}&=d(\iota_{X_t}\omega_t)+\iota_{X_t}(d\omega_t)+d\alpha\\
-&=d(\iota_{X_t}\omega_t)+d\alpha\\
-&=d(\iota_{X_t}\omega_t+\alpha)
+\mathcal{L}_{X_t}\omega_t+\frac{\dd{\omega_t}}{\dd{t}}&=\dd{(\iota_{X_t}\omega_t)}+\iota_{X_t}(\dd{\omega_t})+\dd{\alpha}\\
+&=\dd{(\iota_{X_t}\omega_t)}+\dd{\alpha}\\
+&=\dd{(\iota_{X_t}\omega_t+\alpha)}
 \end{aligned}$$
 
 을 얻는다. 그런데 $(\ast)$에 의하여 $\iota_{X_t}\omega_t+\alpha=0$이므로 괄호 안이 $0$이고, 따라서
 
-$$\frac{d}{dt}(\phi_t^\ast\omega_t)=\phi_t^\ast\,d(0)=0$$
+$$\frac{d}{\dd{t}}(\phi_t^\ast\omega_t)=\phi_t^\ast\dd{(0)}=0$$
 
 이다. 즉 $\phi_t^\ast\omega_t$는 $t$에 무관하게 일정하다.
 
@@ -133,17 +133,17 @@ $$\phi_t^\ast\omega_t=\omega_0$$
 이 모든 $t$에 대해 성립한다. 특히 $\phi_1$은 $(M,\omega_0)$과 $(M,\omega_1)$ 사이의 symplectomorphism이다.
 :::
 ::: 증명
-$[\omega_t]$가 $t$에 무관하게 일정하므로, 그 시간미분의 cohomology class는 $\frac{d}{dt}[\omega_t]=\left[\frac{d\omega_t}{dt}\right]=0$이다. 즉 각 $t$에 대하여 closed $2$-form $\frac{d\omega_t}{dt}$는 exact이다. 표준적인 논증에 의하여 ([\[대수적 위상수학\] §코호몰로지](/ko/math/algebraic_topology/cohomology)) 이 exact form들을 $t$에 대해 $C^\infty$로 의존하는 $1$-form들의 족 $\alpha_t$로 적을 수 있어,
+$[\omega_t]$가 $t$에 무관하게 일정하므로, 그 시간미분의 cohomology class는 $\frac{d}{\dd{t}}[\omega_t]=\left[\frac{\dd{\omega_t}}{\dd{t}}\right]=0$이다. 즉 각 $t$에 대하여 closed $2$-form $\frac{\dd{\omega_t}}{\dd{t}}$는 exact이다. 표준적인 논증에 의하여 ([\[대수적 위상수학\] §코호몰로지](/ko/math/algebraic_topology/cohomology)) 이 exact form들을 $t$에 대해 $C^\infty$로 의존하는 $1$-form들의 족 $\alpha_t$로 적을 수 있어,
 
-$$\frac{d\omega_t}{dt}=d\alpha_t$$
+$$\frac{\dd{\omega_t}}{\dd{t}}=\dd{\alpha_t}$$
 
 가 성립한다. 각 $\omega_t$가 nondegenerate이므로, 대응 $X\mapsto\iota_X\omega_t$가 동형이고 따라서 시간의존 벡터장 $X_t$를
 
 $$\iota_{X_t}\omega_t=-\alpha_t$$
 
-로 유일하게 정의한다. $M$이 compact이므로 $X_t$의 흐름 $\phi_t$는 모든 $t\in[0,1]$에 대해 $M$ 전체에서 정의된다. 이제 [정리 2](#thm2)의 5단계와 동일한 계산을 수행하면, [\[미분다양체\] §리 미분, ⁋명제 4](/ko/math/manifolds/Lie_derivative#prop4)의 Cartan 공식과 $d\omega_t=0$에 의하여
+로 유일하게 정의한다. $M$이 compact이므로 $X_t$의 흐름 $\phi_t$는 모든 $t\in[0,1]$에 대해 $M$ 전체에서 정의된다. 이제 [정리 2](#thm2)의 5단계와 동일한 계산을 수행하면, [\[미분다양체\] §리 미분, ⁋명제 4](/ko/math/manifolds/Lie_derivative#prop4)의 Cartan 공식과 $\dd{\omega_t}=0$에 의하여
 
-$$\frac{d}{dt}(\phi_t^\ast\omega_t)=\phi_t^\ast\left(\mathcal{L}_{X_t}\omega_t+\frac{d\omega_t}{dt}\right)=\phi_t^\ast\,d(\iota_{X_t}\omega_t+\alpha_t)=\phi_t^\ast\,d(0)=0$$
+$$\frac{d}{\dd{t}}(\phi_t^\ast\omega_t)=\phi_t^\ast\left(\mathcal{L}_{X_t}\omega_t+\frac{\dd{\omega_t}}{\dd{t}}\right)=\phi_t^\ast\dd{(\iota_{X_t}\omega_t+\alpha_t)}=\phi_t^\ast\dd{(0)}=0$$
 
 을 얻는다. 따라서 $\phi_t^\ast\omega_t$는 $t$에 무관하게 일정하며, $\phi_0=\id$이므로 $\phi_t^\ast\omega_t=\omega_0$이다. $t=1$로 두면 $\phi_1^\ast\omega_1=\omega_0$이므로 $\phi_1$은 symplectomorphism이다.
 :::

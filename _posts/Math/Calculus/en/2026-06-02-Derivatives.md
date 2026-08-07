@@ -34,7 +34,7 @@ $$y = f(a) + f'(a)(x - a).$$
 
 This linear function approximates $f$ best near $a$, so for small $h$ we write $f(a+h) \approx f(a) + f'(a)h$. Following Leibniz, the derivative is also written as
 
-$$\frac{df}{dx},\qquad \frac{d}{dx}f$$
+$$\frac{\dd{f}}{\dd{x}},\qquad \frac{d}{\dd{x}}f$$
 
 and so on, but in calculus the notation $f'$ is often sufficient.
 

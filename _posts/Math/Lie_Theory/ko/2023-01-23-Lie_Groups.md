@@ -103,11 +103,11 @@ Lie group $G$ 위에 정의된 벡터장 $X$에 대하여, $X$가 *left invarian
 
 즉, 다음의 식
 
-$$d(L_g)\circ X=X\circ L_g$$
+$$\dd{(L_g)}\circ X=X\circ L_g$$
 
 이 성립하는 것이며, 더 명시적으로는 임의의 $p\in G$에 대하여
 
-$$\left(d(L_g)\right)(X_p)=X_{gp}$$
+$$\left(\dd{(L_g)}\right)(X_p)=X_{gp}$$
 
 이 항상 성립하는 것이다. 위의 식으로부터, $G$ 위에 정의된 left invariant인 벡터장 $X$를 명시하기 위해서는 <em-ko>오직 하나의 점</em-ko> $p\in G$에서의 값 $X_p$만 알면 충분하다는 것을 알 수 있으며, 당연하게도 가장 평범한 $p$의 선택은 $G$의 항등원 $e$이다. 또, 각 점에서의 $X$의 값이 이러한 방식으로 정의되었기 때문에, $X$가 left-invariant라는 사실이 $X$의 smoothness를 줄 것이라는 것도 추측할 수 있다. 
 
@@ -138,12 +138,12 @@ Lie group $G$가 주어졌다 하고, $\mathfrak{g}$를 $G$ 위에서 정의된 
 ::: 증명
 1. 벡터장들의 덧셈과 스칼라곱에 대하여 $\mathfrak{g}$가 $\mathbb{R}$-벡터공간이 된다는 것은 자명하고, 또 $\alpha$가 linear map이라는 것 또한 자명하다. 이제 $\alpha$가 isomorphism임을 보여야 하는데, $T_eG$는 유한차원 벡터공간이므로 $\alpha$가 전단사임을 보이면 충분하다. 우선 $\alpha(X)=\alpha(Y)$를 만족하는 두 $X,Y\in\mathfrak{g}$가 존재한다 가정하면, 임의의 $g\in G$에 대하여
   
-    $$X_g=(dL_g)_e(X_e)=(dL_g)_e(Y_e)=Y_g$$
+    $$X_g=(\dd{L_g})_e(X_e)=(\dd{L_g})_e(Y_e)=Y_g$$
 
-    이므로 $X=Y$이다. 거꾸로 임의의 $v\in T_eG$에 대하여 $X_g$를 $(dL_g)_e(v)$으로 정의하면 $X$가 left invariant인 벡터장이고, $\alpha(X)=v$를 만족함이 자명하다. 
+    이므로 $X=Y$이다. 거꾸로 임의의 $v\in T_eG$에 대하여 $X_g$를 $(\dd{L_g})_e(v)$으로 정의하면 $X$가 left invariant인 벡터장이고, $\alpha(X)=v$를 만족함이 자명하다. 
 2. $X\in\mathfrak{g}$가 $C^\infty$임을 보이기 위해서는 임의의 함수 $f$에 대하여 $Xf$가 $C^\infty$임을 보이면 충분하다. ([\[미분다양체\] §벡터장, ⁋명제 2](/ko/math/manifolds/vector_fields#prop2)) 한편 임의의 $p\in G$에 대하여, 
     
-    $$(Xf)(p)=X_pf=(dL_p)_e(X_e)f=X_e(f\circ L_p)$$
+    $$(Xf)(p)=X_pf=(\dd{L_p})_e(X_e)f=X_e(f\circ L_p)$$
     
     이므로 이는 다시 함수 $p\mapsto X_e(f\circ L_p)$가 $C^\infty$를 보이는 문제와 같다. $G$의 곱셈을 $m:G\times G\rightarrow G$로 쓰고, $G$에서 $G\times G$로의 자연스러운 두 embedding을
 
@@ -188,7 +188,7 @@ $$\exp(X)=\sum_{k=0}^\infty\frac{X^k}{k!}$$
 ::: 명제 11
 임의의 $X\in\Mat_n(\mathbb{R})$에 대하여 
 
-$$\frac{d}{dt}\exp(tX)=X\exp(tX)=\exp(tX)X$$
+$$\frac{d}{\dd{t}}\exp(tX)=X\exp(tX)=\exp(tX)X$$
 
 이 성립한다.
 :::
@@ -207,7 +207,7 @@ $$t\mapsto \exp(tX)$$
 
 은 $\GL(n; \mathbb{R})$에서의 곡선이며, $t=0$에서의 이 곡선의 미분은
 
-$$\frac{d}{dt}\exp(tX)\bigg\vert_{t=0}=X$$
+$$\frac{d}{\dd{t}}\exp(tX)\bigg\vert_{t=0}=X$$
 
 임이 앞선 명제에 의해 자명하다. 이를 기하적으로 설명하자면, 위의 곡선은 $I=\exp(O)$에서의 임의의 tangent vector
 
@@ -230,7 +230,7 @@ $$\det(\exp tX)=\exp(\tr(tX))=\exp(t\cdot\tr X)$$
 다음은 앞서 살펴본 left-invariant vector field의 일반화이다. 
 
 ::: 정의 13
-Lie group $G$ 위에 정의된 form $\omega$가 *left invariant<sub>좌불변</sub>*라는 것은 임의의 $g\in G$에 대하여 $(dL_g)\omega=\omega$가 성립하는 것이다. $G$ 위에 정의된 left invariant $k$-form들의 모임은 $\Omega_\text{l.inv}^k(G)$로 적고, $G$ 위에 정의된 모든 left invariant form들의 모임은 $\Omega_\text{l.inv}^\ast(G)$으로 적는다.
+Lie group $G$ 위에 정의된 form $\omega$가 *left invariant<sub>좌불변</sub>*라는 것은 임의의 $g\in G$에 대하여 $(\dd{L_g})\omega=\omega$가 성립하는 것이다. $G$ 위에 정의된 left invariant $k$-form들의 모임은 $\Omega_\text{l.inv}^k(G)$로 적고, $G$ 위에 정의된 모든 left invariant form들의 모임은 $\Omega_\text{l.inv}^\ast(G)$으로 적는다.
 :::
 
 특별히 $\Omega_\text{l.inv}^1(G)$의 원소들은 *Maurer-Cartan form*이라 부른다.
@@ -245,7 +245,7 @@ Lie group $G$와 $\Omega_\text{l.inv}^\ast(G)$에 대하여 다음이 성립한�
 3. 임의의 $\omega\in\Omega_\text{l.inv}^1(G)$와 left invariant인 벡터장 $X$에 대하여, $\omega(X)$는 $G$ 위에서 정의된 상수함수이다.
 4. 임의의 $\omega\in\Omega_\text{l.inv}^1(G)$와 $X,Y\in\mathfrak{g}$에 대하여 
     
-    $$d\omega(X,Y)=-\omega[X,Y]$$
+    $$\dd{\omega}(X,Y)=-\omega[X,Y]$$
 
     이 성립한다.
 5. $\mathfrak{g}$의 basis $X_1,\ldots, X_d$와 그 dual basis $\omega_1,\ldots,\omega_d$에 대하여, 다음의 식
@@ -258,7 +258,7 @@ Lie group $G$와 $\Omega_\text{l.inv}^\ast(G)$에 대하여 다음이 성립한�
 
     을 만족하며, 따라서 다음의 식
 
-    $$d\omega_i=\sum_{j < k} c_{jk}^i\omega_k\wedge\omega_j$$
+    $$\dd{\omega_i}=\sum_{j < k} c_{jk}^i\omega_k\wedge\omega_j$$
 
     이 성립한다.
 :::
@@ -272,13 +272,13 @@ Lie group $G$와 $\Omega_\text{l.inv}^\ast(G)$에 대하여 다음이 성립한�
 ::: 정리 15
 다음이 성립한다.
 
-1. Lie group $G,H$가 주어졌다 하고, 이들의 Lie algebra $\mathfrak{g},\mathfrak{h}$ 사이의 homomorphism $L:\mathfrak{g} \rightarrow \mathfrak{h}$이 주어졌다 하자. 만일 $G$가 simply connected라면, $dF=L$을 만족하는 homomorphism $F:G \rightarrow H$가 유일하게 존재한다.
+1. Lie group $G,H$가 주어졌다 하고, 이들의 Lie algebra $\mathfrak{g},\mathfrak{h}$ 사이의 homomorphism $L:\mathfrak{g} \rightarrow \mathfrak{h}$이 주어졌다 하자. 만일 $G$가 simply connected라면, $\dd{F}=L$을 만족하는 homomorphism $F:G \rightarrow H$가 유일하게 존재한다.
 2. 임의의 유한차원 real Lie algebra $\mathfrak{g}$에 대하여, $\mathfrak{g}$를 Lie algebra로 갖는 simply connected Lie group $G$가 존재한다. 
 :::
 
 즉, 바꾸어 말하자면 $\LieGrp$에서 $\LieAlg$로의 functor $\Lie:\LieGrp \rightarrow \LieAlg$는, simply connected Lie group들로 이루어진 $\LieGrp$의 full subcategory로 제한했을 때 두 category의 equivalence를 준다. 
 
-Category-theoretic한 결과 외에도 이 정리는, 가령, 임의의 Lie group $G$와 그 Lie algebra $\mathfrak{g}$에 대하여 matrix exponential과 비슷한 exponential map을 정의할 수 있도록 해 준다. 이는 $(\mathbb{R},+)$이 1차원 simply connected Lie group이므로 그 Lie algebra 또한 1차원이고, 따라서 여기에서 다른 Lie algebra로의 Lie algebra homomorphism은 basis $d/dt$가 어디로 가는지에 의해 유일하게 결정되며 이 때 $d/dt$가 $X\in \mathfrak{g}$로 옮겨진다면 이 Lie algebra homomorphism에 [정리 15](#thm15)을 적용하여 얻어지는 Lie group homomorphism $\gamma: \mathbb{R}\rightarrow G$이 원하는 곡선을 정의하기 때문이다. 
+Category-theoretic한 결과 외에도 이 정리는, 가령, 임의의 Lie group $G$와 그 Lie algebra $\mathfrak{g}$에 대하여 matrix exponential과 비슷한 exponential map을 정의할 수 있도록 해 준다. 이는 $(\mathbb{R},+)$이 1차원 simply connected Lie group이므로 그 Lie algebra 또한 1차원이고, 따라서 여기에서 다른 Lie algebra로의 Lie algebra homomorphism은 basis $d/\dd{t}$가 어디로 가는지에 의해 유일하게 결정되며 이 때 $d/\dd{t}$가 $X\in \mathfrak{g}$로 옮겨진다면 이 Lie algebra homomorphism에 [정리 15](#thm15)을 적용하여 얻어지는 Lie group homomorphism $\gamma: \mathbb{R}\rightarrow G$이 원하는 곡선을 정의하기 때문이다. 
 
 ::: 정의 16
 임의의 Lie group $G$와 그 Lie algebra $\mathfrak{g}$, 그리고 원소 $X\in \mathfrak{g}$에 대하여, 위의 과정을 통해 얻어지는 곡선을 $\gamma_X$로 표기하자. 그럼 $\exp:\mathfrak{g}\rightarrow G$를 $X\mapsto \gamma_X(1)$로 정의한다.
@@ -310,12 +310,12 @@ Simply connected Lie group $G$와 그 Lie algebra $\mathfrak{g}$, 그리고 $\ma
 
 $$\rho_g: G \rightarrow G; \quad h\mapsto \rho_g(h)=ghg^{-1}$$
 
-을 생각하자. ([\[대수적 구조\] §군의 작용, ⁋명제 9](/ko/math/algebraic_structures/group_actions#prop9)) 이는 Lie group automorphism이며, 따라서 identity $h=e$에서 이를 미분하면 $d\rho_g: \mathfrak{g}\rightarrow \mathfrak{g}$를 얻으며 이는 Lie algebra automorphism이 된다. 
+을 생각하자. ([\[대수적 구조\] §군의 작용, ⁋명제 9](/ko/math/algebraic_structures/group_actions#prop9)) 이는 Lie group automorphism이며, 따라서 identity $h=e$에서 이를 미분하면 $\dd{\rho_g}: \mathfrak{g}\rightarrow \mathfrak{g}$를 얻으며 이는 Lie algebra automorphism이 된다. 
 
 ::: 정의 19
 Lie group $G$에 대하여, 다음의 대응
 
-$$\Ad:G\rightarrow \Aut(\mathfrak{g});\quad g\mapsto d\rho_g$$
+$$\Ad:G\rightarrow \Aut(\mathfrak{g});\quad g\mapsto \dd{\rho_g}$$
 
 을 $G$의 *adjoint representation*이라 부른다. 이를 미분하여 얻어지는 
 
@@ -333,7 +333,7 @@ $$\ad(X)Y =[X,Y]$$
 ::: 정리 20
 Connected compact Lie group $G$에 대하여 다음이 성립한다.
 
-1. $d(\exp(e))=\id_\mathfrak{g}$
+1. $\dd{(\exp(e))}=\id_\mathfrak{g}$
 2. $\Ad\circ\exp=\exp_{\GL(\mathfrak{g})}\circ \ad$
 3. $\rho_x\circ\exp=\exp\circ\Ad(x)$
 :::

@@ -19,15 +19,15 @@ drift_needed: true
 
 ## 코쥴 복합체
 
-Koszul complex의 정의를 다시 떠올리자. Rank $n$의 free $A$-module $F$와 $A$-linear map $\varphi:F \rightarrow A$가 주어지면, Koszul complex $K(\varphi)$는 exterior algebra $\bigwedge F$에 chain complex 구조를 준 것이다. ([\[다중선형대수학\] §텐서대수, ⁋정의 10](/ko/math/multilinear_algebra/tensor_algebras#def10), [\[호몰로지 대수학\] §Ext와 Tor, ⁋정의 7](/ko/math/homological_algebra/ext_and_tor#def7)) 즉 $K_i=\bigwedge\nolimits^iF$이고, differential $d$는 임의의 $f\in F$에 대하여 $d(f)=\varphi(f)$로 주어지며 Leibniz rule
+Koszul complex의 정의를 다시 떠올리자. Rank $n$의 free $A$-module $F$와 $A$-linear map $\varphi:F \rightarrow A$가 주어지면, Koszul complex $K(\varphi)$는 exterior algebra $\bigwedge F$에 chain complex 구조를 준 것이다. ([\[다중선형대수학\] §텐서대수, ⁋정의 10](/ko/math/multilinear_algebra/tensor_algebras#def10), [\[호몰로지 대수학\] §Ext와 Tor, ⁋정의 7](/ko/math/homological_algebra/ext_and_tor#def7)) 즉 $K_i=\bigwedge\nolimits^iF$이고, differential $d$는 임의의 $f\in F$에 대하여 $\dd{(f)}=\varphi(f)$로 주어지며 Leibniz rule
 
-$$d(\xi\wedge \eta)=d\xi\wedge \eta+(-1)^{\deg\xi}\xi\wedge d\eta$$
+$$\dd{(\xi\wedge \eta)}=\dd{\xi}\wedge \eta+(-1)^{\deg\xi}\xi\wedge \dd{\eta}$$
 
 을 만족하는 유일한 degree $-1$의 graded derivation이다. 이 글에서는 언제나 $A$의 원소들 $x_1,\ldots, x_n$을 고정하고, basis $e_1,\ldots, e_n$을 갖는 free module $F=\bigoplus_{i=1}^n Ae_i$와 $\varphi(e_i)=x_i$로 정의된 $\varphi$를 생각하며, 이 때의 $K(\varphi)$를 $K(x_1,\ldots, x_n)$으로 적는다.
 
 [\[다중선형대수학\] §텐서대수, ⁋명제 13](/ko/math/multilinear_algebra/tensor_algebras#prop13)에 의하여 $\bigwedge\nolimits^iF$는 $i$개의 원소로 이루어진 부분집합 $J=\{j_1<\cdots<j_i\}\subseteq \{1,\ldots, n\}$들에 대응되는 원소 $e_J=e_{j_1}\wedge\cdots\wedge e_{j_i}$들을 basis로 갖는 free module이다. 특히 $K_i(x_1,\ldots,x_n)\cong A^{\oplus\binom{n}{i}}$이며, $i<0$이거나 $i>n$이면 $K_i(x_1,\ldots,x_n)=0$이다. Differential은 Leibniz rule을 반복하여 적용하면 다음의 식
 
-$$d(e_{j_1}\wedge\cdots\wedge e_{j_i})=\sum_{k=1}^i(-1)^{k-1}x_{j_k}e_{j_1}\wedge\cdots\wedge\widehat{e_{j_k}}\wedge\cdots\wedge e_{j_i}$$
+$$\dd{(e_{j_1}\wedge\cdots\wedge e_{j_i})}=\sum_{k=1}^i(-1)^{k-1}x_{j_k}e_{j_1}\wedge\cdots\wedge\widehat{e_{j_k}}\wedge\cdots\wedge e_{j_i}$$
 
 으로 주어진다. 여기서 $\widehat{e_{j_k}}$는 해당 원소를 생략한다는 표기이며, 이 식은 index들 $j_1,\ldots, j_i$가 증가하는 순서로 배열되어 있지 않아도 성립한다. $d\circ d=0$이라는 것도 이 식에서 다시 확인할 수 있는데, $d$를 두 번 적용하면 $k<l$에 대하여 $x_{j_k}x_{j_l}$이 곱해진 각 항이 $e_{j_k}$를 먼저 지우는지 $e_{j_l}$을 먼저 지우는지에 따라 부호 $(-1)^{k-1}(-1)^{l-2}$와 $(-1)^{l-1}(-1)^{k-1}$로 정확히 두 번 나타나 서로 소거되기 때문이다.
 
@@ -75,9 +75,9 @@ $$(d_n\otimes\id_M)(\omega\otimes m)=\sum_{k=1}^n(-1)^{k-1}(e_1\wedge\cdots\wedg
 ::: 증명
 각각의 $i$에 대하여 $\sigma_j: K_i(x;M) \rightarrow K_{i+1}(x;M)$을 $\xi\otimes m\mapsto (e_j\wedge \xi)\otimes m$으로 정의하자. 임의의 $\xi\in\bigwedge\nolimits^iF$에 대하여 Leibniz rule은
 
-$$d(e_j\wedge \xi)=x_j\xi-e_j\wedge d\xi$$
+$$\dd{(e_j\wedge \xi)}=x_j\xi-e_j\wedge \dd{\xi}$$
 
-를 주므로, $(d\sigma_j+\sigma_jd)(\xi\otimes m)=x_j(\xi\otimes m)$이다. 즉 $\sigma_j$는 곱하기 $x_j$와 $0$ 사이의 chain homotopy이다. 그럼 [\[호몰로지 대수학\] §긴 완전열, ⁋명제 6](/ko/math/homological_algebra/long_exact_sequence#prop6)에 의하여 곱하기 $x_j$가 각각의 $H_i(x;M)$ 위에 유도하는 map은 $0$이고, 따라서 $x_jH_i(x;M)=0$이다.
+를 주므로, $(\dd{\sigma_j}+\sigma_jd)(\xi\otimes m)=x_j(\xi\otimes m)$이다. 즉 $\sigma_j$는 곱하기 $x_j$와 $0$ 사이의 chain homotopy이다. 그럼 [\[호몰로지 대수학\] §긴 완전열, ⁋명제 6](/ko/math/homological_algebra/long_exact_sequence#prop6)에 의하여 곱하기 $x_j$가 각각의 $H_i(x;M)$ 위에 유도하는 map은 $0$이고, 따라서 $x_jH_i(x;M)=0$이다.
 :::
 
 따라서 각각의 $H_i(x;M)$은 $A/(x)$-module 구조를 가지며, 특히 만일 $(x)=A$라면 모든 $i$에 대하여 $H_i(x;M)=0$이다.
@@ -96,9 +96,9 @@ $$\xi\wedge\eta=\theta_i(\xi)(\eta)\omega,\qquad \xi\in\bigwedge\nolimits^iF,\qu
 
 이제 $\xi\in \bigwedge\nolimits^iF$와 $\eta\in\bigwedge\nolimits^{n-i+1}F$에 대하여 $\xi\wedge\eta\in \bigwedge\nolimits^{n+1}F=0$이므로, Leibniz rule으로부터
 
-$$0=d(\xi\wedge\eta)=d\xi\wedge\eta+(-1)^i\xi\wedge d\eta$$
+$$0=\dd{(\xi\wedge\eta)}=\dd{\xi}\wedge\eta+(-1)^i\xi\wedge \dd{\eta}$$
 
-이고, 이를 $\theta$로 옮겨 적으면 $\theta_{i-1}(d\xi)(\eta)=(-1)^{i+1}\theta_i(\xi)(d\eta)$, 곧 다음의 식
+이고, 이를 $\theta$로 옮겨 적으면 $\theta_{i-1}(\dd{\xi})(\eta)=(-1)^{i+1}\theta_i(\xi)(\dd{\eta})$, 곧 다음의 식
 
 $$\theta_{i-1}\circ d_i=(-1)^{i+1}\Hom_A(d_{n-i+1},A)\circ\theta_i$$
 
@@ -143,7 +143,7 @@ $$\bigwedge\nolimits^iF=\bigwedge\nolimits^iF'\oplus\left(\bigwedge\nolimits^{i-
 
 을 얻는다. $K(x')$의 differential을 $d'$로 적으면, differential의 명시적인 식에 의하여 $d$는 $\bigwedge F'$ 위에서 $d'$와 일치하고, $\alpha\in\bigwedge\nolimits^iF'$와 $\beta\in \bigwedge\nolimits^{i-1}F'$에 대하여 Leibniz rule으로부터
 
-$$d(\alpha+\beta\wedge e_n)=d'\alpha+d'\beta\wedge e_n+(-1)^{i-1}x_n\beta=\left(d'\alpha+(-1)^{i-1}x_n\beta\right)+(d'\beta)\wedge e_n$$
+$$\dd{(\alpha+\beta\wedge e_n)}=d'\alpha+d'\beta\wedge e_n+(-1)^{i-1}x_n\beta=\left(d'\alpha+(-1)^{i-1}x_n\beta\right)+(d'\beta)\wedge e_n$$
 
 이다. 이제 위의 분해에 $\otimes_AM$을 취하면 $K_i(x;M)=K_i(x';M)\oplus K_{i-1}(x';M)$이고, 위의 계산에 의하여 첫째 성분으로의 inclusion $K(x';M) \rightarrow K(x;M)$은 chain map이다. 또, chain complex $L$을 $L_i=K_{i-1}(x';M)$과 $K(x';M)$의 differential 그대로로 정의하면, 둘째 성분으로의 projection $K(x;M) \rightarrow L$ 또한 chain map이며, 정의에 의하여 $H_i(L)=H_{i-1}(x';M)$이다. 그럼 각 degree에서 위의 분해로 주어지는 short exact sequence
 
@@ -151,7 +151,7 @@ $$0 \rightarrow K(x';M) \rightarrow K(x;M) \rightarrow L \rightarrow 0$$
 
 을 얻고, [\[호몰로지 대수학\] §긴 완전열, ⁋정리 1](/ko/math/homological_algebra/long_exact_sequence#thm1)이 원하는 꼴의 long exact sequence를 준다.
 
-Connecting homomorphism을 계산하자. [\[호몰로지 대수학\] §Diagram chasing, ⁋정리 6](/ko/math/homological_algebra/diagram_chasing#thm6)의 증명에 의하면, $\partial_i$는 $L_i$의 cycle $\beta$를 $K_i(x;M)$의 원소 $(0,\beta)$로 lift하고 여기에 differential을 적용한 뒤, 그 결과를 첫째 성분 $K_{i-1}(x';M)$의 원소로 보는 것으로 계산된다. 그런데 위의 계산에 의하여 $d(0,\beta)=((-1)^{i-1}x_n\beta, d'\beta)=((-1)^{i-1}x_n\beta,0)$이므로 $\partial_i[\beta]=(-1)^{i-1}[x_n\beta]$이다.
+Connecting homomorphism을 계산하자. [\[호몰로지 대수학\] §Diagram chasing, ⁋정리 6](/ko/math/homological_algebra/diagram_chasing#thm6)의 증명에 의하면, $\partial_i$는 $L_i$의 cycle $\beta$를 $K_i(x;M)$의 원소 $(0,\beta)$로 lift하고 여기에 differential을 적용한 뒤, 그 결과를 첫째 성분 $K_{i-1}(x';M)$의 원소로 보는 것으로 계산된다. 그런데 위의 계산에 의하여 $\dd{(0,\beta)}=((-1)^{i-1}x_n\beta, d'\beta)=((-1)^{i-1}x_n\beta,0)$이므로 $\partial_i[\beta]=(-1)^{i-1}[x_n\beta]$이다.
 :::
 
 부호 $(-1)^{i-1}$은 이하의 모든 논증에서 아무런 역할도 하지 않는데, 곱하기 $x_n$과 곱하기 $-x_n$은 kernel과 image가 같기 때문이다. 이 long exact sequence의 첫 번째 응용으로 이 글의 절반에 해당하는 결과를 증명한다.
@@ -245,7 +245,7 @@ Noetherian local ring $(A,\mathfrak{m})$과 $0$이 아닌 finitely generated $A$
 ::: 증명
 우선 ring과 module에 대한 아무런 가정 없이, 두 complex $K(x_{\sigma(1)},\ldots,x_{\sigma(n)};M)$과 $K(x_1,\ldots,x_n;M)$이 isomorphic하다는 것을 보인다. $A$-linear map $F \rightarrow \bigwedge F$, $e_i\mapsto e_{\sigma(i)}$는 image의 임의의 원소가 $\bigwedge F$에서 제곱하면 $0$이 되도록 하므로, [\[다중선형대수학\] §텐서대수, ⁋명제 11](/ko/math/multilinear_algebra/tensor_algebras#prop11)에 의하여 $A$-algebra homomorphism $\Psi:\bigwedge F \rightarrow \bigwedge F$로 확장된다. $\Psi$는 basis $e_J$들을 $\pm e_{\sigma(J)}$들로 보내므로 각각의 $\bigwedge\nolimits^iF$의 automorphism을 준다. 한편 $K(x_{\sigma(1)},\ldots,x_{\sigma(n)})$의 differential $d_\sigma$는 $d_\sigma(e_i)=x_{\sigma(i)}$로 결정되는데, 증가하는 순서가 아닌 index들에 대해서도 성립하는 differential의 명시적인 식에 의하여
 
-$$\Psi(d_\sigma(e_{j_1}\wedge\cdots\wedge e_{j_i}))=\sum_{k=1}^i(-1)^{k-1}x_{\sigma(j_k)}e_{\sigma(j_1)}\wedge\cdots\wedge\widehat{e_{\sigma(j_k)}}\wedge\cdots\wedge e_{\sigma(j_i)}=d(\Psi(e_{j_1}\wedge\cdots\wedge e_{j_i}))$$
+$$\Psi(d_\sigma(e_{j_1}\wedge\cdots\wedge e_{j_i}))=\sum_{k=1}^i(-1)^{k-1}x_{\sigma(j_k)}e_{\sigma(j_1)}\wedge\cdots\wedge\widehat{e_{\sigma(j_k)}}\wedge\cdots\wedge e_{\sigma(j_i)}=\dd{(\Psi(e_{j_1}\wedge\cdots\wedge e_{j_i}))}$$
 
 이므로 $\Psi$는 chain map이다. 따라서 $\Psi\otimes\id_M$은 두 Koszul complex 사이의 isomorphism이고, 특히 모든 $i$에 대하여 $H_i(x_{\sigma(1)},\ldots,x_{\sigma(n)};M)\cong H_i(x;M)$이다.
 

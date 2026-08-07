@@ -348,7 +348,7 @@ Line bundle의 정의와 비교하면, 유일한 차이는 fiber가 $\mathbb{A}^
 ::: 예시 24
 가장 단순한 예시는 line bundle $\mathcal{O}_X$로부터 오는 rank $r$ *trivial vector bundle* $\mathcal{O}_X^{\oplus r}$이다. 이는 line bundle $\mathcal{O}_X$를 $r$번 direct sum하여 얻어지는 것이다. 
 
-기하학적으로 중요한 대상들은 tangent bundle과 cotangent bundle이다. *Tangent bundle* $\mathcal{T}_X$는 각 점 $p \in X$에 tangent space $T_p X$를 fiber로 갖는 vector bundle로, 만약 $X$가 $n$차원 smooth variety이면 rank $n$ vector bundle이고, local coordinate $\x_1, \ldots, \x_n$에서 $\partial/\partial \x_1, \ldots, \partial/\partial \x_n$이 local frame을 이룬다. *Cotangent bundle* $\Omega_X^1 = \mathcal{T}_X^\vee$는 tangent bundle의 dual이며, local coordinate에서 $d\x_1, \ldots, d\x_n$이 local frame을 이룬다.
+기하학적으로 중요한 대상들은 tangent bundle과 cotangent bundle이다. *Tangent bundle* $\mathcal{T}_X$는 각 점 $p \in X$에 tangent space $T_p X$를 fiber로 갖는 vector bundle로, 만약 $X$가 $n$차원 smooth variety이면 rank $n$ vector bundle이고, local coordinate $\x_1, \ldots, \x_n$에서 $\partial/\partial \x_1, \ldots, \partial/\partial \x_n$이 local frame을 이룬다. *Cotangent bundle* $\Omega_X^1 = \mathcal{T}_X^\vee$는 tangent bundle의 dual이며, local coordinate에서 $\dd{\x_1}, \ldots, \dd{\x_n}$이 local frame을 이룬다.
 
 직관적으로 $\Omega_X^1$은 $X$ 위에 정의된 differential $1$-form들의 bundle이므로, 이들을 $r$번 텐서하여 $r$-form들의 bundle을 얻을 수 있다. 이들 중 제일 흥미로운 것은 top exterior power $\omega_X = \bigwedge^n \Omega_X^1$으로, 이는 rank $1$ vector bundle, 즉 line bundle이며 미분기하학에서였다면 volume form들의 bundle이라 생각할 수 있었을 것이다. 우리는 이를 *canonical line bundle*이라 부른다. 
 :::

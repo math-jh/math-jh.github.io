@@ -59,8 +59,8 @@ Meanwhile, in the examples of [§Overview of Mirror Symmetry](/en/math/mirror_sy
 ::: Definition 3
 A holomorphic function $f : \mathbb{C}^n \rightarrow \mathbb{C}$ is said to have an *isolated hypersurface singularity* at the origin if the following two conditions hold.
 
-1. $f(0) = 0$, $df(0) = 0$.
-2. The origin is *isolated* among the critical points of $f$, i.e., in some neighborhood of the origin the only solution to $df = 0$ is the origin itself.
+1. $f(0) = 0$, $\dd{f}(0) = 0$.
+2. The origin is *isolated* among the critical points of $f$, i.e., in some neighborhood of the origin the only solution to $\dd{f} = 0$ is the origin itself.
 :::
 
 A standard example is $f(\x) = \x^{k+1}$ ($k \geq 1$), which we call an $A_k$-type singularity.
@@ -74,9 +74,9 @@ Its dimension $\mu(f)=\dim \Jac(f)$ counts the singularities of $f$ with multipl
 ::: Example 4
 For a polynomial $f : \mathbb{C}^n \rightarrow \mathbb{C}$ all of whose critical points are isolated hypersurface singularities, the *residue pairing* $\eta$ on the Jacobi ring $\Jac(f)$ is defined by the formula
 
-$$\eta(g, h) := \frac{1}{(2\pi i)^n} \oint_{\Gamma_\epsilon} \frac{g(\x) h(\x) \, d\x_1 \wedge \cdots \wedge d\x_n}{\partial_1 f \cdots \partial_n f}.$$
+$$\eta(g, h) := \frac{1}{(2\pi i)^n} \oint_{\Gamma_\epsilon} \frac{g(\x) h(\x) \dd{\x_1} \wedge \cdots \wedge \dd{\x_n}}{\partial_1 f \cdots \partial_n f}.$$
 
-Here the integration path $\Gamma_\epsilon$ is a small contour surrounding all points of $\Crit(f)=\{df=0\}$; this integral can be thought of as the contribution at that point when the critical point is regarded as a fat point containing multiplicity information.
+Here the integration path $\Gamma_\epsilon$ is a small contour surrounding all points of $\Crit(f)=\{\dd{f}=0\}$; this integral can be thought of as the contribution at that point when the critical point is regarded as a fat point containing multiplicity information.
 
 In other words, intuitively this can be viewed as localizing the global integral $\int_X$ of [Example 2](#ex2) to integrals over the (finitely many) points of the critical scheme, and one can show that $(\Jac(f), \eta)$ is indeed a Frobenius algebra in a manner similar to that example.
 
@@ -96,7 +96,7 @@ $$W_q = \x + \frac{q}{\x}.$$
 
 Its critical points are the two points $\x_\pm = \pm\sqrt{q}$.
 
-One must be careful that the ambient space $\check{X}$ is not affine space but an algebraic torus, so the differential form defined on it is not simply $d\x$. Indeed, the differential form on it is given by $d\x/\x$ according to [[Toric Geometry] §Logarithmic Differential Forms on Toric Varieties, ⁋Definition 1](/en/math/toric_geometry/logarithmic_differentials#def1), which corresponds to the coordinate $\u=\log\x$ on the torus. Then $d\u=d\x/\x$ and $\partial_\u=\x\partial_\x$; computing the derivatives of $W_q$ in this coordinate in order to find the Hessian yields
+One must be careful that the ambient space $\check{X}$ is not affine space but an algebraic torus, so the differential form defined on it is not simply $\dd{\x}$. Indeed, the differential form on it is given by $\dd{\x}/\x$ according to [[Toric Geometry] §Logarithmic Differential Forms on Toric Varieties, ⁋Definition 1](/en/math/toric_geometry/logarithmic_differentials#def1), which corresponds to the coordinate $\u=\log\x$ on the torus. Then $d\u=\dd{\x}/\x$ and $\partial_\u=\x\partial_\x$; computing the derivatives of $W_q$ in this coordinate in order to find the Hessian yields
 
 $$\partial_\u W_q = \x \partial_\x W_q = \x - q/\x, \qquad \partial_\u^2 W_q = \partial_\u(\x - q/\x) = \x + q/\x,$$
 
@@ -211,7 +211,7 @@ For flat coordinates $t^\alpha$ the covariant derivative $\nabla_{\partial_{t^\d
 
 $$\partial_{t^\delta} c_{\alpha\beta\gamma} = \partial_{t^\alpha} c_{\delta\beta\gamma}$$
 
-holds symmetrically in the four indices. Since $c$ itself is symmetric in three indices, putting these together shows that the 1-form $\omega_{\beta\gamma} := \sum_\alpha c_{\alpha\beta\gamma} dt^\alpha$ is closed. By the Poincaré lemma there locally exist functions $G_{\beta\gamma}$ with $\partial_{t^\alpha} G_{\beta\gamma} = c_{\alpha\beta\gamma}$; the symmetry of $c$ implies $G_{\beta\gamma} = G_{\gamma\beta}$, and moreover $\partial_{t^\alpha} G_{\beta\gamma} = \partial_{t^\beta} G_{\alpha\gamma}$ holds. Applying the Poincaré lemma once more, there exist functions $H_\gamma$ with $\partial_{t^\beta} H_\gamma = G_{\beta\gamma}$, and from the symmetry $\partial_{t^\delta} H_\gamma = \partial_{t^\gamma} H_\delta$ we finally obtain a scalar function $F$ such that $\partial_{t^\gamma} F = H_\gamma$. Altogether we obtain $\partial_{t^\alpha} \partial_{t^\beta} \partial_{t^\gamma} F = c_{\alpha\beta\gamma}$.
+holds symmetrically in the four indices. Since $c$ itself is symmetric in three indices, putting these together shows that the 1-form $\omega_{\beta\gamma} := \sum_\alpha c_{\alpha\beta\gamma} \dd{t}^\alpha$ is closed. By the Poincaré lemma there locally exist functions $G_{\beta\gamma}$ with $\partial_{t^\alpha} G_{\beta\gamma} = c_{\alpha\beta\gamma}$; the symmetry of $c$ implies $G_{\beta\gamma} = G_{\gamma\beta}$, and moreover $\partial_{t^\alpha} G_{\beta\gamma} = \partial_{t^\beta} G_{\alpha\gamma}$ holds. Applying the Poincaré lemma once more, there exist functions $H_\gamma$ with $\partial_{t^\beta} H_\gamma = G_{\beta\gamma}$, and from the symmetry $\partial_{t^\delta} H_\gamma = \partial_{t^\gamma} H_\delta$ we finally obtain a scalar function $F$ such that $\partial_{t^\gamma} F = H_\gamma$. Altogether we obtain $\partial_{t^\alpha} \partial_{t^\beta} \partial_{t^\gamma} F = c_{\alpha\beta\gamma}$.
 :::
 
 Such a function $F$ is called the *potential* of the Frobenius manifold. Hence, choosing flat coordinates and letting $\eta^{\alpha\beta}$ be the inverse matrix of $\eta_{\alpha\beta}$, the structure constants of the multiplication are given by
@@ -253,19 +253,19 @@ The following example is the most basic Frobenius manifold, and serves as a benc
 ::: Example 8
 Introduce coordinates $t^1, \ldots, t^n$ on $M = \mathbb{C}^n$ and set
 
-$$\eta = \sum_{i=1}^n dt^i \otimes dt^i,\qquad \partial_{t^i} \circ \partial_{t^j} = \delta_{ij} \partial_{t^i}.$$
+$$\eta = \sum_{i=1}^n \dd{t}^i \otimes \dd{t}^i,\qquad \partial_{t^i} \circ \partial_{t^j} = \delta_{ij} \partial_{t^i}.$$
 
 This is simply the definition of Euclidean space lifted to $\mathbb{C}$; the facts that $\eta$ is flat, the $t^i$ form flat coordinates, and $e=\sum \partial_{t^i}$ is the unit for the multiplication are almost obvious.
 
 The Euler vector field of this manifold is exactly the vector field $\sum_i t^i\partial_{t^i}$ that we call the Euler vector field in calculus. Indeed, since $E(t^i)=t^i$ in flat coordinates, computing the Lie derivatives gives
 
-$$\mathcal{L}_E(dt^i)=d(E(t^i))=dt^i,\qquad \mathcal{L}_E(\partial_{t^i})=[E, \partial_{t^i}]=-\partial_{t^i},$$
+$$\mathcal{L}_E(\dd{t}^i)=\dd{(E(t^i))}=\dd{t}^i,\qquad \mathcal{L}_E(\partial_{t^i})=[E, \partial_{t^i}]=-\partial_{t^i},$$
 
 whence
 
-$$\mathcal{L}_E(\eta) = \sum_i \bigl( \mathcal{L}_E(dt^i) \otimes dt^i + dt^i \otimes \mathcal{L}_E(dt^i) \bigr) = 2 \sum_i dt^i \otimes dt^i = 2\eta.$$
+$$\mathcal{L}_E(\eta) = \sum_i \bigl( \mathcal{L}_E(\dd{t}^i) \otimes \dd{t}^i + \dd{t}^i \otimes \mathcal{L}_E(\dd{t}^i) \bigr) = 2 \sum_i \dd{t}^i \otimes \dd{t}^i = 2\eta.$$
 
-Similarly, for the multiplication, writing $\circ=\sum dt^i\otimes dt^i\otimes\partial_{t^i}$ and performing a similar computation shows that $\mathcal{L}_E(\circ)=\circ$.
+Similarly, for the multiplication, writing $\circ=\sum \dd{t}^i\otimes \dd{t}^i\otimes\partial_{t^i}$ and performing a similar computation shows that $\mathcal{L}_E(\circ)=\circ$.
 
 Potentiality is obtained almost trivially; working backwards to find a function whose third partial derivatives in the $i,j,k$ directions give $\delta_{ijk}$ yields (of course)
 
@@ -334,17 +334,17 @@ $$E = t^0 \partial_{t^0} + 2\partial_{t^1}.$$
 
 Since $E(t^0) = t^0$ and $E(t^1) = 2$, the Lie derivatives of the components are
 
-$$\mathcal{L}_E(dt^0) = dt^0, \quad \mathcal{L}_E(dt^1) = 0, \quad \mathcal{L}_E(\partial_{t^0}) = [E, \partial_{t^0}] = -\partial_{t^0}, \quad \mathcal{L}_E(\partial_{t^1}) = [E, \partial_{t^1}] = 0;$$
+$$\mathcal{L}_E(\dd{t}^0) = \dd{t}^0, \quad \mathcal{L}_E(\dd{t}^1) = 0, \quad \mathcal{L}_E(\partial_{t^0}) = [E, \partial_{t^0}] = -\partial_{t^0}, \quad \mathcal{L}_E(\partial_{t^1}) = [E, \partial_{t^1}] = 0;$$
 
-applying this to the metric $\eta = dt^0 \otimes dt^1 + dt^1 \otimes dt^0$, each term has weight $1 + 0 = 1$, so
+applying this to the metric $\eta = \dd{t}^0 \otimes \dd{t}^1 + \dd{t}^1 \otimes \dd{t}^0$, each term has weight $1 + 0 = 1$, so
 
-$$\mathcal{L}_E(\eta) = \mathcal{L}_E(dt^0)\otimes dt^1 + dt^1 \otimes \mathcal{L}_E(dt^0) = dt^0 \otimes dt^1 + dt^1 \otimes dt^0 = \eta,$$
+$$\mathcal{L}_E(\eta) = \mathcal{L}_E(\dd{t}^0)\otimes \dd{t}^1 + \dd{t}^1 \otimes \mathcal{L}_E(\dd{t}^0) = \dd{t}^0 \otimes \dd{t}^1 + \dd{t}^1 \otimes \dd{t}^0 = \eta,$$
 
 yielding $2 - d = 1$, which equals $\dim_\mathbb{C}\mathbb{P}^1$.
 
-By a similar computation, the nontrivial part of the multiplication $\circ$ is the tensor $e^{t^1}\, dt^1 \otimes dt^1 \otimes \partial_{t^0}$ (i.e., $\partial_{t^1} \circ \partial_{t^1} = e^{t^1}\partial_{t^0}$). Since $\mathcal{L}_E(e^{t^1}) = E(e^{t^1}) = 2e^{t^1}$ (weight $2$), the two $dt^1$ factors have weight $0$, and $\partial_{t^0}$ has weight $-1$, we obtain
+By a similar computation, the nontrivial part of the multiplication $\circ$ is the tensor $e^{t^1}\dd{t}^1 \otimes \dd{t}^1 \otimes \partial_{t^0}$ (i.e., $\partial_{t^1} \circ \partial_{t^1} = e^{t^1}\partial_{t^0}$). Since $\mathcal{L}_E(e^{t^1}) = E(e^{t^1}) = 2e^{t^1}$ (weight $2$), the two $\dd{t}^1$ factors have weight $0$, and $\partial_{t^0}$ has weight $-1$, we obtain
 
-$$\mathcal{L}_E\bigl(e^{t^1}\, dt^1 \otimes dt^1 \otimes \partial_{t^0}\bigr) = (2 + 0 + 0 - 1)\, e^{t^1}\, dt^1 \otimes dt^1 \otimes \partial_{t^0} = e^{t^1}\, dt^1 \otimes dt^1 \otimes \partial_{t^0},$$
+$$\mathcal{L}_E\bigl(e^{t^1}\dd{t}^1 \otimes \dd{t}^1 \otimes \partial_{t^0}\bigr) = (2 + 0 + 0 - 1)\, e^{t^1}\dd{t}^1 \otimes \dd{t}^1 \otimes \partial_{t^0} = e^{t^1}\dd{t}^1 \otimes \dd{t}^1 \otimes \partial_{t^0},$$
 
 so $\mathcal{L}_E(\circ) = \circ$.
 

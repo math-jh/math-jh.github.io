@@ -160,21 +160,21 @@ $T=\{i\mid x_i\notin\mathfrak{p}\}$로 두자. $S\subseteq T$이면 [보조정�
 
 만일 $T=\emptyset$이라면 $\check{C}(x;E)$는 degree $0$의 $E$ 하나로 이루어지므로 상위 cohomology가 모두 $0$이다. 이제 $T\neq\emptyset$이라 하자. Isomorphism $\iota_S$들로 $S\subseteq T$인 성분들을 $E$와 identify하면, canonical map들이 $\iota$들과 호환되므로 differential의 성분 map들은 $\pm\id_E$가 되고, $\check{C}(x;E)$는 다음의 complex
 
-$$D^j=\bigoplus_{\substack{S\subseteq T\\ \lvert S\rvert=j}}E,\qquad (d\omega)_S=\sum_{i\in S}(-1)^{\sigma(i,S)}\omega_{S\setminus\{i\}}$$
+$$D^j=\bigoplus_{\substack{S\subseteq T\\ \lvert S\rvert=j}}E,\qquad (\dd{\omega})_S=\sum_{i\in S}(-1)^{\sigma(i,S)}\omega_{S\setminus\{i\}}$$
 
-와 isomorphic하다. 가령 $r=2$이고 $T=\{1,2\}$라면 이는 $0 \rightarrow E \rightarrow E\oplus E \rightarrow E \rightarrow 0$, $e\mapsto(e,e)$, $(\omega_1,\omega_2)\mapsto\omega_2-\omega_1$이고, $s(\omega_1,\omega_2)=\omega_1$과 $s(\eta)=(0,\eta)$로 두면 $ds+sd=\id$가 직접 확인된다. 일반적으로 $l\in T$를 고정하고 $h:D^{j+1} \rightarrow D^j$를 다음 식
+와 isomorphic하다. 가령 $r=2$이고 $T=\{1,2\}$라면 이는 $0 \rightarrow E \rightarrow E\oplus E \rightarrow E \rightarrow 0$, $e\mapsto(e,e)$, $(\omega_1,\omega_2)\mapsto\omega_2-\omega_1$이고, $s(\omega_1,\omega_2)=\omega_1$과 $s(\eta)=(0,\eta)$로 두면 $\dd{s}+sd=\id$가 직접 확인된다. 일반적으로 $l\in T$를 고정하고 $h:D^{j+1} \rightarrow D^j$를 다음 식
 
 $$(h\omega)_S=\begin{cases}0&\text{if $l\in S$}\\(-1)^{\sigma(l,S\cup\{l\})}\omega_{S\cup\{l\}}&\text{if $l\notin S$}\end{cases}$$
 
-으로 정의하자. $l\in S$인 성분에서는 $(hd\omega)_S=0$이고, $(dh\omega)_S$에서 $(h\omega)_{S\setminus\{i\}}$는 $i=l$인 항에서만 살아남으므로
+으로 정의하자. $l\in S$인 성분에서는 $(h\dd{\omega})_S=0$이고, $(\dd{h}\omega)_S$에서 $(h\omega)_{S\setminus\{i\}}$는 $i=l$인 항에서만 살아남으므로
 
-$$(dh\omega)_S=(-1)^{\sigma(l,S)}(h\omega)_{S\setminus\{l\}}=(-1)^{2\sigma(l,S)}\omega_S=\omega_S$$
+$$(\dd{h}\omega)_S=(-1)^{\sigma(l,S)}(h\omega)_{S\setminus\{l\}}=(-1)^{2\sigma(l,S)}\omega_S=\omega_S$$
 
 이다. $l\notin S$인 성분에서는
 
-$$(dh\omega)_S=\sum_{i\in S}(-1)^{\sigma(i,S)+\sigma(l,(S\setminus\{i\})\cup\{l\})}\omega_{(S\setminus\{i\})\cup\{l\}},\qquad (hd\omega)_S=\omega_S+\sum_{i\in S}(-1)^{\sigma(l,S\cup\{l\})+\sigma(i,S\cup\{l\})}\omega_{(S\setminus\{i\})\cup\{l\}}$$
+$$(\dd{h}\omega)_S=\sum_{i\in S}(-1)^{\sigma(i,S)+\sigma(l,(S\setminus\{i\})\cup\{l\})}\omega_{(S\setminus\{i\})\cup\{l\}},\qquad (h\dd{\omega})_S=\omega_S+\sum_{i\in S}(-1)^{\sigma(l,S\cup\{l\})+\sigma(i,S\cup\{l\})}\omega_{(S\setminus\{i\})\cup\{l\}}$$
 
-인데, $i<l$이면 $\sigma(i,S\cup\{l\})=\sigma(i,S)$이고 $\sigma(l,(S\setminus\{i\})\cup\{l\})=\sigma(l,S\cup\{l\})-1$이며, $i>l$이면 $\sigma(i,S\cup\{l\})=\sigma(i,S)+1$이고 $\sigma(l,(S\setminus\{i\})\cup\{l\})=\sigma(l,S\cup\{l\})$이므로, 어느 경우에도 두 합의 대응되는 항들의 부호가 반대가 되어 소거되고 $(dh\omega)_S+(hd\omega)_S=\omega_S$이다. 따라서 $\id$는 $0$과 homotopic하고 ([\[호몰로지 대수학\] §긴 완전열, ⁋정의 5](/ko/math/homological_algebra/long_exact_sequence#def5)), homotopic한 chain map들은 cohomology 위에서 같은 map을 유도하므로 ([\[호몰로지 대수학\] §긴 완전열, ⁋명제 6](/ko/math/homological_algebra/long_exact_sequence#prop6)) 모든 $i$에서 $H^i(D^\bullet)=0$이다. 특히 $T\neq\emptyset$일 때에는 $H^0(\check{C}(x;E))=0$인데, 이 경우 어떤 $x_l\notin\mathfrak{p}$이 $\mathfrak{a}$에 속해 $\mathfrak{a}\not\subseteq\mathfrak{p}$이므로 이는 [보조정리 5](#lem5)의 셋째 결과 $\Gamma_\mathfrak{a}(E)=0$과 정합적이다.
+인데, $i<l$이면 $\sigma(i,S\cup\{l\})=\sigma(i,S)$이고 $\sigma(l,(S\setminus\{i\})\cup\{l\})=\sigma(l,S\cup\{l\})-1$이며, $i>l$이면 $\sigma(i,S\cup\{l\})=\sigma(i,S)+1$이고 $\sigma(l,(S\setminus\{i\})\cup\{l\})=\sigma(l,S\cup\{l\})$이므로, 어느 경우에도 두 합의 대응되는 항들의 부호가 반대가 되어 소거되고 $(\dd{h}\omega)_S+(h\dd{\omega})_S=\omega_S$이다. 따라서 $\id$는 $0$과 homotopic하고 ([\[호몰로지 대수학\] §긴 완전열, ⁋정의 5](/ko/math/homological_algebra/long_exact_sequence#def5)), homotopic한 chain map들은 cohomology 위에서 같은 map을 유도하므로 ([\[호몰로지 대수학\] §긴 완전열, ⁋명제 6](/ko/math/homological_algebra/long_exact_sequence#prop6)) 모든 $i$에서 $H^i(D^\bullet)=0$이다. 특히 $T\neq\emptyset$일 때에는 $H^0(\check{C}(x;E))=0$인데, 이 경우 어떤 $x_l\notin\mathfrak{p}$이 $\mathfrak{a}$에 속해 $\mathfrak{a}\not\subseteq\mathfrak{p}$이므로 이는 [보조정리 5](#lem5)의 셋째 결과 $\Gamma_\mathfrak{a}(E)=0$과 정합적이다.
 
 **(일반적인 경우)** 모든 $A$-module $M$에 대한 자연 동형 $H_\mathfrak{a}^i(M)\cong H^i(\check{C}(x;M))$을 $i$에 대한 귀납법으로 보인다. $i=0$은 첫째 단계에서 이미 보였다. $M$이 주어지면 [\[호몰로지 대수학\] §분해, ⁋명제 5](/ko/math/homological_algebra/resolutions#prop5)에 의하여 short exact sequence
 

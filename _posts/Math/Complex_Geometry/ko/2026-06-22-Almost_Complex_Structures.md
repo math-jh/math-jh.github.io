@@ -127,7 +127,7 @@ $$
 
 이 되어, complex manifold에서 좌표로 도입했던 holomorphic·antiholomorphic tangent space ([§복소다양체, ⁋정의 10](/ko/math/complex_geometry/complex_manifolds#def10)) 과 일치한다. 거의 복소구조의 언어는 이 분해를 좌표 없이, 고유공간으로 규정한다.
 
-쌍대 쪽에서도 같은 분해가 일어난다. 복소화 cotangent space $T_p^{\ast\mathbb{C}} M = T_p^\ast M \otimes_{\mathbb{R}} \mathbb{C}$ 위에 $J_p$의 전치를 작용시키면, $+i$ 고유공간 $\Lambda^{1,0}_p$과 $-i$ 고유공간 $\Lambda^{0,1}_p$으로 갈라진다. $\Lambda^{1,0}_p$은 $T_p^{0,1} M$ 위에서 소멸하는 (1,0)-covector들, $\Lambda^{0,1}_p$은 $T_p^{1,0} M$ 위에서 소멸하는 (0,1)-covector들로 이루어진다. 표준 거의 복소구조에서는 $\Lambda^{1,0}_p = \span_{\mathbb{C}}\{dz_j\}$, $\Lambda^{0,1}_p = \span_{\mathbb{C}}\{d\bar{z}_j\}$이다.
+쌍대 쪽에서도 같은 분해가 일어난다. 복소화 cotangent space $T_p^{\ast\mathbb{C}} M = T_p^\ast M \otimes_{\mathbb{R}} \mathbb{C}$ 위에 $J_p$의 전치를 작용시키면, $+i$ 고유공간 $\Lambda^{1,0}_p$과 $-i$ 고유공간 $\Lambda^{0,1}_p$으로 갈라진다. $\Lambda^{1,0}_p$은 $T_p^{0,1} M$ 위에서 소멸하는 (1,0)-covector들, $\Lambda^{0,1}_p$은 $T_p^{1,0} M$ 위에서 소멸하는 (0,1)-covector들로 이루어진다. 표준 거의 복소구조에서는 $\Lambda^{1,0}_p = \span_{\mathbb{C}}\{\dd{z_j}\}$, $\Lambda^{0,1}_p = \span_{\mathbb{C}}\{\dd{\bar{z}_j}\}$이다.
 
 ## (p,q)-형식
 
@@ -146,7 +146,7 @@ $$
 말하자면 $(p,q)$-형식은 (1,0)-covector $p$개와 (0,1)-covector $q$개를 wedge한 것들의 $\mathbb{C}$-선형결합이다. 표준 거의 복소구조에서는 국소적으로
 
 $$
-\Omega^{p,q}(M) \ni \omega = \sum_{\lvert I \rvert = p,\ \lvert J \rvert = q} f_{IJ}\, dz_{i_1} \wedge \cdots \wedge dz_{i_p} \wedge d\bar{z}_{j_1} \wedge \cdots \wedge d\bar{z}_{j_q}
+\Omega^{p,q}(M) \ni \omega = \sum_{\lvert I \rvert = p,\ \lvert J \rvert = q} f_{IJ}\dd{z_{i_1}} \wedge \cdots \wedge \dd{z_{i_p}} \wedge \dd{\bar{z}_{j_1}} \wedge \cdots \wedge \dd{\bar{z}_{j_q}}
 $$
 
 꼴로 적힌다. 여기서 $I = (i_1 < \cdots < i_p)$, $J = (j_1 < \cdots < j_q)$는 증가 다중지표이고 $f_{IJ}$는 smooth 복소함수이다. $\bigwedge^p \Lambda^{1,0}$의 복소차원이 $\binom{n}{p}$, $\bigwedge^q \Lambda^{0,1}$의 복소차원이 $\binom{n}{q}$이므로 $\Lambda^{p,q}$의 fiber 복소차원은 $\binom{n}{p}\binom{n}{q}$이다.
@@ -229,7 +229,7 @@ $$
 
 1. $N_J = 0$.
 2. $T^{1,0} M$이 *involutive*하다. 곧 임의의 (1,0)-벡터장 $Z, W$에 대하여 $[Z, W]$도 다시 (1,0)-벡터장이다.
-3. $d(\Omega^{1,0}(M)) \subseteq \Omega^{2,0}(M) \oplus \Omega^{1,1}(M)$.
+3. $\dd{(\Omega^{1,0}(M))} \subseteq \Omega^{2,0}(M) \oplus \Omega^{1,1}(M)$.
 :::
 
 ::: 증명
@@ -250,16 +250,16 @@ $$
 (2) ⟺ (3)을 보인다. 실 벡터장에 대한 exterior derivative의 항등식
 
 $$
-d\alpha(U, V) = U(\alpha(V)) - V(\alpha(U)) - \alpha([U, V])
+\dd{\alpha}(U, V) = U(\alpha(V)) - V(\alpha(U)) - \alpha([U, V])
 $$
 
 을 (1,0)-형식 $\alpha \in \Omega^{1,0}(M)$과 두 (0,1)-벡터장 $\bar{Z}, \bar{W}$에 적용하자. $\alpha$는 (0,1)-벡터장 위에서 소멸하므로 $\alpha(\bar{Z}) = \alpha(\bar{W}) = 0$이고, 따라서
 
 $$
-d\alpha(\bar{Z}, \bar{W}) = -\alpha([\bar{Z}, \bar{W}]).
+\dd{\alpha}(\bar{Z}, \bar{W}) = -\alpha([\bar{Z}, \bar{W}]).
 $$
 
-$d\alpha$의 (0,2)-성분이 $0$이라는 것은 모든 (1,0)-형식 $\alpha$와 모든 (0,1)-벡터장 쌍에 대해 좌변이 $0$이라는 것과 같고, 위 식에서 이는 $[\bar{Z}, \bar{W}]$에 (1,0)-성분이 없다는 것, 곧 $[\bar Z, \bar W]$가 다시 (0,1)이라는 것과 동치이다. 켤레를 취하면 이는 $T^{1,0}M$의 involutivity와 같다. 한편 $d\alpha$는 $2$-형식이므로 (2,0)+(1,1)+(0,2)로 분해되며, $d(\Omega^{1,0}) \subseteq \Omega^{2,0}\oplus\Omega^{1,1}$은 정확히 (0,2)-성분의 소멸을 뜻한다. 따라서 (2) ⟺ (3)이다.
+$\dd{\alpha}$의 (0,2)-성분이 $0$이라는 것은 모든 (1,0)-형식 $\alpha$와 모든 (0,1)-벡터장 쌍에 대해 좌변이 $0$이라는 것과 같고, 위 식에서 이는 $[\bar{Z}, \bar{W}]$에 (1,0)-성분이 없다는 것, 곧 $[\bar Z, \bar W]$가 다시 (0,1)이라는 것과 동치이다. 켤레를 취하면 이는 $T^{1,0}M$의 involutivity와 같다. 한편 $\dd{\alpha}$는 $2$-형식이므로 (2,0)+(1,1)+(0,2)로 분해되며, $\dd{(\Omega^{1,0})} \subseteq \Omega^{2,0}\oplus\Omega^{1,1}$은 정확히 (0,2)-성분의 소멸을 뜻한다. 따라서 (2) ⟺ (3)이다.
 :::
 
 이로써 적분가능성의 후보 판정량이 갖춰졌다. 조건 (2)는 적분가능성과 곧바로 이어진다. 만약 $J$가 복소구조에서 온다면 $T^{1,0} M$이 $\partial/\partial z_j$들로 생성되고 $[\partial/\partial z_j, \partial/\partial z_k] = 0$이므로 involutive하다. 곧 적분가능성은 $N_J = 0$을 함의한다. 진짜 깊이는 그 역, 곧 $N_J = 0$이 복소구조의 존재를 보장한다는 데 있으며, 이것이 Newlander–Nirenberg 정리이다.
@@ -275,11 +275,11 @@ $d\alpha$의 (0,2)-성분이 $0$이라는 것은 모든 (1,0)-형식 $\alpha$와
 ::: 증명
 필요성은 이미 보았다. $J$가 복소구조에서 오면 [명제 11](#prop11)의 조건 (2)가 성립하고, 동치인 (1)에 의해 $N_J = 0$이다.
 
-충분성이 정리의 본체이며 증명은 길고 해석적이므로 핵심 구조만 적는다. $N_J = 0$이라 가정하면 [명제 11](#prop11)에 의해 복소 분포 $T^{1,0} M$이 involutive하다. 보이고자 하는 바는 각 점 둘레에 국소 복소좌표 $z_1, \ldots, z_n$이 존재하여 $d z_j$들이 $\Lambda^{1,0}$을 점별 생성하는 것, 동치로 holomorphic function처럼 행동하는 좌표 $z_j$ (곧 $\bar{Z} z_j = 0$이 모든 (0,1)-벡터장 $\bar{Z}$에 대해 성립) 가 충분히 많이 존재하는 것이다.
+충분성이 정리의 본체이며 증명은 길고 해석적이므로 핵심 구조만 적는다. $N_J = 0$이라 가정하면 [명제 11](#prop11)에 의해 복소 분포 $T^{1,0} M$이 involutive하다. 보이고자 하는 바는 각 점 둘레에 국소 복소좌표 $z_1, \ldots, z_n$이 존재하여 $\dd{z_j}$들이 $\Lambda^{1,0}$을 점별 생성하는 것, 동치로 holomorphic function처럼 행동하는 좌표 $z_j$ (곧 $\bar{Z} z_j = 0$이 모든 (0,1)-벡터장 $\bar{Z}$에 대해 성립) 가 충분히 많이 존재하는 것이다.
 
 실해석적($C^\omega$) 경우에는 이것이 복소화 Frobenius 정리로 곧장 따라온다. 계수를 복소수로 확장한 holomorphic 영역에서 involutive 복소 분포는 integral manifold를 가지며, 이 integral manifold들의 횡단 좌표가 바라던 $z_j$를 준다. 이 논법은 Cauchy–Kovalevskaya 정리에 기대므로 해석성을 본질적으로 쓴다.
 
-Smooth($C^\infty$) 경우에는 해석성이 없어 위 논법이 작동하지 않으며, 이것이 Newlander–Nirenberg의 진짜 기여이다. 차원에 대한 귀납과 편미분방정식계의 풀이를 결합하여, $N_J = 0$이라는 적분가능성 조건이 보장하는 상삼각 구조 아래에서 비선형 $\bar\partial$-형 방정식 $\bar{Z} z_j = 0$의 충분히 많은 해를 국소적으로 구성한다. 원논문은 비선형 타원계의 linearization과 Newlander–Nirenberg 추정으로 이 해의 존재와 holomorphic 의존성을 얻는다. 이렇게 얻은 좌표 $z_j$들의 transition function은 $\bar\partial z_j = 0$을 만족하므로 holomorphic이고, 따라서 이 좌표들이 $M$ 위에 complex manifold 구조를 정의한다. 구성에서 $d z_j$가 $\Lambda^{1,0}$을 생성하므로 그 표준 거의 복소구조는 $J$와 일치한다.
+Smooth($C^\infty$) 경우에는 해석성이 없어 위 논법이 작동하지 않으며, 이것이 Newlander–Nirenberg의 진짜 기여이다. 차원에 대한 귀납과 편미분방정식계의 풀이를 결합하여, $N_J = 0$이라는 적분가능성 조건이 보장하는 상삼각 구조 아래에서 비선형 $\bar\partial$-형 방정식 $\bar{Z} z_j = 0$의 충분히 많은 해를 국소적으로 구성한다. 원논문은 비선형 타원계의 linearization과 Newlander–Nirenberg 추정으로 이 해의 존재와 holomorphic 의존성을 얻는다. 이렇게 얻은 좌표 $z_j$들의 transition function은 $\bar\partial z_j = 0$을 만족하므로 holomorphic이고, 따라서 이 좌표들이 $M$ 위에 complex manifold 구조를 정의한다. 구성에서 $\dd{z_j}$가 $\Lambda^{1,0}$을 생성하므로 그 표준 거의 복소구조는 $J$와 일치한다.
 
 유일성은 두 복소구조가 같은 $J$를 주면 두 좌표계의 transition function이 양쪽 모두에서 $\bar\partial$를 죽여 holomorphic이 되고, 따라서 두 복소구조가 양립가능하다는 데서 따라온다.
 :::

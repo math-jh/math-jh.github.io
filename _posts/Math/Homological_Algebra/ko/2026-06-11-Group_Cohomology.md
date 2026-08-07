@@ -124,15 +124,15 @@ $$C^n(G;M)=\Hom_{\lMod{\mathbb{Z}G}}(B_n,M)\cong\left\{\text{함수 $\varphi:G^n
 
 이고, 위의 $d_{n+1}$이 유도하는 differential은
 
-$$(d\varphi)(g_1,\ldots,g_{n+1})=g_1\cdot\varphi(g_2,\ldots,g_{n+1})+\sum_{i=1}^n(-1)^i\varphi(g_1,\ldots,g_ig_{i+1},\ldots,g_{n+1})+(-1)^{n+1}\varphi(g_1,\ldots,g_n)$$
+$$(\dd{\varphi})(g_1,\ldots,g_{n+1})=g_1\cdot\varphi(g_2,\ldots,g_{n+1})+\sum_{i=1}^n(-1)^i\varphi(g_1,\ldots,g_ig_{i+1},\ldots,g_{n+1})+(-1)^{n+1}\varphi(g_1,\ldots,g_n)$$
 
 으로 주어진다. [§Ext와 Tor, ⁋명제 3](/ko/math/homological_algebra/ext_and_tor#prop3)에 의하여 $H^n(G;M)$은 이 cochain complex의 cohomology이다. 이 함수들을 *$n$-cochain*이라 부르고, $\ker d$와 $\im d$의 원소들을 각각 *$n$-cocycle*, *$n$-coboundary*라 부른다.
 
 ## 낮은 차수에서의 해석
 
-Degree가 낮을 때는 위의 cochain complex를 손으로 읽을 수 있다. $n=0$일 때 $C^0(G;M)=M$이고 $(d m)(g)=g\cdot m-m$이므로 $H^0(G;M)=M^G$를 다시 얻는다. $n=1$일 때 cocycle 조건은
+Degree가 낮을 때는 위의 cochain complex를 손으로 읽을 수 있다. $n=0$일 때 $C^0(G;M)=M$이고 $(\dd{m})(g)=g\cdot m-m$이므로 $H^0(G;M)=M^G$를 다시 얻는다. $n=1$일 때 cocycle 조건은
 
-$$(d\varphi)(g,h)=g\cdot\varphi(h)-\varphi(gh)+\varphi(g)=0$$
+$$(\dd{\varphi})(g,h)=g\cdot\varphi(h)-\varphi(gh)+\varphi(g)=0$$
 
 이다.
 
@@ -148,7 +148,7 @@ $$\varphi(gh)=g\cdot\varphi(h)+\varphi(g)$$
 $H^1(G;M)$은 crossed homomorphism들의 group을 principal crossed homomorphism들의 subgroup으로 나눈 quotient와 isomorphic하다. 특히 $G$가 $M$에 trivial하게 작용한다면 $H^1(G;M)\cong\Hom_{\Grp}(G,M)$이다.
 :::
 ::: 증명
-위에서 계산한 cocycle 조건이 정확히 crossed homomorphism의 조건이고, $1$-coboundary $dm$이 정확히 principal crossed homomorphism이므로 첫 주장은 정의 그대로이다. Action이 trivial하다면 crossed homomorphism의 조건은 $\varphi(gh)=\varphi(h)+\varphi(g)$, 즉 group homomorphism의 조건이 되고, principal crossed homomorphism은 $0$ 뿐이다.
+위에서 계산한 cocycle 조건이 정확히 crossed homomorphism의 조건이고, $1$-coboundary $\dd{m}$이 정확히 principal crossed homomorphism이므로 첫 주장은 정의 그대로이다. Action이 trivial하다면 crossed homomorphism의 조건은 $\varphi(gh)=\varphi(h)+\varphi(g)$, 즉 group homomorphism의 조건이 되고, principal crossed homomorphism은 $0$ 뿐이다.
 :::
 
 ## 순환군의 코호몰로지

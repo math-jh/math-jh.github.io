@@ -59,11 +59,11 @@ $M$이 $m$차원의 connected manifold라 하자. 다음이 모두 동치이다.
 ::: 증명
 편의상 $M$의 coordinate system들은 모두 connected인 것으로 가정한다. 이는 항상 가능한데, 임의의 chart의 정의역을 좌표근방 안의 열린 공들로 제한하면 되기 때문이다. 또, coordinate system $(U,x)$마다 $U$ 위에서 정의된 non-vanishing $m$-form
 
-$$\omega_U=dx^1\wedge\cdots\wedge dx^m$$
+$$\omega_U=\dd{x}^1\wedge\cdots\wedge \dd{x}^m$$
 
 을 생각하자. 두 coordinate system $(U,x)$, $(V,y)$가 겹치는 곳에서는 다음의 변환식
 
-$$dy^1\wedge\cdots\wedge dy^m=\det\left(\frac{\partial y^i}{\partial x^j}\right)dx^1\wedge\cdots\wedge dx^m$$
+$$\dd{y}^1\wedge\cdots\wedge \dd{y}^m=\det\left(\frac{\partial y^i}{\partial x^j}\right)\dd{x}^1\wedge\cdots\wedge \dd{x}^m$$
 
 이 성립한다는 것을 기억하자.
 

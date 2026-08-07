@@ -61,7 +61,7 @@ holds.
 :::
 
 ::: Corollary 4 (Submersion Level Set Theorem)
-Let $F:M\rightarrow N$ be $C^\infty$, fix $q\in F(M)$, and let $P=F^{-1}(q)$. If for every $p\in P$ the differential $dF_p:T_pM\rightarrow T_{F(p)}N$ is surjective, then there exists a unique manifold structure on $P$ such that the canonical injection $\iota:P\hookrightarrow M$ is a submanifold.
+Let $F:M\rightarrow N$ be $C^\infty$, fix $q\in F(M)$, and let $P=F^{-1}(q)$. If for every $p\in P$ the differential $\dd{F_p}:T_pM\rightarrow T_{F(p)}N$ is surjective, then there exists a unique manifold structure on $P$ such that the canonical injection $\iota:P\hookrightarrow M$ is a submanifold.
 
 Moreover, in this case $\iota$ is an embedding and the codimension $\dim M-\dim P$ of $P$ equals $\dim N$.
 :::
@@ -71,7 +71,7 @@ Moreover, in this case $\iota$ is an embedding and the codimension $\dim M-\dim 
 The hypothesis of the next corollary is weaker than that of the preceding one, so it is more widely applicable.
 
 ::: Corollary 5 (Constant-Rank Level Set Theorem)
-Let $F:M\rightarrow N$ be $C^\infty$, and suppose that the differential $dF_p:T_pM\rightarrow T_{F(p)}N$ defined at each $p\in P$ has the same rank at every point $p\in P$. Then $F:M\rightarrow N$ is an embedded submanifold.
+Let $F:M\rightarrow N$ be $C^\infty$, and suppose that the differential $\dd{F_p}:T_pM\rightarrow T_{F(p)}N$ defined at each $p\in P$ has the same rank at every point $p\in P$. Then $F:M\rightarrow N$ is an embedded submanifold.
 :::
 
 Using these theorems, one can show that certain subsets of a given manifold $M$ are embedded submanifolds. This typically follows an argument such as the one below.
@@ -83,9 +83,9 @@ $$f(x)=\lvert x\rvert^2=\sum_{i=1}^{n+1} r^i(x)^2.$$
 
 For any point $x\in \mathbb{R}^{n+1}$ and $v\in T_x\mathbb{R}^{n+1}$,
 
-$$df_x(v)=v(f)=\sum v^i\frac{\partial f}{\partial r^i}\bigg\vert_{x}=2\sum r^i(x) v^i$$
+$$\dd{f_x}(v)=v(f)=\sum v^i\frac{\partial f}{\partial r^i}\bigg\vert_{x}=2\sum r^i(x) v^i$$
 
-holds, and from this we see that if $x$ is not the origin, then by adjusting $v$ we can make $df_x(v)$ take any real value. That is, since $df_x$ is always surjective away from the origin, there exists a unique manifold structure on $f^{-1}(1)$ making it a submanifold of $\mathbb{R}^{n+1}$. By uniqueness, this structure coincides with the manifold structure given on $S^n$, and again by [Corollary 5](#cor5) we can see that this structure is an embedded submanifold of $\mathbb{R}^{n+1}$.
+holds, and from this we see that if $x$ is not the origin, then by adjusting $v$ we can make $\dd{f_x}(v)$ take any real value. That is, since $\dd{f_x}$ is always surjective away from the origin, there exists a unique manifold structure on $f^{-1}(1)$ making it a submanifold of $\mathbb{R}^{n+1}$. By uniqueness, this structure coincides with the manifold structure given on $S^n$, and again by [Corollary 5](#cor5) we can see that this structure is an embedded submanifold of $\mathbb{R}^{n+1}$.
 :::
 
 ---

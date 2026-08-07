@@ -41,12 +41,12 @@ $$(\mathcal{L}_Xf)(p)=\lim_{t\rightarrow 0}\frac{f(\phi^t(p))-f(\phi^0(p))}{t}=\
 
 가장 간단한 예시는 벡터장의 미분이다. 벡터장 $Y$는 $M$에서 $TM$으로의 함수이므로, 위의 [정의 1](#def1)과 유사한 방법을 사용하여 미분을 시도해볼 수 있으나 이는 만만한 일이 아니다. 여기에는 함수의 미분보다 조금 더 근본적인 문제가 있는데, $Y(\phi^t(p))$는 $T_{\phi^t(p)}M$의 원소인 반면 $Y(p)$는 $T_pM$의 원소이므로 이들 둘의 차 $Y_{\phi^t(p)}-Y_p$를 계산하는 방법이 애초부터 없기 때문이다. 
 
-그럼에도 불구하고 우리 상황에서는 이를 미분하는 것이 가능하다. [§벡터장, ⁋정리 6](/ko/math/manifolds/vector_fields#thm6)을 생각하면 $\phi^t$는 diffeomorphism이므로, $d\phi^t$는 $T_pM$에서 $T_{\phi^t(p)}M$으로의 isomorphism을 유도한다. 또, 같은 정리에서 이 isomorphism의 역함수는 $d\phi^{-t}$라는 것 또한 안다. 따라서 $Y_{\phi^t(p)}$를 $d\phi^{-t}$를 통해 $T_pM$으로 가져오면 다음과 같이 정의할 수 있다.
+그럼에도 불구하고 우리 상황에서는 이를 미분하는 것이 가능하다. [§벡터장, ⁋정리 6](/ko/math/manifolds/vector_fields#thm6)을 생각하면 $\phi^t$는 diffeomorphism이므로, $\dd{\phi}^t$는 $T_pM$에서 $T_{\phi^t(p)}M$으로의 isomorphism을 유도한다. 또, 같은 정리에서 이 isomorphism의 역함수는 $\dd{\phi}^{-t}$라는 것 또한 안다. 따라서 $Y_{\phi^t(p)}$를 $\dd{\phi}^{-t}$를 통해 $T_pM$으로 가져오면 다음과 같이 정의할 수 있다.
 
 ::: 정의 2
 Manifold $M$과 그 위에 정의된 벡터장 $X$를 고정하고, 또 다른 벡터장 $Y:M\rightarrow TM$이 주어졌다 하자. 그럼 $Y$의 *Lie derivative* $\mathcal{L}_XY$는 다음의 식
 
-$$(\mathcal{L}_XY)_p=\lim_{t\rightarrow 0}\frac{(d\phi^{-t})_{\phi^t(p)}(Y_{\phi^t(p)})-Y_p}{t}$$
+$$(\mathcal{L}_XY)_p=\lim_{t\rightarrow 0}\frac{(\dd{\phi}^{-t})_{\phi^t(p)}(Y_{\phi^t(p)})-Y_p}{t}$$
 
 으로 정의된 벡터장이다.
 :::
@@ -58,7 +58,7 @@ $$(\mathcal{L}_XY)_p=\lim_{t\rightarrow 0}\frac{(d\phi^{-t})_{\phi^t(p)}(Y_{\phi
 ::: 정의 3
 Manifold $M$과 그 위에 정의된 벡터장 $X$를 고정하고, differential form $\omega\in\Omega^\ast(M)$이 주어졌다 하자. 그럼 $\omega$의 *Lie derivative* $\mathcal{L}_X\omega$는 다음의 식
 
-$$(\mathcal{L}_X\omega)_p=\frac{d}{dt}\bigg\vert_{t=0}(\phi^t)^\ast\omega_{\phi^t(p)}=\lim_{t\rightarrow 0}\frac{(\phi^t)^\ast\omega_{\phi^t(p)}-\omega_p}{t}$$
+$$(\mathcal{L}_X\omega)_p=\frac{d}{\dd{t}}\bigg\vert_{t=0}(\phi^t)^\ast\omega_{\phi^t(p)}=\lim_{t\rightarrow 0}\frac{(\phi^t)^\ast\omega_{\phi^t(p)}-\omega_p}{t}$$
 
 으로 정의된 differential form이다.
 :::
@@ -80,7 +80,7 @@ $$(\mathcal{L}_X\omega)_p=\frac{d}{dt}\bigg\vert_{t=0}(\phi^t)^\ast\omega_{\phi^
 
 6. 임의의 $\omega\in\Omega^k(M)$과 $X_0, X_1,\ldots, X_k\in\mathfrak{X}(M)$에 대하여
 
-    $$\begin{aligned}d\omega(X_0,\ldots, X_k)&=\sum_{i=0}^k(-1)^iX_i\omega(X_0,\ldots, \hat{X}_i,\ldots, X_k)\\&\phantom{==}+\sum_{i<j}(-1)^{i+j}\omega([X_i, X_j], X_0,\ldots, \hat{X}_i,\ldots, \hat{X}_j,\ldots, X_k)\end{aligned}$$
+    $$\begin{aligned}\dd{\omega}(X_0,\ldots, X_k)&=\sum_{i=0}^k(-1)^iX_i\omega(X_0,\ldots, \hat{X}_i,\ldots, X_k)\\&\phantom{==}+\sum_{i<j}(-1)^{i+j}\omega([X_i, X_j], X_0,\ldots, \hat{X}_i,\ldots, \hat{X}_j,\ldots, X_k)\end{aligned}$$
 
 5번과 6번에서, hat은 주어진 성분이 생략되었음을 의미한다.
 :::
@@ -107,16 +107,16 @@ $$[X,Y]f=X(Yf)-Y(Xf)$$
 
 이렇게 정의된 벡터장 $[X,Y]$를 $X$와 $Y$의 *Lie bracket*이라 부른다. 이 정의는 나중에 아주 중요하게 쓰이므로, 몇 가지 결과를 미리 정리해 두는 것이 좋아보인다.
 
-두 manifold $M,N$ 사이의 $C^\infty$ 함수 $F:M\rightarrow N$이 주어졌다 하자. 그럼 $dF_p:T_pM\rightarrow T_{F(p)}N$은 $M$의 한 점 $p$에서 정의된 tangent vector $v$를 $N$의 한 점 $F(p)$에서 정의된 tangent vector $dF_p(v)$로 보내주는 함수이다. 그러나 일반적으로 이것이 벡터장에 대해 가능할 필요는 없다. 즉, $M$ 위에서 정의된 벡터장 $X$가 주어져 있다 하여, 이를 $dF_p$ 등을 통해 $N$ 위에서 정의된 벡터장을 만들 수 없다. 
+두 manifold $M,N$ 사이의 $C^\infty$ 함수 $F:M\rightarrow N$이 주어졌다 하자. 그럼 $\dd{F_p}:T_pM\rightarrow T_{F(p)}N$은 $M$의 한 점 $p$에서 정의된 tangent vector $v$를 $N$의 한 점 $F(p)$에서 정의된 tangent vector $\dd{F_p}(v)$로 보내주는 함수이다. 그러나 일반적으로 이것이 벡터장에 대해 가능할 필요는 없다. 즉, $M$ 위에서 정의된 벡터장 $X$가 주어져 있다 하여, 이를 $\dd{F_p}$ 등을 통해 $N$ 위에서 정의된 벡터장을 만들 수 없다. 
 
-예컨대 $F$가 전사가 아니라면, $F$의 image에 속하지 않는 점 $q\in N$에서의 tangent vector를 대응시키는 방법이 자연스럽게 존재하지 않는다. 이는 치역을 제한하는 등의 방식으로 해결한다 치더라도, 만일 $F$가 단사가 아니고 $F(p_1)=F(p_2)=q\in N$라면, 이 공통의 점 $q$에서의 tangent vector를 $dF_{p_1} v_1$과 $dF_{p_2} v_2$ 중 어떤 것을 택해야 할지도 정해야 한다.
+예컨대 $F$가 전사가 아니라면, $F$의 image에 속하지 않는 점 $q\in N$에서의 tangent vector를 대응시키는 방법이 자연스럽게 존재하지 않는다. 이는 치역을 제한하는 등의 방식으로 해결한다 치더라도, 만일 $F$가 단사가 아니고 $F(p_1)=F(p_2)=q\in N$라면, 이 공통의 점 $q$에서의 tangent vector를 $\dd{F_{p_1}} v_1$과 $\dd{F_{p_2}} v_2$ 중 어떤 것을 택해야 할지도 정해야 한다.
 
 때문에 $X\in\mathfrak{X}(M)$을 $F$를 통해 움직이려 하기보다는 이미 주어진 $Y\in\mathfrak{X}(N)$이 원하는 성질을 만족하는 경우를 살펴보는 편이 현명하다.
 
 ::: 정의 6
 $F:M\rightarrow N$이 $C^\infty$ 함수라 하자. 만일 $X\in\mathfrak{X}(M)$과 $Y\in\mathfrak{X}(N)$이 다음의 식
 
-$$dF_p(X_p)=Y_{F(p)}$$
+$$\dd{F_p}(X_p)=Y_{F(p)}$$
 
 을 모든 $p\in M$에 대해 만족한다면, $X$와 $Y$가 *$F$-related*되어있다고 부른다.
 :::
@@ -137,7 +137,7 @@ $$X(f\circ F)=(Yf)\circ F$$
 ::: 증명
 임의의 점 $p\in M$에 대하여,
 
-$$X(f\circ F)(p)=X_p(f\circ F)=dF_p(X_p)f$$
+$$X(f\circ F)(p)=X_p(f\circ F)=\dd{F_p}(X_p)f$$
 
 그리고
 
@@ -154,11 +154,11 @@ $F:M\rightarrow N$이 diffeomorphism이라면, 임의의 $X\in\mathfrak{X}(M)$�
 ::: 증명
 각각의 $q\in N$마다 유일한 $p\in M$이 존재하여 $F(p)=q$이다. 따라서 각각의 점 $q\in N$마다, $Y$를 다음의 식
 
-$$Y_q=dF_p(X_p)\qquad (F(p)=q)$$
+$$Y_q=\dd{F_p}(X_p)\qquad (F(p)=q)$$
 
 으로 정의해주면 된다. $Y$가 $X$에 $F$-related이기 위해서는 위의 식이 반드시 성립해야 하므로, 이러한 $Y$가 유일하다는 것은 자명하다. 또, $Y:N\rightarrow TN$은 이제 다음 $C^\infty$ 함수들의 합성
 
-$$N\overset{F^{-1}}{\longrightarrow}M\overset{X}{\longrightarrow}TM\overset{dF}{\longrightarrow}TN$$
+$$N\overset{F^{-1}}{\longrightarrow}M\overset{X}{\longrightarrow}TM\overset{\dd{F}}{\longrightarrow}TN$$
 
 이므로 $Y$는 $C^\infty$이다. 
 :::
@@ -169,14 +169,14 @@ $F:M\rightarrow N$이 $C^\infty$라 하자. 만일 $i=1,2$에 대해 $X_i\in\mat
 ::: 증명
 다음의 식
 
-$$dF_p([X_1,X_2]_p)=[Y_1,Y_2]_{F(p)}$$
+$$\dd{F_p}([X_1,X_2]_p)=[Y_1,Y_2]_{F(p)}$$
 
 이 모든 $p$에 대해 성립함을 보여야 한다. 이제 $F(p)$ 근방에서 정의된 임의의 함수 $f$에 대하여,
 
-$$\begin{aligned}dF_p([X_1,X_2]_p)f&=[X_1,X_2]_p(f\circ F)\\
+$$\begin{aligned}\dd{F_p}([X_1,X_2]_p)f&=[X_1,X_2]_p(f\circ F)\\
 &=(X_1)_p(X_2(f\circ F))-(X_2)_p(X_1(f\circ F))\\
 &=(X_1)_p((Y_2f)\circ F)-(X_2)_p((Y_1f)\circ F)\\
-&=dF_p(X_1)_p(Y_2f)-dF_p(X_2)_p(Y_1f)\\
+&=\dd{F_p}(X_1)_p(Y_2f)-\dd{F_p}(X_2)_p(Y_1f)\\
 &=(Y_1)_{F(p)}(Y_2f)-(Y_2)_{F(p)}(Y_1f)\\
 &=[Y_1,Y_2]_{F(p)}f\end{aligned}$$
 

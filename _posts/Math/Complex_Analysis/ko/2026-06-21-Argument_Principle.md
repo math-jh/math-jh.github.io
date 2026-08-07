@@ -55,7 +55,7 @@ $$\frac{f'(z)}{f(z)} = \frac{k}{z - z_0} + \frac{\varphi'(z)}{\varphi(z)}$$
 ::: 정리 3 (편각원리)
 $\Omega \subseteq \mathbb{C}$가 단순연결 영역이고 $f$가 $\Omega$에서 유리형이며 항등적으로 $0$이 아니라 하자. $\gamma$이 $\Omega$ 안의 양의 방향 simple closed 곡선이고 그 자취 위에 $f$의 영점도 극도 없다고 하자. 그러면
 
-$$\frac{1}{2\pi i}\oint_\gamma \frac{f'(z)}{f(z)}\,dz = Z - P$$
+$$\frac{1}{2\pi i}\oint_\gamma \frac{f'(z)}{f(z)}\dd{z} = Z - P$$
 
 이다. 여기서 $Z$은 $\gamma$ 안쪽에 있는 $f$의 영점의 개수, $P$은 극의 개수이며, 각각 order를 세어 (order $m$인 영점·극은 $m$번) 헤아린다. 더 나아가 이 값은 상곡선 $f \circ \gamma$의 원점에 대한 회전수와 같다. 곧
 
@@ -67,22 +67,22 @@ $$Z - P = n(f \circ \gamma,\, 0)$$
 ::: 증명
 $\gamma$의 자취와 그 안쪽이 이루는 콤팩트 집합 안에는 $f$의 영점과 극이 유한개만 들어 있다. 이들을 $z_1, \dots, z_r$이라 하고 각각의 부호 있는 order를 $k_j = \operatorname{ord}_{z_j} f$이라 하자. 함수 $f'/f$은 $\Omega$에서 이 점들을 제외하면 holomorphic이고, 보조정리 2에 의해 각 $z_j$에서 유수 $k_j$인 단순극을 가진다. $\gamma$의 자취 위에는 영점도 극도 없으므로 $f'/f$이 자취 위에서 holomorphic이다. $\gamma$이 양의 방향 simple closed 곡선이므로 안쪽 점에 대한 회전수는 $1$, 바깥 점에 대한 회전수는 $0$이고, 유수정리 ([§유수정리, ⁋정리 2](/ko/math/complex_analysis/residue_theorem#thm2)) 에 의해
 
-$$\frac{1}{2\pi i}\oint_\gamma\frac{f'(z)}{f(z)}\,dz = \sum_{z_j \text{ 안쪽}} \operatorname{Res}_{z = z_j}\frac{f'}{f} = \sum_{z_j \text{ 안쪽}} k_j$$
+$$\frac{1}{2\pi i}\oint_\gamma\frac{f'(z)}{f(z)}\dd{z} = \sum_{z_j \text{ 안쪽}} \operatorname{Res}_{z = z_j}\frac{f'}{f} = \sum_{z_j \text{ 안쪽}} k_j$$
 
 이다. 안쪽 영점에서는 $k_j$이 그 order만큼 양수이고 안쪽 극에서는 그 order만큼 음수이므로, order를 세어 더한 이 합은 정확히 $Z - P$이다.
 
-남은 것은 이 적분이 상곡선의 회전수와 같음을 보이는 일이다. $\gamma : [a, b] \rightarrow \mathbb{C}$이 piecewise $C^1$ 매개변수화이면 합성곡선 $\sigma = f \circ \gamma$ 역시 piecewise $C^1$이고, 그 자취 위에 $f$의 영점이 없으므로 $\sigma(t) = f(\gamma(t)) \neq 0$이다. 곧 $\sigma$은 원점을 지나지 않는 closed 곡선이다. 치환 $w = f(z)$, $dw = f'(z)\,dz$으로
+남은 것은 이 적분이 상곡선의 회전수와 같음을 보이는 일이다. $\gamma : [a, b] \rightarrow \mathbb{C}$이 piecewise $C^1$ 매개변수화이면 합성곡선 $\sigma = f \circ \gamma$ 역시 piecewise $C^1$이고, 그 자취 위에 $f$의 영점이 없으므로 $\sigma(t) = f(\gamma(t)) \neq 0$이다. 곧 $\sigma$은 원점을 지나지 않는 closed 곡선이다. 치환 $w = f(z)$, $\dd{w} = f'(z)\dd{z}$으로
 
-$$\oint_\gamma\frac{f'(z)}{f(z)}\,dz = \int_a^b\frac{f'(\gamma(t))\,\gamma'(t)}{f(\gamma(t))}\,dt = \int_a^b\frac{\sigma'(t)}{\sigma(t)}\,dt = \oint_\sigma\frac{dw}{w}$$
+$$\oint_\gamma\frac{f'(z)}{f(z)}\dd{z} = \int_a^b\frac{f'(\gamma(t))\,\gamma'(t)}{f(\gamma(t))}\dd{t} = \int_a^b\frac{\sigma'(t)}{\sigma(t)}\dd{t} = \oint_\sigma\frac{\dd{w}}{w}$$
 
 이고, 회전수의 정의 ([§Cauchy 정리, ⁋정의 9](/ko/math/complex_analysis/cauchy_theorem#def9)) 에 의해 마지막 적분이 $2\pi i\, n(\sigma, 0)$이다. 따라서
 
-$$\frac{1}{2\pi i}\oint_\gamma\frac{f'(z)}{f(z)}\,dz = n(f \circ \gamma,\, 0)$$
+$$\frac{1}{2\pi i}\oint_\gamma\frac{f'(z)}{f(z)}\dd{z} = n(f \circ \gamma,\, 0)$$
 
 이고, 이를 앞의 등식과 합치면 $Z - P = n(f \circ \gamma, 0)$을 얻는다.
 :::
 
-정리 3의 이름은 그 마지막 등식에서 온다. $\oint_\gamma f'/f\,dz$은 곧 $\oint_\sigma dw/w = \oint_\sigma d(\log w)$이고, $\log w = \log\lvert w\rvert + i\arg w$의 실수부는 closed 곡선을 한 바퀴 돌면 제자리로 돌아와 기여가 $0$이므로, 살아남는 것은 편각 $\arg w$의 총 변화량이다. 곧 적분의 값은 $z$이 $\gamma$을 한 바퀴 도는 동안 $f(z)$의 편각이 $2\pi$의 몇 배만큼 증가했는가를 센다. 이 편각의 총 증가량이 상곡선이 원점을 감는 횟수이고, 동시에 그것이 안쪽 영점 수에서 극 수를 뺀 값과 같다는 것이 편각원리의 내용이다. Holomorphic function의 경우 극이 없어 $P = 0$이므로, 적분은 곧 안쪽 영점의 개수를 order까지 세어 준다.
+정리 3의 이름은 그 마지막 등식에서 온다. $\oint_\gamma f'/f\dd{z}$은 곧 $\oint_\sigma \dd{w}/w = \oint_\sigma \dd{(\log w)}$이고, $\log w = \log\lvert w\rvert + i\arg w$의 실수부는 closed 곡선을 한 바퀴 돌면 제자리로 돌아와 기여가 $0$이므로, 살아남는 것은 편각 $\arg w$의 총 변화량이다. 곧 적분의 값은 $z$이 $\gamma$을 한 바퀴 도는 동안 $f(z)$의 편각이 $2\pi$의 몇 배만큼 증가했는가를 센다. 이 편각의 총 증가량이 상곡선이 원점을 감는 횟수이고, 동시에 그것이 안쪽 영점 수에서 극 수를 뺀 값과 같다는 것이 편각원리의 내용이다. Holomorphic function의 경우 극이 없어 $P = 0$이므로, 적분은 곧 안쪽 영점의 개수를 order까지 세어 준다.
 
 ::: 예시 4 (다항식의 영점 수)
 $p(z) = z^4 - 5z + 1$의 영점 가운데 단위원판 $\lvert z\rvert < 1$ 안에 있는 것의 개수를 편각원리로 센다. $p$은 다항식이라 entire function이고 극이 없으므로 ($P = 0$), 단위원 $\gamma(\theta) = e^{i\theta}$ ($0 \leq \theta \leq 2\pi$) 위에 영점이 없는 한 안쪽 영점 수 $Z$은 상곡선 $p \circ \gamma$의 원점에 대한 회전수와 같다. 먼저 단위원 위에 영점이 없음을 확인한다. $\lvert z\rvert = 1$이면 삼각부등식으로
@@ -119,7 +119,7 @@ $$h(z) = \frac{f(z) + g(z)}{f(z)} = 1 + \frac{g(z)}{f(z)}$$
 
 $$\lvert h(z) - 1\rvert = \left\lvert\frac{g(z)}{f(z)}\right\rvert < 1$$
 
-이다. 곧 상곡선 $h \circ \gamma$은 중심 $1$, 반지름 $1$인 열린 원판 $D(1, 1)$ 안에 통째로 들어 있다. 이 원판은 원점을 그 boundary에조차 포함하지 않으므로, $h \circ \gamma$은 원점을 감을 수 없어 $n(h \circ \gamma, 0) = 0$이다. 실제로 원점을 품지 않는 단순연결 영역 $D(1,1)$ 위에서 $1/w$은 원시함수 $\log w$ (주가지) 을 가지므로 $\oint_{h \circ \gamma} dw/w = 0$이고, 따라서 회전수가 $0$이다.
+이다. 곧 상곡선 $h \circ \gamma$은 중심 $1$, 반지름 $1$인 열린 원판 $D(1, 1)$ 안에 통째로 들어 있다. 이 원판은 원점을 그 boundary에조차 포함하지 않으므로, $h \circ \gamma$은 원점을 감을 수 없어 $n(h \circ \gamma, 0) = 0$이다. 실제로 원점을 품지 않는 단순연결 영역 $D(1,1)$ 위에서 $1/w$은 원시함수 $\log w$ (주가지) 을 가지므로 $\oint_{h \circ \gamma} \dd{w}/w = 0$이고, 따라서 회전수가 $0$이다.
 
 한편 $(f + g) \circ \gamma = (f \circ \gamma)\cdot(h \circ \gamma)$이고, 원점을 지나지 않는 두 closed 곡선의 곱에 대해 회전수는 더해진다. 이는
 

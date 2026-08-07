@@ -79,15 +79,15 @@ $X,Y\in\mathcal{D}$라 하고, 한 점 $p\in M$을 택하자. $[X,Y]_p\in\mathca
 
 $\mathcal{D}$는 integrable distribution이므로, 점 $p$를 포함하는 $\mathcal{D}$의 integral submanifold $\Phi:S\rightarrow M$이 존재한다. 점 $s\in S$가 $\Phi(s)=p$를 만족한다 하자. 임의의 $x\in S$에 대하여 
 
-$$d\Phi_x:T_xS\rightarrow\mathcal{D}(\Phi(x))$$
+$$\dd{\Phi_x}:T_xS\rightarrow\mathcal{D}(\Phi(x))$$
 
 이 isomorphism이므로, 우리는 
 
-$$d\Phi_s(\tilde{X}_s)=X_p,\qquad d\Phi_s(\tilde{Y}_s)=Y_p$$
+$$\dd{\Phi_s}(\tilde{X}_s)=X_p,\qquad \dd{\Phi_s}(\tilde{Y}_s)=Y_p$$
 
 을 만족하는 두 벡터장 $\tilde{X},\tilde{Y}$를 찾을 수 있다. 그럼 이들은 각각 $X,Y$와 $\Phi$-related인 벡터장들이므로, [§리 미분, ⁋명제 9](/ko/math/manifolds/Lie_derivative#prop9)에 의하여 $[\tilde{X},\tilde{Y}]$는 $[X,Y]$와 $\Phi$-related이다. 따라서
 
-$$[X,Y]_p=d\Phi_s([\tilde{X},\tilde{Y}]_s)\in\mathcal{D}(p)$$
+$$[X,Y]_p=\dd{\Phi_s}([\tilde{X},\tilde{Y}]_s)\in\mathcal{D}(p)$$
 
 이 성립한다. 
 :::
@@ -120,7 +120,7 @@ $$\sigma: (-\epsilon,\epsilon)\times W;\qquad (t,a^2,\ldots, a^d)\mapsto \phi^t(
 
 가 잘 정의된다. 그런데
 
-$$d\sigma\left(\frac{\partial}{\partial r^1}\bigg\vert_0\right)=\frac{\partial}{\partial y^1}\bigg\vert_p=X_p\neq 0,\qquad d\sigma\left(\frac{\partial}{\partial r^i}\bigg\vert_0\right)=\frac{\partial}{\partial y^i}\bigg\vert_p$$
+$$\dd{\sigma}\left(\frac{\partial}{\partial r^1}\bigg\vert_0\right)=\frac{\partial}{\partial y^1}\bigg\vert_p=X_p\neq 0,\qquad \dd{\sigma}\left(\frac{\partial}{\partial r^i}\bigg\vert_0\right)=\frac{\partial}{\partial y^i}\bigg\vert_p$$
 
 이므로 $\sigma$는 원점에서 nonsingular이고, 따라서 $\sigma^{-1}$이 coordinate map을 정의한다.
 :::
@@ -196,9 +196,9 @@ $$Y_i(x^{k+j})=Z_i(w^{k+j})=0$$
 
 이 성립하므로, 첫째 주장과 둘째 주장에 대한 증명이 완료되었다. 
 
-마지막으로 세 번째 주장을 보여야 한다. 이번에는 $\pi$를 $\mathbb{R}^m$에서, 나중 $m-k$개의 좌표로의 projection이라 하자. 그럼 $\mathcal{D}$의 $d(\pi\circ\varphi)$에 의한 image가 $0$이므로, 
+마지막으로 세 번째 주장을 보여야 한다. 이번에는 $\pi$를 $\mathbb{R}^m$에서, 나중 $m-k$개의 좌표로의 projection이라 하자. 그럼 $\mathcal{D}$의 $\dd{(\pi\circ\varphi)}$에 의한 image가 $0$이므로, 
 
-$$d(\pi\circ\varphi\circ\Phi)\equiv 0$$
+$$\dd{(\pi\circ\varphi\circ\Phi)}\equiv 0$$
 
 이 임의의 $y\in N$에 대해 성립한다. 그런데 $N$은 connected이므로, $\pi\circ\varphi\circ\Phi$가 상수함수이고, 따라서 $\Phi(N)$은 하나의 slice에 포함된다.
 :::

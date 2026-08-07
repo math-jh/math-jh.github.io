@@ -23,7 +23,7 @@ drift_needed: true
 
 $$\Der_A(B, M)\cong \Hom_B(\Omega_{B/A}, M)$$
 
-을 통해 characterize된다. ([\[가환대수학\] §미분, ⁋보조정리 2](/ko/math/commutative_algebra/differentials#lem2)) 즉, $\Omega_{B/A}$는 원소들 $db$로 생성되며, 라이프니츠 법칙 $d(xy)=xdy+ydx$과 $A$-linearity를 relation으로 가지는 $B$-module이며, 직관적으로 $\Omega_{B/A}$는 $A$의 원소들은 상수로 생각하고, $B$의 각 원소들은 함수로 생각한 후 이에 따라 라이프니츠 법칙을 요구하는 것으로 생각할 수 있다. 
+을 통해 characterize된다. ([\[가환대수학\] §미분, ⁋보조정리 2](/ko/math/commutative_algebra/differentials#lem2)) 즉, $\Omega_{B/A}$는 원소들 $\dd{b}$로 생성되며, 라이프니츠 법칙 $\dd{(xy)}=x\dd{y}+y\dd{x}$과 $A$-linearity를 relation으로 가지는 $B$-module이며, 직관적으로 $\Omega_{B/A}$는 $A$의 원소들은 상수로 생각하고, $B$의 각 원소들은 함수로 생각한 후 이에 따라 라이프니츠 법칙을 요구하는 것으로 생각할 수 있다. 
 
 위의 $B$-module은 $B$의 $A$-algebra 구조, 혹은 다른 말로 하면 ring homomorphism $A\rightarrow B$로부터 오는 것이므로, 이는 scheme morphism $\Spec B\rightarrow \Spec A$로 생각할 수 있다. 그럼 위에서 정의한 $B$-module $\Omega_{B/A}$는, scheme의 언어에서는 $\Spec B$ 위에 정의된 quasi-coherent sheaf $\widetilde{\Omega_{B/A}}$로 번역될 것이며, 일반적인 scheme morphism $\varphi:X\rightarrow S$에 대해서는 이들을 이어붙여 $\Omega_{X/S}$를 만들게 된다. ([§스킴 사이의 사상, ⁋명제 1](/ko/math/scheme_theory/morphism_of_schemes#prop1)) 그럼 위의 직관에 따르면, 이는 base $S$ 방향은 고정한채로, $\varphi:X\rightarrow S$의 fiber방향만 함수로 생각하여 미분을 한 것이라 생각할 수 있다. 
 
@@ -47,7 +47,7 @@ $A$-algebra $B$의 ideal $\mathfrak{a}$에 대하여 $C=B/\mathfrak{a}$라 하�
 
 $$\mathfrak{a}/\mathfrak{a}^2 \overset{\bar{d}}{\rightarrow} \Omega_{B/A}\otimes_BC \rightarrow \Omega_{C/A} \rightarrow 0$$
 
-은 exact이며, 첫째 morphism $\bar{d}$는 $f+\mathfrak{a}^2\mapsto df\otimes 1$로 주어진다.
+은 exact이며, 첫째 morphism $\bar{d}$는 $f+\mathfrak{a}^2\mapsto \dd{f}\otimes 1$로 주어진다.
 :::
 ::: 증명
 Surjection $\phi:B \rightarrow C=B/\mathfrak{a}$에 [\[가환대수학\] §미분, ⁋명제 9](/ko/math/commutative_algebra/differentials#prop9)를 적용하면 된다.
@@ -72,9 +72,9 @@ $$\Omega_{A_h/A}\otimes_{A_h}B \rightarrow \Omega_{B/A} \rightarrow \Omega_{B/A_
 
 을 얻는다. 그런데 universal derivation $d:A \rightarrow \Omega_{A/A}$는 Leibniz 법칙으로부터 
 
-$$d(1)=d(1\cdot 1)=2d(1),$$
+$$\dd{(1)}=\dd{(1\cdot 1)}=2\dd{(1)},$$
 
-즉 $d(1)=0$을 만족하고 $A$-linear이므로 임의의 $a\in A$에 대하여 $da=a\cdot d(1)=0$이며, 따라서 $\Omega_{A/A}=0$이다. 여기에 첫째 주장을 $B=A$와 $g=h$에 대하여 적용하면 $\Omega_{A_h/A}\cong(\Omega_{A/A})_h=0$이므로 위 sequence의 첫 항이 소멸하고, 남은 $\Omega_{B/A} \rightarrow \Omega_{B/A_h}$가 isomorphism이다.
+즉 $\dd{(1)}=0$을 만족하고 $A$-linear이므로 임의의 $a\in A$에 대하여 $\dd{a}=a\cdot \dd{(1)}=0$이며, 따라서 $\Omega_{A/A}=0$이다. 여기에 첫째 주장을 $B=A$와 $g=h$에 대하여 적용하면 $\Omega_{A_h/A}\cong(\Omega_{A/A})_h=0$이므로 위 sequence의 첫 항이 소멸하고, 남은 $\Omega_{B/A} \rightarrow \Omega_{B/A_h}$가 isomorphism이다.
 :::
 
 이제 $\varphi(U)\subseteq V$인 affine open subset들 $U=\Spec B\subseteq X$와 $V=\Spec A\subseteq S$마다 정의된 local model $\widetilde{\Omega_{B/A}}$를 이어붙여야 한다. 이러한 모양의 gluing은 [§올곱, ⁋정리 8](/ko/math/scheme_theory/fiber_products#thm8)에서 fiber product를 구성할 때 이미 거쳤으며, 그곳에서도 factor 쪽과 base 쪽의 축소를 각각 확인한 뒤 조각들을 이어붙였다. 
@@ -114,7 +114,7 @@ $$\Hom_B(\Omega_{B/A}, M)\cong\Hom_{B'}(\Omega_{B/A}\otimes_BB', M)$$
 
 $$\iota^\ast\Omega_{X/S}\cong\Omega_{X_s/\kappa(s)}$$
 
-를 얻는다. 가장 단순한 예로 $S=\Spec \mathbb{K}[\x]$와 $X=\Spec \mathbb{K}[\x, \y]$에 대하여 첫 좌표로의 projection $X \rightarrow S$를 생각하면, $\Omega_{X/S}$는 $d\y$를 기저로 하는 rank $1$의 free module이다. ([\[가환대수학\] §미분, ⁋명제 5](/ko/math/commutative_algebra/differentials#prop5))
+를 얻는다. 가장 단순한 예로 $S=\Spec \mathbb{K}[\x]$와 $X=\Spec \mathbb{K}[\x, \y]$에 대하여 첫 좌표로의 projection $X \rightarrow S$를 생각하면, $\Omega_{X/S}$는 $\dd{\y}$를 기저로 하는 rank $1$의 free module이다. ([\[가환대수학\] §미분, ⁋명제 5](/ko/math/commutative_algebra/differentials#prop5))
 
 Family가 자명하지 않을 때에는 $\Omega_{X/S}$가 fiber의 기하까지 기록한다. $A=\mathbb{K}[t]$와 $B=\mathbb{K}[t, \x, \y]/(\x\y-t)$에 대하여 $\varphi:X=\Spec B \rightarrow S=\Spec A$를 생각하자. 그럼 관계식이 $t=\x\y$를 주므로 $B\cong \mathbb{K}[\x, \y]$이고 $X$ 자체는 affine plane이다. 그러나 이를 제대로 보기 위해서는 $\varphi$가 $X$를 어떻게 family로 만드는지 보는 것이 좋다. 구체적으로 $a\in \mathbb{K}$가 $0$이 아닐 때 $t=a$ 위의 fiber $X_a$는 쌍곡선 $\x\y=a$이지만, $t=0$ 위의 fiber $X_0$는 이것이 degenerate하여 두 직선 $\x\y=0$이 된다. 
 
@@ -122,11 +122,11 @@ Family가 자명하지 않을 때에는 $\Omega_{X/S}$가 fiber의 기하까지 
 
 $$\mathfrak{a}/\mathfrak{a}^2 \overset{\bar{d}}{\rightarrow} \Omega_{A[\x, \y]/A}\otimes_{A[\x, \y]}B \rightarrow \Omega_{B/A} \rightarrow 0$$
 
-을 얻는다. 가운데 항의 $\Omega_{A[\x, \y]/A}$는 $d\x$와 $d\y$를 기저로 하는 free module이므로 ([\[가환대수학\] §미분, ⁋명제 5](/ko/math/commutative_algebra/differentials#prop5)) 이 항은 $Bd\x\oplus Bd\y$이고, $\mathfrak{a}$가 $\x\y-t$ 하나로 생성되므로 그 quotient $\mathfrak{a}/\mathfrak{a}^2$ 역시 마찬가지이다. 이제 $t\in A$에서 $dt=0$임을 쓰면 $\bar{d}(\x\y-t)=\x d\y+\y d\x$이므로, 관계식은 이것 하나뿐이며
+을 얻는다. 가운데 항의 $\Omega_{A[\x, \y]/A}$는 $\dd{\x}$와 $\dd{\y}$를 기저로 하는 free module이므로 ([\[가환대수학\] §미분, ⁋명제 5](/ko/math/commutative_algebra/differentials#prop5)) 이 항은 $B\dd{\x}\oplus B\dd{\y}$이고, $\mathfrak{a}$가 $\x\y-t$ 하나로 생성되므로 그 quotient $\mathfrak{a}/\mathfrak{a}^2$ 역시 마찬가지이다. 이제 $t\in A$에서 $\dd{t}=0$임을 쓰면 $\bar{d}(\x\y-t)=\x \dd{\y}+\y \dd{\x}$이므로, 관계식은 이것 하나뿐이며
 
-$$\Omega_{B/A}\cong\bigl(Bd\x\oplus Bd\y\bigr)/(\x d\y+\y d\x)$$
+$$\Omega_{B/A}\cong\bigl(B\dd{\x}\oplus B\dd{\y}\bigr)/(\x \dd{\y}+\y \dd{\x})$$
 
-이다. 그럼 각 fiber 위에서 이 관계식이 어떻게 풀리는지를 볼 수 있다. 우선 $t=a$ 위에서는 $\x$가 가역이므로 관계식이 $d\y=-(\y/\x)d\x$가 되어, $\Omega_{X_a/\mathbb{K}}$는 $d\x$를 기저로 하는 rank $1$의 free module이다. 반면 원점에서의 fiber $X_0$ 위에서는 상황이 조금 달라지는데, 이 경우 (원점이 아닌) $x$축 위에 있는 점 $q$는 $\mathfrak{m}_q$가 $\x$를 포함하지 않고, 거꾸로 $y$축 위에 있는 점 $q$는 $\mathfrak{m}_q$가 $\y$를 포함하지 않으므로 이 경우 모두 관계식이 $\kappa(q)$ 위에서 자명하지 않다. 즉, $\Omega_{X/S}\otimes\kappa(q)$가 $1$차원이 된다. 두 직선이 만나는 원점 $p$에서는 $\x$와 $\y$가 모두 $\mathfrak{m}_p$에 속하여 위의 관계식이 소멸하므로 $\Omega_{X/S}\otimes\kappa(p)$는 $d\x$와 $d\y$가 생성하는 $2$차원 vector space가 된다. 곧 fiber $\Omega_{X/S}\otimes\kappa(q)$의 차원은 두 직선이 만나는 점에서만 $1$에서 $2$로 뛰며, 이는 $X$ 위에서 $\mathbb{K}$에 대한 미분만을 취한 $\Omega_{X/\mathbb{K}}$가 rank $2$의 free module이라는 사실에서는 보이지 않는 정보이다.
+이다. 그럼 각 fiber 위에서 이 관계식이 어떻게 풀리는지를 볼 수 있다. 우선 $t=a$ 위에서는 $\x$가 가역이므로 관계식이 $\dd{\y}=-(\y/\x)\dd{\x}$가 되어, $\Omega_{X_a/\mathbb{K}}$는 $\dd{\x}$를 기저로 하는 rank $1$의 free module이다. 반면 원점에서의 fiber $X_0$ 위에서는 상황이 조금 달라지는데, 이 경우 (원점이 아닌) $x$축 위에 있는 점 $q$는 $\mathfrak{m}_q$가 $\x$를 포함하지 않고, 거꾸로 $y$축 위에 있는 점 $q$는 $\mathfrak{m}_q$가 $\y$를 포함하지 않으므로 이 경우 모두 관계식이 $\kappa(q)$ 위에서 자명하지 않다. 즉, $\Omega_{X/S}\otimes\kappa(q)$가 $1$차원이 된다. 두 직선이 만나는 원점 $p$에서는 $\x$와 $\y$가 모두 $\mathfrak{m}_p$에 속하여 위의 관계식이 소멸하므로 $\Omega_{X/S}\otimes\kappa(p)$는 $\dd{\x}$와 $\dd{\y}$가 생성하는 $2$차원 vector space가 된다. 곧 fiber $\Omega_{X/S}\otimes\kappa(q)$의 차원은 두 직선이 만나는 점에서만 $1$에서 $2$로 뛰며, 이는 $X$ 위에서 $\mathbb{K}$에 대한 미분만을 취한 $\Omega_{X/\mathbb{K}}$가 rank $2$의 free module이라는 사실에서는 보이지 않는 정보이다.
 
 위의 정의는 계산에 곧바로 쓸 수 있지만, 그 정의에 chart의 선택이 필요하다. 좌표에 의존하지 않는 묘사는 이미 대수적인 수준에서 얻어졌는데, [\[가환대수학\] §미분, ⁋명제 4](/ko/math/commutative_algebra/differentials#prop4)가 multiplication $m:B\otimes_AB \rightarrow B$의 kernel $\mathfrak{I}$에 대하여 canonical isomorphism $\mathfrak{I}/\mathfrak{I}^2\cong\Omega_{B/A}$를 주기 때문이다. 이를 기하적으로 번역하면 $\Spec(B\otimes_AB)$는 $\Spec B$의 $\Spec A$ 위에서의 fiber product이고 ([§올곱, ⁋보조정리 2](/ko/math/scheme_theory/fiber_products#lem2)) $m$에 대응되는 것은 diagonal morphism $\Delta$이므로, $\mathfrak{I}$는 $\Delta$의 ideal이고 $\mathfrak{I}/\mathfrak{I}^2$은 그 conormal module이다. 곧 $\Delta$의 1차 근방에서 미분을 읽어낸 것이며, 이를 scheme 위로 옮기면 chart를 고르지 않는 $\Omega_{X/S}$의 묘사를 얻는다. 
 
@@ -140,18 +140,18 @@ $$\Omega_{X/S}\cong\Delta^\ast\bigl(\mathcal{I}/\mathcal{I}^2\bigr)$$
 ::: 증명
 양변 모두 affine chart 위에서의 값으로 결정되므로, 위에서 $\Omega_{X/S}$를 정의했을 때와 마찬가지로 affine open chart $U,V$를 잡고 그 위에서 두 sheaf가 canonical하게 identify된다는 것을 보이면 충분하다. 먼저 affine morphism $\varphi:\Spec B \rightarrow \Spec A$의 경우에 $\Delta^\ast(\mathcal{I}/\mathcal{I}^2)$을 계산한다. 위에서 살펴보았듯, 이 경우 $X\times_SX=\Spec(B\otimes_AB)$이고, diagonal morphism $\Delta$는 multiplication $m:B\otimes_AB \rightarrow B$, $b\otimes b'\mapsto bb'$로부터 온다. 이제 $\mathfrak{a}=\ker m$라 하면 $\Delta$의 image의 ideal sheaf는 $\widetilde{\mathfrak{a}}$이고, [§준연접층, ⁋명제 6](/ko/math/scheme_theory/quasicoherent_sheaves#prop6)의 exactness로부터 $\mathcal{I}/\mathcal{I}^2\cong \widetilde{\mathfrak{a}/\mathfrak{a}^2}$이다.
 
-이제 $B$-module로서 $\mathfrak{a}/\mathfrak{a}^2\cong \Omega_{B/A}$임을 보이자. 이를 위해 먼저 $A$-bilinear map $(b, c)\mapsto cdb$가 유도하는 $A$-linear map
+이제 $B$-module로서 $\mathfrak{a}/\mathfrak{a}^2\cong \Omega_{B/A}$임을 보이자. 이를 위해 먼저 $A$-bilinear map $(b, c)\mapsto c\dd{b}$가 유도하는 $A$-linear map
 
-$$\theta:B\otimes_AB \rightarrow \Omega_{B/A};\qquad b\otimes c\mapsto cdb$$
+$$\theta:B\otimes_AB \rightarrow \Omega_{B/A};\qquad b\otimes c\mapsto c\dd{b}$$
 
 를 생각한다. 그럼 임의의 $b, b', c, c'\in B$에 대하여
 
 $$\begin{aligned}
-\theta\bigl((b\otimes c)(b'\otimes c')\bigr)&=cc'd(bb')=bcc'db'+b'cc'db\\
+\theta\bigl((b\otimes c)(b'\otimes c')\bigr)&=cc'\dd{(bb')}=bcc'\dd{b}'+b'cc'\dd{b}\\
 &=m(b\otimes c)\theta(b'\otimes c')+m(b'\otimes c')\theta(b\otimes c)
 \end{aligned}$$
 
-이고 양변이 두 인자 각각에 대하여 additive이므로, 임의의 $u, v\in B\otimes_AB$에 대하여 $\theta(uv)=m(u)\theta(v)+m(v)\theta(u)$가 성립한다. 특히 $u, v\in\mathfrak{a}=\ker m$이면 우변이 사라지므로 $\theta(\mathfrak{a}^2)=0$이고, 따라서 $\theta$는 $\mathfrak{a}/\mathfrak{a}^2 \rightarrow \Omega_{B/A}$로 내려가며 이 map은 $b\otimes 1-1\otimes b$를 $db$로 보낸다.
+이고 양변이 두 인자 각각에 대하여 additive이므로, 임의의 $u, v\in B\otimes_AB$에 대하여 $\theta(uv)=m(u)\theta(v)+m(v)\theta(u)$가 성립한다. 특히 $u, v\in\mathfrak{a}=\ker m$이면 우변이 사라지므로 $\theta(\mathfrak{a}^2)=0$이고, 따라서 $\theta$는 $\mathfrak{a}/\mathfrak{a}^2 \rightarrow \Omega_{B/A}$로 내려가며 이 map은 $b\otimes 1-1\otimes b$를 $\dd{b}$로 보낸다.
 
 거꾸로 $\delta:B \rightarrow \mathfrak{a}/\mathfrak{a}^2$를 $\delta(b)=(b\otimes 1-1\otimes b)+\mathfrak{a}^2$로 정의하면, 임의의 $b, b'\in B$에 대하여 $B\otimes_AB$ 안에서
 
@@ -160,7 +160,7 @@ $$\begin{aligned}
 &\equiv b'(b\otimes 1-1\otimes b)+b(b'\otimes 1-1\otimes b')\pmod{\mathfrak{a}^2}
 \end{aligned}$$
 
-이 성립하므로 $\delta$는 $A$-derivation이다. 따라서 universal property에 의하여 $\Omega_{B/A} \rightarrow \mathfrak{a}/\mathfrak{a}^2$이 유도되고, $\mathfrak{a}$가 $b\otimes 1-1\otimes b$ 꼴의 원소들로 생성되며 $\Omega_{B/A}$가 $db$들로 생성되므로 이것이 $\theta$의 역임은 generator 위에서 확인된다.
+이 성립하므로 $\delta$는 $A$-derivation이다. 따라서 universal property에 의하여 $\Omega_{B/A} \rightarrow \mathfrak{a}/\mathfrak{a}^2$이 유도되고, $\mathfrak{a}$가 $b\otimes 1-1\otimes b$ 꼴의 원소들로 생성되며 $\Omega_{B/A}$가 $\dd{b}$들로 생성되므로 이것이 $\theta$의 역임은 generator 위에서 확인된다.
 
 한편 $R=B\otimes_AB$라 두면 $\Delta$는 surjection $m:R \rightarrow R/\mathfrak{a}\cong B$로부터 오는 closed immersion이므로, affine 위에서 pullback $\Delta^\ast$가 하는 일은 $R$-module에 $-\otimes_RB$를 적용하는 것이다. 그런데 $\mathfrak{a}$가 $\mathfrak{a}/\mathfrak{a}^2$를 소멸시켜 그 $R$-module 구조가 이미 $R/\mathfrak{a}=B$를 통해 주어지므로 $(\mathfrak{a}/\mathfrak{a}^2)\otimes_RB\cong \mathfrak{a}/\mathfrak{a}^2$이고, 따라서 다음의 isomorphism
 
@@ -185,7 +185,7 @@ $$\mathcal{J}/\mathcal{J}^2 \rightarrow \iota^\ast\Omega_{Y/S} \rightarrow \Omeg
 
 이 두 exact sequence는 미분층을 계산하는 표준 도구이므로, 위에서 이들을 도입하며 소개한 대수적 직관을 기하적으로 옮겨보자. 우리는 이미 $\Omega_{X/S}$가 base 방향을 고정한 채 fiber 방향만 함수로 생각하여 진행하는 미분이었다. 첫째 exact sequence를 살펴보기 위해 우선 $S'\rightarrow S$가 $s'$를 $s$로 보낸다 하면 $X_{s'}$는 항상 $X_s$에 속한다. 즉, 이 상황에서는 $S'$ 위에서 재는 방향이 더 좁으며 따라서 $\Omega_{X/S'}$가 $\Omega_{X/S}$의 quotient로 주어지고, 이 때 지워지는 부분은 $\psi^\ast \Omega_{S'/S}$의 image이다. 
 
-둘째 exact sequence에서 $\mathcal{J}/\mathcal{J}^2$은 $Z$의 conormal sheaf이고, 그 dual이 $Z$가 $Y$ 안에서 가지는 normal bundle (정확히는 normal sheaf)에 해당한다. $S=\Spec A$, $Y=\Spec A[\x_1,\ldots, \x_n]$이고 $\mathcal{J}$가 $f_1,\ldots, f_r$로 생성되면 $\iota^\ast\Omega_{Y/S}$가 $d\x_1,\ldots, d\x_n$을 기저로 가지고 $\bar{d}$가 $f_j\mapsto\sum_i(\partial f_j/\partial \x_i)d\x_i$이므로, 이 morphism을 그 기저로 적은 행렬이 곧 Jacobian $(\partial f_j/\partial \x_i)$이다. 즉 $Z$ 위의 미분은 ambient의 미분에서 방정식들의 미분이 생성하는 부분, 곧 $Z$에 수직인 방향을 quotient하여 얻어지며, 한 점에서 이를 dualize하면 [\[대수다양체\] §접공간과 매끄러움, ⁋명제 2](/ko/math/algebraic_varieties/tangent_spaces_and_smoothness#prop2)의 묘사로 돌아온다.
+둘째 exact sequence에서 $\mathcal{J}/\mathcal{J}^2$은 $Z$의 conormal sheaf이고, 그 dual이 $Z$가 $Y$ 안에서 가지는 normal bundle (정확히는 normal sheaf)에 해당한다. $S=\Spec A$, $Y=\Spec A[\x_1,\ldots, \x_n]$이고 $\mathcal{J}$가 $f_1,\ldots, f_r$로 생성되면 $\iota^\ast\Omega_{Y/S}$가 $\dd{\x_1},\ldots, \dd{\x_n}$을 기저로 가지고 $\bar{d}$가 $f_j\mapsto\sum_i(\partial f_j/\partial \x_i)\dd{\x_i}$이므로, 이 morphism을 그 기저로 적은 행렬이 곧 Jacobian $(\partial f_j/\partial \x_i)$이다. 즉 $Z$ 위의 미분은 ambient의 미분에서 방정식들의 미분이 생성하는 부분, 곧 $Z$에 수직인 방향을 quotient하여 얻어지며, 한 점에서 이를 dualize하면 [\[대수다양체\] §접공간과 매끄러움, ⁋명제 2](/ko/math/algebraic_varieties/tangent_spaces_and_smoothness#prop2)의 묘사로 돌아온다.
 
 ## Tangent sheaf와 Zariski 접공간
 
@@ -205,11 +205,11 @@ $$\mathcal{T}_{X/S}(X)\cong \Der_A(B, B)$$
 
 를 얻는다. ([\[가환대수학\] §미분, ⁋보조정리 2](/ko/math/commutative_algebra/differentials#lem2)) 같은 계산을 principal open $D(g)$ 위에서 반복하면 [명제 3](#prop3)의 첫째 주장에 의하여 $\Der_A(B_g, B_g)$가 나오므로, $\mathcal{T}_{X/S}$는 $B$의 $A$-derivation들을 국소적으로 모아 놓은 sheaf이며 이들을 붙이면 일반적인 경우 또한 얻는다. 
 
-$\Omega_{B/A}$는 정의에 의해 $1$차 differential form에 해당한다. 그럼 위에서 정의한 $\Der_A(B,B)$는 이것의 dual, 즉 tangent vector에 해당하는 것이다. 구체적으로 임의의 함수 $b\in B$가 주어졌을 때, $\Der_A(B,B)$의 원소 $D$는 그 미분값 $D(b)$를 주며, universal property 아래에서 이 대응은 $db\mapsto D(b)$로 정해지는 $B$-linear map $\Omega_{B/A} \rightarrow B$와 같은 것이다. ([\[가환대수학\] §미분, ⁋보조정리 2](/ko/math/commutative_algebra/differentials#lem2)) 즉 $\Der_A(B, B)$는 정의상 $\Omega_{B/A}$의 dual module $\Hom_B(\Omega_{B/A}, B)$이고, 두 module 사이에는 $B$-bilinear pairing
+$\Omega_{B/A}$는 정의에 의해 $1$차 differential form에 해당한다. 그럼 위에서 정의한 $\Der_A(B,B)$는 이것의 dual, 즉 tangent vector에 해당하는 것이다. 구체적으로 임의의 함수 $b\in B$가 주어졌을 때, $\Der_A(B,B)$의 원소 $D$는 그 미분값 $D(b)$를 주며, universal property 아래에서 이 대응은 $\dd{b}\mapsto D(b)$로 정해지는 $B$-linear map $\Omega_{B/A} \rightarrow B$와 같은 것이다. ([\[가환대수학\] §미분, ⁋보조정리 2](/ko/math/commutative_algebra/differentials#lem2)) 즉 $\Der_A(B, B)$는 정의상 $\Omega_{B/A}$의 dual module $\Hom_B(\Omega_{B/A}, B)$이고, 두 module 사이에는 $B$-bilinear pairing
 
-$$\langle -, -\rangle:\Omega_{B/A}\times \Der_A(B, B) \rightarrow B; \qquad \langle db, D\rangle=D(b)$$
+$$\langle -, -\rangle:\Omega_{B/A}\times \Der_A(B, B) \rightarrow B; \qquad \langle \dd{b}, D\rangle=D(b)$$
 
-이 존재한다. 이 때 $\Omega_{B/A}$가 $db$ 꼴의 원소들로 생성되므로 이 pairing은 위의 식만으로 결정되며, $D$를 고정하고 $b$를 움직이면 $D$가 정하는 방향으로 함수들을 미분하는 연산을 얻고 거꾸로 $b$를 고정하고 $D$를 움직이면 $db$가 각 방향마다 $b$의 변화율을 대응시키는 함수가 된다. 이는 미분다양체 위에서 벡터장이 함수에 그 도함수를 대응시키고 $1$차 differential form이 벡터장을 대입받아 함수를 내놓는 것과 같은 구조이다. 이 pairing이 dual basis를 주는 모습은 $B=A[\x_1,\ldots, \x_n]$에서 곧바로 보인다. 이 경우 $\Omega_{B/A}$는 $d\x_1,\ldots, d\x_n$을 기저로 하는 free module이고 ([\[가환대수학\] §미분, ⁋명제 5](/ko/math/commutative_algebra/differentials#prop5)), $A$-derivation $D$는 $A$-linearity와 Leibniz 법칙에 의하여 $\x_i$에서의 값 $D(\x_i)$들로 완전히 결정되며 이들을 dual basis를 사용하여 적으면 $D=\sum_iD(\x_i)\partial/\partial \x_i$로 적힌다.
+이 존재한다. 이 때 $\Omega_{B/A}$가 $\dd{b}$ 꼴의 원소들로 생성되므로 이 pairing은 위의 식만으로 결정되며, $D$를 고정하고 $b$를 움직이면 $D$가 정하는 방향으로 함수들을 미분하는 연산을 얻고 거꾸로 $b$를 고정하고 $D$를 움직이면 $\dd{b}$가 각 방향마다 $b$의 변화율을 대응시키는 함수가 된다. 이는 미분다양체 위에서 벡터장이 함수에 그 도함수를 대응시키고 $1$차 differential form이 벡터장을 대입받아 함수를 내놓는 것과 같은 구조이다. 이 pairing이 dual basis를 주는 모습은 $B=A[\x_1,\ldots, \x_n]$에서 곧바로 보인다. 이 경우 $\Omega_{B/A}$는 $\dd{\x_1},\ldots, \dd{\x_n}$을 기저로 하는 free module이고 ([\[가환대수학\] §미분, ⁋명제 5](/ko/math/commutative_algebra/differentials#prop5)), $A$-derivation $D$는 $A$-linearity와 Leibniz 법칙에 의하여 $\x_i$에서의 값 $D(\x_i)$들로 완전히 결정되며 이들을 dual basis를 사용하여 적으면 $D=\sum_iD(\x_i)\partial/\partial \x_i$로 적힌다.
 
 한편 $\Omega_{B/A}$가 free module일 때에는 이렇게 두 module이 서로의 dual이 되지만, 일반적으로는 dual을 취하며 정보가 사라진다. 앞서 본 $A=\mathbb{K}[t]$와 $B=\mathbb{K}[t, \x, \y]/(\x\y-t)$의 경우 $A$-derivation은 $t$를 죽여야 하므로 $\x D(\y)+\y D(\x)=0$을 만족해야 하고, $B\cong \mathbb{K}[\x, \y]$에서 이 방정식의 해는 $w\in B$에 대한 $D(\x)=\x w$와 $D(\y)=-\y w$뿐이다. 즉 $\Der_A(B, B)$는 $\x\partial/\partial \x-\y\partial/\partial \y$를 기저로 하는 rank $1$의 free module로, 원점에서 rank가 $2$로 뛰던 $\Omega_{B/A}$와 달리 어디에서나 rank가 $1$이다. 그러므로 $\mathcal{T}_{X/S}$에서 $\Omega_{X/S}$를 되찾을 수는 없으며, universal property 등의 형식적인 정의 뿐만 아니라 이러한 정보의 차이가 cotangent sheaf를 더 자연스러운 것으로 만든다. 
 
@@ -244,16 +244,16 @@ Ring $A$에 대하여, affine space $\mathbb{A}^n_A=\Spec A[\x_1,\ldots, \x_n]$�
 
 $$\Omega_{\mathbb{A}^n_A/A}\cong \mathcal{O}_{\mathbb{A}^n_A}^{\oplus n}$$
 
-이며, $d\x_1,\ldots, d\x_n$을 기저로 가진다.
+이며, $\dd{\x_1},\ldots, \dd{\x_n}$을 기저로 가진다.
 :::
 ::: 증명
-$B=A[\x_1,\ldots, \x_n]$이라 하자. [정의 4](#def4)에 의하여 $\Omega_{\mathbb{A}^n_A/A}\cong \widetilde{\Omega_{B/A}}$이므로 $\Omega_{B/A}$가 $d\x_1,\ldots, d\x_n$을 기저로 하는 free $B$-module임을 보이면 된다.
+$B=A[\x_1,\ldots, \x_n]$이라 하자. [정의 4](#def4)에 의하여 $\Omega_{\mathbb{A}^n_A/A}\cong \widetilde{\Omega_{B/A}}$이므로 $\Omega_{B/A}$가 $\dd{\x_1},\ldots, \dd{\x_n}$을 기저로 하는 free $B$-module임을 보이면 된다.
 
-$\Omega_{B/A}$는 정의에 의하여 원소들 $df$ ($f\in B$)로 생성되는데, $d$가 $A$-derivation이므로 임의의 다항식 $f$에 대하여 chain rule
+$\Omega_{B/A}$는 정의에 의하여 원소들 $\dd{f}$ ($f\in B$)로 생성되는데, $d$가 $A$-derivation이므로 임의의 다항식 $f$에 대하여 chain rule
 
-$$df=\sum_{i=1}^n\frac{\partial f}{\partial \x_i}d\x_i$$
+$$\dd{f}=\sum_{i=1}^n\frac{\partial f}{\partial \x_i}\dd{\x_i}$$
 
-가 성립한다. 따라서 $\Omega_{B/A}$는 $d\x_1,\ldots, d\x_n$으로 생성된다. 한편 이들이 $B$ 위에서 일차독립임을 보이기 위해, 각 $j$에 대하여 $j$번째 편미분 $\partial/\partial \x_j:B \rightarrow B$가 $A$-derivation임을 이용한다. 이는 universal property에 의하여 $B$-linear map $\partial_j:\Omega_{B/A} \rightarrow B$를 유도하며 $\partial_j(d\x_i)=\delta_{ij}$이므로, $\sum_i b_i d\x_i=0$이면 $\partial_j$를 적용하여 $b_j=0$을 얻는다. 그러므로 $d\x_1,\ldots, d\x_n$은 자유 기저이고 $\Omega_{B/A}\cong B^{\oplus n}$이다.
+가 성립한다. 따라서 $\Omega_{B/A}$는 $\dd{\x_1},\ldots, \dd{\x_n}$으로 생성된다. 한편 이들이 $B$ 위에서 일차독립임을 보이기 위해, 각 $j$에 대하여 $j$번째 편미분 $\partial/\partial \x_j:B \rightarrow B$가 $A$-derivation임을 이용한다. 이는 universal property에 의하여 $B$-linear map $\partial_j:\Omega_{B/A} \rightarrow B$를 유도하며 $\partial_j(\dd{\x_i})=\delta_{ij}$이므로, $\sum_i b_i \dd{\x_i}=0$이면 $\partial_j$를 적용하여 $b_j=0$을 얻는다. 그러므로 $\dd{\x_1},\ldots, \dd{\x_n}$은 자유 기저이고 $\Omega_{B/A}\cong B^{\oplus n}$이다.
 :::
 
 Base가 affine이 아니어도 마찬가지의 결과가 성립한다. 임의의 scheme $S$는 유일한 방식으로 $\Spec \mathbb{Z}$ 위의 scheme이므로, $S$ 위의 *relative affine space*를 base change
@@ -272,7 +272,7 @@ $$0 \rightarrow \Omega_{\mathbb{P}^n_A/A} \rightarrow \mathcal{O}_{\mathbb{P}^n_
 이 존재한다.
 :::
 ::: 증명
-표기의 편의를 위해 $\mathbb{P}^n=\mathbb{P}^n_A$로 줄여 적고 standard affine open $U_i=D_+(\x_i)\cong \Spec A[\x_0,\ldots, \x_n]_{(\x_i)}$ 위에서 작업한다. 이 coordinate ring은 $\y^{(i)}_j=\x_j/\x_i$ ($j\neq i$)를 변수로 하는 $n$변수 polynomial ring이므로 $U_i$는 $A$ 위의 affine space $\mathbb{A}^n_A$이고, 따라서 $\Omega_{\mathbb{P}^n/A}\vert_{U_i}$는 [명제 9](#prop9)에 의하여 $d\y^{(i)}_j$ ($j\neq i$)를 basis로 하는 rank $n$ free sheaf이다.
+표기의 편의를 위해 $\mathbb{P}^n=\mathbb{P}^n_A$로 줄여 적고 standard affine open $U_i=D_+(\x_i)\cong \Spec A[\x_0,\ldots, \x_n]_{(\x_i)}$ 위에서 작업한다. 이 coordinate ring은 $\y^{(i)}_j=\x_j/\x_i$ ($j\neq i$)를 변수로 하는 $n$변수 polynomial ring이므로 $U_i$는 $A$ 위의 affine space $\mathbb{A}^n_A$이고, 따라서 $\Omega_{\mathbb{P}^n/A}\vert_{U_i}$는 [명제 9](#prop9)에 의하여 $\dd{\y}^{(i)}_j$ ($j\neq i$)를 basis로 하는 rank $n$ free sheaf이다.
 
 우선 morphism $\mathcal{O}(-1)^{\oplus(n+1)} \rightarrow \mathcal{O}$를 정의하자. $\mathcal{O}(-1)$의 section에 $\x_i$를 곱하면 $\mathcal{O}$로 가게 되며, 이러한 방식으로 다음의 morphism
 
@@ -298,7 +298,7 @@ $$\frac{1}{\x_i}\left(\x_j-\frac{\x_j}{\x_i}\x_i\right)=0$$
 
 $$\frac{\x_l}{\x_i}=\frac{\x_l}{\x_k}\cdot\frac{\x_k}{\x_i},\qquad d\Bigl(\frac{\x_k}{\x_i}\Bigr)=-\Bigl(\frac{\x_k}{\x_i}\Bigr)^2d\Bigl(\frac{\x_i}{\x_k}\Bigr)$$
 
-를 써서 $d(\x_l/\x_i)$를 $U_k$ 쪽 기저로 전개한 뒤 위의 대응을 적용하면 $e_k$ 항이 상쇄되어 $\x_i^{-2}(\x_ie_l-\x_le_i)$를 얻으므로, $U_i$ 쪽 값과 같다. 그러므로 이들은 global한 morphism $\Omega_{\mathbb{P}^n/A} \rightarrow \mathcal{O}(-1)^{\oplus(n+1)}$로 붙어서 exact sequence를 만들고, exactness는 local property이므로 이들이 sheaf의 short exact sequence를 이룬다.
+를 써서 $\dd{(\x_l/\x_i)}$를 $U_k$ 쪽 기저로 전개한 뒤 위의 대응을 적용하면 $e_k$ 항이 상쇄되어 $\x_i^{-2}(\x_ie_l-\x_le_i)$를 얻으므로, $U_i$ 쪽 값과 같다. 그러므로 이들은 global한 morphism $\Omega_{\mathbb{P}^n/A} \rightarrow \mathcal{O}(-1)^{\oplus(n+1)}$로 붙어서 exact sequence를 만들고, exactness는 local property이므로 이들이 sheaf의 short exact sequence를 이룬다.
 :::
 
 [명제 9](#prop9)에서와 같이 base를 임의의 scheme으로 올릴 수도 있다. $\mathbb{P}^n_S=\mathbb{P}^n_\mathbb{Z}\times_{\Spec \mathbb{Z}}S$와 그 projection $\pi:\mathbb{P}^n_S \rightarrow \mathbb{P}^n_\mathbb{Z}$에 대하여 $\mathcal{O}_{\mathbb{P}^n_S}(d)=\pi^\ast\mathcal{O}_{\mathbb{P}^n_\mathbb{Z}}(d)$로 정의하면, 각 chart 위의 generator $\x_i^d$와 transition function $(\x_i/\x_j)^d$가 그대로 옮겨간다. 특히 이는 base가 affine일 때에는 [§스킴의 층 코호몰로지, ⁋정의 5](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#def5)의 twisting sheaf와 일치하며, 또 [명제 5](#prop5)에 의하여 $\Omega_{\mathbb{P}^n_S/S}\cong\pi^\ast\Omega_{\mathbb{P}^n_\mathbb{Z}/\mathbb{Z}}$이다. 한편 [정리 10](#thm10)을 $A=\mathbb{Z}$에 적용하여 얻는 sequence
@@ -357,7 +357,7 @@ $\lambda$가 isomorphism임은 국소적으로 확인하면 충분하다. 위의
 이를 Euler exact sequence에 적용하면 projective space의 canonical sheaf가 곧바로 계산된다.
 
 ::: 예시 13
-Field $\mathbb{K}$ 위의 projective space $\mathbb{P}^n$을 생각하자. [정리 10](#thm10)을 $A=\mathbb{K}$에 적용하면 Euler exact sequence를 얻으며, 그 증명에서 보았듯 $\Omega_{\mathbb{P}^n/\mathbb{K}}$는 각 $U_i=D_+(\x_i)$ 위에서 $d\y^{(i)}_j$ ($j\neq i$)를 기저로 하는 rank $n$의 free sheaf이므로 locally free이고, 따라서 $\omega_{\mathbb{P}^n}$이 정의된다. Euler exact sequence의 세 항 $\Omega_{\mathbb{P}^n/\mathbb{K}}$, $\mathcal{O}(-1)^{\oplus(n+1)}$, $\mathcal{O}_{\mathbb{P}^n}$의 rank는 각각 $n$, $n+1$, $1$이므로, [명제 12](#prop12)에 의하여
+Field $\mathbb{K}$ 위의 projective space $\mathbb{P}^n$을 생각하자. [정리 10](#thm10)을 $A=\mathbb{K}$에 적용하면 Euler exact sequence를 얻으며, 그 증명에서 보았듯 $\Omega_{\mathbb{P}^n/\mathbb{K}}$는 각 $U_i=D_+(\x_i)$ 위에서 $\dd{\y}^{(i)}_j$ ($j\neq i$)를 기저로 하는 rank $n$의 free sheaf이므로 locally free이고, 따라서 $\omega_{\mathbb{P}^n}$이 정의된다. Euler exact sequence의 세 항 $\Omega_{\mathbb{P}^n/\mathbb{K}}$, $\mathcal{O}(-1)^{\oplus(n+1)}$, $\mathcal{O}_{\mathbb{P}^n}$의 rank는 각각 $n$, $n+1$, $1$이므로, [명제 12](#prop12)에 의하여
 
 $$\det\bigl(\mathcal{O}(-1)^{\oplus(n+1)}\bigr)\cong \omega_{\mathbb{P}^n}\otimes_{\mathcal{O}_{\mathbb{P}^n}}\det\mathcal{O}_{\mathbb{P}^n}\cong\omega_{\mathbb{P}^n}$$
 

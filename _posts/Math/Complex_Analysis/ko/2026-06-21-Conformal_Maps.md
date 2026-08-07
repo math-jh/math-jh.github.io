@@ -292,7 +292,7 @@ Schwarz–Pick 정리는 Schwarz 보조정리를 원점이라는 특정 점에 �
 
 $$\rho(z, w) = \left\lvert \frac{z - w}{1 - \bar w z} \right\rvert$$
 
-은 단위원판 위의 두 점 사이의 *유사쌍곡거리<sub>pseudo-hyperbolic distance</sub>*라 불리며, 정리 13의 첫 부등식은 임의의 holomorphic 사상 $f : \mathbb{D} \rightarrow \mathbb{D}$이 이 거리를 늘리지 않음을 뜻한다. 미분형은 같은 사실을 무한소 수준에서 적은 것으로, 단위원판에 $ds = \lvert dz\rvert/(1 - \lvert z\rvert^2)$ 꼴의 거리 (쌍곡거리) 를 줄 때 holomorphic 사상이 그 거리를 늘리지 않으며, automorphism일 때만 정확히 보존한다는 진술이다. 등호가 automorphism에서만 성립한다는 사실은 단위원판의 automorphism group이 이 쌍곡거리의 등거리변환군과 정확히 일치함을 시사한다.
+은 단위원판 위의 두 점 사이의 *유사쌍곡거리<sub>pseudo-hyperbolic distance</sub>*라 불리며, 정리 13의 첫 부등식은 임의의 holomorphic 사상 $f : \mathbb{D} \rightarrow \mathbb{D}$이 이 거리를 늘리지 않음을 뜻한다. 미분형은 같은 사실을 무한소 수준에서 적은 것으로, 단위원판에 $\dd{s} = \lvert \dd{z}\rvert/(1 - \lvert z\rvert^2)$ 꼴의 거리 (쌍곡거리) 를 줄 때 holomorphic 사상이 그 거리를 늘리지 않으며, automorphism일 때만 정확히 보존한다는 진술이다. 등호가 automorphism에서만 성립한다는 사실은 단위원판의 automorphism group이 이 쌍곡거리의 등거리변환군과 정확히 일치함을 시사한다.
 
 ## 상반평면과 Cayley 변환
 

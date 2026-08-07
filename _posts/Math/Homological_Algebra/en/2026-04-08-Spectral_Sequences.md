@@ -113,15 +113,15 @@ and then using the first isomorphism theorem to factor this through as
 
 $$F^p A^{p+q}/F^{p+1}A^{p+q}\rightarrow F^pA^{p+q+1}/F^{p+1}A^{p+q+1}$$
 
-Here the first isomorphism theorem applies cleanly: if $a \in F^{p+1}A^{p+q}$, then $d(a) \in F^{p+1}A^{p+q+1}$, so it maps to $0$ in the codomain quotient $F^p A^{p+q+1}/F^{p+1}A^{p+q+1}$.
+Here the first isomorphism theorem applies cleanly: if $a \in F^{p+1}A^{p+q}$, then $\dd{(a)} \in F^{p+1}A^{p+q+1}$, so it maps to $0$ in the codomain quotient $F^p A^{p+q+1}/F^{p+1}A^{p+q+1}$.
 
 More generally, the differential $d_r$ on the $E_r$ page is defined in a similar manner. Essentially, since $E_r^{p,q}$ is constructed by taking successive quotients of $F^pC^{p+q}$, an element of $E_r^{p,q}$ can be represented by a suitable equivalence class $[x]$ of some element $x\in F^pC^{p+q}$. Then $d_r^{p,q}: E_r^{p,q}\rightarrow E_r^{p+r, q-r+1}$ is given by the formula
 
-$$d_r^{p,q}([x])=[dx]\in E_r^{p+r, q-r+1}\tag{$\ast$}$$
+$$d_r^{p,q}([x])=[\dd{x}]\in E_r^{p+r, q-r+1}\tag{$\ast$}$$
 
 Of course, verifying that this correspondence is well defined and actually defines a differential requires somewhat involved calculations ([link](https://stacks.math.columbia.edu/tag/012K)), but what matters is that the elements of $E_r^{p,q}$ can be characterized by the following two conditions:
 
-- $dx\in F^{p+r}C^{p+q+1}$, and
+- $\dd{x}\in F^{p+r}C^{p+q+1}$, and
 - If $x,y\in F^{p}C^{p+q}$ differ only by a boundary of the $(r-1)$-th stage, then $x$ and $y$ are identified.
 
 In particular, what ($\ast$) reveals is that all the $d_r$ are essentially the same map as $d$, and the index $r$ serves only to measure how far across the filtration one jumps. That is, the following holds.

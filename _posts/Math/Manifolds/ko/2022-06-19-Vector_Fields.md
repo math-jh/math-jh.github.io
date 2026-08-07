@@ -37,9 +37,9 @@ Manifold $M$ 위에서 정의된 벡터장 $X$를 생각하자. 다음이 모두
 3. 임의의 열린집합 $V\subseteq M$과 $V$ 위에서 정의된 $C^\infty$ 함수 $f:V\rightarrow\mathbb{R}$에 대하여, $X(f)$ 또한 $C^\infty$이다.
 :::
 ::: 증명
-우선 $X$가 $C^\infty$라면 $X\vert_U$가 $C^\infty$인 것은 자명하다. 한편, $TM$에서 정의된 함수로서 $dx^i$들은 coordinate system $\tilde{\varphi}:\pi^{-1}(U)\rightarrow\mathbb{R}^{2m}$의 성분함수들이므로 마찬가지로 $C^\infty$이고, 따라서 이들의 합성
+우선 $X$가 $C^\infty$라면 $X\vert_U$가 $C^\infty$인 것은 자명하다. 한편, $TM$에서 정의된 함수로서 $\dd{x}^i$들은 coordinate system $\tilde{\varphi}:\pi^{-1}(U)\rightarrow\mathbb{R}^{2m}$의 성분함수들이므로 마찬가지로 $C^\infty$이고, 따라서 이들의 합성
 
-$$a^i(p)=dx^i\left(\sum a^i(p)\frac{\partial}{\partial x^i}\bigg\vert_p\right)=dx^i\vert_p\circ(X\vert_U)_p$$
+$$a^i(p)=\dd{x}^i\left(\sum a^i(p)\frac{\partial}{\partial x^i}\bigg\vert_p\right)=\dd{x}^i\vert_p\circ(X\vert_U)_p$$
 
 또한 $C^\infty$인 것이 자명하다. 
 
@@ -51,11 +51,11 @@ $$(X\vert_U)_pf=\sum_{i=1}^m a^i(p)\frac{\partial f}{\partial x^i}(p)$$
 
 마지막으로 3번 조건을 가정하고 1번을 보이자. $X:M\rightarrow TM$이 $C^\infty$임을 보이기 위해서는 임의의 coordinate system $(U,\varphi)$에 대하여 $X\circ\varphi^{-1}$가 $\varphi(U)$에서 $TM$으로의 $C^\infty$ 함수임을 보이면 되고, 이는 다시 $TM$의 coordinate system을 생각하면 다음의 함수들
 
-$$x^i\circ\pi\circ (X\vert_U),\quad dx^i\circ(X\vert_U)$$
+$$x^i\circ\pi\circ (X\vert_U),\quad \dd{x}^i\circ(X\vert_U)$$
 
 들이 $C^\infty$임을 보이면 된다. 그런데 직접 계산을 해 보면
 
-$$x^i\circ\pi\circ (X\vert_U)=x^i\circ\id_U=x^i,\qquad dx^i\circ(X\vert_U)=X(x^i)$$
+$$x^i\circ\pi\circ (X\vert_U)=x^i\circ\id_U=x^i,\qquad \dd{x}^i\circ(X\vert_U)=X(x^i)$$
 
 가 성립하므로 이들은 모두 $C^\infty$가 된다.
 :::
@@ -75,20 +75,20 @@ $$(\alpha X)_p=\alpha\cdot X_p$$
 으로 정의하면 $\alpha X$ 또한 $\mathfrak{X}(M)$의 원소이므로, $\mathfrak{X}(M)$은 $\mathbb{R}$-벡터공간이 된다. 그러나 $\mathbb{R}$-벡터공간으로서 $\mathfrak{X}(M)$은 너무 거대하다. 
 
 ::: 예시 3
-$M=\mathbb{R}$로 두자. 여기서 $M$은 하나의 chart $(\mathbb{R},\id)$을 통해 manifold 구조가 주어진 것으로 생각한다. 그럼 각 점 $p$에서 tangent space $T_pM$은 $d/dx\vert_p$을 통해 생성되는 1차원 벡터공간이며, 따라서 다음 대응
+$M=\mathbb{R}$로 두자. 여기서 $M$은 하나의 chart $(\mathbb{R},\id)$을 통해 manifold 구조가 주어진 것으로 생각한다. 그럼 각 점 $p$에서 tangent space $T_pM$은 $d/\dd{x}\vert_p$을 통해 생성되는 1차원 벡터공간이며, 따라서 다음 대응
 
-$$X:M\rightarrow TM;\qquad p\mapsto \frac{d}{dx}\bigg\vert_p$$
+$$X:M\rightarrow TM;\qquad p\mapsto \frac{d}{\dd{x}}\bigg\vert_p$$
 
 은 $\mathfrak{X}(M)$의 원소이다. 그러나 임의의 $C^\infty$ 함수 $f:\mathbb{R}\rightarrow\mathbb{R}$에 대하여,
 
-$$fX:M\rightarrow TM;\qquad p\mapsto f(p)\frac{d}{dx}\bigg\vert_p$$
+$$fX:M\rightarrow TM;\qquad p\mapsto f(p)\frac{d}{\dd{x}}\bigg\vert_p$$
 
 또한 $\mathfrak{X}(M)$에 속하며 ([명제 2](#prop2)) 이 원소는 $f$가 상수함수가 아닌 이상 $fX$는 $X$의 상수배로 표현되지 않는다. 뿐만 아니라 $C^\infty(M)$은 $\mathbb{R}$ 위의 무한차원 벡터공간이므로 $\mathfrak{X}(M)$ 또한 무한차원 벡터공간이다.
 :::
 
 위와 같은 상황에서 $\mathfrak{X}(M)$을 $C^\infty(M)$-module로 본다면 $\mathfrak{X}(M)$을 다루는 것이 상대적으로 편해진다. 
 
-위에서는 $\mathfrak{X}(M)$이 벡터장 $d/dx$로 생성되었지만, 일반적으로 $C^\infty(M)$은 field가 아니므로 basis를 갖지 않는 $C^\infty(M)$-module이 얼마든지 존재할 수 있다. 가령 잘 알려진 [hairy ball theorem](https://en.wikipedia.org/wiki/Hairy_ball_theorem)은 3차원 상에 있는 단위구 $S^2$ 상에 정의된 연속인 벡터장은 반드시 $0$이 되는 점이 존재한다는 것을 보여준다. 
+위에서는 $\mathfrak{X}(M)$이 벡터장 $d/\dd{x}$로 생성되었지만, 일반적으로 $C^\infty(M)$은 field가 아니므로 basis를 갖지 않는 $C^\infty(M)$-module이 얼마든지 존재할 수 있다. 가령 잘 알려진 [hairy ball theorem](https://en.wikipedia.org/wiki/Hairy_ball_theorem)은 3차원 상에 있는 단위구 $S^2$ 상에 정의된 연속인 벡터장은 반드시 $0$이 되는 점이 존재한다는 것을 보여준다. 
 
 {% diagram Math/Manifolds/Vector_Fields-1.png width="200px" alt="Hairy_ball" %}
 

@@ -22,7 +22,7 @@ weight: 18
 ::: 정리 1 (그린)
 $D$가 조각마다 smooth한 simple closed 곡선 $C = \partial D$로 둘러싸인 평면 영역이고 $P, Q$가 $D$를 포함하는 열린집합에서 $C^1$이면, $C$를 양의 방향으로 잡을 때
 
-$$\oint_C P\mathop{dx} + Q\mathop{dy} = \iint_D \left(\frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y}\right)\mathop{dA}$$
+$$\oint_C P\dd{x} + Q\dd{y} = \iint_D \left(\frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y}\right)\dd{A}$$
 
 이다.
 :::
@@ -34,23 +34,23 @@ $$D = \{(x,y) \mid a \leq x \leq b,\ g_1(x) \leq y \leq g_2(x)\}$$
 
 인 경우에 다음의 식
 
-$$\oint_C P\mathop{dx} = -\iint_D \partial P/\partial y\mathop{dA}$$
+$$\oint_C P\dd{x} = -\iint_D \partial P/\partial y\dd{A}$$
 
 를 보인다. 이중적분 쪽은 [§다중적분, ⁋정리 2](/ko/math/calculus/multiple_integrals#thm2)로 안쪽을 먼저 적분하면
 
-$$\iint_D \frac{\partial P}{\partial y}\mathop{dA} = \int_a^b \bigl(P(x, g_2(x)) - P(x, g_1(x))\bigr)\mathop{dx}$$
+$$\iint_D \frac{\partial P}{\partial y}\dd{A} = \int_a^b \bigl(P(x, g_2(x)) - P(x, g_1(x))\bigr)\dd{x}$$
 
-이다. 한편 boundary $C$는 아래 곡선 $y = g_1(x)$를 $x\colon a \rightarrow b$로, 위 곡선 $y = g_2(x)$를 $x\colon b \rightarrow a$로 도는 두 조각으로 이루어지고, 양 옆 수직변에서는 $x$가 상수라 $dx = 0$이다. 따라서
+이다. 한편 boundary $C$는 아래 곡선 $y = g_1(x)$를 $x\colon a \rightarrow b$로, 위 곡선 $y = g_2(x)$를 $x\colon b \rightarrow a$로 도는 두 조각으로 이루어지고, 양 옆 수직변에서는 $x$가 상수라 $\dd{x} = 0$이다. 따라서
 
-$$\oint_C P\mathop{dx} = \int_a^b P(x, g_1(x))\mathop{dx} + \int_b^a P(x, g_2(x))\mathop{dx} = -\int_a^b \bigl(P(x,g_2) - P(x,g_1)\bigr)\mathop{dx}$$
+$$\oint_C P\dd{x} = \int_a^b P(x, g_1(x))\dd{x} + \int_b^a P(x, g_2(x))\dd{x} = -\int_a^b \bigl(P(x,g_2) - P(x,g_1)\bigr)\dd{x}$$
 
 이라 두 식을 비교하면 
 
-$$\oint_C P\mathop{dx} = -\iint_D \partial P/\partial y\mathop{dA}$$
+$$\oint_C P\dd{x} = -\iint_D \partial P/\partial y\dd{A}$$
 
 이다. Symmetric하게, $D$가 $x$에 대해 단순한 영역이면 
 
-$$\oint_C Q\mathop{dy} = \iint_D \partial Q/\partial x\mathop{dA}$$
+$$\oint_C Q\dd{y} = \iint_D \partial Q/\partial x\dd{A}$$
 
 이다. 일반 영역은 이러한 조각들로 잘라 합치면 내부 boundary들의 적분이 방향이 반대인 두 번의 적분으로 상쇄되어 정리가 성립한다.
 :::
@@ -60,7 +60,7 @@ $$\oint_C Q\mathop{dy} = \iint_D \partial Q/\partial x\mathop{dA}$$
 ::: 따름정리 2
 $D$의 넓이는 boundary 적분으로
 
-$$\area(D) = \oint_C x\mathop{dy} = -\oint_C y\mathop{dx} = \frac{1}{2}\oint_C (x\mathop{dy} - y\mathop{dx})$$
+$$\area(D) = \oint_C x\dd{y} = -\oint_C y\dd{x} = \frac{1}{2}\oint_C (x\dd{y} - y\dd{x})$$
 
 로 주어진다.
 :::
@@ -68,11 +68,11 @@ $$\area(D) = \oint_C x\mathop{dy} = -\oint_C y\mathop{dx} = \frac{1}{2}\oint_C (
 ::: 증명
 [정리 1](#thm1)에서 $(P, Q) = (0, x)$로 두면 $Q_x - P_y = 1$이라 
 
-$$\oint_C x\mathop{dy} = \iint_D 1\mathop{dA} = \area(D)$$
+$$\oint_C x\dd{y} = \iint_D 1\dd{A} = \area(D)$$
 
 이고, $(P, Q) = (-y, 0)$으로 두면 
 
-$$\oint_C -y\mathop{dx} = \area(D)$$
+$$\oint_C -y\dd{x} = \area(D)$$
 
 이다. 셋째 식은 이 둘을 평균낸 것이다.
 :::
@@ -82,7 +82,7 @@ $$\oint_C -y\mathop{dx} = \area(D)$$
 ::: 명제 3
 $D$의 boundary $C$가 양의 방향이고 $\mathbf{F} = (P, Q)$가 $C^1$이면, 단위접선 $\mathbf{T}$와 바깥 단위법선 $\mathbf{n}$에 대해
 
-$$\oint_C \mathbf{F} \cdot \mathbf{T}\mathop{ds} = \iint_D \left(\frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y}\right)\mathop{dA}, \qquad \oint_C \mathbf{F} \cdot \mathbf{n}\mathop{ds} = \iint_D \divergence \mathbf{F}\mathop{dA}$$
+$$\oint_C \mathbf{F} \cdot \mathbf{T}\dd{s} = \iint_D \left(\frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y}\right)\dd{A}, \qquad \oint_C \mathbf{F} \cdot \mathbf{n}\dd{s} = \iint_D \divergence \mathbf{F}\dd{A}$$
 
 이다. 
 :::
@@ -90,17 +90,17 @@ $$\oint_C \mathbf{F} \cdot \mathbf{T}\mathop{ds} = \iint_D \left(\frac{\partial 
 ::: 증명
 첫째 등식은 
 
-$$\oint_C \mathbf{F}\cdot \mathbf{T}\mathop{ds} = \oint_C P\mathop{dx} + Q\mathop{dy}$$
+$$\oint_C \mathbf{F}\cdot \mathbf{T}\dd{s} = \oint_C P\dd{x} + Q\dd{y}$$
 
 가 바로 [정리 1](#thm1)의 좌변이고, 우변의 피적분함수 $Q_x - P_y$가 평면벡터장의 회전이다. ([§벡터장, ⁋정의 3](/ko/math/calculus/vector_fields#def3)) 
 
-둘째 등식의 경우, 양의 방향 boundary에서 바깥 단위법선이 $\mathbf{n}ds = (dy, -dx)$임을 쓰면 
+둘째 등식의 경우, 양의 방향 boundary에서 바깥 단위법선이 $\mathbf{n}\dd{s} = (\dd{y}, -\dd{x})$임을 쓰면 
 
-$$\oint_C \mathbf{F}\cdot \mathbf{n}\mathop{ds} = \oint_C P\mathop{dy} - Q\mathop{dx}$$
+$$\oint_C \mathbf{F}\cdot \mathbf{n}\dd{s} = \oint_C P\dd{y} - Q\dd{x}$$
 
 인데, [정리 1](#thm1)을 $(P, Q) \mapsto (-Q, P)$에 적용하면 이것이 
 
-$$\iint_D (P_x + Q_y)\mathop{dA} = \iint_D \divergence \mathbf{F}\mathop{dA}$$
+$$\iint_D (P_x + Q_y)\dd{A} = \iint_D \divergence \mathbf{F}\dd{A}$$
 
 와 같다.
 :::
@@ -116,7 +116,7 @@ $$\iint_D (P_x + Q_y)\mathop{dA} = \iint_D \divergence \mathbf{F}\mathop{dA}$$
 ::: 증명
 영역이 단순연결이므로 그 안의 임의의 simple closed 곡선 $C$가 둘러싸는 영역 $D$ 전체가 다시 영역 안에 들어간다. 이제 
 
-$$\oint_C \mathbf{F}\cdot d\mathbf{r} = \iint_D (Q_x - P_y)\mathop{dA} = 0$$
+$$\oint_C \mathbf{F}\cdot d\mathbf{r} = \iint_D (Q_x - P_y)\dd{A} = 0$$
 
 이고, 모든 closed 곡선에서 적분이 $0$이므로 [§선적분, ⁋정리 4](/ko/math/calculus/line_integrals#thm4)에 의해 $\mathbf{F}$는 보존장이다.
 :::

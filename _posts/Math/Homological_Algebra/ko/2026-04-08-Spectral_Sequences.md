@@ -116,15 +116,15 @@ $$F^pA^{p+q+1}\rightarrow F^pA^{p+q+1}/F^{p+1}A^{p+q+1}$$
 
 $$F^p A^{p+q}/F^{p+1}A^{p+q}\rightarrow F^pA^{p+q+1}/F^{p+1}A^{p+q+1}$$
 
-로 factor through하여 얻어진다. 이 때, first isomorphism theorem이 잘 적용된다: $a \in F^{p+1}A^{p+q}$이면 $d(a) \in F^{p+1}A^{p+q+1}$이므로 공역 quotient $F^p A^{p+q+1}/F^{p+1}A^{p+q+1}$에서 $0$으로 간다.
+로 factor through하여 얻어진다. 이 때, first isomorphism theorem이 잘 적용된다: $a \in F^{p+1}A^{p+q}$이면 $\dd{(a)} \in F^{p+1}A^{p+q+1}$이므로 공역 quotient $F^p A^{p+q+1}/F^{p+1}A^{p+q+1}$에서 $0$으로 간다.
 
 더 일반적으로, $E_r$페이지에서의 미분 $d_r$ 또한 비슷한 방식으로 정의된다. 본질적으로 $E_r^{p,q}$는 $F^pC^{p+q}$에 여러 단계의 quotient를 취하여 만들어지는 것이므로, $E_r^{p,q}$의 원소는 어떠한 원소 $x\in F^pC^{p+q}$의 적당한 equivalence class $[x]$로 생각할 수 있다. 이제 $d_r^{p,q}: E_r^{p,q}\rightarrow E_r^{p+r, q-r+1}$은 다음의 식
 
-$$d_r^{p,q}([x])=[dx]\in E_r^{p+r, q-r+1}\tag{$\ast$}$$
+$$d_r^{p,q}([x])=[\dd{x}]\in E_r^{p+r, q-r+1}\tag{$\ast$}$$
 
 로 주어진다. 물론 이 대응이 잘 정의되며 differential을 정의하는 것은 다소 복잡한 계산을 통해 보여야 하지만 ([링크](https://stacks.math.columbia.edu/tag/012K)) 중요한 것은 $E_r^{p,q}$의 원소는 다음의 두 조건
 
-- $dx\in F^{p+r}C^{p+q+1}$이며,
+- $\dd{x}\in F^{p+r}C^{p+q+1}$이며,
 - 만일 $x,y\in F^{p}C^{p+q}$들이 $r-1$번째 단계의 boundary만큼만 차이난다면, $x,y$는 같은 것으로 취급한다.
 
 에 의해 정의될 수 있다는 것이다. 특히 ($\ast$)가 알려주는 것은 $d_r$들이 모두 본질적으로는 $d$와 같은 것이며, 그 index $r$은 filtration을 건너뛰는 정도를 측정해주는 데에만 쓰인다는 것이다. 즉 다음이 성립한다.

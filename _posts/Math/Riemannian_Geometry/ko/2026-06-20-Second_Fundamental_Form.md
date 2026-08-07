@@ -16,7 +16,7 @@ published: false
 
 [§리만 계량, §§Normal bundle](/ko/math/riemannian_geometry/Riemannian_metric#normal-bundle)에서 우리는 Riemannian manifold $(\bar M, \bar g)$의 submanifold $M$ 위에 restriction metric $g = \iota^\ast \bar g$를 주고, 각 점에서 tangent space $T_p M$의 orthogonal complement로 normal bundle $NM$을 정의했다. 이 글에서는 이러한 embedding이 $M$에 부여하는 *외재적<sub>extrinsic</sub>* 기하를 다룬다. 핵심 도구는 주변 공간 $\bar M$의 Levi-Civita connection $\bar\nabla$를 접성분과 법성분으로 쪼개는 일이며, 그 법성분이 곧 *제2기본형식*이다. 이를 통해 우리는 $M$의 내재적 곡률과 $\bar M$의 곡률을 잇는 Gauss 방정식을 얻고, [§측지선, ⁋예시 9](/ko/math/riemannian_geometry/geodesics#ex9)에서 구면의 대원이 측지선임을 보일 때 사용한 "주변 가속도를 tangent space로 orthogonal projection"하는 논증의 일반적 배경을 마련한다.
 
-이 글 전체에서 $M \subseteq \bar M$은 embedding된 submanifold이고, $\bar g$는 $\bar M$의 Riemannian metric, $g = \iota^\ast \bar g$는 그 restriction이며, $\bar\nabla, \nabla$는 각각 $(\bar M, \bar g)$와 $(M, g)$의 Levi-Civita connection을 가리킨다. 또 $X, Y, Z, W$ 등은 $M$ 위의 벡터장을 가리키며, 필요할 때 이를 $\bar M$ 위로 확장하여 $\bar\nabla_X Y$ 등을 계산한다. $d\iota$를 통한 동일시 $T_p M \subseteq T_p \bar M$은 따로 명시하지 않고 사용한다.
+이 글 전체에서 $M \subseteq \bar M$은 embedding된 submanifold이고, $\bar g$는 $\bar M$의 Riemannian metric, $g = \iota^\ast \bar g$는 그 restriction이며, $\bar\nabla, \nabla$는 각각 $(\bar M, \bar g)$와 $(M, g)$의 Levi-Civita connection을 가리킨다. 또 $X, Y, Z, W$ 등은 $M$ 위의 벡터장을 가리키며, 필요할 때 이를 $\bar M$ 위로 확장하여 $\bar\nabla_X Y$ 등을 계산한다. $\dd{\iota}$를 통한 동일시 $T_p M \subseteq T_p \bar M$은 따로 명시하지 않고 사용한다.
 
 ## 접-법 분해와 Gauss 공식
 

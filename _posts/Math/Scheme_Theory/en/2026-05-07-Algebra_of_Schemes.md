@@ -234,7 +234,7 @@ $$\x_2\cdot(p(\x_1)+c\x_2)=p(0)\x_2$$
 
 so $\ann(\x_2)=(\x_1,\x_2)$. This is an ideal that properly contains $\ann(\x_1)=(\x_2)$, and geometrically corresponds to the origin. Unlike the above example, this is a point that does not appear as the generic point of an irreducible component of $X$, that is, an embedded point.
 
-In fact, these two points are all the associated points of $X$. For $f=p(\x_1)+c\x_2$ and $g=q(\x_1)+d\x_2$, from $\x_1\x_2=\x_2^2=0$,
+In fact, these two points are all the associated points of $X$. For $f=p(\x_1)+c\x_2$ and $g=q(\x_1)+\dd{\x_2}$, from $\x_1\x_2=\x_2^2=0$,
 
 $$fg=p(\x_1)q(\x_1)+\bigl(dp(0)+cq(0)\bigr)\x_2$$
 

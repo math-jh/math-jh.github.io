@@ -158,9 +158,9 @@ $$v_i = e_i \ (1 \le i \le n), \qquad v_0 = -e_1 - \cdots - e_n$$
 
 $$P_{dH} = \{m \in M_\mathbb{R} \mid \langle m, v_0 \rangle \ge -d,\ \langle m, v_i \rangle \ge 0 \ (1 \le i \le n)\}$$
 
-의 lattice point들이 준다. $m = (m_1, \ldots, m_n)$로 적으면 조건은 $m_i \ge 0$과 $-(m_1 + \cdots + m_n) \ge -d$, 즉 $\sum m_i \le d$이다. 이는 $d$배 표준 simplex $d\Delta_n$이며 그 격자점의 개수는
+의 lattice point들이 준다. $m = (m_1, \ldots, m_n)$로 적으면 조건은 $m_i \ge 0$과 $-(m_1 + \cdots + m_n) \ge -d$, 즉 $\sum m_i \le d$이다. 이는 $d$배 표준 simplex $\dd{\Delta_n}$이며 그 격자점의 개수는
 
-$$\#(d\Delta_n \cap M) = \binom{n + d}{n}$$
+$$\#(\dd{\Delta_n} \cap M) = \binom{n + d}{n}$$
 
 이다. 이것은 정확히 degree $d$의 homogeneous 다항식 공간 $\mathbb{C}[\x_0, \ldots, \x_n]_d$의 차원으로, [\[대수다양체\] §사영공간의 코호몰로지, ⁋명제 1](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop1)의 $q = 0$, $d \ge 0$ 경우와 일치한다.
 

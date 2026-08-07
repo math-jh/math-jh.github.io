@@ -67,7 +67,7 @@ Manifold $M$ 위에 정의된 distribution $\mathcal{D}$에 대하여, $\mathcal
 :::
 
 ::: 정의 5
-Manifold $M$과 submanifold $\Phi:N\rightarrow M$에 대하여, $N$이 ideal $\mathcal{I}$의 *integral manifold*인 것은 임의의 $\omega\in\mathcal{I}$에 대하여 $(d\Phi)^\ast(\omega)\equiv 0$이 성립하는 것이다. 
+Manifold $M$과 submanifold $\Phi:N\rightarrow M$에 대하여, $N$이 ideal $\mathcal{I}$의 *integral manifold*인 것은 임의의 $\omega\in\mathcal{I}$에 대하여 $(\dd{\Phi})^\ast(\omega)\equiv 0$이 성립하는 것이다. 
 :::
 
 그럼 이러한 조건에서 프로베니우스 정리는 다음과 같이 쓸 수 있다.
@@ -85,16 +85,16 @@ $m$차원 manifold $M$과, $m-k$개의 independent 1-form들로 생성된 differ
 
 1. 임의의 $f:N\rightarrow M$에 대하여, $\graph(f)$는 다음의 집합
 
-    $$\{(d(f\circ \pi_1))^\ast(\omega_i)-(d\pi_2)^\ast(\omega_i)\mid i=1,\ldots, m\}$$
+    $$\{(\dd{(f\circ \pi_1)})^\ast(\omega_i)-(\dd{\pi_2})^\ast(\omega_i)\mid i=1,\ldots, m\}$$
 
     으로 생성되는 ideal $\mathcal{I}$의 integral manifold이다.
 2. $N$ 위의 1-form들 $\alpha_1,\ldots,\alpha_m$에 대하여, 다음의 집합
 
-    $$\{(d\pi_1)^\ast(\alpha_i)-(d\pi_2)^\ast(\omega_i)\mid i=1,\ldots,m\}$$
+    $$\{(\dd{\pi_1})^\ast(\alpha_i)-(\dd{\pi_2})^\ast(\omega_i)\mid i=1,\ldots,m\}$$
 
     으로 생성되는 ideal이 differential ideal이라 가정하자. 그럼 임의의 $q_0\in N,p_0\in M$이 주어질 때마다, $q_0$의 적당한 열린근방 $U$와, $f(q_0)=p_0$을 만족하는 $C^\infty$ 함수 $f:U\rightarrow M$이 존재하여
 
-    $$(df)^\ast(\omega_i)=\alpha_i\vert_U$$
+    $$(\dd{f})^\ast(\omega_i)=\alpha_i\vert_U$$
 
     가 성립하도록 할 수 있다.
 :::
@@ -111,15 +111,15 @@ $m$차원 manifold $M$과, $m-k$개의 independent 1-form들로 생성된 differ
     
     로 주어진다. 이제 $\mathcal{I}$가 이를 integral manifold로 갖는다는 것을 증명하려면 주어진 form들 
 
-    $$\mu_i:=(d(f\circ\pi_1))^\ast(\omega_i)-(d\pi_2)^\ast(\omega_i)$$
+    $$\mu_i:=(\dd{(f\circ\pi_1)})^\ast(\omega_i)-(\dd{\pi_2})^\ast(\omega_i)$$
 
-    이 $(d\iota)^\ast(\mu_i)=0$을 만족한다는 것을 보여야 한다. 이는
+    이 $(\dd{\iota})^\ast(\mu_i)=0$을 만족한다는 것을 보여야 한다. 이는
     
-    $$(d\iota)^\ast(\mu_i)=(d(\pi_1\circ\iota))^\ast(df)^\ast(\omega_i)-(d(\pi_2\circ\iota))^\ast(\omega_i)=(df)^\ast(\omega_i)-(df)^\ast(\omega_i)=0$$
+    $$(\dd{\iota})^\ast(\mu_i)=(\dd{(\pi_1\circ\iota)})^\ast(\dd{f})^\ast(\omega_i)-(\dd{(\pi_2\circ\iota)})^\ast(\omega_i)=(\dd{f})^\ast(\omega_i)-(\dd{f})^\ast(\omega_i)=0$$
 
     으로부터 분명하다.
 
-2. 주어진 form들의 집합으로 생성되는 ideal을 $\mathcal{I}$라 하자. 그럼 프로베니우스 정리에 의하여, $\mathcal{I}$는 $(m+n)-m=n$차원의 integral manifold $I$를 갖는다. 이후, 임의의 점 $q\in I$에 대하여, $d\pi_1$을 $I_q$로 제한한 것이 전단사함수임을 보이면 된다. 
+2. 주어진 form들의 집합으로 생성되는 ideal을 $\mathcal{I}$라 하자. 그럼 프로베니우스 정리에 의하여, $\mathcal{I}$는 $(m+n)-m=n$차원의 integral manifold $I$를 갖는다. 이후, 임의의 점 $q\in I$에 대하여, $\dd{\pi_1}$을 $I_q$로 제한한 것이 전단사함수임을 보이면 된다. 
 :::
 
 ---

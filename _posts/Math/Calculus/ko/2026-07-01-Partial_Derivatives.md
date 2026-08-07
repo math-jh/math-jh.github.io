@@ -164,7 +164,7 @@ $$f(a+h,b+k) - f(a,b) - \nabla f(a,b)\cdot(h,k) = \bigl(f_x(a+\theta_1 h, b+k) -
 ::: 정리 6 (다변수 연쇄법칙)
 $f$가 미분가능하고 $\mathbf{x}(t) = (x_1(t), \ldots, x_n(t))$가 미분가능한 곡선이면, 합성 $t \mapsto f(\mathbf{x}(t))$도 미분가능하고
 
-$$\frac{d}{dt} f(\mathbf{x}(t)) = \nabla f(\mathbf{x}(t)) \cdot \mathbf{x}'(t) = \sum_{i=1}^n \frac{\partial f}{\partial x_i} \frac{dx_i}{dt}$$
+$$\frac{d}{\dd{t}} f(\mathbf{x}(t)) = \nabla f(\mathbf{x}(t)) \cdot \mathbf{x}'(t) = \sum_{i=1}^n \frac{\partial f}{\partial x_i} \frac{\dd{x_i}}{\dd{t}}$$
 
 이다.
 :::

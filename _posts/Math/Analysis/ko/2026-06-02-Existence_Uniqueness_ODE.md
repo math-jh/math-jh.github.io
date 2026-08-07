@@ -95,20 +95,20 @@ $f$가 $(t_0, y_0)$ 근방에서 연속이고 $y$에 대해 립시츠 조건을 
 ::: 증명
 미분방정식과 초기 조건을 적분하면, [§미적분의 기본정리, ⁋정리 3](/ko/math/analysis/fundamental_theorem_of_calculus#thm3)에 의해 문제는 integral equation
 
-$$y(t) = y_0 + \int_{t_0}^t f(s, y(s)) ds$$
+$$y(t) = y_0 + \int_{t_0}^t f(s, y(s)) \dd{s}$$
 
 와 동치이다. 실제로 $y$가 미분방정식의 해이면 양변을 $t_0$에서 $t$까지 적분하여 위 식을 얻고, 거꾸로 위 integral equation을 만족하는 연속함수 $y$는 우변이 $t$에 대해 미분가능하므로 미분하면 $y'(t) = f(t, y(t))$를 얻고 $t = t_0$을 대입하면 $y(t_0) = y_0$을 얻는다. Integral equation 형태가 유리한 이유는 미분이라는 까다로운 연산이 사라지고, 연속함수만 다루면 되기 때문이다.
 
 우변을 연속함수 $y$에 대응시키는 *피카르 작용소<sub>Picard operator</sub>*
 
-$$(Ty)(t) = y_0 + \int_{t_0}^t f(s, y(s)) ds$$
+$$(Ty)(t) = y_0 + \int_{t_0}^t f(s, y(s)) \dd{s}$$
 
 를 생각하자. 그러면 integral equation의 해는 정확히 $T$의 fixed point $Ty = y$이다. 충분히 짧은 닫힌구간 $I = [t_0 - h, t_0 + h]$ 위에서 연속함수들의 공간 $C(I)$에 상한노름 $\lVert g\rVert_\infty = \sup_{t\in I}\lvert g(t)\rvert$을 주면 이는 완비 거리공간이다. 두 연속함수 $y_1, y_2$에 대해, 립시츠 조건을 적분 안에서 적용하면
 
 $$\begin{aligned}
-\lvert (Ty_1)(t) - (Ty_2)(t)\rvert &= \left\lvert \int_{t_0}^t \bigl(f(s, y_1(s)) - f(s, y_2(s))\bigr) ds\right\rvert \\
-&\leq \int_{t_0}^t \lvert f(s, y_1(s)) - f(s, y_2(s))\rvert ds \\
-&\leq \int_{t_0}^t L \lvert y_1(s) - y_2(s)\rvert ds \\
+\lvert (Ty_1)(t) - (Ty_2)(t)\rvert &= \left\lvert \int_{t_0}^t \bigl(f(s, y_1(s)) - f(s, y_2(s))\bigr) \dd{s}\right\rvert \\
+&\leq \int_{t_0}^t \lvert f(s, y_1(s)) - f(s, y_2(s))\rvert \dd{s} \\
+&\leq \int_{t_0}^t L \lvert y_1(s) - y_2(s)\rvert \dd{s} \\
 &\leq L \lvert t - t_0\rvert \lVert y_1 - y_2\rVert_\infty \leq L h \lVert y_1 - y_2\rVert_\infty
 \end{aligned}$$
 
@@ -150,12 +150,12 @@ $f(t, y)$가 띠 영역 $\lvert t - t_0\rvert \leq a$, $y \in \mathbb{R}$ 전체
 ::: 증명
 피카르 반복 $y_{n+1} = Ty_n$을 $y_0 \equiv y_0$에서 시작하자. 연속한 두 근사의 차를 평가한다. $M = \sup_{\lvert t - t_0\rvert \leq a}\lvert f(t, y_0)\rvert$로 두면
 
-$$\lvert y_1(t) - y_0(t)\rvert = \left\lvert \int_{t_0}^t f(s, y_0) ds\right\rvert \leq M \lvert t - t_0\rvert$$
+$$\lvert y_1(t) - y_0(t)\rvert = \left\lvert \int_{t_0}^t f(s, y_0) \dd{s}\right\rvert \leq M \lvert t - t_0\rvert$$
 
 이고, 귀납적으로 립시츠 조건을 반복 적용하면
 
 $$\begin{aligned}
-\lvert y_{n+1}(t) - y_n(t)\rvert &\leq \int_{t_0}^t L \lvert y_n(s) - y_{n-1}(s)\rvert ds \\
+\lvert y_{n+1}(t) - y_n(t)\rvert &\leq \int_{t_0}^t L \lvert y_n(s) - y_{n-1}(s)\rvert \dd{s} \\
 &\leq M \frac{L^n \lvert t - t_0\rvert^{n+1}}{(n+1)!}
 \end{aligned}$$
 
@@ -167,7 +167,7 @@ $$\begin{aligned}
 ::: 예시 7 (유한 시간 폭발)
 $y' = y^2$, $y(0) = 1$을 보자. 여기서 $f(t, y) = y^2$는 임의의 bounded 영역에서는 립시츠 조건을 만족하므로 국소해가 존재하고, 변수분리로
 
-$$\int \frac{dy}{y^2} = \int dt  \Longrightarrow  -\frac{1}{y} = t + C$$
+$$\int \frac{\dd{y}}{y^2} = \int \dd{t}  \Longrightarrow  -\frac{1}{y} = t + C$$
 
 를 풀면 $y(0) = 1$에서 $C = -1$, 곧
 

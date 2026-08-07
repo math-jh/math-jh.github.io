@@ -63,7 +63,7 @@ $\mathbb{R}$-벡터공간 $\mathfrak{m}_p/\mathfrak{m}_p^2$의 차원은 유한�
 이를 보이기 위해, 다음의 다변수 테일러 근사
 
 $$\begin{aligned}g(x)&=g(x_0)+\sum_{i=1}^m\frac{\partial g}{\partial r^i}\bigg\vert_{x_0}(r^i(x)-r^i(x_0))\\
-&\phantom{phantom}+\sum_{i,j}(r^i(x)-r^i(x_0))(r^j(x)-r^j(x_0))\int_0^1(1-t)\frac{\partial^2g}{\partial r^i\partial r^j}\bigg\vert_{(x_0+t(x-x_0))}\mathop{dt}\end{aligned}$$
+&\phantom{phantom}+\sum_{i,j}(r^i(x)-r^i(x_0))(r^j(x)-r^j(x_0))\int_0^1(1-t)\frac{\partial^2g}{\partial r^i\partial r^j}\bigg\vert_{(x_0+t(x-x_0))}\dd{t}\end{aligned}$$
 
 을 사용한다. 
 
@@ -71,11 +71,11 @@ $(U,\varphi)$가 $p$을 중심으로 하는 coordinate system이고, $\varphi=(x
 
 위의 식은 유클리드 공간에서 성립하는 식이므로, $g=f\circ\varphi^{-1}$로 두고, $g$의 정의역이 $\varphi(U)$인 것으로 생각하자. 원점을 중심으로 한 테일러 근사로부터, 임의의 $x\in\varphi(U)$에 대하여 다음의 식
 
-$$g(x)=g(0)+\sum_{i=1}^m\frac{\partial g}{\partial r^i}\bigg\vert_0r^i(x)+\sum_{i,j}r^i(x)r^j(x)\int_0^1(1-t)\frac{\partial^2g}{\partial r^i\partial r^j}\bigg\vert_{tx}\mathop{dt}$$
+$$g(x)=g(0)+\sum_{i=1}^m\frac{\partial g}{\partial r^i}\bigg\vert_0r^i(x)+\sum_{i,j}r^i(x)r^j(x)\int_0^1(1-t)\frac{\partial^2g}{\partial r^i\partial r^j}\bigg\vert_{tx}\dd{t}$$
 
 을 얻는다. 이제 $x=\varphi(q)$라 하면
 
-$$\begin{aligned}f(q)&=f(p)+\sum_{i=1}^m\frac{\partial (f\circ\varphi^{-1})}{\partial r^i}\bigg\vert_0r^i(\varphi(q))+\sum_{i,j}r^i(\varphi(q))r^j(\varphi(q))\int_0^1(1-t)\frac{\partial^2g}{\partial r^i\partial r^j}\bigg\vert_{t\varphi(q)}\mathop{dt}\\ &=f(p)+\sum_{i=1}^m\frac{\partial(f\circ\varphi^{-1})}{\partial r^i}\bigg\vert_0 x^i(q)+\sum_{i,j} x^i(q)x^j(q)\int_0^1(1-t)\frac{\partial^2 g}{\partial r^i\partial r^j}\bigg\vert_{t\varphi(q)}dt\end{aligned}$$
+$$\begin{aligned}f(q)&=f(p)+\sum_{i=1}^m\frac{\partial (f\circ\varphi^{-1})}{\partial r^i}\bigg\vert_0r^i(\varphi(q))+\sum_{i,j}r^i(\varphi(q))r^j(\varphi(q))\int_0^1(1-t)\frac{\partial^2g}{\partial r^i\partial r^j}\bigg\vert_{t\varphi(q)}\dd{t}\\ &=f(p)+\sum_{i=1}^m\frac{\partial(f\circ\varphi^{-1})}{\partial r^i}\bigg\vert_0 x^i(q)+\sum_{i,j} x^i(q)x^j(q)\int_0^1(1-t)\frac{\partial^2 g}{\partial r^i\partial r^j}\bigg\vert_{t\varphi(q)}\dd{t}\end{aligned}$$
 
 이다. 우변을 살펴보면, $\mathbf{f}\in\mathfrak{m}_p$으로부터 $f(p)=0$이고, 또 우변의 적분은 $q$에 대한 $C^\infty$ 함수이다. 이제 $x^i$들은 모두 $x^i(p)=0$을 만족하는 함수이므로, 위 식을 germ으로 바꾸면 우변의 이중합은 $\mathfrak{m}_p^2$의 원소가 된다. 이를 모두 정리하면
 

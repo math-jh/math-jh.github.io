@@ -228,9 +228,9 @@ $$\Ext^1_\mathbb{Z}(\mathbb{Z}/n\mathbb{Z}, A) \cong \coker(\cdot n ) = A/nA$$
 Commutative ring $A$와 rank $n$ free $A$-module $F$, 그리고 $A$-linear map $\varphi : F \rightarrow A$가 주어졌다 하자. 그럼 *Koszul complex<sub>코쥴 복합체</sub>* $K(\varphi)_\bullet$은 exterior algebra $K=\bigwedge F$에 다음과 같이 chain complex 구조를 부여한 것이다. 
 
 1. 각각의 $i$에 대하여, $K_i = \bigwedge\nolimits^i F$이다.
-2. 각각의 $i$에 대하여, $d_i: K_i \rightarrow K_{i-1}$는 degree $-1$의 graded derivation으로, 식 $d(f) = \varphi(f)$와 Leibniz rule
+2. 각각의 $i$에 대하여, $d_i: K_i \rightarrow K_{i-1}$는 degree $-1$의 graded derivation으로, 식 $\dd{(f)} = \varphi(f)$와 Leibniz rule
     
-    $$d(\xi \wedge \eta) = d(\xi) \wedge \eta + (-1)^{\degree(\xi)} \, \xi \wedge d(\eta)$$
+    $$\dd{(\xi \wedge \eta)} = \dd{(\xi)} \wedge \eta + (-1)^{\degree(\xi)} \, \xi \wedge \dd{(\eta)}$$
 
     에 의해 유일하게 결정된다.
 :::

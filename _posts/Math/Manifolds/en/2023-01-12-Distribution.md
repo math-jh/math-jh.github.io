@@ -80,15 +80,15 @@ Let $X,Y\in\mathcal{D}$ and pick a point $p\in M$. We must show that $[X,Y]_p\in
 
 Since $\mathcal{D}$ is an integrable distribution, there exists an integral submanifold $\Phi:S\rightarrow M$ of $\mathcal{D}$ containing $p$. Let $s\in S$ be a point satisfying $\Phi(s)=p$. For any $x\in S$,
 
-$$d\Phi_x:T_xS\rightarrow\mathcal{D}(\Phi(x))$$
+$$\dd{\Phi_x}:T_xS\rightarrow\mathcal{D}(\Phi(x))$$
 
 is an isomorphism, so we can find two vector fields $\tilde{X},\tilde{Y}$ satisfying
 
-$$d\Phi_s(\tilde{X}_s)=X_p,\qquad d\Phi_s(\tilde{Y}_s)=Y_p.$$
+$$\dd{\Phi_s}(\tilde{X}_s)=X_p,\qquad \dd{\Phi_s}(\tilde{Y}_s)=Y_p.$$
 
 Then these vector fields are $\Phi$-related to $X$ and $Y$ respectively, so by [§Lie Derivative, ⁋Proposition 9](/en/math/manifolds/Lie_derivative#prop9), $[\tilde{X},\tilde{Y}]$ is $\Phi$-related to $[X,Y]$. Therefore
 
-$$[X,Y]_p=d\Phi_s([\tilde{X},\tilde{Y}]_s)\in\mathcal{D}(p)$$
+$$[X,Y]_p=\dd{\Phi_s}([\tilde{X},\tilde{Y}]_s)\in\mathcal{D}(p)$$
 
 holds.
 :::
@@ -121,7 +121,7 @@ $$\sigma: (-\epsilon,\epsilon)\times W;\qquad (t,a^2,\ldots, a^d)\mapsto \phi^t(
 
 is well-defined. Now,
 
-$$d\sigma\left(\frac{\partial}{\partial r^1}\bigg\vert_0\right)=\frac{\partial}{\partial y^1}\bigg\vert_p=X_p\neq 0,\qquad d\sigma\left(\frac{\partial}{\partial r^i}\bigg\vert_0\right)=\frac{\partial}{\partial y^i}\bigg\vert_p$$
+$$\dd{\sigma}\left(\frac{\partial}{\partial r^1}\bigg\vert_0\right)=\frac{\partial}{\partial y^1}\bigg\vert_p=X_p\neq 0,\qquad \dd{\sigma}\left(\frac{\partial}{\partial r^i}\bigg\vert_0\right)=\frac{\partial}{\partial y^i}\bigg\vert_p$$
 
 so $\sigma$ is nonsingular at the origin, and hence $\sigma^{-1}$ defines a coordinate map.
 :::
@@ -197,9 +197,9 @@ $$Y_i(x^{k+j})=Z_i(w^{k+j})=0$$
 
 holds, so the proofs of the first and second assertions are complete.
 
-Finally, we must prove the third assertion. This time let $\pi$ be the projection from $\mathbb{R}^m$ onto the last $m-k$ coordinates. Then the image of $\mathcal{D}$ under $d(\pi\circ\varphi)$ is $0$, so
+Finally, we must prove the third assertion. This time let $\pi$ be the projection from $\mathbb{R}^m$ onto the last $m-k$ coordinates. Then the image of $\mathcal{D}$ under $\dd{(\pi\circ\varphi)}$ is $0$, so
 
-$$d(\pi\circ\varphi\circ\Phi)\equiv 0$$
+$$\dd{(\pi\circ\varphi\circ\Phi)}\equiv 0$$
 
 holds for any $y\in N$. But since $N$ is connected, $\pi\circ\varphi\circ\Phi$ is constant, and hence $\Phi(N)$ is contained in a single slice.
 :::

@@ -23,7 +23,7 @@ First, we define the *positive orientation* as the direction along which we trav
 ::: Theorem 1 (Green)
 If $D$ is a planar region bounded by a piecewise smooth simple closed curve $C = \partial D$ and $P, Q$ are $C^1$ on an open set containing $D$, then when $C$ is taken with positive orientation,
 
-$$\oint_C P\mathop{dx} + Q\mathop{dy} = \iint_D \left(\frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y}\right)\mathop{dA}$$
+$$\oint_C P\dd{x} + Q\dd{y} = \iint_D \left(\frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y}\right)\dd{A}$$
 
 holds.
 :::
@@ -35,23 +35,23 @@ $$D = \{(x,y) \mid a \leq x \leq b,\ g_1(x) \leq y \leq g_2(x)\},$$
 
 we show the identity
 
-$$\oint_C P\mathop{dx} = -\iint_D \partial P/\partial y\mathop{dA}.$$
+$$\oint_C P\dd{x} = -\iint_D \partial P/\partial y\dd{A}.$$
 
 For the double integral, integrating the inner integral first by [§Multiple Integrals, ⁋Theorem 2](/en/math/calculus/multiple_integrals#thm2) gives
 
-$$\iint_D \frac{\partial P}{\partial y}\mathop{dA} = \int_a^b \bigl(P(x, g_2(x)) - P(x, g_1(x))\bigr)\mathop{dx}.$$
+$$\iint_D \frac{\partial P}{\partial y}\dd{A} = \int_a^b \bigl(P(x, g_2(x)) - P(x, g_1(x))\bigr)\dd{x}.$$
 
-On the other hand, the boundary $C$ consists of two pieces: the lower curve $y = g_1(x)$ traversed with $x\colon a \rightarrow b$, and the upper curve $y = g_2(x)$ traversed with $x\colon b \rightarrow a$, and on the two vertical sides $x$ is constant so $dx = 0$. Hence
+On the other hand, the boundary $C$ consists of two pieces: the lower curve $y = g_1(x)$ traversed with $x\colon a \rightarrow b$, and the upper curve $y = g_2(x)$ traversed with $x\colon b \rightarrow a$, and on the two vertical sides $x$ is constant so $\dd{x} = 0$. Hence
 
-$$\oint_C P\mathop{dx} = \int_a^b P(x, g_1(x))\mathop{dx} + \int_b^a P(x, g_2(x))\mathop{dx} = -\int_a^b \bigl(P(x,g_2) - P(x,g_1)\bigr)\mathop{dx},$$
+$$\oint_C P\dd{x} = \int_a^b P(x, g_1(x))\dd{x} + \int_b^a P(x, g_2(x))\dd{x} = -\int_a^b \bigl(P(x,g_2) - P(x,g_1)\bigr)\dd{x},$$
 
 and comparing the two identities yields
 
-$$\oint_C P\mathop{dx} = -\iint_D \partial P/\partial y\mathop{dA}.$$
+$$\oint_C P\dd{x} = -\iint_D \partial P/\partial y\dd{A}.$$
 
 Symmetrically, if $D$ is a region simple with respect to $x$, then
 
-$$\oint_C Q\mathop{dy} = \iint_D \partial Q/\partial x\mathop{dA}.$$
+$$\oint_C Q\dd{y} = \iint_D \partial Q/\partial x\dd{A}.$$
 
 For a general region, cutting it into such pieces and combining them causes the integrals over interior boundaries to cancel as two integrals in opposite directions, so the theorem holds.
 :::
@@ -61,17 +61,17 @@ In particular, choosing $P, Q$ so that the integrand of the double integral beco
 ::: Corollary 2
 The area of $D$ is given by the boundary integral
 
-$$\area(D) = \oint_C x\mathop{dy} = -\oint_C y\mathop{dx} = \frac{1}{2}\oint_C (x\mathop{dy} - y\mathop{dx}).$$
+$$\area(D) = \oint_C x\dd{y} = -\oint_C y\dd{x} = \frac{1}{2}\oint_C (x\dd{y} - y\dd{x}).$$
 :::
 
 ::: Proof
 In [Theorem 1](#thm1), taking $(P, Q) = (0, x)$ gives $Q_x - P_y = 1$, so
 
-$$\oint_C x\mathop{dy} = \iint_D 1\mathop{dA} = \area(D),$$
+$$\oint_C x\dd{y} = \iint_D 1\dd{A} = \area(D),$$
 
 and taking $(P, Q) = (-y, 0)$ gives
 
-$$\oint_C -y\mathop{dx} = \area(D).$$
+$$\oint_C -y\dd{x} = \area(D).$$
 
 The third formula is the average of these two.
 :::
@@ -81,7 +81,7 @@ Meanwhile, Green's theorem can be rewritten in two forms that interpret the two 
 ::: Proposition 3
 If the boundary $C$ of $D$ is positively oriented and $\mathbf{F} = (P, Q)$ is $C^1$, then for the unit tangent $\mathbf{T}$ and the outward unit normal $\mathbf{n}$,
 
-$$\oint_C \mathbf{F} \cdot \mathbf{T}\mathop{ds} = \iint_D \left(\frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y}\right)\mathop{dA}, \qquad \oint_C \mathbf{F} \cdot \mathbf{n}\mathop{ds} = \iint_D \divergence \mathbf{F}\mathop{dA}$$
+$$\oint_C \mathbf{F} \cdot \mathbf{T}\dd{s} = \iint_D \left(\frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y}\right)\dd{A}, \qquad \oint_C \mathbf{F} \cdot \mathbf{n}\dd{s} = \iint_D \divergence \mathbf{F}\dd{A}$$
 
 hold.
 :::
@@ -89,17 +89,17 @@ hold.
 ::: Proof
 The first equality follows because
 
-$$\oint_C \mathbf{F}\cdot \mathbf{T}\mathop{ds} = \oint_C P\mathop{dx} + Q\mathop{dy}$$
+$$\oint_C \mathbf{F}\cdot \mathbf{T}\dd{s} = \oint_C P\dd{x} + Q\dd{y}$$
 
 is exactly the left-hand side of [Theorem 1](#thm1), and the integrand $Q_x - P_y$ on the right-hand side is the curl of the planar vector field ([§Vector Fields, ⁋Definition 3](/en/math/calculus/vector_fields#def3)).
 
-For the second equality, using that on a positively oriented boundary the outward unit normal satisfies $\mathbf{n}ds = (dy, -dx)$, we have
+For the second equality, using that on a positively oriented boundary the outward unit normal satisfies $\mathbf{n}\dd{s} = (\dd{y}, -\dd{x})$, we have
 
-$$\oint_C \mathbf{F}\cdot \mathbf{n}\mathop{ds} = \oint_C P\mathop{dy} - Q\mathop{dx},$$
+$$\oint_C \mathbf{F}\cdot \mathbf{n}\dd{s} = \oint_C P\dd{y} - Q\dd{x},$$
 
 and applying [Theorem 1](#thm1) to $(P, Q) \mapsto (-Q, P)$ shows this equals
 
-$$\iint_D (P_x + Q_y)\mathop{dA} = \iint_D \divergence \mathbf{F}\mathop{dA}.$$
+$$\iint_D (P_x + Q_y)\dd{A} = \iint_D \divergence \mathbf{F}\dd{A}.$$
 :::
 
 The first equality is exactly Green's theorem itself, and only the second equality is new, but its intuitive meaning is clear. Namely, if we integrate the function $\mathbf{F}$ along the boundary in the *outward* direction, this is precisely captured by the divergence. On the other hand, we already saw in [§Line Integrals, ⁋Example 6](/en/math/calculus/line_integrals#ex6) that if a region has a hole, the field may fail to be conservative even when the curl vanishes; this can be written rigorously as follows.
@@ -113,7 +113,7 @@ On a simply connected open region, a $C^1$ vector field $\mathbf{F} = (P, Q)$ sa
 ::: Proof
 Since the region is simply connected, any simple closed curve $C$ inside it bounds a region $D$ entirely contained in the region. Now
 
-$$\oint_C \mathbf{F}\cdot d\mathbf{r} = \iint_D (Q_x - P_y)\mathop{dA} = 0,$$
+$$\oint_C \mathbf{F}\cdot d\mathbf{r} = \iint_D (Q_x - P_y)\dd{A} = 0,$$
 
 and since the integral vanishes over every closed curve, [§Line Integrals, ⁋Theorem 4](/en/math/calculus/line_integrals#thm4) implies that $\mathbf{F}$ is conservative.
 :::

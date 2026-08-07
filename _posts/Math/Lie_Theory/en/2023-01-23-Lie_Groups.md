@@ -100,11 +100,11 @@ A vector field $X$ defined on a Lie group $G$ is called *left invariant* if $X$ 
 
 That is, the equation
 
-$$d(L_g)\circ X=X\circ L_g$$
+$$\dd{(L_g)}\circ X=X\circ L_g$$
 
 holds, or more explicitly, for any $p\in G$,
 
-$$\left(d(L_g)\right)(X_p)=X_{gp}$$
+$$\left(\dd{(L_g)}\right)(X_p)=X_{gp}$$
 
 always holds. From the above equation, we can see that to specify a left invariant vector field $X$ defined on $G$, it suffices to know its value $X_p$ at *only a single point* $p\in G$, and of course the most natural choice of $p$ is the identity element $e$ of $G$. Also, since the values of $X$ at each point are defined in this way, one can guess that the fact that $X$ is left-invariant will yield the smoothness of $X$.
 
@@ -133,12 +133,12 @@ Let a Lie group $G$ be given, and let $\mathfrak{g}$ be the collection of all le
 ::: Proof
 1. That $\mathfrak{g}$ is an $\mathbb{R}$-vector space under addition and scalar multiplication of vector fields is obvious, and that $\alpha$ is a linear map is also obvious. Now we must show that $\alpha$ is an isomorphism; since $T_eG$ is a finite-dimensional vector space, it suffices to show that $\alpha$ is bijective. First, assuming that there exist two $X,Y\in\mathfrak{g}$ satisfying $\alpha(X)=\alpha(Y)$, then for any $g\in G$,
   
-    $$X_g=(dL_g)_e(X_e)=(dL_g)_e(Y_e)=Y_g$$
+    $$X_g=(\dd{L_g})_e(X_e)=(\dd{L_g})_e(Y_e)=Y_g$$
 
-    so $X=Y$. Conversely, for any $v\in T_eG$, defining $X_g$ as $(dL_g)_e(v)$ gives a left invariant vector field $X$, and it is obvious that $\alpha(X)=v$.
+    so $X=Y$. Conversely, for any $v\in T_eG$, defining $X_g$ as $(\dd{L_g})_e(v)$ gives a left invariant vector field $X$, and it is obvious that $\alpha(X)=v$.
 2. To show that $X\in\mathfrak{g}$ is $C^\infty$, it suffices to show that $Xf$ is $C^\infty$ for an arbitrary function $f$. ([[Differential Manifolds] §Vector Fields, ⁋Proposition 2](/en/math/manifolds/vector_fields#prop2)) On the other hand, for any $p\in G$,
     
-    $$(Xf)(p)=X_pf=(dL_p)_e(X_e)f=X_e(f\circ L_p)$$
+    $$(Xf)(p)=X_pf=(\dd{L_p})_e(X_e)f=X_e(f\circ L_p)$$
     
     so this is again the problem of showing that the map $p\mapsto X_e(f\circ L_p)$ is $C^\infty$. Writing the multiplication of $G$ as $m:G\times G\rightarrow G$, and denoting the two natural embeddings from $G$ to $G\times G$ by
 
@@ -183,7 +183,7 @@ The following proposition is basically a result of linear algebra and calculus.
 ::: Proposition 11
 For any $X\in\Mat_n(\mathbb{R})$,
 
-$$\frac{d}{dt}\exp(tX)=X\exp(tX)=\exp(tX)X$$
+$$\frac{d}{\dd{t}}\exp(tX)=X\exp(tX)=\exp(tX)X$$
 
 holds.
 :::
@@ -202,7 +202,7 @@ $$t\mapsto \exp(tX)$$
 
 is a curve in $\GL(n; \mathbb{R})$, and the derivative of this curve at $t=0$ is
 
-$$\frac{d}{dt}\exp(tX)\bigg\vert_{t=0}=X$$
+$$\frac{d}{\dd{t}}\exp(tX)\bigg\vert_{t=0}=X$$
 
 which is obvious from the preceding proposition. To explain this geometrically, the above curve means that when an arbitrary tangent vector
 
@@ -225,7 +225,7 @@ we know that $X$ satisfying this must exactly satisfy $\tr X=0$. That is, the ta
 The following is a generalization of the left-invariant vector field examined above.
 
 ::: Definition 13
-A form $\omega$ defined on a Lie group $G$ is called *left invariant* if $(dL_g)\omega=\omega$ holds for any $g\in G$. The collection of left invariant $k$-forms defined on $G$ is denoted $\Omega_\text{l.inv}^k(G)$, and the collection of all left invariant forms defined on $G$ is denoted $\Omega_\text{l.inv}^\ast(G)$.
+A form $\omega$ defined on a Lie group $G$ is called *left invariant* if $(\dd{L_g})\omega=\omega$ holds for any $g\in G$. The collection of left invariant $k$-forms defined on $G$ is denoted $\Omega_\text{l.inv}^k(G)$, and the collection of all left invariant forms defined on $G$ is denoted $\Omega_\text{l.inv}^\ast(G)$.
 :::
 
 In particular, elements of $\Omega_\text{l.inv}^1(G)$ are called *Maurer-Cartan forms*.
@@ -240,7 +240,7 @@ For a Lie group $G$ and $\Omega_\text{l.inv}^\ast(G)$, the following hold.
 3. For any $\omega\in\Omega_\text{l.inv}^1(G)$ and left invariant vector field $X$, $\omega(X)$ is a constant function defined on $G$.
 4. For any $\omega\in\Omega_\text{l.inv}^1(G)$ and $X,Y\in\mathfrak{g}$,
     
-    $$d\omega(X,Y)=-\omega[X,Y]$$
+    $$\dd{\omega}(X,Y)=-\omega[X,Y]$$
 
     holds.
 5. For a basis $X_1,\ldots, X_d$ of $\mathfrak{g}$ and its dual basis $\omega_1,\ldots,\omega_d$, there exist $d^3$ constants $c_{ij}^k$ satisfying the formula
@@ -253,7 +253,7 @@ For a Lie group $G$ and $\Omega_\text{l.inv}^\ast(G)$, the following hold.
 
     and therefore the formula
 
-    $$d\omega_i=\sum_{j < k} c_{jk}^i\omega_k\wedge\omega_j$$
+    $$\dd{\omega_i}=\sum_{j < k} c_{jk}^i\omega_k\wedge\omega_j$$
 
     holds.
 :::
@@ -267,13 +267,13 @@ The Lie correspondence is a collection of results concerning the following kinds
 ::: Theorem 15
 The following hold.
 
-1. Let Lie groups $G,H$ be given, and let a homomorphism $L:\mathfrak{g} \rightarrow \mathfrak{h}$ between their Lie algebras $\mathfrak{g},\mathfrak{h}$ be given. If $G$ is simply connected, then there exists a unique homomorphism $F:G \rightarrow H$ satisfying $dF=L$.
+1. Let Lie groups $G,H$ be given, and let a homomorphism $L:\mathfrak{g} \rightarrow \mathfrak{h}$ between their Lie algebras $\mathfrak{g},\mathfrak{h}$ be given. If $G$ is simply connected, then there exists a unique homomorphism $F:G \rightarrow H$ satisfying $\dd{F}=L$.
 2. For any finite-dimensional real Lie algebra $\mathfrak{g}$, there exists a simply connected Lie group $G$ having $\mathfrak{g}$ as its Lie algebra.
 :::
 
 That is, in other words, the functor $\Lie:\LieGrp \rightarrow \LieAlg$ from $\LieGrp$ to $\LieAlg$ gives an equivalence of the two categories when restricted to the full subcategory of $\LieGrp$ consisting of simply connected Lie groups.
 
-Apart from this category-theoretic result, this theorem also allows us to define an exponential map similar to the matrix exponential for any Lie group $G$ and its Lie algebra $\mathfrak{g}$. This is because $(\mathbb{R},+)$ is a 1-dimensional simply connected Lie group, so its Lie algebra is also 1-dimensional, and thus a Lie algebra homomorphism from it to another Lie algebra is uniquely determined by where the basis $d/dt$ goes; when $d/dt$ is sent to $X\in \mathfrak{g}$, applying [Theorem 15](#thm15) to this Lie algebra homomorphism yields the Lie group homomorphism $\gamma: \mathbb{R}\rightarrow G$ that defines the desired curve.
+Apart from this category-theoretic result, this theorem also allows us to define an exponential map similar to the matrix exponential for any Lie group $G$ and its Lie algebra $\mathfrak{g}$. This is because $(\mathbb{R},+)$ is a 1-dimensional simply connected Lie group, so its Lie algebra is also 1-dimensional, and thus a Lie algebra homomorphism from it to another Lie algebra is uniquely determined by where the basis $d/\dd{t}$ goes; when $d/\dd{t}$ is sent to $X\in \mathfrak{g}$, applying [Theorem 15](#thm15) to this Lie algebra homomorphism yields the Lie group homomorphism $\gamma: \mathbb{R}\rightarrow G$ that defines the desired curve.
 
 ::: Definition 16
 For any Lie group $G$ and its Lie algebra $\mathfrak{g}$, and an element $X\in \mathfrak{g}$, let us denote the curve obtained through the above process by $\gamma_X$. Then define $\exp:\mathfrak{g}\rightarrow G$ by $X\mapsto \gamma_X(1)$.
@@ -305,12 +305,12 @@ Finally, we now carry out the classification of abelian Lie groups. By definitio
 
 $$\rho_g: G \rightarrow G; \quad h\mapsto \rho_g(h)=ghg^{-1}$$
 
-([[Algebraic Structures] §Group Actions, ⁋Proposition 9](/en/math/algebraic_structures/group_actions#prop9)) This is a Lie group automorphism, and therefore differentiating it at the identity $h=e$ gives $d\rho_g: \mathfrak{g}\rightarrow \mathfrak{g}$, which becomes a Lie algebra automorphism.
+([[Algebraic Structures] §Group Actions, ⁋Proposition 9](/en/math/algebraic_structures/group_actions#prop9)) This is a Lie group automorphism, and therefore differentiating it at the identity $h=e$ gives $\dd{\rho_g}: \mathfrak{g}\rightarrow \mathfrak{g}$, which becomes a Lie algebra automorphism.
 
 ::: Definition 19
 For a Lie group $G$, the correspondence
 
-$$\Ad:G\rightarrow \Aut(\mathfrak{g});\quad g\mapsto d\rho_g$$
+$$\Ad:G\rightarrow \Aut(\mathfrak{g});\quad g\mapsto \dd{\rho_g}$$
 
 is called the *adjoint representation* of $G$. The map
 
@@ -328,7 +328,7 @@ holds. Moreover, the following holds.
 ::: Theorem 20
 For a connected compact Lie group $G$, the following hold.
 
-1. $d(\exp(e))=\id_\mathfrak{g}$
+1. $\dd{(\exp(e))}=\id_\mathfrak{g}$
 2. $\Ad\circ\exp=\exp_{\GL(\mathfrak{g})}\circ \ad$
 3. $\rho_x\circ\exp=\exp\circ\Ad(x)$
 :::

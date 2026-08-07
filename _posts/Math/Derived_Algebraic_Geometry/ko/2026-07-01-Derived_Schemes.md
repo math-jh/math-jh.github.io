@@ -266,9 +266,9 @@ $$\operatorname{vdim}(Z)=0+0-1=-1$$
 의 quasi-smooth derived scheme이다. $t_0(Z)$은 한 점이지만, $\pi_1\mathcal{O}_Z=k\neq0$이 이 음의 virtual 차원을 실현한다. 곧 두 점이 직선 위에서 일반적으로 만나지 않아 기대 intersection number가 $0$이라는 사실이, Serre 공식 $\operatorname{length}\pi_0-\operatorname{length}\pi_1=1-1=0$으로 정확히 나온다. 고전적 올곱이 이를 "한 점"으로 뭉갠 자리에서, 유도 올곱은 $-1$차원의 virtual 구조를 붙든다.
 
 ::: 예시 17 (derived critical locus)
-Smooth variety $U=\mathbb{A}^n=\Spec k[\x_1,\ldots,\x_n]$ 위의 함수 $f\in \mathcal{O}(U)$에 대하여, 그 미분 $df$은 cotangent 다발 $\Omega_U\cong \mathcal{O}_U^n$의 절단 $(\partial f/\partial \x_1,\ldots,\partial f/\partial \x_n)$이다. $f$의 *derived critical locus<sub>유도 임계점 자리</sub>* $\operatorname{Crit}(f)$을 $df$의 유도 영점자리로 정의한다.
+Smooth variety $U=\mathbb{A}^n=\Spec k[\x_1,\ldots,\x_n]$ 위의 함수 $f\in \mathcal{O}(U)$에 대하여, 그 미분 $\dd{f}$은 cotangent 다발 $\Omega_U\cong \mathcal{O}_U^n$의 절단 $(\partial f/\partial \x_1,\ldots,\partial f/\partial \x_n)$이다. $f$의 *derived critical locus<sub>유도 임계점 자리</sub>* $\operatorname{Crit}(f)$을 $\dd{f}$의 유도 영점자리로 정의한다.
 
-$$\operatorname{Crit}(f)=Z(df)=U\times_{\Omega_U}^hU$$
+$$\operatorname{Crit}(f)=Z(\dd{f})=U\times_{\Omega_U}^hU$$
 
 [명제 13](#prop13)에 의하여 이는 rank $n$ 다발의 절단의 유도 영점자리이므로 quasi-smooth이고 $\operatorname{vdim}=n-n=0$이며, 그 structure sheaf는 편미분들에 대한 Koszul 복합체
 

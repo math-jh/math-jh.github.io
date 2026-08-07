@@ -159,7 +159,7 @@ be the $\mathbb{R}$-vector spaces of differential $k$-forms. Here the coboundary
 
 For instance, consider the differential $2$-form on $\mathbb{R}^3$
 
-$$\omega=dx\wedge dy$$
+$$\omega=\dd{x}\wedge \dd{y}$$
 
 A $2$-dimensional subset of $\mathbb{R}^3$ is given by a map from a (unit) rectangle in $\mathbb{R}^2$ into $\mathbb{R}^3$, and through this we understand what it means to evaluate $\omega$ on such a subset.
 
@@ -169,7 +169,7 @@ $$S = \{ (x, y, 0) \mid 0 \leq x \leq 1,\, 0 \leq y \leq 1 \}$$
 
 is given. Then the integral of $\omega$ over this set is computed simply as
 
-$$\int_S \omega = \int_{x=0}^{1} \int_{y=0}^{1} 1\,dy\,dx = 1$$
+$$\int_S \omega = \int_{x=0}^{1} \int_{y=0}^{1} 1\dd{y}\dd{x} = 1$$
 
 As another example, if the surface
 
@@ -179,12 +179,12 @@ is given, we first parametrize it as a map from $[0,\pi/2]\times[0,2\pi]$ to $\S
 
 $$x = \sin \phi \cos \theta,\qquad y = \sin \phi \sin \theta,\qquad z = \cos \phi$$
 
-and then, using $dx \wedge dy = \sin \phi \cos \phi\, d\phi \wedge d\theta$, we compute the integral as
+and then, using $\dd{x} \wedge \dd{y} = \sin \phi \cos \phi\dd{\phi} \wedge \dd{\theta}$, we compute the integral as
 
 $$\begin{align*}
 \int_{\Sigma} \omega
-&= \int_{0}^{2\pi} \int_{0}^{\pi/2} \sin \phi \cos \phi\, d\phi \, d\theta = \int_{0}^{2\pi} d\theta \int_{0}^{\pi/2} \sin \phi \cos \phi\, d\phi \\
-&= 2\pi \times \frac{1}{2} \int_{0}^{\pi/2} \sin(2\phi) d\phi = 2\pi \times \frac{1}{2} \left[ -\frac{1}{2} \cos(2\phi) \right]_{0}^{\pi/2} \\
+&= \int_{0}^{2\pi} \int_{0}^{\pi/2} \sin \phi \cos \phi\dd{\phi} \dd{\theta} = \int_{0}^{2\pi} \dd{\theta} \int_{0}^{\pi/2} \sin \phi \cos \phi\dd{\phi} \\
+&= 2\pi \times \frac{1}{2} \int_{0}^{\pi/2} \sin(2\phi) \dd{\phi} = 2\pi \times \frac{1}{2} \left[ -\frac{1}{2} \cos(2\phi) \right]_{0}^{\pi/2} \\
 &= 2\pi \times \frac{1}{2} \left( -\frac{1}{2} [\cos(\pi) - \cos(0)] \right) = 2\pi \times \frac{1}{2} \left( -\frac{1}{2}(-1 - 1) \right) = 2\pi \times \frac{1}{2} \times 1 \\
 &= \pi
 \end{align*}$$

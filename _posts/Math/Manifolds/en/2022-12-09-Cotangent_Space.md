@@ -64,17 +64,17 @@ The $\mathbb{R}$-vector space $\mathfrak{m}_p/\mathfrak{m}_p^2$ is finite-dimens
 To show this, we use the following multivariate Taylor approximation:
 
 $$\begin{aligned}g(x)&=g(x_0)+\sum_{i=1}^m\frac{\partial g}{\partial r^i}\bigg\vert_{x_0}(r^i(x)-r^i(x_0))\\
-&\phantom{phantom}+\sum_{i,j}(r^i(x)-r^i(x_0))(r^j(x)-r^j(x_0))\int_0^1(1-t)\frac{\partial^2g}{\partial r^i\partial r^j}\bigg\vert_{(x_0+t(x-x_0))}\mathop{dt}\end{aligned}$$
+&\phantom{phantom}+\sum_{i,j}(r^i(x)-r^i(x_0))(r^j(x)-r^j(x_0))\int_0^1(1-t)\frac{\partial^2g}{\partial r^i\partial r^j}\bigg\vert_{(x_0+t(x-x_0))}\dd{t}\end{aligned}$$
 
 Let $(U,\varphi)$ be a coordinate system centered at $p$, and write $\varphi=(x^i)_{i=1}^m$. Let $\mathbf{f}\in\mathfrak{m}_p$ be given arbitrarily. 
 
 Since the above formula holds in Euclidean space, set $g=f\circ\varphi^{-1}$ and regard the domain of $g$ as $\varphi(U)$. From the Taylor approximation centered at the origin, for any $x\in\varphi(U)$ we obtain
 
-$$g(x)=g(0)+\sum_{i=1}^m\frac{\partial g}{\partial r^i}\bigg\vert_0r^i(x)+\sum_{i,j}r^i(x)r^j(x)\int_0^1(1-t)\frac{\partial^2g}{\partial r^i\partial r^j}\bigg\vert_{tx}\mathop{dt}$$
+$$g(x)=g(0)+\sum_{i=1}^m\frac{\partial g}{\partial r^i}\bigg\vert_0r^i(x)+\sum_{i,j}r^i(x)r^j(x)\int_0^1(1-t)\frac{\partial^2g}{\partial r^i\partial r^j}\bigg\vert_{tx}\dd{t}$$
 
 Now set $x=\varphi(q)$; then
 
-$$\begin{aligned}f(q)&=f(p)+\sum_{i=1}^m\frac{\partial (f\circ\varphi^{-1})}{\partial r^i}\bigg\vert_0r^i(\varphi(q))+\sum_{i,j}r^i(\varphi(q))r^j(\varphi(q))\int_0^1(1-t)\frac{\partial^2g}{\partial r^i\partial r^j}\bigg\vert_{t\varphi(q)}\mathop{dt}\\ &=f(p)+\sum_{i=1}^m\frac{\partial(f\circ\varphi^{-1})}{\partial r^i}\bigg\vert_0 x^i(q)+\sum_{i,j} x^i(q)x^j(q)\int_0^1(1-t)\frac{\partial^2 g}{\partial r^i\partial r^j}\bigg\vert_{t\varphi(q)}dt\end{aligned}$$
+$$\begin{aligned}f(q)&=f(p)+\sum_{i=1}^m\frac{\partial (f\circ\varphi^{-1})}{\partial r^i}\bigg\vert_0r^i(\varphi(q))+\sum_{i,j}r^i(\varphi(q))r^j(\varphi(q))\int_0^1(1-t)\frac{\partial^2g}{\partial r^i\partial r^j}\bigg\vert_{t\varphi(q)}\dd{t}\\ &=f(p)+\sum_{i=1}^m\frac{\partial(f\circ\varphi^{-1})}{\partial r^i}\bigg\vert_0 x^i(q)+\sum_{i,j} x^i(q)x^j(q)\int_0^1(1-t)\frac{\partial^2 g}{\partial r^i\partial r^j}\bigg\vert_{t\varphi(q)}\dd{t}\end{aligned}$$
 
 Examining the right-hand side, since $\mathbf{f}\in\mathfrak{m}_p$ we have $f(p)=0$, and the integral term is a $C^\infty$ function of $q$. The $x^i$ are functions satisfying $x^i(p)=0$, so passing to germs, the double sum on the right-hand side becomes an element of $\mathfrak{m}_p^2$. Collecting everything,
 

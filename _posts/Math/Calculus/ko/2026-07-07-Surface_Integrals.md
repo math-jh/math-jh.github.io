@@ -38,17 +38,17 @@ $$\mathbf{N} = \mathbf{r}_u \times \mathbf{r}_v$$
 ::: 정의 2
 Regular 매개곡면 $\mathbf{r}\colon D \rightarrow \mathbb{R}^3$의 *곡면넓이<sub>surface area</sub>*는
 
-$$\iint_D \lvert \mathbf{r}_u \times \mathbf{r}_v\rvert \mathop{du}\mathop{dv}$$
+$$\iint_D \lvert \mathbf{r}_u \times \mathbf{r}_v\rvert \dd{u}\dd{v}$$
 
-이고, area element를 $dS = \lvert \mathbf{r}_u \times \mathbf{r}_v\rvert \mathop{du}\mathop{dv}$로 적는다.
+이고, area element를 $\dd{S} = \lvert \mathbf{r}_u \times \mathbf{r}_v\rvert \dd{u}\dd{v}$로 적는다.
 :::
 
-Area element $dS$는 다중적분의 야코비 행렬식과 같은 역할을 하는 것으로, 이렇게 정의한 area element $dS$로 곡면 위에 분포한 스칼라량을 적분할 수 있다.
+Area element $\dd{S}$는 다중적분의 야코비 행렬식과 같은 역할을 하는 것으로, 이렇게 정의한 area element $\dd{S}$로 곡면 위에 분포한 스칼라량을 적분할 수 있다.
 
 ::: 정의 3
 곡면 $S$ 위에서 연속인 scalar field $f$의 *면적분<sub>surface integral</sub>*은
 
-$$\iint_S f\mathop{dS} = \iint_D f(\mathbf{r}(u,v))\lvert \mathbf{r}_u \times \mathbf{r}_v\rvert \mathop{du}\mathop{dv}$$
+$$\iint_S f\dd{S} = \iint_D f(\mathbf{r}(u,v))\lvert \mathbf{r}_u \times \mathbf{r}_v\rvert \dd{u}\dd{v}$$
 
 이다.
 :::
@@ -62,7 +62,7 @@ $$\iint_S f\mathop{dS} = \iint_D f(\mathbf{r}(u,v))\lvert \mathbf{r}_u \times \m
 ::: 정의 4
 단위법선 $\mathbf{n}$으로 방향이 주어진 곡면 $S$ 위의 연속 벡터장 $\mathbf{F}$의 *선속<sub>flux</sub>*은
 
-$$\iint_S \mathbf{F} \cdot d\mathbf{S} = \iint_S \mathbf{F} \cdot \mathbf{n}\mathop{dS} = \iint_D \mathbf{F}(\mathbf{r}(u,v)) \cdot (\mathbf{r}_u \times \mathbf{r}_v)\mathop{du}\mathop{dv}$$
+$$\iint_S \mathbf{F} \cdot d\mathbf{S} = \iint_S \mathbf{F} \cdot \mathbf{n}\dd{S} = \iint_D \mathbf{F}(\mathbf{r}(u,v)) \cdot (\mathbf{r}_u \times \mathbf{r}_v)\dd{u}\dd{v}$$
 
 이다. 여기서 $\mathbf{n} = (\mathbf{r}_u \times \mathbf{r}_v)/\lvert \mathbf{r}_u \times \mathbf{r}_v\rvert$가 곡면의 방향과 맞는다고 본다.
 :::
@@ -82,7 +82,7 @@ $$\lvert \mathbf{r}_\phi \times \mathbf{r}_\theta\rvert = R^2\sin\phi$$
 
 이며, 따라서 곡면의 넓이는
 
-$$\iint_S \mathop{dS} = \int_0^{2\pi} \int_0^\pi R^2\sin\phi \mathop{d\phi} \mathop{d\theta} = R^2 \cdot 2\pi \cdot 2 = 4\pi R^2$$
+$$\iint_S \dd{S} = \int_0^{2\pi} \int_0^\pi R^2\sin\phi \dd{\phi} \dd{\theta} = R^2 \cdot 2\pi \cdot 2 = 4\pi R^2$$
 
 으로 익숙한 값이 나온다.
 :::
@@ -104,7 +104,7 @@ $$\mathbf{F}\cdot(\mathbf{r}_\phi\times \mathbf{r}_\theta) = \mathbf{r} \cdot R\
 
 이다. 그러므로
 
-$$\iint_S \mathbf{F}\cdot d\mathbf{S} = \int_0^{2\pi} \int_0^\pi R^3\sin\phi \mathop{d\phi} \mathop{d\theta} = 4\pi R^3$$
+$$\iint_S \mathbf{F}\cdot d\mathbf{S} = \int_0^{2\pi} \int_0^\pi R^3\sin\phi \dd{\phi} \dd{\theta} = 4\pi R^3$$
 
 이다.
 :::

@@ -201,11 +201,11 @@ then near the origin, the tangent space of $T$ is $\mathfrak{t}$ and the tangent
 
 On the other hand, for arbitrary $X\in\mathfrak{t}$ and $Y\in\mathfrak{f}$, the differential of $q$ at $(eT,t)$ is computed as follows. For the direction $X$, that is, considering variation in the $T$ direction,
 
-$$d q_{(eT,t)}(X,0)=\frac{d}{d\epsilon}\bigg\vert_{\epsilon=0}q(eT, t\exp(\epsilon X))=\frac{d}{d\epsilon}\bigg\vert_{\epsilon=0}t\exp(\epsilon X)=X$$
+$$\dd{q_{(eT,t)}}(X,0)=\frac{d}{\dd{\epsilon}}\bigg\vert_{\epsilon=0}q(eT, t\exp(\epsilon X))=\frac{d}{\dd{\epsilon}}\bigg\vert_{\epsilon=0}t\exp(\epsilon X)=X$$
 
 Here we used that $T$ is abelian, so $t$ and $\exp(\epsilon X)$ commute. Next, for the direction $Y$, that is, considering variation in the $G/T$ direction,
 
-$$d q_{(eT,t)}(0,Y)=\frac{d}{d\epsilon}\bigg\vert_{\epsilon=0}q(\exp(\epsilon Y)T, t)=\frac{d}{d\epsilon}\bigg\vert_{\epsilon=0}\exp(\epsilon Y)t\exp(-\epsilon Y)$$
+$$\dd{q_{(eT,t)}}(0,Y)=\frac{d}{\dd{\epsilon}}\bigg\vert_{\epsilon=0}q(\exp(\epsilon Y)T, t)=\frac{d}{\dd{\epsilon}}\bigg\vert_{\epsilon=0}\exp(\epsilon Y)t\exp(-\epsilon Y)$$
 
 Now writing $t=\exp(H)$ ($H\in\mathfrak{t}$),
 
@@ -213,29 +213,29 @@ $$\exp(\epsilon Y)t\exp(-\epsilon Y)=\exp(\epsilon Y)\exp(H)\exp(-\epsilon Y)=\e
 
 and therefore
 
-$$\frac{d}{d\epsilon}\bigg\vert_{\epsilon=0}\exp(\epsilon Y)t\exp(-\epsilon Y)=\frac{d}{d\epsilon}\bigg\vert_{\epsilon=0}\exp(H+\epsilon[Y,H])=\exp(H)\cdot [Y,H]$$
+$$\frac{d}{\dd{\epsilon}}\bigg\vert_{\epsilon=0}\exp(\epsilon Y)t\exp(-\epsilon Y)=\frac{d}{\dd{\epsilon}}\bigg\vert_{\epsilon=0}\exp(H+\epsilon[Y,H])=\exp(H)\cdot [Y,H]$$
 
 Here since $\mathfrak{t}$ is abelian, $[Y,H]\in\mathfrak{f}$, and since $\exp(H)=t$, this can be written as $t\cdot(\Ad_t^{-1}(Y)-Y)$. Summarizing, under appropriate identification,
 
-$$d q_{(eT,t)}=\begin{pmatrix} I & 0 \\ 0 & \Ad_t^{-1}\vert_\mathfrak{f}-I \end{pmatrix}$$
+$$\dd{q_{(eT,t)}}=\begin{pmatrix} I & 0 \\ 0 & \Ad_t^{-1}\vert_\mathfrak{f}-I \end{pmatrix}$$
 
 Here the first block corresponds to the $\mathfrak{t}$ direction and the second block to the $\mathfrak{f}$ direction.
 
 Now we show that $\Ad_t^{-1}\vert_\mathfrak{f}-I$ is invertible, and that the signs match at all preimages. If there exists $Y\in\mathfrak{f}$ such that $(\Ad_t^{-1}-I)Y=0$, then $\Ad_t(Y)=Y$. Then for any integer $m$, we have $\Ad_{t^m}(Y)=Y$, and from the assumption that $t$ is a generator, we have $\Ad_s(Y)=Y$ for all $s\in T$. Now for arbitrary $H\in\mathfrak{t}$,
 
-$$[H,Y]=\frac{d}{d\epsilon}\bigg\vert_{\epsilon=0}\Ad_{\exp(\epsilon H)}(Y)=0$$
+$$[H,Y]=\frac{d}{\dd{\epsilon}}\bigg\vert_{\epsilon=0}\Ad_{\exp(\epsilon H)}(Y)=0$$
 
 so $Y$ commutes with all elements of $\mathfrak{t}$. But since $\mathfrak{t}$ is a maximal abelian subalgebra, $Y\in\mathfrak{t}$, and therefore $Y\in\mathfrak{f}\cap\mathfrak{t}=\{0\}$. That is, $\Ad_t^{-1}\vert_\mathfrak{f}-I$ is invertible.
 
-Finally, let us verify that the determinant of $dq$ has the same sign at all points of $q^{-1}(t)$. Choose arbitrary $w\in W$ and let it be represented by $x\in N$. Then since $q(xT,x^{-1}tx)=t$, we have $(xT, x^{-1}tx)\in q^{-1}(t)$. To compute the differential at this point, from the definition of $q$,
+Finally, let us verify that the determinant of $\dd{q}$ has the same sign at all points of $q^{-1}(t)$. Choose arbitrary $w\in W$ and let it be represented by $x\in N$. Then since $q(xT,x^{-1}tx)=t$, we have $(xT, x^{-1}tx)\in q^{-1}(t)$. To compute the differential at this point, from the definition of $q$,
 
 $$q(gT, s)=gsg^{-1}$$
 
 so, considering left translation by $x$ and conjugation by $x$,
 
-$$d q_{(xT, x^{-1}tx)}=\Ad_x\circ d q_{(eT, t)}\circ (\text{left translation})$$
+$$\dd{q_{(xT, x^{-1}tx)}}=\Ad_x\circ \dd{q_{(eT, t)}}\circ (\text{left translation})$$
 
-In particular, both $\Ad_x\vert_\mathfrak{f}$ and $\Ad_x\vert_\mathfrak{t}$ are linear maps with determinant $1$ (the former because it is an orthogonal map, the latter because $x\in N$ so $\Ad_x$ preserves $\mathfrak{t}$), and therefore the determinant of $d q_{(xT, x^{-1}tx)}$ equals the determinant of $d q_{(eT,t)}$.
+In particular, both $\Ad_x\vert_\mathfrak{f}$ and $\Ad_x\vert_\mathfrak{t}$ are linear maps with determinant $1$ (the former because it is an orthogonal map, the latter because $x\in N$ so $\Ad_x$ preserves $\mathfrak{t}$), and therefore the determinant of $\dd{q_{(xT, x^{-1}tx)}}$ equals the determinant of $\dd{q_{(eT,t)}}$.
 
 On the other hand, $\det(\Ad_t^{-1}\vert_\mathfrak{f}-I)$ is also the same for $w\cdot t$. Indeed,
 
@@ -243,7 +243,7 @@ $$\Ad_{wt^{-1}w^{-1}}\vert_\mathfrak{f}-I=\Ad_w\circ(\Ad_t^{-1}\vert_\mathfrak{f
 
 so these two operators are similar and thus have the same determinant.
 
-From the above, we have verified that $t$ is a regular value of $q$, the number of elements in $q^{-1}(t)$ is $\lvert W\rvert$, and the determinant of $dq$ has the same sign at all preimage points. Therefore, with an appropriate choice of orientation, $\deg q=\lvert W\rvert$.
+From the above, we have verified that $t$ is a regular value of $q$, the number of elements in $q^{-1}(t)$ is $\lvert W\rvert$, and the determinant of $\dd{q}$ has the same sign at all preimage points. Therefore, with an appropriate choice of orientation, $\deg q=\lvert W\rvert$.
 :::
 
 As mentioned above, the core content of this section follows immediately from this lemma.

@@ -130,8 +130,8 @@ $$\begin{aligned}
 기하급수 $1/(1-x) = \sum_{n=0}^\infty x^n$ ($\lvert x\rvert < 1$) 을 [정리 3](#thm3)으로 항별 미분하면
 
 $$\begin{aligned}
-\frac{d}{dx}\frac{1}{1-x} &= \frac{1}{(1-x)^2}, \\
-\frac{d}{dx}\sum_{n=0}^\infty x^n &= \sum_{n=1}^\infty n x^{n-1}
+\frac{d}{\dd{x}}\frac{1}{1-x} &= \frac{1}{(1-x)^2}, \\
+\frac{d}{\dd{x}}\sum_{n=0}^\infty x^n &= \sum_{n=1}^\infty n x^{n-1}
 \end{aligned}$$
 
 이므로 $1/(1-x)^2 = \sum_{n=1}^\infty n x^{n-1}$이고, 양변에 $x$를 곱하면

@@ -134,21 +134,21 @@ and showing that as the partition is refined this converges to a Riemann sum for
 ::: Definition 5
 The *arc length* of a $C^1$ curve $\mathbf{r}\colon [a, b] \rightarrow \mathbb{R}^n$ is
 
-$$L = \int_a^b \lVert \mathbf{r}'(t)\rVert \mathop{dt}$$
+$$L = \int_a^b \lVert \mathbf{r}'(t)\rVert \dd{t}$$
 :::
 
 The integrand $\lVert \mathbf{r}'(t)\rVert$ is continuous so it is integrable ([§Integration, ⁋Theorem 10](/en/math/calculus/integration#thm10)). We now call the arc length measured from the starting point
 
-$$s(t) = \int_a^t \lVert \mathbf{r}'(\tau)\rVert \mathop{d\tau}$$
+$$s(t) = \int_a^t \lVert \mathbf{r}'(\tau)\rVert \dd{\tau}$$
 
 the *arc length*, and by the fundamental theorem of calculus $s'(t) = \lVert \mathbf{r}'(t)\rVert > 0$, so $s$ is an increasing function and we can solve for $t$ in terms of $s$ to reparametrize the curve by arc length.
 
 ::: Proposition 6
-When a curve is parametrized by arc length $s$, it has unit speed. That is, $\lVert d\mathbf{r}/ds\rVert = 1$.
+When a curve is parametrized by arc length $s$, it has unit speed. That is, $\lVert d\mathbf{r}/\dd{s}\rVert = 1$.
 :::
 
 ::: Proof
-By the chain rule $d\mathbf{r}/\mathop{dt} = (d\mathbf{r}/ds)(ds/\mathop{dt})$ and $ds/\mathop{dt} = \lVert \mathbf{r}'(t)\rVert = \lVert d\mathbf{r}/\mathop{dt}\rVert$, so $\lVert d\mathbf{r}/ds\rVert = \lVert d\mathbf{r}/\mathop{dt}\rVert / (ds/\mathop{dt}) = 1$.
+By the chain rule $d\mathbf{r}/\dd{t} = (d\mathbf{r}/\dd{s})(\dd{s}/\dd{t})$ and $\dd{s}/\dd{t} = \lVert \mathbf{r}'(t)\rVert = \lVert d\mathbf{r}/\dd{t}\rVert$, so $\lVert d\mathbf{r}/\dd{s}\rVert = \lVert d\mathbf{r}/\dd{t}\rVert / (\dd{s}/\dd{t}) = 1$.
 :::
 
 The parametrization obtained in this way is called an *arc length parametrization*.
@@ -160,16 +160,16 @@ How much a curve bends is measured by how quickly the direction of the unit tang
 ::: Definition 7
 The *curvature* of a $C^2$-regular curve is the magnitude of the rate at which the unit tangent vector changes with respect to arc length
 
-$$\kappa = \left\lVert \frac{d\mathbf{T}}{ds}\right\rVert$$
+$$\kappa = \left\lVert \frac{d\mathbf{T}}{\dd{s}}\right\rVert$$
 
-When $d\mathbf{T}/ds \neq 0$, the unit vector in that direction
+When $d\mathbf{T}/\dd{s} \neq 0$, the unit vector in that direction
 
-$$\mathbf{N} = \frac{d\mathbf{T}/ds}{\lVert d\mathbf{T}/ds\rVert}$$
+$$\mathbf{N} = \frac{d\mathbf{T}/\dd{s}}{\lVert d\mathbf{T}/\dd{s}\rVert}$$
 
 is called the *unit normal vector*.
 :::
 
-Note that by [Proposition 6](#prop6), $\mathbf{T} = d\mathbf{r}/ds$ is a unit vector. Then by the observation made just after [Proposition 3](#prop3), that the rate of change of a vector of constant length is perpendicular to that vector, we have $d\mathbf{T}/ds \perp \mathbf{T}$. That is, the unit normal vector $\mathbf{N}$ is always perpendicular to the tangent, and points to the inside where the curve is bending.
+Note that by [Proposition 6](#prop6), $\mathbf{T} = d\mathbf{r}/\dd{s}$ is a unit vector. Then by the observation made just after [Proposition 3](#prop3), that the rate of change of a vector of constant length is perpendicular to that vector, we have $d\mathbf{T}/\dd{s} \perp \mathbf{T}$. That is, the unit normal vector $\mathbf{N}$ is always perpendicular to the tangent, and points to the inside where the curve is bending.
 
 The above definition is for curves in general $n$-dimensional space, but in three-dimensional space the cross product allows us to compute this more conveniently. In particular, the following formula can be applied directly without arc length parametrization, which is much more convenient.
 
@@ -184,11 +184,11 @@ $$\kappa = \frac{\lvert f''\rvert}{(1 + f'^2)^{3/2}}$$
 :::
 
 ::: Proof
-Let $v = \lVert \mathbf{r}'\rVert = ds/\mathop{dt}$, then $\mathbf{r}' = v\mathbf{T}$. By the product rule
+Let $v = \lVert \mathbf{r}'\rVert = \dd{s}/\dd{t}$, then $\mathbf{r}' = v\mathbf{T}$. By the product rule
 
 $$\mathbf{r}'' = v'\mathbf{T} + v\mathbf{T}'(t)$$
 
-and by the chain rule $\mathbf{T}'(t) = (d\mathbf{T}/ds)v$ and $\lVert d\mathbf{T}/ds\rVert = \kappa$ we have $\mathbf{T}'(t) = \kappa v\mathbf{N}$. Therefore
+and by the chain rule $\mathbf{T}'(t) = (d\mathbf{T}/\dd{s})v$ and $\lVert d\mathbf{T}/\dd{s}\rVert = \kappa$ we have $\mathbf{T}'(t) = \kappa v\mathbf{N}$. Therefore
 
 $$\mathbf{r}' \times \mathbf{r}'' = (v\mathbf{T}) \times (v'\mathbf{T} + \kappa v^2\mathbf{N}) = v^3 \kappa(\mathbf{T} \times \mathbf{N})$$
 
@@ -204,12 +204,12 @@ The expression $\mathbf{r}'' = v'\mathbf{T} + \kappa v^2\mathbf{N}$, obtained by
 ::: Proposition 9 (Decomposition of Acceleration)
 The acceleration of a $C^2$-regular curve decomposes as
 
-$$\mathbf{r}'' = \frac{dv}{\mathop{dt}}\mathbf{T} + \kappa v^2\mathbf{N}$$
+$$\mathbf{r}'' = \frac{\dd{v}}{\dd{t}}\mathbf{T} + \kappa v^2\mathbf{N}$$
 
 where $v = \lVert \mathbf{r}'\rVert$ is the speed.
 :::
 
-The tangential component $dv/\mathop{dt}$ tells us how much the speed is changing, and the normal component $\kappa v^2$ tells us how much the direction is bending. If the motion is uniform then $dv/\mathop{dt} = 0$, so the acceleration is purely in the normal direction, that is, purely centripetal acceleration, and its magnitude is $\kappa v^2$.
+The tangential component $\dd{v}/\dd{t}$ tells us how much the speed is changing, and the normal component $\kappa v^2$ tells us how much the direction is bending. If the motion is uniform then $\dd{v}/\dd{t} = 0$, so the acceleration is purely in the normal direction, that is, purely centripetal acceleration, and its magnitude is $\kappa v^2$.
 
 ::: Example 10 (Helix)
 For the helix $\mathbf{r}(t) = (\cos t, \sin t, t)$, we have $\mathbf{r}'(t) = (-\sin t, \cos t, 1)$ and $\mathbf{r}''(t) = (-\cos t, -\sin t, 0)$. The cross product is

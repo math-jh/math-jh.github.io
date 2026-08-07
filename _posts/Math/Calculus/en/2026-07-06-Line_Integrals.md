@@ -21,29 +21,29 @@ Now we examine the integral of vector functions. The first step is the line inte
 ::: Definition 1
 The *line integral* of a continuous scalar field $f$ over a $C^1$ curve $\mathbf{r}\colon [a, b] \rightarrow \mathbb{R}^n$ is
 
-$$\int_C f\mathop{ds} = \int_a^b f(\mathbf{r}(t))\lvert \mathbf{r}'(t)\rvert \mathop{dt}$$
+$$\int_C f\dd{s} = \int_a^b f(\mathbf{r}(t))\lvert \mathbf{r}'(t)\rvert \dd{t}$$
 
-Here, $ds = \lvert \mathbf{r}'(t)\rvert \mathop{dt}$ is the arc-length element.
+Here, $\dd{s} = \lvert \mathbf{r}'(t)\rvert \dd{t}$ is the arc-length element.
 :::
 
-By definition, the integral above is evaluated using an arc-length parametrization, so it does not depend on the parametrization of the curve. As a special case, if $f \equiv 1$, then $\int_C \mathop{ds}$ gives the length of the curve.
+By definition, the integral above is evaluated using an arc-length parametrization, so it does not depend on the parametrization of the curve. As a special case, if $f \equiv 1$, then $\int_C \dd{s}$ gives the length of the curve.
 
 To lift this to the integral of a vector function, we must take the direction of the curve into account and define it as follows.
 
 ::: Definition 2
 The *line integral* of a continuous vector field $\mathbf{F}$ over a $C^1$ curve $\mathbf{r}\colon [a, b] \rightarrow \mathbb{R}^n$ is
 
-$$\int_C \mathbf{F} \cdot d\mathbf{r} = \int_a^b \mathbf{F}(\mathbf{r}(t)) \cdot \mathbf{r}'(t)\mathop{dt}$$
+$$\int_C \mathbf{F} \cdot d\mathbf{r} = \int_a^b \mathbf{F}(\mathbf{r}(t)) \cdot \mathbf{r}'(t)\dd{t}$$
 
 :::
 
 Writing this using the unit tangent vector $\mathbf{T} = \mathbf{r}'/\lvert \mathbf{r}'\rvert$, we can verify that
 
-$$\int_C \mathbf{F}\cdot d\mathbf{r} = \int_C (\mathbf{F}\cdot \mathbf{T})\mathop{ds}$$
+$$\int_C \mathbf{F}\cdot d\mathbf{r} = \int_C (\mathbf{F}\cdot \mathbf{T})\dd{s}$$
 
 In particular, in the plane, if $\mathbf{F} = (P, Q)$ and $\mathbf{r}(t) = (x(t), y(t))$, the notation
 
-$$\int_C \mathbf{F}\cdot d\mathbf{r} = \int_C P\mathop{dx} + Q\mathop{dy}$$
+$$\int_C \mathbf{F}\cdot d\mathbf{r} = \int_C P\dd{x} + Q\dd{y}$$
 
 is also commonly used. The symbol $\oint$ is sometimes used to denote the integral along a closed curve, but this is merely a matter of notation and no essentially new content is added.
 
@@ -60,9 +60,9 @@ In particular, the line integral of a conservative field depends only on the two
 :::
 
 ::: Proof
-By [§Multivariable Functions and Partial Derivatives, ⁋Theorem 6](/en/math/calculus/partial_derivatives#thm6), we have $\frac{d}{dt} f(\mathbf{r}(t)) = \nabla f(\mathbf{r}(t)) \cdot \mathbf{r}'(t)$. Therefore, applying [§The Fundamental Theorem of Calculus, ⁋Theorem 4](/en/math/calculus/fundamental_theorem_of_calculus#thm4),
+By [§Multivariable Functions and Partial Derivatives, ⁋Theorem 6](/en/math/calculus/partial_derivatives#thm6), we have $\frac{d}{\dd{t}} f(\mathbf{r}(t)) = \nabla f(\mathbf{r}(t)) \cdot \mathbf{r}'(t)$. Therefore, applying [§The Fundamental Theorem of Calculus, ⁋Theorem 4](/en/math/calculus/fundamental_theorem_of_calculus#thm4),
 
-$$\int_C \nabla f \cdot d\mathbf{r} = \int_a^b \nabla f(\mathbf{r}(t)) \cdot \mathbf{r}'(t)\mathop{dt} = \int_a^b \frac{d}{dt} f(\mathbf{r}(t))\mathop{dt} = f(\mathbf{r}(b)) - f(\mathbf{r}(a))$$
+$$\int_C \nabla f \cdot d\mathbf{r} = \int_a^b \nabla f(\mathbf{r}(t)) \cdot \mathbf{r}'(t)\dd{t} = \int_a^b \frac{d}{\dd{t}} f(\mathbf{r}(t))\dd{t} = f(\mathbf{r}(b)) - f(\mathbf{r}(a))$$
 
 :::
 
@@ -99,7 +99,7 @@ $$\mathbf{F}\cdot \mathbf{r}' = t^2 + 2t^2 = 3t^2$$
 
 and thus integrating this gives
 
-$$\int_C \mathbf{F}\cdot d\mathbf{r} = \int_0^1 3t^2\mathop{dt} = 1$$
+$$\int_C \mathbf{F}\cdot d\mathbf{r} = \int_0^1 3t^2\dd{t} = 1$$
 
 Indeed, since $\mathbf{F} = \nabla(xy)$, by [Theorem 3](#thm3) we can recover the above calculation by computing the difference of the endpoint values of $xy$, namely $1\cdot 1 - 0\cdot 0 = 1$. This depends only on the endpoints; for instance, if we take $\mathbf{r}(t)=(t,t)$ ($0 \leq t \leq 1$),
 
@@ -107,7 +107,7 @@ $$\mathbf{F}(\mathbf{r}(t))=(t,t),\qquad \mathbf{r}'(t)=(1,1)$$
 
 so $\mathbf{F}\cdot \mathbf{r}'=2t$, and we can verify that
 
-$$\int_C \mathbf{F}\cdot d\mathbf{r} = \int_0^1 2t\mathop{dt} = 1$$
+$$\int_C \mathbf{F}\cdot d\mathbf{r} = \int_0^1 2t\dd{t} = 1$$
 
 :::
 
@@ -124,7 +124,7 @@ $$\frac{\partial Q}{\partial x} = \frac{\partial P}{\partial y} = \frac{y^2 - x^
 
 so this vector field is irrotational. However, traversing the unit circle $\mathbf{r}(t) = (\cos t, \sin t)$ once, we have $\mathbf{F}(\mathbf{r}(t)) = (-\sin t, \cos t) = \mathbf{r}'(t)$, so
 
-$$\oint_C \mathbf{F}\cdot d\mathbf{r} = \int_0^{2\pi} (\sin^2 t + \cos^2 t)\mathop{dt} = 2\pi \neq 0$$
+$$\oint_C \mathbf{F}\cdot d\mathbf{r} = \int_0^{2\pi} (\sin^2 t + \cos^2 t)\dd{t} = 2\pi \neq 0$$
 
 By [Theorem 4](#thm4), $\mathbf{F}$ is not a conservative field on this region. The cause is that, although locally this vector field can be represented as the gradient of the polar angle $\theta = \arctan(y/x)$, the polar angle increases by $2\pi$ when going around the origin and therefore cannot be defined as a single-valued function. 
 :::

@@ -136,7 +136,7 @@ Given two chain complexes $C,D$ and chain maps $f,g:C\rightarrow D$, a *chain ho
 such that $f_n-g_n=d_{n+1}^Dh_n+h_{n-1}d_n^C$ holds. If a chain homotopy between $f,g$ exists, we say that $f$ and $g$ are *homotopic* chain maps.
 :::
 
-If for a chain map $f$, there exists $h$ satisfying $f=dh+hd$, then $h$ can be viewed as a chain homotopy between $f$ and $0$. Therefore, when such an $h$ exists, we call $f$ *null-homotopic*.
+If for a chain map $f$, there exists $h$ satisfying $f=\dd{h}+hd$, then $h$ can be viewed as a chain homotopy between $f$ and $0$. Therefore, when such an $h$ exists, we call $f$ *null-homotopic*.
 
 ::: Proposition 6
 Two homotopic chain maps $f,g:C\rightarrow D$ induce the same function on homologies.

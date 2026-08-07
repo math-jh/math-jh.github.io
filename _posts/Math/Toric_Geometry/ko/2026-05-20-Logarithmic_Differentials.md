@@ -23,9 +23,9 @@ published: false
 
 먼저 toric variety $X_\Sigma$가 open dense subset으로 포함하는 algebraic torus $T_N = N \otimes_\mathbb{Z} \mathbb{C}^\ast$ 위에서 자연스럽게 등장하는 differential form들을 살펴본다. ([§아핀 토릭 다양체, ⁋명제 11](/ko/math/toric_geometry/affine_toric_varieties#prop11)) $T_N \cong (\mathbb{C}^\ast)^n$이므로 ($n = \rank N$), $N$의 임의의 $\mathbb{Z}$-기저 $e_1, \ldots, e_n$을 잡으면 coordinate $\x_i \in \mathbb{C}^\ast$들이 $T_N$의 좌표가 된다.
 
-$T_N$ 위에서는 $\x_i \neq 0$이므로 $d\x_i/\x_i$가 well-defined holomorphic 1-form이다. 이는 affine 좌표 $d\x_i$와 달리 torus action에 대해 invariant라는 결정적인 성질을 가진다. 구체적으로 $t \in T_N$의 action $\x_i \mapsto t_i \x_i$ 하에서
+$T_N$ 위에서는 $\x_i \neq 0$이므로 $\dd{\x_i}/\x_i$가 well-defined holomorphic 1-form이다. 이는 affine 좌표 $\dd{\x_i}$와 달리 torus action에 대해 invariant라는 결정적인 성질을 가진다. 구체적으로 $t \in T_N$의 action $\x_i \mapsto t_i \x_i$ 하에서
 
-$$t^\ast \!\left(\frac{d\x_i}{\x_i}\right) = \frac{d(t_i \x_i)}{t_i \x_i} = \frac{t_i \, d\x_i}{t_i \x_i} = \frac{d\x_i}{\x_i}$$
+$$t^\ast \!\left(\frac{\dd{\x_i}}{\x_i}\right) = \frac{\dd{(t_i \x_i)}}{t_i \x_i} = \frac{t_i \dd{\x_i}}{t_i \x_i} = \frac{\dd{\x_i}}{\x_i}$$
 
 이므로, 형식적으로 $d\log \x_i$로 적을 수 있는 이 1-form은 *multiplicative* 좌표계 $T_N$에 가장 자연스럽게 적응한 differential form이다.
 
@@ -65,7 +65,7 @@ $N$의 기저 $e_1, \ldots, e_n$과 dual 기저 $e_1^\ast, \ldots, e_n^\ast \in 
 
 역으로 임의의 1-form $\omega \in \Omega^1(T_N)$은 좌표 $\x_1, \ldots, \x_n$에 대해
 
-$$\omega = \sum_{i=1}^n f_i(\x) \, d\x_i = \sum_{i=1}^n (\x_i f_i(\x)) \, d\log \x_i$$
+$$\omega = \sum_{i=1}^n f_i(\x) \dd{\x_i} = \sum_{i=1}^n (\x_i f_i(\x)) \, d\log \x_i$$
 
 의 꼴로 유일하게 표현된다. $T_N$-invariance를 strong한 조건으로 풀어쓰면 모든 $t \in T_N$에 대해 $t^\ast \omega = \omega$이어야 하고, $t^\ast(d\log \x_i) = d\log \x_i$이므로 각 계수 $\x_i f_i(\x)$가 $T_N$-invariant function이어야 한다. 그런데 $T_N$ 위의 invariant regular function은 상수뿐이므로 ([§아핀 토릭 다양체, ⁋명제 10](/ko/math/toric_geometry/affine_toric_varieties#prop10)) $\x_i f_i(\x) = c_i \in \mathbb{C}$이고, 따라서
 
@@ -81,17 +81,17 @@ $$\omega_{T_N} := d\log(\rchi^{m_1}) \wedge \cdots \wedge d\log(\rchi^{m_n}) \in
 으로 주어지며, $M$의 기저를 바꾸면 $\omega_{T_N}$이 $\GL_n(\mathbb{Z})$의 determinant인 $\pm 1$배만큼만 변하므로 부호 차이를 제외하면 canonical하다.
 
 ::: 예시 3
-$T_N = \mathbb{C}^\ast$ ($n=1$)의 경우, $M = \mathbb{Z}$이며 $M$의 generator $1 \in M$에 대해 $\rchi^1 = \x$이다. 따라서 $\omega_{T_N} = d\x/\x$이며, $\mathbb{C}^\ast$의 de Rham cohomology가 $H^\bullet(\mathbb{C}^\ast) = \mathbb{C} \oplus \mathbb{C}[d\x/\x]$로 이 한 형식에 의해 생성된다는 사실 또한 이로부터 자연스럽다.
+$T_N = \mathbb{C}^\ast$ ($n=1$)의 경우, $M = \mathbb{Z}$이며 $M$의 generator $1 \in M$에 대해 $\rchi^1 = \x$이다. 따라서 $\omega_{T_N} = \dd{\x}/\x$이며, $\mathbb{C}^\ast$의 de Rham cohomology가 $H^\bullet(\mathbb{C}^\ast) = \mathbb{C} \oplus \mathbb{C}[\dd{\x}/\x]$로 이 한 형식에 의해 생성된다는 사실 또한 이로부터 자연스럽다.
 :::
 
 ::: 예시 4
 $T_N = (\mathbb{C}^\ast)^2$의 경우 standard 기저 $\{e_1^\ast, e_2^\ast\} \subseteq M$에 대해 $\rchi^{e_1^\ast} = \x$, $\rchi^{e_2^\ast} = \y$이며
 
-$$\omega_{T_N} = \frac{d\x}{\x} \wedge \frac{d\y}{\y}$$
+$$\omega_{T_N} = \frac{\dd{\x}}{\x} \wedge \frac{\dd{\y}}{\y}$$
 
 이다. 만일 대신 기저를 $\{e_1^\ast + e_2^\ast,\ e_2^\ast\}$로 바꾸면 $\rchi^{e_1^\ast + e_2^\ast} = \x\y$이고
 
-$$\frac{d(\x\y)}{\x\y} \wedge \frac{d\y}{\y} = \left(\frac{d\x}{\x} + \frac{d\y}{\y}\right) \wedge \frac{d\y}{\y} = \frac{d\x}{\x} \wedge \frac{d\y}{\y}$$
+$$\frac{\dd{(\x\y)}}{\x\y} \wedge \frac{\dd{\y}}{\y} = \left(\frac{\dd{\x}}{\x} + \frac{\dd{\y}}{\y}\right) \wedge \frac{\dd{\y}}{\y} = \frac{\dd{\x}}{\x} \wedge \frac{\dd{\y}}{\y}$$
 
 가 되어 정확히 동일한 top form이 얻어지는 것을 확인할 수 있다. 이러한 기저 무관성이 곧 $\omega_{T_N}$의 canonical성이다.
 :::
@@ -109,11 +109,11 @@ Smooth variety $X$ 위의 reduced effective divisor $D \subseteq X$가 *simple n
 ::: 정의 6
 Smooth variety $X$와 [정의 5](#def5)의 SNC divisor $D \subseteq X$의 쌍 $(X, D)$에 대해, *logarithmic cotangent sheaf<sub>로그 코탄젠트 층</sub>* $\Omega^1_X(\log D)$는 $D$ 바깥에서 holomorphic이며 $D$를 따라서는 1차 이하의 극만 갖는 rational 1-form들로 이루어진 $\mathcal{O}_X$-module subsheaf이다. 추상적으로 affine open $U \subseteq X$에 대해
 
-$$\Omega^1_X(\log D)(U) = \{\omega \in \Omega^1_{\mathbb{C}(X)/\mathbb{C}}(U) \mid \omega \text{와 } d\omega \text{가 } U \text{ 위에서 } D\text{를 따라 1차 이하의 극을 가짐}\}$$
+$$\Omega^1_X(\log D)(U) = \{\omega \in \Omega^1_{\mathbb{C}(X)/\mathbb{C}}(U) \mid \omega \text{와 } \dd{\omega} \text{가 } U \text{ 위에서 } D\text{를 따라 1차 이하의 극을 가짐}\}$$
 
 으로 주어진다. 국소적으로 $D = \{z_1 \cdots z_k = 0\}$이면 $\Omega^1_X(\log D)$는
 
-$$\frac{dz_1}{z_1}, \ldots, \frac{dz_k}{z_k}, dz_{k+1}, \ldots, dz_n$$
+$$\frac{\dd{z_1}}{z_1}, \ldots, \frac{\dd{z_k}}{z_k}, \dd{z_{k+1}}, \ldots, \dd{z_n}$$
 
 으로 자유롭게 생성되는 free $\mathcal{O}_X$-module이다. 더 높은 degree의 logarithmic form sheaf는 외적으로 $\Omega^p_X(\log D) := \bigwedge^p \Omega^1_X(\log D)$로 정의한다.
 :::
@@ -140,15 +140,15 @@ $$\Omega^1_{X_\Sigma}(\log D) \cong M \otimes_\mathbb{Z} \mathcal{O}_{X_\Sigma}$
 ::: 증명
 먼저 각 $m \in M$에 대해 $d\log(\rchi^m)$이 $X_\Sigma$ 위의 global section of $\Omega^1_{X_\Sigma}(\log D)$임을 보인다. 이는 local에서 확인하면 충분하다. Smooth cone $\sigma \in \Sigma$에 대해 [§아핀 토릭 다양체, ⁋명제 9](/ko/math/toric_geometry/affine_toric_varieties#prop9)에 의해 $U_\sigma \cong \mathbb{C}^k \times (\mathbb{C}^\ast)^{n-k}$이고, $\sigma$의 ray들의 primitive generator $v_1, \ldots, v_k$를 $N$의 기저의 일부로 잡아 dual 기저 $\{v_1^\ast, \ldots, v_n^\ast\} \subseteq M$을 만들면 $U_\sigma$의 좌표가 $\x_i = \rchi^{v_i^\ast}$ ($i=1, \ldots, n$)로 주어지며 여기서 $\x_1, \ldots, \x_k$는 $\mathbb{C}$-값 좌표, $\x_{k+1}, \ldots, \x_n$는 $\mathbb{C}^\ast$-값 좌표이다. Boundary $D \cap U_\sigma$는 $\{\x_1 \x_2 \cdots \x_k = 0\}$이며 simple normal crossing이다. 임의의 $m = \sum_i a_i v_i^\ast \in M$에 대해
 
-$$d\log(\rchi^m) = d\log\!\left(\prod_i \x_i^{a_i}\right) = \sum_{i=1}^n a_i \, \frac{d\x_i}{\x_i}$$
+$$d\log(\rchi^m) = d\log\!\left(\prod_i \x_i^{a_i}\right) = \sum_{i=1}^n a_i \, \frac{\dd{\x_i}}{\x_i}$$
 
-이며 $d\x_i/\x_i$는 $\x_i = 0$을 따라 정확히 1차 pole을 갖는 logarithmic form이다 ($i \le k$인 경우). $i > k$인 경우에는 $\x_i \in \mathcal{O}_{U_\sigma}^\ast$이므로 $d\x_i/\x_i$는 $U_\sigma$ 위에서 regular하다. 따라서 $d\log(\rchi^m) \in \Omega^1(\log D)(U_\sigma)$.
+이며 $\dd{\x_i}/\x_i$는 $\x_i = 0$을 따라 정확히 1차 pole을 갖는 logarithmic form이다 ($i \le k$인 경우). $i > k$인 경우에는 $\x_i \in \mathcal{O}_{U_\sigma}^\ast$이므로 $\dd{\x_i}/\x_i$는 $U_\sigma$ 위에서 regular하다. 따라서 $d\log(\rchi^m) \in \Omega^1(\log D)(U_\sigma)$.
 
 이로부터 자연스러운 $\mathcal{O}_{X_\Sigma}$-module map
 
 $$\Phi: M \otimes_\mathbb{Z} \mathcal{O}_{X_\Sigma} \longrightarrow \Omega^1_{X_\Sigma}(\log D); \qquad m \otimes 1 \longmapsto d\log(\rchi^m)$$
 
-이 얻어진다. 이것이 isomorphism인 것은 각 $U_\sigma$ 위에서 확인하면 되는데, 위의 좌표에서 $U_\sigma$ 위의 $\Omega^1(\log D)$의 $\mathcal{O}_{U_\sigma}$-module 기저는 정확히 $\{d\x_i/\x_i\}_{i=1}^k \cup \{d\x_j\}_{j=k+1}^n$이며 ($\x_j$가 invertible이므로 $d\x_j$와 $d\x_j/\x_j$는 $\mathcal{O}_{U_\sigma}^\ast$ 배만큼 차이가 나며 같은 free module을 span한다), 이는 $\{d\log \rchi^{v_i^\ast}\}_{i=1}^n$과 동일하다. 따라서 $\Phi$는 각 affine chart 위에서 free $\mathcal{O}_{U_\sigma}$-module 사이의 동형이고, 이로부터 global isomorphism이 따라온다.
+이 얻어진다. 이것이 isomorphism인 것은 각 $U_\sigma$ 위에서 확인하면 되는데, 위의 좌표에서 $U_\sigma$ 위의 $\Omega^1(\log D)$의 $\mathcal{O}_{U_\sigma}$-module 기저는 정확히 $\{\dd{\x_i}/\x_i\}_{i=1}^k \cup \{\dd{\x_j}\}_{j=k+1}^n$이며 ($\x_j$가 invertible이므로 $\dd{\x_j}$와 $\dd{\x_j}/\x_j$는 $\mathcal{O}_{U_\sigma}^\ast$ 배만큼 차이가 나며 같은 free module을 span한다), 이는 $\{d\log \rchi^{v_i^\ast}\}_{i=1}^n$과 동일하다. 따라서 $\Phi$는 각 affine chart 위에서 free $\mathcal{O}_{U_\sigma}$-module 사이의 동형이고, 이로부터 global isomorphism이 따라온다.
 :::
 
 이 명제는 두 가지 측면에서 매우 강한 결과이다. 첫째, [정의 6](#def6)의 logarithmic cotangent sheaf $\Omega^1_X(\log D)$는 일반적인 SNC pair $(X, D)$에 대해서는 결코 trivial bundle이 되지 않는다. Toric variety의 경우에만 boundary $D$가 character lattice $M$ 전체의 정보를 정확히 흡수해주어 $\Omega^1(\log D)$가 rank $n$의 trivial bundle이 되는 것이며, 이는 fan의 ray 구조가 $M$의 전 정보를 결정한다는 toric duality의 또 다른 표현이라 할 수 있다.
@@ -162,29 +162,29 @@ $$0 \rightarrow \Omega^1_{\mathbb{P}^n} \rightarrow \mathcal{O}_{\mathbb{P}^n}(-
 ::: 예시 9
 $X_\Sigma = \mathbb{P}^1$의 경우, fan은 $N = \mathbb{Z}$에서 두 ray $\rho_+ = \mathbb{R}_{\ge 0} \cdot 1$과 $\rho_- = \mathbb{R}_{\ge 0} \cdot (-1)$로 이루어지며 boundary는 $D = D_{\rho_+} + D_{\rho_-} = \{0\} + \{\infty\}$이다. $M = \mathbb{Z}$의 generator $1 \in M$에 대해 $\rchi^1 = \x$가 $\mathbb{P}^1$의 standard inhomogeneous 좌표이며
 
-$$d\log \x = \frac{d\x}{\x}$$
+$$d\log \x = \frac{\dd{\x}}{\x}$$
 
-는 $\x = 0$과 $\x = \infty$ 양쪽에서 1차 pole만을 가지는 logarithmic form이다 ($\x = \infty$ 근방에서는 $\y = 1/\x$로 좌표를 잡으면 $d\x/\x = -d\y/\y$이므로 logarithmic pole임이 확인된다). [명제 8](#prop8)이 주장하는 바는 $\Omega^1_{\mathbb{P}^1}(\log D) \cong \mathcal{O}_{\mathbb{P}^1}$이 $d\x/\x$를 generator로 갖는 trivial bundle이라는 것이며, 이는 $\Omega^1_{\mathbb{P}^1} \cong \mathcal{O}_{\mathbb{P}^1}(-2)$가 *not* trivial인 것과 비교된다.
+는 $\x = 0$과 $\x = \infty$ 양쪽에서 1차 pole만을 가지는 logarithmic form이다 ($\x = \infty$ 근방에서는 $\y = 1/\x$로 좌표를 잡으면 $\dd{\x}/\x = -\dd{\y}/\y$이므로 logarithmic pole임이 확인된다). [명제 8](#prop8)이 주장하는 바는 $\Omega^1_{\mathbb{P}^1}(\log D) \cong \mathcal{O}_{\mathbb{P}^1}$이 $\dd{\x}/\x$를 generator로 갖는 trivial bundle이라는 것이며, 이는 $\Omega^1_{\mathbb{P}^1} \cong \mathcal{O}_{\mathbb{P}^1}(-2)$가 *not* trivial인 것과 비교된다.
 :::
 
 ::: 예시 10
 $X_\Sigma = \mathbb{P}^n$의 경우 fan은 $N = \mathbb{Z}^n$의 standard 기저 $e_1, \ldots, e_n$과 $e_0 = -e_1 - \cdots - e_n$의 $n+1$개 ray로 이루어진다. 각 $e_i$에 대응하는 divisor를 $D_i$라 하면 boundary는 $D = D_0 + D_1 + \cdots + D_n$이고 $[D_0] = [D_1] = \cdots = [D_n] = H$이므로 $D \sim (n+1) H$이다. $M$의 standard 기저 $e_1^\ast, \ldots, e_n^\ast$에 대해 $\rchi^{e_i^\ast} = \x_i$ ($1 \le i \le n$)가 affine 좌표가 되어
 
-$$\Omega^1_{\mathbb{P}^n}(\log D) \cong \mathcal{O}_{\mathbb{P}^n}^{\oplus n};\qquad \text{기저: } \frac{d\x_1}{\x_1}, \ldots, \frac{d\x_n}{\x_n}$$
+$$\Omega^1_{\mathbb{P}^n}(\log D) \cong \mathcal{O}_{\mathbb{P}^n}^{\oplus n};\qquad \text{기저: } \frac{\dd{\x_1}}{\x_1}, \ldots, \frac{\dd{\x_n}}{\x_n}$$
 
-이 된다. 한편 $e_0$에 대응하는 ray의 $d\log$인 $d\log(\rchi^{-e_1^\ast - \cdots - e_n^\ast}) = -\sum_i d\x_i / \x_i$가 위의 $n$개 기저의 음의 합으로 자동적으로 표현되는 것은 fan의 ray가 $M$의 rank를 초과해도 $M$ 자체가 결국 모든 logarithmic form들을 매개하는 것의 한 section이다.
+이 된다. 한편 $e_0$에 대응하는 ray의 $d\log$인 $d\log(\rchi^{-e_1^\ast - \cdots - e_n^\ast}) = -\sum_i \dd{\x_i} / \x_i$가 위의 $n$개 기저의 음의 합으로 자동적으로 표현되는 것은 fan의 ray가 $M$의 rank를 초과해도 $M$ 자체가 결국 모든 logarithmic form들을 매개하는 것의 한 section이다.
 :::
 
 ::: 예시 11
 $X_\Sigma = \mathbb{P}^1 \times \mathbb{P}^1$의 경우 $N = \mathbb{Z}^2$이고 fan은 네 개의 ray $\pm e_1, \pm e_2$와 네 개의 maximal cone으로 이루어진다. Boundary는 네 boundary divisor의 합이며, $M = \mathbb{Z}^2$의 standard 기저에 대해
 
-$$\Omega^1_{\mathbb{P}^1 \times \mathbb{P}^1}(\log D) \cong \mathcal{O}^{\oplus 2};\qquad \text{기저: } \frac{d\x}{\x}, \frac{d\y}{\y}$$
+$$\Omega^1_{\mathbb{P}^1 \times \mathbb{P}^1}(\log D) \cong \mathcal{O}^{\oplus 2};\qquad \text{기저: } \frac{\dd{\x}}{\x}, \frac{\dd{\y}}{\y}$$
 
 이 된다. Künneth 분해
 
 $$\Omega^1_{\mathbb{P}^1 \times \mathbb{P}^1}(\log D) = \pr_1^\ast \Omega^1_{\mathbb{P}^1}(\log D_{\mathbb{P}^1}) \oplus \pr_2^\ast \Omega^1_{\mathbb{P}^1}(\log D_{\mathbb{P}^1})$$
 
-와 [예시 9](#ex9)과 비교하면 두 인자가 정확히 $d\x/\x$, $d\y/\y$를 기여함을 알 수 있다.
+와 [예시 9](#ex9)과 비교하면 두 인자가 정확히 $\dd{\x}/\x$, $\dd{\y}/\y$를 기여함을 알 수 있다.
 :::
 
 ::: 참고 12
@@ -211,11 +211,11 @@ $$\Omega^n_{X_\Sigma}(\log D) \cong \mathcal{O}_{X_\Sigma};\qquad K_{X_\Sigma} =
 
 이제 $K_{X_\Sigma}$를 계산하기 위해, $\omega_\Sigma$를 $\Omega^n_{X_\Sigma}$의 rational section으로 봐서 $\divisor(\omega_\Sigma)$를 계산한다. Smooth ray $\rho \in \Sigma(1)$에 대해 $\rho$를 face로 갖는 maximal cone $\sigma$를 잡고 (smooth가정에 의해 $\sigma$의 ray들이 $N$의 기저 $v_1, \ldots, v_n$의 일부를 이루며 $v_\rho = v_1$이라 할 수 있다), 그 dual 기저 $\{v_1^\ast, \ldots, v_n^\ast\} \subseteq M$를 $M$의 기저 $m_i$로 잡자. 그럼 $U_\sigma$ 위에서 $\rchi^{v_i^\ast} = \x_i$이고 $D_\rho \cap U_\sigma = \{\x_1 = 0\}$이며
 
-$$\omega_\Sigma\vert_{U_\sigma} = \frac{d\x_1}{\x_1} \wedge \frac{d\x_2}{\x_2} \wedge \cdots \wedge \frac{d\x_n}{\x_n}$$
+$$\omega_\Sigma\vert_{U_\sigma} = \frac{\dd{\x_1}}{\x_1} \wedge \frac{\dd{\x_2}}{\x_2} \wedge \cdots \wedge \frac{\dd{\x_n}}{\x_n}$$
 
-이다. $\Omega^n_{X_\Sigma}$의 local trivialization $d\x_1 \wedge \cdots \wedge d\x_n$과 비교하면
+이다. $\Omega^n_{X_\Sigma}$의 local trivialization $\dd{\x_1} \wedge \cdots \wedge \dd{\x_n}$과 비교하면
 
-$$\omega_\Sigma\vert_{U_\sigma} = \frac{1}{\x_1 \x_2 \cdots \x_n} \cdot d\x_1 \wedge \cdots \wedge d\x_n$$
+$$\omega_\Sigma\vert_{U_\sigma} = \frac{1}{\x_1 \x_2 \cdots \x_n} \cdot \dd{\x_1} \wedge \cdots \wedge \dd{\x_n}$$
 
 이므로 $\omega_\Sigma$는 $U_\sigma$ 위에서 정확히 $D_\rho$ (즉 $\{\x_1 = 0\}$)를 따라 1차 pole을 갖는다. $\sigma$가 face로 갖지 않는 다른 ray $\rho'$에 대해서는 $U_\sigma$가 $D_{\rho'}$와 만나지 않으므로 $U_\sigma$ 위의 $\omega_\Sigma$의 vanishing order는 0이다. 모든 ray $\rho \in \Sigma(1)$에 걸쳐 종합하면
 

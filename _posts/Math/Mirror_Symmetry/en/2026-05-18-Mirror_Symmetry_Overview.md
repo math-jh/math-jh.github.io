@@ -80,7 +80,7 @@ The purpose of this post is to examine this phenomenon through light calculation
 
 $$\Jac(W) = \frac{\mathcal{O}(\check{X})}{(\partial_1 W, \ldots, \partial_m W)}.$$
 
-Here $\x_1, \ldots, \x_n$ are local coordinates on $\check{X}$, and the $\partial_i$ are the partial derivatives with respect to them. Geometrically, $\Jac(W)$ is the coordinate ring of the *critical scheme* $\Crit(W) = \{dW = 0\} \subseteq \check{X}$ of $W$. Then the mirror symmetry statement is that the Jacobi ring of the Hori-Vafa mirror in [Definition 4](#def4) recovers the data of the original A-side model. 
+Here $\x_1, \ldots, \x_n$ are local coordinates on $\check{X}$, and the $\partial_i$ are the partial derivatives with respect to them. Geometrically, $\Jac(W)$ is the coordinate ring of the *critical scheme* $\Crit(W) = \{\dd{W} = 0\} \subseteq \check{X}$ of $W$. Then the mirror symmetry statement is that the Jacobi ring of the Hori-Vafa mirror in [Definition 4](#def4) recovers the data of the original A-side model. 
 
 ::: Definition 4
 For a smooth projective toric Fano variety $X_\Sigma$ and additional data $q=(q_1,\ldots, q_r)\in \mathbb{C}^r$, the *Hori-Vafa mirror* defined by this is the following Landau-Ginzburg model.

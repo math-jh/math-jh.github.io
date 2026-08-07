@@ -58,8 +58,8 @@ $$\eta(\alpha \smile \beta, \gamma) = \eta(\alpha, \beta \smile \gamma)$$
 ::: 정의 3
 Holomorphic function $f : \mathbb{C}^n \rightarrow \mathbb{C}$가 원점에서 *isolated hypersurface singularity<sub>고립 초곡면 특이점</sub>*를 갖는다는 것은 다음의 두 조건이 성립하는 것이다.
 
-1. $f(0) = 0$, $df(0) = 0$.
-2. 원점이 $f$의 critical point들 중 *isolated<sub>고립된</sub>*인 것, 즉 원점의 어떤 근방 안에서 $df = 0$의 해가 원점 하나뿐이다.
+1. $f(0) = 0$, $\dd{f}(0) = 0$.
+2. 원점이 $f$의 critical point들 중 *isolated<sub>고립된</sub>*인 것, 즉 원점의 어떤 근방 안에서 $\dd{f} = 0$의 해가 원점 하나뿐이다.
 :::
 
 표준적인 예시는 $f(\x) = \x^{k+1}$ ($k \geq 1$)이며, 우리는 이를 $A_k$-type singularity라 부른다. 
@@ -73,9 +73,9 @@ $$\Jac(f) = \mathbb{C}[\x_1, \ldots, \x_n]/(\partial_1 f, \ldots, \partial_n f)$
 ::: 예시 4
 모든 critical point가 isolated hypersurface singularity인 다항식 $f : \mathbb{C}^n \rightarrow \mathbb{C}$의 Jacobi ring $\Jac(f)$ 위에 *residue pairing* $\eta$를 다음의 식
 
-$$\eta(g, h) := \frac{1}{(2\pi i)^n} \oint_{\Gamma_\epsilon} \frac{g(\x) h(\x) \, d\x_1 \wedge \cdots \wedge d\x_n}{\partial_1 f \cdots \partial_n f}$$
+$$\eta(g, h) := \frac{1}{(2\pi i)^n} \oint_{\Gamma_\epsilon} \frac{g(\x) h(\x) \dd{\x_1} \wedge \cdots \wedge \dd{\x_n}}{\partial_1 f \cdots \partial_n f}$$
 
-으로 정의한다. 여기서 적분경로 $\Gamma_\epsilon$은 $\Crit(f)=\{df=0\}$의 모든 점을 둘러싸는 작은 contour 위에서 이루어지는 것으로, 이 적분은 critical point를 multiplicity 정보가 포함된 fat point로 봤을 때 해당 점에서의 적분값이라 생각할 수 있다. 
+으로 정의한다. 여기서 적분경로 $\Gamma_\epsilon$은 $\Crit(f)=\{\dd{f}=0\}$의 모든 점을 둘러싸는 작은 contour 위에서 이루어지는 것으로, 이 적분은 critical point를 multiplicity 정보가 포함된 fat point로 봤을 때 해당 점에서의 적분값이라 생각할 수 있다. 
 
 즉, 직관적으로 이는 [예시 2](#ex2)의 manifold 전체 적분 $\int_X$를 critical scheme의 (유한 개) 점들에서의 적분으로 localize한 것으로 생각할 수 있으며, $(\Jac(f), \eta)$가 실제로 Frobenius algebra가 되는 것도 해당 예시에서와 비슷한 방식으로 보일 수 있다.
 
@@ -95,7 +95,7 @@ $$W_q = \x + \frac{q}{\x}$$
 
 를 생각하면, 그 critical point는 $\x_\pm = \pm\sqrt{q}$ 두 점이다. 
 
-다소 주의할 것은 ambient space $\check{X}$은 affine space가 아니라 algebraic torus라는 것으로, 이 위에 정의된 differential form은 단순히 $d\x$가 아니라는 것이다. 실제로 이 위의 differential form은 [\[토릭 기하학\] §토릭 다양체 위의 로그 미분형식, ⁋정의 1](/ko/math/toric_geometry/logarithmic_differentials#def1)에 의하여 $d\x/\x$로 주어지며, 이는 torus 위의 좌표가 $\u=\log\x$로 주어진 것이라 보면 된다. 그럼 $d\u=d\x/\x$이고 $\partial_\u=\x\partial_\x$가 되며, Hessian을 계산하기 위해 이 좌표에서 $W_q$의 도함수를 차례로 구하면
+다소 주의할 것은 ambient space $\check{X}$은 affine space가 아니라 algebraic torus라는 것으로, 이 위에 정의된 differential form은 단순히 $\dd{\x}$가 아니라는 것이다. 실제로 이 위의 differential form은 [\[토릭 기하학\] §토릭 다양체 위의 로그 미분형식, ⁋정의 1](/ko/math/toric_geometry/logarithmic_differentials#def1)에 의하여 $\dd{\x}/\x$로 주어지며, 이는 torus 위의 좌표가 $\u=\log\x$로 주어진 것이라 보면 된다. 그럼 $d\u=\dd{\x}/\x$이고 $\partial_\u=\x\partial_\x$가 되며, Hessian을 계산하기 위해 이 좌표에서 $W_q$의 도함수를 차례로 구하면
 
 $$\partial_\u W_q = \x \partial_\x W_q = \x - q/\x, \qquad \partial_\u^2 W_q = \partial_\u(\x - q/\x) = \x + q/\x$$
 
@@ -210,7 +210,7 @@ Flat coordinate $t^\alpha$에 대해 $\nabla_{\partial_{t^\delta}}$는 단순한
 
 $$\partial_{t^\delta} c_{\alpha\beta\gamma} = \partial_{t^\alpha} c_{\delta\beta\gamma}$$
 
-가 네 index에 대해 대칭으로 성립한다는 의미이다. 한편 $c$ 자체가 세 index에 대해 대칭이므로, 이를 함께 모으면 1-form $\omega_{\beta\gamma} := \sum_\alpha c_{\alpha\beta\gamma} dt^\alpha$가 closed임을 얻는다. Poincaré lemma로부터 국소적으로 함수 $G_{\beta\gamma}$가 존재해 $\partial_{t^\alpha} G_{\beta\gamma} = c_{\alpha\beta\gamma}$이며, $c$의 대칭성으로부터 $G_{\beta\gamma} = G_{\gamma\beta}$이고 또한 $\partial_{t^\alpha} G_{\beta\gamma} = \partial_{t^\beta} G_{\alpha\gamma}$가 성립한다. 다시 Poincaré lemma를 한 단계 더 적용하면 함수 $H_\gamma$가 존재해 $\partial_{t^\beta} H_\gamma = G_{\beta\gamma}$이고, $H_\gamma$의 대칭성 $\partial_{t^\delta} H_\gamma = \partial_{t^\gamma} H_\delta$로부터 마지막으로 scalar function $F$가 존재해 $\partial_{t^\gamma} F = H_\gamma$가 성립한다. 종합하면 $\partial_{t^\alpha} \partial_{t^\beta} \partial_{t^\gamma} F = c_{\alpha\beta\gamma}$이다.
+가 네 index에 대해 대칭으로 성립한다는 의미이다. 한편 $c$ 자체가 세 index에 대해 대칭이므로, 이를 함께 모으면 1-form $\omega_{\beta\gamma} := \sum_\alpha c_{\alpha\beta\gamma} \dd{t}^\alpha$가 closed임을 얻는다. Poincaré lemma로부터 국소적으로 함수 $G_{\beta\gamma}$가 존재해 $\partial_{t^\alpha} G_{\beta\gamma} = c_{\alpha\beta\gamma}$이며, $c$의 대칭성으로부터 $G_{\beta\gamma} = G_{\gamma\beta}$이고 또한 $\partial_{t^\alpha} G_{\beta\gamma} = \partial_{t^\beta} G_{\alpha\gamma}$가 성립한다. 다시 Poincaré lemma를 한 단계 더 적용하면 함수 $H_\gamma$가 존재해 $\partial_{t^\beta} H_\gamma = G_{\beta\gamma}$이고, $H_\gamma$의 대칭성 $\partial_{t^\delta} H_\gamma = \partial_{t^\gamma} H_\delta$로부터 마지막으로 scalar function $F$가 존재해 $\partial_{t^\gamma} F = H_\gamma$가 성립한다. 종합하면 $\partial_{t^\alpha} \partial_{t^\beta} \partial_{t^\gamma} F = c_{\alpha\beta\gamma}$이다.
 :::
 
 이러한 $F$를 Frobenius manifold의 *potential*이라 부른다. 이로부터 만일 flat coordinate을 잡고, $\eta^{\alpha\beta}$를 $\eta_{\alpha\beta}$의 역행렬이라 하면 곱셈의 structure constant는
@@ -254,19 +254,19 @@ WDVV equation은 $F$의 삼계도함수들 사이의 quadratic relation이며, $
 ::: 예시 8
 $M = \mathbb{C}^n$ 위에 좌표 $t^1, \ldots, t^n$을 도입하고
 
-$$\eta = \sum_{i=1}^n dt^i \otimes dt^i,\qquad \partial_{t^i} \circ \partial_{t^j} = \delta_{ij} \partial_{t^i}$$
+$$\eta = \sum_{i=1}^n \dd{t}^i \otimes \dd{t}^i,\qquad \partial_{t^i} \circ \partial_{t^j} = \delta_{ij} \partial_{t^i}$$
 
 으로 두자. 이는 그냥 Euclidean space 정의를 $\mathbb{C}$로 올리기만 한 것으로, $\eta$가 flat이고, $t^i$들이 flat coordinate을 이루고, $e=\sum \partial_{t^i}$가 곱셈에 대한 단위원이라는 등의 사실은 거의 자명하게 얻어진다. 
 
 이제 이 manifold의 Euler vector field는 우리가 미적분학 시간에 Euler vector field라 부르는 바로 그 vector field $\sum_i t^i\partial_{t^i}$가 된다. 실제로, flat coordinate들에서 $E(t^i)=t^i$이므로 Lie derivative들을 구해보면
 
-$$\mathcal{L}_E(dt^i)=d(E(t^i))=dt^i,\qquad \mathcal{L}_E(\partial_{t^i})=[E, \partial_{t^i}]=-\partial_{t^i}$$
+$$\mathcal{L}_E(\dd{t}^i)=\dd{(E(t^i))}=\dd{t}^i,\qquad \mathcal{L}_E(\partial_{t^i})=[E, \partial_{t^i}]=-\partial_{t^i}$$
 
 가 되며, 이로부터
 
-$$\mathcal{L}_E(\eta) = \sum_i \bigl( \mathcal{L}_E(dt^i) \otimes dt^i + dt^i \otimes \mathcal{L}_E(dt^i) \bigr) = 2 \sum_i dt^i \otimes dt^i = 2\eta$$
+$$\mathcal{L}_E(\eta) = \sum_i \bigl( \mathcal{L}_E(\dd{t}^i) \otimes \dd{t}^i + \dd{t}^i \otimes \mathcal{L}_E(\dd{t}^i) \bigr) = 2 \sum_i \dd{t}^i \otimes \dd{t}^i = 2\eta$$
 
-임을 안다. 비슷하게 곱셈의 경우, $\circ=\sum dt^i\otimes dt^i\otimes\partial_{t^i}$로 쓴 후 위와 비슷한 계산을 수행하면 $\mathcal{L}_E(\circ)=\circ$임을 확인할 수 있다. 
+임을 안다. 비슷하게 곱셈의 경우, $\circ=\sum \dd{t}^i\otimes \dd{t}^i\otimes\partial_{t^i}$로 쓴 후 위와 비슷한 계산을 수행하면 $\mathcal{L}_E(\circ)=\circ$임을 확인할 수 있다. 
 
 Potentiality는 거의 자명하게 얻을 수 있으며, $i,j,k$ 방향으로 순서대로 미분했을 때 $\delta_{ijk}$가 나오는 함수가 무엇일지 역산해보면 (당연히) 
 
@@ -335,15 +335,15 @@ $$E = t^0 \partial_{t^0} + 2\partial_{t^1}$$
 
 로 주어진다. $E(t^0) = t^0$, $E(t^1) = 2$이므로 각 성분의 Lie derivative는
 
-$$\mathcal{L}_E(dt^0) = dt^0, \quad \mathcal{L}_E(dt^1) = 0, \quad \mathcal{L}_E(\partial_{t^0}) = [E, \partial_{t^0}] = -\partial_{t^0}, \quad \mathcal{L}_E(\partial_{t^1}) = [E, \partial_{t^1}] = 0$$
+$$\mathcal{L}_E(\dd{t}^0) = \dd{t}^0, \quad \mathcal{L}_E(\dd{t}^1) = 0, \quad \mathcal{L}_E(\partial_{t^0}) = [E, \partial_{t^0}] = -\partial_{t^0}, \quad \mathcal{L}_E(\partial_{t^1}) = [E, \partial_{t^1}] = 0$$
 
-이며, 이를 metric $\eta = dt^0 \otimes dt^1 + dt^1 \otimes dt^0$에 적용하면 각 항이 weight $1 + 0 = 1$이므로
+이며, 이를 metric $\eta = \dd{t}^0 \otimes \dd{t}^1 + \dd{t}^1 \otimes \dd{t}^0$에 적용하면 각 항이 weight $1 + 0 = 1$이므로
 
-$$\mathcal{L}_E(\eta) = \mathcal{L}_E(dt^0)\otimes dt^1 + dt^1 \otimes \mathcal{L}_E(dt^0) = dt^0 \otimes dt^1 + dt^1 \otimes dt^0 = \eta$$
+$$\mathcal{L}_E(\eta) = \mathcal{L}_E(\dd{t}^0)\otimes \dd{t}^1 + \dd{t}^1 \otimes \mathcal{L}_E(\dd{t}^0) = \dd{t}^0 \otimes \dd{t}^1 + \dd{t}^1 \otimes \dd{t}^0 = \eta$$
 
-가 되어 $2 - d = 1$을 얻고, 이는 즉 $\dim_\mathbb{C}\mathbb{P}^1$의 값과 같다. 비슷한 계산으로, 곱셈 $\circ$의 비자명한 부분은 tensor $e^{t^1}\, dt^1 \otimes dt^1 \otimes \partial_{t^0}$ (즉 $\partial_{t^1} \circ \partial_{t^1} = e^{t^1}\partial_{t^0}$) 이며, $\mathcal{L}_E(e^{t^1}) = E(e^{t^1}) = 2e^{t^1}$ (weight $2$), $dt^1$ 둘이 weight $0$, $\partial_{t^0}$이 weight $-1$이므로
+가 되어 $2 - d = 1$을 얻고, 이는 즉 $\dim_\mathbb{C}\mathbb{P}^1$의 값과 같다. 비슷한 계산으로, 곱셈 $\circ$의 비자명한 부분은 tensor $e^{t^1}\dd{t}^1 \otimes \dd{t}^1 \otimes \partial_{t^0}$ (즉 $\partial_{t^1} \circ \partial_{t^1} = e^{t^1}\partial_{t^0}$) 이며, $\mathcal{L}_E(e^{t^1}) = E(e^{t^1}) = 2e^{t^1}$ (weight $2$), $\dd{t}^1$ 둘이 weight $0$, $\partial_{t^0}$이 weight $-1$이므로
 
-$$\mathcal{L}_E\bigl(e^{t^1}\, dt^1 \otimes dt^1 \otimes \partial_{t^0}\bigr) = (2 + 0 + 0 - 1)\, e^{t^1}\, dt^1 \otimes dt^1 \otimes \partial_{t^0} = e^{t^1}\, dt^1 \otimes dt^1 \otimes \partial_{t^0}$$
+$$\mathcal{L}_E\bigl(e^{t^1}\dd{t}^1 \otimes \dd{t}^1 \otimes \partial_{t^0}\bigr) = (2 + 0 + 0 - 1)\, e^{t^1}\dd{t}^1 \otimes \dd{t}^1 \otimes \partial_{t^0} = e^{t^1}\dd{t}^1 \otimes \dd{t}^1 \otimes \partial_{t^0}$$
 
 가 되어 $\mathcal{L}_E(\circ) = \circ$이다.
 

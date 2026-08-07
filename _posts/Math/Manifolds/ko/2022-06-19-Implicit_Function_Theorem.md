@@ -30,7 +30,7 @@ $$S=\{q\in U\mid x^i(q)=r^i(p), k+1\leq i\leq m\}$$
 두 manifold 사이의 immersion $F:M\rightarrow N$이 주어졌다 하자. 그럼 임의의 $p\in M$이 주어질 때마다, $F(p)$를 포함하는 coordinate system $(V,\varphi)$와 $p$의 적당한 열린근방 $U$가 존재하여 $F\vert_U$가 injective이고, $F(U)$가 $(V,\varphi)$의 slice이도록 할 수 있다.
 :::
 ::: 증명
-$\dim M=k$, $\dim N=n$이라 하자. $F(p)$를 포함하는 coordinate system $(V_0,\psi)$, $\psi=(y^i)_{i=1}^n$을 하나 택하자. $dF_p$가 injective이므로 [§부분다양체와 역함수 정리, ⁋따름정리 10](/ko/math/manifolds/submanifolds#cor10)에 의하여 집합 $\{y^i\circ F\}$의 적당한 부분집합이 점 $p$ 근방에서 $M$의 coordinate system을 이룬다. 좌표의 순서를 재배열하여, $x^j=y^j\circ F$ ($j=1,\ldots,k$)들이 $p$의 적당한 열린근방 $U_1$ 위에서 coordinate system $(U_1,x)$, $x=(x^j)_{j=1}^k$를 이룬다고 가정해도 좋다. 필요하다면 $U_1$을 줄여 $F(U_1)\subseteq V_0$이라 가정하자.
+$\dim M=k$, $\dim N=n$이라 하자. $F(p)$를 포함하는 coordinate system $(V_0,\psi)$, $\psi=(y^i)_{i=1}^n$을 하나 택하자. $\dd{F_p}$가 injective이므로 [§부분다양체와 역함수 정리, ⁋따름정리 10](/ko/math/manifolds/submanifolds#cor10)에 의하여 집합 $\{y^i\circ F\}$의 적당한 부분집합이 점 $p$ 근방에서 $M$의 coordinate system을 이룬다. 좌표의 순서를 재배열하여, $x^j=y^j\circ F$ ($j=1,\ldots,k$)들이 $p$의 적당한 열린근방 $U_1$ 위에서 coordinate system $(U_1,x)$, $x=(x^j)_{j=1}^k$를 이룬다고 가정해도 좋다. 필요하다면 $U_1$을 줄여 $F(U_1)\subseteq V_0$이라 가정하자.
 
 우선 $F\vert_{U_1}$은 injective이다. $q,q'\in U_1$이 $F(q)=F(q')$를 만족한다면 각각의 $j\leq k$에 대해 $x^j(q)=y^j(F(q))=y^j(F(q'))=x^j(q')$인데, $x$가 $U_1$ 위에서 injective이기 때문이다.
 
@@ -50,9 +50,9 @@ $$w^j=y^j\quad (j=1,\ldots,k),\qquad w^i=y^i-h^i(y^1,\ldots,y^k)\quad (i=k+1,\ld
 
 으로 정의하자. 그럼 점 $F(p)$에서
 
-$$dw^j=dy^j\quad(j\leq k),\qquad dw^i=dy^i-\sum_{j=1}^k\frac{\partial h^i}{\partial y^j}\,dy^j\quad(i>k)$$
+$$\dd{w}^j=\dd{y}^j\quad(j\leq k),\qquad \dd{w}^i=\dd{y}^i-\sum_{j=1}^k\frac{\partial h^i}{\partial y^j}\dd{y}^j\quad(i>k)$$
 
-이므로, $dw^i$들은 basis $dy^i$들로부터 대각성분이 모두 $1$인 삼각행렬꼴의 변환으로 얻어져 일차독립이다. 따라서 [§부분다양체와 역함수 정리, ⁋따름정리 6](/ko/math/manifolds/submanifolds#cor6)에 의하여 $F(p)$의 적당한 열린근방 $V\subseteq V'$ 위에서 $\varphi=(w^1,\ldots,w^n)$은 coordinate system이 된다.
+이므로, $\dd{w}^i$들은 basis $\dd{y}^i$들로부터 대각성분이 모두 $1$인 삼각행렬꼴의 변환으로 얻어져 일차독립이다. 따라서 [§부분다양체와 역함수 정리, ⁋따름정리 6](/ko/math/manifolds/submanifolds#cor6)에 의하여 $F(p)$의 적당한 열린근방 $V\subseteq V'$ 위에서 $\varphi=(w^1,\ldots,w^n)$은 coordinate system이 된다.
 
 마지막으로 $U=U_1\cap F^{-1}(V)$로 두자. 임의의 $q\in U$와 $i>k$에 대하여
 
@@ -96,12 +96,12 @@ $$f(p,q)=0\iff q=g(p)$$
 :::
 
 ::: 따름정리 4 (Submersion level set theorem)
-$F:M\rightarrow N$이 $C^\infty$라 하고, $q\in F(M)$를 고정하고 $P=F^{-1}(q)$라 하자. 만일 임의의 $p\in P$마다 $dF_p:T_pM\rightarrow T_{F(p)}N$이 surjective라면, $P$ 위에 정의된 유일한 manifold 구조가 존재하여 canonical injection $\iota:P\hookrightarrow M$이 submanifold가 된다. 
+$F:M\rightarrow N$이 $C^\infty$라 하고, $q\in F(M)$를 고정하고 $P=F^{-1}(q)$라 하자. 만일 임의의 $p\in P$마다 $\dd{F_p}:T_pM\rightarrow T_{F(p)}N$이 surjective라면, $P$ 위에 정의된 유일한 manifold 구조가 존재하여 canonical injection $\iota:P\hookrightarrow M$이 submanifold가 된다. 
 
 또, 이 때 $\iota$는 embedding이고, $P$의 codimension $\dim M-\dim P$가 $\dim N$과 동일해진다.
 :::
 ::: 증명
-$\dim M=m$, $\dim N=n$이라 하자. 임의의 $p\in P$를 고정하고, $q=F(p)$를 포함하는 coordinate system $(Y,\psi)$, $\psi=(y^j)_{j=1}^n$을 $\psi(q)=0$이도록 택하자. $dF_p$가 surjective이므로 [§부분다양체와 역함수 정리, ⁋따름정리 9](/ko/math/manifolds/submanifolds#cor9)에 의하여 적당한 함수들 $x^{n+1},\ldots,x^m$이 존재하여
+$\dim M=m$, $\dim N=n$이라 하자. 임의의 $p\in P$를 고정하고, $q=F(p)$를 포함하는 coordinate system $(Y,\psi)$, $\psi=(y^j)_{j=1}^n$을 $\psi(q)=0$이도록 택하자. $\dd{F_p}$가 surjective이므로 [§부분다양체와 역함수 정리, ⁋따름정리 9](/ko/math/manifolds/submanifolds#cor9)에 의하여 적당한 함수들 $x^{n+1},\ldots,x^m$이 존재하여
 
 $$x^1=y^1\circ F,\quad\ldots,\quad x^n=y^n\circ F,\qquad x^{n+1},\quad\ldots,\quad x^m$$
 
@@ -121,7 +121,7 @@ $$\varphi_{p'}\circ\varphi_p^{-1}:a\mapsto \bigl(\text{$x'\circ x^{-1}(0,a)$의 
 
 으로, $M$의 두 coordinate system 사이의 $C^\infty$ transition 함수의 합성과 제한이므로 $C^\infty$이다. $P$는 $M$의 subspace로서 Hausdorff이고 second countable이므로, 이들 chart는 $P$를 $(m-n)$차원 manifold로 만든다.
 
-이 구조에 대하여 $\iota:P\hookrightarrow M$은 좌표로 나타내면 $a\mapsto(0,a)$의 꼴이므로 $C^\infty$이고, 모든 점에서 $d\iota$가 injective이다. 즉 $\iota$는 injective immersion이므로 submanifold이고, $P$에 처음부터 subspace topology를 주었으므로 embedding이다. 차원을 세어보면 $P$의 codimension은 $\dim M-\dim P=m-(m-n)=n=\dim N$이다.
+이 구조에 대하여 $\iota:P\hookrightarrow M$은 좌표로 나타내면 $a\mapsto(0,a)$의 꼴이므로 $C^\infty$이고, 모든 점에서 $\dd{\iota}$가 injective이다. 즉 $\iota$는 injective immersion이므로 submanifold이고, $P$에 처음부터 subspace topology를 주었으므로 embedding이다. 차원을 세어보면 $P$의 codimension은 $\dim M-\dim P=m-(m-n)=n=\dim N$이다.
 
 마지막으로 이러한 manifold 구조의 유일성은 [§부분다양체의 유일성, ⁋명제 5](/ko/math/manifolds/uniqueness_of_submanifold#prop5)로부터 나온다. $(P,\iota)$가 subspace topology에 대해 $M$의 submanifold가 되는 미분구조를 가지므로, 이 구조는 $(P,\iota)$를 $M$의 submanifold로 만드는 유일한 manifold 구조이기 때문이다.
 :::
@@ -129,7 +129,7 @@ $$\varphi_{p'}\circ\varphi_p^{-1}:a\mapsto \bigl(\text{$x'\circ x^{-1}(0,a)$의 
 다음 따름정리의 가정은 앞선 따름정리의 가정보다 약하기 때문에 더 잘 사용할 수 있다.
 
 ::: 따름정리 5 (Constant-rank level set theorem)
-$F:M\rightarrow N$이 $C^\infty$라 하고, 각각의 $p\in P$마다 정의되는 $dF_p:T_pM\rightarrow T_{F(p)}N$이 모든 점 $p\in P$에서 같은 rank를 가진다고 하자. 그럼 $F:M\rightarrow N$은 embedded submanifold이다.
+$F:M\rightarrow N$이 $C^\infty$라 하고, 각각의 $p\in P$마다 정의되는 $\dd{F_p}:T_pM\rightarrow T_{F(p)}N$이 모든 점 $p\in P$에서 같은 rank를 가진다고 하자. 그럼 $F:M\rightarrow N$은 embedded submanifold이다.
 :::
 
 이 정리들을 통해 주어진 manifold $M$의 특정한 부분집합이 embedded submanifold라는 것을 보일 수 있는데, 이는 대표적으로 다음과 같은 논증을 따른다.
@@ -141,9 +141,9 @@ $$f(x)=\lvert x\rvert^2=\sum_{i=1}^{n+1} r^i(x)^2$$
 
 를 생각하자. 임의의 점 $x\in \mathbb{R}^{n+1}$과 $v\in T_x\mathbb{R}^{n+1}$에 대하여,
 
-$$df_x(v)=v(f)=\sum v^i\frac{\partial f}{\partial r^i}\bigg\vert_{x}=2\sum r^i(x) v^i$$
+$$\dd{f_x}(v)=v(f)=\sum v^i\frac{\partial f}{\partial r^i}\bigg\vert_{x}=2\sum r^i(x) v^i$$
 
-이 성립하며, 이로부터 $x$가 원점이 아니라면 $v$를 조절하여 $df_x(v)$가 임의의 실수값을 갖도록 할 수 있음을 안다. 즉, $df_x$가 원점을 제외하면 항상 surjective이므로, $f^{-1}(1)$이 $\mathbb{R}^{n+1}$의 submanifold이도록 하는 유일한 manifold 구조가 존재한다. 유일성에 의하여 이 구조는 $S^n$에 주어진 manifold 구조와 동일하며, 다시 [따름정리 5](#cor5)에 의해 이 구조는 $\mathbb{R}^{n+1}$의 embedded submanifold임을 알 수 있다.
+이 성립하며, 이로부터 $x$가 원점이 아니라면 $v$를 조절하여 $\dd{f_x}(v)$가 임의의 실수값을 갖도록 할 수 있음을 안다. 즉, $\dd{f_x}$가 원점을 제외하면 항상 surjective이므로, $f^{-1}(1)$이 $\mathbb{R}^{n+1}$의 submanifold이도록 하는 유일한 manifold 구조가 존재한다. 유일성에 의하여 이 구조는 $S^n$에 주어진 manifold 구조와 동일하며, 다시 [따름정리 5](#cor5)에 의해 이 구조는 $\mathbb{R}^{n+1}$의 embedded submanifold임을 알 수 있다.
 :::
 
 ---

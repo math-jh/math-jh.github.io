@@ -54,7 +54,7 @@ What plays an important role in this process is the following *principle of leas
 
 > When an object moves from $x_0$ to $x_1$, it follows the extremum $z(t)=(x(t),y(t))$ ($t_0\leq t\leq t_1$) of the following *action*.
 > 
-> $\mathcal{A}_H(z)=\int_{t_0}^{t_1}\langle y,\dot{x}\rangle-H(z)\mathop{dt}$
+> $\mathcal{A}_H(z)=\int_{t_0}^{t_1}\langle y,\dot{x}\rangle-H(z)\dd{t}$
 
 In this formula, the newly introduced $H$ denotes the *Hamiltonian*, and for our purposes we may simply regard it as the energy. This principle holds locally even when $H$ depends on time; in that case one merely replaces $H$ by $H_t$. The mathematical treatment of such problems is very well known.
 
@@ -66,15 +66,15 @@ $$\dot{x}=\frac{\partial H_t}{\partial y},\quad \dot{y}=-\frac{\partial H_t}{\pa
 ::: Proof
 To prove this, suppose a 1-parameter family of paths $(z_s)=(x_s,y_s)$ satisfying the boundary conditions $x_s(t_0)=x_0$, $x_s(t_1)=x_1$ is given, and let $z_0=z$. Then
 
-$$\begin{aligned}\frac{\partial}{\partial s}\bigg\vert_{s=0}\mathcal{A}_H(z_s)&=\frac{\partial}{\partial s}\bigg\vert_{s=0}\int_{t_0}^{t_1}\langle y_s,\dot{x}_s\rangle-H_t(x_s,y_s)\mathop{dt}\\&=\int_{t_0}^{t_1}\frac{\partial}{\partial s}\bigg\vert_{s=0}\left(\langle y_s,\dot{x}_s\rangle-H_t(x_s,y_s)\right)\mathop{dt}\\&=\int_{t_0}^{t_1}\bigl\langle\partial_s y_s\vert_0,\dot{x}\bigr\rangle+\bigl\langle y,\partial_s\dot{x}\vert_0\bigr\rangle-\bigl\langle\partial_sx_s\vert_0,\partial_x H_t\bigr\rangle-\bigl\langle\partial_sy_s\vert_0,\partial_yH_t\bigr\rangle\mathop{dt}\end{aligned}$$
+$$\begin{aligned}\frac{\partial}{\partial s}\bigg\vert_{s=0}\mathcal{A}_H(z_s)&=\frac{\partial}{\partial s}\bigg\vert_{s=0}\int_{t_0}^{t_1}\langle y_s,\dot{x}_s\rangle-H_t(x_s,y_s)\dd{t}\\&=\int_{t_0}^{t_1}\frac{\partial}{\partial s}\bigg\vert_{s=0}\left(\langle y_s,\dot{x}_s\rangle-H_t(x_s,y_s)\right)\dd{t}\\&=\int_{t_0}^{t_1}\bigl\langle\partial_s y_s\vert_0,\dot{x}\bigr\rangle+\bigl\langle y,\partial_s\dot{x}\vert_0\bigr\rangle-\bigl\langle\partial_sx_s\vert_0,\partial_x H_t\bigr\rangle-\bigl\langle\partial_sy_s\vert_0,\partial_yH_t\bigr\rangle\dd{t}\end{aligned}$$
 
 Now consider integration by parts:
 
-$$\int_{t_0}^{t_1}\langle y,\partial_s\dot{x}_s\vert_0\rangle\mathop{dt}=\bigl[\langle y,\partial_sx_s\vert_0\rangle\bigr]_{t_0}^{t_1}-\int_{t_0}^{t_1}\langle\dot{y},\partial_sx_s\vert_0\rangle\mathop{dt}$$
+$$\int_{t_0}^{t_1}\langle y,\partial_s\dot{x}_s\vert_0\rangle\dd{t}=\bigl[\langle y,\partial_sx_s\vert_0\rangle\bigr]_{t_0}^{t_1}-\int_{t_0}^{t_1}\langle\dot{y},\partial_sx_s\vert_0\rangle\dd{t}$$
 
 The first term on the right-hand side vanishes by the boundary conditions $x_s(t_0)=x_0$, $x_s(t_1)=x_1$. Substituting this into the preceding equation and rearranging, we obtain
 
-$$\frac{\partial}{\partial s}\bigg\vert_{s=0}\mathcal{A}_H(z)=\int_{t_0}^{t_1}\langle\partial_sy_s\vert_0,\dot{x}-\partial_yH_t\rangle\mathop{dt}-\int_{t_0}^{t_1}\langle\partial_sx_s\vert_0,\dot{y}+\partial_xH_t\rangle\mathop{dt}$$
+$$\frac{\partial}{\partial s}\bigg\vert_{s=0}\mathcal{A}_H(z)=\int_{t_0}^{t_1}\langle\partial_sy_s\vert_0,\dot{x}-\partial_yH_t\rangle\dd{t}-\int_{t_0}^{t_1}\langle\partial_sx_s\vert_0,\dot{y}+\partial_xH_t\rangle\dd{t}$$
 
 Since $\partial_sx_s\vert_0$ and $\partial_sy_s\vert_0$ can vary arbitrarily, $z$ being an extremum of $\mathcal{A}_H$ is equivalent to the two equations
 
@@ -111,21 +111,21 @@ and we know that this is always possible. ([\[Manifolds\] §Vector Fields, ⁋Th
 
 To summarize the discussion above, the Hamiltonian $H$ describes the motion of the object through the formula
 
-$$dH=\langle-J_0\nabla H(z), -\rangle$$
+$$\dd{H}=\langle-J_0\nabla H(z), -\rangle$$
 
 Now define a $2$-form on $\mathbb{R}^{2n}$ by
 
 $$\omega_0(-,-):=\langle J_0-, -\rangle$$
 
-Then the above formula can be written, by analogy with the definition of the gradient of a function $f$ via $df=\langle \nabla f,-\rangle$, as
+Then the above formula can be written, by analogy with the definition of the gradient of a function $f$ via $\dd{f}=\langle \nabla f,-\rangle$, as
 
-$$dH=\omega_0(X_H, -)$$
+$$\dd{H}=\omega_0(X_H, -)$$
 
 We call $\omega_0$ the *canonical symplectic form* on $\mathbb{R}^{2n}$, and from this point of view $X_H$ is sometimes called the *symplectic gradient*.
 
 In the standard coordinate system on $\mathbb{R}^{2n}$,
 
-$$\langle-,-\rangle=\sum_{j=1}^n dx^j\otimes dx^j+\sum_{j=1}^n dy^j\otimes dy^j$$
+$$\langle-,-\rangle=\sum_{j=1}^n \dd{x}^j\otimes \dd{x}^j+\sum_{j=1}^n \dd{y}^j\otimes \dd{y}^j$$
 
 so using equation (1) we can compute $\omega_0$ on the basis vectors $\partial/\partial x^j,\partial/\partial y^j$. For instance,
 
@@ -133,7 +133,7 @@ $$(\omega_0)_p\left(\frac{\partial}{\partial x^j}\bigg\vert_p,\frac{\partial}{\p
 
 and carrying out the remaining computations, we find that $\omega_0$ is expressed in standard coordinates as
 
-$$\omega_0=\sum_{j=1}^n dx^j\wedge dy^j$$
+$$\omega_0=\sum_{j=1}^n \dd{x}^j\wedge \dd{y}^j$$
 
 Before long we shall see that the entire discussion above remains valid when $\mathbb{R}^{2n}$ is replaced by an arbitrary manifold $M$, its cotangent bundle $T^\ast M$, a Riemannian metric $g$, and an almost complex structure $J$.
 

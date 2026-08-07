@@ -126,7 +126,7 @@ $$\det D\tau(x(p))=\frac{\partial y^m}{\partial x^m}(x(p))\cdot\det\left(\frac{\
 
 ## 유도된 향
 
-$\interior M$은 boundary가 없는 $m$차원 manifold이므로, 우리는 $M$이 *orientable*이라는 것을 $\interior M$이 orientable인 것으로, $M$의 *orientation*을 $\interior M$의 orientation으로 정의한다. ([§향, ⁋정의 1](/ko/math/manifolds/orientation#def1), 그리고 connected 가정에 대해서는 아래의 [참고 10](#rmk10)을 보라.) 또, $M$의 chart $(U,x)$가 *positively oriented*라는 것은 그 restriction $(U\cap\interior M,x)$가 [§향, ⁋명제 2](/ko/math/manifolds/orientation#prop2)의 의미에서 주어진 orientation과 호환되는 것, 즉 $dx^1\wedge\cdots\wedge dx^m$이 $U\cap\interior M$ 위에서 선택된 component에 들어가는 것이다.
+$\interior M$은 boundary가 없는 $m$차원 manifold이므로, 우리는 $M$이 *orientable*이라는 것을 $\interior M$이 orientable인 것으로, $M$의 *orientation*을 $\interior M$의 orientation으로 정의한다. ([§향, ⁋정의 1](/ko/math/manifolds/orientation#def1), 그리고 connected 가정에 대해서는 아래의 [참고 10](#rmk10)을 보라.) 또, $M$의 chart $(U,x)$가 *positively oriented*라는 것은 그 restriction $(U\cap\interior M,x)$가 [§향, ⁋명제 2](/ko/math/manifolds/orientation#prop2)의 의미에서 주어진 orientation과 호환되는 것, 즉 $\dd{x}^1\wedge\cdots\wedge \dd{x}^m$이 $U\cap\interior M$ 위에서 선택된 component에 들어가는 것이다.
 
 $m\geq 2$라면 oriented manifold with boundary $M$은 항상 positively oriented chart들로 덮을 수 있다. Chart가 positively oriented가 아니라면 $x^1$의 부호를 바꾼 chart $(U,(-x^1,x^2,\ldots,x^m))$가 여전히 $\mathbb{H}^m$의 열린집합으로 가는 chart이면서 orientation이 뒤집히기 때문이다. 반면 $m=1$인 경우에는 이러한 조작이 불가능한데, 부호를 바꿀 수 있는 좌표가 마지막 좌표 $x^1$ 뿐이고 이것의 부호를 바꾸면 chart가 $\mathbb{H}^1$을 벗어나기 때문이다. 실제로 $[0,1]$의 양 끝점을 모두 $\mathbb{H}^1$-chart로 덮으면 두 chart의 orientation은 반드시 반대가 된다. 이러한 이유로 $m=1$인 경우에는 negatively oriented chart도 함께 사용하되, 적분 등을 정의할 때 부호를 붙여 사용한다.
 

@@ -196,13 +196,13 @@ $$L_{C/B}\simeq (I/I^2)[1]$$
 추이 삼각형은 여접 복합체를 실제로 계산 가능한 대상으로 만든다. 임의의 $B$를 polynomial algebra 위의 quotient로 놓으면, smooth한 부분의 여접 복합체는 이미 알고 있고, quotient에서 오는 conormal 부분을 삼각형이 이어 붙여 주기 때문이다. 이를 곧바로 하나의 fat point에 적용해 본다.
 
 ::: 예시 13 (이중점의 여접 복합체)
-$B=k[\x]/(\x^2)$, 곧 affine 직선 위 원점의 이중점을 생각하고, $k$의 characteristic이 $2$가 아니라 하자. 사슬 $k\rightarrow k[\x]\rightarrow B$에 [정리 12](#thm12)을 적용한다. $k[\x]$는 $k$ 위에서 smooth하므로 $L_{k[x]/k}=\Omega_{k[x]/k}=k[\x]d\x$는 degree $0$에 집중된 free module이다. 한편 $\x^2$은 $k[\x]$의 nonzerodivisor이므로 $k[\x]\rightarrow B$는 lci이고, [정리 12](#thm12)에 의하여
+$B=k[\x]/(\x^2)$, 곧 affine 직선 위 원점의 이중점을 생각하고, $k$의 characteristic이 $2$가 아니라 하자. 사슬 $k\rightarrow k[\x]\rightarrow B$에 [정리 12](#thm12)을 적용한다. $k[\x]$는 $k$ 위에서 smooth하므로 $L_{k[x]/k}=\Omega_{k[x]/k}=k[\x]\dd{\x}$는 degree $0$에 집중된 free module이다. 한편 $\x^2$은 $k[\x]$의 nonzerodivisor이므로 $k[\x]\rightarrow B$는 lci이고, [정리 12](#thm12)에 의하여
 
 $$L_{B/k[x]}\simeq(I/I^2)[1]\simeq B[1],\qquad I=(\x^2)$$
 
-이다. 따라서 여접 복합체는 두 항짜리 free 복합체로 실현되며, 그 미분은 conormal morphism $\overline{d}:B[1]\rightarrow(k[\x]d\x)\otimes B=Bd\x$, 곧 $\overline{\x^2}\mapsto d(\x^2)=2\x d\x$이다. 곧
+이다. 따라서 여접 복합체는 두 항짜리 free 복합체로 실현되며, 그 미분은 conormal morphism $\overline{d}:B[1]\rightarrow(k[\x]\dd{\x})\otimes B=B\dd{\x}$, 곧 $\overline{\x^2}\mapsto \dd{(\x^2)}=2\x \dd{\x}$이다. 곧
 
-$$L_{B/k}\simeq\Bigl[B\overset{\times2\x}{\longrightarrow}Bd\x\Bigr]$$
+$$L_{B/k}\simeq\Bigl[B\overset{\times2\x}{\longrightarrow}B\dd{\x}\Bigr]$$
 
 이고 (degree $1$에서 $0$으로), 그 homology는 $k$의 characteristic이 $2$가 아닐 때
 

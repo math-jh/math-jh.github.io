@@ -39,7 +39,7 @@ $$L = \{\,z \in \mathbb{C} \mid \operatorname{dist}(z, K) \leq 2r\,\}$$
 
 이제 $z, w \in K$이고 $\lvert z - w\rvert < r$이라 하자. 중심 $z$, 반지름 $2r$인 원 $\gamma$ 위의 점 $\zeta$은 $L$에 속하고, $z$과 $w$ 모두 이 원의 interior에 있다 ($\lvert z - w\rvert < r < 2r$이므로). Cauchy 적분공식 ([§Cauchy 적분공식, ⁋정리 1](/ko/math/complex_analysis/cauchy_integral_formula#thm1)) 을 두 점에서 적용하여 빼면
 
-$$f(z) - f(w) = \frac{1}{2\pi i}\oint_\gamma f(\zeta)\left(\frac{1}{\zeta - z} - \frac{1}{\zeta - w}\right)d\zeta = \frac{z - w}{2\pi i}\oint_\gamma \frac{f(\zeta)}{(\zeta - z)(\zeta - w)}\,d\zeta$$
+$$f(z) - f(w) = \frac{1}{2\pi i}\oint_\gamma f(\zeta)\left(\frac{1}{\zeta - z} - \frac{1}{\zeta - w}\right)\dd{\zeta} = \frac{z - w}{2\pi i}\oint_\gamma \frac{f(\zeta)}{(\zeta - z)(\zeta - w)}\dd{\zeta}$$
 
 이다. 원 $\gamma$ 위에서 $\lvert \zeta - z\rvert = 2r$이고, $\lvert \zeta - w\rvert \geq \lvert \zeta - z\rvert - \lvert z - w\rvert > 2r - r = r$이다. 따라서 피적분함수의 크기는 $\lvert f(\zeta)\rvert / (\lvert \zeta - z\rvert\,\lvert \zeta - w\rvert) \leq M/(2r \cdot r)$로 bounded above이고, $\gamma$의 길이가 $2\pi(2r) = 4\pi r$이므로
 
@@ -187,7 +187,7 @@ $$M = \sup_{f \in \mathcal{F}} \lvert f'(z_0)\rvert$$
 
 다음으로 $M$이 유한하고 달성됨을 본다. $\overline{D(z_0, \rho)} \subseteq \Omega$인 $\rho > 0$을 잡고 경계원 $\lvert z - z_0\rvert = \rho$ 위에서 Cauchy 미분공식 ([§Cauchy 적분공식, ⁋정리 2](/ko/math/complex_analysis/cauchy_integral_formula#thm2)) 을 쓰면, 모든 $f \in \mathcal{F}$에서 $\lvert f\rvert \leq 1$이므로
 
-$$\lvert f'(z_0)\rvert = \left\lvert\frac{1}{2\pi i}\oint_{\lvert z - z_0\rvert = \rho}\frac{f(z)}{(z - z_0)^2}\,dz\right\rvert \leq \frac{1}{2\pi}\cdot\frac{1}{\rho^2}\cdot 2\pi\rho = \frac{1}{\rho}$$
+$$\lvert f'(z_0)\rvert = \left\lvert\frac{1}{2\pi i}\oint_{\lvert z - z_0\rvert = \rho}\frac{f(z)}{(z - z_0)^2}\dd{z}\right\rvert \leq \frac{1}{2\pi}\cdot\frac{1}{\rho^2}\cdot 2\pi\rho = \frac{1}{\rho}$$
 
 이라 $M \leq 1/\rho < \infty$이다. Supremum의 정의에서 $\lvert f_n'(z_0)\rvert \rightarrow M$인 함수열 $(f_n) \subseteq \mathcal{F}$을 택한다. $\mathcal{F}$의 모든 함수가 절댓값 $1$로 bounded라 국소유계하므로 Montel 정리 (정리 3) 에 의해 $\mathcal{F}$은 정규족이고, $(f_n)$의 부분열이 $\Omega$의 콤팩트 부분집합 위에서 어떤 holomorphic function $f^\ast$로 균등수렴한다. 이 부분열을 다시 $(f_n)$이라 적는다.
 

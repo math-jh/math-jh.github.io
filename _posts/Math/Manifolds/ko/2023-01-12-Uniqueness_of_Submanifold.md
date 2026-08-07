@@ -85,7 +85,7 @@ $$\iota=\Phi\circ\bar{\Phi}^{-1}$$
 
 은 $A$에서 $M$으로의 immersion이다. 즉 $(A,\iota)$는 $M$의 submanifold이다. 뿐만 아니라, 위의 식은 $(N,\Phi)$와 $(A,\iota)$가 equivalent하다는 것을 보여준다. 
 
-반대로, manifold 구조가 주어진 부분집합 $A\subseteq M$에 대하여 inclusion $\iota:A\hookrightarrow M$이 immersion이라 하면 $(A,\iota)$는 항상 $M$의 submanifold가 된다. 이는 임의의 $x\in A$에 대하여 $d\iota_x:T_xA\rightarrow T_xM$이 단사함수임을 의미하므로, $d\iota_x$는 $T_xA$와 $d\iota_x(T_xA)$ 사이의 전단사함수를 유도한다. 약간의 표기법 상의 문제를 덮어두면 $T_xA$를 $d\iota_x(T_xA)$와 동일한 것으로 취급할 수 있다. 
+반대로, manifold 구조가 주어진 부분집합 $A\subseteq M$에 대하여 inclusion $\iota:A\hookrightarrow M$이 immersion이라 하면 $(A,\iota)$는 항상 $M$의 submanifold가 된다. 이는 임의의 $x\in A$에 대하여 $\dd{\iota_x}:T_xA\rightarrow T_xM$이 단사함수임을 의미하므로, $\dd{\iota_x}$는 $T_xA$와 $\dd{\iota_x}(T_xA)$ 사이의 전단사함수를 유도한다. 약간의 표기법 상의 문제를 덮어두면 $T_xA$를 $\dd{\iota_x}(T_xA)$와 동일한 것으로 취급할 수 있다. 
 
 ## 부분다양체의 유일성
 
@@ -116,11 +116,11 @@ Manifold $M$의 부분집합 $A$가 주어졌다 하자. 만일 $A$를 $M$의 su
 
 여기서 $\iota$와 $\iota'$는 모두 $A\hookrightarrow M$이지만, 구별을 위해 다른 이름으로 표기하였다. 정의에 의해 $(A,\mathcal{T},\mathcal{A})$가 $M$의 embedded submanifold이므로, 수직방향의 $\iota$는 embedding이고 따라서 [명제 2](#prop2)에 의하여 $\id$는 $C^\infty$이다. 또, 연쇄법칙에 의하여
 
-$$d\iota'=d\iota\circ d(\id)$$
+$$\dd{\iota}'=\dd{\iota}\circ \dd{(\id)}$$
 
-이 성립하고, $d\iota'$는 모든 점에서 단사이므로 $d(\id)$ 또한 모든 점에서 단사이다. 따라서 $d(\id)$가 모든 점에서 전사임을 보이면 충분하다.
+이 성립하고, $\dd{\iota}'$는 모든 점에서 단사이므로 $\dd{(\id)}$ 또한 모든 점에서 단사이다. 따라서 $\dd{(\id)}$가 모든 점에서 전사임을 보이면 충분하다.
 
-결론에 반하여 $d(\id)$가 전사가 아닌 점 $a$가 존재한다 가정하자. 그럼 이 점에서의 tangent space의 차원을 생각하면
+결론에 반하여 $\dd{(\id)}$가 전사가 아닌 점 $a$가 존재한다 가정하자. 그럼 이 점에서의 tangent space의 차원을 생각하면
 
 $$\dim(A,\mathcal{T}',\mathcal{A}')<\dim(A,\mathcal{T},\mathcal{A})$$
 

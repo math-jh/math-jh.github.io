@@ -26,7 +26,7 @@ $$\mathcal{I}(z) = \int_\gamma e^{W(x)/z}\,\omega$$
 우선 critical point와 그 non-degeneracy 개념을 정확히 하자.
 
 ::: 정의 1
-Smooth manifold ([\[미분다양체\] §미분다양체, ⁋정의 1](/ko/math/manifolds/smooth_manifolds#def1)) $M$과 smooth function $f:M\rightarrow\mathbb{R}$이 주어졌다 하자. 점 $p\in M$이 $f$의 *critical point<sub>임계점</sub>*라는 것은 differential ([\[미분다양체\] §미분사상, ⁋정의 7](/ko/math/manifolds/differentials#def7)) $df_p:T_pM\rightarrow\mathbb{R}$이 zero map인 것을 뜻한다. 여기서 $T_pM$은 $p$에서의 tangent space이다 ([\[미분다양체\] §접공간, ⁋정의 3](/ko/math/manifolds/tangent_space#def3)).
+Smooth manifold ([\[미분다양체\] §미분다양체, ⁋정의 1](/ko/math/manifolds/smooth_manifolds#def1)) $M$과 smooth function $f:M\rightarrow\mathbb{R}$이 주어졌다 하자. 점 $p\in M$이 $f$의 *critical point<sub>임계점</sub>*라는 것은 differential ([\[미분다양체\] §미분사상, ⁋정의 7](/ko/math/manifolds/differentials#def7)) $\dd{f_p}:T_pM\rightarrow\mathbb{R}$이 zero map인 것을 뜻한다. 여기서 $T_pM$은 $p$에서의 tangent space이다 ([\[미분다양체\] §접공간, ⁋정의 3](/ko/math/manifolds/tangent_space#def3)).
 :::
 
 좌표 $(x_1,\ldots,x_n)$을 점 $p$ 근방에 잡으면 위 조건은 $\partial f/\partial x_i(p)=0$이 모든 $i$에 대해 성립한다는 것과 동치이다. Critical point에서는 일차 정보가 사라지므로, 함수의 국소적 형상은 이차 정보, 즉 Hessian이 결정한다.
@@ -43,7 +43,7 @@ $$\operatorname{Hess}_p(f)(X,Y) = X_p(\tilde Y f)$$
 
 $$\operatorname{Hess}_p(f) = \left[\frac{\partial^2 f}{\partial x_i\partial x_j}(p)\right]_{i,j}$$
 
-으로 주어지는 대칭행렬이다. Critical point가 $df_p=0$이라는 1차 조건만으로 결정되는 데에 반해, Hessian은 그 critical point가 어떤 종류인가, 즉 극소·극대·안장점인가를 구분하는 이차 정보를 담는다.
+으로 주어지는 대칭행렬이다. Critical point가 $\dd{f_p}=0$이라는 1차 조건만으로 결정되는 데에 반해, Hessian은 그 critical point가 어떤 종류인가, 즉 극소·극대·안장점인가를 구분하는 이차 정보를 담는다.
 
 ::: 정의 3
 Critical point $p$가 *non-degenerate<sub>비퇴화</sub>*라는 것은 $\operatorname{Hess}_p(f)$가 비퇴화 대칭 bilinear form인 것, 즉 좌표를 잡았을 때 이 Hessian 행렬이 가역인 것을 뜻한다. 모든 critical point가 non-degenerate인 smooth function $f:M\rightarrow\mathbb{R}$을 *Morse function<sub>모스 함수</sub>*이라 부른다.
@@ -76,13 +76,13 @@ $$f\circ\varphi^{-1}(y) = f(p) - y_1^2 - \cdots - y_{\lambda_p}^2 + y_{\lambda_p
 :::
 
 ::: 증명
-논의를 $M=\mathbb{R}^n$의 원점 근방으로 옮겨도 무방하다. $f(0)=0$, $df_0=0$이라 가정하자. 우선 다음의 보조 항등식이 필요하다. 임의의 smooth function $g:U\rightarrow\mathbb{R}$이 $g(0)=0$을 만족하면
+논의를 $M=\mathbb{R}^n$의 원점 근방으로 옮겨도 무방하다. $f(0)=0$, $\dd{f_0}=0$이라 가정하자. 우선 다음의 보조 항등식이 필요하다. 임의의 smooth function $g:U\rightarrow\mathbb{R}$이 $g(0)=0$을 만족하면
 
-$$g(x) = \int_0^1 \frac{d}{dt}g(tx)\,dt = \sum_{i=1}^n x_i\int_0^1 \frac{\partial g}{\partial x_i}(tx)\,dt = \sum_{i=1}^n x_i\,g_i(x)$$
+$$g(x) = \int_0^1 \frac{d}{\dd{t}}g(tx)\dd{t} = \sum_{i=1}^n x_i\int_0^1 \frac{\partial g}{\partial x_i}(tx)\dd{t} = \sum_{i=1}^n x_i\,g_i(x)$$
 
-로 쓸 수 있다. 여기서 $g_i(x)=\int_0^1 (\partial g/\partial x_i)(tx)\,dt$는 smooth이고 $g_i(0)=(\partial g/\partial x_i)(0)$이다.
+로 쓸 수 있다. 여기서 $g_i(x)=\int_0^1 (\partial g/\partial x_i)(tx)\dd{t}$는 smooth이고 $g_i(0)=(\partial g/\partial x_i)(0)$이다.
 
-이 보조항등식을 $f$ 자신에 한 번 적용하면 $f(x)=\sum_i x_i f_i(x)$를 얻으며, $df_0=0$이므로 $f_i(0)=0$이다. 따라서 각 $f_i$에 다시 같은 항등식을 적용하면
+이 보조항등식을 $f$ 자신에 한 번 적용하면 $f(x)=\sum_i x_i f_i(x)$를 얻으며, $\dd{f_0}=0$이므로 $f_i(0)=0$이다. 따라서 각 $f_i$에 다시 같은 항등식을 적용하면
 
 $$f_i(x) = \sum_{j=1}^n x_j h_{ij}(x)$$
 
@@ -120,13 +120,13 @@ $f$의 non-degenerate critical point는 고립되어 있다. 특히 compact mani
 :::
 
 ::: 증명
-[정리 6](#thm6)의 표준형 $f(y)=f(p)-y_1^2-\cdots-y_{\lambda_p}^2+y_{\lambda_p+1}^2+\cdots+y_n^2$에서 $df(y)=(-2y_1,\ldots,-2y_{\lambda_p},2y_{\lambda_p+1},\ldots,2y_n)$이므로, $y=0$ 외에는 critical point가 존재하지 않는다. 즉 $p$의 적당한 근방에는 $p$ 외의 critical point가 없으므로 $p$는 isolated critical point이다. $M$이 compact이면 critical point 집합이 closed이며 isolated point들로 구성되므로 유한집합이다.
+[정리 6](#thm6)의 표준형 $f(y)=f(p)-y_1^2-\cdots-y_{\lambda_p}^2+y_{\lambda_p+1}^2+\cdots+y_n^2$에서 $\dd{f}(y)=(-2y_1,\ldots,-2y_{\lambda_p},2y_{\lambda_p+1},\ldots,2y_n)$이므로, $y=0$ 외에는 critical point가 존재하지 않는다. 즉 $p$의 적당한 근방에는 $p$ 외의 critical point가 없으므로 $p$는 isolated critical point이다. $M$이 compact이면 critical point 집합이 closed이며 isolated point들로 구성되므로 유한집합이다.
 :::
 
 두 가지 표준적인 예시를 살펴본다.
 
 ::: 예시 8
-평면 $\mathbb{R}^2$ 위의 함수 $f(x,y)=x^2-y^2$을 생각하자. $df=(2x,-2y)$이므로 유일한 critical point는 원점이며, 그 Hessian은 $\operatorname{diag}(2,-2)$이므로 nondegenerate하고 Morse index는 $1$, signature는 $0$이다. 즉 원점은 *안장점<sub>saddle point</sub>*이며, 이미 $f$ 자체가 [정리 6](#thm6)의 표준형으로 주어진 형태이다.
+평면 $\mathbb{R}^2$ 위의 함수 $f(x,y)=x^2-y^2$을 생각하자. $\dd{f}=(2x,-2y)$이므로 유일한 critical point는 원점이며, 그 Hessian은 $\operatorname{diag}(2,-2)$이므로 nondegenerate하고 Morse index는 $1$, signature는 $0$이다. 즉 원점은 *안장점<sub>saddle point</sub>*이며, 이미 $f$ 자체가 [정리 6](#thm6)의 표준형으로 주어진 형태이다.
 :::
 
 ::: 예시 9
@@ -143,9 +143,9 @@ $$\sum_p (-1)^{\lambda_p} = \chi(T^2) = 0$$
 
 Morse lemma의 첫 번째 응용은 oscillating integral의 점근전개이다. Smooth amplitude $a\in C_c^\infty(M)$과 smooth phase $\phi:M\rightarrow\mathbb{R}$이 주어졌을 때, 우리는 다음의 *oscillating integral<sub>oscillating integral</sub>*
 
-$$I(\hbar) = \int_M e^{i\phi(x)/\hbar}\,a(x)\,dx$$
+$$I(\hbar) = \int_M e^{i\phi(x)/\hbar}\,a(x)\dd{x}$$
 
-의 $\hbar\rightarrow 0^+$ 점근 행동을 구하고자 한다. 여기서 $dx$는 manifold 위의 고정된 (예컨대 Riemannian) volume form이며, support condition은 $a$의 compact support로 보장된다. 직관적으로 $\hbar\rightarrow 0$인 극한에서 phase $\phi/\hbar$가 빠르게 진동하므로 적분의 기여는 phase의 미분이 $0$이 되는 점, 즉 $\phi$의 critical point 근방에서만 살아남는다. 이를 정량화하는 것이 다음 정리이다.
+의 $\hbar\rightarrow 0^+$ 점근 행동을 구하고자 한다. 여기서 $\dd{x}$는 manifold 위의 고정된 (예컨대 Riemannian) volume form이며, support condition은 $a$의 compact support로 보장된다. 직관적으로 $\hbar\rightarrow 0$인 극한에서 phase $\phi/\hbar$가 빠르게 진동하므로 적분의 기여는 phase의 미분이 $0$이 되는 점, 즉 $\phi$의 critical point 근방에서만 살아남는다. 이를 정량화하는 것이 다음 정리이다.
 
 ::: 정리 10 (stationary phase formula)
 $\phi:M\rightarrow\mathbb{R}$이 $\operatorname{supp}(a)$ 위에서 유한 개의 non-degenerate critical point만을 가진다고 하자. $n=\dim M$이라 할 때, $\hbar\rightarrow 0^+$에서 다음의 점근전개가 성립한다.
@@ -158,7 +158,7 @@ $$I(\hbar) = (2\pi\hbar)^{n/2}\sum_{p\in\operatorname{Crit}(\phi)\cap\operatorna
 ::: 증명
 증명은 다음 세 단계로 나누어진다.
 
-**1단계 (localization).** 우선 critical point 바깥에서는 적분이 임의의 다항 차수보다 빠르게 감소함을 본다. $x_0\in\operatorname{supp}(a)$가 critical point가 아니라 하자. 그럼 $d\phi(x_0)\neq 0$이므로 $x_0$ 근방에서 vector field $X$를 $X\phi=1$이 되도록 잡을 수 있다. 그럼
+**1단계 (localization).** 우선 critical point 바깥에서는 적분이 임의의 다항 차수보다 빠르게 감소함을 본다. $x_0\in\operatorname{supp}(a)$가 critical point가 아니라 하자. 그럼 $\dd{\phi}(x_0)\neq 0$이므로 $x_0$ 근방에서 vector field $X$를 $X\phi=1$이 되도록 잡을 수 있다. 그럼
 
 $$X\bigl(e^{i\phi/\hbar}\bigr) = \frac{i}{\hbar}(X\phi)e^{i\phi/\hbar} = \frac{i}{\hbar}e^{i\phi/\hbar}$$
 
@@ -170,25 +170,25 @@ $$\phi(y) = \phi(p) - y_1^2 - \cdots - y_{\lambda_p}^2 + y_{\lambda_p+1}^2 + \cd
 
 이라 할 수 있다. 여기서 $Q(y)=\sum_i 2\epsilon_i y_i^2$이며 $\epsilon_i\in\{-1,+1\}$이다. 좌표변환의 Jacobian을 $J(y)$라 하고 $\tilde a(y)=a(y)J(y)$로 두면
 
-$$I(\hbar) = e^{i\phi(p)/\hbar}\int_{\mathbb{R}^n} e^{iQ(y)/(2\hbar)}\,\tilde a(y)\,dy$$
+$$I(\hbar) = e^{i\phi(p)/\hbar}\int_{\mathbb{R}^n} e^{iQ(y)/(2\hbar)}\,\tilde a(y)\dd{y}$$
 
 로 환원된다 (extension은 0으로). 이제 문제는 *Gaussian 형태의 oscillating integral*
 
-$$J(\hbar) = \int_{\mathbb{R}^n} e^{i\sum_i \epsilon_i y_i^2/\hbar}\,\tilde a(y)\,dy$$
+$$J(\hbar) = \int_{\mathbb{R}^n} e^{i\sum_i \epsilon_i y_i^2/\hbar}\,\tilde a(y)\dd{y}$$
 
 의 $\hbar\rightarrow 0$ 점근을 계산하는 것이다.
 
 **3단계 (Gaussian integral).** $\tilde a(y) = \tilde a(0) + \sum_i y_i \tilde a_i(y)$로 Taylor 전개하면, $y_i$항들은 부분적분 후 $O(\hbar)$의 보정만을 주므로 leading order는
 
-$$J(\hbar) \sim \tilde a(0)\prod_{i=1}^n \int_{-\infty}^\infty e^{i\epsilon_i y_i^2/\hbar}\,dy_i$$
+$$J(\hbar) \sim \tilde a(0)\prod_{i=1}^n \int_{-\infty}^\infty e^{i\epsilon_i y_i^2/\hbar}\dd{y_i}$$
 
 으로 인수분해된다. 1차원 Fresnel 적분의 표준 결과
 
-$$\int_{-\infty}^\infty e^{i\epsilon y^2/\hbar}\,dy = \sqrt{\pi\hbar}\,e^{i\epsilon\pi/4} = (\pi\hbar)^{1/2}\,e^{i\operatorname{sgn}(\epsilon)\pi/4}$$
+$$\int_{-\infty}^\infty e^{i\epsilon y^2/\hbar}\dd{y} = \sqrt{\pi\hbar}\,e^{i\epsilon\pi/4} = (\pi\hbar)^{1/2}\,e^{i\operatorname{sgn}(\epsilon)\pi/4}$$
 
 를 모든 $i$에 대해 곱하면
 
-$$\prod_{i=1}^n \int_{-\infty}^\infty e^{i\epsilon_i y_i^2/\hbar}\,dy_i = (\pi\hbar)^{n/2}\,e^{i\pi\sum_i\operatorname{sgn}(\epsilon_i)/4} = (\pi\hbar)^{n/2}\,e^{i\pi\sigma_p/4}$$
+$$\prod_{i=1}^n \int_{-\infty}^\infty e^{i\epsilon_i y_i^2/\hbar}\dd{y_i} = (\pi\hbar)^{n/2}\,e^{i\pi\sum_i\operatorname{sgn}(\epsilon_i)/4} = (\pi\hbar)^{n/2}\,e^{i\pi\sigma_p/4}$$
 
 이 된다. 여기서 마지막 등호는 $\sum_i\operatorname{sgn}(\epsilon_i)$이 정확히 $Q$, 즉 $\operatorname{Hess}_p(\phi)$의 signature $\sigma_p$라는 사실을 사용한다.
 
@@ -214,19 +214,19 @@ $$I(\hbar) \sim (2\pi\hbar)^{n/2}\sum_p e^{i\phi(p)/\hbar}\,e^{i\pi\sigma_p/4}\,
 ::: 예시 12
 $M=\mathbb{R}$ 위에서 $\phi(x)=x^2/2$, $a\in C_c^\infty(\mathbb{R})$이라 하자. 유일한 critical point는 $0$이며 $\phi(0)=0$, $\operatorname{Hess}_0(\phi)=1$, $\sigma_0=+1$이다. [정리 10](#thm10)에 의해
 
-$$\int_{\mathbb{R}} e^{ix^2/(2\hbar)}\,a(x)\,dx = \sqrt{2\pi\hbar}\,e^{i\pi/4}\,a(0) + O(\hbar^{3/2})$$
+$$\int_{\mathbb{R}} e^{ix^2/(2\hbar)}\,a(x)\dd{x} = \sqrt{2\pi\hbar}\,e^{i\pi/4}\,a(0) + O(\hbar^{3/2})$$
 
 가 성립하며, 이는 1차원 Fresnel 적분의 표준 공식과 정확히 일치한다.
 :::
 
 ::: 예시 13
-$M=\mathbb{R}^2$ 위의 $\phi(x,y)=xy$를 생각하자. $d\phi=(y,x)$이므로 유일한 critical point는 원점이고, Hessian은
+$M=\mathbb{R}^2$ 위의 $\phi(x,y)=xy$를 생각하자. $\dd{\phi}=(y,x)$이므로 유일한 critical point는 원점이고, Hessian은
 
 $$\operatorname{Hess}_0(\phi) = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}$$
 
 이며 eigenvalue가 $\pm 1$이므로 nondegenerate하고 $\sigma_0=0$, $\lvert\det\operatorname{Hess}_0(\phi)\rvert=1$이다. 따라서 [정리 10](#thm10)에 의해
 
-$$\int_{\mathbb{R}^2} e^{ixy/\hbar}\,a(x,y)\,dx\,dy = 2\pi\hbar\,a(0,0) + O(\hbar^2)$$
+$$\int_{\mathbb{R}^2} e^{ixy/\hbar}\,a(x,y)\dd{x}\dd{y} = 2\pi\hbar\,a(0,0) + O(\hbar^2)$$
 
 가 성립한다. 이 식은 Fourier 변환과 inverse Fourier 변환을 연결하는 *Fourier inversion* 정형과 동등하며, $a$의 Fourier 변환을 적당히 재배열하면 직접 검증할 수 있다.
 :::
@@ -245,14 +245,14 @@ $$\int_\Gamma e^{W(x)/\hbar}\,\omega$$
 
 $$h(x) = -\operatorname{Re}(W(x)/\hbar)$$
 
-라 하면, $h$는 smooth real-valued function이며, $W$의 holomorphic critical point $p$ (즉 $dW(p)=0$) 가 정확히 $h$의 critical point에 대응한다. 또한 $W$가 $p$에서 non-degenerate, 즉 complex Hessian이 가역이라는 조건은 $h$가 $p$에서 nondegenerate critical point를 가짐과 동치이다. 단 그 *Morse index*는 항상 $n$ (= 절반 차원)이며, 이는 아래 [명제 15](#prop15)에서 정식으로 보인다.
+라 하면, $h$는 smooth real-valued function이며, $W$의 holomorphic critical point $p$ (즉 $\dd{W}(p)=0$) 가 정확히 $h$의 critical point에 대응한다. 또한 $W$가 $p$에서 non-degenerate, 즉 complex Hessian이 가역이라는 조건은 $h$가 $p$에서 nondegenerate critical point를 가짐과 동치이다. 단 그 *Morse index*는 항상 $n$ (= 절반 차원)이며, 이는 아래 [명제 15](#prop15)에서 정식으로 보인다.
 
 $X$ 위에 적당한 Kähler metric을 고정하고 (실 부분이 Riemannian metric을 이루므로 [\[리만기하학\] §리만 계량](/ko/math/riemannian_geometry/Riemannian_metric)의 일반론에 따라 gradient vector field가 정의된다) $h$의 gradient flow를 생각하자.
 
 ::: 정의 14
 $W$의 nondegenerate critical point $p$에 대하여, $h=-\operatorname{Re}(W/\hbar)$의 *Lefschetz thimble<sub>레프셰츠 팀블</sub>* $\Gamma_p$는 $h$의 negative gradient flow
 
-$$\frac{dx}{dt} = -\nabla h(x)$$
+$$\frac{\dd{x}}{\dd{t}} = -\nabla h(x)$$
 
 의 $p$에서의 unstable manifold, 즉 $t\rightarrow-\infty$일 때 $p$로 수렴하는 점들의 집합이다.
 :::
@@ -304,7 +304,7 @@ $$W(z) = W(p) + \frac12\sum_{i=1}^n z_i^2$$
 
 이라 할 수 있다. 그럼 $\Gamma_p$는 이 좌표에서 $z_i = e^{i\theta_i}t_i$ ($t_i\in\mathbb{R}$)의 꼴로 적당한 위상 $\theta_i$들을 따라 잡은 실 $n$차원 submanifold가 되며, 위상 $\theta_i$는 정확히 적분이 수렴하도록 결정된다. 이 좌표에서 적분은 Gaussian integral
 
-$$e^{W(p)/\hbar}\,\alpha(p)\,\prod_{i=1}^n \int_{\mathbb{R}} e^{e^{2i\theta_i}t_i^2/(2\hbar)}\,dt_i$$
+$$e^{W(p)/\hbar}\,\alpha(p)\,\prod_{i=1}^n \int_{\mathbb{R}} e^{e^{2i\theta_i}t_i^2/(2\hbar)}\dd{t_i}$$
 
 으로 환원되며, 각 1차원 적분은 [정리 10](#thm10)의 증명 3단계와 동일한 방식으로 $\sqrt{2\pi\hbar/(-e^{2i\theta_i})}=\sqrt{2\pi\hbar}/\sqrt{-e^{2i\theta_i}}$를 준다. 이를 모두 곱하면 $(2\pi\hbar)^{n/2}/\sqrt{\det\operatorname{Hess}_p(W)}$가 나오며, square root의 branch는 thimble의 orientation $\{e^{i\theta_i}\}$에 의해 결정된다. 자세한 부호 추적은 **[Pha]** §5를 참조한다.
 :::

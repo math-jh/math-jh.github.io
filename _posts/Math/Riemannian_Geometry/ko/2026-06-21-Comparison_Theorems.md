@@ -108,7 +108,7 @@ $J(t_0) = 0$인 Jacobi field는 정확히 $\gamma(t_0)$에서 출발하는 측�
 ::: 정의 6
 측지선 $\gamma : [a, b] \rightarrow M$과 양 끝에서 소멸하는 $\gamma$를 따른 벡터장 $V, W$에 대해, *index form<sub>지표형식</sub>* $I(V, W)$를
 
-$$I(V, W) = \int_a^b \Bigl( \langle D_t V,\, D_t W\rangle - \langle R(V, \dot\gamma)\dot\gamma,\, W\rangle \Bigr) \mathop{dt}$$
+$$I(V, W) = \int_a^b \Bigl( \langle D_t V,\, D_t W\rangle - \langle R(V, \dot\gamma)\dot\gamma,\, W\rangle \Bigr) \dd{t}$$
 
 로 정의한다.
 :::
@@ -118,15 +118,15 @@ Index form이 측지선의 최소화 성질을 판정하는 도구임은 다음 
 ::: 명제 7 (에너지의 제2변분)
 측지선 $\gamma : [a, b] \rightarrow M$의 고정변분 $\Gamma$의 변분장을 $V$라 하자. 그럼
 
-$$\left.\frac{d^2}{ds^2}\right\vert_{s=0} E(\gamma_s) = I(V, V) = \int_a^b \Bigl( \lVert D_t V\rVert^2 - \langle R(V, \dot\gamma)\dot\gamma,\, V\rangle \Bigr) \mathop{dt}$$
+$$\left.\frac{d^2}{\dd{s}^2}\right\vert_{s=0} E(\gamma_s) = I(V, V) = \int_a^b \Bigl( \lVert D_t V\rVert^2 - \langle R(V, \dot\gamma)\dot\gamma,\, V\rangle \Bigr) \dd{t}$$
 
 이 성립한다.
 :::
 
 ::: 증명
-[§측지선, ⁋정리 3](/ko/math/riemannian_geometry/geodesics#thm3)의 증명에서 $\frac{d}{ds} E(\gamma_s) = \int_a^b \langle D_s \partial_t \Gamma, \partial_t \Gamma\rangle \mathop{dt}$임을 보였다. 다시 $s$에 대해 미분하면 metric-compatibility에 의해
+[§측지선, ⁋정리 3](/ko/math/riemannian_geometry/geodesics#thm3)의 증명에서 $\frac{d}{\dd{s}} E(\gamma_s) = \int_a^b \langle D_s \partial_t \Gamma, \partial_t \Gamma\rangle \dd{t}$임을 보였다. 다시 $s$에 대해 미분하면 metric-compatibility에 의해
 
-$$\frac{d^2}{ds^2} E(\gamma_s) = \int_a^b \Bigl( \langle D_s D_s \partial_t \Gamma,\, \partial_t \Gamma\rangle + \langle D_s \partial_t \Gamma,\, D_s \partial_t \Gamma\rangle \Bigr) \mathop{dt}$$
+$$\frac{d^2}{\dd{s}^2} E(\gamma_s) = \int_a^b \Bigl( \langle D_s D_s \partial_t \Gamma,\, \partial_t \Gamma\rangle + \langle D_s \partial_t \Gamma,\, D_s \partial_t \Gamma\rangle \Bigr) \dd{t}$$
 
 이다. 둘째 피적분항에 대칭 보조정리 $D_s \partial_t \Gamma = D_t \partial_s \Gamma$를 쓰면 $\langle D_t \partial_s \Gamma, D_t \partial_s \Gamma\rangle$이다. 첫째 항은 곡률 교환관계 $D_s D_t \partial_s \Gamma = D_t D_s \partial_s \Gamma + R(\partial_s \Gamma, \partial_t \Gamma)\partial_s \Gamma$를 사용하여
 
@@ -134,15 +134,15 @@ $$D_s D_s \partial_t \Gamma = D_s D_t \partial_s \Gamma = D_t D_s \partial_s \Ga
 
 로 바꾼다. 이제 $s = 0$에서 평가하자. 변분이 고정변분이고 $\gamma$가 측지선이므로 $\partial_t \Gamma\vert_{s=0} = \dot\gamma$, $\partial_s \Gamma\vert_{s=0} = V$이다. 첫째 항의 $D_t D_s \partial_s \Gamma$ 부분은 metric-compatibility에 의해
 
-$$\int_a^b \langle D_t D_s \partial_s \Gamma,\, \dot\gamma\rangle \mathop{dt} = \Bigl[\langle D_s \partial_s \Gamma,\, \dot\gamma\rangle\Bigr]_a^b - \int_a^b \langle D_s \partial_s \Gamma,\, D_t \dot\gamma\rangle \mathop{dt}$$
+$$\int_a^b \langle D_t D_s \partial_s \Gamma,\, \dot\gamma\rangle \dd{t} = \Bigl[\langle D_s \partial_s \Gamma,\, \dot\gamma\rangle\Bigr]_a^b - \int_a^b \langle D_s \partial_s \Gamma,\, D_t \dot\gamma\rangle \dd{t}$$
 
 인데, $\gamma$가 측지선이라 $D_t \dot\gamma = 0$이고, 경계항은 $\Gamma$가 고정변분이라 각 $s$에서 $\Gamma(s, a), \Gamma(s, b)$가 상수이므로 $\partial_s \Gamma(s, a) = \partial_s \Gamma(s, b) = 0$이 되어 모두 소멸한다. 따라서 그 부분은 $0$이다. 남은 항을 모으면
 
-$$\left.\frac{d^2}{ds^2}\right\vert_{s=0} E(\gamma_s) = \int_a^b \Bigl( \langle R(V, \dot\gamma)V,\, \dot\gamma\rangle + \lVert D_t V\rVert^2 \Bigr) \mathop{dt}$$
+$$\left.\frac{d^2}{\dd{s}^2}\right\vert_{s=0} E(\gamma_s) = \int_a^b \Bigl( \langle R(V, \dot\gamma)V,\, \dot\gamma\rangle + \lVert D_t V\rVert^2 \Bigr) \dd{t}$$
 
 이 되는데, $\langle R(V, \dot\gamma)V \cdots\rangle$ 항의 부호를 [§리만 곡률, ⁋명제 5](/ko/math/riemannian_geometry/curvature#prop5)의 대칭성으로 정리하면 $\langle R(V, \dot\gamma)\dot\gamma, V\rangle$의 부호는 음이 되어
 
-$$\left.\frac{d^2}{ds^2}\right\vert_{s=0} E(\gamma_s) = \int_a^b \Bigl( \lVert D_t V\rVert^2 - \langle R(V, \dot\gamma)\dot\gamma,\, V\rangle \Bigr) \mathop{dt} = I(V, V)$$
+$$\left.\frac{d^2}{\dd{s}^2}\right\vert_{s=0} E(\gamma_s) = \int_a^b \Bigl( \lVert D_t V\rVert^2 - \langle R(V, \dot\gamma)\dot\gamma,\, V\rangle \Bigr) \dd{t} = I(V, V)$$
 
 를 얻는다.
 :::
@@ -151,7 +151,7 @@ $$\left.\frac{d^2}{ds^2}\right\vert_{s=0} E(\gamma_s) = \int_a^b \Bigl( \lVert D
 
 Index form의 부분적분 형태도 자주 쓰인다. 양 끝에서 소멸하는 smooth $V, W$에 대해 $\langle D_t V, D_t W\rangle$를 부분적분하면
 
-$$I(V, W) = -\int_a^b \langle D_t^2 V + R(V, \dot\gamma)\dot\gamma,\, W\rangle \mathop{dt}$$
+$$I(V, W) = -\int_a^b \langle D_t^2 V + R(V, \dot\gamma)\dot\gamma,\, W\rangle \dd{t}$$
 
 이고, 따라서 $I(V, W) = 0$이 모든 $W$에 대해 성립하는 것은 $V$가 양 끝에서 소멸하는 Jacobi field인 것과 동치이다. 이는 index form의 퇴화 방향이 정확히 conjugate point에서 나오는 Jacobi field임을 말하며, conjugate point 너머에서 측지선이 더 이상 최소화하지 못한다는 사실의 근거가 된다.
 
@@ -176,13 +176,13 @@ $$V_i(t) := \sin\!\Bigl(\frac{\pi t}{L}\Bigr)\, E_i(t)$$
 
 를 놓자. $E_i$가 평행이므로 $D_t V_i = \frac{\pi}{L}\cos(\frac{\pi t}{L})\, E_i$이고, [명제 7](#prop7)의 index form은
 
-$$I(V_i, V_i) = \int_0^L \Bigl( \frac{\pi^2}{L^2}\cos^2\!\frac{\pi t}{L} - \sin^2\!\frac{\pi t}{L}\,\langle R(E_i, \dot\gamma)\dot\gamma, E_i\rangle \Bigr) \mathop{dt}$$
+$$I(V_i, V_i) = \int_0^L \Bigl( \frac{\pi^2}{L^2}\cos^2\!\frac{\pi t}{L} - \sin^2\!\frac{\pi t}{L}\,\langle R(E_i, \dot\gamma)\dot\gamma, E_i\rangle \Bigr) \dd{t}$$
 
 이다. 이제 $i$에 대해 합하면, $\sum_{i=1}^{n-1}\langle R(E_i, \dot\gamma)\dot\gamma, E_i\rangle = \operatorname{Ric}(\dot\gamma, \dot\gamma) \ge (n-1)k$이므로
 
-$$\sum_{i=1}^{n-1} I(V_i, V_i) \le \int_0^L \Bigl( (n-1)\frac{\pi^2}{L^2}\cos^2\!\frac{\pi t}{L} - (n-1)k\, \sin^2\!\frac{\pi t}{L} \Bigr) \mathop{dt} = (n-1)\int_0^L \Bigl( \frac{\pi^2}{L^2}\cos^2\!\frac{\pi t}{L} - k\sin^2\!\frac{\pi t}{L} \Bigr) \mathop{dt}$$
+$$\sum_{i=1}^{n-1} I(V_i, V_i) \le \int_0^L \Bigl( (n-1)\frac{\pi^2}{L^2}\cos^2\!\frac{\pi t}{L} - (n-1)k\, \sin^2\!\frac{\pi t}{L} \Bigr) \dd{t} = (n-1)\int_0^L \Bigl( \frac{\pi^2}{L^2}\cos^2\!\frac{\pi t}{L} - k\sin^2\!\frac{\pi t}{L} \Bigr) \dd{t}$$
 
-이다. $\int_0^L \cos^2(\pi t/L)\mathop{dt} = \int_0^L \sin^2(\pi t/L)\mathop{dt} = L/2$이므로 우변은
+이다. $\int_0^L \cos^2(\pi t/L)\dd{t} = \int_0^L \sin^2(\pi t/L)\dd{t} = L/2$이므로 우변은
 
 $$(n-1)\,\frac{L}{2}\Bigl( \frac{\pi^2}{L^2} - k \Bigr)$$
 

@@ -32,9 +32,9 @@ $G$도 $f$의 원시함수라 하면 $(G - F)' = f - f = 0$이다. [§평균값 
 
 이 명제에 따라 $f$의 원시함수 전체를 하나의 표현으로 묶어
 
-$$\int f(x)\mathop{dx} = F(x) + C$$
+$$\int f(x)\dd{x} = F(x) + C$$
 
-로 적고, 이를 $f$의 *부정적분<sub>indefinite integral</sub>*이라 한다. 여기서 $C$를 *적분상수*, $f$를 *피적분함수*, 기호 $\mathop{dx}$를 적분변수의 표시로 본다. [명제 2](#prop2)가 보장하는 "상수 차이뿐"이라는 사실 덕분에 적분상수 $C$ 하나로 모든 원시함수를 한꺼번에 나타낼 수 있다.
+로 적고, 이를 $f$의 *부정적분<sub>indefinite integral</sub>*이라 한다. 여기서 $C$를 *적분상수*, $f$를 *피적분함수*, 기호 $\dd{x}$를 적분변수의 표시로 본다. [명제 2](#prop2)가 보장하는 "상수 차이뿐"이라는 사실 덕분에 적분상수 $C$ 하나로 모든 원시함수를 한꺼번에 나타낼 수 있다.
 
 우리가 암묵적으로 가정하는 것, 즉 구간이 연결되어 있다는 가정은 본질적인 것까지는 아니지만, 위의 명제는 오직 구간이 연결되어있을 때만 성립한다. 정의역이 끊겨 있으면 각 조각마다 상수가 달라질 수 있기 때문이다. 가령 $1/x$는 $x > 0$과 $x < 0$에서 따로 정의되는데, $F(x) = \ln\lvert x\rvert$에 두 조각에서 서로 다른 상수를 더한 것도 모두 $1/x$의 원시함수이므로, 정의역 전체에서는 "상수 차이뿐"이라는 명제가 문자 그대로 적용되지는 않는다.
 
@@ -47,7 +47,7 @@ $$\int f(x)\mathop{dx} = F(x) + C$$
 ::: 명제 3 (부정적분의 선형성)
 $f, g$가 원시함수를 가지고 $a, b$가 상수이면
 
-$$\int \bigl(a f(x) + b g(x)\bigr)\mathop{dx} = a\int f(x)\mathop{dx} + b\int g(x)\mathop{dx}$$
+$$\int \bigl(a f(x) + b g(x)\bigr)\dd{x} = a\int f(x)\dd{x} + b\int g(x)\dd{x}$$
 
 이다.
 :::
@@ -62,11 +62,11 @@ $$(aF + bG)' = aF' + bG' = af + bg$$
 
 이제 [§미분법](/ko/math/calculus/differentiation_rules)에서의 여러 함수들의 도함수 공식을 뒤집으면 다음의 기본 공식들을 얻는다. 즉, 각 공식의 우변을 미분하면 피적분함수가 된다.
 
-$$\int x^r\mathop{dx} = \frac{x^{r+1}}{r+1} + C\ (r \neq -1), \qquad \int \frac{1}{x}\mathop{dx} = \ln\lvert x\rvert + C,$$
+$$\int x^r\dd{x} = \frac{x^{r+1}}{r+1} + C\ (r \neq -1), \qquad \int \frac{1}{x}\dd{x} = \ln\lvert x\rvert + C,$$
 
-$$\int e^x\mathop{dx} = e^x + C, \qquad \int \cos x\mathop{dx} = \sin x + C, \qquad \int \sin x\mathop{dx} = -\cos x + C,\qquad \int \sec^2 x\mathop{dx} = \tan x + C,$$
+$$\int e^x\dd{x} = e^x + C, \qquad \int \cos x\dd{x} = \sin x + C, \qquad \int \sin x\dd{x} = -\cos x + C,\qquad \int \sec^2 x\dd{x} = \tan x + C,$$
 
-$$\int \frac{dx}{1 + x^2} = \arctan x + C, \qquad \int \frac{dx}{\sqrt{1 - x^2}} = \arcsin x + C.$$
+$$\int \frac{\dd{x}}{1 + x^2} = \arctan x + C, \qquad \int \frac{\dd{x}}{\sqrt{1 - x^2}} = \arcsin x + C.$$
 
 선형성과 이 공식들을 결합하면 기본 함수들의 임의의 합 또한 항별로 적분할 수 있다. 피적분함수가 표준형이 아니면 먼저 다른 도구들로 변형하는데, 가령 삼각함수 관계식
 
@@ -79,7 +79,7 @@ $$\tan^2 x = \sec^2 x - 1$$
 ::: 정리 4 (치환적분)
 $g$가 미분가능하고 $f$가 연속이면
 
-$$\int f(g(x)) g'(x) \mathop{dx} = \int f(u) \mathop{du} \quad (u = g(x))$$
+$$\int f(g(x)) g'(x) \dd{x} = \int f(u) \dd{u} \quad (u = g(x))$$
 
 이다.
 :::
@@ -87,39 +87,39 @@ $$\int f(g(x)) g'(x) \mathop{dx} = \int f(u) \mathop{du} \quad (u = g(x))$$
 ::: 증명
 $F$를 $f$의 원시함수라 하면 [§미분법, ⁋정리 4](/ko/math/calculus/differentiation_rules#thm4)에 의해
 
-$$\frac{d}{\mathop{dx}}F(g(x)) = F'(g(x))g'(x) = f(g(x))g'(x)$$
+$$\frac{d}{\dd{x}}F(g(x)) = F'(g(x))g'(x) = f(g(x))g'(x)$$
 
-이므로, $F(g(x))$가 좌변 피적분함수의 원시함수이다. 따라서 $\int f(g(x))g'(x)\mathop{dx} = F(g(x)) + C = F(u) + C = \int f(u)\mathop{du}$이다.
+이므로, $F(g(x))$가 좌변 피적분함수의 원시함수이다. 따라서 $\int f(g(x))g'(x)\dd{x} = F(g(x)) + C = F(u) + C = \int f(u)\dd{u}$이다.
 :::
 
-실용적으로는 $u = g(x)$, $\mathop{du} = g'(x) \mathop{dx}$로 두고 식을 $u$만으로 바꾸어 적분한 뒤 되돌리면 된다. 가령 $u = \cos x$로 두면 
+실용적으로는 $u = g(x)$, $\dd{u} = g'(x) \dd{x}$로 두고 식을 $u$만으로 바꾸어 적분한 뒤 되돌리면 된다. 가령 $u = \cos x$로 두면 
 
-$$\int \tan x \mathop{dx} = -\int \frac{du}{u} = -\ln\lvert\cos x\rvert + C$$
+$$\int \tan x \dd{x} = -\int \frac{\dd{u}}{u} = -\ln\lvert\cos x\rvert + C$$
 
 이고, 같은 요령으로 
 
-$$\int \frac{x}{x^2+1} \mathop{dx} = \ln(x^2+1) + C$$
+$$\int \frac{x}{x^2+1} \dd{x} = \ln(x^2+1) + C$$
 
 를 얻는다.
 
 ::: 정리 5 (부분적분)
 $u, v$가 미분가능하고 그 도함수가 연속이면
 
-$$\int u v' \mathop{dx} = uv - \int u' v \mathop{dx}$$
+$$\int u v' \dd{x} = uv - \int u' v \dd{x}$$
 
 이다.
 :::
 
 ::: 증명
-[§미분법, ⁋명제 3](/ko/math/calculus/differentiation_rules#prop3)으로 $(uv)' = u'v + uv'$이므로 $uv' = (uv)' - u'v$이고, 양변을 적분하면 $\int (uv)' \mathop{dx} = uv$에서 주장이 따른다.
+[§미분법, ⁋명제 3](/ko/math/calculus/differentiation_rules#prop3)으로 $(uv)' = u'v + uv'$이므로 $uv' = (uv)' - u'v$이고, 양변을 적분하면 $\int (uv)' \dd{x} = uv$에서 주장이 따른다.
 :::
 
-핵심은 $u$를 미분하면 단순해지는 쪽, $v'$을 적분할 수 있는 쪽으로 고르는 것이다. 가령 $\int x e^x \mathop{dx}$는 $u = x$로 두어 $xe^x - e^x + C$가 되고, 로그·역삼각함수처럼 미분이 도리어 간단해지는 함수는 $v' = 1$로 보아 $u$ 자리에 놓는다 ($\int \ln x \mathop{dx} = x\ln x - x + C$). 부분적분이 피적분함수를 단순화하지 않고 자기 자신으로 되돌아오는 경우도 있는데, 이때는 원래 적분을 미지수로 보고 대수적으로 푼다.
+핵심은 $u$를 미분하면 단순해지는 쪽, $v'$을 적분할 수 있는 쪽으로 고르는 것이다. 가령 $\int x e^x \dd{x}$는 $u = x$로 두어 $xe^x - e^x + C$가 되고, 로그·역삼각함수처럼 미분이 도리어 간단해지는 함수는 $v' = 1$로 보아 $u$ 자리에 놓는다 ($\int \ln x \dd{x} = x\ln x - x + C$). 부분적분이 피적분함수를 단순화하지 않고 자기 자신으로 되돌아오는 경우도 있는데, 이때는 원래 적분을 미지수로 보고 대수적으로 푼다.
 
 ::: 예시 6
-$I = \int e^x\cos x \mathop{dx}$는 부분적분을 두 번 하면 자기 자신이 돌아온다. $u = e^x$, $v' = \cos x$로 두면
+$I = \int e^x\cos x \dd{x}$는 부분적분을 두 번 하면 자기 자신이 돌아온다. $u = e^x$, $v' = \cos x$로 두면
 
-$$I = e^x\sin x - \int e^x\sin x \mathop{dx} = e^x\sin x - \Bigl(-e^x\cos x + \int e^x\cos x \mathop{dx}\Bigr) = e^x(\sin x + \cos x) - I$$
+$$I = e^x\sin x - \int e^x\sin x \dd{x} = e^x\sin x - \Bigl(-e^x\cos x + \int e^x\cos x \dd{x}\Bigr) = e^x(\sin x + \cos x) - I$$
 
 이므로 $2I = e^x(\sin x + \cos x)$, 곧
 
@@ -134,32 +134,32 @@ $$\frac{1}{x^2-1} = \frac{1}{2}\left(\frac{1}{x-1} - \frac{1}{x+1}\right)$$
 
 로 가르면 
 
-$$\int \frac{dx}{x^2 - 1} = \frac{1}{2}\ln\left\lvert\frac{x-1}{x+1}\right\rvert + C$$
+$$\int \frac{\dd{x}}{x^2 - 1} = \frac{1}{2}\ln\left\lvert\frac{x-1}{x+1}\right\rvert + C$$
 
 이고, 분모에 기약 이차식이 있으면 완전제곱으로 묶어 
 
-$$\int \frac{dx}{x^2 + 2x + 5} = \frac{1}{2}\arctan\frac{x+1}{2} + C$$
+$$\int \frac{\dd{x}}{x^2 + 2x + 5} = \frac{1}{2}\arctan\frac{x+1}{2} + C$$
 
 처럼 역탄젠트를 활용하면 된다. 
 
-$\sqrt{a^2 - x^2}$, $\sqrt{a^2 + x^2}$ 같은 무리식은 삼각함수로 치환하면 무리식이 사라진다. 가령 $\int \sqrt{1 - x^2} \mathop{dx}$에서 $x = \sin\theta$로 두면
+$\sqrt{a^2 - x^2}$, $\sqrt{a^2 + x^2}$ 같은 무리식은 삼각함수로 치환하면 무리식이 사라진다. 가령 $\int \sqrt{1 - x^2} \dd{x}$에서 $x = \sin\theta$로 두면
 
-$$\int \cos^2\theta \mathop{d\theta} = \frac{1}{2}(\arcsin x + x\sqrt{1-x^2}) + C$$
+$$\int \cos^2\theta \dd{\theta} = \frac{1}{2}(\arcsin x + x\sqrt{1-x^2}) + C$$
 
 를 얻는다. 삼각함수 자체의 거듭제곱은 항등식으로 degree를 낮추거나 치환한다. 홀수 거듭제곱은 하나를 떼어 치환하여
 
-$$\int \sin^3 x \mathop{dx} = -\cos x + \frac{1}{3}\cos^3 x + C$$
+$$\int \sin^3 x \dd{x} = -\cos x + \frac{1}{3}\cos^3 x + C$$
 
 처럼 적분하고, 짝수 거듭제곱은 배각공식으로 degree를 낮추어
 
-$$\int \sin^2 x \mathop{dx} = \frac{x}{2} - \frac{\sin 2x}{4} + C$$
+$$\int \sin^2 x \dd{x} = \frac{x}{2} - \frac{\sin 2x}{4} + C$$
 
 를 얻는다.
 
 부분적분을 반복하면 degree를 한 단계씩 낮추는 점화식을 얻어, 거듭제곱이 섞인 적분을 체계적으로 처리한다.
 
 ::: 예시 7 (점화식)
-$I_n = \int x^n e^x \mathop{dx}$에 $u = x^n$, $v' = e^x$로 부분적분하면
+$I_n = \int x^n e^x \dd{x}$에 $u = x^n$, $v' = e^x$로 부분적분하면
 
 $$I_n = x^n e^x - n I_{n-1}$$
 
@@ -169,12 +169,12 @@ $$I_1 = (x-1)e^x, \quad I_2 = (x^2 - 2x + 2)e^x$$
 
 로 degree를 내려가며 구해진다. 같은 방식으로
 
-$$\int \sin^n x \mathop{dx} = -\frac{1}{n} \sin^{n-1}x\cos x + \frac{n-1}{n}\int \sin^{n-2}x \mathop{dx}$$
+$$\int \sin^n x \dd{x} = -\frac{1}{n} \sin^{n-1}x\cos x + \frac{n-1}{n}\int \sin^{n-2}x \dd{x}$$
 
 라는 점화식도 얻는다.
 :::
 
-이러한 기법으로도 초등함수로 표현되지 않는 적분, 가령 $\int e^{-x^2} \mathop{dx}$나 $\int (\sin x)/x \mathop{dx}$가 있다. 이런 함수도 정적분으로는 잘 정의되며, 그 자체로 새로운 함수를 정의함은 미적분의 기본정리에서 보게 된다.
+이러한 기법으로도 초등함수로 표현되지 않는 적분, 가령 $\int e^{-x^2} \dd{x}$나 $\int (\sin x)/x \dd{x}$가 있다. 이런 함수도 정적분으로는 잘 정의되며, 그 자체로 새로운 함수를 정의함은 미적분의 기본정리에서 보게 된다.
 
 ## 분할과 리만 합
 
@@ -195,14 +195,14 @@ $$S(P, f) = \sum_{i=1}^{n} f(c_i)\Delta x_i$$
 ::: 정의 9
 어떤 실수 $S$가 존재하여, 임의의 $\epsilon > 0$에 대해 $\delta > 0$이 있어 $\lVert P\rVert < \delta$인 모든 분할과 표본점의 선택에 대해 $\lvert S(P, f) - S\rvert < \epsilon$이 성립하면, $f$가 $[a,b]$에서 *적분가능<sub>integrable</sub>*하다고 하고 $S$를 *정적분*이라 하여
 
-$$\int_a^b f(x)\mathop{dx} = S$$
+$$\int_a^b f(x)\dd{x} = S$$
 
 로 적는다. $a$와 $b$를 각각 적분의 아래끝·위끝이라 한다.
 :::
 
 이 정의를 직접 적용해 정적분을 계산할 수 있다. $[0,1]$을 $n$등분하고 오른쪽 끝점 $c_i = i/n$을 택하면, 
 
-$$\int_0^1 x\mathop{dx}$$
+$$\int_0^1 x\dd{x}$$
 
 의 리만 합은
 
@@ -210,7 +210,7 @@ $$\sum_{i=1}^n \frac{i}{n}\cdot\frac1n = \frac{1}{n^2}\cdot\frac{n(n+1)}{2} = \f
 
 이고, 같은 방식으로
 
-$$\int_0^1 x^2\mathop{dx} = \lim_{n\rightarrow\infty}\sum_{i=1}^n \frac{i^2}{n^3} = \lim_{n\rightarrow\infty}\frac{n(n+1)(2n+1)}{6n^3} = \frac13$$
+$$\int_0^1 x^2\dd{x} = \lim_{n\rightarrow\infty}\sum_{i=1}^n \frac{i^2}{n^3} = \lim_{n\rightarrow\infty}\frac{n(n+1)(2n+1)}{6n^3} = \frac13$$
 
 이다. 특히 첫째 결과의 경우 삼각형의 넓이공식으로부터 자명하게 검산 또한 가능하다. 
 
@@ -227,29 +227,29 @@ $[a, b]$에서 연속인 함수는 적분가능하다.
 ::: 명제 11
 $f, g$가 $[a,b]$에서 적분가능하면 다음이 성립한다.
 
-1. 상수 $\alpha, \beta$에 대해 $\int_a^b (\alpha f(x) + \beta g(x))\mathop{dx} = \alpha\int_a^b f(x)\mathop{dx} + \beta\int_a^b g(x)\mathop{dx}$.
-2. $a < c < b$에 대해 $\int_a^b f(x)\mathop{dx} = \int_a^c f(x)\mathop{dx} + \int_c^b f(x)\mathop{dx}$.
-3. 모든 $x$에서 $f(x) \leq g(x)$이면 $\int_a^b f(x)\mathop{dx} \leq \int_a^b g(x)\mathop{dx}$.
+1. 상수 $\alpha, \beta$에 대해 $\int_a^b (\alpha f(x) + \beta g(x))\dd{x} = \alpha\int_a^b f(x)\dd{x} + \beta\int_a^b g(x)\dd{x}$.
+2. $a < c < b$에 대해 $\int_a^b f(x)\dd{x} = \int_a^c f(x)\dd{x} + \int_c^b f(x)\dd{x}$.
+3. 모든 $x$에서 $f(x) \leq g(x)$이면 $\int_a^b f(x)\dd{x} \leq \int_a^b g(x)\dd{x}$.
 :::
 
 ::: 증명
 세 성질 모두 리만 합 수준에서 성립하고 극한으로 보존된다. 선형성은 $S(P, \alpha f + \beta g) = \alpha S(P, f) + \beta S(P, g)$에서, 단조성은 $f(c_i) \leq g(c_i)$이면 $S(P, f) \leq S(P, g)$에서 따른다. 둘째 결과는 $c$를 분할의 한 점으로 포함하는 분할들만 생각하면 리만 합이 두 구간의 리만 합으로 갈라짐에서 얻는다.
 :::
 
-관례적으로 $\int_a^a f(x)\mathop{dx} = 0$, 그리고 $\int_b^a f(x)\mathop{dx} = -\int_a^b f(x)\mathop{dx}$로 두면 둘째 결과는 $a, b, c$의 대소에 무관하게 성립한다. 셋째 결과로부터 두 가지 유용한 계산이 따라온다. 첫째, $m \leq f \leq M$이면
+관례적으로 $\int_a^a f(x)\dd{x} = 0$, 그리고 $\int_b^a f(x)\dd{x} = -\int_a^b f(x)\dd{x}$로 두면 둘째 결과는 $a, b, c$의 대소에 무관하게 성립한다. 셋째 결과로부터 두 가지 유용한 계산이 따라온다. 첫째, $m \leq f \leq M$이면
 
-$$m(b-a) \leq \int_a^b f(x)\mathop{dx} \leq M(b-a)$$
+$$m(b-a) \leq \int_a^b f(x)\dd{x} \leq M(b-a)$$
 
 이다. 둘째, $-\lvert f\rvert \leq f \leq \lvert f\rvert$에 적용하면 삼각부등식의 적분판
 
-$$\left\lvert \int_a^b f(x)\mathop{dx}\right\rvert  \leq \int_a^b \lvert f(x)\rvert \mathop{dx}$$
+$$\left\lvert \int_a^b f(x)\dd{x}\right\rvert  \leq \int_a^b \lvert f(x)\rvert \dd{x}$$
 
 을 얻는다. 첫 부등식을 연속함수에 적용하면, 적분값이 어떤 점에서의 함숫값에 의해 정확히 달성됨을 보일 수 있다.
 
 ::: 명제 12 (적분의 평균값 정리)
 $f$가 $[a,b]$에서 연속이면 
 
-$$\int_a^b f(x)\mathop{dx} = f(c)(b-a)$$
+$$\int_a^b f(x)\dd{x} = f(c)(b-a)$$
 
 를 만족하는 $c \in [a,b]$가 존재한다.
 :::
@@ -257,31 +257,31 @@ $$\int_a^b f(x)\mathop{dx} = f(c)(b-a)$$
 ::: 증명
 [§연속함수, ⁋정리 4](/ko/math/calculus/continuity#thm4)로 $f$는 $[a,b]$에서 최솟값 $m$과 최댓값 $M$을 가진다. 위 계산에서 평균값 
 
-$$\frac{1}{b-a}\int_a^b f(x)\mathop{dx}$$
+$$\frac{1}{b-a}\int_a^b f(x)\dd{x}$$
 
-가 $[m, M]$에 속하므로, [§연속함수, ⁋정리 5](/ko/math/calculus/continuity#thm5)에 의해 그 값을 취하는 $c$, 즉 $f(c) = \frac{1}{b-a}\int_a^b f(x)\mathop{dx}$인 $c$가 존재한다.
+가 $[m, M]$에 속하므로, [§연속함수, ⁋정리 5](/ko/math/calculus/continuity#thm5)에 의해 그 값을 취하는 $c$, 즉 $f(c) = \frac{1}{b-a}\int_a^b f(x)\dd{x}$인 $c$가 존재한다.
 :::
 
 여기서 
 
-$$\frac{1}{b-a}\int_a^b f(x)\mathop{dx}$$
+$$\frac{1}{b-a}\int_a^b f(x)\dd{x}$$
 
 를 $f$의 $[a,b]$에서의 *평균값*이라 하며, [명제 12](#prop12)는 연속함수가 자신의 평균값을 적어도 한 점에서 실제로 취함을 말한다.
 
 ## 넓이와 응용
 
-정적분은 <em-ko>부호가 있는</em-ko> 넓이로 이해하는 것이 가장 직관적이다. 가령 $f < 0$인 구간에서는 리만 합의 항 $f(c_i)\Delta x_i$가 음수이므로, $\int_a^b f(x)\mathop{dx}$는 $x$축과 $f$로 둘러싸인 영역에 마이너스 부호를 붙여준 것이다. 이 관점은 적분 구간 위에서 함수의 부호가 바뀔 때 특히 분명해지며, 한 적분이 양·음의 넓이를 상쇄하여 $0$이 되는 경우와 실제 넓이가 절댓값을 요구하는 경우를 가르는 데서 위에서 살펴본 삼각부등식의 적분판이 진부등호로 나타난다.
+정적분은 <em-ko>부호가 있는</em-ko> 넓이로 이해하는 것이 가장 직관적이다. 가령 $f < 0$인 구간에서는 리만 합의 항 $f(c_i)\Delta x_i$가 음수이므로, $\int_a^b f(x)\dd{x}$는 $x$축과 $f$로 둘러싸인 영역에 마이너스 부호를 붙여준 것이다. 이 관점은 적분 구간 위에서 함수의 부호가 바뀔 때 특히 분명해지며, 한 적분이 양·음의 넓이를 상쇄하여 $0$이 되는 경우와 실제 넓이가 절댓값을 요구하는 경우를 가르는 데서 위에서 살펴본 삼각부등식의 적분판이 진부등호로 나타난다.
 
 ::: 예시 13
-$\int_{-1}^{1} x\mathop{dx} = 0$인 까닭은 $[-1,0]$에서의 음의 넓이와 $[0,1]$에서의 양의 넓이가 정확히 상쇄되기 때문이다. 각 조각은 밑변과 높이가 $1$인 직각삼각형이라 넓이가 $\frac{1}{2}$이고, [명제 11](#prop11)의 둘째 결과를 사용해 갈라 쓰면
+$\int_{-1}^{1} x\dd{x} = 0$인 까닭은 $[-1,0]$에서의 음의 넓이와 $[0,1]$에서의 양의 넓이가 정확히 상쇄되기 때문이다. 각 조각은 밑변과 높이가 $1$인 직각삼각형이라 넓이가 $\frac{1}{2}$이고, [명제 11](#prop11)의 둘째 결과를 사용해 갈라 쓰면
 
-$$\int_{-1}^{1} x\mathop{dx} = \int_{-1}^{0} x\mathop{dx} + \int_{0}^{1} x\mathop{dx} = -\frac{1}{2} + \frac{1}{2} = 0$$
+$$\int_{-1}^{1} x\dd{x} = \int_{-1}^{0} x\dd{x} + \int_{0}^{1} x\dd{x} = -\frac{1}{2} + \frac{1}{2} = 0$$
 
 이다. 곡선과 $x$축이 둘러싼 *실제* 넓이를 원한다면 부호를 지운 $\lvert x\rvert$를 적분해야 하며,
 
-$$\int_{-1}^{1} \lvert x\rvert \mathop{dx} = \int_{-1}^{0} (-x)\mathop{dx} + \int_{0}^{1} x\mathop{dx} = \frac{1}{2} + \frac{1}{2} = 1$$
+$$\int_{-1}^{1} \lvert x\rvert \dd{x} = \int_{-1}^{0} (-x)\dd{x} + \int_{0}^{1} x\dd{x} = \frac{1}{2} + \frac{1}{2} = 1$$
 
-이 된다. 이는 삼각부등식의 적분판 $\bigl\lvert\int_a^b f(x) \mathop{dx}\bigr\rvert \leq \int_a^b \lvert f(x)\rvert \mathop{dx}$이 등호가 아니라 부등호 $0 < 1$로 성립하는 구체적 사례이며, 각 조각의 값은 삼각형 넓이로 곧바로 확인된다. 이 계산은 앞서 리만 합으로 삼각형의 넓이를 구한 것과도 일치한다. 
+이 된다. 이는 삼각부등식의 적분판 $\bigl\lvert\int_a^b f(x) \dd{x}\bigr\rvert \leq \int_a^b \lvert f(x)\rvert \dd{x}$이 등호가 아니라 부등호 $0 < 1$로 성립하는 구체적 사례이며, 각 조각의 값은 삼각형 넓이로 곧바로 확인된다. 이 계산은 앞서 리만 합으로 삼각형의 넓이를 구한 것과도 일치한다. 
 :::
 
 평균값 정리는 적분을 한 점에서의 함숫값으로 바꾸어 주므로, 부등식을 다루거나 평균적 거동을 추론할 때 자주 쓰인다. 가중치를 곱한 적분에 대해서도, 가중치의 부호가 일정하기만 하면 같은 정리가 성립한다.
@@ -289,7 +289,7 @@ $$\int_{-1}^{1} \lvert x\rvert \mathop{dx} = \int_{-1}^{0} (-x)\mathop{dx} + \in
 ::: 명제 14 (가중 평균값 정리)
 $f$가 $[a,b]$에서 연속이고 $\mu$가 $[a,b]$에서 적분가능하며 $\mu \geq 0$이라면, 어떤 $c \in [a,b]$가 존재하여 
 
-$$\int_a^b f(x)\mu(x)\mathop{dx} = f(c)\int_a^b \mu(x)\mathop{dx}$$
+$$\int_a^b f(x)\mu(x)\dd{x} = f(c)\int_a^b \mu(x)\dd{x}$$
 
 이다.
 :::
@@ -297,13 +297,13 @@ $$\int_a^b f(x)\mu(x)\mathop{dx} = f(c)\int_a^b \mu(x)\mathop{dx}$$
 ::: 증명
 [§연속함수, ⁋정리 4](/ko/math/calculus/continuity#thm4)로 $f$는 최솟값 $m$과 최댓값 $M$을 가진다. $\mu \geq 0$이므로 $m\mu(x) \leq f(x)\mu(x) \leq M\mu(x)$이고, 단조성과 선형성으로 적분하면
 
-$$m\int_a^b \mu(x)\mathop{dx} \leq \int_a^b f(x)\mu(x) \mathop{dx}\leq M\int_a^b \mu(x) \mathop{dx}$$
+$$m\int_a^b \mu(x)\dd{x} \leq \int_a^b f(x)\mu(x) \dd{x}\leq M\int_a^b \mu(x) \dd{x}$$
 
-를 얻는다. 만약 $\int_a^b \mu(x)\mathop{dx} = 0$이면 가운데 적분도 $0$이라 임의의 $c$로 등식이 성립한다. $\int_a^b \mu(x)\mathop{dx} > 0$이면 위 부등식을 그 값으로 나누어 
+를 얻는다. 만약 $\int_a^b \mu(x)\dd{x} = 0$이면 가운데 적분도 $0$이라 임의의 $c$로 등식이 성립한다. $\int_a^b \mu(x)\dd{x} > 0$이면 위 부등식을 그 값으로 나누어 
 
-$$\frac{\int_a^b f(x)\mu(x) \mathop{dx}}{\int_a^b \mu(x)\mathop{dx}} \in [m, M]$$
+$$\frac{\int_a^b f(x)\mu(x) \dd{x}}{\int_a^b \mu(x)\dd{x}} \in [m, M]$$
 
-임을 얻고, [§연속함수, ⁋정리 5](/ko/math/calculus/continuity#thm5)로 이 값을 취하는 $c$가 존재한다. 따라서 여기에 $\int_a^b \mu(x)\mathop{dx}$를 곱하면 증명이 완료된다.
+임을 얻고, [§연속함수, ⁋정리 5](/ko/math/calculus/continuity#thm5)로 이 값을 취하는 $c$가 존재한다. 따라서 여기에 $\int_a^b \mu(x)\dd{x}$를 곱하면 증명이 완료된다.
 :::
 
 만일 $\mu \equiv 1$로 두면 가중 평균값 정리는 [명제 12](#prop12)로 환원되므로, [명제 14](#prop14)는 평균값 정리의 일반화로, 일종의 밀도를 추가하는 것으로 생각할 수 있다.

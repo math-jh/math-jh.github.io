@@ -16,7 +16,7 @@ published: false
 
 Complex manifold는 tangent space 수준에서 곱셈 $i$를 흉내내는 거의 복소구조 $J$를 표준적으로 갖추며, 그 적분가능성이 holomorphic 기하 전체를 떠받쳤다 ([§거의 복소구조, ⁋명제 3](/ko/math/complex_geometry/almost_complex_structures#prop3)). 한편 smooth manifold 위에 길이와 각을 재는 Riemannian metric을 얹으면 미분기하의 풍부한 도구가 따라온다 ([\[리만기하학\] §리만 계량, ⁋정의 1](/ko/math/riemannian_geometry/Riemannian_metric#def1)). Complex manifold 위에서 이 두 구조, 곧 복소구조 $J$와 Riemannian metric $g$를 양립시키면 어떤 일이 일어나는가가 이 글의 출발점이다.
 
-양립의 가장 자연스러운 요구는 $J$가 $g$에 대한 등거리변환이 되는 것, 곧 $g(JX, JY) = g(X, Y)$이다. 이러한 계량을 Hermitian 계량이라 하며, 여기서 동반 $2$-형식 $\omega(X, Y) = g(JX, Y)$가 자연히 따라온다. 이 $\omega$가 닫힌형식일 때, 곧 $d\omega = 0$일 때 우리는 그 manifold를 Kähler manifold라 부른다. 이 한 줄의 닫힘조건이 복소기하·리만기하·사교기하 세 구조를 동시에 묶어내며, 그로부터 흘러나오는 강성이 콤팩트 complex manifold theory의 중심을 이룬다. 이 글의 목표는 Hermitian 계량과 기본형식을 세우고, Kähler 조건의 여러 동치 특성화를 증명하며, $\mathbb{C}^n$과 $\mathbb{CP}^n$을 비롯한 표준 예시에서 Kähler 구조를 확인하고, Kähler manifold가 symplectic manifold임과 콤팩트 Kähler manifold의 위상적 귀결을 끌어내는 것이다.
+양립의 가장 자연스러운 요구는 $J$가 $g$에 대한 등거리변환이 되는 것, 곧 $g(JX, JY) = g(X, Y)$이다. 이러한 계량을 Hermitian 계량이라 하며, 여기서 동반 $2$-형식 $\omega(X, Y) = g(JX, Y)$가 자연히 따라온다. 이 $\omega$가 닫힌형식일 때, 곧 $\dd{\omega} = 0$일 때 우리는 그 manifold를 Kähler manifold라 부른다. 이 한 줄의 닫힘조건이 복소기하·리만기하·사교기하 세 구조를 동시에 묶어내며, 그로부터 흘러나오는 강성이 콤팩트 complex manifold theory의 중심을 이룬다. 이 글의 목표는 Hermitian 계량과 기본형식을 세우고, Kähler 조건의 여러 동치 특성화를 증명하며, $\mathbb{C}^n$과 $\mathbb{CP}^n$을 비롯한 표준 예시에서 Kähler 구조를 확인하고, Kähler manifold가 symplectic manifold임과 콤팩트 Kähler manifold의 위상적 귀결을 끌어내는 것이다.
 
 ## Hermitian 계량과 기본형식
 
@@ -57,7 +57,7 @@ $$
 로 두면 (여기서 $g$는 복소화 tangent space 위로 $\mathbb{C}$-쌍선형 확장한 것이다), 기본형식은
 
 $$
-\omega = \frac{i}{2} \sum_{j, k} g_{j\bar{k}}\, dz_j \wedge d\bar{z}_k
+\omega = \frac{i}{2} \sum_{j, k} g_{j\bar{k}}\dd{z_j} \wedge \dd{\bar{z}_k}
 $$
 
 로 표현된다. 행렬 $(g_{j\bar{k}})$는 각 점에서 양의 정부호 Hermitian 행렬이며, $\omega$가 real form이라는 것은 $\overline{g_{j\bar{k}}} = g_{k\bar{j}}$와 동치이다. 이 좌표 표현이 다음 절의 Kähler 조건을 계량 성분의 미분에 대한 대칭조건으로 옮기는 발판이 된다.
@@ -70,37 +70,37 @@ Hermitian 조건만으로는 복소구조와 계량이 일차적으로만 맞물
 Hermitian manifold $(X, J, g)$가 *Kähler manifold<sub>켈러 다양체</sub>*라는 것은 그 기본형식 $\omega$가 닫힌형식인 것, 곧
 
 $$
-d\omega = 0
+\dd{\omega} = 0
 $$
 
 인 것이다. 이때 $g$를 *Kähler metric<sub>켈러 계량</sub>*, $\omega$를 *Kähler form<sub>켈러 형식</sub>*이라 한다.
 :::
 
-조건 $d\omega = 0$은 $\omega$가 de Rham cohomology class $[\omega] \in H^2(X, \mathbb{R})$를 정의하게 하며, 이 류를 $X$의 *Kähler class<sub>켈러 류</sub>*라 한다. 모든 complex manifold가 Hermitian 계량을 갖는 것과 달리, Kähler 계량의 존재는 진정한 제약이다. 아래에서 보듯 콤팩트 Kähler manifold는 짝수 degree의 cohomology가 모두 비자명해야 하므로, 이 조건을 어기는 콤팩트 complex manifold는 Kähler 계량을 전혀 가질 수 없다.
+조건 $\dd{\omega} = 0$은 $\omega$가 de Rham cohomology class $[\omega] \in H^2(X, \mathbb{R})$를 정의하게 하며, 이 류를 $X$의 *Kähler class<sub>켈러 류</sub>*라 한다. 모든 complex manifold가 Hermitian 계량을 갖는 것과 달리, Kähler 계량의 존재는 진정한 제약이다. 아래에서 보듯 콤팩트 Kähler manifold는 짝수 degree의 cohomology가 모두 비자명해야 하므로, 이 조건을 어기는 콤팩트 complex manifold는 Kähler 계량을 전혀 가질 수 없다.
 
-좌표에서 Kähler 조건은 계량 성분의 미분에 대한 깔끔한 대칭으로 번역된다. 기본형식 $\omega = \frac{i}{2}\sum g_{j\bar{k}}\, dz_j \wedge d\bar{z}_k$에 exterior derivative를 적용하면 [§Dolbeault 코호몰로지, ⁋명제 2](/ko/math/complex_geometry/dolbeault_cohomology#prop2)의 $d = \partial + \bar\partial$에 의해 $d\omega$는 $(2,1)$-성분 $\partial\omega$와 $(1,2)$-성분 $\bar\partial\omega$로 갈라진다. $\omega$가 real form이므로 $\partial\omega = 0$과 $\bar\partial\omega = 0$은 켤레로 동치이고, 따라서 $d\omega = 0$은 $\partial\omega = 0$ 하나와 동치이다. 이를 좌표로 풀면 다음 명제가 된다.
+좌표에서 Kähler 조건은 계량 성분의 미분에 대한 깔끔한 대칭으로 번역된다. 기본형식 $\omega = \frac{i}{2}\sum g_{j\bar{k}}\dd{z_j} \wedge \dd{\bar{z}_k}$에 exterior derivative를 적용하면 [§Dolbeault 코호몰로지, ⁋명제 2](/ko/math/complex_geometry/dolbeault_cohomology#prop2)의 $d = \partial + \bar\partial$에 의해 $\dd{\omega}$는 $(2,1)$-성분 $\partial\omega$와 $(1,2)$-성분 $\bar\partial\omega$로 갈라진다. $\omega$가 real form이므로 $\partial\omega = 0$과 $\bar\partial\omega = 0$은 켤레로 동치이고, 따라서 $\dd{\omega} = 0$은 $\partial\omega = 0$ 하나와 동치이다. 이를 좌표로 풀면 다음 명제가 된다.
 
 ::: 명제 4
-Hermitian manifold $(X, J, g)$에 대하여, 기본형식을 $\omega = \frac{i}{2}\sum_{j,k} g_{j\bar{k}}\, dz_j \wedge d\bar{z}_k$로 쓸 때 다음이 동치이다.
+Hermitian manifold $(X, J, g)$에 대하여, 기본형식을 $\omega = \frac{i}{2}\sum_{j,k} g_{j\bar{k}}\dd{z_j} \wedge \dd{\bar{z}_k}$로 쓸 때 다음이 동치이다.
 
-1. $\omega$는 Kähler 형식이다. 곧 $d\omega = 0$.
+1. $\omega$는 Kähler 형식이다. 곧 $\dd{\omega} = 0$.
 2. 모든 $j, k, l$에 대하여 $\dfrac{\partial g_{j\bar{k}}}{\partial z_l} = \dfrac{\partial g_{l\bar{k}}}{\partial z_j}$이다.
 :::
 
 ::: 증명
-$dz_j, d\bar{z}_k$가 닫혀 있으므로 $\partial\omega$는 계수의 $\partial$-미분에서만 나온다.
+$\dd{z_j}, \dd{\bar{z}_k}$가 닫혀 있으므로 $\partial\omega$는 계수의 $\partial$-미분에서만 나온다.
 
 $$
-\partial\omega = \frac{i}{2} \sum_{j,k,l} \frac{\partial g_{j\bar{k}}}{\partial z_l}\, dz_l \wedge dz_j \wedge d\bar{z}_k.
+\partial\omega = \frac{i}{2} \sum_{j,k,l} \frac{\partial g_{j\bar{k}}}{\partial z_l}\dd{z_l} \wedge \dd{z_j} \wedge \dd{\bar{z}_k}.
 $$
 
-이 $(2,1)$-형식이 $0$이라는 것은, 각 고정된 $k$에 대하여 $dz_l \wedge dz_j$의 계수가 모두 $0$이라는 것이다. $dz_l \wedge dz_j = -dz_j \wedge dz_l$이므로, $l, j$에 대한 반대칭화에서 살아남는 부분이 소멸할 조건은
+이 $(2,1)$-형식이 $0$이라는 것은, 각 고정된 $k$에 대하여 $\dd{z_l} \wedge \dd{z_j}$의 계수가 모두 $0$이라는 것이다. $\dd{z_l} \wedge \dd{z_j} = -\dd{z_j} \wedge \dd{z_l}$이므로, $l, j$에 대한 반대칭화에서 살아남는 부분이 소멸할 조건은
 
 $$
 \frac{\partial g_{j\bar{k}}}{\partial z_l} - \frac{\partial g_{l\bar{k}}}{\partial z_j} = 0
 $$
 
-이 모든 $j, k, l$에 대해 성립하는 것이다. 곧 (2)이다. 한편 위에서 보았듯 $\omega$가 real form이므로 $\bar\partial\omega = \overline{\partial\omega}$이고, 따라서 $\partial\omega = 0$이면 $\bar\partial\omega = 0$이 따라와 $d\omega = \partial\omega + \bar\partial\omega = 0$이 된다. 역으로 $d\omega = 0$이면 차수분해의 직합성으로 $\partial\omega = 0$이다. 따라서 (1) ⟺ (2)이다.
+이 모든 $j, k, l$에 대해 성립하는 것이다. 곧 (2)이다. 한편 위에서 보았듯 $\omega$가 real form이므로 $\bar\partial\omega = \overline{\partial\omega}$이고, 따라서 $\partial\omega = 0$이면 $\bar\partial\omega = 0$이 따라와 $\dd{\omega} = \partial\omega + \bar\partial\omega = 0$이 된다. 역으로 $\dd{\omega} = 0$이면 차수분해의 직합성으로 $\partial\omega = 0$이다. 따라서 (1) ⟺ (2)이다.
 :::
 
 조건 (2)는 $g_{j\bar{k}}$가 단일한 실 함수의 이차 혼합 미분으로 표현될 수 있게 한다는 점에서 결정적이다. $\partial g_{j\bar{k}}/\partial z_l$이 $j$와 $l$에 대칭이면, $g_{j\bar{k}}$가 $z_j$에 대한 어떤 함수의 미분처럼 행동하여 국소적으로 $g_{j\bar{k}} = 2\,\partial^2\varphi / \partial z_j \partial \bar{z}_k$ 꼴의 잠재함수 $\varphi$가 존재하게 된다. 이 local potential의 정확한 형태가 Kähler 조건의 또 다른 동치 특성화이며, 다음 절에서 정식화한다.
@@ -112,7 +112,7 @@ Kähler 조건은 표면상 기본형식의 닫힘이라는 사교적 조건이�
 ::: 정리 5 (Kähler 동치조건)
 Hermitian manifold $(X, J, g)$에 대하여 다음 네 조건이 서로 동치이다. 여기서 $\nabla$는 $g$의 Levi-Civita connection이다 ([\[리만기하학\] §레비-치비타 접속, ⁋정리 4](/ko/math/riemannian_geometry/Levi-Civita_connection#thm4)).
 
-1. $\omega$가 닫힘이다. 곧 $d\omega = 0$ (Kähler 조건).
+1. $\omega$가 닫힘이다. 곧 $\dd{\omega} = 0$ (Kähler 조건).
 2. $J$가 $\nabla$에 대해 평행하다. 곧 $\nabla J = 0$.
 3. 각 점 $p$에서 holomorphic coordinates를 적절히 골라 $g_{j\bar{k}}(p) = \delta_{jk}$이고 모든 일차 미분 $\partial g_{j\bar{k}}/\partial z_l$과 $\partial g_{j\bar{k}}/\partial \bar{z}_l$이 $p$에서 소멸한다. 곧 계량이 $p$에서 표준 Hermitian 계량과 이차까지 일치한다.
 4. 국소적으로 실값 함수 $\varphi$가 존재하여 $\omega = i\, \partial\bar\partial\varphi$이다. 곧 $g_{j\bar{k}} = 2\,\dfrac{\partial^2\varphi}{\partial z_j \partial\bar{z}_k}$.
@@ -122,16 +122,16 @@ Hermitian manifold $(X, J, g)$에 대하여 다음 네 조건이 서로 동치�
 (1) ⟺ (4)를 먼저 보인다. (4) ⟹ (1)은 [§Dolbeault 코호몰로지, ⁋명제 3](/ko/math/complex_geometry/dolbeault_cohomology#prop3)의 $\bar\partial\partial = -\partial\bar\partial$와 $\partial^2 = \bar\partial^2 = 0$에서 따라온다. $\omega = i\partial\bar\partial\varphi$이면
 
 $$
-d\omega = (\partial + \bar\partial)(i\partial\bar\partial\varphi) = i\partial^2\bar\partial\varphi + i\bar\partial\partial\bar\partial\varphi = 0 + i\bar\partial\partial\bar\partial\varphi
+\dd{\omega} = (\partial + \bar\partial)(i\partial\bar\partial\varphi) = i\partial^2\bar\partial\varphi + i\bar\partial\partial\bar\partial\varphi = 0 + i\bar\partial\partial\bar\partial\varphi
 $$
 
-이고, $\bar\partial\partial = -\partial\bar\partial$와 $\bar\partial^2 = 0$으로 $\bar\partial\partial\bar\partial\varphi = -\partial\bar\partial\bar\partial\varphi = 0$이므로 $d\omega = 0$이다. 또 $i\partial\bar\partial\varphi = i\sum_{j,k}(\partial^2\varphi/\partial z_j\partial\bar{z}_k)\, dz_j \wedge d\bar{z}_k$이므로, 계수를 $\frac{i}{2}g_{j\bar{k}}$와 맞추면 $\frac{i}{2}g_{j\bar{k}} = i\,\partial^2\varphi/\partial z_j\partial\bar{z}_k$, 곧 $g_{j\bar{k}} = 2\,\partial^2\varphi/\partial z_j\partial\bar{z}_k$이다.
+이고, $\bar\partial\partial = -\partial\bar\partial$와 $\bar\partial^2 = 0$으로 $\bar\partial\partial\bar\partial\varphi = -\partial\bar\partial\bar\partial\varphi = 0$이므로 $\dd{\omega} = 0$이다. 또 $i\partial\bar\partial\varphi = i\sum_{j,k}(\partial^2\varphi/\partial z_j\partial\bar{z}_k)\dd{z_j} \wedge \dd{\bar{z}_k}$이므로, 계수를 $\frac{i}{2}g_{j\bar{k}}$와 맞추면 $\frac{i}{2}g_{j\bar{k}} = i\,\partial^2\varphi/\partial z_j\partial\bar{z}_k$, 곧 $g_{j\bar{k}} = 2\,\partial^2\varphi/\partial z_j\partial\bar{z}_k$이다.
 
-역으로 (1) ⟹ (4)는 [명제 4](#prop4)의 조건 (2)에서 나온다. $d\omega = 0$이면 $\partial g_{j\bar{k}}/\partial z_l$이 $j, l$에 대칭이고, 켤레를 취하면 $\partial g_{j\bar{k}}/\partial\bar{z}_l$이 $k, l$에 대칭이다. 이 대칭성 아래에서, $(0,1)$-형식 $\eta = \frac{i}{2}\sum_{j,k} g_{j\bar{k}}\, z_j$ 꼴의 풀이를 폴리디스크에서 [§Dolbeault 코호몰로지, ⁋보조정리 6](/ko/math/complex_geometry/dolbeault_cohomology#lem6)으로 구성하여 $\omega = d\beta$인 실 $1$-형식 $\beta$를 얻고, $\beta$의 $(1,0)$·$(0,1)$-성분을 다시 $\bar\partial$·$\partial$-Poincaré로 풀면 실값 함수 $\varphi$로서 $\omega = i\partial\bar\partial\varphi$가 국소적으로 성립한다. 구체적으로, $d\omega = 0$인 실 $(1,1)$-형식은 국소적으로 $\omega = d\beta = (\partial + \bar\partial)(\beta^{1,0} + \beta^{0,1})$로 쓰이고, 차수별로 $\partial\beta^{1,0} = 0$, $\bar\partial\beta^{0,1} = 0$, $\omega = \partial\beta^{0,1} + \bar\partial\beta^{1,0}$이 된다. $\partial$-Poincaré로 $\beta^{1,0} = \partial f$, $\bar\partial$-Poincaré로 $\beta^{0,1} = \bar\partial h$ ($h = \bar{f}$로 택할 수 있다)를 얻으면 $\omega = \partial\bar\partial h + \bar\partial\partial f = \bar\partial\partial(f - h)$이고, $\varphi = i(f - h)$를 실값이 되도록 조정하면 $\omega = i\partial\bar\partial\varphi$이다.
+역으로 (1) ⟹ (4)는 [명제 4](#prop4)의 조건 (2)에서 나온다. $\dd{\omega} = 0$이면 $\partial g_{j\bar{k}}/\partial z_l$이 $j, l$에 대칭이고, 켤레를 취하면 $\partial g_{j\bar{k}}/\partial\bar{z}_l$이 $k, l$에 대칭이다. 이 대칭성 아래에서, $(0,1)$-형식 $\eta = \frac{i}{2}\sum_{j,k} g_{j\bar{k}}\, z_j$ 꼴의 풀이를 폴리디스크에서 [§Dolbeault 코호몰로지, ⁋보조정리 6](/ko/math/complex_geometry/dolbeault_cohomology#lem6)으로 구성하여 $\omega = \dd{\beta}$인 실 $1$-형식 $\beta$를 얻고, $\beta$의 $(1,0)$·$(0,1)$-성분을 다시 $\bar\partial$·$\partial$-Poincaré로 풀면 실값 함수 $\varphi$로서 $\omega = i\partial\bar\partial\varphi$가 국소적으로 성립한다. 구체적으로, $\dd{\omega} = 0$인 실 $(1,1)$-형식은 국소적으로 $\omega = \dd{\beta} = (\partial + \bar\partial)(\beta^{1,0} + \beta^{0,1})$로 쓰이고, 차수별로 $\partial\beta^{1,0} = 0$, $\bar\partial\beta^{0,1} = 0$, $\omega = \partial\beta^{0,1} + \bar\partial\beta^{1,0}$이 된다. $\partial$-Poincaré로 $\beta^{1,0} = \partial f$, $\bar\partial$-Poincaré로 $\beta^{0,1} = \bar\partial h$ ($h = \bar{f}$로 택할 수 있다)를 얻으면 $\omega = \partial\bar\partial h + \bar\partial\partial f = \bar\partial\partial(f - h)$이고, $\varphi = i(f - h)$를 실값이 되도록 조정하면 $\omega = i\partial\bar\partial\varphi$이다.
 
-(1) ⟺ (3)을 본다. (3) ⟹ (1)은 즉각적이다. 점 $p$에서 계량의 일차 미분이 모두 소멸하면, [명제 4](#prop4)의 조건 (2) $\partial g_{j\bar{k}}/\partial z_l = \partial g_{l\bar{k}}/\partial z_j$가 $p$에서 양변 $0$으로 성립하므로 $d\omega$가 $p$에서 소멸한다. $p$가 임의였으므로 $d\omega = 0$이다. (1) ⟹ (3)은 (4)를 거친다. (4)에 의해 local potential $\varphi$가 존재하므로, $p$를 원점으로 하는 holomorphic coordinates에서 $\varphi$의 Taylor 전개를 holomorphic 좌표변환으로 normalize한다. $\varphi = \varphi(p) + 2\Real\big(\text{정칙항}\big) + \sum_{j,k} g_{j\bar{k}}(p)\, z_j\bar{z}_k + (\text{삼차 이상})$에서, holomorphic 항은 $\partial\bar\partial$로 죽으므로 무시할 수 있고, 이차항의 Hermitian 부분을 표준형으로 보내는 $\mathbb{C}$-선형 좌표변환으로 $g_{j\bar{k}}(p) = \delta_{jk}$를 만든다. 남은 삼차 이상 항 가운데 $z_j z_k \bar{z}_l$ 꼴의 혼합 삼차항을 holomorphic 이차 좌표변환 $z_j \mapsto z_j + (\text{이차 정칙})$으로 흡수하면 $g_{j\bar{k}}$의 일차 미분이 $p$에서 모두 소멸한다. 이 normalization이 가능한 것이 바로 Kähler 조건이며, 이렇게 얻은 좌표를 *normal coordinate*라 한다.
+(1) ⟺ (3)을 본다. (3) ⟹ (1)은 즉각적이다. 점 $p$에서 계량의 일차 미분이 모두 소멸하면, [명제 4](#prop4)의 조건 (2) $\partial g_{j\bar{k}}/\partial z_l = \partial g_{l\bar{k}}/\partial z_j$가 $p$에서 양변 $0$으로 성립하므로 $\dd{\omega}$가 $p$에서 소멸한다. $p$가 임의였으므로 $\dd{\omega} = 0$이다. (1) ⟹ (3)은 (4)를 거친다. (4)에 의해 local potential $\varphi$가 존재하므로, $p$를 원점으로 하는 holomorphic coordinates에서 $\varphi$의 Taylor 전개를 holomorphic 좌표변환으로 normalize한다. $\varphi = \varphi(p) + 2\Real\big(\text{정칙항}\big) + \sum_{j,k} g_{j\bar{k}}(p)\, z_j\bar{z}_k + (\text{삼차 이상})$에서, holomorphic 항은 $\partial\bar\partial$로 죽으므로 무시할 수 있고, 이차항의 Hermitian 부분을 표준형으로 보내는 $\mathbb{C}$-선형 좌표변환으로 $g_{j\bar{k}}(p) = \delta_{jk}$를 만든다. 남은 삼차 이상 항 가운데 $z_j z_k \bar{z}_l$ 꼴의 혼합 삼차항을 holomorphic 이차 좌표변환 $z_j \mapsto z_j + (\text{이차 정칙})$으로 흡수하면 $g_{j\bar{k}}$의 일차 미분이 $p$에서 모두 소멸한다. 이 normalization이 가능한 것이 바로 Kähler 조건이며, 이렇게 얻은 좌표를 *normal coordinate*라 한다.
 
-(2) ⟺ (1)을 본다. Levi-Civita connection은 계량과 호환되고 비틀림이 없다. $g$가 Hermitian이므로 $\omega(X, Y) = g(JX, Y)$이고, $\nabla g = 0$이므로 $\nabla\omega$와 $\nabla J$는 $\nabla\omega(X; Y, Z) = g((\nabla_X J)Y, Z)$로 직접 이어진다. 따라서 $\nabla J = 0$은 $\nabla\omega = 0$과 동치이고, $\nabla\omega = 0$이면 특히 $\omega$의 반대칭화인 $d\omega$가 소멸한다 ($d\omega(X,Y,Z) = \sum_{\text{cyc}} (\nabla_X\omega)(Y,Z)$, torsion-free이므로). 곧 (2) ⟹ (1)이다. 역의 함의 (1) ⟹ (2)가 Kähler 기하의 핵심이며, 다음과 같이 본다. $\nabla\omega$는 $g$, $J$, $d\omega$, 그리고 $N_J$ (Nijenhuis 텐서)로 대수적으로 표현되는데, $X$가 complex manifold라 [§거의 복소구조, ⁋정리 12](/ko/math/complex_geometry/almost_complex_structures#thm12)에 의해 $N_J = 0$이고 가정에서 $d\omega = 0$이므로 $\nabla\omega = 0$이 따라온다. 정밀하게는, 비틀림 없는 Levi-Civita connection에 대하여 $2\, g\big((\nabla_X J)Y, Z\big)$가 기본형식의 exterior derivative 값 $d\omega(X, Y, Z)$·$d\omega(X, JY, JZ)$와 Nijenhuis 항 $g\big(N_J(Y, Z), JX\big)$의 일차결합으로 표현된다 (각 항의 계수는 $\omega$와 $N_J$의 부호 규약에 따라 정해진다). $X$가 complex manifold라 $N_J = 0$이고 가정에서 $d\omega = 0$이므로 이 결합의 모든 항이 소멸하여 $(\nabla_X J)Y = 0$, 곧 $\nabla J = 0$을 얻는다.
+(2) ⟺ (1)을 본다. Levi-Civita connection은 계량과 호환되고 비틀림이 없다. $g$가 Hermitian이므로 $\omega(X, Y) = g(JX, Y)$이고, $\nabla g = 0$이므로 $\nabla\omega$와 $\nabla J$는 $\nabla\omega(X; Y, Z) = g((\nabla_X J)Y, Z)$로 직접 이어진다. 따라서 $\nabla J = 0$은 $\nabla\omega = 0$과 동치이고, $\nabla\omega = 0$이면 특히 $\omega$의 반대칭화인 $\dd{\omega}$가 소멸한다 ($\dd{\omega}(X,Y,Z) = \sum_{\text{cyc}} (\nabla_X\omega)(Y,Z)$, torsion-free이므로). 곧 (2) ⟹ (1)이다. 역의 함의 (1) ⟹ (2)가 Kähler 기하의 핵심이며, 다음과 같이 본다. $\nabla\omega$는 $g$, $J$, $\dd{\omega}$, 그리고 $N_J$ (Nijenhuis 텐서)로 대수적으로 표현되는데, $X$가 complex manifold라 [§거의 복소구조, ⁋정리 12](/ko/math/complex_geometry/almost_complex_structures#thm12)에 의해 $N_J = 0$이고 가정에서 $\dd{\omega} = 0$이므로 $\nabla\omega = 0$이 따라온다. 정밀하게는, 비틀림 없는 Levi-Civita connection에 대하여 $2\, g\big((\nabla_X J)Y, Z\big)$가 기본형식의 exterior derivative 값 $\dd{\omega}(X, Y, Z)$·$\dd{\omega}(X, JY, JZ)$와 Nijenhuis 항 $g\big(N_J(Y, Z), JX\big)$의 일차결합으로 표현된다 (각 항의 계수는 $\omega$와 $N_J$의 부호 규약에 따라 정해진다). $X$가 complex manifold라 $N_J = 0$이고 가정에서 $\dd{\omega} = 0$이므로 이 결합의 모든 항이 소멸하여 $(\nabla_X J)Y = 0$, 곧 $\nabla J = 0$을 얻는다.
 :::
 
 이 네 동치조건은 Kähler manifold를 보는 네 가지 시점을 준다. 조건 (1)은 사교적, (2)는 리만적, (3)은 국소 해석적, (4)는 복소 해석적 시점이다. 특히 (3)은 Kähler manifold가 각 점에서 평탄한 $\mathbb{C}^n$과 이차까지 구별되지 않음을 뜻하며, 이 "이차 osculation"이 Kähler 항등식과 같은 강력한 국소 공식들이 성립하는 근거이다. 조건 (2)는 holonomy group이 $U(n)$ 안에 들어감을 뜻하여, Kähler manifold를 holonomy 관점에서 특징짓는다. 조건 (4)의 local potential $\varphi$를 *Kähler potential<sub>켈러 퍼텐셜</sub>* 이라 부르며, 다음 절의 Fubini–Study 계량 구성에서 핵심 도구가 된다.
@@ -144,16 +144,16 @@ $$
 $\mathbb{C}^n$에 표준 좌표 $z_1, \ldots, z_n$과 표준 Hermitian 계량 $g_{j\bar{k}} = \delta_{jk}$를 주면, 기본형식은
 
 $$
-\omega_0 = \frac{i}{2} \sum_{j=1}^n dz_j \wedge d\bar{z}_j = \sum_{j=1}^n dx_j \wedge dy_j
+\omega_0 = \frac{i}{2} \sum_{j=1}^n \dd{z_j} \wedge \dd{\bar{z}_j} = \sum_{j=1}^n \dd{x_j} \wedge \dd{y_j}
 $$
 
-이다 ($z_j = x_j + iy_j$). 계수가 상수이므로 $d\omega_0 = 0$이고, 따라서 $\mathbb{C}^n$은 Kähler manifold이다. Kähler potential은 $\varphi = \frac{1}{2}\lvert z \rvert^2 = \frac{1}{2}\sum_j z_j\bar{z}_j$로, $\partial^2\varphi/\partial z_j\partial\bar{z}_k = \frac{1}{2}\delta_{jk}$를 주어 $\omega_0 = i\partial\bar\partial\varphi$를 확인한다. 또 $\omega_0$는 정확히 $\mathbb{R}^{2n}$의 표준 symplectic form이다 ([\[사교기하학\] §사교다양체, ⁋정의 1](/ko/math/symplectic_geometry/symplectic_manifold#def1)).
+이다 ($z_j = x_j + iy_j$). 계수가 상수이므로 $\dd{\omega_0} = 0$이고, 따라서 $\mathbb{C}^n$은 Kähler manifold이다. Kähler potential은 $\varphi = \frac{1}{2}\lvert z \rvert^2 = \frac{1}{2}\sum_j z_j\bar{z}_j$로, $\partial^2\varphi/\partial z_j\partial\bar{z}_k = \frac{1}{2}\delta_{jk}$를 주어 $\omega_0 = i\partial\bar\partial\varphi$를 확인한다. 또 $\omega_0$는 정확히 $\mathbb{R}^{2n}$의 표준 symplectic form이다 ([\[사교기하학\] §사교다양체, ⁋정의 1](/ko/math/symplectic_geometry/symplectic_manifold#def1)).
 :::
 
 다음으로 lattice quotient에서 평탄한 콤팩트 예시가 나온다.
 
 ::: 예시 7 (복소토러스)
-Lattice $\Lambda \subseteq \mathbb{C}^n$에 의한 복소토러스 $T = \mathbb{C}^n/\Lambda$는 Kähler manifold이다 ([§복소다양체, ⁋예시 7](/ko/math/complex_geometry/complex_manifolds#ex7)). $\mathbb{C}^n$의 표준 Kähler 형식 $\omega_0 = \frac{i}{2}\sum dz_j \wedge d\bar{z}_j$가 평행이동 $z \mapsto z + \lambda$에 대해 불변이므로 (계수가 상수이고 $dz_j$가 평행이동 불변), $\omega_0$는 quotient $T$ 위의 잘 정의된 $2$-형식으로 내려가고, 상수계수라 여전히 닫힌형식이다. 따라서 모든 복소토러스는 평탄한 Kähler 계량을 가진다. 차원 $1$에서는 이것이 타원곡선의 평탄 계량이고, 높은 차원에서는 복소토러스가 사영적이지 않을 수 있음에도 ([§복소다양체, ⁋예시 7](/ko/math/complex_geometry/complex_manifolds#ex7)) Kähler 계량은 언제나 존재한다. 곧 Kähler는 사영성보다 약한 조건이다.
+Lattice $\Lambda \subseteq \mathbb{C}^n$에 의한 복소토러스 $T = \mathbb{C}^n/\Lambda$는 Kähler manifold이다 ([§복소다양체, ⁋예시 7](/ko/math/complex_geometry/complex_manifolds#ex7)). $\mathbb{C}^n$의 표준 Kähler 형식 $\omega_0 = \frac{i}{2}\sum \dd{z_j} \wedge \dd{\bar{z}_j}$가 평행이동 $z \mapsto z + \lambda$에 대해 불변이므로 (계수가 상수이고 $\dd{z_j}$가 평행이동 불변), $\omega_0$는 quotient $T$ 위의 잘 정의된 $2$-형식으로 내려가고, 상수계수라 여전히 닫힌형식이다. 따라서 모든 복소토러스는 평탄한 Kähler 계량을 가진다. 차원 $1$에서는 이것이 타원곡선의 평탄 계량이고, 높은 차원에서는 복소토러스가 사영적이지 않을 수 있음에도 ([§복소다양체, ⁋예시 7](/ko/math/complex_geometry/complex_manifolds#ex7)) Kähler 계량은 언제나 존재한다. 곧 Kähler는 사영성보다 약한 조건이다.
 :::
 
 가장 중요한 콤팩트 예시는 Fubini–Study 계량을 갖춘 complex projective space가다.
@@ -174,7 +174,7 @@ $$
 로 정의되는 $2$-형식을 *Fubini–Study form<sub>Fubini–Study 형식</sub>*이라 한다. 이는 $\mathbb{CP}^n$ 전체에서 잘 정의된 Kähler 형식이며, 그 계량 $g_{\mathrm{FS}}$를 *Fubini–Study metric<sub>Fubini–Study 계량</sub>*이라 한다.
 :::
 
-이 정의의 정당성을 차례로 확인한다. 먼저 $\omega_{\mathrm{FS}}$가 좌표 무관하게 잘 정의됨을 본다. 다른 representative $z' = \lambda z$ ($\lambda$는 영점 없는 holomorphic function) 를 택하면 $\log\lVert z'\rVert^2 = \log\lVert z\rVert^2 + \log\lambda + \log\bar\lambda$이고, $\log\lambda$는 holomorphic이라 $\bar\partial\log\lambda = 0$이므로 $\partial\bar\partial\log\lambda = 0$, 마찬가지로 $\log\bar\lambda$는 antiholomorphic이라 $\partial\log\bar\lambda = 0$이다. 따라서 $\partial\bar\partial\log\lVert z'\rVert^2 = \partial\bar\partial\log\lVert z\rVert^2$로, 서로 다른 차트의 potential이 holomorphic·antiholomorphic function만큼 차이가 나 $\partial\bar\partial$ 아래에서 같은 형식을 준다. 다음으로 $d\omega_{\mathrm{FS}} = 0$은 [정리 5](#thm5)의 조건 (4)에서 즉시 따라온다. $\omega_{\mathrm{FS}}$가 국소적으로 $\frac{1}{2\pi}i\partial\bar\partial\varphi_i$ 꼴이므로 Kähler 형식이다. 양의 정부호성, 곧 대응 계량 $g_{\mathrm{FS}}$가 Riemannian metric이 됨은 $U_i$의 inhomogeneous coordinates에서
+이 정의의 정당성을 차례로 확인한다. 먼저 $\omega_{\mathrm{FS}}$가 좌표 무관하게 잘 정의됨을 본다. 다른 representative $z' = \lambda z$ ($\lambda$는 영점 없는 holomorphic function) 를 택하면 $\log\lVert z'\rVert^2 = \log\lVert z\rVert^2 + \log\lambda + \log\bar\lambda$이고, $\log\lambda$는 holomorphic이라 $\bar\partial\log\lambda = 0$이므로 $\partial\bar\partial\log\lambda = 0$, 마찬가지로 $\log\bar\lambda$는 antiholomorphic이라 $\partial\log\bar\lambda = 0$이다. 따라서 $\partial\bar\partial\log\lVert z'\rVert^2 = \partial\bar\partial\log\lVert z\rVert^2$로, 서로 다른 차트의 potential이 holomorphic·antiholomorphic function만큼 차이가 나 $\partial\bar\partial$ 아래에서 같은 형식을 준다. 다음으로 $\dd{\omega_{\mathrm{FS}}} = 0$은 [정리 5](#thm5)의 조건 (4)에서 즉시 따라온다. $\omega_{\mathrm{FS}}$가 국소적으로 $\frac{1}{2\pi}i\partial\bar\partial\varphi_i$ 꼴이므로 Kähler 형식이다. 양의 정부호성, 곧 대응 계량 $g_{\mathrm{FS}}$가 Riemannian metric이 됨은 $U_i$의 inhomogeneous coordinates에서
 
 $$
 g_{j\bar{k}} = \frac{1}{\pi}\frac{\partial^2}{\partial w_j \partial\bar{w}_k}\log\Big(1 + \textstyle\sum_l \lvert w_l\rvert^2\Big) = \frac{1}{\pi}\,\frac{(1 + \lvert w\rvert^2)\delta_{jk} - \bar{w}_j w_k}{(1 + \lvert w\rvert^2)^2}
@@ -194,7 +194,7 @@ Kähler manifold $(X, J, g)$의 복소 부분다양체 $Y \subseteq X$는 유도
 $\iota : Y \hookrightarrow X$를 포함사상이라 하자. $Y$가 복소 부분다양체이므로 그 복소구조 $J_Y$는 $J$의 restriction이고, $Y$ 위의 유도 계량 $g_Y = \iota^\ast g$는 $g$가 $J$-불변이므로 $J_Y$-불변이다. 곧 $g_Y$는 $Y$ 위의 Hermitian 계량이다. $Y$의 기본형식 $\omega_Y$는 $\omega_Y(U, V) = g_Y(J_Y U, V) = g(JU, V) = \omega(U, V)$ ($U, V \in TY$)이므로, $\omega_Y = \iota^\ast\omega$, 곧 $X$의 Kähler 형식의 pullback이다. Exterior derivative는 pullback과 교환하므로
 
 $$
-d\omega_Y = d(\iota^\ast\omega) = \iota^\ast(d\omega) = \iota^\ast 0 = 0
+\dd{\omega_Y} = \dd{(\iota^\ast\omega)} = \iota^\ast(\dd{\omega}) = \iota^\ast 0 = 0
 $$
 
 이다. 따라서 $\omega_Y$는 닫힌형식이고 $Y$는 Kähler manifold이다.
@@ -213,15 +213,15 @@ Kähler manifold $(X, J, g)$의 Kähler 형식 $\omega$는 symplectic form이다
 :::
 
 ::: 증명
-Symplectic form이려면 $\omega$가 닫혀 있고 각 점에서 비퇴화여야 한다 ([\[사교기하학\] §사교다양체, ⁋정의 1](/ko/math/symplectic_geometry/symplectic_manifold#def1)). 닫힘은 Kähler 조건 그 자체이다. 비퇴화는 점별 계산이다. 점 $p$에서 normal coordinate ([정리 5](#thm5)의 (3))를 택하면 $\omega_p = \frac{i}{2}\sum_j dz_j \wedge d\bar{z}_j = \sum_j dx_j \wedge dy_j$로 표준 symplectic form과 일치하고, 이는 nondegenerate하다. Normal coordinate를 쓰지 않더라도, $\omega_p(X, Y) = g_p(JX, Y)$에서 $g_p$가 양의 정부호이고 $J$가 가역이므로, $\omega_p(X, \cdot) = 0$이면 $g_p(JX, \cdot) = 0$, 곧 $JX = 0$, 곧 $X = 0$이다. 따라서 $\omega_p$는 nondegenerate하다.
+Symplectic form이려면 $\omega$가 닫혀 있고 각 점에서 비퇴화여야 한다 ([\[사교기하학\] §사교다양체, ⁋정의 1](/ko/math/symplectic_geometry/symplectic_manifold#def1)). 닫힘은 Kähler 조건 그 자체이다. 비퇴화는 점별 계산이다. 점 $p$에서 normal coordinate ([정리 5](#thm5)의 (3))를 택하면 $\omega_p = \frac{i}{2}\sum_j \dd{z_j} \wedge \dd{\bar{z}_j} = \sum_j \dd{x_j} \wedge \dd{y_j}$로 표준 symplectic form과 일치하고, 이는 nondegenerate하다. Normal coordinate를 쓰지 않더라도, $\omega_p(X, Y) = g_p(JX, Y)$에서 $g_p$가 양의 정부호이고 $J$가 가역이므로, $\omega_p(X, \cdot) = 0$이면 $g_p(JX, \cdot) = 0$, 곧 $JX = 0$, 곧 $X = 0$이다. 따라서 $\omega_p$는 nondegenerate하다.
 
-부피형식과의 일치를 본다. 점 $p$의 normal coordinate $z_j = x_j + iy_j$에서 $\omega_p = \sum_j dx_j \wedge dy_j$이므로
+부피형식과의 일치를 본다. 점 $p$의 normal coordinate $z_j = x_j + iy_j$에서 $\omega_p = \sum_j \dd{x_j} \wedge \dd{y_j}$이므로
 
 $$
-\frac{\omega_p^n}{n!} = \frac{1}{n!}\Big(\sum_j dx_j \wedge dy_j\Big)^n = dx_1 \wedge dy_1 \wedge \cdots \wedge dx_n \wedge dy_n
+\frac{\omega_p^n}{n!} = \frac{1}{n!}\Big(\sum_j \dd{x_j} \wedge \dd{y_j}\Big)^n = \dd{x_1} \wedge \dd{y_1} \wedge \cdots \wedge \dd{x_n} \wedge \dd{y_n}
 $$
 
-이다 (서로 다른 $j$의 $dx_j \wedge dy_j$들이 교환하고 같은 인자의 제곱이 소멸하므로, $n$제곱의 전개에서 모든 인자를 한 번씩 쓴 항만 $n!$개 살아남는다). 한편 $g_p$가 normal coordinate에서 표준 유클리드 계량 $\sum_j(dx_j^2 + dy_j^2)$과 일치하므로 그 리만 부피형식도 $dx_1 \wedge dy_1 \wedge \cdots \wedge dx_n \wedge dy_n$이다. 둘이 같으므로 $\omega^n/n!$은 부피형식이고, 부피형식은 어디서도 소멸하지 않으므로 $\omega^n$도 그러하다.
+이다 (서로 다른 $j$의 $\dd{x_j} \wedge \dd{y_j}$들이 교환하고 같은 인자의 제곱이 소멸하므로, $n$제곱의 전개에서 모든 인자를 한 번씩 쓴 항만 $n!$개 살아남는다). 한편 $g_p$가 normal coordinate에서 표준 유클리드 계량 $\sum_j(\dd{x_j}^2 + \dd{y_j}^2)$과 일치하므로 그 리만 부피형식도 $\dd{x_1} \wedge \dd{y_1} \wedge \cdots \wedge \dd{x_n} \wedge \dd{y_n}$이다. 둘이 같으므로 $\omega^n/n!$은 부피형식이고, 부피형식은 어디서도 소멸하지 않으므로 $\omega^n$도 그러하다.
 :::
 
 이로써 Kähler manifold는 복소·리만·사교의 세 구조를 한 몸에 갖춘 대상이 된다. 다만 역방향, 곧 symplectic manifold가 언제나 Kähler manifold인 것은 아니다. 사교 조건은 비퇴화 닫힌 $2$-형식만 요구하며 양립하는 복소구조나 그 적분가능성을 보장하지 않으므로, Kähler가 아닌 콤팩트 symplectic manifold (예컨대 Kodaira–Thurston manifold) 가 존재한다. 곧 "Kähler ⟹ symplectic"은 성립하지만 그 역은 거짓이다.
@@ -233,13 +233,13 @@ $X$가 콤팩트 connected Kähler manifold이고 $n = \dim_{\mathbb{C}} X$이�
 :::
 
 ::: 증명
-$\omega$가 닫혀 있으므로 $\omega^k$도 닫혀 있고 ($d(\omega^k) = k\, d\omega \wedge \omega^{k-1} = 0$) cohomology class $[\omega^k] \in H^{2k}(X, \mathbb{R})$를 정의한다. 이 류가 $0$이 아님을 보이기 위해, 그 거듭제곱을 끝까지 올린 $[\omega^n]$을 적분한다. [명제 10](#prop10)에 의해 $\omega^n/n!$은 부피형식이므로 $\omega^n$은 양의 부피형식의 양의 상수배이고, $X$가 콤팩트이므로
+$\omega$가 닫혀 있으므로 $\omega^k$도 닫혀 있고 ($\dd{(\omega^k)} = k\dd{\omega} \wedge \omega^{k-1} = 0$) cohomology class $[\omega^k] \in H^{2k}(X, \mathbb{R})$를 정의한다. 이 류가 $0$이 아님을 보이기 위해, 그 거듭제곱을 끝까지 올린 $[\omega^n]$을 적분한다. [명제 10](#prop10)에 의해 $\omega^n/n!$은 부피형식이므로 $\omega^n$은 양의 부피형식의 양의 상수배이고, $X$가 콤팩트이므로
 
 $$
 \int_X \omega^n = n! \int_X \frac{\omega^n}{n!} = n! \cdot \mathrm{vol}(X) > 0
 $$
 
-이다. 만약 어떤 $k$에 대해 $[\omega^k] = 0$, 곧 $\omega^k = d\eta$인 $\eta$가 존재한다면, $\omega^n = \omega^k \wedge \omega^{n-k} = d\eta \wedge \omega^{n-k} = d(\eta \wedge \omega^{n-k})$ ($\omega^{n-k}$가 닫혀 있으므로) 로 $\omega^n$이 완전형식이 된다. 그러면 Stokes 정리에 의해 boundary 없는 콤팩트 $X$에서 $\int_X \omega^n = \int_X d(\eta \wedge \omega^{n-k}) = 0$이 되어 위 부등식 $\int_X\omega^n > 0$과 모순이다. 따라서 모든 $1 \leq k \leq n$에 대해 $[\omega^k] \neq 0$이다.
+이다. 만약 어떤 $k$에 대해 $[\omega^k] = 0$, 곧 $\omega^k = \dd{\eta}$인 $\eta$가 존재한다면, $\omega^n = \omega^k \wedge \omega^{n-k} = \dd{\eta} \wedge \omega^{n-k} = \dd{(\eta \wedge \omega^{n-k})}$ ($\omega^{n-k}$가 닫혀 있으므로) 로 $\omega^n$이 완전형식이 된다. 그러면 Stokes 정리에 의해 boundary 없는 콤팩트 $X$에서 $\int_X \omega^n = \int_X \dd{(\eta \wedge \omega^{n-k})} = 0$이 되어 위 부등식 $\int_X\omega^n > 0$과 모순이다. 따라서 모든 $1 \leq k \leq n$에 대해 $[\omega^k] \neq 0$이다.
 
 $[\omega^k] \neq 0$이면 $H^{2k}(X, \mathbb{R}) \neq 0$이므로 $b_{2k}(X) = \dim_{\mathbb{R}} H^{2k}(X, \mathbb{R}) \geq 1$이다. $k = 1$로 두면 $b_2(X) \geq 1$이다.
 :::
@@ -263,7 +263,7 @@ $$
 ::: 증명
 핵심은 두 항등식이 평탄한 $\mathbb{C}^n$의 표준 Kähler 구조에서 성립함을 보이고, 그 다음 일반 Kähler manifold로 옮기는 것이다.
 
-평탄한 경우, 곧 $X = \mathbb{C}^n$에 [예시 6](#ex6)의 표준 계량을 주면 $L$, $\Lambda$, $\partial$, $\bar\partial$, $\partial^\ast$, $\bar\partial^\ast$가 모두 상수계수 작용소이고, $dz_j \wedge$·$d\bar{z}_j\wedge$와 그 contraction의 대수적 교환관계를 직접 계산하여 $[\Lambda, \bar\partial] = -i\partial^\ast$와 $[\Lambda, \partial] = i\bar\partial^\ast$를 확인한다. 이는 exterior algebra와 그 내적이 만드는 유한차원 선형대수 항등식이며, 미분이 아니라 계수 함수의 일차 미분과 wedge·contraction의 결합으로 환원된다.
+평탄한 경우, 곧 $X = \mathbb{C}^n$에 [예시 6](#ex6)의 표준 계량을 주면 $L$, $\Lambda$, $\partial$, $\bar\partial$, $\partial^\ast$, $\bar\partial^\ast$가 모두 상수계수 작용소이고, $\dd{z_j} \wedge$·$\dd{\bar{z}_j}\wedge$와 그 contraction의 대수적 교환관계를 직접 계산하여 $[\Lambda, \bar\partial] = -i\partial^\ast$와 $[\Lambda, \partial] = i\bar\partial^\ast$를 확인한다. 이는 exterior algebra와 그 내적이 만드는 유한차원 선형대수 항등식이며, 미분이 아니라 계수 함수의 일차 미분과 wedge·contraction의 결합으로 환원된다.
 
 일반 Kähler manifold에서는 [정리 5](#thm5)의 조건 (3)을 쓴다. 임의의 점 $p$에서 normal coordinate를 택하면 계량이 $p$에서 표준 Hermitian 계량과 이차까지 일치하므로, $L$, $\Lambda$와 $\partial$, $\bar\partial$, 그리고 그 수반작용소들이 $p$에서 평탄한 경우와 같은 일차 자료를 가진다. 위 항등식은 작용소들의 일차 미분 정보만으로 결정되는 일차 관계식이므로, $p$에서 평탄한 model의 항등식이 그대로 성립한다. $p$가 임의였으므로 항등식이 $X$ 전체에서 성립한다. Normal coordinate가 존재한다는 것, 곧 계량을 한 점에서 이차까지 표준형으로 만들 수 있다는 것이 바로 Kähler 조건이며, 이것이 평탄 model에서 일반 manifold로 항등식을 전파하는 다리이다.
 :::

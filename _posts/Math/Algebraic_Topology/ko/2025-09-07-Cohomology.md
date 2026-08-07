@@ -168,7 +168,7 @@ $$\Omega^k(\mathbb{R}^n)=\{\text{$k$-forms on $\mathbb{R}^n$}\}$$
 
 가령 $\mathbb{R}^3$ 위에 정의된 differential $2$-form
 
-$$\omega=dx\wedge dy$$
+$$\omega=\dd{x}\wedge \dd{y}$$
 
 을 생각하자. $\mathbb{R}^3$의 $2$차원 부분집합은 $\mathbb{R}^2$의 (단위) 직사각형에서 $\mathbb{R}^3$으로의 함수로 주어지며, 이를 통해 우리는 $2$차원 부분집합에 $\omega$를 적용하는 것이 무엇인지 안다.
 
@@ -178,7 +178,7 @@ $$S = \{ (x, y, 0) \mid 0 \leq x \leq 1,\, 0 \leq y \leq 1 \}$$
 
 이 주어졌다 하자. 그럼 이 집합에서의 $\omega$의 값은 단순히
 
-$$\int_S \omega = \int_{x=0}^{1} \int_{y=0}^{1} 1\,dy\,dx = 1$$
+$$\int_S \omega = \int_{x=0}^{1} \int_{y=0}^{1} 1\dd{y}\dd{x} = 1$$
 
 로 계산된다. 다른 예시로, 곡면
 
@@ -188,12 +188,12 @@ $$\Sigma = \{ (x, y, z) \mid x^2 + y^2 + z^2 = 1,\ z \geq 0 \}$$
 
 $$x = \sin \phi \cos \theta,\qquad y = \sin \phi \sin \theta,\qquad z = \cos \phi$$
 
-를 이용하여 이를 $[0,\pi/2]\times[0,2\pi]$에서 $\Sigma$의 함수로 매개화한 후, $dx \wedge dy = \sin \phi \cos \phi\, d\phi \wedge d\theta$임을 이용하여 
+를 이용하여 이를 $[0,\pi/2]\times[0,2\pi]$에서 $\Sigma$의 함수로 매개화한 후, $\dd{x} \wedge \dd{y} = \sin \phi \cos \phi\dd{\phi} \wedge \dd{\theta}$임을 이용하여 
 
 $$\begin{align*}
 \int_{\Sigma} \omega
-&= \int_{0}^{2\pi} \int_{0}^{\pi/2} \sin \phi \cos \phi\, d\phi \, d\theta = \int_{0}^{2\pi} d\theta \int_{0}^{\pi/2} \sin \phi \cos \phi\, d\phi \\
-&= 2\pi \times \frac{1}{2} \int_{0}^{\pi/2} \sin(2\phi) d\phi = 2\pi \times \frac{1}{2} \left[ -\frac{1}{2} \cos(2\phi) \right]_{0}^{\pi/2} \\
+&= \int_{0}^{2\pi} \int_{0}^{\pi/2} \sin \phi \cos \phi\dd{\phi} \dd{\theta} = \int_{0}^{2\pi} \dd{\theta} \int_{0}^{\pi/2} \sin \phi \cos \phi\dd{\phi} \\
+&= 2\pi \times \frac{1}{2} \int_{0}^{\pi/2} \sin(2\phi) \dd{\phi} = 2\pi \times \frac{1}{2} \left[ -\frac{1}{2} \cos(2\phi) \right]_{0}^{\pi/2} \\
 &= 2\pi \times \frac{1}{2} \left( -\frac{1}{2} [\cos(\pi) - \cos(0)] \right) = 2\pi \times \frac{1}{2} \left( -\frac{1}{2}(-1 - 1) \right) = 2\pi \times \frac{1}{2} \times 1 \\
 &= \pi
 \end{align*}$$

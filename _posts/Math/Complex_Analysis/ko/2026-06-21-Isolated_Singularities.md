@@ -41,7 +41,7 @@ $$f(z) = \sum_{n=-\infty}^{\infty} a_n (z - z_0)^n$$
 
 으로 표현되며, 그 계수는 $r < \rho < R$인 임의의 $\rho$에 대해
 
-$$a_n = \frac{1}{2\pi i}\oint_{\lvert w - z_0\rvert = \rho} \frac{f(w)}{(w - z_0)^{n+1}}\,dw \qquad (n \in \mathbb{Z})$$
+$$a_n = \frac{1}{2\pi i}\oint_{\lvert w - z_0\rvert = \rho} \frac{f(w)}{(w - z_0)^{n+1}}\dd{w} \qquad (n \in \mathbb{Z})$$
 
 로 주어진다. 이 전개와 계수는 유일하게 결정되며, 급수는 $A$의 임의의 콤팩트 부분집합에서 절대·균등수렴한다.
 :::
@@ -49,7 +49,7 @@ $$a_n = \frac{1}{2\pi i}\oint_{\lvert w - z_0\rvert = \rho} \frac{f(w)}{(w - z_0
 ::: 증명
 $z \in A$을 고정하고 $r < \rho_1 < \lvert z - z_0\rvert < \rho_2 < R$이 되도록 두 반지름을 잡는다. $f$가 닫힌 환형 영역 $\{\rho_1 \leq \lvert w - z_0\rvert \leq \rho_2\}$를 품는 영역에서 holomorphic이므로, 이 닫힌 환형 영역의 두 경계원에 [§Cauchy 정리, ⁋정리 6](/ko/math/complex_analysis/cauchy_theorem#thm6)를 적용해 얻는 환형 영역에서의 Cauchy 적분공식에 의해
 
-$$f(z) = \frac{1}{2\pi i}\oint_{\lvert w - z_0\rvert = \rho_2}\frac{f(w)}{w - z}\,dw \;-\; \frac{1}{2\pi i}\oint_{\lvert w - z_0\rvert = \rho_1}\frac{f(w)}{w - z}\,dw$$
+$$f(z) = \frac{1}{2\pi i}\oint_{\lvert w - z_0\rvert = \rho_2}\frac{f(w)}{w - z}\dd{w} \;-\; \frac{1}{2\pi i}\oint_{\lvert w - z_0\rvert = \rho_1}\frac{f(w)}{w - z}\dd{w}$$
 
 이다. 이 환형 영역 형태는 두 경계원을 반대 방향으로 도는 닫힌 경로에 Cauchy 적분공식을 적용한 것으로, 안쪽 원의 부호가 음인 것은 그 방향이 영역의 boundary로서 시계방향이기 때문이다.
 
@@ -59,7 +59,7 @@ $$\frac{1}{w - z} = \frac{1}{(w - z_0)\bigl(1 - \frac{z - z_0}{w - z_0}\bigr)} =
 
 이고 공비의 크기가 $\lvert z - z_0\rvert/\rho_2 < 1$로 $w$에 무관하게 bounded above이므로 바깥 원 위에서 균등수렴한다. 따라서 합과 적분을 바꿔
 
-$$\frac{1}{2\pi i}\oint_{\lvert w - z_0\rvert = \rho_2}\frac{f(w)}{w - z}\,dw = \sum_{n=0}^{\infty}\left(\frac{1}{2\pi i}\oint_{\lvert w - z_0\rvert = \rho_2}\frac{f(w)}{(w - z_0)^{n+1}}\,dw\right)(z - z_0)^n$$
+$$\frac{1}{2\pi i}\oint_{\lvert w - z_0\rvert = \rho_2}\frac{f(w)}{w - z}\dd{w} = \sum_{n=0}^{\infty}\left(\frac{1}{2\pi i}\oint_{\lvert w - z_0\rvert = \rho_2}\frac{f(w)}{(w - z_0)^{n+1}}\dd{w}\right)(z - z_0)^n$$
 
 을 얻는다.
 
@@ -69,15 +69,15 @@ $$\frac{1}{w - z} = \frac{-1}{(z - z_0)\bigl(1 - \frac{w - z_0}{z - z_0}\bigr)} 
 
 이고 공비의 크기가 $\rho_1/\lvert z - z_0\rvert < 1$로 안쪽 원 위에서 균등수렴한다. 앞의 음부호와 함께 합과 적분을 바꾸면
 
-$$-\frac{1}{2\pi i}\oint_{\lvert w - z_0\rvert = \rho_1}\frac{f(w)}{w - z}\,dw = \sum_{m=0}^{\infty}\left(\frac{1}{2\pi i}\oint_{\lvert w - z_0\rvert = \rho_1}f(w)(w - z_0)^m\,dw\right)(z - z_0)^{-(m+1)}$$
+$$-\frac{1}{2\pi i}\oint_{\lvert w - z_0\rvert = \rho_1}\frac{f(w)}{w - z}\dd{w} = \sum_{m=0}^{\infty}\left(\frac{1}{2\pi i}\oint_{\lvert w - z_0\rvert = \rho_1}f(w)(w - z_0)^m\dd{w}\right)(z - z_0)^{-(m+1)}$$
 
-이 된다. $n = -(m+1)$로 지수를 바꾸면 이 항들은 $n \leq -1$인 음의 멱이고, 그 계수는 $\frac{1}{2\pi i}\oint_{\rho_1} f(w)(w - z_0)^{-n-1}\,dw$이다.
+이 된다. $n = -(m+1)$로 지수를 바꾸면 이 항들은 $n \leq -1$인 음의 멱이고, 그 계수는 $\frac{1}{2\pi i}\oint_{\rho_1} f(w)(w - z_0)^{-n-1}\dd{w}$이다.
 
 두 합을 더하면 $f(z) = \sum_{n=-\infty}^{\infty} a_n (z - z_0)^n$을 얻는데, 양의 지수 계수는 $\rho_2$ 원 위의 적분으로, 음의 지수 계수는 $\rho_1$ 원 위의 적분으로 나온다. 그런데 $f(w)/(w - z_0)^{n+1}$이 환형 영역에서 holomorphic이므로, 두 경계원이 환형 영역 안에서 서로 homotopic하므로 적분경로를 변형해도 적분값이 변하지 않는다 (Cauchy의 homotopy 정리 ([§Cauchy 정리, ⁋정리 6](/ko/math/complex_analysis/cauchy_theorem#thm6))). 따라서 $r < \rho < R$인 임의의 $\rho$에 대해 같은 공식이 성립하여 주장하는 계수식을 얻는다.
 
-유일성을 위해 $f(z) = \sum_{n} b_n (z - z_0)^n$이 $A$에서 수렴하는 또 다른 Laurent 표현이라 하자. 이 급수는 각 원 $\lvert z - z_0\rvert = \rho$ 위에서 균등수렴하므로, 양변에 $(z - z_0)^{-k-1}$을 곱하고 그 원 위에서 항별로 적분하면 $\oint (z - z_0)^{m-k-1}\,dz = 2\pi i\,\delta_{m,k}$ (정수 멱의 적분) 에 의해 오직 $m = k$ 항만 살아남아
+유일성을 위해 $f(z) = \sum_{n} b_n (z - z_0)^n$이 $A$에서 수렴하는 또 다른 Laurent 표현이라 하자. 이 급수는 각 원 $\lvert z - z_0\rvert = \rho$ 위에서 균등수렴하므로, 양변에 $(z - z_0)^{-k-1}$을 곱하고 그 원 위에서 항별로 적분하면 $\oint (z - z_0)^{m-k-1}\dd{z} = 2\pi i\,\delta_{m,k}$ (정수 멱의 적분) 에 의해 오직 $m = k$ 항만 살아남아
 
-$$\frac{1}{2\pi i}\oint_{\lvert z - z_0\rvert = \rho} \frac{f(z)}{(z - z_0)^{k+1}}\,dz = b_k$$
+$$\frac{1}{2\pi i}\oint_{\lvert z - z_0\rvert = \rho} \frac{f(z)}{(z - z_0)^{k+1}}\dd{z} = b_k$$
 
 이 된다. 이는 위에서 얻은 $a_k$의 공식과 같으므로 $b_k = a_k$이고, 전개가 유일하다. 절대·균등수렴은 regular part와 주부가 각각 자신의 수렴원판·수렴 외부영역의 콤팩트 부분집합에서 멱급수로서 절대·균등수렴하기 때문이다.
 :::

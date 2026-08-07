@@ -46,7 +46,7 @@ $$TM=\bigsqcup_{p\in M} T_pM$$
 
 우선 $TM$ 위에 coordinate system을 정의하자. 임의의 coordinate system $(U,\varphi)$에 대하여, 함수 $\tilde{\varphi}:\pi^{-1}(U)\rightarrow\mathbb{R}^m\times\mathbb{R}^m$을 다음의 식
 
-$$\tilde{\varphi}(v)=\bigl(x^1(\pi(v)), \ldots, x^m(\pi(v)), dx^1(v),\ldots, dx^m(v)\bigr)$$
+$$\tilde{\varphi}(v)=\bigl(x^1(\pi(v)), \ldots, x^m(\pi(v)), \dd{x}^1(v),\ldots, \dd{x}^m(v)\bigr)$$
 
 으로 정의하자. 그럼 $\tilde{\varphi}$는 $\pi^{-1}(U)$에서 $\mathbb{R}^{2m}$의 열린집합 $\varphi(U)\times\mathbb{R}^m$으로의 bijection이다. 
 
@@ -56,11 +56,11 @@ $$\begin{aligned}(\tilde{\psi}\circ\tilde{\varphi}^{-1})(p^1, \ldots, p^m, v^1, 
 
 이다. 여기에서 $v=\sum v^i\frac{\partial}{\partial x^i}$라 하면 우변은 간단히
 
-$$\left((\psi\circ\varphi^{-1})(p), dy^1(v), \ldots, dy^m(v)\right)$$
+$$\left((\psi\circ\varphi^{-1})(p), \dd{y}^1(v), \ldots, \dd{y}^m(v)\right)$$
 
 로 쓸 수 있다. 이제 임의의 $j$에 대하여
 
-$$dy^j\left(\sum v^i\frac{\partial}{\partial x^i}\bigg\vert_{\varphi^{-1}(p)}\right)=\sum_{i=1}^m v^i\frac{\partial y^j}{\partial x^i}\bigg\vert_{\varphi^{-1}(p)}$$
+$$\dd{y}^j\left(\sum v^i\frac{\partial}{\partial x^i}\bigg\vert_{\varphi^{-1}(p)}\right)=\sum_{i=1}^m v^i\frac{\partial y^j}{\partial x^i}\bigg\vert_{\varphi^{-1}(p)}$$
 
 가 된다. 따라서, 위의 transition map $\tilde{\psi}\circ\tilde{\varphi}^{-1}$의 각 성분들이 $C^\infty$이므로 $\tilde{\psi}\circ\tilde{\varphi}^{-1}$도 $C^\infty$이다. 
 
@@ -72,7 +72,7 @@ $$\{\tilde{\varphi}^{-1}(W)\mid \text{$W$ open in $\mathbb{R}^{2m}$, $(U,\varphi
 
 이제 남은 것은 $TM$에서의 local trivialization 뿐이다. 임의의 coordinate system $(U,\varphi)$에 대하여, $\phi:\pi^{-1}(U)\rightarrow U\times\mathbb{R}^m$을 이번에는 다음의 식
 
-$$v\vert_p\mapsto (p, dx^1(v),\ldots, dx^m(v))$$
+$$v\vert_p\mapsto (p, \dd{x}^1(v),\ldots, \dd{x}^m(v))$$
 
 으로 정의하면 된다. 고정된 $\pi^{-1}(p)$ 위에서 $\phi$가 벡터공간 사이의 isomorphism이 되는 것은 자명하고, 또 임의의 $v_x$에 대하여 $(\pi\circ\phi)(x,v)=x$임도 자명하다. $\phi$가 diffeomorphism이 된다는 것은 
 

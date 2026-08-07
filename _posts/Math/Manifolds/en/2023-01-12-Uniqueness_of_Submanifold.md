@@ -86,7 +86,7 @@ $$\iota=\Phi\circ\bar{\Phi}^{-1}$$
 
 is an immersion from $A$ into $M$. That is, $(A,\iota)$ is a submanifold of $M$. Moreover, the above identity shows that $(N,\Phi)$ and $(A,\iota)$ are equivalent.
 
-Conversely, for a subset $A\subseteq M$ equipped with a manifold structure, if the inclusion $\iota:A\hookrightarrow M$ is an immersion then $(A,\iota)$ is always a submanifold of $M$. This means that for arbitrary $x\in A$, the differential $d\iota_x:T_xA\rightarrow T_xM$ is injective, so $d\iota_x$ induces a bijection between $T_xA$ and $d\iota_x(T_xA)$. Setting aside a slight notational issue, we may identify $T_xA$ with $d\iota_x(T_xA)$.
+Conversely, for a subset $A\subseteq M$ equipped with a manifold structure, if the inclusion $\iota:A\hookrightarrow M$ is an immersion then $(A,\iota)$ is always a submanifold of $M$. This means that for arbitrary $x\in A$, the differential $\dd{\iota_x}:T_xA\rightarrow T_xM$ is injective, so $\dd{\iota_x}$ induces a bijection between $T_xA$ and $\dd{\iota_x}(T_xA)$. Setting aside a slight notational issue, we may identify $T_xA$ with $\dd{\iota_x}(T_xA)$.
 
 ## Uniqueness of Submanifolds
 
@@ -117,11 +117,11 @@ First, applying [Proposition 4](#prop4) to the subspace topology $\mathcal{T}$, 
 
 Here $\iota$ and $\iota'$ are both $A\hookrightarrow M$, but we have denoted them by different names for distinction. By definition $(A,\mathcal{T},\mathcal{A})$ is an embedded submanifold of $M$, so the vertical $\iota$ is an embedding; hence $\id$ is $C^\infty$ by [Proposition 2](#prop2). Moreover, by the chain rule
 
-$$d\iota'=d\iota\circ d(\id)$$
+$$\dd{\iota}'=\dd{\iota}\circ \dd{(\id)}$$
 
-holds, and since $d\iota'$ is injective at every point, $d(\id)$ is also injective at every point. Therefore it suffices to show that $d(\id)$ is surjective at every point.
+holds, and since $\dd{\iota}'$ is injective at every point, $\dd{(\id)}$ is also injective at every point. Therefore it suffices to show that $\dd{(\id)}$ is surjective at every point.
 
-Suppose for contradiction that there exists a point $a$ at which $d(\id)$ is not surjective. Then considering the dimension of the tangent space at this point,
+Suppose for contradiction that there exists a point $a$ at which $\dd{(\id)}$ is not surjective. Then considering the dimension of the tangent space at this point,
 
 $$\dim(A,\mathcal{T}',\mathcal{A}')<\dim(A,\mathcal{T},\mathcal{A})$$
 

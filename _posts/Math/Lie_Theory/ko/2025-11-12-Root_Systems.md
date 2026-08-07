@@ -41,7 +41,7 @@ $$K(\Ad_g(X), \Ad_g(Y))=K(X,Y)$$
 
 이 성립하며, 이를 $g=e$에서 $Z$ 방향으로 미분하면 다음의 $\ad$-invariance
 
-$$0=\frac{d}{dt}\bigg\vert_{t=0}K(\Ad_{\exp(tZ)}X, \Ad_{\exp(tZ)}Y)=K([Z,X],Y)+K(X,[Z,Y])$$
+$$0=\frac{d}{\dd{t}}\bigg\vert_{t=0}K(\Ad_{\exp(tZ)}X, \Ad_{\exp(tZ)}Y)=K([Z,X],Y)+K(X,[Z,Y])$$
 
 을 얻는다. 남아있는 것은 이것이 non-degenerate인 조건이다. 
 

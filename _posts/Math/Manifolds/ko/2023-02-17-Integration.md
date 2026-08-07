@@ -30,26 +30,26 @@ $$\supp\omega=\cl\left\{p\in M\mid \omega(p)\neq 0\right\}$$
 
 열린집합 $U\subseteq\mathbb{R}^m$ 위의 임의의 $m$-form은 표준좌표 $r^1,\ldots,r^m$에 대하여 유일한 방식으로
 
-$$\omega=f\,dr^1\wedge\cdots\wedge dr^m,\qquad f\in C^\infty(U)$$
+$$\omega=f\dd{r}^1\wedge\cdots\wedge \dd{r}^m,\qquad f\in C^\infty(U)$$
 
 로 쓸 수 있다. 이를 이용해 다음을 정의한다.
 
 ::: 정의 2
-열린집합 $U\subseteq\mathbb{R}^m$ 위의 compactly supported $m$-form $\omega=f\,dr^1\wedge\cdots\wedge dr^m$에 대하여, $\omega$의 $U$ 위에서의 *적분<sub>integral</sub>*을 다음의 식
+열린집합 $U\subseteq\mathbb{R}^m$ 위의 compactly supported $m$-form $\omega=f\dd{r}^1\wedge\cdots\wedge \dd{r}^m$에 대하여, $\omega$의 $U$ 위에서의 *적분<sub>integral</sub>*을 다음의 식
 
-$$\int_U\omega=\int_Uf\,dr^1\cdots dr^m$$
+$$\int_U\omega=\int_Uf\dd{r}^1\cdots \dd{r}^m$$
 
 으로 정의한다. 우변은 미적분학에서의 (Riemann) 적분이다.
 :::
 
-$f$가 연속이고 compact support를 가지므로 우변의 적분은 잘 정의된다. 주의할 것은 이 정의가 좌표들의 *순서*에 의존한다는 것이다. 가령 $m=2$일 때 $\omega=f\,dr^2\wedge dr^1$로 쓰여진 형식의 적분은 $dr^2\wedge dr^1=-dr^1\wedge dr^2$이므로 $-\int_Uf\,dr^1dr^2$가 된다.
+$f$가 연속이고 compact support를 가지므로 우변의 적분은 잘 정의된다. 주의할 것은 이 정의가 좌표들의 *순서*에 의존한다는 것이다. 가령 $m=2$일 때 $\omega=f\dd{r}^2\wedge \dd{r}^1$로 쓰여진 형식의 적분은 $\dd{r}^2\wedge \dd{r}^1=-\dd{r}^1\wedge \dd{r}^2$이므로 $-\int_Uf\dd{r}^1\dd{r}^2$가 된다.
 
 다음은 미적분학의 변수변환 공식이다. 이에 대한 증명은 미적분학의 영역이므로 여기서는 다루지 않는다.
 
 ::: 정리 3 (변수변환)
 두 열린집합 $U,V\subseteq\mathbb{R}^m$ 사이의 diffeomorphism $\varphi:V\rightarrow U$와, compact support를 갖는 연속함수 $f:U\rightarrow\mathbb{R}$가 주어졌다 하자. 그럼 다음의 식
 
-$$\int_Uf\,dr^1\cdots dr^m=\int_V(f\circ\varphi)\,\lvert\det D\varphi\rvert\,dr^1\cdots dr^m$$
+$$\int_Uf\dd{r}^1\cdots \dd{r}^m=\int_V(f\circ\varphi)\,\lvert\det D\varphi\rvert\dd{r}^1\cdots \dd{r}^m$$
 
 이 성립한다. 여기서 $D\varphi$는 $\varphi$의 Jacobian matrix이다.
 :::
@@ -64,13 +64,13 @@ $$\int_V\varphi^\ast\omega=\int_U\omega$$
 가 성립한다.
 :::
 ::: 증명
-$\omega=f\,dr^1\wedge\cdots\wedge dr^m$이라 하자. [§미분형식](/ko/math/manifolds/differential_forms)에서 살펴본 pullback의 정의에 의하여 $\varphi^\ast dr^i=d(r^i\circ\varphi)=\sum_{j=1}^m\frac{\partial\varphi^i}{\partial r^j}dr^j$이고, $\varphi^\ast$가 wedge product를 보존하므로
+$\omega=f\dd{r}^1\wedge\cdots\wedge \dd{r}^m$이라 하자. [§미분형식](/ko/math/manifolds/differential_forms)에서 살펴본 pullback의 정의에 의하여 $\varphi^\ast \dd{r}^i=\dd{(r^i\circ\varphi)}=\sum_{j=1}^m\frac{\partial\varphi^i}{\partial r^j}\dd{r}^j$이고, $\varphi^\ast$가 wedge product를 보존하므로
 
-$$\varphi^\ast\omega=(f\circ\varphi)\,\bigwedge_{i=1}^m\left(\sum_{j=1}^m\frac{\partial \varphi^i}{\partial r^j}dr^j\right)=(f\circ\varphi)\,\det(D\varphi)\,dr^1\wedge\cdots\wedge dr^m$$
+$$\varphi^\ast\omega=(f\circ\varphi)\,\bigwedge_{i=1}^m\left(\sum_{j=1}^m\frac{\partial \varphi^i}{\partial r^j}\dd{r}^j\right)=(f\circ\varphi)\,\det(D\varphi)\dd{r}^1\wedge\cdots\wedge \dd{r}^m$$
 
 이다. 마지막 등식은 행렬식의 정의에 따른 것이다. 한편 $\varphi$가 diffeomorphism이므로 $\supp\varphi^\ast\omega=\varphi^{-1}(\supp\omega)$는 compact이고, 따라서 [정의 2](#def2)와 [정리 3](#thm3)에 의하여
 
-$$\int_V\varphi^\ast\omega=\int_V(f\circ\varphi)\det(D\varphi)\,dr^1\cdots dr^m=\int_V(f\circ\varphi)\,\lvert\det D\varphi\rvert\,dr^1\cdots dr^m=\int_U\omega$$
+$$\int_V\varphi^\ast\omega=\int_V(f\circ\varphi)\det(D\varphi)\dd{r}^1\cdots \dd{r}^m=\int_V(f\circ\varphi)\,\lvert\det D\varphi\rvert\dd{r}^1\cdots \dd{r}^m=\int_U\omega$$
 
 이다. 두 번째 등식에서 $\det D\varphi>0$ 가정을 사용하였다.
 :::
@@ -79,7 +79,7 @@ $$\int_V\varphi^\ast\omega=\int_V(f\circ\varphi)\det(D\varphi)\,dr^1\cdots dr^m=
 
 ## 다양체 위에서의 적분
 
-이제 $M$이 $m$차원의 connected orientable manifold라 하고, orientation, 즉 $\bigwedge\nolimits^m(M)\setminus\{0\}$의 component $\Lambda^+$ 하나를 고정하자. ([§향, ⁋정의 1](/ko/math/manifolds/orientation#def1)) Coordinate system $(U,x)$가 *positively oriented*라는 것은 $U$의 모든 점에서 $dx^1\wedge\cdots\wedge dx^m$이 $\Lambda^+$에 속하는 것이다. [§향, ⁋명제 2](/ko/math/manifolds/orientation#prop2)의 증명에서 살펴본 것과 같이 $M$은 positively oriented coordinate system들로 덮을 수 있으며, 이들이 겹치는 곳에서 Jacobian의 행렬식은 항상 $0$보다 크다.
+이제 $M$이 $m$차원의 connected orientable manifold라 하고, orientation, 즉 $\bigwedge\nolimits^m(M)\setminus\{0\}$의 component $\Lambda^+$ 하나를 고정하자. ([§향, ⁋정의 1](/ko/math/manifolds/orientation#def1)) Coordinate system $(U,x)$가 *positively oriented*라는 것은 $U$의 모든 점에서 $\dd{x}^1\wedge\cdots\wedge \dd{x}^m$이 $\Lambda^+$에 속하는 것이다. [§향, ⁋명제 2](/ko/math/manifolds/orientation#prop2)의 증명에서 살펴본 것과 같이 $M$은 positively oriented coordinate system들로 덮을 수 있으며, 이들이 겹치는 곳에서 Jacobian의 행렬식은 항상 $0$보다 크다.
 
 우선 support가 하나의 좌표근방에 들어가는 경우를 처리한다.
 
@@ -162,7 +162,7 @@ $M$이 connected orientable일 때 orientation의 선택지는 $\Lambda^+$와 $\
 :::
 
 ::: 예시 11
-$M$이 표준 orientation이 주어진 열린집합 $U\subseteq\mathbb{R}^m$이라 하자. 즉 identity chart $(U,\id_U)$가 positively oriented이도록 orientation을 잡은 것이다. 그럼 compactly supported $m$-form $\omega=f\,dr^1\wedge\cdots\wedge dr^m$에 대하여, 하나의 chart $(U,\id_U)$와 상수함수 $1$로 이루어진 partition of unity를 택하면 [정의 7](#def7)의 적분은 정확히 [정의 2](#def2)의 적분, 즉 미적분학에서의 적분 $\int_Uf\,dr^1\cdots dr^m$과 일치한다.
+$M$이 표준 orientation이 주어진 열린집합 $U\subseteq\mathbb{R}^m$이라 하자. 즉 identity chart $(U,\id_U)$가 positively oriented이도록 orientation을 잡은 것이다. 그럼 compactly supported $m$-form $\omega=f\dd{r}^1\wedge\cdots\wedge \dd{r}^m$에 대하여, 하나의 chart $(U,\id_U)$와 상수함수 $1$로 이루어진 partition of unity를 택하면 [정의 7](#def7)의 적분은 정확히 [정의 2](#def2)의 적분, 즉 미적분학에서의 적분 $\int_Uf\dd{r}^1\cdots \dd{r}^m$과 일치한다.
 :::
 
 ---

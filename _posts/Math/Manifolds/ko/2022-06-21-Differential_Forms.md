@@ -73,31 +73,31 @@ $$\Omega^\ast(M)=\bigoplus_{k=0}^n\Omega^k(M)$$
 
 으로 생각할 수 있다. 뿐만 아니라, $\Omega^\ast(M)$에서의 $\mathbb{R}$에 의한 스칼라곱은 사실 각 점 $p$마다 수행할 수 있기 때문에, $\Omega^\ast(M)$의 계수를 $C^\infty(M)$으로 생각할 수도 있다. 대수적으로 이는 ring homomorphism $\mathbb{R}\rightarrow C^\infty(M)$을 통해 coefficient ring을 바꾸어 주는 것으로 생각할 수도 있으며, 앞으로 $\Omega^\ast(M)$은 항상 이러한 식으로 $\mathbb{N}$-graded $C^\infty(M)$-algebra 구조가 주어진 것으로 생각한다.
 
-이제 $C^\infty$ 함수 $F:M\rightarrow N$이 주어졌다 하자. 그럼 linear map $dF_p:T_pM\rightarrow T_{F(p)}N$가 잘 정의된다. 따라서 $dF_p$의 dual map에 exterior algebra의 functoriality를 적용하면
+이제 $C^\infty$ 함수 $F:M\rightarrow N$이 주어졌다 하자. 그럼 linear map $\dd{F_p}:T_pM\rightarrow T_{F(p)}N$가 잘 정의된다. 따라서 $\dd{F_p}$의 dual map에 exterior algebra의 functoriality를 적용하면
 
-$$\bigwedge({dF}_p^\ast):\bigwedge(T_{F(p)}^\ast N)\rightarrow\bigwedge(T_p^\ast M)$$
+$$\bigwedge({\dd{F}}_p^\ast):\bigwedge(T_{F(p)}^\ast N)\rightarrow\bigwedge(T_p^\ast M)$$
 
-를 얻는다. ([\[다중선형대수학\] §텐서대수, ⁋정의 10](/ko/math/multilinear_algebra/tensor_algebras#def10)) 각 점 $p$마다 $\bigwedge({dF}_p^\ast)$를 대응시켜 얻은 linear map $\Omega^\ast(N)\rightarrow\Omega^\ast(M)$을 $F^\ast$로 적자. 즉 임의의 $\omega\in\Omega^\ast(N)$에 대하여
+를 얻는다. ([\[다중선형대수학\] §텐서대수, ⁋정의 10](/ko/math/multilinear_algebra/tensor_algebras#def10)) 각 점 $p$마다 $\bigwedge({\dd{F}}_p^\ast)$를 대응시켜 얻은 linear map $\Omega^\ast(N)\rightarrow\Omega^\ast(M)$을 $F^\ast$로 적자. 즉 임의의 $\omega\in\Omega^\ast(N)$에 대하여
 
-$$(F^\ast\omega)_p=\bigwedge({dF}_p^\ast)(\omega_{F(p)})$$
+$$(F^\ast\omega)_p=\bigwedge({\dd{F}}_p^\ast)(\omega_{F(p)})$$
 
 이다. 이렇게 얻어진 differential form $F^\ast\omega$를 $\omega$의 $F$에 의한 *pullback<sub>당김</sub>*이라 부른다. 뿐만 아니라, $F^\ast$는 정의에 의하여 graded algebra homomorphism이므로 $\wedge$ 또한 보존한다.
 
 특별히 $\omega$가 $k$-form이라 가정하자. 점 $p\in M$에서 $(F^\ast\omega)_p$를 계산하기 위해 $k$개의 벡터들 $X_1(p),\ldots, X_k(p)$를 대입하면
 
-$$(F^\ast\omega)_p(X_1(p),\ldots, X_k(p))=(F^\ast_p\omega_{F(p)})\bigl(X_1(p),\ldots, X_k(p)\bigr)=\omega_{F(p)}\bigl(dF_p(X_1(p)), \ldots, dF_p(X_k(p))\bigr)$$
+$$(F^\ast\omega)_p(X_1(p),\ldots, X_k(p))=(F^\ast_p\omega_{F(p)})\bigl(X_1(p),\ldots, X_k(p)\bigr)=\omega_{F(p)}\bigl(\dd{F_p}(X_1(p)), \ldots, \dd{F_p}(X_k(p))\bigr)$$
 
 를 얻는다.
 
 ## 외미분과 드람 코호몰로지
 
-앞서 우리는 $\Omega^0(M)=C^\infty(M)$인 것을 확인했다. 임의의 $f\in C^\infty(M)$에 대하여, 그 differential $df$는 각 점 $p\in M$을 받아 $df_p:T_pM\rightarrow\mathbb{R}$를 내놓는 함수이다. ([§미분사상의 예시들, ⁋정의 6](/ko/math/manifolds/examples_of_differentials#def6)) 즉, $df\in T^\ast M=\Omega^1(M)$이다. 이 operator $d$는 다음과 같이 일반적인 differential form에 대해서도 정의된다.
+앞서 우리는 $\Omega^0(M)=C^\infty(M)$인 것을 확인했다. 임의의 $f\in C^\infty(M)$에 대하여, 그 differential $\dd{f}$는 각 점 $p\in M$을 받아 $\dd{f_p}:T_pM\rightarrow\mathbb{R}$를 내놓는 함수이다. ([§미분사상의 예시들, ⁋정의 6](/ko/math/manifolds/examples_of_differentials#def6)) 즉, $\dd{f}\in T^\ast M=\Omega^1(M)$이다. 이 operator $d$는 다음과 같이 일반적인 differential form에 대해서도 정의된다.
 
 ::: 정리 2
 Manifold $M$에 대하여, degree $1$의 anti-derivation $d:\Omega^\ast(M)\rightarrow\Omega^\ast(M)$가 유일하게 존재하여 다음의 두 조건을 만족한다. (증명은 **[War]**를 보라.)
 
 1. $d^2=0$,
-2. 임의의 $f\in\Omega^0(M)$에 대하여, $df$는 위와 같이 $f$의 differential과 동일하다.
+2. 임의의 $f\in\Omega^0(M)$에 대하여, $\dd{f}$는 위와 같이 $f$의 differential과 동일하다.
 
 뿐만 아니라, 이렇게 정의된 $d$는 pullback $F^\ast$와 commute한다.
 :::

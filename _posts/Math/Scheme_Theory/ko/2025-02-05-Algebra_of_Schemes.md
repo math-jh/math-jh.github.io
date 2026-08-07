@@ -237,7 +237,7 @@ $$\x_2\cdot(p(\x_1)+c\x_2)=p(0)\x_2$$
 
 이므로 $\ann(\x_2)=(\x_1,\x_2)$이다. 이는 $\ann(\x_1)=(\x_2)$를 진부분집합으로 포함하는 ideal로, 기하적으로는 원점에 해당한다. 이는 위의 예시와 달리 $X$의 irreducible component의 generic point로 나타나지 않는 점, 즉 embedded point이다. 
 
-실제로 이 두 점이 $X$의 associated point 전부이다. $f=p(\x_1)+c\x_2$와 $g=q(\x_1)+d\x_2$에 대하여 $\x_1\x_2=\x_2^2=0$으로부터
+실제로 이 두 점이 $X$의 associated point 전부이다. $f=p(\x_1)+c\x_2$와 $g=q(\x_1)+\dd{\x_2}$에 대하여 $\x_1\x_2=\x_2^2=0$으로부터
 
 $$fg=p(\x_1)q(\x_1)+\bigl(dp(0)+cq(0)\bigr)\x_2$$
 

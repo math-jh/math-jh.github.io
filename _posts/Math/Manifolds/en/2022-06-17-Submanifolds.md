@@ -19,7 +19,7 @@ last_polished_at: 2026-06-01T06:30:05+00:00
 ::: Definition 1
 Let two manifolds $M,N$ and a $C^\infty$ function $F:N\rightarrow M$ be given.
 
-1. We say that $F$ is an *immersion* if $dF_p$ is injective for every $p\in N$; similarly, we say that $F$ is a *submersion* if $dF_p$ is surjective for every $p\in N$.
+1. We say that $F$ is an *immersion* if $\dd{F_p}$ is injective for every $p\in N$; similarly, we say that $F$ is a *submersion* if $\dd{F_p}$ is surjective for every $p\in N$.
 2. If $F$ is an immersion and also injective, we call $F$ a *submanifold* of $M$.
 3. If $F$ is not only a submanifold of $M$ but also defines a homeomorphism between $N$ and $F(N)\subseteq M$ when the latter is equipped with the subspace topology, we call $F$ an *embedding*, or, to match the definition in 2, an *embedded submanifold*.
 :::
@@ -34,7 +34,7 @@ For example, in the figure above, $N=\mathbb{R}$, $M=\mathbb{R}^2$, (a) is an im
 
 
 ::: Example 2
-For a manifold $M$ and its open submanifold $U$, the inclusion $\iota:U\hookrightarrow M$ is an embedded submanifold of $M$. That $d\iota_p$ is injective for every $p\in U$ is clear from the fact that it is an isomorphism between $T_pU$ and $T_{\iota(p)}M$, and by the definition of an open submanifold, $\iota(U)$ carries the subspace topology.
+For a manifold $M$ and its open submanifold $U$, the inclusion $\iota:U\hookrightarrow M$ is an embedded submanifold of $M$. That $\dd{\iota_p}$ is injective for every $p\in U$ is clear from the fact that it is an isomorphism between $T_pU$ and $T_{\iota(p)}M$, and by the definition of an open submanifold, $\iota(U)$ carries the subspace topology.
 :::
 
 ::: Example 3
@@ -63,10 +63,10 @@ at a point $p_0\in U$ is nonsingular, then there exists a suitable open set $V$ 
 Using this, we can prove theorems for functions between general manifolds.
 
 ::: Corollary 5
-Let $F:M\rightarrow N$ be a $C^\infty$ function between manifolds and let $p\in M$. If $dF_p:T_pM\rightarrow T_{F(p)}N$ is an isomorphism, then there exists a suitable open set $U\subseteq M$ with $p\in U$ such that $F\vert_U:U\rightarrow F(U)$ defines a diffeomorphism between $U$ and $F(U)$.
+Let $F:M\rightarrow N$ be a $C^\infty$ function between manifolds and let $p\in M$. If $\dd{F_p}:T_pM\rightarrow T_{F(p)}N$ is an isomorphism, then there exists a suitable open set $U\subseteq M$ with $p\in U$ such that $F\vert_U:U\rightarrow F(U)$ defines a diffeomorphism between $U$ and $F(U)$.
 :::
 ::: Proof
-First, from the fact that $dF_p$ is an isomorphism we obtain $\dim M=\dim T_pM=\dim T_{F(p)}N=\dim N$. Now take a coordinate system $(W,\tau)$ containing the point $F(p)$, and a coordinate system $(V,\varphi)$ containing $p$ such that $F(V)\subseteq W$. Then the function $(\tau\circ F\circ\varphi^{-1})\vert_{\varphi(V)}$ is a map between Euclidean spaces of the same dimension, and since $dF_p$ is an isomorphism, the Jacobian matrix of this function at the point $\varphi(p)$ is nonsingular.
+First, from the fact that $\dd{F_p}$ is an isomorphism we obtain $\dim M=\dim T_pM=\dim T_{F(p)}N=\dim N$. Now take a coordinate system $(W,\tau)$ containing the point $F(p)$, and a coordinate system $(V,\varphi)$ containing $p$ such that $F(V)\subseteq W$. Then the function $(\tau\circ F\circ\varphi^{-1})\vert_{\varphi(V)}$ is a map between Euclidean spaces of the same dimension, and since $\dd{F_p}$ is an isomorphism, the Jacobian matrix of this function at the point $\varphi(p)$ is nonsingular.
 
 Therefore, by the inverse function theorem, there exists an open set $U'$ with $\varphi(p)\in U'\subseteq\varphi(V)$ such that $(\tau\circ F\circ\varphi^{-1})\vert_{U'}$ defines a diffeomorphism between $U'$ and $\tau\circ F\circ\varphi^{-1}(U')$. Setting $U=\varphi^{-1}(U')$, the function
 
@@ -75,7 +75,7 @@ $$\tau^{-1}\circ\bigl((\tau\circ F\circ\varphi^{-1})\vert_{U'}\bigr)\circ\varphi
 defines a diffeomorphism between $U$ and $F(U)$.
 :::
 
-Let elements $y^1, \ldots, y^k$ of $C_p^\infty(M)$ be given for a manifold $M$ and $p\in M$. If their differentials $dy^i$ form a linearly independent subset of $T_p^\ast M$, we call them functions independent at the point $p$.
+Let elements $y^1, \ldots, y^k$ of $C_p^\infty(M)$ be given for a manifold $M$ and $p\in M$. If their differentials $\dd{y}^i$ form a linearly independent subset of $T_p^\ast M$, we call them functions independent at the point $p$.
 
 ::: Corollary 6
 Consider an $m$-dimensional manifold $M$. If $y^1, \ldots, y^m$ are independent at a point $p_0\in M$, then $(y^1, \ldots, y^m)$ forms a coordinate system in a neighborhood of $p_0$.
@@ -87,11 +87,11 @@ Suppose the $m$ functions $y^i$ are all defined on an open neighborhood $U$ of $
 
 $$\varphi(p)=(y^1(p),\ldots, y^m(p))$$
 
-Then since each component function $y^i$ is $C^\infty$, $\varphi$ is also $C^\infty$. Now consider $(d\varphi_{p_0})^\ast:T_{\varphi(p_0)}^\ast\mathbb{R}^m\rightarrow T_{p_0}^\ast M$. Applying $(d\varphi_{p_0})^\ast$ to $dr^i\vert_{\varphi(p_0)}$, we have
+Then since each component function $y^i$ is $C^\infty$, $\varphi$ is also $C^\infty$. Now consider $(\dd{\varphi_{p_0}})^\ast:T_{\varphi(p_0)}^\ast\mathbb{R}^m\rightarrow T_{p_0}^\ast M$. Applying $(\dd{\varphi_{p_0}})^\ast$ to $\dd{r}^i\vert_{\varphi(p_0)}$, we have
 
-$$\left(d\varphi_{p_0}\right)^\ast\left(dr^i\vert_{\varphi(p_0)}\right)=\left(dr^i\vert_{\varphi(p_0)}\right)\circ\left(d\varphi_{p_0}\right)=d(r^i\circ\varphi)_{p_0}=dy^i\vert_{p_0}$$
+$$\left(\dd{\varphi_{p_0}}\right)^\ast\left(\dd{r}^i\vert_{\varphi(p_0)}\right)=\left(\dd{r}^i\vert_{\varphi(p_0)}\right)\circ\left(\dd{\varphi_{p_0}}\right)=\dd{(r^i\circ\varphi)_{p_0}}=\dd{y}^i\vert_{p_0}$$
 
-Thus the basis elements $dr^i\vert_{\varphi(p_0)}$ of $T_{\varphi(p_0)}^\ast\mathbb{R}^m$ are mapped to a basis of $T_{p_0}^\ast M$, and therefore $(d\varphi_{p_0})^\ast$ is an isomorphism. Hence $d\varphi_{p_0}$ is also an isomorphism, and applying [Corollary 5](#cor5), we see that there exists a suitable $V$ with $p_0\in V\subseteq U$ such that $\varphi\vert_V:V\rightarrow\varphi(V)$ is a coordinate system.
+Thus the basis elements $\dd{r}^i\vert_{\varphi(p_0)}$ of $T_{\varphi(p_0)}^\ast\mathbb{R}^m$ are mapped to a basis of $T_{p_0}^\ast M$, and therefore $(\dd{\varphi_{p_0}})^\ast$ is an isomorphism. Hence $\dd{\varphi_{p_0}}$ is also an isomorphism, and applying [Corollary 5](#cor5), we see that there exists a suitable $V$ with $p_0\in V\subseteq U$ such that $\varphi\vert_V:V\rightarrow\varphi(V)$ is a coordinate system.
 :::
 
 Obtaining the following two corollaries from the corollary above is essentially an exercise in undergraduate linear algebra.
@@ -100,44 +100,44 @@ Obtaining the following two corollaries from the corollary above is essentially 
 Consider an $m$-dimensional manifold $M$, a point $p_0\in M$, and an integer $0<k<m$. Let $y^1,\ldots, y^k$ be elements of $\mathcal{C}_{M,p_0}^\infty$ that are independent functions at $p_0$. Then there exist suitable functions $x^{k+1},\ldots, x^{m}$ such that $(y^1,\ldots, y^k, x^{k+1}, \ldots, x^m)$ defines a coordinate system in a neighborhood of $p_0$.
 :::
 ::: Proof
-Let a coordinate system $(U,\varphi)$, $\varphi=(x^i)_{i=1}^{m}$, about the point $p_0$ be given. Then the $dx^i$ form a basis of $T_{p_0}^\ast M$. Now, just as in the proof of [\[Linear Algebra\] §Dimension of Vector Spaces, ⁋Lemma 2](/en/math/linear_algebra/dimension#lem2), we insert the $dy^i$ one by one and remove the $dx^j$ one by one, adjusting the indices appropriately.
+Let a coordinate system $(U,\varphi)$, $\varphi=(x^i)_{i=1}^{m}$, about the point $p_0$ be given. Then the $\dd{x}^i$ form a basis of $T_{p_0}^\ast M$. Now, just as in the proof of [\[Linear Algebra\] §Dimension of Vector Spaces, ⁋Lemma 2](/en/math/linear_algebra/dimension#lem2), we insert the $\dd{y}^i$ one by one and remove the $\dd{x}^j$ one by one, adjusting the indices appropriately.
 :::
 
 ::: Corollary 8
-Let elements $y^1,\ldots, y^k$ of $\mathcal{C}_{M,p_0}^\infty$ be given for an $m$-dimensional manifold $M$ and a point $p_0\in M$. If the $dy^i$ span $T_{p_0}^\ast M$, then a suitable subset of $\{y^1,\ldots, y^k\}$ forms a coordinate system in a neighborhood of $p_0$.
+Let elements $y^1,\ldots, y^k$ of $\mathcal{C}_{M,p_0}^\infty$ be given for an $m$-dimensional manifold $M$ and a point $p_0\in M$. If the $\dd{y}^i$ span $T_{p_0}^\ast M$, then a suitable subset of $\{y^1,\ldots, y^k\}$ forms a coordinate system in a neighborhood of $p_0$.
 :::
 ::: Proof
-If we find a suitable subset of $\{dy^1,\ldots, dy^k\}$ that forms a basis of $T_{p_0}^\ast M$, this subset must consist of exactly $m$ elements. Therefore, it suffices to apply [Corollary 6](#cor6).
+If we find a suitable subset of $\{\dd{y}^1,\ldots, \dd{y}^k\}$ that forms a basis of $T_{p_0}^\ast M$, this subset must consist of exactly $m$ elements. Therefore, it suffices to apply [Corollary 6](#cor6).
 :::
 
 The following two corollaries will be used frequently hereafter under the name *rank theorem*.
 
 ::: Corollary 9 (Rank theorem, Submersion case)
-Let $M,N$ be two manifolds and $F:M\rightarrow N$ a $C^\infty$ function, and suppose $dF_p$ is surjective. Then for a coordinate system $\psi=(y^j)_{j=1}^n$ defined in a neighborhood of $F(p)$, there exist suitable functions $x^{n+1},\ldots, x^m$ such that the functions
+Let $M,N$ be two manifolds and $F:M\rightarrow N$ a $C^\infty$ function, and suppose $\dd{F_p}$ is surjective. Then for a coordinate system $\psi=(y^j)_{j=1}^n$ defined in a neighborhood of $F(p)$, there exist suitable functions $x^{n+1},\ldots, x^m$ such that the functions
 
 $$x^1=y^1\circ F,\quad x^2=y^2\circ F,\quad\ldots,\quad x^n=y^n\circ F,\qquad x^{n+1},\quad \ldots,\quad x^m$$
 
 form a coordinate system in a neighborhood of $p$.
 :::
 ::: Proof
-Since $dF_p$ is surjective, its dual $(dF_p)^\ast:T_{F(p)}^\ast N\rightarrow T_p^\ast M$ is injective. That is, the elements
+Since $\dd{F_p}$ is surjective, its dual $(\dd{F_p})^\ast:T_{F(p)}^\ast N\rightarrow T_p^\ast M$ is injective. That is, the elements
 
-$$(dF_p)^\ast(dy^j\vert_{F(p)})=dy^j\vert_{F(p)}\circ dF_p=d(y^j\circ F)_p=dx^j\vert_p$$
+$$(\dd{F_p})^\ast(\dd{y}^j\vert_{F(p)})=\dd{y}^j\vert_{F(p)}\circ \dd{F_p}=\dd{(y^j\circ F)_p}=\dd{x}^j\vert_p$$
 
 are linearly independent in $T_p^\ast M$. Therefore, we obtain the desired result by [Corollary 7](#cor7).
 :::
 
 ::: Corollary 10 (Rank theorem, Immersion case)
-Let $M,N$ be two manifolds and $F:M\rightarrow N$ a $C^\infty$ function, and suppose $dF_p$ is injective. Then for a coordinate system $\psi=(y^j)_{j=1}^n$ defined in a neighborhood of $F(p)$, a subset of
+Let $M,N$ be two manifolds and $F:M\rightarrow N$ a $C^\infty$ function, and suppose $\dd{F_p}$ is injective. Then for a coordinate system $\psi=(y^j)_{j=1}^n$ defined in a neighborhood of $F(p)$, a subset of
 
 $$\{x^j=y^j\circ F\mid j=1,\ldots, n\}$$
 
 forms a coordinate system of $M$ in a neighborhood of $p$.
 :::
 ::: Proof
-Since $dF_p$ is injective, its dual $(dF_p)^\ast:T_{F(p)}^\ast N\rightarrow T_p^\ast M$ is surjective. That is, the elements
+Since $\dd{F_p}$ is injective, its dual $(\dd{F_p})^\ast:T_{F(p)}^\ast N\rightarrow T_p^\ast M$ is surjective. That is, the elements
 
-$$(dF_p)^\ast(dy^j\vert_{F(p)})=dy^j\vert_{F(p)}\circ dF_p=d(y^j\circ F)_p=dx^j\vert_p$$
+$$(\dd{F_p})^\ast(\dd{y}^j\vert_{F(p)})=\dd{y}^j\vert_{F(p)}\circ \dd{F_p}=\dd{(y^j\circ F)_p}=\dd{x}^j\vert_p$$
 
 must span $T_p^\ast M$, and therefore by [Corollary 8](#cor8) a subset of the given set forms a coordinate system of $M$ in a neighborhood of $p$.
 :::

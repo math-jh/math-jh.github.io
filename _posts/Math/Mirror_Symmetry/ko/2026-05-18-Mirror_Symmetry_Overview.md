@@ -83,7 +83,7 @@ Mirror symmetry의 관점에서 charge matrix는 $B$-model의 데이터를 담�
 
 $$\Jac(W) = \frac{\mathcal{O}(\check{X})}{(\partial_1 W, \ldots, \partial_m W)}$$
 
-으로 주어진다. 여기서 $\x_1, \ldots, \x_n$들은 $\check{X}$의 local coordinate이며 $\partial_i$들은 이에 대한 partial derivative들이다. 기하학적으로 $\Jac(W)$는 $W$의 *critical scheme* $\Crit(W) = \{dW = 0\} \subseteq \check{X}$의 coordinate ring이다. 그럼 [정의 4](#def4)의 Hori-Vafa mirror의 Jacobi ring이 원래의 A-side model의 데이터를 복원한다는 것이 mirror symmetry statement이다. 
+으로 주어진다. 여기서 $\x_1, \ldots, \x_n$들은 $\check{X}$의 local coordinate이며 $\partial_i$들은 이에 대한 partial derivative들이다. 기하학적으로 $\Jac(W)$는 $W$의 *critical scheme* $\Crit(W) = \{\dd{W} = 0\} \subseteq \check{X}$의 coordinate ring이다. 그럼 [정의 4](#def4)의 Hori-Vafa mirror의 Jacobi ring이 원래의 A-side model의 데이터를 복원한다는 것이 mirror symmetry statement이다. 
 
 ::: 정의 4
 Smooth projective toric Fano variety $X_\Sigma$와 추가적인 데이터 $q=(q_1,\ldots, q_r)\in \mathbb{C}^r$에 대하여, 이것이 정의하는 *Hori-Vafa mirror<sub>호리-바파 거울</sub>*는 다음의 Landau-Ginzburg model을 의미한다.

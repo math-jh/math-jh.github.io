@@ -109,7 +109,7 @@ so the desired claim holds.
 This result shows that the cotangent bundle is represented by differential $1$-forms as we imagine. 
 
 ::: Example 4
-The cotangent bundle of $\mathbb{A}^n$ is $\Omega_{\mathbb{A}^n}^1 \cong \mathcal{O}_{\mathbb{A}^n}^{\oplus n}$. Algebraically, if we fix the coordinate ring $\mathbb{K}[\x_1, \ldots, \x_n]$ of $\mathbb{A}^n$, the Kähler differentials of this $\mathbb{K}$-algebra are the free module $\bigoplus_{i=1}^n \mathbb{K}[\x_1, \ldots, \x_n]  d\x_i$, so this result aligns well with our intuition.
+The cotangent bundle of $\mathbb{A}^n$ is $\Omega_{\mathbb{A}^n}^1 \cong \mathcal{O}_{\mathbb{A}^n}^{\oplus n}$. Algebraically, if we fix the coordinate ring $\mathbb{K}[\x_1, \ldots, \x_n]$ of $\mathbb{A}^n$, the Kähler differentials of this $\mathbb{K}$-algebra are the free module $\bigoplus_{i=1}^n \mathbb{K}[\x_1, \ldots, \x_n]  \dd{\x_i}$, so this result aligns well with our intuition.
 :::
 
 On the other hand, for any smooth variety $X$ of dimension $n$ and its cotangent bundle $\Omega_X^1$, since each fiber of $\Omega_X^1$ is $n$-dimensional, we know that taking its $n$-fold exterior product yields a line bundle.
@@ -120,7 +120,7 @@ We define the *canonical line bundle* $\omega_X$ of a smooth variety $X$ of dime
 $$\omega_X = \bigwedge\nolimits^{\!n} \Omega_X^1$$
 :::
 
-We call a global section $s\in \Gamma(X, \omega_X)$ of the canonical bundle $\omega_X$ a *regular $n$-form* on $X$. These are the $n$-forms of the form $fd\x_1 \wedge \cdots \wedge d\x_n$ for a regular function $f$, when we take a trivializing open set $U$ of $\omega_X$ and identify it with the cotangent bundle on affine space as in [Example 4](#ex4). 
+We call a global section $s\in \Gamma(X, \omega_X)$ of the canonical bundle $\omega_X$ a *regular $n$-form* on $X$. These are the $n$-forms of the form $f\dd{\x_1} \wedge \cdots \wedge \dd{\x_n}$ for a regular function $f$, when we take a trivializing open set $U$ of $\omega_X$ and identify it with the cotangent bundle on affine space as in [Example 4](#ex4). 
 
 On the other hand, from the correspondence between line bundles and divisor classes, we can define the following.
 
@@ -169,15 +169,15 @@ At this time the canonical divisor is given by $K_{\mathbb{P}^n}=-(n+1)H$. From 
 ::: Example 8
 We can also verify the above calculation from the perspective of transition functions of $n$-forms. Setting the affine coordinates on the standard open cover $U_i = \{\x_i \neq 0\}$ of $\mathbb{P}^n$ as $\y_j^{(i)} = \x_j / \x_i$ ($j \neq i$), we can consider the $n$-form on $U_i$
 
-$$d \y_1^{(i)} \wedge \cdots \wedge \widehat{d \y_i^{(i)}} \wedge \cdots \wedge d \y_n^{(i)}$$
+$$\dd{\y_1}^{(i)} \wedge \cdots \wedge \widehat{\dd{\y_i}^{(i)}} \wedge \cdots \wedge \dd{\y_n}^{(i)}$$
 
 On $U_i \cap U_j$, since $\y_k^{(j)} = \x_k / \x_j = (\x_k / \x_i) / (\x_j / \x_i) = \y_k^{(i)} / \y_j^{(i)}$, for $k \neq i, j$ we have
 
-$$d \y_k^{(j)} = d(\y_k^{(i)} / \y_j^{(i)}) = \frac{\y_j^{(i)} d \y_k^{(i)} - \y_k^{(i)}  d \y_j^{(i)}}{(\y_j^{(i)})^2}$$
+$$\dd{\y_k}^{(j)} = \dd{(\y_k^{(i)} / \y_j^{(i)})} = \frac{\y_j^{(i)} \dd{\y_k}^{(i)} - \y_k^{(i)}  \dd{\y_j}^{(i)}}{(\y_j^{(i)})^2}$$
 
 Therefore the $n$-form on $U_j$ transforms on $U_i \cap U_j$ as
 
-$$\bigwedge_{k \neq j} d \y_k^{(j)} = (\y_j^{(i)})^{-(n+1)} \cdot \bigwedge_{k \neq i} d \y_k^{(i)}$$
+$$\bigwedge_{k \neq j} \dd{\y_k}^{(j)} = (\y_j^{(i)})^{-(n+1)} \cdot \bigwedge_{k \neq i} \dd{\y_k}^{(i)}$$
 
 Here since $(\y_j^{(i)})^{-(n+1)} = (\x_j / \x_i)^{-(n+1)}$, we can verify that the transition function is $g_{ij} = (\x_i / \x_j)^{-(n+1)}$. This matches the transition function of $\mathcal{O}_{\mathbb{P}^n}(-n-1)$.
 :::
@@ -202,7 +202,7 @@ exists. Then we can verify that the dual of this normal bundle $\mathcal{N}_{D/X
 
 $$0 \rightarrow \mathcal{I}_D/\mathcal{I}_D^2\rightarrow \Omega_X^1\vert_D\rightarrow \Omega_D^1\rightarrow 0$$
 
-which corresponds to the dual of the above short exact sequence. Here the first arrow is given by $f\mapsto df$. Taking the top exterior power of this short exact sequence yields the following.
+which corresponds to the dual of the above short exact sequence. Here the first arrow is given by $f\mapsto \dd{f}$. Taking the top exterior power of this short exact sequence yields the following.
 
 ::: Proposition 9
 (Adjunction Formula) For a smooth divisor $D$ of a smooth variety $X$,

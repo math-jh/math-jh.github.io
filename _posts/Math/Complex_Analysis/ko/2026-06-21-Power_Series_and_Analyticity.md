@@ -35,7 +35,7 @@ $$f(z) = \sum_{n=0}^{\infty} \frac{f^{(n)}(z_0)}{n!}\,(z - z_0)^n$$
 ::: 증명
 $z \in D(z_0, R)$을 고정하고, $\lvert z - z_0\rvert < r < R$이 되도록 반지름 $r$을 잡는다. Closed 원판 $\overline{D(z_0, r)}$이 holomorphic인 영역에 들어 있으므로 Cauchy 적분공식 ([§Cauchy 적분공식, ⁋정리 1](/ko/math/complex_analysis/cauchy_integral_formula#thm1)) 에 의해
 
-$$f(z) = \frac{1}{2\pi i}\oint_{\lvert w - z_0\rvert = r} \frac{f(w)}{w - z}\,dw$$
+$$f(z) = \frac{1}{2\pi i}\oint_{\lvert w - z_0\rvert = r} \frac{f(w)}{w - z}\dd{w}$$
 
 이다. 경계원 위에서 $\lvert w - z_0\rvert = r$이고 $\lvert z - z_0\rvert < r$이므로 공비
 
@@ -47,7 +47,7 @@ $$\frac{1}{w - z} = \frac{1}{w - z_0}\sum_{n=0}^{\infty}\left(\frac{z - z_0}{w -
 
 이다. 우변의 급수는 $w$가 경계원 위를 움직일 때 $\lvert q\rvert \leq \lvert z - z_0\rvert/r < 1$로 공비가 $w$에 무관하게 bounded above이므로, 경계원 위에서 균등수렴한다. $f(w)$가 경계원 위에서 bounded이므로 ($\lvert f(w)\rvert \leq M$이라 하자) 이 균등수렴은 $f(w)/(w - z_0)$를 곱한 뒤에도 유지되고, 따라서 합과 적분의 순서를 바꿀 수 있어
 
-$$f(z) = \frac{1}{2\pi i}\oint_{\lvert w - z_0\rvert = r}\left(\sum_{n=0}^{\infty}\frac{f(w)\,(z - z_0)^n}{(w - z_0)^{n+1}}\right)dw = \sum_{n=0}^{\infty}\left(\frac{1}{2\pi i}\oint_{\lvert w - z_0\rvert = r}\frac{f(w)}{(w - z_0)^{n+1}}\,dw\right)(z - z_0)^n$$
+$$f(z) = \frac{1}{2\pi i}\oint_{\lvert w - z_0\rvert = r}\left(\sum_{n=0}^{\infty}\frac{f(w)\,(z - z_0)^n}{(w - z_0)^{n+1}}\right)\dd{w} = \sum_{n=0}^{\infty}\left(\frac{1}{2\pi i}\oint_{\lvert w - z_0\rvert = r}\frac{f(w)}{(w - z_0)^{n+1}}\dd{w}\right)(z - z_0)^n$$
 
 이다. 괄호 안의 적분은 Cauchy 미분공식 ([§Cauchy 적분공식, ⁋정리 2](/ko/math/complex_analysis/cauchy_integral_formula#thm2)) 에 의해 $f^{(n)}(z_0)/n!$과 같으므로
 

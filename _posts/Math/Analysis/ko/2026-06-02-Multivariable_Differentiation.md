@@ -105,9 +105,9 @@ $$\frac{\partial (g\circ f)_i}{\partial x_j}(a) = \sum_{k} \frac{\partial g_i}{\
 
 가장 흔한 특수경우는 곡선을 따른 변화율이다. $g : \mathbb{R}^n \rightarrow \mathbb{R}$가 미분가능하고 $\gamma : \mathbb{R} \rightarrow \mathbb{R}^n$이 미분가능한 곡선이면, $Dg(\gamma(t))$가 $1 \times n$ 행렬 (기울기) 이고 $D\gamma(t)$가 $n \times 1$ 행렬 (속도) 이므로 합성 $t \mapsto g(\gamma(t))$의 변화율은
 
-$$\frac{d}{dt} g(\gamma(t)) = Dg(\gamma(t)) \gamma'(t) = \sum_{j=1}^n \frac{\partial g}{\partial x_j}(\gamma(t)) \gamma_j'(t) = \nabla g(\gamma(t)) \cdot \gamma'(t)$$
+$$\frac{d}{\dd{t}} g(\gamma(t)) = Dg(\gamma(t)) \gamma'(t) = \sum_{j=1}^n \frac{\partial g}{\partial x_j}(\gamma(t)) \gamma_j'(t) = \nabla g(\gamma(t)) \cdot \gamma'(t)$$
 
-이다. 특히 직선 $\gamma(t) = a + tv$를 넣으면 $\gamma'(t) = v$이므로 $t = 0$에서 $(d/dt)\big\vert_{t=0}  g(a + tv) = \nabla g(a)\cdot v$, 곧 방향 $v$로의 방향도함수가 기울기와 $v$의 내적임을 얻는다. 이 곡선 restriction은 아래 다변수 [§평균값 정리와 테일러 정리, ⁋정리 3](/ko/math/analysis/mean_value_theorem#thm3)의 증명에서 다시 쓰인다.
+이다. 특히 직선 $\gamma(t) = a + tv$를 넣으면 $\gamma'(t) = v$이므로 $t = 0$에서 $(d/\dd{t})\big\vert_{t=0}  g(a + tv) = \nabla g(a)\cdot v$, 곧 방향 $v$로의 방향도함수가 기울기와 $v$의 내적임을 얻는다. 이 곡선 restriction은 아래 다변수 [§평균값 정리와 테일러 정리, ⁋정리 3](/ko/math/analysis/mean_value_theorem#thm3)의 증명에서 다시 쓰인다.
 
 ## 연속미분가능성
 
@@ -169,7 +169,7 @@ $$f(a + h) - f(a) = \nabla f(a + \theta h)\cdot h$$
 :::
 
 ::: 증명
-보조함수 $\varphi : [0,1] \rightarrow \mathbb{R}$를 $\varphi(t) = f(a + th)$로 두자. $\gamma(t) = a + th$는 미분가능하고 $\gamma'(t) = h$이므로, 앞서 연쇄법칙의 특수경우로 본 곡선을 따른 변화율 공식 $(d/dt)f(\gamma(t)) = \nabla f(\gamma(t))\cdot\gamma'(t)$에 의해 $\varphi$는 미분가능하고
+보조함수 $\varphi : [0,1] \rightarrow \mathbb{R}$를 $\varphi(t) = f(a + th)$로 두자. $\gamma(t) = a + th$는 미분가능하고 $\gamma'(t) = h$이므로, 앞서 연쇄법칙의 특수경우로 본 곡선을 따른 변화율 공식 $(d/\dd{t})f(\gamma(t)) = \nabla f(\gamma(t))\cdot\gamma'(t)$에 의해 $\varphi$는 미분가능하고
 
 $$\varphi'(t) = \nabla f(a + th)\cdot h$$
 

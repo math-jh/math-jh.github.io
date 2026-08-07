@@ -20,9 +20,9 @@ $$
 H^k_{\mathrm{dR}}(X, \mathbb{C}) \overset{?}{\cong} \bigoplus_{p+q=k} H^{p,q}_{\bar\partial}(X)
 $$
 
-가 일반 complex manifold에서는 성립하지 않으며, 그것이 성립하려면 추가 기하구조가 필요함을 예고하였다. 그 추가 구조가 바로 Kähler 조건 $d\omega = 0$이며 ([§Kähler 다양체, ⁋정의 3](/ko/math/complex_geometry/kahler_manifolds#def3)), 거기서 따라오는 [§Kähler 다양체, ⁋정리 12](/ko/math/complex_geometry/kahler_manifolds#thm12)가 위 분해를 콤팩트 Kähler manifold에서 정확히 성립하게 만든다. 이 분해와 그에 동반하는 대칭을 규명하는 것이 Hodge 이론이며, 그것이 콤팩트 Kähler manifold의 위상에 부과하는 제약이 이 글의 주제이다.
+가 일반 complex manifold에서는 성립하지 않으며, 그것이 성립하려면 추가 기하구조가 필요함을 예고하였다. 그 추가 구조가 바로 Kähler 조건 $\dd{\omega} = 0$이며 ([§Kähler 다양체, ⁋정의 3](/ko/math/complex_geometry/kahler_manifolds#def3)), 거기서 따라오는 [§Kähler 다양체, ⁋정리 12](/ko/math/complex_geometry/kahler_manifolds#thm12)가 위 분해를 콤팩트 Kähler manifold에서 정확히 성립하게 만든다. 이 분해와 그에 동반하는 대칭을 규명하는 것이 Hodge 이론이며, 그것이 콤팩트 Kähler manifold의 위상에 부과하는 제약이 이 글의 주제이다.
 
-핵심 발상은 cohomology class마다 표준 representative를 고르는 것이다. de Rham cohomology class $[\alpha] \in H^k_{\mathrm{dR}}(X)$는 $\alpha + d\beta$ 꼴의 닫힌형식 전체로 이루어진 affine 공간이며, 그 가운데 어느 하나를 본받아 류 전체를 다룰 자연스러운 방법이 없다. 그러나 Riemannian metric을 도입하면 형식들에 길이가 생기고, 각 류에서 $L^2$-norm을 최소화하는 유일한 representative를 고를 수 있다. 이 최소 representative가 *조화형식<sub>harmonic form</sub>*이며, Laplace 작용소의 kernel로 특징지어진다. 조화형식들의 공간 $\mathcal{H}^k$가 cohomology를 그대로 실현한다는 것이 Hodge 정리이고, Kähler 조건 아래에서 $\mathcal{H}^k$가 $(p,q)$-degree로 쪼개진다는 것이 Hodge 분해이다.
+핵심 발상은 cohomology class마다 표준 representative를 고르는 것이다. de Rham cohomology class $[\alpha] \in H^k_{\mathrm{dR}}(X)$는 $\alpha + \dd{\beta}$ 꼴의 닫힌형식 전체로 이루어진 affine 공간이며, 그 가운데 어느 하나를 본받아 류 전체를 다룰 자연스러운 방법이 없다. 그러나 Riemannian metric을 도입하면 형식들에 길이가 생기고, 각 류에서 $L^2$-norm을 최소화하는 유일한 representative를 고를 수 있다. 이 최소 representative가 *조화형식<sub>harmonic form</sub>*이며, Laplace 작용소의 kernel로 특징지어진다. 조화형식들의 공간 $\mathcal{H}^k$가 cohomology를 그대로 실현한다는 것이 Hodge 정리이고, Kähler 조건 아래에서 $\mathcal{H}^k$가 $(p,q)$-degree로 쪼개진다는 것이 Hodge 분해이다.
 
 ## Hodge star와 수반작용소
 
@@ -58,13 +58,13 @@ $$
 콤팩트 지향 Riemannian manifold $M$ 위에서 exterior derivative $d : \Omega^k(M) \rightarrow \Omega^{k+1}(M)$의 *형식 수반작용소<sub>formal adjoint</sub>* $d^\ast : \Omega^{k+1}(M) \rightarrow \Omega^k(M)$를, 모든 $\alpha \in \Omega^k$, $\beta \in \Omega^{k+1}$에 대하여
 
 $$
-(d\alpha, \beta) = (\alpha, d^\ast\beta)
+(\dd{\alpha}, \beta) = (\alpha, d^\ast\beta)
 $$
 
 가 성립하는 작용소로 정의한다. 명시적으로, $p$-형식 위에서 $d^\ast = (-1)^{m(p+1)+1} \ast d\, \ast$이며, 이는 degree를 하나 내린다.
 :::
 
-수반작용소가 존재하고 유일함은 Stokes 정리에서 나온다. $M$이 boundary 없는 콤팩트 manifold이므로 $\int_M d(\alpha \wedge \ast\beta) = 0$이고, $d(\alpha \wedge \ast\beta) = d\alpha \wedge \ast\beta + (-1)^k \alpha \wedge d(\ast\beta)$를 전개하여 $\ast\ast$의 부호를 정리하면 위 명시 공식이 $(d\alpha, \beta) = (\alpha, d^\ast\beta)$를 만족함을 직접 확인할 수 있다. 작용소 $d$가 degree를 하나 올리는 반면 $d^\ast$는 하나 내리며, $d^2 = 0$에서 $(d^\ast)^2 = 0$이 따라온다. Complex manifold에서는 같은 방식으로 $\partial$과 $\bar\partial$의 수반작용소 $\partial^\ast$, $\bar\partial^\ast$를 $L^2$-내적에 대해 정의하며 ([§Kähler 다양체, ⁋정리 12](/ko/math/complex_geometry/kahler_manifolds#thm12)에서 이미 도입), $\partial^\ast = -\ast\bar\partial\ast$, $\bar\partial^\ast = -\ast\partial\ast$ 꼴이다 (Hodge star가 $\partial$과 $\bar\partial$를 맞바꾸므로 수반에 켤레 작용소가 나타난다).
+수반작용소가 존재하고 유일함은 Stokes 정리에서 나온다. $M$이 boundary 없는 콤팩트 manifold이므로 $\int_M \dd{(\alpha \wedge \ast\beta)} = 0$이고, $\dd{(\alpha \wedge \ast\beta)} = \dd{\alpha} \wedge \ast\beta + (-1)^k \alpha \wedge \dd{(\ast\beta)}$를 전개하여 $\ast\ast$의 부호를 정리하면 위 명시 공식이 $(\dd{\alpha}, \beta) = (\alpha, d^\ast\beta)$를 만족함을 직접 확인할 수 있다. 작용소 $d$가 degree를 하나 올리는 반면 $d^\ast$는 하나 내리며, $d^2 = 0$에서 $(d^\ast)^2 = 0$이 따라온다. Complex manifold에서는 같은 방식으로 $\partial$과 $\bar\partial$의 수반작용소 $\partial^\ast$, $\bar\partial^\ast$를 $L^2$-내적에 대해 정의하며 ([§Kähler 다양체, ⁋정리 12](/ko/math/complex_geometry/kahler_manifolds#thm12)에서 이미 도입), $\partial^\ast = -\ast\bar\partial\ast$, $\bar\partial^\ast = -\ast\partial\ast$ 꼴이다 (Hodge star가 $\partial$과 $\bar\partial$를 맞바꾸므로 수반에 켤레 작용소가 나타난다).
 
 ## Laplace 작용소와 조화형식
 
@@ -92,22 +92,22 @@ $$
 콤팩트 지향 Riemannian manifold $M$ 위의 $k$-형식 $\alpha$에 대하여 다음이 동치이다.
 
 1. $\alpha$는 조화형식이다. 곧 $\Delta_d \alpha = 0$.
-2. $d\alpha = 0$이고 $d^\ast\alpha = 0$이다.
+2. $\dd{\alpha} = 0$이고 $d^\ast\alpha = 0$이다.
 :::
 
 ::: 증명
-(2) ⟹ (1)은 정의에서 즉각적이다. $d\alpha = 0$, $d^\ast\alpha = 0$이면 $\Delta_d\alpha = d d^\ast\alpha + d^\ast d\alpha = 0 + 0 = 0$이다.
+(2) ⟹ (1)은 정의에서 즉각적이다. $\dd{\alpha} = 0$, $d^\ast\alpha = 0$이면 $\Delta_d\alpha = d d^\ast\alpha + d^\ast \dd{\alpha} = 0 + 0 = 0$이다.
 
 (1) ⟹ (2)에서 콤팩트성이 쓰인다. $\Delta_d\alpha = 0$이라 하고 $\alpha$ 자신과의 $L^2$-내적을 취하면, $d$와 $d^\ast$가 수반관계이므로
 
 $$
-0 = (\Delta_d\alpha, \alpha) = (d d^\ast\alpha, \alpha) + (d^\ast d\alpha, \alpha) = (d^\ast\alpha, d^\ast\alpha) + (d\alpha, d\alpha) = \lVert d^\ast\alpha \rVert^2 + \lVert d\alpha \rVert^2
+0 = (\Delta_d\alpha, \alpha) = (d d^\ast\alpha, \alpha) + (d^\ast \dd{\alpha}, \alpha) = (d^\ast\alpha, d^\ast\alpha) + (\dd{\alpha}, \dd{\alpha}) = \lVert d^\ast\alpha \rVert^2 + \lVert \dd{\alpha} \rVert^2
 $$
 
-이다. 두 항이 모두 음이 아닌 실수인데 그 합이 $0$이므로 각각 $0$이고, $L^2$-내적이 양의 정부호이므로 $d\alpha = 0$, $d^\ast\alpha = 0$이 따라온다.
+이다. 두 항이 모두 음이 아닌 실수인데 그 합이 $0$이므로 각각 $0$이고, $L^2$-내적이 양의 정부호이므로 $\dd{\alpha} = 0$, $d^\ast\alpha = 0$이 따라온다.
 :::
 
-이 동치는 조화형식이 닫힌형식임을 보장한다. 조화형식은 $d\alpha = 0$이므로 cohomology class $[\alpha] \in H^k_{\mathrm{dR}}(M)$를 정의하며, 동시에 $d^\ast\alpha = 0$이라는 추가 조건이 그 류 안에서 $\alpha$를 특별한 위치에 놓는다. 닫힌형식 $\alpha + d\beta$ 가운데 $\alpha$가 조화라는 것은 그것이 같은 류 안에서 $L^2$-norm을 최소화한다는 것과 같다. $\lVert \alpha + d\beta \rVert^2 = \lVert \alpha \rVert^2 + 2(\alpha, d\beta) + \lVert d\beta \rVert^2 = \lVert \alpha \rVert^2 + 2(d^\ast\alpha, \beta) + \lVert d\beta \rVert^2 = \lVert \alpha \rVert^2 + \lVert d\beta \rVert^2 \geq \lVert \alpha \rVert^2$이기 때문이다 (여기서 $d^\ast\alpha = 0$을 썼다). 곧 조화 representative는 각 류에서 가장 짧은 형식이다.
+이 동치는 조화형식이 닫힌형식임을 보장한다. 조화형식은 $\dd{\alpha} = 0$이므로 cohomology class $[\alpha] \in H^k_{\mathrm{dR}}(M)$를 정의하며, 동시에 $d^\ast\alpha = 0$이라는 추가 조건이 그 류 안에서 $\alpha$를 특별한 위치에 놓는다. 닫힌형식 $\alpha + \dd{\beta}$ 가운데 $\alpha$가 조화라는 것은 그것이 같은 류 안에서 $L^2$-norm을 최소화한다는 것과 같다. $\lVert \alpha + \dd{\beta} \rVert^2 = \lVert \alpha \rVert^2 + 2(\alpha, \dd{\beta}) + \lVert \dd{\beta} \rVert^2 = \lVert \alpha \rVert^2 + 2(d^\ast\alpha, \beta) + \lVert \dd{\beta} \rVert^2 = \lVert \alpha \rVert^2 + \lVert \dd{\beta} \rVert^2 \geq \lVert \alpha \rVert^2$이기 때문이다 (여기서 $d^\ast\alpha = 0$을 썼다). 곧 조화 representative는 각 류에서 가장 짧은 형식이다.
 
 ## Hodge 정리
 
@@ -134,7 +134,7 @@ $$
 
 작용소 $\Delta_d$는 콤팩트 manifold 위의 self-adjoint 이차 타원작용소이다. 타원성은 그 주표상 $\sigma(\Delta_d)(\xi) = -\lvert \xi \rvert^2 \cdot \id$이 $\xi \neq 0$에서 가역이라는 데서 나오며, 콤팩트 manifold 위 self-adjoint 타원작용소에 대한 일반론(Fredholm 이론과 elliptic regularity)이 다음을 준다. Kernel $\mathcal{H}^k = \ker\Delta_d$는 유한차원이고, $L^2$-직교분해 $\Omega^k = \ker\Delta_d \oplus \Img\Delta_d$가 성립하며, $\Img\Delta_d = \Img(d d^\ast + d^\ast d)$이다. 여기까지가 인용하는 해석적 사실이다.
 
-이제 $\Img\Delta_d = d\,\Omega^{k-1} \oplus d^\ast\,\Omega^{k+1}$임을 본다. 포함 $\supseteq$의 직교성부터 본다. $d\eta$와 $d^\ast\zeta$의 내적은 $(d\eta, d^\ast\zeta) = (d d\eta, \zeta) = 0$이므로 두 부분공간은 직교한다. 또 $\Delta_d\gamma = d(d^\ast\gamma) + d^\ast(d\gamma) \in d\,\Omega^{k-1} + d^\ast\,\Omega^{k+1}$이므로 $\Img\Delta_d \subseteq d\,\Omega^{k-1} \oplus d^\ast\,\Omega^{k+1}$이다. 역으로 $d\eta$를 분해의 셋째 직교성으로 본다. $d\eta$는 $\mathcal{H}^k$와 직교한다 (조화 $\alpha$에 대해 $(d\eta, \alpha) = (\eta, d^\ast\alpha) = 0$, [명제 5](#prop5)). 마찬가지로 $d^\ast\zeta$도 $\mathcal{H}^k$와 직교한다 ($(d^\ast\zeta, \alpha) = (\zeta, d\alpha) = 0$). 따라서 $d\,\Omega^{k-1} \oplus d^\ast\,\Omega^{k+1} \subseteq (\mathcal{H}^k)^\perp = \Img\Delta_d$이고, 위 포함과 합쳐 등식이 성립한다. 이로써
+이제 $\Img\Delta_d = d\,\Omega^{k-1} \oplus d^\ast\,\Omega^{k+1}$임을 본다. 포함 $\supseteq$의 직교성부터 본다. $\dd{\eta}$와 $d^\ast\zeta$의 내적은 $(\dd{\eta}, d^\ast\zeta) = (d \dd{\eta}, \zeta) = 0$이므로 두 부분공간은 직교한다. 또 $\Delta_d\gamma = \dd{(d^\ast\gamma)} + d^\ast(\dd{\gamma}) \in d\,\Omega^{k-1} + d^\ast\,\Omega^{k+1}$이므로 $\Img\Delta_d \subseteq d\,\Omega^{k-1} \oplus d^\ast\,\Omega^{k+1}$이다. 역으로 $\dd{\eta}$를 분해의 셋째 직교성으로 본다. $\dd{\eta}$는 $\mathcal{H}^k$와 직교한다 (조화 $\alpha$에 대해 $(\dd{\eta}, \alpha) = (\eta, d^\ast\alpha) = 0$, [명제 5](#prop5)). 마찬가지로 $d^\ast\zeta$도 $\mathcal{H}^k$와 직교한다 ($(d^\ast\zeta, \alpha) = (\zeta, \dd{\alpha}) = 0$). 따라서 $d\,\Omega^{k-1} \oplus d^\ast\,\Omega^{k+1} \subseteq (\mathcal{H}^k)^\perp = \Img\Delta_d$이고, 위 포함과 합쳐 등식이 성립한다. 이로써
 
 $$
 \Omega^k(M) = \mathcal{H}^k(M) \oplus d\,\Omega^{k-1}(M) \oplus d^\ast\,\Omega^{k+1}(M)
@@ -142,7 +142,7 @@ $$
 
 을 얻는다.
 
-이 분해로부터 cohomology와의 동형을 끌어낸다. 닫힌 $k$-형식 $\alpha$를 위 분해로 $\alpha = h + d\eta + d^\ast\zeta$로 쓰면, $d\alpha = 0$이고 $dh = 0$ (조화는 닫힘), $d(d\eta) = 0$이므로 $d(d^\ast\zeta) = 0$이다. 그러면 $0 = (d d^\ast\zeta, \zeta) = (d^\ast\zeta, d^\ast\zeta) = \lVert d^\ast\zeta \rVert^2$이 되어 $d^\ast\zeta = 0$이다. 따라서 닫힌형식은 $\alpha = h + d\eta$ 꼴, 곧 조화 부분과 완전 부분의 합으로만 쓰인다. 이는 cohomology class $[\alpha] = [h]$가 유일한 조화 대표 $h$를 가짐을 뜻한다. 존재는 방금 보인 분해가 주고, 유일성은 두 조화형식이 cohomology에서 같으면 그 차 $h_1 - h_2 = d\beta$가 조화이자 완전형식인데, $(d\beta, d\beta) = (\beta, d^\ast d\beta)$에서 $d^\ast(d\beta) = \Delta_d(d\beta) - d d^\ast d\beta$를 따져 $\Delta_d(d\beta)=0$이고 $d^\ast(d\beta)=0$이면 $(d\beta,d\beta)=(\beta, d^\ast d \beta)=0$, 곧 $d\beta = 0$이 되어 두 대표가 같음에서 나온다. 따라서 $[\alpha] \mapsto h$가 잘 정의된 선형동형 $H^k_{\mathrm{dR}}(M, \mathbb{R}) \cong \mathcal{H}^k(M)$을 준다.
+이 분해로부터 cohomology와의 동형을 끌어낸다. 닫힌 $k$-형식 $\alpha$를 위 분해로 $\alpha = h + \dd{\eta} + d^\ast\zeta$로 쓰면, $\dd{\alpha} = 0$이고 $\dd{h} = 0$ (조화는 닫힘), $\dd{(\dd{\eta})} = 0$이므로 $\dd{(d^\ast\zeta)} = 0$이다. 그러면 $0 = (d d^\ast\zeta, \zeta) = (d^\ast\zeta, d^\ast\zeta) = \lVert d^\ast\zeta \rVert^2$이 되어 $d^\ast\zeta = 0$이다. 따라서 닫힌형식은 $\alpha = h + \dd{\eta}$ 꼴, 곧 조화 부분과 완전 부분의 합으로만 쓰인다. 이는 cohomology class $[\alpha] = [h]$가 유일한 조화 대표 $h$를 가짐을 뜻한다. 존재는 방금 보인 분해가 주고, 유일성은 두 조화형식이 cohomology에서 같으면 그 차 $h_1 - h_2 = \dd{\beta}$가 조화이자 완전형식인데, $(\dd{\beta}, \dd{\beta}) = (\beta, d^\ast \dd{\beta})$에서 $d^\ast(\dd{\beta}) = \Delta_d(\dd{\beta}) - d d^\ast \dd{\beta}$를 따져 $\Delta_d(\dd{\beta})=0$이고 $d^\ast(\dd{\beta})=0$이면 $(\dd{\beta},\dd{\beta})=(\beta, d^\ast \dd{\beta})=0$, 곧 $\dd{\beta} = 0$이 되어 두 대표가 같음에서 나온다. 따라서 $[\alpha] \mapsto h$가 잘 정의된 선형동형 $H^k_{\mathrm{dR}}(M, \mathbb{R}) \cong \mathcal{H}^k(M)$을 준다.
 :::
 
 Hodge 정리는 위상적 불변량인 de Rham cohomology를 해석적·계량적 대상인 조화형식으로 실현한다. Cohomology class라는 형식들의 무한차원 affine 공간이, 계량을 하나 정하는 순간 유한차원의 유일한 점 $\mathcal{H}^k$로 응축되는 것이다. 이 정리는 임의의 콤팩트 지향 Riemannian manifold에서 성립하며, 복소구조나 Kähler 조건을 전혀 요구하지 않는다. Complex manifold에서는 같은 논법이 $\bar\partial$에 대해서도 작동하여, $\Delta_{\bar\partial} = \bar\partial\bar\partial^\ast + \bar\partial^\ast\bar\partial$의 kernel $\mathcal{H}^{p,q}_{\bar\partial}$가 Dolbeault cohomology를 실현한다. 곧 콤팩트 Hermitian manifold에서 $H^{p,q}_{\bar\partial}(X) \cong \mathcal{H}^{p,q}_{\bar\partial}(X)$가 성립한다. 여기서 $\Delta_d$와 $\Delta_{\bar\partial}$는 서로 무관한 작용소이며, 이 둘을 묶는 것이 바로 Kähler 조건이다.
@@ -238,7 +238,7 @@ $$
 
 이다. 둘째 동형 $H^{p,q}(X) \cong H^q(X, \Omega^p)$은 $\mathcal{H}^{p,q}_{\bar\partial}(X) \cong H^{p,q}_{\bar\partial}(X)$ ([정리 6](#thm6)의 $\bar\partial$-판)과 [§Dolbeault 코호몰로지, ⁋정리 9](/ko/math/complex_geometry/dolbeault_cohomology#thm9)를 잇대어 얻는다.
 
-대칭을 본다. 계량 $g$가 실계량이고 $X$가 Kähler이므로 Laplace 작용소 $\Delta_d$는 실작용소이고 복소켤레와 교환한다. 곧 $\alpha$가 조화이면 $\bar\alpha$도 조화이다. 한편 복소켤레는 $(p,q)$-형식을 $(q,p)$-형식으로 보낸다 (좌표에서 $\overline{dz_I \wedge d\bar{z}_J} = d\bar{z}_I \wedge dz_J$이므로 holomorphic·antiholomorphic index가 맞바뀐다). 따라서 켤레사상 $\alpha \mapsto \bar\alpha$는 $\mathcal{H}^{p,q}_{\bar\partial}(X)$를 $\mathcal{H}^{q,p}_{\bar\partial}(X)$로 보내는 $\mathbb{R}$-선형 동형(반선형 $\mathbb{C}$-동형)이다. 이것이 cohomology 수준에서 $\overline{H^{p,q}(X)} = H^{q,p}(X)$를 준다. 반선형 동형은 복소차원을 보존하므로 $h^{p,q}(X) = \dim_{\mathbb{C}} H^{p,q}(X) = \dim_{\mathbb{C}} H^{q,p}(X) = h^{q,p}(X)$이다.
+대칭을 본다. 계량 $g$가 실계량이고 $X$가 Kähler이므로 Laplace 작용소 $\Delta_d$는 실작용소이고 복소켤레와 교환한다. 곧 $\alpha$가 조화이면 $\bar\alpha$도 조화이다. 한편 복소켤레는 $(p,q)$-형식을 $(q,p)$-형식으로 보낸다 (좌표에서 $\overline{\dd{z_I} \wedge \dd{\bar{z}_J}} = \dd{\bar{z}_I} \wedge \dd{z_J}$이므로 holomorphic·antiholomorphic index가 맞바뀐다). 따라서 켤레사상 $\alpha \mapsto \bar\alpha$는 $\mathcal{H}^{p,q}_{\bar\partial}(X)$를 $\mathcal{H}^{q,p}_{\bar\partial}(X)$로 보내는 $\mathbb{R}$-선형 동형(반선형 $\mathbb{C}$-동형)이다. 이것이 cohomology 수준에서 $\overline{H^{p,q}(X)} = H^{q,p}(X)$를 준다. 반선형 동형은 복소차원을 보존하므로 $h^{p,q}(X) = \dim_{\mathbb{C}} H^{p,q}(X) = \dim_{\mathbb{C}} H^{q,p}(X) = h^{q,p}(X)$이다.
 :::
 
 Hodge 분해는 [§Dolbeault 코호몰로지](/ko/math/complex_geometry/dolbeault_cohomology)에서 예고한 등식 $H^k_{\mathrm{dR}}(X, \mathbb{C}) = \bigoplus_{p+q=k} H^{p,q}$가 콤팩트 Kähler manifold에서 정확히 성립함을 확인해 준다. 결정적으로 이 분해는 Kähler 조건에 의존한다. 일반 콤팩트 complex manifold에서는 $\Delta_d \neq 2\Delta_{\bar\partial}$라 조화형식의 차수분해가 깨지고, 그 결과 위 direct sum이 성립하지 않는다. 예컨대 Hopf 곡면은 콤팩트 complex manifold이지만 $b_1 = 1$이 홀수라, 아래에서 보듯 Hodge 분해가 부과하는 짝수성 제약을 어겨 Kähler 계량을 가질 수 없다. Hodge 대칭은 holomorphic과 antiholomorphic을 맞바꾸는 복소켤레가 cohomology에 남기는 흔적으로, 이로부터 Hodge 수의 표가 대각선에 대해 대칭이 된다.

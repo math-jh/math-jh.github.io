@@ -40,12 +40,12 @@ Of course, by the preceding argument this is nothing other than the directional 
 
 The simplest example is the derivative of a vector field. Since a vector field $Y$ is a map from $M$ to $TM$, one might attempt to differentiate it by a method similar to [Definition 1](#def1) above, but this is far from straightforward. The obstacle here is more fundamental than for functions: $Y(\phi^t(p))$ is an element of $T_{\phi^t(p)}M$, whereas $Y(p)$ is an element of $T_pM$, so there is no way even to form their difference $Y_{\phi^t(p)}-Y_p$. 
 
-Nevertheless, differentiation is still possible in our setting. Recalling [§Vector Fields, ⁋Theorem 6](/en/math/manifolds/vector_fields#thm6), since $\phi^t$ is a diffeomorphism, $d\phi^t$ induces an isomorphism from $T_pM$ to $T_{\phi^t(p)}M$. Moreover, the same theorem tells us that the inverse of this isomorphism is $d\phi^{-t}$. Therefore, by pulling $Y_{\phi^t(p)}$ back to $T_pM$ via $d\phi^{-t}$, we can make the following definition.
+Nevertheless, differentiation is still possible in our setting. Recalling [§Vector Fields, ⁋Theorem 6](/en/math/manifolds/vector_fields#thm6), since $\phi^t$ is a diffeomorphism, $\dd{\phi}^t$ induces an isomorphism from $T_pM$ to $T_{\phi^t(p)}M$. Moreover, the same theorem tells us that the inverse of this isomorphism is $\dd{\phi}^{-t}$. Therefore, by pulling $Y_{\phi^t(p)}$ back to $T_pM$ via $\dd{\phi}^{-t}$, we can make the following definition.
 
 ::: Definition 2
 Fix a manifold $M$ and a vector field $X$ defined on it, and suppose another vector field $Y:M\rightarrow TM$ is given. Then the *Lie derivative* $\mathcal{L}_XY$ of $Y$ is the vector field defined by the formula
 
-$$(\mathcal{L}_XY)_p=\lim_{t\rightarrow 0}\frac{(d\phi^{-t})_{\phi^t(p)}(Y_{\phi^t(p)})-Y_p}{t}$$
+$$(\mathcal{L}_XY)_p=\lim_{t\rightarrow 0}\frac{(\dd{\phi}^{-t})_{\phi^t(p)}(Y_{\phi^t(p)})-Y_p}{t}$$
 :::
 
 ## Lie Derivative of Differential Forms
@@ -55,7 +55,7 @@ Naturally, we can continue defining derivatives in this manner. For example, the
 ::: Definition 3
 Fix a manifold $M$ and a vector field $X$ defined on it, and suppose a differential form $\omega\in\Omega^\ast(M)$ is given. Then the *Lie derivative* $\mathcal{L}_X\omega$ of $\omega$ is the differential form defined by the formula
 
-$$(\mathcal{L}_X\omega)_p=\frac{d}{dt}\bigg\vert_{t=0}(\phi^t)^\ast\omega_{\phi^t(p)}=\lim_{t\rightarrow 0}\frac{(\phi^t)^\ast\omega_{\phi^t(p)}-\omega_p}{t}$$
+$$(\mathcal{L}_X\omega)_p=\frac{d}{\dd{t}}\bigg\vert_{t=0}(\phi^t)^\ast\omega_{\phi^t(p)}=\lim_{t\rightarrow 0}\frac{(\phi^t)^\ast\omega_{\phi^t(p)}-\omega_p}{t}$$
 :::
 
 Moreover, it is not difficult to extend this definition to arbitrary tensor fields. Since we will not need this immediately, we omit it.
@@ -75,7 +75,7 @@ For any $X\in\mathfrak{X}(M)$, the following hold.
 
 6. For any $\omega\in\Omega^k(M)$ and $X_0, X_1,\ldots, X_k\in\mathfrak{X}(M)$,
 
-    $$\begin{aligned}d\omega(X_0,\ldots, X_k)&=\sum_{i=0}^k(-1)^iX_i\omega(X_0,\ldots, \hat{X}_i,\ldots, X_k)\\&\phantom{==}+\sum_{i<j}(-1)^{i+j}\omega([X_i, X_j], X_0,\ldots, \hat{X}_i,\ldots, \hat{X}_j,\ldots, X_k)\end{aligned}$$
+    $$\begin{aligned}\dd{\omega}(X_0,\ldots, X_k)&=\sum_{i=0}^k(-1)^iX_i\omega(X_0,\ldots, \hat{X}_i,\ldots, X_k)\\&\phantom{==}+\sum_{i<j}(-1)^{i+j}\omega([X_i, X_j], X_0,\ldots, \hat{X}_i,\ldots, \hat{X}_j,\ldots, X_k)\end{aligned}$$
 
 In 5 and 6, the hat indicates that the corresponding entry is omitted.
 :::
@@ -100,16 +100,16 @@ Of course, for this definition to make sense we must verify that the right-hand 
 
 The vector field $[X,Y]$ defined in this way is called the *Lie bracket* of $X$ and $Y$. Since this definition will be of great importance later, it seems worthwhile to collect a few results in advance.
 
-Suppose a $C^\infty$ map $F:M\rightarrow N$ between two manifolds $M$ and $N$ is given. Then $dF_p:T_pM\rightarrow T_{F(p)}N$ is the map that sends a tangent vector $v$ at a point $p$ of $M$ to the tangent vector $dF_p(v)$ at the point $F(p)$ of $N$. In general, however, this cannot be done for vector fields: even if a vector field $X$ on $M$ is given, we cannot use $dF_p$ to produce a vector field on $N$.
+Suppose a $C^\infty$ map $F:M\rightarrow N$ between two manifolds $M$ and $N$ is given. Then $\dd{F_p}:T_pM\rightarrow T_{F(p)}N$ is the map that sends a tangent vector $v$ at a point $p$ of $M$ to the tangent vector $\dd{F_p}(v)$ at the point $F(p)$ of $N$. In general, however, this cannot be done for vector fields: even if a vector field $X$ on $M$ is given, we cannot use $\dd{F_p}$ to produce a vector field on $N$.
 
-For instance, if $F$ is not surjective, there is no natural way to assign a tangent vector at a point $q\in N$ lying outside the image of $F$. Even if we resolve this by restricting the codomain, should $F$ fail to be injective and satisfy $F(p_1)=F(p_2)=q\in N$, we would still have to decide which of $dF_{p_1} v_1$ and $dF_{p_2} v_2$ to take as the tangent vector at the common point $q$.
+For instance, if $F$ is not surjective, there is no natural way to assign a tangent vector at a point $q\in N$ lying outside the image of $F$. Even if we resolve this by restricting the codomain, should $F$ fail to be injective and satisfy $F(p_1)=F(p_2)=q\in N$, we would still have to decide which of $\dd{F_{p_1}} v_1$ and $\dd{F_{p_2}} v_2$ to take as the tangent vector at the common point $q$.
 
 Therefore, rather than attempting to push $X\in\mathfrak{X}(M)$ forward through $F$, it is wiser to examine the case in which a vector field $Y\in\mathfrak{X}(N)$ already given satisfies the desired property.
 
 ::: Definition 6
 Let $F:M\rightarrow N$ be a $C^\infty$ map. If $X\in\mathfrak{X}(M)$ and $Y\in\mathfrak{X}(N)$ satisfy the equation
 
-$$dF_p(X_p)=Y_{F(p)}$$
+$$\dd{F_p}(X_p)=Y_{F(p)}$$
 
 for all $p\in M$, then we say that $X$ and $Y$ are *$F$-related*.
 :::
@@ -128,7 +128,7 @@ $$X(f\circ F)=(Yf)\circ F$$
 ::: Proof
 For any point $p\in M$,
 
-$$X(f\circ F)(p)=X_p(f\circ F)=dF_p(X_p)f$$
+$$X(f\circ F)(p)=X_p(f\circ F)=\dd{F_p}(X_p)f$$
 
 and
 
@@ -145,11 +145,11 @@ If $F:M\rightarrow N$ is a diffeomorphism, then for every $X\in\mathfrak{X}(M)$ 
 ::: Proof
 For each $q\in N$ there exists a unique $p\in M$ such that $F(p)=q$. Thus, for each point $q\in N$, we define $Y$ by the formula
 
-$$Y_q=dF_p(X_p)\qquad (F(p)=q)$$
+$$Y_q=\dd{F_p}(X_p)\qquad (F(p)=q)$$
 
 Since the above formula must hold for $Y$ to be $F$-related to $X$, the uniqueness of such a $Y$ is obvious. Moreover, $Y:N\rightarrow TN$ is now the composition of the following $C^\infty$ maps
 
-$$N\overset{F^{-1}}{\longrightarrow}M\overset{X}{\longrightarrow}TM\overset{dF}{\longrightarrow}TN$$
+$$N\overset{F^{-1}}{\longrightarrow}M\overset{X}{\longrightarrow}TM\overset{\dd{F}}{\longrightarrow}TN$$
 
 and therefore $Y$ is $C^\infty$.
 :::
@@ -160,14 +160,14 @@ Let $F:M\rightarrow N$ be a $C^\infty$ map. If for $i=1,2$ we have $X_i\in\mathf
 ::: Proof
 We must show that the formula
 
-$$dF_p([X_1,X_2]_p)=[Y_1,Y_2]_{F(p)}$$
+$$\dd{F_p}([X_1,X_2]_p)=[Y_1,Y_2]_{F(p)}$$
 
 holds for all $p$. Now for any function $f$ defined in a neighborhood of $F(p)$,
 
-$$\begin{aligned}dF_p([X_1,X_2]_p)f&=[X_1,X_2]_p(f\circ F)\\
+$$\begin{aligned}\dd{F_p}([X_1,X_2]_p)f&=[X_1,X_2]_p(f\circ F)\\
 &=(X_1)_p(X_2(f\circ F))-(X_2)_p(X_1(f\circ F))\\
 &=(X_1)_p((Y_2f)\circ F)-(X_2)_p((Y_1f)\circ F)\\
-&=dF_p(X_1)_p(Y_2f)-dF_p(X_2)_p(Y_1f)\\
+&=\dd{F_p}(X_1)_p(Y_2f)-\dd{F_p}(X_2)_p(Y_1f)\\
 &=(Y_1)_{F(p)}(Y_2f)-(Y_2)_{F(p)}(Y_1f)\\
 &=[Y_1,Y_2]_{F(p)}f\end{aligned}$$
 

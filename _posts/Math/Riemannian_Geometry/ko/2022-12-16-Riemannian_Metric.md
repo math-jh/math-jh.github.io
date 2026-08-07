@@ -35,7 +35,7 @@ Manifold $M$ 위에 주어진 *Riemannian metric<sub>리만 계량</sub>*은 다
 
 특별히 점 $p$ 근방의 coordinate system $(U,(x^i))$를 잡는다 하면, $g$를
 
-$$g=\sum_{i,j=1}^ng_{ij}dx^i\otimes dx^j$$
+$$g=\sum_{i,j=1}^ng_{ij}\dd{x}^i\otimes \dd{x}^j$$
 
 의 형태로 나타낼 수 있고 이 때 $g$가 Riemannian metric인 것과 $n\times n$ 행렬 $(g_{ij})$가 symmetric, positive-definite인 행렬인 것이 동치이다.
 
@@ -59,13 +59,13 @@ $$X=\sum_{i=1}^n X^i\frac{\partial}{\partial x^i},\quad Y=\sum_{i=1}^n Y^i\frac{
 
 에 대하여
 
-$$\tilde{g}(X)(Y)=\sum_{i,j=1}^ng_{ij}dx^i(X)\otimes dx^j(Y)=\sum_{i,j=1}^ng_{ij}X^iY^j$$
+$$\tilde{g}(X)(Y)=\sum_{i,j=1}^ng_{ij}\dd{x}^i(X)\otimes \dd{x}^j(Y)=\sum_{i,j=1}^ng_{ij}X^iY^j$$
 
 이 성립한다. 이제 $Y$에 $\partial/\partial x^j$들을 대입해보면 $\tilde{g}(X)$는 다음의 식
 
-$$\tilde{g}(X)=\sum_{i,j=1}^n g_{ij}X^idx^j$$
+$$\tilde{g}(X)=\sum_{i,j=1}^n g_{ij}X^i\dd{x}^j$$
 
-으로 주어진다는 것을 알 수 있다. 종종 $\sum_{i=1}^ng_{ij}X^i$를 $X_j$로 줄여쓰기도 하는데, 그럼 위 식은 $\tilde{g}(X)=\sum_{j=1}^nX_j dx^j$가 되므로, $X^i$의 index가 밑으로 내려간 것처럼 보인다. 이 때문에 표기법에 약간의 장난을 쳐서 covector field $\tilde{g}(X)$를 $X^\flat$으로 표기한다. 
+으로 주어진다는 것을 알 수 있다. 종종 $\sum_{i=1}^ng_{ij}X^i$를 $X_j$로 줄여쓰기도 하는데, 그럼 위 식은 $\tilde{g}(X)=\sum_{j=1}^nX_j \dd{x}^j$가 되므로, $X^i$의 index가 밑으로 내려간 것처럼 보인다. 이 때문에 표기법에 약간의 장난을 쳐서 covector field $\tilde{g}(X)$를 $X^\flat$으로 표기한다. 
 
 물론 (1)은 isomorphism이므로 임의의 covector field $\omega$가 주어졌다면 이에 대응되는 vector field를 얻을 수도 있다. 이러한 vector field는 (당연히) $\omega^\sharp$으로 표기하고, 이들 둘을 묶어서 *musical isomorphism*이라 부른다. 물론 이 둘은 서로의 역함수가 된다.
 
@@ -76,7 +76,7 @@ $$\tilde{g}(X)=\sum_{i,j=1}^n g_{ij}X^idx^j$$
 ::: 정의 2
 Riemannian manifold $(M,g)$와, 이 위에 정의된 곡선 $\gamma:[a,b]\rightarrow M$이 있다 하자. 그럼 $\gamma$의 *길이<sub>length</sub>* $\length(\gamma)$는 다음의 식
 
-$$\length(\gamma)=\int_a^b\lVert\dot{\gamma}(t)\rVert_g\mathop{dt}$$
+$$\length(\gamma)=\int_a^b\lVert\dot{\gamma}(t)\rVert_g\dd{t}$$
 
 으로 정의된다.
 :::
@@ -91,7 +91,7 @@ $$d_g(p,q)=\inf_{\gamma\text{ connecting }p,q}\length(\gamma)$$
 
 마지막으로 우리는 *normal bundle*이라는 개념을 정의할 수 있다. 임의의 Riemannian manifold $M$이 주어졌다 하고, submanifold $S$를 생각하자. 그럼 $g$를 $S$로 제한하여 $S$ 위에서의 Riemannian metric $\iota^\ast g$를 얻는다. $\iota$에 의해 유도되는
 
-$$d\iota(T_pS)\subseteq T_pM$$
+$$\dd{\iota}(T_pS)\subseteq T_pM$$
 
 에 의하여 $T_pS$은 $T_pM$의 부분공간으로 볼 수 있고 따라서 $T_pS$는 $T_pM$의 direct summand이다. 일반적으로 $T_pS$의 complementary subspace를 주는 표준적인 방법은 존재하지 않지만, 지금처럼 $T_pM$이 내적공간이라면 이를 $(T_pS)^\perp$으로 정의할 수 있다. 각 점 $p$마다 이러한 bundle $(T_pS)^\perp$이 붙어있는 $\iota(S)$ 위의 vector bundle을 우리는 $S$의 *normal bundle*이라 부르고 $NS$로 적는다.
 

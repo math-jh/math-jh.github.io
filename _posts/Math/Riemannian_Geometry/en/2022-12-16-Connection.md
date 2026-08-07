@@ -16,7 +16,7 @@ last_polished_at: 2026-06-01T21:30:01+00:00
 ---
 ## Connections and Covariant Differentiation
 
-Using the Lie derivative, we can differentiate vector fields or differential forms, but it is impossible to extend this concept to sections $\Gamma(E)$ of an arbitrary vector bundle $\pi:E\rightarrow M$. On the tangent bundle $TM$, given two points $p,q$ on an integral flow $\phi$, there exists a natural isomorphism $d\phi^{-t}$ connecting the two tangent spaces $T_pM$ and $T_qM$; however, no such map exists between two fibers $E_p$ and $E_q$ of an arbitrary vector bundle $E$. Therefore, we additionally define a *connection* that joins these fibers.
+Using the Lie derivative, we can differentiate vector fields or differential forms, but it is impossible to extend this concept to sections $\Gamma(E)$ of an arbitrary vector bundle $\pi:E\rightarrow M$. On the tangent bundle $TM$, given two points $p,q$ on an integral flow $\phi$, there exists a natural isomorphism $\dd{\phi}^{-t}$ connecting the two tangent spaces $T_pM$ and $T_qM$; however, no such map exists between two fibers $E_p$ and $E_q$ of an arbitrary vector bundle $E$. Therefore, we additionally define a *connection* that joins these fibers.
 
 ::: Definition 1
 Given a vector bundle $E\rightarrow M$ over a manifold $M$, a *connection* $\nabla:\mathfrak{X}(M)\times\Gamma(E)\rightarrow\Gamma(E)$ on $E$ is a map satisfying the following conditions.

@@ -20,14 +20,14 @@ weight: 6
 ::: 정의 1
 Manifold $M$에 대하여, $C^\infty$ 함수 $\gamma:(a,b)\rightarrow M$을 $M$ 위에서 정의된 $C^\infty$ 곡선이라 부르고, 임의의 $t\in (a,b)$에 대하여
 
-$$d\gamma_t\left(\frac{d}{dr}\bigg\vert_t\right)$$
+$$\dd{\gamma_t}\left(\frac{d}{\dd{r}}\bigg\vert_t\right)$$
 
 을 점 $\gamma(t)$에서 이 곡선의 *속도벡터<sub>velocity vector</sub>*라 부르고, $\gamma'(t)$로 표기한다.
 :::
 
 벡터 $\gamma'(t)$는 $T_{\gamma(t)}M$의 원소로서 $\mathcal{C}^\infty_{M,\gamma(t)}$의 각 원소들 $f$에 작용하는데, differential의 정의를 풀어쓰면
 
-$$\gamma'(t)f=d\gamma_p\left(\frac{d}{dr}\bigg\vert_t\right)f=\frac{d}{dr}\bigg\vert_t (f\circ\gamma)=\frac{d(f\circ \gamma)}{dr}(t)=(f\circ\gamma)'(t)$$
+$$\gamma'(t)f=\dd{\gamma_p}\left(\frac{d}{\dd{r}}\bigg\vert_t\right)f=\frac{d}{\dd{r}}\bigg\vert_t (f\circ\gamma)=\frac{\dd{(f\circ \gamma)}}{\dd{r}}(t)=(f\circ\gamma)'(t)$$
 
 임을 알 수 있다. 
 
@@ -39,13 +39,13 @@ Manifold $M$과 점 $p\in M$을 고정하자. 영벡터가 아닌 임의의 $v\i
 ::: 증명
 점 $p$를 중심으로 하고, 다음의 식
 
-$$v=d\varphi^{-1}_{\varphi(p)}\left(\frac{\partial}{\partial r^1}\bigg\vert_0\right)$$
+$$v=\dd{\varphi}^{-1}_{\varphi(p)}\left(\frac{\partial}{\partial r^1}\bigg\vert_0\right)$$
 
 을 만족하는 coordinate system $(U,\varphi)$를 찾으면 된다. 그럼 $v$는 $C^\infty$ 곡선 
 
 $$\gamma: t\mapsto \varphi^{-1}(t, 0,\cdots, 0)$$
 
-의 $t=0$에서의 속도벡터가 되기 때문이다. 참고로 위의 조건을 만족하는 coordinate system을 찾는 것은 아주 쉬운데, 임의의 coordinate system $(U,\psi)$를 하나 고른 후, $d\psi_p(v)$가 옮겨진 벡터를 포함하는 $\mathbb{R}^n$의 새로운 basis를 만든 후, 원래의 $\psi$와 이렇게 얻어진 change of basis를 합성하면 된다.
+의 $t=0$에서의 속도벡터가 되기 때문이다. 참고로 위의 조건을 만족하는 coordinate system을 찾는 것은 아주 쉬운데, 임의의 coordinate system $(U,\psi)$를 하나 고른 후, $\dd{\psi_p}(v)$가 옮겨진 벡터를 포함하는 $\mathbb{R}^n$의 새로운 basis를 만든 후, 원래의 $\psi$와 이렇게 얻어진 change of basis를 합성하면 된다.
 :::
 
 특별히 $M=\mathbb{R}^m$인 경우, $T_{\gamma(t)}M$의 basis는
@@ -54,11 +54,11 @@ $$\frac{\partial}{\partial r^1}\bigg\vert_{\gamma(t)},\cdots,\frac{\partial}{\pa
 
 로 주어지므로, 
 
-$$\gamma'(t)=\sum_{i=1}^m\frac{d(r^i\circ \gamma)}{dr}(t)\frac{\partial}{\partial r^i}\bigg\vert_{\gamma(t)}=\frac{d\gamma^1}{dr}\frac{\partial}{\partial r^1}\bigg\vert_{\gamma(t)}+\cdots+\frac{d\gamma^m}{dr}\frac{\partial}{\partial r^m}\bigg\vert_{\gamma(t)}$$
+$$\gamma'(t)=\sum_{i=1}^m\frac{\dd{(r^i\circ \gamma)}}{\dd{r}}(t)\frac{\partial}{\partial r^i}\bigg\vert_{\gamma(t)}=\frac{\dd{\gamma}^1}{\dd{r}}\frac{\partial}{\partial r^1}\bigg\vert_{\gamma(t)}+\cdots+\frac{\dd{\gamma}^m}{\dd{r}}\frac{\partial}{\partial r^m}\bigg\vert_{\gamma(t)}$$
 
 이고, 유클리드 공간에서는 이들 $\partial/\partial r^i$들이 $i$번째 standard basis와 같으므로 이를
 
-$$\left(\frac{d\gamma^1}{dr},\ldots, \frac{d\gamma^m}{dr}\right)$$
+$$\left(\frac{\dd{\gamma}^1}{\dd{r}},\ldots, \frac{\dd{\gamma}^m}{\dd{r}}\right)$$
 
 으로 생각할 수 있다. 이 식은 통상적인 다음의 미분
 
@@ -68,24 +68,24 @@ $$\gamma'(t)=\lim_{h\rightarrow 0}\frac{\gamma(t+h)-\gamma(t)}{h}$$
 
 두 manifold $M,N$ 사이의 $C^\infty$ 함수 $F:M\rightarrow N$이 주어졌다 하고, $C^\infty$ 함수 $\gamma:(a,b)\rightarrow M$을 생각하자. 그럼 $F\circ\gamma$의 $t$에서의 differential을 계산해보면,
 
-$$d(F\circ\gamma)_t=dF_{\gamma(t)}\circ d\gamma_t$$
+$$\dd{(F\circ\gamma)_t}=\dd{F_{\gamma(t)}}\circ \dd{\gamma_t}$$
 
 이고, 따라서
 
-$$d(F\circ\gamma)_t\left(\frac{d}{dr}\bigg\vert_t\right)=(dF_{\gamma(t)}\circ d\gamma_t)\left(\frac{d}{dr}\bigg\vert_t\right)=dF_{\gamma(t)}(\gamma'(t))$$
+$$\dd{(F\circ\gamma)_t}\left(\frac{d}{\dd{r}}\bigg\vert_t\right)=(\dd{F_{\gamma(t)}}\circ \dd{\gamma_t})\left(\frac{d}{\dd{r}}\bigg\vert_t\right)=\dd{F_{\gamma(t)}}(\gamma'(t))$$
 
 이다. 좌변을 $N$에서의 $C^\infty$ 곡선 $F\circ\gamma$의 시간 $t$에서의 속도벡터로 생각할 수 있으므로, 위의 식은
 
-$$(F\circ\gamma)'(t)=dF_{\gamma(t)}(\gamma'(t))$$
+$$(F\circ\gamma)'(t)=\dd{F_{\gamma(t)}}(\gamma'(t))$$
 
 으로 적을 수 있다. 
 
-이를 약간 수정하면, 주어진 $C^\infty$ 함수 $F:M\rightarrow N$에 대하여, 임의의 $v\in T_pM$에서의 differential의 값 $dF_p(v)$를 알기 위해서는 점 $p$에서 $v$방향 속도벡터를 가지는 곡선을 아무거나 하나 고른 후[^2], 이 곡선 $\gamma$에 대해 $F\circ\gamma$의 시간 $t$에서의 속도벡터를 구하면 된다는 것을 알 수 있다. 즉,
+이를 약간 수정하면, 주어진 $C^\infty$ 함수 $F:M\rightarrow N$에 대하여, 임의의 $v\in T_pM$에서의 differential의 값 $\dd{F_p}(v)$를 알기 위해서는 점 $p$에서 $v$방향 속도벡터를 가지는 곡선을 아무거나 하나 고른 후[^2], 이 곡선 $\gamma$에 대해 $F\circ\gamma$의 시간 $t$에서의 속도벡터를 구하면 된다는 것을 알 수 있다. 즉,
 
 ::: 명제 3
 두 manifold $M,N$과 $C^\infty$ 함수 $F:M\rightarrow N$을 생각하자. 임의의 $v\in T_pM$에 대하여, $\gamma(0)=p$, $\gamma'(0)=v$를 만족하는 $C^\infty$ 곡선 $\gamma:(a,b)\rightarrow M$는 다음의 식
 
-$$dF_p(v)=(F\circ\gamma)'(0)$$
+$$\dd{F_p}(v)=(F\circ\gamma)'(0)$$
 
 또한 만족한다.
 :::
@@ -139,7 +139,7 @@ $$v\mapsto D_v\vert_x$$
 
 를 얻고, 이후에는 $\gamma(t)=x+tv$를 이용해 [명제 3](#prop3)을 사용하면
 
-$$dL_x(D_v\vert_x)=(L\circ \gamma)'(0)$$
+$$\dd{L_x}(D_v\vert_x)=(L\circ \gamma)'(0)$$
 
 을 얻는다. 그런데
 
@@ -166,11 +166,11 @@ $n\times n$ 행렬들의 모임 $\Mat_n(\mathbb{R})$은 $n^2$차원 $\mathbb{R}$
 
 ## Tangent covector
 
-임의의 manifold $M$과 $C^\infty$ 함수 $f:M\rightarrow\mathbb{R}$이 주어졌다 하자. 그럼 임의의 점 $p\in M$마다 differential $df_p:T_pM\rightarrow T_{f(p)}\mathbb{R}$이 잘 정의된다. 앞선 [명제 4](#prop4)에 의하여, 1차원 $\mathbb{R}$-벡터공간으로서 $\mathbb{R}$과 그 tangent space $T_{f(p)}\mathbb{R}$ 사이의 isomorphism이 존재한다. 그럼 이제
+임의의 manifold $M$과 $C^\infty$ 함수 $f:M\rightarrow\mathbb{R}$이 주어졌다 하자. 그럼 임의의 점 $p\in M$마다 differential $\dd{f_p}:T_pM\rightarrow T_{f(p)}\mathbb{R}$이 잘 정의된다. 앞선 [명제 4](#prop4)에 의하여, 1차원 $\mathbb{R}$-벡터공간으로서 $\mathbb{R}$과 그 tangent space $T_{f(p)}\mathbb{R}$ 사이의 isomorphism이 존재한다. 그럼 이제
 
-$$T_pM\overset{df_p}{\longrightarrow}T_{f(p)}\mathbb{R}\overset{\sim}{\longrightarrow}\mathbb{R}$$
+$$T_pM\overset{\dd{f_p}}{\longrightarrow}T_{f(p)}\mathbb{R}\overset{\sim}{\longrightarrow}\mathbb{R}$$
 
-에 의하여 $df_p$를 $(T_pM)^\ast$의 원소로 볼 수 있다.
+에 의하여 $\dd{f_p}$를 $(T_pM)^\ast$의 원소로 볼 수 있다.
 
 ::: 정의 6
 Manifold $M$과 한 점 $p\in M$에 대하여, $\mathbb{R}$-벡터공간 $T_pM$의 dual space $(T_pM)^\ast$를 *cotangent space<sub>여접공간</sub>*라 부르고 간단하게 $T_p^\ast M$으로 적는다. $T_p^\ast M$의 원소들을 *tangent covector<sub>여접벡터</sub>* 혹은 간단하게 *covector*라 부른다.
@@ -191,17 +191,17 @@ $$(\xi^i \vert_p)\left(\frac{\partial}{\partial x^j}\bigg\vert_p\right)=\delta_{
 을 통해 유일하게 정의된다. 이 때 $\delta_{ij}$는 크로네커 델타를 의미한다. 
 
 ::: 명제 7
-위와 같은 상황에서, $\xi^i\vert_p=dx^i\vert_p$이다. 즉, $(U,\varphi)$에 의하여 생기는 $T_pM$의 dual basis $(\xi^i \vert_p)$들은 사실 coordinate function들 $x^i$의 점 $p$에서의 differential과 같다.
+위와 같은 상황에서, $\xi^i\vert_p=\dd{x}^i\vert_p$이다. 즉, $(U,\varphi)$에 의하여 생기는 $T_pM$의 dual basis $(\xi^i \vert_p)$들은 사실 coordinate function들 $x^i$의 점 $p$에서의 differential과 같다.
 :::
 ::: 증명
-$dx^i$들이 위의 식 (1)을 만족한다는 것을 보이면 충분하다. 정의에 의하여,
+$\dd{x}^i$들이 위의 식 (1)을 만족한다는 것을 보이면 충분하다. 정의에 의하여,
 
-$$dx^i\vert_p\left(\frac{\partial}{\partial x^j}\bigg\vert_p\right)=\frac{\partial}{\partial x^j}\bigg\vert_p x^i=\delta_{ij}$$
+$$\dd{x}^i\vert_p\left(\frac{\partial}{\partial x^j}\bigg\vert_p\right)=\frac{\partial}{\partial x^j}\bigg\vert_p x^i=\delta_{ij}$$
 
 가 성립한다. 
 :::
 
-위 증명은 우리가 tangent space를 처음 도입할 때 증명했던 [§여접공간, ⁋보조정리 1](/ko/math/manifolds/cotangent_space#lem1)을 떠올리면 좀 더 그럴듯하다. 즉 첫째 등식에서 둘째 식으로 넘어가는 것은 differential $dx^i\vert_p$의 정의이기도 하지만, 동시에 
+위 증명은 우리가 tangent space를 처음 도입할 때 증명했던 [§여접공간, ⁋보조정리 1](/ko/math/manifolds/cotangent_space#lem1)을 떠올리면 좀 더 그럴듯하다. 즉 첫째 등식에서 둘째 식으로 넘어가는 것은 differential $\dd{x}^i\vert_p$의 정의이기도 하지만, 동시에 
 
 $$T_p^\ast M\cong (\mathfrak{m}_p/\mathfrak{m}_p^2)^{\ast\ast}\cong\mathfrak{m}_p/\mathfrak{m}^2_p$$
 

@@ -40,7 +40,7 @@ $$K(\Ad_g(X), \Ad_g(Y))=K(X,Y)$$
 
 holds, and differentiating this at $g=e$ in the direction of $Z$ yields the following $\ad$-invariance:
 
-$$0=\frac{d}{dt}\bigg\vert_{t=0}K(\Ad_{\exp(tZ)}X, \Ad_{\exp(tZ)}Y)=K([Z,X],Y)+K(X,[Z,Y]).$$
+$$0=\frac{d}{\dd{t}}\bigg\vert_{t=0}K(\Ad_{\exp(tZ)}X, \Ad_{\exp(tZ)}Y)=K([Z,X],Y)+K(X,[Z,Y]).$$
 
 What remains is the condition for this form to be non-degenerate.
 

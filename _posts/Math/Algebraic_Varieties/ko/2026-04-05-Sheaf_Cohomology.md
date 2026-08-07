@@ -98,7 +98,7 @@ $$\check{C}^p(\mathcal{U}, \mathcal{F}) = \prod_{i_0 < \cdots < i_p} \mathcal{F}
 
 이 때, *coboundary map* $d: \check{C}^p \rightarrow \check{C}^{p+1}$은 다음의 식
 
-$$(d\alpha)_{i_0 \cdots i_{p+1}} = \sum_{k=0}^{p+1} (-1)^k \alpha_{i_0 \cdots \hat{i_k} \cdots i_{p+1}}\vert_{U_{i_0}\cap \cdots \cap U_{i_{p+1}}}$$
+$$(\dd{\alpha})_{i_0 \cdots i_{p+1}} = \sum_{k=0}^{p+1} (-1)^k \alpha_{i_0 \cdots \hat{i_k} \cdots i_{p+1}}\vert_{U_{i_0}\cap \cdots \cap U_{i_{p+1}}}$$
 
 으로 정의된다. 여기서 $\hat{i_k}$는 index $i_k$를 생략한다는 의미이다.
 :::
@@ -118,7 +118,7 @@ $$\check{H}^p(\mathcal{U}, \mathcal{F}) = H^p(\check{C}^\bullet(\mathcal{U}, \ma
 ::: 예시 5 ($p = 0$)
 Čech complex의 정의에 의하여 $\check{C}^0(\mathcal{U}, \mathcal{F}) = \prod_i \mathcal{F}(U_i)$이고, $\check{C}^0$에서 $\check{C}^1$로의 coboundary map은
 
-$$(ds)_{ij} = s_j\vert_{U_i \cap U_j} - s_i\vert_{U_i \cap U_j}$$
+$$(\dd{s})_{ij} = s_j\vert_{U_i \cap U_j} - s_i\vert_{U_i \cap U_j}$$
 
 이다. 따라서
 

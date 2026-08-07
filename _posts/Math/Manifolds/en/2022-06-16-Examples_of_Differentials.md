@@ -21,14 +21,14 @@ In the previous post we studied differentials in depth; now we examine some exam
 ::: Definition 1
 For a manifold $M$, we call a $C^\infty$ function $\gamma:(a,b)\rightarrow M$ a $C^\infty$ curve on $M$, and for any $t\in (a,b)$ we call
 
-$$d\gamma_t\left(\frac{d}{dr}\bigg\vert_t\right)$$
+$$\dd{\gamma_t}\left(\frac{d}{\dd{r}}\bigg\vert_t\right)$$
 
 the *velocity vector* of this curve at the point $\gamma(t)$, denoting it by $\gamma'(t)$.
 :::
 
 As an element of $T_{\gamma(t)}M$, the vector $\gamma'(t)$ acts on each element $f$ of $\mathcal{C}^\infty_{M,\gamma(t)}$; expanding the definition of the differential yields
 
-$$\gamma'(t)f=d\gamma_p\left(\frac{d}{dr}\bigg\vert_t\right)f=\frac{d}{dr}\bigg\vert_t (f\circ\gamma)=\frac{d(f\circ \gamma)}{dr}(t)=(f\circ\gamma)'(t).$$
+$$\gamma'(t)f=\dd{\gamma_p}\left(\frac{d}{\dd{r}}\bigg\vert_t\right)f=\frac{d}{\dd{r}}\bigg\vert_t (f\circ\gamma)=\frac{\dd{(f\circ \gamma)}}{\dd{r}}(t)=(f\circ\gamma)'(t).$$
 
 In fact, when defining $T_pM$ we may just as well regard it as the collection of $C^\infty$ curves passing through the point $p$[^1]. We prove the following proposition, which is part of this claim and will be used frequently.
 
@@ -38,13 +38,13 @@ Fix a manifold $M$ and a point $p\in M$. For any nonzero $v\in T_pM$, there exis
 ::: Proof
 It suffices to find a coordinate system $(U,\varphi)$ centered at $p$ satisfying
 
-$$v=d\varphi^{-1}_{\varphi(p)}\left(\frac{\partial}{\partial r^1}\bigg\vert_0\right).$$
+$$v=\dd{\varphi}^{-1}_{\varphi(p)}\left(\frac{\partial}{\partial r^1}\bigg\vert_0\right).$$
 
 Then $v$ is the velocity vector at $t=0$ of the $C^\infty$ curve
 
 $$\gamma: t\mapsto \varphi^{-1}(t, 0,\cdots, 0).$$
 
-Finding such a coordinate system is straightforward: choose an arbitrary coordinate system $(U,\psi)$, construct a new basis of $\mathbb{R}^n$ containing the translated vector $d\psi_p(v)$, and compose the original $\psi$ with the resulting change of basis.
+Finding such a coordinate system is straightforward: choose an arbitrary coordinate system $(U,\psi)$, construct a new basis of $\mathbb{R}^n$ containing the translated vector $\dd{\psi_p}(v)$, and compose the original $\psi$ with the resulting change of basis.
 :::
 
 In the special case $M=\mathbb{R}^m$, a basis of $T_{\gamma(t)}M$ is given by
@@ -53,11 +53,11 @@ $$\frac{\partial}{\partial r^1}\bigg\vert_{\gamma(t)},\cdots,\frac{\partial}{\pa
 
 so
 
-$$\gamma'(t)=\sum_{i=1}^m\frac{d(r^i\circ \gamma)}{dr}(t)\frac{\partial}{\partial r^i}\bigg\vert_{\gamma(t)}=\frac{d\gamma^1}{dr}\frac{\partial}{\partial r^1}\bigg\vert_{\gamma(t)}+\cdots+\frac{d\gamma^m}{dr}\frac{\partial}{\partial r^m}\bigg\vert_{\gamma(t)},$$
+$$\gamma'(t)=\sum_{i=1}^m\frac{\dd{(r^i\circ \gamma)}}{\dd{r}}(t)\frac{\partial}{\partial r^i}\bigg\vert_{\gamma(t)}=\frac{\dd{\gamma}^1}{\dd{r}}\frac{\partial}{\partial r^1}\bigg\vert_{\gamma(t)}+\cdots+\frac{\dd{\gamma}^m}{\dd{r}}\frac{\partial}{\partial r^m}\bigg\vert_{\gamma(t)},$$
 
 and since in Euclidean space these $\partial/\partial r^i$ coincide with the $i$th standard basis vectors, we may identify this with
 
-$$\left(\frac{d\gamma^1}{dr},\ldots, \frac{d\gamma^m}{dr}\right).$$
+$$\left(\frac{\dd{\gamma}^1}{\dd{r}},\ldots, \frac{\dd{\gamma}^m}{\dd{r}}\right).$$
 
 This coincides with the usual derivative
 
@@ -67,22 +67,22 @@ so we can verify that our notions of tangent vector and velocity vector agree in
 
 Now let $F:M\rightarrow N$ be a $C^\infty$ function between two manifolds $M,N$, and let $\gamma:(a,b)\rightarrow M$ be a $C^\infty$ curve. Computing the differential of $F\circ\gamma$ at $t$ gives
 
-$$d(F\circ\gamma)_t=dF_{\gamma(t)}\circ d\gamma_t,$$
+$$\dd{(F\circ\gamma)_t}=\dd{F_{\gamma(t)}}\circ \dd{\gamma_t},$$
 
 and therefore
 
-$$d(F\circ\gamma)_t\left(\frac{d}{dr}\bigg\vert_t\right)=(dF_{\gamma(t)}\circ d\gamma_t)\left(\frac{d}{dr}\bigg\vert_t\right)=dF_{\gamma(t)}(\gamma'(t)).$$
+$$\dd{(F\circ\gamma)_t}\left(\frac{d}{\dd{r}}\bigg\vert_t\right)=(\dd{F_{\gamma(t)}}\circ \dd{\gamma_t})\left(\frac{d}{\dd{r}}\bigg\vert_t\right)=\dd{F_{\gamma(t)}}(\gamma'(t)).$$
 
 Since the left-hand side is the velocity vector at time $t$ of the $C^\infty$ curve $F\circ\gamma$ in $N$, the above equation can be written as
 
-$$(F\circ\gamma)'(t)=dF_{\gamma(t)}(\gamma'(t)).$$
+$$(F\circ\gamma)'(t)=\dd{F_{\gamma(t)}}(\gamma'(t)).$$
 
-Refining this slightly, we see that for a given $C^\infty$ function $F:M\rightarrow N$, in order to determine the value $dF_p(v)$ of the differential at any $v\in T_pM$, we need only choose any curve having velocity vector $v$ at the point $p$[^2], and then compute the velocity vector of $F\circ\gamma$ at time $t$ for this curve $\gamma$. That is,
+Refining this slightly, we see that for a given $C^\infty$ function $F:M\rightarrow N$, in order to determine the value $\dd{F_p}(v)$ of the differential at any $v\in T_pM$, we need only choose any curve having velocity vector $v$ at the point $p$[^2], and then compute the velocity vector of $F\circ\gamma$ at time $t$ for this curve $\gamma$. That is,
 
 ::: Proposition 3
 Let $M,N$ be two manifolds and $F:M\rightarrow N$ a $C^\infty$ function. For any $v\in T_pM$, any $C^\infty$ curve $\gamma:(a,b)\rightarrow M$ satisfying $\gamma(0)=p$ and $\gamma'(0)=v$ also satisfies
 
-$$dF_p(v)=(F\circ\gamma)'(0).$$
+$$\dd{F_p}(v)=(F\circ\gamma)'(0).$$
 :::
 
 ## Tangent Spaces of Vector Spaces
@@ -134,7 +134,7 @@ $$v\mapsto D_v\vert_x$$
 
 via $V\rightarrow T_xV$, and then using $\gamma(t)=x+tv$ and [Proposition 3](#prop3) we get
 
-$$dL_x(D_v\vert_x)=(L\circ \gamma)'(0).$$
+$$\dd{L_x}(D_v\vert_x)=(L\circ \gamma)'(0).$$
 
 But
 
@@ -159,11 +159,11 @@ In particular, for the open submanifold $\GL(n;\mathbb{R})$ of $\Mat_n(\mathbb{R
 
 ## Tangent Covectors
 
-Let $M$ be an arbitrary manifold and $f:M\rightarrow\mathbb{R}$ a $C^\infty$ function. Then for every point $p\in M$, the differential $df_p:T_pM\rightarrow T_{f(p)}\mathbb{R}$ is well defined. By [Proposition 4](#prop4), there exists an isomorphism between $\mathbb{R}$ and its tangent space $T_{f(p)}\mathbb{R}$ as 1-dimensional $\mathbb{R}$-vector spaces. Thus, via
+Let $M$ be an arbitrary manifold and $f:M\rightarrow\mathbb{R}$ a $C^\infty$ function. Then for every point $p\in M$, the differential $\dd{f_p}:T_pM\rightarrow T_{f(p)}\mathbb{R}$ is well defined. By [Proposition 4](#prop4), there exists an isomorphism between $\mathbb{R}$ and its tangent space $T_{f(p)}\mathbb{R}$ as 1-dimensional $\mathbb{R}$-vector spaces. Thus, via
 
-$$T_pM\overset{df_p}{\longrightarrow}T_{f(p)}\mathbb{R}\overset{\sim}{\longrightarrow}\mathbb{R}$$
+$$T_pM\overset{\dd{f_p}}{\longrightarrow}T_{f(p)}\mathbb{R}\overset{\sim}{\longrightarrow}\mathbb{R}$$
 
-we may regard $df_p$ as an element of $(T_pM)^\ast$.
+we may regard $\dd{f_p}$ as an element of $(T_pM)^\ast$.
 
 ::: Definition 6
 For a manifold $M$ and a point $p\in M$, the dual space $(T_pM)^\ast$ of the $\mathbb{R}$-vector space $T_pM$ is called the *cotangent space*, written simply as $T_p^\ast M$. The elements of $T_p^\ast M$ are called *tangent covectors*, or simply *covectors*.
@@ -184,15 +184,15 @@ $$(\xi^i \vert_p)\left(\frac{\partial}{\partial x^j}\bigg\vert_p\right)=\delta_{
 where $\delta_{ij}$ denotes the Kronecker delta.
 
 ::: Proposition 7
-In the above situation, $\xi^i\vert_p=dx^i\vert_p$. In other words, the dual bases $(\xi^i \vert_p)$ of $T_pM$ arising from $(U,\varphi)$ are precisely the differentials at $p$ of the coordinate functions $x^i$.
+In the above situation, $\xi^i\vert_p=\dd{x}^i\vert_p$. In other words, the dual bases $(\xi^i \vert_p)$ of $T_pM$ arising from $(U,\varphi)$ are precisely the differentials at $p$ of the coordinate functions $x^i$.
 :::
 ::: Proof
-It suffices to show that the $dx^i$ satisfy equation (1). By definition,
+It suffices to show that the $\dd{x}^i$ satisfy equation (1). By definition,
 
-$$dx^i\vert_p\left(\frac{\partial}{\partial x^j}\bigg\vert_p\right)=\frac{\partial}{\partial x^j}\bigg\vert_p x^i=\delta_{ij}.$$
+$$\dd{x}^i\vert_p\left(\frac{\partial}{\partial x^j}\bigg\vert_p\right)=\frac{\partial}{\partial x^j}\bigg\vert_p x^i=\delta_{ij}.$$
 :::
 
-This proof becomes more transparent if we recall [§Cotangent Space, ⁋Lemma 1](/en/math/manifolds/cotangent_space#lem1), proved when we first introduced the tangent space. That is, passing from the first equality to the second is by definition of the differential $dx^i\vert_p$, but simultaneously it is the process of naturally identifying the double dual of the finite-dimensional $\mathbb{R}$-vector space $\mathfrak{m}_p/\mathfrak{m}^2_p$ with itself via
+This proof becomes more transparent if we recall [§Cotangent Space, ⁋Lemma 1](/en/math/manifolds/cotangent_space#lem1), proved when we first introduced the tangent space. That is, passing from the first equality to the second is by definition of the differential $\dd{x}^i\vert_p$, but simultaneously it is the process of naturally identifying the double dual of the finite-dimensional $\mathbb{R}$-vector space $\mathfrak{m}_p/\mathfrak{m}^2_p$ with itself via
 
 $$T_p^\ast M\cong (\mathfrak{m}_p/\mathfrak{m}_p^2)^{\ast\ast}\cong\mathfrak{m}_p/\mathfrak{m}^2_p.$$
 

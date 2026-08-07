@@ -74,29 +74,29 @@ $$\Omega^\ast(M)=\bigoplus_{k=0}^n\Omega^k(M).$$
 
 Moreover, since scalar multiplication in $\Omega^\ast(M)$ by $\mathbb{R}$ can in fact be performed at each point $p$, we may also regard the coefficients of $\Omega^\ast(M)$ as $C^\infty(M)$. Algebraically, this can be thought of as changing the coefficient ring via the ring homomorphism $\mathbb{R}\rightarrow C^\infty(M)$, and henceforth we always consider $\Omega^\ast(M)$ as an $\mathbb{N}$-graded $C^\infty(M)$-algebra in this manner.
 
-Now suppose a $C^\infty$ function $F:M\rightarrow N$ is given. Then the linear map $dF_p:T_pM\rightarrow T_{F(p)}N$ is well defined. Therefore, applying the functoriality of the exterior algebra to the dual map of $dF_p$, we obtain
+Now suppose a $C^\infty$ function $F:M\rightarrow N$ is given. Then the linear map $\dd{F_p}:T_pM\rightarrow T_{F(p)}N$ is well defined. Therefore, applying the functoriality of the exterior algebra to the dual map of $\dd{F_p}$, we obtain
 
-$$\bigwedge({dF}_p^\ast):\bigwedge(T_{F(p)}^\ast N)\rightarrow\bigwedge(T_p^\ast M).$$
+$$\bigwedge({\dd{F}}_p^\ast):\bigwedge(T_{F(p)}^\ast N)\rightarrow\bigwedge(T_p^\ast M).$$
 
-([\[Multilinear Algebra\] §Tensor Algebra, ⁋Definition 10](/en/math/multilinear_algebra/tensor_algebras#def10)) Let $F^\ast$ denote the linear map $\Omega^\ast(N)\rightarrow\Omega^\ast(M)$ obtained by assigning $\bigwedge({dF}_p^\ast)$ to each point $p$. That is, for any $\omega\in\Omega^\ast(N)$,
+([\[Multilinear Algebra\] §Tensor Algebra, ⁋Definition 10](/en/math/multilinear_algebra/tensor_algebras#def10)) Let $F^\ast$ denote the linear map $\Omega^\ast(N)\rightarrow\Omega^\ast(M)$ obtained by assigning $\bigwedge({\dd{F}}_p^\ast)$ to each point $p$. That is, for any $\omega\in\Omega^\ast(N)$,
 
-$$(F^\ast\omega)_p=\bigwedge({dF}_p^\ast)(\omega_{F(p)}).$$
+$$(F^\ast\omega)_p=\bigwedge({\dd{F}}_p^\ast)(\omega_{F(p)}).$$
 
 The differential form $F^\ast\omega$ obtained in this way is called the *pullback* of $\omega$ by $F$. Moreover, since $F^\ast$ is a graded algebra homomorphism by definition, it also preserves $\wedge$.
 
 In particular, suppose $\omega$ is a $k$-form. To compute $(F^\ast\omega)_p$ at a point $p\in M$, we evaluate it on $k$ vectors $X_1(p),\ldots, X_k(p)$ to obtain
 
-$$(F^\ast\omega)_p(X_1(p),\ldots, X_k(p))=(F^\ast_p\omega_{F(p)})\bigl(X_1(p),\ldots, X_k(p)\bigr)=\omega_{F(p)}\bigl(dF_p(X_1(p)), \ldots, dF_p(X_k(p))\bigr).$$
+$$(F^\ast\omega)_p(X_1(p),\ldots, X_k(p))=(F^\ast_p\omega_{F(p)})\bigl(X_1(p),\ldots, X_k(p)\bigr)=\omega_{F(p)}\bigl(\dd{F_p}(X_1(p)), \ldots, \dd{F_p}(X_k(p))\bigr).$$
 
 ## Exterior Derivative and de Rham Cohomology
 
-Earlier we verified that $\Omega^0(M)=C^\infty(M)$. For any $f\in C^\infty(M)$, its differential $df$ is the function that takes each point $p\in M$ and outputs $df_p:T_pM\rightarrow\mathbb{R}$. ([§Examples of Differentials, ⁋Definition 6](/en/math/manifolds/examples_of_differentials#def6)) That is, $df\in T^\ast M=\Omega^1(M)$. This operator $d$ is defined for general differential forms as follows.
+Earlier we verified that $\Omega^0(M)=C^\infty(M)$. For any $f\in C^\infty(M)$, its differential $\dd{f}$ is the function that takes each point $p\in M$ and outputs $\dd{f_p}:T_pM\rightarrow\mathbb{R}$. ([§Examples of Differentials, ⁋Definition 6](/en/math/manifolds/examples_of_differentials#def6)) That is, $\dd{f}\in T^\ast M=\Omega^1(M)$. This operator $d$ is defined for general differential forms as follows.
 
 ::: Theorem 2
 For a manifold $M$, there exists a unique degree $1$ anti-derivation $d:\Omega^\ast(M)\rightarrow\Omega^\ast(M)$ satisfying the following two conditions. (See **[War]** for a proof.)
 
 1. $d^2=0$,
-2. For any $f\in\Omega^0(M)$, $df$ coincides with the differential of $f$ as above.
+2. For any $f\in\Omega^0(M)$, $\dd{f}$ coincides with the differential of $f$ as above.
 
 Moreover, this $d$ commutes with pullback $F^\ast$.
 :::

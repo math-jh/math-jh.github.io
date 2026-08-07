@@ -24,33 +24,33 @@ published: false
 축약을 시작하려면 우선 $\mu^{-1}(0)$이 smooth 부분다양체여야 한다. 이는 $0$이 운동량 사상의 regular value일 때 보장된다. 다음 보조정리는 regularity 조건을 작용의 자유도로 번역한다.
 
 ::: 보조정리 1
-$(M,\omega,G,\mu)$가 Hamiltonian $G$-공간이고 $p\in\mu^{-1}(0)$이라 하자. 그럼 미분 $d\mu_p:T_pM\rightarrow\mathfrak{g}^\ast$의 성질은 점 $p$에서의 작용의 stabilizer와 다음과 같이 대응한다.
+$(M,\omega,G,\mu)$가 Hamiltonian $G$-공간이고 $p\in\mu^{-1}(0)$이라 하자. 그럼 미분 $\dd{\mu_p}:T_pM\rightarrow\mathfrak{g}^\ast$의 성질은 점 $p$에서의 작용의 stabilizer와 다음과 같이 대응한다.
 
-$$\ker d\mu_p=(\mathfrak{g}\cdot p)^{\omega},\qquad \im d\mu_p=(\mathfrak{g}_p)^{\circ}$$
+$$\ker \dd{\mu_p}=(\mathfrak{g}\cdot p)^{\omega},\qquad \im \dd{\mu_p}=(\mathfrak{g}_p)^{\circ}$$
 
 여기서 $\mathfrak{g}\cdot p=\{X_M(p)\mid X\in\mathfrak{g}\}\subseteq T_pM$은 orbit의 tangent space, $(\,\cdot\,)^{\omega}$은 $\omega_p$에 대한 symplectic complement ([§사교벡터공간, ⁋정의 3](/ko/math/symplectic_geometry/linear_symplectic_geometry#def3)), $\mathfrak{g}_p=\{X\in\mathfrak{g}\mid X_M(p)=0\}$은 stabilizer의 Lie algebra, $(\mathfrak{g}_p)^{\circ}\subseteq\mathfrak{g}^\ast$은 그 annihilator이다. 특히 $0$이 regular value일 필요충분조건은 모든 $p\in\mu^{-1}(0)$에서 $\mathfrak{g}_p=0$, 즉 작용이 $\mu^{-1}(0)$ 위에서 locally free인 것이다.
 :::
 ::: 증명
-각 $X\in\mathfrak{g}$에 대하여, [§운동량 사상, ⁋정의 2](/ko/math/symplectic_geometry/moment_map#def2)의 조건 1은 $d\mu^X=\iota_{X_M}\omega$이다. 점 $p$와 tangent vector $v\in T_pM$에서 이를 평가하면
+각 $X\in\mathfrak{g}$에 대하여, [§운동량 사상, ⁋정의 2](/ko/math/symplectic_geometry/moment_map#def2)의 조건 1은 $\dd{\mu}^X=\iota_{X_M}\omega$이다. 점 $p$와 tangent vector $v\in T_pM$에서 이를 평가하면
 
-$$\langle d\mu_p(v),X\rangle=d\mu_p^X(v)=\omega_p(X_M(p),v)$$
+$$\langle \dd{\mu_p}(v),X\rangle=\dd{\mu_p}^X(v)=\omega_p(X_M(p),v)$$
 
-이다. 따라서 $v\in\ker d\mu_p$일 필요충분조건은 모든 $X\in\mathfrak{g}$에 대해 $\omega_p(X_M(p),v)=0$, 즉 $v$가 모든 orbit tangent vector $X_M(p)$와 $\omega_p$-직교하는 것이다. 이것이 정확히 $v\in(\mathfrak{g}\cdot p)^{\omega}$이므로 $\ker d\mu_p=(\mathfrak{g}\cdot p)^{\omega}$이다.
+이다. 따라서 $v\in\ker \dd{\mu_p}$일 필요충분조건은 모든 $X\in\mathfrak{g}$에 대해 $\omega_p(X_M(p),v)=0$, 즉 $v$가 모든 orbit tangent vector $X_M(p)$와 $\omega_p$-직교하는 것이다. 이것이 정확히 $v\in(\mathfrak{g}\cdot p)^{\omega}$이므로 $\ker \dd{\mu_p}=(\mathfrak{g}\cdot p)^{\omega}$이다.
 
-Image에 대해서는, 위 식이 말하는 바를 $X$에 대한 linear functional로 보면 $d\mu_p(v)$는 $X\mapsto\omega_p(X_M(p),v)$이다. 한 원소 $\xi=d\mu_p(v)$가 어떤 $X\in\mathfrak{g}_p$, 즉 $X_M(p)=0$인 $X$에서 소멸함은 자명하므로 $\im d\mu_p\subseteq(\mathfrak{g}_p)^{\circ}$이다. 역포함은 차원 계산으로 따라온다. Symplectic form의 nondegeneracy로부터 부분공간 $U=\mathfrak{g}\cdot p$에 대해 $\dim U+\dim U^{\omega}=\dim T_pM$이므로
+Image에 대해서는, 위 식이 말하는 바를 $X$에 대한 linear functional로 보면 $\dd{\mu_p}(v)$는 $X\mapsto\omega_p(X_M(p),v)$이다. 한 원소 $\xi=\dd{\mu_p}(v)$가 어떤 $X\in\mathfrak{g}_p$, 즉 $X_M(p)=0$인 $X$에서 소멸함은 자명하므로 $\im \dd{\mu_p}\subseteq(\mathfrak{g}_p)^{\circ}$이다. 역포함은 차원 계산으로 따라온다. Symplectic form의 nondegeneracy로부터 부분공간 $U=\mathfrak{g}\cdot p$에 대해 $\dim U+\dim U^{\omega}=\dim T_pM$이므로
 
-$$\dim\ker d\mu_p=\dim(\mathfrak{g}\cdot p)^{\omega}=\dim T_pM-\dim(\mathfrak{g}\cdot p)$$
+$$\dim\ker \dd{\mu_p}=\dim(\mathfrak{g}\cdot p)^{\omega}=\dim T_pM-\dim(\mathfrak{g}\cdot p)$$
 
 이고, 한편 $X\mapsto X_M(p)$의 kernel이 $\mathfrak{g}_p$이므로 $\dim(\mathfrak{g}\cdot p)=\dim\mathfrak{g}-\dim\mathfrak{g}_p$이다. 이를 합치면 rank-nullity에 의하여
 
-$$\dim\im d\mu_p=\dim T_pM-\dim\ker d\mu_p=\dim(\mathfrak{g}\cdot p)=\dim\mathfrak{g}-\dim\mathfrak{g}_p=\dim(\mathfrak{g}_p)^{\circ}$$
+$$\dim\im \dd{\mu_p}=\dim T_pM-\dim\ker \dd{\mu_p}=\dim(\mathfrak{g}\cdot p)=\dim\mathfrak{g}-\dim\mathfrak{g}_p=\dim(\mathfrak{g}_p)^{\circ}$$
 
-이 되어 $\im d\mu_p=(\mathfrak{g}_p)^{\circ}$이다.
+이 되어 $\im \dd{\mu_p}=(\mathfrak{g}_p)^{\circ}$이다.
 
-마지막 주장은 즉시 따라온다. $d\mu_p$가 surjective, 즉 $0$이 $p$에서 regular일 필요충분조건은 $\im d\mu_p=\mathfrak{g}^\ast$, 곧 $(\mathfrak{g}_p)^{\circ}=\mathfrak{g}^\ast$이고 이는 $\mathfrak{g}_p=0$과 동치이다. $\mathfrak{g}_p=0$은 stabilizer $G_p$가 discrete임, 즉 작용이 $p$에서 locally free임을 뜻한다.
+마지막 주장은 즉시 따라온다. $\dd{\mu_p}$가 surjective, 즉 $0$이 $p$에서 regular일 필요충분조건은 $\im \dd{\mu_p}=\mathfrak{g}^\ast$, 곧 $(\mathfrak{g}_p)^{\circ}=\mathfrak{g}^\ast$이고 이는 $\mathfrak{g}_p=0$과 동치이다. $\mathfrak{g}_p=0$은 stabilizer $G_p$가 discrete임, 즉 작용이 $p$에서 locally free임을 뜻한다.
 :::
 
-이 보조정리는 영점집합의 두 가지 기하학적 사실을 한꺼번에 준다. 첫째, $0$이 regular value이면 $\mu^{-1}(0)$은 codimension $\dim G$의 smooth 부분다양체이고 $T_p(\mu^{-1}(0))=\ker d\mu_p=(\mathfrak{g}\cdot p)^{\omega}$이다. 둘째, 이 tangent space가 orbit tangent space $\mathfrak{g}\cdot p$의 symplectic complement라는 등식 $T_p(\mu^{-1}(0))=(\mathfrak{g}\cdot p)^{\omega}$이 다음 절에서 symplectic form을 내릴 때 결정적으로 쓰인다. 작용이 ($\mu^{-1}(0)$ 위에서) 자유로우면 $\mathfrak{g}_p=0$이므로 regularity는 자동이며, 우리는 앞으로 이 강한 가정 아래에서 작업한다.
+이 보조정리는 영점집합의 두 가지 기하학적 사실을 한꺼번에 준다. 첫째, $0$이 regular value이면 $\mu^{-1}(0)$은 codimension $\dim G$의 smooth 부분다양체이고 $T_p(\mu^{-1}(0))=\ker \dd{\mu_p}=(\mathfrak{g}\cdot p)^{\omega}$이다. 둘째, 이 tangent space가 orbit tangent space $\mathfrak{g}\cdot p$의 symplectic complement라는 등식 $T_p(\mu^{-1}(0))=(\mathfrak{g}\cdot p)^{\omega}$이 다음 절에서 symplectic form을 내릴 때 결정적으로 쓰인다. 작용이 ($\mu^{-1}(0)$ 위에서) 자유로우면 $\mathfrak{g}_p=0$이므로 regularity는 자동이며, 우리는 앞으로 이 강한 가정 아래에서 작업한다.
 
 등식 $T_p(\mu^{-1}(0))=(\mathfrak{g}\cdot p)^{\omega}$을 symplectic vector space의 언어로 다시 읽으면, $\mu^{-1}(0)$이 *coisotropic* 부분다양체임을 뜻한다. 부분공간 $W\subseteq T_pM$이 coisotropic이라는 것은 $W^{\omega}\subseteq W$인 것인데 ([§사교벡터공간, ⁋정의 3](/ko/math/symplectic_geometry/linear_symplectic_geometry#def3)), $W=T_p(\mu^{-1}(0))$에 대하여 $W^{\omega}=\bigl((\mathfrak{g}\cdot p)^{\omega}\bigr)^{\omega}=\mathfrak{g}\cdot p$이고, $p\in\mu^{-1}(0)$에서 각 $X_M(p)$이 $\mu^{-1}(0)$에 접하므로 ($G$가 $\mu^{-1}(0)$을 보존하기 때문) $\mathfrak{g}\cdot p\subseteq T_p(\mu^{-1}(0))=W$이다. 즉 영점집합의 사교수직방향이 정확히 orbit 방향이며, 이것이 quotient를 취해 symplectic form을 회복할 수 있게 하는 구조적 이유이다.
 
@@ -80,25 +80,25 @@ $$\dim Z/G=\dim Z-\dim G=(\dim M-\dim G)-\dim G=\dim M-2\dim G$$
 
 이다.
 
-이제 symplectic form을 내린다. 점 $p\in Z$에서 $d\pi_p:T_pZ\rightarrow T_{\pi(p)}(Z/G)$은 surjective이고 그 kernel은 정확히 fiber의 tangent space, 곧 orbit 방향 $\mathfrak{g}\cdot p$이다. 밑공간의 형식을 정의하려면, 두 벡터 $\bar u,\bar v\in T_{\pi(p)}(Z/G)$에 대해 이를 $u,v\in T_pZ$로 들어 올려
+이제 symplectic form을 내린다. 점 $p\in Z$에서 $\dd{\pi_p}:T_pZ\rightarrow T_{\pi(p)}(Z/G)$은 surjective이고 그 kernel은 정확히 fiber의 tangent space, 곧 orbit 방향 $\mathfrak{g}\cdot p$이다. 밑공간의 형식을 정의하려면, 두 벡터 $\bar u,\bar v\in T_{\pi(p)}(Z/G)$에 대해 이를 $u,v\in T_pZ$로 들어 올려
 
 $$(\omega_{\mathrm{red}})_{\pi(p)}(\bar u,\bar v):=\omega_p(u,v)$$
 
 으로 두면 된다. 이것이 잘 정의됨을 보이려면 (i) 들어 올림의 선택에 무관함과 (ii) 점 $p$를 같은 orbit 안에서 옮겨도 같은 값이 나옴을 확인해야 한다.
 
-(i) 들어 올림은 $\ker d\pi_p=\mathfrak{g}\cdot p$만큼의 모호함을 가진다. $u$를 $u+X_M(p)$로 ($X\in\mathfrak{g}$) 바꾸어도 값이 변하지 않음은
+(i) 들어 올림은 $\ker \dd{\pi_p}=\mathfrak{g}\cdot p$만큼의 모호함을 가진다. $u$를 $u+X_M(p)$로 ($X\in\mathfrak{g}$) 바꾸어도 값이 변하지 않음은
 
-$$\omega_p(X_M(p),v)=\langle d\mu_p(v),X\rangle=0$$
+$$\omega_p(X_M(p),v)=\langle \dd{\mu_p}(v),X\rangle=0$$
 
-에서 나온다. 마지막 등식은 $v\in T_pZ=\ker d\mu_p$이기 때문이다. $v$에 대해서도 같으므로 $\omega_p(u,v)$은 들어 올림의 선택에 무관하다. 즉 $\iota^\ast\omega$은 orbit 방향으로 퇴화하며, 이는 $T_pZ=(\mathfrak{g}\cdot p)^{\omega}$, 곧 $\mathfrak{g}\cdot p$이 $\iota^\ast\omega$의 kernel임과 정확히 같은 말이다.
+에서 나온다. 마지막 등식은 $v\in T_pZ=\ker \dd{\mu_p}$이기 때문이다. $v$에 대해서도 같으므로 $\omega_p(u,v)$은 들어 올림의 선택에 무관하다. 즉 $\iota^\ast\omega$은 orbit 방향으로 퇴화하며, 이는 $T_pZ=(\mathfrak{g}\cdot p)^{\omega}$, 곧 $\mathfrak{g}\cdot p$이 $\iota^\ast\omega$의 kernel임과 정확히 같은 말이다.
 
-(ii) $G$가 $\omega$를 보존하고 ($\psi_g^\ast\omega=\omega$) $Z$을 보존하므로 $\psi_g^\ast(\iota^\ast\omega)=\iota^\ast\omega$이다. 따라서 $p$를 $g\cdot p$로 옮기고 들어 올림을 $d\psi_g$로 옮기면 같은 값을 준다. (i)과 (ii)에 의해 $\omega_{\mathrm{red}}$은 $Z/G$ 위에 well-defined인 $2$-form이고, 구성상 $\pi^\ast\omega_{\mathrm{red}}=\iota^\ast\omega$이며 이 조건이 $\omega_{\mathrm{red}}$을 유일하게 결정한다 ($\pi^\ast$이 injective이므로).
+(ii) $G$가 $\omega$를 보존하고 ($\psi_g^\ast\omega=\omega$) $Z$을 보존하므로 $\psi_g^\ast(\iota^\ast\omega)=\iota^\ast\omega$이다. 따라서 $p$를 $g\cdot p$로 옮기고 들어 올림을 $\dd{\psi_g}$로 옮기면 같은 값을 준다. (i)과 (ii)에 의해 $\omega_{\mathrm{red}}$은 $Z/G$ 위에 well-defined인 $2$-form이고, 구성상 $\pi^\ast\omega_{\mathrm{red}}=\iota^\ast\omega$이며 이 조건이 $\omega_{\mathrm{red}}$을 유일하게 결정한다 ($\pi^\ast$이 injective이므로).
 
 마지막으로 $\omega_{\mathrm{red}}$이 symplectic form, 즉 closed이고 nondegenerate임을 보인다.
 
-*Closedness.* $\pi^\ast(d\omega_{\mathrm{red}})=d(\pi^\ast\omega_{\mathrm{red}})=d(\iota^\ast\omega)=\iota^\ast(d\omega)=0$이고, $\pi^\ast$이 injective이므로 $d\omega_{\mathrm{red}}=0$이다.
+*Closedness.* $\pi^\ast(\dd{\omega_{\mathrm{red}}})=\dd{(\pi^\ast\omega_{\mathrm{red}})}=\dd{(\iota^\ast\omega)}=\iota^\ast(\dd{\omega})=0$이고, $\pi^\ast$이 injective이므로 $\dd{\omega_{\mathrm{red}}}=0$이다.
 
-*Nondegeneracy.* $\bar u\in T_{\pi(p)}(Z/G)$이 모든 $\bar v$에 대해 $(\omega_{\mathrm{red}})_{\pi(p)}(\bar u,\bar v)=0$이라 하자. 들어 올림 $u\in T_pZ$을 택하면 모든 $v\in T_pZ$에 대해 $\omega_p(u,v)=0$이므로 $u\in(T_pZ)^{\omega}$이다. 그런데 $T_pZ=(\mathfrak{g}\cdot p)^{\omega}$이므로 $(T_pZ)^{\omega}=\mathfrak{g}\cdot p$이고, 따라서 $u\in\mathfrak{g}\cdot p=\ker d\pi_p$이다. 즉 $\bar u=d\pi_p(u)=0$이므로 $\omega_{\mathrm{red}}$은 nondegenerate이다.
+*Nondegeneracy.* $\bar u\in T_{\pi(p)}(Z/G)$이 모든 $\bar v$에 대해 $(\omega_{\mathrm{red}})_{\pi(p)}(\bar u,\bar v)=0$이라 하자. 들어 올림 $u\in T_pZ$을 택하면 모든 $v\in T_pZ$에 대해 $\omega_p(u,v)=0$이므로 $u\in(T_pZ)^{\omega}$이다. 그런데 $T_pZ=(\mathfrak{g}\cdot p)^{\omega}$이므로 $(T_pZ)^{\omega}=\mathfrak{g}\cdot p$이고, 따라서 $u\in\mathfrak{g}\cdot p=\ker \dd{\pi_p}$이다. 즉 $\bar u=\dd{\pi_p}(u)=0$이므로 $\omega_{\mathrm{red}}$은 nondegenerate이다.
 :::
 
 축약공간의 표기 $M /\!\!/ G$은 사교 몫임을 강조하는 기호로, 단순한 위상적 몫 $M/G$과 구별된다. 위 증명에서 symplectic form이 내려올 수 있었던 두 기둥은 [보조정리 1](#lem1)의 등식 $T_pZ=(\mathfrak{g}\cdot p)^{\omega}$이다. 이 한 등식이 (i)에서는 $\iota^\ast\omega$의 퇴화방향이 정확히 orbit 방향임을, nondegeneracy에서는 그 퇴화방향을 quotient로 죽이고 나면 남는 형식이 nondegenerate임을 동시에 보장한다. Coisotropic 부분다양체를 그 null 방향으로 나누어 symplectic manifold를 얻는 이 절차는 *coisotropic reduction*이라는 더 일반적인 구성의 특수한 경우이다.
@@ -155,7 +155,7 @@ $$\mu^{-1}(\xi)/G_\xi\rightarrow\mu^{-1}(\mathcal{O}_\xi)/G$$
 가장 투명한 예시는 $\mathbb{C}^{n+1}$ 위의 대각 원작용을 축약하여 $\mathbb{CP}^n$을 얻는 것이다. 이 예시는 [§운동량 사상, ⁋예시 8](/ko/math/symplectic_geometry/moment_map#ex8) 뒤에서 언급한 $S^{2n+1}$ 위 제약과 대각 $S^1$ quotient가 정확히 사교 축약임을 확인해 준다.
 
 ::: 예시 6
-$M=\mathbb{C}^{n+1}$에 좌표 $z_j=x_j+iy_j$ ($j=0,1,\ldots,n$)와 symplectic form $\omega=\sum_{j=0}^n dx_j\wedge dy_j$을 주자 ([§운동량 사상, ⁋예시 8](/ko/math/symplectic_geometry/moment_map#ex8)). $G=S^1$이 모든 좌표에 동시에 작용하는 *대각* 회전
+$M=\mathbb{C}^{n+1}$에 좌표 $z_j=x_j+iy_j$ ($j=0,1,\ldots,n$)와 symplectic form $\omega=\sum_{j=0}^n \dd{x_j}\wedge \dd{y_j}$을 주자 ([§운동량 사상, ⁋예시 8](/ko/math/symplectic_geometry/moment_map#ex8)). $G=S^1$이 모든 좌표에 동시에 작용하는 *대각* 회전
 
 $$t\cdot(z_0,\ldots,z_n)=(e^{2\pi it}z_0,\ldots,e^{2\pi it}z_n)$$
 
@@ -171,7 +171,7 @@ $$\mu(z)=\frac{\pi}{2}\Bigl(\sum_{j=0}^n\lvert z_j\rvert^2-1\Bigr)$$
 
 $$\mu^{-1}(0)=\Bigl\{z\in\mathbb{C}^{n+1}:\sum_{j=0}^n\lvert z_j\rvert^2=1\Bigr\}=S^{2n+1}$$
 
-으로 단위 구면이다. $z=0$은 영점집합에 없으므로 그 위에서 $d\mu$은 처처에서 nonzero, 즉 $0$은 regular value이고, $S^1$이 구면 위에 자유롭게 (그리고 compact이므로 proper하게) 작용한다. 따라서 [정리 2](#thm2)의 가정이 모두 충족된다.
+으로 단위 구면이다. $z=0$은 영점집합에 없으므로 그 위에서 $\dd{\mu}$은 처처에서 nonzero, 즉 $0$은 regular value이고, $S^1$이 구면 위에 자유롭게 (그리고 compact이므로 proper하게) 작용한다. 따라서 [정리 2](#thm2)의 가정이 모두 충족된다.
 
 축약공간은
 

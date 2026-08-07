@@ -164,7 +164,7 @@ For this we need a curve $\mathbf{x}(t) = (x_1(t), \ldots, x_n(t))$ parameterize
 ::: Theorem 6 (Multivariable Chain Rule)
 If $f$ is differentiable and $\mathbf{x}(t) = (x_1(t), \ldots, x_n(t))$ is a differentiable curve, then the composition $t \mapsto f(\mathbf{x}(t))$ is also differentiable and
 
-$$\frac{d}{dt} f(\mathbf{x}(t)) = \nabla f(\mathbf{x}(t)) \cdot \mathbf{x}'(t) = \sum_{i=1}^n \frac{\partial f}{\partial x_i} \frac{dx_i}{dt}.$$
+$$\frac{d}{\dd{t}} f(\mathbf{x}(t)) = \nabla f(\mathbf{x}(t)) \cdot \mathbf{x}'(t) = \sum_{i=1}^n \frac{\partial f}{\partial x_i} \frac{\dd{x_i}}{\dd{t}}.$$
 
 :::
 ::: Proof

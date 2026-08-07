@@ -40,17 +40,17 @@ If we partition the surface into small rectangles in the parameter domain, each 
 ::: Definition 2
 The *surface area* of a regular parametrized surface $\mathbf{r}\colon D \rightarrow \mathbb{R}^3$ is
 
-$$\iint_D \lvert \mathbf{r}_u \times \mathbf{r}_v\rvert \mathop{du}\mathop{dv}$$
+$$\iint_D \lvert \mathbf{r}_u \times \mathbf{r}_v\rvert \dd{u}\dd{v}$$
 
-and we write the area element as $dS = \lvert \mathbf{r}_u \times \mathbf{r}_v\rvert \mathop{du}\mathop{dv}$.
+and we write the area element as $\dd{S} = \lvert \mathbf{r}_u \times \mathbf{r}_v\rvert \dd{u}\dd{v}$.
 :::
 
-The area element $dS$ plays the same role as the Jacobian determinant in multiple integrals, and with this area element $dS$ we can integrate a scalar quantity distributed over the surface.
+The area element $\dd{S}$ plays the same role as the Jacobian determinant in multiple integrals, and with this area element $\dd{S}$ we can integrate a scalar quantity distributed over the surface.
 
 ::: Definition 3
 The *surface integral* of a continuous scalar field $f$ on a surface $S$ is
 
-$$\iint_S f\mathop{dS} = \iint_D f(\mathbf{r}(u,v))\lvert \mathbf{r}_u \times \mathbf{r}_v\rvert \mathop{du}\mathop{dv}.$$
+$$\iint_S f\dd{S} = \iint_D f(\mathbf{r}(u,v))\lvert \mathbf{r}_u \times \mathbf{r}_v\rvert \dd{u}\dd{v}.$$
 :::
 
 Just as a line integral is independent of the curve's parametrization because we integrate with respect to arc length, a surface integral is independent of the surface's parametrization because we integrate with respect to the area element.
@@ -62,7 +62,7 @@ On the other hand, we can also consider integrating a vector function, rather th
 ::: Definition 4
 The *flux* of a continuous vector field $\mathbf{F}$ on an oriented surface $S$ with unit normal $\mathbf{n}$ is
 
-$$\iint_S \mathbf{F} \cdot d\mathbf{S} = \iint_S \mathbf{F} \cdot \mathbf{n}\mathop{dS} = \iint_D \mathbf{F}(\mathbf{r}(u,v)) \cdot (\mathbf{r}_u \times \mathbf{r}_v)\mathop{du}\mathop{dv}.$$
+$$\iint_S \mathbf{F} \cdot d\mathbf{S} = \iint_S \mathbf{F} \cdot \mathbf{n}\dd{S} = \iint_D \mathbf{F}(\mathbf{r}(u,v)) \cdot (\mathbf{r}_u \times \mathbf{r}_v)\dd{u}\dd{v}.$$
 
 Here we take $\mathbf{n} = (\mathbf{r}_u \times \mathbf{r}_v)/\lvert \mathbf{r}_u \times \mathbf{r}_v\rvert$ to match the orientation of the surface.
 :::
@@ -82,7 +82,7 @@ $$\lvert \mathbf{r}_\phi \times \mathbf{r}_\theta\rvert = R^2\sin\phi,$$
 
 so the surface area is
 
-$$\iint_S \mathop{dS} = \int_0^{2\pi} \int_0^\pi R^2\sin\phi \mathop{d\phi} \mathop{d\theta} = R^2 \cdot 2\pi \cdot 2 = 4\pi R^2,$$
+$$\iint_S \dd{S} = \int_0^{2\pi} \int_0^\pi R^2\sin\phi \dd{\phi} \dd{\theta} = R^2 \cdot 2\pi \cdot 2 = 4\pi R^2,$$
 
 the familiar value.
 :::
@@ -104,7 +104,7 @@ $$\mathbf{F}\cdot(\mathbf{r}_\phi\times \mathbf{r}_\theta) = \mathbf{r} \cdot R\
 
 Therefore
 
-$$\iint_S \mathbf{F}\cdot d\mathbf{S} = \int_0^{2\pi} \int_0^\pi R^3\sin\phi \mathop{d\phi} \mathop{d\theta} = 4\pi R^3.$$
+$$\iint_S \mathbf{F}\cdot d\mathbf{S} = \int_0^{2\pi} \int_0^\pi R^3\sin\phi \dd{\phi} \dd{\theta} = 4\pi R^3.$$
 :::
 
 ---

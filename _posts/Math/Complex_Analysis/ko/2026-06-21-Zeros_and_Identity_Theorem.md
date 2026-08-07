@@ -102,15 +102,15 @@ $\Omega \subseteq \mathbb{C}$가 connected 열린집합이고 $f$가 $\Omega$에
 ::: 증명
 $z_0$의 근방 $D(z_0, \delta) \subseteq \Omega$에서 $\lvert f(z)\rvert \leq \lvert f(z_0)\rvert$이 성립한다고 하자. $0 < r < \delta$인 각 $r$에 대해 평균값 성질 ([§Cauchy 적분공식, ⁋따름정리 7](/ko/math/complex_analysis/cauchy_integral_formula#cor7)) 에서
 
-$$f(z_0) = \frac{1}{2\pi}\int_0^{2\pi} f(z_0 + re^{i\theta})\,d\theta$$
+$$f(z_0) = \frac{1}{2\pi}\int_0^{2\pi} f(z_0 + re^{i\theta})\dd{\theta}$$
 
 이므로 양변의 절댓값을 취하고 삼각부등식을 쓰면
 
-$$\lvert f(z_0)\rvert \leq \frac{1}{2\pi}\int_0^{2\pi} \lvert f(z_0 + re^{i\theta})\rvert\,d\theta \leq \frac{1}{2\pi}\int_0^{2\pi} \lvert f(z_0)\rvert\,d\theta = \lvert f(z_0)\rvert$$
+$$\lvert f(z_0)\rvert \leq \frac{1}{2\pi}\int_0^{2\pi} \lvert f(z_0 + re^{i\theta})\rvert\dd{\theta} \leq \frac{1}{2\pi}\int_0^{2\pi} \lvert f(z_0)\rvert\dd{\theta} = \lvert f(z_0)\rvert$$
 
 이다. 마지막 부등식은 $\lvert f(z_0 + re^{i\theta})\rvert \leq \lvert f(z_0)\rvert$ 때문이다. 양 끝이 같으므로 두 부등식이 모두 등호이고, 특히
 
-$$\frac{1}{2\pi}\int_0^{2\pi}\bigl(\lvert f(z_0)\rvert - \lvert f(z_0 + re^{i\theta})\rvert\bigr)\,d\theta = 0$$
+$$\frac{1}{2\pi}\int_0^{2\pi}\bigl(\lvert f(z_0)\rvert - \lvert f(z_0 + re^{i\theta})\rvert\bigr)\dd{\theta} = 0$$
 
 이다. 피적분함수는 연속이고 음이 아니므로, 그 적분이 $0$이려면 항등적으로 $0$이어야 한다. 곧 모든 $\theta$에서 $\lvert f(z_0 + re^{i\theta})\rvert = \lvert f(z_0)\rvert$이다. $r \in (0, \delta)$이 임의였으므로 $\lvert f\rvert$는 $D(z_0, \delta)$ 전체에서 상수 $\lvert f(z_0)\rvert$이다.
 

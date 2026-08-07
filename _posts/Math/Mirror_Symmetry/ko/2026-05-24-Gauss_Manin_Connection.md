@@ -40,7 +40,7 @@ Smooth projective variety $Y$와 reduced SNC divisor ([\[토릭 기하학\] §�
 
 기하적으로, 앞선 construction에서 $\mathcal{K}_Y\otimes \mathcal{O}_Y(D)\cong \mathcal{O}_Y$의 nowhere-vanishing global section을 통해 $\omega$를 택하는 것은 trivialization $\Omega^N_Y(\log D)\cong\mathcal{O}_Y$를 택하는 것과 같다. 특히 $\check{X}=(\mathbb{C}^\ast)^N$인 경우 standard affine coordinate들 $\x_i$에 대한 canonical volume form은
 
-$$\omega = \frac{d\x_1 \wedge \cdots \wedge d\x_N}{\x_1 \cdots \x_N} = d\log \x_1 \wedge \cdots \wedge d\log \x_N$$
+$$\omega = \frac{\dd{\x_1} \wedge \cdots \wedge \dd{\x_N}}{\x_1 \cdots \x_N} = d\log \x_1 \wedge \cdots \wedge d\log \x_N$$
 
 이다.
 
@@ -139,7 +139,7 @@ Cochain 차원에서 chain rule로 계산하면
 
 $$\partial_{q_i}\!\left(e^{W_q/z}\,\omega\right) = \frac{\partial_{q_i} W_q}{z}\, e^{W_q/z}\, \omega,\qquad z\partial_z\!\left(e^{W_q/z}\,\omega\right) = -\frac{W_q}{z}\, e^{W_q/z}\, \omega$$
 
-이다 ($\omega$는 $q, z$와 무관). $\nabla^{GM}$의 well-definedness는 cocycle 변형이 coboundary로 떨어진다는 사실, 즉 임의의 $(N-1)$-form $\beta$에 대해 $d(e^{W_q/z}\beta) = e^{W_q/z}(d\beta + z^{-1} dW_q \wedge \beta)$이 exact임에서 따라 나오며, flatness $[\nabla^{GM}_{\partial_{q_i}}, \nabla^{GM}_{\partial_{q_j}}] = 0$은 partial derivative들의 commutativity로부터 즉시 얻어진다.
+이다 ($\omega$는 $q, z$와 무관). $\nabla^{GM}$의 well-definedness는 cocycle 변형이 coboundary로 떨어진다는 사실, 즉 임의의 $(N-1)$-form $\beta$에 대해 $\dd{(e^{W_q/z}\beta)} = e^{W_q/z}(\dd{\beta} + z^{-1} \dd{W_q} \wedge \beta)$이 exact임에서 따라 나오며, flatness $[\nabla^{GM}_{\partial_{q_i}}, \nabla^{GM}_{\partial_{q_j}}] = 0$은 partial derivative들의 commutativity로부터 즉시 얻어진다.
 :::
 
 ## B-model connection
@@ -166,9 +166,9 @@ $$z\,\partial_{q_i}\mathcal{I}_\Gamma = \int_\Gamma \partial_{q_i}W_q\cdot e^{W_
 
 이다. 그런데 ($\ast$)의 우변은 우리가 알고 있는 [정의 2](#def2)의 형태와는 다른 것으로, 이를 해결하기 위해서는 $f$가 rapid decay homology의 decaying condition을 깨지 않는 한에서 $f e^{W_q/z}\omega$ 꼴로 integrand를 넓혀주어야 한다. Thimble $\Gamma$의 boundary 부근에서 $\lvert e^{W_q/z}\rvert = e^{\Real(W_q/z)}$가 지수적으로 $0$으로 사라지므로, $f$가 polynomial 정도의 성장만 한다면 충분히 컨트롤이 가능하며 따라서 자연스러운 함수 공간은 regular function들의 공간 $\mathcal{O}(\check{X})$이다. 
 
-문제는 이렇게 정의할 경우 regular function들의 모임은 (벡터공간으로서) 무한차원이므로 이들을 모두 추가하는 것이 불가능하다는 것에 있다. 이를 해결하기 위해 우리는 period integral을 사용해서 pairing을 정의할 경우, 그 값이 cohomology class에만 의존한다는 것을 관찰한다. 이는 만일 $f, g \in \mathcal{O}(\check{X})$가 같은 cohomology class를 정의한다면, 즉 만일 적당한 rapid decay form $\alpha$에 대하여 다음의 식 $(f-g)\cdot e^{W_q/z}\omega = d\alpha$이 성립한다면, Stokes 정리로부터
+문제는 이렇게 정의할 경우 regular function들의 모임은 (벡터공간으로서) 무한차원이므로 이들을 모두 추가하는 것이 불가능하다는 것에 있다. 이를 해결하기 위해 우리는 period integral을 사용해서 pairing을 정의할 경우, 그 값이 cohomology class에만 의존한다는 것을 관찰한다. 이는 만일 $f, g \in \mathcal{O}(\check{X})$가 같은 cohomology class를 정의한다면, 즉 만일 적당한 rapid decay form $\alpha$에 대하여 다음의 식 $(f-g)\cdot e^{W_q/z}\omega = \dd{\alpha}$이 성립한다면, Stokes 정리로부터
 
-$$\int_\Gamma (f-g)\cdot e^{W_q/z}\omega = \int_\Gamma d\alpha = \int_{\partial\Gamma}\alpha = 0$$
+$$\int_\Gamma (f-g)\cdot e^{W_q/z}\omega = \int_\Gamma \dd{\alpha} = \int_{\partial\Gamma}\alpha = 0$$
 
 이고, 따라서 $\mathcal{I}^f_\Gamma$의 값은 $f$의 cohomology class $[f\cdot e^{W_q/z}\omega] \in \mathcal{H}_{(q,z)}$에만 의존함이 따라온다. 즉 우리가 다뤄야 하는 unknown 공간은 사실상 $\mathcal{O}(\check{X})$가 아니라 $\mathcal{H}_{(q,z)}$이고, $\mathcal{H}_{(q,z)}$만 유한차원이면 이 문제가 해결된다. 그리고 이는 실제로 성립하는데, $W_q$가 Morse type이면 rapid decay homology $H_N(\check{X}, S_z;\mathbb{C})$가 thimble basis $\{[\Gamma_p]\}_{p\in\Crit(W_q)}$를 가지고, 이것이 $\mathcal{H}_{(q,z)}$의 dual이므로
 
@@ -213,7 +213,7 @@ $$e_a = \sum_p \mathcal{I}^a_p\,f^p,\qquad f^p = \sum_a (\mathcal{I}^{-1})^p_a\,
 ::: 예시 8 ($X = \mathbb{P}^n$)
 우리는 앞서 [§거울대칭 개요, ⁋예시 5](/ko/math/mirror_symmetry/overview#ex5)에서 $\mathbb{P}^n$의 Hori-Vafa mirror는
 
-$$\check{X} = (\mathbb{C}^\ast)^n,\qquad W_q = \x_1 + \cdots + \x_n + \frac{q}{\x_1 \cdots \x_n},\qquad \omega = \frac{d\x_1 \wedge \cdots \wedge d\x_n}{\x_1 \cdots \x_n}$$
+$$\check{X} = (\mathbb{C}^\ast)^n,\qquad W_q = \x_1 + \cdots + \x_n + \frac{q}{\x_1 \cdots \x_n},\qquad \omega = \frac{\dd{\x_1} \wedge \cdots \wedge \dd{\x_n}}{\x_1 \cdots \x_n}$$
 
 형태로 주어지는 것을 확인했다. 이 때, critical point를 계산하기 위해 미분을 해 보면
 

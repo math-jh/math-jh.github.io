@@ -18,12 +18,12 @@ published: false
 
 ## 길이 범함수와 에너지 범함수
 
-곡선 $\gamma : [a, b] \rightarrow M$의 길이는 적분 $\length(\gamma) = \int_a^b \lVert \dot\gamma(t)\rVert_g \mathop{dt}$로 주어진다. 이 functional은 피적분함수에 제곱근이 들어 있어 변분을 계산할 때 다루기 번거로우며, 또한 $\dot\gamma(t) = 0$인 점에서 미분가능하지 않다. 더불어 길이는 [§리만 계량, ⁋정의 2](/ko/math/riemannian_geometry/Riemannian_metric#def2) 직후에 언급했듯 reparametrization에 불변이므로 그 임계 곡선이 유일한 parametrization을 결정하지 못한다. 이러한 이유로 우리는 제곱근을 없앤 다음의 functional을 함께 도입한다.
+곡선 $\gamma : [a, b] \rightarrow M$의 길이는 적분 $\length(\gamma) = \int_a^b \lVert \dot\gamma(t)\rVert_g \dd{t}$로 주어진다. 이 functional은 피적분함수에 제곱근이 들어 있어 변분을 계산할 때 다루기 번거로우며, 또한 $\dot\gamma(t) = 0$인 점에서 미분가능하지 않다. 더불어 길이는 [§리만 계량, ⁋정의 2](/ko/math/riemannian_geometry/Riemannian_metric#def2) 직후에 언급했듯 reparametrization에 불변이므로 그 임계 곡선이 유일한 parametrization을 결정하지 못한다. 이러한 이유로 우리는 제곱근을 없앤 다음의 functional을 함께 도입한다.
 
 ::: 정의 1
 Riemannian manifold $(M, g)$ 위의 곡선 $\gamma : [a, b] \rightarrow M$의 *에너지<sub>energy</sub>* $E(\gamma)$는 다음의 식
 
-$$E(\gamma) = \frac{1}{2} \int_a^b \lVert \dot\gamma(t)\rVert_g^2 \mathop{dt} = \frac{1}{2}\int_a^b \langle \dot\gamma(t), \dot\gamma(t)\rangle_g \mathop{dt}$$
+$$E(\gamma) = \frac{1}{2} \int_a^b \lVert \dot\gamma(t)\rVert_g^2 \dd{t} = \frac{1}{2}\int_a^b \langle \dot\gamma(t), \dot\gamma(t)\rangle_g \dd{t}$$
 
 으로 정의된다.
 :::
@@ -39,9 +39,9 @@ $$\length(\gamma)^2 \le 2(b - a)\, E(\gamma)$$
 :::
 
 ::: 증명
-$L^2([a, b])$의 두 함수 $f(t) = \lVert \dot\gamma(t)\rVert_g$와 $h(t) \equiv 1$에 Cauchy-Schwarz 부등식 $\left(\int_a^b f h \mathop{dt}\right)^2 \le \int_a^b f^2 \mathop{dt} \int_a^b h^2 \mathop{dt}$을 적용하면
+$L^2([a, b])$의 두 함수 $f(t) = \lVert \dot\gamma(t)\rVert_g$와 $h(t) \equiv 1$에 Cauchy-Schwarz 부등식 $\left(\int_a^b f h \dd{t}\right)^2 \le \int_a^b f^2 \dd{t} \int_a^b h^2 \dd{t}$을 적용하면
 
-$$\length(\gamma)^2 = \left(\int_a^b \lVert \dot\gamma(t)\rVert_g \mathop{dt}\right)^2 \le \left(\int_a^b \lVert \dot\gamma(t)\rVert_g^2 \mathop{dt}\right)\left(\int_a^b 1 \mathop{dt}\right) = 2(b - a)\, E(\gamma)$$
+$$\length(\gamma)^2 = \left(\int_a^b \lVert \dot\gamma(t)\rVert_g \dd{t}\right)^2 \le \left(\int_a^b \lVert \dot\gamma(t)\rVert_g^2 \dd{t}\right)\left(\int_a^b 1 \dd{t}\right) = 2(b - a)\, E(\gamma)$$
 
 를 얻는다. Cauchy-Schwarz 부등식의 등호 조건은 $f$와 $h$가 일차종속, 즉 $f$가 상수배 $h$인 것이므로, 여기서는 $\lVert \dot\gamma(t)\rVert_g$가 상수인 것과 동치이다.
 :::
@@ -65,35 +65,35 @@ $$D_s \partial_t \Gamma = D_t \partial_s \Gamma$$
 ::: 정리 3 (에너지의 제1변분)
 곡선 $\gamma : [a, b] \rightarrow M$의 변분 $\Gamma$와 그 변분장 $V$에 대해, $E(s) := E(\gamma_s)$라 두면 다음의 식
 
-$$\left.\frac{d}{ds}\right\vert_{s = 0} E(\gamma_s) = \langle V(b), \dot\gamma(b)\rangle - \langle V(a), \dot\gamma(a)\rangle - \int_a^b \langle V(t),\, D_t \dot\gamma(t)\rangle \mathop{dt}$$
+$$\left.\frac{d}{\dd{s}}\right\vert_{s = 0} E(\gamma_s) = \langle V(b), \dot\gamma(b)\rangle - \langle V(a), \dot\gamma(a)\rangle - \int_a^b \langle V(t),\, D_t \dot\gamma(t)\rangle \dd{t}$$
 
 이 성립한다. 특히 $\Gamma$가 고정변분이면 우변의 경계항이 소멸하여
 
-$$\left.\frac{d}{ds}\right\vert_{s = 0} E(\gamma_s) = -\int_a^b \langle V(t),\, D_t \dot\gamma(t)\rangle \mathop{dt}$$
+$$\left.\frac{d}{\dd{s}}\right\vert_{s = 0} E(\gamma_s) = -\int_a^b \langle V(t),\, D_t \dot\gamma(t)\rangle \dd{t}$$
 
 이다.
 :::
 
 ::: 증명
-$E(\gamma_s) = \frac{1}{2}\int_a^b \langle \partial_t \Gamma, \partial_t \Gamma\rangle \mathop{dt}$이므로 적분기호 안에서 $s$에 대해 미분하면, $\nabla$가 metric과 compatible, 즉 [§레비-치비타 접속, ⁋정의 1](/ko/math/riemannian_geometry/Levi-Civita_connection#def1)의 식이 곡선을 따른 미분 $D_s$에 대해서도 성립하므로
+$E(\gamma_s) = \frac{1}{2}\int_a^b \langle \partial_t \Gamma, \partial_t \Gamma\rangle \dd{t}$이므로 적분기호 안에서 $s$에 대해 미분하면, $\nabla$가 metric과 compatible, 즉 [§레비-치비타 접속, ⁋정의 1](/ko/math/riemannian_geometry/Levi-Civita_connection#def1)의 식이 곡선을 따른 미분 $D_s$에 대해서도 성립하므로
 
-$$\frac{d}{ds} E(\gamma_s) = \frac{1}{2}\int_a^b \partial_s \langle \partial_t \Gamma, \partial_t \Gamma\rangle \mathop{dt} = \int_a^b \langle D_s \partial_t \Gamma,\, \partial_t \Gamma\rangle \mathop{dt}$$
+$$\frac{d}{\dd{s}} E(\gamma_s) = \frac{1}{2}\int_a^b \partial_s \langle \partial_t \Gamma, \partial_t \Gamma\rangle \dd{t} = \int_a^b \langle D_s \partial_t \Gamma,\, \partial_t \Gamma\rangle \dd{t}$$
 
 을 얻는다. 여기에 대칭 보조정리 $D_s \partial_t \Gamma = D_t \partial_s \Gamma$를 대입하면
 
-$$\frac{d}{ds} E(\gamma_s) = \int_a^b \langle D_t \partial_s \Gamma,\, \partial_t \Gamma\rangle \mathop{dt}$$
+$$\frac{d}{\dd{s}} E(\gamma_s) = \int_a^b \langle D_t \partial_s \Gamma,\, \partial_t \Gamma\rangle \dd{t}$$
 
 이 된다. 한편 metric-compatibility로부터 다음의 곱미분
 
-$$\frac{d}{dt}\langle \partial_s \Gamma,\, \partial_t \Gamma\rangle = \langle D_t \partial_s \Gamma,\, \partial_t \Gamma\rangle + \langle \partial_s \Gamma,\, D_t \partial_t \Gamma\rangle$$
+$$\frac{d}{\dd{t}}\langle \partial_s \Gamma,\, \partial_t \Gamma\rangle = \langle D_t \partial_s \Gamma,\, \partial_t \Gamma\rangle + \langle \partial_s \Gamma,\, D_t \partial_t \Gamma\rangle$$
 
 이 성립하므로, 이를 위 적분에 대입하고 미적분학의 기본정리를 적용하면
 
-$$\frac{d}{ds} E(\gamma_s) = \int_a^b \frac{d}{dt}\langle \partial_s \Gamma,\, \partial_t \Gamma\rangle \mathop{dt} - \int_a^b \langle \partial_s \Gamma,\, D_t \partial_t \Gamma\rangle \mathop{dt} = \Bigl[\langle \partial_s \Gamma,\, \partial_t \Gamma\rangle\Bigr]_a^b - \int_a^b \langle \partial_s \Gamma,\, D_t \partial_t \Gamma\rangle \mathop{dt}$$
+$$\frac{d}{\dd{s}} E(\gamma_s) = \int_a^b \frac{d}{\dd{t}}\langle \partial_s \Gamma,\, \partial_t \Gamma\rangle \dd{t} - \int_a^b \langle \partial_s \Gamma,\, D_t \partial_t \Gamma\rangle \dd{t} = \Bigl[\langle \partial_s \Gamma,\, \partial_t \Gamma\rangle\Bigr]_a^b - \int_a^b \langle \partial_s \Gamma,\, D_t \partial_t \Gamma\rangle \dd{t}$$
 
 가 된다. 이제 $s = 0$에서 평가하면 $\partial_s \Gamma\vert_{s = 0} = V$, $\partial_t \Gamma\vert_{s = 0} = \dot\gamma$, $D_t \partial_t \Gamma\vert_{s = 0} = D_t \dot\gamma$이므로
 
-$$\left.\frac{d}{ds}\right\vert_{s = 0} E(\gamma_s) = \langle V(b), \dot\gamma(b)\rangle - \langle V(a), \dot\gamma(a)\rangle - \int_a^b \langle V,\, D_t \dot\gamma\rangle \mathop{dt}$$
+$$\left.\frac{d}{\dd{s}}\right\vert_{s = 0} E(\gamma_s) = \langle V(b), \dot\gamma(b)\rangle - \langle V(a), \dot\gamma(a)\rangle - \int_a^b \langle V,\, D_t \dot\gamma\rangle \dd{t}$$
 
 을 얻는다. 고정변분의 경우 $V(a) = V(b) = 0$이므로 경계항이 소멸한다.
 :::
@@ -121,15 +121,15 @@ $$\ddot\gamma^k(t) + \sum_{i, j = 1}^n \Gamma_{ij}^k(\gamma(t))\, \dot\gamma^i(t
 먼저 측지선이 [정리 3](#thm3)이 예고한 대로 정확히 에너지의 임계 곡선임을 확인한다.
 
 ::: 따름정리 5
-곡선 $\gamma : [a, b] \rightarrow M$이 측지선인 것과, 끝점을 고정하는 모든 고정변분 $\Gamma$에 대해 $\left.\frac{d}{ds}\right\vert_{s = 0} E(\gamma_s) = 0$이 성립하는 것은 동치이다.
+곡선 $\gamma : [a, b] \rightarrow M$이 측지선인 것과, 끝점을 고정하는 모든 고정변분 $\Gamma$에 대해 $\left.\frac{d}{\dd{s}}\right\vert_{s = 0} E(\gamma_s) = 0$이 성립하는 것은 동치이다.
 :::
 
 ::: 증명
 $\gamma$가 측지선이면 $D_t \dot\gamma = 0$이므로 [정리 3](#thm3)의 고정변분 공식 우변의 피적분함수가 항등적으로 $0$이 되어 모든 고정변분에 대해 제1변분이 소멸한다.
 
-역으로 모든 고정변분에 대해 제1변분이 소멸한다 하자. [정리 3](#thm3)에 의해 모든 고정변분장 $V$에 대해 $\int_a^b \langle V, D_t \dot\gamma\rangle \mathop{dt} = 0$이다. $D_t \dot\gamma$가 어떤 점 $t_0 \in (a, b)$에서 $0$이 아니라고 가정하자. $\varphi : [a, b] \rightarrow [0, \infty)$를 $\varphi(t_0) > 0$이고 $\varphi(a) = \varphi(b) = 0$이며 $t_0$의 작은 근방 밖에서 $0$인 bump function이라 하면, $V(t) := \varphi(t)\, D_t \dot\gamma(t)$는 $V(a) = V(b) = 0$을 만족하는 곡선 $\gamma$ 위의 vector field이며 어떤 고정변분의 변분장으로 실현된다. 이때
+역으로 모든 고정변분에 대해 제1변분이 소멸한다 하자. [정리 3](#thm3)에 의해 모든 고정변분장 $V$에 대해 $\int_a^b \langle V, D_t \dot\gamma\rangle \dd{t} = 0$이다. $D_t \dot\gamma$가 어떤 점 $t_0 \in (a, b)$에서 $0$이 아니라고 가정하자. $\varphi : [a, b] \rightarrow [0, \infty)$를 $\varphi(t_0) > 0$이고 $\varphi(a) = \varphi(b) = 0$이며 $t_0$의 작은 근방 밖에서 $0$인 bump function이라 하면, $V(t) := \varphi(t)\, D_t \dot\gamma(t)$는 $V(a) = V(b) = 0$을 만족하는 곡선 $\gamma$ 위의 vector field이며 어떤 고정변분의 변분장으로 실현된다. 이때
 
-$$\int_a^b \langle V, D_t \dot\gamma\rangle \mathop{dt} = \int_a^b \varphi(t)\, \lVert D_t \dot\gamma(t)\rVert_g^2 \mathop{dt} > 0$$
+$$\int_a^b \langle V, D_t \dot\gamma\rangle \dd{t} = \int_a^b \varphi(t)\, \lVert D_t \dot\gamma(t)\rVert_g^2 \dd{t} > 0$$
 
 이 되어 가정에 모순이다. 따라서 $D_t \dot\gamma \equiv 0$, 즉 $\gamma$는 측지선이다.
 :::
@@ -145,7 +145,7 @@ $$\int_a^b \langle V, D_t \dot\gamma\rangle \mathop{dt} = \int_a^b \varphi(t)\, 
 ::: 증명
 $f(t) := \langle \dot\gamma(t), \dot\gamma(t)\rangle$라 두자. Metric-compatibility로부터
 
-$$\frac{d}{dt} f(t) = \frac{d}{dt}\langle \dot\gamma, \dot\gamma\rangle = 2\langle D_t \dot\gamma,\, \dot\gamma\rangle$$
+$$\frac{d}{\dd{t}} f(t) = \frac{d}{\dd{t}}\langle \dot\gamma, \dot\gamma\rangle = 2\langle D_t \dot\gamma,\, \dot\gamma\rangle$$
 
 이고, $\gamma$가 측지선이므로 $D_t \dot\gamma = 0$이다. 따라서 $f$의 미분이 항등적으로 $0$이 되어 $\lVert \dot\gamma\rVert_g = \sqrt{f}$는 상수이다.
 :::

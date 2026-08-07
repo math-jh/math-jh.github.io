@@ -45,7 +45,7 @@ $$\begin{aligned}
 
 전역으로의 extension이 핵심인데, 비선형의 경우와 달리 립시츠 상수가 해의 크기 $\lvert y\rvert$에 전혀 의존하지 않는다는 점이 결정적이다. 실제로 해가 존재하는 구간에서 $\lvert y(t)\rvert$의 성장은
 
-$$\frac{d}{dt}\lvert y\rvert \leq \lvert y'\rvert = \lvert A(t)y + b(t)\rvert \leq \lVert A(t)\rVert \lvert y\rvert + \lvert b(t)\rvert$$
+$$\frac{d}{\dd{t}}\lvert y\rvert \leq \lvert y'\rvert = \lvert A(t)y + b(t)\rvert \leq \lVert A(t)\rVert \lvert y\rvert + \lvert b(t)\rvert$$
 
 로 통제되고, 그뢴발 부등식을 적용하면 $\lvert y(t)\rvert$이 컴팩트 부분구간에서 bounded로 머문다. 따라서 해가 구간의 끝점으로 다가가도 발산하지 않으므로 $I$ 전체로 연장된다.
 :::
@@ -78,7 +78,7 @@ $$e^{A + B} = e^A e^B$$
 
 행렬지수를 멱급수로 항별 미분하면
 
-$$\frac{d}{dt}e^{tA} = \frac{d}{dt}\sum_{k=0}^\infty \frac{t^k A^k}{k!} = \sum_{k=1}^\infty \frac{t^{k-1}A^k}{(k-1)!} = A\sum_{j=0}^\infty \frac{t^j A^j}{j!} = A e^{tA}$$
+$$\frac{d}{\dd{t}}e^{tA} = \frac{d}{\dd{t}}\sum_{k=0}^\infty \frac{t^k A^k}{k!} = \sum_{k=1}^\infty \frac{t^{k-1}A^k}{(k-1)!} = A\sum_{j=0}^\infty \frac{t^j A^j}{j!} = A e^{tA}$$
 
 이므로 (항별 미분의 정당성은 멱급수의 균등수렴에서 나온다) 다음을 얻는다.
 
@@ -95,9 +95,9 @@ $y(t) = e^{tA}y_0$이 해가 됨을 직접 확인한다. 초기 조건은
 
 $$y(0) = e^{0\cdot A} y_0 = I y_0 = y_0$$
 
-으로 성립하고, 앞서 구한 미분 공식 $(d/dt)e^{tA} = A e^{tA}$를 쓰면
+으로 성립하고, 앞서 구한 미분 공식 $(d/\dd{t})e^{tA} = A e^{tA}$를 쓰면
 
-$$y'(t) = \frac{d}{dt}\bigl(e^{tA}y_0\bigr) = A e^{tA}y_0 = A y(t)$$
+$$y'(t) = \frac{d}{\dd{t}}\bigl(e^{tA}y_0\bigr) = A e^{tA}y_0 = A y(t)$$
 
 이므로 $y' = Ay$를 만족한다. 따라서 $y(t) = e^{tA}y_0$은 해이며, 상수계수계도 [정리 2](#thm2)의 가정($A(t) \equiv A$가 연속, $b \equiv 0$)을 충족하므로 그 유일성에 의해 이것이 유일한 해이다.
 :::
@@ -173,7 +173,7 @@ e^{tA} &= e^{t\lambda I} e^{tN} = e^{\lambda t}I\cdot\bigl(I + tN\bigr) \\
 ::: 명제 8 (매개변수변환 공식)
 상수계수 비제차계 $y' = Ay + b(t)$, $y(t_0) = y_0$의 유일한 해는
 
-$$y(t) = e^{(t - t_0)A} y_0 + \int_{t_0}^{t} e^{(t - s)A} b(s) ds$$
+$$y(t) = e^{(t - t_0)A} y_0 + \int_{t_0}^{t} e^{(t - s)A} b(s) \dd{s}$$
 
 이다.
 :::
@@ -182,17 +182,17 @@ $$y(t) = e^{(t - t_0)A} y_0 + \int_{t_0}^{t} e^{(t - s)A} b(s) ds$$
 핵심 착상은 *적분인자* $e^{-tA}$를 곱하는 것이다. $y' - Ay = b(t)$의 양변에 $e^{-tA}$를 왼쪽에서 곱하면, 좌변이 완전미분이 됨을 확인할 수 있다:
 
 $$\begin{aligned}
-\frac{d}{dt}\bigl(e^{-tA}y\bigr) &= -A e^{-tA}y + e^{-tA}y' = e^{-tA}\bigl(y' - Ay\bigr) = e^{-tA}b(t).
+\frac{d}{\dd{t}}\bigl(e^{-tA}y\bigr) &= -A e^{-tA}y + e^{-tA}y' = e^{-tA}\bigl(y' - Ay\bigr) = e^{-tA}b(t).
 \end{aligned}$$
 
-여기서 $(d/dt)e^{-tA} = -A e^{-tA}$를 썼다. 이제 양변을 $t_0$에서 $t$까지 적분하면
+여기서 $(d/\dd{t})e^{-tA} = -A e^{-tA}$를 썼다. 이제 양변을 $t_0$에서 $t$까지 적분하면
 
-$$e^{-tA}y(t) - e^{-t_0 A}y_0 = \int_{t_0}^t e^{-sA}b(s) ds$$
+$$e^{-tA}y(t) - e^{-t_0 A}y_0 = \int_{t_0}^t e^{-sA}b(s) \dd{s}$$
 
 이고, 양변에 왼쪽에서 $e^{tA}$를 곱한 뒤 $e^{tA}e^{-t_0 A} = e^{(t-t_0)A}$, $e^{tA}e^{-sA} = e^{(t-s)A}$ ($tA$와 $-sA$가 교환하므로) 를 쓰면 주어진 공식을 얻는다.
 :::
 
-우변의 첫 항 $e^{(t-t_0)A}y_0$은 제차해(초기조건을 나르는 부분)이고, 적분항은 강제항 $b(s)$가 $s$ 시점부터 $t$까지 행렬지수로 전파되어 누적된 *특수해*이다. 이는 스칼라 일차방정식 $y' = ay + b(t)$의 적분인자 풀이를 행렬로 그대로 들어올린 것이다. 강제항이 제차해와 같은 지수율을 가질 때, 가령 $y' = -y + e^{-t}$에서 적분 $\int_0^t e^{-(t-s)}e^{-s} ds = t e^{-t}$가 보이듯, 해에 다항식 인자가 곱해진 *공명* 항 $t e^{-t}$이 생기는 것도 이 공식이 직접 설명한다.
+우변의 첫 항 $e^{(t-t_0)A}y_0$은 제차해(초기조건을 나르는 부분)이고, 적분항은 강제항 $b(s)$가 $s$ 시점부터 $t$까지 행렬지수로 전파되어 누적된 *특수해*이다. 이는 스칼라 일차방정식 $y' = ay + b(t)$의 적분인자 풀이를 행렬로 그대로 들어올린 것이다. 강제항이 제차해와 같은 지수율을 가질 때, 가령 $y' = -y + e^{-t}$에서 적분 $\int_0^t e^{-(t-s)}e^{-s} \dd{s} = t e^{-t}$가 보이듯, 해에 다항식 인자가 곱해진 *공명* 항 $t e^{-t}$이 생기는 것도 이 공식이 직접 설명한다.
 
 마지막으로, 고윳값의 실수부가 해의 장기거동을 어떻게 지배하는지를 정리해 둔다.
 

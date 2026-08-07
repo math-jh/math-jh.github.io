@@ -47,11 +47,11 @@ $$T_x X = (\mathfrak{m}_x / \mathfrak{m}_x^2)^\ast$$
 ::: 명제 2
 Affine variety $X = Z(f_1, \ldots, f_k) \subseteq \mathbb{A}^n$의 점 $x = (x_1, \ldots, x_n)$에서,
 
-$$T_x X \cong \{v \in \mathbb{K}^n \mid (df_i)_x(v) = 0 \text{ for all } i\}$$
+$$T_x X \cong \{v \in \mathbb{K}^n \mid (\dd{f_i})_x(v) = 0 \text{ for all } i\}$$
 
-이다. 여기서 $(df_i)_x$는 $f_i$의 $x$에서의 differential로,
+이다. 여기서 $(\dd{f_i})_x$는 $f_i$의 $x$에서의 differential로,
 
-$$(df_i)_x(v) = \sum_{j=1}^n \frac{\partial f_i}{\partial \x_j}(x) v_j$$
+$$(\dd{f_i})_x(v) = \sum_{j=1}^n \frac{\partial f_i}{\partial \x_j}(x) v_j$$
 
 이다.
 :::
@@ -67,14 +67,14 @@ $$f_i = \sum_{j=1}^n \frac{\partial f_i}{\partial \x_j}(x) (\x_j - a_j) + \text{
 
 이고, higher order terms는 $(\x_1 - a_1, \x_2 - a_2, \ldots, \x_n - a_n)^2$에 속한다. 따라서 $\mathfrak{m}_x / \mathfrak{m}_x^2$에서 $f_i$들의 linear part $\sum_j \frac{\partial f_i}{\partial \x_j}(x) (\x_j - a_j)$가 0이 된다.
 
-한편, $\mathfrak{m}_x / \mathfrak{m}_x^2$는 $\x_j - a_j$들의 linear combination으로 생성되므로 $\mathbb{K}^n$의 quotient로 볼 수 있다. 이때 differential $(df_i)_x$의 kernel이 정확히 $\mathfrak{m}_x / \mathfrak{m}_x^2$에서 사라지는 방향들에 해당한다. Dual을 취하면
+한편, $\mathfrak{m}_x / \mathfrak{m}_x^2$는 $\x_j - a_j$들의 linear combination으로 생성되므로 $\mathbb{K}^n$의 quotient로 볼 수 있다. 이때 differential $(\dd{f_i})_x$의 kernel이 정확히 $\mathfrak{m}_x / \mathfrak{m}_x^2$에서 사라지는 방향들에 해당한다. Dual을 취하면
 
-$$T_x X = (\mathfrak{m}_x / \mathfrak{m}_x^2)^\ast \cong \{v \in \mathbb{K}^n \mid (df_i)_x(v) = 0 \text{ for all } i\}$$
+$$T_x X = (\mathfrak{m}_x / \mathfrak{m}_x^2)^\ast \cong \{v \in \mathbb{K}^n \mid (\dd{f_i})_x(v) = 0 \text{ for all } i\}$$
 
 을 얻는다.
 :::
 
-증명은 maximal ideal의 언어를 사용하며 복잡하게 쓰여졌지만, 그 철학은 $X=Z(f_i)$에 대해 생각해보면 간단하다. 이 경우 $(df_i)_x(v)=0$은 ($\mathbb{K}^n$을 $\mathbb{A}^n$으로 본다면) 정확히 $\mathbb{A}^n$ 안에서 hypersurface $Z(f_i)$의 (일상적인) tangent space이다. [명제 2](#prop2)은 그 자체만으로는 affine variety에 대해서만 적용되는 것이기는 하지만, 임의의 variety $X$의 임의의 점 $x$는 affine neighborhood를 가지므로 본질적으로는 모든 variety에 대해 적용되는 것이다. Tangent space의 차원에 대한 다음 명제 또한 마찬가지다.
+증명은 maximal ideal의 언어를 사용하며 복잡하게 쓰여졌지만, 그 철학은 $X=Z(f_i)$에 대해 생각해보면 간단하다. 이 경우 $(\dd{f_i})_x(v)=0$은 ($\mathbb{K}^n$을 $\mathbb{A}^n$으로 본다면) 정확히 $\mathbb{A}^n$ 안에서 hypersurface $Z(f_i)$의 (일상적인) tangent space이다. [명제 2](#prop2)은 그 자체만으로는 affine variety에 대해서만 적용되는 것이기는 하지만, 임의의 variety $X$의 임의의 점 $x$는 affine neighborhood를 가지므로 본질적으로는 모든 variety에 대해 적용되는 것이다. Tangent space의 차원에 대한 다음 명제 또한 마찬가지다.
 
 ::: 명제 3
 $T_x X$는 $\mathbb{K}$-벡터공간이며, 그 차원은 $n - \rank(J_x)$이다. 여기서 $J_x$는 $k \times n$ Jacobian matrix
@@ -84,7 +84,7 @@ $$J_x = \left(\frac{\partial f_i}{\partial \x_j}(x)\right)_{1 \le i \le k, 1 \le
 이다.
 :::
 ::: 증명
-각 $(df_i)_x: \mathbb{K}^n \rightarrow \mathbb{K}$는 linear functional이다. [명제 2](#prop2)에서 $T_x X$는 이들의 kernel들의 교집합이므로 $\mathbb{K}^n$의 부분공간이다. Jacobian matrix $J_x$의 행들은 이 linear functional들의 좌표표현이므로,
+각 $(\dd{f_i})_x: \mathbb{K}^n \rightarrow \mathbb{K}$는 linear functional이다. [명제 2](#prop2)에서 $T_x X$는 이들의 kernel들의 교집합이므로 $\mathbb{K}^n$의 부분공간이다. Jacobian matrix $J_x$의 행들은 이 linear functional들의 좌표표현이므로,
 
 $$T_x X = \ker(J_x) = \{v \in \mathbb{K}^n \mid J_x v = 0\}$$
 

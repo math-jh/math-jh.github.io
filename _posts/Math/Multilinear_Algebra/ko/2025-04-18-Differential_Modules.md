@@ -100,7 +100,7 @@ $$(b, t)(b', t') = (bb', bt' + b't)$$
 
 $$h_1(ax) = h_0(a) h_1(x)$$
 
-이 성립하므로, $h_1$은 $M$에서 $B\oplus E$로의 $A$-linear map이다. 따라서 우리는 주어진 가정들을 사용하여, $\T(M)$, $\S(M)$ 혹은 $\bigwedge(M)$의 universal property를 사용하여 $h\vert_M=h_1$을 만족하는 유일한 $A$-algebra homomorphism $h:B \rightarrow B\oplus E$를 얻는다. 한편, $h$를 augmentation map $B\oplus E \rightarrow B$와 합성하면 $\id_B$가 되는 것을 쉽게 확인할 수 있으므로, 다시 [명제 3](#prop3)에 의해 $h(b)=(b,d(b))$이도록 하는 유일한 $\varepsilon$-derivation $d:B \rightarrow E$가 존재하고 이로부터 원하는 결과를 얻는다. 
+이 성립하므로, $h_1$은 $M$에서 $B\oplus E$로의 $A$-linear map이다. 따라서 우리는 주어진 가정들을 사용하여, $\T(M)$, $\S(M)$ 혹은 $\bigwedge(M)$의 universal property를 사용하여 $h\vert_M=h_1$을 만족하는 유일한 $A$-algebra homomorphism $h:B \rightarrow B\oplus E$를 얻는다. 한편, $h$를 augmentation map $B\oplus E \rightarrow B$와 합성하면 $\id_B$가 되는 것을 쉽게 확인할 수 있으므로, 다시 [명제 3](#prop3)에 의해 $h(b)=(b,\dd{(b)})$이도록 하는 유일한 $\varepsilon$-derivation $d:B \rightarrow E$가 존재하고 이로부터 원하는 결과를 얻는다. 
 :::
 
 ## Universal property
@@ -140,13 +140,13 @@ $$\sum_i x_i\otimes y_i=\sum_i \left(x_i(1\otimes y_i)-(x_iy_i)\otimes 1\right)=
 
 한편, 유일성의 경우 $\delta_E$의 정의로부터
 
-$$f(x \otimes 1 - 1 \otimes x) = dx$$
+$$f(x \otimes 1 - 1 \otimes x) = \dd{x}$$
 
 여야 함을 알고 있고, [보조정리 6](#lem6)에 의하여 $\mathfrak{I}$는 $\delta_E$의 image에 의하여 유일하게 생성되므로 주어진 조건을 만족하는 $f$는 존재한다면 유일해야 한다. 추가적으로 앞선 보조정리에서의 계산을 활용하면 임의의 $\sum x_i \otimes y_i\in \mathfrak{I}$에 대하여 다음의 식
 
-$$f\left( \sum_i x_i \otimes y_i \right) = \sum_i x_i  f(1 \otimes y_i - y_i \otimes 1) = - \sum_i x_i  dy_i$$
+$$f\left( \sum_i x_i \otimes y_i \right) = \sum_i x_i  f(1 \otimes y_i - y_i \otimes 1) = - \sum_i x_i  \dd{y_i}$$
 
-이 반드시 성립해야 하는 것을 안다. 따라서 존재성을 보이기 위해서는 이것이 $(E,E)$-bimodule homomorphism인 것을 보여야 한다. 이를 위해서는 우선 mapping $(x, y) \mapsto -x \cdot dy$는 $E$에서 $M$으로 가는 $A$-bilinear mapping이므로, 이로부터 $A$-bilinear map $g: E \otimes E \rightarrow M$을 $g(x \otimes y) = -x \cdot dy$이 정의되는 것을 안다. 그럼 이를 $\mathfrak{I}$로 제한한 것이 $f$와 같고, 이제 이 $g$의 restriction이 $f$이고 이것이 $E$-bimodule 구조를 보존하는 것만 보이면 충분하고, 이는 단순한 계산이다. 
+이 반드시 성립해야 하는 것을 안다. 따라서 존재성을 보이기 위해서는 이것이 $(E,E)$-bimodule homomorphism인 것을 보여야 한다. 이를 위해서는 우선 mapping $(x, y) \mapsto -x \cdot \dd{y}$는 $E$에서 $M$으로 가는 $A$-bilinear mapping이므로, 이로부터 $A$-bilinear map $g: E \otimes E \rightarrow M$을 $g(x \otimes y) = -x \cdot \dd{y}$이 정의되는 것을 안다. 그럼 이를 $\mathfrak{I}$로 제한한 것이 $f$와 같고, 이제 이 $g$의 restriction이 $f$이고 이것이 $E$-bimodule 구조를 보존하는 것만 보이면 충분하고, 이는 단순한 계산이다. 
 :::
 
 위의 명제에 의하여 우리는 canonical $A$-module isomorphism 
@@ -212,7 +212,7 @@ $$x\mapsto (x\otimes 1-1\otimes x)+\mathfrak{I}^2$$
 :::
 
 ::: 정의 9
-$E$-module $\mathfrak{I}/\mathfrak{I}^2$는 *$A$-differential*들의  ($E$-)module이라 부르고 이를, $\Omega_{A}(E)$ 혹은 $\Omega_{E/A}$로 표기한다. 또, $\delta_{E/A}(x)$를 $d_{E/A}(x)$라 적으며, 혼동의 여지가 없으면 이를 간단히 $dx$라 적기도 한다. 각 $x \in E$에 대해 $d_{E/A}(x)$를 $x$의 *differential*이라 한다.
+$E$-module $\mathfrak{I}/\mathfrak{I}^2$는 *$A$-differential*들의  ($E$-)module이라 부르고 이를, $\Omega_{A}(E)$ 혹은 $\Omega_{E/A}$로 표기한다. 또, $\delta_{E/A}(x)$를 $d_{E/A}(x)$라 적으며, 혼동의 여지가 없으면 이를 간단히 $\dd{x}$라 적기도 한다. 각 $x \in E$에 대해 $d_{E/A}(x)$를 $x$의 *differential*이라 한다.
 :::
 
 따라서, 우리는 다음의 canonical isomorphism
@@ -242,9 +242,9 @@ $$M\rightarrow M\otimes_A\S(M);\qquad x\mapsto x\otimes1$$
 
 $$\Omega_{\S(M)/A}\cong M\otimes_A\S(M)$$
 
-이 성립함을 알고, 뿐만 아니라 이 isomorphism을 $\omega:M\otimes_A\S(M)\rightarrow\Omega_{\S(M)/A}$이라 적는다면 임의의 $x\in M$에 대하여 $\omega(x\otimes1)=d_{\S(M)/A}(x)=dx$임을 안다. 
+이 성립함을 알고, 뿐만 아니라 이 isomorphism을 $\omega:M\otimes_A\S(M)\rightarrow\Omega_{\S(M)/A}$이라 적는다면 임의의 $x\in M$에 대하여 $\omega(x\otimes1)=d_{\S(M)/A}(x)=\dd{x}$임을 안다. 
 
-특히, 만일 $M$이 free $A$-module of finite rank $n$이라면, $\S(M)$은 polynomial algebra $A[\x_1,\ldots, \x_n]$과 identify할 수 있으며 이 identification 하에서 $d\x_i$들은 <em-ko>정말로</em-ko> $\x_i$의 $d=d_{\S(M)/A}$에 의한 image이며, 다항식 $p\in A[\x_1,\ldots, \x_n]$의 $d$에 의한 image를 $\Omega_{\S(M)/A}$의 basis $d\x_i$들의 linear combination으로 나타낸다면 그 앞에 붙는 계수들이 정확히 $p$의 $i$번째 편미분 $\partial p/\partial \x_i$이 된다. 
+특히, 만일 $M$이 free $A$-module of finite rank $n$이라면, $\S(M)$은 polynomial algebra $A[\x_1,\ldots, \x_n]$과 identify할 수 있으며 이 identification 하에서 $\dd{\x_i}$들은 <em-ko>정말로</em-ko> $\x_i$의 $d=d_{\S(M)/A}$에 의한 image이며, 다항식 $p\in A[\x_1,\ldots, \x_n]$의 $d$에 의한 image를 $\Omega_{\S(M)/A}$의 basis $\dd{\x_i}$들의 linear combination으로 나타낸다면 그 앞에 붙는 계수들이 정확히 $p$의 $i$번째 편미분 $\partial p/\partial \x_i$이 된다. 
 :::
 
 이제 $\Omega_{E/A}$의 성질들을 보이자. 앞으로 모든 ring은 commutative이고, 모든 algebra도 associative, commutative, unital algebra이며 algebra homomorphism도 unital이다. 
@@ -364,7 +364,7 @@ $$\mathfrak{I}\overset{d\vert_{\mathfrak{I}}}{\longrightarrow}\Omega_{E/A}\overs
 
 을 $d'$라 하면, 임의의 $x,y\in \mathfrak{I}$에 대하여
 
-$$d'(xy)=d(xy)\otimes1=dy\otimes u(x)+dx\otimes u(y)=0$$
+$$d'(xy)=\dd{(xy)}\otimes1=\dd{y}\otimes u(x)+\dd{x}\otimes u(y)=0$$
 
 이므로 다음의 $E$-linear map
 
@@ -380,7 +380,7 @@ $$\mathfrak{I}/\mathfrak{I}^2\overset{\overline{d}}{\longrightarrow}\Omega_{E/A}
 이 exact이다. 
 :::
 ::: 증명
-앞선 논증의 표기에서, 우리는 $\Omega_{E/A}\otimes_EE'$를 $\Omega_{E/A}/\mathfrak{I}\Omega_{E/A}$와 identify할 수 있다. 그럼 이 identification 하에서, $\overline{d}$의 image는 $d(\mathfrak{I})\subseteq\Omega_{E/A}$의 quotient module $\Omega_{E/A}/\mathfrak{I}\Omega_{E/A}$에서의 image가 된다. 따라서, $\Omega_{E/A}$의 $A$-submodule $I$를 $\mathfrak{I}\Omega_{E/A}$와 $d(\mathfrak{I})$에 의해 생성되는 것으로 잡으면 다음의 isomorphism
+앞선 논증의 표기에서, 우리는 $\Omega_{E/A}\otimes_EE'$를 $\Omega_{E/A}/\mathfrak{I}\Omega_{E/A}$와 identify할 수 있다. 그럼 이 identification 하에서, $\overline{d}$의 image는 $\dd{(\mathfrak{I})}\subseteq\Omega_{E/A}$의 quotient module $\Omega_{E/A}/\mathfrak{I}\Omega_{E/A}$에서의 image가 된다. 따라서, $\Omega_{E/A}$의 $A$-submodule $I$를 $\mathfrak{I}\Omega_{E/A}$와 $\dd{(\mathfrak{I})}$에 의해 생성되는 것으로 잡으면 다음의 isomorphism
 
 $$\frac{\Omega_{E/A}\otimes_EE'}{\im(\overline{d})}\cong\frac{\Omega_{E/A}}{I}$$
 

@@ -61,10 +61,10 @@ $$
 가 따라온다. 첫 식에서 $\theta = \dfrac{\partial\, h(e,e)}{h(e,e)} = \partial\log h(e,e)$로 $\theta$가 유일하게 결정되고, 둘째 식은 그 켤레로 자동으로 성립한다. $h(e,e) = e^{-\varphi}$이면 $\theta = \partial(-\varphi) = -\partial\varphi$이다. 역으로 이렇게 정의한 $\theta$가 두 조건을 모두 만족함은 위 계산을 거꾸로 읽으면 된다. Frame을 $e' = u e$로 바꾸면 $\theta' = \partial\log(\lvert u\rvert^2 h(e,e)) = \theta + \partial\log u$로 변환하는데, 이는 정확히 connection 형식의 게이지 변환 법칙이므로 국소 정의들이 하나의 대역적 connection $\nabla$로 이어붙는다.
 :::
 
-Chern connection의 곡률은 connection 형식의 exterior derivative로 주어지며, line bundle이므로 그 값은 행렬이 아니라 스칼라값 $2$-형식이 된다. 곡률 $\Theta = d\theta$를 계산하면, $\theta = -\partial\varphi$이므로
+Chern connection의 곡률은 connection 형식의 exterior derivative로 주어지며, line bundle이므로 그 값은 행렬이 아니라 스칼라값 $2$-형식이 된다. 곡률 $\Theta = \dd{\theta}$를 계산하면, $\theta = -\partial\varphi$이므로
 
 $$
-\Theta = d(-\partial\varphi) = -(\partial + \bar\partial)\partial\varphi = -\bar\partial\partial\varphi = \partial\bar\partial\varphi
+\Theta = \dd{(-\partial\varphi)} = -(\partial + \bar\partial)\partial\varphi = -\bar\partial\partial\varphi = \partial\bar\partial\varphi
 $$
 
 이다 ($\partial^2 = 0$, $\bar\partial\partial = -\partial\bar\partial$를 사용). 곧 곡률은 potential의 $\partial\bar\partial$로, 정확히 앞서 관찰한 틀-불변 형식이다. 다음 정의에서 이를 대역적 곡률 형식으로 정식화한다.
@@ -85,7 +85,7 @@ $$
 로 정의한다.
 :::
 
-곡률 $\Theta$가 frame의 선택과 무관함은 potential 변환항 $\log\lvert u\rvert^2$가 $\partial\bar\partial$로 소멸하기 때문이고, $\Theta$가 closed $(1,1)$-형식임은 그 정의 $\Theta = \partial\bar\partial\varphi$에서 직접 따라온다 ($d\Theta = (\partial + \bar\partial)\partial\bar\partial\varphi = 0$). $\Theta$ 자체는 $\overline{\partial\bar\partial\varphi} = \bar\partial\partial\bar\varphi = -\partial\bar\partial\varphi$로 순허수이지만, $\frac{i}{2\pi}$ normalization을 거친 $c_1(L,h)$는 closed 실 $(1,1)$-형식이 된다. 결정적으로, 제1 Chern 형식의 de Rham 류는 계량 $h$의 선택과 무관하다. 두 계량 $h$, $h'$의 비 $h'/h = e^{-\psi}$는 대역적 양함수 $e^{-\psi}$로 주어지므로 두 곡률의 차가 $\Theta' - \Theta = \partial\bar\partial\psi = d(\bar\partial\psi)$로 완전형식이 되어, cohomology class
+곡률 $\Theta$가 frame의 선택과 무관함은 potential 변환항 $\log\lvert u\rvert^2$가 $\partial\bar\partial$로 소멸하기 때문이고, $\Theta$가 closed $(1,1)$-형식임은 그 정의 $\Theta = \partial\bar\partial\varphi$에서 직접 따라온다 ($\dd{\Theta} = (\partial + \bar\partial)\partial\bar\partial\varphi = 0$). $\Theta$ 자체는 $\overline{\partial\bar\partial\varphi} = \bar\partial\partial\bar\varphi = -\partial\bar\partial\varphi$로 순허수이지만, $\frac{i}{2\pi}$ normalization을 거친 $c_1(L,h)$는 closed 실 $(1,1)$-형식이 된다. 결정적으로, 제1 Chern 형식의 de Rham 류는 계량 $h$의 선택과 무관하다. 두 계량 $h$, $h'$의 비 $h'/h = e^{-\psi}$는 대역적 양함수 $e^{-\psi}$로 주어지므로 두 곡률의 차가 $\Theta' - \Theta = \partial\bar\partial\psi = \dd{(\bar\partial\psi)}$로 완전형식이 되어, cohomology class
 
 $$
 c_1(L) = [c_1(L, h)] = \left[ \frac{i}{2\pi}\Theta \right] \in H^2(X, \mathbb{R})
@@ -104,7 +104,7 @@ $$
 \omega_L = \frac{i}{2\pi}\,\Theta(L, h)
 $$
 
-가 양정치인 것이다. 곧 국소 holomorphic frame에서 $\Theta = \partial\bar\partial\varphi = \sum_{j,k} \varphi_{j\bar{k}}\, dz_j \wedge d\bar{z}_k$로 쓸 때, 각 점에서 Hermitian 행렬 $(\varphi_{j\bar{k}})$가 양의 정부호인 것이다. 이때 $c_1(L)$을 *positive class<sub>양의 류</sub>*라 부른다.
+가 양정치인 것이다. 곧 국소 holomorphic frame에서 $\Theta = \partial\bar\partial\varphi = \sum_{j,k} \varphi_{j\bar{k}}\dd{z_j} \wedge \dd{\bar{z}_k}$로 쓸 때, 각 점에서 Hermitian 행렬 $(\varphi_{j\bar{k}})$가 양의 정부호인 것이다. 이때 $c_1(L)$을 *positive class<sub>양의 류</sub>*라 부른다.
 :::
 
 양의 line bundle의 정의는 곧 곡률 형식이 Kähler 형식이라는 조건이다. $\omega_L = \frac{i}{2\pi}\Theta$는 closed 실 $(1,1)$-형식이고, 양정치성은 그것이 비퇴화일 뿐 아니라 양의 Hermitian 계량 $g_{j\bar{k}} = \varphi_{j\bar{k}}$를 정의함을 뜻한다. 따라서 $L$이 양의 line bundle이면 $\omega_L$은 $X$ 위의 Kähler 형식이 되고, 그 Kähler 류 $[\omega_L] = c_1(L)$은 positive class이자 정수류이다. 역으로 어떤 Kähler 형식 $\omega$가 $c_1(L)$을 대표하면, $\partial\bar\partial$-보조정리로 그 류 안에서 곡률 형식과 일치하는 대표를 골라 양의 계량을 구성할 수 있다. 곧 양의 line bundle의 존재는 다음 세 조건의 동치로 정리된다.
@@ -120,7 +120,7 @@ $$
 ::: 증명
 (1) ⟺ (2)는 정의의 재진술이다. [정의 4](#def4)에서 $L$이 양이라는 것은 어떤 $h$의 곡률로 만든 $\omega_L = \frac{i}{2\pi}\Theta(L,h)$가 양정치인 것이고, 이 $\omega_L$이 [정의 3](#def3)의 $c_1(L)$을 대표하므로 곧 (2)이다.
 
-(2) ⟺ (3)을 본다. $\omega = \frac{i}{2\pi}\Theta(L, h)$는 [정의 3](#def3) 직후에 본 바와 같이 closed 실 $(1,1)$-형식이다 ($\Theta = \partial\bar\partial\varphi$이므로 $d\omega = 0$). 따라서 $\omega$가 양정치라는 조건은, closed 실 $(1,1)$-형식이 양정치라는 것, 곧 그것이 정의하는 Hermitian 계량 $g_{j\bar{k}} = \varphi_{j\bar{k}}$가 Riemannian metric이고 그 기본형식이 $\omega$인 것과 같다. 닫힘과 양정치를 모두 갖춘 실 $(1,1)$-형식은 정확히 Kähler 형식이므로 ([§Kähler 다양체, ⁋정의 3](/ko/math/complex_geometry/kahler_manifolds#def3)), (2)와 (3)은 동치이다. 곧 $L$이 양이라는 것은 그 곡률을 Kähler 형식으로 만드는 계량이 존재한다는 것과 같다.
+(2) ⟺ (3)을 본다. $\omega = \frac{i}{2\pi}\Theta(L, h)$는 [정의 3](#def3) 직후에 본 바와 같이 closed 실 $(1,1)$-형식이다 ($\Theta = \partial\bar\partial\varphi$이므로 $\dd{\omega} = 0$). 따라서 $\omega$가 양정치라는 조건은, closed 실 $(1,1)$-형식이 양정치라는 것, 곧 그것이 정의하는 Hermitian 계량 $g_{j\bar{k}} = \varphi_{j\bar{k}}$가 Riemannian metric이고 그 기본형식이 $\omega$인 것과 같다. 닫힘과 양정치를 모두 갖춘 실 $(1,1)$-형식은 정확히 Kähler 형식이므로 ([§Kähler 다양체, ⁋정의 3](/ko/math/complex_geometry/kahler_manifolds#def3)), (2)와 (3)은 동치이다. 곧 $L$이 양이라는 것은 그 곡률을 Kähler 형식으로 만드는 계량이 존재한다는 것과 같다.
 :::
 
 이 명제가 양의 line bundle과 Kähler 기하를 잇는 다리이다. 양의 line bundle을 갖는 콤팩트 complex manifold는 자동으로 Kähler manifold이며, 그 Kähler 류는 $H^2(X, \mathbb{Z})$ 안에 놓이는 정수류이다. 거꾸로 이 정수성이 매장정리의 핵심이다. 정수 Kähler 류는 어떤 line bundle의 제1 Chern 류로 실현되고, 그 line bundle이 바로 사영매장을 만들어 내는 양의 line bundle이 된다. 가장 단순한 예는 complex projective space의 hyperplane bundle이다.
@@ -184,7 +184,7 @@ $$
 
 1. *base-point freeness<sub>기저점 없음</sub>*: 각 점 $x$에서 어떤 $s_i$가 $s_i(x) \neq 0$이다. 따라서 $\Phi_M$이 $X$ 전체에서 정의된다.
 2. *점 분리<sub>separation of points</sub>*: $x \neq y$이면 어떤 section이 $s(x) = 0$, $s(y) \neq 0$이 되어 $\Phi_M(x) \neq \Phi_M(y)$이다.
-3. *separation of tangent vectors<sub>접벡터 분리</sub>*: 각 점 $x$에서 $\Phi_M$의 미분 $d\Phi_M\vert_x$가 단사이다.
+3. *separation of tangent vectors<sub>접벡터 분리</sub>*: 각 점 $x$에서 $\Phi_M$의 미분 $\dd{\Phi_M}\vert_x$가 단사이다.
 :::
 
 세 조건은 정확히 $\Phi_M$이 holomorphic 단사 immersion, 곧 콤팩트성과 함께 holomorphic embedding이 되기 위한 요구이다. (1)은 morphism이 어디서나 정의되게 하고, (2)는 단사성을, (3)은 몰입성을 보장한다. $X$가 콤팩트이므로 단사 immersion은 곧 위상적 embedding이고, holomorphic 단사 immersion은 closed 복소 부분다양체로의 embedding이 된다. 따라서 $M$이 very ample이면 $X$는 $\Phi_M$을 통해 $\mathbb{CP}^N$의 smooth한 closed 부분다양체로 실현되어 projective variety ([\[대수다양체\] §사영다양체, ⁋정의 1](/ko/math/algebraic_varieties/projective_varieties#def1)) 가 된다. 세 분리 조건 각각을 section의 존재로 환원하면, 그 section의 존재가 다름 아닌 고차 cohomology의 소멸에서 나온다는 것이 매장정리 증명의 골자이다.
@@ -206,7 +206,7 @@ $$
 
 의 전사성을 준다. 곧 두 fiber에서의 값을 독립적으로 처방하는 section이 존재하여 $x, y$가 분리된다. 같은 논법에서 한 점 $x$만 처방하면 *basepoint-free*가 따라온다.
 
-*tangent vector 분리.* 한 점 $x$에서 $\Phi_{L^{\otimes k}}$의 미분이 단사이려면, $x$에서 $1$차까지 소멸하는 section(곧 $s(x) = 0$이고 $ds(x) = 0$) 과 $0$차에서만 소멸하는 section($s(x) = 0$, $ds(x) \neq 0$) 을 구별할 수 있어야 한다. 이는 $x$를 blow up하여 예외인자 $E$ 위에서 $\mathcal{O}(-2E)$ 류를 비트는 같은 소멸 논법으로, restriction map $\Gamma(X, L^{\otimes k}) \rightarrow L^{\otimes k}_x \otimes (\mathcal{O}_X / \mathfrak{m}_x^2)$ ($\mathfrak{m}_x$는 $x$의 maximal ideal) 의 전사성으로 환원되고, 다시 $H^1$의 소멸이 이를 보장한다.
+*tangent vector 분리.* 한 점 $x$에서 $\Phi_{L^{\otimes k}}$의 미분이 단사이려면, $x$에서 $1$차까지 소멸하는 section(곧 $s(x) = 0$이고 $\dd{s}(x) = 0$) 과 $0$차에서만 소멸하는 section($s(x) = 0$, $\dd{s}(x) \neq 0$) 을 구별할 수 있어야 한다. 이는 $x$를 blow up하여 예외인자 $E$ 위에서 $\mathcal{O}(-2E)$ 류를 비트는 같은 소멸 논법으로, restriction map $\Gamma(X, L^{\otimes k}) \rightarrow L^{\otimes k}_x \otimes (\mathcal{O}_X / \mathfrak{m}_x^2)$ ($\mathfrak{m}_x$는 $x$의 maximal ideal) 의 전사성으로 환원되고, 다시 $H^1$의 소멸이 이를 보장한다.
 
 세 조건이 모두 충분히 큰 $k$에서 성립하고, 콤팩트성으로 그 $k$를 $x, y$에 무관하게 한꺼번에 택할 수 있으므로, $L^{\otimes k}$은 very ample이다. 따라서 $\Phi_{L^{\otimes k}} : X \hookrightarrow \mathbb{CP}^N$이 holomorphic embedding이고 $X$는 projective variety이다. 기술적 세부, 특히 blow-up 위에서 양성을 유지하는 $k$의 존재와 $H^1$-소멸에서 전사성으로 가는 정확한 long exact sequence 논증은 인용에 맡긴다.
 :::

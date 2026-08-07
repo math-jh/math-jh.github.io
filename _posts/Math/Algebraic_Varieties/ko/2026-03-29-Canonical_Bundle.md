@@ -109,7 +109,7 @@ $$\widetilde{\Omega_{A/\mathbb{K}}}^\vee\cong \widetilde{\Omega_{A/\mathbb{K}}^\
 이 결과는 cotangent bundle이 우리가 상상하는 것처럼 differential $1$-form들로 나타난다는 것을 보여준다. 
 
 ::: 예시 4
-$\mathbb{A}^n$의 cotangent bundle은 $\Omega_{\mathbb{A}^n}^1 \cong \mathcal{O}_{\mathbb{A}^n}^{\oplus n}$이다. 대수적으로, 만일 $\mathbb{A}^n$의 coordinate ring $\mathbb{K}[\x_1, \ldots, \x_n]$을 고정하면 이 $\mathbb{K}$-algebra의 Kähler differentials는 free module $\bigoplus_{i=1}^n \mathbb{K}[\x_1, \ldots, \x_n]  d\x_i$이므로, 이 결과는 우리의 직관과 잘 맞아떨어진다.
+$\mathbb{A}^n$의 cotangent bundle은 $\Omega_{\mathbb{A}^n}^1 \cong \mathcal{O}_{\mathbb{A}^n}^{\oplus n}$이다. 대수적으로, 만일 $\mathbb{A}^n$의 coordinate ring $\mathbb{K}[\x_1, \ldots, \x_n]$을 고정하면 이 $\mathbb{K}$-algebra의 Kähler differentials는 free module $\bigoplus_{i=1}^n \mathbb{K}[\x_1, \ldots, \x_n]  \dd{\x_i}$이므로, 이 결과는 우리의 직관과 잘 맞아떨어진다.
 :::
 
 한편 우리는 임의의 smooth variety $X$ of dimension $n$과 그 위의 cotangent bundle $\Omega_X^1$에 대하여, $\Omega_X^1$의 각 fiber는 $n$차원이므로 이를 $n$번 exterior product한 것은 line bundle이 되는 것을 안다.
@@ -122,7 +122,7 @@ $$\omega_X = \bigwedge\nolimits^{\!n} \Omega_X^1$$
 로 정의한다. 
 :::
 
-우리는 canonical bundle $\omega_X$의 global section $s\in \Gamma(X, \omega_X)$을 $X$ 위의 *regular $n$-form*이라 부른다. 이들은 만일 $\omega_X$의 trivializing open set $U$를 잡고, 이를 [예시 4](#ex4)과 같이 affine space 위의 cotangent bundle로 identify할 경우 regular function $f$에 대하여 $fd\x_1 \wedge \cdots \wedge d\x_n$의 꼴로 나타나는 $n$-form들이다. 
+우리는 canonical bundle $\omega_X$의 global section $s\in \Gamma(X, \omega_X)$을 $X$ 위의 *regular $n$-form*이라 부른다. 이들은 만일 $\omega_X$의 trivializing open set $U$를 잡고, 이를 [예시 4](#ex4)과 같이 affine space 위의 cotangent bundle로 identify할 경우 regular function $f$에 대하여 $f\dd{\x_1} \wedge \cdots \wedge \dd{\x_n}$의 꼴로 나타나는 $n$-form들이다. 
 
 한편 우리는 line bundle과 divisor class의 대응으로부터 다음을 정의할 수 있다.
 
@@ -173,15 +173,15 @@ $$\omega_{\mathbb{P}^n}=\det(\Omega_{\mathbb{P}^n}^1)\cong \mathcal{O}_{\mathbb{
 ::: 예시 8
 위의 계산을 $n$-form의 transition function 관점에서도 확인할 수 있다. $\mathbb{P}^n$의 standard open cover $U_i = \{\x_i \neq 0\}$ 위에서 affine coordinate를 $\y_j^{(i)} = \x_j / \x_i$ ($j \neq i$)로 놓으면, $U_i$ 위의 $n$-form 
 
-$$d \y_1^{(i)} \wedge \cdots \wedge \widehat{d \y_i^{(i)}} \wedge \cdots \wedge d \y_n^{(i)}$$
+$$\dd{\y_1}^{(i)} \wedge \cdots \wedge \widehat{\dd{\y_i}^{(i)}} \wedge \cdots \wedge \dd{\y_n}^{(i)}$$
 
 을 생각할 수 있다. $U_i \cap U_j$ 위에서 $\y_k^{(j)} = \x_k / \x_j = (\x_k / \x_i) / (\x_j / \x_i) = \y_k^{(i)} / \y_j^{(i)}$이므로, $k \neq i, j$에 대해 
 
-$$d \y_k^{(j)} = d(\y_k^{(i)} / \y_j^{(i)}) = \frac{\y_j^{(i)} d \y_k^{(i)} - \y_k^{(i)}  d \y_j^{(i)}}{(\y_j^{(i)})^2}$$
+$$\dd{\y_k}^{(j)} = \dd{(\y_k^{(i)} / \y_j^{(i)})} = \frac{\y_j^{(i)} \dd{\y_k}^{(i)} - \y_k^{(i)}  \dd{\y_j}^{(i)}}{(\y_j^{(i)})^2}$$
 
 이다. 따라서 $U_j$ 위의 $n$-form은 $U_i \cap U_j$에서
 
-$$\bigwedge_{k \neq j} d \y_k^{(j)} = (\y_j^{(i)})^{-(n+1)} \cdot \bigwedge_{k \neq i} d \y_k^{(i)}$$
+$$\bigwedge_{k \neq j} \dd{\y_k}^{(j)} = (\y_j^{(i)})^{-(n+1)} \cdot \bigwedge_{k \neq i} \dd{\y_k}^{(i)}$$
 
 로 변환된다. 여기서 $(\y_j^{(i)})^{-(n+1)} = (\x_j / \x_i)^{-(n+1)}$이므로, transition function이 $g_{ij} = (\x_i / \x_j)^{-(n+1)}$임을 확인할 수 있다. 이는 $\mathcal{O}_{\mathbb{P}^n}(-n-1)$의 transition function과 일치한다.
 :::
@@ -206,7 +206,7 @@ $$0\rightarrow \mathcal{T}_D\rightarrow \mathcal{T}_X\vert_D\rightarrow \mathcal
 
 $$0 \rightarrow \mathcal{I}_D/\mathcal{I}_D^2\rightarrow \Omega_X^1\vert_D\rightarrow \Omega_D^1\rightarrow 0$$
 
-을 확인하여 얻어진다. 여기서 첫째 arrow는 $f\mapsto df$로 주어진다. 이 short exact sequence에 top exterior power를 취하면 다음을 얻는다.
+을 확인하여 얻어진다. 여기서 첫째 arrow는 $f\mapsto \dd{f}$로 주어진다. 이 short exact sequence에 top exterior power를 취하면 다음을 얻는다.
 
 ::: 명제 9
 (Adjunction Formula) Smooth variety $X$의 smooth divisor $D$에 대해

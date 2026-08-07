@@ -23,24 +23,24 @@ published: false
 Complex manifold $X$ 위에서 exterior derivative $d$는 복소화 형식에도 $\mathbb{C}$-선형으로 확장된다. 국소 holomorphic 좌표 $z_1, \ldots, z_n$에서 $(p,q)$-형식은
 
 $$
-\omega = \sum_{\lvert I \rvert = p,\ \lvert J \rvert = q} f_{IJ}\, dz_I \wedge d\bar{z}_J, \qquad
-dz_I = dz_{i_1} \wedge \cdots \wedge dz_{i_p},\ \ d\bar{z}_J = d\bar{z}_{j_1} \wedge \cdots \wedge d\bar{z}_{j_q}
+\omega = \sum_{\lvert I \rvert = p,\ \lvert J \rvert = q} f_{IJ}\dd{z_I} \wedge \dd{\bar{z}_J}, \qquad
+\dd{z_I} = \dd{z_{i_1}} \wedge \cdots \wedge \dd{z_{i_p}},\ \ \dd{\bar{z}_J} = \dd{\bar{z}_{j_1}} \wedge \cdots \wedge \dd{\bar{z}_{j_q}}
 $$
 
-로 적힌다. 여기서 $dz_I$와 $d\bar{z}_J$는 상수계수 closed 형식이므로 ($d(dz_j) = d(d\bar z_j) = 0$), $d\omega$는 계수 $f_{IJ}$의 exterior derivative에서만 나온다. 그런데 함수의 exterior derivative는
+로 적힌다. 여기서 $\dd{z_I}$와 $\dd{\bar{z}_J}$는 상수계수 closed 형식이므로 ($\dd{(\dd{z_j})} = \dd{(\dd{\bar z_j})} = 0$), $\dd{\omega}$는 계수 $f_{IJ}$의 exterior derivative에서만 나온다. 그런데 함수의 exterior derivative는
 
 $$
-df_{IJ} = \sum_{k} \frac{\partial f_{IJ}}{\partial z_k}\, dz_k + \sum_{k} \frac{\partial f_{IJ}}{\partial \bar{z}_k}\, d\bar{z}_k
+\dd{f_{IJ}} = \sum_{k} \frac{\partial f_{IJ}}{\partial z_k}\dd{z_k} + \sum_{k} \frac{\partial f_{IJ}}{\partial \bar{z}_k}\dd{\bar{z}_k}
 $$
 
 로 $(1,0)$-부분과 $(0,1)$-부분으로 자연히 갈라진다. 앞항을 wedge하면 형식의 degree가 $(p+1,q)$로, 뒷항을 wedge하면 $(p,q+1)$로 올라간다. 이 갈림이 $\partial$와 $\bar\partial$의 정의를 준다.
 
 ::: 정의 1
-Complex manifold $X$ 위의 $(p,q)$-형식 $\omega = \sum_{I,J} f_{IJ}\, dz_I \wedge d\bar{z}_J$에 대하여 *del 연산자<sub>del operator</sub>* $\partial$와 *del-bar 연산자<sub>del-bar operator</sub>* $\bar\partial$를 국소좌표에서
+Complex manifold $X$ 위의 $(p,q)$-형식 $\omega = \sum_{I,J} f_{IJ}\dd{z_I} \wedge \dd{\bar{z}_J}$에 대하여 *del 연산자<sub>del operator</sub>* $\partial$와 *del-bar 연산자<sub>del-bar operator</sub>* $\bar\partial$를 국소좌표에서
 
 $$
-\partial \omega = \sum_{I,J} \sum_{k} \frac{\partial f_{IJ}}{\partial z_k}\, dz_k \wedge dz_I \wedge d\bar{z}_J, \qquad
-\bar\partial \omega = \sum_{I,J} \sum_{k} \frac{\partial f_{IJ}}{\partial \bar{z}_k}\, d\bar{z}_k \wedge dz_I \wedge d\bar{z}_J
+\partial \omega = \sum_{I,J} \sum_{k} \frac{\partial f_{IJ}}{\partial z_k}\dd{z_k} \wedge \dd{z_I} \wedge \dd{\bar{z}_J}, \qquad
+\bar\partial \omega = \sum_{I,J} \sum_{k} \frac{\partial f_{IJ}}{\partial \bar{z}_k}\dd{\bar{z}_k} \wedge \dd{z_I} \wedge \dd{\bar{z}_J}
 $$
 
 으로 정의한다. 그러면 $\partial : \Omega^{p,q}(X) \rightarrow \Omega^{p+1,q}(X)$이고 $\bar\partial : \Omega^{p,q}(X) \rightarrow \Omega^{p,q+1}(X)$이다.
@@ -55,19 +55,19 @@ $$
 d = \partial + \bar\partial
 $$
 
-로 분해된다. 곧 임의의 $(p,q)$-형식 $\omega$에 대하여 $d\omega$의 $(p+1,q)$-성분은 $\partial\omega$, $(p,q+1)$-성분은 $\bar\partial\omega$이며, 다른 degree의 성분은 없다.
+로 분해된다. 곧 임의의 $(p,q)$-형식 $\omega$에 대하여 $\dd{\omega}$의 $(p+1,q)$-성분은 $\partial\omega$, $(p,q+1)$-성분은 $\bar\partial\omega$이며, 다른 degree의 성분은 없다.
 :::
 
 ::: 증명
-$X$가 complex manifold이므로 그 표준 거의 복소구조는 적분가능하고 ([§거의 복소구조, ⁋정리 12](/ko/math/complex_geometry/almost_complex_structures#thm12)), 따라서 $d(\Omega^{1,0}) \subseteq \Omega^{2,0} \oplus \Omega^{1,1}$이 성립한다 ([§거의 복소구조, ⁋명제 11](/ko/math/complex_geometry/almost_complex_structures#prop11)의 동치조건 (3)). 켤레를 취하면 $d(\Omega^{0,1}) \subseteq \Omega^{1,1} \oplus \Omega^{0,2}$도 성립한다.
+$X$가 complex manifold이므로 그 표준 거의 복소구조는 적분가능하고 ([§거의 복소구조, ⁋정리 12](/ko/math/complex_geometry/almost_complex_structures#thm12)), 따라서 $\dd{(\Omega^{1,0})} \subseteq \Omega^{2,0} \oplus \Omega^{1,1}$이 성립한다 ([§거의 복소구조, ⁋명제 11](/ko/math/complex_geometry/almost_complex_structures#prop11)의 동치조건 (3)). 켤레를 취하면 $\dd{(\Omega^{0,1})} \subseteq \Omega^{1,1} \oplus \Omega^{0,2}$도 성립한다.
 
-이제 국소좌표에서 $\omega = \sum_{I,J} f_{IJ}\, dz_I \wedge d\bar{z}_J$를 미분하자. $d$는 antiderivation이고 $dz_j, d\bar{z}_j$가 닫혀 있으므로
+이제 국소좌표에서 $\omega = \sum_{I,J} f_{IJ}\dd{z_I} \wedge \dd{\bar{z}_J}$를 미분하자. $d$는 antiderivation이고 $\dd{z_j}, \dd{\bar{z}_j}$가 닫혀 있으므로
 
 $$
-d\omega = \sum_{I,J} df_{IJ} \wedge dz_I \wedge d\bar{z}_J
+\dd{\omega} = \sum_{I,J} \dd{f_{IJ}} \wedge \dd{z_I} \wedge \dd{\bar{z}_J}
 $$
 
-이다. 함수 $f_{IJ}$에 대하여 $df_{IJ} = \partial f_{IJ} + \bar\partial f_{IJ}$이고, 여기서 $\partial f_{IJ} = \sum_k (\partial f_{IJ}/\partial z_k)\, dz_k$는 $(1,0)$-형식, $\bar\partial f_{IJ} = \sum_k (\partial f_{IJ}/\partial \bar{z}_k)\, d\bar{z}_k$는 $(0,1)$-형식이다. 위 표현에서 $dz_I \wedge d\bar z_J$가 degree $(p,q)$이므로, $\partial f_{IJ}$를 wedge한 항은 정확히 $(p+1,q)$-형식이고 이들의 합이 [정의 1](#def1)의 $\partial\omega$이다. 마찬가지로 $\bar\partial f_{IJ}$를 wedge한 항은 $(p,q+1)$-형식이고 그 합이 $\bar\partial\omega$이다. 다른 degree의 항은 나타나지 않으므로 $d\omega = \partial\omega + \bar\partial\omega$이고 분해가 차수별로 성립한다.
+이다. 함수 $f_{IJ}$에 대하여 $\dd{f_{IJ}} = \partial f_{IJ} + \bar\partial f_{IJ}$이고, 여기서 $\partial f_{IJ} = \sum_k (\partial f_{IJ}/\partial z_k)\dd{z_k}$는 $(1,0)$-형식, $\bar\partial f_{IJ} = \sum_k (\partial f_{IJ}/\partial \bar{z}_k)\dd{\bar{z}_k}$는 $(0,1)$-형식이다. 위 표현에서 $\dd{z_I} \wedge d\bar z_J$가 degree $(p,q)$이므로, $\partial f_{IJ}$를 wedge한 항은 정확히 $(p+1,q)$-형식이고 이들의 합이 [정의 1](#def1)의 $\partial\omega$이다. 마찬가지로 $\bar\partial f_{IJ}$를 wedge한 항은 $(p,q+1)$-형식이고 그 합이 $\bar\partial\omega$이다. 다른 degree의 항은 나타나지 않으므로 $\dd{\omega} = \partial\omega + \bar\partial\omega$이고 분해가 차수별로 성립한다.
 :::
 
 이 분해는 본질적으로 $X$의 적분가능성에 의존한다. 적분가능하지 않은 거의 complex manifold에서는 $d$가 $(p,q)$-형식을 네 개의 degree $(p+2,q-1), (p+1,q), (p,q+1), (p-1,q+2)$로 흩뜨려 $d = \mu + \partial + \bar\partial + \bar\mu$ 꼴이 되며, 두 여분의 항 $\mu, \bar\mu$가 정확히 Nijenhuis 텐서를 담는다. Complex manifold에서는 이 여분 항이 소멸하여 깔끔한 두 항 분해가 살아남고, 비로소 $\bar\partial$만으로 닫힌 복합체를 세울 수 있다.
@@ -144,7 +144,7 @@ de Rham 이론에서 Poincaré 보조정리는 볼록영역에서 closed 형식�
 $f$가 닫힌원판 $\overline{D} = \{ \zeta \in \mathbb{C} : \lvert \zeta \rvert \leq r \}$의 근방에서 정의된 smooth 복소함수라 하자. 그러면
 
 $$
-u(\zeta) = \frac{1}{2\pi i} \int_{D} \frac{f(w)}{w - \zeta}\, dw \wedge d\bar{w}
+u(\zeta) = \frac{1}{2\pi i} \int_{D} \frac{f(w)}{w - \zeta}\dd{w} \wedge \dd{\bar{w}}
 $$
 
 로 정의되는 함수 $u$는 $D$의 interior에서 매끄럽고
@@ -157,25 +157,25 @@ $$
 :::
 
 ::: 증명
-적분의 분모에 $w = \zeta$에서 singular point가 있으나 $1/(w-\zeta)$가 국소적분가능하므로 ($dw \wedge d\bar{w} = -2i\, dx\, dy$를 극좌표로 보면 $1/\lvert w - \zeta\rvert$의 적분은 수렴) $u$는 잘 정의된다. 변수치환 $w = \zeta + s$로 singular point를 적분기호 밖으로 옮기면
+적분의 분모에 $w = \zeta$에서 singular point가 있으나 $1/(w-\zeta)$가 국소적분가능하므로 ($\dd{w} \wedge \dd{\bar{w}} = -2i\dd{x}\dd{y}$를 극좌표로 보면 $1/\lvert w - \zeta\rvert$의 적분은 수렴) $u$는 잘 정의된다. 변수치환 $w = \zeta + s$로 singular point를 적분기호 밖으로 옮기면
 
 $$
-u(\zeta) = \frac{1}{2\pi i} \int \frac{f(\zeta + s)}{s}\, ds \wedge d\bar{s}
+u(\zeta) = \frac{1}{2\pi i} \int \frac{f(\zeta + s)}{s}\dd{s} \wedge \dd{\bar{s}}
 $$
 
 이고, 이제 피적분함수의 $\zeta$-의존성이 smooth $f(\zeta + s)$에만 있으므로 적분기호 아래에서 미분할 수 있다. $\partial/\partial\bar\zeta$를 적용하면
 
 $$
-\frac{\partial u}{\partial \bar{\zeta}}(\zeta) = \frac{1}{2\pi i} \int \frac{1}{s}\, \frac{\partial f}{\partial \bar{\zeta}}(\zeta + s)\, ds \wedge d\bar{s} = \frac{1}{2\pi i} \int_{D} \frac{1}{w - \zeta}\, \frac{\partial f}{\partial \bar{w}}(w)\, dw \wedge d\bar{w}
+\frac{\partial u}{\partial \bar{\zeta}}(\zeta) = \frac{1}{2\pi i} \int \frac{1}{s}\, \frac{\partial f}{\partial \bar{\zeta}}(\zeta + s)\dd{s} \wedge \dd{\bar{s}} = \frac{1}{2\pi i} \int_{D} \frac{1}{w - \zeta}\, \frac{\partial f}{\partial \bar{w}}(w)\dd{w} \wedge \dd{\bar{w}}
 $$
 
 이다 (다시 $s = w - \zeta$로 되돌리고 $\partial f(\zeta+s)/\partial\bar\zeta = (\partial f/\partial\bar w)(\zeta+s)$를 썼다). 이제 일반화된 Cauchy 적분공식을 적용한다. Smooth 함수 $g$와 영역 $D$에 대하여 Cauchy–Pompeiu 공식
 
 $$
-g(\zeta) = \frac{1}{2\pi i} \int_{\partial D} \frac{g(w)}{w - \zeta}\, dw + \frac{1}{2\pi i} \int_{D} \frac{1}{w - \zeta}\, \frac{\partial g}{\partial \bar{w}}\, dw \wedge d\bar{w}
+g(\zeta) = \frac{1}{2\pi i} \int_{\partial D} \frac{g(w)}{w - \zeta}\dd{w} + \frac{1}{2\pi i} \int_{D} \frac{1}{w - \zeta}\, \frac{\partial g}{\partial \bar{w}}\dd{w} \wedge \dd{\bar{w}}
 $$
 
-가 성립한다 (이는 Stokes 정리를 $g(w)/(w-\zeta)$의 differential form에 적용해 얻는다). 이 공식을 $g = f$에 쓰면 우변 둘째 항이 위에서 계산한 $\partial u/\partial\bar\zeta$와 정확히 같다. 한편 $D$를 충분히 키워 $f$의 지지를 포함하는 더 큰 원판으로 두거나, 국소적으로 $f$에 차단함수를 곱해 컴팩트 지지로 만들면 경계적분 $\int_{\partial D} f(w)/(w-\zeta)\, dw$가 사라지도록 할 수 있고, 이때 $\partial u/\partial\bar\zeta = f$가 따라온다. 차단으로 바뀐 부분은 $\zeta$가 차단 영역 안쪽에 있는 한 $f$를 바꾸지 않으므로 국소적으로 원하는 등식이 성립한다.
+가 성립한다 (이는 Stokes 정리를 $g(w)/(w-\zeta)$의 differential form에 적용해 얻는다). 이 공식을 $g = f$에 쓰면 우변 둘째 항이 위에서 계산한 $\partial u/\partial\bar\zeta$와 정확히 같다. 한편 $D$를 충분히 키워 $f$의 지지를 포함하는 더 큰 원판으로 두거나, 국소적으로 $f$에 차단함수를 곱해 컴팩트 지지로 만들면 경계적분 $\int_{\partial D} f(w)/(w-\zeta)\dd{w}$가 사라지도록 할 수 있고, 이때 $\partial u/\partial\bar\zeta = f$가 따라온다. 차단으로 바뀐 부분은 $\zeta$가 차단 영역 안쪽에 있는 한 $f$를 바꾸지 않으므로 국소적으로 원하는 등식이 성립한다.
 :::
 
 이 한 변수 풀이를 변수 개수에 대한 귀납으로 끌어올리면 폴리디스크 전체에서의 결과를 얻는다. 표기를 위해 폴리디스크를 $\Delta = \{ z \in \mathbb{C}^n : \lvert z_j \rvert < r_j \}$로 적는다.
@@ -185,18 +185,18 @@ $$
 :::
 
 ::: 증명
-$p$는 계산에 관여하지 않으므로 ($dz_I$ 인자는 $\bar\partial$를 통과해 그대로 남는다) $p = 0$인 경우를 보이면 충분하다. 증명은 $\omega$에 나타나는 $d\bar{z}_k$의 index가 처음 몇 개 $\{1, \ldots, m\}$에만 들어 있는가에 대한 귀납으로 한다. 곧 $\omega$가 $d\bar{z}_1, \ldots, d\bar{z}_m$만 포함한다고 가정하고 $m$에 대해 귀납한다. $m < q$이면 $\omega = 0$이므로 자명하고, 귀납의 출발은 $m = q$이다.
+$p$는 계산에 관여하지 않으므로 ($\dd{z_I}$ 인자는 $\bar\partial$를 통과해 그대로 남는다) $p = 0$인 경우를 보이면 충분하다. 증명은 $\omega$에 나타나는 $\dd{\bar{z}_k}$의 index가 처음 몇 개 $\{1, \ldots, m\}$에만 들어 있는가에 대한 귀납으로 한다. 곧 $\omega$가 $\dd{\bar{z}_1}, \ldots, \dd{\bar{z}_m}$만 포함한다고 가정하고 $m$에 대해 귀납한다. $m < q$이면 $\omega = 0$이므로 자명하고, 귀납의 출발은 $m = q$이다.
 
-$(0,1)$-형식의 경우, 곧 $q = 1$이고 $\omega = \sum_{k=1}^n f_k\, d\bar{z}_k$를 먼저 다루어 논법의 골격을 드러낸다. $\bar\partial\omega = 0$은 모든 $k, l$에 대하여
+$(0,1)$-형식의 경우, 곧 $q = 1$이고 $\omega = \sum_{k=1}^n f_k\dd{\bar{z}_k}$를 먼저 다루어 논법의 골격을 드러낸다. $\bar\partial\omega = 0$은 모든 $k, l$에 대하여
 
 $$
 \frac{\partial f_k}{\partial \bar{z}_l} = \frac{\partial f_l}{\partial \bar{z}_k}
 $$
 
-를 뜻한다. 형식이 $d\bar{z}_1, \ldots, d\bar{z}_m$만 포함한다는 귀납가정 아래에서, $g$를
+를 뜻한다. 형식이 $\dd{\bar{z}_1}, \ldots, \dd{\bar{z}_m}$만 포함한다는 귀납가정 아래에서, $g$를
 
 $$
-g(z) = \frac{1}{2\pi i} \int \frac{f_m(z_1, \ldots, z_{m-1}, w, z_{m+1}, \ldots, z_n)}{w - z_m}\, dw \wedge d\bar{w}
+g(z) = \frac{1}{2\pi i} \int \frac{f_m(z_1, \ldots, z_{m-1}, w, z_{m+1}, \ldots, z_n)}{w - z_m}\dd{w} \wedge \dd{\bar{w}}
 $$
 
 로 정의하자. 곧 [보조정리 5](#lem5)의 한 변수 풀이를 $m$번째 변수에 적용한 것이다. 그러면 $\partial g/\partial\bar{z}_m = f_m$이다. 한편 $l > m$인 변수에 대해서는 $f_m$이 그 변수에 대해 holomorphic($\partial f_m/\partial\bar{z}_l = 0$, 형식에 $d\bar z_l$이 없으므로 닫힘조건에서 따라온다)이므로 적분기호 아래 미분으로 $\partial g/\partial\bar{z}_l = 0$ ($l > m$)이다. 이제
@@ -205,7 +205,7 @@ $$
 \omega' = \omega - \bar\partial g
 $$
 
-를 보면, $\bar\partial g = \sum_l (\partial g/\partial\bar{z}_l)\, d\bar{z}_l$의 $m$번째 성분이 $f_m$과 정확히 상쇄되어 $\omega'$에는 $d\bar{z}_m$ 항이 없고, $l > m$ 성분도 추가되지 않으므로 $\omega'$는 $d\bar{z}_1, \ldots, d\bar{z}_{m-1}$만 포함한다. 또 $\bar\partial\omega' = \bar\partial\omega - \bar\partial^2 g = 0$이므로 $\omega'$도 $\bar\partial$-닫혀 있다. 귀납가정에 의해 $\omega' = \bar\partial h$인 $h$가 존재하고, 따라서
+를 보면, $\bar\partial g = \sum_l (\partial g/\partial\bar{z}_l)\dd{\bar{z}_l}$의 $m$번째 성분이 $f_m$과 정확히 상쇄되어 $\omega'$에는 $\dd{\bar{z}_m}$ 항이 없고, $l > m$ 성분도 추가되지 않으므로 $\omega'$는 $\dd{\bar{z}_1}, \ldots, \dd{\bar{z}_{m-1}}$만 포함한다. 또 $\bar\partial\omega' = \bar\partial\omega - \bar\partial^2 g = 0$이므로 $\omega'$도 $\bar\partial$-닫혀 있다. 귀납가정에 의해 $\omega' = \bar\partial h$인 $h$가 존재하고, 따라서
 
 $$
 \omega = \omega' + \bar\partial g = \bar\partial(h + g)
@@ -213,7 +213,7 @@ $$
 
 로 $\bar\partial$-완전하다.
 
-$q \geq 2$의 일반 경우도 같은 귀납이 작동한다. $\omega$를 $\omega = d\bar{z}_m \wedge \alpha + \beta$로 쓰되 $\alpha, \beta$가 $d\bar{z}_m$을 포함하지 않게 분해하고, $\alpha$의 각 계수에 위와 같이 $m$번째 변수의 Cauchy 적분을 적용해 만든 형식 $\gamma$로 $\omega - \bar\partial\gamma$에서 $d\bar{z}_m$ 항을 모두 제거한다. $\bar\partial$-닫힘조건이 이 제거 후에도 $l > m$ index가 다시 생기지 않도록 보장하므로, 포함된 index 집합이 $\{1, \ldots, m-1\}$로 줄어든 closed 형식을 얻고 귀납가정을 적용한다. $m = q$에서 시작해 $m$을 하나씩 줄여 $m < q$에 이르면 형식이 $0$이 되어 귀납이 끝난다.
+$q \geq 2$의 일반 경우도 같은 귀납이 작동한다. $\omega$를 $\omega = \dd{\bar{z}_m} \wedge \alpha + \beta$로 쓰되 $\alpha, \beta$가 $\dd{\bar{z}_m}$을 포함하지 않게 분해하고, $\alpha$의 각 계수에 위와 같이 $m$번째 변수의 Cauchy 적분을 적용해 만든 형식 $\gamma$로 $\omega - \bar\partial\gamma$에서 $\dd{\bar{z}_m}$ 항을 모두 제거한다. $\bar\partial$-닫힘조건이 이 제거 후에도 $l > m$ index가 다시 생기지 않도록 보장하므로, 포함된 index 집합이 $\{1, \ldots, m-1\}$로 줄어든 closed 형식을 얻고 귀납가정을 적용한다. $m = q$에서 시작해 $m$을 하나씩 줄여 $m < q$에 이르면 형식이 $0$이 되어 귀납이 끝난다.
 
 엄밀히는 [보조정리 5](#lem5)가 닫힌원판 근방에서의 풀이를 주므로, 폴리디스크 $\Delta$ 전체에서의 결과를 얻으려면 $\Delta$를 안쪽 폴리디스크들의 증가열로 소진하고 각 단계의 풀이를 이어 붙이는 극한 논법이 필요하다. 각 콤팩트 부분폴리디스크에서 위 구성이 풀이를 주고, Mittag-Leffler 형 수렴 논법으로 전역 풀이로 이어붙이면 $\Delta$ 위의 $\eta$를 얻는다.
 :::
@@ -231,7 +231,7 @@ $$
 \Omega^p(U) = \{ \omega \in \Omega^{p,0}(U) \mid \bar\partial\omega = 0 \}
 $$
 
-들로 정의되는 sheaf라 한다. 곧 국소적으로 $\omega = \sum_{\lvert I \rvert = p} f_I\, dz_I$이되 모든 계수 $f_I$가 holomorphic인 형식들의 sheaf이다.
+들로 정의되는 sheaf라 한다. 곧 국소적으로 $\omega = \sum_{\lvert I \rvert = p} f_I\dd{z_I}$이되 모든 계수 $f_I$가 holomorphic인 형식들의 sheaf이다.
 :::
 
 $p = 0$일 때 $\Omega^0$은 holomorphic function의 structure sheaf $\mathcal{O}_X$이다. $p = 1$일 때 $\Omega^1$은 holomorphic 1-형식의 sheaf로, holomorphic cotangent bundle의 holomorphic section들이 이루는 sheaf이다 ([§복소다양체, ⁋정의 11](/ko/math/complex_geometry/complex_manifolds#def11)). 조건 $\bar\partial\omega = 0$은 $(p,0)$-형식의 계수에 대한 Cauchy–Riemann 방정식이며, 정의에 의해 $\Omega^p = \ker(\bar\partial : \Omega^{p,0} \rightarrow \Omega^{p,1})$로 $\bar\partial$-closed $(p,0)$-형식들의 sheaf이다. 이 sheaf의 sheaf cohomology ([\[대수다양체\] §층 코호몰로지, ⁋정의 1](/ko/math/algebraic_varieties/sheaf_cohomology#def1)) $H^q(X, \Omega^p)$가 Dolbeault cohomology의 정체임을 보이려 한다.
@@ -304,7 +304,7 @@ $$
 H^k_{\mathrm{dR}}(X, \mathbb{C}) \cong \bigoplus_{p+q=k} H^{p,q}_{\bar\partial}(X)
 $$
 
-가 성립하기를 기대할 수 있다. 그러나 이 분해는 일반적인 complex manifold에서는 성립하지 않는다. 문제는 $d = \partial + \bar\partial$의 닫힘조건 $d\omega = 0$이 $\partial\omega = 0$과 $\bar\partial\omega = 0$을 따로 함의하지 않는다는 데 있다. $d$-closed 형식을 차수별로 쪼개면 각 조각이 $\bar\partial$-닫힌지가 보장되지 않으므로, $d$-cohomology class를 $\bar\partial$-cohomology class들로 자연히 분해할 수 없다.
+가 성립하기를 기대할 수 있다. 그러나 이 분해는 일반적인 complex manifold에서는 성립하지 않는다. 문제는 $d = \partial + \bar\partial$의 닫힘조건 $\dd{\omega} = 0$이 $\partial\omega = 0$과 $\bar\partial\omega = 0$을 따로 함의하지 않는다는 데 있다. $d$-closed 형식을 차수별로 쪼개면 각 조각이 $\bar\partial$-닫힌지가 보장되지 않으므로, $d$-cohomology class를 $\bar\partial$-cohomology class들로 자연히 분해할 수 없다.
 
 이 분해가 성립하려면 $X$에 추가 구조가 필요하다. 적절한 추가 기하구조 아래에서는 위 직합 분해(Hodge 분해)와 더불어 $H^{p,q}$와 $H^{q,p}$ 사이의 켤레 대칭이 성립하며, 그 결과 de Rham Betti 수가 Hodge 수들의 합 $b_k = \sum_{p+q=k} h^{p,q}$로 쪼개진다. 일반적인 complex manifold에서는 이 등식이 깨지고 부등식 $b_k \leq \sum_{p+q=k} h^{p,q}$만 남는 것이 보통이다. 추가 구조가 무엇이고 그 아래에서 분해가 왜 성립하는지는 별도의 이론을 요구한다.
 
@@ -319,7 +319,7 @@ $$
 H^{p,q}_{\bar\partial}(\mathbb{C}^n) = 0
 $$
 
-이다. $q = 0$인 경우 $H^{p,0}_{\bar\partial}(\mathbb{C}^n)$은 $\bar\partial$-closed $(p,0)$-형식, 곧 holomorphic $p$-형식의 공간 $\Omega^p(\mathbb{C}^n)$이며, 이는 holomorphic function을 계수로 갖는 $\sum_I f_I\, dz_I$들로 이루어진 무한차원 공간이다. 특히 $H^{0,0}_{\bar\partial}(\mathbb{C}^n) = \mathcal{O}(\mathbb{C}^n)$은 전역 holomorphic function 전체이다. $\mathbb{C}^n$이 콤팩트하지 않으므로 [§복소다양체, ⁋정리 14](/ko/math/complex_geometry/complex_manifolds#thm14)의 상수성은 적용되지 않고, 다항식을 비롯한 풍부한 holomorphic function이 살아남는다.
+이다. $q = 0$인 경우 $H^{p,0}_{\bar\partial}(\mathbb{C}^n)$은 $\bar\partial$-closed $(p,0)$-형식, 곧 holomorphic $p$-형식의 공간 $\Omega^p(\mathbb{C}^n)$이며, 이는 holomorphic function을 계수로 갖는 $\sum_I f_I\dd{z_I}$들로 이루어진 무한차원 공간이다. 특히 $H^{0,0}_{\bar\partial}(\mathbb{C}^n) = \mathcal{O}(\mathbb{C}^n)$은 전역 holomorphic function 전체이다. $\mathbb{C}^n$이 콤팩트하지 않으므로 [§복소다양체, ⁋정리 14](/ko/math/complex_geometry/complex_manifolds#thm14)의 상수성은 적용되지 않고, 다항식을 비롯한 풍부한 holomorphic function이 살아남는다.
 :::
 
 콤팩트한 경우의 가장 기본적인 예는 복소차원 $1$의 Riemann 곡면이다. 차원이 $1$이므로 $(p,q)$는 $p, q \in \{0, 1\}$의 네 가지뿐이다.

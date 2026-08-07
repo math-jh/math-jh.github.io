@@ -189,13 +189,13 @@ Compact real form의 존재성과 유일성이 주는 가장 중요한 응용 �
 $U$가 compact Lie group이고 $\rho:U\rightarrow\GL(V)$가 유한차원 복소 representation이면, $\rho$는 완전가약이다. 곧 $V$는 irreducible subrepresentation들의 direct sum으로 분해된다.
 :::
 ::: 증명
-$\langle-,-\rangle_0$을 $V$ 위의 임의의 Hermitian inner product라 하고, compact group $U$ 위의 normalized Haar measure $du$ ($\int_U du=1$)에 대하여
+$\langle-,-\rangle_0$을 $V$ 위의 임의의 Hermitian inner product라 하고, compact group $U$ 위의 normalized Haar measure $\dd{u}$ ($\int_U \dd{u}=1$)에 대하여
 
-$$\langle v,w\rangle=\int_U\langle\rho(u)v,\rho(u)w\rangle_0\,du$$
+$$\langle v,w\rangle=\int_U\langle\rho(u)v,\rho(u)w\rangle_0\dd{u}$$
 
-로 평균낸 form을 정의한다. Compactness가 이 적분의 수렴과 $du$의 존재를 보장하며, 적분 안의 각 피적분 함수가 양의 정부호 Hermitian form이므로 $\langle-,-\rangle$도 양의 정부호 Hermitian form이다. Haar measure의 left invariance에서 임의의 $g\in U$에 대하여
+로 평균낸 form을 정의한다. Compactness가 이 적분의 수렴과 $\dd{u}$의 존재를 보장하며, 적분 안의 각 피적분 함수가 양의 정부호 Hermitian form이므로 $\langle-,-\rangle$도 양의 정부호 Hermitian form이다. Haar measure의 left invariance에서 임의의 $g\in U$에 대하여
 
-$$\langle\rho(g)v,\rho(g)w\rangle=\int_U\langle\rho(ug)v,\rho(ug)w\rangle_0\,du=\langle v,w\rangle$$
+$$\langle\rho(g)v,\rho(g)w\rangle=\int_U\langle\rho(ug)v,\rho(ug)w\rangle_0\dd{u}=\langle v,w\rangle$$
 
 이므로 $\langle-,-\rangle$은 $U$-불변이다. 이제 $W\subseteq V$가 subrepresentation이면 그 orthogonal complement $W^\perp$ 역시 subrepresentation이다. 임의의 $w\in W$, $x\in W^\perp$, $g\in U$에 대하여 $\langle w,\rho(g)x\rangle=\langle\rho(g^{-1})w,x\rangle=0$이고 ($\rho(g^{-1})w\in W$), 따라서 $\rho(g)x\in W^\perp$이기 때문이다. 그럼 $V=W\oplus W^\perp$가 representation의 direct sum 분해이고, $\dim V$에 대한 귀납법으로 $V$가 irreducible subrepresentation들의 direct sum임이 따른다.
 :::

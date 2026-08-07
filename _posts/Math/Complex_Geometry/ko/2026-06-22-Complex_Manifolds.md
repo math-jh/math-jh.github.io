@@ -232,13 +232,13 @@ Holomorphic tangent space들이 점마다 매끄럽게 (실은 holomorphic하게
 Complex manifold $M$ 위의 *holomorphic tangent bundle<sub>정칙접다발</sub>* $T^{1,0} M$은 각 점 $p$에서의 fiber가 $T_p^{1,0} M$인 복소 vector bundle이다. 그 dual bundle을 *holomorphic cotangent bundle<sub>정칙여접다발</sub>* $(T^{1,0}M)^\ast$이라 하고, 그 holomorphic 단면 전체를 $\Omega^1_{\mathrm{hol}}(M)$으로 적어 *holomorphic 1-form<sub>정칙 1-형식</sub>*들의 공간이라 한다.
 :::
 
-Cotangent bundle의 구성은 smooth 경우의 추상적 다발 functor 구성을 ([\[미분다양체\] §접다발과 여접다발, ⁋정의 7](/ko/math/manifolds/tangent_and_cotangent_bundles#def7)) holomorphic 범주에서 반복한 것이다. 국소좌표에서 $\partial/\partial z_j$의 쌍대 기저가 $dz_j$이고 $\partial/\partial \bar{z}_j$의 쌍대 기저가 $d\bar{z}_j$이며,
+Cotangent bundle의 구성은 smooth 경우의 추상적 다발 functor 구성을 ([\[미분다양체\] §접다발과 여접다발, ⁋정의 7](/ko/math/manifolds/tangent_and_cotangent_bundles#def7)) holomorphic 범주에서 반복한 것이다. 국소좌표에서 $\partial/\partial z_j$의 쌍대 기저가 $\dd{z_j}$이고 $\partial/\partial \bar{z}_j$의 쌍대 기저가 $\dd{\bar{z}_j}$이며,
 
 $$
-dz_j = dx_j + i\, dy_j, \qquad d\bar{z}_j = dx_j - i\, dy_j
+\dd{z_j} = \dd{x_j} + i\dd{y_j}, \qquad \dd{\bar{z}_j} = \dd{x_j} - i\dd{y_j}
 $$
 
-이다. Holomorphic 1-form은 국소적으로 $\sum_j f_j\, dz_j$ 꼴로 적히되 계수 $f_j$가 holomorphic인 형식이다. $d\bar{z}_j$ 항이 없다는 점이 핵심이며, 이는 holomorphicity가 antiholomorphic 방향의 부재로 표현된다는 [정의 1](#def1) 직후의 Cauchy–Riemann 조건과 정확히 같은 내용이다. $\Omega^1_{\mathrm{hol}}$을 비롯한 holomorphic forms의 미분과 cohomology는 다음 글들에서 본격적으로 다룬다.
+이다. Holomorphic 1-form은 국소적으로 $\sum_j f_j\dd{z_j}$ 꼴로 적히되 계수 $f_j$가 holomorphic인 형식이다. $\dd{\bar{z}_j}$ 항이 없다는 점이 핵심이며, 이는 holomorphicity가 antiholomorphic 방향의 부재로 표현된다는 [정의 1](#def1) 직후의 Cauchy–Riemann 조건과 정확히 같은 내용이다. $\Omega^1_{\mathrm{hol}}$을 비롯한 holomorphic forms의 미분과 cohomology는 다음 글들에서 본격적으로 다룬다.
 
 ## 콤팩트 복소다양체와 최대원리
 

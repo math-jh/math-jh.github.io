@@ -227,9 +227,9 @@ $$e^z = \sum_{n=0}^{\infty} \frac{z^n}{n!}, \qquad \cos z = \sum_{n=0}^{\infty} 
 
 세 급수는 모두 수렴반지름이 $\infty$이다. 가령 $e^z$의 계수는 $a_n = 1/n!$이고 $\lvert a_n\rvert^{1/n} = (n!)^{-1/n} \rightarrow 0$이므로 수렴반지름이 $\infty$이며, 따라서 $e^z$는 entire function이다. 같은 이유로 $\cos z$, $\sin z$도 entire function이다. 정리 9의 항별미분을 적용하면 익숙한 도함수 공식이 그대로 따라 나온다. 곧
 
-$$\frac{d}{dz}e^z = \sum_{n=1}^{\infty} \frac{n z^{n-1}}{n!} = \sum_{n=1}^{\infty} \frac{z^{n-1}}{(n-1)!} = e^z$$
+$$\frac{d}{\dd{z}}e^z = \sum_{n=1}^{\infty} \frac{n z^{n-1}}{n!} = \sum_{n=1}^{\infty} \frac{z^{n-1}}{(n-1)!} = e^z$$
 
-이고, 마찬가지로 항별미분하면 $\dfrac{d}{dz}\sin z = \cos z$, $\dfrac{d}{dz}\cos z = -\sin z$이다. 또 급수를 직접 비교하면 모든 복소수 $z$에 대해 *Euler 공식<sub>Euler's formula</sub>*
+이고, 마찬가지로 항별미분하면 $\dfrac{d}{\dd{z}}\sin z = \cos z$, $\dfrac{d}{\dd{z}}\cos z = -\sin z$이다. 또 급수를 직접 비교하면 모든 복소수 $z$에 대해 *Euler 공식<sub>Euler's formula</sub>*
 
 $$e^{iz} = \cos z + i\sin z$$
 

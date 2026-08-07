@@ -45,7 +45,7 @@ Then there is a natural projection map $\pi:TM\rightarrow M$. To regard $TM$ as 
 
 First, let us define a coordinate system on $TM$. For an arbitrary coordinate system $(U,\varphi)$, define the map $\tilde{\varphi}:\pi^{-1}(U)\rightarrow\mathbb{R}^m\times\mathbb{R}^m$ by the formula
 
-$$\tilde{\varphi}(v)=\bigl(x^1(\pi(v)), \ldots, x^m(\pi(v)), dx^1(v),\ldots, dx^m(v)\bigr)$$
+$$\tilde{\varphi}(v)=\bigl(x^1(\pi(v)), \ldots, x^m(\pi(v)), \dd{x}^1(v),\ldots, \dd{x}^m(v)\bigr)$$
 
 Then $\tilde{\varphi}$ is a bijection from $\pi^{-1}(U)$ onto the open subset $\varphi(U)\times\mathbb{R}^m$ of $\mathbb{R}^{2m}$.
 
@@ -55,11 +55,11 @@ $$\begin{aligned}(\tilde{\psi}\circ\tilde{\varphi}^{-1})(p^1, \ldots, p^m, v^1, 
 
 Writing $v=\sum v^i\frac{\partial}{\partial x^i}$ here, the right-hand side can simply be written as
 
-$$\left((\psi\circ\varphi^{-1})(p), dy^1(v), \ldots, dy^m(v)\right)$$
+$$\left((\psi\circ\varphi^{-1})(p), \dd{y}^1(v), \ldots, \dd{y}^m(v)\right)$$
 
 Now for arbitrary $j$ we have
 
-$$dy^j\left(\sum v^i\frac{\partial}{\partial x^i}\bigg\vert_{\varphi^{-1}(p)}\right)=\sum_{i=1}^m v^i\frac{\partial y^j}{\partial x^i}\bigg\vert_{\varphi^{-1}(p)}$$
+$$\dd{y}^j\left(\sum v^i\frac{\partial}{\partial x^i}\bigg\vert_{\varphi^{-1}(p)}\right)=\sum_{i=1}^m v^i\frac{\partial y^j}{\partial x^i}\bigg\vert_{\varphi^{-1}(p)}$$
 
 Therefore, since each component of the transition map $\tilde{\psi}\circ\tilde{\varphi}^{-1}$ above is $C^\infty$, the map $\tilde{\psi}\circ\tilde{\varphi}^{-1}$ itself is also $C^\infty$.
 
@@ -71,7 +71,7 @@ as a basis. Taking $W=\mathbb{R}^{2m}$, we can check that the $\pi^{-1}(U)$ are 
 
 What remains is the local trivialization on $TM$. For an arbitrary coordinate system $(U,\varphi)$, define $\phi:\pi^{-1}(U)\rightarrow U\times\mathbb{R}^m$ this time by the formula
 
-$$v\vert_p\mapsto (p, dx^1(v),\ldots, dx^m(v))$$
+$$v\vert_p\mapsto (p, \dd{x}^1(v),\ldots, \dd{x}^m(v))$$
 
 That $\phi$ is an isomorphism between vector spaces on each fixed fiber $\pi^{-1}(p)$ is obvious, and it is also obvious that for any $v_x$ we have $(\pi\circ\phi)(x,v)=x$. That $\phi$ is a diffeomorphism follows from
 

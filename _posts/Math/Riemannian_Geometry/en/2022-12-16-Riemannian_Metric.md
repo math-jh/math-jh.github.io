@@ -36,7 +36,7 @@ As observed above, if $g$ is a Riemannian metric, then at each point $p$ the map
 
 In particular, if we take a coordinate system $(U,(x^i))$ in a neighborhood of a point $p$, then we can express $g$ in the form
 
-$$g=\sum_{i,j=1}^ng_{ij}dx^i\otimes dx^j$$
+$$g=\sum_{i,j=1}^ng_{ij}\dd{x}^i\otimes \dd{x}^j$$
 
 and $g$ is a Riemannian metric if and only if the $n\times n$ matrix $(g_{ij})$ is symmetric and positive-definite.
 
@@ -60,13 +60,13 @@ $$X=\sum_{i=1}^n X^i\frac{\partial}{\partial x^i},\quad Y=\sum_{i=1}^n Y^i\frac{
 
 we have
 
-$$\tilde{g}(X)(Y)=\sum_{i,j=1}^ng_{ij}dx^i(X)\otimes dx^j(Y)=\sum_{i,j=1}^ng_{ij}X^iY^j$$
+$$\tilde{g}(X)(Y)=\sum_{i,j=1}^ng_{ij}\dd{x}^i(X)\otimes \dd{x}^j(Y)=\sum_{i,j=1}^ng_{ij}X^iY^j$$
 
 Substituting $\partial/\partial x^j$ for $Y$, we see that $\tilde{g}(X)$ is given by
 
-$$\tilde{g}(X)=\sum_{i,j=1}^n g_{ij}X^idx^j$$
+$$\tilde{g}(X)=\sum_{i,j=1}^n g_{ij}X^i\dd{x}^j$$
 
-We sometimes abbreviate $\sum_{i=1}^ng_{ij}X^i$ as $X_j$; the above formula then becomes $\tilde{g}(X)=\sum_{j=1}^nX_j dx^j$, so the index of $X^i$ appears to have been lowered. For this reason, with a slight notational convention the covector field $\tilde{g}(X)$ is denoted by $X^\flat$.
+We sometimes abbreviate $\sum_{i=1}^ng_{ij}X^i$ as $X_j$; the above formula then becomes $\tilde{g}(X)=\sum_{j=1}^nX_j \dd{x}^j$, so the index of $X^i$ appears to have been lowered. For this reason, with a slight notational convention the covector field $\tilde{g}(X)$ is denoted by $X^\flat$.
 
 Of course, since (1) is an isomorphism, given any covector field $\omega$ we can also obtain the corresponding vector field. This vector field is (naturally) denoted by $\omega^\sharp$, and the two maps taken together are called the *musical isomorphism*. They are inverses of each other.
 
@@ -77,7 +77,7 @@ A Riemannian metric finally allows us to do geometry on a manifold: measuring di
 ::: Definition 2
 Let $(M,g)$ be a Riemannian manifold and let $\gamma:[a,b]\rightarrow M$ be a curve defined on it. Then the *length* $\length(\gamma)$ of $\gamma$ is defined by
 
-$$\length(\gamma)=\int_a^b\lVert\dot{\gamma}(t)\rVert_g\mathop{dt}$$
+$$\length(\gamma)=\int_a^b\lVert\dot{\gamma}(t)\rVert_g\dd{t}$$
 :::
 
 The length of a curve defined in this way is independent of the parametrization. Moreover, via the above definition we can make $M$ into a metric space by setting
@@ -88,7 +88,7 @@ $$d_g(p,q)=\inf_{\gamma\text{ connecting }p,q}\length(\gamma)$$
 
 Finally, we can define the notion of a *normal bundle*. Let $M$ be a Riemannian manifold and let $S$ be a submanifold. Restricting $g$ to $S$ yields a Riemannian metric $\iota^\ast g$ on $S$. The inclusion $\iota$ induces
 
-$$d\iota(T_pS)\subseteq T_pM$$
+$$\dd{\iota}(T_pS)\subseteq T_pM$$
 
 so we may regard $T_pS$ as a subspace of $T_pM$, and hence $T_pS$ is a direct summand of $T_pM$. In general there is no canonical way to choose a complementary subspace of $T_pS$, but because $T_pM$ is now an inner product space we can define it as $(T_pS)^\perp$. The vector bundle over $\iota(S)$ with the fibers $(T_pS)^\perp$ attached at each point $p$ is called the *normal bundle* of $S$ and is denoted by $NS$.
 

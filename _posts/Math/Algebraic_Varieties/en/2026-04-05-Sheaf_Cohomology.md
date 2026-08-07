@@ -99,7 +99,7 @@ $$\check{C}^p(\mathcal{U}, \mathcal{F}) = \prod_{i_0 < \cdots < i_p} \mathcal{F}
 
 The *coboundary map* $d: \check{C}^p \rightarrow \check{C}^{p+1}$ is defined by the formula
 
-$$(d\alpha)_{i_0 \cdots i_{p+1}} = \sum_{k=0}^{p+1} (-1)^k \alpha_{i_0 \cdots \hat{i_k} \cdots i_{p+1}}\vert_{U_{i_0}\cap \cdots\cap U_{i_{p+1}}},$$
+$$(\dd{\alpha})_{i_0 \cdots i_{p+1}} = \sum_{k=0}^{p+1} (-1)^k \alpha_{i_0 \cdots \hat{i_k} \cdots i_{p+1}}\vert_{U_{i_0}\cap \cdots\cap U_{i_{p+1}}},$$
 
 where $\hat{i_k}$ means omitting the index $i_k$.
 :::
@@ -117,7 +117,7 @@ We said earlier that Čech cohomology measures the failure of gluing, and this i
 ::: Example 5 ($p = 0$)
 By definition of the Čech complex, $\check{C}^0(\mathcal{U}, \mathcal{F}) = \prod_i \mathcal{F}(U_i)$, and the coboundary map from $\check{C}^0$ to $\check{C}^1$ is
 
-$$(ds)_{ij} = s_j\vert_{U_i \cap U_j} - s_i\vert_{U_i \cap U_j}.$$
+$$(\dd{s})_{ij} = s_j\vert_{U_i \cap U_j} - s_i\vert_{U_i \cap U_j}.$$
 
 Therefore
 

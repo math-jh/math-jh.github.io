@@ -58,9 +58,9 @@ $$g_J(v, w) := \omega(v, J w)$$
 ::: 정의 4
 Almost complex manifold $(M, J)$와 Riemann surface $(\Sigma, j)$에 대해, smooth map $u: \Sigma \rightarrow M$이 *J-holomorphic<sub>$J$-정칙</sub>* (또는 *pseudoholomorphic<sub>유사정칙</sub>*) 이라 함은 nonlinear *Cauchy-Riemann equation<sub>코시-리만 방정식</sub>*
 
-$$\bar\partial_J u := \frac{1}{2}\big(du + J \circ du \circ j\big) = 0$$
+$$\bar\partial_J u := \frac{1}{2}\big(\dd{u} + J \circ \dd{u} \circ j\big) = 0$$
 
-을 만족함을 말한다. 등가적으로, $u$의 differential $du: T\Sigma \rightarrow TM$이 $J$-linear, 즉 $du \circ j = J \circ du$를 만족함을 말한다.
+을 만족함을 말한다. 등가적으로, $u$의 differential $\dd{u}: T\Sigma \rightarrow TM$이 $J$-linear, 즉 $\dd{u} \circ j = J \circ \dd{u}$를 만족함을 말한다.
 :::
 
 Local coordinate $z = s + it$를 $\Sigma$에 도입하고 $u = u(s, t)$로 쓰면 Cauchy-Riemann equation은
@@ -76,9 +76,9 @@ J-holomorphic curve의 분석에서 핵심적인 양은 *energy<sub>에너지</s
 ::: 정의 5
 Smooth map $u: \Sigma \rightarrow M$의 *energy*는
 
-$$E(u) := \frac{1}{2}\int_\Sigma \lvert du \rvert^2_J\, d\mathrm{vol}_\Sigma$$
+$$E(u) := \frac{1}{2}\int_\Sigma \lvert \dd{u} \rvert^2_J\, d\mathrm{vol}_\Sigma$$
 
-으로 정의된다. 여기서 $\lvert du \rvert_J$는 $g_J$로 유도되는 Hilbert-Schmidt norm이고, $d\mathrm{vol}_\Sigma$는 어떤 적절한 metric에 대한 면적 form이다.
+으로 정의된다. 여기서 $\lvert \dd{u} \rvert_J$는 $g_J$로 유도되는 Hilbert-Schmidt norm이고, $d\mathrm{vol}_\Sigma$는 어떤 적절한 metric에 대한 면적 form이다.
 :::
 
 J-holomorphic curve의 결정적 성질은 energy가 *topological data*만으로 결정된다는 것이다.
@@ -94,11 +94,11 @@ $$E(u) = \int_\Sigma u^\ast \omega = \omega \cdot u_\ast [\Sigma]$$
 ::: 증명
 Compatibility $\omega(Jv, Jw) = \omega(v, w)$를 사용하면 임의의 벡터 $v \in T_p \Sigma$에 대해
 
-$$\lvert du(v) \rvert^2_J = \omega(du(v), J du(v)) = \omega(du(v), du(jv))$$
+$$\lvert \dd{u}(v) \rvert^2_J = \omega(\dd{u}(v), J \dd{u}(v)) = \omega(\dd{u}(v), \dd{u}(jv))$$
 
-이며, 마지막 등식에서 $J \circ du = du \circ j$ (J-holomorphicity)을 사용하였다. $\Sigma$의 local orthonormal frame $\{ e_1, e_2 = je_1 \}$를 잡으면
+이며, 마지막 등식에서 $J \circ \dd{u} = \dd{u} \circ j$ (J-holomorphicity)을 사용하였다. $\Sigma$의 local orthonormal frame $\{ e_1, e_2 = je_1 \}$를 잡으면
 
-$$\lvert du \rvert^2_J = \lvert du(e_1) \rvert^2_J + \lvert du(e_2) \rvert^2_J = 2\,\omega(du(e_1), du(e_2)) = 2\, u^\ast \omega(e_1, e_2)$$
+$$\lvert \dd{u} \rvert^2_J = \lvert \dd{u}(e_1) \rvert^2_J + \lvert \dd{u}(e_2) \rvert^2_J = 2\,\omega(\dd{u}(e_1), \dd{u}(e_2)) = 2\, u^\ast \omega(e_1, e_2)$$
 
 이고, $d\mathrm{vol}_\Sigma(e_1, e_2) = 1$이므로 양변을 $d\mathrm{vol}_\Sigma$로 적분하면
 

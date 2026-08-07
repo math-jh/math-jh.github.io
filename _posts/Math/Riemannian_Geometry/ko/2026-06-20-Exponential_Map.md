@@ -82,7 +82,7 @@ $$(d\exp_p)_0 = \id_{T_p M}$$
 ::: 증명
 임의의 $v \in T_p M \cong T_0(T_p M)$을 잡자. 동일시에 따라 $v$는 곡선 $\tau(t) := tv$ (값이 $T_p M$ 안에 있는 곡선)의 $t = 0$에서의 속도벡터로 표현된다. 미분의 정의에 의해, $(d\exp_p)_0(v)$는 합성곡선 $t \mapsto \exp_p(\tau(t)) = \exp_p(tv)$의 $t = 0$에서의 속도벡터이다. [보조정리 2](#lem2)에 의해 $\exp_p(tv) = \gamma_v(t)$이므로, 이 합성곡선은 측지선 $\gamma_v$ 자신이고, 따라서
 
-$$(d\exp_p)_0(v) = \left.\frac{d}{dt}\right\vert_{t = 0} \exp_p(tv) = \left.\frac{d}{dt}\right\vert_{t = 0} \gamma_v(t) = \dot\gamma_v(0) = v$$
+$$(d\exp_p)_0(v) = \left.\frac{d}{\dd{t}}\right\vert_{t = 0} \exp_p(tv) = \left.\frac{d}{\dd{t}}\right\vert_{t = 0} \gamma_v(t) = \dot\gamma_v(0) = v$$
 
 를 얻는다. $v$가 임의였으므로 $(d\exp_p)_0 = \id_{T_p M}$이다.
 :::
@@ -122,7 +122,7 @@ $p$를 중심으로 하는 normal coordinate $(x^i)$에서 다음이 성립한�
 ::: 증명
 (1) $v = \sum_i v^i E_i \in V$에 대해 [보조정리 2](#lem2)에 의해 $\exp_p(tv) = \gamma_v(t)$이고, $tv = \sum_i (t v^i) E_i$의 normal coordinate는 정의상 $(t v^1, \ldots, t v^n)$이다. 따라서 $\varphi(\gamma_v(t)) = (t v^1, \ldots, t v^n)$이 되어, $\gamma_v$는 좌표상에서 원점을 지나는 직선이다.
 
-(2) Normal coordinate의 좌표기저 vector $\partial_i\vert_p$는 $\varphi$의 미분 $d\varphi_p$의 역, 즉 $(d\varphi_p)^{-1}(e_i)$이다. 한편 $\varphi = E^{-1} \circ (\exp_p\vert_V)^{-1}$이고 [명제 4](#prop4)에서 $(d\exp_p)_0 = \id$이므로, $p$에서의 미분은 $d\varphi_p = E^{-1} \circ (d\exp_p)_0^{-1} = E^{-1}$이며, 따라서 $\partial_i\vert_p = E(e_i) = E_i$이다. $(E_i)$가 $g_p$에 대한 orthonormal basis이므로
+(2) Normal coordinate의 좌표기저 vector $\partial_i\vert_p$는 $\varphi$의 미분 $\dd{\varphi_p}$의 역, 즉 $(\dd{\varphi_p})^{-1}(e_i)$이다. 한편 $\varphi = E^{-1} \circ (\exp_p\vert_V)^{-1}$이고 [명제 4](#prop4)에서 $(d\exp_p)_0 = \id$이므로, $p$에서의 미분은 $\dd{\varphi_p} = E^{-1} \circ (d\exp_p)_0^{-1} = E^{-1}$이며, 따라서 $\partial_i\vert_p = E(e_i) = E_i$이다. $(E_i)$가 $g_p$에 대한 orthonormal basis이므로
 
 $$g_{ij}(p) = g_p(\partial_i\vert_p, \partial_j\vert_p) = g_p(E_i, E_j) = \delta_{ij}$$
 
@@ -164,7 +164,7 @@ $w$를 $v$에 평행한 성분과 수직인 성분으로 나누면 양변이 모
 
 먼저 $w = v$인 경우. [명제 4](#prop4)의 증명과 같이 곡선 $t \mapsto v + tv = (1 + t)v$를 생각하면, [보조정리 2](#lem2)에 의해 $\exp_p((1 + t)v) = \gamma_v(1 + t)$이므로
 
-$$(d\exp_p)_v(v) = \left.\frac{d}{dt}\right\vert_{t = 0} \gamma_v(1 + t) = \dot\gamma_v(1)$$
+$$(d\exp_p)_v(v) = \left.\frac{d}{\dd{t}}\right\vert_{t = 0} \gamma_v(1 + t) = \dot\gamma_v(1)$$
 
 이다. 측지선의 속력은 [§측지선, ⁋명제 6](/ko/math/riemannian_geometry/geodesics#prop6)에 의해 상수이고 $\dot\gamma_v(0) = v$이므로, $\lVert \dot\gamma_v(1) \rVert = \lVert v \rVert$이다. 따라서
 
@@ -172,7 +172,7 @@ $$\langle (d\exp_p)_v(v), (d\exp_p)_v(v) \rangle = \lVert \dot\gamma_v(1) \rVert
 
 가 되어 $w = v$인 경우가 성립한다.
 
-다음으로 $\langle v, w \rangle_p = 0$인 경우. $w$를 실현하는 변분을 잡는다. $T_p M$ 안에서 $s \mapsto v(s)$를 $v(0) = v$, $\frac{d}{ds}\big\vert_{s=0} v(s) = w$이고 $\lVert v(s) \rVert_g \equiv \lVert v \rVert_g$인 곡선으로 택한다 ($\langle v, w\rangle_p = 0$이므로 $v$ 중심 구면 위의 곡선으로 가능하다). 이제 변분
+다음으로 $\langle v, w \rangle_p = 0$인 경우. $w$를 실현하는 변분을 잡는다. $T_p M$ 안에서 $s \mapsto v(s)$를 $v(0) = v$, $\frac{d}{\dd{s}}\big\vert_{s=0} v(s) = w$이고 $\lVert v(s) \rVert_g \equiv \lVert v \rVert_g$인 곡선으로 택한다 ($\langle v, w\rangle_p = 0$이므로 $v$ 중심 구면 위의 곡선으로 가능하다). 이제 변분
 
 $$\Gamma(s, t) := \exp_p\bigl(t\, v(s)\bigr)$$
 
@@ -184,13 +184,13 @@ $$J(t) := \left.\frac{\partial \Gamma}{\partial s}\right\vert_{s = 0}(t) = (d\ex
 
 함수 $f(t) := \langle J(t), \dot\gamma_v(t) \rangle$를 생각하자. Metric-compatibility에 의해
 
-$$\frac{d}{dt} f(t) = \langle D_t J,\, \dot\gamma_v \rangle + \langle J,\, D_t \dot\gamma_v \rangle$$
+$$\frac{d}{\dd{t}} f(t) = \langle D_t J,\, \dot\gamma_v \rangle + \langle J,\, D_t \dot\gamma_v \rangle$$
 
 이고, $\gamma_v$가 측지선이므로 둘째 항은 $0$이다. 첫째 항을 위해 대칭 보조정리 $D_t \partial_s \Gamma = D_s \partial_t \Gamma$ ([§측지선, §§에너지의 제1변분](/ko/math/riemannian_geometry/geodesics#에너지의-제1변분)에서 사용한 것) 를 적용하면 $D_t J = D_t \partial_s \Gamma\vert_{s=0} = D_s \partial_t \Gamma\vert_{s=0}$이고, 따라서
 
 $$\langle D_t J, \dot\gamma_v \rangle = \langle D_s \partial_t \Gamma, \partial_t \Gamma \rangle\big\vert_{s = 0} = \frac{1}{2} \left.\frac{\partial}{\partial s}\right\vert_{s = 0} \langle \partial_t \Gamma, \partial_t \Gamma \rangle$$
 
-이다. 그런데 각 $s$에 대해 $\partial_t \Gamma(s, t) = \dot\gamma_{v(s)}(t)$의 크기는 측지선의 속력이라 상수이고 그 값은 $\lVert \dot\gamma_{v(s)}(0) \rVert = \lVert v(s) \rVert = \lVert v \rVert$로 $s$에 무관하다. 즉 $\langle \partial_t \Gamma, \partial_t \Gamma \rangle \equiv \lVert v \rVert^2$은 $s$에 대해 상수이므로 그 $s$-미분이 $0$이고, 따라서 $\frac{d}{dt} f(t) = 0$이다.
+이다. 그런데 각 $s$에 대해 $\partial_t \Gamma(s, t) = \dot\gamma_{v(s)}(t)$의 크기는 측지선의 속력이라 상수이고 그 값은 $\lVert \dot\gamma_{v(s)}(0) \rVert = \lVert v(s) \rVert = \lVert v \rVert$로 $s$에 무관하다. 즉 $\langle \partial_t \Gamma, \partial_t \Gamma \rangle \equiv \lVert v \rVert^2$은 $s$에 대해 상수이므로 그 $s$-미분이 $0$이고, 따라서 $\frac{d}{\dd{t}} f(t) = 0$이다.
 
 이로써 $f$는 상수이다. 한편 $J(0) = (d\exp_p)_0(0) = 0$이므로 $f(0) = \langle J(0), \dot\gamma_v(0) \rangle = 0$이고, 따라서 $f \equiv 0$이다. 특히 $f(1) = \langle J(1), \dot\gamma_v(1) \rangle = \langle (d\exp_p)_v(w), (d\exp_p)_v(v) \rangle = 0 = \langle v, w \rangle_p$를 얻는다.
 :::

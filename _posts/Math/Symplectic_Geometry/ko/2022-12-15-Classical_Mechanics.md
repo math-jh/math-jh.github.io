@@ -53,7 +53,7 @@ weight: 1
 
 > 물체가 $x_0$에서 $x_1$로 움직일 때, 이 물체는 다음의 *액션*의 극값 $z(t)=(x(t),y(t))$ ($t_0\leq t\leq t_1$)를 따라 움직인다.
 > 
-> $\mathcal{A}_H(z)=\int_{t_0}^{t_1}\langle y,\dot{x}\rangle-H(z)\mathop{dt}$
+> $\mathcal{A}_H(z)=\int_{t_0}^{t_1}\langle y,\dot{x}\rangle-H(z)\dd{t}$
 
 식에서 새로 도입한 $H$는 *Hamiltonian<sub>해밀토니안</sub>*을 의미하며, 앞으로 할 이야기에서는 그냥 에너지라 생각해도 무방하다. 이 원리는 $H$가 시간에 의존할 경우에도 국소적으로는 성립하며, 이 때는 $H$를 $H_t$로 바꾸어 쓰면 된다. 수학적으로 이러한 문제를 어떻게 다루는지는 아주 잘 알려져있다.
 
@@ -67,15 +67,15 @@ $$\dot{x}=\frac{\partial H_t}{\partial y},\quad \dot{y}=-\frac{\partial H_t}{\pa
 ::: 증명
 이를 증명하기 위해, 위치조건 $x_s(t_0)=x_0$, $x_s(t_1)=x_1$을 만족하는 경로들의 1-parameter family $(z_s)=(x_s,y_s)$가 주어졌다 하고, $z_0=z$라 하자. 그럼
 
-$$\begin{aligned}\frac{\partial}{\partial s}\bigg\vert_{s=0}\mathcal{A}_H(z_s)&=\frac{\partial}{\partial s}\bigg\vert_{s=0}\int_{t_0}^{t_1}\langle y_s,\dot{x}_s\rangle-H_t(x_s,y_s)\mathop{dt}\\&=\int_{t_0}^{t_1}\frac{\partial}{\partial s}\bigg\vert_{s=0}\left(\langle y_s,\dot{x}_s\rangle-H_t(x_s,y_s)\right)\mathop{dt}\\&=\int_{t_0}^{t_1}\bigl\langle\partial_s y_s\vert_0,\dot{x}\bigr\rangle+\bigl\langle y,\partial_s\dot{x}\vert_0\bigr\rangle-\bigl\langle\partial_sx_s\vert_0,\partial_x H_t\bigr\rangle-\bigl\langle\partial_sy_s\vert_0,\partial_yH_t\bigr\rangle\mathop{dt}\end{aligned}$$
+$$\begin{aligned}\frac{\partial}{\partial s}\bigg\vert_{s=0}\mathcal{A}_H(z_s)&=\frac{\partial}{\partial s}\bigg\vert_{s=0}\int_{t_0}^{t_1}\langle y_s,\dot{x}_s\rangle-H_t(x_s,y_s)\dd{t}\\&=\int_{t_0}^{t_1}\frac{\partial}{\partial s}\bigg\vert_{s=0}\left(\langle y_s,\dot{x}_s\rangle-H_t(x_s,y_s)\right)\dd{t}\\&=\int_{t_0}^{t_1}\bigl\langle\partial_s y_s\vert_0,\dot{x}\bigr\rangle+\bigl\langle y,\partial_s\dot{x}\vert_0\bigr\rangle-\bigl\langle\partial_sx_s\vert_0,\partial_x H_t\bigr\rangle-\bigl\langle\partial_sy_s\vert_0,\partial_yH_t\bigr\rangle\dd{t}\end{aligned}$$
 
 이다. 이제 부분적분
 
-$$\int_{t_0}^{t_1}\langle y,\partial_s\dot{x}_s\vert_0\rangle\mathop{dt}=\bigl[\langle y,\partial_sx_s\vert_0\rangle\bigr]_{t_0}^{t_1}-\int_{t_0}^{t_1}\langle\dot{y},\partial_sx_s\vert_0\rangle\mathop{dt}$$
+$$\int_{t_0}^{t_1}\langle y,\partial_s\dot{x}_s\vert_0\rangle\dd{t}=\bigl[\langle y,\partial_sx_s\vert_0\rangle\bigr]_{t_0}^{t_1}-\int_{t_0}^{t_1}\langle\dot{y},\partial_sx_s\vert_0\rangle\dd{t}$$
 
 을 생각하면, 우변의 첫째 항은 위치조건 $x_s(t_0)=x_0$, $x_s(t_1)=x_1$으로부터 $0$이 된다. 이를 앞선 식에 대입한 후 정리하면,
 
-$$\frac{\partial}{\partial s}\bigg\vert_{s=0}\mathcal{A}_H(z)=\int_{t_0}^{t_1}\langle\partial_sy_s\vert_0,\dot{x}-\partial_yH_t\rangle\mathop{dt}-\int_{t_0}^{t_1}\langle\partial_sx_s\vert_0,\dot{y}+\partial_xH_t\rangle\mathop{dt}$$
+$$\frac{\partial}{\partial s}\bigg\vert_{s=0}\mathcal{A}_H(z)=\int_{t_0}^{t_1}\langle\partial_sy_s\vert_0,\dot{x}-\partial_yH_t\rangle\dd{t}-\int_{t_0}^{t_1}\langle\partial_sx_s\vert_0,\dot{y}+\partial_xH_t\rangle\dd{t}$$
 
 이고, $\partial_sx_s\vert_0$과 $\partial_sy_s\vert_0$은 임의로 변할 수 있으므로 $z$가 $\mathcal{A}_H$의 극값이 되는 것은 두 식
 
@@ -112,21 +112,21 @@ $$X_H=-J_0\nabla H(z)$$
 
 위의 과정을 요약하자면, Hamiltonian $H$는 다음의 식
 
-$$dH=\langle-J_0\nabla H(z), -\rangle$$
+$$\dd{H}=\langle-J_0\nabla H(z), -\rangle$$
 
 을 통해 물체의 운동을 기술한다. 이제 $\mathbb{R}^{2n}$ 위에 $2$-form
 
 $$\omega_0(-,-):=\langle J_0-, -\rangle$$
 
-을 정의하면, 위의 식은 함수 $f$의 gradient $\nabla f$가 $df=\langle \nabla f,-\rangle$을 정의하는 것과 유사하게
+을 정의하면, 위의 식은 함수 $f$의 gradient $\nabla f$가 $\dd{f}=\langle \nabla f,-\rangle$을 정의하는 것과 유사하게
 
-$$dH=\omega_0(X_H, -)$$
+$$\dd{H}=\omega_0(X_H, -)$$
 
 으로 적을 수 있다. $\omega_0$는 $\mathbb{R}^{2n}$ 위에 정의된 *canonical symplectic form*이라 부르고, 이러한 관점에서 $X_H$를 *symplectic gradient*라고 부르기도 한다. 
 
 일반적인 $\mathbb{R}^{2n}$의 좌표계에서 
 
-$$\langle-,-\rangle=\sum_{j=1}^n dx^j\otimes dx^j+\sum_{j=1}^n dy^j\otimes dy^j$$
+$$\langle-,-\rangle=\sum_{j=1}^n \dd{x}^j\otimes \dd{x}^j+\sum_{j=1}^n \dd{y}^j\otimes \dd{y}^j$$
 
 이므로, 식 (1)을 사용하면 $\omega_0$을 각각의 basis들 $\partial/\partial x^j,\partial/\partial y^j$에서 계산할 수 있다. 예컨대
 
@@ -134,7 +134,7 @@ $$(\omega_0)_p\left(\frac{\partial}{\partial x^j}\bigg\vert_p,\frac{\partial}{\p
 
 가 되며, 나머지 basis들에 대하여도 계산해보면 $\omega_0$이 standard coordinate 상에서는
 
-$$\omega_0=\sum_{j=1}^n dx^j\wedge dy^j$$
+$$\omega_0=\sum_{j=1}^n \dd{x}^j\wedge \dd{y}^j$$
 
 와 같이 나타난다는 것을 확인할 수 있다. 
 

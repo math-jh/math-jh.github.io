@@ -62,9 +62,9 @@ $$\Omega_{A_{(\overline{\mathbb{K}})}/\overline{\mathbb{K}}}\cong \Omega_{A/\mat
 
 우선 $A$가 diagonalizable이라 가정하면, $A$는 [§에탈대수, ⁋명제 6](/ko/math/field_theory/etale_algebras#prop6)의 둘째 조건에 의하여 idempotent들로 생성된다. 그런데 임의의 idempotent $e$에 대하여, Leibniz rule을 생각하면
 
-$$d(e)=d(e^2)=ed(e)+ed(e)=2ed(e)$$
+$$\dd{(e)}=\dd{(e^2)}=e\dd{(e)}+e\dd{(e)}=2e\dd{(e)}$$
 
-이고 양 변에 $e$를 곱하면 $ed(e)=0$이어야 하므로, 이를 다시 위에 대입하면 $de=0$이어야 함을 안다. 한편 명시적으로 $\Omega_{A/\mathbb{K}}$는 이러한 원소들 $de$로 생성되는 free module에 적절한 relation들로 자른 것으로 나타나므로 ([\[다중선형대수학\] §미분가군, ⁋예시 10](/ko/math/multilinear_algebra/differential_modules#ex10)) 이로부터 $\Omega_{A/\mathbb{K}}=0$이어야 함을 안다. 
+이고 양 변에 $e$를 곱하면 $e\dd{(e)}=0$이어야 하므로, 이를 다시 위에 대입하면 $\dd{e}=0$이어야 함을 안다. 한편 명시적으로 $\Omega_{A/\mathbb{K}}$는 이러한 원소들 $\dd{e}$로 생성되는 free module에 적절한 relation들로 자른 것으로 나타나므로 ([\[다중선형대수학\] §미분가군, ⁋예시 10](/ko/math/multilinear_algebra/differential_modules#ex10)) 이로부터 $\Omega_{A/\mathbb{K}}=0$이어야 함을 안다. 
 
 이제 거꾸로 $\Omega_{A/\mathbb{K}}=0$이라 가정하고 $A$가 diagonalizable임을 보이자. $A$의 degree에 대한 귀납법으로 진행하며, degree $1$인 경우는 자명하다. 이제 일반적인 경우에 $A$의 maximal ideal $\mathfrak{m}$을 하나 택하자. 그럼 [보조정리 1](#lem1)에 의하여 $\mathfrak{m}=\mathfrak{m}^2$이고, 따라서 [보조정리 2](#lem2)를 적용하면 $\mathfrak{m}=Ae$이도록 하는 idempotent $e$를 찾을 수 있다. 한편, 이로부터 $A$를 $\mathfrak{a}=(1-e)A$와 $\mathfrak{m}$의 direct sum으로 쪼개놓으면  $\mathbb{K}$가 algebraically closed라는 가정으로부터 extension $A/\mathfrak{m}$이 degree $1$이어야 함을 안다. 즉, 이 direct sum을 
 
@@ -76,28 +76,28 @@ $$A\cong \mathfrak{a}\oplus\mathfrak{m}\cong \mathbb{K}\times A/\mathfrak{a}$$
 앞서 우리는 [§순수비분리확대체, ⁋예시 9](/ko/math/field_theory/purely_inseparable_extensions#ex9)에서 Galois 이론을 전개할 때 문제가 될 수 있는 상황을 살펴보았었는데, 이 예시를 바탕으로 [정리 3](#thm3)을 살펴보자. 
 
 ::: 예시 4
-좋은 경우는, [§순수비분리확대체](/ko/math/field_theory/purely_inseparable_extensions)의 서두에서 살펴보았듯, $\mathbb{Q}(\sqrt{2})/\mathbb{Q}$가 있다. 우리는 [\[다중선형대수학\] §미분가군, ⁋예시 10](/ko/math/multilinear_algebra/differential_modules#ex10)의 계산으로부터, $\Omega_{\mathbb{Q}[\x]/\mathbb{Q}}$는 $d\x$로 생성되는 free $\mathbb{Q}[\x]$-module임을 안다. 한편 $\mathbb{Q}[\x]$의 ideal $\mathfrak{I}=(\x^2-2)$를 생각하면 [\[다중선형대수학\] §미분가군, ⁋명제 14](/ko/math/multilinear_algebra/differential_modules#prop14)로부터 다음의 exact sequence
+좋은 경우는, [§순수비분리확대체](/ko/math/field_theory/purely_inseparable_extensions)의 서두에서 살펴보았듯, $\mathbb{Q}(\sqrt{2})/\mathbb{Q}$가 있다. 우리는 [\[다중선형대수학\] §미분가군, ⁋예시 10](/ko/math/multilinear_algebra/differential_modules#ex10)의 계산으로부터, $\Omega_{\mathbb{Q}[\x]/\mathbb{Q}}$는 $\dd{\x}$로 생성되는 free $\mathbb{Q}[\x]$-module임을 안다. 한편 $\mathbb{Q}[\x]$의 ideal $\mathfrak{I}=(\x^2-2)$를 생각하면 [\[다중선형대수학\] §미분가군, ⁋명제 14](/ko/math/multilinear_algebra/differential_modules#prop14)로부터 다음의 exact sequence
 
 $$\mathfrak{I}/\mathfrak{I}^2\overset{\overline{d}}{\longrightarrow}\Omega_{\mathbb{Q}[\x]/\mathbb{Q}}\otimes_\mathbb{Q}\mathbb{Q}(\sqrt{2})\overset{\Omega_0(u)}{\longrightarrow}\Omega_{\mathbb{Q}(\sqrt{2})/\mathbb{Q}}\longrightarrow 0$$
 
-로부터 $\Omega_{\mathbb{Q}(\sqrt{2})/\mathbb{Q}}$는 원소 $d(\sqrt{2})$로 생성되는 $\mathbb{Q}(\sqrt{2})$-module임을 안다. 그런데 다음의 계산
+로부터 $\Omega_{\mathbb{Q}(\sqrt{2})/\mathbb{Q}}$는 원소 $\dd{(\sqrt{2})}$로 생성되는 $\mathbb{Q}(\sqrt{2})$-module임을 안다. 그런데 다음의 계산
 
-$$0=d(2)=d((\sqrt{2})^2)=2\sqrt{2}d(\sqrt{2})$$
+$$0=\dd{(2)}=\dd{((\sqrt{2})^2)}=2\sqrt{2}\dd{(\sqrt{2})}$$
 
-와 $2\sqrt{2}$가 $\mathbb{Q}(\sqrt{2})$에서 invertible이라는 사실로부터 $d(\sqrt{2})=0$이어야 하고 따라서 $\Omega_{\mathbb{Q}(\sqrt{2})/\mathbb{Q}}=0$이어야 함을 안다. 
+와 $2\sqrt{2}$가 $\mathbb{Q}(\sqrt{2})$에서 invertible이라는 사실로부터 $\dd{(\sqrt{2})}=0$이어야 하고 따라서 $\Omega_{\mathbb{Q}(\sqrt{2})/\mathbb{Q}}=0$이어야 함을 안다. 
 
-반면 [§순수비분리확대체, ⁋예시 9](/ko/math/field_theory/purely_inseparable_extensions#ex9)에서 살펴본 $\mathbb{K}=\mathbb{F}_p(t)$의 algebraic extension $\mathbb{K}(t^{1/p})=\mathbb{K}[\x]/(\x^p-t)$에서는 위의 계산이 틀어지게 되는데, 위의 계산과 마찬가지로 $\Omega_{\mathbb{K}(t^{1/p})/\mathbb{K}}$는 $d(t^{1/p})$로 생성되는 $\mathbb{K}(t^{1/p})$-module이지만, 다음의 계산
+반면 [§순수비분리확대체, ⁋예시 9](/ko/math/field_theory/purely_inseparable_extensions#ex9)에서 살펴본 $\mathbb{K}=\mathbb{F}_p(t)$의 algebraic extension $\mathbb{K}(t^{1/p})=\mathbb{K}[\x]/(\x^p-t)$에서는 위의 계산이 틀어지게 되는데, 위의 계산과 마찬가지로 $\Omega_{\mathbb{K}(t^{1/p})/\mathbb{K}}$는 $\dd{(t^{1/p})}$로 생성되는 $\mathbb{K}(t^{1/p})$-module이지만, 다음의 계산
 
-$$0=d(t)=d((t^{1/p})^p)=p(t^{1/p})^{p-1}d(t^{1/p})$$
+$$0=\dd{(t)}=\dd{((t^{1/p})^p)}=p(t^{1/p})^{p-1}\dd{(t^{1/p})}$$
 
-은 $d(t^{1/p})=0$이라는 결과를 주지 못한다. 어차피 $\mathbb{K}(t^{1/p})$는 characteristic $p$이므로 $p(t^{1/p})^{p-1}$은 $0$이고, 따라서 위의 식은 $d(t^{1/p})$에 대한 어떠한 relation도 주지 않기 때문이다. 실제로, 명시적으로 임의의 field $\mathbb{K}$와 algebraic extension $\mathbb{K}(\alpha)=\mathbb{K}[\x]/(f)$를 생각하면
+은 $\dd{(t^{1/p})}=0$이라는 결과를 주지 못한다. 어차피 $\mathbb{K}(t^{1/p})$는 characteristic $p$이므로 $p(t^{1/p})^{p-1}$은 $0$이고, 따라서 위의 식은 $\dd{(t^{1/p})}$에 대한 어떠한 relation도 주지 않기 때문이다. 실제로, 명시적으로 임의의 field $\mathbb{K}$와 algebraic extension $\mathbb{K}(\alpha)=\mathbb{K}[\x]/(f)$를 생각하면
 
-$$\Omega_{(\mathbb{K}[\x]/(f))/\mathbb{K}}\cong\frac{\Omega_{\mathbb{K}[\x]/\mathbb{K}}\otimes_\mathbb{K}\mathbb{K}(\alpha)}{\mathfrak{I}/\mathfrak{I}^2}\cong\frac{ {\mathbb{K}[\x]\mathop{d\x}}\otimes\mathbb{K}[\x]/(f)}{(df)}\cong \frac{\mathbb{K}[\x]}{(f, f')}\mathop{d\x}$$
+$$\Omega_{(\mathbb{K}[\x]/(f))/\mathbb{K}}\cong\frac{\Omega_{\mathbb{K}[\x]/\mathbb{K}}\otimes_\mathbb{K}\mathbb{K}(\alpha)}{\mathfrak{I}/\mathfrak{I}^2}\cong\frac{ {\mathbb{K}[\x]\dd{\x}}\otimes\mathbb{K}[\x]/(f)}{(\dd{f})}\cong \frac{\mathbb{K}[\x]}{(f, f')}\dd{\x}$$
 
 이므로 이로부터 위의 두 계산이 따라나온다. 
 :::
 
-우리가 배제하고자 하는 경우는 정확히 minimal polynomial $f$가 중근을 갖는 경우, 즉 $df=0$인 경우이므로 étale algebra의 개념을 유용하게 사용할 수 있을 것이다. 곧 우리는 *separable extension*을 임의의 finite degree subextension이 étale인 field extension으로 정의할 것이다. ([정의 8](#def8)) 그럼 [예시 4](#ex4)에서 살펴봤듯 $\mathbb{Q}$의 임의의 algebraic extension은 separable extension이 된다. 더 나아가 우리는 perfect field의 임의의 algebraic extension은 separable인 것을 보일 것이다. ([명제 9](#prop9)) 이 과정에서 사용할 étale algebra의 성질들을 조금 더 살펴보자. 
+우리가 배제하고자 하는 경우는 정확히 minimal polynomial $f$가 중근을 갖는 경우, 즉 $\dd{f}=0$인 경우이므로 étale algebra의 개념을 유용하게 사용할 수 있을 것이다. 곧 우리는 *separable extension*을 임의의 finite degree subextension이 étale인 field extension으로 정의할 것이다. ([정의 8](#def8)) 그럼 [예시 4](#ex4)에서 살펴봤듯 $\mathbb{Q}$의 임의의 algebraic extension은 separable extension이 된다. 더 나아가 우리는 perfect field의 임의의 algebraic extension은 separable인 것을 보일 것이다. ([명제 9](#prop9)) 이 과정에서 사용할 étale algebra의 성질들을 조금 더 살펴보자. 
 
 ::: 명제 5
 임의의 field $\mathbb{K}$에 대하여, finite degree, commutative $\mathbb{K}$-algebra $A$가 reduced인 것은 $\mathbb{K}$의 적당한 finite degree field extension $\mathbb{L}_1,\ldots, \mathbb{L}_n$이 존재하여 $A$가 $\mathbb{L}_1\times\cdots\times \mathbb{L}_n$과 $\mathbb{K}$-algebra로서 isomorphic한 것이 동치이다. 
@@ -114,7 +114,7 @@ $\mathbb{L}_1\times\cdots\times \mathbb{L}_n$은 reduced이므로 한쪽 방향�
 Perfect field $\mathbb{K}$에 대하여, 임의의 finite degree, reduced $\mathbb{K}$-algebra는 étale이다. 
 :::
 ::: 증명
-주장의 조건을 만족하는 $\mathbb{K}$-algebra $A$를 생각하자. 우선 [명제 5](#prop5)로부터 $A\cong \mathbb{L}_1\times\cdots \times\mathbb{L}_n$이도록 하는 extension들이 존재한다. 한편 étale algebra들의 곱은 étale이므로 주어진 주장은 임의의 finite degree field extension over perfect field $\mathbb{K}$가 étale임을 보이면 충분하다. 따라서 [정리 3](#thm3)을 적용하여, 임의의 $\alpha\in A$에 대하여 $d\alpha=0$임을 보이면 충분하다. [예시 4](#ex4)의 계산에 의하여 우리는 식 $f'(\alpha)d\alpha=0$이 성립해야 함을 알고, 비슷한 논리에 의하여 우리는 $f'(\alpha)\neq 0$임을 보여야 한다. 
+주장의 조건을 만족하는 $\mathbb{K}$-algebra $A$를 생각하자. 우선 [명제 5](#prop5)로부터 $A\cong \mathbb{L}_1\times\cdots \times\mathbb{L}_n$이도록 하는 extension들이 존재한다. 한편 étale algebra들의 곱은 étale이므로 주어진 주장은 임의의 finite degree field extension over perfect field $\mathbb{K}$가 étale임을 보이면 충분하다. 따라서 [정리 3](#thm3)을 적용하여, 임의의 $\alpha\in A$에 대하여 $\dd{\alpha}=0$임을 보이면 충분하다. [예시 4](#ex4)의 계산에 의하여 우리는 식 $f'(\alpha)\dd{\alpha}=0$이 성립해야 함을 알고, 비슷한 논리에 의하여 우리는 $f'(\alpha)\neq 0$임을 보여야 한다. 
 
 결론에 반하여 $f'(\alpha)=0$이라 하자. 어차피 $f$가 상수인 경우에는 증명할 것이 없으므로 $f$가 일차식 이상이라 가정할 수 있고, 그럼 [§체, ⁋명제 19](/ko/math/field_theory/fields#prop19)의 결과에 의하여 $\ch(\mathbb{K})=p\neq 0$이며 $f\in \mathbb{K}[\x^p]=\mathbb{K}[\x]^p$여야 한다. 그런데 $f$는 minimal polynomial이므로 irreducible이고, irreducible polynomial은 정의에 의하여 $\mathbb{K}[\x]^p$에 속할 수 없으므로 이는 모순이다. 따라서 $f'(\alpha)\neq 0$이다. 
 :::
