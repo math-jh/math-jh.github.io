@@ -21,12 +21,12 @@ Closed subscheme의 중요한 예시 중 하나는 [§닫힌 부분스킴, ⁋�
 
 한편 우리는 더 일반적으로 global section들의 (유한한) family $s_1,\ldots, s_k\in \Gamma(X, \mathcal{O}_X)$가 주어졌을 때 이들이 정의하는 vanishing scheme $Z(s_1,\ldots, s_k)$에도 관심이 있다. 직관적으로 이는 우선 $X$에서 global section $s_1$을 사용하여 만든 vanishing scheme $\iota_1:Z(s_1)\hookrightarrow X$을 생각한 후, $Z(s_1)$의 global section 
 
-$$s_2\vert_{Z(s_1)}=\iota_1^\sharp(X)(s_2)\in(\iota_1)_\ast \mathcal{O}_{Z(s_1)}(X)=\Gamma(Z(s_1), \mathcal{O}_{Z(s_1)})$$
+$$s_2\vert_{Z(s_1)}=\iota_1^\sharp(X)(s_2)\in\bigl((\iota_1)_\ast \mathcal{O}_{Z(s_1)}\bigr)(X)=\Gamma(Z(s_1), \mathcal{O}_{Z(s_1)})$$
 
 을 통해 $Z(s_1)$에서 $s_2\vert_{Z(s_1)}$의 vanishing scheme을 찾아나가는 것을 반복하여 얻어질 것이며, 물론 이를 위해서는 이 과정이 $s_1, \ldots, s_k$의 순서에 무관하게 같은 scheme을 주어야 할 것이다. 
 
-$k=1$인 경우, 곧 하나의 방정식이 잘라내는 경우는 [§인자와 선형계](/ko/math/scheme_theory/divisors_and_linear_systems)에서 effective Cartier divisor의 이름으로 이미 다루었다. 이 글에서 우리는 이를 여러 개의 방정식으로 확장하여 complete intersection을 정의하고, 그 codimension이 자르는 방정식의 개수와 정확히 일치함을 본다. 이어 [\[가환대수학\] §코쥴 복합체](/ko/math/commutative_algebra/koszul_complex)의 결과를 associated sheaf로 옮겨 structure sheaf의 국소적인 자유 분해를 얻고, 이로부터 conormal sheaf $\mathcal{I}/\mathcal{I}^2$이 rank $k$의 locally free sheaf라는 완전교차 고유의 성질을 이끌어낸다. 마지막으로 projective space 안에서 대역적으로 잘리는 경우에는 이 분해가 하나의 대역적인 분해로 붙으므로, [§스킴의 층 코호몰로지](/ko/math/scheme_theory/sheaf_cohomology_of_schemes)의 Euler characteristic을 계산하여 Hilbert polynomial과 degree를 읽어낼 수 있다.
-
+$k=1$인 경우, 곧 하나의 방정식이 잘라내는 경우는 [§인자와 선형계](/ko/math/scheme_theory/divisors_and_linear_systems)에서 effective Cartier divisor의 이름으로 이미 다루었다. 이 글에서 우리는 이를 여러 개의 방정식으로 확장하여 complete intersection을 정의하고, 그 codimension이 자르는 방정식의 개수와 정확히 일치함을 본다. 이어 [\[가환대수학\] §코쥴 복합체](/ko/math/commutative_algebra/koszul_complex)의 결과를 associated sheaf로 옮겨 structure sheaf의 국소적인 자유 분해를 얻고, 이로부터 conormal sheaf $\mathcal{I}/\mathcal{I}^2$이 rank $k$의 locally free sheaf라는 complete intersection 고유의 성질을 이끌어낸다. 마지막으로 projective space 안에서 대역적으로 잘리는 경우에는 이 분해가 하나의 대역적인 분해로 붙으므로, [§스킴의 층 코호몰로지](/ko/math/scheme_theory/sheaf_cohomology_of_schemes)의 Euler characteristic을 계산하여 Hilbert polynomial과 degree를 읽어낼 수 있다.
+/
 ## 여차원과 완전교차
 
 이제 도입부에서 예고한, 여러 global section들의 family가 정의하는 vanishing scheme을 구성한다. Scheme $X$와 global section들 $s_1,\ldots, s_k\in \Gamma(X, \mathcal{O}_X)$가 주어졌다 하자. 각 affine open set $U=\Spec A$ 위에서 $s_i$는 $A$의 원소 $s_i\vert_U$로 제한되며, 우리는 ideal $(s_1\vert_U,\ldots, s_k\vert_U)$가 정의하는 $U$의 closed subscheme을 생각할 수 있다. 이들은 $U$를 옮겨다닐 때 서로 합치되어 $X$의 closed subscheme을 정의하는데, 이를 $Z(s_1,\ldots, s_k)$로 적고 $s_1,\ldots, s_k$의 *vanishing scheme*이라 부른다. 정의하는 ideal $(s_1,\ldots, s_k)$는 $s_i$들의 순서에 무관하므로 $Z(s_1,\ldots, s_k)$ 또한 순서에 무관하며, 도입부에서 말한 "$Z(s_1)$에서 $s_2$의 vanishing scheme을 찾아나가는" 과정은 scheme-theoretic 교집합
@@ -59,15 +59,15 @@ $$\dim A_\mathfrak{p}/(s_1,\ldots, s_k)=\dim\bigl(A/(s_1,\ldots, s_k)\bigr)_\mat
 
 이를 위해 다음 사실을 보인다.
 
-> Noetherian local ring $(R,\mathfrak{m})$의 non-zerodivisor $s\in\mathfrak{m}$에 대하여 $\dim R/(s)=\dim R-1$이다.
+> Noetherian local ring $(R,\mathfrak{m})$의 non-zerodivisor $s\in\mathfrak{m}$에 대하여 $\dim R/(s)\leq\dim R-1$이다.
 
-[§차원, ⁋명제 12](/ko/math/scheme_theory/dimension#prop12)을 $\Spec R$에 적용하면 $V(s)$의 모든 component는 codimension $0$ 또는 $1$이고, $s$가 non-zerodivisor이므로 ([\[가환대수학\] §동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)) $s$는 어떠한 minimal prime에도 속하지 않아 codimension $0$인 component는 없다. 따라서 $V(s)$의 모든 component는 codimension $1$이고, $\dim R/(s)=\dim R-1$이다. 
+[§차원, ⁋명제 12](/ko/math/scheme_theory/dimension#prop12)을 $\Spec R$에 적용하면 $V(s)$의 모든 component는 codimension $0$ 또는 $1$이고, $s$가 non-zerodivisor이므로 ([\[가환대수학\] §동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)) $s$는 어떠한 minimal prime에도 속하지 않아 codimension $0$인 component는 없다. 즉 $V(s)$의 각 component $W$마다 $W$를 진부분집합으로 담는 irreducible closed subset이 존재하며, $W$ 안의 chain을 그것으로 한 칸 늘일 수 있으므로 $\dim W\leq \dim R-1$이다. 그럼 $\dim R/(s)$는 이러한 $\dim W$들의 최댓값이므로 원하는 부등식을 얻는다. 등호까지 주장하려면 $\dim R/\mathfrak{q}+\codim\mathfrak{q}=\dim R$ 꼴의 차원 공식이 필요하고 이는 일반적인 Noetherian local ring에서 성립하지 않으나, 이하에서는 부등식만을 사용한다.
 
 이제 $(s_1,\ldots, s_k)$가 $A$-regular sequence이므로 localization $A_\mathfrak{p}$에서도 regular sequence이며 (localization은 non-zerodivisor를 보존한다), 각 $s_{i+1}$은 $A_\mathfrak{p}/(s_1,\ldots, s_i)$의 non-zerodivisor이다. 위 사실을 $i=0,1,\ldots, k-1$에 차례로 적용하면 
 
-$$0=\dim A_\mathfrak{p}/(s_1,\ldots, s_k)=\dim A_\mathfrak{p}-k$$
+$$0=\dim A_\mathfrak{p}/(s_1,\ldots, s_k)\leq\dim A_\mathfrak{p}-k$$
 
-를 얻으므로 $\dim A_\mathfrak{p}=k$, 즉 $\codim_X W=k$이다.
+를 얻으므로 $\dim A_\mathfrak{p}\geq k$이다. 반대 방향의 부등식은 $\mathfrak{p}$가 $k$개의 원소로 생성되는 ideal을 포함하는 minimal prime이라는 것으로부터 나오는데, [\[가환대수학\] §차원, ⁋정리 7](/ko/math/commutative_algebra/Krull_dimension#thm7)에 의하여 $\codim\mathfrak{p}\leq k$이고 이것이 $\dim A_\mathfrak{p}$이기 때문이다. 따라서 $\dim A_\mathfrak{p}=k$, 즉 $\codim_X W=k$이다.
 :::
 
 ::: 예시 3
@@ -91,7 +91,7 @@ $$0=\dim A_\mathfrak{p}/(s_1,\ldots, s_k)=\dim A_\mathfrak{p}-k$$
 [정의 1](#def1)이 요구하는 것은 국소적으로 하나의 regular sequence가 $Z$를 잘라낸다는 것인데, regular sequence의 Koszul 복합체가 acyclic이라는 것은 이미 확인한 바이다. ([\[가환대수학\] §코쥴 복합체, ⁋정리 7](/ko/math/commutative_algebra/koszul_complex#thm7)) 이를 associated sheaf로 옮기면 complete intersection의 structure sheaf가 각 chart 위에서 명시적인 유한 자유 분해를 갖는다는 것이 된다.
 
 ::: 명제 5
-Locally Noetherian scheme $X$의 codimension $k$ complete intersection $\iota:Z\hookrightarrow X$와, $Z\cap U=Z(s_1,\ldots, s_k)$이고 $s_1,\ldots, s_k$가 $A$-regular sequence인 affine open subset $U=\Spec A$가 주어졌다 하자. 그럼 $\mathcal{O}_U$-module층들의 sequence
+Locally Noetherian scheme $X$의 codimension $k$ complete intersection $\iota:Z\hookrightarrow X$와, $Z\cap U=Z(s_1,\ldots, s_k)$이고 $s_1,\ldots, s_k$가 $A$-regular sequence인 affine open subset $U=\Spec A$가 주어졌다 하자. 그럼 $\mathcal{O}_U$-module들의 sequence
 
 $$0 \rightarrow \mathcal{O}_U^{\oplus\binom{k}{k}} \rightarrow \mathcal{O}_U^{\oplus\binom{k}{k-1}} \rightarrow \cdots \rightarrow \mathcal{O}_U^{\oplus\binom{k}{1}} \rightarrow \mathcal{O}_U \rightarrow (\iota_\ast\mathcal{O}_Z)\vert_U \rightarrow 0$$
 
@@ -105,7 +105,7 @@ $$0 \rightarrow A^{\oplus\binom{k}{k}} \rightarrow \cdots \rightarrow A^{\oplus\
 을 얻는다. associated sheaf functor는 exact이므로 ([§준연접층, ⁋명제 6](/ko/math/scheme_theory/quasicoherent_sheaves#prop6)) 이를 associated sheaf로 옮기면 위의 sequence가 exact이다. 마지막 항에 대해서는 $Z\cap U=Z(s_1,\ldots, s_k)$가 $\Spec A/(s_1,\ldots, s_k)$이고 ([§닫힌 부분스킴, ⁋정의 7](/ko/math/scheme_theory/closed_subschemes#def7) 이후의 논의) closed embedding을 따라 밀어낸 것이 그 associated sheaf이므로 ([§준연접층, ⁋명제 18](/ko/math/scheme_theory/quasicoherent_sheaves#prop18), [§준연접층, ⁋정리 10](/ko/math/scheme_theory/quasicoherent_sheaves#thm10)), $(\iota_\ast\mathcal{O}_Z)\vert_U\cong \widetilde{A/(s_1,\ldots, s_k)}$이다.
 :::
 
-이 분해의 오른쪽 끝 두 항이 담고 있는 정보를 ideal sheaf의 언어로 옮기면 complete intersection 고유의 성질이 나온다. Ideal sheaf $\mathcal{I}=\mathcal{I}_{Z/X}$에 대하여 ([§닫힌 부분스킴, ⁋정의 5](/ko/math/scheme_theory/closed_subschemes#def5)) $\mathcal{I}$는 $\mathcal{I}/\mathcal{I}^2$ 위에 자명하게 작용하므로 $\mathcal{I}/\mathcal{I}^2$은 $\mathcal{O}_X/\mathcal{I}=\iota_\ast\mathcal{O}_Z$-module층이고, 따라서 $Z$ 위의 quasi-coherent sheaf로 볼 수 있다. 일반적으로 이 sheaf에 대해서는 아무것도 말할 수 없지만, 자르는 방정식들이 regular sequence를 이루면 그 개수만큼의 자유도를 정확히 갖는다.
+이 분해의 오른쪽 끝 두 항이 담고 있는 정보를 ideal sheaf의 언어로 옮기면 complete intersection 고유의 성질이 나온다. Ideal sheaf $\mathcal{I}=\mathcal{I}_{Z/X}$에 대하여 ([§닫힌 부분스킴, ⁋정의 5](/ko/math/scheme_theory/closed_subschemes#def5)) $\mathcal{I}$는 $\mathcal{I}/\mathcal{I}^2$ 위에 자명하게 작용하므로 $\mathcal{I}/\mathcal{I}^2$은 $\mathcal{O}_X/\mathcal{I}=\iota_\ast\mathcal{O}_Z$-module이고, 따라서 $Z$ 위의 quasi-coherent sheaf로 볼 수 있다. 일반적으로 이 sheaf에 대해서는 아무것도 말할 수 없지만, 자르는 방정식들이 regular sequence를 이루면 그 개수만큼의 자유도를 정확히 갖는다.
 
 ::: 명제 6
 Locally Noetherian scheme $X$의 codimension $k$ complete intersection $\iota:Z\hookrightarrow X$와 그 ideal sheaf $\mathcal{I}=\mathcal{I}_{Z/X}$에 대하여, $\mathcal{I}/\mathcal{I}^2$은 $Z$ 위의 rank $k$의 locally free sheaf이다.
@@ -116,21 +116,21 @@ Locally Noetherian scheme $X$의 codimension $k$ complete intersection $\iota:Z\
 $A/\mathfrak{a}$-linear map $\psi:(A/\mathfrak{a})^{\oplus k} \rightarrow \mathfrak{a}/\mathfrak{a}^2$을 $e_i\mapsto s_i+\mathfrak{a}^2$으로 정의하자. $\mathfrak{a}$가 $s_i$들로 생성되므로 $\psi$는 surjective이다. Injectivity를 보이기 위해 $a_1,\ldots, a_k\in A$가 $\sum_ia_is_i\in \mathfrak{a}^2$을 만족한다 하자. $\mathfrak{a}^2$은 곱 $s_is_j$들로 생성되므로 적당한 $b_{ij}\in A$에 대하여 $\sum_ia_is_i=\sum_{i,j}b_{ij}s_is_j$이고, $c_i=a_i-\sum_jb_{ij}s_j$로 두면 $\sum_ic_is_i=0$이다. 곧 $\sum_ic_ie_i$는 Koszul 복합체 $K(s_1,\ldots, s_k)$의 degree $1$ cycle인데, [\[가환대수학\] §코쥴 복합체, ⁋정리 7](/ko/math/commutative_algebra/koszul_complex#thm7)에 의하여 $H_1(K(s_1,\ldots, s_k))=0$이므로 이는 boundary이다. Koszul differential이 $\dd{(e_i\wedge e_j)}=s_ie_j-s_je_i$로 주어지므로 boundary의 각 성분은 $\mathfrak{a}$에 속하고, 따라서 모든 $i$에 대하여 $c_i\in \mathfrak{a}$이다. 그럼 $a_i=c_i+\sum_jb_{ij}s_j\in \mathfrak{a}$이므로 $(A/\mathfrak{a})^{\oplus k}$ 안에서 $\sum_ia_ie_i=0$이고, $\psi$는 injective이다.
 :::
 
-$\mathcal{I}/\mathcal{I}^2$이 놓이는 자리는 conormal exact sequence이다. Closed subscheme $Z\hookrightarrow X$와 base scheme $S$에 대하여 [§Kähler 미분과 여접층, ⁋명제 2](/ko/math/scheme_theory/sheaf_of_differentials#prop2)를 associated sheaf로 옮기면 $Z$ 위의 exact sequence
+$\mathcal{I}/\mathcal{I}^2$은 conormal exact sequence에 놓인다. Closed subscheme $Z\hookrightarrow X$와 base scheme $T$에 대하여 [§Kähler 미분과 여접층, ⁋명제 2](/ko/math/scheme_theory/sheaf_of_differentials#prop2)를 associated sheaf로 옮기면 $Z$ 위의 exact sequence
 
-$$\mathcal{I}/\mathcal{I}^2 \longrightarrow \Omega_{X/S}\vert_Z \longrightarrow \Omega_{Z/S} \longrightarrow 0$$
+$$\mathcal{I}/\mathcal{I}^2 \longrightarrow \Omega_{X/T}\vert_Z \longrightarrow \Omega_{Z/T} \longrightarrow 0$$
 
 을 얻는데, [명제 6](#prop6)은 complete intersection의 경우 이 sequence의 왼쪽 항이 rank $k$의 locally free sheaf임을 말해준다. 곧 $Z$의 법선 방향은 자르는 방정식의 개수만큼의 자유도를 가지며, 이는 국소적인 방정식들이 서로 독립적이라는 것의 정확한 표현이다. 한편 이 sequence의 왼쪽 끝에 $0$을 붙일 수 있는지, 곧 왼쪽 morphism이 injective인지는 complete intersection이라는 조건만으로는 결정되지 않고 $Z$ 자신에 대한 조건을 더 요구한다.
 
 ## Hilbert polynomial과 degree
 
-[참고 4](#rmk4)가 구별한 두 조건 가운데 강한 쪽, 곧 projective space 안에서 대역적으로 잘리는 경우에는 [명제 5](#prop5)의 국소적인 분해가 하나의 대역적인 분해로 붙는다. 각 chart 위의 자유 module이 twisting sheaf로 바뀔 뿐이다. 이 절에서는 ambient가 언제나 projective space가므로 표기를 바꾸어, 앞 절까지 ambient를 가리키던 $X$를 여기에서는 $\mathbb{P}^n$의 closed subscheme을 가리키는 데 쓴다. 따라서 [명제 5](#prop5)와 [명제 6](#prop6)을 적용할 때에는 그 진술의 $X$를 $\mathbb{P}^n$의 chart로, $Z$를 $X$와 그 chart의 교집합으로 읽는다.
+[참고 4](#rmk4)가 구별한 두 조건 가운데 강한 쪽, 곧 projective space 안에서 대역적으로 잘리는 경우에는 [명제 5](#prop5)의 국소적인 분해가 하나의 대역적인 분해로 붙는다. 각 chart 위의 자유 module이 twisting sheaf로 바뀔 뿐이다. 이 절에서는 ambient가 언제나 projective space이므로 표기를 바꾸어, 앞 절까지 ambient를 가리키던 $X$를 여기에서는 $\mathbb{P}^n$의 closed subscheme을 가리키는 데 쓴다. 따라서 [명제 5](#prop5)와 [명제 6](#prop6)을 적용할 때에는 그 진술의 $X$를 $\mathbb{P}^n$의 chart로, $Z$를 $X$와 그 chart의 교집합으로 읽는다.
 
 ::: 명제 7
-Field $\mathbb{K}$ 위의 projective space $\mathbb{P}^n=\Proj S$ ($S=\mathbb{K}[\x_0,\ldots, \x_n]$)와 각각 degree $d_i>0$인 homogeneous polynomial들 $f_1,\ldots, f_k$가 주어지고, 이들이 $S$-regular sequence를 이룬다 하자. $X=V_+(f_1,\ldots, f_k)$이고 $\iota:X\hookrightarrow \mathbb{P}^n$이 그 closed embedding일 때 ([§projective space의 닫힌 부분스킴, ⁋명제 1](/ko/math/scheme_theory/closed_subschemes_of_projective_spaces#prop1)) 다음이 성립한다.
+Field $\mathbb{K}$ 위의 projective space $\mathbb{P}^n=\Proj S$ ($S=\mathbb{K}[\x_0,\ldots, \x_n]$)와 각각 degree $d_i>0$인 homogeneous polynomial들 $f_1,\ldots, f_k$가 주어지고, 이들이 $S$-regular sequence를 이룬다 하자. $X=V_+(f_1,\ldots, f_k)$이고 $\iota:X\hookrightarrow \mathbb{P}^n$이 그 closed embedding일 때 ([§사영공간의 닫힌 부분스킴, ⁋명제 1](/ko/math/scheme_theory/closed_subschemes_of_projective_spaces#prop1)) 다음이 성립한다.
 
 1. $\iota$는 codimension $k$의 complete intersection이며, [정의 1](#def1)의 affine open cover로 표준 chart들 $\{D_+(\x_m)\}_{m=0}^n$을 택할 수 있다.
-2. $J\subseteq \{1,\ldots, k\}$에 대하여 $d_J=\sum_{i\in J}d_i$로 적으면, $\mathcal{O}_{\mathbb{P}^n}$-module층들의 sequence
+2. $J\subseteq \{1,\ldots, k\}$에 대하여 $d_J=\sum_{i\in J}d_i$로 적으면, $\mathcal{O}_{\mathbb{P}^n}$-module들의 sequence
 
 	$$0 \rightarrow \bigoplus_{\lvert J\rvert=k}\mathcal{O}(-d_J) \rightarrow \cdots \rightarrow \bigoplus_{\lvert J\rvert=1}\mathcal{O}(-d_J) \rightarrow \mathcal{O}_{\mathbb{P}^n} \rightarrow \iota_\ast\mathcal{O}_X \rightarrow 0$$
 
@@ -188,7 +188,7 @@ $k=1$인 경우 [따름정리 8](#cor8)은 degree $e$의 hypersurface가 $\deg X
 
 	이다. 곧 $\dim X=1$이고 $\deg X=1!\cdot 4=4$이며, arithmetic genus는 $p_a(X)=(-1)^1\bigl(P_{\mathcal{O}_X}(0)-1\bigr)=1$이다. ([§스킴의 층 코호몰로지, ⁋정의 17](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#def17)) 두 quadric이 일반적인 위치에 있을 때 얻어지는 것이 고전적인 elliptic quartic curve이며, 위의 $f_1=\x_0\x_1$, $f_2=\x_2\x_3$의 경우 $X$는 네 직선 $V_+(\x_0,\x_2)$, $V_+(\x_0,\x_3)$, $V_+(\x_1,\x_3)$, $V_+(\x_1,\x_2)$의 합집합으로서, 나열한 순서로 이웃한 것끼리만 한 점에서 만나고 마주보는 두 직선은 만나지 않는다. 이 퇴화된 경우도 위와 같은 수치적 불변량을 갖는다.
 
-2. $\mathbb{P}^3_\mathbb{K}$의 twisted cubic $C$, 곧 $\mathbb{P}^1=\Proj \mathbb{K}[\y_0,\y_1]$ 위의 invertible sheaf $\mathcal{O}_{\mathbb{P}^1}(3)$과 이를 globally generate하는 절단 $\y_0^3, \y_0^2\y_1, \y_0\y_1^2, \y_1^3$이 정의하는 morphism $\varphi:\mathbb{P}^1 \rightarrow \mathbb{P}^3_\mathbb{K}$의 image를 생각하자. ([§인자와 선형계, §§Ample invertible sheaf](/ko/math/scheme_theory/divisors_and_linear_systems#ample-invertible-sheaf)) 각각의 표준 chart $D_+(\x_j)$에 대하여 $\varphi^{-1}(D_+(\x_j))$은 $j=0$이면 $D_+(\y_0)=\Spec\mathbb{K}[\y_1/\y_0]$, $j=3$이면 $D_+(\y_1)=\Spec\mathbb{K}[\y_0/\y_1]$, 그 밖에는 $D_+(\y_0\y_1)=\Spec\mathbb{K}[\y_0/\y_1,\y_1/\y_0]$이고, 대응하는 ring homomorphism $\x_i/\x_j\mapsto \y_0^{3-i}\y_1^i/\y_0^{3-j}\y_1^j$의 image는 차례로 $\y_1/\y_0$, $\y_0/\y_1$, 그리고 이 둘 모두를 담으므로 언제나 surjective이다. 표준 chart들은 $\mathbb{P}^3_\mathbb{K}$의 affine open cover를 이루고, [§닫힌 부분스킴, ⁋명제 3](/ko/math/scheme_theory/closed_subschemes#prop3)의 증명은 이 조건을 하나의 affine open cover 위에서 확인하면 충분함을 보였으므로 $\varphi$는 closed embedding이다. 따라서 $C\cong\mathbb{P}^1$이며 $\mathcal{O}_C(1)=\varphi^\ast\mathcal{O}(1)\cong \mathcal{O}_{\mathbb{P}^1}(3)$이다. 그럼 [§스킴의 층 코호몰로지, ⁋정리 16](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#thm16)와 [§스킴의 층 코호몰로지, ⁋따름정리 15](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#cor15)에 의하여
+2. $\mathbb{P}^3_\mathbb{K}$의 twisted cubic $C$, 곧 $\mathbb{P}^1=\Proj \mathbb{K}[\y_0,\y_1]$ 위의 invertible sheaf $\mathcal{O}_{\mathbb{P}^1}(3)$과 이를 globally generate하는 절단 $\y_0^3, \y_0^2\y_1, \y_0\y_1^2, \y_1^3$이 정의하는 morphism $\varphi:\mathbb{P}^1 \rightarrow \mathbb{P}^3_\mathbb{K}$의 image를 생각하자. ([§인자와 선형계, §§Ample invertible sheaf](/ko/math/scheme_theory/divisors_and_linear_systems#ample-invertible-sheaf)) 각각의 표준 chart $D_+(\x_j)$에 대하여 $\varphi^{-1}(D_+(\x_j))$은 $j=0$이면 $D_+(\y_0)=\Spec\mathbb{K}[\y_1/\y_0]$, $j=3$이면 $D_+(\y_1)=\Spec\mathbb{K}[\y_0/\y_1]$, 그 밖에는 $D_+(\y_0\y_1)=\Spec\mathbb{K}[\y_0/\y_1,\y_1/\y_0]$이고, 대응하는 ring homomorphism $\x_i/\x_j\mapsto \y_0^{3-i}\y_1^i/\y_0^{3-j}\y_1^j$의 image는 차례로 $\y_1/\y_0$, $\y_0/\y_1$, 그리고 이 둘 모두를 담으므로 언제나 surjective이다. 표준 chart들은 $\mathbb{P}^3_\mathbb{K}$의 affine open cover를 이루고, [§닫힌 부분스킴, ⁋명제 3](/ko/math/scheme_theory/closed_subschemes#prop3)의 증명은 이 조건을 하나의 affine open cover 위에서 확인하면 충분함을 보였으므로 $\varphi$는 closed embedding이다. 따라서 $C\cong\mathbb{P}^1$이며 $\mathcal{O}_C(1)=\varphi^\ast\mathcal{O}(1)\cong \mathcal{O}_{\mathbb{P}^1}(3)$이다. 표준 chart들은 모두 $C$와 만나므로, 이들 위에서 $C$를 자르는 ideal을 계산하면 $C$가 codimension $2$의 complete intersection이라는 것 또한 얻는다. $v=\y_1/\y_0$이라 두고 $D_+(\x_0)$의 좌표를 $a=\x_1/\x_0$, $b=\x_2/\x_0$, $c=\x_3/\x_0$이라 하면 위의 ring homomorphism은 이들을 각각 $v$, $v^2$, $v^3$으로 보내는데, $\mathbb{K}[a,b,c]/(b-a^2, c-a^3)\cong\mathbb{K}[a]$가 $a\mapsto v$로 $\mathbb{K}[v]$와 isomorphic하므로 그 kernel은 정확히 $(b-a^2, c-a^3)$이다. 그런데 $\mathbb{K}[a,b,c]$는 integral domain이고 $\mathbb{K}[a,b,c]/(b-a^2)\cong \mathbb{K}[a,c]$ 또한 그러하므로 $b-a^2, c-a^3$은 regular sequence이다. 마찬가지로 $D_+(\x_1)$의 좌표를 $p=\x_0/\x_1$, $q=\x_2/\x_1$, $r=\x_3/\x_1$이라 하면 이들은 각각 $v^{-1}$, $v$, $v^2$으로 가고 $\mathbb{K}[p,q,r]/(r-q^2, pq-1)\cong\mathbb{K}[q,q^{-1}]$이 $\mathbb{K}[\y_0/\y_1,\y_1/\y_0]$와 isomorphic하므로, kernel은 $(r-q^2, pq-1)$이며 $\mathbb{K}[p,q,r]/(r-q^2)\cong\mathbb{K}[p,q]$가 integral domain이라 이 또한 regular sequence이다. 남은 두 chart에 대해서는 $\x_i\mapsto \x_{3-i}$가 정의하는 $\mathbb{P}^3_\mathbb{K}$의 automorphism이 $\y_0\leftrightarrow \y_1$과 어울려 $C$를 보존하면서 $D_+(\x_0)$과 $D_+(\x_3)$을, $D_+(\x_1)$과 $D_+(\x_2)$를 맞바꾸므로 위의 두 계산이 그대로 옮겨진다. 그럼 [§스킴의 층 코호몰로지, ⁋정리 16](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#thm16)와 [§스킴의 층 코호몰로지, ⁋따름정리 15](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#cor15)에 의하여
 
 	$$P_{\mathcal{O}_C}(t)=\rchi\bigl(\mathbb{P}^1,\mathcal{O}_{\mathbb{P}^1}(3t)\bigr)=\binom{1+3t}{1}=3t+1$$
 
