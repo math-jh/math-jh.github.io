@@ -13600,6 +13600,13 @@ R:
   defs:
   - label: '[복소해석학] §유수정리'
     url: /ko/math/complex_analysis/residue_theorem
+- id: resolution
+  en: resolution
+  ko: 분해
+  primary: ko
+  defs:
+  - label: '[대수적 위상수학] §코호몰로지'
+    url: /ko/math/algebraic_topology/cohomology
 - id: restricted_sum
   en: restricted sum
   ko: 제한합
