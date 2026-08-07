@@ -1734,6 +1734,13 @@ C:
     id: canonical_bundle
   - label: Canonical divisor
     id: canonical_divisor
+- id: canonical_pairing
+  en: canonical pairing
+  ko: 정준 페어링
+  primary: en
+  defs:
+  - label: '[선형대수학] §쌍대공간'
+    url: /ko/math/linear_algebra/dual_space
 - id: canonical_projection
   en: canonical projection
   ko: 동치관계로부터 유도된 전사함수
@@ -9138,6 +9145,13 @@ L:
   defs:
   - label: '[리 이론] §Richardson variety와 Peterson variety'
     url: /ko/math/lie_theory/richardson_peterson_variety
+- id: laplace_expansion
+  en: Laplace expansion
+  ko: 라플라스 전개
+  primary: ko
+  defs:
+  - label: '[다중선형대수학] §행렬식'
+    url: /ko/math/multilinear_algebra/determinants
 - id: laplacian
   en: Laplacian
   ko: Laplace 연산자
