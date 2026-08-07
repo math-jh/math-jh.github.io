@@ -2019,6 +2019,13 @@ C:
   defs:
   - label: '[미적분학] §미분법'
     url: /ko/math/calculus/differentiation_rules
+- id: change_of_basis
+  en: change of basis
+  ko: 기저변환
+  primary: en
+  defs:
+  - label: '[선형대수학] §선형대수학의 기본정리'
+    url: /ko/math/linear_algebra/ftla
 - id: change-of-basis_matrix
   en: change-of-basis matrix
   ko: 기저변환행렬
@@ -3490,6 +3497,13 @@ C:
   defs:
   - label: '[대수다양체] §아핀다양체'
     url: /ko/math/algebraic_varieties/affine_varieties
+- id: coordinate_space
+  en: coordinate space
+  ko: 좌표공간
+  primary: ko
+  defs:
+  - label: '[선형대수학] §벡터공간'
+    url: /ko/math/linear_algebra/vector_spaces
 - id: coordinate_transformation
   en: coordinate transformation
   ko: 좌표변환
@@ -7855,6 +7869,13 @@ I:
   - label: 유한
     lang: ko
     id: finite
+- id: infinite-dimensional
+  en: infinite-dimensional
+  ko: 무한차원
+  primary: ko
+  defs:
+  - label: '[선형대수학] §벡터공간의 차원'
+    url: /ko/math/linear_algebra/dimension
 - id: infinite_series
   en: infinite series
   ko: 무한급수
@@ -9595,6 +9616,13 @@ L:
   defs:
   - label: '[미적분학] §선적분'
     url: /ko/math/calculus/line_integrals
+- id: linear_algebra
+  en: linear algebra
+  ko: 선형대수
+  primary: ko
+  defs:
+  - label: '[가환대수학] §기본 개념들'
+    url: /ko/math/commutative_algebra/basic_notions
 - id: linear_combination
   en: linear combination
   ko: 일차결합
@@ -9611,6 +9639,13 @@ L:
   defs:
   - label: '[해석학] §미분방정식의 존재성과 유일성'
     url: /ko/math/analysis/existence_uniqueness_ode
+- id: linear_dependence
+  en: linear dependence
+  ko: 일차종속
+  primary: ko
+  defs:
+  - label: '[선형대수학] §벡터공간의 기저'
+    url: /ko/math/linear_algebra/basis
 - id: linear_equivalence
   en: linear equivalence
   ko: 선형동치
@@ -9639,6 +9674,13 @@ L:
   defs:
   - label: '[토릭 기하학] §토릭 다양체의 교차 이론'
     url: /ko/math/toric_geometry/toric_intersection_theory
+- id: linear_independence
+  en: linear independence
+  ko: 일차독립
+  primary: ko
+  defs:
+  - label: '[선형대수학] §벡터공간의 기저'
+    url: /ko/math/linear_algebra/basis
 - id: linear_map
   en: linear map
   ko: 선형사상
@@ -10528,6 +10570,13 @@ M:
   defs:
   - label: '[사교기하학] §운동량 사상'
     url: /ko/math/symplectic_geometry/moment_map
+- id: monic_polynomial
+  en: monic polynomial
+  ko: monic 다항식
+  primary: en
+  defs:
+  - label: '[환론] §다항식환'
+    url: /ko/math/ring_theory/polynomial_rings
 - id: monodromy_functor
   en: monodromy functor
   ko: ''
@@ -14111,6 +14160,13 @@ S:
   defs:
   - label: '[미적분학] §벡터장'
     url: /ko/math/calculus/vector_fields
+- id: scalar_multiplication
+  en: scalar multiplication
+  ko: 스칼라곱
+  primary: ko
+  defs:
+  - label: '[선형대수학] §벡터공간'
+    url: /ko/math/linear_algebra/vector_spaces
 - id: scheme
   en: scheme
   ko: 스킴
