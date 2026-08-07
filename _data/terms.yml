@@ -14612,6 +14612,13 @@ S:
   defs:
   - label: '[군론] §실로우 정리'
     url: /ko/math/group_theory/Sylow_theorems
+- id: simple_ideal
+  en: simple ideal
+  ko: 단순 아이디얼
+  primary: en
+  defs:
+  - label: '[리 이론] §Killing 형식과 Cartan 판정법'
+    url: /ko/math/lie_theory/killing_form_and_cartan_criterion
 - id: simple_module
   en: simple module
   ko: 단순가군
