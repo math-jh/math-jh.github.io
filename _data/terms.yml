@@ -2859,6 +2859,13 @@ C:
   defs:
   - label: '[가환대수학] §완비화'
     url: /ko/math/commutative_algebra/completion
+- id: complete_reducibility
+  en: complete reducibility
+  ko: 완전가약성
+  primary: ko
+  defs:
+  - label: '[리 이론] §Weyl 완전가약성 정리'
+    url: /ko/math/lie_theory/weyl_complete_reducibility
 - id: complete_ring
   en: complete ring
   ko: 완비환
@@ -4702,6 +4709,13 @@ D:
 - id: dominant_integral
   en: dominant integral
   ko: 지배적 정수
+  primary: en
+  defs:
+  - label: '[리 이론] §최고 무게 가군'
+    url: /ko/math/lie_theory/highest_weight_modules
+- id: dominant_integral_weight
+  en: dominant integral weight
+  ko: 지배적 정수 무게
   primary: en
   defs:
   - label: '[리 이론] §최고 무게 가군'
@@ -13099,6 +13113,8 @@ R:
     url: /ko/math/commutative_algebra/properties_of_localization
   - label: '[리 이론] §가해 Lie algebra와 nilpotent Lie algebra'
     url: /ko/math/lie_theory/solvable_nilpotent_lie_algebras
+  - label: '[리 이론] §Killing 형식과 Cartan 판정법'
+    url: /ko/math/lie_theory/killing_form_and_cartan_criterion
   see:
   - label: Nilradical
     id: nilradical
@@ -17012,6 +17028,8 @@ W:
   defs:
   - label: '[리 이론] §원환면의 작용'
     url: /ko/math/lie_theory/torus_action#def4
+  - label: '[리 이론] §최고 무게 가군'
+    url: /ko/math/lie_theory/highest_weight_modules
   see:
   - label: Highest weight vector
     id: highest_weight_vector

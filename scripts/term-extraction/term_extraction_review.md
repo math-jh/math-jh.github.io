@@ -5241,3 +5241,7 @@ Decide whether each one is a definition and add it to `_data/terms.yml` (then ru
 
 - _posts/Math/Homological_Algebra/ko/2026-06-11-Group_Cohomology.md: 주요 용어 'bar resolution' ko 미상 — 보류
 - _posts/Math/Homological_Algebra/ko/2026-06-11-Group_Cohomology.md: 주요 용어 'Ext' ko 미상 — 보류
+
+## term_extract_worker 2026-08-07 16:01
+
+- _posts/Math/Lie_Theory/ko/2026-06-20-Universal_Enveloping_Algebra.md: 주요 용어 'Poincaré–Birkhoff–Witt' ko 미상 — 보류
