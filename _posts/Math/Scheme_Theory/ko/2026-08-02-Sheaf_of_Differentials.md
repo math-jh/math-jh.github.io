@@ -11,8 +11,6 @@ sidebar:
 date: 2026-06-21
 weight: 19
 
-published: false
-drift_needed: true
 ---
 
 이제 우리는 미분의 개념을 정의한다. Algebraic variety나 scheme 위에서는 해석학적인 극한이 존재하지 않으므로, 이를 정의하기 위해서는 순수하게 대수적인 방식을 택해야 하며 그 출발점은 가환대수학에서 구성한 Kähler differential module이다. 이 글에서는 이를 scheme morphism의 cotangent sheaf로 붙이고, tangent sheaf와 Zariski tangent space, affine space와 projective space에서의 계산을 거쳐 canonical sheaf의 정의와 Serre duality의 진술까지 정리한다.

@@ -5245,3 +5245,7 @@ Decide whether each one is a definition and add it to `_data/terms.yml` (then ru
 ## term_extract_worker 2026-08-07 16:01
 
 - _posts/Math/Lie_Theory/ko/2026-06-20-Universal_Enveloping_Algebra.md: 주요 용어 'Poincaré–Birkhoff–Witt' ko 미상 — 보류
+
+## term_extract_worker 2026-08-07 18:01
+
+- _posts/Math/Lie_Theory/ko/2026-06-21-Representations_of_sl2.md: 주요 용어 'Clebsch–Gordan' ko 미상 — 보류

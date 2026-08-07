@@ -14273,6 +14273,13 @@ S:
   defs:
   - label: '[리 이론] §근계'
     url: /ko/math/lie_theory/root_systems
+- id: semisimple_lie_algebra
+  en: semisimple Lie algebra
+  ko: 반단순 리 대수
+  primary: en
+  defs:
+  - label: '[리 이론] §Killing 형식과 Cartan 판정법'
+    url: /ko/math/lie_theory/killing_form_and_cartan_criterion
 - id: semisimple_module
   en: semisimple module
   ko: 반단순 가군
