@@ -1255,6 +1255,13 @@ B:
   see:
   - label: Small quantum product
     id: small_quantum_product
+- id: bigraded
+  en: bigraded
+  ko: 쌍차
+  primary: en
+  defs:
+  - label: '[호몰로지 대수학] §스펙트럼 열'
+    url: /ko/math/homological_algebra/spectral_sequences
 - id: biholomorphic
   en: biholomorphic
   ko: 쌍정칙
@@ -2366,6 +2373,13 @@ C:
   defs:
   - label: '[대수다양체] §층 코호몰로지'
     url: /ko/math/algebraic_varieties/sheaf_cohomology
+- id: cochain
+  en: cochain
+  ko: 공사슬
+  primary: en
+  defs:
+  - label: '[대수적 위상수학] §코호몰로지'
+    url: /ko/math/algebraic_topology/cohomology
 - id: cochain_complex
   en: cochain complex
   ko: 공사슬복합체
@@ -10080,6 +10094,13 @@ M:
   see:
   - label: Monoid homomorphism
     id: monoid_homomorphism
+- id: manifold
+  en: manifold
+  ko: 다양체
+  primary: en
+  defs:
+  - label: '[대수적 위상수학] §위상다양체'
+    url: /ko/math/algebraic_topology/topological_manifolds
 - id: manifold_with_boundary
   en: manifold with boundary
   ko: $m$차원의 경계가 있는 manifold
