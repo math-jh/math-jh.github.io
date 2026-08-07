@@ -939,6 +939,13 @@ A:
   defs:
   - label: '[호몰로지 대수학] §분해'
     url: /ko/math/homological_algebra/resolutions
+- id: augmented_matrix
+  en: augmented matrix
+  ko: 첨가행렬
+  primary: ko
+  defs:
+  - label: '[선형대수학] §가우스 소거법'
+    url: /ko/math/linear_algebra/Gaussian_elimination
 - id: auslander_reiten_quiver
   en: Auslander–Reiten quiver
   ko: ''
@@ -13385,6 +13392,13 @@ R:
   defs:
   - label: '[정수론] §오일러 정리와 phi 함수'
     url: /ko/math/number_theory/euler_theorem
+- id: reduced_row_echelon_form
+  en: reduced row echelon form
+  ko: 기약행사다리꼴
+  primary: ko
+  defs:
+  - label: '[선형대수학] §가우스 소거법'
+    url: /ko/math/linear_algebra/Gaussian_elimination
 - id: reduced_row_echelon_matrix
   en: reduced row échelon matrix
   ko: 기약행사다리꼴행렬
@@ -14108,6 +14122,13 @@ R:
   defs:
   - label: '[대수적 구조] §가환군'
     url: /ko/math/algebraic_structures/abelian_groups
+- id: row_echelon_form
+  en: row echelon form
+  ko: 행사다리꼴
+  primary: ko
+  defs:
+  - label: '[선형대수학] §가우스 소거법'
+    url: /ko/math/linear_algebra/Gaussian_elimination
 - id: row_echelon_matrix
   en: row échelon matrix
   ko: 행사다리꼴행렬
