@@ -3490,6 +3490,13 @@ C:
     url: /ko/math/complex_analysis/cauchy_theorem
   - label: '[그로모프-위튼 이론] §안정사상 moduli의 대수적 구성'
     url: /ko/math/gromov-witten_theory/moduli_of_stable_maps
+- id: coordinate_chart
+  en: coordinate chart
+  ko: 좌표근방
+  primary: en
+  defs:
+  - label: '[미분다양체] §미분다양체'
+    url: /ko/math/manifolds/smooth_manifolds
 - id: coordinate_form
   en: coordinate form
   ko: 좌표 형식
@@ -9520,6 +9527,13 @@ L:
   defs:
   - label: '[대수다양체] §층 코호몰로지'
     url: /ko/math/algebraic_varieties/sheaf_cohomology
+- id: level_set
+  en: level set
+  ko: 수준집합
+  primary: en
+  defs:
+  - label: '[미분다양체] §음함수 정리'
+    url: /ko/math/manifolds/implicit_function_theorem
 - id: levi-civita_connection
   en: Levi-Civita connection
   ko: Levi-Civita 접속
@@ -12320,6 +12334,13 @@ P:
   defs:
   - label: '[복소기하학] §Kodaira 매장정리'
     url: /ko/math/complex_geometry/kodaira_embedding_theorem
+- id: positive_definite
+  en: positive definite
+  ko: 양정치
+  primary: en
+  defs:
+  - label: '[선형대수학] §스펙트럼 정리'
+    url: /ko/math/linear_algebra/spectral_theorem
 - id: positive_nilpotent_subalgebra
   en: positive nilpotent subalgebra
   ko: 양의 멱영 부분대수
@@ -12679,6 +12700,13 @@ P:
   defs:
   - label: '[대수적 구조] §대수적 구조'
     url: /ko/math/algebraic_structures/algebraic_structures
+- id: product_manifold
+  en: product manifold
+  ko: 곱다양체
+  primary: en
+  defs:
+  - label: '[대수적 위상수학] §위상다양체'
+    url: /ko/math/algebraic_topology/topological_manifolds
 - id: product_rule
   en: product rule
   ko: 곱의 미분법
@@ -13208,6 +13236,13 @@ Q:
   defs:
   - label: '[스택] §대수적 stack과 quotient stack'
     url: /ko/math/stacks/algebraic_stacks
+- id: quotient_topology
+  en: quotient topology
+  ko: 몫위상
+  primary: en
+  defs:
+  - label: '[위상수학] §몫공간'
+    url: /ko/math/topology/quotient_spaces
 R:
 - id: r_0_-space
   en: $R_0$-space
@@ -15096,6 +15131,13 @@ S:
   defs:
   - label: '[미분다양체] §접다발과 여접다발'
     url: /ko/math/manifolds/tangent_and_cotangent_bundles
+- id: smooth_manifold
+  en: smooth manifold
+  ko: 매끄러운 다양체
+  primary: en
+  defs:
+  - label: '[미분다양체] §미분다양체'
+    url: /ko/math/manifolds/smooth_manifolds
 - id: smooth_point
   en: smooth point
   ko: 매끄러운 점
@@ -15799,6 +15841,13 @@ S:
   defs:
   - label: '[군론] §실로우 정리'
     url: /ko/math/group_theory/Sylow_theorems
+- id: sylvester_s_law_of_inertia
+  en: 'Sylvester''s law of inertia'
+  ko: 실베스터 관성 법칙
+  primary: en
+  defs:
+  - label: '[선형대수학] §이차형식과 실베스터 관성법칙'
+    url: /ko/math/linear_algebra/quadratic_forms
 - id: symbolic_power
   en: symbolic power
   ko: 기호적 거듭제곱
@@ -16962,6 +17011,13 @@ U:
   see:
   - label: Lower triangular matrix
     id: lower_triangular_matrix
+- id: urysohn_lemma
+  en: Urysohn lemma
+  ko: Urysohn 보조정리
+  primary: ko
+  defs:
+  - label: '[위상수학] §Urysohn 보조정리와 Tietze 확장정리'
+    url: /ko/math/topology/urysohn_and_tietze
 - id: urysohn_space
   en: Urysohn space
   ko: 유리손 공간
