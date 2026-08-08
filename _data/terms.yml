@@ -5311,6 +5311,13 @@ E:
   defs:
   - label: '[미적분학] §연속함수'
     url: /ko/math/calculus/continuity
+- id: essential_extension
+  en: essential extension
+  ko: 본질적 확대
+  primary: en
+  defs:
+  - label: '[가환대수학] §단사가군과 Matlis 쌍대성'
+    url: /ko/math/commutative_algebra/matlis_duality
 - id: essential_singularity
   en: essential singularity
   ko: 본질적 특이점
@@ -8098,6 +8105,13 @@ I:
   see:
   - label: Projective dimension
     id: projective_dimension
+- id: injective_hull
+  en: injective hull
+  ko: 단사껍질
+  primary: en
+  defs:
+  - label: '[가환대수학] §단사가군과 Matlis 쌍대성'
+    url: /ko/math/commutative_algebra/matlis_duality
 - id: injective_limit
   en: injective limit
   ko: 귀납적 극한
@@ -10394,6 +10408,13 @@ M:
   defs:
   - label: '[스택] §Grothendieck 위상과 site'
     url: /ko/math/stacks/grothendieck_topology
+- id: matlis_duality
+  en: Matlis duality
+  ko: Matlis 쌍대성
+  primary: en
+  defs:
+  - label: '[가환대수학] §단사가군과 Matlis 쌍대성'
+    url: /ko/math/commutative_algebra/matlis_duality
 - id: matrix
   en: matrix
   ko: 행렬
