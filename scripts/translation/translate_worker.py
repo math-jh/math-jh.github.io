@@ -1639,11 +1639,18 @@ def call_claude_verify(prompt: str) -> str:
         "Do not use any tools.\n"
     )
     claude_bin = shutil.which("claude") or str(Path.home() / ".local/bin/claude")
+    # 2026-08-08: ~/.claude/settings.json 의 advisorModel(fable)이 전역 기본값이라,
+    # 막지 않으면 haiku(advisor_rank 1) 세션인 이 verify 에도 Fable 상담이 붙는다
+    # (부착 조건은 base_rank <= advisor_rank). 정해진 정책은 "cron 은 research
+    # researcher 하나만 advisor 사용" 이므로 끈다. 이 env 가 유일하게 확실한 off:
+    # advisor 게이트의 첫 검사라 settings 의 advisorModel 보다 먼저 short-circuit
+    # 하고, `--advisor <더 약한 모델>` 방식은 rank 1 인 haiku 를 값으로 못 쓴다.
+    env = {**os.environ, "CLAUDE_CODE_DISABLE_ADVISOR_TOOL": "1"}
     proc = subprocess.run(
         [claude_bin, "-p", "--model", "haiku", "--output-format", "text"],
         input=full, capture_output=True, text=True,
         timeout=CLAUDE_VERIFY_DONE_TIMEOUT,
-        cwd=str(BLOG_ROOT),
+        cwd=str(BLOG_ROOT), env=env,
     )
     if proc.returncode != 0:
         raise RuntimeError(
