@@ -344,7 +344,7 @@ def find_box(doc: ParsedDoc, anchor: str | None = None, kind: str | None = None,
                 return b
     return None
 
-# ── 보호 구간 (code fence·raw·수식) ────────────────────────────────────────
+# ── 보호 구간 (code fence·raw·수식·inline code) ────────────────────────────
 
 def protected_spans(text: str) -> list[tuple[int, int]]:
     spans: list[tuple[int, int]] = []
@@ -376,38 +376,71 @@ def protected_spans(text: str) -> list[tuple[int, int]]:
     if in_fence or in_raw:
         spans.append((region_start, len(text)))
 
-    # 문자 기반: $...$ / $$...$$ (fence·raw 밖에서만)
+    # 문자 기반: inline code `...` 와 수식 $...$ / $$...$$ (fence·raw 밖에서만).
+    # 둘을 한 번의 좌→우 스캔으로 처리해 먼저 열린 쪽이 이긴다: `$a_2$ 꼴` 은 통째로
+    # code span 이고, $a `b` c$ 는 통째로 수식이다. inline code 를 보호하는 이유는
+    # 문법을 설명하느라 본문에 적어둔 예시(`[§몫공간, ⁋정의 3](…#def3)` 같은 것)가
+    # 진짜 인용으로 오인돼 치환되는 것을 막기 위해서다.
     def covered(pos: int) -> bool:
         return any(s <= pos < e for s, e in spans)
 
+    def backtick_run(pos: int, limit: int) -> int:
+        j = pos
+        while j < limit and text[j] == "`":
+            j += 1
+        return j
+
     i, n = 0, len(text)
-    math_start = None
-    display = False
     while i < n:
         c = text[i]
         if c == "\\":
             i += 2
             continue
-        if c == "$" and not covered(i):
-            dd = i + 1 < n and text[i + 1] == "$"
-            if math_start is None:
-                math_start, display = i, dd
-                i += 2 if dd else 1
-                continue
-            if display:
-                if dd:
-                    spans.append((math_start, i + 2))
-                    math_start = None
-                    i += 2
-                    continue
+        if c == "`" and not covered(i):
+            # 닫는 런은 같은 줄에서만 찾는다 (여러 줄 code span 은 코퍼스에 없고,
+            # 못 찾으면 그냥 code span 이 아닌 것으로 두는 쪽이 안전하다).
+            eol = text.find("\n", i)
+            eol = n if eol < 0 else eol
+            j = backtick_run(i, eol)
+            run, k, end = j - i, j, None
+            while k < eol:
+                if text[k] == "`":
+                    m = backtick_run(k, eol)
+                    if m - k == run:
+                        end = m
+                        break
+                    k = m
+                else:
+                    k += 1
+            if end is None:
+                i = j
             else:
-                spans.append((math_start, i + 1))
-                math_start = None
-                i += 1
-                continue
+                spans.append((i, end))
+                i = end
+            continue
+        if c == "$" and not covered(i):
+            display = i + 1 < n and text[i + 1] == "$"
+            k, end = i + (2 if display else 1), None
+            while k < n:
+                if text[k] == "\\":
+                    k += 2
+                    continue
+                if text[k] == "$":
+                    if not display:
+                        end = k + 1
+                        break
+                    if k + 1 < n and text[k + 1] == "$":
+                        end = k + 2
+                        break
+                    k += 1      # display 안의 single $ (\text{$k$}) 는 닫지 않는다
+                    continue
+                k += 1
+            spans.append((i, end if end is not None else n))
+            if end is None:
+                break
+            i = end
+            continue
         i += 1
-    if math_start is not None:
-        spans.append((math_start, n))
     spans.sort()
     return spans
 
