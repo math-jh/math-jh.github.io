@@ -659,6 +659,13 @@ A:
   defs:
   - label: '[복소해석학] §고립특이점과 Laurent 급수'
     url: /ko/math/complex_analysis/isolated_singularities
+- id: anticanonical_divisor
+  en: anticanonical divisor
+  ko: 반정준 약수
+  primary: en
+  defs:
+  - label: '[토릭 기하학] §파노 다양체'
+    url: /ko/math/toric_geometry/reflexive_polytope_fano
 - id: antiderivative
   en: antiderivative
   ko: 원시함수
@@ -759,7 +766,7 @@ A:
   primary: en
   defs:
   - label: '[스킴] §스킴의 층 코호몰로지'
-    url: /ko/math/scheme_theory/sheaf_cohomology_of_schemes#def16
+    url: /ko/math/scheme_theory/sheaf_cohomology_of_schemes#def17
 - id: arrow
   en: arrow
   ko: 화살표
@@ -1657,6 +1664,13 @@ C:
 - id: calabi-yau
   en: Calabi-Yau
   ko: 카라비-야우
+  primary: en
+  defs:
+  - label: '[거울대칭] §거울대칭 개요'
+    url: /ko/math/mirror_symmetry/overview
+- id: calabi-yau_threefold
+  en: Calabi-Yau threefold
+  ko: 칼라비-야우 삼중체
   primary: en
   defs:
   - label: '[거울대칭] §거울대칭 개요'
@@ -5728,6 +5742,13 @@ F:
   see:
   - label: Toric variety
     id: toric_variety
+- id: fano_variety
+  en: Fano variety
+  ko: 파노 다양체
+  primary: en
+  defs:
+  - label: '[토릭 기하학] §파노 다양체'
+    url: /ko/math/toric_geometry/reflexive_polytope_fano
 - id: fermat_s_theorem
   en: 'Fermat''s theorem'
   ko: 페르마 정리
@@ -6072,6 +6093,13 @@ F:
     url: /ko/math/riemannian_geometry/curvature
   - label: '[스킴] §평탄사상'
     url: /ko/math/scheme_theory/flat_morphisms
+- id: flat_connection
+  en: flat connection
+  ko: 평탄 접속
+  primary: en
+  defs:
+  - label: '[리만기하학] §리만 곡률'
+    url: /ko/math/riemannian_geometry/curvature
 - id: flat_module
   en: flat module
   ko: 평탄가군
@@ -7498,6 +7526,13 @@ H:
   defs:
   - label: '[복소기하학] §복소다양체'
     url: /ko/math/complex_geometry/complex_manifolds
+- id: holomorphic_volume_form
+  en: holomorphic volume form
+  ko: 정칙 부피 형식
+  primary: en
+  defs:
+  - label: '[거울대칭] §가우스-마닌 접속'
+    url: /ko/math/mirror_symmetry/gauss-manin_connection
 - id: homeomorphic
   en: homeomorphic
   ko: 위상동형
@@ -8878,6 +8913,13 @@ J:
   defs:
   - label: '[미적분학] §다중적분'
     url: /ko/math/calculus/multiple_integrals
+- id: jacobi_ring
+  en: Jacobi ring
+  ko: 야코비 환
+  primary: en
+  defs:
+  - label: '[거울대칭] §프로베니우스 다양체'
+    url: /ko/math/mirror_symmetry/frobenius_manifold
 - id: jacobi_symbol
   en: Jacobi symbol
   ko: 야코비 기호
@@ -9102,6 +9144,13 @@ K:
   defs:
   - label: '[복소기하학] §Kähler 다양체'
     url: /ko/math/complex_geometry/kahler_manifolds
+- id: kähler_structure
+  en: Kähler structure
+  ko: 켈러 구조
+  primary: en
+  defs:
+  - label: '[거울대칭] §거울대칭 개요'
+    url: /ko/math/mirror_symmetry/overview
 - id: kernel
   en: kernel
   ko: 핵
@@ -10654,10 +10703,10 @@ M:
   ko: 최소다항식
   primary: en
   defs:
-  - label: '[체론] §대수적 확장'
-    url: /ko/math/field_theory/algebraic_extensions
   - label: '[선형대수학] §최소다항식'
     url: /ko/math/linear_algebra/minimal_polynomial
+  - label: '[체론] §대수적 확장'
+    url: /ko/math/field_theory/algebraic_extensions
   see:
   - label: Characteristic polynomial
     id: characteristic_polynomial
@@ -10789,6 +10838,13 @@ M:
   defs:
   - label: '[환론] §다항식환'
     url: /ko/math/ring_theory/polynomial_rings
+- id: monodromy
+  en: monodromy
+  ko: 모노드로미
+  primary: en
+  defs:
+  - label: '[대수적 위상수학] §피복공간'
+    url: /ko/math/algebraic_topology/covering_spaces
 - id: monodromy_functor
   en: monodromy functor
   ko: ''
@@ -12311,6 +12367,13 @@ P:
   defs:
   - label: '[거울대칭] §가우스-마닌 접속'
     url: /ko/math/mirror_symmetry/gauss-manin_connection
+- id: period_matrix
+  en: period matrix
+  ko: 주기 행렬
+  primary: en
+  defs:
+  - label: '[거울대칭] §가우스-마닌 접속'
+    url: /ko/math/mirror_symmetry/gauss-manin_connection
 - id: permutation
   en: permutation
   ko: 치환
@@ -12400,6 +12463,13 @@ P:
   defs:
   - label: '[대수적 위상수학] §푸앵카레 쌍대성'
     url: /ko/math/algebraic_topology/Poincare_duality
+- id: poincaré_pairing
+  en: Poincaré pairing
+  ko: 푸앙카레 쌍
+  primary: en
+  defs:
+  - label: '[그로모프-위튼 이론] §Gromov-Witten 불변량과 공리계: 대수적 관점'
+    url: /ko/math/gromov-witten_theory/gw_invariants_axioms
 - id: point
   en: point
   ko: 점
@@ -15714,6 +15784,13 @@ S:
   defs:
   - label: '[집합론] §단조함수'
     url: /ko/math/set_theory/monotone_functions
+- id: stringy_hodge_number
+  en: stringy Hodge number
+  ko: 끈 호지 수
+  primary: en
+  defs:
+  - label: '[토릭 기하학] §파노 다양체'
+    url: /ko/math/toric_geometry/reflexive_polytope_fano
 - id: stronger_topology
   en: stronger topology
   ko: 강한 위상
@@ -15969,10 +16046,10 @@ S:
     url: /ko/math/algebraic_structures/abelian_groups
   - label: '[위상수학] §Compactness와 paracompactness'
     url: /ko/math/topology/compactness
-  - label: '[스킴] §스킴'
-    url: /ko/math/scheme_theory/schemes
   - label: '[미분다양체] §적분'
     url: /ko/math/manifolds/integration
+  - label: '[스킴] §스킴'
+    url: /ko/math/scheme_theory/schemes
 - id: support_set
   en: support set
   ko: 지지 집합

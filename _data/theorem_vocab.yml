@@ -38,6 +38,7 @@ extra_canon:
   증명: Proof
   주장: Conjecture
   주의: Remark
+  명제–정의: Proposition–Definition
 
 # 번역 표시 라벨 치환 전용 — 박스 어휘 밖 섹션 제목 포함.
 extra_labels:

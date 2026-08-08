@@ -5272,3 +5272,11 @@ Decide whether each one is a definition and add it to `_data/terms.yml` (then ru
 ## term_extract_worker 2026-08-08 19:30
 
 - _posts/Math/Commutative_Algebra/ko/2026-07-24-Hilbert-Samuel_Function.md: 주요 용어 'numerical polynomial' ko 미상 — 보류
+
+## term_extract_worker 2026-08-09 04:31
+
+- _posts/Math/Mirror_Symmetry/ko/2026-05-18-Mirror_Symmetry_Overview.md: 주요 용어 'Jacobi ring' ko 미상 — 보류
+
+## term_extract_worker 2026-08-09 06:01
+
+- _posts/Math/Mirror_Symmetry/ko/2026-05-24-Gauss_Manin_Connection.md: 주요 용어 'rapid decay homology' ko 미상 — 보류
