@@ -2774,6 +2774,13 @@ C:
   defs:
   - label: '[리 이론] §콤팩트 실형식'
     url: /ko/math/lie_theory/compact_real_form
+- id: compact_support
+  en: compact support
+  ko: 컴팩트 지지
+  primary: en
+  defs:
+  - label: '[미분다양체] §적분'
+    url: /ko/math/manifolds/integration
 - id: compactifiable
   en: compactifiable
   ko: 옹골화 가능
@@ -8345,6 +8352,13 @@ I:
   defs:
   - label: '[미적분학] §적분'
     url: /ko/math/calculus/integration
+- id: integration
+  en: integration
+  ko: 적분
+  primary: ko
+  defs:
+  - label: '[해석학] §미적분의 기본정리'
+    url: /ko/math/analysis/fundamental_theorem_of_calculus
 - id: integration_by_parts
   en: integration by parts
   ko: 부분적분
@@ -11918,6 +11932,13 @@ O:
   defs:
   - label: '[대수적 위상수학] §푸앵카레 쌍대성'
     url: /ko/math/algebraic_topology/Poincare_duality
+- id: oriented_manifold
+  en: oriented manifold
+  ko: 향을 가진 다양체
+  primary: en
+  defs:
+  - label: '[미분다양체] §경계가 있는 다양체'
+    url: /ko/math/manifolds/manifolds_with_boundary
 - id: orthogonal
   en: orthogonal
   ko: 작교
@@ -15950,6 +15971,8 @@ S:
     url: /ko/math/topology/compactness
   - label: '[스킴] §스킴'
     url: /ko/math/scheme_theory/schemes
+  - label: '[미분다양체] §적분'
+    url: /ko/math/manifolds/integration
 - id: support_set
   en: support set
   ko: 지지 집합
