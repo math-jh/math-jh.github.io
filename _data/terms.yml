@@ -4685,6 +4685,13 @@ D:
   defs:
   - label: '[호몰로지 대수학] §유도카테고리'
     url: /ko/math/homological_algebra/derived_categories
+- id: distribution
+  en: distribution
+  ko: 분포
+  primary: en
+  defs:
+  - label: '[미분다양체] §Distribution'
+    url: /ko/math/manifolds/distribution
 - id: distributive_law
   en: distributive law
   ko: 분배법칙
@@ -6075,6 +6082,13 @@ F:
   defs:
   - label: '[가환대수학] §평탄성'
     url: /ko/math/commutative_algebra/flatness
+- id: flow
+  en: flow
+  ko: 흐름
+  primary: ko
+  defs:
+  - label: '[미적분학] §벡터장'
+    url: /ko/math/calculus/vector_fields
 - id: flux
   en: flux
   ko: 선속
@@ -6249,6 +6263,13 @@ F:
   defs:
   - label: '[거울대칭] §프로베니우스 다양체'
     url: /ko/math/mirror_symmetry/frobenius_manifold
+- id: frobenius_theorem
+  en: Frobenius theorem
+  ko: Frobenius 정리
+  primary: en
+  defs:
+  - label: '[미분다양체] §Distribution'
+    url: /ko/math/manifolds/distribution
 - id: fubini_study_form
   en: Fubini–Study form
   ko: Fubini–Study 형식
