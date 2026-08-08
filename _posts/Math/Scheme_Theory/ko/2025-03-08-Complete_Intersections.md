@@ -55,13 +55,19 @@ Locally Noetherian scheme $X$의 closed embedding $\iota:Z\hookrightarrow X$가 
 Codimension $k$의 complete intersection $\iota:Z\hookrightarrow X$의 모든 irreducible component는 $X$에서 codimension $k$를 갖는다.
 :::
 ::: 증명
-$Z$의 irreducible component $W$를 고정하고 [정의 1](#def1)의응 cover 가운데 $W$와 만나는 $U=\Spec A$를 택하자. 그럼 $Z\cap U\neq\emptyset$이므로 [정의 1](#def1)에 의하여 적당한 $A$-regular sequence $s_1,\ldots, s_k$가 $Z\cap U=Z(s_1,\ldots, s_k)$를 만족하며, $X$가 locally Noetherian이므로 $A$는 Noetherian ring이다. ([§스킴 사상의 성질들, ⁋명제 6](/ko/math/scheme_theory/properties_of_scheme_morphisms#prop6)의 증명) $W$의 generic point는 $W$의 공집합이 아닌 열린집합에 언제나 속하므로 $U$ 안에 있으며, [\[위상수학\] §차원, ⁋명제 15](/ko/math/topology/dimension#prop15)의 대응에 의하여 $W\cap U$는 $Z\cap U$의 irreducible component이다. 따라서 이 generic point에 대응되는 $A$의 prime ideal을 $\mathfrak{p}$라 하면 $\mathfrak{p}$는 $A/(s_1,\ldots, s_k)$의 minimal prime이므로 
+$Z$의 irreducible component $W$를 고정하고 [정의 1](#def1)의 cover 가운데 $W$와 만나는 $U=\Spec A$를 택하자. 그럼 적당한 $A$-regular sequence $s_1,\ldots, s_k$가 $Z\cap U=Z(s_1,\ldots, s_k)$를 만족하며, $X$가 locally Noetherian이므로 $A$는 Noetherian ring이다. ([§스킴의 위상구조, ⁋보조정리 13](/ko/math/scheme_theory/topology_of_schemes#lem13)) [\[위상수학\] §차원, ⁋명제 15](/ko/math/topology/dimension#prop15)의 대응에 의하여 $W\cap U$는 $Z\cap U$의 irreducible component이다. 한편 $W$의 generic point는 $W$에서 dense이므로 공집합이 아닌 열린집합 $W\cap U$에 속하고 그 안에서도 dense이다. 즉, 이는 $W\cap U$의 generic point이기도 하며, 이 점에 대응되는 $A$의 prime ideal을 $\mathfrak{p}$라 하면 $\mathfrak{p}$는 $A/(s_1,\ldots, s_k)$의 minimal prime이므로 
 
 $$\dim A_\mathfrak{p}/(s_1,\ldots, s_k)=\dim\bigl(A/(s_1,\ldots, s_k)\bigr)_\mathfrak{p}=0$$
 
-이다. 한편 [§차원, ⁋명제 8](/ko/math/scheme_theory/dimension#prop8)에 의하여 $\codim_X W=\dim A_\mathfrak{p}$이므로, $\dim A_\mathfrak{p}=k$임을 보이면 된다. 
+이다. ([\[가환대수학\] §국소화, ⁋명제 8](/ko/math/commutative_algebra/localization#prop8)) 
 
-이제 $\mathfrak{p}$가 $(s_1,\ldots, s_k)$를 포함하므로 $(s_1,\ldots, s_k)A_\mathfrak{p}$는 proper이고, localization이 exact이라 non-zerodivisor를 보존하므로 $(s_1,\ldots, s_k)$는 $A_\mathfrak{p}$-regular sequence이다. 곧 $M_i=A_\mathfrak{p}/(s_1,\ldots, s_i)$로 두면 각각의 $M_i$는 $0$이 아닌 finitely generated $A_\mathfrak{p}$-module이고, $s_{i+1}\in \mathfrak{p}A_\mathfrak{p}$이며 곱하기 $s_{i+1}$이 $M_i$ 위에서 injective이고 $M_i/s_{i+1}M_i=M_{i+1}$이다. 따라서 [\[가환대수학\] §Depth, ⁋명제 9](/ko/math/commutative_algebra/depth#prop9)에 의하여 $\dim M_{i+1}=\dim M_i-1$이고, 이를 $i=0,1,\ldots, k-1$에 차례로 적용하면 
+한편, [§차원, ⁋명제 8](/ko/math/scheme_theory/dimension#prop8)에 의하여 $\codim_X W=\dim A_\mathfrak{p}$이므로 우리가 증명해야 할 것은 $\dim A_\mathfrak{p}$가 $k$가 된다는 사실이다. 위의 식에서 우리는 $\dim A_\mathfrak{p}/(s_1,\ldots, s_k)=0$임을 보았으므로, 이를 위해서는 $s_i$들로 자르는 과정이 정확히 차원을 $1$씩 깎는다는 것을 보이면 충분하다. 
+
+이제 $\mathfrak{p}$가 $(s_1,\ldots, s_k)$를 포함하므로 $(s_1,\ldots, s_k)A_\mathfrak{p}$는 proper이고, localization이 exact이라 non-zerodivisor를 보존하므로 $(s_1,\ldots, s_k)$는 $A_\mathfrak{p}$-regular sequence이다. 곧 $R_i=A_\mathfrak{p}/(s_1,\ldots, s_i)$로 두면 각각의 $R_i$는 $0$이 아닌 Noetherian local ring이고, $s_{i+1}$의 image는 $R_i$의 maximal ideal에 속하는 non-zerodivisor이며 $R_i/s_{i+1}R_i=R_{i+1}$이다.
+
+부등식 $\dim R_{i+1}\geq \dim R_i-1$은 [\[가환대수학\] §매개계, ⁋따름정리 7](/ko/math/commutative_algebra/system_of_parameters#cor7)이 non-zerodivisor 조건 없이 준다. 반대 부등식은 $s_{i+1}$이 non-zerodivisor라는 것에서 나온다. [\[가환대수학\] §동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)의 둘째 결과에 의하여 $s_{i+1}$은 $R_i$의 어떠한 associated prime에도 속하지 않고, 같은 정리의 첫째 결과에 의하여 $R_i$의 minimal prime은 모두 associated prime이므로, $s_{i+1}$을 포함하는 $R_i$의 prime ideal은 minimal이 아니다. 그럼 $R_{i+1}$의 prime ideal들의 임의의 chain에 대하여 그 가장 작은 항 $\mathfrak{q}$는 $s_{i+1}$을 포함하는 $R_i$의 prime ideal이므로 $\mathfrak{q}'\subsetneq \mathfrak{q}$인 $R_i$의 prime ideal $\mathfrak{q}'$이 존재하고, 이를 chain 아래에 덧붙이면 길이가 하나 더 긴 $R_i$의 chain을 얻는다. 곧 $\dim R_{i+1}+1\leq \dim R_i$이다.
+
+이상에서 $\dim R_{i+1}=\dim R_i-1$이고, 이를 $i=0,1,\ldots, k-1$에 차례로 적용하면 
 
 $$0=\dim A_\mathfrak{p}/(s_1,\ldots, s_k)=\dim A_\mathfrak{p}-k$$
 
