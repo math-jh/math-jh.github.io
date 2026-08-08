@@ -2530,6 +2530,13 @@ C:
   defs:
   - label: '[선형대수학] §행렬식의 존재성과 유일성'
     url: /ko/math/linear_algebra/existence_and_uniqueness_of_determinant
+- id: cohen-macaulay
+  en: Cohen-Macaulay
+  ko: 코언-맥컬레이
+  primary: en
+  defs:
+  - label: '[가환대수학] §Cohen-Macaulay 환'
+    url: /ko/math/commutative_algebra/cohen_macaulay_rings
 - id: coherence_condition
   en: coherence condition
   ko: 일관성 조건
@@ -5489,6 +5496,13 @@ E:
   defs:
   - label: '[리만기하학] §지수사상'
     url: /ko/math/riemannian_geometry/exponential_map
+- id: ext
+  en: Ext
+  ko: 엑스트
+  primary: en
+  defs:
+  - label: '[가환대수학] §평탄성'
+    url: /ko/math/commutative_algebra/flatness
 - id: extended_complex_plane
   en: extended complex plane
   ko: 확장복소평면
@@ -5944,6 +5958,13 @@ F:
   defs:
   - label: '[가환대수학] §기본 개념들'
     url: /ko/math/commutative_algebra/basic_notions
+- id: finitely_presented_module
+  en: finitely presented module
+  ko: 유한제시 모듈
+  primary: en
+  defs:
+  - label: '[가환대수학] §기본 개념들'
+    url: /ko/math/commutative_algebra/basic_notions
 - id: first_chern_form
   en: first Chern form
   ko: 제1 Chern 형식
@@ -6186,6 +6207,13 @@ F:
   defs:
   - label: '[대수적 구조] §자유곱'
     url: /ko/math/algebraic_structures/free_products
+- id: free_resolution
+  en: free resolution
+  ko: 자유분해
+  primary: en
+  defs:
+  - label: '[호몰로지 대수학] §Ext와 Tor'
+    url: /ko/math/homological_algebra/ext_and_tor
 - id: frobenius_algebra
   en: Frobenius algebra
   ko: 프로베니우스 대수
@@ -6757,6 +6785,13 @@ G:
   defs:
   - label: '[대수적 위상수학] §호몰로지의 계산'
     url: /ko/math/algebraic_topology/computation_of_homology
+- id: gorenstein_ring
+  en: Gorenstein ring
+  ko: 고렌슈타인 환
+  primary: en
+  defs:
+  - label: '[가환대수학] §Gorenstein 환'
+    url: /ko/math/commutative_algebra/gorenstein_rings
 - id: grade
   en: grade
   ko: 차수
@@ -9070,6 +9105,13 @@ K:
   defs:
   - label: '[호몰로지 대수학] §Ext와 Tor'
     url: /ko/math/homological_algebra/ext_and_tor
+- id: koszul_homology
+  en: Koszul homology
+  ko: 코쥘 호몰로지
+  primary: en
+  defs:
+  - label: '[가환대수학] §코쥴 복합체'
+    url: /ko/math/commutative_algebra/koszul_complex
 - id: kronecker_pairing
   en: Kronecker pairing
   ko: 크로네커 쌍
@@ -11249,6 +11291,13 @@ N:
   defs:
   - label: '[선형대수학] §쌍선형형식'
     url: /ko/math/linear_algebra/bilinear_form
+- id: non-zerodivisor
+  en: non-zerodivisor
+  ko: 정칙원소
+  primary: en
+  defs:
+  - label: '[가환대수학] §평탄성'
+    url: /ko/math/commutative_algebra/flatness
 - id: nonabelian_derived_functor
   en: nonabelian derived functor
   ko: 비아벨 유도 함자

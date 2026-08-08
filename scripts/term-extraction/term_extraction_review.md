@@ -5263,3 +5263,12 @@ Decide whether each one is a definition and add it to `_data/terms.yml` (then ru
 - _posts/Math/Commutative_Algebra/ko/2026-07-24-Cohen_Macaulay_Rings.md: 주요 용어 'Cohen-Macaulay' ko 미상 — 보류
 - _posts/Math/Commutative_Algebra/ko/2026-07-24-Cohen_Macaulay_Rings.md: 주요 용어 'Noetherian' ko 미상 — 보류
 - _posts/Math/Commutative_Algebra/ko/2026-07-24-Cohen_Macaulay_Rings.md: 주요 용어 'catenary' ko 미상 — 보류
+
+## term_extract_worker 2026-08-08 19:00
+
+- _posts/Math/Commutative_Algebra/ko/2026-07-24-Gorenstein_Rings.md: 주요 용어 'Noetherian' ko 미상 — 보류
+- _posts/Math/Commutative_Algebra/ko/2026-07-24-Gorenstein_Rings.md: 주요 용어 'socle' ko 미상 — 보류
+
+## term_extract_worker 2026-08-08 19:30
+
+- _posts/Math/Commutative_Algebra/ko/2026-07-24-Hilbert-Samuel_Function.md: 주요 용어 'numerical polynomial' ko 미상 — 보류
