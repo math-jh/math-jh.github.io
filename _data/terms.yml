@@ -1946,6 +1946,13 @@ C:
     url: /ko/math/commutative_algebra/completion
   - label: '[해석학] §Cauchy 수열과 완비성'
     url: /ko/math/analysis/cauchy_sequences
+- id: cayley-hamilton
+  en: Cayley-Hamilton
+  ko: 케일리-해밀턴
+  primary: en
+  defs:
+  - label: '[선형대수학] §최소다항식'
+    url: /ko/math/linear_algebra/minimal_polynomial
 - id: cayley-hamilton_theorem
   en: Cayley-Hamilton theorem
   ko: 케일리-해밀턴 정리
@@ -8819,6 +8826,13 @@ J:
     id: diagonalizable
   - label: Jordan block
     id: jordan_block
+- id: jordan-chevalley_decomposition
+  en: Jordan-Chevalley decomposition
+  ko: 조르당-슈발레 분해
+  primary: en
+  defs:
+  - label: '[선형대수학] §최소다항식'
+    url: /ko/math/linear_algebra/minimal_polynomial
 - id: j_th_column_vector
   en: $j$th column vector
   ko: $j$번째 열벡터
@@ -10481,6 +10495,8 @@ M:
   defs:
   - label: '[체론] §대수적 확장'
     url: /ko/math/field_theory/algebraic_extensions
+  - label: '[선형대수학] §최소다항식'
+    url: /ko/math/linear_algebra/minimal_polynomial
   see:
   - label: Characteristic polynomial
     id: characteristic_polynomial
@@ -12332,6 +12348,13 @@ P:
   defs:
   - label: '[리 이론] §근계'
     url: /ko/math/lie_theory/root_systems
+- id: positive_semidefinite
+  en: positive semidefinite
+  ko: 반양정부호
+  primary: en
+  defs:
+  - label: '[선형대수학] §스펙트럼 정리'
+    url: /ko/math/linear_algebra/spectral_theorem
 - id: potential
   en: potential
   ko: 퍼텐셜
