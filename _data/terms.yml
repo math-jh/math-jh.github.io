@@ -666,6 +666,13 @@ A:
   defs:
   - label: '[토릭 기하학] §파노 다양체'
     url: /ko/math/toric_geometry/reflexive_polytope_fano
+- id: antiderivation
+  en: antiderivation
+  ko: 반미분
+  primary: en
+  defs:
+  - label: '[다중선형대수학] §미분'
+    url: /ko/math/multilinear_algebra/derivations
 - id: antiderivative
   en: antiderivative
   ko: 원시함수
@@ -10752,6 +10759,13 @@ M:
   defs:
   - label: '[거울대칭] §거울대칭 개요'
     url: /ko/math/mirror_symmetry/overview
+- id: mixed_tensor
+  en: mixed tensor
+  ko: 혼합 텐서
+  primary: en
+  defs:
+  - label: '[다중선형대수학] §텐서대수'
+    url: /ko/math/multilinear_algebra/tensor_algebras
 - id: möbius_function
   en: Möbius function
   ko: 뫼비우스 함수

@@ -5280,3 +5280,10 @@ Decide whether each one is a definition and add it to `_data/terms.yml` (then ru
 ## term_extract_worker 2026-08-09 06:01
 
 - _posts/Math/Mirror_Symmetry/ko/2026-05-24-Gauss_Manin_Connection.md: 주요 용어 'rapid decay homology' ko 미상 — 보류
+
+## term_extract_worker 2026-08-09 07:31
+
+- _posts/Math/Multilinear_Algebra/ko/2022-12-08-Derivations.md: 주요 용어 'commutation factor' ko 미상 — 보류
+- _posts/Math/Multilinear_Algebra/ko/2022-12-08-Derivations.md: 주요 용어 'graded algebra' ko 미상 — 보류
+- _posts/Math/Multilinear_Algebra/ko/2022-12-08-Derivations.md: 주요 용어 'bracket' ko 미상 — 보류
+- _posts/Math/Multilinear_Algebra/ko/2022-12-08-Derivations.md: 주요 용어 'Jacobi identity' ko 미상 — 보류
