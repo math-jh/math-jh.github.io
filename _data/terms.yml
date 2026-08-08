@@ -3532,6 +3532,13 @@ C:
   defs:
   - label: '[선형대수학] §벡터공간'
     url: /ko/math/linear_algebra/vector_spaces
+- id: coordinate_system
+  en: coordinate system
+  ko: 좌표계
+  primary: en
+  defs:
+  - label: '[미분다양체] §미분다양체'
+    url: /ko/math/manifolds/smooth_manifolds
 - id: coordinate_transformation
   en: coordinate transformation
   ko: 좌표변환
@@ -15124,6 +15131,13 @@ S:
   defs:
   - label: '[미분다양체] §미분다양체'
     url: /ko/math/manifolds/smooth_manifolds
+- id: smooth_function
+  en: smooth function
+  ko: 매끄러운 함수
+  primary: en
+  defs:
+  - label: '[미분다양체] §미분사상'
+    url: /ko/math/manifolds/differentials
 - id: smooth_functor
   en: smooth functor
   ko: 매끄러운 함자
