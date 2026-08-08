@@ -5249,3 +5249,11 @@ Decide whether each one is a definition and add it to `_data/terms.yml` (then ru
 ## term_extract_worker 2026-08-07 18:01
 
 - _posts/Math/Lie_Theory/ko/2026-06-21-Representations_of_sl2.md: 주요 용어 'Clebsch–Gordan' ko 미상 — 보류
+
+## term_extract_worker 2026-08-08 09:00
+
+- _posts/Math/Linear_Algebra/ko/2026-06-25-Complex_Spectral_Theorem.md: 주요 용어 'Hermitian' ko 미상 — 보류
+
+## term_extract_worker 2026-08-08 09:31
+
+- _posts/Math/Linear_Algebra/ko/2026-06-25-Spectral_Theorem.md: 주요 용어 'positive definite' ko 미상 — 보류

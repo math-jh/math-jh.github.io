@@ -11302,6 +11302,13 @@ N:
   defs:
   - label: '[리만기하학] §지수사상'
     url: /ko/math/riemannian_geometry/exponential_map
+- id: normal_operator
+  en: normal operator
+  ko: 정규작용소
+  primary: en
+  defs:
+  - label: '[선형대수학] §복소내적공간'
+    url: /ko/math/linear_algebra/complex_inner_product_spaces
 - id: normal_regular_space
   en: normal regular space
   ko: 정규정칙공간
@@ -14255,6 +14262,13 @@ S:
     id: schur_polynomial
   - label: Schubert cell
     id: schubert_cell
+- id: schur_decomposition
+  en: Schur decomposition
+  ko: Schur 분해
+  primary: en
+  defs:
+  - label: '[선형대수학] §복소 스펙트럼 정리'
+    url: /ko/math/linear_algebra/complex_spectral_theorem
 - id: schur_polynomial
   en: Schur polynomial
   ko: 슈어 다항식
@@ -14338,6 +14352,13 @@ S:
   defs:
   - label: '[선형대수학] §스펙트럼 정리'
     url: /ko/math/linear_algebra/spectral_theorem
+- id: self-adjoint_operator
+  en: self-adjoint operator
+  ko: 자기수반작용소
+  primary: en
+  defs:
+  - label: '[선형대수학] §복소내적공간'
+    url: /ko/math/linear_algebra/complex_inner_product_spaces
 - id: self-intersection_number
   en: self-intersection number
   ko: 자기교차수
@@ -15142,6 +15163,13 @@ S:
   defs:
   - label: '[호몰로지 대수학] §스펙트럼 열'
     url: /ko/math/homological_algebra/spectral_sequences
+- id: spectral_theorem
+  en: spectral theorem
+  ko: 스펙트럼 정리
+  primary: en
+  defs:
+  - label: '[선형대수학] §스펙트럼 정리'
+    url: /ko/math/linear_algebra/spectral_theorem
 - id: spectrum
   en: spectrum
   ko: 스펙트럼
@@ -15797,6 +15825,13 @@ S:
   defs:
   - label: '[군론] §대칭군'
     url: /ko/math/group_theory/symmetric_groups
+- id: symmetric_matrix
+  en: symmetric matrix
+  ko: 대칭행렬
+  primary: en
+  defs:
+  - label: '[선형대수학] §스펙트럼 정리'
+    url: /ko/math/linear_algebra/spectral_theorem
 - id: symmetric_monoidal_category
   en: symmetric monoidal category
   ko: 대칭 모노이드 범주
@@ -16753,6 +16788,20 @@ U:
   defs:
   - label: '[대수적 구조] §대수'
     url: /ko/math/algebraic_structures/algebras
+- id: unitary_matrix
+  en: unitary matrix
+  ko: 유니터리 행렬
+  primary: en
+  defs:
+  - label: '[선형대수학] §복소내적공간'
+    url: /ko/math/linear_algebra/complex_inner_product_spaces
+- id: unitary_operator
+  en: unitary operator
+  ko: 단일작용소
+  primary: en
+  defs:
+  - label: '[선형대수학] §복소내적공간'
+    url: /ko/math/linear_algebra/complex_inner_product_spaces
 - id: unitary_representation
   en: unitary representation
   ko: 유니타리표현
