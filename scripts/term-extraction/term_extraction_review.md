@@ -5257,3 +5257,9 @@ Decide whether each one is a definition and add it to `_data/terms.yml` (then ru
 ## term_extract_worker 2026-08-08 09:31
 
 - _posts/Math/Linear_Algebra/ko/2026-06-25-Spectral_Theorem.md: 주요 용어 'positive definite' ko 미상 — 보류
+
+## term_extract_worker 2026-08-08 17:31
+
+- _posts/Math/Commutative_Algebra/ko/2026-07-24-Cohen_Macaulay_Rings.md: 주요 용어 'Cohen-Macaulay' ko 미상 — 보류
+- _posts/Math/Commutative_Algebra/ko/2026-07-24-Cohen_Macaulay_Rings.md: 주요 용어 'Noetherian' ko 미상 — 보류
+- _posts/Math/Commutative_Algebra/ko/2026-07-24-Cohen_Macaulay_Rings.md: 주요 용어 'catenary' ko 미상 — 보류

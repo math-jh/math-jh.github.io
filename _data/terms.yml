@@ -5930,6 +5930,13 @@ F:
   defs:
   - label: '[대수적 구조] §가군'
     url: /ko/math/algebraic_structures/modules
+- id: finitely_generated_module
+  en: finitely generated module
+  ko: 유한생성 가군
+  primary: en
+  defs:
+  - label: '[대수적 구조] §가군'
+    url: /ko/math/algebraic_structures/modules
 - id: finitely_presented
   en: finitely presented
   ko: 유한표시가군
@@ -5958,6 +5965,13 @@ F:
   defs:
   - label: '[유도대수기하학] §변형이론과 여접 복합체'
     url: /ko/math/derived_algebraic_geometry/deformation_theory
+- id: fitting_ideal
+  en: Fitting ideal
+  ko: 핏팅 아이디얼
+  primary: en
+  defs:
+  - label: '[가환대수학] §Fitting 아이디얼'
+    url: /ko/math/commutative_algebra/fitting_ideals
 - id: fixed_point
   en: fixed point
   ko: 고정점
@@ -6743,6 +6757,13 @@ G:
   defs:
   - label: '[대수적 위상수학] §호몰로지의 계산'
     url: /ko/math/algebraic_topology/computation_of_homology
+- id: grade
+  en: grade
+  ko: 차수
+  primary: ko
+  defs:
+  - label: '[대수적 구조] §등급가군'
+    url: /ko/math/algebraic_structures/graded_modules
 - id: graded_abelian_group
   en: graded abelian group
   ko: 등급 가환군
@@ -10502,6 +10523,13 @@ M:
   defs:
   - label: '[집합론] §순서집합의 원소들'
     url: /ko/math/set_theory/elements_in_ordered_set
+- id: minimal_free_resolution
+  en: minimal free resolution
+  ko: 극소 자유 분해
+  primary: en
+  defs:
+  - label: '[가환대수학] §호몰로지 차원'
+    url: /ko/math/commutative_algebra/homological_dimension
 - id: minimal_length_coset_representatives
   en: minimal length coset representatives
   ko: 최소 길이 잉여류 대표원
@@ -10549,6 +10577,13 @@ M:
   defs:
   - label: '[선형대수학] §최소제곱법'
     url: /ko/math/linear_algebra/least_squares_method
+- id: minor
+  en: minor
+  ko: 소행렬식
+  primary: ko
+  defs:
+  - label: '[다중선형대수학] §행렬식'
+    url: /ko/math/multilinear_algebra/determinants
 - id: mirror_symmetry
   en: mirror symmetry
   ko: 거울 대칭
@@ -11174,6 +11209,13 @@ N:
   defs:
   - label: '[대수다양체] §Noether Formula'
     url: /ko/math/algebraic_varieties/noether_formula
+- id: noetherian_local_ring
+  en: Noetherian local ring
+  ko: 뇌터 국소환
+  primary: en
+  defs:
+  - label: '[가환대수학] §평탄성과 국소화'
+    url: /ko/math/commutative_algebra/local_criterion_for_flatness
 - id: noetherian
   en: Noetherian module
   ko: 뇌터가군
@@ -16373,6 +16415,13 @@ T:
   defs:
   - label: '[위상수학] §열린집합'
     url: /ko/math/topology/open_sets
+- id: tor
+  en: Tor
+  ko: 토르
+  primary: en
+  defs:
+  - label: '[호몰로지 대수학] §Ext와 Tor'
+    url: /ko/math/homological_algebra/ext_and_tor
 - id: toric_boundary
   en: toric boundary
   ko: 토릭 경계
