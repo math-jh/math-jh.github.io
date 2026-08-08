@@ -1225,6 +1225,13 @@ B:
     id: vector_space
   - label: Dual basis
     id: dual_basis
+- id: betti_number
+  en: Betti number
+  ko: 베티 수
+  primary: en
+  defs:
+  - label: '[가환대수학] §호몰로지 차원'
+    url: /ko/math/commutative_algebra/homological_dimension
 - id: bézout_theorem
   en: Bézout theorem
   ko: 베주 정리
@@ -12607,6 +12614,13 @@ P:
   defs:
   - label: '[정수론] §소수와 산술의 기본정리'
     url: /ko/math/number_theory/primes
+- id: prime_element
+  en: prime element
+  ko: 소원
+  primary: en
+  defs:
+  - label: '[환론] §정역'
+    url: /ko/math/ring_theory/integral_domains
 - id: prime_field
   en: prime field
   ko: 소체
@@ -16100,6 +16114,13 @@ S:
   defs:
   - label: '[가환대수학] §매개계'
     url: /ko/math/commutative_algebra/system_of_parameters
+- id: syzygy
+  en: syzygy
+  ko: 시지지
+  primary: en
+  defs:
+  - label: '[가환대수학] §호몰로지 차원'
+    url: /ko/math/commutative_algebra/homological_dimension
 T:
 - id: t_0_-space
   en: $T_0$-space
