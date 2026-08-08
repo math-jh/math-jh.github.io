@@ -86,9 +86,9 @@ $$0=\dim A_\mathfrak{p}/(s_1,\ldots, s_k)=\dim A_\mathfrak{p}-k$$
 
 거꾸로 codimension이 $k$라고 하여 complete intersection이 되는 것은 아니다. 가령 $\mathbb{A}^4_\mathbb{K}$ 안에서 원점에서만 만나는 두 평면의 합집합 $Z(\x_1,\x_2)\cup Z(\x_3,\x_4)$는 codimension $2$이지만 complete intersection이 아니다. 두 평면 각각은 두 개의 방정식으로 잘리지만 이들이 만나는 원점 근방에서는 두 개로 부족하기 때문이며, 이는 [명제 5](#prop5) 직전의 논의에서 확인한다.
 
-## 코쥴 분해와 conormal sheaf
+## 코쥴 복합체와 여법다발
 
-[정의 1](#def1)이 요구하는 것은 국소적으로 하나의 regular sequence가 $Z$를 잘라낸다는 것이고, 이 조건을 다루는 데 쓰이는 것이 Koszul 복합체이다. 우리가 가져다 쓰는 것은 그 이론의 일부이므로 필요한 만큼만 되짚어 두자. Ring $A$의 원소들 $x_1,\ldots, x_n$에 대하여 $K(x_1,\ldots, x_n)$은 $j$번째 항이 $A^{\oplus\binom{n}{j}}$이고 differential이 각 basis 원소에서 $e_{j_k}$를 하나씩 지우며 $x_{j_k}$를 곱하는 교대합으로 주어지는 복합체이며, $n=1$인 경우에는
+[정의 1](#def1)이 요구하는 것은 국소적으로 하나의 regular sequence가 $Z$를 잘라낸다는 것이고, 이 조건을 다루는 데 쓰이는 것이 Koszul complex이다. Ring $A$의 원소들 $x_1,\ldots, x_n$에 대하여, 그 *Koszul complex*는 $K(x_1,\ldots, x_n)$은 $j$번째 항이 $A^{\oplus\binom{n}{j}}$이고 differential이 각 basis 원소에서 $e_{j_k}$를 하나씩 지우며 $x_{j_k}$를 곱하는 alternating sum으로 주어지는 complex이며, $n=1$인 경우에는
 
 $$0 \rightarrow A\overset{x_1}{\longrightarrow}A \rightarrow 0$$
 
