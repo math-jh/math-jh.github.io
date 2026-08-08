@@ -9,7 +9,7 @@ sidebar:
     nav: "commutative_algebra-ko"
 
 date: 2025-01-24
-weight: 18
+weight: 20
 
 ---
 
@@ -54,46 +54,6 @@ Regular local Noetherian ring의 regular system of parameters는 $A$-sequence를
 :::
 
 ::: 명제 4
-Regular local Noetherian ring $(A, \mathfrak{m})$과 그 prime ideal $\mathfrak{p}$에 대하여,
-
-$$\dim A/\mathfrak{p} + \codim \mathfrak{p} = \dim A$$
-
-가 성립한다.
-:::
-::: 증명
-[§차원](/ko/math/commutative_algebra/Krull_dimension)에서 살펴본 것처럼 일반적으로 $\dim A/\mathfrak{p} + \codim \mathfrak{p} \le \dim A$이다. 따라서 반대 부등식을 보이면 충분하다.
-
-$d = \dim A$이고 $h = \codim \mathfrak{p}$라 하자. [따름정리 3](#cor3)에 의하여 regular system of parameters $x_1, \ldots, x_d$는 $\mathfrak{m}$에 속하는 $A$-sequence이다. 일반적으로 $d$차원 Noetherian local ring $(A,\mathfrak{m})$이 $d$개의 원소로 이루어진 $A$-sequence를 $\mathfrak{m}$ 안에 가질 때 $A$를 *Cohen--Macaulay local ring*이라 부르므로, regular local ring은 Cohen--Macaulay local ring이다. 따라서 다음 두 주장을 $d$에 대한 귀납법으로 보이면 충분하다.
-
-1. $d$차원 Cohen--Macaulay local ring $A$의 임의의 associated prime $\mathfrak{q}\in \Ass A$는 $\dim A/\mathfrak{q}=d$를 만족한다.
-2. $d$차원 Cohen--Macaulay local ring $A$의 임의의 prime ideal $\mathfrak{p}$는 $\dim A/\mathfrak{p}+\codim \mathfrak{p}=d$를 만족한다.
-
-$d=0$인 경우 두 주장 모두 자명하므로, $d\geq 1$이라 하고 두 주장이 $(d-1)$차원 Cohen--Macaulay local ring들에 대해 성립한다고 가정하자.
-
-첫째 주장을 보이기 위해 $\mathfrak{q}=\ann(a)\in\Ass A$라 하자. $x_1$은 non-zerodivisor이므로 [§동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)에 의하여 $x_1\not\in \mathfrak{q}$이다. 우리는 $a\not\in x_1A$이라 가정할 수 있다. 실제로 $a=x_1b$라면 $x_1$이 non-zerodivisor이므로 $\ann(b)=\ann(a)=\mathfrak{q}$이고, 이 때 $Aa\subsetneq Ab$이다. 만일 $Aa=Ab$라면 $b=ca=cx_1b$로부터 $(1-cx_1)b=0$인데, $x_1\in\mathfrak{m}$이므로 $1-cx_1$은 unit이고 따라서 $b=0$, 곧 $\mathfrak{q}=A$라는 모순을 얻기 때문이다. 그러므로 $a$를 $b$로 교체하는 과정은 ascending chain condition에 의해 유한 번 안에 끝난다.
-
-이제 $\overline{A}=A/x_1A$라 하자. 그럼 $\overline{A}$는 정의에 의하여 $\overline{A}$-sequence $\overline{x}_2,\ldots, \overline{x}_d$를 그 maximal ideal 안에 가지며, $\dim \overline{A}=d-1$이다. 실제로 [§매개계, ⁋따름정리 7](/ko/math/commutative_algebra/system_of_parameters#cor7)에 의해 $\dim \overline{A}\geq d-1$이고, non-zerodivisor $x_1$은 [§동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)에 의해 $A$의 어떠한 minimal prime ideal에도 속하지 않으므로, $x_1$을 포함하는 임의의 prime ideal $\mathfrak{q}_0$는 $\codim \mathfrak{q}_0\geq 1$, 따라서 $\dim A/\mathfrak{q}_0\leq d-1$을 만족하기 때문이다. 특히 $\overline{A}$는 $(d-1)$차원 Cohen--Macaulay local ring이다.
-
-$a\not\in x_1A$이므로 $\bar{a}\in \overline{A}$는 $0$이 아니며 $\ann_{\overline{A}}(\bar a)\supseteq (\mathfrak{q}+x_1A)/x_1A$이다. [§동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)에 의해 $\Ass(\overline{A}\bar a)$는 공집합이 아니고 그 원소들은 $\ann_{\overline{A}}(\bar a)$를 포함하며, [§동반소아이디얼, ⁋보조정리 5](/ko/math/commutative_algebra/associated_primes#lem5)에 의해 $\Ass(\overline{A}\bar{a})\subseteq \Ass \overline{A}$이다. 그러므로 적당한 $\overline{\mathfrak{q}}'\in \Ass\overline{A}$가 존재하여, 그 preimage $\mathfrak{q}'\subseteq A$는 $\mathfrak{q}\subsetneq \mathfrak{q}'$를 만족한다 ($x_1\in\mathfrak{q}'\setminus\mathfrak{q}$). 귀납가설의 첫째 주장에 의하여 $\dim \overline{A}/\overline{\mathfrak{q}}'=d-1$이므로
-
-$$\dim A/\mathfrak{q}\geq 1+\dim A/\mathfrak{q}'=1+\dim \overline{A}/\overline{\mathfrak{q}}'=d$$
-
-이고, 반대 부등식은 자명하므로 첫째 주장을 얻는다.
-
-둘째 주장을 보이자. 만일 $h=0$이라면 $\mathfrak{p}$는 minimal prime ideal이고, [§동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)에 의해 $\mathfrak{p}\in\Ass A$이므로 첫째 주장으로부터 $\dim A/\mathfrak{p}=d$를 얻는다. 이제 $h\geq 1$이라 하자. 만일 $\mathfrak{p}$가 어떠한 $\mathfrak{q}\in \Ass A$에 포함된다면 첫째 주장과 일반 부등식으로부터 $\codim \mathfrak{q}=0$인데, 그럼 $\mathfrak{p}\subseteq \mathfrak{q}$로부터 $h=0$이 되어 모순이다. $\Ass A$는 유한집합이므로 ([§동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)), [§동반소아이디얼, ⁋보조정리 2](/ko/math/commutative_algebra/associated_primes#lem2)에 의하여 어떠한 associated prime에도 속하지 않는 $x\in \mathfrak{p}$를 택할 수 있고, 특히 $x$는 non-zerodivisor이다.
-
-이제 $\overline{A}=A/xA$가 다시 $(d-1)$차원 Cohen--Macaulay local ring이라는 사실을 사용한다. 이는 depth 이론의 표준적인 결과 — non-zerodivisor에 대한 quotient는 depth와 dimension을 동시에 정확히 $1$씩 줄인다 — 로, 본 블로그에서는 아직 depth 이론을 다루지 않았으므로 그 증명은 [§Depth, ⁋명제 9](/ko/math/commutative_algebra/depth#prop9)로 미룬다. $\overline{\mathfrak{p}}=\mathfrak{p}/xA$에 귀납가설의 둘째 주장을 적용하면
-
-$$\dim \overline{A}/\overline{\mathfrak{p}}+\codim \overline{\mathfrak{p}}=d-1$$
-
-이다. 그런데 $\overline{A}/\overline{\mathfrak{p}}\cong A/\mathfrak{p}$이고, $\codim \overline{\mathfrak{p}}=\dim \overline{A}_{\overline{\mathfrak{p}}}=\dim A_\mathfrak{p}/xA_\mathfrak{p}$이다. 한편 $x$는 $A_\mathfrak{p}$에서도 non-zerodivisor인데, $(x/1)(b/s)=0$이라면 적당한 $u\not\in\mathfrak{p}$에 대하여 $uxb=0$이고 $x$가 non-zerodivisor이므로 $ub=0$, 곧 $b/s=0$이기 때문이다. 그럼 $x/1\in \mathfrak{p}A_\mathfrak{p}$이므로, $\dim\overline{A}=d-1$의 증명과 동일한 논증을 local ring $A_\mathfrak{p}$에 적용하여 $\dim A_\mathfrak{p}/xA_\mathfrak{p}=\dim A_\mathfrak{p}-1=h-1$을 얻는다. 종합하면
-
-$$\dim A/\mathfrak{p}+(h-1)=d-1$$
-
-이므로 원하는 결과를 얻는다.
-:::
-
-::: 명제 5
 Complete regular local Noetherian ring $(A, \mathfrak{m})$의 차원이 $d$이고, residue field $\kappa=A/\mathfrak{m}$라 하자. 만일 $A$가 어떠한 field를 포함한다면 $A\cong \kappa[[\x_1,\ldots, \x_d]]$이며, 이 isomorphism은 각각의 변수 $\x_i$들과 $A$의 regular system of parameters를 대응시킨다.
 :::
 ::: 증명
@@ -108,7 +68,7 @@ $$d=\dim A=\dim \im(\phi)=\dim \kappa[[\x_1,\ldots,\x_d]]/\ker\phi\leq \dim \kap
 
 이제 우리는 $1$차원의 regular local ring $(A,\mathfrak{m})$에 대해 살펴본다. 그럼 정의에 의해 $\mathfrak{m}$은 하나의 원소 $m$으로 생성되어야 하며, 우리는 이를 $A$의 *regular parameter* 혹은 *uniformizing parameter*라 부른다.
 
-::: 명제 6
+::: 명제 5
 1차원의 regular local ring $(A, \mathfrak{m})$이 주어졌다 하고, $m$이 $A$의 regular parameter라 하자. 그럼 $\Frac(A)$의 임의의 원소 $x$는 
 
 $$x=a m^k\qquad \text{$k\in \mathbb{Z}$, $a$ a unit of $A$}$$
@@ -131,7 +91,7 @@ $$\nu:\Frac(A)^\times \rightarrow \mathbb{Z};\qquad am^k\mapsto k$$
 
 를 정의할 수 있다. 더 일반적으로 다음을 정의한다. 
 
-::: 정의 7
+::: 정의 6
 Integral domain $A$와 totally ordered abelian group $G$에 대하여, group homomorphism $\nu:\Frac(A)^\times \rightarrow G$가 다음 부등식
 
 $$\nu(x+y)\geq \min(\nu(x), \nu(y))$$
@@ -149,13 +109,13 @@ $$S=\nu^{-1}\left(\{g\in G\mid g\geq 0\}\right)$$
 
 $$am^k+bm^l=(am^{k-\min(k,l)}+bm^{l-\min(k,l)})m^{\min(k,l)}$$
 
-에 의해 자명하다. 그럼 [명제 5](#prop5)에 의하여, 두 complete discrete valuation ring이 각각 field를 포함하고, isomorphic한 residue field를 갖는다면 이들은 서로 isomorphic하다는 것을 안다. 그러나 일반적으로 complete하지 않은 discrete valuation ring들 사이에는 이러한 종류의 classification이 존재하지 않는다.
+에 의해 자명하다. 그럼 [명제 4](#prop4)에 의하여, 두 complete discrete valuation ring이 각각 field를 포함하고, isomorphic한 residue field를 갖는다면 이들은 서로 isomorphic하다는 것을 안다. 그러나 일반적으로 complete하지 않은 discrete valuation ring들 사이에는 이러한 종류의 classification이 존재하지 않는다.
 
 ## 세르의 정규화 조건
 
 우선 편의를 위해, ring $A$의 non-zerodivisor $u$에 대하여, $A/(u)$의 associated prime ideal $\mathfrak{p}$를 *associated to a non-zerodivisor $u$*라 부르기로 하자. 이는 [§동반소아이디얼, ⁋정의 1](/ko/math/commutative_algebra/associated_primes#def1)에서와 마찬가지 예외이다. 
 
-::: 명제 8
+::: 명제 7
 Reduced Noetherian ring $A$와 $A$의 total ring of fractions $K$가 주어졌다 하자. 그럼 원소 $x\in K$가 $A$에 속하는 것은 임의의 prime ideal $\mathfrak{p}$ associated to a non-zerodivisor에 대하여 $x$의 $K_\mathfrak{p}$에서의 image가 $A_\mathfrak{p}$에 속하는 것과 동치이다. 
 :::
 ::: 증명
@@ -172,7 +132,7 @@ $$\epsilon_\mathfrak{p}(a)\in(u)A_\mathfrak{p}$$
 
 이를 통해 다음을 보일 수 있다.
 
-::: 정리 9
+::: 정리 8
 Noetherian integral domain $A$가 normal domain인 것은 다음 조건과 동치이다. 
 
 ($\ast$) 임의의 prime ideal $\mathfrak{p}$ associated to a principal ideal에 대하여, $\mathfrak{p}A_\mathfrak{p}$는 $A_\mathfrak{p}$의 principal ideal이다. 
@@ -182,7 +142,7 @@ Noetherian integral domain $A$가 normal domain인 것은 다음 조건과 동�
 
 $$A=\bigcap_\text{\scriptsize$\mathfrak{p}$ associated to a principal ideal}A_\mathfrak{p}$$
 
-을 보이면 충분하며, 여기서 $A_\mathfrak{p}$는 $A$의 quotient field $K$의 부분집합으로 본 것이다. 이제 보이고자 하는 주장은 [명제 8](#prop8)에서 더 일반적인 경우에 다루었다. 
+을 보이면 충분하며, 여기서 $A_\mathfrak{p}$는 $A$의 quotient field $K$의 부분집합으로 본 것이다. 이제 보이고자 하는 주장은 [명제 7](#prop7)에서 더 일반적인 경우에 다루었다. 
 
 거꾸로 $A$가 normal domain이라 하고, $\mathfrak{p}$가 principal ideal $\mathfrak{a}=(a)$의 associated prime이라 하자. 즉
 
@@ -199,7 +159,7 @@ $$\mathfrak{p}^{-1}=\{x\in K\mid x \mathfrak{p}\subseteq A\}$$
 
 이 정리는 더욱 일반화가 가능하다. 우선 다음을 정의하자.
 
-::: 정의 10
+::: 정의 9
 Ring $A$와 $A$의 total ring of fractions $K$를 고정하자.
 
 1. $A$가 *normal ring<sub>정규환</sub>*이라는 것은 $A$가 reduced이고, $K$ 안에서 $A$가 integrally closed인 것이다.
@@ -208,7 +168,7 @@ Ring $A$와 $A$의 total ring of fractions $K$를 고정하자.
 
 그럼 다음이 성립한다.
 
-::: 정리 11 (Serre)
+::: 정리 10 (Serre)
 Noetherian ring $A$가 normal domain들의 (유한한) direct product인 것은 다음의 두 조건이 모두 성립하는 것과 동치이다.
 
 (R1) $A$의 codimension $1$ prime에서의 localization은 DVR이고, $A$의 codimension $0$ prime에서의 localization은 field이다.  
@@ -229,13 +189,13 @@ $$a=(a_1,\ldots, a_n),\qquad\text{$a_i$ a non-zerodivisor of $A_i$}$$
 
 의 associated prime은 $\mathfrak{p}_k$를 $a_k$의 associated prime으로 둔 것과 같다. 
 
-이제 주장을 증명하자. 우선 각각의 $A_i$가 normal이라면 (S2)조건은 [정리 9](#thm9)의 결과로 얻어지고, (R1) 조건은 $A$의 codimension $c$짜리 prime ideal $\mathfrak{p}$에서의 localization을 위에서의 $\mathfrak{p}$의 묘사를 통해 $A_k$에서의 codimension $c$ prime $\mathfrak{p}_k$에서의 localization으로 볼 수 있기 때문에 성립한다.
+이제 주장을 증명하자. 우선 각각의 $A_i$가 normal이라면 (S2)조건은 [정리 8](#thm8)의 결과로 얻어지고, (R1) 조건은 $A$의 codimension $c$짜리 prime ideal $\mathfrak{p}$에서의 localization을 위에서의 $\mathfrak{p}$의 묘사를 통해 $A_k$에서의 codimension $c$ prime $\mathfrak{p}_k$에서의 localization으로 볼 수 있기 때문에 성립한다.
 
 거꾸로 R1S2 조건이 성립한다 하자. 그럼 우선 $A$는 reduced ring이다. 이는 만일
 
 $$0=\bigcap \mathfrak{q}_i,\qquad\text{$\mathfrak{q}_i$ a $\mathfrak{p}_i$-primary ideal}$$
 
-가 $0$의 minimal primary decomposition이라면 여기에 등장하는 $\mathfrak{p}_i$들은 모두 S2 조건에 의해 codimension $0$ ideal들이고, R1 조건에 의해 여기에서의 localization이 field임을 안다. 따라서 [명제 8](#prop8)을 적용할 수 있고, 여기에 [§조르단-횔더 정리, ⁋정리 5](/ko/math/commutative_algebra/Jordan-Holder_theorem#thm5)를 적용해주면 원하는 결과를 얻는다. 
+가 $0$의 minimal primary decomposition이라면 여기에 등장하는 $\mathfrak{p}_i$들은 모두 S2 조건에 의해 codimension $0$ ideal들이고, R1 조건에 의해 여기에서의 localization이 field임을 안다. 따라서 [명제 7](#prop7)을 적용할 수 있고, 여기에 [§조르단-횔더 정리, ⁋정리 5](/ko/math/commutative_algebra/Jordan-Holder_theorem#thm5)를 적용해주면 원하는 결과를 얻는다. 
 :::
 
 ---

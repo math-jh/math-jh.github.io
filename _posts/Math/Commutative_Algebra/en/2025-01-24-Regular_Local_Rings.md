@@ -9,7 +9,7 @@ sidebar:
     nav: "commutative_algebra-en"
 
 date: 2025-01-24
-weight: 18
+weight: 20
 translated_at: 2026-06-26T16:30:02+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-06-26T16:30:02+00:00
@@ -55,46 +55,6 @@ For each $i$, the quotient $A/(a_1,\ldots, a_i)$ is also a regular local ring, a
 :::
 
 ::: Proposition 4
-For a regular local Noetherian ring $(A, \mathfrak{m})$ and a prime ideal $\mathfrak{p}$ thereof,
-
-$$\dim A/\mathfrak{p} + \codim \mathfrak{p} = \dim A$$
-
-holds.
-:::
-::: Proof
-As we saw in [§Dimension](/en/math/commutative_algebra/Krull_dimension), in general we have $\dim A/\mathfrak{p} + \codim \mathfrak{p} \le \dim A$. Thus it suffices to prove the reverse inequality.
-
-Let $d = \dim A$ and $h = \codim \mathfrak{p}$. By [Corollary 3](#cor3), a regular system of parameters $x_1, \ldots, x_d$ is an $A$-sequence contained in $\mathfrak{m}$. In general, when a $d$-dimensional Noetherian local ring $(A,\mathfrak{m})$ has an $A$-sequence of $d$ elements inside $\mathfrak{m}$, we call $A$ a *Cohen–Macaulay local ring*; thus every regular local ring is a Cohen–Macaulay local ring. Therefore it suffices to prove the following two claims by induction on $d$.
-
-1. Any associated prime $\mathfrak{q}\in \Ass A$ of a $d$-dimensional Cohen–Macaulay local ring $A$ satisfies $\dim A/\mathfrak{q}=d$.
-2. Any prime ideal $\mathfrak{p}$ of a $d$-dimensional Cohen–Macaulay local ring $A$ satisfies $\dim A/\mathfrak{p}+\codim \mathfrak{p}=d$.
-
-The case $d=0$ is trivial for both claims, so assume $d\geq 1$ and that both claims hold for $(d-1)$-dimensional Cohen–Macaulay local rings.
-
-To prove the first claim, let $\mathfrak{q}=\ann(a)\in\Ass A$. Since $x_1$ is a non-zerodivisor, by [§Associated Primes, ⁋Theorem 7](/en/math/commutative_algebra/associated_primes#thm7) we have $x_1\not\in \mathfrak{q}$. We may assume that $a\not\in x_1A$. Indeed, if $a=x_1b$, then since $x_1$ is a non-zerodivisor we have $\ann(b)=\ann(a)=\mathfrak{q}$, and $Aa\subsetneq Ab$. If $Aa=Ab$, then from $b=ca=cx_1b$ we get $(1-cx_1)b=0$; since $x_1\in\mathfrak{m}$, the element $1-cx_1$ is a unit and hence $b=0$, i.e. $\mathfrak{q}=A$, a contradiction. Therefore the process of replacing $a$ by $b$ terminates in finitely many steps by the ascending chain condition.
-
-Now let $\overline{A}=A/x_1A$. Then by definition $\overline{A}$ contains an $\overline{A}$-sequence $\overline{x}_2,\ldots, \overline{x}_d$ in its maximal ideal, and $\dim \overline{A}=d-1$. Indeed, by [§System of Parameters, ⁋Corollary 7](/en/math/commutative_algebra/system_of_parameters#cor7) we have $\dim \overline{A}\geq d-1$, and since the non-zerodivisor $x_1$ belongs to no minimal prime ideal of $A$ by [§Associated Primes, ⁋Theorem 7](/en/math/commutative_algebra/associated_primes#thm7), any prime ideal $\mathfrak{q}_0$ containing $x_1$ satisfies $\codim \mathfrak{q}_0\geq 1$, hence $\dim A/\mathfrak{q}_0\leq d-1$. In particular, $\overline{A}$ is a $(d-1)$-dimensional Cohen–Macaulay local ring.
-
-Since $a\not\in x_1A$, the element $\bar{a}\in \overline{A}$ is nonzero and $\ann_{\overline{A}}(\bar a)\supseteq (\mathfrak{q}+x_1A)/x_1A$. By [§Associated Primes, ⁋Theorem 7](/en/math/commutative_algebra/associated_primes#thm7), the set $\Ass(\overline{A}\bar a)$ is nonempty and its elements contain $\ann_{\overline{A}}(\bar a)$, and by [§Associated Primes, ⁋Lemma 5](/en/math/commutative_algebra/associated_primes#lem5) we have $\Ass(\overline{A}\bar{a})\subseteq \Ass \overline{A}$. Therefore there exists some $\overline{\mathfrak{q}}'\in \Ass\overline{A}$ whose preimage $\mathfrak{q}'\subseteq A$ satisfies $\mathfrak{q}\subsetneq \mathfrak{q}'$ (since $x_1\in\mathfrak{q}'\setminus\mathfrak{q}$). By the first claim of the induction hypothesis, $\dim \overline{A}/\overline{\mathfrak{q}}'=d-1$, so
-
-$$\dim A/\mathfrak{q}\geq 1+\dim A/\mathfrak{q}'=1+\dim \overline{A}/\overline{\mathfrak{q}}'=d$$
-
-and the reverse inequality is obvious, yielding the first claim.
-
-For the second claim, if $h=0$ then $\mathfrak{p}$ is a minimal prime ideal, and by [§Associated Primes, ⁋Theorem 7](/en/math/commutative_algebra/associated_primes#thm7) we have $\mathfrak{p}\in\Ass A$, so the first claim gives $\dim A/\mathfrak{p}=d$. Now assume $h\geq 1$. If $\mathfrak{p}$ were contained in some $\mathfrak{q}\in \Ass A$, then from the first claim and the general inequality we would get $\codim \mathfrak{q}=0$, but then $\mathfrak{p}\subseteq \mathfrak{q}$ implies $h=0$, a contradiction. Since $\Ass A$ is finite ([§Associated Primes, ⁋Theorem 7](/en/math/commutative_algebra/associated_primes#thm7)), by prime avoidance ([§Associated Primes, ⁋Lemma 2](/en/math/commutative_algebra/associated_primes#lem2)) we can choose $x\in \mathfrak{p}$ not belonging to any associated prime; in particular, $x$ is a non-zerodivisor.
-
-We now use the fact that $\overline{A}=A/xA$ is again a $(d-1)$-dimensional Cohen–Macaulay local ring. This is a standard result from depth theory — quotienting by a non-zerodivisor reduces both depth and dimension by exactly $1$ — and since we have not yet covered depth theory on this blog, we defer its proof to [[Stacks, Lemma 10.104.2]](https://stacks.math.columbia.edu/tag/02JN). Applying the second claim of the induction hypothesis to $\overline{\mathfrak{p}}=\mathfrak{p}/xA$ gives
-
-$$\dim \overline{A}/\overline{\mathfrak{p}}+\codim \overline{\mathfrak{p}}=d-1$$
-
-But $\overline{A}/\overline{\mathfrak{p}}\cong A/\mathfrak{p}$, and $\codim \overline{\mathfrak{p}}=\dim \overline{A}_{\overline{\mathfrak{p}}}=\dim A_\mathfrak{p}/xA_\mathfrak{p}$. On the other hand, $x$ is also a non-zerodivisor in $A_\mathfrak{p}$: if $(x/1)(b/s)=0$, then for some $u\not\in\mathfrak{p}$ we have $uxb=0$, and since $x$ is a non-zerodivisor we get $ub=0$, i.e. $b/s=0$. Then since $x/1\in \mathfrak{p}A_\mathfrak{p}$, applying the same argument as in the proof of $\dim\overline{A}=d-1$ to the local ring $A_\mathfrak{p}$ yields $\dim A_\mathfrak{p}/xA_\mathfrak{p}=\dim A_\mathfrak{p}-1=h-1$. Putting everything together,
-
-$$\dim A/\mathfrak{p}+(h-1)=d-1$$
-
-and we obtain the desired result.
-:::
-
-::: Proposition 5
 Let $(A, \mathfrak{m})$ be a complete regular local Noetherian ring of dimension $d$, and let $\kappa=A/\mathfrak{m}$ be its residue field. If $A$ contains a field, then $A\cong \kappa[[\x_1,\ldots, \x_d]]$, and this isomorphism identifies each variable $\x_i$ with an element of a regular system of parameters of $A$.
 :::
 ::: Proof
@@ -109,7 +69,7 @@ and for this inequality to hold we must have $\codim\ker\phi=0$. But $\kappa[[\x
 
 We now examine a one-dimensional regular local ring $(A,\mathfrak{m})$. By definition, $\mathfrak{m}$ must be generated by a single element $m$, which we call a *regular parameter* or *uniformizing parameter* of $A$.
 
-::: Proposition 6
+::: Proposition 5
 Let $(A, \mathfrak{m})$ be a one-dimensional regular local ring, and let $m$ be a regular parameter of $A$. Then any element $x$ of $\Frac(A)$ can be written uniquely in the form
 
 $$x=a m^k\qquad \text{$k\in \mathbb{Z}$, $a$ a unit of $A$}$$
@@ -130,7 +90,7 @@ $$\nu:\Frac(A)^\times \rightarrow \mathbb{Z};\qquad am^k\mapsto k$$
 
 More generally, we define the following.
 
-::: Definition 7
+::: Definition 6
 For an integral domain $A$ and a totally ordered abelian group $G$, a group homomorphism $\nu:\Frac(A)^\times \rightarrow G$ satisfying the inequality
 
 $$\nu(x+y)\geq \min(\nu(x), \nu(y))$$
@@ -148,13 +108,13 @@ That the $\nu:\Frac(A)^\times \rightarrow \mathbb{Z}$ defined above is a discret
 
 $$am^k+bm^l=(am^{k-\min(k,l)}+bm^{l-\min(k,l)})m^{\min(k,l)}$$
 
-Then by [Proposition 5](#prop5), we know that if two complete discrete valuation rings each contain a field and have isomorphic residue fields, then they are isomorphic. However, in general no such classification exists among discrete valuation rings that are not complete.
+Then by [Proposition 4](#prop4), we know that if two complete discrete valuation rings each contain a field and have isomorphic residue fields, then they are isomorphic. However, in general no such classification exists among discrete valuation rings that are not complete.
 
 ## Serre's Normality Criterion
 
 For convenience, for a non-zerodivisor $u$ in a ring $A$, we shall call an associated prime ideal $\mathfrak{p}$ of $A/(u)$ *associated to a non-zerodivisor $u$*. This is the same exception as in [§Associated Primes, ⁋Definition 1](/en/math/commutative_algebra/associated_primes#def1).
 
-::: Proposition 8
+::: Proposition 7
 Let $A$ be a reduced Noetherian ring and let $K$ be its total ring of fractions. Then an element $x\in K$ belongs to $A$ if and only if its image in $K_\mathfrak{p}$ belongs to $A_\mathfrak{p}$ for every prime ideal $\mathfrak{p}$ associated to a non-zerodivisor.
 :::
 ::: Proof
@@ -171,7 +131,7 @@ On the other hand, since $A$ is reduced, $K$ is a finite direct product of field
 
 From this we can prove the following.
 
-::: Theorem 9
+::: Theorem 8
 A Noetherian integral domain $A$ is a normal domain if and only if the following condition holds.
 
 ($\ast$) For any prime ideal $\mathfrak{p}$ associated to a principal ideal, $\mathfrak{p}A_\mathfrak{p}$ is a principal ideal of $A_\mathfrak{p}$.
@@ -181,7 +141,7 @@ First, assuming ($\ast$), we show that $A$ is a normal domain. Now it is obvious
 
 $$A=\bigcap_\text{\scriptsize$\mathfrak{p}$ associated to a principal ideal}A_\mathfrak{p}$$
 
-where each $A_\mathfrak{p}$ is viewed as a subset of the quotient field $K$ of $A$. The claim we wish to prove was treated in the more general case in [Proposition 8](#prop8).
+where each $A_\mathfrak{p}$ is viewed as a subset of the quotient field $K$ of $A$. The claim we wish to prove was treated in the more general case in [Proposition 7](#prop7).
 
 Conversely, assume $A$ is a normal domain, and let $\mathfrak{p}$ be an associated prime of a principal ideal $\mathfrak{a}=(a)$. That is,
 
@@ -198,7 +158,7 @@ Therefore we must have $\mathfrak{p}\mathfrak{p}^{-1}=A$. Moreover, since $(A, \
 
 This theorem admits a further generalization. First we define the following.
 
-::: Definition 10
+::: Definition 9
 Fix a ring $A$ and its total ring of fractions $K$.
 
 1. A ring $A$ is called *normal* if $A$ is reduced and integrally closed in $K$.
@@ -207,7 +167,7 @@ Fix a ring $A$ and its total ring of fractions $K$.
 
 Then the following holds.
 
-::: Theorem 11 (Serre)
+::: Theorem 10 (Serre)
 A Noetherian ring $A$ is a (finite) direct product of normal domains if and only if the following two conditions both hold.
 
 (R1) The localization of $A$ at a codimension $1$ prime is a DVR, and the localization at a codimension $0$ prime is a field.  
@@ -228,13 +188,13 @@ $$a=(a_1,\ldots, a_n),\qquad\text{$a_i$ a non-zerodivisor of $A_i$}$$
 
 are the same as those obtained by taking $\mathfrak{p}_k$ to be an associated prime of $a_k$.
 
-Now let us prove the claim. First, if each $A_i$ is normal, then condition (S2) follows from the result of [Theorem 9](#thm9), and condition (R1) holds because the localization of $A$ at a codimension $c$ prime ideal $\mathfrak{p}$ can be viewed, via the above description of $\mathfrak{p}$, as the localization of $A_k$ at a codimension $c$ prime $\mathfrak{p}_k$.
+Now let us prove the claim. First, if each $A_i$ is normal, then condition (S2) follows from the result of [Theorem 8](#thm8), and condition (R1) holds because the localization of $A$ at a codimension $c$ prime ideal $\mathfrak{p}$ can be viewed, via the above description of $\mathfrak{p}$, as the localization of $A_k$ at a codimension $c$ prime $\mathfrak{p}_k$.
 
 Conversely, assume that conditions R1 and S2 hold. Then first, $A$ is a reduced ring. Indeed, if
 
 $$0=\bigcap \mathfrak{q}_i,\qquad\text{$\mathfrak{q}_i$ a $\mathfrak{p}_i$-primary ideal}$$
 
-is a minimal primary decomposition of $0$, then the $\mathfrak{p}_i$ appearing here are all codimension $0$ ideals by condition S2, and their localizations are fields by condition R1. Therefore we can apply [Proposition 8](#prop8), and applying [§The Jordan-Hölder Theorem, ⁋Theorem 5](/en/math/commutative_algebra/Jordan-Holder_theorem#thm5) yields the desired result.
+is a minimal primary decomposition of $0$, then the $\mathfrak{p}_i$ appearing here are all codimension $0$ ideals by condition S2, and their localizations are fields by condition R1. Therefore we can apply [Proposition 7](#prop7), and applying [§The Jordan-Hölder Theorem, ⁋Theorem 5](/en/math/commutative_algebra/Jordan-Holder_theorem#thm5) yields the desired result.
 :::
 
 ---

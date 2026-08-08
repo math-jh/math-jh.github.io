@@ -89,8 +89,6 @@ Regular local ring은 Cohen--Macaulay local ring이다.
 Regular local ring $(A,\mathfrak{m})$의 regular system of parameters는 [§정칙국소환, ⁋따름정리 3](/ko/math/commutative_algebra/regular_local_rings#cor3)에 의하여 $A$-sequence를 이룬다. 이는 $A$의 어떤 system of parameters가 $A$-sequence라는 것이므로 [정리 4](#thm4)에 의하여 $A$는 Cohen--Macaulay이다.
 :::
 
-[§정칙국소환, ⁋명제 4](/ko/math/commutative_algebra/regular_local_rings#prop4)의 증명에서는 $d$차원 Noetherian local ring이 $\mathfrak{m}$ 안에 $d$개의 원소로 이루어진 $A$-sequence를 가질 때 이를 Cohen--Macaulay local ring이라 불렀는데, [정리 4](#thm4)는 이 임시 정의가 [정의 1](#def1)과 동치임을 해명한다. 실제로 $\mathfrak{m}$ 안에 길이 $d=\dim A$의 $A$-sequence가 있으면 $\operatorname{depth}A\geq d$이고 [§Depth, ⁋따름정리 8](/ko/math/commutative_algebra/depth#cor8)과 종합하여 $\operatorname{depth}A=d=\dim A$이므로 [정의 1](#def1)의 의미에서 Cohen--Macaulay이며, 거꾸로 Cohen--Macaulay local ring은 [정리 4](#thm4)에 의하여 임의의 system of parameters, 곧 $d$개의 원소로 이루어진 $A$-sequence를 $\mathfrak{m}$ 안에 갖기 때문이다.
-
 또, Cohen--Macaulay 조건은 regular sequence에 대한 quotient로 내려간다.
 
 ::: 따름정리 6
@@ -150,7 +148,7 @@ $$\dim A/\mathfrak{p}+(\codim \mathfrak{p}-1)=\dim A/xA=\dim A-1$$
 이므로 $\dim A/\mathfrak{p}+\codim \mathfrak{p}=\dim A$를 얻는다.
 :::
 
-[정리 9](#thm9)의 둘째 결과는 [§정칙국소환, ⁋명제 4](/ko/math/commutative_algebra/regular_local_rings#prop4)에서 regular local ring에 대해 증명한 차원 공식 $\dim A/\mathfrak{p}+\codim \mathfrak{p}=\dim A$이 실은 Cohen--Macaulay local ring 전체로 확장된다는 것을 보여준다. 이 공식은 prime ideal들의 chain의 길이에 대한 강한 통제로 이어진다. 이를 정확히 서술하기 위해 다음을 정의한다.
+[정리 9](#thm9)의 둘째 결과가 주는 차원 공식 $\dim A/\mathfrak{p}+\codim \mathfrak{p}=\dim A$은 prime ideal들의 chain의 길이에 대한 강한 통제로 이어진다. 이를 정확히 서술하기 위해 다음을 정의한다.
 
 ::: 정의 10
 Ring $A$가 *catenary*라는 것은, $A$의 임의의 두 prime ideal $\mathfrak{p}\subseteq \mathfrak{q}$에 대하여 $\mathfrak{p}$와 $\mathfrak{q}$ 사이의 saturated chain, 곧 어느 두 항 사이에도 새로운 prime ideal을 끼워넣을 수 없는 chain들이 모두 같은 유한한 길이를 갖는 것이다.

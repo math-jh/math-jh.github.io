@@ -50,7 +50,7 @@ On the other hand, for any prime ideal $\mathfrak{p}\subseteq \mathbb{K}[\x_1,\l
 
 $$\dim \mathbb{K}[\x_1,\ldots, \x_n]/\mathfrak{p}+\codim \mathfrak{p}=\dim \mathbb{K}[\x_1,\ldots, \x_n]=n\tag{$\ast$}$$
 
-([[Commutative Algebra] §Regular Local Rings, ⁋Proposition 4](/en/math/commutative_algebra/regular_local_rings#prop4)) Here the codimension of $\mathfrak{p}$ is as defined in [[Commutative Algebra] §Dimension, ⁋Definition 2](/en/math/commutative_algebra/Krull_dimension#def2): it is the supremum of the lengths of chains of prime ideals contained in $\mathfrak{p}$, and geometrically it is the supremum of the lengths of chains of closed subvarieties of $\mathbb{A}^n$ containing $X=Z(\mathfrak{p})$. Since geometrically $\dim \mathbb{K}[\x_1,\ldots, \x_n]/\mathfrak{p}$ is the dimension of $Z(\mathfrak{p})$, we can give ($\ast$) a geometric meaning through this.
+([[Commutative Algebra] §Noether Normalization, ⁋Theorem 4](/en/math/commutative_algebra/noether_normalization#thm4)) Here the codimension of $\mathfrak{p}$ is as defined in [[Commutative Algebra] §Dimension, ⁋Definition 2](/en/math/commutative_algebra/Krull_dimension#def2): it is the supremum of the lengths of chains of prime ideals contained in $\mathfrak{p}$, and geometrically it is the supremum of the lengths of chains of closed subvarieties of $\mathbb{A}^n$ containing $X=Z(\mathfrak{p})$. Since geometrically $\dim \mathbb{K}[\x_1,\ldots, \x_n]/\mathfrak{p}$ is the dimension of $Z(\mathfrak{p})$, we can give ($\ast$) a geometric meaning through this.
 
 ## Dimension of a projective variety
 
@@ -89,7 +89,7 @@ Since $f$ is irreducible, $(f)$ is a prime ideal, and hence the coordinate ring 
 
 $$\dim \mathbb{K}[\x_1, \ldots, \x_n]/(f) = \dim \mathbb{K}[\x_1, \ldots, \x_n] - \codim(f) = n - 1$$
 
-In general, for a regular local ring $R$ and a prime ideal $\mathfrak{p}$, we have $\dim R/\mathfrak{p} = \dim R - \codim(\mathfrak{p})$. ([[Commutative Algebra] §Regular Local Rings, ⁋Proposition 4](/en/math/commutative_algebra/regular_local_rings#prop4))
+Here the first equality follows from [[Commutative Algebra] §Noether Normalization, ⁋Theorem 4](/en/math/commutative_algebra/noether_normalization#thm4).
 :::
 
 ## Dimension via the function field

@@ -50,7 +50,7 @@ $\dim \mathbb{A}^n = n$이다.
 
 $$\dim \mathbb{K}[\x_1,\ldots, \x_n]/\mathfrak{p}+\codim \mathfrak{p}=\dim \mathbb{K}[\x_1,\ldots, \x_n]=n\tag{$\ast$}$$
 
-이 성립하는 것을 안다. ([\[가환대수학\] §정칙국소환, ⁋명제 4](/ko/math/commutative_algebra/regular_local_rings#prop4)) 여기서 codimension $\mathfrak{p}$는 [\[가환대수학\] §차원, ⁋정의 2](/ko/math/commutative_algebra/Krull_dimension#def2)에서 정의된 것으로, $\mathfrak{p}$에 포함되는 prime ideal들의 chain의 길이의 supremum이며, 기하적으로는 $X=Z(\mathfrak{p})$를 포함하는 $\mathbb{A}^n$의 closed subvariety들의 chain의 길이의 supremum이다. 기하적으로 우리는 $\dim \mathbb{K}[\x_1,\ldots, \x_n]/\mathfrak{p}$이 $Z(\mathfrak{p})$의 차원인 것을 알고 있으므로, 이를 통해 ($\ast$)에 기하적인 의미를 부여할 수 있다. 
+이 성립하는 것을 안다. ([\[가환대수학\] §뇌터 정규화, ⁋정리 4](/ko/math/commutative_algebra/noether_normalization#thm4)) 여기서 codimension $\mathfrak{p}$는 [\[가환대수학\] §차원, ⁋정의 2](/ko/math/commutative_algebra/Krull_dimension#def2)에서 정의된 것으로, $\mathfrak{p}$에 포함되는 prime ideal들의 chain의 길이의 supremum이며, 기하적으로는 $X=Z(\mathfrak{p})$를 포함하는 $\mathbb{A}^n$의 closed subvariety들의 chain의 길이의 supremum이다. 기하적으로 우리는 $\dim \mathbb{K}[\x_1,\ldots, \x_n]/\mathfrak{p}$이 $Z(\mathfrak{p})$의 차원인 것을 알고 있으므로, 이를 통해 ($\ast$)에 기하적인 의미를 부여할 수 있다. 
 
 ## Projective variety의 차원
 
@@ -89,7 +89,7 @@ $f$가 irreducible이므로 $(f)$는 prime ideal이고, 따라서 $Z(f)$의 coor
 
 $$\dim \mathbb{K}[\x_1, \ldots, \x_n]/(f) = \dim \mathbb{K}[\x_1, \ldots, \x_n] - \codim(f) = n - 1$$
 
-이다. 일반적으로 regular local ring $R$과 prime ideal $\mathfrak{p}$에 대하여 $\dim R/\mathfrak{p} = \dim R - \codim(\mathfrak{p})$가 성립한다. ([\[가환대수학\] §정칙국소환, ⁋명제 4](/ko/math/commutative_algebra/regular_local_rings#prop4))
+이다. 여기서 첫째 등식은 [\[가환대수학\] §뇌터 정규화, ⁋정리 4](/ko/math/commutative_algebra/noether_normalization#thm4)에 의한 것이다.
 :::
 
 ## 함수체를 통한 차원
