@@ -299,7 +299,7 @@ $\operatorname{depth}M=\dim M$이므로 [따름정리 11](#cor11)에 의하여 $
 시리즈에서 다루어 온 ring들에서 이 결과들을 구체적으로 확인한다.
 
 ::: 예시 14
-1. $A=\mathbb{K}[[\x]]$를 생각하자. 이는 maximal ideal $\mathfrak{m}=(\x)$를 갖는 $1$차원 Noetherian local domain이고 ([§단사가군과 Matlis 쌍대성, ⁋예시 13](/ko/math/commutative_algebra/matlis_duality#ex13)), $\mathfrak{m}$이 한 개의 원소로 생성되므로 regular local ring이다. ([§차원, ⁋정의 12](/ko/math/commutative_algebra/Krull_dimension#def12)) 따라서 [§Cohen-Macaulay 환, ⁋따름정리 5](/ko/math/commutative_algebra/cohen_macaulay_rings#cor5)와 [따름정리 13](#cor13)에 의하여 $H_\mathfrak{m}^i(A)$는 $i=1$에서만 $0$이 아니다. [정리 8](#thm8)로 그 값을 직접 계산하면, $\mathfrak{m}=(\x)$의 Čech complex는 $0 \rightarrow A \rightarrow A_\x \rightarrow 0$이고, [§정칙국소환, ⁋명제 6](/ko/math/commutative_algebra/regular_local_rings#prop6)에 의하여 $\Frac(A)$의 임의의 원소가 $u\x^k$ ($u$ unit, $k\in\mathbb{Z}$) 꼴이므로 $A_\x=\Frac(A)=\mathbb{K}((\x))$이다. 따라서
+1. $A=\mathbb{K}[[\x]]$를 생각하자. 이는 maximal ideal $\mathfrak{m}=(\x)$를 갖는 $1$차원 Noetherian local domain이고 ([§단사가군과 Matlis 쌍대성, ⁋예시 13](/ko/math/commutative_algebra/matlis_duality#ex13)), $\mathfrak{m}$이 한 개의 원소로 생성되므로 regular local ring이다. ([§차원, ⁋정의 12](/ko/math/commutative_algebra/Krull_dimension#def12)) 따라서 [§Cohen-Macaulay 환, ⁋따름정리 5](/ko/math/commutative_algebra/cohen_macaulay_rings#cor5)와 [따름정리 13](#cor13)에 의하여 $H_\mathfrak{m}^i(A)$는 $i=1$에서만 $0$이 아니다. [정리 8](#thm8)로 그 값을 직접 계산하면, $\mathfrak{m}=(\x)$의 Čech complex는 $0 \rightarrow A \rightarrow A_\x \rightarrow 0$이고, [§정칙국소환, ⁋명제 5](/ko/math/commutative_algebra/regular_local_rings#prop5)에 의하여 $\Frac(A)$의 임의의 원소가 $u\x^k$ ($u$ unit, $k\in\mathbb{Z}$) 꼴이므로 $A_\x=\Frac(A)=\mathbb{K}((\x))$이다. 따라서
 
 	$$H_\mathfrak{m}^1(A)\cong A_\x/A=\mathbb{K}((\x))/\mathbb{K}[[\x]]$$
 

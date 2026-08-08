@@ -9,7 +9,7 @@ sidebar:
     nav: "commutative_algebra-ko"
 
 date: 2026-07-24
-weight: 22
+weight: 18
 published: false
 drift_needed: true
 
@@ -352,7 +352,7 @@ $$\Delta\chi_{\mathfrak{m},A}(n)=\length(\mathfrak{m}^n/\mathfrak{m}^{n+1})=H_{\
 거꾸로 graded isomorphism $\gr_\mathfrak{m}A\cong \kappa[\x_1,\ldots,\x_e]$가 존재한다 하자. Degree $n$ part를 비교하면 $H_{\gr_\mathfrak{m}A}(n)=\binom{n+e-1}{e-1}$이므로, 위의 관찰과 [보조정리 2](#lem2)의 둘째 결과에 의하여 $d(A)=e$이고, [정리 13](#thm13)에 의하여 $\dim A=e$이다. 한편 degree $1$ part의 비교에서 $\mathfrak{m}/\mathfrak{m}^2$은 $e$차원 $\kappa$-벡터공간이므로, [§차원, ⁋정의 12](/ko/math/commutative_algebra/Krull_dimension#def12) 직후에 살펴본 것처럼 [§정수적 확장, ⁋보조정리 8](/ko/math/commutative_algebra/integral_extension#lem8)에 의하여 $\mathfrak{m}$은 $e=\dim A$개의 원소로 생성된다. 즉 $A$는 regular local ring이다.
 :::
 
-이 명제를 [§부풀림 대수, ⁋따름정리 11](/ko/math/commutative_algebra/blowup_algebra#cor11)과 종합하면, polynomial ring이 integral domain이므로 regular local ring이 integral domain이라는 [§정칙국소환, ⁋따름정리 1](/ko/math/commutative_algebra/regular_local_rings#cor1)의 또 다른 증명을 얻는다.
+이 명제를 [§부풀림 대수, ⁋따름정리 11](/ko/math/commutative_algebra/blowup_algebra#cor11)과 종합하면, polynomial ring이 integral domain이므로 regular local ring이 integral domain이라는 것을 얻는다.
 
 ::: 따름정리 18
 $d$차원의 regular local ring $(A,\mathfrak{m})$에 대하여, 임의의 $n\geq 1$에서

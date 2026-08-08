@@ -9988,6 +9988,13 @@ L:
   defs:
   - label: '[미적분학] §평균값 정리'
     url: /ko/math/calculus/mean_value_theorem
+- id: local_frame
+  en: local frame
+  ko: 국소 틀
+  primary: en
+  defs:
+  - label: '[미분다양체] §벡터장'
+    url: /ko/math/manifolds/vector_fields
 - id: local_homology_group
   en: local homology group
   ko: 국소 호몰로지 군

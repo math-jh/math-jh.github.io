@@ -2568,12 +2568,12 @@
     meaning: valuation
     defs:
     - label: §정칙국소환
-      url: /ko/math/commutative_algebra/regular_local_rings#def7
+      url: /ko/math/commutative_algebra/regular_local_rings#def6
   - symbol: \mathfrak{p}^{-1}
     meaning: ideal의 역
     defs:
     - label: §정칙국소환
-      url: /ko/math/commutative_algebra/regular_local_rings#thm9
+      url: /ko/math/commutative_algebra/regular_local_rings#thm8
   - symbol: \mathfrak{p}^\ast
     meaning: prime ideal의 동차화
     defs:

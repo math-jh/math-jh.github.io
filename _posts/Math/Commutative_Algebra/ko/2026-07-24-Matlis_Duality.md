@@ -197,7 +197,7 @@ $$\Hom_A(E,E)\cong\widehat{A}=\varprojlim_n\mathbb{Z}/p^n=\mathbb{Z}_p$$
 :::
 
 ::: 예시 13
-Field $\mathbb{K}$ 위의 formal power series ring $A=\mathbb{K}[[\x]]$을 생각하자. 이는 maximal ideal $(\x)$와 residue field $\kappa\cong\mathbb{K}$를 갖는 complete DVR이며, 그 $0$이 아닌 ideal은 $(\x^n)$ 꼴이다. ([§정칙국소환, ⁋명제 6](/ko/math/commutative_algebra/regular_local_rings#prop6)) 우리는 Laurent series field $\mathbb{K}((\x))=\Frac(\mathbb{K}[[\x]])$의 quotient
+Field $\mathbb{K}$ 위의 formal power series ring $A=\mathbb{K}[[\x]]$을 생각하자. 이는 maximal ideal $(\x)$와 residue field $\kappa\cong\mathbb{K}$를 갖는 complete DVR이며, 그 $0$이 아닌 ideal은 $(\x^n)$ 꼴이다. ([§정칙국소환, ⁋명제 5](/ko/math/commutative_algebra/regular_local_rings#prop5)) 우리는 Laurent series field $\mathbb{K}((\x))=\Frac(\mathbb{K}[[\x]])$의 quotient
 $$E:=\mathbb{K}((\x))/\mathbb{K}[[\x]]$$
 이 $E(\kappa)$임을 보인다. $E$의 원소는 유한한 주부 $\sum_{i=1}^{m}a_i\x^{-i}$의 class로 표현되며, 각각은 $\x^m$에 의하여 소멸된다.
 
