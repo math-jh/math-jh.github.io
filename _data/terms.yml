@@ -17457,6 +17457,13 @@ W:
   see:
   - label: Stronger topology
     id: stronger_topology
+- id: wedge_product
+  en: wedge product
+  ko: 쐐기곱
+  primary: en
+  defs:
+  - label: '[미분다양체] §미분형식'
+    url: /ko/math/manifolds/differential_forms
 - id: weight
   en: weight
   ko: 무게
