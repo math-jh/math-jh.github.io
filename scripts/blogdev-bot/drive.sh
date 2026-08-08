@@ -27,6 +27,12 @@ esac
 
 log "launching claude -p (sonnet) for marvin"
 cd "$BLOG_ROOT"
+# 2026-08-08: ~/.claude/settings.json 에 advisorModel(fable)이 전역 기본값으로
+# 들어갔다. 부착 조건이 base_rank <= advisor_rank 라 sonnet(3) 세션인 marvin 도
+# fable(5) 상담이 붙는다. cron 잡은 research 파이프라인의 researcher 하나만
+# advisor 를 쓰기로 했으므로 여기서는 끈다. 이 env 가 유일하게 확실한 off 다
+# (게이트 함수의 첫 검사라 settings 의 advisorModel 보다 먼저 short-circuit).
+export CLAUDE_CODE_DISABLE_ADVISOR_TOOL=1
 if ! timeout 2400 "$CLAUDE_BIN" -p --model sonnet \
       --permission-mode bypassPermissions \
       "Read $HERE/marvin.md and execute it now."; then

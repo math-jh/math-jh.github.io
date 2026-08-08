@@ -194,10 +194,17 @@ def call_llm(prompt: str) -> str:
     args = [LLM_BIN, "-p", "--output-format", "text"]
     if LLM_MODEL:
         args += ["--model", LLM_MODEL]
+    # 2026-08-08: ~/.claude/settings.json 에 advisorModel(fable)이 전역 기본값으로
+    # 들어갔다. advisor 부착 조건이 base_rank <= advisor_rank 라서 haiku(rank 1)로
+    # 도는 이 워커도 조건을 만족해 Fable 상담이 붙는다 — 30분마다, 하루 48회.
+    # 이 워커는 기계적 용어 추출이라 상위 모델 상담이 필요 없으므로 끈다.
+    # 끄는 방법은 이 env 뿐이다: `--advisor <더 약한 모델>`은 base rank 에 따라
+    # 켜지기도 하고, rank 1 인 haiku 는 advisor 값으로 아예 거부당한다(실측).
+    env = {**os.environ, "CLAUDE_CODE_DISABLE_ADVISOR_TOOL": "1"}
     proc = subprocess.run(
         args,
         input=prompt, capture_output=True, text=True,
-        timeout=LLM_TIMEOUT, cwd="/tmp",
+        timeout=LLM_TIMEOUT, cwd="/tmp", env=env,
     )
     if proc.returncode != 0:
         raise RuntimeError(f"LLM exited {proc.returncode}: "
