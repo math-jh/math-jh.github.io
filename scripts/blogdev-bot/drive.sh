@@ -35,7 +35,7 @@ cd "$BLOG_ROOT"
 export CLAUDE_CODE_DISABLE_ADVISOR_TOOL=1
 if ! timeout 2400 "$CLAUDE_BIN" -p --model sonnet \
       --permission-mode bypassPermissions \
-      "Read $HERE/marvin.md and execute it now."; then
+      "[cron] Read $HERE/marvin.md and execute it now."; then
   log "claude -p failed"
   exit 1
 fi

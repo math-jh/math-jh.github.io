@@ -1648,7 +1648,10 @@ def call_claude_verify(prompt: str) -> str:
     env = {**os.environ, "CLAUDE_CODE_DISABLE_ADVISOR_TOOL": "1"}
     proc = subprocess.run(
         [claude_bin, "-p", "--model", "haiku", "--output-format", "text"],
-        input=full, capture_output=True, text=True,
+        # 첫 user 메시지를 리터럴 `[cron]` 으로 시작시킨다 — 세션 트랜스크립트
+        # 리퍼가 봇 턴을 식별하는 단일 규약 (프롬프트 문구 변경에 영향받지 않음).
+        # verdict 블록만 출력하라는 지시와 섞이지 않도록 단독 줄로 둔다.
+        input="[cron]\n\n" + full, capture_output=True, text=True,
         timeout=CLAUDE_VERIFY_DONE_TIMEOUT,
         cwd=str(BLOG_ROOT), env=env,
     )

@@ -201,9 +201,12 @@ def call_llm(prompt: str) -> str:
     # 끄는 방법은 이 env 뿐이다: `--advisor <더 약한 모델>`은 base rank 에 따라
     # 켜지기도 하고, rank 1 인 haiku 는 advisor 값으로 아예 거부당한다(실측).
     env = {**os.environ, "CLAUDE_CODE_DISABLE_ADVISOR_TOOL": "1"}
+    # 첫 user 메시지를 리터럴 `[cron]` 으로 시작시킨다 — 세션 트랜스크립트
+    # 리퍼가 봇 턴을 식별하는 단일 규약. 프롬프트 문구가 바뀌어도 이 접두사만
+    # 지키면 리퍼는 그대로다. JSON 만 출력하라는 지시와 섞이지 않도록 단독 줄로.
     proc = subprocess.run(
         args,
-        input=prompt, capture_output=True, text=True,
+        input="[cron]\n\n" + prompt, capture_output=True, text=True,
         timeout=LLM_TIMEOUT, cwd="/tmp", env=env,
     )
     if proc.returncode != 0:
