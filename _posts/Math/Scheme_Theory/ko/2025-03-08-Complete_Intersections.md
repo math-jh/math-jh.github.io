@@ -44,7 +44,7 @@ $$Z(\y,\x\z)=Z(\y)\cap (Z(\x)\cup Z(\z))=Z(\x,\y)\cup Z(\y,\z)$$
 이며 이들 중 $Z(\x,\y)$는 이미 첫째 성분 $Z(\x)$에 담겨있으므로 유효하게 남는 것은 $Z(\y,\z)$ 뿐이라 위의 묘사를 얻는다. 이에 해당하는 대수적인 설명은 첫째 방정식이 잘라낸 closed subscheme의 coordinate ring $\mathbb{K}[\x,\y,\z]/(\x\y)$ 안에서 $\y\neq 0$이면서 $\x\z\cdot\y=0$이라는 것, 곧 $\x\z$가 zerodivisor라는 것이다. 따라서 이를 해결하기 위해서는 각각의 방정식이 앞선 방정식들을 지난 후에도 여전히 non-zerodivisor일 것을 요구하면 된다. ([\[가환대수학\] §정칙국소환, ⁋정의 2](/ko/math/commutative_algebra/regular_local_rings#def2))
 
 ::: 정의 1
-Locally Noetherian scheme $X$의 closed embedding $\iota:Z\hookrightarrow X$가 codimension $k$의 *local complete intersection<sub>국소 완전교차</sub>*, 혹은 codimension $k$의 *regular embedding*이라는 것은 $X$의 affine open cover $\{U_i=\Spec A_i\}$가 존재하여, 각각의 $U_i$에 대해 $Z\cap U_i=\emptyset$이거나, $Z\cap U_i=Z(s_{i,1},\ldots, s_{i,k})$이고 $(s_{i,1},\ldots, s_{i,k})$가 $A_i$-regular sequence인 것이다.
+Locally Noetherian scheme $X$의 closed embedding $\iota:Z\hookrightarrow X$가 codimension $k$의 *local complete intersection<sub>국소 완전교차</sub>*, 혹은 codimension $k$의 *regular embedding*이라는 것은 $X$의 affine open cover $\{U_i=\Spec A_i\}$가 존재하여, $Z\cap U_i\neq\emptyset$일 때마다 $Z\cap U_i=Z(s_{i,1},\ldots, s_{i,k})$이고 $(s_{i,1},\ldots, s_{i,k})$가 $A_i$-regular sequence인 것이다.
 :::
 
 일반적으로 regular sequence의 조건은 원소를 나열하는 순서에 의존했던 것을 기억하자. ([\[가환대수학\] §정칙국소환, ⁋정의 2](/ko/math/commutative_algebra/regular_local_rings#def2)) 그러나 이 의존성은 [정의 1](#def1)에는 남지 않는데, $\mathfrak{p}$가 $(s_{i,1},\ldots, s_{i,k})$를 포함하는 $A_i$의 prime ideal이라면 localization이 exact이므로 $(s_{i,1},\ldots, s_{i,k})$는 $(A_i)_\mathfrak{p}$-regular sequence이고, Noetherian local ring에서는 maximal ideal에 속하는 regular sequence를 임의로 재배열하여도 다시 regular sequence가 되기 때문이다. ([\[가환대수학\] §코쥴 복합체, ⁋따름정리 10](/ko/math/commutative_algebra/koszul_complex#cor10)) 
