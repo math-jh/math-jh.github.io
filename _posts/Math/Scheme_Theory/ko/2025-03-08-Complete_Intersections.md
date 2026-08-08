@@ -55,7 +55,7 @@ Locally Noetherian scheme $X$의 closed embedding $\iota:Z\hookrightarrow X$가 
 Codimension $k$의 complete intersection $\iota:Z\hookrightarrow X$의 모든 irreducible component는 $X$에서 codimension $k$를 갖는다.
 :::
 ::: 증명
-$Z$의 irreducible component $W$를 고정하고 [정의 1](#def1)의 cover 가운데 $W$와 만나는 $U=\Spec A$를 택하자. 그럼 $Z\cap U\neq\emptyset$이므로 [정의 1](#def1)에 의하여 적당한 $A$-regular sequence $s_1,\ldots, s_k$가 $Z\cap U=Z(s_1,\ldots, s_k)$를 만족하며, $X$가 locally Noetherian이므로 $A$는 Noetherian ring이다. ([§스킴 사상의 성질들, ⁋명제 6](/ko/math/scheme_theory/properties_of_scheme_morphisms#prop6)의 증명) $W$의 generic point는 $W$의 공집합이 아닌 열린집합에 언제나 속하므로 $U$ 안에 있으며, [\[위상수학\] §차원, ⁋명제 15](/ko/math/topology/dimension#prop15)의 대응에 의하여 $W\cap U$는 $Z\cap U$의 irreducible component이다. 따라서 이 generic point에 대응되는 $A$의 prime ideal을 $\mathfrak{p}$라 하면 $\mathfrak{p}$는 $A/(s_1,\ldots, s_k)$의 minimal prime이므로 
+$Z$의 irreducible component $W$를 고정하고 [정의 1](#def1)의응 cover 가운데 $W$와 만나는 $U=\Spec A$를 택하자. 그럼 $Z\cap U\neq\emptyset$이므로 [정의 1](#def1)에 의하여 적당한 $A$-regular sequence $s_1,\ldots, s_k$가 $Z\cap U=Z(s_1,\ldots, s_k)$를 만족하며, $X$가 locally Noetherian이므로 $A$는 Noetherian ring이다. ([§스킴 사상의 성질들, ⁋명제 6](/ko/math/scheme_theory/properties_of_scheme_morphisms#prop6)의 증명) $W$의 generic point는 $W$의 공집합이 아닌 열린집합에 언제나 속하므로 $U$ 안에 있으며, [\[위상수학\] §차원, ⁋명제 15](/ko/math/topology/dimension#prop15)의 대응에 의하여 $W\cap U$는 $Z\cap U$의 irreducible component이다. 따라서 이 generic point에 대응되는 $A$의 prime ideal을 $\mathfrak{p}$라 하면 $\mathfrak{p}$는 $A/(s_1,\ldots, s_k)$의 minimal prime이므로 
 
 $$\dim A_\mathfrak{p}/(s_1,\ldots, s_k)=\dim\bigl(A/(s_1,\ldots, s_k)\bigr)_\mathfrak{p}=0$$
 
