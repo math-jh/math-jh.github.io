@@ -6095,6 +6095,13 @@ F:
   defs:
   - label: '[체론] §대수적 확장'
     url: /ko/math/field_theory/algebraic_extensions
+- id: finite_group
+  en: finite group
+  ko: 유한군
+  primary: en
+  defs:
+  - label: '[군론] §대칭군'
+    url: /ko/math/group_theory/symmetric_groups
 - id: finite_homomorphism
   en: finite homomorphism
   ko: 유한 준동형사상
@@ -8913,6 +8920,13 @@ I:
   defs:
   - label: '[리 이론] §최고 무게 가군'
     url: /ko/math/lie_theory/highest_weight_modules
+- id: irreducible_morphism
+  en: irreducible morphism
+  ko: 기약 사상
+  primary: en
+  defs:
+  - label: '[표현론] §Auslander–Reiten 이론'
+    url: /ko/math/representation_theory/auslander_reiten
 - id: irreducible_polynomial
   en: irreducible polynomial
   ko: 기약 다항식
@@ -15994,6 +16008,13 @@ S:
   defs:
   - label: '[그로모프-위튼 이론] §Log structure와 log smooth curve'
     url: /ko/math/gromov-witten_theory/log_structures
+- id: standard_representation
+  en: standard representation
+  ko: 표준표현
+  primary: en
+  defs:
+  - label: '[리 이론] §sl₂의 표현론'
+    url: /ko/math/lie_theory/representations_of_sl2
 - id: stanley-reisner_ideal
   en: stanley-reisner ideal
   ko: 스탠리-라이스너 아이디얼
