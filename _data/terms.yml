@@ -1363,6 +1363,13 @@ B:
   defs:
   - label: '[다중선형대수학] §미분'
     url: /ko/math/multilinear_algebra/derivations
+- id: bimodule
+  en: bimodule
+  ko: 쌍가군
+  primary: en
+  defs:
+  - label: '[다중선형대수학] §Hom과 텐서곱'
+    url: /ko/math/multilinear_algebra/hom_and_tensor
 - id: bimonoid
   en: bimonoid
   ko: 쌍모노이드
@@ -2662,6 +2669,13 @@ C:
   defs:
   - label: '[대수적 위상수학] §위상다양체'
     url: /ko/math/algebraic_topology/topological_manifolds
+- id: column_vector
+  en: column vector
+  ko: 열벡터
+  primary: ko
+  defs:
+  - label: '[선형대수학] §행렬'
+    url: /ko/math/linear_algebra/matrices
 - id: comaximal
   en: comaximal
   ko: 공최대
@@ -3532,6 +3546,13 @@ C:
     url: /ko/math/complex_analysis/cauchy_theorem
   - label: '[그로모프-위튼 이론] §안정사상 moduli의 대수적 구성'
     url: /ko/math/gromov-witten_theory/moduli_of_stable_maps
+- id: coordinate
+  en: coordinate
+  ko: 좌표
+  primary: en
+  defs:
+  - label: '[대수다양체] §아핀다양체'
+    url: /ko/math/algebraic_varieties/affine_varieties
 - id: coordinate_chart
   en: coordinate chart
   ko: 좌표근방
@@ -6007,6 +6028,13 @@ F:
   defs:
   - label: '[대수적 구조] §가군'
     url: /ko/math/algebraic_structures/modules
+- id: finitely_generated_projective
+  en: finitely generated projective
+  ko: 유한생성 사영
+  primary: en
+  defs:
+  - label: '[다중선형대수학] §Hom과 텐서곱'
+    url: /ko/math/multilinear_algebra/hom_and_tensor
 - id: finitely_presented
   en: finitely presented
   ko: 유한표시가군
@@ -7854,6 +7882,13 @@ I:
   see:
   - label: Function
     id: function
+- id: identity_matrix
+  en: identity matrix
+  ko: 항등행렬
+  primary: ko
+  defs:
+  - label: '[선형대수학] §행렬'
+    url: /ko/math/linear_algebra/matrices
 - id: identity_theorem
   en: identity theorem
   ko: 일치정리
@@ -9589,6 +9624,13 @@ L:
 - id: left_exact
   en: left exact
   ko: 왼쪽 완전
+  primary: en
+  defs:
+  - label: '[범주론] §아벨 카테고리'
+    url: /ko/math/category_theory/abelian_categories
+- id: left_exact_functor
+  en: left exact functor
+  ko: 좌정확 함자
   primary: en
   defs:
   - label: '[범주론] §아벨 카테고리'
@@ -14488,6 +14530,13 @@ R:
   defs:
   - label: '[선형대수학] §가우스 소거법'
     url: /ko/math/linear_algebra/Gaussian_elimination
+- id: row_vector
+  en: row vector
+  ko: 행벡터
+  primary: ko
+  defs:
+  - label: '[선형대수학] §행렬'
+    url: /ko/math/linear_algebra/matrices
 - id: Russell's_paradox
   en: Russell's paradox
   ko: 러셀의 역설
@@ -15545,6 +15594,13 @@ S:
   defs:
   - label: '[다중선형대수학] §완전열'
     url: /ko/math/multilinear_algebra/exact_sequences
+- id: splitting_exact_sequence
+  en: splitting exact sequence
+  ko: 분해완전열
+  primary: en
+  defs:
+  - label: '[다중선형대수학] §완전열'
+    url: /ko/math/multilinear_algebra/exact_sequences
 - id: splitting_extension
   en: splitting extension
   ko: 분해확대체
@@ -15904,6 +15960,13 @@ S:
     url: /ko/math/manifolds/examples_of_manifolds
   - label: '[미분다양체] §부분다양체와 역함수 정리'
     url: /ko/math/manifolds/submanifolds
+- id: submatrix
+  en: submatrix
+  ko: 부분행렬
+  primary: ko
+  defs:
+  - label: '[다중선형대수학] §행렬'
+    url: /ko/math/multilinear_algebra/matrices
 - id: submersion
   en: submersion
   ko: 침몰
