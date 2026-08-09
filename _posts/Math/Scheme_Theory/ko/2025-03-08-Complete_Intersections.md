@@ -88,11 +88,15 @@ $$0=\dim A_\mathfrak{p}/(s_1,\ldots, s_k)=\dim A_\mathfrak{p}-k$$
 
 ## 코쥴 복합체와 여법다발
 
-[정의 1](#def1)이 요구하는 것은 국소적으로 하나의 regular sequence가 $Z$를 잘라낸다는 것이고, 이 조건을 다루는 데 쓰이는 것이 Koszul complex이다. Ring $A$의 원소들 $x_1,\ldots, x_n$에 대하여, 그 *Koszul complex*는 $K(x_1,\ldots, x_n)$은 $j$번째 항이 $A^{\oplus\binom{n}{j}}$이고 differential이 각 basis 원소에서 $e_{j_k}$를 하나씩 지우며 $x_{j_k}$를 곱하는 alternating sum으로 주어지는 complex이며, $n=1$인 경우에는
+[정의 1](#def1)이 요구하는 것은 국소적으로 하나의 regular sequence가 $Z$를 잘라낸다는 것이고, 이 조건을 다루는 데 쓰이는 것이 Koszul complex이다. Ring $A$의 원소들 $x_1,\ldots, x_n$에 대하여, 그 *Koszul complex* $K(x_1,\ldots, x_n)$은 $j$번째 항이 $A^{\oplus\binom{n}{j}}$인 complex
 
-$$0 \rightarrow A\overset{x_1}{\longrightarrow}A \rightarrow 0$$
+$$0 \rightarrow A^{\oplus\binom{n}{n}} \rightarrow A^{\oplus\binom{n}{n-1}} \rightarrow \cdots \rightarrow A^{\oplus\binom{n}{1}} \rightarrow A \rightarrow 0$$
 
-이다. 양 끝의 homology는 익숙한 대상으로, $H_0$는 quotient $A/(x_1,\ldots, x_n)$이고 $H_n$은 $x_i$들 모두에 의해 annihilate되는 원소들의 모임이다. ([\[가환대수학\] §코쥴 복합체, ⁋명제 2](/ko/math/commutative_algebra/koszul_complex#prop2)) 그 사이의 homology들은 $x_i$들 사이의 자명하지 않은 관계식을 담으며, 위의 $n=1$인 경우에 $H_1$이 소멸한다는 것은 정확히 $x_1$이 non-zerodivisor라는 것이다.
+이다. 여기에서 $j$번째 항은 $i_1<\cdots<i_j$를 만족하는 index들에 대응되는 원소 $e_{i_1}\wedge\cdots\wedge e_{i_j}$들을 basis로 갖고, differential은 각 basis 원소에서 $e_{i_k}$를 하나씩 지우며 $x_{i_k}$를 곱한 alternating sum
+
+$$\dd{(e_{i_1}\wedge\cdots\wedge e_{i_j})}=\sum_{k=1}^j(-1)^{k-1}x_{i_k}e_{i_1}\wedge\cdots\wedge\widehat{e_{i_k}}\wedge\cdots\wedge e_{i_j}$$
+
+으로 주어진다. 양 끝의 homology는 익숙한 대상으로, $H_0$는 quotient $A/(x_1,\ldots, x_n)$이고 $H_n$은 $x_i$들 모두에 의해 annihilate되는 원소들의 모임이다. ([\[가환대수학\] §코쥴 복합체, ⁋명제 2](/ko/math/commutative_algebra/koszul_complex#prop2)) 그 사이의 homology들은 $x_i$들 사이의 자명하지 않은 관계식을 담으며, 복합체가 $0 \rightarrow A\overset{x_1}{\longrightarrow}A \rightarrow 0$이 되는 $n=1$인 경우에 $H_1$이 소멸한다는 것은 정확히 $x_1$이 non-zerodivisor라는 것이다.
 
 우리에게 필요한 것은 두 가지이다. 하나는 이 소멸이 regular sequence에서는 모든 $i\geq 1$에 대하여 $H_i$가 사라지는 것으로 확장된다는 것으로 ([\[가환대수학\] §코쥴 복합체, ⁋정리 7](/ko/math/commutative_algebra/koszul_complex#thm7)), 그 결과 $K(x_1,\ldots, x_n)$은 $A/(x_1,\ldots, x_n)$의 유한한 자유 분해가 된다. ([\[가환대수학\] §코쥴 복합체, ⁋따름정리 8](/ko/math/commutative_algebra/koszul_complex#cor8)) 다른 하나는 Koszul homology가 언제나 $(x_1,\ldots, x_n)$에 의해 annihilate된다는 것으로 ([\[가환대수학\] §코쥴 복합체, ⁋명제 3](/ko/math/commutative_algebra/koszul_complex#prop3)), 자르는 방정식들이 unit ideal을 생성하는 극단적인 경우에는 이로부터 모든 homology가 소멸한다. 이를 associated sheaf로 옮기면 complete intersection의 structure sheaf가 각 chart 위에서 명시적인 유한 자유 분해를 갖는다는 것이 된다.
 
