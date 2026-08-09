@@ -10703,6 +10703,14 @@ M:
   defs:
   - label: '[대수적 위상수학] §위상다양체'
     url: /ko/math/algebraic_topology/topological_manifolds
+  see:
+  - label: Topological manifold
+    id: topological_manifold
+  - label: 미분다양체
+    lang: ko
+    id: differentiable_manifold
+  - label: Complex manifold
+    id: complex_manifold
 - id: manifold_with_boundary
   en: manifold with boundary
   ko: $m$차원의 경계가 있는 manifold
@@ -10769,6 +10777,15 @@ M:
   - label: 선형사상
     lang: ko
     id: linear_map
+  - label: 고윳값
+    lang: ko
+    id: eigenvalue
+  - label: 고유벡터
+    lang: ko
+    id: eigenvector
+  - label: 행렬식
+    lang: ko
+    id: determinant
 - id: matrix_exponential
   en: matrix exponential
   ko: 행렬지수
@@ -10817,6 +10834,11 @@ M:
   defs:
   - label: '[리 이론] §원환면의 작용'
     url: /ko/math/lie_theory/torus_action
+  see:
+  - label: Torus
+    id: torus
+  - label: Algebraic group
+    id: algebraic_group
 - id: maximum
   en: maximum
   ko: 최댓값
@@ -10852,6 +10874,10 @@ M:
   defs:
   - label: '[복소해석학] §Cauchy 적분공식'
     url: /ko/math/complex_analysis/cauchy_integral_formula
+  see:
+  - label: 조화함수
+    lang: ko
+    id: harmonic_function
 - id: mean_value_theorem
   en: mean value theorem
   ko: 평균값 정리
@@ -10873,6 +10899,10 @@ M:
   defs:
   - label: '[복소해석학] §편각원리와 Rouché 정리'
     url: /ko/math/complex_analysis/argument_principle
+  see:
+  - label: 유리형함수
+    lang: ko
+    id: meromorphic_function
 - id: meromorphic_function
   en: meromorphic function
   ko: 유리형함수
@@ -11434,6 +11464,8 @@ N:
   see:
   - label: Cohomology group
     id: cohomology_group
+  - label: Homology group
+    id: homology_group
 - id: n_-th_homotopy_group
   en: $n$-th homotopy group
   ko: $n$번째 호모토피 군
@@ -11446,6 +11478,8 @@ N:
     id: homotopy
   - label: Fundamental groupoid
     id: fundamental_groupoid
+  - label: Homotopy group
+    id: homotopy_group
 - id: n_-th_root_of_unity
   en: $n$-th root of unity
   ko: 1의 $n$제곱근
@@ -11503,6 +11537,9 @@ N:
   defs:
   - label: '[범주론] §자연변환'
     url: /ko/math/category_theory/natural_transformations
+  see:
+  - label: Natural transformation
+    id: natural_transformation
 - id: natural_number
   en: natural number
   ko: 자연수
@@ -11531,6 +11568,9 @@ N:
   defs:
   - label: '[대수다양체] §천 특성류'
     url: /ko/math/algebraic_varieties/chern_classes
+  see:
+  - label: Natural transformation
+    id: natural_transformation
 - id: naturally_equivalent
   en: naturally equivalent
   ko: 자연변환에 대해 동등
@@ -11538,6 +11578,9 @@ N:
   defs:
   - label: '[범주론] §자연변환'
     url: /ko/math/category_theory/natural_transformations
+  see:
+  - label: Natural transformation
+    id: natural_transformation
 - id: nearby_cycle
   en: nearby cycle
   ko: 근방 cycle
@@ -11545,6 +11588,10 @@ N:
   defs:
   - label: '[층론] §Perverse 층'
     url: /ko/math/sheaf_theory/perverse_sheaves
+  see:
+  - label: 소멸 cycle
+    lang: ko
+    id: vanishing_cycle
 - id: negative_nilpotent_subalgebra
   en: negative nilpotent subalgebra
   ko: 음의 멱영 부분대수
@@ -11559,6 +11606,10 @@ N:
   defs:
   - label: '[정수론] §펠 방정식'
     url: /ko/math/number_theory/pell_equation
+  see:
+  - label: 펠 방정식
+    lang: ko
+    id: pell_s_equation
 - id: neighborhood
   en: neighborhood
   ko: 근방
@@ -11582,6 +11633,9 @@ N:
   defs:
   - label: '[해석학] §부분수열과 Bolzano–Weierstrass 정리'
     url: /ko/math/analysis/bolzano_weierstrass
+  see:
+  - label: Nested interval theorem
+    id: nested_interval_theorem
 - id: nested_interval_theorem
   en: nested interval theorem
   ko: 중첩구간정리
@@ -11589,6 +11643,9 @@ N:
   defs:
   - label: '[해석학] §실수의 완비성'
     url: /ko/math/analysis/completeness_of_reals
+  see:
+  - label: Nested interval property
+    id: nested_interval_property
 - id: newlander_nirenberg_theorem
   en: Newlander–Nirenberg theorem
   ko: Newlander–Nirenberg 정리
@@ -11596,6 +11653,10 @@ N:
   defs:
   - label: '[복소기하학] §거의 복소구조'
     url: /ko/math/complex_geometry/almost_complex_structures
+  see:
+  - label: 거의 복소구조
+    lang: ko
+    id: almost_complex_structure
 - id: nijenhuis_tensor
   en: Nijenhuis tensor
   ko: 네이엔하위스 텐서

@@ -81,7 +81,7 @@ $$U_\mathbb{M}(\id_\mathbb{L})=\left\{\tau\in \Gal(\mathbb{L}/\mathbb{K})\mid \t
 
 $$U_\mathbb{M}(\id_\mathbb{L})=\Gal(\mathbb{L}/\mathbb{M})$$
 
-인 것을 안다. 여기에서 [§갈루아 확장, ⁋정리 8](/ko/math/field_theory/galois_extension#thm8)의 셋째 조건은 $\mathbb{K}$ 대신 $\mathbb{M}$ 위에서 보아도 성립하므로 $\mathbb{L}/\mathbb{M}$ 또한 Galois extension이며, 우측의 group에서 $\Gal(\mathbb{L}/\mathbb{K})$로의 inclusion은 단순히 $\mathbb{M}$-automorphism을 $\mathbb{K}$-automorphism으로 보아 얻어지는 것이다. 뿐만 아니라 $\Gal(\mathbb{L}/\mathbb{M})$이 갖는 위상구조는 $U_\mathbb{M}(\id_\mathbb{L})$이 $\Gal(\mathbb{L}/\mathbb{K})$로부터 물려받는 subspace topology와 같다. 그럼 같은 정리의 첫째 조건에 의하여 $\mathbb{L}^{\Gal(\mathbb{L}/\mathbb{M})}=\mathbb{M}$이므로
+이다. 여기에서 [§갈루아 확장, ⁋정리 8](/ko/math/field_theory/galois_extension#thm8)의 셋째 조건은 $\mathbb{K}$ 대신 $\mathbb{M}$ 위에서 보아도 성립하므로 $\mathbb{L}/\mathbb{M}$ 또한 Galois extension이며, 우측의 group에서 $\Gal(\mathbb{L}/\mathbb{K})$로의 inclusion은 단순히 $\mathbb{M}$-automorphism을 $\mathbb{K}$-automorphism으로 보아 얻어지는 것이다. 뿐만 아니라 $\Gal(\mathbb{L}/\mathbb{M})$이 갖는 위상구조는 $U_\mathbb{M}(\id_\mathbb{L})$이 $\Gal(\mathbb{L}/\mathbb{K})$로부터 물려받는 subspace topology와 같다. 그럼 같은 정리의 첫째 조건에 의하여 $\mathbb{L}^{\Gal(\mathbb{L}/\mathbb{M})}=\mathbb{M}$이므로
 
 $$U_\mathbb{M}(\id_\mathbb{L})\subseteq U_\mathbb{N}(\id_\mathbb{L})\iff \mathbb{M}\supseteq \mathbb{N}$$
 
