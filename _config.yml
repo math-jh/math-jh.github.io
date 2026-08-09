@@ -81,10 +81,13 @@ google:
   instant_search         : # false (default), true
 # SEO Related
 google_site_verification : "yFpbvl3mlOU_qKtfTCT4EkVWBgdCSV2m1FQsH6bQw38"
-bing_site_verification   :
+bing_site_verification   : "EDD9BFB4CFBAF359F52496A42C5CFF0E"
 naver_site_verification  : "4eb7cd46f1bd3875a2c91482087ea23d615353c7"
 yandex_site_verification :
 baidu_site_verification  :
+# IndexNow(Bing·Naver·Yandex·Seznam·Yep 공용)는 meta 태그가 아니라 루트의 키 파일로
+# 인증한다: /059d61933cc601464ea45413f398ad2b.txt
+# 제출기는 scripts/indexnow/submit.py (로컬 전용, .git/info/exclude 등재).
 
 # Social Sharing
 twitter:
