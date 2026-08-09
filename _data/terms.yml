@@ -12014,6 +12014,10 @@ O:
     id: coherent_sheaf
   - label: Quasi-coherent sheaf
     id: quasi-coherent_sheaf
+  - label: Coherent module
+    id: coherent_module
+  - label: Locally free sheaf
+    id: locally_free_sheaf
 - id: object
   en: object
   ko: 대상
@@ -12047,6 +12051,10 @@ O:
   see:
   - label: Even permutation
     id: even_permutation
+  - label: Symmetric group
+    id: symmetric_group
+  - label: Alternating group
+    id: alternating_group
 - id: one-parameter_group
   en: one-parameter group
   ko: 단일매개변수군
@@ -12059,6 +12067,13 @@ O:
     id: lie_group
   - label: Algebraic group
     id: algebraic_group
+  - label: Lie algebra
+    id: lie_algebra
+  - label: Exponential map
+    id: exponential_map
+  - label: 흐름
+    lang: ko
+    id: flow
 - id: one-point_compactification
   en: one-point compactification
   ko: 일점 옹골화
@@ -12084,6 +12099,12 @@ O:
   - label: 거리공간
     lang: ko
     id: metric_space
+  - label: 열린집합
+    lang: ko
+    id: open_set
+  - label: 근방
+    lang: ko
+    id: neighborhood
 - id: open_cover
   en: open cover
   ko: 열린덮개
@@ -12096,6 +12117,9 @@ O:
   see:
   - label: Compact
     id: compact
+  - label: 열린집합
+    lang: ko
+    id: open_set
 - id: open_covering
   en: open covering
   ko: 열린덮개
@@ -12445,6 +12469,8 @@ P:
     id: bilinear_form
   - label: Dual pairing
     id: dual_pairing
+  - label: Perfect pairing
+    id: perfect_pairing
 - id: pairwise_comaximal
   en: pairwise comaximal
   ko: 쌍마다 공최대
@@ -12452,6 +12478,9 @@ P:
   defs:
   - label: '[환론] §중국인의 나머지정리'
     url: /ko/math/ring_theory/chinese_remainder_theorem
+  see:
+  - label: Ideal
+    id: ideal
 - id: pairwise_disjoint
   en: pairwise disjoint
   ko: 쌍마다 서로소
@@ -12472,6 +12501,8 @@ P:
   see:
   - label: Borel subgroup
     id: borel_subgroup
+  - label: Lie algebra
+    id: lie_algebra
 - id: paracompact
   en: paracompact
   ko: 파라콤팩트
@@ -12479,6 +12510,9 @@ P:
   defs:
   - label: '[위상수학] §Compactness와 paracompactness'
     url: /ko/math/topology/compactness
+  see:
+  - label: Locally compact
+    id: locally_compact
 - id: parallel
   en: parallel
   ko: 평행
@@ -12489,6 +12523,8 @@ P:
   see:
   - label: Parallel transport
     id: parallel_transport
+  - label: Connection
+    id: connection
 - id: parallel_transport
   en: parallel transport
   ko: 평행 운반
@@ -12508,6 +12544,9 @@ P:
   defs:
   - label: '[미분다양체] §접다발과 여접다발'
     url: /ko/math/manifolds/tangent_and_cotangent_bundles
+  see:
+  - label: Parallel transport
+    id: parallel_transport
 - id: parallelogram_law
   en: parallelogram law
   ko: 평행사변형 법칙
@@ -12515,6 +12554,10 @@ P:
   defs:
   - label: '[선형대수학] §내적공간'
     url: /ko/math/linear_algebra/inner_product_spaces
+  see:
+  - label: 내적공간
+    lang: ko
+    id: inner_product_space
 - id: parameter_ideal
   en: parameter ideal
   ko: 매개변수 아이디얼
@@ -12522,6 +12565,9 @@ P:
   defs:
   - label: '[가환대수학] §매개계'
     url: /ko/math/commutative_algebra/system_of_parameters
+  see:
+  - label: System of parameters
+    id: system_of_parameters
 - id: parametrized_curve
   en: parametrized curve
   ko: 매개곡선
@@ -12529,6 +12575,10 @@ P:
   defs:
   - label: '[미적분학] §곡선과 벡터함수'
     url: /ko/math/calculus/vector_functions
+  see:
+  - label: 곡선
+    lang: ko
+    id: curve
 - id: parametrized_surface
   en: parametrized surface
   ko: 매개곡면
@@ -12536,6 +12586,9 @@ P:
   defs:
   - label: '[미적분학] §면적분과 선속'
     url: /ko/math/calculus/surface_integrals
+  see:
+  - label: Differential form
+    id: differential_form
 - id: partial_derivative
   en: partial derivative
   ko: 편미분
