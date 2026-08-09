@@ -425,6 +425,13 @@ A:
   defs:
   - label: '[대수적 구조] §대수적 구조'
     url: /ko/math/algebraic_structures/algebraic_structures
+- id: algebra_homomorphism
+  en: algebra homomorphism
+  ko: 대수 준동형
+  primary: en
+  defs:
+  - label: '[대수적 구조] §대수'
+    url: /ko/math/algebraic_structures/algebras
 - id: algebraic
   en: algebraic
   ko: 대수적
@@ -10815,6 +10822,13 @@ M:
   defs:
   - label: '[정수론] §산술적 함수와 뫼비우스 반전'
     url: /ko/math/number_theory/arithmetic_functions
+- id: möbius_inversion
+  en: Möbius inversion
+  ko: 뫼비우스 반전
+  primary: ko
+  defs:
+  - label: '[정수론] §산술적 함수와 뫼비우스 반전'
+    url: /ko/math/number_theory/arithmetic_functions
 - id: möbius_transformation
   en: Möbius transformation
   ko: 뫼비우스 변환
@@ -16570,6 +16584,13 @@ T:
   defs:
   - label: '[미분다양체] §미분형식'
     url: /ko/math/manifolds/differential_forms
+- id: tensor_power
+  en: tensor power
+  ko: 텐서거듭제곱
+  primary: en
+  defs:
+  - label: '[다중선형대수학] §텐서대수'
+    url: /ko/math/multilinear_algebra/tensor_algebras
 - id: tensor_product
   en: tensor product
   ko: 텐서곱
