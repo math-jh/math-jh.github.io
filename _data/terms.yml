@@ -13648,6 +13648,9 @@ Q:
   - label: Gram-Schmidt 과정
     lang: ko
     id: Gram-Schmidt_process
+  - label: 특이값 분해
+    lang: ko
+    id: singular_value_decomposition
 - id: quadratic_field
   en: quadratic field
   ko: 이차체
@@ -13655,6 +13658,14 @@ Q:
   defs:
   - label: '[정수론] §가우스 정수와 두 제곱수의 합'
     url: /ko/math/number_theory/gaussian_integers
+  see:
+  - label: Field extension
+    id: field_extension
+  - label: Algebraic extension
+    id: algebraic_extension
+  - label: 이차무리수
+    lang: ko
+    id: quadratic_irrational
 - id: quadratic_form
   en: quadratic form
   ko: 이차형식
@@ -13665,6 +13676,10 @@ Q:
   see:
   - label: Bilinear form
     id: bilinear_form
+  - label: Symmetric matrix
+    id: symmetric_matrix
+  - label: Intersection form
+    id: intersection_form
 - id: quadratic_irrational
   en: quadratic irrational
   ko: 이차무리수
@@ -13672,6 +13687,11 @@ Q:
   defs:
   - label: '[정수론] §연분수'
     url: /ko/math/number_theory/continued_fractions
+  see:
+  - label: Quadratic field
+    id: quadratic_field
+  - label: Algebraic element
+    id: algebraic_element
 - id: quadratic_non-residue
   en: quadratic non-residue
   ko: 이차 비잉여
@@ -13693,6 +13713,13 @@ Q:
   defs:
   - label: '[정수론] §이차 상호법칙'
     url: /ko/math/number_theory/quadratic_reciprocity
+  see:
+  - label: 르장드르 기호
+    lang: ko
+    id: legendre_symbol
+  - label: 오일러 판정법
+    lang: ko
+    id: euler_criterion
 - id: quadratic_relation
   en: quadratic relation
   ko: 이차 관계식
