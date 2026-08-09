@@ -1437,6 +1437,20 @@ B:
   defs:
   - label: '[집합론] §이항관계'
     url: /ko/math/set_theory/binary_relation
+- id: binomial_coefficient
+  en: binomial coefficient
+  ko: 이항계수
+  primary: ko
+  defs:
+  - label: '[정수론] §페르마 소정리'
+    url: /ko/math/number_theory/fermat_little_theorem
+- id: binomial_theorem
+  en: binomial theorem
+  ko: 이항정리
+  primary: ko
+  defs:
+  - label: '[해석학] §수열의 수렴'
+    url: /ko/math/analysis/convergence_of_sequences
 - id: birational_equivalence
   en: birational equivalence
   ko: 쌍유리 동치
@@ -1736,6 +1750,13 @@ C:
     id: complex_algebraic_variety
   - label: Kähler manifold
     id: kähler_manifold
+- id: cancellation_law
+  en: cancellation law
+  ko: 소거 법칙
+  primary: en
+  defs:
+  - label: '[대수적 구조] §반군, 모노이드, 군'
+    url: /ko/math/algebraic_structures/groups
 - id: canonical_bundle
   en: canonical bundle
   ko: 표준다발
@@ -5489,6 +5510,13 @@ E:
   see:
   - label: Principal ideal domain
     id: principal_ideal_domain
+- id: euclidean_lemma
+  en: Euclidean lemma
+  ko: 유클리드 보조정리
+  primary: en
+  defs:
+  - label: '[정수론] §소수와 산술의 기본정리'
+    url: /ko/math/number_theory/primes
 - id: Euclidean_space
   en: Euclidean space
   ko: 유클리드 공간
@@ -6557,6 +6585,13 @@ F:
   defs:
   - label: '[복소해석학] §Cauchy 적분공식'
     url: /ko/math/complex_analysis/cauchy_integral_formula
+- id: fundamental_theorem_of_arithmetic
+  en: fundamental theorem of arithmetic
+  ko: 산술의 기본정리
+  primary: ko
+  defs:
+  - label: '[정수론] §소수와 산술의 기본정리'
+    url: /ko/math/number_theory/primes
 - id: fundamental_theorem_of_calculus
   en: Fundamental Theorem of Calculus
   ko: 미적분의 기본정리
@@ -6746,6 +6781,20 @@ G:
   defs:
   - label: '[미적분학] §다중적분'
     url: /ko/math/calculus/multiple_integrals
+- id: gaussian_prime
+  en: Gaussian prime
+  ko: 가우스 소수
+  primary: ko
+  defs:
+  - label: '[정수론] §가우스 정수와 두 제곱수의 합'
+    url: /ko/math/number_theory/gaussian_integers
+- id: gcd
+  en: GCD
+  ko: 최대공약수
+  primary: ko
+  defs:
+  - label: '[정수론] §나눗셈과 최대공약수'
+    url: /ko/math/number_theory/divisibility
 - id: general_linear_group
   en: general linear group
   ko: 일반선형군
@@ -9557,6 +9606,13 @@ L:
   - label: 멱급수
     lang: ko
     id: power_series
+- id: lcm
+  en: LCM
+  ko: 최소공배수
+  primary: ko
+  defs:
+  - label: '[정수론] §나눗셈과 최대공약수'
+    url: /ko/math/number_theory/divisibility
 - id: leading_coefficient
   en: leading coefficient
   ko: 선행계수
@@ -10017,6 +10073,13 @@ L:
     url: /ko/math/linear_algebra/subspaces
   - label: '[대수적 구조] §가군'
     url: /ko/math/algebraic_structures/modules
+- id: linear_congruence
+  en: linear congruence
+  ko: 일차 합동식
+  primary: ko
+  defs:
+  - label: '[정수론] §일차 합동식'
+    url: /ko/math/number_theory/linear_congruences
 - id: linear_convergence
   en: linear convergence
   ko: 선형 수렴
@@ -12971,6 +13034,13 @@ P:
   defs:
   - label: '[대수적 구조] §분수체'
     url: /ko/math/algebraic_structures/field_of_fractions
+- id: prime_number
+  en: prime number
+  ko: 소수
+  primary: ko
+  defs:
+  - label: '[해석학] §실수의 완비성'
+    url: /ko/math/analysis/completeness_of_reals
 - id: prime_number_theorem
   en: prime number theorem
   ko: 소수 정리
@@ -13422,6 +13492,13 @@ Q:
   - label: Gram-Schmidt 과정
     lang: ko
     id: Gram-Schmidt_process
+- id: quadratic_field
+  en: quadratic field
+  ko: 이차체
+  primary: en
+  defs:
+  - label: '[정수론] §가우스 정수와 두 제곱수의 합'
+    url: /ko/math/number_theory/gaussian_integers
 - id: quadratic_form
   en: quadratic form
   ko: 이차형식
@@ -16252,6 +16329,13 @@ S:
     url: /ko/math/set_theory/operation_of_cardinals
   - label: '[대수적 구조] §환의 정의'
     url: /ko/math/algebraic_structures/rings
+- id: sum_of_two_squares
+  en: sum of two squares
+  ko: 두 제곱수의 합
+  primary: ko
+  defs:
+  - label: '[정수론] §가우스 정수와 두 제곱수의 합'
+    url: /ko/math/number_theory/gaussian_integers
 - id: superpotential
   en: superpotential
   ko: ''
@@ -17312,6 +17396,13 @@ U:
   see:
   - label: Intersection
     id: intersection
+- id: unique_factorization
+  en: unique factorization
+  ko: 유일인수분해
+  primary: en
+  defs:
+  - label: '[환론] §정역'
+    url: /ko/math/ring_theory/integral_domains
 - id: unique_factorization_domain
   en: unique factorization domain
   ko: 단일인수분해정역
