@@ -944,6 +944,13 @@ A:
   defs:
   - label: '[미적분학] §함수의 극한'
     url: /ko/math/calculus/functions_and_limits
+- id: asymptotic_expansion
+  en: asymptotic expansion
+  ko: 점근전개
+  primary: ko
+  defs:
+  - label: '[정수론] §소수의 무한성과 분포'
+    url: /ko/math/number_theory/distribution_of_primes
 - id: atlas
   en: atlas
   ko: 좌표첩
@@ -1246,6 +1253,13 @@ B:
     id: vector_space
   - label: Dual basis
     id: dual_basis
+- id: bertrand_postulate
+  en: Bertrand postulate
+  ko: 베르트랑 가설
+  primary: ko
+  defs:
+  - label: '[정수론] §소수의 무한성과 분포'
+    url: /ko/math/number_theory/distribution_of_primes
 - id: best_approximation
   en: best approximation
   ko: 최선 근사
@@ -3185,6 +3199,13 @@ C:
   defs:
   - label: '[미적분학] §연속함수'
     url: /ko/math/calculus/continuity
+- id: composite_number
+  en: composite number
+  ko: 합성수
+  primary: ko
+  defs:
+  - label: '[정수론] §소수와 산술의 기본정리'
+    url: /ko/math/number_theory/primes
 - id: composition
   en: composition
   ko: 합성
@@ -4578,6 +4599,13 @@ D:
   defs:
   - label: '[가환대수학] §뇌터 정규화'
     url: /ko/math/commutative_algebra/noether_normalization
+- id: diophantine_equation
+  en: Diophantine equation
+  ko: 디오판토스 방정식
+  primary: ko
+  defs:
+  - label: '[정수론] §유클리드 호제법과 Bézout 항등식'
+    url: /ko/math/number_theory/euclidean_algorithm
 - id: direct_limit
   en: direct limit (injective limit)
   ko: 직접극한 (귀납적극한)
@@ -4820,6 +4848,13 @@ D:
   defs:
   - label: '[해석학] §수열의 수렴'
     url: /ko/math/analysis/convergence_of_sequences
+- id: divisibility
+  en: divisibility
+  ko: 나누어떨어짐
+  primary: ko
+  defs:
+  - label: '[정수론] §나눗셈과 최대공약수'
+    url: /ko/math/number_theory/divisibility
 - id: division_ring
   en: division ring
   ko: 나눗셈환
@@ -5484,6 +5519,13 @@ E:
   defs:
   - label: '[표현론] §반사 함자'
     url: /ko/math/representation_theory/reflection_functors
+- id: euler_product
+  en: Euler product
+  ko: 오일러 곱
+  primary: en
+  defs:
+  - label: '[정수론] §소수의 무한성과 분포'
+    url: /ko/math/number_theory/distribution_of_primes
 - id: euler_s_formula
   en: 'Euler''s formula'
   ko: Euler 공식
@@ -5491,6 +5533,13 @@ E:
   defs:
   - label: '[복소해석학] §복소수와 복소평면'
     url: /ko/math/complex_analysis/complex_numbers
+- id: euler_s_theorem
+  en: 'Euler''s theorem'
+  ko: 오일러 정리
+  primary: ko
+  defs:
+  - label: '[정수론] §오일러 정리와 phi 함수'
+    url: /ko/math/number_theory/euler_theorem
 - id: euler_s_totient
   en: 'Euler''s totient'
   ko: 오일러 phi 함수
@@ -5812,6 +5861,13 @@ F:
   defs:
   - label: '[토릭 기하학] §파노 다양체'
     url: /ko/math/toric_geometry/reflexive_polytope_fano
+- id: fermat_s_little_theorem
+  en: 'Fermat''s Little Theorem'
+  ko: 페르마 소정리
+  primary: ko
+  defs:
+  - label: '[정수론] §페르마 소정리'
+    url: /ko/math/number_theory/fermat_little_theorem
 - id: fermat_s_theorem
   en: 'Fermat''s theorem'
   ko: 페르마 정리
@@ -5856,6 +5912,13 @@ F:
   defs:
   - label: '[범주론] §극한'
     url: /ko/math/category_theory/limits
+- id: fibonacci_number
+  en: Fibonacci number
+  ko: 피보나치 수
+  primary: ko
+  defs:
+  - label: '[정수론] §유클리드 호제법과 Bézout 항등식'
+    url: /ko/math/number_theory/euclidean_algorithm
 - id: fibration
   en: fibration
   ko: 올림
@@ -11183,6 +11246,13 @@ M:
   defs:
   - label: '[정수론] §산술적 함수와 뫼비우스 반전'
     url: /ko/math/number_theory/arithmetic_functions
+- id: multiplicative_function
+  en: multiplicative function
+  ko: 곱셈성
+  primary: ko
+  defs:
+  - label: '[정수론] §산술적 함수와 뫼비우스 반전'
+    url: /ko/math/number_theory/arithmetic_functions
 - id: multiplicative_group
   en: multiplicative group
   ko: 곱셈군
@@ -12873,6 +12943,13 @@ P:
   defs:
   - label: '[환론] §정역'
     url: /ko/math/ring_theory/integral_domains
+- id: prime_factorization
+  en: prime factorization
+  ko: 소인수분해
+  primary: ko
+  defs:
+  - label: '[정수론] §소수와 산술의 기본정리'
+    url: /ko/math/number_theory/primes
 - id: prime_field
   en: prime field
   ko: 소체
@@ -14360,6 +14437,13 @@ R:
   defs:
   - label: '[복소기하학] §복소다양체'
     url: /ko/math/complex_geometry/complex_manifolds
+- id: riemann_zeta_function
+  en: Riemann zeta function
+  ko: 리만 제타 함수
+  primary: en
+  defs:
+  - label: '[정수론] §소수의 무한성과 분포'
+    url: /ko/math/number_theory/distribution_of_primes
 - id: riemannian_manifold
   en: Riemannian manifold
   ko: 리만다양체
