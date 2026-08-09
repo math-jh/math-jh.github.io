@@ -10,9 +10,6 @@ sidebar:
 
 date: 2025-06-18
 weight: 9
-published: false
-revising: true
-drift_needed: true
 
 ---
 
@@ -174,7 +171,7 @@ $$\varphi(\sigma\tau)=\varphi(\sigma)\cdot\sigma\bigl(\varphi(\tau)\bigr)$$
 
 $$\varphi(\sigma)\cdot\sigma(\varphi(\tau))=\frac{\sigma(c)}{c}\cdot\sigma\left(\frac{\tau(c)}{c}\right)=\frac{\sigma(c)}{c}\cdot\frac{\sigma\tau(c)}{\sigma(c)}=\frac{\sigma\tau(c)}{c}=\varphi(\sigma\tau)$$
 
-이다. 또, $\mathbb{L}^\times$가 abelian이므로 1-cocycle들은 pointwise multiplication에 대해 abelian group을 이루고, $c\mapsto(\sigma\mapsto\sigma(c)/c)$가 group homomorphism이므로 1-coboundary들은 그 subgroup을 이룬다. 따라서 quotient group을 생각할 수 있으며, 이를 $H^1(G,\mathbb{L}^\times)$로 적는다. Hilbert의 정리 90은 이 group이 아무 정보도 담고 있지 않다는, 다소 김빠지지만 대단히 유용한 정리이다.
+이다. 또, $\mathbb{L}^\times$가 abelian이므로 1-cocycle들은 pointwise multiplication에 대해 abelian group을 이루고, $c\mapsto(\sigma\mapsto\sigma(c)/c)$가 group homomorphism이므로 1-coboundary들은 그 subgroup을 이룬다. 따라서 quotient group을 생각할 수 있으며, 이를 $H^1(G,\mathbb{L}^\times)$로 적는다. Hilbert의 정리 90은 이 group이 아무 정보도 담고 있지 않다는 것이다.
 
 ::: 정리 7 (Hilbert 90)
 Finite degree Galois extension $\mathbb{L}/\mathbb{K}$에 대하여, 임의의 1-cocycle $\varphi:G \rightarrow \mathbb{L}^\times$는 1-coboundary이다. 즉 $H^1(G,\mathbb{L}^\times)$는 자명하다.
@@ -239,16 +236,11 @@ $$x=\varphi(\sigma)=\frac{\sigma(c)}{c}$$
 이므로 $y=c$로 두면 된다.
 :::
 
-::: 참고 9
-[정의 6](#def6)의 1-cocycle은 [\[호몰로지 대수학\] §군 코호몰로지](/ko/math/homological_algebra/group_cohomology)에서 다루는 crossed homomorphism을 multiplicative notation으로 옮긴 것이다. 즉 $\mathbb{L}^\times$를 $G$-module로 보면 $H^1(G,\mathbb{L}^\times)$는 group cohomology의 $H^1$이고, [정리 7](#thm7)은 이것이 사라진다는 주장이며, [따름정리 8](#cor8)은 cyclic group의 cohomology 계산과 결합한 것이다. 한편 $\mathbb{L}/\mathbb{K}$가 infinite degree Galois extension인 경우에는 임의의 cocycle 대신 이 글에서 정의한 Krull topology에 대해 연속인 cocycle들을 사용해야 올바른 이론이 얻어지며, 이것이 이 글에서 위상구조를 공들여 만든 또 하나의 이유이다. 덧셈 버전, 즉 $\mathbb{L}$을 additive group으로 보았을 때 $H^1(G,\mathbb{L})$이 사라진다는 것도 성립하는데, 이는 normal basis 정리와 관련이 있으므로 추후 필요할 때 다루기로 한다.
-:::
-
 ---
 
 **참고문헌**
 
 **[Bou]** N. Bourbaki. *Algebra II: Chapters 4–7*. Springer, 2003.  
-**[Ser]** J.-P. Serre. *Local Fields*. Graduate texts in mathematics. Springer, 1979.
 
 ---
 
