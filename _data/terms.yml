@@ -13966,6 +13966,12 @@ R:
   defs:
   - label: '[위상수학] §하우스도르프 공간'
     url: /ko/math/topology/Hausdorff_spaces
+  see:
+  - label: Separation axiom
+    id: separation_axiom
+  - label: 위상공간
+    lang: ko
+    id: topological_space
 - id: r_1_-space
   en: $R_1$-space
   ko: $R_1$-공간
@@ -13973,6 +13979,12 @@ R:
   defs:
   - label: '[위상수학] §하우스도르프 공간'
     url: /ko/math/topology/Hausdorff_spaces
+  see:
+  - label: Separation axiom
+    id: separation_axiom
+  - label: 위상공간
+    lang: ko
+    id: topological_space
 - id: r-polynomial
   en: $R$-polynomial
   ko: $R$-다항식
@@ -14017,6 +14029,12 @@ R:
   defs:
   - label: '[체론] §거듭제곱근 가해성'
     url: /ko/math/field_theory/solvability_by_radicals
+  see:
+  - label: Algebraic extension
+    id: algebraic_extension
+  - label: 거듭제곱근으로 풀린다
+    lang: ko
+    id: solvable_by_radicals
 - id: radius_of_convergence
   en: radius of convergence
   ko: 수렴반경
@@ -14035,6 +14053,11 @@ R:
   defs:
   - label: '[정수론] §가우스 정수와 두 제곱수의 합'
     url: /ko/math/number_theory/gaussian_integers
+  see:
+  - label: Algebraic extension
+    id: algebraic_extension
+  - label: Field extension
+    id: field_extension
 - id: rank
   en: rank
   ko: 랭크
@@ -14068,6 +14091,13 @@ R:
   defs:
   - label: '[미적분학] §무한급수'
     url: /ko/math/calculus/series
+  see:
+  - label: 근판정
+    lang: ko
+    id: root_test
+  - label: 점근분수
+    lang: ko
+    id: convergent
 - id: rational
   en: rational
   ko: 유리
@@ -14973,6 +15003,11 @@ S:
   defs:
   - label: '[환론] §Semisimple module'
     url: /ko/math/ring_theory/semisimple_modules
+  see:
+  - label: Weight decomposition
+    id: weight_decomposition
+  - label: Simple module
+    id: simple_module
 - id: saddle_point
   en: saddle point
   ko: 안장점
@@ -14982,6 +15017,9 @@ S:
     url: /ko/math/calculus/partial_derivatives
   - label: '[사교기하학] §Morse 이론과 stationary phase 근사'
     url: /ko/math/symplectic_geometry/morse_stationary_phase
+  see:
+  - label: Critical point
+    id: critical_point
 - id: saturated
   en: saturated
   ko: 포화된
@@ -14989,6 +15027,9 @@ S:
   defs:
   - label: '[집합론] §동치관계의 예시들'
     url: /ko/math/set_theory/examples_of_equivalence
+  see:
+  - label: Saturation
+    id: saturation
 - id: saturation
   en: saturation
   ko: 포화
@@ -14996,6 +15037,9 @@ S:
   defs:
   - label: '[집합론] §동치관계의 예시들'
     url: /ko/math/set_theory/examples_of_equivalence
+  see:
+  - label: Saturated
+    id: saturated
 - id: scalar
   en: scalar
   ko: 스칼라
@@ -15003,6 +15047,12 @@ S:
   defs:
   - label: '[선형대수학] §벡터공간'
     url: /ko/math/linear_algebra/vector_spaces
+  see:
+  - label: Scalar field
+    id: scalar_field
+  - label: 스칼라곱
+    lang: ko
+    id: scalar_multiplication
 - id: scalar_field
   en: scalar field
   ko: 스칼라장
@@ -15010,6 +15060,13 @@ S:
   defs:
   - label: '[미적분학] §벡터장'
     url: /ko/math/calculus/vector_fields
+  see:
+  - label: 스칼라
+    lang: ko
+    id: scalar
+  - label: 벡터장
+    lang: ko
+    id: vector_field
 - id: scalar_multiplication
   en: scalar multiplication
   ko: 스칼라곱
@@ -15017,6 +15074,10 @@ S:
   defs:
   - label: '[선형대수학] §벡터공간'
     url: /ko/math/linear_algebra/vector_spaces
+  see:
+  - label: 스칼라
+    lang: ko
+    id: scalar
 - id: scheme
   en: scheme
   ko: 스킴
