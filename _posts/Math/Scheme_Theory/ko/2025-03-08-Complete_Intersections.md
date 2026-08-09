@@ -84,7 +84,7 @@ $$0=\dim A_\mathfrak{p}/(s_1,\ldots, s_k)=\dim A_\mathfrak{p}-k$$
 	은 integral domain이므로 $\x_{n-k+i+1}$은 이 ring에서 non-zerodivisor이다. 즉 $(\x_{n-k+1},\ldots, \x_n)$은 regular sequence이고, $Z(\x_{n-k+1},\ldots, \x_n)$은 codimension $k$의 complete intersection이다. [명제 2](#prop2)와 부합하게 이 closed subscheme의 codimension은 정확히 $k$이다. 
 :::
 
-거꾸로 codimension이 $k$라고 하여 complete intersection이 되는 것은 아니다. 가령 $\mathbb{A}^4_\mathbb{K}$ 안에서 원점에서만 만나는 두 평면의 합집합 $Z(\x_1,\x_2)\cup Z(\x_3,\x_4)$는 codimension $2$이지만 complete intersection이 아니다. 두 평면 각각은 두 개의 방정식으로 잘리지만 이들이 만나는 원점 근방에서는 두 개로 부족하기 때문이며, 이는 [명제 5](#prop5) 직전의 논의에서 확인한다.
+거꾸로 codimension이 $k$라고 하여 complete intersection이 되는 것은 아니다. 가령 $\mathbb{A}^4_\mathbb{K}$ 안에서 원점에서만 만나는 두 평면의 합집합 $Z(\x_1,\x_2)\cup Z(\x_3,\x_4)$는 codimension $2$이지만 complete intersection이 아니다. 두 평면 각각은 두 개의 방정식으로 잘리지만 이들이 만나는 원점 근방에서는 두 개로 부족하기 때문이며, 이는 [명제 5](#prop5) 이후의 논의에서 확인한다.
 
 ## 코쥴 복합체와 여법다발
 
@@ -109,17 +109,27 @@ $$H_1=\ker(A\overset{x_1}{\longrightarrow}A)=\{a\in A\mid x_1a=0\}$$
 이므로 $H_1$의 소멸이 곧 $x_1$이 non-zerodivisor라는 조건이 되는데, 이를 모든 degree와 임의의 길이의 sequence로 올린 것이 Koszul complex이다. 이를 associated sheaf로 옮기면 complete intersection의 structure sheaf가 각 chart 위에서 명시적인 finite free resolution를 갖는다는 것이 된다.
 
 ::: 명제 4
-Locally Noetherian scheme $X$의 codimension $k$ complete intersection $\iota:Z\hookrightarrow X$와, $Z$와 nontrivial하게 만나는 affine open subset $U$에 대하여, $Z\cap U=Z(s_1,\ldots, s_k)$라 하자. 여기서 $s_1,\ldots, s_k$는 $A$-regular sequence이다. 그럼 $\mathcal{O}_U$-module들의 sequence
+Locally Noetherian scheme $X$의 codimension $k$ complete intersection $\iota:Z\hookrightarrow X$와, $Z$와 nontrivial하게 만나는 affine open subset $U=\Spec A$에 대하여, $Z\cap U=Z(s_1,\ldots, s_k)$라 하자. 여기서 $s_1,\ldots, s_k$는 $A$-regular sequence이다. 그럼 $\mathcal{O}_U$-module들의 sequence
 
 $$0 \rightarrow \mathcal{O}_U^{\oplus\binom{k}{k}} \rightarrow \mathcal{O}_U^{\oplus\binom{k}{k-1}} \rightarrow \cdots \rightarrow \mathcal{O}_U^{\oplus\binom{k}{1}} \rightarrow \mathcal{O}_U \rightarrow (\iota_\ast\mathcal{O}_Z)\vert_U \rightarrow 0$$
 
 은 exact이다. 여기에서 $\mathcal{O}_U^{\oplus\binom{k}{j}}$은 Koszul complex $K(s_1,\ldots, s_k)$의 $j$번째 항의 associated sheaf이고, differential 또한 그 complex의 differential을 associated sheaf로 옮긴 것이다.
 :::
 ::: 증명
-우리는 앞서 $s_1,\ldots, s_k$가 $A$-regular sequence라면 $K(s_1,\ldots, s_k)$가 $A/(s_1,\ldots, s_k)$의 free resolution이 된다는 것을 살펴보았다. 이제 associated sheaf functor는 exact이므로 ([§준연접층, ⁋명제 6](/ko/math/scheme_theory/quasicoherent_sheaves#prop6)), 이를 associated sheaf로 옮겨도 그 exactness가 보존되며, 이것이 명제의 첫 부분을 준다. 마지막 항에 대해서는 $Z\cap U=Z(s_1,\ldots, s_k)$가 $\Spec A/(s_1,\ldots, s_k)$이고 closed embedding을 따라 그 structure sheaf 밀어낸 것이 associated sheaf이므로 $(\iota_\ast\mathcal{O}_Z)\vert_U\cong \widetilde{A/(s_1,\ldots, s_k)}$이다.
+우리는 앞서 $s_1,\ldots, s_k$가 $A$-regular sequence라면 $K(s_1,\ldots, s_k)$가 $A/(s_1,\ldots, s_k)$의 free resolution이 된다는 것을 살펴보았다. 이제 associated sheaf functor는 exact이므로 ([§준연접층, ⁋명제 6](/ko/math/scheme_theory/quasicoherent_sheaves#prop6)), 이를 associated sheaf로 옮겨도 그 exactness가 보존되며, 이것이 명제의 첫 부분을 준다. 마지막 항에 대해서는 $Z\cap U=Z(s_1,\ldots, s_k)$가 $\Spec A/(s_1,\ldots, s_k)$이고 closed embedding을 따라 그 structure sheaf를 밀어낸 것이 associated sheaf이므로 $(\iota_\ast\mathcal{O}_Z)\vert_U\cong \widetilde{A/(s_1,\ldots, s_k)}$이다.
 :::
 
-Ideal sheaf $\mathcal{I}=\mathcal{I}_{Z/X}$에 대하여, $\mathcal{I}$는 $\mathcal{I}/\mathcal{I}^2$ 위에 자명하게 작용하므로 $\mathcal{I}/\mathcal{I}^2$은 $\mathcal{O}_X/\mathcal{I}=\iota_\ast\mathcal{O}_Z$-module이고, $\iota$가 $Z$에서 그 image인 $X$의 닫힌집합 위로의 homeomorphism이므로 이를 $Z$ 위의 quasi-coherent sheaf로 볼 수 있다. 일반적으로는 이 sheaf가 locally free일 이유가 없는데, 이는 [\[가환대수학\] §정수적 확장, ⁋보조정리 8](/ko/math/commutative_algebra/integral_extension#lem8)에 의하여 점 $z\in Z$에서의 fiber $\mathcal{I}/\mathcal{I}^2\otimes\kappa(z)$의 차원은 $z$ 주위에서 $\mathcal{I}$를 생성하는 데 필요한 최소 개수이고, 이 개수는 점을 옮겨다닐 때 뛸 수 있기 때문이다. 앞서 본 $\mathbb{A}^4_\mathbb{K}$ 안의 두 평면의 합집합을 자르는 ideal $\mathfrak{a}=(\x_1,\x_2)\cap(\x_3,\x_4)=(\x_1\x_3, \x_1\x_4, \x_2\x_3, \x_2\x_4)$가 그러하다. 원점이 아닌 점 주위에서는 네 좌표 가운데 하나가 가역인데, 가령 $\x_1$이 가역이면 $\x_1\x_3$과 $\x_1\x_4$가 각각 $\x_3$과 $\x_4$를 주고 나머지 두 generator $\x_2\x_3, \x_2\x_4$는 이 둘이 생성하는 ideal에 담기므로, $\mathfrak{a}$의 localization은 $(\x_3,\x_4)$가 되어 두 개면 충분하다. 반면 원점에서는 $\mathfrak{m}=(\x_1,\x_2,\x_3,\x_4)$에 대하여 $\mathfrak{m}\mathfrak{a}$가 degree $3$ 이상의 원소들만 담는 데 반해 네 generator는 모두 degree $2$이므로, 이들의 $\mathbb{K}$-linear combination 가운데 $\mathfrak{m}\mathfrak{a}$에 속하는 것은 $0$뿐이고 따라서 넷이 모두 필요하다. 곧 fiber의 차원이 원점 밖에서는 $2$이다가 원점에서 $4$로 뛴다. 이 합집합이 codimension $2$의 complete intersection이었다면 아래의 [명제 5](#prop5)에 의하여 이 차원이 모든 점에서 $2$여야 하므로, 이것이 앞서 말한 대로 complete intersection이 아닌 이유이다. 자르는 방정식들이 regular sequence를 이루면 이런 일이 일어나지 않고, $\mathcal{I}/\mathcal{I}^2$은 그 개수만큼의 자유도를 정확히 갖는다.
+$Z$의 ideal sheaf $\mathcal{I}=\mathcal{I}_{Z/X}$에 대하여 $\mathcal{I}$는 $\mathcal{I}/\mathcal{I}^2$ 위에 자명하게 작용하므로, 그 $\mathcal{O}_X$-module 구조는 $\mathcal{O}_X/\mathcal{I}\cong\iota_\ast\mathcal{O}_Z$를 거쳐 주어지고 따라서 $\mathcal{I}/\mathcal{I}^2$은 $Z$ 위의 quasi-coherent sheaf로 생각할 수 있다. 이는 기하적으로 $Z$의 conormal sheaf로, 우리는 complete intersection에 대해서는 이 sheaf가 rank $k$의 locally free sheaf가 되어 conormal *bundle*이 된다는 것을 보인다.
+
+우선 이 sheaf의 각 점에서의 fiber를 보자. 임의의 점 $z\in Z$를 포함하는 affine open subset $\Spec A$를 잡고, 여기서 $\mathcal{I}$에 대응하는 ideal을 $\mathfrak{a}$, $z$에 대응하는 prime을 $\mathfrak{p}$라 하면, $\mathcal{I}$의 stalk은 $\mathfrak{a}_\mathfrak{p}$이고 $\mathcal{O}_{Z,z}=A_\mathfrak{p}/\mathfrak{a}_\mathfrak{p}$의 maximal ideal은 $\mathfrak{p}A_\mathfrak{p}/\mathfrak{a}_\mathfrak{p}$이므로, $z$에서의 fiber는
+
+$$(\mathcal{I}/\mathcal{I}^2)\otimes\kappa(z)=\mathfrak{a}_\mathfrak{p}/(\mathfrak{a}_\mathfrak{p}^2+\mathfrak{p}\mathfrak{a}_\mathfrak{p})=\mathfrak{a}_\mathfrak{p}/\mathfrak{p}\mathfrak{a}_\mathfrak{p}$$
+
+이다. 여기서 마지막 등식은 대수적인 것으로, 만일 $z\in Z$이면 $\mathfrak{a}\subseteq \mathfrak{p}$이고 따라서 $\mathfrak{a}_\mathfrak{p}^2\subseteq \mathfrak{p}\mathfrak{a}_\mathfrak{p}$인 데서 온다. 그럼 [\[가환대수학\] §정수적 확장, ⁋보조정리 8](/ko/math/commutative_algebra/integral_extension#lem8)의 둘째 결과에 의해, $\mathfrak{a}_\mathfrak{p}$의 원소들이 이 ideal을 생성하는 것과 그 image가 $\kappa(z)$-vector space $\mathfrak{a}_\mathfrak{p}/\mathfrak{p}\mathfrak{a}_\mathfrak{p}$를 span하는 것이 동치이므로, fiber의 차원은 $\mathcal{I}_z$를 생성하는 데 필요한 원소의 최소 개수와 같다. 이 보조정리가 요구하는 Jacobson radical 조건은 $J(A_\mathfrak{p})=\mathfrak{p}A_\mathfrak{p}$인 local ring $A_\mathfrak{p}$에서 자동으로 만족된다.
+
+이 개수는 지금 상태에서는 한 점 $z$에서 잰 것이지만, 그 값은 $z$의 근방에서 잰 것으로 생각할 수 있다. $X$가 locally Noetherian이라 $A$가 Noetherian이고 따라서 $\mathfrak{a}$가 finitely generated이므로 $\mathcal{I}$는 finite type이며, 이로부터 [§준연접층](/ko/math/scheme_theory/quasicoherent_sheaves)에서 본 대로 stalk을 생성하는 section들은 그 점의 어떤 근방에서 sheaf 전체를 생성하기 때문이다. 즉, fiber의 차원은 $z$의 근방에서 $Z$를 잘라내는 데 필요한 방정식의 최소 개수이다.
+
+Complete intersection에서는 이 개수가 정확히 하나로 통제되는 것이 우리의 요지이다. 우선 한쪽 부등식의 경우, [정의 1](#def1)이 요구하는 것은 $Z$가 국소적으로 $k$개의 방정식으로 잘린다는 것이므로 fiber의 차원은 $Z$의 모든 점에서 $k$ 이하이다. 다른 한편으로 이 개수는 codimension 아래로 내려갈 수 없는데, $z$를 지나는 $Z$의 irreducible component $W$를 잡고 그 generic point에 대응하는 $A$의 prime을 $\mathfrak{q}$라 하면 $\mathfrak{q}A_\mathfrak{p}$는 $\mathfrak{a}_\mathfrak{p}$를 포함하는 minimal prime이고 [명제 2](#prop2)와 [§차원, ⁋명제 8](/ko/math/scheme_theory/dimension#prop8)에 의하여 그 codimension이 $\codim_XW=k$이므로, [\[가환대수학\] §차원, ⁋정리 7](/ko/math/commutative_algebra/Krull_dimension#thm7)이 $\mathfrak{a}_\mathfrak{p}$를 생성하는 원소의 개수가 $k$ 이상임을 주기 때문이다. 곧 complete intersection의 conormal sheaf는 모든 점에서 정확히 $k$차원의 fiber를 갖는다. 그러나 fiber의 차원이 일정하다는 것만으로 sheaf가 locally free가 되지는 않는데, 가령 $A=\mathbb{K}[\x]/(\x^2)$ 위의 module $A/(\x)$는 $\Spec A$의 유일한 점에서 $1$차원의 fiber를 갖지만 free $A$-module이 아니다. 이 간극을 메우는 것이 regular sequence 조건으로, [명제 4](#prop4)가 사용한 $H_1(K(s_1,\ldots, s_k))$의 소멸은 $\sum_ia_is_i=0$인 관계가 모두 trivial한 관계 $s_ie_j-s_je_i$들의 조합이라는 뜻이고 그러한 관계에 나타나는 $a_i$는 모두 $\mathfrak{a}$에 속하므로, $\mathfrak{a}/\mathfrak{a}^2$ 위에서는 $s_i$들 사이의 관계가 남지 않는다.
 
 ::: 명제 5
 Locally Noetherian scheme $X$의 codimension $k$ complete intersection $\iota:Z\hookrightarrow X$와 그 ideal sheaf $\mathcal{I}=\mathcal{I}_{Z/X}$에 대하여, $\mathcal{I}/\mathcal{I}^2$은 $Z$ 위의 rank $k$의 locally free sheaf이다.
@@ -130,11 +140,19 @@ Locally Noetherian scheme $X$의 codimension $k$ complete intersection $\iota:Z\
 $A/\mathfrak{a}$-linear map $\psi:(A/\mathfrak{a})^{\oplus k} \rightarrow \mathfrak{a}/\mathfrak{a}^2$을 $e_i\mapsto s_i+\mathfrak{a}^2$으로 정의하자. $\mathfrak{a}$가 $s_i$들로 생성되므로 $\psi$는 surjective이다. Injectivity를 보이기 위해 $a_1,\ldots, a_k\in A$가 $\sum_ia_is_i\in \mathfrak{a}^2$을 만족한다 하자. $\mathfrak{a}^2$은 곱 $s_is_j$들로 생성되므로 적당한 $b_{ij}\in A$에 대하여 $\sum_ia_is_i=\sum_{i,j}b_{ij}s_is_j$이고, $c_i=a_i-\sum_jb_{ij}s_j$로 두면 $\sum_ic_is_i=0$이다. 곧 $\sum_ic_ie_i$는 Koszul 복합체 $K(s_1,\ldots, s_k)$의 degree $1$ cycle인데, $s_1,\ldots, s_k$가 regular sequence이므로 $H_1(K(s_1,\ldots, s_k))=0$이고 따라서 이는 boundary이다. Koszul differential이 $\dd{(e_i\wedge e_j)}=s_ie_j-s_je_i$로 주어지므로 boundary의 각 성분은 $\mathfrak{a}$에 속하고, 따라서 모든 $i$에 대하여 $c_i\in \mathfrak{a}$이다. 그럼 $a_i=c_i+\sum_jb_{ij}s_j\in \mathfrak{a}$이므로 $(A/\mathfrak{a})^{\oplus k}$ 안에서 $\sum_ia_ie_i=0$이고, $\psi$는 injective이다.
 :::
 
-$\mathcal{I}/\mathcal{I}^2$은 conormal exact sequence에 놓인다. Closed subscheme $Z\hookrightarrow X$와 base scheme $T$에 대하여 [§Kähler 미분과 여접층, ⁋명제 2](/ko/math/scheme_theory/sheaf_of_differentials#prop2)를 associated sheaf로 옮기면 $Z$ 위의 exact sequence
+곧 $Z$를 국소적으로 잘라내는 $k$개의 방정식은 conormal sheaf의 기저를 이루며, $Z$의 법선 방향은 자르는 방정식의 개수만큼의 자유도를 정확히 갖는다. Base scheme $T$에 대하여 [§Kähler 미분과 여접층, ⁋명제 2](/ko/math/scheme_theory/sheaf_of_differentials#prop2)를 associated sheaf로 옮기면 $Z$ 위의 conormal exact sequence
 
-$$\mathcal{I}/\mathcal{I}^2 \longrightarrow \Omega_{X/T}\vert_Z \longrightarrow \Omega_{Z/T} \longrightarrow 0$$
+$$\mathcal{I}/\mathcal{I}^2 \longrightarrow \iota^\ast\Omega_{X/T} \longrightarrow \Omega_{Z/T} \longrightarrow 0$$
 
-을 얻는데, [명제 5](#prop5)은 complete intersection의 경우 이 sequence의 왼쪽 항이 rank $k$의 locally free sheaf임을 말해준다. 곧 $Z$의 법선 방향은 자르는 방정식의 개수만큼의 자유도를 가지며, 이는 국소적인 방정식들이 서로 독립적이라는 것의 정확한 표현이다. 한편 이 sequence의 왼쪽 끝에 $0$을 붙일 수 있는지, 곧 왼쪽 morphism이 injective인지는 complete intersection이라는 조건만으로는 결정되지 않고 $Z$ 자신에 대한 조건을 더 요구한다.
+을 얻는데, 이 안에서 위의 결과는 왼쪽 항이 rank $k$의 locally free sheaf라는 것이다. 한편 이 sequence의 왼쪽 끝에 $0$을 붙일 수 있는지, 곧 왼쪽 morphism이 injective인지는 complete intersection이라는 조건만으로는 결정되지 않고 $Z$ 자신에 대한 조건을 더 요구한다.
+
+[예시 3](#ex3) 직후에 미뤄둔 주장 또한 이제 확인할 수 있다. $A=\mathbb{K}[\x_1,\ldots, \x_4]$에 대하여 $\mathbb{A}^4_\mathbb{K}=\Spec A$ 안에서 원점에서만 만나는 두 평면의 합집합 $Z=Z(\x_1,\x_2)\cup Z(\x_3,\x_4)$를 정의하는 ideal은
+
+$$\mathfrak{a}=(\x_1,\x_2)\cap(\x_3,\x_4)=(\x_1\x_3, \x_1\x_4, \x_2\x_3, \x_2\x_4)$$
+
+이다. 원점이 아닌 $Z$의 점은 모두 네 chart $D(\x_i)$ 가운데 하나에 놓이는데, 가령 $A_{\x_1}$ 안에서는 $\x_3=\x_1^{-1}(\x_1\x_3)$과 $\x_4=\x_1^{-1}(\x_1\x_4)$가 모두 $\mathfrak{a}A_{\x_1}$에 속하고 남은 두 generator $\x_2\x_3, \x_2\x_4$는 이 둘이 생성하는 ideal에 담기므로 $\mathfrak{a}A_{\x_1}=(\x_3,\x_4)A_{\x_1}$이다. 여기에서 $A_{\x_1}$과 $A_{\x_1}/(\x_3)$이 모두 integral domain이라 $\x_3,\x_4$는 regular sequence이고, 나머지 세 좌표에 대해서도 같은 계산이 성립하므로, 원점을 제외하면 $Z$는 codimension $2$의 complete intersection이며 [명제 5](#prop5)에 의하여 그 위에서 fiber의 차원은 $2$이다.
+
+문제가 되는 곳은 원점이다. 이에 대응하는 maximal ideal을 $\mathfrak{m}=(\x_1,\x_2,\x_3,\x_4)$라 하면 $\mathfrak{m}\mathfrak{a}$의 homogeneous 원소는 모두 degree $3$ 이상인 데 반해 $\mathfrak{a}$의 네 generator는 모두 degree $2$이므로, 이들의 $\mathbb{K}$-linear combination 가운데 $\mathfrak{m}\mathfrak{a}$에 속하는 것은 $0$뿐이고 따라서 $\mathfrak{a}/\mathfrak{m}\mathfrak{a}$는 $4$차원이다. 이 vector space는 이미 $\mathfrak{m}$에 의해 소멸되고 $A\setminus \mathfrak{m}$의 원소는 그 위에서 $\mathbb{K}^\times$의 원소로 작용하므로 $\mathfrak{m}$에서 localize하여도 바뀌지 않으며, 곧 원점에서의 fiber $\mathfrak{a}_\mathfrak{m}/\mathfrak{m}\mathfrak{a}_\mathfrak{m}$ 또한 $4$차원이다. 만일 $Z$가 codimension $k$의 complete intersection이라면 [명제 2](#prop2)에 의하여 두 irreducible component가 모두 codimension $k$를 가져야 하므로 $k=2$이고, [명제 5](#prop5)에 의하여 fiber의 차원이 모든 점에서 $2$여야 한다. 그러나 이 차원은 원점에서 $4$로 뛰므로 $Z$는 complete intersection이 아니며, 동시에 $\mathcal{I}/\mathcal{I}^2$이 locally free가 아닌 예이기도 하다.
 
 ## Hilbert polynomial과 degree
 

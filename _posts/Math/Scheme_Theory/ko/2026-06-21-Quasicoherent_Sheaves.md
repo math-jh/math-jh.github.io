@@ -214,6 +214,8 @@ Scheme $X$ 위의 quasi-coherent sheaf $\mathcal{F}$가 *finite type<sub>유한�
 
 Locally Noetherian scheme 위에서는 finitely generated와 finitely presented가 일치하므로, 이 경우 coherent sheaf는 곧 finite type quasi-coherent sheaf이다. $X$ 위의 coherent sheaves는 $\QCoh(X)$의 full subcategory $\Coh(X)$를 이룬다. 가장 단순한 예시는 $\mathcal{O}_X$ 자기 자신으로, 이는 affine 위에서 $\widetilde A$이고 $A$는 자기 자신 위의 free module이므로 coherent sheaf이다.
 
+Finite type 조건은 한 점에서의 생성을 그 근방으로 퍼뜨린다. $\mathcal{F}$가 finite type이고 [정의 11](#def11)이 주는 affine open neighborhood $U=\Spec A$ 위에서 $\mathcal{F}\vert_U\cong\widetilde M$이라 하자. 점 $x\in U$에 대응하는 prime을 $\mathfrak{p}$라 할 때 $m_1,\ldots, m_r\in M$의 image가 stalk $M_\mathfrak{p}$를 생성한다 하면, $N=M/\sum_iAm_i$는 finitely generated이면서 $N_\mathfrak{p}=0$이므로 $N$의 각 generator를 소멸시키는 $\mathfrak{p}$ 밖의 원소가 존재하고, $\mathfrak{p}$가 prime이라 이들의 곱 $f$ 또한 $\mathfrak{p}$에 속하지 않아 $fN=0$에서 $N_f=0$이다. 곧 stalk을 생성하는 section들은 언제나 그 점의 근방 $D(f)$ 위에서 $\mathcal{F}$ 전체를 생성한다.
+
 ## Locally free sheaf와 invertible sheaf
 
 Quasi-coherent sheaf 가운데 국소적으로 free module에 대응하는 것들은 vector bundle의 대수기하학적 대응물로서 특히 중요하다.
@@ -225,6 +227,12 @@ Scheme $X$ 위의 $\mathcal{O}_X$-module $\mathcal{E}$가 *locally free sheaf of
 Locally free sheaf는 항상 quasi-coherent sheaf이다. 실제로 각 점의 근방을 affine $\Spec A$로 줄이면 $\mathcal{E}\vert_{\Spec A}\cong \mathcal{O}_{\Spec A}^{\oplus r}=\widetilde{A^{\oplus r}}$이므로, 이는 free module $A^{\oplus r}$의 associated sheaf이다. 더욱이 finite rank이면 $A^{\oplus r}$이 finitely presented이므로 locally free sheaf는 coherent sheaf이기도 하다.
 
 [\[대수다양체\] §선다발과 벡터다발, ⁋정의 23](/ko/math/algebraic_varieties/line_bundles#def23)에서 우리는 variety 위의 rank $r$ vector bundle을 local trivialization의 데이터로 정의하였고, rank $1$의 경우 그 section sheaf가 invertible sheaf임을 보았다. ([\[대수다양체\] §선다발과 벡터다발, ⁋명제 5](/ko/math/algebraic_varieties/line_bundles#prop5)) 일반적인 rank에서도 local trivialization이 section sheaf를 각 $U_i$ 위에서 $\mathcal{O}_{U_i}^{\oplus r}$로 만들어 주므로, scheme의 언어에서 locally free sheaf는 정확히 이 vector bundle의 section sheaf에 대응하며 특히 invertible sheaf는 line bundle에 대응한다. ([\[대수다양체\] §선다발과 벡터다발, ⁋정의 1](/ko/math/algebraic_varieties/line_bundles#def1)) 이름이 알려주듯, invertible sheaf는 tensor product에 대한 역원을 가진다.
+
+Vector bundle의 각 점 위의 fiber에 해당하는 것도 sheaf의 언어로 그대로 옮겨진다. $\mathcal{O}_X$-module $\mathcal{F}$와 점 $x\in X$에 대하여, [§스킴](/ko/math/scheme_theory/schemes)에서 정의한 residue field $\kappa(x)=\mathcal{O}_{X,x}/\mathfrak{m}_x$를 사용하여 $\mathcal{F}$의 $x$에서의 *fiber*를
+
+$$\mathcal{F}\otimes\kappa(x)=\mathcal{F}_x\otimes_{\mathcal{O}_{X,x}}\kappa(x)=\mathcal{F}_x/\mathfrak{m}_x\mathcal{F}_x$$
+
+로 정의한다. 이는 stalk과 구별되는 대상인데, stalk $\mathcal{F}_x$가 $x$ 주위의 germ을 모두 기억하는 $\mathcal{O}_{X,x}$-module인 데 반해 fiber는 그것을 maximal ideal로 내려 그 점에서의 값만 남긴 $\kappa(x)$-vector space이기 때문이다. 가령 $\mathcal{O}_X$의 stalk은 local ring $\mathcal{O}_{X,x}$ 전체이지만 그 fiber는 $\kappa(x)$이며, $\mathcal{E}$가 rank $r$의 locally free sheaf이면 이를 trivialize하는 근방 위에서 stalk이 $\mathcal{O}_{X,x}^{\oplus r}$이고 fiber가 $\kappa(x)^{\oplus r}$이 되어 대응하는 vector bundle의 $x$ 위 fiber를 그대로 준다. 물론 일반적인 quasi-coherent sheaf에서는 fiber의 차원이 점을 옮겨다닐 때 변할 수 있으며, affine 위의 finitely generated module에 대하여 이 차원이 upper semicontinuous하다는 것이 [§평탄사상, ⁋명제 22](/ko/math/scheme_theory/flat_morphisms#prop22)이다.
 
 ::: 명제 13
 Invertible sheaf $\mathcal{L}$에 대하여, $\mathcal{L}^\vee=\sHom_{\mathcal{O}_X}(\mathcal{L}, \mathcal{O}_X)$ 또한 invertible sheaf이며, $\mathcal{L}\otimes_{\mathcal{O}_X}\mathcal{L}^\vee\cong \mathcal{O}_X$이다.
