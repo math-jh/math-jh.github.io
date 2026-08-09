@@ -5540,6 +5540,13 @@ E:
   defs:
   - label: '[대수적 위상수학] §벡터다발의 특성류'
     url: /ko/math/algebraic_topology/characteristic_classes
+- id: euler_criterion
+  en: Euler criterion
+  ko: 오일러 판정법
+  primary: ko
+  defs:
+  - label: '[정수론] §이차 잉여'
+    url: /ko/math/number_theory/quadratic_residues
 - id: euler_form
   en: Euler form
   ko: 오일러 형식
@@ -6781,6 +6788,13 @@ G:
   defs:
   - label: '[미적분학] §다중적분'
     url: /ko/math/calculus/multiple_integrals
+- id: gaussian_lemma
+  en: Gaussian lemma
+  ko: 가우스 보조정리
+  primary: ko
+  defs:
+  - label: '[정수론] §이차 상호법칙'
+    url: /ko/math/number_theory/quadratic_reciprocity
 - id: gaussian_prime
   en: Gaussian prime
   ko: 가우스 소수
@@ -9583,6 +9597,13 @@ L:
   see:
   - label: Ordered set
     id: ordered_set
+- id: lattice_point
+  en: lattice point
+  ko: 격자점
+  primary: en
+  defs:
+  - label: '[토릭 기하학] §아핀 토릭 다양체'
+    url: /ko/math/toric_geometry/affine_toric_varieties
 - id: lattice_polytope
   en: lattice polytope
   ko: 격자 다면체
@@ -11337,6 +11358,13 @@ M:
   defs:
   - label: '[가환대수학] §국소화'
     url: /ko/math/commutative_algebra/localization
+- id: multiplicativity
+  en: multiplicativity
+  ko: 곱셈성
+  primary: ko
+  defs:
+  - label: '[복소해석학] §복소수와 복소평면'
+    url: /ko/math/complex_analysis/complex_numbers
 - id: multiplicity
   en: multiplicity
   ko: 중복도
@@ -13530,6 +13558,13 @@ Q:
   - label: 르장드르 기호
     lang: ko
     id: legendre_symbol
+- id: quadratic_reciprocity
+  en: quadratic reciprocity
+  ko: 이차 상호법칙
+  primary: ko
+  defs:
+  - label: '[정수론] §이차 상호법칙'
+    url: /ko/math/number_theory/quadratic_reciprocity
 - id: quadratic_relation
   en: quadratic relation
   ko: 이차 관계식
@@ -16343,6 +16378,13 @@ S:
   defs:
   - label: '[거울대칭] §거울대칭 개요'
     url: /ko/math/mirror_symmetry/overview
+- id: supplementary_law
+  en: supplementary law
+  ko: 보충법칙
+  primary: ko
+  defs:
+  - label: '[정수론] §이차 상호법칙'
+    url: /ko/math/number_theory/quadratic_reciprocity
 - id: supplementary_submodule
   en: supplementary submodule
   ko: 보조부분가군
