@@ -96,9 +96,9 @@ $$0 \rightarrow A^{\oplus\binom{n}{n}} \rightarrow A^{\oplus\binom{n}{n-1}} \rig
 
 $$\dd{(e_{i_1}\wedge\cdots\wedge e_{i_j})}=\sum_{k=1}^j(-1)^{k-1}x_{i_k}e_{i_1}\wedge\cdots\wedge\widehat{e_{i_k}}\wedge\cdots\wedge e_{i_j}$$
 
-으로 주어진다. 양 끝의 homology는 익숙한 대상으로, $H_0$는 quotient $A/(x_1,\ldots, x_n)$이고 $H_n$은 $x_i$들 모두에 의해 annihilate되는 원소들의 모임이다. ([\[가환대수학\] §코쥴 복합체, ⁋명제 2](/ko/math/commutative_algebra/koszul_complex#prop2)) 그 사이의 homology들은 $x_i$들 사이의 자명하지 않은 관계식을 담으며, 복합체가 $0 \rightarrow A\overset{x_1}{\longrightarrow}A \rightarrow 0$이 되는 $n=1$인 경우에 $H_1$이 소멸한다는 것은 정확히 $x_1$이 non-zerodivisor라는 것이다.
+으로 주어진다. 이 complex의 homology는 우리에게 필요한 것을 모두 담고 있으므로, [\[가환대수학\] §코쥴 복합체](/ko/math/commutative_algebra/koszul_complex)의 기본적인 결과들을 소개한다. 
 
-우리에게 필요한 것은 두 가지이다. 하나는 이 소멸이 regular sequence에서는 모든 $i\geq 1$에 대하여 $H_i$가 사라지는 것으로 확장된다는 것으로 ([\[가환대수학\] §코쥴 복합체, ⁋정리 7](/ko/math/commutative_algebra/koszul_complex#thm7)), 그 결과 $K(x_1,\ldots, x_n)$은 $A/(x_1,\ldots, x_n)$의 유한한 자유 분해가 된다. ([\[가환대수학\] §코쥴 복합체, ⁋따름정리 8](/ko/math/commutative_algebra/koszul_complex#cor8)) 다른 하나는 Koszul homology가 언제나 $(x_1,\ldots, x_n)$에 의해 annihilate된다는 것으로 ([\[가환대수학\] §코쥴 복합체, ⁋명제 3](/ko/math/commutative_algebra/koszul_complex#prop3)), 자르는 방정식들이 unit ideal을 생성하는 극단적인 경우에는 이로부터 모든 homology가 소멸한다. 이를 associated sheaf로 옮기면 complete intersection의 structure sheaf가 각 chart 위에서 명시적인 유한 자유 분해를 갖는다는 것이 된다.
+우선 이 complex의 양 끝의 homology는 익숙한 대상으로, $H_0$는 quotient $A/(x_1,\ldots, x_n)$이고 $H_n$은 $x_i$들 모두에 의해 annihilate되는 원소들의 모임이다. 또, Koszul homology는 언제나 $(x_1,\ldots, x_n)$에 의해 annihilate되므로, 자르는 방정식들이 unit ideal을 생성하는 극단적인 경우에는 모든 homology가 소멸한다. 가장 중요한 것은 $x_1,\ldots, x_n$이 regular sequence이면 모든 $i\geq 1$에 대하여 $H_i$가 소멸하고, 그 결과 $K(x_1,\ldots, x_n)$은 $A/(x_1,\ldots, x_n)$의 유한한 free resolution이 된다는 것이다. 복합체가 $0 \rightarrow A\overset{x_1}{\longrightarrow}A \rightarrow 0$인 $n=1$의 경우에 $H_1$의 소멸이 곧 $x_1$이 non-zerodivisor라는 조건이었던 것이, 이렇게 모든 degree로 확장되는 것이다. 이를 associated sheaf로 옮기면 complete intersection의 structure sheaf가 각 chart 위에서 명시적인 유한 자유 분해를 갖는다는 것이 된다.
 
 ::: 명제 4
 Locally Noetherian scheme $X$의 codimension $k$ complete intersection $\iota:Z\hookrightarrow X$와, $Z\cap U=Z(s_1,\ldots, s_k)$이고 $s_1,\ldots, s_k$가 $A$-regular sequence인 affine open subset $U=\Spec A$가 주어졌다 하자. 그럼 $\mathcal{O}_U$-module들의 sequence
