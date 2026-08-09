@@ -54,6 +54,12 @@ from find_post import resolve_one, fail
 REVIEW: list[str] = []
 DANGLING: list[str] = []
 DANGLING_ANCHORS: set[str] = set()   # --allow-dangling 시 사후 게이트에서 제외할 앵커
+TALLY: dict[tuple[str, str], int] = {}   # (파일, 변경 종류) → 건수 (변경 내역 보고용)
+TALLY_KINDS = ("라벨 정의 줄", "증명 귀속", "글 내부 참조", "inbound 인용", "url 앵커")
+
+
+def tally(rel: str, kind: str) -> None:
+    TALLY[(rel, kind)] = TALLY.get((rel, kind), 0) + 1
 
 # _posts 밖에서 글 앵커를 들고 있는 곳: _pages 마크다운, _data yml의 url 값.
 EXTRA_MD_DIRS = ("_pages",)
@@ -250,6 +256,7 @@ def shift_opening_lines(text: str, doc, mapping: dict[int, int], rel: str) -> li
             REVIEW.append(f"{rel}:{b.line_start}: 여는 줄 번호 치환 실패 — 수동 확인: {old_line!r}")
             continue
         edit_line(b.line_start, new_line)
+        tally(rel, "라벨 정의 줄")
         if b.explicit:
             REVIEW.append(f"{rel}:{b.line_start}: 명시형 {{#{b.anchor}}} — 표시 번호만 "
                           f"{b.number}→{mapping[b.number]} shift, id는 유지 (id 개명 여부 판단 필요)")
@@ -266,6 +273,7 @@ def shift_opening_lines(text: str, doc, mapping: dict[int, int], rel: str) -> li
         new_line = re.sub(rf"(\({re.escape(tm.group(1))}[ \t]+){old}(?!\d)",
                           lambda m: f"{m.group(1)}{mapping[old]}", old_line, count=1)
         edit_line(pr.line_start, new_line)
+        tally(rel, "증명 귀속")
     return edits
 
 
@@ -278,6 +286,7 @@ def shift_citations(text: str, own_paths: set[str], ctx: Ctx,
     """
     spans = protected_spans(text)
     li = LineIndex(text)
+    cite_kind = "글 내부 참조" if is_target_file else "inbound 인용"
 
     edits = []
     for m in CITATION_UNIT_RE.finditer(text):
@@ -317,6 +326,7 @@ def shift_citations(text: str, own_paths: set[str], ctx: Ctx,
             new_body = body[:t.start(2)] + str(new) + body[t.end(2):]
             replaced = f"[{new_body}]({m.group('path')}#{aword}{new})"
             edits.append((m.start(), m.end(), replaced))
+            tally(rel, cite_kind)
             josa_check(text, m.end(), old, new, rel, li.of(m.start()))
         else:
             # 명시형 id 앵커: id는 verbatim 유지, 표시 번호만 shift.
@@ -334,6 +344,7 @@ def shift_citations(text: str, own_paths: set[str], ctx: Ctx,
             t = cands[-1]
             new_body = body[:t.start(1)] + str(ctx.mapping[old]) + body[t.end(1):]
             edits.append((m.start(), m.end(), f"[{new_body}]({m.group('path')}#{full_id})"))
+            tally(rel, cite_kind)
             REVIEW.append(f"{rel}:{li.of(m.start())}: 명시형 #{full_id} 참조 — 표시 번호만 "
                           f"{old}→{ctx.mapping[old]}, id 유지")
     return edits
@@ -357,6 +368,7 @@ def shift_data_urls(text: str, ctx: Ctx, rel: str) -> list[tuple[int, int, str]]
         if old not in ctx.mapping:
             continue
         edits.append((m.start("aword"), m.end("anum"), f"{aword}{ctx.mapping[old]}"))
+        tally(rel, "url 앵커")
     return edits
 
 
@@ -615,6 +627,14 @@ def run_shift(args) -> None:
                                     fromfile=rel, tofile=rel + " (shifted)")
         sys.stdout.writelines(diff)
         print()
+
+    if changes:
+        print("── 변경 내역 " + "─" * 56)
+        print(f"  번호 매핑: {', '.join(f'{o}→{n}' for o, n in sorted(mapping.items()))}")
+        width = max(len(rel) for rel, _, _ in changes)
+        for rel, _, _ in changes:
+            parts = [f"{k} {TALLY[(rel, k)]}" for k in TALLY_KINDS if (rel, k) in TALLY]
+            print(f"  {rel.ljust(width)}  {', '.join(parts)}")
 
     if DANGLING:
         print("── DANGLING (없는 번호를 가리키는 인용 — 먼저 처리할 것) " + "─" * 16)
