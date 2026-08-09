@@ -1246,6 +1246,13 @@ B:
     id: vector_space
   - label: Dual basis
     id: dual_basis
+- id: best_approximation
+  en: best approximation
+  ko: 최선 근사
+  primary: en
+  defs:
+  - label: '[정수론] §연분수'
+    url: /ko/math/number_theory/continued_fractions
 - id: betti_number
   en: Betti number
   ko: 베티 수
@@ -1253,6 +1260,13 @@ B:
   defs:
   - label: '[가환대수학] §호몰로지 차원'
     url: /ko/math/commutative_algebra/homological_dimension
+- id: bézout_s_identity
+  en: 'Bézout''s identity'
+  ko: Bézout 항등식
+  primary: ko
+  defs:
+  - label: '[정수론] §유클리드 호제법과 Bézout 항등식'
+    url: /ko/math/number_theory/euclidean_algorithm
 - id: bézout_theorem
   en: Bézout theorem
   ko: 베주 정리
@@ -2220,6 +2234,13 @@ C:
   defs:
   - label: '[리 이론] §Serre 관계식'
     url: /ko/math/lie_theory/serre_relations
+- id: chinese_remainder_theorem
+  en: Chinese Remainder Theorem
+  ko: 중국인의 나머지 정리
+  primary: ko
+  defs:
+  - label: '[정수론] §중국인의 나머지 정리'
+    url: /ko/math/number_theory/chinese_remainder_theorem
 - id: choice_function
   en: choice function
   ko: 선택함수
@@ -3244,6 +3265,13 @@ C:
   defs:
   - label: '[복소해석학] §등각사상과 Möbius 변환'
     url: /ko/math/complex_analysis/conformal_maps
+- id: congruence
+  en: congruence
+  ko: 합동식
+  primary: ko
+  defs:
+  - label: '[정수론] §합동식'
+    url: /ko/math/number_theory/congruences
 - id: congruent
   en: congruent
   ko: 합동
@@ -8714,6 +8742,13 @@ I:
   defs:
   - label: '[미분다양체] §경계가 있는 다양체'
     url: /ko/math/manifolds/manifolds_with_boundary
+- id: irrational_number
+  en: irrational number
+  ko: 무리수
+  primary: ko
+  defs:
+  - label: '[해석학] §실수의 완비성'
+    url: /ko/math/analysis/completeness_of_reals
 - id: irreducible
   en: irreducible
   ko: 기약
@@ -11155,6 +11190,13 @@ M:
   defs:
   - label: '[스킴] §군 스킴'
     url: /ko/math/scheme_theory/group_schemes
+- id: multiplicative_inverse
+  en: multiplicative inverse
+  ko: 곱셈 역원
+  primary: ko
+  defs:
+  - label: '[정수론] §유클리드 호제법과 Bézout 항등식'
+    url: /ko/math/number_theory/euclidean_algorithm
 - id: multiplicatively_closed
   en: multiplicatively closed
   ko: 곱셈에 대하여 닫혀있다
@@ -13313,6 +13355,13 @@ Q:
   see:
   - label: Bilinear form
     id: bilinear_form
+- id: quadratic_irrational
+  en: quadratic irrational
+  ko: 이차무리수
+  primary: ko
+  defs:
+  - label: '[정수론] §연분수'
+    url: /ko/math/number_theory/continued_fractions
 - id: quadratic_non-residue
   en: quadratic non-residue
   ko: 이차 비잉여
@@ -13714,6 +13763,13 @@ R:
   - label: 유리함수
     lang: ko
     id: rational_function
+- id: rational_number
+  en: rational number
+  ko: 유리수
+  primary: ko
+  defs:
+  - label: '[해석학] §실수의 완비성'
+    url: /ko/math/analysis/completeness_of_reals
 - id: rationally_equivalent
   en: rationally equivalent
   ko: 유리 동치
