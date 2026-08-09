@@ -30,6 +30,11 @@ url·중복·dangling see 는 판단이 필요하므로 절대 자동 수정하�
 
 --notify 는 남은 에러가 있을 때 텔레그램(~/.hermes/.env)으로 알린다.
 
+--fix 는 terms.yml 을 읽고 다시 쓰므로(read→write) 같은 파일을 쓰는 다른 실행과
+lost update 로 부딪힌다. extract_terms.py 와 같은 PID 파일 lock(/tmp/extract-terms.lock)
+을 잡아 양방향으로 물린다 (relabel.py 도 같은 lock 을 잡는다). 못 잡으면 이번 회차를
+건너뛴다 — 매일 도는 감사라 다음 실행에서 처리된다.
+
 cron (매일 04:20, link normalizer 감사 04:30 직전):
   20 4 * * * cd .../scripts/term-extraction && python3 terms_lint.py --fix --notify >>term_extraction_lint.log 2>&1
 """
@@ -39,6 +44,7 @@ import argparse
 import os
 import re
 import sys
+import time
 from datetime import datetime
 from pathlib import Path
 
@@ -55,9 +61,45 @@ from terms_common import (  # noqa: E402
 SCRIPT_DIR = Path(__file__).resolve().parent
 BACKUP_PATH = SCRIPT_DIR / "terms.yml.bak"
 
+# terms.yml 쓰기 lock — extract_terms.py 와 같은 PID 파일 경로·규약.
+LOCK_PATH = Path("/tmp/extract-terms.lock")
+LOCK_WAIT = 180.0
+
 
 def log(msg: str) -> None:
     print(f"[{datetime.now():%Y-%m-%d %H:%M:%S}] {msg}")
+
+
+def acquire_lock(wait_s: float = LOCK_WAIT) -> bool:
+    """살아 있는 PID 가 쥐고 있으면 놓을 때까지 기다린다. 상한 초과 시 False."""
+    deadline = time.monotonic() + wait_s
+    while True:
+        if LOCK_PATH.exists():
+            alive = True
+            try:
+                os.kill(int(LOCK_PATH.read_text().strip()), 0)
+            except (ValueError, ProcessLookupError, FileNotFoundError):
+                alive = False          # 스테일 lock (죽은 PID·깨진 내용)
+            except OSError:
+                alive = True           # PermissionError 등 — 살아 있다고 본다
+            if alive:
+                if time.monotonic() >= deadline:
+                    return False
+                time.sleep(5)
+                continue
+        try:
+            LOCK_PATH.write_text(str(os.getpid()))
+        except OSError:
+            return False
+        return True
+
+
+def release_lock() -> None:
+    try:
+        if LOCK_PATH.read_text().strip() == str(os.getpid()):
+            LOCK_PATH.unlink()
+    except (OSError, ValueError):
+        pass
 
 
 def send_telegram(msg: str) -> None:
@@ -408,6 +450,13 @@ def main() -> int:
     ap.add_argument("--notify", action="store_true", help="에러 잔존 시 텔레그램")
     ap.add_argument("--path", default=str(TERMS_PATH), help="검사 대상 (테스트용)")
     args = ap.parse_args()
+    # 읽기 전용 실행과 테스트 대상(--path)은 lock 이 필요 없다 (쓰기는 tmp+replace 라
+    # 원자적이고, 부딪히는 것은 --fix 의 read→write 뿐이다).
+    locked = args.fix and Path(args.path).resolve() == TERMS_PATH.resolve()
+    if locked and not acquire_lock():
+        log(f"SKIP: terms.yml 쓰기 lock 을 {int(LOCK_WAIT)}초 안에 얻지 못함 "
+            f"({LOCK_PATH}) — 다른 실행이 쓰는 중이다. 다음 회차에서 처리된다.")
+        return 0
     try:
         return run(Path(args.path), args.fix, args.notify)
     except Exception as e:  # noqa: BLE001
@@ -415,6 +464,9 @@ def main() -> int:
         if args.notify:
             send_telegram(f"[terms_lint] 크래시: {e!r}")
         return 2
+    finally:
+        if locked:
+            release_lock()
 
 
 if __name__ == "__main__":
