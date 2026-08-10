@@ -55,6 +55,8 @@ A:
   see:
   - label: $A$-algebra
     id: a_-algebra
+  - label: Algebra homomorphism
+    id: algebra_homomorphism
 - id: a_divides_b
   en: $a$ divides $b$
   ko: $a$가 $b$를 나눈다
@@ -66,6 +68,11 @@ A:
   - label: 최대공약수
     lang: ko
     id: greatest_common_divisor
+  - label: 최소공배수
+    lang: ko
+    id: least_common_multiple
+  - label: Unique factorization domain
+    id: unique_factorization_domain
 - id: mathfrak_a_-filtration
   en: $\mathfrak{a}$-filtration
   ko: $\mathfrak{a}$-여과
@@ -127,6 +134,10 @@ A:
   see:
   - label: Additive category
     id: additive_category
+  - label: Homology
+    id: homology
+  - label: Cohomology
+    id: cohomology
 - id: abelian_extension
   en: abelian extension
   ko: 아벨 확대
@@ -134,6 +145,13 @@ A:
   defs:
   - label: '[체론] §원분확대'
     url: /ko/math/field_theory/cyclotomic_extensions
+  see:
+  - label: Galois extension
+    id: galois_extension
+  - label: Galois group
+    id: galois_group
+  - label: Galois theory
+    id: galois_theory
 - id: abelian_group
   en: abelian group
   ko: 가환군
@@ -147,6 +165,8 @@ A:
   see:
   - label: Group
     id: group
+  - label: Group algebra
+    id: group_algebra
 - id: abelian_presheaf
   en: abelian presheaf
   ko: 아벨 준층
@@ -157,6 +177,8 @@ A:
   see:
   - label: Presheaf
     id: presheaf
+  - label: Sheaf
+    id: sheaf
 - id: abelian_surface
   en: abelian surface
   ko: 아벨 곡면
@@ -18444,6 +18466,14 @@ Z:
     id: zariski_topology
   - label: Scheme
     id: scheme
+  - label: Local ring
+    id: local_ring
+  - label: Cotangent space
+    id: cotangent_space
+  - label: Smooth point
+    id: smooth_point
+  - label: Derivation
+    id: derivation
 - id: zariski_topology
   en: Zariski topology
   ko: 자리스키 위상
@@ -18463,6 +18493,8 @@ Z:
     id: spectrum
   - label: Prime ideal
     id: prime_ideal
+  - label: Algebraic variety
+    id: algebraic_variety
 - id: zero
   en: zero
   ko: 영점
@@ -18470,6 +18502,12 @@ Z:
   defs:
   - label: '[대수적 구조] §반군, 모노이드, 군'
     url: /ko/math/algebraic_structures/groups
+  see:
+  - label: Zero map
+    id: zero_map
+  - label: 항등원
+    lang: ko
+    id: identity_element
 - id: zero_map
   en: zero map
   ko: 영사상
@@ -18485,6 +18523,8 @@ Z:
     id: kernel
   - label: Image
     id: image
+  - label: Zero
+    id: zero
 - id: zerodivisor
   en: zerodivisor
   ko: 영인자
@@ -18502,6 +18542,12 @@ Z:
   defs:
   - label: '[집합론] §ZFC 공리계'
     url: /ko/math/set_theory/zfc_axioms
+  see:
+  - label: 선택공리
+    lang: ko
+    id: axiom_of_choice
+  - label: Axiom of infinity
+    id: axiom_of_infinity
 - id: Zorn's_lemma
   en: Zorn's lemma
   ko: 초른의 보조정리
