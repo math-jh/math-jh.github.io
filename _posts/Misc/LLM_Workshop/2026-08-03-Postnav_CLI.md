@@ -14,6 +14,7 @@ sidebar:
 author: Marvin
 
 date: 2026-08-03
+last_modified_at: 2026-08-10
 weight: 36
 
 ---
@@ -139,6 +140,32 @@ if masked_segments(text) != masked_segments(new):
 {: data-filename="scripts/postnav/relabel.py"}
 
 보호 구간 앞뒤 문자열 집합을 통째로 비교해서, 치환 전후로 마스킹된 영역 자체가 달라졌으면 shift 결과를 버리고 즉시 중단한다. 레포 루트의 CLAUDE.md가 대량 치환 스크립트에 못 박아 둔 "mask-first, 마스킹 영역이 바뀌면 abort" 원칙을 그대로 따른 것이다.
+
+## 파일마다 무엇이 몇 번 바뀌었는지 센다
+
+dry-run diff는 정직하지만 집계는 아니다. 파일 여러 개에 걸쳐 라벨 수십 개가 한꺼번에 밀리면, 다섯 전파 자리(정의 줄·증명 귀속·글 내부 참조·inbound 인용·url 앵커) 중 어느 파일에 무엇이 몇 건 갔는지는 diff를 처음부터 눈으로 세어야 알 수 있었다. [f9e2b465](https://github.com/math-jh/math-jh.github.io/commit/f9e2b465d32b1edbd4a4a19935fc111b019971eb)가 그 집계를 붙였다.
+
+전파 지점은 세 곳인데 종류는 다섯이다. 라벨 여는 줄과 단독형 증명의 귀속 괄호는 같은 `shift_opening_lines` 안에서 각각 치환되는 자리에 tally를 남기고, `shift_citations`는 대상 글 자신을 처리하는 패스인지(`is_target_file`)로 "글 내부 참조"와 "inbound 인용"을 나눠 찍고, `shift_data_urls`는 `_data/*.yml`의 url 앵커를 처리할 때마다 찍는다.
+
+```python
+TALLY: dict[tuple[str, str], int] = {}   # (파일, 변경 종류) → 건수 (변경 내역 보고용)
+TALLY_KINDS = ("라벨 정의 줄", "증명 귀속", "글 내부 참조", "inbound 인용", "url 앵커")
+
+
+def tally(rel: str, kind: str) -> None:
+    TALLY[(rel, kind)] = TALLY.get((rel, kind), 0) + 1
+```
+{: data-filename="scripts/postnav/relabel.py"}
+
+출력은 diff 뒤, DANGLING·REVIEW 목록 앞에 붙는다. 변경이 없으면 아예 찍지 않는다.
+
+```
+── 변경 내역 ────────────────────────────────────────────────────────
+  번호 매핑: 6→7, 7→8
+  _posts/Math/Linear_Algebra/ko/2026-06-19-Quotient_Space.md  라벨 정의 줄 2, 글 내부 참조 2
+```
+
+집계 자체는 라벨링 결과를 바꾸지 않는다. shift 하나로 파일 여러 개가 한꺼번에 움직일 때, 예컨대 inbound 인용을 건 다른 글까지 같이 밀리는 경우, 어느 파일이 다섯 자리 중 몇 곳만 건드려졌는지를 diff를 처음부터 다시 읽지 않고도 확인할 수 있다.
 
 ## 정리
 
