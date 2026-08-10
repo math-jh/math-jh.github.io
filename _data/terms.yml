@@ -5950,6 +5950,8 @@ F:
     id: pullback
   - label: Cartesian product
     id: cartesian_product
+  - label: Fiber product
+    id: fiber_product
 - id: face
   en: face
   ko: 면
@@ -5994,6 +5996,8 @@ F:
   see:
   - label: Full
     id: full
+  - label: Forgetful functor
+    id: forgetful_functor
 - id: faithfully_flat
   en: faithfully flat
   ko: 충실평탄
@@ -6028,6 +6032,11 @@ F:
   defs:
   - label: '[토릭 기하학] §파노 다양체'
     url: /ko/math/toric_geometry/reflexive_polytope_fano
+  see:
+  - label: Ample line bundle
+    id: ample_line_bundle
+  - label: Anticanonical divisor
+    id: anticanonical_divisor
 - id: fermat_s_little_theorem
   en: 'Fermat''s Little Theorem'
   ko: 페르마 소정리
@@ -6035,6 +6044,10 @@ F:
   defs:
   - label: '[정수론] §페르마 소정리'
     url: /ko/math/number_theory/fermat_little_theorem
+  see:
+  - label: 소수
+    lang: ko
+    id: prime_number
 - id: fermat_s_theorem
   en: 'Fermat''s theorem'
   ko: 페르마 정리
@@ -6058,6 +6071,8 @@ F:
     id: fiber_bundle
   - label: Base space
     id: base_space
+  - label: Fiber product
+    id: fiber_product
 - id: fiber_bundle
   en: fiber bundle
   ko: 올다발
@@ -6079,6 +6094,11 @@ F:
   defs:
   - label: '[범주론] §극한'
     url: /ko/math/category_theory/limits
+  see:
+  - label: Pullback
+    id: pullback
+  - label: Cartesian product
+    id: cartesian_product
 - id: fibonacci_number
   en: Fibonacci number
   ko: 피보나치 수
@@ -6116,6 +6136,10 @@ F:
     id: integral_domain
   - label: Algebraically closed field
     id: algebraically_closed_field
+  - label: Field extension
+    id: field_extension
+  - label: Field of fractions
+    id: field_of_fractions
 - id: field_extension
   en: field extension
   ko: 체 확장
@@ -6809,6 +6833,10 @@ G:
     id: Galois_correspondence
   - label: Galois group
     id: galois_group
+  - label: Galois theory
+    id: galois_theory
+  - label: Galois extension
+    id: galois_extension
 - id: galois_cohomology
   en: Galois cohomology
   ko: 갈루아 코호몰로지
@@ -6816,6 +6844,13 @@ G:
   defs:
   - label: '[호몰로지 대수학] §군 코호몰로지'
     url: /ko/math/homological_algebra/group_cohomology
+  see:
+  - label: Galois
+    id: galois
+  - label: Cohomology
+    id: cohomology
+  - label: Group cohomology
+    id: group_cohomology
 - id: Galois_connection
   en: Galois connection
   ko: 갈루아 연결
@@ -6846,6 +6881,10 @@ G:
     id: galois
   - label: Galois group
     id: galois_group
+  - label: Galois theory
+    id: galois_theory
+  - label: Galois extension
+    id: galois_extension
 - id: galois_extension
   en: Galois extension
   ko: 갈루아 확대
@@ -6853,6 +6892,13 @@ G:
   defs:
   - label: '[체론] §갈루아 확장'
     url: /ko/math/field_theory/galois_extension
+  see:
+  - label: Galois
+    id: galois
+  - label: Galois group
+    id: galois_group
+  - label: Galois theory
+    id: galois_theory
 - id: galois_group
   en: Galois group
   ko: 갈루아 군
