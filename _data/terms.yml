@@ -16889,6 +16889,8 @@ T:
     id: t_3_-space
   - label: Hausdorff space
     id: hausdorff_space
+  - label: $T_{2\frac{1}{2}}$-space
+    id: t_2_frac_1_2_-space
 - id: t_2_frac_1_2_-space
   en: $T_{2\frac{1}{2}}$-space
   ko: $T_{2\frac{1}{2}}$-공간
@@ -16901,6 +16903,8 @@ T:
     id: t_2_-space
   - label: $T_3$-space
     id: t_3_-space
+  - label: Completely Hausdorff space
+    id: completely_hausdorff_space
 - id: t_3_-space
   en: $T_3$-space
   ko: $T_3$-공간
@@ -16911,6 +16915,8 @@ T:
   see:
   - label: $T_2$-space
     id: t_2_-space
+  - label: Normal space
+    id: normal_space
 - id: t_4_-space
   en: $T_4$-space
   ko: $T_4$-공간
@@ -16918,6 +16924,9 @@ T:
   defs:
   - label: '[위상수학] §하우스도르프 공간'
     url: /ko/math/topology/Hausdorff_spaces
+  see:
+  - label: Normal space
+    id: normal_space
 - id: t-structure
   en: t-structure
   ko: t-구조
@@ -16925,6 +16934,9 @@ T:
   defs:
   - label: '[층론] §Perverse 층'
     url: /ko/math/sheaf_theory/perverse_sheaves
+  see:
+  - label: Triangulated category
+    id: triangulated_category
 - id: tangent_bundle
   en: tangent bundle
   ko: 접다발
@@ -16935,6 +16947,10 @@ T:
   see:
   - label: Cotangent bundle
     id: cotangent_bundle
+  - label: Tangent space
+    id: tangent_space
+  - label: Tangent vector
+    id: tangent_vector
 - id: tangent_complex
   en: tangent complex
   ko: 접복합체
@@ -16942,6 +16958,10 @@ T:
   defs:
   - label: '[유도대수기하학] §Derived scheme과 derived stack'
     url: /ko/math/derived_algebraic_geometry/derived_schemes
+  see:
+  - label: 여접 복합체
+    lang: ko
+    id: cotangent_complex
 - id: tangent_cone
   en: tangent cone
   ko: 접뿔
@@ -16956,6 +16976,9 @@ T:
   defs:
   - label: '[미분다양체] §미분사상의 예시들'
     url: /ko/math/manifolds/examples_of_differentials
+  see:
+  - label: Cotangent space
+    id: cotangent_space
 - id: tangent_line
   en: tangent line
   ko: 접선
@@ -16963,6 +16986,9 @@ T:
   defs:
   - label: '[미적분학] §미분과 도함수'
     url: /ko/math/calculus/derivatives
+  see:
+  - label: Tangent space
+    id: tangent_space
 - id: tangent_sheaf
   en: tangent sheaf
   ko: 접층
@@ -17587,6 +17613,16 @@ U:
   defs:
   - label: '[해석학] §연속함수의 성질'
     url: /ko/math/analysis/continuous_functions
+  see:
+  - label: 연속함수
+    lang: ko
+    id: continuous_function
+  - label: 립시츠 연속
+    lang: ko
+    id: lipschitz_continuity
+  - label: 거리공간
+    lang: ko
+    id: metric_space
 - id: uniform_convergence
   en: uniform convergence
   ko: 균등수렴
@@ -17642,6 +17678,12 @@ U:
   defs:
   - label: '[해석학] §균등수렴'
     url: /ko/math/analysis/uniform_convergence
+  see:
+  - label: 균등수렴
+    lang: ko
+    id: uniform_convergence
+  - label: Cauchy sequence
+    id: cauchy_sequence
 - id: uniformly_continuous
   en: uniformly continuous
   ko: 균등연속
@@ -17649,6 +17691,10 @@ U:
   defs:
   - label: '[해석학] §연속함수의 성질'
     url: /ko/math/analysis/continuous_functions
+  see:
+  - label: 균등연속성
+    lang: ko
+    id: uniform_continuity
 - id: union
   en: union
   ko: 합집합
@@ -17668,6 +17714,12 @@ U:
   defs:
   - label: '[환론] §정역'
     url: /ko/math/ring_theory/integral_domains
+  see:
+  - label: Unique factorization domain
+    id: unique_factorization_domain
+  - label: 산술의 기본정리
+    lang: ko
+    id: fundamental_theorem_of_arithmetic
 - id: unique_factorization_domain
   en: unique factorization domain
   ko: 단일인수분해정역
@@ -17678,6 +17730,8 @@ U:
   see:
   - label: Principal ideal domain
     id: principal_ideal_domain
+  - label: Unique factorization
+    id: unique_factorization
 - id: unique_up_to
   en: unique up to
   ko: '...에 대하여 유일하다'
@@ -17685,6 +17739,10 @@ U:
   defs:
   - label: '[집합론] §집합의 합'
     url: /ko/math/set_theory/sum_of_sets
+  see:
+  - label: 전단사함수에 대하여 유일하다
+    lang: ko
+    id: unique_up_to_bijection
 - id: unique_up_to_bijection
   en: unique up to bijection
   ko: 전단사함수에 대하여 유일하다
