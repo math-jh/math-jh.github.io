@@ -7577,6 +7577,9 @@ H:
   see:
   - label: Holomorphic function
     id: holomorphic_function
+  - label: 조화함수
+    lang: ko
+    id: harmonic_function
 - id: harmonic_form
   en: harmonic form
   ko: 조화형식
@@ -7590,6 +7593,8 @@ H:
   - label: Laplace 연산자
     lang: ko
     id: laplacian
+  - label: De Rham cohomology
+    id: de_rham_cohomology
 - id: harmonic_function
   en: harmonic function
   ko: 조화함수
@@ -7603,6 +7608,9 @@ H:
     id: laplacian
   - label: Holomorphic function
     id: holomorphic_function
+  - label: 조화형식
+    lang: ko
+    id: harmonic_form
 - id: harmonic_series
   en: harmonic series
   ko: 조화급수
@@ -7624,6 +7632,9 @@ H:
   defs:
   - label: '[대수적 위상수학] §위상다양체'
     url: /ko/math/algebraic_topology/topological_manifolds
+  see:
+  - label: Hausdorff space
+    id: hausdorff_space
 - id: hausdorff_space
   en: Hausdorff space
   ko: 하우스도르프 공간
@@ -7688,6 +7699,8 @@ H:
   see:
   - label: Line bundle
     id: line_bundle
+  - label: Hermitian metric
+    id: hermitian_metric
 - id: hermitian_manifold
   en: Hermitian manifold
   ko: 에르미트 다양체
@@ -7737,6 +7750,10 @@ H:
     url: /ko/math/calculus/partial_derivatives
   - label: '[리만기하학] §접속'
     url: /ko/math/riemannian_geometry/connection
+  see:
+  - label: 야코비 행렬
+    lang: ko
+    id: jacobian_matrix
 - id: higher-order_derivative
   en: higher-order derivative
   ko: 고계도함수
@@ -7744,6 +7761,10 @@ H:
   defs:
   - label: '[해석학] §평균값 정리와 테일러 정리'
     url: /ko/math/analysis/mean_value_theorem
+  see:
+  - label: $n$차 테일러 다항식
+    lang: ko
+    id: taylor_polynomial
 - id: highest_weight
   en: highest weight
   ko: 최고무게
@@ -7751,6 +7772,9 @@ H:
   defs:
   - label: '[리 이론] §최고 무게 가군'
     url: /ko/math/lie_theory/highest_weight_modules
+  see:
+  - label: Highest weight vector
+    id: highest_weight_vector
 - id: highest_weight_vector
   en: highest weight vector
   ko: 최고무게 벡터
@@ -7758,6 +7782,9 @@ H:
   defs:
   - label: '[리 이론] §최고 무게 가군'
     url: /ko/math/lie_theory/highest_weight_modules
+  see:
+  - label: Verma module
+    id: verma_module
 - id: hilbert_function
   en: Hilbert function
   ko: 힐베르트 함수
@@ -7765,6 +7792,9 @@ H:
   defs:
   - label: '[가환대수학] §힐베르트-사무엘 함수'
     url: /ko/math/commutative_algebra/hilbert-samuel_function
+  see:
+  - label: Hilbert polynomial
+    id: hilbert_polynomial
 - id: hilbert_polynomial
   en: Hilbert polynomial
   ko: 힐베르트 다항식
@@ -8172,6 +8202,8 @@ I:
     id: graded_ring
   - label: Graded submodule
     id: graded_submodule
+  - label: Graded ideal
+    id: graded_ideal
 - id: i_-th_coordinate
   en: $i$-th coordinate
   ko: $i$번째 좌표
@@ -8179,6 +8211,9 @@ I:
   defs:
   - label: '[스킴] §스펙트럼'
     url: /ko/math/scheme_theory/spectrums
+  see:
+  - label: Index
+    id: index
 - id: ideal
   en: ideal
   ko: 아이디얼
@@ -8195,6 +8230,14 @@ I:
     id: subring
   - label: Ideal quotient
     id: ideal_quotient
+  - label: Maximal ideal
+    id: maximal_ideal
+  - label: Prime ideal
+    id: prime_ideal
+  - label: Principal ideal
+    id: principal_ideal
+  - label: Kernel
+    id: kernel
 - id: ideal_quotient
   en: ideal quotient
   ko: 아이디얼 몫
@@ -8204,6 +8247,9 @@ I:
     url: /ko/math/commutative_algebra/basic_notions
   - label: '[가환대수학] §등급환의 국소화'
     url: /ko/math/commutative_algebra/localization_of_graded_rings
+  see:
+  - label: Quotient ring
+    id: quotient_ring
 - id: idempotent
   en: idempotent
   ko: 멱등원
@@ -8211,6 +8257,9 @@ I:
   defs:
   - label: '[환론] §멱등원과 곱분해'
     url: /ko/math/ring_theory/idempotents
+  see:
+  - label: Central idempotent
+    id: central_idempotent
 - id: identity_element
   en: identity element
   ko: 항등원
@@ -8218,6 +8267,10 @@ I:
   defs:
   - label: '[대수적 구조] §반군, 모노이드, 군'
     url: /ko/math/algebraic_structures/groups
+  see:
+  - label: 역원
+    lang: ko
+    id: inverse_element
 - id: identity_function
   en: identity function
   ko: 항등함수
@@ -8228,6 +8281,9 @@ I:
   see:
   - label: Function
     id: function
+  - label: 항등원
+    lang: ko
+    id: identity_element
 - id: identity_matrix
   en: identity matrix
   ko: 항등행렬
