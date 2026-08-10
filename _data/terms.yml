@@ -9782,6 +9782,14 @@ L:
   defs:
   - label: '[해석학] §평균값 정리와 테일러 정리'
     url: /ko/math/analysis/mean_value_theorem
+  see:
+  - label: Limit
+    id: limit
+  - label: 부정형
+    lang: ko
+    id: indeterminate_form
+  - label: Derivative
+    id: derivative
 - id: l_hôpital_s_theorem
   en: 'L''Hôpital''s Theorem'
   ko: 로피탈 정리
@@ -9789,6 +9797,14 @@ L:
   defs:
   - label: '[미적분학] §평균값 정리'
     url: /ko/math/calculus/mean_value_theorem
+  see:
+  - label: Limit
+    id: limit
+  - label: 부정형
+    lang: ko
+    id: indeterminate_form
+  - label: Derivative
+    id: derivative
 - id: lagrange_multiplier
   en: Lagrange multiplier
   ko: 라그랑주 승수
@@ -9800,6 +9816,9 @@ L:
   - label: 제약극값
     lang: ko
     id: constrained_extremum
+  - label: 극값
+    lang: ko
+    id: extremum
 - id: lagrangian_morphism
   en: Lagrangian morphism
   ko: Lagrangian 사상
@@ -9864,6 +9883,12 @@ L:
   defs:
   - label: '[다중선형대수학] §행렬식'
     url: /ko/math/multilinear_algebra/determinants
+  see:
+  - label: 행렬식
+    lang: ko
+    id: determinant
+  - label: Cofactor expansion
+    id: cofactor_expansion
 - id: laplacian
   en: Laplacian
   ko: Laplace 연산자
@@ -9875,6 +9900,9 @@ L:
   - label: $\partial$-연산자
     lang: ko
     id: del_operator
+  - label: 기울기
+    lang: ko
+    id: gradient
 - id: lattice
   en: lattice
   ko: 격자
@@ -10951,6 +10979,12 @@ M:
   - label: $n$차 테일러 다항식
     lang: ko
     id: taylor_polynomial
+  - label: 테일러 급수
+    lang: ko
+    id: taylor_series
+  - label: 멱급수
+    lang: ko
+    id: power_series
 - id: magma
   en: magma
   ko: 마그마
@@ -11016,6 +11050,10 @@ M:
     id: chain_map
   - label: Homology
     id: homology
+  - label: Derived functor
+    id: derived_functor
+  - label: Derived category
+    id: derived_category
 - id: mapping_stack
   en: mapping stack
   ko: 매핑 스택
@@ -11023,6 +11061,11 @@ M:
   defs:
   - label: '[유도대수기하학] §Shifted symplectic 구조'
     url: /ko/math/derived_algebraic_geometry/shifted_symplectic_structures
+  see:
+  - label: Classifying stack
+    id: classifying_stack
+  - label: Derived stack
+    id: derived_stack
 - id: marked_point
   en: marked point
   ko: 표시된 점
@@ -11044,6 +11087,13 @@ M:
   defs:
   - label: '[가환대수학] §단사가군과 Matlis 쌍대성'
     url: /ko/math/commutative_algebra/matlis_duality
+  see:
+  - label: Duality
+    id: duality
+  - label: Injective module
+    id: injective_module
+  - label: Local ring
+    id: local_ring
 - id: matrix
   en: matrix
   ko: 행렬
@@ -11064,6 +11114,8 @@ M:
   - label: 행렬식
     lang: ko
     id: determinant
+  - label: Jordan canonical form
+    id: jordan_canonical_form
 - id: matrix_exponential
   en: matrix exponential
   ko: 행렬지수
