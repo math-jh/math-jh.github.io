@@ -11796,6 +11796,12 @@ N:
     id: cohomology_group
   - label: Homology group
     id: homology_group
+  - label: Singular homology
+    id: singular_homology
+  - label: Simplicial homology
+    id: simplicial_homology
+  - label: Reduced homology
+    id: reduced_homology
 - id: n_-th_homotopy_group
   en: $n$-th homotopy group
   ko: $n$번째 호모토피 군
@@ -11810,6 +11816,8 @@ N:
     id: fundamental_groupoid
   - label: Homotopy group
     id: homotopy_group
+  - label: Fundamental group
+    id: fundamental_group
 - id: n_-th_root_of_unity
   en: $n$-th root of unity
   ko: 1의 $n$제곱근
@@ -11824,6 +11832,8 @@ N:
     id: primitive_n_-th_root_of_unity
   - label: Cyclotomic field
     id: cyclotomic_field
+  - label: Cyclotomic polynomial
+    id: cyclotomic_polynomial
 - id: naive_cotangent_complex
   en: naive cotangent complex
   ko: ''
@@ -11838,6 +11848,8 @@ N:
   - label: 상대 여접 복합체
     lang: ko
     id: relative_cotangent_complex
+  - label: Kähler differential
+    id: kähler_differential
 - id: nakayama_lemma
   en: Nakayama lemma
   ko: 나카야마 보조정리
@@ -11845,6 +11857,11 @@ N:
   defs:
   - label: '[가환대수학] §정수적 확장'
     url: /ko/math/commutative_algebra/integral_extension
+  see:
+  - label: Local ring
+    id: local_ring
+  - label: Jacobson radical
+    id: jacobson_radical
 - id: nakayama_s_lemma
   en: 'Nakayama''s lemma'
   ko: Nakayama 보조정리
@@ -11852,6 +11869,11 @@ N:
   defs:
   - label: '[가환대수학] §매개계'
     url: /ko/math/commutative_algebra/system_of_parameters
+  see:
+  - label: Local ring
+    id: local_ring
+  - label: Jacobson radical
+    id: jacobson_radical
 - id: natural_constant
   en: natural constant
   ko: 자연상수
@@ -12362,6 +12384,10 @@ O:
   defs:
   - label: '[유도대수기하학] §변형이론과 여접 복합체'
     url: /ko/math/derived_algebraic_geometry/deformation_theory
+  see:
+  - label: 변형이론
+    lang: ko
+    id: deformation_theory
 - id: odd_map
   en: odd map
   ko: 기함수형 사상
@@ -12477,6 +12503,10 @@ O:
   defs:
   - label: '[집합론] §유향집합'
     url: /ko/math/set_theory/directed_set
+  see:
+  - label: 닫힌구간
+    lang: ko
+    id: closed_interval
 - id: open_map
   en: open map
   ko: 열린사상
@@ -12484,6 +12514,9 @@ O:
   defs:
   - label: '[복소해석학] §편각원리와 Rouché 정리'
     url: /ko/math/complex_analysis/argument_principle
+  see:
+  - label: Closed mapping
+    id: closed_mapping
 - id: open_mapping
   en: open mapping
   ko: 열린사상
@@ -12491,6 +12524,9 @@ O:
   defs:
   - label: '[위상수학] §열린사상과 닫힌사상'
     url: /ko/math/topology/open_mappings_and_closed_mappings
+  see:
+  - label: Open map
+    id: open_map
 - id: open_neighborhood
   en: open neighborhood
   ko: 열린근방
@@ -12498,6 +12534,10 @@ O:
   defs:
   - label: '[위상수학] §열린집합'
     url: /ko/math/topology/open_sets
+  see:
+  - label: 근방
+    lang: ko
+    id: neighborhood
 - id: open_refinement
   en: open refinement
   ko: 열린 세분
@@ -12505,6 +12545,11 @@ O:
   defs:
   - label: '[위상수학] §Compactness와 paracompactness'
     url: /ko/math/topology/compactness
+  see:
+  - label: Refinement
+    id: refinement
+  - label: Open cover
+    id: open_cover
 - id: open_richardson_variety
   en: open Richardson variety
   ko: 열린 리처드슨 다양체
@@ -12512,6 +12557,13 @@ O:
   defs:
   - label: '[리 이론] §Richardson variety와 Peterson variety'
     url: /ko/math/lie_theory/richardson_peterson_variety
+  see:
+  - label: Richardson variety
+    id: richardson_variety
+  - label: Schubert variety
+    id: schubert_variety
+  - label: Bruhat decomposition
+    id: bruhat_decomposition
 - id: open_set
   en: open set
   ko: 열린집합
