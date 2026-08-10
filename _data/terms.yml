@@ -18233,6 +18233,9 @@ U:
   - label: 산술의 기본정리
     lang: ko
     id: fundamental_theorem_of_arithmetic
+  - label: 소인수분해
+    lang: ko
+    id: prime_factorization
 - id: unique_factorization_domain
   en: unique factorization domain
   ko: 단일인수분해정역
@@ -18363,6 +18366,9 @@ U:
   defs:
   - label: '[범주론] §표현가능한 함자'
     url: /ko/math/category_theory/representable_functors
+  see:
+  - label: Universal property
+    id: universal_property
 - id: universal_enveloping_algebra
   en: universal enveloping algebra
   ko: 보편 포락 대수
@@ -18370,6 +18376,9 @@ U:
   defs:
   - label: '[리 이론] §보편 포락 대수'
     url: /ko/math/lie_theory/universal_enveloping_algebra
+  see:
+  - label: Lie algebra
+    id: lie_algebra
 - id: universal_family
   en: universal family
   ko: 보편 족
@@ -18393,6 +18402,9 @@ U:
     url: /ko/math/topology/proper_maps
   - label: '[스킴] §값매김환'
     url: /ko/math/scheme_theory/valuative_criteria
+  see:
+  - label: Proper morphism
+    id: proper_morphism
 - id: unobstructed
   en: unobstructed
   ko: 장애 없음
@@ -18400,6 +18412,9 @@ U:
   defs:
   - label: '[유도대수기하학] §변형이론과 여접 복합체'
     url: /ko/math/derived_algebraic_geometry/deformation_theory
+  see:
+  - label: Obstruction
+    id: obstruction
 - id: unramified
   en: unramified
   ko: 비분기
@@ -18407,6 +18422,9 @@ U:
   defs:
   - label: '[스킴] §매끄러운 사상과 étale 사상'
     url: /ko/math/scheme_theory/smooth_and_etale_morphisms
+  see:
+  - label: 'Étale'
+    id: étale
 - id: upper_adjoint
   en: upper adjoint
   ko: 위 수반
@@ -18448,6 +18466,13 @@ U:
   defs:
   - label: '[해석학] §Riemann 적분'
     url: /ko/math/analysis/riemann_integral
+  see:
+  - label: 하합
+    lang: ko
+    id: lower_sum
+  - label: 리만 합
+    lang: ko
+    id: riemann_sum
 - id: upper_triangular_matrix
   en: upper triangular matrix
   ko: 상삼각행렬
@@ -18465,6 +18490,9 @@ U:
   defs:
   - label: '[위상수학] §Urysohn 보조정리와 Tietze 확장정리'
     url: /ko/math/topology/urysohn_and_tietze
+  see:
+  - label: Normal space
+    id: normal_space
 - id: urysohn_space
   en: Urysohn space
   ko: 유리손 공간
