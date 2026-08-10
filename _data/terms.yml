@@ -1246,6 +1246,12 @@ B:
   defs:
   - label: '[대수다양체] §선형계'
     url: /ko/math/algebraic_varieties/linear_systems
+  see:
+  - label: 기저점 없음
+    lang: ko
+    id: base-point_freeness
+  - label: Ample
+    id: ample
 - id: basic
   en: basic
   ko: 기본
@@ -1296,6 +1302,9 @@ B:
   defs:
   - label: '[가환대수학] §호몰로지 차원'
     url: /ko/math/commutative_algebra/homological_dimension
+  see:
+  - label: Homology group
+    id: homology_group
 - id: bézout_s_identity
   en: 'Bézout''s identity'
   ko: Bézout 항등식
@@ -1303,6 +1312,10 @@ B:
   defs:
   - label: '[정수론] §유클리드 호제법과 Bézout 항등식'
     url: /ko/math/number_theory/euclidean_algorithm
+  see:
+  - label: 최대공약수
+    lang: ko
+    id: gcd
 - id: bézout_theorem
   en: Bézout theorem
   ko: 베주 정리
@@ -1310,6 +1323,9 @@ B:
   defs:
   - label: '[대수다양체] §베주 정리'
     url: /ko/math/algebraic_varieties/bezout_theorem
+  see:
+  - label: Intersection theory
+    id: intersection_theory
 - id: bifunctor
   en: bifunctor
   ko: 쌍함자
@@ -1364,6 +1380,9 @@ B:
   defs:
   - label: '[복소기하학] §복소다양체'
     url: /ko/math/complex_geometry/complex_manifolds
+  see:
+  - label: Biholomorphic
+    id: biholomorphic
 - id: bijection
   en: bijection
   ko: 전단사
@@ -1459,6 +1478,12 @@ B:
   defs:
   - label: '[집합론] §이항관계'
     url: /ko/math/set_theory/binary_relation
+  see:
+  - label: 동치관계
+    lang: ko
+    id: equivalence_relation
+  - label: Order relation
+    id: order_relation
 - id: binomial_coefficient
   en: binomial coefficient
   ko: 이항계수
@@ -1466,6 +1491,10 @@ B:
   defs:
   - label: '[정수론] §페르마 소정리'
     url: /ko/math/number_theory/fermat_little_theorem
+  see:
+  - label: 이항정리
+    lang: ko
+    id: binomial_theorem
 - id: binomial_theorem
   en: binomial theorem
   ko: 이항정리
@@ -1480,6 +1509,9 @@ B:
   defs:
   - label: '[대수다양체] §유리사상'
     url: /ko/math/algebraic_varieties/rational_maps
+  see:
+  - label: Birational map
+    id: birational_map
 - id: birational_map
   en: birational map
   ko: 쌍유리 사상
@@ -1753,6 +1785,13 @@ C:
   defs:
   - label: '[거울대칭] §거울대칭 개요'
     url: /ko/math/mirror_symmetry/overview
+  see:
+  - label: Calabi-yau variety
+    id: calabi-yau_variety
+  - label: Calabi-Yau threefold
+    id: calabi-yau_threefold
+  - label: Kähler manifold
+    id: kähler_manifold
 - id: calabi-yau_threefold
   en: Calabi-Yau threefold
   ko: 칼라비-야우 삼중체
@@ -1760,6 +1799,11 @@ C:
   defs:
   - label: '[거울대칭] §거울대칭 개요'
     url: /ko/math/mirror_symmetry/overview
+  see:
+  - label: Calabi-Yau
+    id: calabi-yau
+  - label: Calabi-yau variety
+    id: calabi-yau_variety
 - id: calabi-yau_variety
   en: Calabi-yau variety
   ko: 칼라비-야우 다양체
@@ -1772,6 +1816,10 @@ C:
     id: complex_algebraic_variety
   - label: Kähler manifold
     id: kähler_manifold
+  - label: Calabi-Yau
+    id: calabi-yau
+  - label: Calabi-Yau threefold
+    id: calabi-yau_threefold
 - id: cancellation_law
   en: cancellation law
   ko: 소거 법칙
@@ -1813,6 +1861,8 @@ C:
     id: canonical_bundle
   - label: Canonical line bundle
     id: canonical_line_bundle
+  - label: Canonical holomorphic volume form
+    id: canonical_holomorphic_volume_form
 - id: canonical_filtration
   en: canonical filtration
   ko: 표준 여과
@@ -1830,6 +1880,8 @@ C:
   see:
   - label: Canonical divisor
     id: canonical_divisor
+  - label: Canonical line bundle
+    id: canonical_line_bundle
 - id: canonical_injection
   en: canonical injection
   ko: 포함관계로부터 유도된 단사함수
@@ -1842,6 +1894,8 @@ C:
     id: function
   - label: Injective
     id: injective
+  - label: Canonical projection
+    id: canonical_projection
 - id: canonical_line_bundle
   en: canonical line bundle
   ko: 표준 선다발
