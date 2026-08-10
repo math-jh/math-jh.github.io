@@ -9389,6 +9389,9 @@ J:
   - label: 르장드르 기호
     lang: ko
     id: legendre_symbol
+  - label: 이차 상호법칙
+    lang: ko
+    id: quadratic_reciprocity
 - id: jacobian
   en: Jacobian
   ko: 야코비안
@@ -9430,6 +9433,8 @@ J:
   see:
   - label: Meet
     id: meet
+  - label: Lattice
+    id: lattice
 - id: jordan_block
   en: Jordan block
   ko: 조르당 블록
@@ -9459,6 +9464,9 @@ J:
   defs:
   - label: '[선형대수학] §최소다항식'
     url: /ko/math/linear_algebra/minimal_polynomial
+  see:
+  - label: Jordan canonical form
+    id: jordan_canonical_form
 - id: j_th_column_vector
   en: $j$th column vector
   ko: $j$번째 열벡터
@@ -9475,6 +9483,9 @@ J:
     url: /ko/math/calculus/functions_and_limits
   - label: '[미적분학] §연속함수'
     url: /ko/math/calculus/continuity
+  see:
+  - label: Jump discontinuity
+    id: jump_discontinuity
 - id: jump_discontinuity
   en: jump discontinuity
   ko: 도약 불연속
@@ -9482,6 +9493,16 @@ J:
   defs:
   - label: '[미적분학] §연속함수'
     url: /ko/math/calculus/continuity
+  see:
+  - label: Jump
+    id: jump
+  - label: 불연속
+    lang: ko
+    id: discontinuity
+  - label: Removable discontinuity
+    id: removable_discontinuity
+  - label: Essential discontinuity
+    id: essential_discontinuity
 K:
 - id: k3_surface
   en: K3 surface
@@ -9505,6 +9526,8 @@ K:
     id: singular_k_-simplex
   - label: Singular homology
     id: singular_homology
+  - label: Simplicial homology
+    id: simplicial_homology
 - id: mathbb_k_-vector_space
   en: $\mathbb{K}$-vector space
   ko: $\mathbb{K}$-벡터공간
@@ -9546,6 +9569,9 @@ K:
   defs:
   - label: '[스킴] §Kähler 미분과 여접층'
     url: /ko/math/scheme_theory/sheaf_of_differentials
+  see:
+  - label: Kähler differential module
+    id: kähler_differential_module
 - id: kähler_differential_module
   en: Kähler differential module
   ko: 캘러 미분가군
@@ -9573,6 +9599,8 @@ K:
   see:
   - label: Symplectic form
     id: symplectic_form
+  - label: Differential form
+    id: differential_form
 - id: kähler_manifold
   en: Kähler manifold
   ko: 켈러 다양체
@@ -9585,6 +9613,10 @@ K:
     id: complex_manifold
   - label: Symplectic manifold
     id: symplectic_manifold
+  - label: Kähler form
+    id: kähler_form
+  - label: Kähler metric
+    id: kähler_metric
 - id: kähler_metric
   en: Kähler metric
   ko: 켈러 계량
@@ -9595,6 +9627,8 @@ K:
   see:
   - label: Hermitian metric
     id: hermitian_metric
+  - label: Kähler form
+    id: kähler_form
 - id: kähler_potential
   en: Kähler potential
   ko: 켈러 퍼텐셜
@@ -9602,6 +9636,9 @@ K:
   defs:
   - label: '[복소기하학] §Kähler 다양체'
     url: /ko/math/complex_geometry/kahler_manifolds
+  see:
+  - label: Kähler form
+    id: kähler_form
 - id: kähler_structure
   en: Kähler structure
   ko: 켈러 구조
@@ -9609,6 +9646,9 @@ K:
   defs:
   - label: '[거울대칭] §거울대칭 개요'
     url: /ko/math/mirror_symmetry/overview
+  see:
+  - label: Kähler manifold
+    id: kähler_manifold
 - id: kernel
   en: kernel
   ko: 핵
@@ -9623,6 +9663,10 @@ K:
   see:
   - label: Cokernel
     id: cokernel
+  - label: Image
+    id: image
+  - label: Exact sequence
+    id: exact_sequence
 - id: killing_form
   en: Killing form
   ko: 킬링 형식
