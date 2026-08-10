@@ -18,6 +18,8 @@ revising: true
 
 우리는 이제 드디어 Galois 이론의 기본정리를 증명할 수 있다. 
 
+## 기본정리의 서술과 응용
+
 ::: 정리 1
 Field $\mathbb{K}$의 Galois extension $\mathbb{L}/\mathbb{K}$와 그 Galois group $\Gamma=\Gal(\mathbb{L}/\mathbb{K})$을 생각하자. $\Ext(\mathbb{L}/\mathbb{K})$를 $\mathbb{L}$의 subextension들의 모임이라 하고, $\SubGrp_{\cl}(\Gamma)$를 $\Gamma$의 closed subgroup들의 모임이라 하면 $\Ext(\mathbb{L}/\mathbb{K})$와 $\SubGrp_{\cl}(\Gamma)$ 사이의 두 함수
 
@@ -30,9 +32,105 @@ $$g:\Ext(\mathbb{L}/\mathbb{K})\rightarrow\SubGrp_{\cl}(\Gamma);\qquad \mathbb{M
 을 생각하면 이들은 서로의 inverse이다. 
 :::
 
-이를 증명하기 위해 다음과 같이 두 단계로 나누어 증명한다. 
+정리의 서술에서 $g$가 실제로 closed subgroup을 준다는 것부터가 확인을 필요로 하며, 이는 [보조정리 7](#lem7)에서 다룬다. 이번 절에서는 정리를 받아들이고 그로부터 얻어지는 것들을 먼저 살펴본 후, 증명은 다음 절로 미룬다.
 
-::: 보조정리 2
+특별히 $\mathbb{L}/\mathbb{K}$가 finite degree Galois extension이라면 [§갈루아 군의 성질들, ⁋예시 1](/ko/math/field_theory/properties_of_galois_extensions#ex1)에서 살펴본 것과 같이 $\Gal(\mathbb{L}/\mathbb{K})$는 discrete space이고, 따라서 임의의 subgroup이 closed이다. 즉 이 경우 [정리 1](#thm1)은 subextension들과 subgroup들 사이의 대응이라는 고전적인 Galois 이론의 기본정리가 된다. 이 경우를 다룰 때 되풀이해서 쓰이는 것이 다음의 counting이다.
+
+::: 명제 2
+Finite degree Galois extension $\mathbb{L}/\mathbb{K}$에 대하여 $\card\Gal(\mathbb{L}/\mathbb{K})=[\mathbb{L}:\mathbb{K}]$가 성립한다.
+:::
+::: 증명
+$\mathbb{L}/\mathbb{K}$가 separable이므로 $\mathbb{L}$에서 $\overline{\mathbb{K}}$로의 $\mathbb{K}$-homomorphism의 개수는 $[\mathbb{L}:\mathbb{K}]_s=[\mathbb{L}:\mathbb{K}]$이다. ([§에탈대수, ⁋정의 10](/ko/math/field_theory/etale_algebras#def10), [§분리가능차수, ⁋명제 9](/ko/math/field_theory/separable_degree#prop9)) 한편 $\mathbb{L}/\mathbb{K}$는 quasi-Galois이므로 [§갈루아 확장, ⁋명제 5](/ko/math/field_theory/galois_extension#prop5)의 넷째 조건에 의하여 이들 homomorphism은 모두 $\mathbb{L}$로 들어가며, $\mathbb{L}/\mathbb{K}$가 finite degree이므로 단사인 $\mathbb{K}$-linear map은 자동으로 전사이다. 즉 이들은 정확히 $\mathbb{L}$의 $\mathbb{K}$-automorphism들이다.
+:::
+
+가장 작은 경우부터 살펴보자.
+
+::: 예시 3
+$\mathbb{L}=\mathbb{Q}(\sqrt{2},\sqrt{3})$은 $(\x^2-2)(\x^2-3)\in\mathbb{Q}[\x]$의 splitting field이므로 [§갈루아 확장, ⁋명제 5](/ko/math/field_theory/galois_extension#prop5)의 다섯째 조건에 의해 quasi-Galois이고, characteristic $0$의 field는 perfect이므로 ([§체, ⁋명제 18](/ko/math/field_theory/fields#prop18)) 그 algebraic extension은 모두 separable이다. ([§분리가능확대체, ⁋명제 9](/ko/math/field_theory/separable_extensions#prop9)) 즉 [§갈루아 확장, ⁋정리 8](/ko/math/field_theory/galois_extension#thm8)의 둘째 조건에 의하여 $\mathbb{L}/\mathbb{Q}$는 Galois extension이다.
+
+우선 $\sqrt{3}\not\in\mathbb{Q}(\sqrt{2})$이다. 만일 $\sqrt{3}=a+b\sqrt{2}$라면 양변을 제곱하여 $3=a^2+2b^2+2ab\sqrt{2}$를 얻는데, $\sqrt{2}$가 유리수가 아니므로 $ab=0$이어야 하고, $b=0$이면 $\sqrt{3}$이, $a=0$이면 $\sqrt{3/2}$가 유리수가 되어 모두 모순이기 때문이다. 따라서 $[\mathbb{L}:\mathbb{Q}]=[\mathbb{L}:\mathbb{Q}(\sqrt{2})][\mathbb{Q}(\sqrt{2}):\mathbb{Q}]=4$이고, [명제 2](#prop2)에 의하여 $\card\Gal(\mathbb{L}/\mathbb{Q})=4$이다.
+
+한편 $\Gal(\mathbb{L}/\mathbb{Q})$의 원소는 $\sqrt{2}\mapsto\pm\sqrt{2}$와 $\sqrt{3}\mapsto\pm\sqrt{3}$의 선택으로 완전히 결정되므로 많아야 네 개이고, 따라서 네 가지 선택이 모두 실현된다. 특히 항등원이 아닌 모든 원소의 order가 $2$이므로 $\Gal(\mathbb{L}/\mathbb{Q})$는 $\mathbb{Z}/2\mathbb{Z}\times\mathbb{Z}/2\mathbb{Z}$와 isomorphic하고, 자명하지 않은 proper subgroup은 $\sqrt{3}$의 부호만 바꾸는 $\sigma$, $\sqrt{2}$의 부호만 바꾸는 $\tau$, 그리고 $\sigma\tau$가 각각 생성하는 셋뿐이다. 이제 위의 tower로부터 $\{1,\sqrt{2},\sqrt{3},\sqrt{6}\}$이 $\mathbb{L}$의 $\mathbb{Q}$-basis이므로 $x=a+b\sqrt{2}+c\sqrt{3}+d\sqrt{6}$에 대하여
+
+$$\sigma(x)=a+b\sqrt{2}-c\sqrt{3}-d\sqrt{6},\qquad \tau(x)=a-b\sqrt{2}+c\sqrt{3}-d\sqrt{6},\qquad \sigma\tau(x)=a-b\sqrt{2}-c\sqrt{3}+d\sqrt{6}$$
+
+을 얻고, 따라서 세 subgroup의 fixed field는 각각 $\mathbb{Q}(\sqrt{2})$, $\mathbb{Q}(\sqrt{3})$, $\mathbb{Q}(\sqrt{6})$이다. [정리 1](#thm1)에 의하여 이들이 $\mathbb{L}$의 자명하지 않은 subextension 전부이다.
+
+[§순수비분리확대체](/ko/math/field_theory/purely_inseparable_extensions)의 서두에서 우리는 바로 이 extension의 root들을 서로 바꾸는 group $S_2\times S_2$를 예고로 삼았었다. 위의 계산이 그 예고를 정확한 형태로 갚은 것이다.
+:::
+
+앞의 예시에서는 Galois group이 abelian이라 모든 subgroup이 normal이었다. 다음은 그렇지 않은 가장 작은 예이다.
+
+::: 예시 4
+$\alpha$를 $2$의 실수 세제곱근, $\omega=e^{2\pi i/3}$이라 하고 $\mathbb{L}=\mathbb{Q}(\alpha,\omega)$라 하자. $\x^3-2$의 세 root가 $\alpha$, $\omega\alpha$, $\omega^2\alpha$이므로 $\mathbb{L}$은 $\x^3-2$의 splitting field이고, 앞의 예시와 같은 이유로 $\mathbb{L}/\mathbb{Q}$는 Galois extension이다. $\x^3-2$는 유리수 root를 갖지 않는 삼차식이므로 irreducible이고 따라서 $[\mathbb{Q}(\alpha):\mathbb{Q}]=3$인데, $\mathbb{Q}(\alpha)$가 $\mathbb{R}$에 포함되어 $\omega$를 포함하지 않으므로 $\mathbb{Q}(\alpha)$ 위에서 $\omega$의 minimal polynomial은 $\x^2+\x+1$이다. 즉 $[\mathbb{L}:\mathbb{Q}]=6$이고 [명제 2](#prop2)에 의하여 $\card\Gal(\mathbb{L}/\mathbb{Q})=6$이다.
+
+$\omega=(\omega\alpha)/\alpha$이므로 $\mathbb{L}$은 $\x^3-2$의 root들로 생성되고, 따라서 [§갈루아 확장, ⁋정의 12](/ko/math/field_theory/galois_extension#def12) 이후의 논의에서와 같이 root들의 permutation으로 주어지는 injective homomorphism $\Gal(\mathbb{L}/\mathbb{Q})\rightarrow S_3$을 얻는다. 양쪽 모두 여섯 개의 원소를 가지므로 이는 isomorphism이다.
+
+$S_3$의 자명하지 않은 proper subgroup은 order $3$인 $A_3$ 하나와 order $2$인 것 셋이며, [정리 1](#thm1)과 [명제 2](#prop2)에 의하여 이들은 각각 degree $2$인 subextension 하나와 degree $3$인 subextension 셋에 대응한다. $A_3$의 원소들은 $\omega$를 고정하므로 $A_3$의 fixed field는 $\mathbb{Q}(\omega)$를 포함하고, 양쪽 모두 $\mathbb{Q}$ 위에서 degree $2$이므로 이들은 같다. 마찬가지로 $\omega^i\alpha$를 고정하는 order $2$의 subgroup의 fixed field는 $\x^3-2$의 root인 $\omega^i\alpha$가 생성하는 degree $3$의 field $\mathbb{Q}(\omega^i\alpha)$를 포함하므로 그것과 같다. 한편 $\x^3-2$의 서로 다른 두 root를 함께 포함하는 field는 그 비인 $\omega$ 또는 $\omega^2$를, 따라서 어느 쪽이든 $\omega$를 포함하여 $\mathbb{L}$ 전체가 되므로, 뒤의 세 field는 각각 $\x^3-2$의 root를 하나씩만 포함한다. 즉 이들은 [§갈루아 확장, ⁋명제 5](/ko/math/field_theory/galois_extension#prop5)의 둘째 조건을 만족하지 않아 $\mathbb{Q}$의 quasi-Galois extension이 아니며, 서로 다른 field이지만 $\Gal(\mathbb{L}/\mathbb{Q})$의 원소에 의해 서로 옮겨진다.
+:::
+
+이제 [정리 1](#thm1)의 서술에 등장하는 closed 조건이 왜 필요한지를 보여주는 예시를 살펴보자. Galois group이 무한할 때에는 subgroup 전체가 아니라 그중 closed인 것만이 subextension과 대응한다.
+
+::: 예시 5
+소수 $p$를 고정하고 $\mathbb{F}_p$의 algebraic closure $\overline{\mathbb{F}}_p$를 생각하자. $\mathbb{F}_p$는 유한집합이므로 perfect이고 ([§체, ⁋명제 18](/ko/math/field_theory/fields#prop18)) 따라서 그 algebraic extension은 모두 separable이다. ([§분리가능확대체, ⁋명제 9](/ko/math/field_theory/separable_extensions#prop9)) 한편 $\overline{\mathbb{F}}_p$는 $\mathbb{F}_p[\x]$의 non-constant polynomial 전체의 splitting field이므로 [§갈루아 확장, ⁋명제 5](/ko/math/field_theory/galois_extension#prop5)의 다섯째 조건에 의해 quasi-Galois이고, 즉 $\overline{\mathbb{F}}_p/\mathbb{F}_p$는 Galois extension이다. 그 Galois group을 $\Gamma$라 적자.
+
+$\overline{\mathbb{F}}_p$ 또한 perfect이므로 ([§분리가능차수, ⁋따름정리 3](/ko/math/field_theory/separable_degree#cor3)) Frobenius endomorphism $\varphi:x\mapsto x^p$는 $\overline{\mathbb{F}}_p$의 automorphism이고, $\mathbb{F}_p$의 원소들은 $\x^p-\x$의 root이므로 $\varphi\in\Gamma$이다. 거꾸로 $\varphi(x)=x$인 것은 $x$가 $\x^p-\x$의 root인 것인데, 이 다항식의 root는 많아야 $p$개이고 $\mathbb{F}_p$의 원소 $p$개가 이미 모두 root이다. 따라서 $\varphi$가 생성하는 subgroup $H$에 대하여
+
+$$k(H)=\mathbb{F}_p=k(\Gamma)$$
+
+가 성립한다. 따라서 $H\neq\Gamma$이기만 하면 $k$는 subgroup 전체 위에서 단사가 아니게 된다.
+
+이를 확인하기 위해 각각의 $n\geq1$마다 $\x^{p^n}-\x$의 $\overline{\mathbb{F}}_p$에서의 root들의 집합을 $\mathbb{F}_{p^n}$이라 하자. 이는 $\varphi^n$에 의해 고정되는 원소들의 모임이므로 subfield이고, $\x^{p^n}-\x$의 derivative가 $-1$이라 중근이 없으므로 ([\[환론\] §다항식환, ⁋명제 11](/ko/math/ring_theory/polynomial_rings#prop11)) 원소가 정확히 $p^n$개이다. 그럼 $\mathbb{F}_{p^n}$은 $\mathbb{F}_p$-벡터공간으로서 dimension $n$을 가지므로 $[\mathbb{F}_{p^n}:\mathbb{F}_p]=n$이고, $\x^{p^n}-\x$의 splitting field이므로 quasi-Galois이며, 위에서 본 것과 같이 separable이므로 $\mathbb{F}_{p^n}/\mathbb{F}_p$는 finite degree Galois extension이다. 한편 $\varphi^d$가 $\mathbb{F}_{p^n}$ 위에서 항등함수라면 $p^n$개의 원소가 모두 $\x^{p^d}-\x$의 root가 되어 $n\leq d$이므로, $\varphi\vert_{\mathbb{F}_{p^n}}$의 order는 정확히 $n$이고 [명제 2](#prop2)에 의하여
+
+$$\Gal(\mathbb{F}_{p^n}/\mathbb{F}_p)=\langle\varphi\vert_{\mathbb{F}_{p^n}}\rangle\cong\mathbb{Z}/n\mathbb{Z}$$
+
+이다. 여기서 마지막 isomorphism은 $\varphi\vert_{\mathbb{F}_{p^n}}$을 $1$로 보내는 것이다.
+
+이제 $m\mid n$일 때 $x^{p^m}=x$로부터 $x^{p^{n}}=x$가 따라나오므로 $\mathbb{F}_{p^m}\subseteq\mathbb{F}_{p^n}$이고, 특히 $\mathbb{F}_{p^m}$과 $\mathbb{F}_{p^n}$은 언제나 $\mathbb{F}_{p^{mn}}$에 함께 포함된다. 또 임의의 $x\in\overline{\mathbb{F}}_p$에 대하여 $d=[\mathbb{F}_p(x):\mathbb{F}_p]$라 하면 $\mathbb{F}_p(x)$는 $p^d$개의 원소를 갖는 field이고, 그 가역원들의 group의 order가 $p^d-1$이므로 ([\[대수적 구조\] §몫군, ⁋명제 5](/ko/math/algebraic_structures/quotient_groups#prop5)) $x\neq0$일 때 $x^{p^d-1}=1$이다. $x=0$인 경우와 합치면 언제나 $x^{p^d}=x$, 즉 $x\in\mathbb{F}_{p^d}$이다. 즉 $\overline{\mathbb{F}}_p$는 $\mathbb{F}_{p^n}$들의 union이며, [§갈루아 군의 성질들, ⁋명제 5](/ko/math/field_theory/properties_of_galois_extensions#prop5)를 이 family에 적용하면 restriction들이 유도하는
+
+$$\Gamma\cong\varprojlim_n\Gal(\mathbb{F}_{p^n}/\mathbb{F}_p)\cong\varprojlim_n\mathbb{Z}/n\mathbb{Z}$$
+
+이 topological group들의 isomorphism이다. 여기서 오른쪽의 inverse limit은 $m\mid n$일 때의 reduction map들에 대한 것이고, $\varphi^k$는 각 성분에서 $k$의 residue class로 주어지는 원소에 대응한다.
+
+이제 자연수 $n$을 $n=2^am$ ($m$은 홀수)으로 쓰고, $c_n\in\mathbb{Z}/n\mathbb{Z}$을 $c_n\equiv0\pmod{2^a}$이고 $c_n\equiv1\pmod m$인 유일한 residue class라 하자. 만일 $n'\mid n$이라면 $n'=2^{a'}m'$의 $a'$과 $m'$이 각각 $a'\leq a$와 $m'\mid m$을 만족하므로 $c_n$을 $n'$으로 나눈 나머지가 $c_{n'}$이고, 따라서 $(c_n)_n$은 위의 inverse limit의 원소이다. 만일 이것이 어떤 $\varphi^k$에 대응한다면 $n=2^a$인 성분들로부터 모든 $a$에 대하여 $2^a\mid k$가 되어 $k=0$이어야 하는데, $n=3$인 성분은 $k\equiv1\pmod 3$을 요구하므로 이는 불가능하다. 즉 $(c_n)_n$은 $H$에 속하지 않는 $\Gamma$의 원소이다.
+
+한편 $H$의 closure $\overline{H}$는 다시 subgroup이고, $H\subseteq\overline{H}\subseteq\Gamma$로부터 $k(\overline{H})$가 $k(\Gamma)=\mathbb{F}_p$와 $k(H)=\mathbb{F}_p$ 사이에 놓이므로 $k(\overline{H})=\mathbb{F}_p$이다. 그럼 [정리 1](#thm1)을 closed subgroup $\overline{H}$에 적용하여 $\overline{H}=g(\mathbb{F}_p)=\Gamma$를 얻는다. 즉 $H$는 $\Gamma$에서 dense하지만 closed가 아닌 subgroup이다.
+:::
+
+기본정리의 두 번째 부분은 이 대응 하에서 normal subgroup이 무엇에 대응되는지를 알려준다.
+
+::: 따름정리 6
+[정리 1](#thm1)의 상황에서, closed subgroup $H\in\SubGrp_{\cl}(\Gamma)$가 $\Gal(\mathbb{L}/\mathbb{K})$의 normal subgroup인 것과 $\mathbb{M}=k(H)$가 $\mathbb{K}$의 Galois extension인 것이 동치이다. 이 경우 restriction은 group isomorphism
+
+$$\Gal(\mathbb{L}/\mathbb{K})/H\cong \Gal(\mathbb{M}/\mathbb{K})$$
+
+을 유도한다.
+:::
+::: 증명
+우선 간단한 계산으로 시작하자. 임의의 closed subgroup $H$와 $\sigma\in\Gal(\mathbb{L}/\mathbb{K})$에 대하여, $x\in \mathbb{L}$이 $\sigma H\sigma^{-1}$의 모든 원소에 의해 고정되는 것은 $\sigma^{-1}(x)$가 $H$의 모든 원소에 의해 고정되는 것과 같으므로
+
+$$\mathbb{L}^{\sigma H\sigma^{-1}}=\sigma(\mathbb{L}^H)=\sigma(\mathbb{M})\tag{$\ast$}$$
+
+이 성립한다.
+
+이제 $H$가 normal subgroup이라 가정하자. 그럼 식 $(\ast)$에 의해 임의의 $\sigma\in\Gal(\mathbb{L}/\mathbb{K})$에 대해 $\sigma(\mathbb{M})=\mathbb{M}$이고, 따라서 restriction $\rho:\Gal(\mathbb{L}/\mathbb{K}) \rightarrow \Aut_\mathbb{K}(\mathbb{M})$이 잘 정의된다. $\mathbb{M}$의 원소 $x$가 $\rho$의 image의 모든 원소에 의해 고정된다면 $x$는 $\Gal(\mathbb{L}/\mathbb{K})$ 전체에 의해 고정되므로, $\mathbb{L}/\mathbb{K}$가 Galois라는 것으로부터 $x\in \mathbb{K}$이다. 특히 $\mathbb{M}$의 모든 $\mathbb{K}$-automorphism들의 group의 invariant들은 $\mathbb{K}$에 포함되고, 따라서 [§갈루아 확장, ⁋정리 8](/ko/math/field_theory/galois_extension#thm8)의 첫째 조건에 의하여 $\mathbb{M}/\mathbb{K}$는 Galois extension이다.
+
+거꾸로 $\mathbb{M}/\mathbb{K}$가 Galois extension이라 하자. 그럼 특히 $\mathbb{M}/\mathbb{K}$는 quasi-Galois이므로, [§갈루아 확장, ⁋명제 5](/ko/math/field_theory/galois_extension#prop5)에 의하여 임의의 $\sigma\in \Gal(\mathbb{L}/\mathbb{K})$가 $\sigma(\mathbb{M})=\mathbb{M}$을 만족한다. 그럼 식 $(\ast)$과 [정리 1](#thm1)의 대응에 의하여
+
+$$\sigma H\sigma^{-1}=g\bigl(\sigma(\mathbb{M})\bigr)=g(\mathbb{M})=H$$
+
+이므로 $H$는 normal subgroup이다. 여기서 $\sigma H\sigma^{-1}$이 closed인 것은 conjugation이 topological group의 homeomorphism이기 때문이다.
+
+마지막으로 isomorphism을 확인하자. $\mathbb{M}/\mathbb{K}$가 Galois일 때, 위에서 정의한 restriction은 group homomorphism $\rho:\Gal(\mathbb{L}/\mathbb{K}) \rightarrow \Gal(\mathbb{M}/\mathbb{K})$이고, 그 kernel은 $\mathbb{M}$을 고정하는 원소들의 모임, 즉 $g(\mathbb{M})=g(k(H))=H$이다. 한편 $\rho$가 surjective인 것은 [§갈루아 확장, ⁋명제 13](/ko/math/field_theory/galois_extension#prop13)과 같다. 임의의 $\tau\in\Gal(\mathbb{M}/\mathbb{K})$는 [§갈루아 확장, ⁋명제 1](/ko/math/field_theory/galois_extension#prop1)에 의해 $\overline{\mathbb{K}}$의 $\mathbb{K}$-automorphism으로 확장되고, $\mathbb{L}/\mathbb{K}$가 quasi-Galois이므로 이 extension을 $\mathbb{L}$로 제한하면 $\tau$를 확장하는 $\Gal(\mathbb{L}/\mathbb{K})$의 원소를 얻기 때문이다. 따라서 first isomorphism theorem에 의해 $\Gal(\mathbb{L}/\mathbb{K})/H\cong\Gal(\mathbb{M}/\mathbb{K})$이다.
+:::
+
+[예시 4](#ex4)의 order $2$인 세 subgroup은 서로 conjugate이므로 normal이 아니며, 실제로 이들에 대응하는 $\mathbb{Q}(\omega^i\alpha)$는 $\mathbb{Q}$의 Galois extension이 아니었다. 반면 $A_3$은 normal subgroup이고 $\mathbb{Q}(\omega)$는 $\x^2+\x+1$의 splitting field로서 $\mathbb{Q}$의 Galois extension이며, 이 경우 [따름정리 6](#cor6)의 isomorphism은 $S_3/A_3\cong\Gal(\mathbb{Q}(\omega)/\mathbb{Q})$이다.
+
+## 기본정리의 증명
+
+[정리 1](#thm1)은 다음과 같이 두 단계로 나누어 증명한다. 
+
+::: 보조정리 7
 임의의 subextension $\mathbb{M}\in \Ext(\mathbb{L}/\mathbb{K})$에 대하여, $\mathbb{L}/\mathbb{M}$ 또한 Galois extension이다. 이 때, $\mathbb{M}$-automorphism을 $\mathbb{K}$-automorphism으로 보아 Galois group $\Gal(\mathbb{L}/\mathbb{M})$을 $\Gal(\mathbb{L}/\mathbb{K})$의 subgroup으로 보면, 이는 $\Gal(\mathbb{L}/\mathbb{K})$의 *closed* subgroup이며 따라서 $g$가 잘 정의된다. 
 :::
 ::: 증명
@@ -47,7 +145,7 @@ $$\Gal(\mathbb{L}/\mathbb{M})=\left\{\sigma\in \Gal(\mathbb{L}/\mathbb{K})\mid \
 
 다음 보조정리는 흔히 *Artin의 보조정리*라는 이름으로 불리는 결과로, [정리 1](#thm1)의 증명에서 핵심적인 counting을 제공한다.
 
-::: 보조정리 3 (Artin)
+::: 보조정리 8 (Artin)
 Field $\mathbb{N}$과, $\mathbb{N}$의 automorphism들로 이루어진 유한군 $H$가 주어졌다 하자. $H$의 invariant들의 field를 $\mathbb{N}^H$라 하면, $[\mathbb{N}:\mathbb{N}^H]\leq \card H$가 성립한다.
 :::
 ::: 증명
@@ -73,9 +171,9 @@ $$\sum_{j=1}^{m+1}(\tau\sigma_i)(x_j)\tau(c_j)=0,\qquad i=1,\ldots,m$$
 이제 [정리 1](#thm1)을 증명할 수 있다.
 
 ::: 증명 (정리 1)
-[보조정리 2](#lem2)에 의하여 $g$가 잘 정의되고, $k$의 경우 $G$의 원소들이 모두 $\mathbb{K}$를 고정하므로 invariant들의 field $k(G)$는 $\mathbb{K}$를 포함하는 $\mathbb{L}$의 subfield, 곧 $\Ext(\mathbb{L}/\mathbb{K})$의 원소이다.
+[보조정리 7](#lem7)에 의하여 $g$가 잘 정의되고, $k$의 경우 $G$의 원소들이 모두 $\mathbb{K}$를 고정하므로 invariant들의 field $k(G)$는 $\mathbb{K}$를 포함하는 $\mathbb{L}$의 subfield, 곧 $\Ext(\mathbb{L}/\mathbb{K})$의 원소이다.
 
-우선 $k\circ g=\id_{\Ext(\mathbb{L}/\mathbb{K})}$를 보이자. 임의의 $\mathbb{M}\in\Ext(\mathbb{L}/\mathbb{K})$에 대하여 [보조정리 2](#lem2)에 의해 $\mathbb{L}/\mathbb{M}$은 Galois extension이고, 따라서 [§갈루아 확장, ⁋정리 8](/ko/math/field_theory/galois_extension#thm8)의 첫째 조건에 의하여 $\Gal(\mathbb{L}/\mathbb{M})$-invariant element들은 모두 $\mathbb{M}$의 원소이다. 거꾸로 $\mathbb{M}$의 원소들이 $\Gal(\mathbb{L}/\mathbb{M})$에 의해 고정되는 것은 자명하므로 $k(g(\mathbb{M}))=\mathbb{M}$이다.
+우선 $k\circ g=\id_{\Ext(\mathbb{L}/\mathbb{K})}$를 보이자. 임의의 $\mathbb{M}\in\Ext(\mathbb{L}/\mathbb{K})$에 대하여 [보조정리 7](#lem7)에 의해 $\mathbb{L}/\mathbb{M}$은 Galois extension이고, 따라서 [§갈루아 확장, ⁋정리 8](/ko/math/field_theory/galois_extension#thm8)의 첫째 조건에 의하여 $\Gal(\mathbb{L}/\mathbb{M})$-invariant element들은 모두 $\mathbb{M}$의 원소이다. 거꾸로 $\mathbb{M}$의 원소들이 $\Gal(\mathbb{L}/\mathbb{M})$에 의해 고정되는 것은 자명하므로 $k(g(\mathbb{M}))=\mathbb{M}$이다.
 
 이제 $g\circ k=\id_{\SubGrp_{\cl}(\Gamma)}$를 보여야 한다. Closed subgroup $G\in\SubGrp_{\cl}(\Gamma)$에 대하여 $\mathbb{M}=k(G)$로 두고 $G'=g(\mathbb{M})=\Gal(\mathbb{L}/\mathbb{M})$이라 하자. $G$의 원소들은 정의에 의해 $\mathbb{M}$을 고정하므로 $G\subseteq G'$이다. 우리의 주장은 $G$가 $G'$에서 dense하다는 것이다.
 
@@ -85,46 +183,17 @@ $\mathbb{N}/\mathbb{M}$이 quasi-Galois이므로, [§갈루아 확장, ⁋명제
 
 $$\rho:\Gal(\mathbb{L}/\mathbb{M}) \rightarrow \Gal(\mathbb{N}/\mathbb{M});\qquad \tau\mapsto \tau\vert_\mathbb{N}$$
 
-이 잘 정의된다. $H=\rho(G)$라 하면 $H$는 $\mathbb{N}$의 automorphism들로 이루어진 유한군이다. 이제 $\mathbb{N}^H$를 계산하면, $x\in \mathbb{N}$이 $H$의 모든 원소에 의해 고정되는 것은 $G$의 모든 원소에 의해 고정되는 것과 같고, 이는 곧 $x\in k(G)=\mathbb{M}$인 것과 같다. 즉 $\mathbb{N}^H=\mathbb{M}$이고, [보조정리 3](#lem3)에 의하여
+이 잘 정의된다. $H=\rho(G)$라 하면 $H$는 $\mathbb{N}$의 automorphism들로 이루어진 유한군이다. 이제 $\mathbb{N}^H$를 계산하면, $x\in \mathbb{N}$이 $H$의 모든 원소에 의해 고정되는 것은 $G$의 모든 원소에 의해 고정되는 것과 같고, 이는 곧 $x\in k(G)=\mathbb{M}$인 것과 같다. 즉 $\mathbb{N}^H=\mathbb{M}$이고, [보조정리 8](#lem8)에 의하여
 
 $$[\mathbb{N}:\mathbb{M}]\leq \card H$$
 
-이다. 한편 $\mathbb{N}/\mathbb{M}$은 finite degree Galois extension이므로 $\card\Gal(\mathbb{N}/\mathbb{M})=[\mathbb{N}:\mathbb{M}]$이다. 이는 $\mathbb{N}/\mathbb{M}$이 separable이므로 $\mathbb{M}$-homomorphism $\mathbb{N} \rightarrow \overline{\mathbb{M}}$의 개수가 $[\mathbb{N}:\mathbb{M}]_s=[\mathbb{N}:\mathbb{M}]$이고 ([§에탈대수, ⁋정의 10](/ko/math/field_theory/etale_algebras#def10), [§분리가능차수, ⁋명제 9](/ko/math/field_theory/separable_degree#prop9)), $\mathbb{N}/\mathbb{M}$이 quasi-Galois이므로 이들 homomorphism이 모두 $\mathbb{N}$의 $\mathbb{M}$-automorphism이 되기 때문이다. ([§갈루아 확장, ⁋명제 5](/ko/math/field_theory/galois_extension#prop5)) 따라서
+이다. 한편 $\mathbb{N}/\mathbb{M}$은 finite degree Galois extension이므로 [명제 2](#prop2)에 의하여 $\card\Gal(\mathbb{N}/\mathbb{M})=[\mathbb{N}:\mathbb{M}]$이다. 따라서
 
 $$\card H\leq \card \Gal(\mathbb{N}/\mathbb{M})=[\mathbb{N}:\mathbb{M}]\leq \card H$$
 
 이고, $H\subseteq \Gal(\mathbb{N}/\mathbb{M})$이 같은 크기의 유한집합들이므로 $H=\Gal(\mathbb{N}/\mathbb{M})$이다.
 
 특히 $\sigma\vert_\mathbb{N}\in \Gal(\mathbb{N}/\mathbb{M})=\rho(G)$이므로, $\tau\vert_\mathbb{N}=\sigma\vert_\mathbb{N}$이도록 하는 $\tau\in G$가 존재한다. 그럼 $\mathbb{M}_0\subseteq \mathbb{N}$이므로 $\tau\in U_{\mathbb{M}_0}(\sigma)$이고, 즉 $\sigma$의 임의의 기본근방이 $G$와 만난다. 따라서 $G$는 $G'$에서 dense하고, $G$가 closed라는 가정으로부터 $G=G'$이다. 
-:::
-
-특별히 $\mathbb{L}/\mathbb{K}$가 finite degree Galois extension이라면 [§갈루아 군의 성질들, ⁋예시 1](/ko/math/field_theory/properties_of_galois_extensions#ex1)에서 살펴본 것과 같이 $\Gal(\mathbb{L}/\mathbb{K})$는 discrete space이고, 따라서 임의의 subgroup이 closed이다. 즉 이 경우 [정리 1](#thm1)은 subextension들과 subgroup들 사이의 대응이라는 고전적인 Galois 이론의 기본정리가 된다. 또, [정리 1](#thm1)의 증명 과정에서 finite degree Galois extension $\mathbb{N}/\mathbb{M}$에 대하여 $\card\Gal(\mathbb{N}/\mathbb{M})=[\mathbb{N}:\mathbb{M}]$이 성립한다는 사실도 함께 얻었다.
-
-기본정리의 두 번째 부분은 이 대응 하에서 normal subgroup이 무엇에 대응되는지를 알려준다.
-
-::: 따름정리 4
-[정리 1](#thm1)의 상황에서, closed subgroup $H\in\SubGrp_{\cl}(\Gamma)$가 $\Gal(\mathbb{L}/\mathbb{K})$의 normal subgroup인 것과 $\mathbb{M}=k(H)$가 $\mathbb{K}$의 Galois extension인 것이 동치이다. 이 경우 restriction은 group isomorphism
-
-$$\Gal(\mathbb{L}/\mathbb{K})/H\cong \Gal(\mathbb{M}/\mathbb{K})$$
-
-을 유도한다.
-:::
-::: 증명
-우선 간단한 계산으로 시작하자. 임의의 closed subgroup $H$와 $\sigma\in\Gal(\mathbb{L}/\mathbb{K})$에 대하여, $x\in \mathbb{L}$이 $\sigma H\sigma^{-1}$의 모든 원소에 의해 고정되는 것은 $\sigma^{-1}(x)$가 $H$의 모든 원소에 의해 고정되는 것과 같으므로
-
-$$\mathbb{L}^{\sigma H\sigma^{-1}}=\sigma(\mathbb{L}^H)=\sigma(\mathbb{M})\tag{$\ast$}$$
-
-이 성립한다.
-
-이제 $H$가 normal subgroup이라 가정하자. 그럼 식 $(\ast)$에 의해 임의의 $\sigma\in\Gal(\mathbb{L}/\mathbb{K})$에 대해 $\sigma(\mathbb{M})=\mathbb{M}$이고, 따라서 restriction $\rho:\Gal(\mathbb{L}/\mathbb{K}) \rightarrow \Aut_\mathbb{K}(\mathbb{M})$이 잘 정의된다. $\mathbb{M}$의 원소 $x$가 $\rho$의 image의 모든 원소에 의해 고정된다면 $x$는 $\Gal(\mathbb{L}/\mathbb{K})$ 전체에 의해 고정되므로, $\mathbb{L}/\mathbb{K}$가 Galois라는 것으로부터 $x\in \mathbb{K}$이다. 특히 $\mathbb{M}$의 모든 $\mathbb{K}$-automorphism들의 group의 invariant들은 $\mathbb{K}$에 포함되고, 따라서 [§갈루아 확장, ⁋정리 8](/ko/math/field_theory/galois_extension#thm8)의 첫째 조건에 의하여 $\mathbb{M}/\mathbb{K}$는 Galois extension이다.
-
-거꾸로 $\mathbb{M}/\mathbb{K}$가 Galois extension이라 하자. 그럼 특히 $\mathbb{M}/\mathbb{K}$는 quasi-Galois이므로, [§갈루아 확장, ⁋명제 5](/ko/math/field_theory/galois_extension#prop5)에 의하여 임의의 $\sigma\in \Gal(\mathbb{L}/\mathbb{K})$가 $\sigma(\mathbb{M})=\mathbb{M}$을 만족한다. 그럼 식 $(\ast)$과 [정리 1](#thm1)의 대응에 의하여
-
-$$\sigma H\sigma^{-1}=g\bigl(\sigma(\mathbb{M})\bigr)=g(\mathbb{M})=H$$
-
-이므로 $H$는 normal subgroup이다. 여기서 $\sigma H\sigma^{-1}$이 closed인 것은 conjugation이 topological group의 homeomorphism이기 때문이다.
-
-마지막으로 isomorphism을 확인하자. $\mathbb{M}/\mathbb{K}$가 Galois일 때, 위에서 정의한 restriction은 group homomorphism $\rho:\Gal(\mathbb{L}/\mathbb{K}) \rightarrow \Gal(\mathbb{M}/\mathbb{K})$이고, 그 kernel은 $\mathbb{M}$을 고정하는 원소들의 모임, 즉 $\Gal(\mathbb{L}/\mathbb{M})=g(k(H))=H$이다. 한편 $\rho$가 surjective인 것은 [§갈루아 확장, ⁋명제 13](/ko/math/field_theory/galois_extension#prop13)과 같다. 임의의 $\tau\in\Gal(\mathbb{M}/\mathbb{K})$는 [§갈루아 확장, ⁋명제 1](/ko/math/field_theory/galois_extension#prop1)에 의해 $\overline{\mathbb{K}}$의 $\mathbb{K}$-automorphism으로 확장되고, $\mathbb{L}/\mathbb{K}$가 quasi-Galois이므로 이 extension을 $\mathbb{L}$로 제한하면 $\tau$를 확장하는 $\Gal(\mathbb{L}/\mathbb{K})$의 원소를 얻기 때문이다. 따라서 first isomorphism theorem에 의해 $\Gal(\mathbb{L}/\mathbb{K})/H\cong\Gal(\mathbb{M}/\mathbb{K})$이다.
 :::
 
 ---
