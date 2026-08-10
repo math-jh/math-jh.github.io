@@ -14459,6 +14459,10 @@ R:
   see:
   - label: Radical
     id: radical
+  - label: Nilradical
+    id: nilradical
+  - label: Jacobson radical
+    id: jacobson_radical
 - id: radical_tower
   en: radical tower
   ko: 거듭제곱근 탑
@@ -14483,6 +14487,12 @@ R:
   - label: 멱급수
     lang: ko
     id: power_series
+  - label: 비판정
+    lang: ko
+    id: ratio_test
+  - label: 근판정
+    lang: ko
+    id: root_test
 - id: ramification
   en: ramification
   ko: 분기
@@ -14639,6 +14649,8 @@ R:
   see:
   - label: Coxeter group
     id: coxeter_group
+  - label: Root system
+    id: root_system
 - id: reduced_homology
   en: reduced homology
   ko: 축소 호몰로지
@@ -14646,6 +14658,9 @@ R:
   defs:
   - label: '[대수적 위상수학] §호몰로지의 계산'
     url: /ko/math/algebraic_topology/computation_of_homology
+  see:
+  - label: Homology group
+    id: homology_group
 - id: reduced_residue_class
   en: reduced residue class
   ko: 기약잉여류
@@ -14653,6 +14668,10 @@ R:
   defs:
   - label: '[정수론] §원시근'
     url: /ko/math/number_theory/primitive_roots
+  see:
+  - label: 기약잉여계
+    lang: ko
+    id: reduced_residue_system
 - id: reduced_residue_system
   en: reduced residue system
   ko: 기약잉여계
@@ -14660,6 +14679,9 @@ R:
   defs:
   - label: '[정수론] §오일러 정리와 phi 함수'
     url: /ko/math/number_theory/euler_theorem
+  see:
+  - label: Reduced residue class
+    id: reduced_residue_class
 - id: reduced_row_echelon_form
   en: reduced row echelon form
   ko: 기약행사다리꼴
@@ -14667,6 +14689,10 @@ R:
   defs:
   - label: '[선형대수학] §가우스 소거법'
     url: /ko/math/linear_algebra/Gaussian_elimination
+  see:
+  - label: 행사다리꼴
+    lang: ko
+    id: row_echelon_form
 - id: reduced_row_echelon_matrix
   en: reduced row échelon matrix
   ko: 기약행사다리꼴행렬
@@ -14677,6 +14703,9 @@ R:
   see:
   - label: Row échelon matrix
     id: row_echelon_matrix
+  - label: 행사다리꼴
+    lang: ko
+    id: row_echelon_form
 - id: reduced_row_échelon_matrix_rref
   en: reduced row échelon matrix, rref
   ko: 기약행사다리꼴행렬
@@ -15525,6 +15554,10 @@ S:
   see:
   - label: Affine scheme
     id: affine_scheme
+  - label: Scheme-theoretic image
+    id: scheme-theoretic_image
+  - label: Algebraic variety
+    id: algebraic_variety
 - id: scheme-theoretic_image
   en: scheme-theoretic image
   ko: ''
@@ -15532,6 +15565,11 @@ S:
   defs:
   - label: '[스킴] §닫힌 부분스킴'
     url: /ko/math/scheme_theory/closed_subschemes
+  see:
+  - label: Scheme
+    id: scheme
+  - label: Morphism
+    id: morphism
 - id: schubert_cell
   en: Schubert cell
   ko: 슈베르트 셀
@@ -15554,6 +15592,10 @@ S:
     id: schur_polynomial
   - label: Schubert cell
     id: schubert_cell
+  - label: Grassmannian
+    id: grassmannian
+  - label: Flag variety
+    id: flag_variety
 - id: schur_decomposition
   en: Schur decomposition
   ko: Schur 분해
@@ -15561,6 +15603,9 @@ S:
   defs:
   - label: '[선형대수학] §복소 스펙트럼 정리'
     url: /ko/math/linear_algebra/complex_spectral_theorem
+  see:
+  - label: Schur polynomial
+    id: schur_polynomial
 - id: schur_polynomial
   en: Schur polynomial
   ko: 슈어 다항식
@@ -15575,6 +15620,10 @@ S:
   defs:
   - label: '[복소해석학] §등각사상과 Möbius 변환'
     url: /ko/math/complex_analysis/conformal_maps
+  see:
+  - label: 최대절댓값 원리
+    lang: ko
+    id: maximum_modulus_principle
 - id: second_countable
   en: second countable
   ko: 제2 가산
@@ -15582,6 +15631,11 @@ S:
   defs:
   - label: '[위상수학] §옹골성과 필터의 수렴'
     url: /ko/math/topology/filter_convergence
+  see:
+  - label: Countable
+    id: countable
+  - label: Lindelöf
+    id: lindelöf
 - id: second_covariant_derivative
   en: second covariant derivative
   ko: 이계 공변미분
@@ -17300,6 +17354,11 @@ T:
     id: t_1_-space
   - label: $T_2$-space
     id: t_2_-space
+  - label: Separation axiom
+    id: separation_axiom
+  - label: 위상공간
+    lang: ko
+    id: topological_space
 - id: t_1_-space
   en: $T_1$-space
   ko: $T_1$-공간
@@ -17312,6 +17371,11 @@ T:
     id: t_0_-space
   - label: $T_2$-space
     id: t_2_-space
+  - label: Separation axiom
+    id: separation_axiom
+  - label: 위상공간
+    lang: ko
+    id: topological_space
 - id: t_2_-space
   en: $T_2$-space
   ko: $T_2$-공간
@@ -17328,6 +17392,8 @@ T:
     id: hausdorff_space
   - label: $T_{2\frac{1}{2}}$-space
     id: t_2_frac_1_2_-space
+  - label: Separation axiom
+    id: separation_axiom
 - id: t_2_frac_1_2_-space
   en: $T_{2\frac{1}{2}}$-space
   ko: $T_{2\frac{1}{2}}$-공간
@@ -17354,6 +17420,10 @@ T:
     id: t_2_-space
   - label: Normal space
     id: normal_space
+  - label: Regular space
+    id: regular_space
+  - label: Separation axiom
+    id: separation_axiom
 - id: t_4_-space
   en: $T_4$-space
   ko: $T_4$-공간
@@ -17364,6 +17434,10 @@ T:
   see:
   - label: Normal space
     id: normal_space
+  - label: Completely normal space
+    id: completely_normal_space
+  - label: Separation axiom
+    id: separation_axiom
 - id: t-structure
   en: t-structure
   ko: t-구조
@@ -17388,6 +17462,8 @@ T:
     id: tangent_space
   - label: Tangent vector
     id: tangent_vector
+  - label: Vector bundle
+    id: vector_bundle
 - id: tangent_complex
   en: tangent complex
   ko: 접복합체
