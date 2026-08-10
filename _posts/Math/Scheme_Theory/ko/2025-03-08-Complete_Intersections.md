@@ -11,9 +11,6 @@ sidebar:
 date: 2025-03-08
 weight: 20
 
-published: false
-
-drift_needed: true
 
 ---
 
@@ -25,7 +22,7 @@ $$s_2\vert_{Z(s_1)}=\iota_1^\sharp(X)(s_2)\in\bigl((\iota_1)_\ast \mathcal{O}_{Z
 
 을 통해 $Z(s_1)$에서 $s_2\vert_{Z(s_1)}$의 vanishing scheme을 찾아나가는 것을 반복하여 얻어질 것이며, 물론 이를 위해서는 이 과정이 $s_1, \ldots, s_k$의 순서에 무관하게 같은 scheme을 주어야 할 것이다. 
 
-$k=1$인 경우, 즉 하나의 방정식이 잘라내는 경우는 [§인자와 선형계](/ko/math/scheme_theory/divisors_and_linear_systems)에서 effective Cartier divisor라는 이름으로 이미 다루었다. 이 글에서 우리는 이를 여러 개의 방정식으로 확장하여 local complete intersection을 정의하고, 그 codimension이 자르는 방정식의 개수와 정확히 일치함을 본다. 이어 [\[가환대수학\] §코쥴 복합체](/ko/math/commutative_algebra/koszul_complex)의 결과를 associated sheaf로 옮겨 structure sheaf의 국소적인 자유 분해를 얻고, 이로부터 conormal sheaf $\mathcal{I}/\mathcal{I}^2$이 rank $k$의 locally free sheaf라는 local complete intersection 고유의 성질을 이끌어낸다. 마지막으로 projective space 안에서 대역적으로 잘리는 경우에는 이 분해가 하나의 대역적인 분해로 붙으므로, [§스킴의 층 코호몰로지](/ko/math/scheme_theory/sheaf_cohomology_of_schemes)의 Euler characteristic을 계산하여 Hilbert polynomial과 degree를 읽어낼 수 있다.
+$k=1$인 경우, 즉 하나의 방정식이 잘라내는 경우는 [§인자와 선형계](/ko/math/scheme_theory/divisors_and_linear_systems)에서 effective Cartier divisor라는 이름으로 이미 다루었다. 이 글에서 우리는 이를 여러 개의 방정식으로 확장하여 local complete intersection을 정의하고, 그 codimension이 자르는 방정식의 개수와 정확히 일치함을 본다. 이어 [\[가환대수학\] §코쥴 복합체](/ko/math/commutative_algebra/koszul_complex)의 결과를 associated sheaf로 옮겨 structure sheaf의 local free resolution을 얻고, 이로부터 conormal sheaf $\mathcal{I}/\mathcal{I}^2$이 rank $k$의 locally free sheaf라는 local complete intersection 고유의 성질을 이끌어낸다. 마지막으로 projective space 안에서 대역적으로 잘리는 경우에는 이 분해가 하나의 대역적인 분해로 붙으므로, [§스킴의 층 코호몰로지](/ko/math/scheme_theory/sheaf_cohomology_of_schemes)의 Euler characteristic을 계산하여 Hilbert polynomial과 degree를 읽어낼 수 있다.
 
 ## 여차원과 완전교차
 
@@ -47,7 +44,7 @@ $$Z(\y,\x\z)=Z(\y)\cap (Z(\x)\cup Z(\z))=Z(\x,\y)\cup Z(\y,\z)$$
 Locally Noetherian scheme $X$의 closed embedding $\iota:Z\hookrightarrow X$가 codimension $k$의 *local complete intersection<sub>국소 완전교차</sub>*, 혹은 codimension $k$의 *regular embedding*이라는 것은 $X$의 affine open cover $\{U_i=\Spec A_i\}$가 존재하여, $Z\cap U_i\neq\emptyset$일 때마다 $Z\cap U_i=Z(s_{i,1},\ldots, s_{i,k})$이고 $(s_{i,1},\ldots, s_{i,k})$가 $A_i$-regular sequence인 것이다.
 :::
 
-일반적으로 regular sequence의 조건은 원소를 나열하는 순서에 의존했던 것을 기억하자. ([\[가환대수학\] §정칙국소환, ⁋정의 2](/ko/math/commutative_algebra/regular_local_rings#def2)) 그러나 이 의존성은 [정의 1](#def1)에는 남지 않는데, $\mathfrak{p}$가 $(s_{i,1},\ldots, s_{i,k})$를 포함하는 $A_i$의 prime ideal이라면 localization이 exact이므로 $(s_{i,1},\ldots, s_{i,k})$는 $(A_i)_\mathfrak{p}$-regular sequence이고, Noetherian local ring에서는 maximal ideal에 속하는 regular sequence를 임의로 재배열하여도 다시 regular sequence가 되기 때문이다. ([\[가환대수학\] §코쥴 복합체, ⁋따름정리 10](/ko/math/commutative_algebra/koszul_complex#cor10)) 
+일반적으로 regular sequence의 조건은 원소를 나열하는 순서에 의존했던 것을 기억하자. ([\[가환대수학\] §정칙국소환, ⁋정의 2](/ko/math/commutative_algebra/regular_local_rings#def2)) 그러나 이 의존성은 [정의 1](#def1)에는 남지 않는데, $\mathfrak{p}$가 $(s_{i,1},\ldots, s_{i,k})$를 포함하는 $A_i$의 prime ideal이라면 localization이 exact이므로 $(s_{i,1},\ldots, s_{i,k})$는 $(A_i)_\mathfrak{p}$-regular sequence이고, Noetherian local ring에서는 maximal ideal에 속하는 regular sequence를 임의로 재배열하여도 다시 regular sequence가 되기 때문이다. ([\[가환대수학\] §코쥴 복합체, ⁋따름정리 10](/ko/math/commutative_algebra/koszul_complex#cor10)) 재배열한 sequence가 $A_i$ 전체에서 다시 regular sequence가 되지는 않을 수 있지만, 각 단계에 나타나는 module의 associated prime이 유한개이므로 $\mathfrak{p}$에 담기지 않는 것들을 한꺼번에 피하는 $f\notin \mathfrak{p}$를 택하면 $(A_i)_f$ 위에서는 그러하고, [정의 1](#def1)은 cover를 고를 자유를 주므로 이렇게 세분한 cover가 조건을 만족한다. 
 
 이제 이를 도입하기 전 우리의 직관을 정당화하자. 한쪽 방향은 조건 없이 성립하는데, $k$개의 원소가 생성하는 ideal을 포함하는 minimal prime의 codimension은 언제나 $k$ 이하이기 때문이다. ([\[가환대수학\] §차원, ⁋정리 7](/ko/math/commutative_algebra/Krull_dimension#thm7)) 따라서 실제로 보여야 할 것은 codimension이 $k$보다 작아지지 않는다는 것이다.
 
@@ -224,15 +221,29 @@ $k=1$인 경우 [따름정리 7](#cor7)은 degree $e$의 hypersurface가 $\deg X
 
 	이다. 곧 $\dim X=1$이고 $\deg X=1!\cdot 4=4$이며, arithmetic genus는 $p_a(X)=(-1)^1\bigl(P_{\mathcal{O}_X}(0)-1\bigr)=1$이다. ([§스킴의 층 코호몰로지, ⁋정의 17](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#def17)) 
 
-2. $\mathbb{P}^3_\mathbb{K}=\Proj \mathbb{K}[\x_0,\x_1,\x_2,\x_3]$의 twisted cubic $C$를 보자. 이는 $\mathbb{P}^1=\Proj \mathbb{K}[\y_0,\y_1]$ 위의 invertible sheaf $\mathcal{O}_{\mathbb{P}^1}(3)$과 그 globally generating section $\y_0^3, \y_0^2\y_1, \y_0\y_1^2, \y_1^3$이 정의하는 morphism $\varphi:\mathbb{P}^1 \rightarrow \mathbb{P}^3_\mathbb{K}$으로 주어진 것이다. Standard affine chart $D_+(\x_j)$ 위에서 $\varphi$에 대응하는 ring homomorphism은 $\x_i/\x_j\mapsto \y_0^{3-i}\y_1^i/\y_0^{3-j}\y_1^j$이므로, 이것이 surjective인 것과 그 kernel이 두 원소의 regular sequence로 생성되는 것을 함께 확인하면 $\varphi$가 closed embedding이라는 것과 $C$가 codimension $2$의 local complete intersection이라는 것을 한꺼번에 얻는다. 표기의 편의를 위해 $\t=\y_1/\y_0$으로 적자.
+2. $\mathbb{P}^3_\mathbb{K}=\Proj \mathbb{K}[\x_0,\x_1,\x_2,\x_3]$의 twisted cubic $C$를 보자. 이는 $\mathbb{P}^1=\Proj \mathbb{K}[\y_0,\y_1]$ 위의 invertible sheaf $\mathcal{O}_{\mathbb{P}^1}(3)$과 그 globally generating section $\y_0^3, \y_0^2\y_1, \y_0\y_1^2, \y_1^3$이 정의하는 morphism $\varphi:\mathbb{P}^1 \rightarrow \mathbb{P}^3_\mathbb{K}$으로 주어진 것이다. Standard affine chart $D_+(\x_j)$ 위에서 $\varphi$에 대응하는 ring homomorphism은 $\x_i/\x_j\mapsto \y_0^{3-i}\y_1^i/\y_0^{3-j}\y_1^j$이며, 우리는 우선 $C$가 closed embedding이라는 것을 보이기 위해 우선 이 ring homomorphism이 surjective임을 보인다. 표기의 편의를 위해 $\t=\y_1/\y_0$으로 적자.
+  
+	우선 $\varphi^{-1}(D_+(\x_0))=D_+(\y_0)=\Spec\mathbb{K}[\t]$이고 $D_+(\x_0)$의 좌표 $\s_1=\x_1/\x_0$, $\s_2=\x_2/\x_0$, $\s_3=\x_3/\x_0$은 각각 $\t$, $\t^2$, $\t^3$으로 가므로, 대응하는 ring homomorphism은 surjective이고 이렇게 주어지는 $\s_1\mapsto \t$이 정의하는 isomorphism
+	
+	$$\mathbb{K}[\s_1,\s_2,\s_3]/(\s_2-\s_1^2, \s_3-\s_1^3)\cong\mathbb{K}[\s_1]\cong \mathbb{K}[\t]$$
+	
+	으로부터 그 kernel이 정확히 $(\s_2-\s_1^2, \s_3-\s_1^3)$이다. 마찬가지로 
+	
+	$$\varphi^{-1}(D_+(\x_1))=D_+(\y_0\y_1)=\Spec\mathbb{K}[\t,\t^{-1}]$$
+	
+	위에서는 $D_+(\x_1)$의 좌표 $\s_1'=\x_0/\x_1$, $\s_2'=\x_2/\x_1$, $\s_3'=\x_3/\x_1$가 각각 $\t^{-1}$, $\t$, $\t^2$으로 가 surjective이며, $\s_2'\mapsto \t$이 정의하는 isomorphism
+	
+	$$\mathbb{K}[\s_1',\s_2',\s_3']/(\s_3'-{\s_2'}^2, \s_1'\s_2'-1)\cong\mathbb{K}[\s_2',{\s_2'}^{-1}]\cong \mathbb{K}[\t,\t^{-1}]$$
+	
+	으로부터 이 ring homomorphism의 kernel이 $(\s_3'-{\s_2'}^2, \s_1'\s_2'-1)$임을 안다. 남은 두 chart에 대해서는 $\x_i'=\x_{3-i}$와 $\y_0'=\y_1$, $\y_1'=\y_0$, $\t'=\t^{-1}$로 이름을 바꾸어 적으면 $\varphi$가 $\x_i'\mapsto {\y_0'}^{3-i}{\y_1'}^i$라는 같은 꼴로 주어지고 $D_+(\x_0')=D_+(\x_3)$, $D_+(\x_1')=D_+(\x_2)$이므로, 위의 두 계산이 그대로 옮겨진다. 이제 standard affine chart들은 $\mathbb{P}^3_\mathbb{K}$의 affine open cover를 이루고 [§닫힌 부분스킴, ⁋명제 3](/ko/math/scheme_theory/closed_subschemes#prop3)의 증명은 이 조건을 하나의 affine open cover 위에서 확인하면 충분함을 보였으므로, $\varphi$는 closed embedding이고 따라서 $C\cong\mathbb{P}^1$이며 $\mathcal{O}_C(1)=\varphi^\ast\mathcal{O}(1)\cong \mathcal{O}_{\mathbb{P}^1}(3)$이다.
 
-	$\varphi^{-1}(D_+(\x_0))=D_+(\y_0)=\Spec\mathbb{K}[\t]$이고 $D_+(\x_0)$의 좌표 $\s_1=\x_1/\x_0$, $\s_2=\x_2/\x_0$, $\s_3=\x_3/\x_0$은 각각 $\t$, $\t^2$, $\t^3$으로 가므로, 대응하는 ring homomorphism은 surjective이고 $\mathbb{K}[\s_1,\s_2,\s_3]/(\s_2-\s_1^2, \s_3-\s_1^3)\cong\mathbb{K}[\s_1]$가 $\s_1\mapsto \t$로 $\mathbb{K}[\t]$와 isomorphic하다는 데서 그 kernel은 정확히 $(\s_2-\s_1^2, \s_3-\s_1^3)$이다. 마찬가지로 $\varphi^{-1}(D_+(\x_1))=D_+(\y_0\y_1)=\Spec\mathbb{K}[\t,\t^{-1}]$이고 $D_+(\x_1)$의 좌표 $\s_1'=\x_0/\x_1$, $\s_2'=\x_2/\x_1$, $\s_3'=\x_3/\x_1$은 각각 $\t^{-1}$, $\t$, $\t^2$으로 가 surjective이며, $\mathbb{K}[\s_1',\s_2',\s_3']/(\s_3'-{\s_2'}^2, \s_1'\s_2'-1)\cong\mathbb{K}[\s_2',{\s_2'}^{-1}]$이 $\s_2'\mapsto \t$로 $\mathbb{K}[\t,\t^{-1}]$와 isomorphic하므로 kernel은 $(\s_3'-{\s_2'}^2, \s_1'\s_2'-1)$이다. 두 경우 모두 ambient가 integral domain이고 첫 generator로 나눈 quotient $\mathbb{K}[\s_1,\s_3]$와 $\mathbb{K}[\s_1',\s_2']$ 또한 integral domain이므로, 각 kernel의 두 generator는 regular sequence를 이룬다. 남은 두 chart에 대해서는 $\x_i\mapsto \x_{3-i}$가 정의하는 $\mathbb{P}^3_\mathbb{K}$의 automorphism이 $\y_0\leftrightarrow \y_1$과 어울려 $C$를 보존하면서 $D_+(\x_0)$과 $D_+(\x_3)$을, $D_+(\x_1)$과 $D_+(\x_2)$를 맞바꾸므로 위의 두 계산이 그대로 옮겨진다.
-
-	표준 chart들은 $\mathbb{P}^3_\mathbb{K}$의 affine open cover를 이루고 [§닫힌 부분스킴, ⁋명제 3](/ko/math/scheme_theory/closed_subschemes#prop3)의 증명은 이 조건을 하나의 affine open cover 위에서 확인하면 충분함을 보였으므로, $\varphi$는 closed embedding이고 따라서 $C\cong\mathbb{P}^1$이며 $\mathcal{O}_C(1)=\varphi^\ast\mathcal{O}(1)\cong \mathcal{O}_{\mathbb{P}^1}(3)$이다. 또 각 chart 위에서 $C$가 두 원소의 regular sequence로 잘리므로 $C$는 codimension $2$의 local complete intersection이다. 그럼 [§스킴의 층 코호몰로지, ⁋정리 16](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#thm16)와 [§스킴의 층 코호몰로지, ⁋따름정리 15](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#cor15)에 의하여
+	뿐만 아니라, 위의 계산에서 두 경우 모두 ambient가 integral domain이고 첫 generator로 나눈 quotient $\mathbb{K}[\s_1,\s_3]$와 $\mathbb{K}[\s_1',\s_2']$ 또한 integral domain이므로, 각 kernel의 두 generator는 regular sequence를 이룬다. 즉, $C$는 codimension $2$의 local complete intersection이며, 이로부터 
 
 	$$P_{\mathcal{O}_C}(t)=\rchi\bigl(\mathbb{P}^1,\mathcal{O}_{\mathbb{P}^1}(3t)\bigr)=\binom{1+3t}{1}=3t+1$$
 
-	이므로 $\dim C=1$이고 $\deg C=1!\cdot 3=3$이다. 만일 $C$가 $S_\bullet$-regular sequence를 이루는 두 homogeneous polynomial $f_1,f_2$에 대하여 $C=V_+(f_1,f_2)$의 꼴이라면, 상수는 $0$이든 아니든 regular sequence의 항이 될 수 없으므로 $d_1,d_2>0$이고 [따름정리 7](#cor7)에 의하여 $d_1d_2=3$이다. 그럼 둘 가운데 하나는 degree $1$이고, 곧 $C$가 hyperplane $V_+(\ell)$에 담긴다. 그런데 $\ell=\sum_ia_i\x_i$를 $C\cong\mathbb{P}^1$로 당기면 $\sum_ia_i\y_0^{3-i}\y_1^i$이고 $\y_0^3,\y_0^2\y_1,\y_0\y_1^2,\y_1^3$은 $\Gamma(\mathbb{P}^1,\mathcal{O}_{\mathbb{P}^1}(3))$에서 일차독립이므로 모든 $a_i$가 $0$이어야 한다. 따라서 그러한 $\ell$은 없고, $C$는 codimension $2$의 local complete intersection임에도 두 homogeneous polynomial의 vanishing으로 대역적으로 잘리지는 않는다.
+	이므로 $\dim C=1$이고 $\deg C=1!\cdot 3=3$이다. 
+	
+	우리 주장은 $C$가 $S_\bullet$-regular sequence를 이루는 두 homogeneous polynomial $f_1,f_2$에 대하여 $C=V_+(f_1,f_2)$의 꼴이 아니라는 것이다. 만일 $C$가 이러한 꼴이라면, [따름정리 7](#cor7)에 의하여 $d_1d_2=3$이다. 그럼 둘 가운데 하나는 degree $1$이고, 이는 $C$가 hyperplane $V_+(H)$에 담긴다는 뜻이다. 그런데 $H=\sum_ia_i\x_i$를 $C\cong\mathbb{P}^1$로 당기면 $\sum_ia_i\y_0^{3-i}\y_1^i$이고, 이 때 $\y_0^3,\y_0^2\y_1,\y_0\y_1^2,\y_1^3$은 $\Gamma(\mathbb{P}^1,\mathcal{O}_{\mathbb{P}^1}(3))$에서 일차독립이므로 모든 $a_i$가 $0$이어야 한다. 따라서 그러한 $H$는 존재할 수 없다. 한편 $C=V_+(f_1,f_2)$이기만 하면 위의 regular sequence 가정은 저절로 따라오는데, $\dim C=1$이라 $f_1,f_2$는 모두 positive degree를 갖고, 공통인수가 상수가 아니라면 그것이 정의하는 hypersurface가 $C$에 담겨 차원이 맞지 않으므로 둘은 서로소이며, $S_\bullet$이 UFD라 $f_1\mid f_2g$에서 $f_1\mid g$가 따라나와 $f_2$가 $S_\bullet/(f_1)$의 non-zerodivisor이기 때문이다. 즉, $C$는 codimension $2$의 local complete intersection임에도 두 global하게는 homogeneous polynomial의 vanishing으로 잘리지는 않는 예시이다.
 :::
 
 ---
