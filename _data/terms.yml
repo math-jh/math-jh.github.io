@@ -18004,6 +18004,9 @@ V:
   defs:
   - label: '[스킴] §닫힌 부분스킴'
     url: /ko/math/scheme_theory/closed_subschemes
+  see:
+  - label: Scheme
+    id: scheme
 - id: variation
   en: variation
   ko: 변분
@@ -18011,6 +18014,10 @@ V:
   defs:
   - label: '[리만기하학] §측지선'
     url: /ko/math/riemannian_geometry/geodesics
+  see:
+  - label: 변분장
+    lang: ko
+    id: variation_field
 - id: variation_field
   en: variation field
   ko: 변분장
@@ -18018,6 +18025,10 @@ V:
   defs:
   - label: '[리만기하학] §측지선'
     url: /ko/math/riemannian_geometry/geodesics
+  see:
+  - label: 변분
+    lang: ko
+    id: variation
 - id: variety
   en: variety
   ko: 다양체
@@ -18062,6 +18073,9 @@ V:
     url: /ko/math/calculus/vector_fields
   - label: '[미분다양체] §벡터장'
     url: /ko/math/manifolds/vector_fields
+  see:
+  - label: Tangent bundle
+    id: tangent_bundle
 - id: vector_function
   en: vector function
   ko: 벡터함수
@@ -18069,6 +18083,10 @@ V:
   defs:
   - label: '[미적분학] §곡선과 벡터함수'
     url: /ko/math/calculus/vector_functions
+  see:
+  - label: 벡터값 함수
+    lang: ko
+    id: vector-valued_function
 - id: vector_space
   en: vector space
   ko: 벡터공간
@@ -18086,6 +18104,10 @@ V:
   defs:
   - label: '[선형대수학] §벡터공간'
     url: /ko/math/linear_algebra/vector_spaces
+  see:
+  - label: 벡터공간
+    lang: ko
+    id: vector_space
 - id: vector-valued_function
   en: vector-valued function
   ko: 벡터값 함수
@@ -18093,6 +18115,10 @@ V:
   defs:
   - label: '[미적분학] §곡선과 벡터함수'
     url: /ko/math/calculus/vector_functions
+  see:
+  - label: 벡터함수
+    lang: ko
+    id: vector_function
 - id: velocity
   en: velocity
   ko: 속도
@@ -18100,6 +18126,10 @@ V:
   defs:
   - label: '[미적분학] §곡선과 벡터함수'
     url: /ko/math/calculus/vector_functions
+  see:
+  - label: 속도벡터
+    lang: ko
+    id: velocity_vector
 - id: velocity_vector
   en: velocity vector
   ko: 속도벡터
@@ -18107,6 +18137,12 @@ V:
   defs:
   - label: '[미분다양체] §미분사상의 예시들'
     url: /ko/math/manifolds/examples_of_differentials
+  see:
+  - label: 속도
+    lang: ko
+    id: velocity
+  - label: Tangent vector
+    id: tangent_vector
 - id: verdier_dual
   en: Verdier dual
   ko: 베르디에 쌍대
@@ -18206,6 +18242,15 @@ W:
   defs:
   - label: '[그로모프-위튼 이론] §Gromov-Witten 불변량과 공리계: 대수적 관점'
     url: /ko/math/gromov-witten_theory/gw_invariants_axioms
+  see:
+  - label: Gromov-Witten invariant
+    id: gromov-witten_invariant
+  - label: Gromov-Witten potential
+    id: gromov-witten_potential
+  - label: Frobenius manifold
+    id: frobenius_manifold
+  - label: Quantum cohomology
+    id: quantum_cohomology
 - id: weak_direct_product
   en: weak direct product
   ko: 약한 직접곱
@@ -18213,6 +18258,9 @@ W:
   defs:
   - label: '[대수적 구조] §제한합'
     url: /ko/math/algebraic_structures/restricted_sums
+  see:
+  - label: Direct product
+    id: direct_product
 - id: weak_equivalence
   en: weak equivalence
   ko: 약한 동치
@@ -18220,6 +18268,11 @@ W:
   defs:
   - label: '[유도대수기하학] §Simplicial 가환환과 animation'
     url: /ko/math/derived_algebraic_geometry/animated_rings
+  see:
+  - label: Homotopy equivalence
+    id: homotopy_equivalence
+  - label: Quasi-isomorphism
+    id: quasi-isomorphism
 - id: weaker_topology
   en: weaker topology
   ko: 약한 위상
@@ -18237,6 +18290,9 @@ W:
   defs:
   - label: '[미분다양체] §미분형식'
     url: /ko/math/manifolds/differential_forms
+  see:
+  - label: Exterior algebra
+    id: exterior_algebra
 - id: weight
   en: weight
   ko: 무게
@@ -18249,6 +18305,10 @@ W:
   see:
   - label: Highest weight vector
     id: highest_weight_vector
+  - label: Weight space
+    id: weight_space
+  - label: Weight module
+    id: weight_module
 - id: weight_decomposition
   en: weight decomposition
   ko: 무게 분해
