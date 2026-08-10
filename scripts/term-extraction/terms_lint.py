@@ -58,6 +58,9 @@ from terms_common import (  # noqa: E402
     split_file, url_slug, yaml_quote,
 )
 
+sys.path.insert(0, str(BLOG_ROOT / "scripts/lib"))
+from cron_commit import commit_outputs  # noqa: E402
+
 SCRIPT_DIR = Path(__file__).resolve().parent
 BACKUP_PATH = SCRIPT_DIR / "terms.yml.bak"
 
@@ -416,6 +419,12 @@ def run(path: Path, fix: bool, notify: bool) -> int:
             tmp.replace(path)
             log(f"자동 수정: 라벨 {n_lbl}건, 케이스 {n_case}건, 그룹 이동 {n_grp}건, "
                 f"정렬 {n_ord}그룹, defs 재정렬 {n_def}건 (백업: {BACKUP_PATH.name})")
+            # 자기 수정분은 자기 이름으로 커밋한다 (push 는 autopush). --path 로
+            # 다른 파일을 검사하는 테스트 실행은 커밋하지 않는다.
+            if path.resolve() == TERMS_PATH.resolve():
+                commit_outputs("terms-lint", [str(TERMS_PATH.relative_to(BLOG_ROOT))],
+                               f"라벨 {n_lbl}·케이스 {n_case}·그룹 {n_grp}·"
+                               f"정렬 {n_ord}·defs {n_def}건 자동 수정", log=log)
             issues = (semantic_checks(nd, pmap, ko_by_slug) + check_order(new)
                       + check_case(new)
                       + check_defs_order(new, pmap) + check_parser_parity(new, nd))

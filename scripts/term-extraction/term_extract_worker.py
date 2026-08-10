@@ -14,8 +14,9 @@ semantic_checks 비악화)를 통과해야만 원자적으로 쓴다. 실패는 
     0. 한 번도 안 돌린 글 (path 순)          — published:false 포함
     1. 마지막 검사 후 translation worker 가 재번역한 글 (재번역 = 한때
        drift_needed = 내용 변경 = 새 용어 가능성↑), 오래된 번역부터
-    2. 마지막 검사가 14일 지난 글, 오래된 검사부터
-    3. 전부 비면: 짝수 시각에만 terms.yml 자체 감사 (글자 하나씩 순환,
+    2. 마지막 검사가 14일 지났고 **그 뒤에 실제로 바뀐** 글, 오래된 검사부터
+       (안 바뀐 글은 다시 넣어도 같은 답이 나온다)
+    3. 전부 비면: 하루 1회만 terms.yml 자체 감사 (글자 하나씩 순환,
        각 항목의 sees 보강)
   처리:
     - 정의 마커(*en<sub>ko</sub>* 등)는 결정론 파싱 (extract_terms 재사용).
@@ -30,7 +31,8 @@ semantic_checks 비악화)를 통과해야만 원자적으로 쓴다. 실패는 
     - 필수 필드: id(slugify_id 로 생성, LLM id 불신)·en·ko·primary·defs 1+.
       ko 를 모르는 후보는 추가하지 않고 리뷰 파일로.
     - sees: 제안된 관련어 중 실존 항목만 (label 은 대상 항목에서 파생).
-  변경이 있으면 텔레그램으로 요약 전송.
+  변경은 자기 이름으로 커밋한다 (scripts/lib/cron_commit.py — `cron(term-extract):`,
+  push 는 autopush 몫). 텔레그램은 문제일 때만 — 3회 연속 실패 → 격리.
 
 사용: term_extract_worker.py [--dry-run] [--status] [--audit-letter X]
 cron: 0,30 * * * * cd .../scripts/term-extraction && python3 term_extract_worker.py >>term_extract_worker.log 2>&1
@@ -69,10 +71,16 @@ from usage_dominance import count_term, dominance  # noqa: E402
 import gloss_stage  # noqa: E402
 import yaml  # noqa: E402
 
+sys.path.insert(0, str(BLOG_ROOT / "scripts/lib"))
+from cron_commit import commit_outputs, dirty_paths  # noqa: E402
+
 STATE_PATH = SCRIPT_DIR / "term_extract_worker_state.json"
 LOCK_PATH = Path("/tmp/term-extract-worker.lock")
 REVIEW_PATH = SCRIPT_DIR / "term_extraction_review.md"
 BACKUP_PATH = SCRIPT_DIR / "terms.yml.bak-extract"
+# 자기 산출물을 자기가 커밋한다 (cron_commit). 레포 상대 경로가 pathspec 이다.
+REL_TERMS = str(TERMS_PATH.relative_to(BLOG_ROOT))
+REL_REVIEW = str(REVIEW_PATH.relative_to(BLOG_ROOT))
 
 LLM_BIN = os.environ.get("TERM_EXTRACT_LLM",
                          str(Path.home() / ".local/bin/claude"))
@@ -137,6 +145,30 @@ def all_ko_posts() -> list[str]:
     return out
 
 
+def ko_commit_ts() -> dict[str, float]:
+    """rel → 그 글이 마지막으로 커밋된 시각. stale 재검사 게이트용.
+
+    전체 히스토리를 한 번에 훑는다 (실측 0.35s, 경로 1000여 개). 글마다
+    `git log` 를 부르면 600 회 프로세스 기동이라 틱 예산을 먹는다.
+    """
+    p = subprocess.run(
+        ["git", "log", "--name-only", "--pretty=format:%ct", "--", "_posts"],
+        cwd=str(BLOG_ROOT), capture_output=True, text=True)
+    out: dict[str, float] = {}
+    if p.returncode != 0:
+        log("경고: git log 실패 — stale 게이트 없이 진행")
+        return out
+    ts = 0.0
+    for ln in p.stdout.splitlines():
+        if not ln:
+            continue
+        if ln.isdigit():
+            ts = float(ln)
+        elif ts and ln not in out:   # 최신 커밋이 먼저 나온다
+            out[ln] = ts
+    return out
+
+
 def load_translation_ts() -> dict[str, float]:
     """rel path → 마지막 번역 완료 시각 (status done 만).
 
@@ -178,9 +210,25 @@ def select_post(state: dict) -> tuple[str | None, str]:
     if drift:
         return sorted(drift)[0][1], "drift"
 
+    # stale 재검사는 **글이 마지막 검사 뒤에 실제로 바뀐 경우만** 한다. 안 바뀐 글을
+    # 14 일마다 다시 LLM 에 넣어 봐야 같은 답이 나온다 — 2026-08-10 에 1 차 수확이
+    # 끝나면서 그 재검사가 하루 43 회 헛돌 예정이었다. 커밋 시각이 없는 글(gitignore
+    # 된 Mirror_Symmetry 등)은 파일 mtime 으로 판단한다.
+    git_ts = ko_commit_ts()
+
+    def changed_since(rel: str, since: float) -> bool:
+        ts = git_ts.get(rel)
+        if ts is None:
+            try:
+                ts = (BLOG_ROOT / rel).stat().st_mtime
+            except OSError:
+                return False
+        return ts > since
+
     stale = [(st[r]["last_checked"], r) for r in posts
              if r in st and ok(r)
-             and now - st[r].get("last_checked", now) > STALE_SEC]
+             and now - st[r].get("last_checked", now) > STALE_SEC
+             and changed_since(r, st[r].get("last_checked", now))]
     if stale:
         return sorted(stale)[0][1], "stale"
     return None, ""
@@ -803,36 +851,47 @@ def main() -> int:
         return 1
 
     if args.audit_letter:
-        state["audit"]["letter"] = args.audit_letter.upper()
+        letter = state["audit"]["letter"] = args.audit_letter.upper()
         ch = audit_letter(state, args.dry_run)
-        if ch and not args.dry_run:
+        if not args.dry_run:
             save_state(state)
-            send_telegram("[용어 추출] " + " · ".join(ch))
-        elif not args.dry_run:
-            save_state(state)
+            if ch:
+                commit_outputs("term-extract", [REL_TERMS],
+                               f"see 링크 {len(ch)}건 (감사 {letter})", log=log)
         return 0
 
     rel, kind = select_post(state)
     if rel is None:
-        if datetime.now().hour % 2 == 0:
+        today = f"{datetime.now():%Y-%m-%d}"
+        # 감사(see 링크 보강)는 하루 한 번으로 묶는다. 2026-08-10 에 1 차 수확이
+        # 끝나 유휴 틱이 대부분이 되면서, 짝수 시각마다 도는 감사가 하루 23 회
+        # LLM 호출로 see 링크를 228 건 밀어 넣었다 — 그게 상시 비용의 거의 전부다.
+        if state["audit"].get("last_date") != today:
+            letter = state["audit"].get("letter", "A")
             try:
                 ch = audit_letter(state, args.dry_run)
             except Exception as e:
                 log(f"감사 실패: {e}")
                 return 1
             if not args.dry_run:
+                state["audit"]["last_date"] = today
                 save_state(state)
                 if ch:
-                    send_telegram("[용어 추출] " + " · ".join(ch))
+                    commit_outputs("term-extract", [REL_TERMS],
+                                   f"see 링크 {len(ch)}건 (감사 {letter})", log=log)
         else:
             # 할 일이 없어도 한 줄은 남긴다 — 대시보드가 이 로그의 mtime 으로
             # 워커 생존을 판정하므로(2.5×30분), 조용히 끝내면 정상 동작 중에
             # '안 돎'으로 표시된다.
-            log("대상 없음 (감사는 짝수 시각)")
+            log("대상 없음 (감사는 하루 1회, 오늘치 완료)")
         return 0
 
     log(f"선정({kind}): {rel}")
     ps = state["posts"].setdefault(rel, {})
+    # 처리 전에 글이 이미 더러웠으면(사용자가 편집 중) 그 글은 cron 커밋에 넣지
+    # 않는다 — 넣으면 작업 중인 원고가 [lastmod-skip] 붙은 봇 커밋에 딸려 들어간다.
+    # 병기만 워킹트리에 남고, autopush 가 분류해서 가져간다.
+    post_was_dirty = bool(dirty_paths([rel]))
     try:
         changes = process_post(rel, kind, args.dry_run)
     except Exception as e:
@@ -853,10 +912,17 @@ def main() -> int:
         save_state(state)
     if changes:
         log("변경: " + " · ".join(changes))
+        # 정상 변경은 텔레그램으로 알리지 않는다 (하루 30 회씩 왔다) — 히스토리와
+        # 로그에 남고 대시보드가 보여 준다. 알림은 문제일 때만: 3 회 연속 실패 →
+        # 격리 (위 except 절).
         if not args.dry_run:
-            send_telegram(f"[용어 추출] {Path(rel).name}: "
-                          + " · ".join(changes[:8])
-                          + (f" 외 {len(changes)-8}건" if len(changes) > 8 else ""))
+            # 병기는 글 본문도 고치므로 깨끗했던 글은 같은 커밋에 넣는다. 표기·병기
+            # 정비라 [lastmod-skip] — 독자가 다시 읽을 것은 없다.
+            paths = [REL_TERMS, REL_REVIEW] + ([] if post_was_dirty else [rel])
+            if post_was_dirty:
+                log(f"편집 중인 글이라 커밋에서 제외: {rel} (autopush 가 가져간다)")
+            commit_outputs("term-extract", paths,
+                           f"{Path(rel).stem} {len(changes)}건", log=log)
     else:
         log(f"변경 없음: {rel}")
     return 0

@@ -514,9 +514,17 @@ def sec_system():
         pass
     rc, out, _ = run(["git", "status", "--porcelain"], cwd=ROOT)
     dirty = [ln for ln in out.splitlines() if ln.strip()]
+    # 미push 커밋. 워커가 자기 산출물을 직접 커밋하고 autopush 가 cron 커밋만
+    # 밀려 있으면 최대 7 일 push 를 미루므로, 며칠씩 쌓여 있는 게 정상 상태다.
+    # 여기 없으면 "왜 사이트에 안 나오지"의 답이 대시보드에 아예 안 보인다.
+    # fetch 는 하지 않는다 — origin/main 은 autopush 가 2 시간마다 갱신한다.
+    rc, out, _ = run(["git", "log", "--pretty=%ct", "origin/main..HEAD"], cwd=ROOT)
+    unpushed = [int(x) for x in out.split() if x.isdigit()] if rc == 0 else []
     return dict(jekyll=jekyll, mem=mem[0] if mem else "",
                 pagefind_mtime=mtime(f"{ROOT}/_site/pagefind/pagefind-entry.json"),
-                quota=quota, dirty=dirty[:20], dirty_count=len(dirty))
+                quota=quota, dirty=dirty[:20], dirty_count=len(dirty),
+                unpushed=len(unpushed),
+                unpushed_oldest=min(unpushed) if unpushed else None)
 
 
 def build_summary():

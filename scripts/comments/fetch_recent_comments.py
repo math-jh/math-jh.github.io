@@ -249,6 +249,13 @@ def main() -> int:
     total = sum(len(v) for v in by_lang.values())
     stamp = time.strftime("%Y-%m-%d %H:%M:%S")
     print(f"[{stamp}] wrote {total} recent comments to {DATA_PATH}")
+    # 매 틱 쓰지만 내용이 같으면 diff 가 없어 커밋도 없다 (실제로 새 댓글이
+    # 달린 틱에만 커밋된다). push 는 autopush 몫.
+    sys.path.insert(0, str(BLOG_ROOT / "scripts/lib"))
+    from cron_commit import commit_outputs
+    commit_outputs("comments", [str(DATA_PATH.relative_to(BLOG_ROOT))],
+                   f"최근 댓글 {total}건 갱신",
+                   log=lambda m: print(f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] {m}"))
     return 0
 
 

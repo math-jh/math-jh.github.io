@@ -302,6 +302,10 @@ def _post_title(path: Path) -> str:
         return path.stem
 
 
+# 제목은 `cron(translate): …` 로 시작한다 — cron 산출물 커밋은 전부 `cron(<워커>):`
+# 접두사를 달아, git log 만 봐도 어느 워커가 낸 것인지 보이게 하는 규약이다
+# (scripts/lib/cron_commit.py 를 쓰는 다른 워커들과 같은 형식).
+_COMMIT_PREFIX = "cron(translate): "
 _COMMIT_SUBJECT = {
     "pending": "EN 신규 번역",       # Phase 1: EN 이 아예 없던 글
     "drift":   "EN 재번역(drift)",   # Phase 2: KO 가 바뀌어 `drift_needed` 가 걸린 글
@@ -344,13 +348,14 @@ def commit_translation(ko_path: Path, en_path: Path, reason: str) -> None:
         if reason == "drift" and out.strip():
             _git("add", "--", rel_ko)
             rc, _, err = _git("commit", "-m",
-                              "재번역 완료된 글의 drift 플래그 소거 [lastmod-skip]")
+                              _COMMIT_PREFIX
+                              + "재번역 완료된 글의 drift 플래그 소거 [lastmod-skip]")
             if rc != 0:
                 log(f"commit(ko) 실패: {err.strip()[:200]}")
                 _git("reset", "-q", "--", rel_ko)
 
         # 2) EN: 번역 결과 (content)
-        subject = _COMMIT_SUBJECT.get(reason, f"EN 재번역({reason})")
+        subject = _COMMIT_PREFIX + _COMMIT_SUBJECT.get(reason, f"EN 재번역({reason})")
         _git("add", "--", rel_en)
         rc, _, err = _git("commit", "-m", f"{subject}: {title}")
         if rc != 0:

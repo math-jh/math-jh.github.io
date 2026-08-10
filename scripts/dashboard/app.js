@@ -251,6 +251,13 @@ function alertsOf(d) {
     level: 'info', text: '커밋 안 된 변경 ' + sys.dirty_count + '건',
     sub: (sys.dirty || [])[0] + (sys.dirty_count > 1 ? ' 외 ' + (sys.dirty_count - 1) + '건' : ''), to: 'activity'
   });
+  // 워커가 자기 산출물을 커밋하고 autopush 가 cron 커밋만 있으면 최대 7일 미룬다 —
+  // 며칠 밀려 있는 것은 정상이므로 info, 다만 프로덕션과의 시차는 보여 준다.
+  if (sys.unpushed) out.push({
+    level: 'info', text: '미push 커밋 ' + sys.unpushed + '건',
+    sub: (sys.unpushed_oldest ? '가장 오래된 건 ' + ago(sys.unpushed_oldest) + ' — ' : '')
+      + 'cron 산출물만 밀려 있으면 autopush 가 최대 7일 미룬다', to: 'activity'
+  });
   return out;
 }
 function verdict(d) {
