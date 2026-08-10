@@ -127,7 +127,7 @@ $$\mathbb{Q}(\zeta_n)\cong\mathbb{Q}[\x]/(\Phi_n)\cong\mathbb{Q}(\zeta_n^a)$$
 을 얻으며, 이는 $\zeta_n$을 $\zeta_n^a$로 보낸다. 한편 $\zeta_n^a$가 $\mu_n$의 generator이므로 $\mathbb{Q}(\zeta_n^a)=\mathbb{Q}(\zeta_n)$이고, 따라서 이 isomorphism은 $\mathbb{Q}$를 고정하는 $\mathbb{Q}(\zeta_n)$의 automorphism, 즉 $\Gal(\mathbb{Q}(\zeta_n)/\mathbb{Q})$의 원소이다. 그 image는 정의에 의해 $a$이므로 주어진 homomorphism은 surjective이다.
 :::
 
-특히 $\Gal(\mathbb{Q}(\zeta_n)/\mathbb{Q})$는 order $\varphi(n)$의 abelian group이다. 그럼 [§갈루아 이론의 기본정리, ⁋정리 1](/ko/math/field_theory/fundamental_theorem_of_galois_theory#thm1)에 의해 $\mathbb{Q}(\zeta_n)$의 subextension들은 $(\mathbb{Z}/n\mathbb{Z})^\times$의 subgroup들과 일대일로 대응하며, abelian group의 모든 subgroup이 normal이므로 [§갈루아 이론의 기본정리, ⁋따름정리 4](/ko/math/field_theory/fundamental_theorem_of_galois_theory#cor4)에 의하여 그 subextension들은 모두 $\mathbb{Q}$의 Galois extension이다.
+특히 $\Gal(\mathbb{Q}(\zeta_n)/\mathbb{Q})$는 order $\varphi(n)$의 abelian group이다. 그럼 [§갈루아 이론의 기본정리, ⁋정리 1](/ko/math/field_theory/fundamental_theorem_of_galois_theory#thm1)에 의해 $\mathbb{Q}(\zeta_n)$의 subextension들은 $(\mathbb{Z}/n\mathbb{Z})^\times$의 subgroup들과 일대일로 대응하며, abelian group의 모든 subgroup이 normal이므로 [§갈루아 이론의 기본정리, ⁋따름정리 6](/ko/math/field_theory/fundamental_theorem_of_galois_theory#cor6)에 의하여 그 subextension들은 모두 $\mathbb{Q}$의 Galois extension이다.
 
 ::: 예시 8
 $n=8$인 경우를 보자. $\varphi(8)=4$이고 $\x^8-1=(\x^4-1)(\x^4+1)$이며 $\Phi_1\Phi_2\Phi_4=\x^4-1$이므로 [명제 2](#prop2)에 의해 $\Phi_8=\x^4+1$이다. $\zeta=\zeta_8=e^{2\pi i/8}$로 두면 $\zeta^4=-1$이고 $\zeta=(1+i)/\sqrt2$이므로

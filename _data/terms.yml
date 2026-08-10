@@ -12825,6 +12825,8 @@ P:
   see:
   - label: Differential form
     id: differential_form
+  - label: Exterior derivative
+    id: exterior_derivative
 - id: p_q_-form
   en: $(p,q)$-form
   ko: $(p,q)$-형식
@@ -12978,6 +12980,9 @@ P:
   defs:
   - label: '[미적분학] §다변수함수와 편미분'
     url: /ko/math/calculus/partial_derivatives
+  see:
+  - label: Derivative
+    id: derivative
 - id: partial_mapping
   en: partial mapping
   ko: 편사상
@@ -12992,6 +12997,9 @@ P:
   defs:
   - label: '[복소기하학] §Dolbeault 코호몰로지'
     url: /ko/math/complex_geometry/dolbeault_cohomology
+  see:
+  - label: Dolbeault complex
+    id: dolbeault_complex
 - id: del_operator
   en: $\partial$-operator
   ko: $\partial$-연산자
@@ -12999,6 +13007,9 @@ P:
   defs:
   - label: '[복소기하학] §Dolbeault 코호몰로지'
     url: /ko/math/complex_geometry/dolbeault_cohomology
+  see:
+  - label: Exterior derivative
+    id: exterior_derivative
 - id: partial_product
   en: partial product
   ko: 부분곱
@@ -13047,6 +13058,12 @@ P:
     url: /ko/math/representation_theory/path_algebras
   - label: '[위상수학] §연결공간'
     url: /ko/math/topology/connected_spaces
+  see:
+  - label: Fundamental group
+    id: fundamental_group
+  - label: 위상공간
+    lang: ko
+    id: topological_space
 - id: path_algebra
   en: path algebra
   ko: 경로대수
@@ -13063,6 +13080,9 @@ P:
     url: /ko/math/analysis/connectedness
   - label: '[위상수학] §연결공간'
     url: /ko/math/topology/connected_spaces
+  see:
+  - label: Connected
+    id: connected
 - id: path_homotopic
   en: path homotopic
   ko: 경로 호모토픽
@@ -13070,6 +13090,9 @@ P:
   defs:
   - label: '[대수적 위상수학] §호모토피'
     url: /ko/math/algebraic_topology/homotopy
+  see:
+  - label: Homotopy
+    id: homotopy
 - id: path_homotopy
   en: path homotopy
   ko: 경로 호모토피
@@ -13077,6 +13100,9 @@ P:
   defs:
   - label: '[대수적 위상수학] §호모토피'
     url: /ko/math/algebraic_topology/homotopy
+  see:
+  - label: Homotopy
+    id: homotopy
 - id: peak
   en: peak
   ko: 봉우리
@@ -13192,6 +13218,9 @@ P:
   defs:
   - label: '[사교기하학] §고전역학'
     url: /ko/math/symplectic_geometry/classical_mechanics
+  see:
+  - label: Symplectic form
+    id: symplectic_form
 - id: Picard_group
   en: Picard group
   ko: 피카르 군
@@ -14033,6 +14062,10 @@ Q:
   - label: 특이값 분해
     lang: ko
     id: singular_value_decomposition
+  - label: Orthogonal matrix
+    id: orthogonal_matrix
+  - label: Orthonormal basis
+    id: orthonormal_basis
 - id: quadratic_field
   en: quadratic field
   ko: 이차체
@@ -14048,6 +14081,9 @@ Q:
   - label: 이차무리수
     lang: ko
     id: quadratic_irrational
+  - label: 이차형식
+    lang: ko
+    id: quadratic_form
 - id: quadratic_form
   en: quadratic form
   ko: 이차형식
@@ -14074,6 +14110,9 @@ Q:
     id: quadratic_field
   - label: Algebraic element
     id: algebraic_element
+  - label: 연분수
+    lang: ko
+    id: continued_fraction
 - id: quadratic_non-residue
   en: quadratic non-residue
   ko: 이차 비잉여
@@ -14130,6 +14169,9 @@ Q:
   defs:
   - label: '[그로모프-위튼 이론] §Gromov-Witten 불변량과 공리계: 대수적 관점'
     url: /ko/math/gromov-witten_theory/gw_invariants_axioms
+  see:
+  - label: Gromov-Witten invariant
+    id: gromov-witten_invariant
 - id: quartic_surface
   en: quartic surface
   ko: 4차 곡면
@@ -14137,6 +14179,9 @@ Q:
   defs:
   - label: '[대수다양체] §K3 Surfaces'
     url: /ko/math/algebraic_varieties/k3_surfaces
+  see:
+  - label: K3 surface
+    id: k3_surface
 - id: quasi-coherent_sheaf
   en: quasi-coherent sheaf
   ko: 준연접층
@@ -14185,6 +14230,8 @@ Q:
   see:
   - label: Normal extension
     id: normal_extension
+  - label: Separable extension
+    id: separable_extension
 - id: quasi-isomorphic
   en: quasi-isomorphic
   ko: 유사동형
@@ -14223,6 +14270,11 @@ Q:
   defs:
   - label: '[대수다양체] §준사영다양체'
     url: /ko/math/algebraic_varieties/quasi_projective_varieties
+  see:
+  - label: Projective variety
+    id: projective_variety
+  - label: Affine variety
+    id: affine_variety
 - id: quasi-separated
   en: quasi-separated
   ko: 준분리
@@ -14276,6 +14328,9 @@ Q:
   defs:
   - label: '[대수적 구조] §몫군'
     url: /ko/math/algebraic_structures/quotient_groups
+  see:
+  - label: Kernel
+    id: kernel
 - id: quotient_magma
   en: quotient magma
   ko: 몫마그마

@@ -78,7 +78,7 @@ $$(\sigma\tau)(\alpha)/\alpha=\sigma\bigl(\tau(\alpha)/\alpha\bigr)\cdot\sigma(\
 $\mathbb{L}/\mathbb{K}$가 degree $n$의 Galois extension이고 $\Gal(\mathbb{L}/\mathbb{K})$가 cyclic group이라 하자. 그럼 ($\zeta\in\mathbb{K}$ 가정 하에) 적당한 $\alpha\in\mathbb{L}$가 존재하여 $\mathbb{L}=\mathbb{K}(\alpha)$이고 $\alpha^n\in\mathbb{K}$이다.
 :::
 ::: 증명
-$\Gal(\mathbb{L}/\mathbb{K})$의 generator를 $\sigma$라 하자. [§갈루아 이론의 기본정리](/ko/math/field_theory/fundamental_theorem_of_galois_theory)의 마지막에 언급한 counting에 의하여 $\card\Gal(\mathbb{L}/\mathbb{K})=[\mathbb{L}:\mathbb{K}]=n$이고, 따라서 $\id,\sigma,\sigma^2,\ldots,\sigma^{n-1}$은 $\mathbb{L}$에서 $\mathbb{L}$로의 서로 다른 homomorphism들이다. [§에탈대수, ⁋따름정리 3](/ko/math/field_theory/etale_algebras#cor3)에 의하여 이들은 $\mathbb{L}$-벡터공간 안에서 일차독립이므로, 일차결합
+$\Gal(\mathbb{L}/\mathbb{K})$의 generator를 $\sigma$라 하자. [§갈루아 이론의 기본정리, ⁋명제 2](/ko/math/field_theory/fundamental_theorem_of_galois_theory#prop2)에 의하여 $\card\Gal(\mathbb{L}/\mathbb{K})=[\mathbb{L}:\mathbb{K}]=n$이고, 따라서 $\id,\sigma,\sigma^2,\ldots,\sigma^{n-1}$은 $\mathbb{L}$에서 $\mathbb{L}$로의 서로 다른 homomorphism들이다. [§에탈대수, ⁋따름정리 3](/ko/math/field_theory/etale_algebras#cor3)에 의하여 이들은 $\mathbb{L}$-벡터공간 안에서 일차독립이므로, 일차결합
 
 $$\id+\zeta\sigma+\zeta^2\sigma^2+\cdots+\zeta^{n-1}\sigma^{n-1}$$
 
@@ -158,7 +158,7 @@ Characteristic $0$의 field $\mathbb{K}$와 다항식 $f\in\mathbb{K}[\x]$, 그�
 
 $$\mathbb{K}'=\mathbb{F}_0\subseteq\mathbb{F}_1\subseteq\cdots\subseteq\mathbb{F}_r=\mathbb{L}',\qquad \mathbb{F}_i=\mathbb{L}'^{H_i}$$
 
-을 얻는다. 각각의 $i$에 대하여 [§갈루아 이론의 기본정리, ⁋보조정리 2](/ko/math/field_theory/fundamental_theorem_of_galois_theory#lem2)에 의해 $\mathbb{L}'/\mathbb{F}_{i-1}$은 Galois extension이고 그 Galois group은 $H_{i-1}$이며, $H_i$가 $H_{i-1}$의 normal subgroup이므로 [§갈루아 이론의 기본정리, ⁋따름정리 4](/ko/math/field_theory/fundamental_theorem_of_galois_theory#cor4)에 의하여 $\mathbb{F}_i/\mathbb{F}_{i-1}$은 Galois extension이고
+을 얻는다. 각각의 $i$에 대하여 [§갈루아 이론의 기본정리, ⁋보조정리 7](/ko/math/field_theory/fundamental_theorem_of_galois_theory#lem7)에 의해 $\mathbb{L}'/\mathbb{F}_{i-1}$은 Galois extension이고 그 Galois group은 $H_{i-1}$이며, $H_i$가 $H_{i-1}$의 normal subgroup이므로 [§갈루아 이론의 기본정리, ⁋따름정리 6](/ko/math/field_theory/fundamental_theorem_of_galois_theory#cor6)에 의하여 $\mathbb{F}_i/\mathbb{F}_{i-1}$은 Galois extension이고
 
 $$\Gal(\mathbb{F}_i/\mathbb{F}_{i-1})\cong H_{i-1}/H_i$$
 
@@ -192,11 +192,11 @@ $$\mathbb{K}\subseteq\mathbb{K}(\zeta)=\mathbb{T}_1\subseteq\mathbb{T}_2\subsete
 
 이 된다. 여기서 각 단계 $\mathbb{T}_{k+1}=\mathbb{T}_k(\beta_k)$에서 $\beta_k^{d_k}\in\mathbb{T}_k$이고 $d_k$는 어떤 $n_i$이므로 $n$을 나눈다.
 
-이제 $\Gal(\mathbb{N}/\mathbb{K})$가 solvable임을 보이자. Subgroup들 $G_k=\Gal(\mathbb{N}/\mathbb{T}_k)$를 생각하면 ([§갈루아 이론의 기본정리, ⁋보조정리 2](/ko/math/field_theory/fundamental_theorem_of_galois_theory#lem2)) 다음의 decreasing sequence
+이제 $\Gal(\mathbb{N}/\mathbb{K})$가 solvable임을 보이자. Subgroup들 $G_k=\Gal(\mathbb{N}/\mathbb{T}_k)$를 생각하면 ([§갈루아 이론의 기본정리, ⁋보조정리 7](/ko/math/field_theory/fundamental_theorem_of_galois_theory#lem7)) 다음의 decreasing sequence
 
 $$\Gal(\mathbb{N}/\mathbb{K})=G_0\supseteq G_1\supseteq\cdots\supseteq G_t=\{e\}$$
 
-를 얻는다. 첫 단계 $\mathbb{T}_1=\mathbb{K}(\zeta)$는 [명제 3](#prop3)에 의해 $\mathbb{K}$의 Galois extension이고 그 Galois group이 abelian이며, $k\geq1$인 단계 $\mathbb{T}_{k+1}=\mathbb{T}_k(\beta_k)$는 $\zeta^{n/d_k}\in\mathbb{T}_1\subseteq\mathbb{T}_k$가 primitive $d_k$-th root of unity이므로 [명제 4](#prop4)에 의해 $\mathbb{T}_k$의 Galois extension이고 그 Galois group이 cyclic이다. 그럼 각각의 $k$에 대하여 [§갈루아 이론의 기본정리, ⁋따름정리 4](/ko/math/field_theory/fundamental_theorem_of_galois_theory#cor4)를 Galois extension $\mathbb{N}/\mathbb{T}_k$에 적용하면, $G_{k+1}$은 $G_k$의 normal subgroup이고
+를 얻는다. 첫 단계 $\mathbb{T}_1=\mathbb{K}(\zeta)$는 [명제 3](#prop3)에 의해 $\mathbb{K}$의 Galois extension이고 그 Galois group이 abelian이며, $k\geq1$인 단계 $\mathbb{T}_{k+1}=\mathbb{T}_k(\beta_k)$는 $\zeta^{n/d_k}\in\mathbb{T}_1\subseteq\mathbb{T}_k$가 primitive $d_k$-th root of unity이므로 [명제 4](#prop4)에 의해 $\mathbb{T}_k$의 Galois extension이고 그 Galois group이 cyclic이다. 그럼 각각의 $k$에 대하여 [§갈루아 이론의 기본정리, ⁋따름정리 6](/ko/math/field_theory/fundamental_theorem_of_galois_theory#cor6)을 Galois extension $\mathbb{N}/\mathbb{T}_k$에 적용하면, $G_{k+1}$은 $G_k$의 normal subgroup이고
 
 $$G_k/G_{k+1}\cong\Gal(\mathbb{T}_{k+1}/\mathbb{T}_k)$$
 
