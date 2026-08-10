@@ -73,7 +73,7 @@ $$H^i(\Spec A, \widetilde M)\cong H^i\bigl(\Gamma(\Spec A, \widetilde{I^\bullet}
 
 The second equality follows from the fact that the global sections of the associated sheaf are the original module ([§Quasi-coherent Sheaves, ⁋Definition 4](/en/math/scheme_theory/quasicoherent_sheaves#def4)), and since $M \rightarrow I^\bullet$ is a quasi-isomorphism, the cohomology on the right vanishes for all $i>0$. Thus $H^i(\Spec A, \widetilde M)=0$ ($i>0$).
 
-It remains to show that the associated sheaf $\widetilde I$ of an injective $A$-module $I$ is acyclic. For this we show that $\widetilde I$ is flasque. ([[Algebraic Varieties] §Sheaf Cohomology, ⁋Proposition 16](/en/math/algebraic_varieties/sheaf_cohomology#prop16)) Since every open subset of $\Spec A$ is of the form $U=\Spec A\setminus V(\mathfrak{a})$, it suffices to show that the restriction $\widetilde I(\Spec A)=I\rightarrow\widetilde I(U)$ is surjective for each such $U$. There is an exact sequence connecting the sections of a quasi-coherent sheaf with local cohomology
+It remains to show that the associated sheaf $\widetilde I$ of an injective $A$-module $I$ is acyclic. For this we show that $\widetilde I$ is flasque. ([[Algebraic Varieties] §Sheaf Cohomology, ⁋Proposition 16](/en/math/algebraic_varieties/sheaf_cohomology#prop16)) Since every open subset of $\Spec A$ is of the form $U=\Spec A\setminus Z(\mathfrak{a})$, it suffices to show that the restriction $\widetilde I(\Spec A)=I\rightarrow\widetilde I(U)$ is surjective for each such $U$. There is an exact sequence connecting the sections of a quasi-coherent sheaf with local cohomology
 
 $$I\longrightarrow\widetilde I(U)\longrightarrow H^1_{\mathfrak{a}}(I)\longrightarrow 0$$
 

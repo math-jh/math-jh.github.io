@@ -178,7 +178,7 @@ Now consider $\x\z-t\y^2$; since $\x\z$ and $t\y^2$ are both degree $2$ in $\x,\
 
 $$X=\Proj A_\bullet/(\x\z-t\y^2)$$
 
-is the closed subscheme $Z_+(\x\z-t\y^2)$ of $\mathbb{P}^2\times_\mathbb{K}\mathbb{A}^1_\mathbb{K}$. That is, $X$ is a family of curves cut out in $\mathbb{P}^2$ by the equation $\x\z=t\y^2$, and the above structure morphism makes this a family over $\mathbb{A}^1_\mathbb{K}$.
+is the closed subscheme $V_+(\x\z-t\y^2)$ of $\mathbb{P}^2\times_\mathbb{K}\mathbb{A}^1_\mathbb{K}$. That is, $X$ is a family of curves cut out in $\mathbb{P}^2$ by the equation $\x\z=t\y^2$, and the above structure morphism makes this a family over $\mathbb{A}^1_\mathbb{K}$.
 
 That this morphism is flat is checked on the three affine charts. On $D_+(\y)$, setting $u=\x/\y$, $v=\z/\y$ and dividing the relation by $\y^2$ gives $uv=t$, so the coordinate ring is $\mathbb{K}[t][u,v]/(uv-t)$, which is isomorphic to the integral domain $\mathbb{K}[u,v]$ via $t=uv$. Since $uv$ is also not constant, by the same reason as in [Example 7](#ex7) it is flat by [Proposition 5](#prop5). On $D_+(\x)$, setting $w=\y/\x$, $s=\z/\x$ and dividing by $\x^2$ gives $s=tw^2$, so the coordinate ring is $\mathbb{K}[t][w]$, which is a free $\mathbb{K}[t]$-module and hence flat. The case of $D_+(\z)$ is symmetric. Since these three cover $X$, $X \rightarrow \mathbb{A}^1_\mathbb{K}$ is flat.
 

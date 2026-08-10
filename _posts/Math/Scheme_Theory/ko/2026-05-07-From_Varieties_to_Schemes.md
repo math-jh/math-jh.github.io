@@ -52,7 +52,7 @@ Scheme theory는 이 모든 문제를 해결하기 위해 탄생했다. Scheme�
 
 구체적으로, 위에서 우리는 classical variety가 점을 maximal ideal로만 보고 radical ideal을 취해 nilpotent를 모두 버렸다는 한계를 살펴보고, 이들을 살려 fat point로 보면 손실되는 정보가 없어진다는 것을 보았다. Scheme은 이 수정을 전체에 걸쳐 체계화한 것으로, 여기에서 우리는 점을 maximal ideal이 아니라 <em-ko>모든 prime ideal</em-ko>로 삼고, 각 점 위에 local ring을 올려 함수를 그 section으로 정의한다. 
 
-그 결과로 나타나는 것 중 가장 비직관적인 것 중 하나는 generic point의 존재이다. 예를 들어 $\Spec \mathbb{K}[\x,\y]$에서는 closed point $(\x-a,\y-b)$ 외에도 $(\x)$, $(\y)$, 그리고 $(0)$와 같은 non-closed point들이 존재한다. 이 가운데 어떤 점 $\mathfrak{p}\in\Spec A$의 closure $\overline{\{\mathfrak{p}\}}=V(\mathfrak{p})$이 irreducible closed subset이 될 때, $\mathfrak{p}$를 그 irreducible closed subset의 *generic point*라 부르며, $A$가 integral domain이면 $(0)$이 $\Spec A$ 전체의 generic point가 된다. 
+그 결과로 나타나는 것 중 가장 비직관적인 것 중 하나는 generic point의 존재이다. 예를 들어 $\Spec \mathbb{K}[\x,\y]$에서는 closed point $(\x-a,\y-b)$ 외에도 $(\x)$, $(\y)$, 그리고 $(0)$와 같은 non-closed point들이 존재한다. 이 가운데 어떤 점 $\mathfrak{p}\in\Spec A$의 closure $\overline{\{\mathfrak{p}\}}=Z(\mathfrak{p})$이 irreducible closed subset이 될 때, $\mathfrak{p}$를 그 irreducible closed subset의 *generic point*라 부르며, $A$가 integral domain이면 $(0)$이 $\Spec A$ 전체의 generic point가 된다. 
 
 ::: 예시 3
 $\Spec \mathbb{Z}[\x]$를 생각하자. 이 scheme은 $\mathbb{Z}$ 위에서 정의되는 직선 $\mathbb{A}_{\mathbb{Z}}^1$에 해당한다. 이 예시에서 우리는 이 공간의 몇몇 점들을 살펴본다. 

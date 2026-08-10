@@ -16,7 +16,7 @@ last_polished_at: 2026-07-27T00:45:02+00:00
 ---
 By definition, $\Sch$ is a full subcategory of $\LRS$. ([§Schemes, ⁋Definition 1](/en/math/scheme_theory/schemes#def1)) That is, given two schemes $X,Y$, a scheme morphism from $X$ to $Y$ is given by a continuous map $\varphi: X \rightarrow Y$ and a morphism $\varphi^\sharp: \mathcal{O}_Y \rightarrow \varphi_\ast \mathcal{O}_X$ of structure sheaves, where $\varphi^\sharp$ must become a local homomorphism upon restriction to each stalk. ([§Affine Scheme, ⁋Definition 2](/en/math/scheme_theory/affine_schemes#def2))
 
-Thus a scheme morphism $f:X \rightarrow Y$ is fundamentally an object we have already defined. In the next post we will examine properties of scheme morphisms; before that, we present four ways to understand them.
+Thus a scheme morphism $\varphi:X \rightarrow Y$ is fundamentally an object we have already defined. In the next post we will examine properties of scheme morphisms; before that, we present four ways to understand them.
 
 ## Gluing Ring Homomorphisms
 
@@ -146,7 +146,7 @@ $$x\mapsto [f_0(x):\cdots: f_n(x)].$$
 We also define the following.
 
 ::: Definition 6
-We call a scheme morphism $f: X \rightarrow Y$ an *$X$-point* of $Y$.
+We call a scheme morphism $\varphi: X \rightarrow Y$ an *$X$-point* of $Y$.
 :::
 
 Similarly, examining the case where $X$ is an affine scheme is intuitively helpful.
@@ -193,7 +193,7 @@ Then $\Hom_\Sch(-,X)$ is the functor that takes a scheme $S$ and returns the set
 
 ## Families of Schemes
 
-The final perspective cannot yet be defined rigorously because our language is insufficient, so we shall only explain the geometric intuition. We call a scheme morphism $f:X \rightarrow S$ a *family parametrized by $S$*, or simply an $S$-family. Thus by definition $\Sch_{/S}$ can be regarded as the category of families parametrized by $S$.
+The final perspective cannot yet be defined rigorously because our language is insufficient, so we shall only explain the geometric intuition. We call a scheme morphism $\varphi:X \rightarrow S$ a *family parametrized by $S$*, or simply an $S$-family. Thus by definition $\Sch_{/S}$ can be regarded as the category of families parametrized by $S$.
 
 For geometric intuition, one should basically think of the following (non-scheme) situation.
 

@@ -26,22 +26,22 @@ Scheme $S$ 위의 *group scheme<sub>군 스킴</sub>*은, $S$-scheme $G$로서 �
 
 $$h_G:(\Sch_{/S})^\op \rightarrow \Grp$$
 
-이 존재하여, forgetful functor $\Grp \rightarrow \Set$과 합성하면 $\Hom_{\Sch_{/S}}(-, G)$가 되는 것이다. 풀어 말하면, 각각의 $S$-scheme $T$에 대하여 $G(T)$에 group 구조가 주어지고, 임의의 $S$-scheme morphism $T' \rightarrow T$가 유도하는 $G(T) \rightarrow G(T')$이 group homomorphism인 것이다. 두 group scheme $G, H$ 사이의 *homomorphism*은 $S$-scheme morphism $f: G \rightarrow H$로서, 각각의 $T$에 대하여 $f_T: G(T) \rightarrow H(T)$가 group homomorphism인 것이다.
+이 존재하여, forgetful functor $\Grp \rightarrow \Set$과 합성하면 $\Hom_{\Sch_{/S}}(-, G)$가 되는 것이다. 풀어 말하면, 각각의 $S$-scheme $T$에 대하여 $G(T)$에 group 구조가 주어지고, 임의의 $S$-scheme morphism $T' \rightarrow T$가 유도하는 $G(T) \rightarrow G(T')$이 group homomorphism인 것이다. 두 group scheme $G, H$ 사이의 *homomorphism*은 $S$-scheme morphism $\varphi: G \rightarrow H$로서, 각각의 $T$에 대하여 $\varphi_T: G(T) \rightarrow H(T)$가 group homomorphism인 것이다.
 :::
 
 [정의 1](#def1)은 group scheme을 "functor로서 group인 scheme"으로 규정한다. 범주론의 언어로는 $\Sch_{/S}$가 categorical product를 가지는 cartesian monoidal category이므로 그 안의 group object를 생각할 수 있으며 ([\[범주론\] §모노이드 대상, ⁋정의 3](/ko/math/category_theory/monoid_objects#def3)), group scheme이란 정확히 이 group object이다. ([\[범주론\] §모노이드 대상, ⁋예시 4](/ko/math/category_theory/monoid_objects#ex4)) 다음 명제가 이 두 서술이 일치함을 확인해준다.
 
 ::: 명제 2
-$S$-scheme $G$와 그 structure morphism $\pi: G \rightarrow S$에 대하여, 다음 두 데이터는 서로 일대일대응한다. 아래에서 $S$-scheme morphism $a, b: X \rightarrow G$가 유도하는 morphism $X \rightarrow G\times_SG$를 $(a,b)$로 적는다.
+$S$-scheme $G$와 그 structure morphism $\pi: G \rightarrow S$에 대하여, 다음 두 데이터는 서로 일대일대응한다. 아래에서 $S$-scheme morphism $\alpha, \beta: X \rightarrow G$가 유도하는 morphism $X \rightarrow G\times_SG$를 $(\alpha,\beta)$로 적는다.
 
 1. [정의 1](#def1)의 의미에서 $G$ 위의 group scheme 구조.
-2. $S$-scheme morphism $m: G\times_SG \rightarrow G$, $i: G \rightarrow G$, $e: S \rightarrow G$로서
+2. $S$-scheme morphism $\mu_G: G\times_SG \rightarrow G$, $\iota_G: G \rightarrow G$, $\epsilon_G: S \rightarrow G$로서
 
-   $$m\circ(m\times \id_G)=m\circ(\id_G\times m),\qquad m\circ(e\circ\pi, \id_G)=\id_G=m\circ(\id_G, e\circ\pi)$$
+   $$\mu_G\circ(\mu_G\times \id_G)=\mu_G\circ(\id_G\times \mu_G),\qquad \mu_G\circ(\epsilon_G\circ\pi, \id_G)=\id_G=\mu_G\circ(\id_G, \epsilon_G\circ\pi)$$
 
    과
 
-   $$m\circ(i, \id_G)=e\circ\pi=m\circ(\id_G, i)$$
+   $$\mu_G\circ(\iota_G, \id_G)=\epsilon_G\circ\pi=\mu_G\circ(\id_G, \iota_G)$$
 
    을 만족하는 것.
 :::
@@ -52,12 +52,12 @@ $$(G\times_SG)(T)=G(T)\times_{S(T)}G(T)=G(T)\times G(T)$$
 
 이 성립한다.
 
-1번을 가정하자. 각각의 $T$마다 곱셈 $G(T)\times G(T) \rightarrow G(T)$, 역원 $G(T) \rightarrow G(T)$, 그리고 항등원을 고르는 map $S(T) \rightarrow G(T)$가 주어지고, 이들은 group 구조가 $T$에 대해 자연스럽다는 가정으로부터 $T$에 대해 자연스럽다. 위의 동일시 아래에서 이들은 각각 natural transformation $h_{G\times_SG} \rightarrow h_G$, $h_G \rightarrow h_G$, $h_S \rightarrow h_G$이므로, 유일한 morphism $m, i, e$를 준다. 이제 group의 공리는 각각의 $T$에서 성립하는 등식이고, 위의 대응은 합성을 합성으로 옮기므로, 결합법칙·항등원·역원의 조건은 그대로 2번의 세 등식이 된다.
+1번을 가정하자. 각각의 $T$마다 곱셈 $G(T)\times G(T) \rightarrow G(T)$, 역원 $G(T) \rightarrow G(T)$, 그리고 항등원을 고르는 map $S(T) \rightarrow G(T)$가 주어지고, 이들은 group 구조가 $T$에 대해 자연스럽다는 가정으로부터 $T$에 대해 자연스럽다. 위의 동일시 아래에서 이들은 각각 natural transformation $h_{G\times_SG} \rightarrow h_G$, $h_G \rightarrow h_G$, $h_S \rightarrow h_G$이므로, 유일한 morphism $\mu_G, \iota_G, \epsilon_G$를 준다. 이제 group의 공리는 각각의 $T$에서 성립하는 등식이고, 위의 대응은 합성을 합성으로 옮기므로, 결합법칙·항등원·역원의 조건은 그대로 2번의 세 등식이 된다.
 
-거꾸로 2번을 가정하고 $h_G$를 적용하면, 각각의 $T$에 대하여 $m_T: G(T)\times G(T) \rightarrow G(T)$, $i_T: G(T) \rightarrow G(T)$와 원소 $e_T\in G(T)$를 얻고, 주어진 세 등식은 이들이 group의 공리를 만족한다는 것 그대로이다. 이 구조가 $T$에 대해 자연스러운 것은 $m, i, e$가 하나의 morphism이어서 그 유도 map이 functoriality와 commute하기 때문이다. 두 대응이 서로 역임은 [§점함자, ⁋따름정리 2](/ko/math/scheme_theory/functor_of_points#cor2)의 일대일대응의 유일성에서 따라온다.
+거꾸로 2번을 가정하고 $h_G$를 적용하면, 각각의 $T$에 대하여 $\mu_{G,T}: G(T)\times G(T) \rightarrow G(T)$, $\iota_{G,T}: G(T) \rightarrow G(T)$와 원소 $\epsilon_{G,T}\in G(T)$를 얻고, 주어진 세 등식은 이들이 group의 공리를 만족한다는 것 그대로이다. 이 구조가 $T$에 대해 자연스러운 것은 $\mu_G, \iota_G, \epsilon_G$가 하나의 morphism이어서 그 유도 map이 functoriality와 commute하기 때문이다. 두 대응이 서로 역임은 [§점함자, ⁋따름정리 2](/ko/math/scheme_theory/functor_of_points#cor2)의 일대일대응의 유일성에서 따라온다.
 :::
 
-[명제 2](#prop2)에 의하여 우리는 group scheme을 다룰 때 필요에 따라 두 언어를 자유롭게 오갈 수 있다. Functorial한 정의의 장점은 group의 공리를 직접 commutative diagram으로 적는 대신 각 $G(T)$가 통상적인 의미에서 group이라는 것만 확인하면 된다는 데 있고, morphism에 의한 서술의 장점은 $m, i, e$를 대수적으로 명시할 수 있어 좌표 계산이 가능하다는 데 있다. 이후 $e\circ\pi: G \rightarrow G$를 간단히 $e$로 적고, $G(T)$의 항등원 또한 $e$로 적는다.
+[명제 2](#prop2)에 의하여 우리는 group scheme을 다룰 때 필요에 따라 두 언어를 자유롭게 오갈 수 있다. Functorial한 정의의 장점은 group의 공리를 직접 commutative diagram으로 적는 대신 각 $G(T)$가 통상적인 의미에서 group이라는 것만 확인하면 된다는 데 있고, morphism에 의한 서술의 장점은 $\mu_G, \iota_G, \epsilon_G$를 대수적으로 명시할 수 있어 좌표 계산이 가능하다는 데 있다. 이후 $\epsilon_G\circ\pi: G \rightarrow G$를 간단히 $\epsilon_G$로 적고, $G(T)$의 항등원 또한 $\epsilon_G$로 적는다.
 
 ::: 예시 3
 다음은 모두 $\Spec \mathbb{Z}$ 위의 group scheme이다.
@@ -86,32 +86,32 @@ $$\GL_n=\Spec \mathbb{Z}[\x_{11},\ldots,\x_{nn},\z]/(\z\det-1)$$
 Group scheme 사이의 homomorphism이 주어지면 그 kernel을 만들고 싶다. Group의 kernel은 항등원의 preimage이므로, scheme의 언어에서 이는 항등원 morphism을 따른 fiber product가 된다.
 
 ::: 정의 4
-$S$ 위의 group scheme $G$의 *closed subgroup scheme*이란, group scheme $H$와 group scheme homomorphism $\iota: H \rightarrow G$로서 $\iota$가 closed embedding인 것이다. ([§닫힌 부분스킴, ⁋정의 2](/ko/math/scheme_theory/closed_subschemes#def2)) 또, group scheme homomorphism $f: G \rightarrow H$에 대하여 그 *kernel*을 fiber product
+$S$ 위의 group scheme $G$의 *closed subgroup scheme*이란, group scheme $H$와 group scheme homomorphism $\iota: H \rightarrow G$로서 $\iota$가 closed embedding인 것이다. ([§닫힌 부분스킴, ⁋정의 2](/ko/math/scheme_theory/closed_subschemes#def2)) 또, group scheme homomorphism $\varphi: G \rightarrow H$에 대하여 그 *kernel*을 fiber product
 
-$$\ker f=G\times_{f, H, e}S$$
+$$\ker \varphi=G\times_{\varphi, H, \epsilon_H}S$$
 
-으로 정의한다. 여기에서 $e: S \rightarrow H$는 [명제 2](#prop2)의 항등원 morphism이다.
+으로 정의한다. 여기에서 $\epsilon_H: S \rightarrow H$는 [명제 2](#prop2)의 항등원 morphism이다.
 :::
 
 [§점함자, ⁋명제 11](/ko/math/scheme_theory/functor_of_points#prop11)로 계산하면 각각의 $S$-scheme $T$에 대하여
 
-$$(\ker f)(T)=G(T)\times_{H(T)}S(T)=\{g\in G(T)\mid f_T(g)=e\}$$
+$$(\ker \varphi)(T)=G(T)\times_{H(T)}S(T)=\{g\in G(T)\mid \varphi_T(g)=\epsilon_{H,T}\}$$
 
-이므로, 이 정의는 통상적인 kernel의 정의를 그대로 옮긴 것이다. 우변이 $G(T)$의 subgroup이고 그 대응이 $T$에 대해 자연스러우므로, $\ker f$는 [정의 1](#def1)의 의미에서 group scheme이다. 남는 것은 $\ker f \rightarrow G$가 closed embedding인지의 여부인데, 이는 $e$가 closed embedding인 것에 달려 있고 그 조건이 곧 separatedness이다.
+이므로, 이 정의는 통상적인 kernel의 정의를 그대로 옮긴 것이다. 우변이 $G(T)$의 subgroup이고 그 대응이 $T$에 대해 자연스러우므로, $\ker \varphi$는 [정의 1](#def1)의 의미에서 group scheme이다. 남는 것은 $\ker \varphi \rightarrow G$가 closed embedding인지의 여부인데, 이는 $\epsilon_H$가 closed embedding인 것에 달려 있고 그 조건이 곧 separatedness이다.
 
 ::: 명제 5
-$S$ 위의 group scheme homomorphism $f: G \rightarrow H$에 대하여, $H \rightarrow S$가 separated이면 ([§값매김환, ⁋정의 3](/ko/math/scheme_theory/valuative_criteria#def3)) $\ker f$는 $G$의 closed subgroup scheme이다.
+$S$ 위의 group scheme homomorphism $\varphi: G \rightarrow H$에 대하여, $H \rightarrow S$가 separated이면 ([§값매김환, ⁋정의 3](/ko/math/scheme_theory/valuative_criteria#def3)) $\ker \varphi$는 $G$의 closed subgroup scheme이다.
 :::
 ::: 증명
-먼저 $H$의 항등원 morphism $e: S \rightarrow H$가 closed embedding임을 본다. $\pi: H \rightarrow S$를 structure morphism이라 하면 $e$는 $\pi$의 절단, 곧 $\pi\circ e=\id_S$이다. 이제 두 morphism $\id_H$와 $e\circ\pi$가 유도하는 $(\id_H, e\circ\pi): H \rightarrow H\times_SH$를 따라 diagonal morphism $\Delta: H \rightarrow H\times_SH$를 base change하자. 임의의 $S$-scheme $T$에 대하여 [§점함자, ⁋명제 11](/ko/math/scheme_theory/functor_of_points#prop11)로 계산하면, 이 fiber product의 $T$-point들은 $(h', h')=(h, e_T(\pi_T(h)))$를 만족하는 순서쌍 $(h', h)\in H(T)\times H(T)$들, 곧 $h'=h$이면서 $h=e_T(\pi_T(h))$인 $h\in H(T)$들이다. 그런데 대응 $s\mapsto e_T\circ s$와 $h\mapsto \pi_T\circ h$가 서로 역이므로 이 집합은 $S(T)$와 자연스럽게 일대일대응하며, [§점함자, ⁋따름정리 2](/ko/math/scheme_theory/functor_of_points#cor2)에 의하여 fiber product는 $S$이고 $H$로의 사영은 $e$이다. $\pi$가 separated이므로 $\Delta$는 closed embedding이다.
+먼저 $H$의 항등원 morphism $\epsilon_H: S \rightarrow H$가 closed embedding임을 본다. $\pi: H \rightarrow S$를 structure morphism이라 하면 $\epsilon_H$는 $\pi$의 절단, 곧 $\pi\circ \epsilon_H=\id_S$이다. 이제 두 morphism $\id_H$와 $\epsilon_H\circ\pi$가 유도하는 $(\id_H, \epsilon_H\circ\pi): H \rightarrow H\times_SH$를 따라 diagonal morphism $\Delta: H \rightarrow H\times_SH$를 base change하자. 임의의 $S$-scheme $T$에 대하여 [§점함자, ⁋명제 11](/ko/math/scheme_theory/functor_of_points#prop11)로 계산하면, 이 fiber product의 $T$-point들은 $(h', h')=(h, \epsilon_{H,T}(\pi_T(h)))$를 만족하는 순서쌍 $(h', h)\in H(T)\times H(T)$들, 곧 $h'=h$이면서 $h=\epsilon_{H,T}(\pi_T(h))$인 $h\in H(T)$들이다. 그런데 대응 $s\mapsto \epsilon_{H,T}\circ s$와 $h\mapsto \pi_T\circ h$가 서로 역이므로 이 집합은 $S(T)$와 자연스럽게 일대일대응하며, [§점함자, ⁋따름정리 2](/ko/math/scheme_theory/functor_of_points#cor2)에 의하여 fiber product는 $S$이고 $H$로의 사영은 $\epsilon_H$이다. $\pi$가 separated이므로 $\Delta$는 closed embedding이다.
 
-다음으로 closed embedding이 base change에 대해 보존됨을 확인한다. Closed embedding $\iota: Z \rightarrow X$와 임의의 morphism $g: X' \rightarrow X$가 주어졌다 하고 $W=Z\times_XX'$이라 하자. Closed embedding은 affine morphism이고 affine은 base change에 대해 보존되므로 ([§닫힌 부분스킴, ⁋명제 3](/ko/math/scheme_theory/closed_subschemes#prop3), [§올곱, ⁋명제 16](/ko/math/scheme_theory/fiber_products#prop16)) $W \rightarrow X'$ 또한 affine이다. 따라서 남은 것은 [§닫힌 부분스킴, ⁋명제 3](/ko/math/scheme_theory/closed_subschemes#prop3)의 둘째 조건, 곧 $X'$의 <em-ko>임의의</em-ko> affine open subset $V=\Spec C$에 대하여 그 preimage $\Spec D$를 주는 $C \rightarrow D$가 surjective인 것을 확인하는 일이다.
+다음으로 closed embedding이 base change에 대해 보존됨을 확인한다. Closed embedding $\iota: Z \rightarrow X$와 임의의 morphism $\psi: X' \rightarrow X$가 주어졌다 하고 $W=Z\times_XX'$이라 하자. Closed embedding은 affine morphism이고 affine은 base change에 대해 보존되므로 ([§닫힌 부분스킴, ⁋명제 3](/ko/math/scheme_theory/closed_subschemes#prop3), [§올곱, ⁋명제 16](/ko/math/scheme_theory/fiber_products#prop16)) $W \rightarrow X'$ 또한 affine이다. 따라서 남은 것은 [§닫힌 부분스킴, ⁋명제 3](/ko/math/scheme_theory/closed_subschemes#prop3)의 둘째 조건, 곧 $X'$의 <em-ko>임의의</em-ko> affine open subset $V=\Spec C$에 대하여 그 preimage $\Spec D$를 주는 $C \rightarrow D$가 surjective인 것을 확인하는 일이다.
 
 $X$를 affine open subset들로 덮고 그 preimage들을 $V$에서 잘라내면 $V$의 열린 덮개를 얻으며, principal open set들이 $\Spec C$의 base를 이루므로 ([§스펙트럼, ⁋보조정리 11](/ko/math/scheme_theory/spectrums#lem11)) 이를 세분하여 $V=\bigcup_\alpha D(c_\alpha)$이면서 각 $D(c_\alpha)$가 $X$의 어떤 affine open subset $\Spec B_\alpha$ 안으로 사상되도록 할 수 있다. 그럼 $\iota^{-1}(\Spec B_\alpha)\cong \Spec A_\alpha$에 대하여 $B_\alpha \rightarrow A_\alpha$가 surjective이고 ([§닫힌 부분스킴, ⁋명제 3](/ko/math/scheme_theory/closed_subschemes#prop3)), $D(c_\alpha)=\Spec C_{c_\alpha}$ 위에서 $W$는 $\Spec (A_\alpha\otimes_{B_\alpha}C_{c_\alpha})$인 동시에 $\Spec D_{c_\alpha}$이므로 ([§올곱, ⁋보조정리 2](/ko/math/scheme_theory/fiber_products#lem2)), $C_{c_\alpha} \rightarrow D_{c_\alpha}$는 $B_\alpha \rightarrow A_\alpha$의 base change로서 surjective이다.
 
 이제 $C$의 임의의 maximal ideal $\mathfrak{m}$을 택하면 그에 대응하는 점이 어떤 $D(c_\alpha)$에 속하므로 $C_\mathfrak{m}$과 $D_\mathfrak{m}$은 각각 $C_{c_\alpha}$와 $D_{c_\alpha}$를 $C_{c_\alpha}\setminus\mathfrak{m}C_{c_\alpha}$에서 다시 localize한 것이다. 따라서 $D_\mathfrak{m}$의 임의의 원소는 $d\in D_{c_\alpha}$와 $t\in C_{c_\alpha}\setminus\mathfrak{m}C_{c_\alpha}$로 $d/t$ 꼴로 적히는데 위에서 $d$가 $C_{c_\alpha}$의 어떤 원소의 image이므로, $C_\mathfrak{m} \rightarrow D_\mathfrak{m}$ 또한 surjective이다. 따라서 [\[가환대수학\] §국소화의 성질들, ⁋명제 4](/ko/math/commutative_algebra/properties_of_localization#prop4)에 의하여 $C \rightarrow D$는 surjective이고, $V$가 임의의 affine open subset이었으므로 $W \rightarrow X'$는 closed embedding이다.
 
-위의 두 문단을 합치면 $e$는 closed embedding $\Delta$를 $(\id_H, e\circ\pi)$를 따라 base change한 것이므로 closed embedding이고, 다시 $\ker f \rightarrow G$는 $e$를 $f$를 따라 base change한 것이므로 closed embedding이다. 위에서 확인한 대로 $(\ker f)(T)$가 $G(T)$의 subgroup이므로 $\ker f$는 $G$의 closed subgroup scheme이다.
+위의 두 문단을 합치면 $\epsilon_H$는 closed embedding $\Delta$를 $(\id_H, \epsilon_H\circ\pi)$를 따라 base change한 것이므로 closed embedding이고, 다시 $\ker \varphi \rightarrow G$는 $\epsilon_H$를 $\varphi$를 따라 base change한 것이므로 closed embedding이다. 위에서 확인한 대로 $(\ker \varphi)(T)$가 $G(T)$의 subgroup이므로 $\ker \varphi$는 $G$의 closed subgroup scheme이다.
 :::
 
 Affine scheme 사이의 morphism은 항상 separated이므로 ([§값매김환, ⁋보조정리 5](/ko/math/scheme_theory/valuative_criteria#lem5)), affine base 위의 affine group scheme에 대해서는 [명제 5](#prop5)의 가정이 자동으로 성립한다. 가장 중요한 예는 $n$제곱 morphism $[n]:\mathbb{G}_m \rightarrow \mathbb{G}_m$, 곧 각각의 $T$에서 $a\mapsto a^n$인 homomorphism이다. 공역의 좌표를 $\y$로 적으면 이는 ring 수준에서 $\y\mapsto \x^n$에 대응하고, 항등원 morphism은 $\y\mapsto 1$인 counit에 대응하므로
@@ -122,7 +122,7 @@ $$\ker[n]=\Spec\left(\mathbb{Z}[\x,\x^{-1}]\otimes_{\mathbb{Z}[\y,\y^{-1}]}\math
 
 ## Hopf algebra
 
-이제 base가 affine이고 group scheme 자신도 affine인 경우를 본다. 이 경우 $\Spec$이 ring과 affine scheme 사이의 반대동치를 주므로, [명제 2](#prop2)의 세 morphism $m, i, e$는 coordinate ring 위의 세 사상으로 뒤집혀 나타나고 group의 공리는 그 dual 조건이 된다. 이렇게 얻어지는 대수적 구조가 Hopf algebra이다.
+이제 base가 affine이고 group scheme 자신도 affine인 경우를 본다. 이 경우 $\Spec$이 ring과 affine scheme 사이의 반대동치를 주므로, [명제 2](#prop2)의 세 morphism $\mu_G, \iota_G, \epsilon_G$는 coordinate ring 위의 세 사상으로 뒤집혀 나타나고 group의 공리는 그 dual 조건이 된다. 이렇게 얻어지는 대수적 구조가 Hopf algebra이다.
 
 ::: 정의 6
 Ring $\mathbb{K}$에 대하여, commutative $\mathbb{K}$-algebra $A$와 $\mathbb{K}$-algebra homomorphism
@@ -135,13 +135,13 @@ $$\Delta: A \rightarrow A\otimes_\mathbb{K}A,\qquad \epsilon: A \rightarrow \mat
 2. (Counit) 동일시 $\mathbb{K}\otimes_\mathbb{K}A\cong A\cong A\otimes_\mathbb{K}\mathbb{K}$ 아래에서 $(\epsilon\otimes\id_A)\circ\Delta=\id_A=(\id_A\otimes\epsilon)\circ\Delta$.
 3. (Antipode) $\mu\circ(\iota\otimes\id_A)\circ\Delta=\eta\circ\epsilon=\mu\circ(\id_A\otimes\iota)\circ\Delta$.
 
-이 때 $\Delta$를 *comultiplication*, $\epsilon$을 *counit*, $\iota$를 *antipode*라 부른다. 두 Hopf $\mathbb{K}$-algebra 사이의 *homomorphism*은 $\mathbb{K}$-algebra homomorphism $f: A \rightarrow B$로서 $\Delta_B\circ f=(f\otimes f)\circ\Delta_A$, $\epsilon_B\circ f=\epsilon_A$, $f\circ\iota_A=\iota_B\circ f$를 만족하는 것이다.
+이 때 $\Delta$를 *comultiplication*, $\epsilon$을 *counit*, $\iota$를 *antipode*라 부른다. 두 Hopf $\mathbb{K}$-algebra 사이의 *homomorphism*은 $\mathbb{K}$-algebra homomorphism $\phi: A \rightarrow B$로서 $\Delta_B\circ \phi=(\phi\otimes \phi)\circ\Delta_A$, $\epsilon_B\circ \phi=\epsilon_A$, $\phi\circ\iota_A=\iota_B\circ \phi$를 만족하는 것이다.
 :::
 
 세 조건은 각각 결합법칙·항등원·역원의 dual이며, 이는 [\[범주론\] §모노이드 대상, ⁋정의 7](/ko/math/category_theory/monoid_objects#def7)의 Hopf monoid를 monoidal category $(\rMod{\mathbb{K}},\otimes_\mathbb{K}, \mathbb{K})$에서 구현한 것이다. ([\[범주론\] §모노이드 대상, ⁋예시 8](/ko/math/category_theory/monoid_objects#ex8)) 문헌의 일반적인 정의는 $A$의 commutativity를 요구하지 않으며, 그 경우 antipode는 algebra homomorphism이 아니라 anti-homomorphism이 된다. 우리는 affine group scheme의 coordinate ring만을 다루므로 처음부터 commutative인 경우로 제한하였고, 이 제한 아래에서 antipode가 $\mathbb{K}$-algebra homomorphism이 되는 것이다. 또 문헌에서는 antipode를 $S$로 적는 것이 관례이나, 여기에서는 base scheme의 기호와 겹치지 않도록 $\iota$를 쓴다.
 
 ::: 정리 7
-Ring $\mathbb{K}$에 대하여, $\Spec$은 [정의 6](#def6)의 Hopf $\mathbb{K}$-algebra들의 category와 $\Spec \mathbb{K}$ 위의 affine group scheme들의 category 사이의 anti-equivalence를 준다. 이 대응 아래에서 $\Delta, \epsilon, \iota$는 각각 $m, e, i$에 대응한다.
+Ring $\mathbb{K}$에 대하여, $\Spec$은 [정의 6](#def6)의 Hopf $\mathbb{K}$-algebra들의 category와 $\Spec \mathbb{K}$ 위의 affine group scheme들의 category 사이의 anti-equivalence를 준다. 이 대응 아래에서 $\Delta, \epsilon, \iota$는 각각 $\mu_G, \epsilon_G, \iota_G$에 대응한다.
 :::
 ::: 증명
 [§아핀스킴, ⁋정리 13](/ko/math/scheme_theory/affine_schemes#thm13)의 adjunction을 affine scheme으로 제한하면 동치 $\AffSch\simeq \cRing^\op$를 얻으며, $\Spec \mathbb{K}$ 위의 affine scheme들과 $\mathbb{K}$-algebra들 사이에서도 마찬가지이다. 이 동치는 $\Spec \mathbb{K}$ 위의 fiber product를 tensor product로 옮기고 ([§올곱, ⁋보조정리 2](/ko/math/scheme_theory/fiber_products#lem2)), terminal object $\Spec \mathbb{K}$를 $\mathbb{K}$로 옮긴다. 곧 $A$를 commutative $\mathbb{K}$-algebra라 할 때
@@ -150,9 +150,9 @@ $$\Spec A\times_{\Spec \mathbb{K}}\Spec A=\Spec(A\otimes_\mathbb{K}A),\qquad \Sp
 
 이다.
 
-따라서 [명제 2](#prop2)의 데이터 $m: \Spec A\times_{\Spec \mathbb{K}}\Spec A \rightarrow \Spec A$, $e:\Spec \mathbb{K} \rightarrow \Spec A$, $i:\Spec A \rightarrow \Spec A$를 주는 것은 $\mathbb{K}$-algebra homomorphism $\Delta: A \rightarrow A\otimes_\mathbb{K}A$, $\epsilon: A \rightarrow \mathbb{K}$, $\iota: A \rightarrow A$를 주는 것과 정확히 같다. 남은 것은 세 조건의 대응인데, 동치가 합성과 항등사상을 보존하므로 등식이 등식으로 옮겨간다. 결합법칙 $m\circ(m\times\id)=m\circ(\id\times m)$은 $(\Delta\otimes\id_A)\circ\Delta=(\id_A\otimes\Delta)\circ\Delta$이 되고, 항등원 조건은 counit 조건이 되며, 역원 조건에서는 $(i,\id_G)$가 $a\otimes b\mapsto \iota(a)b$, 곧 $\mu\circ(\iota\otimes\id_A)$에 대응하고 $e\circ\pi$가 $\eta\circ\epsilon$에 대응하여 antipode 조건이 된다.
+따라서 [명제 2](#prop2)의 데이터 $\mu_G: \Spec A\times_{\Spec \mathbb{K}}\Spec A \rightarrow \Spec A$, $\epsilon_G:\Spec \mathbb{K} \rightarrow \Spec A$, $\iota_G:\Spec A \rightarrow \Spec A$를 주는 것은 $\mathbb{K}$-algebra homomorphism $\Delta: A \rightarrow A\otimes_\mathbb{K}A$, $\epsilon: A \rightarrow \mathbb{K}$, $\iota: A \rightarrow A$를 주는 것과 정확히 같다. 남은 것은 세 조건의 대응인데, 동치가 합성과 항등사상을 보존하므로 등식이 등식으로 옮겨간다. 결합법칙 $\mu_G\circ(\mu_G\times\id)=\mu_G\circ(\id\times \mu_G)$은 $(\Delta\otimes\id_A)\circ\Delta=(\id_A\otimes\Delta)\circ\Delta$이 되고, 항등원 조건은 counit 조건이 되며, 역원 조건에서는 $(\iota_G,\id_G)$가 $a\otimes b\mapsto \iota(a)b$, 곧 $\mu\circ(\iota\otimes\id_A)$에 대응하고 $\epsilon_G\circ\pi$가 $\eta\circ\epsilon$에 대응하여 antipode 조건이 된다.
 
-마지막으로 morphism의 대응을 본다. Group scheme homomorphism은 각각의 $T$에서 $G(T) \rightarrow H(T)$가 group homomorphism이 되는 morphism이고, group homomorphism은 항등원과 역원을 자동으로 보존하므로 이는 $m$, $e$, $i$ 모두와 commute하는 $\Spec \mathbb{K}$ 위의 morphism과 같다. 위의 동치가 이 세 조건을 뒤집으면 $\Delta$, $\epsilon$, $\iota$ 모두와 commute하는 $\mathbb{K}$-algebra homomorphism, 곧 [정의 6](#def6)의 Hopf algebra homomorphism이 된다.
+마지막으로 morphism의 대응을 본다. Group scheme homomorphism은 각각의 $T$에서 $G(T) \rightarrow H(T)$가 group homomorphism이 되는 morphism이고, group homomorphism은 항등원과 역원을 자동으로 보존하므로 이는 $\mu_G$, $\epsilon_G$, $\iota_G$ 모두와 commute하는 $\Spec \mathbb{K}$ 위의 morphism과 같다. 위의 동치가 이 세 조건을 뒤집으면 $\Delta$, $\epsilon$, $\iota$ 모두와 commute하는 $\mathbb{K}$-algebra homomorphism, 곧 [정의 6](#def6)의 Hopf algebra homomorphism이 된다.
 :::
 
 [정리 7](#thm7)에 의하여 affine group scheme $G=\Spec A$의 $R$-point들의 group 구조는 $A$의 Hopf 구조로 명시된다. 곧 $G(R)=\Hom_{\mathbb{K}\text{-alg}}(A, R)$ 위에서 곱셈은 $g\ast h=\mu_R\circ(g\otimes h)\circ\Delta$, 항등원은 $\eta_R\circ\epsilon$, 역원은 $g\mapsto g\circ\iota$로 주어진다. 이 공식들은 다음 절에서 representation을 comodule로 번역할 때 그대로 쓰인다.
@@ -184,9 +184,9 @@ Ring $\mathbb{K}$ 위의 affine group scheme $G$와 $\mathbb{K}$-module $V$에 �
 
 $$r_R: G(R) \rightarrow \Aut_R(V\otimes_\mathbb{K}R)$$
 
-이 주어지고 이것이 $R$에 대해 자연스러운 것이다. 곧 임의의 $\mathbb{K}$-algebra homomorphism $\varphi: R \rightarrow R'$과 $g\in G(R)$에 대하여
+이 주어지고 이것이 $R$에 대해 자연스러운 것이다. 곧 임의의 $\mathbb{K}$-algebra homomorphism $\phi: R \rightarrow R'$과 $g\in G(R)$에 대하여
 
-$$r_{R'}(G(\varphi)(g))\circ(\id_V\otimes\varphi)=(\id_V\otimes\varphi)\circ r_R(g)$$
+$$r_{R'}(G(\phi)(g))\circ(\id_V\otimes\phi)=(\id_V\otimes\phi)\circ r_R(g)$$
 
 이 성립하는 것이다. 두 representation $(V, r)$과 $(W, r')$ 사이의 *morphism*은 $\mathbb{K}$-linear map $u: V \rightarrow W$로서, 각각의 $R$과 $g\in G(R)$에 대하여 $r'_R(g)\circ(u\otimes\id_R)=(u\otimes\id_R)\circ r_R(g)$인 것이다.
 :::
@@ -214,7 +214,7 @@ Representation $\{r_R\}$이 주어졌다 하자. $R=A$로 두고 universal eleme
 
 $$\rho: V \rightarrow V\otimes_\mathbb{K}A;\qquad \rho(v)=\sigma(v\otimes 1)$$
 
-로 정의한다. 임의의 $g\in G(R)$은 $\mathbb{K}$-algebra homomorphism $g: A \rightarrow R$이고 $G(g)(\id_A)=g$이므로, [정의 9](#def9)의 자연스러움을 $\varphi=g$에 적용하여
+로 정의한다. 임의의 $g\in G(R)$은 $\mathbb{K}$-algebra homomorphism $g: A \rightarrow R$이고 $G(g)(\id_A)=g$이므로, [정의 9](#def9)의 자연스러움을 $\phi=g$에 적용하여
 
 $$r_R(g)(v\otimes 1)=r_R(g)\left((\id_V\otimes g)(v\otimes 1)\right)=(\id_V\otimes g)(\sigma(v\otimes 1))=(\id_V\otimes g)(\rho(v))\tag{$\ast$}$$
 
@@ -231,11 +231,11 @@ r_R(g)\left(r_R(h)(v\otimes 1)\right)&=\sum_ir_R(g)(v_i\otimes 1)h(a_i)=\sum_i(\
 
 $$\tau\left((\id_V\otimes\Delta)(\rho(v))\right)=\sum_iv_i\otimes(g\ast h)(a_i)=(\id_V\otimes(g\ast h))(\rho(v))=r_R(g\ast h)(v\otimes 1)$$
 
-을 얻는다. 따라서 coassociativity $(\rho\otimes\id_A)\circ\rho=(\id_V\otimes\Delta)\circ\rho$에 의하여 $r_R(g)\circ r_R(h)=r_R(g\ast h)$이다. 또 counit 조건에서 $r_R(\eta_R\circ\epsilon)=\id$인데, $G(R)$이 group이고 그 역원이 $g\circ\iota$이므로 $g\ast(g\circ\iota)$와 $(g\circ\iota)\ast g$가 모두 항등원 $\eta_R\circ\epsilon$이다. 따라서 $r_R(g)\circ r_R(g\circ\iota)$와 $r_R(g\circ\iota)\circ r_R(g)$가 모두 $\id$이 되어 $r_R(g)$는 가역이다. 자연스러움은 $\mathbb{K}$-algebra homomorphism $\varphi: R \rightarrow R'$에 대하여
+을 얻는다. 따라서 coassociativity $(\rho\otimes\id_A)\circ\rho=(\id_V\otimes\Delta)\circ\rho$에 의하여 $r_R(g)\circ r_R(h)=r_R(g\ast h)$이다. 또 counit 조건에서 $r_R(\eta_R\circ\epsilon)=\id$인데, $G(R)$이 group이고 그 역원이 $g\circ\iota$이므로 $g\ast(g\circ\iota)$와 $(g\circ\iota)\ast g$가 모두 항등원 $\eta_R\circ\epsilon$이다. 따라서 $r_R(g)\circ r_R(g\circ\iota)$와 $r_R(g\circ\iota)\circ r_R(g)$가 모두 $\id$이 되어 $r_R(g)$는 가역이다. 자연스러움은 $\mathbb{K}$-algebra homomorphism $\phi: R \rightarrow R'$에 대하여
 
-$$r_{R'}(\varphi\circ g)(v\otimes 1)=(\id_V\otimes(\varphi\circ g))(\rho(v))=(\id_V\otimes\varphi)\left((\id_V\otimes g)(\rho(v))\right)=(\id_V\otimes\varphi)\left(r_R(g)(v\otimes 1)\right)$$
+$$r_{R'}(\phi\circ g)(v\otimes 1)=(\id_V\otimes(\phi\circ g))(\rho(v))=(\id_V\otimes\phi)\left((\id_V\otimes g)(\rho(v))\right)=(\id_V\otimes\phi)\left(r_R(g)(v\otimes 1)\right)$$
 
-이 성립하고, 양변을 $x\in V\otimes_\mathbb{K}R$의 함수 $F$로 볼 때 둘 모두 가법적이며 임의의 $c\in R$에 대하여 $F(cx)=\varphi(c)F(x)$를 만족하는데 $V\otimes_\mathbb{K}R$가 $R$-module로서 $v\otimes 1$ 꼴의 원소들로 생성되므로, 그러한 원소들에서의 일치가 $V\otimes_\mathbb{K}R$ 전체에서의 일치를 주기 때문이다.
+이 성립하고, 양변을 $x\in V\otimes_\mathbb{K}R$의 함수 $F$로 볼 때 둘 모두 가법적이며 임의의 $c\in R$에 대하여 $F(cx)=\phi(c)F(x)$를 만족하는데 $V\otimes_\mathbb{K}R$가 $R$-module로서 $v\otimes 1$ 꼴의 원소들로 생성되므로, 그러한 원소들에서의 일치가 $V\otimes_\mathbb{K}R$ 전체에서의 일치를 주기 때문이다.
 
 두 구성이 서로 역인 것은 $(\ast)$가 양방향에서 같은 식이기 때문이다. 마지막으로 $u: V \rightarrow W$가 각 $r_R$과 commute하는 것은 $(\ast)$에 의해 $\rho_W\circ u=(u\otimes\id_A)\circ\rho_V$와 동치이므로, 대응은 morphism까지 보존한다.
 :::
@@ -305,7 +305,7 @@ $$\sigma_T: G(T)\times X(T) \rightarrow X(T)$$
 이 group $G(T)$의 집합 $X(T)$ 위로의 작용인 것이다.
 :::
 
-여기에서도 [§점함자, ⁋명제 11](/ko/math/scheme_theory/functor_of_points#prop11)과 [§점함자, ⁋따름정리 2](/ko/math/scheme_theory/functor_of_points#cor2)에 의하여, 이 조건은 $\sigma\circ(m\times\id_X)=\sigma\circ(\id_G\times\sigma)$와 $\sigma\circ(e\circ\pi_X, \id_X)=\id_X$이라는 두 등식과 동치이다. 여기에서 $\pi_X: X \rightarrow S$는 structure morphism이다. 가장 기본적인 작용은 $G$ 자신 위로의 left translation, 곧 $\sigma=m$인 경우이다. Torsor는 이 자명한 예를 국소적으로만 닮은 대상이다.
+여기에서도 [§점함자, ⁋명제 11](/ko/math/scheme_theory/functor_of_points#prop11)과 [§점함자, ⁋따름정리 2](/ko/math/scheme_theory/functor_of_points#cor2)에 의하여, 이 조건은 $\sigma\circ(\mu_G\times\id_X)=\sigma\circ(\id_G\times\sigma)$와 $\sigma\circ(\epsilon_G\circ\pi_X, \id_X)=\id_X$이라는 두 등식과 동치이다. 여기에서 $\pi_X: X \rightarrow S$는 structure morphism이다. 가장 기본적인 작용은 $G$ 자신 위로의 left translation, 곧 $\sigma=\mu_G$인 경우이다. Torsor는 이 자명한 예를 국소적으로만 닮은 대상이다.
 
 ::: 정의 16
 $S$ 위의 group scheme $G$와 left action $\sigma: G\times_SP \rightarrow P$를 가진 $S$-scheme $P$에 대하여, $P$가 *$G$-torsor*라는 것은 다음 두 조건이 성립하는 것이다.
@@ -330,7 +330,7 @@ $$G(T)\times P(T) \rightarrow P(T)\times P(T);\qquad (g, q)\mapsto (g\cdot q, q)
 $S$ 위의 $G$-torsor $P$에 대하여, $P$가 trivial한 것과 $P(S)\neq \emptyset$인 것, 곧 $P \rightarrow S$가 절단을 가지는 것은 동치이다.
 :::
 ::: 증명
-$P$가 trivial하면 $G$의 항등원 $e\in G(S)$에 대응하는 원소가 $P(S)$의 원소를 주므로 절단이 존재한다.
+$P$가 trivial하면 $G$의 항등원 $\epsilon_G\in G(S)$에 대응하는 원소가 $P(S)$의 원소를 주므로 절단이 존재한다.
 
 거꾸로 절단 $s\in P(S)$가 주어졌다 하자. 합성
 

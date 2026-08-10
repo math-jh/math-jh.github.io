@@ -210,7 +210,7 @@ Flat의 경우, $M$이 flat임을 보이려면 임의의 단사 $A$-module morph
 지금까지의 affine 위의 결과를 일반적인 scheme 위로 옮기려면, faithfully flat morphism을 적절한 Grothendieck 위상의 covering으로 받아들여야 한다. 그 위상이 fpqc 위상이다. 이름은 *fidèlement plat quasi-compact*, 즉 faithfully flat이며 quasi-compact라는 뜻이다.
 
 ::: 정의 8
-Scheme $X$ 위의 morphism들의 모임 $\{f_i: U_i \rightarrow X\}_{i\in I}$이 *fpqc cover<sub>fpqc 덮개</sub>*라는 것은, 각 $f_i$가 flat이고, 합 $\coprod_i U_i \rightarrow X$가 surjective이며, 각 affine open $V\subseteq X$가 유한히 많은 $U_i$의 affine open들 $W_{ij}$의 image로 덮이는 quasi-compact 조건을 만족하는 것이다. 이러한 covering들이 정의하는 $\Sch$ 위의 Grothendieck 위상을 *fpqc 위상*이라 부른다.
+Scheme $X$ 위의 morphism들의 모임 $\{\psi_i: U_i \rightarrow X\}_{i\in I}$이 *fpqc cover<sub>fpqc 덮개</sub>*라는 것은, 각 $\psi_i$가 flat이고, 합 $\coprod_i U_i \rightarrow X$가 surjective이며, 각 affine open $V\subseteq X$가 유한히 많은 $U_i$의 affine open들 $W_{ij}$의 image로 덮이는 quasi-compact 조건을 만족하는 것이다. 이러한 covering들이 정의하는 $\Sch$ 위의 Grothendieck 위상을 *fpqc 위상*이라 부른다.
 :::
 
 Fpqc 위상에서 한 affine scheme $\Spec A$를 덮는 가장 단순한 covering은 faithfully flat ring homomorphism $A \rightarrow B$ 하나로 이루어진 $\{\Spec B \rightarrow \Spec A\}$이다. 이 경우 [정리 6](#thm6)이 곧바로 sheaf 조건의 형태로 다시 쓰인다. 우리는 quasi-coherent sheaf가 이 위상에 대한 sheaf임을 주장한다. ([§준연접층, ⁋정의 8](/ko/math/scheme_theory/quasicoherent_sheaves#def8))
@@ -218,11 +218,11 @@ Fpqc 위상에서 한 affine scheme $\Spec A$를 덮는 가장 단순한 coverin
 ::: 정리 9
 임의의 scheme $X$와 $X$ 위의 quasi-coherent sheaf $\mathcal{F}$에 대하여, presheaf
 
-$$T\mapsto \Gamma(T, f^\ast \mathcal{F})\qquad (f: T \rightarrow X)$$
+$$T\mapsto \Gamma(T, \psi^\ast \mathcal{F})\qquad (\psi: T \rightarrow X)$$
 
 은 fpqc 위상에 대한 sheaf이다. 즉 임의의 fpqc cover $\{T_i \rightarrow T\}$에 대하여, sequence
 
-$$\Gamma(T, f^\ast\mathcal{F}) \rightarrow \prod_i \Gamma(T_i, f_i^\ast\mathcal{F}) \rightrightarrows \prod_{i,j}\Gamma(T_i\times_T T_j, f_{ij}^\ast\mathcal{F})$$
+$$\Gamma(T, \psi^\ast\mathcal{F}) \rightarrow \prod_i \Gamma(T_i, \psi_i^\ast\mathcal{F}) \rightrightarrows \prod_{i,j}\Gamma(T_i\times_T T_j, \psi_{ij}^\ast\mathcal{F})$$
 
 는 정확하다.
 :::
@@ -241,7 +241,7 @@ $$0 \rightarrow M \rightarrow M\otimes_A B \rightarrow M\otimes_A B\otimes_A B$$
 [정리 9](#thm9)는 quasi-coherent sheaf의 global section을 faithfully flat covering 위에서 계산할 수 있게 해준다. Covering 위의 section이 두 겹 겹침에서 일치하면 그것은 밑공간 위의 section에서 유일하게 온다는 것이다. 이로부터 quasi-coherent sheaf 자체의 하강, 즉 [정의 4](#def4)의 sheaf 버전이 따라온다.
 
 ::: 정리 10
-$\{f_i: U_i \rightarrow X\}$가 fpqc cover라 하자. 그럼 $X$ 위의 quasi-coherent sheaf를 주는 것은, 각 $U_i$ 위의 quasi-coherent sheaf $\mathcal{F}_i$들과, $U_i\times_X U_j$ 위에서 cocycle 조건을 만족하는 isomorphism $\varphi_{ij}: \operatorname{pr}_2^\ast \mathcal{F}_j\cong \operatorname{pr}_1^\ast \mathcal{F}_i$들의 데이터를 주는 것과 동치이다. 즉 quasi-coherent sheaf는 fpqc 위상에 대하여 *effective descent*를 가진다.
+$\{\psi_i: U_i \rightarrow X\}$가 fpqc cover라 하자. 그럼 $X$ 위의 quasi-coherent sheaf를 주는 것은, 각 $U_i$ 위의 quasi-coherent sheaf $\mathcal{F}_i$들과, $U_i\times_X U_j$ 위에서 cocycle 조건을 만족하는 isomorphism $\varphi_{ij}: \operatorname{pr}_2^\ast \mathcal{F}_j\cong \operatorname{pr}_1^\ast \mathcal{F}_i$들의 데이터를 주는 것과 동치이다. 즉 quasi-coherent sheaf는 fpqc 위상에 대하여 *effective descent*를 가진다.
 :::
 ::: 증명
 문제가 국소적이므로 $X=\Spec A$이고 covering이 단일 faithfully flat morphism $\Spec B \rightarrow \Spec A$인 경우로 환원된다. 이 때 $U_i\times_X U_j$는 $\Spec(B\otimes_A B)$이고, 주어진 데이터는 정확히 $B$-module $N=\Gamma(\Spec B, \mathcal{F}_1)$과 $B\otimes_A B$-module 동형 $\varphi_N$의 cocycle 쌍, 즉 [정의 4](#def4)의 descent datum이다. [§준연접층, ⁋정리 9](/ko/math/scheme_theory/quasicoherent_sheaves#thm9)의 quasi-coherent sheaf와 module의 대응과 pullback의 base change 해석 ([§준연접층, ⁋명제 15](/ko/math/scheme_theory/quasicoherent_sheaves#prop15)) 아래에서, 이 데이터는 $\operatorname{Desc}(B/A)$의 대상에 정확히 대응한다. 따라서 [정리 6](#thm6)에 의해 이는 유일한 $A$-module $M$, 즉 유일한 quasi-coherent sheaf $\widetilde M$으로부터 오며, 그 morphism까지 동치이다.
@@ -259,15 +259,15 @@ $\{f_i: U_i \rightarrow X\}$가 fpqc cover라 하자. 그럼 $X$ 위의 quasi-co
 $\{U_i \rightarrow X\}$가 fpqc cover이고, 각 $U_i$ 위에서 affine morphism $V_i \rightarrow U_i$들과 $U_i\times_X U_j$ 위의 cocycle 동형 데이터가 주어졌다 하자. 그럼 이 데이터는 $X$ 위의 affine morphism $V \rightarrow X$로부터 유일하게 base change되어 온다. 즉 affine scheme은 fpqc 위상에 대하여 effective descent를 가진다.
 :::
 ::: 증명
-Affine morphism $V_i \rightarrow U_i$은 $U_i$ 위의 준연접 $\mathcal{O}_{U_i}$-대수층 $\mathcal{A}_i=(g_i)_\ast \mathcal{O}_{V_i}$에 의해 $V_i=\operatorname{\mathbf{Spec}}\mathcal{A}_i$로 복원된다. 주어진 cocycle 데이터는 $\mathcal{A}_i$들 위의 quasi-coherent sheaf 동형으로서 대수 구조를 보존하는 것이므로, [정리 10](#thm10)에 의해 $X$ 위의 준연접 $\mathcal{O}_X$-대수층 $\mathcal{A}$로 유일하게 하강한다. 대수 구조의 하강은 곱셈 morphism $\mathcal{A}_i\otimes \mathcal{A}_i \rightarrow \mathcal{A}_i$ 또한 [정리 10](#thm10)의 동치 아래에서 함께 내려오기 때문이다. 그럼 $V=\operatorname{\mathbf{Spec}}\mathcal{A} \rightarrow X$가 원하는 affine morphism이며, 그 base change가 주어진 $V_i \rightarrow U_i$들을 회복함은 affine morphism과 준연접 대수층의 대응이 base change와 호환되기 때문이다.
+Affine morphism $V_i \rightarrow U_i$은 $U_i$ 위의 준연접 $\mathcal{O}_{U_i}$-대수층 $\mathcal{A}_i=(\sigma_i)_\ast \mathcal{O}_{V_i}$에 의해 $V_i=\operatorname{\mathbf{Spec}}\mathcal{A}_i$로 복원된다. 주어진 cocycle 데이터는 $\mathcal{A}_i$들 위의 quasi-coherent sheaf 동형으로서 대수 구조를 보존하는 것이므로, [정리 10](#thm10)에 의해 $X$ 위의 준연접 $\mathcal{O}_X$-대수층 $\mathcal{A}$로 유일하게 하강한다. 대수 구조의 하강은 곱셈 morphism $\mathcal{A}_i\otimes \mathcal{A}_i \rightarrow \mathcal{A}_i$ 또한 [정리 10](#thm10)의 동치 아래에서 함께 내려오기 때문이다. 그럼 $V=\operatorname{\mathbf{Spec}}\mathcal{A} \rightarrow X$가 원하는 affine morphism이며, 그 base change가 주어진 $V_i \rightarrow U_i$들을 회복함은 affine morphism과 준연접 대수층의 대응이 base change와 호환되기 때문이다.
 :::
 
 [정리 11](#thm11)은 affine scheme이 fpqc 하강에 대해 effective임을 말하며, 같은 결론은 quasi-affine morphism까지 확장되지만 그 증명은 여기에서 다루지 않는다. (Stacks 0247) 이것이 representability 이론과 만나는 지점이다. 어떤 functor $F:\Sch^\op \rightarrow \Set$이 fpqc sheaf이고, 적절한 fpqc cover 위에서 representable이며 그 위의 데이터가 affine으로 하강한다면, $F$ 자신이 어떤 scheme에 의해 representable이라고 결론지을 수 있다. ([§점함자, ⁋정의 3](/ko/math/scheme_theory/functor_of_points#def3)) 즉 하강은 functor적으로 정의된 moduli 문제가 실제 scheme을 산출하는지를 검증하는 표준 도구이다. 실제로 [§점함자](/ko/math/scheme_theory/functor_of_points)에서 다룬 fiber product의 functor of points 기술처럼 ([§점함자, ⁋명제 11](/ko/math/scheme_theory/functor_of_points#prop11)), 점별로 정의된 functor의 representability는 국소적 representability와 하강의 결합으로 환원된다.
 
-성질들의 하강 또한 같은 원리로 정리된다. Scheme morphism $f: X \rightarrow Y$의 여러 성질은 fpqc-local on the base이다. 즉 어떤 fpqc cover $\{Y_i \rightarrow Y\}$를 잡아 각 base change $f_i: X\times_Y Y_i \rightarrow Y_i$가 그 성질을 가지면, $f$ 자신도 그 성질을 가진다.
+성질들의 하강 또한 같은 원리로 정리된다. Scheme morphism $\psi: X \rightarrow Y$의 여러 성질은 fpqc-local on the base이다. 즉 어떤 fpqc cover $\{Y_i \rightarrow Y\}$를 잡아 각 base change $\psi_i: X\times_Y Y_i \rightarrow Y_i$가 그 성질을 가지면, $\psi$ 자신도 그 성질을 가진다.
 
 ::: 명제 12
-$\{Y_i \rightarrow Y\}$를 fpqc cover라 하고 $f: X \rightarrow Y$를 scheme morphism이라 하자. 그럼 $f$가 다음 성질들 가운데 하나를 가지는 것은, 각 base change $f_i: X\times_Y Y_i \rightarrow Y_i$가 그 성질을 가지는 것과 동치이다: flat, faithfully flat, 그리고 affine, locally of finite type, locally of finite presentation, 그리고 surjective.
+$\{Y_i \rightarrow Y\}$를 fpqc cover라 하고 $\psi: X \rightarrow Y$를 scheme morphism이라 하자. 그럼 $\psi$가 다음 성질들 가운데 하나를 가지는 것은, 각 base change $\psi_i: X\times_Y Y_i \rightarrow Y_i$가 그 성질을 가지는 것과 동치이다: flat, faithfully flat, 그리고 affine, locally of finite type, locally of finite presentation, 그리고 surjective.
 :::
 ::: 증명
 각 성질이 base change에 대해 보존됨은 표준적이므로 (flatness의 경우 [§평탄사상, ⁋명제 3](/ko/math/scheme_theory/flat_morphisms#prop3)), fpqc cover 위에서 성립하면 원래 morphism에서도 성립함만 보이면 된다. 문제가 $Y$ 위에서 국소적이고 quasi-compact 조건으로 유한 covering으로 환원되므로, $Y=\Spec A$, covering이 단일 faithfully flat $\Spec A' \rightarrow \Spec A$인 경우만 본다.
