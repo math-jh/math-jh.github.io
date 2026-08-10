@@ -28,7 +28,10 @@ fi
 
 BUSY_RE='esc to interrupt|Esc to interrupt|Interrupt'
 
-log() { printf '[%s blogdev-bot] %s\n' "$(date '+%H:%M:%S')" "$*" >&2; }
+# 날짜까지 찍는다 — 대시보드(scripts/dashboard/server.py)가 타임스탬프 간격으로
+# 실행을 갈라 마지막 실행분만 오류 판정에 쓴다. 날짜가 없으면 그 분할이 안 돼
+# "마지막 10 줄" 폴백으로 내려가고, 며칠 지난 오류가 계속 불을 켠다.
+log() { printf '[%s blogdev-bot] %s\n' "$(date '+%Y-%m-%d %H:%M:%S')" "$*" >&2; }
 
 _pane() { tmux capture-pane -t "$R_SESSION" -p 2>/dev/null || true; }
 

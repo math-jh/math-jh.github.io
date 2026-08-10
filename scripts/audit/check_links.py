@@ -46,6 +46,7 @@ import argparse
 import os
 import re
 import sys
+import time
 import urllib.request
 from collections import defaultdict, OrderedDict
 from dataclasses import dataclass, field
@@ -657,6 +658,16 @@ def render_report(audits: List[PostAudit]) -> str:
     return "\n".join(lines).rstrip() + "\n"
 
 
+def _log(msg: str, stream=sys.stdout) -> None:
+    """진행 상황을 타임스탬프와 함께 남긴다 (--report 모드 = 크론 전용).
+
+    대시보드(scripts/dashboard/server.py)가 이 타임스탬프로 실행 경계를 잡아
+    마지막 실행분만 오류 판정에 쓴다. 시작 줄이 있어야 도중에 죽어 남은
+    트레이스백도 그 실행에 붙는다. 보고서 본문을 stdout 으로 뽑는 수동
+    모드에서는 부르지 않는다 — 출력이 섞인다."""
+    print(f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] {msg}", file=stream, flush=True)
+
+
 def main(argv: Optional[List[str]] = None) -> int:
     parser = argparse.ArgumentParser(
         description="Audit Jekyll posts for frontmatter and link integrity.",
@@ -681,6 +692,10 @@ def main(argv: Optional[List[str]] = None) -> int:
     )
     args = parser.parse_args(argv)
 
+    if args.report is not None:
+        _log(f"audit 시작 — category={args.category or 'all'} "
+             f"external={'on' if args.check_external else 'off'}")
+
     if not POSTS_DIR.exists():
         print(f"error: _posts directory not found at {POSTS_DIR}", file=sys.stderr)
         return 2
@@ -701,7 +716,7 @@ def main(argv: Optional[List[str]] = None) -> int:
     else:
         args.report.parent.mkdir(parents=True, exist_ok=True)
         args.report.write_text(report, encoding="utf-8")
-        print(f"wrote {args.report}")
+        _log(f"wrote {args.report}")
 
     has_issues = any(a.issues for a in audits)
     return 1 if has_issues else 0

@@ -286,6 +286,43 @@ def _log_runs(path, now, window=86400):
     return sorted(out)[-300:]
 
 
+_ERR_RE = re.compile(r"traceback|\bexception\b|\bfail(ed|ure)\b|\berrors?\s*[:=]\s*[1-9]"
+                     r"|\berror\b(?!s?\s*[:=]\s*0)", re.I)
+
+
+def _last_run_lines(path, interval, n=10):
+    """마지막 실행이 남긴 줄만 돌려준다. 오류 판정 범위를 여기로 좁히면,
+    지난 실행에서 난 오류가 로그 꼬리에 남아 있어도 최신 실행이 깨끗하면
+    불이 꺼진다.
+
+    실행 경계는 타임스탬프 간격으로 잡는다 — gap 을 넘으면 다른 실행이다.
+    타임스탬프 없는 줄(트레이스백 등)은 직전 줄의 실행에 붙으므로, 마지막
+    줄 뒤에 붙은 크래시도 잡힌다. 날짜 없는 로그(blogdev-bot·audit)는
+    경계를 알 수 없어 마지막 n 줄로 폴백한다."""
+    lines = tail(path, 400, maxbytes=500_000)
+    stamps = []
+    for i, ln in enumerate(lines):
+        m = _RUN_TS_RE.search(ln)
+        if not m:
+            continue
+        try:
+            stamps.append((i, time.mktime(
+                (int(m.group(1)), int(m.group(2)), int(m.group(3)),
+                 int(m.group(4)), int(m.group(5)), int(m.group(6) or 0), 0, 0, -1))))
+        except Exception:
+            continue
+    if not stamps:
+        return lines[-n:]
+    # 한 실행 안의 줄 간격(GSC full sweep 은 10 분 넘게 벌어진다)보다는 크고,
+    # 실행 사이 간격(=cron 주기)보다는 작아야 한다.
+    gap = max(300, interval * 0.25)
+    start = stamps[0][0]
+    for (i, ts), (_, prev) in zip(stamps[1:], stamps):
+        if ts - prev > gap:
+            start = i
+    return lines[start:]
+
+
 def sec_workers():
     now = time.time()
     out = []
@@ -307,11 +344,11 @@ def sec_workers():
         if not runs and ts is not None and now - ts <= 86400:
             runs = [int(ts)]
         lines = tail(w["log"], 10) if w.get("log") else []
+        # 표시용 꼬리는 10 줄이지만 오류 판정은 마지막 실행분만 본다.
         # errors=0 / error_count: 0 같은 정상 요약줄을 오탐하지 않도록 좁게 잡는다.
         # quota-gate blocked 는 설계된 스킵이지 오류가 아니다.
-        err = any(re.search(r"traceback|\bexception\b|\bfail(ed|ure)\b|\berrors?\s*[:=]\s*[1-9]"
-                            r"|\berror\b(?!s?\s*[:=]\s*0)", ln, re.I)
-                  for ln in lines)
+        err = any(_ERR_RE.search(ln)
+                  for ln in (_last_run_lines(w["log"], w["interval"]) if w.get("log") else []))
         out.append(dict(key=w["key"], name=w["name"], schedule=w["schedule"],
                         status=status, age=age, last_ts=ts, err=err, tail=lines,
                         runs=runs, has_log=bool(w.get("log"))))
