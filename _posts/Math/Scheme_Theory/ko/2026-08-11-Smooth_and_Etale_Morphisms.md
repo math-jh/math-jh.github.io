@@ -15,9 +15,9 @@ published: false
 drift_needed: true
 ---
 
-Cotangent sheaf $\Omega_{X/S}$가 ([§Kähler 미분과 여접층, ⁋정의 4](/ko/math/scheme_theory/sheaf_of_differentials#def4)) 만족하는 두 exact sequence는 ([§Kähler 미분과 여접층, ⁋명제 1](/ko/math/scheme_theory/sheaf_of_differentials#prop1), [§Kähler 미분과 여접층, ⁋명제 2](/ko/math/scheme_theory/sheaf_of_differentials#prop2)) 모두 오른쪽에서만 exact하며, 왼쪽 끝을 $0$으로 막을 수 있는지는 morphism 자체의 성질에 달려 있다. $X$를 affine space 안의 closed subscheme으로 국소적으로 표현했을 때 conormal exact sequence가 왼쪽으로 연장되어 split short exact sequence가 되는 것은 $\varphi$가 flat이고 ([§평탄사상, ⁋정의 1](/ko/math/scheme_theory/flat_morphisms#def1)) 그 geometric fiber가 regular인 것과 동치이며, 우리는 이 가운데 후자를 *smooth* morphism의 정의로 삼는다. 반대쪽 극단으로 $\Omega_{X/S}$가 통째로 소멸하는 경우를 *unramified* morphism이라 부르고, 두 조건을 함께 요구하여 얻어지는 상대차원 $0$의 morphism이 *étale* morphism이다. 이 글에서는 먼저 unramified morphism을 정의하고 대각선 morphism을 통한 특징을 제시한 뒤, smooth morphism을 flat이면서 geometric fiber가 regular인 morphism으로 정의하고 그 Jacobian 판정을 본다. 이어서 étale morphism을 두 개념의 교집합으로 도입하고 standard étale 모형과 예시를 살펴본 다음, 세 개념을 통일적으로 다루는 square-zero 확대에 대한 무한소 lifting 판정으로 마무리한다.
+우리는 본질적으로 cotangent sheaf가 주는 exact sequence들은 *right* exact이기만 하다는 것을 살펴보았다. ([§Kähler 미분과 여접층, ⁋명제 6](/ko/math/scheme_theory/sheaf_of_differentials#prop6) 이후의 exact sequence들) 이러한 정보의 손실을 막기 위해서는 morphism에 특수한 조건을 부여해야 하는데, 그것이 smooth morphism의 동기이다. 반대쪽 극단은 $\Omega_{X/S}$가 통째로 소멸하는 경우로, 우리는 이를 *unramified* morphism이라 부른다. 마지막으로 우리는 smooth unramified morphism인 *étale* morphism을 정의한다. 
 
-우리는 이 글 전체에서 morphism이 *locally of finite presentation*임을 기본 가정으로 둔다. Locally Noetherian base 위에서는 이것이 locally of finite type과 일치하므로, 독자는 Noetherian 맥락에서 후자로 읽어도 무방하다.
+우리는 이 글 전체에서 morphism이 *locally of finite presentation*임을 기본 가정으로 둔다. 이는 (대부분의 관심사인) locally Noetherian base 위에서는 이것이 locally of finite type과 일치하므로 직관적으로는 이렇게 생각해도 무방하다. 
 
 ## Unramified 사상
 
@@ -31,7 +31,7 @@ $$\Omega_{X/S}=0$$
 인 것이다.
 :::
 
-이 정의는 affine 위에서 곧바로 계산된다. $S=\Spec A$, $X=\Spec B$이면 $\Omega_{X/S}=\widetilde{\Omega_{B/A}}$이므로 ([§Kähler 미분과 여접층, ⁋정의 4](/ko/math/scheme_theory/sheaf_of_differentials#def4)), $\varphi$가 unramified한 것은 Kähler 미분 module $\Omega_{B/A}$가 영인 것과 동치이다. 가령 field 확대 $K \subseteq L$이 separable algebraic이면 $\Omega_{L/K}=0$이고, 따라서 $\Spec L \rightarrow \Spec K$는 unramified하다. 반대로 characteristic $p$에서 $L=K(t^{1/p})$와 같은 inseparable 확대는 $\Omega_{L/K}\neq 0$을 주어 unramified하지 않다.
+이 정의는 affine 위에서 곧바로 계산된다. $S=\Spec A$, $X=\Spec B$이면 $\Omega_{X/S}=\widetilde{\Omega_{B/A}}$이므로 ([§Kähler 미분과 여접층, ⁋정의 4](/ko/math/scheme_theory/sheaf_of_differentials#def4)), $\varphi$가 unramified한 것은 Kähler 미분 module $\Omega_{B/A}$가 영인 것과 동치이다. 가령 field 확대 $\mathbb{K} \subseteq \mathbb{L}$이 separable algebraic이면 $\Omega_{\mathbb{L}/\mathbb{K}}=0$이고, 따라서 $\Spec \mathbb{L} \rightarrow \Spec \mathbb{K}$는 unramified하다. 반대로 characteristic $p$에서 $\mathbb{L}=\mathbb{K}(t^{1/p})$와 같은 inseparable 확대는 $\Omega_{\mathbb{L}/\mathbb{K}}\neq 0$을 주어 unramified하지 않다.
 
 Unramified 조건은 대각선 morphism을 통해 좌표 독립적으로 표현된다. Cotangent sheaf 자체가 대각선의 conormal로 정의되므로, 그 소멸은 대각선이 열린 부분scheme이 되는 것과 직접 연결된다.
 
@@ -188,7 +188,7 @@ $$B=\bigl(A[t]/(f)\bigr)_g$$
 여기서 $A[t]/(f)$는 monic $f$로 인하여 $A$ 위에서 자유 module, 따라서 flat하고, localization $(\cdot)_g$ 역시 flat하므로 $B$는 $A$ 위에서 flat하다. 한편 conormal exact sequence에서 $\Omega_{(A[t]/(f))/A}\cong (A[t]/(f))/(f')$이고 $f'$를 가역으로 만드는 localization에서 이 module이 소멸하므로 $\Omega_{B/A}=0$이다. 따라서 standard étale morphism은 실제로 étale하며, 핵심 조건인 $f'$의 가역성은 정확히 $f=0$이 중근을 가지지 않는다는 분리가능성의 대수적 표현이다. Étale morphism은 국소적으로 항상 이 standard 형태를 가진다는 구조 정리가 성립하지만, 그 증명은 본 글의 범위를 넘는다.
 
 ::: 예시 10
-Separable algebraic field 확대 $K \subseteq L$에 대하여 $\Spec L \rightarrow \Spec K$는 étale하다. 실제로 primitive element 정리에 의하여 $L=K[t]/(f)$이고 $f$가 separable이므로 $f'$가 $L$에서 가역이다. 따라서 이는 standard étale morphism이며, fiber가 한 점인 covering의 가장 단순한 예이다. 반면 inseparable 확대 $\mathbb{F}_p(t^{1/p}) \supseteq \mathbb{F}_p(t)$는 $\Omega\neq 0$이므로 unramified하지 않고, étale하지도 않다.
+Separable algebraic field 확대 $\mathbb{K} \subseteq \mathbb{L}$에 대하여 $\Spec \mathbb{L} \rightarrow \Spec \mathbb{K}$는 étale하다. 실제로 primitive element 정리에 의하여 $\mathbb{L}=\mathbb{K}[t]/(f)$이고 $f$가 separable이므로 $f'$가 $\mathbb{L}$에서 가역이다. 따라서 이는 standard étale morphism이며, fiber가 한 점인 covering의 가장 단순한 예이다. 반면 inseparable 확대 $\mathbb{F}_p(t^{1/p}) \supseteq \mathbb{F}_p(t)$는 $\Omega\neq 0$이므로 unramified하지 않고, étale하지도 않다.
 :::
 
 ::: 예시 11
