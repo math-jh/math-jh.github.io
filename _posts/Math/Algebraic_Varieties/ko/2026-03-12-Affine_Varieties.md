@@ -17,7 +17,7 @@ Algebraic geometry에서 우리의 목표는 다항식으로 정의되는 기하
 
 $$Z(f)= \{(x_1, \ldots, x_n) \in \mathbb{A}^n \mid f(x_1, \ldots, x_n) = 0\},\qquad f\in \mathbb{K}[\x_1,\ldots, \x_n]$$
 
-으로 주어지는 집합들에 관심이 있다. 이는 $\mathbb{K}^n$에서 다항식 $f$의 root들의 모임이다. 일반적으로 $\mathbb{K}=\mathbb{C}$로 두며, 이러한 가정에서 특히 좋은 것은 $\mathbb{C}$이 algebraically closed라는 사실이다. 그러나, 대부분의 경우 이렇게 가정하는 것이 큰 도움이 되지는 않으므로 우리는 더 일반적인 세팅을 사용하기로 한다. 또, 혼동을 방지하기 위하여 다항식 $f$의 변수는 정자 $\x$와 같은 식으로 표기할 것이다.
+으로 주어지는 집합들에 관심이 있다. 이는 $\mathbb{K}^n$에서 다항식 $f$의 해들의 모임이다. 일반적으로 $\mathbb{K}=\mathbb{C}$로 두며, 이러한 가정에서 특히 좋은 것은 $\mathbb{C}$이 algebraically closed라는 사실이다. 그러나, 대부분의 경우 이렇게 가정하는 것이 큰 도움이 되지는 않으므로 우리는 더 일반적인 세팅을 사용하기로 한다. 또, 혼동을 방지하기 위하여 다항식 $f$의 변수는 정자 $\x$와 같은 식으로 표기할 것이다.
 
 ## 아핀다양체의 정의
 
@@ -87,7 +87,7 @@ $$f_1g_1+\cdots+ f_kg_k,\qquad f_i\in \mathfrak{a}, g_i\in \mathfrak{b}$$
 
 그보다 중요한 것은 위의 명제에 의해, 만일 $\mathbb{A}^n$ 위에서 정의된 affine algebraic set들을 닫힌집합이라고 선언한다면, [\[위상수학\] §집합의 내부, 폐포, 경계, ⁋명제 2](/ko/math/topology/other_concepts#prop2)의 조건들이 모두 만족되고 따라서 $\mathbb{A}^n$ 위의 위상구조가 유일하게 결정된다는 것이다. 이를 *Zariski topology<sub>자리스키 위상</sub>*이라 부른다. 정의에 의해 임의의 affine variety $X$는 적당한 affine space $\mathbb{A}^n$의 닫힌 부분집합이며, 우리는 $\mathbb{A}^n$에서 정의된 위상의 subspace topology를 통해 $X$에서의 위상을 정의할 수 있다. 
 
-특별한 예시로 $\mathbb{A}^1$에서의 Zariski topology를 보면, $\mathbb{K}$의 임의의 원소는 일차식 $\x-x$의 zero set이므로 임의의 singleton은 닫힌집합이고, 따라서 임의의 유한집합은 닫힌집합이다. 그러나 $\mathbb{K}[\x]$의 $0$이 아닌 임의의 원소는 많아야 유한 개의 root만을 가지므로, 이 위상구조 상에서는 ($\mathbb{K}$가 유한집합이 아닌 한) 무한한 원소를 가진 닫힌집합은 오직 $\mathbb{K}$ 자기자신 뿐이다. 즉 $\mathbb{A}^1$의 Zariski topology는 cofinite topology이며, 이로부터 우리는 Zariski topology가 Hausdorff일 필요가 없다는 것을 관찰할 수 있다. 더 일반적으로 irreducible space는 Hausdorff가 될 수 없고, 우리의 정의에서 affine variety들은 모두 irreducible이므로 임의의 affine variety는 Hausdorff space가 아니다. ([\[위상수학\] §차원, ⁋명제 7](/ko/math/topology/dimension#prop7))
+특별한 예시로 $\mathbb{A}^1$에서의 Zariski topology를 보면, $\mathbb{K}$의 임의의 원소는 일차식 $\x-x$의 zero set이므로 임의의 singleton은 닫힌집합이고, 따라서 임의의 유한집합은 닫힌집합이다. 그러나 $\mathbb{K}[\x]$의 $0$이 아닌 임의의 원소는 많아야 유한 개의 해만을 가지므로, 이 위상구조 상에서는 ($\mathbb{K}$가 유한집합이 아닌 한) 무한한 원소를 가진 닫힌집합은 오직 $\mathbb{K}$ 자기자신 뿐이다. 즉 $\mathbb{A}^1$의 Zariski topology는 cofinite topology이며, 이로부터 우리는 Zariski topology가 Hausdorff일 필요가 없다는 것을 관찰할 수 있다. 더 일반적으로 irreducible space는 Hausdorff가 될 수 없고, 우리의 정의에서 affine variety들은 모두 irreducible이므로 임의의 affine variety는 Hausdorff space가 아니다. ([\[위상수학\] §차원, ⁋명제 7](/ko/math/topology/dimension#prop7))
 
 이제 우리는 Zariski topology의 열린집합들을 살펴보자.
 

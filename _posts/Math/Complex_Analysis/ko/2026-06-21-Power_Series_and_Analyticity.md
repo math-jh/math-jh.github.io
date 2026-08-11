@@ -161,7 +161,7 @@ $$f(z) = \sum_{k=0}^{\infty} b_k (z - z_0)^{m+k}$$
 이므로 $f$의 Taylor 계수는 $n < m$에서 모두 $0$이고 $n = m$에서 $b_0 \neq 0$이다. 따라서 $f$는 $z_0$에서 order $m$인 영점을 가진다.
 :::
 
-명제 6은 holomorphic function의 영점이 다항식의 root와 똑같은 방식으로 인수 $(z - z_0)^m$을 내놓되, 남는 인수 $g$가 영점에서 사라지지 않는 holomorphic function이라는 점만 다름을 보인다. 이 인수분해에서 $g(z_0) \neq 0$이라는 조건이 $g$가 $z_0$ 근방에서 부호 없이 $0$에서 떨어져 있게 하므로, $z_0$ 근처에서 $f$의 영점은 $z_0$ 하나뿐이다. 곧 항등적으로 $0$이 아닌 holomorphic function의 영점은 고립되어 있다. 또 order $m$은 $f$가 영점 근방에서 $\lvert f(z)\rvert \approx \lvert g(z_0)\rvert\,\lvert z - z_0\rvert^m$의 비율로 사라짐을 알려 주어, 영점의 깊이를 정량적으로 잰다.
+명제 6은 holomorphic function의 영점이 다항식의 해와 똑같은 방식으로 인수 $(z - z_0)^m$을 내놓되, 남는 인수 $g$가 영점에서 사라지지 않는 holomorphic function이라는 점만 다름을 보인다. 이 인수분해에서 $g(z_0) \neq 0$이라는 조건이 $g$가 $z_0$ 근방에서 부호 없이 $0$에서 떨어져 있게 하므로, $z_0$ 근처에서 $f$의 영점은 $z_0$ 하나뿐이다. 곧 항등적으로 $0$이 아닌 holomorphic function의 영점은 고립되어 있다. 또 order $m$은 $f$가 영점 근방에서 $\lvert f(z)\rvert \approx \lvert g(z_0)\rvert\,\lvert z - z_0\rvert^m$의 비율로 사라짐을 알려 주어, 영점의 깊이를 정량적으로 잰다.
 
 ::: 예시 7 (위수의 계산)
 함수 $f(z) = z^2(e^z - 1)$의 원점에서의 영점의 order를 구한다. $e^z = \sum_{n\geq 0} z^n/n!$이므로 ([§복소정칙함수, ⁋정의 10](/ko/math/complex_analysis/holomorphic_functions#def10))

@@ -190,7 +190,7 @@ $$T^1(B/k,M)=T^2(B/k,M)=0\qquad(\text{모든 }B\text{-module }M)$$
 이다. 곧 smooth한 $B$의 변형은 어떤 square-zero extension 위로도 동형을 무시하면 유일하게 (장애 없이) 존재하며, 그 무한소 automorphism은 vector field $\Der_k(B,B)$가 통제한다.
 :::
 ::: 증명
-$B$가 smooth하면 ([\[스킴\] §매끄러운 사상과 étale 사상, ⁋명제 6](/ko/math/scheme_theory/smooth_and_etale_morphisms#prop6)) conormal exact sequence
+$B$가 smooth하면 ([\[스킴\] §매끄러운 사상과 étale 사상, ⁋명제 4](/ko/math/scheme_theory/smooth_and_etale_morphisms#prop4)) conormal exact sequence
 
 $$0\longrightarrow I/I^2\overset{\overline{d}}{\longrightarrow}\Omega_{P/k}\otimes_PB\longrightarrow\Omega_{B/k}\longrightarrow0$$
 

@@ -150,14 +150,14 @@ Liouville 정리는 holomorphicity와 boundedness가 양립하기에는 너무 �
 
 ## 대수학의 기본정리
 
-복소수체에서는 상수가 아닌 모든 다항식이 root를 가진다. 이 사실이 대수학의 기본정리이며, 그 이름과 달리 순수하게 algebraic한 증명은 알려져 있지 않고 해석학의 도구가 본질적으로 개입한다. Liouville 정리를 쓰면 root가 없다는 가정에서 다항식의 역수가 유계인 entire function이 되어 모순이 빚어짐을 간단히 보일 수 있다.
+복소수체에서는 상수가 아닌 모든 다항식이 해를 가진다. 이 사실이 대수학의 기본정리이며, 그 이름과 달리 순수하게 algebraic한 증명은 알려져 있지 않고 해석학의 도구가 본질적으로 개입한다. Liouville 정리를 쓰면 해가 없다는 가정에서 다항식의 역수가 유계인 entire function이 되어 모순이 빚어짐을 간단히 보일 수 있다.
 
 ::: 정리 6 (대수학의 기본정리)
-Degree가 $1$ 이상인 임의의 복소계수 다항식 $p(z) = a_n z^n + \cdots + a_1 z + a_0$ ($a_n \neq 0$, $n \geq 1$) 은 $\mathbb{C}$에서 적어도 하나의 root를 가진다.
+Degree가 $1$ 이상인 임의의 복소계수 다항식 $p(z) = a_n z^n + \cdots + a_1 z + a_0$ ($a_n \neq 0$, $n \geq 1$) 은 $\mathbb{C}$에서 적어도 하나의 해를 가진다.
 :::
 
 ::: 증명
-$p$가 root를 갖지 않는다고 가정하면, 곧 모든 $z \in \mathbb{C}$에 대해 $p(z) \neq 0$이면 함수
+$p$가 해를 갖지 않는다고 가정하면, 곧 모든 $z \in \mathbb{C}$에 대해 $p(z) \neq 0$이면 함수
 
 $$g(z) = \frac{1}{p(z)}$$
 
@@ -173,10 +173,10 @@ $$\lvert p(z)\rvert \geq \frac{1}{2}\,\lvert a_n\rvert\,\lvert z\rvert^n \geq \f
 
 이다. 곧 $\lvert z\rvert \geq R$인 곳에서 $\lvert g(z)\rvert \leq 2/(\lvert a_n\rvert R^n)$로 유계이다. 한편 closed 원판 $\overline{D(0, R)}$은 콤팩트이고 $g$가 그 위에서 연속이므로 $\lvert g\rvert$은 거기서 어떤 최댓값 이하로 유계이다. 두 어림을 합치면 $g$는 $\mathbb{C}$ 전체에서 유계인 entire function이다.
 
-Liouville 정리 (따름정리 5) 에 의해 $g$는 상수이고, 따라서 $p = 1/g$도 상수이다. 그런데 이는 $p$의 degree가 $n \geq 1$이라는 가정에 어긋난다. 모순이므로 $p$는 적어도 하나의 root를 가진다.
+Liouville 정리 (따름정리 5) 에 의해 $g$는 상수이고, 따라서 $p = 1/g$도 상수이다. 그런데 이는 $p$의 degree가 $n \geq 1$이라는 가정에 어긋난다. 모순이므로 $p$는 적어도 하나의 해를 가진다.
 :::
 
-정리 6에서 root를 하나 얻으면 인수분해 $p(z) = (z - \alpha)q(z)$로 degree를 하나 낮추고, $q$에 같은 정리를 반복 적용하여 $p$가 (중복도를 세어) 정확히 $n$개의 root를 가짐을 얻는다. 곧 $\mathbb{C}$ 위에서 degree $n$인 다항식은 $p(z) = a_n(z - \alpha_1)\cdots(z - \alpha_n)$으로 일차식의 곱으로 완전히 쪼개지며, 이는 복소수체가 대수적으로 닫혀 있다는 진술과 같다. 해석학의 강성 정리 하나가 대수학의 근본 사실을 떠받친다는 점이 인상적이다.
+정리 6에서 해를 하나 얻으면 인수분해 $p(z) = (z - \alpha)q(z)$로 degree를 하나 낮추고, $q$에 같은 정리를 반복 적용하여 $p$가 (중복도를 세어) 정확히 $n$개의 해를 가짐을 얻는다. 곧 $\mathbb{C}$ 위에서 degree $n$인 다항식은 $p(z) = a_n(z - \alpha_1)\cdots(z - \alpha_n)$으로 일차식의 곱으로 완전히 쪼개지며, 이는 복소수체가 대수적으로 닫혀 있다는 진술과 같다. 해석학의 강성 정리 하나가 대수학의 근본 사실을 떠받친다는 점이 인상적이다.
 
 ## 평균값 성질과 Morera 정리
 
