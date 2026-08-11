@@ -15037,12 +15037,12 @@ R:
     url: /ko/math/category_theory/representable_functors
   - label: '[표현론] §유한군의 표현론'
     url: /ko/math/representation_theory/representations_of_finite_groups
+  - label: '[표현론] §Quiver와 경로대수'
+    url: /ko/math/representation_theory/path_algebras
   - label: '[리 이론] §원환면의 작용'
     url: /ko/math/lie_theory/torus_action
   - label: '[대수다양체] §대수적 군'
     url: /ko/math/algebraic_varieties/algebraic_groups
-  - label: '[표현론] §Quiver와 경로대수'
-    url: /ko/math/representation_theory/path_algebras
   see:
   - label: Irreducible representation
     id: irreducible_representation
@@ -15411,6 +15411,7 @@ R:
   en: root
   ko: 근
   primary: en
+  note: 'Lie theory의 root system 계열(단순근·양근 등)만 영어 root. 다항식의 root는 체론에서 한국어 ''해''로 쓴다 (2026-08-12 룰링). ''중근''도 한국어 유지'
   defs:
   - label: '[리 이론] §근계'
     url: /ko/math/lie_theory/root_systems
