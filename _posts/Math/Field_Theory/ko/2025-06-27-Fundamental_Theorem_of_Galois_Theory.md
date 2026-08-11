@@ -27,7 +27,7 @@ $$k:\SubGrp_{\cl}(\Gamma)\rightarrow\Ext(\mathbb{L}/\mathbb{K});\qquad G\mapsto 
 
 그리고 
 
-$$g:\Ext(\mathbb{L}/\mathbb{K})\rightarrow\SubGrp_{\cl}(\Gamma);\qquad \mathbb{M}\mapsto g(\mathbb{M})\text{ the group of $\mathbb{M}$-automorphisms of $L$}$$
+$$g:\Ext(\mathbb{L}/\mathbb{K})\rightarrow\SubGrp_{\cl}(\Gamma);\qquad \mathbb{M}\mapsto g(\mathbb{M})\text{ the group of $\mathbb{M}$-automorphisms of $\mathbb{L}$}$$
 
 을 생각하면 이들은 서로의 inverse이다. 
 :::
@@ -35,32 +35,40 @@ $$g:\Ext(\mathbb{L}/\mathbb{K})\rightarrow\SubGrp_{\cl}(\Gamma);\qquad \mathbb{M
 일반적으로 $\mathbb{L}/\mathbb{K}$가 infinite degree Galois extension이라면 위 정리에서 *closed* subgroup인 것이 핵심적인 서술이지만, 만일 $\mathbb{L}/\mathbb{K}$가 finite degree Galois extension이라면 [§갈루아 군의 성질들, ⁋예시 1](/ko/math/field_theory/properties_of_galois_extensions#ex1)에서 살펴본 것과 같이 $\Gal(\mathbb{L}/\mathbb{K})$는 discrete space이고, 따라서 임의의 subgroup이 closed가 되어 이 경우 [정리 1](#thm1)은 subextension들과 subgroup들 사이의 대응이라는 고전적인 Galois 이론의 기본정리가 복원된다. 
 
 ::: 명제 2
-Finite degree Galois extension $\mathbb{L}/\mathbb{K}$에 대하여 $\card\Gal(\mathbb{L}/\mathbb{K})=[\mathbb{L}:\mathbb{K}]$가 성립한다.
+Finite degree Galois extension $\mathbb{L}/\mathbb{K}$에 대하여 $\lvert\Gal(\mathbb{L}/\mathbb{K})\rvert=[\mathbb{L}:\mathbb{K}]$가 성립한다.
 :::
 ::: 증명
-$\mathbb{L}/\mathbb{K}$가 separable이므로 $\mathbb{L}$에서 $\overline{\mathbb{K}}$로의 $\mathbb{K}$-homomorphism의 개수는 $[\mathbb{L}:\mathbb{K}]_s=[\mathbb{L}:\mathbb{K}]$이다. ([§에탈대수, ⁋정의 10](/ko/math/field_theory/etale_algebras#def10), [§분리가능차수, ⁋명제 9](/ko/math/field_theory/separable_degree#prop9)) 한편 $\mathbb{L}/\mathbb{K}$는 quasi-Galois이므로 [§갈루아 확장, ⁋명제 5](/ko/math/field_theory/galois_extension#prop5)의 넷째 조건에 의하여 이들 homomorphism은 모두 $\mathbb{L}$로 들어가며, $\mathbb{L}/\mathbb{K}$가 finite degree이므로 단사인 $\mathbb{K}$-linear map은 자동으로 전사이다. 즉 이들은 정확히 $\mathbb{L}$의 $\mathbb{K}$-automorphism들이다.
+우리의 주장은 $\mathbb{L}$의 $\mathbb{K}$-automorphism들의 집합이 정확히 $\mathbb{L}$에서 $\overline{\mathbb{K}}$로의 $\mathbb{K}$-homomorphism들과 일대일 대응을 이룬다는 것이다. 우선 $\mathbb{L}$의 $\mathbb{K}$-automorphism이 주어졌을 때, 이는 $\mathbb{L}$에서 $\overline{\mathbb{K}}$로 가는 inclusion과 합성하여 $\mathbb{K}$-homomorphism $\mathbb{L} \rightarrow \overline{\mathbb{K}}$를 준다. 거꾸로 $\mathbb{K}$-homomorphism $u:\mathbb{L} \rightarrow \overline{\mathbb{K}}$가 주어졌다 하면, $\mathbb{L}/\mathbb{K}$가 quasi-Galois이므로 [§갈루아 확장, ⁋명제 5](/ko/math/field_theory/galois_extension#prop5)의 넷째 조건에 의하여 $u$의 image가 $\mathbb{L}$에 들어가고, 따라서 $u$를 $\mathbb{L}$의 $\mathbb{K}$-endomorphism으로 생각할 수 있다. Field homomorphism은 반드시 단사이며, $\mathbb{L}/\mathbb{K}$가 finite degree이므로 단사인 $\mathbb{K}$-linear endomorphism은 전사이다. ([\[선형대수학\] §동형사상, ⁋정리 7](/ko/math/linear_algebra/isomorphic_vector_spaces#thm7)) 즉 $u$는 $\mathbb{L}$의 $\mathbb{K}$-automorphism이며, 이 대응이 서로의 역임을 쉽게 확인할 수 있다.
+
+따라서 $\lvert\Gal(\mathbb{L}/\mathbb{K})\rvert$는 $\mathbb{L}$에서 $\overline{\mathbb{K}}$로의 $\mathbb{K}$-homomorphism의 개수, 곧 separable degree $[\mathbb{L}:\mathbb{K}]_s$이다. ([§에탈대수, ⁋정의 10](/ko/math/field_theory/etale_algebras#def10)) 그런데 $\mathbb{L}/\mathbb{K}$가 finite degree separable extension이므로 étale algebra이고 ([§분리가능확대체, ⁋정의 8](/ko/math/field_theory/separable_extensions#def8)), 따라서 [§에탈대수, ⁋명제 13](/ko/math/field_theory/etale_algebras#prop13)에 의하여 이 값은 $[\mathbb{L}:\mathbb{K}]$와 같다.
 :::
 
-가장 작은 경우부터 살펴보자.
+이제 우리는 [정리 1](#thm1)의 구체적인 사용을 살펴본다. 우선 처음 살펴볼 것은 가장 단순한 다음의 예이다. 
 
 ::: 예시 3
-$\mathbb{L}=\mathbb{Q}(\sqrt{2},\sqrt{3})$은 $(\x^2-2)(\x^2-3)\in\mathbb{Q}[\x]$의 splitting field이므로 [§갈루아 확장, ⁋명제 5](/ko/math/field_theory/galois_extension#prop5)의 다섯째 조건에 의해 quasi-Galois이고, characteristic $0$의 field는 perfect이므로 ([§체, ⁋명제 18](/ko/math/field_theory/fields#prop18)) 그 algebraic extension은 모두 separable이다. ([§분리가능확대체, ⁋명제 9](/ko/math/field_theory/separable_extensions#prop9)) 즉 [§갈루아 확장, ⁋정리 8](/ko/math/field_theory/galois_extension#thm8)의 둘째 조건에 의하여 $\mathbb{L}/\mathbb{Q}$는 Galois extension이다.
+[§순수비분리확대체](/ko/math/field_theory/purely_inseparable_extensions)의 서두에서 우리는 $\pm\sqrt{2}$와 $\pm\sqrt{3}$을 각각 서로 바꾸는 group $S_2\times S_2$를 Galois 이론의 예고로 삼았었다. 이 group이 실제로 $\mathbb{Q}(\sqrt{2},\sqrt{3})/\mathbb{Q}$의 Galois group임을 확인하는 것이 이 예시의 목표이다.
 
-우선 $\sqrt{3}\not\in\mathbb{Q}(\sqrt{2})$이다. 만일 $\sqrt{3}=a+b\sqrt{2}$라면 양변을 제곱하여 $3=a^2+2b^2+2ab\sqrt{2}$를 얻는데, $\sqrt{2}$가 유리수가 아니므로 $ab=0$이어야 하고, $b=0$이면 $\sqrt{3}$이, $a=0$이면 $\sqrt{3/2}$가 유리수가 되어 모두 모순이기 때문이다. 따라서 $[\mathbb{L}:\mathbb{Q}]=[\mathbb{L}:\mathbb{Q}(\sqrt{2})][\mathbb{Q}(\sqrt{2}):\mathbb{Q}]=4$이고, [명제 2](#prop2)에 의하여 $\card\Gal(\mathbb{L}/\mathbb{Q})=4$이다.
+$\mathbb{L}=\mathbb{Q}(\sqrt{2},\sqrt{3})$이라 하자. 이는 다항식 $(\x^2-2)(\x^2-3)\in\mathbb{Q}[\x]$의 splitting field이므로 [§갈루아 확장, ⁋명제 5](/ko/math/field_theory/galois_extension#prop5)의 마지막 조건에 의해 quasi-Galois이다. 한편, [§체, ⁋명제 18](/ko/math/field_theory/fields#prop18)에 의하여 $\mathbb{Q}$의 algebraic extension은 모두 separable이므로 ([§분리가능확대체, ⁋명제 9](/ko/math/field_theory/separable_extensions#prop9)) [§갈루아 확장, ⁋정리 8](/ko/math/field_theory/galois_extension#thm8)의 둘째 조건에 의하여 $\mathbb{L}/\mathbb{Q}$는 Galois extension이다.
 
-한편 $\Gal(\mathbb{L}/\mathbb{Q})$의 원소는 $\sqrt{2}\mapsto\pm\sqrt{2}$와 $\sqrt{3}\mapsto\pm\sqrt{3}$의 선택으로 완전히 결정되므로 많아야 네 개이고, 따라서 네 가지 선택이 모두 실현된다. 특히 항등원이 아닌 모든 원소의 order가 $2$이므로 $\Gal(\mathbb{L}/\mathbb{Q})$는 $\mathbb{Z}/2\mathbb{Z}\times\mathbb{Z}/2\mathbb{Z}$와 isomorphic하고, 자명하지 않은 proper subgroup은 $\sqrt{3}$의 부호만 바꾸는 $\sigma$, $\sqrt{2}$의 부호만 바꾸는 $\tau$, 그리고 $\sigma\tau$가 각각 생성하는 셋뿐이다. 이제 위의 tower로부터 $\{1,\sqrt{2},\sqrt{3},\sqrt{6}\}$이 $\mathbb{L}$의 $\mathbb{Q}$-basis이므로 $x=a+b\sqrt{2}+c\sqrt{3}+d\sqrt{6}$에 대하여
+우선 $\sqrt{3}\not\in\mathbb{Q}(\sqrt{2})$이다. 만일 $\sqrt{3}=a+b\sqrt{2}$라면 양변을 제곱하여 $3=a^2+2b^2+2ab\sqrt{2}$를 얻는데, $\sqrt{2}$가 유리수가 아니므로 $ab=0$이어야 하고, $b=0$이면 $\sqrt{3}$이, $a=0$이면 $\sqrt{3/2}$가 유리수가 되어 모두 모순이기 때문이다. 따라서 $[\mathbb{L}:\mathbb{Q}]=[\mathbb{L}:\mathbb{Q}(\sqrt{2})][\mathbb{Q}(\sqrt{2}):\mathbb{Q}]=4$이고, [명제 2](#prop2)에 의하여 $\lvert\Gal(\mathbb{L}/\mathbb{Q})\rvert=4$이다.
+
+한편 $\mathbb{L}$은 $f=(\x^2-2)(\x^2-3)$의 root들로 생성되므로, [§갈루아 확장, ⁋정의 12](/ko/math/field_theory/galois_extension#def12) 이후의 논의에 의하여 이 root들의 permutation으로 주어지는 injective homomorphism을 얻으며 그 image는 $f$의 irreducible factor별 root 집합 $\{\pm\sqrt{2}\}$와 $\{\pm\sqrt{3}\}$의 symmetric group들의 곱에 포함된다. 즉 injective homomorphism
+
+$$\Gal(\mathbb{L}/\mathbb{Q})\rightarrow S_2\times S_2$$
+
+를 얻고, 양쪽 모두 네 개의 원소를 가지므로 이는 isomorphism이다.
+
+이제 $S_2\times S_2$에서 항등원이 아닌 세 원소는 모두 order $2$이므로 자명하지 않은 proper subgroup은 이들이 각각 생성하는 셋뿐이며, $\Gal(\mathbb{L}/\mathbb{Q})$ 쪽에서 이는 $\sqrt{3}$의 부호만 바꾸는 $\sigma$, $\sqrt{2}$의 부호만 바꾸는 $\tau$, 그리고 $\sigma\tau$가 각각 생성하는 subgroup들이다. 위의 tower로부터 $\{1,\sqrt{2},\sqrt{3},\sqrt{6}\}$이 $\mathbb{L}$의 $\mathbb{Q}$-basis이므로 $x=a+b\sqrt{2}+c\sqrt{3}+d\sqrt{6}$에 대하여
 
 $$\sigma(x)=a+b\sqrt{2}-c\sqrt{3}-d\sqrt{6},\qquad \tau(x)=a-b\sqrt{2}+c\sqrt{3}-d\sqrt{6},\qquad \sigma\tau(x)=a-b\sqrt{2}-c\sqrt{3}+d\sqrt{6}$$
 
 을 얻고, 따라서 세 subgroup의 fixed field는 각각 $\mathbb{Q}(\sqrt{2})$, $\mathbb{Q}(\sqrt{3})$, $\mathbb{Q}(\sqrt{6})$이다. [정리 1](#thm1)에 의하여 이들이 $\mathbb{L}$의 자명하지 않은 subextension 전부이다.
-
-[§순수비분리확대체](/ko/math/field_theory/purely_inseparable_extensions)의 서두에서 우리는 바로 이 extension의 root들을 서로 바꾸는 group $S_2\times S_2$를 예고로 삼았었다. 위의 계산이 그 예고를 정확한 형태로 갚은 것이다.
 :::
 
 앞의 예시에서는 Galois group이 abelian이라 모든 subgroup이 normal이었다. 다음은 그렇지 않은 가장 작은 예이다.
 
 ::: 예시 4
-$\alpha$를 $2$의 실수 세제곱근, $\omega=e^{2\pi i/3}$이라 하고 $\mathbb{L}=\mathbb{Q}(\alpha,\omega)$라 하자. $\x^3-2$의 세 root가 $\alpha$, $\omega\alpha$, $\omega^2\alpha$이므로 $\mathbb{L}$은 $\x^3-2$의 splitting field이고, 앞의 예시와 같은 이유로 $\mathbb{L}/\mathbb{Q}$는 Galois extension이다. $\x^3-2$는 유리수 root를 갖지 않는 삼차식이므로 irreducible이고 따라서 $[\mathbb{Q}(\alpha):\mathbb{Q}]=3$인데, $\mathbb{Q}(\alpha)$가 $\mathbb{R}$에 포함되어 $\omega$를 포함하지 않으므로 $\mathbb{Q}(\alpha)$ 위에서 $\omega$의 minimal polynomial은 $\x^2+\x+1$이다. 즉 $[\mathbb{L}:\mathbb{Q}]=6$이고 [명제 2](#prop2)에 의하여 $\card\Gal(\mathbb{L}/\mathbb{Q})=6$이다.
+$\alpha$를 $2$의 실수 세제곱근, $\omega=e^{2\pi i/3}$이라 하고 $\mathbb{L}=\mathbb{Q}(\alpha,\omega)$라 하자. $\x^3-2$의 세 root가 $\alpha$, $\omega\alpha$, $\omega^2\alpha$이므로 $\mathbb{L}$은 $\x^3-2$의 splitting field이고, 앞의 예시와 같은 이유로 $\mathbb{L}/\mathbb{Q}$는 Galois extension이다. $\x^3-2$는 유리수 root를 갖지 않는 삼차식이므로 irreducible이고 따라서 $[\mathbb{Q}(\alpha):\mathbb{Q}]=3$인데, $\mathbb{Q}(\alpha)$가 $\mathbb{R}$에 포함되어 $\omega$를 포함하지 않으므로 $\mathbb{Q}(\alpha)$ 위에서 $\omega$의 minimal polynomial은 $\x^2+\x+1$이다. 즉 $[\mathbb{L}:\mathbb{Q}]=6$이고 [명제 2](#prop2)에 의하여 $\lvert\Gal(\mathbb{L}/\mathbb{Q})\rvert=6$이다.
 
 $\omega=(\omega\alpha)/\alpha$이므로 $\mathbb{L}$은 $\x^3-2$의 root들로 생성되고, 따라서 [§갈루아 확장, ⁋정의 12](/ko/math/field_theory/galois_extension#def12) 이후의 논의에서와 같이 root들의 permutation으로 주어지는 injective homomorphism $\Gal(\mathbb{L}/\mathbb{Q})\rightarrow S_3$을 얻는다. 양쪽 모두 여섯 개의 원소를 가지므로 이는 isomorphism이다.
 
@@ -144,10 +152,10 @@ $$\Gal(\mathbb{L}/\mathbb{M})=\left\{\sigma\in \Gal(\mathbb{L}/\mathbb{K})\mid \
 다음 보조정리는 흔히 *Artin의 보조정리*라는 이름으로 불리는 결과로, [정리 1](#thm1)의 증명에서 핵심적인 counting을 제공한다.
 
 ::: 보조정리 8 (Artin)
-Field $\mathbb{N}$과, $\mathbb{N}$의 automorphism들로 이루어진 유한군 $H$가 주어졌다 하자. $H$의 invariant들의 field를 $\mathbb{N}^H$라 하면, $[\mathbb{N}:\mathbb{N}^H]\leq \card H$가 성립한다.
+Field $\mathbb{N}$과, $\mathbb{N}$의 automorphism들로 이루어진 유한군 $H$가 주어졌다 하자. $H$의 invariant들의 field를 $\mathbb{N}^H$라 하면, $[\mathbb{N}:\mathbb{N}^H]\leq \lvert H\rvert$가 성립한다.
 :::
 ::: 증명
-$\card H=m$이라 하고 $H=\{\sigma_1,\ldots,\sigma_m\}$이라 적자. 여기서 $\sigma_1=\id_\mathbb{N}$이다. 결론에 반하여 $\mathbb{N}^H$ 위에서 일차독립인 원소들 $x_1,\ldots,x_{m+1}\in \mathbb{N}$이 존재한다 가정하자.
+$\lvert H\rvert=m$이라 하고 $H=\{\sigma_1,\ldots,\sigma_m\}$이라 적자. 여기서 $\sigma_1=\id_\mathbb{N}$이다. 결론에 반하여 $\mathbb{N}^H$ 위에서 일차독립인 원소들 $x_1,\ldots,x_{m+1}\in \mathbb{N}$이 존재한다 가정하자.
 
 다음의 homogeneous 연립일차방정식
 
@@ -183,11 +191,11 @@ $$\rho:\Gal(\mathbb{L}/\mathbb{M}) \rightarrow \Gal(\mathbb{N}/\mathbb{M});\qqua
 
 이 잘 정의된다. $H=\rho(G)$라 하면 $H$는 $\mathbb{N}$의 automorphism들로 이루어진 유한군이다. 이제 $\mathbb{N}^H$를 계산하면, $x\in \mathbb{N}$이 $H$의 모든 원소에 의해 고정되는 것은 $G$의 모든 원소에 의해 고정되는 것과 같고, 이는 곧 $x\in k(G)=\mathbb{M}$인 것과 같다. 즉 $\mathbb{N}^H=\mathbb{M}$이고, [보조정리 8](#lem8)에 의하여
 
-$$[\mathbb{N}:\mathbb{M}]\leq \card H$$
+$$[\mathbb{N}:\mathbb{M}]\leq \lvert H\rvert$$
 
-이다. 한편 $\mathbb{N}/\mathbb{M}$은 finite degree Galois extension이므로 [명제 2](#prop2)에 의하여 $\card\Gal(\mathbb{N}/\mathbb{M})=[\mathbb{N}:\mathbb{M}]$이다. 따라서
+이다. 한편 $\mathbb{N}/\mathbb{M}$은 finite degree Galois extension이므로 [명제 2](#prop2)에 의하여 $\lvert\Gal(\mathbb{N}/\mathbb{M})\rvert=[\mathbb{N}:\mathbb{M}]$이다. 따라서
 
-$$\card H\leq \card \Gal(\mathbb{N}/\mathbb{M})=[\mathbb{N}:\mathbb{M}]\leq \card H$$
+$$\lvert H\rvert\leq \lvert\Gal(\mathbb{N}/\mathbb{M})\rvert=[\mathbb{N}:\mathbb{M}]\leq \lvert H\rvert$$
 
 이고, $H\subseteq \Gal(\mathbb{N}/\mathbb{M})$이 같은 크기의 유한집합들이므로 $H=\Gal(\mathbb{N}/\mathbb{M})$이다.
 
