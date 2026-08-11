@@ -18550,6 +18550,8 @@ V:
     id: valuation
   - label: Discrete valuation ring
     id: discrete_valuation_ring
+  - label: Local ring
+    id: local_ring
 - id: vanishing_cycle
   en: vanishing cycle
   ko: 소멸 cycle
@@ -18605,6 +18607,9 @@ V:
     id: algebraic_variety
   - label: Scheme
     id: scheme
+  - label: 미분다양체
+    lang: ko
+    id: differentiable_manifold
 - id: vector
   en: vector
   ko: 벡터
@@ -18628,6 +18633,10 @@ V:
   see:
   - label: Fiber bundle
     id: fiber_bundle
+  - label: Tangent bundle
+    id: tangent_bundle
+  - label: Cotangent bundle
+    id: cotangent_bundle
 - id: vector_field
   en: vector field
   ko: 벡터장
@@ -18661,6 +18670,11 @@ V:
   see:
   - label: Left $A$-module
     id: left_a_-module
+  - label: Basis
+    id: basis
+  - label: 일차독립
+    lang: ko
+    id: linear_independence
 - id: vector_space_over_mathbb_k
   en: vector space over $\mathbb{K}$
   ko: $\mathbb{K}$에 대한 벡터공간
@@ -18694,6 +18708,9 @@ V:
   - label: 속도벡터
     lang: ko
     id: velocity_vector
+  - label: 가속도
+    lang: ko
+    id: acceleration
 - id: velocity_vector
   en: velocity vector
   ko: 속도벡터
@@ -18714,6 +18731,11 @@ V:
   defs:
   - label: '[층론] §Verdier 쌍대성'
     url: /ko/math/sheaf_theory/verdier_duality
+  see:
+  - label: Verdier duality
+    id: verdier_duality
+  - label: Verdier dual functor
+    id: verdier_dual_functor
 - id: verdier_dual_functor
   en: verdier dual functor
   ko: Verdier 쌍대 함자
@@ -18721,6 +18743,9 @@ V:
   defs:
   - label: '[층론] §Verdier 쌍대성'
     url: /ko/math/sheaf_theory/verdier_duality
+  see:
+  - label: Verdier dual
+    id: verdier_dual
 - id: verdier_duality
   en: verdier duality
   ko: Verdier 쌍대성
