@@ -4733,6 +4733,13 @@ D:
   defs:
   - label: '[가환대수학] §뇌터 정규화'
     url: /ko/math/commutative_algebra/noether_normalization
+- id: dimension_vector
+  en: dimension vector
+  ko: 차원벡터
+  primary: en
+  defs:
+  - label: '[표현론] §Gabriel 정리'
+    url: /ko/math/representation_theory/gabriel_theorem
 - id: diophantine_equation
   en: Diophantine equation
   ko: 디오판토스 방정식
@@ -14790,6 +14797,13 @@ R:
 - id: reflection
   en: reflection
   ko: 반사
+  primary: en
+  defs:
+  - label: '[표현론] §반사 함자'
+    url: /ko/math/representation_theory/reflection_functors
+- id: reflection_functor
+  en: reflection functor
+  ko: 반사 함자
   primary: en
   defs:
   - label: '[표현론] §반사 함자'
