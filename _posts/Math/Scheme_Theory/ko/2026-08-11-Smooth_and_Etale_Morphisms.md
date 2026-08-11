@@ -8,14 +8,14 @@ permalink: /ko/math/scheme_theory/smooth_and_etale_morphisms
 sidebar: 
     nav: "scheme_theory-ko"
 
-date: 2026-06-21
+date: 2026-08-11
 weight: 21
 
 published: false
 drift_needed: true
 ---
 
-미분기하에서 submersion과 covering map은 smooth morphism 가운데 각각 fiber가 양의 차원을 가지는 경우와 이산적인 경우에 해당한다. 대수기하에서 이 두 개념의 유사물이 *smooth* morphism과 *étale* morphism이며, 둘을 함께 묶는 약한 조건이 *unramified* morphism이다. 이들은 모두 fiber가 base 위에서 균일하게 regular임을 요구하므로, flatness와 ([§평탄사상, ⁋정의 1](/ko/math/scheme_theory/flat_morphisms#def1)) cotangent sheaf의 ([§Kähler 미분과 여접층, ⁋정의 4](/ko/math/scheme_theory/sheaf_of_differentials#def4)) 국소자유성을 조합하여 정의된다. 이 글에서는 먼저 unramified morphism을 cotangent sheaf의 소멸로 정의하고 대각선 morphism을 통한 특징을 제시한 뒤, smooth morphism을 flat이면서 geometric fiber가 regular인 morphism으로 정의하고 그 Jacobian 판정을 본다. 이어서 étale morphism을 두 개념의 교집합으로 도입하고 standard étale 모형과 예시를 살펴본 다음, 세 개념을 통일적으로 다루는 square-zero 확대에 대한 무한소 lifting 판정으로 마무리한다.
+Cotangent sheaf $\Omega_{X/S}$가 ([§Kähler 미분과 여접층, ⁋정의 4](/ko/math/scheme_theory/sheaf_of_differentials#def4)) 만족하는 두 exact sequence는 ([§Kähler 미분과 여접층, ⁋명제 1](/ko/math/scheme_theory/sheaf_of_differentials#prop1), [§Kähler 미분과 여접층, ⁋명제 2](/ko/math/scheme_theory/sheaf_of_differentials#prop2)) 모두 오른쪽에서만 exact하며, 왼쪽 끝을 $0$으로 막을 수 있는지는 morphism 자체의 성질에 달려 있다. $X$를 affine space 안의 closed subscheme으로 국소적으로 표현했을 때 conormal exact sequence가 왼쪽으로 연장되어 split short exact sequence가 되는 것은 $\varphi$가 flat이고 ([§평탄사상, ⁋정의 1](/ko/math/scheme_theory/flat_morphisms#def1)) 그 geometric fiber가 regular인 것과 동치이며, 우리는 이 가운데 후자를 *smooth* morphism의 정의로 삼는다. 반대쪽 극단으로 $\Omega_{X/S}$가 통째로 소멸하는 경우를 *unramified* morphism이라 부르고, 두 조건을 함께 요구하여 얻어지는 상대차원 $0$의 morphism이 *étale* morphism이다. 이 글에서는 먼저 unramified morphism을 정의하고 대각선 morphism을 통한 특징을 제시한 뒤, smooth morphism을 flat이면서 geometric fiber가 regular인 morphism으로 정의하고 그 Jacobian 판정을 본다. 이어서 étale morphism을 두 개념의 교집합으로 도입하고 standard étale 모형과 예시를 살펴본 다음, 세 개념을 통일적으로 다루는 square-zero 확대에 대한 무한소 lifting 판정으로 마무리한다.
 
 우리는 이 글 전체에서 morphism이 *locally of finite presentation*임을 기본 가정으로 둔다. Locally Noetherian base 위에서는 이것이 locally of finite type과 일치하므로, 독자는 Noetherian 맥락에서 후자로 읽어도 무방하다.
 

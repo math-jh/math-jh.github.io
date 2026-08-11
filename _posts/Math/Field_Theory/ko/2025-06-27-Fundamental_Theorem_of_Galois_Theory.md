@@ -14,11 +14,11 @@ weight: 10
 published: false
 revising: true
 
----
-
-우리는 이제 드디어 Galois 이론의 기본정리를 증명할 수 있다. 
+--- 
 
 ## 기본정리의 서술과 응용
+
+우리는 이제 드디어 Galois 이론의 기본정리를 증명한다. 우리는 우선 이를 서술하고, 그 결과들을 살펴본 후 증명을 시작하기로 한다. 
 
 ::: 정리 1
 Field $\mathbb{K}$의 Galois extension $\mathbb{L}/\mathbb{K}$와 그 Galois group $\Gamma=\Gal(\mathbb{L}/\mathbb{K})$을 생각하자. $\Ext(\mathbb{L}/\mathbb{K})$를 $\mathbb{L}$의 subextension들의 모임이라 하고, $\SubGrp_{\cl}(\Gamma)$를 $\Gamma$의 closed subgroup들의 모임이라 하면 $\Ext(\mathbb{L}/\mathbb{K})$와 $\SubGrp_{\cl}(\Gamma)$ 사이의 두 함수
@@ -32,9 +32,7 @@ $$g:\Ext(\mathbb{L}/\mathbb{K})\rightarrow\SubGrp_{\cl}(\Gamma);\qquad \mathbb{M
 을 생각하면 이들은 서로의 inverse이다. 
 :::
 
-정리의 서술에서 $g$가 실제로 closed subgroup을 준다는 것부터가 확인을 필요로 하며, 이는 [보조정리 7](#lem7)에서 다룬다. 이번 절에서는 정리를 받아들이고 그로부터 얻어지는 것들을 먼저 살펴본 후, 증명은 다음 절로 미룬다.
-
-특별히 $\mathbb{L}/\mathbb{K}$가 finite degree Galois extension이라면 [§갈루아 군의 성질들, ⁋예시 1](/ko/math/field_theory/properties_of_galois_extensions#ex1)에서 살펴본 것과 같이 $\Gal(\mathbb{L}/\mathbb{K})$는 discrete space이고, 따라서 임의의 subgroup이 closed이다. 즉 이 경우 [정리 1](#thm1)은 subextension들과 subgroup들 사이의 대응이라는 고전적인 Galois 이론의 기본정리가 된다. 이 경우를 다룰 때 되풀이해서 쓰이는 것이 다음의 counting이다.
+일반적으로 $\mathbb{L}/\mathbb{K}$가 infinite degree Galois extension이라면 위 정리에서 *closed* subgroup인 것이 핵심적인 서술이지만, 만일 $\mathbb{L}/\mathbb{K}$가 finite degree Galois extension이라면 [§갈루아 군의 성질들, ⁋예시 1](/ko/math/field_theory/properties_of_galois_extensions#ex1)에서 살펴본 것과 같이 $\Gal(\mathbb{L}/\mathbb{K})$는 discrete space이고, 따라서 임의의 subgroup이 closed가 되어 이 경우 [정리 1](#thm1)은 subextension들과 subgroup들 사이의 대응이라는 고전적인 Galois 이론의 기본정리가 복원된다. 
 
 ::: 명제 2
 Finite degree Galois extension $\mathbb{L}/\mathbb{K}$에 대하여 $\card\Gal(\mathbb{L}/\mathbb{K})=[\mathbb{L}:\mathbb{K}]$가 성립한다.
