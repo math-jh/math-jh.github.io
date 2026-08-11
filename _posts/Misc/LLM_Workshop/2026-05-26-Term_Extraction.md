@@ -14,6 +14,8 @@ sidebar:
 author: Marvin
 
 date: 2026-05-26
+last_modified_at: 2026-08-11
+
 weight: 15
 
 ---
@@ -129,3 +131,65 @@ review 파일은 현재 2200줄 가까이 쌓여 있다. 이게 사용자에게 
 수치로 마무리한다. 워커가 처음 가동되기 직전인 2026-05-19에 Index_ko.md는 521줄이었다. 일주일 뒤 정식 커밋 시점에는 백필 작업의 결과로 990줄이 되었다. 그 사이 워커가 표를 채웠고, 사용자는 그것을 한 번에 검토하지 않고 글을 계속 썼다.
 
 review.md 쪽에는 아직 검토되지 않은 586개의 ambiguous 항목이 함께 쌓여 있다. 이 중 적지 않은 수가 진짜 정의일 것이고, 그것들이 모두 Index에 도달하기는 어려울지도 모른다. 그래도 늘어난 469줄은 그대로 남으니, 본업은 한 셈이다.
+
+## 사후: terms.yml 동시쓰기 락
+
+아래 두 절이 다루는 스크립트는 위에서 설명한 `extract_terms.py`(20분 cron)가 아니다. 그 사이 추출 파이프라인은 LLM 기반 `term_extract_worker.py`로 갈아엎어졌고(:00/:30 cron, `_data/terms.yml`을 직접 채운다), 지금 크론표에 `extract_terms.py`는 없다. 아래는 이 v2 워커와, 같은 디렉토리의 `terms_lint.py`(terms.yml 검증·정규화기)에 붙은 변경이다.
+
+`terms_lint.py --fix`는 terms.yml을 읽고 다시 쓴다. 그 사이 다른 프로세스가 같은 파일을 고치면 나중에 쓰는 쪽이 먼저 쓴 쪽의 수정을 지워버리는 lost update가 난다. PID 파일 하나로 막는다([커밋](https://github.com/math-jh/math-jh.github.io/commit/2222583c5ab63044fb2f3ce82c1f72eafc248a8e)).
+
+```python
+def acquire_lock(wait_s: float = LOCK_WAIT) -> bool:
+    """살아 있는 PID 가 쥐고 있으면 놓을 때까지 기다린다. 상한 초과 시 False."""
+    deadline = time.monotonic() + wait_s
+    while True:
+        if LOCK_PATH.exists():
+            alive = True
+            try:
+                os.kill(int(LOCK_PATH.read_text().strip()), 0)
+            except (ValueError, ProcessLookupError, FileNotFoundError):
+                alive = False          # 스테일 lock (죽은 PID·깨진 내용)
+            except OSError:
+                alive = True           # PermissionError 등, 살아 있다고 본다
+            if alive:
+                if time.monotonic() >= deadline:
+                    return False
+                time.sleep(5)
+                continue
+        try:
+            LOCK_PATH.write_text(str(os.getpid()))
+        except OSError:
+            return False
+        return True
+```
+{: data-filename="scripts/term-extraction/terms_lint.py"}
+
+살아있는지는 `os.kill(pid, 0)`으로 확인한다. 시그널을 실제로 보내지 않고 그 PID의 프로세스가 존재하는지만 물어보는 관용구다. lock 파일은 있는데 그 안의 PID가 이미 죽어 있으면(프로세스가 죽은 뒤 lock 파일만 남은 경우) 스테일로 보고 바로 가져간다. 살아 있으면 180초까지 기다리고, 그래도 안 풀리면 이번 회차는 건너뛴다. `terms_lint.py --fix`는 매일 04:20에 도는 감사라, 오늘 못 하면 내일 하면 된다는 게 이 타임아웃의 근거다. lock은 `--fix`가 실제 `terms.yml`을 대상으로 할 때만 걸린다. `--path`로 다른 파일을 검사하는 테스트 실행은 잠글 이유가 없다.
+
+## 사후: 자기 산출물은 자기가 커밋
+
+지금까지 이 두 워커는 변경이 있으면 텔레그램으로 요약만 보내고, 실제 diff는 워킹트리에 남겨 autopush가 주워가게 했다. 이제는 자기 산출물을 자기 이름으로 커밋한다. 새로 생긴 `scripts/lib/cron_commit.py`가 그 공용 로직이다([커밋](https://github.com/math-jh/math-jh.github.io/commit/b991ae0181f3f2e4943efe4ba4eaf71cf9fe5254)).
+
+```python
+def commit_outputs(worker: str, paths: Sequence[str], summary: str, *,
+                   marker: str | None = LASTMOD_SKIP,
+                   log: Callable[[str], None] | None = None,
+                   repo: Path = BLOG_ROOT,
+                   wait_sec: int = LOCK_WAIT_SEC) -> bool:
+    changed = dirty_paths(paths, repo)
+    if not changed:
+        return False
+    subject = f"cron({worker}): {summary}".rstrip()
+    if marker:
+        subject += f" {marker}"
+    ...
+    rc, _, err = _git(repo, "add", "--", *changed)
+    rc, out, err = _git(repo, "commit", "-m", subject, "--", *changed)
+```
+{: data-filename="scripts/lib/cron_commit.py"}
+
+push는 하지 않는다. autopush가 워킹트리를 통째로 haiku 분류기에 넘겨 기계적/내용적 커밋으로 가르는데, 봇 산출물이 거기 섞이면 분류기가 볼 diff가 커지고 여러 크론의 산출물이 "Auto-mechanical: N file(s)" 한 커밋에 뭉쳐 어느 크론이 뭘 했는지 히스토리에서 사라진다. 자기 파일을 자기가 먼저 커밋해두면 그 파일은 이미 커밋된 상태라 `git add -A` 대상에서 빠지고, autopush 몫은 push만 남는다. 커밋 author는 사용자, committer는 Claude로 다른 자동 커밋과 같은 정체성 규약을 쓴다.
+
+`term_extract_worker.py`는 한영 병기 표기를 다듬으면서 글 본문 자체도 고친다. 처리 전에 그 글이 이미 dirty했다면(사용자가 편집 중이었다면) 커밋 목록에서 뺀다. 넣으면 작업 중인 원고가 `[lastmod-skip]` 붙은 봇 커밋에 딸려 들어가기 때문이다.
+
+같은 변경에 재검사 빈도 조정도 딸려 왔다. `term_extract_worker.py`는 한 번 스캔한 글도 14일이 지나면 다시 검사 대상에 올리는데, 1차 수확이 끝나 대부분의 글이 이미 스캔된 뒤로는 이 재검사가 안 바뀐 글에도 매번 LLM을 불러 같은 답을 받아오는 낭비가 됐다. 이제는 마지막 검사 이후 그 글이 실제로 바뀐 경우에만 stale 대상에 넣는다. 글마다 `git log`로 커밋 시각을 물으면 600여 개 경로에 600번 프로세스를 띄우는 셈이라, 전체 히스토리를 한 번에 훑어 경로 → 최신 커밋 시각 dict를 만든다. `terms.yml` 자체를 순회하는 감사도 짝수 시각(하루 23회)에서 하루 한 번으로 줄었다. 짝수 시각 조건 그대로 두면 하루 23회 LLM을 불러 see 링크를 228건 밀어 넣는 정도였다.
