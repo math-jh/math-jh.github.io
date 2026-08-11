@@ -46,11 +46,9 @@ Finite degree Galois extension $\mathbb{L}/\mathbb{K}$에 대하여 $\lvert\Gal(
 이제 우리는 [정리 1](#thm1)의 구체적인 사용을 살펴본다. 우선 처음 살펴볼 것은 가장 단순한 다음의 예이다. 
 
 ::: 예시 3
-[§순수비분리확대체](/ko/math/field_theory/purely_inseparable_extensions)의 서두에서 우리는 $\pm\sqrt{2}$와 $\pm\sqrt{3}$을 각각 서로 바꾸는 group $S_2\times S_2$를 Galois 이론의 예고로 삼았었다. 이 group이 실제로 $\mathbb{Q}(\sqrt{2},\sqrt{3})/\mathbb{Q}$의 Galois group임을 확인하는 것이 이 예시의 목표이다.
+$\mathbb{L}=\mathbb{Q}(\sqrt{2},\sqrt{3})$이라 하자. 이는 다항식 $(\x^2-2)(\x^2-3)\in\mathbb{Q}[\x]$의 splitting field이므로 [§갈루아 확장, ⁋명제 5](/ko/math/field_theory/galois_extension#prop5)의 마지막 조건에 의해 quasi-Galois이다. 한편, [§체, ⁋명제 18](/ko/math/field_theory/fields#prop18)에 의하여 $\mathbb{Q}$의 algebraic extension은 모두 separable이므로 ([§분리가능확대체, ⁋명제 9](/ko/math/field_theory/separable_extensions#prop9)), [§갈루아 확장, ⁋정리 8](/ko/math/field_theory/galois_extension#thm8)의 둘째 조건에 의하여 $\mathbb{L}/\mathbb{Q}$는 Galois extension이다.
 
-$\mathbb{L}=\mathbb{Q}(\sqrt{2},\sqrt{3})$이라 하자. 이는 다항식 $(\x^2-2)(\x^2-3)\in\mathbb{Q}[\x]$의 splitting field이므로 [§갈루아 확장, ⁋명제 5](/ko/math/field_theory/galois_extension#prop5)의 마지막 조건에 의해 quasi-Galois이다. 한편, [§체, ⁋명제 18](/ko/math/field_theory/fields#prop18)에 의하여 $\mathbb{Q}$의 algebraic extension은 모두 separable이므로 ([§분리가능확대체, ⁋명제 9](/ko/math/field_theory/separable_extensions#prop9)) [§갈루아 확장, ⁋정리 8](/ko/math/field_theory/galois_extension#thm8)의 둘째 조건에 의하여 $\mathbb{L}/\mathbb{Q}$는 Galois extension이다.
-
-우선 $\sqrt{3}\not\in\mathbb{Q}(\sqrt{2})$이다. 만일 $\sqrt{3}=a+b\sqrt{2}$라면 양변을 제곱하여 $3=a^2+2b^2+2ab\sqrt{2}$를 얻는데, $\sqrt{2}$가 유리수가 아니므로 $ab=0$이어야 하고, $b=0$이면 $\sqrt{3}$이, $a=0$이면 $\sqrt{3/2}$가 유리수가 되어 모두 모순이기 때문이다. 따라서 $[\mathbb{L}:\mathbb{Q}]=[\mathbb{L}:\mathbb{Q}(\sqrt{2})][\mathbb{Q}(\sqrt{2}):\mathbb{Q}]=4$이고, [명제 2](#prop2)에 의하여 $\lvert\Gal(\mathbb{L}/\mathbb{Q})\rvert=4$이다.
+우선 $\sqrt{3}\not\in\mathbb{Q}(\sqrt{2})$이다. 만일 $\sqrt{3}=a+b\sqrt{2}$라면 양변을 제곱하여 $3=a^2+2b^2+2ab\sqrt{2}$를 얻는데, $\sqrt{2}$가 유리수가 아니므로 $ab=0$이어야 하고, $b=0$이면 $\sqrt{3}$이, $a=0$이면 $\sqrt{3/2}$가 유리수가 되어 모두 모순이기 때문이다. 따라서 $\mathbb{L}/\mathbb{Q}$는 $\mathbb{Q}(\sqrt{2})$를 intermediate field로 가지고, 따라서 $[\mathbb{L}:\mathbb{Q}]=[\mathbb{L}:\mathbb{Q}(\sqrt{2})][\mathbb{Q}(\sqrt{2}):\mathbb{Q}]=4$이며, [명제 2](#prop2)에 의하여 $\lvert\Gal(\mathbb{L}/\mathbb{Q})\rvert=4$이다.
 
 한편 $\mathbb{L}$은 $f=(\x^2-2)(\x^2-3)$의 root들로 생성되므로, [§갈루아 확장, ⁋정의 12](/ko/math/field_theory/galois_extension#def12) 이후의 논의에 의하여 이 root들의 permutation으로 주어지는 injective homomorphism을 얻으며 그 image는 $f$의 irreducible factor별 root 집합 $\{\pm\sqrt{2}\}$와 $\{\pm\sqrt{3}\}$의 symmetric group들의 곱에 포함된다. 즉 injective homomorphism
 
