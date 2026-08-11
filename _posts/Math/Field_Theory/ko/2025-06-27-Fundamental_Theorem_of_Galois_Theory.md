@@ -50,13 +50,15 @@ $\mathbb{L}=\mathbb{Q}(\sqrt{2},\sqrt{3})$이라 하자. 이는 다항식 $(\x^2
 
 우선 $\sqrt{3}\not\in\mathbb{Q}(\sqrt{2})$이다. 만일 $\sqrt{3}=a+b\sqrt{2}$라면 양변을 제곱하여 $3=a^2+2b^2+2ab\sqrt{2}$를 얻는데, $\sqrt{2}$가 유리수가 아니므로 $ab=0$이어야 하고, $b=0$이면 $\sqrt{3}$이, $a=0$이면 $\sqrt{3/2}$가 유리수가 되어 모두 모순이기 때문이다. 따라서 $\mathbb{L}/\mathbb{Q}$는 $\mathbb{Q}(\sqrt{2})$를 intermediate field로 가지고, 따라서 $[\mathbb{L}:\mathbb{Q}]=[\mathbb{L}:\mathbb{Q}(\sqrt{2})][\mathbb{Q}(\sqrt{2}):\mathbb{Q}]=4$이며, [명제 2](#prop2)에 의하여 $\lvert\Gal(\mathbb{L}/\mathbb{Q})\rvert=4$이다.
 
-한편 $\mathbb{L}$은 $f=(\x^2-2)(\x^2-3)$의 root들로 생성되므로, [§갈루아 확장, ⁋정의 12](/ko/math/field_theory/galois_extension#def12) 이후의 논의에 의하여 이 root들의 permutation으로 주어지는 injective homomorphism을 얻으며 그 image는 $f$의 irreducible factor별 root 집합 $\{\pm\sqrt{2}\}$와 $\{\pm\sqrt{3}\}$의 symmetric group들의 곱에 포함된다. 즉 injective homomorphism
+한편 $\mathbb{L}$은 $f=(\x^2-2)(\x^2-3)$의 해들로 생성되므로, [§갈루아 확장, ⁋정의 12](/ko/math/field_theory/galois_extension#def12) 이후의 논의에 의하여 이 해들의 permutation으로 주어지는 injective homomorphism
 
-$$\Gal(\mathbb{L}/\mathbb{Q})\rightarrow S_2\times S_2$$
+$$\Gal(\mathbb{L}/\mathbb{Q})\rightarrow S_4$$
 
-를 얻고, 양쪽 모두 네 개의 원소를 가지므로 이는 isomorphism이다.
+을 얻으며, 그 image는
 
-이제 $S_2\times S_2$에서 항등원이 아닌 세 원소는 모두 order $2$이므로 자명하지 않은 proper subgroup은 이들이 각각 생성하는 셋뿐이며, $\Gal(\mathbb{L}/\mathbb{Q})$ 쪽에서 이는 $\sqrt{3}$의 부호만 바꾸는 $\sigma$, $\sqrt{2}$의 부호만 바꾸는 $\tau$, 그리고 $\sigma\tau$가 각각 생성하는 subgroup들이다. 위의 tower로부터 $\{1,\sqrt{2},\sqrt{3},\sqrt{6}\}$이 $\mathbb{L}$의 $\mathbb{Q}$-basis이므로 $x=a+b\sqrt{2}+c\sqrt{3}+d\sqrt{6}$에 대하여
+을 얻으며 그 image는 $f$의 irreducible factor $\x^2-2$와 $x^2-3$의 해집합 $\{\pm\sqrt{2}\}$와 $\{\pm\sqrt{3}\}$의 symmetric group들의 곱에 포함된다. 즉 위 image는 $S_2\times S_2\subset S_4$로 들어가며, 원소 개수에 의해 이는 isomorphism이다.
+
+구체적으로, $S_2\times S_2$에서 항등원이 아닌 세 원소는 모두 order $2$이므로 자명하지 않은 proper subgroup은 이들이 각각 생성하는 셋뿐이며, $\Gal(\mathbb{L}/\mathbb{Q})$ 쪽에서 이는 $\sqrt{3}$의 부호만 바꾸는 $\sigma$, $\sqrt{2}$의 부호만 바꾸는 $\tau$, 그리고 $\sigma\tau$가 각각 생성하는 subgroup들이다. 위의 tower $\mathbb{L}/\mathbb{Q}(\sqrt{2})/\mathbb{Q}$로부터 $\{1,\sqrt{2},\sqrt{3},\sqrt{6}\}$이 $\mathbb{L}$의 $\mathbb{Q}$-basis이므로 $x=a+b\sqrt{2}+c\sqrt{3}+d\sqrt{6}$에 대하여
 
 $$\sigma(x)=a+b\sqrt{2}-c\sqrt{3}-d\sqrt{6},\qquad \tau(x)=a-b\sqrt{2}+c\sqrt{3}-d\sqrt{6},\qquad \sigma\tau(x)=a-b\sqrt{2}-c\sqrt{3}+d\sqrt{6}$$
 
@@ -66,11 +68,13 @@ $$\sigma(x)=a+b\sqrt{2}-c\sqrt{3}-d\sqrt{6},\qquad \tau(x)=a-b\sqrt{2}+c\sqrt{3}
 앞의 예시에서는 Galois group이 abelian이라 모든 subgroup이 normal이었다. 다음은 그렇지 않은 가장 작은 예이다.
 
 ::: 예시 4
-$\alpha$를 $2$의 실수 세제곱근, $\omega=e^{2\pi i/3}$이라 하고 $\mathbb{L}=\mathbb{Q}(\alpha,\omega)$라 하자. $\x^3-2$의 세 root가 $\alpha$, $\omega\alpha$, $\omega^2\alpha$이므로 $\mathbb{L}$은 $\x^3-2$의 splitting field이고, 앞의 예시와 같은 이유로 $\mathbb{L}/\mathbb{Q}$는 Galois extension이다. $\x^3-2$는 유리수 root를 갖지 않는 삼차식이므로 irreducible이고 따라서 $[\mathbb{Q}(\alpha):\mathbb{Q}]=3$인데, $\mathbb{Q}(\alpha)$가 $\mathbb{R}$에 포함되어 $\omega$를 포함하지 않으므로 $\mathbb{Q}(\alpha)$ 위에서 $\omega$의 minimal polynomial은 $\x^2+\x+1$이다. 즉 $[\mathbb{L}:\mathbb{Q}]=6$이고 [명제 2](#prop2)에 의하여 $\lvert\Gal(\mathbb{L}/\mathbb{Q})\rvert=6$이다.
+우선 $\alpha=\sqrt[3]{2}$, $\omega=e^{2\pi i/3}$이라 하고 $\mathbb{L}=\mathbb{Q}(\alpha,\omega)$라 하자. 그럼 $\alpha$는 $\x^3-2$의 근이며 $\omega$는 $\x^2+\x+1$의 근이다. 
 
-$\omega=(\omega\alpha)/\alpha$이므로 $\mathbb{L}$은 $\x^3-2$의 root들로 생성되고, 따라서 [§갈루아 확장, ⁋정의 12](/ko/math/field_theory/galois_extension#def12) 이후의 논의에서와 같이 root들의 permutation으로 주어지는 injective homomorphism $\Gal(\mathbb{L}/\mathbb{Q})\rightarrow S_3$을 얻는다. 양쪽 모두 여섯 개의 원소를 가지므로 이는 isomorphism이다.
+$\x^3-2$의 세 근들이 $\alpha$, $\omega\alpha$, $\omega^2\alpha$이므로 $\mathbb{L}$은 $\x^3-2$의 splitting field이고, 앞의 예시와 같은 이유로 $\mathbb{L}/\mathbb{Q}$는 Galois extension이다. $\x^3-2$는 유리수 해를 갖지 않는 삼차식이므로 $\mathbb{Q}$에서 irreducible이고, 따라서 $[\mathbb{Q}(\alpha):\mathbb{Q}]=3$인데, $\mathbb{Q}(\alpha)$가 $\mathbb{R}$에 포함되어 $\omega$를 포함하지 않으므로 $\mathbb{Q}(\alpha)$ 위에서 $\omega$의 minimal polynomial은 $\x^2+\x+1$이다. 즉 $[\mathbb{L}:\mathbb{Q}]=6$이고 [명제 2](#prop2)에 의하여 $\lvert\Gal(\mathbb{L}/\mathbb{Q})\rvert=6$이다.
 
-$S_3$의 자명하지 않은 proper subgroup은 order $3$인 $A_3$ 하나와 order $2$인 것 셋이며, [정리 1](#thm1)과 [명제 2](#prop2)에 의하여 이들은 각각 degree $2$인 subextension 하나와 degree $3$인 subextension 셋에 대응한다. $A_3$의 원소들은 $\omega$를 고정하므로 $A_3$의 fixed field는 $\mathbb{Q}(\omega)$를 포함하고, 양쪽 모두 $\mathbb{Q}$ 위에서 degree $2$이므로 이들은 같다. 마찬가지로 $\omega^i\alpha$를 고정하는 order $2$의 subgroup의 fixed field는 $\x^3-2$의 root인 $\omega^i\alpha$가 생성하는 degree $3$의 field $\mathbb{Q}(\omega^i\alpha)$를 포함하므로 그것과 같다. 한편 $\x^3-2$의 서로 다른 두 root를 함께 포함하는 field는 그 비인 $\omega$ 또는 $\omega^2$를, 따라서 어느 쪽이든 $\omega$를 포함하여 $\mathbb{L}$ 전체가 되므로, 뒤의 세 field는 각각 $\x^3-2$의 root를 하나씩만 포함한다. 즉 이들은 [§갈루아 확장, ⁋명제 5](/ko/math/field_theory/galois_extension#prop5)의 둘째 조건을 만족하지 않아 $\mathbb{Q}$의 quasi-Galois extension이 아니며, 서로 다른 field이지만 $\Gal(\mathbb{L}/\mathbb{Q})$의 원소에 의해 서로 옮겨진다.
+$\omega=(\omega\alpha)/\alpha$이므로 $\mathbb{L}$은 $\x^3-2$의 해들로 생성되고, 따라서 [§갈루아 확장, ⁋정의 12](/ko/math/field_theory/galois_extension#def12) 이후의 논의에서와 같이 해들의 permutation으로 주어지는 injective homomorphism $\Gal(\mathbb{L}/\mathbb{Q})\rightarrow S_3$을 얻는다. 양쪽 모두 여섯 개의 원소를 가지므로 이는 isomorphism이다.
+
+$S_3$의 자명하지 않은 proper subgroup은 order $3$인 $A_3$ 하나와 order $2$인 것 셋이며, [정리 1](#thm1)과 [명제 2](#prop2)에 의하여 이들은 각각 degree $2$인 subextension 하나와 degree $3$인 subextension 셋에 대응한다. $A_3$의 원소들은 $\omega$를 고정하므로 $A_3$의 fixed field는 $\mathbb{Q}(\omega)$를 포함하고, 양쪽 모두 $\mathbb{Q}$ 위에서 degree $2$이므로 이들은 같다. 마찬가지로 $\omega^i\alpha$를 고정하는 order $2$의 subgroup의 fixed field는 $\x^3-2$의 해인 $\omega^i\alpha$가 생성하는 degree $3$의 field $\mathbb{Q}(\omega^i\alpha)$를 포함하므로 그것과 같다. 한편 $\x^3-2$의 서로 다른 두 해를 함께 포함하는 field는 그 비인 $\omega$ 또는 $\omega^2$를, 따라서 어느 쪽이든 $\omega$를 포함하여 $\mathbb{L}$ 전체가 되므로, 뒤의 세 field는 각각 $\x^3-2$의 해를 하나씩만 포함한다. 즉 이들은 [§갈루아 확장, ⁋명제 5](/ko/math/field_theory/galois_extension#prop5)의 둘째 조건을 만족하지 않아 $\mathbb{Q}$의 quasi-Galois extension이 아니며, 서로 다른 field이지만 $\Gal(\mathbb{L}/\mathbb{Q})$의 원소에 의해 서로 옮겨진다.
 :::
 
 이제 [정리 1](#thm1)의 서술에 등장하는 closed 조건이 왜 필요한지를 보여주는 예시를 살펴보자. Galois group이 무한할 때에는 subgroup 전체가 아니라 그중 closed인 것만이 subextension과 대응한다.
@@ -78,13 +82,13 @@ $S_3$의 자명하지 않은 proper subgroup은 order $3$인 $A_3$ 하나와 ord
 ::: 예시 5
 소수 $p$를 고정하고 $\mathbb{F}_p$의 algebraic closure $\overline{\mathbb{F}}_p$를 생각하자. $\mathbb{F}_p$는 유한집합이므로 perfect이고 ([§체, ⁋명제 18](/ko/math/field_theory/fields#prop18)) 따라서 그 algebraic extension은 모두 separable이다. ([§분리가능확대체, ⁋명제 9](/ko/math/field_theory/separable_extensions#prop9)) 한편 $\overline{\mathbb{F}}_p$는 $\mathbb{F}_p[\x]$의 non-constant polynomial 전체의 splitting field이므로 [§갈루아 확장, ⁋명제 5](/ko/math/field_theory/galois_extension#prop5)의 다섯째 조건에 의해 quasi-Galois이고, 즉 $\overline{\mathbb{F}}_p/\mathbb{F}_p$는 Galois extension이다. 그 Galois group을 $\Gamma$라 적자.
 
-$\overline{\mathbb{F}}_p$ 또한 perfect이므로 ([§분리가능차수, ⁋따름정리 3](/ko/math/field_theory/separable_degree#cor3)) Frobenius endomorphism $\varphi:x\mapsto x^p$는 $\overline{\mathbb{F}}_p$의 automorphism이고, $\mathbb{F}_p$의 원소들은 $\x^p-\x$의 root이므로 $\varphi\in\Gamma$이다. 거꾸로 $\varphi(x)=x$인 것은 $x$가 $\x^p-\x$의 root인 것인데, 이 다항식의 root는 많아야 $p$개이고 $\mathbb{F}_p$의 원소 $p$개가 이미 모두 root이다. 따라서 $\varphi$가 생성하는 subgroup $H$에 대하여
+$\overline{\mathbb{F}}_p$ 또한 perfect이므로 ([§분리가능차수, ⁋따름정리 3](/ko/math/field_theory/separable_degree#cor3)) Frobenius endomorphism $\varphi:x\mapsto x^p$는 $\overline{\mathbb{F}}_p$의 automorphism이고, $\mathbb{F}_p$의 원소들은 $\x^p-\x$의 해이므로 $\varphi\in\Gamma$이다. 거꾸로 $\varphi(x)=x$인 것은 $x$가 $\x^p-\x$의 해인 것인데, 이 다항식의 해는 많아야 $p$개이고 $\mathbb{F}_p$의 원소 $p$개가 이미 모두 해이다. 따라서 $\varphi$가 생성하는 subgroup $H$에 대하여
 
 $$k(H)=\mathbb{F}_p=k(\Gamma)$$
 
 가 성립한다. 따라서 $H\neq\Gamma$이기만 하면 $k$는 subgroup 전체 위에서 단사가 아니게 된다.
 
-이를 확인하기 위해 각각의 $n\geq1$마다 $\x^{p^n}-\x$의 $\overline{\mathbb{F}}_p$에서의 root들의 집합을 $\mathbb{F}_{p^n}$이라 하자. 이는 $\varphi^n$에 의해 고정되는 원소들의 모임이므로 subfield이고, $\x^{p^n}-\x$의 derivative가 $-1$이라 중근이 없으므로 ([\[환론\] §다항식환, ⁋명제 11](/ko/math/ring_theory/polynomial_rings#prop11)) 원소가 정확히 $p^n$개이다. 그럼 $\mathbb{F}_{p^n}$은 $\mathbb{F}_p$-벡터공간으로서 dimension $n$을 가지므로 $[\mathbb{F}_{p^n}:\mathbb{F}_p]=n$이고, $\x^{p^n}-\x$의 splitting field이므로 quasi-Galois이며, 위에서 본 것과 같이 separable이므로 $\mathbb{F}_{p^n}/\mathbb{F}_p$는 finite degree Galois extension이다. 한편 $\varphi^d$가 $\mathbb{F}_{p^n}$ 위에서 항등함수라면 $p^n$개의 원소가 모두 $\x^{p^d}-\x$의 root가 되어 $n\leq d$이므로, $\varphi\vert_{\mathbb{F}_{p^n}}$의 order는 정확히 $n$이고 [명제 2](#prop2)에 의하여
+이를 확인하기 위해 각각의 $n\geq1$마다 $\x^{p^n}-\x$의 $\overline{\mathbb{F}}_p$에서의 해들의 집합을 $\mathbb{F}_{p^n}$이라 하자. 이는 $\varphi^n$에 의해 고정되는 원소들의 모임이므로 subfield이고, $\x^{p^n}-\x$의 derivative가 $-1$이라 중근이 없으므로 ([\[환론\] §다항식환, ⁋명제 11](/ko/math/ring_theory/polynomial_rings#prop11)) 원소가 정확히 $p^n$개이다. 그럼 $\mathbb{F}_{p^n}$은 $\mathbb{F}_p$-벡터공간으로서 dimension $n$을 가지므로 $[\mathbb{F}_{p^n}:\mathbb{F}_p]=n$이고, $\x^{p^n}-\x$의 splitting field이므로 quasi-Galois이며, 위에서 본 것과 같이 separable이므로 $\mathbb{F}_{p^n}/\mathbb{F}_p$는 finite degree Galois extension이다. 한편 $\varphi^d$가 $\mathbb{F}_{p^n}$ 위에서 항등함수라면 $p^n$개의 원소가 모두 $\x^{p^d}-\x$의 해가 되어 $n\leq d$이므로, $\varphi\vert_{\mathbb{F}_{p^n}}$의 order는 정확히 $n$이고 [명제 2](#prop2)에 의하여
 
 $$\Gal(\mathbb{F}_{p^n}/\mathbb{F}_p)=\langle\varphi\vert_{\mathbb{F}_{p^n}}\rangle\cong\mathbb{Z}/n\mathbb{Z}$$
 

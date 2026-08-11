@@ -166,9 +166,9 @@ $$1=[\mathbb{K}(a):\mathbb{K}]_s\lneq [\mathbb{K}(a):\mathbb{K}]=p^e$$
 
 1. $f'$가 $0$이 아니다.
 2. $f$와 $f'$가 $\mathbb{K}[\x]$에서 서로소이다. 
-3. $f$가 $\mathbb{L}[\x]$ 안에서 simple root를 갖도록 하는 extension $\mathbb{L}/\mathbb{K}$이 존재한다. 
+3. $f$가 $\mathbb{L}[\x]$ 안에서 중근이 아닌 해를 갖도록 하는 extension $\mathbb{L}/\mathbb{K}$이 존재한다. 
 4. $f$가 $\mathbb{L}[\x]$ 안에서 서로 다른 일차식들의 곱으로 쪼개지도록 하는 extension $\mathbb{L}/\mathbb{K}$이 존재한다. 
-5. $f$는 $\overline{\mathbb{K}}/\mathbb{K}$ 안에서 simple root만을 갖는다. 
+5. $f$는 $\overline{\mathbb{K}}/\mathbb{K}$ 안에서 중근을 갖지 않는다. 
 6. $\mathbb{K}[\x]/(f)$가 étale $\mathbb{K}$-algebra이다. 
 7. $\mathbb{K}$가 characteristic $0$이거나, $\ch(\mathbb{K})=p$이고 $f\not\in\mathbb{K}[\x^p]$이다. 
 :::
@@ -179,11 +179,11 @@ $$1=[\mathbb{K}(a):\mathbb{K}]_s\lneq [\mathbb{K}(a):\mathbb{K}]=p^e$$
 Field extension $\mathbb{L}/\mathbb{K}$에 대하여, algebraic element $x\in \mathbb{L}$이 *separable element<sub>분리가능 원소</sub>*라는 것은 $\mathbb{K}(x)/\mathbb{K}$이 separable extension인 것이다. 
 :::
 
-정의에 의해, $x$의 minimal polynomial을 $f$라 한다면, $f$가 separable이어야 하고 이 때 $x$는 $f$의 simple root가 된다. 이들 개념은 (당연히) 모두 같은 것을 의미한다. 즉, extension $\mathbb{L}/\mathbb{K}$와 원소 $x\in\mathbb{L}$, 그리고 $x$의 minimal polynomial $f$에 대하여 다음이 모두 동치이다.
+정의에 의해, $x$의 minimal polynomial을 $f$라 한다면, $f$가 separable이어야 하고 이 때 $x$는 $f$의 중근이 아닌 해가 된다. 이들 개념은 (당연히) 모두 같은 것을 의미한다. 즉, extension $\mathbb{L}/\mathbb{K}$와 원소 $x\in\mathbb{L}$, 그리고 $x$의 minimal polynomial $f$에 대하여 다음이 모두 동치이다.
 
 1. $x$가 separable이다.
 2. $f$가 separable이다.
-3. $x$가 $f$의 simple root이다.
+3. $x$가 $f$의 중근이 아닌 해이다.
 
 뿐만 아니라, 모든 원소가 algebraic한 extension이 algebraic extension이듯이 다음이 성립한다. 
 

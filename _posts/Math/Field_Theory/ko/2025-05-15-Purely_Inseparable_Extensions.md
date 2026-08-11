@@ -17,7 +17,7 @@ weight: 4
 
 $$\x^2-2,\qquad \x^2-3$$
 
-으로부터 나오는 것이다. 그런데 이 두 다항식을 각각 살펴보면, 이들은 각각 두 개의 root $\pm \sqrt{2}$, $\pm\sqrt{3}$을 가지는 다항식이며 이를 $\mathbb{Q}$에서는 algebraic한 방식으로 구별할 방법이 없다. 따라서 이들 root를 서로 바꾸는 action (혹은 $\mathbb{Q}(\sqrt{2},\sqrt{3})$의 $\mathbb{Q}$-automorphism)을 생각하면, 즉 permutation group $S_2\times S_2$를 생각하면 이것은 $S_4$의 subgroup이다. 
+으로부터 나오는 것이다. 그런데 이 두 다항식을 각각 살펴보면, 이들은 각각 두 개의 해 $\pm \sqrt{2}$, $\pm\sqrt{3}$을 가지는 다항식이며 이를 $\mathbb{Q}$에서는 algebraic한 방식으로 구별할 방법이 없다. 따라서 이들 해를 서로 바꾸는 action (혹은 $\mathbb{Q}(\sqrt{2},\sqrt{3})$의 $\mathbb{Q}$-automorphism)을 생각하면, 즉 permutation group $S_2\times S_2$를 생각하면 이것은 $S_4$의 subgroup이다. 
 
 이와 같은 방식으로 우리는 다항식이 주어질 때마다 적절한 Galois group을 정의해줄 수 있고, 이들을 보는 것이 $\mathbb{Q}$의 extension들을 분류해줄 수 있다는 것이 Galois theory의 철학이다. 
 
@@ -51,7 +51,7 @@ Field $\mathbb{K}$의 원소 $a$가 $a\not\in \mathbb{K}^p$를 만족한다 가�
 ::: 증명
 만일 $p=1$이라면 $\mathbb{K}^p=\mathbb{K}$이므로 가정을 만족하는 $a$가 존재하지 않는다. 따라서 $p$가 prime인 경우만 보면 충분하다. 또 $e=0$이라면 $f$는 일차식이 되어 자명하게 irreducible이므로, $e\geq 1$인 경우만 보면 충분하다.
 
-$\overline{\mathbb{K}}$에서 $f$의 root $\alpha$를 하나 택하자. 즉 $\alpha^{p^e}=a$이다. 그럼 [§체, ⁋정리 10](/ko/math/field_theory/fields#thm10)의 Frobenius endomorphism을 characteristic $p$의 ring $\overline{\mathbb{K}}[\x]$에 반복하여 적용하면
+$\overline{\mathbb{K}}$에서 $f$의 해 $\alpha$를 하나 택하자. 즉 $\alpha^{p^e}=a$이다. 그럼 [§체, ⁋정리 10](/ko/math/field_theory/fields#thm10)의 Frobenius endomorphism을 characteristic $p$의 ring $\overline{\mathbb{K}}[\x]$에 반복하여 적용하면
 
 $$f(\x)=\x^{p^e}-\alpha^{p^e}=(\x-\alpha)^{p^e}$$
 
@@ -69,7 +69,7 @@ $$g=\bigl((\x-\alpha)^{p^c}\bigr)^u=(\x^{p^c}-\alpha^{p^c})^u$$
 ::: 증명 (명제 2)
 만일 $e=0$이라면 $x=a\in \mathbb{K}$이므로 $x$의 minimal polynomial은 $\x-a$, 즉 $\x^{p^0}-a$이고 $[\mathbb{K}(x):\mathbb{K}]=1=p^0$이다.
 
-이제 $e\geq 1$이라 하고, 어떠한 $b\in\mathbb{K}$에 대하여 $a=b^p$라 가정하자. 그럼 $(x^{p^{e-1}})^p=x^{p^e}=a=b^p$인데 field에서 Frobenius endomorphism은 항상 injective이므로 $x^{p^{e-1}}=b\in \mathbb{K}$가 되어 $e$의 최소성에 모순이다. 따라서 $a\not\in \mathbb{K}^p$이고, [보조정리 3](#lem3)에 의하여 $\x^{p^e}-a$는 irreducible이다. 이는 $x$를 root로 갖는 monic polynomial이므로 $x$의 minimal polynomial이며, 그 degree가 $p^e$이므로 $[\mathbb{K}(x):\mathbb{K}]=p^e$이다.
+이제 $e\geq 1$이라 하고, 어떠한 $b\in\mathbb{K}$에 대하여 $a=b^p$라 가정하자. 그럼 $(x^{p^{e-1}})^p=x^{p^e}=a=b^p$인데 field에서 Frobenius endomorphism은 항상 injective이므로 $x^{p^{e-1}}=b\in \mathbb{K}$가 되어 $e$의 최소성에 모순이다. 따라서 $a\not\in \mathbb{K}^p$이고, [보조정리 3](#lem3)에 의하여 $\x^{p^e}-a$는 irreducible이다. 이는 $x$를 해로 갖는 monic polynomial이므로 $x$의 minimal polynomial이며, 그 degree가 $p^e$이므로 $[\mathbb{K}(x):\mathbb{K}]=p^e$이다.
 :::
 
 다음 정의는 [정의 1](#def1) 직후에 왔어도 자연스러웠을 것이다. 

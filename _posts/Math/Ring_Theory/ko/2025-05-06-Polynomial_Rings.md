@@ -167,14 +167,14 @@ $$N: u\mapsto \deg(u)\qquad \text{단, $N(0)=0$}$$
 한편 $\mathbb{K}[\x]$는 UFD이며, 따라서 $\mathbb{K}[\x]$의 irreducible element 등을 정의할 수 있다. 한편 $\mathbb{K}[\x]$의 unit은 정확히 $\mathbb{K}$의 unit과 동일하므로, 임의의 irreducible polynomial $u$는 (정의에 의해) $\deg(u)\geq 1$을 만족하며, $u$가 irreducible이므로 만일 $v\mid u$라면 $v$는 상수 다항식이거나 $u$의 상수배이다. 특히, 임의의 두 irreducible polynomial은 서로의 상수배여야만 하므로, 서로 다른 두 *monic* irreducible polynomial은 서로소이다. 이와 같이 $A[\x]$의 임의의 다항식은, leading coefficient와 monic irreducible polynomial의 곱으로 유일하게 나타낼 수 있다. 
 
 ::: 명제 7
-임의의 다항식 $u\in A[\x]$와 $a\in A$에 대하여, $u(\x)$를 $\x-a$로 나눈 나머지는 $u(a)$이다. 따라서, $u$가 root $a$를 갖는 것과 $\x-a$가 $A[\x]$ 안에서 $u$의 약수인 것이 동치이다. 
+임의의 다항식 $u\in A[\x]$와 $a\in A$에 대하여, $u(\x)$를 $\x-a$로 나눈 나머지는 $u(a)$이다. 따라서, $u$가 해 $a$를 갖는 것과 $\x-a$가 $A[\x]$ 안에서 $u$의 약수인 것이 동치이다. 
 :::
 
-이에 대한 증명은 당연히 Euclidean algorithm을 돌리면 되며, 이는 사실 중학교 때부터 익숙한 결과이다. 또 다른 결과로, 만일 $u$가 root $a$를 갖는다면 $u$는 반드시 다음의 꼴
+이에 대한 증명은 당연히 Euclidean algorithm을 돌리면 되며, 이는 사실 중학교 때부터 익숙한 결과이다. 또 다른 결과로, 만일 $u$가 해 $a$를 갖는다면 $u$는 반드시 다음의 꼴
 
 $$u(\x)=(\x-a)^p v(\x),\qquad v(a)\neq 0$$
 
-로 쓰여져야 하는 것을 안다. 이 때 우리는 $p$를 root $a$의 *multiplicity*라 부른다. 그럼 다음이 성립한다. 
+로 쓰여져야 하는 것을 안다. 이 때 우리는 $p$를 해 $a$의 *multiplicity*라 부른다. 그럼 다음이 성립한다. 
 
 ::: 명제 8
 임의의 두 다항식 $u,v\in A[\x]$이 공통근 $a$를 갖는다 하고, $u$와 $v$ 각각에서 $a$의 multiplicity가 $p,q$라 하자. 그럼 다음이 성립한다.
@@ -187,7 +187,7 @@ $u(\x) = (\x-a)^p u_1(\x)$, $v(\x) = (\x-a)^q v_1(\x)$이고 $u_1(a) \neq 0$, $v
 
 $$u(\x) + v(\x) = (\x-a)^p (u_1(\x) + (\x-a)^{q-p}v_1(\x))$$
 
-을 얻으므로 원하는 부등식을 얻는다. 만일 여기에서 $p < q$였다면 $a$는 $u_1(\x) + (\x-a)^{q-p}v_1(\x)$의 root가 아니므로 원하는 결과를 얻는다. 
+을 얻으므로 원하는 부등식을 얻는다. 만일 여기에서 $p < q$였다면 $a$는 $u_1(\x) + (\x-a)^{q-p}v_1(\x)$의 해가 아니므로 원하는 결과를 얻는다. 
 
 둘째 결과의 경우, 동일한 가정 하에서
 
@@ -199,21 +199,21 @@ $$u(\x)v(\x) = (\x-a)^{p+q}u_1(\x)v_1(\x)$$
 더 나아가 만일 $A$가 integral domain이라면 귀납적으로 다음을 보일 수 있다.
 
 ::: 명제 9
-Integral domain $A$를 고정하자. $A[\x]$의 nonzero element $u$가 root $a_1,\ldots, a_r$을 가지며, 이들의 multiplicity가 각각 $p_1,\ldots, p_r$이라 하자. 그럼 
+Integral domain $A$를 고정하자. $A[\x]$의 nonzero element $u$가 해 $a_1,\ldots, a_r$을 가지며, 이들의 multiplicity가 각각 $p_1,\ldots, p_r$이라 하자. 그럼 
 
 $$u(\x)=(\x-a_1)^{p_1}\cdots(\x-a_r)^{p_r}v(\x),\qquad v(a_1),\ldots, v(a_r)\neq0$$
 
 이도록 하는 $v\in A[\x]$가 존재한다. 
 :::
 ::: 증명
-$r$에 대한 귀납법으로 진행한다. $r=1$인 경우는 자명하므로, $u$의 $r$개의 root $a_1,\ldots, a_r$이 주어졌다 하고, 앞의 $r-1$개의 root에 귀납적 가정을 적용하여 
+$r$에 대한 귀납법으로 진행한다. $r=1$인 경우는 자명하므로, $u$의 $r$개의 해 $a_1,\ldots, a_r$이 주어졌다 하고, 앞의 $r-1$개의 해에 귀납적 가정을 적용하여 
 
 $$u(\x)=u_1(\x)u_2(\x)=(\x-a_1)^{p_1}\cdots(\x-a_{r-1})^{p_{r-1}}u_2(\x)$$
 
 이라 적자. 그럼 $A$가 integral domain이라는 가정으로부터 $u_1(a_r)\neq 0$임을 알고 있으므로, 반드시 $u_2(a_r)=0$이어야 하고 $u_2$에서 $a_r$의 multiplicity가 $p_r$이어야 한다. 이로부터 원하는 주장을 얻는다. 
 :::
 
-특히, 임의의 integral domain $A$에 대하여, $A[\x]$의 임의의 $n$차 다항식은 (중복을 허용하여 셌을 때) 많아야 $n$개의 root를 갖는다는 것을 안다. 따라서 만일 $n$차 이하의 두 다항식 $f,g\in A[\x]$가 주어졌다 하고, 서로 다른 $n+1$개의 원소 $a_1,\ldots, a_{n+1}$에 대해 $f(a_i)=g(a_i)$가 성립한다 가정하면 $f=g$여야만 한다. 이로부터 다음의 결과를 얻는다. 
+특히, 임의의 integral domain $A$에 대하여, $A[\x]$의 임의의 $n$차 다항식은 (중복을 허용하여 셌을 때) 많아야 $n$개의 해를 갖는다는 것을 안다. 따라서 만일 $n$차 이하의 두 다항식 $f,g\in A[\x]$가 주어졌다 하고, 서로 다른 $n+1$개의 원소 $a_1,\ldots, a_{n+1}$에 대해 $f(a_i)=g(a_i)$가 성립한다 가정하면 $f=g$여야만 한다. 이로부터 다음의 결과를 얻는다. 
 
 ::: 명제 10
 Field $\mathbb{K}$의 서로 다른 $n$개의 원소들 $a_1,\ldots, a_n$을 고정하자. $\mathbb{K}$의 임의의 원소들 $b_1,\ldots, b_n$에 대하여, 각각의 $i$마다
@@ -245,16 +245,16 @@ $$D(uv)=(Du)v+u(Dv)$$
 이며, 이는 [\[다중선형대수학\] §미분](/ko/math/multilinear_algebra/derivations)에서는 derivation의 정의이지만 위의 식 ($\ast$)를 정의로 받아들인다면 직접 계산을 통해 확인할 수 있다. 
 
 ::: 명제 11
-임의의 다항식 $u \in A[\x]$에 대하여, $u$의 root $a \in A$가 simple root이기 위한 필요충분조건은 $a$가 $Du$의 root가 아닌 것이다. 
+임의의 다항식 $u \in A[\x]$에 대하여, $u$의 해 $a \in A$가 중근이 아니기 위한 필요충분조건은 $a$가 $Du$의 해가 아닌 것이다. 
 :::
 ::: 증명
-$a$가 $u$의 root라는 가정에 의해 $u = (\x - a)v$이도록 하는 $v \in A[\x]$가 존재하며, 이 때 $a$가 $u$의 simple root일 필요충분조건은 $v(a) \neq 0$인 것이다. 이제 $Du = v + (\x - a)Dv$이므로, $(Du)(a) = v(a)$이다.
+$a$가 $u$의 해라는 가정에 의해 $u = (\x - a)v$이도록 하는 $v \in A[\x]$가 존재하며, 이 때 $a$가 $u$의 중근이 아닐 필요충분조건은 $v(a) \neq 0$인 것이다. 이제 $Du = v + (\x - a)Dv$이므로, $(Du)(a) = v(a)$이다.
 :::
 
 더 일반적으로, 귀납법을 사용하면 다음을 보일 수 있다.
 
 ::: 명제 12
-임의의 다항식 $u \in A[\x]$에 대하여, $u$의 root $a \in A$가 multiplicity $k$를 가진다면, $a$는 $Du$의 multiplicity $\geq k-1$의 root이다. 만일 $k \cdot 1$이 $A$에서 cancellable하다면, $a$는 $Du$에 대해 order $k-1$을 가진다.
+임의의 다항식 $u \in A[\x]$에 대하여, $u$의 해 $a \in A$가 multiplicity $k$를 가진다면, $a$는 $Du$의 multiplicity $\geq k-1$의 해이다. 만일 $k \cdot 1$이 $A$에서 cancellable하다면, $a$는 $Du$에 대해 order $k-1$을 가진다.
 :::
 ::: 증명
 위의 명제와 비슷하게 $u=(\x-a)^k v$로 두고 $v(a)\neq 0$이므로, 

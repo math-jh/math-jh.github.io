@@ -60,10 +60,10 @@ $$z^{-1}x=z^{-1}xzz^{-1}=z^{-1}zxz^{-1}=xz^{-1}$$
 
 $$\Phi_n(\x)=\prod_{\substack{1\leq m\leq n\\ \gcd(m,n)=1}}\bigl(\x-\zeta^m\bigr),\qquad \zeta=e^{2\pi i/n}$$
 
-으로 정의한다. 즉 $\Phi_n(\x)$는 $n$번째 primitive root of unity들을 root로 갖는 monic polynomial이다.
+으로 정의한다. 즉 $\Phi_n(\x)$는 $n$번째 primitive root of unity들을 해로 갖는 monic polynomial이다.
 :::
 
-Cyclotomic polynomial의 기본 성질로 우리는 두 가지를 사용한다. 첫째, $\x^n-1$의 모든 root는 어떤 $d\mid n$에 대한 primitive $d$번째 root of unity이므로
+Cyclotomic polynomial의 기본 성질로 우리는 두 가지를 사용한다. 첫째, $\x^n-1$의 모든 해는 어떤 $d\mid n$에 대한 primitive $d$번째 root of unity이므로
 
 $$\x^n-1=\prod_{d\mid n}\Phi_d(\x)$$
 

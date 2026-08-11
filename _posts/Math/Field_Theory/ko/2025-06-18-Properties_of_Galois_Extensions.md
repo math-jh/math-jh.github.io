@@ -113,7 +113,7 @@ $$\Gal(\mathbb{L}/\mathbb{K})\hookrightarrow \prod_{x\in \mathbb{L}}\mathbb{L}\o
 
 를 생각하면 이 함수의 image는 유한집합이다. 따라서 $\Gal(\mathbb{L}/\mathbb{K})$는 유한집합들의 곱의 부분집합이며, 유한집합들은 compact이므로 이 곱 또한 compact이다. ([\[위상수학\] §Compactness와 paracompactness, ⁋정리 2 (Tychonoff)](/ko/math/topology/compactness#thm2)) 따라서 주어진 명제를 보이는 것은 $\Gal(\mathbb{L}/\mathbb{K})$이 $\mathbb{L}^\mathbb{L}$에서 closed임을 보이는 것과 같다. 
 
-함수 $u$가 $\Gal(\mathbb{L}/\mathbb{K})$의 $\mathbb{L}^\mathbb{L}$에서의 closure에 포함된다 하자. 우선 $\mathbb{K}$를 fix하는 field homomorphism $u:\mathbb{L}\rightarrow\mathbb{L}$은 언제나 $\Gal(\mathbb{L}/\mathbb{K})$의 원소인데, $u$는 단사이고 임의의 $x\in \mathbb{L}$에 대하여 $x$의 minimal polynomial의 $\mathbb{L}$에서의 root들이 이루는 유한집합을 자기 자신으로 보내므로 그 위에서 전단사이고, 따라서 $x$가 $u$의 image에 속하기 때문이다. 그러므로 만일 $u$가 $\Gal(\mathbb{L}/\mathbb{K})$의 원소가 아니라면, $u$는 field homomorphism이 아니거나 $u$가 $\mathbb{K}$를 fix하지 않아야 한다. 첫 번째 가정을 받아들여, 가령 $u(x+y)\neq u(x)+u(y)$이도록 하는 $x,y\in\mathbb{L}$이 존재한다 하자. 그럼 다음 집합
+함수 $u$가 $\Gal(\mathbb{L}/\mathbb{K})$의 $\mathbb{L}^\mathbb{L}$에서의 closure에 포함된다 하자. 우선 $\mathbb{K}$를 fix하는 field homomorphism $u:\mathbb{L}\rightarrow\mathbb{L}$은 언제나 $\Gal(\mathbb{L}/\mathbb{K})$의 원소인데, $u$는 단사이고 임의의 $x\in \mathbb{L}$에 대하여 $x$의 minimal polynomial의 $\mathbb{L}$에서의 해들이 이루는 유한집합을 자기 자신으로 보내므로 그 위에서 전단사이고, 따라서 $x$가 $u$의 image에 속하기 때문이다. 그러므로 만일 $u$가 $\Gal(\mathbb{L}/\mathbb{K})$의 원소가 아니라면, $u$는 field homomorphism이 아니거나 $u$가 $\mathbb{K}$를 fix하지 않아야 한다. 첫 번째 가정을 받아들여, 가령 $u(x+y)\neq u(x)+u(y)$이도록 하는 $x,y\in\mathbb{L}$이 존재한다 하자. 그럼 다음 집합
 
 $$\left\{f\in \mathbb{L}^\mathbb{L}\mid f(x)=u(x),f(y)=u(y),f(x+y)=u(x+y)\right\}$$
 
