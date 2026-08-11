@@ -19,17 +19,11 @@ drift_needed: true
 
 우리는 이 글 전체에서 morphism이 *locally of finite presentation*임을 기본 가정으로 둔다. 이는 (대부분의 관심사인) locally Noetherian base 위에서는 이것이 locally of finite type과 일치하므로 직관적으로는 이렇게 생각해도 무방하다. 
 
-## Smooth 사상
+## 매끄러운 사상
 
-Smooth morphism은 fiber가 base 위에서 균일하게 regular family를 이루는 morphism이다. 각 점 $s\in S$ 위의 fiber는 $X_s=X\times_S\Spec\kappa(s)$이고 ([§올곱, ⁋정의 12](/ko/math/scheme_theory/fiber_products#def12)) 이는 residue field $\kappa(s)$ 위의 scheme이므로, 각 fiber가 singular point를 가지지 않는다는 조건은 우선 $X_s$의 모든 local ring이 regular local ring이라는 것으로 ([\[가환대수학\] §정칙국소환](/ko/math/commutative_algebra/regular_local_rings)) 적어볼 수 있다.
+Smooth morphism은 fiber가 base 위에서 균일하게 regular family를 이루는 morphism이다. 이를 가장 간단하게 정의할 방법은 각 점 $s\in S$ 위의 fiber $X_s=X\times_S\Spec\kappa(s)$가 singular point를 가지지 않는다는 조건을 부여하는 것이다. 즉, 임의의 점에서 접방향이 fiber 차원을 넘어가서는 안되며, 이를 해당 점에서의 대수적인 언어로 풀어쓰면 Noetherian local ring $(A, \mathfrak{m})$에서의 부등식 $\dim A\leq \dim_{A/\mathfrak{m}}\mathfrak{m}/\mathfrak{m}^2$의 등호가 성립해야 한다는 조건, 즉  $A$가 regular local ring이라는 것으로 해석할 수 있다. ([\[가환대수학\] §차원, ⁋정의 12](/ko/math/commutative_algebra/Krull_dimension#def12)) 
 
-그러나 regularity는 계수체를 확장하면 보존되지 않는다. $\mathbb{K}=\mathbb{F}_p(t)$ 위에서 $\mathbb{L}=\mathbb{K}[\x]/(\x^p-t)$를 생각하면, $t$가 $\mathbb{K}$ 안에서 $p$제곱이 아니므로 $\x^p-t$는 $\mathbb{K}$ 위에서 irreducible이고 따라서 $\mathbb{L}$은 field이다. Field의 spectrum은 maximal ideal이 $0$인 local ring을 가지는 한 점이므로 $\Spec\mathbb{L}$은 regular scheme이다. 그런데 characteristic $p$에서 $\x^p-t=(\x-t^{1/p})^p$이므로 algebraic closure $\overline{\mathbb{K}}$로 계수를 올리면
-
-$$\mathbb{L}\otimes_{\mathbb{K}}\overline{\mathbb{K}}=\overline{\mathbb{K}}[\x]/\bigl((\x-t^{1/p})^p\bigr)$$
-
-가 되어 $\x-t^{1/p}$의 class가 $0$이 아닌 nilpotent를 이룬다. Regular local ring은 integral domain이므로 ([\[가환대수학\] §정칙국소환, ⁋따름정리 1](/ko/math/commutative_algebra/regular_local_rings#cor1)) 이 scheme은 regular가 아니며, 곧 $\Spec\mathbb{L}$은 $\mathbb{K}$ 위에서 regular이지만 계수를 확장하면 그 성질을 잃는다.
-
-이러한 현상은 residue field가 perfect가 아닐 때에만 일어나므로, characteristic $0$이나 유한체 위에서만 작업한다면 굳이 신경 쓸 필요가 없다. 그러나 일반의 base에서는 위와 같은 fiber를 regular한 것으로 인정하지 않기 위하여, 처음부터 계수체를 $\kappa(s)$의 algebraic closure까지 올린 $X\times_S\Spec\overline{\kappa(s)}$에서 regularity를 요구한다. 이를 $s$에서의 *geometric fiber*라 부르며, 접두사 geometric은 일반적으로 algebraic closure로 base change한 뒤의 상황을 가리킨다. Geometric fiber가 regular인 것은 $\kappa(s)$의 임의의 확대체로 계수를 올린 fiber가 regular인 것과 동치이므로, 이렇게 두면 fiber의 regularity가 계수체의 선택에 의존하지 않는 조건이 된다.
+문제는 이것이 family의 성질이 되기 위해서는 이것이 base change에 대해 잘 행동해야 하는데, 일반적으로 그렇지 않다는 것이다. 즉, 위와 같이 명시적으로 fiber $X_s$의 각 점에서의 regularity를 요구하는 것은 base change에 대해 취약하며, 이를 위해서는 field $\kappa(s)$의 algebraic closure $\overline{\kappa(s)}$로 계수를 올려준 *geometric fiber* $X\times_S\Spec\overline{\kappa(s)}$를 생각하면 된다는 사실이 알려져 있다. 그러나 이 사실에 대한 증명은 그렇게 가볍지는 않으므로, 우리는 이를 motivation으로만 활용하고 바로 다음의 정의를 도입하기로 한다. 
 
 ::: 정의 1
 Locally of finite presentation인 scheme morphism $\varphi:X \rightarrow S$가 *smooth<sub>매끄러운</sub>*하다는 것은 다음 두 조건이 성립하는 것이다.
@@ -44,28 +38,48 @@ Locally of finite presentation인 scheme morphism $\varphi:X \rightarrow S$가 *
 
 이 정의에서 두 조건은 서로 다른 방향을 통제한다. Flatness는 fiber들이 base를 따라 차원 도약 없이 연속적으로 변함을 보장하고 ([§평탄사상, ⁋명제 17](/ko/math/scheme_theory/flat_morphisms#prop17)), geometric fiber의 regularity는 각 fiber 자체가 singular point를 가지지 않음을 보장한다.
 
-Smooth morphism은 cotangent sheaf의 국소자유성으로 동치적으로 특징지어진다. 이것이 미분기하의 submersion과의 직접적 연결을 준다.
+Smooth morphism은 cotangent sheaf의 local freeness로 적어줄 수도 있으며, 이것이 가장 중요한 smooth morphism의 characterization이다. 이를 진술하려면 차원을 점마다 재는 방법이 필요하다. Scheme $Y$와 그 점 $y\in Y$에 대하여, $y$에서의 *국소차원<sub>local dimension</sub>* $\dim_yY$를 $y$를 포함하는 irreducible component들의 차원의 supremum으로 정의한다. 곧 $y$ 주위에서만 본 $Y$의 차원이며, 전체 차원은 이들의 supremum $\dim Y=\sup_{y\in Y}\dim_yY$이다. ([§차원, ⁋정의 1](/ko/math/scheme_theory/dimension#def1))
+
+이는 local ring의 차원 $\dim\mathcal{O}_{Y,y}$와 다른 양이다. 후자는 $\overline{\{y\}}$의 codimension이라 ([§차원, ⁋명제 8](/ko/math/scheme_theory/dimension#prop8)) $y$가 얼마나 큰 닫힌집합의 generic point인지가 아니라 그 위로 얼마나 긴 chain이 올라가는지를 재며, 가령 $Y=\mathbb{A}^1_\mathbb{K}$의 generic point $\eta$에서 $\dim_\eta Y=1$이지만 $\dim\mathcal{O}_{Y,\eta}=0$이다. 두 양은 field 위에서 finite type인 scheme의 closed point에서 차원 공식에 의하여 일치한다. ([\[가환대수학\] §뇌터 정규화, ⁋정리 4](/ko/math/commutative_algebra/noether_normalization#thm4))
 
 ::: 정리 2
 Locally of finite presentation인 morphism $\varphi:X \rightarrow S$에 대하여 다음이 동치이다.
 
 1. $\varphi$는 smooth하다.
-2. $\varphi$는 flat하고, $\Omega_{X/S}$는 locally free sheaf이며 ([§준연접층, ⁋정의 12](/ko/math/scheme_theory/quasicoherent_sheaves#def12)), 각 $x\in X$에서 그 rank가 $s=\varphi(x)$ 위 fiber의 국소차원 $\dim_x X_s$와 같다.
+2. $\varphi$는 flat하고, $\Omega_{X/S}$는 locally free sheaf이며, 각 $x\in X$에서 그 rank가 $s=\varphi(x)$ 위 fiber의 국소차원 $\dim_x X_s$와 같다.
 
 이 때 $\Omega_{X/S}$의 rank를 $\varphi$의 *상대차원<sub>relative dimension</sub>*이라 부른다.
 :::
 ::: 증명
 문제가 국소적이므로 $S=\Spec A$, $X=\Spec B$이고 한 점 $x$에 해당하는 prime $\mathfrak{p}\subseteq B$ 근방에서 작업한다. $s=\varphi(x)$에 해당하는 prime을 $\mathfrak{q}\subseteq A$라 하자.
 
-먼저 $\varphi$가 smooth하다고 가정한다. Geometric fiber $X_{\bar s}$가 regular이고 flat하므로, fiber 위에서 cotangent sheaf의 거동을 본다. Field $\mathbb{K}=\overline{\kappa(s)}$ 위의 regular scheme $X_{\bar s}$의 점 $\bar x$에서, Zariski tangent space의 ([§Kähler 미분과 여접층, ⁋정의 8](/ko/math/scheme_theory/sheaf_of_differentials#def8)) 차원은 국소차원과 같다. 즉
+먼저 $\varphi$가 smooth하다고 가정하고 $\Omega_{X/S}$의 $x$에서의 fiber 차원을 계산한다. Cotangent sheaf는 base change와 commute하므로 $\mathbb{K}=\overline{\kappa(s)}$ 위의 geometric fiber에서 $\Omega_{X_{\bar s}/\mathbb{K}}$는 $\Omega_{X/S}$의 pullback이고, $X_{\bar s} \rightarrow X_s$가 전사이므로 $x$ 위의 점 $\bar x$를 택하면
 
-$$\dim_{\kappa(\bar x)}\bigl(\Omega_{X_{\bar s}/\mathbb{K}}\otimes \kappa(\bar x)\bigr)=\dim \mathcal{O}_{X_{\bar s},\bar x}=\dim_{\bar x}X_{\bar s}$$
+$$\dim_{\kappa(x)}\bigl(\Omega_{X/S}\otimes \kappa(x)\bigr)=\dim_{\kappa(\bar x)}\bigl(\Omega_{X_{\bar s}/\mathbb{K}}\otimes \kappa(\bar x)\bigr)$$
 
-이다. 이는 정확히 regular local ring의 cotangent space $\mathfrak{m}/\mathfrak{m}^2$이 차원만큼의 dimension을 가진다는 사실이다. ([\[가환대수학\] §정칙국소환](/ko/math/commutative_algebra/regular_local_rings)의 regular local ring은 그 정의상 $\mathfrak{m}$이 $\dim$개의 원소로 생성되며, 이는 $\dim\mathfrak{m}/\mathfrak{m}^2=\dim$과 동치이다.) Cotangent sheaf는 base change와 commute하므로 $\Omega_{X_{\bar s}/\mathbb{K}}=\Omega_{X/S}\otimes_S \mathbb{K}$이고, 따라서 $\Omega_{X/S}\otimes \kappa(\bar x)$의 차원이 fiber 차원과 같다.
+이 성립한다. 곧 우변을 regular scheme $X_{\bar s}$ 위에서 계산하면 된다.
 
-이제 flatness와 결합한다. $\varphi$가 flat이고 fiber 위에서 $\Omega$의 fiber 차원이 일정하므로, 유한표시 module에 대한 국소자유성 판정에 의하여 $\Omega_{X/S}$는 $\mathfrak{p}$ 근방에서 그 차원만큼의 rank를 가지는 locally free sheaf이다. 구체적으로 $\Omega_{B/A}$는 finitely presented $B$-module이고, $\varphi$가 flat이고 모든 fiber에서 $\dim_{\kappa(x)}\Omega_{B/A}\otimes\kappa(x)$가 일정하므로 $\Omega_{B/A}$는 projective module, 곧 국소자유이다 (유한표시·flat module의 fiber rank가 국소상수이면 국소자유, Stacks 00NX). 그 rank가 fiber 차원과 같음은 위 계산에서 따른다.
+우선 closed point에서 본다. $X_{\bar s}$가 algebraically closed field $\mathbb{K}$ 위에서 locally of finite presentation이므로 그 closed point $z$의 residue field는 $\mathbb{K}$의 유한확대, 곧 $\kappa(z)=\mathbb{K}$이다. ([\[가환대수학\] §영점정리, ⁋정리 4](/ko/math/commutative_algebra/nullstellensatz#thm4)) 이러한 $\mathbb{K}$-rational point에서는 $\Omega_{X_{\bar s}/\mathbb{K}}\otimes\kappa(z)\cong\mathfrak{m}_z/\mathfrak{m}_z^2$이 성립하므로 ([§Kähler 미분과 여접층, ⁋정의 8](/ko/math/scheme_theory/sheaf_of_differentials#def8) 직후의 관찰), $\mathcal{O}_{X_{\bar s},z}$가 regular local ring이라는 것은 정확히
 
-역으로 두 번째 조건을 가정하자. $\Omega_{X/S}$가 국소자유이고 그 rank가 fiber 차원과 같으면, 각 geometric fiber $X_{\bar s}$ 위에서 $\Omega_{X_{\bar s}/\mathbb{K}}$도 국소자유이며 그 rank가 fiber의 차원과 일치한다. 이는 $X_{\bar s}$의 모든 점에서 Zariski tangent space 차원이 국소차원과 같다는 것이고, $X_{\bar s}$가 finite type over a field이므로 그 점은 regular이다. (algebraically closed field 위에서 tangent space 차원과 국소차원이 일치하면 그 local ring은 regular이다.) 따라서 geometric fiber가 regular이고, 가정에 의해 $\varphi$가 flat이므로 $\varphi$는 smooth하다.
+$$\dim_{\kappa(z)}\bigl(\Omega_{X_{\bar s}/\mathbb{K}}\otimes \kappa(z)\bigr)=\dim \mathcal{O}_{X_{\bar s},z}$$
+
+를 뜻한다. ([\[가환대수학\] §정칙국소환](/ko/math/commutative_algebra/regular_local_rings)의 regular local ring은 그 정의상 $\mathfrak{m}$이 $\dim$개의 원소로 생성되며, 이는 $\dim\mathfrak{m}/\mathfrak{m}^2=\dim$과 동치이다.) 게다가 $z$가 closed point이므로 차원 공식에 의하여 우변은 국소차원 $\dim_zX_{\bar s}$와 같다. 반면 non-closed point $\bar x$에서는 $\dim\mathcal{O}_{X_{\bar s},\bar x}$가 codimension이라 국소차원보다 작을 수 있으므로 이 계산을 그대로 옮길 수 없고, 남은 점들은 반연속성으로 처리해야 한다.
+
+$X_{\bar s}$의 local ring들은 regular, 특히 domain이므로 ([\[가환대수학\] §정칙국소환, ⁋따름정리 1](/ko/math/commutative_algebra/regular_local_rings#cor1)) 서로 다른 irreducible component는 만나지 않는다. 곧 각 component는 열린 동시에 닫힌집합이고 그 위에서 국소차원은 일정하므로, $\bar x$를 담는 component를 $Z$, $d=\dim Z$라 하자. 이제
+
+$$\mu(v)=\dim_{\kappa(v)}\bigl(\Omega_{X_{\bar s}/\mathbb{K}}\otimes \kappa(v)\bigr)$$
+
+로 두면 $\mu$는 upper semicontinuous이다. ([§평탄사상, ⁋명제 22](/ko/math/scheme_theory/flat_morphisms#prop22)) 한편 $X_{\bar s}$의 공집합이 아닌 열린집합이나 닫힌집합은 언제나 $X_{\bar s}$의 closed point를 담는다. 그러한 부분집합에 reduced 구조를 주면 이 또한 $\mathbb{K}$ 위에서 locally of finite type이라 그 affine open의 maximal ideal이 한 점을 주고, 그 점의 residue field가 $\mathbb{K}$의 유한확대이므로 $X_{\bar s}$ 안에서의 closure가 $0$차원, 곧 그 점 자신이기 때문이다. ([\[가환대수학\] §뇌터 정규화, ⁋정리 3](/ko/math/commutative_algebra/noether_normalization#thm3)) 그럼 $\overline{\{\bar x\}}$ 안의 closed point $z$를 택하면 closed point에서의 계산이 $\mu(z)=\dim_zX_{\bar s}=d$를 주고, 열린집합 $\{\mu\leq d\}$가 $z$를 담으므로 $\bar x$도 담아 $\mu(\bar x)\leq d$이다. 거꾸로 열린집합 $\{\mu\leq\mu(\bar x)\}$와 $Z$의 교집합 안의 closed point $z'$을 택하면 $d=\mu(z')\leq\mu(\bar x)$이므로, 결국 $\mu(\bar x)=d=\dim_{\bar x}X_{\bar s}$이다.
+
+마지막으로 이를 $X_s$로 내린다. Algebraic 확대가 주는 $\Spec\mathbb{K} \rightarrow \Spec\kappa(s)$가 integral이고 integral morphism은 base change로 보존되므로 ([§올곱, ⁋명제 16](/ko/math/scheme_theory/fiber_products#prop16)) $X_{\bar s} \rightarrow X_s$는 integral 전사이다. 그럼 $\bar x$를 담는 $X_{\bar s}$의 component는 그 image의 closure 위로 가는 dominant한 integral morphism을 주어 [§차원, ⁋명제 5](/ko/math/scheme_theory/dimension#prop5)에 의하여 그 closure와 차원이 같고, 이 closure는 $x$를 담는 어떤 component 안에 들어가므로 $\dim_{\bar x}X_{\bar s}\leq\dim_xX_s$이다. 거꾸로 $x$를 담는 $X_s$의 component $W$를 잡으면 $\bar x$는 base change $W\times_{\Spec\kappa(s)}\Spec\mathbb{K}$에 속하고, 이 scheme의 각 component는 $W$의 generic point 위로 간다. ($W$가 integral이라 그 위로의 integral extension이 단사이므로 minimal prime이 minimal prime 위로 간다. [\[가환대수학\] §정수적 확장과 아이디얼, ⁋따름정리 4](/ko/math/commutative_algebra/lying_over_and_going_up#cor4)) 따라서 다시 [§차원, ⁋명제 5](/ko/math/scheme_theory/dimension#prop5)에 의하여 이들의 차원은 $\dim W$이며, $\bar x$를 담는 것 하나를 택하면 그것을 담는 $X_{\bar s}$의 component가 $\bar x$를 지나 $\dim_{\bar x}X_{\bar s}\geq\dim W$이다. $W$가 임의였으므로 $\dim_{\bar x}X_{\bar s}=\dim_xX_s$이고, 따라서 $\Omega_{X/S}$의 $x$에서의 fiber 차원은 $\dim_xX_s$이다.
+
+이제 flatness와 결합한다. $\varphi$가 flat이고 $\Omega$의 fiber 차원이 국소상수이므로, 유한표시 module에 대한 국소자유성 판정에 의하여 $\Omega_{X/S}$는 $\mathfrak{p}$ 근방에서 그 차원만큼의 rank를 가지는 locally free sheaf이다. 구체적으로 $\Omega_{B/A}$는 finitely presented $B$-module이고, $\varphi$가 flat이고 $\dim_{\kappa(x)}\Omega_{B/A}\otimes\kappa(x)$가 국소상수이므로 $\Omega_{B/A}$는 projective module, 곧 국소자유이다 (유한표시·flat module의 fiber rank가 국소상수이면 국소자유, Stacks 00NX). 그 rank가 fiber 차원과 같음은 위 계산에서 따른다.
+
+역으로 두 번째 조건을 가정하자. $\Omega_{X/S}$가 국소자유이고 그 rank가 fiber의 국소차원과 같으면, 앞의 base change 계산에 의하여 각 geometric fiber $X_{\bar s}$ 위에서도 $\Omega_{X_{\bar s}/\mathbb{K}}$의 fiber 차원이 국소차원과 일치한다. 여기서도 closed point에서 출발한다. $X_{\bar s}$의 closed point $z$는 $\mathbb{K}$-rational이라 $\Omega_{X_{\bar s}/\mathbb{K}}\otimes\kappa(z)\cong\mathfrak{m}_z/\mathfrak{m}_z^2$이고 차원 공식이 $\dim_zX_{\bar s}=\dim\mathcal{O}_{X_{\bar s},z}$를 주므로
+
+$$\dim_{\kappa(z)}\mathfrak{m}_z/\mathfrak{m}_z^2=\dim_zX_{\bar s}=\dim\mathcal{O}_{X_{\bar s},z}$$
+
+이 되어 $\mathcal{O}_{X_{\bar s},z}$는 regular local ring이다. 이제 임의의 점 $\bar x\in X_{\bar s}$에 대하여 $\overline{\{\bar x\}}$ 안의 closed point $z$를 택하면, $z$의 열린근방은 모두 $\bar x$를 담으므로 $\mathcal{O}_{X_{\bar s},\bar x}$는 $\mathcal{O}_{X_{\bar s},z}$의 localization이다. Regular local ring의 localization은 regular이므로 ([\[가환대수학\] §정칙성의 호몰로지 판정, ⁋따름정리 4](/ko/math/commutative_algebra/homological_criterion_for_regularity#cor4)) $\mathcal{O}_{X_{\bar s},\bar x}$ 또한 regular local ring이다. 따라서 geometric fiber가 regular이고, 가정에 의해 $\varphi$가 flat이므로 $\varphi$는 smooth하다.
 :::
 
 이 동치성에 의하여 smooth morphism은 fiber다발처럼 다룰 수 있다. $\Omega_{X/S}$가 rank $r$의 locally free sheaf라는 것은 $X$가 국소적으로 $S$ 위의 $r$차원 affine space처럼 보인다는 직관을 정확히 표현한다. 실제로 가장 기본적인 예는 affine space로의 projection이며, $\mathbb{A}^r_S \rightarrow S$는 flat하고 $\Omega_{\mathbb{A}^r_S/S}\cong \mathcal{O}^{\oplus r}$이므로 ([§Kähler 미분과 여접층, ⁋명제 9](/ko/math/scheme_theory/sheaf_of_differentials#prop9)) 상대차원 $r$의 smooth morphism이다.
@@ -180,7 +194,7 @@ Locally of finite presentation인 morphism $\varphi:X \rightarrow S$에 대하�
 
 (1) $\Rightarrow$ (2)는 정의에 포함되어 있다. $\varphi$가 étale하면 smooth하므로 flat하고, unramified하다.
 
-(2) $\Rightarrow$ (1)을 보이려면 $\varphi$가 flat하고 unramified할 때 geometric fiber가 regular임을 보이면 된다. Unramified 가정에 의하여 $\Omega_{X/S}=0$이고, 따라서 임의의 geometric fiber $X_{\bar s}$ 위에서도 base change와 commute하는 cotangent sheaf가 $\Omega_{X_{\bar s}/\mathbb{K}}=0$이다. $X_{\bar s}$는 algebraically closed field $\mathbb{K}=\overline{\kappa(s)}$ 위의 finite type scheme이고, 그 위에서 $\Omega=0$이라는 것은 모든 점에서 Zariski tangent space가 영, 곧 국소차원이 $0$이라는 뜻이다. 따라서 $X_{\bar s}$는 $\mathbb{K}$의 유한 분리가능 확대들의 곱의 spectrum, 곧 reduced $0$차원 scheme이며 특히 regular이다. 그러므로 $\varphi$는 flat하고 geometric fiber가 regular이므로 smooth하며, $\Omega_{X/S}=0$이므로 unramified, 곧 étale하다.
+(2) $\Rightarrow$ (1)을 보이려면 $\varphi$가 flat하고 unramified할 때 geometric fiber가 regular임을 보이면 된다. Unramified 가정에 의하여 $\Omega_{X/S}=0$이고, 따라서 임의의 geometric fiber $X_{\bar s}$ 위에서도 base change와 commute하는 cotangent sheaf가 $\Omega_{X_{\bar s}/\mathbb{K}}=0$이다. $X_{\bar s}$는 algebraically closed field $\mathbb{K}=\overline{\kappa(s)}$ 위에서 locally of finite presentation이므로 그 closed point $z$는 $\mathbb{K}$-rational이고, 따라서 $\mathfrak{m}_z/\mathfrak{m}_z^2\cong\Omega_{X_{\bar s}/\mathbb{K}}\otimes\kappa(z)=0$이다. Nakayama 보조정리에 의하여 ([\[가환대수학\] §정수적 확장, ⁋보조정리 8](/ko/math/commutative_algebra/integral_extension#lem8)) $\mathfrak{m}_z=0$이므로 $\mathcal{O}_{X_{\bar s},z}=\mathbb{K}$는 field이다. 그럼 $z$를 담는 irreducible component가 $\{z\}$뿐이고 나머지 component들의 합집합은 닫혀 있으므로, 그 여집합으로서 $\{z\}$는 열린집합이다. 이 열린집합들의 합집합의 여집합은 closed point를 담지 않는 닫힌집합이라 공집합이므로 ([정리 2](#thm2)의 증명에서 보았듯 공집합이 아닌 닫힌집합은 언제나 closed point를 담는다), $X_{\bar s}$는 $\Spec\mathbb{K}$들의 disjoint union이다. 특히 이는 국소차원이 $0$인 reduced scheme이라 regular이다. 그러므로 $\varphi$는 flat하고 geometric fiber가 regular이므로 smooth하며, $\Omega_{X/S}=0$이므로 unramified, 곧 étale하다.
 :::
 
 이 명제에 의하여 étale morphism은 "flat한 unramified morphism"이라는 가장 간결한 형태로 다룰 수 있으며, 상대차원 $0$이라는 점에서 covering map의 대수적 대응물이다. Étale morphism은 국소적으로 표준적인 모형을 가진다. 이것이 미분기하에서 covering map이 국소적으로 trivial sheet들의 합집합으로 보이는 것에 대응한다.
