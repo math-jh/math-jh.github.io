@@ -914,6 +914,13 @@ A:
   defs:
   - label: '[대수적 구조] §대수'
     url: /ko/math/algebraic_structures/algebras
+- id: associative_algebra
+  en: associative algebra
+  ko: 결합대수
+  primary: ko
+  defs:
+  - label: '[다중선형대수학] §텐서대수'
+    url: /ko/math/multilinear_algebra/tensor_algebras
 - id: associative_law
   en: associative law
   ko: 결합법칙
@@ -15034,6 +15041,8 @@ R:
     url: /ko/math/lie_theory/torus_action
   - label: '[대수다양체] §대수적 군'
     url: /ko/math/algebraic_varieties/algebraic_groups
+  - label: '[표현론] §Quiver와 경로대수'
+    url: /ko/math/representation_theory/path_algebras
   see:
   - label: Irreducible representation
     id: irreducible_representation
