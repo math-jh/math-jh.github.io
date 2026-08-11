@@ -48,7 +48,7 @@ $$\Phi_p(\x)=\frac{\x^p-1}{\x-1}=\x^{p-1}+\x^{p-2}+\cdots+\x+1$$
 2. $\Phi_n(\x)\in\mathbb{Z}[\x]$이다. 특히 $\Phi_n$은 $\mathbb{K}$의 선택에 의존하지 않는다.
 :::
 ::: 증명
-우선 1을 보인다. $\mu_n$의 원소 $\omega$의 order를 $d$라 하면 $d\mid n$이고, $\omega$가 생성하는 subgroup $\langle\omega\rangle$은 order $d$의 cyclic group이며 $\omega^d=1$로부터 $\langle\omega\rangle\subseteq\mu_d$이다. 그런데 $\card\mu_d=d$이므로 $\langle\omega\rangle=\mu_d$, 즉 $\omega$는 primitive $d$-th root of unity이다. 거꾸로 $d\mid n$일 때 primitive $d$-th root of unity는 $\mu_d\subseteq\mu_n$의 원소로서 order $d$를 가지므로, $\mu_n$은 $d\mid n$에 따라 primitive $d$-th root of unity들의 집합으로 분할된다.
+우선 1을 보인다. $\mu_n$의 원소 $\omega$의 order를 $d$라 하면 $d\mid n$이고, $\omega$가 생성하는 subgroup $\langle\omega\rangle$은 order $d$의 cyclic group이며 $\omega^d=1$로부터 $\langle\omega\rangle\subseteq\mu_d$이다. 그런데 $\lvert\mu_d\rvert=d$이므로 $\langle\omega\rangle=\mu_d$, 즉 $\omega$는 primitive $d$-th root of unity이다. 거꾸로 $d\mid n$일 때 primitive $d$-th root of unity는 $\mu_d\subseteq\mu_n$의 원소로서 order $d$를 가지므로, $\mu_n$은 $d\mid n$에 따라 primitive $d$-th root of unity들의 집합으로 분할된다.
 
 한편 $\x^n-1$은 monic degree $n$ 다항식이면서 $\mu_n$의 $n$개의 원소를 모두 root로 가지므로 $\x^n-1=\prod_{\omega\in\mu_n}(\x-\omega)$이고, 이 곱을 위의 분할에 따라 묶으면 1을 얻는다.
 

@@ -33,14 +33,14 @@ $G$의 원소들의 order들의 최소공배수를 $n$이라 하자. 우선 orde
 
 $\lcm(r,s)$를 소인수분해하여 각 소인수의 거듭제곱 $p^e$마다, $p^e$가 $r$ 혹은 $s$를 나누므로 $x^{r/p^e}$ 혹은 $y^{s/p^e}$가 order $p^e$의 원소가 된다. 따라서 order가 서로소인 두 원소 $u,v$의 곱이 order $\ord(u)\ord(v)$를 갖는 것만 보이면 충분하다. $G$가 abelian이므로 $(uv)^{\ord(u)\ord(v)}=e$이고, 거꾸로 $(uv)^k=e$라면 $u^k=v^{-k}\in\langle u\rangle\cap\langle v\rangle$인데 이 교집합의 order는 [\[대수적 구조\] §몫군, ⁋명제 5](/ko/math/algebraic_structures/quotient_groups#prop5)에 의해 서로소인 $\ord(u)$와 $\ord(v)$를 모두 나누므로 $1$이다. 즉 $u^k=v^k=e$이고 $\ord(u),\ord(v)$가 모두 $k$를 나누므로 $\ord(u)\ord(v)\mid k$이다.
 
-이제 $G$의 모든 원소는 $x^n=1$, 즉 다항식 $\x^n-1$의 root이다. Field 위에서 $n$차 다항식은 많아야 $n$개의 root를 가지므로 ([\[환론\] §다항식환, ⁋명제 9](/ko/math/ring_theory/polynomial_rings#prop9)) $\card G\leq n$이다. 한편 위에서 찾은 order $n$의 원소 $a$에 대하여 $\langle a\rangle$은 $n$개의 원소를 갖는 $G$의 subgroup이므로 $G=\langle a\rangle$이고, 즉 $G$는 cyclic이다.
+이제 $G$의 모든 원소는 $x^n=1$, 즉 다항식 $\x^n-1$의 root이다. Field 위에서 $n$차 다항식은 많아야 $n$개의 root를 가지므로 ([\[환론\] §다항식환, ⁋명제 9](/ko/math/ring_theory/polynomial_rings#prop9)) $\lvert G\rvert\leq n$이다. 한편 위에서 찾은 order $n$의 원소 $a$에 대하여 $\langle a\rangle$은 $n$개의 원소를 갖는 $G$의 subgroup이므로 $G=\langle a\rangle$이고, 즉 $G$는 cyclic이다.
 :::
 
 ::: 정의 2
 Field $\mathbb{K}$와 자연수 $n\geq1$에 대하여, $\overline{\mathbb{K}}$에서의 다항식 $\x^n-1$의 root들의 모임을 $\mu_n$으로 적고 그 원소들을 *1의 $n$제곱근<sub>$n$-th root of unity</sub>*이라 부른다. Group $\mu_n$의 generator를 *primitive $n$-th root of unity<sub>1의 원시 $n$제곱근</sub>*이라 부른다.
 :::
 
-이 정의가 말이 되는 것을 확인하자. $\mu_n$이 $\overline{\mathbb{K}}^\times$의 subgroup인 것은 자명하다. 한편 $\x^n-1$의 derivative는 $n\x^{n-1}$이고, characteristic이 $0$이므로 이 둘은 공통근을 갖지 않는다. 따라서 [\[환론\] §다항식환, ⁋명제 11](/ko/math/ring_theory/polynomial_rings#prop11)에 의해 $\x^n-1$의 root들은 모두 simple root이고, $\overline{\mathbb{K}}$에서 $\x^n-1$이 일차식들로 쪼개지므로 $\card\mu_n=n$이다. 그럼 [보조정리 1](#lem1)에 의하여 $\mu_n$은 order $n$의 cyclic group이고, 특히 generator, 즉 primitive $n$-th root of unity $\zeta$가 존재한다.
+이 정의가 말이 되는 것을 확인하자. $\mu_n$이 $\overline{\mathbb{K}}^\times$의 subgroup인 것은 자명하다. 한편 $\x^n-1$의 derivative는 $n\x^{n-1}$이고, characteristic이 $0$이므로 이 둘은 공통근을 갖지 않는다. 따라서 [\[환론\] §다항식환, ⁋명제 11](/ko/math/ring_theory/polynomial_rings#prop11)에 의해 $\x^n-1$의 root들은 모두 simple root이고, $\overline{\mathbb{K}}$에서 $\x^n-1$이 일차식들로 쪼개지므로 $\lvert\mu_n\rvert=n$이다. 그럼 [보조정리 1](#lem1)에 의하여 $\mu_n$은 order $n$의 cyclic group이고, 특히 generator, 즉 primitive $n$-th root of unity $\zeta$가 존재한다.
 
 ::: 명제 3
 Primitive $n$-th root of unity $\zeta$에 대하여, $\mathbb{K}(\zeta)/\mathbb{K}$는 finite degree Galois extension이고 그 Galois group은 abelian group $(\mathbb{Z}/n\mathbb{Z})^\times$의 subgroup과 isomorphic하다.
@@ -78,7 +78,7 @@ $$(\sigma\tau)(\alpha)/\alpha=\sigma\bigl(\tau(\alpha)/\alpha\bigr)\cdot\sigma(\
 $\mathbb{L}/\mathbb{K}$가 degree $n$의 Galois extension이고 $\Gal(\mathbb{L}/\mathbb{K})$가 cyclic group이라 하자. 그럼 ($\zeta\in\mathbb{K}$ 가정 하에) 적당한 $\alpha\in\mathbb{L}$가 존재하여 $\mathbb{L}=\mathbb{K}(\alpha)$이고 $\alpha^n\in\mathbb{K}$이다.
 :::
 ::: 증명
-$\Gal(\mathbb{L}/\mathbb{K})$의 generator를 $\sigma$라 하자. [§갈루아 이론의 기본정리, ⁋명제 2](/ko/math/field_theory/fundamental_theorem_of_galois_theory#prop2)에 의하여 $\card\Gal(\mathbb{L}/\mathbb{K})=[\mathbb{L}:\mathbb{K}]=n$이고, 따라서 $\id,\sigma,\sigma^2,\ldots,\sigma^{n-1}$은 $\mathbb{L}$에서 $\mathbb{L}$로의 서로 다른 homomorphism들이다. [§에탈대수, ⁋따름정리 3](/ko/math/field_theory/etale_algebras#cor3)에 의하여 이들은 $\mathbb{L}$-벡터공간 안에서 일차독립이므로, 일차결합
+$\Gal(\mathbb{L}/\mathbb{K})$의 generator를 $\sigma$라 하자. [§갈루아 이론의 기본정리, ⁋명제 2](/ko/math/field_theory/fundamental_theorem_of_galois_theory#prop2)에 의하여 $\lvert\Gal(\mathbb{L}/\mathbb{K})\rvert=[\mathbb{L}:\mathbb{K}]=n$이고, 따라서 $\id,\sigma,\sigma^2,\ldots,\sigma^{n-1}$은 $\mathbb{L}$에서 $\mathbb{L}$로의 서로 다른 homomorphism들이다. [§에탈대수, ⁋따름정리 3](/ko/math/field_theory/etale_algebras#cor3)에 의하여 이들은 $\mathbb{L}$-벡터공간 안에서 일차독립이므로, 일차결합
 
 $$\id+\zeta\sigma+\zeta^2\sigma^2+\cdots+\zeta^{n-1}\sigma^{n-1}$$
 
@@ -130,7 +130,7 @@ $$G=H_0\supseteq H_1\supseteq\cdots\supseteq H_r=\{e\}$$
 를 갖는다. 즉 각각의 $H_{i+1}$은 $H_i$의 normal subgroup이고 $H_i/H_{i+1}$은 cyclic group이다.
 :::
 ::: 증명
-우선 유한한 abelian group $A$가 이러한 series를 갖는 것을 $\card A$에 대한 귀납법으로 보이자. $A$가 trivial이면 자명하다. 그렇지 않다면 $e$가 아닌 원소 $a\in A$를 택하고 quotient $A/\langle a\rangle$을 생각하면, 귀납가정에 의해 $A/\langle a\rangle$은 cyclic quotient들을 갖는 series를 갖고, quotient group의 subgroup correspondence로 이를 $A$의 series로 끌어올린 후 마지막에 $\langle a\rangle\supseteq\{e\}$를 붙이면 된다. $A$가 abelian이므로 모든 subgroup이 normal이고, 끌어올린 series의 quotient들은 원래 series의 quotient들과 isomorphic하다.
+우선 유한한 abelian group $A$가 이러한 series를 갖는 것을 $\lvert A\rvert$에 대한 귀납법으로 보이자. $A$가 trivial이면 자명하다. 그렇지 않다면 $e$가 아닌 원소 $a\in A$를 택하고 quotient $A/\langle a\rangle$을 생각하면, 귀납가정에 의해 $A/\langle a\rangle$은 cyclic quotient들을 갖는 series를 갖고, quotient group의 subgroup correspondence로 이를 $A$의 series로 끌어올린 후 마지막에 $\langle a\rangle\supseteq\{e\}$를 붙이면 된다. $A$가 abelian이므로 모든 subgroup이 normal이고, 끌어올린 series의 quotient들은 원래 series의 quotient들과 isomorphic하다.
 
 이제 일반적인 solvable group $G$에 대하여, derived series
 
@@ -150,7 +150,7 @@ Characteristic $0$의 field $\mathbb{K}$와 다항식 $f\in\mathbb{K}[\x]$, 그�
 ::: 증명
 우선 $\mathbb{L}_f/\mathbb{K}$는 splitting field이므로 quasi-Galois이고 ([§갈루아 확장, ⁋명제 5](/ko/math/field_theory/galois_extension#prop5)), characteristic $0$이므로 finite degree Galois extension이다.
 
-**(2)$\implies$(1)** $G=\Gal(\mathbb{L}_f/\mathbb{K})$가 solvable이라 하고 $n=\card G$로 두자. Primitive $n$-th root of unity $\zeta$를 택하고 $\mathbb{K}'=\mathbb{K}(\zeta)$, $\mathbb{L}'=\mathbb{L}_f(\zeta)$라 하자. $\mathbb{L}'$은 $\mathbb{K}'$ 위에서의 $f$의 splitting field이므로 $\mathbb{L}'/\mathbb{K}'$도 finite degree Galois extension이다.
+**(2)$\implies$(1)** $G=\Gal(\mathbb{L}_f/\mathbb{K})$가 solvable이라 하고 $n=\lvert G\rvert$로 두자. Primitive $n$-th root of unity $\zeta$를 택하고 $\mathbb{K}'=\mathbb{K}(\zeta)$, $\mathbb{L}'=\mathbb{L}_f(\zeta)$라 하자. $\mathbb{L}'$은 $\mathbb{K}'$ 위에서의 $f$의 splitting field이므로 $\mathbb{L}'/\mathbb{K}'$도 finite degree Galois extension이다.
 
 우선 $H=\Gal(\mathbb{L}'/\mathbb{K}')$가 solvable임을 보이자. 임의의 $\sigma\in H$에 대하여 $\sigma$는 $\mathbb{K}$를 고정하고, $\mathbb{L}_f/\mathbb{K}$가 quasi-Galois이므로 [§갈루아 확장, ⁋명제 5](/ko/math/field_theory/galois_extension#prop5)에 의해 $\sigma(\mathbb{L}_f)=\mathbb{L}_f$이다. 따라서 restriction homomorphism $H \rightarrow G$가 잘 정의되며, $\sigma\in H$가 $\mathbb{L}_f$를 고정한다면 $\zeta\in\mathbb{K}'$도 고정하므로 $\mathbb{L}'=\mathbb{K}'(\mathbb{L}_f)$ 전체를 고정한다. 즉 이 restriction은 injective이고, $H$는 solvable group $G$의 subgroup과 isomorphic하므로 [보조정리 8](#lem8)에 의해 solvable이다.
 
@@ -162,7 +162,7 @@ $$\mathbb{K}'=\mathbb{F}_0\subseteq\mathbb{F}_1\subseteq\cdots\subseteq\mathbb{F
 
 $$\Gal(\mathbb{F}_i/\mathbb{F}_{i-1})\cong H_{i-1}/H_i$$
 
-는 cyclic group이다. 그 order를 $d_i$라 하면 [\[대수적 구조\] §몫군, ⁋명제 5](/ko/math/algebraic_structures/quotient_groups#prop5)에 의해 $d_i$는 $\card H$를 나누고, 다시 $\card H$는 $n$을 나눈다. 따라서 $\zeta^{n/d_i}$는 primitive $d_i$-th root of unity이고 $\mathbb{K}'\subseteq\mathbb{F}_{i-1}$에 속하므로, [명제 5](#prop5)에 의하여 $\mathbb{F}_i=\mathbb{F}_{i-1}(\alpha_i)$, $\alpha_i^{d_i}\in\mathbb{F}_{i-1}$이도록 하는 $\alpha_i$가 존재한다.
+는 cyclic group이다. 그 order를 $d_i$라 하면 [\[대수적 구조\] §몫군, ⁋명제 5](/ko/math/algebraic_structures/quotient_groups#prop5)에 의해 $d_i$는 $\lvert H\rvert$를 나누고, 다시 $\lvert H\rvert$는 $n$을 나눈다. 따라서 $\zeta^{n/d_i}$는 primitive $d_i$-th root of unity이고 $\mathbb{K}'\subseteq\mathbb{F}_{i-1}$에 속하므로, [명제 5](#prop5)에 의하여 $\mathbb{F}_i=\mathbb{F}_{i-1}(\alpha_i)$, $\alpha_i^{d_i}\in\mathbb{F}_{i-1}$이도록 하는 $\alpha_i$가 존재한다.
 
 종합하면 $\zeta^n=1\in\mathbb{K}$이므로
 
