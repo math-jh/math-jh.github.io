@@ -18920,6 +18920,10 @@ W:
     id: weight_space
   - label: Weight module
     id: weight_module
+  - label: Root system
+    id: root_system
+  - label: Weyl group
+    id: weyl_group
 - id: weight_decomposition
   en: weight decomposition
   ko: 무게 분해
@@ -18927,6 +18931,11 @@ W:
   defs:
   - label: '[리 이론] §원환면의 작용'
     url: /ko/math/lie_theory/torus_action
+  see:
+  - label: Weight space
+    id: weight_space
+  - label: Weight module
+    id: weight_module
 - id: weight_module
   en: weight module
   ko: 무게 가군
@@ -18934,6 +18943,9 @@ W:
   defs:
   - label: '[리 이론] §최고 무게 가군'
     url: /ko/math/lie_theory/highest_weight_modules
+  see:
+  - label: Weight space
+    id: weight_space
 - id: weight_space
   en: weight space
   ko: 무게 공간
@@ -18941,6 +18953,9 @@ W:
   defs:
   - label: '[리 이론] §원환면의 작용'
     url: /ko/math/lie_theory/torus_action
+  see:
+  - label: Weight
+    id: weight
 - id: weight_string
   en: weight string
   ko: 무게 사슬
@@ -19024,6 +19039,10 @@ W:
   defs:
   - label: '[대수다양체] §천 특성류'
     url: /ko/math/algebraic_varieties/chern_classes
+  see:
+  - label: 특성류
+    lang: ko
+    id: characteristic_class
 - id: winding_number
   en: winding number
   ko: 회전수
@@ -19031,6 +19050,10 @@ W:
   defs:
   - label: '[복소해석학] §Cauchy 정리'
     url: /ko/math/complex_analysis/cauchy_theorem
+  see:
+  - label: 편각원리
+    lang: ko
+    id: argument_principle
 - id: wirtinger_derivative
   en: Wirtinger derivative
   ko: Wirtinger 미분
