@@ -7965,6 +7965,13 @@ H:
   defs:
   - label: '[거울대칭] §가우스-마닌 접속'
     url: /ko/math/mirror_symmetry/gauss-manin_connection
+- id: holonomy
+  en: holonomy
+  ko: 홀로노미
+  primary: en
+  defs:
+  - label: '[리만기하학] §리만 곡률'
+    url: /ko/math/riemannian_geometry/curvature
 - id: homeomorphic
   en: homeomorphic
   ko: 위상동형
