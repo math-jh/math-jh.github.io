@@ -66,11 +66,19 @@ $$\sigma(x)=a+b\sqrt{2}-c\sqrt{3}-d\sqrt{6},\qquad \tau(x)=a-b\sqrt{2}+c\sqrt{3}
 앞의 예시에서는 Galois group이 abelian이라 모든 subgroup이 normal이었다. 다음은 그렇지 않은 가장 작은 예이다.
 
 ::: 예시 4
-우선 $\alpha=\sqrt[3]{2}$, $\omega=e^{2\pi i/3}$이라 하고 $\mathbb{L}=\mathbb{Q}(\alpha,\omega)$라 하자. 그럼 $\alpha$는 $\x^3-2$의 근이며 $\omega$는 $\x^2+\x+1$의 근이다. 또, $\alpha$만 넣어준 $\mathbb{Q}(\alpha)$는 $\x^3-2$의 splitting field가 될 수 <em-ko>없지만</em-ko>, $\omega$를 함께 넣어주면 $\x^3-2$의 세 근들이 $\alpha$, $\omega\alpha$, $\omega^2\alpha$이므로 $\mathbb{L}=\mathbb{Q}(\alpha,\omega)$은 $\x^3-2$의 splitting field가 된다. 뿐만 아니라, 앞선 예시와 마찬가지 이유로 $\mathbb{L}/\mathbb{Q}$는 Galois extension이다. 
+우선 $\alpha=\sqrt[3]{2}$, $\omega=e^{2\pi i/3}$이라 하고 $\mathbb{L}=\mathbb{Q}(\alpha,\omega)$라 하자. 그럼 $\alpha$는 $\x^3-2$의 해이며 $\omega$는 $\x^2+\x+1$의 해이다. 또, $\alpha$만 넣어준 $\mathbb{Q}(\alpha)$는 $\x^3-2$의 splitting field가 될 수 <em-ko>없지만</em-ko>, $\omega$를 함께 넣어주면 $\x^3-2$의 세 해들이 $\alpha$, $\omega\alpha$, $\omega^2\alpha$이므로 $\mathbb{L}=\mathbb{Q}(\alpha,\omega)$은 $\x^3-2$의 splitting field가 된다. 뿐만 아니라, 앞선 예시와 마찬가지 이유로 $\mathbb{L}/\mathbb{Q}$는 Galois extension이다. 
 
 $\x^3-2$는 유리수 해를 갖지 않는 삼차식이므로 $\mathbb{Q}$에서 irreducible이고, 따라서 $[\mathbb{Q}(\alpha):\mathbb{Q}]=3$인데, $\mathbb{Q}(\alpha)$가 $\mathbb{R}$에 포함되어 $\omega$를 포함하지 않으므로 $\mathbb{Q}(\alpha)$ 위에서 $\omega$의 minimal polynomial은 $\x^2+\x+1$이다. 즉 $[\mathbb{L}:\mathbb{Q}]=6$이고 [명제 2](#prop2)에 의하여 $\lvert\Gal(\mathbb{L}/\mathbb{Q})\rvert=6$이다. 한편 $\omega=(\omega\alpha)/\alpha$이므로 $\mathbb{L}$은 정확히 $\x^3-2$의 해들로 생성되고, 따라서 [§갈루아 확장, ⁋정의 12](/ko/math/field_theory/galois_extension#def12) 이후의 논의에서와 같이 해들의 permutation으로 주어지는 injective homomorphism $\Gal(\mathbb{L}/\mathbb{Q})\rightarrow S_3$을 얻는다. 양쪽 모두 여섯 개의 원소를 가지므로 이는 isomorphism이다.
 
-이제 $S_3$의 자명하지 않은 proper subgroup은 order $3$인 $A_3$ 하나와 order $2$인 것 셋이며, [정리 1](#thm1)과 [명제 2](#prop2)에 의하여 이들은 각각 degree $2$인 subextension 하나와 degree $3$인 subextension 셋에 대응한다. $A_3$의 원소들은 $\omega$를 고정하므로 $A_3$의 fixed field는 $\mathbb{Q}(\omega)$를 포함하고, 양쪽 모두 $\mathbb{Q}$ 위에서 degree $2$이므로 이들은 같다. 마찬가지로 $\omega^i\alpha$를 고정하는 order $2$의 subgroup의 fixed field는 $\x^3-2$의 해인 $\omega^i\alpha$가 생성하는 degree $3$의 field $\mathbb{Q}(\omega^i\alpha)$를 포함하므로 그것과 같다. 한편 $\x^3-2$의 서로 다른 두 해를 함께 포함하는 field는 그 비인 $\omega$ 또는 $\omega^2$를, 따라서 어느 쪽이든 $\omega$를 포함하여 $\mathbb{L}$ 전체가 되므로, 뒤의 세 field는 각각 $\x^3-2$의 해를 하나씩만 포함한다. 즉 이들은 [§갈루아 확장, ⁋명제 5](/ko/math/field_theory/galois_extension#prop5)의 둘째 조건을 만족하지 않아 $\mathbb{Q}$의 quasi-Galois extension이 아니며, 서로 다른 field이지만 $\Gal(\mathbb{L}/\mathbb{Q})$의 원소에 의해 서로 옮겨진다.
+앞서 [예시 3](#ex3)에서 $\Gal(\mathbb{L}/\mathbb{Q})$의 원소가 해들의 집합에 작용하는 방식은 꽤나 자명했는데, 이번 예시의 action은 조금 더 복잡하다. 
+
+이제 이 isomorphism 아래에서 $S_3$의 원소가 세 해에 무엇을 하는지 읽어보자. Order $3$인 원소는 세 해를 순환시키며, 가령 $\alpha\mapsto\omega\alpha\mapsto\omega^2\alpha\mapsto\alpha$인 $\sigma$에 대하여 $\sigma(\omega)=\sigma(\omega\alpha)/\sigma(\alpha)=\omega^2\alpha/(\omega\alpha)=\omega$이므로 $\sigma$는 $\omega$를 고정한다. Order $2$인 원소는 두 해를 맞바꾸고 나머지 하나를 고정하는데, 가령 복소수의 켤레를 취하는 automorphism은 실수인 $\alpha$를 고정하고 $\omega\alpha$와 $\omega^2\alpha$를 맞바꾼다. 따라서 $S_3$의 자명하지 않은 proper subgroup은 order $3$인 원소들이 이루는 $A_3$ 하나와, 각각의 $i$마다 $\omega^i\alpha$를 고정하는 order $2$의 subgroup 셋이다.
+
+그럼 [정리 1](#thm1)에 의하여 이 네 subgroup이 $\mathbb{L}$의 자명하지 않은 subextension 전부와 대응한다. 각각의 subgroup $H$에 대하여 $\mathbb{L}/k(H)$는 Galois extension이고 그 Galois group이 $H$이므로 ([보조정리 7](#lem7)) [명제 2](#prop2)에 의하여 $[\mathbb{L}:k(H)]=\lvert H\rvert$이고, 따라서 $A_3$에는 degree $2$인 subextension이, 나머지 셋에는 degree $3$인 subextension이 대응한다.
+
+위에서 확인한 고정원소로부터 이들을 지목할 수 있다. $A_3$의 원소들이 $\omega$를 고정하므로 $k(A_3)$는 $\mathbb{Q}(\omega)$를 포함하는데, $\omega$의 minimal polynomial이 $\x^2+\x+1$이라 양쪽 모두 $\mathbb{Q}$ 위에서 degree $2$이고 따라서 이들은 같다. 마찬가지로 $\omega^i\alpha$를 고정하는 order $2$의 subgroup의 fixed field는 $\mathbb{Q}(\omega^i\alpha)$를 포함하며, $\omega^i\alpha$가 irreducible polynomial $\x^3-2$의 해이므로 양쪽 모두 degree $3$이 되어 이들도 같다.
+
+한편 $\x^3-2$의 서로 다른 두 해를 함께 포함하는 field는 그 비인 $\omega$ 또는 $\omega^2$를, 따라서 어느 쪽이든 $\omega$를 포함하여 $\mathbb{L}$ 전체가 된다. 그럼 degree $3$인 위의 세 field는 서로 다르며 각각 $\x^3-2$의 해를 하나씩만 포함하므로, [§갈루아 확장, ⁋명제 5](/ko/math/field_theory/galois_extension#prop5)의 둘째 조건을 만족하지 않아 $\mathbb{Q}$의 quasi-Galois extension이 아니다. 그럼에도 이들은 $\Gal(\mathbb{L}/\mathbb{Q})$의 원소에 의해 서로 옮겨진다.
 :::
 
 이제 [정리 1](#thm1)의 서술에 등장하는 closed 조건이 왜 필요한지를 보여주는 예시를 살펴보자. Galois group이 무한할 때에는 subgroup 전체가 아니라 그중 closed인 것만이 subextension과 대응한다.

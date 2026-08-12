@@ -7,7 +7,13 @@
 \usepackage{diagram-style}
 \begin{document}
 
-%%FIG lifting diagram (Smooth_and_Etale_Morphisms-1.svg)
+%%FIG pullback (Smooth_and_Etale_Morphisms-1.svg)
+\begin{tikzcd}
+	{X_{\overline{s}}} \arrow[r, "\pi"] \arrow[d] & X \arrow[d, "\varphi"] \\
+	{\Spec\mathbb{K}} \arrow[r, "\overline{s}"'] & S
+\end{tikzcd}
+
+%%FIG lifting diagram (Smooth_and_Etale_Morphisms-2.svg)
 \begin{tikzcd}
 T_0 \arrow[r, "\psi_0"] \arrow[d, hook] & X \arrow[d, "\varphi"] \\
 T \arrow[r] \arrow[ru, dashed, "\psi"] & S
