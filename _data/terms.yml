@@ -4009,6 +4009,13 @@ C:
   defs:
   - label: '[복소기하학] §Kodaira 매장정리'
     url: /ko/math/complex_geometry/kodaira_embedding_theorem
+- id: curvature_tensor
+  en: curvature tensor
+  ko: 곡률 텐서
+  primary: ko
+  defs:
+  - label: '[리만기하학] §리만 곡률'
+    url: /ko/math/riemannian_geometry/curvature
 - id: curve
   en: curve
   ko: 곡선
