@@ -11218,6 +11218,13 @@ M:
   defs:
   - label: '[대수적 위상수학] §호몰로지의 계산'
     url: /ko/math/algebraic_topology/computation_of_homology
+- id: mean_curvature
+  en: mean curvature
+  ko: 평균곡률
+  primary: ko
+  defs:
+  - label: '[리만기하학] §제2기본형식'
+    url: /ko/math/riemannian_geometry/second_fundamental_form
 - id: mean_curvature_vector
   en: mean curvature vector
   ko: 평균곡률 벡터
