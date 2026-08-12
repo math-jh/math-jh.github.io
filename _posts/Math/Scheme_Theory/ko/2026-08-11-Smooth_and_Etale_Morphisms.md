@@ -38,9 +38,9 @@ Locally of finite presentation인 scheme morphism $\varphi:X \rightarrow S$가 *
 
 이 정의에서 두 조건은 서로 다른 방향을 통제한다. Flatness는 fiber들이 base를 따라 차원 도약 없이 연속적으로 변함을 보장하고 ([§평탄사상, ⁋명제 17](/ko/math/scheme_theory/flat_morphisms#prop17)), geometric fiber의 regularity는 각 fiber 자체가 singular point를 가지지 않음을 보장한다.
 
-Smooth morphism은 cotangent sheaf의 local freeness로 적어줄 수도 있으며, 이것이 가장 중요한 smooth morphism의 characterization이다. 이를 진술하려면 차원을 점마다 재는 방법이 필요하다. Scheme $Y$와 그 점 $y\in Y$에 대하여, $y$에서의 *국소차원<sub>local dimension</sub>* $\dim_yY$를 $y$를 포함하는 irreducible component들의 차원의 supremum으로 정의한다. 곧 $y$ 주위에서만 본 $Y$의 차원이며, 전체 차원은 이들의 supremum $\dim Y=\sup_{y\in Y}\dim_yY$이다. ([§차원, ⁋정의 1](/ko/math/scheme_theory/dimension#def1))
+Smooth morphism은 cotangent sheaf의 local freeness로 적어줄 수도 있으며, 이것이 가장 중요한 smooth morphism의 characterization이다. 이를 위해 우선 scheme $Y$와 그 점 $y\in Y$에 대하여, $y$에서의 *국소차원<sub>local dimension</sub>* $\dim_yY$를 $y$를 포함하는 irreducible component들의 차원의 supremum으로 정의하자. 그럼 정의에 의해 $Y$의 전체 차원은 이들의 supremum $\dim Y=\sup_{y\in Y}\dim_yY$이며, 만일 $Y$가 irreducible이면 모든 점이 유일한 irreducible component 위에 놓이므로 $\dim_yY=\dim Y$가 성립한다. 더 일반적으로 모든 irreducible component의 차원이 같은 *equidimensional* scheme에서도 그러하다. 이것이 성립하며, 이 개념은 새로운 것이 아니라 평면과 직선의 합집합 $Y=V(\x\z,\y\z)\subseteq\mathbb{A}^3_\mathbb{K}$에서 서로 차원이 다른 두 성분을 다루기 위한 언어일 뿐이다. 
 
-이는 local ring의 차원 $\dim\mathcal{O}_{Y,y}$와 다른 양이다. 후자는 $\overline{\{y\}}$의 codimension이라 ([§차원, ⁋명제 8](/ko/math/scheme_theory/dimension#prop8)) $y$가 얼마나 큰 닫힌집합의 generic point인지가 아니라 그 위로 얼마나 긴 chain이 올라가는지를 재며, 가령 $Y=\mathbb{A}^1_\mathbb{K}$의 generic point $\eta$에서 $\dim_\eta Y=1$이지만 $\dim\mathcal{O}_{Y,\eta}=0$이다. 두 양은 field 위에서 finite type인 scheme의 closed point에서 차원 공식에 의하여 일치한다. ([\[가환대수학\] §뇌터 정규화, ⁋정리 4](/ko/math/commutative_algebra/noether_normalization#thm4))
+한편 $Y$가 field 위에서 finite type이면 그 closed point $z$에서는 [\[가환대수학\] §뇌터 정규화, ⁋정리 4](/ko/math/commutative_algebra/noether_normalization#thm4)의 차원 공식에 의하여 $\dim\mathcal{O}_{Y,z}=\dim_zY$가 성립한다.
 
 ::: 정리 2
 Locally of finite presentation인 morphism $\varphi:X \rightarrow S$에 대하여 다음이 동치이다.
