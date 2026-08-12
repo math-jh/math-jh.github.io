@@ -17260,6 +17260,13 @@ S:
   see:
   - label: Exterior algebra
     id: exterior_algebra
+- id: symmetric_bilinear_form
+  en: symmetric bilinear form
+  ko: 대칭쌍선형형식
+  primary: en
+  defs:
+  - label: '[선형대수학] §쌍선형형식'
+    url: /ko/math/linear_algebra/bilinear_form
 - id: symmetric_euler_form
   en: symmetric Euler form
   ko: 대칭 오일러 형식

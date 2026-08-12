@@ -5287,3 +5287,8 @@ Decide whether each one is a definition and add it to `_data/terms.yml` (then ru
 - _posts/Math/Multilinear_Algebra/ko/2022-12-08-Derivations.md: 주요 용어 'graded algebra' ko 미상 — 보류
 - _posts/Math/Multilinear_Algebra/ko/2022-12-08-Derivations.md: 주요 용어 'bracket' ko 미상 — 보류
 - _posts/Math/Multilinear_Algebra/ko/2022-12-08-Derivations.md: 주요 용어 'Jacobi identity' ko 미상 — 보류
+
+## term_extract_worker 2026-08-12 23:31
+
+- _posts/Math/Representation_Theory/ko/2026-06-21-Reflection_Functors.md: 주요 용어 'Dynkin' ko 미상 — 보류
+- _posts/Math/Representation_Theory/ko/2026-06-21-Reflection_Functors.md: 주요 용어 'Gabriel' ko 미상 — 보류
