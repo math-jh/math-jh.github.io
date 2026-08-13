@@ -139,6 +139,37 @@ body {
 }
 
 .page__content {
+  /* KO 본문 조판은 kotex(xetexko·luatexko) 방식을 따른다.
+     word-break 는 기본값(음절 사이 개행 허용)으로 둔다 — xetexko 가 한글 사이를
+     \XeTeXlinebreakpenalty=50 으로 끊는 자리와 같다. 양끝맞춤에서 남는 폭은 어절 사이
+     서너 곳이 아니라 글자 사이 수십 곳으로 흩어야 rivers 가 안 생기므로 inter-character
+     를 함께 건다 (xetexko 의 \XeTeXlinebreakskip=0pt plus.04em minus.02em 에 해당).
+     Safari 는 text-justify 를 통째로 무시하므로 @supports 로 감싸 그쪽은 왼쪽 정렬로
+     남긴다 — 안 그러면 어절 사이만 벌어져 공백이 최대 15px 까지 간다.
+     $medium 미만(폰)에서는 한 줄이 짧아 벌어짐이 커지므로 걸지 않는다.
+     overflow-wrap 은 하이픈이 안 걸리는 긴 URL·식별자의 탈출구다. */
+  &:lang(ko) {
+    @include breakpoint($medium) {
+      overflow-wrap: break-word;
+
+      @supports (text-justify: inter-character) {
+        p,
+        li {
+          text-align: justify;
+          text-justify: inter-character;
+        }
+
+        /* Latin_hyphens.js 가 감싼 영문 낱말. TeX 이 한국어 문서 안의 라틴 낱말도
+           하이픈으로 쪼개는 것과 같은 목적 — 한 줄에서 메워야 할 폭 자체를 줄여
+           글자 사이가 크게 벌어지는 줄을 없앤다. 글 전체가 lang=ko 라 이 span 없이는
+           브라우저가 영문 하이픈 패턴을 꺼내지 않는다. */
+        [lang="en"] {
+          hyphens: auto;
+        }
+      }
+    }
+  }
+
   /* h2 밑줄은 정리 박스의 라벨 헤어라인과 헷갈려 제거했다. padding-bottom 은 남겨
      아래 본문과의 간격을 그대로 유지한다. */
   h2 {

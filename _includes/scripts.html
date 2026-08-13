@@ -31,6 +31,8 @@
          strict: false,
          throwOnError: false
          });
+         // 영문 낱말에 lang=en 을 달아 하이픈이 걸리게 (Latin_hyphens.js)
+         if (window.hyphenateLatin) window.hyphenateLatin(document.querySelector(".page__content"));
      });
  </script>
 

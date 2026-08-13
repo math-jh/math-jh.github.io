@@ -338,6 +338,8 @@ head_scripts:
   # katex-macros 는 커스텀 스크립트보다 먼저 — Xref_preview 가 parse 시점에
   # window.KATEX_DELIMITERS 를 읽는다
   - /assets/js/katex-macros.js
+  # window.hyphenateLatin 정의만 한다 — 호출은 KaTeX 렌더 뒤 (scripts.html)
+  - /assets/js/custom/Latin_hyphens.js
   - /assets/js/custom/Color_scheme.js
   - /assets/js/custom/HiddenTopButton.js
   - /assets/js/custom/Comments.js
