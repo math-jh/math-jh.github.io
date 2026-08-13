@@ -6303,6 +6303,13 @@ F:
   defs:
   - label: '[위상수학] §옹골공간'
     url: /ko/math/topology/compact_spaces
+- id: finite_morphism
+  en: finite morphism
+  ko: 유한 사상
+  primary: en
+  defs:
+  - label: '[스킴] §스킴 사상의 성질들'
+    url: /ko/math/scheme_theory/properties_of_scheme_morphisms
 - id: finite_support
   en: finite support
   ko: 유한지지
@@ -15670,6 +15677,13 @@ S:
     id: scheme-theoretic_image
   - label: Algebraic variety
     id: algebraic_variety
+- id: scheme_morphism
+  en: scheme morphism
+  ko: 스킴 사상
+  primary: en
+  defs:
+  - label: '[스킴] §스킴 사이의 사상'
+    url: /ko/math/scheme_theory/morphism_of_schemes
 - id: scheme-theoretic_image
   en: scheme-theoretic image
   ko: ''
