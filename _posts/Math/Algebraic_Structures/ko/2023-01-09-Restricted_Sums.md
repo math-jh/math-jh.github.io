@@ -19,13 +19,15 @@ drift_needed: true
 
 한편 $\Grp$의 임의의 morphism은 coequalizer를 갖는다. ([§군 동형사상, ⁋명제 8](/ko/math/algebraic_structures/isomorphism_theorems#prop8)) 따라서 $\Grp$이 임의의 coproduct를 갖는다면, $\Grp$은 cocomplete category가 되고 따라서 bicomplete category가 될 것이다. 
 
-그러나 [§군의 직접곱, ⁋보조정리 1](/ko/math/algebraic_structures/direct_products#lem1)과 같이 $\Set$에서의 coproduct $\coprod G_i$ 위에 group 구조를 주는 방법을 자명하게 찾는 것은 힘들어 보인다. ([\[집합론\] §집합의 합, ⁋명제 5](/ko/math/set_theory/sum_of_sets#prop5))
+그러나 [§군의 직접곱, ⁋보조정리 1](/ko/math/algebraic_structures/direct_products#lem1)과 같이 $\Set$에서의 coproduct $\coprod G_i$ 위에 group 구조를 주는 방법을 자명하게 찾는 것은 힘들어 보인다. ([\[집합론\] §집합의 합, ⁋명제 5](/ko/math/set_theory/sum_of_sets#prop5)) 
 
-이 글에서 우리는 우선 abelian group이 coproduct를 갖는 category임을 보인다. 다음 글에서는 이번 글과는 다른 방식을 통해 <em-ko>임의의</em-ko> group들에 대하여도 coproduct의 universal property를 만족하는 group이 존재함을 보인다.
+그 대신 우리는 이미 존재를 아는 product $\prod G_i$ 안에서 답을 찾는다. 각 $G_i$를 $\prod G_i$의 subgroup으로 보고 이들이 함께 생성하는 subgroup을 생각하는 것으로, 이 글에서 우리는 이렇게 얻어지는 group을 weak direct product라 부르고 그 universal property를 확인한다.
+
+다만 이 universal property에는 서로 다른 $G_i$에서 오는 homomorphism들의 image가 commute해야 한다는 조건이 따라붙어, weak direct product는 적어도 abelian group들에 대해서는 우리가 찾던 구성이 되지만 일반적인 group에 대해서는 그렇지 못하다. 다음 글에서는 이번 글과는 다른 방식을 통해 <em-ko>임의의</em-ko> group들에 대하여도 coproduct의 universal property를 만족하는 group이 존재함을 보인다.
 
 ## Restricted sum
 
-Group들의 family $(G_i)$와, 이들의 product가 주어졌다 하자. 그럼 $G_i$들 각각은 $\iota_i$를 통해 $\prod G_i$의 subgroup으로 볼 수 있다. 자연스럽게 다음의 식
+Group들의 family $(G_i)$와, 이들의 product가 주어졌다 하자. 각 $i$에 대하여 $g\in G_i$를 $i$번째 성분만 $g$이고 나머지 성분은 항등원인 원소로 보내는 함수 $\iota_i:G_i\rightarrow\prod G_i$는 injective group homomorphism이므로, $G_i$들 각각은 $\iota_i$를 통해 $\prod G_i$의 subgroup으로 볼 수 있다. 자연스럽게 다음의 식
 
 $$\prod_{i\in I} G_i=\left\langle\bigcup \iota_i(G_i)\right\rangle$$
 
@@ -51,7 +53,7 @@ $${\prod_{i\in I}}^w G_i$$
 
 $$\left\langle\bigcup \iota_i(G_i)\right\rangle={\prod_{i\in I}}^w G_i$$
 
-이 성립한다. 또, 만일 $I$가 유한집합이라면 weak direct product는 보통의 direct product와 동일하다.
+이 성립한다. 특히 $\iota_i$의 image는 $\prod^w G_i$에 포함되므로, 앞으로 $\iota_i$는 $\prod^w G_i$로 가는 단사 homomorphism으로 본다. 또, 만일 $I$가 유한집합이라면 weak direct product는 보통의 direct product와 동일하다.
 
 그럼 $\prod^wG_i$는 다음과 같은 universal property를 갖는다.
 
@@ -69,13 +71,13 @@ Group들의 family $(G_i)$와 이들의 weak direct product $\prod^w G_i$가 주
 
 $$f(x)=\prod_{i\in I} f_i(\pr_ix)$$
 
-으로 정의하자. 이 때 $\prod$는 일반적인 원소들의 곱을 의미한다. $x$는 $\prod^w G_i$의 원소이므로, 우변의 $f_i(\pr_ix)$는 유한개의 $i$를 제외하면 모두 항등원이고, 따라서 이 곱은 잘 정의된다. 
+으로 정의하자. 이 때 $\prod$는 일반적인 원소들의 곱을 의미한다. $x$는 $\prod^w G_i$의 원소이므로, 우변의 $f_i(\pr_ix)$는 유한개의 $i$를 제외하면 모두 항등원이다. 또, 우변의 원소의 항등원이 아닌 인자들은 서로 다른 index에서 오므로 가설에 의해 서로 commute하고, 따라서 곱하는 순서와 무관하게 이 곱은 잘 정의된다. 
 
 식 $f_i=f\circ\iota_i$가 성립하는 것은 $f(\iota_i(g))=\prod_{j\in I}f_j(\pr_j\iota_i(g))=f_i(g)$로부터 얻어지고, $f$가 group homomorphism인 것은 임의의 $x,y\in\prod^wG_i$에 대해
 
 $$f(xy)=\prod_{i\in I}f_i(\pr_i(xy))=\prod_{i\in I}f_i(\pr_ix)f_i(\pr_iy)$$
 
-가 성립하므로, $\pr_i(xy)$가 $e_i$가 아니도록 하는 유한개의 값만 골라 이 index들을 $1,\ldots, n$이라 하면
+가 성립하므로, $\pr_ix$와 $\pr_iy$ 중 적어도 하나가 $e_i$가 아니도록 하는 유한개의 값만 골라 이 index들을 $1,\ldots, n$이라 하면 이 식은
 
 $$f_1(\pr_1x)f_1(\pr_1y)f_2(\pr_2x)f_2(\pr_2y)\cdots f_n(\pr_nx)f_n(\pr_ny)$$
 
@@ -97,10 +99,19 @@ Weak direct product의 universal property를 이용하면 direct product때와 �
 ::: 명제 3
 $G_i$들이 group이고, $H_i$들이 $G_i$들의 normal subgroup이라 하면 $\prod^w H_i$들 또한 $\prod^w G_i$들의 normal subgroup이고 그 quotient group은 $\prod^w (G_i/H_i)$와 같다.
 :::
+::: 증명
+Canonical homomorphism들 $p_i:G_i\rightarrow G_i/H_i$를 생각하자. 임의의 $x\in\prod^wG_i$에 대하여 $\bigl(p_i(\pr_ix)\bigr)_{i\in I}$는 유한개의 $i$를 제외하면 모두 항등원이므로 $\prod^w(G_i/H_i)$의 원소이고, 이렇게 얻어지는 함수 $p:\prod^wG_i\rightarrow\prod^w(G_i/H_i)$는 각 성분에서 $p_i$가 homomorphism이므로 homomorphism이다.
+
+$\prod^w(G_i/H_i)$의 원소 $y$가 주어지면 $\pr_iy$가 항등원인 $i$에서는 representative로 $e$를 택하고 남은 유한개의 $i$에서는 임의의 representative를 택하여 $\prod^wG_i$의 원소를 얻을 수 있으므로 $p$는 전사이다. 또 $p(x)$가 항등원인 것은 임의의 $i$에 대하여 $\pr_ix\in H_i$인 것과 동치이므로 $\ker p=\prod^wH_i$이다. 따라서 [§군 동형사상, ⁋보조정리 1](/ko/math/algebraic_structures/isomorphism_theorems#lem1)에 의해 $\prod^wH_i$는 $\prod^wG_i$의 normal subgroup이고, [§군 동형사상, ⁋정리 2](/ko/math/algebraic_structures/isomorphism_theorems#thm2)에 의해 다음의 식
+
+$$\biggl({\prod_{i\in I}}^wG_i\biggr)\bigg/\biggl({\prod_{i\in I}}^wH_i\biggr)\cong{\prod_{i\in I}}^w(G_i/H_i)$$
+
+이 성립한다.
+:::
 
 ## Internal weak product
 
-$G$가 group이고, $(H_i)$들이 $G$의 subgroup들의 family라 하자. 만일 $i\neq j$일 때마다 $H_i$의 원소들이 $H_j$의 원소들과 commute한다면, inclusion homomorphism들 $\iota_i:H_i\rightarrow G$에 의해 유도되는 $\prod^w H_i$에서 $G$로의 homomorphism $\iota$가 존재한다.
+$G$가 group이고, $(H_i)$들이 $G$의 subgroup들의 family라 하자. 만일 $i\neq j$일 때마다 $H_i$의 원소들이 $H_j$의 원소들과 commute한다면, inclusion homomorphism들 $\iota_i:H_i\rightarrow G$에 의해 유도되는 $\prod^w H_i$에서 $G$로의 homomorphism $\iota$가 존재한다. 이 때 $H_i$에서 $\prod^wH_i$로의 inclusion homomorphism을 $\iota^w_i$로 적으면 $\iota\circ\iota^w_i=\iota_i$가 성립한다.
 
 또, 다음을 정의한다.
 
@@ -133,11 +144,11 @@ $$x_ix_jx_i^{-1}x_j^{-1}=x_i\bigl(x_jx_i^{-1}x_j^{-1}\bigr)=\bigl(x_ix_jx_i^{-1}
 
 $G$가 $H_i$들의 internal weak direct product임을 보이기 위해서는 이렇게 유도된 $\iota$가 isomorphism인 것을 보여야 한다. 우선 1번 조건에 의해, 임의의 $a\in G$는 $\bigcup H_i$들의 *finite*한 operation들을 통해 얻어진다. 또 $H_i$들이 서로 commute하므로, $a$를 
 
-$$a=\prod_{i\in I} h_i=\prod_{i\in I}\iota_i(h_i),\qquad\text{$\supp(h_i)$ finite and $h_i\in H_i$}$$
+$$a=\prod_{i\in I} h_i,\qquad\text{$\supp(h_i)$ finite and $h_i\in H_i$}$$
 
-로 적을 수 있다. $h=\prod_{i\in I} \iota_i(h_i)\in\prod^w H_i$라 하면, 
+로 적을 수 있다. $h=\prod_{i\in I} \iota^w_i(h_i)\in\prod^w H_i$라 하면, 
 
-$$a=\prod_{i\in I}\iota_i(h_i)=\iota\left(\prod_{i\in I}\iota_i(h_i)\right)=\iota(h)$$
+$$\iota(h)=\prod_{i\in I}\iota\bigl(\iota^w_i(h_i)\bigr)=\prod_{i\in I}\iota_i(h_i)=\prod_{i\in I}h_i=a$$
 
 이므로 $\iota$는 surjective이다.
 

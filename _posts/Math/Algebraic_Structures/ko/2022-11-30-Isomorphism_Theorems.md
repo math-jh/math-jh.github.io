@@ -48,7 +48,7 @@ $$h([x][x'])=h([xx'])=f(xx')=f(x)f(x')=h([x])h([x'])$$
 한편 [\[집합론\] §동치관계의 예시들, ⁋명제 7](/ko/math/set_theory/examples_of_equivalence#prop7)을 이용하면 다음 명제를 얻는다. 
 
 ::: 명제 3
-임의의 homomorphism $f:G\rightarrow G'$와 $G$의 normal subgroup $N$에 대하여, $f=\bar{f}\circ p$를 만족하는 $\bar{f}:G/N\rightarrow G'$가 존재할 필요충분조건은 $N\leq \ker f$인 것이다. 
+임의의 homomorphism $f:G\rightarrow G'$와 $G$의 normal subgroup $N$에 대하여, $f=\bar{f}\circ p$를 만족하는 $\bar{f}:G/N\rightarrow G'$가 존재할 필요충분조건은 $N\leq \ker f$인 것이다. 이 경우, $p$가 surjective이므로 $\bar{f}$는 유일하게 결정된다. 
 :::
 
 ## The second isomorphism theorem

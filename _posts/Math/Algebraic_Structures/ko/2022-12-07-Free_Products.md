@@ -48,7 +48,7 @@ $$\Hom_\Set(X, U(G))\cong\Hom_\Grp(F(X), G)$$
 을 만족하는 functor이다. ([\[범주론\] §수반함자, ⁋정의 1](/ko/math/category_theory/adjoints#def1)) 즉 functor $F$는 임의의 집합 $X$와 임의의 group $G$에 대하여, $f\in\Hom_\Set(X, U(G))$마다 $\Hom_\Grp(F(X),G)$의 원소를 유일하게 대응시키는 bijection으로 주어진다. 이를 다시 쓰면 다음과 같다.
 
 ::: 정의 2
-공집합이 아닌 집합 $X$에 대하여, $X$에 의해 정의된 *free group<sub>자유군</sub>* $F(X)$는 다음과 같은 universal mapping problem의 solution $(F(X), \eta_X\in\Hom_\Set(X,UF(X)))$으로 정해진다.
+집합 $X$에 대하여, $X$에 의해 정의된 *free group<sub>자유군</sub>* $F(X)$는 다음과 같은 universal mapping problem의 solution $(F(X), \eta_X\in\Hom_\Set(X,UF(X)))$으로 정해진다.
 
 > 임의의 group $G$에 대하여, 만일 어떤 함수 $f:X\rightarrow U(G)$가 주어졌다면 유일한 group homomorphism $\hat{f}:F(X)\rightarrow G$가 존재하여 $U(\hat{f})\circ\eta_X=f$를 만족한다.
 :::

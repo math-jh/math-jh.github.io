@@ -179,7 +179,7 @@ $$(\alpha+\mathfrak{p})(\beta+\mathfrak{p})=0+\mathfrak{p}$$
 Commutative ring $A,B$ 사이의 ring homomorphism $\phi:A \rightarrow B$와 $B$의 prime ideal $\mathfrak{p}$에 대하여, $\phi^{-1}(\mathfrak{p})$는 $A$의 prime ideal이다.
 :::
 ::: 증명
-결론에 반하여 $\alpha\beta\in\phi^{-1}(\mathfrak{p})$이지만 $\alpha,\beta\not\in\phi^{-1}(\mathfrak{p})$인 $\alpha,\beta\in A$가 존재한다 하면, $\phi(\alpha)\phi(\beta)=\phi(\alpha\beta)\in \mathfrak{p}$이지만 $\phi(\alpha),\phi(\beta)\not\in \mathfrak{p}$가 되어 [명제 8](#prop8)의 동치에 모순이다. 
+우선 $\phi^{-1}(\mathfrak{p})$는 덧셈에 대한 subgroup이고, 임의의 $\alpha\in A$와 $x\in\phi^{-1}(\mathfrak{p})$에 대하여 $\phi(\alpha x)=\phi(\alpha)\phi(x)\in\mathfrak{p}$이므로 $A$의 ideal이다. 또 $\mathfrak{p}\neq B$이므로 $1\not\in\mathfrak{p}$이고, $\phi(1)=1$로부터 $1\not\in\phi^{-1}(\mathfrak{p})$, 즉 $\phi^{-1}(\mathfrak{p})\neq A$를 얻는다. 이제 결론에 반하여 $\alpha\beta\in\phi^{-1}(\mathfrak{p})$이지만 $\alpha,\beta\not\in\phi^{-1}(\mathfrak{p})$인 $\alpha,\beta\in A$가 존재한다 하면, $\phi(\alpha)\phi(\beta)=\phi(\alpha\beta)\in \mathfrak{p}$이지만 $\phi(\alpha),\phi(\beta)\not\in \mathfrak{p}$가 되어 [명제 8](#prop8)의 동치에 모순이다. 
 :::
 
 한편, [명제 8](#prop8)의 2번 동치에 의하여, commutative ring $A$를 multiplicative monoid로 본다면, 그 prime ideal $\mathfrak{p}$에 대해 $A\setminus\mathfrak{p}$는 $A$의 submonoid로 볼 수 있다. 따라서 ring of fractions $(A\setminus \mathfrak{p})^{-1}A$가 잘 정의되며, 이 ring의 분모에 들어가는 것은 오직 $A\setminus \mathfrak{p}$의 원소들 뿐이다. 이를 다음과 같이 정의한다.
@@ -227,7 +227,7 @@ $$\mathfrak{N}=\bigcap_\text{\scriptsize$\mathfrak{p}$: prime} \mathfrak{p}$$
 이 성립한다. 
 :::
 ::: 증명
-만일 $x\not\in \mathfrak{N}$이라면, 적당한 $\mathfrak{p}$에 대해 $x\not\in \mathfrak{p}$임을 보이면 충분하다. 우선 multiplicative subset $S=\{1,x,x^2,\ldots\}$으로 만들어진 ring of fractions $A_x=S^{-1}A$를 생각하자. 그럼 $A_x$의 곱셈에 대한 항등원 $x/x$이 반드시 $0/1$과 다르다는 것을 확인할 수 있고, 특히 $A_x\neq 0$이다. 이제 [§환의 정의, ⁋정리 10](/ko/math/algebraic_structures/rings#thm10)로부터 $A_x$의 maximal ideal $\mathfrak{m}$이 반드시 존재하고, 모든 maximal ideal은 prime ideal이므로 $A_x$는 prime ideal을 갖는다. 이제 [명제 9](#prop9)를 $\epsilon:A \rightarrow A_x$에 적용하면 $\epsilon^{-1}(\mathfrak{p})$는 $A$의 prime ideal이며, 만일 $x\in\epsilon^{-1}(\mathfrak{p})$라면 $x/1\in \mathfrak{p}$이고 $x/1$은 $A_x$에서 invertible이므로 $\mathfrak{p}=A_x$가 되어 모순이다. 
+만일 $x\not\in \mathfrak{N}$이라면, 적당한 $\mathfrak{p}$에 대해 $x\not\in \mathfrak{p}$임을 보이면 충분하다. 우선 multiplicative subset $S=\{1,x,x^2,\ldots\}$으로 만들어진 ring of fractions $A_x=S^{-1}A$를 생각하자. 그럼 $A_x$의 곱셈에 대한 항등원 $x/x$이 반드시 $0/1$과 다른데, $x/x=0/1$은 어떤 $k\geq 0$에 대해 $x^{k+1}=0$인 것과 같고 이는 $x\not\in\mathfrak{N}$이라는 가정에 어긋나기 때문이다. 특히 $A_x\neq 0$이다. 이제 [§환의 정의, ⁋정리 10](/ko/math/algebraic_structures/rings#thm10)로부터 $A_x$의 maximal ideal $\mathfrak{m}$이 반드시 존재하고, 모든 maximal ideal은 prime ideal이므로 $\mathfrak{m}$은 $A_x$의 prime ideal이다. 이제 [명제 9](#prop9)를 $\epsilon:A \rightarrow A_x$에 적용하면 $\epsilon^{-1}(\mathfrak{m})$은 $A$의 prime ideal이며, 만일 $x\in\epsilon^{-1}(\mathfrak{m})$이라면 $x/1\in \mathfrak{m}$이고 $x/1$은 $A_x$에서 invertible이므로 $\mathfrak{m}=A_x$가 되어 모순이다. 
 :::
 
 

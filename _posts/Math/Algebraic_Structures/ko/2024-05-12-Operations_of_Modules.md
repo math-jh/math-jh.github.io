@@ -74,7 +74,11 @@ $$\Hom_A(A, M)\cong\Hom_\Set(\ast, U(M))$$
 
 $$F(X)=F\left(\coprod_{x\in X} \{x\}\right)\cong\bigoplus_{x\in X} F(\{x\})$$
 
-이 성립해야 하고, 위의 representation을 이용하면 $F(X)=\bigoplus_{x\in X}Ax$로 정의해야 한다는 것을 안다. 즉 다음이 성립한다. 
+이 성립해야 하고, 위의 representation을 이용하면 $F(X)=\bigoplus_{x\in X}Ax$로 정의해야 한다는 것을 안다. 거꾸로 $F(X)$를 이렇게 정의하고 함수 $u:X\rightarrow Y$에 대하여 $F(u)$를 각 generator를 대응시키는 linear map으로 두면, coproduct의 universal property와 위의 representation으로부터 임의의 $A$-module $M$에 대하여 다음의 isomorphism
+
+$$\Hom_A\biggl(\bigoplus_{x\in X}Ax,M\biggr)\cong\prod_{x\in X}\Hom_A(A,M)\cong\prod_{x\in X}U(M)\cong\Hom_\Set(X,U(M))$$
+
+을 얻는다. 여기에서 각 대응은 linear map의 합성과 함수의 합성으로만 주어지므로 $X$와 $M$ 양쪽에서 natural하고, 따라서 다음을 얻는다. 
 
 ::: 명제 3
 Forgetful functor $U:\lMod{A} \rightarrow\Set$과 위에서 정의한 free functor $F:\Set \rightarrow\lMod{A}$에 대하여, adjunction $F\dashv U$가 존재한다.
@@ -122,6 +126,8 @@ $$\Hom_\mathbb{Z}(M\otimes_A N, L)\cong\Hom_{\rMod{A}}(M,\Hom_\mathbb{Z}(N, L))\
 
 이 존재한다. 
 :::
+
+이에 대한 증명은 $A$-balanced map $f:M\times N\rightarrow L$에 $x\mapsto f(x,-)$를 대응시키면 $\tilde{f}(x\alpha)=\tilde{f}(x)\alpha$가 성립하므로 $\Balan_A(M,N;L)\cong\Hom_{\rMod{A}}(M,\Hom_\mathbb{Z}(N,L))$을 얻고, 두 번째 변수를 고정하면 마찬가지로 $\Hom_{\lMod{A}}(N,\Hom_\mathbb{Z}(M,L))$이 나오므로 얻어진다.
 
 따라서 $\otimes$는 colimit과 commute하고, $\Hom$은 limit과 commute한다. 특히 abelian group들 사이의 다음의 isomorphism들
 
@@ -178,6 +184,12 @@ $$\Bilin_A(M,N;L)=\{\text{$A$-bilinear maps from $M\times N$ to $L$}\}$$
 ::: 명제 8
 Functor $\Bilin_A(M,N;-):\lMod{A}\rightarrow\Set$은 representable functor이며, 그 representation은 위에서 정의한 *$A$-module* $M\otimes_AN$이다. 
 :::
+
+$A$-bilinear map은 특히 $A$-balanced이므로 [정리 5](#thm5)의 대응이 그대로 적용되고, 이 대응 아래에서 $f$가 $A$-bilinear인 것은 $\hat{f}$가 $A$-linear인 것과 같다. 실제로
+
+$$\hat{f}(\alpha(x\otimes_Ay))=\hat{f}((\alpha x)\otimes_Ay)=f(\alpha x,y)=\alpha f(x,y)=\alpha\hat{f}(x\otimes_Ay)$$
+
+이고, $M\otimes_AN$은 $x\otimes_Ay$ 꼴의 원소들로 생성되므로 반대방향도 성립한다. 즉 $\Bilin_A(M,N;L)\cong\Hom_A(M\otimes_AN,L)$이다.
 
 한편 $A$가 일반적인 ring이라면 $\Hom_{\lMod{A}}(M,M')$은 $A$-module 구조를 갖지 않았지만, $A$가 commutative ring이라면 $\Hom_{\lMod{A}}(M,M')$ 위에도 $A$-module 구조가 존재한다. 즉, $\Hom_A$는 internal $\Hom$이며,  따라서 [정리 6](#thm6)의 adjunction을 더 다듬어 다음을 증명할 수 있다.
 

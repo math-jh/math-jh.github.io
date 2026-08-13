@@ -54,20 +54,20 @@ $$u(xy)=(u_i(xy))_{i\in I}=(u_i(x)u_i(y))_{i\in I}=u(x)u(y)$$
 이기 때문이다.
 :::
 
-한편, 우리는 다른 algebraic structure들에서 했던 것처럼 다음의 subalgebra를 생각할 수 있다. 
+한편, 우리는 다른 algebraic structure들에서 했던 것처럼 direct product 안의 finitely supported인 원소들을 생각할 수 있다. 
 
 ::: 명제 4
-$A$-module direct sum $\bigoplus_{i\in I}E_i\subseteq\prod_{i\in I}E_i$는 direct product의 곱셈을 제한하면 그 subalgebra, 곧 $A$-algebra가 된다.
+$A$-module direct sum $\bigoplus_{i\in I}E_i$는 direct product $\prod_{i\in I}E_i$의 two-sided ideal이다. 특별히 $I$가 유한집합이라면 $\bigoplus_{i\in I}E_i=\prod_{i\in I}E_i$이다.
 :::
 ::: 증명
-$\bigoplus E_i$의 두 원소 $(x_i),(y_i)$는 각각 finitely supported이므로, 성분별 곱 $(x_iy_i)$에서 $i$번째 성분이 $0$이 아닌 $i$는 $x_i\neq 0$인 $i$들과 $y_i\neq 0$인 $i$들의 합집합 안에 든다. 이는 유한집합이므로 $(x_iy_i)$도 finitely supported이고, 따라서 $\bigoplus E_i$는 곱셈에 대해 닫혀 $\prod E_i$의 subalgebra이다. ([§대수, ⁋정의 9](/ko/math/algebraic_structures/algebras#def9))
+$\bigoplus E_i$가 $\prod E_i$의 submodule인 것은 정의에 의한 것이므로, 흡수조건만 확인하면 된다. 임의의 $x=(x_i)\in\bigoplus E_i$와 $\alpha=(\alpha_i)\in\prod E_i$에 대하여, 성분별 곱 $\alpha x=(\alpha_ix_i)$의 $i$번째 성분이 $0$이 아니려면 $x_i\neq 0$이어야 하므로 $\alpha x$의 support는 $x$의 support에 포함된다. 이는 유한집합이므로 $\alpha x\in\bigoplus E_i$이고, $x\alpha$의 경우도 마찬가지이다. 마지막으로 $I$가 유한집합이라면 finitely supported 조건이 저절로 성립하므로 두 집합이 일치한다.
 :::
 
 ::: 정의 5
-[명제 4](#prop4)의 곱셈이 주어진 $A$-algebra $\bigoplus_{i\in I}E_i$를 $E_i$들의 *direct sum<sub>직합</sub>*이라 부른다.
+Direct product의 곱셈을 제한하여 얻어지는 (possibly non-unital) $A$-algebra $\bigoplus_{i\in I}E_i$를 $E_i$들의 *direct sum<sub>직합</sub>*이라 부른다.
 :::
 
-주의할 것은 이것이 $A$-algebra의 category에서의 coproduct가 <em-ko>아니라는</em-ko> 것이다. 즉 canonical injection $\iota_j:E_j\hookrightarrow\bigoplus E_i$는 $A$-algebra homomorphism이며, 집합으로서 [정의 5](#def5)의 집합은 $A$-module로서의 direct sum과 같은 집합이지만 이들 데이터가 universal property를 만족하지는 않는다. 가령 $E_1=E_2=A$이고, 
+주의할 것은 이것이 $A$-algebra의 category에서의 coproduct가 <em-ko>아니라는</em-ko> 것이다. 우선 [§대수, ⁋정의 1](/ko/math/algebraic_structures/algebras#def1)의 일반적인 의미에서 보더라도 canonical injection $\iota_j:E_j\hookrightarrow\bigoplus E_i$는 덧셈과 스칼라곱, 그리고 곱셈을 모두 보존하지만, 이들 데이터가 universal property를 만족하지는 않는다. 가령 $E_1=E_2=A$이고, 
 
 $$f_i: E_i\rightarrow A$$
 
@@ -84,6 +84,8 @@ $$f\bigl((a,b)\bigr)=f\bigl((a,0)+(0,b)\bigr)=f\bigl((a,0)\bigr)+f\bigl((0,b)\bi
 $$f\bigl((a,b)(c,d)\bigr)=ac+bd\neq (a+b)(c+d)=f(a,b)f(c,d)$$
 
 에 의해 $f$는 곱셈을 보존하지 못한다. 
+
+한편 $A$-algebra와 그 homomorphism이 항상 unital이라는 우리의 관례 아래에서는 상황이 더 나쁘다. $\iota_j$는 $1_{E_j}$를 $\bigoplus E_i$의 항등원으로 보내지 않으므로 애초에 $A$-algebra homomorphism이 아니며, $I$가 무한집합이고 모든 $E_i$가 nonzero라면 [명제 4](#prop4)의 $\bigoplus E_i$는 $\prod E_i$의 진부분 ideal이라 항등원을 갖지 않는다. 
 
 ## 대수의 텐서곱
 

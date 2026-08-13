@@ -32,7 +32,7 @@ Monoidal category $(\mathcal{A},\otimes, I)$와 $\mathcal{A}$의 monoid object $
 마찬가지로 $E\otimes I \rightarrow E$는 right unitor이다. 이 상황을 $E \circlearrowleft A$로 적는다.
 :::
 
-Monoidal category $(\Set,\times, I)$ 위의 monoid object $(M,\cdot,1)$을 고정하자. 그럼 이를 통해 임의의 집합 $E$ 위에 정의된 $M$의 left action을 생각할 수 있다. 그럼 [\[집합론\] §집합의 곱, ⁋명제 4](/ko/math/set_theory/product_of_sets#prop4)로부터
+Monoidal category $(\Set,\times, I)$ 위의 monoid object $(M,\cdot,1)$을 고정하자. 그럼 이를 통해 임의의 집합 $E$ 위에 정의된 $M$의 left action을 생각할 수 있다. 그럼 $M\times E\cong E\times M$으로 성분의 순서를 바꾼 뒤 [\[집합론\] §집합의 곱, ⁋명제 4](/ko/math/set_theory/product_of_sets#prop4)를 적용하면
 
 $$\Hom_\Set(M\times E,E)\cong\Hom_\Set(M,\Hom_\Set(E,E))\cong\Hom_\Set(M, \End(E))$$
 
@@ -60,7 +60,7 @@ $$x\cdot(\beta\alpha)=(x\cdot\beta)\cdot\alpha,\qquad x\cdot e=x$$
 라 할 수 있다. 이렇게 left action과 right action은 표기상의 차이일 뿐, 본질적으로는 동일한 의미를 갖는다. 따라서 앞으로 일반적인 이론을 전개할 때는 모든 action이 left action인 것으로 생각한다. 
 
 ::: 예시 3
-Monoid $M$과 $M$-set $E$가 주어졌다 하자. 그럼 $\mathcal{P}(E)$도 자연스러운 $M$-set 구조를 갖는다. 임의의 $\alpha\in M$과 $A\in \mathcal{P}(E)$에 대하여, $\alpha\cdot A$를 다음 식
+Monoid $M$이 집합 $E$ 위에 act한다 하자. 그럼 $\mathcal{P}(E)$ 위에도 자연스러운 $M$-action이 주어진다. 임의의 $\alpha\in M$과 $A\in \mathcal{P}(E)$에 대하여, $\alpha\cdot A$를 다음 식
 
 $$\alpha\cdot A=\{\alpha\cdot a\mid a\in A\}$$
 
@@ -68,7 +68,7 @@ $$\alpha\cdot A=\{\alpha\cdot a\mid a\in A\}$$
 
 $$(\alpha\beta)\cdot A=\{(\alpha\beta)\cdot a\mid a\in A\}=\{\alpha\cdot(\beta\cdot a)\mid a\in A\}=\alpha\cdot\{\beta\cdot a\mid a\in A\}=\alpha\cdot(\beta\cdot A)$$
 
-이므로 이것이 $\mathcal{P}(E)$ 위에 $M$-action을 정의한다.
+이고 $e\cdot A=\{e\cdot a\mid a\in A\}=A$이므로 이것이 $\mathcal{P}(E)$ 위에 $M$-action을 정의한다.
 :::
 
 논의의 편의를 위해 다음과 같이 정의한다.
@@ -167,13 +167,13 @@ $$(\beta\alpha\beta^{-1})a=\beta(\alpha(\beta^{-1}a))=\beta\beta^{-1}a=a$$
 이므로 $\beta\alpha\beta^{-1}\in\Fix(A)$가 되어 성립한다. 
 :::
 
-위의 따름정리의 증명으로부터, group $G$가 집합 $E$에 act할 때, $\rho_g$는 반드시 전단사임을 안다. 즉 $\im\rho\subseteq \Aut(E)$가 항상 성립한다.
+Group $G$가 집합 $E$에 act할 때, 임의의 $x\in E$에 대하여 $g^{-1}\cdot(g\cdot x)=(g^{-1}g)\cdot x=x$이므로 $\rho_{g^{-1}}$은 $\rho_g$의 역함수가 된다. 따라서 $\rho_g$는 반드시 전단사이고, 이로부터 $\im\rho\subseteq \Aut(E)$가 항상 성립한다.
 
 ## 내부자기동형사상
 
 이제 우리는 집합 $E$ 위에 추가적인 구조가 주어진 경우를 생각한다. 가령 $E$ 또한 monoid 구조를 가진다 하고, 주어진 monoid $M$이 $E$ 위에 act한다 하면, $M$-action은 monoid homomorphism $M \rightarrow\End(E)=\End_\Mon(E)$로 주어진다. 
 
-특별히 group $G$가 자기 자신 위에 act하는 경우를 생각하자. 즉 $\rho:G\rightarrow\End(G)=\End_\Grp(G)$가 주어져 있다 하면, [따름정리 8](#cor8)의 증명으로부터 $\rho$의 image는 모두 전단사라는 것을 안다. 그런데 전단사인 group homomorphism은 항상 group isomorphism이므로 ([§대수적 구조, ⁋정의 6](/ko/math/algebraic_structures/algebraic_structures#def6)) $G$가 자기 자신 위에 act한다면 이는 반드시 group homomorphism $G \rightarrow \Aut(G)$와 같은 형태로 나타나야 한다는 것을 안다.
+특별히 group $G$가 자기 자신 위에 act하는 경우를 생각하자. Homomorphism $\rho:G\rightarrow\End(G)=\End_\Grp(G)$가 주어져 있다 하면, 전단사인 group homomorphism은 항상 group isomorphism이므로 ([§대수적 구조, ⁋정의 6](/ko/math/algebraic_structures/algebraic_structures#def6)) $G$가 자기 자신 위에 act한다면 이는 반드시 group homomorphism $G \rightarrow \Aut(G)$와 같은 형태로 나타나야 한다는 것을 안다.
 
 자기 자신 위에서 정의된 group action 중 특히 다음의 예시는 기억해둘 만한 가치가 있다.
 
@@ -189,13 +189,13 @@ $$\rho_g(x)=gxg^{-1}$$
 
 $$\rho_g(xy)=g(xy)g^{-1}=(gxg^{-1})(gyg^{-1})=\rho_g(x)\rho_g(y)$$
 
-가 성립하는 것으로부터 $\rho_g$가 group homomorphism이라는 것을 안다. 따라서 $\im\rho\subseteq\Aut(G)$가 성립한다. 
+가 성립하는 것으로부터 $\rho_g$가 group homomorphism이라는 것을 안다. 
 
 한편 임의의 $g,h\in G$와 $x\in G$에 대하여,
 
 $$\rho_{gh}(x)=(gh)x(gh)^{-1}=g(hxh^{-1})g^{-1}=(\rho_g\circ\rho_h)(x)$$
 
-이므로 $\rho_{gh}=\rho_g\circ\rho_h$이다. 즉, $\rho:g\mapsto \rho_g$는 $G$에서 $\Aut(G)$로의 group homomorphism이다.
+이므로 $\rho_{gh}=\rho_g\circ\rho_h$이다. 특히 $h=g^{-1}$을 넣으면 $\rho_g\circ\rho_{g^{-1}}=\rho_e=\id_G$이므로 각 $\rho_g$는 전단사이고, 따라서 $\im\rho\subseteq\Aut(G)$가 성립한다. 즉, $\rho:g\mapsto \rho_g$는 $G$에서 $\Aut(G)$로의 group homomorphism이다.
 :::
 
 ::: 정의 10

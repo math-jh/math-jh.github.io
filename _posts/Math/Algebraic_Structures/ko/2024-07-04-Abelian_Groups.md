@@ -71,7 +71,7 @@ $$e=f(x)^{-1}f(y)^{-1}f(x)f(y)=f(x^{-1}y^{-1}xy)$$
 이 성립하므로, $[G,G]\leq\ker f$이다. 이제 [§군 동형사상, ⁋명제 3](/ko/math/algebraic_structures/isomorphism_theorems#prop3)에 의하여 다음을 얻는다.
 
 ::: 명제 5
-임의의 group $G$와 quotient homomorphism $p:G\rightarrow G/[G,G]$를 생각하자. 그럼 임의의 abelian group $H$와 group homomorphism $f:G \rightarrow H$에 대하여, $f=\bar{f}\circ p$를 만족하는 $\bar{f}:G/[G,G]\rightarrow H$가 존재한다.
+임의의 group $G$와 quotient homomorphism $p:G\rightarrow G/[G,G]$를 생각하자. 그럼 임의의 abelian group $H$와 group homomorphism $f:G \rightarrow H$에 대하여, $f=\bar{f}\circ p$를 만족하는 $\bar{f}:G/[G,G]\rightarrow H$가 유일하게 존재한다.
 :::
 
 특히, 임의의 group homomorphism $f:G\rightarrow H$가 주어졌다 하자. 그럼 합성 $G\rightarrow H\rightarrow H/[H,H]$에 의해 group $G$로부터 abelian group $H/[H,H]$로의 group homomorphism을 얻고, [명제 5](#prop5)에 의하여 이는 $G/[G,G]$에서 $H/[H,H]$로의 group homomorphism을 유도한다. 
@@ -80,25 +80,35 @@ $$e=f(x)^{-1}f(y)^{-1}f(x)f(y)=f(x^{-1}y^{-1}xy)$$
 임의의 group $G$에 대하여, quotient group $G/[G,G]$를 $G$의 *abelianization<sub>아벨화</sub>*이라 부르고 $G^\ab$으로 표기한다.
 :::
 
-그럼 앞선 논증은 이것이 functor $\ab:\Grp\rightarrow\Ab$를 정의한다는 것을 보여준다. 뿐만 아니라 다음이 성립한다.
+그럼 앞선 논증은 이것이 functor $\ab:\Grp\rightarrow\Ab$를 정의한다는 것을 보여준다. 즉,  
+
+$$\ab(\id_G)=\id_{G^\ab},\qquad \ab(g\circ f)=\ab(g)\circ\ab(f)$$
+
+이 성립하며, 이 두 식은 우변이 좌변이 만족해야 할 universal property를 만족한다는 것을 보이면 유일성으로부터 따라나오는 것이다. 뿐만 아니라 다음이 성립한다.
 
 ::: 명제 7
 Forgetful functor $U:\Ab \rightarrow \Grp$과 abelianization functor $\ab:\Grp \rightarrow \Ab$에 대하여, adjunction $\ab\dashv U$가 존재한다.
 :::
 
-이에 대한 증명은 이미 위에서 완료하였다.
+이 주장의 bijection $\Hom_\Ab(G^\ab,H)\cong \Hom_\Grp(G,U(H))$은 [명제 5](#prop5)의 대응 $\bar{f}\mapsto\bar{f}\circ p$으로부터 바로 나오는 것이며, 유일하게 보여야 할 것은 각각의 factor에 대한 naturality 뿐이지만 이 또한 앞에서 살펴본 유일성 논증과 유사한 방식으로 얻을 수 있다. 
 
 ## 자유가환군
 
-앞선 글의 말미에서 우리는 free group $F(X)$를 free product
+한편 앞선 글의 말미에서 우리는 free group $F(X)$를 free product
 
 $${\prod_{x\in X}}^\ast \mathbb{Z}$$
 
-으로 해석할 수 있었다. 그런데 $\Ab$는 이미 coproduct $\bigoplus$를 갖는다는 것을 알고 있으므로, 동일한 논증을 통해 forgetful functor $U:\Ab \rightarrow \Set$의 left adjoint $F_\Ab:\Set\rightarrow \Ab$를 다음 식
+으로 해석할 수 있었다. $\Ab$에서 free product의 자리를 대신하는 것은 direct sum이므로, 집합 $X$에 대하여
 
-$$F_\Ab(X)=F_\Ab\left(\coprod_{x\in X} \{x\}\right)\cong \coprod_{x\in X} F_\Ab(\ast)=\bigoplus_{x\in X} \mathbb{Z}$$
+$$F_\Ab(X)=\bigoplus_{x\in X} \mathbb{Z}$$
 
-을 통해 얻을 수 있다. 이렇게 얻어지는 $F_\Ab(X)$를 *free abelian group*이라 정의한다. 즉 다음 명제가 성립한다.
+로 두고 이를 $X$에 의해 정의된 *free abelian group*이라 부르기로 한다. 함수 $u:X\rightarrow Y$가 $x$번째 generator를 $u(x)$번째 generator로 보내는 homomorphism $F_\Ab(u)$를 유도하므로 $F_\Ab$는 functor $\Set\rightarrow\Ab$가 된다.
+
+이제 [정리 1](#thm1)과, $\mathbb{Z}$에서 나가는 group homomorphism이 $1$의 image에 의해 결정된다는 사실을 차례로 쓰면 임의의 abelian group $H$에 대하여 다음의 isomorphism
+
+$$\Hom_\Ab\biggl(\bigoplus_{x\in X}\mathbb{Z},H\biggr)\cong\prod_{x\in X}\Hom_\Ab(\mathbb{Z},H)\cong\prod_{x\in X}U(H)\cong\Hom_\Set(X,U(H))$$
+
+을 얻는다. 여기에서 각 대응은 homomorphism의 합성과 함수의 합성으로만 주어지므로 $X$와 $H$ 양쪽에서 natural하고, 따라서 다음을 얻는다. ([\[범주론\] §수반함자, ⁋정의 1](/ko/math/category_theory/adjoints#def1))
 
 ::: 명제 8
 Forgetful functor $U:\Ab \rightarrow \Set$의 left adjoint $F_\Ab:\Set \rightarrow\Ab$가 존재한다. 
@@ -220,7 +230,7 @@ $$\Hom_\Ab(G\otimes H, A)\cong\Hom_\Ab(G,\Hom_\Ab(H, A))\cong\Hom_\Ab(H,\Hom_\Ab
 Abelian group들의 family $(G_i)$에 대하여, direct sum $\bigoplus G_i$가 잘 정의된다. 다음 정의는 다른 대수적인 구조들에서 특히 유용하게 사용된다.
 
 ::: 정의 16
-Commutative monoid $I$에 대하여, $I$로 index가 주어진 abelian group들의 family $(G_i)_{i\in I}$를 생각하자. 이를 *graded abelian group<sub>등급 가환군</sub>*이라 부른다.
+Commutative monoid $I$에 대하여, $I$로 index가 주어진 abelian group들의 family $(G_i)_{i\in I}$를 생각하자. 그럼 이 family의 direct sum $\bigoplus G_i$를 *graded abelian group<sub>등급 가환군</sub>*이라 부른다.
 :::
 
 현재로서는 commutative monoid $I$에 대하여, $I$를 집합으로 생각하여 direct sum을 취한 것과 위에서 정의한 graded abelian group 사이에 차이가 없으므로 현재로서는 이 정의는 기존에 있던 개념에 새로운 이름을 붙인 것에 불과하다. 이를 정의하는 이유는 나중에 abelian group 위에 새로운 연산을 정의했을 때 이 연산과 $I$의 덧셈 사이의 관계를 부여하기 위한 것이다.

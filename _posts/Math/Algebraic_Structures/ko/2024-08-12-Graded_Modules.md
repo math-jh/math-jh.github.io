@@ -56,7 +56,11 @@ $I$-graded left $A$-module $M=\bigoplus_{i\in I} M_i$가 주어졌다 하자. �
 3. $N$은 homogeneous element들로 생성된다.
 :::
 
-이 명제는 [§등급환, ⁋명제 6](/ko/math/algebraic_structures/graded_rings#prop6)의 일반화이며, 그 증명 또한 동일하다. 이 동치조건을 만족하는 submodule들을 *graded submodule<sub>등급부분가군</sub>*이라 부른다. 다음 명제 또한 [§등급환, ⁋명제 7](/ko/math/algebraic_structures/graded_rings#prop7)의 일반화이다.
+이 명제는 [§등급환, ⁋명제 6](/ko/math/algebraic_structures/graded_rings#prop6)의 일반화이며, 그 증명 또한 동일하다. 이 동치조건을 만족하는 submodule들을 *graded submodule<sub>등급부분가군</sub>*이라 부른다. 한편 graded submodule $N$에 대하여 [§등급환, ⁋명제 7](/ko/math/algebraic_structures/graded_rings#prop7)의 증명이 그대로 옮겨가, quotient module $M/N$은 다음의 decomposition
+
+$$M/N=\bigoplus_{i\in I}M_i/(N\cap M_i)$$
+
+을 통해 graded module이 된다. 그럼 다음이 성립한다.
 
 ::: 명제 5
 Degree $d$의 graded $A$-homomorphism $u:M \rightarrow N$에 대하여, 다음이 성립한다.
@@ -64,6 +68,13 @@ Degree $d$의 graded $A$-homomorphism $u:M \rightarrow N$에 대하여, 다음�
 1. $\im(u)$는 $N$의 graded submodule이다.
 2. 만일 $d$가 cancellable이라면, $\ker(u)$는 $M$의 graded submodule이다.
 3. $d=0$이라면 canonical bijection $M/\ker(u)\cong\im(u)$는 graded module들 사이의 isomorphism을 정의한다. 
+:::
+::: 증명
+1번의 경우, $M=\bigoplus_j M_j$이므로 $\im(u)$는 homogeneous element $u(x_j)\in N_{d+j}$들로 생성되고, 따라서 [명제 4](#prop4)의 셋째 조건에 의해 graded submodule이다.
+
+2번의 경우, $x=\sum_j x_j\in\ker(u)$라 하면 $0=u(x)=\sum_j u(x_j)$이고 각 $u(x_j)$는 $N_{d+j}$에 속한다. $d$가 cancellable이므로 $j\mapsto d+j$는 단사이고, 따라서 이 합의 항들이 서로 다른 degree에 놓여 성분별로 $u(x_j)=0$을 얻는다. 즉 각 $x_j$가 $\ker(u)$에 속하므로 [명제 4](#prop4)의 둘째 조건이 성립한다.
+
+3번의 경우, 임의의 $y\in\im(u)\cap N_i$에 대하여 $y=u(x)$인 $x=\sum_j x_j$를 택하면 $d=0$이므로 $u(x)$의 $N_i$-성분은 $u(x_i)$이고, 따라서 $\im(u)\cap N_i=u(M_i)$이다. 그럼 canonical bijection $M/\ker(u)\rightarrow\im(u)$가 $M_i/(\ker(u)\cap M_i)$를 $\im(u)\cap N_i$로 보내므로, 위에서 준 $M/\ker(u)$의 grading에 대하여 degree를 보존한다.
 :::
 
 ---

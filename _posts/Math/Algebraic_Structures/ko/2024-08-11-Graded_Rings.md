@@ -55,12 +55,12 @@ Commutative monoid $I$와 두 $I$-graded ring $A,A'$에 대하여, ring homomorp
 
 ## 동차아이디얼과 등급환의 몫
 
-Graded ring $A=\bigoplus_{i\in I} A_i$에 대해, $A$의 ideal $\mathfrak{a}$에 대한 quotient ring $A/\mathfrak{a}$가 항상 graded ring이 되지는 않을 수도 있다. 
+Graded ring $A=\bigoplus_{i\in I} A_i$와 $A$의 two-sided ideal $\mathfrak{a}$에 대하여, quotient ring $A/\mathfrak{a}$는 $A$의 grading을 물려받지 못할 수 있다. 즉 quotient map이 graded homomorphism이 되도록 하는 $A/\mathfrak{a}$의 grading이 존재하지 않을 수 있다. 
 
 ::: 예시 5
-Ring $A$를 고정하고, $A$의 원소들을 계수로 가지는 *polynomial ring*
+Commutative ring $A$를 고정하고, $A$의 원소들을 계수로 가지는 *polynomial ring*
 
-$$A[\x]=\{\alpha_n\x^n+\cdots+\alpha_1\x+\alpha_0\mid \alpha_i\in A\}$$
+$$A[\x]=\{\alpha_n\x^n+\cdots+\alpha_1\x+\alpha_0\mid n\in\mathbb{N}, \alpha_i\in A\}$$
 
 을 생각하자. 그럼 이는 다음의 decomposition
 
@@ -74,13 +74,13 @@ $$A[\x]/(\x-1)\cong A$$
 
 $$\alpha_n\x^n +\cdots+\alpha_1\x+\alpha_0\quad \mapsto\quad \alpha_n+\cdots+\alpha_1+\alpha_0$$
 
-으로 정의된 evaluation map에 first isomorphism theorem을 적용하여 얻어진다. 그러나 위의 homomorphism은 graded homomorphism이 아니다.
+으로 정의된 evaluation map에 first isomorphism theorem을 적용하여 얻어진다. 그런데 이 때 quotient map $\pi:A[\x]\rightarrow A[\x]/(\x-1)$은 임의의 $n$에 대하여 $A\x^n$을 $A$ 전체로 보낸다. 따라서 $A\neq 0$이라면 $\pi(A\x^n)$들의 합은 direct sum이 될 수 없고, $\pi$를 graded homomorphism으로 만드는 grading은 $A[\x]/(\x-1)$에 존재하지 않는다.
 :::
 
 이를 피하기 위해 *homogeneous ideal*의 개념을 도입한다.
 
 ::: 명제 6
-$I$-graded ring $A=\bigoplus_{i\in I} A_i$와 $A$의 ideal $\mathfrak{a}$에 대하여 다음이 모두 동치이다. 
+$I$-graded ring $A=\bigoplus_{i\in I} A_i$와 $A$의 two-sided ideal $\mathfrak{a}$에 대하여 다음이 모두 동치이다. 
 
 1. $\mathfrak{a}$는 $\mathfrak{a}\cap A_i$들의 합이다.
 2. $\mathfrak{a}$의 임의의 원소를 homogeneous element로 분해하면, 각각의 원소들도 모두 $\mathfrak{a}$에 속한다. 
@@ -89,20 +89,20 @@ $I$-graded ring $A=\bigoplus_{i\in I} A_i$와 $A$의 ideal $\mathfrak{a}$에 대
 ::: 증명
 $A$의 원소로서, $\mathfrak{a}$의 모든 원소들은 homogeneous element들의 합으로 유일하게 나타난다. 따라서 처음 두 조건은 서로 동치이며, 1번 조건 하에서 $\mathfrak{a}$는 homogeneous element인 $\mathfrak{a}\cap A_i$의 원소들로 생성되므로 1번 조건이 3번 조건을 함의한다. 이제 세 번째 조건을 가정하고 두 번째 조건을 증명한다. $\mathfrak{a}$가 homogeneous element들 $(x_j)_{j\in J}$로 생성된다 가정하자. 그럼 임의의 $x\in \mathfrak{a}$가 다음의 식
 
-$$x=\sum_{j\in J} \alpha_j x_j,\qquad\text{$(\alpha_j)_{j\in J}$ finitely supported}$$
+$$x=\sum_{k\in K} a_k x_{j(k)} b_k,\qquad\text{$K$ finite, $a_k,b_k\in A$}$$
 
-으로 나타난다. 이제 $\alpha_j$들 각각은 다시 $A$의 원소로서 homogeneous element들의 합
+으로 나타난다. 이제 $a_k$와 $b_k$ 각각은 다시 $A$의 원소로서 homogeneous element들의 합
 
-$$\alpha_j=\sum_{k\in K_j} \alpha_{jk},\qquad \text{$(\alpha_{jk})_{k\in K_j}$ finitely supported}$$
+$$a_k=\sum_{p} a_{kp},\qquad b_k=\sum_q b_{kq}$$
 
-으로 나타난다. 따라서
+으로 나타나므로
 
-$$x=\sum_{j\in J}\sum_{k\in K_j}\alpha_{jk}x_j,\qquad \text{$(\alpha_{jk})_{j\in J,k\in K_j}$ finitely supported}$$
+$$x=\sum_{k\in K}\sum_{p,q}a_{kp}x_{j(k)}b_{kq}$$
 
-이고, $\alpha_{jk}x_j$들은 모두 각각 homogeneous element들이며 모두 $\mathfrak{a}$에 속한다. 이로부터 2번 조건을 보일 수 있다.
+를 얻는다. 이 때 $a_{kp}x_{j(k)}b_{kq}$들은 모두 각각 homogeneous element들이며 모두 $\mathfrak{a}$에 속한다. 이제 같은 degree를 갖는 항들끼리 모으면 그 합이 $x$의 각 homogeneous 성분이 되고, 이들이 모두 $\mathfrak{a}$에 속하므로 2번 조건을 얻는다.
 :::
 
-위의 동치조건을 만족하는 ideal을 *homogeneous ideal<sub>동차 아이디얼</sub>*이라 부른다. 그럼 다음이 성립한다.
+위의 동치조건을 만족하는 two-sided ideal을 *homogeneous ideal<sub>동차 아이디얼</sub>*이라 부른다. 그럼 다음이 성립한다.
 
 ::: 명제 7
 Homogeneous ideal $\mathfrak{a}$에 대하여, $A/\mathfrak{a}$가 graded ring이며, 그 decomposition이 다음 식
@@ -111,8 +111,13 @@ $$A/\mathfrak{a}=\bigoplus_{i\in I}A_i/(\mathfrak{a}\cap A_i)$$
 
 으로 주어진다.
 :::
+::: 증명
+Quotient map을 $\pi:A\rightarrow A/\mathfrak{a}$라 하자. $A=\bigoplus_i A_i$이고 $\pi$가 전사이므로 $A/\mathfrak{a}$는 $\pi(A_i)$들의 합이며, $\pi$를 $A_i$로 제한한 것의 kernel이 $\mathfrak{a}\cap A_i$이므로 $\pi(A_i)\cong A_i/(\mathfrak{a}\cap A_i)$이다.
 
-이에 대한 증명은 자명하므로 생략한다.
+이 합이 direct sum인 것을 보이기 위해 우리는 finitely supported homogeneous element들의 family $(\alpha_i)$가 $\sum_i \pi(\alpha_i)=0$을 만족한다 가정하고 모든 $i$에 대해 $\pi(\alpha_i)=0$임을 보여야 한다. 가정에 의해 $\sum_i\alpha_i\in\mathfrak{a}$이므로, [명제 6](#prop6)의 둘째 조건에 의해 각 $\alpha_i$가 $\mathfrak{a}$에 속해야 하고, 따라서 $\mathfrak{a}\cap A_i$에 속한다. 즉 모든 $i$에 대해 $\pi(\alpha_i)=0$이다.
+
+마지막으로 $A_iA_j\subseteq A_{i+j}$로부터 $\pi(A_i)\pi(A_j)\subseteq \pi(A_{i+j})$가 성립하므로, 이 decomposition은 $A/\mathfrak{a}$ 위에 graded ring의 구조를 준다.
+:::
 
 ---
 

@@ -36,9 +36,9 @@ Ring homomorphism $\phi:A \rightarrow B$에 대하여, 위와 같은 방식으�
 
 $$\alpha\cdot_A y:=\phi(\alpha)\cdot_B y$$
 
-으로 정의하는 것이다. 
+으로 정의하는 것이다. 같은 구성이 right module에 대해서도 그대로 적용되며, 이 경우 우리는 $\phi^\ast$를 $\rMod{B} \rightarrow\rMod{A}$로도 본다. 
 
-특별히 $N=B$인 경우를 생각하자. 집합으로서는 $\phi^\ast B$와 $B$가 동일하므로, 기존의 ring homomorphism $\phi:A \rightarrow B$와 $\phi^\ast B$의 action 사이의 관계를 확인할 수 있는데, 이 경우 $\phi$는 $A$-linear map이 되는 것을 확인할 수 있다. 
+특별히 $N=B$인 경우를 생각하자. 집합으로서는 $\phi^\ast B$와 $B$가 동일하므로, 기존의 ring homomorphism $\phi:A \rightarrow B$와 $\phi^\ast B$의 action 사이의 관계를 확인할 수 있는데, 이 경우 $\phi$는 $A$-linear map이 되는 것을 확인할 수 있다. 또 $B$는 자기 자신 위의 left $B$-module인 동시에 right $B$-module이므로, $\phi^\ast B$는 왼쪽에서 $B$가 곱셈으로 작용하고 오른쪽에서 $\beta\cdot_A\alpha=\beta\phi(\alpha)$를 통해 $A$가 작용하는 $(B,A)$-bimodule이 된다. 앞으로 $\phi^\ast B$를 tensor product의 왼쪽 인자로 쓸 때는 이 right $A$-구조를 뜻한다. 
 
 ::: 예시 2
 Forgetful functor $U: \lMod{B} \rightarrow\Ab$는 (유일한) ring homomorphism $\mathbb{Z}\rightarrow B$로부터 유도되는 것이다. 
@@ -136,10 +136,23 @@ $$\Phi((\id_{\phi^\ast B}\otimes_A u)(\beta'\cdot_B(\beta\otimes_Ax)))=\Phi((\be
 이제 위에서 정의된 두 함수가 서로의 역함수임을 확인할 수 있고, 뿐만 아니라 이들이 natural equivalence를 정의한다는 것 또한 확인할 수 있다.
 :::
 
-또, 다음의 adjoint pair 또한 비슷한 방식으로 증명할 수 있다. 
+또, 다음의 adjoint pair 또한 성립한다. 
 
 ::: 명제 7
 Adjoint $\phi^\ast\dashv\phi_\ast$가 존재한다. 
+:::
+::: 증명
+$B$-module $N$과 $A$-module $M$을 고정하고 $\Hom_A(\phi^\ast N,M)\cong\Hom_B(N,\phi_\ast M)$을 보이면 된다. 임의의 $u\in\Hom_A(\phi^\ast N,M)$에 대하여 $\tilde{u}(y)$를 $\beta\mapsto u(\beta\cdot_By)$로 정의하자. 그럼
+
+$$\tilde{u}(y)(\alpha\cdot_A\beta)=u\bigl((\phi(\alpha)\beta)\cdot_By\bigr)=u\bigl(\alpha\cdot_A(\beta\cdot_By)\bigr)=\alpha\cdot_A\tilde{u}(y)(\beta)$$
+
+이므로 $\tilde{u}(y)\in\phi_\ast M$이고, $\tilde{u}(\beta'\cdot_By)(\beta)=u((\beta\beta')\cdot_By)=\tilde{u}(y)(\beta\beta')$이 [정의 4](#def4) 직전에 정의한 $B$-action에 의해 $(\beta'\cdot_B\tilde{u}(y))(\beta)$이므로 $\tilde{u}\in\Hom_B(N,\phi_\ast M)$이다.
+
+거꾸로 임의의 $w\in\Hom_B(N,\phi_\ast M)$에 대하여 $u(y)=w(y)(1)$로 두면
+
+$$u(\alpha\cdot_Ay)=w(\phi(\alpha)\cdot_By)(1)=w(y)(\phi(\alpha))=w(y)(\alpha\cdot_A1)=\alpha\cdot_Au(y)$$
+
+이므로 $u\in\Hom_A(\phi^\ast N,M)$이다. 이 두 대응은 서로의 역인데, $\tilde{u}(y)(1)=u(1\cdot_By)=u(y)$이며, 반대로 $w$로부터 얻은 $u$에 대하여 $\tilde{u}(y)(\beta)=w(\beta\cdot_By)(1)=w(y)(\beta)$이기 때문이다. 마지막으로 두 대응이 모두 $u$·$w$와의 합성으로만 주어지므로 $M$과 $N$ 양쪽에서 natural하다.
 :::
 
 따라서 $\phi^\ast:\lMod{B} \rightarrow\lMod{A}$는 left adjoint이자 right adjoint이고, 따라서 모든 종류의 limit, colimit과 commute한다. 
