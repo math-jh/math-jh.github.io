@@ -107,7 +107,7 @@ $$\frac{\partial (g\circ f)_i}{\partial x_j}(a) = \sum_{k} \frac{\partial g_i}{\
 
 $$\frac{d}{\dd{t}} g(\gamma(t)) = Dg(\gamma(t)) \gamma'(t) = \sum_{j=1}^n \frac{\partial g}{\partial x_j}(\gamma(t)) \gamma_j'(t) = \nabla g(\gamma(t)) \cdot \gamma'(t)$$
 
-이다. 특히 직선 $\gamma(t) = a + tv$를 넣으면 $\gamma'(t) = v$이므로 $t = 0$에서 $(d/\dd{t})\big\vert_{t=0}  g(a + tv) = \nabla g(a)\cdot v$, 곧 방향 $v$로의 방향도함수가 기울기와 $v$의 내적임을 얻는다. 이 곡선 restriction은 아래 다변수 [§평균값 정리와 테일러 정리, ⁋정리 3](/ko/math/analysis/mean_value_theorem#thm3)의 증명에서 다시 쓰인다.
+이다. 특히 직선 $\gamma(t) = a + tv$를 넣으면 $\gamma'(t) = v$이므로 $t = 0$에서 $(d/\dd{t})\big\vert_{t=0}  g(a + tv) = \nabla g(a)\cdot v$, 곧 방향 $v$로의 방향도함수가 기울기와 $v$의 내적임을 얻는다. 이 곡선 restriction은 아래 [명제 6](#prop6)의 증명에서 다시 쓰인다.
 
 ## 연속미분가능성
 
@@ -180,10 +180,10 @@ $$\varphi(1) - \varphi(0) = \varphi'(\theta)$$
 인데, 좌변은 $f(a+h) - f(a)$이고 우변은 $\nabla f(a+\theta h)\cdot h$이므로 주장이 따른다.
 :::
 
-벡터값 함수($m \ge 2$)에서는 이 등식이 성립하지 않음에 유의한다. 가령 $\gamma(t) = (\cos t, \sin t)$는 $\gamma(2\pi) - \gamma(0) = 0$이지만 $\gamma'(t) = (-\sin t, \cos t)$는 결코 $0$이 아니어서, 좌변을 한 점에서의 미분으로 표현할 수 없다. 대신 norm에 대한 부등식 형태가 살아남는데, 이로부터 다음 따름정리를 얻는다.
+벡터값 함수($m \ge 2$)에서는 이 등식이 성립하지 않음에 유의한다. 가령 $\gamma(t) = (\cos t, \sin t)$는 $\gamma(2\pi) - \gamma(0) = 0$이지만 $\gamma'(t) = (-\sin t, \cos t)$는 결코 $0$이 아니어서, 좌변을 한 점에서의 미분으로 표현할 수 없다. 대신 norm에 대한 부등식 형태가 살아남는데, 실숫값 함수의 경우에는 [명제 6](#prop6)에서 곧바로 다음 따름정리를 얻는다.
 
 ::: 따름정리 7
-Convex 집합 $U$ 위에서 $f : U \rightarrow \mathbb{R}$가 미분가능하고 $\nabla f \equiv 0$이면, $f$는 $U$에서 상수이다.
+열린 convex 집합 $U$ 위에서 $f : U \rightarrow \mathbb{R}$가 미분가능하고 $\nabla f \equiv 0$이면, $f$는 $U$에서 상수이다.
 :::
 
 ::: 증명
@@ -194,7 +194,7 @@ $$f(a + h) - f(a) = \nabla f(a + \theta h)\cdot h = 0 \cdot h = 0$$
 이므로 $f(a+h) = f(a)$이다. 두 점이 임의였으므로 $f$는 $U$에서 상수이다.
 :::
 
-이 따름정리는 일변수에서 "도함수가 $0$이면 상수"라는 사실의 다변수 판본으로, 두 함수의 기울기가 같으면 둘이 상수 차이임을, 따라서 potential이 상수배까지 유일함을 보장한다.
+이 따름정리는 일변수에서 "도함수가 $0$이면 상수"라는 사실의 다변수 판본으로, 두 함수의 기울기가 같으면 둘이 상수 차이임을, 따라서 potential이 상수 차이까지 유일함을 보장한다.
 
 ## 예시와 계산
 

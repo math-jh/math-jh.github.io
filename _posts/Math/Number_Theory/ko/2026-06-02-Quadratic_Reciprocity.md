@@ -1,6 +1,6 @@
 ---
 title: "이차 상호법칙"
-description: "가우스 보조정리를 증명하여 2가 언제 이차 잉여인지를 결정하고, 두 홀수 소수의 르장드르 기호를 맞바꾸는 이차 상호법칙을 격자점 계산으로 증명한다. 이를 이용해 르장드르 기호를 효율적으로 계산한다."
+description: "가우스 보조정리를 증명하여 2가 언제 이차 잉여인지를 결정하고, 두 홀수 소수의 르장드르 기호를 맞바꾸는 이차 상호법칙을 lattice point 계산으로 증명한다. 이를 이용해 르장드르 기호를 효율적으로 계산한다."
 excerpt: "가우스 보조정리, 제2보충법칙, 이차 상호법칙"
 
 categories: [Math / Number Theory]
@@ -14,16 +14,16 @@ weight: 13
 published: false
 ---
 
-[§이차 잉여](/ko/math/number_theory/quadratic_residues)에서 르장드르 기호가 multiplicative임을 보았고, 그 계산이 소수와 $-1$에서의 값으로 환원됨을 알았다. $-1$의 경우는 이미 해결했으니, 남은 것은 두 홀수 소수의 르장드르 기호 사이의 관계 — 가우스가 "황금 정리"라 부른 이차 상호법칙 — 이다.
+[§이차 잉여](/ko/math/number_theory/quadratic_residues)에서 르장드르 기호가 multiplicative임을 보았고, 그 계산이 소수와 $-1$에서의 값으로 환원됨을 알았다. $-1$의 경우는 이미 해결했으니, 남은 것은 두 홀수 소수의 르장드르 기호 사이의 관계, 곧 가우스가 "황금 정리"라 부른 이차 상호법칙이다.
 
-이 관계가 왜 놀라운지를 먼저 짚어 두자. 르장드르 기호 $\left(\frac{q}{p}\right)$는 "$q$가 법 $p$의 이차 잉여인가"라는, $p$를 법으로 한 산술에 관한 물음이다. 반대로 $\left(\frac{p}{q}\right)$는 법 $q$의 산술에 관한 물음으로, 표면적으로는 전혀 다른 세계의 정보이다. 이차 상호법칙은 이 두 물음의 답이 $p, q$를 $4$로 나눈 나머지라는 사소한 정보만으로 서로 결정됨을 말한다. 즉 한쪽의 어려운 계산을 다른 쪽의 같은 종류 계산으로 뒤집을 수 있고, 분모를 줄여 가며 유클리드 호제법처럼 답에 도달할 수 있다. 가우스 스스로 평생에 걸쳐 여덟 가지가 넘는 증명을 남긴 것도 이 대칭의 깊이를 반영한다.
+이 관계가 왜 놀라운지를 먼저 짚어 두자. 르장드르 기호 $\left(\frac{q}{p}\right)$는 "$q$가 법 $p$의 이차 잉여인가"라는, $p$를 법으로 한 산술에 관한 물음이다. 반대로 $\left(\frac{p}{q}\right)$는 법 $q$의 산술에 관한 물음으로, 표면적으로는 전혀 다른 세계의 정보이다. 이차 상호법칙은 이 두 물음의 답이 $p, q$를 $4$로 나눈 나머지라는 사소한 정보만으로 서로 결정됨을 말한다. 즉 한쪽의 어려운 계산을 다른 쪽의 같은 종류 계산으로 뒤집을 수 있고, 분모를 줄여 가며 유클리드 호제법처럼 답에 도달할 수 있다. 가우스 스스로 평생에 걸쳐 여덟 가지의 증명을 남긴 것도 이 대칭의 깊이를 반영한다.
 
 ## 가우스 보조정리
 
-상호법칙의 증명과 $2$의 처리에 공통으로 쓰이는 도구는 르장드르 기호를 격자점 세기로 번역하는 가우스 보조정리이다. 핵심 발상은 오일러 판정법이 $\left(\frac{a}{p}\right)$를 거듭제곱 $a^{(p-1)/2}$로 환원해 주었으니, 이 거듭제곱을 $a, 2a, \ldots, \frac{p-1}{2}a$의 곱으로 풀어쓴 뒤 그 나머지들의 부호를 추적하는 것이다.
+상호법칙의 증명과 $2$의 처리에 공통으로 쓰이는 도구는 르장드르 기호를 lattice point 세기로 번역하는 가우스 보조정리이다. 핵심 발상은 오일러 판정법이 $\left(\frac{a}{p}\right)$를 거듭제곱 $a^{(p-1)/2}$로 환원해 주었으니, 이 거듭제곱을 $a, 2a, \ldots, \frac{p-1}{2}a$의 곱으로 풀어쓴 뒤 그 나머지들의 부호를 추적하는 것이다.
 
 ::: 보조정리 1 (가우스 보조정리)
-홀수 소수 $p$와 $p \nmid a$에 대하여, $a, 2a, \ldots, \dfrac{p-1}{2}a$를 법 $p$로 환원한 최소 양의 나머지 중 $\dfrac{p}{2}$보다 큰 것의 개수를 $\mu$라 하면
+홀수 소수 $p$와 $p \nmid a$에 대하여, $a, 2a, \ldots, \frac{p-1}{2}a$를 법 $p$로 환원한 최소 양의 나머지 중 $p/2$보다 큰 것의 개수를 $\mu$라 하면
 
 $$\left(\frac{a}{p}\right) = (-1)^{\mu}$$
 
@@ -33,9 +33,9 @@ $$\left(\frac{a}{p}\right) = (-1)^{\mu}$$
 ::: 증명
 각 $ja$ ($1 \leq j \leq (p-1)/2$) 의 최소 양의 나머지를 $r_j$라 하자. $r_j > p/2$인 것들은 $p - r_j < p/2$로 바꾸어 두면, 얻어진 수들
 
-$$\{\, r_j \mid r_j < p/2 \,\} \cup \{\, p - r_j \mid r_j > p/2 \,\}$$
+$$\{ r_j \mid r_j < p/2 \} \cup \{ p - r_j \mid r_j > p/2 \}$$
 
-이 정확히 $1, 2, \ldots, (p-1)/2$의 재배열임을 보일 수 있다. 실제로 이들은 모두 $1$과 $(p-1)/2$ 사이에 있고 그 개수가 $(p-1)/2$로 같으므로, 서로 다름만 보이면 된다. 만약 두 수가 같다면 $r_i = r_j$ 또는 $r_i = p - r_j$인데, 앞의 경우는 $ia \equiv ja \pmod p$에서 $i = j$를 주고, 뒤의 경우는 $ia \equiv -ja \pmod p$에서 $(i+j)a \equiv 0$, 곧 $p \mid i + j$를 주지만 $2 \leq i + j \leq p-1$이라 불가능하다. 따라서 재배열이다. 이제 양변을 모두 곱하면
+이 정확히 $1, 2, \ldots, (p-1)/2$의 재배열임을 보일 수 있다. 실제로 이들은 모두 $1$과 $(p-1)/2$ 사이에 있고 그 개수가 $(p-1)/2$로 같으므로, 서로 다름만 보이면 된다. 만일 두 수가 같다면 $r_i = r_j$ 또는 $r_i = p - r_j$인데, 앞의 경우는 $ia \equiv ja \pmod p$에서 $i = j$를 주고, 뒤의 경우는 $ia \equiv -ja \pmod p$에서 $(i+j)a \equiv 0$, 곧 $p \mid i + j$를 주지만 $2 \leq i + j \leq p-1$이라 불가능하다. 따라서 재배열이다. 이제 양변을 모두 곱하면
 
 $$\begin{aligned}
 \left(\frac{p-1}{2}\right)!
@@ -43,7 +43,7 @@ $$\begin{aligned}
 &\equiv \prod_{r_j < p/2} r_j \cdot \prod_{r_j > p/2} (-r_j) \pmod p \\
 &\equiv (-1)^{\mu} \prod_{j=1}^{(p-1)/2} r_j
 \equiv (-1)^{\mu} \prod_{j=1}^{(p-1)/2} (ja) \\
-&\equiv (-1)^{\mu}\, a^{(p-1)/2} \left(\frac{p-1}{2}\right)! \pmod p
+&\equiv (-1)^{\mu} a^{(p-1)/2} \left(\frac{p-1}{2}\right)! \pmod p
 \end{aligned}$$
 
 이다. 부호 $(-1)^\mu$는 $r_j > p/2$인 $\mu$개의 항에서 $p - r_j$를 $-r_j$로 바꾼 데서 나온다. 양변에서 $\left((p-1)/2\right)!$은 $p$와 서로소이므로 소거할 수 있고, 남은 합동식에 [§이차 잉여, ⁋정리 4](/ko/math/number_theory/quadratic_residues#thm4)을 쓰면
@@ -54,7 +54,7 @@ $$\left(\frac{a}{p}\right) \equiv a^{(p-1)/2} \equiv (-1)^\mu \pmod p$$
 :::
 
 ::: 명제 2 (제2보충법칙)
-홀수 소수 $p$에 대하여 $\left(\dfrac{2}{p}\right) = (-1)^{(p^2-1)/8}$이다. 즉 $2$는 $p \equiv \pm 1 \pmod 8$일 때 이차 잉여, $p \equiv \pm 3 \pmod 8$일 때 비잉여이다.
+홀수 소수 $p$에 대하여 $\left(\frac{2}{p}\right) = (-1)^{(p^2-1)/8}$이다. 즉 $2$는 $p \equiv \pm 1 \pmod 8$일 때 이차 잉여, $p \equiv \pm 3 \pmod 8$일 때 비잉여이다.
 :::
 
 ::: 증명
@@ -76,7 +76,7 @@ r = 7:\quad &\mu = (4k+3) - (2k+1) = 2k+2, &&\text{짝수}
 
 ## 이차 상호법칙
 
-이제 두 홀수 소수의 르장드르 기호를 맞바꾸는 황금 정리를 격자점 계산으로 증명한다. 핵심은 가우스 보조정리의 부호 $\mu$를 직접 세는 대신, 나머지 $r_j$가 $p/2$를 넘는지를 quotient $\lfloor jq/p \rfloor$의 홀짝으로 바꾸어 표현하고, 그 합을 좌표평면의 직사각형 안 격자점 수로 해석하는 데 있다. 그러면 $p$와 $q$의 역할을 맞바꾼 두 합이 대각선을 사이에 두고 직사각형을 정확히 양분하게 되어, 둘의 합이 직사각형 전체의 격자점 수가 된다.
+이제 두 홀수 소수의 르장드르 기호를 맞바꾸는 황금 정리를 lattice point 계산으로 증명한다. 핵심은 가우스 보조정리의 부호 $\mu$를 직접 세는 대신, 나머지 $r_j$가 $p/2$를 넘는지를 quotient $\lfloor jq/p \rfloor$의 홀짝으로 바꾸어 표현하고, 그 합을 좌표평면의 직사각형 안 lattice point 수로 해석하는 데 있다. 그럼 $p$와 $q$의 역할을 맞바꾼 두 합이 대각선을 사이에 두고 직사각형을 정확히 양분하게 되어, 둘의 합이 직사각형 전체의 lattice point 수가 된다.
 
 ::: 정리 3 (이차 상호법칙)
 서로 다른 두 홀수 소수 $p, q$에 대하여
@@ -105,11 +105,11 @@ $$\left(\frac{q}{p}\right) = (-1)^{\mu} = (-1)^{S}$$
 
 가 된다.
 
-이제 $S$를 격자점 수로 읽는다. $\lfloor jq/p\rfloor$는 $x = j$에서 직선 $py = qx$ 아래에 있는 양의 정수 $y$의 개수와 같으므로, $S$는 직사각형 $0 < x < p/2$, $0 < y < q/2$ 안의 격자점 가운데 직선 $py = qx$의 *아래쪽*($py < qx$)에 있는 것의 개수이다. 같은 논법을 $p, q$를 맞바꾸어 적용하면
+이제 $S$를 lattice point 수로 읽는다. $\lfloor jq/p\rfloor$는 $x = j$에서 직선 $py = qx$ 아래에 있는 양의 정수 $y$의 개수와 같으므로, $S$는 직사각형 $0 < x < p/2$, $0 < y < q/2$ 안의 lattice point 가운데 직선 $py = qx$의 *아래쪽*($py < qx$)에 있는 것의 개수이다. 같은 논법을 $p, q$를 맞바꾸어 적용하면
 
 $$\left(\frac{p}{q}\right) = (-1)^{T}, \qquad T = \sum_{i=1}^{(q-1)/2}\left\lfloor \frac{ip}{q}\right\rfloor$$
 
-이고 $T$는 같은 직사각형에서 직선의 *위쪽*($py > qx$)에 있는 격자점 수이다. 직선 $py = qx$ 위에 격자점이 있으려면 $p \mid x$여야 하는데 $0 < x < p/2$에는 그런 $x$가 없으므로, 직선 위에는 격자점이 없다. 따라서 직사각형 안의 모든 격자점은 위·아래 중 한쪽에 속하고
+이고 $T$는 같은 직사각형에서 직선의 *위쪽*($py > qx$)에 있는 lattice point 수이다. 직선 $py = qx$ 위에 lattice point가 있으려면 $p \mid x$여야 하는데 $0 < x < p/2$에는 그런 $x$가 없으므로, 직선 위에는 lattice point가 없다. 따라서 직사각형 안의 모든 lattice point는 위·아래 중 한쪽에 속하고
 
 $$S + T = \left(\frac{p-1}{2}\right)\left(\frac{q-1}{2}\right)$$
 
@@ -121,7 +121,7 @@ $$\left(\frac{p}{q}\right)\left(\frac{q}{p}\right) = (-1)^{S+T} = (-1)^{\frac{p-
 :::
 
 ::: 예시 4
-$\left(\dfrac{30}{53}\right)$을 구하자. $53$은 소수이고 $30 = 2\cdot 3\cdot 5$이므로 곱셈성으로 $\left(\frac{30}{53}\right) = \left(\frac{2}{53}\right)\left(\frac{3}{53}\right)\left(\frac{5}{53}\right)$이다. $53 \equiv 5 \pmod 8$이므로 $\left(\frac{2}{53}\right) = -1$이다. 상호법칙으로 $53 \equiv 1 \pmod 4$이니 $\left(\frac{3}{53}\right) = \left(\frac{53}{3}\right) = \left(\frac{2}{3}\right) = -1$, $\left(\frac{5}{53}\right) = \left(\frac{53}{5}\right) = \left(\frac{3}{5}\right) = -1$이다. 따라서 $\left(\frac{30}{53}\right) = (-1)(-1)(-1) = -1$로, $30$은 법 $53$의 비잉여이다.
+$\left(\frac{30}{53}\right)$을 구하자. $53$은 소수이고 $30 = 2\cdot 3\cdot 5$이므로 곱셈성으로 $\left(\frac{30}{53}\right) = \left(\frac{2}{53}\right)\left(\frac{3}{53}\right)\left(\frac{5}{53}\right)$이다. $53 \equiv 5 \pmod 8$이므로 $\left(\frac{2}{53}\right) = -1$이다. 상호법칙으로 $53 \equiv 1 \pmod 4$이니 $\left(\frac{3}{53}\right) = \left(\frac{53}{3}\right) = \left(\frac{2}{3}\right) = -1$, $\left(\frac{5}{53}\right) = \left(\frac{53}{5}\right) = \left(\frac{3}{5}\right) = -1$이다. 따라서 $\left(\frac{30}{53}\right) = (-1)(-1)(-1) = -1$로, $30$은 법 $53$의 비잉여이다.
 :::
 
 ## 르장드르 기호의 계산
@@ -137,11 +137,11 @@ $$\left(\frac{3}{p}\right) = (-1)^{\frac{p-1}{2}\cdot 1}\left(\frac{p}{3}\right)
 
 $$\left(\frac{3}{p}\right) = +1 \iff p \equiv \pm 1 \pmod{12}$$
 
-임이 따른다. 예컨대 $p = 11 \equiv -1$이면 $3$은 잉여이고 ($5^2 = 25 \equiv 3$), $p = 7 \equiv 7$이면 비잉여이다.
+임이 따른다. 가령 $p = 11 \equiv -1$이면 $3$은 잉여이고 ($5^2 = 25 \equiv 3$), $p = 7 \equiv 7$이면 비잉여이다.
 :::
 
 ::: 예시 6 (큰 분자의 환원)
-$\left(\dfrac{105}{317}\right)$을 구하자. $317$은 소수이고 $105 = 3\cdot 5\cdot 7$이므로
+$\left(\frac{105}{317}\right)$을 구하자. $317$은 소수이고 $105 = 3\cdot 5\cdot 7$이므로
 
 $$\left(\frac{105}{317}\right) = \left(\frac{3}{317}\right)\left(\frac{5}{317}\right)\left(\frac{7}{317}\right)$$
 
@@ -173,7 +173,7 @@ $$\left(\frac{a}{n}\right) = \prod_{i=1}^{k}\left(\frac{a}{p_i}\right)$$
 
 $$\left(\frac{m}{n}\right)\left(\frac{n}{m}\right) = (-1)^{\frac{m-1}{2}\cdot\frac{n-1}{2}}$$
 
-이고, 또 $\left(\dfrac{-1}{n}\right) = (-1)^{(n-1)/2}$, $\left(\dfrac{2}{n}\right) = (-1)^{(n^2-1)/8}$이다.
+이고, 또 $\left(\frac{-1}{n}\right) = (-1)^{(n-1)/2}$, $\left(\frac{2}{n}\right) = (-1)^{(n^2-1)/8}$이다.
 :::
 
 ::: 증명
@@ -191,7 +191,7 @@ $$\sum_i \frac{p_i-1}{2} \equiv \frac{m-1}{2}, \qquad \sum_j \frac{q_j-1}{2} \eq
 야코비 기호 덕분에 분모가 소수인지 일일이 확인하지 않고도 르장드르 기호를 계산할 수 있다. 다음 예시가 이 호제법형 절차를 보여 준다.
 
 ::: 예시 9 (호제법형 계산)
-$\left(\dfrac{1009}{2307}\right)$을 구하자. $2307 = 3\cdot 769$로 홀수이고 $1009$가 소수임을 안다면 르장드르 기호이지만, 야코비 기호로 보면 소인수분해 없이도 진행된다:
+$\left(\frac{1009}{2307}\right)$을 구하자. 분모의 소인수분해 $2307 = 3\cdot 769$를 안다면 르장드르 기호의 곱 $\left(\frac{1009}{3}\right)\left(\frac{1009}{769}\right)$으로 계산할 수 있지만, 야코비 기호로 보면 소인수분해 없이도 진행된다:
 
 $$\begin{aligned}
 \left(\frac{1009}{2307}\right)

@@ -28,7 +28,7 @@ $$\operatorname{Res}_{z = z_0} f = a_{-1}$$
 로 적는다.
 :::
 
-유수는 Laurent 전개에서 단 하나의 계수만을 뽑아낸 양이지만, 정의 1의 계수공식 ([§고립특이점과 Laurent 급수, ⁋정리 2](/ko/math/complex_analysis/isolated_singularities#thm2)) 에 $n = -1$을 대입하면
+유수는 Laurent 전개에서 단 하나의 계수만을 뽑아낸 양이지만, [§고립특이점과 Laurent 급수, ⁋정리 2](/ko/math/complex_analysis/isolated_singularities#thm2)의 계수공식에 $n = -1$을 대입하면
 
 $$\operatorname{Res}_{z = z_0} f = a_{-1} = \frac{1}{2\pi i}\oint_{\lvert z - z_0\rvert = \rho} f(z)\dd{z}$$
 
@@ -53,21 +53,21 @@ $$P_j(z) = \sum_{n=1}^{\infty} a_{-n}^{(j)}(z - z_j)^{-n}$$
 
 $$g(z) = f(z) - \sum_{j=1}^{k} P_j(z)$$
 
-을 생각한다. 각 $z_j$ 근방에서 $f$의 주부는 정확히 $P_j$이고 다른 $P_\ell$ ($\ell \neq j$) 은 $z_j$에서 holomorphic이므로, $g$의 $z_j$에서의 Laurent 전개에는 주부가 남지 않는다. 따라서 $g$는 각 $z_j$에서 가제거 singular point를 가지며 ([§고립특이점과 Laurent 급수, ⁋정의 4](/ko/math/complex_analysis/isolated_singularities#def4)), 그 점들을 메우면 $g$가 $\Omega$ 전체에서 holomorphic function으로 확장된다. $\Omega$가 단순연결이므로 Cauchy 정리 ([§Cauchy 정리, ⁋따름정리 8](/ko/math/complex_analysis/cauchy_theorem#cor8)) 에 의해
+을 생각한다. 각 $z_j$ 근방에서 $f$의 주부는 정확히 $P_j$이고 다른 $P_\ell$ ($\ell \neq j$) 은 $z_j$에서 holomorphic이므로, $g$의 $z_j$에서의 Laurent 전개에는 주부가 남지 않는다. 따라서 $g$는 각 $z_j$에서 가제거 singular point를 가지며 ([§고립특이점과 Laurent 급수, ⁋정의 4](/ko/math/complex_analysis/isolated_singularities#def4)), 그 점들을 메우면 $g$가 $\Omega$ 전체에서 holomorphic function으로 확장된다. $\Omega$가 단순연결이므로 [§Cauchy 정리, ⁋따름정리 8](/ko/math/complex_analysis/cauchy_theorem#cor8)에 의해
 
 $$\oint_\gamma g(z)\dd{z} = 0, \qquad \text{곧}\qquad \oint_\gamma f(z)\dd{z} = \sum_{j=1}^{k}\oint_\gamma P_j(z)\dd{z}$$
 
 이다.
 
-각 주부의 적분을 계산한다. 주부 $P_j$은 $\mathbb{C} \setminus \{z_j\}$에서 균등수렴하는 급수이므로 $\gamma$ 위에서 항별로 적분할 수 있고,
+각 주부의 적분을 계산한다. 주부 $P_j$의 급수는 $\mathbb{C} \setminus \{z_j\}$의 콤팩트 부분집합에서 균등수렴하고 $\gamma$의 자취가 $z_j$을 지나지 않는 콤팩트 집합이므로, $\gamma$ 위에서 항별로 적분할 수 있고,
 
 $$\oint_\gamma P_j(z)\dd{z} = \sum_{n=1}^{\infty} a_{-n}^{(j)}\oint_\gamma (z - z_j)^{-n}\dd{z}$$
 
-이다. $n \geq 2$인 항에서는 $(z - z_j)^{-n}$이 $\mathbb{C} \setminus \{z_j\}$에서 원시함수 $(z - z_j)^{-n+1}/(-n+1)$을 가지므로 closed 경로 적분이 $0$이다 ([§복소적분, ⁋따름정리 9](/ko/math/complex_analysis/complex_integration#cor9)). $n = 1$인 항만 살아남고, 회전수의 정의 ([§Cauchy 정리, ⁋정의 9](/ko/math/complex_analysis/cauchy_theorem#def9)) 에 의해
+이다. $n \geq 2$인 항에서는 $(z - z_j)^{-n}$이 $\mathbb{C} \setminus \{z_j\}$에서 원시함수 $(z - z_j)^{-n+1}/(-n+1)$을 가지므로 closed 경로 적분이 $0$이다 ([§복소적분, ⁋따름정리 9](/ko/math/complex_analysis/complex_integration#cor9)). $n = 1$인 항만 살아남고, 회전수를 정의한 [§Cauchy 정리, ⁋정의 9](/ko/math/complex_analysis/cauchy_theorem#def9)에 의해
 
-$$\oint_\gamma (z - z_j)^{-1}\dd{z} = 2\pi i\, n(\gamma, z_j)$$
+$$\oint_\gamma (z - z_j)^{-1}\dd{z} = 2\pi i\cdot n(\gamma, z_j)$$
 
-이므로 $\oint_\gamma P_j\dd{z} = a_{-1}^{(j)} \cdot 2\pi i\, n(\gamma, z_j) = 2\pi i\, n(\gamma, z_j)\operatorname{Res}_{z=z_j} f$이다. 이를 $j$에 대해 더하면 주장하는 등식을 얻는다.
+이므로 $\oint_\gamma P_j\dd{z} = a_{-1}^{(j)} \cdot 2\pi i\cdot n(\gamma, z_j) = 2\pi i\cdot n(\gamma, z_j)\operatorname{Res}_{z=z_j} f$이다. 이를 $j$에 대해 더하면 주장하는 등식을 얻는다.
 :::
 
 유수정리는 closed 경로 적분이라는 전역적 양을, 경로가 감는 singular point들에서의 국소적 양인 유수로 완전히 분해한다. 회전수 인자 $n(\gamma, z_j)$은 경로가 각 singular point를 몇 번 감는지를 세므로, 경로 밖의 singular point는 $n(\gamma, z_j) = 0$이 되어 적분에 기여하지 않는다. 실제 응용에서는 거의 항상 $\gamma$이 각 singular point를 반시계방향으로 정확히 한 번 감는 simple closed 곡선이며, 이때 안쪽 singular point에서는 $n(\gamma, z_j) = 1$, 바깥 singular point에서는 $0$이 되어 공식이
@@ -117,7 +117,7 @@ $$\operatorname{Res}_{z = z_0}\frac{g}{h} = \lim_{z \rightarrow z_0}(z - z_0)\fr
 명제 3은 극의 order에 맞춰 적용해야 한다. 단순극에서는 인수 $(z - z_0)$를 곱하고 극한만 취하면 되지만, order가 높아질수록 $m - 1$번 미분해야 하므로 계산이 무거워진다. 분모의 영점으로 생기는 단순극에서는 마지막 공식 $g(z_0)/h'(z_0)$이 가장 효율적인데, 분모를 인수분해할 필요 없이 도함수 한 번으로 유수가 나온다. 두 가지 구체적 예로 감을 잡아 둔다.
 
 ::: 예시 4 (단순극과 이차극의 유수)
-먼저 $f(z) = \dfrac{z}{(z - 1)(z + 2)}$의 두 단순극에서의 유수를 구한다. $z = 1$에서는 인수 $(z - 1)$을 곱해
+먼저 $f(z) = z/\bigl((z - 1)(z + 2)\bigr)$의 두 단순극에서의 유수를 구한다. $z = 1$에서는 인수 $(z - 1)$을 곱해
 
 $$\operatorname{Res}_{z = 1} f = \lim_{z \rightarrow 1}(z - 1)\frac{z}{(z - 1)(z + 2)} = \lim_{z \rightarrow 1}\frac{z}{z + 2} = \frac{1}{3}$$
 
@@ -127,7 +127,7 @@ $$\operatorname{Res}_{z = -2} f = \lim_{z \rightarrow -2}\frac{z}{z - 1} = \frac
 
 이다.
 
-다음으로 $g(z) = \dfrac{e^z}{(z - 1)^2}$의 $z = 1$에서의 이차극을 본다. Order $m = 2$이므로 명제 3에서 $(z - 1)^2 g(z) = e^z$을 한 번 미분하고 극한을 취해
+다음으로 $g(z) = e^z/(z - 1)^2$의 $z = 1$에서의 이차극을 본다. Order $m = 2$이므로 명제 3에서 $(z - 1)^2 g(z) = e^z$을 한 번 미분하고 극한을 취해
 
 $$\operatorname{Res}_{z = 1} g = \frac{1}{(2 - 1)!}\lim_{z \rightarrow 1}\frac{d}{\dd{z}}\Bigl[(z - 1)^2 \frac{e^z}{(z - 1)^2}\Bigr] = \lim_{z \rightarrow 1}\frac{d}{\dd{z}}e^z = e$$
 
@@ -147,11 +147,11 @@ $$\int_{-\infty}^{\infty} f(x)\dd{x} = 2\pi i \sum_{\Img z_j > 0} \operatorname{
 :::
 
 ::: 증명
-반지름 $R$인 상반평면 반원 boundary $\gamma_R$을, 실축 위의 선분 $[-R, R]$과 그 위를 잇는 반원호 $C_R = \{Re^{i\theta} \mid 0 \leq \theta \leq \pi\}$를 이어붙인 closed 경로로 잡는다. $R$을 모든 극의 절댓값보다 크게 잡으면 상반평면의 극이 모두 $\gamma_R$ 안에 들고 각각 회전수가 $1$이므로, 유수정리 (정리 2) 에 의해
+반지름 $R$인 상반평면 반원 boundary $\gamma_R$을, 실축 위의 선분 $[-R, R]$과 그 위를 잇는 반원호 $C_R = \{Re^{i\theta} \mid 0 \leq \theta \leq \pi\}$를 이어붙인 closed 경로로 잡는다. $R$을 모든 극의 절댓값보다 크게 잡으면 상반평면의 극이 모두 $\gamma_R$ 안에 들고 각각 회전수가 $1$이므로, [정리 2](#thm2)에 의해
 
 $$\int_{-R}^{R} f(x)\dd{x} + \int_{C_R} f(z)\dd{z} = 2\pi i \sum_{\Img z_j > 0}\operatorname{Res}_{z = z_j} f$$
 
-이다. 이제 반원호 적분이 $R \rightarrow \infty$에서 $0$으로 감을 보인다. $\deg Q \geq \deg P + 2$이므로 충분히 큰 $\lvert z\rvert$에서 어떤 상수 $M$이 있어 $\lvert f(z)\rvert \leq M/\lvert z\rvert^2$이고, 따라서 $C_R$ 위에서 $\lvert f(z)\rvert \leq M/R^2$이다. ML 부등식 ([§복소적분, ⁋명제 6](/ko/math/complex_analysis/complex_integration#prop6)) 으로
+이다. 이제 반원호 적분이 $R \rightarrow \infty$에서 $0$으로 감을 보인다. $\deg Q \geq \deg P + 2$이므로 충분히 큰 $\lvert z\rvert$에서 어떤 상수 $M$이 있어 $\lvert f(z)\rvert \leq M/\lvert z\rvert^2$이고, 따라서 $C_R$ 위에서 $\lvert f(z)\rvert \leq M/R^2$이다. [§복소적분, ⁋명제 6](/ko/math/complex_analysis/complex_integration#prop6)으로
 
 $$\left\lvert \int_{C_R} f(z)\dd{z}\right\rvert \leq \frac{M}{R^2}\cdot \pi R = \frac{\pi M}{R} \xrightarrow[R \rightarrow \infty]{} 0$$
 
@@ -163,7 +163,7 @@ $$\left\lvert \int_{C_R} f(z)\dd{z}\right\rvert \leq \frac{M}{R^2}\cdot \pi R = 
 ::: 보조정리 6 (Jordan)
 $a > 0$이라 하자. $f$가 상반평면의 반원호 $C_R = \{Re^{i\theta} \mid 0 \leq \theta \leq \pi\}$ 위에서 연속이고, $M(R) = \max_{z \in C_R}\lvert f(z)\rvert \rightarrow 0$ ($R \rightarrow \infty$) 이면
 
-$$\lim_{R \rightarrow \infty}\int_{C_R} f(z)\,e^{iaz}\dd{z} = 0$$
+$$\lim_{R \rightarrow \infty}\int_{C_R} f(z)e^{iaz}\dd{z} = 0$$
 
 이다.
 :::
@@ -171,7 +171,7 @@ $$\lim_{R \rightarrow \infty}\int_{C_R} f(z)\,e^{iaz}\dd{z} = 0$$
 ::: 증명
 $z = Re^{i\theta}$로 매개변수화하면 $\dd{z} = iRe^{i\theta}\dd{\theta}$이고 $\lvert e^{iaz}\rvert = e^{-aR\sin\theta}$이므로
 
-$$\left\lvert \int_{C_R} f(z)e^{iaz}\dd{z}\right\rvert \leq \int_0^\pi \lvert f(Re^{i\theta})\rvert\, e^{-aR\sin\theta}\, R\dd{\theta} \leq M(R)\,R\int_0^\pi e^{-aR\sin\theta}\dd{\theta}$$
+$$\left\lvert \int_{C_R} f(z)e^{iaz}\dd{z}\right\rvert \leq \int_0^\pi \lvert f(Re^{i\theta})\rvert e^{-aR\sin\theta} R\dd{\theta} \leq M(R)R\int_0^\pi e^{-aR\sin\theta}\dd{\theta}$$
 
 이다. 피적분함수가 $\theta = \pi/2$에 대해 대칭이므로 $\int_0^\pi = 2\int_0^{\pi/2}$이고, 구간 $[0, \pi/2]$에서 $\sin\theta \geq 2\theta/\pi$ (Jordan 부등식, $\sin$의 오목성에서 따름) 이므로
 
@@ -179,7 +179,7 @@ $$\int_0^{\pi/2} e^{-aR\sin\theta}\dd{\theta} \leq \int_0^{\pi/2} e^{-2aR\theta/
 
 이다. 이를 합치면
 
-$$\left\lvert \int_{C_R} f(z)e^{iaz}\dd{z}\right\rvert \leq M(R)\,R\cdot 2\cdot\frac{\pi}{2aR} = \frac{\pi}{a}M(R) \xrightarrow[R \rightarrow \infty]{} 0$$
+$$\left\lvert \int_{C_R} f(z)e^{iaz}\dd{z}\right\rvert \leq M(R)R\cdot 2\cdot\frac{\pi}{2aR} = \frac{\pi}{a}M(R) \xrightarrow[R \rightarrow \infty]{} 0$$
 
 이다.
 :::
@@ -187,7 +187,7 @@ $$\left\lvert \int_{C_R} f(z)e^{iaz}\dd{z}\right\rvert \leq M(R)\,R\cdot 2\cdot\
 보조정리 6의 핵심은 $\sin\theta \geq 2\theta/\pi$라는 부등식으로 지수 감소를 끌어내어, 적분 $\int_0^\pi e^{-aR\sin\theta}\dd{\theta}$이 $R$에 반비례하여 작아짐을 보인 데 있다. 이 $1/R$ 인자가 $C_R$의 길이에서 오는 $R$ 인자와 상쇄되어, $\lvert f\rvert$이 단지 $0$으로 가기만 하면 ($\lvert f\rvert \sim 1/R^2$일 필요 없이) 적분이 소멸한다. 덕분에 oscillating integral에서는 degree 조건이 $\deg Q \geq \deg P + 1$로 약화된다. 이를 Fourier 변환형 적분에 적용한다.
 
 ::: 예시 7 (Fourier 적분)
-적분 $\displaystyle\int_{-\infty}^{\infty}\frac{\cos x}{x^2 + 1}\dd{x}$를 계산한다. $\cos x = \Real(e^{ix})$이므로 복소화하여 $f(z) = \dfrac{e^{iz}}{z^2 + 1}$을 상반평면 반원 경로에서 적분한다. 분모 $z^2 + 1 = (z - i)(z + i)$의 영점 가운데 상반평면에 있는 것은 $z = i$ 하나이고, 이는 단순극이다. 명제 3의 단순극 공식으로
+적분 $\int_{-\infty}^{\infty}\cos x/(x^2 + 1)\dd{x}$를 계산한다. $\cos x = \Real(e^{ix})$이므로 복소화하여 $f(z) = e^{iz}/(z^2 + 1)$을 상반평면 반원 경로에서 적분한다. 분모 $z^2 + 1 = (z - i)(z + i)$의 영점 가운데 상반평면에 있는 것은 $z = i$ 하나이고, 이는 단순극이다. 명제 3의 단순극 공식으로
 
 $$\operatorname{Res}_{z = i} f = \frac{e^{iz}}{(z^2 + 1)'}\bigg\rvert_{z = i} = \frac{e^{iz}}{2z}\bigg\rvert_{z = i} = \frac{e^{i\cdot i}}{2i} = \frac{e^{-1}}{2i}$$
 
@@ -195,7 +195,7 @@ $$\operatorname{Res}_{z = i} f = \frac{e^{iz}}{(z^2 + 1)'}\bigg\rvert_{z = i} = 
 
 $$\int_{-\infty}^{\infty}\frac{e^{ix}}{x^2 + 1}\dd{x} = 2\pi i\cdot\frac{e^{-1}}{2i} = \frac{\pi}{e}$$
 
-이다. 양변의 실수부를 취하면 $\displaystyle\int_{-\infty}^{\infty}\frac{\cos x}{x^2 + 1}\dd{x} = \frac{\pi}{e}$이다. 허수부는 $0$인데, 피적분함수 $\sin x/(x^2 + 1)$이 기함수라 적분이 소멸하는 것과 일치한다.
+이다. 양변의 실수부를 취하면 $\int_{-\infty}^{\infty}\cos x/(x^2 + 1)\dd{x} = \pi/e$이다. 허수부는 $0$인데, 피적분함수 $\sin x/(x^2 + 1)$이 기함수라 적분이 소멸하는 것과 일치한다.
 :::
 
 ## 삼각함수의 정적분
@@ -209,25 +209,25 @@ $$\cos\theta = \frac{1}{2}\Bigl(z + \frac{1}{z}\Bigr), \qquad \sin\theta = \frac
 
 이며,
 
-$$\int_0^{2\pi} R(\cos\theta, \sin\theta)\dd{\theta} = \oint_{\lvert z\rvert = 1} R\Bigl(\frac{1}{2}(z + z^{-1}),\, \frac{1}{2i}(z - z^{-1})\Bigr)\frac{\dd{z}}{iz} = 2\pi i\sum_{\lvert z_j\rvert < 1}\operatorname{Res}_{z = z_j} F$$
+$$\int_0^{2\pi} R(\cos\theta, \sin\theta)\dd{\theta} = \oint_{\lvert z\rvert = 1} R\Bigl(\frac{1}{2}(z + z^{-1}), \frac{1}{2i}(z - z^{-1})\Bigr)\frac{\dd{z}}{iz} = 2\pi i\sum_{\lvert z_j\rvert < 1}\operatorname{Res}_{z = z_j} F$$
 
 이다. 여기서 $F(z)$은 가운데 적분의 피적분함수이고, 합은 단위원판 안의 극 전체에 걸친다.
 :::
 
 ::: 증명
-$\theta$가 $0$부터 $2\pi$까지 증가하면 $z = e^{i\theta}$이 단위원을 반시계방향으로 정확히 한 번 돈다. Euler 공식 ([§복소정칙함수, ⁋정의 10](/ko/math/complex_analysis/holomorphic_functions#def10)) 에서 $e^{i\theta} = \cos\theta + i\sin\theta$이고 $e^{-i\theta} = \cos\theta - i\sin\theta$이므로, 두 식을 더하고 빼면 $\cos\theta = (e^{i\theta} + e^{-i\theta})/2 = (z + z^{-1})/2$, $\sin\theta = (e^{i\theta} - e^{-i\theta})/(2i) = (z - z^{-1})/(2i)$이다. 또 $\dd{z} = ie^{i\theta}\dd{\theta} = iz\dd{\theta}$이므로 $\dd{\theta} = \dd{z}/(iz)$이다.
+$\theta$가 $0$부터 $2\pi$까지 증가하면 $z = e^{i\theta}$이 단위원을 반시계방향으로 정확히 한 번 돈다. [§복소정칙함수, ⁋정의 10](/ko/math/complex_analysis/holomorphic_functions#def10)의 Euler 공식에서 $e^{i\theta} = \cos\theta + i\sin\theta$이고 $e^{-i\theta} = \cos\theta - i\sin\theta$이므로, 두 식을 더하고 빼면 $\cos\theta = (e^{i\theta} + e^{-i\theta})/2 = (z + z^{-1})/2$, $\sin\theta = (e^{i\theta} - e^{-i\theta})/(2i) = (z - z^{-1})/(2i)$이다. 또 $\dd{z} = ie^{i\theta}\dd{\theta} = iz\dd{\theta}$이므로 $\dd{\theta} = \dd{z}/(iz)$이다.
 
-이 치환을 적분에 대입하면 실수 적분이 단위원 $\lvert z\rvert = 1$을 따른 복소적분으로 바뀌고, 피적분함수 $F(z) = R(\cdots)/(iz)$은 $z$의 유리함수이다. 가정에서 $R$의 분모가 $[0, 2\pi]$의 $\theta$에 대해 사라지지 않으므로 $F$은 단위원 위 ($\lvert z\rvert = 1$) 에 극을 갖지 않고, 따라서 유한 개의 극이 단위원판 안팎에 흩어져 있다. 단위원이 안쪽 극을 각각 한 번 감으므로 유수정리 (정리 2) 에 의해 적분이 $2\pi i$ 곱하기 단위원판 안 극들의 유수 합이다.
+이 치환을 적분에 대입하면 실수 적분이 단위원 $\lvert z\rvert = 1$을 따른 복소적분으로 바뀌고, 피적분함수 $F(z) = R(\cdots)/(iz)$은 $z$의 유리함수이다. 가정에서 $R$의 분모가 $[0, 2\pi]$의 $\theta$에 대해 사라지지 않으므로 $F$은 단위원 위 ($\lvert z\rvert = 1$) 에 극을 갖지 않고, 따라서 유한 개의 극이 단위원판 안팎에 흩어져 있다. 단위원이 안쪽 극을 각각 한 번 감으므로 [정리 2](#thm2)에 의해 적분이 $2\pi i$ 곱하기 단위원판 안 극들의 유수 합이다.
 :::
 
 명제 8은 삼각적분을 기계적으로 유수 계산으로 바꾼다. 치환 뒤 남는 일은 피적분함수 $F(z)$의 극 가운데 어느 것이 단위원판 $\lvert z\rvert < 1$ 안에 있는지 가려내고 그 유수를 더하는 것뿐이다. 분모가 $z$의 이차식이면 두 해의 곱이 상수항으로 주어지므로, 보통 해 하나만 원판 안에 들어와 계산이 단순극 하나로 끝난다.
 
 ::: 예시 9 (삼각적분)
-$a > 1$일 때 $\displaystyle\int_0^{2\pi}\frac{\dd{\theta}}{a + \cos\theta}$를 구한다. $z = e^{i\theta}$로 치환하면 $\cos\theta = (z + z^{-1})/2$, $\dd{\theta} = \dd{z}/(iz)$이므로
+$a > 1$일 때 $\int_0^{2\pi}\dd{\theta}/(a + \cos\theta)$를 구한다. $z = e^{i\theta}$로 치환하면 $\cos\theta = (z + z^{-1})/2$, $\dd{\theta} = \dd{z}/(iz)$이므로
 
 $$\int_0^{2\pi}\frac{\dd{\theta}}{a + \cos\theta} = \oint_{\lvert z\rvert = 1}\frac{1}{a + \frac12(z + z^{-1})}\frac{\dd{z}}{iz} = \oint_{\lvert z\rvert = 1}\frac{2}{i}\frac{\dd{z}}{z^2 + 2az + 1}$$
 
-이다. 분모 $z^2 + 2az + 1$의 해는 $z_\pm = -a \pm \sqrt{a^2 - 1}$이고, 두 해의 곱은 $z_+ z_- = 1$이다. $a > 1$이므로 $z_+ = -a + \sqrt{a^2 - 1}$은 $\lvert z_+\rvert < 1$로 단위원판 안에 있고 $z_- = -a - \sqrt{a^2 - 1}$은 밖에 있다. 따라서 $F(z) = \dfrac{2}{i}\dfrac{1}{(z - z_+)(z - z_-)}$의 단위원판 안 극은 단순극 $z_+$ 하나뿐이고, 그 유수는
+이다. 분모 $z^2 + 2az + 1$의 해는 $z_\pm = -a \pm \sqrt{a^2 - 1}$이고, 두 해의 곱은 $z_+ z_- = 1$이다. $a > 1$이므로 $z_+ = -a + \sqrt{a^2 - 1}$은 $\lvert z_+\rvert < 1$로 단위원판 안에 있고 $z_- = -a - \sqrt{a^2 - 1}$은 밖에 있다. 따라서 $F(z) = 2/\bigl(i(z - z_+)(z - z_-)\bigr)$의 단위원판 안 극은 단순극 $z_+$ 하나뿐이고, 그 유수는
 
 $$\operatorname{Res}_{z = z_+} F = \frac{2}{i}\frac{1}{z_+ - z_-} = \frac{2}{i}\frac{1}{2\sqrt{a^2 - 1}} = \frac{1}{i\sqrt{a^2 - 1}}$$
 
@@ -245,7 +245,7 @@ $$\int_0^{2\pi}\frac{\dd{\theta}}{a + \cos\theta} = 2\pi i\cdot\frac{1}{i\sqrt{a
 ::: 명제 10 (cotangent 합 공식)
 $f$가 유리함수이고 $\deg(\text{분모}) \geq \deg(\text{분자}) + 2$이며, $f$의 극이 모두 정수가 아니라 하자. 그러면
 
-$$\sum_{n = -\infty}^{\infty} f(n) = -\sum_{j}\operatorname{Res}_{z = z_j}\Bigl[\pi\cot(\pi z)\,f(z)\Bigr]$$
+$$\sum_{n = -\infty}^{\infty} f(n) = -\sum_{j}\operatorname{Res}_{z = z_j}\Bigl[\pi\cot(\pi z)f(z)\Bigr]$$
 
 이다. 여기서 오른쪽 합은 $f$의 극 $z_j$ 전체에 걸친다.
 :::
@@ -261,11 +261,11 @@ $$\operatorname{Res}_{z = n} g_f = f(n)\operatorname{Res}_{z = n}\pi\cot\pi z = 
 
 이다.
 
-이제 한 변이 $N + 1/2$인 정사각형 경로 $\Gamma_N$을 잡는다. 곧 꼭짓점이 $(\pm(N+1/2), \pm(N+1/2))$인 정사각형의 boundary를 반시계방향으로 도는 경로이다. 이 경로 위에서 $\lvert\cot\pi z\rvert$이 $N$에 무관한 상수 $C$로 유계임이 알려져 있다 (변마다 $\sin\pi z$의 절댓값이 아래로 유계이기 때문이다). $N$을 충분히 크게 잡으면 $\Gamma_N$ 안에 정수 $-N, \dots, N$과 $f$의 모든 극이 들어가므로, 유수정리 (정리 2) 에 의해
+이제 한 변이 $N + 1/2$인 정사각형 경로 $\Gamma_N$을 잡는다. 곧 꼭짓점이 $(\pm(N+1/2), \pm(N+1/2))$인 정사각형의 boundary를 반시계방향으로 도는 경로이다. 이 경로 위에서 $\lvert\cot\pi z\rvert$은 $N$에 무관한 상수 $C$로 유계이다. 수직변 $\Real z = \pm(N + 1/2)$ 위에서는 $\cot$의 주기 $\pi$에 의해 $\cot\pi z = -i\tanh(\pi\Img z)$이므로 $\lvert\cot\pi z\rvert \leq 1$이고, 수평변 $\lvert\Img z\rvert = N + 1/2$ 위에서는 $\lvert\cot\pi z\rvert^2 = (\cos^2\pi\Real z + \sinh^2\pi\Img z)/(\sin^2\pi\Real z + \sinh^2\pi\Img z) \leq \coth^2(\pi\Img z)$이라 $\lvert\cot\pi z\rvert \leq \coth(\pi/2)$이므로, $C = \coth(\pi/2)$로 잡으면 된다. $N$을 충분히 크게 잡으면 $\Gamma_N$ 안에 정수 $-N, \dots, N$과 $f$의 모든 극이 들어가므로, [정리 2](#thm2)에 의해
 
 $$\frac{1}{2\pi i}\oint_{\Gamma_N} \pi\cot(\pi z)f(z)\dd{z} = \sum_{n = -N}^{N} f(n) + \sum_{j}\operatorname{Res}_{z = z_j}\Bigl[\pi\cot(\pi z)f(z)\Bigr]$$
 
-이다. 왼쪽 적분을 어림한다. Degree 조건에서 큰 $\lvert z\rvert$에 대해 $\lvert f(z)\rvert \leq A/\lvert z\rvert^2$이고 $\Gamma_N$ 위에서 $\lvert z\rvert \geq N + 1/2$이므로, $\Gamma_N$의 둘레가 $4(2N + 1)$임과 함께 ML 부등식 ([§복소적분, ⁋명제 6](/ko/math/complex_analysis/complex_integration#prop6)) 으로
+이다. 왼쪽 적분을 어림한다. Degree 조건에서 큰 $\lvert z\rvert$에 대해 $\lvert f(z)\rvert \leq A/\lvert z\rvert^2$이고 $\Gamma_N$ 위에서 $\lvert z\rvert \geq N + 1/2$이므로, $\Gamma_N$의 둘레가 $4(2N + 1)$임과 함께 [§복소적분, ⁋명제 6](/ko/math/complex_analysis/complex_integration#prop6)으로
 
 $$\left\lvert\oint_{\Gamma_N}\pi\cot(\pi z)f(z)\dd{z}\right\rvert \leq \pi C\cdot\frac{A}{(N + \frac12)^2}\cdot 4(2N + 1) \xrightarrow[N \rightarrow \infty]{} 0$$
 
@@ -279,7 +279,7 @@ $$0 = \sum_{n=-\infty}^{\infty} f(n) + \sum_{j}\operatorname{Res}_{z = z_j}\Bigl
 명제 10은 무한급수의 합을 유한개의 유수 계산으로 환원한다. 급수의 항이 한 유리함수 $f$에서 $f(n)$으로 나오기만 하면, $f$의 극이라는 유한집합에서의 유수만 구하면 합이 닫힌 형태로 결정된다. 정사각형 경로를 쓰는 것은 그 위에서 $\cot\pi z$이 균등하게 유계여서 적분이 소멸하기 때문이며, 정수에 걸리지 않도록 변을 반정수 $N + 1/2$에 두는 것이 요령이다. 이 공식의 가장 유명한 응용이 Basel 문제이다.
 
 ::: 예시 11 (Basel 문제)
-$\displaystyle\sum_{n=1}^{\infty}\frac{1}{n^2} = \frac{\pi^2}{6}$임을 보인다. $f(z) = 1/z^2$은 degree 조건을 만족하지만 극 $z = 0$이 정수라 명제 10을 곧장 쓸 수 없으므로, 원점을 따로 다룬다. 정사각형 경로 $\Gamma_N$ 안에서 $g(z) = \pi\cot(\pi z)/z^2$의 극은 정수 $z = n$ ($n \neq 0$) 들과 원점이며, 명제 10의 증명과 같은 어림으로 $N \rightarrow \infty$에서 $\oint_{\Gamma_N} g\dd{z} \rightarrow 0$이다. 따라서 모든 극에서의 유수 합이 $0$이다.
+$\sum_{n=1}^{\infty} 1/n^2 = \pi^2/6$임을 보인다. $f(z) = 1/z^2$은 degree 조건을 만족하지만 극 $z = 0$이 정수라 명제 10을 곧장 쓸 수 없으므로, 원점을 따로 다룬다. 정사각형 경로 $\Gamma_N$ 안에서 $g(z) = \pi\cot(\pi z)/z^2$의 극은 정수 $z = n$ ($n \neq 0$) 들과 원점이며, 명제 10의 증명과 같은 어림으로 $N \rightarrow \infty$에서 $\oint_{\Gamma_N} g\dd{z} \rightarrow 0$이다. 따라서 모든 극에서의 유수 합이 $0$이다.
 
 $n \neq 0$인 정수에서는 $\pi\cot\pi z$이 유수 $1$인 단순극이므로 $\operatorname{Res}_{z = n} g = 1/n^2$이다. 원점에서는 $\pi\cot\pi z$이 단순극, $1/z^2$이 이차극이라 $g$이 $z = 0$에서 삼차극을 가지며, 그 유수는 Laurent 전개로 구한다. $\pi\cot\pi z$의 원점 근방 전개는
 

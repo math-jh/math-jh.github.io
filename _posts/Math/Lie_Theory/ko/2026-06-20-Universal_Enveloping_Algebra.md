@@ -15,7 +15,7 @@ published: false
 
 ---
 
-Lie algebra $\mathfrak{g}$의 표현론은 본질적으로 결합대수의 module 이론으로 환원된다. 그 환원을 가능하게 하는 대상이 *universal enveloping algebra*이며, 이는 $\mathfrak{g}$의 Lie bracket을 결합대수의 commutator로 실현하는 가장 보편적인 결합대수이다. 이 글에서 우리는 이 대수를 tensor algebra의 quotient로 정의하고, 그 보편 성질을 서술한 뒤, canonical filtration<sub>filtration</sub>를 통해 얻어지는 associated graded가 symmetric algebra와 isomorphic임을 주장하는 Poincaré–Birkhoff–Witt 정리를 증명한다. 이 정리는 자연스러운 morphism $\mathfrak{g}\rightarrow U(\mathfrak{g})$가 단사임을 즉시 함의하며, semisimple Lie algebra의 표현론 전체의 기초가 된다.
+Lie algebra $\mathfrak{g}$의 표현론은 본질적으로 결합대수의 module 이론으로 환원된다. 그 환원을 가능하게 하는 대상이 *universal enveloping algebra*이며, 이는 $\mathfrak{g}$의 Lie bracket을 결합대수의 commutator로 실현하는 가장 보편적인 결합대수이다. 이 글에서 우리는 이 대수를 tensor algebra의 quotient로 정의하고, 그 보편 성질을 서술한 뒤, canonical filtration을 통해 얻어지는 associated graded가 symmetric algebra와 isomorphic임을 주장하는 Poincaré–Birkhoff–Witt 정리를 증명한다. 이 정리는 자연스러운 morphism $\mathfrak{g}\rightarrow U(\mathfrak{g})$가 단사임을 즉시 함의하며, semisimple Lie algebra의 표현론 전체의 기초가 된다.
 
 이 글 전체에서 $k$는 고정된 체이고, $\mathfrak{g}$는 $k$ 위에 정의된 Lie algebra이다. ([§리 군, ⁋정의 8](/ko/math/lie_theory/Lie_groups#def8)) Lie algebra의 정의는 임의의 체 위에서 동일하게 주어지므로, 우리는 기반 체를 $k$로 일반화하여 사용한다.
 
@@ -50,7 +50,7 @@ $$\begin{aligned}
 ::: 정의 2
 Lie algebra $\mathfrak{g}$에 대하여, tensor algebra $\T(\mathfrak{g})$의 two-sided ideal
 
-$$\mathfrak{I}=\langle\, x\otimes y-y\otimes x-[x,y]\,\mid\, x,y\in\mathfrak{g}\,\rangle$$
+$$\mathfrak{I}=\langle x\otimes y-y\otimes x-[x,y]\mid x,y\in\mathfrak{g}\rangle$$
 
 을 생각하자. Quotient algebra
 
@@ -59,7 +59,7 @@ $$U(\mathfrak{g})=\T(\mathfrak{g})/\mathfrak{I}$$
 를 $\mathfrak{g}$의 *universal enveloping algebra<sub>보편 포락 대수</sub>*라 부른다. 합성 $\mathfrak{g}=\T^1(\mathfrak{g})\hookrightarrow\T(\mathfrak{g})\twoheadrightarrow U(\mathfrak{g})$로 얻어지는 $k$-linear map을 $\iota:\mathfrak{g}\rightarrow U(\mathfrak{g})$로 표기한다.
 :::
 
-Generator $x\otimes y-y\otimes x-[x,y]$는 tensor algebra의 degree $2$ 성분과 degree $1$ 성분이 섞인 비동차<sub>inhomogeneous</sub> 원소이므로, $\mathfrak{I}$는 homogeneous 이데알이 아니다. 이는 symmetric algebra나 exterior algebra를 정의할 때 사용한 [\[다중선형대수학\] §텐서대수, ⁋정의 5](/ko/math/multilinear_algebra/tensor_algebras#def5)의 homogeneous 이데알과의 결정적인 차이이며, 따라서 $U(\mathfrak{g})$는 grading을 갖지 않는다. 그 대신 $U(\mathfrak{g})$는 아래 [정의 6](#def6)에서 보듯 자연스러운 여과를 가지며, PBW 정리의 핵심은 이 여과의 associated graded가 symmetric algebra와 isomorphic이라는 데에 있다.
+Generator $x\otimes y-y\otimes x-[x,y]$는 $[x,y]\neq 0$일 때 tensor algebra의 degree $2$ 성분과 degree $1$ 성분이 섞인 비동차<sub>inhomogeneous</sub> 원소이므로, abelian이 아닌 $\mathfrak{g}$에 대하여 $\mathfrak{I}$는 homogeneous 이데알이 아니다. 이는 symmetric algebra나 exterior algebra를 정의할 때 사용한 [\[다중선형대수학\] §텐서대수, ⁋정의 5](/ko/math/multilinear_algebra/tensor_algebras#def5)의 homogeneous 이데알과의 결정적인 차이이며, 따라서 $U(\mathfrak{g})$는 $\T(\mathfrak{g})$의 grading을 물려받지 않는다. 그 대신 $U(\mathfrak{g})$는 아래 [정의 6](#def6)에서 보듯 자연스러운 여과를 가지며, PBW 정리의 핵심은 이 여과의 associated graded가 symmetric algebra와 isomorphic이라는 데에 있다.
 
 $U(\mathfrak{g})$에서 $\iota(x)\iota(y)-\iota(y)\iota(x)=\iota([x,y])$가 성립함을 강조해 둔다. 정의에 의하여 $x\otimes y-y\otimes x-[x,y]\in\mathfrak{I}$이므로 quotient에서 이 원소는 $0$이 되고, $\iota$가 $\T^1$에서의 morphism이라는 점을 함께 쓰면 위 등식을 얻는다. 표기의 번거로움을 피하기 위해, 이후 $\iota$를 생략하고 $\mathfrak{g}$의 원소와 그 $U(\mathfrak{g})$에서의 상을 같은 기호로 적으며, $U(\mathfrak{g})$에서의 곱은 병치<sub>juxtaposition</sub>로 적는다. 이 표기 하에서 위의 관계는 $U(\mathfrak{g})$ 안에서
 
@@ -191,7 +191,7 @@ $$z_S=x_{i_1}x_{i_2}\cdots x_{i_n},\qquad S=(i_1\leq i_2\leq\cdots\leq i_n)$$
 
 $$x_i\cdot z_S=x_j\cdot(x_i\cdot z_{S'})+[x_i,x_j]\cdot z_{S'}$$
 
-로 정의한다. 우변의 $x_i\cdot z_{S'}$은 길이 $n-1$짜리 원소에 대한 action이라 귀납 가정으로 이미 정의되어 있고, 그 결과에 $x_j$를 작용시키는 것 또한, $x_i\cdot z_{S'}$을 기저 $z_T$들로 전개했을 때 각 $T$의 길이가 $n-1$ 이하이므로 다시 귀납 가정 안에 든다. $[x_i,x_j]\cdot z_{S'}$도 길이 $n-1$짜리에 대한 action이다. 이 정의가 조건 1을 만족함은 구성에서 자명하다.
+로 정의한다. 우변의 $x_i\cdot z_{S'}$은 길이 $n-1$짜리 기저원소에 대한 action이라 귀납 가정으로 이미 정의되어 있으며, 귀납 가정에는 그 값이 $x_i\cdot z_{S'}=z_{(i,S')}+w$의 꼴로 $w$가 길이 $n-1$ 이하인 기저원소들의 일차결합이 된다는 것을 함께 포함시킨다. 그럼 $j<i$이고 $j\leq S'$이므로 $j\leq(i,S')$이고, 따라서 $x_j\cdot z_{(i,S')}$은 길이 $n$인 기저원소에 대한 action이지만 조건 1로 이미 주어져 있으며, $x_j\cdot w$는 길이 $n-1$ 이하인 기저원소들에 대한 action이라 다시 귀납 가정 안에 든다. $[x_i,x_j]\cdot z_{S'}$도 길이 $n-1$짜리에 대한 action이다. 이렇게 정의된 $x_i\cdot z_S$ 또한 $z_{(i,S)}$와 길이 $n$ 이하인 기저원소들의 일차결합의 합이 되므로 귀납 가정이 그대로 이어지며, 이 정의가 조건 1을 만족함은 구성에서 자명하다.
 
 이제 조건 2가 모든 $i,j$와 모든 기저원소 $z_S$에 대하여 성립함을 $\lvert S\rvert$에 대한 귀납법으로 확인한다. 대칭성에 의해 $i>j$인 경우만 보면 되고, $i=j$이면 좌변이 자명히 $0$이며 $[x_i,x_i]=0$이다. $i>j$이고 $j\leq S$인 경우, action의 정의가 정확히 $x_i\cdot(x_j\cdot z_S)=x_j\cdot(x_i\cdot z_S)+[x_i,x_j]\cdot z_S$가 되도록 위에서 $x_i\cdot z_{(j,S)}$을 정의하였으므로 조건 2가 성립한다. $j\leq S$가 아닌 일반적인 경우는 $S=(l,S')$ ($l\leq S'$, $l<j<i$)로 쓰고, $x_l$을 한 칸 끄집어낸 뒤 길이 $n-1$인 $S'$에 대한 귀납 가정과 $\mathfrak{g}$의 Jacobi identity를 사용하여 정리하면 얻어진다. Jacobi identity가 들어가는 곳은 세 첨자 $i,j,l$에 대한 이중 commutator들이 상쇄되어야 하는 부분이며, 이는 $\mathfrak{g}$가 [§리 군, ⁋정의 8](/ko/math/lie_theory/Lie_groups#def8)의 Lie algebra라는 가정이 사용되는 유일한 지점이다.
 
@@ -203,7 +203,7 @@ $$\rho:U(\mathfrak{g})\longrightarrow\End_k(\S(\mathfrak{g}))$$
 
 $$\rho(x_{i_1}\cdots x_{i_n})(1)=x_{i_1}\cdot\bigl(x_{i_2}\cdot(\cdots(x_{i_n}\cdot 1))\bigr)=z_{(i_1,\ldots,i_n)}$$
 
-을 얻는다. 만일 정렬된 단항식들 사이에 비자명한 일차관계 $\sum_S\lambda_S\,x_{i_1^S}\cdots x_{i_{n_S}^S}=0$이 $U(\mathfrak{g})$에서 성립한다면, 양변에 $\rho(-)(1)$을 적용하여 $\sum_S\lambda_S\,z_S=0$을 $\S(\mathfrak{g})$에서 얻는데, $z_S$들은 $\S(\mathfrak{g})$의 기저이므로 모든 $\lambda_S=0$이다. 따라서 정렬된 단항식들은 일차독립이며, 생성성과 합쳐 $U(\mathfrak{g})$의 기저를 이룬다.
+을 얻는다. 만일 정렬된 단항식들 사이에 비자명한 일차관계 $\sum_S\lambda_S x_{i_1^S}\cdots x_{i_{n_S}^S}=0$이 $U(\mathfrak{g})$에서 성립한다면, 양변에 $\rho(-)(1)$을 적용하여 $\sum_S\lambda_S z_S=0$을 $\S(\mathfrak{g})$에서 얻는데, $z_S$들은 $\S(\mathfrak{g})$의 기저이므로 모든 $\lambda_S=0$이다. 따라서 정렬된 단항식들은 일차독립이며, 생성성과 합쳐 $U(\mathfrak{g})$의 기저를 이룬다.
 :::
 
 위 증명에서 구성한 action $\rho$는 $\S(\mathfrak{g})$를 $U(\mathfrak{g})$-module로 만들며, $1\in\S(\mathfrak{g})$를 사용하면 $U(\mathfrak{g})$에서 $\S(\mathfrak{g})$로의 $k$-linear 동형 $u\mapsto\rho(u)(1)$을 정의한다. 이 동형이 정렬된 단항식 기저를 정렬된 단항식 기저로 보낸다는 점이 일차독립성 논증의 핵심이었다. 정리 9를 associated graded의 언어로 옮기면 다음을 얻는다.
@@ -216,9 +216,9 @@ $$\omega:\S(\mathfrak{g})\longrightarrow\gr U(\mathfrak{g})$$
 는 graded 결합대수의 동형이다.
 :::
 ::: 증명
-$\omega$가 전사임은 [보조정리 8](#lem8) 이후 이미 확인하였으므로 단사임을 보이면 된다. 각 degree $n$에서 $\omega$가 단사임을 보이면 충분하다. $\S^n(\mathfrak{g})$는 길이 정확히 $n$인 정렬된 단항식 $z_S$ ($\lvert S\rvert=n$)들을 기저로 갖고, $\omega$는 이를 $x_{i_1}\cdots x_{i_n}$의 $U_n/U_{n-1}$에서의 상으로 보낸다. Degree $n$ 성분에서 $\sum_{\lvert S\rvert=n}\lambda_S\,\omega(z_S)=0$이라 하면, 이는 $U_n/U_{n-1}$에서의 관계, 곧
+$\omega$가 전사임은 [보조정리 8](#lem8) 이후 이미 확인하였으므로 단사임을 보이면 된다. 각 degree $n$에서 $\omega$가 단사임을 보이면 충분하다. $\S^n(\mathfrak{g})$는 길이 정확히 $n$인 정렬된 단항식 $z_S$ ($\lvert S\rvert=n$)들을 기저로 갖고, $\omega$는 이를 $x_{i_1}\cdots x_{i_n}$의 $U_n/U_{n-1}$에서의 상으로 보낸다. Degree $n$ 성분에서 $\sum_{\lvert S\rvert=n}\lambda_S\omega(z_S)=0$이라 하면, 이는 $U_n/U_{n-1}$에서의 관계, 곧
 
-$$\sum_{\lvert S\rvert=n}\lambda_S\,x_{i_1^S}\cdots x_{i_n^S}\in U_{n-1}$$
+$$\sum_{\lvert S\rvert=n}\lambda_S x_{i_1^S}\cdots x_{i_n^S}\in U_{n-1}$$
 
 을 뜻한다. $U_{n-1}$은 길이 $n-1$ 이하의 정렬된 단항식들로 생성되므로, 위 식을 옮기면 길이 $n$인 정렬된 단항식들과 길이 $n-1$ 이하의 정렬된 단항식들 사이의 일차관계가 된다. [정리 9](#thm9)에 의하여 $U(\mathfrak{g})$의 모든 정렬된 단항식은 일차독립이므로, 특히 길이 $n$짜리 계수들 $\lambda_S$는 모두 $0$이어야 한다. 따라서 $\omega$는 각 degree에서 단사이고, 전체로서 동형이다.
 :::
@@ -231,7 +231,7 @@ $$\sum_{\lvert S\rvert=n}\lambda_S\,x_{i_1^S}\cdots x_{i_n^S}\in U_{n-1}$$
 표준 사상 $\iota:\mathfrak{g}\rightarrow U(\mathfrak{g})$은 단사이다.
 :::
 ::: 증명
-$\iota(\mathfrak{g})$는 길이 $1$인 정렬된 단항식 $x_i$들로 생성되며, $x\in\mathfrak{g}$를 기저로 $x=\sum_i a_i x_i$로 쓰면 $\iota(x)=\sum_i a_i\, x_i$이다. [정리 9](#thm9)에 의하여 길이 $1$짜리 정렬 단항식 $x_i$들은 $U(\mathfrak{g})$ 안에서 일차독립이므로, $\iota(x)=0$이면 모든 $a_i=0$, 곧 $x=0$이다. 따라서 $\iota$는 단사이다.
+$\iota(\mathfrak{g})$는 길이 $1$인 정렬된 단항식 $x_i$들로 생성되며, $x\in\mathfrak{g}$를 기저로 $x=\sum_i a_i x_i$로 쓰면 $\iota(x)=\sum_i a_i x_i$이다. [정리 9](#thm9)에 의하여 길이 $1$짜리 정렬 단항식 $x_i$들은 $U(\mathfrak{g})$ 안에서 일차독립이므로, $\iota(x)=0$이면 모든 $a_i=0$, 곧 $x=0$이다. 따라서 $\iota$는 단사이다.
 :::
 
 따름정리 11에 의하여 우리는 $\mathfrak{g}$를 $U(\mathfrak{g})$의 부분공간으로, 더 정확히는 $U_1/U_0$과 동일시되는 부분으로 취급할 수 있으며, 이것이 앞서 $\iota$를 생략하고 $\mathfrak{g}\subseteq U(\mathfrak{g})$로 적은 표기를 정당화한다. 또한 PBW 정리는 $U(\mathfrak{g})$의 크기에 대한 구체적인 정보를 준다. $\mathfrak{g}$가 유한차원 $d$이면, $U_n/U_{n-1}\cong\S^n(\mathfrak{g})$의 차원은 $\binom{n+d-1}{d-1}$이고, $U_n$의 차원은 $\binom{n+d}{d}$이다. 또 한 가지 따름정리로, $\mathfrak{h}\subseteq\mathfrak{g}$가 부분 Lie algebra이면 포함사상이 유도하는 $U(\mathfrak{h})\rightarrow U(\mathfrak{g})$는 단사이다. 이는 $\mathfrak{h}$의 기저를 $\mathfrak{g}$의 기저로 확장하고 그 순서가 $\mathfrak{h}$의 원소들을 앞에 두도록 하면, $\mathfrak{h}$의 정렬 단항식이 $\mathfrak{g}$의 정렬 단항식 가운데 일부로서 일차독립이기 때문이다.
@@ -252,14 +252,14 @@ $$he-eh=2e,\qquad hf-fh=-2f,\qquad ef-fe=h$$
 
 로 표시되는 결합대수이다. 첨자에 순서 $f<h<e$를 주면, PBW 정리에 의하여 정렬된 단항식
 
-$$f^a\,h^b\,e^c,\qquad a,b,c\geq 0$$
+$$f^ah^be^c,\qquad a,b,c\geq 0$$
 
-들이 $U(\sl_2)$의 기저를 이룬다. 위의 세 관계식은 임의의 단항식을 이 정렬된 꼴로 다시 쓰는 재작성 규칙을 정확히 제공하며, 가령 $eh$는 $he-2e=he-2e$로, 곧 $h,e$를 정렬한 항과 길이가 줄어든 항의 합으로 환원된다.
+들이 $U(\sl_2)$의 기저를 이룬다. 위의 세 관계식은 임의의 단항식을 이 정렬된 꼴로 다시 쓰는 재작성 규칙을 정확히 제공하며, 가령 $eh$는 $he-2e$로, 곧 $h,e$를 정렬한 항과 길이가 줄어든 항의 합으로 환원된다.
 
 이 대수의 center에는 특별한 원소가 하나 존재한다.
 
 ::: 예시 12
-$U(\sl_2)$의 원소
+체 $k$의 characteristic이 $2$가 아니라 하자. $U(\sl_2)$의 원소
 
 $$\Omega=ef+fe+\frac{1}{2}h^2$$
 

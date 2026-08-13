@@ -80,7 +80,7 @@ $$\mathrm{II}(X, Y) - \mathrm{II}(Y, X) = (\bar\nabla_X Y - \nabla_X Y) - (\bar\
 
 다음으로 $C^\infty(M)$-linearity를 보인다. 첫 인수에 대해서는 $\bar\nabla$과 $\nabla$이 모두 첫 인수에 $C^\infty(M)$-linear이므로 그 차인 $\mathrm{II}$도 그러하다. 둘째 인수에 대해서는, $f \in C^\infty(M)$에 대해 두 connection의 라이프니츠 법칙을 적용하면
 
-$$\mathrm{II}(X, fY) = \bar\nabla_X(fY) - \nabla_X(fY) = \bigl(f\bar\nabla_X Y + (Xf) Y\bigr) - \bigl(f\nabla_X Y + (Xf) Y\bigr) = f(\bar\nabla_X Y - \nabla_X Y) = f\, \mathrm{II}(X, Y)$$
+$$\mathrm{II}(X, fY) = \bar\nabla_X(fY) - \nabla_X(fY) = \bigl(f\bar\nabla_X Y + (Xf) Y\bigr) - \bigl(f\nabla_X Y + (Xf) Y\bigr) = f(\bar\nabla_X Y - \nabla_X Y) = f \mathrm{II}(X, Y)$$
 
 가 되어 $(Xf) Y$항이 상쇄된다. 따라서 둘째 인수에 대해서도 $C^\infty(M)$-linear이다. 두 인수 모두에 $C^\infty(M)$-linear이므로 텐서성 판정 (각 인수의 점별 의존성)에 의해 $\mathrm{II}(X, Y)_p$는 $X_p, Y_p$에만 의존하며, $\mathrm{II}$는 $NM$-값 대칭 $(0, 2)$-tensor이다.
 :::
@@ -164,7 +164,7 @@ $$\begin{aligned}
 Gauss 방정식은 $M$의 내재적 곡률 $R$이 주변 곡률 $\bar R$로부터 제2기본형식의 이차식만큼의 보정을 거쳐 결정됨을 말한다. 특히 주변 공간이 평탄한 경우, 즉 $\bar M = \mathbb{R}^{n+1}$이고 $\bar R = 0$인 경우에는 $M$의 모든 곡률이 순전히 제2기본형식으로부터 나온다. 이것이 Gauss의 *Theorema Egregium*의 일반적 형태로, 곡면의 Gauss 곡률이 주변 공간에 어떻게 embedding되었는지가 아니라 제1기본형식만으로 결정되는 *내재적* 양이라는 사실의 고차원 일반화이다.
 
 ::: 참고 7
-Sectional curvature의 언어로 Gauss 방정식을 다시 읽으면 더 기하학적인 형태를 얻는다. $M$의 한 점에서 정규직교 벡터 $X, Y \in T_p M$이 펼치는 평면의 sectional curvature $K(X, Y)$와 같은 평면을 $\bar M$ 안에서 본 $\bar K(X, Y)$ 사이에
+[§비교 정리, ⁋정의 1](/ko/math/riemannian_geometry/comparison_theorems#def1)에서 정의할 sectional curvature의 언어로 Gauss 방정식을 다시 읽으면 더 기하학적인 형태를 얻는다. $M$의 한 점에서 정규직교 벡터 $X, Y \in T_p M$이 펼치는 평면의 sectional curvature $K(X, Y)$와 같은 평면을 $\bar M$ 안에서 본 $\bar K(X, Y)$ 사이에
 
 $$K(X, Y) = \bar K(X, Y) + \langle \mathrm{II}(X, X), \mathrm{II}(Y, Y)\rangle - \lvert \mathrm{II}(X, Y)\rvert^2$$
 
@@ -183,7 +183,7 @@ $$H := \sum_{i=1}^m \mathrm{II}(e_i, e_i) \in N_p M$$
 로 정의된다.
 :::
 
-$\mathrm{II}$가 텐서이고 trace가 basis 선택에 무관하므로 $H$는 well-defined인 법벡터이다. 문헌에 따라 평균을 취해 $\frac{1}{m} \sum_i \mathrm{II}(e_i, e_i)$를 평균곡률로 정의하기도 하나, 우리는 trace 자체를 택한다. Hypersurface의 경우 법선 방향 $\nu$를 고정하면 $H = (\tr S_\nu)\, \nu$이며, $\tr S_\nu$는 주곡률들의 합이다. 평균곡률이 항등적으로 $0$인 submanifold를 *minimal submanifold<sub>극소 부분다양체</sub>*라 부르는데, 이는 부피 functional의 critical point라는 변분적 의미를 가지며 비누막의 형상 등으로 나타난다.
+$\mathrm{II}$가 텐서이고 trace가 basis 선택에 무관하므로 $H$는 well-defined인 법벡터이다. 문헌에 따라 평균을 취해 $\frac{1}{m} \sum_i \mathrm{II}(e_i, e_i)$를 평균곡률로 정의하기도 하나, 우리는 trace 자체를 택한다. Hypersurface의 경우 단위 법벡터 $\nu$를 고정하면 $H = (\tr S_\nu) \nu$이며, $\tr S_\nu$는 principal curvature들의 합이다. 평균곡률이 항등적으로 $0$인 submanifold를 *minimal submanifold<sub>극소 부분다양체</sub>*라 부르는데, 이는 부피 functional의 critical point라는 변분적 의미를 가지며 비누막의 형상 등으로 나타난다.
 
 ## 측지선과의 관계
 
@@ -214,7 +214,7 @@ $\gamma$가 $M$의 측지선인 것은 [§측지선, ⁋정의 4](/ko/math/riema
 ::: 예시 10
 단위 구면 $S^n \subseteq \mathbb{R}^{n+1}$에 표준 embedding으로 유도되는 round metric을 주자. 점 $p \in S^n$에서의 바깥 단위 법벡터는 위치벡터 $\nu = p$ 자신이다. 우리는 $S^n$의 제2기본형식이
 
-$$\mathrm{II}(X, Y) = -\langle X, Y\rangle\, \nu$$
+$$\mathrm{II}(X, Y) = -\langle X, Y\rangle \nu$$
 
 임을 보인다. 점 $p$를 지나는 접 벡터 $X, Y \in T_p S^n$을 잡고, $\nu(q) = q$를 $\mathbb{R}^{n+1}$ 전체에서의 법벡터장으로 확장하자 (단위 구면 위에서 $\lvert q\rvert = 1$이므로 이 extension은 $S^n$ 위에서 단위 법벡터장이다). 평탄한 $\mathbb{R}^{n+1}$의 Levi-Civita connection은 [§레비-치비타 접속, ⁋예시 7](/ko/math/riemannian_geometry/Levi-Civita_connection#ex7)에 의해 성분별 미분이므로, $\nu(q) = q = (q^1, \ldots, q^{n+1})$의 $X$ 방향 미분은
 
@@ -228,9 +228,9 @@ $$S_\nu(X) = -(\bar\nabla_X \nu)^\top = -X$$
 
 $$\langle \mathrm{II}(X, Y), \nu\rangle = \langle S_\nu(X), Y\rangle = \langle -X, Y\rangle = -\langle X, Y\rangle$$
 
-이다. $\mathrm{II}(X, Y)$는 법선이고 $\nu$가 단위 법벡터로 normal bundle의 fiber $N_p S^n$을 한 줄로 펼치므로, 위 식은 $\mathrm{II}(X, Y) = -\langle X, Y\rangle\, \nu$를 준다.
+이다. $\mathrm{II}(X, Y)$는 법선이고 $\nu$가 단위 법벡터로 normal bundle의 fiber $N_p S^n$을 한 줄로 펼치므로, 위 식은 $\mathrm{II}(X, Y) = -\langle X, Y\rangle \nu$를 준다.
 
-이로부터 곡선의 주변 가속도가 [명제 9](#prop9)를 통해 곧장 회복된다. 단위 속력 곡선 $\gamma$에 대해 $\mathrm{II}(\dot\gamma, \dot\gamma) = -\langle \dot\gamma, \dot\gamma\rangle\, \nu = -\nu = -\gamma$이므로, $\gamma$가 측지선이면 $\bar D_t \dot\gamma = \ddot\gamma = \mathrm{II}(\dot\gamma, \dot\gamma) = -\gamma$, 즉 [§측지선, ⁋예시 9](/ko/math/riemannian_geometry/geodesics#ex9)에서 대원에 대해 직접 계산한 $\ddot\gamma = -\gamma$를 다시 얻는다. 또한 평균곡률은 $T_p S^n$의 orthonormal basis $e_1, \ldots, e_n$에 대해 $H = \sum_{i=1}^n \mathrm{II}(e_i, e_i) = -\sum_{i=1}^n \langle e_i, e_i\rangle\, \nu = -n\, \nu$이므로 $S^n$은 minimal submanifold가 아니다.
+이로부터 곡선의 주변 가속도가 [명제 9](#prop9)를 통해 곧장 회복된다. 단위 속력 곡선 $\gamma$에 대해 $\mathrm{II}(\dot\gamma, \dot\gamma) = -\langle \dot\gamma, \dot\gamma\rangle \nu = -\nu = -\gamma$이므로, $\gamma$가 측지선이면 $\bar D_t \dot\gamma = \ddot\gamma = \mathrm{II}(\dot\gamma, \dot\gamma) = -\gamma$, 즉 [§측지선, ⁋예시 9](/ko/math/riemannian_geometry/geodesics#ex9)에서 대원에 대해 직접 계산한 $\ddot\gamma = -\gamma$를 다시 얻는다. 또한 평균곡률은 $T_p S^n$의 orthonormal basis $e_1, \ldots, e_n$에 대해 $H = \sum_{i=1}^n \mathrm{II}(e_i, e_i) = -\sum_{i=1}^n \langle e_i, e_i\rangle \nu = -n \nu$이므로 $S^n$은 minimal submanifold가 아니다.
 :::
 
 마지막으로 Gauss 방정식 [정리 6](#thm6)을 구면에 적용하면 그 곡률이 회복된다. $\bar M = \mathbb{R}^{n+1}$이 평탄하여 $\bar R = 0$이므로, 정규직교 $X, Y \in T_p S^n$에 대해 [참고 7](#rmk7)의 식은

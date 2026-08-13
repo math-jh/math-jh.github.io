@@ -43,7 +43,7 @@ $$\bigwedge\nolimits^n(L):\bigwedge\nolimits^n(V)\rightarrow\bigwedge\nolimits^n
 
 이 잘 정의된다. 한편 $V,W$가 모두 $n$차원이므로 $\bigwedge\nolimits^n(V),\bigwedge\nolimits^n(W)$는 모두 1차원 벡터공간이 되고, 따라서 위의 linear map은 임의의 영이 아닌 벡터가 어디로 옮겨지는지에 의해 유일하게 결정된다. 특히 만일 $V=W$라면, $\bigwedge\nolimits^n(V)$의 영이 아닌 임의의 벡터는 항상 자기 자신의 상수배로 옮겨지게 되며, 이 때의 상수가 $L$의 행렬식과 같다. 이러한 관점에서 $\bigwedge\nolimits^n(L)$을 *determinant map*이라 부르기도 하고, $E$가 manifold $M$ 위에 정의된 $n$차원의 vector bundle이라면 $\bigwedge\nolimits^n(E)$를 $E$의 *determinant bundle*이라 부르기도 한다.
 
-특별히 $E=T^\ast M$이라면 다음과 같이 정의한다.
+특별히 $m$차원 manifold $M$에 대하여 $E=T^\ast M$인 경우의 determinant bundle $\bigwedge\nolimits^m(T^\ast M)$은 간단히 $\bigwedge\nolimits^m(M)$으로 적기로 하고, 이를 이용하여 다음과 같이 정의한다.
 
 ::: 정의 1
 $M$이 $m$차원의 connected manifold라 하자. 이 때, $M$이 *orientable*이라는 것은 $\bigwedge\nolimits^m(M)\setminus\{0\}$이 두 개의 component를 갖는 것이고, 이 때 두 component중 하나를 택하는 것을 $M$의 *orientation*이라 부른다. 
@@ -53,7 +53,7 @@ $M$이 $m$차원의 connected manifold라 하자. 이 때, $M$이 *orientable*�
 $M$이 $m$차원의 connected manifold라 하자. 다음이 모두 동치이다.
 
 1. $M$이 orientable이다.
-2. $M$을 덮는 적당한 coordinate system들의 모임이 존재하여, 이들이 겹치는 곳에서 Jacobian이 항상 0보다 크도록 할 수 있다.
+2. $M$을 덮는 적당한 coordinate system들의 모임이 존재하여, 이들이 겹치는 곳에서 Jacobian의 행렬식이 항상 0보다 크도록 할 수 있다.
 3. $M$ 위에 정의된 non-vanishing $m$-form이 존재한다.
 :::
 ::: 증명
@@ -85,7 +85,7 @@ $$\Lambda\vert_{U_\alpha}\cong U_\alpha\times \mathbb{R};\qquad t\,\omega_{U_\al
 
 따라서 각 fiber는 두 component와 ray 하나씩으로 만난다. 이제 component 하나를 택해 $\Lambda^+$라 부르자. 임의의 connected coordinate system $(U,x)$에 대하여 $\omega_U(U)$는 connected이므로 하나의 component에 포함되고, 만일 그것이 $\Lambda^+$가 아니라면 (3)$\implies$(2)에서와 같이 좌표를 맞바꾸어 $\omega_U(U)\subseteq \Lambda^+$이도록 할 수 있다. 이렇게 얻은 coordinate system들의 모임에 대하여, 겹치는 점 $p$에서 $\omega_{U}(p)$와 $\omega_{V}(p)$는 같은 fiber에서 모두 $\Lambda^+$에 속하므로 같은 ray에 속하고, 즉 서로의 positive multiple이다. 따라서 변환식에 의해 Jacobian의 행렬식이 항상 $0$보다 크다.
 
-**(2)$\implies$(3)** 조건을 만족하는 coordinate system들의 모임 $(U_\alpha,x_\alpha)$를 생각하자. Manifold는 paracompact Hausdorff이므로 open cover $(U_\alpha)$에 subordinate한 partition of unity가 존재하고 ([\[위상수학\] §옹골성, ⁋정리 27](/ko/math/topology/compactness#thm27)), [§미분다양체, §§Smooth partition of unity](/ko/math/manifolds/smooth_manifolds)에서 살펴본 것과 같이 이를 $C^\infty$이도록 택할 수 있다. 이 partition of unity를 $(\phi_i)_{i\in I}$라 하고 각각의 $i$마다 $\supp\phi_i\subseteq U_{\alpha(i)}$라 하자. 이제
+**(2)$\implies$(3)** 조건을 만족하는 coordinate system들의 모임 $(U_\alpha,x_\alpha)$를 생각하자. Manifold는 paracompact Hausdorff이므로 open cover $(U_\alpha)$에 subordinate한 partition of unity가 존재하고 ([\[위상수학\] §Compactness와 paracompactness, ⁋정리 27](/ko/math/topology/compactness#thm27)), [§미분다양체, §§Smooth partition of unity](/ko/math/manifolds/smooth_manifolds#smooth-partition-of-unity)에서 살펴본 것과 같이 이를 $C^\infty$이도록 택할 수 있다. 이 partition of unity를 $(\phi_i)_{i\in I}$라 하고 각각의 $i$마다 $\supp\phi_i\subseteq U_{\alpha(i)}$라 하자. 이제
 
 $$\omega=\sum_{i\in I}\phi_i\,\omega_{U_{\alpha(i)}}$$
 
@@ -95,7 +95,7 @@ $$\omega=\sum_{i\in I}\phi_i\,\omega_{U_{\alpha(i)}}$$
 :::
 
 ::: 예시 3
-임의의 Lie group은 orientable이다. 이는 $\Omega_\text{l.inv}^\ast(G)$에서의 임의의 basis $\omega_1,\ldots,\omega_n$을 택한 후, 이들의 wedge $\omega_1\wedge\cdots\wedge\omega_n$을 생각하면 이것이 $G$ 위에서 nonvanishing $n$-form을 정의하기 때문이다.
+임의의 Lie group은 orientable이다. 이는 [\[리 이론\] §리 군, ⁋정의 13](/ko/math/lie_theory/Lie_groups#def13)의 $\Omega_\text{l.inv}^1(G)$에서의 임의의 basis $\omega_1,\ldots,\omega_n$을 택한 후, 이들의 wedge $\omega_1\wedge\cdots\wedge\omega_n$을 생각하면 이것이 $G$ 위에서 nonvanishing $n$-form을 정의하기 때문이다.
 :::
 
 ---

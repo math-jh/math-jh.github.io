@@ -29,17 +29,17 @@ $$
 h(e, e) = e^{-\varphi}, \qquad \varphi \in C^\infty(U, \mathbb{R})
 $$
 
-가 정해지고, 두 section $s = f e$, $t = g e$의 내적이 $h(s, t) = f \bar{g}\, e^{-\varphi}$로 주어지는 것이다. 이러한 $h$를 갖춘 $(L, h)$를 *Hermitian line bundle<sub>에르미트 선다발</sub>*이라 한다.
+가 정해지고, 두 section $s = f e$, $t = g e$의 내적이 $h(s, t) = f \bar{g} e^{-\varphi}$로 주어지는 것이다. 이러한 $h$를 갖춘 $(L, h)$를 *Hermitian line bundle<sub>에르미트 선다발</sub>*이라 한다.
 :::
 
-국소 holomorphic frame $e$를 바꾸면 $e' = u\, e$ ($u$는 영점 없는 holomorphic function) 이고, $h(e', e') = \lvert u \rvert^2 h(e, e)$이므로 potential은 $\varphi' = \varphi - \log\lvert u \rvert^2$로 변한다. 따라서 $\varphi$ 자체는 대역적으로 정의되지 않지만, 그 변환이 holomorphic·antiholomorphic 함수의 합 $\log\lvert u\rvert^2 = \log u + \log\bar{u}$만큼이라는 점이 결정적이다. 이 변환항은 $\partial\bar\partial$ 아래에서 소멸하므로, $\partial\bar\partial\varphi$가 frame의 선택과 무관한 대역적 $(1,1)$-형식을 정의하게 된다. 모든 complex manifold 위의 모든 holomorphic line bundle은 partition of unity로 국소 계량을 이어붙여 Hermitian 계량을 가지므로, $h$의 존재 자체는 제약이 아니다. 제약은 그로부터 나오는 곡률의 양정치성에 있다.
+국소 holomorphic frame $e$를 바꾸면 $e' = u e$ ($u$는 영점 없는 holomorphic function) 이고, $h(e', e') = \lvert u \rvert^2 h(e, e)$이므로 potential은 $\varphi' = \varphi - \log\lvert u \rvert^2$로 변한다. 따라서 $\varphi$ 자체는 대역적으로 정의되지 않지만, 그 변환이 holomorphic·antiholomorphic 함수의 합 $\log\lvert u\rvert^2 = \log u + \log\bar{u}$만큼이라는 점이 결정적이다. 이 변환항은 $\partial\bar\partial$ 아래에서 소멸하므로, $\partial\bar\partial\varphi$가 frame의 선택과 무관한 대역적 $(1,1)$-형식을 정의하게 된다. 모든 complex manifold 위의 모든 holomorphic line bundle은 partition of unity로 국소 계량을 이어붙여 Hermitian 계량을 가지므로, $h$의 존재 자체는 제약이 아니다. 제약은 그로부터 나오는 곡률의 양정치성에 있다.
 
 Hermitian 계량은 section을 미분하는 표준적인 방법, 곧 계량과 holomorphic 구조에 모두 어울리는 connection을 유일하게 결정한다.
 
 ::: 명제 2 (Chern 접속)
 Hermitian line bundle $(L, h)$ 위에 다음 두 조건을 만족하는 connection $\nabla$가 유일하게 존재한다.
 
-1. $\nabla$는 $h$와 호환된다. 곧 임의의 section $s, t$에 대하여 $d\,h(s, t) = h(\nabla s, t) + h(s, \nabla t)$이다.
+1. $\nabla$는 $h$와 호환된다. 곧 임의의 section $s, t$에 대하여 $\dd{h(s, t)} = h(\nabla s, t) + h(s, \nabla t)$이다.
 2. $\nabla$의 $(0,1)$-성분은 holomorphic 구조의 $\bar\partial$ 작용소와 일치한다. 곧 $\nabla^{0,1} = \bar\partial$이다.
 
 이 $\nabla$를 $(L, h)$의 *Chern connection<sub>Chern 접속</sub>*이라 한다. 국소 holomorphic frame $e$에서 $h(e,e) = e^{-\varphi}$일 때 그 connection 형식은 $\theta = \partial\log h(e, e) = -\partial\varphi$로 주어진다.
@@ -49,16 +49,16 @@ Hermitian line bundle $(L, h)$ 위에 다음 두 조건을 만족하는 connecti
 국소 holomorphic frame $e$를 고정하고 connection을 $\nabla e = \theta \otimes e$로 적으면, $\theta$는 $U$ 위의 복소값 $1$-형식이며 $\nabla$를 결정한다. 조건 (2)는 $\nabla e$의 $(0,1)$-성분이 $\bar\partial e = 0$ ($e$가 holomorphic이므로) 임을 요구하므로, $\theta$는 $(1,0)$-형식이어야 한다. 조건 (1)을 $s = t = e$에 적용하면
 
 $$
-d\, h(e, e) = h(\nabla e, e) + h(e, \nabla e) = \theta\, h(e,e) + \bar\theta\, h(e,e)
+\dd{h(e, e)} = h(\nabla e, e) + h(e, \nabla e) = \theta h(e,e) + \bar\theta h(e,e)
 $$
 
-이다. 좌변 $d\,h(e,e) = (\partial + \bar\partial) h(e,e)$를 $(1,0)$-성분과 $(0,1)$-성분으로 갈라 비교하면, $\theta$가 $(1,0)$-형식이고 $\bar\theta$가 $(0,1)$-형식이므로
+이다. 좌변 $\dd{h(e,e)} = (\partial + \bar\partial) h(e,e)$를 $(1,0)$-성분과 $(0,1)$-성분으로 갈라 비교하면, $\theta$가 $(1,0)$-형식이고 $\bar\theta$가 $(0,1)$-형식이므로
 
 $$
-\partial\, h(e,e) = \theta\, h(e,e), \qquad \bar\partial\, h(e,e) = \bar\theta\, h(e,e)
+\partial h(e,e) = \theta h(e,e), \qquad \bar\partial h(e,e) = \bar\theta h(e,e)
 $$
 
-가 따라온다. 첫 식에서 $\theta = \dfrac{\partial\, h(e,e)}{h(e,e)} = \partial\log h(e,e)$로 $\theta$가 유일하게 결정되고, 둘째 식은 그 켤레로 자동으로 성립한다. $h(e,e) = e^{-\varphi}$이면 $\theta = \partial(-\varphi) = -\partial\varphi$이다. 역으로 이렇게 정의한 $\theta$가 두 조건을 모두 만족함은 위 계산을 거꾸로 읽으면 된다. Frame을 $e' = u e$로 바꾸면 $\theta' = \partial\log(\lvert u\rvert^2 h(e,e)) = \theta + \partial\log u$로 변환하는데, 이는 정확히 connection 형식의 게이지 변환 법칙이므로 국소 정의들이 하나의 대역적 connection $\nabla$로 이어붙는다.
+가 따라온다. 첫 식에서 $\theta = \partial h(e,e)/h(e,e) = \partial\log h(e,e)$로 $\theta$가 유일하게 결정되고, 둘째 식은 그 켤레로 자동으로 성립한다. $h(e,e) = e^{-\varphi}$이면 $\theta = \partial(-\varphi) = -\partial\varphi$이다. 역으로 이렇게 정의한 $\theta$가 두 조건을 모두 만족함은 위 계산을 거꾸로 읽으면 된다. Frame을 $e' = u e$로 바꾸면 $\theta' = \partial\log(\lvert u\rvert^2 h(e,e)) = \theta + \partial\log u$로 변환하는데, 이는 정확히 connection 형식의 게이지 변환 법칙이므로 국소 정의들이 하나의 대역적 connection $\nabla$로 이어붙는다.
 :::
 
 Chern connection의 곡률은 connection 형식의 exterior derivative로 주어지며, line bundle이므로 그 값은 행렬이 아니라 스칼라값 $2$-형식이 된다. 곡률 $\Theta = \dd{\theta}$를 계산하면, $\theta = -\partial\varphi$이므로
@@ -79,7 +79,7 @@ $$
 로 정의되는 대역적 $2$-형식이라 한다. 이는 순허수 $(1,1)$-형식이며 (실함수 $\varphi$에 대해 $\overline{\partial\bar\partial\varphi} = -\partial\bar\partial\varphi$이므로), 여기에 $\frac{i}{2\pi}$를 곱해 real form으로 normalize한 $L$의 *first Chern form<sub>제1 Chern 형식</sub>*을
 
 $$
-c_1(L, h) = \frac{i}{2\pi}\,\Theta
+c_1(L, h) = \frac{i}{2\pi}\Theta
 $$
 
 로 정의한다.
@@ -101,7 +101,7 @@ $$
 콤팩트 complex manifold $X$ 위의 holomorphic line bundle $L$이 *positive<sub>양의</sub>*라는 것은, 어떤 Hermitian 계량 $h$가 존재하여 그 곡률 형식 $\Theta(L, h)$로부터 얻는 실 $(1,1)$-형식
 
 $$
-\omega_L = \frac{i}{2\pi}\,\Theta(L, h)
+\omega_L = \frac{i}{2\pi}\Theta(L, h)
 $$
 
 가 양정치인 것이다. 곧 국소 holomorphic frame에서 $\Theta = \partial\bar\partial\varphi = \sum_{j,k} \varphi_{j\bar{k}}\dd{z_j} \wedge \dd{\bar{z}_k}$로 쓸 때, 각 점에서 Hermitian 행렬 $(\varphi_{j\bar{k}})$가 양의 정부호인 것이다. 이때 $c_1(L)$을 *positive class<sub>양의 류</sub>*라 부른다.
@@ -164,7 +164,7 @@ $$
 0 = (\Delta_{\bar\partial}\alpha, \alpha) = \lVert \partial^\ast\alpha \rVert^2 + \lVert \partial\alpha \rVert^2 + \big( [i\Theta, \Lambda]\alpha, \alpha \big)
 $$
 
-를 얻는다. 마지막 곡률항은 $L$이 양의 line bundle이라 $i\Theta = 2\pi\,\omega_L$이 양정치 $(1,1)$-형식이므로, $(n, q)$-형식($q > 0$) 위에서 양의 작용소가 된다. 곧 점별로 $([i\Theta, \Lambda]\alpha, \alpha) \geq c\, q\, \lvert \alpha \rvert^2$ ($c > 0$은 곡률의 최소 고윳값에서 오는 상수) 라는 Nakano 양정치 부등식이 성립한다. 그러면 위 등식의 우변은 음이 아닌 세 항의 합인데 그 합이 $0$이므로, 특히 곡률항이 $0$이고 따라서 $\alpha = 0$이다. $q > 0$인 모든 조화 $(n, q)$-형식이 $0$이므로 $H^q(X, K_X \otimes L) = 0$이다.
+를 얻는다. 마지막 곡률항은 $L$이 양의 line bundle이라 $i\Theta = 2\pi\omega_L$이 양정치 $(1,1)$-형식이므로, $(n, q)$-형식($q > 0$) 위에서 양의 작용소가 된다. 곧 점별로 $([i\Theta, \Lambda]\alpha, \alpha) \geq c q \lvert \alpha \rvert^2$ ($c > 0$은 곡률의 최소 고윳값에서 오는 상수) 라는 Nakano 양정치 부등식이 성립한다. 그러면 위 등식의 우변은 음이 아닌 세 항의 합인데 그 합이 $0$이므로, 특히 곡률항이 $0$이고 따라서 $\alpha = 0$이다. $q > 0$인 모든 조화 $(n, q)$-형식이 $0$이므로 $H^q(X, K_X \otimes L) = 0$이다.
 :::
 
 이 소멸정리는 양의 line bundle $L$을 점점 더 큰 거듭제곱 $L^{\otimes k}$로 비틀면 더욱 강력해진다. $L$이 양이면 $L^{\otimes k}$의 곡률이 $k\Theta$로 $k$배 양정치이므로, $L^{\otimes k}$도 양의 line bundle이고 소멸정리가 그대로 적용된다. Canonical line bundle과의 텐서를 떼어내기 위해 $L^{\otimes k} \otimes K_X^{-1}$에 적용하면, $k$가 충분히 클 때 $L^{\otimes k} \otimes K_X^{-1}$도 여전히 양이므로 $H^q(X, K_X \otimes (L^{\otimes k} \otimes K_X^{-1})) = H^q(X, L^{\otimes k}) = 0$ ($q > 0$) 이 따라온다. 이 고차 cohomology의 소멸이 전역단면의 풍부함을 보장하는 메커니즘이며, embedding 논법의 기관차가 된다. 한편 이 정리는 smooth한 projective variety에 대한 대수적 Kodaira 소멸정리 ([\[대수다양체\] §고다이라 소멸정리, ⁋명제 1](/ko/math/algebraic_varieties/kodaira_vanishing#prop1)) 와 같은 결론을 주며, 그쪽이 Serre 쌍대를 거친 대수적 판본인 반면 여기서는 곡률과 조화형식을 통한 해석적 판본이다.
@@ -187,7 +187,7 @@ $$
 3. *separation of tangent vectors<sub>접벡터 분리</sub>*: 각 점 $x$에서 $\Phi_M$의 미분 $\dd{\Phi_M}\vert_x$가 단사이다.
 :::
 
-세 조건은 정확히 $\Phi_M$이 holomorphic 단사 immersion, 곧 콤팩트성과 함께 holomorphic embedding이 되기 위한 요구이다. (1)은 morphism이 어디서나 정의되게 하고, (2)는 단사성을, (3)은 몰입성을 보장한다. $X$가 콤팩트이므로 단사 immersion은 곧 위상적 embedding이고, holomorphic 단사 immersion은 closed 복소 부분다양체로의 embedding이 된다. 따라서 $M$이 very ample이면 $X$는 $\Phi_M$을 통해 $\mathbb{CP}^N$의 smooth한 closed 부분다양체로 실현되어 projective variety ([\[대수다양체\] §사영다양체, ⁋정의 1](/ko/math/algebraic_varieties/projective_varieties#def1)) 가 된다. 세 분리 조건 각각을 section의 존재로 환원하면, 그 section의 존재가 다름 아닌 고차 cohomology의 소멸에서 나온다는 것이 매장정리 증명의 골자이다.
+세 조건은 정확히 $\Phi_M$이 holomorphic 단사 immersion, 곧 콤팩트성과 함께 holomorphic embedding이 되기 위한 요구이다. (1)은 morphism이 어디서나 정의되게 하고, (2)는 단사성을, (3)은 몰입성을 보장한다. $X$가 콤팩트이므로 단사 immersion은 곧 위상적 embedding이고, holomorphic 단사 immersion은 closed 복소 부분다양체로의 embedding이 된다. 따라서 $M$이 very ample이면 $X$는 $\Phi_M$을 통해 $\mathbb{CP}^N$의 smooth한 closed 부분다양체로 실현되어 projective variety ([\[대수다양체\] §사영다양체, ⁋정의 3](/ko/math/algebraic_varieties/projective_varieties#def3)) 가 된다. 세 분리 조건 각각을 section의 존재로 환원하면, 그 section의 존재가 다름 아닌 고차 cohomology의 소멸에서 나온다는 것이 매장정리 증명의 골자이다.
 
 ::: 정리 9 (Kodaira 매장정리)
 $X$를 콤팩트 complex manifold라 하자. $X$ 위에 양의 line bundle $L$이 존재하면, 충분히 큰 모든 $k$에 대하여 $L^{\otimes k}$은 very ample이다. 따라서 $\Phi_{L^{\otimes k}} : X \hookrightarrow \mathbb{CP}^N$이 holomorphic embedding이고, $X$는 projective variety이다. 역으로 projective variety는 양의 line bundle($\mathbb{CP}^N$의 $\mathcal{O}(1)$의 restriction)을 가진다. 곧 콤팩트 complex manifold $X$가 사영적인 것은 $X$ 위에 양의 line bundle이 존재하는 것과 동치이다.
@@ -198,7 +198,7 @@ $X$를 콤팩트 complex manifold라 하자. $X$ 위에 양의 line bundle $L$�
 
 정방향이 본질적인 내용이며, 핵심 단계만 제시한다. 목표는 충분히 큰 $k$에서 $L^{\otimes k}$이 [정의 8](#def8)의 세 조건을 만족함을 보이는 것이고, 세 조건 모두 적절한 전역 section의 존재로 환원된 뒤 [정리 7](#thm7)의 소멸로 해결된다.
 
-*점 분리.* 서로 다른 두 점 $x, y \in X$를 분리하려면, $s(x) = 0$이고 $s(y) \neq 0$인 section $s \in \Gamma(X, L^{\otimes k})$를 찾으면 된다. 두 점에서 동시에 소멸하는 section들의 부분공간을 보기 위해, $x, y$를 blow up한 $\pi : \widetilde{X} \rightarrow X$를 도입하고 그 예외인자를 $E_x, E_y$라 하자. Blow-up의 canonical line bundle 변화 공식 ([\[대수다양체\] §표준선다발, ⁋명제 12](/ko/math/algebraic_varieties/canonical_bundle#prop12)) 에 의해, $\pi^\ast L^{\otimes k} \otimes \mathcal{O}(-E_x - E_y) \otimes K_{\widetilde{X}}^{-1}$이 $k \gg 0$에서 여전히 양이 되도록 할 수 있다. 그러면 [정리 7](#thm7)을 $\widetilde{X}$ 위에서 적용하여 $H^1(\widetilde{X}, \pi^\ast L^{\otimes k} \otimes \mathcal{O}(-E_x - E_y)) = 0$을 얻고, 이 $H^1$의 소멸이 restriction map
+*점 분리.* 서로 다른 두 점 $x, y \in X$를 분리하려면, $s(x) = 0$이고 $s(y) \neq 0$인 section $s \in \Gamma(X, L^{\otimes k})$를 찾으면 된다. 두 점에서 동시에 소멸하는 section들의 부분공간을 보기 위해, $x, y$를 blow up한 $\pi : \widetilde{X} \rightarrow X$를 도입하고 그 예외인자를 $E_x, E_y$라 하자. [\[대수다양체\] §표준선다발, ⁋명제 12](/ko/math/algebraic_varieties/canonical_bundle#prop12)의 blow-up canonical bundle 변화 공식에 의해, $\pi^\ast L^{\otimes k} \otimes \mathcal{O}(-E_x - E_y) \otimes K_{\widetilde{X}}^{-1}$이 $k \gg 0$에서 여전히 양이 되도록 할 수 있다. 그러면 [정리 7](#thm7)을 $\widetilde{X}$ 위에서 적용하여 $H^1(\widetilde{X}, \pi^\ast L^{\otimes k} \otimes \mathcal{O}(-E_x - E_y)) = 0$을 얻고, 이 $H^1$의 소멸이 restriction map
 
 $$
 \Gamma(X, L^{\otimes k}) \longrightarrow L^{\otimes k}_x \oplus L^{\otimes k}_y
@@ -206,7 +206,7 @@ $$
 
 의 전사성을 준다. 곧 두 fiber에서의 값을 독립적으로 처방하는 section이 존재하여 $x, y$가 분리된다. 같은 논법에서 한 점 $x$만 처방하면 *basepoint-free*가 따라온다.
 
-*tangent vector 분리.* 한 점 $x$에서 $\Phi_{L^{\otimes k}}$의 미분이 단사이려면, $x$에서 $1$차까지 소멸하는 section(곧 $s(x) = 0$이고 $\dd{s}(x) = 0$) 과 $0$차에서만 소멸하는 section($s(x) = 0$, $\dd{s}(x) \neq 0$) 을 구별할 수 있어야 한다. 이는 $x$를 blow up하여 예외인자 $E$ 위에서 $\mathcal{O}(-2E)$ 류를 비트는 같은 소멸 논법으로, restriction map $\Gamma(X, L^{\otimes k}) \rightarrow L^{\otimes k}_x \otimes (\mathcal{O}_X / \mathfrak{m}_x^2)$ ($\mathfrak{m}_x$는 $x$의 maximal ideal) 의 전사성으로 환원되고, 다시 $H^1$의 소멸이 이를 보장한다.
+*tangent vector 분리.* 한 점 $x$에서 $\Phi_{L^{\otimes k}}$의 미분이 단사이려면, $x$에서 $1$차까지 소멸하는 section(곧 $s(x) = 0$이고 $\dd{s}(x) = 0$) 과 $0$차에서만 소멸하는 section($s(x) = 0$, $\dd{s}(x) \neq 0$) 을 구별할 수 있어야 한다. 이는 $x$를 blow up하여 예외인자 $E$ 위에서 $\mathcal{O}(-2E)$ 류를 비트는 같은 소멸 논법으로, restriction map $\Gamma(X, L^{\otimes k}) \rightarrow L^{\otimes k}_x \otimes (\mathcal{O}_{X,x} / \mathfrak{m}_x^2)$ ($\mathcal{O}_{X,x}$는 $x$에서의 local ring, $\mathfrak{m}_x$는 그 maximal ideal) 의 전사성으로 환원되고, 다시 $H^1$의 소멸이 이를 보장한다.
 
 세 조건이 모두 충분히 큰 $k$에서 성립하고, 콤팩트성으로 그 $k$를 $x, y$에 무관하게 한꺼번에 택할 수 있으므로, $L^{\otimes k}$은 very ample이다. 따라서 $\Phi_{L^{\otimes k}} : X \hookrightarrow \mathbb{CP}^N$이 holomorphic embedding이고 $X$는 projective variety이다. 기술적 세부, 특히 blow-up 위에서 양성을 유지하는 $k$의 존재와 $H^1$-소멸에서 전사성으로 가는 정확한 long exact sequence 논증은 인용에 맡긴다.
 :::
@@ -236,7 +236,7 @@ $$
 ::: 증명
 $X$가 정수 Kähler 류 $[\omega] \in H^2(X, \mathbb{Z})$를 갖는다고 하자. 콤팩트 Kähler manifold에서 Hodge 분해 ([§Hodge 이론, ⁋정리 9](/ko/math/complex_geometry/hodge_theory#thm9)) 에 의해 $H^2(X, \mathbb{C}) = H^{2,0} \oplus H^{1,1} \oplus H^{0,2}$이고, Kähler 형식 $\omega$는 실 $(1,1)$-형식이므로 그 류는 $H^{1,1}(X) \cap H^2(X, \mathbb{Z})$에 놓인다. Lefschetz의 $(1,1)$-류 정리에 의해 이러한 정수 $(1,1)$-류는 모두 어떤 holomorphic line bundle $L$의 제1 Chern 류 $c_1(L)$로 실현된다 (지수열 $0 \rightarrow \mathbb{Z} \rightarrow \mathcal{O}_X \rightarrow \mathcal{O}_X^\ast \rightarrow 0$의 연결사상 $H^1(X, \mathcal{O}_X^\ast) = \Pic(X) \rightarrow H^2(X, \mathbb{Z})$의 image가 정확히 $H^{1,1} \cap H^2(X, \mathbb{Z})$이다). 곧 $c_1(L) = [\omega]$인 $L$이 존재한다.
 
-이제 $\omega$가 $c_1(L)$을 대표하는 양의 $(1,1)$-형식이므로, [명제 5](#prop5)에 의해 $L$은 양의 line bundle이다. [정리 9](#thm9)를 적용하면 $X$는 projective variety이다. 역으로 projective variety는 $\mathcal{O}(1)$의 restriction으로 양의 line bundle을 가지고, 그 Kähler 류 $[\omega_{\mathrm{FS}}\vert_X] = c_1(\mathcal{O}(1)\vert_X)$가 정수류이므로 Hodge manifold이다.
+이제 $\omega$가 $c_1(L)$을 대표하는 양의 $(1,1)$-형식이므로, $\partial\bar\partial$-보조정리로 $L$의 계량 $h$를 골라 $\omega = \frac{i}{2\pi}\Theta(L, h)$가 되게 할 수 있고, 따라서 [명제 5](#prop5)에 의해 $L$은 양의 line bundle이다. [정리 9](#thm9)를 적용하면 $X$는 projective variety이다. 역으로 projective variety는 $\mathcal{O}(1)$의 restriction으로 양의 line bundle을 가지고, 그 Kähler 류 $[\omega_{\mathrm{FS}}\vert_X] = c_1(\mathcal{O}(1)\vert_X)$가 정수류이므로 Hodge manifold이다.
 :::
 
 이 따름정리가 Kodaira 정리의 가장 쓰기 좋은 형태이다. 콤팩트 complex manifold가 사영적인지를 묻는 대신, 그 위에 정수 Kähler 류가 있는지만 확인하면 된다. 그런데 사영적이라는 결론에는 아직 미세한 간격이 있다. Embedding $X \hookrightarrow \mathbb{CP}^N$이 주는 것은 $X$가 $\mathbb{CP}^N$의 closed 복소 *해석적* 부분다양체라는 것이지, 곧바로 다항식으로 정의되는 대수적 부분다양체라는 것은 아니다. 이 간격을 메우는 것이 Chow의 정리이다.
@@ -256,7 +256,7 @@ Chow 정리와 매장정리를 합치면 결론이 깔끔해진다. Hodge manifo
 Kodaira 판정의 힘은 사영성과 비사영성을 가르는 구체적인 예에서 드러난다. 가장 먼저 보았던 complex projective space는 자명한 양의 예이다.
 
 ::: 예시 13 ($\mathbb{CP}^n$과 그 부분다양체)
-[예시 6](#ex6)에서 $\mathbb{CP}^n$은 양의 line bundle $\mathcal{O}(1)$을 가지므로 [정리 9](#thm9)에 의해 사영적이다. 이는 동어반복에 가깝지만, 그 부분다양체로 가면 내용이 생긴다. $\mathbb{CP}^n$의 smooth closed 복소 부분다양체 $Y$는 $\mathcal{O}(1)\vert_Y$를 양의 line bundle로 물려받으므로 ([§Kähler 다양체, ⁋명제 9](/ko/math/complex_geometry/kahler_manifolds#prop9)), 다시 사영적이다. 곧 사영공간의 smooth 해석적 부분다양체는 전부 projective algebraic variety이며, 이는 Chow 정리 ([정리 12](#thm12)) 의 한 특수경우이기도 하다.
+[예시 6](#ex6)에서 $\mathbb{CP}^n$은 양의 line bundle $\mathcal{O}(1)$을 가지므로 [정리 9](#thm9)에 의해 사영적이다. 이는 동어반복에 가깝지만, 그 부분다양체로 가면 내용이 생긴다. $\mathbb{CP}^n$의 smooth closed 복소 부분다양체 $Y$는 $\mathcal{O}(1)\vert_Y$를 양의 line bundle로 물려받으므로 ([§Kähler 다양체, ⁋명제 9](/ko/math/complex_geometry/kahler_manifolds#prop9)), 다시 사영적이다. 곧 사영공간의 smooth 해석적 부분다양체는 전부 projective algebraic variety이며, 이는 [정리 12](#thm12)의 한 특수경우이기도 하다.
 :::
 
 대조적인 예가 복소토러스이다. 모든 복소토러스는 Kähler이지만 ([§Kähler 다양체, ⁋예시 7](/ko/math/complex_geometry/kahler_manifolds#ex7)), 사영적인 것은 그 가운데 일부뿐이다.

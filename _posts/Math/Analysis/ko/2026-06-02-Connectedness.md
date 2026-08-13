@@ -64,15 +64,15 @@ U \cap V \cap E_\alpha &\subseteq U \cap V \cap E = \emptyset.
 거리공간 $X$의 점 $x$에 대하여, $x$를 포함하는 $X$의 모든 connected 부분집합의 합집합을 $x$의 *connected component<sub>연결성분</sub>*라 한다.
 :::
 
-Connected component는 [명제 3](#prop3)에 의해 그 자체로 connected이며, $x$를 포함하는 연결집합 중 maximal인 것이다. 서로 다른 두 점의 connected component는 같거나 서로소이므로, connected component들은 $X$를 분할한다. 가령 $\mathbb{Q}$의 각 점의 connected component는 그 점 하나뿐인 집합이며 (이런 공간을 완전부정연결<sub>totally disconnected</sub>이라 한다), $\mathbb{R} \setminus \{0\}$의 connected component는 두 반직선 $(-\infty, 0)$과 $(0, \infty)$이다.
+Connected component는 [명제 3](#prop3)에 의해 그 자체로 connected이며, $x$를 포함하는 연결집합 중 maximal인 것이다. 서로 다른 두 점의 connected component는 같거나 서로소이므로, connected component들은 $X$를 분할한다. 가령 $\mathbb{Q}$의 각 점의 connected component는 그 점 하나뿐인 집합이며 (이런 공간을 *totally disconnected<sub>전비연결</sub>*라 한다), $\mathbb{R} \setminus \{0\}$의 connected component는 두 반직선 $(-\infty, 0)$과 $(0, \infty)$이다.
 
 
 ## 연결성의 보존과 중간값 정리
 
-Compactness와 마찬가지로 연결성도 연속함수가 보존하는 위상적 성질이다 ([§연속함수의 성질](/ko/math/analysis/continuous_functions)에서 compactness의 보존을 보았다). 핵심 착상은, 상에서의 분할이 있다면 preimage를 취해 정의역에서의 분할을 만들 수 있다는 점이다. Preimage가 열린집합을 열린집합으로 되돌린다는 사실 — 곧 연속성의 위상적 특징화 — 이 그대로 동력이 된다.
+Compactness와 마찬가지로 연결성도 연속함수가 보존하는 위상적 성질이다 ([§연속함수의 성질](/ko/math/analysis/continuous_functions)에서 compactness의 보존을 보았다). 핵심 착상은, image에서의 분할이 있다면 preimage를 취해 정의역에서의 분할을 만들 수 있다는 점이다. Preimage가 열린집합을 열린집합으로 되돌린다는 사실, 곧 연속성의 위상적 특징화가 그대로 동력이 된다.
 
 ::: 정리 5
-$f : X \rightarrow Y$가 연속이고 $E \subseteq X$가 connected이면, 상 $f(E)$도 connected이다.
+$f : X \rightarrow Y$가 연속이고 $E \subseteq X$가 connected이면, image $f(E)$도 connected이다.
 :::
 
 ::: 증명
@@ -98,7 +98,7 @@ $f : [a, b] \rightarrow \mathbb{R}$가 연속이고 $f(a)$와 $f(b)$ 사이의 �
 $[a,b]$가 구간이므로 connected이고 ([정리 2](#thm2)), [정리 5](#thm5)에 의해 $f([a,b])$도 connected, 곧 구간이다. $f(a), f(b) \in f([a,b])$이고 구간은 두 점 사이의 모든 값을 포함하므로 $y \in f([a,b])$, 즉 $f(c) = y$인 $c$가 있다.
 :::
 
-이로써 중간값 정리에서 받아들였던 중간값 정리가 실수의 완비성에 기초하여 증명되었다. 증명의 구조를 다시 짚으면, 정의역의 연결성, 곧 완비성에서 나오는 [정리 2](#thm2)와 연속성에 의한 연결성의 보존, 곧 [정리 5](#thm5)라는 두 위상적 사실만으로 중간값 정리가 따라 나온다. 해석학에서 익숙한 "사잇값을 모두 취한다"는 성질이 실은 순전히 위상적인 진술임을 보여 준다.
+이로써 미적분학에서 도구로 받아들였던 중간값 정리가 실수의 완비성에 기초하여 증명되었다. 증명의 구조를 다시 짚으면, 정의역의 연결성, 곧 완비성에서 나오는 [정리 2](#thm2)와 연속성에 의한 연결성의 보존, 곧 [정리 5](#thm5)라는 두 위상적 사실만으로 중간값 정리가 따라 나온다. 해석학에서 익숙한 "사잇값을 모두 취한다"는 성질이 실은 순전히 위상적인 진술임을 보여 준다.
 
 ## 응용: 근의 존재와 고정점
 
@@ -121,7 +121,7 @@ g(1) &= f(1) - 1 \leq 0
 인데, 이는 $f$의 치역이 $[0,1]$에 들어 있기 때문이다. 만약 $g(0) = 0$이면 $c = 0$이, $g(1) = 0$이면 $c = 1$이 곧 fixed point이다. 그렇지 않으면 $g(0) > 0 > g(1)$이므로 [따름정리 6](#cor6)를 $y = 0$에 적용하여 $g(c) = 0$, 곧 $f(c) = c$인 $c \in (0, 1)$를 얻는다.
 :::
 
-연결성은 부호의 변화뿐 아니라 두 값을 잇는 연속적 경로의 존재와도 관련된다. 이 관점에서 자연스러운 변형이 path-connectedness이다.
+연결성은 부호의 변화뿐 아니라 두 값을 잇는 continuous path의 존재와도 관련된다. 이 관점에서 자연스러운 변형이 path-connectedness이다.
 
 ::: 정의 8
 거리공간 $X$의 부분집합 $E$가 *path-connected<sub>경로연결</sub>*라는 것은, 임의의 두 점 $x, y \in E$에 대하여 연속함수 $\gamma : [0, 1] \rightarrow E$가 존재하여 $\gamma(0) = x$, $\gamma(1) = y$인 것이다.
@@ -134,7 +134,7 @@ Path-connected인 집합은 connected이다.
 :::
 
 ::: 증명
-$E$가 path-connected인데 connected가 아니라고 가정하고, 열린집합 $U, V$가 $E$를 분할한다고 하자. $x \in U \cap E$, $y \in V \cap E$를 택하고, path-connectedness로 연속함수 $\gamma : [0,1] \rightarrow E$를 $\gamma(0) = x$, $\gamma(1) = y$가 되도록 잡는다. 그러면 정의역 $[0,1]$은 connected이므로([정리 2](#thm2)) [정리 5](#thm5)에 의해 상 $\gamma([0,1])$도 connected이다. 그런데
+$E$가 path-connected인데 connected가 아니라고 가정하고, 열린집합 $U, V$가 $E$를 분할한다고 하자. $x \in U \cap E$, $y \in V \cap E$를 택하고, path-connectedness로 연속함수 $\gamma : [0,1] \rightarrow E$를 $\gamma(0) = x$, $\gamma(1) = y$가 되도록 잡는다. 그러면 정의역 $[0,1]$은 connected이므로([정리 2](#thm2)) [정리 5](#thm5)에 의해 image $\gamma([0,1])$도 connected이다. 그런데
 
 $$\begin{aligned}
 \gamma([0,1]) &\subseteq E \subseteq U \cup V, \\
@@ -146,13 +146,11 @@ U \cap V \cap \gamma([0,1]) &\subseteq U \cap V \cap E = \emptyset
 이므로 $U, V$가 연결집합 $\gamma([0,1])$을 분할하게 되어 모순이다. 따라서 $E$는 connected이다.
 :::
 
-[명제 9](#prop9)는 연결성을 보이는 실용적인 방법을 준다. 어떤 집합이 connected임을 직접 보이려면 분할이 없음을 보여야 하지만, 두 점을 잇는 경로를 명시적으로 구성하는 편이 종종 더 쉽다. 가령 $\mathbb{R}^n$의 볼록집합 $E$는 임의의 두 점 $x, y$에 대해 선분 $\gamma(t) = (1-t)x + ty$가 $E$ 안에 있어 path-connected이고, 따라서 connected이다. 한편 그 역이 성립하지 않는 고전적 예는 topologist's sine curve
+[명제 9](#prop9)는 연결성을 보이는 실용적인 방법을 준다. 어떤 집합이 connected임을 직접 보이려면 분할이 없음을 보여야 하지만, 두 점을 잇는 path를 명시적으로 구성하는 편이 종종 더 쉽다. 가령 $\mathbb{R}^n$의 볼록집합 $E$는 임의의 두 점 $x, y$에 대해 선분 $\gamma(t) = (1-t)x + ty$가 $E$ 안에 있어 path-connected이고, 따라서 connected이다. 한편 그 역이 성립하지 않는 고전적 예는 topologist's sine curve
 
 $$S = \{(x, \sin(1/x)) \mid 0 < x \leq 1\} \cup \{(0, y) \mid -1 \leq y \leq 1\}$$
 
-으로, $S$는 connected이지만 path-connected는 아니다. 원점 부근의 진동이 점점 빨라져, 세로 선분 위의 점과 곡선 위의 점을 잇는 연속 경로를 만들 수 없기 때문이다.
-
-지금까지의 결과를 종합하면, 실수 위에서는 connected·path-connected·구간이라는 세 성질이 모두 일치하고, 연속함수가 이 성질을 보존하기에 중간값 정리가 따라 나온다.
+으로, $S$는 connected이지만 path-connected는 아니다. 원점 부근의 진동이 점점 빨라져, 세로 선분 위의 점과 곡선 위의 점을 잇는 continuous path를 만들 수 없기 때문이다.
 
 ---
 

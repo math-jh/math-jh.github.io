@@ -100,11 +100,11 @@ $$H_M(n)=\length_{R_0}(M_n)$$
 ::: 증명
 $R$의 generator의 개수 $s$에 대한 귀납법으로 증명한다. $s=0$인 경우 $R=R_0$이고, 위에서 살펴본 것처럼 $M_n=\sum_i R_{n-d_i}m_i$인데 $R_k=0$ ($k\neq 0$)이므로 $n>\max_i d_i$에 대하여 $M_n=0$이다. 따라서 $H_M$은 결국 $0$과 일치한다.
 
-이제 $s\geq 1$이라 하고 주장이 $s-1$개의 degree $1$ 원소로 생성되는 graded ring들에 대해 성립한다고 가정하자. 곱하기 $x_s$는 각 degree에서 $R_0$-linear map $M_n \rightarrow M_{n+1}$을 주므로, $K=\{x\in M\mid x_sx=0\}$와 $C=M/x_sM$으로 두면 각각의 $n$에 대하여 다음의 exact sequence
+이제 $s\geq 1$이라 하고 주장이 $s-1$개의 degree $1$ 원소로 생성되는 graded ring들에 대해 성립한다고 가정하자. 곱하기 $x_s$는 각 degree에서 $R_0$-linear map $M_n \rightarrow M_{n+1}$을 주므로, $K=\{z\in M\mid x_sz=0\}$와 $C=M/x_sM$으로 두면 각각의 $n$에 대하여 다음의 exact sequence
 
 $$0 \rightarrow K_n \rightarrow M_n \overset{x_s}{\longrightarrow} M_{n+1} \rightarrow C_{n+1} \rightarrow 0$$
 
-를 얻는다. 여기서 $K$가 graded submodule이라는 것은, $x\in K$를 homogeneous 성분들로 분해하여 $x=\sum x_i$로 적으면 $x_sx_i$들이 서로 다른 degree의 homogeneous 성분들이므로 $x_sx=0$이 각각의 $x_sx_i=0$을 함의한다는 것에서 알 수 있고, $x_sM$이 graded submodule이므로 $C$도 graded module이다. $R$가 Noetherian이고 $M$이 finitely generated이므로 $M$은 Noetherian module이고 ([§기본 개념들, ⁋따름정리 6](/ko/math/commutative_algebra/basic_notions#cor6)과 [§기본 개념들, ⁋명제 4](/ko/math/commutative_algebra/basic_notions#prop4)), 따라서 submodule $K$는 finitely generated이며 ([§기본 개념들, ⁋정리 3](/ko/math/commutative_algebra/basic_notions#thm3)) quotient $C$도 그러하다.
+를 얻는다. 여기서 $K$가 graded submodule이라는 것은, $z\in K$를 homogeneous 성분들로 분해하여 $z=\sum z_i$로 적으면 $x_sz_i$들이 서로 다른 degree의 homogeneous 성분들이므로 $x_sz=0$이 각각의 $x_sz_i=0$을 함의한다는 것에서 알 수 있고, $x_sM$이 graded submodule이므로 $C$도 graded module이다. $R$가 Noetherian이고 $M$이 finitely generated이므로 $M$은 Noetherian module이고 ([§기본 개념들, ⁋따름정리 6](/ko/math/commutative_algebra/basic_notions#cor6)과 [§기본 개념들, ⁋명제 4](/ko/math/commutative_algebra/basic_notions#prop4)), 따라서 submodule $K$는 finitely generated이며 ([§기본 개념들, ⁋정리 3](/ko/math/commutative_algebra/basic_notions#thm3)) quotient $C$도 그러하다.
 
 한편 $K$와 $C$는 모두 $x_s$에 의해 annihilate되므로 quotient ring $R/(x_s)$ 위의 finitely generated graded module이다. Ideal $(x_s)$는 homogeneous 원소로 생성되므로 $R/(x_s)$는 다시 graded ring이고, 그 degree $0$ part는 $R_0$ 그대로이며 $R_0$ 위에서 $x_1,\ldots, x_{s-1}$의 image들로 생성된다. 따라서 귀납적 가정에 의하여 $H_K$와 $H_C$는 충분히 큰 $n$에서 각각 $0$이거나 degree $s-2$ 이하의 numerical polynomial과 일치한다.
 

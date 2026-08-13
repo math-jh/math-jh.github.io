@@ -22,7 +22,7 @@ published: false
 
 이 점을 명확히 하자. [§하우스도르프 공간, ⁋정의 3](/ko/math/topology/Hausdorff_spaces#def3)에서 두 부분집합 $A,B$가 연속함수로 분리가능하다는 것은 연속함수 $f:X\rightarrow\mathbb{R}$이 존재하여 $A\subseteq f^{-1}(\{0\})$이고 $B\subseteq f^{-1}(\{1\})$인 것으로 정의하였다. 이는 근방으로 분리가능하다는 조건보다 훨씬 강하다. 근방에 의한 분리는 두 집합을 감싸는 서로소인 열린집합만을 요구하지만, 연속함수에 의한 분리는 두 집합 사이의 모든 중간 단계를 연속적으로 이어 주는 실숫값 척도를 요구하기 때문이다.
 
-이 글의 목표는 normal space에서 서로소인 닫힌집합이 언제나 연속함수로 분리가능함을 보이는 것이다. 이것이 Urysohn 보조정리이며, 여기에서 파생되는 Tietze 확장정리와 Urysohn 거리화정리는 일반위상수학에서 연속함수의 존재를 다루는 가장 기본적인 도구가 된다. 우리는 [§하우스도르프 공간, ⁋정의 3](/ko/math/topology/Hausdorff_spaces#def3)의 용어를 따라, 서로소인 두 닫힌집합이 언제나 근방으로 분리가능한 공간을 *normal space<sub>정규공간</sub>*라 부른다. 이 정의에는 $T_1$ 조건이 포함되지 않으므로, normal이라는 조건만으로는 점이 닫혀 있을 필요조차 없다는 점에 유의한다.
+이 글의 목표는 normal space에서 서로소인 닫힌집합이 언제나 연속함수로 분리가능함을 보이는 것이다. 이것이 Urysohn 보조정리이며, 여기에서 파생되는 Tietze 확장정리와 Urysohn 거리화정리는 일반위상수학에서 연속함수의 존재를 다루는 가장 기본적인 도구가 된다. 우리는 [§하우스도르프 공간, ⁋정의 3](/ko/math/topology/Hausdorff_spaces#def3)의 용어를 따라, 서로소인 두 닫힌집합이 언제나 근방으로 분리가능한 공간을 *normal space*라 부른다. 이 정의에는 $T_1$ 조건이 포함되지 않으므로, normal이라는 조건만으로는 점이 닫혀 있을 필요조차 없다는 점에 유의한다.
 
 ## Urysohn 보조정리
 
@@ -102,7 +102,7 @@ $$d(x,S)=\inf_{s\in S}d(x,s)$$
 모든 metric space는 normal space이다.
 :::
 ::: 증명
-Metric space $(X,d)$의 서로소인 두 닫힌집합 $A,B$가 주어졌다 하자. 함수
+Metric space $(X,d)$의 서로소인 두 닫힌집합 $A,B$가 주어졌다 하자. 만일 $A$나 $B$가 공집합이면 $\emptyset$과 $X$가 이들을 분리하므로, 둘 다 공집합이 아니라 가정하여도 좋다. 함수
 
 $$g(x)=d(x,A)-d(x,B)$$
 
@@ -113,7 +113,7 @@ $$U=g^{-1}((-\infty,0)),\qquad V=g^{-1}((0,\infty))$$
 라 두면 $U,V$는 연속함수의 preimage로서 열린집합이며 서로소이다. 임의의 $a\in A$에 대하여 $d(a,A)=0$이고, $a\notin B$이며 $B$가 닫힌집합이므로 $d(a,B)>0$이다. 따라서 $g(a)<0$이 되어 $a\in U$이고, 같은 이유로 $B\subseteq V$이다. 이로써 $A,B$가 서로소인 열린집합 $U,V$로 분리되었다.
 :::
 
-[명제 4](#prop4)의 증명에서 등장한 함수
+[명제 4](#prop4)의 증명에 등장한 거리함수로 만든 함수
 
 $$x\mapsto\frac{d(x,A)}{d(x,A)+d(x,B)}$$
 
@@ -137,10 +137,10 @@ $$B=g^{-1}([-r,-r/3]),\qquad C=g^{-1}([r/3,r])$$
 :::
 
 ::: 정리 6
-(Tietze extension theorem) Normal space $X$의 닫힌집합 $A$와 연속함수 $f:A\rightarrow[a,b]$가 주어졌다 하자. 그럼 연속함수 $F:X\rightarrow[a,b]$이 존재하여 $F\vert_A=f$이다.
+(Tietze extension theorem) Normal space $X$의 닫힌집합 $A$와 연속함수 $f:A\rightarrow[c,d]$가 주어졌다 하자. 그럼 연속함수 $F:X\rightarrow[c,d]$이 존재하여 $F\vert_A=f$이다.
 :::
 ::: 증명
-$[a,b]$와 $[-1,1]$ 사이의 affine한 homeomorphism을 통해 $[a,b]=[-1,1]$인 경우만 다루면 충분하다. [보조정리 5](#lem5)를 $g=f$와 $r=1$에 적용하여 연속함수 $h_1:X\rightarrow\mathbb{R}$을 얻는다. 이는 모든 $x$에서 $\lvert h_1(x)\rvert\leq 1/3$이고 모든 $a\in A$에서 $\lvert f(a)-h_1(a)\rvert\leq 2/3$을 만족한다.
+$[c,d]$와 $[-1,1]$ 사이의 affine한 homeomorphism을 통해 $[c,d]=[-1,1]$인 경우만 다루면 충분하다. [보조정리 5](#lem5)를 $g=f$와 $r=1$에 적용하여 연속함수 $h_1:X\rightarrow\mathbb{R}$을 얻는다. 이는 모든 $x$에서 $\lvert h_1(x)\rvert\leq 1/3$이고 모든 $a\in A$에서 $\lvert f(a)-h_1(a)\rvert\leq 2/3$을 만족한다.
 
 이제 $A$ 위에서 $f-h_1$은 $2/3$으로 유계인 연속함수이므로, 여기에 [보조정리 5](#lem5)를 $r=2/3$으로 적용하여 $\lvert h_2(x)\rvert\leq (1/3)(2/3)$이고 $A$ 위에서 $\lvert f-h_1-h_2\rvert\leq(2/3)^2$인 연속함수 $h_2$를 얻는다. 이를 귀납적으로 반복하면 연속함수들의 열 $(h_n)$을 얻어, 모든 $n\geq 1$에 대하여
 

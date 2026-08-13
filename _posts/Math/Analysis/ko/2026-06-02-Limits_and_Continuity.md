@@ -60,7 +60,7 @@ $f$가 연속이고 $V \subseteq Y$가 열려 있다 하자. $a \in f^{-1}(V)$�
 
 [명제 3](#prop3)은 거리를 전혀 언급하지 않으므로, 연속의 개념이 본질적으로 위상적임을 드러낸다. 이것이 [\[위상수학\] §연속함수](/ko/math/topology/continuous_functions)에서 일반 위상공간 사이의 연속을 열린집합의 preimage로 *정의*하는 근거이다.
 
-세 특징화 — $\varepsilon$-$\delta$, 점열, 열린집합 — 는 상황에 따라 골라 쓰인다. 점별 평가가 자연스러운 곳에서는 $\varepsilon$-$\delta$를, 수렴하는 점열이 주어진 곳에서는 [명제 2](#prop2)를, 그리고 공간 전체의 위상적 성질을 다룰 때는 [명제 3](#prop3)을 택하는 것이 보통이다. 아래에서 이 세 관점을 구체적인 함수에 적용해 보고, 연속함수가 합·곱·합성에 대해 닫혀 있음을 확인한다.
+세 특징화($\varepsilon$-$\delta$, 점열, 열린집합)는 상황에 따라 골라 쓰인다. 점별 평가가 자연스러운 곳에서는 $\varepsilon$-$\delta$를, 수렴하는 점열이 주어진 곳에서는 [명제 2](#prop2)를, 그리고 공간 전체의 위상적 성질을 다룰 때는 [명제 3](#prop3)을 택하는 것이 보통이다. 아래에서 이 세 관점을 구체적인 함수에 적용해 보고, 연속함수가 합·곱·합성에 대해 닫혀 있음을 확인한다.
 
 ## 함수의 극한
 
@@ -100,9 +100,9 @@ $$d_Z\bigl(g(f(x)), g(f(a))\bigr) < \varepsilon$$
 이므로 $g \circ f$는 $a$에서 연속이다.
 :::
 
-[명제 2](#prop2)의 [명제 2](#prop2)를 쓰면 같은 사실이 한층 짧게 나온다. $x_n \rightarrow a$이면 $f$의 연속으로 $f(x_n) \rightarrow f(a)$이고, 다시 $g$의 연속으로 $g(f(x_n)) \rightarrow g(f(a))$이므로 $(g \circ f)(x_n) \rightarrow (g \circ f)(a)$이다. 두 증명은 본질적으로 같은 내용을 $\varepsilon$-$\delta$의 언어와 점열의 언어로 각각 옮긴 것이다.
+[명제 2](#prop2)를 쓰면 같은 사실이 한층 짧게 나온다. $x_n \rightarrow a$이면 $f$의 연속으로 $f(x_n) \rightarrow f(a)$이고, 다시 $g$의 연속으로 $g(f(x_n)) \rightarrow g(f(a))$이므로 $(g \circ f)(x_n) \rightarrow (g \circ f)(a)$이다. 두 증명은 본질적으로 같은 내용을 $\varepsilon$-$\delta$의 언어와 점열의 언어로 각각 옮긴 것이다.
 
-치역이 $\mathbb{R}$인 경우, 연속함수의 합·곱·quotient도 연속이다. 이는 실수열의 극한이 대수 연산과 교환한다는 [§수열의 수렴, ⁋정리 4](/ko/math/analysis/convergence_of_sequences#thm4)를 [명제 2](#prop2)를 통해 함수에 옮긴 것이다.
+공역이 $\mathbb{R}$인 경우, 연속함수의 합·곱·quotient도 연속이다. 이는 실수열의 극한이 대수 연산과 교환한다는 [§수열의 수렴, ⁋정리 4](/ko/math/analysis/convergence_of_sequences#thm4)를 [명제 2](#prop2)를 통해 함수에 옮긴 것이다.
 
 ::: 명제 6 (합과 곱의 연속)
 $f, g : X \rightarrow \mathbb{R}$가 $a$에서 연속이면 $f + g$와 $fg$도 $a$에서 연속이며, $g(a) \neq 0$이면 $f/g$도 $a$에서 연속이다.
@@ -138,7 +138,7 @@ $$d(x, p) \leq d(x, y) + d(y, p), \qquad d(y, p) \leq d(y, x) + d(x, p)$$
 
 $$\lvert f(x) - f(y)\rvert = \lvert d(x, p) - d(y, p)\rvert \leq d(x, y)$$
 
-를 얻는다. 따라서 임의의 $\varepsilon > 0$에 대해 $\delta = \varepsilon$으로 두면 $d(x, y) < \delta$일 때 $\lvert f(x) - f(y)\rvert < \varepsilon$이므로 $f$는 연속이다. 이렇게 $\delta$를 점에 무관하게 잡을 수 있는 함수를 *균등연속<sub>uniformly continuous</sub>*이라 하며, $d(x, y)$가 그대로 upper bound가 되는 특수한 경우를 *Lipschitz 함수*라 한다.
+를 얻는다. 따라서 임의의 $\varepsilon > 0$에 대해 $\delta = \varepsilon$으로 두면 $d(x, y) < \delta$일 때 $\lvert f(x) - f(y)\rvert < \varepsilon$이므로 $f$는 연속이다. 이렇게 $\delta$를 점에 무관하게 잡을 수 있는 함수를 *균등연속<sub>uniformly continuous</sub>*이라 하며, 어떤 상수 $C > 0$에 대해 $\lvert f(x) - f(y)\rvert \leq Cd(x, y)$가 성립하는 특수한 경우를 *Lipschitz 함수*라 한다. 위의 거리함수는 $C = 1$로 잡을 수 있는 경우이다.
 :::
 
 연속이 점열을 보존한다는 [명제 2](#prop2)는 극한을 계산하는 실용적 도구이기도 하다. $g$가 연속이고 $x_n \rightarrow a$이면

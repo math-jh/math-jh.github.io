@@ -24,7 +24,7 @@ $$r = \rank\,\operatorname{Pic}(X) = \dim_\mathbb{C} H^2(X; \mathbb{C})$$
 
 로 주어졌다. 우리는 이 위에 oscillating integral을 정의하기 위해 우선 holomorphic volume form $\omega$를 정의한다.
 
-일반적으로 compact (algebraic geometry에서는 complete) 공간에서는 form이 non-vanishing일 수 없으므로, volume form을 얻기 위해 우리는 이러한 점들을 임의로 제거해주어야 한다. 즉, $\check{X}$를 어떤 smooth projective variety $Y$의 open subset $\check{X} = Y \setminus D$로 본 후, $Y$의 divisor $D$를 $\mathcal{K}_Y$의 rational section의 bad locus를 정확히 흡수하는 divisor로 고르는 것이다. 구체적으로 anti-canonical class $-K_Y$의 effective representative $D \geq 0$ (즉 $D \sim -K_Y$)를 잡으면 $\mathcal{K}_Y \otimes \mathcal{O}_Y(D) \cong \mathcal{O}_Y$가 trivial이 되어 nowhere-vanishing global section
+일반적으로 canonical bundle이 trivial하지 않은 compact (algebraic geometry에서는 complete) 공간에서는 holomorphic top form이 non-vanishing일 수 없으므로, volume form을 얻기 위해 우리는 이러한 점들을 임의로 제거해주어야 한다. 즉, $\check{X}$를 어떤 smooth projective variety $Y$의 open subset $\check{X} = Y \setminus D$로 본 후, $Y$의 divisor $D$를 $\mathcal{K}_Y$의 rational section의 bad locus를 정확히 흡수하는 divisor로 고르는 것이다. 구체적으로 anti-canonical class $-K_Y$의 effective representative $D \geq 0$ (즉 $D \sim -K_Y$)를 잡으면 $\mathcal{K}_Y \otimes \mathcal{O}_Y(D) \cong \mathcal{O}_Y$가 trivial이 되어 nowhere-vanishing global section
 
 $$\Omega\in H^0(Y, \mathcal{K}_Y\otimes \mathcal{O}_Y(D))$$
 
@@ -35,7 +35,7 @@ $$\omega = d\log \rchi^{m_1} \wedge \cdots \wedge d\log \rchi^{m_N}$$
 을 만드는 구성[^1]의 일반화이다. 한편 이 구성이 작동하는 ambient 데이터 $(Y, D)$ 자체를 추상화하면 다음 정의의 log Calabi-Yau pair가 된다.
 
 ::: 정의 1
-Smooth projective variety $Y$와 reduced SNC divisor ([\[토릭 기하학\] §토릭 다양체 위의 로그 미분형식, ⁋정의 5](/ko/math/toric_geometry/logarithmic_differentials#def5)) $D \subseteq Y$의 쌍 $(Y, D)$가 $K_Y + D \sim 0$을 만족할 때 이를 *log Calabi-Yau pair<sub>로그 칼라비-야우 쌍</sub>*라 부른다. 이 때, 위의 construction을 통해 얻어지는 non-vanihsing volume form $\omega=\Omega\vert_{\check{X}}$을 log CY pair의 *canonical holomorphic volume form<sub>표준 정칙 부피 형식</sub>*이라 부른다. 
+Smooth projective variety $Y$와 reduced SNC divisor ([\[토릭 기하학\] §토릭 다양체 위의 로그 미분형식, ⁋정의 5](/ko/math/toric_geometry/logarithmic_differentials#def5)) $D \subseteq Y$의 쌍 $(Y, D)$가 $K_Y + D \sim 0$을 만족할 때 이를 *log Calabi-Yau pair<sub>로그 칼라비-야우 쌍</sub>*라 부른다. 이 때, 위의 construction을 통해 얻어지는 non-vanishing volume form $\omega=\Omega\vert_{\check{X}}$을 log CY pair의 *canonical holomorphic volume form<sub>표준 정칙 부피 형식</sub>*이라 부른다. 
 :::
 
 기하적으로, 앞선 construction에서 $\mathcal{K}_Y\otimes \mathcal{O}_Y(D)\cong \mathcal{O}_Y$의 nowhere-vanishing global section을 통해 $\omega$를 택하는 것은 trivialization $\Omega^N_Y(\log D)\cong\mathcal{O}_Y$를 택하는 것과 같다. 특히 $\check{X}=(\mathbb{C}^\ast)^N$인 경우 standard affine coordinate들 $\x_i$에 대한 canonical volume form은
@@ -54,19 +54,19 @@ $$\mathcal{I}_\Gamma(q,z)=\int_\Gamma e^{W_q/z}\omega$$
 
 이를 위해 우리는 각각의 점 $p\in \Crit(W_q)$에 대하여 다음의 꼴
 
-$$\Gamma_p := \left\{ x \in \check{X} \,\middle\vert\, \lim_{t \rightarrow +\infty} \Real\!\left(\frac{W_q(x(t))}{z}\right) = -\infty,\; x(0) = p \right\}$$
+$$\Gamma_p := \left\{ x(0) \in \check{X} \,\middle\vert\, \lim_{t \rightarrow -\infty} x(t) = p,\; \lim_{t \rightarrow +\infty} \Real\!\left(\frac{W_q(x(t))}{z}\right) = -\infty \right\}$$
 
-로 나타나는 cycle을 *Lefschetz thimble*이라 부른다. 만일 $W_q$가 Morse type이라면 $\Gamma_p$는 real dimension $N$의 cycle을 이룬다는 것이 알려져 있다 ([\[사교기하학\] §Morse 이론과 stationary phase 근사, ⁋정의 14](/ko/math/symplectic_geometry/morse_stationary_phase#def14)). 한편 [§거울대칭 개요](/ko/math/mirror_symmetry/overview)에서 살펴본 ring isomorphism $\Jac(W_q) \cong QH^\ast(X)$로부터 critical point의 개수는 정확히 $\dim_\mathbb{C} H^\ast(X, \mathbb{C})$와 일치한다. 이 critical point에 대응하는 Lefschetz thimble들 $\{\Gamma_p\}_{p \in \Crit(W_q)}$는 *$N$th rapid decay homology*
+로 나타나는 cycle을 *Lefschetz thimble*이라 부른다. 여기서 $x(t)$는 $\Real(W_q/z)$의 negative gradient flow line이며, 따라서 $\Gamma_p$는 $p$의 unstable manifold이다. ([\[사교기하학\] §Morse 이론과 stationary phase 근사, ⁋정의 14](/ko/math/symplectic_geometry/morse_stationary_phase#def14)) 만일 $W_q$가 Morse type이라면 $\Gamma_p$는 real dimension $N$의 cycle을 이룬다는 것이 알려져 있다 ([\[사교기하학\] §Morse 이론과 stationary phase 근사, ⁋명제 15](/ko/math/symplectic_geometry/morse_stationary_phase#prop15)). 한편 [§거울대칭 개요](/ko/math/mirror_symmetry/overview)에서 살펴본 ring isomorphism $\Jac(W_q) \cong QH^\ast(X)$로부터 critical point의 개수는 정확히 $\dim_\mathbb{C} H^\ast(X, \mathbb{C})$와 일치한다. 이 critical point에 대응하는 Lefschetz thimble들 $\{\Gamma_p\}_{p \in \Crit(W_q)}$는 *$N$th rapid decay homology*
 
 $$H_N(\check{X}, \{\Real(W_q/z) \ll 0\}; \mathbb{C})$$
 
 의 $\mathbb{C}$-basis가 된다. 여기서 rapid decay homology $H_\ast(\check{X}, \{\Real(W_q/z) \ll 0\}; \mathbb{C})$는 충분히 작은 $\Real(W_q/z)$를 갖는 점들로 이루어진 *rapid decay zone*
 
-$$S_z=\{x \in \check{X} \mid \Real(W(x)/z) \ll 0\}$$
+$$S_z=\{x \in \check{X} \mid \Real(W_q(x)/z) \ll 0\}$$
 
 에 대해, boundary $\partial \sigma$가 $S_z$ 안에 들어가는 $n$-chain $\sigma$들을, $S_z$ 안에 완전히 들어가는 chain은 0으로 quotient하여 모은 것이다. 더 엄밀하게는
 
-$$S_z^M=\{x \in \check{X} \mid \Real(W(x)/z) <-M\}$$
+$$S_z^M=\{x \in \check{X} \mid \Real(W_q(x)/z) <-M\}$$
 
 으로 두고, relative singular homology $H_n(\check{X}, S_z^M; \mathbb{C})$을 생각한 것으로, $S_z^M$은 물론 $M$의 값에 의존하지만 이 relative homology 자체는 $M$의 값이 커지면 stabilize한다는 것이 알려져 있다. 우리는 이 stabilize한 값을 rapid decay homology로 정의하는 것이다. 
 
@@ -93,7 +93,7 @@ $W_q$의 non-degenerate critical point $p$와 이를 통과하는 Lefschetz thim
 
 $$\mathcal{I}_{\Gamma_p}(q, z) \sim (2\pi z)^{N/2} \frac{e^{W_q(p)/z}}{\sqrt{\det\Hess_p(W_q)}} \big(1 + O(z)\big)$$
 
-이 성립한다. 여기서 $N = \dim_\mathbb{C} \check{X}$, $\Hess_p$는 $p$에서의 Hessian이며, $\sqrt{}$의 branch는 $\Gamma_p$의 orientation으로 결정된다.
+이 성립한다. 여기서 $N = \dim_\mathbb{C} \check{X}$이고, $\Hess_p$는 $\omega$가 standard volume form $\dd{y_1}\wedge\cdots\wedge\dd{y_N}$이 되는 $p$ 근방의 holomorphic coordinate $y$에 대한 $p$에서의 Hessian이며, $\sqrt{}$의 branch는 $\Gamma_p$의 orientation으로 결정된다.
 :::
 
 증명의 핵심은 $p$ 근방에서 [\[사교기하학\] §Morse 이론과 stationary phase 근사, ⁋정리 6](/ko/math/symplectic_geometry/morse_stationary_phase#thm6)을 사용하여 $W_q$를 quadratic form으로 환원한 뒤 Gaussian 적분을 적용하는 것이다. 어쨌든 우리 상황에서 중요한 것은 $z \rightarrow 0^+$일 때 oscillating integral이 *각 critical point의 local data*, 즉 critical value $W_q(p)$와 Hessian determinant로 완전히 결정된다는 사실이다. 특히 mirror symmetry isomorphism $\Jac(W_q) \cong QH^\ast(X_\Sigma)$ 관점에서, critical value들 $\{ W_q(p) \}$는 A-side에서는 quantum cohomology의 *canonical coordinate*로 해석된다.
@@ -206,20 +206,20 @@ $$z\,\partial_{q_i}\mathcal{I}^a_p = \sum_b (M_i)^a_b\,\mathcal{I}^b_p,\qquad z^
 
 $$e_a = \sum_p \mathcal{I}^a_p\,f^p,\qquad f^p = \sum_a (\mathcal{I}^{-1})^p_a\,e_a$$
 
-이다. 따라서 $\mathcal{I}^{-1}$의 column들이 frame $\{e_a\}$로 표현한 $\nabla^z_B$의 horizontal sections이며, $\mathcal{I}$ 자체가 $\nabla^z_B$의 모든 데이터를 인코딩하게 되는 것이다. 이 fundamental solution matrix $\mathcal{I}$가 A-side에서는 quantum cohomology $D$-module의 fundamental solution($J$-function)과 일치한다는 것이 mirror theorem의 주장이며, 이는 다음 글에서 다룬다. 
+이다. 따라서 $\mathcal{I}^{-1}$의 row들이 frame $\{e_a\}$로 표현한 $\nabla^z_B$의 horizontal sections이며, $\mathcal{I}$ 자체가 $\nabla^z_B$의 모든 데이터를 인코딩하게 되는 것이다. 이 fundamental solution matrix $\mathcal{I}$가 A-side에서는 quantum cohomology $D$-module의 fundamental solution($J$-function)과 일치한다는 것이 mirror theorem의 주장이며, 이는 다음 글에서 다룬다. 
 
 ## 예시: $\mathbb{P}^n$의 oscillating integral
 
 ::: 예시 8 ($X = \mathbb{P}^n$)
-우리는 앞서 [§거울대칭 개요, ⁋예시 5](/ko/math/mirror_symmetry/overview#ex5)에서 $\mathbb{P}^n$의 Hori-Vafa mirror는
+[§거울대칭 개요, ⁋정의 4](/ko/math/mirror_symmetry/overview#def4)로부터 $\mathbb{P}^n$의 Hori-Vafa mirror는
 
 $$\check{X} = (\mathbb{C}^\ast)^n,\qquad W_q = \x_1 + \cdots + \x_n + \frac{q}{\x_1 \cdots \x_n},\qquad \omega = \frac{\dd{\x_1} \wedge \cdots \wedge \dd{\x_n}}{\x_1 \cdots \x_n}$$
 
-형태로 주어지는 것을 확인했다. 이 때, critical point를 계산하기 위해 미분을 해 보면
+형태로 주어진다. 이 때, critical point를 계산하기 위해 미분을 해 보면
 
-$$\partial_{\x_i}W_q =1 - \frac{1}{\x_i}\frac{q}{\x_1\cdots x_n} = 0$$
+$$\partial_{\x_i}W_q =1 - \frac{1}{\x_i}\frac{q}{\x_1\cdots \x_n} = 0$$
 
-이고, 이것이 모든 $i$에 대해 성립해야 하므로 $x_i=\zeta^kq^{1/(n+1)}$을 만족하는 $x$들이 critical point들이다. Jacobi ring 관점에서는 위의 critical point들의 방정식이
+이고, 이것이 모든 $i$에 대해 성립해야 하므로 모든 $\x_i$가 같은 값을 가져야 하며, 따라서 $(n+1)$th root of unity $\zeta$에 대해 $x_i = \zeta q^{1/(n+1)}$ ($i=1,\ldots,n$)로 주어지는 점 $x_\zeta$들이 critical point들이다. Jacobi ring 관점에서는 위의 critical point들의 방정식이
 
 $$\Jac(W_q) \;\cong\; \mathbb{C}[\x, \x^{-1}]\,/\,(\x^{n+1} - q)$$
 
@@ -247,15 +247,13 @@ $$z\partial_q\mathcal{I}_p^n=\mathcal{I}_p^0$$
 
 $$(z\partial_q)\bigl(qz\partial_q\bigr)^n\,\mathcal{I}^0_p = \mathcal{I}^0_p$$
 
-를 얻으며, 이것이 곧 $\mathbb{P}^n$의 quantum differential equation이다. 
+를 얻으며, 이것이 곧 $\mathbb{P}^n$의 quantum differential equation으로, A-side $J$-function이 만족하는 hypergeometric ODE와 동일하다. Stationary phase asymptotic의 경우, $\omega$가 standard volume form이 되는 coordinate는 $u_i = \log\x_i$이므로 [명제 3](#prop3)의 Hessian은 $u$에 대해 계산해야 한다. $x_\zeta$에서 $\partial_{u_i}\partial_{u_j} W_q$는 대각 $2x_\zeta$, 비대각 $x_\zeta$ ($\mathbf{1} := (1,\ldots,1)^\top$)이므로
 
-으로, A-side $J$-function이 만족하는 hypergeometric ODE와 동일하다. State phase asymptotic의 경우, $x_\zeta$에서 $\partial_i\partial_j W_q$는 대각 $2/x_\zeta$, 비대각 $1/x_\zeta$ ($\mathbf{1} := (1,\ldots,1)^\top$)이므로
-
-$$\Hess_{x_\zeta}(W_q) = \frac{1}{x_\zeta}\bigl(I_n + \mathbf{1}\mathbf{1}^\top\bigr),\qquad \det \Hess_{x_\zeta}(W_q) = (n+1)\,(\zeta\,q^{1/(n+1)})^{-n}$$
+$$\Hess_{x_\zeta}(W_q) = x_\zeta\bigl(I_n + \mathbf{1}\mathbf{1}^\top\bigr),\qquad \det \Hess_{x_\zeta}(W_q) = (n+1)\,(\zeta\,q^{1/(n+1)})^{n}$$
 
 이고 critical value $W_q(x_\zeta) = (n+1)\,\zeta\,q^{1/(n+1)}$이므로 [명제 3](#prop3)에 의해
 
-$$\mathcal{I}_{\Gamma_{x_\zeta}}(q, z) \sim (2\pi z)^{n/2}\,\frac{\exp\bigl((n+1)\,\zeta\,q^{1/(n+1)}/z\bigr)}{\sqrt{(n+1)(\zeta\,q^{1/(n+1)})^{-n}}}\,(1 + O(z))$$
+$$\mathcal{I}_{\Gamma_{x_\zeta}}(q, z) \sim (2\pi z)^{n/2}\,\frac{\exp\bigl((n+1)\,\zeta\,q^{1/(n+1)}/z\bigr)}{\sqrt{(n+1)(\zeta\,q^{1/(n+1)})^{n}}}\,(1 + O(z))$$
 
 가 따른다.
 :::

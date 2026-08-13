@@ -48,7 +48,7 @@ dual numbers 위에서의 변형은 변형이론의 "일차 항"에 해당한다
 
 ## 평탄 변형과 일차 변형
 
-변형에서 결정적인 조건은 *flatness<sub>flatness</sub>*이다. Flatness가 없으면 base 위의 점마다 fiber의 크기가 멋대로 변할 수 있어 "연속적인 가족"이라는 직관이 무너진다. Flatness는 fiber가 base를 따라 일정한 방식으로 변한다는 것을 보장한다.
+변형에서 결정적인 조건은 *flatness*이다. Flatness가 없으면 base 위의 점마다 fiber의 크기가 멋대로 변할 수 있어 "연속적인 가족"이라는 직관이 무너진다. Flatness는 fiber가 base를 따라 일정한 방식으로 변한다는 것을 보장한다.
 
 ::: 정의 3
 $A$-algebra $B$와 square-zero extension $0\rightarrow M\rightarrow A'\rightarrow A\rightarrow0$이 주어졌다 하자. $B$의 $A'$ 위로의 *변형<sub>deformation</sub>*이란, $A'$ 위에서 flat한 $A'$-algebra $B'$과 $A'$-algebra isomorphism $B'\otimes_{A'}A\cong B$의 짝을 뜻한다. 두 변형 $B', B''$이 *isomorphic*이라는 것은 $A$ 위로 환원했을 때 $B$ 위의 항등사상을 유도하는 $A'$-algebra isomorphism $B'\cong B''$이 존재하는 것이다.
@@ -91,7 +91,7 @@ $$\varphi:I/I^2\longrightarrow B$$
 
 를 well-defined하게 정의한다. 거꾸로 임의의 $\varphi\in\Hom_B(I/I^2,B)$은 $g_j\in P$를 $\varphi(\overline{f_j})=\overline{g_j}$이도록 택하여 flat한 first-order deformation을 준다. 즉 flat한 first-order deformation의 집합은 $\Hom_B(I/I^2,B)$와 자연스럽게 대응한다.
 
-남은 일은 이 중 어떤 것들이 isomorphic인지, 곧 자명한 변형을 걸러내는 것이다. 변형 $B'=B[\epsilon]$ (즉 모든 $g_j=0$)에 isomorphic인 변형을 *trivial*하다 부른다. 좌표변환 $\x_i\mapsto\x_i+\epsilon\theta(\x_i)$ ($\theta\in\Hom_k(P,B)$를 derivation으로 확장)에 의한 $P[\epsilon]$의 automorphism은 $f_j$를 $f_j+\epsilon\sum_i\theta(\x_i)(\partial f_j/\partial\x_i)=f_j+\epsilon\theta(f_j)$로 옮기므로, trivial한 변형들은 정확히 $\varphi$가 derivation에서 오는 경우, 곧 합성
+남은 일은 이 중 어떤 것들이 isomorphic인지, 곧 trivial한 변형을 걸러내는 것이다. 변형 $B'=B[\epsilon]$ (즉 모든 $g_j=0$)에 isomorphic인 변형을 *trivial*하다 부른다. 좌표변환 $\x_i\mapsto\x_i+\epsilon\theta(\x_i)$ (각 $\theta(\x_i)\in B$를 임의로 정하고 derivation으로 확장하여 얻는 $\theta\in\Der_k(P,B)$)에 의한 $P[\epsilon]$의 automorphism은 $f_j$를 $f_j+\epsilon\sum_i\theta(\x_i)(\partial f_j/\partial\x_i)=f_j+\epsilon\theta(f_j)$로 옮기므로, trivial한 변형들은 정확히 $\varphi$가 derivation에서 오는 경우, 곧 합성
 
 $$\Der_k(P,B)=\Hom_B(\Omega_{P/k}\otimes_PB,B)\overset{\overline{d}^\ast}{\longrightarrow}\Hom_B(I/I^2,B)$$
 
@@ -148,7 +148,7 @@ $$\Hom_B(I/I^2,B)\big/\im\overline{d}^\ast=\coker\overline{d}^\ast=T^1(B/k,B)$$
 $A$-algebra $B$와 $B$-module $M$에 대하여, $B$를 $M$으로 확대하는 square-zero $A$-algebra 확대 $0\rightarrow M\rightarrow B'\rightarrow B\rightarrow0$의 isomorphism class 집합 $\operatorname{Exal}_A(B,M)$은 $T^1(B/A,M)$과 자연스럽게 일대일 대응한다.
 :::
 ::: 증명
-[정리 7](#thm7)의 논증은 base가 일반적인 $A$이고 흔드는 module이 일반적인 $M$일 때로 그대로 옮겨진다. Presentation $B=P/I$에서 확대 $B'$은 $B'=P\oplus M$ 위에 $P$의 곱과 $I$의 action을 비틀어 주는 데이터로 기술되고, 그 비틂은 $\Hom_B(I/I^2,M)$의 원소가, 동형의 자유도는 $\Der_A(P,M)$이 흡수하여, isomorphism class가 $\coker=T^1(B/A,M)$로 떨어진다. 완전한 증명과 $T^1(B/A,M)\cong\Ext^1_B(L_{B/A},M)$이라는 여접 복합체 형태의 진술은 ([Ill], [Ser])에 있다.
+[정리 7](#thm7)의 논증은 base가 일반적인 $A$이고 흔드는 module이 일반적인 $M$일 때로 그대로 옮겨진다. Presentation $B=P/I$에서 확대 $B'$은 각 $f\in I$를 $M$의 한 원소와 동일시하여 $P\oplus M$을 quotient한 것으로 기술되고, 그 비틂은 $\Hom_B(I/I^2,M)$의 원소가, 동형의 자유도는 $\Der_A(P,M)$이 흡수하여, isomorphism class가 $\coker=T^1(B/A,M)$로 떨어진다. 완전한 증명과 $T^1(B/A,M)\cong\Ext^1_B(L_{B/A},M)$이라는 여접 복합체 형태의 진술은 ([Ill], [Ser])에 있다.
 :::
 
 [명제 8](#prop8)을 dual numbers $A'=A[\epsilon]$, $M=B$의 경우에 적용하면 [정리 7](#thm7)의 일반 base 형태를 얻는다. 곧 $\operatorname{Exal}$은 변형의 일차 데이터를 담는 보편적인 그릇이며, $T^1$이 그것을 측정한다.
@@ -162,7 +162,7 @@ $\xi\in T^1(B/k,B)$를 first-order deformation이라 하자. 그럼 $\xi$가 $k[
 
 $$\operatorname{ob}(\xi)\in T^2(B/k,B)$$
 
-가 자연스럽게 정의되며, $\xi$가 연장 가능한 것은 $\operatorname{ob}(\xi)=0$인 것과 동치이다. 더 일반적으로, square-zero extension $0\rightarrow M\rightarrow A'\rightarrow A\rightarrow0$과 $A$ 위의 변형 $B_A$에 대하여, $B_A$를 $A'$ 위로 연장하는 것에 대한 장애는 $T^2(B/A,B\otimes_AM)$의 한 원소이고, 연장이 존재할 때 그 isomorphism class들은 $T^1(B/A,B\otimes_AM)$ 위의 torsor를 이룬다.
+가 자연스럽게 정의되며, $\xi$가 연장 가능한 것은 $\operatorname{ob}(\xi)=0$인 것과 동치이다. 더 일반적으로, square-zero extension $0\rightarrow M\rightarrow A'\rightarrow A\rightarrow0$과 $A$ 위의 변형 $B_A$에 대하여, $B_A$를 $A'$ 위로 연장하는 것에 대한 장애는 $T^2(B_A/A,B_A\otimes_AM)$의 한 원소이고, 연장이 존재할 때 그 isomorphism class들은 $T^1(B_A/A,B_A\otimes_AM)$ 위의 torsor를 이룬다.
 :::
 ::: 증명
 $\xi$를 [명제 4](#prop4)와 같이 $F_j=f_j+tg_j$로 실현하자. Flatness에 의하여 각 생성 syzygy $(a_j^{(r)})$에 대하여 $\sum_ja_j^{(r)}g_j=\sum_jc_j^{(r)}f_j$이도록 하는 $c_j^{(r)}\in P$가 존재한다. 이제 $k[t]/(t^3)$ 위로 연장하려면 $F_j^{(2)}=f_j+tg_j+t^2h_j$를 택하여 syzygy가 이차까지 들어올려지도록 해야 한다. [명제 4](#prop4)의 증명에서처럼 일차 syzygy lift $R_j^{(r)}=a_j^{(r)}-tc_j^{(r)}$를 잡으면
@@ -178,7 +178,7 @@ $$\sum_jc_j^{(r)}g_j\equiv\sum_ja_j^{(r)}h_j\pmod I$$
 
 장애의 정체는 이렇게 명료하다. First-order deformation은 syzygy를 일차까지 들어올린 뒤 남는 이차 잔여항 $-t^2\sum c_jg_j$를 만들고, 이 잔여항을 $h_j$의 선택으로 흡수할 수 있는지가 연장 가능성이며, 흡수의 실패를 $T^2$가 잰다. 여기서 잔여항이 syzygy의 데이터로 표현되고, 그것이 Koszul 관계를 넘어서는 부분에서만 의미를 가지므로 $L_2=\operatorname{Syz}/\operatorname{Kos}$가 등장한 것이다. 이 장애를 반복적으로 소거하며 더 높은 차수로 변형을 쌓아 올리면, 그 limit으로 complete local ring 위의 formal deformation을 얻는다 ([Ser]).
 
-## Smooth한 경우와 국소 완전교차
+## Smooth한 경우와 local complete intersection
 
 장애와 first-order deformation이 가장 단순해지는 경우가 smooth한 경우이다.
 
@@ -194,12 +194,12 @@ $B$가 smooth하면 ([\[스킴\] §매끄러운 사상과 étale 사상, ⁋명�
 
 $$0\longrightarrow I/I^2\overset{\overline{d}}{\longrightarrow}\Omega_{P/k}\otimes_PB\longrightarrow\Omega_{B/k}\longrightarrow0$$
 
-이 왼쪽에서도 split되는 short exact sequence가 되어 $\overline{d}$가 injective이고 그 cokernel $\Omega_{B/k}$이 projective이다. 따라서 $H_1(\operatorname{NL}_{B/k})=\ker\overline{d}=0$이고 $\operatorname{NL}_{B/k}$은 projective module $\Omega_{B/k}$ 하나에 quasi-isomorphic하다. 그럼 $\Hom_B(\operatorname{NL}_{B/k},M)$이 $\Hom_B(\Omega_{B/k},M)$ 한 항에 집중되어 $T^1=0$이다. $T^2=0$도 split된 exact sequence로부터 $L_2$가 소멸하여 따른다. 무한소 automorphism에 관한 주장은 [정리 7](#thm7)의 일반 형태이다.
+이 왼쪽에서도 split되는 short exact sequence가 되어 $\overline{d}$가 injective이고 그 cokernel $\Omega_{B/k}$이 projective이다. 따라서 $H_1(\operatorname{NL}_{B/k})=\ker\overline{d}=0$이고 $\operatorname{NL}_{B/k}$은 projective module $\Omega_{B/k}$ 하나에 quasi-isomorphic하다. 그럼 $\Hom_B(\operatorname{NL}_{B/k},M)$이 $\Hom_B(\Omega_{B/k},M)$ 한 항에 집중되어 $T^1=0$이다. $T^2=0$은 [참고 6](#rmk6)의 $T^i(B/k,M)=\Ext^i_B(L_{B/k},M)$과, smooth한 $B$에 대하여 $L_{B/k}$가 이 projective module $\Omega_{B/k}$ 하나에 quasi-isomorphic하다는 사실로부터 따른다. 무한소 automorphism에 관한 주장은 [정리 7](#thm7)의 일반 형태이다.
 
 이 결론은 [\[스킴\] §매끄러운 사상과 étale 사상, ⁋정리 12](/ko/math/scheme_theory/smooth_and_etale_morphisms#thm12)과 정확히 일치한다. Smooth는 모든 square-zero 확대에 대한 lifting의 존재($T^2=0$, unobstructed)와 그 lifting의 일대일적 통제($T^1=0$, 동형 유일)에 해당하기 때문이다.
 :::
 
-조금 더 약한 가정인 *local complete intersection* (국소 완전교차)에서도 장애는 사라진다. $B=P/I$에서 $I$가 국소적으로 regular sequence로 생성되면 완전한 여접 복합체 $L_{B/k}$가 $[0,1]$ 두 degree에 projective module로 집중되어, 그 dual의 둘째 cohomology가 자동으로 $0$이 되기 때문이다. 곧 $T^2(B/k,M)=0$이고 lci singular point는 항상 *unobstructed<sub>장애 없음</sub>*이다. 다만 lci라고 해서 $H_1(\operatorname{NL}_{B/k})$이 소멸하는 것은 아니며, 반대로 아래 [예시 11](#ex11)처럼 singular한 lci가 $H_1(\operatorname{NL}_{B/k})=0$을 만족하기도 한다. 곧 $H_1(\operatorname{NL})$의 소멸만으로는 lci 여부가 판정되지 않으며, smoothness는 $H_1(\operatorname{NL}_{B/k})=0$과 $\Omega_{B/k}$의 국소자유성이 함께 성립하는 것으로 특징지어진다.
+조금 더 약한 가정인 *local complete intersection*에서도 장애는 사라진다. $B=P/I$에서 $I$가 국소적으로 regular sequence로 생성되면 완전한 여접 복합체 $L_{B/k}$가 $[0,1]$ 두 degree에 projective module로 집중되어, 그 dual의 둘째 cohomology가 자동으로 $0$이 되기 때문이다. 곧 $T^2(B/k,M)=0$이고 lci singular point는 항상 *unobstructed<sub>장애 없음</sub>*이다. 다만 lci라고 해서 $H_1(\operatorname{NL}_{B/k})$이 소멸하는 것은 아니며, 반대로 아래 [예시 11](#ex11)처럼 singular한 lci가 $H_1(\operatorname{NL}_{B/k})=0$을 만족하기도 한다. 곧 $H_1(\operatorname{NL})$의 소멸만으로는 lci 여부가 판정되지 않으며, smoothness는 $H_1(\operatorname{NL}_{B/k})=0$과 $\Omega_{B/k}$의 국소자유성이 함께 성립하는 것으로 특징지어진다.
 
 ## 예시: 매끄러운 변형부터 장애까지
 

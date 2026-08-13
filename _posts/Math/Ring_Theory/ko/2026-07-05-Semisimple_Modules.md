@@ -39,7 +39,7 @@ Index 집합 $I$가 공집합인 경우도 허용하므로 $0$은 semisimple mod
 ::: 예시 3
 1. Division ring $D$를 자기 자신 위의 left module로 보면, $D$의 submodule은 left ideal이고, nonzero left ideal $I$는 $0\neq x\in I$에 대해 $1=x^{-1}x\in I$이므로 $I=D$이다. 즉 $D$는 simple $D$-module이다. 일반적으로 $D$ 위의 벡터 space $V$는 기저 $B$를 갖고 (field의 경우와 동일한 Zorn 논증), $V=\bigoplus_{b\in B}Db$는 simple submodule들의 direct sum이므로 $V$는 semisimple이다.
 2. $\mathbb{Z}$-module $\mathbb{Z}/6\mathbb{Z}\cong\mathbb{Z}/2\mathbb{Z}\oplus\mathbb{Z}/3\mathbb{Z}$은 semisimple이다. 각 인자는 소수 개의 원소를 갖는 abelian group이므로 proper nonzero subgroup을 가질 수 없어 simple이다.
-3. 반면 $\mathbb{Z}$ 자신은 semisimple이 아니다. $\mathbb{Z}$의 두 nonzero submodule $m\mathbb{Z}$, $n\mathbb{Z}$은 언제나 $mn\neq 0$을 공유하므로 $\mathbb{Z}$는 simple submodule을 하나도 갖지 않는다. $\mathbb{Z}/4\mathbb{Z}$ 또한 semisimple이 아닌데, 유일한 proper nonzero submodule $2\mathbb{Z}/4\mathbb{Z}$가 직합의 인자가 될 수 없기 때문이다.
+3. 반면 $\mathbb{Z}$ 자신은 semisimple이 아니다. $\mathbb{Z}$의 nonzero submodule은 $m\neq 0$에 대한 $m\mathbb{Z}$ 꼴인데 이는 proper nonzero submodule $2m\mathbb{Z}$을 포함하므로, $\mathbb{Z}$는 simple submodule을 하나도 갖지 않는다. $\mathbb{Z}/4\mathbb{Z}$ 또한 semisimple이 아닌데, 유일한 proper nonzero submodule $2\mathbb{Z}/4\mathbb{Z}$가 직합의 인자가 될 수 없기 때문이다.
 :::
 
 Semisimple module의 유용성은 대부분 다음 보조정리에서 나온다. 이는 simple submodule들의 합이 주어지면, 임의의 submodule을 그 합의 일부로 언제나 보완할 수 있다는 것이다.

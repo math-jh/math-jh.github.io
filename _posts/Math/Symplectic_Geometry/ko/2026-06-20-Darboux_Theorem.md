@@ -44,7 +44,7 @@ $$\dd{\alpha}=\dd{(h\beta)}=\psi_1^\ast\beta=\beta$$
 마지막으로 $\beta_0=0$인 경우를 보자. 위 적분식에서 $\alpha_x=(h\beta)_x$는 피적분함수 $t^{k-1}\beta_{tx}(x,-)$의 적분이다. $x=0$을 대입하면 모든 $t$에 대해 피적분함수가 $\beta_0(0,-)=0$이므로 $\alpha_0=0$이다.
 :::
 
-위 보조정리에서 구성한 $\alpha$는 단지 존재할 뿐 아니라 $\beta$에 선형적으로 의존하므로, 본문에서 $\beta=\omega-\omega_0$에 적용할 때 $\omega$와 $\omega_0$이 한 점에서 일치하면 $\beta$가 그 점에서 사라지고, 따라서 $\alpha$ 또한 그 점에서 사라지도록 택할 수 있다. 이 마지막 성질은 Moser의 방법에서 생성하는 벡터장이 중심점을 fixed point로 갖게 하여, 흐름이 그 점 근방에서 짧은 시간 동안 잘 정의되도록 보장하는 데 결정적이다.
+위 보조정리에서 구성한 $\alpha$는 단지 존재할 뿐 아니라 $\beta$에 선형적으로 의존하므로, 본문에서 $\beta=\omega-\omega_0$에 적용할 때 $\omega$와 $\omega_0$이 한 점에서 일치하면 $\beta$가 그 점에서 사라지고, 따라서 $\alpha$ 또한 그 점에서 사라지도록 택할 수 있다. 이 마지막 성질은 Moser의 방법에서 생성하는 벡터장이 중심점을 fixed point로 갖게 하여, 흐름이 그 점 근방에서 모든 $t\in[0,1]$에 대해 잘 정의되도록 보장하는 데 결정적이다.
 
 ## Moser의 방법과 Darboux 정리
 
@@ -58,7 +58,7 @@ $$\varphi^\ast\omega_0=\omega\vert_U$$
 가 성립한다. 여기서 $\omega_0=\sum_{i=1}^n \dd{x_i}\wedge \dd{y_i}$은 $\mathbb{R}^{2n}$의 canonical symplectic form이다. 즉 $U$에서 좌표 $(x_1,\ldots,x_n,y_1,\ldots,y_n)$을 적당히 택하면 $\omega=\sum_{i=1}^n \dd{x_i}\wedge \dd{y_i}$로 적힌다.
 :::
 ::: 증명
-문제가 국소적이므로, 우선 $p$ 근방의 임의의 좌표계를 잡아 상황을 $\mathbb{R}^{2n}$의 원점 $0$ 근방에서의 문제로 옮긴다. 즉 $0$의 열린근방 위에서 symplectic form $\omega$가 주어졌고 $p$가 $0$에 대응한다고 가정해도 좋으며, 우리의 목표는 $0$ 근방에서 정의된 diffeomorphism $\varphi$로 $0$을 고정하고 $\varphi^\ast\omega_0=\omega$를 만족하는 것을 찾는 것이다.
+문제가 국소적이므로, 우선 $p$ 근방의 임의의 coordinate system을 잡아 상황을 $\mathbb{R}^{2n}$의 원점 $0$ 근방에서의 문제로 옮긴다. 즉 $0$의 열린근방 위에서 symplectic form $\omega$가 주어졌고 $p$가 $0$에 대응한다고 가정해도 좋으며, 우리의 목표는 $0$ 근방에서 정의된 diffeomorphism $\varphi$로 $0$을 고정하고 $\varphi^\ast\omega_0=\omega$를 만족하는 것을 찾는 것이다.
 
 **1단계 (한 점에서의 표준화).** $\omega_0$의 원점에서의 값 $\omega_0\vert_0$과 $\omega$의 원점에서의 값 $\omega\vert_0$을 $T_0\mathbb{R}^{2n}$ 위의 두 linear symplectic form으로 비교한다. ([§사교벡터공간, ⁋보조정리 2](/ko/math/symplectic_geometry/linear_symplectic_geometry#lem2)에 의하여) 두 linear symplectic form은 적당한 선형동형으로 옮겨지므로, 원점에서의 선형좌표변환 $A\in\GL(2n;\mathbb{R})$을 취하여 $A^\ast(\omega_0\vert_0)=\omega\vert_0$이 성립하도록 할 수 있다. $A$로 좌표를 한 번 더 바꾸면, 처음부터
 
@@ -72,9 +72,9 @@ $$\omega_t=\omega_0+t(\omega-\omega_0)=(1-t)\omega_0+t\omega,\qquad t\in[0,1]$$
 
 으로 정의한다. 각 $\omega_t$는 closed인 두 form의 일차결합이므로 $\dd{\omega_t}=0$이다. 한편 nondegeneracy를 살펴보자. 원점에서는 $\omega\vert_0=\omega_0\vert_0$이므로 모든 $t$에 대해
 
-$$\omega_t\vert_0=(1-t)\,\omega_0\vert_0+t\,\omega\vert_0=\omega_0\vert_0$$
+$$\omega_t\vert_0=(1-t)\omega_0\vert_0+t\omega\vert_0=\omega_0\vert_0$$
 
-이고, 이는 nondegenerate이다. Nondegeneracy는 $(\omega_t)_x^{\,n}\neq 0$이라는 열린조건이고 $[0,1]$이 compact이므로, $0$의 충분히 작은 열린공 $B$가 존재하여 모든 $x\in B$와 모든 $t\in[0,1]$에 대해 $(\omega_t)_x$가 nondegenerate이도록 할 수 있다. 따라서 $B$ 위에서 $\{\omega_t\}_{t\in[0,1]}$은 symplectic form들의 경로이다.
+이고, 이는 nondegenerate이다. Nondegeneracy는 $(\omega_t)_x^n\neq 0$이라는 열린조건이고 $[0,1]$이 compact이므로, $0$의 충분히 작은 열린공 $B$가 존재하여 모든 $x\in B$와 모든 $t\in[0,1]$에 대해 $(\omega_t)_x$가 nondegenerate이도록 할 수 있다. 따라서 $B$ 위에서 $\{\omega_t\}_{t\in[0,1]}$은 symplectic form들의 경로이다.
 
 **3단계 ($\alpha$의 선택).** $\omega-\omega_0$은 $B$ 위에서 closed이고, $B$가 볼록이므로 [보조정리 1](#lem1)에 의하여 $1$-form $\alpha$가 존재하여
 
@@ -112,7 +112,7 @@ $$\frac{d}{\dd{t}}(\phi_t^\ast\omega_t)=\phi_t^\ast\dd{(0)}=0$$
 
 $$\phi_1^\ast\omega_1=\phi_0^\ast\omega_0=\id^\ast\omega_0=\omega_0$$
 
-이다. 한편 $\omega_1=\omega$이므로, $\phi_1$은 원점을 고정하는 diffeomorphism이며 $\phi_1^\ast\omega=\omega_0$을 만족한다. 따라서 $\varphi=\phi_1$로 두면 $\varphi^\ast\omega_0$이 아니라 $\phi_1^\ast\omega=\omega_0$을 얻으므로, 원하는 좌표사상은 $\varphi=\phi_1^{-1}$이다. 실제로 $\phi_1^\ast\omega=\omega_0$의 양변에 $(\phi_1^{-1})^\ast$를 적용하면 $\omega=(\phi_1^{-1})^\ast\omega_0$, 즉 $(\phi_1^{-1})^\ast\omega_0=\omega$이고, $\phi_1^{-1}$은 원점을 고정한다. 처음에 잡은 좌표계와 1단계의 선형변환을 합성하면, 이는 곧 $M$의 원래 점 $p$ 근방에서 $\varphi(p)=0$, $\varphi^\ast\omega_0=\omega$를 만족하는 좌표사상을 준다.
+이다. 한편 $\omega_1=\omega$이므로, $\phi_1$은 원점을 고정하는 diffeomorphism이며 $\phi_1^\ast\omega=\omega_0$을 만족한다. 따라서 $\varphi=\phi_1$로 두면 $\varphi^\ast\omega_0$이 아니라 $\phi_1^\ast\omega=\omega_0$을 얻으므로, 원하는 좌표사상은 $\varphi=\phi_1^{-1}$이다. 실제로 $\phi_1^\ast\omega=\omega_0$의 양변에 $(\phi_1^{-1})^\ast$를 적용하면 $\omega=(\phi_1^{-1})^\ast\omega_0$, 즉 $(\phi_1^{-1})^\ast\omega_0=\omega$이고, $\phi_1^{-1}$은 원점을 고정한다. 처음에 잡은 coordinate system과 1단계의 선형변환을 합성하면, 이는 곧 $M$의 원래 점 $p$ 근방에서 $\varphi(p)=0$, $\varphi^\ast\omega_0=\omega$를 만족하는 좌표사상을 준다.
 :::
 
 위 증명에서 얻은 좌표 $(x_1,\ldots,x_n,y_1,\ldots,y_n)$을 *Darboux 좌표<sub>Darboux coordinates</sub>*라 부른다. 이 좌표에서 [§사교다양체, ⁋정의 6](/ko/math/symplectic_geometry/symplectic_manifold#def6)의 Hamiltonian 벡터장은 [§고전역학, ⁋명제 1](/ko/math/symplectic_geometry/classical_mechanics#prop1)의 Hamilton 방정식 그대로 적히므로, Darboux 정리는 모든 symplectic manifold가 국소적으로 고전역학의 phase space와 동일함을 말한다.
@@ -123,7 +123,7 @@ Moser의 방법의 핵심은 두 군데에서 nondegeneracy를 사용한다는 �
 
 ## Moser 안정성 정리
 
-Moser의 방법은 한 점 근방이 아니라 compact manifold 전체에서도 작동하며, 이때 얻어지는 결과가 Moser stability 정리이다. Darboux 정리에서는 두 form $\omega_0$과 $\omega$이 한 점에서 일치한다는 사실로부터 $\alpha$가 그 점에서 사라지게 만들어 흐름이 짧은 시간 동안 존재함을 보장하였다. 대역적인 경우에는 $M$이 compact라는 가정이 흐름의 대역적 존재를 보장하는 역할을 대신하며, $\omega-\omega_0$이 exact라는 조건이 $\alpha$의 존재를 준다.
+Moser의 방법은 한 점 근방이 아니라 compact manifold 전체에서도 작동하며, 이때 얻어지는 결과가 Moser stability 정리이다. Darboux 정리에서는 두 form $\omega_0$과 $\omega$이 한 점에서 일치한다는 사실로부터 $\alpha$가 그 점에서 사라지게 만들어 흐름이 그 점의 근방에서 모든 $t\in[0,1]$에 대해 존재함을 보장하였다. 대역적인 경우에는 $M$이 compact라는 가정이 흐름의 대역적 존재를 보장하는 역할을 대신하며, $\omega-\omega_0$이 exact라는 조건이 $\alpha$의 존재를 준다.
 
 ::: 정리 4 (Moser 안정성)
 $M$이 boundary가 없는 compact manifold이고, $\{\omega_t\}_{t\in[0,1]}$이 $M$ 위의 symplectic form들의 $C^\infty$ 경로라 하자. 만일 de Rham cohomology class $[\omega_t]\in H^2_{\mathrm{dR}}(M)$이 모든 $t$에 대해 일정하다면, isotopy $\{\phi_t\}_{t\in[0,1]}$이 존재하여 $\phi_0=\id$이고

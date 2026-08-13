@@ -136,9 +136,9 @@ $$\zeta^2=i,\qquad \zeta-\zeta^3=\zeta+\zeta^{-1}=\sqrt2,\qquad \zeta+\zeta^3=\z
 
 이며, 특히 $\mathbb{Q}(\zeta_8)=\mathbb{Q}(i,\sqrt2)$이다. 즉 $\mathbb{Q}$에 $1$의 $8$제곱근을 추가하는 것만으로 $\sqrt2$가 얻어진다.
 
-한편 $(\mathbb{Z}/8\mathbb{Z})^\times=\{1,3,5,7\}$은 항등원이 아닌 모든 원소의 order가 $2$이므로 $\mathbb{Z}/2\mathbb{Z}\times\mathbb{Z}/2\mathbb{Z}$와 isomorphic하고, 따라서 자명하지 않은 proper subgroup을 정확히 세 개 갖는다. [정리 7](#thm7)에 의해 $\zeta\mapsto\zeta^a$로 주어지는 automorphism $\sigma_a$가 각각의 $a$마다 존재하며, [따름정리 5](#cor5)와 [§대수적 확장, ⁋정리 15](/ko/math/field_theory/algebraic_extensions#thm15)에 의해 $1,\zeta,\zeta^2,\zeta^3$은 $\mathbb{Q}(\zeta_8)$의 $\mathbb{Q}$-basis이므로, $x=a+b\zeta+c\zeta^2+\dd{\zeta}^3$에 대하여 $\zeta^4=-1$을 사용하면
+한편 $(\mathbb{Z}/8\mathbb{Z})^\times=\{1,3,5,7\}$은 항등원이 아닌 모든 원소의 order가 $2$이므로 $\mathbb{Z}/2\mathbb{Z}\times\mathbb{Z}/2\mathbb{Z}$와 isomorphic하고, 따라서 자명하지 않은 proper subgroup을 정확히 세 개 갖는다. [정리 7](#thm7)에 의해 $\zeta\mapsto\zeta^a$로 주어지는 automorphism $\sigma_a$가 각각의 $a$마다 존재하며, [따름정리 5](#cor5)와 [§대수적 확장, ⁋정리 15](/ko/math/field_theory/algebraic_extensions#thm15)에 의해 $1,\zeta,\zeta^2,\zeta^3$은 $\mathbb{Q}(\zeta_8)$의 $\mathbb{Q}$-basis이므로, $x=a+b\zeta+c\zeta^2+d\zeta^3$에 대하여 $\zeta^4=-1$을 사용하면
 
-$$\sigma_5(x)=a-b\zeta+c\zeta^2-\dd{\zeta}^3,\qquad \sigma_7(x)=a-\dd{\zeta}-c\zeta^2-b\zeta^3,\qquad \sigma_3(x)=a+\dd{\zeta}-c\zeta^2+b\zeta^3$$
+$$\sigma_5(x)=a-b\zeta+c\zeta^2-d\zeta^3,\qquad \sigma_7(x)=a-d\zeta-c\zeta^2-b\zeta^3,\qquad \sigma_3(x)=a+d\zeta-c\zeta^2+b\zeta^3$$
 
 을 얻는다. 따라서 $\sigma_5(x)=x$인 것은 $b=d=0$인 것이고, $\sigma_7(x)=x$인 것은 $c=0$이고 $d=-b$인 것이며, $\sigma_3(x)=x$인 것은 $c=0$이고 $d=b$인 것이다. 위의 등식들을 사용하여 이를 다시 쓰면 세 subgroup $\langle\sigma_5\rangle$, $\langle\sigma_7\rangle$, $\langle\sigma_3\rangle$의 fixed field가 각각
 

@@ -1,7 +1,7 @@
 ---
 title: "균등수렴"
-description: "함수열의 균등수렴을 상한노름으로 정의하고, 균등극한이 연속성을 보존하며 극한과 적분이 교환됨을 증명한다. 함수항급수의 균등수렴을 보장하는 바이어슈트라스 M-판정법을 다룬다."
-excerpt: "균등수렴, 연속성과 적분의 보존, 바이어슈트라스 M-판정"
+description: "함수열의 균등수렴을 상한노름으로 정의하고, 균등극한이 연속성을 보존하며 극한과 적분이 교환됨을 증명한다. 함수항급수의 균등수렴을 보장하는 Weierstrass M-판정법을 다룬다."
+excerpt: "균등수렴, 연속성과 적분의 보존, Weierstrass M-판정"
 
 categories: [Math / Analysis]
 permalink: /ko/math/analysis/uniform_convergence
@@ -60,16 +60,16 @@ $$\left\lvert\int_a^b f_n - \int_a^b f\right\rvert \leq \int_a^b \lvert f_n - f\
 
 [§함수열과 점별수렴, ⁋예시 3](/ko/math/analysis/sequences_of_functions#ex3)의 반례에서 적분이 교환되지 않았던 것은 그 수렴이 균등하지 않았기 때문이다. (미분에 대해서는 더 강하게, $f_n'$ 자체의 균등수렴을 요구해야 극한과 미분이 교환된다.)
 
-## 바이어슈트라스 M-판정
+## Weierstrass M-판정
 
 Function series $\sum f_n$의 균등수렴을 보장하는 실용적 기준이다.
 
-::: 정리 4 (바이어슈트라스 M-판정)
+::: 정리 4 (Weierstrass M-판정)
 모든 $x$에서 $\lvert f_n(x)\rvert \leq M_n$이고 수치급수 $\sum M_n$이 수렴하면, function series $\sum f_n$은 균등수렴(이며 절대수렴)한다.
 :::
 
 ::: 증명
-부분합 $s_N = \sum_{n=1}^N f_n$을 생각하자. $M > N$에 대해 $\lVert s_M - s_N\rVert_\infty \leq \sum_{n=N+1}^M M_n$인데, $\sum M_n$이 수렴하므로 우변은 $N \rightarrow \infty$에서 $0$으로 간다. 즉 $(s_N)$이 상한노름에 대해 Cauchy이고, 따라서 극한함수로 균등수렴한다 ([§Cauchy 수열과 완비성](/ko/math/analysis/cauchy_sequences)의 완비성 논법을 상한노름 공간에 적용).
+부분합 $s_N = \sum_{n=1}^N f_n$을 생각하자. $M > N$에 대해 $\lVert s_M - s_N\rVert_\infty \leq \sum_{n=N+1}^M M_n$인데, $\sum M_n$이 수렴하므로 우변은 $N \rightarrow \infty$에서 $0$으로 간다. 즉 $(s_N)$이 상한노름에 대해 Cauchy이고, 따라서 아래 [명제 5](#prop5)에 의해 어떤 극한함수로 균등수렴한다. 각 $x$에서 $\sum \lvert f_n(x)\rvert \leq \sum M_n < \infty$이므로 절대수렴도 따라 나온다.
 :::
 
 M-판정의 위력은 극한함수의 정체를 전혀 몰라도, 각 항의 크기를 $x$에 무관한 수 $M_n$으로 위에서 누르기만 하면 균등수렴이 따라 나온다는 데 있다. 이때 $\sum M_n$이 수렴하는지는 [§무한급수](/ko/math/analysis/series)에서 익힌 수치급수 판정법으로 결정되므로, function series의 균등수렴 문제가 익숙한 수치급수의 수렴 문제로 환원된다. 가령 $\sum \sin(nx)/n^2$은 $\lvert\sin\rvert \leq 1$로 $x$ 의존성을 한 번에 지워 $M_n = 1/n^2$을 얻으므로 $\mathbb{R}$ 전체에서 균등수렴하며, 더 일반적으로 $\sum a_n \sin(nx)$은 $\sum \lvert a_n\rvert < \infty$이면 같은 방식으로 균등수렴한다. 다만 M-판정은 충분조건일 뿐이어서, 이를 통과하지 못한다고 해서 균등수렴이 곧 부정되는 것은 아니다.
@@ -136,12 +136,12 @@ $$\lim_{n\rightarrow\infty} f_n'(0) \neq \Bigl(\lim_{n\rightarrow\infty} f_n\Big
 
 [예시 7](#ex7)은 적분과 달리 미분은 균등수렴만으로 극한과 교환되지 않음을 드러낸다. 마지막으로 균등수렴이 함수의 boundedness를 보존함을 확인해 두자.
 
-::: 명제 8 (유계성의 보존)
-Bounded function들의 열 $(f_n)$이 $f$로 균등수렴하면 $f$도 유계이다.
+::: 명제 8 (boundedness의 보존)
+Bounded function들의 열 $(f_n)$이 $f$로 균등수렴하면 $f$도 bounded이다.
 :::
 
 ::: 증명
-균등수렴으로 $\lVert f_N - f\rVert_\infty < 1$인 $N$을 잡고, $f_N$이 유계이므로 $\lVert f_N\rVert_\infty \leq B$인 $B$를 잡는다. 그러면 모든 $x$에 대해
+균등수렴으로 $\lVert f_N - f\rVert_\infty < 1$인 $N$을 잡고, $f_N$이 bounded이므로 $\lVert f_N\rVert_\infty \leq B$인 $B$를 잡는다. 그러면 모든 $x$에 대해
 
 $$\begin{aligned}
 \lvert f(x)\rvert &\leq \lvert f(x) - f_N(x)\rvert + \lvert f_N(x)\rvert \\
@@ -149,7 +149,7 @@ $$\begin{aligned}
 &< 1 + B
 \end{aligned}$$
 
-이므로 $f$는 상수 $1 + B$로 유계이다.
+이므로 $f$는 상수 $1 + B$로 bounded이다.
 :::
 
 Boundedness의 보존은 점별수렴에서는 깨지는 성질이다 ([§함수열과 점별수렴, ⁋예시 6](/ko/math/analysis/sequences_of_functions#ex6)). 점별수렴은 각 점에서 독립적으로 수렴값을 줄 뿐이어서, 점마다 다른 속도로 수렴하면 극한이 무한정 커질 수 있다. 균등수렴은 단 하나의 $N$으로 모든 점을 동시에 잡아 두므로 이런 일이 일어나지 않으며, [명제 8](#prop8)은 그 차이를 가장 단순하게 드러낸다.

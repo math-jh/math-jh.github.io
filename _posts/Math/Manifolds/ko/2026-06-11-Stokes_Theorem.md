@@ -50,9 +50,9 @@ $$\int_M\dd{\omega}=\int_{\partial M}\iota^\ast\omega$$
 이 성립한다. 특히 $\partial M=\emptyset$이라면 $\int_M\dd{\omega}=0$이다.
 :::
 ::: 증명
-우선 partition of unity를 통해 주장을 국소적인 명제로 줄이자. $M$을 덮는 chart들 $(U_\alpha,x_\alpha)$와 이에 subordinate한 smooth partition of unity $(\phi_i)$를 택하면 ([§미분다양체, §§Smooth partition of unity](/ko/math/manifolds/smooth_manifolds)), $\supp\omega$가 compact이므로 $\omega=\sum_i\phi_i\omega$는 유한 합이다. 한편 $\sum_i\phi_i=1$로부터 $\sum_i\dd{\phi_i}=0$이므로
+우선 partition of unity를 통해 주장을 국소적인 명제로 줄이자. $M$을 덮는 chart들 $(U_\alpha,x_\alpha)$와 이에 subordinate한 smooth partition of unity $(\phi_i)$를 택하면 ([§미분다양체, §§Smooth partition of unity](/ko/math/manifolds/smooth_manifolds#smooth-partition-of-unity)), $\supp\omega$가 compact이므로 $\omega=\sum_i\phi_i\omega$는 유한 합이다. 한편 $\sum_i\phi_i=1$로부터 $\sum_i\dd{\phi_i}=0$이므로
 
-$$\sum_i\dd{(\phi_i\,\omega)}=\sum_i\bigl(\dd{\phi_i}\wedge\omega+\phi_i\dd{\omega}\bigr)=\dd{\omega}$$
+$$\sum_i\dd{(\phi_i\omega)}=\sum_i\bigl(\dd{\phi_i}\wedge\omega+\phi_i\dd{\omega}\bigr)=\dd{\omega}$$
 
 이고, 양변이 모두 $\omega$에 대해 선형이므로 $\supp\omega$가 하나의 chart $(U,x)$에 들어가는 경우만 증명하면 충분하다. $m\geq2$라면 chart를 positively oriented로 택할 수 있다. ([§경계가 있는 다양체](/ko/math/manifolds/manifolds_with_boundary))
 
@@ -94,7 +94,7 @@ $$\int_{\partial M}\iota^\ast\omega=(-1)^m\int_{\mathbb{R}^{m-1}}f_m(r',0)\dd{r}
 
 마지막으로 $m=1$인 경우를 살펴보자. $\omega$는 compactly supported 함수 $f$이고, $\supp f$가 chart $(U,x)$에 들어간다고 하자. Chart의 부호를 $\epsilon=\pm1$이라 하면 적분의 정의에 의해
 
-$$\int_M\dd{f}=\epsilon\int_{x(U)}d\bigl((x^{-1})^\ast f\bigr)$$
+$$\int_M\dd{f}=\epsilon\int_{x(U)}\dd{\bigl((x^{-1})^\ast f\bigr)}$$
 
 이다. 만일 $x(U)$가 $\partial\mathbb{H}^1$과 만나지 않으면 위에서와 같이 기본정리에 의해 양변이 모두 $0$이다. $x(U)$가 경계점 $0$을 포함하면, $g=(x^{-1})^\ast f$에 대하여
 
@@ -125,7 +125,7 @@ $$\int_{[0,1]}\dd{f}=f(1)-f(0)$$
 :::
 
 ::: 참고 4
-미적분학에서 다루는 Green 정리, divergence 정리, 고전적인 Stokes 정리는 모두 [정리 1](#thm1)의 특수한 경우이다. 가령 $\mathbb{R}^2$의 (boundary가 smooth한) 영역 $D$와 $1$-form $\omega=P\dd{x}+Q\dd{y}$에 대하여 $\dd{\omega}=(\partial Q/\partial x-\partial P/\partial y)\dd{x}\wedge \dd{y}$이므로 [정리 1](#thm1)은 Green 정리가 된다. 이들 고전적 정리들에서 등장하는 "반시계 방향"이나 "바깥쪽 법선" 같은 조건들이 정확히 induced orientation의 내용이다.
+미적분학에서 다루는 Green 정리, divergence 정리, 고전적인 Stokes 정리는 모두 [정리 1](#thm1)의 특수한 경우이다. 가령 $\mathbb{R}^2$의 (boundary가 smooth한) bounded 영역 $D$와 $1$-form $\omega=P\dd{x}+Q\dd{y}$에 대하여 $\dd{\omega}=(\partial Q/\partial x-\partial P/\partial y)\dd{x}\wedge \dd{y}$이므로 [정리 1](#thm1)은 Green 정리가 된다. 이들 고전적 정리들에서 등장하는 "반시계 방향"이나 "바깥쪽 법선" 같은 조건들이 정확히 induced orientation의 내용이다.
 :::
 
 ---

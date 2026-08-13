@@ -42,14 +42,14 @@ $$\int_U\omega=\int_Uf\dd{r}^1\cdots \dd{r}^m$$
 으로 정의한다. 우변은 미적분학에서의 (Riemann) 적분이다.
 :::
 
-$f$가 연속이고 compact support를 가지므로 우변의 적분은 잘 정의된다. 주의할 것은 이 정의가 좌표들의 *순서*에 의존한다는 것이다. 가령 $m=2$일 때 $\omega=f\dd{r}^2\wedge \dd{r}^1$로 쓰여진 형식의 적분은 $\dd{r}^2\wedge \dd{r}^1=-\dd{r}^1\wedge \dd{r}^2$이므로 $-\int_Uf\dd{r}^1\dd{r}^2$가 된다.
+$f$가 연속이고 compact support를 가지므로 우변의 적분은 잘 정의된다. 주의할 것은 이 정의가 좌표들의 <em-ko>순서</em-ko>에 의존한다는 것이다. 가령 $m=2$일 때 $\omega=f\dd{r}^2\wedge \dd{r}^1$로 쓰여진 형식의 적분은 $\dd{r}^2\wedge \dd{r}^1=-\dd{r}^1\wedge \dd{r}^2$이므로 $-\int_Uf\dd{r}^1\dd{r}^2$가 된다.
 
 다음은 미적분학의 변수변환 공식이다. 이에 대한 증명은 미적분학의 영역이므로 여기서는 다루지 않는다.
 
 ::: 정리 3 (변수변환)
 두 열린집합 $U,V\subseteq\mathbb{R}^m$ 사이의 diffeomorphism $\varphi:V\rightarrow U$와, compact support를 갖는 연속함수 $f:U\rightarrow\mathbb{R}$가 주어졌다 하자. 그럼 다음의 식
 
-$$\int_Uf\dd{r}^1\cdots \dd{r}^m=\int_V(f\circ\varphi)\,\lvert\det D\varphi\rvert\dd{r}^1\cdots \dd{r}^m$$
+$$\int_Uf\dd{r}^1\cdots \dd{r}^m=\int_V(f\circ\varphi)\lvert\det D\varphi\rvert\dd{r}^1\cdots \dd{r}^m$$
 
 이 성립한다. 여기서 $D\varphi$는 $\varphi$의 Jacobian matrix이다.
 :::
@@ -66,22 +66,22 @@ $$\int_V\varphi^\ast\omega=\int_U\omega$$
 ::: 증명
 $\omega=f\dd{r}^1\wedge\cdots\wedge \dd{r}^m$이라 하자. [§미분형식](/ko/math/manifolds/differential_forms)에서 살펴본 pullback의 정의에 의하여 $\varphi^\ast \dd{r}^i=\dd{(r^i\circ\varphi)}=\sum_{j=1}^m\frac{\partial\varphi^i}{\partial r^j}\dd{r}^j$이고, $\varphi^\ast$가 wedge product를 보존하므로
 
-$$\varphi^\ast\omega=(f\circ\varphi)\,\bigwedge_{i=1}^m\left(\sum_{j=1}^m\frac{\partial \varphi^i}{\partial r^j}\dd{r}^j\right)=(f\circ\varphi)\,\det(D\varphi)\dd{r}^1\wedge\cdots\wedge \dd{r}^m$$
+$$\varphi^\ast\omega=(f\circ\varphi)\bigwedge_{i=1}^m\left(\sum_{j=1}^m\frac{\partial \varphi^i}{\partial r^j}\dd{r}^j\right)=(f\circ\varphi)\det(D\varphi)\dd{r}^1\wedge\cdots\wedge \dd{r}^m$$
 
 이다. 마지막 등식은 행렬식의 정의에 따른 것이다. 한편 $\varphi$가 diffeomorphism이므로 $\supp\varphi^\ast\omega=\varphi^{-1}(\supp\omega)$는 compact이고, 따라서 [정의 2](#def2)와 [정리 3](#thm3)에 의하여
 
-$$\int_V\varphi^\ast\omega=\int_V(f\circ\varphi)\det(D\varphi)\dd{r}^1\cdots \dd{r}^m=\int_V(f\circ\varphi)\,\lvert\det D\varphi\rvert\dd{r}^1\cdots \dd{r}^m=\int_U\omega$$
+$$\int_V\varphi^\ast\omega=\int_V(f\circ\varphi)\det(D\varphi)\dd{r}^1\cdots \dd{r}^m=\int_V(f\circ\varphi)\lvert\det D\varphi\rvert\dd{r}^1\cdots \dd{r}^m=\int_U\omega$$
 
 이다. 두 번째 등식에서 $\det D\varphi>0$ 가정을 사용하였다.
 :::
 
-즉, differential form의 적분은 Jacobian의 행렬식이 항상 양수인 좌표변환에 대해서는 불변이다. [§향, ⁋명제 2](/ko/math/manifolds/orientation#prop2)의 둘째 조건이 정확히 이러한 좌표계들의 모임의 존재를 보장하므로, 우리는 orientable manifold 위에서 적분을 정의할 수 있다.
+즉, differential form의 적분은 Jacobian의 행렬식이 항상 양수인 좌표변환에 대해서는 불변이다. [§향, ⁋명제 2](/ko/math/manifolds/orientation#prop2)의 둘째 조건이 정확히 이러한 coordinate system들의 모임의 존재를 보장하므로, 우리는 orientable manifold 위에서 적분을 정의할 수 있다.
 
 ## 다양체 위에서의 적분
 
 이제 $M$이 $m$차원의 connected orientable manifold라 하고, orientation, 즉 $\bigwedge\nolimits^m(M)\setminus\{0\}$의 component $\Lambda^+$ 하나를 고정하자. ([§향, ⁋정의 1](/ko/math/manifolds/orientation#def1)) Coordinate system $(U,x)$가 *positively oriented*라는 것은 $U$의 모든 점에서 $\dd{x}^1\wedge\cdots\wedge \dd{x}^m$이 $\Lambda^+$에 속하는 것이다. [§향, ⁋명제 2](/ko/math/manifolds/orientation#prop2)의 증명에서 살펴본 것과 같이 $M$은 positively oriented coordinate system들로 덮을 수 있으며, 이들이 겹치는 곳에서 Jacobian의 행렬식은 항상 $0$보다 크다.
 
-우선 support가 하나의 좌표근방에 들어가는 경우를 처리한다.
+우선 support가 하나의 coordinate chart에 들어가는 경우를 처리한다.
 
 ::: 정의 5
 Compactly supported $m$-form $\omega$ on $M$이 어떤 positively oriented coordinate system $(U,x)$에 대하여 $\supp\omega\subseteq U$를 만족한다 하자. 그럼 $\omega$의 적분을 다음의 식
@@ -101,19 +101,19 @@ $$\int_{x(U)}(x^{-1})^\ast\omega=\int_{y(V)}(y^{-1})^\ast\omega$$
 이 성립한다.
 :::
 ::: 증명
-$\supp\omega\subseteq U\cap V$이므로, $(x^{-1})^\ast\omega$는 $x(U\cap V)$ 바깥에서 $0$이고 $(y^{-1})^\ast\omega$는 $y(U\cap V)$ 바깥에서 $0$이다. 따라서 두 적분은 각각 $x(U\cap V)$와 $y(U\cap V)$ 위에서의 적분과 같다. 이제 transition $\varphi=x\circ y^{-1}:y(U\cap V)\rightarrow x(U\cap V)$를 생각하면, 두 좌표계가 모두 positively oriented이므로 $\det D\varphi>0$이고,
+$\supp\omega\subseteq U\cap V$이므로, $(x^{-1})^\ast\omega$는 $x(U\cap V)$ 바깥에서 $0$이고 $(y^{-1})^\ast\omega$는 $y(U\cap V)$ 바깥에서 $0$이다. 따라서 두 적분은 각각 $x(U\cap V)$와 $y(U\cap V)$ 위에서의 적분과 같다. 이제 transition $\varphi=x\circ y^{-1}:y(U\cap V)\rightarrow x(U\cap V)$를 생각하면, 두 coordinate system이 모두 positively oriented이므로 $\det D\varphi>0$이고,
 
 $$\varphi^\ast\bigl((x^{-1})^\ast\omega\bigr)=(x^{-1}\circ\varphi)^\ast\omega=(y^{-1})^\ast\omega$$
 
 이므로 [따름정리 4](#cor4)에 의하여 원하는 등식을 얻는다.
 :::
 
-일반적인 경우는 [§미분다양체, §§Smooth partition of unity](/ko/math/manifolds/smooth_manifolds)의 결과를 이용해 위의 경우로 쪼개면 된다.
+일반적인 경우는 [§미분다양체, §§Smooth partition of unity](/ko/math/manifolds/smooth_manifolds#smooth-partition-of-unity)의 결과를 이용해 위의 경우로 쪼개면 된다.
 
 ::: 정의 7
 Oriented manifold $M$ 위의 compactly supported $m$-form $\omega$가 주어졌다 하자. Positively oriented coordinate system들의 모임 $(U_\alpha,x_\alpha)$가 $M$을 덮는다 하고, $(\phi_i)_{i\in I}$가 이 open cover에 subordinate한 smooth partition of unity라 하자. 그럼 $\omega$의 $M$ 위에서의 적분을 다음의 식
 
-$$\int_M\omega=\sum_{i\in I}\int_M\phi_i\,\omega$$
+$$\int_M\omega=\sum_{i\in I}\int_M\phi_i\omega$$
 
 으로 정의한다.
 :::
@@ -124,13 +124,13 @@ $$\int_M\omega=\sum_{i\in I}\int_M\phi_i\,\omega$$
 [정의 7](#def7)은 잘 정의된다. 즉 위의 적분은 positively oriented coordinate system들의 모임과 partition of unity의 선택에 의존하지 않는다.
 :::
 ::: 증명
-또 다른 positively oriented coordinate system들의 모임 $(V_\beta,y_\beta)$와 그에 subordinate한 partition of unity $(\psi_j)_{j\in J}$가 주어졌다 하자. 우선 support가 하나의 positively oriented 좌표근방에 들어가는 form들에 대하여, [정의 5](#def5)의 적분은 [정의 2](#def2)의 적분의 선형성에 의해 선형이다. 이제 각각의 $i$에 대하여 $\phi_i\omega$는 $U_{\alpha(i)}$에 support를 갖고, $\sum_{j\in J}\psi_j=1$이며 $\supp(\phi_i\omega)$와 만나는 $\supp\psi_j$가 유한 개 뿐이므로
+또 다른 positively oriented coordinate system들의 모임 $(V_\beta,y_\beta)$와 그에 subordinate한 partition of unity $(\psi_j)_{j\in J}$가 주어졌다 하자. 우선 support가 하나의 positively oriented coordinate chart에 들어가는 form들에 대하여, [정의 5](#def5)의 적분은 [정의 2](#def2)의 적분의 선형성에 의해 선형이다. 이제 각각의 $i$에 대하여 $\phi_i\omega$는 $U_{\alpha(i)}$에 support를 갖고, $\sum_{j\in J}\psi_j=1$이며 $\supp(\phi_i\omega)$와 만나는 $\supp\psi_j$가 유한 개 뿐이므로
 
-$$\int_M\phi_i\,\omega=\int_M\left(\sum_{j\in J}\psi_j\right)\phi_i\,\omega=\sum_{j\in J}\int_M\psi_j\phi_i\,\omega$$
+$$\int_M\phi_i\omega=\int_M\left(\sum_{j\in J}\psi_j\right)\phi_i\omega=\sum_{j\in J}\int_M\psi_j\phi_i\omega$$
 
-이다. 여기서 각각의 $\psi_j\phi_i\omega$는 $U_{\alpha(i)}$와 $V_{\beta(j)}$ 모두에 support를 가지므로, [보조정리 6](#lem6)에 의해 $\int_M\psi_j\phi_i\omega$는 어느 쪽 좌표계로 계산해도 같은 값이다. 따라서
+이다. 여기서 각각의 $\psi_j\phi_i\omega$는 $U_{\alpha(i)}$와 $V_{\beta(j)}$ 모두에 support를 가지므로, [보조정리 6](#lem6)에 의해 $\int_M\psi_j\phi_i\omega$는 어느 쪽 coordinate system으로 계산해도 같은 값이다. 따라서
 
-$$\sum_{i\in I}\int_M\phi_i\,\omega=\sum_{i\in I}\sum_{j\in J}\int_M\psi_j\phi_i\,\omega=\sum_{j\in J}\sum_{i\in I}\int_M\phi_i\psi_j\,\omega=\sum_{j\in J}\int_M\psi_j\,\omega$$
+$$\sum_{i\in I}\int_M\phi_i\omega=\sum_{i\in I}\sum_{j\in J}\int_M\psi_j\phi_i\omega=\sum_{j\in J}\sum_{i\in I}\int_M\phi_i\psi_j\omega=\sum_{j\in J}\int_M\psi_j\omega$$
 
 이고, 가운데 등식은 $0$이 아닌 항이 유한 개 뿐인 이중합의 순서교환이다. 즉 두 정의가 일치한다.
 :::
@@ -146,13 +146,13 @@ Oriented manifold $M$ 위의 compactly supported $m$-form들 $\omega,\eta$와 �
 ::: 증명
 첫째 주장을 보이자. $\omega,\eta$에 대해 공통의 positively oriented coordinate system들의 모임과 partition of unity $(\phi_i)$를 택하면, 각 항에서의 선형성 ([정의 2](#def2)의 적분의 선형성)에 의하여
 
-$$\int_M(a\omega+b\eta)=\sum_i\int_M\phi_i(a\omega+b\eta)=a\sum_i\int_M\phi_i\,\omega+b\sum_i\int_M\phi_i\,\eta=a\int_M\omega+b\int_M\eta$$
+$$\int_M(a\omega+b\eta)=\sum_i\int_M\phi_i(a\omega+b\eta)=a\sum_i\int_M\phi_i\omega+b\sum_i\int_M\phi_i\eta=a\int_M\omega+b\int_M\eta$$
 
 이다.
 
 둘째 주장을 보이자. $M$의 positively oriented coordinate system들의 모임 $(U_\alpha,x_\alpha)$와 partition of unity $(\phi_i)$를 택하자. 그럼 $(F^{-1}(U_\alpha),x_\alpha\circ F)$들은 가정에 의해 $N$의 positively oriented coordinate system들이고, $(\phi_i\circ F)$는 이들에 subordinate한 partition of unity이다. 각각의 $i$에 대하여 $\supp\bigl((\phi_i\circ F)F^\ast\omega\bigr)=F^{-1}(\supp\phi_i\omega)\subseteq F^{-1}(U_{\alpha(i)})$이고, $(\phi_i\circ F)F^\ast\omega=F^\ast(\phi_i\omega)$이므로 [정의 5](#def5)를 계산하면
 
-$$\int_NF^\ast(\phi_i\,\omega)=\int_{x_{\alpha(i)}(U_{\alpha(i)})}\bigl((x_{\alpha(i)}\circ F)^{-1}\bigr)^\ast F^\ast(\phi_i\,\omega)=\int_{x_{\alpha(i)}(U_{\alpha(i)})}(x_{\alpha(i)}^{-1})^\ast(\phi_i\,\omega)=\int_M\phi_i\,\omega$$
+$$\int_NF^\ast(\phi_i\omega)=\int_{x_{\alpha(i)}(U_{\alpha(i)})}\bigl((x_{\alpha(i)}\circ F)^{-1}\bigr)^\ast F^\ast(\phi_i\omega)=\int_{x_{\alpha(i)}(U_{\alpha(i)})}(x_{\alpha(i)}^{-1})^\ast(\phi_i\omega)=\int_M\phi_i\omega$$
 
 이다. 이를 $i$에 대해 더하면 원하는 결과를 얻는다.
 :::

@@ -16,13 +16,13 @@ published: false
 
 ---
 
-고전적 대수기하는 가환환을 국소적 재료로 삼아 affine scheme을 만들고, 이들을 이어붙여 scheme을 세운다. ([\[스킴\] §스킴, ⁋정의 1](/ko/math/scheme_theory/schemes#def1)) 이 이어붙이기가 낳는 가장 중요한 구성 가운데 하나가 올곱, 곧 두 부분다양체의 교차이다. 그러나 고전적 교차는 두 variety가 횡단적(transverse)일 때에만 올바른 답을 준다. 횡단적이지 않으면, 가령 서로 접하거나 예상보다 큰 차원에서 겹치면, scheme으로서의 교차 $\Spec(B\otimes_AC)$는 excess intersection을 놓치고 중복도나 초과 차원을 뭉갠다. 이 결함의 뿌리는 tensor product $\otimes$이 non-exact하다는 데 있으며, 우리는 이미 이를 유도 tensor product $\otimes^{\mathbb{L}}$으로 교정하는 법을 보았다. ([§Simplicial 가환환과 animation, ⁋명제 8](/ko/math/derived_algebraic_geometry/animated_rings#prop8))
+고전적 대수기하는 commutative ring을 국소적 재료로 삼아 affine scheme을 만들고, 이들을 이어붙여 scheme을 세운다. ([\[스킴\] §스킴, ⁋정의 1](/ko/math/scheme_theory/schemes#def1)) 이 이어붙이기가 낳는 가장 중요한 구성 가운데 하나가 올곱, 곧 두 부분다양체의 교차이다. 그러나 고전적 교차는 두 variety가 횡단적(transverse)일 때에만 올바른 답을 준다. 횡단적이지 않으면, 가령 서로 접하거나 예상보다 큰 차원에서 겹치면, scheme으로서의 교차 $\Spec(B\otimes_AC)$는 excess intersection을 놓치고 중복도나 초과 차원을 뭉갠다. 이 결함의 뿌리는 tensor product $\otimes$이 non-exact하다는 데 있으며, 우리는 이미 이를 유도 tensor product $\otimes^{\mathbb{L}}$으로 교정하는 법을 보았다. ([§Simplicial 가환환과 animation, ⁋명제 8](/ko/math/derived_algebraic_geometry/animated_rings#prop8))
 
-이 글의 목표는 그 국소적 교정을 대역적 기하로 승격하는 것이다. 곧 우리는 animated commutative ring을 국소 재료로 삼아 *derived scheme*을 이어붙이고, 그 위에서 올곱이 자동으로 유도 올곱 $X\times_Z^hY$이 되도록 한다. 이렇게 하면 고전적으로 비횡단적이거나 초과 차원인 교차조차 올바른 virtual 차원과 virtual 중복도를 나른다. 이어서 우리는 animated ring 위의 functor로서 derived stack을 정의하고, 여접 복합체 $L_X$와 접복합체 $T_X$를 대역화하며, quasi-smooth morphism과 그것이 주는 virtual 구조를 확립한다. 이하에서 $k$는 field이고, 별다른 언급이 없으면 모든 것은 $k$ 위에서 생각한다. Animated commutative ring들의 $\infty$-범주를 $\operatorname{Ani}=\operatorname{Ani}(\mathrm{CRing}_k)$로 ([§Simplicial commutative ring과 animation, ⁋정의 4](/ko/math/derived_algebraic_geometry/animated_rings#def4)), $\infty$-groupoid들, 곧 space들의 $\infty$-범주를 $\mathcal{S}$로 적는다.
+이 글의 목표는 그 국소적 교정을 대역적 기하로 승격하는 것이다. 곧 우리는 animated commutative ring을 국소 재료로 삼아 *derived scheme*을 이어붙이고, 그 위에서 올곱이 자동으로 유도 올곱 $X\times_Z^hY$이 되도록 한다. 이렇게 하면 고전적으로 비횡단적이거나 초과 차원인 교차조차 올바른 virtual 차원과 virtual 중복도를 나른다. 이어서 우리는 animated ring 위의 functor로서 derived stack을 정의하고, 여접 복합체 $L_X$와 접복합체 $T_X$를 대역화하며, quasi-smooth morphism과 그것이 주는 virtual 구조를 확립한다. 이하에서 $k$는 field이고, 별다른 언급이 없으면 모든 것은 $k$ 위에서 생각한다. Animated commutative ring들의 $\infty$-범주를 $\operatorname{Ani}=\operatorname{Ani}(\mathrm{CRing}_k)$로 ([§Simplicial 가환환과 animation, ⁋정의 4](/ko/math/derived_algebraic_geometry/animated_rings#def4)), $\infty$-groupoid들, 곧 space들의 $\infty$-범주를 $\mathcal{S}$로 적는다.
 
 ## Affine derived scheme과 derived Spec
 
-고전적 affine scheme은 commutative ring $A$에 반변적으로 대응하는 $\Spec A$였고, 그 본질은 점functor $h_{\Spec A}=\Hom(-,A)$가 test scheme 위에서 어떻게 보이는가에 있었다. ([\[스킴\] §스킴 사이의 사상, ⁋정의 9](/ko/math/scheme_theory/morphism_of_schemes#def9)) Derived 세계에서 우리는 이 그림을 그대로 옮기되, commutative ring을 animated commutative ring으로, 집합값 functor를 space값 functor로 바꾼다.
+고전적 affine scheme은 commutative ring $A$에 반변적으로 대응하는 $\Spec A$였고, 그 본질은 점functor $h_{\Spec A}=\Hom_{\Sch}(-,\Spec A)$가 test scheme 위에서 어떻게 보이는가에 있었다. ([\[스킴\] §스킴 사이의 사상, ⁋정의 9](/ko/math/scheme_theory/morphism_of_schemes#def9)) Derived 세계에서 우리는 이 그림을 그대로 옮기되, commutative ring을 animated commutative ring으로, 집합값 functor를 space값 functor로 바꾼다.
 
 ::: 정의 1
 Animated commutative ring $R\in \operatorname{Ani}$에 대하여, 그 *affine derived scheme* $\Spec R$은 $\operatorname{Ani}^\op$의 대상으로서의 $R$이며, 그 *점functor*는
@@ -32,7 +32,7 @@ $$h_{\Spec R}=\operatorname{Map}_{\operatorname{Ani}}(R,-):\operatorname{Ani}\lo
 로 주어지는, animated ring 위의 space값 functor이다. 여기서 $\operatorname{Map}_{\operatorname{Ani}}(R,S)$은 $\operatorname{Ani}$의 mapping space이다. Affine derived scheme들의 $\infty$-범주를 $\mathrm{dAff}=\operatorname{Ani}^\op$로 적는다.
 :::
 
-곧 $\Spec$은 정의상 반변 동치 $\operatorname{Ani}\overset{\sim}{\rightarrow}\mathrm{dAff}^\op$이며, 이는 고전적 반변 동치 "commutative ring $\leftrightarrow$ affine scheme"의 유도 판본이다. 이 대상에 위상공간과 structure sheaf를 입히는 방식은 고전적인 경우와 평행하다. Animated ring $R$의 밑에 깔린 고전적 ring은 $\pi_0(R)$이므로 ([§Simplicial commutative ring과 animation, ⁋명제 6](/ko/math/derived_algebraic_geometry/animated_rings#prop6)), $\Spec R$의 밑공간은 고전적 spectrum $\lvert\Spec R\rvert=\Spec \pi_0(R)$의 위상공간으로 두고, 그 위에 각 basic open $D(f)$ ($f\in \pi_0(R)$)에서 localization $R[1/f]$를 값으로 갖는 animated ring의 sheaf $\mathcal{O}_{\Spec R}$을 얹는다.
+곧 $\Spec$은 정의상 반변 동치 $\operatorname{Ani}\overset{\sim}{\rightarrow}\mathrm{dAff}^\op$이며, 이는 고전적 반변 동치 "commutative ring $\leftrightarrow$ affine scheme"의 유도 판본이다. 이 대상에 위상공간과 structure sheaf를 입히는 방식은 고전적인 경우와 평행하다. Animated ring $R$의 밑에 깔린 고전적 ring은 $\pi_0(R)$이므로 ([§Simplicial 가환환과 animation, ⁋명제 6](/ko/math/derived_algebraic_geometry/animated_rings#prop6)), $\Spec R$의 밑공간은 고전적 spectrum $\lvert\Spec R\rvert=\Spec \pi_0(R)$의 위상공간으로 두고, 그 위에 각 basic open $D(f)$ ($f\in \pi_0(R)$)에서 localization $R[1/f]$를 값으로 갖는 animated ring의 sheaf $\mathcal{O}_{\Spec R}$을 얹는다.
 
 ::: 명제 2
 Animated ring $R$에 대하여, 위상공간 $\lvert\Spec R\rvert=\Spec \pi_0(R)$ 위에 animated ring의 sheaf $\mathcal{O}_{\Spec R}$이 존재하여 다음을 만족한다.
@@ -43,7 +43,7 @@ Animated ring $R$에 대하여, 위상공간 $\lvert\Spec R\rvert=\Spec \pi_0(R)
 특히 $\pi_0\mathcal{O}_{\Spec R}$은 고전적 structure sheaf $\mathcal{O}_{\Spec \pi_0(R)}$과 같다.
 :::
 ::: 증명
-Localization $R\mapsto R[1/f]$는 $\operatorname{Ani}$에서 유도 localization, 곧 $R\otimes_{\pi_0(R)}^{\mathbb{L}}\pi_0(R)[1/f]$로 잘 정의되는데, $\pi_0(R)[1/f]$이 $\pi_0(R)$ 위에서 flat하므로 유도 tensor product가 discrete한 localization과 일치하여 ([§Simplicial 가환환과 animation, ⁋명제 8](/ko/math/derived_algebraic_geometry/animated_rings#prop8)) $\pi_i(R[1/f])=\pi_i(R)[1/f]$이다. 따라서 $D(f)\mapsto R[1/f]$의 대응은 basic open들의 교차 $D(fg)=D(f)\cap D(g)$ 위에서 정합적이며, 고전적 structure sheaf가 basis 위의 자료로부터 접착되던 것과 같은 논증으로 ([\[스킴\] §스킴, ⁋보조정리 9](/ko/math/scheme_theory/schemes#lem9)) $\lvert\Spec R\rvert$ 위의 sheaf $\mathcal{O}_{\Spec R}$을 준다. 각 $\pi_i(R)$은 $\pi_0(R)$-module이므로 ([§Simplicial 가환환과 animation, ⁋명제 6](/ko/math/derived_algebraic_geometry/animated_rings#prop6)) 그 sheafification $\pi_i\mathcal{O}_{\Spec R}$은 $\Spec \pi_0(R)$ 위의 quasi-coherent sheaf가 된다. $i=0$일 때 $\pi_0(R[1/f])=\pi_0(R)[1/f]$이므로 $\pi_0\mathcal{O}_{\Spec R}$은 고전적 structure sheaf이다.
+Localization $R\mapsto R[1/f]$는 $\operatorname{Ani}$에서 유도 localization, 곧 $f$의 lift를 주는 $k[\x]\rightarrow R$을 따라 취한 $R\otimes_{k[\x]}^{\mathbb{L}}k[\x,\x^{-1}]$로 잘 정의되는데, $k[\x,\x^{-1}]$이 $k[\x]$ 위에서 flat하므로 유도 tensor product가 higher Tor를 낳지 않아 ([§Simplicial 가환환과 animation, ⁋명제 8](/ko/math/derived_algebraic_geometry/animated_rings#prop8)) $\pi_i(R[1/f])=\pi_i(R)[1/f]$이다. 따라서 $D(f)\mapsto R[1/f]$의 대응은 basic open들의 교차 $D(fg)=D(f)\cap D(g)$ 위에서 정합적이며, 고전적 structure sheaf가 basis 위의 자료로부터 접착되던 것과 같은 논증으로 ([\[스킴\] §스킴, ⁋보조정리 9](/ko/math/scheme_theory/schemes#lem9)) $\lvert\Spec R\rvert$ 위의 sheaf $\mathcal{O}_{\Spec R}$을 준다. 각 $\pi_i(R)$은 $\pi_0(R)$-module이므로 ([§Simplicial 가환환과 animation, ⁋명제 6](/ko/math/derived_algebraic_geometry/animated_rings#prop6)) 그 sheafification $\pi_i\mathcal{O}_{\Spec R}$은 $\Spec \pi_0(R)$ 위의 quasi-coherent sheaf가 된다. $i=0$일 때 $\pi_0(R[1/f])=\pi_0(R)[1/f]$이므로 $\pi_0\mathcal{O}_{\Spec R}$은 고전적 structure sheaf이다.
 :::
 
 [명제 2](#prop2)는 affine derived scheme을 국소적으로 ring이 얹힌 공간으로 실현한다. 밑공간과 $\pi_0$-sheaf는 고전적 scheme $\Spec \pi_0(R)$의 그것과 정확히 같고, 새로운 정보는 오직 higher homotopy sheaf $\pi_i\mathcal{O}_{\Spec R}$ ($i\geq1$)에 담긴다. 이 sheaf들이 $\Spec \pi_0(R)$ 위의 quasi-coherent sheaf로서 "고전적 그림자 위에 얹힌 유도 두께"를 이룬다. 이제 이 국소 모형을 이어붙인다.
@@ -99,7 +99,7 @@ $$F(R)\overset{\sim}{\longrightarrow}\lim_{[n]\in \Delta}F(R_n)$$
 이 동치인 것, 곧 $F$이 étale 위상에 대하여 hyperdescent를 만족하는 것을 뜻한다. Derived stack들의 $\infty$-범주를 $\mathrm{dSt}$로 적는다.
 :::
 
-여기서 limit은 cosimplicial diagram 위의 homotopy limit이며, 이것이 고전적 stack의 하강 조건, 곧 두 겹 겹침에서의 cocycle 조건을 모든 degree의 겹침으로 정합적으로 확장한 것이다. ([\[Stacks\] §Grothendieck 위상과 site, ⁋예시 8](/ko/math/stacks/grothendieck_topology#ex8)와 [\[Stacks\] §Grothendieck 위상과 site, ⁋정의 10](/ko/math/stacks/grothendieck_topology#def10)의 site 위 sheaf 조건을 space값으로 승격한 것이다.) 값을 truncated groupoid로 제한하고 밑을 discrete ring으로 제한하면 고전적 stack의 정의가 정확히 되살아난다. Fpqc 위상이 subcanonical이어서 표현가능 functor가 모두 sheaf였듯 ([\[Stacks\] §Grothendieck 위상과 site, ⁋정리 17](/ko/math/stacks/grothendieck_topology#thm17)), affine derived scheme의 점functor는 자동으로 derived stack이며, 이로써 $\mathrm{dSch}$이 $\mathrm{dSt}$에 완전 충실하게 들어간다.
+여기서 limit은 cosimplicial diagram 위의 homotopy limit이며, 이것이 고전적 stack의 하강 조건, 곧 두 겹 겹침에서의 cocycle 조건을 모든 degree의 겹침으로 정합적으로 확장한 것이다. ([\[Stacks\] §Grothendieck 위상과 site, ⁋예시 8](/ko/math/stacks/grothendieck_topology#ex8)와 [\[Stacks\] §Grothendieck 위상과 site, ⁋정의 10](/ko/math/stacks/grothendieck_topology#def10)의 site 위 sheaf 조건을 space값으로 승격한 것이다.) 값을 truncated groupoid로 제한하고 밑을 discrete ring으로 제한하면 고전적 stack의 정의가 정확히 되살아난다. Fpqc 위상이 subcanonical이어서 representable functor가 모두 sheaf였듯 ([\[Stacks\] §Grothendieck 위상과 site, ⁋정리 17](/ko/math/stacks/grothendieck_topology#thm17)), affine derived scheme의 점functor는 자동으로 derived stack이며, 이로써 $\mathrm{dSch}$이 $\mathrm{dSt}$에 완전 충실하게 들어간다.
 
 ::: 명제 7
 Yoneda embedding $X\mapsto \operatorname{Map}_{\mathrm{dSch}}(-,X)\vert_{\mathrm{dAff}}$은 완전 충실한 포함 $\mathrm{dSch}\hookrightarrow \mathrm{dSt}$을 주며, derived scheme과 (뒤에서 정의할) geometric derived stack에 대하여 truncation functor $t_0$이 이들의 밑에 깔린 고전적 scheme·algebraic stack을 준다. 특히 고전적 algebraic stack은 discrete ring 위에서 truncated groupoid값을 갖는 derived stack으로서 $\mathrm{dSt}$에 완전 충실하게 들어간다.
@@ -132,7 +132,7 @@ $$T_X=L_X^\vee=\mathcal{R}\mathcal{H}om_{\mathcal{O}_X}(L_X,\mathcal{O}_X)$$
 을 $X$의 *접복합체<sub>tangent complex</sub>*라 부른다. Geometric derived stack $\mathcal{X}$에 대해서는 atlas $u:U\rightarrow \mathcal{X}$을 따라 pullback한 $u^\ast L_{\mathcal{X}}$이 삼각형 $u^\ast L_{\mathcal{X}}\rightarrow L_U\rightarrow L_{U/\mathcal{X}}$을 채우도록 하는 유일한 대상으로 $L_{\mathcal{X}}$을 정의한다.
 :::
 
-접착이 잘 정의됨은 여접 복합체가 étale morphism에 대하여 소멸하고 localization과 교환한다는 사실, 곧 étale $R\rightarrow R'$에 대하여 $L_{R'/R}\simeq0$이고 $L_{R/k}\otimes_R R'\simeq L_{R'/k}$이라는 데서 나온다. ([§Simplicial 가환환과 animation, ⁋명제 14](/ko/math/derived_algebraic_geometry/animated_rings#prop14)의 매끄러움 판정과 추이 삼각형이 이를 준다.) Affine 경우 $X=\Spec R$이면 $L_X$은 단순히 $L_{R/k}$의 sheafification이고, $X$이 smooth한 고전적 scheme이면 $L_X\simeq \Omega_X$이 degree $0$에 집중된 국소자유 sheaf이다. Stack의 경우 atlas 삼각형에서 $L_{U/\mathcal{X}}$이 atlas morphism의 상대 여접 복합체이므로, $\mathcal{X}$이 smooth할 때 $L_{\mathcal{X}}$은 degree $0$의 접방향 위에 stack 방향에서 오는 양의 degree 항, 곧 $\mathbf{B}G$ 유형의 automorphism이 주는 항을 함께 가질 수 있다.
+접착이 잘 정의됨은 여접 복합체가 étale morphism에 대하여 소멸하고 localization과 교환한다는 사실, 곧 étale $R\rightarrow R'$에 대하여 $L_{R'/R}\simeq0$이고 $L_{R/k}\otimes_R R'\simeq L_{R'/k}$이라는 데서 나온다. ([§Simplicial 가환환과 animation, ⁋명제 14](/ko/math/derived_algebraic_geometry/animated_rings#prop14)의 매끄러움 판정과 추이 삼각형이 이를 준다.) Affine 경우 $X=\Spec R$이면 $L_X$은 단순히 $L_{R/k}$의 sheafification이고, $X$이 smooth한 고전적 scheme이면 $L_X\simeq \Omega_X$이 degree $0$에 집중된 국소자유 sheaf이다. Stack의 경우 atlas 삼각형에서 $L_{U/\mathcal{X}}$이 atlas morphism의 상대 여접 복합체이므로, $\mathcal{X}$이 smooth할 때 $L_{\mathcal{X}}$은 degree $0$의 접방향과 함께 stack 방향에서 오는 음의 degree 항, 곧 $\mathbf{B}G$ 유형의 automorphism이 주는 $\mathfrak{g}^\vee[-1]$ 꼴의 항을 가질 수 있다.
 
 ::: 명제 11
 여접 복합체는 다음을 만족한다.
@@ -146,7 +146,7 @@ $$f^\ast L_{Y/Z}\longrightarrow L_{X/Z}\longrightarrow L_{X/Y}\longrightarrow f^
 2. (base change) derived scheme의 유도 올곱 $X'=X\times_Y^hY'$과 그 projection $g:X'\rightarrow X$에 대하여 $L_{X'/Y'}\simeq g^\ast L_{X/Y}$이다.
 :::
 ::: 증명
-두 성질은 모두 affine 국소적이며, 그 국소 형태가 각각 [§Simplicial 가환환과 animation, ⁋정리 12](/ko/math/derived_algebraic_geometry/animated_rings#thm12)과, 유도 tensor product에 대한 base change invariance가다. Affine 국소적으로 $X=\Spec B$, $Y=\Spec A$, $Y'=\Spec A'$이면 $X'=\Spec(B\otimes_A^{\mathbb{L}}A')$이고, 여접 복합체가 유도 tensor product와 교환하여 $L_{(B\otimes_A^{\mathbb{L}}A')/A'}\simeq L_{B/A}\otimes_B^{\mathbb{L}}(B\otimes_A^{\mathbb{L}}A')$이 됨은 free simplicial 분해를 base change하여 직접 확인된다. 이 국소 동형들이 [정의 10](#def10)의 접착과 호환되므로 대역적으로 성립한다. 자세한 논증은 ([Ill], [Lur, SAG])에 있다.
+두 성질은 모두 affine 국소적이며, 그 국소 형태가 각각 [§Simplicial 가환환과 animation, ⁋정리 12](/ko/math/derived_algebraic_geometry/animated_rings#thm12)과, 유도 tensor product에 대한 base change invariance이다. Affine 국소적으로 $X=\Spec B$, $Y=\Spec A$, $Y'=\Spec A'$이면 $X'=\Spec(B\otimes_A^{\mathbb{L}}A')$이고, 여접 복합체가 유도 tensor product와 교환하여 $L_{(B\otimes_A^{\mathbb{L}}A')/A'}\simeq L_{B/A}\otimes_B^{\mathbb{L}}(B\otimes_A^{\mathbb{L}}A')$이 됨은 free simplicial 분해를 base change하여 직접 확인된다. 이 국소 동형들이 [정의 10](#def10)의 접착과 호환되므로 대역적으로 성립한다. 자세한 논증은 ([Ill], [Lur, SAG])에 있다.
 :::
 
 추이 삼각형과 base change는 여접 복합체를 계산 가능한 대상으로 만들며, 특히 base change invariance는 유도 올곱 위의 여접 복합체가 원래 morphism의 여접 복합체를 그대로 물려받음을 말한다. 이 두 성질이 다음 절에서 quasi-smooth morphism이 유도 올곱에 대하여 닫혀 있음을 보장한다.
@@ -178,14 +178,14 @@ $$X\simeq Z(s)=P\times_{E}^hP$$
 
 로 국소적으로 표현되는 것과 동치이다. 여기서 두 morphism $P\rightrightarrows E$은 각각 영절단과 $s$이다.
 
-2. $f$이 quasi-smooth이면 그 truncation $t_0(f):t_0(X)\rightarrow t_0(Y)$은 고전적 lci morphism이며, $f$이 discrete할 (곧 $X$이 고전적 scheme일) 필요충분조건은 $\pi_1(\mathcal{O}_X)=0$인 것이다.
+2. $f$이 quasi-smooth이면 그 truncation $t_0(f):t_0(X)\rightarrow t_0(Y)$은 국소적으로 smooth morphism 위에서 $r$개의 방정식으로 잘린 것이며, 이 방정식들이 regular sequence를 이룰 때 고전적 lci morphism이 된다. 이 조건은 $f$이 discrete할 (곧 $X$이 고전적 scheme일) 필요충분조건인 $\pi_1(\mathcal{O}_X)=0$과 동치이다.
 
 3. Quasi-smooth morphism은 임의의 base change에 대하여 닫혀 있고, virtual 상대차원을 보존한다. 곧 $f$이 quasi-smooth이고 $Y'\rightarrow Y$이 임의의 morphism이면 $f':X\times_Y^hY'\rightarrow Y'$도 quasi-smooth이며 $\operatorname{vdim}(f')=\operatorname{vdim}(f)$이다.
 :::
 ::: 증명
 **(1)** 절단 $s:P\rightarrow E$의 유도 영점자리 $Z(s)=P\times_E^hP$은 국소적으로 $E$을 rank $r$의 자명 다발로 놓아 $s=(s_1,\ldots,s_r)$으로 쓰면 $\mathcal{O}_{Z(s)}=\operatorname{Kos}(\mathcal{O}_P;s_1,\ldots,s_r)$, 곧 $s_i$들에 대한 Koszul 복합체이다. Embedding $Z(s)\hookrightarrow P$의 여접 복합체는 [명제 11](#prop11)의 base change로 계산되어 $L_{Z(s)/P}\simeq(E^\vee\vert_{Z(s)})[1]$, 곧 degree $1$에 집중된 국소자유 sheaf이다. $P$이 $Y$ 위에서 smooth하므로 $L_{P/Y}$은 degree $0$의 국소자유 sheaf이고, [명제 11](#prop11)의 추이 삼각형이 $L_{X/Y}$을 degree $0,1$의 두 항으로 준다. 따라서 $Z(s)$은 quasi-smooth이다. 역으로 $f$이 quasi-smooth이면 $L_f\simeq[E_1\rightarrow E_0]$의 $E_0$을 실현하는 smooth 인수 $P$을 국소적으로 잡고, $E_1$을 실현하는 절단 $s$을 그 위에서 택하여 위 인수분해를 얻는다. 세부는 ([Kha], [Lur, SAG])에 있다.
 
-**(2)** $X=Z(s)$이면 $t_0(X)=\{s=0\}$은 $P$의 고전적 영점자리이고, 이는 국소적으로 $r$개의 방정식으로 잘린 lci이다. $X$이 discrete함은 $s_1,\ldots,s_r$이 regular sequence를 이루어 Koszul 복합체가 $\pi_0$에 집중되는 것, 곧 $\pi_1(\mathcal{O}_X)=0$인 것과 동치이다. Regular sequence가 아니면 Koszul homology가 $\pi_{\geq1}\mathcal{O}_X\neq0$을 낳아 $X$은 discrete하지 않다.
+**(2)** $X=Z(s)$이면 $t_0(X)=\{s=0\}$은 $P$의 고전적 영점자리이고, 이는 국소적으로 $r$개의 방정식으로 잘린 것이며, 그 방정식들이 regular sequence를 이룰 때 고전적 lci가 된다. $X$이 discrete함은 $s_1,\ldots,s_r$이 regular sequence를 이루어 Koszul 복합체가 $\pi_0$에 집중되는 것, 곧 $\pi_1(\mathcal{O}_X)=0$인 것과 동치이다. Regular sequence가 아니면 Koszul homology가 $\pi_{\geq1}\mathcal{O}_X\neq0$을 낳아 $X$은 discrete하지 않다.
 
 **(3)** Base change 안정성은 유도 올곱이 여접 복합체를 pullback으로 보존하고 ([명제 11](#prop11)의 base change), pullback이 perfect 복합체의 Tor-amplitude를 넓히지 않으며 국소자유 sheaf의 rank를 보존하는 데서 따른다. 따라서 $L_{f'}\simeq g^\ast L_f$이 다시 Tor-amplitude $[-1,0]$이고 $\operatorname{vdim}$이 rank로 정해지므로 보존된다.
 :::
@@ -217,7 +217,7 @@ $X\xrightarrow{f}Z\xleftarrow{g}Y$을 derived scheme의 morphism이라 하고 $W
 
 $$t_0(W)\cong t_0(X)\times_{t_0(Z)}t_0(Y)$$
 
-Affine에서 $\pi_0\mathcal{O}_W=B\otimes_AC$이고, higher homotopy는 $\pi_n\mathcal{O}_W=\Tor_n^A(B,C)$이 초과분을 기록한다.
+$X,Y,Z$이 고전적 scheme인 affine 경우 $\pi_0\mathcal{O}_W=B\otimes_AC$이고, higher homotopy는 $\pi_n\mathcal{O}_W=\Tor_n^A(B,C)$이 초과분을 기록한다.
 
 2. $f$이 quasi-smooth이면 그 base change인 projection $W\rightarrow Y$도 quasi-smooth이고 $\operatorname{vdim}(W/Y)=\operatorname{vdim}(f)$이다. 특히 $X,Y,Z$이 각각 차원 $d_X,d_Y,d_Z$의 smooth 고전적 variety이고 $f,g$이 closed embedding이면 $W$은 quasi-smooth이며
 

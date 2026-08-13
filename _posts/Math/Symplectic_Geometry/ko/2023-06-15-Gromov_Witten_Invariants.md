@@ -1,6 +1,6 @@
 ---
 title: "Gromov-Witten 불변량"
-description: "Gromov-Witten 불변량을 evaluation map과 접선 다발의 첫 번째 Chern class로 정의하고, descendant 버전의 정의와 genus-0에서의 string, divisor, dilaton, splitting 공리들, 그리고 quantum cohomology 구성을 다룬다."
+description: "Gromov-Witten 불변량을 evaluation map과 cotangent line bundle의 첫 번째 Chern class로 정의하고, descendant 버전의 정의와 genus-0에서의 string, divisor, dilaton, splitting 공리들, 그리고 quantum cohomology 구성을 다룬다."
 excerpt: "Stable map moduli로부터의 GW invariant 정의와 quantum cohomology"
 
 categories: [Math / Symplectic Geometry]
@@ -28,7 +28,7 @@ $$\langle \alpha_1, \ldots, \alpha_n \rangle_{g, n, \beta}^X := \int_{[\overline
 으로 정의된다. 여기서 $\mathrm{ev}_i: \overline{\mathcal{M}}_{g, n}(X, \beta) \rightarrow X$는 $i$번째 marked point에서의 evaluation map이다.
 :::
 
-비유한 적분이 되려면 형식적으로 $\sum_i \deg \alpha_i = 2\, \mathrm{vdim}_\mathbb{C}\, \overline{\mathcal{M}}_{g, n}(X, \beta)$를 요구하며 ([§Stable maps의 moduli space, ⁋명제 5](/ko/math/symplectic_geometry/stable_maps#prop5)), 그 외에는 GW invariant가 정의상 $0$이다.
+적분이 $0$이 아니려면 $\sum_i \deg \alpha_i = 2\, \mathrm{vdim}_\mathbb{C}\, \overline{\mathcal{M}}_{g, n}(X, \beta)$를 요구하며 ([§Stable maps의 moduli space, ⁋명제 5](/ko/math/symplectic_geometry/stable_maps#prop5)), 그 외에는 GW invariant가 정의상 $0$이다.
 
 ## Descendant Gromov-Witten invariant
 
@@ -42,7 +42,7 @@ $$\langle \tau_{a_1}(\alpha_1), \ldots, \tau_{a_n}(\alpha_n) \rangle_{g, n, \bet
 으로 정의된다. 여기서 $\psi_i$는 $i$번째 marked point에서의 cotangent line bundle의 first Chern class이다.
 :::
 
-$a_i = 0$이면 [정의 1](#def1)의 primary GW invariant로 환원된다. $\psi$ class의 power는 *gravitational descendant*라 불리며, 물리에서 *gravitational coupling*의 quantum 보정과 관련된다.
+$a_i = 0$이면 [정의 1](#def1)의 primary GW invariant로 환원된다. 이하에서 $\tau_0(\alpha) = \alpha$로 적고 $\tau_{-1}(\alpha) := 0$으로 약속하여, 아래 등식들의 우변에서 $a_i = 0$인 index에 $\tau_{a_i - 1}$이 나타나면 그 항은 없는 것으로 읽는다. $\psi$ class의 power는 *gravitational descendant*라 불리며, 물리에서 *gravitational coupling*의 quantum 보정과 관련된다.
 
 ## Genus-0 axiom: string, divisor, dilaton
 
@@ -59,9 +59,9 @@ $1 \in H^0(X)$를 evaluate하는 marked point는 기하학적 제약을 주지 �
 ::: 명제 4 (Divisor equation)
 $D \in H^2(X, \mathbb{Q})$이고 $\beta \neq 0$일 때
 
-$$\langle D, \tau_{a_1}(\alpha_1), \ldots, \tau_{a_n}(\alpha_n) \rangle_{0, n+1, \beta}^X = (D \cdot \beta)\, \langle \tau_{a_1}(\alpha_1), \ldots, \tau_{a_n}(\alpha_n) \rangle_{0, n, \beta}^X + (\text{lower } \psi \text{ corrections})$$
+$$\langle D, \tau_{a_1}(\alpha_1), \ldots, \tau_{a_n}(\alpha_n) \rangle_{0, n+1, \beta}^X = (D \cdot \beta) \langle \tau_{a_1}(\alpha_1), \ldots, \tau_{a_n}(\alpha_n) \rangle_{0, n, \beta}^X + \sum_{j=1}^n \langle \tau_{a_1}(\alpha_1), \ldots, \tau_{a_j - 1}(D \cup \alpha_j), \ldots, \tau_{a_n}(\alpha_n) \rangle_{0, n, \beta}^X$$
 
-$\beta = 0$이고 $n \geq 2$인 경우 우변의 첫 항은 $0$이다.
+이며, 여기서 $D \cdot \beta = \int_\beta D$이다. 모든 $a_i$가 $0$인 primary invariant에서는 우변의 합이 통째로 사라진다.
 :::
 
 ::: 증명
@@ -71,11 +71,11 @@ $\beta = 0$이고 $n \geq 2$인 경우 우변의 첫 항은 $0$이다.
 Divisor equation은 $H^2$의 marked point가 본질적으로 intersection number $D \cdot \beta$만큼 invariant를 곱한다는 statement이다. 이로 인해 $H^2$ 방향의 deformation은 *Novikov variable* $q$로 흡수된다.
 
 ::: 명제 5 (Dilaton equation)
-$$\langle \tau_1(1), \tau_{a_1}(\alpha_1), \ldots, \tau_{a_n}(\alpha_n) \rangle_{0, n+1, \beta}^X = (2g - 2 + n)\, \langle \tau_{a_1}(\alpha_1), \ldots, \tau_{a_n}(\alpha_n) \rangle_{0, n, \beta}^X$$
+$$\langle \tau_1(1), \tau_{a_1}(\alpha_1), \ldots, \tau_{a_n}(\alpha_n) \rangle_{0, n+1, \beta}^X = (n - 2) \langle \tau_{a_1}(\alpha_1), \ldots, \tau_{a_n}(\alpha_n) \rangle_{0, n, \beta}^X$$
 :::
 
 ::: 증명
-마찬가지로 forgetful map의 fiber 위에서 $\tau_1(1) = \psi^1 \cdot 1$ class를 적분한다. $\psi$의 fiber 적분은 $2g - 2 + n$ (Euler characteristic of pointed Riemann surface)이 된다. [KM] 또는 [HKKPTVVZ]의 dilaton axiom 참조.
+마찬가지로 forgetful map의 fiber 위에서 $\tau_1(1) = \psi^1 \cdot 1$ class를 적분한다. $\psi$의 fiber 적분은 genus $g$의 $n$-pointed curve에 대해 $2g - 2 + n$, 즉 그 Euler characteristic $2 - 2g - n$의 부호를 뒤집은 값이 되며, genus $0$에서는 $n - 2$이다. [KM] 또는 [HKKPTVVZ]의 dilaton axiom 참조.
 :::
 
 ## Splitting axiom과 WDVV equation
@@ -85,13 +85,13 @@ GW invariant의 가장 강력한 정합성 조건은 *splitting axiom*이며, �
 ::: 명제 6 (WDVV equation, genus-0)
 Gromov-Witten potential
 
-$$F(t) := \sum_{n \geq 3,\, \beta} \frac{1}{n!} \langle t, \ldots, t \rangle_{0, n, \beta}^X\, q^\beta,\qquad t = \sum_\alpha t^\alpha T_\alpha \in H^\ast(X, \mathbb{C})$$
+$$F(t) := \sum_{n \geq 3,\, \beta} \frac{1}{n!} \langle t, \ldots, t \rangle_{0, n, \beta}^X\, q^\beta,\qquad t = \sum_a t^a T_a \in H^\ast(X, \mathbb{C})$$
 
 은 다음 *Witten-Dijkgraaf-Verlinde-Verlinde equation*을 만족한다.
 
 $$\sum_{e, f} \partial_a \partial_b \partial_e F\, \eta^{ef}\, \partial_f \partial_c \partial_d F = \sum_{e, f} \partial_a \partial_c \partial_e F\, \eta^{ef}\, \partial_f \partial_b \partial_d F$$
 
-여기서 $\eta_{\alpha\beta} = \int_X T_\alpha \cup T_\beta$는 Poincaré pairing이다.
+여기서 $\partial_a = \partial / \partial t^a$이고, $\eta_{ab} = \int_X T_a \cup T_b$는 Poincaré pairing, $(\eta^{ab})$는 그 역행렬이다.
 :::
 
 ::: 증명
@@ -117,13 +117,13 @@ Quantum cohomology ring $(H^\ast(X), \circ_t)$은 $t \in H^\ast(X)$ 위에 매�
 ## $\mathbb{P}^n$의 GW invariant 예시
 
 ::: 예시 8 ($X = \mathbb{P}^n$)
-$\mathbb{P}^n$의 cohomology basis는 $\{ 1, H, H^2, \ldots, H^n \}$이고 effective curve class는 $d H^\vee$ ($d \geq 0$)로 매개된다. $\overline{\mathcal{M}}_{0, n}(\mathbb{P}^n, d)$의 expected dimension은 $d(n+1) + n - 3 + n_{\text{marked}}$이다.
+$\mathbb{P}^n$의 cohomology basis는 $\{ 1, H, H^2, \ldots, H^n \}$이고 effective curve class는 $d H^\vee$ ($d \geq 0$)로 매개된다. Marked point가 $m$개인 moduli $\overline{\mathcal{M}}_{0, m}(\mathbb{P}^n, d)$의 expected dimension은 $d(n+1) + n - 3 + m$이다.
 
 가장 기본적인 GW invariant는 *line counting*이다. $d = 1$일 때, $\mathbb{P}^n$ 안의 직선 중 두 generic point를 지나는 것은 유일하다. 이는
 
 $$\langle H^n, H^n \rangle_{0, 2, 1}^{\mathbb{P}^n} = 1$$
 
-으로 표현된다 (두 점이 직선상에 있을 조건은 codimension $n$이므로 정확히 expected dim과 맞아 떨어진다).
+으로 표현된다 (한 점을 지날 조건이 각각 codimension $n$이므로 둘을 합하면 $\overline{\mathcal{M}}_{0, 2}(\mathbb{P}^n, 1)$의 expected dimension $2n$과 정확히 맞아 떨어진다).
 
 $\mathbb{P}^2$에서 5개의 generic point를 지나는 conic ($d = 2$)의 개수는 고전적으로 $1$이며, 이를 GW invariant로 표현하면
 

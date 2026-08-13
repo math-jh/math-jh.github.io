@@ -52,7 +52,7 @@ Quiver $Q$와 field $k$에 대하여, *path algebra<sub>경로대수</sub>* $kQ$
 
 $$p\cdot q=\begin{cases}pq&\text{if }s(p)=t(q)\\0&\text{otherwise}\end{cases}$$
 
-으로 정의한다. 여기서 $pq$는 $q$ 다음에 $p$를 이어붙여 얻는 path이며, trivial path $e_i$가 곱해지는 경우에는 $e_{t(p)}\,p=p=p\,e_{s(p)}$로 약속한다. 이 곱셈을 $k$-bilinear하게 확장하여 $kQ$ 위의 곱셈을 정의한다.
+으로 정의한다. 여기서 $pq$는 $q$ 다음에 $p$를 이어붙여 얻는 path이며, trivial path $e_i$가 곱해지는 경우에는 $e_{t(p)}p=p=pe_{s(p)}$로 약속한다. 이 곱셈을 $k$-bilinear하게 확장하여 $kQ$ 위의 곱셈을 정의한다.
 :::
 
 정의에서 곱 $p\cdot q$가 $0$이 아니려면 $q$의 target $t(q)$가 $p$의 source $s(p)$와 일치해야 하며, 이는 함수를 합성할 때 안쪽 함수의 치역이 바깥쪽 함수의 정의역과 맞아야 하는 것과 같다. 곱셈을 basis인 path들 위에서 정의한 뒤 양변에 대해 선형으로 확장하였으므로, $kQ$의 일반적인 두 원소의 곱은 각 path 곱들의 $k$-선형결합이다. 이 곱셈이 실제로 결합대수의 구조를 줌을 확인한다.
@@ -82,9 +82,9 @@ $$1\cdot p=\sum_{i\in Q_0}e_i\cdot p$$
 인데, $e_i\cdot p$는 $s(e_i)=i$가 $t(p)$와 일치할 때, 곧 $i=t(p)$일 때만 $0$이 아니고 그 값은 $p$이다. 따라서 $1\cdot p=p$이다. 마찬가지로 $p\cdot 1=\sum_{i\in Q_0}p\cdot e_i$에서 $p\cdot e_i$는 $t(e_i)=i$가 $s(p)$와 일치할 때, 곧 $i=s(p)$일 때만 $0$이 아니고 그 값은 $p$이므로 $p\cdot 1=p$이다. 선형성에 의하여 $1$은 $kQ$ 전체의 항등원이다.
 :::
 
-명제 4의 trivial path들 $e_i$는 단순한 항등원의 조각이 아니라 그 자체로 구조적인 의미를 가진다. 각 $e_i$에 대하여 $e_i\cdot e_i=e_i$이고, $i\neq j$이면 $e_i\cdot e_j=0$이므로 $\{e_i\}_{i\in Q_0}$은 서로 직교하는 idempotent들의 모임을 이루며, 그 합이 $1$이다. 더 나아가 임의의 path $p$에 대하여 $e_{t(p)}\,p\,e_{s(p)}=p$가 성립하므로, $e_i\,kQ\,e_j$는 정확히 source가 $j$이고 target이 $i$인 path들이 생성하는 부분공간이다.
+명제 4의 trivial path들 $e_i$는 단순한 항등원의 조각이 아니라 그 자체로 구조적인 의미를 가진다. 각 $e_i$에 대하여 $e_i\cdot e_i=e_i$이고, $i\neq j$이면 $e_i\cdot e_j=0$이므로 $\{e_i\}_{i\in Q_0}$은 서로 직교하는 idempotent들의 모임을 이루며, 그 합이 $1$이다. 더 나아가 임의의 path $p$에 대하여 $e_{t(p)}pe_{s(p)}=p$가 성립하므로, $e_ikQe_j$는 정확히 source가 $j$이고 target이 $i$인 path들이 생성하는 부분공간이다.
 
-$kQ$의 곱셈은 일반적으로 commutative가 아니다. 가령 arrow $\alpha:1\rightarrow 2$가 있으면 $\alpha=e_2\,\alpha\,e_1$이고 $e_1\,\alpha=0$이므로 $\alpha\,e_1=\alpha\neq 0=e_1\,\alpha$이다. 한편 $kQ$의 $k$ 위의 차원은 $Q$의 path의 개수와 같으므로, 다음 명제가 path algebra가 유한차원이 되는 경우를 정확히 가려낸다.
+$kQ$의 곱셈은 일반적으로 commutative가 아니다. 가령 arrow $\alpha:1\rightarrow 2$가 있으면 $\alpha=e_2\alpha e_1$이고 $e_1\alpha=0$이므로 $\alpha e_1=\alpha\neq 0=e_1\alpha$이다. 한편 $kQ$의 $k$ 위의 차원은 $Q$의 path의 개수와 같으므로, 다음 명제가 path algebra가 유한차원이 되는 경우를 정확히 가려낸다.
 
 ::: 명제 5
 $kQ$가 유한차원 $k$-algebra인 것은 $Q$가 *oriented cycle*, 곧 길이 $\geq 1$이면서 source와 target이 같은 path를 가지지 않는 것과 동치이다.
@@ -192,7 +192,7 @@ $$V_\alpha\oplus W_\alpha:V_i\oplus W_i\rightarrow V_j\oplus W_j$$
 를 배정하여 얻는 representation이다.
 :::
 
-Subrepresentation에서 부분공간들이 arrow를 따라 닫혀 있어야 한다는 조건은 morphism의 commutativity 조건을 부분공간에 제한한 것이며, 이 조건 덕분에 제한된 선형사상 $V_\alpha\vert_{W_i}:W_i\rightarrow W_j$가 잘 정의된다. Direct sum의 경우 포함사상 $V\hookrightarrow V\oplus W$와 projection map $V\oplus W\twoheadrightarrow V$가 모두 $\Rep(Q)$의 morphism이 되며, 이는 module의 direct sum이 가지는 보편적 성질 ([\[대수적 구조\] §가군의 직접곱과 직합, 텐서곱, ⁋정리 1](/ko/math/algebraic_structures/operations_of_modules#thm1)) 의 representation 판본이다. 이러한 평행성은 우연이 아니며, 다음 절에서 보일 category 동치로 완전히 설명된다.
+Subrepresentation에서 부분공간들이 arrow를 따라 닫혀 있어야 한다는 조건은 morphism의 commutativity 조건을 부분공간에 제한한 것이며, 이 조건 덕분에 제한된 선형사상 $V_\alpha\vert_{W_i}:W_i\rightarrow W_j$가 잘 정의된다. Direct sum의 경우 포함사상 $V\hookrightarrow V\oplus W$와 projection map $V\oplus W\twoheadrightarrow V$가 모두 $\Rep(Q)$의 morphism이 되며, 이는 module의 direct sum이 가지는 보편적 성질의 representation 판본이다. ([\[대수적 구조\] §가군의 직접곱과 직합, 텐서곱, ⁋정리 1](/ko/math/algebraic_structures/operations_of_modules#thm1)) 이러한 평행성은 우연이 아니며, 다음 절에서 보일 category 동치로 완전히 설명된다.
 
 ## $\Rep(Q)$와 $kQ$-module의 동치
 
@@ -239,7 +239,8 @@ $$M=1\cdot M=\sum_{i\in Q_0}e_iM=\bigoplus_{i\in Q_0}V_i$$
 
 정리 12의 동치 아래에서 [정의 11](#def11)의 representation 구성들은 정확히 module의 대응하는 구성으로 번역된다. Subrepresentation은 $kQ$-submodule에 대응하는데, 부분공간들이 arrow를 따라 닫혀 있다는 조건이 바로 $\bigoplus_i W_i$가 $kQ$의 action에 대하여 닫혀 있다는 조건이기 때문이다. 마찬가지로 representation의 direct sum은 module의 direct sum에 대응한다. 따라서 representation에 대한 모든 분해 이론을 module의 언어로, 또는 그 반대로 옮길 수 있으며, 우리는 다음 글들에서 이 자유로운 번역을 전제로 한다.
 
-이 동치는 또한 representation을 다룰 때 굳이 path algebra 전체를 명시하지 않고 quiver의 자료만으로 작업해도 좋다는 것을 정당화한다. 가령 선형 $A_2$ quiver의 representation은 선형사상 $V_\alpha:V_1\rightarrow V_2$ 하나이고, 이를 분류하는 것은 곧 선형사상을 isomorphism 차이를 무시하고 분류하는 문제, 곧 rank에 의한 분류이다. 
+이 동치는 또한 representation을 다룰 때 굳이 path algebra 전체를 명시하지 않고 quiver의 자료만으로 작업해도 좋다는 것을 정당화한다. 가령 선형 $A_2$ quiver의 representation은 선형사상 $V_\alpha:V_1\rightarrow V_2$ 하나이고, 이를 분류하는 것은 곧 선형사상을 isomorphism 차이를 무시하고 분류하는 문제, 곧 rank에 의한 분류이다.
+
 ---
 
 **참고문헌**

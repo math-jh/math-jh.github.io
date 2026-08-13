@@ -1,6 +1,6 @@
 ---
 title: "원시근"
-description: "잉여류의 위수를 정의하고, 소수를 법으로 하는 기약잉여계의 곱셈군이 순환군임을 — 즉 원시근이 존재함을 — 약수에 대한 phi 함수의 합 항등식을 이용하여 증명한다. 일반 법에서의 원시근 존재 조건도 정리한다."
+description: "잉여류의 위수를 정의하고, 소수를 법으로 하는 기약잉여계의 곱셈군이 cyclic group임을, 즉 원시근이 존재함을, 약수에 대한 phi 함수의 합 항등식을 이용하여 증명한다. 일반 법에서의 원시근 존재 조건도 정리한다."
 excerpt: "위수, 원시근, 소수 법의 곱셈군의 순환성"
 
 categories: [Math / Number Theory]
@@ -14,7 +14,7 @@ weight: 11
 published: false
 ---
 
-[§오일러 정리와 phi 함수](/ko/math/number_theory/euler_theorem)는 $\gcd(a, n) = 1$일 때 $a^{\varphi(n)} \equiv 1$임을 말했다. 그렇다면 $a$의 거듭제곱이 $1$로 돌아오는 가장 작은 지수는 무엇이며, 그 거듭제곱이 기약잉여계 전체를 훑을 수 있는가? 이 물음이 coset의 곱셈 구조를 드러낸다.
+[§오일러 정리와 phi 함수](/ko/math/number_theory/euler_theorem)는 $\gcd(a, n) = 1$일 때 $a^{\varphi(n)} \equiv 1$임을 말했다. 그렇다면 자연스러운 물음은 $a$의 거듭제곱이 $1$로 돌아오는 가장 작은 지수가 무엇인지, 그리고 그 거듭제곱이 기약잉여계 전체를 훑을 수 있는지의 여부이다. 이 물음이 coset의 곱셈 구조를 드러낸다.
 
 ## 위수
 
@@ -25,7 +25,7 @@ $\gcd(a, n) = 1$일 때, $a^k \equiv 1 \pmod n$을 만족하는 가장 작은 �
 오일러 정리에 의해 order는 항상 존재하며 $\varphi(n)$ 이하이다. Order는 다음의 나눗셈 성질로 통제된다.
 
 ::: 명제 2
-$a^k \equiv 1 \pmod n$인 것은 $\ord_n(a) \mid k$인 것과 동치이다. 특히 $\ord_n(a) \mid \varphi(n)$이다.
+$\gcd(a, n) = 1$일 때, $a^k \equiv 1 \pmod n$인 것은 $\ord_n(a) \mid k$인 것과 동치이다. 특히 $\ord_n(a) \mid \varphi(n)$이다.
 :::
 
 ::: 증명
@@ -38,18 +38,18 @@ $d = \ord_n(a)$라 하고 $k = dq + r$ ($0 \leq r < d$) 로 나누면 $a^k = (a^
 $\ord_n(a) = \varphi(n)$인 $a$를 법 $n$의 *원시근<sub>primitive root</sub>*이라 한다. 원시근 $g$가 존재하면 $g, g^2, \ldots, g^{\varphi(n)}$이 기약잉여계 전체를 이룬다.
 :::
 
-원시근의 존재는 multiplicative group이 한 원소로 생성되는 순환군임을 뜻한다. 소수 법에서는 언제나 존재한다.
+원시근의 존재는 multiplicative group이 한 원소로 생성되는 cyclic group임을 뜻한다. 소수 법에서는 언제나 존재한다.
 
 ::: 정리 4
-$p$가 소수이면 법 $p$의 원시근이 존재한다. 즉 $\mathbb{Z}/p\mathbb{Z}$의 $0$이 아닌 원소들이 이루는 multiplicative group은 순환군이다.
+$p$가 소수이면 법 $p$의 원시근이 존재한다. 즉 $\mathbb{Z}/p\mathbb{Z}$의 $0$이 아닌 원소들이 이루는 multiplicative group은 cyclic group이다.
 :::
 
 ::: 증명
-Order $d$인 원소의 개수를 $\psi(d)$라 하자. 각 order는 $p - 1$의 약수이므로 $\sum_{d \mid p-1}\psi(d) = p - 1$이다. Order가 $d$인 원소가 하나라도 있으면, 그것이 생성하는 $d$개의 원소 $1, a, \ldots, a^{d-1}$이 모두 $x^d \equiv 1 \pmod p$의 해이다. 이 합동식은 field $\mathbb{Z}/p\mathbb{Z}$에서 degree $d$의 다항식이므로 해가 많아야 $d$개이고, 따라서 그 $d$개가 해 전부이다. 그중 order가 정확히 $d$인 것은 $\varphi(d)$개이므로, $\psi(d)$는 $0$ 또는 $\varphi(d)$이다. 한편 $\sum_{d\mid p-1}\varphi(d) = p - 1$이므로 ([§산술적 함수와 뫼비우스 반전, ⁋예시 7](/ko/math/number_theory/arithmetic_functions#ex7)), $\sum_d \psi(d) = \sum_d \varphi(d)$에서 모든 약수 $d$에 대해 $\psi(d) = \varphi(d)$이어야 한다. 특히 $\psi(p-1) = \varphi(p-1) \geq 1$이므로 order $p - 1$인 원소, 곧 원시근이 존재한다.
+Order $d$인 원소의 개수를 $\psi(d)$라 하자. 각 order는 $p - 1$의 약수이므로 $\sum_{d \mid p-1}\psi(d) = p - 1$이다. Order가 $d$인 원소가 하나라도 있으면, 그것이 생성하는 $d$개의 원소 $1, a, \ldots, a^{d-1}$이 모두 $x^d \equiv 1 \pmod p$의 해이다. 이 합동식은 field $\mathbb{Z}/p\mathbb{Z}$에서 degree $d$의 다항식이므로 해가 많아야 $d$개이고, 따라서 그 $d$개가 해 전부이다. 그중 order가 정확히 $d$인 것은 [명제 6](#prop6)에 의해 $\varphi(d)$개이므로, $\psi(d)$는 $0$ 또는 $\varphi(d)$이다. 한편 $\sum_{d\mid p-1}\varphi(d) = p - 1$이므로 ([§산술적 함수와 뫼비우스 반전, ⁋예시 7](/ko/math/number_theory/arithmetic_functions#ex7)), $\sum_d \psi(d) = \sum_d \varphi(d)$에서 모든 약수 $d$에 대해 $\psi(d) = \varphi(d)$이어야 한다. 특히 $\psi(p-1) = \varphi(p-1) \geq 1$이므로 order $p - 1$인 원소, 곧 원시근이 존재한다.
 :::
 
 ::: 참고 5
-일반 법 $n$에 대해 원시근이 존재하는 것은 $n = 1, 2, 4, p^k, 2p^k$ (여기서 $p$는 홀수 소수) 인 경우에 한한다. 따라서 $\mathbb{Z}/n\mathbb{Z}$의 multiplicative group은 일반적으로 순환군이 아니며, 가령 법 $8$에서는 $1, 3, 5, 7$의 order가 모두 $2$ 이하여서 원시근이 없다.
+일반 법 $n$에 대해 원시근이 존재하는 것은 $n = 1, 2, 4, p^k, 2p^k$ (여기서 $p$는 홀수 소수) 인 경우에 한한다. 따라서 $\mathbb{Z}/n\mathbb{Z}$의 multiplicative group은 일반적으로 cyclic group이 아니며, 가령 법 $8$에서는 $1, 3, 5, 7$의 order가 모두 $2$ 이하여서 원시근이 없다.
 :::
 
 ## 위수의 성질과 계산
@@ -149,10 +149,8 @@ $$\begin{aligned}
 5^2 &= 25 \equiv 1, & 7^2 &= 49 \equiv 1 \pmod 8
 \end{aligned}$$
 
-이어서 $1$을 뺀 세 원소가 모두 order $2$이다. Order $4$인 원소가 없으므로 원시근이 존재하지 않으며, multiplicative group은 순환군이 아니라 $\mathbb{Z}/2 \times \mathbb{Z}/2$ 구조를 가진다. 이는 참고 5의 예외 목록 $n = 1, 2, 4, p^k, 2p^k$에 $8$이 들지 않음과 부합한다.
+이어서 $1$을 뺀 세 원소가 모두 order $2$이다. Order $4$인 원소가 없으므로 원시근이 존재하지 않으며, multiplicative group은 cyclic group이 아니라 $\mathbb{Z}/2 \times \mathbb{Z}/2$ 구조를 가진다. 이는 참고 5의 예외 목록 $n = 1, 2, 4, p^k, 2p^k$에 $8$이 들지 않음과 부합한다.
 :::
-
-원시근 $g$가 있으면 모든 reduced residue class가 $g$의 거듭제곱으로 적히므로, 곱셈이 지수의 덧셈으로 바뀌어 — 마치 로그처럼 — 계산이 단순해진다.
 
 ---
 

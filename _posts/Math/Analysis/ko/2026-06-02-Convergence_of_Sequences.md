@@ -53,7 +53,7 @@ $a_n \rightarrow L$이면 $\varepsilon = 1$에 대해 $n \geq N$에서 $\lvert a
 ::: 정리 4 (극한의 대수)
 $a_n \rightarrow A$, $b_n \rightarrow B$이면 다음이 성립한다.
 
-$$a_n + b_n \rightarrow A + B, \qquad a_n b_n \rightarrow AB, \qquad \frac{a_n}{b_n} \rightarrow \frac{A}{B}\ (B \neq 0).$$
+$$a_n + b_n \rightarrow A + B, \qquad a_n b_n \rightarrow AB, \qquad \frac{a_n}{b_n} \rightarrow \frac{A}{B} \quad (b_n \neq 0, B \neq 0).$$
 :::
 
 ::: 증명
@@ -107,7 +107,7 @@ $\sqrt[n]{n} \rightarrow 1$임을 보인다. $n \geq 1$에서 $\sqrt[n]{n} \geq 
 
 $$n = (1 + h_n)^n \geq \binom{n}{2} h_n^2 = \frac{n(n-1)}{2} h_n^2$$
 
-이다. $n \geq 2$에서 정리하면 $h_n^2 \leq 2/(n-1)$, 곧 $0 \leq h_n \leq \sqrt{2/(n-1)}$이다. 우변이 $0$으로 가므로 [명제 5](#prop5)에 의해 $h_n \rightarrow 0$이고 $\sqrt[n]{n} = 1 + h_n \rightarrow 1$이다. 같은 방식으로 $a > 0$에 대해 $\sqrt[n]{a} \rightarrow 1$도 따른다.
+이다. $n \geq 2$에서 정리하면 $h_n^2 \leq 2/(n-1)$, 곧 $0 \leq h_n \leq \sqrt{2/(n-1)}$이다. 우변이 $0$으로 가므로 [명제 5](#prop5)에 의해 $h_n \rightarrow 0$이고 $\sqrt[n]{n} = 1 + h_n \rightarrow 1$이다. $a \geq 1$에 대해서도 같은 방식으로 $\sqrt[n]{a} \rightarrow 1$이 따르고, $0 < a < 1$이면 $1/a$에 이를 적용한 뒤 [정리 4](#thm4)를 쓰면 된다.
 :::
 
 ## 발산과 무한대로의 발산

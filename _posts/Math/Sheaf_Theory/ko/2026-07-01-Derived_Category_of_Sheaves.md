@@ -36,7 +36,7 @@ $$(\ker \phi)_x = \ker(\phi_x), \qquad (\coker \phi)_x = \coker(\phi_x), \qquad 
 ::: 증명
 Sheaf morphism $\phi$의 presheaf 차원 kernel $U \mapsto \ker(\phi(U))$는 그 자체로 sheaf이며, 따라서 sheaf morphism의 kernel은 이 presheaf kernel로 정의한다 ([\[위상수학\] §층, ⁋정의 7](/ko/math/topology/sheaves#def7)). 이는 sheaf 공리가 국소적으로 section을 이어붙이는 조건이기 때문이다. 호환되는 local section $s_i \in \ker(\phi(U_i))$가 주어지면 $\mathcal{F}$가 sheaf이므로 이들은 유일한 $s \in \mathcal{F}(U)$로 이어붙고, $\phi(U)(s)$는 각 $U_i$ 위에서 $\phi(U_i)(s_i) = 0$으로 제한되므로 $\mathcal{G}$의 separatedness에 의해 $\phi(U)(s) = 0$, 즉 $s \in \ker(\phi(U))$이다. Cokernel과 image는 presheaf 차원의 $U \mapsto \coker(\phi(U))$, $U \mapsto \im(\phi(U))$를 sheafify하여 정의한다. Sheafification은 stalk를 보존하고 ([\[위상수학\] §층, ⁋정의 5](/ko/math/topology/sheaves#def5) 직후의 universal property로부터 $(\mathcal{P}^\dagger)_x = \mathcal{P}_x$) stalk functor $\mathcal{F} \mapsto \mathcal{F}_x$는 exact하므로, 위의 stalk 공식이 따라 나온다.
 
-이제 abelian category의 공리를 확인하자. $\Sh(X)$는 additive category이고 모든 morphism이 kernel과 cokernel을 가진다. 임의의 monomorphism이 자신의 image의 kernel이고 임의의 epimorphism이 자신의 coimage의 cokernel이라는 조건은 stalk에서 확인하면 되는데, $\mathbb{Z}$-module(또는 $\mathcal{O}_{X,x}$-module)의 category가 abelian이므로 각 stalk에서 성립하고, sheaf morphism의 동형은 stalk 동형으로 판정되므로 ([\[위상수학\] §층, ⁋명제 4](/ko/math/topology/sheaves#prop4)) sheaf 차원에서도 성립한다. $\operatorname{Mod}(\mathcal{O}_X)$의 경우도 동일하다.
+이제 abelian category의 공리를 확인하자. $\Sh(X)$는 additive category이고 모든 morphism이 kernel과 cokernel을 가진다. 임의의 monomorphism이 자신의 cokernel의 kernel이고 임의의 epimorphism이 자신의 kernel의 cokernel이라는 조건은 stalk에서 확인하면 되는데, $\mathbb{Z}$-module(또는 $\mathcal{O}_{X,x}$-module)의 category가 abelian이므로 각 stalk에서 성립하고, sheaf morphism의 동형은 stalk 동형으로 판정되므로 ([\[위상수학\] §층, ⁋명제 4](/ko/math/topology/sheaves#prop4)) sheaf 차원에서도 성립한다. $\operatorname{Mod}(\mathcal{O}_X)$의 경우도 동일하다.
 :::
 
 명제의 stalk 공식은 sheaf의 short exact sequence를 stalk 차원에서 점검할 수 있게 해 주는, 앞으로 반복적으로 쓰일 도구이다. 특히 sequence $0 \rightarrow \mathcal{F}' \rightarrow \mathcal{F} \rightarrow \mathcal{F}'' \rightarrow 0$이 exact인 것은 각 점 $x$에서 $0 \rightarrow \mathcal{F}'_x \rightarrow \mathcal{F}_x \rightarrow \mathcal{F}''_x \rightarrow 0$이 exact인 것과 동치이다. 한편 global section functor $\Gamma(X, -)$가 left exact이지만 일반적으로 right exact가 아니라는 사실이 바로 sheaf cohomology가 비자명해지는 근원이며, 이 글의 모든 derived functor가 측정하는 대상이다.
@@ -85,7 +85,7 @@ $$Rf_\ast \mathcal{F} \cong f_\ast \mathcal{A}^\bullet$$
 이 성립한다. 특히 flasque resolution은 이 조건을 만족한다.
 :::
 ::: 증명
-이는 추상적 사실의 적용이다. $\mathcal{A}^\bullet$이 $f_\ast$-acyclic 항으로 이루어진 complex이면, $\mathcal{F}$의 $K$-injective resolution $\mathcal{I}^\bullet$에 대해 $f_\ast$를 적용한 두 complex $f_\ast \mathcal{A}^\bullet$과 $f_\ast \mathcal{I}^\bullet$이 quasi-isomorphic함을 보이면 된다. Injective sheaf는 flasque이고 ([\[대수다양체\] §층 코호몰로지, ⁋보조정리 9](/ko/math/algebraic_varieties/sheaf_cohomology#lem9)), flasque sheaf는 $f_\ast$-acyclic이다. 후자는 다음과 같이 확인된다. 임의의 열린집합 $V \subseteq Y$에 대해 $(R^q f_\ast \mathcal{F})$는 presheaf $V \mapsto H^q(f^{-1}(V), \mathcal{F})$의 sheafification이며, $\mathcal{F}$가 flasque이면 $\mathcal{F}\vert_{f^{-1}(V)}$도 flasque이므로 모든 $q > 0$에 대해 $H^q(f^{-1}(V), \mathcal{F}) = 0$이고 ([\[대수다양체\] §층 코호몰로지, ⁋명제 16](/ko/math/algebraic_varieties/sheaf_cohomology#prop16)), 따라서 $R^q f_\ast \mathcal{F} = 0$이다.
+이는 추상적 사실의 적용이다. $\mathcal{A}^\bullet$이 $f_\ast$-acyclic 항으로 이루어진 complex이면, $\mathcal{F}$의 injective resolution $\mathcal{I}^\bullet$에 대해 $f_\ast$를 적용한 두 complex $f_\ast \mathcal{A}^\bullet$과 $f_\ast \mathcal{I}^\bullet$이 quasi-isomorphic함을 보이면 된다. Injective sheaf는 flasque이고 ([\[대수다양체\] §층 코호몰로지, ⁋보조정리 9](/ko/math/algebraic_varieties/sheaf_cohomology#lem9)), flasque sheaf는 $f_\ast$-acyclic이다. 후자는 다음과 같이 확인된다. 임의의 열린집합 $V \subseteq Y$에 대해 $(R^q f_\ast \mathcal{F})$는 presheaf $V \mapsto H^q(f^{-1}(V), \mathcal{F})$의 sheafification이며, $\mathcal{F}$가 flasque이면 $\mathcal{F}\vert_{f^{-1}(V)}$도 flasque이므로 모든 $q > 0$에 대해 $H^q(f^{-1}(V), \mathcal{F}) = 0$이고 ([\[대수다양체\] §층 코호몰로지, ⁋명제 16](/ko/math/algebraic_varieties/sheaf_cohomology#prop16)), 따라서 $R^q f_\ast \mathcal{F} = 0$이다.
 
 두 acyclic resolution이 같은 결과를 준다는 것은 [\[대수다양체\] §층 코호몰로지, ⁋명제 17](/ko/math/algebraic_varieties/sheaf_cohomology#prop17)의 acyclic resolution 정리를 hyper-derived functor 차원으로 끌어올린 것으로, $f_\ast \mathcal{A}^\bullet$과 $f_\ast \mathcal{I}^\bullet$ 사이의 비교 morphism이 Cartan-Eilenberg resolution을 매개로 quasi-isomorphism이 됨을 보이면 된다. 핵심은 각 항이 $f_\ast$-acyclic이라는 사실이며, 자세한 spectral sequence 비교는 [\[대수다양체\] §층 코호몰로지, ⁋정의 18](/ko/math/algebraic_varieties/sheaf_cohomology#def18) 이후의 논증을 따른다.
 :::
@@ -171,7 +171,7 @@ $$R(g f)_\ast \cong Rg_\ast \circ Rf_\ast$$
 ::: 증명
 핵심은 $f_\ast$가 injective sheaf를 $g_\ast$-acyclic sheaf로 보낸다는 사실이다. $f_\ast$는 exact functor $f^{-1}$의 right adjoint이므로 injective object를 injective object로 보낸다. 즉 $\mathcal{I}$가 injective이면 $f_\ast \mathcal{I}$도 injective이고, injective sheaf는 flasque이며 ([\[대수다양체\] §층 코호몰로지, ⁋보조정리 9](/ko/math/algebraic_varieties/sheaf_cohomology#lem9)) flasque sheaf는 $g_\ast$-acyclic이다 ([명제 4](#prop4)의 증명).
 
-이제 $\mathcal{F}^\bullet \in D^+(\Sh(X))$의 $K$-injective resolution $\mathcal{I}^\bullet$을 택하자. 정의에 의해 $Rf_\ast \mathcal{F}^\bullet = f_\ast \mathcal{I}^\bullet$이다. $f_\ast \mathcal{I}^\bullet$은 $g_\ast$-acyclic 항으로 이루어진 complex이므로 [명제 4](#prop4)에 의해 $g_\ast$에 적용하여 $Rg_\ast(f_\ast \mathcal{I}^\bullet) = g_\ast f_\ast \mathcal{I}^\bullet$을 얻는다. 한편 $(gf)_\ast = g_\ast f_\ast$이고 $\mathcal{I}^\bullet$은 $(gf)_\ast$를 계산하는 데 쓸 수 있는 $K$-injective resolution이므로 $R(gf)_\ast \mathcal{F}^\bullet = (gf)_\ast \mathcal{I}^\bullet = g_\ast f_\ast \mathcal{I}^\bullet$이다. 따라서
+이제 $\mathcal{F}^\bullet \in D^+(\Sh(X))$의 resolution 가운데 각 항이 injective이고 bounded below인 $\mathcal{I}^\bullet$을 택하자. 이는 [\[호몰로지 대수학\] §유도카테고리, ⁋명제 7](/ko/math/homological_algebra/derived_categories#prop7)에 의해 $K$-injective이므로, 정의에 의해 $Rf_\ast \mathcal{F}^\bullet = f_\ast \mathcal{I}^\bullet$이다. $f_\ast \mathcal{I}^\bullet$은 $g_\ast$-acyclic 항으로 이루어진 bounded below complex이므로 [명제 4](#prop4)의 논법을 complex 차원에 적용하여 $Rg_\ast(f_\ast \mathcal{I}^\bullet) = g_\ast f_\ast \mathcal{I}^\bullet$을 얻는다. 한편 $(gf)_\ast = g_\ast f_\ast$이고 $\mathcal{I}^\bullet$은 $(gf)_\ast$를 계산하는 데 쓸 수 있는 $K$-injective resolution이므로 $R(gf)_\ast \mathcal{F}^\bullet = (gf)_\ast \mathcal{I}^\bullet = g_\ast f_\ast \mathcal{I}^\bullet$이다. 따라서
 $$R(gf)_\ast \mathcal{F}^\bullet = g_\ast f_\ast \mathcal{I}^\bullet = Rg_\ast(f_\ast \mathcal{I}^\bullet) = Rg_\ast Rf_\ast \mathcal{F}^\bullet$$
 이 성립한다. Ringed space 차원도 동일하다.
 :::
@@ -191,7 +191,7 @@ $$E_2^{p,q} = H^p(Y, R^q f_\ast \mathcal{F}) \Rightarrow H^{p+q}(X, \mathcal{F})
 :::
 
 먼저 $a: S^1 \rightarrow \{\ast\}$에 대한 $R\Gamma(S^1, \mathbb{Z}_{S^1}) = Ra_\ast \mathbb{Z}_{S^1}$을 계산한다. $S^1$을 두 호 $U, V$로 덮자. 각각은 열린 구간과 homeomorphic이고 $U \cap V$는 서로소인 두 호 $W_1 \sqcup W_2$이며, $U$, $V$, $W_1$, $W_2$는 모두 가축이라 그 위에서 $\mathbb{Z}$ 계수 cohomology가 degree $0$에 집중된다. 이 covering에 대한 Čech complex를 적으면 ([\[대수다양체\] §층 코호몰로지, ⁋정의 3](/ko/math/algebraic_varieties/sheaf_cohomology#def3))
-$$\check{C}^0 = \mathbb{Z}_U \oplus \mathbb{Z}_V = \mathbb{Z}^2, \qquad \check{C}^1 = \mathbb{Z}_{W_1} \oplus \mathbb{Z}_{W_2} = \mathbb{Z}^2$$
+$$\check{C}^0 = \mathbb{Z}_{S^1}(U) \oplus \mathbb{Z}_{S^1}(V) = \mathbb{Z}^2, \qquad \check{C}^1 = \mathbb{Z}_{S^1}(W_1) \oplus \mathbb{Z}_{S^1}(W_2) = \mathbb{Z}^2$$
 이고 그 이상은 $0$이다. Coboundary $d: \mathbb{Z}^2 \rightarrow \mathbb{Z}^2$는 $(s_U, s_V) \mapsto (s_V - s_U, s_V - s_U)$로, $W_1$과 $W_2$ 두 성분에서 같은 차 $s_V - s_U$를 준다. 따라서
 $$\ker d = \{(s_U, s_V)\mid s_U = s_V\} \cong \mathbb{Z}, \qquad \coker d = \mathbb{Z}^2 / \{(t, t)\mid t \in \mathbb{Z}\} \cong \mathbb{Z}$$
 이고, covering의 각 성분이 acyclic이므로 ([\[대수다양체\] §층 코호몰로지, ⁋정리 11](/ko/math/algebraic_varieties/sheaf_cohomology#thm11)) 이 Čech cohomology가 sheaf cohomology와 일치한다. 그러므로
@@ -202,7 +202,7 @@ $$H^0(S^1, \mathbb{Z}_{S^1}) = \mathbb{Z}, \qquad H^1(S^1, \mathbb{Z}_{S^1}) = \
 $$(R^0 p_\ast \mathbb{Z}_{T^2})_x = \mathbb{Z}, \qquad (R^1 p_\ast \mathbb{Z}_{T^2})_x = \mathbb{Z}, \qquad (R^q p_\ast \mathbb{Z}_{T^2})_x = 0 \quad (q \geq 2)$$
 이고, $p$가 $S^1 \times S^1 \rightarrow S^1$인 곱사상이라 fiber 방향의 monodromy가 없으므로 이 stalk들이 모여 다시 constant sheaf를 이룬다. 즉
 $$R^0 p_\ast \mathbb{Z}_{T^2} \cong \mathbb{Z}_{S^1}, \qquad R^1 p_\ast \mathbb{Z}_{T^2} \cong \mathbb{Z}_{S^1}$$
-이다. 이 비자명한 $R^1 p_\ast = \mathbb{Z}_{S^1}$이 fiber $S^1$의 첫 cohomology를 base 위에 기억하는 sheaf이다.
+이다. 이 비자명한 $R^1 p_\ast \mathbb{Z}_{T^2}$가 fiber $S^1$의 첫 cohomology를 base 위에 기억하는 sheaf이다.
 
 이 두 결과를 Leray spectral sequence $E_2^{p,q} = H^p(S^1, R^q p_\ast \mathbb{Z}_{T^2}) \Rightarrow H^{p+q}(T^2, \mathbb{Z})$에 넣는다. 위에서 구한 $R^q p_\ast$와 $S^1$의 cohomology에 의해 비자명한 $E_2$ 항은
 $$E_2^{0,0} = H^0(S^1, \mathbb{Z}_{S^1}) = \mathbb{Z}, \quad E_2^{1,0} = H^1(S^1, \mathbb{Z}_{S^1}) = \mathbb{Z}, \quad E_2^{0,1} = H^0(S^1, \mathbb{Z}_{S^1}) = \mathbb{Z}, \quad E_2^{1,1} = H^1(S^1, \mathbb{Z}_{S^1}) = \mathbb{Z}$$

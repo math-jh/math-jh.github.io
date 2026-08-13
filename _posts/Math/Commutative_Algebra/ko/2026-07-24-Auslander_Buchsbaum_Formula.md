@@ -23,13 +23,13 @@ $$\pd_A M+\operatorname{depth}M=\operatorname{depth}A$$
 
 ## 준비: regular 원소와 최소 자유 분해
 
-공식의 증명은 $\operatorname{depth}A$에 대한 귀납법으로 진행된다. $\operatorname{depth}A\geq 1$이면 $A$와 $M$을 동시에 non-zerodivisor로 갖는 원소 $x$를 $\mathfrak{m}$에서 뽑아 $A/xA$로 내려가는데, 이때 depth는 [§Depth](/ko/math/commutative_algebra/depth)의 결과로 정확히 $1$씩 줄어드는 반면 projective dimension은 변하지 않아야 공식의 양변이 나란히 감소한다. Projective dimension이 보존되는 이유는 minimal free resolution이 $x$로 나누는 조작 아래에서 그 계수를 그대로 유지하기 때문이며, 이 절에서는 먼저 이 사실과, free module의 depth가 ring의 depth와 같다는 기초적인 관찰을 확립한다.
+공식의 증명은 $\operatorname{depth}A$에 대한 귀납법으로 진행된다. $\operatorname{depth}A\geq 1$이고 $\operatorname{depth}M\geq 1$이면 $A$와 $M$을 동시에 non-zerodivisor로 갖는 원소 $x$를 $\mathfrak{m}$에서 뽑아 $A/xA$로 내려가는데, 이때 depth는 [§Depth](/ko/math/commutative_algebra/depth)의 결과로 정확히 $1$씩 줄어드는 반면 projective dimension은 변하지 않아야 공식의 양변이 나란히 감소한다. Projective dimension이 보존되는 이유는 minimal free resolution이 $x$로 나누는 조작 아래에서 그 계수를 그대로 유지하기 때문이며, 이 절에서는 먼저 이 사실과, free module의 depth가 ring의 depth와 같다는 기초적인 관찰을 확립한다.
 
 ::: 명제 1
 Noetherian local ring $(A,\mathfrak{m})$ 위의 $0$이 아닌 finitely generated free module $F$에 대하여 $\operatorname{depth}F=\operatorname{depth}A$이다.
 :::
 ::: 증명
-$F\neq 0$이 finitely generated free이므로 적당한 $r\geq 1$에 대하여 $F\cong A^{\oplus r}$이다. $\kappa=A/\mathfrak{m}$의 projective resolution $P_\bullet$을 하나 고정하면, $\Hom_A(-,-)$이 둘째 변수의 유한 직합과 commute하고 cohomology 또한 유한 직합과 commute하므로, 각각의 $i$에 대하여
+$F\neq 0$이 finitely generated free이므로 적당한 $r\geq 1$에 대하여 $F\cong A^{\oplus r}$이다. $\kappa=A/\mathfrak{m}$의 projective resolution $P_\bullet$을 하나 고정하면, $\Hom_A(-,-)$이 둘째 변수의 유한한 direct sum과 commute하고 cohomology 또한 유한한 direct sum과 commute하므로, 각각의 $i$에 대하여
 
 $$\Ext_A^i(\kappa,A^{\oplus r})=H^i(\Hom_A(P_\bullet,A^{\oplus r}))=H^i(\Hom_A(P_\bullet,A))^{\oplus r}=\Ext_A^i(\kappa,A)^{\oplus r}$$
 
@@ -120,7 +120,7 @@ $$\pd_A M+\operatorname{depth}M=(\pd_A M'+1)+0=\operatorname{depth}A$$
 을 얻는다.
 :::
 
-공식은 $\pd_A M\geq 0$과 결합하여 $\operatorname{depth}M\leq\operatorname{depth}A$를 즉시 주며, [§Depth, ⁋따름정리 8](/ko/math/commutative_algebra/depth#cor8)의 $\operatorname{depth}A\leq\dim A$과 종합하면 finite projective dimension을 갖는 module은 언제나 $\operatorname{depth}M\leq\operatorname{depth}A\leq\dim A$를 만족한다. 한편 $\pd_A M<\infty$라는 가정은 공식이 성립하기 위한 필수 조건이며, 이를 떼어내면 [예시 7](#ex7)에서 보듯 등식이 깨진다. 공식의 첫 응용으로 projective dimension의 크기와, depth가 $0$일 때의 경직성을 얻는다.
+공식은 $\pd_A M\geq 0$과 결합하여 $\operatorname{depth}M\leq\operatorname{depth}A$를 즉시 주며, [§Depth, ⁋따름정리 8](/ko/math/commutative_algebra/depth#cor8)의 $\operatorname{depth}A\leq\dim A$와 종합하면 finite projective dimension을 갖는 module은 언제나 $\operatorname{depth}M\leq\operatorname{depth}A\leq\dim A$를 만족한다. 한편 $\pd_A M<\infty$라는 가정은 공식이 성립하기 위한 필수 조건이며, 이를 떼어내면 [예시 7](#ex7)에서 보듯 등식이 깨진다. 공식의 첫 응용으로 projective dimension의 크기와, depth가 $0$일 때의 경직성을 얻는다.
 
 ::: 따름정리 4
 Noetherian local ring $(A,\mathfrak{m})$에 대하여 다음이 성립한다.

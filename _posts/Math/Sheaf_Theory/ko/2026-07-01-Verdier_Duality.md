@@ -24,7 +24,7 @@ published: false
 
 ## Dualizing complex
 
-비콤팩트하거나 특이한 공간에서 Poincaré duality를 끌어내려면, manifold에서 fundamental class $[M] \in H_n(M)$이 cap product를 통해 수행하던 역할을 대체할 대상이 필요하다. Manifold의 경우 [§고유 받음과 여섯 함자, ⁋정리 7](/ko/math/sheaf_theory/six_functors#thm7)이 알려 주듯 $a_X^! k \cong k_X[n]$이며, degree 이동 $[n]$이 바로 fundamental class의 차원 정보를 담는다. 일반적인 공간에서는 $a_X^! k$이 더 이상 shift된 상수 sheaf가 아니지만, 그것이 duality를 매개하는 객체로서의 역할은 그대로 유지한다. 우리는 이 객체를 다음과 같이 명명한다.
+비콤팩트하거나 특이한 공간에서 Poincaré duality를 끌어내려면, manifold에서 fundamental class $[M] \in H_n(M)$이 cap product를 통해 수행하던 역할을 대체할 대상이 필요하다. 방향지어진 $n$차원 manifold의 경우 [§고유 받음과 여섯 함자, ⁋정리 7](/ko/math/sheaf_theory/six_functors#thm7)이 알려 주듯 $a_X^! k \cong k_X[n]$이며, degree 이동 $[n]$이 바로 fundamental class의 차원 정보를 담는다. 일반적인 공간에서는 $a_X^! k$이 더 이상 shift된 상수 sheaf가 아니지만, 그것이 duality를 매개하는 객체로서의 역할은 그대로 유지한다. 우리는 이 객체를 다음과 같이 명명한다.
 
 ::: 정의 1
 위상공간 $X$의 구조 morphism $a_X: X \rightarrow \{\ast\}$에 대해, $\{\ast\}$ 위의 계수 $k$의 예외 역상
@@ -34,7 +34,7 @@ $$\omega_X := a_X^! k$$
 
 $\omega_X$는 일반적으로 한 degree에 집중되지 않는 $D(\Sh(X))$의 대상이며, 그 cohomology sheaf $\mathcal{H}^{-i}(\omega_X)$의 stalk는 $X$의 국소적인 Borel–Moore homology를 계산한다. 이 해석은 [예시 10](#ex10)에서 구체적으로 확인한다. 한편 $X$가 방향지어진 $n$차원 topological manifold이면 [§고유 받음과 여섯 함자, ⁋정리 7](/ko/math/sheaf_theory/six_functors#thm7)을 $Y = \{\ast\}$에 적용하여 $\omega_X \cong k_X[n]$을 얻는데, 이 특수한 경우가 곧 Poincaré duality의 sheaf 차원 표현이며 [정리 9](#thm9)에서 다룬다.
 
-Dualizing complex를 축으로 삼아 sheaf complex 하나하나에 그 "쌍대"를 대응시키는 functor를 정의한다. 이는 [§층의 유도 범주와 유도 함자, ⁋정의 7](/ko/math/sheaf_theory/derived_category_of_sheaves#def7)의 derived sheaf-Hom $R\mathcal{H}om$의 둘째 변수에 $\omega_X$를 고정한 것이다.
+Dualizing complex를 축으로 삼아 sheaf complex 하나하나에 그 "쌍대"를 대응시키는 functor를 정의한다. 이는 [§층의 유도 범주와 유도 functor, ⁋정의 7](/ko/math/sheaf_theory/derived_category_of_sheaves#def7)의 derived sheaf-Hom $R\mathcal{H}om$의 둘째 변수에 $\omega_X$를 고정한 것이다.
 
 ::: 정의 2
 $X$ 위의 *Verdier dual functor<sub>Verdier 쌍대 함자</sub>* $\mathbf{D}_X: D(\Sh(X))^{\op} \rightarrow D(\Sh(X))$를
@@ -76,9 +76,9 @@ $$\begin{aligned}
 &\cong \Hom_{D(Y)}\big(\mathcal{H}^\bullet \otimes^L Rf_!\mathcal{F}^\bullet, \mathcal{G}^\bullet\big) \\
 &\cong \Hom_{D(Y)}\big(\mathcal{H}^\bullet, R\mathcal{H}om(Rf_!\mathcal{F}^\bullet, \mathcal{G}^\bullet)\big).
 \end{aligned}$$
-첫째 동형은 [§층의 유도 범주와 유도 함자, ⁋정리 9](/ko/math/sheaf_theory/derived_category_of_sheaves#thm9)의 $(f^{-1}, Rf_\ast)$ 수반이고, 둘째와 다섯째 동형은 [§층의 유도 범주와 유도 함자, ⁋명제 8](/ko/math/sheaf_theory/derived_category_of_sheaves#prop8)의 tensor-hom adjunction이며, 셋째 동형은 [§고유 받음과 여섯 함자, ⁋정의 6](/ko/math/sheaf_theory/six_functors#def6)의 $(Rf_!, f^!)$ 수반이고, 넷째 동형은 [§고유 받음과 여섯 함자, ⁋정리 9](/ko/math/sheaf_theory/six_functors#thm9)이다. 모든 자연 동형이 $\mathcal{H}^\bullet$에 함자적이므로 Yoneda 보조정리에 의해 양 끝의 대상이 isomorphic하고, 이것이 국소적 형태이다.
+첫째 동형은 [§층의 유도 범주와 유도 functor, ⁋정리 9](/ko/math/sheaf_theory/derived_category_of_sheaves#thm9)의 $(f^{-1}, Rf_\ast)$ 수반이고, 둘째와 다섯째 동형은 [§층의 유도 범주와 유도 functor, ⁋명제 8](/ko/math/sheaf_theory/derived_category_of_sheaves#prop8)의 tensor-hom adjunction이며, 셋째 동형은 [§고유 받음과 여섯 함자, ⁋정의 6](/ko/math/sheaf_theory/six_functors#def6)의 $(Rf_!, f^!)$ 수반이고, 넷째 동형은 [§고유 받음과 여섯 함자, ⁋정리 9](/ko/math/sheaf_theory/six_functors#thm9)이다. 모든 자연 동형이 $\mathcal{H}^\bullet$에 함자적이므로 Yoneda 보조정리에 의해 양 끝의 대상이 isomorphic하고, 이것이 국소적 형태이다.
 
-대역적 형태는 국소적 형태에 $R\Gamma(Y, -)$을 적용하여 얻는다. $a_Y \circ f = a_X$이므로 [§층의 유도 범주와 유도 함자, ⁋정리 10](/ko/math/sheaf_theory/derived_category_of_sheaves#thm10)의 합성 동형에 의해 $R\Gamma(Y, Rf_\ast(-)) = R\Gamma(X, -)$이고, [§층의 유도 범주와 유도 함자, ⁋명제 8](/ko/math/sheaf_theory/derived_category_of_sheaves#prop8) 직후의 서술에 따라 $R\Hom = R\Gamma \circ R\mathcal{H}om$이므로, 좌변은 $R\Gamma(X, R\mathcal{H}om(\mathcal{F}^\bullet, f^!\mathcal{G}^\bullet)) = R\Hom_X(\mathcal{F}^\bullet, f^!\mathcal{G}^\bullet)$이고 우변은 $R\Hom_Y(Rf_!\mathcal{F}^\bullet, \mathcal{G}^\bullet)$이다.
+대역적 형태는 국소적 형태에 $R\Gamma(Y, -)$을 적용하여 얻는다. $a_Y \circ f = a_X$이므로 [§층의 유도 범주와 유도 functor, ⁋정리 10](/ko/math/sheaf_theory/derived_category_of_sheaves#thm10)의 합성 동형에 의해 $R\Gamma(Y, Rf_\ast(-)) = R\Gamma(X, -)$이고, [§층의 유도 범주와 유도 functor, ⁋명제 8](/ko/math/sheaf_theory/derived_category_of_sheaves#prop8) 직후의 서술에 따라 $R\Hom = R\Gamma \circ R\mathcal{H}om$이므로, 좌변은 $R\Gamma(X, R\mathcal{H}om(\mathcal{F}^\bullet, f^!\mathcal{G}^\bullet)) = R\Hom_X(\mathcal{F}^\bullet, f^!\mathcal{G}^\bullet)$이고 우변은 $R\Hom_Y(Rf_!\mathcal{F}^\bullet, \mathcal{G}^\bullet)$이다.
 :::
 
 대역적 형태에서 $f = a_X: X \rightarrow \{\ast\}$, $\mathcal{G}^\bullet = k$로 specialize하면 dualizing complex의 정의가 곧바로 작동하여, $\mathbf{D}_X$의 전역 cohomology가 compactly supported cohomology의 dual임을 얻는다. 이것이 Verdier duality의 가장 자주 인용되는 형태이다.
@@ -105,7 +105,7 @@ Cohomological 형태 $H^j(X, \mathbf{D}_X \mathcal{F}) \cong H^{-j}_c(X, \mathca
 [따름정리 5](#cor5)는 임의의 $\mathcal{F}^\bullet$에 대해 성립하지만, $\mathbf{D}_X$가 진정한 의미의 duality, 즉 두 번 적용하면 항등으로 돌아오는 involution이 되려면 대상을 적절히 제한해야 한다. 임의의 sheaf complex는 너무 거칠어서 $\mathbf{D}_X \mathbf{D}_X \mathcal{F}^\bullet$이 $\mathcal{F}^\bullet$으로 돌아오지 않을 수 있다. 올바른 정의역은 위상적으로 잘 통제된 complex, 곧 constructible complex이다.
 
 ::: 정의 6
-위상공간 $X$의 *stratification<sub>층화</sub>*은 국소 유한한 locally closed 부분공간들의 분할 $X = \bigsqcup_\alpha S_\alpha$로서, 각 $\overline{S_\alpha}$가 다른 stratum들의 합집합이 되는 것을 말한다. 유계 complex $\mathcal{F}^\bullet \in D^b(\Sh(X))$가 *constructible<sub>구성가능</sub>*하다는 것은 어떤 stratification $\{S_\alpha\}$가 존재하여, 모든 $j$와 모든 $\alpha$에 대해 cohomology sheaf의 restriction $\mathcal{H}^j(\mathcal{F}^\bullet)\vert_{S_\alpha}$이 유한 rank의 locally constant sheaf가 되는 것이다. Constructible complex들이 이루는 $D^b(\Sh(X))$의 충만한 부분삼각범주를 $D^b_c(X)$로 적는다.
+위상공간 $X$의 *stratification<sub>층화</sub>*은 국소 유한한 locally closed 부분공간들의 분할 $X = \bigsqcup_\alpha S_\alpha$로서, 각 $\overline{S_\alpha}$가 stratum들의 합집합이 되는 것을 말한다. 유계 complex $\mathcal{F}^\bullet \in D^b(\Sh(X))$가 *constructible<sub>구성가능</sub>*하다는 것은 어떤 stratification $\{S_\alpha\}$가 존재하여, 모든 $j$와 모든 $\alpha$에 대해 cohomology sheaf의 restriction $\mathcal{H}^j(\mathcal{F}^\bullet)\vert_{S_\alpha}$이 유한 rank의 locally constant sheaf가 되는 것이다. Constructible complex들이 이루는 $D^b(\Sh(X))$의 충만한 부분삼각범주를 $D^b_c(X)$로 적는다.
 :::
 
 직관적으로 constructible complex는 공간을 유한히 많은 조각으로 잘랐을 때 각 조각 위에서 국소상수가 되는 complex이다. 상수 sheaf $k_X$ (전체를 한 stratum으로), 닫힌 부분다양체에 support를 가진 상수 sheaf, 그리고 [예시 10](#ex10)에서 다룰 특이공간의 dualizing complex가 모두 이 부류에 속한다. 우리가 가정한 공간 위에서 $D^b_c(X)$는 여섯 functor 모두에 대해 닫혀 있으며, 특히 $\omega_X \in D^b_c(X)$이고 $\mathbf{D}_X$가 $D^b_c(X)$를 자기 자신으로 보낸다. 이 사실의 증명은 stratification에 대한 귀납과 [§고유 받음과 여섯 함자, ⁋정리 10](/ko/math/sheaf_theory/six_functors#thm10)을 사용하며, 그 자체로 상당한 분량이므로 여기서는 결과만 인용하고 [KS]의 §3.4와 [Dim]의 §4를 참조한다.
@@ -116,7 +116,7 @@ $$\mathcal{F}^\bullet \xrightarrow{\ \sim\ } \mathbf{D}_X \mathbf{D}_X \mathcal{
 이 성립한다. 따라서 $\mathbf{D}_X: D^b_c(X)^{\op} \rightarrow D^b_c(X)$는 삼각범주의 anti-equivalence이며 $\mathbf{D}_X^2 \cong \id$이다.
 :::
 ::: 증명
-자연 morphism $\mathcal{F}^\bullet \rightarrow \mathbf{D}_X \mathbf{D}_X \mathcal{F}^\bullet$은 tensor-hom adjunction의 evaluation, 즉 $\mathcal{F}^\bullet \otimes^L R\mathcal{H}om(\mathcal{F}^\bullet, \omega_X) \rightarrow \omega_X$에 대응하는 morphism으로 표준적으로 존재한다 ([§층의 유도 범주와 유도 함자, ⁋명제 8](/ko/math/sheaf_theory/derived_category_of_sheaves#prop8)). 이것이 동형임을 보이는 것이 핵심이며, 동형 여부는 [§층의 유도 범주와 유도 함자, ⁋명제 1](/ko/math/sheaf_theory/derived_category_of_sheaves#prop1)의 stalk 판정에 의해 국소적인 문제이다. Stratification에 대한 귀납으로 환원되는데, 가장 낮은 차원의 stratum은 manifold이므로 그 위에서는 $\omega$가 shift된 국소계가 되어 ([§고유 받음과 여섯 함자, ⁋정리 7](/ko/math/sheaf_theory/six_functors#thm7)) biduality가 유한차원 vector space의 표준 동형 $V \cong (V^\vee)^\vee$으로 귀착되고, 이는 $\mathcal{H}^j(\mathcal{F}^\bullet)$의 stalk가 유한 rank라는 constructibility 가정에서 성립한다. 높은 차원의 stratum으로는 [§고유 받음과 여섯 함자, ⁋정리 10](/ko/math/sheaf_theory/six_functors#thm10)을 따라 $\mathbf{D}_X$가 두 변을 동형으로 보냄을 이어 올린다. 유한 rank 조건이 빠지면 $V \cong (V^\vee)^\vee$이 깨지므로 constructibility는 필수적이다. 자세한 논증은 [KS]의 Proposition 3.4.3을 따른다.
+자연 morphism $\mathcal{F}^\bullet \rightarrow \mathbf{D}_X \mathbf{D}_X \mathcal{F}^\bullet$은 tensor-hom adjunction의 evaluation, 즉 $\mathcal{F}^\bullet \otimes^L R\mathcal{H}om(\mathcal{F}^\bullet, \omega_X) \rightarrow \omega_X$에 대응하는 morphism으로 표준적으로 존재한다 ([§층의 유도 범주와 유도 functor, ⁋명제 8](/ko/math/sheaf_theory/derived_category_of_sheaves#prop8)). 이것이 동형임을 보이는 것이 핵심이며, 동형 여부는 [§층의 유도 범주와 유도 functor, ⁋명제 1](/ko/math/sheaf_theory/derived_category_of_sheaves#prop1)의 stalk 판정에 의해 국소적인 문제이다. Stratification에 대한 귀납으로 환원되는데, 가장 낮은 차원의 stratum은 manifold이므로 그 위에서는 $\omega$가 shift된 국소계가 되어 ([§고유 받음과 여섯 함자, ⁋정리 7](/ko/math/sheaf_theory/six_functors#thm7)) biduality가 유한차원 vector space의 표준 동형 $V \cong (V^\vee)^\vee$으로 귀착되고, 이는 $\mathcal{H}^j(\mathcal{F}^\bullet)$의 stalk가 유한 rank라는 constructibility 가정에서 성립한다. 높은 차원의 stratum으로는 [§고유 받음과 여섯 함자, ⁋정리 10](/ko/math/sheaf_theory/six_functors#thm10)을 따라 $\mathbf{D}_X$가 두 변을 동형으로 보냄을 이어 올린다. 유한 rank 조건이 빠지면 $V \cong (V^\vee)^\vee$이 깨지므로 constructibility는 필수적이다. 자세한 논증은 [KS]의 Proposition 3.4.3을 따른다.
 :::
 
 Biduality가 성립하면 $\mathbf{D}_X$는 다른 다섯 functor와의 호환 관계를 통해 그들을 짝지어 교환한다. 다음 명제는 Verdier duality의 형식적 귀결로서, $\mathbf{D}$가 $Rf_\ast$와 $Rf_!$을, 그리고 $Lf^\ast$와 $f^!$을 서로 맞바꾼다는 것을 말한다.
@@ -138,7 +138,7 @@ $$\begin{aligned}
 &\cong \Hom_{D(Y)}\big(Rf_!\mathcal{F}^\bullet, \mathcal{G}^\bullet\big) \\
 &\cong \Hom_{D(X)}\big(\mathcal{F}^\bullet, f^!\mathcal{G}^\bullet\big)
 \end{aligned}$$
-이다. 첫째와 넷째 동형은 $\mathbf{D}_X$와 $\mathbf{D}_Y$가 $D^b_c$ 위에서 contravariant equivalence라는 [정리 7](#thm7)의 귀결이고, 둘째 동형은 [§층의 유도 범주와 유도 함자, ⁋정리 9](/ko/math/sheaf_theory/derived_category_of_sheaves#thm9)의 $(f^{-1}, Rf_\ast)$ 수반이며, 셋째 동형은 방금 증명한 첫 동형, 다섯째 동형은 [§고유 받음과 여섯 함자, ⁋정의 6](/ko/math/sheaf_theory/six_functors#def6)의 $(Rf_!, f^!)$ 수반이다. Yoneda 보조정리에 의해 $\mathbf{D}_X f^{-1}\mathbf{D}_Y\mathcal{G}^\bullet \cong f^!\mathcal{G}^\bullet$이고, $\mathcal{G}^\bullet$을 $\mathbf{D}_Y\mathcal{G}^\bullet$으로 바꾼 뒤 [정리 7](#thm7)의 $\mathbf{D}_Y^2 \cong \id$을 쓰면 $f^!\mathbf{D}_Y\mathcal{G}^\bullet \cong \mathbf{D}_X f^{-1}\mathcal{G}^\bullet$을 얻는다. 끝의 두 식은 양변에 $\mathbf{D}$를 적용하고 다시 $\mathbf{D}^2 \cong \id$을 쓰면 따라 나온다.
+이다. 첫째와 넷째 동형은 $\mathbf{D}_X$와 $\mathbf{D}_Y$가 $D^b_c$ 위에서 contravariant equivalence라는 [정리 7](#thm7)의 귀결이고, 둘째 동형은 [§층의 유도 범주와 유도 functor, ⁋정리 9](/ko/math/sheaf_theory/derived_category_of_sheaves#thm9)의 $(f^{-1}, Rf_\ast)$ 수반이며, 셋째 동형은 방금 증명한 첫 동형, 다섯째 동형은 [§고유 받음과 여섯 함자, ⁋정의 6](/ko/math/sheaf_theory/six_functors#def6)의 $(Rf_!, f^!)$ 수반이다. Yoneda 보조정리에 의해 $\mathbf{D}_X f^{-1}\mathbf{D}_Y\mathcal{G}^\bullet \cong f^!\mathcal{G}^\bullet$이고, $\mathcal{G}^\bullet$을 $\mathbf{D}_Y\mathcal{G}^\bullet$으로 바꾼 뒤 [정리 7](#thm7)의 $\mathbf{D}_Y^2 \cong \id$을 쓰면 $f^!\mathbf{D}_Y\mathcal{G}^\bullet \cong \mathbf{D}_X f^{-1}\mathcal{G}^\bullet$을 얻는다. 끝의 두 식은 양변에 $\mathbf{D}$를 적용하고 다시 $\mathbf{D}^2 \cong \id$을 쓰면 따라 나온다.
 :::
 
 명제는 여섯 functor가 $\mathbf{D}$ 아래에서 둘씩 짝을 이룬다는 구조를 드러낸다. $Rf_\ast$와 $Rf_!$이 한 쌍, $Lf^\ast = f^{-1}$과 $f^!$이 한 쌍이다. 이 대칭은 여섯 functor 형식이 단지 functor들의 모음이 아니라 duality를 내장한 구조임을 보여 주며, perverse sheaf 이론에서 self-dual 객체를 다룰 때 본질적인 역할을 한다.

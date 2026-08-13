@@ -92,7 +92,7 @@ $$\sigma(\alpha)=\sigma(x)+\zeta\sigma^2(x)+\cdots+\zeta^{n-1}x=\zeta^{-1}\bigl(
 
 를 얻는다. 따라서 $\sigma(\alpha^n)=\zeta^{-n}\alpha^n=\alpha^n$이고, $\alpha^n$은 $\Gal(\mathbb{L}/\mathbb{K})=\langle\sigma\rangle$ 전체에 의해 고정되므로 $\mathbb{L}/\mathbb{K}$가 Galois라는 것으로부터 $\alpha^n\in\mathbb{K}$이다.
 
-마지막으로 $\sigma^i(\alpha)=\zeta^{-i}\alpha$들은 서로 다른 $n$개의 원소들이므로, $\alpha$는 $\mathbb{K}(\alpha)$ 위에서 적어도 $n$개의 conjugate을 갖고 따라서 $[\mathbb{K}(\alpha):\mathbb{K}]\geq n$이다. $\mathbb{K}(\alpha)\subseteq\mathbb{L}$이고 $[\mathbb{L}:\mathbb{K}]=n$이므로 $\mathbb{L}=\mathbb{K}(\alpha)$이다.
+마지막으로 $\sigma^i(\alpha)=\zeta^{-i}\alpha$들은 서로 다른 $n$개의 원소들이므로, $\alpha$는 $\mathbb{K}$ 위에서 적어도 $n$개의 conjugate을 갖고 따라서 $[\mathbb{K}(\alpha):\mathbb{K}]\geq n$이다. $\mathbb{K}(\alpha)\subseteq\mathbb{L}$이고 $[\mathbb{L}:\mathbb{K}]=n$이므로 $\mathbb{L}=\mathbb{K}(\alpha)$이다.
 :::
 
 ## 거듭제곱근 가해성
@@ -134,7 +134,7 @@ $$G=H_0\supseteq H_1\supseteq\cdots\supseteq H_r=\{e\}$$
 
 이제 일반적인 solvable group $G$에 대하여, derived series
 
-$$G=D_1(G)\supseteq D_2(G)\supseteq\cdots\supseteq D_{n+1}(G)=\{e\}$$
+$$G=D_0(G)\supseteq D_1(G)\supseteq\cdots\supseteq D_{n+1}(G)=\{e\}$$
 
 를 생각하면 각 quotient $D_k(G)/D_{k+1}(G)$는 abelian이다. 각각의 단계를 위에서 살펴본 abelian group의 series로 refine하자. 즉 $D_k(G)/D_{k+1}(G)$의 cyclic quotient들을 갖는 series를 correspondence로 끌어올려 $D_k(G)$와 $D_{k+1}(G)$ 사이의 중간 subgroup들로 바꾸면, 이들 중간 subgroup들은 abelian quotient $D_k(G)/D_{k+1}(G)$의 subgroup들에 대응되므로 각각이 바로 앞의 것의 normal subgroup이고, 연이은 quotient들이 cyclic이다. 이렇게 모든 단계를 refine하면 원하는 series를 얻는다.
 :::

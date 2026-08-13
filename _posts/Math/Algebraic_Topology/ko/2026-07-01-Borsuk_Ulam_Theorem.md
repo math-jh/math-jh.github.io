@@ -50,7 +50,7 @@ $n\geq 1$에 대하여, [정리 2](#thm2)의 진술 (1)과 (2)는 서로 동치�
 ::: 증명
 먼저 (1)이 성립한다고 가정하고 (2)를 보인다. Antipodal map $g:S^n\rightarrow S^{n-1}$이 존재한다고 하자. $S^{n-1}\subseteq\mathbb{R}^n$이므로 $g$를 연속함수 $g:S^n\rightarrow\mathbb{R}^n$으로 볼 수 있고, (1)에 의하여 $g(x)=g(-x)$인 점 $x$가 존재한다. 그런데 $g$가 antipodal이므로 $g(-x)=-g(x)$이고, 따라서 $g(x)=-g(x)$, 곧 $g(x)=0$이다. 이는 $g(x)\in S^{n-1}$, 곧 $\lvert g(x)\rvert=1$이라는 사실에 모순이다. 그러므로 그러한 $g$는 존재하지 않으며 (2)가 성립한다.
 
-역으로 (2)가 성립한다고 가정하고 (1)을 보인다. 만일 (1)이 거짓이라면 모든 $x\in S^n$에 대하여 $f(x)\neq f(-x)$인 연속함수 $f:S^n\rightarrow\mathbb{R}^n$이 존재한다. 그러면 $f(x)-f(-x)$는 어디서도 $0$이 아니므로
+역으로 (2)가 성립한다고 가정하고 (1)을 보인다. 만일 (1)이 거짓이라면 모든 $x\in S^n$에 대하여 $f(x)\neq f(-x)$인 연속함수 $f:S^n\rightarrow\mathbb{R}^n$이 존재한다. 그럼 $f(x)-f(-x)$는 어디서도 $0$이 아니므로
 
 $$g(x)=\frac{f(x)-f(-x)}{\lvert f(x)-f(-x)\rvert}$$
 
@@ -77,9 +77,9 @@ $S^1=\{e^{2\pi i\theta}\mid\theta\in\mathbb{R}\}$으로 보고, covering map $p:
 
 $$p(F(\theta))=f(e^{2\pi i\theta})\qquad(\theta\in\mathbb{R})$$
 
-를 만족하는 연속함수 $F:\mathbb{R}\rightarrow\mathbb{R}$이 유일하게 결정된다. $f(e^{2\pi i(\theta+1)})=f(e^{2\pi i\theta})$이므로 $p(F(\theta+1))=p(F(\theta))$, 곧 $F(\theta+1)-F(\theta)$는 정수이고 연속함수이므로 상수이다. 이 정수 $\deg f=F(1)-F(0)$은 [§사상의 차수와 Brouwer·Lefschetz 고정점 정리, ⁋정의 2](/ko/math/algebraic_topology/degree_and_fixed_point_theorems#def2)에서 정의한 $S^1$ 자기사상의 degree와 일치하는 감음수이다.
+를 만족하는 연속함수 $F:\mathbb{R}\rightarrow\mathbb{R}$이 유일하게 결정된다. $f(e^{2\pi i(\theta+1)})=f(e^{2\pi i\theta})$이므로 $p(F(\theta+1))=p(F(\theta))$, 곧 $F(\theta+1)-F(\theta)$는 정수이고 연속함수이므로 상수이다. 이 정수 $\deg f=F(1)-F(0)$은 [§사상의 차수와 Brouwer·Lefschetz 고정점 정리, ⁋정의 2](/ko/math/algebraic_topology/degree_and_fixed_point_theorems#def2)에서 정의한 $S^1$ 자기사상의 degree와 일치하는 회전수이다.
 
-이제 $f$가 antipodal이라 하자. 그러면 $f(e^{2\pi i(\theta+1/2)})=-f(e^{2\pi i\theta})=e^{\pi i}f(e^{2\pi i\theta})$이므로
+이제 $f$가 antipodal이라 하자. 그럼 $f(e^{2\pi i(\theta+1/2)})=-f(e^{2\pi i\theta})=e^{\pi i}f(e^{2\pi i\theta})$이므로
 
 $$p\bigl(F(\theta+1/2)\bigr)=p\bigl(F(\theta)+\frac12\bigr)$$
 
@@ -97,23 +97,23 @@ F(\theta+1)&=F\bigl((\theta+\frac12)+\frac12\bigr)=F(\theta+\frac12)+\frac12+q\\
 가 되어 $\deg f=F(1)-F(0)=1+2q$이다. 이는 홀수이다.
 :::
 
-보조정리 4의 증명에서 antipodal 조건은 반주기 $1/2$만큼의 이동이 lifting을 정확히 $1/2+q$만큼 밀어낸다는 사실로 번역되었고, 한 바퀴는 반주기의 두 배이므로 감음수가 $1+2q$라는 홀수 형태로 강제되었다. 같은 현상이 임의의 차원에서 성립하며, 이것이 다음 정리의 내용이다.
+보조정리 4의 증명에서 antipodal 조건은 반주기 $1/2$만큼의 이동이 lifting을 정확히 $1/2+q$만큼 밀어낸다는 사실로 번역되었고, 한 바퀴는 반주기의 두 배이므로 회전수가 $1+2q$라는 홀수 형태로 강제되었다. 같은 현상이 임의의 차원에서 성립하며, 이것이 다음 정리의 내용이다.
 
 ::: 정리 5 (Borsuk)
 $n\geq 1$에 대하여, 임의의 antipodal 연속 자기사상 $f:S^n\rightarrow S^n$의 degree $\deg f$는 홀수이다.
 :::
 ::: 증명
-$n$에 대한 귀납법을 사용한다. 기저 단계 $n=1$은 [보조정리 4](#lem4)에서 이미 확립하였다. 이제 $n\geq 2$라 하고, 한 차원 낮은 구에서 antipodal 자기사상의 degree가 홀수라는 것을 가정한다. 일반 단계의 증명은 antipode에 의한 quotient space, 곧 real projective space $\RP^n=S^n/(x\sim-x)$을 매개로 진행되며, 여기에서는 그 골격만 제시하고 세부는 [Hat]의 §2.B와 [Mat]에 넘긴다.
+$n=1$인 경우와 $n\geq 2$인 경우를 나누어 다룬다. $n=1$은 [보조정리 4](#lem4)에서 이미 확립하였다. 이제 $n\geq 2$라 하자. 이 경우의 증명은 antipode에 의한 quotient space, 곧 real projective space $\RP^n=S^n/(x\sim-x)$을 매개로 진행되며, 여기에서는 그 골격만 제시하고 세부는 [Hat]의 §2.B와 [Mat]에 넘긴다.
 
 첫째, $f$가 antipodal이면 $f(-x)=-f(x)$이므로 이중피복 $p:S^n\rightarrow\RP^n$의 quotient 위에 유도된 연속함수 $\bar f:\RP^n\rightarrow\RP^n$이 $p\circ f=\bar f\circ p$를 만족하며 잘 정의된다.
 
 둘째, $n\geq 2$일 때 $\pi_1(\RP^n)\cong\mathbb{Z}/2$이다. 이 fundamental group의 generator는 $S^n$에서 한 점 $x$와 그 대척점 $-x$를 잇는 경로가 $p$ 아래에서 이루는 loop로 실현된다. $f$는 antipodal이므로 이 경로를 $f(x)$와 $-f(x)$를 잇는 경로로 보내고, 그 image는 다시 $\RP^n$의 자명하지 않은 loop로 projection된다. 따라서 $\bar f$가 유도하는 $\pi_1(\RP^n)\rightarrow\pi_1(\RP^n)$은 항등, 곧 $\mathbb{Z}/2$ 위의 유일한 automorphism이다. ([§피복공간, ⁋보조정리 6](/ko/math/algebraic_topology/covering_spaces#lem6)의 lifting을 사용한다.)
 
-셋째, 계수를 $\mathbb{Z}/2$로 잡은 homology에서 이 정보를 최고차까지 밀어올린다. 여기서 "장거리 exact sequence"란 이중피복 $p:S^n\rightarrow\RP^n$에 결부된 Gysin(전달) exact sequence
+셋째, 계수를 $\mathbb{Z}/2$로 잡은 homology에서 이 정보를 최고차까지 밀어올린다. 여기에서 사용하는 것은 이중피복 $p:S^n\rightarrow\RP^n$에 결부된 Gysin(전달) exact sequence
 
 $$\cdots\rightarrow H_i(S^n;\mathbb{Z}/2)\xrightarrow{p_\ast}H_i(\RP^n;\mathbb{Z}/2)\xrightarrow{\cap w}H_{i-1}(\RP^n;\mathbb{Z}/2)\rightarrow H_{i-1}(S^n;\mathbb{Z}/2)\rightarrow\cdots$$
 
-을 말하며, $w\in H^1(\RP^n;\mathbb{Z}/2)$은 이 이중피복을 분류하는 유일한 비자명 원소이다. $H_i(S^n;\mathbb{Z}/2)$은 $i=0,n$에서만 $\mathbb{Z}/2$이고 그 사이에서는 $0$이므로, $2\leq i\leq n-1$인 중간 degree에서 exact sequence는 $\cap w:H_i(\RP^n;\mathbb{Z}/2)\xrightarrow{\sim}H_{i-1}(\RP^n;\mathbb{Z}/2)$가 isomorphism임을 준다. $\bar f$는 $p\circ f=\bar f\circ p$를 만족하므로 이 exact sequence의 자연스러운 사다리를 유도하고, $H^1(\RP^n;\mathbb{Z}/2)\cong\mathbb{Z}/2$이라 $\bar f^\ast w=w$이어서 그 사다리는 $\cap w$와 가환한다. 둘째 단계에서 $\bar f_\ast$가 $H_1(\RP^n;\mathbb{Z}/2)$ 위에서 isomorphism임을 이미 알고 있으므로, 이 $\cap w$-isomorphism들을 따라 degree를 하나씩 올리면 $\bar f_\ast$가 모든 $0\leq i\leq n$에서 $H_i(\RP^n;\mathbb{Z}/2)$ 위의 isomorphism임이 귀납적으로 따라 나온다. 끝으로 exact sequence의 전달사상이 주는 자연스러운 isomorphism $H_n(\RP^n;\mathbb{Z}/2)\cong H_n(S^n;\mathbb{Z}/2)$과 사다리의 가환성을 결합하면, 최고차에서 $\bar f_\ast$가 isomorphism이라는 사실은 $f$가 $H_n(S^n;\mathbb{Z}/2)\cong\mathbb{Z}/2$ 위에서 항등으로 작용함, 곧 $\deg f\equiv 1\pmod 2$임과 동치이다. 그러므로 $\deg f$는 홀수이다.
+이며, $w\in H^1(\RP^n;\mathbb{Z}/2)$은 이 이중피복을 분류하는 유일한 비자명 원소이다. $H_i(S^n;\mathbb{Z}/2)$은 $i=0,n$에서만 $\mathbb{Z}/2$이고 그 사이에서는 $0$이므로, $2\leq i\leq n-1$인 중간 degree에서 exact sequence는 $\cap w:H_i(\RP^n;\mathbb{Z}/2)\xrightarrow{\sim}H_{i-1}(\RP^n;\mathbb{Z}/2)$가 isomorphism임을 준다. 최고차 $i=n$에서도 마찬가지인데, $H_{n+1}(\RP^n;\mathbb{Z}/2)=0$이므로 exactness가 전달사상 $H_n(\RP^n;\mathbb{Z}/2)\rightarrow H_n(S^n;\mathbb{Z}/2)$의 단사성을, 따라서 두 group이 모두 $\mathbb{Z}/2$이라는 사실과 합쳐 그 전사성을 주고, 다시 exactness가 $p_\ast:H_n(S^n;\mathbb{Z}/2)\rightarrow H_n(\RP^n;\mathbb{Z}/2)$이 $0$임을 주어 $\cap w$가 단사이며, $H_{n-1}(S^n;\mathbb{Z}/2)=0$이라 전사이기 때문이다. $\bar f$는 $p\circ f=\bar f\circ p$를 만족하므로 이 exact sequence의 자연스러운 사다리를 유도한다. 둘째 단계에서 $\bar f_\ast$가 $H_1(\RP^n;\mathbb{Z}/2)\cong\mathbb{Z}/2$ 위의 항등임을 이미 알고 있고, $H^1(\RP^n;\mathbb{Z}/2)\cong\Hom(H_1(\RP^n;\mathbb{Z}/2),\mathbb{Z}/2)$ 아래에서 $\bar f^\ast$는 그 dual이므로 $\bar f^\ast w=w$이고, 따라서 그 사다리는 $\cap w$와 가환한다. 그럼 이 $\cap w$-isomorphism들을 따라 degree를 하나씩 올리면 $\bar f_\ast$가 모든 $0\leq i\leq n$에서 $H_i(\RP^n;\mathbb{Z}/2)$ 위의 isomorphism임이 따라 나온다. 끝으로 exact sequence의 전달사상이 주는 자연스러운 isomorphism $H_n(\RP^n;\mathbb{Z}/2)\cong H_n(S^n;\mathbb{Z}/2)$과 사다리의 가환성을 결합하면, 최고차에서 $\bar f_\ast$가 isomorphism이라는 사실은 $f$가 $H_n(S^n;\mathbb{Z}/2)\cong\mathbb{Z}/2$ 위에서 항등으로 작용함, 곧 $\deg f\equiv 1\pmod 2$임과 동치이다. 그러므로 $\deg f$는 홀수이다.
 :::
 
 정리 5는 antipodal 자기사상이 degree $0$을 가질 수 없음을 함축하므로, 그러한 morphism은 결코 상수사상과 homotopic하지 않다. 이 결론은 앞선 글에서 얻은 antipodal morphism $a(x)=-x$의 degree 계산과도 정확히 부합한다. [§사상의 차수와 Brouwer·Lefschetz 고정점 정리, ⁋따름정리 5](/ko/math/algebraic_topology/degree_and_fixed_point_theorems#cor5)에 의하여 $\deg a=(-1)^{n+1}$이므로 $n$의 홀짝과 무관하게 $\deg a=\pm 1$은 늘 홀수이며, 이는 antipodal morphism이 antipodal map의 원형이라는 사실과 잘 어울린다. 이제 이 degree의 홀짝성으로부터 antipodal map $S^n\rightarrow S^{n-1}$의 비존재를 이끌어낸다.
@@ -124,7 +124,7 @@ $n\geq 1$에 대하여, antipodal map $g:S^n\rightarrow S^{n-1}$은 존재하지
 ::: 증명
 Antipodal map $g:S^n\rightarrow S^{n-1}$이 존재한다고 가정하자. $S^{n-1}$을 $S^n$의 적도, 곧 마지막 좌표가 $0$인 점들의 집합으로 보는 포함사상 $\iota:S^{n-1}\hookrightarrow S^n$을 생각하면, $\iota(-y)=-\iota(y)$이므로 합성 $\iota\circ g:S^n\rightarrow S^n$은 다시 antipodal 자기사상이다. 그런데 이 합성의 image는 적도에 놓여 있어 북극과 남극을 포함하지 않으므로, $\iota\circ g$는 전사가 아니다.
 
-전사가 아닌 자기사상은 어떤 점 $q$를 image에서 빠뜨리므로 그 image가 $S^n\setminus\{q\}$에 담긴다. $S^n\setminus\{q\}$은 stereographic projection에 의해 $\mathbb{R}^n$과 homeomorphic한 contractible 공간이므로, $\iota\circ g$는 한 점을 거쳐 인수분해되어 상수사상과 homotopic하다. 따라서 그 degree는 [§사상의 차수와 Brouwer·Lefschetz 고정점 정리, ⁋명제 3](/ko/math/algebraic_topology/degree_and_fixed_point_theorems#prop3)의 homotopy invariance와 상수사상의 degree가 $0$이라는 사실에 의하여 $\deg(\iota\circ g)=0$이다. 그러나 $\iota\circ g$는 antipodal이므로 [정리 5](#thm5)에 의하여 그 degree가 홀수여야 하고, 이는 $0$과 모순이다. 그러므로 그러한 $g$는 존재하지 않는다.
+전사가 아닌 자기사상은 어떤 점 $q$를 image에서 빠뜨리므로 그 image가 $S^n\setminus\{q\}$에 담긴다. $S^n\setminus\{q\}$은 stereographic projection에 의해 $\mathbb{R}^n$과 homeomorphic한 contractible 공간이므로, $\iota\circ g$는 이 contractible 공간을 거쳐 인수분해되어 상수사상과 homotopic하다. 따라서 그 degree는 [§사상의 차수와 Brouwer·Lefschetz 고정점 정리, ⁋명제 3](/ko/math/algebraic_topology/degree_and_fixed_point_theorems#prop3)의 homotopy invariance와 상수사상의 degree가 $0$이라는 사실에 의하여 $\deg(\iota\circ g)=0$이다. 그러나 $\iota\circ g$는 antipodal이므로 [정리 5](#thm5)에 의하여 그 degree가 홀수여야 하고, 이는 $0$과 모순이다. 그러므로 그러한 $g$는 존재하지 않는다.
 
 이로써 [정리 2](#thm2)의 (2)가 성립하고, [명제 3](#prop3)에 의하여 (1)도 성립하며, (3)은 [정리 5](#thm5) 그 자체이다.
 :::
@@ -135,10 +135,10 @@ Antipodal map $g:S^n\rightarrow S^{n-1}$이 존재한다고 가정하자. $S^{n-
 
 ## Ham sandwich 정리
 
-Borsuk–Ulam 정리의 첫 귀결은 측도들을 동시에 이등분하는 hyperplane의 존재이다. 이름은 빵과 햄과 치즈로 이루어진 샌드위치를 한 번의 칼질로 세 재료 모두 정확히 반씩 나눌 수 있다는 삼차원의 그림에서 왔다. 이를 엄밀히 진술하려면 이등분의 대상이 될 측도의 조건을 정해야 한다. 우리는 각 hyperplane에 측도 $0$을 주는 유한 Borel measure를 다루는데, 이 조건은 예컨대 Lebesgue measure에 대해 절대연속인 유한측도가 모두 만족하며, hyperplane 위에 질량이 뭉쳐 있지 않아 이등분이 연속적으로 변한다는 것을 보장한다.
+Borsuk–Ulam 정리의 첫 귀결은 측도들을 동시에 이등분하는 hyperplane의 존재이다. 이름은 빵과 햄과 치즈로 이루어진 샌드위치를 한 번의 칼질로 세 재료 모두 정확히 반씩 나눌 수 있다는 삼차원의 그림에서 왔다. 이를 엄밀히 진술하려면 이등분의 대상이 될 측도의 조건을 정해야 한다. 우리는 각 hyperplane에 측도 $0$을 주는 유한 Borel measure를 다루는데, 이 조건은 가령 Lebesgue measure에 대해 절대연속인 유한측도가 모두 만족하며, hyperplane 위에 질량이 뭉쳐 있지 않아 이등분이 연속적으로 변한다는 것을 보장한다.
 
 ::: 정리 8 (Ham sandwich)
-$\mathbb{R}^n$ 위의 유한 Borel measure $\mu_1,\ldots,\mu_n$이 각각 모든 hyperplane에 측도 $0$을 준다고 하자. 그러면 하나의 affine hyperplane이 존재하여 이들 $n$개의 측도를 동시에 이등분한다. 곧 그 hyperplane이 결정하는 두 closed 반공간 $H,H'$에 대하여 모든 $i$에서
+$\mathbb{R}^n$ 위의 유한 Borel measure $\mu_1,\ldots,\mu_n$이 각각 모든 hyperplane에 측도 $0$을 준다고 하자. 그럼 하나의 affine hyperplane이 존재하여 이들 $n$개의 측도를 동시에 이등분한다. 곧 그 hyperplane이 결정하는 두 closed 반공간 $H,H'$에 대하여 모든 $i$에서
 
 $$\mu_i(H)=\mu_i(H')=\frac12\mu_i(\mathbb{R}^n)$$
 
@@ -179,7 +179,7 @@ $$\mu_i(H_u)=\mu_i(H_{-u})=\frac12\mu_i(\mathbb{R}^n)$$
 두 번째 귀결은 구를 닫힌집합들로 덮을 때 나타나는 조합적 제약이다. Antipode를 피하는 closed covering이 얼마나 많은 조각을 필요로 하는가라는 물음에 Borsuk–Ulam 정리가 정확한 하한을 준다.
 
 ::: 정리 9 (Lusternik–Schnirelmann–Borsuk)
-$S^n$이 $n+1$개의 닫힌집합 $A_1,\ldots,A_{n+1}$의 합집합으로 덮인다고 하자. 그러면 어떤 $A_j$은 대척쌍을 포함한다. 곧 $x,-x\in A_j$인 점 $x\in S^n$이 존재하는 $j$가 있다.
+$S^n$이 $n+1$개의 닫힌집합 $A_1,\ldots,A_{n+1}$의 합집합으로 덮인다고 하자. 그럼 어떤 $A_j$은 대척쌍을 포함한다. 곧 $x,-x\in A_j$인 점 $x\in S^n$이 존재하는 $j$가 있다.
 :::
 ::: 증명
 처음 $n$개의 집합까지의 거리를 모아 연속함수
@@ -196,7 +196,7 @@ $$f:S^n\rightarrow\mathbb{R}^n;\qquad f(x)=\bigl(\operatorname{dist}(x,A_1),\ldo
 정리 9의 조각 개수 $n+1$은 더 줄일 수 없다는 의미에서 최적이다. 조각을 하나 더 허용하면 antipode를 완전히 피하는 closed covering이 실제로 존재하기 때문이다.
 
 ::: 예시 10
-$S^n$은 대척쌍을 하나도 포함하지 않는 $n+2$개의 닫힌집합으로 덮인다. 원점을 interior에 품는 $(n+1)$-simplex $\Delta\subseteq\mathbb{R}^{n+1}$을 택하자. 예컨대 원점 중심의 정규 simplex를 잡으면 된다. 그 boundary $\partial\Delta$은 $n+2$개의 facet $F_0,\ldots,F_{n+1}$로 이루어지고, 원점이 interior에 있으므로 방사 projection
+$S^n$은 대척쌍을 하나도 포함하지 않는 $n+2$개의 닫힌집합으로 덮인다. 원점을 interior에 품는 $(n+1)$-simplex $\Delta\subseteq\mathbb{R}^{n+1}$을 택하자. 가령 원점 중심의 정규 simplex를 잡으면 된다. 그 boundary $\partial\Delta$은 $n+2$개의 facet $F_0,\ldots,F_{n+1}$로 이루어지고, 원점이 interior에 있으므로 방사 projection
 
 $$\pi:\partial\Delta\rightarrow S^n;\qquad\pi(y)=\frac{y}{\lvert y\rvert}$$
 

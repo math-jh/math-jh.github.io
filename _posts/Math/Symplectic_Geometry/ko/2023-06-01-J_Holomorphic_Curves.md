@@ -14,7 +14,7 @@ weight: 8
 published: false
 ---
 
-[§사교다양체](/ko/math/symplectic_geometry/symplectic_manifold)에서 우리는 symplectic form $\omega$로 부여된 manifold $(M, \omega)$의 기본 성질을 살펴 보았다. 1985년 M. Gromov는 *almost complex structure* $J$를 도입하여, 두 종류의 기하학—complex 측면과 symplectic 측면—을 한 manifold 위에서 *맞물려* 다룰 수 있는 framework을 제시하였다. 그 결과 등장하는 *J-holomorphic curve*는 Gromov-Witten 이론과 Floer 이론의 근간이 되는 객체이다.
+[§사교다양체](/ko/math/symplectic_geometry/symplectic_manifold)에서 우리는 symplectic form $\omega$로 부여된 manifold $(M, \omega)$의 기본 성질을 살펴 보았다. 1985년 M. Gromov는 *almost complex structure* $J$를 도입하여, 두 종류의 기하학(complex 측면과 symplectic 측면)을 한 manifold 위에서 *맞물려* 다룰 수 있는 framework을 제시하였다. 그 결과 등장하는 *J-holomorphic curve*는 Gromov-Witten 이론과 Floer 이론의 근간이 되는 객체이다.
 
 본 글에서는 compatible almost complex structure의 정의로부터 출발하여, J-holomorphic curve의 정의와 그 기본 성질 (energy identity, removable singularity), 그리고 Gromov compactness theorem의 statement까지 개괄한다.
 
@@ -27,7 +27,7 @@ Manifold $M$의 *almost complex structure<sub>거의 복소구조</sub>*란 tang
 Symplectic manifold $(M, \omega)$ 위에서는 $J$가 $\omega$와 어떤 *호환성*을 가질 때 특히 유용하다.
 
 ::: 정의 2
-$(M, \omega)$를 symplectic manifold라 하자. Almost complex structure $J$가 $\omega$와 *compatible* (또는 *$\omega$-tame*)하다는 것은 다음 두 조건을 만족함을 의미한다.
+$(M, \omega)$를 symplectic manifold라 하자. Almost complex structure $J$가 $\omega$와 *compatible*하다는 것은 다음 두 조건을 만족함을 의미한다.
 
 1. **Tameness:** 임의의 nonzero $v \in TM$에 대해 $\omega(v, Jv) > 0$.
 2. **Compatibility:** $\omega(Jv, Jw) = \omega(v, w)$가 모든 $v, w \in TM$에 대해 성립.
@@ -46,7 +46,13 @@ $$g_J(v, w) := \omega(v, J w)$$
 :::
 
 ::: 증명
-각 점 $p \in M$의 tangent space $T_p M$ 위에서는 [§사교벡터공간](/ko/math/symplectic_geometry/linear_symplectic_geometry)의 결과에 의해 compatible linear complex structure가 존재하며, 그 공간이 contractible임이 알려져 있다 (이는 본질적으로 $\mathrm{Sp}(2n, \mathbb{R})/U(n)$이 contractible이라는 것과 동치이다). 이 fiberwise compatible $J$들을 partition of unity로 patch하면 global compatible $J$가 얻어진다.
+Partition of unity를 사용하여 $M$ 위에 Riemannian metric $g$를 하나 잡고, bundle automorphism $A: TM \rightarrow TM$을 $\omega(v, w) = g(Av, w)$로 정의하자. $\omega$가 non-degenerate이므로 $A$는 invertible이고, $\omega$의 skew-symmetry에 의해 $A$는 $g$에 대해 skew-adjoint, 즉 $A^\ast = -A$이다. 따라서 $A^\ast A = -A^2$는 positive-definite symmetric이며, 그 square root $P := (A^\ast A)^{1/2}$는 $A$와 commute한다. 이제 polar decomposition $A = JP$, 즉 $J := AP^{-1}$을 생각하면 $J^\ast J = P^{-1}A^\ast A P^{-1} = \id$이고 $J^\ast = P^{-1}A^\ast = -AP^{-1} = -J$이므로, $J^{-1} = J^\ast = -J$로부터 $J^2 = -\id$을 얻는다. 또한 $A$와 $J$가 commute하므로
+
+$$\omega(v, Jv) = g(JPv, Jv) = g(Pv, v) > 0, \qquad \omega(Jv, Jw) = g(AJv, Jw) = g(Av, w) = \omega(v, w)$$
+
+가 성립하여 $J$는 $\omega$-compatible이다.
+
+이 구성은 $g$에 매끄럽게 의존하며, $g$가 이미 어떤 compatible $J$의 metric $g_J$였다면 위의 $A$는 $J$ 자신이고 $P = \id$이므로 $J$가 그대로 돌아온다. 즉 $g \mapsto J$는 Riemannian metric들의 공간에서 $\mathcal{J}(M, \omega)$로의 retraction이고, metric들의 공간은 convex하여 contractible이므로 $\mathcal{J}(M, \omega)$ 또한 contractible이다.
 :::
 
 [명제 3](#prop3)은 J-holomorphic curve 이론에서 핵심적인 출발점이다. $J$를 자유롭게 *섭동*할 수 있다는 사실 덕분에, J-holomorphic curve의 moduli space를 generic $J$에 대해 잘 통제된 manifold (또는 orbifold) 로 만들 수 있다.
@@ -76,15 +82,15 @@ J-holomorphic curve의 분석에서 핵심적인 양은 *energy<sub>에너지</s
 ::: 정의 5
 Smooth map $u: \Sigma \rightarrow M$의 *energy*는
 
-$$E(u) := \frac{1}{2}\int_\Sigma \lvert \dd{u} \rvert^2_J\, d\mathrm{vol}_\Sigma$$
+$$E(u) := \frac{1}{2}\int_\Sigma \lvert \dd{u} \rvert^2_J d\mathrm{vol}_\Sigma$$
 
-으로 정의된다. 여기서 $\lvert \dd{u} \rvert_J$는 $g_J$로 유도되는 Hilbert-Schmidt norm이고, $d\mathrm{vol}_\Sigma$는 어떤 적절한 metric에 대한 면적 form이다.
+으로 정의된다. 여기서 $\lvert \dd{u} \rvert_J$는 $\Sigma$ 위의 metric과 $g_J$로 유도되는 Hilbert-Schmidt norm이고, $d\mathrm{vol}_\Sigma$는 그 metric의 면적 form이다. $\Sigma$ 위의 metric으로는 $j$와 compatible한 것, 즉 $j$가 각 tangent space에서 isometry가 되는 것을 택한다. 실 2차원에서 $\lvert \dd{u} \rvert^2_J d\mathrm{vol}_\Sigma$는 metric의 conformal rescaling $g \mapsto \lambda g$에 대해 불변이고 $j$와 compatible한 metric들은 서로 conformal하므로, $E(u)$는 이 선택에 의존하지 않는다.
 :::
 
 J-holomorphic curve의 결정적 성질은 energy가 *topological data*만으로 결정된다는 것이다.
 
 ::: 명제 6 (Energy identity)
-$u: \Sigma \rightarrow M$이 $J$-holomorphic이면
+$J$가 $\omega$-compatible하고 $u: \Sigma \rightarrow M$이 $J$-holomorphic이면
 
 $$E(u) = \int_\Sigma u^\ast \omega = \omega \cdot u_\ast [\Sigma]$$
 
@@ -98,7 +104,7 @@ $$\lvert \dd{u}(v) \rvert^2_J = \omega(\dd{u}(v), J \dd{u}(v)) = \omega(\dd{u}(v
 
 이며, 마지막 등식에서 $J \circ \dd{u} = \dd{u} \circ j$ (J-holomorphicity)을 사용하였다. $\Sigma$의 local orthonormal frame $\{ e_1, e_2 = je_1 \}$를 잡으면
 
-$$\lvert \dd{u} \rvert^2_J = \lvert \dd{u}(e_1) \rvert^2_J + \lvert \dd{u}(e_2) \rvert^2_J = 2\,\omega(\dd{u}(e_1), \dd{u}(e_2)) = 2\, u^\ast \omega(e_1, e_2)$$
+$$\lvert \dd{u} \rvert^2_J = \lvert \dd{u}(e_1) \rvert^2_J + \lvert \dd{u}(e_2) \rvert^2_J = 2\omega(\dd{u}(e_1), \dd{u}(e_2)) = 2 u^\ast \omega(e_1, e_2)$$
 
 이고, $d\mathrm{vol}_\Sigma(e_1, e_2) = 1$이므로 양변을 $d\mathrm{vol}_\Sigma$로 적분하면
 
@@ -114,7 +120,7 @@ $$E(u) = \int_\Sigma u^\ast \omega$$
 $\Sigma$의 한 점 $p$ 근방에서만 정의된 J-holomorphic map의 경우, 다음 *removable singularity* 정리는 끝점에서 그 map이 매끄럽게 확장됨을 보장한다.
 
 ::: 명제 7 (Removable singularity, Gromov)
-Punctured disk $D^\ast := \{ 0 < \lvert z \rvert < 1 \}$에서 정의된 J-holomorphic map $u: D^\ast \rightarrow M$이 finite energy $E(u) < \infty$를 가지면, $u$는 origin $0$까지 $C^\infty$-매끄럽게 확장된다.
+$(M, \omega)$가 compact symplectic manifold이고 $J$가 $\omega$-compatible이라 하자. Punctured disk $D^\ast := \{ 0 < \lvert z \rvert < 1 \}$에서 정의된 J-holomorphic map $u: D^\ast \rightarrow M$이 finite energy $E(u) < \infty$를 가지면, $u$는 origin $0$까지 $C^\infty$-매끄럽게 확장된다.
 :::
 ::: 증명
 핵심 단계는 다음과 같다. 우선 $g_J$에 대한 *mean value inequality*에 의해, J-holomorphic map은 작은 ball 위에서의 energy를 알면 image 직경을 ball 반지름의 함수로 통제할 수 있다. 즉 $E(u\vert_{B_r(z)}) < \varepsilon_0$이면 $\mathrm{diam}(u(B_{r/2}(z)))$는 $C\sqrt{E(u\vert_{B_r})}$ 이하이다. Finite energy 가정에 의해 $z\rightarrow 0$일 때 작은 annulus 위의 energy가 $0$으로 수렴하므로, 위 부등식으로부터 $u$가 $0$에서 어떤 점 $x_0\in M$으로 연속적으로 확장됨이 얻어진다.
@@ -129,12 +135,12 @@ Punctured disk $D^\ast := \{ 0 < \lvert z \rvert < 1 \}$에서 정의된 J-holom
 J-holomorphic curve 이론의 중심 정리는 다음 *Gromov compactness theorem*이다.
 
 ::: 명제 8 (Gromov compactness)
-$(M, \omega)$를 compact symplectic manifold, $\beta \in H_2(M, \mathbb{Z})$를 고정하자. Sequence of J-holomorphic curves $u_n: \Sigma \rightarrow M$이 모두 homology class $\beta$를 represent하고, $\Sigma$가 fixed Riemann surface (genus $g$, $n$개의 marked points 부착)일 때, $\{ u_n \}$은 부분수열 추출 후 *stable map*으로 수렴한다.
+$(M, \omega)$를 compact symplectic manifold, $J$를 $\omega$-compatible almost complex structure, $\beta \in H_2(M, \mathbb{Z})$를 고정하자. Sequence of J-holomorphic curves $u_\nu: \Sigma \rightarrow M$이 모두 homology class $\beta$를 represent하고, $\Sigma$가 fixed Riemann surface (genus $g$, $n$개의 marked points 부착)일 때, $\{ u_\nu \}$는 부분수열 추출 후 *stable map*으로 수렴한다.
 :::
 
-Stable map이란 nodal Riemann surface $\widehat\Sigma \rightarrow M$의 J-holomorphic map으로, 각 component가 $\mathbb{P}^1$ (또는 더 일반 genus) 의 $J$-holomorphic curve이고 *stability* 조건 (자동 동형군이 유한) 을 만족하는 것이다. 정확한 정의와 그 moduli space의 구성은 [§Stable maps의 moduli space](/ko/math/symplectic_geometry/stable_maps)에서 다룬다.
+Stable map이란 nodal Riemann surface $\widehat\Sigma \rightarrow M$의 J-holomorphic map으로, 각 component가 $\mathbb{P}^1$ (또는 더 일반 genus) 의 $J$-holomorphic curve이고 *stability* 조건 (automorphism group이 유한) 을 만족하는 것이다. 정확한 정의와 그 moduli space의 구성은 [§Stable maps의 moduli space](/ko/math/symplectic_geometry/stable_maps)에서 다룬다.
 
-Gromov compactness의 의미: J-holomorphic curve들의 sequence가 limit을 가질 때, 그 limit은 *smooth* J-holomorphic curve가 아닐 수 있으며 *bubble*들이 떨어져 나가는 nodal 구조가 형성될 수 있다. 그러나 이 nodal 구조가 *유한히 많은* bubble만 가지며 *총 homology class는 보존*된다 ($\sum_i \beta_i = \beta$). 이 사실이 moduli space의 compactification—즉 *moduli space of stable maps* $\overline{\mathcal{M}}_{g, n}(M, \beta)$—을 가능하게 만든다.
+Gromov compactness의 의미: J-holomorphic curve들의 sequence가 limit을 가질 때, 그 limit은 *smooth* J-holomorphic curve가 아닐 수 있으며 *bubble*들이 떨어져 나가는 nodal 구조가 형성될 수 있다. 그러나 이 nodal 구조가 *유한히 많은* bubble만 가지며 *총 homology class는 보존*된다 ($\sum_i \beta_i = \beta$). 이 사실이 moduli space의 compactification(즉 *moduli space of stable maps* $\overline{\mathcal{M}}_{g, n}(M, \beta)$)을 가능하게 만든다.
 
 ## 응용: Gromov-Witten 이론과 Floer 이론
 

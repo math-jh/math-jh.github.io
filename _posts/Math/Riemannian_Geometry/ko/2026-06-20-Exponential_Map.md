@@ -46,11 +46,11 @@ $$\gamma_{sv}(t) = \gamma_v(st)$$
 :::
 
 ::: 증명
-곡선 $\sigma(t) := \gamma_v(st)$를 정의하자. 연쇄법칙에 의해 $\dot\sigma(t) = s\, \dot\gamma_v(st)$이고, 곡선을 따른 covariant derivative에 대해 다시 연쇄법칙을 적용하면
+곡선 $\sigma(t) := \gamma_v(st)$를 정의하자. 연쇄법칙에 의해 $\dot\sigma(t) = s \dot\gamma_v(st)$이고, 곡선을 따른 covariant derivative에 대해 다시 연쇄법칙을 적용하면
 
-$$D_t \dot\sigma(t) = D_t\bigl(s\, \dot\gamma_v(st)\bigr) = s^2\, (D_t \dot\gamma_v)(st)$$
+$$D_t \dot\sigma(t) = D_t\bigl(s \dot\gamma_v(st)\bigr) = s^2 (D_t \dot\gamma_v)(st)$$
 
-이다. $\gamma_v$가 측지선이므로 $D_t \dot\gamma_v \equiv 0$이고, 따라서 $D_t \dot\sigma \equiv 0$이 되어 $\sigma$도 측지선이다. 또한 $\sigma(0) = \gamma_v(0) = p$이고 $\dot\sigma(0) = s\, \dot\gamma_v(0) = sv$이므로, $\sigma$는 초기조건 $\sigma(0) = p$, $\dot\sigma(0) = sv$를 만족하는 측지선이다. [§측지선, ⁋정리 7](/ko/math/riemannian_geometry/geodesics#thm7)의 유일성에 의해 $\sigma = \gamma_{sv}$이고, 따라서 $\gamma_{sv}(t) = \gamma_v(st)$이다. 여기에 $t = 1$을 대입하면 $\exp_p(sv) = \gamma_{sv}(1) = \gamma_v(s)$를 얻는다.
+이다. $\gamma_v$가 측지선이므로 $D_t \dot\gamma_v \equiv 0$이고, 따라서 $D_t \dot\sigma \equiv 0$이 되어 $\sigma$도 측지선이다. 또한 $\sigma(0) = \gamma_v(0) = p$이고 $\dot\sigma(0) = s \dot\gamma_v(0) = sv$이므로, $\sigma$는 초기조건 $\sigma(0) = p$, $\dot\sigma(0) = sv$를 만족하는 측지선이다. [§측지선, ⁋정리 7](/ko/math/riemannian_geometry/geodesics#thm7)의 유일성에 의해 $\sigma = \gamma_{sv}$이고, 따라서 $\gamma_{sv}(t) = \gamma_v(st)$이다. 여기에 $t = 1$을 대입하면 $\exp_p(sv) = \gamma_{sv}(1) = \gamma_v(s)$를 얻는다.
 :::
 
 [보조정리 2](#lem2)는 한 vector $v$를 따르는 반직선 $s \mapsto sv$가 exponential map 아래에서 측지선 $s \mapsto \gamma_v(s)$로 보내짐을 말해 준다. 즉 exponential map은 $T_p M$의 원점을 지나는 직선들을 $p$를 지나는 측지선들로 옮기며, 이것이 exponential map이 $p$ 근방의 기하를 그 tangent space 위로 끌어올리는 방식이다.
@@ -66,7 +66,15 @@ Riemannian manifold $(M, g)$의 점 $p$에 대해, $0 \in T_p M$의 적당한 �
 ::: 증명
 측지선 방정식의 흐름을 생각하자. [§측지선, ⁋정리 7](/ko/math/riemannian_geometry/geodesics#thm7)의 증명에서 보았듯, $(p, v) \in TM$을 초기조건 $\gamma(0) = p$, $\dot\gamma(0) = v$로 하는 측지선 $\gamma_{(p, v)}(t)$는 $TM$ 위의 일계 상미분방정식 시스템의 해이며, 그 우변은 매끄럽다. 상미분방정식 흐름의 초기조건과 시간에 대한 smooth 의존성에 의해, 점 $(p, 0) \in TM$의 적당한 열린근방 $\mathcal{O} \subseteq TM$과 $\varepsilon > 0$이 존재하여, $(q, w) \in \mathcal{O}$이면 측지선 $\gamma_{(q, w)}(t)$가 $t \in (-\varepsilon, \varepsilon)$에서 정의되고 $(t, q, w)$에 매끄럽게 의존한다.
 
-이제 $\delta > 0$을 충분히 작게 잡아 집합 $W := \{w \in T_p M : \lVert w \rVert_g < \delta\}$이 $\mathcal{O} \cap T_p M$에 포함되고 $\delta < \varepsilon$이도록 하자. 그럼 각 $w \in W$에 대해 $\gamma_w$는 $(-\varepsilon, \varepsilon) \supseteq [0, 1]$ 위에서 정의되므로 $W \subseteq \mathcal{E}_p$이고, $\exp_p(w) = \gamma_w(1)$은 $\gamma_{(p, w)}(1)$이 $w$에 매끄럽게 의존하는 데서 $W$ 위에서 매끄럽다. 마지막으로 $W$는 $\lVert \cdot \rVert_g$에 대한 원점 중심의 열린 공이므로 $0$에 대해 star-shaped이다. 따라서 $V := W$로 두면 된다.
+이제 $\delta > 0$을 충분히 작게 잡아 집합 $\{w \in T_p M : \lVert w \rVert_g < \delta\}$이 $\mathcal{O} \cap T_p M$에 포함되도록 하고
+
+$$V := \{v \in T_p M : \lVert v \rVert_g < \delta\varepsilon/2\}$$
+
+로 두자. $v \in V$이면 $w := (2/\varepsilon)v$가 $\lVert w \rVert_g < \delta$를 만족하므로 $\gamma_w$는 $(-\varepsilon, \varepsilon)$ 위에서, 특히 $t = \varepsilon/2$에서 정의된다. 따라서 $v = (\varepsilon/2)w$에 [보조정리 2](#lem2)를 적용하면 $\gamma_v$는 $t = 1$에서 정의되고 $\gamma_v(t) = \gamma_w(\varepsilon t/2)$이므로, $V \subseteq \mathcal{E}_p$이고
+
+$$\exp_p(v) = \gamma_v(1) = \gamma_{(p, w)}(\varepsilon/2)$$
+
+이다. 우변이 $w$에, 따라서 $v$에 매끄럽게 의존하므로 $\exp_p$는 $V$ 위에서 매끄럽다. 마지막으로 $V$는 $\lVert \cdot \rVert_g$에 대한 원점 중심의 열린 공이므로 $0$에 대해 star-shaped이다.
 :::
 
 [보조정리 2](#lem2)는 $V$가 star-shaped이어야 하는 이유를 설명한다. $v \in V$가 $\exp_p(v) = \gamma_v(1)$이 정의되도록 한다면, 같은 측지선의 자취 위의 점 $\gamma_v(s) = \exp_p(sv)$ ($0 \le s \le 1$)도 정의되어야 자연스러우며, 이는 정확히 $sv \in V$를 요구하는 조건이다. 이제 exponential map의 핵심 성질, 즉 $0$에서의 미분을 계산한다. 여기서 우리는 vector space $T_p M$의 한 점 $0$에서의 tangent space $T_0(T_p M)$을 vector space 자신 $T_p M$과 표준적으로 동일시한다. 구체적으로, $v \in T_p M$을 곡선 $t \mapsto tv$의 $t = 0$에서의 속도벡터로 보는 동일시이다.
@@ -89,7 +97,7 @@ $$(d\exp_p)_0(v) = \left.\frac{d}{\dd{t}}\right\vert_{t = 0} \exp_p(tv) = \left.
 
 ## Normal neighborhood와 normal coordinate
 
-[명제 4](#prop4)에서 $(d\exp_p)_0$이 가역이므로, manifold 사이의 smooth 함수에 대한 역함수 정리를 적용할 수 있다. 이로부터 exponential map이 $p$ 근방에 좌표계를 부여한다.
+[명제 4](#prop4)에서 $(d\exp_p)_0$이 가역이므로, manifold 사이의 smooth 함수에 대한 역함수 정리를 적용할 수 있다. 이로부터 exponential map이 $p$ 근방에 coordinate system을 부여한다.
 
 ::: 정의 5
 Riemannian manifold $(M, g)$의 점 $p$에 대해, $0$의 star-shaped 열린근방 $V \subseteq T_p M$이 존재하여 $\exp_p\vert_V : V \rightarrow \exp_p(V)$가 diffeomorphism이 될 때, image $U := \exp_p(V)$를 $p$의 *normal neighborhood<sub>정규근방</sub>*라 부른다.
@@ -99,7 +107,7 @@ Riemannian manifold $(M, g)$의 점 $p$에 대해, $0$의 star-shaped 열린근�
 [명제 3](#prop3)에 의해 $\exp_p$는 $0$의 star-shaped 열린근방 위에서 매끄러우며, [명제 4](#prop4)에 의해 $(d\exp_p)_0 = \id_{T_p M}$은 isomorphism이다. 따라서 manifold 사이의 smooth 함수에 대한 [\[미분다양체\] §부분다양체와 역함수 정리, ⁋따름정리 5](/ko/math/manifolds/submanifolds#cor5)에 의해, $0$의 적당한 열린근방 $V_0$ 위에서 $\exp_p$가 $V_0$와 $\exp_p(V_0)$ 사이의 diffeomorphism을 정의한다. $V_0$ 안에 $0$ 중심의 star-shaped 열린 공 $V$를 잡으면 ([명제 3](#prop3)의 증명처럼 $\lVert \cdot \rVert_g$에 대한 충분히 작은 공) $\exp_p\vert_V$도 diffeomorphism이며, $U = \exp_p(V)$는 normal neighborhood이다.
 :::
 
-Normal neighborhood 위에서 exponential map의 역사상은 $T_p M$ 위로의 smooth 좌표를 준다. 여기에 tangent space의 orthonormal basis를 통한 선형동형을 합성하면 manifold 위의 구체적인 좌표계를 얻는다.
+Normal neighborhood 위에서 exponential map의 역사상은 $T_p M$ 위로의 smooth 좌표를 준다. 여기에 tangent space의 orthonormal basis를 통한 선형동형을 합성하면 manifold 위의 구체적인 coordinate system을 얻는다.
 
 ::: 정의 6
 $p$의 normal neighborhood $U = \exp_p(V)$와 $T_p M$의 $g_p$에 대한 orthonormal basis $(E_1, \ldots, E_n)$이 주어졌다 하자. 이 basis가 정하는 선형동형 $E : \mathbb{R}^n \rightarrow T_p M$, $E(x^1, \ldots, x^n) = \sum_i x^i E_i$에 대해, 합성
@@ -109,7 +117,7 @@ $$\varphi := E^{-1} \circ (\exp_p\vert_V)^{-1} : U \rightarrow \mathbb{R}^n$$
 을 $p$를 중심으로 하는 *normal coordinate<sub>정규좌표</sub>*라 부른다.
 :::
 
-정의에 의해 $\varphi(p) = 0$이며, 점 $\exp_p(v) \in U$의 normal coordinate는 $v = \sum_i x^i E_i$를 만족하는 $(x^1, \ldots, x^n)$이다. 이 좌표계가 가지는 특징적인 성질들을 모아 다음 명제로 정리한다. 핵심은 normal coordinate에서 $p$를 지나는 측지선들이 원점을 지나는 직선으로 보이고, 그 결과 $p$에서 metric과 connection이 가장 단순한 형태를 가진다는 것이다.
+정의에 의해 $\varphi(p) = 0$이며, 점 $\exp_p(v) \in U$의 normal coordinate는 $v = \sum_i x^i E_i$를 만족하는 $(x^1, \ldots, x^n)$이다. 이 coordinate system이 가지는 특징적인 성질들을 모아 다음 명제로 정리한다. 핵심은 normal coordinate에서 $p$를 지나는 측지선들이 원점을 지나는 직선으로 보이고, 그 결과 $p$에서 metric과 connection이 가장 단순한 형태를 가진다는 것이다.
 
 ::: 명제 7
 $p$를 중심으로 하는 normal coordinate $(x^i)$에서 다음이 성립한다.
@@ -130,15 +138,15 @@ $$g_{ij}(p) = g_p(\partial_i\vert_p, \partial_j\vert_p) = g_p(E_i, E_j) = \delta
 
 (3) $v = \sum_i v^i E_i \in V$를 임의로 잡자. (1)에 의해 $\gamma_v(t)$의 좌표성분은 $\gamma_v^k(t) = t v^k$이므로 $\ddot\gamma_v^k(t) = 0$이다. [§측지선, ⁋정의 4](/ko/math/riemannian_geometry/geodesics#def4) 직후의 좌표 측지선 방정식
 
-$$\ddot\gamma_v^k(t) + \sum_{i, j} \Gamma_{ij}^k(\gamma_v(t))\, \dot\gamma_v^i(t)\, \dot\gamma_v^j(t) = 0$$
+$$\ddot\gamma_v^k(t) + \sum_{i, j} \Gamma_{ij}^k(\gamma_v(t)) \dot\gamma_v^i(t) \dot\gamma_v^j(t) = 0$$
 
 에 이를 대입하면, $\dot\gamma_v^i(t) = v^i$이므로
 
-$$\sum_{i, j} \Gamma_{ij}^k(\gamma_v(t))\, v^i v^j = 0$$
+$$\sum_{i, j} \Gamma_{ij}^k(\gamma_v(t)) v^i v^j = 0$$
 
 이 모든 $t$에서 성립한다. $t = 0$에서 $\gamma_v(0) = p$이므로
 
-$$\sum_{i, j} \Gamma_{ij}^k(p)\, v^i v^j = 0$$
+$$\sum_{i, j} \Gamma_{ij}^k(p) v^i v^j = 0$$
 
 이고, 이는 모든 $v = (v^1, \ldots, v^n) \in \mathbb{R}^n$ (충분히 작은 $v$, 따라서 척도조정으로 모든 $v$)에 대해 성립한다. 각 $k$에 대해 $\sum_{i, j} \Gamma_{ij}^k(p) v^i v^j$는 $v$에 대한 이차형식이고, Levi-Civita connection은 torsion-free이므로 [§레비-치비타 접속, ⁋정의 3](/ko/math/riemannian_geometry/Levi-Civita_connection#def3)에 의해 $\Gamma_{ij}^k(p) = \Gamma_{ji}^k(p)$로 대칭이다. 대칭인 이차형식이 항등적으로 $0$이면 그 계수가 모두 $0$이므로 ($v = E_i + E_j$ 등을 대입해 편극화하면), $\Gamma_{ij}^k(p) = 0$을 얻는다.
 :::
@@ -154,7 +162,7 @@ Gauss lemma를 깔끔하게 진술하기 위해, exponential map의 미분이 �
 ::: 보조정리 8
 $v \in V \setminus \{0\}$에 대해, $T_v(T_p M) \cong T_p M$의 동일시 아래에서 $v$ 자신을 방사벡터로 본다. 그럼 임의의 $w \in T_p M \cong T_v(T_p M)$에 대해
 
-$$\bigl\langle (d\exp_p)_v(v),\, (d\exp_p)_v(w) \bigr\rangle_{\exp_p(v)} = \langle v, w \rangle_p$$
+$$\bigl\langle (d\exp_p)_v(v), (d\exp_p)_v(w) \bigr\rangle_{\exp_p(v)} = \langle v, w \rangle_p$$
 
 가 성립한다.
 :::
@@ -172,9 +180,9 @@ $$\langle (d\exp_p)_v(v), (d\exp_p)_v(v) \rangle = \lVert \dot\gamma_v(1) \rVert
 
 가 되어 $w = v$인 경우가 성립한다.
 
-다음으로 $\langle v, w \rangle_p = 0$인 경우. $w$를 실현하는 변분을 잡는다. $T_p M$ 안에서 $s \mapsto v(s)$를 $v(0) = v$, $\frac{d}{\dd{s}}\big\vert_{s=0} v(s) = w$이고 $\lVert v(s) \rVert_g \equiv \lVert v \rVert_g$인 곡선으로 택한다 ($\langle v, w\rangle_p = 0$이므로 $v$ 중심 구면 위의 곡선으로 가능하다). 이제 변분
+다음으로 $\langle v, w \rangle_p = 0$인 경우. $w$를 실현하는 변분을 잡는다. $T_p M$ 안에서 $s \mapsto v(s)$를 $v(0) = v$, $\frac{d}{\dd{s}}\big\vert_{s=0} v(s) = w$이고 $\lVert v(s) \rVert_g \equiv \lVert v \rVert_g$인 곡선으로 택한다 ($\langle v, w\rangle_p = 0$이므로 원점 중심의 반지름 $\lVert v \rVert_g$인 구면 위의 곡선으로 가능하다). 이제 변분
 
-$$\Gamma(s, t) := \exp_p\bigl(t\, v(s)\bigr)$$
+$$\Gamma(s, t) := \exp_p\bigl(t v(s)\bigr)$$
 
 를 생각하자. 각 $s$에 대해 $t \mapsto \Gamma(s, t)$는 [보조정리 2](#lem2)에 의해 측지선 $\gamma_{v(s)}$이며, $\Gamma(0, t) = \gamma_v(t)$이다. 변분장은
 
@@ -184,7 +192,7 @@ $$J(t) := \left.\frac{\partial \Gamma}{\partial s}\right\vert_{s = 0}(t) = (d\ex
 
 함수 $f(t) := \langle J(t), \dot\gamma_v(t) \rangle$를 생각하자. Metric-compatibility에 의해
 
-$$\frac{d}{\dd{t}} f(t) = \langle D_t J,\, \dot\gamma_v \rangle + \langle J,\, D_t \dot\gamma_v \rangle$$
+$$\frac{d}{\dd{t}} f(t) = \langle D_t J, \dot\gamma_v \rangle + \langle J, D_t \dot\gamma_v \rangle$$
 
 이고, $\gamma_v$가 측지선이므로 둘째 항은 $0$이다. 첫째 항을 위해 대칭 보조정리 $D_t \partial_s \Gamma = D_s \partial_t \Gamma$ ([§측지선, §§에너지의 제1변분](/ko/math/riemannian_geometry/geodesics#에너지의-제1변분)에서 사용한 것) 를 적용하면 $D_t J = D_t \partial_s \Gamma\vert_{s=0} = D_s \partial_t \Gamma\vert_{s=0}$이고, 따라서
 
@@ -206,7 +214,7 @@ Normal neighborhood $U = \exp_p(V)$ 안에서, $p$를 지나는 방사 측지선
 
 한편 [보조정리 8](#lem8)의 증명에서 $\dot\gamma_v(1) = (d\exp_p)_v(v)$임을 보였다. 따라서 임의의 그러한 tangent vector $(d\exp_p)_v(w)$에 대해, [보조정리 8](#lem8)에 의해
 
-$$\langle \dot\gamma_v(1),\, (d\exp_p)_v(w) \rangle_q = \langle (d\exp_p)_v(v),\, (d\exp_p)_v(w) \rangle_q = \langle v, w \rangle_p = 0$$
+$$\langle \dot\gamma_v(1), (d\exp_p)_v(w) \rangle_q = \langle (d\exp_p)_v(v), (d\exp_p)_v(w) \rangle_q = \langle v, w \rangle_p = 0$$
 
 이다. 즉 $\dot\gamma_v(1)$는 측지구면의 모든 tangent vector에 수직이다.
 :::
@@ -228,15 +236,15 @@ $$\exp_p(v) = \gamma_v(1) = p + v$$
 ::: 예시 11
 $\mathbb{R}^3$에 매장된 단위 구면 $S^2$에 round metric을 주자. [§측지선, ⁋예시 9](/ko/math/riemannian_geometry/geodesics#ex9)에서 점 $p \in S^2$와 unit vector $v \in T_p S^2$에 대한 측지선이 대원
 
-$$\gamma_v(t) = (\cos t)\, p + (\sin t)\, v$$
+$$\gamma_v(t) = (\cos t) p + (\sin t) v$$
 
 임을 보았다. 일반의 $v \in T_p S^2$에 대해서는 [보조정리 2](#lem2)의 동차성으로 속력 $\lVert v \rVert = r$을 반영하면
 
-$$\gamma_v(t) = (\cos rt)\, p + \frac{\sin rt}{r}\, v$$
+$$\gamma_v(t) = (\cos rt) p + \frac{\sin rt}{r} v$$
 
 이고, 따라서
 
-$$\exp_p(v) = \gamma_v(1) = (\cos r)\, p + \frac{\sin r}{r}\, v, \qquad r = \lVert v \rVert$$
+$$\exp_p(v) = \gamma_v(1) = (\cos r) p + \frac{\sin r}{r} v, \qquad r = \lVert v \rVert$$
 
 이다. 기하적으로 $\exp_p$는 접평면 $T_p S^2$의 vector $v$를, $v$ 방향의 대원을 따라 arc length $r = \lVert v \rVert$만큼 나아간 점으로 보내는 *방사사상*이다. 이 사상은 $r < \pi$인 영역, 즉 열린 공 $\{v : \lVert v \rVert < \pi\}$ 위에서 diffeomorphism이며, 그 image는 $p$의 대척점 $-p$를 제외한 $S^2 \setminus \{-p\}$로서 $p$의 normal neighborhood이다. 반지름 $r$의 측지구면 $\exp_p(S_r)$은 $p$로부터 측지거리 $r$만큼 떨어진 위도원이며, [정리 9](#thm9)가 말하듯 $p$에서 나오는 대원들(경도선)이 이 위도원들과 직교한다. $r = \pi$에서 $\exp_p$가 구면 $S_\pi$ 전체를 한 점 $-p$로 보내 diffeomorphism이 깨지는 것은, normal neighborhood가 일반적으로 $T_p M$ 전체로 확장되지 않는 전형적인 예이다.
 :::

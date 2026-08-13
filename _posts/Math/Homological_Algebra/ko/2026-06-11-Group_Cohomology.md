@@ -30,7 +30,7 @@ $$M^G=\left\{m\in M\mid \text{$g\cdot m=m$ for all $g\in G$}\right\}$$
 
 $G$-module 구조를 푸는 것은 어렵지 않다. Abelian group $M$ 위의 $\mathbb{Z}G$-module 구조는 $G$의 각 원소가 $M$에 어떻게 작용하는지로 결정되고, 각각의 $g\in G$의 action은 $M$의 automorphism이며 ($g^{-1}$의 action이 역함수), action이 곱셈과 호환되어야 하므로 이는 정확히 group homomorphism $G \rightarrow \Aut(M)$을 주는 것과 같다. 특히 임의의 abelian group은 모든 $g\in G$가 identity로 작용하는 *trivial $G$-module* 구조를 갖는다. 앞으로 $\mathbb{Z}$는 항상 trivial $G$-module로 생각하며, ring homomorphism
 
-$$\varepsilon:\mathbb{Z}G \rightarrow \mathbb{Z};\qquad \sum_{g\in G}a_g\,g\mapsto\sum_{g\in G}a_g$$
+$$\varepsilon:\mathbb{Z}G \rightarrow \mathbb{Z};\qquad \sum_{g\in G}a_gg\mapsto\sum_{g\in G}a_g$$
 
 를 *augmentation map*이라 부른다.
 
@@ -50,7 +50,7 @@ $$g\cdot\varphi(1)=\varphi(g\cdot 1)=\varphi(1)$$
 
 $$\varphi_m(x\cdot n)=\varepsilon(x)nm=\sum_ga_g(nm)=x\cdot(nm)=x\cdot\varphi_m(n)$$
 
-이다. 마지막 등식에서 $m$이 invariant라는 가정이 사용되었다. 즉 $\varphi_m$은 $\mathbb{Z}G$-linear이다. 두 함수가 서로의 역함수인 것과 abelian group homomorphism인 것은 자명하다.
+이다. 셋째 등식에서 $m$이 invariant라는 가정이 사용되었다. 즉 $\varphi_m$은 $\mathbb{Z}G$-linear이다. 두 함수가 서로의 역함수인 것과 abelian group homomorphism인 것은 자명하다.
 :::
 
 즉 invariant들을 취하는 functor $M\mapsto M^G$는 $\Hom_{\lMod{\mathbb{Z}G}}(\mathbb{Z},-)$와 같은 functor이고, 특히 left exact이다. 따라서 다음의 정의가 자연스럽다.
@@ -109,7 +109,7 @@ $$d_{n+1}h_n+h_{n-1}d_n=\id_{B_n}$$
 
 이다.
 
-우선 위의 homotopy 항등식으로부터 $d_nd_{n+1}=0$을 확인하자. $B_{n+1}$이 abelian group으로서 $h_n$의 image로 생성되므로 ($[g_0\mid\cdots\mid g_n]=h_n(g_0[g_1\mid\cdots\mid g_n])$이고 $d$들은 additive이다) $d_nd_{n+1}h_n=0$만 보이면 충분하다. Homotopy 항등식을 두 번 적용하면
+우선 위의 homotopy 항등식으로부터 $d_nd_{n+1}=0$을 확인하자. $B_{n+1}$이 $\mathbb{Z}G$-module로서 $h_n$의 image로 생성되므로 ($[g_0\mid\cdots\mid g_n]=h_n(g_0[g_1\mid\cdots\mid g_n])$이고 $d$들은 $\mathbb{Z}G$-linear이다) $d_nd_{n+1}h_n=0$만 보이면 충분하다. Homotopy 항등식을 두 번 적용하면
 
 $$d_nd_{n+1}h_n=d_n(\id_{B_n}-h_{n-1}d_n)=d_n-(d_nh_{n-1})d_n=d_n-(\id_{B_{n-1}}-h_{n-2}d_{n-1})d_n=h_{n-2}d_{n-1}d_n$$
 

@@ -18,7 +18,7 @@ Cauchy 정리는 ([§Cauchy 정리](/ko/math/complex_analysis/cauchy_theorem)) �
 
 ## Cauchy 적분공식
 
-$f$가 closed 원판 $\overline{D(z_0, r)}$를 품는 영역에서 holomorphic이라 하자. 경계원 위에서 $f$를 kernel $1/(w-z)$로 무게를 주어 적분하면, 그 값이 interior 점 $z$에서의 $f(z)$를 복원한다는 것이 Cauchy 적분공식이다. 증명의 발상은 다음과 같다. 함수 $w \mapsto f(w)/(w-z)$는 $w = z$를 제외한 원판 위에서 holomorphic이므로, Cauchy 정리의 homotopy 형태를 써서 적분의 경로를 경계원에서 $z$를 중심으로 한 아주 작은 원으로 옮길 수 있다. 그 작은 원 위에서는 $f(w) \approx f(z)$이고, 남는 적분 $\oint \dd{w}/(w-z)$이 정확히 $2\pi i$를 내므로 결과가 $2\pi i\, f(z)$가 된다.
+$f$가 closed 원판 $\overline{D(z_0, r)}$를 품는 영역에서 holomorphic이라 하자. 경계원 위에서 $f$를 kernel $1/(w-z)$로 무게를 주어 적분하면, 그 값이 interior 점 $z$에서의 $f(z)$를 복원한다는 것이 Cauchy 적분공식이다. 증명의 발상은 다음과 같다. 함수 $w \mapsto f(w)/(w-z)$는 $w = z$를 제외한 원판 위에서 holomorphic이므로, Cauchy 정리의 homotopy 형태를 써서 적분의 경로를 경계원에서 $z$를 중심으로 한 아주 작은 원으로 옮길 수 있다. 그 작은 원 위에서는 $f(w) \approx f(z)$이고, 남는 적분 $\oint \dd{w}/(w-z)$이 정확히 $2\pi i$를 내므로 결과가 $2\pi i f(z)$가 된다.
 
 ::: 정리 1 (Cauchy 적분공식)
 $\Omega \subseteq \mathbb{C}$가 열린집합이고 $f$가 $\Omega$에서 holomorphic이라 하자. Closed 원판 $\overline{D(z_0, r)}$이 $\Omega$에 들어 있으면, 열린 원판 $D(z_0, r)$ 안의 임의의 점 $z$에 대하여
@@ -39,15 +39,15 @@ $$\oint_{C_r} g(w)\dd{w} = \oint_{C_\rho} g(w)\dd{w}$$
 
 이다. 이제 우변을 $\rho \rightarrow 0$의 극한으로 평가한다. Kernel 부분의 적분 $\oint_{C_\rho} \dd{w}/(w - z)$는 중심 $z$를 한 바퀴 도는 원에서의 적분이므로 $2\pi i$이다 ([§복소적분, ⁋명제 10](/ko/math/complex_analysis/complex_integration#prop10)에서 $n = -1$인 경우, 평행이동으로 중심을 $z$로 옮긴 것). 따라서
 
-$$\oint_{C_\rho} \frac{f(w)}{w - z}\dd{w} - 2\pi i\, f(z) = \oint_{C_\rho} \frac{f(w) - f(z)}{w - z}\dd{w}$$
+$$\oint_{C_\rho} \frac{f(w)}{w - z}\dd{w} - 2\pi i f(z) = \oint_{C_\rho} \frac{f(w) - f(z)}{w - z}\dd{w}$$
 
 이다. $f$가 $z$에서 연속이므로 임의의 $\varepsilon > 0$에 대해 $\rho$이 충분히 작으면 $C_\rho$ 위에서 $\lvert f(w) - f(z)\rvert \leq \varepsilon$이고, 그 위에서 $\lvert w - z\rvert = \rho$이므로 피적분함수의 크기는 $\varepsilon/\rho$ 이하이다. ML 부등식 ([§복소적분, ⁋명제 6](/ko/math/complex_analysis/complex_integration#prop6)) 을 $\mathrm{length}(C_\rho) = 2\pi\rho$에 적용하면
 
 $$\left\lvert \oint_{C_\rho} \frac{f(w) - f(z)}{w - z}\dd{w} \right\rvert \leq \frac{\varepsilon}{\rho}\cdot 2\pi\rho = 2\pi\varepsilon$$
 
-이다. 좌변은 $\rho$에 무관한 상수 $\bigl\lvert \oint_{C_r} g\dd{w} - 2\pi i\, f(z)\bigr\rvert$이고 (앞의 homotopy invariance로 $C_\rho$ 적분이 $C_r$ 적분과 같으므로) 우변은 $\varepsilon \rightarrow 0$일 때 $0$으로 가므로, 이 상수는 $0$이다. 곧
+이다. 좌변은 $\rho$에 무관한 상수 $\bigl\lvert \oint_{C_r} g\dd{w} - 2\pi i f(z)\bigr\rvert$이고 (앞의 homotopy invariance로 $C_\rho$ 적분이 $C_r$ 적분과 같으므로) 우변은 $\varepsilon \rightarrow 0$일 때 $0$으로 가므로, 이 상수는 $0$이다. 곧
 
-$$\oint_{C_r} \frac{f(w)}{w - z}\dd{w} = 2\pi i\, f(z)$$
+$$\oint_{C_r} \frac{f(w)}{w - z}\dd{w} = 2\pi i f(z)$$
 
 이고, 양변을 $2\pi i$로 나누면 주장하는 공식을 얻는다.
 :::
@@ -75,7 +75,7 @@ $$\frac{f^{(n)}(z + h) - f^{(n)}(z)}{h} = \frac{n!}{2\pi i}\oint_{C_r} f(w)\cdot
 
 이다 (여기서 $C_r$은 경계원). 괄호 안에서 $a = w - z - h$, $b = w - z$로 두면 $b - a = h$이고, 항등식
 
-$$\frac{1}{a^{n+1}} - \frac{1}{b^{n+1}} = \frac{b^{n+1} - a^{n+1}}{a^{n+1}b^{n+1}} = (b - a)\,\frac{\sum_{j=0}^{n} a^j b^{n-j}}{a^{n+1}b^{n+1}}$$
+$$\frac{1}{a^{n+1}} - \frac{1}{b^{n+1}} = \frac{b^{n+1} - a^{n+1}}{a^{n+1}b^{n+1}} = (b - a)\frac{\sum_{j=0}^{n} a^j b^{n-j}}{a^{n+1}b^{n+1}}$$
 
 를 써서 $1/h$을 약분하면, 차분비의 kernel은
 
@@ -111,7 +111,7 @@ $z_0 \in \Omega$을 임의로 잡으면 $\Omega$가 열려 있어 $\overline{D(z
 ::: 정리 4 (Cauchy 부등식)
 $f$가 closed 원판 $\overline{D(z_0, r)}$를 품는 영역에서 holomorphic이고, 경계원 $\lvert w - z_0\rvert = r$ 위에서 $\lvert f(w)\rvert \leq M$이라 하자. 그러면 모든 정수 $n \geq 0$에 대하여
 
-$$\bigl\lvert f^{(n)}(z_0)\bigr\rvert \leq \frac{n!\,M}{r^n}$$
+$$\bigl\lvert f^{(n)}(z_0)\bigr\rvert \leq \frac{n!M}{r^n}$$
 
 이다.
 :::
@@ -127,7 +127,7 @@ $$\left\lvert \frac{f(w)}{(w - z_0)^{n+1}} \right\rvert = \frac{\lvert f(w)\rver
 
 이하이다. 경계원의 길이가 $2\pi r$이므로 ML 부등식 ([§복소적분, ⁋명제 6](/ko/math/complex_analysis/complex_integration#prop6)) 에 의해
 
-$$\bigl\lvert f^{(n)}(z_0)\bigr\rvert = \frac{n!}{2\pi}\left\lvert \oint \frac{f(w)}{(w - z_0)^{n+1}}\dd{w} \right\rvert \leq \frac{n!}{2\pi}\cdot \frac{M}{r^{n+1}}\cdot 2\pi r = \frac{n!\,M}{r^n}$$
+$$\bigl\lvert f^{(n)}(z_0)\bigr\rvert = \frac{n!}{2\pi}\left\lvert \oint \frac{f(w)}{(w - z_0)^{n+1}}\dd{w} \right\rvert \leq \frac{n!}{2\pi}\cdot \frac{M}{r^{n+1}}\cdot 2\pi r = \frac{n!M}{r^n}$$
 
 이다.
 :::
@@ -141,7 +141,7 @@ $f$가 entire function이고 평면 전체에서 유계이면, 곧 어떤 상수
 ::: 증명
 $f$가 entire function이므로 ([§복소정칙함수, ⁋정의 2](/ko/math/complex_analysis/holomorphic_functions#def2)) 임의의 점 $z_0 \in \mathbb{C}$과 임의의 $r > 0$에 대해 closed 원판 $\overline{D(z_0, r)}$가 holomorphic 영역에 들어 있다. 경계원 위에서 $\lvert f\rvert \leq M$이므로 정리 4를 $n = 1$에 적용하면
 
-$$\bigl\lvert f'(z_0)\bigr\rvert \leq \frac{1!\,M}{r} = \frac{M}{r}$$
+$$\bigl\lvert f'(z_0)\bigr\rvert \leq \frac{1!M}{r} = \frac{M}{r}$$
 
 이다. $f$가 평면 전체에서 holomorphic이므로 $r$을 임의로 크게 잡을 수 있고, $r \rightarrow \infty$이면 우변이 $0$으로 가므로 $f'(z_0) = 0$이다. $z_0$이 임의였으므로 $f' \equiv 0$이다. 도함수가 항상 $0$인 holomorphic function은 연결된 영역에서 상수이므로 (실수부와 허수부의 모든 편미분이 $0$이라 Cauchy–Riemann 관계 아래 $u, v$가 상수이다), $f$는 $\mathbb{C}$에서 상수함수이다.
 :::
@@ -169,7 +169,7 @@ $$p(z) = a_n z^n\left( 1 + \frac{a_{n-1}}{a_n z} + \cdots + \frac{a_0}{a_n z^n} 
 
 이고 괄호 안은 $\lvert z\rvert \rightarrow \infty$일 때 $1$로 수렴하므로, 충분히 큰 $R > 0$이 있어 $\lvert z\rvert \geq R$이면 괄호 안의 크기가 $1/2$ 이상이고 따라서
 
-$$\lvert p(z)\rvert \geq \frac{1}{2}\,\lvert a_n\rvert\,\lvert z\rvert^n \geq \frac{1}{2}\,\lvert a_n\rvert\,R^n$$
+$$\lvert p(z)\rvert \geq \frac{1}{2}\lvert a_n\rvert\lvert z\rvert^n \geq \frac{1}{2}\lvert a_n\rvert R^n$$
 
 이다. 곧 $\lvert z\rvert \geq R$인 곳에서 $\lvert g(z)\rvert \leq 2/(\lvert a_n\rvert R^n)$로 유계이다. 한편 closed 원판 $\overline{D(0, R)}$은 콤팩트이고 $g$가 그 위에서 연속이므로 $\lvert g\rvert$은 거기서 어떤 최댓값 이하로 유계이다. 두 어림을 합치면 $g$는 $\mathbb{C}$ 전체에서 유계인 entire function이다.
 
@@ -197,7 +197,7 @@ $$f(z_0) = \frac{1}{2\pi i}\oint_{\lvert w - z_0\rvert = r} \frac{f(w)}{w - z_0}
 
 이다. 경계원을 $w = z_0 + r e^{i\theta}$ ($\theta \in [0, 2\pi]$) 로 매개화하면 $\dd{w} = i r e^{i\theta}\dd{\theta}$이고 $w - z_0 = r e^{i\theta}$이므로
 
-$$f(z_0) = \frac{1}{2\pi i}\int_0^{2\pi} \frac{f(z_0 + r e^{i\theta})}{r e^{i\theta}}\,i r e^{i\theta}\dd{\theta} = \frac{1}{2\pi}\int_0^{2\pi} f\bigl(z_0 + r e^{i\theta}\bigr)\dd{\theta}$$
+$$f(z_0) = \frac{1}{2\pi i}\int_0^{2\pi} \frac{f(z_0 + r e^{i\theta})}{r e^{i\theta}} i r e^{i\theta}\dd{\theta} = \frac{1}{2\pi}\int_0^{2\pi} f\bigl(z_0 + r e^{i\theta}\bigr)\dd{\theta}$$
 
 이다.
 :::
@@ -221,7 +221,7 @@ $$F(z) = \int_{[z_0, z]} f(\zeta)\dd{\zeta} \qquad (z \in D)$$
 
 $$F(z + h) - F(z) = \int_{[z, z+h]} f(\zeta)\dd{\zeta}$$
 
-이다. 상수 $f(z)$의 선분 적분이 $f(z)\,h$이므로
+이다. 상수 $f(z)$의 선분 적분이 $f(z)h$이므로
 
 $$\frac{F(z + h) - F(z)}{h} - f(z) = \frac{1}{h}\int_{[z, z+h]} \bigl( f(\zeta) - f(z) \bigr)\dd{\zeta}$$
 

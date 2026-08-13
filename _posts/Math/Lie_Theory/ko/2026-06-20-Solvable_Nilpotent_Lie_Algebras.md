@@ -59,14 +59,14 @@ Homomorphism $\phi:\mathfrak{g}\rightarrow\mathfrak{h}$의 kernel $\ker\phi$는 
 ::: 명제 5
 $\mathfrak{a}$가 $\mathfrak{g}$의 ideal이면, quotient 벡터공간 $\mathfrak{g}/\mathfrak{a}$ 위에
 
-$$[x+\mathfrak{a},\,y+\mathfrak{a}]=[x,y]+\mathfrak{a}$$
+$$[x+\mathfrak{a},y+\mathfrak{a}]=[x,y]+\mathfrak{a}$$
 
 으로 정의되는 연산은 잘 정의된 Lie bracket이며, 이로써 $\mathfrak{g}/\mathfrak{a}$는 Lie algebra가 된다. 또한 quotient map $\pi:\mathfrak{g}\rightarrow\mathfrak{g}/\mathfrak{a}$는 surjective homomorphism이고, $\ker\pi=\mathfrak{a}$이다.
 :::
 ::: 증명
 연산이 representative의 선택과 무관함을 보인다. $x'=x+a$, $y'=y+b$ ($a,b\in\mathfrak{a}$)라 하면
 
-$$[x',y']=[x+a,\,y+b]=[x,y]+[x,b]+[a,y]+[a,b]$$
+$$[x',y']=[x+a,y+b]=[x,y]+[x,b]+[a,y]+[a,b]$$
 
 이다. $\mathfrak{a}$가 ideal이므로 $[x,b],[a,y],[a,b]$는 모두 $\mathfrak{a}$에 속하고, 따라서 $[x',y']+\mathfrak{a}=[x,y]+\mathfrak{a}$이다. 즉 연산이 잘 정의된다. Bilinearity는 $\mathfrak{g}$의 bracket의 bilinearity에서 따라오고, anticommutativity와 Jacobi identity도 quotient map이 선형이므로 $\mathfrak{g}$의 해당 항등식에서 직접 내려온다. 가령 임의의 $\bar x,\bar y,\bar z\in\mathfrak{g}/\mathfrak{a}$에 대하여
 
@@ -75,7 +75,7 @@ $$[[\bar x,\bar y],\bar z]+[[\bar y,\bar z],\bar x]+[[\bar z,\bar x],\bar y]=\bi
 이다. $\pi$가 surjective homomorphism이고 $\ker\pi=\mathfrak{a}$임은 정의에서 즉각적이다.
 :::
 
-이로써 Lie algebra의 first isomorphism theorem이 성립한다. Homomorphism $\phi:\mathfrak{g}\rightarrow\mathfrak{h}$에 대하여 $\mathfrak{g}/\ker\phi\cong\im\phi$이며, 이는 벡터공간 사이의 isomorphic이 bracket을 보존함을 [명제 5](#prop5)와 같은 방식으로 확인하면 얻어진다. 앞으로 우리는 이 동형을 자유로이 사용한다.
+이로써 Lie algebra의 first isomorphism theorem이 성립한다. Homomorphism $\phi:\mathfrak{g}\rightarrow\mathfrak{h}$에 대하여 $\mathfrak{g}/\ker\phi\cong\im\phi$이며, 이는 벡터공간 사이의 isomorphism이 bracket을 보존함을 [명제 5](#prop5)와 같은 방식으로 확인하면 얻어진다. 앞으로 우리는 이 동형을 자유로이 사용한다.
 
 ## Adjoint representation
 
@@ -128,7 +128,7 @@ $$\mathfrak{g}^{1}=\mathfrak{g},\qquad \mathfrak{g}^{n+1}=[\mathfrak{g},\mathfra
 으로 귀납적으로 정의되는 부분공간들의 열이다.
 :::
 
-두 열의 각 항은 모두 $\mathfrak{g}$의 ideal이다. Derived series의 경우 $\mathfrak{g}^{(n)}$이 ideal이면 $[\mathfrak{g},\mathfrak{g}^{(n+1)}]=[\mathfrak{g},[\mathfrak{g}^{(n)},\mathfrak{g}^{(n)}]]\subseteq\mathfrak{g}^{(n+1)}$임을 Jacobi identity로 확인할 수 있고, lower central series의 경우 $\mathfrak{g}^{n+1}=[\mathfrak{g},\mathfrak{g}^n]$이 정의상 $[\mathfrak{g},-]$의 상이므로 ideal이다. 또한 정의에서 두 열은 모두 감소열
+두 열의 각 항은 모두 $\mathfrak{g}$의 ideal이다. Derived series의 경우 $\mathfrak{g}^{(n)}$이 ideal이면 $[\mathfrak{g},\mathfrak{g}^{(n+1)}]=[\mathfrak{g},[\mathfrak{g}^{(n)},\mathfrak{g}^{(n)}]]\subseteq\mathfrak{g}^{(n+1)}$임을 Jacobi identity로 확인할 수 있고, lower central series의 경우 $[\mathfrak{g},\mathfrak{g}^{n+1}]=\mathfrak{g}^{n+2}\subseteq\mathfrak{g}^{n+1}$이므로 ideal이다. 또한 정의에서 두 열은 모두 감소열
 
 $$\mathfrak{g}=\mathfrak{g}^{(0)}\supseteq\mathfrak{g}^{(1)}\supseteq\cdots,\qquad \mathfrak{g}=\mathfrak{g}^{1}\supseteq\mathfrak{g}^{2}\supseteq\cdots$$
 
@@ -151,7 +151,7 @@ $\mathfrak{gl}(n;k)$의 두 subalgebra를 살펴본다.
 2. Strictly 상삼각행렬 전체로 이루어진 $\mathfrak{n}=\mathfrak{n}(n;k)$는 nilpotent이다. $\mathfrak{n}$의 원소를 곱할 때마다 $0$이 아닌 성분이 대각선에서 한 칸씩 멀어지므로, $\mathfrak{n}^{n}=0$이다.
 3. 임의의 abelian Lie algebra는 $[\mathfrak{g},\mathfrak{g}]=0$이므로 $\mathfrak{g}^{2}=0$, 곧 nilpotent이다.
 
-특히 $n\geq 2$이면 $\mathfrak{b}$는 solvable이지만 nilpotent가 아니다. 가령 $n=2$에서 $h=\begin{pmatrix}1&0\\0&0\end{pmatrix}$, $e=\begin{pmatrix}0&1\\0&0\end{pmatrix}$에 대하여 $[h,e]=e$이므로 $(\ad h)^m e=e$가 모든 $m$에 대해 성립하여 $\mathfrak{b}^{n}$이 결코 $0$이 되지 않는다.
+특히 $n\geq 2$이면 $\mathfrak{b}$는 solvable이지만 nilpotent가 아니다. 가령 $n=2$에서 $h=\begin{pmatrix}1&0\\0&0\end{pmatrix}$, $e=\begin{pmatrix}0&1\\0&0\end{pmatrix}$에 대하여 $[h,e]=e$이므로 $(\ad h)^m e=e$가 모든 $m$에 대해 성립하여 $\mathfrak{b}^{m}$이 결코 $0$이 되지 않는다.
 :::
 
 위 예시에서 strictly 상삼각행렬은 $\mathfrak{gl}(V)$ 안의 nilpotent endomorphism들이며, 따라서 $\mathfrak{n}$의 모든 원소는 nilpotent endomorphism이다. Engel의 정리는 이 현상의 역, 곧 nilpotent endomorphism들로 이루어진 Lie algebra가 항상 동시에 strictly 상삼각화됨을 보인다.
@@ -214,7 +214,7 @@ $V$가 $0$이 아닌 유한차원 $k$-벡터공간이고 $\mathfrak{g}\subseteq\
 ::: 증명
 $\dim\mathfrak{g}$에 대한 귀납법으로 증명한다. $\dim\mathfrak{g}=0$이면 조건이 공허하게 성립하므로, $\dim\mathfrak{g}\geq 1$이고 차원이 더 작은 모든 경우에 대하여 결론이 성립한다고 가정한다.
 
-먼저 $\mathfrak{g}$가 codimension $1$인 ideal $\mathfrak{h}$를 가짐을 보인다. 이를 위해 $\mathfrak{g}$의 임의의 maximal proper subalgebra $\mathfrak{h}$를 택한다. $\mathfrak{h}$의 $\mathfrak{g}$ 위의 action을 adjoint로 보면 $\mathfrak{h}$는 $\mathfrak{g}$와 $\mathfrak{h}$ 둘 다에 작용하므로 quotient 벡터공간 $\mathfrak{g}/\mathfrak{h}$ 위에 작용한다. 곧 각 $x\in\mathfrak{h}$에 대하여 $\ad x$가 $\mathfrak{h}$를 보존하므로, $\overline{\ad}\,x:\mathfrak{g}/\mathfrak{h}\rightarrow\mathfrak{g}/\mathfrak{h}$가 유도된다. 이로써 $\mathfrak{h}$는 $\mathfrak{gl}(\mathfrak{g}/\mathfrak{h})$의 subalgebra의 상이 되는데, 임의의 $x\in\mathfrak{g}$에 대하여 $\ad x$는 nilpotent endomorphism이다. 이는 $x$가 $\mathfrak{gl}(V)$ 안의 nilpotent endomorphism일 때, 그 좌·우 곱사상의 차로 표현되는 $\ad x$ 역시 nilpotent이기 때문이다. 따라서 $\dim\mathfrak{h}<\dim\mathfrak{g}$인 $\mathfrak{h}$의 상에 귀납 가정을 적용하면, 어떤 $0\neq \bar y\in\mathfrak{g}/\mathfrak{h}$가 존재하여 모든 $x\in\mathfrak{h}$에 대하여 $\overline{\ad}\,x(\bar y)=0$, 곧 $[x,y]\in\mathfrak{h}$이다. 이 $y\notin\mathfrak{h}$에 대하여 $\mathfrak{h}+ky$는 subalgebra이고 $\mathfrak{h}$를 진부분으로 포함하므로, $\mathfrak{h}$의 maximality에서 $\mathfrak{h}+ky=\mathfrak{g}$이다. $[\mathfrak{h},y]\subseteq\mathfrak{h}$이고 $[\mathfrak{h},\mathfrak{h}]\subseteq\mathfrak{h}$이므로 $\mathfrak{h}$는 $\mathfrak{g}$의 ideal이며, $\dim(\mathfrak{g}/\mathfrak{h})=1$이다.
+먼저 $\mathfrak{g}$가 codimension $1$인 ideal $\mathfrak{h}$를 가짐을 보인다. 이를 위해 $\mathfrak{g}$의 임의의 maximal proper subalgebra $\mathfrak{h}$를 택한다. $\mathfrak{h}$의 $\mathfrak{g}$ 위의 action을 adjoint로 보면 $\mathfrak{h}$는 $\mathfrak{g}$와 $\mathfrak{h}$ 둘 다에 작용하므로 quotient 벡터공간 $\mathfrak{g}/\mathfrak{h}$ 위에 작용한다. 곧 각 $x\in\mathfrak{h}$에 대하여 $\ad x$가 $\mathfrak{h}$를 보존하므로, $\overline{\ad}x:\mathfrak{g}/\mathfrak{h}\rightarrow\mathfrak{g}/\mathfrak{h}$가 유도된다. 이로써 $\mathfrak{h}$의 상은 $\mathfrak{gl}(\mathfrak{g}/\mathfrak{h})$의 subalgebra가 되는데, 임의의 $x\in\mathfrak{g}$에 대하여 $\ad x$는 nilpotent endomorphism이다. 이는 $x$가 $\mathfrak{gl}(V)$ 안의 nilpotent endomorphism일 때, 그 좌·우 곱사상의 차로 표현되는 $\ad x$ 역시 nilpotent이기 때문이다. 따라서 $\dim\mathfrak{h}<\dim\mathfrak{g}$인 $\mathfrak{h}$의 상에 귀납 가정을 적용하면, 어떤 $0\neq \bar y\in\mathfrak{g}/\mathfrak{h}$가 존재하여 모든 $x\in\mathfrak{h}$에 대하여 $\overline{\ad}x(\bar y)=0$, 곧 $[x,y]\in\mathfrak{h}$이다. 이 $y\notin\mathfrak{h}$에 대하여 $\mathfrak{h}+ky$는 subalgebra이고 $\mathfrak{h}$를 진부분으로 포함하므로, $\mathfrak{h}$의 maximality에서 $\mathfrak{h}+ky=\mathfrak{g}$이다. $[\mathfrak{h},y]\subseteq\mathfrak{h}$이고 $[\mathfrak{h},\mathfrak{h}]\subseteq\mathfrak{h}$이므로 $\mathfrak{h}$는 $\mathfrak{g}$의 ideal이며, $\dim(\mathfrak{g}/\mathfrak{h})=1$이다.
 
 이제 $\dim\mathfrak{h}<\dim\mathfrak{g}$이고 $\mathfrak{h}$의 모든 원소가 $V$ 위의 nilpotent endomorphism이므로, 귀납 가정에 의해 공통 kernel 공간
 
@@ -252,7 +252,7 @@ $$0=\bar V_0\subsetneq\bar V_1\subsetneq\cdots\subsetneq\bar V_{n-1}=\bar V$$
 ::: 증명
 $\dim\mathfrak{g}$에 대한 귀납법으로 증명한다. $\mathfrak{g}=0$이면 자명하다. $\mathfrak{g}\neq 0$이라 하자. $\ad\mathfrak{g}=\{\ad x\mid x\in\mathfrak{g}\}$는 $\mathfrak{gl}(\mathfrak{g})$의 subalgebra이고 ([명제 7](#prop7)), 가정에 의해 그 모든 원소가 nilpotent endomorphism이다. 만일 $\ad\mathfrak{g}=0$이면 $\mathfrak{g}=Z(\mathfrak{g})$이므로 $\mathfrak{g}$는 abelian, 따라서 nilpotent이다. $\ad\mathfrak{g}\neq 0$인 경우, $\mathfrak{g}=\ker(\ad)$가 아니므로 [보조정리 16](#lem16)을 $V=\mathfrak{g}$, $\ad\mathfrak{g}\subseteq\mathfrak{gl}(\mathfrak{g})$에 적용하면 어떤 $0\neq z\in\mathfrak{g}$가 존재하여 모든 $x\in\mathfrak{g}$에 대하여 $(\ad x)(z)=[x,z]=0$이다. 곧 $z\in Z(\mathfrak{g})$이고 $z\neq 0$이므로 $Z(\mathfrak{g})\neq 0$이다.
 
-Quotient $\bar{\mathfrak{g}}=\mathfrak{g}/Z(\mathfrak{g})$를 생각하면 $\dim\bar{\mathfrak{g}}<\dim\mathfrak{g}$이다. Quotient map $\pi$에 대하여 $\overline{\ad}\,\pi(x)=\ad x$가 $\bar{\mathfrak{g}}$ 위에 유도하는 morphism은 $\ad x$의 quotient이므로 nilpotent endomorphism이다. 따라서 $\bar{\mathfrak{g}}$의 모든 원소도 ad-nilpotent이고, 귀납 가정에 의해 $\bar{\mathfrak{g}}$는 nilpotent이다. 곧 어떤 $m$에 대하여 $\bar{\mathfrak{g}}^{m}=0$이며, 이는 $\mathfrak{g}^{m}\subseteq Z(\mathfrak{g})$를 뜻한다. 그럼
+Quotient $\bar{\mathfrak{g}}=\mathfrak{g}/Z(\mathfrak{g})$를 생각하면 $\dim\bar{\mathfrak{g}}<\dim\mathfrak{g}$이다. Quotient map $\pi$에 대하여 $\overline{\ad}\pi(x)=\ad x$가 $\bar{\mathfrak{g}}$ 위에 유도하는 morphism은 $\ad x$의 quotient이므로 nilpotent endomorphism이다. 따라서 $\bar{\mathfrak{g}}$의 모든 원소도 ad-nilpotent이고, 귀납 가정에 의해 $\bar{\mathfrak{g}}$는 nilpotent이다. 곧 어떤 $m$에 대하여 $\bar{\mathfrak{g}}^{m}=0$이며, 이는 $\mathfrak{g}^{m}\subseteq Z(\mathfrak{g})$를 뜻한다. 그럼
 
 $$\mathfrak{g}^{m+1}=[\mathfrak{g},\mathfrak{g}^{m}]\subseteq[\mathfrak{g},Z(\mathfrak{g})]=0$$
 
@@ -281,23 +281,23 @@ $x\in\mathfrak{g}$와 $0\neq w\in W$를 고정한다. 임의의 $a\in\mathfrak{a
 
 각 $a\in\mathfrak{a}$가 $W_m$을 보존하며, 기저 $w,xw,\ldots,x^{m-1}w$에 대하여 상삼각행렬로, 더 정밀하게는 대각성분이 모두 $\lambda(a)$인 상삼각행렬로 작용함을 $i$에 대한 귀납법으로 보인다. 곧 모든 $a\in\mathfrak{a}$와 모든 $i\geq 0$에 대하여
 
-$$a\,x^i w\equiv\lambda(a)\,x^i w\pmod{W_i}$$
+$$ax^i w\equiv\lambda(a)x^i w\pmod{W_i}$$
 
 이다. $i=0$이면 $aw=\lambda(a)w$이므로 성립한다. $i$까지 모든 $a$에 대해 성립한다고 가정하면
 
-$$a\,x^{i+1}w=a x(x^i w)=x a(x^i w)+[a,x]x^i w$$
+$$ax^{i+1}w=a x(x^i w)=x a(x^i w)+[a,x]x^i w$$
 
-인데, 귀납 가정에서 $a(x^i w)=\lambda(a)x^i w+u$ ($u\in W_i$)이므로 $x a(x^i w)=\lambda(a)x^{i+1}w+xu$이고 $xu\in W_{i+1}$이다. 또 $[a,x]\in\mathfrak{a}$이므로 귀납 가정을 $[a,x]$에 적용하면 $[a,x]x^i w\equiv\lambda([a,x])x^i w\in W_{i+1}\pmod{W_i}$, 곧 $[a,x]x^i w\in W_{i+1}$이다. 따라서 $a\,x^{i+1}w\equiv\lambda(a)x^{i+1}w\pmod{W_{i+1}}$이다.
+인데, 귀납 가정에서 $a(x^i w)=\lambda(a)x^i w+u$ ($u\in W_i$)이므로 $x a(x^i w)=\lambda(a)x^{i+1}w+xu$이고 $xu\in W_{i+1}$이다. 또 $[a,x]\in\mathfrak{a}$이므로 귀납 가정을 $[a,x]$에 적용하면 $[a,x]x^i w\equiv\lambda([a,x])x^i w\in W_{i+1}\pmod{W_i}$, 곧 $[a,x]x^i w\in W_{i+1}$이다. 따라서 $ax^{i+1}w\equiv\lambda(a)x^{i+1}w\pmod{W_{i+1}}$이다.
 
 이로써 각 $a\in\mathfrak{a}$는 $W_m$ 위에서 대각성분이 모두 $\lambda(a)$인 상삼각행렬이므로, $W_m$ 위로 제한한 $a$의 trace는
 
-$$\tr(a\vert_{W_m})=m\,\lambda(a)$$
+$$\tr(a\vert_{W_m})=m\lambda(a)$$
 
 이다. 특히 $a=[x,b]$ ($b\in\mathfrak{a}$)에 이 식을 적용한다. $x$와 $b$가 모두 $W_m$을 보존하므로 그 commutator $[x,b]\vert_{W_m}=x\vert_{W_m}b\vert_{W_m}-b\vert_{W_m}x\vert_{W_m}$의 trace는 $0$이다. 따라서
 
-$$0=\tr([x,b]\vert_{W_m})=m\,\lambda([x,b])$$
+$$0=\tr([x,b]\vert_{W_m})=m\lambda([x,b])$$
 
-이며, $k$의 characteristic이 $0$이고 $m\geq 1$이므로 $\lambda([x,b])=0$이다. 임의의 $a=[a',x]=-[x,a']$ ($a'\in\mathfrak{a}$) 꼴에 대해서도 $\lambda([a',x])=-\lambda([x,a'])=0$이므로, 처음의 등식 $a(xw)=\lambda(a)xw+\lambda([a,x])w$에서 모든 $a$에 대해 $\lambda([a,x])=0$이다. 따라서 $xw\in W$이다.
+이며, $k$의 characteristic이 $0$이고 $m\geq 1$이므로 $\lambda([x,b])=0$이다. 임의의 $a\in\mathfrak{a}$에 대하여 $\lambda([a,x])=-\lambda([x,a])=0$이므로, 처음의 등식 $a(xw)=\lambda(a)xw+\lambda([a,x])w$에서 $a(xw)=\lambda(a)xw$이다. 따라서 $xw\in W$이다.
 :::
 
 Characteristic $0$ 가정이 사용된 유일한 지점은 마지막 단계에서 $m\lambda([x,b])=0$으로부터 $\lambda([x,b])=0$을 끌어내는 부분이다. Characteristic이 $m$을 나누는 양의 정수이면 이 추론이 무너지며, 실제로 그러한 체에서 Lie의 정리는 성립하지 않는다. 이제 이 보조정리로부터 공통 eigenvector의 존재를 귀납적으로 얻는다.
@@ -306,7 +306,7 @@ Characteristic $0$ 가정이 사용된 유일한 지점은 마지막 단계에�
 $k$가 대수적으로 닫힌 characteristic $0$의 체이고, $V$가 $0$이 아닌 유한차원 $k$-벡터공간, $\mathfrak{g}\subseteq\mathfrak{gl}(V)$가 solvable subalgebra라 하자. 그럼 $\mathfrak{g}$의 모든 원소가 공유하는 eigenvector $0\neq v\in V$가 존재한다. 곧 linear functional $\lambda:\mathfrak{g}\rightarrow k$가 존재하여 모든 $x\in\mathfrak{g}$에 대하여 $xv=\lambda(x)v$이다.
 :::
 ::: 증명
-$\dim\mathfrak{g}$에 대한 귀납법으로 증명한다. $\dim\mathfrak{g}=0$이면 $k$가 대수적으로 닫혀 있으므로 임의의 $0\neq v\in V$가 (공허하게) 조건을 만족한다. $\dim\mathfrak{g}=1$인 경우, $\mathfrak{g}=kx$이고 $x$의 eigenvector가 $k$가 대수적으로 닫혀 있다는 데에서 존재한다.
+$\dim\mathfrak{g}$에 대한 귀납법으로 증명한다. $\dim\mathfrak{g}=0$이면 $V\neq 0$이므로 임의의 $0\neq v\in V$가 (공허하게) 조건을 만족한다. $\dim\mathfrak{g}=1$인 경우, $\mathfrak{g}=kx$이고 $x$의 eigenvector가 $k$가 대수적으로 닫혀 있다는 데에서 존재한다.
 
 이제 $\dim\mathfrak{g}\geq 1$이고 차원이 더 작은 모든 solvable subalgebra에 대하여 결론이 성립한다고 가정한다. $\mathfrak{g}$가 solvable이고 $\mathfrak{g}\neq 0$이므로 $[\mathfrak{g},\mathfrak{g}]\neq\mathfrak{g}$이다. 만일 $[\mathfrak{g},\mathfrak{g}]=\mathfrak{g}$이면 derived series가 $\mathfrak{g}$에서 멈춰 결코 $0$에 도달하지 못해 solvability에 모순이기 때문이다. 따라서 $\mathfrak{g}/[\mathfrak{g},\mathfrak{g}]$는 $0$이 아닌 abelian Lie algebra이고, 그 안에서 codimension $1$인 부분공간을 택해 preimage를 취하면 $[\mathfrak{g},\mathfrak{g}]$를 포함하는 codimension $1$의 부분공간 $\mathfrak{a}\subseteq\mathfrak{g}$를 얻는다. $[\mathfrak{g},\mathfrak{g}]\subseteq\mathfrak{a}$이므로 $[\mathfrak{g},\mathfrak{a}]\subseteq[\mathfrak{g},\mathfrak{g}]\subseteq\mathfrak{a}$, 곧 $\mathfrak{a}$는 $\mathfrak{g}$의 ideal이다. $\mathfrak{a}$는 solvable Lie algebra $\mathfrak{g}$의 subalgebra이므로 solvable이고 ([명제 14](#prop14)), $\dim\mathfrak{a}=\dim\mathfrak{g}-1$이다.
 
@@ -320,7 +320,7 @@ $$W=\left\{v\in V\mid av=\lambda(a)v\text{ for all }a\in\mathfrak{a}\right\}$$
 [따름정리 17](#cor17)과 동일한 flag 구성을 반복하면, 공통 eigenvector로부터 동시 상삼각화를 얻는다. 다만 이번에는 매 단계에서 strictly 상삼각이 아니라 단지 상삼각이 된다.
 
 ::: 따름정리 21
-$k$가 대수적으로 닫힌 characteristic $0$의 체이고 $\mathfrak{g}\subseteq\mathfrak{gl}(V)$가 $0\neq V$ 위의 solvable subalgebra이면, $V$의 기저를 적절히 택하여 $\mathfrak{g}$의 모든 원소가 동시에 상삼각행렬로 표현되도록 할 수 있다. 곧 flag
+$k$가 대수적으로 닫힌 characteristic $0$의 체이고, $V$가 $0$이 아닌 유한차원 $k$-벡터공간, $\mathfrak{g}\subseteq\mathfrak{gl}(V)$가 solvable subalgebra이면, $V$의 기저를 적절히 택하여 $\mathfrak{g}$의 모든 원소가 동시에 상삼각행렬로 표현되도록 할 수 있다. 곧 flag
 
 $$0=V_0\subsetneq V_1\subsetneq\cdots\subsetneq V_n=V,\qquad \dim V_i=i$$
 

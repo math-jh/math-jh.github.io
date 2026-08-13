@@ -93,7 +93,7 @@ $$r:S^n\rightarrow S^n;\qquad r(x_0,\ldots,x_i,\ldots,x_n)=(x_0,\ldots,-x_i,\ldo
 의 degree는 $\deg r=-1$이다.
 :::
 ::: 증명
-좌표의 이름을 바꾸어도 일반성을 잃지 않으므로 마지막 좌표를 뒤집는 반사사상을 생각하자. [명제 1](#prop1)의 증명에서 사용한 분해 $S^n=U\cup V$를 북극과 남극이 마지막 좌표축 위에 놓이도록 택하면, 이 반사사상은 두 극을 맞바꾸어 $U$와 $V$를 서로 보내고 적도 $U\cap V\simeq S^{n-1}$을 자기 자신으로 보내되 그 위에서 한 좌표를 뒤집는 반사사상으로 작용한다. Mayer-Vietoris의 connecting homomorphism은 이러한 morphism들에 대하여 자연스러우므로, [명제 1](#prop1)의 isomorphism $\widetilde{H}_n(S^n)\cong\widetilde{H}_{n-1}(S^{n-1})$ 아래에서 $S^n$의 반사사상이 유도하는 준동형은 $S^{n-1}$의 반사사상이 유도하는 준동형과 일치한다. 따라서 degree를 계산하는 문제가 한 차원 낮아지며, 귀납적으로 $n=0$의 경우로 환원된다.
+좌표의 이름을 바꾸어도 일반성을 잃지 않으므로 첫 좌표를 뒤집는 반사사상 $r(x_0,x_1,\ldots,x_n)=(-x_0,x_1,\ldots,x_n)$을 생각하자. $n\geq 1$이면 좌표축이 둘 이상이므로, [명제 1](#prop1)의 증명에서 사용한 분해 $S^n=U\cup V$를 북극과 남극이 뒤집히지 않는 축, 가령 마지막 좌표축 위에 놓이도록 택할 수 있다. 그럼 이 반사사상은 두 극을 각각 고정하여 $U$와 $V$를 각각 자기 자신으로 보내고, 적도 $U\cap V\simeq S^{n-1}$을 자기 자신으로 보내되 그 위에서 첫 좌표를 뒤집는 반사사상으로 작용한다. Mayer-Vietoris의 connecting homomorphism은 이러한 morphism들에 대하여 자연스러우므로, [명제 1](#prop1)의 isomorphism $\widetilde{H}_n(S^n)\cong\widetilde{H}_{n-1}(S^{n-1})$ 아래에서 $S^n$의 반사사상이 유도하는 준동형은 $S^{n-1}$의 반사사상이 유도하는 준동형과 일치한다. 따라서 degree를 계산하는 문제가 한 차원 낮아지며, 귀납적으로 $n=0$의 경우로 환원된다.
 
 $n=0$의 경우, 반사사상은 $S^0$의 두 점을 맞바꾼다. $\widetilde{H}_0(S^0)\cong\mathbb{Z}$은 두 점의 형식적 차 $[p_+]-[p_-]$가 생성하는데, 두 점을 맞바꾸는 morphism은 이 generator를 $[p_-]-[p_+]$, 곧 그 부호를 뒤집은 것으로 보내므로 유도되는 준동형은 $-1$을 곱하는 morphism이다. 따라서 반사사상의 degree는 $-1$이며, 귀납법에 의하여 모든 $n\geq 0$에서 $\deg r=-1$이다.
 :::
@@ -188,7 +188,7 @@ $$L(f)=\sum_{i\geq 0}(-1)^i\operatorname{tr}\bigl(f_\ast:H_i(X;\mathbb{Q})\right
 를 $f$의 *Lefschetz number<sub>레프셰츠 수</sub>*라 부른다.
 :::
 
-정의의 합은 유한합이다. $X$가 위의 조건을 만족하면 유한개의 $i$에 대해서만 $H_i(X;\mathbb{Q})\neq 0$이기 때문이다. 또한 $L(f)$는 각 trace가 정수가 아닐 수도 있지만 그 교대합은 항상 정수가 되는데, 이는 $f_\ast$가 실제로는 정수계수 homology 위의 준동형에서 유래하기 때문이다. Lefschetz 수는 명백히 homotopy 불변량이다. Homotopic한 두 morphism은 각 $H_i(X;\mathbb{Q})$ 위에서 같은 선형사상을 유도하므로 trace가 일치한다. 특별히 $f=\id_X$이면 각 $f_\ast$가 항등사상이고 그 trace는 $\dim_\mathbb{Q}H_i(X;\mathbb{Q})$, 곧 $i$번째 Betti 수이므로 $L(\id_X)=\sum_i(-1)^i\dim_\mathbb{Q}H_i(X;\mathbb{Q})$은 $X$의 Euler characteristic과 같다.
+정의의 합은 유한합이다. $X$가 위의 조건을 만족하면 유한개의 $i$에 대해서만 $H_i(X;\mathbb{Q})\neq 0$이기 때문이다. 또한 각 trace는 언제나 정수이고 따라서 $L(f)$도 정수인데, 이는 $H_i(X;\mathbb{Q})$가 $H_i(X)$의 torsion을 없앤 free abelian group에 $\mathbb{Q}$를 텐서한 것이고 $f_\ast$가 그 free abelian group 위의 준동형에서 유래하여 정수 행렬로 표현되기 때문이다. Lefschetz 수는 명백히 homotopy 불변량이다. Homotopic한 두 morphism은 각 $H_i(X;\mathbb{Q})$ 위에서 같은 선형사상을 유도하므로 trace가 일치한다. 특별히 $f=\id_X$이면 각 $f_\ast$가 항등사상이고 그 trace는 $\dim_\mathbb{Q}H_i(X;\mathbb{Q})$, 곧 $i$번째 Betti 수이므로 $L(\id_X)=\sum_i(-1)^i\dim_\mathbb{Q}H_i(X;\mathbb{Q})$은 $X$의 Euler characteristic과 같다.
 
 ::: 정리 10 (Lefschetz fixed point 정리)
 $X$를 유한 CW complex이거나 삼각화가능한 콤팩트 공간이라 하고, $f:X\rightarrow X$를 연속함수라 하자. 만일 $L(f)\neq 0$이면 $f$는 fixed point를 갖는다.
@@ -196,7 +196,7 @@ $X$를 유한 CW complex이거나 삼각화가능한 콤팩트 공간이라 하�
 ::: 증명
 대우, 곧 $f$가 fixed point를 갖지 않으면 $L(f)=0$임을 보인다. 증명은 두 개의 축으로 이루어지며, 여기에서는 그 골격만 제시하고 세부는 [Hat]의 §2.C에 넘긴다.
 
-첫째 축은 순수하게 algebraic한 사실, 곧 trace의 교대합이 chain 준위에서 계산되어도 homology 준위에서 계산되어도 같다는 것이다. 유한차원 $\mathbb{Q}$-vector space들의 chain complex $(C_i,\partial)$와 그 위의 chain map $\varphi_\ast=(\varphi_i)$가 주어지면
+첫째 축은 순수하게 algebraic한 사실, 곧 trace의 교대합이 chain 준위에서 계산되어도 homology 준위에서 계산되어도 같다는 것이다. 유한차원 $\mathbb{Q}$-vector space들의 chain complex $(C_i,\partial)$와 그 위의 chain map $\varphi_\bullet=(\varphi_i)$가 주어지면
 
 $$\sum_i(-1)^i\operatorname{tr}(\varphi_i:C_i\rightarrow C_i)=\sum_i(-1)^i\operatorname{tr}(\varphi_\ast:H_i\rightarrow H_i)$$
 
@@ -221,7 +221,7 @@ $X$가 contractible하면 한 점과 같은 homology를 가지므로 ([§호몰�
 
 $$L(f)=(-1)^0\cdot 1=1\neq 0$$
 
-이므로 [정리 10](#thm10)에 의하여 $f$는 fixed point를 갖는다. 특히 $D^{n+1}$은 convex하여 contractible하고 삼각형화가능한 콤팩트 공간이므로 ($n+1$-simplex와 homeomorphic이다), 임의의 $f:D^{n+1}\rightarrow D^{n+1}$이 fixed point를 가진다는 [정리 7](#thm7)의 Brouwer 정리를 얻는다.
+이므로 [정리 10](#thm10)에 의하여 $f$는 fixed point를 갖는다. 특히 $D^{n+1}$은 convex하여 contractible하고 삼각화가능한 콤팩트 공간이므로 ($n+1$-simplex와 homeomorphic이다), 임의의 $f:D^{n+1}\rightarrow D^{n+1}$이 fixed point를 가진다는 [정리 7](#thm7)의 Brouwer 정리를 얻는다.
 :::
 
 ## 예시

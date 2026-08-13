@@ -260,7 +260,7 @@ $$\operatorname{depth}M=\min\{i\mid H_\mathfrak{m}^i(M)\neq 0\}$$
 $M\neq 0$이므로 [§정수적 확장, ⁋보조정리 8](/ko/math/commutative_algebra/integral_extension#lem8)에 의하여 $\mathfrak{m}M\neq M$이고, [정리 10](#thm10)을 $\mathfrak{a}=\mathfrak{m}$에 적용하면 된다.
 :::
 
-이로써 depth는 $H_\mathfrak{m}^\bullet(M)$이 처음으로 살아나는 자리를 짚는다. 반대쪽 끝은 차원이 통제한다. [따름정리 9](#cor9)는 이미 $\dim A$ 위에서의 소멸을 주었지만, module 자신의 차원까지 상한을 내리는 것이 Grothendieck의 소멸정리이다.
+이로써 depth는 $H_\mathfrak{m}^\bullet(M)$이 처음으로 살아나는 차수를 짚는다. 반대쪽 끝은 차원이 통제한다. [따름정리 9](#cor9)는 이미 $\dim A$ 위에서의 소멸을 주었지만, module 자신의 차원까지 상한을 내리는 것이 Grothendieck의 소멸정리이다.
 
 ::: 정리 12 (Grothendieck)
 Noetherian local ring $(A,\mathfrak{m})$과 $0$이 아닌 finitely generated $A$-module $M$에 대하여, $i>\dim M$이면 $H_\mathfrak{m}^i(M)=0$이다.

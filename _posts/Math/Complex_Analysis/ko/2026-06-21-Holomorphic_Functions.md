@@ -45,7 +45,7 @@ $$(f + g)'(z_0) = f'(z_0) + g'(z_0), \qquad (fg)'(z_0) = f'(z_0)g(z_0) + f(z_0)g
 
 $$\left(\frac{f}{g}\right)'(z_0) = \frac{f'(z_0)g(z_0) - f(z_0)g'(z_0)}{g(z_0)^2}$$
 
-이다. 또 $f$가 $z_0$에서, $g$가 $f(z_0)$에서 복소미분가능하면 $g \circ f$가 $z_0$에서 복소미분가능하고 $(g \circ f)'(z_0) = g'(f(z_0))\,f'(z_0)$이다.
+이다. 또 $f$가 $z_0$에서, $g$가 $f(z_0)$에서 복소미분가능하면 $g \circ f$가 $z_0$에서 복소미분가능하고 $(g \circ f)'(z_0) = g'(f(z_0))f'(z_0)$이다.
 :::
 
 ::: 증명
@@ -55,7 +55,7 @@ $$\frac{(f+g)(z_0+h) - (f+g)(z_0)}{h} = \frac{f(z_0+h)-f(z_0)}{h} + \frac{g(z_0+
 
 이므로 두 극한의 합으로 $f'(z_0) + g'(z_0)$이 된다. 곱에 대하여는
 
-$$\frac{f(z_0+h)g(z_0+h) - f(z_0)g(z_0)}{h} = \frac{f(z_0+h)-f(z_0)}{h}\,g(z_0+h) + f(z_0)\,\frac{g(z_0+h)-g(z_0)}{h}$$
+$$\frac{f(z_0+h)g(z_0+h) - f(z_0)g(z_0)}{h} = \frac{f(z_0+h)-f(z_0)}{h}g(z_0+h) + f(z_0)\frac{g(z_0+h)-g(z_0)}{h}$$
 
 으로 쪼개고, $g$가 $z_0$에서 복소미분가능하면 연속이므로 $h \rightarrow 0$일 때 $g(z_0+h) \rightarrow g(z_0)$임을 쓰면 우변이 $f'(z_0)g(z_0) + f(z_0)g'(z_0)$으로 수렴한다. Quotient의 경우 먼저 $g(z_0)\neq 0$이고 $g$가 연속이므로 $z_0$의 작은 근방에서 $g$가 $0$이 아니어서 $f/g$가 정의되며,
 
@@ -63,11 +63,11 @@ $$\frac{1}{h}\left(\frac{1}{g(z_0+h)} - \frac{1}{g(z_0)}\right) = -\frac{1}{g(z_
 
 이므로 $(1/g)'(z_0) = -g'(z_0)/g(z_0)^2$이고, 여기에 곱셈규칙을 적용하면 quotient 공식을 얻는다. 합성에 대하여는 $w_0 = f(z_0)$로 두고 보조함수
 
-$$\psi(w) = \begin{cases} \dfrac{g(w) - g(w_0)}{w - w_0}, & w \neq w_0, \\[1mm] g'(w_0), & w = w_0 \end{cases}$$
+$$\psi(w) = \begin{cases} \frac{g(w) - g(w_0)}{w - w_0}, & w \neq w_0, \\[1mm] g'(w_0), & w = w_0 \end{cases}$$
 
 를 생각하면 $g$의 복소미분가능성에서 $\psi$가 $w_0$에서 연속이고, 모든 $w$에 대해 $g(w) - g(w_0) = \psi(w)(w - w_0)$이다. 이를 $w = f(z_0+h)$에 적용하면
 
-$$\frac{g(f(z_0+h)) - g(f(z_0))}{h} = \psi(f(z_0+h))\,\frac{f(z_0+h)-f(z_0)}{h}$$
+$$\frac{g(f(z_0+h)) - g(f(z_0))}{h} = \psi(f(z_0+h))\frac{f(z_0+h)-f(z_0)}{h}$$
 
 이고, $f$의 연속성으로 $f(z_0+h) \rightarrow w_0$이므로 $\psi(f(z_0+h)) \rightarrow \psi(w_0) = g'(w_0)$이며 우변이 $g'(f(z_0))f'(z_0)$으로 수렴한다.
 :::
@@ -84,7 +84,7 @@ $$\frac{\overline{z_0 + h} - \overline{z_0}}{h} = \frac{\bar{h}}{h}$$
 
 ## Cauchy–Riemann 방정식
 
-예시 4는 복소미분가능성이 차분비의 방향 독립성을 요구하며, 이것이 실수부와 허수부 사이의 관계로 번역됨을 시사한다. 이 관계를 정확히 적은 것이 Cauchy–Riemann 방정식이다. 함수 $f : \Omega \rightarrow \mathbb{C}$를 실수부와 허수부로 갈라 $f(z) = u(x, y) + i\,v(x, y)$ ($z = x + iy$) 로 적으면, $f$는 두 실숫값 함수 $u, v : \Omega \rightarrow \mathbb{R}$의 쌍, 곧 평면사상 $(x, y) \mapsto (u, v)$로 볼 수 있다. 이때 $f$의 복소미분가능성은 그 평면사상의 실미분가능성 ([\[해석학\] §다변수 미분, ⁋정의 1](/ko/math/analysis/multivariable_differentiation#def1)) 에 한 쌍의 편미분 등식을 더한 것과 정확히 동치이다.
+예시 4는 복소미분가능성이 차분비의 방향 독립성을 요구하며, 이것이 실수부와 허수부 사이의 관계로 번역됨을 시사한다. 이 관계를 정확히 적은 것이 Cauchy–Riemann 방정식이다. 함수 $f : \Omega \rightarrow \mathbb{C}$를 실수부와 허수부로 갈라 $f(z) = u(x, y) + iv(x, y)$ ($z = x + iy$) 로 적으면, $f$는 두 실숫값 함수 $u, v : \Omega \rightarrow \mathbb{R}$의 쌍, 곧 평면사상 $(x, y) \mapsto (u, v)$로 볼 수 있다. 이때 $f$의 복소미분가능성은 그 평면사상의 실미분가능성 ([\[해석학\] §다변수 미분, ⁋정의 1](/ko/math/analysis/multivariable_differentiation#def1)) 에 한 쌍의 편미분 등식을 더한 것과 정확히 동치이다.
 
 ::: 정리 5 (Cauchy–Riemann 방정식)
 $\Omega \subseteq \mathbb{C}$가 열려 있고 $f = u + iv : \Omega \rightarrow \mathbb{C}$이며 $z_0 = x_0 + iy_0 \in \Omega$이라 하자. 그러면 $f$가 $z_0$에서 복소미분가능한 것은 $u, v$가 $(x_0, y_0)$에서 ($\mathbb{R}^2$의 함수로서) 실미분가능하고 그곳에서
@@ -93,7 +93,7 @@ $$\frac{\partial u}{\partial x} = \frac{\partial v}{\partial y}, \qquad \frac{\p
 
 가 성립하는 것과 동치이다. 이때 도함수는
 
-$$f'(z_0) = \frac{\partial u}{\partial x}(x_0, y_0) + i\,\frac{\partial v}{\partial x}(x_0, y_0)$$
+$$f'(z_0) = \frac{\partial u}{\partial x}(x_0, y_0) + i\frac{\partial v}{\partial x}(x_0, y_0)$$
 
 으로 주어진다.
 :::
@@ -101,7 +101,7 @@ $$f'(z_0) = \frac{\partial u}{\partial x}(x_0, y_0) + i\,\frac{\partial v}{\part
 ::: 증명
 먼저 $f$가 $z_0$에서 복소미분가능하고 $f'(z_0) = a + ib$라 하자. 정의 1의 극한에서
 
-$$f(z_0 + h) - f(z_0) = f'(z_0)\,h + r(h), \qquad \frac{r(h)}{h} \rightarrow 0 \;\;(h \rightarrow 0)$$
+$$f(z_0 + h) - f(z_0) = f'(z_0)h + r(h), \qquad \frac{r(h)}{h} \rightarrow 0 \quad (h \rightarrow 0)$$
 
 이며, $\lvert r(h)\rvert/\lvert h\rvert = \lvert r(h)/h\rvert \rightarrow 0$이므로 $r(h) = o(\lvert h\rvert)$이다. $h = s + it$로 적고 복소수 곱 $f'(z_0)h = (a+ib)(s+it) = (as - bt) + i(bs + at)$을 실허로 나누면
 
@@ -121,7 +121,7 @@ $$\begin{pmatrix} u_x & u_y \\ v_x & v_y \end{pmatrix} = \begin{pmatrix} a & -b 
 $$\begin{aligned}
 f(z_0 + h) - f(z_0)
 &= (as - bt) + i(bs + at) + \rho(h) \\
-&= (a + ib)(s + it) + \rho(h) = (a+ib)\,h + \rho(h)
+&= (a + ib)(s + it) + \rho(h) = (a+ib)h + \rho(h)
 \end{aligned}$$
 
 이고 $\rho(h) = o(\lVert(s,t)\rVert) = o(\lvert h\rvert)$이다. 따라서
@@ -131,7 +131,7 @@ $$\frac{f(z_0 + h) - f(z_0)}{h} = (a + ib) + \frac{\rho(h)}{h}$$
 인데 $\lvert \rho(h)/h\rvert = \lvert\rho(h)\rvert/\lvert h\rvert \rightarrow 0$이므로 차분비가 $a + ib$로 수렴한다. 그러므로 $f$는 $z_0$에서 복소미분가능하고 $f'(z_0) = a + ib = u_x + i v_x$이다.
 :::
 
-정리 5의 증명이 드러내는 핵심은, 복소미분가능성이 곧 평면사상 $(u, v)$의 미분이 *복소수 곱*의 꼴, 곧 $\left(\begin{smallmatrix} a & -b \\ b & a \end{smallmatrix}\right)$ 행렬이어야 한다는 조건이라는 점이다. 이 형태의 행렬은 정확히 평면의 회전·확대를 합성한 것 ([§복소수와 복소평면, ⁋명제 6](/ko/math/complex_analysis/complex_numbers#prop6)) 이므로, 복소미분가능한 함수의 미분은 한 점에서 평면을 회전·확대하는 *각도를 보존하는* 선형사상이다. 일반적인 실미분은 임의의 $2\times 2$ 행렬을 야코비로 가질 수 있는 데 반해, 복소미분가능성은 그 야코비를 한 복소수로 표현되는 닮음변환으로 제한한다. 이것이 복소미분의 경직성의 근원이며, holomorphic function이 등각사상이 되는 기하적 사실의 대수적 핵심이다.
+정리 5의 증명이 드러내는 핵심은, 복소미분가능성이 곧 평면사상 $(u, v)$의 미분이 *복소수 곱*의 꼴, 곧 $\left(\begin{smallmatrix} a & -b \\ b & a \end{smallmatrix}\right)$ 행렬이어야 한다는 조건이라는 점이다. 이 형태의 행렬은 $a + ib \neq 0$일 때 정확히 평면의 회전·확대를 합성한 것 ([§복소수와 복소평면, ⁋명제 6](/ko/math/complex_analysis/complex_numbers#prop6)) 이므로, $f'(z_0) \neq 0$인 점에서 복소미분가능한 함수의 미분은 평면을 회전·확대하는 *각도를 보존하는* 선형사상이다. 일반적인 실미분은 임의의 $2\times 2$ 행렬을 야코비로 가질 수 있는 데 반해, 복소미분가능성은 그 야코비를 한 복소수로 표현되는 닮음변환으로 제한한다. 이것이 복소미분의 경직성의 근원이며, holomorphic function이 등각사상이 되는 기하적 사실의 대수적 핵심이다.
 
 한편 실미분가능성을 직접 확인하기 번거로울 때를 위해, 편미분의 연속성을 가정하면 Cauchy–Riemann 방정식만으로 holomorphicity를 판정할 수 있다. 이는 연속인 편미분이 실미분가능성을 보장한다는 사실 ([\[해석학\] §다변수 미분, ⁋명제 4](/ko/math/analysis/multivariable_differentiation#prop4)) 의 직접적 귀결이다.
 
@@ -152,7 +152,7 @@ Cauchy–Riemann 방정식의 두 등식은 적절한 미분연산자를 도입�
 ::: 정의 7
 $\Omega \subseteq \mathbb{C}$에서 실미분가능한 함수 $f$에 대하여 *Wirtinger 미분<sub>Wirtinger derivative</sub>*을
 
-$$\frac{\partial f}{\partial z} = \frac{1}{2}\left(\frac{\partial f}{\partial x} - i\,\frac{\partial f}{\partial y}\right), \qquad \frac{\partial f}{\partial \bar{z}} = \frac{1}{2}\left(\frac{\partial f}{\partial x} + i\,\frac{\partial f}{\partial y}\right)$$
+$$\frac{\partial f}{\partial z} = \frac{1}{2}\left(\frac{\partial f}{\partial x} - i\frac{\partial f}{\partial y}\right), \qquad \frac{\partial f}{\partial \bar{z}} = \frac{1}{2}\left(\frac{\partial f}{\partial x} + i\frac{\partial f}{\partial y}\right)$$
 
 으로 정의하고, 각각 $\partial_z f$, $\partial_{\bar{z}} f$로도 적는다. 여기서 $\partial_x f$, $\partial_y f$는 $f$를 두 실변수 $x, y$의 (복소숫값) 함수로 본 편미분이다.
 :::
@@ -164,7 +164,7 @@ $f = u + iv$가 $z_0$에서 실미분가능하다고 하자. 그러면 $z_0$에�
 
 $$\frac{\partial f}{\partial \bar{z}}(z_0) = 0$$
 
-인 것과 동치이며, 이때 $f'(z_0) = \dfrac{\partial f}{\partial z}(z_0)$이다.
+인 것과 동치이며, 이때 $f'(z_0) = \partial_z f(z_0)$이다.
 :::
 
 ::: 증명
@@ -176,7 +176,7 @@ $$\frac{\partial f}{\partial \bar{z}} = \frac{1}{2}\left( (u_x + i v_x) + i(u_y 
 
 $$\frac{\partial f}{\partial z} = \frac{1}{2}\left( (u_x + i v_x) - i(u_y + i v_y) \right) = \frac{1}{2}\bigl( (u_x + v_y) + i(v_x - u_y) \bigr)$$
 
-인데, Cauchy–Riemann 방정식이 성립하면 $v_y = u_x$, $u_y = -v_x$이므로 우변이 $(2u_x + i\,2v_x)/2 = u_x + i v_x$가 되어, 정리 5의 도함수 공식에 의해 $f'(z_0) = u_x + i v_x = \partial_z f(z_0)$이다.
+인데, Cauchy–Riemann 방정식이 성립하면 $v_y = u_x$, $u_y = -v_x$이므로 우변이 $(2u_x + 2iv_x)/2 = u_x + i v_x$가 되어, 정리 5의 도함수 공식에 의해 $f'(z_0) = u_x + i v_x = \partial_z f(z_0)$이다.
 :::
 
 명제 8은 holomorphicity를 "$f$가 $\bar{z}$에 의존하지 않는다"로 해석하게 해 준다. 형식적으로 $\partial_{\bar z} f = 0$은 $f$가 $\bar{z}$에 무관하게 $z$만의 함수임을 뜻하며, holomorphic function이 곧 "$z$만의 함수"라는 직관을 정당화한다. 이 관점에서 예시 4의 $f(z) = \bar{z}$는 $\partial_{\bar z}\bar z = 1 \neq 0$이라 어디에서도 holomorphic이 아님이 즉시 보인다. 또 holomorphic function의 도함수가 $\partial_z f$로 주어지므로, 실무에서는 $f$를 $z$로 적고 평범하게 미분하면 도함수가 나온다. 가령 $f(z) = z^2$이면 $\partial_z f = 2z$, $\partial_{\bar z} f = 0$이다.
@@ -192,7 +192,7 @@ $$f(z) = \sum_{n=0}^{\infty} a_n (z - z_0)^n$$
 
 은 열린 원판 $B(z_0, R) = \{z : \lvert z - z_0\rvert < R\}$에서 holomorphic이고, 그 도함수는 항별미분으로 얻어지는 급수
 
-$$f'(z) = \sum_{n=1}^{\infty} n\,a_n (z - z_0)^{n-1}$$
+$$f'(z) = \sum_{n=1}^{\infty} n a_n (z - z_0)^{n-1}$$
 
 로 주어진다. 이 항별미분 급수도 수렴반지름이 $R$이다.
 :::
@@ -204,7 +204,7 @@ $$f'(z) = \sum_{n=1}^{\infty} n\,a_n (z - z_0)^{n-1}$$
 
 $$\frac{f(z) - f(w)}{z - w} - g(w) = \sum_{n=2}^{\infty} a_n \left( \frac{z^n - w^n}{z - w} - n w^{n-1} \right)$$
 
-이다 ($n = 0, 1$ 항은 소거된다). 인수분해 $\dfrac{z^n - w^n}{z - w} = \sum_{k=0}^{n-1} z^k w^{n-1-k}$를 쓰면 괄호 안은
+이다 ($n = 0, 1$ 항은 소거된다). 인수분해 $(z^n - w^n)/(z - w) = \sum_{k=0}^{n-1} z^k w^{n-1-k}$를 쓰면 괄호 안은
 
 $$\sum_{k=0}^{n-1} \bigl( z^k - w^k \bigr) w^{n-1-k} = (z - w)\sum_{k=1}^{n-1} \left( \sum_{j=0}^{k-1} z^j w^{k-1-j} \right) w^{n-1-k}$$
 
@@ -229,7 +229,7 @@ $$e^z = \sum_{n=0}^{\infty} \frac{z^n}{n!}, \qquad \cos z = \sum_{n=0}^{\infty} 
 
 $$\frac{d}{\dd{z}}e^z = \sum_{n=1}^{\infty} \frac{n z^{n-1}}{n!} = \sum_{n=1}^{\infty} \frac{z^{n-1}}{(n-1)!} = e^z$$
 
-이고, 마찬가지로 항별미분하면 $\dfrac{d}{\dd{z}}\sin z = \cos z$, $\dfrac{d}{\dd{z}}\cos z = -\sin z$이다. 또 급수를 직접 비교하면 모든 복소수 $z$에 대해 *Euler 공식<sub>Euler's formula</sub>*
+이고, 마찬가지로 항별미분하면 $(\sin z)' = \cos z$, $(\cos z)' = -\sin z$이다. 또 급수를 직접 비교하면 모든 복소수 $z$에 대해 *Euler 공식<sub>Euler's formula</sub>*
 
 $$e^{iz} = \cos z + i\sin z$$
 
@@ -252,11 +252,11 @@ $f = u + iv$가 영역 $\Omega$에서 holomorphic이면, $u = \Real f$와 $v = \
 :::
 
 ::: 증명
-$f$가 holomorphic이면 $u, v$는 ($C^2$급이므로) Cauchy–Riemann 방정식 $u_x = v_y$, $u_y = -v_x$를 만족한다. 첫 등식을 $x$로, 둘째 등식을 $y$로 편미분하면
+$f$가 holomorphic이면 [정리 5](#thm5)에 의해 $u, v$가 Cauchy–Riemann 방정식 $u_x = v_y$, $u_y = -v_x$를 만족하며, 절 서두에서 받아들인 대로 $C^2$급이다. 첫 등식을 $x$로, 둘째 등식을 $y$로 편미분하면
 
 $$u_{xx} = v_{yx}, \qquad u_{yy} = -v_{xy}$$
 
-이다. $v$가 $C^2$급이므로 혼합편미분이 순서에 무관하여 $v_{yx} = v_{xy}$이고 ([\[미적분학\] §다변수함수와 편미분, ⁋정리 7](/ko/math/calculus/partial_derivatives#thm7)의 클레로 정리), 따라서
+이다. $v$가 $C^2$급이므로 혼합편미분이 순서에 무관하여 $v_{yx} = v_{xy}$이고 ([\[미적분학\] §다변수함수와 편미분, ⁋정리 7](/ko/math/calculus/partial_derivatives#thm7)), 따라서
 
 $$\Delta u = u_{xx} + u_{yy} = v_{yx} - v_{xy} = 0$$
 
@@ -269,14 +269,14 @@ $$\Delta u = u_{xx} + u_{yy} = v_{yx} - v_{xy} = 0$$
 영역 $\Omega$ 위의 두 조화함수 $u, v$가 Cauchy–Riemann 방정식 $u_x = v_y$, $u_y = -v_x$를 만족하면, $v$를 $u$의 *harmonic conjugate<sub>조화켤레</sub>*라 한다.
 :::
 
-조화켤레는 정의 13의 비대칭성이 시사하듯 $u$에서 $v$로의 일방적 관계이며, 실제로 $v$가 $u$의 조화켤레이면 $-u$가 $v$의 조화켤레가 된다 (Cauchy–Riemann 방정식의 두 등식을 $(v, -u)$에 대해 다시 쓰면 확인된다). 주어진 조화함수 $u$에 대해 그 조화켤레 $v$가 (적절한 영역에서) 존재하면, $f = u + iv$가 holomorphic function이 되어 임의의 조화함수를 holomorphic function의 실수부로 실현할 수 있다. 가장 단순한 예로 $u(x, y) = x^2 - y^2$를 보면 $u_{xx} + u_{yy} = 2 - 2 = 0$이라 조화이고, $v(x, y) = 2xy$가 $v_y = 2x = u_x$, $v_x = 2y = -u_y$로 조화켤레이며, 둘을 합치면 $f(z) = (x^2 - y^2) + i\,2xy = z^2$으로 holomorphic function을 회복한다.
+조화켤레는 정의 13의 비대칭성이 시사하듯 $u$에서 $v$로의 일방적 관계이며, 실제로 $v$가 $u$의 조화켤레이면 $-u$가 $v$의 조화켤레가 된다 (Cauchy–Riemann 방정식의 두 등식을 $(v, -u)$에 대해 다시 쓰면 확인된다). 주어진 조화함수 $u$에 대해 그 조화켤레 $v$가 (적절한 영역에서) 존재하면, $f = u + iv$가 holomorphic function이 되어 임의의 조화함수를 holomorphic function의 실수부로 실현할 수 있다. 가장 단순한 예로 $u(x, y) = x^2 - y^2$를 보면 $u_{xx} + u_{yy} = 2 - 2 = 0$이라 조화이고, $v(x, y) = 2xy$가 $v_y = 2x = u_x$, $v_x = 2y = -u_y$로 조화켤레이며, 둘을 합치면 $f(z) = (x^2 - y^2) + 2ixy = z^2$으로 holomorphic function을 회복한다.
 
 ::: 예시 14 (지수함수의 실허부와 조화성)
 Entire function $e^z = e^x(\cos y + i\sin y)$의 실수부와 허수부는
 
 $$u(x, y) = e^x \cos y, \qquad v(x, y) = e^x \sin y$$
 
-이다. 명제 12에 의해 둘 다 조화여야 하는데, 직접 확인하면 $u_{xx} = e^x\cos y$, $u_{yy} = -e^x\cos y$이므로 $\Delta u = 0$이고, 같은 계산으로 $\Delta v = 0$이다. 또 $u_x = e^x\cos y = v_y$, $u_y = -e^x\sin y = -v_x$로 Cauchy–Riemann 방정식이 성립하여 $v$가 $u$의 조화켤레임을 본다. 도함수는 명제 8의 $f' = \partial_z f = u_x + i v_x = e^x\cos y + i\,e^x\sin y = e^z$로, 앞서 항별미분으로 얻은 $(e^z)' = e^z$와 일치한다.
+이다. 명제 12에 의해 둘 다 조화여야 하는데, 직접 확인하면 $u_{xx} = e^x\cos y$, $u_{yy} = -e^x\cos y$이므로 $\Delta u = 0$이고, 같은 계산으로 $\Delta v = 0$이다. 또 $u_x = e^x\cos y = v_y$, $u_y = -e^x\sin y = -v_x$로 Cauchy–Riemann 방정식이 성립하여 $v$가 $u$의 조화켤레임을 본다. 도함수는 명제 8의 $f' = \partial_z f = u_x + i v_x = e^x\cos y + ie^x\sin y = e^z$로, 앞서 항별미분으로 얻은 $(e^z)' = e^z$와 일치한다.
 :::
 
 ---

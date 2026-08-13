@@ -14,7 +14,7 @@ weight: 9
 published: false
 ---
 
-[§부분수열과 [§부분수열과 Bolzano–Weierstrass 정리, ⁋정리 4](/ko/math/analysis/bolzano_weierstrass#thm4) 정리](/ko/math/analysis/bolzano_weierstrass)는 bounded sequence에서 수렴하는 부분수열을 뽑았다. 이 "부분수열을 추출하여 극한을 얻는" 능력을 집합의 성질로 추상화한 것이 compactness가며, 해석학의 존재 정리들을 떠받치는 가장 중요한 위상적 개념이다.
+[§부분수열과 Bolzano–Weierstrass 정리, ⁋정리 4](/ko/math/analysis/bolzano_weierstrass#thm4)는 bounded sequence에서 수렴하는 부분수열을 뽑았다. 이 "부분수열을 추출하여 극한을 얻는" 능력을 집합의 성질로 추상화한 것이 compactness이며, 해석학의 존재 정리들을 떠받치는 가장 중요한 위상적 개념이다.
 
 해석학에서 어떤 점의 존재를 보이는 표준 전략은 다음과 같다. 먼저 원하는 성질에 점점 가까워지는 점열 $(x_m)$을 구성하고, 그 점열에서 수렴하는 부분수열을 뽑은 뒤, limit point가 원하는 성질을 가짐을 보이는 것이다. 이 전략이 작동하려면 두 가지가 필요하다. 점열에서 수렴하는 부분수열을 언제나 뽑을 수 있어야 하고, 그 극한이 우리가 다루는 집합 안에 남아 있어야 한다. 바로 이 두 요구를 한 단어로 묶은 것이 점렬컴팩트성이다. 따라서 컴팩트집합은 "극한을 향한 추출"이 막힘없이 이루어지는 무대이며, [§연속함수의 성질, ⁋따름정리 2](/ko/math/analysis/continuous_functions#cor2)나 균등연속성 같은 결과가 이 무대 위에서 자연스럽게 따라 나온다.
 
@@ -65,7 +65,7 @@ $$\lVert x_m \rVert > m$$
 :::
 
 ::: 참고 4
-거리공간에서는 컴팩트성과 sequential compactness가 동치이다. 따라서 하이네–보렐 정리는 open cover 의미의 컴팩트성에 대해서도 그대로 성립한다 — $\mathbb{R}^n$에서 컴팩트인 것은 닫혀 있고 bounded인 것과 같다. 이 동치성과 일반 위상공간에서의 컴팩트성 이론은 [\[위상수학\] §옹골성](/ko/math/topology/compactness)과 [\[위상수학\] §옹골공간](/ko/math/topology/compact_spaces)에서 다룬다.
+거리공간에서는 컴팩트성과 sequential compactness가 동치이다. 따라서 하이네–보렐 정리는 open cover 의미의 컴팩트성에 대해서도 그대로 성립한다. 곧 $\mathbb{R}^n$에서 컴팩트인 것은 닫혀 있고 bounded인 것과 같다. 이 동치성과 일반 위상공간에서의 컴팩트성 이론은 [\[위상수학\] §옹골성과 필터의 수렴](/ko/math/topology/filter_convergence)과 [\[위상수학\] §옹골공간](/ko/math/topology/compact_spaces)에서 다룬다.
 :::
 
 ## 예시와 계산

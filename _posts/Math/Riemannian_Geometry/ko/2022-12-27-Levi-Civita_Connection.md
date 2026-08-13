@@ -20,7 +20,7 @@ published: false
 (Pseudo-)Riemannian manifold $(M, g)$의 tangent bundle 위의 connection $\nabla$가 주어졌을 때, $\nabla$와 $g$를 호환되도록 만드는 가장 자연스러운 조건은 두 벡터장의 pairing이 한 벡터장에 의해 미분될 때 다음의 라이프니츠 법칙을 만족하는 것이다.
 
 ::: 정의 1
-(Pseudo-)Riemannian manifold $(M, g)$ 위의 tangent bundle $TM$ 위의 connection $\nabla$가 $g$와 *compatible<sub>호환된다</sub>*은 것은 임의의 벡터장 $X, Y, Z \in \mathfrak{X}(M)$에 대해 다음의 식
+(Pseudo-)Riemannian manifold $(M, g)$ 위의 tangent bundle $TM$ 위의 connection $\nabla$가 $g$와 *compatible<sub>호환된다</sub>*하다는 것은 임의의 벡터장 $X, Y, Z \in \mathfrak{X}(M)$에 대해 다음의 식
 
 $$X\langle Y, Z\rangle = \langle \nabla_X Y, Z\rangle + \langle Y, \nabla_X Z\rangle$$
 
@@ -42,7 +42,7 @@ $$X\langle Y, Z\rangle = \langle \nabla_X Y, Z\rangle + \langle Y, \nabla_X Z\ra
 
 (1) ⟹ (3): [정의 8](#def8)에서 parallel 벡터장 $V$는 $\nabla_{\dot\gamma} V = 0$을 만족하는 것으로 정의될 것이다. 곡선 $\gamma$를 따라 $f(t) := \langle V(t), W(t)\rangle$이라 하면 $\dot{f}(t) = \dot\gamma\langle V, W\rangle = \langle \nabla_{\dot\gamma} V, W\rangle + \langle V, \nabla_{\dot\gamma} W\rangle = 0$.
 
-(3) ⟹ (1): 점 $p \in M$에서 임의의 벡터 $X_p, Y_p, Z_p$를 잡고, $Y, Z$를 $X_p$ 방향의 적당한 곡선을 따라 parallel transport해 벡터장으로 확장하면 그 곡선 위에서 $\langle Y, Z\rangle$이 상수이므로 양변의 미분으로부터 (1)의 식을 얻는다.
+(3) ⟹ (1): 위에서 본 것처럼 [정의 1](#def1)의 식의 양변의 차는 $(\nabla_X g)(Y, Z)$이고 이는 $X, Y, Z$에 대해 $C^\infty$-linear이므로, 각 점에서 주어진 벡터들을 편리한 벡터장으로 확장해 확인하면 충분하다. 점 $p \in M$에서 임의의 벡터 $X_p, Y_p, Z_p$를 잡고, $Y, Z$를 $X_p$ 방향의 적당한 곡선을 따라 parallel transport해 벡터장으로 확장하면 그 곡선 위에서 $\langle Y, Z\rangle$이 상수이므로 양변의 미분으로부터 (1)의 식을 얻는다.
 :::
 
 ## 비틀림
@@ -86,7 +86,7 @@ Z\langle X, Y\rangle &= \langle \nabla_Z X, Y\rangle + \langle X, \nabla_Z Y\ran
 
 $$2 \langle \nabla_X Y, Z\rangle = X\langle Y, Z\rangle + Y\langle Z, X\rangle - Z\langle X, Y\rangle - \langle X, [Y, Z]\rangle + \langle Y, [Z, X]\rangle + \langle Z, [X, Y]\rangle \tag{$\ast$}$$
 
-을 얻는다. 우변은 $X, Y$에만 의존하지 않고 $Z$에 대해서는 $C^\infty$-linear이므로 $\nabla_X Y$가 좌변에 의해 유일하게 결정된다 — 이는 $\nabla$의 유일성을 보장한다.
+을 얻는다. 우변은 $\nabla$에 의존하지 않고 $Z$에 대해 $C^\infty$-linear이므로, $g$의 non-degeneracy에 의해 $\nabla_X Y$가 우변에 의해 유일하게 결정된다. 따라서 그러한 $\nabla$는 많아야 하나이다.
 
 존재성을 위해서는 식 ($\ast$)의 우변을 $Z$에 대한 covector로 보고 metric duality로 벡터장 $\nabla_X Y$를 정의하면 된다. 이렇게 정의된 $\nabla$가 connection의 조건과 metric compatibility, torsion-freeness를 모두 만족한다는 것은 단순한 계산으로 확인된다.
 :::
@@ -148,9 +148,9 @@ $$P_\gamma^{t_0, t_1} : T_{\gamma(t_0)} M \rightarrow T_{\gamma(t_1)} M, \qquad 
 :::
 
 ::: 증명
-곡선 $\gamma$의 image 위에 local coordinate $(x^i)$를 잡고 $V = \sum_k V^k(t)\, \partial/\partial x^k$로 표현하면, $\nabla_{\dot\gamma} V = 0$ 조건은 
+곡선 $\gamma$의 image 위에 local coordinate $(x^i)$를 잡고 $V = \sum_k V^k(t) \partial/\partial x^k$로 표현하면, $\nabla_{\dot\gamma} V = 0$ 조건은 
 
-$$\dot V^k(t) + \sum_{i, j} \Gamma_{ij}^k(\gamma(t))\, \dot\gamma^i(t)\, V^j(t) = 0, \qquad k = 1, \ldots, n$$
+$$\dot V^k(t) + \sum_{i, j} \Gamma_{ij}^k(\gamma(t)) \dot\gamma^i(t) V^j(t) = 0, \qquad k = 1, \ldots, n$$
 
 이라는 $n$개의 일계 선형 ODE 시스템과 동치가 된다. 초기값 $V^k(t_0)$가 주어지면 ODE의 표준 이론에 의해 유일한 해가 존재한다.
 :::

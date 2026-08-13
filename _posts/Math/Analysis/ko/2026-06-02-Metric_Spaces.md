@@ -32,7 +32,7 @@ published: false
 - $\mathbb{R}$에 $d(x, y) = \lvert x - y\rvert$를 준 것. 우리가 다뤄 온 표준 거리이다.
 - $\mathbb{R}^n$에 유클리드 거리 $d(x, y) = \sqrt{\sum_{i=1}^n (x_i - y_i)^2}$를 준 것.
 - 임의의 집합 $X$에 $x \neq y$이면 $d(x, y) = 1$, $x = y$이면 $0$으로 준 *이산거리*.
-- 닫힌구간 위의 연속함수들의 공간 $C[a,b]$에 $d(f, g) = \sup_{x}\lvert f(x) - g(x)\rvert$를 준 것.
+- 닫힌구간 위의 연속함수들의 공간 $C[a,b]$에 $d(f, g) = \sup_{x \in [a,b]}\lvert f(x) - g(x)\rvert$를 준 것.
 :::
 
 ## 수렴과 완비성
@@ -40,7 +40,7 @@ published: false
 거리만 있으면 수렴과 Cauchy 조건을 [§수열의 수렴](/ko/math/analysis/convergence_of_sequences)·[§Cauchy 수열과 완비성](/ko/math/analysis/cauchy_sequences)에서와 똑같은 형태로 정의할 수 있다. $\lvert a_n - L\rvert$을 $d(a_n, L)$로 바꾸기만 하면 된다.
 
 ::: 정의 3
-거리공간 $(X, d)$의 점열 $(x_n)$이 $x \in X$로 *수렴*한다는 것은 $d(x_n, x) \rightarrow 0$인 것이다. $(x_n)$이 *Cauchy<sub>코시</sub>*라는 것은 임의의 $\varepsilon > 0$에 대해 $N$이 있어 $m, n \geq N$이면 $d(x_m, x_n) < \varepsilon$인 것이다. Center $x$, 반지름 $r > 0$의 *열린공<sub>open ball</sub>*은 $B(x, r) = \{y \in X \mid d(x, y) < r\}$이다.
+거리공간 $(X, d)$의 점열 $(x_n)$이 $x \in X$로 *수렴*한다는 것은 $d(x_n, x) \rightarrow 0$인 것이다. $(x_n)$이 *Cauchy<sub>코시</sub>*라는 것은 임의의 $\varepsilon > 0$에 대해 $N$이 있어 $m, n \geq N$이면 $d(x_m, x_n) < \varepsilon$인 것이다. 중심 $x$, 반지름 $r > 0$의 *열린공<sub>open ball</sub>*은 $B(x, r) = \{y \in X \mid d(x, y) < r\}$이다.
 :::
 
 실수에서와 마찬가지로 수렴하는 점열은 Cauchy이지만, 그 역은 공간에 따라 성립하지 않을 수 있다.
@@ -49,7 +49,7 @@ published: false
 거리공간 $(X, d)$에서 모든 Cauchy 점열이 (그 공간 안의 점으로) 수렴하면 $(X, d)$를 *완비<sub>complete</sub>*하다고 한다.
 :::
 
-실수의 완비성은 곧 표준 거리를 준 $\mathbb{R}$이 완비 거리공간이라는 진술이다. ([§Cauchy 수열과 완비성, ⁋정리 4](/ko/math/analysis/cauchy_sequences#thm4)) 같은 논증을 좌표별로 적용하면 유클리드 공간 $\mathbb{R}^n$도 완비임을 얻는다. 반면 유리수 $\mathbb{Q}$나 개구간 $(0,1)$은 완비가 아니다 — boundary로 다가가는 Cauchy 점열의 극한이 빠져 있기 때문이다. 완비성은 부동점 정리를 비롯한 존재 정리들의 무대가 되며, 이는 [§미분방정식의 존재성과 유일성](/ko/math/analysis/existence_uniqueness_ode)에서 결정적으로 쓰인다.
+실수의 완비성은 곧 표준 거리를 준 $\mathbb{R}$이 완비 거리공간이라는 진술이다. ([§Cauchy 수열과 완비성, ⁋정리 4](/ko/math/analysis/cauchy_sequences#thm4)) 같은 논증을 좌표별로 적용하면 유클리드 공간 $\mathbb{R}^n$도 완비임을 얻는다. 반면 유리수 $\mathbb{Q}$나 개구간 $(0,1)$은 완비가 아니다. 극한이 그 공간 밖에 놓이는 Cauchy 점열이 있기 때문이다. 완비성은 부동점 정리를 비롯한 존재 정리들의 무대가 되며, 이는 [§미분방정식의 존재성과 유일성](/ko/math/analysis/existence_uniqueness_ode)에서 결정적으로 쓰인다.
 
 ## 거리의 기본 성질
 
@@ -112,7 +112,7 @@ d(x_m, x_n) &\leq d(x_m, x) + d(x, x_n) \\
 
 ## 예시
 
-거리공간의 풍부함은 같은 바탕집합에 서로 다른 거리를 줄 수 있다는 데 있다. 유클리드 거리 외에도 $\mathbb{R}^n$에는 좌표의 절댓값 합 $d_1(x, y) = \sum_{i=1}^n \lvert x_i - y_i\rvert$이나 최대 절댓값 $d_\infty(x, y) = \max_{1 \leq i \leq n} \lvert x_i - y_i\rvert$로도 거리를 줄 수 있다. 각 좌표에서 실수의 삼각부등식 $\lvert x_i - z_i\rvert \leq \lvert x_i - y_i\rvert + \lvert y_i - z_i\rvert$이 성립하므로 양변을 더하면 $d_1$이, 최댓값을 취하면 $d_\infty$가 삼각부등식을 물려받는다. 이 세 거리는 같은 점에서 서로 다른 값을 줄 수 있지만, 임의의 $x, y$에서 부등식 사슬
+거리공간의 풍부함은 같은 바탕집합에 서로 다른 거리를 줄 수 있다는 데 있다. 유클리드 거리 $d_2$ 외에도 $\mathbb{R}^n$에는 좌표의 절댓값 합 $d_1(x, y) = \sum_{i=1}^n \lvert x_i - y_i\rvert$이나 최대 절댓값 $d_\infty(x, y) = \max_{1 \leq i \leq n} \lvert x_i - y_i\rvert$로도 거리를 줄 수 있다. 각 좌표에서 실수의 삼각부등식 $\lvert x_i - z_i\rvert \leq \lvert x_i - y_i\rvert + \lvert y_i - z_i\rvert$이 성립하므로 양변을 더하면 $d_1$이, 최댓값을 취하면 $d_\infty$가 삼각부등식을 물려받는다. 이 세 거리는 같은 점에서 서로 다른 값을 줄 수 있지만, 임의의 $x, y$에서 부등식 사슬
 
 $$d_\infty(x, y) \leq d_2(x, y) \leq d_1(x, y) \leq n  d_\infty(x, y)$$
 
@@ -125,7 +125,7 @@ $$d_\infty(x, y) \leq d_2(x, y) \leq d_1(x, y) \leq n  d_\infty(x, y)$$
 
 $$x_n \rightarrow x \iff \text{어떤 } N \text{부터 } x_n = x \text{로 일정}$$
 
-이다. 같은 이유로 Cauchy 점열은 결국 한 점으로 일정해지므로 수렴한다 — 이산거리 공간은 언제나 완비이다.
+이다. 같은 이유로 Cauchy 점열은 결국 한 점으로 일정해지므로 수렴한다. 즉 이산거리 공간은 언제나 완비이다.
 :::
 
 완비성이 깨지는 모습은 같은 점열을 더 큰 공간과 더 작은 공간에서 비교할 때 가장 선명하다.
@@ -135,10 +135,10 @@ $$x_n \rightarrow x \iff \text{어떤 } N \text{부터 } x_n = x \text{로 일�
 
 $$d(x_m, x_n) = \left\lvert \frac1m - \frac1n \right\rvert \leq \frac1m + \frac1n \rightarrow 0$$
 
-이라 Cauchy이다. 그러나 $X$ 안에는 이 점열의 극한이 없다. 만일 $x_n \rightarrow L \in (0,1)$이라면 $\mathbb{R}$에서의 극한 유일성 ([명제 6](#prop6)) 에 의해 $L = 0$이어야 하는데 $0 \notin (0,1)$이기 때문이다. 따라서 $(0,1)$은 완비가 아니다. 반면 닫힌구간 $[0,1]$에서는 같은 점열이 $0$으로 수렴하며, 실제로 $[0,1]$은 완비이다 — 닫힌구간은 그 극한들을 모두 품고 있기 때문이다.
+이라 Cauchy이다. 그러나 $X$ 안에는 이 점열의 극한이 없다. 만일 $x_n \rightarrow L \in (0,1)$이라면 $\mathbb{R}$에서 [명제 6](#prop6)의 극한 유일성에 의해 $L = 0$이어야 하는데 $0 \notin (0,1)$이기 때문이다. 따라서 $(0,1)$은 완비가 아니다. 반면 닫힌구간 $[0,1]$에서는 같은 점열이 $0$으로 수렴하며, 실제로 $[0,1]$은 완비이다. 닫힌구간은 그 극한들을 모두 품고 있기 때문이다.
 :::
 
-연속함수 공간의 sup 거리 ([예시 2](#ex2)) 는 무한차원 거리공간의 대표적 예이며, 그 완비성이 해석학의 여러 존재 정리를 떠받친다. $C[a,b]$에 sup 거리 $d(f, g) = \sup_{x \in [a,b]} \lvert f(x) - g(x)\rvert$를 주면, 이 거리에서 $f_n \rightarrow f$라는 것은 $\sup_{x \in [a,b]} \lvert f_n(x) - f(x)\rvert \rightarrow 0$, 곧 $(f_n)$이 $f$로 *균등수렴*한다는 것과 정확히 같다. 균등수렴하는 연속함수열의 극한은 다시 연속이므로 $C[a,b]$의 모든 sup-Cauchy 함수열은 어떤 연속함수로 수렴하며, 따라서 $(C[a,b], d)$는 완비 거리공간이다.
+[예시 2](#ex2)의 연속함수 공간 sup 거리는 무한차원 거리공간의 대표적 예이며, 그 완비성이 해석학의 여러 존재 정리를 떠받친다. $C[a,b]$에 sup 거리 $d(f, g) = \sup_{x \in [a,b]} \lvert f(x) - g(x)\rvert$를 주면, 이 거리에서 $f_n \rightarrow f$라는 것은 $\sup_{x \in [a,b]} \lvert f_n(x) - f(x)\rvert \rightarrow 0$, 곧 $(f_n)$이 $f$로 *균등수렴*한다는 것과 정확히 같다. $(f_n)$이 sup 거리에서 Cauchy이면 각 점 $x$에서 $(f_n(x))$가 실수의 Cauchy 수열이라 점별 극한 $f(x)$가 존재하고, sup-Cauchy 조건에서 $f_n \rightarrow f$의 수렴이 균등하다. 균등수렴하는 연속함수열의 극한은 다시 연속이므로 $C[a,b]$의 모든 sup-Cauchy 함수열은 어떤 연속함수로 수렴하며, 따라서 $(C[a,b], d)$는 완비 거리공간이다.
 
 ## 응용: 닫힌 부분공간과 고정점
 
@@ -161,7 +161,7 @@ Y \text{가 닫힘},\ y_n \in Y &\implies x \in Y
 
 이 명제는 닫힌구간 $[a,b]$가 완비라는 사실을 즉시 설명한다. $[a,b]$는 완비공간 $\mathbb{R}$의 닫힌 부분집합이므로 [명제 9](#prop9)에 의해 완비이고, [예시 8](#ex8)에서 본 $(0,1)$과의 차이가 바로 닫힘 여부에 있었던 것이다. 같은 논리로 $\mathbb{R}^n$의 닫힌 공이나 구면처럼 닫힌 집합들은 모두 완비 거리공간이 된다.
 
-완비성이 마련해 주는 가장 중요한 도구는 *contraction<sub>축약사상</sub>*의 fixed point이다. 거리를 일정 비율 $\lambda < 1$로 줄이는 사상 $T$, 곧 $d(Tx, Ty) \leq \lambda  d(x, y)$를 만족하는 사상을 한 점에서 반복하면, 완비성 덕분에 그 반복열이 Cauchy가 되어 유일한 fixed point로 수렴한다. 가령 $\mathbb{R}$ 위의 $T(x) = x/2 + 1$은 비율 $\lambda = 1/2$의 contraction이고, 그 반복은 유일한 fixed point $2 = T(2)$로 수렴한다. 이 현상을 일반화한 것이 완비 거리공간 위의 [§미분방정식의 존재성과 유일성, ⁋정리 2](/ko/math/analysis/existence_uniqueness_ode#thm2)이며, $\mathbb{R}$의 완비성이 수렴을 보장하는 핵심이었듯 완비성이 그 무대가 된다 ([§미분방정식의 존재성과 유일성, ⁋정리 2](/ko/math/analysis/existence_uniqueness_ode#thm2)).
+완비성이 마련해 주는 가장 중요한 도구는 *contraction<sub>축약사상</sub>*의 fixed point이다. 거리를 일정 비율 $\lambda < 1$로 줄이는 사상 $T$, 곧 $d(Tx, Ty) \leq \lambda  d(x, y)$를 만족하는 사상을 한 점에서 반복하면, 완비성 덕분에 그 반복열이 Cauchy가 되어 유일한 fixed point로 수렴한다. 가령 $\mathbb{R}$ 위의 $T(x) = x/2 + 1$은 비율 $\lambda = 1/2$의 contraction이고, 그 반복은 유일한 fixed point $2 = T(2)$로 수렴한다. 이 현상을 일반화한 것이 완비 거리공간 위의 [§미분방정식의 존재성과 유일성, ⁋정리 2](/ko/math/analysis/existence_uniqueness_ode#thm2)이며, $\mathbb{R}$의 완비성이 수렴을 보장하는 핵심이었듯 완비성이 그 무대가 된다.
 
 ## 위상으로의 연결
 

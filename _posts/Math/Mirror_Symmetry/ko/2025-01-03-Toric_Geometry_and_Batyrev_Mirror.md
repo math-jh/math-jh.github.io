@@ -27,10 +27,10 @@ Reflexive polytope $\Delta \subseteq M_{\mathbb{R}}$에 대하여, $\Delta$의 l
 
 $$f_\Delta(\x) = \sum_{i=0}^{s} c_i \x^{m_i} \in \mathbb{C}[M]$$
 
-여기서 $c_i \in \mathbb{C}$는 일반적인 계수이고, $\x^{m_i}$는 character $\chi^{m_i} : T_N \rightarrow \mathbb{C}^\ast$에 해당하는 monomial이다. $f_\Delta = 0$으로 정의되는 $T_N$의 부분다양체를 *ambient* $X_\Delta$ 안으로 취한 closure를 $Y_\Delta$라 하면, 일반적인 $c_i$에 대해 $Y_\Delta$는 ($n-1$이 충분히 작거나 crepant resolution 후) *Calabi-Yau variety<sub>칼라비-야우 다양체</sub>*가 된다.
+여기서 $c_i \in \mathbb{C}$는 일반적인 계수이고, $\x^{m_i}$는 character $\chi^{m_i} : T_N \rightarrow \mathbb{C}^\ast$에 해당하는 monomial이다. $f_\Delta = 0$으로 정의되는 $T_N$의 부분다양체를 ambient $X_\Delta$ 안으로 취한 closure를 $Y_\Delta$라 하면, 일반적인 $c_i$에 대해 $Y_\Delta$는 (필요시 crepant resolution을 거쳐) *Calabi-Yau variety<sub>칼라비-야우 다양체</sub>*가 된다 ([Bat]).
 :::
 
-Batyrev의 핵심 관찰은 다음과 같다. $\Delta$가 reflexive이면 $\Delta^\circ$ 또한 reflexive이므로, 동일한 construction을 $\Delta^\circ$에 대해 반복하여 mirror Calabi-Yau $Y$를 얻는다. 즉 $\Delta^\circ$의 lattice points로부터 toric variety $X_\Delta$ 위의 anticanonical section을 정의하고, 그 zero locus를 취한다.
+Batyrev의 핵심 관찰은 다음과 같다. $\Delta$가 reflexive이면 $\Delta^\circ$ 또한 reflexive이므로, 동일한 construction을 $\Delta^\circ$에 대해 반복하여 mirror Calabi-Yau $Y_{\Delta^\circ}$를 얻는다. 즉 $\Delta^\circ$의 lattice points로부터 toric variety $X_{\Delta^\circ}$ 위의 anticanonical section을 정의하고, 그 zero locus를 취한다.
 
 ::: 명제 2 (Batyrev mirror symmetry)
 $\dim X_\Delta = n \ge 4$이고 $\Delta$가 reflexive polytope라 하자. $\Delta$와 그 dual $\Delta^\circ$로부터 (필요시 crepant resolution을 거쳐) 얻어지는 Calabi-Yau pair $(Y_\Delta, Y_{\Delta^\circ})$의 *stringy* Hodge number는 다음 mirror symmetry를 만족한다:
@@ -68,11 +68,11 @@ $$\sigma_1 = \operatorname{Cone}(v_2, v_3), \qquad \sigma_2 = \operatorname{Cone
 
 $\mathbb{P}^2$의 fan $\Sigma$는 어떤 lattice polytope의 normal fan인가? $N_{\mathbb{R}}$에서 $\Delta^\circ = \operatorname{Conv}\{(1,0), (0,1), (-1,-1)\}$라 하자. 이 polytope의 각 face에 대응하는 inner normal 벡터를 계산하면 다음과 같다.
 
-Facet $\Theta_1 = \operatorname{Conv}\{(0,1), (-1,-1)\}$를 생각하자. 이 edge를 포함하는 직선은 $y = 2x + 1$, 즉 $2x - y = -1$이다. 임의의 $(x,y) \in \Delta^\circ$에 대해 $2x - y \ge -1$를 확인할 수 있는데, $(1,0)$에서 $2 > -1$이고 $(0,1), (-1,-1)$에서는 등호가 성립한다. 따라서 $\langle (x,y), (2,-1) \rangle = 2x - y = -1$이 되며, 정수 벡터 $(2,-1) \in N$에 의해 $\Theta_1$가 정의된다.
+Facet $\Theta_1 = \operatorname{Conv}\{(0,1), (-1,-1)\}$를 생각하자. 이 edge를 포함하는 직선은 $y = 2x + 1$, 즉 $2x - y = -1$이다. 임의의 $(x,y) \in \Delta^\circ$에 대해 $2x - y \ge -1$를 확인할 수 있는데, $(1,0)$에서 $2 > -1$이고 $(0,1), (-1,-1)$에서는 등호가 성립한다. 따라서 $\langle (2,-1), (x,y) \rangle = 2x - y = -1$이 되며, 정수 벡터 $(2,-1) \in M$에 의해 $\Theta_1$가 정의된다.
 
-Facet $\Theta_2 = \operatorname{Conv}\{(1,0), (-1,-1)\}$는 직선 $x - 2y = 1$ 위에 있다. 정수 벡터 $(-1, 2) \in N$에 대해 $\langle (x,y), (-1, 2) \rangle = -x + 2y = -1$이 되며, $\Delta^\circ$의 interior인 원점에서는 $0 > -1$이므로 이것이 inner normal direction임을 확인할 수 있다. 남은 점 $(0,1)$에 대해서는 $\langle (0,1), (-1,2) \rangle = 2 > -1$이므로 $(-1,2)$는 올바른 inner normal 벡터이다.
+Facet $\Theta_2 = \operatorname{Conv}\{(1,0), (-1,-1)\}$는 직선 $x - 2y = 1$ 위에 있다. 정수 벡터 $(-1, 2) \in M$에 대해 $\langle (-1, 2), (x,y) \rangle = -x + 2y = -1$이 되며, $\Delta^\circ$의 interior인 원점에서는 $0 > -1$이므로 이것이 inner normal direction임을 확인할 수 있다. 남은 점 $(0,1)$에 대해서는 $\langle (-1,2), (0,1) \rangle = 2 > -1$이므로 $(-1,2)$는 올바른 inner normal 벡터이다.
 
-Facet $\Theta_3 = \operatorname{Conv}\{(1,0), (0,1)\}$는 직선 $x + y = 1$ 위에 있다. 정수 벡터 $(-1,-1) \in N$에 대해 $\langle (x,y), (-1,-1) \rangle = -x-y = -1$이 되어 역시 reflexive 조건을 만족한다.
+Facet $\Theta_3 = \operatorname{Conv}\{(1,0), (0,1)\}$는 직선 $x + y = 1$ 위에 있다. 정수 벡터 $(-1,-1) \in M$에 대해 $\langle (-1,-1), (x,y) \rangle = -x-y = -1$이 되어 역시 reflexive 조건을 만족한다.
 
 원점 $(0,0)$은 $\Delta^\circ$의 interior에 있으므로, 위의 계산에 의해 $\Delta^\circ$는 reflexive polytope임을 확인할 수 있다. 이제 dual polytope $\Delta$를 계산한다.
 
@@ -85,7 +85,7 @@ $$\Delta = \{u \in M_{\mathbb{R}} \mid \langle u, v \rangle \ge -1 \text{ for al
 
 따라서 $\Delta$는 다음 부등식 시스템으로 정의된다.
 
-$$\Delta = \{(u_1, u_2) \in M_{\mathbb{R}} \mid u_1 \ge -1, \; u_2 \ge -1, \; u_1 + u_2 \le 1\}$$
+$$\Delta = \{(u_1, u_2) \in M_{\mathbb{R}} \mid u_1 \ge -1, \quad u_2 \ge -1, \quad u_1 + u_2 \le 1\}$$
 
 $\Delta$의 꼭짓점은 이들 직선의 교점들이므로 $(-1,-1), (2,-1), (-1,2)$이다. $\Delta$ 위의 lattice points를 세면:
 
@@ -98,13 +98,13 @@ $\Delta$의 꼭짓점은 이들 직선의 교점들이므로 $(-1,-1), (2,-1), (
 
 $\Delta$의 facets는 $u_1 = -1$, $u_2 = -1$, $u_1 + u_2 = 1$이며, 이들의 primitive inner normal 벡터들은 각각 $(1,0), (0,1), (-1,-1)$이다. 따라서 $\Delta$의 normal fan은 ray generator들이 $(1,0), (0,1), (-1,-1)$인 fan으로, 이는 $\mathbb{P}^2$의 standard fan이다. 즉 ambient $X_\Delta \cong \mathbb{P}^2$. 반면 $\Delta^\circ$의 normal fan을 계산하면 ray들이 $(2,-1), (-1,2), (-1,-1)$이 되어 ($\mathbb{P}^2$의 fan과 lattice-isomorphic이 아니며, 인접 두 ray의 determinant가 $\pm 3$이다), $X_{\Delta^\circ}$는 세 점에 $\mathbb{Z}/3$ singular point를 갖는 singular Gorenstein Fano surface가 된다. ([\[토릭 기하학\] §파노 다양체, ⁋예시 6](/ko/math/toric_geometry/reflexive_polytope_fano#ex6)에서 같은 reflexive pair를 다룬다.)
 
-$n=2$인 경우 anticanonical hypersurface $Y_\Delta \subseteq X_\Delta = \mathbb{P}^2$는 일반적으로 차원 $1$의 smooth genus-$1$ curve (elliptic curve)가 된다 (anticanonical class $-K_{\mathbb{P}^2} = \mathcal{O}(3)$의 generic section은 cubic curve이며 generic이면 smooth). Mirror 측 $Y_{\Delta^\circ}$도 적절한 crepant resolution 후 genus-$1$ curve가 된다. 1차원 Calabi-Yau에서 mirror symmetry는 $g(Y_\Delta) = g(Y_{\Delta^\circ}) = 1$로 trivial하게 표현되며, 본격적인 Batyrev mirror symmetry는 $n \ge 4$인 경우 (K3 surface, CY 3-fold 등)에 들어가서야 비자명한 의미를 가진다. 위의 명제 2 공식은 이 영역에서 적용되며, $n=2$에서는 substituting 후 자명한 항등식으로 환원된다.
+$n=2$인 경우 anticanonical hypersurface $Y_\Delta \subseteq X_\Delta = \mathbb{P}^2$는 일반적으로 차원 $1$의 smooth genus-$1$ curve (elliptic curve)가 된다 (anticanonical class $-K_{\mathbb{P}^2} = \mathcal{O}(3)$의 generic section은 cubic curve이며 generic이면 smooth). Mirror 측 $Y_{\Delta^\circ}$도 적절한 crepant resolution 후 genus-$1$ curve가 된다. 1차원 Calabi-Yau에서 mirror symmetry는 $g(Y_\Delta) = g(Y_{\Delta^\circ}) = 1$로 trivial하게 표현되며, 본격적인 Batyrev mirror symmetry는 $n \ge 4$인 경우 (CY 3-fold 이상)에 들어가서야 nontrivial한 의미를 가진다. 명제 2의 lattice point 공식 또한 $n \ge 4$에서만 실제 Hodge number를 계산한다. 실제로 $n=2$에 그대로 대입하면 $\Delta^\circ$의 edge에는 interior lattice point가 없고 $\Delta$의 각 edge에는 두 개씩 있으므로 $h^{1,1}$ 쪽 식은 $4 - 1 - 2 - 0 + 3 \cdot 1 \cdot 2 = 7$을 주는데, 이는 elliptic curve의 $h^{1,1} = 1$과 어긋난다. 두 식이 $\Delta \leftrightarrow \Delta^\circ$ 아래에서 서로 swap된다는 형식적 항등식만은 차원과 무관하게 성립한다.
 
 ## Grassmannian mirror symmetry로의 연결
 
-Toric variety에 대한 Batyrev mirror construction은 조합론적 데이터의 duality를 통해 mirror pair를 명시적으로 구성하는 아름다운 예시이다. 그러나 toric variety는 homogeneous space의 특별한 경우에 불과하며, 더 일반적인 공간으로의 extension은 비자명한 문제이다. 특히 Grassmannian $\Gr(k, n)$은 toric variety가 아니므로 Batyrev의 construction을 직접 적용할 수 없다.
+Toric variety에 대한 Batyrev mirror construction은 조합론적 데이터의 duality를 통해 mirror pair를 명시적으로 구성하는 아름다운 예시이다. 그러나 이 construction은 ambient space가 toric variety라는 사실에 전적으로 의존하며, 더 일반적인 공간으로의 extension은 nontrivial한 문제이다. 특히 Grassmannian $\Gr(k, n)$은 toric variety가 아니므로 Batyrev의 construction을 직접 적용할 수 없다.
 
-[§거울대칭 개요](/ko/math/mirror_symmetry/overview)에서 살펴 보았듯이, toric variety의 mirror는 Landau-Ginzburg model $(\bar{X}, W)$의 형태를 띠며, 이는 charge matrix를 통해 구체적으로 기술된다. Grassmannian의 경우 Marsh와 Rietsch는 Plücker coordinate를 이용하여 이와 유사한 Landau-Ginzburg model을 구성하였고 ([§Marsh–Rietsch superpotential](/ko/math/mirror_symmetry/marsh_rietsch_superpotential)), 그 Jacobi ring이 quantum cohomology ring과 isomorphic함을 보였다 ([§Marsh-Rietsch Mirror Theorem](/ko/math/mirror_symmetry/mr_mirror_theorem)). 이 construction은 toric case에서의 Batyrev mirror가 갖는 조합론적 투명성을 완전히 잃는 대신, Lie theory와 cluster algebra의 풍부한 구조를 대신 활용한다. Grassmannian mirror symmetry는 본 시리즈의 연구용 stream에 모아 두었으며, Bruhat decomposition, Richardson variety, Peterson variety 등의 Lie-theoretic 도구들이 본 글의 toric/Batyrev 흐름과 어떻게 차별화되는지 그 stream에서 다룬다. 그 stream은 거울 대칭의 우변에 해당하는 [§Grassmannian의 양자 코호몰로지](/ko/math/mirror_symmetry/quantum_cohomology_of_grassmannians)에서 출발하여, 거울 대칭이 Grassmannian을 넘어 그 안의 singular Schubert variety로까지 확장되는 [§Schubert variety의 거울과 head-over-tails superpotential](/ko/math/mirror_symmetry/schubert_variety_mirror)에서 정점에 이른다.
+[§거울대칭 개요](/ko/math/mirror_symmetry/overview)에서 살펴 보았듯이, toric variety의 mirror는 Landau-Ginzburg model $(\check{X}, W)$의 형태를 띠며, 이는 charge matrix를 통해 구체적으로 기술된다. Grassmannian의 경우 Marsh와 Rietsch는 Plücker coordinate를 이용하여 이와 유사한 Landau-Ginzburg model을 구성하였고 ([§Marsh–Rietsch superpotential](/ko/math/mirror_symmetry/marsh_rietsch_superpotential)), 그 Jacobi ring이 quantum cohomology ring과 isomorphic함을 보였다 ([§Marsh-Rietsch Mirror Theorem](/ko/math/mirror_symmetry/mr_mirror_theorem)). 이 construction은 toric case에서의 Batyrev mirror가 갖는 조합론적 투명성을 완전히 잃는 대신, Lie theory와 cluster algebra의 풍부한 구조를 대신 활용한다. Grassmannian mirror symmetry는 본 시리즈의 연구용 stream에 모아 두었으며, Bruhat decomposition, Richardson variety, Peterson variety 등의 Lie-theoretic 도구들이 본 글의 toric/Batyrev 흐름과 어떻게 차별화되는지 그 stream에서 다룬다. 그 stream은 mirror symmetry의 우변에 해당하는 [§Grassmannian의 양자 코호몰로지](/ko/math/mirror_symmetry/quantum_cohomology_of_grassmannians)에서 출발하여, mirror symmetry가 Grassmannian을 넘어 그 안의 singular Schubert variety로까지 확장되는 [§Schubert variety의 거울과 head-over-tails superpotential](/ko/math/mirror_symmetry/schubert_variety_mirror)에서 정점에 이른다.
 
 ---
 

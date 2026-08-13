@@ -70,11 +70,11 @@ $$\left\lVert \frac{A^k}{k!}\right\rVert \leq \frac{\lVert A\rVert^k}{k!}$$
 
 이고, 우변의 합 $\sum_k \lVert A\rVert^k/k! = e^{\lVert A\rVert}$이 수렴하는 스칼라 급수이다. 따라서 [§균등수렴, ⁋정리 4](/ko/math/analysis/uniform_convergence#thm4)에 의해 행렬급수가 (성분별로, 그리고 norm에서) 절대수렴하며, $\lVert e^A\rVert \leq e^{\lVert A\rVert}$이라는 유용한 부등식도 함께 얻는다.
 
-행렬지수는 스칼라 지수의 여러 성질을 그대로 물려받지만, 한 가지 중요한 예외가 있다. $A$와 $B$가 *교환할 때*, 즉 $AB = BA$일 때에만
+행렬지수는 스칼라 지수의 여러 성질을 그대로 물려받지만, 한 가지 중요한 예외가 있다. $A$와 $B$가 *교환할 때*, 즉 $AB = BA$일 때
 
 $$e^{A + B} = e^A e^B$$
 
-가 성립한다. 일반적으로는 $AB \neq BA$이면 이 등식이 깨진다. 이 사실에서 $e^A$가 항상 가역이며 그 역이 $e^{-A}$임이 따라 나오는데, $A$와 $-A$는 언제나 교환하므로 $e^A e^{-A} = e^{A - A} = e^0 = I$이기 때문이다. 또 한 매개변수족 $t \mapsto e^{tA}$는 $e^{(s+t)A} = e^{sA}e^{tA}$를 만족해 가역행렬들의 multiplicative group 안에서 일매개변수subgroup을 이룬다.
+가 성립한다. 일반적으로는 $AB \neq BA$이면 이 등식이 깨진다. 이 사실에서 $e^A$가 항상 가역이며 그 역이 $e^{-A}$임이 따라 나오는데, $A$와 $-A$는 언제나 교환하므로 $e^A e^{-A} = e^{A - A} = e^0 = I$이기 때문이다. 또 한 매개변수족 $t \mapsto e^{tA}$는 $e^{(s+t)A} = e^{sA}e^{tA}$를 만족해 가역행렬들의 multiplicative group 안에서 일매개변수 subgroup을 이룬다.
 
 행렬지수를 멱급수로 항별 미분하면
 
@@ -150,7 +150,7 @@ e^{tA} &= \sum_{k=0}^\infty \frac{t^k A^k}{k!} = \left(\sum_{m=0}^\infty \frac{(
 &= \begin{pmatrix} \cos\omega t & -\sin\omega t \\ \sin\omega t & \cos\omega t \end{pmatrix}
 \end{aligned}$$
 
-가 되어, $e^{tA}$가 각속도 $\omega$의 회전행렬임을 본다. 해 $y(t) = e^{tA}y_0$은 원점을 center로 일정한 반지름 $\lvert y_0\rvert$로 도는 원운동이다. 이는 단진동 방정식 $u'' + \omega^2 u = 0$을 일차계 $y = (u, u')$로 환원한 형태이며, 고윳값의 허수부 $\omega$가 진동의 각진동수임을 보여 준다.
+가 되어, $e^{tA}$가 각속도 $\omega$의 회전행렬임을 본다. 해 $y(t) = e^{tA}y_0$은 원점을 center로 일정한 반지름 $\lvert y_0\rvert$로 도는 원운동이다. 이는 단진동 방정식 $u'' + \omega^2 u = 0$을 일차계 $y = (u'/\omega, u)$로 환원한 형태이며, 고윳값의 허수부 $\omega$가 진동의 각진동수임을 보여 준다.
 :::
 
 대각화되지 않는 경우, 즉 고유벡터가 기저를 이루지 못하는 *결손<sub>defective</sub>* 행렬에서는 Jordan canonical form을 써야 하고, 그 결과 $t^j e^{\lambda t}$ 꼴의 다항식 인자가 등장한다.
@@ -171,7 +171,7 @@ e^{tA} &= e^{t\lambda I} e^{tN} = e^{\lambda t}I\cdot\bigl(I + tN\bigr) \\
 이제 $b(t) \neq 0$인 비제차계로 돌아간다. 제차계의 행렬지수를 알면 비제차계의 해도 적분으로 닫힌 형태로 적을 수 있다.
 
 ::: 명제 8 (매개변수변환 공식)
-상수계수 비제차계 $y' = Ay + b(t)$, $y(t_0) = y_0$의 유일한 해는
+$b(t)$가 구간 $I$에서 연속이라 하자. 상수계수 비제차계 $y' = Ay + b(t)$, $y(t_0) = y_0$ ($t_0 \in I$) 의 $I$ 위에서의 유일한 해는
 
 $$y(t) = e^{(t - t_0)A} y_0 + \int_{t_0}^{t} e^{(t - s)A} b(s) \dd{s}$$
 
@@ -179,7 +179,7 @@ $$y(t) = e^{(t - t_0)A} y_0 + \int_{t_0}^{t} e^{(t - s)A} b(s) \dd{s}$$
 :::
 
 ::: 증명
-핵심 착상은 *적분인자* $e^{-tA}$를 곱하는 것이다. $y' - Ay = b(t)$의 양변에 $e^{-tA}$를 왼쪽에서 곱하면, 좌변이 완전미분이 됨을 확인할 수 있다:
+핵심 착상은 *적분인자* $e^{-tA}$를 곱하는 것이다. $y' - Ay = b(t)$의 양변에 $e^{-tA}$를 왼쪽에서 곱하면, 좌변이 완전미분이 되어 다음이 성립한다.
 
 $$\begin{aligned}
 \frac{d}{\dd{t}}\bigl(e^{-tA}y\bigr) &= -A e^{-tA}y + e^{-tA}y' = e^{-tA}\bigl(y' - Ay\bigr) = e^{-tA}b(t).
@@ -208,7 +208,7 @@ $$\lvert t^j e^{\lambda t}\rvert = t^j e^{(\Real\lambda) t}$$
 인데, 가정에서 $\Real\lambda < 0$이므로 지수의 감쇠가 다항식 $t^j$의 증가를 압도하여 $t \rightarrow \infty$에서 $0$으로 간다. 따라서 $e^{tA} \rightarrow 0$이고, 임의의 $y_0$에 대해 $y(t) = e^{tA}y_0 \rightarrow 0$이다.
 :::
 
-Symmetric으로, 어떤 고윳값이 $\Real\lambda > 0$이면 그 모드를 따라 해가 지수적으로 발산하고, 고윳값이 모두 순허수이면 [예시 6](#ex6)처럼 해가 진동하며 bounded로 머문다. 이렇게 평형 $y = 0$의 안정·불안정·중립 거동이 고윳값의 실수부 부호로 한꺼번에 읽힌다.
+Symmetric으로, 어떤 고윳값이 $\Real\lambda > 0$이면 그 모드를 따라 해가 지수적으로 발산하고, 고윳값이 모두 순허수이고 $A$가 대각화되면 [예시 6](#ex6)처럼 해가 진동하며 bounded로 머문다 (대각화되지 않으면 순허수 고윳값에서도 $t^j e^{\lambda t}$ 꼴 항이 남아 해가 발산할 수 있다). 이렇게 평형 $y = 0$의 안정·불안정·중립 거동이 고윳값의 실수부 부호로 한꺼번에 읽힌다.
 
 이렇게 선형 미분방정식의 풀이는 행렬의 고윳값·고유벡터, 곧 선형사상의 spectrum 구조로 완전히 귀착된다 ([\[다중선형대수학\] §행렬과 선형사상](/ko/math/multilinear_algebra/matrices_and_linear_maps)). 미분방정식의 해의 정성적 거동(평형의 stability, 진동, 발산)이 고윳값의 실수부와 허수부로 읽힌다는 사실은 동역학계 이론의 출발점이며, 해석학·선형대수·기하가 만나는 지점이다.
 

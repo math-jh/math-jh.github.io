@@ -32,7 +32,7 @@ published: false
 나아가 $A$가 *finite type<sub>유한형</sub>*이라는 것은, 양의 대각행렬 $D=\operatorname{diag}(d_1,\ldots,d_\ell)$가 존재하여 $DA$가 symmetric이고 positive definite가 되도록 할 수 있는 것이다.
 :::
 
-세 조건은 root system의 Cartan matrix가 만족하던 성질을 그대로 옮긴 것이다. 실제로 $a_{ij}=\langle\alpha_i,\alpha_j\rangle=2(\alpha_i,\alpha_j)/(\alpha_j,\alpha_j)$이므로 $a_{ii}=2$이고, 서로 다른 simple root는 둔각을 이루어 $(\alpha_i,\alpha_j)\leq 0$이므로 $a_{ij}\leq 0$이며, $a_{ij}=0$은 $(\alpha_i,\alpha_j)=0$과 동치이므로 $a_{ji}=0$과 동치이다. Finite type 조건의 $D$는 $d_i=(\alpha_i,\alpha_i)/2$로 택하면 $(DA)_{ij}=(\alpha_i,\alpha_j)$가 되어 inner product의 Gram 행렬, 곧 symmetric positive definite가 된다. 따라서 유한차원 semisimple Lie algebra에서 얻은 Cartan matrix는 항상 finite type이다. 이 글에서 우리가 관심을 두는 것은 정확히 이 finite type의 경우이며, generalized Cartan matrix를 도입한 것은 $\mathfrak{g}(A)$의 정의가 finite type 여부와 무관하게 똑같이 작동함을 분명히 하기 위함이다.
+세 조건은 root system의 Cartan matrix가 만족하던 성질을 그대로 옮긴 것이다. 실제로 $a_{ij}=\langle\alpha_i,\alpha_j\rangle=2(\alpha_i,\alpha_j)/(\alpha_j,\alpha_j)$이므로 $a_{ii}=2$이고, 서로 다른 simple root는 둔각을 이루어 $(\alpha_i,\alpha_j)\leq 0$이므로 $a_{ij}\leq 0$이며, $a_{ij}=0$은 $(\alpha_i,\alpha_j)=0$과 동치이므로 $a_{ji}=0$과 동치이다. Finite type 조건의 $D$는 $d_i=2/(\alpha_i,\alpha_i)$로 택하면 $(DA)_{ij}=4(\alpha_i,\alpha_j)/\left((\alpha_i,\alpha_i)(\alpha_j,\alpha_j)\right)$가 되어, 일차독립인 vector들 $2\alpha_i/(\alpha_i,\alpha_i)$의 Gram 행렬, 곧 symmetric positive definite가 된다. 따라서 유한차원 semisimple Lie algebra에서 얻은 Cartan matrix는 항상 finite type이다. 이 글에서 우리가 관심을 두는 것은 정확히 이 finite type의 경우이며, generalized Cartan matrix를 도입한 것은 $\mathfrak{g}(A)$의 정의가 finite type 여부와 무관하게 똑같이 작동함을 분명히 하기 위함이다.
 
 ::: 참고 2
 Finite type이 아닌 generalized Cartan matrix에 대해서도 아래 [정의 3](#def3)의 presentation은 그대로 의미를 가지며, 이때 얻어지는 $\mathfrak{g}(A)$는 일반적으로 무한차원인 Kac–Moody algebra이다. 우리는 finite type만을 다루므로 그 경우의 $\mathfrak{g}(A)$가 유한차원 semisimple임을 [정리 7](#thm7)에서 서술하는 데 집중한다.
@@ -40,14 +40,14 @@ Finite type이 아닌 generalized Cartan matrix에 대해서도 아래 [정의 3
 
 ## Lie algebra $\mathfrak{g}(A)$의 정의
 
-이제 generator와 relation으로 Lie algebra를 구성한다. 자유 대상의 quotient라는 점에서 보편 포락 대수의 구성과 ([§보편 포락 대수, ⁋정의 2](/ko/math/lie_theory/universal_enveloping_algebra#def2)) 형식이 같으나, 여기에서는 결합대수가 아니라 Lie algebra 단계에서 quotient를 취한다. 집합 $X=\{e_i,f_i,h_i\mid 1\leq i\leq\ell\}$ 위의 *free Lie algebra<sub>자유 리 대수</sub>* $\mathfrak{F}(X)$를, $X$로부터 임의의 Lie algebra로 가는 모든 집합 사상이 유일한 Lie algebra 준동형으로 확장되는 보편 대상으로 둔다. 구체적으로는 $X$ 위의 free vector space의 tensor algebra $\T(X)$ 안에서 $X$로 생성되는 가장 작은 Lie subalgebra가 $\mathfrak{F}(X)$이며, 그 보편 성질은 tensor algebra의 보편 성질을 ([§보편 포락 대수, ⁋명제 4](/ko/math/lie_theory/universal_enveloping_algebra#prop4)) commutator Lie 구조로 제한한 것으로 얻어진다.
+이제 generator와 relation으로 Lie algebra를 구성한다. 자유 대상의 quotient라는 점에서 보편 포락 대수의 구성과 ([§보편 포락 대수, ⁋정의 2](/ko/math/lie_theory/universal_enveloping_algebra#def2)) 형식이 같으나, 여기에서는 결합대수가 아니라 Lie algebra 단계에서 quotient를 취한다. 집합 $X=\{e_i,f_i,h_i\mid 1\leq i\leq\ell\}$ 위의 *free Lie algebra<sub>자유 리 대수</sub>* $\mathfrak{F}(X)$를, $X$로부터 임의의 Lie algebra로 가는 모든 집합 사상이 유일한 Lie algebra 준동형으로 확장되는 보편 대상으로 둔다. 구체적으로는 $X$ 위의 free vector space의 tensor algebra $\T(X)$ 안에서 $X$로 생성되는 가장 작은 Lie subalgebra가 $\mathfrak{F}(X)$이며, 그 보편 성질은 tensor algebra의 보편 성질을 ([\[다중선형대수학\] §텐서대수, ⁋명제 2](/ko/math/multilinear_algebra/tensor_algebras#prop2)) commutator Lie 구조로 제한한 것으로 얻어진다.
 
 ::: 정의 3
 Generalized Cartan matrix $A=(a_{ij})_{1\leq i,j\leq\ell}$에 대하여, 기호들 $e_i,f_i,h_i$ ($1\leq i\leq\ell$) 위의 free Lie algebra $\mathfrak{F}$를 생각하고, 다음 관계식들로 생성되는 ideal $\mathfrak{R}\subseteq\mathfrak{F}$를 둔다.
 
 $$[h_i,h_j]=0,\qquad [h_i,e_j]=a_{ji}e_j,\qquad [h_i,f_j]=-a_{ji}f_j,\qquad [e_i,f_j]=\delta_{ij}h_i,$$
 
-$$(\ad e_i)^{\,1-a_{ji}}e_j=0\quad(i\neq j),\qquad (\ad f_i)^{\,1-a_{ji}}f_j=0\quad(i\neq j).$$
+$$(\ad e_i)^{1-a_{ji}}e_j=0\quad(i\neq j),\qquad (\ad f_i)^{1-a_{ji}}f_j=0\quad(i\neq j).$$
 
 Quotient Lie algebra
 
@@ -56,7 +56,7 @@ $$\mathfrak{g}(A)=\mathfrak{F}/\mathfrak{R}$$
 를 Cartan matrix $A$에 딸린 *Chevalley–Serre presentation<sub>슈발레-세르 표시</sub>*으로 표시되는 Lie algebra라 부르고, 위 관계식들을 *Serre 관계식<sub>Serre relations</sub>*이라 부른다. 마지막 두 줄의 관계식, 곧 $i\neq j$에 대한 $(\ad e_i)^{1-a_{ji}}e_j=0$과 $(\ad f_i)^{1-a_{ji}}f_j=0$을 특별히 *Serre relation<sub>세르 관계식</sub>*이라 한정해 부르기도 한다.
 :::
 
-여기에서 $\delta_{ij}$는 Kronecker delta이고, $(\ad x)^m y$는 $\ad x$를 $y$에 $m$번 반복 적용한 것 $[x,[x,\cdots[x,y]\cdots]]$를 뜻한다. 관계식의 의미를 하나씩 풀어 보면, $[h_i,h_j]=0$은 $h_i$들이 abelian 부분, 곧 Cartan subalgebra의 역할을 할 부분을 생성함을 강제하고, $[h_i,e_j]=a_{ji}e_j$와 $[h_i,f_j]=-a_{ji}f_j$는 $e_j,f_j$가 각각 weight $\alpha_j$, $-\alpha_j$의 root vector처럼 행동하게 하며, $[e_i,f_j]=\delta_{ij}h_i$는 같은 첨자의 $e_i,f_i,h_i$가 $\sl_2$의 표준 관계식 $[e,f]=h$를 만족하고 첨자가 다르면 $e_i,f_j$가 commute함을 말한다. 처음 세 줄까지만 부과한 Lie algebra는 일반적으로 무한차원이며, 이를 유한하게 잘라내는 것이 마지막 두 줄의 Serre relation이다.
+여기에서 $\delta_{ij}$는 Kronecker delta이고, $(\ad x)^m y$는 $\ad x$를 $y$에 $m$번 반복 적용한 것 $[x,[x,\cdots[x,y]\cdots]]$를 뜻한다. 관계식의 의미를 하나씩 풀어 보면, $[h_i,h_j]=0$은 $h_i$들이 abelian 부분, 곧 Cartan subalgebra의 역할을 할 부분을 생성함을 강제하고, $[h_i,e_j]=a_{ji}e_j$와 $[h_i,f_j]=-a_{ji}f_j$는 $e_j,f_j$가 각각 weight $\alpha_j$, $-\alpha_j$의 root vector처럼 행동하게 하며, $[e_i,f_j]=\delta_{ij}h_i$는 같은 첨자의 $e_i,f_i,h_i$가 $\sl_2$의 표준 관계식 $[e,f]=h$를 만족하고 첨자가 다르면 $e_i,f_j$가 commute함을 말한다. 처음 네 줄까지만 부과한 Lie algebra는 일반적으로 무한차원이며, 이를 유한하게 잘라내는 것이 마지막 두 줄의 Serre relation이다.
 
 이 presentation이 우리가 아는 예와 맞물리는지를 가장 작은 경우에서 확인한다.
 
@@ -76,11 +76,11 @@ $$(\ad e_1)^2 e_2=[e_1,[e_1,e_2]]=0,\qquad (\ad e_2)^2 e_1=[e_2,[e_2,e_1]]=0$$
 과 $f$에 대한 같은 꼴의 두 관계식이다. 이 presentation으로 얻어지는 $\mathfrak{g}(A)$는 $\sl_3$이며, $e_1,e_2$는 두 simple root에 딸린 root vector, $[e_1,e_2]$는 highest root에 딸린 root vector에 해당한다. Serre relation $[e_1,[e_1,e_2]]=0$은 root $2\alpha_1+\alpha_2$가 $A_2$의 root가 아니라는 사실, 곧 그 자리의 root space가 $0$임을 대수적으로 표현한 것이다.
 :::
 
-두 예시는 Serre relation의 지수 $1-a_{ji}$가 어떻게 결정되는지를 보여준다. $\sl_2$ 표현론에서 $e_j$를 weight $\alpha_j$의 highest weight처럼 보고 $\sl_{2,\alpha_i}=\langle e_i,f_i,h_i\rangle$의 action을 생각하면, $\ad e_i$를 거듭 적용해 얻는 weight 사슬 $\alpha_j,\alpha_j+\alpha_i,\alpha_j+2\alpha_i,\ldots$이 더는 root가 되지 않고 끊기는 지점이 바로 $\alpha_j-a_{ji}\alpha_i$ 다음, 곧 $(\ad e_i)^{1-a_{ji}}e_j$ 자리이다. $h_i$가 $e_j$에 weight $\beta(h_i)=a_{ji}$로 작용하므로 $\alpha_i$-string의 길이가 $1-a_{ji}$로 정해지는 것인데, 이는 [§근계, ⁋명제 7](/ko/math/lie_theory/root_systems#prop7)의 $\sl_2$ string 계산이 그대로 옮겨 온 것이다.
+두 예시는 Serre relation의 지수 $1-a_{ji}$가 어떻게 결정되는지를 보여준다. $\sl_2$ 표현론에서 $e_j$를 $\sl_{2,\alpha_i}=\langle e_i,f_i,h_i\rangle$의 action에 대한 lowest weight vector로 보면 ($i\neq j$이므로 $[f_i,e_j]=0$이다), $\ad e_i$를 거듭 적용해 얻는 weight 사슬 $\alpha_j,\alpha_j+\alpha_i,\alpha_j+2\alpha_i,\ldots$이 더는 root가 되지 않고 끊기는 지점이 바로 $\alpha_j-a_{ji}\alpha_i$ 다음, 곧 $(\ad e_i)^{1-a_{ji}}e_j$ 자리이다. $h_i$가 $e_j$에 weight $\alpha_j(h_i)=a_{ji}$로 작용하므로 $\alpha_i$-string의 길이가 $1-a_{ji}$로 정해지는 것인데, 이는 [§근계, ⁋명제 7](/ko/math/lie_theory/root_systems#prop7)의 $\sl_2$ string 계산이 그대로 옮겨 온 것이다.
 
 ## 삼각 분해와 Cartan 부분의 통제
 
-$\mathfrak{g}(A)$가 의도한 구조를 갖는지를 보려면 먼저 generator $h_i,e_i,f_i$들이 quotient에서 무너지지 않고 독립적으로 살아남는지, 그리고 $\mathfrak{g}(A)$가 $\sl_2$ 표현론을 적용할 수 있는 형태로 분해되는지를 확인해야 한다. 핵심은 처음 세 줄의 관계식만으로 이미 weight 구조가 강제된다는 점이다.
+$\mathfrak{g}(A)$가 의도한 구조를 갖는지를 보려면 먼저 generator $h_i,e_i,f_i$들이 quotient에서 무너지지 않고 독립적으로 살아남는지, 그리고 $\mathfrak{g}(A)$가 $\sl_2$ 표현론을 적용할 수 있는 형태로 분해되는지를 확인해야 한다. 핵심은 처음 네 줄의 관계식만으로 이미 weight 구조가 강제된다는 점이다.
 
 ::: 명제 6
 $A=(a_{ij})$가 $\det A\neq 0$인 generalized Cartan matrix라 하자. $\mathfrak{g}(A)$ 안에서 $h_1,\ldots,h_\ell$의 image는 일차독립이고, 이들이 생성하는 abelian subalgebra $\mathfrak{h}=\span_k\{h_1,\ldots,h_\ell\}$의 $\ad$ 작용에 대하여
@@ -99,7 +99,7 @@ $$\mathfrak{g}(A)=\mathfrak{n}^-\oplus\mathfrak{h}\oplus\mathfrak{n}^+$$
 를 얻고, weight $0$ 공간이 $\mathfrak{h}$로서 $\ell$차원이므로 $h_i$들은 일차독립이다.
 :::
 
-이 분해를 *triangular decomposition<sub>삼각 분해</sub>*이라 부른다. $\mathfrak{h}$를 $\mathfrak{g}(A)$의 Cartan 부분, $\mathfrak{n}^+,\mathfrak{n}^-$를 각각 위·아래 nilpotent 부분으로 보는 관점이며, finite type일 때 이는 semisimple Lie algebra의 root 분해 $\mathfrak{g}=\mathfrak{n}^-\oplus\mathfrak{h}\oplus\mathfrak{n}^+$와 정확히 대응한다 ([§근계, ⁋정의 5](/ko/math/lie_theory/root_systems#def5) 이후의 root decomposition). 처음 세 줄의 관계식만으로는 $\mathfrak{n}^{\pm}$가 무한차원일 수 있으나, Serre relation이 각 $\alpha_i$-string을 $1-a_{ij}$ 길이에서 끊어 weight 공간들을 유한하게 잘라낸다. Finite type에서 이 절단이 정확히 root system $\Phi$의 root들만 살아남게 만든다는 것이 다음 정리의 핵심이다.
+이 분해를 *triangular decomposition<sub>삼각 분해</sub>*이라 부른다. $\mathfrak{h}$를 $\mathfrak{g}(A)$의 Cartan 부분, $\mathfrak{n}^+,\mathfrak{n}^-$를 각각 위·아래 nilpotent 부분으로 보는 관점이며, finite type일 때 이는 semisimple Lie algebra의 root 분해 $\mathfrak{g}=\mathfrak{n}^-\oplus\mathfrak{h}\oplus\mathfrak{n}^+$와 정확히 대응한다 ([§근계, ⁋정의 5](/ko/math/lie_theory/root_systems#def5) 이후의 root decomposition). 처음 네 줄의 관계식만으로는 $\mathfrak{n}^{\pm}$가 무한차원일 수 있으나, Serre relation이 각 $\alpha_i$-string을 $1-a_{ji}$ 길이에서 끊어 weight 공간들을 유한하게 잘라낸다. Finite type에서 이 절단이 정확히 root system $\Phi$의 root들만 살아남게 만든다는 것이 다음 정리의 핵심이다.
 
 ## Serre의 정리
 
@@ -108,7 +108,7 @@ $$\mathfrak{g}(A)=\mathfrak{n}^-\oplus\mathfrak{h}\oplus\mathfrak{n}^+$$
 ::: 정리 7 (Serre)
 $A=(a_{ij})_{1\leq i,j\leq\ell}$가 finite type generalized Cartan matrix라 하자. 그럼 [정의 3](#def3)의 $\mathfrak{g}(A)$는 유한차원 semisimple Lie algebra이고, $\mathfrak{h}=\span_k\{h_1,\ldots,h_\ell\}$은 그 Cartan subalgebra이며, 그에 딸린 root system의 Cartan matrix는 다시 $A$이다. 역으로 임의의 유한차원 semisimple Lie algebra $\mathfrak{g}$에 대하여, Cartan subalgebra와 simple root를 택해 얻은 Cartan matrix를 $A$라 하면, generator $e_i,f_i,h_i$를 각 simple root에 딸린 표준 원소로 보내는 morphism은 동형
 
-$$\mathfrak{g}(A)\;\xrightarrow{\ \sim\ }\;\mathfrak{g}$$
+$$\mathfrak{g}(A)\xrightarrow{\ \sim\ }\mathfrak{g}$$
 
 를 정의한다.
 :::
@@ -121,7 +121,7 @@ $$[e_i,f_i]=h_i,\qquad [h_i,e_i]=2e_i,\qquad [h_i,f_i]=-2f_i$$
 
 를 만족하는 표준 원소 $e_i\in\mathfrak{g}_{\alpha_i}$, $f_i\in\mathfrak{g}_{-\alpha_i}$, $h_i=h_{\alpha_i}\in\mathfrak{h}$를 택한다. 이때 $h_i$의 action은 $[h_i,e_j]=\alpha_j(h_i)e_j=a_{ji}e_j$이고 $[h_i,f_j]=-a_{ji}f_j$이며, $i\neq j$에 대하여 $\alpha_i-\alpha_j$가 root가 아니므로 ([§근계, ⁋정의 15](/ko/math/lie_theory/root_systems#def15) 이후의 simple root 성질) $[e_i,f_j]=0=\delta_{ij}h_i$이다. 또 $h_i$들이 commute하므로 처음 네 줄의 관계식이 모두 성립한다.
 
-Serre relation은 $\alpha_i$-string의 길이로부터 따라온다. $\sl_{2,\alpha_i}=\langle e_i,f_i,h_i\rangle$의 action에서 $e_j$는 weight $\alpha_j(h_i)=a_{ji}$의 highest weight vector처럼 행동하고 ([§근계, ⁋명제 7](/ko/math/lie_theory/root_systems#prop7)), root $\alpha_j$를 지나는 $\alpha_i$-string은 $\alpha_j,\alpha_j+\alpha_i,\ldots,\alpha_j-a_{ji}\alpha_i$로 끝난다. 따라서 $\alpha_j+(1-a_{ji})\alpha_i$는 root가 아니어서 그 root space가 $0$이고, $(\ad e_i)^{1-a_{ji}}e_j\in\mathfrak{g}_{\alpha_j+(1-a_{ji})\alpha_i}=0$이다. $f$에 대한 관계식도 같다. 그러므로 generator $e_i,f_i,h_i$들이 [정의 3](#def3)의 모든 Serre 관계식을 만족하고, free Lie algebra의 보편 성질로 Lie algebra 준동형 $\pi:\mathfrak{g}(A)\rightarrow\mathfrak{g}$가 유일하게 정해진다. $\mathfrak{g}$가 semisimple이므로 각 root space는 $e_i$들의 반복 bracket으로 생성되고 ([§근계, ⁋보조정리 10](/ko/math/lie_theory/root_systems#lem10)), $\mathfrak{g}$가 root vector와 $\mathfrak{h}$로 생성되므로 $\pi$는 전사이다. 단사성은 [명제 6](#prop6)의 삼각 분해를 $\mathfrak{g}(A)$와 $\mathfrak{g}$ 양쪽에서 비교하여 얻는다. $\pi$는 weight 공간을 weight 공간으로 보내고, finite type일 때 아래 정방향에서 보듯 $\mathfrak{g}(A)$의 nonzero weight 공간이 정확히 $\Phi$의 root들에서만 나타나며 각 root space가 $1$차원이므로, 전사인 $\pi$는 각 weight 공간에서 차원을 보존해 동형이다.
+Serre relation은 $\alpha_i$-string의 길이로부터 따라온다. $\sl_{2,\alpha_i}=\langle e_i,f_i,h_i\rangle$의 action에서 $e_j$는 weight $\alpha_j(h_i)=a_{ji}$의 lowest weight vector로서 $[f_i,e_j]=0$을 만족하고 ([§근계, ⁋명제 7](/ko/math/lie_theory/root_systems#prop7)), root $\alpha_j$를 지나는 $\alpha_i$-string은 $\alpha_j,\alpha_j+\alpha_i,\ldots,\alpha_j-a_{ji}\alpha_i$로 끝난다. 따라서 $\alpha_j+(1-a_{ji})\alpha_i$는 root가 아니어서 그 root space가 $0$이고, $(\ad e_i)^{1-a_{ji}}e_j\in\mathfrak{g}_{\alpha_j+(1-a_{ji})\alpha_i}=0$이다. $f$에 대한 관계식도 같다. 그러므로 generator $e_i,f_i,h_i$들이 [정의 3](#def3)의 모든 Serre 관계식을 만족하고, free Lie algebra의 보편 성질로 Lie algebra 준동형 $\pi:\mathfrak{g}(A)\rightarrow\mathfrak{g}$가 유일하게 정해진다. $\mathfrak{g}$가 semisimple이므로 각 root space는 $e_i$들의 반복 bracket으로 생성되고 ([§근계, ⁋보조정리 10](/ko/math/lie_theory/root_systems#lem10)), $\mathfrak{g}$가 root vector와 $\mathfrak{h}$로 생성되므로 $\pi$는 전사이다. 단사성은 [명제 6](#prop6)의 삼각 분해를 $\mathfrak{g}(A)$와 $\mathfrak{g}$ 양쪽에서 비교하여 얻는다. $\pi$는 weight 공간을 weight 공간으로 보내고, finite type일 때 아래 정방향에서 보듯 $\mathfrak{g}(A)$의 nonzero weight 공간이 정확히 $\Phi$의 root들에서만 나타나며 각 root space가 $1$차원이므로, 전사인 $\pi$는 각 weight 공간에서 차원을 보존해 동형이다.
 
 (정방향) $A$가 finite type이면, $A$를 Cartan matrix로 갖는 유한차원 semisimple Lie algebra $\mathfrak{g}$가 존재한다. 이는 Cartan matrix가 root system을 통해 유한차원 semisimple Lie algebra를 유일하게 결정한다는 분류 정리로부터 나오며, $A_\ell,B_\ell,C_\ell,D_\ell$의 고전형에 대해서는 $\sl_{\ell+1},\mathfrak{so}_{2\ell+1},\mathfrak{sp}_{2\ell},\mathfrak{so}_{2\ell}$이 그러한 $\mathfrak{g}$를 직접 제공하고, 예외형 $G_2,F_4,E_6,E_7,E_8$도 각각 구체적인 실현을 가진다. 그러한 $\mathfrak{g}$에 역방향을 적용하면 전사 준동형 $\pi:\mathfrak{g}(A)\rightarrow\mathfrak{g}$를 얻고, $\pi$가 동형임을 보이는 것은 $\dim\mathfrak{g}(A)\leq\dim\mathfrak{g}$, 곧 $\mathfrak{g}(A)$가 유한차원이며 그 차원이 $\mathfrak{g}$를 넘지 않음을 보이는 것으로 충분하다.
 
@@ -130,14 +130,14 @@ $\mathfrak{n}^+$가 유한차원임을 보인다. $\mathfrak{n}^+$는 $e_1,\ldot
 이제 $\pi:\mathfrak{g}(A)\rightarrow\mathfrak{g}$가 weight 공간마다 차원을 비교하면 동형임이 따른다. $\mathfrak{g}$의 nonzero root space는 정확히 $\Phi$의 root에서 $1$차원으로 나타나고, $\pi$가 전사이므로 $\mathfrak{g}(A)$의 대응 weight 공간은 차원이 $1$ 이상이다. 그런데 위에서 본 string 절단으로 $\mathfrak{g}(A)$의 weight 공간 또한 $\Phi$의 root에서만 나타나며 그 차원이 $1$을 넘지 않으므로, 모든 weight 공간에서 차원이 정확히 일치하여 $\pi$는 동형이다. 따라서 $\mathfrak{g}(A)\cong\mathfrak{g}$는 유한차원 semisimple이고, $\mathfrak{h}$가 그 Cartan subalgebra이며 그 Cartan matrix가 $A$임이 따라온다.
 :::
 
-증명의 두 방향은 같은 다리의 양 끝이다. 역방향은 임의의 semisimple Lie algebra가 그 Cartan matrix로부터 generator와 relation으로 복원됨을 말하고, 정방향은 finite type Cartan matrix가 항상 그러한 semisimple Lie algebra에서 비롯됨을 말한다. 둘을 합치면 finite type Cartan matrix와 유한차원 semisimple Lie algebra가 서로를 유일하게 결정한다. 한 가지 주의할 부호 관례는 $[h_i,e_j]=a_{ij}e_j$에서 $a_{ij}=\langle\alpha_i,\alpha_j\rangle=2(\alpha_i,\alpha_j)/(\alpha_j,\alpha_j)$의 첨자 순서이다. $h_i$는 $\alpha_i$에 딸린 coroot이고 $e_j$는 weight $\alpha_j$이므로 그 weight은 $\alpha_j(h_i)=\langle\alpha_j,\alpha_i^{\vee}\rangle=a_{ij}$인데, [§근계, ⁋정의 16](/ko/math/lie_theory/root_systems#def16)의 $a_{ij}=\langle\alpha_i,\alpha_j\rangle$ 관례와 맞추어 본문은 $[h_i,e_j]=a_{ij}e_j$로 적었다. 따라서 Serre relation의 지수 $1-a_{ij}$ 역시 이 관례 아래에서 $\alpha_j$를 지나는 $\alpha_i$-string의 길이로 읽힌다.
+증명의 두 방향은 같은 다리의 양 끝이다. 역방향은 임의의 semisimple Lie algebra가 그 Cartan matrix로부터 generator와 relation으로 복원됨을 말하고, 정방향은 finite type Cartan matrix가 항상 그러한 semisimple Lie algebra에서 비롯됨을 말한다. 둘을 합치면 finite type Cartan matrix와 유한차원 semisimple Lie algebra가 서로를 유일하게 결정한다. 한 가지 주의할 부호 관례는 $[h_i,e_j]=a_{ji}e_j$의 첨자 순서이다. $h_i$는 $\alpha_i$에 딸린 coroot이고 $e_j$는 weight $\alpha_j$이므로 그 weight은 $\alpha_j(h_i)=\langle\alpha_j,\alpha_i\rangle$인데, [§근계, ⁋정의 16](/ko/math/lie_theory/root_systems#def16)의 $a_{ij}=\langle\alpha_i,\alpha_j\rangle=2(\alpha_i,\alpha_j)/(\alpha_j,\alpha_j)$ 관례 아래에서 이 값은 $a_{ji}$이고, 따라서 본문은 $[h_i,e_j]=a_{ji}e_j$로 적었다. 그러므로 Serre relation의 지수 $1-a_{ji}$ 역시 이 관례 아래에서 $\alpha_j$를 지나는 $\alpha_i$-string의 길이로 읽힌다.
 
 ## 분류와 Chevalley basis
 
 Serre 정리는 root system 이론과 결합하여 분류를 완성한다. [§근계, ⁋명제 12](/ko/math/lie_theory/root_systems#prop12)에서 보았듯 유한차원 semisimple Lie algebra는 Cartan subalgebra를 거쳐 root system을 낳고, simple root를 택하면 Cartan matrix가, 따라서 Dynkin diagram이 결정된다 ([§Borel subgroup, ⁋정의 1](/ko/math/lie_theory/borel_subgroup#def1)). 거꾸로 Serre 정리는 finite type Cartan matrix로부터 그것을 실현하는 유한차원 semisimple Lie algebra를 직접 구성해 준다. 이 두 방향이 서로 역임을 합치면 다음을 얻는다.
 
 ::: 따름정리 8
-유한차원 semisimple Lie algebra의 isomorphism class와 finite type Cartan matrix의 equivalence class, 곧 Dynkin diagram 사이에 자연스러운 일대일 대응이 있다. Simple Lie algebra는 connected Dynkin diagram, 곧 $A_\ell\,(\ell\geq 1),B_\ell\,(\ell\geq 2),C_\ell\,(\ell\geq 3),D_\ell\,(\ell\geq 4)$의 네 무한족과 다섯 예외형 $E_6,E_7,E_8,F_4,G_2$에 대응한다.
+유한차원 semisimple Lie algebra의 isomorphism class와 finite type Cartan matrix의 equivalence class, 곧 Dynkin diagram 사이에 자연스러운 일대일 대응이 있다. Simple Lie algebra는 connected Dynkin diagram, 곧 $A_\ell(\ell\geq 1),B_\ell(\ell\geq 2),C_\ell(\ell\geq 3),D_\ell(\ell\geq 4)$의 네 무한족과 다섯 예외형 $E_6,E_7,E_8,F_4,G_2$에 대응한다.
 :::
 ::: 증명
 [정리 7](#thm7)의 역방향은 각 유한차원 semisimple $\mathfrak{g}$에 finite type Cartan matrix $A$를 대응시키고, 정방향은 각 $A$에 $\mathfrak{g}(A)$를 대응시킨다. 두 대응이 서로 역임은 정리의 동형 $\mathfrak{g}(A)\cong\mathfrak{g}$가 정확히 말하는 바이다. Cartan matrix는 simple root의 번호 매김에 따라 동시치환만큼의 모호함을 가지므로, 그 equivalence class는 Dynkin diagram과 일대일 대응한다 ([§Borel subgroup, ⁋정의 1](/ko/math/lie_theory/borel_subgroup#def1) 이후의 논의). 마지막으로 $\mathfrak{g}$가 simple인 것은 그 Dynkin diagram이 connected인 것과 동치인데, 이는 Cartan matrix가 direct sum으로 쪼개지지 않는 것이 semisimple 분해 $\mathfrak{g}=\bigoplus_i\mathfrak{g}_i$의 ([§Killing 형식과 Cartan 판정법, ⁋정리 10](/ko/math/lie_theory/killing_form_and_cartan_criterion#thm10)) simple 성분이 하나뿐인 것과 같기 때문이다. Connected finite type Dynkin diagram의 목록이 네 무한족과 다섯 예외형뿐이라는 것은 generalized Cartan matrix의 positive definite 조건을 그래프 조합론으로 분류하여 얻어지며 ([§Borel subgroup, ⁋정리 6](/ko/math/lie_theory/borel_subgroup#thm6)), 이로써 대응이 완성된다.

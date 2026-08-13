@@ -95,7 +95,7 @@ Transitivity. $S\in J(U)$이고, $U$ 위의 sieve $R$이 모든 $(f: V \rightarr
 위상공간 $X$에 대하여, 대상이 $X$의 열린집합이고 morphism이 포함관계 $V\subseteq U$인 부분순서 범주를 $\Op(X)$라 하자. 이 범주에서 fiber product는 교집합 $U\cap V$로 주어진다. 각 열린집합 $U$ 위의 covering family를 통상적인 open cover $\{U_i\hookrightarrow U\}$ ($U=\bigcup_i U_i$)로 정의하면 이는 pretopology를 이룬다. Isomorphism 조건은 $U=U$ 자신이 $U$를 덮음이고, base change 조건은 $\{U_i\cap V\}$가 $V$를 덮음이며, transitivity는 covering의 세분이 다시 covering임이다. 이렇게 얻은 site $(\Op(X), \tau)$ 위의 sheaf는 정확히 $X$ 위의 고전적인 sheaf와 같다. ([\[위상수학\] §층, ⁋정의 1](/ko/math/topology/sheaves#def1))
 :::
 
-[예시 6](#ex6)에서 covering family $\{U_i\hookrightarrow U\}$가 생성하는 covering sieve은 어떤 $U_i$ 안에 포함되는 열린집합 전체로 이루어진 sieve이며, 이는 $\{U_i\}$가 위상공간으로서 $U$를 덮는다는 정보와 동치이다. 이 site의 특징은 모든 morphism이 monomorphism(포함)이라는 점인데, 일반적인 site에서는 covering의 morphism이 단사일 필요가 없고, 바로 이 점이 다음의 대수기하학적 예시들을 고전적 위상과 구별짓는다.
+[예시 6](#ex6)에서 covering family $\{U_i\hookrightarrow U\}$가 생성하는 covering sieve은 어떤 $U_i$ 안에 포함되는 열린집합 전체로 이루어진 sieve이며, 이는 $\{U_i\}$가 위상공간으로서 $U$를 덮는다는 정보와 동치이다. 이 site의 특징은 모든 morphism이 monomorphism(포함)이라는 점인데, 일반적인 site에서는 covering의 morphism이 단사일 필요가 없고, 바로 이 점이 다음의 algebraic geometry 예시들을 고전적 위상과 구별짓는다.
 
 ::: 예시 7 (Zariski site)
 Scheme $X$에 대하여 두 가지 site가 있다. *작은 Zariski site* $X_{\Zar}$는 대상이 $X$의 열린집합(열린 부분scheme)이고 morphism이 열린포함이며, covering family가 open cover인 site로, 이는 위상공간 $X$의 site $\Op(X)$와 본질적으로 같다. *큰 Zariski site*는 slice 범주 $\Sch/X$를 밑범주로 삼고, $X$-scheme들의 족 $\{U_i \rightarrow T\}$이 각 $U_i \rightarrow T$가 열린 immersion이고 합 $\coprod U_i \rightarrow T$가 전사일 때 covering family로 선언한 site이다. 큰 site는 $X$ 위의 모든 scheme을 동시에 다루므로 functorially 정의된 대상의 sheaf 성질을 논하기에 적합하다.
@@ -107,7 +107,7 @@ Scheme $X$에 대하여 두 가지 site가 있다. *작은 Zariski site* $X_{\Za
 Scheme $X$의 *작은 étale site* $X_{\et}$는 대상이 étale morphism $U \rightarrow X$이고, morphism이 그 위의 $X$-morphism이며 (étale morphism 사이의 $X$-morphism은 자동으로 étale이다), covering family가 jointly surjective한 étale 사상족 $\{U_i \rightarrow U\}$인 site이다. ([\[스킴\] §매끄러운 사상과 étale 사상, ⁋정의 7](/ko/math/scheme_theory/smooth_and_etale_morphisms#def7)) 더 일반적으로 *큰 étale site*는 $\Sch/X$ 위에서 jointly surjective한 étale 사상족을 covering family로 삼는다. 두 경우 모두 base change 조건은 étale morphism이 base change에 대해 닫혀 있음으로부터, transitivity는 étale morphism의 합성이 étale임으로부터 따른다.
 :::
 
-[예시 8](#ex8)의 covering에서 morphism $U_i \rightarrow U$은 더 이상 단사가 아니며, fiber가 여러 점을 가질 수 있다. 가령 분리 가능한 체확대 $\Spec L \rightarrow \Spec K$나 multiplicative group의 $n$제곱 morphism은 étale covering의 전형적인 예이다. 이렇게 단사가 아닌 covering을 허용하기에 étale site의 sheaf 조건은 두 겹 겹침 $U_i\times_U U_j$가 $U_i$의 대각선에 그치지 않는 비자명한 자료를 담게 되고, 이것이 étale cohomology가 Zariski cohomology보다 풍부한 근본 이유이다. étale보다 더 넓은 flat morphism을 covering으로 삼으면 fppf와 fpqc 위상을 얻는다.
+[예시 8](#ex8)의 covering에서 morphism $U_i \rightarrow U$은 더 이상 단사가 아니며, fiber가 여러 점을 가질 수 있다. 가령 유한 분리 가능한 체확대 $\Spec L \rightarrow \Spec K$나, 밑에서 $n$이 가역일 때 multiplicative group의 $n$제곱 morphism은 étale covering의 전형적인 예이다. 이렇게 단사가 아닌 covering을 허용하기에 étale site의 sheaf 조건은 두 겹 겹침 $U_i\times_U U_i$가 대각선 $U_i$에 그치지 않는 비자명한 자료를 담게 되고, 이것이 étale cohomology가 Zariski cohomology보다 풍부한 근본 이유이다. étale보다 더 넓은 flat morphism을 covering으로 삼으면 fppf와 fpqc 위상을 얻는다.
 
 ::: 예시 9 (fppf와 fpqc site)
 밑범주를 $\Sch$ (또는 $\Sch/S$)로 둔다. 사상족 $\{f_i: U_i \rightarrow U\}$이 *fppf covering family*라는 것은 각 $f_i$가 flat이고 locally of finite presentation이며 합 $\coprod U_i \rightarrow U$가 전사인 것이다 (이름은 *fidèlement plat de présentation finie*에서 온다). 더 넓게, $\{f_i: U_i \rightarrow U\}$이 *fpqc covering family*라는 것은 각 $f_i$가 flat이고, $\coprod U_i \rightarrow U$가 전사이며, $U$의 각 affine open이 유한히 많은 $U_i$의 affine open들의 상으로 덮이는 quasi-compact 조건을 만족하는 것이다. ([\[스킴\] §충실평탄 하강, ⁋정의 8](/ko/math/scheme_theory/faithfully_flat_descent#def8)) 두 경우 모두 flatness와 전사성이 base change·합성에 대해 보존되므로 pretopology를 이루며, fppf covering은 항상 fpqc covering이다.
@@ -144,7 +144,7 @@ $$F(U) \xrightarrow{\ e\ } \prod_i F(U_i) \underset{q}{\overset{p}{\rightrightar
 ::: 증명
 생성 covering sieve $S=\langle f_i\rangle$ 위의 matching family와 위 equalizer의 자료가 일대일로 대응함을 보이면 충분하다.
 
-$S$ 위의 matching family $(x_f)_{f\in S}$가 주어지면, 특히 각 $f_i\in S$에 대한 $s_i=x_{f_i}\in F(U_i)$들의 족 $(s_i)\in \prod_i F(U_i)$을 얻는다. 두 projection $\operatorname{pr}_1, \operatorname{pr}_2: U_i\times_U U_j \rightrightarrows U$의 합성 $f_i\circ \operatorname{pr}_1=f_j\circ \operatorname{pr}_2$은 같은 morphism이고 $S$에 속하므로, matching 조건을 $g=\operatorname{pr}_1$과 $g=\operatorname{pr}_2$에 각각 적용하면
+$S$ 위의 matching family $(x_f)_{f\in S}$가 주어지면, 특히 각 $f_i\in S$에 대한 $s_i=x_{f_i}\in F(U_i)$들의 족 $(s_i)\in \prod_i F(U_i)$을 얻는다. 두 projection $\operatorname{pr}_1: U_i\times_U U_j \rightarrow U_i$와 $\operatorname{pr}_2: U_i\times_U U_j \rightarrow U_j$에 각각 $f_i$와 $f_j$를 합성한 $f_i\circ \operatorname{pr}_1=f_j\circ \operatorname{pr}_2$은 같은 morphism이고 $S$에 속하므로, matching 조건을 $g=\operatorname{pr}_1$과 $g=\operatorname{pr}_2$에 각각 적용하면
 
 $$F(\operatorname{pr}_1)(s_i)=x_{f_i\circ \operatorname{pr}_1}=x_{f_j\circ \operatorname{pr}_2}=F(\operatorname{pr}_2)(s_j)$$
 
@@ -153,6 +153,8 @@ $$F(\operatorname{pr}_1)(s_i)=x_{f_i\circ \operatorname{pr}_1}=x_{f_j\circ \oper
 역으로 $p((s_i))=q((s_i))$인 $(s_i)\in \prod_i F(U_i)$이 주어지면, $S$ 위의 matching family를 다음과 같이 정의한다. $f\in S$이면 $f=f_i\circ g$인 $i$와 $g: V \rightarrow U_i$가 있으므로 $x_f=F(g)(s_i)$로 둔다. 이것이 well-defined임, 즉 $f=f_i\circ g=f_j\circ g'$인 두 인수분해에서 같은 값을 줌은 $(g, g'): V \rightarrow U_i\times_U U_j$로 묶은 뒤 $p((s_i))=q((s_i))$의 $(i, j)$-성분을 $F(g, g')$로 당겨 $F(g)(s_i)=F(g')(s_j)$를 얻음으로써 확인된다. 이 대응이 matching family 조건을 만족함과, 두 구성이 서로 역임은 정의로부터 직접 따른다.
 
 따라서 amalgamation $x\in F(U)$의 존재·유일성은 정확히 $e$가 equalizer로의 전단사임과 같다. Sheaf 조건은 amalgamation의 존재와 유일성이므로 $e$가 equalizer 위로의 전단사, 즉 위 도식이 equalizer인 것과 동치이고, separated 조건은 유일성뿐이므로 $e$가 단사인 것과 동치이다.
+
+마지막으로 $J(U)$의 covering sieve $S'$은 생성 covering sieve $\langle f_i\rangle$을 포함할 뿐 그와 같을 필요는 없으므로, $S'$ 위의 matching family를 $\langle f_i\rangle$로 제한하여 얻은 $x$가 $S'$ 전체의 amalgamation임을 확인해야 한다. 임의의 $(f: V \rightarrow U)\in S'$에 대하여 base change한 covering family $\{\operatorname{pr}_2: U_i\times_U V \rightarrow V\}$을 잡으면 $f\circ \operatorname{pr}_2=f_i\circ \operatorname{pr}_1\in \langle f_i\rangle$이므로 $F(\operatorname{pr}_2)(F(f)(x))=x_{f\circ \operatorname{pr}_2}=F(\operatorname{pr}_2)(x_f)$이고, 이 covering family에 대한 $e$의 단사성으로 $F(f)(x)=x_f$를 얻는다.
 :::
 
 [명제 11](#prop11)은 site 위의 sheaf 조건이 위상공간 위의 그것과 형식적으로 동일함을 보여준다. ([\[위상수학\] §층, ⁋정의 1](/ko/math/topology/sheaves#def1)) 다만 두 겹 겹침이 교집합 $U_i\cap U_j$ 대신 fiber product $U_i\times_U U_j$로 바뀐다. 위상공간에서는 covering의 morphism이 모두 단사여서 $U_i\times_U U_i=U_i$이지만, étale이나 fpqc covering에서는 $U_i\times_U U_i$이 $U_i$보다 클 수 있고, 바로 이 차이가 비단사 covering 위의 하강을 가능하게 한다. 특히 단일 morphism으로 이루어진 fpqc covering $\{\Spec B \rightarrow \Spec A\}$에 대해서는 이 equalizer가 faithfully flat descent의 Amitsur 정확열로 환원되는데, 이는 아래에서 다시 다룬다.
@@ -160,7 +162,7 @@ $$F(\operatorname{pr}_1)(s_i)=x_{f_i\circ \operatorname{pr}_1}=x_{f_j\circ \oper
 이제 presheaf가 sheaf가 아닌 전형적인 예를 보고, 이를 통해 sheafification의 필요를 동기화한다.
 
 ::: 예시 12 (sheaf가 아닌 separated presheaf)
-$X$가 두 열린집합 $X=U_1\sqcup U_2$의 disjoint union인 위상공간이라 하고, 원소가 둘 이상인 집합 $A$에 대하여 상수 presheaf $\underline{A}^{\mathrm{pre}}$를 비어 있지 않은 열린집합 $V$에는 $\underline{A}^{\mathrm{pre}}(V)=A$로, 빈 열린집합에는 $\underline{A}^{\mathrm{pre}}(\emptyset)=\{\ast\}$ (한원소 집합)으로 두고, 비어 있지 않은 열린집합 사이의 restriction을 항등으로 정의하자. Covering $\{U_1, U_2\}$를 생각하면 $U_1\cap U_2=\emptyset$이고 [명제 11](#prop11)의 equalizer에서 겹침을 담는 항이 $\underline{A}^{\mathrm{pre}}(\emptyset)=\{\ast\}$이라 한원소 집합이므로 겹침 조건이 공허하고, 따라서 서로 다른 $a_1, a_2\in A$를 각각 $U_1, U_2$ 위의 자료로 택한 것이 matching family를 이룬다. 그러나 이를 붙인 $X$ 위의 원소는 $\underline{A}^{\mathrm{pre}}(X)=A$의 한 원소여야 하는데 그것이 $U_1$과 $U_2$ 위에서 동시에 $a_1, a_2$로 restrict될 수는 없으므로 amalgamation이 존재하지 않는다. 한편 두 원소가 모든 $U_i$ 위에서 일치하면 같으므로 이 presheaf는 separated이다. 그 sheafification은 locally constant 함수의 sheaf $\underline{A}$로, $\underline{A}(X)=A\times A$이다.
+$X$가 비어 있지 않은 두 connected 열린집합의 disjoint union $X=U_1\sqcup U_2$인 위상공간이라 하고, 원소가 둘 이상인 집합 $A$에 대하여 상수 presheaf $\underline{A}^{\mathrm{pre}}$를 비어 있지 않은 열린집합 $V$에는 $\underline{A}^{\mathrm{pre}}(V)=A$로, 빈 열린집합에는 $\underline{A}^{\mathrm{pre}}(\emptyset)=\{\ast\}$ (한원소 집합)으로 두고, 비어 있지 않은 열린집합 사이의 restriction을 항등으로 정의하자. Covering $\{U_1, U_2\}$를 생각하면 $U_1\cap U_2=\emptyset$이고 [명제 11](#prop11)의 equalizer에서 겹침을 담는 항이 $\underline{A}^{\mathrm{pre}}(\emptyset)=\{\ast\}$이라 한원소 집합이므로 겹침 조건이 공허하고, 따라서 서로 다른 $a_1, a_2\in A$를 각각 $U_1, U_2$ 위의 자료로 택한 것이 matching family를 이룬다. 그러나 이를 붙인 $X$ 위의 원소는 $\underline{A}^{\mathrm{pre}}(X)=A$의 한 원소여야 하는데 그것이 $U_1$과 $U_2$ 위에서 동시에 $a_1, a_2$로 restrict될 수는 없으므로 amalgamation이 존재하지 않는다. 한편 두 원소가 모든 $U_i$ 위에서 일치하면 같으므로 이 presheaf는 separated이다. 그 sheafification은 locally constant 함수의 sheaf $\underline{A}$로, $\underline{A}(X)=A\times A$이다.
 :::
 
 [예시 12](#ex12)는 separated와 sheaf의 차이를 분명히 보여준다. 자료를 비정합적으로 붙이려는 시도가 실패하는 것이 아니라, 정합적인 국소 자료조차 붙일 대역 자료가 presheaf 안에 없는 것이다. Sheafification은 이러한 결손을 보편적인 방식으로 보충하여 presheaf에 가장 가까운 sheaf를 부여하는 조작이며, site 위에서는 plus construction으로 구성된다.
@@ -207,7 +209,7 @@ $$\Hom_{\Sh}(F^{++}, G)\cong \Hom_{\PSh}(F, G)$$
 [정리 14](#thm14)는 [\[위상수학\] §층, ⁋정의 5](/ko/math/topology/sheaves#def5)에서 다룬 sheafification adjunction을 임의의 site로 확장한다. Left adjoint $a$가 유한 limit을 보존한다는 사실은 특히 중요한데, 이로부터 sheaf 범주가 위상공간의 sheaf 범주와 같은 종류의 좋은 구조를 가짐이 따라온다.
 
 ::: 참고 15
-Site $(\mathcal{C}, \tau)$ 위의 sheaf 범주 $\Sh(\mathcal{C}; \tau)$를 *Grothendieck topos<sub>그로텐디크 토포스</sub>*라 부른다. 이는 작은 site 위의 sheaf 범주와 동치인 범주로 정의되며, 모든 작은 limit과 colimit을 가지고, cartesian closed이며, subobject classifier를 가지는 등 집합 범주 $\Set$이 누리는 형식적 성질의 대부분을 공유한다. $\Set$ 자신은 한원소 위상공간(또는 자명한 site) 위의 sheaf 범주로서 가장 단순한 topos이다. Topos 이론은 그 자체로 방대한 주제이므로 여기에서는 정의를 언급하는 데 그치고, 이후 stack의 맥락에서 필요한 만큼만 다룬다.
+Site $(\mathcal{C}, \tau)$ 위의 sheaf 범주 $\Sh(\mathcal{C}; \tau)$를 *Grothendieck topos<sub>그로텐디크 토포스</sub>*라 부른다. 이는 작은 site 위의 sheaf 범주와 동치인 범주로 정의되며, 모든 작은 limit과 colimit을 가지고, cartesian closed이며, subobject classifier를 가지는 등 집합 범주 $\Set$이 누리는 형식적 성질의 대부분을 공유한다. $\Set$ 자신은 한원소 위상공간(또는 trivial site) 위의 sheaf 범주로서 가장 단순한 topos이다. Topos 이론은 그 자체로 방대한 주제이므로 여기에서는 정의를 언급하는 데 그치고, 이후 stack의 맥락에서 필요한 만큼만 다룬다.
 :::
 
 ## Subcanonical 위상과 representable presheaf
@@ -243,7 +245,7 @@ $$\Hom_{\Ring}(R, A) \rightarrow \Hom_{\Ring}(R, B)\rightrightarrows \Hom_{\Ring
 일반적인 $X$에 대해서는 다음과 같이 붙인다. 두 morphism $g_1, g_2:\Spec B \rightarrow X$이 $\Spec(B\otimes_A B)$ 위에서 일치한다 하자. 위 affine 경우를 $X$의 affine open들에 적용하면 우선 두 morphism이 위상공간 사이의 연속함수로서 일치하고, 이어 각 affine open 위에서 structure sheaf에 대한 위 equalizer로부터 $g_1=g_2$임과, 정합적으로 주어진 morphism이 $\Spec A \rightarrow X$로 유일하게 내려옴을 얻는다. 여기에서 morphism의 상이 faithfully flat base change에 대해 잘 행동함과 quasi-compact 조건이 유한 affine covering으로의 환원을 가능하게 함을 사용한다. 따라서 $h_X$은 fpqc sheaf이다. Fpqc보다 거친 위상의 covering은 fpqc covering이므로 이들에 대해서도 sheaf 조건이 따라온다.
 :::
 
-[정리 17](#thm17)이 stack 이론으로 가는 길을 연다. Scheme $X$를 그 functor of points $h_X:\Sch^\op \rightarrow \Set$과 동일시하면 ([\[스킴\] §점함자, ⁋정리 1](/ko/math/scheme_theory/functor_of_points#thm1)), scheme은 fpqc site $\Sch$ 위의 sheaf 가운데 특별한 것, 즉 적절한 representability 조건을 만족하는 sheaf로 자리매김한다. Functorially 정의된 moduli 문제 $F:\Sch^\op \rightarrow \Set$이 scheme을 표현하는지를 묻는 일은, 먼저 $F$가 fpqc sheaf인지를 확인하고 ([\[스킴\] §충실평탄 하강, ⁋정리 9](/ko/math/scheme_theory/faithfully_flat_descent#thm9)의 하강 논증과 같은 방식으로) 이어 그것이 국소적으로 표현가능한지를 보는 두 단계로 나뉜다. Stack은 이 그림에서 sheaf의 값을 집합 대신 groupoid로 확장하여, 점들이 비자명한 automorphism을 가지는 moduli 문제까지 포착하는 일반화이다. 그 정의와 전개는 이후의 글로 미룬다.
+[정리 17](#thm17)이 stack 이론으로 가는 길을 연다. Scheme $X$를 그 functor of points $h_X:\Sch^\op \rightarrow \Set$과 동일시하면 ([\[스킴\] §점함자, ⁋정리 1](/ko/math/scheme_theory/functor_of_points#thm1)), scheme은 fpqc site $\Sch$ 위의 sheaf 가운데 특별한 것, 즉 적절한 representability 조건을 만족하는 sheaf로 자리매김한다. Functorially 정의된 moduli 문제 $F:\Sch^\op \rightarrow \Set$이 scheme을 표현하는지를 묻는 일은, 먼저 $F$가 fpqc sheaf인지를 확인하고 ([\[스킴\] §충실평탄 하강, ⁋정리 9](/ko/math/scheme_theory/faithfully_flat_descent#thm9)의 하강 논증과 같은 방식으로) 이어 그것이 국소적으로 representable한지를 보는 두 단계로 나뉜다. Stack은 이 그림에서 sheaf의 값을 집합 대신 groupoid로 확장하여, 점들이 비자명한 automorphism을 가지는 moduli 문제까지 포착하는 일반화이다. 그 정의와 전개는 이후의 글로 미룬다.
 
 ## $\mathbb{G}_a$의 sheaf 성질
 

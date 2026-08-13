@@ -108,7 +108,7 @@ $$
 T_p^{\mathbb{C}} M = T_p^{1,0} M \oplus T_p^{0,1} M
 $$
 
-이 성립한다. $T_p^{\mathbb{C}} M$ 위의 복소켤레 $\overline{v \otimes \lambda} = v \otimes \bar{\lambda}$는 $J_p$와 가환이 아니라 반가환($J_p \bar{v} = \overline{J_p v}$를 쓰면 $+i$ 고유벡터의 켤레는 $-i$ 고유벡터)이므로, 켤레는 두 고유공간을 맞바꾼다.
+이 성립한다. $T_p^{\mathbb{C}} M$ 위의 복소켤레 $\overline{v \otimes \lambda} = v \otimes \bar{\lambda}$는 $J_p$와 가환이지만 ($J_p \bar{v} = \overline{J_p v}$) $\mathbb{C}$ 위에서 반선형이므로, $+i$ 고유벡터의 켤레는 $-i$ 고유벡터가 되어 켤레는 두 고유공간을 맞바꾼다.
 
 ::: 명제 5
 복소켤레는 $\overline{T_p^{1,0} M} = T_p^{0,1} M$을 만족한다. 따라서 두 부분공간은 같은 복소차원 $n$을 가진다.
@@ -134,10 +134,10 @@ $$
 Cotangent space의 분해를 exterior algebra로 끌어올리면 복소화 differential form이 차수별로 정밀하게 갈라진다. 이 (p,q)-분해는 적분가능성을 differential form의 언어로 옮기는 데 쓰이며, 더 나아가 Dolbeault 이론 전체의 무대가 된다.
 
 ::: 정의 6
-거의 complex manifold $(M, J)$ 위의 복소화 differential form의 다발을 $\Lambda^k_{\mathbb{C}} = \bigwedge^k (T^\ast M) \otimes_{\mathbb{R}} \mathbb{C}$라 하자. 음이 아닌 정수 $p, q$에 대하여 *(p,q)-form<sub>(p,q)-형식</sub>*의 다발 $\Lambda^{p,q}$을 각 점에서
+거의 complex manifold $(M, J)$ 위의 복소화 differential form의 다발을 $\Lambda^k_{\mathbb{C}} = \bigwedge^k (T^\ast M) \otimes_{\mathbb{R}} \mathbb{C}$라 하자. 음이 아닌 정수 $p, q$에 대하여 *(p,q)-form<sub>(p,q)-형식</sub>*의 다발 $\Lambda^{p,q}$을 각 점 $x$에서
 
 $$
-\Lambda^{p,q}_p = \left( \bigwedge\nolimits^p \Lambda^{1,0}_p \right) \wedge \left( \bigwedge\nolimits^q \Lambda^{0,1}_p \right)
+\Lambda^{p,q}_x = \left( \bigwedge\nolimits^p \Lambda^{1,0}_x \right) \wedge \left( \bigwedge\nolimits^q \Lambda^{0,1}_x \right)
 $$
 
 으로 정의한다. $\Lambda^{p,q}$의 smooth 단면 전체를 $\Omega^{p,q}(M)$으로 적는다.
@@ -146,10 +146,10 @@ $$
 말하자면 $(p,q)$-형식은 (1,0)-covector $p$개와 (0,1)-covector $q$개를 wedge한 것들의 $\mathbb{C}$-선형결합이다. 표준 거의 복소구조에서는 국소적으로
 
 $$
-\Omega^{p,q}(M) \ni \omega = \sum_{\lvert I \rvert = p,\ \lvert J \rvert = q} f_{IJ}\dd{z_{i_1}} \wedge \cdots \wedge \dd{z_{i_p}} \wedge \dd{\bar{z}_{j_1}} \wedge \cdots \wedge \dd{\bar{z}_{j_q}}
+\Omega^{p,q}(M) \ni \omega = \sum_{\lvert I \rvert = p,\ \lvert K \rvert = q} f_{IK}\dd{z_{i_1}} \wedge \cdots \wedge \dd{z_{i_p}} \wedge \dd{\bar{z}_{k_1}} \wedge \cdots \wedge \dd{\bar{z}_{k_q}}
 $$
 
-꼴로 적힌다. 여기서 $I = (i_1 < \cdots < i_p)$, $J = (j_1 < \cdots < j_q)$는 증가 다중지표이고 $f_{IJ}$는 smooth 복소함수이다. $\bigwedge^p \Lambda^{1,0}$의 복소차원이 $\binom{n}{p}$, $\bigwedge^q \Lambda^{0,1}$의 복소차원이 $\binom{n}{q}$이므로 $\Lambda^{p,q}$의 fiber 복소차원은 $\binom{n}{p}\binom{n}{q}$이다.
+꼴로 적힌다. 여기서 $I = (i_1 < \cdots < i_p)$, $K = (k_1 < \cdots < k_q)$는 증가 다중지표이고 $f_{IK}$는 smooth 복소함수이다. $\bigwedge^p \Lambda^{1,0}$의 복소차원이 $\binom{n}{p}$, $\bigwedge^q \Lambda^{0,1}$의 복소차원이 $\binom{n}{q}$이므로 $\Lambda^{p,q}$의 fiber 복소차원은 $\binom{n}{p}\binom{n}{q}$이다.
 
 이 자료가 복소화 differential form 전체를 차수별로 분해한다.
 
@@ -164,13 +164,13 @@ $$
 :::
 
 ::: 증명
-각 점 $p$에서 [명제 5](#prop5)의 쌍대 버전으로 $T_p^{\ast\mathbb{C}} M = \Lambda^{1,0}_p \oplus \Lambda^{0,1}_p$이다 (cotangent space 위의 $J_p$ 전치도 $\pm i$ 고유공간 분해를 가진다). 직합으로 분해된 벡터공간 $W = W' \oplus W''$의 exterior algebra는
+각 점 $x$에서 [명제 5](#prop5)의 쌍대 버전으로 $T_x^{\ast\mathbb{C}} M = \Lambda^{1,0}_x \oplus \Lambda^{0,1}_x$이다 (cotangent space 위의 $J_x$ 전치도 $\pm i$ 고유공간 분해를 가진다). 직합으로 분해된 벡터공간 $W = W' \oplus W''$의 exterior algebra는
 
 $$
 \bigwedge\nolimits^k W = \bigoplus_{p+q=k} \left( \bigwedge\nolimits^p W' \right) \wedge \left( \bigwedge\nolimits^q W'' \right)
 $$
 
-으로 분해된다 (exterior algebra의 보편성에서 따라오는 표준 동형이다). $W = T_p^{\ast\mathbb{C}} M$, $W' = \Lambda^{1,0}_p$, $W'' = \Lambda^{0,1}_p$에 적용하면 우변의 $(p,q)$-항이 정확히 $\Lambda^{p,q}_p$이므로 점별 분해를 얻는다. 이 분해가 점에 대해 매끄럽게 변하므로 다발의 직합 분해가 되고 ([\[미분다양체\] §미분형식, ⁋정의 1](/ko/math/manifolds/differential_forms#def1)의 $\Omega^k$를 복소화한 것이다), 단면을 취하면 $\Omega^k(M)\otimes\mathbb{C}$의 분해가 된다.
+으로 분해된다 (exterior algebra의 보편성에서 따라오는 표준 동형이다). $W = T_x^{\ast\mathbb{C}} M$, $W' = \Lambda^{1,0}_x$, $W'' = \Lambda^{0,1}_x$에 적용하면 우변의 $(p,q)$-항이 정확히 $\Lambda^{p,q}_x$이므로 점별 분해를 얻는다. 이 분해가 점에 대해 매끄럽게 변하므로 다발의 직합 분해가 되고 ([\[미분다양체\] §미분형식, ⁋정의 1](/ko/math/manifolds/differential_forms#def1)의 $\Omega^k$를 복소화한 것이다), 단면을 취하면 $\Omega^k(M)\otimes\mathbb{C}$의 분해가 된다.
 :::
 
 이 분해 자체는 임의의 거의 복소구조에서 성립하므로, 거의 복소구조만 있으면 (p,q)-형식을 말할 수 있다. 그러나 exterior derivative $d$가 이 분해와 어떻게 어울리는가는 거의 복소구조가 적분가능한지에 달려 있다. 적분가능성이 바로 이 어긋남을 재는 척도이며, 다음 절에서 그 정밀한 동치들을 세운다.
@@ -198,7 +198,7 @@ $$
 표현식에 Lie bracket이 들어 있어 처음에는 미분연산자처럼 보이지만, 실제로는 함수에 대해 $C^\infty(M)$-쌍선형이어서 각 점에서의 값이 그 점에서의 $X_p, Y_p$에만 의존한다. 곧 $N_J$는 진짜 텐서이다.
 
 ::: 명제 10
-Nijenhuis 텐서 $N_J$는 두 변수 모두에서 $C^\infty(M)$-선형이고 반대칭이다. 따라서 각 점 $p$에서 $N_J(X, Y)\vert_p$는 $X_p, Y_p$에만 의존하는 $(2,1)$-텐서를 정의한다.
+Nijenhuis 텐서 $N_J$는 두 변수 모두에서 $C^\infty(M)$-선형이고 반대칭이다. 따라서 각 점 $p$에서 $N_J(X, Y)\vert_p$는 $X_p, Y_p$에만 의존하는 $(1,2)$-텐서를 정의한다.
 :::
 
 ::: 증명
@@ -284,7 +284,7 @@ Smooth($C^\infty$) 경우에는 해석성이 없어 위 논법이 작동하지 �
 유일성은 두 복소구조가 같은 $J$를 주면 두 좌표계의 transition function이 양쪽 모두에서 $\bar\partial$를 죽여 holomorphic이 되고, 따라서 두 복소구조가 양립가능하다는 데서 따라온다.
 :::
 
-이 정리는 거의 complex manifold의 미분기하와 complex manifold의 holomorphic 기하 사이를 잇는 다리이다. 적분가능성이라는 대역적·해석적 조건이 Nijenhuis 텐서라는 점별 텐서의 소멸로 환원되므로, 주어진 $J$가 복소구조에서 오는지를 국소 계산만으로 판정할 수 있다. 실차원 $2$에서는 $N_J$가 반대칭 $(2,1)$-텐서인데 $\binom{2}{2} = 1$차원 입력 공간에서 반대칭성이 강하여 $N_J$가 항상 $0$이 된다. 곧 모든 거의 복소구조가 적분가능하며, 향위 곡면(orientable surface) 위의 거의 복소구조는 언제나 복소구조, 곧 Riemann surface 구조를 준다. 차원이 올라가면 $N_J \neq 0$인 거의 복소구조가 풍부하게 나타나, 적분가능성이 진정한 제약이 된다.
+이 정리는 거의 complex manifold의 미분기하와 complex manifold의 holomorphic 기하 사이를 잇는 다리이다. 적분가능성이라는 대역적·해석적 조건이 Nijenhuis 텐서라는 점별 텐서의 소멸로 환원되므로, 주어진 $J$가 복소구조에서 오는지를 국소 계산만으로 판정할 수 있다. 실차원 $2$에서는 $N_J$가 항상 $0$이 된다. 정의식에 $Y = JX$를 넣으면 $[JX, JX] = 0$과 $J(JX) = -X$에서 $N_J(X, JX) = [X, JX] + [JX, X] = 0$이고, 한편 $0 \neq v \in T_p M$에 대하여 $J_p v = a v$가 되는 실수 $a$는 $-v = a^2 v$를 낳아 존재할 수 없으므로 $\{v, J_p v\}$가 $T_p M$의 기저이기 때문이다. 반대칭인 $N_J$가 이 기저의 두 벡터에서 소멸하면 $p$에서 $N_J$ 전체가 소멸한다. 곧 모든 거의 복소구조가 적분가능하며, orientable surface 위의 거의 복소구조는 언제나 복소구조, 곧 Riemann surface 구조를 준다. 차원이 올라가면 $N_J \neq 0$인 거의 복소구조가 풍부하게 나타나, 적분가능성이 진정한 제약이 된다.
 
 ## 예시
 
@@ -298,13 +298,13 @@ J_0\!\left( \frac{\partial}{\partial x_j} \right) = \frac{\partial}{\partial y_j
 J_0\!\left( \frac{\partial}{\partial y_j} \right) = -\frac{\partial}{\partial x_j}
 $$
 
-으로 상수계수 거의 복소구조 $J_0$를 정의하면, 이는 동일시 $z_j = x_j + i y_j$로 $\mathbb{R}^{2n} = \mathbb{C}^n$에 준 복소구조의 표준 $J$이다. $J_0$의 성분이 상수이므로 모든 Lie bracket이 소멸하여 $N_{J_0} = 0$이고, 따라서 적분가능하다. 이는 $\mathbb{C}^n$이 complex manifold라는 사실의 거의 복소구조 버전이다.
+으로 상수계수 거의 복소구조 $J_0$를 정의하면, 이는 동일시 $z_j = x_j + i y_j$로 $\mathbb{R}^{2n} = \mathbb{C}^n$에 준 복소구조의 표준 $J$이다. $N_{J_0}$가 점별로 결정된다는 [명제 10](#prop10)에 의해 좌표 벡터장에서의 값만 확인하면 되는데, $J_0$가 좌표 벡터장을 좌표 벡터장으로 보내고 좌표 벡터장들끼리의 Lie bracket은 모두 $0$이므로 $N_{J_0} = 0$이고, 따라서 적분가능하다. 이는 $\mathbb{C}^n$이 complex manifold라는 사실의 거의 복소구조 버전이다.
 :::
 
 콤팩트한 예로 가장 기본적인 것은 리만 구면이다.
 
 ::: 예시 14 ($S^2 \cong \mathbb{CP}^1$)
-$2$차원 구면 $S^2$는 complex manifold $\mathbb{CP}^1$의 바탕 smooth manifold이며 ([§복소다양체, ⁋예시 9](/ko/math/complex_geometry/complex_manifolds#ex9)), 그 표준 거의 복소구조는 적분가능하다. 더 일반적으로 위 정리 12 직후의 관찰에 따라, $S^2$ 위의 임의의 거의 복소구조는 실차원 $2$이므로 $N_J = 0$을 자동으로 만족하여 적분가능하다. 따라서 $S^2$ 위의 모든 거의 복소구조는 어떤 Riemann surface 구조에서 온다.
+$2$차원 구면 $S^2$는 complex manifold $\mathbb{CP}^1$의 바탕 smooth manifold이며 ([§복소다양체, ⁋예시 9](/ko/math/complex_geometry/complex_manifolds#ex9)), 그 표준 거의 복소구조는 적분가능하다. 더 일반적으로 [정리 12](#thm12) 직후의 관찰에 따라, $S^2$ 위의 임의의 거의 복소구조는 실차원 $2$이므로 $N_J = 0$을 자동으로 만족하여 적분가능하다. 따라서 $S^2$ 위의 모든 거의 복소구조는 어떤 Riemann surface 구조에서 온다.
 :::
 
 적분불가능성이 처음 본격적으로 나타나는 것은 $S^6$이다.

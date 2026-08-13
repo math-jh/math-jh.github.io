@@ -35,13 +35,13 @@ Flat ring homomorphism $\varphi: A \rightarrow B$에 대하여 다음이 동치�
 3. $\varphi$가 유도하는 morphism $\Spec B \rightarrow \Spec A$는 surjective이다.
 :::
 ::: 증명
-(1) $\Rightarrow$ (2). $B$가 flat이므로 정확한 sequence는 $-\otimes_A B$ 후에도 정확하다. 역을 보이기 위해 $M' \xrightarrow{f} M \xrightarrow{g} M''$이 $-\otimes_A B$ 후 정확하다 하자. $H=\ker g/\im f$라 두면, $B$가 flat이므로 homology가 tensor와 commute하여 $H\otimes_A B=\ker(g\otimes 1)/\im(f\otimes 1)=0$이다. 충실성에 의해 $H=0$이고 따라서 원래 sequence가 정확하다.
+(1) $\Rightarrow$ (2). $B$가 flat이므로 정확한 sequence는 $-\otimes_A B$ 후에도 정확하다. 역을 보이기 위해 $M' \xrightarrow{f} M \xrightarrow{g} M''$이 $-\otimes_A B$ 후 정확하다 하자. 우선 $g\circ f=0$이다. 실제로 $(g\otimes 1)\circ(f\otimes 1)=0$이므로 $\im(g\circ f)\otimes_A B \rightarrow M''\otimes_A B$의 image가 $0$인데, $\im(g\circ f)$가 $M''$의 submodule이고 $B$가 flat이므로 이 morphism은 단사여서 $\im(g\circ f)\otimes_A B=0$이고, 충실성에 의해 $\im(g\circ f)=0$이다. 그럼 $H=\ker g/\im f$라 두면, $B$가 flat이므로 homology가 tensor와 commute하여 $H\otimes_A B=\ker(g\otimes 1)/\im(f\otimes 1)=0$이다. 충실성에 의해 $H=0$이고 따라서 원래 sequence가 정확하다.
 
 (2) $\Rightarrow$ (1). $M\otimes_A B=0$이라 하면, sequence $0 \rightarrow M \rightarrow 0$이 $-\otimes_A B$ 후 정확하므로 (2)에 의해 $0 \rightarrow M \rightarrow 0$이 정확하여 $M=0$이다. 따라서 $\varphi$는 faithfully flat이다.
 
-(1) $\Rightarrow$ (3). 임의의 $\mathfrak{p}\in \Spec A$에 대하여 잔여체 $\kappa(\mathfrak{p})=A_\mathfrak{p}/\mathfrak{p}A_\mathfrak{p}$를 생각하면, $\mathfrak{p}$가 $\varphi$의 image에 속하는 것은 fiber $\Spec(B\otimes_A \kappa(\mathfrak{p}))$가 비어있지 않은 것, 즉 $B\otimes_A \kappa(\mathfrak{p})\neq 0$인 것과 동치이다. ([§올곱, ⁋예시 9](/ko/math/scheme_theory/fiber_products#ex9)) 그런데 $\kappa(\mathfrak{p})\neq 0$이므로 충실성에 의해 $\kappa(\mathfrak{p})\otimes_A B\neq 0$이고, 따라서 $\mathfrak{p}$는 image에 속한다.
+(1) $\Rightarrow$ (3). 임의의 $\mathfrak{p}\in \Spec A$에 대하여 잔여체 $\kappa(\mathfrak{p})=A_\mathfrak{p}/\mathfrak{p}A_\mathfrak{p}$를 생각하면, $\mathfrak{p}$가 $\Spec B \rightarrow \Spec A$의 image에 속하는 것은 fiber $\Spec(B\otimes_A \kappa(\mathfrak{p}))$가 비어있지 않은 것, 즉 $B\otimes_A \kappa(\mathfrak{p})\neq 0$인 것과 동치이다. ([§올곱, ⁋예시 9](/ko/math/scheme_theory/fiber_products#ex9)) 그런데 $\kappa(\mathfrak{p})\neq 0$이므로 충실성에 의해 $\kappa(\mathfrak{p})\otimes_A B\neq 0$이고, 따라서 $\mathfrak{p}$는 image에 속한다.
 
-(3) $\Rightarrow$ (1). $M\neq 0$인 $A$-module을 잡고 $0\neq x\in M$을 택하면, $Ax\cong A/\mathfrak{a}$ ($\mathfrak{a}=\operatorname{Ann}(x)$)인 submodule이 있다. $\mathfrak{a}\subseteq \mathfrak{m}$인 maximal ideal $\mathfrak{m}$을 잡으면, (3)에 의해 $\mathfrak{m}$은 $\varphi$의 image에 속하므로 $\kappa(\mathfrak{m})\otimes_A B\neq 0$이다. 전사 $A/\mathfrak{a}\twoheadrightarrow A/\mathfrak{m}=\kappa(\mathfrak{m})$에 $-\otimes_A B$를 적용하면 (tensor product는 우완전) 전사 $(A/\mathfrak{a})\otimes_A B\twoheadrightarrow \kappa(\mathfrak{m})\otimes_A B$를 얻는데, 우변이 $0$이 아니므로 $(A/\mathfrak{a})\otimes_A B\neq 0$이다. 다시 $A/\mathfrak{a}=Ax\hookrightarrow M$에 flatness를 적용하면 $(A/\mathfrak{a})\otimes_A B\hookrightarrow M\otimes_A B$이므로 $M\otimes_A B\neq 0$이다.
+(3) $\Rightarrow$ (1). $M\neq 0$인 $A$-module을 잡고 $0\neq x\in M$을 택하면, $Ax\cong A/\mathfrak{a}$ ($\mathfrak{a}=\operatorname{Ann}(x)$)인 submodule이 있다. $\mathfrak{a}\subseteq \mathfrak{m}$인 maximal ideal $\mathfrak{m}$을 잡으면, (3)에 의해 $\mathfrak{m}$은 $\Spec B \rightarrow \Spec A$의 image에 속하므로 $\kappa(\mathfrak{m})\otimes_A B\neq 0$이다. 전사 $A/\mathfrak{a}\twoheadrightarrow A/\mathfrak{m}=\kappa(\mathfrak{m})$에 $-\otimes_A B$를 적용하면 (tensor product는 우완전) 전사 $(A/\mathfrak{a})\otimes_A B\twoheadrightarrow \kappa(\mathfrak{m})\otimes_A B$를 얻는데, 우변이 $0$이 아니므로 $(A/\mathfrak{a})\otimes_A B\neq 0$이다. 다시 $A/\mathfrak{a}=Ax\hookrightarrow M$에 flatness를 적용하면 $(A/\mathfrak{a})\otimes_A B\hookrightarrow M\otimes_A B$이므로 $M\otimes_A B\neq 0$이다.
 :::
 
 [명제 2](#prop2)의 둘째 조건이 하강 이론 전체를 떠받치는 사실이다. 정확성을 base change로 검사할 수 있다는 것은, $B$ 위에서 성립하는 정확성에 관한 진술이 $A$ 위로 그대로 내려온다는 것을 뜻한다. 특별히 $M' \rightarrow M$이 단사 또는 전사인 것도 $-\otimes_A B$ 후의 단사·전사로 판정된다. 셋째 조건은 이 대수적 성질이 정확히 morphism $\Spec B \rightarrow \Spec A$의 전사성에 대응함을 보여주며, 따라서 faithfully flat ring homomorphism은 [§평탄사상, ⁋정의 1](/ko/math/scheme_theory/flat_morphisms#def1)의 affine faithfully flat morphism에 다름 아니다.
@@ -89,11 +89,11 @@ $$b\otimes b'=t(b\otimes 1\otimes b')=t(b\otimes b'\otimes 1)=bb'\otimes 1=(\var
 
 $B$-module $N$이 어떤 $A$-module $M$의 base change $M\otimes_A B$로부터 왔다고 하자. 그럼 $N\otimes_A B$를 만드는 두 방법, 즉 $N$의 $B$-구조를 첫째 인수로 보느냐 둘째 인수로 보느냐에 따라 $B\otimes_A B$-module 두 개가 생기는데, $N=M\otimes_A B$인 경우 둘 다 $M\otimes_A B\otimes_A B$와 같아져 자연스러운 동형을 가진다. Descent datum은 이 동형을 추상적인 출발 데이터로 승격한 것이다.
 
-표기를 고정하자. $B\otimes_A B$ 위에서 세 morphism
+표기를 고정하자. 다음의 morphism들
 
 $$p_1, p_2: B \rightrightarrows B\otimes_A B,\qquad p_{12}, p_{13}, p_{23}: B\otimes_A B \rightrightarrows B\otimes_A B\otimes_A B$$
 
-를 둔다. 여기에서 $p_1(b)=b\otimes 1$, $p_2(b)=1\otimes b$이고, $p_{12}, p_{13}, p_{23}$은 세 인수 가운데 표시된 두 자리로 보내는 자명한 morphism이다. $B$-module $N$에 대하여 $p_i^\ast N=N\otimes_{B, p_i}(B\otimes_A B)$로 적으면, $p_1^\ast N=N\otimes_A B$ (둘째 인수에 새 $B$를 붙임), $p_2^\ast N=B\otimes_A N$ (첫째 인수에 붙임)이다.
+을 둔다. 여기에서 $p_1(b)=b\otimes 1$, $p_2(b)=1\otimes b$이고, $p_{12}, p_{13}, p_{23}$은 세 인수 가운데 표시된 두 자리로 보내는 자명한 morphism이다. $B$-module $N$에 대하여 $p_i^\ast N=N\otimes_{B, p_i}(B\otimes_A B)$로 적으면, $p_1^\ast N=N\otimes_A B$ (둘째 인수에 새 $B$를 붙임), $p_2^\ast N=B\otimes_A N$ (첫째 인수에 붙임)이다.
 
 ::: 정의 4
 $\varphi: A \rightarrow B$에 대한 *descent datum<sub>하강 자료</sub>*은 $B$-module $N$과 $B\otimes_A B$-module isomorphism
@@ -192,7 +192,7 @@ $$\varphi_N\bigl((\theta\otimes 1)(m\otimes b\otimes b')\bigr)=\varphi_N(bm\otim
 이고, 이는 [예시 5](#ex5)의 동일시 아래에서 $(1\otimes \theta)(b\otimes m\otimes b')$과 같다. Naturality도 원소 계산이다. Descent datum의 morphism $g: (N, \varphi_N) \rightarrow (N', \varphi_{N'})$와 $N'$ 쪽의 같은 구성 $\theta'$에 대하여, $g$가 $B$-linear이고 invariant를 invariant로 보내므로 $g(\theta(m\otimes b))=g(bm)=bg(m)=\theta'\bigl((g\vert_{N^\varphi}\otimes 1)(m\otimes b)\bigr)$, 곧 $g\circ\theta=\theta'\circ(g\vert_{N^\varphi}\otimes 1)$이다. 따라서 두 합성 모두 항등 functor와 natural isomorphism이고, 두 functor는 서로 quasi-inverse이다.
 :::
 
-[정리 6](#thm6)은 faithfully flat morphism을 따라 module이 완전히 하강함을 말한다. $B$ 위의 module $N$에 $B\otimes_A B$ 위의 cocycle 동형 하나를 더하면, 그것은 유일한 $A$-module $M$의 base change이다. 이 정리의 직접적인 결과로, module의 여러 성질들이 faithfully flat base change에 대해 내려온다. 가령 $M\otimes_A B$가 finitely generated $B$-module이면 $M$도 finitely generated이고, $M\otimes_A B$가 finitely presented이면 $M$도 finitely presented이며, $M\otimes_A B$가 flat 또는 projective이면 $M$ 역시 그러하다. 이들은 모두 해당 성질이 정확열로 표현되고 [명제 2](#prop2)가 그 정확성을 $A$ 위로 반영하기 때문이다.
+[정리 6](#thm6)은 faithfully flat morphism을 따라 module이 완전히 하강함을 말한다. $B$ 위의 module $N$에 $B\otimes_A B$ 위의 cocycle 동형 하나를 더하면, 그것은 유일한 $A$-module $M$의 base change이다. 이 정리의 직접적인 결과로, module의 여러 성질들이 faithfully flat base change에 대해 내려온다. 가령 $M\otimes_A B$가 finitely generated $B$-module이면 $M$도 finitely generated이고, $M\otimes_A B$가 finitely presented이면 $M$도 finitely presented이며, $M\otimes_A B$가 flat이면 $M$ 역시 그러하다. 이들은 모두 해당 성질이 정확열로 표현되고 [명제 2](#prop2)가 그 정확성을 $A$ 위로 반영하기 때문이다.
 
 ::: 명제 7
 $\varphi: A \rightarrow B$가 faithfully flat이고 $M$이 $A$-module이라 하자. 그럼 $M$이 finitely generated(각각 finitely presented, flat, locally free of finite rank)인 것은 $M\otimes_A B$가 $B$-module로서 finitely generated(각각 finitely presented, flat, locally free of finite rank)인 것과 동치이다.

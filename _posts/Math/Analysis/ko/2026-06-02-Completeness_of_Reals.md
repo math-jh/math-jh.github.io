@@ -16,7 +16,7 @@ drift_needed: true
 published: false
 ---
 
-[\[미적분학\] §함수의 극한](/ko/math/calculus/functions_and_limits)에서 우리는 극한을 다루며 실수의 "빈틈 없음"을 직관적으로 사용하였고, 중간값 정리의 [§연결성과 중간값 정리, ⁋따름정리 6](/ko/math/analysis/connectedness#cor6)가 유리수 위에서는 성립하지 않음을 지적하였다. 해석학은 이 직관적 성질을 하나의 공리로 명확히 못박는 데서 출발한다. 그것이 *완비성*이며, 극한과 최댓값과 적분의 존재를 비롯한 미적분학의 모든 존재 정리가 궁극적으로 여기에 기댄다.
+[\[미적분학\] §함수의 극한](/ko/math/calculus/functions_and_limits)에서 우리는 극한을 다루며 실수의 "빈틈 없음"을 직관적으로 사용하였다. 완비성이 없는 유리수 위에서는 [§연결성과 중간값 정리, ⁋따름정리 6](/ko/math/analysis/connectedness#cor6)가 성립하지 않는다. 해석학은 이 직관적 성질을 하나의 공리로 명확히 못박는 데서 출발한다. 그것이 *완비성*이며, 극한과 최댓값과 적분의 존재를 비롯한 미적분학의 모든 존재 정리가 궁극적으로 여기에 기댄다.
 
 ## 순서체로서의 실수
 
@@ -28,7 +28,7 @@ published: false
 $S \subseteq \mathbb{R}$가 공집합이 아니라 하자. 실수 $M$이 $S$의 *upper bound<sub>상계</sub>*라는 것은 모든 $s \in S$에 대해 $s \leq M$인 것이고, upper bound가 하나라도 존재하면 $S$를 *bounded above<sub>위로 유계</sub>*라 한다. $S$의 upper bound 중 가장 작은 것이 존재하면 그것을 $S$의 *상한<sub>supremum</sub>*이라 하고 $\sup S$로 적는다. Symmetric하게 *lower bound<sub>하계</sub>*, *bounded below*, *하한* $\inf S$를 정의한다.
 :::
 
-상한 $\alpha = \sup S$는 두 조건으로 특징지어진다: (i) $\alpha$는 upper bound이다 (모든 $s \in S$에 대해 $s \leq \alpha$); (ii) $\alpha$는 가장 작은 upper bound이다 — 즉 임의의 $\varepsilon > 0$에 대해 $\alpha - \varepsilon$은 더 이상 upper bound가 아니므로 $s > \alpha - \varepsilon$인 $s \in S$가 존재한다. 조건 (ii)의 이 형태는 앞으로 거듭 쓰인다.
+상한 $\alpha = \sup S$는 두 조건으로 특징지어진다: (i) $\alpha$는 upper bound이다 (모든 $s \in S$에 대해 $s \leq \alpha$); (ii) $\alpha$는 가장 작은 upper bound이다. 즉 임의의 $\varepsilon > 0$에 대해 $\alpha - \varepsilon$은 더 이상 upper bound가 아니므로 $s > \alpha - \varepsilon$인 $s \in S$가 존재한다. 조건 (ii)의 이 형태는 앞으로 거듭 쓰인다.
 
 ## 완비성 공리
 
@@ -48,11 +48,11 @@ Bounded below인 공집합이 아닌 모든 $S \subseteq \mathbb{R}$은 하한 $
 $-S = \{-s \mid s \in S\}$를 생각하자. $S$가 lower bound $m$을 가지면 $-m$은 $-S$의 upper bound이므로 $-S$는 bounded above이고, [정의 2](#def2)에 의해 $\alpha = \sup(-S)$가 존재한다. 그러면 $-\alpha = \inf S$임이 정의로부터 직접 확인된다.
 :::
 
-## 아르키메데스 성질과 조밀성
+## Archimedean property와 density
 
 완비성의 첫 수확은 "자연수가 한없이 커진다"는 당연해 보이는 사실인데, 놀랍게도 이는 완비성 없이는 보장되지 않는다.
 
-::: 정리 4 (아르키메데스 성질)
+::: 정리 4 (Archimedean property)
 임의의 실수 $x$에 대하여, $n > x$인 자연수 $n$이 존재한다.
 :::
 
@@ -62,7 +62,7 @@ $-S = \{-s \mid s \in S\}$를 생각하자. $S$가 lower bound $m$을 가지면 
 
 Archimedean property의 동치 형태로, 임의의 $\varepsilon > 0$에 대해 $1/n < \varepsilon$인 자연수 $n$이 존재한다 ($n > 1/\varepsilon$을 잡으면 된다). 이로부터 유리수가 실수 안에 촘촘히 들어차 있음을 얻는다.
 
-::: 정리 5 (유리수의 조밀성)
+::: 정리 5 (유리수의 density)
 임의의 두 실수 $a < b$ 사이에는 유리수 $q$가 존재한다. 즉 $a < q < b$인 $q \in \mathbb{Q}$가 있다.
 :::
 
@@ -106,13 +106,13 @@ $$\begin{aligned}
 이므로 $\lambda\alpha - \varepsilon$ 또한 upper bound가 아니다. 따라서 $\sup(\lambda S) = \lambda\alpha$이다.
 :::
 
-위 명제에서 $\lambda > 0$이라는 가정은 본질적이다. $\lambda = -1$이면 부등호의 방향이 뒤집혀 upper bound가 lower bound로 바뀌고, 실제로 [명제 3](#prop3)의 증명에서 본 대로 $\sup(-S) = -\inf S$가 된다. 일반적으로 음수배는 상한과 하한을 맞바꾼다.
+위 명제에서 $\lambda > 0$이라는 가정은 본질적이다. $\lambda = -1$이면 부등호의 방향이 뒤집혀 upper bound가 lower bound로 바뀌고, 실제로 [명제 3](#prop3)의 증명과 같은 논증으로 $\inf(-S) = -\sup S$가 된다. 일반적으로 음수배는 상한과 하한을 맞바꾼다.
 
-## 중첩구간정리
+## Nested interval theorem
 
 완비성의 가장 기하학적인 표현 가운데 하나는 "끝없이 줄어드는 closed 구간들의 사슬은 빈 곳을 남기지 않는다"는 것이다. 이는 십진법 전개로 실수를 구성하는 직관의 바탕이 된다.
 
-::: 정리 7 (중첩구간정리)
+::: 정리 7 (nested interval theorem)
 Closed 구간들의 중첩하는 사슬 $I_1 \supseteq I_2 \supseteq I_3 \supseteq \cdots$, $I_n = [a_n, b_n]$ ($a_n \leq b_n$) 에 대하여 교집합 $\bigcap_{n=1}^\infty I_n$은 공집합이 아니다.
 :::
 
@@ -136,8 +136,8 @@ $$a_n \leq \alpha \leq b_n \quad (\forall n), \qquad \text{즉} \quad \alpha \in
 
 Closed 구간이라는 조건은 없앨 수 없다. 반열린 구간 $I_n = \left(0, \frac1n\right]$을 보면 모두 중첩하지만 임의의 $x > 0$은 Archimedean property로 $\frac1n < x$가 되는 순간 빠져나가므로 $\bigcap_n I_n = \emptyset$이다. 구간의 길이 $b_n - a_n$이 $0$으로 줄어드는 경우에는 교집합이 정확히 한 점이 되며, 이 한 점이 모든 $a_n$의 상한이자 모든 $b_n$의 하한이다.
 
-::: 예시 8 (길이가 줄어드는 구간과 십진 전개)
-실수 $x$의 decimal expansion은 중첩구간정리의 전형적 사례이다. $x = 0. d_1 d_2 d_3 \cdots$ ($d_k \in \{0, 1, \dots, 9\}$) 에 대해
+::: 예시 8 (길이가 줄어드는 구간과 decimal expansion)
+실수 $x$의 decimal expansion은 nested interval theorem의 전형적 사례이다. $x = 0. d_1 d_2 d_3 \cdots$ ($d_k \in \{0, 1, \dots, 9\}$) 에 대해
 
 $$I_n = \left[  0.d_1\cdots d_n,\ \ 0.d_1\cdots d_n + 10^{-n}  \right]$$
 

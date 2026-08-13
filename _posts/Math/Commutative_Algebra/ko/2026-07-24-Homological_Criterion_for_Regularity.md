@@ -52,7 +52,7 @@ $$\mathfrak{m}/x\mathfrak{m}=(xA/x\mathfrak{m})\oplus((N+x\mathfrak{m})/x\mathfr
 
 이 보조정리에서 $\mathfrak{m}/xA$는 다른 것이 아니라 $\overline{A}$의 maximal ideal $\overline{\mathfrak{m}}$이다. 즉 $\mathfrak{m}/x\mathfrak{m}\cong\overline{\mathfrak{m}}\oplus\kappa$이고, 좌변의 projective dimension은 [§Auslander-Buchsbaum 공식, ⁋보조정리 2](/ko/math/commutative_algebra/auslander_buchsbaum_formula#lem2)로 통제되므로 direct summand인 $\kappa$의 projective dimension도 따라서 통제된다.
 
-조건 $x\not\in\mathfrak{m}^2$은 생략할 수 없다. 가령 $A=\mathbb{K}[[\x]]$에서 $x=\x^2$을 택하면 $\mathfrak{m}/x\mathfrak{m}=(\x)/(\x^3)$은 $\x$의 class로 생성되는 cyclic module로서 그 annihilator가 $(\x^2)$인 반면, $(\mathfrak{m}/xA)\oplus\kappa=(\x)/(\x^2)\oplus\kappa$는 $\mathfrak{m}$ 전체에 의해 annihilate되므로 두 module은 isomorphic하지 않다. 증명에서 $x$의 image를 $\mathfrak{m}/\mathfrak{m}^2$의 basis로 확장하는 첫 단계가 정확히 이 조건을 사용하는 자리이다. 위의 관찰을 정확히 적으면 다음과 같다.
+조건 $x\not\in\mathfrak{m}^2$은 생략할 수 없다. 가령 $A=\mathbb{K}[[\x]]$에서 $x=\x^2$을 택하면 $\mathfrak{m}/x\mathfrak{m}=(\x)/(\x^3)$은 $\x$의 class로 생성되는 cyclic module로서 그 annihilator가 $(\x^2)$인 반면, $(\mathfrak{m}/xA)\oplus\kappa=(\x)/(\x^2)\oplus\kappa$는 $\mathfrak{m}$ 전체에 의해 annihilate되므로 두 module은 isomorphic하지 않다. 증명에서 $x$의 image를 $\mathfrak{m}/\mathfrak{m}^2$의 basis로 확장하는 첫 단계가 정확히 이 조건을 사용하는 곳이다. 위의 관찰을 정확히 적으면 다음과 같다.
 
 ::: 보조정리 2
 [보조정리 1](#lem1)의 상황에서, $\pd_A\kappa<\infty$이면 $\pd_{\overline{A}}\kappa<\infty$이다.
@@ -350,7 +350,7 @@ $$\mathfrak{p}A_x=(p/1)A_x=(\pi/1)A_x$$
 
 증명의 뼈대를 되짚어보면, $x\in\mathfrak{m}\setminus\mathfrak{m}^2$이 prime element라는 사실은 $A$가 regular라는 것에서 나오고, $x$를 invert한 ring $A_x$는 국소적으로 더 작은 차원의 regular local ring들로 이루어져 귀납이 작동하며, $\mathfrak{p}A_x$의 유한 free resolution은 locally principal ideal을 진짜 principal ideal로 승격시키는 지점에서 개입한다. 유한한 free resolution 없이는 invertible module이 free일 이유가 전혀 없다는 점에서, 이 정리는 [정리 3](#thm3)과 마찬가지로 free resolution의 언어가 실질적인 계산력을 갖는다는 것을 보여준다.
 
-기하적으로 Auslander--Buchsbaum 정리는 smooth point의 local ring에서는 언제나 유일한 소인수분해가 가능하다는 선언이다. Algebraic variety의 smooth point에서의 local ring은 regular local ring이므로, 그 점 근방의 함수는 unit과 순서를 무시하면 유일한 방식으로 기약 인수들의 곱으로 분해되고, 특히 codimension $1$의 부분다양체는 국소적으로 방정식 하나로 잘려 나온다. ([보조정리 8](#lem8)의 첫째 결과) 이것이 smooth variety 위에서 divisor 이론이 특히 투명해지는 대수적 이유이다. 지금까지 우리는 free resolution의 길이라는 정보만으로 어떤 ring이 regular인지를 판정하고 나아가 UFD라는 것까지 끌어냈는데, free resolution이 담고 있는 정보는 길이에 그치지 않으며, 이후의 글에서는 Fitting ideal과 determinantal 방법 등 free resolution의 행렬 표현을 더 정밀하게 읽어내는 도구들을 다룬다.
+기하적으로 Auslander--Buchsbaum 정리는 smooth point의 local ring에서는 언제나 유일한 소인수분해가 가능하다는 선언이다. Algebraic variety의 smooth point에서의 local ring은 regular local ring이므로, 그 점 근방의 함수는 unit과 순서를 무시하면 유일한 방식으로 irreducible element들의 곱으로 분해되고, 특히 codimension $1$의 부분다양체는 국소적으로 방정식 하나로 잘려 나온다. ([보조정리 8](#lem8)의 첫째 결과) 이것이 smooth variety 위에서 divisor 이론이 특히 투명해지는 대수적 이유이다. 지금까지 우리는 free resolution의 길이라는 정보만으로 어떤 ring이 regular인지를 판정하고 나아가 UFD라는 것까지 끌어냈는데, free resolution이 담고 있는 정보는 길이에 그치지 않으며, 이후의 글에서는 Fitting ideal과 determinantal 방법 등 free resolution의 행렬 표현을 더 정밀하게 읽어내는 도구들을 다룬다.
 
 ---
 

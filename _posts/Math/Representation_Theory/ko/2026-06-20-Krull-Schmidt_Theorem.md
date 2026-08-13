@@ -21,7 +21,7 @@ published: false
 
 ## Indecomposable
 
-분해를 논하기 위해 먼저 더 이상 쪼갤 수 없는 대상을 정의한다. 자명한 direct sum $M=M\oplus 0$은 분해로 치지 않으므로, 두 *nonzero* submodule의 direct sum으로 적히지 않는다는 조건을 붙인다.
+분해를 논하기 위해 먼저 더 이상 쪼갤 수 없는 대상을 정의한다. Trivial direct sum $M=M\oplus 0$은 분해로 치지 않으므로, 두 *nonzero* submodule의 direct sum으로 적히지 않는다는 조건을 붙인다.
 
 ::: 정의 1
 $A$-module $M$이 *indecomposable<sub>분해불가능</sub>*이라는 것은 $M\neq 0$이며, $M=M_1\oplus M_2$이도록 하는 nonzero submodule $M_1,M_2$가 존재하지 않는 것이다. 곧 $M$이 두 submodule의 direct sum으로 적힐 때마다 그중 하나는 반드시 $0$이어야 한다. Quiver $Q$의 representation $V$가 indecomposable이라는 것도 같은 방식으로, $V\neq 0$이며 $V=V_1\oplus V_2$가 nonzero representation들의 direct sum이 될 수 없다는 것으로 정의한다.
@@ -36,7 +36,7 @@ Simple module은 indecomposable이다. $M$이 simple이면 ([\[가환대수학\]
 
 $$V:\quad k\xrightarrow{\ 1\ }k$$
 
-곧 $V_1=V_2=k$이고 $V_\alpha=\id_k$인 representation을 생각하자. $V$의 nonzero subrepresentation $W$가 $V$의 진부분이려면 $W_1,W_2$ 중 적어도 하나가 $0$이어야 하는데, $V_\alpha=\id_k$가 isomorphic이므로 $W_1\neq 0$이면 $W_2=V_\alpha(W_1)=k$이고, 따라서 $W$를 다른 subrepresentation으로 보충하여 $V$를 nonzero direct sum으로 적을 수 없다. 곧 $V$는 indecomposable이지만, $V_1\neq 0\neq V_2$이므로 simple은 아니다.
+곧 $V_1=V_2=k$이고 $V_\alpha=\id_k$인 representation을 생각하자. $V$의 nonzero subrepresentation $W$가 $V$의 진부분이려면 $W_1,W_2$ 중 적어도 하나가 $0$이어야 하는데, $V_\alpha=\id_k$가 isomorphic이므로 $W_1\neq 0$이면 $W_2\supseteq V_\alpha(W_1)=k$에서 $W=V$가 되어 진부분이 아니다. 곧 $V$의 진부분인 nonzero subrepresentation은 모두 $W_1=0$을 만족하므로, 그러한 두 subrepresentation의 direct sum도 첫째 성분이 $0$이어서 $V$가 될 수 없다. 곧 $V$는 indecomposable이지만, $V_1\neq 0\neq V_2$이므로 simple은 아니다.
 :::
 
 위 예시는 indecomposable이 simple보다 진정으로 약한 개념임을 보여 준다. Simple module은 부분구조가 전혀 없는 대상인 반면, indecomposable module은 부분구조를 가질 수 있되 전체를 두 조각의 direct sum으로 갈라놓는 분해만 허용하지 않는다. 표현론에서 분류의 단위가 되는 것은 simple이 아니라 indecomposable이며, 이 글의 정리는 모든 유한차원 representation이 indecomposable들의 direct sum으로, 그것도 본질적으로 유일하게 적힌다는 것을 보장한다.
@@ -122,7 +122,7 @@ $$M=M_1\oplus M_2\oplus\cdots\oplus M_r$$
 특히 quiver $Q$의 임의의 nonzero 유한차원 representation은 indecomposable representation들의 direct sum으로 적히며, 그 분해는 isomorphism과 순서를 무시하면 유일하다.
 :::
 ::: 증명
-**존재성.** $\length(M)$에 대한 귀납으로 보인다. $M$이 indecomposable이면 자기 자신이 길이 $1$짜리 indecomposable 분해이다. 그렇지 않으면 $M=M'\oplus M''$인 nonzero submodule $M',M''$이 있고, direct sum에서 각 인자의 길이가 진하게 작으므로 $\length(M')<\length(M)$이고 $\length(M'')<\length(M)$이다. 귀납가정에 의하여 $M'$과 $M''$이 각각 indecomposable 분해를 가지고, 이들을 합치면 $M$의 indecomposable 분해를 얻는다. 길이가 유한이므로 이 과정은 유한 번에 끝난다.
+**존재성.** $\length(M)$에 대한 귀납으로 보인다. $M$이 indecomposable이면 자기 자신이 길이 $1$짜리 indecomposable 분해이다. 그렇지 않으면 $M=M'\oplus M''$인 nonzero submodule $M',M''$이 있고, direct sum에서 각 인자의 길이가 진성으로 작으므로 $\length(M')<\length(M)$이고 $\length(M'')<\length(M)$이다. 귀납가정에 의하여 $M'$과 $M''$이 각각 indecomposable 분해를 가지고, 이들을 합치면 $M$의 indecomposable 분해를 얻는다. 길이가 유한이므로 이 과정은 유한 번에 끝난다.
 
 **유일성.** 두 indecomposable 분해
 
@@ -130,7 +130,7 @@ $$M=M_1\oplus\cdots\oplus M_r=N_1\oplus\cdots\oplus N_s$$
 
 가 주어졌다 하자. $r$에 대한 귀납으로 진행한다. $r=0$이면 $M=0$이고 $s=0$이므로 자명하다. $r\geq 1$이라 하자. $M_1$에 관련된 morphism들을 모은다. 둘째 분해에 대한 projection $\pi_j:M\rightarrow N_j$와 포함 $\iota_j:N_j\rightarrow M$, 그리고 첫째 분해에 대한 $M_1$로의 projection $p:M\rightarrow M_1$과 포함 $q:M_1\rightarrow M$을 생각하자. $\sum_{j=1}^s\iota_j\pi_j=\id_M$이므로 $M_1$ 위에서
 
-$$\sum_{j=1}^s (p\,\iota_j)(\pi_j\,q)=p\Bigl(\sum_{j=1}^s\iota_j\pi_j\Bigr)q=p\,q=\id_{M_1}$$
+$$\sum_{j=1}^s (p\iota_j)(\pi_j q)=p\Bigl(\sum_{j=1}^s\iota_j\pi_j\Bigr)q=pq=\id_{M_1}$$
 
 이 성립한다. 여기서 각 $p\iota_j\pi_j q$는 $M_1$의 endomorphism이다. $M_1$이 유한 길이 indecomposable이므로 [따름정리 4](#cor4)에 의하여 $\End_A(M_1)$은 local ring이고, 가역원 $\id_{M_1}$이 위와 같이 $s$개의 합으로 적혔으므로 어떤 $j$에 대하여 $g:=(p\iota_j)(\pi_j q)\in\End_A(M_1)$이 automorphism이다. 순서를 바꾸어 $j=1$이라 해도 좋다.
 
@@ -138,7 +138,7 @@ $$\sum_{j=1}^s (p\,\iota_j)(\pi_j\,q)=p\Bigl(\sum_{j=1}^s\iota_j\pi_j\Bigr)q=p\,
 
 이로부터 $M_1\cong N_1$을 얻었다. 남은 것은 $M_1$을 떼어낸 나머지가 다시 같은 형태의 두 분해를 이룬다는 것이며, 이를 위해 $N_1$이 $M_2\oplus\cdots\oplus M_r$의 보충으로 $M_1$을 대신할 수 있음을 보인다. $M''=M_2\oplus\cdots\oplus M_r$로 두면 $M=M_1\oplus M''$이고 $p:M\rightarrow M_1$은 $M''$을 따른 projection이다. 합성
 
-$$p\,\iota_1=h:N_1\rightarrow M_1$$
+$$p\iota_1=h:N_1\rightarrow M_1$$
 
 은 $hf=g$가 isomorphic이고 $f$가 isomorphic이므로 $h=gf^{-1}$ 또한 isomorphic이다. 따라서 $\iota_1(N_1)\cap M''=0$이다. 실제로 $x\in\iota_1(N_1)\cap M''$이면 $x=\iota_1(y)$인 $y\in N_1$이 있고 $x\in M''=\ker p$이므로 $h(y)=p\iota_1(y)=p(x)=0$인데, $h$가 단사이므로 $y=0$, 곧 $x=0$이다. 또 길이를 비교하면 $\length(\iota_1(N_1))+\length(M'')=\length(N_1)+\length(M'')=\length(M_1)+\length(M'')=\length(M)$이므로, $\iota_1(N_1)\oplus M''$이 $M$의 길이와 같은 submodule이어서 $M$ 전체와 일치한다. 곧
 
@@ -155,7 +155,7 @@ $$M_2\oplus\cdots\oplus M_r\cong N_2\oplus\cdots\oplus N_s$$
 
 위 증명의 핵심은 첫째 분해의 indecomposable 조각 $M_1$을 둘째 분해의 어떤 조각 $N_1$과 맞바꾸어 $M=N_1\oplus M_2\oplus\cdots\oplus M_r$를 얻은 데에 있다. 이렇게 한 분해의 한 조각을 다른 분해의 조각으로 교체할 수 있다는 성질을 *exchange property*라 부르며, [따름정리 4](#cor4)가 보장하는 local endomorphism ring이 정확히 이 교체를 가능케 하는 조건이다. 일단 $M_1$을 $N_1$로 바꾸고 나면 양쪽 분해에서 $N_1$을 소거하여 $M_2\oplus\cdots\oplus M_r\cong N_2\oplus\cdots\oplus N_s$를 얻고, 귀납이 이를 마무리한다.
 
-이 정리가 보장하는 유일성 덕분에, 유한차원 representation $V$에 대하여 그 분해에 나타나는 indecomposable들의 isomorphism class와 각각의 중복도가 $V$의 불변량으로 잘 정의된다. 따라서 $\Rep(Q)$의 유한차원 대상을 이해하는 문제는 indecomposable representation들을 isomorphism을 무시하고 분류하는 문제로 환원된다. 예시 2에서 보았듯 선형 $A_2$ quiver의 indecomposable은 두 simple representation과 한 개의 비simple indecomposable로 이루어지며, 이러한 분류가 모든 quiver에 대하여 가능한지, 가능하다면 그 목록이 무엇인지가 다음 논의의 주제이다.
+이 정리가 보장하는 유일성 덕분에, 유한차원 representation $V$에 대하여 그 분해에 나타나는 indecomposable들의 isomorphism class와 각각의 중복도가 $V$의 불변량으로 잘 정의된다. 따라서 $\Rep(Q)$의 유한차원 대상을 이해하는 문제는 indecomposable representation들을 isomorphism을 무시하고 분류하는 문제로 환원된다. 예시 2에서 본 $V$까지 포함하여 선형 $A_2$ quiver의 indecomposable은 두 simple representation과 한 개의 비simple indecomposable로 이루어지며, 이러한 분류가 모든 quiver에 대하여 가능한지, 가능하다면 그 목록이 무엇인지가 다음 논의의 주제이다.
 
 ::: 참고 7
 Krull–Schmidt 정리는 indecomposable들의 isomorphism class를 유한차원 representation 이론의 기본 단위로 확정한다. 이 단위 위에서 indecomposable들 사이의 morphism을 체계적으로 기술하는 것이 *Auslander–Reiten 이론*이며, almost split sequence와 Auslander–Reiten quiver가 그 핵심 도구이다. 또한 어떤 quiver $Q$가 유한개의 indecomposable representation만을 가지는지, 곧 *representation-finite*인지를 묻는 문제의 답이 *Gabriel의 정리*로, $Q$의 underlying graph가 type $A$, $D$, $E$의 Dynkin diagram일 때에 한정된다. 두 이론 모두 분해의 존재성과 유일성을 전제로 indecomposable의 세계를 분석하므로, 이 글의 결과가 그 출발점에 놓인다.

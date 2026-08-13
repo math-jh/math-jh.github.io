@@ -44,7 +44,7 @@ Categorical quotient $\varphi: X \rightarrow Y$가 *geometric quotient<sub>기�
 3. Structure sheaf의 차원에서 $\mathcal{O}_Y = (\varphi_\ast \mathcal{O}_X)^G$.
 :::
 
-Geometric quotient는 통상 $Y = X/G$로 표기하며, $Y$의 점은 정확히 $X$의 $G$-orbit과 일대일 대응한다. Categorical quotient는 closed orbit들을 한 점으로 묶을 뿐이지만 ([명제 3](#prop3)), geometric quotient는 모든 orbit을 분리한다. 직관적으로 두 개념 사이의 간극은 $X$ 안에 *다른 orbit의 closure에 포함되는 orbit*이 있을 때 발생한다.
+Geometric quotient는 통상 $Y = X/G$로 표기하며, $Y$의 점은 정확히 $X$의 $G$-orbit과 일대일 대응한다. Categorical quotient는 closure가 서로 만나는 orbit들을 한 점으로 묶지만 ([명제 3](#prop3)), geometric quotient는 모든 orbit을 분리한다. 직관적으로 두 개념 사이의 간극은 $X$ 안에 *다른 orbit의 closure에 포함되는 orbit*이 있을 때 발생한다.
 
 ::: 명제 3
 Reductive group $G$가 affine variety $X = \Spec A$ 위에 작용한다고 하자. 그러면 invariant subring
@@ -107,7 +107,7 @@ $$\bigoplus_{n \ge 0} H^0(X, L^{\otimes n})^{G, \chi^n} = \mathbb{C}[\z_1, \z_2]
 
 $$\mathbb{C}^2 /\!/_\chi \mathbb{C}^\ast = \Proj \mathbb{C}[\z_1, \z_2] = \mathbb{P}^1$$
 
-이다. 주어진 linearization $L_\chi$에 대해 점 $x \in X$가 *semistable*이라는 것은 양의 degree의 invariant section 가운데 $x$에서 $0$이 아닌 값을 갖는 것이 존재한다는 뜻이고, 여기에 orbit $G \cdot x$가 닫혀 있고 stabilizer $G_x$가 유한하다는 조건까지 붙은 것이 *stable*이며, semistable이 아닌 점을 *unstable*이라 부른다. 이 예시에서 직접 확인하면 $(z_1, z_2) \ne (0, 0)$인 모든 점이 semistable이고 원점은 unstable이다. 즉
+이다. 주어진 linearization $L_\chi$에 대해 점 $x \in X$가 *semistable*이라는 것은 양의 degree의 invariant section 가운데 $x$에서 $0$이 아닌 값을 갖는 것이 존재한다는 뜻이고, 여기에 orbit $G \cdot x$가 semistable 점들의 집합 안에서 닫혀 있고 stabilizer $G_x$가 유한하다는 조건까지 붙은 것이 *stable*이며, semistable이 아닌 점을 *unstable*이라 부른다. 이 예시에서 직접 확인하면 $(z_1, z_2) \ne (0, 0)$인 모든 점이 semistable이고 원점은 unstable이다. 즉
 
 $$X^{\mathrm{ss}}(L_\chi) = X^{\mathrm{s}}(L_\chi) = \mathbb{C}^2 \setminus \{0\}$$
 
@@ -152,7 +152,7 @@ $$1 \longrightarrow G \longrightarrow (\mathbb{C}^\ast)^{\Sigma(1)} \longrightar
 
 을 얻으며, 여기서 $G = \Hom_\mathbb{Z}(\Cl(X_\Sigma), \mathbb{C}^\ast)$, $T_N = N \otimes_\mathbb{Z} \mathbb{C}^\ast$는 $X_\Sigma$의 dense torus이다. 따라서 $G$는 $(\mathbb{C}^\ast)^{\Sigma(1)}$의 subgroup으로서, 자연스럽게 affine space $\mathbb{C}^{\Sigma(1)} = \Spec S$ 위에 diagonal action을 한다.
 
-Cox ring $S$ 위의 $\Cl(X_\Sigma)$-grading은 다음과 같이 정의된다: $\beta \in \Cl(X_\Sigma)$에 대해 그 inverse image $\sum_\rho a_\rho D_\rho$를 잡고, monomial $\prod_\rho \x_\rho^{a_\rho}$의 degree를 $\beta$로 정한다. 이 grading은 $G$의 character group과 일치하며, 따라서 $G$의 action에 의한 invariant theory와 자연스럽게 연결된다.
+Cox ring $S$ 위의 $\Cl(X_\Sigma)$-grading은 다음과 같이 정의된다: monomial $\prod_\rho \x_\rho^{a_\rho}$ ($a_\rho \ge 0$)의 degree를 그에 대응하는 divisor의 class $[\sum_\rho a_\rho D_\rho] \in \Cl(X_\Sigma)$로 정한다. 이 grading은 $G$의 character group과 일치하며, 따라서 $G$의 action에 의한 invariant theory와 자연스럽게 연결된다.
 
 다음으로, projective space 구성에서 원점 $\{0\}$을 제거하던 것에 해당하는 exceptional subset을 정의한다.
 
@@ -168,7 +168,7 @@ $$B(\Sigma) = \langle \hat{\x}_\sigma \mid \sigma \in \Sigma \rangle \subseteq S
 이며, *exceptional set<sub>예외집합</sub>* $Z(\Sigma) = V(B(\Sigma)) \subseteq \mathbb{C}^{\Sigma(1)}$은 그 zero locus이다.
 :::
 
-명칭의 유래는 $\mathbb{P}^n$의 경우 $B(\Sigma) = \langle \x_0, \ldots, \x_n \rangle$이 되어 usual homogeneous coordinate ring의 irrelevant ideal과 일치하는 데 있다. 실제로 $\mathbb{P}^n$의 fan은 $n+1$개의 1차원 cone을 가지며, 각 maximal cone은 그 중 $n$개를 포함하므로 $\hat{\x}_\sigma$는 변수 하나만 빼고 곱한 것이 된다. 모든 maximal cone에 대해 모으면 $\langle \x_0, \ldots, \x_n \rangle$이 생성된다.
+명칭의 유래는 $\mathbb{P}^n$의 경우 $B(\Sigma) = \langle \x_0, \ldots, \x_n \rangle$이 되어 usual homogeneous coordinate ring의 irrelevant ideal과 일치하는 데 있다. 실제로 $\mathbb{P}^n$의 fan은 $n+1$개의 1차원 cone을 가지며, 각 maximal cone은 그 중 $n$개를 포함하므로 $\hat{\x}_\sigma$는 그 cone에 들어 있지 않은 나머지 변수 하나가 된다. 모든 maximal cone에 대해 모으면 $\langle \x_0, \ldots, \x_n \rangle$이 생성된다.
 
 ## Toric variety를 GIT quotient로 재구성하기
 
@@ -221,15 +221,15 @@ $$\mathbb{P}^n = (\mathbb{C}^{n+1} \setminus \{0\}) / \mathbb{C}^\ast$$
 ::: 예시 11 (projective line의 곱)
 $X = \mathbb{P}^1 \times \mathbb{P}^1$의 fan은 1차원 cone 4개 $\rho_1, \rho_2, \rho_3, \rho_4$를 가지며 primitive generator는 보통 $u_1 = (1, 0)$, $u_2 = (0, 1)$, $u_3 = (-1, 0)$, $u_4 = (0, -1)$이다. Maximal cone 4개는 각각 인접한 두 cone으로 생성되며, 예컨대 $\sigma_{12} = \mathrm{cone}(u_1, u_2)$에 대해 $\hat{\x}_{\sigma_{12}} = \x_3 \x_4$이다. 모든 maximal cone에 대해 계산하면
 
-$$B(\Sigma) = \langle \x_1 \x_3,\, \x_1 \x_4,\, \x_2 \x_3,\, \x_2 \x_4 \rangle = \langle \x_1, \x_2 \rangle \cap \langle \x_3, \x_4 \rangle$$
+$$B(\Sigma) = \langle \x_1 \x_2, \x_1 \x_4, \x_2 \x_3, \x_3 \x_4 \rangle = \langle \x_1, \x_3 \rangle \cap \langle \x_2, \x_4 \rangle$$
 
 이고 exceptional set은
 
-$$Z(\Sigma) = \{\x_1 = \x_2 = 0\} \cup \{\x_3 = \x_4 = 0\}$$
+$$Z(\Sigma) = \{\x_1 = \x_3 = 0\} \cup \{\x_2 = \x_4 = 0\}$$
 
 이다. Divisor class group은 $\Cl(\mathbb{P}^1 \times \mathbb{P}^1) = \mathbb{Z} \oplus \mathbb{Z}$이므로 $G = (\mathbb{C}^\ast)^2$이고, 그 action은
 
-$$(t_1, t_2) \cdot (\x_1, \x_2, \x_3, \x_4) = (t_1 \x_1, t_1 \x_2, t_2 \x_3, t_2 \x_4)$$
+$$(t_1, t_2) \cdot (\x_1, \x_2, \x_3, \x_4) = (t_1 \x_1, t_2 \x_2, t_1 \x_3, t_2 \x_4)$$
 
 으로 각 $\mathbb{P}^1$ 인자에 독립적으로 scaling한다. 이로부터
 
@@ -256,7 +256,7 @@ Cox ring $S$의 $\beta$차 성분은 monomial $\prod_\rho \x_\rho^{a_\rho}$들�
 
 명제 12는 Cox ring이 toric variety의 모든 line bundle의 global section을 동시에 인코딩한다는 것을 의미한다. 이는 projective space에서 $\mathbb{C}[\x_0, \ldots, \x_n]$이 모든 $\mathcal{O}_{\mathbb{P}^n}(d)$의 global section을 담고 있는 것과 정확히 일치한다. 이 관점에서 Cox ring은 toric variety의 divisor class group으로 graded된 "universal" coordinate ring이다.
 
-더 나아가 coherent sheaf에 대한 대응도 존재한다. Simplicial toric variety $X_\Sigma$ 위의 coherent sheaf $\mathcal{F}$에 대해 graded $S$-module $\Gamma_\ast(\mathcal{F})$를 적절히 정의하면, quasi-coherent sheaf의 category와 graded $S$-module의 category 사이에 equivalence가 성립한다. 이는 projective space에서의 Serre correspondence를 일반화하는 결과이다.
+더 나아가 sheaf에 대한 대응도 존재한다. Smooth toric variety $X_\Sigma$ 위의 quasi-coherent sheaf $\mathcal{F}$에 대해 graded $S$-module $\Gamma_\ast(\mathcal{F})$를 적절히 정의하면, graded $S$-module의 category를 $B(\Sigma)$-torsion module들이 이루는 부분범주로 나눈 quotient category와 quasi-coherent sheaf의 category 사이에 equivalence가 성립한다. Simplicial이지만 singular한 경우에는 $\Cl(X_\Sigma)$-grading 대신 $\Pic(X_\Sigma)$로 graded된 Veronese subring $\bigoplus_{\alpha \in \Pic(X_\Sigma)} S_\alpha$를 써야 한다. 이는 projective space에서의 Serre correspondence를 일반화하는 결과이다.
 
 ## Secondary fan과 birational geometry
 

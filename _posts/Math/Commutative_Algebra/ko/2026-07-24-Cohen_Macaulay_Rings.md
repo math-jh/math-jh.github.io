@@ -39,7 +39,7 @@ $\mathfrak{p}\in \Ass M$이라 하자. [§Depth, ⁋따름정리 8](/ko/math/com
 
 $$\dim M=\operatorname{depth}M\leq \dim A/\mathfrak{p}\leq \dim M$$
 
-이 되어 $\dim A/\mathfrak{p}=\dim M$을 얻는다. 이제 모든 associated prime $\mathfrak{p}$가 $\dim A/\mathfrak{p}=\dim M$을 만족하므로, 만일 $\mathfrak{p}\subsetneq \mathfrak{p}'$인 두 associated prime이 있다면 $\mathfrak{p}$에서 시작하는 chain의 앞에 $\mathfrak{p}'$을 끼워넣어 $\dim A/\mathfrak{p}\geq 1+\dim A/\mathfrak{p}'$을 얻는데, 이는 두 값이 같다는 것에 모순이다. 따라서 $\Ass M$의 원소들은 서로 포함관계가 없고, 특히 [§동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)에서 $\ann M$을 포함하는 minimal prime들이 모두 $\Ass M$에 속하므로 $\Ass M$은 정확히 이 minimal prime들로 이루어진다.
+이 되어 $\dim A/\mathfrak{p}=\dim M$을 얻는다. 이제 모든 associated prime $\mathfrak{p}$가 $\dim A/\mathfrak{p}=\dim M$을 만족하므로, 만일 $\mathfrak{p}\subsetneq \mathfrak{p}'$인 두 associated prime이 있다면 $\mathfrak{p}'$에서 시작하는 chain의 앞에 $\mathfrak{p}$를 끼워넣어 $\dim A/\mathfrak{p}\geq 1+\dim A/\mathfrak{p}'$을 얻는데, 이는 두 값이 같다는 것에 모순이다. 따라서 $\Ass M$의 원소들은 서로 포함관계가 없고, 특히 [§동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)에서 $\ann M$을 포함하는 minimal prime들이 모두 $\Ass M$에 속하므로 $\Ass M$은 정확히 이 minimal prime들로 이루어진다.
 :::
 
 이 성질을 흔히 *unmixedness*라 부른다. Cohen--Macaulay module은 그 associated prime들이 전부 같은 차원을 갖는다는 점에서 차원의 관점에서 균질하다. 다음 명제는 Cohen--Macaulay 조건이 non-zerodivisor에 대한 quotient에 대해 잘 보존된다는 것을 말해주며, 앞으로의 귀납법에서 핵심적인 역할을 한다.

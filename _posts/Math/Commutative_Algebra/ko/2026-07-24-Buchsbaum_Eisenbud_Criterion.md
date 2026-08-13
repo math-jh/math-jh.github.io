@@ -141,7 +141,7 @@ $$\operatorname{depth}A_\mathfrak{p}=g+\operatorname{depth}_{A_\mathfrak{p}}(A_\
 Noetherian ring $A$의 ideal $\mathfrak{a}$에 대하여 다음이 성립한다.
 
 1. 정수 $k$에 대하여, $\operatorname{grade}(\mathfrak{a})\geq k$인 것은 모든 $\mathfrak{p}\in V(\mathfrak{a})$에서 $\operatorname{depth}A_\mathfrak{p}\geq k$인 것과 동치이다.
-2. $\mathfrak{a}$를 포함하는 임의의 prime ideal $\mathfrak{q}$에 대하여 $\operatorname{grade}(\mathfrak{a}A_\mathfrak{q})\geq\operatorname{grade}(\mathfrak{a})$이다.
+2. 임의의 prime ideal $\mathfrak{q}$에 대하여 $\operatorname{grade}(\mathfrak{a}A_\mathfrak{q})\geq\operatorname{grade}(\mathfrak{a})$이다.
 3. $\mathfrak{a}$가 proper이고 $x\in\mathfrak{a}$가 non-zerodivisor라면, $\overline{A}=A/(x)$에서 $\operatorname{grade}(\mathfrak{a})=1+\operatorname{grade}(\mathfrak{a}\overline{A})$이다.
 :::
 ::: 증명
@@ -241,7 +241,7 @@ $$e\leq\operatorname{grade}I(\psi_e)\leq\operatorname{depth}A$$
 마지막으로 [보조정리 9](#lem9)를 complex $0 \rightarrow G_n \rightarrow\cdots \rightarrow G_1 \rightarrow G_0$에 적용한다. $0$이 아닌 $G_j$는 free module $A^{k_j}$ ($k_j\geq 1$)인데, 원소들 $x_1,\ldots,x_d$가 $A$-sequence인 것과 $A^{k_j}$-sequence인 것은 곱셈의 injectivity와 quotient의 비소멸이 성분별로 판정되므로 동치이고, 따라서 $\operatorname{depth}A^{k_j}=\operatorname{depth}A\geq e\geq j$가 $j\leq e$에서 성립하며 $j>e$에서는 $G_j=0$이라 depth 조건이 공허하게 성립한다. 각 homology는 $0$이거나 depth $0$임을 보였으므로 [보조정리 9](#lem9)에 의하여 모든 $j\geq 1$에서 $H_j(G_\bullet)=0$이고, 곧 $F_\bullet$은 exact이다.
 :::
 
-이 정리의 조건 (2)는 온전히 행렬들의 소행렬식으로 표현된다. Rank 등식은 exact complex에서 기대되는 덧셈 관계이고, grade 조건은 rank가 무너지는 자리가 complex의 왼쪽으로 갈수록, 정확히 위치 $i$만큼 깊어야 한다는 요구이다. 조건에 등장하는 ideal이 $A$ 전체가 되는 자리는 grade를 $\infty$로 약속하였으므로 자동으로 통과되는데, 증명에서 본 것처럼 이는 해당 위치에서 complex가 국소적으로 분할되는 상황에 대응한다.
+이 정리의 조건 (2)는 온전히 행렬들의 소행렬식으로 표현된다. Rank 등식은 exact complex에서 기대되는 덧셈 관계이고, grade 조건은 rank가 무너지는 곳이 complex의 왼쪽으로 갈수록, 정확히 위치 $i$만큼 깊어야 한다는 요구이다. 조건에 등장하는 ideal이 $A$ 전체가 되는 경우는 grade를 $\infty$로 약속하였으므로 자동으로 통과되는데, 증명에서 본 것처럼 이는 해당 위치에서 complex가 국소적으로 분할되는 상황에 대응한다.
 
 첫 응용으로 regular sequence의 Koszul complex를 판정법에 통과시켜 본다.
 

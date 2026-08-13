@@ -157,25 +157,37 @@ $$
 :::
 
 ::: 증명
-적분의 분모에 $w = \zeta$에서 singular point가 있으나 $1/(w-\zeta)$가 국소적분가능하므로 ($\dd{w} \wedge \dd{\bar{w}} = -2i\dd{x}\dd{y}$를 극좌표로 보면 $1/\lvert w - \zeta\rvert$의 적분은 수렴) $u$는 잘 정의된다. 변수치환 $w = \zeta + s$로 singular point를 적분기호 밖으로 옮기면
+적분의 분모에 $w = \zeta$에서 singular point가 있으나 $1/(w-\zeta)$가 국소적분가능하므로 ($\dd{w} \wedge \dd{\bar{w}} = -2i\dd{x}\dd{y}$를 극좌표로 보면 $1/\lvert w - \zeta\rvert$의 적분은 수렴) $u$는 잘 정의된다.
+
+주장이 국소적이므로 $D$의 interior의 한 점 $\zeta_0$를 고정하고 그 근방에서 보이면 충분하다. $\zeta_0$의 닫힌 원판 근방 $V \subseteq D$ 위에서 값이 $1$이고 $D$ 안에 compact support를 갖는 smooth 차단함수 $\chi$를 잡아 $f = \chi f + (1 - \chi)f$로 쪼개고, 두 조각이 주는 적분을 각각 $u_1, u_2$라 하자. $(1-\chi)f$는 $V$에서 소멸하므로 그 support는 $V$의 interior와 만나지 않고, 따라서 $\zeta$가 $V$의 interior에서 움직이는 동안 $u_2$의 피적분함수는 singular point를 만나지 않는다. 곧 $u_2$는 $V$의 interior에서 smooth하며 $\zeta$에 대해 holomorphic이므로 $\partial u_2/\partial\bar\zeta = 0$이다. 남은 $u_1$은 $\chi f$를 $\mathbb{C}$ 전체로 $0$-확장해도 값이 변하지 않으므로, 적분영역을 $\mathbb{C}$ 전체로 두고 다룰 수 있다.
+
+변수치환 $w = \zeta + s$로 singular point를 적분기호 밖으로 옮기면
 
 $$
-u(\zeta) = \frac{1}{2\pi i} \int \frac{f(\zeta + s)}{s}\dd{s} \wedge \dd{\bar{s}}
+u_1(\zeta) = \frac{1}{2\pi i} \int_{\mathbb{C}} \frac{(\chi f)(\zeta + s)}{s}\dd{s} \wedge \dd{\bar{s}}
 $$
 
-이고, 이제 피적분함수의 $\zeta$-의존성이 smooth $f(\zeta + s)$에만 있으므로 적분기호 아래에서 미분할 수 있다. $\partial/\partial\bar\zeta$를 적용하면
+이고, 적분영역이 $\zeta$에 무관해졌으므로 피적분함수의 $\zeta$-의존성은 smooth $(\chi f)(\zeta + s)$에만 있다. $1/s$가 국소적분가능하고 $\chi f$가 compact support를 가지므로 적분기호 아래에서 몇 번이든 미분할 수 있고, 특히 $u_1$은 smooth하다. $\partial/\partial\bar\zeta$를 적용하면
 
 $$
-\frac{\partial u}{\partial \bar{\zeta}}(\zeta) = \frac{1}{2\pi i} \int \frac{1}{s}\, \frac{\partial f}{\partial \bar{\zeta}}(\zeta + s)\dd{s} \wedge \dd{\bar{s}} = \frac{1}{2\pi i} \int_{D} \frac{1}{w - \zeta}\, \frac{\partial f}{\partial \bar{w}}(w)\dd{w} \wedge \dd{\bar{w}}
+\frac{\partial u_1}{\partial \bar{\zeta}}(\zeta) = \frac{1}{2\pi i} \int_{\mathbb{C}} \frac{1}{s} \frac{\partial (\chi f)}{\partial \bar{\zeta}}(\zeta + s)\dd{s} \wedge \dd{\bar{s}} = \frac{1}{2\pi i} \int_{D'} \frac{1}{w - \zeta} \frac{\partial (\chi f)}{\partial \bar{w}}(w)\dd{w} \wedge \dd{\bar{w}}
 $$
 
-이다 (다시 $s = w - \zeta$로 되돌리고 $\partial f(\zeta+s)/\partial\bar\zeta = (\partial f/\partial\bar w)(\zeta+s)$를 썼다). 이제 일반화된 Cauchy 적분공식을 적용한다. Smooth 함수 $g$와 영역 $D$에 대하여 Cauchy–Pompeiu 공식
+이다 (다시 $s = w - \zeta$로 되돌리고, $\chi f$의 support를 품는 큰 원판 $D'$로 적분영역을 줄였다). 이제 일반화된 Cauchy 적분공식을 적용한다. Smooth 함수 $g$와 영역 $D'$에 대하여 Cauchy–Pompeiu 공식
 
 $$
-g(\zeta) = \frac{1}{2\pi i} \int_{\partial D} \frac{g(w)}{w - \zeta}\dd{w} + \frac{1}{2\pi i} \int_{D} \frac{1}{w - \zeta}\, \frac{\partial g}{\partial \bar{w}}\dd{w} \wedge \dd{\bar{w}}
+g(\zeta) = \frac{1}{2\pi i} \int_{\partial D'} \frac{g(w)}{w - \zeta}\dd{w} + \frac{1}{2\pi i} \int_{D'} \frac{1}{w - \zeta} \frac{\partial g}{\partial \bar{w}}\dd{w} \wedge \dd{\bar{w}}
 $$
 
-가 성립한다 (이는 Stokes 정리를 $g(w)/(w-\zeta)$의 differential form에 적용해 얻는다). 이 공식을 $g = f$에 쓰면 우변 둘째 항이 위에서 계산한 $\partial u/\partial\bar\zeta$와 정확히 같다. 한편 $D$를 충분히 키워 $f$의 지지를 포함하는 더 큰 원판으로 두거나, 국소적으로 $f$에 차단함수를 곱해 컴팩트 지지로 만들면 경계적분 $\int_{\partial D} f(w)/(w-\zeta)\dd{w}$가 사라지도록 할 수 있고, 이때 $\partial u/\partial\bar\zeta = f$가 따라온다. 차단으로 바뀐 부분은 $\zeta$가 차단 영역 안쪽에 있는 한 $f$를 바꾸지 않으므로 국소적으로 원하는 등식이 성립한다.
+가 성립한다 (이는 Stokes 정리를 $g(w)/(w-\zeta)$의 differential form에 적용해 얻는다). 이 공식을 $g = \chi f$에 쓰면 $D'$의 경계가 $\chi f$의 support 바깥에 놓이므로 경계적분이 사라지고, 우변에 남은 둘째 항이 위에서 계산한 $\partial u_1/\partial\bar\zeta$와 정확히 같다. 따라서 $\partial u_1/\partial\bar\zeta = \chi f$이다.
+
+$V$의 interior에서는 $\chi = 1$이므로 그곳에서 $u = u_1 + u_2$가 smooth하고
+
+$$
+\frac{\partial u}{\partial \bar{\zeta}} = \frac{\partial u_1}{\partial \bar{\zeta}} + \frac{\partial u_2}{\partial \bar{\zeta}} = \chi f = f
+$$
+
+이다. $\zeta_0$가 $D$의 interior의 임의의 점이었으므로 원하는 등식이 interior 전체에서 성립한다.
 :::
 
 이 한 변수 풀이를 변수 개수에 대한 귀납으로 끌어올리면 폴리디스크 전체에서의 결과를 얻는다. 표기를 위해 폴리디스크를 $\Delta = \{ z \in \mathbb{C}^n : \lvert z_j \rvert < r_j \}$로 적는다.
@@ -306,7 +318,7 @@ $$
 
 가 성립하기를 기대할 수 있다. 그러나 이 분해는 일반적인 complex manifold에서는 성립하지 않는다. 문제는 $d = \partial + \bar\partial$의 닫힘조건 $\dd{\omega} = 0$이 $\partial\omega = 0$과 $\bar\partial\omega = 0$을 따로 함의하지 않는다는 데 있다. $d$-closed 형식을 차수별로 쪼개면 각 조각이 $\bar\partial$-닫힌지가 보장되지 않으므로, $d$-cohomology class를 $\bar\partial$-cohomology class들로 자연히 분해할 수 없다.
 
-이 분해가 성립하려면 $X$에 추가 구조가 필요하다. 적절한 추가 기하구조 아래에서는 위 직합 분해(Hodge 분해)와 더불어 $H^{p,q}$와 $H^{q,p}$ 사이의 켤레 대칭이 성립하며, 그 결과 de Rham Betti 수가 Hodge 수들의 합 $b_k = \sum_{p+q=k} h^{p,q}$로 쪼개진다. 일반적인 complex manifold에서는 이 등식이 깨지고 부등식 $b_k \leq \sum_{p+q=k} h^{p,q}$만 남는 것이 보통이다. 추가 구조가 무엇이고 그 아래에서 분해가 왜 성립하는지는 별도의 이론을 요구한다.
+이 분해가 성립하려면 우선 $X$가 콤팩트해야 하고, 그 위에 추가 구조가 더 필요하다. 콤팩트하고 적절한 추가 기하구조를 갖춘 경우에는 위 직합 분해(Hodge 분해)와 더불어 $H^{p,q}$와 $H^{q,p}$ 사이의 켤레 대칭이 성립하며, 그 결과 de Rham Betti 수가 Hodge 수들의 합 $b_k = \sum_{p+q=k} h^{p,q}$로 쪼개진다. 일반적인 콤팩트 complex manifold에서는 이 등식이 깨지고 부등식 $b_k \leq \sum_{p+q=k} h^{p,q}$만 남는 것이 보통이다. 추가 구조가 무엇이고 그 아래에서 분해가 왜 성립하는지는 별도의 이론을 요구한다.
 
 ## 예시
 

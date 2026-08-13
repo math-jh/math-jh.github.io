@@ -35,11 +35,11 @@ $$\operatorname{Res}_{z = z_0}\frac{f'}{f} = \operatorname{ord}_{z_0} f$$
 :::
 
 ::: 증명
-$z_0$이 order $m$인 영점인 경우와 order $m$인 극인 경우를 한꺼번에 다룬다. 부호 있는 order를 $k = \operatorname{ord}_{z_0} f$이라 두면, 영점이면 $k = m \geq 1$, 극이면 $k = -m \leq -1$이고, 어느 쪽이든 $z_0$의 어떤 구멍 뚫린 근방에서 holomorphic이고 $\varphi(z_0) \neq 0$인 함수 $\varphi$이 있어
+$z_0$이 order $m$인 영점인 경우와 order $m$인 극인 경우를 한꺼번에 다룬다. 부호 있는 order를 $k = \operatorname{ord}_{z_0} f$이라 두면, 영점이면 $k = m \geq 1$, 극이면 $k = -m \leq -1$이고, 어느 쪽이든 $z_0$의 어떤 근방에서 holomorphic이고 $\varphi(z_0) \neq 0$인 함수 $\varphi$이 있어
 
-$$f(z) = (z - z_0)^k\,\varphi(z)$$
+$$f(z) = (z - z_0)^k\varphi(z)$$
 
-이다. 영점의 경우는 인수분해 ([§멱급수와 해석성, ⁋명제 6](/ko/math/complex_analysis/power_series_and_analyticity#prop6)) 에서 $\varphi = g$이고, 극의 경우는 극의 특징 ([§고립특이점과 Laurent 급수, ⁋명제 6](/ko/math/complex_analysis/isolated_singularities#prop6)) 에서 $\varphi = h$이다. 양변에 로그미분을 적용한다. 곱의 미분으로
+이다. 영점의 경우는 [§멱급수와 해석성, ⁋명제 6](/ko/math/complex_analysis/power_series_and_analyticity#prop6)의 인수분해에서 $\varphi = g$이고, 극의 경우는 [§고립특이점과 Laurent 급수, ⁋명제 6](/ko/math/complex_analysis/isolated_singularities#prop6)의 극의 특징에서 $\varphi = h$이다. 양변에 로그미분을 적용한다. 곱의 미분으로
 
 $$f'(z) = k(z - z_0)^{k-1}\varphi(z) + (z - z_0)^k\varphi'(z)$$
 
@@ -59,13 +59,13 @@ $$\frac{1}{2\pi i}\oint_\gamma \frac{f'(z)}{f(z)}\dd{z} = Z - P$$
 
 이다. 여기서 $Z$은 $\gamma$ 안쪽에 있는 $f$의 영점의 개수, $P$은 극의 개수이며, 각각 order를 세어 (order $m$인 영점·극은 $m$번) 헤아린다. 더 나아가 이 값은 상곡선 $f \circ \gamma$의 원점에 대한 회전수와 같다. 곧
 
-$$Z - P = n(f \circ \gamma,\, 0)$$
+$$Z - P = n(f \circ \gamma, 0)$$
 
 이다.
 :::
 
 ::: 증명
-$\gamma$의 자취와 그 안쪽이 이루는 콤팩트 집합 안에는 $f$의 영점과 극이 유한개만 들어 있다. 이들을 $z_1, \dots, z_r$이라 하고 각각의 부호 있는 order를 $k_j = \operatorname{ord}_{z_j} f$이라 하자. 함수 $f'/f$은 $\Omega$에서 이 점들을 제외하면 holomorphic이고, 보조정리 2에 의해 각 $z_j$에서 유수 $k_j$인 단순극을 가진다. $\gamma$의 자취 위에는 영점도 극도 없으므로 $f'/f$이 자취 위에서 holomorphic이다. $\gamma$이 양의 방향 simple closed 곡선이므로 안쪽 점에 대한 회전수는 $1$, 바깥 점에 대한 회전수는 $0$이고, 유수정리 ([§유수정리, ⁋정리 2](/ko/math/complex_analysis/residue_theorem#thm2)) 에 의해
+$\gamma$의 자취와 그 안쪽이 이루는 콤팩트 집합 안에는 $f$의 영점과 극이 유한개만 들어 있다. 이들을 $z_1, \dots, z_r$이라 하고 각각의 부호 있는 order를 $k_j = \operatorname{ord}_{z_j} f$이라 하자. 함수 $f'/f$은 $\Omega$에서 이 점들을 제외하면 holomorphic이고, 보조정리 2에 의해 각 $z_j$에서 유수 $k_j$인 단순극을 가진다. $\gamma$의 자취 위에는 영점도 극도 없으므로 $f'/f$이 자취 위에서 holomorphic이다. $\gamma$이 양의 방향 simple closed 곡선이므로 안쪽 점에 대한 회전수는 $1$, 바깥 점에 대한 회전수는 $0$이고, [§유수정리, ⁋정리 2](/ko/math/complex_analysis/residue_theorem#thm2)에 의해
 
 $$\frac{1}{2\pi i}\oint_\gamma\frac{f'(z)}{f(z)}\dd{z} = \sum_{z_j \text{ 안쪽}} \operatorname{Res}_{z = z_j}\frac{f'}{f} = \sum_{z_j \text{ 안쪽}} k_j$$
 
@@ -73,11 +73,11 @@ $$\frac{1}{2\pi i}\oint_\gamma\frac{f'(z)}{f(z)}\dd{z} = \sum_{z_j \text{ 안쪽
 
 남은 것은 이 적분이 상곡선의 회전수와 같음을 보이는 일이다. $\gamma : [a, b] \rightarrow \mathbb{C}$이 piecewise $C^1$ 매개변수화이면 합성곡선 $\sigma = f \circ \gamma$ 역시 piecewise $C^1$이고, 그 자취 위에 $f$의 영점이 없으므로 $\sigma(t) = f(\gamma(t)) \neq 0$이다. 곧 $\sigma$은 원점을 지나지 않는 closed 곡선이다. 치환 $w = f(z)$, $\dd{w} = f'(z)\dd{z}$으로
 
-$$\oint_\gamma\frac{f'(z)}{f(z)}\dd{z} = \int_a^b\frac{f'(\gamma(t))\,\gamma'(t)}{f(\gamma(t))}\dd{t} = \int_a^b\frac{\sigma'(t)}{\sigma(t)}\dd{t} = \oint_\sigma\frac{\dd{w}}{w}$$
+$$\oint_\gamma\frac{f'(z)}{f(z)}\dd{z} = \int_a^b\frac{f'(\gamma(t))\gamma'(t)}{f(\gamma(t))}\dd{t} = \int_a^b\frac{\sigma'(t)}{\sigma(t)}\dd{t} = \oint_\sigma\frac{\dd{w}}{w}$$
 
-이고, 회전수의 정의 ([§Cauchy 정리, ⁋정의 9](/ko/math/complex_analysis/cauchy_theorem#def9)) 에 의해 마지막 적분이 $2\pi i\, n(\sigma, 0)$이다. 따라서
+이고, 회전수의 정의에 의해 마지막 적분이 $2\pi i n(\sigma, 0)$이다. ([§Cauchy 정리, ⁋정의 9](/ko/math/complex_analysis/cauchy_theorem#def9)) 따라서
 
-$$\frac{1}{2\pi i}\oint_\gamma\frac{f'(z)}{f(z)}\dd{z} = n(f \circ \gamma,\, 0)$$
+$$\frac{1}{2\pi i}\oint_\gamma\frac{f'(z)}{f(z)}\dd{z} = n(f \circ \gamma, 0)$$
 
 이고, 이를 앞의 등식과 합치면 $Z - P = n(f \circ \gamma, 0)$을 얻는다.
 :::
@@ -94,7 +94,7 @@ $$\lvert p(z)\rvert = \lvert {-5z} + (z^4 + 1)\rvert \geq \lvert 5z\rvert - \lve
 
 ## Rouché 정리
 
-편각원리는 영점 수를 상곡선의 회전수로 바꾸어 주는데, 회전수는 곡선을 연속적으로 변형해도 원점을 가로지르지 않는 한 변하지 않는 위상적 불변량이다. 이 안정성을 함수의 섭동으로 옮긴 것이 Rouché 정리이다. 두 함수 $f$과 $f + g$을 비교할 때, boundary에서 $g$이 $f$보다 작으면 상곡선이 원점을 감는 횟수가 바뀔 수 없고, 따라서 두 함수의 안쪽 영점 수가 같아진다. 이는 영점 수를 직접 세기 어려운 함수를, 영점 수가 자명한 우세항과 비교하여 알아내는 강력한 도구가 된다.
+편각원리는 영점 수를 상곡선의 회전수로 바꾸어 주는데, 회전수는 곡선을 연속적으로 변형해도 원점을 가로지르지 않는 한 변하지 않는 위상적 불변량이다. 이 안정성을 함수의 섭동으로 옮긴 것이 Rouché 정리이다. 두 함수 $f$과 $f + g$을 비교할 때, boundary에서 $g$이 $f$보다 작으면 상곡선이 원점을 감는 횟수가 바뀔 수 없고, 따라서 두 함수의 안쪽 영점 수가 같아진다. 이는 영점 수를 직접 세기 어려운 함수를, 영점 수를 한눈에 아는 우세항과 비교하여 알아내는 강력한 도구가 된다.
 
 ::: 명제 5 (Rouché 정리)
 $\Omega \subseteq \mathbb{C}$가 단순연결 영역이고 $f, g$이 $\Omega$에서 holomorphic이라 하자. $\gamma$이 $\Omega$ 안의 양의 방향 simple closed 곡선이고, 그 자취 위의 모든 점에서
@@ -107,7 +107,7 @@ $$\lvert g(z)\rvert < \lvert f(z)\rvert$$
 ::: 증명
 먼저 두 함수가 자취 위에서 영점을 갖지 않음을 본다. $\gamma$ 위에서 $\lvert g\rvert < \lvert f\rvert$이므로 특히 $\lvert f(z)\rvert > \lvert g(z)\rvert \geq 0$이라 $f(z) \neq 0$이고, 또 $\lvert f(z) + g(z)\rvert \geq \lvert f(z)\rvert - \lvert g(z)\rvert > 0$이라 $(f+g)(z) \neq 0$이다. 따라서 $f$과 $f + g$ 모두 자취 위에 영점이 없어 편각원리를 적용할 수 있다. 둘 다 holomorphic이라 극이 없으므로, $f$의 안쪽 영점 수를 $Z_f$, $f + g$의 안쪽 영점 수를 $Z_{f+g}$이라 하면 정리 3에 의해
 
-$$Z_f = n(f \circ \gamma,\, 0), \qquad Z_{f+g} = n\bigl((f+g) \circ \gamma,\, 0\bigr)$$
+$$Z_f = n(f \circ \gamma, 0), \qquad Z_{f+g} = n\bigl((f+g) \circ \gamma, 0\bigr)$$
 
 이다.
 
@@ -119,7 +119,7 @@ $$h(z) = \frac{f(z) + g(z)}{f(z)} = 1 + \frac{g(z)}{f(z)}$$
 
 $$\lvert h(z) - 1\rvert = \left\lvert\frac{g(z)}{f(z)}\right\rvert < 1$$
 
-이다. 곧 상곡선 $h \circ \gamma$은 중심 $1$, 반지름 $1$인 열린 원판 $D(1, 1)$ 안에 통째로 들어 있다. 이 원판은 원점을 그 boundary에조차 포함하지 않으므로, $h \circ \gamma$은 원점을 감을 수 없어 $n(h \circ \gamma, 0) = 0$이다. 실제로 원점을 품지 않는 단순연결 영역 $D(1,1)$ 위에서 $1/w$은 원시함수 $\log w$ (주가지) 을 가지므로 $\oint_{h \circ \gamma} \dd{w}/w = 0$이고, 따라서 회전수가 $0$이다.
+이다. 곧 상곡선 $h \circ \gamma$은 중심 $1$, 반지름 $1$인 열린 원판 $D(1, 1)$ 안에 통째로 들어 있다. 이 원판은 원점을 포함하지 않으므로, $h \circ \gamma$은 원점을 감을 수 없어 $n(h \circ \gamma, 0) = 0$이다. 실제로 원점을 품지 않는 단순연결 영역 $D(1,1)$ 위에서 $1/w$은 원시함수 $\log w$ (주가지) 을 가지므로 $\oint_{h \circ \gamma} \dd{w}/w = 0$이고, 따라서 회전수가 $0$이다.
 
 한편 $(f + g) \circ \gamma = (f \circ \gamma)\cdot(h \circ \gamma)$이고, 원점을 지나지 않는 두 closed 곡선의 곱에 대해 회전수는 더해진다. 이는
 
@@ -127,7 +127,7 @@ $$\frac{(fh)'}{fh} = \frac{f'}{f} + \frac{h'}{h}$$
 
 을 $\gamma$ 위에서 적분하고 $2\pi i$로 나눈 것이 회전수의 합임에서 나온다. 따라서
 
-$$n\bigl((f+g)\circ\gamma,\,0\bigr) = n(f\circ\gamma,\,0) + n(h\circ\gamma,\,0) = n(f\circ\gamma,\,0) + 0$$
+$$n\bigl((f+g)\circ\gamma, 0\bigr) = n(f\circ\gamma, 0) + n(h\circ\gamma, 0) = n(f\circ\gamma, 0) + 0$$
 
 이고, 곧 $Z_{f+g} = Z_f$이다.
 :::
@@ -155,7 +155,7 @@ $f$이 $z_0$의 한 근방에서 holomorphic이고 $w_0 = f(z_0)$이라 하자. 
 :::
 
 ::: 증명
-$F(z) = f(z) - w_0$으로 두면 $F$은 $z_0$에서 order $m$인 영점을 가진다. 영점이 고립되어 있고 ([§영점과 일치정리, ⁋명제 2](/ko/math/complex_analysis/zeros_and_identity_theorem#prop2)) $F'$ 역시 비상수라 그 영점도 고립되어 있으므로, 충분히 작은 $\delta > 0$을 골라 closed 원판 $\overline{D(z_0, \delta)}$ 안에서 $F$의 영점이 $z_0$ 하나뿐이고 $F'$의 영점도 $z_0$ 외에는 없도록 할 수 있다. 그러면 경계원 $\lvert z - z_0\rvert = \delta$ 위에서 $F(z) \neq 0$이므로
+$F(z) = f(z) - w_0$으로 두면 $F$은 $z_0$에서 order $m$인 영점을 가진다. 영점이 고립되어 있고 ([§영점과 일치정리, ⁋명제 2](/ko/math/complex_analysis/zeros_and_identity_theorem#prop2)) $F'$ 역시 항등적으로 $0$이 아니라 그 영점도 고립되어 있으므로, 충분히 작은 $\delta > 0$을 골라 closed 원판 $\overline{D(z_0, \delta)}$ 안에서 $F$의 영점이 $z_0$ 하나뿐이고 $F'$의 영점도 $z_0$ 외에는 없도록 할 수 있다. 그러면 경계원 $\lvert z - z_0\rvert = \delta$ 위에서 $F(z) \neq 0$이므로
 
 $$\varepsilon = \min_{\lvert z - z_0\rvert = \delta}\lvert F(z)\rvert = \min_{\lvert z - z_0\rvert = \delta}\lvert f(z) - w_0\rvert > 0$$
 
@@ -173,13 +173,13 @@ $\Omega \subseteq \mathbb{C}$가 connected 열린집합이고 $f$이 $\Omega$에
 :::
 
 ::: 증명
-$U \subseteq \Omega$이 열려 있다고 하고, $w_0 \in f(U)$을 임의로 잡아 $f(U)$이 $w_0$의 한 근방을 포함함을 보이면 된다. $w_0 = f(z_0)$인 $z_0 \in U$을 택한다. $f$이 connected 열린집합 $\Omega$에서 상수가 아니므로, 일치정리 ([§영점과 일치정리, ⁋정리 3](/ko/math/complex_analysis/zeros_and_identity_theorem#thm3)) 에 의해 $f - w_0$은 어떤 근방에서도 항등적으로 $0$이 아니고, 따라서 $z_0$에서 유한한 order $m \geq 1$인 영점을 가진다.
+$U \subseteq \Omega$이 열려 있다고 하고, $w_0 \in f(U)$을 임의로 잡아 $f(U)$이 $w_0$의 한 근방을 포함함을 보이면 된다. $w_0 = f(z_0)$인 $z_0 \in U$을 택한다. $f$이 connected 열린집합 $\Omega$에서 상수가 아니므로, [§영점과 일치정리, ⁋정리 3](/ko/math/complex_analysis/zeros_and_identity_theorem#thm3)에 의해 $f - w_0$은 어떤 근방에서도 항등적으로 $0$이 아니고, 따라서 $z_0$에서 유한한 order $m \geq 1$인 영점을 가진다.
 
 정리 7을 $f$과 $z_0$에 적용한다. 정리 7이 주는 $\delta > 0$과 $\varepsilon > 0$을, $\overline{D(z_0, \delta)} \subseteq U$이 되도록 $\delta$을 더 줄여 잡을 수 있다 ($U$이 열려 있으므로). 그러면 $0 < \lvert w - w_0\rvert < \varepsilon$인 모든 $w$에 대해 $f(z) = w$인 해가 $D(z_0, \delta) \subseteq U$ 안에 (적어도 하나) 존재하므로 $w \in f(U)$이다. 또 $w = w_0$ 자신도 $f(z_0)$으로서 $f(U)$에 든다. 따라서
 
 $$D(w_0, \varepsilon) \subseteq f(U)$$
 
-이고, $w_0 \in f(U)$이 임의였으므로 $f(U)$의 모든 점이 interior point가다. 곧 $f(U)$이 열려 있다.
+이고, $w_0 \in f(U)$이 임의였으므로 $f(U)$의 모든 점이 interior point이다. 곧 $f(U)$이 열려 있다.
 :::
 
 Open mapping 정리는 holomorphic function의 image가 결코 찌부러질 수 없음을 말한다. 실변수의 smooth 함수는 가령 상수가 아니면서도 image가 한 구간으로 닫혀 있을 수 있지만, 비상수 holomorphic function의 image에는 그런 일이 없어 항상 열린집합으로 퍼진다. 이 정리에서 두 가지 중요한 귀결이 곧장 나온다. 하나는 단사 holomorphic function의 역사상이 자동으로 holomorphic이 된다는 사실이고, 다른 하나는 최대절댓값 원리의 새로운 증명이다. 먼저 역사상의 holomorphicity를 본다.
@@ -193,7 +193,7 @@ $$(f^{-1})'(w) = \frac{1}{f'(f^{-1}(w))}$$
 :::
 
 ::: 증명
-$f$이 단사이고 비상수이므로 (단사함수는 상수일 수 없다) open mapping 정리 (정리 8) 에 의해 $\Omega' = f(\Omega)$이 열려 있고, 더 일반적으로 $\Omega$의 임의의 열린 부분집합의 image가 열려 있다. 이는 곧 $f^{-1} : \Omega' \rightarrow \Omega$이 연속임을 뜻한다. 임의의 열린집합 $U \subseteq \Omega$에 대해 $(f^{-1})^{-1}(U) = f(U)$이 열려 있기 때문이다.
+$\Omega$의 각 connected component에서 $f$이 단사라 상수가 아니므로 (단사함수는 상수일 수 없다) 성분마다 open mapping 정리 (정리 8) 를 적용하면 $\Omega' = f(\Omega)$이 열려 있고, 더 일반적으로 $\Omega$의 임의의 열린 부분집합의 image가 열려 있다. 이는 곧 $f^{-1} : \Omega' \rightarrow \Omega$이 연속임을 뜻한다. 임의의 열린집합 $U \subseteq \Omega$에 대해 $(f^{-1})^{-1}(U) = f(U)$이 열려 있기 때문이다.
 
 다음으로 $f$의 도함수가 어디서도 $0$이 아님을 본다. 만일 어떤 $z_0$에서 $f'(z_0) = 0$이면 $f - f(z_0)$이 $z_0$에서 order $m \geq 2$인 영점을 가지므로, 정리 7에 의해 $f$이 $z_0$의 구멍 뚫린 근방에서 어떤 값 $w$을 $m \geq 2$번 취하여 단사성에 어긋난다. 따라서 모든 $z \in \Omega$에서 $f'(z) \neq 0$이다.
 

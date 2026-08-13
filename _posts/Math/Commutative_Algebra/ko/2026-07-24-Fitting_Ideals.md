@@ -89,7 +89,7 @@ $A=\mathbb{Z}$이고 $d_1\mid d_2\mid d_3$인 양의 정수들에 대하여
 
 $$M=\mathbb{Z}/d_1\mathbb{Z}\oplus\mathbb{Z}/d_2\mathbb{Z}\oplus\mathbb{Z}/d_3\mathbb{Z}$$
 
-를 생각하자. 대각 행렬 $\varphi=\operatorname{diag}(d_1,d_2,d_3):\mathbb{Z}^3\to\mathbb{Z}^3$은 $M$의 presentation을 주며, 여기서 $n=3$이다. 대각 행렬의 $2\times2$ 부분행렬은 고른 행의 집합과 열의 집합이 일치할 때에만 두 대각 성분의 곱을 행렬식으로 갖고 그 외에는 성분에 $0$을 포함하므로, $I_2(\varphi)=(d_1d_2,d_1d_3,d_2d_3)$이다. $d_1\mid d_2\mid d_3$이므로 $d_1d_2$가 나머지 둘을 나누어 $I_2(\varphi)=(d_1d_2)$이며, 같은 방식으로 $I_1(\varphi)=(d_1,d_2,d_3)=(d_1)$이고 $I_3(\varphi)=(d_1d_2d_3)$이다. 따라서
+를 생각하자. 대각 행렬 $\varphi=\operatorname{diag}(d_1,d_2,d_3):\mathbb{Z}^3\to\mathbb{Z}^3$은 $M$의 presentation을 주며, 여기서 $n=3$이다. 대각 행렬의 $2\times2$ 부분행렬은 고른 행의 집합과 열의 집합이 일치할 때에만 두 대각 성분의 곱을 행렬식으로 갖고 그 외에는 어떤 행이 통째로 $0$이 되어 행렬식이 $0$이므로, $I_2(\varphi)=(d_1d_2,d_1d_3,d_2d_3)$이다. $d_1\mid d_2\mid d_3$이므로 $d_1d_2$가 나머지 둘을 나누어 $I_2(\varphi)=(d_1d_2)$이며, 같은 방식으로 $I_1(\varphi)=(d_1,d_2,d_3)=(d_1)$이고 $I_3(\varphi)=(d_1d_2d_3)$이다. 따라서
 
 $$\operatorname{Fitt}_0(M)=(d_1d_2d_3),\quad\operatorname{Fitt}_1(M)=(d_1d_2),\quad\operatorname{Fitt}_2(M)=(d_1),\quad\operatorname{Fitt}_3(M)=\mathbb{Z}$$
 
@@ -146,7 +146,7 @@ $$(a_1e_1)\wedge\cdots\wedge(a_ne_n)=a_1\cdots a_n(e_1\wedge\cdots\wedge e_n)$$
 인데, 좌변의 각 $a_je_j$를 $c_k$들의 조합으로 전개하면 이는 $c_{k_1}\wedge\cdots\wedge c_{k_n}$ 꼴의 항들의 $A$-linear combination이 되고, [\[다중선형대수학\] §행렬식, ⁋보조정리 4](/ko/math/multilinear_algebra/determinants#lem4)에 의하여 각 항은 $\varphi$의 $n\times n$ 소행렬식에 $e_1\wedge\cdots\wedge e_n$을 곱한 것이다. 두 표현의 $e_1\wedge\cdots\wedge e_n$ 계수를 비교하면 $a_1\cdots a_n\in I_n(\varphi)=\operatorname{Fitt}_0(M)$이다. 이러한 곱들이 $\ann(M)^n$을 생성하므로 $\ann(M)^n\subseteq\operatorname{Fitt}_0(M)$이다.
 :::
 
-두 포함관계에 radical을 취하고 $\sqrt{\ann(M)^n}=\sqrt{\ann(M)}$임을 쓰면 $\sqrt{\operatorname{Fitt}_0(M)}=\sqrt{\ann(M)}$을 얻는다. 곧 $\operatorname{Fitt}_0(M)$은 annihilator와 같은 radical을 가지므로, radical의 수준에서 $M$이 소멸하는 자리를 그대로 기억한다.
+두 포함관계에 radical을 취하고 $\sqrt{\ann(M)^n}=\sqrt{\ann(M)}$임을 쓰면 $\sqrt{\operatorname{Fitt}_0(M)}=\sqrt{\ann(M)}$을 얻는다. 곧 $\operatorname{Fitt}_0(M)$은 annihilator와 같은 radical을 가지므로, radical의 수준에서 $M$이 소멸하는 곳을 그대로 기억한다.
 
 셋째 성질은 local ring에서 generator의 개수를 읽어내는 것이다.
 

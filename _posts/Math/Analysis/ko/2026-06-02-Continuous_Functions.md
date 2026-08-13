@@ -16,9 +16,9 @@ drift_needed: true
 published: false
 ---
 
-[\[미적분학\] §연속함수](/ko/math/calculus/continuity)에서 우리는 최대·최소 정리를 증명 없이 도구로 받아들였다. 이제 [§compactness](/ko/math/analysis/compactness)을 갖추었으므로 이를 증명할 수 있다. 핵심은 연속함수가 compactness를 보존한다는 단 하나의 사실이다.
+[\[미적분학\] §연속함수](/ko/math/calculus/continuity)에서 우리는 최대·최소 정리를 증명 없이 도구로 받아들였다. 이제 [§컴팩트성](/ko/math/analysis/compactness)을 갖추었으므로 이를 증명할 수 있다. 핵심은 연속함수가 compactness를 보존한다는 단 하나의 사실이다.
 
-연속성은 정의역의 위상적 성질이 image로 옮겨 가는지를 묻는 관점에서 보면 가장 잘 이해된다. 연속함수가 열린집합의 preimage를 열린집합으로 보낸다는 ([§함수의 극한과 연속, ⁋명제 3](/ko/math/analysis/limits_and_continuity#prop3)) 위상적 특징화는, 정의역의 구조가 아니라 정의역 위에서 측정되는 양들의 거동을 통제한다. 그러나 compactness·연결성과 같은 "전역적" 성질은 preimage가 아니라 image의 방향으로 보존되며, 바로 이 보존이 해석학의 존재 정리들 — 최댓값의 존재, 중간값의 존재 — 을 떠받친다. 이 글에서 우리는 그중 compactness의 보존을 출발점으로 삼아, 거기서 최대·최소 정리와 균등연속성을 차례로 끌어낸다.
+연속성은 정의역의 위상적 성질이 image로 옮겨 가는지를 묻는 관점에서 보면 가장 잘 이해된다. 연속함수가 열린집합의 preimage를 열린집합으로 보낸다는 ([§함수의 극한과 연속, ⁋명제 3](/ko/math/analysis/limits_and_continuity#prop3)) 위상적 특징화는, 정의역의 구조가 아니라 정의역 위에서 측정되는 양들의 거동을 통제한다. 그러나 compactness·연결성과 같은 "전역적" 성질은 preimage가 아니라 image의 방향으로 보존되며, 바로 이 보존이 해석학의 존재 정리들(최댓값의 존재, 중간값의 존재)을 떠받친다. 이 글에서 우리는 그중 compactness의 보존을 출발점으로 삼아, 거기서 최대·최소 정리와 균등연속성을 차례로 끌어낸다.
 
 ## 컴팩트성의 보존
 
@@ -34,14 +34,14 @@ $$y_{n_k} = f(x_{n_k}) \longrightarrow f(x) \in f(K)$$
 이다. 따라서 $(y_n)$이 $f(K)$ 안의 점으로 수렴하는 부분수열을 가지므로 $f(K)$는 점렬컴팩트이다.
 :::
 
-증명에서 본질적으로 쓰인 것은 연속성의 점열 특징화 하나뿐이며, 정의역과 공역의 차원이나 구체적 구조는 전혀 개입하지 않는다. 그 결과 [정리 1](#thm1)은 임의의 거리공간 사이의 연속함수에 그대로 적용된다. 한편 compactness와 달리 닫힘이나 boundedness는 연속함수가 보존하지 않음을 유의해야 한다 — 예컨대 $f(x) = \arctan x$는 닫힌집합 $\mathbb{R}$를 bounded인 열린구간 $(-\pi/2, \pi/2)$로 보내고, $g(x) = 1/x$는 bounded가 아닌 닫힌집합 $(0, 1]$ 위에서 bounded가 아닌 image를 만든다. Compactness가 닫힘과 bounded의 결합이라는 [§compactness, ⁋정리 2](/ko/math/analysis/compactness#thm2)를 떠올리면, 두 성질이 따로따로는 깨지지만 묶어 놓으면 보존된다는 사실이 더욱 두드러진다.
+증명에서 본질적으로 쓰인 것은 연속성의 점열 특징화 하나뿐이며, 정의역과 공역의 차원이나 구체적 구조는 전혀 개입하지 않는다. 그 결과 [정리 1](#thm1)은 임의의 거리공간 사이의 연속함수에 그대로 적용된다. 한편 compactness와 달리 닫힘이나 boundedness는 연속함수가 보존하지 않음을 유의해야 한다. 가령 $f(x) = \arctan x$는 닫힌집합 $\mathbb{R}$를 닫혀 있지 않은 열린구간 $(-\pi/2, \pi/2)$로 보내고, $g(x) = 1/x$는 bounded인 집합 $(0, 1]$을 bounded가 아닌 image $[1, \infty)$로 보낸다. Compactness가 닫힘과 bounded의 결합이라는 [§컴팩트성, ⁋정리 2](/ko/math/analysis/compactness#thm2)를 떠올리면, 두 성질이 따로따로는 깨지지만 묶어 놓으면 보존된다는 사실이 더욱 두드러진다.
 
 ## 최대·최소 정리
 
 실숫값 연속함수에 [정리 1](#thm1)을 적용하면 최댓값과 최솟값의 존재가 곧바로 따른다. 핵심 관찰은 $\mathbb{R}$의 점렬컴팩트 부분집합이 자신의 상한과 하한을 원소로 포함한다는 것이다. 닫혀 있고 bounded인 집합은 상·하한이 존재하며, 닫힘 때문에 그 극한값이 집합 안에 들어오기 때문이다. 따라서 $f$의 image $f(K)$가 점렬컴팩트라는 [정리 1](#thm1)의 결론만으로 최댓값·최솟값이 실현된다.
 
 ::: 따름정리 2 (최대·최소 정리)
-$K$가 점렬컴팩트이고 $f : K \rightarrow \mathbb{R}$가 연속이면, $f$는 $K$에서 최댓값과 최솟값을 가진다. 특히 닫힌구간 $[a,b]$에서 연속인 함수는 최댓값과 최솟값을 가진다.
+$K$가 공집합이 아닌 점렬컴팩트집합이고 $f : K \rightarrow \mathbb{R}$가 연속이면, $f$는 $K$에서 최댓값과 최솟값을 가진다. 특히 닫힌구간 $[a,b]$에서 연속인 함수는 최댓값과 최솟값을 가진다.
 :::
 
 ::: 증명
@@ -56,7 +56,7 @@ $$M - \frac1n < y_n \leq M, \qquad y_n \in f(K)$$
 인 $y_n$을 고를 수 있고, 따라서 $y_n \rightarrow M$이다. $f(K)$가 닫혀 있으므로 그 극한 $M$도 $f(K)$의 원소이다. 즉 $M = f(x_{\max})$인 $x_{\max} \in K$가 있어 $M$이 최댓값이다. 하한 $m = \inf f(K)$에 대해서도 같은 논증을 적용하면 $m = f(x_{\min})$인 $x_{\min} \in K$가 있어 최솟값이 실현된다. 마지막 주장은 닫힌구간 $[a,b]$가 닫혀 있고 bounded여서 점렬컴팩트이므로 곧바로 따른다.
 :::
 
-이로써 최대·최소 정리에서 받아들였던 최대·최소 정리가 완비성에 기초하여 증명되었고, 그것에 의존하던 평균값 정리](/ko/math/calculus/mean_value_theorem)의 롤의 정리도 정당화된다.
+이로써 [\[미적분학\] §연속함수](/ko/math/calculus/continuity)에서 받아들였던 최대·최소 정리가 완비성에 기초하여 증명되었고, 그것에 의존하던 [\[미적분학\] §평균값 정리, ⁋정리 3](/ko/math/calculus/mean_value_theorem#thm3)도 정당화된다.
 
 ## 균등연속성
 
@@ -66,7 +66,7 @@ $$M - \frac1n < y_n \leq M, \qquad y_n \in f(K)$$
 $f : X \rightarrow Y$가 *균등연속<sub>uniformly continuous</sub>*이라는 것은, 임의의 $\varepsilon > 0$에 대하여 $\delta > 0$이 존재하여 ($x$에 무관하게) 모든 $x, x'$에 대해 $d_X(x, x') < \delta$이면 $d_Y(f(x), f(x')) < \varepsilon$인 것이다.
 :::
 
-정의 1의 연속과의 차이는 한정사의 순서에 있다. 점별 연속은 $\varepsilon$과 점 $a$를 먼저 받은 뒤 $\delta$를 고르는 반면, 균등연속은 $\varepsilon$만 받고 모든 점에 동시에 통하는 $\delta$를 고른다. 기호로 적으면, 점별 연속이
+[§함수의 극한과 연속, ⁋정의 1](/ko/math/analysis/limits_and_continuity#def1)의 연속과의 차이는 한정사의 순서에 있다. 점별 연속은 $\varepsilon$과 점 $a$를 먼저 받은 뒤 $\delta$를 고르는 반면, 균등연속은 $\varepsilon$만 받고 모든 점에 동시에 통하는 $\delta$를 고른다. 기호로 적으면, 점별 연속이
 
 $$\forall \varepsilon  \forall a  \exists \delta  \forall x : \bigl(d_X(x, a) < \delta \implies d_Y(f(x), f(a)) < \varepsilon\bigr)$$
 
@@ -100,7 +100,7 @@ d_Y\bigl(f(x_{n_k}), f(x_{n_k}')\bigr)
 이어서 두 image의 거리가 $0$으로 가야 한다. 이는 그 거리가 모든 $k$에서 $\varepsilon$ 이상이라는 데 모순이다. 따라서 $f$는 균등연속이다.
 :::
 
-증명은 compactness를 점열로 두 번 — 한 번은 $(x_n)$의 수렴 부분수열을 뽑기 위해 — 사용했을 뿐, 함수의 구체적 형태에는 의존하지 않는다. Compactness가 빠지면 결론이 무너진다는 것을 다음 절의 예시들에서 직접 확인한다.
+증명은 compactness를 $(x_n)$의 수렴 부분수열을 뽑는 데 한 번 사용했을 뿐, 함수의 구체적 형태에는 의존하지 않는다. 짝지어진 점열 $(x_n')$이 같은 극한으로 가는 것은 삼각부등식에서 따라온다. Compactness가 빠지면 결론이 무너진다는 것을 다음 절의 예시들에서 직접 확인한다.
 
 ## 예시와 계산
 
@@ -131,7 +131,7 @@ $$\lvert x_n - x_n' \rvert = \frac1n - \frac{1}{n+1} = \frac{1}{n(n+1)} \longrig
 
 $$\lvert f(x_n) - f(x_n') \rvert = \lvert n - (n+1) \rvert = 1$$
 
-이 항상 $1$이다. 따라서 $\varepsilon = 1$에 대해서는 어떤 $\delta > 0$도 통하지 않아 $f$는 균등연속이 아니다. 원점 근처에서 함수가 한없이 가팔라져 공통의 $\delta$를 허용하지 않기 때문이다. 정의역 $(0, 1]$이 닫혀 있지 않아 — 따라서 컴팩트가 아니어서 — [정리 4](#thm4)의 가정이 충족되지 않는 것과 정확히 맞물린다.
+이 항상 $1$이다. 따라서 $\varepsilon = 1$에 대해서는 어떤 $\delta > 0$도 통하지 않아 $f$는 균등연속이 아니다. 원점 근처에서 함수가 한없이 가팔라져 공통의 $\delta$를 허용하지 않기 때문이다. 정의역 $(0, 1]$이 닫혀 있지 않아, 따라서 컴팩트가 아니어서 [정리 4](#thm4)의 가정이 충족되지 않는 것과 정확히 맞물린다.
 
 같은 현상은 $g : \mathbb{R} \rightarrow \mathbb{R}$, $g(x) = x^2$에서도 나타난다. $x_n = n + 1/n$, $x_n' = n$이면 $\lvert x_n - x_n'\rvert = 1/n \rightarrow 0$이지만
 
@@ -170,7 +170,7 @@ $$d_Y\bigl(f(x), f(x')\bigr) \leq L \cdot d_X(x, x') < L \cdot \frac{\varepsilon
 
 $$\frac{\lvert \sqrt{x} - \sqrt{0} \rvert}{\lvert x - 0\rvert} = \frac{1}{\sqrt{x}} \longrightarrow \infty$$
 
-이어서 어떤 유한한 립시츠 상수로도 묶이지 않는다. 즉 립시츠 연속, 균등연속, 단순 연속은 갈수록 약해지는 세 단계의 조건이며, 컴팩트 정의역 위에서는 가운데 두 조건이 연속과 합쳐진다.
+이어서 어떤 유한한 립시츠 상수로도 묶이지 않는다. 즉 립시츠 연속, 균등연속, 단순 연속은 갈수록 약해지는 세 단계의 조건이며, 컴팩트 정의역 위에서는 가운데 조건이 연속과 합쳐진다.
 
 ---
 

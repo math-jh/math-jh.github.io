@@ -16,7 +16,7 @@ published: false
 Smooth projective surface의 기하학을 분류하는 데 있어 가장 기본적인 불변량들은 self-intersection number $K_S^2$, topological Euler characteristic $\rchi_{\mathrm{top}}(S)$, 그리고 structure sheaf의 Euler characteristic $\rchi(\mathcal{O}_S)$이다. 이 세 불변량 사이에는 놀랍도록 단순한 선형관계가 존재하며, 이를 **Noether formula**라 부른다. 본 글에서는 Hirzebruch-Riemann-Roch 정리의 곡면으로의 환원을 통해 Noether formula를 유도하고, $c_2(S)$의 기하학적 의미를 설명한 뒤, 다양한 구체적인 예시를 통해 이 공식을 검증한다.
 
 ::: 정의 1
-Smooth projective surface $S$의 **topological Euler characteristic** $\rchi_{\mathrm{top}}(S)$는
+복소수체 위의 smooth projective surface $S$의 **topological Euler characteristic** $\rchi_{\mathrm{top}}(S)$는
 
 $$\rchi_{\mathrm{top}}(S)=\sum_{i=0}^4(-1)^i\dim H^i(S,\mathbb{Q})$$
 
@@ -24,7 +24,7 @@ $$\rchi_{\mathrm{top}}(S)=\sum_{i=0}^4(-1)^i\dim H^i(S,\mathbb{Q})$$
 :::
 
 ::: 명제 2 (Poincaré-Hopf)
-Smooth projective surface $S$에 대하여, 그 두 번째 Chern class의 적분값은 topological Euler characteristic과 일치한다. 즉
+복소수체 위의 smooth projective surface $S$에 대하여, 그 두 번째 Chern class의 적분값은 topological Euler characteristic과 일치한다. 즉
 
 $$\int_S c_2(T_S)=\rchi_{\mathrm{top}}(S)$$
 
@@ -88,7 +88,7 @@ Smooth projective surface $S$에 대하여
 
 $$\rchi(\mathcal{O}_S)=1-q+p_g$$
 
-이 성립한다. 여기서 $q=h^1(S,\mathcal{O}_S)$는 *불규칙성<sub>irregularity</sub>*, $p_g=h^0(S,K_S)$는 *기하적 genus<sub>geometric genus</sub>*이다.
+이 성립한다. 여기서 $q=h^1(S,\mathcal{O}_S)$는 *irregularity<sub>불규칙성</sub>*, $p_g=h^0(S,K_S)$는 *geometric genus<sub>기하적 genus</sub>*이다.
 :::
 
 ::: 증명
@@ -162,7 +162,7 @@ $$\rchi(\mathcal{O}_{\widetilde{\mathbb{P}}^2})=\rchi(\mathcal{O}_{\mathbb{P}^2}
 :::
 
 ::: 예시 9 ($\mathbb{P}^3$ 속 degree $d$ smooth surface)
-$S\subseteq\mathbb{P}^3$를 degree $d$인 smooth surface라 하자. Adjunction formula에 의해
+$S\subseteq\mathbb{P}^3$를 degree $d$인 smooth surface라 하자. [§표준선다발, ⁋명제 9](/ko/math/algebraic_varieties/canonical_bundle#prop9)의 adjunction formula에 의해
 
 $$K_S=(K_{\mathbb{P}^3}+S)\vert_S=(-4H+dH)\vert_S=(d-4)h$$
 

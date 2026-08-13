@@ -29,7 +29,7 @@ $$x \equiv a \pmod m, \qquad x \equiv b \pmod n$$
 ::: 증명
 *존재성.* $\gcd(m, n) = 1$이므로 [§유클리드 호제법과 Bézout 항등식, ⁋정리 3](/ko/math/number_theory/euclidean_algorithm#thm3)으로 $mu + nv = 1$인 정수 $u, v$가 있다. $x_0 = a\,nv + b\,mu$로 두면, $nv = 1 - mu \equiv 1 \pmod m$이므로 $x_0 \equiv a\cdot 1 + 0 = a \pmod m$이고, symmetric으로 $mu \equiv 1 \pmod n$이므로 $x_0 \equiv b \pmod n$이다. 따라서 $x_0$이 해이다.
 
-*유일성.* $x_0, x_1$이 모두 해이면 $x_0 - x_1$이 $m$과 $n$ 모두로 나누어떨어진다. $\gcd(m, n) = 1$이므로 $mn \mid (x_0 - x_1)$이고 (서로소인 두 수로 나누어떨어지면 그 곱으로도 나누어떨어진다 — 산술의 기본정리 또는 Euclid 보조정리로 얻는다), 따라서 $x_0 \equiv x_1 \pmod{mn}$이다.
+*유일성.* $x_0, x_1$이 모두 해이면 $x_0 - x_1$이 $m$과 $n$ 모두로 나누어떨어진다. $x_0 - x_1 = ms$로 쓰면 $n \mid ms$이고 $\gcd(n, m) = 1$이므로 [§나눗셈과 최대공약수, ⁋명제 9](/ko/math/number_theory/divisibility#prop9)로 $n \mid s$이다. 따라서 $mn \mid (x_0 - x_1)$이고 $x_0 \equiv x_1 \pmod{mn}$이다.
 :::
 
 ::: 예시 2
@@ -45,7 +45,7 @@ $m_1, m_2, \ldots, m_r$이 쌍마다 서로소이면, 임의의 $a_1, \ldots, a_
 :::
 
 ::: 증명
-$r$에 대한 귀납법으로 보인다. $r = 1$은 자명하다. 앞의 $r-1$개를 합쳐 법 $m_1\cdots m_{r-1}$에 대한 하나의 합동식으로 만들면, 이 법은 $m_r$과 서로소이므로 ($m_r$이 각 $m_i$와 서로소이면 그 곱과도 서로소) 정리 1을 적용하여 법 $M$에 대한 유일한 해를 얻는다.
+$r$에 대한 귀납법으로 보인다. $r = 1$이면 합동식이 하나뿐이고 그 자체가 법 $m_1$에 대한 유일한 해를 준다. 앞의 $r-1$개를 합쳐 법 $m_1\cdots m_{r-1}$에 대한 하나의 합동식으로 만들면, 이 법은 $m_r$과 서로소이므로 ($m_r$이 각 $m_i$와 서로소이면 그 곱과도 서로소) 정리 1을 적용하여 법 $M$에 대한 유일한 해를 얻는다.
 :::
 
 따름정리 3은 구조적으로 ring의 direct product 분해로 읽힌다.
@@ -73,7 +73,7 @@ $$x \equiv \sum_{i=1}^{r} a_i M_i N_i \pmod{M}$$
 :::
 
 ::: 증명
-먼저 $\gcd(M_i, m_i) = 1$임을 본다. $M_i = \prod_{j \neq i} m_j$는 $m_i$와 서로소인 인수들의 곱이고, 쌍마다 서로소인 수들의 곱은 다시 $m_i$와 서로소이므로 ([§유클리드 호제법과 Bézout 항등식](/ko/math/number_theory/euclidean_algorithm)의 결과로 얻는다) $\gcd(M_i, m_i) = 1$이다. 따라서 곱셈 역원 $N_i \equiv M_i^{-1} \pmod{m_i}$가 존재한다. 이제 $x = \sum_{k} a_k M_k N_k$를 고정된 법 $m_i$로 환원하자. $j \neq i$이면 $m_i \mid M_j$이므로 $M_j N_j \equiv 0 \pmod{m_i}$이고, $k = i$인 항만 살아남아
+먼저 $\gcd(M_i, m_i) = 1$임을 본다. $M_i = \prod_{j \neq i} m_j$는 $m_i$와 서로소인 인수들의 곱이고, $m_i$와 서로소인 수들의 곱은 다시 $m_i$와 서로소이므로 ([§유클리드 호제법과 Bézout 항등식](/ko/math/number_theory/euclidean_algorithm)의 결과로 얻는다) $\gcd(M_i, m_i) = 1$이다. 따라서 곱셈 역원 $N_i \equiv M_i^{-1} \pmod{m_i}$가 존재한다. 이제 $x = \sum_{k} a_k M_k N_k$를 고정된 법 $m_i$로 환원하자. $j \neq i$이면 $m_i \mid M_j$이므로 $M_j N_j \equiv 0 \pmod{m_i}$이고, $k = i$인 항만 살아남아
 
 $$\begin{aligned}
 x &= \sum_{k=1}^{r} a_k M_k N_k \\
@@ -165,7 +165,7 @@ $$\begin{aligned}
 7 &\equiv 2 \pmod 5, & 7^4 \equiv 2^4 = 16 &\equiv 1 \pmod 5 &\Longrightarrow\quad 7^{100} = (7^4)^{25} &\equiv 1 \pmod 5
 \end{aligned}$$
 
-이다. 따라서 $7^{100}$은 세 법 $4, 3, 5$ 모두에 대해 $1$과 합동이고, 정리에 의해 법 $60$에 대해 $1$과 합동인 수가 유일하므로 $7^{100} \equiv 1 \pmod{60}$이다. 큰 지수의 거듭제곱을 직접 다루지 않고 작은 법에서의 주기성만으로 답을 얻었다.
+이다. 따라서 $7^{100}$은 세 법 $4, 3, 5$ 모두에 대해 $1$과 합동이고, 따름정리 3에 의해 법 $60$에 대해 $1$과 합동인 수가 유일하므로 $7^{100} \equiv 1 \pmod{60}$이다. 큰 지수의 거듭제곱을 직접 다루지 않고 작은 법에서의 주기성만으로 답을 얻었다.
 :::
 
 ::: 예시 11 (제곱근의 개수)

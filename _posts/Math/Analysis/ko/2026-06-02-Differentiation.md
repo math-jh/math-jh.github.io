@@ -100,7 +100,7 @@ $$\left(\frac{f}{g}\right)'(a) = \frac{f'(a)g(a) - f(a)g'(a)}{g(a)^2}$$
 :::
 
 ::: 증명
-$g$가 $a$에서 연속이고 $g(a) \neq 0$이므로, [§함수의 극한과 연속](/ko/math/analysis/limits_and_continuity)의 부호 보존성에 의해 $a$의 한 근방에서 $g$는 $0$이 되지 않아 $f/g$가 정의된다. 그 근방에서 [명제 1](#prop1)의 $\varphi, \psi$를 써서 차이를 정리하면
+$g$가 $a$에서 연속이고 $g(a) \neq 0$이므로, [§함수의 극한과 연속, ⁋정의 1](/ko/math/analysis/limits_and_continuity#def1)의 연속 조건에서 $\varepsilon = \lvert g(a)\rvert/2$로 두면 $a$의 한 근방에서 $\lvert g(x)\rvert > \lvert g(a)\rvert/2 > 0$이 되어 $f/g$가 정의된다. 그 근방에서 [명제 1](#prop1)의 $\varphi, \psi$를 써서 차이를 정리하면
 
 $$\begin{aligned}
 \frac{f(x)}{g(x)} - \frac{f(a)}{g(a)} &= \frac{f(x)g(a) - f(a)g(x)}{g(x)g(a)} \\
@@ -130,7 +130,7 @@ $$(f^{-1})'(b) = \frac{1}{f'(a)} = \frac{1}{f'(f^{-1}(b))}$$
 :::
 
 ::: 증명
-$f^{-1}(f(x)) = x$가 $I$의 모든 $x$에서 성립한다. 양변을 $a$에서 미분하되 좌변에는 [정리 3](#thm3) 을 적용하면
+$f^{-1}(f(x)) = x$가 $I$의 모든 $x$에서 성립한다. 양변을 $a$에서 미분하되 좌변에는 [정리 3](#thm3)을 적용하면
 
 $$(f^{-1})'(f(a))\cdot f'(a) = 1$$
 

@@ -24,14 +24,14 @@ Holomorphic function의 미분 이론을 ([§복소정칙함수](/ko/math/comple
 연속사상 $\gamma : [a, b] \rightarrow \mathbb{C}$가 *piecewise $C^1$ 곡선<sub>조각마다 C¹인 곡선</sub>*이라는 것은, 구간의 분할 $a = t_0 < t_1 < \cdots < t_n = b$이 있어 각 부분구간 $[t_{k-1}, t_k]$ 위에서 $\gamma$가 $C^1$급(곧 도함수 $\gamma'$이 존재하고 연속)인 것이다. 점 $\gamma(a)$를 곡선의 *시점<sub>initial point</sub>*, $\gamma(b)$를 *종점<sub>terminal point</sub>*이라 하고, $\gamma(a) = \gamma(b)$이면 $\gamma$를 *closed curve<sub>닫힌 곡선</sub>*라 한다.
 :::
 
-여기서 $\gamma$를 실수부와 허수부로 갈라 $\gamma(t) = x(t) + i\,y(t)$로 적으면, 그 도함수는 $\gamma'(t) = x'(t) + i\,y'(t)$로 정의되는 복소숫값 함수이다. 곧 복소숫값 함수의 미분은 실허 두 성분을 각각 미분한 것이며, 각 부분구간 위에서 $x, y$가 $C^1$이라는 뜻이다. 분할의 끝점 $t_k$에서는 좌·우 도함수가 다를 수 있어 $\gamma'$이 불연속일 수 있지만, 그런 점은 유한 개뿐이므로 아래 적분에는 영향을 주지 않는다. 같은 자취를 그리는 곡선이라도 매개변수 $t$를 어떻게 잡느냐에 따라 사상 $\gamma$ 자체는 달라지는데, 적분값이 이 선택에 무관함은 [명제 4](#prop4)에서 확인한다.
+여기서 $\gamma$를 실수부와 허수부로 갈라 $\gamma(t) = x(t) + iy(t)$로 적으면, 그 도함수는 $\gamma'(t) = x'(t) + iy'(t)$로 정의되는 복소숫값 함수이다. 곧 복소숫값 함수의 미분은 실허 두 성분을 각각 미분한 것이며, 각 부분구간 위에서 $x, y$가 $C^1$이라는 뜻이다. 분할의 끝점 $t_k$에서는 좌·우 도함수가 다를 수 있어 $\gamma'$이 불연속일 수 있지만, 그런 점은 유한 개뿐이므로 아래 적분에는 영향을 주지 않는다. 같은 자취를 그리는 곡선이라도 매개변수 $t$를 어떻게 잡느냐에 따라 사상 $\gamma$ 자체는 달라지는데, 적분값이 이 선택에 무관함은 [명제 4](#prop4)에서 확인한다.
 
 이제 곡선 위에서 함수를 적분한다. 발상은 곡선을 따라 미소 변위 $\dd{z} = \gamma'(t)\dd{t}$를 잡고 $f$ 값을 곱해 더하는 것으로, 형식적으로는 치환 $z = \gamma(t)$를 통해 실변수 적분으로 환원된다.
 
 ::: 정의 2
 $\gamma : [a, b] \rightarrow \mathbb{C}$가 piecewise $C^1$ 곡선이고 $f$가 $\gamma$의 자취 $\gamma([a,b])$를 포함하는 열린집합에서 정의된 연속함수일 때, $\gamma$를 따르는 $f$의 *경로적분<sub>contour integral</sub>*을
 
-$$\int_\gamma f(z)\dd{z} = \int_a^b f(\gamma(t))\,\gamma'(t)\dd{t}$$
+$$\int_\gamma f(z)\dd{z} = \int_a^b f(\gamma(t))\gamma'(t)\dd{t}$$
 
 로 정의한다. Closed 곡선 $\gamma$에 대하여는 같은 적분을 $\oint_\gamma f(z)\dd{z}$로도 적는다.
 :::
@@ -41,11 +41,11 @@ $$\int_\gamma f(z)\dd{z} = \int_a^b f(\gamma(t))\,\gamma'(t)\dd{t}$$
 ::: 예시 3 (단위원 위의 적분)
 반시계방향 단위원 $\gamma(t) = e^{it}$ ($t \in [0, 2\pi]$) 를 따라 $f(z) = 1/z$를 적분한다. $\gamma'(t) = i e^{it}$이고 자취 위에서 $f(\gamma(t)) = e^{-it}$이므로
 
-$$\oint_\gamma \frac{\dd{z}}{z} = \int_0^{2\pi} e^{-it}\,(i e^{it})\dd{t} = \int_0^{2\pi} i\dd{t} = 2\pi i$$
+$$\oint_\gamma \frac{\dd{z}}{z} = \int_0^{2\pi} e^{-it}(i e^{it})\dd{t} = \int_0^{2\pi} i\dd{t} = 2\pi i$$
 
 이다. 같은 곡선 위에서 $f(z) = z$를 적분하면 $f(\gamma(t)) = e^{it}$이라
 
-$$\oint_\gamma z\dd{z} = \int_0^{2\pi} e^{it}\,(i e^{it})\dd{t} = i\int_0^{2\pi} e^{2it}\dd{t} = i\left[\frac{e^{2it}}{2i}\right]_0^{2\pi} = 0$$
+$$\oint_\gamma z\dd{z} = \int_0^{2\pi} e^{it}(i e^{it})\dd{t} = i\int_0^{2\pi} e^{2it}\dd{t} = i\left[\frac{e^{2it}}{2i}\right]_0^{2\pi} = 0$$
 
 이 된다. 두 적분의 대비가 이 글의 주제를 압축한다. $z$는 평면 전체에서 원시함수 $z^2/2$를 가져 closed 곡선에서 적분이 $0$인 반면, $1/z$는 원점을 둘러싼 영역에서 단일한 원시함수를 갖지 못해 적분이 $0$이 아니다.
 :::
@@ -57,34 +57,34 @@ $$\oint_\gamma z\dd{z} = \int_0^{2\pi} e^{it}\,(i e^{it})\dd{t} = i\int_0^{2\pi}
 ::: 명제 4
 $\gamma : [a, b] \rightarrow \mathbb{C}$가 piecewise $C^1$ 곡선이고 $f, g$가 $\gamma$의 자취를 포함하는 열린집합에서 연속이라 하자. 그러면 다음이 성립한다.
 
-1. (선형성) 임의의 복소수 $\alpha, \beta$에 대하여 $\displaystyle\int_\gamma (\alpha f + \beta g)\dd{z} = \alpha\int_\gamma f\dd{z} + \beta\int_\gamma g\dd{z}$이다.
-2. (재매개화 불변) $\varphi : [c, d] \rightarrow [a, b]$가 $\varphi(c) = a$, $\varphi(d) = b$인 $C^1$급 증가 전단사이면, $\tilde{\gamma} = \gamma \circ \varphi$에 대하여 $\displaystyle\int_{\tilde\gamma} f\dd{z} = \int_\gamma f\dd{z}$이다.
-3. (역방향) $\gamma$를 거꾸로 지나는 곡선 $(-\gamma)(t) = \gamma(a + b - t)$ ($t \in [a, b]$) 에 대하여 $\displaystyle\int_{-\gamma} f\dd{z} = -\int_\gamma f\dd{z}$이다.
-4. (이어붙이기) $\gamma_1 : [a, b] \rightarrow \mathbb{C}$의 종점이 $\gamma_2 : [b, c] \rightarrow \mathbb{C}$의 시점과 같아 이어붙인 곡선 $\gamma_1 + \gamma_2$을 이룰 때, $\displaystyle\int_{\gamma_1 + \gamma_2} f\dd{z} = \int_{\gamma_1} f\dd{z} + \int_{\gamma_2} f\dd{z}$이다.
+1. (선형성) 임의의 복소수 $\alpha, \beta$에 대하여 $\int_\gamma (\alpha f + \beta g)\dd{z} = \alpha\int_\gamma f\dd{z} + \beta\int_\gamma g\dd{z}$이다.
+2. (재매개화 불변) $\varphi : [c, d] \rightarrow [a, b]$가 $\varphi(c) = a$, $\varphi(d) = b$인 $C^1$급 증가 전단사이면, $\tilde{\gamma} = \gamma \circ \varphi$에 대하여 $\int_{\tilde\gamma} f\dd{z} = \int_\gamma f\dd{z}$이다.
+3. (역방향) $\gamma$를 거꾸로 지나는 곡선 $(-\gamma)(t) = \gamma(a + b - t)$ ($t \in [a, b]$) 에 대하여 $\int_{-\gamma} f\dd{z} = -\int_\gamma f\dd{z}$이다.
+4. (이어붙이기) piecewise $C^1$ 곡선 $\gamma_1 : [a, b] \rightarrow \mathbb{C}$의 종점이 $\gamma_2 : [b, c] \rightarrow \mathbb{C}$의 시점과 같아 이어붙인 곡선 $\gamma_1 + \gamma_2$을 이루고 $f$가 두 자취의 합집합을 포함하는 열린집합에서 연속이면, $\int_{\gamma_1 + \gamma_2} f\dd{z} = \int_{\gamma_1} f\dd{z} + \int_{\gamma_2} f\dd{z}$이다.
 :::
 
 ::: 증명
-(1) 정의 2에서 피적분함수가 $(\alpha f + \beta g)(\gamma(t))\gamma'(t) = \alpha\,f(\gamma(t))\gamma'(t) + \beta\,g(\gamma(t))\gamma'(t)$로 갈라지고, 실변수 복소숫값 적분이 선형이므로 적분이 분배된다.
+(1) 정의 2에서 피적분함수가 $(\alpha f + \beta g)(\gamma(t))\gamma'(t) = \alpha f(\gamma(t))\gamma'(t) + \beta g(\gamma(t))\gamma'(t)$로 갈라지고, 실변수 복소숫값 적분이 선형이므로 적분이 분배된다.
 
 (2) 치환적분으로 직접 계산한다. $\tilde\gamma'(s) = \gamma'(\varphi(s))\varphi'(s)$이므로
 
-$$\int_{\tilde\gamma} f\dd{z} = \int_c^d f(\gamma(\varphi(s)))\,\gamma'(\varphi(s))\,\varphi'(s)\dd{s}$$
+$$\int_{\tilde\gamma} f\dd{z} = \int_c^d f(\gamma(\varphi(s)))\gamma'(\varphi(s))\varphi'(s)\dd{s}$$
 
 이고, $t = \varphi(s)$로 치환하면 $\dd{t} = \varphi'(s)\dd{s}$이고 $\varphi$가 증가하여 적분 구간이 $s : c \rightarrow d$에서 $t : a \rightarrow b$로 바뀌므로, 우변이 $\int_a^b f(\gamma(t))\gamma'(t)\dd{t} = \int_\gamma f\dd{z}$가 된다.
 
 (3) $(-\gamma)(t) = \gamma(a + b - t)$의 도함수는 연쇄법칙으로 $-\gamma'(a + b - t)$이므로
 
-$$\int_{-\gamma} f\dd{z} = \int_a^b f(\gamma(a + b - t))\,\bigl(-\gamma'(a + b - t)\bigr)\dd{t}$$
+$$\int_{-\gamma} f\dd{z} = \int_a^b f(\gamma(a + b - t))\bigl(-\gamma'(a + b - t)\bigr)\dd{t}$$
 
 이다. $u = a + b - t$로 치환하면 $\dd{u} = -\dd{t}$이고 구간이 $t : a \rightarrow b$에서 $u : b \rightarrow a$로 뒤집히므로
 
-$$\int_{-\gamma} f\dd{z} = \int_b^a f(\gamma(u))\,\bigl(-\gamma'(u)\bigr)\,(-\dd{u}) = \int_b^a f(\gamma(u))\gamma'(u)\dd{u} = -\int_a^b f(\gamma(u))\gamma'(u)\dd{u}$$
+$$\int_{-\gamma} f\dd{z} = \int_b^a f(\gamma(u))\bigl(-\gamma'(u)\bigr)(-\dd{u}) = \int_b^a f(\gamma(u))\gamma'(u)\dd{u} = -\int_a^b f(\gamma(u))\gamma'(u)\dd{u}$$
 
 가 되어 $-\int_\gamma f\dd{z}$와 같다.
 
 (4) 이어붙인 곡선 $\gamma_1 + \gamma_2$은 $[a, c]$ 위에서 $[a, b]$에서는 $\gamma_1$로, $[b, c]$에서는 $\gamma_2$로 주어지는 piecewise $C^1$ 곡선이다. 실변수 적분의 구간가법성에 의해
 
-$$\int_{\gamma_1 + \gamma_2} f\dd{z} = \int_a^c f(\gamma(t))\gamma'(t)\dd{t} = \int_a^b f(\gamma_1(t))\gamma_1'(t)\dd{t} + \int_b^c f(\gamma_2(t))\gamma_2'(t)\dd{t}$$
+$$\int_{\gamma_1 + \gamma_2} f\dd{z} = \int_a^c f\bigl((\gamma_1 + \gamma_2)(t)\bigr)(\gamma_1 + \gamma_2)'(t)\dd{t} = \int_a^b f(\gamma_1(t))\gamma_1'(t)\dd{t} + \int_b^c f(\gamma_2(t))\gamma_2'(t)\dd{t}$$
 
 이고 이는 $\int_{\gamma_1} f\dd{z} + \int_{\gamma_2} f\dd{z}$이다.
 :::
@@ -102,9 +102,9 @@ $$\mathrm{length}(\gamma) = \int_a^b \lvert \gamma'(t)\rvert\dd{t}$$
 피적분함수 $\lvert\gamma'(t)\rvert = \sqrt{x'(t)^2 + y'(t)^2}$은 곡선의 순간 속력이므로, 그 적분은 곡선을 따라 이동한 총 거리, 곧 arc length이다. 가령 단위원 $\gamma(t) = e^{it}$ ($t \in [0, 2\pi]$) 은 $\lvert\gamma'(t)\rvert = \lvert i e^{it}\rvert = 1$이라 $\mathrm{length}(\gamma) = \int_0^{2\pi} 1\dd{t} = 2\pi$로, 반지름 $1$인 원의 둘레와 일치한다. 이 길이를 써서 경로적분의 크기를 위로 어림한다.
 
 ::: 명제 6 (ML 부등식)
-$\gamma : [a, b] \rightarrow \mathbb{C}$가 piecewise $C^1$ 곡선이고 $f$가 $\gamma$의 자취 위에서 연속이라 하자. 그러면
+$\gamma : [a, b] \rightarrow \mathbb{C}$가 piecewise $C^1$ 곡선이고 $f$가 $\gamma$의 자취를 포함하는 열린집합에서 연속이라 하자. 그러면
 
-$$\left\lvert \int_\gamma f(z)\dd{z} \right\rvert \leq \Bigl(\sup_{z \in \gamma([a,b])} \lvert f(z)\rvert\Bigr)\,\mathrm{length}(\gamma)$$
+$$\left\lvert \int_\gamma f(z)\dd{z} \right\rvert \leq \Bigl(\sup_{z \in \gamma([a,b])} \lvert f(z)\rvert\Bigr)\mathrm{length}(\gamma)$$
 
 이다. 특히 $\gamma$의 자취 위에서 $\lvert f\rvert \leq M$이고 $L = \mathrm{length}(\gamma)$이면 $\bigl\lvert\int_\gamma f\dd{z}\bigr\rvert \leq ML$이다.
 :::
@@ -118,9 +118,9 @@ $$\lvert I\rvert = e^{-i\theta} I = \int_a^b e^{-i\theta} g(t)\dd{t} = \Real \in
 
 이를 $g(t) = f(\gamma(t))\gamma'(t)$에 적용하면
 
-$$\left\lvert \int_\gamma f\dd{z} \right\rvert = \left\lvert \int_a^b f(\gamma(t))\gamma'(t)\dd{t} \right\rvert \leq \int_a^b \lvert f(\gamma(t))\rvert\,\lvert\gamma'(t)\rvert\dd{t}$$
+$$\left\lvert \int_\gamma f\dd{z} \right\rvert = \left\lvert \int_a^b f(\gamma(t))\gamma'(t)\dd{t} \right\rvert \leq \int_a^b \lvert f(\gamma(t))\rvert\lvert\gamma'(t)\rvert\dd{t}$$
 
-이다. 자취 위에서 $\lvert f(\gamma(t))\rvert \leq \sup_{z}\lvert f(z)\rvert =: M$이므로 우변은 $M\int_a^b \lvert\gamma'(t)\rvert\dd{t} = M\,\mathrm{length}(\gamma)$ 이하이다.
+이다. 자취 위에서 $\lvert f(\gamma(t))\rvert \leq \sup_{z}\lvert f(z)\rvert =: M$이므로 우변은 $M\int_a^b \lvert\gamma'(t)\rvert\dd{t} = M \cdot \mathrm{length}(\gamma)$ 이하이다.
 :::
 
 ML 부등식은 적분의 정확한 값을 모르더라도 그 크기에 상한을 주므로, 곡선을 변형시키며 적분이 $0$으로 가는지를 가늠하는 데 두루 쓰인다. 이름의 $M$은 피적분함수의 최댓값(maximum), $L$은 곡선의 길이(length)를 가리킨다. 가령 반지름 $R$인 원호 위에서 $\lvert f\rvert \leq M_R$이고 $M_R \cdot R \rightarrow 0$이면 그 호를 따른 적분이 $0$으로 감을 즉시 알 수 있는데, 이런 어림이 closed 곡선 적분의 평가에서 결정적 역할을 한다.
@@ -144,9 +144,9 @@ $$\int_\gamma f(z)\dd{z} = F(\gamma(b)) - F(\gamma(a))$$
 :::
 
 ::: 증명
-먼저 $\gamma$이 한 구간 $[a, b]$ 전체에서 $C^1$인 경우를 본다. 합성함수 $t \mapsto F(\gamma(t))$를 생각하면, $F$가 holomorphic이므로 holomorphic function의 합성에 대한 미분 규칙 ([§복소정칙함수, ⁋명제 3](/ko/math/complex_analysis/holomorphic_functions#prop3)) 에 의해
+먼저 $\gamma$이 한 구간 $[a, b]$ 전체에서 $C^1$인 경우를 본다. 합성함수 $t \mapsto F(\gamma(t))$를 생각하면, $F$가 holomorphic이므로 [§복소정칙함수, ⁋명제 3](/ko/math/complex_analysis/holomorphic_functions#prop3)의 합성 규칙 증명에 쓰인 보조함수 논증이 실수 증분 $h \rightarrow 0$에 대해서도 그대로 통하여
 
-$$\frac{d}{\dd{t}}F(\gamma(t)) = F'(\gamma(t))\,\gamma'(t) = f(\gamma(t))\,\gamma'(t)$$
+$$\frac{d}{\dd{t}}F(\gamma(t)) = F'(\gamma(t))\gamma'(t) = f(\gamma(t))\gamma'(t)$$
 
 이다. 따라서 정의 2의 피적분함수가 정확히 $H(t) = F(\gamma(t))$의 도함수 $H'(t)$이고, 실변수 미적분의 기본정리를 실허부에 각각 적용하면
 
@@ -164,8 +164,8 @@ $$\int_\gamma f\dd{z} = \sum_{k=1}^n \bigl( F(\gamma(t_k)) - F(\gamma(t_{k-1})) 
 ::: 따름정리 9
 $\Omega \subseteq \mathbb{C}$가 열려 있고 연속함수 $f$가 $\Omega$에서 원시함수 $F$를 가진다고 하자. 그러면 다음이 성립한다.
 
-1. (경로 독립) 자취가 $\Omega$에 들어 있고 시점·종점이 같은 두 piecewise $C^1$ 곡선 $\gamma_1, \gamma_2$에 대하여 $\displaystyle\int_{\gamma_1} f\dd{z} = \int_{\gamma_2} f\dd{z}$이다.
-2. (closed 경로) 자취가 $\Omega$에 들어 있는 임의의 closed piecewise $C^1$ 곡선 $\gamma$에 대하여 $\displaystyle\oint_\gamma f\dd{z} = 0$이다.
+1. (경로 독립) 자취가 $\Omega$에 들어 있고 시점·종점이 같은 두 piecewise $C^1$ 곡선 $\gamma_1, \gamma_2$에 대하여 $\int_{\gamma_1} f\dd{z} = \int_{\gamma_2} f\dd{z}$이다.
+2. (closed 경로) 자취가 $\Omega$에 들어 있는 임의의 closed piecewise $C^1$ 곡선 $\gamma$에 대하여 $\oint_\gamma f\dd{z} = 0$이다.
 :::
 
 ::: 증명
@@ -191,11 +191,11 @@ $$\oint_{\gamma_r} z^n\dd{z} = \begin{cases} 2\pi i, & n = -1, \\ 0, & n \neq -1
 ::: 증명
 $\gamma_r(t) = r e^{it}$이면 $\gamma_r'(t) = i r e^{it}$이고 자취 위에서 $z^n = r^n e^{int}$이므로
 
-$$\oint_{\gamma_r} z^n\dd{z} = \int_0^{2\pi} r^n e^{int}\,(i r e^{it})\dd{t} = i\, r^{n+1}\int_0^{2\pi} e^{i(n+1)t}\dd{t}$$
+$$\oint_{\gamma_r} z^n\dd{z} = \int_0^{2\pi} r^n e^{int}(i r e^{it})\dd{t} = i r^{n+1}\int_0^{2\pi} e^{i(n+1)t}\dd{t}$$
 
 이다. $n = -1$이면 지수가 $0$이 되어 피적분함수가 $1$이므로
 
-$$\oint_{\gamma_r} z^{-1}\dd{z} = i\,r^0 \int_0^{2\pi} 1\dd{t} = i \cdot 2\pi = 2\pi i$$
+$$\oint_{\gamma_r} z^{-1}\dd{z} = i r^0 \int_0^{2\pi} 1\dd{t} = i \cdot 2\pi = 2\pi i$$
 
 이다 (반지름 $r$에 무관함에 유의한다). $n \neq -1$이면 $m = n + 1$이 $0$이 아닌 정수이고
 
@@ -207,7 +207,7 @@ $$\int_0^{2\pi} e^{imt}\dd{t} = \left[ \frac{e^{imt}}{im} \right]_0^{2\pi} = \fr
 명제 10의 두 경우를 따름정리 9에 비추어 해석하면, 이 글 전체의 결론이 또렷해진다. $n \neq -1$인 멱함수 $z^n$은 적분이 $0$인데, 이는 우연이 아니라 $z^n$이 원시함수 $z^{n+1}/(n+1)$을 가지기 때문이다. $n \geq 0$이면 이 원시함수가 평면 전체에서 holomorphic이고, $n \leq -2$이면 원점을 뺀 영역 $\mathbb{C}\setminus\{0\}$에서 holomorphic이어서, 어느 경우든 원 $\gamma_r$의 자취를 품는 영역에서 원시함수가 존재하므로 따름정리 9에 의해 적분이 $0$이다. 유독 $n = -1$, 곧 $f(z) = 1/z$만이 예외인데, 적분값 $2\pi i \neq 0$은 따름정리 9에 의해 $1/z$이 원 $\gamma_r$의 자취를 포함하는 어떤 영역에서도 원시함수를 가질 수 없음을 뜻한다.
 
 ::: 참고 11
-$1/z$이 원시함수를 가지지 못하는 까닭은 그 자연스러운 원시함수인 complex logarithm $\log z$가 원점을 둘러싼 영역에서 단일한 값으로 정의되지 않기 때문이다. 곡선을 따라 한 바퀴 돌면 편각 $\arg z$가 ([§복소수와 복소평면, ⁋정의 5](/ko/math/complex_analysis/complex_numbers#def5)) $2\pi$만큼 증가하여 $\log z$의 허수부가 $2\pi i$만큼 점프하는데, 명제 10의 $2\pi i$가 바로 이 점프의 크기이다. 이는 $1/z$이 국소적으로는(원점을 둘러싸지 않는 작은 영역에서는) 원시함수를 갖지만 전역적으로는 갖지 못한다는 뜻으로, 영역의 위상이 적분에 개입하는 첫 신호이다.
+$1/z$이 원시함수를 가지지 못하는 까닭은 그 자연스러운 원시함수인 complex logarithm $\log z$가 원점을 둘러싼 영역에서 단일한 값으로 정의되지 않기 때문이다. 곡선을 따라 한 바퀴 돌면 편각 $\arg z$가 ([§복소수와 복소평면, ⁋정의 5](/ko/math/complex_analysis/complex_numbers#def5)) $2\pi$만큼 증가하여 $\log z$가 $2\pi i$만큼 점프하는데, 명제 10의 $2\pi i$가 바로 이 점프의 크기이다. 이는 $1/z$이 국소적으로는(원점을 둘러싸지 않는 작은 영역에서는) 원시함수를 갖지만 전역적으로는 갖지 못한다는 뜻으로, 영역의 위상이 적분에 개입하는 첫 신호이다.
 :::
 
 명제 10은 작아 보이지만, closed 곡선 적분이 피적분함수의 singular point를 어떻게 감지하는가를 보여 주는 원형이다. 적분값 $2\pi i$는 반지름 $r$에 무관하게 항상 같으며, 이는 원을 연속적으로 부풀리거나 수축시켜도 그 안에 갇힌 원점이라는 singular point가 그대로 남아 있는 한 적분이 변하지 않음을 시사한다. 이 invariance는 같은 두 끝점을 잇되 singular point를 사이에 두고 양쪽으로 갈라지는 두 경로의 적분이 서로 다를 수 있다는 사실, 곧 경로 독립성이 영역의 위상에 의존한다는 사실과 동전의 양면이다.

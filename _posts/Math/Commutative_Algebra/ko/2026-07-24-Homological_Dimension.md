@@ -28,7 +28,7 @@ $A$-module $M$에 대하여 다음을 정의한다.
 2. $M$의 *injective dimension<sub>단사차원</sub>*은 injective resolution의 최소 길이로 쌍대적으로 정의하며, $\operatorname{injdim}_A M$으로 적는다.
 :::
 
-Projective dimension은 이미 존재하는 매크로 $\pd$로 적고, injective dimension에는 $\operatorname{injdim}$을 쓴다. 관례적인 표기 $\operatorname{id}$는 identity morphism과 겹치므로 피한다. 정의에 의하여 $\pd_A M=0$인 것은 $M$이 $0$이 아닌 projective module인 것과 동치이고, 마찬가지로 $\operatorname{injdim}_A M=0$인 것은 $M$이 $0$이 아닌 injective module인 것과 동치이다.
+Projective dimension은 $\pd$로 적고, injective dimension에는 $\operatorname{injdim}$을 쓴다. 관례적인 표기 $\operatorname{id}$는 identity morphism과 겹치므로 피한다. 정의에 의하여 $\pd_A M=0$인 것은 $M$이 projective module인 것과 동치이고, 마찬가지로 $\operatorname{injdim}_A M=0$인 것은 $M$이 injective module인 것과 동치이다.
 
 이 불변량들을 다루는 기본 도구는 $\Ext$의 long exact sequence이다. $\Ext_A^i(M,-)$은 left exact functor $\Hom_A(M,-)$의 right derived functor이므로 ([\[호몰로지 대수학\] §Ext와 Tor, ⁋정의 1](/ko/math/homological_algebra/ext_and_tor#def1), [\[호몰로지 대수학\] §유도함자, ⁋정의 9](/ko/math/homological_algebra/derived_functors#def9)), cohomological $\delta$-functor로서 둘째 변수의 short exact sequence마다 long exact sequence를 유도한다. ([\[호몰로지 대수학\] §유도함자, ⁋정의 1](/ko/math/homological_algebra/derived_functors#def1)) 또, [\[호몰로지 대수학\] §Ext와 Tor, ⁋명제 3](/ko/math/homological_algebra/ext_and_tor#prop3)의 balancing에 의하여 $\Ext$는 첫째 변수의 projective resolution으로도 계산되므로, 첫째 변수의 short exact sequence $0 \rightarrow M' \rightarrow M \rightarrow M'' \rightarrow 0$ 또한 long exact sequence
 $$\cdots \rightarrow \Ext_A^i(M'',N) \rightarrow \Ext_A^i(M,N) \rightarrow \Ext_A^i(M',N) \rightarrow \Ext_A^{i+1}(M'',N) \rightarrow \cdots$$

@@ -97,7 +97,7 @@ $$\begin{aligned}
 \lim_{n\rightarrow\infty}\bigl(f_n(x) g_n(x)\bigr) &= \Bigl(\lim_{n\rightarrow\infty} f_n(x)\Bigr)\Bigl(\lim_{n\rightarrow\infty} g_n(x)\Bigr) = f(x) g(x)
 \end{aligned}$$
 
-가 성립하는 수열 극한의 대수법칙에서 곧바로 나온다.
+가 성립하는 [§수열의 수렴, ⁋정리 4](/ko/math/analysis/convergence_of_sequences#thm4)에서 곧바로 나온다.
 :::
 
 따라서 "$(f_n)$의 점별극한"이라는 표현은 모호함 없이 한 함수를 가리키며, 우리는 이를 $\lim_{n} f_n$으로 적는다. 점별극한이 보존하지 못하는 것은 연속·적분·미분 같은 *해석적* 성질이지, 합과 곱 같은 *대수적* 연산이 아님을 [명제 5](#prop5)가 분명히 한다. 이 대비가 다음 두 예시에서 한층 선명해진다.
@@ -115,7 +115,7 @@ $$f_n(x) = \begin{cases} n, & 0 < x \leq 1/n,\\ 1/x, & 1/n < x \leq 1 \end{cases
 
 $$f(x) = \frac{1}{x} \qquad (0 < x \leq 1)$$
 
-이다. 그런데 $f$는 $x \rightarrow 0^+$에서 무한대로 발산하여 $(0,1]$에서 bounded가 아니다. 즉 bounded function의 점별극한이 bounded가 아닐 수 있다. 더욱이 각 $f_n$은 $\sup_n \sup_x f_n(x) = \infty$이므로, 함수열이 한 상수로 *uniformly bounded<sub>균등유계</sub>*하지도 않다.
+이다. 그런데 $f$는 $x \rightarrow 0^+$에서 무한대로 발산하여 $(0,1]$에서 bounded가 아니다. 즉 bounded function의 점별극한이 bounded가 아닐 수 있다. 더욱이 $\sup_n \sup_x f_n(x) = \infty$이므로, 함수열이 한 상수로 *uniformly bounded<sub>균등유계</sub>*하지도 않다.
 :::
 
 다음 예시는 디리클레 함수가 연속함수들의 *이중* 점별극한으로 얻어짐을 보여, 점별극한을 반복하면 연속성에서 아주 멀리 떨어진 함수까지 닿을 수 있음을 드러낸다.
@@ -169,7 +169,7 @@ $$M_n = \sup_{0\leq x\leq 1} \lvert x^n - f(x)\rvert = \sup_{0\leq x < 1} x^n = 
 
 예시들의 공통된 병폐는, 수렴의 빠르기가 점마다 제각각이어서 극한이 "고르게" 일어나지 않는다는 데 있다. 가령 [예시 2](#ex2)에서는 $x$가 $1$에 가까울수록 $x^n$이 $0$으로 가는 속도가 한없이 느려진다. 이를 막으려면 $N$을 모든 점에 대해 *동시에* 잡을 수 있어야 한다.
 
-지금까지의 모든 반례는 $M_n = \sup_x \lvert f_n(x) - f(x)\rvert$이 $0$으로 가지 않는다는 한 가지 사실로 통합된다. 연속성이 깨진 [예시 2](#ex2), 적분이 어긋난 [예시 3](#ex3), boundedness를 잃은 [예시 6](#ex6), 연속 극한인데도 봉우리가 커진 [예시 8](#ex8)이 모두 그러했다. 거꾸로, 만약 이 최대 격차가 $0$으로 간다면, 즉 어떤 $N$ 하나로 모든 점에서 $\lvert f_n(x) - f(x)\rvert < \varepsilon$을 동시에 보장할 수 있다면, 위의 병리들은 모두 사라진다. 이것이 점별수렴과 균등수렴을 가르는 결정적 차이이다.
+지금까지의 반례 가운데 미분에 관한 [예시 4](#ex4)를 뺀 나머지는 $M_n = \sup_x \lvert f_n(x) - f(x)\rvert$이 $0$으로 가지 않는다는 한 가지 사실로 통합된다. 연속성이 깨진 [예시 2](#ex2), 적분이 어긋난 [예시 3](#ex3), boundedness를 잃은 [예시 6](#ex6), 연속 극한인데도 봉우리가 커진 [예시 8](#ex8)이 모두 그러했다. 거꾸로, 만약 이 최대 격차가 $0$으로 간다면, 즉 어떤 $N$ 하나로 모든 점에서 $\lvert f_n(x) - f(x)\rvert < \varepsilon$을 동시에 보장할 수 있다면, 위의 병리들은 모두 사라진다. 이것이 점별수렴과 균등수렴을 가르는 결정적 차이이다.
 
 이렇게 점에 무관하게 일정한 수렴을 요구하는 것이 *균등수렴*이며, [§균등수렴](/ko/math/analysis/uniform_convergence)에서 정의한다.
 

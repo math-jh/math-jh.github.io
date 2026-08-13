@@ -69,15 +69,15 @@ $$\sum_{\rho \in \Sigma(1)} \langle m, v_\rho \rangle [D_\rho] = 0$$
 :::
 
 ::: 증명
-(1) 먼저 $k = 2$인 경우를 보고 귀납적으로 일반화한다. 두 ray $\rho_1, \rho_2$가 $2$차원 cone $\tau = \rho_1 + \rho_2 \in \Sigma$를 이룬다고 하자. $X_\Sigma$가 smooth이므로 $v_{\rho_1}, v_{\rho_2}$는 $N$의 $\mathbb{Z}$-basis의 일부를 이루며, 두 divisor $D_{\rho_1}, D_{\rho_2}$는 affine chart $U_\tau \cong \mathbb{C}^n$ 위에서 서로 다른 두 좌표 hyperplane으로 나타난다. 이 두 hyperplane은 transverse하게 만나므로 그 교차는 정확히 codimension $2$의 부분다양체 $V(\tau)$이고, intersection multiplicity는 $1$이다 ([\[대수다양체\] §교차곱, ⁋명제 4](/ko/math/algebraic_varieties/intersection_product#prop4)). 따라서 $[D_{\rho_1}] \cdot [D_{\rho_2}] = [V(\tau)]$이다.
+(1) 먼저 $k = 2$인 경우를 보고 귀납적으로 일반화한다. 두 ray $\rho_1, \rho_2$가 $2$차원 cone $\tau = \rho_1 + \rho_2 \in \Sigma$를 이룬다고 하자. $X_\Sigma$가 smooth이므로 $v_{\rho_1}, v_{\rho_2}$는 $N$의 $\mathbb{Z}$-basis의 일부를 이루며, 두 divisor $D_{\rho_1}, D_{\rho_2}$는 affine chart $U_\tau \cong \mathbb{C}^2 \times (\mathbb{C}^\ast)^{n-2}$ 위에서 서로 다른 두 좌표 hyperplane으로 나타난다. 이 두 hyperplane은 transverse하게 만나므로 그 교차는 정확히 codimension $2$의 부분다양체 $V(\tau) \cap U_\tau$이고, intersection multiplicity는 $1$이다 ([\[대수다양체\] §교차곱, ⁋명제 4](/ko/math/algebraic_varieties/intersection_product#prop4)). 따라서 $[D_{\rho_1}] \cdot [D_{\rho_2}] = [V(\tau)]$이다.
 
-이제 $\sigma = \rho_1 + \cdots + \rho_k$가 smooth cone이라 하자. Affine chart $U_\sigma \cong \mathbb{C}^n$ 위에서 $v_{\rho_1}, \ldots, v_{\rho_k}$는 $N$의 basis $v_{\rho_1}, \ldots, v_{\rho_n}$로 확장되며, 각 $D_{\rho_i}$는 이에 dual인 좌표 $\rchi^{v_{\rho_i}^\ast}$의 zero locus, 즉 한 좌표 hyperplane으로 나타난다. 서로 다른 $k$개의 좌표 hyperplane들은 transverse하게 만나 codimension $k$의 좌표 부분공간 $V(\sigma)$를 이루고, 그 intersection multiplicity는 모두 $1$이다. Chow ring의 associativity와 ([\[대수다양체\] §교차곱, ⁋명제 6](/ko/math/algebraic_varieties/intersection_product#prop6)) 위 $k=2$ 계산을 반복 적용하면
+이제 $\sigma = \rho_1 + \cdots + \rho_k$가 smooth cone이라 하자. Affine chart $U_\sigma \cong \mathbb{C}^k \times (\mathbb{C}^\ast)^{n-k}$ 위에서 $v_{\rho_1}, \ldots, v_{\rho_k}$는 $N$의 basis $v_{\rho_1}, \ldots, v_{\rho_n}$로 확장되며, 각 $D_{\rho_i}$는 이에 dual인 좌표 $\rchi^{v_{\rho_i}^\ast}$의 zero locus, 즉 한 좌표 hyperplane으로 나타난다. 서로 다른 $k$개의 좌표 hyperplane들은 transverse하게 만나 codimension $k$의 부분다양체 $V(\sigma) \cap U_\sigma = O(\sigma)$를 이루고, 그 intersection multiplicity는 모두 $1$이다. Chow ring의 associativity와 ([\[대수다양체\] §교차곱, ⁋명제 6](/ko/math/algebraic_varieties/intersection_product#prop6)) 위 $k=2$ 계산을 반복 적용하면
 
 $$[D_{\rho_1}] \cdots [D_{\rho_k}] = [V(\sigma)]$$
 
 을 얻는다.
 
-(2) $\rho_1, \ldots, \rho_k$가 $\Sigma$의 어떤 cone도 이루지 않는다고 하자. 그러면 어떤 maximal cone도 이들 ray를 모두 포함하지 못한다. Divisor $D_{\rho_i}$의 support는 정확히 ray $\rho_i$를 포함하는 cone들에 대응하는 orbit들의 합집합이므로, 교집합 $\bigcap_i \operatorname{Supp} D_{\rho_i}$는 $\rho_1, \ldots, \rho_k$를 모두 face로 갖는 cone에 대응하는 orbit들로 이루어진다. 그러한 cone이 $\Sigma$에 존재하지 않으므로 이 교집합은 공집합이다. 한편 [\[대수다양체\] §교차곱, ⁋보조정리 8](/ko/math/algebraic_varieties/intersection_product#lem8)의 moving lemma에 의해 $[D_{\rho_1}] \cdots [D_{\rho_k}]$는 generic하게 transverse한 representative로 계산할 수 있는데, 각 $D_{\rho_i}$는 $\divisor(\rchi^{m_i})$만큼 이동시켜도 같은 class를 주므로 ($m_i \in M$), 적절한 character 이동으로 얻은 representative들의 교집합 또한 비어 있게 만들 수 있다. 따라서 곱은 $0$이다.
+(2) $\rho_1, \ldots, \rho_k$가 $\Sigma$의 어떤 cone도 이루지 않는다고 하자. 그러면 어떤 maximal cone도 이들 ray를 모두 포함하지 못한다. Divisor $D_{\rho_i}$의 support는 정확히 ray $\rho_i$를 포함하는 cone들에 대응하는 orbit들의 합집합이므로, 교집합 $\bigcap_i \operatorname{Supp} D_{\rho_i}$는 $\rho_1, \ldots, \rho_k$를 모두 face로 갖는 cone에 대응하는 orbit들로 이루어진다. 그러한 cone이 $\Sigma$에 존재하지 않으므로 이 교집합은 공집합이다. 그런데 이처럼 support들의 교집합이 공집합인 cycle들은 자명하게 properly intersect하고, 그 intersection product는 ([\[대수다양체\] §교차곱, ⁋명제 6](/ko/math/algebraic_varieties/intersection_product#prop6)) 교집합의 component들 위의 합으로 주어져 빈 합이 된다. 따라서 곱은 $0$이다.
 :::
 
 명제 2의 (2)가 *Stanley-Reisner relation*이다. Fan $\Sigma$의 ray 집합 $\Sigma(1)$ 위에서, "함께 하나의 cone을 이루는 ray들의 부분집합"을 face라 부르면 $\Sigma$는 추상적인 simplicial complex의 구조를 가지며, cone을 이루지 않는 부분집합 $\{\rho_{i_1}, \ldots, \rho_{i_k}\}$을 *non-face*라 부른다. 명제 2의 (2)는 정확히 모든 non-face에 대응하는 monomial $\x_{\rho_{i_1}} \cdots \x_{\rho_{i_k}}$이 사라진다는 진술이다. 이 두 종류의 관계가 Chow ring을 완전히 결정한다는 것이 다음 절의 주제이다.
@@ -155,7 +155,7 @@ $$D_{\rho_1} \cdots D_{\rho_n} = [V(\sigma)]$$
 
 명제 7은 smooth complete toric variety의 모든 top-degree intersection number를 maximal cone의 목록으로부터 즉시 읽게 해 준다. 같은 ray가 중복되어 나타나는 self-intersection $D_{\rho_1}^{a_1} \cdots D_{\rho_s}^{a_s}$ ($\sum a_i = n$)의 경우에는 명제 7만으로는 부족하고 linear relation을 사용하여 중복된 ray를 다른 ray들로 바꿔 써야 한다. 아래 예시들에서 이 계산을 구체적으로 수행한다.
 
-한편 $D_\rho$들이 nef인 ample divisor를 이룰 때에는 intersection number가 대응 polytope의 부피로 해석된다. [§토러스 인자와 선다발, ⁋명제 9](/ko/math/toric_geometry/toric_divisors#prop9)에서 보았듯 ample torus-invariant divisor $D = \sum_\rho a_\rho D_\rho$는 strictly convex piecewise linear function $\psi_D$를 통해 lattice polytope
+한편 torus-invariant divisor $D$가 ample일 때에는 intersection number가 대응 polytope의 부피로 해석된다. [§토러스 인자와 선다발, ⁋명제 9](/ko/math/toric_geometry/toric_divisors#prop9)에서 보았듯 ample torus-invariant divisor $D = \sum_\rho a_\rho D_\rho$는 strictly convex piecewise linear function $\psi_D$를 통해 lattice polytope
 
 $$P_D = \{m \in M_\mathbb{R} \mid \langle m, v_\rho \rangle \ge -a_\rho \text{ for all } \rho \in \Sigma(1)\}$$
 
@@ -276,7 +276,7 @@ $$\CH^\ast(\Bl_p \mathbb{P}^2) \cong \mathbb{Z}[H, E] / (HE,\ H^2 + E^2)$$
 
 $$H^2 = 1, \qquad H \cdot E = 0, \qquad E^2 = -1$$
 
-을 얻는다. 마지막으로 $H^2 = 1$임을 명제 7로 확인하자. $H = \x_0 = D_0$이지만 $\rho_0$만으로는 $2$차원 cone을 이룰 수 없으므로 linear relation으로 바꿔 써야 한다. $H^2 = H \cdot \x_1 + H \cdot \x_3$이 아니라, $\x_1 = H - E$에서 $H = \x_1 + \x_3 = D_1 + E$이므로 $H^2 = H(D_1 + E) = H D_1 + HE = H D_1$이고, 다시 $H = D_1 + E$를 대입하면 $H D_1 = (D_1 + E) D_1 = D_1^2 + E D_1$이다. 여기서 $\rho_1, \rho_3$은 maximal cone $\rho_1 + \rho_3$을 이루므로 명제 7에 의해 $E D_1 = D_3 D_1 = 1$이고, $D_1^2$은 $\x_1 \x_2 = 0$ 즉 $D_1 D_2 = 0$과 $D_1 = D_2$ (둘 다 $H - E$)로부터 $D_1^2 = D_1 D_2 = 0$이다. 따라서 $H^2 = 0 + 1 = 1$로 기대값과 일치한다. 
+을 얻는다. 마지막으로 $H^2 = 1$임을 명제 7로 확인하자. $H = \x_0 = D_0$이지만 $\rho_0$만으로는 $2$차원 cone을 이룰 수 없으므로 linear relation으로 바꿔 써야 한다. $\x_1 = H - E$에서 $H = \x_1 + \x_3 = D_1 + E$이므로 $H^2 = H(D_1 + E) = H D_1 + HE = H D_1$이고, 다시 $H = D_1 + E$를 대입하면 $H D_1 = (D_1 + E) D_1 = D_1^2 + E D_1$이다. 여기서 $\rho_1, \rho_3$은 maximal cone $\rho_1 + \rho_3$을 이루므로 명제 7에 의해 $E D_1 = D_3 D_1 = 1$이고, $D_1^2$은 $\x_1 \x_2 = 0$ 즉 $D_1 D_2 = 0$과 $D_1 = D_2$ (둘 다 $H - E$)로부터 $D_1^2 = D_1 D_2 = 0$이다. 따라서 $H^2 = 0 + 1 = 1$로 기대값과 일치한다. 
 
 이 계산은 blow-up의 표준적 사실, 즉 exceptional divisor의 self-intersection $E^2 = -1$과 pullback class의 보존 $H^2 = 1$, 그리고 $E$가 pullback class와 만나지 않음 $H \cdot E = 0$을 fan의 조합론만으로 재현한 것이다.
 :::

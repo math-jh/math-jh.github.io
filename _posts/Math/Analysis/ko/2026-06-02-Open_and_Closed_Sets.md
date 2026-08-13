@@ -33,7 +33,7 @@ published: false
 :::
 
 ::: 증명
-2: $x \in \bigcup_\alpha U_\alpha$이면 어떤 $U_\alpha$에 속하고, $U_\alpha$가 열려 있어 $B(x, r) \subseteq U_\alpha \subseteq \bigcup_\alpha U_\alpha$인 $r$가 있다. 3: $x \in \bigcap_{i=1}^n U_i$이면 각 $i$에 대해 $B(x, r_i) \subseteq U_i$인 $r_i$가 있고, $r = \min_i r_i > 0$으로 두면 $B(x, r) \subseteq \bigcap_i U_i$이다.
+1: $\emptyset$에는 조건을 확인할 점이 없어 공허하게 성립하고, $X$에서는 임의의 $x$와 임의의 $r > 0$에 대해 $B(x, r) \subseteq X$이다. 2: $x \in \bigcup_\alpha U_\alpha$이면 어떤 $U_\alpha$에 속하고, $U_\alpha$가 열려 있어 $B(x, r) \subseteq U_\alpha \subseteq \bigcup_\alpha U_\alpha$인 $r$가 있다. 3: $x \in \bigcap_{i=1}^n U_i$이면 각 $i$에 대해 $B(x, r_i) \subseteq U_i$인 $r_i$가 있고, $r = \min_i r_i > 0$으로 두면 $B(x, r) \subseteq \bigcap_i U_i$이다.
 :::
 
 [명제 2](#prop2)의 세 성질은 정확히 위상공간의 공리이다 ([\[위상수학\] §열린집합](/ko/math/topology/open_sets)). 즉 거리는 그로부터 정해지는 열린집합들의 모임, 곧 거리가 유도하는 *위상*을 통해 위상공간의 구조를 낳는다. 무한개의 교집합은 열려 있지 않을 수 있다: $\bigcap_{n} (-1/n, 1/n) = \{0\}$은 $\mathbb{R}$에서 열린집합이 아니다.
@@ -91,10 +91,10 @@ $$\mathbb{R} \setminus \{0\} = (-\infty, 0) \cup (0, \infty)$$
 표준거리를 준 $\mathbb{R}$에서 열린공은 열린구간 $B(x, r) = (x - r, x + r)$이므로, 열린구간 $(a, b)$는 각 점에서 $r = \min\{x - a,\ b - x\} > 0$짜리 공이 통째로 들어가 열린집합이고, 닫힌구간 $[a, b]$는 여집합 $(-\infty, a) \cup (b, \infty)$가 열려 있어 닫힌집합이다. 반면 반열린구간 $[a, b)$는 둘 중 어느 쪽도 아니다: 점 $a$에서는 어떤 공도 왼쪽으로 새어나가 담기지 못하므로 열려 있지 않고, 점열 $b - 1/n \in [a, b)$의 극한 $b$가 밖에 있으므로 닫혀 있지도 않다. 이렇게 열린집합도 닫힌집합도 아닌 집합이 존재한다는 사실은 두 개념이 서로의 부정이 아님을, 곧 "열려 있지 않음"이 "닫혀 있음"을 뜻하지 않음을 분명히 한다. 반대 극단으로 두 성질을 동시에 갖는 집합도 있다.
 
 ::: 예시 6 (동시에 열리고 닫힌 집합)
-임의의 거리공간 $X$에서 $\emptyset$과 $X$는 [명제 2](#prop2)와 [명제 5](#prop5)에 의해 둘 다 열려 있고 닫혀 있다. 이렇게 열리면서 닫힌 집합을 *clopen set<sub>열린닫힌집합</sub>*이라 한다. 연결되지 않은 공간에서는 자명하지 않은 clopen set이 나타난다. 부분공간 $X = (0, 1) \cup (2, 3) \subseteq \mathbb{R}$에서 조각 $(0, 1)$은 $X$의 열린집합이면서, 그 여집합 $(2, 3)$도 열려 있어 동시에 닫힌집합이다. 한 공간에서 자명하지 않은 clopen set이 존재하는지 여부가 연결성의 척도가 된다.
+임의의 거리공간 $X$에서 $\emptyset$과 $X$는 [명제 2](#prop2)와 [명제 5](#prop5)에 의해 둘 다 열려 있고 닫혀 있다. 이렇게 열리면서 닫힌 집합을 *clopen set<sub>열린닫힌집합</sub>*이라 한다. 연결되지 않은 공간에서는 자명하지 않은 clopen set이 나타난다. $\mathbb{R}$의 거리를 제한하여 얻는 부분공간 $X = (0, 1) \cup (2, 3)$에서 조각 $(0, 1)$은 $X$의 열린집합이면서, 그 여집합 $(2, 3)$도 열려 있어 동시에 닫힌집합이다. 한 공간에서 자명하지 않은 clopen set이 존재하는지 여부가 연결성의 척도가 된다.
 :::
 
-Closure는 점열의 극한을 모두 더해 집합을 닫는 연산이다. 정의로 직접 계산하기보다 [명제 4](#prop4)의 [§함수의 극한과 연속, ⁋명제 2](/ko/math/analysis/limits_and_continuity#prop2)를 쓰면 closure를 손쉽게 결정할 수 있다. 가령 $\overline{(a, b)} = [a, b]$인데 끝점 $a, b$가 각각 $a + 1/n$, $b - 1/n$의 극한으로 도달되기 때문이고, $\overline{\mathbb{Q}} = \mathbb{R}$인데 [§실수의 완비성, ⁋정리 5](/ko/math/analysis/completeness_of_reals#thm5)에 의해 임의의 실수가 유리수열의 극한이기 때문이다.
+Closure는 점열의 극한을 모두 더해 집합을 닫는 연산이다. 정의로 직접 계산하기보다 [명제 4](#prop4)의 점열 판정을 쓰면 closure를 손쉽게 결정할 수 있다. 가령 $\overline{(a, b)} = [a, b]$인데 끝점 $a, b$가 각각 $a + 1/n$, $b - 1/n$의 극한으로 도달되기 때문이고, $\overline{\mathbb{Q}} = \mathbb{R}$인데 [§실수의 완비성, ⁋정리 5](/ko/math/analysis/completeness_of_reals#thm5)에 의해 임의의 실수가 유리수열의 극한이기 때문이다.
 
 Closure가 점열의 극한을 더하는 연산임을 가장 또렷이 보여 주는 것은 집합 $\{1/n \mid n \in \mathbb{N}\}$이다. 이 집합 자체는 닫혀 있지 않다. 점열
 

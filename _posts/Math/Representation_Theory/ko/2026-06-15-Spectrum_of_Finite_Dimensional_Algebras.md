@@ -28,7 +28,7 @@ published: false
 
 $$M_a(x)=ax$$
 
-으로 정의한다. 이 때 $a\mapsto M_a$로 주어지는 representation $A\rightarrow \End_k(A)$를 $A$의 *정규표현<sub>regular representation</sub>*이라 부른다.
+으로 정의한다. 이 때 $a\mapsto M_a$로 주어지는 representation $A\rightarrow \End_k(A)$를 $A$의 *regular representation<sub>정규표현</sub>*이라 부른다.
 :::
 
 여기서 $\End_k(A)$는 $A$를 단순히 유한차원 $k$-벡터공간으로 보았을 때의 $k$-선형 endomorphism들이 이루는 대수이다. Regular representation이 실제로 representation, 곧 unital algebra homomorphism이라는 것을 먼저 확인하자.
@@ -80,7 +80,7 @@ $$A/\ker\chi\cong \im\chi=k$$
 :::
 
 ::: 참고 5
-여기에서 정의한 character는 [§유한군의 표현론](/ko/math/representation_theory/representations_of_finite_groups)과 [§표현의 지표](/ko/math/representation_theory/character_theory)에서 다룬 *character<sub>지표</sub>*와 이름은 같으나 일반적으로는 서로 다른 개념이다. 후자는 representation $\rho:G\rightarrow \Aut(V)$에 대하여 각 $g$를 $\tr\rho(g)$로 보내는 함수 $\rchi_\rho:G\rightarrow k$, 곧 trace character이다 ([§표현의 지표, ⁋정의 1](/ko/math/representation_theory/character_theory#def1)). 이는 일반적으로 곱셈을 보존하지 않으므로 algebra homomorphism이 아니다. 두 개념이 일치하는 것은 representation이 $1$차원일 때이다. $1$차원 representation $\rho:G\rightarrow k^\times$에 대하여 $\tr\rho(g)=\rho(g)$이고, 이를 group algebra 위로 선형확장한 $\mathbb{C}[G]\rightarrow k$는 곱셈을 보존하므로, 정의 3의 의미에서 $\mathbb{C}[G]$의 character가 된다. 실제로 $A=\mathbb{C}[G]$의 character $\mathbb{C}[G]\rightarrow \mathbb{C}$들은 정확히 $G$의 $1$차원 representation들과 일대일로 대응되는데, 이는 [\[대수적 구조\] §대수, ⁋명제 6](/ko/math/algebraic_structures/algebras#prop6)의 universal property로부터 algebra homomorphism $\mathbb{C}[G]\rightarrow \mathbb{C}$들이 group homomorphism $G\rightarrow \mathbb{C}^\times$들과 대응되기 때문이다.
+여기에서 정의한 character는 [§유한군의 표현론](/ko/math/representation_theory/representations_of_finite_groups)과 [§표현의 지표](/ko/math/representation_theory/character_theory)에서 다룬 *character<sub>지표</sub>*와 이름은 같으나 일반적으로는 서로 다른 개념이다. 후자는 representation $\rho:G\rightarrow \Aut(V)$에 대하여 각 $g$를 $\tr\rho(g)$로 보내는 함수 $\rchi_\rho:G\rightarrow \mathbb{C}$, 곧 trace character이다 ([§표현의 지표, ⁋정의 1](/ko/math/representation_theory/character_theory#def1)). 이는 일반적으로 곱셈을 보존하지 않으므로 algebra homomorphism이 아니다. 두 개념이 일치하는 것은 representation이 $1$차원일 때이다. $1$차원 representation $\rho:G\rightarrow \mathbb{C}^\times$에 대하여 $\tr\rho(g)=\rho(g)$이고, 이를 group algebra 위로 선형확장한 $\mathbb{C}[G]\rightarrow \mathbb{C}$는 곱셈을 보존하므로, 정의 3의 의미에서 $\mathbb{C}[G]$의 character가 된다. 실제로 $A=\mathbb{C}[G]$의 character $\mathbb{C}[G]\rightarrow \mathbb{C}$들은 정확히 $G$의 $1$차원 representation들과 일대일로 대응되는데, 이는 [\[대수적 구조\] §대수, ⁋명제 6](/ko/math/algebraic_structures/algebras#prop6)의 universal property로부터 algebra homomorphism $\mathbb{C}[G]\rightarrow \mathbb{C}$들이 group homomorphism $G\rightarrow \mathbb{C}^\times$들과 대응되기 때문이다.
 :::
 
 명제 4가 보여 주듯, character는 항상 maximal ideal을 낳는다. 그 역, 곧 모든 maximal ideal이 character로부터 온다는 것은 $k$가 algebraically closed일 때 성립하며, 이는 character와 maximal ideal을 동일시할 수 있게 해 준다.
@@ -149,7 +149,7 @@ $$M_{\alpha a+b}\vert_{A_\lambda}=\alpha M_a\vert_{A_\lambda}+M_b\vert_{A_\lambd
 곱셈을 보존함을 보이자. 블록 위에서
 
 $$\begin{aligned}
-M_{ab}\vert_{A_\lambda}&=M_a\vert_{A_\lambda}\,M_b\vert_{A_\lambda}=(\lambda(a)\id+N_a)(\lambda(b)\id+N_b)\\
+M_{ab}\vert_{A_\lambda}&=M_a\vert_{A_\lambda}M_b\vert_{A_\lambda}=(\lambda(a)\id+N_a)(\lambda(b)\id+N_b)\\
 &=\lambda(a)\lambda(b)\id+\bigl(\lambda(a)N_b+\lambda(b)N_a+N_aN_b\bigr)
 \end{aligned}$$
 
@@ -157,9 +157,9 @@ M_{ab}\vert_{A_\lambda}&=M_a\vert_{A_\lambda}\,M_b\vert_{A_\lambda}=(\lambda(a)\
 
 $$M_{ab}\vert_{A_\lambda}=\lambda(ab)\id+(\text{nilpotent})=\lambda(a)\lambda(b)\id+(\text{nilpotent})$$
 
-을 비교하면 $(\lambda(ab)-\lambda(a)\lambda(b))\id$이 nilpotent이어야 하고, 스칼라 배 $c\,\id$이 nilpotent인 것은 $c=0$일 때뿐이므로 $\lambda(ab)=\lambda(a)\lambda(b)$이다. 마지막으로 $M_1=\id_A$이므로 블록 위에서 $M_1\vert_{A_\lambda}=\id$, 곧 $\lambda(1)=1$이다. 따라서 $\lambda$는 unital algebra homomorphism, 곧 character이다.
+을 비교하면 $(\lambda(ab)-\lambda(a)\lambda(b))\id$이 nilpotent이어야 하고, 스칼라 배 $c\id$이 nilpotent인 것은 $c=0$일 때뿐이므로 $\lambda(ab)=\lambda(a)\lambda(b)$이다. 마지막으로 $M_1=\id_A$이므로 블록 위에서 $M_1\vert_{A_\lambda}=\id$, 곧 $\lambda(1)=1$이다. 따라서 $\lambda$는 unital algebra homomorphism, 곧 character이다.
 
-**역으로 모든 character가 나타남.** $\chi$를 $A$의 임의의 character라 하자. $\chi$를 위 분해에 적용하기 위하여, $\chi$가 어떤 블록 위에서 일반화고유값으로 실현됨을 보이면 된다. 각 $a$에 대하여 $M_a-\chi(a)\id_A$의 행렬식을 생각하면, 이는 $A/\ker\chi\cong k$ 위에서 $M_a$가 스칼라 $\chi(a)$로 작용한다는 사실로부터 가역이 아니다. 더 구체적으로, [명제 6](#prop6)에 의하여 $\chi$는 maximal ideal $\mathfrak{m}=\ker\chi$에 대응하고, $\mathfrak{m}$을 보존하는 분해의 한 블록이 정확히 $\chi$를 일반화고유값으로 갖는다. 따라서 $\chi=\lambda^{(s)}$인 $s$가 존재한다. 결국 $A_\lambda\neq 0$인 $\lambda$들의 집합은 character들의 집합과 일치한다.
+**역으로 모든 character가 나타남.** $\chi$를 $A$의 임의의 character라 하자. $1=\sum_{s=1}^r x_s$를 위 분해에 따라 성분별로 쓰면 $\chi(1)=1$이므로 적당한 $s$에 대하여 $\chi(x_s)\neq 0$이고, 이 $x=x_s\in A_{\lambda^{(s)}}$를 고정한다. $\lambda=\lambda^{(s)}$라 두고 임의의 $a\in A$를 택하면 $M_a-\lambda(a)\id_A=M_{a-\lambda(a)1}$이므로, $A_\lambda$의 정의는 $(a-\lambda(a)1)^{\dim A}x=0$을 뜻한다. 여기에 $\chi$를 적용하면 $\chi$가 곱셈과 $k$-선형성을 보존하므로 $(\chi(a)-\lambda(a))^{\dim A}\chi(x)=0$이고, $\chi(x)\neq 0$이며 $k$가 field이므로 $\chi(a)=\lambda(a)$이다. 이것이 모든 $a$에 대해 성립하므로 $\chi=\lambda^{(s)}$이다. 결국 $A_\lambda\neq 0$인 $\lambda$들의 집합은 character들의 집합과 일치한다.
 
 **고유값에 관한 결론.** 동시 삼각화에서 $M_a$의 대각성분, 곧 고유값들은 정확히 $\lambda^{(1)}(a),\ldots,\lambda^{(r)}(a)$이고, 이들이 character들에서의 값 $\chi(a)$이므로 $M_a$의 고유값 집합은 $\{\chi(a)\mid \chi\text{ character}\}$이다.
 :::
@@ -211,22 +211,22 @@ Reduced라는 조건은 정리 8의 분해에서 nilpotent 부분이 완전히 �
 $k$가 algebraically closed이고 $A$가 유한차원 commutative $k$-algebra이며 $N=\dim A$라 하자. 다음 네 조건이 동치이다.
 
 1. $A$는 reduced이다.
-2. 모든 character $\chi$에 대하여 $A_\chi=k\,e_\chi$, 곧 $\mathfrak{n}_\chi=0$이다.
+2. 모든 character $\chi$에 대하여 $A_\chi=ke_\chi$, 곧 $\mathfrak{n}_\chi=0$이다.
 3. Character의 개수가 정확히 $N$이며, $A\cong k^N$이다.
 4. Regular representation $\{M_a\}_{a\in A}$이 동시대각화 가능하다.
 
 이 때 각 idempotent $e_\chi$는 모든 $M_a$의 공통 고유벡터이며 $M_a e_\chi=\chi(a)e_\chi$를 만족한다.
 :::
 ::: 증명
-**(1) $\Rightarrow$ (2).** $A$가 reduced라 하자. [따름정리 9](#cor9)에 의하여 $\mathfrak{n}_\chi$의 모든 원소는 nilpotent이고, $A$에 nonzero nilpotent가 없으므로 $\mathfrak{n}_\chi=0$이다. 따라서 $A_\chi$는 maximal ideal이 $0$인 local algebra, 곧 field이고 동시에 $k$-algebra이며 $A_\chi/\mathfrak{n}_\chi=A_\chi\cong k$이므로 $A_\chi=k\,e_\chi$이다.
+**(1) $\Rightarrow$ (2).** $A$가 reduced라 하자. [따름정리 9](#cor9)에 의하여 $\mathfrak{n}_\chi$의 모든 원소는 nilpotent이고, $A$에 nonzero nilpotent가 없으므로 $\mathfrak{n}_\chi=0$이다. 따라서 $A_\chi$는 maximal ideal이 $0$인 local algebra, 곧 field이고 동시에 $k$-algebra이며 $A_\chi/\mathfrak{n}_\chi=A_\chi\cong k$이므로 $A_\chi=ke_\chi$이다.
 
-**(2) $\Rightarrow$ (3).** $A_\chi=k\,e_\chi$이면 $\dim A_\chi=1$이므로 [따름정리 9](#cor9)의 $\dim A=\sum_\chi\dim A_\chi$로부터 character의 개수는 $\sum_\chi 1=\dim A=N$이다. 또 $A\cong\prod_\chi A_\chi\cong\prod_\chi k=k^N$이다.
+**(2) $\Rightarrow$ (3).** $A_\chi=ke_\chi$이면 $\dim A_\chi=1$이므로 [따름정리 9](#cor9)의 $\dim A=\sum_\chi\dim A_\chi$로부터 character의 개수는 $\sum_\chi 1=\dim A=N$이다. 또 $A\cong\prod_\chi A_\chi\cong\prod_\chi k=k^N$이다.
 
 **(3) $\Rightarrow$ (4).** $A\cong k^N$의 regular representation을 생각하자. $k^N$에서 곱셈은 성분별이므로 표준 basis $\{\varepsilon_1,\ldots,\varepsilon_N\}$ (각 $\varepsilon_i$는 $i$번째 성분만 $1$) 에 대하여 임의의 $a=(a_1,\ldots,a_N)$의 곱셈연산자 $M_a$는 $M_a\varepsilon_i=a_i\varepsilon_i$로 작용한다. 즉 모든 $M_a$가 이 공통 basis에 대해 동시에 대각행렬이므로 regular representation은 동시대각화 가능하다.
 
 **(4) $\Rightarrow$ (1).** regular representation이 동시대각화 가능하다 하자. 그럼 각 $M_a$가 대각화 가능하므로 nilpotent가 아닌 한 $0$이 아닌 고유값을 가지며, 특히 어떤 $a$에 대해 $M_a$가 nilpotent라면 $M_a=0$이다. [명제 2](#prop2)에 의해 $a\mapsto M_a$가 injective이므로 $M_a=0$은 $a=0$을 뜻한다. 따라서 $a^n=0$이면 $M_a^n=M_{a^n}=0$이고 $M_a$가 nilpotent이므로 $M_a=0$, 곧 $a=0$이다. 따라서 $A$는 reduced이다.
 
-마지막 주장은 (3)의 증명에서 본 대각화에서 $\varepsilon_i$가 $e_{\chi}$에 해당하고 $M_a e_\chi=\chi(a)e_\chi$임을 관찰하면 된다. 실제로 일반적인 경우에도 [따름정리 9](#cor9)의 idempotent $e_\chi$에 대하여 $a\,e_\chi\in A_\chi$이고 $a\,e_\chi=\chi(a)e_\chi+N_a(e_\chi)$인데, reduced인 경우 $N_a=0$이므로 $M_a e_\chi=\chi(a)e_\chi$이다.
+마지막 주장은 (3)의 증명에서 본 대각화에서 $\varepsilon_i$가 $e_{\chi}$에 해당하고 $M_a e_\chi=\chi(a)e_\chi$임을 관찰하면 된다. 실제로 일반적인 경우에도 [따름정리 9](#cor9)의 idempotent $e_\chi$에 대하여 $ae_\chi\in A_\chi$이고 $ae_\chi=\chi(a)e_\chi+N_a(e_\chi)$인데, reduced인 경우 $N_a=0$이므로 $M_a e_\chi=\chi(a)e_\chi$이다.
 :::
 
 명제 11은 reduced인 가환대수가 정확히 regular representation이 동시대각화되는 경우, 곧 각 블록이 $1\times 1$로 떨어지는 경우임을 말해 준다. 이 경우 character의 개수는 차원과 정확히 같고, idempotent $e_\chi$들이 공통 고유벡터들의 basis를 이룬다. 일반적인 경우와의 차이는 오직 nilpotent 부분 $\mathfrak{n}_\chi$의 존재 여부이다.

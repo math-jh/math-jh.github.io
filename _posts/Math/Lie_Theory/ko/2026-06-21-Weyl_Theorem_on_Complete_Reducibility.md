@@ -42,7 +42,7 @@ Representation이 faithful이 아니더라도 $\ker\rho$는 $\mathfrak{g}$의 id
 ::: 정의 2
 $\rho:\mathfrak{g}\rightarrow\gl(V)$가 faithful representation이라 하고, $\beta(x,y)=\tr\bigl(\rho(x)\rho(y)\bigr)$를 [명제 1](#prop1)의 nondegenerate invariant form이라 하자. $\mathfrak{g}$의 basis $(x_1,\ldots,x_n)$과 그에 대한 $\beta$-dual basis $(x^1,\ldots,x^n)$, 곧 $\beta(x_i,x^j)=\delta_i^j$를 만족하는 basis를 택할 때, 보편 포락 대수 $U(\mathfrak{g})$의 원소
 
-$$c_\rho=\sum_{i=1}^{n}x_i\,x^i$$
+$$c_\rho=\sum_{i=1}^{n}x_i x^i$$
 
 의 $\rho$에 의한 image $\rho(c_\rho)=\sum_{i=1}^{n}\rho(x_i)\rho(x^i)\in\End(V)$를 representation $\rho$의 *Casimir element<sub>카시미르 원소</sub>*라 부른다.
 :::
@@ -67,20 +67,20 @@ Basis 독립성과 $\rho(\mathfrak{g})$와의 commutativity를 보이기 위해,
 
 $$a_{ik}=\beta\bigl([x,x_i],x^k\bigr)=-\beta\bigl(x_i,[x,x^k]\bigr)=-b_{ki}$$
 
-가 성립한다 (양변에서 $\beta(x_i,x^k)=\delta_i^k$의 계수를 비교). 이제 $U(\mathfrak{g})$ 안에서 commutator $[\,\cdot\,,\,\cdot\,]$가 Leibniz 규칙을 만족함을 써서
+가 성립한다 (양변에서 $\beta(x_i,x^k)=\delta_i^k$의 계수를 비교). 이제 $U(\mathfrak{g})$ 안에서 commutator $[\cdot,\cdot]$가 Leibniz 규칙을 만족함을 써서
 
 $$\begin{aligned}
 [x,c_\rho]&=\sum_{i}[x,x_i x^i]=\sum_i\bigl([x,x_i]x^i+x_i[x,x^i]\bigr)\\
-&=\sum_{i,j}a_{ij}\,x_j x^i+\sum_{i,j}b_{ij}\,x_i x^j\\
-&=\sum_{i,j}a_{ij}\,x_j x^i-\sum_{i,j}a_{ji}\,x_i x^j
+&=\sum_{i,j}a_{ij}x_j x^i+\sum_{i,j}b_{ij}x_i x^j\\
+&=\sum_{i,j}a_{ij}x_j x^i-\sum_{i,j}a_{ji}x_i x^j
 \end{aligned}$$
 
-을 얻는데, 둘째 합에서 첨자 $i,j$의 이름을 맞바꾸면 두 합이 정확히 상쇄되어 $[x,c_\rho]=0$이다. 여기에서 $[x,x_i x^i]$의 commutator는 $U(\mathfrak{g})$ 안의 결합 곱에 대한 것이며, $\rho$가 결합대수 준동형 $U(\mathfrak{g})\rightarrow\End(V)$로 올라가므로 ([§보편 포락 대수, ⁋명제 4](/ko/math/lie_theory/universal_enveloping_algebra#prop4)) 이를 $\rho$로 보내면 $[\rho(x),\rho(c_\rho)]=\rho([x,c_\rho])=0$이 된다.
+을 얻는데, 둘째 합에서 첨자 $i,j$의 이름을 맞바꾸면 두 합이 정확히 상쇄되어 $[x,c_\rho]=0$이다. 여기에서 $[x,x_i x^i]$의 commutator는 $U(\mathfrak{g})$ 안의 결합 곱에 대한 것이며, $\rho$가 associative algebra homomorphism $U(\mathfrak{g})\rightarrow\End(V)$로 올라가므로 ([§보편 포락 대수, ⁋명제 4](/ko/math/lie_theory/universal_enveloping_algebra#prop4)) 이를 $\rho$로 보내면 $[\rho(x),\rho(c_\rho)]=\rho([x,c_\rho])=0$이 된다.
 
 Basis 독립성은 다음과 같이 본다. $\rho(c_\rho)$를 다른 basis $(y_i)$와 그 dual basis $(y^i)$로 구성한 원소를 $\rho(c'_\rho)$라 하면, 두 basis 사이의 변환행렬과 그 dual 변환행렬이 서로 transpose-inverse 관계이므로 $\sum_i x_i\otimes x^i=\sum_i y_i\otimes y^i$가 $\mathfrak{g}\otimes\mathfrak{g}$ 안에서 같은 원소임이 따라온다. 이는 $\beta$가 정하는 동형 $\mathfrak{g}\cong\mathfrak{g}^\ast$ 아래에서 $\sum_i x_i\otimes x^i$가 항등사상 $\id_{\mathfrak{g}}\in\mathfrak{g}\otimes\mathfrak{g}^\ast\cong\End(\mathfrak{g})$에 대응하는 canonical element라는 사실의 표현이다. 곱사상 $\mathfrak{g}\otimes\mathfrak{g}\rightarrow U(\mathfrak{g})$로 보내면 $c_\rho=c'_\rho$이고, 따라서 $\rho(c_\rho)$는 basis에 의존하지 않는다.
 :::
 
-$\rho(c_\rho)$가 $\rho(\mathfrak{g})$ 전체와 교환한다는 것은, $V$ 위의 모든 $\mathfrak{g}$-subrepresentation이 $\rho(c_\rho)$에 대해 불변이고 $\rho(c_\rho)$가 $\mathfrak{g}$-equivariant라는 뜻이다. 따라서 $V$가 irreducible이면 Schur의 보조정리에 의해 $\rho(c_\rho)$는 스칼라로 작용하며, 그 스칼라는 trace를 차원으로 나눈 $\dim\mathfrak{g}/\dim V$로 결정된다. 특히 $V\neq 0$인 irreducible representation에서 이 스칼라는 $\dim\mathfrak{g}/\dim V\neq 0$이므로 $\rho(c_\rho)$는 가역이다. 이 가역성이 다음 절에서 exact sequence를 분할하는 데에 결정적으로 쓰인다.
+$\rho(c_\rho)$는 $\rho(\mathfrak{g})$의 원소들의 곱의 합이므로 $V$ 위의 모든 $\mathfrak{g}$-subrepresentation을 자기 자신 안으로 보내며, $\rho(\mathfrak{g})$ 전체와 교환하므로 $\mathfrak{g}$-equivariant이다. 따라서 $V$가 irreducible이면 Schur의 보조정리에 의해 $\rho(c_\rho)$는 스칼라로 작용하며, 그 스칼라는 trace를 차원으로 나눈 $\dim\mathfrak{g}/\dim V$로 결정된다. 특히 $V\neq 0$인 irreducible representation에서 이 스칼라는 $\dim\mathfrak{g}/\dim V\neq 0$이므로 $\rho(c_\rho)$는 가역이다. 이 가역성이 다음 절에서 exact sequence를 분할하는 데에 결정적으로 쓰인다.
 
 ::: 참고 4
 $\rho$가 faithful이 아닐 때에는 $\ker\rho\neq 0$이고, 위 trace 계산에서 $\dim\mathfrak{g}$ 대신 faithful한 quotient $\mathfrak{g}/\ker\rho$의 차원이 나타난다. 이 경우에도 $\mathfrak{g}/\ker\rho$ 위의 trace form으로 같은 구성을 하거나, 혹은 항상 nondegenerate인 Killing form $\kappa$를 $\beta$ 대신 사용하여 Casimir element를 정의할 수 있다. 어느 경우든 [명제 3](#prop3)의 commutativity와 trace의 비자명성($\tr\rho(c_\rho)\neq 0$ 단 $\rho(\mathfrak{g})\neq 0$)이 유지되며, 아래의 정리는 그 두 성질만을 사용한다.
@@ -102,9 +102,9 @@ $$V=W\oplus L$$
 ::: 증명
 Representation을 정의하는 morphism을 $\rho:\mathfrak{g}\rightarrow\gl(V)$라 한다. $V/W$ 위에서 $\mathfrak{g}$가 자명하게 작용하므로, 임의의 $x\in\mathfrak{g}$에 대하여 $\rho(x)V\subseteq W$이고, 특히 $\rho(x)W\subseteq W$이다. $\dim W$에 대한 귀납법으로 $W$가 irreducible인 경우로 환원한 뒤, irreducible인 경우를 Casimir element로 처리한다.
 
-먼저 $W$가 irreducible인 경우를 보인다. $W$ 위에서 $\mathfrak{g}$가 자명하게 작용하면 $V$ 위에서도 $\mathfrak{g}$가 nilpotent하게만 작용하여 ($\rho(x)V\subseteq W$이고 $\rho(x)W=0$이므로 $\rho(x)^2=0$) $\rho(\mathfrak{g})=[\rho(\mathfrak{g}),\rho(\mathfrak{g})]$의 원소들의 trace가 $0$인 한편 이들은 nilpotent이고, $\rho$의 image가 $\mathfrak{g}$의 quotient라 semisimple이므로 abelian 성분이 없어 $\rho=0$이 되어 임의의 $1$차원 보충 $L$이 분할을 준다. 그러므로 $W$ 위에서 $\mathfrak{g}$가 비자명하게 작용하는 경우, 곧 $\rho\vert_W$가 $0$이 아닌 irreducible representation인 경우만 다루면 된다.
+먼저 $W$가 irreducible인 경우를 보인다. $W$ 위에서 $\mathfrak{g}$가 자명하게 작용하면, 임의의 $x,y\in\mathfrak{g}$에 대하여 $\rho(y)V\subseteq W$이고 $\rho(x)W=0$이므로 $\rho(x)\rho(y)=0$, 따라서 $[\rho(x),\rho(y)]=0$이다. $\mathfrak{g}=[\mathfrak{g},\mathfrak{g}]$이므로 $\rho(\mathfrak{g})=\rho\bigl([\mathfrak{g},\mathfrak{g}]\bigr)=[\rho(\mathfrak{g}),\rho(\mathfrak{g})]=0$, 곧 $\rho=0$이 되어 임의의 $1$차원 보충 $L$이 분할을 준다. 그러므로 $W$ 위에서 $\mathfrak{g}$가 비자명하게 작용하는 경우, 곧 $\rho\vert_W$가 $0$이 아닌 irreducible representation인 경우만 다루면 된다.
 
-이 경우 representation $\rho:\mathfrak{g}\rightarrow\gl(V)$의 Casimir element $c=\rho(c_\rho)$를 생각한다 ([정의 2](#def2), [참고 4](#rmk4)). [명제 3](#prop3)에 의해 $c$는 $\rho(\mathfrak{g})$와 교환하므로 $\ker c$와 $\im c$는 모두 $V$의 subrepresentation이다. $\mathfrak{g}$는 $V/W\cong k$ 위에서 자명하게 작용하므로 $c$도 $V/W$ 위에서 $0$으로 작용하고, 따라서 $c(V)\subseteq W$이다. 한편 $W$가 $0$이 아닌 irreducible representation이므로 [명제 3](#prop3) 이후의 논의에 의해 $c\vert_W$는 $0$이 아닌 스칼라배, 곧 $W$ 위에서 가역이다. 그러므로 $c:V\rightarrow W$는 전사이고, $\dim V=\dim W+1$에서 $\ker c$는 $1$차원이며 $\ker c\cap W=0$이다. $L=\ker c$로 두면 $L$은 $\mathfrak{g}$-불변인 $1$차원 subrepresentation이고 $V=W\oplus L$이다.
+이 경우 representation $\rho:\mathfrak{g}\rightarrow\gl(V)$의 Casimir element $c=\rho(c_\rho)$를 생각한다 ([정의 2](#def2), [참고 4](#rmk4)). [명제 3](#prop3)에 의해 $c$는 $\rho(\mathfrak{g})$와 교환하므로 $\ker c$와 $\im c$는 모두 $V$의 subrepresentation이다. $\mathfrak{g}$는 $V/W\cong k$ 위에서 자명하게 작용하므로 $c$도 $V/W$ 위에서 $0$으로 작용하고, 따라서 $c(V)\subseteq W$이고, 특히 $c$는 $W$를 자기 자신 안으로 보낸다. $W$가 $0$이 아닌 irreducible representation이므로 Schur의 보조정리에 의해 $c\vert_W=\lambda\cdot\id_W$이고, $c$가 $V/W$ 위에서 $0$으로 작용하므로 $\tr c=\lambda\dim W$이다. $\tr c\neq 0$이므로 ([명제 3](#prop3), [참고 4](#rmk4)) $\lambda\neq 0$, 곧 $c\vert_W$는 $W$ 위에서 가역이다. 그러므로 $c:V\rightarrow W$는 전사이고, $\dim V=\dim W+1$에서 $\ker c$는 $1$차원이며 $\ker c\cap W=0$이다. $L=\ker c$로 두면 $L$은 $\mathfrak{g}$-불변인 $1$차원 subrepresentation이고 $V=W\oplus L$이다.
 
 이제 $W$가 irreducible이 아닌 일반적인 경우를 $\dim W$에 대한 귀납법으로 처리한다. $W$가 $0$이 아닌 proper subrepresentation $W'\subsetneq W$를 가지면, quotient representation $V/W'$을 생각한다. $W/W'$은 $V/W'$의 codimension $1$ subrepresentation이고 $(V/W')/(W/W')\cong V/W$ 위에서 $\mathfrak{g}$가 자명하게 작용하므로, $\dim(W/W')<\dim W$에 대한 귀납 가정에서 $\mathfrak{g}$-불변 direct sum $V/W'=(W/W')\oplus(\widetilde{L}/W')$이 존재한다. 여기에서 $\widetilde{L}$은 $W'$을 포함하고 $\dim\widetilde{L}=\dim W'+1$인 $V$의 subrepresentation이다. 그럼 $W'$은 $\widetilde{L}$의 codimension $1$ subrepresentation이고 $\widetilde{L}/W'$ 위에서 $\mathfrak{g}$가 자명하게 작용하므로, 다시 $\dim W'<\dim W$에 대한 귀납 가정에서 $\mathfrak{g}$-불변 direct sum $\widetilde{L}=W'\oplus L$, $\dim L=1$이 존재한다. 이 $L$이 구하는 보충이다. 실제로 $L\subseteq\widetilde{L}$이고 $L\cap W'=0$이며, $\widetilde{L}/W'$이 $V/W'$에서 $W/W'$과 direct sum을 이루므로 $L\cap W\subseteq\widetilde{L}\cap W=W'$과 $L\cap W'=0$에서 $L\cap W=0$이고, 차원을 세면 $V=W\oplus L$이다.
 :::
@@ -124,7 +124,7 @@ $$\begin{aligned}
 
 를 생각한다. $f\vert_W$가 $\id_W$의 스칼라배라는 조건과 $0$이라는 조건은 모두 $\mathfrak{g}$-action에 대해 닫혀 있어 $\mathcal{V},\mathcal{W}$는 subrepresentation이고, $\mathcal{W}\subseteq\mathcal{V}$이다. $f\mapsto\lambda$로 주어지는 morphism $\mathcal{V}\rightarrow k$은 전사이고 그 kernel이 $\mathcal{W}$이므로 $\mathcal{V}/\mathcal{W}\cong k$는 $1$차원이다. 더구나 이 quotient 위에서 $\mathfrak{g}$는 자명하게 작용한다. 임의의 $f\in\mathcal{V}$($f\vert_W=\lambda\id_W$)와 $x\in\mathfrak{g}$, $w\in W$에 대하여
 
-$$(x\cdot f)(w)=\rho_W(x)f(w)-f\bigl(\rho_V(x)w\bigr)=\lambda\,\rho_W(x)w-\lambda\,\rho_W(x)w=0$$
+$$(x\cdot f)(w)=\rho_W(x)f(w)-f\bigl(\rho_V(x)w\bigr)=\lambda\rho_W(x)w-\lambda\rho_W(x)w=0$$
 
 이므로 ($W$가 subrepresentation이라 $\rho_V(x)w=\rho_W(x)w$) $x\cdot f\in\mathcal{W}$, 곧 $x$의 action이 $\mathcal{V}$를 $\mathcal{W}$ 안으로 보낸다.
 

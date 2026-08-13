@@ -70,14 +70,14 @@ $[a,b]$에서 연속인 함수는 Riemann 적분가능하다.
 :::
 
 ::: 증명
-$f$는 컴팩트구간 $[a,b]$에서 연속이므로 균등연속이다 ([§연속함수의 성질, ⁋정리 4](/ko/math/analysis/continuous_functions#thm4)). 임의의 $\varepsilon > 0$에 대해, 균등연속성으로 $\lvert x - y\rvert < \delta$이면 $\lvert f(x) - f(y)\rvert < \varepsilon/(b - a)$이게 하는 $\delta$가 있다. Mesh가 $\delta$ 미만인 분할 $P$를 잡으면, 각 부분구간에서 $f$가 (compactness로) 최댓값과 최솟값을 가지므로 $M_i - m_i \leq \varepsilon/(b-a)$이고
+$f$는 컴팩트구간 $[a,b]$에서 연속이므로 균등연속이다 ([§연속함수의 성질, ⁋정리 4](/ko/math/analysis/continuous_functions#thm4)). 임의의 $\varepsilon > 0$에 대해, 균등연속성으로 $\lvert x - y\rvert < \delta$이면 $\lvert f(x) - f(y)\rvert < \varepsilon/(b - a)$이게 하는 $\delta$가 있다. Mesh가 $\delta$ 미만인 분할 $P$를 잡으면, 각 부분구간에서 $f$가 (compactness로) 최댓값과 최솟값을 가지고 그 두 점의 거리가 $\delta$ 미만이므로 $M_i - m_i < \varepsilon/(b-a)$이고
 
-$$U(P, f) - L(P, f) = \sum_i (M_i - m_i)\Delta x_i \leq \frac{\varepsilon}{b-a}\sum_i \Delta x_i = \varepsilon$$
+$$U(P, f) - L(P, f) = \sum_i (M_i - m_i)\Delta x_i < \frac{\varepsilon}{b-a}\sum_i \Delta x_i = \varepsilon$$
 
 이다. [정리 3](#thm3)에 의해 $f$는 적분가능하다.
 :::
 
-[정리 4](#thm4)의 증명에서 핵심은 균등연속성이 부분구간 너비 $\delta$를 *위치에 무관하게* 한꺼번에 통제한다는 데 있다. 만약 보통의 연속성만 썼다면 $\delta$가 점마다 달라져 진동 $M_i - m_i$를 일률적으로 작게 만들 수 없었을 것이고, 그렇기에 [§컴팩트성](/ko/math/analysis/compactness)을 통해 얻은 [§연속함수의 성질, ⁋정리 4](/ko/math/analysis/continuous_functions#thm4) 정리가 결정적이었다.
+[정리 4](#thm4)의 증명에서 핵심은 균등연속성이 부분구간 너비 $\delta$를 *위치에 무관하게* 한꺼번에 통제한다는 데 있다. 만약 보통의 연속성만 썼다면 $\delta$가 점마다 달라져 진동 $M_i - m_i$를 일률적으로 작게 만들 수 없었을 것이고, 그렇기에 [§컴팩트성](/ko/math/analysis/compactness)을 통해 얻은 [§연속함수의 성질, ⁋정리 4](/ko/math/analysis/continuous_functions#thm4)가 결정적이었다.
 
 ## 적분 불가능한 함수
 
@@ -139,7 +139,7 @@ $$L(P,f) + L(P,g) \leq L(P, f+g) \leq U(P, f+g) \leq U(P,f) + U(P,g)$$
 이다. 적분가능성으로 양 끝의 차를 $\varepsilon$ 미만으로 만드는 공통세분을 잡으면 가운데도 그러하여 $f+g$가 적분가능하고, 같은 부등식에서 세 적분이 모두 같은 값으로 죄어들어 $\int(f+g) = \int f + \int g$가 된다. 상수배는 $c \geq 0$이면 infimum·supremum이 $c$배로 곱해지고 $c < 0$이면 infimum과 supremum의 역할이 바뀔 뿐이므로 곧바로 따른다. 단조성은 $f \leq g$일 때 모든 분할에서 $L(P, f) \leq L(P, g)$이고 supremum을 취하면 $\int f = \underline{\int} f \leq \underline{\int} g = \int g$임에서 나온다.
 :::
 
-단조성에서 $g = \lvert f\rvert$, $-\lvert f\rvert \leq f \leq \lvert f\rvert$를 쓰면 적분의 삼각부등식 $\bigl\lvert \int_a^b f\bigr\rvert \leq \int_a^b \lvert f\rvert$도 따라 나온다. 마지막으로 적분 영역을 쪼개고 이어 붙이는 성질을 본다.
+한편 각 부분구간에서 $\bigl\lvert \lvert f(x)\rvert - \lvert f(y)\rvert\bigr\rvert \leq \lvert f(x) - f(y)\rvert$이므로 $\lvert f\rvert$의 진동이 $f$의 진동을 넘지 못하고, 따라서 $U(P, \lvert f\rvert) - L(P, \lvert f\rvert) \leq U(P, f) - L(P, f)$이어서 [정리 3](#thm3)에 의해 $\lvert f\rvert$도 적분가능하다. 여기에 단조성에서 $g = \lvert f\rvert$, $-\lvert f\rvert \leq f \leq \lvert f\rvert$를 쓰면 적분의 삼각부등식 $\bigl\lvert \int_a^b f\bigr\rvert \leq \int_a^b \lvert f\rvert$도 따라 나온다. 마지막으로 적분 영역을 쪼개고 이어 붙이는 성질을 본다.
 
 ::: 명제 8 (구간가법성)
 $a < c < b$일 때, $f$가 $[a,b]$에서 적분가능한 것은 $[a,c]$와 $[c,b]$에서 각각 적분가능한 것과 동치이며, 이때

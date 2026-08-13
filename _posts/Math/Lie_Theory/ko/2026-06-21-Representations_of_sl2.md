@@ -14,7 +14,7 @@ weight: 10
 published: false
 ---
 
-Semisimple Lie algebra의 표현론 전체에서 $\sl_2$는 가장 작으면서도 가장 근본적인 경우이다. 임의의 semisimple Lie algebra의 각 root $\alpha$는 그 안에 $\sl_2$와 isomorphic한 subalgebra $\sl_{2,\alpha}$를 낳고 ([§근계, ⁋명제 12](/ko/math/lie_theory/root_systems#prop12) 이후의 논의), 일반적인 highest weight 이론의 integrality와 Weyl group 대칭성은 모두 이 $\sl_2$들에 대한 표현론을 root별로 적용하여 얻어진다. 이 글에서 우리는 $\sl_2=\sl(2;\mathbb{C})$의 유한차원 representation을 완전히 분류한다. 각 정수 $n\geq 0$마다 차원 $n+1$의 irreducible representation $V(n)$이 동형을 무시하고 유일하게 존재함을 보이고, 임의의 유한차원 representation이 $h$의 작용으로 weight 분해되어 완전가약<sub>completely reducible</sub>임을 Casimir element를 통해 증명한 뒤, 두 irreducible representation의 tensor product를 분해하는 Clebsch–Gordan 공식을 유도한다.
+Semisimple Lie algebra의 표현론 전체에서 $\sl_2$는 가장 작으면서도 가장 근본적인 경우이다. 임의의 semisimple Lie algebra의 각 root $\alpha$는 그 안에 $\sl_2$와 isomorphic한 subalgebra $\sl_{2,\alpha}$를 낳고 ([§근계, ⁋명제 12](/ko/math/lie_theory/root_systems#prop12) 이전의 논의), 일반적인 highest weight 이론의 integrality와 Weyl group 대칭성은 모두 이 $\sl_2$들에 대한 표현론을 root별로 적용하여 얻어진다. 이 글에서 우리는 $\sl_2=\sl(2;\mathbb{C})$의 유한차원 representation을 완전히 분류한다. 각 정수 $n\geq 0$마다 차원 $n+1$의 irreducible representation $V(n)$이 동형을 무시하고 유일하게 존재함을 보이고, 임의의 유한차원 representation이 $h$의 작용으로 weight 분해되어 완전가약<sub>completely reducible</sub>임을 Casimir element를 통해 증명한 뒤, 두 irreducible representation의 tensor product를 분해하는 Clebsch–Gordan 공식을 유도한다.
 
 이 글 전체에서 기반 체는 $\mathbb{C}$이며, $\sl_2$의 representation이란 Lie algebra 준동형 $\sl_2\rightarrow\gl(V)$, 곧 유한차원 $\mathbb{C}$-벡터공간 $V$ 위의 $\sl_2$-module 구조를 뜻한다. $x\in\sl_2$와 $v\in V$에 대하여 그 작용을 $x\cdot v$로 적는다.
 
@@ -69,7 +69,7 @@ $$h\cdot v=\mu v,\qquad e\cdot v=0$$
 이 성립하는 것이다. 이 때 $\mu$를 *highest weight<sub>최고무게</sub>*라 부른다.
 :::
 
-임의의 유한차원 $V\neq 0$에는 highest weight vector가 존재한다. $h$는 복소공간 위의 연산자이므로 고윳값 $\lambda$와 고유벡터 $w\in V_\lambda$를 적어도 하나 가지며, [명제 2](#prop2)에 의해 $w,\,e\cdot w,\,e^2\cdot w,\dots$은 서로 다른 weight $\lambda,\lambda+2,\lambda+4,\dots$의 weight space에 속한다. 서로 다른 고윳값의 고유벡터는 일차독립이고 $V$가 유한차원이므로 이 열은 유한 번 안에 $0$이 되어야 하며, $e^k\cdot w\neq 0$이지만 $e^{k+1}\cdot w=0$인 $k$를 잡으면 $e^k\cdot w$가 highest weight vector이다.
+임의의 유한차원 $V\neq 0$에는 highest weight vector가 존재한다. $h$는 복소공간 위의 연산자이므로 고윳값 $\lambda$와 고유벡터 $w\in V_\lambda$를 적어도 하나 가지며, [명제 2](#prop2)에 의해 $w,e\cdot w,e^2\cdot w,\dots$은 서로 다른 weight $\lambda,\lambda+2,\lambda+4,\dots$의 weight space에 속한다. 서로 다른 고윳값의 고유벡터는 일차독립이고 $V$가 유한차원이므로 이 열은 유한 번 안에 $0$이 되어야 하며, $e^k\cdot w\neq 0$이지만 $e^{k+1}\cdot w=0$인 $k$를 잡으면 $e^k\cdot w$가 highest weight vector이다.
 
 다음 명제는 highest weight vector 하나에서 출발해 $f$를 반복 적용하여 얻는 사슬의 작용을 완전히 기술한다.
 
@@ -88,11 +88,11 @@ $e$에 대한 식은 $j$에 대한 귀납법으로 보인다. $j=0$인 경우 $v
 $$\begin{aligned}
 e\cdot v_{j+1}&=e\cdot\frac{1}{j+1}f\cdot v_j=\frac{1}{j+1}(fe+h)\cdot v_j\\
 &=\frac{1}{j+1}\bigl(f\cdot((\mu-j+1)v_{j-1})+(\mu-2j)v_j\bigr)\\
-&=\frac{1}{j+1}\bigl((\mu-j+1)\cdot j\,v_j+(\mu-2j)v_j\bigr)\\
+&=\frac{1}{j+1}\bigl((\mu-j+1)\cdot jv_j+(\mu-2j)v_j\bigr)\\
 &=\frac{1}{j+1}\bigl(j\mu-j^2+j+\mu-2j\bigr)v_j=(\mu-j)v_j
 \end{aligned}$$
 
-을 얻는데, 이는 $j$를 $j+1$로 바꾼 식 $e\cdot v_{j+1}=(\mu-(j+1)+1)v_j$와 일치한다. 여기에서 $f\cdot v_{j-1}=j\,v_j$를 사용하였다.
+을 얻는데, 이는 $j$를 $j+1$로 바꾼 식 $e\cdot v_{j+1}=(\mu-(j+1)+1)v_j$와 일치한다. 여기에서 $f\cdot v_{j-1}=jv_j$를 사용하였다.
 :::
 
 이 사슬은 highest weight $\mu$가 음이 아닌 정수일 때에만 유한차원 안에서 일관되게 닫힌다. $V$가 유한차원이면 $v_0,v_1,v_2,\dots$ 중 $0$이 아닌 것은 서로 다른 weight를 가지므로 일차독립이고, 따라서 $v_{m+1}=0$이면서 $v_m\neq 0$인 최소의 $m\geq 0$이 존재한다. 이 $m$에 대하여 [명제 4](#prop4)의 $e$-식을 $j=m+1$에서 적용하면
@@ -111,7 +111,7 @@ $$h\cdot v_j=(n-2j)v_j,\qquad f\cdot v_j=(j+1)v_{j+1},\qquad e\cdot v_j=(n-j+1)v
 
 위 작용이 실제로 $\sl_2$의 representation을 정의함은 세 관계식 $[h,e]=2e$, $[h,f]=-2f$, $[e,f]=h$가 각 $v_j$ 위에서 성립함을 확인하면 된다. 가령 $[e,f]=h$의 경우 $j$에 대하여 $ef\cdot v_j-fe\cdot v_j$를 계산하면
 
-$$ef\cdot v_j=(j+1)\,e\cdot v_{j+1}=(j+1)(n-j)v_j,\qquad fe\cdot v_j=(n-j+1)\,f\cdot v_{j-1}=(n-j+1)j\,v_j$$
+$$ef\cdot v_j=(j+1)e\cdot v_{j+1}=(j+1)(n-j)v_j,\qquad fe\cdot v_j=(n-j+1)f\cdot v_{j-1}=(n-j+1)jv_j$$
 
 이고 그 차는 $\bigl((j+1)(n-j)-j(n-j+1)\bigr)v_j=(n-2j)v_j=h\cdot v_j$이다. 나머지 두 관계식도 같은 방식으로 확인된다. $V(n)$의 weight들은 $n,n-2,\dots,-n$이며 각각 multiplicity $1$을 갖는다.
 
@@ -126,7 +126,7 @@ $$ef\cdot v_j=(j+1)\,e\cdot v_{j+1}=(j+1)(n-j)v_j,\qquad fe\cdot v_j=(n-j+1)\,f\
 끝으로 $V(m)\cong V(n)$이면 두 representation의 차원이 같아야 하므로 $m+1=n+1$, 곧 $m=n$이다.
 :::
 
-[명제 6](#prop6)에 의하여 유한차원 기약 $\sl_2$-representation은 그 차원, 동등하게는 highest weight에 의해 완전히 분류된다. $V(0)$은 자명한 $1$차원 representation이고, $V(1)$은 $\sl_2$가 정의된 standard representation $\mathbb{C}^2$이며, $V(2)$는 $3$차원 adjoint representation $\sl_2$ 자신과 동형이다.
+[명제 6](#prop6)에 의하여 유한차원 기약 $\sl_2$-representation은 그 차원, 동등하게는 highest weight에 의해 완전히 분류된다. $V(0)$은 $1$차원 trivial representation이고, $V(1)$은 $\sl_2$가 정의된 standard representation $\mathbb{C}^2$이며, $V(2)$는 $3$차원 adjoint representation $\sl_2$ 자신과 동형이다.
 
 ## 완전가약성
 
@@ -142,22 +142,22 @@ $$C=e\circ f+f\circ e+\frac{1}{2}h\circ h:V\rightarrow V$$
 
 $\Omega$가 $U(\sl_2)$의 중심에 속하므로 ([§보편 포락 대수, ⁋예시 12](/ko/math/lie_theory/universal_enveloping_algebra#ex12)), $C$는 $h,e,f$의 작용 모두와 가환이다. 곧 $C$는 $\sl_2$-equivariant한 자기준동형이며, Schur의 보조정리의 정신에 따라 irreducible representation 위에서는 스칼라로 작용한다. 실제로 $V(n)$의 highest weight vector $v_0$ 위에서 $e\cdot v_0=0$을 사용하면
 
-$$C\cdot v_0=ef\cdot v_0+fe\cdot v_0+\frac{1}{2}h^2\cdot v_0=(fe+h)\cdot v_0+0+\frac{1}{2}n^2v_0=n\,v_0+\frac{1}{2}n^2v_0=\frac{1}{2}n(n+2)v_0$$
+$$C\cdot v_0=ef\cdot v_0+fe\cdot v_0+\frac{1}{2}h^2\cdot v_0=(fe+h)\cdot v_0+0+\frac{1}{2}n^2v_0=nv_0+\frac{1}{2}n^2v_0=\frac{1}{2}n(n+2)v_0$$
 
 이므로, $C$는 $V(n)$ 위에서 스칼라 $n(n+2)/2$로 작용한다. 여기에서 $ef\cdot v_0=(fe+[e,f])\cdot v_0=(fe+h)\cdot v_0$이고 $fe\cdot v_0=0$, $h\cdot v_0=nv_0$을 사용하였다. 이 스칼라는 $n\geq 0$에 대해 서로 다른 값을 가지므로 $C$의 고윳값은 representation을 구별한다.
 
 완전가약성 증명의 핵심은 representation이 short exact sequence로 쪼개질 때, 그 exact sequence가 항상 분리됨을 보이는 것이다. 다음 보조정리가 그 출발점이다.
 
 ::: 보조정리 8
-$0\rightarrow W\rightarrow V\rightarrow\mathbb{C}\rightarrow 0$이 $\sl_2$-representation들의 short exact sequence이고, 여기에서 $\mathbb{C}=V(0)$은 자명한 representation이라 하자. 그럼 이 exact sequence는 분리된다. 곧 $V\cong W\oplus\mathbb{C}$인 $\sl_2$-불변 분해가 존재한다.
+$0\rightarrow W\rightarrow V\rightarrow\mathbb{C}\rightarrow 0$이 $\sl_2$-representation들의 short exact sequence이고, 여기에서 $\mathbb{C}=V(0)$은 trivial representation이라 하자. 그럼 이 exact sequence는 분리된다. 곧 $V\cong W\oplus\mathbb{C}$인 $\sl_2$-불변 분해가 존재한다.
 :::
 ::: 증명
 $\dim W$에 대한 귀납법으로 보인다. $W$가 $0$이 아닌 진부분 subrepresentation $W'$을 가지면, 몫 $V/W'$은 $0\rightarrow W/W'\rightarrow V/W'\rightarrow\mathbb{C}\rightarrow 0$을 이루고 $\dim(W/W')<\dim W$이므로 귀납 가정에 의해 분리되어, $V/W'$ 안에 $\mathbb{C}$로 사상되는 $1$차원 subrepresentation $\widetilde U/W'$이 있다. 이제 $0\rightarrow W'\rightarrow\widetilde U\rightarrow\mathbb{C}\rightarrow 0$은 $\dim W'<\dim W$이므로 다시 귀납 가정으로 분리되어, $\widetilde U$ 안에 $\mathbb{C}$로 사상되는 $1$차원 subrepresentation $L$이 있다. $L$은 $V\rightarrow\mathbb{C}$로 동형으로 사상되므로 $V=W\oplus L$이다.
 
-따라서 $W$가 기약인 경우만 보이면 된다. $W=V(0)$이 자명한 representation이면 $V$는 $2$차원이고 $\sl_2$가 $V$ 위에서 nilpotent하게만 작용하므로 ($h,e,f$의 모든 commutator가 자명한 $1$차원 몫과 부분 위에서 $0$이 되어 작용 전체가 strictly upper-triangular), $[e,f]=h$의 trace를 비교하면 $h$의 작용이 $0$이고 작용이 분리되어 $V\cong W\oplus\mathbb{C}$이다. $W=V(n)$이 $n\geq 1$인 기약인 경우, $V$ 위의 Casimir operator $C$를 생각한다. $C$는 자명한 representation $\mathbb{C}=V(0)$ 위에서 $0$으로, $W=V(n)$ 위에서 $n(n+2)/2\neq 0$으로 작용한다. $C$가 $\sl_2$의 작용과 가환이므로 $\ker C$는 $V$의 subrepresentation이다. Exact sequence에서 $V/W\cong\mathbb{C}$ 위에서 $C$가 $0$이므로 $C(V)\subseteq W$이고, $W$ 위에서 $C$가 가역 스칼라이므로 $C\colon V\rightarrow W$는 전사이며 $\ker C$는 $1$차원이다. $\ker C\cap W=0$이므로 $V=W\oplus\ker C$가 $\sl_2$-불변 분해이다.
+따라서 $W$가 기약인 경우만 보이면 된다. $W=V(0)$이 trivial representation이면 $V$는 $2$차원이고, $W$와 $V/W\cong\mathbb{C}$가 모두 trivial이므로 $\sl_2$의 각 원소는 $V$를 $W$ 안으로, $W$를 $0$으로 보낸다. 곧 $W$의 $0$이 아닌 벡터를 첫 기저벡터로 삼으면 $h,e,f$의 작용이 모두 strictly upper-triangular $2\times 2$ 행렬로 표시되는데, 이러한 행렬들은 서로 commute하므로 $h=[e,f]$의 작용이 $0$이고, 이어서 $2e=[h,e]$와 $-2f=[h,f]$의 작용도 $0$이다. 곧 $\sl_2$가 $V$ 위에서 $0$으로 작용하므로 $W$의 임의의 여공간이 subrepresentation이 되어 $V\cong W\oplus\mathbb{C}$이다. $W=V(n)$이 $n\geq 1$인 기약인 경우, $V$ 위의 Casimir operator $C$를 생각한다. $C$는 trivial representation $\mathbb{C}=V(0)$ 위에서 $0$으로, $W=V(n)$ 위에서 $n(n+2)/2\neq 0$으로 작용한다. $C$가 $\sl_2$의 작용과 가환이므로 $\ker C$는 $V$의 subrepresentation이다. Exact sequence에서 $V/W\cong\mathbb{C}$ 위에서 $C$가 $0$이므로 $C(V)\subseteq W$이고, $W$ 위에서 $C$가 가역 스칼라이므로 $C\colon V\rightarrow W$는 전사이며 $\ker C$는 $1$차원이다. $\ker C\cap W=0$이므로 $V=W\oplus\ker C$가 $\sl_2$-불변 분해이다.
 :::
 
-이제 일반적인 short exact sequence로 넘어간다. 보조정리 8의 자명한 몫이라는 제약을 $\Hom$ 공간을 도입하여 제거한다.
+이제 일반적인 short exact sequence로 넘어간다. [보조정리 8](#lem8)의 몫이 trivial representation이어야 한다는 제약을 $\Hom$ 공간을 도입하여 제거한다.
 
 ::: 정리 9 (Weyl 완전가약성)
 모든 유한차원 $\sl_2$-representation은 irreducible representation들의 직합이다. 특히 임의의 유한차원 $\sl_2$-representation 위에서 $h$는 대각화 가능하고 정수 고윳값만 가지며, $V=\bigoplus_\lambda V_\lambda$로 weight 분해된다.
@@ -169,7 +169,7 @@ $\sl_2$-equivariant한 morphism $s\colon U\rightarrow V$로 $\pi\circ s=\id_U$�
 
 $$A=\{\varphi\in\Hom_{\mathbb{C}}(U,V)\mid \pi\circ\varphi=\lambda\cdot\id_U\ \text{for some}\ \lambda\in\mathbb{C}\},\qquad B=\{\varphi\mid \pi\circ\varphi=0\}$$
 
-을 생각하면, $\pi$가 전사이므로 $B\subseteq A$는 부분공간이고 $\varphi\mapsto\lambda$가 $\sl_2$-equivariant한 short exact sequence $0\rightarrow B\rightarrow A\rightarrow\mathbb{C}\rightarrow 0$을 준다. ($\sl_2$가 $A,B$를 보존함은 작용의 정의에서 확인된다. $\pi$가 $\sl_2$-equivariant이므로 $\pi\circ(x\cdot\varphi)=x\cdot(\pi\circ\varphi)-(\pi\circ\varphi)\circ x_U$이고, $\pi\circ\varphi=\lambda\id_U$이면 이는 $\lambda(x_U-x_U)=0$이 되어 $x\cdot\varphi\in B$이다.) [보조정리 8](#lem8)에 의해 이 exact sequence는 분리되어, $A$ 안에 $\varphi\mapsto\lambda$로 $1$로 사상되는 $\sl_2$-불변 원소 $\varphi_0$, 곧 $\pi\circ\varphi_0=\id_U$인 $\sl_2$-equivariant $\varphi_0$이 존재한다. 이것이 우리가 찾던 splitting이다.
+을 생각하면, $\pi$가 전사이므로 $B\subseteq A$는 부분공간이고 $\varphi\mapsto\lambda$가 $\sl_2$-equivariant한 short exact sequence $0\rightarrow B\rightarrow A\rightarrow\mathbb{C}\rightarrow 0$을 준다. ($\sl_2$가 $A,B$를 보존함은 작용의 정의에서 확인된다. $\pi$가 $\sl_2$-equivariant이므로 $\pi\circ(x\cdot\varphi)=x_U\circ(\pi\circ\varphi)-(\pi\circ\varphi)\circ x_U$이고, $\pi\circ\varphi=\lambda\id_U$이면 이는 $\lambda(x_U-x_U)=0$이 되어 $x\cdot\varphi\in B$이다.) [보조정리 8](#lem8)에 의해 이 exact sequence는 분리되어, $A$ 안에 $\varphi\mapsto\lambda$로 $1$로 사상되는 $\sl_2$-불변 원소 $\varphi_0$, 곧 $\pi\circ\varphi_0=\id_U$인 $\sl_2$-equivariant $\varphi_0$이 존재한다. 이것이 우리가 찾던 splitting이다.
 
 완전가약성은 $\dim V$에 대한 귀납법으로 따라온다. $V$가 기약이면 끝이고, 그렇지 않으면 $0$이 아닌 진부분 subrepresentation $W$를 잡아 $0\rightarrow W\rightarrow V\rightarrow V/W\rightarrow 0$을 분리하면 $V\cong W\oplus V/W$이며, 두 인자는 차원이 더 작으므로 귀납 가정으로 irreducible representation들의 직합이다. 따라서 $V$도 그러하다. 마지막으로 각 기약 인자 $V(n)$ 위에서 $h$가 정수 고윳값 $n,n-2,\dots,-n$으로 대각화되므로, 그 직합인 $V$ 위에서도 $h$가 정수 고윳값으로 대각화되어 $V=\bigoplus_\lambda V_\lambda$이다.
 :::
@@ -194,7 +194,7 @@ $V(m)$의 weight은 $m,m-2,\dots,-m$이고 $V(n)$의 weight은 $n,n-2,\dots,-n$�
 
 이제 $m\geq n$이라 두어도 일반성을 잃지 않는다. 가능한 weight들은 $m+n$부터 $-(m+n)$까지 $2$씩 줄어드는 값들이며, multiplicity $d_\lambda$는 $\lambda=m+n$에서 $1$로 시작하여 $\lambda$가 $2$씩 줄어들 때마다 $1$씩 늘다가, $\lambda=m-n$에서 최댓값 $n+1$에 이른 뒤 $\lvert\lambda\rvert\leq m-n$인 구간에서 $n+1$로 일정하고, 다시 $\lambda<-(m-n)$에서 $1$씩 줄어 $\lambda=-(m+n)$에서 $1$이 된다. 곧 $d_\lambda$는 $\lambda$에 대해 우함수이며 정점이 평평한 사다리꼴 모양이다.
 
-한편 분해 $\bigoplus_r V(r)^{\oplus c_r}$에서 $V(r)$은 weight $r,r-2,\dots,-r$에 각각 $1$씩 기여하므로, weight $\lambda$의 총 multiplicity는 $d_\lambda=\sum_{r\geq\lvert\lambda\rvert,\,r\equiv\lambda\,(2)}c_r$이다. 이로부터 $c_r=d_r-d_{r+2}$를 얻는다. 위에서 구한 $d_\lambda$를 대입하면, $r$이 $m+n,m+n-2,\dots,m-n$ 중 하나일 때 $d_r-d_{r+2}=1$이고 그 밖의 $r$에 대해서는 $0$이다. 따라서
+한편 분해 $\bigoplus_r V(r)^{\oplus c_r}$에서 $V(r)$은 weight $r,r-2,\dots,-r$에 각각 $1$씩 기여하므로, weight $\lambda$의 총 multiplicity는 $d_\lambda=\sum_{r\geq\lvert\lambda\rvert,r\equiv\lambda\pmod 2}c_r$이다. 이로부터 $c_r=d_r-d_{r+2}$를 얻는다. 위에서 구한 $d_\lambda$를 대입하면, $r$이 $m+n,m+n-2,\dots,m-n$ 중 하나일 때 $d_r-d_{r+2}=1$이고 그 밖의 $r$에 대해서는 $0$이다. 따라서
 
 $$V(m)\otimes V(n)\cong\bigoplus_{r\in\{m-n,m-n+2,\dots,m+n\}}V(r)=\bigoplus_{k=0}^{n}V(m+n-2k)$$
 

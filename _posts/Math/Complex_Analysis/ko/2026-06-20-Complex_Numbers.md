@@ -32,7 +32,7 @@ $$(a + bi) + (c + di) = (a + c) + (b + d)i, \qquad (a + bi)(c + di) = (ac - bd) 
 곱셈의 정의는 분배법칙을 형식적으로 전개한 뒤 $i^2 = -1$을 대입한 것에 지나지 않는다. 실수부와 허수부를 좌표로 읽으면 $z = a + bi$를 평면의 점 $(a, b) \in \mathbb{R}^2$와 동일시할 수 있으며, 이렇게 본 $\mathbb{R}^2$를 *복소평면<sub>complex plane</sub>*이라 부른다. 덧셈은 평면에서의 벡터 덧셈과 정확히 일치하고, 실수배 $\lambda z = \lambda a + \lambda b i$ ($\lambda \in \mathbb{R}$) 또한 벡터의 스칼라배와 일치하므로, $\mathbb{C}$는 $\mathbb{R}$ 위의 $2$차원 벡터공간이기도 하다. 복소수 곱셈만이 평면의 벡터 구조에 없는 새로운 연산이며, 그 기하적 의미는 아래 극형식에서 드러난다.
 
 ::: 정의 2
-복소수 $z = a + bi$에 대하여 그 *복소켤레<sub>complex conjugate</sub>*를 $\bar{z} = a - bi$로 정의하고, *절댓값<sub>modulus</sub>* 혹은 *modulus<sub>절댓값</sub>*를
+복소수 $z = a + bi$에 대하여 그 *복소켤레<sub>complex conjugate</sub>*를 $\bar{z} = a - bi$로 정의하고, *절댓값<sub>modulus</sub>*를
 
 $$\lvert z\rvert = \sqrt{a^2 + b^2}$$
 
@@ -152,7 +152,7 @@ $$zw = (re^{i\theta})(se^{i\varphi}) = rs\, e^{i\theta}e^{i\varphi} = rs\, e^{i(
 
 $$(\cos\theta + i\sin\theta)^n = \cos(n\theta) + i\sin(n\theta)$$
 
-이다. 따라서 $0$이 아닌 복소수 $z = re^{i\theta}$의 $n$제곱근은 정확히 $n$개 존재하며,
+이다. 따라서 양의 정수 $n$에 대하여, $0$이 아닌 복소수 $z = re^{i\theta}$의 $n$제곱근은 정확히 $n$개 존재하며,
 
 $$z_k = r^{1/n}\exp\!\left(i\,\frac{\theta + 2\pi k}{n}\right) \qquad (k = 0, 1, \ldots, n-1)$$
 
@@ -169,7 +169,7 @@ $$(\cos\theta + i\sin\theta)^{n+1} = (\cos\theta + i\sin\theta)^n(\cos\theta + i
 이제 $w = se^{i\varphi}$가 $w^n = z$를 만족한다고 하자. 절댓값을 비교하면 $s^n = r$이므로 $s = r^{1/n}$ (양의 실수 제곱근) 이다. 편각을 비교하면 $n\varphi \equiv \theta \pmod{2\pi}$, 곧 어떤 정수 $k$에 대해 $n\varphi = \theta + 2\pi k$이므로 $\varphi = (\theta + 2\pi k)/n$이다. $k$와 $k + n$은 편각을 $2\pi$만큼 차이 나게 하여 같은 복소수를 주므로, 서로 다른 근은 $k = 0, 1, \ldots, n-1$에서 나오는 $n$개뿐이다.
 :::
 
-de Moivre 공식의 한 특수한 경우인 $n$제곱근 $1$, 곧 *root of unity<sub>단위근</sub>*는 $z = 1$에 위 공식을 적용한 $\exp(2\pi i k/n)$ ($k = 0, \ldots, n-1$) 이며, 복소평면에서 단위원에 내접하는 정 $n$각형의 꼭짓점을 이룬다. 이 기하적 그림은 복소수의 곱셈 구조가 평면의 대칭성과 직결됨을 보여 주는 가장 단순한 예이다.
+de Moivre 공식의 한 특수한 경우인 $1$의 $n$제곱근, 곧 *root of unity<sub>단위근</sub>*는 $z = 1$에 위 공식을 적용한 $\exp(2\pi i k/n)$ ($k = 0, \ldots, n-1$) 이며, 복소평면에서 단위원에 내접하는 정 $n$각형의 꼭짓점을 이룬다. 이 기하적 그림은 복소수의 곱셈 구조가 평면의 대칭성과 직결됨을 보여 주는 가장 단순한 예이다.
 
 ## 거리공간으로서의 ℂ
 
@@ -268,11 +268,7 @@ $z \in \mathbb{C}$를 고정하고 $z_n \rightarrow z$ (표준거리) 라 하자
 
 $$\chi(z_n, z) = \frac{2\,\lvert z_n - z\rvert}{\sqrt{1 + \lvert z_n\rvert^2}\,\sqrt{1 + \lvert z\rvert^2}} \leq \frac{2\,\lvert z_n - z\rvert}{\sqrt{1 + \lvert z\rvert^2}} \rightarrow 0$$
 
-이다. 분모는 $\sqrt{1 + \lvert z\rvert^2} \geq 1$로 bounded below이고 분자가 $0$으로 가기 때문이다. 역으로 $\chi(z_n, z) \rightarrow 0$이라 하자. 분모는 모든 $n$에서
-
-$$\sqrt{1 + \lvert z_n\rvert^2}\,\sqrt{1 + \lvert z\rvert^2}$$
-
-인데, 만일 $(z_n)$이 bounded가 아니라면 어떤 부분수열에서 $\lvert z_n\rvert \rightarrow \infty$이고, 그때 $\chi(z_n, z) \rightarrow \chi(\infty, z) = 2/\sqrt{1 + \lvert z\rvert^2} > 0$이 되어 $\chi(z_n, z) \rightarrow 0$에 모순이다. 따라서 $(z_n)$은 bounded이고 $\lvert z_n\rvert \leq M$이라 두면
+이다. 분모는 $\sqrt{1 + \lvert z\rvert^2} \geq 1$로 bounded below이고 분자가 $0$으로 가기 때문이다. 역으로 $\chi(z_n, z) \rightarrow 0$이라 하자. 만일 $(z_n)$이 bounded가 아니라면 어떤 부분수열에서 $\lvert z_n\rvert \rightarrow \infty$이고, 그때 $\chi(z_n, z) \rightarrow \chi(\infty, z) = 2/\sqrt{1 + \lvert z\rvert^2} > 0$이 되어 $\chi(z_n, z) \rightarrow 0$에 모순이다. 따라서 $(z_n)$은 bounded이고 $\lvert z_n\rvert \leq M$이라 두면
 
 $$\lvert z_n - z\rvert = \frac{\sqrt{1 + \lvert z_n\rvert^2}\,\sqrt{1 + \lvert z\rvert^2}}{2}\,\chi(z_n, z) \leq \frac{\sqrt{1 + M^2}\,\sqrt{1 + \lvert z\rvert^2}}{2}\,\chi(z_n, z) \rightarrow 0$$
 

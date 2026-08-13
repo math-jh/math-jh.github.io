@@ -18,7 +18,7 @@ published: false
 
 ## Goursat 정리
 
-복소적분에서 closed 경로 적분의 소멸을 끌어내는 가장 약한 출발점은, holomorphic function을 가장 단순한 closed 경로인 삼각형의 boundary 위에서 적분하는 것이다. 놀라운 점은 이 적분이 항상 $0$이며, 그 증명에 도함수 $f'$의 연속성이나 Cauchy–Riemann 방정식의 holomorphicity 판정조차 필요하지 않다는 사실이다. 복소미분가능성의 정의 ([§복소정칙함수, ⁋정의 1](/ko/math/complex_analysis/holomorphic_functions#def1)) 가 주는 한 점에서의 일차 근사만으로 충분하다. 삼각형이라 함은 평면의 세 점 $a, b, c$가 이루는 closed 삼각형 영역을 가리키며, 그 boundary $\partial T$는 $a \rightarrow b \rightarrow c \rightarrow a$를 잇는 세 선분을 이어붙인 closed 곡선으로, piecewise $C^1$ 곡선 ([§복소적분, ⁋정의 1](/ko/math/complex_analysis/complex_integration#def1)) 이다.
+복소적분에서 closed 경로 적분의 소멸을 끌어내는 가장 약한 출발점은, holomorphic function을 가장 단순한 closed 경로인 삼각형의 boundary 위에서 적분하는 것이다. 놀라운 점은 이 적분이 항상 $0$이며, 그 증명에 도함수 $f'$의 연속성이나 Cauchy–Riemann 방정식의 holomorphicity 판정조차 필요하지 않다는 사실이다. [§복소정칙함수, ⁋정의 1](/ko/math/complex_analysis/holomorphic_functions#def1)의 복소미분가능성이 주는 한 점에서의 일차 근사만으로 충분하다. 삼각형이라 함은 평면의 세 점 $a, b, c$가 이루는 closed 삼각형 영역을 가리키며, 그 boundary $\partial T$는 $a \rightarrow b \rightarrow c \rightarrow a$를 잇는 세 선분을 이어붙인 closed 곡선으로, [§복소적분, ⁋정의 1](/ko/math/complex_analysis/complex_integration#def1)의 piecewise $C^1$ 곡선이다.
 
 ::: 정리 1 (Goursat)
 $\Omega \subseteq \mathbb{C}$가 열린집합이고 $f$가 $\Omega$에서 holomorphic이라 하자. 삼각형 $T$가 그 interior와 boundary를 모두 포함하여 $\Omega$에 들어 있으면, 그 boundary를 따른 적분은
@@ -39,25 +39,25 @@ $$\oint_{\partial T} f\dd{z} = \sum_{j=1}^{4} \oint_{\partial T_j} f\dd{z}$$
 
 **반복.** 같은 이등분을 되풀이하면, 삼각형의 감소열 $T^{(0)} \supseteq T^{(1)} \supseteq T^{(2)} \supseteq \cdots$이 얻어지고 각 단계에서
 
-$$\left\lvert \oint_{\partial T^{(n)}} f\dd{z} \right\rvert \geq \frac{1}{4^n}\,I$$
+$$\left\lvert \oint_{\partial T^{(n)}} f\dd{z} \right\rvert \geq \frac{1}{4^n}I$$
 
 이다. 한편 한 번 이등분할 때마다 둘레와 직경이 절반으로 줄므로, $L = \mathrm{length}(\partial T^{(0)})$, $d = \operatorname{diam}(T^{(0)})$이라 하면
 
 $$\mathrm{length}(\partial T^{(n)}) = \frac{L}{2^n}, \qquad \operatorname{diam}(T^{(n)}) = \frac{d}{2^n}$$
 
-이다. 삼각형들은 콤팩트이고 직경이 $0$으로 줄어드는 감소열이므로, 그 교집합은 단 한 점 $z_0 = \bigcap_n T^{(n)}$로 이루어지며 $z_0 \in T \subseteq \Omega$이다.
+이다. 삼각형들은 콤팩트이고 직경이 $0$으로 줄어드는 감소열이므로, 그 교집합은 단 한 점으로 이루어져 $\bigcap_n T^{(n)} = \{z_0\}$이며 $z_0 \in T \subseteq \Omega$이다.
 
 **$z_0$에서의 일차 근사.** $f$가 $z_0$에서 복소미분가능하므로, 임의의 $\varepsilon > 0$에 대해 $\delta > 0$이 있어 $\lvert z - z_0\rvert < \delta$이면
 
-$$f(z) = f(z_0) + f'(z_0)(z - z_0) + r(z), \qquad \lvert r(z)\rvert \leq \varepsilon\,\lvert z - z_0\rvert$$
+$$f(z) = f(z_0) + f'(z_0)(z - z_0) + r(z), \qquad \lvert r(z)\rvert \leq \varepsilon\lvert z - z_0\rvert$$
 
 이다 (이는 차분비의 극한 정의를 풀어 쓴 것이다). $n$이 충분히 크면 $\operatorname{diam}(T^{(n)}) = d/2^n < \delta$이므로 $T^{(n)}$ 전체가 $z_0$의 $\delta$-근방에 들어간다. 그런데 일차다항식 $z \mapsto f(z_0) + f'(z_0)(z - z_0)$은 평면 전체에서 원시함수 $f(z_0)z + f'(z_0)(z - z_0)^2/2$을 가지므로, closed 경로 $\partial T^{(n)}$에서의 적분이 $0$이다 ([§복소적분, ⁋따름정리 9](/ko/math/complex_analysis/complex_integration#cor9)). 따라서
 
 $$\oint_{\partial T^{(n)}} f\dd{z} = \oint_{\partial T^{(n)}} r(z)\dd{z}$$
 
-이고, ML 부등식 ([§복소적분, ⁋명제 6](/ko/math/complex_analysis/complex_integration#prop6)) 을 적용하면 $\partial T^{(n)}$ 위에서 $\lvert r(z)\rvert \leq \varepsilon\,\lvert z - z_0\rvert \leq \varepsilon\,\operatorname{diam}(T^{(n)}) = \varepsilon d/2^n$이므로
+이고, [§복소적분, ⁋명제 6](/ko/math/complex_analysis/complex_integration#prop6)을 적용하면 $\partial T^{(n)}$ 위에서 $\lvert r(z)\rvert \leq \varepsilon\lvert z - z_0\rvert \leq \varepsilon\operatorname{diam}(T^{(n)}) = \varepsilon d/2^n$이므로
 
-$$\left\lvert \oint_{\partial T^{(n)}} f\dd{z} \right\rvert \leq \varepsilon\,\frac{d}{2^n} \cdot \mathrm{length}(\partial T^{(n)}) = \varepsilon\,\frac{d}{2^n}\cdot\frac{L}{2^n} = \frac{\varepsilon\, dL}{4^n}$$
+$$\left\lvert \oint_{\partial T^{(n)}} f\dd{z} \right\rvert \leq \varepsilon\frac{d}{2^n} \cdot \mathrm{length}(\partial T^{(n)}) = \varepsilon\frac{d}{2^n}\cdot\frac{L}{2^n} = \frac{\varepsilon dL}{4^n}$$
 
 이다.
 
@@ -87,11 +87,11 @@ $$F(z) = \int_{[z_\ast, z]} f(\zeta)\dd{\zeta}$$
 
 로 정의한다. $F$가 $z$에서 복소미분가능하고 $F'(z) = f(z)$임을 보이면 된다.
 
-점 $z \in \Omega$를 고정한다. $\Omega$가 열려 있으므로 작은 원판 $B(z, \rho) \subseteq \Omega$이 있고, $\lvert h\rvert < \rho$인 $h$에 대해 $z + h \in \Omega$이다. 세 점 $z_\ast, z, z+h$를 꼭짓점으로 하는 삼각형 $T$를 생각하자. 별중심의 성질로 변 $[z_\ast, z]$와 $[z_\ast, z+h]$가 $\Omega$에 들어 있고, 나머지 변 $[z, z+h]$는 $B(z,\rho)$ 안에 있어 역시 $\Omega$에 들어 있다. 더 나아가 별중심에서 이 삼각형의 각 변 위의 점으로 가는 선분이 모두 $\Omega$에 있으므로 삼각형의 interior도 $\Omega$에 포함되며, 따라서 Goursat 정리 (정리 1) 를 이 삼각형에 적용할 수 있다. Boundary $z_\ast \rightarrow z \rightarrow z+h \rightarrow z_\ast$를 따른 적분이 $0$이므로
+점 $z \in \Omega$를 고정한다. $\Omega$가 열려 있으므로 작은 원판 $B(z, \rho) \subseteq \Omega$이 있고, $\lvert h\rvert < \rho$인 $h$에 대해 $z + h \in \Omega$이다. 세 점 $z_\ast, z, z+h$를 꼭짓점으로 하는 삼각형 $T$를 생각하자. 별중심의 성질로 변 $[z_\ast, z]$와 $[z_\ast, z+h]$가 $\Omega$에 들어 있고, 나머지 변 $[z, z+h]$는 $B(z,\rho)$ 안에 있어 역시 $\Omega$에 들어 있다. 더 나아가 별중심에서 이 삼각형의 각 변 위의 점으로 가는 선분이 모두 $\Omega$에 있으므로 삼각형의 interior도 $\Omega$에 포함되며, 따라서 [정리 1](#thm1)을 이 삼각형에 적용할 수 있다. Boundary $z_\ast \rightarrow z \rightarrow z+h \rightarrow z_\ast$를 따른 적분이 $0$이므로
 
 $$\int_{[z_\ast, z]} f\dd{\zeta} + \int_{[z, z+h]} f\dd{\zeta} + \int_{[z+h, z_\ast]} f\dd{\zeta} = 0$$
 
-이고, 역방향 적분의 부호 ([§복소적분, ⁋명제 4](/ko/math/complex_analysis/complex_integration#prop4)) 를 써서 정리하면
+이고, [§복소적분, ⁋명제 4](/ko/math/complex_analysis/complex_integration#prop4)의 역방향 적분 부호를 써서 정리하면
 
 $$F(z+h) - F(z) = \int_{[z_\ast, z+h]} f\dd{\zeta} - \int_{[z_\ast, z]} f\dd{\zeta} = \int_{[z, z+h]} f\dd{\zeta}$$
 
@@ -99,14 +99,14 @@ $$F(z+h) - F(z) = \int_{[z_\ast, z+h]} f\dd{\zeta} - \int_{[z_\ast, z]} f\dd{\ze
 
 $$\frac{F(z+h) - F(z)}{h} - f(z) = \frac{1}{h}\int_{[z, z+h]} \bigl( f(\zeta) - f(z) \bigr)\dd{\zeta}$$
 
-이다. $f$가 $z$에서 연속이므로 임의의 $\varepsilon > 0$에 대해 $\lvert h\rvert$이 충분히 작으면 선분 위에서 $\lvert f(\zeta) - f(z)\rvert \leq \varepsilon$이고, ML 부등식 ([§복소적분, ⁋명제 6](/ko/math/complex_analysis/complex_integration#prop6)) 으로 우변의 크기가
+이다. $f$가 $z$에서 연속이므로 임의의 $\varepsilon > 0$에 대해 $\lvert h\rvert$이 충분히 작으면 선분 위에서 $\lvert f(\zeta) - f(z)\rvert \leq \varepsilon$이고, [§복소적분, ⁋명제 6](/ko/math/complex_analysis/complex_integration#prop6)으로 우변의 크기가
 
-$$\frac{1}{\lvert h\rvert}\cdot \varepsilon \cdot \mathrm{length}([z, z+h]) = \frac{1}{\lvert h\rvert}\cdot \varepsilon\, \lvert h\rvert = \varepsilon$$
+$$\frac{1}{\lvert h\rvert}\cdot \varepsilon \cdot \mathrm{length}([z, z+h]) = \frac{1}{\lvert h\rvert}\cdot \varepsilon \lvert h\rvert = \varepsilon$$
 
 이하이다. 따라서 $h \rightarrow 0$일 때 차분비가 $f(z)$로 수렴하여 $F'(z) = f(z)$이다. $z$가 임의였으므로 $F$는 $\Omega$에서 $f$의 원시함수이다.
 :::
 
-정리 3은 holomorphicity라는 미분 조건을, 적분의 경로 독립성을 보장하는 원시함수의 존재로 번역한다. 그 다리가 바로 Goursat 정리이며, 원시함수의 차분비가 작은 삼각형 위의 적분으로 표현되고 그 적분이 $0$이라는 사실이 미분가능성을 낳는다. 원시함수가 존재하면 복소적분 이론의 일반 원리 ([§복소적분, ⁋따름정리 9](/ko/math/complex_analysis/complex_integration#cor9)) 에 의해 closed 경로 적분이 곧바로 소멸하므로, 다음 형태의 Cauchy 정리가 따라 나온다.
+정리 3은 holomorphicity라는 미분 조건을, 적분의 경로 독립성을 보장하는 원시함수의 존재로 번역한다. 그 다리가 바로 Goursat 정리이며, 원시함수의 차분비가 작은 삼각형 위의 적분으로 표현되고 그 적분이 $0$이라는 사실이 미분가능성을 낳는다. 원시함수가 존재하면 [§복소적분, ⁋따름정리 9](/ko/math/complex_analysis/complex_integration#cor9)에 의해 closed 경로 적분이 곧바로 소멸하므로, 다음 형태의 Cauchy 정리가 따라 나온다.
 
 ::: 따름정리 4 (Cauchy 정리, star-shaped 형태)
 $\Omega \subseteq \mathbb{C}$가 star-shaped 영역이고 $f$가 $\Omega$에서 holomorphic이라 하자. 그러면 자취가 $\Omega$에 들어 있는 임의의 closed piecewise $C^1$ 곡선 $\gamma$에 대하여
@@ -117,7 +117,7 @@ $$\oint_\gamma f(z)\dd{z} = 0$$
 :::
 
 ::: 증명
-정리 3에 의해 $f$는 $\Omega$에서 원시함수 $F$를 가진다. 자취가 $\Omega$에 들어 있는 closed 곡선 $\gamma$에 대해, 원시함수를 갖는 연속함수의 closed 경로 적분이 $0$이라는 사실 ([§복소적분, ⁋따름정리 9](/ko/math/complex_analysis/complex_integration#cor9)) 을 적용하면 $\oint_\gamma f\dd{z} = 0$이다.
+정리 3에 의해 $f$는 $\Omega$에서 원시함수 $F$를 가진다. 자취가 $\Omega$에 들어 있는 closed 곡선 $\gamma$에 대해, [§복소적분, ⁋따름정리 9](/ko/math/complex_analysis/complex_integration#cor9)의 closed 경로 적분 소멸을 적용하면 $\oint_\gamma f\dd{z} = 0$이다.
 :::
 
 따름정리 4는 closed 곡선의 모양에 아무런 제약을 두지 않는다. 영역이 star-shaped이기만 하면, 그 안의 어떤 복잡한 closed 경로를 따라 holomorphic function을 적분해도 결과가 $0$이다. 가령 열린 원판 위에서 holomorphic인 함수는 그 원판 안의 어떤 closed 경로에서도 적분이 소멸한다. 다만 이 결론은 영역의 star-shapedness에 결정적으로 기댄다. $1/z$은 $\mathbb{C}\setminus\{0\}$에서 holomorphic이지만 이 영역이 star-shaped가 아니므로 정리가 적용되지 않고, 실제로 원점을 감는 원에서의 적분이 $2\pi i \neq 0$이다. 영역의 어떤 위상적 성질이 star-shapedness를 대신할 수 있는가가 다음 절의 물음이다.
@@ -151,9 +151,9 @@ $$\int_{\gamma_0} f(z)\dd{z} = \int_{\gamma_1} f(z)\dd{z}$$
 ::: 증명
 $H : [a, b] \times [0, 1] \rightarrow \Omega$를 $\gamma_0$에서 $\gamma_1$로 가는 homotopy라 하자. 상 $K = H([a,b]\times[0,1])$은 콤팩트집합 위의 연속상이므로 콤팩트이고 $\Omega$에 들어 있다. 콤팩트집합 $K$와 닫힌집합 $\mathbb{C}\setminus\Omega$ 사이의 거리는 양수이므로, $3r < \operatorname{dist}(K, \mathbb{C}\setminus\Omega)$인 $r > 0$을 잡으면 $K$의 각 점을 중심으로 한 반지름 $2r$인 원판이 통째로 $\Omega$에 들어간다.
 
-$H$가 콤팩트집합 위에서 균등연속이므로, 분할을 충분히 잘게 잡아 $a = t_0 < t_1 < \cdots < t_n = b$와 $0 = s_0 < s_1 < \cdots < s_m = 1$을 택하면, 각 작은 직사각형 $[t_{i-1}, t_i]\times[s_{j-1}, s_j]$의 $H$-상이 지름 $r$인 원판 안에 들어가도록 할 수 있다. 격자점의 상을 $w_{i,j} = H(t_i, s_j)$라 하자.
+$H$가 콤팩트집합 위에서 균등연속이므로, 분할을 충분히 잘게 잡아 $a = t_0 < t_1 < \cdots < t_n = b$와 $0 = s_0 < s_1 < \cdots < s_m = 1$을 택하면, 각 작은 직사각형 $[t_{i-1}, t_i]\times[s_{j-1}, s_j]$의 $H$-상이 지름 $r$인 원판 안에 들어가도록 할 수 있다. 분할이 이루는 각 점 $(t_i, s_j)$의 상을 $w_{i,j} = H(t_i, s_j)$라 하자.
 
-각 $s_j$에 대해 격자점 $w_{0,j}, w_{1,j}, \ldots, w_{n,j}$을 차례로 잇는 선분들로 이루어진 다각선 $\Gamma_j$를 생각한다. 이 다각선의 적분과 곡선 $\gamma_{s_j}$의 적분이 같고, 또 이웃한 두 다각선의 적분이 서로 같음을 보이면 된다.
+각 $s_j$에 대해 점 $w_{0,j}, w_{1,j}, \ldots, w_{n,j}$을 차례로 잇는 선분들로 이루어진 다각선 $\Gamma_j$를 생각한다. 이웃한 두 다각선의 적분이 서로 같고, 또 양 끝의 다각선 $\Gamma_0, \Gamma_m$의 적분이 각각 $\gamma_0, \gamma_1$의 적분과 같음을 보이면 된다 (중간의 곡선 $\gamma_{s_j}$은 연속일 뿐 piecewise $C^1$이라는 보장이 없어 그 적분을 쓰지 않는다).
 
 이웃한 두 다각선 $\Gamma_{j-1}$과 $\Gamma_j$을 비교한다. 각 $i$에 대해 네 점 $w_{i-1,j-1}, w_{i,j-1}, w_{i,j}, w_{i-1,j}$은 모두 위 작은 직사각형들의 상에 속해 한 점에서 반지름 $2r$인 공통 원판 $D_i \subseteq \Omega$ 안에 들어간다. 원판은 볼록하여 star-shaped이므로, 이 네 점을 꼭짓점으로 하는 closed 다각형 경로를 따른 $f$의 적분이 따름정리 4에 의해 $0$이다. 이러한 사각형 적분들을 $i = 1, \ldots, n$에 대해 모두 더하면 인접한 사각형이 공유하는 세로변 $[w_{i,j-1}, w_{i,j}]$에서의 적분이 방향이 반대라 상쇄되고, 양 끝의 세로변은 homotopy가 끝점을 고정하므로 $w_{0,j-1} = w_{0,j} = p$, $w_{n,j-1} = w_{n,j} = q$이 되어 길이 $0$의 선분이라 기여가 없다. 남는 것은 위·아래 가로변뿐이므로
 
@@ -161,9 +161,9 @@ $$\int_{\Gamma_{j-1}} f\dd{z} = \int_{\Gamma_j} f\dd{z}$$
 
 이다. $j = 1, \ldots, m$에 대해 이를 이으면 $\int_{\Gamma_0} f\dd{z} = \int_{\Gamma_m} f\dd{z}$이다.
 
-끝으로 다각선 $\Gamma_0$과 곡선 $\gamma_0$의 적분이 같음을 본다. 각 $i$에 대해 호 $\gamma_0\vert_{[t_{i-1}, t_i]}$와 선분 $[w_{i-1,0}, w_{i,0}]$은 같은 끝점을 갖고 둘 다 공통 원판 $D_i$ 안에 있다. 이 원판 위에서 $f$가 원시함수를 가지므로 (정리 3) 두 경로의 적분이 끝값의 차로 같아져 일치하며 ([§복소적분, ⁋따름정리 9](/ko/math/complex_analysis/complex_integration#cor9)의 경로 독립), $i$에 대해 더하면 $\int_{\gamma_0} f\dd{z} = \int_{\Gamma_0} f\dd{z}$이다. 같은 논증으로 $\int_{\gamma_1} f\dd{z} = \int_{\Gamma_m} f\dd{z}$이므로, 위 결과와 합쳐 $\int_{\gamma_0} f\dd{z} = \int_{\gamma_1} f\dd{z}$를 얻는다.
+끝으로 다각선 $\Gamma_0$과 곡선 $\gamma_0$의 적분이 같음을 본다. 각 $i$에 대해 호 $\gamma_0\vert_{[t_{i-1}, t_i]}$와 선분 $[w_{i-1,0}, w_{i,0}]$은 같은 끝점을 갖고 둘 다 공통 원판 $D_i$ 안에 있다. [정리 3](#thm3)에 의해 이 원판 위에서 $f$가 원시함수를 가지므로 두 경로의 적분이 끝값의 차로 같아져 일치하며 ([§복소적분, ⁋따름정리 9](/ko/math/complex_analysis/complex_integration#cor9)의 경로 독립), $i$에 대해 더하면 $\int_{\gamma_0} f\dd{z} = \int_{\Gamma_0} f\dd{z}$이다. 같은 논증으로 $\int_{\gamma_1} f\dd{z} = \int_{\Gamma_m} f\dd{z}$이므로, 위 결과와 합쳐 $\int_{\gamma_0} f\dd{z} = \int_{\gamma_1} f\dd{z}$를 얻는다.
 
-Null-homotopic한 closed 곡선의 경우, closed 곡선에 대한 homotopy를 같은 방식으로 다루면 ($H(a,s) = H(b,s)$이라 양 끝 세로변이 길이 $0$ 대신 한 점으로 닫혀 상쇄됨) 그 적분이 상수 곡선의 적분과 같고, 상수 곡선의 적분은 $0$이다.
+Null-homotopic한 closed 곡선의 경우, closed 곡선에 대한 homotopy를 같은 방식으로 다루면 ($H(a,s) = H(b,s)$이라 $w_{0,j} = w_{n,j}$이고, 양 끝 세로변이 길이 $0$인 대신 같은 선분을 서로 반대 방향으로 지나 상쇄됨) 그 적분이 상수 곡선의 적분과 같고, 상수 곡선의 적분은 $0$이다.
 :::
 
 정리 6은 holomorphic function의 적분이 경로 자체가 아니라 경로의 homotopy류에만 의존함을 말한다. 같은 두 끝점을 잇되 영역 안에서 서로 끌어당겨 포갤 수 있는 두 경로는 같은 적분값을 주고, 영역 안에서 한 점으로 오므릴 수 있는 closed 경로는 적분이 $0$이다. Star-shaped 영역에서는 임의의 closed 곡선이 별중심으로 직선을 따라 수축되어 null-homotopic하므로, 따름정리 4가 이 정리의 특수한 경우로 회복된다. 한편 $\mathbb{C}\setminus\{0\}$에서 원점을 감는 원은 원점이라는 구멍에 걸려 한 점으로 수축되지 못하므로 null-homotopic하지 않고, 정리 6은 그 적분이 $0$이라고 주장하지 않는다. 적분이 $0$이 됨을 보장하는 영역은 모든 closed 곡선이 수축되는 영역이며, 이것이 다음 정의이다.
@@ -190,7 +190,7 @@ $\Omega$가 단순연결이므로 자취가 $\Omega$에 들어 있는 임의의 
 
 ## 회전수
 
-단순연결이 아닌 영역에서는 closed 경로가 한 점으로 수축되지 못하고, 그 장애는 경로가 영역의 구멍을 몇 번 감는가에서 비롯한다. 이 감는 횟수를 정수로 정확히 재는 것이 회전수이며, 그 정의 자체가 핵심 계산 $\oint \dd{z}/z = 2\pi i$ ([§복소적분, ⁋명제 10](/ko/math/complex_analysis/complex_integration#prop10)) 를 일반화한 적분으로 주어진다.
+단순연결이 아닌 영역에서는 closed 경로가 한 점으로 수축되지 못하고, 그 장애는 경로가 영역의 구멍을 몇 번 감는가에서 비롯한다. 이 감는 횟수를 정수로 정확히 재는 것이 회전수이며, 그 정의 자체가 [§복소적분, ⁋명제 10](/ko/math/complex_analysis/complex_integration#prop10)의 핵심 계산 $\oint \dd{z}/z = 2\pi i$를 일반화한 적분으로 주어진다.
 
 ::: 정의 9
 $\gamma : [a, b] \rightarrow \mathbb{C}$가 closed piecewise $C^1$ 곡선이고 $z_0$이 그 자취 위에 있지 않은 점이라 하자. $\gamma$의 $z_0$에 대한 *winding number<sub>회전수</sub>*를
@@ -200,7 +200,7 @@ $$n(\gamma, z_0) = \frac{1}{2\pi i}\oint_\gamma \frac{\dd{z}}{z - z_0}$$
 으로 정의한다.
 :::
 
-회전수는 closed 경로 $\gamma$가 점 $z_0$의 둘레를 반시계방향으로 몇 바퀴 도는지를 세는 정수이다. 적분 $\oint_\gamma \dd{z}/(z - z_0)$의 피적분함수 $1/(z - z_0)$은 $z_0$을 중심으로 한 편각의 미소 변화를 재므로, 경로를 한 바퀴 돌며 그 편각의 총 변화량을 모은 것이 적분이고, 이를 $2\pi i$로 나누면 회전 횟수가 된다. 가령 $z_0$을 중심으로 반시계방향으로 한 번 도는 원에 대해서는 명제 10의 계산에서 $n(\gamma, z_0) = 1$이고, 같은 원을 거꾸로 돌면 $-1$, $z_0$을 감지 않는 경로에 대해서는 $0$이다. 이 양이 항상 정수임을 보인다.
+회전수는 closed 경로 $\gamma$가 점 $z_0$의 둘레를 반시계방향으로 몇 바퀴 도는지를 세는 정수이다. 적분 $\oint_\gamma \dd{z}/(z - z_0)$의 피적분함수 $1/(z - z_0)$은 $z_0$을 중심으로 한 편각의 미소 변화를 재므로, 경로를 한 바퀴 돌며 그 편각의 총 변화량을 모은 것이 적분이고, 이를 $2\pi i$로 나누면 회전 횟수가 된다. 가령 $z_0$을 중심으로 반시계방향으로 한 번 도는 원에 대해서는 [§복소적분, ⁋명제 10](/ko/math/complex_analysis/complex_integration#prop10)의 계산에서 $n(\gamma, z_0) = 1$이고, 같은 원을 거꾸로 돌면 $-1$, $z_0$을 감지 않는 경로에 대해서는 $0$이다. 이 양이 항상 정수임을 보인다.
 
 ::: 명제 10
 정의 9의 가정 아래, 회전수 $n(\gamma, z_0)$은 정수이다.
@@ -215,16 +215,16 @@ $$g(t) = \int_a^t \frac{\gamma'(\tau)}{\gamma(\tau)}\dd{\tau}$$
 
 $$\frac{d}{\dd{t}}\bigl( e^{-g(t)}\gamma(t) \bigr) = e^{-g(t)}\bigl( -g'(t)\gamma(t) + \gamma'(t) \bigr) = e^{-g(t)}\bigl( -\gamma'(t) + \gamma'(t) \bigr) = 0$$
 
-이다. 이 함수는 연속이고 도함수가 유한 개의 점을 빼고 $0$이므로 $[a, b]$에서 상수이다. 따라서 모든 $t$에 대해 $e^{-g(t)}\gamma(t) = e^{-g(a)}\gamma(a) = \gamma(a)$ ($g(a) = 0$이므로) 이고, 곧 $\gamma(t) = \gamma(a)\,e^{g(t)}$이다.
+이다. 이 함수는 연속이고 도함수가 유한 개의 점을 빼고 $0$이므로 $[a, b]$에서 상수이다. 따라서 모든 $t$에 대해 $e^{-g(t)}\gamma(t) = e^{-g(a)}\gamma(a) = \gamma(a)$ ($g(a) = 0$이므로) 이고, 곧 $\gamma(t) = \gamma(a)e^{g(t)}$이다.
 
-$\gamma$가 닫혀 있어 $\gamma(b) = \gamma(a) \neq 0$이므로 $e^{g(b)} = \gamma(b)/\gamma(a) = 1$이다. 복소지수가 $1$이 되는 것은 그 지수가 $2\pi i$의 정수배일 때 ([§복소정칙함수, ⁋정의 10](/ko/math/complex_analysis/holomorphic_functions#def10)의 지수함수와 Euler 공식에서 $e^{w} = 1 \iff w \in 2\pi i\,\mathbb{Z}$) 이므로, $g(b) = 2\pi i\,k$인 정수 $k$가 있다. 그런데 정의에 의해
+$\gamma$가 닫혀 있어 $\gamma(b) = \gamma(a) \neq 0$이므로 $e^{g(b)} = \gamma(b)/\gamma(a) = 1$이다. 복소지수가 $1$이 되는 것은 그 지수가 $2\pi i$의 정수배일 때 ([§복소정칙함수, ⁋정의 10](/ko/math/complex_analysis/holomorphic_functions#def10)의 지수함수와 Euler 공식에서 $e^{w} = 1 \iff w \in 2\pi i\mathbb{Z}$) 이므로, $g(b) = 2\pi i k$인 정수 $k$가 있다. 그런데 정의에 의해
 
 $$g(b) = \int_a^b \frac{\gamma'(\tau)}{\gamma(\tau)}\dd{\tau} = \oint_\gamma \frac{\dd{z}}{z}$$
 
 이므로 $n(\gamma, 0) = g(b)/(2\pi i) = k$는 정수이다.
 :::
 
-명제 10의 증명은 회전수의 정수성이 곧 복소지수의 주기성 $e^w = 1 \iff w \in 2\pi i\,\mathbb{Z}$에서 비롯함을 드러낸다. 적분 $g(b)$는 경로를 따라 누적된 $\log\gamma$의 변화량이고, 경로가 닫혀 출발점으로 돌아오면 $\gamma$의 절댓값은 제자리이되 편각만 $2\pi$의 정수배만큼 어긋날 수 있는데, 그 정수가 바로 회전수이다. 이로써 회전수는 closed 경로가 한 점을 감는 위상적 횟수를 적분으로 포착하며, 단순연결이 아닌 영역에서 Cauchy 정리가 어긋나는 정도를 정량화하는 도구가 된다. 가령 $f$가 $z_0$을 뺀 영역에서 holomorphic일 때 closed 경로 적분이 $n(\gamma, z_0)$에 비례하여 결정되는 현상이 적분공식과 잔여정리에서 본격적으로 전개된다.
+명제 10의 증명은 회전수의 정수성이 곧 복소지수의 주기성 $e^w = 1 \iff w \in 2\pi i\mathbb{Z}$에서 비롯함을 드러낸다. 적분 $g(b)$는 경로를 따라 누적된 $\log\gamma$의 변화량이고, 경로가 닫혀 출발점으로 돌아오면 $\gamma$의 절댓값은 제자리이되 편각만 $2\pi$의 정수배만큼 어긋날 수 있는데, 그 정수가 바로 회전수이다. 이로써 회전수는 closed 경로가 한 점을 감는 위상적 횟수를 적분으로 포착하며, 단순연결이 아닌 영역에서 Cauchy 정리가 어긋나는 정도를 정량화하는 도구가 된다. 가령 $f$가 $z_0$을 뺀 영역에서 holomorphic일 때 closed 경로 적분이 $n(\gamma, z_0)$에 비례하여 결정되는 현상이 적분공식과 잔여정리에서 본격적으로 전개된다.
 
 ---
 

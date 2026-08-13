@@ -1,7 +1,7 @@
 ---
 title: "Artin-Wedderburn 정리"
 description: "자기 자신 위의 module로서 semisimple인 환을 semisimple ring으로 정의하고, 이것이 모든 module이 semisimple인 것과 동치임을 보인다. Division ring 위의 행렬환의 module 구조와 opposite ring·endomorphism ring 계산을 거쳐, semisimple ring이 division ring 위의 행렬환 유한개의 곱으로 유일하게 분해된다는 Artin-Wedderburn 정리를 증명한다."
-excerpt: "Semisimple ring의 구조 정리 — division ring 위 행렬환들의 곱으로의 유일한 분해"
+excerpt: "Semisimple ring의 구조 정리: division ring 위 행렬환들의 곱으로의 유일한 분해"
 
 categories: [Math / Ring Theory]
 permalink: /ko/math/ring_theory/artin_wedderburn
@@ -194,7 +194,7 @@ $R\cong\prod_{i=1}^k\Mat_{n_i}(D_i)$가 semisimple ring이라 하자. 그럼 sim
 :::
 
 ::: 참고 14
-유한군 $G$의 group algebra $\mathbb{C}[G]$는 이 정리의 대표적인 응용처이다. [\[표현론\] §유한군의 표현론, ⁋따름정리 7](/ko/math/representation_theory/representations_of_finite_groups#cor7)에 의해 모든 유한차원 representation이 semisimple $\mathbb{C}[G]$-module이고, 특히 regular representation $\mathbb{C}[G]$ 자신이 그러하므로 $\mathbb{C}[G]$는 semisimple ring이다. [정리 11](#thm11)의 분해에 등장하는 division ring들은 simple module $V_i$의 endomorphism ring으로부터 나오는데, algebraically closed field 위의 유한차원 representation에서는 $\End_{\mathbb{C}[G]}(V_i)\cong\mathbb{C}$이므로 ([같은 글, ⁋보조정리 8](/ko/math/representation_theory/representations_of_finite_groups#lem8)) 모든 $D_i$가 $\mathbb{C}$가 된다. 따라서
+Finite group $G$의 group algebra $\mathbb{C}[G]$는 이 정리의 대표적인 응용처이다. [\[표현론\] §유한군의 표현론, ⁋따름정리 7](/ko/math/representation_theory/representations_of_finite_groups#cor7)에 의해 모든 유한차원 representation이 semisimple $\mathbb{C}[G]$-module이고, 특히 regular representation $\mathbb{C}[G]$ 자신이 그러하므로 $\mathbb{C}[G]$는 semisimple ring이다. [정리 11](#thm11)의 분해에 등장하는 division ring들은 simple module $V_i$의 endomorphism ring으로부터 나오는데, algebraically closed field 위의 유한차원 representation에서는 $\End_{\mathbb{C}[G]}(V_i)\cong\mathbb{C}$이므로 ([같은 글, ⁋보조정리 8](/ko/math/representation_theory/representations_of_finite_groups#lem8)) 모든 $D_i$가 $\mathbb{C}$가 된다. 따라서
 
 $$\mathbb{C}[G]\cong\prod_{i=1}^k\Mat_{d_i}(\mathbb{C})$$
 

@@ -41,7 +41,7 @@ $$h_{(-)}:\Sch \rightarrow \operatorname{Fun}(\Sch^\op, \Set)$$
 
 ## Yoneda 보조정리와 representability
 
-Functor of points 관점이 유용하려면, scheme $X$에 대한 모든 정보가 functor $h_X$에 담겨 있어야 한다. 이를 보장하는 것이 Yoneda 보조정리이다. 이는 임의의 locally small category $\mathcal{C}$에 대하여 성립하는 순수하게 범주론적인 사실이므로, 여기에서는 $\mathcal{C}=\Sch$인 경우로 진술한다. 
+Functor of points 관점이 유용하려면, scheme $X$에 대한 모든 정보가 functor $h_X$에 담겨 있어야 한다. 이를 보장하는 것이 Yoneda 보조정리이다. 이는 임의의 locally small category $\mathcal{C}$에 대하여 성립하는 순수하게 범주론적인 사실이므로 ([\[범주론\] §표현가능한 함자, ⁋정리 4](/ko/math/category_theory/representable_functors#thm4)), 여기에서는 $\mathcal{C}=\Sch$인 경우로 진술한다. 
 
 ::: 정리 1 (Yoneda)
 Scheme $X$와 임의의 functor $F:\Sch^\op \rightarrow \Set$가 주어졌다 하자. 그럼 natural transformation들의 모임과 집합 $F(X)$ 사이에 자연스러운 일대일대응
@@ -115,7 +115,7 @@ Functor $F:\Sch^\op \rightarrow \Set$가 scheme $X$에 의해 representable인 �
 이제 구체적인 scheme들의 functor of points를 계산하여, functorial한 기술이 어떻게 그 scheme의 기하학을 직접 드러내는지를 살펴본다. 가장 기본적인 예는 affine line $\mathbb{A}^1$이다. 
 
 ::: 명제 5
-$\mathbb{Z}$ 위의 affine line $\mathbb{A}^1=\Spec \mathbb{Z}[\x]$에 대하여, 임의의 scheme $T$의 점들의 집합은
+$\mathbb{Z}$ 위의 affine line $\mathbb{A}^1=\Spec \mathbb{Z}[\x]$와 임의의 scheme $T$에 대하여, $\mathbb{A}^1$의 $T$-point들의 집합은
 
 $$\mathbb{A}^1(T)\cong \Gamma(T, \mathcal{O}_T)=\mathcal{O}_T(T)$$
 
@@ -184,19 +184,19 @@ Morphism $\psi: T \rightarrow \mathbb{P}^n$이 주어졌다 하자. $\mathbb{P}^
 이 두 구성이 서로 역이라는 것과 isomorphic한 데이터가 같은 morphism을 준다는 것은, $(\mathcal{L}, s_0,\ldots, s_n)$ 전체를 $\mathcal{O}_T$-module isomorphism으로 옮겨도 $s_j/s_i$들이 변하지 않으므로 같은 gluing 데이터를 준다는 사실로부터 확인된다. 자연스러움은 $\tau: T' \rightarrow T$에 대하여 위의 데이터를 pullback하는 것과 morphism을 합성하는 것이 일치한다는 것이다. 
 :::
 
-[정리 9](#thm9)는 projective space의 functorial한 본질을 보여준다. $\mathbb{P}^n$은 더 이상 affine scheme들을 붙인 결과로서 다루어지지 않고, "line bundle 하나와 그것을 생성하는 절단 $n+1$개"라는 단일한 데이터를 분류하는 대상으로 나타난다. 특별히 $T=\Spec \mathbb{K}$가 한 점이고 $\mathbb{K}$가 field인 경우, $\mathbb{K}$ 위의 line bundle은 자명하므로 데이터는 $0$이 아닌 $(n+1)$-tuple $(s_0,\ldots, s_n)\in \mathbb{K}^{n+1}$을 전체 scaling $\mathbb{K}^\times$으로 나눈 것과 같고, 이는 정확히 고전적인 homogeneous coordinates $[s_0:\cdots:s_n]$이다. 즉 line bundle의 등장은 homogeneous coordinates의 전체 scaling 모호성을 functorial하게 정확하게 포착한 것이다. 
+[정리 9](#thm9)는 projective space의 functorial한 본질을 보여준다. $\mathbb{P}^n$은 더 이상 affine scheme들을 붙인 결과로서 다루어지지 않고, "line bundle 하나와 그것을 생성하는 절단 $n+1$개"라는 단일한 데이터를 분류하는 대상으로 나타난다. 특별히 $T=\Spec \mathbb{K}$가 한 점이고 $\mathbb{K}$가 field인 경우, $\mathbb{K}$ 위의 line bundle은 trivial하므로 데이터는 $0$이 아닌 $(n+1)$-tuple $(s_0,\ldots, s_n)\in \mathbb{K}^{n+1}$을 전체 scaling $\mathbb{K}^\times$으로 나눈 것과 같고, 이는 정확히 고전적인 homogeneous coordinates $[s_0:\cdots:s_n]$이다. 즉 line bundle의 등장은 homogeneous coordinates의 전체 scaling 모호성을 functorial하게 정확하게 포착한 것이다. 
 
 이 관점은 Grassmannian으로 자연스럽게 확장된다. 
 
 ::: 예시 10
-$\mathbb{Z}$ 위의 Grassmannian $\Gr(k,n)$은 다음 functor를 representable하게 만드는 scheme으로 정의할 수 있다. 각각의 $T$에 대하여, $\Gr(k,n)(T)$를 자명한 다발 $\mathcal{O}_T^n$의 rank $k$ locally free quotient bundle들
+$\mathbb{Z}$ 위의 Grassmannian $\Gr(k,n)$은 다음 functor를 representable하게 만드는 scheme으로 정의할 수 있다. 각각의 $T$에 대하여, $\Gr(k,n)(T)$를 trivial bundle $\mathcal{O}_T^n$의 rank $k$ locally free quotient bundle들
 
 $$\mathcal{O}_T^n \twoheadrightarrow \mathcal{Q},\qquad \mathcal{Q}\text{ is locally free of rank } k$$
 
-의 isomorphism class들의 집합으로 둔다. 여기에서 두 quotient bundle $\mathcal{O}_T^n\twoheadrightarrow \mathcal{Q}$와 $\mathcal{O}_T^n\twoheadrightarrow \mathcal{Q}'$이 isomorphic하다는 것은, 두 quotient map을 commute하게 하는 $\mathcal{O}_T$-module isomorphism $\mathcal{Q}\cong \mathcal{Q}'$이 존재하는 것이다. $T=\Spec \mathbb{K}$가 field 위의 한 점인 경우, rank $k$ quotient space $\mathbb{K}^n\twoheadrightarrow Q$은 그 kernel인 $\mathbb{K}^n$의 $(n-k)$차원 부분공간과 일대일대응하므로, $\Gr(k,n)(\mathbb{K})$는 $\mathbb{K}^n$의 $(n-k)$차원 부분공간들의 집합, 즉 고전적인 Grassmannian과 일치한다. $k=1$인 경우, 곧 rank $1$ quotient bundle을 분류하는 경우 [정리 9](#thm9)의 projective space $\mathbb{P}^{n-1}$로 환원된다. 
+의 isomorphism class들의 집합으로 둔다. 여기에서 두 quotient bundle $\mathcal{O}_T^n\twoheadrightarrow \mathcal{Q}$와 $\mathcal{O}_T^n\twoheadrightarrow \mathcal{Q}'$이 isomorphic하다는 것은, 두 quotient map을 commute하게 하는 $\mathcal{O}_T$-module isomorphism $\mathcal{Q}\cong \mathcal{Q}'$이 존재하는 것이다. $T=\Spec \mathbb{K}$가 field 위의 한 점인 경우, rank $k$ quotient space $\mathbb{K}^n\twoheadrightarrow Q$은 그 kernel인 $\mathbb{K}^n$의 $(n-k)$차원 부분공간과 일대일대응하므로, $\Gr(k,n)(\mathbb{K})$는 $\mathbb{K}^n$의 $(n-k)$차원 부분공간들의 집합과 일치한다. 부분공간을 직접 분류하는 [\[대수다양체\] §그라스만 다양체, ⁋정의 1](/ko/math/algebraic_varieties/grassmannians#def1)의 관례에서 이 집합은 $\Gr(n-k,n)$에 해당하며, quotient bundle의 moduli로서 정의한 여기에서의 $\Gr(k,n)$은 kernel을 취하는 대응을 통해 그것과 동일시된다. $k=1$인 경우, 곧 rank $1$ quotient bundle을 분류하는 경우 [정리 9](#thm9)의 projective space $\mathbb{P}^{n-1}$로 환원된다. 
 :::
 
-[예시 10](#ex10)에서 quotient bundle을 사용하는 것은 [정리 9](#thm9)에서 line bundle과 그 생성절단을 사용한 것의 직접적인 일반화이다. 실제로 자명한 다발의 rank $1$ quotient bundle $\mathcal{O}_T^{n}\twoheadrightarrow \mathcal{L}$을 주는 것은, $\mathcal{L}$의 생성절단 $n$개를 주는 것과 같다. 이러한 functorial한 정의가 representable임을 보이는 것이 moduli theory의 출발점이며, 그 증명은 Grassmannian을 affine chart들로 덮어 [명제 4](#prop4)의 universal element를 구성하는 방식으로 이루어진다. 
+[예시 10](#ex10)에서 quotient bundle을 사용하는 것은 [정리 9](#thm9)에서 line bundle과 그 생성절단을 사용한 것의 직접적인 일반화이다. 실제로 trivial bundle의 rank $1$ quotient bundle $\mathcal{O}_T^{n}\twoheadrightarrow \mathcal{L}$을 주는 것은, $\mathcal{L}$의 생성절단 $n$개를 주는 것과 같다. 이러한 functorial한 정의가 representable임을 보이는 것이 moduli theory의 출발점이며, 그 증명은 Grassmannian을 affine chart들로 덮어 [명제 4](#prop4)의 universal element를 구성하는 방식으로 이루어진다. 
 
 ## Functor로 본 올곱
 

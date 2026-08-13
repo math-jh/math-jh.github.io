@@ -23,7 +23,7 @@ Complex vector bundle $\mathcal{E} \rightarrow X$마다 cohomology class $c_i(\m
 
 1. (*Naturality<sub>자연성</sub>*) 연속사상 $f: Y \rightarrow X$에 대하여 $c_i(f^{\ast}\mathcal{E}) = f^{\ast}c_i(\mathcal{E})$이다. 여기서 $f^{\ast}$은 cohomology에서의 pullback이다.
 2. (*Whitney sum formula<sub>휘트니 합 공식</sub>*) 두 vector bundle $\mathcal{E}, \mathcal{F}$에 대하여 $c(\mathcal{E} \oplus \mathcal{F}) = c(\mathcal{E}) \smile c(\mathcal{F})$이다. 여기서 $c(\mathcal{E}) = \sum_{i \geq 0} c_i(\mathcal{E})$는 *total Chern class*이고 우변은 cup product이다.
-3. (*Normalization*) $c_0(\mathcal{E})=1$이며, line bundle $\mathcal{L} \rightarrow X$에 대하여 $c(\mathcal{L}) = 1 + c_1(\mathcal{L})$이고, $\mathbb{P}^n$ 위의 hyperplane bundle $\mathcal{O}(1)$에 대하여 $c_1(\mathcal{O}(1))$은 $H^2(\mathbb{P}^n, \mathbb{Z}) \cong \mathbb{Z}$의 generator이다.
+3. (*Normalization*) $c_0(\mathcal{E})=1$이며, line bundle $\mathcal{L} \rightarrow X$에 대하여 $c(\mathcal{L}) = 1 + c_1(\mathcal{L})$이고, $\mathbb{P}^n$ 위의 hyperplane bundle $\mathcal{O}(1)$에 대하여 $c_1(\mathcal{O}(1))$은 hyperplane의 cycle class로 주어지는 $H^2(\mathbb{P}^n, \mathbb{Z}) \cong \mathbb{Z}$의 generator이다.
 :::
 
 공리는 Chern class를 직접 구성하지 않고 그것이 따라야 할 규칙만 못박는다. Naturality는 Chern class가 다발의 위상적 정보만에 의존함을, Whitney 공식은 direct sum을 곱으로 옮김을, normalization은 가장 단순한 다발인 line bundle에서의 값을 고정한다. 놀랍게도 이 세 규칙만으로 Chern class가 유일하게 결정되고 또 실제로 존재하는데, 이는 splitting principle을 확립한 뒤 [명제 6](#prop6)에서 증명한다. 한편 rank $r$ 다발에서는 $c_i(\mathcal{E}) = 0$ ($i > r$)이므로 total Chern class는 $c(\mathcal{E}) = 1 + c_1(\mathcal{E}) + \cdots + c_r(\mathcal{E})$로 끝난다.
@@ -33,7 +33,7 @@ Complex vector bundle $\mathcal{E} \rightarrow X$마다 cohomology class $c_i(\m
 Chern class는 일반적으로 직접 계산하기 어렵지만, line bundle에 대해서는 완전히 기하학적으로 이해되며, 이 경우가 이후 모든 계산의 토대가 된다.
 
 ::: 명제 2
-$X$가 smooth variety이고 $\mathcal{L} \rightarrow X$가 line bundle이라 하자. $\mathcal{L}$의 영이 아닌 rational section $s$의 zero divisor $D = \divisor(s)$에 대하여
+$X$가 smooth variety이고 $\mathcal{L} \rightarrow X$가 line bundle이라 하자. $\mathcal{L}$의 영이 아닌 rational section $s$의 divisor $D = \divisor(s)$에 대하여
 
 $$c_1(\mathcal{L}) = [D] \in H^2(X, \mathbb{Z})$$
 
@@ -101,7 +101,7 @@ Splitting principle의 핵심은 $f^{\ast}$이 단사라는 점이다. $Y$는 $X
 ::: 증명
 **존재성.** [명제 4](#prop4)의 관계식 $\xi^r + \pi^{\ast}c_1\xi^{r-1} + \cdots + \pi^{\ast}c_r = 0$을 $c_i(\mathcal{E})$의 정의로 삼으면 (Grothendieck), 이렇게 얻은 $c_i$가 세 공리를 모두 만족함을 확인할 수 있다 ([BT]).
 
-**유일성.** 공리를 만족하는 두 이론 $c, c'$가 있다 하자. 먼저 line bundle에서는 둘이 일치한다. 임의의 line bundle $\mathcal{L}$은 classifying space $\mathbb{P}^{\infty}$로의 morphism $g: X \rightarrow \mathbb{P}^{\infty}$에 대해 $\mathcal{L} = g^{\ast}\mathcal{O}(1)$의 꼴이고, naturality와 normalization에 의해 $c_1(\mathcal{L}) = g^{\ast}c_1(\mathcal{O}(1)) = c_1'(\mathcal{L})$이기 때문이다. 일반 $\mathcal{E}$에 대해서는 [명제 5](#prop5)로 $f^{\ast}\mathcal{E} = \bigoplus_i \mathcal{L}_i$이고 $f^{\ast}$이 단사인 $f: Y \rightarrow X$를 택하면, Whitney 공식과 normalization으로
+**유일성.** 공리를 만족하는 두 이론 $c, c'$가 있다 하자. 먼저 line bundle에서는 둘이 일치한다. 임의의 line bundle $\mathcal{L}$은 classifying space $\mathbb{P}^{\infty}$로의 연속사상 $g: X \rightarrow \mathbb{P}^{\infty}$에 대해 $\mathcal{L} = g^{\ast}\mathcal{O}(1)$의 꼴이고, naturality와 normalization에 의해 $c_1(\mathcal{L}) = g^{\ast}c_1(\mathcal{O}(1)) = c_1'(\mathcal{L})$이기 때문이다. 일반 $\mathcal{E}$에 대해서는 [명제 5](#prop5)로 $f^{\ast}\mathcal{E} = \bigoplus_i \mathcal{L}_i$이고 $f^{\ast}$이 단사인 $f: Y \rightarrow X$를 택하면, Whitney 공식과 normalization으로
 
 $$f^{\ast}c(\mathcal{E}) = \prod_i \bigl(1 + c_1(\mathcal{L}_i)\bigr) = f^{\ast}c'(\mathcal{E})$$
 
@@ -170,7 +170,7 @@ Top Chern class $c_n(T_X)$는 복소 rank $n$ 다발 $T_X$를 실 rank $2n$의 o
 :::
 
 ::: 예시 11
-$\mathbb{P}^n$의 tangent bundle은 Euler exact sequence ([§표준선다발, ⁋명제 7](/ko/math/algebraic_varieties/canonical_bundle#prop7))
+$\mathbb{P}^n$의 tangent bundle은 [§표준선다발, ⁋명제 7](/ko/math/algebraic_varieties/canonical_bundle#prop7)을 dual하여 얻어지는
 
 $$0 \rightarrow \mathcal{O} \rightarrow \mathcal{O}(1)^{\oplus(n+1)} \rightarrow T_{\mathbb{P}^n} \rightarrow 0$$
 
@@ -178,7 +178,7 @@ $$0 \rightarrow \mathcal{O} \rightarrow \mathcal{O}(1)^{\oplus(n+1)} \rightarrow
 
 $$c(T_{\mathbb{P}^n}) = c(\mathcal{O}(1))^{n+1} = (1+H)^{n+1}$$
 
-이고, 여기서 $H = c_1(\mathcal{O}(1))$은 $H^{\ast}(\mathbb{P}^n, \mathbb{Z}) = \mathbb{Z}[H]/(H^{n+1})$의 generator이다 ([§사영공간의 코호몰로지](/ko/math/algebraic_varieties/cohomology_of_projective_spaces)). 따라서 $c_k(T_{\mathbb{P}^n}) = \binom{n+1}{k}H^k$이며, 특히 $c_n(T_{\mathbb{P}^n}) = (n+1)H^n$이다. $\int_{\mathbb{P}^n} H^n = 1$이므로 [명제 10](#prop10)에 의해
+이고, 여기서 $H = c_1(\mathcal{O}(1))$은 $H^{\ast}(\mathbb{P}^n, \mathbb{Z}) = \mathbb{Z}[H]/(H^{n+1})$의 generator이다 ([\[대수적 위상수학\] §벡터다발의 특성류, ⁋예시 11](/ko/math/algebraic_topology/characteristic_classes#ex11)). 따라서 $c_k(T_{\mathbb{P}^n}) = \binom{n+1}{k}H^k$이며, 특히 $c_n(T_{\mathbb{P}^n}) = (n+1)H^n$이다. $\int_{\mathbb{P}^n} H^n = 1$이므로 [명제 10](#prop10)에 의해
 
 $$\rchi_{\mathrm{top}}(\mathbb{P}^n) = \int_{\mathbb{P}^n} c_n(T_{\mathbb{P}^n}) = n+1$$
 

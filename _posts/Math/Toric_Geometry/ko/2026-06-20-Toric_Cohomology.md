@@ -25,7 +25,7 @@ published: false
 
 $$P_D = \{m \in M_\mathbb{R} \mid \langle m, v_\rho \rangle \ge -a_\rho \text{ for all } \rho \in \Sigma(1)\}$$
 
-을 $D$의 *polytope*이라 부른다. $X_\Sigma$가 complete이고 $D$가 Cartier이면 $P_D$는 lattice polytope이다.
+을 $D$의 *polytope*이라 부른다. $X_\Sigma$가 complete이면 $P_D$는 bounded, 즉 polytope이며, 나아가 $D$가 ample인 Cartier divisor이면 그 꼭짓점이 모두 $M$에 속해 lattice polytope이 된다.
 
 ::: 명제 1 (Global section의 격자점 기술)
 Torus-invariant Weil divisor $D = \sum_{\rho \in \Sigma(1)} a_\rho D_\rho$에 대해
@@ -36,7 +36,7 @@ $$H^0(X_\Sigma, \mathcal{O}_{X_\Sigma}(D)) = \bigoplus_{m \in P_D \cap M} \mathb
 :::
 
 ::: 증명
-[§토러스 인자와 선다발, ⁋명제 7](/ko/math/toric_geometry/toric_divisors#prop7)에 의해 $H^0(X_\Sigma, \mathcal{O}_{X_\Sigma}(D))$은 조건 $\langle m, v_\rho \rangle \ge -a_\rho$ ($\forall \rho \in \Sigma(1)$)을 만족하는 $m \in M$들의 character $\rchi^m$으로 basis를 이룬다. 이 조건은 정확히 $m \in P_D$를 뜻하므로 basis를 이루는 character는 $P_D \cap M$로 색인된다. $X_\Sigma$가 complete이면 $\Sigma$의 support가 $N_\mathbb{R}$ 전체이므로 ray들이 $N_\mathbb{R}$를 span하고, 따라서 $P_D$는 bounded above인 polyhedron, 즉 polytope이 되어 $P_D \cap M$이 유한집합이다.
+[§토러스 인자와 선다발, ⁋명제 7](/ko/math/toric_geometry/toric_divisors#prop7)에 의해 $H^0(X_\Sigma, \mathcal{O}_{X_\Sigma}(D))$은 조건 $\langle m, v_\rho \rangle \ge -a_\rho$ ($\forall \rho \in \Sigma(1)$)을 만족하는 $m \in M$들의 character $\rchi^m$으로 basis를 이룬다. 이 조건은 정확히 $m \in P_D$를 뜻하므로 basis를 이루는 character는 $P_D \cap M$로 색인된다. $X_\Sigma$가 complete이면 $\Sigma$의 support가 $N_\mathbb{R}$ 전체이므로 임의의 $v \in N_\mathbb{R}$가 ray들의 nonnegative 결합으로 적히고, 따라서 $P_D$의 recession cone $\{m \in M_\mathbb{R} \mid \langle m, v_\rho \rangle \ge 0 \ \forall \rho\}$은 $\{0\}$이 되어 $P_D$는 bounded polyhedron, 즉 polytope이고 $P_D \cap M$이 유한집합이다.
 :::
 
 이 description은 $D$가 nef일 때 [\[대수다양체\] §사영공간의 코호몰로지, ⁋정의 2](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#def2)의 Euler characteristic 계산에서 핵심적으로 쓰이며, 격자점의 개수 $\#(kP_D \cap M)$가 Ehrhart 다항식을 이루어 intersection number와 polytope의 부피를 잇는다 ([§토릭 다양체의 교차 이론, ⁋명제 8](/ko/math/toric_geometry/toric_intersection_theory#prop8)). 우리의 다음 과제는 같은 character grading을 $i > 0$의 cohomology로 끌어올리는 것이다.
@@ -82,7 +82,7 @@ $X_\Sigma$의 affine open cover로 maximal cone들이 주는 $\{U_\sigma\}_{\sig
 정리 3은 toric cohomology 계산을 순수하게 조합론적 문제로 환원한다. 각 $m \in M$마다 $N_\mathbb{R}$ 안의 한 도형 $V_{D, m}$을 그리고 그 위상을 읽으면 되는 것이다. $V_{D, m} = \emptyset$인 $m$들이 $H^0$을 주고 ($\widetilde{H}^{-1}(\emptyset) = \mathbb{C}$), $V_{D, m}$이 비지 않으면서 위상적으로 비자명한 $m$들이 고차 cohomology를 만든다. 실제 계산에서 가장 중요한 경우는 $X_\Sigma$가 complete이고 $D$가 nef일 때인데, 이 경우 모든 $V_{D, m}$이 contractible하거나 비어 있어 고차 cohomology가 통째로 사라진다. 이것이 다음 절의 Demazure vanishing이다.
 
 ::: 참고 4
-정의 2의 support set $V_{D, m}$은 문헌에 따라 동치인 여러 형태로 나타난다. [CLS]는 $\lvert \Sigma \rvert$ 안에서 $\langle m, \cdot \rangle + \psi_D \ge 0$ 또는 $< 0$이 되는 영역의 위상으로 기술하며, Cox의 local cohomology 접근 ([CLS] §9.5)은 Cox ring 위의 monomial ideal에 대한 local cohomology로 같은 답을 준다. 또한 $X_\Sigma$가 complete이면 $\lvert \Sigma \rvert = N_\mathbb{R}$가 contractible하므로 Mayer–Vietoris 또는 long exact sequence를 통해 $V_{D, m}$의 reduced cohomology를 그 여집합의 그것으로 바꿔 쓸 수 있고, 이 형태가 Demazure vanishing의 증명에서 편리하다.
+정의 2의 support set $V_{D, m}$은 문헌에 따라 동치인 여러 형태로 나타난다. [CLS]는 $\lvert \Sigma \rvert$ 안에서 $\langle m, \cdot \rangle - \psi_D \ge 0$ 또는 $< 0$이 되는 영역의 위상으로 기술하며, Cox의 local cohomology 접근 ([CLS] §9.5)은 Cox ring 위의 monomial ideal에 대한 local cohomology로 같은 답을 준다. 또한 $X_\Sigma$가 complete이면 $\lvert \Sigma \rvert = N_\mathbb{R}$가 contractible하므로 Mayer–Vietoris 또는 long exact sequence를 통해 $V_{D, m}$의 reduced cohomology를 그 여집합의 그것으로 바꿔 쓸 수 있고, 이 형태가 Demazure vanishing의 증명에서 편리하다.
 :::
 
 ## Demazure vanishing
@@ -100,13 +100,17 @@ $$H^i(X_\Sigma, \mathcal{O}_{X_\Sigma}(D)) = 0 \qquad (i > 0)$$
 ::: 증명
 정리 3에 의해 각 $m \in M$에서 $H^i(X_\Sigma, \mathcal{O}_{X_\Sigma}(D))_m = \widetilde{H}^{i-1}(V_{D, m}; \mathbb{C})$이므로, 모든 $m \in M$에 대해 $V_{D, m}$이 비어 있거나 contractible함을 보이면 $i > 0$에서 $\widetilde{H}^{i-1}(V_{D,m}) = 0$이 되어 증명이 끝난다.
 
-$D$가 nef이므로 $\psi_D$는 convex piecewise linear function이고, 각 maximal cone $\sigma$ 위에서 $\psi_D(v) = \langle m_\sigma, v \rangle$ ($m_\sigma \in M$)이며 convexity로부터 모든 $v \in N_\mathbb{R}$에서 $\psi_D(v) \le \langle m_\sigma, v \rangle$가 성립한다 ([§토러스 인자와 선다발, ⁋명제 6](/ko/math/toric_geometry/toric_divisors#prop6) 직후 및 [§토러스 인자와 선다발, ⁋정의 8](/ko/math/toric_geometry/toric_divisors#def8)). 부호 규약 $\psi_D(v_\rho) = -a_\rho$를 상기하면, 조건 $\langle m, v_\rho \rangle < -a_\rho$는 $\langle m, v_\rho \rangle < \psi_D(v_\rho)$, 즉 $\langle m - \,\cdot\,, v_\rho\rangle$의 부호 문제로 바뀐다. 함수
+$D$가 nef이므로 $\psi_D$는 convex piecewise linear function이고, 각 maximal cone $\sigma$ 위에서 $\psi_D(v) = \langle m_\sigma, v \rangle$ ($m_\sigma \in M$)이며 convexity로부터 모든 $v \in N_\mathbb{R}$에서 $\psi_D(v) \le \langle m_\sigma, v \rangle$가 성립한다 ([§토러스 인자와 선다발, ⁋명제 6](/ko/math/toric_geometry/toric_divisors#prop6) 직후 및 [§토러스 인자와 선다발, ⁋정의 8](/ko/math/toric_geometry/toric_divisors#def8)). 부호 규약 $\psi_D(v_\rho) = -a_\rho$를 상기하면, 조건 $\langle m, v_\rho \rangle < -a_\rho$는 $\langle m, v_\rho \rangle < \psi_D(v_\rho)$로 다시 적힌다. 함수
 
 $$h_m(v) = \langle m, v \rangle - \psi_D(v)$$
 
-를 생각하면, $\psi_D$가 convex이므로 $h_m$은 concave piecewise linear function이고, $V_{D, m}$은 정확히 $h_m(v_\rho) < 0$인 ray $v_\rho$들이 각 cone 안에서 이루는 convex hull들의 합집합이다.
+를 생각하면 $V_{D, m}$은 정확히 $h_m(v_\rho) < 0$인 ray $v_\rho$들이 각 cone 안에서 이루는 convex hull들의 합집합이다.
 
-이제 핵심 관찰은 다음이다. Concave 함수 $h_m$에 대해 sublevel set처럼 보이는 $V_{D,m}$이 사실 star-shaped 또는 비어 있음을 보인다. 만약 모든 $\rho$에서 $h_m(v_\rho) \ge 0$이면 $V_{D, m} = \emptyset$이다. 그렇지 않으면 어떤 ray에서 $h_m < 0$이다. $X_\Sigma$가 complete이므로 $\lvert \Sigma \rvert = N_\mathbb{R}$이고 $h_m$은 $N_\mathbb{R}$ 전체에서 정의된 concave piecewise linear 함수이다. Concave 함수의 strict sublevel set $\{v \mid h_m(v) < 0\}$은 convex 집합의 여집합이므로 일반적으로 convex가 아니지만, fan 구조와 호환된 $V_{D, m}$은 다음 의미에서 $\lvert \Sigma \rvert$ 안에서 *deformation retract*로 한 점에 수축한다. $h_m$이 concave이고 그 최댓값이 $\{h_m \ge 0\}$ 위에서 달성되므로, 각 ray 방향을 따라 원점 쪽으로 (또는 $h_m$이 증가하는 방향으로) 밀어 올리는 선형 homotopy가 $V_{D, m}$을 $V_{D, m}$ 안의 한 점 또는 빈 집합으로 수축시킨다. 따라서 $V_{D, m}$은 비어 있거나 contractible하며, 어느 경우든 $\widetilde{H}^{j}(V_{D, m}; \mathbb{C}) = 0$ ($j \ge 0$)이다.
+위의 부등식과 각 maximal cone 위에서의 등호로부터 $\psi_D = \min_{\sigma} \langle m_\sigma, \cdot \rangle$이므로
+
+$$h_m(v) = \max_{\sigma} \langle m - m_\sigma, v \rangle$$
+
+이고, $h_m$은 유한 개 linear function의 최댓값이며 $\lambda \ge 0$에 대해 $h_m(\lambda v) = \lambda h_m(v)$를 만족한다. 최댓값이 음수인 영역은 각 linear function이 음수인 열린 halfspace들의 교집합이므로 $C = \{v \in N_\mathbb{R} \mid h_m(v) < 0\}$은 convex cone이고, $h_m$이 각 cone 위에서 linear이므로 $V_{D, m} \subseteq C$이다. $X_\Sigma$가 complete이라 임의의 $v \in N_\mathbb{R}$가 어떤 cone의 ray들의 nonnegative 결합이므로, 모든 $\rho$에서 $h_m(v_\rho) \ge 0$이면 $C = \emptyset$이고 이 때 $V_{D, m} = \emptyset$이다. 어떤 ray에서 $h_m(v_\rho) < 0$인 경우에는 $V_{D, m}$이 contractible한데, 이는 [CLS] Theorem 9.2.3의 논증이 준다. Nef인 경우에도 $V_{D, m}$ 자체가 convex가 되지는 않으므로 (이웃한 deficient ray들의 convex hull이 꺾인 도형이 될 수 있다) $C$의 convexity에서 곧바로 따라오지는 않는다. 따라서 $V_{D, m}$은 비어 있거나 contractible하며, 어느 경우든 $\widetilde{H}^{j}(V_{D, m}; \mathbb{C}) = 0$ ($j \ge 0$)이다.
 
 그러므로 모든 $i > 0$과 모든 $m \in M$에 대해 $H^i(X_\Sigma, \mathcal{O}_{X_\Sigma}(D))_m = \widetilde{H}^{i-1}(V_{D, m}; \mathbb{C}) = 0$이고, weight를 모두 합하면 $H^i(X_\Sigma, \mathcal{O}_{X_\Sigma}(D)) = 0$을 얻는다. Smooth인 경우 Cartier와 Weil이 일치하므로 nef Weil divisor에 대해서도 같은 결론이 성립한다.
 :::
@@ -138,7 +142,7 @@ $$H^i(X_\Sigma, \mathcal{O}_{X_\Sigma}) = 0 \qquad (i > 0)$$
 :::
 
 ::: 증명
-$D = 0$은 $\psi_D \equiv 0$에 대응하며 이는 convex piecewise linear function이므로 nef Cartier divisor이다. 따라서 정리 5에 의해 $H^i(X_\Sigma, \mathcal{O}_{X_\Sigma}) = 0$ ($i > 0$)이다. $H^0$의 경우 명제 1에서 $P_0 = \{m \in M_\mathbb{R} \mid \langle m, v_\rho \rangle \ge 0 \ \forall \rho\}$인데, $X_\Sigma$가 complete이면 ray들이 $N_\mathbb{R}$를 span하므로 이 조건을 만족하는 $m$은 $m = 0$뿐이다. 따라서 $P_0 \cap M = \{0\}$이고 $H^0(X_\Sigma, \mathcal{O}_{X_\Sigma}) = \mathbb{C} \cdot \rchi^0 = \mathbb{C}$이다.
+$D = 0$은 $\psi_D \equiv 0$에 대응하며 이는 convex piecewise linear function이므로 nef Cartier divisor이다. 따라서 정리 5에 의해 $H^i(X_\Sigma, \mathcal{O}_{X_\Sigma}) = 0$ ($i > 0$)이다. $H^0$의 경우 명제 1에서 $P_0 = \{m \in M_\mathbb{R} \mid \langle m, v_\rho \rangle \ge 0 \ \forall \rho\}$인데, $X_\Sigma$가 complete이면 임의의 $v \in N_\mathbb{R}$가 ray들의 nonnegative 결합이므로 이 조건은 모든 $v \in N_\mathbb{R}$에서 $\langle m, v \rangle \ge 0$을 뜻하고, 따라서 $m = 0$뿐이다. 따라서 $P_0 \cap M = \{0\}$이고 $H^0(X_\Sigma, \mathcal{O}_{X_\Sigma}) = \mathbb{C} \cdot \rchi^0 = \mathbb{C}$이다.
 :::
 
 따름정리 7은 complete toric variety가 cohomology의 관점에서 매우 "단순"함을 말한다. Structure sheaf의 고차 cohomology가 통째로 사라지므로, 가령 smooth complete toric variety는 Hodge 수 $h^{0, q} = \dim H^q(X_\Sigma, \mathcal{O}_{X_\Sigma}) = 0$ ($q > 0$)을 가지며, 이는 smooth complete toric variety가 홀수 degree cohomology를 갖지 않고 그 cohomology가 algebraic cycle로 채워진다는 사실과 정합적이다 ([§토릭 다양체의 교차 이론, ⁋참고 6](/ko/math/toric_geometry/toric_intersection_theory#rmk6)). 또한 이로부터 picard group과 class group을 잇는 exponential 계열 논증에서 $\Pic(X_\Sigma)$가 free이고 위상적 $H^2$와 일치함을 끌어낼 수 있다.
@@ -158,13 +162,13 @@ $$v_i = e_i \ (1 \le i \le n), \qquad v_0 = -e_1 - \cdots - e_n$$
 
 $$P_{dH} = \{m \in M_\mathbb{R} \mid \langle m, v_0 \rangle \ge -d,\ \langle m, v_i \rangle \ge 0 \ (1 \le i \le n)\}$$
 
-의 lattice point들이 준다. $m = (m_1, \ldots, m_n)$로 적으면 조건은 $m_i \ge 0$과 $-(m_1 + \cdots + m_n) \ge -d$, 즉 $\sum m_i \le d$이다. 이는 $d$배 표준 simplex $\dd{\Delta_n}$이며 그 격자점의 개수는
+의 lattice point들이 준다. $m = (m_1, \ldots, m_n)$로 적으면 조건은 $m_i \ge 0$과 $-(m_1 + \cdots + m_n) \ge -d$, 즉 $\sum m_i \le d$이다. 이는 $d$배 표준 simplex $d\Delta_n$이며 그 격자점의 개수는
 
-$$\#(\dd{\Delta_n} \cap M) = \binom{n + d}{n}$$
+$$\#(d\Delta_n \cap M) = \binom{n + d}{n}$$
 
 이다. 이것은 정확히 degree $d$의 homogeneous 다항식 공간 $\mathbb{C}[\x_0, \ldots, \x_n]_d$의 차원으로, [\[대수다양체\] §사영공간의 코호몰로지, ⁋명제 1](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop1)의 $q = 0$, $d \ge 0$ 경우와 일치한다.
 
-이제 $d < 0$인 경우를 본다. $d < 0$이면 $a_0 = d < 0$이고 $P_{dH}$의 조건 $m_i \ge 0$, $\sum m_i \le d < 0$은 양립 불가능하므로 $P_{dH} \cap M = \emptyset$, 즉 $H^0 = 0$이다. 고차 cohomology는 정리 3으로 계산한다. Weight $m$의 piece는 $\widetilde{H}^{i-1}(V_{dH, m})$인데, $V_{dH, m}$은 $\langle m, v_\rho \rangle < -a_\rho$인 ray들로 이루어진다. $\mathbb{P}^n$의 fan에서 $n+1$개의 ray 중 $n$개씩이 maximal cone을 이루고 $n+1$개 전체는 cone을 이루지 않으므로 ([§토릭 다양체의 교차 이론, ⁋예시 9](/ko/math/toric_geometry/toric_intersection_theory#ex9)), 모든 $n+1$개 ray가 "부족한" weight $m$에 대해서는 $V_{dH, m}$이 $n+1$개 점 $\{v_0, \ldots, v_n\}$ 각각을 따로 담되 그들이 함께 하나의 cone을 이루지 못해 합집합이 $n$차원 구면 $S^{n-1}$과 homotopy 동치인 boundary 복합체를 이룬다. 이 때 $\widetilde{H}^{n-1}(V_{dH, m}; \mathbb{C}) = \mathbb{C}$이 되어 $H^n$에 기여하고, 그 외 degree는 $0$이다. 이러한 $m$들을 세면 $\langle m, v_i \rangle < 0$ ($0 \le i \le n$)인 $m$, 즉 $m_i < 0$과 $\sum m_i > d$를 만족하는 격자점들로 그 개수가 $\binom{-d-1}{n} = \binom{-d - 1}{-d - n - 1}$이다. 이는 [\[대수다양체\] §사영공간의 코호몰로지, ⁋명제 1](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop1)의 $q = n$, $d \le -n-1$ 경우 $\mathbb{C}[\x_0^{-1}, \ldots, \x_n^{-1}]_{-d-n-1}$의 차원과 일치한다. 중간 degree $0 < i < n$에서는 모든 weight $m$에 대해 $V_{dH, m}$이 비어 있거나 contractible하여 $H^i = 0$이며, 이로써 Bott 공식 전체가 fan의 조합론으로부터 회복된다.
+이제 $d < 0$인 경우를 본다. $d < 0$이면 $a_0 = d < 0$이고 $P_{dH}$의 조건 $m_i \ge 0$, $\sum m_i \le d < 0$은 양립 불가능하므로 $P_{dH} \cap M = \emptyset$, 즉 $H^0 = 0$이다. 고차 cohomology는 정리 3으로 계산한다. Weight $m$의 piece는 $\widetilde{H}^{i-1}(V_{dH, m})$인데, $V_{dH, m}$은 $\langle m, v_\rho \rangle < -a_\rho$인 ray들이 각 cone 안에서 이루는 convex hull들의 합집합이다. $\mathbb{P}^n$의 fan에서 $n+1$개의 ray 중 $n$개씩이 maximal cone을 이루고 $n+1$개 전체는 cone을 이루지 않으므로 ([§토릭 다양체의 교차 이론, ⁋예시 9](/ko/math/toric_geometry/toric_intersection_theory#ex9)), 모든 $n+1$개 ray가 "부족한" weight $m$에 대해서는 $V_{dH, m}$이 각 maximal cone마다 그 안의 $n$개 ray의 convex hull을 담아 그 합집합이 simplex $\operatorname{conv}\{v_0, \ldots, v_n\}$의 boundary가 되며, $v_0 + \cdots + v_n = 0$이라 원점이 이 simplex의 interior에 있으므로 그 boundary는 $(n-1)$차원 구면 $S^{n-1}$과 homeomorphic하다. 이 때 $\widetilde{H}^{n-1}(V_{dH, m}; \mathbb{C}) = \mathbb{C}$이 되어 $H^n$에 기여하고, 그 외 degree는 $0$이다. 이러한 $m$들을 세면 $\langle m, v_i \rangle < 0$ ($0 \le i \le n$)인 $m$, 즉 $m_i < 0$과 $\sum m_i > d$를 만족하는 격자점들로 그 개수가 $\binom{-d-1}{n} = \binom{-d - 1}{-d - n - 1}$이다. 이는 [\[대수다양체\] §사영공간의 코호몰로지, ⁋명제 1](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop1)의 $q = n$, $d \le -n-1$ 경우 $\mathbb{C}[\x_0^{-1}, \ldots, \x_n^{-1}]_{-d-n-1}$의 차원과 일치한다. 중간 degree $0 < i < n$에서는 모든 weight $m$에 대해 $V_{dH, m}$이 비어 있거나 contractible하여 $H^i = 0$이며, 이로써 Bott 공식 전체가 fan의 조합론으로부터 회복된다.
 :::
 
 ## 사영선의 곱

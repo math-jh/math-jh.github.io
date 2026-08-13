@@ -41,7 +41,7 @@ $T$는 콤팩트이므로 $M$ 위에 $T$-불변 Riemann metric을 평균화로 �
 성분 $F$에서 $T_xM=T_xF\oplus(N_F)_x$로 분해할 때, $T_xF=(T_xM)^T$는 정확히 weight $0$ 부분이므로 그 보충 $(N_F)_x$ 위의 isotropy representation에는 weight $0$이 나타나지 않는다. 만일 normal 방향에 weight $0$ 성분이 있었다면 그 방향이 fixed locus를 키워 $F$의 차원과 모순이다. 동변 tubular neighborhood 정리에 의해 $F$의 근방은 $N_F$의 disk bundle과 $T$-동변 diffeomorphism이고, 그 위에서 $T$가 fiber에 선형으로 작용한다. 자세한 slice 정리와 동변 tubular neighborhood의 구성은 [BGV]의 §7을 따른다.
 :::
 
-곧 fixed locus는 차원이 제각각일 수 있는 부분다양체들의 모임이며, 각 성분 $F$ 위에서는 $T$가 아무 일도 하지 않는 대신 그 normal 방향에 모든 비자명한 작용이 응축되어 있다. Isolated fixed point, 곧 $F=\{p\}$가 한 점인 경우에는 $N_F=T_pM$이 곧 tangent space 전체이고, 그 위의 isotropy representation의 weight $w_1(p),\ldots,w_m(p)\in M_T$ (여기서 $m=\dim_{\mathbb{C}}M$, 단 $M$이 거의 complex manifold일 때) 들이 작용의 모든 국소 정보를 담는다. ([\[리 이론\] §원환면의 작용, ⁋정의 4](/ko/math/lie_theory/torus_action#def4)) 앞으로 이 weight들이 $R$의 일차식으로 분모에 등장한다.
+곧 fixed locus는 차원이 제각각일 수 있는 부분다양체들의 모임이며, 각 성분 $F$ 위에서는 $T$가 아무 일도 하지 않는 대신 그 normal 방향에 모든 비자명한 작용이 응축되어 있다. Isolated fixed point, 곧 $F=\{p\}$가 한 점인 경우에는 $N_F=T_pM$이 곧 tangent space 전체이고, 그 위의 isotropy representation의 weight $w_1(p),\ldots,w_m(p)\in M_T$ (여기서 $m=\dim_{\mathbb{C}}M$, 단 $M$이 almost complex manifold일 때) 들이 작용의 모든 국소 정보를 담는다. ([\[리 이론\] §원환면의 작용, ⁋정의 4](/ko/math/lie_theory/torus_action#def4)) 앞으로 이 weight들이 $R$의 일차식으로 분모에 등장한다.
 
 ## 동변 Euler class
 
@@ -61,7 +61,7 @@ $$c_i^T(E):=c_i(E_T)\in H_T^{2i}(Y),\qquad e_T(E):=c_{\mathrm{rank}}^T(E)=e\big(
 
 $$H_T^\bullet(F)=H^\bullet(BT\times F)=R\otimes_{\mathbb{Q}}H^\bullet(F;\mathbb{Q})$$
 
-이다 (Künneth). 자명한 작용을 갖는 $T$-동변 복소 bundle $N_F$은 weight에 따라 고유 subbundle들로 분해된다. 곧 $N_F=\bigoplus_{\chi}(N_F)_\chi$이고 여기서 $T$는 $(N_F)_\chi$ 위에 character $\chi\in M_T$로 작용한다. 명제 1에 의해 나타나는 $\chi$는 모두 $0$이 아니다. 한 weight bundle $(N_F)_\chi$의 Borel 구성은 $BT\times F$ 위에서 $L_\chi\boxtimes(N_F)_\chi$ 꼴로 풀려, 그 보통의 Chern root가 $x_{\chi,j}+\chi$ ($x_{\chi,j}$는 $(N_F)_\chi$의 $H^\bullet(F)$ 안에서의 Chern root, $\chi\in R$) 가 된다. 따라서
+이다 (Künneth). $T$가 자명하게 작용하는 공간 위의 $T$-동변 복소 bundle $N_F$은 weight에 따라 고유 subbundle들로 분해된다. 곧 $N_F=\bigoplus_{\chi}(N_F)_\chi$이고 여기서 $T$는 $(N_F)_\chi$ 위에 character $\chi\in M_T$로 작용한다. 명제 1에 의해 나타나는 $\chi$는 모두 $0$이 아니다. 한 weight bundle $(N_F)_\chi$의 Borel 구성은 $BT\times F$ 위에서 $L_\chi\boxtimes(N_F)_\chi$ 꼴로 풀려, 그 보통의 Chern root가 $x_{\chi,j}+\chi$ ($x_{\chi,j}$는 $(N_F)_\chi$의 $H^\bullet(F)$ 안에서의 Chern root, $\chi\in R$) 가 된다. 따라서
 
 $$e_T(N_F)=\prod_{\chi}\prod_{j}\big(x_{\chi,j}+\chi\big)\in R\otimes_{\mathbb{Q}}H^\bullet(F)$$
 
@@ -115,7 +115,7 @@ $j_F:F\hookrightarrow M$을 fixed component의 포함, $\pi_M:M\rightarrow\mathr
 
 ## 국소화 정리
 
-이제 핵심 보조정리로 넘어간다. Fixed locus를 제거한 자리 위에서는 작용이 어디서도 자명하지 않으므로, 그 equivariant cohomology가 $R$ 위에서 torsion이 된다. 이것이 localization의 대수적 원천이다.
+이제 핵심 보조정리로 넘어간다. Fixed locus를 제거한 열린집합 위에서는 작용이 어디서도 자명하지 않으므로, 그 equivariant cohomology가 $R$ 위에서 torsion이 된다. 이것이 localization의 대수적 원천이다.
 
 ::: 보조정리 6
 $U=M\setminus M^T$이라 하면 $H_T^\bullet(U)$은 torsion $R$-module이다. 같은 결론이 pair의 상대 cohomology $H_T^\bullet(M,M^T)$에도 성립한다.
@@ -125,12 +125,12 @@ $U$의 한 점 $x$를 보자. $x$는 fixed point가 아니므로 그 stabilizer 
 
 $$H_T^\bullet(T\times_{T_x}S_x)=H_{T_x}^\bullet(S_x)$$
 
-이다. 이 module 위의 $R=H_T^\bullet(\mathrm{pt})$-작용은 restriction map $R=H_T^\bullet(\mathrm{pt})\rightarrow H_{T_x}^\bullet(\mathrm{pt})$을 거친다. $T_x$가 진부분 subgroup이므로 그 항등성분 $T_x^0$의 차원은 $n$보다 작거나, $T_x$가 유한군이다. $\mathbb{Q}$-계수에서 $H_{T_x}^\bullet(\mathrm{pt};\mathbb{Q})=H^\bullet(BT_x^0;\mathbb{Q})=\mathrm{Sym}_{\mathbb{Q}}\big(\mathrm{Hom}(T_x^0,S^1)\otimes\mathbb{Q}\big)$이고, restriction map $M_T\otimes\mathbb{Q}\rightarrow\mathrm{Hom}(T_x^0,S^1)\otimes\mathbb{Q}$은 차원이 떨어지므로 kernel이 $0$이 아니다. 그 kernel의 $0$이 아닌 원소 $\chi\in R$을 고르면, $\chi$는 $H_{T_x}^\bullet(S_x)$ 위에서 $0$으로 작용한다. 곧 $\chi$가 이 국소 module을 소멸시킨다.
+이다. 이 module 위의 $R=H_T^\bullet(\mathrm{pt})$-작용은 restriction map $R=H_T^\bullet(\mathrm{pt})\rightarrow H_{T_x}^\bullet(\mathrm{pt})$을 거친다. $T_x$가 진부분 subgroup이므로 그 항등성분 $T_x^0$의 차원은 $n$보다 작거나, $T_x$가 finite group이다. $\mathbb{Q}$-계수에서 $H_{T_x}^\bullet(\mathrm{pt};\mathbb{Q})=H^\bullet(BT_x^0;\mathbb{Q})=\mathrm{Sym}_{\mathbb{Q}}\big(\mathrm{Hom}(T_x^0,S^1)\otimes\mathbb{Q}\big)$이고, restriction map $M_T\otimes\mathbb{Q}\rightarrow\mathrm{Hom}(T_x^0,S^1)\otimes\mathbb{Q}$은 차원이 떨어지므로 kernel이 $0$이 아니다. 그 kernel의 $0$이 아닌 원소 $\chi\in R$을 고르면, $\chi$는 $H_{T_x}^\bullet(S_x)$ 위에서 $0$으로 작용한다. 곧 $\chi$가 이 국소 module을 소멸시킨다.
 
-$M^T$이 콤팩트이고 그 보충 $U$를 위와 같은 유한 개의 $T$-불변 열린집합으로 덮을 수 있다. ($M$이 콤팩트이므로 임의의 콤팩트 부분집합이 유한 개로 덮이고, Mayer–Vietoris로 이어붙인다.) 각 조각을 소멸시키는 character들의 곱 $\chi=\chi_1\cdots\chi_r\in R$은 $0$이 아니며, Mayer–Vietoris exact sequence를 따라 귀납하면 $\chi$가 $H_T^\bullet(U)$ 전체를 소멸시킨다. 따라서 $H_T^\bullet(U)$은 torsion이다. $H_T^\bullet(M,M^T)$의 torsion성은 pair $(M,M^T)$의 동변 tubular neighborhood를 통한 excision으로 $U$의 (compactly supported) equivariant cohomology와 같은 orbit-type 조각들로 환원되어 같은 방식으로 따라온다. 전면적인 Mayer–Vietoris 논증은 [AB]의 §3과 [AF]의 §7을 따른다.
+$M^T$의 동변 tubular neighborhood $W$를 잡으면 $W\setminus M^T$은 그 sphere bundle 위로 동변 deformation retract하므로, $U$ 또한 콤팩트 $T$-불변 집합 $M\setminus W$ 위로 동변 deformation retract한다. 이 콤팩트 집합을 위와 같은 $T$-불변 열린집합 유한 개로 덮고 그 합집합을 $V$라 하면, 각 조각의 점들의 stabilizer가 모두 진부분 subgroup이므로 $M\setminus W\subseteq V\subseteq U$이다. 각 조각을 소멸시키는 character들의 곱 $\chi=\chi_1\cdots\chi_r\in R$은 $0$이 아니며, Mayer–Vietoris exact sequence를 따라 귀납하면 $\chi$가 $H_T^\bullet(V)$ 전체를 소멸시킨다. 위 retract에서 restriction $H_T^\bullet(U)\rightarrow H_T^\bullet(M\setminus W)$이 동형이고 이것이 $H_T^\bullet(V)$를 거치므로, $H_T^\bullet(U)$ 또한 torsion이다. $H_T^\bullet(M,M^T)$의 torsion성은 pair $(M,M^T)$의 동변 tubular neighborhood를 통한 excision으로 $U$의 (compactly supported) equivariant cohomology와 같은 orbit-type 조각들로 환원되어 같은 방식으로 따라온다. 전면적인 Mayer–Vietoris 논증은 [AB]의 §3과 [AF]의 §7을 따른다.
 :::
 
-이 torsion 현상이 의미하는 바는 직관적으로 명료하다. $\mathrm{Spec}R$을 좌표공간으로 볼 때, equivariant cohomology는 그 위의 module로서 작용의 stabilizer가 비자명한 자리에 support를 가지며, 작용이 거의 자유로운 $U$ 위에서는 support가 원점 주변의 진부분 자취로 밀려나 field of fractions로 넘어가면 사라진다. 이제 본 정리를 증명한다.
+이 torsion 현상이 의미하는 바는 직관적으로 명료하다. $\mathrm{Spec}R$을 좌표공간으로 볼 때, equivariant cohomology는 그 위의 module로서 작용의 stabilizer가 비자명한 곳에 support를 가지며, 작용이 거의 자유로운 $U$ 위에서는 support가 원점 주변의 진부분 자취로 밀려나 field of fractions로 넘어가면 사라진다. 이제 본 정리를 증명한다.
 
 ::: 정리 7 (Atiyah–Bott, Berline–Vergne localization 정리)
 포함 $i:M^T\hookrightarrow M$이 유도하는 restriction map은 localization 후 동형
@@ -206,7 +206,7 @@ $$\chi(M)=\#M^T$$
 
 $$\int_M e_T(TM)=\sum_{p}\frac{e_T(N_p)}{e_T(N_p)}=\sum_p 1=\#M^T$$
 
-이다. 한편 $\int_M e_T(TM)$은 degree $2m-2m=0$의 $R$-원소, 곧 상수이며, $t_i=0$으로 보내면 보통의 적분 $\int_M e(TM)$가 된다. 보통의 Euler class를 fundamental class 위에서 평가한 값이 Euler characteristic $\chi(M)$이므로 ([\[대수적 위상수학\] §벡터다발의 특성류, ⁋명제 4](/ko/math/algebraic_topology/characteristic_classes#prop4)의 tangent bundle에 대한 Poincaré–Hopf 해석) $\int_M e_T(TM)=\chi(M)$이고, 따라서 $\chi(M)=\#M^T$이다. 양의 차원 성분이 있는 일반적 경우에는 각 성분에서 $i_F^\ast e_T(TM)=e_T(TF)\smile e_T(N_F)$이므로 ($TM\vert_F=TF\oplus N_F$에 대한 Whitney 합 공식) ABBV의 피적분은 $e_T(TF)\smile e_T(N_F)/e_T(N_F)=e_T(TF)$이고, $T$가 $F$ 위에서 자명하게 작용하므로 $\int_F e_T(TF)=\int_F e(TF)=\chi(F)$가 되어 $\chi(M)=\sum_F\chi(F)$를 얻는다.
+이다. 한편 $\int_M e_T(TM)$은 degree $2m-2m=0$의 $R$-원소, 곧 상수이며, $t_i=0$으로 보내면 보통의 적분 $\int_M e(TM)$가 된다. 보통의 Euler class를 fundamental class 위에서 평가한 값이 Euler characteristic $\chi(M)$이므로 ([\[대수적 위상수학\] §벡터다발의 특성류, §§오일러 특성류](/ko/math/algebraic_topology/characteristic_classes#오일러-특성류)) $\int_M e_T(TM)=\chi(M)$이고, 따라서 $\chi(M)=\#M^T$이다. 양의 차원 성분이 있는 일반적 경우에는 각 성분에서 $i_F^\ast e_T(TM)=e_T(TF)\smile e_T(N_F)$이므로 ($TM\vert_F=TF\oplus N_F$에 대한 Whitney 합 공식) ABBV의 피적분은 $e_T(TF)\smile e_T(N_F)/e_T(N_F)=e_T(TF)$이고, $T$가 $F$ 위에서 자명하게 작용하므로 $\int_F e_T(TF)=\int_F e(TF)=\chi(F)$가 되어 $\chi(M)=\sum_F\chi(F)$를 얻는다.
 :::
 
 곧 Atiyah–Bott–Berline–Vergne 공식은 위상적 불변량인 Euler characteristic을 "fixed point를 세는" 조합적 양으로 바꾸어 주며, 이는 콤팩트 Lie group 작용에 대한 고전적인 결과를 equivariant integration의 특수한 경우로 회수한다.
@@ -228,7 +228,7 @@ $$e_T(N_{p_i})=\prod_{j\neq i}(t_j-t_i)$$
 
 $$\int_{\mathbb{P}^n}h^k=\sum_{i=0}^n\frac{t_i^k}{\prod_{j\neq i}(t_j-t_i)}$$
 
-이다. 좌변은 degree $2k-2n$의 상수 또는 $0$이므로 우변도 그러해야 하고, 실제로 이는 Lagrange 보간에서 나오는 고전적 항등식
+이다. 좌변은 degree $2k-2n$의 homogeneous element 또는 $0$이므로 우변도 그러해야 하고, 실제로 이는 Lagrange 보간에서 나오는 고전적 항등식
 
 $$\sum_{i=0}^n\frac{t_i^k}{\prod_{j\neq i}(t_i-t_j)}=h_{k-n}(t_0,\ldots,t_n)$$
 

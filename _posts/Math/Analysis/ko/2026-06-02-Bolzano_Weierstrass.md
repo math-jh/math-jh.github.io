@@ -16,7 +16,7 @@ drift_needed: true
 published: false
 ---
 
-[§수열의 수렴](/ko/math/analysis/convergence_of_sequences)의 [§수열의 수렴, ⁋정리 7](/ko/math/analysis/convergence_of_sequences#thm7)는 단조수열에만 적용된다. 그러나 bounded이지만 단조가 아닌 수열, 가령 $a_n = (-1)^n$은 수렴하지 않는다. 이런 수열에서도 "수렴하는 부분만 뽑아낼" 수 있다는 것이 Bolzano–Weierstrass 정리이며, 이것이 해석학에서 compactness를 떠받치는 핵심 도구이다.
+[§수열의 수렴, ⁋정리 7](/ko/math/analysis/convergence_of_sequences#thm7)는 단조수열에만 적용된다. 그러나 bounded이지만 단조가 아닌 수열, 가령 $a_n = (-1)^n$은 수렴하지 않는다. 이런 수열에서도 "수렴하는 부분만 뽑아낼" 수 있다는 것이 Bolzano–Weierstrass 정리이며, 이것이 해석학에서 compactness를 떠받치는 핵심 도구이다.
 
 ## 부분수열
 
@@ -69,7 +69,7 @@ $(a_n)$이 bounded라 하자. [보조정리 3](#lem3)에 의해 단조 부분수
 [§수열의 수렴](/ko/math/analysis/convergence_of_sequences)에서 본 발산수열 $a_n = (-1)^n$이 가장 단순한 예다. 이는 bounded이므로 [정리 4](#thm4)가 적용되며, 짝수·홀수 첨자만 취한 두 상수 부분수열 $a_{2k} \rightarrow 1$과 $a_{2k-1} \rightarrow -1$이 서로 다른 극한으로 수렴한다. 부분극한이 둘이므로 [명제 2](#prop2)의 대우에 의해 $(a_n)$ 자체는 발산하며, 동시에 [정리 4](#thm4)의 부분수열이 일반적으로 유일하지 않음을, 곧 집적점이 둘 이상일 수 있음을 본다. 집적점의 개수는 훨씬 더 커질 수 있다.
 
 ::: 예시 5 (조밀한 집적점)
-유리수 전체를 하나의 수열 $(q_n)$로 늘어놓되, 그 일부를 구간 $[0, 1]$ 안의 유리수로 한정하여 $(r_n)$을 만들면 $(r_n)$은 $[0, 1]$에 들어 있으므로 bounded이다. $[0,1]$의 임의의 실수 $x$와 임의의 $\varepsilon > 0$에 대해 구간 $(x - \varepsilon, x + \varepsilon)$ 안에는 유리수가 무한히 많으므로, 다음과 같이 첨자를 귀납적으로 고른다.
+유리수 전체를 하나의 수열 $(q_n)$로 늘어놓되, 그 일부를 구간 $[0, 1]$ 안의 유리수로 한정하여 $(r_n)$을 만들면 $(r_n)$은 $[0, 1]$에 들어 있으므로 bounded이다. $[0,1]$의 임의의 실수 $x$와 임의의 $\varepsilon > 0$에 대해 구간 $(x - \varepsilon, x + \varepsilon)$ 안에는 $[0, 1]$의 유리수가 무한히 많으므로, 다음과 같이 첨자를 귀납적으로 고른다.
 
 $$\lvert r_{n_k} - x\rvert < \frac{1}{k} \qquad (n_1 < n_2 < n_3 < \cdots).$$
 
@@ -111,7 +111,7 @@ $$I_0 \supseteq I_1 \supseteq I_2 \supseteq \cdots, \qquad \length(I_j) = \frac{
 
 $$a_{n_j} \in I_j \qquad (j = 1, 2, 3, \dots).$$
 
-구간의 길이가 $0$으로 가므로, nested interval property에 의해 모든 $I_j$에 공통으로 들어 있는 점 $L$이 유일하게 존재한다. 이때 $a_{n_j}$와 $L$이 모두 $I_j$ 안에 있으므로
+구간의 길이가 $0$으로 가므로, [§실수의 완비성, ⁋정리 7](/ko/math/analysis/completeness_of_reals#thm7)에 의해 모든 $I_j$에 공통으로 들어 있는 점 $L$이 유일하게 존재한다. 이때 $a_{n_j}$와 $L$이 모두 $I_j$ 안에 있으므로
 
 $$\begin{aligned}
 \lvert a_{n_j} - L\rvert
@@ -140,7 +140,7 @@ $$\begin{aligned}
 이므로 $a_n \rightarrow L$이다. 부분수열의 극한 하나가 전체 수열을 끌어당기는 것이다.
 :::
 
-같은 발상이 연속함수 이론의 [§연속함수의 성질, ⁋따름정리 2](/ko/math/analysis/continuous_functions#cor2)에서도 작동한다. Closed bounded 구간 위의 연속함수 $f$가 상한 $S = \sup f$에 임의로 가까운 값을 취하는 점들의 수열 $(x_n)$을 잡으면, 이 수열은 bounded이므로 [정리 4](#thm4)에 의해 수렴하는 부분수열 $x_{n_k} \rightarrow c$를 가진다. 구간이 닫혀 있어 limit point $c$도 구간 안에 있고, $f$의 연속성으로 $f(x_{n_k}) \rightarrow f(c)$이므로 $f(c) = S$가 되어, 상한이 실제로 달성된다. 이처럼 "bounded sequence에서 극한을 추출한다"는 [정리 4](#thm4)의 한 문장이 존재 정리의 골격을 이룬다.
+같은 발상이 연속함수 이론의 최대·최소 정리에서도 작동한다. Closed bounded 구간 위의 연속함수 $f$가 상한 $S = \sup f$에 임의로 가까운 값을 취하는 점들의 수열 $(x_n)$을 잡으면, 이 수열은 bounded이므로 [정리 4](#thm4)에 의해 수렴하는 부분수열 $x_{n_k} \rightarrow c$를 가진다. 구간이 닫혀 있어 limit point $c$도 구간 안에 있고, $f$의 연속성으로 $f(x_{n_k}) \rightarrow f(c)$이므로 $f(c) = S$가 되어, 상한이 실제로 달성된다. 이처럼 "bounded sequence에서 극한을 추출한다"는 [정리 4](#thm4)의 한 문장이 존재 정리의 골격을 이룬다.
 
 앞서 자유로이 쓴 용어를 정리해 두면, 수렴하는 부분수열의 극한을 *부분수열극한<sub>subsequential limit</sub>* 또는 *집적점<sub>cluster point</sub>*이라 한다.
 

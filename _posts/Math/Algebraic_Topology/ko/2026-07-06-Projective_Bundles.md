@@ -42,11 +42,11 @@ $$\Phi_U:H^\bullet(U)\otimes H^\bullet(F)\rightarrow H^\bullet(E_U),\qquad \Phi_
 
 을 생각하자. $a_j\vert_{E_U}$은 여전히 각 fiber로 제한하면 basis를 주므로, 우리가 보일 것은 $U=B$에서 $\Phi_B=\Phi$가 isomorphism이라는 것이다. 이를 $B$의 유한 trivializing covering의 크기에 대한 귀납으로 보인다.
 
-우선 $U$가 하나의 trivializing open인 경우, $E_U\cong U\times F$이고 $\pi$는 projection이 된다. $H^\bullet(F)$가 자유이므로 [§코호몰로지, ⁋따름정리 10](/ko/math/algebraic_topology/cohomology#cor10)에 의하여
+우선 $U$가 하나의 trivializing open인 경우, $E_U\cong U\times F$이고 $\pi$는 projection이 된다. $H^\bullet(F)$가 유한 rank의 자유 abelian group이므로 [§코호몰로지, ⁋따름정리 10](/ko/math/algebraic_topology/cohomology#cor10)과 [§코호몰로지, ⁋정리 5](/ko/math/algebraic_topology/cohomology#thm5)이 함께 주는 cohomology 판본의 Künneth 공식에 의하여
 
 $$H^\bullet(U\times F)\cong H^\bullet(U)\otimes H^\bullet(F)$$
 
-이 성립하고, 따라서 우변은 $\{1\times(a_k\vert_F)\}_k$을 basis로 하는 유한 rank의 자유 $H^\bullet(U)$-module이다. 좌변 $H^\bullet(U)\otimes H^\bullet(F)$ 또한 $\{1\otimes(a_k\vert_F)\}_k$을 basis로 하는 같은 rank의 자유 $H^\bullet(U)$-module이며, $\Phi_U$는 이를 원소 $a_j\vert_{E_U}\in H^\bullet(U\times F)$들로 보낸다. 그런데 $a_j\vert_{E_U}$을 한 fiber $\{u\}\times F$로 제한하면 $a_j\vert_F$이 되므로, Künneth 분해에서
+이 성립하고, 따라서 $H^\bullet(U\times F)$는 $\{1\times(a_k\vert_F)\}_k$을 basis로 하는 유한 rank의 자유 $H^\bullet(U)$-module이다. $H^\bullet(U)\otimes H^\bullet(F)$ 또한 $\{1\otimes(a_k\vert_F)\}_k$을 basis로 하는 같은 rank의 자유 $H^\bullet(U)$-module이며, $\Phi_U$는 이를 원소 $a_j\vert_{E_U}\in H^\bullet(U\times F)$들로 보낸다. 그런데 $a_j\vert_{E_U}$을 한 fiber $\{u\}\times F$로 제한하면 $a_j\vert_F$이 되므로, Künneth 분해에서
 
 $$a_j\vert_{E_U}=1\times(a_j\vert_F)+(\text{$U$의 차수가 양인 항들})$$
 
@@ -57,7 +57,7 @@ $$a_j\vert_{E_U}=1\times(a_j\vert_F)+(\text{$U$의 차수가 양인 항들})$$
 Trivializing open들의 교집합은 다시 trivializing open이므로, $B$가 유한 trivializing covering을 가지면 covering의 크기에 대한 귀납으로 $\Phi_B$가 isomorphism임을 얻는다. 일반적인 paracompact 밑공간에 대해서는 open cover에 대한 직접극한 논증이 추가로 필요하며, 이는 [Hat]와 [BT]에 자세히 다루어져 있다.
 :::
 
-계수를 $\mathbb{Z}$로 두었지만, 위의 증명은 fiber의 cohomology가 free module이 되는 임의의 PID 계수에 대하여 그대로 성립한다. 조건의 핵심은 fiber의 cohomology가 전역적인 class로 "펼쳐진다"는 것으로, 이 때 전공간의 cohomology는 밑공간의 cohomology를 coefficient ring으로 삼아 fiber의 cohomology를 그대로 복제한 모양이 된다. 아래에서 이 정리는 밑공간이 무한차원인 경우 ($\CP^\infty$ 등) 에도 쓰이므로 일반 판본이 실제로 필요하다.
+계수를 $\mathbb{Z}$로 두었지만, 위의 증명은 fiber의 cohomology가 free module이 되는 임의의 PID 계수에 대하여 그대로 성립한다. 조건의 핵심은 fiber의 cohomology가 전역적인 class로 "펼쳐진다"는 것으로, 이 때 전공간의 cohomology는 밑공간의 cohomology를 coefficient ring으로 삼아 fiber의 cohomology를 그대로 복제한 모양이 된다. 아래에서 이 정리는 밑공간이 무한차원인 경우 ($\CP^\infty$ 등)에도 쓰이므로 일반 판본이 실제로 필요하다.
 
 개념적으로 [정리 1](#thm1)은 [§호모토피의 계산, ⁋정리 15](/ko/math/algebraic_topology/fibrations#thm15)이 degenerate하는 특수한 경우이다. 전역 class $a_j$은 $H^\bullet(E)$에서 오므로 fiber 방향 열의 permanent cycle이고, 이들이 $H^\bullet(F)$ 전체를 생성하므로 곱 구조에 의해 모든 미분이 소멸하며, 동시에 그 존재가 $\pi_1(B)$의 $H^\bullet(F)$ 위 action을 자명하게 만들어 $E_2^{p,q}=H^p(B)\otimes H^q(F)$이 torsion 없이 성립한다. 따라서 $E_2=E_\infty$가 되어 위의 결론이 그대로 따라온다. 우리가 택한 Mayer–Vietoris 증명은 이 spectral sequence를 경유하지 않고 같은 결론에 이르는 초등적인 우회로이며, 그런 만큼 국소계수계에 얽힌 미묘함도 자연스럽게 비켜간다.
 
@@ -80,7 +80,7 @@ $$\pi^\ast E\cong\gamma_E\oplus\gamma_E^\perp$$
 로 쪼갤 수 있고, 여기서 $\gamma_E^\perp$는 rank $(n-1)$의 complex vector bundle이다.
 
 ::: 정리 3
-Complex rank $n$ vector bundle $E\rightarrow B$의 projective bundle $\pi:\mathbb{P}(E)\rightarrow B$와 tautological line bundle $\gamma_E$에 대하여, $a=c_1(\gamma_E)\in H^2(\mathbb{P}(E);\mathbb{Z})$이라 두자. 그럼 $H^\bullet(\mathbb{P}(E);\mathbb{Z})$은 $1,a,\ldots,a^{n-1}$을 basis로 하는 $H^\bullet(B;\mathbb{Z})$ 위의 free module이다. 특히 $\pi^\ast:H^\bullet(B)\rightarrow H^\bullet(\mathbb{P}(E))$은 단사이다.
+Paracompact 밑공간 $B$ 위의 complex rank $n$ vector bundle $E\rightarrow B$의 projective bundle $\pi:\mathbb{P}(E)\rightarrow B$와 tautological line bundle $\gamma_E$에 대하여, $a=c_1(\gamma_E)\in H^2(\mathbb{P}(E);\mathbb{Z})$이라 두자. 그럼 $H^\bullet(\mathbb{P}(E);\mathbb{Z})$은 $1,a,\ldots,a^{n-1}$을 basis로 하는 $H^\bullet(B;\mathbb{Z})$ 위의 free module이다. 특히 $\pi^\ast:H^\bullet(B)\rightarrow H^\bullet(\mathbb{P}(E))$은 단사이다.
 :::
 
 ::: 증명
@@ -115,7 +115,7 @@ Paracompact 밑공간 $B$ 위의 complex rank $n$ vector bundle $E\rightarrow B$
 ::: 증명
 Rank $n$에 대한 귀납으로 보인다. $n=1$이면 $E$ 자체가 line bundle이므로 $F(E)=B$와 $\rho=\id$로 두면 된다.
 
-$n\geq 2$라 하고, rank $n-1$까지 명제가 성립한다 가정하자. Projective bundle $\pi:\mathbb{P}(E)\rightarrow B$를 잡으면 [정리 3](#thm3)에 의하여 $\pi^\ast$은 단사이고, tautological line bundle에 대하여
+$n\geq 2$라 하고, rank $n-1$까지 명제가 성립한다 가정하자. Projective bundle $\pi:\mathbb{P}(E)\rightarrow B$를 잡자. $\pi$는 compact fiber $\CP^{n-1}$을 갖는 bundle의 projection이라 proper map이므로 $\mathbb{P}(E)$ 또한 paracompact이며, [정리 3](#thm3)에 의하여 $\pi^\ast$은 단사이고, tautological line bundle에 대하여
 
 $$\pi^\ast E\cong\gamma_E\oplus\gamma_E^\perp$$
 

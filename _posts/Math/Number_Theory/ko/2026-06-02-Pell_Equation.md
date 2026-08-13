@@ -24,7 +24,7 @@ published: false
 방정식 $x^2 - Dy^2 = 1$을 *펠 방정식<sub>Pell's equation</sub>*이라 한다. $x = \pm 1, y = 0$인 해를 *자명한 해*라 한다.
 :::
 
-수 $\alpha = x + y\sqrt{D}$ ($x, y \in \mathbb{Z}$) 들이 이루는 ring $\mathbb{Z}[\sqrt D]$에서 *norm*을 $N(\alpha) = (x + y\sqrt D)(x - y\sqrt D) = x^2 - Dy^2$으로 정의하면, 펠 방정식의 해는 정확히 $N(\alpha) = 1$인 원소이다. Norm은 multiplicative가므로 — $N(\alpha\beta) = N(\alpha)N(\beta)$ — 해들의 곱도 다시 해이다. 이것이 해의 구조를 지배한다.
+수 $\alpha = x + y\sqrt{D}$ ($x, y \in \mathbb{Z}$) 들이 이루는 ring $\mathbb{Z}[\sqrt D]$에서 *norm*을 $N(\alpha) = (x + y\sqrt D)(x - y\sqrt D) = x^2 - Dy^2$으로 정의하면, 펠 방정식의 해는 정확히 $N(\alpha) = 1$인 원소이다. Norm은 multiplicative이므로 ($N(\alpha\beta) = N(\alpha)N(\beta)$) 해들의 곱도 다시 해이다. 이것이 해의 구조를 지배한다.
 
 ## 기본해의 존재
 
@@ -35,10 +35,10 @@ published: false
 :::
 
 ::: 증명
-[§연분수, ⁋정리 3](/ko/math/number_theory/continued_fractions#thm3)에 의해 $\left\lvert \sqrt D - \dfrac{p}{q}\right\rvert < \dfrac{1}{q^2}$인 유리수가 무한히 많다. 이런 $p, q$에 대해 $\lvert p^2 - Dq^2\rvert = \lvert p - q\sqrt D\rvert\,\lvert p + q\sqrt D\rvert < \dfrac1q\cdot(2q\sqrt D + 1)$이 bounded이므로, $p^2 - Dq^2$이 같은 값 $k$를 갖는 해가 무한히 많다. 그중 $p, q$가 법 $\lvert k\rvert$에 대해 같은 coset인 두 해 $\alpha_1, \alpha_2$를 고르면, 비 $\alpha_1/\alpha_2$가 norm $1$인 자명하지 않은 정수해 $\mathbb{Z}[\sqrt D]$의 원소를 준다. 실제로 $\sqrt D$의 순환연분수의 한 주기에서 나오는 점근분수가 fundamental solution을 직접 산출한다.
+[§연분수, ⁋정리 3](/ko/math/number_theory/continued_fractions#thm3)에 의해 $\lvert \sqrt D - p/q\rvert < 1/q^2$인 유리수가 무한히 많다. 이런 $p, q$에 대해 $\lvert p^2 - Dq^2\rvert = \lvert p - q\sqrt D\rvert\lvert p + q\sqrt D\rvert < (2q\sqrt D + 1)/q$이 bounded이므로, $p^2 - Dq^2$이 같은 값 $k$를 갖는 해가 무한히 많다. 그중 $p, q$가 법 $\lvert k\rvert$에 대해 같은 coset인 두 해 $\alpha_1, \alpha_2$를 고르면, 비 $\alpha_1/\alpha_2$가 norm $1$인 자명하지 않은 정수해 $\mathbb{Z}[\sqrt D]$의 원소를 준다. 실제로 $\sqrt D$의 순환연분수의 한 주기에서 나오는 점근분수가 fundamental solution을 직접 산출한다.
 :::
 
-자명하지 않은 양의 해 중 $x + y\sqrt D$가 가장 작은 것을 *기본해<sub>fundamental solution</sub>* $\varepsilon_1 = x_1 + y_1\sqrt D$라 한다.
+자명하지 않은 양의 해 중 $x + y\sqrt D$가 가장 작은 것을 *fundamental solution<sub>기본해</sub>* $\varepsilon_1 = x_1 + y_1\sqrt D$라 한다.
 
 ## 모든 해의 구조
 
@@ -47,11 +47,11 @@ $\varepsilon_1 = x_1 + y_1\sqrt D$을 fundamental solution이라 하면, $x^2 - 
 
 $$x_n + y_n\sqrt D = (x_1 + y_1\sqrt D)^n \qquad (n = 1, 2, 3, \ldots)$$
 
-으로 정확히 한 번씩 주어진다. 부호와 $y$의 부호까지 포함하면 모든 해는 $\pm \varepsilon_1^{\,n}$ ($n \in \mathbb{Z}$) 이다.
+으로 정확히 한 번씩 주어진다. 부호와 $y$의 부호까지 포함하면 모든 해는 $\pm \varepsilon_1^n$ ($n \in \mathbb{Z}$) 이다.
 :::
 
 ::: 증명
-Norm의 곱셈성으로 $N(\varepsilon_1^n) = N(\varepsilon_1)^n = 1$이므로 각 $\varepsilon_1^n$은 해이다. 거꾸로 $\beta = x + y\sqrt D > 1$이 어떤 해인데 $\varepsilon_1^n$ 꼴이 아니라면, $\varepsilon_1^n \leq \beta < \varepsilon_1^{n+1}$인 $n$을 잡을 수 있고 $1 \leq \beta\varepsilon_1^{-n} < \varepsilon_1$이다. $\beta\varepsilon_1^{-n}$도 norm $1$의 해인데 $1$보다 작은 자명하지 않은 해가 되어 fundamental solution의 최소성에 모순이다 (또는 $1$이어서 $\beta = \varepsilon_1^n$). 따라서 모든 양의 해가 거듭제곱으로 소진된다.
+Norm의 곱셈성으로 $N(\varepsilon_1^n) = N(\varepsilon_1)^n = 1$이므로 각 $\varepsilon_1^n$은 해이다. 거꾸로 $\beta = x + y\sqrt D > 1$이 어떤 해인데 $\varepsilon_1^n$ 꼴이 아니라면, $\varepsilon_1^n \leq \beta < \varepsilon_1^{n+1}$인 $n$을 잡을 수 있고 $1 \leq \beta\varepsilon_1^{-n} < \varepsilon_1$이다. $\beta\varepsilon_1^{-n}$도 norm $1$의 해인데 $1$보다 크고 $\varepsilon_1$보다 작은 자명하지 않은 해가 되어 fundamental solution의 최소성에 모순이다 (또는 $1$이어서 $\beta = \varepsilon_1^n$). 따라서 모든 양의 해가 거듭제곱으로 소진된다.
 :::
 
 ::: 예시 4
@@ -63,19 +63,19 @@ $D = 2$이면 $\sqrt 2 = [1; \overline{2}]$의 점근분수 $3/2$에서 fundamen
 정리 3은 모든 해를 fundamental solution의 거듭제곱으로 기술하지만, 실제 계산에서는 거듭제곱을 직접 펼치기보다 이웃한 해를 잇는 점화식을 쓰는 편이 편리하다. 곱셈 $\varepsilon_1^{n+1} = \varepsilon_1 \cdot \varepsilon_1^{n}$을 좌표로 풀어 쓰면 다음을 얻는다.
 
 ::: 명제 5
-Fundamental solution을 $\varepsilon_1 = x_1 + y_1\sqrt D$, $n$번째 양의 해를 $x_n + y_n\sqrt D = \varepsilon_1^{\,n}$이라 하면
+Fundamental solution을 $\varepsilon_1 = x_1 + y_1\sqrt D$, $n$번째 양의 해를 $x_n + y_n\sqrt D = \varepsilon_1^n$이라 하면
 
-$$x_{n+1} = x_1 x_n + D\,y_1 y_n, \qquad y_{n+1} = x_1 y_n + y_1 x_n$$
+$$x_{n+1} = x_1 x_n + D y_1 y_n, \qquad y_{n+1} = x_1 y_n + y_1 x_n$$
 
 이 성립한다. 특히 $x_n, y_n$은 모두 정수이고 $n$에 대해 단조증가한다.
 :::
 
 ::: 증명
-$\varepsilon_1^{\,n+1} = (x_1 + y_1\sqrt D)(x_n + y_n\sqrt D)$을 전개하면
+$\varepsilon_1^{n+1} = (x_1 + y_1\sqrt D)(x_n + y_n\sqrt D)$을 전개하면
 
 $$\begin{aligned}
-\varepsilon_1^{\,n+1} &= x_1 x_n + x_1 y_n\sqrt D + y_1 x_n\sqrt D + y_1 y_n\,(\sqrt D)^2 \\
-&= (x_1 x_n + D\,y_1 y_n) + (x_1 y_n + y_1 x_n)\sqrt D
+\varepsilon_1^{n+1} &= x_1 x_n + x_1 y_n\sqrt D + y_1 x_n\sqrt D + y_1 y_n(\sqrt D)^2 \\
+&= (x_1 x_n + D y_1 y_n) + (x_1 y_n + y_1 x_n)\sqrt D
 \end{aligned}$$
 
 이다. $\sqrt D$가 무리수이므로 $\{1, \sqrt D\}$는 $\mathbb{Q}$ 위에서 일차독립이고, 따라서 유리수 계수의 비교가 정당하다. 좌변을 $x_{n+1} + y_{n+1}\sqrt D$로 적어 두 계수를 견주면 주장하는 두 식을 얻는다. $x_1, y_1 \geq 1$이고 $D \geq 2$이므로 모든 항이 양이어서 $x_{n+1} > x_n$, $y_{n+1} > y_n$이 따른다.
@@ -83,7 +83,7 @@ $$\begin{aligned}
 
 이 점화식은 $2 \times 2$ 행렬의 거듭제곱으로도 읽을 수 있다. 명제 5의 두 식을 한데 묶으면
 
-$$\begin{pmatrix} x_{n+1} \\ y_{n+1} \end{pmatrix} = \begin{pmatrix} x_1 & D\,y_1 \\ y_1 & x_1 \end{pmatrix} \begin{pmatrix} x_n \\ y_n \end{pmatrix}$$
+$$\begin{pmatrix} x_{n+1} \\ y_{n+1} \end{pmatrix} = \begin{pmatrix} x_1 & D y_1 \\ y_1 & x_1 \end{pmatrix} \begin{pmatrix} x_n \\ y_n \end{pmatrix}$$
 
 이므로, 해의 열은 행렬 $M = \left(\begin{smallmatrix} x_1 & D y_1 \\ y_1 & x_1 \end{smallmatrix}\right)$의 거듭제곱을 초기벡터 $(x_1, y_1)^{\mathsf T}$에 작용시켜 얻는다. $\det M = x_1^2 - D y_1^2 = 1$이라 $M \in \mathrm{SL}_2(\mathbb{Z})$이며, 펠 방정식의 group 구조가 이 행렬군 안에 자연스럽게 들어앉음을 보여 준다.
 
@@ -122,21 +122,21 @@ $D = 61$의 사례는 인도 수학자 바스카라 2세와 브라마굽타가 �
 Norm이 $-1$인 방정식 $x^2 - Dy^2 = -1$은 *음의 펠 방정식<sub>negative Pell equation</sub>*이라 불리며, 보통의 펠 방정식과 달리 항상 풀리지는 않는다. 그 해법 가능성은 $\sqrt D$ 연분수의 주기 길이의 홀짝성에 달려 있다.
 
 ::: 명제 8
-$x^2 - Dy^2 = -1$이 정수해를 가지면 $D$는 두 제곱수의 합으로 표현되며, 특히 $4$로 나눈 나머지가 $3$인 소인수를 갖지 않는다. 따라서 $D \equiv 3 \pmod 4$이거나 $D$가 그런 소인수를 가지면 음의 펠 방정식은 풀리지 않는다.
+$x^2 - Dy^2 = -1$이 정수해를 가지면 $D$는 $4$로 나눈 나머지가 $3$인 소인수를 갖지 않으며, 특히 두 제곱수의 합으로 표현된다. 따라서 $D \equiv 3 \pmod 4$이거나 $D$가 그런 소인수를 가지면 음의 펠 방정식은 풀리지 않는다.
 :::
 
 ::: 증명
-$x^2 - Dy^2 = -1$이면 $x^2 + 1 = D y^2$이다. $p \mid D$인 홀소수 $p$를 잡으면 $p \mid x^2 + 1$, 곧 $x^2 \equiv -1 \pmod p$이므로 $-1$이 법 $p$의 이차잉여이다. 오일러 판정법 ([§가우스 정수와 두 제곱수의 합](/ko/math/number_theory/gaussian_integers)에서 본 사실) 에 의해 이는 $p \equiv 1 \pmod 4$와 동치이다. 또 $x$는 홀수여야 하는데, 만약 $x$가 짝수이면 $x^2 + 1$이 홀수이고 $D y^2$도 홀수여야 하므로 $D$와 $y$가 모두 홀수가 되어 $x^2 - Dy^2 \equiv -y^2 \equiv 3 \pmod 4$ ($y$ 홀수일 때) 등으로 $-1 \pmod 4$과의 정합성을 따져 보면 $D \not\equiv 3 \pmod 4$가 강제된다. 종합하면 $D$의 모든 홀소인수가 $1 \pmod 4$이고 $D \not\equiv 3 \pmod 4$여서, 두 제곱수의 합 정리에 의해 $D$는 두 제곱수의 합이다.
+$x^2 - Dy^2 = -1$이면 $x^2 + 1 = D y^2$이다. $p \mid D$인 홀소수 $p$를 잡으면 $p \mid x^2 + 1$, 곧 $x^2 \equiv -1 \pmod p$이므로 $-1$이 법 $p$의 이차잉여이다. [§이차 잉여, ⁋따름정리 5](/ko/math/number_theory/quadratic_residues#cor5)에 의해 이는 $p \equiv 1 \pmod 4$와 동치이다. 또 $y$는 홀수여야 하는데, 만일 $y$가 짝수이면 $Dy^2 \equiv 0 \pmod 4$이어서 $x^2 \equiv -1 \equiv 3 \pmod 4$가 되고 이는 불가능하기 때문이다. 그러면 $y^2 \equiv 1 \pmod 4$이므로 $D \equiv Dy^2 = x^2 + 1 \pmod 4$이고, $x^2 \equiv 0$ 또는 $1$이어서 $D \equiv 1$ 또는 $2 \pmod 4$, 특히 $D \not\equiv 3 \pmod 4$이다. 종합하면 $D$의 모든 홀소인수가 $1 \pmod 4$여서 $4$로 나눈 나머지가 $3$인 소수가 $D$의 소인수분해에 아예 나타나지 않고, [§가우스 정수와 두 제곱수의 합, ⁋정리 8](/ko/math/number_theory/gaussian_integers#thm8)에 의해 $D$는 두 제곱수의 합이다.
 :::
 
-위 조건은 필요조건일 뿐 충분조건은 아니다. 가령 $D = 34 = 25 + 9$는 두 제곱수의 합이고 모든 홀소인수($2$와 $17$)가 적격이지만, $x^2 - 34 y^2 = -1$은 해가 없다. 정확한 판정은 $\sqrt D$ 연분수의 최소 주기 길이 $\ell$이 홀수일 때 음의 펠 방정식이 풀리고 짝수이면 풀리지 않는다는 것이며, 풀리는 경우 fundamental solution $\varepsilon_1$ 자체가 norm $-1$을 갖고 $\varepsilon_1^2$이 norm $1$ 펠 방정식의 fundamental solution이 된다.
+위 조건은 필요조건일 뿐 충분조건은 아니다. 가령 $D = 34 = 25 + 9$는 두 제곱수의 합이고 유일한 홀소인수 $17$이 적격이지만, $x^2 - 34 y^2 = -1$은 해가 없다. 정확한 판정은 $\sqrt D$ 연분수의 최소 주기 길이 $\ell$이 홀수일 때 음의 펠 방정식이 풀리고 짝수이면 풀리지 않는다는 것이며, 풀리는 경우 $x^2 - Dy^2 = -1$의 가장 작은 양의 해 $\eta$가 norm $-1$을 갖고 $\eta^2$이 norm $1$ 펠 방정식의 fundamental solution $\varepsilon_1$이 된다.
 
 ::: 예시 9
 $D = 2$에서 $x^2 - 2y^2 = -1$은 $(x, y) = (1, 1)$로 풀린다 ($1 - 2 = -1$). 이때 $\eta = 1 + \sqrt2$는 norm $-1$의 단원이고
 
 $$\eta^2 = (1 + \sqrt2)^2 = 3 + 2\sqrt2 = \varepsilon_1$$
 
-로, 그 제곱이 정확히 예시 4의 norm $1$ fundamental solution을 준다. 한편 $D = 3$에서는 $\sqrt3 = [1; \overline{1, 2}]$의 주기가 $2$로 짝수여서 $x^2 - 3y^2 = -1$은 해가 없다. 실제로 임의의 정수에 대해 $x^2 - 3y^2 \equiv x^2 + y^2 \pmod 3$이 $2$가 될 수 없어 $-1 \equiv 2 \pmod 3$과 모순이다.
+로, 그 제곱이 정확히 예시 4의 norm $1$ fundamental solution을 준다. 한편 $D = 3$에서는 $\sqrt3 = [1; \overline{1, 2}]$의 주기가 $2$로 짝수여서 $x^2 - 3y^2 = -1$은 해가 없다. 실제로 임의의 정수에 대해 $x^2 - 3y^2 \equiv x^2 \pmod 3$이 $2$가 될 수 없어 $-1 \equiv 2 \pmod 3$과 모순이다.
 :::
 
 ## 응용
@@ -166,12 +166,12 @@ $$\frac{x}{y} - \sqrt D = \frac{x - y\sqrt D}{y} = \frac{x^2 - D y^2}{y(x + y\sq
 
 이고, $x + y\sqrt D > 2y\sqrt D$이므로
 
-$$\left\lvert \frac{x}{y} - \sqrt D \right\rvert < \frac{1}{2\sqrt D\,y^2}$$
+$$\left\lvert \frac{x}{y} - \sqrt D \right\rvert < \frac{1}{2\sqrt D y^2}$$
 
 이다. 따라서 해 $(x_n, y_n)$의 비 $x_n/y_n$은 $\sqrt D$로 매우 빠르게 (오차가 $y_n^{-2}$ 규모로) 수렴한다. $D = 2$의 경우 $3/2, 17/12, 99/70, 577/408$이 차례로 $\sqrt2 = 1.41421356\ldots$에 접근하며, $577/408 = 1.41421568\ldots$은 이미 소수점 아래 다섯 자리까지 정확하다.
 :::
 
-정리 3은 펠 방정식의 해가 infinite cyclic group (자명한 부호를 곱하면 $\mathbb{Z} \times \mathbb{Z}/2\mathbb{Z}$의 구조) 을 이룸을 뜻한다. 이는 실이차체 $\mathbb{Q}(\sqrt D)$의 정수환의 단원군에 관한 디리클레 단원정리의 가장 단순한 경우로, [§가우스 정수와 두 제곱수의 합](/ko/math/number_theory/gaussian_integers)에서 본 단원 $\pm 1, \pm i$가 유한했던 것과 대비된다. 두 글은 함께 대수적 정수론으로 들어가는 두 문 — 허이차체와 실이차체 — 을 보여 준다.
+정리 3은 펠 방정식의 해가 infinite cyclic group (자명한 부호를 곱하면 $\mathbb{Z} \times \mathbb{Z}/2\mathbb{Z}$의 구조) 을 이룸을 뜻한다. 이는 real quadratic field $\mathbb{Q}(\sqrt D)$의 정수환의 단원군에 관한 디리클레 단원정리의 가장 단순한 경우로, [§가우스 정수와 두 제곱수의 합](/ko/math/number_theory/gaussian_integers)에서 본 단원 $\pm 1, \pm i$가 유한했던 것과 대비된다. 두 글은 함께 대수적 정수론으로 들어가는 두 문(imaginary quadratic field와 real quadratic field)을 보여 준다.
 
 ---
 

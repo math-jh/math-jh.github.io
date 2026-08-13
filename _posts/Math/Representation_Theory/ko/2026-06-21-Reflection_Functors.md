@@ -41,15 +41,15 @@ $k$가 $Q$에서 sink이면, $k$에 인접한 arrow는 모두 $k$로 들어오�
 ::: 정의 3
 $k$가 $Q$의 sink라 하고, $V=(V_i,V_\alpha)$를 $Q$의 representation이라 하자. $k$로 들어오는 arrow들 $\alpha:i\rightarrow k$ (이때 $i=s(\alpha)$) 로부터 morphism
 
-$$V_{\mathrm{in}}=(V_\alpha)_\alpha:\bigoplus_{\alpha:\,i\rightarrow k}V_{s(\alpha)}\longrightarrow V_k$$
+$$V_{\mathrm{in}}=(V_\alpha)_\alpha:\bigoplus_{\alpha:i\rightarrow k}V_{s(\alpha)}\longrightarrow V_k$$
 
 을 각 성분에서 $V_\alpha$로 주어지는 morphism으로 정의한다. *Sink에서의 reflection functor* $S_k^+:\Rep(Q)\rightarrow\Rep(\sigma_k Q)$를 다음과 같이 둔다. $W=S_k^+ V$는
 
-$$W_k=\ker\Bigl(V_{\mathrm{in}}:\bigoplus_{\alpha:\,i\rightarrow k}V_{s(\alpha)}\rightarrow V_k\Bigr),\qquad W_i=V_i\ (i\neq k)$$
+$$W_k=\ker\Bigl(V_{\mathrm{in}}:\bigoplus_{\alpha:i\rightarrow k}V_{s(\alpha)}\rightarrow V_k\Bigr),\qquad W_i=V_i\ (i\neq k)$$
 
 를 vertex 위의 공간으로 가진다. $k$에 인접하지 않은 arrow $\beta$에는 $W_\beta=V_\beta$를 두고, 뒤집힌 각 arrow $\bar\alpha:k\rightarrow s(\alpha)$에는 합성
 
-$$W_{\bar\alpha}:W_k\hookrightarrow\bigoplus_{\alpha:\,i\rightarrow k}V_{s(\alpha)}\xrightarrow{\ \mathrm{pr}_\alpha\ }V_{s(\alpha)}$$
+$$W_{\bar\alpha}:W_k\hookrightarrow\bigoplus_{\alpha:i\rightarrow k}V_{s(\alpha)}\xrightarrow{\ \mathrm{pr}_\alpha\ }V_{s(\alpha)}$$
 
 곧 $W_k$를 direct sum에 포함한 뒤 $\alpha$-성분으로 사영하는 morphism을 둔다. Morphism $f=(f_i):V\rightarrow V'$에 대해서는 $i\neq k$에서 $(S_k^+ f)_i=f_i$로 두고, vertex $k$에서는 $f$가 $V_{\mathrm{in}}$과 $V'_{\mathrm{in}}$을 교환시키므로 direct sum 위의 morphism $\bigoplus_\alpha f_{s(\alpha)}$가 kernel을 kernel로 보내는 것으로부터 유도되는 restriction morphism $(S_k^+ f)_k:W_k\rightarrow W'_k$를 둔다.
 :::
@@ -71,15 +71,15 @@ $$W_2=\ker(V_\alpha:V_1\rightarrow V_2),\qquad W_1=V_1,\qquad W_{\bar\alpha}:W_2
 ::: 정의 5
 $k$가 $Q$의 source라 하고, $V$를 $Q$의 representation이라 하자. $k$에서 나가는 arrow들 $\alpha:k\rightarrow j$ (이때 $j=t(\alpha)$) 로부터 morphism
 
-$$V_{\mathrm{out}}=(V_\alpha)_\alpha:V_k\longrightarrow\bigoplus_{\alpha:\,k\rightarrow j}V_{t(\alpha)}$$
+$$V_{\mathrm{out}}=(V_\alpha)_\alpha:V_k\longrightarrow\bigoplus_{\alpha:k\rightarrow j}V_{t(\alpha)}$$
 
 을 각 성분이 $V_\alpha$인 morphism으로 정의한다. *Source에서의 reflection functor* $S_k^-:\Rep(Q)\rightarrow\Rep(\sigma_k Q)$는 $W=S_k^- V$를
 
-$$W_k=\coker\Bigl(V_{\mathrm{out}}:V_k\rightarrow\bigoplus_{\alpha:\,k\rightarrow j}V_{t(\alpha)}\Bigr),\qquad W_i=V_i\ (i\neq k)$$
+$$W_k=\coker\Bigl(V_{\mathrm{out}}:V_k\rightarrow\bigoplus_{\alpha:k\rightarrow j}V_{t(\alpha)}\Bigr),\qquad W_i=V_i\ (i\neq k)$$
 
 로 두고, $k$에 인접하지 않은 arrow에는 $V$의 morphism을, 뒤집힌 각 arrow $\bar\alpha:t(\alpha)\rightarrow k$에는 합성
 
-$$W_{\bar\alpha}:V_{t(\alpha)}\xrightarrow{\ \iota_\alpha\ }\bigoplus_{\alpha:\,k\rightarrow j}V_{t(\alpha)}\twoheadrightarrow W_k$$
+$$W_{\bar\alpha}:V_{t(\alpha)}\xrightarrow{\ \iota_\alpha\ }\bigoplus_{\alpha:k\rightarrow j}V_{t(\alpha)}\twoheadrightarrow W_k$$
 
 곧 $\alpha$-성분으로의 포함과 cokernel로의 projection의 합성을 둔다. Morphism에 대해서는 $S_k^+$와 symmetric으로 cokernel로 내려가는 유도사상을 둔다.
 :::
@@ -104,9 +104,9 @@ $$\langle d,e\rangle=\sum_{i\in Q_0}d_i e_i-\sum_{\alpha\in Q_1}d_{s(\alpha)}e_{
 
 표준 basis vector $e_k\in\mathbb{Z}^n$ (vertex $k$에 대응) 에 대하여 $(e_k,e_k)=2$임을 직접 확인할 수 있다. Loop가 없으므로 $\langle e_k,e_k\rangle=1$이고 따라서 $(e_k,e_k)=2$이다. 그럼 각 vertex $k$에 대하여 root lattice 위의 simple reflection
 
-$$s_k(d)=d-(d,e_k)\,e_k$$
+$$s_k(d)=d-(d,e_k)e_k$$
 
-을 정의할 수 있다. 이는 [\[리 이론\] §근계, ⁋정의 9](/ko/math/lie_theory/root_systems#def9)의 reflection과 같은 꼴이며, vertex $k$ 좌표만 바꾸는 변환이다. 구체적으로 $k$가 sink일 때 $k$로 들어오는 arrow의 개수를 $m$이라 하면 $(d,e_k)$의 계산에서 $s_k(d)$의 $k$-좌표는 $\sum_{\alpha:i\rightarrow k}d_{s(\alpha)}-d_k$로 바뀐다. 다음 명제가 이 변환이 정확히 반사 functor의 효과임을 말한다.
+을 정의할 수 있다. 이는 [\[리 이론\] §근계, ⁋정의 9](/ko/math/lie_theory/root_systems#def9)의 reflection과 같은 꼴이며, vertex $k$ 좌표만 바꾸는 변환이다. 구체적으로 $k$가 sink일 때 $(d,e_k)$의 계산에서 $s_k(d)$의 $k$-좌표는 $\sum_{\alpha:i\rightarrow k}d_{s(\alpha)}-d_k$로 바뀐다. 다음 명제가 이 변환이 정확히 반사 functor의 효과임을 말한다.
 
 ::: 명제 7
 $k$가 $Q$의 sink이고 $V$가 $Q$의 indecomposable representation으로서 vertex $k$에 얹힌 simple representation $S_k$ (곧 dimension vector $e_k$인 것) 와 isomorphic하지 않다고 하자. 그럼 morphism $V_{\mathrm{in}}$이 전사이고,
@@ -120,15 +120,15 @@ Sink의 경우를 보이고 source의 경우는 쌍대적으로 따라온다. $k
 
 이제 차원을 센다. $V_{\mathrm{in}}$이 전사이므로 short exact sequence
 
-$$0\longrightarrow W_k\longrightarrow\bigoplus_{\alpha:\,i\rightarrow k}V_{s(\alpha)}\xrightarrow{\ V_{\mathrm{in}}\ }V_k\longrightarrow 0$$
+$$0\longrightarrow W_k\longrightarrow\bigoplus_{\alpha:i\rightarrow k}V_{s(\alpha)}\xrightarrow{\ V_{\mathrm{in}}\ }V_k\longrightarrow 0$$
 
 을 얻고, $W_k=\ker V_{\mathrm{in}}$이므로 rank–nullity에 의하여
 
-$$\dim_k W_k=\sum_{\alpha:\,i\rightarrow k}\dim_k V_{s(\alpha)}-\dim_k V_k$$
+$$\dim_k W_k=\sum_{\alpha:i\rightarrow k}\dim_k V_{s(\alpha)}-\dim_k V_k$$
 
 이다. $i\neq k$에서는 $(S_k^+ V)_i=V_i$이므로 dimension vector는 $k$-좌표에서만 달라지며, 그 새 $k$-좌표가 위 식이다. 한편 $s_k(\underline\dim V)$도 $k$-좌표에서만 달라지고, $(\underline\dim V,e_k)$가 $k$에 인접한 arrow들로부터 $\sum_{\alpha:i\rightarrow k}\dim_k V_{s(\alpha)}$를, $(e_k,e_k)=2$로부터 $2\dim_k V_k$를 받아
 
-$$s_k(\underline\dim V)_k=\dim_k V_k-\Bigl(2\dim_k V_k-\sum_{\alpha:\,i\rightarrow k}\dim_k V_{s(\alpha)}\Bigr)$$
+$$s_k(\underline\dim V)_k=\dim_k V_k-\Bigl(2\dim_k V_k-\sum_{\alpha:i\rightarrow k}\dim_k V_{s(\alpha)}\Bigr)$$
 
 이 되는데, 정리하면 $\sum_{\alpha:i\rightarrow k}\dim_k V_{s(\alpha)}-\dim_k V_k$로 위에서 구한 $\dim_k W_k$와 같다. 따라서 $\underline\dim(S_k^+ V)=s_k(\underline\dim V)$이다.
 :::
@@ -149,7 +149,7 @@ $$S_k^- S_k^+ V\cong V$$
 ::: 증명
 $k$가 sink인 경우를 보인다. $V$가 $S_k$를 direct summand로 가지지 않으므로, 명제 7의 증명에서 본 것과 같이 morphism $V_{\mathrm{in}}:\bigoplus_{\alpha:i\rightarrow k}V_{s(\alpha)}\rightarrow V_k$이 전사이다. (그 논증은 $V$가 indecomposable이라는 것보다 약한, $S_k$를 summand로 가지지 않는다는 조건만 사용한다. $\im V_{\mathrm{in}}$의 보충공간이 vertex $k$ 위의 $S_k$-summand를 주기 때문이다.) 따라서
 
-$$0\longrightarrow W_k\xrightarrow{\ j\ }\bigoplus_{\alpha:\,i\rightarrow k}V_{s(\alpha)}\xrightarrow{\ V_{\mathrm{in}}\ }V_k\longrightarrow 0$$
+$$0\longrightarrow W_k\xrightarrow{\ j\ }\bigoplus_{\alpha:i\rightarrow k}V_{s(\alpha)}\xrightarrow{\ V_{\mathrm{in}}\ }V_k\longrightarrow 0$$
 
 은 short exact sequence이며, 여기서 $W=S_k^+ V$이고 $j$는 포함이다. 이제 $\sigma_k Q$에서 $k$는 source이고 $W$에서 $k$로부터 나가는 morphism은 $W_{\bar\alpha}=\mathrm{pr}_\alpha\circ j:W_k\rightarrow V_{s(\alpha)}$이다. 이들을 모은 morphism이 정확히 $W_{\mathrm{out}}=j:W_k\rightarrow\bigoplus_\alpha V_{s(\alpha)}$인데, $j$가 단사이므로 그 cokernel은
 
@@ -157,7 +157,7 @@ $$(S_k^- W)_k=\coker(W_{\mathrm{out}})=\coker(j)\cong V_k$$
 
 이고, 이 isomorphism은 $V_{\mathrm{in}}$이 유도하는 것이다. 곧 short exact sequence의 cokernel이 $V_k$와 표준적으로 동일시된다. 나머지 vertex에서는 $S_k^+$도 $S_k^-$도 공간을 바꾸지 않으므로 $(S_k^- S_k^+ V)_i=V_i$이다. 마지막으로 arrow 위의 morphism이 일치함을 본다. 원래 $k$로 들어오던 arrow $\alpha:i\rightarrow k$에 대하여, $S_k^- W$에서 그에 대응하는 (다시 뒤집혀 원래 방향이 된) arrow의 morphism은 $V_{s(\alpha)}\xrightarrow{\iota_\alpha}\bigoplus_\beta V_{s(\beta)}\twoheadrightarrow\coker(j)\cong V_k$인데, $\coker(j)\cong V_k$가 $V_{\mathrm{in}}$으로 주어졌으므로 이 합성은 $V_{\mathrm{in}}\circ\iota_\alpha=V_\alpha$와 같다. 따라서 $k$에 인접하지 않은 arrow의 morphism이 보존됨과 합쳐, representation의 동형 $S_k^- S_k^+ V\cong V$를 얻고, 이 동형은 위 구성에 자연스럽다.
 
-Source의 경우는 $k$가 sink일 때의 논증을 완전히 쌍대화하여, $V_{\mathrm{out}}$의 단사성으로부터 $S_k^+ S_k^- V\cong V$를 얻는다. 끝으로 두 functor가 $S_k$를 제외한 indecomposable 위에서 서로 역임은 다음과 같다. $V$가 $S_k$가 아닌 indecomposable이면 명제 7에 의하여 $S_k^+ V$의 dimension vector가 음이 아니고 $0$이 아니므로 $S_k^+ V\neq 0$이며, 위에서 $S_k^- S_k^+ V\cong V$이므로 $S_k^+ V$ 또한 indecomposable이고 $S_k$ (이번에는 $\sigma_k Q$의 simple) 가 아니다. 따라서 두 대응이 서로 역인 전단사를 이룬다.
+Source의 경우는 $k$가 sink일 때의 논증을 완전히 쌍대화하여, $V_{\mathrm{out}}$의 단사성으로부터 $S_k^+ S_k^- V\cong V$를 얻는다. 끝으로 두 functor가 $S_k$를 제외한 indecomposable 위에서 서로 역임은 다음과 같다. $V$가 $S_k$가 아닌 indecomposable이면 $V$는 $S_k$를 direct summand로 가지지 않으므로 위에서 $S_k^- S_k^+ V\cong V\neq 0$을 얻고, 따라서 $W=S_k^+ V\neq 0$이다. 이때 $W$에서 vertex $k$로부터 나가는 morphism을 모은 것이 단사인 $j$이므로, $W$는 $\sigma_k Q$의 simple $S_k$를 direct summand로 가지지 않는다. 한편 $S_k^-$가 $0$으로 보내는 nonzero representation은 vertex $k$ 위에만 얹힌 것, 곧 $S_k$의 direct sum뿐이므로 $W$의 어떤 nonzero direct summand도 $S_k^-$에 의하여 $0$이 되지 않으며, $S_k^-$가 direct sum을 보존하고 $S_k^- W\cong V$가 indecomposable이므로 $W$ 또한 indecomposable이고 $S_k$ (이번에는 $\sigma_k Q$의 simple) 가 아니다. 따라서 두 대응이 서로 역인 전단사를 이룬다.
 :::
 
 명제 8은 반사 functor가 거의 모든 indecomposable을 가역적으로 옮긴다는 것을 말한다. 유일하게 잃는 것은 vertex $k$ 위의 simple $S_k$ 하나뿐이며, $S_k^+ S_k=0$이다. 따라서 한 vertex에서의 반사는 indecomposable의 분류를 $S_k$ 하나만큼 어긋나게 옮긴다. 이 한 칸의 어긋남을 모든 vertex에 걸쳐 한 바퀴 누적시키면, 다음 절의 Coxeter functor가 얻어진다.
@@ -179,7 +179,7 @@ $$C^+=S_{k_n}^+\cdots S_{k_2}^+ S_{k_1}^+:\Rep(Q)\longrightarrow\Rep(Q)$$
 ::: 명제 10
 $(k_1,\ldots,k_n)$이 admissible sink sequence이고 $V$가 $Q$의 indecomposable representation이라 하자. $C^+ V\neq 0$이면
 
-$$\underline\dim(C^+ V)=c\,(\underline\dim V),\qquad c=s_{k_n}\cdots s_{k_1}$$
+$$\underline\dim(C^+ V)=c(\underline\dim V),\qquad c=s_{k_n}\cdots s_{k_1}$$
 
 이며 $C^+ V$는 다시 indecomposable이다.
 :::
@@ -192,7 +192,7 @@ $$\underline\dim V^{(r)}=\underline\dim(S_{k_r}^+ V^{(r-1)})=s_{k_r}(\underline\
 
 이고, 명제 8에 의하여 $S_{k_r}^+ V^{(r-1)}=V^{(r)}$ 또한 indecomposable이다. 만일 $V^{(r-1)}$이 어떤 단계에서 simple $S_{k_r}$과 같다면 $V^{(r)}=S_{k_r}^+ V^{(r-1)}=0$이 되어 $C^+ V=0$이라는 결론에 이르므로, $C^+ V\neq 0$이라는 가정 아래에서는 그런 단계가 없다. 따라서 모든 단계에서 dimension vector에 $s_{k_r}$가 차례로 작용하고 indecomposability가 보존되어,
 
-$$\underline\dim(C^+ V)=s_{k_n}\cdots s_{k_1}(\underline\dim V)=c\,(\underline\dim V)$$
+$$\underline\dim(C^+ V)=s_{k_n}\cdots s_{k_1}(\underline\dim V)=c(\underline\dim V)$$
 
 이며 $C^+ V$는 indecomposable이다.
 :::

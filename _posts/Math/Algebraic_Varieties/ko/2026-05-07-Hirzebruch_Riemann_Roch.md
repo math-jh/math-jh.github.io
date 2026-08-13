@@ -18,7 +18,7 @@ Smooth projective variety $X$ 위의 coherent sheaf $\mathcal{F}$에 대하여, 
 
 $$\chi(X,\mathcal{F})=\sum_{i\geq 0}(-1)^i\dim H^i(X,\mathcal{F})$$
 
-으로 정의한다. 우리는 대개 $X$가 projective이고 $\mathcal{F}$가 coherent이므로 각 cohomology group이 finite dimensional이며, $i>\dim X$에서는 소멸하므로 위의 합은 유한합이다.
+으로 정의한다. $X$가 projective이고 $\mathcal{F}$가 coherent이므로 각 cohomology group이 finite dimensional이며, $i>\dim X$에서는 소멸하므로 위의 합은 유한합이다.
 :::
 
 HRR 정리의 좌변은 바로 이 Euler characteristic이며, 우변은 $X$의 intersection theory 위에서의 적분으로 주어진다. 이를 위해서는 Chern character와 Todd class라는 두 가지 characteristic class가 필요하다. 이들의 정의와 성질은 [§Todd Class](/ko/math/algebraic_varieties/todd_class)에서 자세히 다루었으므로, 본 글에서는 필요한 최소한의 사실만을 상기시킨다.
@@ -28,12 +28,12 @@ Algebraically closed field 위의 smooth projective variety $X$와 그 위의 co
 
 $$\chi(X,\mathcal{F})=\int_X\operatorname{ch}(\mathcal{F})\cdot\operatorname{td}(T_X)$$
 
-여기서 $\operatorname{ch}(\mathcal{F})$는 $\mathcal{F}$의 Chern character, $\operatorname{td}(T_X)$는 tangent bundle $T_X$의 Todd class이며, $\int_X$는 Chow group $A_{\dim X}(X)$ (또는 cohomology $H^{2\dim X}(X,\mathbb{Q})$) 위의 degree map을 의미한다.
+여기서 $\operatorname{ch}(\mathcal{F})$는 $\mathcal{F}$의 Chern character, $\operatorname{td}(T_X)$는 tangent bundle $T_X$의 Todd class이며, $\int_X$는 Chow group $A^{\dim X}(X)$ (또는 cohomology $H^{2\dim X}(X,\mathbb{Q})$) 위의 degree map을 의미한다.
 :::
 
 정리 [2](#thm2)에서 우변의 $\operatorname{ch}(\mathcal{F})\cdot\operatorname{td}(T_X)$는 Chow ring $A^\bullet(X)\otimes_\mathbb{Z}\mathbb{Q}$ 위에서의 곱셈이며, $\int_X$는 이 곱의 $\dim X$차 homogeneous 성분을 취한 후 그 degree를 적분하는 연산이다. 즉, $n=\dim X$일 때
 
-$$\int_X\operatorname{ch}(\mathcal{F})\cdot\operatorname{td}(T_X)=\bigl[\operatorname{ch}(\mathcal{F})\cdot\operatorname{td}(T_X)\bigr]_n$$
+$$\int_X\operatorname{ch}(\mathcal{F})\cdot\operatorname{td}(T_X)=\deg\bigl[\operatorname{ch}(\mathcal{F})\cdot\operatorname{td}(T_X)\bigr]_n$$
 
 으로, 여기서 $[\bullet]_n$는 $n$차 homogeneous 성분을 의미한다.
 
@@ -59,7 +59,7 @@ $$\operatorname{ch}(\mathcal{L})\cdot\operatorname{td}(T_C)=\left(1+c_1(\mathcal
 
 의 $1$차 성분은 $c_1(\mathcal{L})-\frac{1}{2}K_C$이며, 이를 적분하면
 
-$$\chi(C,\mathcal{L})=\int_C c_1(\mathcal{L})-\frac{1}{2}K_C=\deg(\mathcal{L})+1-g$$
+$$\chi(C,\mathcal{L})=\int_C\left(c_1(\mathcal{L})-\frac{1}{2}K_C\right)=\deg(\mathcal{L})+1-g$$
 
 이 된다. 한편 Euler characteristic의 정의와 Serre duality에 의해
 
@@ -129,7 +129,7 @@ $$\int_X\operatorname{ch}(\mathcal{F})\cdot\operatorname{td}(T_X)=\sum_i(-1)^i\d
 
 HRR 정리의 완전한 증명은 상당한 기술적 준비를 필요로 하며, 특히 Grothendieck-Riemann-Roch 정리의 체계 내에서 이해된다. 본 절에서는 증명의 전략과 핵심적인 아이디어를 개괄한다.
 
-증명의 출발점은 **Grothendieck group** $K_0(X)$이다. Smooth projective variety $X$ 위의 locally free coherent sheaf들의 isomorphism class로 생성되는 free abelian group에, short exact sequence $\mathcal{E}'\rightarrow\mathcal{E}\rightarrow\mathcal{E}''$마다 관계식 $[\mathcal{E}]=[\mathcal{E}']+[\mathcal{E}'']$를 부여하여 얻어지는 ring이 바로 $K_0(X)$이다. Smooth variety 위에서는 coherent sheaf가 locally free sheaf의 유한 해상계를 갖으므로, $K_0(X)$의 원소는 임의의 coherent sheaf의 class로 확장된다.
+증명의 출발점은 **Grothendieck group** $K_0(X)$이다. Smooth projective variety $X$ 위의 locally free coherent sheaf들의 isomorphism class로 생성되는 free abelian group에, short exact sequence $0\rightarrow\mathcal{E}'\rightarrow\mathcal{E}\rightarrow\mathcal{E}''\rightarrow 0$마다 관계식 $[\mathcal{E}]=[\mathcal{E}']+[\mathcal{E}'']$를 부여하여 얻어지는 ring이 바로 $K_0(X)$이다. Smooth variety 위에서는 coherent sheaf가 유한한 길이의 locally free resolution을 가지므로, $K_0(X)$의 원소는 임의의 coherent sheaf의 class로 확장된다.
 
 Chern character는 ring homomorphism
 
@@ -151,7 +151,7 @@ Closed immersion의 경우가 핵심적인 어려움을 내포하는데, 이를 
 
 Deformation to the normal cone의 핵심은 다음과 같다. $X$를 $Y$에 embedded시킨 상황에서의 GRR 등식을, $X$를 자신의 normal bundle $N_{X/Y}$에 zero section으로 embedded시킨 훨씬 단순한 상황으로 **변형**할 수 있다는 것이다. Normal bundle에 대한 zero section embedding의 경우에는 Koszul complex를 사용한 명시적인 계산이 가능하며, 이로부터 closed immersion에 대한 GRR 등식을 유도한다. 이 과정에서 Chow ring에서의 **self-intersection formula**와 **excess intersection formula**가 본질적으로 사용된다.
 
-이러한 기법들을 종합하여 Grothendieck는 GRR 정리를 증명하였고, 이로부터 $Y$가 점인 특수한 경우인 HRR 정리가 따른다. Fulton과 others는 이후 deformation to the normal cone을 보다 체계적으로 발전시켜, intersection theory의 근간을 이루는 일련의 결과들을 통합적으로 증명하였다.
+이러한 기법들을 종합하여 Grothendieck는 GRR 정리를 증명하였고, 이로부터 $Y$가 점인 특수한 경우인 HRR 정리가 따른다. Fulton 등은 이후 deformation to the normal cone을 보다 체계적으로 발전시켜, intersection theory의 근간을 이루는 일련의 결과들을 통합적으로 증명하였다.
 
 ## 예시: 사영공간 $\mathbb{P}^n$
 
@@ -175,7 +175,7 @@ $$\operatorname{ch}(\mathcal{O}_{\mathbb{P}^n}(d))\cdot\operatorname{td}(T_{\mat
 
 이다. HRR 정리에 의해 이것의 $n$차 성분을 취한 후 적분하면 $\chi(\mathbb{P}^n,\mathcal{O}_{\mathbb{P}^n}(d))$가 된다. 적분 $\int_{\mathbb{P}^n}$은 사실상 $h^n$의 계수를 추출하는 연산이므로, 우리는
 
-$$\chi(\mathbb{P}^n,\mathcal{O}_{\mathbb{P}^n}(d))=\bigl[e^{dh}\cdot\operatorname{td}(T_{\mathbb{P}^n})\bigr]_n$$
+$$\chi(\mathbb{P}^n,\mathcal{O}_{\mathbb{P}^n}(d))=\deg\bigl[e^{dh}\cdot\operatorname{td}(T_{\mathbb{P}^n})\bigr]_n$$
 
 를 계산해야 한다. Formal power series $\frac{h}{1-e^{-h}}$의 역수는 $\frac{1-e^{-h}}{h}$이며, 이는 Bernoulli 수와 관련이 있다. 보다 직접적인 계산을 위하여 우리는
 
@@ -185,7 +185,7 @@ $$e^{dh}\left(\frac{h}{1-e^{-h}}\right)^{n+1}=\frac{h^{n+1}e^{dh}}{(1-e^{-h})^{n
 
 $$\frac{(-t)^{n+1}e^{-dt}}{(1-e^t)^{n+1}}=\frac{t^{n+1}e^{-dt}}{(e^t-1)^{n+1}}$$
 
-이 된다. $(e^t-1)^{n+1}$의 전개와 $e^{-dt}$의 전개를 고려하여, $t^n$의 계수를 구하면 그 값이 $\chi(\mathbb{P}^n,\mathcal{O}_{\mathbb{P}^n}(d))$가 된다.
+이 된다. 치환 $t=-h$에 의해 $h^n$의 계수는 $t^n$의 계수에 $(-1)^n$을 곱한 것이므로, $(e^t-1)^{n+1}$의 전개와 $e^{-dt}$의 전개를 고려하여 $t^n$의 계수를 구한 뒤 $(-1)^n$을 곱하면 그 값이 $\chi(\mathbb{P}^n,\mathcal{O}_{\mathbb{P}^n}(d))$가 된다.
 
 보다 간단한 접근법으로, $\frac{h}{1-e^{-h}}$를 $1+\frac{h}{2}+\frac{h^2}{12}-\cdots$로 전개하고 $e^{dh}$를 $1+dh+\frac{d^2h^2}{2!}+\cdots$로 전개한 뒤, $h^n$의 계수를 직접 모으는 방법도 있다. 예를 들어 $n=2$의 경우,
 
@@ -195,7 +195,7 @@ $$\operatorname{td}(T_{\mathbb{P}^2})=1+\frac{3h}{2}+h^2,\qquad \operatorname{ch
 
 $$\chi(\mathbb{P}^2,\mathcal{O}_{\mathbb{P}^2}(d))=\frac{d^2}{2}+\frac{3d}{2}+1=\frac{(d+1)(d+2)}{2}=\binom{d+2}{2}$$
 
-를 얻는다. 일반적으로는 residue theorem을 사용하거나, Todd class의 정의로부터 직접 계산하여 $\binom{n+d}{n}$이 됨을 확인할 수 있다. 이는 [§사영공간의 코호몰로지](/ko/math/algebraic_varieties/cohomology_of_projective_spaces)에서 직접 계산한 cohomology의 결과와 일치하며, 특히 $d\geq 0$일 때 $H^i(\mathbb{P}^n,\mathcal{O}_{\mathbb{P}^n}(d))=0$ for $i>0$이므로 $\chi$가 $h^0$와 일치하여 $\binom{n+d}{n}$이 됨을 알 수 있다. $\square$
+를 얻는다. 일반적으로는 residue theorem을 사용하거나, Todd class의 정의로부터 직접 계산하여 $\binom{n+d}{n}$이 됨을 확인할 수 있다. 이는 [§사영공간의 코호몰로지](/ko/math/algebraic_varieties/cohomology_of_projective_spaces)에서 직접 계산한 cohomology의 결과와 일치하며, 특히 $d\geq 0$일 때 $i>0$에 대하여 $H^i(\mathbb{P}^n,\mathcal{O}_{\mathbb{P}^n}(d))=0$이므로 $\chi$가 $h^0$와 일치하여 $\binom{n+d}{n}$이 됨을 알 수 있다. $\square$
 :::
 
 예시 [6](#ex6)에서 얻어진 $\chi(\mathbb{P}^n,\mathcal{O}_{\mathbb{P}^n}(d))$는 $d$에 대한 $n$차 polynomial이며, 이를 $\mathbb{P}^n$ 위의 coherent sheaf에 대한 **Hilbert polynomial**의 원형으로 볼 수 있다. 임의의 coherent sheaf $\mathcal{F}$에 대하여 $d\gg 0$이면 Serre vanishing에 의해 $H^i(\mathbb{P}^n,\mathcal{F}(d))=0$ ($i>0$)이 되므로

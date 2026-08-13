@@ -14,9 +14,9 @@ weight: 1
 published: false
 ---
 
-미분다양체는 국소적으로 $\mathbb{R}^n$처럼 보이며 transition function이 smooth 공간이었다 ([\[미분다양체\] §미분다양체, ⁋정의 1](/ko/math/manifolds/smooth_manifolds#def1)). Complex manifold는 같은 도식을 한 단계 더 강화한 것으로, 국소 모형을 $\mathbb{C}^n$으로 바꾸고 transition function에 매끄러움 대신 *holomorphicity*를 요구한다. $\mathbb{C}^n$을 $\mathbb{R}^{2n}$과 동일시하면 모든 complex manifold는 자동으로 차원 $2n$의 실 미분다양체가 되지만, holomorphic transition function이라는 추가 조건은 smooth 구조만으로는 보이지 않는 강한 강성을 만들어낸다. 이 강성의 가장 단적인 표현이 이 글의 마지막 정리, 곧 콤팩트 connected complex manifold 위의 holomorphic function이 상수밖에 없다는 사실이다.
+미분다양체는 국소적으로 $\mathbb{R}^n$처럼 보이며 transition function이 smooth한 공간이었다 ([\[미분다양체\] §미분다양체, ⁋정의 1](/ko/math/manifolds/smooth_manifolds#def1)). Complex manifold는 같은 도식을 한 단계 더 강화한 것으로, 국소 모형을 $\mathbb{C}^n$으로 바꾸고 transition function에 매끄러움 대신 *holomorphicity*를 요구한다. $\mathbb{C}^n$을 $\mathbb{R}^{2n}$과 동일시하면 모든 complex manifold는 자동으로 차원 $2n$의 실 미분다양체가 되지만, holomorphic transition function이라는 추가 조건은 smooth 구조만으로는 보이지 않는 강한 강성을 만들어낸다. 이 강성의 가장 단적인 표현이 이 글의 마지막 정리, 곧 콤팩트 connected complex manifold 위의 holomorphic function이 상수밖에 없다는 사실이다.
 
-이 글의 목표는 complex manifold의 정의를 세우고, 표준적인 예시들을 직접 구성하며, 점에서의 holomorphic tangent space를 도입하는 것이다. 한 변수 holomorphic function의 기초는 이미 다루었으므로 ([\[복소해석학\] §정칙함수, ⁋정의 2](/ko/math/complex_analysis/holomorphic_functions#def2)) 여기서는 여러 변수로의 extension에서 출발한다.
+이 글의 목표는 complex manifold의 정의를 세우고, 표준적인 예시들을 직접 구성하며, 점에서의 holomorphic tangent space를 도입하는 것이다. 한 변수 holomorphic function의 기초는 이미 다루었으므로 ([\[복소해석학\] §복소정칙함수, ⁋정의 2](/ko/math/complex_analysis/holomorphic_functions#def2)) 여기서는 여러 변수로의 extension에서 출발한다.
 
 ## 여러 변수 복소정칙함수
 
@@ -48,7 +48,7 @@ $\mathbb{C}^n$ 사이의 morphism의 holomorphicity는 성분별로 정의한다
 
 Biholomorphism은 복소해석적 isomorphism에 해당한다. 두 열린집합이 biholomorphic하게 동치이면 그 위의 holomorphic 함수론은 완전히 같다. Complex manifold란 바로 이런 biholomorphic 동치를 풀로 삼아 $\mathbb{C}^n$의 조각들을 이어 붙인 공간이다.
 
-한 변수의 Wirtinger 미분 ([\[복소해석학\] §정칙함수, ⁋정의 7](/ko/math/complex_analysis/holomorphic_functions#def7)) 은 변수마다 그대로 복제된다. 좌표 $z_j = x_j + i y_j$에 대하여
+한 변수의 Wirtinger 미분 ([\[복소해석학\] §복소정칙함수, ⁋정의 7](/ko/math/complex_analysis/holomorphic_functions#def7)) 은 변수마다 그대로 복제된다. 좌표 $z_j = x_j + i y_j$에 대하여
 
 $$
 \frac{\partial}{\partial z_j} = \frac{1}{2}\left( \frac{\partial}{\partial x_j} - i \frac{\partial}{\partial y_j} \right), \qquad
@@ -68,7 +68,7 @@ $$
 이제 holomorphic transition function을 갖는 manifold를 정의한다.
 
 ::: 정의 3
-$M$을 topological manifold라 하자. $M$ 위의 *holomorphic atlas<sub>정칙 좌표계 모임</sub>*는 차트들의 모임 $\{(U_\alpha, \varphi_\alpha)\}$로서, 각 $\varphi_\alpha : U_\alpha \rightarrow \varphi_\alpha(U_\alpha) \subseteq \mathbb{C}^n$이 homeomorphism이고 $\bigcup_\alpha U_\alpha = M$이며, $U_\alpha \cap U_\beta \neq \emptyset$일 때마다 *transition map<sub>전이함수</sub>*
+$M$을 topological manifold라 하자. $M$ 위의 *holomorphic atlas<sub>정칙 좌표계 모임</sub>*는 차트들의 모임 $\{(U_\alpha, \varphi_\alpha)\}$로서, 각 $\varphi_\alpha$가 $U_\alpha$에서 열린집합 $\varphi_\alpha(U_\alpha) \subseteq \mathbb{C}^n$ 위로의 homeomorphism이고 $\bigcup_\alpha U_\alpha = M$이며, $U_\alpha \cap U_\beta \neq \emptyset$일 때마다 *transition map<sub>전이함수</sub>*
 
 $$
 \varphi_\beta \circ \varphi_\alpha^{-1} : \varphi_\alpha(U_\alpha \cap U_\beta) \longrightarrow \varphi_\beta(U_\alpha \cap U_\beta)
@@ -77,7 +77,7 @@ $$
 이 [정의 2](#def2)의 의미로 holomorphic인 것이다. 이때 두 holomorphic atlas는 합집합이 다시 holomorphic atlas이면 서로 *compatible<sub>양립가능</sub>*하다 하고, 양립가능성에 의한 equivalence class, 곧 maximal holomorphic atlas를 $M$의 *complex structure<sub>복소구조</sub>*라 한다. 복소구조를 갖춘 topological manifold를 *complex manifold<sub>복소다양체</sub>*라 하고, 국소 모형 $\mathbb{C}^n$의 $n$을 그 *complex dimension<sub>복소차원</sub>* $\dim_{\mathbb{C}} M = n$이라 한다.
 :::
 
-Transition function이 holomorphic이면 그 역사상도 holomorphic이므로 (holomorphic morphism의 합성과 역에 대한 닫힘성에서), 두 차트 $\varphi_\alpha, \varphi_\beta$ 사이의 관계는 biholomorphic이다. $\mathbb{C}^n$을 표준 동일시 $z_j = x_j + i y_j$로 $\mathbb{R}^{2n}$과 동일시하면 holomorphic transition function은 특히 매끄럽고, 따라서 모든 복소차원 $n$의 complex manifold는 실차원 $2n$의 smooth manifold를 바탕으로 한다. 이 바탕 위에 얹힌 "holomorphic transition function"라는 조건이 복소구조이며, 같은 smooth manifold가 서로 다른 복소구조를 가질 수도, 아예 하나도 갖지 못할 수도 있다.
+Transition function $\varphi_\beta \circ \varphi_\alpha^{-1}$의 역사상 $\varphi_\alpha \circ \varphi_\beta^{-1}$ 또한 [정의 3](#def3)이 holomorphic이기를 요구하는 transition function이므로, 두 차트 $\varphi_\alpha, \varphi_\beta$ 사이의 관계는 biholomorphic이다. $\mathbb{C}^n$을 표준 동일시 $z_j = x_j + i y_j$로 $\mathbb{R}^{2n}$과 동일시하면 holomorphic transition function은 특히 매끄럽고, 따라서 모든 복소차원 $n$의 complex manifold는 실차원 $2n$의 smooth manifold를 바탕으로 한다. 이 바탕 위에 얹힌 "holomorphic transition function"라는 조건이 복소구조이며, 같은 smooth manifold가 서로 다른 복소구조를 가질 수도, 아예 하나도 갖지 못할 수도 있다.
 
 Complex manifold 사이의 morphism에 대한 holomorphicity도 국소 차트로 옮겨 정의한다.
 
@@ -153,7 +153,7 @@ $$
 
 이다. 평행이동은 holomorphic이므로 모든 transition function이 holomorphic이고, $T$는 complex manifold가 된다. 또한 $T$는 기본영역 (lattice의 closed 평행육면체) 의 연속 전사상이므로 콤팩트하다.
 
-복소차원 $1$의 경우 $T = \mathbb{C}/\Lambda$는 *elliptic curve<sub>타원곡선</sub>*의 복소해석적 모습이며 항상 projective variety로 실현된다. 그러나 차원이 올라가면 사정이 달라진다. 일반적인 lattice $\Lambda \subseteq \mathbb{C}^n$ ($n \geq 2$) 에 대한 복소토러스는 어떠한 $\mathbb{CP}^N$에도 holomorphic하게 embedding되지 않는다. 곧 *비대수적*이다. Projective이 되기 위해서는 lattice가 추가적인 정수 대수적 조건 (Riemann 관계식) 을 만족해야 하는데, 이를 만족하는 lattice는 전체 가운데 진부분집합을 이루므로 무작위로 잡은 lattice는 이를 만족하지 않는다. 모든 콤팩트 complex manifold가 대수적이지는 않다는 사실의 가장 손쉬운 출처가 바로 이 복소토러스이다.
+복소차원 $1$의 경우 $T = \mathbb{C}/\Lambda$는 *elliptic curve<sub>타원곡선</sub>*의 복소해석적 모습이며 항상 projective variety로 실현된다. 그러나 차원이 올라가면 사정이 달라진다. 일반적인 lattice $\Lambda \subseteq \mathbb{C}^n$ ($n \geq 2$) 에 대한 복소토러스는 어떠한 $\mathbb{CP}^N$에도 holomorphic하게 embedding되지 않는다. 곧 *비대수적*이다. Projective이 되기 위해서는 lattice가 추가적인 정수 대수적 조건 (Riemann 관계식) 을 만족해야 하는데, 이를 만족하는 lattice는 전체 가운데 measure zero인 부분집합을 이루므로 무작위로 잡은 lattice는 이를 만족하지 않는다. 모든 콤팩트 complex manifold가 대수적이지는 않다는 사실의 가장 손쉬운 출처가 바로 이 복소토러스이다.
 
 복소차원 $1$의 complex manifold에는 따로 이름이 붙는다.
 
@@ -180,7 +180,7 @@ $$
 이다. $\mathbb{C}^\ast$에서 $z \mapsto 1/z$는 holomorphic이므로 이는 holomorphic atlas이다. 위상적으로 $\mathbb{CP}^1$은 $\mathbb{C}$에 한 점 ($[0:1]$에 해당하는 $z = \infty$) 을 더한 것으로, $2$차원 구면 $S^2$와 homeomorphic이다. 이것이 확장복소평면 $\widehat{\mathbb{C}}$의 ([\[복소해석학\] §복소수와 복소평면, ⁋정의 13](/ko/math/complex_analysis/complex_numbers#def13)) complex manifold 구조이며, *Riemann 구면*이라 부른다.
 :::
 
-마지막으로, 가장 풍부한 예시의 출처는 projective algebraic geometry가다. $\mathbb{CP}^N$ 안의 smooth projective algebraic variety, 곧 homogeneous 다항식들의 공통 영점집합으로 정의되고 매끄러움 조건 (Jacobian의 최대 계수) 을 만족하는 부분집합은, 자연스럽게 complex manifold 구조를 물려받는다. 음함수 정리의 holomorphic 버전이 국소적으로 그러한 영점집합을 $\mathbb{C}^k$의 그래프로 펴주기 때문이다. 이렇게 얻는 complex manifold는 정의상 projective이며 따라서 algebraic하다. 앞서 본 복소토러스의 예와 합치면, 콤팩트 complex manifold의 세계는 projective인 것 (대수적) 과 non-projective인 것 (비대수적) 으로 갈린다. 어느 쪽인지를 가르는 기준을 추구하는 것이 복소기하학의 한 주된 동력이다.
+마지막으로, 가장 풍부한 예시의 출처는 projective algebraic geometry이다. $\mathbb{CP}^N$ 안의 smooth projective algebraic variety, 곧 homogeneous 다항식들의 공통 영점집합으로 정의되고 매끄러움 조건 (Jacobian의 최대 계수) 을 만족하는 부분집합은, 자연스럽게 complex manifold 구조를 물려받는다. 음함수 정리의 holomorphic 버전이 국소적으로 그러한 영점집합을 $\mathbb{C}^k$의 그래프로 펴주기 때문이다. 이렇게 얻는 complex manifold는 정의상 projective이며 따라서 algebraic하다. 앞서 본 복소토러스의 예와 합치면, 콤팩트 complex manifold의 세계는 projective인 것 (대수적) 과 non-projective인 것 (비대수적) 으로 갈린다. 어느 쪽인지를 가르는 기준을 추구하는 것이 복소기하학의 한 주된 동력이다.
 
 ## 복소정칙접공간
 
@@ -229,7 +229,7 @@ $$
 Holomorphic tangent space들이 점마다 매끄럽게 (실은 holomorphic하게) 변하면 다발을 이룬다.
 
 ::: 정의 11
-Complex manifold $M$ 위의 *holomorphic tangent bundle<sub>정칙접다발</sub>* $T^{1,0} M$은 각 점 $p$에서의 fiber가 $T_p^{1,0} M$인 복소 vector bundle이다. 그 dual bundle을 *holomorphic cotangent bundle<sub>정칙여접다발</sub>* $(T^{1,0}M)^\ast$이라 하고, 그 holomorphic 단면 전체를 $\Omega^1_{\mathrm{hol}}(M)$으로 적어 *holomorphic 1-form<sub>정칙 1-형식</sub>*들의 공간이라 한다.
+Complex manifold $M$ 위의 *holomorphic tangent bundle<sub>정칙접다발</sub>* $T^{1,0} M$은 각 점 $p$에서의 fiber가 $T_p^{1,0} M$인 복소 vector bundle이다. 그 dual bundle을 *holomorphic cotangent bundle<sub>정칙여접다발</sub>* $(T^{1,0}M)^\ast$이라 하고, 그 holomorphic section 전체를 $\Omega^1_{\mathrm{hol}}(M)$으로 적어 *holomorphic 1-form<sub>정칙 1-형식</sub>*들의 공간이라 한다.
 :::
 
 Cotangent bundle의 구성은 smooth 경우의 추상적 다발 functor 구성을 ([\[미분다양체\] §접다발과 여접다발, ⁋정의 7](/ko/math/manifolds/tangent_and_cotangent_bundles#def7)) holomorphic 범주에서 반복한 것이다. 국소좌표에서 $\partial/\partial z_j$의 쌍대 기저가 $\dd{z_j}$이고 $\partial/\partial \bar{z}_j$의 쌍대 기저가 $\dd{\bar{z}_j}$이며,
@@ -238,7 +238,7 @@ $$
 \dd{z_j} = \dd{x_j} + i\dd{y_j}, \qquad \dd{\bar{z}_j} = \dd{x_j} - i\dd{y_j}
 $$
 
-이다. Holomorphic 1-form은 국소적으로 $\sum_j f_j\dd{z_j}$ 꼴로 적히되 계수 $f_j$가 holomorphic인 형식이다. $\dd{\bar{z}_j}$ 항이 없다는 점이 핵심이며, 이는 holomorphicity가 antiholomorphic 방향의 부재로 표현된다는 [정의 1](#def1) 직후의 Cauchy–Riemann 조건과 정확히 같은 내용이다. $\Omega^1_{\mathrm{hol}}$을 비롯한 holomorphic forms의 미분과 cohomology는 다음 글들에서 본격적으로 다룬다.
+이다. Holomorphic 1-form은 국소적으로 $\sum_j f_j\dd{z_j}$ 꼴로 적히되 계수 $f_j$가 holomorphic인 형식이다. $\dd{\bar{z}_j}$ 항이 없다는 점이 핵심이며, 이는 holomorphicity가 antiholomorphic 방향의 부재로 표현된다는 [정의 2](#def2) 직후의 Cauchy–Riemann 조건과 정확히 같은 내용이다. $\Omega^1_{\mathrm{hol}}$을 비롯한 holomorphic forms의 미분과 cohomology는 다음 글들에서 본격적으로 다룬다.
 
 ## 콤팩트 복소다양체와 최대원리
 
@@ -298,7 +298,7 @@ $M$이 콤팩트 connected complex manifold이면, $M$ 위의 모든 holomorphic
 $f \in \mathcal{O}(M)$이라 하자. $f$는 holomorphic이므로 연속이고, 따라서 $\lvert f \rvert : M \rightarrow \mathbb{R}$은 연속함수이다. $M$이 콤팩트이므로 연속함수 $\lvert f \rvert$는 $M$의 어떤 점 $p$에서 전역 최댓값을 가진다. $M$이 connected이므로 [명제 13](#prop13)에 의해 $f$는 $M$에서 상수이다. $f$가 임의의 holomorphic function이었으므로 $\mathcal{O}(M)$의 모든 원소는 상수이고, 상수함수는 모두 holomorphic이므로 $\mathcal{O}(M) = \mathbb{C}$이다.
 :::
 
-이 정리는 complex manifold와 미분다양체의 차이를 한눈에 보여준다. Smooth manifold에서는 partition of unity로 만든 함수들 덕분에 $C^\infty(M)$이 언제나 무한차원으로 풍부하지만, 콤팩트 complex manifold에서는 전역 holomorphic function이 상수밖에 없다. 전역 holomorphic function으로는 점을 구별조차 할 수 없으므로, 콤팩트 complex manifold의 기하를 들여다보려면 함수 대신 더 유연한 대상, 곧 holomorphic 다발의 단면이나 전역 유리형 함수를 동원해야 한다. 충분히 많은 단면을 모아 $\mathbb{CP}^N$으로의 embedding을 줄 수 있는가 하는 물음이 자연스럽게 떠오르며, 이것이 사영성과 대수성을 가르는 기준으로 이어진다. 앞서 본 복소토러스의 비대수성 ([예시 7](#ex7)) 도 정확히 이 단면들의 부족으로 설명된다.
+이 정리는 complex manifold와 미분다양체의 차이를 한눈에 보여준다. Smooth manifold에서는 partition of unity로 만든 함수들 덕분에 $C^\infty(M)$이 언제나 무한차원으로 풍부하지만, 콤팩트 complex manifold에서는 전역 holomorphic function이 상수밖에 없다. 전역 holomorphic function으로는 점을 구별조차 할 수 없으므로, 콤팩트 complex manifold의 기하를 들여다보려면 함수 대신 더 유연한 대상, 곧 holomorphic 다발의 section이나 전역 유리형 함수를 동원해야 한다. 충분히 많은 section을 모아 $\mathbb{CP}^N$으로의 embedding을 줄 수 있는가 하는 물음이 자연스럽게 떠오르며, 이것이 사영성과 대수성을 가르는 기준으로 이어진다. 앞서 본 복소토러스의 비대수성 ([예시 7](#ex7)) 도 정확히 이 section들의 부족으로 설명된다.
 
 ---
 

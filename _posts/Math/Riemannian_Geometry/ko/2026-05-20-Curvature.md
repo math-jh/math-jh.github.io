@@ -14,7 +14,7 @@ published: false
 
 ---
 
-[§레비-치비타 접속, §§평행 운반 8](/ko/math/riemannian_geometry/Levi-Civita_connection#def8)에서 우리는 Riemannian manifold $(M, g)$ 위에서 곡선 $\gamma$를 따라 벡터를 *상수처럼* 옮기는 parallel transport $P_\gamma$를 정의했다. 그러나 일반적으로 같은 두 점 $p, q$ 사이를 잇는 두 곡선 $\gamma_1, \gamma_2$에 대해 $P_{\gamma_1} \ne P_{\gamma_2}$일 수 있다. 즉 어떤 길을 따라 벡터를 옮기느냐에 따라 도착한 벡터가 달라진다. 이 *path-dependence*를 점별 정보로 측정하는 텐서가 *Riemann 곡률 텐서*이다.
+[§레비-치비타 접속, ⁋정의 8](/ko/math/riemannian_geometry/Levi-Civita_connection#def8)에서 우리는 Riemannian manifold $(M, g)$ 위에서 곡선 $\gamma$를 따라 벡터를 *상수처럼* 옮기는 parallel transport $P_\gamma$를 정의했다. 그러나 일반적으로 같은 두 점 $p, q$ 사이를 잇는 두 곡선 $\gamma_1, \gamma_2$에 대해 $P_{\gamma_1} \ne P_{\gamma_2}$일 수 있다. 즉 어떤 길을 따라 벡터를 옮기느냐에 따라 도착한 벡터가 달라진다. 이 *path-dependence*를 점별 정보로 측정하는 텐서가 *Riemann 곡률 텐서*이다.
 
 ## 평행 운반의 path-dependence
 
@@ -30,12 +30,12 @@ published: false
 출발점 $p_0$에서 적도 방향의 단위 벡터 $v = (0, 1, 0) \in T_{p_0} S^2$을 잡고 이를 $\gamma$를 따라 parallel transport하자.
 
 - $\gamma_1$ (0° 자오선, 측지선): $v$는 매 순간 곡선 $\gamma_1$에 *수직*이므로 parallel transport 동안 적도 방향을 유지하며, 북극에서는 90° 자오선 방향의 벡터 $(0, 1, 0)$이 된다.
-- $\gamma_2$ (90° 자오선, 측지선): 위에서 도착한 벡터는 $\gamma_2$에 *수직*이므로 parallel transport 동안 그 수직 방향을 유지하며, $p_1$에서는 $(-1, 0, 0)$이 된다.
-- $\gamma_3$ (적도, 측지선): 위에서 도착한 벡터는 $\gamma_3$의 방향과 *평행*이며 (음의 방향), parallel transport 동안 그 평행성을 유지하므로 $p_0$로 돌아왔을 때 여전히 $(-1, 0, 0)$이다.
+- $\gamma_2$ (90° 자오선, 측지선): 위에서 도착한 벡터는 $\gamma_2$의 방향과 *평행*이므로 parallel transport 동안 그 평행성을 유지하며, $p_1$에서는 $\gamma_2$의 도착 방향인 $(0, 0, -1)$이 된다.
+- $\gamma_3$ (적도, 측지선): 위에서 도착한 벡터는 $\gamma_3$에 *수직*이므로 parallel transport 동안 그 수직 방향을 유지하며, $p_0$로 돌아왔을 때 여전히 $(0, 0, -1)$이다.
 
-결국 닫힌 곡선 $\gamma_1 \cdot \gamma_2 \cdot \gamma_3$를 따라 한 바퀴 parallel transport한 결과 초기 벡터 $(0, 1, 0)$은 $(-1, 0, 0)$으로, 즉 *90° 회전된* 벡터로 돌아온다. 
+결국 닫힌 곡선 $\gamma_1 \cdot \gamma_2 \cdot \gamma_3$를 따라 한 바퀴 parallel transport한 결과 초기 벡터 $(0, 1, 0)$은 $(0, 0, -1)$으로, 즉 *90° 회전된* 벡터로 돌아온다. 
 
-이를 다른 식으로 해석하면, $p_0$에서 $p_1$로 가는 *두 가지 path* — $\gamma_1 \cdot \gamma_2$로 가는 길과 $\gamma_3$ (의 역)으로 가는 길 — 의 parallel transport가 일치하지 않는다는 것이다. 
+이를 다른 식으로 해석하면, $p_0$에서 $p_1$로 가는 *두 가지 path*, 곧 $\gamma_1 \cdot \gamma_2$로 가는 길과 $\gamma_3$의 역으로 가는 길의 parallel transport가 일치하지 않는다는 것이다. 
 :::
 
 위 예시에서 닫힌 곡선이 둘러싸는 면적은 $S^2$ 전체 면적 $4\pi$의 $1/8$인 $\pi/2$이며, 정확히 이만큼이 회전 각도 (radian)와 일치한다. 이는 우연이 아니며, 다음에 정의할 곡률 텐서를 곡선이 둘러싸는 면적 위에서 적분한 값이 정확히 holonomy를 통제한다는 *Gauss-Bonnet*의 국소 버전의 결과이다.
@@ -84,7 +84,7 @@ $$R(X, Y)(fZ) = f \cdot R(X, Y) Z$$
 [예시 1](#ex1)의 직관에 맞춰, 곡률 텐서를 작은 loop 위의 parallel transport holonomy의 *무한소 generator*로 해석할 수 있다. 정확한 진술은 다음과 같다.
 
 ::: 명제 4
-점 $p \in M$과 두 벡터 $X_p, Y_p \in T_p M$에 대해, $\epsilon \rightarrow 0$의 극한에서 다음이 성립한다. $X_p, Y_p$가 펼치는 (적절한 좌표계에서의) 면적 $\epsilon^2$의 작은 평행사변형 loop $\partial D_\epsilon$를 따른 parallel transport $P_{\partial D_\epsilon} : T_p M \rightarrow T_p M$는 임의의 $Z_p \in T_p M$에 대해
+점 $p \in M$과 두 벡터 $X_p, Y_p \in T_p M$에 대해, $\epsilon \rightarrow 0$의 극한에서 다음이 성립한다. 적절한 coordinate system에서 $\epsilon X_p, \epsilon Y_p$가 펼치는 작은 평행사변형 loop $\partial D_\epsilon$를 따른 parallel transport $P_{\partial D_\epsilon} : T_p M \rightarrow T_p M$는 임의의 $Z_p \in T_p M$에 대해
 
 $$P_{\partial D_\epsilon}(Z_p) = Z_p - \epsilon^2 R(X_p, Y_p) Z_p + O(\epsilon^3)$$
 
@@ -99,7 +99,7 @@ $$P_{\partial D} \approx \exp\left(-\int_D R\right) \in \GL(T_p M)$$
 
 ## 곡률 텐서의 대칭성
 
-곡률 텐서는 정의로부터 첫 두 인수에 대해 antisymmetric이며, Riemannian (즉 metric-compatible) connection의 경우 추가로 더 강한 대칭성들을 만족한다.
+곡률 텐서는 정의로부터 첫 두 인수에 대해 antisymmetric이며, metric-compatible이고 torsion-free인 Levi-Civita connection의 경우 추가로 더 강한 대칭성들을 만족한다.
 
 ::: 명제 5
 $(M, g)$의 Levi-Civita connection의 곡률 텐서 $R$은 다음 대칭성들을 만족한다.
@@ -110,7 +110,7 @@ $(M, g)$의 Levi-Civita connection의 곡률 텐서 $R$은 다음 대칭성들�
 4. (제1 Bianchi 항등식) $R(X, Y) Z + R(Y, Z) X + R(Z, X) Y = 0$. (torsion-freeness로부터)
 :::
 
-이 대칭성들로 인해 metric으로 lower index $R_{ijkl} := \langle R(\partial_i, \partial_j) \partial_k, \partial_l\rangle$로 보면, $R_{ijkl}$은 $ij$ pair에 대해 antisymmetric, $kl$ pair에 대해 antisymmetric, $(ij, kl)$ pair 교환에 대해 symmetric이며, $R_{ijkl} + R_{ikjl} + R_{iljk} = 0$이 성립하는 $(0, 4)$-tensor가 된다. 이 대칭성을 갖는 $(0, 4)$-tensor의 모듈러스 공간의 차원은 $n = \dim M$에 대해 $n^2(n^2 - 1)/12$로 계산되며 ($n = 2$일 때 1차원, $n = 3$일 때 6차원, $n = 4$일 때 20차원), 이것이 Riemannian 기하학에서의 *국소* 기하 정보의 자유도이다.
+이 대칭성들로 인해 metric으로 lower index $R_{ijkl} := \langle R(\partial_i, \partial_j) \partial_k, \partial_l\rangle$로 보면, $R_{ijkl}$은 $ij$ pair에 대해 antisymmetric, $kl$ pair에 대해 antisymmetric, $(ij, kl)$ pair 교환에 대해 symmetric이며, $R_{ijkl} + R_{iklj} + R_{iljk} = 0$이 성립하는 $(0, 4)$-tensor가 된다. 이 대칭성을 갖는 $(0, 4)$-tensor들이 이루는 벡터공간의 차원은 $n = \dim M$에 대해 $n^2(n^2 - 1)/12$로 계산되며 ($n = 2$일 때 1차원, $n = 3$일 때 6차원, $n = 4$일 때 20차원), 이것이 Riemannian 기하학에서의 *국소* 기하 정보의 자유도이다.
 
 ## 평탄 접속과 path-independence
 
@@ -120,7 +120,7 @@ $(M, g)$의 Levi-Civita connection의 곡률 텐서 $R$은 다음 대칭성들�
 Connection $\nabla$의 곡률 텐서가 $R \equiv 0$일 때 $\nabla$를 *flat<sub>평탄</sub>* connection이라 부른다.
 :::
 
-[명제 4](#prop4)의 직접적 결과로, flat connection 하에서는 모든 simply connected 영역 안에서 parallel transport가 *path-independent*가 된다. 즉 임의의 두 점 $p, q$와 그 사이의 두 곡선 $\gamma_1, \gamma_2$가 homotopic이면 $P_{\gamma_1} = P_{\gamma_2}$이다. 이는 모든 $T_p M$이 canonical하게 한 fixed 벡터공간과 동일시되도록 하며, 적절한 좌표계 $(t^1, \ldots, t^n)$에서 $\nabla$가 단순 partial derivative로 환원되는 *flat coordinate*가 (국소적으로) 존재한다는 결과로 이어진다.
+[명제 4](#prop4)의 직접적 결과로, flat connection 하에서는 모든 simply connected 영역 안에서 parallel transport가 *path-independent*가 된다. 즉 임의의 두 점 $p, q$와 그 사이의 두 곡선 $\gamma_1, \gamma_2$가 homotopic이면 $P_{\gamma_1} = P_{\gamma_2}$이다. 이는 모든 $T_p M$이 canonical하게 한 fixed 벡터공간과 동일시되도록 한다. 여기에 $\nabla$의 torsion-freeness를 더하면 그렇게 얻은 parallel frame $(E_1, \ldots, E_n)$이 $[E_i, E_j] = \nabla_{E_i} E_j - \nabla_{E_j} E_i = 0$을 만족해 coordinate frame이 되므로, $\nabla$가 단순 partial derivative로 환원되는 coordinate system $(t^1, \ldots, t^n)$, 곧 *flat coordinate*가 국소적으로 존재한다는 결과로 이어진다.
 
 ---
 

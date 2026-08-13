@@ -82,7 +82,7 @@ $\overline{\mathcal{M}}_{g, n}(X, \beta)$ 위에는 두 가지 핵심 natural ma
 
 $$\mathrm{ev}_i: \overline{\mathcal{M}}_{g, n}(X, \beta) \rightarrow X,\qquad (C, p_\bullet, f) \mapsto f(p_i)$$
 
-**Forgetful map.** Domain의 marked points를 forget하면 $\overline{\mathcal{M}}_{g, n}(X, \beta) \rightarrow \overline{\mathcal{M}}_{g, n}$이며 (stabilization을 거쳐), $X$측 forgetful은 $\overline{\mathcal{M}}_{g, n}(X, \beta) \rightarrow \overline{\mathcal{M}}_{g, n-1}(X, \beta)$이다.
+**Forgetful map.** Map $f$를 forget하고 도메인만 남기면 $\overline{\mathcal{M}}_{g, n}(X, \beta) \rightarrow \overline{\mathcal{M}}_{g, n}$이며 (stabilization을 거쳐), marked point 하나를 forget하면 $\overline{\mathcal{M}}_{g, n}(X, \beta) \rightarrow \overline{\mathcal{M}}_{g, n-1}(X, \beta)$이다.
 
 **Cotangent line bundle (psi class).** $i$번째 marked point에서의 cotangent line의 first Chern class
 
@@ -97,16 +97,16 @@ $\overline{\mathcal{M}}_{g, n}(X, \beta)$의 *expected* (또는 *virtual*) dimen
 ::: 명제 5 (Expected dimension)
 $X$가 complex dimension $d$일 때
 
-$$\mathrm{vdim}_\mathbb{C}\, \overline{\mathcal{M}}_{g, n}(X, \beta) = \int_\beta c_1(TX) + (d - 3)(1 - g) + n$$
+$$\mathrm{vdim}_\mathbb{C} \overline{\mathcal{M}}_{g, n}(X, \beta) = \int_\beta c_1(TX) + (d - 3)(1 - g) + n$$
 
 이다.
 :::
 
-증명 sketch: deformation의 tangent space와 obstruction space의 차원은 deformation theory에서
+증명 sketch: deformation의 tangent space와 obstruction space의 차원의 차는 deformation theory에서
 
-$$\dim H^0(C, f^\ast TX(-\sum p_i)) - \dim H^1(C, f^\ast TX(-\sum p_i)) + \dim \mathrm{Def}(C, p_\bullet)$$
+$$\dim H^0(C, f^\ast TX) - \dim H^1(C, f^\ast TX) + \dim \mathrm{Def}(C, p_\bullet)$$
 
-으로 주어진다. Riemann-Roch on $C$를 사용하면 $\chi(f^\ast TX) = \int_\beta c_1(TX) + d(1-g)$이고, marked points의 $-\sum p_i$는 차원을 $-nd$만큼 감소시킨다. Prestable curve의 deformation 차원은 $3g - 3 + n$이다. 모두 더하면 위 공식이 나온다.
+으로 주어진다. Riemann-Roch on $C$를 사용하면 $\chi(f^\ast TX) = \int_\beta c_1(TX) + d(1-g)$이고, $n$-pointed prestable curve의 deformation 차원은 $3g - 3 + n$이다. 모두 더하면 위 공식이 나온다.
 
 $X$가 Calabi-Yau ($c_1 = 0$) 이고 $g = 0$, $n = 0$이면 $\mathrm{vdim} = d - 3$이므로, $d = 3$ (Calabi-Yau 3-fold)에서 $\mathrm{vdim} = 0$이 되어 *유한 개의 점*을 세는 enumerative problem이 된다.
 
@@ -122,7 +122,7 @@ $$[\overline{\mathcal{M}}_{g, n}(X, \beta)]^{\mathrm{vir}} \in H_{2 \mathrm{vdim
 Li-Tian, Behrend-Fantechi (algebraic case), Fukaya-Ono, Ruan, Siebert (symplectic case) 등에 의해, moduli space $\overline{\mathcal{M}}_{g, n}(X, \beta)$ 위에 *virtual fundamental class* $[\overline{\mathcal{M}}_{g, n}(X, \beta)]^{\mathrm{vir}}$가 잘 정의되며, expected dimension의 homology class를 이룬다.
 :::
 
-Virtual fundamental class의 정확한 construction은 매우 기술적이며, 본 글의 범위를 넘어선다 ([LT], [BF], [FO]). 핵심 idea: actual moduli space가 너무 큰 경우, *obstruction bundle*의 *Euler class*를 곱하여 expected dimension의 cycle을 인공적으로 만들어낸다. Smooth case에서는 $[\overline{\mathcal{M}}_{g, n}(X, \beta)]^{\mathrm{vir}} = [\overline{\mathcal{M}}_{g, n}(X, \beta)]$이다.
+Virtual fundamental class의 정확한 construction은 매우 기술적이며, 본 글의 범위를 넘어선다 ([LT], [BF], [FO]). 핵심 idea: actual moduli space가 너무 큰 경우, *obstruction bundle*의 *Euler class*를 곱하여 expected dimension의 cycle을 인공적으로 만들어낸다. Obstruction이 사라져 moduli space가 expected dimension의 smooth space가 되는 경우에는 $[\overline{\mathcal{M}}_{g, n}(X, \beta)]^{\mathrm{vir}} = [\overline{\mathcal{M}}_{g, n}(X, \beta)]$이다.
 
 Virtual fundamental class는 다음의 핵심 성질을 만족한다.
 
@@ -136,7 +136,7 @@ Virtual fundamental class는 다음의 핵심 성질을 만족한다.
 
 [§Gromov-Witten 불변량](/ko/math/symplectic_geometry/gromov_witten)에서 우리는 evaluation map $\mathrm{ev}_i$와 psi class $\psi_i$를 사용하여
 
-$$\langle \tau_{a_1}(\alpha_1), \ldots, \tau_{a_n}(\alpha_n) \rangle_{g, \beta}^X := \int_{[\overline{\mathcal{M}}_{g,n}(X,\beta)]^{\mathrm{vir}}} \prod_i \psi_i^{a_i}\, \mathrm{ev}_i^\ast \alpha_i$$
+$$\langle \tau_{a_1}(\alpha_1), \ldots, \tau_{a_n}(\alpha_n) \rangle_{g, \beta}^X := \int_{[\overline{\mathcal{M}}_{g,n}(X,\beta)]^{\mathrm{vir}}} \prod_i \psi_i^{a_i} \mathrm{ev}_i^\ast \alpha_i$$
 
 으로 *descendant Gromov-Witten invariant*를 정의한다. 이로부터 quantum cohomology 구조가 유도된다.
 

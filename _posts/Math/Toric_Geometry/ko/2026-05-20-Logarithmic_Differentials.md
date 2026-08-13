@@ -1,6 +1,6 @@
 ---
 title: "토릭 다양체 위의 로그 미분형식"
-description: "토릭 다양체 위에서 경계를 따라 로그 극점을 허용하는 로그 미분형식을 다루며, 캐릭터 격자를 통한 완전한 자명화로부터 캐논ical 클래스 공식과 표준 부피 형식을 유도한다."
+description: "토릭 다양체 위에서 경계를 따라 로그 극점을 허용하는 로그 미분형식을 다루며, 캐릭터 격자를 통한 완전한 자명화로부터 canonical class 공식과 표준 부피 형식을 유도한다."
 excerpt: "Fan으로부터 유도되는 logarithmic differential forms와 canonical class의 toric 표현"
 
 categories: [Math / Toric Geometry]
@@ -25,9 +25,9 @@ published: false
 
 $T_N$ 위에서는 $\x_i \neq 0$이므로 $\dd{\x_i}/\x_i$가 well-defined holomorphic 1-form이다. 이는 affine 좌표 $\dd{\x_i}$와 달리 torus action에 대해 invariant라는 결정적인 성질을 가진다. 구체적으로 $t \in T_N$의 action $\x_i \mapsto t_i \x_i$ 하에서
 
-$$t^\ast \!\left(\frac{\dd{\x_i}}{\x_i}\right) = \frac{\dd{(t_i \x_i)}}{t_i \x_i} = \frac{t_i \dd{\x_i}}{t_i \x_i} = \frac{\dd{\x_i}}{\x_i}$$
+$$t^\ast\left(\frac{\dd{\x_i}}{\x_i}\right) = \frac{\dd{(t_i \x_i)}}{t_i \x_i} = \frac{t_i \dd{\x_i}}{t_i \x_i} = \frac{\dd{\x_i}}{\x_i}$$
 
-이므로, 형식적으로 $d\log \x_i$로 적을 수 있는 이 1-form은 *multiplicative* 좌표계 $T_N$에 가장 자연스럽게 적응한 differential form이다.
+이므로, 형식적으로 $d\log \x_i$로 적을 수 있는 이 1-form은 *multiplicative* coordinate system $T_N$에 가장 자연스럽게 적응한 differential form이다.
 
 이를 lattice의 언어로 일반화하기 위해, 각 character $\rchi^m: T_N \rightarrow \mathbb{C}^\ast$ ($m \in M$)에 대해 logarithmic differential
 
@@ -65,16 +65,16 @@ $N$의 기저 $e_1, \ldots, e_n$과 dual 기저 $e_1^\ast, \ldots, e_n^\ast \in 
 
 역으로 임의의 1-form $\omega \in \Omega^1(T_N)$은 좌표 $\x_1, \ldots, \x_n$에 대해
 
-$$\omega = \sum_{i=1}^n f_i(\x) \dd{\x_i} = \sum_{i=1}^n (\x_i f_i(\x)) \, d\log \x_i$$
+$$\omega = \sum_{i=1}^n f_i(\x) \dd{\x_i} = \sum_{i=1}^n (\x_i f_i(\x)) d\log \x_i$$
 
-의 꼴로 유일하게 표현된다. $T_N$-invariance를 strong한 조건으로 풀어쓰면 모든 $t \in T_N$에 대해 $t^\ast \omega = \omega$이어야 하고, $t^\ast(d\log \x_i) = d\log \x_i$이므로 각 계수 $\x_i f_i(\x)$가 $T_N$-invariant function이어야 한다. 그런데 $T_N$ 위의 invariant regular function은 상수뿐이므로 ([§아핀 토릭 다양체, ⁋명제 10](/ko/math/toric_geometry/affine_toric_varieties#prop10)) $\x_i f_i(\x) = c_i \in \mathbb{C}$이고, 따라서
+의 꼴로 유일하게 표현된다. $T_N$-invariance를 strong한 조건으로 풀어쓰면 모든 $t \in T_N$에 대해 $t^\ast \omega = \omega$이어야 하고, $t^\ast(d\log \x_i) = d\log \x_i$이므로 각 계수 $\x_i f_i(\x)$가 $T_N$-invariant function이어야 한다. 그런데 [§아핀 토릭 다양체, ⁋명제 10](/ko/math/toric_geometry/affine_toric_varieties#prop10)의 $t \cdot \rchi^u = \rchi^u(t) \rchi^u$로부터 $T_N$ 위의 invariant regular function은 상수뿐이므로 $\x_i f_i(\x) = c_i \in \mathbb{C}$이고, 따라서
 
-$$\omega = \sum_{i=1}^n c_i \, d\log \x_i = \Psi\!\left(\sum_{i=1}^n c_i \, e_i^\ast\right)$$
+$$\omega = \sum_{i=1}^n c_i d\log \x_i = \Psi\left(\sum_{i=1}^n c_i e_i^\ast\right)$$
 
-가 되어 $\omega$가 $\Psi$의 image에 들어간다. $\Psi$의 단사성은 $\{d\log \x_i\}$가 $\mathbb{C}(T_N)$-module로서의 $\Omega^1(T_N)$의 free basis이므로 자명하다.
+가 되어 $\omega$가 $\Psi$의 image에 들어간다. $\Psi$의 단사성은 $\{d\log \x_i\}$가 $\mathcal{O}(T_N)$-module로서의 $\Omega^1(T_N)$의 free basis이므로 자명하다.
 :::
 
-위 명제는 단순히 차원만 맞춰주는 것이 아니라, $T_N$-invariant 1-form들이 character lattice의 lattice point들과 *공식적으로 같은 것*임을 알려준다. 따라서 $T_N$ 위에서 고려할 가장 자연스러운 top form은 임의의 $\mathbb{Z}$-기저 $m_1, \ldots, m_n$의 $M$에 대해
+위 명제는 단순히 차원만 맞춰주는 것이 아니라, $T_N$-invariant 1-form들이 character lattice의 lattice point들과 *공식적으로 같은 것*임을 알려준다. 따라서 $T_N$ 위에서 고려할 가장 자연스러운 top form은 $M$의 임의의 $\mathbb{Z}$-기저 $m_1, \ldots, m_n$에 대해
 
 $$\omega_{T_N} := d\log(\rchi^{m_1}) \wedge \cdots \wedge d\log(\rchi^{m_n}) \in \Omega^n(T_N)^{T_N}$$
 
@@ -101,7 +101,7 @@ $$\frac{\dd{(\x\y)}}{\x\y} \wedge \frac{\dd{\y}}{\y} = \left(\frac{\dd{\x}}{\x} 
 지금까지의 form들은 $T_N$ 위에서만 정의되었다. 우리는 이를 toric variety $X_\Sigma$ 전체로 확장하고자 하는데, character $\rchi^m$은 $X_\Sigma$ 위에서 *rational* function일 뿐이므로 ([§토러스 인자와 선다발, ⁋명제 3](/ko/math/toric_geometry/toric_divisors#prop3)) $d\log \rchi^m = d\rchi^m / \rchi^m$ 또한 일반적으로는 boundary $D_\rho$를 따라 pole을 가지는 rational form이 된다. 다행히 character의 logarithmic differential의 pole은 *가장 약한* 종류, 즉 logarithmic pole에 한정되며, 이러한 form 전체를 모은 sheaf가 fan으로부터 깔끔하게 기술된다.
 
 ::: 정의 5
-Smooth variety $X$ 위의 reduced effective divisor $D \subseteq X$가 *simple normal crossing divisor<sub>단순 정규교차 인자</sub>* (이하 *SNC divisor*)라는 것은, 각 점 $p \in X$ 주위에서 적당한 local coordinate $z_1, \ldots, z_n$을 잡았을 때 $D$의 local equation이 $z_1 \cdots z_k = 0$ ($0 \le k \le n$; $k = 0$인 경우 $D$가 $p$를 지나지 않음)의 형태로 표현되는 것을 말한다. 직관적으로, $D$를 이루는 component들이 각각 smooth이고 좌표평면처럼 transversally 만나는 경우이다.
+Smooth variety $X$ 위의 reduced effective divisor $D \subseteq X$가 *simple normal crossing divisor<sub>단순 정규교차 인자</sub>* (이하 *SNC divisor*)라는 것은, $D$의 각 irreducible component가 smooth이고, 각 점 $p \in X$ 주위에서 적당한 local coordinate $z_1, \ldots, z_n$을 잡았을 때 $D$의 local equation이 $z_1 \cdots z_k = 0$ ($0 \le k \le n$; $k = 0$인 경우 $D$가 $p$를 지나지 않음)의 형태로 표현되는 것을 말한다. 직관적으로, $D$를 이루는 component들이 각각 smooth이고 좌표평면처럼 transversally 만나는 경우이다.
 :::
 
 먼저 임의의 smooth variety와 SNC divisor에 대해 logarithmic pole만 허용한 form들의 sheaf를 정의한 뒤 (Saito-Deligne의 표준 정의), 이를 toric variety의 toric boundary에 적용한다.
@@ -109,7 +109,7 @@ Smooth variety $X$ 위의 reduced effective divisor $D \subseteq X$가 *simple n
 ::: 정의 6
 Smooth variety $X$와 [정의 5](#def5)의 SNC divisor $D \subseteq X$의 쌍 $(X, D)$에 대해, *logarithmic cotangent sheaf<sub>로그 코탄젠트 층</sub>* $\Omega^1_X(\log D)$는 $D$ 바깥에서 holomorphic이며 $D$를 따라서는 1차 이하의 극만 갖는 rational 1-form들로 이루어진 $\mathcal{O}_X$-module subsheaf이다. 추상적으로 affine open $U \subseteq X$에 대해
 
-$$\Omega^1_X(\log D)(U) = \{\omega \in \Omega^1_{\mathbb{C}(X)/\mathbb{C}}(U) \mid \omega \text{와 } \dd{\omega} \text{가 } U \text{ 위에서 } D\text{를 따라 1차 이하의 극을 가짐}\}$$
+$$\Omega^1_X(\log D)(U) = \{\omega \in \Omega^1_{\mathbb{C}(X)/\mathbb{C}} \mid \omega \text{와 } \dd{\omega} \text{가 } U \text{ 위에서 } D\text{를 따라 1차 이하의 극을 가짐}\}$$
 
 으로 주어진다. 국소적으로 $D = \{z_1 \cdots z_k = 0\}$이면 $\Omega^1_X(\log D)$는
 
@@ -140,7 +140,7 @@ $$\Omega^1_{X_\Sigma}(\log D) \cong M \otimes_\mathbb{Z} \mathcal{O}_{X_\Sigma}$
 ::: 증명
 먼저 각 $m \in M$에 대해 $d\log(\rchi^m)$이 $X_\Sigma$ 위의 global section of $\Omega^1_{X_\Sigma}(\log D)$임을 보인다. 이는 local에서 확인하면 충분하다. Smooth cone $\sigma \in \Sigma$에 대해 [§아핀 토릭 다양체, ⁋명제 9](/ko/math/toric_geometry/affine_toric_varieties#prop9)에 의해 $U_\sigma \cong \mathbb{C}^k \times (\mathbb{C}^\ast)^{n-k}$이고, $\sigma$의 ray들의 primitive generator $v_1, \ldots, v_k$를 $N$의 기저의 일부로 잡아 dual 기저 $\{v_1^\ast, \ldots, v_n^\ast\} \subseteq M$을 만들면 $U_\sigma$의 좌표가 $\x_i = \rchi^{v_i^\ast}$ ($i=1, \ldots, n$)로 주어지며 여기서 $\x_1, \ldots, \x_k$는 $\mathbb{C}$-값 좌표, $\x_{k+1}, \ldots, \x_n$는 $\mathbb{C}^\ast$-값 좌표이다. Boundary $D \cap U_\sigma$는 $\{\x_1 \x_2 \cdots \x_k = 0\}$이며 simple normal crossing이다. 임의의 $m = \sum_i a_i v_i^\ast \in M$에 대해
 
-$$d\log(\rchi^m) = d\log\!\left(\prod_i \x_i^{a_i}\right) = \sum_{i=1}^n a_i \, \frac{\dd{\x_i}}{\x_i}$$
+$$d\log(\rchi^m) = d\log\left(\prod_i \x_i^{a_i}\right) = \sum_{i=1}^n a_i \frac{\dd{\x_i}}{\x_i}$$
 
 이며 $\dd{\x_i}/\x_i$는 $\x_i = 0$을 따라 정확히 1차 pole을 갖는 logarithmic form이다 ($i \le k$인 경우). $i > k$인 경우에는 $\x_i \in \mathcal{O}_{U_\sigma}^\ast$이므로 $\dd{\x_i}/\x_i$는 $U_\sigma$ 위에서 regular하다. 따라서 $d\log(\rchi^m) \in \Omega^1(\log D)(U_\sigma)$.
 
@@ -151,7 +151,7 @@ $$\Phi: M \otimes_\mathbb{Z} \mathcal{O}_{X_\Sigma} \longrightarrow \Omega^1_{X_
 이 얻어진다. 이것이 isomorphism인 것은 각 $U_\sigma$ 위에서 확인하면 되는데, 위의 좌표에서 $U_\sigma$ 위의 $\Omega^1(\log D)$의 $\mathcal{O}_{U_\sigma}$-module 기저는 정확히 $\{\dd{\x_i}/\x_i\}_{i=1}^k \cup \{\dd{\x_j}\}_{j=k+1}^n$이며 ($\x_j$가 invertible이므로 $\dd{\x_j}$와 $\dd{\x_j}/\x_j$는 $\mathcal{O}_{U_\sigma}^\ast$ 배만큼 차이가 나며 같은 free module을 span한다), 이는 $\{d\log \rchi^{v_i^\ast}\}_{i=1}^n$과 동일하다. 따라서 $\Phi$는 각 affine chart 위에서 free $\mathcal{O}_{U_\sigma}$-module 사이의 동형이고, 이로부터 global isomorphism이 따라온다.
 :::
 
-이 명제는 두 가지 측면에서 매우 강한 결과이다. 첫째, [정의 6](#def6)의 logarithmic cotangent sheaf $\Omega^1_X(\log D)$는 일반적인 SNC pair $(X, D)$에 대해서는 결코 trivial bundle이 되지 않는다. Toric variety의 경우에만 boundary $D$가 character lattice $M$ 전체의 정보를 정확히 흡수해주어 $\Omega^1(\log D)$가 rank $n$의 trivial bundle이 되는 것이며, 이는 fan의 ray 구조가 $M$의 전 정보를 결정한다는 toric duality의 또 다른 표현이라 할 수 있다.
+이 명제는 두 가지 측면에서 매우 강한 결과이다. 첫째, [정의 6](#def6)의 logarithmic cotangent sheaf $\Omega^1_X(\log D)$는 일반적인 SNC pair $(X, D)$에 대해서는 trivial bundle이 아니다. Toric variety의 경우에만 boundary $D$가 character lattice $M$ 전체의 정보를 정확히 흡수해주어 $\Omega^1(\log D)$가 rank $n$의 trivial bundle이 되는 것이며, 이는 fan의 ray 구조가 $M$의 전 정보를 결정한다는 toric duality의 또 다른 표현이라 할 수 있다.
 
 둘째, 비교를 위해 $\Omega^1_{X_\Sigma}$ 자체를 보면 가령 $X_\Sigma = \mathbb{P}^n$의 경우 Euler sequence
 
@@ -172,7 +172,7 @@ $X_\Sigma = \mathbb{P}^n$의 경우 fan은 $N = \mathbb{Z}^n$의 standard 기저
 
 $$\Omega^1_{\mathbb{P}^n}(\log D) \cong \mathcal{O}_{\mathbb{P}^n}^{\oplus n};\qquad \text{기저: } \frac{\dd{\x_1}}{\x_1}, \ldots, \frac{\dd{\x_n}}{\x_n}$$
 
-이 된다. 한편 $e_0$에 대응하는 ray의 $d\log$인 $d\log(\rchi^{-e_1^\ast - \cdots - e_n^\ast}) = -\sum_i \dd{\x_i} / \x_i$가 위의 $n$개 기저의 음의 합으로 자동적으로 표현되는 것은 fan의 ray가 $M$의 rank를 초과해도 $M$ 자체가 결국 모든 logarithmic form들을 매개하는 것의 한 section이다.
+이 된다. 한편 $-e_1^\ast - \cdots - e_n^\ast \in M$의 logarithmic differential $d\log(\rchi^{-e_1^\ast - \cdots - e_n^\ast}) = -\sum_i \dd{\x_i} / \x_i$가 위의 $n$개 기저의 음의 합으로 자동적으로 표현되는 것은, fan의 ray 개수 $n+1$이 $M$의 rank를 초과해도 $M$ 자체가 결국 모든 logarithmic form들을 매개한다는 것을 보여준다.
 :::
 
 ::: 예시 11
@@ -198,7 +198,7 @@ $$\Omega^1_{\mathbb{P}^1 \times \mathbb{P}^1}(\log D) = \pr_1^\ast \Omega^1_{\ma
 ::: 명제 13
 Smooth toric variety $X_\Sigma$에 대해, $M$의 임의의 $\mathbb{Z}$-기저 $m_1, \ldots, m_n$를 잡으면 top form
 
-$$\omega_\Sigma := d\log(\rchi^{m_1}) \wedge \cdots \wedge d\log(\rchi^{m_n}) \in \Omega^n(X_\Sigma)(\log D)$$
+$$\omega_\Sigma := d\log(\rchi^{m_1}) \wedge \cdots \wedge d\log(\rchi^{m_n}) \in \Omega^n_{X_\Sigma}(\log D)(X_\Sigma)$$
 
 는 $\Omega^n_{X_\Sigma}(\log D)$의 nowhere-vanishing global section이며, 기저 선택에 대해 부호를 제외하고 canonical하다. 따라서
 
@@ -232,7 +232,7 @@ $\Omega^n_{X_\Sigma}$는 $\omega_X = \mathcal{O}(K_X)$이므로 ([\[대수다양
 
 이 경우 *Poincaré residue* 
 
-$$\operatorname{Res}_Y\!\left(\frac{\omega_\Sigma}{f}\right) \in H^0(Y, \omega_Y)$$
+$$\operatorname{Res}_Y\left(\frac{\omega_\Sigma}{f}\right) \in H^0(Y, \omega_Y)$$
 
 가 정의되며, 이것이 $Y$ 위의 nowhere-vanishing canonical volume form을 정의한다. 핵심은 $\omega_\Sigma$가 [명제 13](#prop13)에 의해 $\divisor(\omega_\Sigma) = -D$를 가지므로, $f$가 anticanonical, 즉 $\divisor(f) \sim D$인 한 $\omega_\Sigma / f$가 $Y$를 따라 정확히 1차 pole을 갖는 rational $n$-form이라는 점이다. Residue map은 이러한 simple pole form을 hypersurface 위의 holomorphic $(n-1)$-form으로 떨어뜨려준다.
 

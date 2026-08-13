@@ -49,7 +49,7 @@ $$a + c \equiv b + d, \qquad a - c \equiv b - d, \qquad ac \equiv bd \pmod n$$
 :::
 
 ::: 증명
-$n \mid (a - b)$이고 $n \mid (c - d)$이다. 덧셈은 $(a + c) - (b + d) = (a - b) + (c - d)$가 선형결합 성질로 $n$의 배수임에서 따른다. 곱셈은 $ac - bd = a(c - d) + d(a - b)$가 역시 $n$의 배수임에서 따른다. 거듭제곱은 $ac \equiv bd$를 반복 적용하면 된다.
+$n \mid (a - b)$이고 $n \mid (c - d)$이다. 덧셈과 뺄셈은 $(a + c) - (b + d) = (a - b) + (c - d)$와 $(a - c) - (b - d) = (a - b) - (c - d)$가 선형결합 성질로 $n$의 배수임에서 따른다. 곱셈은 $ac - bd = a(c - d) + d(a - b)$가 역시 $n$의 배수임에서 따른다. 거듭제곱은 $ac \equiv bd$를 반복 적용하면 된다.
 :::
 
 ::: 예시 4
@@ -72,9 +72,9 @@ $$2^1 \equiv 2,\quad 2^2 \equiv 4,\quad 2^3 \equiv 3,\quad 2^4 \equiv 1 \pmod 5$
 정수 $a$의 법 $n$에 대한 *residue class<sub>잉여류</sub>*는 $a$와 합동인 모든 정수의 집합 $[a] = \{a + kn \mid k \in \mathbb{Z}\}$이다. 서로 다른 residue class는 정확히 $[0], [1], \ldots, [n-1]$의 $n$개이며, 이들의 집합을 $\mathbb{Z}/n\mathbb{Z}$로 적는다.
 :::
 
-Residue class는 정수 전체를 $n$개의 줄로 나눈 것으로 볼 수 있다. 정수 $a$를 $n$으로 나눈 나머지를 $r$이라 하면 $a \equiv r \pmod n$이므로 $[a] = [r]$이고, $0 \le r \le n-1$인 $r$이 유일하게 결정되므로 $[0], [1], \ldots, [n-1]$은 서로 다르고 모든 residue class를 빠짐없이 준다. 한 residue class에서 아무 정수나 골라 그 류를 대표시킬 수 있는데, 이렇게 고른 수를 그 residue class의 *대표원<sub>representative</sub>*이라 한다. 예컨대 법 $5$에서 $[2] = [7] = [-3] = [12]$이며, 이 중 어느 것을 써도 같은 류를 가리킨다.
+Residue class는 정수 전체를 $n$개의 줄로 나눈 것으로 볼 수 있다. 정수 $a$를 $n$으로 나눈 나머지를 $r$이라 하면 $a \equiv r \pmod n$이므로 $[a] = [r]$이고, $0 \le r \le n-1$인 $r$이 유일하게 결정되므로 $[0], [1], \ldots, [n-1]$은 서로 다르고 모든 residue class를 빠짐없이 준다. 한 residue class에서 아무 정수나 골라 그 류를 대표시킬 수 있는데, 이렇게 고른 수를 그 residue class의 *representative<sub>대표원</sub>*라 한다. 가령 법 $5$에서 $[2] = [7] = [-3] = [12]$이며, 이 중 어느 것을 써도 같은 류를 가리킨다.
 
-명제 3은 residue class 위에 $[a] + [b] = [a + b]$, $[a][b] = [ab]$로 덧셈과 곱셈이 잘 정의됨을 뜻한다. 여기서 "잘 정의됨"이란 결과가 representative의 선택에 의존하지 않음을 말한다. 만약 $[a] = [a']$이고 $[b] = [b']$이면 $a \equiv a'$, $b \equiv b' \pmod n$이고, 명제 3에 의해
+명제 3은 residue class 위에 $[a] + [b] = [a + b]$, $[a][b] = [ab]$로 덧셈과 곱셈이 잘 정의됨을 뜻한다. 여기서 "잘 정의됨"이란 결과가 representative의 선택에 의존하지 않음을 말한다. 만일 $[a] = [a']$이고 $[b] = [b']$이면 $a \equiv a'$, $b \equiv b' \pmod n$이고, 명제 3에 의해
 
 $$a + b \equiv a' + b', \qquad ab \equiv a'b' \pmod n$$
 
@@ -84,10 +84,10 @@ $$a + b \equiv a' + b', \qquad ab \equiv a'b' \pmod n$$
 
 ## 소거와 곱셈 역원
 
-등식과 달리 합동에서는 같은 수로 나누는 소거가 항상 되지는 않는다. 예컨대 $2\cdot 3 \equiv 2 \cdot 0 \pmod 6$이지만 $3 \not\equiv 0 \pmod 6$이다. 소거가 언제 허용되는지는 Bézout 항등식이 결정한다.
+등식과 달리 합동에서는 같은 수로 나누는 소거가 항상 되지는 않는다. 가령 $2\cdot 3 \equiv 2 \cdot 0 \pmod 6$이지만 $3 \not\equiv 0 \pmod 6$이다. 소거가 언제 허용되는지는 Bézout 항등식이 결정한다.
 
 ::: 명제 6 (소거법칙)
-$\gcd(c, n) = 1$이면, $ca \equiv cb \pmod n$에서 $a \equiv b \pmod n$을 소거할 수 있다.
+$\gcd(c, n) = 1$이면 $ca \equiv cb \pmod n$에서 $c$를 소거하여 $a \equiv b \pmod n$을 얻는다.
 :::
 
 ::: 증명
@@ -104,7 +104,7 @@ a - b &= (cx + ny)(a - b) \\
 소거가 가능하다는 것은 곱셈에 대한 역원이 존재한다는 것과 같은 이야기이다.
 
 ::: 명제 7
-$a$가 법 $n$에 대해 곱셈 역원을 가진다 — 즉 $ax \equiv 1 \pmod n$인 $x$가 존재한다 — 는 것은 $\gcd(a, n) = 1$인 것과 동치이다.
+$a$가 법 $n$에 대해 곱셈 역원을 가진다는 것, 즉 $ax \equiv 1 \pmod n$인 $x$가 존재한다는 것은 $\gcd(a, n) = 1$인 것과 동치이다.
 :::
 
 ::: 증명
@@ -122,7 +122,7 @@ $\gcd(a, n) = 1$이면 $ax \equiv 1 \pmod n$을 만족하는 residue class $[x]$
 :::
 
 ::: 증명
-$ax \equiv 1$이고 $ax' \equiv 1 \pmod n$이라 하자. 그러면
+$ax \equiv 1$이고 $ax' \equiv 1 \pmod n$이라 하자. 그럼
 
 $$ax \equiv ax' \pmod n$$
 
@@ -134,15 +134,15 @@ $$ax \equiv ax' \pmod n$$
 ## 예시와 계산
 
 ::: 예시 9 (역원의 계산)
-$17$의 법 $23$에서의 역원을 구하자. $\gcd(17, 23) = 1$이므로 역원이 존재한다. 확장 유클리드 호제법으로 $23$과 $17$에 대한 Bézout 계수를 찾는다:
+$17$의 법 $23$에서의 역원을 구하자. $\gcd(17, 23) = 1$이므로 역원이 존재한다. 확장 유클리드 호제법으로 $23$과 $17$에 대한 Bézout 계수를 찾는다. 호제법은
 
 $$\begin{aligned}
 23 &= 1\cdot 17 + 6, \\
 17 &= 2\cdot 6 + 5, \\
-6 &= 1\cdot 5 + 1.
+6 &= 1\cdot 5 + 1
 \end{aligned}$$
 
-거꾸로 거슬러 올라가면
+이고, 거꾸로 거슬러 올라가면
 
 $$\begin{aligned}
 1 &= 6 - 1\cdot 5 \\
@@ -164,14 +164,14 @@ $$x \equiv 19\cdot 5 = 95 = 4\cdot 23 + 3 \equiv 3 \pmod{23}$$
 :::
 
 ::: 예시 11 (큰 거듭제곱의 끝자리)
-$3^{1000}$의 마지막 두 자리, 곧 $3^{1000} \bmod 100$을 구하자. 거듭제곱의 주기를 찾는다:
+$3^{1000}$의 마지막 두 자리, 곧 $3^{1000} \bmod 100$을 구하자. 거듭제곱의 주기를 찾자. 차례로 계산하면
 
 $$\begin{aligned}
 3^1 &\equiv 3, & 3^2 &\equiv 9, & 3^3 &\equiv 27, & 3^4 &\equiv 81 \pmod{100}, \\
-3^5 &\equiv 43, & 3^{10} &\equiv 43^2 = 1849 \equiv 49, & 3^{20} &\equiv 49^2 = 2401 \equiv 1 \pmod{100}.
+3^5 &\equiv 43, & 3^{10} &\equiv 43^2 = 1849 \equiv 49, & 3^{20} &\equiv 49^2 = 2401 \equiv 1 \pmod{100}
 \end{aligned}$$
 
-따라서 $3^{20} \equiv 1 \pmod{100}$이고, $1000 = 20\cdot 50$이므로
+이다. 따라서 $3^{20} \equiv 1 \pmod{100}$이고, $1000 = 20\cdot 50$이므로
 
 $$3^{1000} = (3^{20})^{50} \equiv 1^{50} = 1 \pmod{100}$$
 

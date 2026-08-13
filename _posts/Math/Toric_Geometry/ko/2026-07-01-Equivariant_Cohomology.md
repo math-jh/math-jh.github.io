@@ -93,7 +93,7 @@ $$q^{-1}(U)=EG\times_G(U\times G)\cong U\times EG$$
 
 이다. 마지막 동형은 $[e,(u,g)]\mapsto(u,e\cdot g)$로 주어지며 ($G$가 두 번째 성분에서 simply transitive하게 작용하므로 잘 정의된 homeomorphism이다), 따라서 $q:X_G\rightarrow X/G$는 fiber $EG$를 갖는 fiber bundle이다. $EG$가 contractible이므로 이 bundle은 fiber가 contractible하다. Contractible fiber를 갖는 fiber bundle은 Dold의 정리에 의해 paracompact base 위에서 homotopy equivalence이므로 ([tD] §6), $q$는 homotopy equivalence이고
 
-$$H_G^\bullet(X)=H^\bullet(X_G)\xrightarrow[\cong]{q^\ast}H^\bullet(X/G)$$
+$$H^\bullet(X/G)\xrightarrow[\cong]{q^\ast}H^\bullet(X_G)=H_G^\bullet(X)$$
 
 가 성립한다.
 :::
@@ -233,7 +233,7 @@ $$H_T^\bullet(X)\otimes_{H_T^\bullet(\mathrm{pt})}\mathbb{Z}\xrightarrow{\cong}H
 
 $$E_2^{p,q}=H^p\big(BT;H^q(X)\big)\Longrightarrow H_T^{p+q}(X)$$
 
-를 생각하면, equivariant formality는 이 spectral sequence가 $E_2$ 면에서 collapse하는 것과 동치이다. 이 경우 $H_T^\bullet(X)$은 $H^\bullet(BT)$-module로서 $H^\bullet(X)\otimes_{\mathbb{Z}}H^\bullet(BT)$와 동형이 된다. Cohomology가 짝수 degree에만 있는 공간 (가령 cell이 모두 짝수 차원인 CW complex로, $\mathbb{P}^n$이나 일반적인 smooth projective toric variety가 이에 속한다) 은 degree의 parity 때문에 미분이 모두 사라져 항상 equivariantly formal이다. 이 freeness가 fixed point로의 restriction을 거의 단사로 만들어, 다음 글에서 다룰 localization 정리를 통한 계산을 가능하게 한다.
+를 생각하면, equivariant formality는 이 spectral sequence가 $E_2$ 면에서 collapse함을 함의하며, $H^\bullet(X)$가 free $\mathbb{Z}$-module일 때에는 그 역도 성립한다. 이 경우 $H_T^\bullet(X)$은 $H^\bullet(BT)$-module로서 $H^\bullet(X)\otimes_{\mathbb{Z}}H^\bullet(BT)$와 동형이 된다. Cohomology가 짝수 degree에만 있는 공간 (가령 cell이 모두 짝수 차원인 CW complex로, $\mathbb{P}^n$이나 일반적인 smooth projective toric variety가 이에 속한다) 은 degree의 parity 때문에 미분이 모두 사라져 항상 equivariantly formal이다. 이 freeness가 fixed point로의 restriction을 거의 단사로 만들어, 다음 글에서 다룰 localization 정리를 통한 계산을 가능하게 한다.
 
 ::: 참고 9
 $X$가 smooth variety이고 $G$가 compact Lie group으로 매끄럽게 작용할 때는, 위의 위상적 Borel 구성과 같은 $H_G^\bullet(X;\mathbb{R})$을 differential form으로 계산하는 model이 존재한다. Cartan model에서는 equivariant differential form의 복합체

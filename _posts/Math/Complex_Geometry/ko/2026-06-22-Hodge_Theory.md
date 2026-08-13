@@ -86,7 +86,7 @@ $$
 로 적는다.
 :::
 
-작용소 $\Delta_d$는 degree를 보존하는 이차 미분작용소이며, $d$와 $d^\ast$가 서로 수반이므로 $L^2$-내적에 대해 self-adjoint가다. 곧 $(\Delta_d\alpha, \beta) = (\alpha, \Delta_d\beta)$이다. 조화형식은 단순히 $\Delta_d$로 죽는 형식인데, 콤팩트성 덕분에 이 조건이 훨씬 강한 조건과 동치가 된다.
+작용소 $\Delta_d$는 degree를 보존하는 이차 미분작용소이며, $d$와 $d^\ast$가 서로 수반이므로 $L^2$-내적에 대해 self-adjoint이다. 곧 $(\Delta_d\alpha, \beta) = (\alpha, \Delta_d\beta)$이다. 조화형식은 단순히 $\Delta_d$로 죽는 형식인데, 콤팩트성 덕분에 이 조건이 훨씬 강한 조건과 동치가 된다.
 
 ::: 명제 5
 콤팩트 지향 Riemannian manifold $M$ 위의 $k$-형식 $\alpha$에 대하여 다음이 동치이다.
@@ -142,7 +142,7 @@ $$
 
 을 얻는다.
 
-이 분해로부터 cohomology와의 동형을 끌어낸다. 닫힌 $k$-형식 $\alpha$를 위 분해로 $\alpha = h + \dd{\eta} + d^\ast\zeta$로 쓰면, $\dd{\alpha} = 0$이고 $\dd{h} = 0$ (조화는 닫힘), $\dd{(\dd{\eta})} = 0$이므로 $\dd{(d^\ast\zeta)} = 0$이다. 그러면 $0 = (d d^\ast\zeta, \zeta) = (d^\ast\zeta, d^\ast\zeta) = \lVert d^\ast\zeta \rVert^2$이 되어 $d^\ast\zeta = 0$이다. 따라서 닫힌형식은 $\alpha = h + \dd{\eta}$ 꼴, 곧 조화 부분과 완전 부분의 합으로만 쓰인다. 이는 cohomology class $[\alpha] = [h]$가 유일한 조화 대표 $h$를 가짐을 뜻한다. 존재는 방금 보인 분해가 주고, 유일성은 두 조화형식이 cohomology에서 같으면 그 차 $h_1 - h_2 = \dd{\beta}$가 조화이자 완전형식인데, $(\dd{\beta}, \dd{\beta}) = (\beta, d^\ast \dd{\beta})$에서 $d^\ast(\dd{\beta}) = \Delta_d(\dd{\beta}) - d d^\ast \dd{\beta}$를 따져 $\Delta_d(\dd{\beta})=0$이고 $d^\ast(\dd{\beta})=0$이면 $(\dd{\beta},\dd{\beta})=(\beta, d^\ast \dd{\beta})=0$, 곧 $\dd{\beta} = 0$이 되어 두 대표가 같음에서 나온다. 따라서 $[\alpha] \mapsto h$가 잘 정의된 선형동형 $H^k_{\mathrm{dR}}(M, \mathbb{R}) \cong \mathcal{H}^k(M)$을 준다.
+이 분해로부터 cohomology와의 동형을 끌어낸다. 닫힌 $k$-형식 $\alpha$를 위 분해로 $\alpha = h + \dd{\eta} + d^\ast\zeta$로 쓰면, $\dd{\alpha} = 0$이고 $\dd{h} = 0$ (조화는 닫힘), $\dd{(\dd{\eta})} = 0$이므로 $\dd{(d^\ast\zeta)} = 0$이다. 그러면 $0 = (d d^\ast\zeta, \zeta) = (d^\ast\zeta, d^\ast\zeta) = \lVert d^\ast\zeta \rVert^2$이 되어 $d^\ast\zeta = 0$이다. 따라서 닫힌형식은 $\alpha = h + \dd{\eta}$ 꼴, 곧 조화 부분과 완전 부분의 합으로만 쓰인다. 이는 cohomology class $[\alpha] = [h]$가 유일한 조화 대표 $h$를 가짐을 뜻한다. 존재는 방금 보인 분해가 주고, 유일성은 두 조화형식이 cohomology에서 같으면 그 차 $h_1 - h_2 = \dd{\beta}$가 조화이자 완전형식인데, 조화형식이므로 [명제 5](#prop5)에 의해 $d^\ast(\dd{\beta}) = 0$이고, 따라서 $(\dd{\beta}, \dd{\beta}) = (\beta, d^\ast \dd{\beta}) = 0$, 곧 $\dd{\beta} = 0$이 되어 두 대표가 같음에서 나온다. 따라서 $[\alpha] \mapsto h$가 잘 정의된 선형동형 $H^k_{\mathrm{dR}}(M, \mathbb{R}) \cong \mathcal{H}^k(M)$을 준다.
 :::
 
 Hodge 정리는 위상적 불변량인 de Rham cohomology를 해석적·계량적 대상인 조화형식으로 실현한다. Cohomology class라는 형식들의 무한차원 affine 공간이, 계량을 하나 정하는 순간 유한차원의 유일한 점 $\mathcal{H}^k$로 응축되는 것이다. 이 정리는 임의의 콤팩트 지향 Riemannian manifold에서 성립하며, 복소구조나 Kähler 조건을 전혀 요구하지 않는다. Complex manifold에서는 같은 논법이 $\bar\partial$에 대해서도 작동하여, $\Delta_{\bar\partial} = \bar\partial\bar\partial^\ast + \bar\partial^\ast\bar\partial$의 kernel $\mathcal{H}^{p,q}_{\bar\partial}$가 Dolbeault cohomology를 실현한다. 곧 콤팩트 Hermitian manifold에서 $H^{p,q}_{\bar\partial}(X) \cong \mathcal{H}^{p,q}_{\bar\partial}(X)$가 성립한다. 여기서 $\Delta_d$와 $\Delta_{\bar\partial}$는 서로 무관한 작용소이며, 이 둘을 묶는 것이 바로 Kähler 조건이다.
@@ -174,7 +174,7 @@ $$
 :::
 
 ::: 증명
-Kähler 항등식 ([§Kähler 다양체, ⁋정리 12](/ko/math/complex_geometry/kahler_manifolds#thm12)) $[\Lambda, \bar\partial] = -i\,\partial^\ast$, $[\Lambda, \partial] = i\,\bar\partial^\ast$에서 출발한다. 둘째 항등식을 수반으로 옮기면 $\partial^\ast = i[\bar\partial, L]$ 류의 동반관계가 따라오나, 직접 계산에는 위 두 식과 $\partial^\ast = i[\Lambda, \bar\partial]$의 부호만 쓰면 충분하다.
+Kähler 항등식 ([§Kähler 다양체, ⁋정리 12](/ko/math/complex_geometry/kahler_manifolds#thm12)) $[\Lambda, \bar\partial] = -i\,\partial^\ast$, $[\Lambda, \partial] = i\,\bar\partial^\ast$에서 출발한다. 둘째 항등식을 수반으로 옮기면 $[\partial^\ast, L] = -i\bar\partial$ 류의 동반관계가 따라오나, 직접 계산에는 위 두 식과 $\partial^\ast = i[\Lambda, \bar\partial]$의 부호만 쓰면 충분하다.
 
 먼저 $\Delta_\partial = \Delta_{\bar\partial}$를 본다. $\partial^\ast = i[\Lambda, \bar\partial] = i(\Lambda\bar\partial - \bar\partial\Lambda)$이므로
 

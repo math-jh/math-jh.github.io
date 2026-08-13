@@ -74,7 +74,7 @@ $$\Ext_{A_\mathfrak{p}}^{n+1}(A_\mathfrak{p}/JA_\mathfrak{p},M_\mathfrak{p})\con
 이다. 따라서 다시 [§호몰로지 차원, ⁋따름정리 5](/ko/math/commutative_algebra/homological_dimension#cor5)에 의하여 $\operatorname{injdim}_{A_\mathfrak{p}}(M_\mathfrak{p})\leq n$이다. $A$가 Gorenstein이면 $M=A$에 대하여 $\operatorname{injdim}_{A_\mathfrak{p}}A_\mathfrak{p}\leq\operatorname{injdim}_AA<\infty$이고, $A_\mathfrak{p}$는 Noetherian local ring이므로 ([§국소화, ⁋따름정리 9](/ko/math/commutative_algebra/localization#cor9)) Gorenstein이다.
 :::
 
-반대로, injective dimension은 prime ideal의 chain을 따라 올라갈 때 한 단계마다 적어도 $1$씩 커진다. 이 강하 성질이 다음 절에서 Gorenstein ring의 차원과 depth를 잇는 열쇠가 된다.
+반대로, injective dimension은 prime ideal의 chain을 따라 올라갈 때 한 단계마다 적어도 $1$씩 커진다. 이 성질이 아래에서 Gorenstein ring의 차원과 depth를 잇는 열쇠가 된다.
 
 ::: 보조정리 5
 Noetherian local ring $(A,\mathfrak{m})$ 위의 $0$이 아닌 finitely generated $A$-module $M$과 prime ideal $\mathfrak{p}\subsetneq\mathfrak{m}$, 그리고 정수 $i$에 대하여, $\Ext_{A_\mathfrak{p}}^i(\kappa(\mathfrak{p}),M_\mathfrak{p})\neq 0$이면 $\operatorname{injdim}_AM\geq i+1$이다. 여기서 $\kappa(\mathfrak{p})=A_\mathfrak{p}/\mathfrak{p}A_\mathfrak{p}$이다.
@@ -207,9 +207,9 @@ Socle이 $1$차원이라는 조건은 $A$가 유일한 minimal한 $0$이 아닌 
 
 3. $\mathbb{K}[[t]]$의 subring $A_1=\mathbb{K}[[t^3,t^4]]$와 $A_2=\mathbb{K}[[t^3,t^4,t^5]]$을 생각하자. 두 ring 모두 $1$차원 Noetherian local domain이다. $t^3$이 domain의 $0$이 아닌 원소라 $A_i$-regular이고, 아래에서 보듯 $A_i/(t^3)$이 유한한 $\mathbb{K}$-차원을 가지므로 $(t^3)$은 $\mathfrak{m}$-primary, 곧 $\dim A_i=1$이다. Domain이라 $\operatorname{depth}A_i\geq 1$이므로 [§Cohen-Macaulay 환, ⁋예시 7](/ko/math/commutative_algebra/cohen_macaulay_rings#ex7)의 넷째 판정에 의하여 $A_i$는 Cohen--Macaulay이다. [정리 8](#thm8)에 의하여 $A_i$가 Gorenstein인 것은 Artinian local ring $A_i/(t^3)$이 Gorenstein인 것과 동치이므로, 후자에 [정리 10](#thm10)의 socle 판정을 적용한다.
 
-  $A_1$은 semigroup $\langle 3,4\rangle=\{0,3,4,6,7,8,\ldots\}$의 원소 $s$에 대한 $t^s$들을 $\mathbb{K}$-basis로 가지며, $t^3A_1=\{t^{3+s}\mid s\in\langle 3,4\rangle\}$을 법으로 하면 $\langle 3,4\rangle$에서 $3+\langle 3,4\rangle$을 뺀 나머지가 $\{0,4,8\}$이므로 $A_1/(t^3)$은 $\{1,t^4,t^8\}$을 basis로 갖는다. 그 maximal ideal은 $t^3=0$이라 $t^4$의 상으로 생성되고, $t^4\cdot t^4=t^8\neq 0$이지만 $t^4\cdot t^8=t^{12}=0$이므로 socle은 $t^8$의 상으로 이루어진 $1$차원이다. 따라서 $A_1/(t^3)$은 Gorenstein이고 $A_1$도 Gorenstein이다.
+  $A_1$은 semigroup $\langle 3,4\rangle=\{0,3,4,6,7,8,\ldots\}$의 원소 $s$에 대한 $t^s$들을 $\mathbb{K}$-basis로 가지며, $t^3A_1$이 $\{t^{3+s}\mid s\in\langle 3,4\rangle\}$을 $\mathbb{K}$-basis로 가지므로 이를 법으로 하면 $\langle 3,4\rangle$에서 $3+\langle 3,4\rangle$을 뺀 나머지가 $\{0,4,8\}$이므로 $A_1/(t^3)$은 $\{1,t^4,t^8\}$을 basis로 갖는다. 그 maximal ideal은 $t^3=0$이라 $t^4$의 상으로 생성되고, $t^4\cdot t^4=t^8\neq 0$이지만 $t^4\cdot t^8=t^{12}=0$이므로 socle은 $t^8$의 상으로 이루어진 $1$차원이다. 따라서 $A_1/(t^3)$은 Gorenstein이고 $A_1$도 Gorenstein이다.
 
-  $A_2$는 semigroup $\langle 3,4,5\rangle=\{0,3,4,5,6,\ldots\}$로부터 같은 방식으로 $A_2/(t^3)=\{1,t^4,t^5\}$을 얻는다. 이번에는 $t^4\cdot t^4=t^8=t^3t^5\in(t^3)$이라 $0$이고 마찬가지로 $t^4\cdot t^5=t^9=0$, $t^5\cdot t^5=t^{10}=0$이므로 $t^4$과 $t^5$의 상이 모두 maximal ideal에 의해 소멸된다. 곧 socle은 $2$차원이고, [정리 10](#thm10)에 의하여 $A_2/(t^3)$은 Gorenstein이 아니므로 $A_2$도 Gorenstein이 아니다. 두 monomial curve $A_1$과 $A_2$는 모두 $1$차원 Cohen--Macaulay local domain이면서 Gorenstein 여부에서 갈린다.
+  $A_2$는 semigroup $\langle 3,4,5\rangle=\{0,3,4,5,6,\ldots\}$로부터 같은 방식으로 $\{1,t^4,t^5\}$을 basis로 갖는 $A_2/(t^3)$을 얻는다. 이번에는 $t^4\cdot t^4=t^8=t^3t^5\in(t^3)$이라 $0$이고 마찬가지로 $t^4\cdot t^5=t^9=0$, $t^5\cdot t^5=t^{10}=0$이므로 $t^4$과 $t^5$의 상이 모두 maximal ideal에 의해 소멸된다. 곧 socle은 $2$차원이고, [정리 10](#thm10)에 의하여 $A_2/(t^3)$은 Gorenstein이 아니므로 $A_2$도 Gorenstein이 아니다. 두 monomial curve $A_1$과 $A_2$는 모두 $1$차원 Cohen--Macaulay local domain이면서 Gorenstein 여부에서 갈린다.
 :::
 
 Local ring의 depth와 차원, 그리고 이 글의 duality를 하나의 언어로 엮는 local cohomology가 이 여정의 다음 장을 이룬다.

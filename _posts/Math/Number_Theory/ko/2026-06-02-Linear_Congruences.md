@@ -34,13 +34,13 @@ ax - b &= ny \\
 ax - ny &= b
 \end{aligned}$$
 
-가 성립한다는 것과 동치이다. 좌변 $ax - ny$가 $x, y$를 정수 전체에 걸쳐 움직일 때 취하는 값 전체는 $\gcd(a, n) = d$의 배수 전체와 정확히 일치하므로 ([§유클리드 호제법과 Bézout 항등식, ⁋따름정리 4](/ko/math/number_theory/euclidean_algorithm#cor4)), 위 방정식이 풀릴 필요충분조건은 $d \mid b$이다.
+가 성립한다는 것과 동치이다. 좌변 $ax - ny$가 $x, y$를 정수 전체에 걸쳐 움직일 때 취하는 값 전체는 $\gcd(a, n) = d$의 배수 전체와 정확히 일치하므로 ([§유클리드 호제법과 Bézout 항등식, ⁋명제 5](/ko/math/number_theory/euclidean_algorithm#prop5)), 위 방정식이 풀릴 필요충분조건은 $d \mid b$이다.
 
 이제 $d \mid b$라 하고 $a = da'$, $n = dn'$, $b = db'$로 쓰자. 이때 $\gcd(a', n') = 1$이며, $ax \equiv b \pmod n$의 양변과 법을 공통인수 $d$로 나누면
 
 $$a'x \equiv b' \pmod{n'}$$
 
-과 동치가 된다 (합동식을 그 법과 서로소가 아닌 공약수로 약분할 때 법도 함께 나눠야 함에 주의한다). $\gcd(a', n') = 1$이므로 $a'$은 법 $n'$에 대해 곱셈 역원 $(a')^{-1}$을 가지고 ([§합동식, ⁋명제 7](/ko/math/number_theory/congruences#prop7)), 양변에 그것을 곱하면
+과 동치가 된다. (뒤의 [명제 7](#prop7)) 합동식을 그 법과 서로소가 아닌 공약수로 약분할 때 법도 함께 나눠야 함에 주의한다. $\gcd(a', n') = 1$이므로 $a'$은 법 $n'$에 대해 곱셈 역원 $(a')^{-1}$을 가지고 ([§합동식, ⁋명제 7](/ko/math/number_theory/congruences#prop7)), 양변에 그것을 곱하면
 
 $$x \equiv (a')^{-1} b' \pmod{n'}$$
 
@@ -117,7 +117,7 @@ $$x \equiv 9 \pmod{10}$$
 ::: 명제 6 (해 집합의 구조)
 $d = \gcd(a, n)$이고 $d \mid b$라 하자. $x_0$이 $ax \equiv b \pmod n$의 한 정수해이면, 정수해 전체는
 
-$$x \equiv x_0 + \frac{n}{d}\,k \pmod n \qquad (k = 0, 1, \ldots, d-1)$$
+$$x \equiv x_0 + \frac{n}{d}k \pmod n \qquad (k = 0, 1, \ldots, d-1)$$
 
 로 주어지며, 이것이 정리 1이 말하는 $d$개의 coset이다.
 :::
@@ -130,12 +130,12 @@ dn' &\mid da'(x - x_0) \\
 n' &\mid a'(x - x_0)
 \end{aligned}$$
 
-이고, $\gcd(a', n') = 1$이므로 $n' \mid x - x_0$이다 ([§유클리드 호제법과 Bézout 항등식, ⁋따름정리 4](/ko/math/number_theory/euclidean_algorithm#cor4)에서 따르는 Euclid 보조정리). 곧 $x = x_0 + n' k = x_0 + (n/d)k$ 꼴이며, 역으로 이런 모든 $x$가 $a(x - x_0) = a n' k = a' n k$를 만족해 해가 된다. 법 $n$ 아래에서 $k$와 $k + d$는 같은 coset을 주므로 ($(n/d)(k+d) = (n/d)k + n$), 서로 다른 해는 $k = 0, 1, \ldots, d-1$의 $d$개이다.
+이고, $\gcd(a', n') = 1$이므로 $n' \mid x - x_0$이다 ([§합동식, ⁋명제 6](/ko/math/number_theory/congruences#prop6)). 곧 $x = x_0 + n' k = x_0 + (n/d)k$ 꼴이며, 역으로 이런 모든 $x$가 $a(x - x_0) = a n' k = a' n k$를 만족해 해가 된다. 법 $n$ 아래에서 $k$와 $k + d$는 같은 coset을 주므로 ($(n/d)(k+d) = (n/d)k + n$), 서로 다른 해는 $k = 0, 1, \ldots, d-1$의 $d$개이다.
 :::
 
 명제 6은 해들이 등차적으로 $n/d$ 간격으로 배열됨을 말한다. 예시 2에서 $d = 2$, $n/d = 7$이었고 해가 $6, 13$으로 정확히 $7$만큼 떨어져 있었던 것이 이 명제의 구체적 사례이다. 또 합동식을 약분할 때 법을 함께 나눠야 하는 이유도 여기서 분명하다. $\gcd(a, n) = d$로 양변을 나누면 정보가 법 $n$ 수준에서 법 $n/d$ 수준으로 줄어들고, 잃어버린 $d$겹의 정보가 바로 해의 다중성이다.
 
-::: 명제 7 (소거 법칙)
+::: 명제 7 (cancellation law)
 $ca \equiv cb \pmod n$이고 $\gcd(c, n) = 1$이면 $a \equiv b \pmod n$이다. 더 일반적으로 $g = \gcd(c, n)$이면
 
 $$ca \equiv cb \pmod n \iff a \equiv b \pmod{n/g}$$
@@ -152,10 +152,10 @@ n \mid c(a-b) &\iff gn' \mid gc'(a-b) \\
 &\iff n' \mid a - b
 \end{aligned}$$
 
-이며, 마지막 동치는 $\gcd(c', n') = 1$에서 따른다. 곧 $a \equiv b \pmod{n/g}$이다. 특히 $\gcd(c, n) = 1$이면 $g = 1$, $n/g = n$이어서 법이 그대로 보존되는 통상의 소거 법칙을 얻는다.
+이며, 마지막 동치는 $\gcd(c', n') = 1$에서 따른다. ([§합동식, ⁋명제 6](/ko/math/number_theory/congruences#prop6)) 곧 $a \equiv b \pmod{n/g}$이다. 특히 $\gcd(c, n) = 1$이면 $g = 1$, $n/g = n$이어서 법이 그대로 보존되는 통상의 cancellation law를 얻는다.
 :::
 
-소거 법칙은 일차 합동식을 손으로 풀 때 가장 자주 쓰는 도구이다. 계수와 법이 공약수를 가지면 무턱대고 약분해서는 안 되고, 명제 7에 따라 법을 동시에 조정해야 등치가 유지된다. 가령 $8x \equiv 12 \pmod{20}$에서 양변을 $4$로 나눌 때 $g = \gcd(4, 20) = 4$이므로 법도 $20/4 = 5$로 줄여 $2x \equiv 3 \pmod 5$를 얻어야 하며, 이는 $x \equiv 4 \pmod 5$, 곧 법 $20$에 대해 $x \equiv 4, 9, 14, 19$의 네 해를 준다 ($d = \gcd(8, 20) = 4$와 일치).
+Cancellation law는 일차 합동식을 손으로 풀 때 가장 자주 쓰는 도구이다. 계수와 법이 공약수를 가지면 무턱대고 약분해서는 안 되고, 명제 7에 따라 법을 동시에 조정해야 등치가 유지된다. 가령 $8x \equiv 12 \pmod{20}$에서 양변을 $4$로 나눌 때 $g = \gcd(4, 20) = 4$이므로 법도 $20/4 = 5$로 줄여 $2x \equiv 3 \pmod 5$를 얻어야 하며, 이는 $x \equiv 4 \pmod 5$, 곧 법 $20$에 대해 $x \equiv 4, 9, 14, 19$의 네 해를 준다 ($d = \gcd(8, 20) = 4$와 일치).
 
 ## 응용과 추가 예시
 

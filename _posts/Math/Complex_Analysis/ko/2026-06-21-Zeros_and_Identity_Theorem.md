@@ -28,7 +28,7 @@ $$D(z_0, \varepsilon) \cap S = \{z_0\}$$
 인 $\varepsilon > 0$이 존재하는 것을 뜻한다. $S$의 모든 점이 isolated point이면 $S$를 *discrete set<sub>이산집합</sub>*이라 한다.
 :::
 
-Isolated point라는 개념은 영점이 모여 있지 않고 흩어져 있다는 상황을 정확히 포착한다. Holomorphic function $f$의 영점집합을 $Z(f) = \{z \mid f(z) = 0\}$이라 적으면, 다음 명제는 $f$가 항등적으로 $0$이 아닌 한 $Z(f)$의 모든 점이 isolated point임을 말한다.
+Isolated point라는 개념은 영점이 모여 있지 않고 흩어져 있다는 상황을 정확히 포착한다. Holomorphic function $f$의 영점집합을 $Z(f) = \{z \mid f(z) = 0\}$이라 적으면, 다음 명제는 $f$가 어느 점의 근방에서도 항등적으로 $0$이 아닌 한 $Z(f)$의 모든 점이 isolated point임을 말한다.
 
 ::: 명제 2 (영점의 고립성)
 $f$가 점 $z_0$의 한 근방에서 holomorphic이고 $f(z_0) = 0$이라 하자. 그러면 다음 둘 중 정확히 하나가 성립한다.
@@ -74,7 +74,7 @@ $$A = \{z \in \Omega \mid h \text{가 } z \text{의 어떤 근방에서 항등�
 
 이라 두자. 방금 본 대로 $z_\ast \in A$이므로 $A \neq \emptyset$이다. 정의상 $A$는 열려 있다. $A$가 $\Omega$에서 닫혀 있음을 보이면, $\Omega$가 connected이고 $A$가 공집합 아닌 열린·닫힌 부분집합이므로 $A = \Omega$이 된다.
 
-$A$가 닫혀 있음을 보이기 위해 $\Omega$ 안의 점 $w$가 $A$의 closure에 속한다고, 곧 $A$의 점들의 수열 $w_j \rightarrow w$이 있다고 하자. 각 $w_j$의 근방에서 $h \equiv 0$이므로 특히 $h(w_j) = 0$이고, $h$의 연속성에서 $h(w) = 0$이다. 더구나 $w_j \rightarrow w$이고 $w_j$들은 ($j$가 클 때) $w$ 아닌 $h$의 영점이므로 $w$ 역시 $Z(h)$의 isolated point가 아니다. 다시 명제 2에 의해 $h$가 $w$의 어떤 근방에서 항등적으로 $0$이고, 따라서 $w \in A$이다. 이로써 $A$가 $\Omega$에서 닫혀 있다.
+$A$가 닫혀 있음을 보이기 위해 $\Omega$ 안의 점 $w$가 $A$의 closure에 속한다고, 곧 $A$의 점들의 수열 $w_j \rightarrow w$이 있다고 하자. 각 $w_j$의 근방에서 $h \equiv 0$이므로 특히 $h(w_j) = 0$이고, $h$의 연속성에서 $h(w) = 0$이다. $w \in A$이면 곧바로 원하는 결론이 나오므로 $w \notin A$이라 하자. 그러면 $A$의 점인 각 $w_j$가 $w$와 다르므로 $w_j \rightarrow w$은 $w$ 아닌 $h$의 영점들의 수열이고, 따라서 $w$ 역시 $Z(h)$의 isolated point가 아니다. 다시 명제 2에 의해 $h$가 $w$의 어떤 근방에서 항등적으로 $0$이고, 따라서 $w \in A$이다. 이로써 $A$가 $\Omega$에서 닫혀 있다.
 
 연결성에 의해 $A = \Omega$이므로 $h$가 $\Omega$ 전체에서 항등적으로 $0$이고, 곧 $\Omega$에서 $f = g$이다.
 :::
@@ -88,7 +88,7 @@ $A$가 닫혀 있음을 보이기 위해 $\Omega$ 안의 점 $w$가 $A$의 closu
 
 $$F(z) = e^{z+w}, \qquad G(z) = e^z e^w$$
 
-을 생각하면 둘 다 $z$에 대해 entire function이다. 한편 실변수 $z = x \in \mathbb{R}$이고 $w$ 또한 실수일 때는 실지수함수의 덧셈공식에서 $F(x) = G(x)$이다. 그러나 우선 $w$를 실수로 고정하면 $F$와 $G$가 실축 전체에서 일치하고, 실축은 $\mathbb{C}$ 안에 집적점을 가지므로 정리 3에 의해 모든 $z \in \mathbb{C}$에서 $F(z) = G(z)$이다. 다음으로 $z$를 임의의 복소수로 고정하고 이번에는 $w$를 변수로 보면, 두 entire function $w \mapsto e^{z+w}$과 $w \mapsto e^z e^w$이 실축 $w \in \mathbb{R}$에서 (방금 보인 등식에서) 일치하므로, 같은 논법으로 모든 $w \in \mathbb{C}$에서 일치한다. 따라서 등식이 모든 복소수쌍에서 성립한다. 실축에서의 한 항등식이 두 번의 해석적 접속을 거쳐 복소평면 전체로 번진 것이다.
+을 생각하면 둘 다 $z$에 대해 entire function이다. 한편 실변수 $z = x \in \mathbb{R}$이고 $w$ 또한 실수일 때는 실지수함수의 덧셈공식에서 $F(x) = G(x)$이다. 우선 $w$를 실수로 고정하면 $F$와 $G$가 실축 전체에서 일치하고, 실축은 $\mathbb{C}$ 안에 집적점을 가지므로 정리 3에 의해 모든 $z \in \mathbb{C}$에서 $F(z) = G(z)$이다. 다음으로 $z$를 임의의 복소수로 고정하고 이번에는 $w$를 변수로 보면, 두 entire function $w \mapsto e^{z+w}$과 $w \mapsto e^z e^w$이 실축 $w \in \mathbb{R}$에서 (방금 보인 등식에서) 일치하므로, 같은 논법으로 모든 $w \in \mathbb{C}$에서 일치한다. 따라서 등식이 모든 복소수쌍에서 성립한다. 실축에서의 한 항등식이 두 번의 해석적 접속을 거쳐 복소평면 전체로 번진 것이다.
 :::
 
 ## 최대절댓값 원리
@@ -168,7 +168,7 @@ $$\lvert g(z)\rvert \leq 1, \qquad z \in \mathbb{D}$$
 (2)를 위해 등호의 경우를 본다. 어떤 $z_0 \neq 0$에서 $\lvert f(z_0)\rvert = \lvert z_0\rvert$이면 $\lvert g(z_0)\rvert = 1$이고, $\lvert f'(0)\rvert = 1$이면 $\lvert g(0)\rvert = 1$이다. 어느 경우든 $\mathbb{D}$ 안의 한 점에서 $\lvert g\rvert$가 그 상한 $1$에 이르므로, $\lvert g\rvert$가 interior point에서 최댓값 $1$을 가진다. 최대절댓값 원리 ([정리 5](#thm5)) 에 의해 $g$는 connected 영역 $\mathbb{D}$에서 상수이고, 그 절댓값이 $1$이므로 $g(z) \equiv \lambda$ ($\lvert\lambda\rvert = 1$) 이다. 따라서 $f(z) = \lambda z$이다.
 :::
 
-Schwarz 보조정리는 원점을 고정하는 단위원판의 자기사상이 원점 근방에서 항등사상보다 더 빠르게 자랄 수 없음을 말한다. $\lvert f(z)\rvert \leq \lvert z\rvert$은 각 점에서 함수값이 원점에 더 가까워짐을, $\lvert f'(0)\rvert \leq 1$은 원점에서의 확대율이 $1$을 넘지 못함을 뜻한다. 등호의 경우가 회전 $f(z) = \lambda z$뿐이라는 두 번째 진술은 이 부등식이 비상수 자기사상에 대해서는 결코 포화되지 않는 엄격한 부등식임을 말해 준다. 이 보조정리는 단위원판의 holomorphic automorphism을 분류하는 출발점이 되며, 그로부터 단위원판 위의 자연스러운 거리인 쌍곡거리가 holomorphic 사상에 의해 늘어나지 않는다는 사실로 이어진다.
+Schwarz 보조정리는 원점을 고정하는 단위원판의 자기사상이 원점 근방에서 항등사상보다 더 빠르게 자랄 수 없음을 말한다. $\lvert f(z)\rvert \leq \lvert z\rvert$은 각 점에서 함수값이 원점에서 더 멀어지지 않음을, $\lvert f'(0)\rvert \leq 1$은 원점에서의 확대율이 $1$을 넘지 못함을 뜻한다. 등호의 경우가 회전 $f(z) = \lambda z$뿐이라는 두 번째 진술은 이 부등식이 회전이 아닌 자기사상에 대해서는 결코 포화되지 않는 엄격한 부등식임을 말해 준다. 이 보조정리는 단위원판의 holomorphic automorphism을 분류하는 출발점이 되며, 그로부터 단위원판 위의 자연스러운 거리인 쌍곡거리가 holomorphic 사상에 의해 늘어나지 않는다는 사실로 이어진다.
 
 ::: 예시 8 (원점을 고정하는 automorphism)
 $f : \mathbb{D} \rightarrow \mathbb{D}$가 holomorphic인 전단사이고 그 역함수도 holomorphic이며 $f(0) = 0$이라 하자. 곧 $f$는 원점을 고정하는 단위원판의 holomorphic automorphism이다. 이러한 $f$가 회전뿐임을 Schwarz 보조정리로 보인다. $f$와 그 역함수 $f^{-1}$ 모두 $\mathbb{D}$를 $\mathbb{D}$로 보내고 원점을 고정하므로, 정리 7의 (1)을 양쪽에 적용하면

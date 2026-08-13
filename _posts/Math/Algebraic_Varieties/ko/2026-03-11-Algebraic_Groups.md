@@ -55,7 +55,7 @@ $$i: G \rightarrow G;\qquad g \mapsto g^{-1}$$
 3. General linear group $\GL(n;\mathbb{K})$는 $\mathbb{A}^{n^2}$의 principal open set $D(\det)$이므로 affine variety이고, 그 coordinate ring은 $\mathbb{K}[\x_{11}, \ldots, \x_{nn}][1/\det]$이다. Multiplication의 각 성분은 $\x_{ij}$들의 다항식이고 Cramer 공식 $i(A) = (\det A)^{-1}\operatorname{adj}(A)$의 각 성분은 $D(\det)$ 위의 regular function이므로 ([§아핀다양체, ⁋정의 14](/ko/math/algebraic_varieties/affine_varieties#def14)) 둘 다 morphism이다. $n = 1$이면 $\GL(1;\mathbb{K}) = \mathbb{G}_m$이다.
 4. Special linear group $\SL(n;\mathbb{K}) = Z(\det - 1)$은 $\GL(n;\mathbb{K})$의 닫힌집합이며, multiplication과 inversion의 restriction이 다시 morphism이므로 ([§준사영다양체, ⁋명제 12](/ko/math/algebraic_varieties/quasi_projective_varieties#prop12)) algebraic group이다.
 5. Smooth plane cubic $E \subseteq \mathbb{P}^2$ 위의 inflection point $O$를 하나 고정하면, chord-tangent 구성은 $O$를 identity로 하는 abelian group 구조를 $E$에 주며, group law가 유리식으로 주어지므로 $m$과 $i$는 morphism이다. 이를 *타원곡선<sub>elliptic curve</sub>*이라 부른다. $E$는 projective variety이므로 위의 예시들과 달리 affine variety가 아니고, 이 차이가 algebraic group의 구조론에서 가장 큰 분기점이 된다.
-6. 유한군 $\Gamma$는 유한개의 점으로 이루어진 affine algebraic set이고 그 위의 모든 함수가 regular이므로 algebraic group이다. 가령 $\operatorname{char}\mathbb{K}$가 $n$을 나누지 않으면 $\mu_n = Z(\x^n - 1) \subseteq \mathbb{G}_m$은 $n$개의 점으로 이루어진 algebraic group이며 $\mathbb{Z}/n\mathbb{Z}$와 isomorphic하다.
+6. Finite group $\Gamma$는 유한개의 점으로 이루어진 affine algebraic set이고 그 위의 모든 함수가 regular이므로 algebraic group이다. 가령 $\operatorname{char}\mathbb{K}$가 $n$을 나누지 않으면 $\mu_n = Z(\x^n - 1) \subseteq \mathbb{G}_m$은 $n$개의 점으로 이루어진 algebraic group이며 $\mathbb{Z}/n\mathbb{Z}$와 isomorphic하다.
 :::
 
 위의 예시들에서 보듯 $m$과 $i$가 morphism이라는 것을 확인하는 일은 대체로 간단하다. 정작 중요한 것은 group 구조가 variety의 국소적 성질에 강한 제약을 준다는 사실이며, 그 출발점은 translation이다.
@@ -102,14 +102,14 @@ $G^\circ$를 identity $e$를 포함하는 $G$의 irreducible component라 하자
 마지막으로 [명제 4](#prop4)에 의해 각 component가 열린 닫힌집합이므로 $G$의 connected component와 irreducible component가 일치한다. 따라서 $G$가 connected인 것은 component가 하나뿐인 것, 곧 $G$가 irreducible인 것과 동치이다.
 :::
 
-$G^\circ$를 $G$의 *identity component*라 부른다. [명제 5](#prop5)는 algebraic group의 연구를 두 층으로 나누어 준다. 하나는 connected algebraic group $G^\circ$이고 다른 하나는 유한군 $G/G^\circ$이며, 앞으로 다룰 결과들은 대부분 앞쪽에 관한 것이다. 또 이 명제 덕분에 connected와 irreducible을 구별할 필요가 없어지므로, 이하에서 둘을 구별 없이 쓴다.
+$G^\circ$를 $G$의 *identity component*라 부른다. [명제 5](#prop5)는 algebraic group의 연구를 두 층으로 나누어 준다. 하나는 connected algebraic group $G^\circ$이고 다른 하나는 finite group $G/G^\circ$이며, 앞으로 다룰 결과들은 대부분 앞쪽에 관한 것이다. 또 이 명제 덕분에 connected와 irreducible을 구별할 필요가 없어지므로, 이하에서 둘을 구별 없이 쓴다.
 
 ::: 예시 6
 [예시 2](#ex2)의 대상들에서 identity component를 확인해 보자.
 
 1. $\mathbb{G}_a$, $\mathbb{G}_m$, $\GL(n;\mathbb{K})$는 각각 $\mathbb{A}^1$, $\mathbb{A}^1$, $\mathbb{A}^{n^2}$의 열린집합이므로 irreducible이고, 따라서 [명제 5](#prop5)에 의해 connected이다.
 2. $\operatorname{char}\mathbb{K} \ne 2$일 때 orthogonal group $\Omat(n;\mathbb{K}) = \{A \mid A^\mathsf{T}A = I\}$에서는 $(\det A)^2 = 1$이므로 $\det A = \pm 1$이다. 두 조건 $\det A = 1$과 $\det A = -1$은 각각 닫힌집합을 정의하고 어느 쪽도 공집합이 아니므로 $\Omat(n;\mathbb{K})$는 connected가 아니다. 한편 $\det$은 $\Omat(n;\mathbb{K})$ 위에서 $\pm 1$의 값만 가지므로 connected인 $\Omat(n;\mathbb{K})^\circ$ 위에서는 상수 $1$이고, 따라서 $\Omat(n;\mathbb{K})^\circ$는 $\operatorname{SO}(n;\mathbb{K}) = \{A \in \Omat(n;\mathbb{K}) \mid \det A = 1\}$에 포함된다. 실제로는 등호가 성립하나 그러려면 $\operatorname{SO}(n;\mathbb{K})$가 connected임을 보여야 하고, 이는 여기서 다루지 않는다.
-3. 유한군 $\Gamma$에서는 $\Gamma^\circ = \{e\}$이고 component가 $\lvert \Gamma \rvert$개이므로, [명제 5](#prop5)의 index 조건이 극단적으로 실현된다.
+3. Finite group $\Gamma$에서는 $\Gamma^\circ = \{e\}$이고 component가 $\lvert \Gamma \rvert$개이므로, [명제 5](#prop5)의 index 조건이 극단적으로 실현된다.
 :::
 
 ## Subgroup과 homomorphism
@@ -146,7 +146,7 @@ Algebraic group이 affine일 때에는 group 구조 전체가 coordinate ring �
 Algebraic group $G$가 affine algebraic set일 때, $G$를 *affine algebraic group<sub>아핀 대수적 군</sub>*이라 부른다.
 :::
 
-[예시 2](#ex2)의 $\mathbb{G}_a$, $\mathbb{G}_m$, $\GL(n;\mathbb{K})$, $\SL(n;\mathbb{K})$와 유한군은 모두 affine algebraic group이고, 타원곡선은 그렇지 않다. 두 affine algebraic set $X \subseteq \mathbb{A}^n$과 $Y \subseteq \mathbb{A}^m$에 대하여 곱 $X \times Y \subseteq \mathbb{A}^{n+m}$도 affine algebraic set이며, 이는 앞에서 정한 Segre 구성과 일치한다. Segre embedding을 $\mathbb{A}^n \times \mathbb{A}^m$에 제한하면 점 $(x, y)$를 좌표가 $x_i$, $y_j$, $x_iy_j$인 점으로 보내는 morphism이 되는데, 처음 $n + m$개의 좌표로의 projection이 그 역사상이기 때문이다.
+[예시 2](#ex2)의 $\mathbb{G}_a$, $\mathbb{G}_m$, $\GL(n;\mathbb{K})$, $\SL(n;\mathbb{K})$와 finite group은 모두 affine algebraic group이고, 타원곡선은 그렇지 않다. 두 affine algebraic set $X \subseteq \mathbb{A}^n$과 $Y \subseteq \mathbb{A}^m$에 대하여 곱 $X \times Y \subseteq \mathbb{A}^{n+m}$도 affine algebraic set이며, 이는 앞에서 정한 Segre 구성과 일치한다. Segre embedding을 $\mathbb{A}^n \times \mathbb{A}^m$에 제한하면 점 $(x, y)$를 좌표가 $x_i$, $y_j$, $x_iy_j$인 점으로 보내는 morphism이 되는데, 처음 $n + m$개의 좌표로의 projection이 그 역사상이기 때문이다.
 
 이 곱의 coordinate ring은 두 인자의 coordinate ring으로부터 결정된다. 우선 $f \otimes g$를 함수 $(x, y) \mapsto f(x)g(y)$로 보내는 대응은 algebra homomorphism
 
@@ -212,7 +212,7 @@ $$\rho: G \rightarrow \GL(V)$$
 의 쌍이다. 여기서 $V$의 basis를 고정하면 $\GL(V) \cong \GL(n;\mathbb{K})$이다.
 :::
 
-즉 $\rho$는 group homomorphism이면서 동시에 morphism이어야 한다. 유한군의 표현론에서와 마찬가지로 $\chi_\rho(g) = \tr(\rho(g))$를 생각할 수 있고 이를 $\rho$의 character라 부르지만, 이 글에서 정작 쓰이는 것은 다음의 대수적 번역이다.
+즉 $\rho$는 group homomorphism이면서 동시에 morphism이어야 한다. Finite group의 표현론에서와 마찬가지로 $\chi_\rho(g) = \tr(\rho(g))$를 생각할 수 있고 이를 $\rho$의 character라 부르지만, 이 글에서 정작 쓰이는 것은 다음의 대수적 번역이다.
 
 ::: 명제 14
 $G$가 affine algebraic group이고 $A = \mathbb{K}[G]$라 하자. 유한차원 벡터공간 $V$에 대하여, representation $\rho: G \rightarrow \GL(V)$들과 $V$ 위의 comodule structure $\Delta_V: V \rightarrow V \otimes_\mathbb{K} A$들 사이에는 일대일 대응이 있다. 이 대응은 $V$의 basis $v_1, \ldots, v_n$을 고정할 때
@@ -294,7 +294,7 @@ Affine algebraic group 가운데 가장 단순하면서도 가장 자주 등장�
 Algebraic group $G$의 *character<sub>지표</sub>*란 algebraic group들 사이의 homomorphism $\rchi: G \rightarrow \mathbb{G}_m$이다. Character들은 점별 multiplication $(\rchi\rchi')(g) = \rchi(g)\rchi'(g)$에 대하여 abelian group을 이루며, 이를 $G$의 *character group<sub>지표군</sub>* $X^\ast(G)$라 부른다.
 :::
 
-두 character의 곱과 역이 다시 regular function이므로 $X^\ast(G)$가 group이라는 것은 곧바로 확인된다. 유한군의 표현론에서 쓰는 $1$차원 representation의 character가 정확히 이 개념이며, [정의 13](#def13)의 뒤에서 언급한 $\tr(\rho(g))$는 $\dim V = 1$일 때 이것과 일치한다.
+두 character의 곱과 역이 다시 regular function이므로 $X^\ast(G)$가 group이라는 것은 곧바로 확인된다. Finite group의 표현론에서 쓰는 $1$차원 representation의 character가 정확히 이 개념이며, [정의 13](#def13)의 뒤에서 언급한 $\tr(\rho(g))$는 $\dim V = 1$일 때 이것과 일치한다.
 
 ::: 정의 18
 Algebraic group $T$가 *algebraic torus<sub>대수적 토러스</sub>*라는 것은 적당한 $n \ge 1$에 대하여
@@ -424,9 +424,9 @@ Connected가 아닌 $G$에 대해서는 $G^\circ$로 바꾸어 생각하면 된�
 
     $$J = \begin{pmatrix} a & 1 \\ 0 & a \end{pmatrix}$$
 
-    의 orbit은 eigenvalue가 $a$뿐이면서 대각화되지 않는 행렬들, 곧 $(A - aI)^2 = 0$이고 $A \ne aI$인 $A$들 전체이다. Cayley–Hamilton 정리에 의해 $N = A - aI$에 대한 조건 $N^2 = 0$은 $\tr N = \det N = 0$과 동치이므로, $\x_{22} = -\x_{11}$을 대입하면 이 orbit은 $\mathbb{A}^3$ 안의 quadric cone
+    의 orbit은 eigenvalue가 $a$뿐이면서 대각화되지 않는 행렬들, 곧 $(A - aI)^2 = 0$이고 $A \ne aI$인 $A$들 전체이다. Cayley–Hamilton 정리에 의해 $N = A - aI$에 대한 조건 $N^2 = 0$은 $\tr N = \det N = 0$과 동치이므로, $\x_{22} = 2a - \x_{11}$을 대입하면 이 orbit은 $\mathbb{A}^3$ 안의 quadric cone
 
-    $$\x_{11}^2 + \x_{12}\x_{21} = 0$$
+    $$(\x_{11} - a)^2 + \x_{12}\x_{21} = 0$$
 
     에서 꼭짓점 하나를 뺀 것과 isomorphic하다. 좌변도 위와 같은 이유로 irreducible이므로 이 cone은 차원 $2$의 irreducible hypersurface이고, orbit은 그 안의 공집합이 아닌 열린집합이므로 $\overline{G \cdot J}$는 cone 전체이며 $G \cdot J$의 차원은 $2$이다. 실제로
 

@@ -29,7 +29,7 @@ $$R = \frac{1}{\limsup_{n\rightarrow\infty} \lvert c_n\rvert^{1/n}}$$
 :::
 
 ::: 증명
-[§무한급수, ⁋정리 10](/ko/math/analysis/series#thm10)의 양 $\limsup \lvert c_n (x-a)^n\rvert^{1/n} = \lvert x - a\rvert \limsup\lvert c_n\rvert^{1/n} = \lvert x - a\rvert/R$를 본다. 이 값이 $1$보다 작으면, 곧 $\lvert x - a\rvert < R$이면 절대수렴하고, $1$보다 크면 일반항이 $0$으로 가지 않아 발산한다 ([§무한급수](/ko/math/analysis/series)의 근판정).
+근판정의 양 $\limsup \lvert c_n (x-a)^n\rvert^{1/n} = \lvert x - a\rvert \limsup\lvert c_n\rvert^{1/n} = \lvert x - a\rvert/R$를 본다. [§무한급수, ⁋정리 10](/ko/math/analysis/series#thm10)은 극한이 존재하는 경우를 다루므로, $\limsup$만 있는 일반의 경우를 직접 본다. 이 값이 $1$보다 작으면, 곧 $\lvert x - a\rvert < R$이면 그 값과 $1$ 사이의 $\theta$를 잡아 충분히 큰 $n$에서 $\lvert c_n (x-a)^n\rvert \leq \theta^n$이므로 [§무한급수, ⁋정리 4](/ko/math/analysis/series#thm4)에 의해 절대수렴하고, $1$보다 크면 무한히 많은 $n$에서 $\lvert c_n (x-a)^n\rvert \geq 1$이어서 일반항이 $0$으로 가지 않으므로 [§무한급수, ⁋명제 3](/ko/math/analysis/series#prop3)에 의해 발산한다.
 :::
 
 ## 균등수렴과 항별 미분
@@ -55,7 +55,7 @@ $$f'(x) = \sum_{n=1}^\infty n c_n (x - a)^{n-1}$$
 :::
 
 ::: 증명
-$\lim n^{1/n} = 1$이므로 항별 미분한 급수의 수렴반경도 $1/\limsup\lvert n c_n\rvert^{1/n} = R$로 같다. 도함수 급수가 컴팩트하게 균등수렴하므로 ([정리 2](#thm2)), 균등수렴하는 도함수열의 극한이 원래 극한의 도함수가 된다는 정리에 의해 $f'$가 항별 미분으로 주어진다. 이를 반복하면 $f$가 무한히 미분가능하고, $x = a$를 대입하면 $f^{(n)}(a) = n! c_n$이다.
+$\lim n^{1/n} = 1$이므로 항별 미분한 급수의 수렴반경도 $1/\limsup\lvert n c_n\rvert^{1/n} = R$로 같다. $\lvert x - a\rvert \leq r$에서 원래 급수의 부분합열이 수렴하고 그 도함수열, 곧 도함수 급수의 부분합열이 균등수렴하므로 ([정리 2](#thm2)), 도함수열이 균등수렴하고 함수열이 한 점에서 수렴하면 극한함수가 미분가능하며 그 도함수가 도함수열의 극한이 된다는 정리를 가져다 쓰면 ([Rud] §7), $f'$가 항별 미분으로 주어진다. 이를 반복하면 $f$가 무한히 미분가능하고, $x = a$를 대입하면 $f^{(n)}(a) = n! c_n$이다.
 :::
 
 ## 해석함수
@@ -87,7 +87,7 @@ d_n &= \frac{f^{(n)}(a)}{n!}
 
 ## 수렴반경의 계산
 
-Cauchy–Hadamard 공식 ([정리 1](#thm1)) 은 모든 멱급수에 통하지만, 실제 계산에서는 [§무한급수, ⁋정리 7](/ko/math/analysis/series#thm7)이 더 다루기 쉬운 경우가 많다. 계수의 비 $\lvert c_{n+1}/c_n\rvert$이 극한을 가지면 그 극한의 역수가 곧 수렴반경이 된다.
+[정리 1](#thm1)은 모든 멱급수에 통하지만, 실제 계산에서는 [§무한급수, ⁋정리 7](/ko/math/analysis/series#thm7)이 더 다루기 쉬운 경우가 많다. 계수의 비 $\lvert c_{n+1}/c_n\rvert$이 극한을 가지면 그 극한의 역수가 곧 수렴반경이 된다.
 
 ::: 명제 6 (비판정에 의한 수렴반경)
 $c_n \neq 0$이 충분히 큰 $n$에서 성립하고 $\lim_{n\rightarrow\infty}\lvert c_{n+1}/c_n\rvert = L$이 존재하면, 멱급수 $\sum c_n (x-a)^n$의 수렴반경은 $R = 1/L$이다 ($L = 0$이면 $R = \infty$, $L = \infty$이면 $R = 0$).
@@ -119,7 +119,7 @@ $$\begin{aligned}
 \limsup_{n\rightarrow\infty}\lvert c_n\rvert^{1/n} &= 3
 \end{aligned}$$
 
-이므로 Cauchy–Hadamard 공식 ([정리 1](#thm1)) 에 의해 $R = 1/3$이다. 이처럼 $\limsup$은 진동하는 계수에도 항상 정의된다.
+이므로 [정리 1](#thm1)에 의해 $R = 1/3$이다. 이처럼 $\limsup$은 진동하는 계수에도 항상 정의된다.
 :::
 
 ## 응용: 항별 미분의 계산

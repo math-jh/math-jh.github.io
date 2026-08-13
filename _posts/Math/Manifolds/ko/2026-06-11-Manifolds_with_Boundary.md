@@ -35,7 +35,7 @@ $$\partial\mathbb{H}^m=\left\{x\in \mathbb{H}^m\mid x^m=0\right\},\qquad \interi
 부분집합 $A\subseteq\mathbb{R}^m$ 위에서 정의된 함수 $f:A \rightarrow \mathbb{R}^n$이 *$C^\infty$*라는 것은, 각각의 $p\in A$마다 $p$의 ($\mathbb{R}^m$에서의) 열린근방 $W$와 $C^\infty$ 함수 $\tilde{f}:W \rightarrow \mathbb{R}^n$이 존재하여 $\tilde{f}\vert_{W\cap A}=f\vert_{W\cap A}$이 성립하는 것이다.
 :::
 
-즉 국소적으로 열린집합 위의 $C^\infty$ 함수로 확장되는 함수를 $C^\infty$라 부르는 것이다. $A$가 열린집합이라면 이는 기존의 정의와 일치한다. 한편 $A=\mathbb{H}^m$의 열린집합이고 $p\in\partial\mathbb{H}^m$인 경우, $f$의 편미분 $\partial f/\partial x^i(p)$들은 확장 $\tilde{f}$의 선택과 무관하게 잘 정의되는데, 이는 $p$ 근방에서 $W\cap A$가 $p$로 수렴하는 점렬들을 모든 방향에 대해 충분히 담고 있어 $\tilde f$의 일계도함수들이 $W\cap A$ 위의 값들로 결정되기 때문이다. 실제로 $i<m$ 방향의 편미분은 $\partial\mathbb{H}^m$ 방향의 difference quotient의 극한으로, $i=m$ 방향의 편미분은 한쪽 극한
+즉 국소적으로 열린집합 위의 $C^\infty$ 함수로 확장되는 함수를 $C^\infty$라 부르는 것이다. $A$가 열린집합이라면 이는 기존의 정의와 일치한다. 한편 $A$가 $\mathbb{H}^m$의 열린집합이고 $p\in\partial\mathbb{H}^m$인 경우, $f$의 편미분 $\partial f/\partial x^i(p)$들은 확장 $\tilde{f}$의 선택과 무관하게 잘 정의되는데, 이는 $p$ 근방에서 $W\cap A$가 $p$로 수렴하는 점렬들을 모든 방향에 대해 충분히 담고 있어 $\tilde f$의 일계도함수들이 $W\cap A$ 위의 값들로 결정되기 때문이다. 실제로 $i<m$ 방향의 편미분은 $\partial\mathbb{H}^m$ 방향의 difference quotient의 극한으로, $i=m$ 방향의 편미분은 한쪽 극한
 
 $$\frac{\partial f}{\partial x^m}(p)=\lim_{t\rightarrow0^+}\frac{f(p+te_m)-f(p)}{t}$$
 
@@ -57,7 +57,7 @@ Second countable Hausdorff space $M$이 *$m$차원의 경계가 있는 manifold<
 위의 정의가 말이 되려면 경계점이라는 개념이 chart의 선택에 의존하지 않아야 한다.
 
 ::: 명제 3
-점 $p\in M$와 두 chart $(U,\varphi)$, $(V,\psi)$에 대하여, $\varphi(p)\in\partial\mathbb{H}^m$인 것과 $\psi(p)\in\partial\mathbb{H}^m$인 것이 동치이다.
+점 $p\in M$을 포함하는 두 chart $(U,\varphi)$, $(V,\psi)$에 대하여, $\varphi(p)\in\partial\mathbb{H}^m$인 것과 $\psi(p)\in\partial\mathbb{H}^m$인 것이 동치이다.
 :::
 ::: 증명
 대우를 보이자. 즉 $\varphi(p)\in\interior\mathbb{H}^m$이라 가정하고 $\psi(p)\in\interior\mathbb{H}^m$임을 보인다. Transition $\tau=\psi\circ\varphi^{-1}$와 그 역함수 $\sigma=\varphi\circ\psi^{-1}$를 생각하자. [정의 1](#def1)에 의하여 $\varphi(p)$와 $\psi(p)$의 적당한 열린근방 $W,W'\subseteq\mathbb{R}^m$과 $C^\infty$ 확장 $\tilde{\tau}:W \rightarrow \mathbb{R}^m$, $\tilde{\sigma}:W' \rightarrow \mathbb{R}^m$이 존재한다.
@@ -78,7 +78,7 @@ $m$차원의 경계가 있는 manifold $M$에 대하여 다음이 성립한다.
 2. $\partial M$은 $M$의 닫힌집합이고, chart들 $(U_\alpha\cap\partial M, (\varphi_\alpha^1,\ldots,\varphi_\alpha^{m-1})\vert_{\partial M})$에 대하여 ($\partial$ 없는) $(m-1)$차원 manifold이다.
 :::
 ::: 증명
-우선 첫째 주장을 보이자. $p\in\interior M$이라 하면 chart $(U,\varphi)$에 대해 $\varphi(p)\in\interior\mathbb{H}^m$이고, $\interior\mathbb{H}^m$이 $\mathbb{H}^m$에서 열린집합이므로 $U'=\varphi^{-1}(\interior\mathbb{H}^m\cap\varphi(U))$는 $p$의 열린근방이다. [명제 3](#prop3)에 의해 $U'$의 모든 점이 interior point가므로 $\interior M$은 열린집합이고, 이러한 $(U',\varphi\vert_{U'})$들은 $\mathbb{R}^m$의 열린집합으로 가는 chart들이므로 $\interior M$은 $m$차원 manifold이다.
+우선 첫째 주장을 보이자. $p\in\interior M$이라 하면 chart $(U,\varphi)$에 대해 $\varphi(p)\in\interior\mathbb{H}^m$이고, $\interior\mathbb{H}^m$이 $\mathbb{H}^m$에서 열린집합이므로 $U'=\varphi^{-1}(\interior\mathbb{H}^m\cap\varphi(U))$는 $p$의 열린근방이다. [명제 3](#prop3)에 의해 $U'$의 모든 점이 interior point이므로 $\interior M$은 열린집합이고, 이러한 $(U',\varphi\vert_{U'})$들은 $\mathbb{R}^m$의 열린집합으로 가는 chart들이므로 $\interior M$은 $m$차원 manifold이다.
 
 이제 둘째 주장을 보이자. $\partial M$은 열린집합 $\interior M$의 여집합이므로 닫힌집합이다. Chart $(U,\varphi)$에 대하여 [명제 3](#prop3)에 의해 $\varphi(U\cap\partial M)=\varphi(U)\cap\partial\mathbb{H}^m$이고, $\partial\mathbb{H}^m$을 $\mathbb{R}^{m-1}$과 identify하면 이는 $\mathbb{R}^{m-1}$의 열린집합이다. 따라서 $(\varphi^1,\ldots,\varphi^{m-1})\vert_{U\cap\partial M}$은 $U\cap\partial M$에서 $\mathbb{R}^{m-1}$의 열린집합으로의 homeomorphism이고, 이들의 transition은 $M$의 transition들의 restriction이므로 $C^\infty$이다. $\partial M$이 $M$의 subspace로서 Hausdorff이고 second countable인 것은 자명하므로 $\partial M$은 $(m-1)$차원 manifold이다.
 :::
@@ -88,17 +88,17 @@ $m$차원의 경계가 있는 manifold $M$에 대하여 다음이 성립한다.
 
 조금 더 의미있는 예시로 닫힌 공 $\overline{B}^m=\{x\in\mathbb{R}^m: \lvert x\rvert\leq 1\}$을 생각하자. Interior는 열린 공이므로 chart 하나로 충분하다. Boundary 근방의 점들에 대해서는, $S^{m-1}$의 chart $(V,\theta)$마다 함수
 
-$$x\mapsto \bigl(\theta(x/\lvert x\rvert),\,1-\lvert x\rvert\bigr)$$
+$$x\mapsto \bigl(\theta(x/\lvert x\rvert),1-\lvert x\rvert\bigr)$$
 
 를 생각하면 이것이 $\{x\neq 0: x/\lvert x\rvert\in V\}\cap\overline{B}^m$에서 $\mathbb{H}^m$의 열린집합으로 가는 chart가 되고, transition들이 $C^\infty$임을 확인할 수 있다. 따라서 $\overline{B}^m$은 경계가 있는 manifold이고 $\partial\overline{B}^m=S^{m-1}$이다.
 :::
 
 ## 접공간과 바깥 방향
 
-경계가 있는 manifold $M$의 점 $p$에서의 tangent space $T_pM$은 [§접공간](/ko/math/manifolds/tangent_space)에서와 동일하게 정의한다. 여기서 함수의 germ은 [정의 1](#def1)의 의미에서 $C^\infty$인 함수들의 germ이다. 주의할 점은 $p\in\partial M$이더라도 $T_pM$은 여전히 $m$차원이라는 것이다. 이는 [§접공간](/ko/math/manifolds/tangent_space)에서의 논증이 그대로 적용되기 때문인데, 핵심이 되는 Taylor 전개 논증은 정의역이 convex하기만 하면 성립하고, $\varphi(p)$ 근방에서 $\mathbb{H}^m$과 열린 공의 교집합은 convex하기 때문이다. 특히 $p\in\partial M$에서도 chart $(U,x)$는 basis $(\partial/\partial x^1\vert_p,\ldots,\partial/\partial x^m\vert_p)$를 준다.
+경계가 있는 manifold $M$의 점 $p$에서의 tangent space $T_pM$은 [§접공간](/ko/math/manifolds/tangent_space)에서와 동일하게 정의한다. 여기서 함수의 germ은 [정의 1](#def1)의 의미에서 $C^\infty$인 함수들의 germ이다. 주의할 점은 $p\in\partial M$이더라도 $T_pM$은 여전히 $m$차원이라는 것이다. 이는 [§여접공간, ⁋정리 2](/ko/math/manifolds/cotangent_space#thm2)의 논증이 그대로 적용되기 때문인데, 핵심이 되는 Taylor 전개 논증은 정의역이 convex하기만 하면 성립하고, $\varphi(p)$ 근방에서 $\mathbb{H}^m$과 열린 공의 교집합은 convex하기 때문이다. 특히 $p\in\partial M$에서도 chart $(U,x)$는 basis $(\partial/\partial x^1\vert_p,\ldots,\partial/\partial x^m\vert_p)$를 준다.
 
 ::: 정의 6
-경계점 $p\in\partial M$에서의 tangent vector $v=\sum_{i=1}^ma^i\,\partial/\partial x^i\vert_p$가 *outward<sub>바깥 방향</sub>*라는 것은 $a^m<0$인 것이고, *inward<sub>안쪽 방향</sub>*라는 것은 $a^m>0$인 것이다.
+경계점 $p\in\partial M$에서의 tangent vector $v=\sum_{i=1}^ma^i\partial/\partial x^i\vert_p$가 *outward<sub>바깥 방향</sub>*라는 것은 $a^m<0$인 것이고, *inward<sub>안쪽 방향</sub>*라는 것은 $a^m>0$인 것이다.
 :::
 
 이 정의가 의미를 가지려면 $a^m$의 부호가 chart의 선택과 무관해야 하고, 이는 다음 보조정리로부터 나온다. 이 보조정리는 아래에서 induced orientation을 정의할 때도 핵심적으로 사용된다.
@@ -122,7 +122,7 @@ $$\det D\tau(x(p))=\frac{\partial y^m}{\partial x^m}(x(p))\cdot\det\left(\frac{\
 이 $0$이 아니어야 하고, 따라서 $\partial y^m/\partial x^m(x(p))>0$이다. 마지막 주장은 위의 행렬식 전개로부터 자명하다.
 :::
 
-이제 [정의 6](#def6)이 잘 정의되는 것을 확인할 수 있다. $v$의 두 좌표표현 $\sum a^i\partial/\partial x^i\vert_p=\sum b^i\partial/\partial y^i\vert_p$에 대하여 $b^m=\sum_ja^j\,\partial y^m/\partial x^j(x(p))=a^m\,\partial y^m/\partial x^m(x(p))$이고, [보조정리 7](#lem7)에 의해 마지막 인수가 양수이기 때문이다.
+이제 [정의 6](#def6)이 잘 정의되는 것을 확인할 수 있다. $v$의 두 좌표표현 $\sum a^i\partial/\partial x^i\vert_p=\sum b^i\partial/\partial y^i\vert_p$에 대하여 $b^m=\sum_ja^j\partial y^m/\partial x^j(x(p))=a^m\partial y^m/\partial x^m(x(p))$이고, [보조정리 7](#lem7)에 의해 마지막 인수가 양수이기 때문이다.
 
 ## 유도된 향
 
@@ -138,7 +138,7 @@ $$\bigl(U\cap\partial M,\ (x^1,\ldots,x^{m-1})\vert_{\partial M}\bigr)$$
 은 transition들의 Jacobian의 행렬식이 항상 $0$보다 큰 $\partial M$의 atlas를 이룬다. 특히 $\partial M$은 orientable이다.
 :::
 ::: 증명
-두 positively oriented chart의 transition $\tau$와 경계점에서의 그 restriction을 생각하자. $\partial M$ 위에서의 transition의 Jacobian matrix는 정확히 $\bigl(\partial y^i/\partial x^j\bigr)_{1\leq i,j\leq m-1}$이고, [보조정리 7](#lem7)에 의하여 이 행렬의 행렬식은 $\det D\tau>0$과 같은 부호를 가지므로 양수이다.
+두 positively oriented chart의 transition $\tau$와 경계점에서의 그 restriction을 생각하자. $\partial M$ 위에서의 transition의 Jacobian matrix는 정확히 $\bigl(\partial y^i/\partial x^j\bigr)_{1\leq i,j\leq m-1}$이고, [보조정리 7](#lem7)에 의하여 이 행렬의 행렬식은 $\det D\tau$와 같은 부호를 갖는다. 한편 두 chart가 positively oriented이므로 $\det D\tau$는 interior에 대응하는 점들에서 양수이고, 연속성에 의해 경계점에서도 음이 아니며, $D\tau$가 invertible이므로 경계점에서 양수이다. 따라서 위의 행렬식도 양수이다.
 :::
 
 다만 Stokes 정리의 부호를 맞추기 위해서는 [명제 8](#prop8)의 orientation을 그대로 쓰는 대신 다음과 같이 수정하는 것이 표준적이다. 점 $p\in\partial M$에서, outward vector $\nu$를 맨 앞에 둔 ordered basis $(\nu,v_1,\ldots,v_{m-1})$ ($v_i\in T_p\partial M$)가 $M$의 orientation에 대해 positively oriented일 때 $(v_1,\ldots,v_{m-1})$이 positively oriented이도록 $\partial M$의 orientation을 잡는 것이다. Positively oriented chart $(U,x)$에서 $\nu=-\partial/\partial x^m$으로 택하고 행렬식을 계산하면
@@ -148,7 +148,7 @@ $$\det\bigl[-e_m\ e_1\ \cdots\ e_{m-1}\bigr]=(-1)^m$$
 이므로, 이는 [명제 8](#prop8)의 atlas가 주는 orientation에 $(-1)^m$을 곱한 것이다.
 
 ::: 정의 9
-Oriented manifold with boundary $M$ ($m\geq 2$)에 대하여, $\partial M$의 *유도된 향<sub>induced orientation</sub>*은 [명제 8](#prop8)의 atlas가 주는 orientation에 $(-1)^m$을 곱한 것, 즉 $m$이 짝수라면 그 atlas 자신이 positively oriented이고 $m$이 홀수라면 그 atlas의 첫 좌표의 부호를 바꾼 것이 positively oriented이도록 하는 orientation이다.
+Oriented manifold with boundary $M$ ($m\geq 2$)에 대하여, $\partial M$의 *induced orientation<sub>유도된 향</sub>*은 [명제 8](#prop8)의 atlas가 주는 orientation에 $(-1)^m$을 곱한 것, 즉 $m$이 짝수라면 그 atlas 자신이 positively oriented이고 $m$이 홀수라면 그 atlas의 첫 좌표의 부호를 바꾼 것이 positively oriented이도록 하는 orientation이다.
 
 $m=1$인 경우 $\partial M$은 $0$차원 manifold, 즉 점들의 모임이고, 이 때 orientation은 각 점에 부호 $\pm1$을 주는 것으로 정의한다. Induced orientation은 outward vector가 $T_pM$의 orientation에 대해 positively oriented인 점 $p$에 $+1$을, 그렇지 않은 점에 $-1$을 주는 것이다.
 :::

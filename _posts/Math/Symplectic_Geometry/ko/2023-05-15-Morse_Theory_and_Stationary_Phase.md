@@ -60,7 +60,7 @@ $$\sigma_p = n - 2\lambda_p$$
 :::
 
 ::: 참고 5
-문헌에 따라 signature를 $\lvert\det\operatorname{Hess}_p(f)\rvert$의 부호와 혼동하는 경우가 있으나, 우리는 signature를 위와 같이 *eigenvalue 부호의 부호화*로 정의한다. Stationary phase formula의 위상 인자 $e^{i\pi\sigma_p/4}$에서 사용되는 것은 이 정의이다.
+문헌에 따라 signature를 $\det\operatorname{Hess}_p(f)$의 부호와 혼동하는 경우가 있으나, 우리는 signature를 위와 같이 *eigenvalue 부호의 부호화*로 정의한다. Stationary phase formula의 위상 인자 $e^{i\pi\sigma_p/4}$에서 사용되는 것은 이 정의이다.
 :::
 
 ## Morse lemma
@@ -96,7 +96,7 @@ $$f(x) = \sum_{i,j} x_i x_j h_{ij}(x)$$
 
 $$Q(x)^\top H(x) Q(x) = \operatorname{diag}(-1,\ldots,-1,+1,\ldots,+1)$$
 
-으로 만들 수 있다. 이는 다음과 같이 귀납적으로 구성한다. $H(0)$이 nondegenerate하므로 어떤 $h_{ii}(0)\neq 0$이 존재하며, 좌표 재배열을 통해 $h_{11}(0)\neq 0$이라 가정한다. 새 변수
+으로 만들 수 있다. 이는 다음과 같이 귀납적으로 구성한다. 우선 $h_{11}(0)\neq 0$이라 가정해도 좋다. 실제로 어떤 대각성분 $h_{ii}(0)$이 영이 아니라면 좌표를 재배열하면 되고, 대각성분이 모두 영이라면 $H(0)$이 nondegenerate하다는 사실로부터 영이 아닌 비대각성분이 존재하므로 좌표 재배열로 $h_{12}(0)\neq 0$이라 두고 선형변환 $x_1=u+v$, $x_2=u-v$를 취하면 새 좌표에서의 $(1,1)$ 성분이 $h_{11}(0)+2h_{12}(0)+h_{22}(0)=2h_{12}(0)\neq 0$이 된다. 새 변수
 
 $$y_1(x) = \sqrt{\lvert h_{11}(x)\rvert}\left(x_1 + \sum_{j\ge 2}\frac{h_{1j}(x)}{h_{11}(x)}x_j\right)$$
 
@@ -141,7 +141,7 @@ $$\sum_p (-1)^{\lambda_p} = \chi(T^2) = 0$$
 
 ## Stationary phase 근사
 
-Morse lemma의 첫 번째 응용은 oscillating integral의 점근전개이다. Smooth amplitude $a\in C_c^\infty(M)$과 smooth phase $\phi:M\rightarrow\mathbb{R}$이 주어졌을 때, 우리는 다음의 *oscillating integral<sub>oscillating integral</sub>*
+Morse lemma의 첫 번째 응용은 oscillating integral의 점근전개이다. Smooth amplitude $a\in C_c^\infty(M)$과 smooth phase $\phi:M\rightarrow\mathbb{R}$이 주어졌을 때, 우리는 다음의 *oscillating integral*
 
 $$I(\hbar) = \int_M e^{i\phi(x)/\hbar}\,a(x)\dd{x}$$
 
@@ -192,7 +192,7 @@ $$\prod_{i=1}^n \int_{-\infty}^\infty e^{i\epsilon_i y_i^2/\hbar}\dd{y_i} = (\pi
 
 이 된다. 여기서 마지막 등호는 $\sum_i\operatorname{sgn}(\epsilon_i)$이 정확히 $Q$, 즉 $\operatorname{Hess}_p(\phi)$의 signature $\sigma_p$라는 사실을 사용한다.
 
-한편 좌표변환 $y=y(x)$의 Jacobian은 $J(0)^2 \cdot \det[\operatorname{diag}(2\epsilon_i)] = \det\operatorname{Hess}_p(\phi)$를 만족하므로 (Morse lemma의 좌표가 Hessian을 $\operatorname{diag}(2\epsilon_i)$로 만들기 때문이다) $\tilde a(0) = a(p)\lvert\det\operatorname{Hess}_p(\phi)\rvert^{-1/2}\cdot 2^{n/2}$가 성립한다. 이를 위 식과 결합하고 $(\pi\hbar)^{n/2}\cdot 2^{n/2}=(2\pi\hbar)^{n/2}$임을 사용하면
+한편 위에서 잡은 $J$는 $\det\operatorname{Hess}_p(\phi) = J(0)^{-2}\cdot\det[\operatorname{diag}(2\epsilon_i)]$를 만족하므로 (Morse lemma의 좌표가 Hessian을 $\operatorname{diag}(2\epsilon_i)$로 만들기 때문이다) $\tilde a(0) = a(p)\lvert\det\operatorname{Hess}_p(\phi)\rvert^{-1/2}\cdot 2^{n/2}$가 성립한다. 이를 위 식과 결합하고 $(\pi\hbar)^{n/2}\cdot 2^{n/2}=(2\pi\hbar)^{n/2}$임을 사용하면
 
 $$I(\hbar) = (2\pi\hbar)^{n/2}\,\frac{e^{i\phi(p)/\hbar}\,e^{i\pi\sigma_p/4}}{\sqrt{\lvert\det\operatorname{Hess}_p(\phi)\rvert}}\,a(p) + O(\hbar^{n/2+1})$$
 
@@ -254,7 +254,7 @@ $W$의 nondegenerate critical point $p$에 대하여, $h=-\operatorname{Re}(W/\h
 
 $$\frac{\dd{x}}{\dd{t}} = -\nabla h(x)$$
 
-의 $p$에서의 unstable manifold, 즉 $t\rightarrow-\infty$일 때 $p$로 수렴하는 점들의 집합이다.
+의 $p$에서의 stable manifold, 즉 $t\rightarrow+\infty$일 때 $p$로 수렴하는 점들의 집합이다.
 :::
 
 이 thimble의 차원이 항상 $\dim_\mathbb{C} X$임은 holomorphic이라는 가정의 직접적 결과이며, 다음 명제로 정리한다.

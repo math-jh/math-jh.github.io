@@ -38,7 +38,7 @@ $$e^\mu\cdot e^\nu=e^{\mu+\nu},\qquad e^0=1$$
 로 정한 commutative ring이다. 곧 $\mathbb{Z}[P]$의 일반적인 원소는 유한합 $\sum_\mu c_\mu e^\mu$ ($c_\mu\in\mathbb{Z}$, 유한 개를 빼고 $c_\mu=0$)이다.
 :::
 
-기호 $e^\mu$는 단지 lattice 원소 $\mu$를 multiplicative group의 원소로 옮긴 형식적 지수일 뿐이며, $\mathbb{Z}[P]$는 추상적으로 Laurent 다항식환 $\mathbb{Z}[x_1^{\pm 1},\ldots,x_l^{\pm 1}]$과 동형이다. 여기에서 $x_i=e^{\varpi_i}$는 lattice $P$의 basis, 곧 fundamental weight들에 대응한다. Weyl group $W$는 $\mathfrak{h}^\ast$ 위에 작용하고 $P$를 보존하므로 $w\cdot e^\mu=e^{w\mu}$로 $\mathbb{Z}[P]$ 위에 ring automorphism으로 작용한다. 이 $W$-작용이 character 공식의 분자와 분모를 떠받치는 대칭이다.
+기호 $e^\mu$는 단지 lattice 원소 $\mu$를 multiplicative group의 원소로 옮긴 형식적 지수일 뿐이며, $\mathbb{Z}[P]$는 추상적으로 Laurent polynomial ring $\mathbb{Z}[x_1^{\pm 1},\ldots,x_l^{\pm 1}]$과 동형이다. 여기에서 $x_i=e^{\varpi_i}$는 lattice $P$의 basis, 곧 fundamental weight들에 대응한다. Weyl group $W$는 $\mathfrak{h}^\ast$ 위에 작용하고 $P$를 보존하므로 $w\cdot e^\mu=e^{w\mu}$로 $\mathbb{Z}[P]$ 위에 ring automorphism으로 작용한다. 이 $W$-작용이 character 공식의 분자와 분모를 떠받치는 대칭이다.
 
 ::: 정의 2
 유한차원 representation $V$의 weight 분해 $V=\bigoplus_{\mu}V_\mu$에 대하여, $V$의 *formal character<sub>형식 지표</sub>*는 $\mathbb{Z}[P]$의 원소
@@ -131,13 +131,13 @@ $$e^{\alpha/2}-e^{-\alpha/2}=e^{\alpha/2}\bigl(1-e^{-\alpha}\bigr)$$
 
 이고, 이를 모든 $\alpha\in\Phi^+$에 대해 곱하면 묶여 나온 인자들의 곱이 $\prod_{\alpha\in\Phi^+}e^{\alpha/2}=e^{\frac12\sum_{\alpha>0}\alpha}=e^\rho$이므로 따라온다. 이로써 $\mathrm{ch}\,M(\mu)=e^\mu/\prod_{\alpha>0}(1-e^{-\alpha})=e^{\mu+\rho}/\Delta$도 [명제 5](#prop5)에서 곧장 나온다.
 
-둘째 등호를 본다. 먼저 $\Delta$가 Weyl group 작용에 대해 부호를 갖고 변함을 보인다. 곧 임의의 $w\in W$에 대하여 $w\Delta=(-1)^{\ell(w)}\Delta$이다. $W$가 simple reflection $s_i$들로 생성되고 $\ell$이 그 생성에 대해 가법적으로 작동하므로 ([§Bruhat decomposition, ⁋정의 3](/ko/math/lie_theory/bruhat_decomposition#def3)) $w=s_i$인 경우만 보이면 충분하다. Simple reflection $s_i$는 positive root $\alpha_i$를 $-\alpha_i$로 보내고 나머지 positive root 전체를 자기들끼리 치환한다. 따라서 곱
+둘째 등호를 본다. 먼저 $\Delta$가 Weyl group 작용에 대해 부호를 갖고 변함을 보인다. 곧 임의의 $w\in W$에 대하여 $w\Delta=(-1)^{\ell(w)}\Delta$이다. $W$가 simple reflection $s_i$들로 생성되고 $\ell(ws_i)=\ell(w)\pm 1$이어서 부호 $w\mapsto(-1)^{\ell(w)}$가 group homomorphism이므로 ([§Bruhat decomposition, ⁋정의 3](/ko/math/lie_theory/bruhat_decomposition#def3) 이후의 논의) $w=s_i$인 경우만 보이면 충분하다. Simple reflection $s_i$는 positive root $\alpha_i$를 $-\alpha_i$로 보내고 나머지 positive root 전체를 자기들끼리 치환한다. 따라서 곱
 
 $$s_i\Delta=\prod_{\alpha\in\Phi^+}\bigl(e^{s_i\alpha/2}-e^{-s_i\alpha/2}\bigr)$$
 
 에서 $\alpha=\alpha_i$에 해당하는 인자만 $e^{-\alpha_i/2}-e^{\alpha_i/2}=-(e^{\alpha_i/2}-e^{-\alpha_i/2})$로 부호가 바뀌고 나머지 인자들은 순서만 뒤바뀌므로, $s_i\Delta=-\Delta=(-1)^{\ell(s_i)}\Delta$이다.
 
-이제 $\Delta$를 전개한다. 각 인자에서 $e^{\alpha/2}$ 또는 $-e^{-\alpha/2}$를 고르는 모든 방식을 합하면, $\Phi^+$의 각 부분집합 $S$에 대해 부호 $(-1)^{\lvert S\rvert}$가 붙은 항 $e^{\rho-\sum_{\alpha\in S}\alpha}$가 나온다. 그중 $S=\emptyset$인 최고차 항은 $e^\rho$이며, 이는 dominant weight $\rho$에 대응하므로 $\Delta$에서 계수 $+1$의 항으로 단 한 번만 나타난다. $\Delta$가 $w\Delta=(-1)^{\ell(w)}\Delta$를 만족하므로, $e^\rho$의 $W$-orbit 위의 각 항 $e^{w\rho}$는 계수 $(-1)^{\ell(w)}$를 가져야 한다. $\rho$가 strictly dominant이고 regular이므로 $W$는 $\rho$ 위에 자유롭게 작용하여 $w\rho$들은 서로 다른 $\lvert W\rvert$개의 weight이고, 이들 각각은 다시 $\rho$ 이하의 weight이다. 한편 $\Delta$의 모든 항 $e^{\rho-\sum_{\alpha\in S}\alpha}$의 weight는 $\sum_{\alpha\in S}\alpha\geq 0$만큼 $\rho$ 아래에 있고, $\Delta$가 반대칭이므로 $W$-regular가 아닌 weight (어떤 reflection이 고정하는 weight)의 계수는 $0$이어야 한다. Regular weight들은 정확히 $W$-orbit $\{w\rho\}$로 떨어지며 다른 regular orbit이 $\rho$ 이하에 더 나타나지 않음을 degree 비교로 확인하면, 남는 항은 $\sum_{w\in W}(-1)^{\ell(w)}e^{w\rho}$뿐이다.
+이제 $\Delta$를 전개한다. 각 인자에서 $e^{\alpha/2}$ 또는 $-e^{-\alpha/2}$를 고르는 모든 방식을 합하면, $\Phi^+$의 각 부분집합 $S$에 대해 부호 $(-1)^{\lvert S\rvert}$가 붙은 항 $e^{\rho-\sum_{\alpha\in S}\alpha}$가 나온다. 그중 $S=\emptyset$인 최고차 항은 $e^\rho$이며, 이는 dominant weight $\rho$에 대응하므로 $\Delta$에서 계수 $+1$의 항으로 단 한 번만 나타난다. $\Delta$가 $w\Delta=(-1)^{\ell(w)}\Delta$를 만족하므로, $e^\rho$의 $W$-orbit 위의 각 항 $e^{w\rho}$는 계수 $(-1)^{\ell(w)}$를 가져야 한다. $\rho$가 strictly dominant이고 regular이므로 $W$는 $\rho$ 위에 자유롭게 작용하여 $w\rho$들은 서로 다른 $\lvert W\rvert$개의 weight이고, 이들 각각은 다시 $\rho$ 이하의 weight이다. 한편 $\Delta$의 모든 항 $e^{\rho-\sum_{\alpha\in S}\alpha}$의 weight는 $\sum_{\alpha\in S}\alpha\geq 0$만큼 $\rho$ 아래에 있고, $\Delta$가 반대칭이므로 $W$-regular가 아닌 weight (어떤 reflection이 고정하는 weight)의 계수는 $0$이어야 한다. 계수가 $0$이 아닌 regular weight의 orbit 안의 dominant 원소를 $\rho-q$ ($q\in Q^+$)라 하면 이는 strictly dominant이어서 $-q=(\rho-q)-\rho$가 dominant weight이고, dominant weight는 simple root들의 음이 아닌 유리계수 결합이므로 $q\in Q^+$와 합쳐 $q=0$이 된다. 곧 그러한 regular weight는 $W$-orbit $\{w\rho\}$의 원소뿐이므로, 남는 항은 $\sum_{w\in W}(-1)^{\ell(w)}e^{w\rho}$이다.
 :::
 
 따라서 highest weight $\mu$를 $\mu+\rho$로 옮긴 frame에서 모든 Verma module character는 공통 분모 $\Delta=\sum_w(-1)^{\ell(w)}e^{w\rho}$ 위의 분자 $e^{\mu+\rho}$ 하나로 적힌다. 이 $\rho$-이동된 좌표가 character 공식을 깔끔한 교대합으로 만든다.
@@ -147,16 +147,16 @@ $$s_i\Delta=\prod_{\alpha\in\Phi^+}\bigl(e^{s_i\alpha/2}-e^{-s_i\alpha/2}\bigr)$
 이제 기약 representation의 character를 Verma module character들로 표현한다. 발상은 두 가지 사실을 결합하는 것이다. 첫째, 임의의 highest weight module은 Jordan–Hölder 인자가 모두 기약 highest weight module $L(\nu)$들이므로, formal character의 수준에서 $\mathrm{ch}\,M(\mu)=\sum_\nu[M(\mu):L(\nu)]\,\mathrm{ch}\,L(\nu)$이고, 이 관계는 $\mathrm{ch}\,L(\lambda)$를 $\mathrm{ch}\,M(\mu)$들의 정수계수 결합으로 거꾸로 푸는 것을 허용한다. 둘째, 그 결합에 어떤 $M(\mu)$가 실제로 들어올 수 있는지를 Casimir 원소의 central character가 강하게 제약한다.
 
 ::: 명제 8
-$\mathfrak{g}$의 Casimir 원소 $\Omega\in U(\mathfrak{g})$는 Verma module $M(\mu)$ 위에서 스칼라 $\langle\mu+\rho,\mu+\rho\rangle-\langle\rho,\rho\rangle$로 작용한다. 여기에서 $\langle-,-\rangle$은 Killing form이 $\mathfrak{h}^\ast$ 위에 유도하는 $W$-불변 내적이다. 특히 두 weight $\mu,\mu'$에 대하여 $M(\mu)$와 $M(\mu')$ 위의 $\Omega$의 고윳값이 같을 필요충분조건은 $\mu'+\rho$가 $\mu+\rho$의 Weyl group orbit 위에 놓이는 것이다.
+$\mathfrak{g}$의 Casimir 원소 $\Omega\in U(\mathfrak{g})$는 Verma module $M(\mu)$ 위에서 스칼라 $\langle\mu+\rho,\mu+\rho\rangle-\langle\rho,\rho\rangle$로 작용한다. 여기에서 $\langle-,-\rangle$은 Killing form이 $\mathfrak{h}^\ast$ 위에 유도하는 $W$-불변 내적이다. 특히 $\mu'+\rho$가 $\mu+\rho$의 Weyl group orbit 위에 놓이면 $M(\mu)$와 $M(\mu')$ 위의 $\Omega$의 고윳값이 같고, 거꾸로 두 고윳값이 같으면 $\langle\mu+\rho,\mu+\rho\rangle=\langle\mu'+\rho,\mu'+\rho\rangle$이다.
 :::
 ::: 증명
-$\Omega$는 $U(\mathfrak{g})$의 중심에 속하므로 ($\sl_2$의 경우가 [§보편 포락 대수, ⁋예시 12](/ko/math/lie_theory/universal_enveloping_algebra#ex12)) 각 weight space를 보존하며 highest weight module 위에서는 스칼라로 작용한다. $\Omega$를 삼각 분해 $\mathfrak{g}=\mathfrak{n}^-\oplus\mathfrak{h}\oplus\mathfrak{n}^+$에 맞춰 정렬하면
+$\Omega$는 $U(\mathfrak{g})$의 중심에 속하므로 ($\sl_2$의 경우가 [§보편 포락 대수, ⁋예시 12](/ko/math/lie_theory/universal_enveloping_algebra#ex12)) 각 weight space를 보존하며 highest weight module 위에서는 스칼라로 작용한다. $\mathfrak{h}$의 기저 $(H_i)$와 Killing form $\kappa$에 대한 그 dual basis $(H^i)$를 잡고 각 $\alpha\in\Phi^+$에 대해 $\kappa(e_\alpha,f_\alpha)=1$이 되도록 $e_\alpha\in\mathfrak{g}_\alpha$, $f_\alpha\in\mathfrak{g}_{-\alpha}$를 택하면 $\Omega=\sum_iH_iH^i+\sum_{\alpha\in\Phi^+}(e_\alpha f_\alpha+f_\alpha e_\alpha)$이다. $[e_\alpha,f_\alpha]=t_\alpha$ ($t_\alpha\in\mathfrak{h}$는 $\kappa$가 $\alpha$에 대응시키는 원소)를 써서 $\mathfrak{n}^+$를 오른쪽으로 몰고 $\sum_{\alpha\in\Phi^+}t_\alpha=t_{2\rho}=2t_\rho$를 쓰면
 
-$$\Omega=\sum_i H_i^2+\text{(lower terms)}+2\sum_{\alpha\in\Phi^+}f_\alpha e_\alpha+(\mathfrak{h}\text{-part})$$
+$$\Omega=\sum_iH_iH^i+2t_\rho+2\sum_{\alpha\in\Phi^+}f_\alpha e_\alpha$$
 
-의 꼴로 쓰이는데, $M(\mu)$의 highest weight vector $v_\mu^+$에 작용시키면 $\mathfrak{n}^+$로 시작하는 항은 모두 $v_\mu^+$를 소멸시키고 ([§최고 무게 가군, ⁋정의 4](/ko/math/lie_theory/highest_weight_modules#def4)) $\mathfrak{h}$-부분만 남는다. 이를 정리하면 고윳값은 $\langle\mu,\mu\rangle+2\langle\mu,\rho\rangle=\langle\mu+\rho,\mu+\rho\rangle-\langle\rho,\rho\rangle$이 된다. $\Omega$가 스칼라로 작용하므로 $M(\mu)$ 전체에서 이 값이다.
+가 된다. $M(\mu)$의 highest weight vector $v_\mu^+$에 작용시키면 오른쪽 끝이 $\mathfrak{n}^+$에 놓인 항은 모두 $v_\mu^+$를 소멸시키고 ([§최고 무게 가군, ⁋정의 4](/ko/math/lie_theory/highest_weight_modules#def4)) $\mathfrak{h}$-부분만 남으므로, 고윳값은 $\langle\mu,\mu\rangle+2\langle\mu,\rho\rangle=\langle\mu+\rho,\mu+\rho\rangle-\langle\rho,\rho\rangle$이 된다. $\Omega$가 스칼라로 작용하므로 $M(\mu)$ 전체에서 이 값이다.
 
-두 고윳값이 같음은 $\langle\mu+\rho,\mu+\rho\rangle=\langle\mu'+\rho,\mu'+\rho\rangle$, 곧 $\mu+\rho$와 $\mu'+\rho$가 같은 길이를 가짐과 동치이다. $W$가 이 형식을 보존하므로, $\mu'+\rho\in W(\mu+\rho)$이면 두 central character가 같다. 우리가 사용하는 것은 이 함의이다. $\mathrm{ch}\,L(\lambda)$를 Verma character들의 정수계수 합으로 적을 때 나타나는 $M(\mu)$는 모두 $L(\lambda)$와 같은 central character를 가지면서 $\mu\leq\lambda$인 것들이며, [명제 5](#prop5)의 support 조건에 의해 그러한 $\mu$는 유한개이다.
+두 고윳값이 같음은 $\langle\mu+\rho,\mu+\rho\rangle=\langle\mu'+\rho,\mu'+\rho\rangle$, 곧 $\mu+\rho$와 $\mu'+\rho$가 같은 길이를 가짐과 동치이다. $W$가 이 형식을 보존하므로, $\mu'+\rho\in W(\mu+\rho)$이면 두 central character가 같다. 역방향은 일반적으로 성립하지 않는다. $\sl_3$의 두 fundamental weight $\varpi_1,\varpi_2$는 $\varpi_1+\rho$와 $\varpi_2+\rho$가 같은 길이를 가지면서 서로 다른 dominant weight이라 같은 $W$-orbit에 놓이지 않기 때문이다. 우리가 사용하는 것은 같은 길이라는 필요조건이며, 고정된 $\lambda$에 대하여 $\mu\leq\lambda$이면서 $\langle\mu+\rho,\mu+\rho\rangle=\langle\lambda+\rho,\lambda+\rho\rangle$인 $\mu$는 유한개이다. $q=\lambda-\mu\in Q^+$로 두면 이 등식은 $\langle q,q\rangle=2\langle\lambda+\rho,q\rangle$이 되어 Cauchy–Schwarz 부등식으로 $\lvert q\rvert\leq 2\lvert\lambda+\rho\rvert$를 주고, 이 크기 조건을 만족하는 $Q^+$의 원소는 유한개이기 때문이다.
 :::
 
 이제 central character가 같은 Verma module만이 한 블록에 묶인다는 사실과 Verma character가 $\widehat{\mathbb{Z}[P]}$에서 가역 분모를 갖는다는 사실을 결합하여, character 공식을 끌어낸다.
@@ -169,30 +169,38 @@ $$\mathrm{ch}\,L(\lambda)=\frac{\sum_{w\in W}(-1)^{\ell(w)}\,e^{w(\lambda+\rho)}
 이다.
 :::
 ::: 증명
-$M(\lambda)$는 유한 길이의 module이고 그 모든 composition factor는 highest weight $\nu\leq\lambda$인 기약 module $L(\nu)$이며 $L(\lambda)$가 중복도 $1$로 한 번 나타난다 ([§최고 무게 가군, ⁋명제 8](/ko/math/lie_theory/highest_weight_modules#prop8)). Formal character는 short exact sequence에 대해 가법적이므로
+$M(\lambda)$의 임의의 irreducible 부분몫은 그 weight 가운데 maximal한 것 $\nu$의 벡터가 highest weight vector가 되어 $L(\nu)$와 isomorphic이고 ([§최고 무게 가군, ⁋명제 10](/ko/math/lie_theory/highest_weight_modules#prop10)), $\nu$가 $M(\lambda)$의 weight이므로 $\nu\leq\lambda$이다 ([§최고 무게 가군, ⁋명제 7](/ko/math/lie_theory/highest_weight_modules#prop7)). 또한 $\Omega$가 $M(\lambda)$ 위에서 스칼라로 작용하므로 그 부분몫 위에서도 같은 스칼라로 작용하고, $L(\nu)$가 $M(\nu)$의 quotient이므로 [명제 8](#prop8)에 의하여 $\langle\nu+\rho,\nu+\rho\rangle=\langle\lambda+\rho,\lambda+\rho\rangle$이 성립한다. 곧 등장할 수 있는 highest weight는 유한집합
+
+$$S=\{\nu\leq\lambda\mid\langle\nu+\rho,\nu+\rho\rangle=\langle\lambda+\rho,\lambda+\rho\rangle\}$$
+
+안에 있다 ([명제 8](#prop8)의 증명). 각 factor $L(\nu)$가 weight space $M(\lambda)_\nu$의 차원을 적어도 $1$만큼 소비하므로 $M(\lambda)$의 길이는 유한한 값 $\sum_{\nu\in S}\dim M(\lambda)_\nu$ 이하이고 ([§최고 무게 가군, ⁋명제 7](/ko/math/lie_theory/highest_weight_modules#prop7)), $M(\lambda)_\lambda$가 $1$차원이므로 $L(\lambda)$는 중복도 $1$로 한 번 나타난다. Formal character는 short exact sequence에 대해 가법적이므로
 
 $$\mathrm{ch}\,M(\lambda)=\mathrm{ch}\,L(\lambda)+\sum_{\nu<\lambda}[M(\lambda):L(\nu)]\,\mathrm{ch}\,L(\nu)\tag{$\ast$}$$
 
-이다. 여기에서 합에 등장하는 모든 $L(\nu)$는 $M(\nu)$의 quotient이므로 $M(\nu)$와 같은 central character, 곧 $\Omega$의 같은 고윳값을 갖는다. $L(\nu)$가 $M(\lambda)$의 composition factor이려면 $M(\nu)$가 $M(\lambda)$와 같은 $\Omega$-고윳값을 가져야 하므로, [명제 8](#prop8)에 의하여 $\nu+\rho\in W(\lambda+\rho)$이다. 따라서 $(\ast)$에 실제로 기여하는 weight는 $\nu+\rho=w(\lambda+\rho)$ 꼴의 유한 개뿐이다.
+이다. 여기에서 합에 등장하는 $\nu$는 모두 $S$의 원소이다.
 
-같은 추론을 각 $M(w(\lambda+\rho)-\rho)$에 적용하면, 행렬 $\bigl([M(\nu):L(\nu')]\bigr)$이 이 유한한 weight 집합 위에서 단위 대각을 갖는 상삼각 행렬이 되어 가역이다. 그러므로 $(\ast)$를 거꾸로 풀면 정수계수 $c_w$들이 존재하여
+같은 추론을 각 $\nu\in S$의 $M(\nu)$에 적용하면 그 composition factor의 highest weight도 $S$ 안에 머무르므로, 행렬 $\bigl([M(\nu):L(\nu')]\bigr)_{\nu,\nu'\in S}$은 순서 $\leq$에 대해 단위 대각을 갖는 삼각 행렬이 되어 가역이다. 그러므로 $(\ast)$를 거꾸로 풀면 정수계수 $c_\nu$들이 존재하여
 
-$$\mathrm{ch}\,L(\lambda)=\sum_{w\in W}c_w\,\mathrm{ch}\,M\bigl(w(\lambda+\rho)-\rho\bigr),\qquad c_e=1$$
+$$\mathrm{ch}\,L(\lambda)=\sum_{\nu\in S}c_\nu\,\mathrm{ch}\,M(\nu),\qquad c_\lambda=1$$
 
-로 쓰인다. [명제 7](#prop7)에 의해 $\mathrm{ch}\,M(w(\lambda+\rho)-\rho)=e^{w(\lambda+\rho)}/\Delta$이므로
+로 쓰인다. [명제 7](#prop7)에 의해 $\mathrm{ch}\,M(\nu)=e^{\nu+\rho}/\Delta$이므로
 
-$$\Delta\cdot\mathrm{ch}\,L(\lambda)=\sum_{w\in W}c_w\,e^{w(\lambda+\rho)}\tag{$\ast\ast$}$$
+$$\Delta\cdot\mathrm{ch}\,L(\lambda)=\sum_{\nu\in S}c_\nu\,e^{\nu+\rho}\tag{$\ast\ast$}$$
 
 이다. 좌변의 성질을 본다. $\mathrm{ch}\,L(\lambda)$는 $W$-불변이고 ([정의 2](#def2) 이후의 논의) $\Delta$는 $w\Delta=(-1)^{\ell(w)}\Delta$를 만족하므로 ([명제 7](#prop7)의 증명), 좌변 $\Delta\cdot\mathrm{ch}\,L(\lambda)$는 $W$-반대칭이다. 곧 임의의 $w\in W$에 대하여 $w\bigl(\Delta\cdot\mathrm{ch}\,L(\lambda)\bigr)=(-1)^{\ell(w)}\Delta\cdot\mathrm{ch}\,L(\lambda)$이다.
 
-따라서 우변 $(\ast\ast)$도 $W$-반대칭이어야 하고, 이는 계수가 orbit 위에서 $c_{ww'}=(-1)^{\ell(w)}c_{w'}$를 만족하도록 강제한다. $c_e=1$이므로 $c_w=(-1)^{\ell(w)}$이다. 한편 $\lambda+\rho$가 strictly dominant이고 regular이므로 $W$가 그 위에 자유롭게 작용하여 $w(\lambda+\rho)$들이 서로 다른 $\lvert W\rvert$개의 weight를 주어, 위 계수 부여에 충돌이 없다. 그러므로
+따라서 우변 $(\ast\ast)$도 $W$-반대칭이어야 한다. 곧 $c_\nu\neq 0$이고 $w\in W$이면 $w(\nu+\rho)=\nu'+\rho$인 $\nu'\in S$가 존재하여 $c_{\nu'}=(-1)^{\ell(w)}c_\nu$를 만족한다. 여기에서 $w$를 $w(\nu+\rho)$가 dominant가 되도록 고르면 $\nu'+\rho$가 dominant이고, $q=\lambda-\nu'\in Q^+$에 대하여
+
+$$0=\langle\lambda+\rho,\lambda+\rho\rangle-\langle\nu'+\rho,\nu'+\rho\rangle=\bigl\langle q,(\lambda+\rho)+(\nu'+\rho)\bigr\rangle$$
+
+이 성립한다. $\lambda+\rho$는 strictly dominant이고 $\nu'+\rho$는 dominant이므로 그 합은 strictly dominant이며, $q\neq 0$이면 우변이 양수가 되어 모순이다. 따라서 $\nu'=\lambda$이고, $c_\nu\neq 0$인 $\nu$는 모두 $\nu+\rho\in W(\lambda+\rho)$를 만족한다. $\lambda+\rho$가 strictly dominant이고 regular이므로 $W$가 그 위에 자유롭게 작용하여 $w(\lambda+\rho)$들은 서로 다른 $\lvert W\rvert$개의 weight를 주고, $c_\lambda=1$과 위의 부호 관계로부터 $\nu=w(\lambda+\rho)-\rho$에서 $c_\nu=(-1)^{\ell(w)}$이다. 그러므로
 
 $$\Delta\cdot\mathrm{ch}\,L(\lambda)=\sum_{w\in W}(-1)^{\ell(w)}e^{w(\lambda+\rho)}$$
 
 이고, $\Delta=\sum_w(-1)^{\ell(w)}e^{w\rho}=\prod_{\alpha>0}(e^{\alpha/2}-e^{-\alpha/2})$로 양변을 나누면 주장한 공식을 얻는다.
 :::
 
-분자와 분모는 각각 $W$-반대칭인 $\widehat{\mathbb{Z}[P]}$의 원소이고, 그 quotient가 $W$-불변인 formal character를 준다는 점이 공식의 구조를 떠받친다. 분모를 $\rho$의 orbit 합으로, 분자를 $\lambda+\rho$의 orbit 합으로 적으면 두 교대합이 같은 꼴을 가지므로, 분자를 분모로 형식적으로 나누는 계산이 곧 weight 중복도를 산출한다. $\lambda=0$이면 분자와 분모가 같아 $\mathrm{ch}\,L(0)=1$, 곧 자명한 representation을 정확히 회복한다.
+분자와 분모는 각각 $W$-반대칭인 $\widehat{\mathbb{Z}[P]}$의 원소이고, 그 quotient가 $W$-불변인 formal character를 준다는 점이 공식의 구조를 떠받친다. 분모를 $\rho$의 orbit 합으로, 분자를 $\lambda+\rho$의 orbit 합으로 적으면 두 교대합이 같은 꼴을 가지므로, 분자를 분모로 형식적으로 나누는 계산이 곧 weight 중복도를 산출한다. $\lambda=0$이면 분자와 분모가 같아 $\mathrm{ch}\,L(0)=1$, 곧 trivial representation을 정확히 회복한다.
 
 ## Weyl 차원 공식
 
