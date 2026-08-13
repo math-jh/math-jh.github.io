@@ -13954,6 +13954,13 @@ P:
   see:
   - label: Injective module
     id: injective_module
+- id: projective_morphism
+  en: projective morphism
+  ko: 사영사상
+  primary: en
+  defs:
+  - label: '[스킴] §값매김환'
+    url: /ko/math/scheme_theory/valuative_criteria
 - id: projective_n_-space
   en: projective $n$-space
   ko: $n$차원 사영공간
@@ -15973,6 +15980,13 @@ S:
   defs:
   - label: '[위상수학] §하우스도르프 공간'
     url: /ko/math/topology/Hausdorff_spaces
+- id: separated_morphism
+  en: separated morphism
+  ko: 분리사상
+  primary: en
+  defs:
+  - label: '[스킴] §스킴 사상의 성질들'
+    url: /ko/math/scheme_theory/properties_of_scheme_morphisms
 - id: separated_presheaf
   en: separated presheaf
   ko: 분리 준층

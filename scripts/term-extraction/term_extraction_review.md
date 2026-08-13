@@ -5292,3 +5292,7 @@ Decide whether each one is a definition and add it to `_data/terms.yml` (then ru
 
 - _posts/Math/Representation_Theory/ko/2026-06-21-Reflection_Functors.md: 주요 용어 'Dynkin' ko 미상 — 보류
 - _posts/Math/Representation_Theory/ko/2026-06-21-Reflection_Functors.md: 주요 용어 'Gabriel' ko 미상 — 보류
+
+## term_extract_worker 2026-08-13 11:00
+
+- _posts/Math/Scheme_Theory/ko/2024-05-24-Valuative_Criteria.md: 주요 용어 'Noetherian' ko 미상 — 보류
