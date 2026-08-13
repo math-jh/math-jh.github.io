@@ -9040,6 +9040,8 @@ I:
     url: /ko/math/algebraic_structures/algebraic_structures
   - label: '[대수적 구조] §반군, 모노이드, 군'
     url: /ko/math/algebraic_structures/groups
+  - label: '[환론] §가역원과 영인자'
+    url: /ko/math/ring_theory/units_and_zero_divisors
 - id: inverse_element
   en: inverse element
   ko: 역원
@@ -13636,6 +13638,8 @@ P:
   defs:
   - label: '[체론] §체'
     url: /ko/math/field_theory/fields
+  - label: '[환론] §가역원과 영인자'
+    url: /ko/math/ring_theory/units_and_zero_divisors
 - id: prime_filter
   en: prime filter
   ko: 소필터
