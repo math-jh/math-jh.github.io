@@ -9334,6 +9334,13 @@ I:
   defs:
   - label: '[사교기하학] §사교벡터공간'
     url: /ko/math/symplectic_geometry/linear_symplectic_geometry
+- id: isotypic_component
+  en: isotypic component
+  ko: 등형 성분
+  primary: en
+  defs:
+  - label: '[표현론] §유한군의 표현론'
+    url: /ko/math/representation_theory/representations_of_finite_groups
 - id: iterated_integral
   en: iterated integral
   ko: 반복적분
