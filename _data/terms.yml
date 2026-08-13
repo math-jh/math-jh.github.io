@@ -817,6 +817,13 @@ A:
   defs:
   - label: '[스택] §대수적 stack과 quotient stack'
     url: /ko/math/stacks/algebraic_stacks
+- id: artin-wedderburn_theorem
+  en: Artin-Wedderburn theorem
+  ko: Artin-Wedderburn 정리
+  primary: en
+  defs:
+  - label: '[환론] §Artin-Wedderburn 정리'
+    url: /ko/math/ring_theory/artin_wedderburn
 - id: artinian
   en: Artinian module
   ko: 아틴가군
@@ -11160,6 +11167,13 @@ M:
   defs:
   - label: '[해석학] §선형 미분방정식계'
     url: /ko/math/analysis/linear_ode
+- id: matrix_ring
+  en: matrix ring
+  ko: 행렬환
+  primary: ko
+  defs:
+  - label: '[환론] §가역원과 영인자'
+    url: /ko/math/ring_theory/units_and_zero_divisors
 - id: maximal
   en: maximal
   ko: 극대
