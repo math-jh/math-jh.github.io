@@ -200,6 +200,8 @@ exclude:
   - scripts
   - .obsidian
   - .backups
+  - notes                               # gitignore된 작업 노트. frontmatter가 있어 Jekyll이
+                                        # 파싱하려다 YAML 예외를 낸다 (CI엔 존재하지 않음)
   # CI deploy fix (2026-07-03): keep the GitHub Pages site under the 1 GB limit
   # (2026-07-05: keyboard posts re-published with <video> references removed)
   - assets/videos                       # 510 MB of .mov keyboard sound-test clips
