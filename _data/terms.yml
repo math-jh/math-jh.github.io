@@ -11564,6 +11564,13 @@ M:
   defs:
   - label: '[범주론] §모노이드 범주'
     url: /ko/math/category_theory/monoidal_categories
+- id: monomial
+  en: monomial
+  ko: 단항식
+  primary: en
+  defs:
+  - label: '[대수다양체] §사영다양체'
+    url: /ko/math/algebraic_varieties/projective_varieties
 - id: monomorphism
   en: monomorphism
   ko: ''
