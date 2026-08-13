@@ -1219,6 +1219,13 @@ B:
     id: base_locus
   - label: Base space
     id: base_space
+- id: base_change
+  en: base change
+  ko: 밑 변환
+  primary: en
+  defs:
+  - label: '[체론] §분리가능확대체'
+    url: /ko/math/field_theory/separable_extensions
 - id: base_locus
   en: base locus
   ko: 기저점 자취
@@ -6483,6 +6490,13 @@ F:
   see:
   - label: Projective module
     id: projective_module
+- id: flat_morphism
+  en: flat morphism
+  ko: 평탄 사상
+  primary: en
+  defs:
+  - label: '[스킴] §평탄사상'
+    url: /ko/math/scheme_theory/flat_morphisms
 - id: flatness
   en: flatness
   ko: 평탄성
