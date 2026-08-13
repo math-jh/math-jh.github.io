@@ -18,6 +18,7 @@ import json
 import os
 import re
 import subprocess
+import sys
 import time
 import urllib.parse
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
@@ -37,6 +38,14 @@ KOTYPO_STATE = f"{STATE}/blog_dashboard_kotypo.json"
 QUOTA = os.path.expanduser("~/Projects/hud-display/state/claude_quota.json")
 PORT = int(os.environ.get("BLOG_DASH_PORT", "8089"))
 CACHE_TTL = 45
+
+# 색인 요청 추천 순위는 index-monitor 와 **같은 모듈**을 쓴다. 규칙을 여기 복제하면
+# inspect_monitor 가 순위를 바꿀 때 대시보드만 조용히 옛 규칙으로 남는다.
+sys.path.insert(0, f"{ROOT}/scripts/index-monitor")
+try:
+    import index_ranking
+except Exception:
+    index_ranking = None
 
 # ── 워커 정의 ────────────────────────────────────────────────────────────────
 # interval: cron 주기(초). age > 2.5*interval 이면 stale(빨간불) 판정.
@@ -326,6 +335,9 @@ def _last_run_lines(path, interval, n=10):
 def sec_workers():
     now = time.time()
     out = []
+    # 일시정지된 워커는 로그가 늙는 게 정상이다 — stale 로 불을 켜면 의도된 정지가
+    # 고장으로 읽힌다. 프런트가 그 구분을 할 수 있게 정지 상태를 같이 실어 보낸다.
+    paused_of = {j["worker"]: j for j in sec_cron()["items"] if j.get("worker")}
     for w in WORKERS:
         target = w.get("log") or w.get("watch")
         ts = mtime(target)
@@ -349,9 +361,11 @@ def sec_workers():
         # quota-gate blocked 는 설계된 스킵이지 오류가 아니다.
         err = any(_ERR_RE.search(ln)
                   for ln in (_last_run_lines(w["log"], w["interval"]) if w.get("log") else []))
+        p = paused_of.get(w["key"]) or {}
         out.append(dict(key=w["key"], name=w["name"], schedule=w["schedule"],
                         status=status, age=age, last_ts=ts, err=err, tail=lines,
-                        runs=runs, has_log=bool(w.get("log"))))
+                        runs=runs, has_log=bool(w.get("log")),
+                        paused=bool(p.get("paused")), cron_id=p.get("id")))
     return out
 
 
@@ -476,11 +490,30 @@ def sec_gsc():
                               checked=v.get("last_checked", ""),
                               snoozed=bool(snooze and snooze > today)))
     unindexed.sort(key=lambda r: (r["snoozed"], r["since"]))
+
+    # 오늘의 색인 요청 추천. 03:00 크론이 이미 오늘치를 뽑아 뒀으면 **그걸** 쓴다
+    # (그 배치는 GSC 실측을 거쳤고, 뽑히면서 쿨다운이 걸려 여기서 다시 계산하면
+    # 다음 순번이 나온다). 아직 안 돌았거나 어제 것이면 같은 모듈로 직접 고른다.
+    batch = d.get("last_batch") or {}
+    rec_paths, rec_src = [], "none"
+    if batch.get("date") == today and batch.get("paths"):
+        rec_paths, rec_src = list(batch["paths"]), "batch"
+    elif index_ranking:
+        cands = [k for k, v in urls.items()
+                 if isinstance(v, dict) and v.get("indexed") is not True]
+        rec_paths = index_ranking.recommend_from_state(urls, cands, today)
+        rec_src = "computed"
+    recommend = [dict(path=p, coverage=(urls.get(p) or {}).get("coverage"),
+                      since=(urls.get(p) or {}).get("since", ""))
+                 for p in rec_paths]
+
     return dict(mtime=mtime(p), total=len(urls), unindexed=unindexed[:25],
                 unindexed_count=len(unindexed), by_coverage=by_coverage,
                 actionable=sum(1 for r in unindexed if not r["snoozed"]),
-                last_batch=(d.get("last_batch") or {}).get("date"),
-                last_full_sweep=d.get("last_full_sweep"))
+                last_batch=batch.get("date"),
+                last_full_sweep=d.get("last_full_sweep"),
+                recommend=recommend, recommend_src=rec_src,
+                host="https://math-jh.com")
 
 
 def sec_git():
@@ -527,6 +560,61 @@ def sec_system():
                 unpushed_oldest=min(unpushed) if unpushed else None)
 
 
+# ── cron 제어 ────────────────────────────────────────────────────────────────
+# 정지/재개는 crontab 을 고치지 않는다. crontab 에 박힌 cron-gate 가 상태파일
+# 하나를 보고 뒤 명령을 돌릴지 말지 정하고, 이 서버는 그 CLI 만 호출한다.
+# crontab 은 director/sync_slots/safety_net 이 락 없이 rewrite 하므로 웹에서
+# 건드리면 lost update 가 난다 (2026-07-18 번역워커 라인 소실 사고).
+CRON_GATE = os.path.expanduser("~/.local/bin/cron-gate")
+# 키가 곧 허용목록이다. 연구 파이프라인(research-*)은 Pi 대시보드(:8088) 소관.
+CRON_JOBS = [
+    dict(id="blog-translation",      name="번역 워커",        worker="translation"),
+    dict(id="blog-terms",            name="용어 추출",        worker="terms"),
+    dict(id="blog-terms-lint",       name="용어 lint",        worker="terms_lint"),
+    dict(id="blog-terms-deprecated", name="폐기 용어 점검",   worker=None),
+    dict(id="blog-comments",         name="댓글 수집",        worker="comments"),
+    dict(id="blog-devbot",           name="개발 노트 봇",     worker="blogdev"),
+    dict(id="blog-links-audit",      name="주간 링크 감사",   worker="audit"),
+    dict(id="blog-pagefind",         name="Pagefind 재색인",  worker="pagefind"),
+    dict(id="blog-link-normalizer",  name="링크 정규화 감사", worker="link_norm"),
+    dict(id="blog-gsc-monitor",      name="GSC 색인 모니터",  worker="index_monitor"),
+    dict(id="blog-indexnow",         name="IndexNow 제출",    worker=None),
+    dict(id="timer:blog-autopush",   name="autopush",         worker=None),
+]
+CRON_IDS = {j["id"] for j in CRON_JOBS}
+_cron_cache = {"ts": 0.0, "data": None}
+
+
+def gate_cli(*args, timeout=15):
+    """cron-gate 호출 — 정지 상태를 읽고 쓰는 유일한 경로."""
+    try:
+        p = subprocess.run([CRON_GATE, *args], capture_output=True, text=True,
+                           timeout=timeout)
+        return json.loads(p.stdout or "{}")
+    except Exception as e:
+        return {"ok": False, "error": f"cron-gate 호출 실패: {str(e)[:160]}"}
+
+
+def sec_cron():
+    now = time.time()
+    if _cron_cache["data"] is not None and now - _cron_cache["ts"] < 15:
+        return _cron_cache["data"]
+    rows = {r["id"]: r for r in (gate_cli("--jobs", "--json").get("jobs") or [])}
+    out = []
+    for j in CRON_JOBS:
+        r = rows.get(j["id"])
+        out.append(dict(id=j["id"], name=j["name"], worker=j["worker"],
+                        schedule=(r or {}).get("schedule", ""),
+                        next=(r or {}).get("next", ""),
+                        paused=bool(r and r.get("paused")),
+                        until=(r or {}).get("until"), by=(r or {}).get("by"),
+                        # crontab/timers.conf 에서 게이트가 사라지면 버튼이 무의미해진다
+                        missing=r is None, timer=j["id"].startswith("timer:")))
+    data = dict(items=out, paused=sum(1 for x in out if x["paused"]))
+    _cron_cache.update(ts=now, data=data)
+    return data
+
+
 def build_summary():
     posts = scan_posts()
     stats, categories, orphan_en, unpublished = sec_posts(posts)
@@ -543,6 +631,7 @@ def build_summary():
         gsc=sec_gsc(),
         git=sec_git(),
         system=sec_system(),
+        cron=sec_cron(),
     )
 
 
@@ -564,7 +653,7 @@ STATIC = {"/": ("index.html", "text/html; charset=utf-8"),
 # index.html 을 줘야 app.js 가 hash 라우트로 리다이렉트할 수 있다.
 # (nginx 가 /dash/ 를 벗겨 보내므로 여기서 보는 경로는 "/workers" 처럼 접두사가 없다.)
 SECTIONS = {"workers", "pipeline", "drafts", "weights", "translation", "audit",
-            "index", "activity"}
+            "index", "activity", "cron"}
 
 
 class Handler(BaseHTTPRequestHandler):
@@ -646,8 +735,14 @@ class Handler(BaseHTTPRequestHandler):
 
     def do_POST(self):
         path = urllib.parse.urlparse(self.path).path.rstrip("/")
-        if path != "/api/kotypo":
+        if path not in ("/api/kotypo", "/api/cron/pause", "/api/cron/resume"):
             return self._send(404, "not found", "text/plain; charset=utf-8")
+        why = self._reject_write()
+        if why:
+            return self._send(403, json.dumps({"ok": False, "error": why},
+                                              ensure_ascii=False))
+        if path != "/api/kotypo":
+            return self._cron_action(path)
         # 클라이언트가 전체 map 을 보내 통째로 교체한다 (키 (path@verified_at) → 1).
         try:
             n = int(self.headers.get("Content-Length") or 0)
@@ -665,6 +760,55 @@ class Handler(BaseHTTPRequestHandler):
             json.dump(clean, f, ensure_ascii=False)
         os.replace(tmp, KOTYPO_STATE)
         return self._send(200, json.dumps({"ok": True, "n": len(clean)}))
+
+    # ── 쓰기 경로의 게이트 ───────────────────────────────────────────────
+    # 막으려는 건 브라우저 CSRF 다 — 이 대시보드는 Cloudflare Access 뒤에 있고
+    # Access 쿠키는 cross-site POST 에도 실린다. 커스텀 헤더까지 요구하면
+    # cross-origin 요청은 프리플라이트를 거쳐야 하는데 그건 통과하지 못한다.
+    # 반대로 같은 uid 로 127.0.0.1 을 때리는 로컬 프로세스는 막지 않는다 —
+    # 그 상황이면 이미 crontab -e 가 되므로 권한 상승이 아니다.
+    def _reject_write(self):
+        origin = self.headers.get("Origin") or ""
+        host = self.headers.get("Host") or ""
+        if not origin or not host:
+            return "Origin 헤더 없음"
+        # 포트를 뺀 호스트명으로 비교한다 — nginx 가 Host 를 `$host:$server_port`
+        # 로 넘기는 반면 브라우저 Origin 은 기본 포트를 생략하므로, netloc 을
+        # 그대로 비교하면 정상 요청이 전부 막힌다.
+        o = urllib.parse.urlsplit("//" + urllib.parse.urlsplit(origin).netloc).hostname
+        h = urllib.parse.urlsplit("//" + host).hostname
+        if not o or not h or o.lower() != h.lower():
+            return "Origin 불일치"
+        if "application/json" not in (self.headers.get("Content-Type") or ""):
+            return "Content-Type 이 application/json 이 아님"
+        if self.headers.get("X-Dash-Action") != "1":
+            return "X-Dash-Action 헤더 없음"
+        return None
+
+    def _cron_action(self, path):
+        try:
+            n = int(self.headers.get("Content-Length") or 0)
+            if not 0 <= n <= 4096:
+                raise ValueError
+            body = json.loads(self.rfile.read(n).decode("utf-8") or "{}")
+            jid = body.get("id")
+            if jid not in CRON_IDS:      # 허용목록 — 임의 id 로 파일 못 만든다
+                raise ValueError
+        except Exception:
+            return self._send(400, json.dumps({"ok": False, "error": "bad body"},
+                                              ensure_ascii=False))
+        if path.endswith("pause"):
+            args = ["--pause", jid, "--by", "blog-dash", "--json"]
+            until = body.get("until")
+            if isinstance(until, str) and re.match(r"^\d{4}-\d{2}-\d{2}T[\d:+\-]{4,14}$", until):
+                args += ["--until", until]
+        else:
+            args = ["--resume", jid, "--json"]
+        res = gate_cli(*args)
+        _cron_cache["ts"] = 0.0          # 다음 폴에서 바로 새 상태가 보이게
+        _cache["ts"] = 0.0
+        return self._send(200 if res.get("ok") else 500,
+                          json.dumps(res, ensure_ascii=False))
 
 
 def main():

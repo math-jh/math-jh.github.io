@@ -5,7 +5,7 @@
 
 /* 구 경로(/dash/workers 등)로 들어오면 hash 라우트로 넘긴다. */
 (function () {
-  var m = location.pathname.match(/^\/dash\/(workers|pipeline|drafts|weights|translation|audit|index|activity)\/?$/);
+  var m = location.pathname.match(/^\/dash\/(workers|pipeline|drafts|weights|translation|audit|index|activity|cron)\/?$/);
   if (m) location.replace('/dash/#' + m[1]);
 })();
 
@@ -21,12 +21,13 @@ var state = {
 
 /* 워커·파이프라인은 별도 페이지 없이 개요에서 소화한다 — 워커 행은 로그
    모달 직결, 파이프라인은 개요 우측 칼럼에 상주. */
-var ROUTES = ['drafts', 'weights', 'translation', 'audit', 'index', 'activity'];
-var SECTION_LABEL = { drafts: '미발행', weights: 'weight 지도', translation: '번역 큐', audit: '감사', index: '색인', activity: '활동' };
+var ROUTES = ['drafts', 'weights', 'translation', 'audit', 'index', 'activity', 'cron'];
+var SECTION_LABEL = { drafts: '미발행', weights: 'weight 지도', translation: '번역 큐', audit: '감사', index: '색인', activity: '활동', cron: '크론 제어' };
 var PAGE_DESC = {
   drafts: '미발행 초안 목록·필터·lint', weights: '카테고리별 weight 눈금자',
   translation: '번역 상태 집계·KO-TYPOS·최근 시도', audit: '링크·frontmatter 감사와 번역 짝 맞춤',
-  index: 'GSC 색인 분포와 조치 대상', activity: '커밋·댓글·시스템 상태'
+  index: 'GSC 색인 분포와 조치 대상', activity: '커밋·댓글·시스템 상태',
+  cron: '블로그 크론 워커 일시정지·재개'
 };
 
 function route() {
@@ -107,8 +108,35 @@ function gitRow(c) {
 }
 function badWorkers(d) {
   return (d.workers || []).filter(function (w) {
+    /* 일시정지 중이면 로그가 늙는 게 정상 — 의도된 정지를 고장으로 세지 않는다. */
+    if (w.paused) return false;
     return w.status === 'stale' || w.status === 'missing' || w.err;
   });
+}
+function pausedCount(d) { return ((d.cron || {}).paused) || 0; }
+/* 클립보드 복사 — 블로그 본문의 인용 라벨 복사(Citation.js)와 같은 방식.
+   preview.math-jh.com 은 https 라 secure context 이고, http 로 직접 들어온
+   경우를 위해 execCommand 폴백을 남긴다. */
+function copyText(text, node) {
+  function legacy() {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); } catch (e) { }
+    document.body.removeChild(ta);
+  }
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text).catch(legacy);
+  } else {
+    legacy();
+  }
+  if (node) {
+    node.classList.add('copied');
+    setTimeout(function () { node.classList.remove('copied'); }, 600);
+  }
 }
 /* ── 모달 ─────────────────────────────────────────────────────────────── */
 function openModal(title, body) {
@@ -261,15 +289,16 @@ function alertsOf(d) {
   return out;
 }
 function verdict(d) {
-  var bad = badWorkers(d), ws = (d.workers || []).length;
+  var bad = badWorkers(d), ws = (d.workers || []).length, pz = pausedCount(d);
+  var pnote = pz ? ' 일시정지 ' + pz + '건은 따로 세지 않았다.' : '';
   if (bad.length) return {
     ok: false, head: '워커 ' + bad.length + '개 점검 필요',
-    sub: bad.map(function (w) { return w.name; }).join(' · ') + ' 의 로그가 주기보다 늙었다.'
+    sub: bad.map(function (w) { return w.name; }).join(' · ') + ' 의 로그가 주기보다 늙었다.' + pnote
   };
   return {
-    ok: true, head: '워커 ' + ws + '개 모두 정상',
+    ok: true, head: '워커 ' + ws + '개 모두 정상' + (pz ? ' (정지 ' + pz + ')' : ''),
     sub: '급한 일은 없다. 미발행 ' + num(d.stats.unpublished) + '편 · 재번역 대기 ' + num(d.stats.drift) +
-      '편 · 색인 조치 ' + num((d.gsc || {}).actionable) + '건 — 오늘 안 해도 무너지지 않는 일.'
+      '편 · 색인 조치 ' + num((d.gsc || {}).actionable) + '건 — 오늘 안 해도 무너지지 않는 일.' + pnote
   };
 }
 
@@ -293,7 +322,15 @@ function overview(d) {
   left.innerHTML = '<h1 class="verdict__h' + (v.ok ? '' : ' verdict__h--warn') + '"><i></i>' + esc(v.head) + '</h1>' +
     '<p class="verdict__s">' + esc(v.sub) + '</p>';
   var right = el('div');
-  right.appendChild(el('p', 'panel__t', '최근 24시간 실행 기록'));
+  /* 제목 줄 오른쪽 끝이 크론 제어로 가는 유일한 입구다 — 링크를 따로 두지 않고
+     정지 건수 자체를 링크로 쓴다. 글꼴·색은 제목과 같고 hover 에서만 금색. */
+  var beatsHd = el('p', 'panel__t panel__t--row');
+  beatsHd.appendChild(el('span', null, '최근 24시간 실행 기록'));
+  var cronLink = el('a', 'panel__t-link',
+    pausedCount(d) ? '일시정지 ' + pausedCount(d) + '건' : '일시정지 없음');
+  cronLink.href = link('cron');
+  beatsHd.appendChild(cronLink);
+  right.appendChild(beatsHd);
   var beats = el('div', 'beats');
   var nowSec = Date.now() / 1000;
   (d.workers || []).forEach(function (w) {
@@ -303,8 +340,9 @@ function overview(d) {
       var frac = (1 - (nowSec - ts) / 86400) * 100;
       if (frac >= 0 && frac <= 100) ticks += '<i style="left:' + frac.toFixed(2) + '%"></i>';
     });
-    a.innerHTML = '<span><span class="dot dot--' + w.status + '"></span>' + esc(w.name) +
-      (w.err ? '<span class="tag tag--err">로그 오류</span>' : '') + '</span>' +
+    a.innerHTML = '<span><span class="dot dot--' + (w.paused ? 'paused' : w.status) + '"></span>' + esc(w.name) +
+      (w.paused ? '<span class="tag">정지</span>' : '') +
+      (w.err && !w.paused ? '<span class="tag tag--err">로그 오류</span>' : '') + '</span>' +
       '<span class="beat__track">' + ticks + '</span>' +
       '<span class="beat__age">' + (w.age == null ? '—' : agoSec(w.age) + ' 전') + '</span>';
     if (w.has_log) a.onclick = function () { openWorkerLog(w); };
@@ -623,7 +661,7 @@ function secTranslation(d) {
   function saveDone() {
     fetch(API + 'kotypo', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 'Content-Type': 'application/json', 'X-Dash-Action': '1' },
       body: JSON.stringify(doneMap)
     }).catch(function () { });
   }
@@ -728,17 +766,30 @@ function secIndex(d) {
     })));
   l.appendChild(el('p', 'hint', '전체 ' + num(g.total) + ' URL · 마지막 배치 ' + (g.last_batch || '—') +
     ' · 전체 스윕 ' + (g.last_full_sweep || '—')));
-  var act = (g.unindexed || []).filter(function (u) { return !u.snoozed; }).slice(0, 15);
+  /* 색인 요청 추천 — index-monitor 와 같은 순위 규칙(index_ranking.py)으로 고른
+     10건. URL 을 누르면 이동이 아니라 완결된 링크가 클립보드로 복사된다:
+     그대로 GSC 검색창에 붙여 넣고 색인 요청을 누르는 흐름. */
+  var host = g.host || 'https://math-jh.com';
+  var rec = g.recommend || [];
   r.appendChild(el('h3', null, '미색인 — 조치 대상 ' + num(g.actionable) + '건'));
-  r.appendChild(table(['URL', '상태', { label: '이후', num: true }], act.map(function (u) {
-    return row([
-      { html: '<a href="https://math-jh.com' + esc(u.path) + '" target="_blank" class="mono">' + esc(u.path) + '</a>' },
-      { text: (u.coverage || '').replace(' - currently not indexed', ''), cls: 'muted sans' },
+  r.appendChild(table(['URL (누르면 복사)', '상태', { label: '이후', num: true }], rec.map(function (u) {
+    var tr = row([
+      { html: '<button type="button" class="copy-url">' + esc(u.path) + '</button>' },
+      { text: (u.coverage || '미검사').replace(' - currently not indexed', ''), cls: 'muted sans' },
       { text: u.since, cls: 'num muted' }
     ]);
+    var b = tr.querySelector('button');
+    b.onclick = function () { copyText(host + u.path, b); };
+    return tr;
   })));
-  r.appendChild(el('p', 'hint', '오래된 것부터 색인 요청을 넣는다. 전체 ' + num(g.actionable) +
-    '건 중 ' + act.length + '건 표시.'));
+  r.appendChild(el('p', 'hint',
+    'URL 을 누르면 ' + host + '/… 완결된 링크가 클립보드로 복사된다. ' +
+    (g.recommend_src === 'batch'
+      ? '오늘 03:00 배치(' + (g.last_batch || '—') + ')를 그대로 보여준다.'
+      : g.recommend_src === 'computed'
+        ? '오늘 배치가 아직 없어 같은 규칙으로 지금 골랐다.'
+        : '추천할 URL이 없다.') +
+    ' 전체 조치 대상 ' + num(g.actionable) + '건 중 ' + rec.length + '건.'));
   c.appendChild(l); c.appendChild(r); s.appendChild(c);
   return s;
 }
@@ -779,9 +830,67 @@ function secActivity(d) {
   return s;
 }
 
+/* ── 크론 제어 ─────────────────────────────────────────────────────────── */
+/* 정지·재개는 서버의 cron-gate 로만 나간다 — crontab 은 런타임에 건드리지 않는다.
+   정지 상태의 정본은 ~/.local/state/cron-pause/<id>.json 이고, 대시보드가 죽어도
+   `cron-gate --resume <id>` 로 손으로 풀 수 있다. */
+function cronAction(job, btn) {
+  var was = btn.textContent;
+  btn.disabled = true;
+  btn.textContent = '…';
+  fetch(API + 'cron/' + (job.paused ? 'resume' : 'pause'), {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'X-Dash-Action': '1' },
+    body: JSON.stringify({ id: job.id })
+  })
+    .then(function (r) {
+      return r.json().catch(function () { return {}; }).then(function (d) {
+        if (!r.ok || !d.ok) throw new Error(d.error || ('HTTP ' + r.status));
+        return d;
+      });
+    })
+    .then(function () { load(true); })   /* 서버 상태로 다시 그린다 */
+    .catch(function (e) {
+      btn.disabled = false;
+      btn.textContent = was;
+      var w = document.getElementById('cron-err');
+      if (w) w.textContent = job.name + ': ' + (e.message || e);
+    });
+}
+
+function secCron(d) {
+  var c = d.cron || { items: [], paused: 0 };
+  var s = secNode('크론 제어', c.items.length + '개 · 정지 ' + c.paused);
+  var rows = c.items.map(function (j) {
+    var tr = row([
+      { html: '<span class="dot dot--' + (j.paused ? 'paused' : 'ok') + '"></span>' +
+              esc(j.name) + (j.timer ? '<span class="tag">timer</span>' : '') },
+      { text: j.schedule || (j.missing ? '게이트 없음' : ''), cls: 'mono muted' },
+      { text: j.paused ? (j.until ? '정지 · 만료 ' + j.until.slice(5, 16).replace('T', ' ') : '정지됨') : '실행 중',
+        cls: 'muted' },
+      { html: '<button class="ghost-btn' + (j.paused ? ' ghost-btn--resume' : '') + '"' +
+              (j.missing ? ' disabled' : '') + '>' + (j.paused ? '재개' : '정지') + '</button>', cls: 'num' }
+    ], j.paused ? 'is-paused' : null);
+    var btn = tr.querySelector('button');
+    if (btn && !j.missing) btn.onclick = function () { cronAction(j, btn); };
+    return tr;
+  });
+  s.appendChild(table(['잡', '스케줄', '상태', { label: '', num: true }], rows));
+  var err = el('p', 'hint', '');
+  err.id = 'cron-err';
+  err.style.color = 'var(--bad)';
+  s.appendChild(err);
+  s.appendChild(el('p', 'hint',
+    '정지는 crontab 을 고치지 않는다 — 각 크론 라인 앞의 cron-gate 가 상태파일을 보고 스킵한다. ' +
+    'autopush 만 systemd 타이머라 systemctl --user stop 으로 멈추며, 재부팅하면 자동 복귀한다. ' +
+    '연구 파이프라인(director·verifier·reporter)은 Pi 대시보드(:8088)에 있다.'));
+  return s;
+}
+
 var SECTIONS = {
   drafts: secDrafts, weights: secWeights,
-  translation: secTranslation, audit: secAudit, index: secIndex, activity: secActivity
+  translation: secTranslation, audit: secAudit, index: secIndex, activity: secActivity,
+  cron: secCron
 };
 
 /* ── 페이지 셸 · 렌더 · 로드 ──────────────────────────────────────────── */
@@ -832,7 +941,7 @@ function load(fresh) {
           localStorage.removeItem('dash-kotypo-done');
           fetch(API + 'kotypo', {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
+            headers: { 'Content-Type': 'application/json', 'X-Dash-Action': '1' },
             body: JSON.stringify(state.kotypoDone)
           }).catch(function () { });
         }
