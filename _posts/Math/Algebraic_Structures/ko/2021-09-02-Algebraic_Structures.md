@@ -23,12 +23,12 @@ weight: 1
 집합 $A$에 대하여, $A\times A$에서 $A$로의 함수 $\star$를 *이항연산*이라 부른다. 이항연산이 주어져 있는 집합을 *마그마*라 부른다.
 :::
 
-이항연산 $\star$의 함수값 $\star(x,y)$는 $x\ast y$로 줄여쓴다. 마그마는 집합 $A$ 뿐만 아니라 그 위에 정의된 연산까지도 포함하는 구조이므로, 문맥상 명확할 경우를 제외하면 마그마를 나타낼 때에는 $(A,\star)$와 같이 연산과 집합을 모두 표기해준다.
+이항연산 $\star$의 함수값 $\star(x,y)$는 $x\star y$로 줄여쓴다. 마그마는 집합 $A$ 뿐만 아니라 그 위에 정의된 연산까지도 포함하는 구조이므로, 문맥상 명확할 경우를 제외하면 마그마를 나타낼 때에는 $(A,\star)$와 같이 연산과 집합을 모두 표기해준다.
 
 ::: 예시 2
 임의의 집합 $X$에 대하여, $(\mathcal{P}(X),\cup)$과 $(\mathcal{P}(X),\cap)$은 모두 마그마이다.
 
-$\mathbb{N}$ 위에 정의된 연산 $x-y$ 또한 이항연산이므로, $(\mathbb{N}, -)$ 또한 마그마이다.
+$\mathbb{Z}$ 위에 정의된 연산 $x-y$ 또한 이항연산이므로, $(\mathbb{Z}, -)$ 또한 마그마이다.
 :::
 
 두 마그마 $(\mathcal{P}(X),\cup)$과 $(\mathcal{P}(X),\cap)$에서는 다음의 식
@@ -84,7 +84,7 @@ $$\prod_{i\in I} (A_i\times A_i)\cong\left(\prod_{i\in I} A_i\right)\times\left(
 
 $$\prod_{i\in I}\star_i:\prod_{i\in I} (A_i\times A_i) \rightarrow \prod_{i\in I} A_i$$
 
-를 $\left(\prod_{i\in I} A_i\right)\times\left(\prod_{i\in I}A_i\right)$에서 $\left(\prod_{i\in I} A_i\right)\times\left(\prod_{i\in I}A_i\right)$로의 함수로 볼 수 있다. ([\[집합론\] §곱집합의 성질, ⁋정의 4](/ko/math/set_theory/property_of_products#def4)) 따라서 $\prod A_i$는 $\star=\prod\star_i$에 대해 마그마 구조를 갖는다. 이렇게 얻어지는 마그마 $(\prod A_i, \star)$를 *곱<sub>product magma</sub>*이라고 부른다. 
+를 $\left(\prod_{i\in I} A_i\right)\times\left(\prod_{i\in I}A_i\right)$에서 $\prod_{i\in I}A_i$로의 함수로 볼 수 있다. ([\[집합론\] §곱집합의 성질, ⁋정의 4](/ko/math/set_theory/property_of_products#def4)) 따라서 $\prod A_i$는 $\star=\prod\star_i$에 대해 마그마 구조를 갖는다. 이렇게 얻어지는 마그마 $(\prod A_i, \star)$를 *곱<sub>product magma</sub>*이라고 부른다. 
 
 위의 두 diagram들을 모든 $i\in I$에 대하여 곱하면, 만일 $\star_i$들이 모두 commutative하거나, 모두 associative하다면 $\star$ 또한 그렇다는 것을 알 수 있다. 
 :::
@@ -118,7 +118,7 @@ $$(g\circ f)(x\star_1 y)=g(f(x\star_1y))=g(f(x)\star_2f(y))=g(f(x))\star_3g(f(y)
 이 성립한다.
 :::
 
-따라서 magma들을 대상으로, magma homomorphism을 morphism으로 갖는 cartesian monoidal category $\Magma$가 존재한다.
+따라서 magma들을 대상으로, magma homomorphism을 morphism으로 갖는 cartesian monoidal category $\Magma$가 존재한다. ([\[범주론\] §모노이드 범주, ⁋정의 3](/ko/math/category_theory/monoidal_categories#def3))
 
 대수학에서는 $f$의 image를 $f(A)$ 대신 $\im f$와 같이 적는 것이 보통이다. 임의의 $w,z\in\im f$를 택하자. 그럼 어떤 $x,y\in A$가 존재하여 $w=f(x)$이고, $z=f(y)$이다. 이제
 

@@ -24,12 +24,12 @@ In this post, we examine the *magma*, an algebraic structure equipped with a sin
 Given a set $A$, a function $\star$ from $A\times A$ to $A$ is called a *binary operation*. A set equipped with a binary operation is called a *magma*.
 :::
 
-The value of the binary operation $\star$ at $(x,y)$ is abbreviated as $x\ast y$. Since a magma is a structure that includes not only the set $A$ but also the operation defined on it, we usually denote a magma as $(A,\star)$, including both the set and the operation, except when the context makes it clear.
+The value of the binary operation $\star$ at $(x,y)$ is abbreviated as $x\star y$. Since a magma is a structure that includes not only the set $A$ but also the operation defined on it, we usually denote a magma as $(A,\star)$, including both the set and the operation, except when the context makes it clear.
 
 ::: Example 2
 For any set $X$, both $(\mathcal{P}(X),\cup)$ and $(\mathcal{P}(X),\cap)$ are magmas.
 
-The operation $x-y$ defined on $\mathbb{N}$ is also a binary operation, so $(\mathbb{N}, -)$ is a magma as well.
+The operation $x-y$ defined on $\mathbb{Z}$ is also a binary operation, so $(\mathbb{Z}, -)$ is a magma as well.
 :::
 
 For the two magmas $(\mathcal{P}(X),\cup)$ and $(\mathcal{P}(X),\cap)$, the identities
@@ -85,7 +85,7 @@ so ([\[Set Theory\] §Properties of Products, ⁋Proposition 3](/en/math/set_the
 
 $$\prod_{i\in I}\star_i:\prod_{i\in I} (A_i\times A_i) \rightarrow \prod_{i\in I} A_i$$
 
-can be viewed as a function from $\left(\prod_{i\in I} A_i\right)\times\left(\prod_{i\in I}A_i\right)$ to $\left(\prod_{i\in I} A_i\right)\times\left(\prod_{i\in I}A_i\right)$. ([\[Set Theory\] §Properties of Products, ⁋Definition 4](/en/math/set_theory/property_of_products#def4)) Thus $\prod A_i$ has a magma structure with respect to $\star=\prod\star_i$. The magma $(\prod A_i, \star)$ obtained in this way is called the *product magma*.
+can be viewed as a function from $\left(\prod_{i\in I} A_i\right)\times\left(\prod_{i\in I}A_i\right)$ to $\prod_{i\in I}A_i$. ([\[Set Theory\] §Properties of Products, ⁋Definition 4](/en/math/set_theory/property_of_products#def4)) Thus $\prod A_i$ has a magma structure with respect to $\star=\prod\star_i$. The magma $(\prod A_i, \star)$ obtained in this way is called the *product magma*.
 
 Taking the product of the above two diagrams over all $i\in I$, we can see that if all the $\star_i$ satisfy the commutative law, or all satisfy the associative law, then $\star$ does as well.
 :::

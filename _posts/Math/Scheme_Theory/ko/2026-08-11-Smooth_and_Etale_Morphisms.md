@@ -36,15 +36,23 @@ Locally of finite presentation인 scheme morphism $\varphi:X \rightarrow S$가 *
    는 regular scheme이다. 즉 그 모든 local ring이 regular local ring이다.
 :::
 
-위의 canonical morphism은 다음의 합성
+위의 정의에서 두 조건은 서로 다른 방향을 통제하는데, flatness는 fiber들이 base를 따라 차원 도약 없이 연속적으로 변함을 보장하고 ([§평탄사상, ⁋명제 17](/ko/math/scheme_theory/flat_morphisms#prop17)), geometric fiber의 regularity는 각 fiber 자체가 singular point를 가지지 않음을 보장한다.
+
+정의의 canonical morphism은 다음의 합성
 
 $$\Spec \overline{\kappa(s)}\rightarrow \Spec \kappa(s)\rightarrow S$$
 
-로 주어지는 것으로, 위의 조건은 $X_s$ 자체에 대한 조건보다 강한 것이다. 
+로 주어지는 것으로, 위의 조건은 $X_s$ 자체에 대한 조건보다 강한 것이다. 구체적으로 $X_{\overline{s}} \rightarrow X_s$는 cartesian square
 
-이 정의에서 두 조건은 서로 다른 방향을 통제한다. Flatness는 fiber들이 base를 따라 차원 도약 없이 연속적으로 변함을 보장하고 ([§평탄사상, ⁋명제 17](/ko/math/scheme_theory/flat_morphisms#prop17)), geometric fiber의 regularity는 각 fiber 자체가 singular point를 가지지 않음을 보장한다. 이 조건이 $X_s$ 자체에 대한 조건을 강화한 것임은 $X_{\overline{s}} \rightarrow X_s$가 전사이기 때문이다. 실제로 $x\in X_s$ 위의 fiber는 $\Spec\bigl(\kappa(x)\otimes_{\kappa(s)}\overline{\kappa(s)}\bigr)$이고, $\kappa(s)$ 위의 vector space로서 두 factor가 모두 $0$이 아니므로 이 tensor product도 $0$이 아니다.
+{% diagram Math/Scheme_Theory/Smooth_and_Etale_Morphisms-1.svg width="12.38em" alt="base change" %}
 
-Smooth morphism은 cotangent sheaf의 local freeness로 적어줄 수도 있으며, 이것이 가장 중요한 smooth morphism의 characterization이다. 이를 위해 우선 scheme $Y$와 그 점 $y\in Y$에 대하여, $y$에서의 *local dimension<sub>국소차원</sub>* $\dim_yY$를 $y$를 포함하는 irreducible component들의 차원의 supremum으로 정의하자. 그럼 정의에 의해 $Y$의 전체 차원은 이들의 supremum이며, 만일 $Y$가 irreducible이면 모든 점이 유일한 irreducible component 위에 놓이므로 $\dim_yY=\dim Y$가 성립한다. 더 일반적으로 모든 irreducible component의 차원이 같은 *equidimensional* scheme에서도 그러하다. 이것이 성립하며, 이 개념은 새로운 것이 아니라 평면과 직선의 합집합 $Y=V(\x\z,\y\z)\subseteq\mathbb{A}^3_\mathbb{K}$에서 서로 차원이 다른 두 성분을 다루기 위한 언어일 뿐이다. 만일 $Y$가 field 위에서 finite type이면 그 closed point $z$에서는 [\[가환대수학\] §뇌터 정규화, ⁋정리 4](/ko/math/commutative_algebra/noether_normalization#thm4)에 의하여 $\dim\mathcal{O}_{Y,z}=\dim_zY$가 성립한다.
+에서 $X_s$를 $\Spec\overline{\kappa(s)} \rightarrow \Spec\kappa(s)$를 따라 base change하여 얻어지는 projection으로, 이 morphism의 $x\in X_s$ 위의 fiber가
+
+$$\Spec\kappa(x)\times_{\Spec \kappa(s)}\Spec \overline{\kappa(s)}=\Spec\bigl(\kappa(x)\otimes_{\kappa(s)}\overline{\kappa(s)}\bigr)$$
+
+이고, $\kappa(x)$와 $\overline{\kappa(s)}$가 모두 $\kappa(s)$ 위의 nonzero vector space이므로 그 tensor product 또한 nonzero가 되어 이 fiber는 공집합이 아니다. 그럼 fiber가 집합으로서의 preimage와 일치하므로 ([§올곱, ⁋보조정리 13](/ko/math/scheme_theory/fiber_products#lem13)) $X_{\overline{s}}\rightarrow X_s$가 전사가 된다. 즉, geometric fiber는 $X_s$의 점을 하나도 잃지 않고 계수만 키운 것으로, 이 위에서 regularity를 요구하는 것이 $X_s$의 모든 점에 대한 요구를 포함한다. 
+
+한편, smooth morphism은 cotangent sheaf의 local freeness로 적어줄 수도 있으며, 이것이 가장 중요한 smooth morphism의 characterization이다. 이를 위해 우선 scheme $Y$와 그 점 $y\in Y$에 대하여, $y$에서의 *local dimension<sub>국소차원</sub>* $\dim_yY$를 $y$를 포함하는 irreducible component들의 차원의 supremum으로 정의하자. 그럼 정의에 의해 $Y$의 전체 차원은 이들의 supremum이며, 만일 $Y$가 irreducible이면 모든 점이 유일한 irreducible component 위에 놓이므로 $\dim_yY=\dim Y$가 성립한다. 더 일반적으로 모든 irreducible component의 차원이 같은 *equidimensional* scheme에서도 그러하다. 이것이 성립하며, 이 개념은 새로운 것이 아니라 평면과 직선의 합집합 $Y=V(\x\z,\y\z)\subseteq\mathbb{A}^3_\mathbb{K}$에서 서로 차원이 다른 두 성분을 다루기 위한 언어일 뿐이다. 만일 $Y$가 field 위에서 finite type이면 그 closed point $z$에서는 [\[가환대수학\] §뇌터 정규화, ⁋정리 4](/ko/math/commutative_algebra/noether_normalization#thm4)에 의하여 $\dim\mathcal{O}_{Y,z}=\dim_zY$가 성립한다.
 
 ::: 정리 2
 Locally of finite presentation인 morphism $\varphi:X \rightarrow S$에 대하여 다음이 동치이다.
@@ -59,7 +67,7 @@ Locally of finite presentation인 morphism $\varphi:X \rightarrow S$에 대하�
 
 먼저 $\varphi$가 smooth하다고 가정하자. 우리는 우선 $\Omega_{X/S}$의 $x$에서의 fiber dimension을 계산한다. Cotangent sheaf는 base change와 commute하므로 ([§Kähler 미분과 여접층, ⁋명제 5](/ko/math/scheme_theory/sheaf_of_differentials#prop5)) $\mathbb{K}=\overline{\kappa(s)}$ 위의 geometric fiber가 주는 pullback diagram
 
-{% diagram Math/Scheme_Theory/Smooth_and_Etale_Morphisms-1.svg width="8.18em" alt="pullback" %}
+{% diagram Math/Scheme_Theory/Smooth_and_Etale_Morphisms-2.svg width="8.18em" alt="pullback" %}
 
 에서 $\Omega_{X_{\overline{s}}/\mathbb{K}}$는 $\pi$를 따라 끌어온 pullback $\pi^\ast\Omega_{X/S}$이다.
 
@@ -246,7 +254,7 @@ $$\Omega_{\mathbb{G}_m/\mathbb{G}_m}\cong \mathbb{K}[t, t^{-1}]/(nt^{n-1})$$
 ::: 정리 12 (무한소 lifting 판정)
 Locally of finite presentation인 morphism $\varphi:X \rightarrow S$가 주어졌다 하자. 임의의 affine $S$-scheme $T$와 그 안의 square-zero 닫힌 부분scheme $T_0\hookrightarrow T$, 그리고 $S$-morphism $\psi_0:T_0 \rightarrow X$에 대하여, $\psi_0$을 $T$ 위로 확장하는 $S$-morphism $\psi:T \rightarrow X$의 존재·유일성을 다음과 같이 부른다.
 
-{% diagram Math/Scheme_Theory/Smooth_and_Etale_Morphisms-2.svg width="6.05em" alt="lifting diagram" %}
+{% diagram Math/Scheme_Theory/Smooth_and_Etale_Morphisms-3.svg width="6.05em" alt="lifting diagram" %}
 
 그럼 다음이 성립한다.
 
