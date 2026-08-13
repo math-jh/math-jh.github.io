@@ -8873,6 +8873,13 @@ I:
   defs:
   - label: '[미분다양체] §Distribution'
     url: /ko/math/manifolds/distribution
+- id: integral_morphism
+  en: integral morphism
+  ko: 정수형 사상
+  primary: en
+  defs:
+  - label: '[스킴] §스킴 사상의 성질들'
+    url: /ko/math/scheme_theory/properties_of_scheme_morphisms
 - id: integral_scheme
   en: integral scheme
   ko: 정역스킴
