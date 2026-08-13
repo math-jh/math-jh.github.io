@@ -6762,6 +6762,13 @@ F:
   defs:
   - label: '[범주론] §자연변환'
     url: /ko/math/category_theory/natural_transformations
+- id: functor_of_points
+  en: functor of points
+  ko: 점의 함자
+  primary: en
+  defs:
+  - label: '[스킴] §점함자'
+    url: /ko/math/scheme_theory/functor_of_points
 - id: functor_of_points_of_x
   en: functor of points of $X$
   ko: $X$의 점 함자
