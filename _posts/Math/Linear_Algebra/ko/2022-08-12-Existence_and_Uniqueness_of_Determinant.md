@@ -13,6 +13,8 @@ date: 2022-08-12
 
 weight: 14
 
+drift_needed: true
+
 ---
 
 이번 글에서 우리는 행렬식이 유일하게 존재하는 것을 보이고, 이를 계산하는 방법을 살펴본다. 
@@ -35,9 +37,9 @@ $$\tau(k)=\begin{cases}i&\text{if $k=j$,}\\j&\text{if $k=i$,}\\k&\text{otherwise
 
 $S_n$의 모든 원소들은 항상 transposition들의 유한한 합성으로 나타날 수 있다는 것이 잘 알려져 있다. 임의의 원소 $\tau\in S_n$가 주어졌다 하고, 다음의 식과 같이 $\tau$를 transposition들의 합성으로 나타내는 방법 두 가지가 주어졌다 하자.
 
-$$\tau=\upsilon_1\circ\upsilon_2\circ\cdots\circ\upsilon_n=\upsilon_1'\circ\upsilon_2'\circ\cdots\circ\upsilon_m'.$$
+$$\tau=\upsilon_1\circ\upsilon_2\circ\cdots\circ\upsilon_k=\upsilon_1'\circ\upsilon_2'\circ\cdots\circ\upsilon_m'.$$
 
-일반적으로 $m$과 $n$이 같을 필요는 없으나, $m,n$이 홀수인지 짝수인지의 여부는 항상 동일하다. 만일 이 숫자가 짝수일 경우, $\tau$를 *even permutation<sub>짝치환</sub>*이라 부르고, 홀수라면 *odd permutation<sub>홀치환</sub>*이라 부른다. 그럼 함수 $\sgn:S_n\rightarrow\{-1,1\}$을 다음의 식
+일반적으로 $m$과 $k$가 같을 필요는 없으나, $m,k$가 홀수인지 짝수인지의 여부는 항상 동일하다. 만일 이 숫자가 짝수일 경우, $\tau$를 *even permutation<sub>짝치환</sub>*이라 부르고, 홀수라면 *odd permutation<sub>홀치환</sub>*이라 부른다. 그럼 함수 $\sgn:S_n\rightarrow\{-1,1\}$을 다음의 식
 
 $$\sgn(\tau)=\begin{cases}1&\text{if $\tau$ is even}\\-1&\text{if $\tau$ is odd}\end{cases}$$
 
@@ -59,14 +61,14 @@ $$f(v_1,v_2,\ldots, v_n)=\sgn(\tau)f(v_{\tau(1)},v_{\tau(2)},\ldots, v_{\tau(n)}
 [§행렬식, ⁋정의 4](/ko/math/linear_algebra/determinant#def4)을 만족하는 함수 $D$는 유일하게 존재한다.
 :::
 ::: 증명
-$f$가 alternating linear map이라 하자. 임의의 $v_1,\ldots, v_n\in V$에 대하여, 만일
+$f$가 alternating multilinear map이라 하자. 임의의 $v_1,\ldots, v_n\in \mathbb{K}^n$에 대하여, 만일
 
-$$v_i=v_1^ie_1+\cdots v_n^ie_n,\qquad i=1,\ldots, n$$
+$$v_i=v_1^ie_1+\cdots+v_n^ie_n,\qquad i=1,\ldots, n$$
 
 이라 하면
 
 $$\begin{aligned}f(v_1,\ldots, v_n)&=\sum_{i_1=1}^nv_{i_1}^1f(e_{i_1},v_2,\ldots, v_n)\\
-&=\sum_{i_1,i_2=1}^n v_{i_1}^1v_{i_2}^2f(e_{i_1},e_{i_2},v_3,\ldots, v_n)\\&=\cdots\\&=\sum_{i_1,\ldots, i_n=1}^nv_{i_1}^1v_{i_2}^2\ldots, v_{i_n}^nf(e_{i_1},\ldots, e_{i_n})\end{aligned}$$
+&=\sum_{i_1,i_2=1}^n v_{i_1}^1v_{i_2}^2f(e_{i_1},e_{i_2},v_3,\ldots, v_n)\\&=\cdots\\&=\sum_{i_1,\ldots, i_n=1}^nv_{i_1}^1v_{i_2}^2\ldots v_{i_n}^nf(e_{i_1},\ldots, e_{i_n})\end{aligned}$$
 
 이 성립한다. [§행렬식, ⁋명제 3](/ko/math/linear_algebra/determinant#prop3)에 의하여, $i_1,\ldots, i_n$들 중 같은 것이 존재한다면 $f(e_{i_1},\ldots,e_{i_n})$의 값은 항상 0이 되므로, 우변의 식은 
 
@@ -122,9 +124,9 @@ $$(AB)_{ij}=\sum_{k=1}^nA_{ik}B_{kj}$$
 
 을 통해 얻어진다. 따라서, 
 
-$$\begin{aligned}\det(AB)&=\det((AB)_1, (AB)_2,\ldots, (AB)_n)\\&=\sum_{\tau\in S_n}\sgn(\tau)(AB)_{\tau(1)1}(AB)_{\tau(2)2}\cdots(AB)_{\tau(n)n}\\&=\sum_{\tau\in S_n}\sgn(\tau)\left(\sum_{i_1=1}^nA_{\tau(1)i_1}B_{i_11}\right)\cdots\left(\sum_{i_n=1}^nA_{\tau(n)i_n}B_{i_nn}\right)\\&=\sum_{\tau\in S_n}\sum_{i_1,\ldots, i_n=1}^n\sgn(\tau)A_{\tau(1)i_1}\cdots A_{\tau(n)i_n}B_{i_11}\cdots B_{i_nn}\\&=\sum_{i_1,\ldots, i_n=1}^nB_{i_11}\cdots B_{i_nn}\left(\sum_{\tau\in S_n}\sgn(\tau)A_{\tau(1)1}\cdots A_{\tau(n)n}\right)\\&=\sum_{i_1,\ldots, i_n=1}^n\det(A_{i_1},\ldots, A_{i_n})B_{i_11}\cdots B_{i_nn}\end{aligned}$$
+$$\begin{aligned}\det(AB)&=\det((AB)_1, (AB)_2,\ldots, (AB)_n)\\&=\sum_{\tau\in S_n}\sgn(\tau)(AB)_{\tau(1)1}(AB)_{\tau(2)2}\cdots(AB)_{\tau(n)n}\\&=\sum_{\tau\in S_n}\sgn(\tau)\left(\sum_{i_1=1}^nA_{\tau(1)i_1}B_{i_11}\right)\cdots\left(\sum_{i_n=1}^nA_{\tau(n)i_n}B_{i_nn}\right)\\&=\sum_{\tau\in S_n}\sum_{i_1,\ldots, i_n=1}^n\sgn(\tau)A_{\tau(1)i_1}\cdots A_{\tau(n)i_n}B_{i_11}\cdots B_{i_nn}\\&=\sum_{i_1,\ldots, i_n=1}^nB_{i_11}\cdots B_{i_nn}\left(\sum_{\tau\in S_n}\sgn(\tau)A_{\tau(1)i_1}\cdots A_{\tau(n)i_n}\right)\\&=\sum_{i_1,\ldots, i_n=1}^n\det(A_{i_1},\ldots, A_{i_n})B_{i_11}\cdots B_{i_nn}\end{aligned}$$
 
-이제 $\upsilon\in S_n$을 다음의 식
+[§행렬식, ⁋명제 3](/ko/math/linear_algebra/determinant#prop3)에 의하여 $i_1,\ldots, i_n$들 중 같은 것이 존재한다면 $\det(A_{i_1},\ldots, A_{i_n})$의 값은 항상 0이 되므로, 위 식의 우변에서는 $i_1,\ldots, i_n$이 서로 다른 항들만 남는다. 이제 $\upsilon\in S_n$을 다음의 식
 
 $$\upsilon(1)=i_1,\ldots, \upsilon(n)=i_n$$
 
@@ -141,7 +143,7 @@ $$\sum_{\upsilon\in S_n}\sgn(\upsilon)\det(A)B_{\upsilon(1)1}\cdots B_{\upsilon(
 임의의 행렬 $A\in\Mat_n(\mathbb{K})$에 대하여, $\det A\neq 0$인 것과 $A$가 가역인 것이 동치이다.
 :::
 ::: 증명
-선형대수학의 기본정리로부터, $A$가 가역인 것은 $A$에 의해 정의되는 linear map $L_A:\mathbb{K}^n\rightarrow \mathbb{K}^n$이 가역인 것과 동치라는 것을 안다. $\mathbb{K}^n$은 유한차원이므로 이는 다시 $L_A$가 surjective인 것과 동치이고, 이는 $\col(A)$의 basis인 열벡터들 $A_1,\ldots, A_n$들이 일차독립인 것과 동치이다. 만일 $A_1,\ldots, A_n$들이 일차독립이 아니라면 [§행렬식, ⁋명제 3](/ko/math/linear_algebra/determinant#prop3)에 의하여 $\det A=0$이 된다. 즉, $\det A\neq 0$이라면 $A$는 가역이다.
+[§선형대수학의 기본정리](/ko/math/linear_algebra/ftla)로부터, $A$가 가역인 것은 $A$에 의해 정의되는 linear map $L_A:\mathbb{K}^n\rightarrow \mathbb{K}^n$이 가역인 것과 동치라는 것을 안다. $\mathbb{K}^n$은 유한차원이므로 이는 다시 $L_A$가 surjective인 것과 동치이고, 이는 $\col(A)$의 basis인 열벡터들 $A_1,\ldots, A_n$들이 일차독립인 것과 동치이다. 만일 $A_1,\ldots, A_n$들이 일차독립이 아니라면 [§행렬식, ⁋명제 3](/ko/math/linear_algebra/determinant#prop3)에 의하여 $\det A=0$이 된다. 즉, $\det A\neq 0$이라면 $A$는 가역이다.
 
 거꾸로 $A$가 가역이라 가정하자. 그럼 다음의 식
 
@@ -227,9 +229,9 @@ $$\begin{pmatrix}A&O\\C&B\end{pmatrix}$$
 ::: 증명
 다음의 식
 
-$$\begin{pmatrix}A&O\\C&B\end{pmatrix}=\begin{pmatrix}A&O\\O&E\end{pmatrix}\begin{pmatrix}I&O\\O&I\end{pmatrix}\begin{pmatrix}I&O\\O&B\end{pmatrix}$$
+$$\begin{pmatrix}A&O\\C&B\end{pmatrix}=\begin{pmatrix}A&O\\O&I\end{pmatrix}\begin{pmatrix}I&O\\C&I\end{pmatrix}\begin{pmatrix}I&O\\O&B\end{pmatrix}$$
 
-과 [명제 9](#prop9), 그리고 [보조정리 4](#lem4)에 의해 자명하다. 마지막 행렬의 경우, $l$번의 행 바꿈 후 $l$번의 열 바꿈을 하여 $2l$번의 부호 변경이 생겨 주어진 행렬의 행렬식이 $\det B$와 같게 된다.
+과 [명제 9](#prop9), 그리고 [보조정리 4](#lem4)에 의해 자명하다. 가운데 행렬의 경우 대각성분이 모두 1인 하삼각행렬이므로 [명제 8](#prop8)에 의해 그 행렬식은 1이다. 마지막 행렬의 경우, $l$번의 행 바꿈 후 $l$번의 열 바꿈을 하여 $2l$번의 부호 변경이 생겨 주어진 행렬의 행렬식이 $\det B$와 같게 된다.
 :::
 
 어렵지 않게 위의 결과들을 귀납적으로 확장할 수 있다. 즉
@@ -265,11 +267,11 @@ $$\det A=\sum_{j=1}^n(-1)^{i+j}A_{ij}\det (A^{(i,j)})$$
 
 $$B_j'=\begin{pmatrix}A_{ij}&0&\cdots&0\\A_{1j}&&&\\\vdots&&A^{(i,j)}&\\A_{nj}&&&\end{pmatrix}$$
 
-이다. 이제 [명제 9](#prop9)에 의하여 이 행렬의 행렬식은 $A_{ij}\det A^{(i,j)}$와 같고, 따라서
+이다. 이제 [따름정리 10](#cor10)에 의하여 이 행렬의 행렬식은 $A_{ij}\det A^{(i,j)}$와 같고, 따라서
 
 $$\det B_j=(-1)^{i+j-2}\det B_j'=(-1)^{i+j-2}A_{ij}\det A^{(i,j)}=(-1)^{i+j}A_{ij}\det A^{(i,j)}$$
 
-이다. 한편, $i$번째 열에 대한 multilinearity를 사용하면 $B_j$들의 행렬식의 합은 $A$의 행렬식과 같으므로 원하는 식
+이다. 한편, [따름정리 3](#cor3)에 의해 행렬식은 행에 대해서도 multilinear하고, $i$번째 행에 대한 multilinearity를 사용하면 $B_j$들의 행렬식의 합은 $A$의 행렬식과 같으므로 원하는 식
 
 $$\det A=\sum_{j=1}^n\det B_j=\sum_{j=1}^n (-1)^{i+j}A_{ij}\det A^{(i,j)}$$
 

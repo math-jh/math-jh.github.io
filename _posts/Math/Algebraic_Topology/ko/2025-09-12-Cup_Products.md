@@ -11,6 +11,8 @@ sidebar:
 date: 2025-09-12
 weight: 11
 
+drift_needed: true
+
 ---
 
 앞서 cohomology를 도입하며 우리는 cohomology의 가장 큰 장점 중 하나가 이 위에 자연스럽게 정의된 곱셈구조라 하였다. 그렇다면 이 구조가 왜 homology에서는 보이지 않았는지 또한 합리적인 의문일 것인데, 이번 글에서 이 곱셈구조를 정의하면, 본질적으로 cohomology가 contravariant functor이기 때문이라는 것이 드러난다.
@@ -35,7 +37,7 @@ $$(\phi\times\psi):(C\otimes D)_\bullet \rightarrow A;\qquad (\alpha\otimes \bet
 
 이고, 나머지에 대해서는 $0$인 함수로 이 대응을 정의한다. 그럼 어렵지 않게 이것이 cochain complex들 사이의 morphism인 것을 확인할 수 있으며 따라서 $\times$는 cohomology의 함수
 
-$$\bar{\times}: H^\bullet(C^\vee\otimes D^\vee)\rightarrow (H(C^\vee)\otimes H(D^\vee))^\bullet\rightarrow H^\bullet((C\otimes D)^\vee)$$
+$$\bar{\times}: (H(C^\vee)\otimes H(D^\vee))^\bullet\rightarrow H^\bullet(C^\vee\otimes D^\vee)\rightarrow H^\bullet((C\otimes D)^\vee)$$
 
 를 정의한다.
 
@@ -60,7 +62,7 @@ $${\AW^\ast}\circ{(-\mathbin{\bar{\times}}-)}:H^p(X;A)\otimes_A H^q(Y;A)\rightar
 ::: 정의 1
 Commutative ring $A$와 위상공간 $X$에 대하여, 다음의 합성
 
-$${\smile}:H^\bullet(X;A)\otimes_A H^\bullet(X;A)\overset{\AW^\ast\circ\bar{\times}}{\longrightarrow}H^\bullet(X\times X)\overset{\Delta^\ast}{\longrightarrow} H^\bullet(X)$$
+$${\smile}:H^\bullet(X;A)\otimes_A H^\bullet(X;A)\overset{\AW^\ast\circ\bar{\times}}{\longrightarrow}H^\bullet(X\times X;A)\overset{\Delta^\ast}{\longrightarrow} H^\bullet(X;A)$$
 
 을 $H^\bullet(X;A)$ 위의 *cup product<sub>합곱</sub>*이라 부른다. 
 :::
@@ -71,7 +73,7 @@ $$H_p(X;A)\otimes_A H_q(X;A)\rightarrow H_{p+q}(X\times X;A)$$
 
 까지는 만들 수 있을 것이나, diagonal map $\Delta:X\rightarrow X\times X$에 homology functor를 취하는 것은 covariant이므로 방향이 맞지 않을 것이기 때문이다.
 
-명시적으로, 임의의 $\alpha\in H^p(X;A)$, $\beta\in H^q(X;A)$에 대하여, $\alpha\smile\beta\in H^{p+q}(X;A)$는 임의의 chain $\sigma:\Delta^{p+q}\rightarrow X$ 위에서 다음의 식
+명시적으로, 임의의 $\alpha\in H^p(X;A)$, $\beta\in H^q(X;A)$에 대하여, $\alpha\smile\beta\in H^{p+q}(X;A)$는 임의의 singular simplex $\sigma:\Delta^{p+q}\rightarrow X$ 위에서 다음의 식
 
 $$(\alpha\smile\beta)(\sigma)=(\Delta^\ast\AW^\ast(\alpha\mathbin{\bar{\times}}\beta))(\sigma)=(\alpha\mathbin{\bar{\times}}\beta)(\AW(\Delta(\sigma)))=(-1)^{pq}\alpha(\text{front face of $\sigma$})\beta(\text{back face of $\sigma$})$$
 
@@ -84,10 +86,10 @@ $$(\alpha\smile\beta)(\sigma)=(\Delta^\ast\AW^\ast(\alpha\mathbin{\bar{\times}}\
 
 $$(H^\bullet(X;A), {\smile}, 1)$$
 
-은 *grade*-commutative, $\mathbb{N}$-graded $A$-algebra를 이룬다. 여기서 $1\in H^0(X;A)$는 $X$의 임의의 $\Delta$-simplex를 모두 $1\in A$로 보내는 cocycle이다.
+은 graded-commutative, $\mathbb{N}$-graded $A$-algebra를 이룬다. 여기서 $1\in H^0(X;A)$는 $X$의 임의의 singular 0-simplex를 모두 $1\in A$로 보내는 cocycle이다.
 :::
 
-즉, homogeneous cycle들 $\alpha\in H^p(X;A),\beta\in H^q(X;A),\gamma\in H^r(X;A)$에 대하여, 
+즉, homogeneous class들 $\alpha\in H^p(X;A),\beta\in H^q(X;A),\gamma\in H^r(X;A)$에 대하여, 
 
 - (Unit) $1\smile\alpha=\alpha\smile 1=\alpha$
 - (Associativity) $(\alpha\smile\beta)\smile\gamma=\alpha\smile(\beta\smile\gamma)$
@@ -102,7 +104,7 @@ $$(H^\bullet(X;A), {\smile}, 1)$$
 ::: 명제 3
 임의의 위상공간 $X,Y$와 commutative ring $A$에 대하여, 
 
-$$\times: H^\ast(X;A)\otimes_A H^\ast(Y;A) \rightarrow H^\ast(X\times Y;A)$$
+$$\times: H^\bullet(X;A)\otimes_A H^\bullet(Y;A) \rightarrow H^\bullet(X\times Y;A)$$
 
 는 graded $A$-algebra homomorphism이다.
 :::
@@ -111,11 +113,11 @@ $$\times: H^\ast(X;A)\otimes_A H^\ast(Y;A) \rightarrow H^\ast(X\times Y;A)$$
 
 {% diagram Math/Algebraic_Topology/Cup_Products-1.svg width="41.10em" alt="functoriality_of_cup_products" %}
 
-의 commutativity이다. 이는 임의의 $\alpha_1,\alpha_2\in H^\ast(X;A)$와 임의의 $\beta_1,\beta_2\in H^\ast(Y;A)$에 대하여, 
+의 commutativity이다. 이는 임의의 $\alpha_1,\alpha_2\in H^\bullet(X;A)$와 임의의 $\beta_1,\beta_2\in H^\bullet(Y;A)$에 대하여, 
 
 $$(\alpha_1\times\beta_1)(\alpha_2\times\beta_2)=\Delta_{X\times Y}^\ast ((\alpha_1\times\beta_1)\times(\alpha_2\times\beta_2))$$
 
-이고, 이제 우변이 $\alpha_1\times\beta_1\times\alpha_2\times\beta_2$의 꼴이므로 이를 다시 적절하게 묶어주면 된다. 이것이 graded homomorphism이고 $1$을 보존하는 것은 자명하다.
+이고, 이제 우변이 $\alpha_1\times\beta_1\times\alpha_2\times\beta_2$의 꼴이므로 이를 다시 적절하게 묶어주면 된다. 이것이 graded homomorphism인 것은 $\times$가 $H^p(X;A)\otimes_A H^q(Y;A)$를 $H^{p+q}(X\times Y;A)$로 보내는 데에서, $1$을 보존하는 것은 $X\times Y$의 임의의 singular 0-simplex가 $\AW$에 의해 그 두 projection의 tensor로 보내지는 데에서 나온다.
 :::
 
 그럼 이를 바탕으로 cup product의 functoriality 또한 보일 수 있다.
@@ -128,7 +130,7 @@ $$f^\ast(\alpha\smile\beta)=(f^\ast\alpha)\smile(f^\ast\beta)$$
 이 성립한다. 
 :::
 
-이 명제의 증명은 앞선 [명제 3](#prop3)에 의해 우리는 다음 diagram
+앞선 [명제 3](#prop3)에 의해 우리는 다음 diagram
 
 {% diagram Math/Algebraic_Topology/Cup_Products-2.svg width="21.22em" alt="functoriality_1" %}
 
@@ -140,7 +142,7 @@ $$f^\ast(\alpha\smile\beta)=(f^\ast\alpha)\smile(f^\ast\beta)$$
 
 ## Cap product
 
-이제 남은 부분에서 우리는 homology와 cohomology의 duality를 다루기 위한 준비를 한다. 물론 우리는 이 duality를 [\[대수적 위상수학\] §코호몰로지, ⁋명제 3](/ko/math/algebraic_topology/cohomology#prop3)와 같은 형태로 관찰할 수 있었지만, 이번에 살펴볼 것은 조금 더 미묘한 감이 있다.
+이제 남은 부분에서 우리는 homology와 cohomology의 duality를 다루기 위한 준비를 한다. 물론 우리는 이 duality를 [§코호몰로지, ⁋명제 3](/ko/math/algebraic_topology/cohomology#prop3)와 같은 형태로 관찰할 수 있었지만, 이번에 살펴볼 것은 조금 더 미묘한 감이 있다.
 
 우리가 지금부터 할 일은 homology module $H_\bullet(X;A)$에 graded ring $H^\bullet(X;A)$의 action을 정의하는 것이다. 이를
 
@@ -177,7 +179,7 @@ $$\frown:H^p(X;A)\otimes H_{p+q}(X;A) \rightarrow H_q(X;A)$$
 그럼 다음이 성립한다.
 
 ::: 명제 6 (Projection formula)
-연속함수 $f:X \rightarrow Y$와 $\alpha\in H^p(X)$, $\beta\in H^q(Y)$, 그리고 $\sigma\in H_{p+q}(X)$에 대하여 다음의 식
+연속함수 $f:X \rightarrow Y$와 $\beta\in H^q(Y;A)$, 그리고 $\sigma\in H_{p+q}(X;A)$에 대하여 다음의 식
 
 $$f_\ast(f^\ast\beta\frown\sigma)=\beta\frown f_\ast\sigma$$
 

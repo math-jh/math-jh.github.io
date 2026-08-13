@@ -13,6 +13,8 @@ date: 2026-06-27
 
 weight: 26
 
+drift_needed: true
+
 ---
 
 우리가 지금까지 다룬 도구들은 모두 $n\times n$ 행렬, 즉 linear operator에 적용되는 것들로, 일반적인 $m\times n$ 행렬은 정사각행렬이 아니므로 eigenvalue나 대각화를 직접 말할 수 없다. 이 글에서는 임의의 실행렬을 두 orthogonal matrix와 하나의 diagonal matrix의 곱으로 분해하는 특이값 분해를 다룬다. 그 출발점은, 임의의 $A$에 대하여 $A^tA$이 항상 실수 symmetric matrix가 되어 스펙트럼 정리를 적용할 수 있다는 관찰이다. 
@@ -56,7 +58,7 @@ $$u_i=\frac{1}{\sigma_i}Av_i\in\mathbb{R}^m$$
 
 $$\langle u_i,u_j\rangle=\frac{1}{\sigma_i\sigma_j}\langle Av_i,Av_j\rangle=\frac{1}{\sigma_i\sigma_j}\langle A^tAv_i,v_j\rangle=\frac{\sigma_i^2}{\sigma_i\sigma_j}\langle v_i,v_j\rangle=\frac{\sigma_i}{\sigma_j}\delta_{ij}=\delta_{ij}$$
 
-이므로 $\{u_1,\ldots, u_r\}$은 $\mathbb{R}^m$의 orthonormal set이다. 이를 확장하여 $\mathbb{R}^m$의 orthonormal basis $\{u_1,\ldots, u_m\}$을 얻을 수 있다. ([§내적공간, §§정규직교기저](/ko/math/linear_algebra/inner_product_spaces#정규직교기저)) 
+이므로 $\{u_1,\ldots, u_r\}$은 $\mathbb{R}^m$의 orthonormal set이다. 이를 확장하여 $\mathbb{R}^m$의 orthonormal basis $\{u_1,\ldots, u_m\}$을 얻을 수 있다. ([§벡터공간의 차원, ⁋명제 5](/ko/math/linear_algebra/dimension#prop5), [§내적공간, §§정규직교기저](/ko/math/linear_algebra/inner_product_spaces#정규직교기저)) 
 
 한편 $r<i\leq n$에 대하여는 
 
@@ -119,7 +121,7 @@ $$A^+AA^+=V(\Sigma^+\Sigma)V^tV\Sigma^+U^t=V(\Sigma^+\Sigma\Sigma^+)U^t=V\Sigma^
 
 $$\bigl((A^tA)^{-1}A^t\bigr)A=I_n,\qquad A\bigl((A^tA)^{-1}A^t\bigr)=A(A^tA)^{-1}A^t$$
 
-으로부터 위 네 조건을 모두 만족함을 직접 확인할 수 있다. 
+으로부터 위 네 조건을 모두 만족함을 직접 확인할 수 있다. 이때 $A^tA$이 symmetric이므로 $\bigl((A^tA)^{-1}\bigr)^t=(A^tA)^{-1}$이고, 따라서 $A(A^tA)^{-1}A^t$ 또한 symmetric이다. 
 
 특이값 분해 $A=U\Sigma V^t$은 기하학적으로 임의의 linear map $A$가 orthonormal basis에 대한 회전 혹은 반사, 각 축으로의 $\sigma_i$배 확대, 그리고 또 다른 회전 혹은 반사의 합성으로 분해됨을 의미한다. $V$의 열 $v_i$를 *오른쪽 특이벡터*, $U$의 열 $u_i$를 *왼쪽 특이벡터*라 부르며, 이들은 각각 $A^tA$과 $AA^t$의 고유벡터이다.
 

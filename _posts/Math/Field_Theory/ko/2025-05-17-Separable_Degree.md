@@ -11,6 +11,8 @@ sidebar:
 date: 2025-05-17
 weight: 7
 
+drift_needed: true
+
 ---
 
 ## 순수비분리확대체
@@ -20,7 +22,7 @@ weight: 7
 우선 다음의 보조정리를 보이자.
 
 ::: 보조정리 1
-Characteristic $p\neq 0$의 field $\mathbb{K}$에 대하여, finite degree $\mathbb{K}$-algebra $A$가 étale인 것과 $A=\mathbb{K}[A^p]$인 것이 동치이다. 뿐만 아니라, 이 경우 $(a_i)$가 $A$의 $\mathbb{K}$-basis라면 $(a_i^p)$들도 그러하다.
+Characteristic $p\neq 0$의 field $\mathbb{K}$에 대하여, finite degree commutative $\mathbb{K}$-algebra $A$가 étale인 것과 $A=\mathbb{K}[A^p]$인 것이 동치이다. 뿐만 아니라, 이 경우 $(a_i)$가 $A$의 $\mathbb{K}$-basis라면 $(a_i^p)$들도 그러하다.
 :::
 ::: 증명
 $\mathbb{K}$의 algebraic closure $\overline{\mathbb{K}}$를 생각하자. 그럼 임의의 $u,v\in \Hom_\Alg{\mathbb{K}}(A, \overline{\mathbb{K}})$에 대하여, 만일 $u,v$를 subalgebra $\mathbb{K}[A^p]$로 제한한 것이 같다면 다음의 식
@@ -74,10 +76,10 @@ Perfect field $\mathbb{K}$의 임의의 algebraic extension은 perfect이다.
 뿐만 아니라 다음이 성립한다. 
 
 ::: 따름정리 4
-Field $\mathbb{K}$의 algebraic closure $\overline{\mathbb{K}}$와 이 안에서의 perfect closure $\mathbb{K}^{p^{-\infty}}$에 대하여, $\overline{\mathbb{K}}/\mathbb{K}$의 subextension $\mathbb{L}/\mathbb{K}$가 separable인 것과 $\mathbb{K}^{p^{-\infty}}$가 linearly disjoint한 것이 동치이다. 
+Field $\mathbb{K}$의 algebraic closure $\overline{\mathbb{K}}$와 이 안에서의 perfect closure $\mathbb{K}^{p^{-\infty}}$에 대하여, $\overline{\mathbb{K}}/\mathbb{K}$의 subextension $\mathbb{L}/\mathbb{K}$가 separable인 것과 $\mathbb{L}$이 $\mathbb{K}^{p^{-\infty}}$와 linearly disjoint한 것이 동치이다. 
 :::
 ::: 증명
-언제나와 마찬가지로 $\mathbb{L}/\mathbb{K}$가 finite degree인 상황을 생각하면 충분하다. $\mathbb{L}/\mathbb{K}$의 basis $(x_i)$가 주어졌다 하면, $\mathbb{L}$이 $\mathbb{K}^{p^{-\infty}}$와 linearly disjoint인 것은 $(x_i)$가 모든 $\mathbb{K}^{p^{-n}}$과 linearly disjoint인 것과 동치이므로, 이는 임의의 family $(a_i)$와 임의의 $n$에 대하여
+언제나와 마찬가지로 $\mathbb{L}/\mathbb{K}$가 finite degree인 상황을 생각하면 충분하다. $\mathbb{L}/\mathbb{K}$의 basis $(x_i)$가 주어졌다 하면, $\mathbb{L}$이 $\mathbb{K}^{p^{-\infty}}$와 linearly disjoint인 것은 $(x_i)$가 모든 $\mathbb{K}^{p^{-n}}$ 위에서 free인 것과 동치이므로, 이는 임의의 family $(a_i)$와 임의의 $n$에 대하여
 
 $$\sum x_i a_i^{p^{-n}}=0\implies a_i=0$$
 
@@ -107,11 +109,11 @@ Algebraic extension $\mathbb{L}/\mathbb{K}$와, [명제 5](#prop5)에서 정의�
 3. $\mathbb{L}_s$는 $\mathbb{L}$의 subextension 중, $\mathbb{K}$에 대해 separable이고, 자신에 대해서는 $\mathbb{L}$이 $p$-radical이도록 하는 유일한 것이다. 
 :::
 ::: 증명
-우선 첫 번째 주장의 경우, $\ch(\mathbb{K})=0$인 경우는 자명하므로 $\ch(\mathbb{K})=p>0$인 경우를 생각하자. 이제 $x\in \mathbb{L}$와 그 minimal polynomial $f$를 생각하면, 적당한 $m\geq 0$이 존재하여 $f\in\mathbb{K}[\x^{p^m}]$이지만 $f\not\in \mathbb{K}[\x^{p^{m+1}}]$이도록 할 수 있으며, 이 때 $f(\x)=g(\x^{p^m})$이도록 하는 다항식 $g$를 택할 수 있다. 그런데 $f$는 irreducible이므로, $g$ 또한 그러하고 따라서 $g$는 $\mathbb{K}$의 원소 $x^{p^m}$의 minimal polynomial이 된다. 이제 [§분리가능확대체, ⁋명제 10](/ko/math/field_theory/separable_extensions#prop10)의 마지막 동치조건으로부터 $g$는 separable이고, 따라서 $x^{p^m}$은 $\mathbb{L}_s$에 속한다. 따라서 $x$는 $\mathbb{L}/\mathbb{L}_s$에서 $p$-radical extension이고 이로부터 원하는 결과를 얻는다. 
+우선 첫 번째 주장의 경우, $\ch(\mathbb{K})=0$인 경우는 자명하므로 $\ch(\mathbb{K})=p>0$인 경우를 생각하자. 이제 $x\in \mathbb{L}$와 그 minimal polynomial $f$를 생각하면, 적당한 $m\geq 0$이 존재하여 $f\in\mathbb{K}[\x^{p^m}]$이지만 $f\not\in \mathbb{K}[\x^{p^{m+1}}]$이도록 할 수 있으며, 이 때 $f(\x)=g(\x^{p^m})$이도록 하는 다항식 $g$를 택할 수 있다. 그런데 $f$는 irreducible이므로, $g$ 또한 그러하고 따라서 $g$는 $\mathbb{K}$ 위에서 $x^{p^m}$의 minimal polynomial이 된다. 이제 [§분리가능확대체, ⁋명제 10](/ko/math/field_theory/separable_extensions#prop10)의 마지막 동치조건으로부터 $g$는 separable이고, 따라서 $x^{p^m}$은 $\mathbb{L}_s$에 속한다. 따라서 $x$는 $\mathbb{L}/\mathbb{L}_s$에서 $p$-radical extension이고 이로부터 원하는 결과를 얻는다. 
 
-한편 둘째 가정을 만족하는 subextension $\mathbb{M}/\mathbb{K}$가 주어졌다 하고, $x\in \mathbb{L}_s$라 하자. 그럼 $x$는 $\mathbb{K}$에 대해 separable이므로, $\mathbb{M}$에 대해서도 separable이다. 그런데 $\mathbb{L}/\mathbb{M}$이 $p$-radical이므로 $x$는 $\mathbb{M}$에 대해 $p$-radical이다. 다시 [§분리가능확대체, ⁋명제 10](/ko/math/field_theory/separable_extensions#prop10)의 마지막 동치조건에서 $x$의 minimal polynomial은 $\mathbb{K}[\x^p]$에 속해야 하지만, 동시에 $x$가 $p$-radical이라는 조건으로부터 $x$의 height $e$에 대하여 $\x^{p^e}-x^{p^e}$가 $x$의 minimal polynomial이어야 한다. 따라서 $e=0$이고 $\x-x$가 $x$의 minimal polynomial이어야 하므로 $x\in \mathbb{M}$이어야 한다. 
+한편 둘째 가정을 만족하는 subextension $\mathbb{M}/\mathbb{K}$가 주어졌다 하고, $x\in \mathbb{L}_s$라 하자. 그럼 $x$는 $\mathbb{K}$에 대해 separable이므로, $\mathbb{M}$에 대해서도 separable이다. 그런데 $\mathbb{L}/\mathbb{M}$이 $p$-radical이므로 $x$는 $\mathbb{M}$에 대해 $p$-radical이다. 다시 [§분리가능확대체, ⁋명제 10](/ko/math/field_theory/separable_extensions#prop10)의 마지막 동치조건에서 $x$의 $\mathbb{M}$ 위에서의 minimal polynomial은 $\mathbb{M}[\x^p]$에 속하지 않아야 하지만, 동시에 $x$가 $p$-radical이라는 조건으로부터 $x$의 height $e$에 대하여 $\x^{p^e}-x^{p^e}$가 $x$의 minimal polynomial이어야 한다. 따라서 $e=0$이고 $\x-x$가 $x$의 minimal polynomial이어야 하므로 $x\in \mathbb{M}$이어야 한다. 
 
-마지막 주장은 [명제 5](#prop5)의 유일성으로부터 얻어진다. 
+마지막 주장은 [명제 5](#prop5)의 최대성과 위의 둘째 주장을 합쳐 얻어진다. 
 :::
 
 그럼 algebraic extension이 separable한 것은 base change에 대해 stable하므로, 만일 어떠한 extension의 두 subextension $\mathbb{L}/\mathbb{K}$, $\mathbb{K}'/\mathbb{K}$, 그리고 $\mathbb{L}$에서의 $\mathbb{K}$의 relative separable closure $\mathbb{L}_s$에 대하여 $\mathbb{K}'(\mathbb{L}_s)$가 $\mathbb{K}'$의 $\mathbb{K}'(\mathbb{L})$에서의 relative separable closure가 되는 것을 확인할 수 있다. 또, relative separable closure의 유일성으로부터, finite degree extension $\mathbb{L}/\mathbb{K}$에 대하여 다음의 식 
@@ -137,11 +139,11 @@ Field $\mathbb{K}$의 algebraic closure $\overline{\mathbb{K}}$를 고정하자.
 2. $\mathbb{K}$의 separable algebraic closure는 isomorphism에 대하여 유일하게 결정된다.
 :::
 ::: 증명
-1. $\overline{\mathbb{K}}_s$는 [명제 5](#prop5)에 의해 separable이고, algebraic closure $\overline{\mathbb{K}}$의 subextension이므로 algebraic이다. 따라서 주장은 임의의 separable algebraic extension $\mathbb{L}/\overline{\mathbb{K}}_s$가 주어졌을 때, $\mathbb{L}$이 $\overline{\mathbb{K}}_s$의 trivial extension임을 보이면 충분하다. 이는 우선 extension $\mathbb{L}/\overline{\mathbb{K}}_s$이 algebraic이므로 유일한 $\overline{\mathbb{K}}_s$-homomorphism $u:\mathbb{L}\rightarrow\overline{\mathbb{K}}$가 존재하며 ([§대수적 폐포, ⁋정리 5](/ko/math/field_theory/algebraically_closed_extensions#thm5)) 그 image $u(\mathbb{L})$은 [§분리가능확대체, ⁋명제 15](/ko/math/field_theory/separable_extensions#prop15)에 의해 separable algebraic이고, 따라서 $u(\mathbb{L})=\overline{\mathbb{K}}_s$가 성립한다. 
+1. $\overline{\mathbb{K}}_s$는 [명제 5](#prop5)에 의해 separable이고, algebraic closure $\overline{\mathbb{K}}$의 subextension이므로 algebraic이다. 따라서 주장은 임의의 separable algebraic extension $\mathbb{L}/\overline{\mathbb{K}}_s$가 주어졌을 때, $\mathbb{L}$이 $\overline{\mathbb{K}}_s$의 trivial extension임을 보이면 충분하다. 이는 우선 extension $\mathbb{L}/\overline{\mathbb{K}}_s$이 algebraic이므로 $\overline{\mathbb{K}}_s$-homomorphism $u:\mathbb{L}\rightarrow\overline{\mathbb{K}}$가 존재하며 ([§대수적 폐포, ⁋정리 5](/ko/math/field_theory/algebraically_closed_extensions#thm5)) 그 image $u(\mathbb{L})$은 [§분리가능확대체, ⁋명제 15](/ko/math/field_theory/separable_extensions#prop15)에 의해 separable algebraic이고, 따라서 $u(\mathbb{L})=\overline{\mathbb{K}}_s$가 성립한다. 
 2. 마찬가지로 [§대수적 폐포, ⁋정리 5](/ko/math/field_theory/algebraically_closed_extensions#thm5)를 이용하면 된다. 
 :::
 
-이로부터, separable algebraic closure는 가장 작은 separably closed algebraic extension임을 안다. 즉 $\mathbb{L}/\mathbb{K}$가 $\mathbb{K}$의 separable algebraic closure이고, field extension $\mathbb{M}/\mathbb{K}$에 대하여 $\mathbb{M}$이 separably closed라면 유일한 morphism $\mathbb{L}\rightarrow\mathbb{M}$이 존재한다. 
+이로부터, separable algebraic closure는 가장 작은 separably closed algebraic extension임을 안다. 즉 $\mathbb{L}/\mathbb{K}$가 $\mathbb{K}$의 separable algebraic closure이고, field extension $\mathbb{M}/\mathbb{K}$에 대하여 $\mathbb{M}$이 separably closed라면 morphism $\mathbb{L}\rightarrow\mathbb{M}$이 존재한다. 
 
 ## 분리가능차수
 
@@ -151,7 +153,7 @@ Field $\mathbb{K}$의 algebraic closure $\overline{\mathbb{K}}$를 고정하자.
 위와 같은 상황에서, $[\mathbb{L}:\mathbb{K}]_s=[\mathbb{L}_s:\mathbb{K}]$이다.
 :::
 ::: 증명
-정의에 의해 $[\mathbb{L}:\mathbb{K}]_s$는 $\mathbb{K}$의 algebraic closure $\overline{\mathbb{K}}$에 대하여, $\mathbb{L}$에서 $\overline{\mathbb{K}}$로의 $\mathbb{K}$-algebra homomorphism들의 갯수로 정의된다. 그런데 $\overline{\mathbb{K}}$는 algebraically closed field이므로 perfect field이고, 따라서 [§순수비분리확대체, ⁋명제 6](/ko/math/field_theory/purely_inseparable_extensions#prop6)으로부터 임의의 $\mathbb{K}$-algebra homomorphism $\mathbb{L} \rightarrow \overline{\mathbb{K}}$이 주어질 때마다 유일한 $\mathbb{L}_s\rightarrow \overline{\mathbb{K}}$이 정의되며 거꾸로 $\mathbb{K}$-algebra homomorphism $\mathbb{L}_s \rightarrow \overline{\mathbb{K}}$이 주어질 때마다 이를 $\mathbb{L}$로 제한하여 $\mathbb{L}\rightarrow\overline{\mathbb{K}}$를 얻을 수 있다. 이로부터 등식 
+정의에 의해 $[\mathbb{L}:\mathbb{K}]_s$는 $\mathbb{K}$의 algebraic closure $\overline{\mathbb{K}}$에 대하여, $\mathbb{L}$에서 $\overline{\mathbb{K}}$로의 $\mathbb{K}$-algebra homomorphism들의 갯수로 정의된다. 그런데 $\overline{\mathbb{K}}$는 algebraically closed field이므로 perfect field이고, 따라서 [§순수비분리확대체, ⁋명제 6](/ko/math/field_theory/purely_inseparable_extensions#prop6)으로부터 임의의 $\mathbb{K}$-algebra homomorphism $\mathbb{L} \rightarrow \overline{\mathbb{K}}$이 주어질 때마다 이를 $\mathbb{L}_s$로 제한하여 $\mathbb{L}_s\rightarrow \overline{\mathbb{K}}$이 정의되며 거꾸로 $\mathbb{K}$-algebra homomorphism $\mathbb{L}_s \rightarrow \overline{\mathbb{K}}$이 주어질 때마다 이를 $\mathbb{L}$로 확장하는 유일한 $\mathbb{L}\rightarrow\overline{\mathbb{K}}$를 얻을 수 있다. 이로부터 등식 
 
 $$[\mathbb{L}:\mathbb{K}]_s=[\mathbb{L}_s:\mathbb{K}]_s$$
 

@@ -10,6 +10,7 @@ sidebar:
 
 date: 2026-06-08
 weight: 7
+drift_needed: true
 
 ---
 
@@ -62,7 +63,7 @@ $$s_i(\beta)=\beta-\langle\beta,\alpha_i\rangle\alpha_i$$
 
 따라서, 이를 identity에서부터 reduced expression을 따라가며 따져보면 $w$에서 $ws_i$로 바뀔 때의 length의 변화량
 
-$$\ell(ws_i)=\ell(w)+1$$
+$$\ell(ws_i)=\ell(w)\pm1$$
 
 의 증감이 정확히 이를 반영해주는 것을 알 수 있다. 즉 임의의 $w\in W$에 대하여
 
@@ -132,7 +133,7 @@ $$X_w^\circ:=BwB/B\cong\mathbb{A}^{\ell(w)}\subseteq G/B$$
 ::: 증명
 $B=U\rtimes T$이고 $U$는 root subgroup들의 곱으로 분해된다. $U$를 $U_w$와 $U_w'=U\cap wUw^{-1}$의 곱으로 쓰면 $U=U_wU_w'$이고 $U_w\cap U_w'=\{e\}$이다. $U_w'$는 $w^{-1}$에 의해 positive root에서 positive root로 보내지는 root들에 해당하므로 $w^{-1}U_w'w\subseteq U$이고, 따라서
 
-$$BwB=UwB=U_w(wU_w'w^{-1})wB=U_wwB$$
+$$BwB=UwB=U_wU_w'wB=U_ww(w^{-1}U_w'w)B=U_wwB$$
 
 이다. 이제 $u_1wb_1=u_2wb_2$ ($u_i\in U_w$, $b_i\in B$)라 하면 $w^{-1}u_2^{-1}u_1w=b_2b_1^{-1}\in B$이다. 한편 $u_2^{-1}u_1\in U_w$이므로 $w^{-1}u_2^{-1}u_1w\in U^-$이고, 따라서 $w^{-1}u_2^{-1}u_1w\in B\cap U^-=\{e\}$이다. 이로부터 $u_1=u_2$, $b_1=b_2$이므로 map은 bijective이며, 실제로 variety의 isomorphism이다. 마지막으로 $U_w$는 $\ell(w)$개의 root subgroup의 곱이고 각 root subgroup은 $\mathbb{G}_a$와 isomorphic하므로 $U_w\cong\mathbb{A}^{\ell(w)}$이다.
 :::

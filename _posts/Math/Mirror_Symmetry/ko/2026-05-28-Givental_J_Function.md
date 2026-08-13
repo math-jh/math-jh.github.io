@@ -10,6 +10,7 @@ sidebar:
 
 date: 2026-05-28
 weight: 6
+drift_needed: true
 
 ---
 
@@ -50,7 +51,7 @@ $$\int_\Sigma \psi_i\in \mathbb{Z}$$
 직관적으로 $\psi_i$는 이러한 방식으로 생기는 boundary divisor들의 합 $\sum_{i\in S} D_S$처럼 생각할 수 있지만, 이대로 두면 같은 cohomology class가 여러 번 세게 되므로 redundancy를 제거하는 reference choice가 필요하다. 즉, $j,k$를 고정하고, $S^c$에 해당하는 component를 $j,k$와 nodal point로 이쪽 $\mathbb{P}^1$의 automorphism을 죽여주어야 한다. 
 
 ::: 명제 2 (Genus 0 Topological Recursion Relation)
-$\{1, \ldots, n\}$ ($n\geq 4$)의 고정된 세 index $i,j,k$에 대하여, $\psi$-class $\psi_i$는 다음 boundary divisor들의 합
+$\{1, \ldots, n\}$ ($n\geq 4$)의 고정된 서로 다른 세 index $i,j,k$에 대하여, $\psi$-class $\psi_i$는 다음 boundary divisor들의 합
 
 $$\psi_i=\sum_{\substack{S \subseteq \{1, \ldots, n\} \\ i \in S, j, k \notin S, \lvert S\rvert \geq 2}} D_S \in H^2(\overline{\mathcal{M}}_{0, n})$$
 
@@ -87,7 +88,7 @@ $$\nabla^z = \partial + z^{-1}\mathcal{C}$$
 
 으로 정의되었는데, 이번 글에서 우리는 oscillating integral 쪽과 부호를 맞추기 위해 그 *dual Dubrovin connection*
 
-$$\nabla^{z, \vee} := -\nabla^{-z} = \partial - z^{-1}\mathcal{C}$$
+$$\nabla^{z, \vee} := \nabla^{-z} = \partial - z^{-1}\mathcal{C}$$
 
 과 이 connection의 horizontal section equation
 
@@ -95,7 +96,7 @@ $$z q_a\partial_{q_a} s = T_a \qtimes s \qquad (a = 1, \ldots, r)\tag{$\ast$}$$
 
 을 고려하기로 한다. 
 
-이 방정식의 해를 구하기 위해 우선 $z\rightarrow \infty$인 상황을 보자. 그럼 $z\rightarrow\infty$일 때 $z^{-1}\mathcal{C}$ 항이 사라지면서 standard differential $\partial$로 degenerate하며, 따라서 ($\ast$)의 leading-order horizontal section은 $\partial$의 horizontal section, 즉 $q$에 무관한 constant section이 된다. 더 일반적으로, $z\rightarrow \infty$인 limit에서 사라지는 solution은
+이 방정식의 해를 구하기 위해 우선 $z\rightarrow \infty$인 상황을 보자. 그럼 $z\rightarrow\infty$일 때 $z^{-1}\mathcal{C}$ 항이 사라지면서 standard differential $\partial$로 degenerate하며, 따라서 ($\ast$)의 leading-order horizontal section은 $\partial$의 horizontal section, 즉 $q$에 무관한 constant section이 된다. 더 일반적으로, $z\rightarrow \infty$인 limit에서 보정항이 사라지는 solution은
 
 $$s=s_0+\frac{s_1}{z}+\frac{s_2}{z^2}+\cdots$$
 
@@ -207,7 +208,7 @@ $$\sum_{k \geq 1} z^{-k-1}\langle \tau_{k-1}(T_a)\rangle_{0, 1, \beta} = \sum_{m
 
 이제 $S$의 각 열 $S(q,z)T_b$가 horizontal section임을 보이자. 이를 위해서는  $z q_a\partial_{q_a}$를 $S(q, z) T_b$에 직접 작용시켜보면 된다. 우선 $S(q, z) T_b$는 $\beta$마다 $q^\beta$를 인자로 갖는 항들의 합으로 나타나는데, $J$-function을 도입하기 전 살펴본 recursion relation과 [\[사교기하학\] §Gromov-Witten 불변량, ⁋명제 4](/ko/math/symplectic_geometry/gromov_witten#prop4)을 사용하면 $z q_a\partial_{q_a}$는 결국 $T_a$를 한 점으로 삽입하면서, 곱해진 $z$로 distinguished marked point의 $1/(z - \psi)$에서 $\psi$를 한 degree 내리는 효과를 준다.
 
-이제 이렇게 degree를 내린 $\psi$를 [명제 2](#prop2)로 (정확히는 [명제 2](#prop2)에서 target을 살린 버전으로) boundary divisor들의 합 $\sum_S D_S$로 분해할 수 있다. 이 때, 각 $D_S$ 위에서 source curve는 effective class가 $\beta = \beta_1 + \beta_2$로 쪼개진 두 component로 갈라지고, 그 사이의 node에서는 diagonal class $\sum_c T_c \otimes T^c$가 끼어든다. 새로 삽입한 $T_a$가 모이는 component는 3-point invariant $\langle T_a, T_c, T_d\rangle_{0, 3, \beta_1}$, 곧 quantum product $T_a \qtimes$를 basis로 표현한 structure constant를 주고, 나머지 component는 $T^c$를 node로 갖는 $S(q, z) T_b$의 (더 낮은 degree인) $\beta_2$에 해당하는 부분을 복원한다. 따라서 모든 $c$와 분해 $\beta = \beta_1 + \beta_2$에 대해 합하면 $T_a \qtimes$를 벡터 $S(q, z) T_b$에 적용한 것, 곧 우변 $T_a \qtimes \bigl(S(q, z) T_b\bigr)$가 정확히 복원된다.
+이제 이렇게 degree를 내린 $\psi$를 [명제 2](#prop2)로 (정확히는 [명제 2](#prop2)에서 target을 살린 버전으로) boundary divisor들의 합 $\sum_S D_S$로 분해할 수 있다. 이 때, 각 $D_S$ 위에서 source curve는 effective class가 $\beta = \beta_1 + \beta_2$로 쪼개진 두 component로 갈라지고, 그 사이의 node에서는 diagonal class $\sum_c T_c \otimes T^c$가 끼어든다. 새로 삽입한 $T_a$가 모이는 component는 3-point invariant $\langle T_a, T_c, T^d\rangle_{0, 3, \beta_1}$, 곧 quantum product $T_a \qtimes$를 basis로 표현한 structure constant를 주고, 나머지 component는 $T^c$를 node로 갖는 $S(q, z) T_b$의 (더 낮은 degree인) $\beta_2$에 해당하는 부분을 복원한다. 따라서 모든 $c$와 분해 $\beta = \beta_1 + \beta_2$에 대해 합하면 $T_a \qtimes$를 벡터 $S(q, z) T_b$에 적용한 것, 곧 우변 $T_a \qtimes \bigl(S(q, z) T_b\bigr)$가 정확히 복원된다.
 :::
 
 따라서 $q\rightarrow 0$일 때 모든 $q^\beta$항이 사라지므로, $S$의 classical limit은 $\id$이다. 이는 A-side에서는 quantum cup product의 classical limit이 ordinary cup product라는 것의 결과로 생각할 수 있다. 

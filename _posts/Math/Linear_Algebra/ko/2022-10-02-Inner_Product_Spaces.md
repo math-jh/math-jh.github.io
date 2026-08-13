@@ -13,6 +13,8 @@ date: 2022-10-02
 
 weight: 21
 
+drift_needed: true
+
 
 ---
 
@@ -137,7 +139,7 @@ $$\hat{x}_1:=x_1$$
 
 으로 정의하자. 이후 
 
-$$\hat{x}_k:=x_k-\sum_{i=1}^{k-1}\frac{\langle x_i,x_k\rangle}{\langle x_i,x_i\rangle}x_i$$
+$$\hat{x}_k:=x_k-\sum_{i=1}^{k-1}\frac{\langle \hat{x}_i,x_k\rangle}{\langle \hat{x}_i,\hat{x}_i\rangle}\hat{x}_i$$
 
 으로 정의하면, 이 과정 끝에 얻어지는 집합 $\{\hat{x}_1,\ldots, \hat{x}_n\}$이 orthogonal basis가 된다는 것을 확인할 수 있다. 이렇게 임의의 basis로부터 orthogonal basis를 얻어내는 방법을 *Gram-Schmidt 과정*이라 부른다. 때때로 우리는 이렇게 얻어진 basis의 각 원소들의 크기가 1이기를 바랄 때도 있는데, 이를 위해서는 각 벡터를 자기 자신의 크기로 나누어주면 된다. 이러한 성질을 만족하는 basis를 *orthonormal basis*라 부른다. 만일 $\mathcal{B}=\{x_1, \ldots, x_n\}$이 orthonormal basis라면, 임의의 $v\in V$에 대하여
 
@@ -254,7 +256,7 @@ $$(1-\lambda)v=u-\lambda u'\in U$$
 
 가 성립한다. 이로부터 $\lambda=1$이거나 $v\in U$이다. 만일 $\lambda=1$이라면 $v-u=v-u'$로부터 $u=u'$이고, $v\in U$라면 $\lVert v-w\rVert$를 최소로 만드는 $w$는 $w=v$ 뿐이므로 이 경우에도 마찬가지로 $u=u'$이다. 따라서 이 식을 최소로 만드는 벡터는 유일하다. 
 
-이제 실제로 $\proj_Uv$가 실제로 $\lVert v-w\rVert$를 최소로 만드는 벡터임을 보여야 한다. $U$의 basis $\{x_1,\ldots, x_k\}$를 하나 택하고, 이를 포함하는 $V$의 orthonormal basis를 $\{x_1,\ldots, x_n\}$이라 하자. 그럼 $v=\sum_{i=1}^n v_i x_i$, $w=\sum_{i=1}^k w_i x_i$로부터
+이제 실제로 $\proj_Uv$가 실제로 $\lVert v-w\rVert$를 최소로 만드는 벡터임을 보여야 한다. $U$의 orthonormal basis $\{x_1,\ldots, x_k\}$를 하나 택하고, 이를 포함하는 $V$의 orthonormal basis를 $\{x_1,\ldots, x_n\}$이라 하자. 그럼 $v=\sum_{i=1}^n v_i x_i$, $w=\sum_{i=1}^k w_i x_i$로부터
 
 $$\lVert v-w\rVert^2=\left\lVert\sum_{i=1}^k(v_i-w_i)x_i+\sum_{i=k+1}^n v_ix_i\right\rVert^2=\sum_{i=1}^k (v_i-w_i)^2+\sum_{i=k+1}^n v_i^2\geq \sum_{i=k+1}^n v_i^2$$
 

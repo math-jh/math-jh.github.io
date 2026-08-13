@@ -11,6 +11,7 @@ sidebar:
 
 date: 2026-03-05
 weight: 1
+drift_needed: true
 ---
 
 Toric geometry는 말 그대로 toric variety라 불리는 특별한 algebraic variety를 연구하는 분야이다. 일반적인 algebraic variety에 비해 toric variety가 가지는 장점은 이것이 본질적으로 조합론적인 정보로 만들어지므로 더 손에 잡히는 계산을 수행하기 용이하다는 것이다. 우리는 이 글에서 먼저 가장 간단한 toric variety, 즉 affine toric variety를 살펴본다. 
@@ -68,16 +69,16 @@ $$S_\sigma = \sigma^\vee \cap M = \{ u \in M \mid \langle u, v \rangle \ge 0 \te
 
 을 정의하고, 이를 통해 *semigroup algebra<sub>반군 대수</sub>*
 
-$$\mathbb{C}[S_\sigma] = \mathbb{C}[\,{\rchi}^u \mid u \in S_\sigma]$$
+$$\mathbb{C}[S_\sigma] = \mathbb{C}[{\rchi}^u \mid u \in S_\sigma]$$
 
-을 정의한다. ([\[대수적 구조\] §대수, ⁋정의 5](/ko/math/algebraic_structures/algebras#def5)) 여기서 $\rchi^u$는 $M$의 원소 $u$에 대응되는 단항식이다.
+을 정의한다. ([\[대수적 구조\] §대수, ⁋정의 5](/ko/math/algebraic_structures/algebras#def5)) 여기서 $\rchi^u$는 $M$의 원소 $u$에 대응되는 monomial이다.
 :::
 
 이를 풀어쓰면 다음과 같다. 그 정의에 의하여 $S_\sigma$는 덧셈에 대한 semigroup이며, semigroup algebra $\mathbb{C}[S_\sigma]$는 가장 깔끔하게는 집합 $S_\sigma$ 위의 자유 $\mathbb{C}$-벡터공간에 곱셈
 
 $$\rchi^u\cdot\rchi^{u'}=\rchi^{u+u'}$$
 
-을 부여한 것으로 기술된다. 즉 $\mathbb{C}[S_\sigma]$는 $\{\rchi^u \mid u\in S_\sigma\}$를 basis로 가지며, 위의 곱셈으로 생성되는 $\mathbb{C}$-algebra이다. 한편 $S_\sigma$가 finitely generated semigroup임은 *Gordan's lemma* ([Wikipedia](https://en.wikipedia.org/wiki/Gordan%27s_lemma))에 의해 알려져 있으며, 따라서 $\mathbb{C}[S_\sigma]$는 finitely generated $\mathbb{C}$-algebra가 된다. 그럼 이 $\mathbb{C}$-algebra가 affine toric variety의 coordinate ring이 된다. 
+을 부여한 것으로 기술된다. 즉 $\mathbb{C}[S_\sigma]$는 $\{\rchi^u \mid u\in S_\sigma\}$를 basis로 가지며, 위의 곱셈으로 생성되는 $\mathbb{C}$-algebra이다. 한편 $S_\sigma$가 finitely generated semigroup임은 [Gordan's lemma](https://en.wikipedia.org/wiki/Gordan%27s_lemma)에 의해 알려져 있으며, 따라서 $\mathbb{C}[S_\sigma]$는 finitely generated $\mathbb{C}$-algebra가 된다. 그럼 이 $\mathbb{C}$-algebra가 affine toric variety의 coordinate ring이 된다. 
 
 ::: 정의 5
 Strongly convex rational polyhedral cone $\sigma \subseteq N_{\mathbb{R}}$에 대해, 이것이 정의하는 *affine toric variety<sub>아핀 토릭 다양체</sub>* $U_\sigma$를
@@ -109,7 +110,7 @@ $$\mathbb{C}[S_\sigma] = \mathbb{C}[\rchi^{e_1^\ast}, \rchi^{e_2^\ast}] = \mathb
 
 ## 매끄러움
 
-위의 [예시 6](#ex6)의 $\sigma = \{0\}$과 [예시 7](#ex7)의 standard quadrant $\sigma = \mathrm{cone}(e_1, e_2)$에서 $U_\sigma$가 각각 $T_N$, $\mathbb{C}^2$로 모두 smooth algebraic variety였다. 이제 우리는 이것이 우연이 아닐 뿐만 아니라 $U_\sigma$의 smoothness가 cone $\sigma$의 조합론적 데이터만으로 완전히 판정된다는 것을 살펴볼 것이다.
+위의 [예시 6](#ex6)의 $\sigma = \{0\}$과 [예시 7](#ex7)의 standard quadrant $\sigma = \mathrm{cone}(e_1, e_2)$에서 $U_\sigma$가 각각 $(\mathbb{C}^\ast)^n$, $\mathbb{C}^2$로 모두 smooth algebraic variety였다. 이제 우리는 이것이 우연이 아닐 뿐만 아니라 $U_\sigma$의 smoothness가 cone $\sigma$의 조합론적 데이터만으로 완전히 판정된다는 것을 살펴볼 것이다.
 
 ::: 정의 8
 Strongly convex rational polyhedral cone $\sigma \subseteq N_{\mathbb{R}}$가 *smooth<sub>매끄러운</sub>* (또는 *regular*, *nonsingular*) cone이라는 것은, $\sigma$의 primitive ray generator들 $v_1, \ldots, v_k$ ($k = \dim \sigma$)이 lattice $N$의 어떤 $\mathbb{Z}$-basis의 일부를 이루는 것이다.
@@ -120,7 +121,7 @@ Strongly convex rational polyhedral cone $\sigma \subseteq N_{\mathbb{R}}$가 *s
 1. $\sigma$가 *simplicial*이다. 즉 ray 수와 차원이 일치한다.
 2. ($\sigma$가 full-dimensional인 경우) primitive ray generator $v_1, \ldots, v_n$들을 열로 모은 행렬 $[v_1 \mid \cdots \mid v_n] \in \mathrm{Mat}_n(\mathbb{Z})$의 determinant가 $\pm 1$이다.
 
-특히 $N = \mathbb{Z}^2$에서 2차원 cone에 대해서는 두 ray generator로 만든 $2 \times 2$ 행렬의 determinant가 $\pm 1$인지만 확인하면 되고, 실제로 [예시 6](#ex6)과 [예시 7](#ex7)은 이를 만족한다. 
+특히 $N = \mathbb{Z}^2$에서 2차원 cone에 대해서는 두 ray generator로 만든 $2 \times 2$ 행렬의 determinant가 $\pm 1$인지만 확인하면 되고, 실제로 [예시 7](#ex7)은 이를 만족한다. 
 
 ::: 명제 9
 Affine toric variety $U_\sigma$가 smooth algebraic variety인 것은 $\sigma$가 smooth cone인 것과 필요충분조건이다. 더 구체적으로, $\sigma$가 smooth이고 $k = \dim \sigma$이면
@@ -152,7 +153,7 @@ $$\mathbb{C}[S_\sigma] = \mathbb{C}[\rchi^{v_1^\ast}, \ldots, \rchi^{v_k^\ast}, 
 
 $$\begin{vmatrix} 0 & 2 \\ 1 & -1 \end{vmatrix} = -2$$
 
-이므로 $\sigma$는 simplicial이지만 smooth가 아니다. 실제로 $S_\sigma$의 minimal generator를 계산하면 $u_1 = e_1^\ast$, $u_2 = e_1^\ast + e_2^\ast$, $u_3 = 2 e_1^\ast + e_2^\ast$의 세 원소이고 관계식 $u_1 u_3 = u_2^2$가 성립하므로
+이므로 $\sigma$는 simplicial이지만 smooth가 아니다. 실제로 $S_\sigma$의 minimal generator를 계산하면 $u_1 = e_1^\ast$, $u_2 = e_1^\ast + e_2^\ast$, $u_3 = e_1^\ast + 2 e_2^\ast$의 세 원소이고 관계식 $\rchi^{u_1}\rchi^{u_3} = (\rchi^{u_2})^2$가 성립하므로
 
 $$\mathbb{C}[S_\sigma] \cong \mathbb{C}[x, y, z]/(xz - y^2)$$
 
@@ -160,7 +161,7 @@ $$\mathbb{C}[S_\sigma] \cong \mathbb{C}[x, y, z]/(xz - y^2)$$
 
 ## 토러스 작용
 
-우리는 $\Spec(\mathbb{C}[S_\sigma])$ 위에 torus action을 정의하기 위해, 이미 친숙한 $\mathbb{P}^N$의 예시를 살펴본다. $\mathbb{P}^N = \Proj(\mathbb{C}[\x_0, \ldots, \x_N])$의 경우, $\mathbb{C}^\ast$가 scaling action을 하면 polynomial ring $\mathbb{C}[\x_0, \ldots, \x_N]$이 degree-by-degree로 분해된다. 각 homogeneous component $\mathbb{C}[\x_0, \ldots, \x_N]_d$는 $\mathbb{C}^\ast$-module로서 eigenspace를 형성한다.
+우리는 $\Spec(\mathbb{C}[S_\sigma])$ 위에 torus action을 정의하기 위해, 이미 친숙한 $\mathbb{P}^r$의 예시를 살펴본다. $\mathbb{P}^r = \Proj(\mathbb{C}[\x_0, \ldots, \x_r])$의 경우, $\mathbb{C}^\ast$가 scaling action을 하면 polynomial ring $\mathbb{C}[\x_0, \ldots, \x_r]$이 degree-by-degree로 분해된다. 각 homogeneous component $\mathbb{C}[\x_0, \ldots, \x_r]_d$는 $\mathbb{C}^\ast$-module로서 eigenspace를 형성한다.
 
 이와 비슷하게, $\mathbb{C}[S_\sigma]$ 위에서도 자연스러운 $M$-grading
 
@@ -188,7 +189,7 @@ $$t + t' = e_1 \otimes (z_1 z_1') + \cdots + e_n \otimes (z_n z_n') = (z_1 z_1',
 
 으로 주어지므로, $T_N$은 multiplicative group $(\mathbb{C}^\ast)^n$으로 자연스럽게 해석된다. 이제 $M = \Hom(N, \mathbb{Z})$의 원소 $m$에 대해 group homomorphism $\rchi^m : T_N \rightarrow \mathbb{C}^\ast$를 다음의 식
 
-$$\rchi^m(t) := z^{m(v)}, \qquad t = v \otimes z \in T_N, \; m(v) \in \mathbb{Z}$$
+$$\rchi^m(t) := z^{m(v)}, \qquad t = v \otimes z \in T_N, \quad m(v) \in \mathbb{Z}$$
 
 으로 정의하자. 우리 주장은 이것이 잘 정의된 group homomorphism이라는 것이다. 먼저 $T_N$의 임의의 원소는 유한합 $t = \sum_i v_i \otimes z_i$의 꼴로 주어지며, 그럼 이 원소에 대해
 
@@ -200,7 +201,7 @@ $$t = \sum_i v_i \otimes z_i,\qquad t' = \sum_j v_j' \otimes z_j'$$
 
 에 대하여,
 
-$$\rchi^m(t + t') = \rchi^m\!\left(\sum_i v_i \otimes z_i + \sum_j v_j' \otimes z_j'\right) = \prod_i z_i^{m(v_i)} \prod_j (z_j')^{m(v_j')} = \rchi^m(t)\rchi^m(t')$$
+$$\rchi^m(t + t') = \rchi^m\left(\sum_i v_i \otimes z_i + \sum_j v_j' \otimes z_j'\right) = \prod_i z_i^{m(v_i)} \prod_j (z_j')^{m(v_j')} = \rchi^m(t)\rchi^m(t')$$
 
 가 성립하므로 $\rchi^m$은 group homomorphism이다. 더 구체적으로 $N$의 basis $e_1, \ldots, e_n$과 dual basis $e_1^\ast, \ldots, e_n^\ast \in M$을 도입하면, $m \in M$은 $m = m_1 e_1^\ast + \cdots + m_n e_n^\ast$로 쓸 수 있고, 이에 따라
 
@@ -267,7 +268,7 @@ $\sigma = \{0\}$인 경우 $\sigma^\vee = M_{\mathbb{R}}$이므로 $S_\sigma = M
 
 $$T_N = \Spec(\mathbb{C}[M]) \longrightarrow \Spec(\mathbb{C}[S_\sigma]) = U_\sigma$$
 
-을 유도한다. 더욱이 $\sigma$가 strongly convex이므로 $\sigma^\vee$는 $M_{\mathbb{R}}$에서 full-dimensional cone이고, 그 interior에 lattice point $u_0 \in M$이 존재한다. 임의의 $m \in M$에 대해 충분히 큰 $N$을 잡으면 $Nu_0$과 $Nu_0 + m$이 모두 $S_\sigma$에 속하므로 $m = (Nu_0 + m) - Nu_0$로 $S_\sigma$가 group으로서 $M$ 전체를 생성하고, $\mathbb{C}[S_\sigma]$의 fraction field는 $\mathbb{C}(M)$과 일치한다. 따라서 $T_N \hookrightarrow U_\sigma$는 열린 조밀한 부분집합이 된다.
+을 유도한다. 더욱이 $\sigma$가 strongly convex이므로 $\sigma^\vee$는 $M_{\mathbb{R}}$에서 full-dimensional cone이고, 그 interior에 lattice point $u_0 \in M$이 존재한다. 임의의 $m \in M$에 대해 충분히 큰 $\ell$을 잡으면 $\ell u_0$과 $\ell u_0 + m$이 모두 $S_\sigma$에 속하므로 $m = (\ell u_0 + m) - \ell u_0$로 $S_\sigma$가 group으로서 $M$ 전체를 생성하고, $\mathbb{C}[S_\sigma]$의 fraction field는 $\mathbb{C}(M)$과 일치한다. 따라서 $T_N \hookrightarrow U_\sigma$는 열린 조밀한 부분집합이 된다.
 :::
 
 이어서 face 구조가 affine toric variety 위에서 어떻게 발현되는지 살펴본다. 이를 위해 다음 보조정리가 핵심적이다.
@@ -284,7 +285,7 @@ $$\tau^\vee = \sigma^\vee + \mathbb{R}_{\ge 0}(-u)$$
 가 성립한다.
 :::
 
-이로부터 다음 명제가 따른다.
+이 보조정리의 증명은 이 글의 범위를 벗어나므로 생략하고 [CLS]에 위임한다. 이로부터 다음 명제가 따른다.
 
 ::: 명제 13
 Cone $\sigma$의 face $\tau$에 대하여, $U_\tau$는 $U_\sigma$의 principal open subset이다. ([\[대수다양체\] §아핀다양체, ⁋정의 5](/ko/math/algebraic_varieties/affine_varieties#def5)) 구체적으로, $u \in S_\sigma$를 $\tau = \sigma \cap u^{\perp}$를 만족하는 것으로 선택하면
@@ -321,7 +322,7 @@ $$U_\tau = \Spec(\mathbb{C}[S_\tau]) = \Spec(\mathbb{C}[S_\sigma]_{\rchi^u}) = (
 
 $$t \cdot \z_i = \rchi^{e_i^\ast}(t) \z_i = t_i \z_i \qquad i = 1, 2$$
 
-을 통해 작용한다. 이로부터 점 위의 작용을 읽어내기 위해, $\mathbb{C}^2$의 점 $(z_1, z_2)$가 $\mathbb{C}[\z_1, \z_2]$의 maximal ideal $\mathfrak{m} = (\z_1 - z_1, \z_2 - z_2)$에 대응한다는 사실을 떠올리자. 이 때 $\mathfrak{m}$의 generator에 ring map $\sigma_t^\ast : \z_i \mapsto t_i \z_i$를 적용해서 얻어지는 ideal은
+을 통해 작용한다. 이로부터 점 위의 작용을 읽어내기 위해, $\mathbb{C}^2$의 점 $(z_1, z_2)$가 $\mathbb{C}[\z_1, \z_2]$의 maximal ideal $\mathfrak{m} = (\z_1 - z_1, \z_2 - z_2)$에 대응한다는 사실을 떠올리자. 이 때 $\mathfrak{m}$의 generator에 ring map $\z_i \mapsto t_i \z_i$를 적용해서 얻어지는 ideal은
 
 $$(t_1\z_1 - z_1, t_2\z_2 - z_2) = (\z_1 - z_1/t_1, \z_2 - z_2/t_2)$$
 
@@ -349,9 +350,9 @@ Affine toric variety $U_\sigma$에 대해 다음이 성립한다:
 :::
 
 ::: 증명
-1. Normality의 경우, Gordan's lemma에 의해 $S_\sigma = \sigma^\vee \cap M$은 finitely generated semigroup이다. 더욱이 $S_\sigma$는 *saturated*이다: 즉 $k \cdot u \in S_\sigma$인 $k \in \mathbb{Z}_{>0}$와 $u \in M$에 대해 $u \in S_\sigma$이다. 이는 $\langle u, v \rangle \ge 0$가 $\sigma$ 위에서 성립함을 의미한다. Affine semigroup algebra가 normal domain이 되는 것은 그 semigroup이 saturated인 것과 동치이므로, $\mathbb{C}[S_\sigma]$는 normal domain이고 그 spectrum인 $U_\sigma$는 normal이다.
+1. Normality의 경우, Gordan's lemma에 의해 $S_\sigma = \sigma^\vee \cap M$은 finitely generated semigroup이다. 더욱이 $S_\sigma$는 *saturated*이다: 즉 $k \cdot u \in S_\sigma$인 $k \in \mathbb{Z}_{>0}$와 $u \in M$에 대해 $u \in S_\sigma$이다. 실제로 $ku \in S_\sigma$이면 모든 $v \in \sigma$에 대해 $\langle ku, v \rangle \ge 0$이고, 따라서 $\langle u, v \rangle \ge 0$이므로 $u$ 또한 $S_\sigma$에 속한다. Affine semigroup algebra가 normal domain이 되는 것은 그 semigroup이 saturated인 것과 동치이므로, $\mathbb{C}[S_\sigma]$는 normal domain이고 그 spectrum인 $U_\sigma$는 normal이다.
 2. Irreducibility의 경우, $S_\sigma$는 torsion-free abelian group $M$의 부분 semigroup이므로, $\mathbb{C}[S_\sigma]$에는 zero divisor가 존재하지 않는다. 따라서 $\mathbb{C}[S_\sigma]$는 integral domain이고 $U_\sigma = \Spec(\mathbb{C}[S_\sigma])$는 irreducible이다.
-3. $\mathbb{C}[S_\sigma] \subseteq \mathbb{C}[M]$이므로 fraction field는 $\mathbb{C}(M)$에 포함된다. 한편 $\sigma$가 strongly convex이므로 $\sigma^\vee$는 $M_{\mathbb{R}}$에서 full-dimensional cone이며, 따라서 $\sigma^\vee$의 interior에 lattice point $u_0 \in M$이 존재한다. 임의의 $m \in M$에 대해 충분히 큰 $N$을 잡으면 $Nu_0$과 $Nu_0 + m$이 모두 $S_\sigma$에 속하므로 $m = (Nu_0 + m) - Nu_0$로 $S_\sigma$가 group으로서 $M$ 전체를 생성하고, $\mathbb{C}[S_\sigma]$의 fraction field는 정확히 $\mathbb{C}(M)$과 일치한다. $M \cong \mathbb{Z}^n$이므로 $\mathbb{C}(M)$의 transcendence degree는 $n$이고, 이로부터 $\dim U_\sigma = n$이 성립한다.
+3. $\mathbb{C}[S_\sigma] \subseteq \mathbb{C}[M]$이므로 fraction field는 $\mathbb{C}(M)$에 포함된다. 한편 $\sigma$가 strongly convex이므로 $\sigma^\vee$는 $M_{\mathbb{R}}$에서 full-dimensional cone이며, 따라서 $\sigma^\vee$의 interior에 lattice point $u_0 \in M$이 존재한다. 임의의 $m \in M$에 대해 충분히 큰 $\ell$을 잡으면 $\ell u_0$과 $\ell u_0 + m$이 모두 $S_\sigma$에 속하므로 $m = (\ell u_0 + m) - \ell u_0$로 $S_\sigma$가 group으로서 $M$ 전체를 생성하고, $\mathbb{C}[S_\sigma]$의 fraction field는 정확히 $\mathbb{C}(M)$과 일치한다. $M \cong \mathbb{Z}^n$이므로 $\mathbb{C}(M)$의 transcendence degree는 $n$이고, 이로부터 $\dim U_\sigma = n$이 성립한다.
 :::
 
 ---

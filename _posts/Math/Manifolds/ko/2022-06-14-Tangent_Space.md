@@ -10,6 +10,7 @@ sidebar:
 
 date: 2022-06-14
 weight: 3
+drift_needed: true
 
 ---
 
@@ -36,7 +37,7 @@ $$\rho_{UV}:f\mapsto f\vert_V$$
 으로 정의하자. 그럼 이 구조는 $M$ 위에 정의된 ring들의 sheaf $\mathcal{C}^\infty_M$가 된다. ([\[위상수학\] §층, ⁋정의 1](/ko/math/topology/sheaves#def1)) 임의의 $p\in M$에서의 $\mathcal{C}^\infty$의 stalk은 $\mathcal{C}^\infty_{M,p}$, 혹은 혼동이 없을 때에는 $\mathcal{C}^\infty_p$로 적는다. ([\[위상수학\] §준층, ⁋정의 9](/ko/math/topology/presheaves#def9))
 
 ::: 명제 1
-임의의 manifold $M$에 대하여 $\mathcal{C}^\infty_p$은 $\mathbb{R}$-algebra 구조를 갖는다.
+임의의 manifold $M$과 한 점 $p\in M$에 대하여 $\mathcal{C}^\infty_p$은 $\mathbb{R}$-algebra 구조를 갖는다.
 :::
 ::: 증명
 이를 보이기 위해서는 $\mathcal{C}^\infty_p$ 위에서의 연산들을 정의해주면 된다. $\mathcal{C}^\infty_p$의 두 원소 $\mathbf{f},\mathbf{g}$를 택하자. 그럼 $p$의 적당한 열린근방 $U,V$가 존재하여, $\mathbf{f}$와 $\mathbf{g}$를 각각 $(f,U)$, $(g,V)$의 germ이라 생각할 수 있다. 이제 $\mathbf{f}+\mathbf{g}$를 다음의 함수
@@ -75,7 +76,7 @@ $$0\longrightarrow \mathfrak{m}_p\longrightarrow \mathcal{C}^\infty_p\overset{\e
 
 뿐만 아니라, 두 함수 $f,g$가 점 $p$의 어떤 열린근방 $U$ 위에서 동일한 함수를 정의한다면, 점 $p$에서의 이들의 미분 또한 동일해지므로 방향미분을 다룰 때 이들은 동일한 것으로 취급해도 된다. 그럼 우리가 관심있는 대상들은 더 이상 함수가 아니라 함수들의 equivalence class가 되며, 명시적으로 이는 다음과 같다.
 
-$$\mathcal{C}^\infty_p=\{(f,U)\mid f\in C^\infty(U)\}\big/{\sim},\qquad (f,U)\sim (g,V)\iff f\vert_W=g\vert_W\text{ for some $W\subseteq U\cap V$ open}$$
+$$\mathcal{C}^\infty_p=\{(f,U)\mid p\in U\text{ open}, f\in C^\infty(U)\}\big/{\sim},\qquad (f,U)\sim (g,V)\iff f\vert_W=g\vert_W\text{ for some open $W\subseteq U\cap V$ with $p\in W$}$$
 
 $f$의 equivalence class를 $\mathbf{f}$로 적자. 그럼 $\mathbf{f}\mathbf{g},\mathbf{f}+\mathbf{g}$와 같이 $\mathcal{C}^\infty_p$ 위에 스칼라곱과 덧셈, 더 나아가 곱셈까지 잘 정의된다는 것이 [명제 1](#prop1)의 내용이다.
 
@@ -89,7 +90,7 @@ $$v(\mathbf{f}\mathbf{g})=\mathbf{f}(p)v(\mathbf{g})+\mathbf{g}(p)v(\mathbf{f})$
 을 만족하는 $\mathbb{R}$-linear map $v:\mathcal{C}^\infty_p\rightarrow\mathbb{R}$을 점 $p$에서의 $M$의 *tangent vector<sub>접벡터</sub>*라고 부른다. 점 $p$에서의 $M$의 tangent vector들의 모임을 점 $p$에서의 $M$의 *tangent space<sub>접공간</sub>*이라 하고, $T_pM$으로 적는다.
 :::
 
-다음 명제는 이미 명제로부터 충분히 짐작할 수 있는 사실이다.
+다음 명제는 이미 이름으로부터 충분히 짐작할 수 있는 사실이다.
 
 ::: 명제 4
 [정의 3](#def3)에서 정의한 $T_pM$은 $\mathbb{R}$-벡터공간이다.
@@ -104,7 +105,7 @@ $$(v+w)(\mathbf{f})=v(\mathbf{f})+w(\mathbf{f})$$
 $$\begin{aligned}(v+w)(\mathbf{fg})&=v(\mathbf{fg})+w(\mathbf{fg})=\mathbf{f}(p)v(\mathbf{g})+\mathbf{g}(p)v(\mathbf{f})+\mathbf{f}(p)w(\mathbf{g})+\mathbf{g}(p)w(\mathbf{f})\\
 &=\mathbf{f}(p)(v+w)(\mathbf{g})+\mathbf{g}(p)(v+w)(\mathbf{f})\end{aligned}$$
 
-를 계산하여 $v+w$ 또한 $T_pM$의 원소가 된다는 것을 확인할 수 있다. 
+를 계산하여 $v+w$ 또한 $T_pM$의 원소가 된다는 것을 확인할 수 있다. 상수곱의 경우에도 $(cv)(\mathbf{fg})=cv(\mathbf{fg})=\mathbf{f}(p)(cv)(\mathbf{g})+\mathbf{g}(p)(cv)(\mathbf{f})$를 계산하여 $cv\in T_pM$임을 얻는다. 
 :::
 
 뿐만 아니라, 임의의 tangent vector $v$와 모든 점에서 값 $c$를 갖는 상수함수 $\mathbf{c}$에 대하여 $v(\mathbf{c})=0$이 항상 성립한다. $\mathbf{1}$을 함숫값 $1$을 갖는 상수함수라 하면, $\mathbf{c}=c\cdot\mathbf{1}$이므로 다음만 보이면 충분하다.
@@ -128,4 +129,4 @@ $$v(\mathbf{1})=v(\mathbf{1}\cdot\mathbf{1})=\mathbf{1}(p)v(\mathbf{1})+\mathbf{
 
 ---
 
-[^1]: $U$ 위에서만 정의된 함수도 partition of unity를 통해 $M$ 전체로 확장할 수 있으므로 현재 상황에서는 이 둘을 구별하지 않아도 된다.
+[^1]: $U$ 위에서만 정의된 함수에 대해서도 partition of unity를 통해 점 $p$의 더 작은 열린근방 위에서 이와 일치하는 $M$ 전체에서 정의된 $C^\infty$ 함수를 잡을 수 있으므로, 현재 상황에서는 이 둘을 구별하지 않아도 된다.

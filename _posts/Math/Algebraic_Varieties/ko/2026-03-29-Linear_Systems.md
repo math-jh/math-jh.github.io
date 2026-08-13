@@ -10,6 +10,7 @@ sidebar:
 
 date: 2026-03-29
 weight: 11
+drift_needed: true
 
 ---
 
@@ -23,7 +24,7 @@ weight: 11
 Variety $X$ 위에 정의된 Weil divisor $D=\sum n_i D_i$가 *effective*라는 것은 모든 $i$에 대해 $n_i\geq 0$인 것이다. Cartier divisor $\{(U_i, f_i)\}$가 *effective*라는 것은 모든 $i$에 대해 $f_i$가 $U_i$ 위에서 regular인 것이다. 
 :::
 
-그렇다면 우리의 목적은 divisor $D$의 divisor class 안에서 어떠한 effective divisor가 존재하는지 살펴보는 것이다. 이를 위해 divisor $D$가 정의하는 line bundle $\mathcal{L}=\mathcal{O}_X(D)$를 생각하자. ([§선다발과 벡터다발, ⁋정의 17](/ko/math/algebraic_varieties/line_bundles#def17)) 우리는 $\mathcal{L}$의 각각의 nonzero global section $s\in \Gamma(X, \mathcal{L})$는 pole이 없으므로 effective divisor $\divisor(s)$를 정의하며, 이는 원래의 $D$와 trivialization만큼만 차이나는 것을 확인할 수 있으므로 $D$와 linearly equivalent하다. 즉 $D$와 linearly equivalent한 effective divisor를 찾기 위해선 $\mathcal{O}_X(D)$의 nonzero global section을 보면 된다. 다만 주의할 사항은 $\divisor(s)$는 $s$ 자체가 아니라 $s$의 nonzero multiple에 의존한다는 것으로, 이때문에 우리가 관심을 가져야할 대상은 $\Gamma(X, \mathcal{L})$ 자체가 아니라 그 projectivization이다. 
+그렇다면 우리의 목적은 divisor $D$의 divisor class 안에서 어떠한 effective divisor가 존재하는지 살펴보는 것이다. 이를 위해 divisor $D$가 정의하는 line bundle $\mathcal{L}=\mathcal{O}_X(D)$를 생각하자. ([§선다발과 벡터다발, ⁋정의 17](/ko/math/algebraic_varieties/line_bundles#def17)) 우리는 $\mathcal{L}$의 각각의 nonzero global section $s\in \Gamma(X, \mathcal{L})$는 pole이 없으므로 effective divisor $\divisor(s)$를 정의하며, 이는 원래의 $D$와 trivialization만큼만 차이나는 것을 확인할 수 있으므로 $D$와 linearly equivalent하다. 즉 $D$와 linearly equivalent한 effective divisor를 찾기 위해선 $\mathcal{O}_X(D)$의 nonzero global section을 보면 된다. 다만 주의할 사항은 $\divisor(s)$가 $s$의 nonzero scalar 배에 의존하지 않는다는 것으로, 이때문에 우리가 관심을 가져야할 대상은 $\Gamma(X, \mathcal{L})$ 자체가 아니라 그 projectivization이다. 
 
 ::: 정의 2
 Variety $X$ 위의 line bundle $\mathcal{L}$에 대하여, $\mathcal{L}$의 *complete linear system<sub>완비 선형계</sub>*은 $\mathcal{L}$의 global section space $\Gamma(X, \mathcal{L})$의 projectivization
@@ -35,7 +36,7 @@ $$\lvert \mathcal{L} \rvert = \mathbb{P}(\Gamma(X, \mathcal{L}))$$
 
 ## Projective space의 linear system
 
-앞서 [§선다발과 벡터다발, ⁋예시 12](/ko/math/algebraic_varieties/line_bundles#ex12) 이후의 계산에 의해 $\Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n}(d))$가 degree $d$의 homogeneous polynomial들의 공간 $\mathbb{K}[\x_0, \ldots, \x_n]_d$와 동형임을 보았다. 이 공간의 각 원소들은 $\mathbb{P}^n$의 degree $d$ hypersurface를 정의하므로, 우리는 $\mathcal{O}_{\mathbb{P}^n}(d)$의 complete linear system
+앞서 [§선다발과 벡터다발, ⁋예시 16](/ko/math/algebraic_varieties/line_bundles#ex16) 이후의 계산에 의해 $\Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n}(d))$가 degree $d$의 homogeneous polynomial들의 공간 $\mathbb{K}[\x_0, \ldots, \x_n]_d$와 동형임을 보았다. 이 공간의 각 원소들은 $\mathbb{P}^n$의 degree $d$ hypersurface를 정의하므로, 우리는 $\mathcal{O}_{\mathbb{P}^n}(d)$의 complete linear system
 
 $$\lvert \mathcal{O}_{\mathbb{P}^n}(d)\rvert=\mathbb{P}(\Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n}(d)))\cong \mathbb{P}(\mathbb{K}[\x_0,\ldots, \x_n]_d)\cong \mathbb{P}^{\binom{n+d}{d} - 1}$$
 
@@ -50,7 +51,7 @@ $$\lvert \mathcal{O}_{\mathbb{P}^2}(1)\rvert\cong \mathbb{P}(\mathbb{K}[\x_0,\x_
 
 조금 더 복잡하고 기하적인 예시를 위해, 우리는 $\mathbb{P}^2$ 위의 line bundle $\mathcal{O}_{\mathbb{P}^2}(2)$가 정의하는 complete linear system
 
-$$\lvert \mathcal{O}_{\mathbb{P}^2}(2)\rvert\cong \mathbb{P}(\mathbb{K}[\x_0,\x_1,\x_2]_2)\cong \mathbb{P}^{\binom{3}{2}-1}=\mathbb{P}^5$$
+$$\lvert \mathcal{O}_{\mathbb{P}^2}(2)\rvert\cong \mathbb{P}(\mathbb{K}[\x_0,\x_1,\x_2]_2)\cong \mathbb{P}^{\binom{4}{2}-1}=\mathbb{P}^5$$
 
 의 1차원 부분공간 (즉 $1$차원 linear system)을 생각하자. 대표적인 예시는 두 conic의 *pencil*이다. $\mathbb{P}^2$에서 정의된 두 conic $C_1=Z(F_1)$, $C_2=Z(F_2)$을 생각하자. 그럼 $C_1$과 $C_2$가 동일한 conic이 아닌 한, 이들의 linear combination
 
@@ -66,13 +67,13 @@ $$C_1: Z((\x_0-2\x_2)^2+\x_1^2-9\x_2^2),\qquad C_2: Z((\x_0+2\x_2)^2+\x_1^2-9\x_
 
 $$(\x-2)^2+\y^2=9,\qquad (\x+2)^2+\y^2=9$$
 
-의 방정식이다. 이들은 $U_2$ 위에서는 위의 두 식으로부터 계산되는 $(x,y)=(0,\pm\sqrt{5})$에서 만나며, $U_2$ 바깥 --- 즉 $U_2$의 <em-ko>무한대 직선</em-ko>[^1] --- 에서는 두 점 $[1:i:0]$, $[1: -i:0]$에서 만난다. 위의 pencil $Z(\lambda F_1+\mu F_2)$는, 그럼 이들 교집합 $C_1\cap C_2$을 지나는 conic들의 모임이다. 
+의 방정식이다. 이들은 $U_2$ 위에서는 위의 두 식으로부터 계산되는 $(x,y)=(0,\pm\sqrt{5})$에서 만나며, $U_2$ 바깥 --- 즉 $\mathbb{P}^2$의 <em-ko>무한대 직선</em-ko>[^1] --- 에서는 두 점 $[1:i:0]$, $[1: -i:0]$에서 만난다. 위의 pencil $Z(\lambda F_1+\mu F_2)$는, 그럼 이들 교집합 $C_1\cap C_2$을 지나는 conic들의 모임이다. 
 
 한편 일반적인 degree 2 homogeneous polynomial은
 
 $$F(\x_0,\x_1,\x_2) = a_{00}\x_0^2 + a_{11}\x_1^2 + a_{22}\x_2^2 + a_{01}\x_0\x_1 + a_{02}\x_0\x_2 + a_{12}\x_1\x_2$$
 
-의 꼴이며, 이것이 정확히 $\Gamma(X, \mathcal{O}(2))$가 $6$차원 공간인 이유이다. 한편, 위에서 계산한 네 점짜리 집합 $C_1\cap C_2$를 지나야 한다는 조건을 추가한다면, 이들 네 점이 각각 하나씩의 제약조건을 걸어 필요한 parameter를 하나씩 지워주므로 이를 나타내기 위한 parameter는 2개임을 안다. 더 구체적으로, 다음 네 개의 조건
+의 꼴이며, 이것이 정확히 $\Gamma(\mathbb{P}^2, \mathcal{O}_{\mathbb{P}^2}(2))$가 $6$차원 공간인 이유이다. 한편, 위에서 계산한 네 점짜리 집합 $C_1\cap C_2$를 지나야 한다는 조건을 추가한다면, 이들 네 점이 각각 하나씩의 제약조건을 걸어 필요한 parameter를 하나씩 지워주므로 이를 나타내기 위한 parameter는 2개임을 안다. 더 구체적으로, 다음 네 개의 조건
 
 $$0=F(0,\sqrt{5},1)=5a_{11}+a_{22}+\sqrt{5}a_{12}$$
 
@@ -82,7 +83,7 @@ $$0=F(1,i,0)=a_{00}-a_{11}+ia_{01}$$
 
 $$0=F(1,-i,0)=a_{00}-a_{11}-ia_{01}$$
 
-이 $a_{12}=0$, $a_{01}=0$, $5a_{11}=-a_{22}$, $a_{00}=a_{11}$을 강제하므로 실질적인 변수는 $a_{00}$, $a_{02}$의 두 개이다. 즉, 이들 conic의 모임은 $\Gamma(X,\mathcal{O}(2))$의 2차원 부분공간 $V$를 이룰 것이며, 이를 projectivize한 것이 $[\lambda:\mu]$로 나타나는 $\mathbb{P}^1$이 된다. 
+이 $a_{12}=0$, $a_{01}=0$, $5a_{11}=-a_{22}$, $a_{00}=a_{11}$을 강제하므로 실질적인 변수는 $a_{00}$, $a_{02}$의 두 개이다. 즉, 이들 conic의 모임은 $\Gamma(\mathbb{P}^2,\mathcal{O}_{\mathbb{P}^2}(2))$의 2차원 부분공간 $V$를 이룰 것이며, 이를 projectivize한 것이 $[\lambda:\mu]$로 나타나는 $\mathbb{P}^1$이 된다. 
 
 {% diagram Math/Algebraic_Varieties/Linear_Systems-1.svg width="40em" alt="pencil_of_circles" %}
 :::
@@ -93,9 +94,9 @@ $$\Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n}(d)) \rightarrow \Gamma(X, \mat
 
 은 homogeneous polynomial $F \in \mathbb{K}[\x_0, \ldots, \x_n]_d$를 $X$ 위의 section으로 보내며, 그 kernel은 $I(X)$의 degree $d$인 homogeneous part $I(X)_d$이다. 따라서
 
-$$\Gamma(X, \mathcal{O}_{\mathbb{P}^n}(d)\vert_X) \cong \mathbb{K}[\x_0, \ldots, \x_n]_d / I(X)_d$$
+$$\mathbb{K}[\x_0, \ldots, \x_n]_d / I(X)_d \hookrightarrow \Gamma(X, \mathcal{O}_{\mathbb{P}^n}(d)\vert_X)$$
 
-로서 $\mathbb{P}^n$에서와 본질적으로 동일한 계산이 가능하다. 특히 $F - G \in I(X)$일 때 같은 교차를 정의하므로, parameter space는 $\mathbb{P}(V/(V \cap I(X)))$가 된다.
+는 단사이며 ($d$가 충분히 크면 이는 isomorphism이다), 이를 통해 $\mathbb{P}^n$에서와 본질적으로 동일한 계산이 가능하다. 특히 $F - G \in I(X)$일 때 같은 교차를 정의하므로, parameter space는 $\mathbb{P}(V/(V \cap I(X)))$가 된다.
 
 ## Base Locus
 
@@ -107,13 +108,13 @@ $$\varphi_L:X\rightarrow \mathbb{P}^r;\qquad x\mapsto [F_0(x):\cdots:F_r(x)]$$
 
 물론 이것이 항상 가능한 것은 아니다. 가령 [예시 3](#ex3)에서, $(a_{00},a_{02})=(1,0), (0,1)$에 해당하는 다음의 두 basis
 
-$$F_1(\x_0,\x_1,\x_2)=\x_0^2+\x_1^2-5\x_2^2, \qquad F_2(\x_0,\x_1,\x_2)=\x_0\x_2$$
+$$G_1(\x_0,\x_1,\x_2)=\x_0^2+\x_1^2-5\x_2^2, \qquad G_2(\x_0,\x_1,\x_2)=\x_0\x_2$$
 
 를 택하면 이 "embedding"은
 
-$$\mathbb{P}^2\rightarrow \mathbb{P}^1;\qquad [\x_0,\x_1,\x_2]\mapsto [\x_0^2+\x_1^2-5\x_2^2:\x_0\x_2]$$
+$$\mathbb{P}^2\rightarrow \mathbb{P}^1;\qquad [\x_0:\x_1:\x_2]\mapsto [\x_0^2+\x_1^2-5\x_2^2:\x_0\x_2]$$
 
-이 된다. 이는 우선 $\mathbb{P}^2$에서 더 작은 공간 $\mathbb{P}^1$로 가는 함수이므로 어딘가 잘못되었다는 것을 알고 있고, 이는 두 함수 $F_1,F_2$가 동시에 $0$이 되는 부분이 존재하기 때문이다.
+이 된다. 이는 우선 $\mathbb{P}^2$에서 더 작은 공간 $\mathbb{P}^1$로 가는 함수이므로 어딘가 잘못되었다는 것을 알고 있고, 이는 두 함수 $G_1,G_2$가 동시에 $0$이 되는 부분이 존재하기 때문이다.
 
 위에서의 embedding $\varphi_L$은 실은 $V$의 basis의 선택에 의존하지만, $\varphi_L$이 갖는 여러 성질들은 그렇지 않다. 가령, 방금 전과 같이 basis들 모두가 vanish하는 $X$의 점들은 basis의 선택에 의존하지 않는다.
 
@@ -140,7 +141,7 @@ $$\varphi_L:X\rightarrow\mathbb{P}^r,\quad p\mapsto[F_0(p):\cdots:F_r(p)]$$
 을 정의할 수 있다. 우리가 처음 linear system에 관심을 가진 것은 주어진 divisor $D$에 대해 $D$와 linearly equivalent한 effective divisor를 찾기 위해서였는데, 다음 명제는 이에 대한 직접적인 대답을 준다.
 
 ::: 명제 6
-위의 상황에서, $\mathbb{P}^r$의 hyperplane $H$는 $\lvert L\rvert$에 속하는 effective divisor를 정의한다. 
+위의 상황에서, $\mathbb{P}^r$의 hyperplane $H$는 $L$에 속하는 effective divisor를 정의한다. 
 :::
 
 이를 확인하기 위해서는 $\mathbb{P}^r$의 hyperplane $H: a_0\x_0+\cdots+a_r\x_r=0$에 대하여, $\varphi_L^{-1}(H)$는 다음의 global section 
@@ -150,7 +151,7 @@ $$\sigma=a_0F_0+\cdots+a_rF_r\in V$$
 의 zero set, 즉 $\divisor(\sigma)$와 일치한다는 것을 확인하면 된다. 좀 더 구체적인 예시를 살펴 보자.
 
 ::: 예시 7
-[예시 3](#ex3)에서 살펴 본 $\mathbb{P}^n$의 두 예시를 살펴 보자. 우선 처음의 complete linear system 
+[예시 3](#ex3)에서 살펴 본 $\mathbb{P}^2$의 두 예시를 살펴 보자. 우선 처음의 complete linear system 
 
 $$\lvert \mathcal{O}_{\mathbb{P}^2}(1)\rvert=\mathbb{P}(\mathbb{K}[\x_0,\x_1,\x_2]_1)$$
 
@@ -162,7 +163,7 @@ $$\lvert \mathcal{O}_{\mathbb{P}^2}(1)\rvert=\mathbb{P}(\mathbb{K}[\x_0,\x_1,\x_
 위의 예시는 basepoint라는 이름의 유래를 직관적으로 보여주지만, $\varphi_L$이 identity이므로 [명제 6](#prop6)은 사실 큰 의미가 없다. 좀 더 non-trivial한 예시를 살펴 보자.
 
 ::: 예시 8
-$\mathbb{P}^1$에서 $d \ge 1$일 때, $\lvert \mathcal{O}_{\mathbb{P}^1}(d) \rvert$의 complete linear system이 정의하는 map은
+$\mathbb{P}^1$에서 $d \ge 1$일 때, complete linear system $\lvert \mathcal{O}_{\mathbb{P}^1}(d) \rvert$이 정의하는 map은
 
 $$\nu_d: \mathbb{P}^1 \rightarrow \mathbb{P}^d, \quad [s : t] \mapsto [s^d : s^{d-1}t : \cdots : t^d]$$
 
@@ -191,7 +192,7 @@ $$\nu_d^{-1}(H_1) = \{[s:t] \in \mathbb{P}^1 \mid s^d - t^d = 0\}$$
 Line bundle $\mathcal{L}$ (또는 대응하는 linear system $\lvert \mathcal{L} \rvert$)이 *very ample*이라는 것은, complete linear system $\lvert \mathcal{L} \rvert = \mathbb{P}(\Gamma(X, \mathcal{L}))$이 정의하는 regular map $\varphi_{\mathcal{L}}: X \rightarrow \mathbb{P}(\Gamma(X, \mathcal{L}))$이 closed embedding인 것이다.
 :::
 
-이것이 잘 정의되려면 $\varphi_L$이 basis의 선택에 의존하지 않아야 하며, 실제로 그러하다는 것을 쉽게 확인할 수 있다. 
+$\varphi_L$은 basis의 선택에 따라 $\mathbb{P}^r$의 automorphism만큼 달라지므로, 이것이 closed embedding인지의 여부는 basis의 선택에 의존하지 않는다. 
 
 Very ample의 정의에서 핵심은 사상이 단순한 morphism이 아니라 *closed* embedding이라는 점이다. 즉, 위에서 설명한 것과 같이 추상적인 variety의 세계에서도 이를 사용하여 projective variety를 정의하고, 심지어 very ample line bundle $\mathcal{L}$을 사용하면 $X$를 이 ambient projective space에서 명시적인 좌표로 표현할 수도 있게 된다. 
 

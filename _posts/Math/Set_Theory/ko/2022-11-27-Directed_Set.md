@@ -10,6 +10,7 @@ sidebar:
 
 date: 2022-11-27
 weight: 17
+drift_needed: true
 
 ---
 
@@ -52,15 +53,15 @@ $(x_i),(y_i)\in\prod A_i$라 하자. 그럼 각각의 $i$에 대하여, $x_i,y_i
 Ordered set $A$가 *lattice*라는 것은 $A$의 임의의 원소 두 개짜리 부분집합이 supremum과 infimum을 갖는 것이다. 이 때, 두 원소 $\sup\{x,y\}$와 $\inf\{x,y\}$를 각각 $x,y$의 *join*과 *meet*이라 부르고, $x\vee y$와 $x\wedge y$로 적는다. 
 :::
 
-Lattice $A$의 임의의 <em-ko>유한한</em-ko> 부분집합은 supremum과 infimum을 갖는다. 만일 $A$의 <em-ko>모든</em-ko> 부분집합이 supremum과 infimum을 갖는다면, $A$를 *complete lattice*라 부른다.
+Lattice $A$의 임의의 <em-ko>비어있지 않은 유한한</em-ko> 부분집합은 supremum과 infimum을 갖는다. 만일 $A$의 <em-ko>모든</em-ko> 부분집합이 supremum과 infimum을 갖는다면, $A$를 *complete lattice*라 부른다.
 
 ## Totally ordered set
 
 ::: 정의 5
-Preordered set $A$에서의 두 원소 $x$, $y$가 *comparable<sub>비교가능</sub>*하다는 것은 명제 <phrase>$x\leq y$ 혹은 $y\leq x$</phrase>이 성립하는 것이다. 만약 집합 $A$의 임의의 두 원소가 comparable하다면, 이를 *totally ordered set<sub>전순서집합</sub>*이라 부른다.
+Preordered set $A$에서의 두 원소 $x$, $y$가 *comparable<sub>비교가능</sub>*하다는 것은 명제 <phrase>$x\leq y$ 혹은 $y\leq x$</phrase>이 성립하는 것이다. 만약 ordered set $A$의 임의의 두 원소가 comparable하다면, 이를 *totally ordered set<sub>전순서집합</sub>*이라 부른다.
 :::
 
-만약 $A$가 totally ordered set이라면, trichotomy가 성립한다. 즉,임의의 $x, y\in A$에 대하여,  
+만약 $A$가 totally ordered set이라면, trichotomy가 성립한다. 즉, 임의의 $x, y\in A$에 대하여,  
 
 $$x=y,\qquad x < y,\qquad x > y$$
 

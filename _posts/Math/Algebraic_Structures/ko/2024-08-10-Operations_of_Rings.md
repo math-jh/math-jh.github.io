@@ -10,6 +10,7 @@ sidebar:
 
 date: 2024-08-10
 weight: 103
+drift_needed: true
 
 ---
 
@@ -38,25 +39,25 @@ $$(\alpha_i)_{i\in I}(\beta_i)_{i\in I}=(\alpha_i\beta_i)_{i\in I}$$
 
 $$\Eq(\phi,\psi)=\{\alpha\in A\mid \phi(\alpha)=\psi(\alpha)\}$$
 
-으로 정의하면 이것은 [§군 준동형사상, ⁋명제 2](/ko/math/algebraic_structures/group_homomorphisms#prop2)에 의해 $A$의 subgrouop이고, 뿐만 아니라 임의의 $\alpha,\beta\in\Eq(\phi,\psi)$에 대하여
+으로 정의하면 이것은 [§군 준동형사상, ⁋명제 2](/ko/math/algebraic_structures/group_homomorphisms#prop2)에 의해 $A$의 subgroup이고, 뿐만 아니라 임의의 $\alpha,\beta\in\Eq(\phi,\psi)$에 대하여
 
 $$\phi(\alpha\beta)=\phi(\alpha)\phi(\beta)=\psi(\alpha)\psi(\beta)=\psi(\alpha\beta)$$
 
-이므로 $\alpha\beta\in\Eq(\phi,\psi)$이다. 즉 $\Eq(\phi,\psi)$는 $A$의 subring이며, 이것이 $\Ring$에서 $\phi$와 $\psi$의 equalizer를 정의한다. 이로부터 다음이 성립한다.
+이므로 $\alpha\beta\in\Eq(\phi,\psi)$이고, 또한 $\phi(1)=1=\psi(1)$이므로 $1\in\Eq(\phi,\psi)$이다. 즉 $\Eq(\phi,\psi)$는 $A$의 subring이며, 이것이 $\Ring$에서 $\phi$와 $\psi$의 equalizer를 정의한다. 이로부터 다음이 성립한다.
 
 ::: 정리 2
 Category $\Ring$은 complete이다. 
 :::
 
-한편, $\Rng$에서 유용한 개념 중 하나로 direct sum이 있다. Ring들의 family $(A_i)_{i\in I}$를 생각하자. Direct product $\prod_{i\in I}A_i$의 원소 가운데 유한 개의 성분을 제외하고는 모두 $0$인 것, 즉 finitely supported인 family들의 모임은 덧셈과 곱셈에 닫혀 있어 $\prod A_i$의 subring을 이룬다. (두 finitely supported family의 합과 곱은 여전히 finitely supported이다.) 이를 다음과 같이 부른다.
+한편, $\Rng$에서 유용한 개념 중 하나로 direct sum이 있다. Ring들의 family $(A_i)_{i\in I}$를 생각하자. Direct product $\prod_{i\in I}A_i$의 원소 가운데 유한 개의 성분을 제외하고는 모두 $0$인 것, 즉 finitely supported인 family들의 모임은 덧셈과 곱셈에 닫혀 있어 $\Rng$에서 $\prod A_i$의 subobject를 이룬다. (두 finitely supported family의 합과 곱은 여전히 finitely supported이다.) 이를 다음과 같이 부른다.
 
 ::: 정의 3
 Ring들의 family $(A_i)_{i\in I}$에 대하여, direct product $\prod_{i\in I}A_i$의 원소 중 finitely supported인 것들의 모임을 ring들의 *direct sum<sub>직합</sub>*이라 부르고 $\bigoplus_{i\in I} A_i$로 적는다.
 :::
 
-이는 [\[대수적 구조\] §가환군, ⁋정의 2](/ko/math/algebraic_structures/abelian_groups#def2)에서 abelian group에 대해 정의한 direct sum과 정확히 같은 정신이다. 다만 index 집합 $I$가 무한일 때 direct sum $\bigoplus A_i$는 항등원 $(1)_{i\in I}$을 포함하지 않으므로 (unital) ring이 아니며, 이로 인해 이 개념은 주로 $\Rng$에서 사용하게 된다. 반대로 $I$가 유한집합일 때는 그 정의에 의해 direct sum이 direct product와 정확하게 일치한다.
+이는 [§가환군, ⁋정의 2](/ko/math/algebraic_structures/abelian_groups#def2)에서 abelian group에 대해 정의한 direct sum과 정확히 같은 정신이다. 다만 모든 $A_i$가 nonzero이고 index 집합 $I$가 무한일 때 direct sum $\bigoplus A_i$는 항등원 $(1)_{i\in I}$을 포함하지 않으므로 (unital) ring이 아니며, 이로 인해 이 개념은 주로 $\Rng$에서 사용하게 된다. 반대로 $I$가 유한집합일 때는 그 정의에 의해 direct sum이 direct product와 정확하게 일치한다.
 
-Abelian group의 경우 direct sum이 coproduct가 되지만 ([\[대수적 구조\] §가환군, ⁋정리 1](/ko/math/algebraic_structures/abelian_groups#thm1)), (non-commutative) ring에서는 direct sum이 coproduct가 되지 않는다. 이는 non-abelian group에서 direct sum이 coproduct가 되지 않는 것과 같은 상황이며, 따라서 ring들의 coproduct는 따로 정의해야 한다.
+Abelian group의 경우 direct sum이 coproduct가 되지만 ([§가환군, ⁋정리 1](/ko/math/algebraic_structures/abelian_groups#thm1)), (non-commutative) ring에서는 direct sum이 coproduct가 되지 않는다. 이는 non-abelian group에서 direct sum이 coproduct가 되지 않는 것과 같은 상황이며, 따라서 ring들의 coproduct는 따로 정의해야 한다.
 
 ## 환들의 쌍대곱
 
@@ -69,7 +70,7 @@ Abelian group의 경우 direct sum이 coproduct가 되지만 ([\[대수적 구�
 한편 임의의 두 ring homomorphism $\phi,\psi:A \rightarrow B$이 주어졌다 하자. $B$의 ideal $\mathfrak{b}$를 $\phi(\alpha)-\psi(\alpha)$들로 생성되는 two-sided ideal이라 하면 $B/\mathfrak{b}$가 잘 정의된다. 그럼 [§군 동형사상, ⁋명제 8](/ko/math/algebraic_structures/isomorphism_theorems#prop8)과 동일한 증명을 통해 다음이 성립한다.
 
 ::: 명제 5
-위와 같은 상황에서, $\CoEq(\phi,\psi)=B/\mathfrak{b}$는 $f,g$의 coequalizer를 정의한다.
+위와 같은 상황에서, $\CoEq(\phi,\psi)=B/\mathfrak{b}$는 $\phi,\psi$의 coequalizer를 정의한다.
 :::
 
 따라서 다음이 성립한다. 
@@ -84,7 +85,7 @@ Category $\Ring$은 bicomplete category이다.
 
 $$(A\otimes B)\otimes(A\otimes B) \rightarrow A\otimes B$$
 
-를 정의하면 충분하다. 그런데 tensor product의 associatvity와 commutativity에 의하여, 
+를 정의하면 충분하다. 그런데 tensor product의 associativity와 commutativity에 의하여, 
 
 $$(A\otimes B)\otimes(A\otimes B)\cong (A\otimes A)\otimes (B\otimes B)$$
 
@@ -106,13 +107,13 @@ $$(\alpha\otimes \beta)(\alpha'\otimes \beta')=\alpha\alpha'\otimes \beta\beta'$
 
 한 가지 흥미로운 사실은, $\otimes$가 $\cRing$에서의 coproduct와 같다는 것이다. 이를 확인하기 위해서는 임의의 commutative ring $A,B$와 다음 식
 
-$$\iota_A: A \hookrightarrow A\otimes B;\quad \alpha\mapsto \alpha\otimes 1$$
+$$\iota_A: A \rightarrow A\otimes B;\quad \alpha\mapsto \alpha\otimes 1$$
 
-그리고 비슷한 방식으로 정의된 $\iota_B$가 coproduct의 universal property를 만족함을 보이면 된다. 임의의 $\phi_A: A \rightarrow C$, $\phi_B: B \rightarrow C$가 주어졌다 하자. 만일 coproduct의 universal property를 만족하는 $\phi: A\otimes B \rightarrow C$가 존재한다면, 이는 반드시
+그리고 비슷한 방식으로 정의된 $\iota_B$가 coproduct의 universal property를 만족함을 보이면 된다. 임의의 commutative ring $C$와 ring homomorphism $\phi_A: A \rightarrow C$, $\phi_B: B \rightarrow C$가 주어졌다 하자. 만일 coproduct의 universal property를 만족하는 $\phi: A\otimes B \rightarrow C$가 존재한다면, 이는 반드시
 
 $$\phi(\alpha\otimes \beta)=\phi((\alpha\otimes 1)(1\otimes \beta))=\cdots=\phi_A(\alpha)\phi_B(\beta)$$
 
-를 만족해야 하므로 유일하다는 것을 알 수 있다. 한편, $A\times B$에서 $C$로의 함수 $(\alpha,\beta)\mapsto \phi_A(\alpha)\phi_B(\beta)$가 bilinear이므로, tensor product의 universal property로부터 $\alpha\otimes \beta\mapsto \phi_A(\alpha)\phi_B(\beta)$를 만족하는 ring homomorphism $A\otimes B \rightarrow C$가 존재하게 되고, 이것이 정확히 $\phi$가 된다. 
+를 만족해야 하므로 유일하다는 것을 알 수 있다. 한편, $A\times B$에서 $C$로의 함수 $(\alpha,\beta)\mapsto \phi_A(\alpha)\phi_B(\beta)$가 bilinear이므로, tensor product의 universal property로부터 $\alpha\otimes \beta\mapsto \phi_A(\alpha)\phi_B(\beta)$를 만족하는 abelian group homomorphism $A\otimes B \rightarrow C$가 존재하게 되는데, $C$가 commutative이므로 $\phi_B(\beta)$와 $\phi_A(\alpha')$가 서로 교환하여 이 함수가 곱셈을 보존하고 또 $1\otimes 1$을 $1$로 보내므로, 이는 ring homomorphism이고 정확히 $\phi$가 된다. 
 
 ---
 

@@ -10,6 +10,7 @@ sidebar:
 
 date: 2026-04-21
 weight: 15
+drift_needed: true
 
 
 
@@ -25,7 +26,7 @@ $$H^k(M;R)\times H^{n-k}(M;R)\rightarrow R$$
 
 ## 사영공간에서의 세르 쌍대성
 
-우리는 우선 $X=\mathbb{P}^n$인 경우만 엄밀하게 살펴본다. 우리는 $\mathbb{P}^n$ 위에 정의된 line bundle은 모두 $\mathcal{O}(d)$의 꼴인 것을 알고 있으며, 특히 [§표준선다발, ⁋명제 7](/ko/math/algebraic_varieties/canonical_bundle#prop7)에서 이것이 $\mathcal{O}(-n-1)$임을 살펴보았다. 그럼 [§사영공간의 코호몰로지, ⁋명제 1](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop1)에서 우리는 다음을 얻는다.
+우리는 우선 $X=\mathbb{P}^n$인 경우만 엄밀하게 살펴본다. 우리는 $\mathbb{P}^n$ 위에 정의된 line bundle은 모두 $\mathcal{O}(d)$의 꼴인 것을 알고 있으며, 특히 [§표준선다발, §§$\mathbb{P}^n$의 Canonical Bundle](/ko/math/algebraic_varieties/canonical_bundle#mathbbpn의-canonical-bundle)에서 이것이 $\mathcal{O}(-n-1)$임을 살펴보았다. 그럼 [§사영공간의 코호몰로지, ⁋명제 1](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop1)에서 우리는 다음을 얻는다.
 
 ::: 명제 1
 Projective space $X=\mathbb{P}^n$ 위의 canonical line bundle $\omega_X$에 대하여, isomorphism
@@ -45,13 +46,13 @@ $$(\alpha \smile \beta)_{i_0, \ldots, i_{i+j}} = \alpha_{i_0,\ldots,i_i}\big\ver
 
 $$\smile:\check{H}^i(\mathcal{U}, \mathcal{F}) \times \check{H}^j(\mathcal{U}, \mathcal{G}) \rightarrow \check{H}^{i+j}(\mathcal{U}, \mathcal{F} \otimes \mathcal{G})$$
 
-가 정의된다. Sheaf cohomology 레벨에서도 $\mathcal{F}$와 $\mathcal{G}$의 injective resolution $\mathcal{I}^\bullet$, $\mathcal{J}^\bullet$을 각각 잡은 후, 이들의 tensor product complex (즉 각각의 성분이 $\mathcal{I}^p\otimes \mathcal{J}^q$인 double complex의 total complex)가 $\mathcal{F}\otimes \mathcal{G}$의 resolution을 정의한다는 사실을 이용하면 이를 정의할 수 있다. 
+가 정의된다. Sheaf cohomology 레벨에서도 $\mathcal{F}$와 $\mathcal{G}$의 flat resolution $\mathcal{I}^\bullet$, $\mathcal{J}^\bullet$을 각각 잡은 후, 이들의 tensor product complex (즉 각각의 성분이 $\mathcal{I}^p\otimes \mathcal{J}^q$인 double complex의 total complex)를 이용하면 이를 정의할 수 있다. 
 
 어쨌든, cup product pairing에 의하여 우리는 임의의 locally free sheaf $\mathcal{E}$와 $\omega_{\mathbb{P}^n}\otimes \mathcal{E}^\vee$의 cocycle에 대하여 다음의 bilinear map
 
 $$H^k(\mathbb{P}^n, \mathcal{E})\times H^{n-k}(\mathbb{P}^n, \omega_{\mathbb{P}^n}\otimes \mathcal{E}^\vee)\rightarrow H^n(\mathbb{P}^n, \mathcal{E}\otimes \omega_{\mathbb{P}^n}\otimes \mathcal{E}^\vee)$$
 
-을 얻은 후, isomorphism $\mathcal{E}\otimes \mathcal{E}^\vee\rightarrow \mathcal{O}_{\mathbb{P}^n}$과 위에서의 trace map을 활용하여 bilinear form
+을 얻은 후, evaluation map $\mathcal{E}\otimes \mathcal{E}^\vee\rightarrow \mathcal{O}_{\mathbb{P}^n}$과 위에서의 trace map을 활용하여 bilinear form
 
 $$H^k(\mathbb{P}^n, \mathcal{E})\times H^{n-k}(\mathbb{P}^n, \omega_{\mathbb{P}^n}\otimes\mathcal{E}^\vee)\rightarrow \mathbb{K}$$
 
@@ -109,17 +110,17 @@ $$\binom{2+(-4)}{2}=\binom{-2}{2} = 3$$
 
 $$\mathcal{H}om(\mathcal{E}, \mathcal{F})\cong \mathcal{E}^\vee\otimes \mathcal{F}$$
 
-를 사용하였으나, 실제로 이는 $\mathcal{E}$가 locally free이기 때문에 가능한 것으로, 만일 $\mathcal{E}$가 coherent sheaf이고 $X$가 singular라면 $\mathcal{E}$가 finite length locally free resolution을 갖는다는 보장이 없으므로 이 isomorphism이 성립하지 않는다. 때문에 우리는 다시 derived functor를 도입하여, 다음의 식
+를 사용하였으나, 실제로 이는 $\mathcal{E}$가 locally free이기 때문에 가능한 것으로, 만일 $\mathcal{E}$가 coherent sheaf이고 $X$가 singular라면 $\mathcal{E}$가 finite length locally free resolution을 갖는다는 보장이 없으므로 이 isomorphism이 성립하지 않는다. 때문에 우리는 다시 derived functor를 도입하여, $X$ 위의 모든 coherent sheaf $\mathcal{F}$와 모든 $i$에 대하여 다음의 식
 
-$$\Ext^i_X(\mathcal{F},\omega_X)\cong H^{n-i}(X,\mathcal{F})^\vee$$
+$$\Ext^i_X(\mathcal{F},\omega_X)\cong H^{n-i}(X,\mathcal{F})^\ast$$
 
 을 만족하는 $\omega_X$를 $X$의 *dualizing sheaf*라 부른다. 일반적으로 이는 Cohen-Macaulay variety of pure dimension $n$에 대하여는 그 존재성이 보장되며, 정의를 내리지는 않을 것이지만 Cohen-Macaulay condition은 직관적으로 차원 문제를 일으키지 않는 singular variety들을 포함하는 개념이라 생각하면 된다.
 
 조금 덜 직관적인 버전의 일반화는 relative Serre duality이다. 우리는 그 동안 variety의 underlying field $\mathbb{K}$에 대해 신경을 쓰지 않은 것이 사실이지만, 이 맥락에서는 그 역할을 명확하게 하는 것이 도움이 된다. 
 
-Affine variety $X$가 $\mathbb{K}$ 위에서 정의되었다는 것은 그 coordinate ring $A$가 $\mathbb{K}$-algebra라는 것으로, 이 구조를 담는 ring homomorphism $\mathbb{K}\rightarrow A$가 존재한다. 이를 각각 $\mathbb{A}^1_\mathbb{K}$와 $X$의 coordinate ring 사이의 morphism으로 본다면, 이 structure morphism은 기하적으로는 $X\rightarrow \mathbb{A}^1_\mathbb{K}$로 주어지게 된다.
+Affine variety $X$가 $\mathbb{K}$ 위에서 정의되었다는 것은 그 coordinate ring $A$가 $\mathbb{K}$-algebra라는 것으로, 이 구조를 담는 ring homomorphism $\mathbb{K}\rightarrow A$가 존재한다. 이를 각각 한 점 $\Spec\mathbb{K}$와 $X$의 coordinate ring 사이의 morphism으로 본다면, 이 structure morphism은 기하적으로는 $X\rightarrow \Spec\mathbb{K}$, 곧 한 점으로 가는 사상으로 주어지게 된다.
 
-Relative Serre duality는 이 세팅을 일반화하는 것으로, target $\mathbb{A}^1_\mathbb{K}$를 또 다른 variety로 바꿔준다. 우선 임의의 variety $X,Y$에 대하여, morphism $f:X\rightarrow Y$가 *smooth projective morphism*이라는 것을 각각의 $y\in Y$ 위에서의 fiber $f^{-1}(y)$가 smooth projective variety가 되는 것으로 정의하자. 그럼 이 경우, $f^{-1}(y)$는 smooth projective variety로서 canonical line bundle $\omega_{X_y}$가 존재할 것이며, 이들을 일관적으로 모은 *relative dualizing sheaf* $\omega_{X/Y}$가 $X$ 위에 정의된다. 즉 $\omega_{X/Y}$는 각각의 $y$에 대하여 $\omega_{X/Y}\vert_{X_y}\cong\omega_{X_y}$을 만족하는 sheaf이다. 그럼 이 때의 일반화는 다음과 같다. 
+Relative Serre duality는 이 세팅을 일반화하는 것으로, target인 한 점 $\Spec\mathbb{K}$를 또 다른 variety로 바꿔준다. 우선 임의의 variety $X,Y$에 대하여, morphism $f:X\rightarrow Y$가 *smooth projective morphism*이라는 것을 $f$가 flat proper morphism이면서 각각의 $y\in Y$ 위에서의 fiber $f^{-1}(y)$가 smooth projective variety가 되는 것으로 정의하자. 그럼 이 경우, $f^{-1}(y)$는 smooth projective variety로서 canonical line bundle $\omega_{X_y}$가 존재할 것이며, 이들을 일관적으로 모은 *relative dualizing sheaf* $\omega_{X/Y}$가 $X$ 위에 정의된다. 즉 $\omega_{X/Y}$는 각각의 $y$에 대하여 $\omega_{X/Y}\vert_{X_y}\cong\omega_{X_y}$을 만족하는 sheaf이다. 그럼 이 때의 일반화는 다음과 같다. 
 
 ::: 명제 4 (Relative Serre duality)
 Smooth projective morphism $f \colon X \rightarrow Y$에서 $n = \dim X - \dim Y$라 하자. 그럼
@@ -150,11 +151,11 @@ $$\operatorname{Hom}_{D(X)}(\mathcal{F}, f^! \mathcal{G}) \cong \operatorname{Ho
 앞서 말했듯 Grothendieck duality는 relative Serre duality를 포함하는 결과이다. 이를 살펴보기 위해 smooth morphism $f:X\rightarrow Y$의 경우를 생각하면, $f^! \mathcal{O}_Y \cong \omega_{X/Y}[n]$이 성립하며, 이로부터 $\omega_{X/Y}$가 올바른 dimension에 들어있는 것이 정확히 $f^!\mathcal{O}_Y$임을 알 수 있다.
 
 ::: 명제 5 (Grothendieck Duality)
-Proper morphism $f \colon X \rightarrow Y$와 coherent sheaf $\mathcal{F}$ on $X$에 대해, derived category에서 다음 isomorphism이 성립한다:
+Proper morphism $f \colon X \rightarrow Y$와 coherent sheaf $\mathcal{F}$ on $X$에 대해, derived category에서 다음의 isomorphism
 
 $$R f_\ast R\mathcal{H}om_{\mathcal{O}_X}(\mathcal{F}, f^! \mathcal{G}) \cong R\mathcal{H}om_{\mathcal{O}_Y}(R f_\ast \mathcal{F}, \mathcal{G})$$
 
-여기서 $R\mathcal{H}om$은 derived Hom이며 ([\[호몰로지 대수학\] §유도카테고리, ⁋명제 10](/ko/math/homological_algebra/derived_categories#prop10)), $\mathcal{G}$는 $Y$ 위의 coherent sheaf의 bounded complex이다. 
+이 성립한다. 여기서 $R\mathcal{H}om$은 derived Hom이며 ([\[호몰로지 대수학\] §유도카테고리, ⁋명제 10](/ko/math/homological_algebra/derived_categories#prop10)), $\mathcal{G}$는 $Y$ 위의 coherent sheaf의 bounded complex이다. 
 :::
 
 직관적으로 이 정리는 'pushforward 후 Hom'과 'Hom 후 pushforward'가 같다는 것을 의미한다. 즉, $\mathcal{F}$와 $f^! \mathcal{G}$ 사이의 Hom을 $X$에서 계산한 후 $Y$로 내려보내는 것과, $\mathcal{F}$를 먼저 $Y$로 내려보낸 후 $\mathcal{G}$와의 Hom을 계산하는 것이 같다는 뜻이다. 

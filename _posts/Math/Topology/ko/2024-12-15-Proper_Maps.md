@@ -10,6 +10,7 @@ sidebar:
 
 date: 2024-12-15
 weight: 18
+drift_needed: true
 
 ---
 
@@ -28,7 +29,7 @@ $Z=\{\ast\}$로 두면 임의의 universally closed map은 closed map인 것을 
 
 1. $f$가 universally closed이다.
 2. $f$가 closed이다.
-3. $f$는 $X$와 $f(X)$ 사이의 homeomorphism이다.
+3. $f$는 $X$와 $f(X)$ 사이의 homeomorphism이고 $f(X)$는 $Y$의 닫힌집합이다.
 :::
 ::: 증명
 위의 논증에 의해 첫 번째 조건이 성립하면 두 번째 조건이 성립하는 것은 자명하다. 한편, $f$가 injective이므로 $f$의 canonical decomposition을 생각하면 $X$와 $f(X)$ 사이의 homeomorphism이 되는 것을 안다. ([§열린사상과 닫힌사상, ⁋명제 5](/ko/math/topology/open_mappings_and_closed_mappings#prop5)) 이제 세 번째 조건이 성립한다 가정하면, 임의의 $Z$에 대하여 $f\times\id_Z$가 $X\times Z$에서 $Y\times Z$의 닫힌집합 $f(X)\times Z$로의 homeomorphism이므로 원하는 결과를 얻는다.
@@ -45,13 +46,13 @@ $Z=\{\ast\}$로 두면 임의의 universally closed map은 closed map인 것을 
 ::: 증명
 우선 첫째 결과를 보이기 위해 임의의 위상공간 $Z$가 주어졌다 하자. 그럼 $Y$의 임의의 부분집합 $A$에 대하여
 
-$$(f\vert_{f^{-1}(A)})\times \id_Z=(f\times\id_Z)\vert_{f^{-1}(A\times Z)}$$
+$$(f\vert_{f^{-1}(A)})\times \id_Z=(f\times\id_Z)\vert_{(f\times\id_Z)^{-1}(A\times Z)}$$
 
-가 성립한다. 이제 $f$가 universally closed라는 가정으로부터 $f\times\id_Z$는 closed이고, 따라서 $(f\times\id_Z)\vert_{f^{-1}(A\times Z)}$ 또한 closed이다. 
+가 성립한다. 이제 $f$가 universally closed라는 가정으로부터 $f\times\id_Z$는 closed이고, 따라서 $(f\times\id_Z)\vert_{(f\times\id_Z)^{-1}(A\times Z)}$ 또한 closed이다. 
 
 이제 두 번째 결과를 보이자. 주어진 조건을 만족하는 $(A_i)$가 주어졌다 하면, $(A_i\times Z)$ 또한 동일한 조건을 만족한다. 이제 만일 $f\vert_{f^{-1}(A_i)}$들이 universally closed라면 다음의 함수들
 
-$$(f\times\id_Z)\vert_{f^{-1}(A_i\times Z)}$$
+$$(f\times\id_Z)\vert_{(f\times\id_Z)^{-1}(A_i\times Z)}$$
 
 이 closed이므로, $f\times\id_Z$ 또한 그러하다. ([§열린사상과 닫힌사상, ⁋명제 3](/ko/math/topology/open_mappings_and_closed_mappings#prop3))
 :::
@@ -104,7 +105,7 @@ $$\mathcal{F}'=\{F\cup\{\ast_X\}\mid F\in \mathcal{F}\}$$
 
 $$\Delta=\{(x,x)\mid x\in X\}$$
 
-으로 정의하자. 그럼 $\Delta$의 closure $\cl\Delta$를 생각할 수 있으며, 이 때 $f$가 universally closed라는 가정으로부터 $\cl\Delta$의 $f\times\id_{X'}:X\times X'\rightarrow \{\ast\}\times X'\cong X'$에 의한 image가 닫힌집합임을 안다. 이제 이 image는 $x$를 포함하므로, $\ast_X$가 closure에 포함된다는 가정으로부터 적당한 $x\in X$가 존재하여 $(x,\ast_X)\in \cl\Delta$임을 안다. 그럼 $x$가 $\mathcal{F}$의 cluster point이고, 따라서 $\mathcal{F}$를 포함하는 ultrafilter를 생각하면 $x$는 그 filter의 limit point임을 안다. 
+으로 정의하자. 그럼 $\Delta$의 closure $\cl\Delta$를 생각할 수 있으며, 이 때 $f$가 universally closed라는 가정으로부터 $\cl\Delta$의 $f\times\id_{X'}:X\times X'\rightarrow \{\ast\}\times X'\cong X'$에 의한 image가 닫힌집합임을 안다. 이제 이 image는 $X$를 포함하므로, $\ast_X$가 closure에 포함된다는 가정으로부터 적당한 $x\in X$가 존재하여 $(x,\ast_X)\in \cl\Delta$임을 안다. 그럼 $x$가 $\mathcal{F}$의 cluster point이고, 따라서 $\mathcal{F}$를 포함하는 ultrafilter를 생각하면 $x$는 그 filter의 limit point임을 안다. 
 :::
 
 위의 보조정리는 그 역 또한 성립한다. 더 일반적으로 다음이 성립한다.

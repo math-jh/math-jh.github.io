@@ -10,6 +10,7 @@ sidebar:
 
 date: 2025-05-06
 weight: 4
+drift_needed: true
 
 ---
 
@@ -23,7 +24,7 @@ weight: 4
 
 다항식들을 본격적으로 다루기 전에, 이들을 다루기 위한 도구들을 먼저 정의하자. 우선 $A$ 위에서 정의된 *다항식*들은 polynomial ring $P=A[\x_i]_{i\in I}$의 원소들을 의미한다. 이 때, $\mathbb{N}^{(I)}$를 $I$에서 $\mathbb{N}$으로 가는 finitely supported function들의 모임
 
-$$\mathbb{N}^{(I)}=\{\nu:I \rightarrow \mathbb{N}\mid\text{$f(i)=0$ for all but finitely many $i\in I$}\}$$
+$$\mathbb{N}^{(I)}=\{\nu:I \rightarrow \mathbb{N}\mid\text{$\nu(i)=0$ for all but finitely many $i\in I$}\}$$
 
 으로 정의하자. 그럼 임의의 $\nu\in \mathbb{N}^{(I)}$에 대하여, 
 
@@ -33,7 +34,7 @@ $$\x^\nu=\prod_{i\in I} \x_i^{\nu_i}$$
 
 $$a\x^\nu$$
 
-꼴의 원소들을 *단항식*이라 부른다. 그럼 임의의 다항식 $u$는 단항식들의 유한합
+꼴의 원소들을 *monomial<sub>단항식</sub>*이라 부른다. 그럼 임의의 다항식 $u$는 monomial들의 유한합
 
 $$u(\x)=\sum_{\nu\in \mathbb{N}^{(I)}} a_\nu \x^\nu,\qquad\text{$a_\nu=0$ for all but finitely many $\nu$}$$
 
@@ -50,7 +51,7 @@ $$P=\bigoplus_{n\in \mathbb{N}}\bigoplus_{\lvert\nu\rvert=n}(A[\x_i]_{i\in I})_\
 으로 생각할 수 있다. 이 때, 각각의 $n$에 대하여, $P_n$의 원소들을 degree $n$의  *homogeneous polynomial<sub>동차다항식</sub>*이라 부른다. 또, 임의의 다항식 $u\in P$에 대하여, 이 homogeneous decomposition에서 degree $n$에 해당하는 $u$의 성분을 $u_n$으로 적기도 한다. 
 
 ::: 정의 1
-Polynomial ring $P=A[\x]_{i\in I}$의 임의의 원소 
+Polynomial ring $P=A[\x_i]_{i\in I}$의 임의의 원소 
 
 $$u(\x)=\sum_{\nu\in \mathbb{N}^{(I)}} a_\nu \x^\nu,\qquad\text{$a_\nu=0$ for all but finitely many $\nu$}$$
 
@@ -74,7 +75,7 @@ $$u(\x)=\sum_{\nu\in \mathbb{N}^{(I)}} a_\nu \x^\nu,\qquad\text{$a_\nu=0$ for al
 
 $$u(\x)=\sum_{i=0}^n a_i\x^i\qquad\text{($a_n\neq 0$)}$$
 
-의 꼴로 적을 수 있으며, 이 때 $a_n\x^n$을 다항식 $p$의 *leading term*, 그 계수 $a_n$을 다항식 $p$의 *leading coefficient*라 부른다. 만일 $p$의 leading coefficient가 $1$이라면 $p$를 *monic polynomial*이라 부른다. 
+의 꼴로 적을 수 있으며, 이 때 $a_n\x^n$을 다항식 $u$의 *leading term*, 그 계수 $a_n$을 다항식 $u$의 *leading coefficient*라 부른다. 만일 $u$의 leading coefficient가 $1$이라면 $u$를 *monic polynomial*이라 부른다. 
 
 이제 임의의 두 (일변수)다항식
 
@@ -139,14 +140,14 @@ $$b_nu(\x)=a_m\x^{m-n}v(\x)+u_1(\x)$$
 
 $$b_n^{k-1}u_1(\x)=q_1(\x)v(\x)+r(\x),\qquad \deg(r) < n$$
 
-이 성립하도록 할 수 있다. 이제 이를 다시 앞선 식에 대입하면
+이 성립하도록 할 수 있다. 여기서 귀납적 가정이 $u_1$에 대해 직접 주는 것은 $k_1=\sup(\deg(u_1)-n+1,0)$에 대한 식이지만, $\deg(u_1)\leq m-1$과 $n\leq m$으로부터 $k_1\leq k-1$이므로 양 변에 $b_n^{(k-1)-k_1}$을 곱하면 위의 식을 얻는다. 이제 이를 다시 앞선 식에 대입하면
 
 $$b_n^k u(\x)=(b_n^{k-1}a_m\x^{m-n}+q_1(\x))v(\x)+r(\x)$$
 
 을 얻는다. 
 :::
 
-여기서 등장하는 계수 $b_n^k$는 $v$에서 degree를 하나씩 올려가며 $u$와 최고차항을 맞춰줄 때 생기는 것으로, 가령 $b_n$이 invertible하다면 위의 식을 만족하는 $q$와 $r$은 유일하게 결정됨을 확인할 수 있다. 특히 만일 $A$의 임의의 nonzero element가 invertible이라면, 즉 $A=\mathbb{K}$라면 우리는 위와 같은 상황에서
+여기서 등장하는 계수 $b_n^k$는 $v$에 $\x$의 거듭제곱을 곱해 최고차항을 맞춰가며 나머지의 degree를 하나씩 낮춰갈 때 생기는 것으로, 가령 $b_n$이 invertible하다면 위의 식을 만족하는 $q$와 $r$은 유일하게 결정됨을 확인할 수 있다. 특히 만일 $A$의 임의의 nonzero element가 invertible이라면, 즉 $A=\mathbb{K}$라면 우리는 위와 같은 상황에서
 
 $$u=qv+r,\qquad \deg r < n$$
 
@@ -162,15 +163,15 @@ $$N: u\mapsto \deg(u)\qquad \text{단, $N(0)=0$}$$
 
 특히 Euclidean domain 위에서는 최대공약수의 개념이 잘 정의되며, 이와 관련하여 Bézout lemma 또한 성립한다. ([§정역, ⁋정리 7](/ko/math/ring_theory/integral_domains#thm7))
 
-앞서 $\mathbb{K}[\x]$에서 $\mathbb{K}$의 임의의 (non-zero) 원소들의 image가 $\mathbb{K}[\x]$의 unit인 것을 살펴보았다. ([보조정리 3](#lem3)) 한편 Euclidean domain에서 어떠한 원소가 다른 한 원소를 나누는지의 여부는 Euclidean algorithm을 돌려서 알아낼 수 있으므로, 상수가 아닌 임의의 $u\in \mathbb{K}[\x]$가 irreducible인 것은 $u$가 $\deg(v)<\deg(u)$를 만족하는 임의의 $v\in \mathbb{K}[\x]$에 의해 나누어떨어지지 않는 것과 동치이다. 
+앞서 $\mathbb{K}[\x]$에서 $\mathbb{K}$의 임의의 (non-zero) 원소들의 image가 $\mathbb{K}[\x]$의 unit인 것을 살펴보았다. ([보조정리 3](#lem3)) 한편 Euclidean domain에서 어떠한 원소가 다른 한 원소를 나누는지의 여부는 Euclidean algorithm을 돌려서 알아낼 수 있으므로, 상수가 아닌 임의의 $u\in \mathbb{K}[\x]$가 irreducible인 것은 $u$가 $1\leq \deg(v)<\deg(u)$를 만족하는 임의의 $v\in \mathbb{K}[\x]$에 의해 나누어떨어지지 않는 것과 동치이다. 
 
-한편 $\mathbb{K}[\x]$는 UFD이며, 따라서 $\mathbb{K}[\x]$의 irreducible element 등을 정의할 수 있다. 한편 $\mathbb{K}[\x]$의 unit은 정확히 $\mathbb{K}$의 unit과 동일하므로, 임의의 irreducible polynomial $u$는 (정의에 의해) $\deg(u)\geq 1$을 만족하며, $u$가 irreducible이므로 만일 $v\mid u$라면 $v$는 상수 다항식이거나 $u$의 상수배이다. 특히, 임의의 두 irreducible polynomial은 서로의 상수배여야만 하므로, 서로 다른 두 *monic* irreducible polynomial은 서로소이다. 이와 같이 $A[\x]$의 임의의 다항식은, leading coefficient와 monic irreducible polynomial의 곱으로 유일하게 나타낼 수 있다. 
+한편 [명제 6](#prop6)과 [§정역, ⁋정리 19](/ko/math/ring_theory/integral_domains#thm19)에 의하여 $\mathbb{K}[\x]$는 UFD이며, 따라서 $\mathbb{K}[\x]$의 irreducible element 등을 정의할 수 있다. 한편 $\mathbb{K}[\x]$의 unit은 정확히 $\mathbb{K}$의 unit과 동일하므로, 임의의 irreducible polynomial $u$는 (정의에 의해) $\deg(u)\geq 1$을 만족하며, $u$가 irreducible이므로 만일 $v\mid u$라면 $v$는 상수 다항식이거나 $u$의 상수배이다. 특히, 상수가 아닌 공통인수를 갖는 두 irreducible polynomial은 서로의 상수배여야만 하므로, 서로 다른 두 *monic* irreducible polynomial은 서로소이다. 이와 같이 $\mathbb{K}[\x]$의 $0$이 아닌 임의의 다항식은, leading coefficient와 monic irreducible polynomial들의 곱으로 유일하게 나타낼 수 있다. 
 
 ::: 명제 7
 임의의 다항식 $u\in A[\x]$와 $a\in A$에 대하여, $u(\x)$를 $\x-a$로 나눈 나머지는 $u(a)$이다. 따라서, $u$가 해 $a$를 갖는 것과 $\x-a$가 $A[\x]$ 안에서 $u$의 약수인 것이 동치이다. 
 :::
 
-이에 대한 증명은 당연히 Euclidean algorithm을 돌리면 되며, 이는 사실 중학교 때부터 익숙한 결과이다. 또 다른 결과로, 만일 $u$가 해 $a$를 갖는다면 $u$는 반드시 다음의 꼴
+이에 대한 증명은 [명제 5](#prop5)를 monic polynomial $v(\x)=\x-a$에 적용하면 되며, 이는 사실 중학교 때부터 익숙한 결과이다. 또 다른 결과로, 만일 $u$가 해 $a$를 갖는다면 $u$는 반드시 다음의 꼴
 
 $$u(\x)=(\x-a)^p v(\x),\qquad v(a)\neq 0$$
 
@@ -199,7 +200,7 @@ $$u(\x)v(\x) = (\x-a)^{p+q}u_1(\x)v_1(\x)$$
 더 나아가 만일 $A$가 integral domain이라면 귀납적으로 다음을 보일 수 있다.
 
 ::: 명제 9
-Integral domain $A$를 고정하자. $A[\x]$의 nonzero element $u$가 해 $a_1,\ldots, a_r$을 가지며, 이들의 multiplicity가 각각 $p_1,\ldots, p_r$이라 하자. 그럼 
+Integral domain $A$를 고정하자. $A[\x]$의 nonzero element $u$가 서로 다른 해 $a_1,\ldots, a_r$을 가지며, 이들의 multiplicity가 각각 $p_1,\ldots, p_r$이라 하자. 그럼 
 
 $$u(\x)=(\x-a_1)^{p_1}\cdots(\x-a_r)^{p_r}v(\x),\qquad v(a_1),\ldots, v(a_r)\neq0$$
 
@@ -227,7 +228,7 @@ $$u=b_1 u_1 + \cdots + b_n u_n$$
 는 각각의 $i$에 대해 $u(a_i)=b_i$를 만족하는 유일한 $n$차 미만의 다항식이다. 
 :::
 ::: 증명
-유일성은 위의 논증에 의해 자명하고, 남는 것은 $u$에 각각의 $a_i$를 대입하여 그 값이 $b_i$가 나오는 것을 확인하는 것 뿐이다. 
+유일성은 위의 논증에 의해 자명하고, 남는 것은 $u$에 각각의 $a_i$를 대입하여 그 값이 $b_i$가 나오는 것을 확인하는 것 뿐이다. 만일 $j\neq i$라면 $u_j$의 분자에 인수 $\x-a_i$가 등장하므로 $u_j(a_i)=0$이고, $u_i(a_i)=1$이므로 $u(a_i)=b_i$를 얻는다. 
 :::
 
 한편, 중근을 찾아내는 방법 중 유용한 것은 주어진 다항식을 미분하는 것이다. 우리는 대수적으로 derivation이 무엇인지를 정의할 수 있으나 ([\[다중선형대수학\] §미분](/ko/math/multilinear_algebra/derivations)) 이 카테고리에서는 이러한 논의 없이 정의로서 $D: A[\x] \rightarrow A[\x]$를 다음의 식
@@ -267,7 +268,7 @@ $$Du=k(\x-a)^{k-1}v+(\x-a)^k Dv=(\x - a)^{k-1}(kv + (\x - a)Dv)$$
 ::: 명제 13
 Integral domain $A$와 집합 $I$가 주어졌다 하고, $(H_i)_{i\in I}$를 $I$로 index된 $A$의 무한한 부분집합들의 family라 하자. 또, $H=\prod_{i\in I} H_i\subseteq A^I$라 하자. 그럼 만일 $u$가 $A[\x_i]_{i\in I}$의 non-zero element이라 하면, $H$와 다음의 집합
 
-$$H_u=\{(\x_i)\in H\mid u(\x_i)\neq 0\}$$
+$$H_u=\{(x_i)\in H\mid u(x_i)\neq 0\}$$
 
 이 같은 cardinality를 갖는다. 
 :::
@@ -278,9 +279,9 @@ $$u=\sum_{k=0}^m v_k\x_n^k$$
 
 이도록 하는 $v_k\in B$들이 존재한다. 여기서 $v_m\neq 0$이다. 이제 귀납적 가정에 의하여, 집합
 
-$$H_{v_m}=\{(\x_i)\in H\mid v_m(\x_i)\neq 0\}$$
+$$H_{v_m}=\{(x_i)\in \prod_{i\in J} H_i\mid v_m(x_i)\neq 0\}$$
 
-은 $\prod_{i\in J} H_i$와 같은 cardinality를 가진다. 이제 $\prod_{i\in J} H_i$의 임의의 원소 $(x_i)_{i\in J}$에 대하여, 
+은 $\prod_{i\in J} H_i$와 같은 cardinality를 가진다. 이제 $H_{v_m}$의 임의의 원소 $(x_i)_{i\in J}$에 대하여, 
 
 $$w(\x)=\sum_{k=0}^mv_k(x_1,\ldots, x_{n-1})\x_n^k$$
 
@@ -311,15 +312,15 @@ $(\Frac A)[\x]$의 다항식 $u$가 두 다항식의 곱
 
 $$u(\x)=\tilde{v}_1(\x)\tilde{v}_2(\x),\qquad \tilde{v}_i\in (\Frac A)[\x]$$
 
-으로 나타난다 하자. 그럼 $\tilde{v}_1$과 $\tilde{v}_2$의 계수들의 최소공배수들을 양변에 곱하여, 적절한 $a\in A$에 대하여
+으로 나타난다 하자. 그럼 $\tilde{v}_1$과 $\tilde{v}_2$의 계수들의 분모의 최소공배수들을 양변에 곱하여, 적절한 $a\in A$에 대하여
 
 $$a u(\x)=v_1(\x)v_2(\x)$$
 
 이도록 하는 $v_i\in A[\x]$들이 존재한다. 만일 $a$가 unit이라면 더 증명할 것이 없으므로, $a$가 unit이 아니라 가정하자. 그럼 $a=p_1\cdots p_r$이도록 하는 irreducible element $p_i\in A$들이 존재한다. 이 때, [§정역, ⁋명제 17](/ko/math/ring_theory/integral_domains#prop17)에 의하여 $(p_i)$는 $A$의 prime ideal이며, 따라서 
 
-$$(A/p_iA)[\x]\cong A[\x]/P_i$$
+$$(A/p_iA)[\x]\cong A[\x]/p_iA[\x]$$
 
-는 [명제 4](#prop4)에 의해 integral domain이다. 따라서 등식 $au=v_1v_2$를 $P_i$로 mod out 하고 나면, $v_1$ 혹은 $v_2$가 $(A/p_iA)[x]$에서 $0$이 되어야 하는 것을 안다. 즉, $v_1$ 혹은 $v_2$ 중 하나의 계수들은 모두 $p_i$의 배수이며, 따라서 이 $p_i$를 약분하여 $A[\x]$의 또 다른 polynomial을 얻을 수 있다. 이제 이를 모든 $p_i$에 대해 적용하면 원하는 결과를 얻는다.
+는 [명제 4](#prop4)에 의해 integral domain이다. 따라서 등식 $au=v_1v_2$를 $p_iA[\x]$로 mod out 하고 나면, $v_1$ 혹은 $v_2$가 $(A/p_iA)[\x]$에서 $0$이 되어야 하는 것을 안다. 즉, $v_1$ 혹은 $v_2$ 중 하나의 계수들은 모두 $p_i$의 배수이며, 따라서 이 $p_i$를 약분하여 $A[\x]$의 또 다른 polynomial을 얻을 수 있다. 이제 이를 모든 $p_i$에 대해 적용하면 원하는 결과를 얻는다.
 :::
 
 이로부터 다음을 얻는다. 
@@ -347,7 +348,7 @@ $A[\x]$가 UFD이면 $A$도 UFD임은 자명하므로, 반대방향만 보이면
 
 UFD $A$에 대하여, $A[\x]$의 $0$이 아닌 원소를 $u(\x)$라 하고, $u(\x)$의 계수들의 최대공약수를 $d$라 하면 $u(\x)=du_0(\x)$로 두어 계수들의 최대공약수가 $1$인 다항식 $u_0\in A[\x]$를 얻어낼 수 있으므로 우리는 일반성을 잃지 않고 $u$의 계수들의 최대공약수가 $1$이라 가정할 수 있다. 
 
-[명제 6](#prop6)에 의해 $u$는 $(\Frac A)[\x]$에서 유일한 방식으로 인수분해를 할 수 있으며, [명제 14](#prop14)를 이 인수분해에 적용하면 우리는 $u$를 $A[\x]$에서 인수분해할 수 있다. 한편, $u$의 계수들의 최대공약수는 $1$이므로, 이렇게 얻어진 $u$의 factor들의 계수들의 최대공약수 또한 $1$이고 따라서 [따름정리 15](#cor15)에 의해 이들은 $A[\x]$에서 irreducible이다. 이로부터 $u$의 $A[\x]$에서의 인수분해를 얻으며, 유일성은 이들 각각의 성분이 $(\Frac A)[\x]$에서 해당하는 인수들의 $\Frac A$-multiple이라는 사실을 이용하면 자명하다. 
+[명제 6](#prop6)과 [§정역, ⁋정리 19](/ko/math/ring_theory/integral_domains#thm19)에 의해 $u$는 $(\Frac A)[\x]$에서 유일한 방식으로 인수분해를 할 수 있으며, [명제 14](#prop14)를 이 인수분해에 적용하면 우리는 $u$를 $A[\x]$에서 인수분해할 수 있다. 한편, $u$의 계수들의 최대공약수는 $1$이므로, 이렇게 얻어진 $u$의 factor들의 계수들의 최대공약수 또한 $1$이고 따라서 [따름정리 15](#cor15)에 의해 이들은 $A[\x]$에서 irreducible이다. 이로부터 $u$의 $A[\x]$에서의 인수분해를 얻으며, 유일성은 이들 각각의 성분이 $(\Frac A)[\x]$에서 해당하는 인수들의 $\Frac A$-multiple이라는 사실을 이용하면 자명하다. 
 :::
 
 ## 유리식환
@@ -401,13 +402,13 @@ $$\deg(u/v)=\deg(u)-\deg(v)$$
 
 ## 멱급수환
 
-멱급수환은 polynomial ring의 또 다른 변형으로, 우리는 이제 단항식들의 무한합
+멱급수환은 polynomial ring의 또 다른 변형으로, monomial들의 무한합
 
 $$u(\x)=\sum_{\nu\in \mathbb{N}^{(I)}} a_\nu \x^\nu,\qquad\text{$a_\nu$ need not satisfy finiteness condition}$$
 
 들의 모임이다. 이를 $A[[\x_i]]_{i\in I}$으로 적고, *ring of formal power series*라 부른다. 
 
-Formal power series들은 단항식의 <em-ko>무한한</em-ko> 합이라는 사실만 제외하면 다항식과 유사한 개념들을 정의할 수 있다. 가령 우리는 formal power series $u$의 degree $p$ 성분 $u_p$를 정의할 수 있다. 그러나 $u$의 (total) degree의 경우, 다항식이 아닌 한 원소들의 degree는 $+\infty$일 것이기 때문에 굳이 $A[[\x_i]]_{i\in I}$에서 이를 사용할 이유가 없다. 대신 임의의 formal power series $u$에 대하여, $u$의 *order* $\omega(u)$를 $u_p\neq 0$이도록 하는 가장 <em-ko>작은</em-ko> $p$로 정한다. 마찬가지로 $\omega(0)=\infty$라 놓으면 다음의 식
+Formal power series들은 monomial의 <em-ko>무한한</em-ko> 합이라는 사실만 제외하면 다항식과 유사한 개념들을 정의할 수 있다. 가령 우리는 formal power series $u$의 degree $p$ 성분 $u_p$를 정의할 수 있다. 그러나 $u$의 (total) degree의 경우, 다항식이 아닌 한 원소들의 degree는 $+\infty$일 것이기 때문에 굳이 $A[[\x_i]]_{i\in I}$에서 이를 사용할 이유가 없다. 대신 임의의 formal power series $u$에 대하여, $u$의 *order* $\omega(u)$를 $u_p\neq 0$이도록 하는 가장 <em-ko>작은</em-ko> $p$로 정한다. 마찬가지로 $\omega(0)=\infty$라 놓으면 다음의 식
 
 $$\omega(u+v)\geq \inf(\omega(u),\omega(v)),\quad\text{equality if $\omega(u)\neq\omega(v)$}$$
 
@@ -417,23 +418,23 @@ $$\omega(uv)\geq \omega(u)+\omega(v)$$
 
 이 성립한다. 
 
-Degree에 대해서는 위의 부등식이 만일 $A$가 integral domain이었다면 성립했었다. 이와 같이 다음이 성립한다. 
+Degree에 대해서는 $A$가 integral domain일 때 둘째 식에 대응하는 등식이 성립했었다. ([명제 4](#prop4)) 이와 같이 다음이 성립한다. 
 
 ::: 명제 19
 Integral domain $A$에 대하여 다음이 성립한다. 
 
-1. $A[[x_i]]_{i\in I}$이 integral domain이다. 
-2. 두 nonzero element $u,v\in A[[x_i]]_{i\in I}$에 대하여, $\omega(uv)=\omega(u)+\omega(v)$가 성립한다. 
+1. $A[[\x_i]]_{i\in I}$이 integral domain이다. 
+2. 두 nonzero element $u,v\in A[[\x_i]]_{i\in I}$에 대하여, $\omega(uv)=\omega(u)+\omega(v)$가 성립한다. 
 :::
 
-단, 다소 주의할 것은 [명제 4](#prop4)와는 다르게 $A[[x_i]]_{i\in I}$의 unit은 $A$의 unit보다 크다는 것이다. 가령 다음의 식
+단, 다소 주의할 것은 [명제 4](#prop4)와는 다르게 $A[[\x_i]]_{i\in I}$의 unit은 $A$의 unit보다 크다는 것이다. 가령 다음의 식
 
 $$(1-\x)\left( \sum_{n=0}^\infty \x^n\right)=1$$
 
 을 생각하면 된다. 더 일반적으로 다음이 성립한다.
 
 ::: 명제 20
-임의의 $u\in A[[x_i]]_{i\in I}$에 대하여, $u$가 $A[[x_i]]_{i\in I}$에서 invertible인 것과 $u$의 상수항이 $A$에서 invertible인 것이 동치이다. 
+임의의 $u\in A[[\x_i]]_{i\in I}$에 대하여, $u$가 $A[[\x_i]]_{i\in I}$에서 invertible인 것과 $u$의 상수항이 $A$에서 invertible인 것이 동치이다. 
 :::
 
 ---

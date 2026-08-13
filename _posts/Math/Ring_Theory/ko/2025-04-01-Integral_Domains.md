@@ -10,6 +10,7 @@ sidebar:
 
 date: 2025-04-01
 weight: 2
+drift_needed: true
 
 ---
 
@@ -28,13 +29,13 @@ Integral domain $A$가 *Euclidean domain<sub>유클리드 정역</sub>*이라는
 
 $$a = qb + r \qquad\text{with $r = 0$ or $N(r) < N(b)$}$$
 
-를 만족하는 것이다. 여기서 $q$를 *몫<sub>quotient</sub>*, $r$을 *나머지<sub>remainder</sub>*라고 부른다.
+를 만족하는 것이다. 여기서 $q$를 *quotient<sub>몫</sub>*, $r$을 *나머지<sub>remainder</sub>*라고 부른다.
 :::
 
-이는 $A$를 정수 $\mathbb{Z}$로 대체하고, $N$을 절댓값 함수 $\lvert-\rvert:\mathbb{Z} \rightarrow \mathbb{Z}_{\geq 0}$으로 보면 우리가 잘 알고 있는 정수의 나눗셈 알고리즘, 즉 [\[정수론\] §나눗셈과 최대공약수, ⁋정리 3](/ko/math/number_theory/divisibility#thm3)과 동일하다. 또 다른 예로, polynomial ring $\mathbb{K}[\x]$ 위에 $N$을 다항식의 degree를 주는 함수로 정의하면 다항식의 나눗셈 알고리즘을 얻게 될 것이다. 마지막으로, 임의의 field $\mathbb{K}$는 Euclidean domain이며, 이는 모든 $x\in\mathbb{K}$를 $0$으로 보내는 함수 $N$에 의해 얻어진다. 이것이 위의 조건을 만족하는 이유는 field의 모든 (nonzero) 원소는 항상 다른 원소를 나누기 때문이다. 
+이는 $A$를 정수 $\mathbb{Z}$로 대체하고, $N$을 절댓값 함수 $\lvert-\rvert:\mathbb{Z} \rightarrow \mathbb{Z}_{\geq 0}$으로 보면 우리가 잘 알고 있는 정수의 나눗셈 알고리즘, 즉 [\[정수론\] §나눗셈과 최대공약수, ⁋정리 3](/ko/math/number_theory/divisibility#thm3)으로부터 얻어진다. 또 다른 예로, polynomial ring $\mathbb{K}[\x]$ 위에 $N$을 다항식의 degree를 주는 함수로 정의하면 (단, $N(0)=0$으로 둔다) 다항식의 나눗셈 알고리즘을 얻게 될 것이다. 마지막으로, 임의의 field $\mathbb{K}$는 Euclidean domain이며, 이는 모든 $x\in\mathbb{K}$를 $0$으로 보내는 함수 $N$에 의해 얻어진다. 이것이 위의 조건을 만족하는 이유는 field의 모든 (nonzero) 원소는 항상 다른 원소를 나누기 때문이다. 
 
 ::: 명제 3
-Euclidean Domain의 모든 ideal은 principal이다. 좀 더 정확히 말하면, Euclidean Domain $A$의 임의의 영이 아닌 ideal $\mathfrak{a}$에 대하여, $\mathfrak{a}$의 minimal norm을 갖는 원소를 $a$라 하면 $\mathfrak{a}=(a)$이다. 
+Euclidean Domain의 모든 ideal은 principal이다. 좀 더 정확히 말하면, Euclidean Domain $A$의 임의의 영이 아닌 ideal $\mathfrak{a}$에 대하여, $\mathfrak{a}$의 영이 아닌 원소들 중 minimal norm을 갖는 원소를 $a$라 하면 $\mathfrak{a}=(a)$이다. 
 :::
 ::: 증명
 $\mathfrak{a}$가 zero ideal이라면 증명할 것이 없으므로, $\mathfrak{a}\neq 0$이라 가정하자. 
@@ -62,9 +63,9 @@ Commutative ring $A$와 그 안의 원소 $a, b \in A$ ($b \neq 0$)에 대하여
 $a$와 $b$의 greatest common divisor는 $\gcd(a, b)$ 또는 간단히 $(a, b)$로 쓴다.
 :::
 
-정의에 의해, $b \mid a$가 $A$의 ring에서 성립함은 $(a) \subseteq (b)$와 동치이다. 특히, $d$가 $a$, $b$의 모든 공약수이면 $(d)$는 $(a, b)$를 포함해야 한다. 따라서 위의 두 조건은 ideal의 언어로 다음과 같이 번역할 수 있다:
+정의에 의해, $b \mid a$가 ring $A$에서 성립함은 $(a) \subseteq (b)$와 동치이다. 특히, $d$가 $a$, $b$의 임의의 공약수이면 $(d)$는 $(a, b)$를 포함해야 한다. 따라서 위의 두 조건은 ideal의 언어로 다음과 같이 번역할 수 있다:
 
-- $\mathfrak{a} \subseteq (d)$
+- $(a, b) \subseteq (d)$
 - $(d) \subseteq (d')$ for any principal ideal $(d')$ such that $a, b \in (d')$
 
 즉, $a$, $b$의 greatest common divisor는 (존재한다면) $a$, $b$를 포함하는 가장 작은 principal ideal을 생성하는 원소가 된다. 이것이 가능한 integral domain을 *GCD domain*이라 부르지만, 우리의 논의에서 이 정의가 별도로 등장할 일은 없다. 
@@ -101,7 +102,7 @@ $A$를 Euclidean domain이라 하자. $a, b \in A$가 $0$이 아닌 원소들이
 ::: 증명
 $r_n$이 $a$와 $b$를 나눈다는 것을 보이자. Euclidean algorithm의 마지막 단계는 다음의 식
     
-$$r_{n-1} = q_n r_n$$
+$$r_{n-1} = q_{n+1} r_n$$
 
 으로 주어졌을 것이며, 일반적으로는
 
@@ -145,7 +146,7 @@ Principal Ideal Domain $A$의 모든 $0$이 아닌 prime ideal은 maximal ideal�
 :::
 
 ::: 증명
-결론에 반하여 $A$의 nonzero prime ideal $\mathfrak{p} = (p)$에 대하여 $\mathfrak{p} \subsetneq \mathfrak{m} = (m)$인 ideal $\mathfrak{m}$이 있다고 하자. 그럼 우선 $p \in \mathfrak{m} = (m)$이므로, 적당한 $r\in A$에 대하여 $p = rm$이고, $\mathfrak{p}$가 prime ideal이라는 가정으로부터 $r\in \mathfrak{p}$이거나 $m\in\mathfrak{p}$이고, 가정 $\mathfrak{p} \subsetneq \mathfrak{m}$로부터 $m\not\in \mathfrak{p}$여야 한다. 그런데 만약 $r \in \mathfrak{p} = (p)$라면 적당한 $s\in A$에 대하여 $r = ps$이고, 따라서 $p = rm = psm$이므로 $1 = sm$이다. 즉, $m$은 unit이고 이는 $\mathfrak{m}$이 maximal ideal이라는 가정에 모순이다. (정의에 의해, $A$ 자기자신은 maximal ideal이 아니다.)
+결론에 반하여 $A$의 nonzero prime ideal $\mathfrak{p} = (p)$에 대하여 $\mathfrak{p} \subsetneq \mathfrak{m} = (m) \subsetneq A$인 ideal $\mathfrak{m}$이 있다고 하자. 그럼 우선 $p \in \mathfrak{m} = (m)$이므로, 적당한 $r\in A$에 대하여 $p = rm$이고, $\mathfrak{p}$가 prime ideal이라는 가정으로부터 $r\in \mathfrak{p}$이거나 $m\in\mathfrak{p}$이고, 가정 $\mathfrak{p} \subsetneq \mathfrak{m}$로부터 $m\not\in \mathfrak{p}$여야 한다. 그런데 만약 $r \in \mathfrak{p} = (p)$라면 적당한 $s\in A$에 대하여 $r = ps$이고, 따라서 $p = rm = psm$이므로 $1 = sm$이다. 즉, $m$은 unit이고 이는 $\mathfrak{m} \subsetneq A$라는 가정에 모순이다.
 :::
 
 ## 단일인수분해정역
@@ -160,7 +161,7 @@ $A$를 integral domain이라 하자.
 3. 두 원소 $a,b$에 대하여, 만일 $A$의 적당한 unit $u$가 존재하여 $a=ub$라면 이들이 *associate in $A$*이라 부른다. 
 :::
 
-가령 $\mathbb{Z}$를 보자. 우리는 $\mathbb{Z}$의 임의의 원소, 예를 들어 $10$이 주어졌을 때 이를 유일하게 $2\times 5$의 꼴로 인수분해할 수 있다고 주장하고 싶다. 그러나 $\mathbb{Z}$의 $1$이 아닌 unit, 즉 $-1$ 때문에 다음의 식
+가령 $\mathbb{Z}$를 보자. 우리는 $\mathbb{Z}$의 임의의 nonzero, non-unit 원소, 예를 들어 $10$이 주어졌을 때 이를 유일하게 $2\times 5$의 꼴로 인수분해할 수 있다고 주장하고 싶다. 그러나 $\mathbb{Z}$의 $1$이 아닌 unit, 즉 $-1$ 때문에 다음의 식
 
 $$10=2\times 5=(-2)\times (-5)=(-1)^2\times 2\times 5=\cdots$$
 
@@ -237,7 +238,7 @@ $$2=3x+(1+\sqrt{-5})y$$
 
 $$3x + (1+\sqrt{-5})y = (3a_1 + b_1 - 5b_2) + (3a_2 + b_1 + b_2)\sqrt{-5}$$
 
-이므로, 이것이 $2$가 되려면 다음의 두 연립방정식
+이므로, 이것이 $2$가 되려면 다음의 연립방정식
 
 $$\begin{cases}3a_1 + b_1 - 5b_2 = 2 \\3a_2 + b_1 + b_2 = 0\end{cases}$$
 
@@ -318,11 +319,11 @@ $$(r)=(r_0) \subsetneq (r_1) \subsetneq (r_2) \subsetneq \cdots$$
 
 이제 $\mathfrak{a}=\bigcup_{i=0}^\infty (r_i)$라 하자. 그럼 $\mathfrak{a}$가 ideal인 것은 자명하며, $A$가 PID라는 가정으로부터 $\mathfrak{a}=(a)$이도록 하는 $a\in A$가 존재한다. 그럼 어떠한 $n$에 대해서는 $a\in (r_n)$이어야 하고, 그럼 이 $n$ 이후부터는 $(r_n)$이 항상 $a$를 포함하므로 $(r_n)\subsetneq (r_{n+1})$에 모순이다. 
 
-유일성의 경우는 [명제 18](#prop18)과 비슷한 방법으로 
+유일성의 경우는 
 
 $$r = p_1 \cdots p_m = q_1 \cdots q_n$$
 
-와 같이 두 개의 표현이 주어졌다 가정하고, $p_1$부터 순서대로 associate관계에 있는 $q_j$들을 찾아가면 된다. 
+와 같이 두 개의 표현이 주어졌다 가정하고, [명제 14](#prop14)에 의해 각 $p_i$가 prime이므로 $p_1$부터 순서대로 associate관계에 있는 $q_j$들을 찾아가면 된다. 
 :::
 
 ---

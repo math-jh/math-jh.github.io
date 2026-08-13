@@ -10,6 +10,7 @@ sidebar:
 
 date: 2024-06-14
 weight: 7
+drift_needed: true
 
 ---
 
@@ -38,7 +39,7 @@ Monoidal category $(\mathcal{A},\otimes, I)$에서의 *monoid object<sub>모노�
 다음은 모두 monoid object들의 예시이다.
 
 - Cartesian monoidal category $\Set$에서 monoid object는 일반적인 의미에서의 monoid이다.
-- $\Top$에서의 monoidal object는 *topological monoid*이다.
+- $\Top$에서의 monoid object는 *topological monoid*이다.
 - 임의의 commutative ring $R$에 대하여, $(\lMod{R},\otimes_R, R)$의 monoid object는 associative unital $R$-algebra이다.
 - 임의의 commutative ring $R$에 대하여, $(\Ch(R),\otimes_R, R)$의 monoid object는 differential graded $R$-algebra이다. 여기서 unit $R$은 degree $0$에 $R$이 있고, 나머지 degree는 모두 $0$인 chain complex이다.
 :::
@@ -53,7 +54,7 @@ $$\lambda_M: R\otimes M \rightarrow M;\quad r\otimes m\mapsto rm$$
 
 으로 결정되는 isomorphism이고, 비슷하게 $\rho_M$은 $m\otimes r\mapsto rm$을 통해 유일하게 결정되는 $R$-linear map이다.
 
-$\lMod{R}$의 임의의 대상은 이미 덧셈구조가 존재한다. $\lMod{R}$에서의 monoid object $(M,\mu,\eta)$는 $M$이 가지고 있는 덧셈구조에 더하여 이 덧셈구조와 호환되는 곱셈구조가 생기는 것으로 이해할 수 있으며, 이러한 방식으로 $M$이 $R$-algebra가 된다. 이 때, 덧셈구조와 곱셈구조가 호환된다는 것, 즉 분배법칙과 같은 것들이 성립한다는 사실은 $M\otimes M \rightarrow M$의 임의의 원소와, $M\times M$에서 $M$으로의 $R$-bilinear map 사이의 일대일대응이 존재한다는 사실로부터 얻어진다. 
+$\lMod{R}$의 임의의 대상은 이미 덧셈구조가 존재한다. $\lMod{R}$에서의 monoid object $(M,\mu,\eta)$는 $M$이 가지고 있는 덧셈구조에 더하여 이 덧셈구조와 호환되는 곱셈구조가 생기는 것으로 이해할 수 있으며, 이러한 방식으로 $M$이 $R$-algebra가 된다. 이 때, 덧셈구조와 곱셈구조가 호환된다는 것, 즉 분배법칙과 같은 것들이 성립한다는 사실은 $M\otimes M \rightarrow M$의 임의의 $R$-linear map과, $M\times M$에서 $M$으로의 $R$-bilinear map 사이의 일대일대응이 존재한다는 사실로부터 얻어진다. 
 
 $M$에 곱셈구조를 주기 위해 마지막으로 남는 것은 이 곱셈에 대한 항등원인데, 이 정보는 $\eta:R \rightarrow M$로부터 정해줄 수 있다. $R$ 위에 정의된 left $R$-module 구조를 생각해보면, $\eta$가 담고 있는 정보는 정확히 $\eta(1)$과 동등하고, 이 원소 $\eta(1)\in M$이 새로 정의한 곱셈에 대한 항등원 역할을 한다. 
 
@@ -93,7 +94,7 @@ $$G\overset{\epsilon_G}{\longrightarrow}\{e\}\overset{\eta}{\longrightarrow}G$$
 ::: 정의 3
 Cartesian monoidal category $(\mathcal{A},\times, I)$에 대하여, 이 category에서의 *group object<sub>군 대상</sub>*은 다음과 같은 데이터
 - 대상 $G$,
-- *multiplication* $\mu:G\otimes G \rightarrow G$,
+- *multiplication* $\mu:G\times G \rightarrow G$,
 - *unit* $\eta:I \rightarrow G$,
 - *inverse* $\iota:G \rightarrow G$
 
@@ -127,18 +128,18 @@ Cartesian monoidal category $(\mathcal{A},\times, I)$에 대하여, 이 category
 
 ## Hopf monoid
 
-위의 [정의 3](#def3)을 만들 때 필요했던 것을 살펴보면, 우리가 필요한 것은 정확히 diagonal map $\Delta: G \rightarrow G\otimes G$와 augmentation map $G \rightarrow I$, 그리고 inverse map $I \rightarrow G$이다. 여기에서 필요한 것들을 잘 나눠보면 우선 다음을 정의할 수 있다.
+위의 [정의 3](#def3)을 만들 때 필요했던 것을 살펴보면, 우리가 필요한 것은 정확히 diagonal map $\Delta: G \rightarrow G\otimes G$와 augmentation map $G \rightarrow I$, 그리고 inverse map $\iota: G \rightarrow G$이다. 여기에서 필요한 것들을 잘 나눠보면 우선 다음을 정의할 수 있다.
 
 ::: 정의 5
 Monoidal category $(\mathcal{A},\otimes,I)$가 주어졌다 하자. $\mathcal{A}$의 대상 $M$이 *comonoid<sub>쌍대모노이드</sub>*라는 것은 $M$이 $\mathcal{A}^\op$에서 monoid object인 것이다.
 :::
 
-이를 풀어 써 보자면, comonoid가 담고 있는 정보는 *comultiplication<sub>쌍대곱</sub>* $\Delta: G \rightarrow G\otimes G$와 *counit<sub>쌍대단위원</sub>* $\epsilon:G \rightarrow I$으로 이루어지며, 이들은 [정의 1](#def1)의 두 조건의 dual 버전을 만족한다. 
+이를 풀어 써 보자면, comonoid가 담고 있는 정보는 *comultiplication<sub>쌍대곱</sub>* $\Delta: M \rightarrow M\otimes M$과 *counit<sub>쌍대단위원</sub>* $\epsilon:M \rightarrow I$으로 이루어지며, 이들은 [정의 1](#def1)의 두 조건의 dual 버전을 만족한다. 
 
 ::: 정의 6
 Symmetric monoidal category $(\mathcal{A},\otimes,I)$가 주어졌다 하자. 그럼 $(M,\mu,\eta,\Delta,\epsilon)$이 *bimonoid<sub>쌍모노이드</sub>*라는 것은 다음과 같은 뜻이다.
 
-- $(M,\mu,\eta)$이 monoid이다.
+- $(M,\mu,\eta)$이 monoid object이다.
 - $(M,\Delta,\epsilon)$이 comonoid이다.
 - Comultiplication과 counit이 모두 monoid morphism이다.
 :::

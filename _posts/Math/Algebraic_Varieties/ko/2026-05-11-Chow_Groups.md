@@ -10,6 +10,7 @@ sidebar:
 
 date: 2026-05-11
 weight: 19
+drift_needed: true
 ---
 
 앞서 우리는 [§곡면에서의 리만-로흐 정리, ⁋정의 1](/ko/math/algebraic_varieties/riemann_roch_surfaces#def1)에서 두 divisor의 intersection number를 정의했다. 이는 당연히 아주 흥미로운 개념으로, 이번 글에서 우리는 임의의 variety 위에서 이 개념을 일반화하기 위해 *Chow group*을 정의한다. 
@@ -39,14 +40,14 @@ $$\divisor(f) = \sum_{V \subseteq Y, \dim V = k} v_V(f) \cdot V$$
 직관적으로 이 정의는 [§인자, ⁋정의 3](/ko/math/algebraic_varieties/divisors#def3)을, $Y$를 ambient variety 삼아 반복한 것에 불과하며 따라서 해당 정의의 자연스러운 일반화이다. 다소 미묘한 부분은 해당 글의 도입에서 언급한 normality로, $X$가 좋은 (가령 normal) variety라 하더라도 $X$의 임의의 subvariety는 그러한 성질을 물려받지 않을 수 있으므로 이 경우에는 normalization이 조금 더 필수적으로 들어간다는 것이다. 이를 염두에 두고 다음을 정의한다. 
 
 ::: 정의 3
-두 $k$-cycle $Z_1, Z_2$가 *rationally equivalent<sub>유리 동치</sub>*라는 것은, $X$의 $(k+1)$-dimensional closed irreducible subvariety $Y_j$와 그 위의 rational function $f_j \in \mathbb{K}(Y_j)^\ast$들이 존재하여
+두 $k$-cycle $Z_1, Z_2$가 *rationally equivalent<sub>유리 동치</sub>*라는 것은, $X$의 $(k+1)$-dimensional closed irreducible subvariety $Y_j$와 그 위의 rational function $f_j \in \mathbb{K}(Y_j)^\times$들이 존재하여
 
 $$Z_1 - Z_2 = \sum_j \divisor(f_j)$$
 
 을 만족하는 것이다. 이를 $Z_1 \sim_{\text{rat}} Z_2$로 표기한다.
 :::
 
-즉, divisor class group을 정의할 때와 마찬가지로 우리는 principal divisor만큼의 차이만 나는 divisor를 같은 것으로 볼 것이다. 이 동치관계는 이전 [§인자, ⁋정의 9](/ko/math/algebraic_varieties/divisors#def9) 직후에 설명한 직관과 동일하게, homotopy의 개념을 algebraic geometry로 옮겨온 것으로 생각할 수 있다.
+즉, divisor class group을 정의할 때와 마찬가지로 우리는 principal cycle만큼의 차이만 나는 cycle을 같은 것으로 볼 것이다. 이 동치관계는 이전 [§인자, ⁋정의 9](/ko/math/algebraic_varieties/divisors#def9) 직후에 설명한 직관과 동일하게, homotopy의 개념을 algebraic geometry로 옮겨온 것으로 생각할 수 있다.
 
 그럼 다음 명제가 성립한다. 
 
@@ -70,7 +71,7 @@ Codimension $k$ Chow group은 $\CH^k(X) = \CH_{n-k}(X)$로 정의하고, 위에�
 
 대수위상에서 homology 및 cohomology는 임의의 연속함수에 대해 functoriality를 갖지만, Chow group은 그렇지 않다. Chow group은 **proper morphism**에 대해서만 pushforward functoriality를, **flat morphism**에 대해서만 pullback functoriality를 갖는다. 
 
-우선 두 variety 사이의 morphism $f: X \rightarrow Y$가 *proper morphism*이라는 것은 대략적으로 compact map의 대수기하적 analogue라 할 수 있다. ([\[스킴\] §값매김환, ⁋정의 9](/ko/math/scheme_theory/valuative_criteria#def9)) 다소 주의할 것은, compactness의 경우 algebraic geometry에서는 잘 작동하지 않으므로 이를 곧바로 옮겨올 수는 없다는 것이다. 직관은 compact map의 fiber와 image가 무한대로 새어나가지 않듯이 proper morphism 또한 그러하다는 것이며, 특히 중요한 것은 이 fiber를 묘사하는 데 유한 개의 좌표만 추가적으로 필요하다는 것이다. ([\[스킴\] §스킴 사상의 성질들, ⁋예시 16](/ko/math/scheme_theory/properties_of_scheme_morphisms#ex16)) 이 때 필요한 좌표의 개수는 function field의 extension degree $[\mathbb{K}(V):\mathbb{K}(f(V))]$으로 계산되며, 이는 $V$와 $f(V)$가 같은 차원일 때 정의된다. 편의상
+우선 두 variety 사이의 morphism $f: X \rightarrow Y$가 *proper morphism*이라는 것은 대략적으로 compact map의 대수기하적 analogue라 할 수 있다. ([\[스킴\] §값매김환, ⁋정의 9](/ko/math/scheme_theory/valuative_criteria#def9)) 다소 주의할 것은, compactness의 경우 algebraic geometry에서는 잘 작동하지 않으므로 이를 곧바로 옮겨올 수는 없다는 것이다. 직관은 compact map의 fiber와 image가 무한대로 새어나가지 않듯이 proper morphism 또한 그러하다는 것이며, 특히 중요한 것은 이 fiber를 묘사하는 데 유한 개의 좌표만 추가적으로 필요하다는 것이다. ([\[스킴\] §스킴 사상의 성질들, ⁋예시 16](/ko/math/scheme_theory/properties_of_scheme_morphisms#ex16)) 한편 subvariety $V\subseteq X$가 $\dim f(V)=\dim V$를 만족하면 $V$는 $f(V)$를 유한 겹으로 덮으며, 그 겹수가 function field의 extension degree $[\mathbb{K}(V):\mathbb{K}(f(V))]$이다. 편의상
 
 $$\deg(V/f(V))=\begin{cases}[\mathbb{K}(V):\mathbb{K}(f(V))]&\text{if $\dim f(V)=\dim V$,}\\ 0&\text{if $\dim f(V)<\dim V$}\end{cases}$$
 
@@ -119,7 +120,7 @@ $$\CH_k(\mathbb{A}^n)=\begin{cases}\mathbb{Z}&\text{if $k=n$}\\0&\text{otherwise
 
 $$\CH_k(\mathbb{P}^n)=\mathbb{Z}\qquad\text{for all $0\leq k\leq n$}$$
 
-이 성립한다. 이는 Euclidean space와 projective space의 homology와 일치하는 결과로, 우리가 정의한 Chow group이 실제로 기하적 직관을 잘 반영함을 보여준다. 
+이 성립한다. 이는 Euclidean space와 projective space의 Borel-Moore homology와 일치하는 결과로, 우리가 정의한 Chow group이 실제로 기하적 직관을 잘 반영함을 보여준다. ([명제 12](#prop12))
 :::
 
 일반적으로 $n$-dimensional variety $X$에 대하여 $\CH_n(X) \cong \mathbb{Z}$이며, 그 generator는 $X$ 자신의 class $[X]$이다. 이는 $X$의 $n$-dimensional closed irreducible subvariety가 [§차원, ⁋명제 9](/ko/math/algebraic_varieties/dimension#prop9)에 의해 $X$ 자신뿐이고, rational equivalence를 정의할 $(n+1)$-dimensional subvariety는 존재하지 않기 때문이다. [예시 9](#ex9)의 계산 가운데 $k = n$인 경우가 여기에 해당한다. 한편 $k < n$에 대하여 $\CH_k(\mathbb{P}^n)$의 generator는 $k$-dimensional linear subspace $\ell_k = \mathbb{P}^k \subseteq \mathbb{P}^n$의 class $[\ell_k]$이며, 임의의 $k$-dimensional closed irreducible subvariety $V \subseteq \mathbb{P}^n$는 적당한 양의 정수 $d$에 대하여 $[V] = d[\ell_k]$를 만족한다. 이 정수 $d$는 $V$와 일반적인 위치에 있는 $(n-k)$-dimensional linear subspace가 만나는 점의 개수로, 이를 $V$의 *degree*라 부른다.
@@ -136,7 +137,7 @@ $$f_\ast[\mathbb{P}^1] = d \cdot [\mathbb{P}^1] \in \CH_1(\mathbb{P}^1) \cong \m
 가 성립한다. 즉, $\mathbb{P}^1$가 $\mathbb{P}^1$ 위로 $d$겹으로 덮혀지며, pushforward는 이를 잡아내는 역할을 한다.
 :::
 
-그 정의에 의해 다음 명제는 거의 자명하다. 
+$X$의 $n$-dimensional closed irreducible subvariety는 $X$ 자신뿐이라 codimension 1 cycle의 rational equivalence가 곧 linear equivalence이고, 여기에 [§인자, ⁋명제 14](/ko/math/algebraic_varieties/divisors#prop14)와 [§선다발과 벡터다발, ⁋명제 19](/ko/math/algebraic_varieties/line_bundles#prop19)를 더하면 다음을 얻는다. 
 
 ::: 명제 11
 Smooth variety $X$에 대해

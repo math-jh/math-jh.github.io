@@ -10,6 +10,7 @@ sidebar:
 
 date: 2025-04-11
 weight: 3
+drift_needed: true
 
 
 ---
@@ -38,7 +39,7 @@ $$\mathfrak{a}\mathfrak{b}=\{x_1y_1+x_2y_2+\cdots+x_ny_n\mid x_i\in \mathfrak{a}
 
 $\mathfrak{a}\mathfrak{b}$이 $A$의 덧셈에 대한 subgroup임은 자명하다. 한편 $\mathfrak{a}\mathfrak{b}$의 임의의 원소 $x_1y_1+\cdots+x_ny_n$와, $A$의 임의의 원소 $x$에 대하여,
 
-$$x(x_1y_1+\cdots+x_ny_n)=xx_1y_1+\cdots xx_ny_n$$
+$$x(x_1y_1+\cdots+x_ny_n)=xx_1y_1+\cdots +xx_ny_n$$
 
 이고 $xx_i\in \mathfrak{a}$이므로 $x(x_1y_1+\cdots+x_ny_n)\in \mathfrak{a}\mathfrak{b}$이다. $x$를 오른쪽에 곱해도 비슷한 논증이 성립하므로, $\mathfrak{a}\mathfrak{b}$는 $A$의 two-sided ideal인 것을 확인할 수 있다.
 
@@ -58,11 +59,11 @@ $$\left(\sum_{i=1}^{n_1} x_i^{(1)}y_i^{(1)}\right)z_1+\cdots+\left(\sum_{i=1}^{n
 
 마지막으로 임의의 $b_1+c_1,\ldots, b_n+c_n\in \mathfrak{b}+\mathfrak{c}$에 대하여 
 
-$$a_1(b_1+c_1)+\cdots a_n(b_n+c_n)$$
+$$a_1(b_1+c_1)+\cdots +a_n(b_n+c_n)$$
 
 을 분배법칙을 사용하여 풀어주면 $\mathfrak{a}(\mathfrak{b}+\mathfrak{c})\subseteq \mathfrak{a}\mathfrak{b}+\mathfrak{a}\mathfrak{c}$를 쉽게 보일 수 있다. 거꾸로 임의의
 
-$$a_1b_1+\cdots a_nb_n + a_1'c_1+\cdots +a_m'c_m\in \mathfrak{a}\mathfrak{b}+\mathfrak{a}\mathfrak{c}$$
+$$a_1b_1+\cdots +a_nb_n + a_1'c_1+\cdots +a_m'c_m\in \mathfrak{a}\mathfrak{b}+\mathfrak{a}\mathfrak{c}$$
 
 에 대하여, $b_i$들과 $c_i$들이 모두 $\mathfrak{b}+\mathfrak{c}$의 원소이므로 위의 원소는 $\mathfrak{a}(\mathfrak{b}+\mathfrak{c})$의 원소이다. 비슷하게 오른쪽 분배법칙도 증명할 수 있다.
 :::
@@ -97,7 +98,7 @@ $$A=\mathfrak{a}+\mathfrak{b}_1\cdots \mathfrak{b}_n=\mathfrak{a}+(\mathfrak{b}_
 
 우선 $A=\mathfrak{a}+\mathfrak{b}_1=\mathfrak{a}+\mathfrak{b}_2$로부터, $1=a+b_1=a'+b_2$를 만족하는 $a,a'\in \mathfrak{a}, b_i\in \mathfrak{b}_i$를 택할 수 있다. 그럼
 
-$$1=a'+b_2=a'+1b_2=a'+(a+b_1)b_2=(a+a'b_2)+b_1b_2\in \mathfrak{a}+\mathfrak{b}_1 \mathfrak{b}_2$$
+$$1=a'+b_2=a'+1b_2=a'+(a+b_1)b_2=(a'+ab_2)+b_1b_2\in \mathfrak{a}+\mathfrak{b}_1 \mathfrak{b}_2$$
 
 이 성립한다. 
 :::
@@ -159,7 +160,7 @@ $$e_i=\prod_{j\ne i}v_{ij}$$
 
 $$v_{ij}=1-u_{ij}\equiv 1\pmod{\mathfrak{a}_i}$$
 
-이므로 $e_i\equiv 1\pmod{\mathfrak{a}_i}$이 성립한다. 이로부터 원하는 결과를 얻는다. 
+이므로 $e_i\equiv 1\pmod{\mathfrak{a}_i}$이 성립한다. 따라서 $x=\sum_i x_ie_i$로 두면 $j\neq i$마다 $x_je_j\in \mathfrak{a}_i$이므로 $x\equiv x_ie_i\equiv x_i\pmod{\mathfrak{a}_i}$이고, 이는 $\pi(x)$가 주어진 원소와 같음을 뜻한다. 
 :::
 
 따라서, first isomorphism theorem에 의하여 다음의 canonical isomorphism

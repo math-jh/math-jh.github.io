@@ -11,6 +11,8 @@ sidebar:
 date: 2024-06-12
 weight: 6
 
+drift_needed: true
+
 ---
 
 범주론 카테고리의 글은 기본적으로 [\[집합론\]](/ko/set_theory/) 카테고리의 글만 읽으면 이해할 수 있도록 되어있고, 이번 글에서 다루는 monoidal category 또한 그런 방식으로 글을 쓸 수도 있지만 특별히 이번 글의 첫 번째 부분은 이해를 돕기 위해 [\[대수적 구조\]](/ko/algebraic_structures) 카테고리의 글을 가져오게 되었다.
@@ -30,11 +32,11 @@ weight: 6
 
 {% diagram Math/Category_Theory/Monoidal_Categories-1.svg width="13.51em" alt="Associativity" %}
 
-이는 당연한 것이, 왼쪽 위에 있는 집합의 임의의 원소 $(a,b,c)$를 뽑아오면, $\urcorner$ 방향으로 진행할 경우에는 
+이는 당연한 것이, 왼쪽 위에 있는 집합의 임의의 원소 $(a,b,c)$를 뽑아오면, $\llcorner$ 방향으로 진행할 경우에는 
 
 $$\mu(\mu(a,b),c)=\mu(a\cdot b,c)=(a\cdot b)\cdot c$$
 
-를 얻고, 비슷하게 $\llcorner$ 방향으로 진행할 경우에는
+를 얻고, 비슷하게 $\urcorner$ 방향으로 진행할 경우에는
 
 $$\mu(a,\mu(b,c))=\mu(a,b\cdot c)=a\cdot(b\cdot c)$$
 
@@ -50,9 +52,9 @@ $$\mu(a,\mu(b,c))=\mu(a,b\cdot c)=a\cdot(b\cdot c)$$
 
 ## 모노이드 카테고리
 
-간단히 말해서, monoidal category란 대상들 사이의 monoid operation, 즉 associative하고 항등원을 가지는 연산이 주어지는 category이다. 얘컨대 우리가 맨 앞에서 monoid를 정의할 때 사용했던 $\times$는 $\Set$을 monoidal category로 만든다는 것을 곧 살펴볼 것이다. 
+간단히 말해서, monoidal category란 대상들 사이의 monoid operation, 즉 associative하고 항등원을 가지는 연산이 주어지는 category이다. 가령 우리가 맨 앞에서 monoid를 정의할 때 사용했던 $\times$는 $\Set$을 monoidal category로 만든다는 것을 곧 살펴볼 것이다. 
 
-정의를 하기에 앞서, monoid를 정의하는 두 diagram에서 $M\times(M\times M)$과 $(M\times M)\times M$은 서로 다른 집합이고, $M$, $I\times M$, $M\times I$도 서로 다른 집합이라는 것을 기억하자. 이들은 분명 서로 다른 집합들이며, 다만 이들 사이에 자연스러운 isomorphism들이 존재할 뿐이다. 
+정의를 하기에 앞서, monoid를 정의할 때 $M\times(M\times M)$과 $(M\times M)\times M$은 서로 다른 집합이고, $M$, $I\times M$, $M\times I$도 서로 다른 집합이라는 것을 기억하자. 이들은 분명 서로 다른 집합들이며, 다만 이들 사이에 자연스러운 isomorphism들이 존재할 뿐이다. 
 
 ::: 정의 1 (Monoidal category)
 *Monoidal category<sub>모노이드 범주</sub>*는 데이터 $(\mathcal{A},\otimes, I)$로 이루어진다. 여기서 $\mathcal{A}$는 category이고, $I\in\obj(\mathcal{A})$이며, $\otimes:\mathcal{A}\times \mathcal{A}\rightarrow \mathcal{A}$가 bifunctor이다. 이들은 다음 조건을 만족한다. 
@@ -74,7 +76,7 @@ $$\mu(a,\mu(b,c))=\mu(a,b\cdot c)=a\cdot(b\cdot c)$$
 - (Unitor)
   {% diagram Math/Category_Theory/Monoidal_Categories-4.svg width="21.81em" alt="unitor_diagram" %}
 
-만일 monoidal category $(\mathcal{A},\otimes,I)$에 추가적으로 $\otimes$의 symmetric 조건이 추가되면 이를 *symmetric monoidal category<sub>대칭 모노이드 범주</sub>*라 부른다. 이는 natural isomorphism (*symmetor<sub>대칭자</sub>*) $\gamma_{AB}:A\otimes B \rightarrow B\otimes A$과, 다음의 추가적인 coherence condition들
+만일 monoidal category $(\mathcal{A},\otimes,I)$에 추가적으로 $\otimes$의 symmetric 조건이 추가되면 이를 *symmetric monoidal category<sub>대칭 모노이드 범주</sub>*라 부른다. 이는 natural isomorphism (*symmetor<sub>대칭자</sub>*) $\gamma_{A,B}:A\otimes B \rightarrow B\otimes A$과, 다음의 추가적인 coherence condition들
 
 - (Associativity coherence)
   {% diagram Math/Category_Theory/Monoidal_Categories-5.svg width="26.70em" alt="associativity_coherence" %}
@@ -105,7 +107,7 @@ Associator와 unitor들의 coherence condition은 Mac Lane의 coherence theorem�
 [예시 2](#ex2)의 앞의 두 예시는 일반화가 가능하다. 우선 다음을 정의하자.
 
 ::: 정의 3
-Category $\mathcal{A}$의 대상들의 유한한 family가 항상 categorical product를 갖는다면, 이 category를 *cartesian category<sub>데카르트 범주</sub>*라 부른다. 
+Category $\mathcal{A}$의 대상들의 유한한 family가 항상 categorical product를 갖는다면 (여기서 유한한 family는 빈 family를 포함하며, 따라서 $\mathcal{A}$는 특히 terminal object를 갖는다), 이 category를 *cartesian category<sub>데카르트 범주</sub>*라 부른다. 
 :::
 
 그럼 앞선 예시에서, $\Set$과 $\Grp$은 cartesian category가 된다. 마찬가지로 $\Top$이나 $\Man^\infty$ 등도 모두 cartesian category이다.

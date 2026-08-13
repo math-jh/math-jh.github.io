@@ -10,6 +10,7 @@ sidebar:
 
 date: 2024-08-12
 weight: 204
+drift_needed: true
 
 ---
 
@@ -18,14 +19,14 @@ weight: 204
 ## 등급가군
 
 ::: 정의 1
-Commutative monoid $I$에 대해, $A=\bigoplus_{i\in I}A_i$가 $I$-graded ring이라 하고, $M$이 left $A$-module이라 하자. 그럼 $M$이 *$I$-graded left $A$-module<sub>$I$-등급 왼쪽가군</sub>*이라는 것은 임의의 $i,j\in I$에 대하여 
+Commutative monoid $I$에 대해, $A=\bigoplus_{i\in I}A_i$가 $I$-graded ring이라 하고, $M$이 left $A$-module이면서 동시에 $I$-graded abelian group $M=\bigoplus_{i\in I}M_i$라 하자. 그럼 $M$이 *$I$-graded left $A$-module<sub>$I$-등급 왼쪽가군</sub>*이라는 것은 임의의 $i,j\in I$에 대하여 
 
 $$A_iM_j\subseteq M_{i+j}$$
 
 이 성립하는 것이다. 
 :::
 
-비슷하게 $I$-graded right $A$-module 도한 정의한다. 특별히 $A$를 $A$ 자기 자신에 대한 left $A$-module로 본다면, [정의 1](#def1)에 의해 모든 graded ring은 자기 자신에 대한 graded (left) $A$-module이다. 만일 $I$의 덧셈에 대하여, 모든 원소가 cancellable이라면 [§등급환, ⁋명제 2](/ko/math/algebraic_structures/graded_rings#prop2)에 의하여 $A_0$은 ring이다. 그럼 위의 식으로부터 각각의 $M_j$들이 $A_0$-module이 되는 것이 자명하다. 
+비슷하게 $I$-graded right $A$-module도 또한 정의한다. 특별히 $A$를 $A$ 자기 자신에 대한 left $A$-module로 본다면, [정의 1](#def1)에 의해 모든 graded ring은 자기 자신에 대한 graded (left) $A$-module이다. 만일 $I$의 덧셈에 대하여, 모든 원소가 cancellable이라면 [§등급환, ⁋명제 2](/ko/math/algebraic_structures/graded_rings#prop2)에 의하여 $A_0$은 ring이다. 그럼 위의 식으로부터 각각의 $M_j$들이 $A_0$-module이 되는 것이 자명하다. 
 
 ::: 정의 2
 두 $I$-graded left $A$-module $M,M'$에 대하여, $A$-linear map $u:M \rightarrow M'$이 *graded homomorphism*이라는 것은 $u(M_i)\subseteq M_i'$이 항상 성립하는 것이다.
@@ -39,7 +40,7 @@ $$A_iM_j\subseteq M_{i+j}$$
 
 그럼 [정의 2](#def2)의 graded homomorphism들은 모두 graded homomorphism of degree $0$에 불과하다. 만일 $I$의 모든 원소들이 cancellable이라면, 우리는 *graded homomorphism of degree $-i$*를 다음 조건
 
-$$u(M_{i+j})\subseteq M_j',\qquad u(M_j)=0\text{ if $j-i\not\in I$}$$
+$$u(M_{i+j})\subseteq M_j',\qquad u(M_k)=0\text{ if $k-i\not\in I$}$$
 
 으로 정의할 수도 있다. 다만 이러한 방식으로 정의할 때 주의할 점은 bijective graded homomorphism of degree $i$는 $i\neq 0$일 경우, 일반적으로 $I$-graded left $A$-module들 사이의 isomorphism으로 생각하지 않는다는 것이다. 
 

@@ -10,12 +10,13 @@ sidebar:
 
 date: 2024-09-05
 weight: 7
+drift_needed: true
 
 ---
 
 ## 좌표표현
 
-이제 우리는 행렬과 linear map 사이의 관계를 살펴본다. 이는 [\[선형대수학\] §선형대수학의 기본정리, ⁋정리 5](/ko/math/linear_algebra/ftla#thm5)의 일반화라 생각할 수 있다. 편의를 위해 
+이제 우리는 행렬과 linear map 사이의 관계를 살펴본다. 이는 [\[선형대수학\] §선형대수학의 기본정리, ⁋정리 5](/ko/math/linear_algebra/ftla#thm5)의 일반화라 생각할 수 있다.
 
 Free $A$-module $M$이 주어졌다 하고, $M$의 basis $\mathcal{B}=(e_i)_{i\in I}$를 고정하자. 그럼 임의의 $x\in M$은 
 
@@ -49,7 +50,7 @@ Linear map $u:M \rightarrow N$의 행렬표현 $[u]_\mathcal{C}^\mathcal{B}$의 
 
 $$(f_j^\ast(u(e_i)))_{j\in J}=(\langle u(e_i), f_j^\ast\rangle)_{j\in J}$$
 
-으로 주어진다. 이제 이 열벡터의 $j$번째 성분은 앞선 식 (1)에 의하여, 정확히 $u(e_i)$를 basis $\mathcal{C}$에 대해 일차결합으로 나타났을 때 $f_j$의 계수와 같다. 
+으로 주어진다. 이제 이 열벡터의 $j$번째 성분은 앞선 식 (1)에 의하여, 정확히 $u(e_i)$를 basis $\mathcal{C}$에 대해 일차결합으로 나타냈을 때 $f_j$의 계수와 같다. 
 :::
 
 만일 또 다른 $A$-linear map $v:M \rightarrow N$이 주어졌다면
@@ -60,9 +61,9 @@ $$[u+v]_\mathcal{C}^\mathcal{B}=[u]_\mathcal{C}^\mathcal{B}+[v]_\mathcal{C}^\mat
 
 $$[\alpha u]_\mathcal{C}^\mathcal{B}=\alpha[u]_\mathcal{C}^\mathcal{B}$$
 
-로 주어지는 것을 알 수 있다. 요약하자면 $u\mapsto [u]_\mathcal{C}^\mathcal{B}$는 $\Hom_{\lMod{A}}(M,N)$에서 $\Mat_{J\times I}(A)$로의 $Z(A)$-module homomorphism이다. 이 $Z(A)$-linear map은 injective인데, 이는 $u=0$인 것과 모든 $i\in I$에 대하여 $u(e_i)=0$인 것이 서로 동치이기 때문이다. 한편, 만일 $J$가 유한집합이라면 $\Mat_{J\times I}(A)$의 임의의 원소 $(x_{ji})$에 대하여, $u\in\Hom_\lMod{A}$를 다음 식
+로 주어지는 것을 알 수 있다. 요약하자면 $u\mapsto [u]_\mathcal{C}^\mathcal{B}$는 $\Hom_{\lMod{A}}(M,N)$에서 $\Mat_{J\times I}(A)$로의 $Z(A)$-module homomorphism이다. 이 $Z(A)$-linear map은 injective인데, 이는 $u=0$인 것과 모든 $i\in I$에 대하여 $u(e_i)=0$인 것이 서로 동치이기 때문이다. 한편, 만일 $J$가 유한집합이라면 $\Mat_{J\times I}(A)$의 임의의 원소 $(x_{ji})$에 대하여, $u\in\Hom_\lMod{A}(M,N)$을 다음 식
 
-$$u(e_i)=\sum_{j\in J} \langle u(e_i),f_j^\ast\rangle f_j$$
+$$u(e_i)=\sum_{j\in J} x_{ji} f_j$$
 
 으로 정의하여 위의 $Z(A)$-linear map의 inverse를 만들 수 있으므로 이것이 $Z(A)$-isomorphism이 된다.
 
@@ -120,7 +121,7 @@ $$\left([u]_\mathcal{C}^\mathcal{B}\right)^t=\left[u^t\right]_{\mathcal{B}^\ast}
 ::: 증명
 [§쌍대공간, ⁋명제 8](/ko/math/multilinear_algebra/dual_spaces#prop8)에 의하여 $M$과 $M^{\ast\ast}$를 같은 것으로 취급할 수 있고, 이 때 $\mathcal{B}$는 $\mathcal{B}^\ast$의 dual basis $\mathcal{B}^{\ast\ast}$에 대응되게 된다. 이제
 
-$$\left(\left[u^t\right]_{\mathcal{B}^\ast}^{\mathcal{C}^\ast}\right)_{ji}=\langle u^t(f_j^\ast), e_i^{\ast\ast}\rangle=\langle e_i, u^t(f_j^\ast)\rangle=\langle u(e_i), f_j^\ast\rangle=\left([u]_\mathcal{C}^\mathcal{B}\right)_{ij}=\left(\left([u]_\mathcal{C}^\mathcal{B}\right)^t\right)_{ji} $$
+$$\left(\left[u^t\right]_{\mathcal{B}^\ast}^{\mathcal{C}^\ast}\right)_{ij}=\langle u^t(f_j^\ast), e_i^{\ast\ast}\rangle=\langle e_i, u^t(f_j^\ast)\rangle=\langle u(e_i), f_j^\ast\rangle=\left([u]_\mathcal{C}^\mathcal{B}\right)_{ji}=\left(\left([u]_\mathcal{C}^\mathcal{B}\right)^t\right)_{ij} $$
 
 이므로 원하는 결과를 얻는다.
 :::

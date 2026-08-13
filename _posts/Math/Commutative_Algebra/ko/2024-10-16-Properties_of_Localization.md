@@ -10,6 +10,7 @@ sidebar:
 
 date: 2024-10-16
 weight: 3
+drift_needed: true
 
 ---
 
@@ -17,7 +18,7 @@ weight: 3
 
 ## 국소화와 Hom, tensor
 
-우선 보조정리 하나를 증명하며 시작한다. $A$-module homomorphism $S^{-1}A\times_A M \rightarrow  S^{-1}M$을 $(r/u, x)\mapsto rx/u$으로 정의하면 이는 $A$-bilinear map이고, 따라서 $A$-linear map $S^{-1}A\otimes_A M \rightarrow S^{-1}M$을 유도한다. ([\[대수적 구조\] §가군의 직접곱과 직합, 텐서곱, ⁋정리 5](/ko/math/algebraic_structures/operations_of_modules#thm5)) 
+우선 보조정리 하나를 증명하며 시작한다. 함수 $S^{-1}A\times M \rightarrow  S^{-1}M$을 $(r/u, x)\mapsto rx/u$으로 정의하면 이는 $A$-bilinear map이고, 따라서 $A$-linear map $S^{-1}A\otimes_A M \rightarrow S^{-1}M$을 유도한다. ([\[대수적 구조\] §가군의 직접곱과 직합, 텐서곱, ⁋정리 5](/ko/math/algebraic_structures/operations_of_modules#thm5)) 
 
 ::: 보조정리 1
 위에서 정의한 $A$-linear map은 isomorphism이 된다.
@@ -61,7 +62,7 @@ $$\frac{x}{s}=\frac{tx}{ts}=\frac{0}{ts}=0$$
 
 ## 국소화에 의해 결정되는 성질들
 
-위의 [명제 2](#prop2)에 의하여, $u:M \rightarrow M'$이 injective (resp. surjective, bijective)라면 이로부터 유도되는 $S^{-1}M \rightarrow S^{-1}M'$ 또한 그러하다는 것을 안다. [명제 4](#prop4)는 이에 대한 일종의 (강력한) 역이라고 생각할 수 있다. 이를 위해 우선 다음 보조정리를 보인다.
+위의 [명제 2](#prop2)와 tensor product의 right exactness에 의하여, $u:M \rightarrow M'$이 injective (resp. surjective, bijective)라면 이로부터 유도되는 $S^{-1}M \rightarrow S^{-1}M'$ 또한 그러하다는 것을 안다. [명제 4](#prop4)는 이에 대한 일종의 (강력한) 역이라고 생각할 수 있다. 이를 위해 우선 다음 보조정리를 보인다.
 
 ::: 보조정리 3
 $A$-module $M$과, $A$의 maximal ideal $\mathfrak{m}$에서의 localization $\epsilon_\mathfrak{m}:M \rightarrow M_\mathfrak{m}$을 생각하자. 그럼 $M$의 원소 $x$가 $0$인 것은, <em-ko>모든</em-ko> $A$의 maximal ideal $\mathfrak{m}$에 대하여 위에서 정의한 $\epsilon_\mathfrak{m}$이 $\epsilon_\mathfrak{m}(x)=0$을 만족하는 것이 동치이다. 
@@ -90,7 +91,7 @@ $$\alpha: E\otimes_A\Hom_A(M,N) \rightarrow\Hom_E(E\otimes_A M, E\otimes_AN);\qq
 ::: 증명
 $\alpha$가 잘 정의된다는 것은 자명하다. 이제 $E$가 flat $A$-module이고 $M=A$라 하자. 그럼 주어진
 
-$$\alpha: E\otimes_A\Hom_A(A, N) \rightarrow\Hom_E(E\otimes_AM, E\otimes_AN)$$
+$$\alpha: E\otimes_A\Hom_A(A, N) \rightarrow\Hom_E(E\otimes_AA, E\otimes_AN)$$
 
 은 사실 다음의 commutative diagram
 
@@ -98,9 +99,9 @@ $$\alpha: E\otimes_A\Hom_A(A, N) \rightarrow\Hom_E(E\otimes_AM, E\otimes_AN)$$
 
 에 넣을 수 있으므로 주어진 명제가 성립한다. 여기서 수직 방향 함수는 각각 isomorphism 
 
-$$\Hom_A(A,N)\cong N,\qquad \Hom_E(E\otimes_AM,E\otimes_AN)\cong\Hom_E(E,E\otimes_AN)\cong E\otimes_AN$$
+$$\Hom_A(A,N)\cong N,\qquad \Hom_E(E\otimes_AA,E\otimes_AN)\cong\Hom_E(E,E\otimes_AN)\cong E\otimes_AN$$
 
-에서 온 것들이다. 그 후, $\Hom$과 $\otimes$는 유한한 direct sum과 commute하므로 이 명제는 flat $A$-module $E$와 임의의 finitely generated free $A$-module $M$에 대해서도 성립하며, 마지막으로 $M$이 finitely presented인 경우는 다음의 free presentation
+에서 온 것들이다. 그 후, $\Hom$과 $\otimes$는 유한한 direct sum과 commute하므로 이 명제는 flat $A$-module $E$와 임의의 finitely generated free $A$-module $M$에 대해서도 성립하며, 마지막으로 $M$이 finitely presented인 경우는 finitely generated free $A$-module $F,G$로 이루어진 다음의 free presentation
 
 $$F \rightarrow G \rightarrow M \rightarrow 0$$
 
@@ -145,7 +146,7 @@ $$0 \rightarrow M_\mathfrak{m} \rightarrow L_\mathfrak{m} \rightarrow N_\mathfra
 Ring $A$와 multiplicative subset $S$에 대하여, $\mathfrak{a}$가 $S$와 만나지 않는 ideal 중 maximal한 것이라 가정하자. 그럼 $\mathfrak{a}$는 prime ideal이다.
 :::
 ::: 증명
-$A$의 두 원소 $a_1,a_2$가 주어졌다 하고, $a_1,a_2\not\in \mathfrak{a}$라면 $a_1a_2\not\in \mathfrak{a}$임을 보이자. $\mathfrak{a}$의 maximality에 의하여, 두 ideal $\mathfrak{a}+(a_1)$과 $\mathfrak{a}+(a_2)$는 반드시 $S$와 만나야 하므로, 적당한 $b_1,b_2\in A$와 $x_1,x_2\in \mathfrak{a}$에 대하여 $a_ib_i+x_i\in S$가 성립해야 한다. 그런데 $S$는 곱셈에 대해 닫혀있으므로, 다음 원소
+우선 $1\in S$이므로 $\mathfrak{a}\cap S=\emptyset$으로부터 $1\not\in \mathfrak{a}$, 즉 $\mathfrak{a}\neq A$임을 안다. 이제 $A$의 두 원소 $a_1,a_2$가 주어졌다 하고, $a_1,a_2\not\in \mathfrak{a}$라면 $a_1a_2\not\in \mathfrak{a}$임을 보이자. $\mathfrak{a}$의 maximality에 의하여, 두 ideal $\mathfrak{a}+(a_1)$과 $\mathfrak{a}+(a_2)$는 반드시 $S$와 만나야 하므로, 적당한 $b_1,b_2\in A$와 $x_1,x_2\in \mathfrak{a}$에 대하여 $a_ib_i+x_i\in S$가 성립해야 한다. 그런데 $S$는 곱셈에 대해 닫혀있으므로, 다음 원소
 
 $$(a_1b_1+x_1)(a_2b_2+x_2)=a_1a_2b_1b_2+a_1b_1x_2+a_2b_2x_1+x_1x_2$$
 
@@ -166,7 +167,7 @@ $$\sqrt{\mathfrak{a}}=\bigcap_\text{\scriptsize$\mathfrak{p}$ prime containing $
 이 성립한다.
 :::
 ::: 증명
-한쪽 방향은 자명하며, 반대로 만일 $a\not\in \sqrt{\mathfrak{a}}$라면 $S=\{a^k\mid k\geq 1\}$로 두고 [§국소화, ⁋명제 8](/ko/math/commutative_algebra/localization#prop8)를 적용하면 된다.
+한쪽 방향은 자명하며, 반대로 만일 $a\not\in \sqrt{\mathfrak{a}}$라면 $S=\{a^k\mid k\geq 0\}$로 두고 [§국소화, ⁋명제 8](/ko/math/commutative_algebra/localization#prop8)를 적용하면 된다.
 :::
 
 ---

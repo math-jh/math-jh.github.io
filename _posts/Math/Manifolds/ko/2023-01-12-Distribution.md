@@ -10,6 +10,7 @@ sidebar:
 
 date: 2023-01-12
 weight: 14
+drift_needed: true
 
 ---
 
@@ -19,12 +20,12 @@ weight: 14
 
 $$\sigma'(t)=X(\sigma(t)),\qquad \sigma(0)=p\tag{1}$$
 
-을 만족하는 곡선 $\sigma:(-\epsilon,\epsilon)\rightarrow M$이 존재한다는 것을 보았다. 이렇게 정의된 곡선 $\sigma$의 $M$에서의 image $S$는 점 $p$를 포함하는 $M$의 submanifold로 볼 수 있다. 
+을 만족하는 곡선 $\sigma:(-\epsilon,\epsilon)\rightarrow M$이 존재한다는 것을 보았다. $X_p\neq 0$이라 하면, 이렇게 정의된 곡선 $\sigma$의 $M$에서의 image $S$는 점 $p$를 포함하는 $M$의 submanifold로 볼 수 있다. 
 
 한편, 위의 식 (1)은 $\sigma$의 image 뿐만 아니라, 이를 매개화하는 방법도 강제한다. 반면 submanifold $S$는 $\sigma$의 매개화와는 무관하게 결정되므로, 이는 벡터 $X_p$가 아니라 $T_pM$의 1차원 부분공간 $\span(X_p)$에 의해서만 결정된다.
 
 ::: 정의 1
-$m$차원 manifold $M$이 주어졌다 하고, $1\leq k\leq m$인 정수 $k$가 주어졌다 하자. 각각의 $p\in M$마다 $T_pM$의 $k$차원 부분공간 $\mathcal{D}$를 대응시키는 함수 $p\rightarrow\mathcal{D}(p)$를 *$k$차원 distribution*이라 부른다. 
+$m$차원 manifold $M$이 주어졌다 하고, $1\leq k\leq m$인 정수 $k$가 주어졌다 하자. 각각의 $p\in M$마다 $T_pM$의 $k$차원 부분공간 $\mathcal{D}(p)$를 대응시키는 함수 $p\mapsto\mathcal{D}(p)$를 *$k$차원 distribution*이라 부른다. 
 
 $k$차원 distribution $\mathcal{D}$가 $C^\infty$인 것은 각각의 $p\in M$마다 적당한 열린근방 $U$와, 이 위에서 정의된 $C^\infty$ 벡터장들 $X_1,\ldots, X_k$가 존재하여, 각각의 $x\in U$마다 다음의 식
 
@@ -33,7 +34,7 @@ $$\mathcal{D}(x)=\span\{(X_1)_x,\ldots, (X_k)_x\}$$
 이 성립하는 것이다.
 :::
 
-벡터장 $X$는 위에서 살펴본 것과 같이 다음의 식 $p\mapsto\span(X_p)\subseteq T_pM$을 통해 1차원 distribution을 정의한다. 그럼 submanifold $S$는 다음의 식
+어디에서도 영이 되지 않는 벡터장 $X$는 위에서 살펴본 것과 같이 다음의 식 $p\mapsto\span(X_p)\subseteq T_pM$을 통해 1차원 distribution을 정의한다. 그럼 submanifold $S$는 다음의 식
 
 $$T_xS=\mathcal{D}(x)\qquad\text{for all $x$}$$
 
@@ -54,14 +55,14 @@ $$T_xS=\mathcal{D}(x)\qquad\text{for all $x$}$$
 다음의 정리가 잘 알려져 있다. 
 
 ::: 정리 3 (Frobenius)
-Manifold $M$ 위에 정의된 $k$차원 distribution $\mathcal{D}$를 생각하자. 그럼 $\mathcal{D}$가 integrable인 것과, 임의의 $X,Y\in\mathcal{D}$에 대하여 $[X,Y]\in\mathcal{D}$가 성립하는 것이 동치이다. 
+Manifold $M$ 위에 정의된 $k$차원 $C^\infty$ distribution $\mathcal{D}$를 생각하자. 그럼 $\mathcal{D}$가 integrable인 것과, 임의의 $X,Y\in\mathcal{D}$에 대하여 $[X,Y]\in\mathcal{D}$가 성립하는 것이 동치이다. 
 
 뿐만 아니라, 임의의 $k$차원 involutive distribution에 대하여 다음이 성립한다. 
 
 1. 각각의 $p\in M$에 대하여, $p$를 포함하는 $\mathcal{D}$의 integral manifold가 존재한다. 
 2. 뿐만 아니라, $p$를 중심으로 하는 coordinate system $(U,\varphi)$를 잘 택하여, 다음 식들
     
-    $$x_i=\text{constant},\qquad i>k$$
+    $$x^i=\text{constant},\qquad i>k$$
 
    로 정의된 slice들이 $\mathcal{D}$의 integral manifold이도록 할 수 있다.
 3. 마지막으로, 만일 $\Phi:N\rightarrow M$이 connected integral manifold이고, $\Phi(N)\subseteq U$라면 $\Phi(N)$은 2번의 slice들 중 단 하나의 slice에만 포함된다.
@@ -108,15 +109,15 @@ $$X_p=\frac{\partial}{\partial y^1}\bigg\vert_p$$
 
 이도록 하자. 일반성을 잃지 않고, $V$가 충분히 작아서 적당한 $\epsilon>0$에 대하여 다음의 함수
 
-$$(-\epsilon,\epsilon)\times V\rightarrow M;\qquad(t,q)\mapsto X_t(q)$$
+$$(-\epsilon,\epsilon)\times V\rightarrow M;\qquad(t,q)\mapsto \phi^t(q)$$
 
-가 잘 정의된 $C^\infty$라고 가정할 수 있다. ([§벡터장, ⁋정리 6](/ko/math/manifolds/vector_fields#thm6)) 뿐만 아니라, $\epsilon>0$을 다음 포함관계
+가 잘 정의된 $C^\infty$라고 가정할 수 있다. ([§벡터장, ⁋정리 6](/ko/math/manifolds/vector_fields#thm6)) 뿐만 아니라, $\epsilon>0$과 $W$를 다음 포함관계
 
-$$(-\epsilon,\epsilon)\times W\subseteq V,\qquad \text{$W$ is an open neighborhood of the origin in $\mathbb{R}^{m-1}$}$$
+$$\phi^t(\tau^{-1}(\{0\}\times W))\subseteq V\quad(\lvert t\rvert<\epsilon),\qquad \text{$W$ is an open neighborhood of the origin in $\mathbb{R}^{m-1}$}$$
 
 가 성립할만큼 작게 잡으면 다음의 함수
 
-$$\sigma: (-\epsilon,\epsilon)\times W;\qquad (t,a^2,\ldots, a^d)\mapsto \phi^t(\tau^{-1}(0,a^2,\ldots, a^d))$$
+$$\sigma: (-\epsilon,\epsilon)\times W\rightarrow M;\qquad (t,a^2,\ldots, a^m)\mapsto \phi^t(\tau^{-1}(0,a^2,\ldots, a^m))$$
 
 가 잘 정의된다. 그런데
 
@@ -130,7 +131,7 @@ $$\dd{\sigma}\left(\frac{\partial}{\partial r^1}\bigg\vert_0\right)=\frac{\parti
 
 $$X_1\vert_V=\frac{\partial}{\partial y^1}$$
 
-이도록 하는, $p$를 중심으로 하는 coordinate system $(V,\tau),\tau=(y^1,\ldots, y^k)$을 찾을 수 있다. 
+이도록 하는, $p$를 중심으로 하는 coordinate system $(V,\tau),\tau=(y^1,\ldots, y^m)$을 찾을 수 있다. 
 
 이제 $k$개의 벡터장 $Y_1,\ldots, Y_k$를 다음의 식
 
@@ -138,7 +139,7 @@ $$Y_1=X_1,\qquad Y_i=X_i-(X_i(y^1))X_1\quad(i\geq 2)$$
 
 으로 정의하자. $X_i$들은 서로 independent하므로 $Y_i$들도 그러하다. 
 
-이제 $S$를 $y_1=0$에 의해 정의된 slice라 하자. 그럼 $Y_2,\ldots, Y_k$들을 $S$로 제한하여 벡터장들
+이제 $S$를 $y^1=0$에 의해 정의된 slice라 하자. 그럼 $Y_2,\ldots, Y_k$들을 $S$로 제한하여 벡터장들
 
 $$Z_i=Y_i\vert_S \qquad (i\geq 2)$$
 
@@ -154,19 +155,19 @@ Inclusion $\iota:S\rightarrow M$을 생각하자. 그럼 $Z_i$들은 $Y_i$와 $\
 
 $$Y_i(y^1)=X_i(y^1)-X_i(y^1)X_1(y^1)=X_i(y^1)-X_i(y^1)=0$$
 
-이 모든 $i$에 대하여 성립하고, 따라서 $[Y_i,Y_j]y^1=0$이다. 이로부터 $[Y_i,Y_j]$들은 실제로 $\span(Y_2,\ldots, Y_k)$에 속한다는 것을 안다. 
+이 모든 $i\geq 2$에 대하여 성립하고, 따라서 $[Y_i,Y_j]y^1=0$이다. 한편 $\mathcal{D}$가 involutive이므로 $[Y_i,Y_j]=\sum_{l=1}^kc_lY_l$로 적을 수 있고, 여기에 $y^1$을 적용하면 $Y_1(y^1)=1$로부터 $c_1=0$을 얻는다. 이로부터 $[Y_i,Y_j]$들은 실제로 $\span(Y_2,\ldots, Y_k)$에 속한다는 것을 안다. 
 
-이제 $S$ 위에 정의된 involutive distribution $\span(Z_2,\ldots, Z_k)$에 정리의 둘째 주장을 적용하면, $p\in S$를 중심으로 하는 coordinate system $(w^2,\ldots, w^d)$를 잘 택하여 식들
+이제 $S$ 위에 정의된 involutive distribution $\span(Z_2,\ldots, Z_k)$에 정리의 둘째 주장을 적용하면, $p\in S$를 중심으로 하는 coordinate system $(w^2,\ldots, w^m)$를 잘 택하여 식들
 
 $$w^i=\text{constant},\qquad i>k$$
 
 로 얻어지는 slice들이 $\span(Z_2,\ldots, Z_k)$의 integral submanifold가 되도록 할 수 있다. 
 
-첫 번째와 두 번째 주장의 증명을 마무리하기 위해, $k$개의 함수들
+첫 번째와 두 번째 주장의 증명을 마무리하기 위해, $m$개의 함수들
 
 $$x^1=y^1,\quad x^j=w^j\circ\pi$$
 
-를 정의하자. 여기에서 $\pi:V\rightarrow S$는 $y_1$ 성분을 없애주는 projection이다. 그럼 이제 $(x^i)$는 independent인 함수들이므로, 우리는 이들을 성분함수로 갖는 coordinate system $(U,\varphi)$가 존재함을 안다. 그럼 이렇게 정의한 coordinate system은 둘째 주장을 만족한다. 즉, 다음의 식들
+를 정의하자. 여기에서 $\pi:V\rightarrow S$는 $y^1$ 성분을 없애주는 projection이다. 그럼 이제 $(x^i)$는 independent인 함수들이므로, 우리는 이들을 성분함수로 갖는 coordinate system $(U,\varphi)$가 존재함을 안다. 그럼 이렇게 정의한 coordinate system은 둘째 주장을 만족한다. 즉, 다음의 식들
 
 $$x^i=\text{constant},\qquad i>k$$
 
@@ -188,7 +189,7 @@ $$[Y_1,Y_i]=\sum_{l=1}^k c_{il}Y_l$$
 
 $$\frac{\partial}{\partial x^1}(Y_i(x^{k+j}))=\sum_{l=2}^k c_{il}Y_l(x^{k+j})$$
 
-임을 안다. 이제 고정된 slice $W$에 대하여, $Y_i(x^{k+j})$들은 $x^1$에 대한 일변수함수이고, 따라서 위의 식은 $k-1$개의 linear ODE가 되므로 그 해를 구할 수 있다. 
+임을 안다. 이제 고정된 slice $W$에 대하여, $Y_i(x^{k+j})$들은 $x^1$에 대한 일변수함수이고, 따라서 위의 식은 $k-1$개의 linear homogeneous ODE가 되므로, 그 해는 초기값에 의하여 유일하게 결정된다. 
 
 이렇게 얻어진 slice들은 $S\cap U$와 단 하나의 점에서만 만나고, 여기에서는
 

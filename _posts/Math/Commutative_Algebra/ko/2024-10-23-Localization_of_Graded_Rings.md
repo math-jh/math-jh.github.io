@@ -10,6 +10,7 @@ sidebar:
 
 date: 2024-10-23
 weight: 4
+drift_needed: true
 
 ---
 
@@ -46,15 +47,15 @@ Graded ring $A$와 $A$의 homogeneous ideal들 $\mathfrak{a},\mathfrak{b}$에 �
 
 1. $\sqrt{\mathfrak{a}}$는 homogeneous ideal이다. 
 2. $(\mathfrak{a}:\mathfrak{b})$는 homogeneous ideal이다. 
-3. 임의의 homogeneous element $a,b\in A$가 $ab\in \mathfrak{a}$를 만족할 때마다 $a\in \mathfrak{a}$ 혹은 $b\in \mathfrak{a}$가 성립한다 하자. 그럼 $\mathfrak{a}$는 prime ideal이다. 
+3. $\mathfrak{a}\neq A$이고, 임의의 homogeneous element $a,b\in A$가 $ab\in \mathfrak{a}$를 만족할 때마다 $a\in \mathfrak{a}$ 혹은 $b\in \mathfrak{a}$가 성립한다 하자. 그럼 $\mathfrak{a}$는 prime ideal이다. 
 :::
 ::: 증명
 1. 우선 $\sqrt{\mathfrak{a}}$가 homogeneous ideal인 것을 보이자. 즉 임의의 $x\in \sqrt{\mathfrak{a}}$에 대하여, $x$를 homogeneous element들의 합
     
     $$x=x_{d_1}+\cdots+x_{d_l},\quad d_1 < \cdots < d_l\tag{$\ast$}$$
     
-    으로 나타냈을 때, $x_i$들 각각이 $\sqrt{\mathfrak{a}}$에 속한다는 것을 보여야 한다. 우선 $x\in \sqrt{\mathfrak{a}}$인 것으로부터, 적당한 $k$가 존재하여 $x^k\in \mathfrak{a}$이다. 한편, 일반성을 잃지 않고 위의 표현 ($\ast$)에서 $x_l$이 가장 큰 degree를 갖는다고 하면, $x^k$를 homogeneous element들의 합으로 나타냈을 때, $x_l^k$가 degree $k\deg x_l$에 있는 유일한 원소이다. 이제 $x^k\in \mathfrak{a}$이고 $\mathfrak{a}$가 homogeneous ideal인 것으로부터 $x_l^k\in \mathfrak{a}$, 즉 $x_l\in \sqrt{\mathfrak{a}}$인 것을 안다. 이후에는 $x-x_l\in\sqrt{\mathfrak{a}}$이므로 같은 논증을 반복하면 된다.
-2. $x\in (\mathfrak{a}:\mathfrak{b})$라 하자. 위와 마찬가지로 $x$를 homogeneous element들의 합 ($\ast$)으로 나타냈을 때, $x_i$들 각각이 $(\mathfrak{a}:\mathfrak{b})$에 속함을 보여야 한다. 이제 $\mathfrak{b}$를 생성하는 임의의 homogeneous element $b$가 주어졌다 하자. 그럼 $x_ib$는 원소 $xb\in \mathfrak{a}$의 $\deg x_i+\deg b$에 해당하는 homogeneous element이며, $\mathfrak{a}$가 homogeneous ideal이므로 $x_ib\in \mathfrak{a}$이다. 
+    으로 나타냈을 때, $x_{d_i}$들 각각이 $\sqrt{\mathfrak{a}}$에 속한다는 것을 보여야 한다. 우선 $x\in \sqrt{\mathfrak{a}}$인 것으로부터, 적당한 $k$가 존재하여 $x^k\in \mathfrak{a}$이다. 한편, 일반성을 잃지 않고 위의 표현 ($\ast$)에서 $x_{d_l}$이 가장 큰 degree를 갖는다고 하면, $x^k$를 homogeneous element들의 합으로 나타냈을 때, $x_{d_l}^k$가 degree $k\deg x_{d_l}$에 있는 유일한 원소이다. 이제 $x^k\in \mathfrak{a}$이고 $\mathfrak{a}$가 homogeneous ideal인 것으로부터 $x_{d_l}^k\in \mathfrak{a}$, 즉 $x_{d_l}\in \sqrt{\mathfrak{a}}$인 것을 안다. 이후에는 $x-x_{d_l}\in\sqrt{\mathfrak{a}}$이므로 같은 논증을 반복하면 된다.
+2. $x\in (\mathfrak{a}:\mathfrak{b})$라 하자. 위와 마찬가지로 $x$를 homogeneous element들의 합 ($\ast$)으로 나타냈을 때, $x_{d_i}$들 각각이 $(\mathfrak{a}:\mathfrak{b})$에 속함을 보여야 한다. 이제 $\mathfrak{b}$를 생성하는 임의의 homogeneous element $b$가 주어졌다 하자. 그럼 $x_{d_i}b$는 원소 $xb\in \mathfrak{a}$의 $\deg x_{d_i}+\deg b$에 해당하는 homogeneous element이며, $\mathfrak{a}$가 homogeneous ideal이므로 $x_{d_i}b\in \mathfrak{a}$이다. $\mathfrak{b}$가 homogeneous element $b_j$들로 생성되므로, 임의의 $\sum_j a_jb_j\in \mathfrak{b}$에 대하여 $x_{d_i}\sum_j a_jb_j=\sum_j a_j(x_{d_i}b_j)\in \mathfrak{a}$이고, 따라서 $x_{d_i}\in (\mathfrak{a}:\mathfrak{b})$이다. 
 3. 마지막으로 주어진 조건을 가정한 후, 임의의 두 원소 $x,y\in A$를 homogeneous element들의 합
     
     $$x=x_{d_1}+\cdots+x_{d_m},\quad y=y_{e_1}+\cdots+y_{e_n},\qquad d_1<\cdots< d_m,\quad e_1<\cdots< e_n$$
@@ -74,7 +75,7 @@ Graded ring $A$와 $A$의 homogeneous ideal들 $\mathfrak{a},\mathfrak{b}$에 �
 $A$의 multiplicative subset $S$의 모든 원소가 homogeneous라 하자. 그럼 임의의 homogeneous element $x\in M_n$과 $s\in S$에 대하여, $x/s\in S^{-1}M$를 degree $n-\deg s$에 있는 것으로 정의하면 $S^{-1}M$는 $\mathbb{Z}$-graded $A$-module의 구조를 갖는다. 만일 $M=A$인 경우, 이 grading은 $S^{-1}A$ 위에 정의된 곱셈에 대하여도 잘 작동하여 $S^{-1}A$를 $\mathbb{Z}$-graded ring으로 만든다.
 :::
 
-우리는 inclusion $(S^{-1}A)_0 \rightarrow S^{-1}A$를 통해 $S^{-1}A$을 $(S^{-1}A)_0$-module로 생각할 수 있다. 그럼 $S^{-1}A$의 degree $0$ 부분 $(S^{-1}A)_0$은 곱셈에 대하여 닫혀있으므로 $(S^{-1}A)_0$은 $(S^{-1}A)_0$-algebra이다. 일반적으로 $S^{-1}M$은 곱셈이 정의되지는 않지만, 마찬가지로 $S^{-1}M$의 degree $0$ 부분 $(S^{-1}M)_0$을 생각하면 이는 $(S^{-1}A)_0$-module 구조를 갖는다.
+우리는 inclusion $(S^{-1}A)_0 \rightarrow S^{-1}A$를 통해 $S^{-1}A$을 $(S^{-1}A)_0$-module로 생각할 수 있다. 그럼 $S^{-1}A$의 degree $0$ 부분 $(S^{-1}A)_0$은 곱셈에 대하여 닫혀있으므로 $S^{-1}A$는 $(S^{-1}A)_0$-algebra이다. 일반적으로 $S^{-1}M$은 곱셈이 정의되지는 않지만, 마찬가지로 $S^{-1}M$의 degree $0$ 부분 $(S^{-1}M)_0$을 생각하면 이는 $(S^{-1}A)_0$-module 구조를 갖는다.
 
 특별히 중요한 예시 중 하나는 degree $1$의 homogeneous element $f\in A_1$에 대하여 $S=\{1,f,f^2,\cdots\}$인 경우인데, 이 경우는 $(S^{-1}A)_0$으로부터 $S^{-1}A$를 복원해낼 수 있다.
 
@@ -118,7 +119,7 @@ $$\begin{aligned}\sum_{i,j\geq 0} a_{i,j} T_1^iT_2^j&=\sum_{j\geq 0} a_{j,j}T_1^
 
 $$\left(\sum_{j\geq 1} a_{j,j}(T_1^jT_2^j-1)\right)+\sum_{d>0}\left(\sum_{j\geq 1}a_{j+d,j}T_1^d(T_1^jT_2^j-1)\right)+\sum_{d>0}\left(\sum_{j\geq 1}a_{j,j+d}T_2^d(T_1^jT_2^j-1)\right)$$
 
-이 된다. 이 때 각각의 $T_1^jT_2^j-1$는 $(T_1T_2-1)$에 포함되므로 위의 식의 kernel은 <em-ko>정확히</em-ko> $(S^{-1}A)_0[T_1,T_2]$의 ideal $(T_1T_2-1)$에 해당한다. 한편 이 homomorphism은 정의에 의해 surjective이므로 원하는 결과를 얻는다. 
+이 된다. 이 때 각각의 $T_1^jT_2^j-1$는 $(T_1T_2-1)$에 포함되므로 위의 식의 kernel은 <em-ko>정확히</em-ko> $(S^{-1}A)_0[T_1,T_2]$의 ideal $(T_1T_2-1)$에 해당한다. 한편 임의의 $a\in A_n$과 $k\geq 0$에 대하여 $a/f^k=(a/f^n)f^{n-k}$이고 $a/f^n\in (S^{-1}A)_0$이므로 이 homomorphism은 surjective이고, 따라서 원하는 결과를 얻는다. 
 :::
 
 ## 동차국소화
@@ -127,7 +128,7 @@ $$\left(\sum_{j\geq 1} a_{j,j}(T_1^jT_2^j-1)\right)+\sum_{d>0}\left(\sum_{j\geq 
 앞서 정의한 $(S^{-1}A)_0$와 $(S^{-1}M)_0$을 각각 $A$와 $M$의 *homogeneous localization<sub>동차국소화</sub>*이라 부르고, $A_{(S)}$와 $M_{(S)}$와 같이 표현한다.
 :::
 
-일반적인 localization과 마찬가지로, homogeneous element $f\in A$에 대하여, $S=\{1,f,f^2,\cdots\}$으로 얻어지는 $M$의 homogeneous localization을 $M_{(f)}$으로 적기로 하고, homogeneous prime ideal $\mathfrak{p}\subseteq A$에 대하여, $S=A\setminus \mathfrak{p}$으로 얻어지는 $M$의 homogeneous localization을 $M_{(\mathfrak{p})}$으로 적기로 한다. 
+일반적인 localization과 마찬가지로, homogeneous element $f\in A$에 대하여, $S=\{1,f,f^2,\cdots\}$으로 얻어지는 $M$의 homogeneous localization을 $M_{(f)}$으로 적기로 하고, homogeneous prime ideal $\mathfrak{p}\subseteq A$에 대하여, $\mathfrak{p}$에 속하지 않는 homogeneous element들로 이루어진 $S$로 얻어지는 $M$의 homogeneous localization을 $M_{(\mathfrak{p})}$으로 적기로 한다. 
 
 남은 글에서, 임의의 graded $A$-module $M$에 대하여 
 
@@ -136,7 +137,7 @@ $$M^{(d)}=\bigoplus_{k\geq 0} M_{kd}$$
 으로 적기로 한다. 그럼 다음은 [명제 4](#prop4)의 일반화이다.
 
 ::: 명제 6
-Degree $d$의 homogeneous element $f\in A$를 고정하자. 그럼 다음의 isomorphism
+$d\geq 1$에 대하여, degree $d$의 homogeneous element $f\in A$를 고정하자. 그럼 다음의 isomorphism
 
 $$M_{(f)}\cong M^{(d)}/(f-1)M^{(d)}$$
 
@@ -160,9 +161,9 @@ $S$가 degree $1$의 원소를 적어도 하나 포함하는 homogeneous multipl
 ::: 증명
 이는 본질적으로 [명제 4](#prop4)과 동일한 증명으로, $S$에 속하는 degree $1$의 원소 $f$를 택하여 [명제 4](#prop4)의 증명과 동일한 방식으로 homomorphism $(S^{-1}A)_0[T_1,T_2] \rightarrow S^{-1}A$을 정의하면 된다. 그럼 이 homomorphism의 kernel이 $(T_1T_2-1)$이 되는 것은 동일한 증명으로 보일 수 있으며, 이 homomorphism이 surjective인 것은 임의의 degree $d$짜리 $S^{-1}A$의 원소 $a/s$를 다음의 꼴
 
-$$\frac{a}{s}=\frac{af^d}{s}\frac{1}{f^d}$$
+$$\frac{a}{s}=\left(\frac{a}{s}f^{-d}\right)f^d$$
 
-으로 쓸 수 있다는 것을 이용하면 쉽게 보일 수 있다.
+으로 써서 첫 인자를 $(S^{-1}A)_0$의 원소로 둘 수 있다는 것을 이용하면 쉽게 보일 수 있다.
 :::
 
 특별히 homogeneous prime ideal $\mathfrak{p}$을 하나 고정하고, $A_1\not\subseteq \mathfrak{p}$라 가정하자. $S$를 $\mathfrak{p}$에 속하지 않는 homogeneous element들로 이루어진 multiplicative subset이라 하면, 적어도 하나의 nonzero $f\in A_1$이 존재하여 $f\in S$이므로, 위의 명제에 의해

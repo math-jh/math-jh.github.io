@@ -10,6 +10,7 @@ sidebar:
 
 date: 2025-03-08
 weight: 12
+drift_needed: true
 
 ---
 
@@ -47,7 +48,7 @@ $$\Spec A\times_{\Spec C}\Spec B\cong\Spec (A\otimes_C B)$$
 가 성립한다.
 :::
 ::: 증명
-$\AffSch\cong\cRing^\op$를 통해 $\Spec A \rightarrow \Spec C$, $\Spec B \rightarrow \Spec C$를 $C \rightarrow A$, $C \rightarrow B$로 바꿔놓고 [\[대수적 구조\] §대수의 직접곱, 직합, 텐서곱, ⁋정리 8](/ko/math/algebraic_structures/operations_of_algebras#thm8)의 universal property와 fiber product의 universal property를 비교하면 된다.
+$\AffSch\cong\cRing^\op$를 통해 $\Spec A \rightarrow \Spec C$, $\Spec B \rightarrow \Spec C$를 $C \rightarrow A$, $C \rightarrow B$로 바꿔놓고 [\[대수적 구조\] §대수의 직접곱, 직합, 텐서곱, ⁋정리 8](/ko/math/algebraic_structures/operations_of_algebras#thm8)의 universal property와 fiber product의 universal property를 비교하면 된다. 이 비교가 affine scheme뿐 아니라 임의의 scheme $T$를 test object로 삼아도 성립하는 것은, [§아핀스킴, ⁋정리 13](/ko/math/scheme_theory/affine_schemes#thm13)에 의하여 임의의 ring $R$에 대하여 $\Hom_\Sch(T, \Spec R)\cong \Hom_\cRing(R, \Gamma(T))$이기 때문이다.
 :::
 
 이제 일반적인 scheme에 대해 fiber product가 존재한다는 사실은 [보조정리 2](#lem2)에서 살펴본 affine scheme에서의 결과를 바탕으로, 이들을 잘 붙일 수 있다는 것을 보이면 된다. 
@@ -97,7 +98,7 @@ Affine scheme들 $X, Z$ 그리고 임의의 scheme $Y$에 대하여, $X\rightarr
 한편, [보조정리 4](#lem4)의 증명을 보면 $X\times_ZY_{ij}$는 각각 $X\times_ZY_i$와 $X\times_ZY_j$의 open subscheme인 것을 알 수 있다. 이들 데이터가 [§스킴, ⁋보조정리 9](/ko/math/scheme_theory/schemes#lem9)의 조건들을 만족하는 것을 쉽게 확인할 수 있으므로, 이들을 붙여 scheme $X\times_ZY$를 만들 수 있다. 이것이 fiber product의 universal property를 만족하는 것은 다음과 같이 확인한다. Scheme $W$와 morphism $\alpha: W \rightarrow X$, $\beta: W \rightarrow Y$가 $Z$ 위에서 일치한다 하고 $W_i=\beta^{-1}(Y_i)$라 두자. 그럼 $\beta$를 $W_i$로 제한한 것은 $W_i \rightarrow Y_i$를 정의하므로, $X\times_ZY_i$의 universal property로부터 유일한 morphism $\sigma_i: W_i \rightarrow X\times_ZY_i$를 얻는다. 이제 $W_i\cap W_j=\beta^{-1}(Y_{ij})$ 위에서 $\sigma_i$와 $\sigma_j$는 모두 $X\times_ZY_{ij}$의 universal property가 주는 유일한 morphism과 같으므로 서로 일치하며, 따라서 [§스킴 사이의 사상, ⁋명제 1](/ko/math/scheme_theory/morphism_of_schemes#prop1)에 의하여 이들은 유일한 morphism $\sigma: W \rightarrow X\times_ZY$로 붙는다. 여기에서 공역을 $Y_i$로 제한하는 것이 아니라 정의역을 $W_i$로 제한한다는 것에 주의해야 하는데, $\beta$의 image가 $Y_i$에 들어갈 이유가 없기 때문이다. 
 :::
 
-이 보조정리에서 $X$가 affine scheme이라는 가정은 오직 $X\times_ZY_i$가 존재한다는 것을 보이기 위해서만 사용되었다. 따라서, 임의의 두 scheme $X,Y$와 affine scheme $Z$, 그리고 scheme morphism $X \rightarrow Z$와 $Y \rightarrow Z$가 주어졌다 하면 우리는 $Y$의 affine open cover $\{Y_i\}$를 택한 후 [보조정리 5](#lem5)에서 두 인자의 역할을 바꾸어 적용할 수 있다. 즉 $Y_i$와 $Z$가 affine이므로 $Y_i\times_ZX$가 존재하고, fiber product는 두 인자의 순서에 대해 대칭이므로 $X\times_ZY_i$가 존재한다. 또 $Y_{ij}$는 $Y_i$의 open subscheme이므로 [보조정리 4](#lem4)에 의하여 $X\times_ZY_{ij}$가 존재하며 이는 $X\times_ZY_i$와 $X\times_ZY_j$의 open subscheme이다. 따라서 [보조정리 5](#lem5)의 증명에서의 접합 논증을 그대로 반복하면 다음을 얻는다.
+이 보조정리에서 $X$가 affine scheme이라는 가정은 오직 $X\times_ZY_i$가 존재한다는 것을 보이기 위해서만 사용되었다. 따라서, 임의의 두 scheme $X,Y$와 affine scheme $Z$, 그리고 scheme morphism $X \rightarrow Z$와 $Y \rightarrow Z$가 주어졌다 하면 우리는 $Y$의 affine open cover $\{Y_i\}$를 택한 후 [보조정리 5](#lem5)에서 두 인자의 역할을 바꾸어 적용할 수 있다. 즉 $Y_i$와 $Z$가 affine이므로 $Y_i\times_ZX$가 존재하고, fiber product는 두 인자의 순서에 대해 대칭이므로 $X\times_ZY_i$가 존재한다. 또 $Y_{ij}$는 $Y_i$의 open subscheme이므로 [보조정리 4](#lem4)의 증명과 같은 방식으로 $X\times_ZY_{ij}$가 존재하며 이는 $X\times_ZY_i$와 $X\times_ZY_j$의 open subscheme이다. 따라서 [보조정리 5](#lem5)의 증명에서의 접합 논증을 그대로 반복하면 다음을 얻는다.
 
 ::: 보조정리 6
 Affine scheme $Z$, 임의의 scheme $X,Y$와 scheme morphism $X \rightarrow Z$, $Y \rightarrow Z$에 대하여, fiber product $X\times_ZY$가 존재한다. 
@@ -114,7 +115,7 @@ $Z'$이 affine이므로 $X\times_{Z'}Y$는 존재한다. 이제 임의의 scheme
 한편 $\iota$에 대한 가정이 없으면 이는 성립하지 않는다. 가령 $k$-scheme의 structure morphism $\iota:Z \rightarrow \Spec k$를 택하고 $X=Y=Z=\mathbb{A}^1_k$에 identity morphism을 주면, $X\times_ZY=\mathbb{A}^1_k$이지만 $X\times_{\Spec k}Y=\mathbb{A}^2_k$이다.
 :::
 
-이제 위의 보조정리를 이용하여 우리는 임의의 $X,Y,Z$와 scheme morphism $\varphi_X:X \rightarrow Z$, $\varphi_Y: Y \rightarrow Z$에 대하여 $Z$를 affine open cover $\{Z_i\}$들로 덮으면 $\varphi_X\vert^{Z_i}:\varphi_X^{-1}(Z_i) \rightarrow Z_i$와 $\varphi_Y\vert^{Z_i}:\varphi_Y^{-1}(Z_i) \rightarrow Z_i$에 대해서는 fiber product $X_i\times_{Z_i}Y_i$가 존재하는 것을 안다. 이제 교집합 $Z_{ij}=Z_i\cap Z_j$은 $Z_i$의 열린집합이므로 [보조정리 7](#lem7)에 의하여 $\varphi_X\vert^{Z_{ij}}$와 $\varphi_Y\vert^{Z_{ij}}$의 fiber product들도 존재하며 이는 $X_i\times_{Z_i}Y_i$와 $X_j\times_{Z_j}Y_j$의 open subscheme이다. 따라서 [보조정리 5](#lem5)의 증명과 마찬가지로, 이들 데이터가 [§스킴, ⁋보조정리 9](/ko/math/scheme_theory/schemes#lem9)의 조건을 만족한다는 것을 보이면 다음 정리를 얻는다.
+이제 위의 보조정리를 이용하여 우리는 임의의 $X,Y,Z$와 scheme morphism $\varphi_X:X \rightarrow Z$, $\varphi_Y: Y \rightarrow Z$에 대하여 $Z$를 affine open cover $\{Z_i\}$들로 덮으면 $\varphi_X\vert^{Z_i}:\varphi_X^{-1}(Z_i) \rightarrow Z_i$와 $\varphi_Y\vert^{Z_i}:\varphi_Y^{-1}(Z_i) \rightarrow Z_i$에 대해서는, $X_i=\varphi_X^{-1}(Z_i)$와 $Y_i=\varphi_Y^{-1}(Z_i)$로 쓰면 fiber product $X_i\times_{Z_i}Y_i$가 존재하는 것을 안다. 이제 교집합 $Z_{ij}=Z_i\cap Z_j$은 $Z_i$의 열린집합이므로 [보조정리 7](#lem7)에 의하여 $\varphi_X\vert^{Z_{ij}}$와 $\varphi_Y\vert^{Z_{ij}}$의 fiber product들도 존재하며 이는 $X_i\times_{Z_i}Y_i$와 $X_j\times_{Z_j}Y_j$의 open subscheme이다. 따라서 [보조정리 5](#lem5)의 증명과 마찬가지로, 이들 데이터가 [§스킴, ⁋보조정리 9](/ko/math/scheme_theory/schemes#lem9)의 조건을 만족한다는 것을 보이면 다음 정리를 얻는다.
 
 ::: 정리 8
 임의의 scheme $X,Y,Z$와 scheme morphism $X \rightarrow Z$, $Y \rightarrow Z$에 대하여, fiber product $X\times_ZY$가 존재한다.
@@ -189,7 +190,7 @@ $$\mathbb{K}[\x,\y] \rightarrow \mathbb{K}[\x],\qquad \mathbb{K}[\x,\y] \rightar
 
 로 주어진다. 이제 $X\times_ZY$는, [보조정리 2](#lem2)에 의하여, 
 
-$$\Spec\left(\frac{\mathbb{K}[\x,\y]}{(\x)}\otimes_{\mathbb{K}[\x,\y]} \frac{\mathbb{K}[\x,\y]}{(\y)}\right)\cong \Spec \mathbb{K}[\x,\y]/(\x,\y)\cong\Spec \mathbb{K}$$
+$$\Spec\left(\frac{\mathbb{K}[\x,\y]}{(\y)}\otimes_{\mathbb{K}[\x,\y]} \frac{\mathbb{K}[\x,\y]}{(\x)}\right)\cong \Spec \mathbb{K}[\x,\y]/(\x,\y)\cong\Spec \mathbb{K}$$
 
 로 주어지는 것을 확인할 수 있으며 이는 정확히 $\x$축과 $\y$축의 교점인 원점에 해당한다.
 
@@ -206,7 +207,7 @@ $$\Spec\left(\frac{\mathbb{K}[\x,\y]}{(\y)}\otimes_{\mathbb{K}[\x,\y]}\frac{\mat
 
 이 관점에서 우리는 scheme morphism $\varphi:X \rightarrow Y$의 $y_0\in Y$에서의 fiber $\varphi^{-1}(y_0)$을 어떻게 정의해야 하는지도 알 수 있다. $y_0$ 하나만을 담는 scheme에서 $Y$로 가는 morphism을 만든 후, 이 morphism과 $\varphi$의 fiber product를 취하면 된다. 여기에서 한점집합 $\{y_0\}$을 $Y$의 부분공간으로 보아 embedding을 취할 수는 없다는 것에 주의해야 한다. $y_0$가 closed point가 아니면 $\{y_0\}$은 일반적으로 $Y$의 locally closed subset조차 아니기 때문이다. 가령 $\mathbb{A}^2$의 generic point가 그러하다. 
 
-이제 $\iota$를 만들기 위해 $y$에서의 residue field $\kappa(y)$를 생각하자. 그럼 $\Spec\kappa(y)$는 항상 한점집합이다. 뿐만 아니라, $y$를 포함하는 $Y$의 affine open subset $V=\Spec B$를 생각하고, $y$가 prime ideal $\mathfrak{q}_y$에 대응된다 하면 canonical morphism
+이제 $\Spec\kappa(y) \rightarrow Y$를 만들기 위해 $y$에서의 residue field $\kappa(y)$를 생각하자. 그럼 $\Spec\kappa(y)$는 항상 한점집합이다. 뿐만 아니라, $y$를 포함하는 $Y$의 affine open subset $V=\Spec B$를 생각하고, $y$가 prime ideal $\mathfrak{q}_y$에 대응된다 하면 canonical morphism
 
 $$B \rightarrow B_{\mathfrak{q}_y} \rightarrow B_{\mathfrak{q}_y}/\mathfrak{q}_y B_{\mathfrak{q}_y} =\kappa(\mathfrak{q}_y)=\kappa(y)$$
 
@@ -226,7 +227,7 @@ $$\varphi^{-1}(y)=X\times_Y\Spec \kappa(y)$$
 Scheme morphism $\varphi: X \rightarrow Y$와 $y\in Y$에 대하여, projection $X\times_Y\Spec\kappa(y) \rightarrow X$는 집합으로서의 preimage $\{x\in X\mid \varphi(x)=y\}$ 위로의 homeomorphism이다.
 :::
 ::: 증명
-[보조정리 4](#lem4)에 의하여 fiber product를 만드는 것은 $X$와 $Y$를 열린집합으로 제한하는 것과 호환되므로, $y\in V=\Spec B$인 affine open subset $V$를 택하고 $\varphi^{-1}(V)$를 affine open subset $\Spec A$들로 덮어 $X=\Spec A$, $Y=\Spec B$인 경우만 보이면 충분하다. 이 때 $y$에 대응되는 prime ideal을 $\mathfrak{q}$, $\phi: B \rightarrow A$를 $\varphi$에 대응되는 ring homomorphism이라 하자.
+[보조정리 4](#lem4)의 증명과 같은 방식으로 fiber product를 만드는 것은 $X$와 $Y$를 열린집합으로 제한하는 것과 호환되므로, $y\in V=\Spec B$인 affine open subset $V$를 택하고 $\varphi^{-1}(V)$를 affine open subset $\Spec A$들로 덮어 $X=\Spec A$, $Y=\Spec B$인 경우만 보이면 충분하다. 이 때 $y$에 대응되는 prime ideal을 $\mathfrak{q}$, $\phi: B \rightarrow A$를 $\varphi$에 대응되는 ring homomorphism이라 하자.
 
 [보조정리 2](#lem2)에 의하여 $X\times_Y\Spec \kappa(\mathfrak{q})=\Spec (A\otimes_B\kappa(\mathfrak{q}))$이다. 한편 $\kappa(\mathfrak{q})=B_\mathfrak{q}/\mathfrak{q}B_\mathfrak{q}$이므로, $S=\phi(B\setminus \mathfrak{q})$라 두면
 
@@ -236,7 +237,7 @@ $$A\otimes_B\kappa(\mathfrak{q})\cong (S^{-1}A)/\mathfrak{q}(S^{-1}A)$$
 :::
 
 ::: 예시 14
-Algebraically closed field $\mathbb{K}$에 대하여, ring homomorphism $\mathbb{K}[\x] \rightarrow \mathbb{K}[\y]$을 식 $\x \mapsto \y^2$으로 정의하고, 이로부터 얻어지는 scheme morphism $\varphi: \Spec \mathbb{K}[\y] \rightarrow \Spec \mathbb{K}[\x]$를 생각하자. 그럼 $\Spec\mathbb{K}[\x]$의 임의의 점 $(\x-a)$에서의 residue field는 
+$\operatorname{char}\mathbb{K}\neq 2$인 algebraically closed field $\mathbb{K}$에 대하여, ring homomorphism $\mathbb{K}[\x] \rightarrow \mathbb{K}[\y]$을 식 $\x \mapsto \y^2$으로 정의하고, 이로부터 얻어지는 scheme morphism $\varphi: \Spec \mathbb{K}[\y] \rightarrow \Spec \mathbb{K}[\x]$를 생각하자. 그럼 $\Spec\mathbb{K}[\x]$의 임의의 점 $(\x-a)$에서의 residue field는 
 
 $$\Frac(\mathbb{K}[\x]/(\x-a))=\mathbb{K}[\x]/(\x-a)$$
 
@@ -244,7 +245,7 @@ $$\Frac(\mathbb{K}[\x]/(\x-a))=\mathbb{K}[\x]/(\x-a)$$
 
 $$\varphi^{-1}((\x-a))=\Spec \mathbb{K}[\y]\times_{\Spec \mathbb{K}[\x]}\Spec \mathbb{K}[\x]/(\x-a)\cong \Spec(\mathbb{K}[\y]\otimes_{\mathbb{K}[\x]}\mathbb{K}[\x]/(\x-a))=\Spec \mathbb{K}[\y]/(\y^2-a)$$
 
-이며, 따라서 만일 $a=0$이라면 $\varphi^{-1}((\x))\cong\Spec \mathbb{K}[\y]/(\y^2)$이고, $a\neq 0$이라면 $\mathbb{K}$가 algebraically closed라는 가정으로부터 
+이며, 따라서 만일 $a=0$이라면 $\varphi^{-1}((\x))\cong\Spec \mathbb{K}[\y]/(\y^2)$이고, $a\neq 0$이라면 $\mathbb{K}$가 algebraically closed이고 $\operatorname{char}\mathbb{K}\neq 2$라는 가정으로부터 
 
 $$\Spec \mathbb{K}[\y]/(\y^2-a)\cong \Spec \mathbb{K}[\y]/(\y-\sqrt{a})\coprod \Spec \mathbb{K}[\y]/(\y+\sqrt{a})$$
 
@@ -261,7 +262,7 @@ $$\varphi^{-1}((0))=\Spec \mathbb{K}[\y]\times_{\Spec \mathbb{K}[\x]}\Spec \math
 Finite morphism $\varphi: X \rightarrow Y$는 quasi-finite morphism이다. 
 :::
 ::: 증명
-[보조정리 13](#lem13)에 의하여 집합 $\varphi^{-1}(y)$의 점들은 scheme $X\times_Y\Spec\kappa(y)$의 점들과 일대일로 대응하므로, 후자의 점의 개수를 세면 된다. 그럼 affine인 경우만 보이면 충분하다. 즉, 임의의 finite ring homomorphism $\phi: B \rightarrow A$와 $B$의 prime ideal $\mathfrak{q}$에 대하여 $A\otimes_B\kappa(\mathfrak{q})$가 유한히 많은 prime ideal을 갖는다는 것을 보이면 충분하다. 그런데 $\phi$가 finite이므로 $A\otimes_B\kappa(\mathfrak{q})$는 finite $\kappa(\mathfrak{q})$-algebra이고 따라서 Artinian이므로 이로부터 원하는 결과를 얻는다. ([\[가환대수학\] §조르단-횔더 정리, ⁋정리 4](/ko/math/commutative_algebra/Jordan-Holder_theorem#thm4))
+우선 [§스킴 사상의 성질들, ⁋명제 15](/ko/math/scheme_theory/properties_of_scheme_morphisms#prop15)에 의하여 finite morphism은 integral이면서 locally of finite type이고, integral morphism은 affine이므로 quasi-compact이어서 $\varphi$는 morphism of finite type이다. 따라서 fiber들이 유한집합임만 보이면 되는데, [보조정리 13](#lem13)에 의하여 집합 $\varphi^{-1}(y)$의 점들은 scheme $X\times_Y\Spec\kappa(y)$의 점들과 일대일로 대응하므로, 후자의 점의 개수를 세면 된다. 그럼 affine인 경우만 보이면 충분하다. 즉, 임의의 finite ring homomorphism $\phi: B \rightarrow A$와 $B$의 prime ideal $\mathfrak{q}$에 대하여 $A\otimes_B\kappa(\mathfrak{q})$가 유한히 많은 prime ideal을 갖는다는 것을 보이면 충분하다. 그런데 $\phi$가 finite이므로 $A\otimes_B\kappa(\mathfrak{q})$는 finite $\kappa(\mathfrak{q})$-algebra이고 따라서 Artinian이며, [\[가환대수학\] §조르단-횔더 정리, ⁋따름정리 6](/ko/math/commutative_algebra/Jordan-Holder_theorem#cor6)에 의하여 $0$이 유한히 많은 maximal ideal들의 곱이므로 임의의 prime ideal은 그 가운데 하나와 같아 원하는 결과를 얻는다.
 :::
 
 위의 예시와 명제들에서 우리는 중요한 관찰을 할 수 있는데, $X \rightarrow S$가 만족하는 성질이 임의의 $S' \rightarrow S$로의 base change $X\times_SS' \rightarrow S'$에도 이어지는 경우가 많다는 것이다. 물론 모든 성질이 그런 것은 아니다. 가령 dominant는 보존되지 않는데, $\Spec \mathbb{K}(\t) \rightarrow \Spec \mathbb{K}[\t]$는 generic point로의 dominant morphism이지만 $\t=0$을 따라 base change하면 공집합에서 한 점으로 가는 morphism이 된다. 그러나 우리가 관심을 가지는 대부분의 성질은 base change에 대해 닫혀있다. 
@@ -324,7 +325,7 @@ $$B\otimes_A\kappa(\mathfrak{p})\cong (B/\mathfrak{p}B)_\mathfrak{p}$$
 
 이제 유한히 많은 prime ideal만을 갖는 finite type $\mathbb{K}$-algebra $R$은 항상 유한차원 $\mathbb{K}$-벡터 space임을 보이자. 우선 $R$의 임의의 prime ideal $\mathfrak{p}$가 maximal임을 보인다. 만일 $\mathfrak{p}$를 진부분집합으로 포함하는 prime ideal이 존재한다면 $d=\dim R/\mathfrak{p}\geq 1$이고, [\[가환대수학\] §뇌터 정규화, ⁋정리 1](/ko/math/commutative_algebra/noether_normalization#thm1)에 의하여 $R/\mathfrak{p}$는 polynomial ring $\mathbb{K}[\x_1,\ldots, \x_d]$를 subring으로 가지며 그 위에서 finitely generated module, 특히 integral extension이다. 그런데 $d\geq 1$이므로 $\mathbb{K}[\x_1,\ldots, \x_d]$는 $\mathbb{K}[\x_1]$의 서로 다른 irreducible polynomial들이 생성하는 무한히 많은 prime ideal을 갖고, [\[가환대수학\] §정수적 확장과 아이디얼, ⁋명제 1](/ko/math/commutative_algebra/lying_over_and_going_up#prop1)에 의하여 이들 각각 위에 $R/\mathfrak{p}$의 prime ideal이 놓이므로, $R$이 유한히 많은 prime ideal만을 갖는다는 가정에 모순이다. 따라서 $R$의 모든 prime ideal은 maximal이고, [\[가환대수학\] §기본 개념들, ⁋정리 12](/ko/math/commutative_algebra/basic_notions#thm12)에 의하여 $R$이 Noetherian이므로 [\[가환대수학\] §조르단-횔더 정리, ⁋정리 4](/ko/math/commutative_algebra/Jordan-Holder_theorem#thm4)에 의하여 $R$은 $R$-module로서 유한한 length를 갖는다. 이 때 composition factor들은 모두 $R/\mathfrak{m}$의 꼴인데, field는 Jacobson ring이므로 [\[가환대수학\] §영점정리, ⁋정리 4](/ko/math/commutative_algebra/nullstellensatz#thm4)에 의하여 $R/\mathfrak{m}$은 $\mathbb{K}$의 finite extension이다. 따라서 $R$은 유한차원 $\mathbb{K}$-벡터 space이다.
 
-그럼 각각의 $R_l$은 유한차원 $\kappa(z)$-벡터 space이므로 $R_l\otimes_{\kappa(z)}\kappa(y)$ 또한 유한차원 $\kappa(y)$-벡터 space이고, 따라서 Artinian ring이 되어 유한히 많은 prime ideal만을 갖는다. ([\[가환대수학\] §조르단-횔더 정리, ⁋정리 4](/ko/math/commutative_algebra/Jordan-Holder_theorem#thm4)) 이제 $\rho_Y^{-1}(y)$는 유한히 많은 $\Spec (R_l\otimes_{\kappa(z)}\kappa(y))$들로 덮이므로 유한집합이고, 이로써 $\rho_Y$가 quasi-finite임을 안다. 
+그럼 각각의 $R_l$은 유한차원 $\kappa(z)$-벡터 space이므로 $R_l\otimes_{\kappa(z)}\kappa(y)$ 또한 유한차원 $\kappa(y)$-벡터 space이고, 따라서 Artinian ring이 되어 위에서와 같은 이유로 유한히 많은 prime ideal만을 갖는다. ([\[가환대수학\] §조르단-횔더 정리, ⁋따름정리 6](/ko/math/commutative_algebra/Jordan-Holder_theorem#cor6)) 이제 $\rho_Y^{-1}(y)$는 유한히 많은 $\Spec (R_l\otimes_{\kappa(z)}\kappa(y))$들로 덮이므로 유한집합이고, 이로써 $\rho_Y$가 quasi-finite임을 안다. 
 :::
 
 ---

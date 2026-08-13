@@ -13,6 +13,8 @@ date: 2022-07-28
 
 weight: 2
 
+drift_needed: true
+
 ---
 
 앞선 글의 서두에서 이야기했듯 선형대수에서 다루는 공간인 *벡터공간*은 고등학교 때 배우는 좌표공간을 일반화하는 개념이다. 우리는 이를 위해 지난 글에서 abelian group과 field를 정의했다. 
@@ -22,7 +24,7 @@ weight: 2
 ## 벡터공간의 정의
 
 ::: 정의 1
-$\mathbb{K}$가 field이고, $V$가 abelian group이라 하자. $V$가 *$\mathbb{K}$에 대한 벡터공간<sub>vector space over $\mathbb{K}$</sub>*, 혹은 간단히 *$\mathbb{K}$-벡터공간<sub>$\mathbb{K}$-vector space</sub>*이라는 것은 여기에 추가적인 연산 (*스칼라곱*) $\cdot:\mathbb{K}\times V\rightarrow V$가 존재하여 
+$\mathbb{K}$가 field이고, $V$가 abelian group이라 하자. $V$가 *$\mathbb{K}$에 대한 벡터공간<sub>vector space over $\mathbb{K}$</sub>*, 혹은 간단히 *$\mathbb{K}$-벡터공간<sub>$\mathbb{K}$-vector space</sub>*이라는 것은 여기에 추가적인 연산 (*스칼라곱<sub>scalar multiplication</sub>*) $\cdot:\mathbb{K}\times V\rightarrow V$가 존재하여 
 
 1. 임의의 $\alpha,\beta\in\mathbb{K}$와 임의의 $u\in V$에 대하여 $\alpha\cdot(\beta\cdot u)=(\alpha\beta)\cdot u$가 성립한다.
 2. 임의의 $\alpha\in\mathbb{K}$와 임의의 $u,v\in V$에 대하여 $\alpha\cdot(u+_{\tiny V}v)=(\alpha\cdot u)+_{\tiny V}(\alpha\cdot v)$가 성립한다.
@@ -57,7 +59,7 @@ $$\alpha0+\alpha0=\alpha(0+0)=\alpha0$$
 
 $$0v+0v=(0+0)v=0v$$
 
-이므로 $0v=0$이다. 마지막으로, $\alpha v=0$이고 $\alpha\neq 0$이라 하자. 만일 $\alpha\neq 0$이라면, $\alpha^{-1}\in\mathbb{K}$가 존재하여 $\alpha\alpha^{-1}=1$이고, 따라서
+이므로 $0v=0$이다. 마지막으로, $\alpha v=0$이고 $\alpha\neq 0$이라 하자. 그럼 $\alpha^{-1}\in\mathbb{K}$가 존재하여 $\alpha\alpha^{-1}=1$이고, 따라서
 
 $$v=1v=(\alpha^{-1}\alpha)v=\alpha^{-1}(\alpha v)=\alpha^{-1}0=0$$
 
@@ -86,7 +88,7 @@ $$(-1)v+v=(-1)v+1v=((-1)+1)v=0v=0$$
 
 조금 덜 자명한 예시는 field 그 자체다. 임의의 field $\mathbb{K}$에 대하여, $\mathbb{K}$는 $\mathbb{K}$-벡터공간이다. $\mathbb{K}$는 field이므로, 덧셈에 대해 abelian group이 된다는 것은 자명하다. 여기에 스칼라곱 구조만 주면 충분한데, 이는 그냥 $\mathbb{K}$에서의 곱하기 $\mathbb{K}\times \mathbb{K}\rightarrow \mathbb{K}$로 주면 된다. 이렇게 정의하면 스칼라곱이 [정의 1](#def1)의 조건들을 모두 만족한다는 것을 확인할 수 있고, 따라서 $\mathbb{K}$는 그 자체로 $\mathbb{K}$-벡터공간이다. 
 
-더 일반적으로 $\mathbb{K}$가 field이고, 다른 어떤 field $\mathbb{K}'$가 존재하여 $\mathbb{K}'\supseteq \mathbb{K}$라 하자. 그럼 $\mathbb{K}'$는 $\mathbb{K}$-벡터공간이 된다. $\mathbb{K}'$는 field이므로, 아까 전과 같이 덧셈에 대해 abelian group을 이루며, $\alpha\in\mathbb{K}$의 원소와의 스칼라곱은 $\alpha$를 $\mathbb{K}'$의 원소로 취급한 후 $\mathbb{K}'$에서의 곱셈구조를 이용하면 된다. 예를 들어 $\mathbb{C}$는 $\mathbb{R}$-벡터공간이고, $\mathbb{R}$은 $\mathbb{Q}$-벡터공간이다. 
+더 일반적으로 $\mathbb{K}$가 field이고, $\mathbb{K}$를 subfield로 갖는 다른 어떤 field $\mathbb{K}'$가 존재한다고 하자. 그럼 $\mathbb{K}'$는 $\mathbb{K}$-벡터공간이 된다. $\mathbb{K}'$는 field이므로, 아까 전과 같이 덧셈에 대해 abelian group을 이루며, $\alpha\in\mathbb{K}$의 원소와의 스칼라곱은 $\alpha$를 $\mathbb{K}'$의 원소로 취급한 후 $\mathbb{K}'$에서의 곱셈구조를 이용하면 된다. 예를 들어 $\mathbb{C}$는 $\mathbb{R}$-벡터공간이고, $\mathbb{R}$은 $\mathbb{Q}$-벡터공간이다. 
 :::
 
 ::: 예시 5
@@ -98,7 +100,7 @@ $$\begin{pmatrix}a_1\\a_2\\\vdots\\a_n\end{pmatrix},\qquad a_i\in\mathbb{K}\text
 
 $$\begin{pmatrix}a_1\\a_2\\\vdots\\a_n\end{pmatrix}+\begin{pmatrix}b_1\\b_2\\\vdots\\b_n\end{pmatrix}=\begin{pmatrix}a_1+b_1\\a_2+b_2\\\vdots\\a_n+b_n\end{pmatrix},\qquad \alpha\begin{pmatrix}a_1\\a_2\\\vdots\\a_n\end{pmatrix}=\begin{pmatrix}\alpha a_1\\\alpha a_2\\\vdots\\\alpha a_n\end{pmatrix}$$
 
-으로 정의된다. $\mathbb{K}=\mathbb{R}$이고 $n=2,3$일 경우, 이 정의는 우리가 잘 아는 좌표평면과 좌표공간이 된다. 
+으로 정의된다. 이 벡터공간을 $\mathbb{K}^n$으로 적는다. $\mathbb{K}=\mathbb{R}$이고 $n=2,3$일 경우, 이 정의는 우리가 잘 아는 좌표평면과 좌표공간이 된다. 
 :::
 
 유클리드 공간은 우리가 특히 많이 다룰 대상이다. 위의 예시에서 우리는 순서쌍 $(a_1, a_2, \ldots, a_n)$이라는 표기법 대신 열로 이루어진 표기법을 사용하고 있으며, 이는 선형대수학의 기본정리와 밀접한 연관이 있다.
@@ -114,7 +116,7 @@ $$f+g:t\mapsto f(t)+g(t),\qquad \alpha f:t\mapsto \alpha f(t)$$
 
 으로 정의하면 $\Fun(I,\mathbb{R})$이 벡터공간 구조를 갖는 것을 확인할 수 있다. 즉, $f+g$는 임의의 $t\in I$를 $f(t)+g(t)$라는 값으로 보내는 함수로, $\alpha f$는 임의의 $t\in I$를 $\alpha f(t)$로 보내는 함수로 정의된다. 
 
-뿐만 아니라, $\Fun(I,\mathbb{R})$의 여러 부분집합들도 $\mathbb{R}$-벡터공간이 된다. 예를 들어, $I$에서 $\mathbb{R}$로의 연속함수들의 모임 $C(I)$ 또한 $\mathbb{R}$-벡터공간이고, 더 일반적으로 $k$번째 도함수가 연속인 함수들의 모임 $C^k(I)$들의 모임도 $\mathbb{R}$-벡터공간이 된다는 것을 확인할 수 있다.
+뿐만 아니라, $\Fun(I,\mathbb{R})$의 여러 부분집합들도 $\mathbb{R}$-벡터공간이 된다. 예를 들어, $I$에서 $\mathbb{R}$로의 연속함수들의 모임 $C(I)$ 또한 $\mathbb{R}$-벡터공간이고, 더 일반적으로 $k$번째 도함수가 연속인 함수들의 모임 $C^k(I)$도 $\mathbb{R}$-벡터공간이 된다는 것을 확인할 수 있다.
 :::
 
 $\Fun(I,\mathbb{R})$을 product set $\mathbb{R}^I$라 생각하면 [예시 6](#ex6)은 [예시 5](#ex5)의 자연스러운 일반화로 볼 수도 있다. ([\[집합론\] §집합의 곱, ⁋정의 1](/ko/math/set_theory/product_of_sets#def1))

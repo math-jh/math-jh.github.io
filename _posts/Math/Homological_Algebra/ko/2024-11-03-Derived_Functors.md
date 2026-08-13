@@ -11,6 +11,8 @@ sidebar:
 date: 2024-11-03
 weight: 5
 
+drift_needed: true
+
 ---
 
 ## $\delta$-functor
@@ -54,7 +56,7 @@ $$\cdots\longrightarrow T_0(A)\longrightarrow T_0(B)\longrightarrow T_0(C)\longr
 
 즉 $T_0$이 right exact functor라는 의미가 된다. 마찬가지로 cohomological $\delta$-functor의 첫 번째 조건은 $T^0$이 left exact functor가 되도록 한다. 
 
-또, $\delta$-functor의 두 번째 조건인 naturality는 short exact sequence들의 모임 $\mathbf{S}(\mathcal{A})$에서 $\mathcal{A}$로 가는 두 functor $T_i(C)$와 $T_{i-1}(A)$를 생각할 때, $\delta_i$가 이들 사이의 natural transformation이 된다는 것을 의미한다.
+또, $\delta$-functor의 두 번째 조건인 naturality는 short exact sequence들의 모임 $\mathbf{S}(\mathcal{A})$에서 $\mathcal{B}$로 가는 두 functor $T_i(C)$와 $T_{i-1}(A)$를 생각할 때, $\delta_i$가 이들 사이의 natural transformation이 된다는 것을 의미한다.
 
 언제나와 같이 cohomological $\delta$-functor의 경우는 homological $\delta$-functor로부터 쉽게 유도할 수 있으므로, 앞으로는 homological $\delta$-functor에 대해서만 생각하기로 한다.
 
@@ -111,7 +113,7 @@ $$F(P_1) \overset{Fd_1}{\longrightarrow} F(P_0) \overset{F\epsilon_0}{\longright
 
 가 exact임을 안다. 따라서 
 
-$$L_0F(A)=H_0(F(P))=\frac{F(P_0)}{\im Fd_1}=\frac{F(P_0)}{\ker F\epsilon_0}\cong F(A)$$
+$$L_0F(A)=H_0(F(P_\bullet))=\frac{F(P_0)}{\im Fd_1}=\frac{F(P_0)}{\ker F\epsilon_0}\cong F(A)$$
 
 을 얻는다. 
 
@@ -121,7 +123,7 @@ $L_\bullet F$들이 homological $\delta$-functor임을 보이기 위해서는 �
 $L_iF$들은 additive functor이다.
 :::
 ::: 증명
-우선 임의의 $f: A' \rightarrow A$와 $A'$, $A$의 projective resolution들이 각각 주어졌을 때 [§분해, ⁋정리 6](/ko/math/homological_algebra/resolutions#thm6)을 적용하여 $L_nF(f)$를 얻을 수 있다. 이것이 functoriality와 additivity를 만족한다는 것은 universal property로부터 자명하다. 
+우선 임의의 $f: A' \rightarrow A$와 $A'$, $A$의 projective resolution들이 각각 주어졌을 때 [§분해, ⁋정리 6](/ko/math/homological_algebra/resolutions#thm6)을 적용하여 $L_nF(f)$를 얻을 수 있다. $f$의 두 lift가 chain homotopic이고 additive functor $F$가 chain homotopy를 보존하므로 $L_nF(f)$는 lift의 선택에 의존하지 않으면서 functoriality를 만족하고, 두 morphism $f,g:A'\rightarrow A$의 lift $f_\bullet,g_\bullet$에 대해 $f_\bullet+g_\bullet$이 $f+g$의 lift가 된다는 것으로부터 additivity를 얻는다. 
 :::
 
 ::: 보조정리 7
@@ -142,7 +144,7 @@ $$0 \rightarrow F(P_\bullet) \rightarrow F(Q_\bullet) \rightarrow F(R_\bullet) \
 
 또한 short exact sequence이며 ([\[다중선형대수학\] §Hom과 텐서곱, ⁋명제 1](/ko/math/multilinear_algebra/hom_and_tensor#prop1)), 여기에서 homology sequence를 생각하면 원하는 connecting map들과, left derived functor들의 long exact sequence
 
-$$\cdots\overset{\partial}{\longrightarrow}L_iF(A)\longrightarrow L_iF(B)\longrightarrow L_iF(C)\overset{\partial}{\longrightarrow}L_{i-1}F(A)\longrightarrow L_{i-1}F(B)\longrightarrow L_{i-1}F(C)\overset{\partial}{\longrightarrow}\cdots$$
+$$\cdots\overset{\delta}{\longrightarrow}L_iF(A)\longrightarrow L_iF(B)\longrightarrow L_iF(C)\overset{\delta}{\longrightarrow}L_{i-1}F(A)\longrightarrow L_{i-1}F(B)\longrightarrow L_{i-1}F(C)\overset{\delta}{\longrightarrow}\cdots$$
 
 를 얻는다. 이렇게 얻어진 정보가 [정의 1](#def1)의 두 번째 조건을 만족한다는 것은 [§분해, ⁋정리 6](/ko/math/homological_algebra/resolutions#thm6)을 사용하면 된다.
 :::
@@ -158,7 +160,7 @@ Enough projective를 갖는 abelian category $\mathcal{A}$와, 임의의 right e
 ::: 정의 9
 Left exact functor $F:\mathcal{A}\rightarrow \mathcal{B}$가 주어졌다 하고, $\mathcal{A}$가 enough injective를 갖는다 하자. 그럼 $F$의 *right derived functor<sub>오른쪽 유도함자</sub>*들 $R^i F$를 다음의 식
 
-$$(R^iF)(A)=H_i(F(I^\bullet)),\qquad\text{$I^\bullet$ an injective resolution of $A$}$$
+$$(R^iF)(A)=H^i(F(I^\bullet)),\qquad\text{$I^\bullet$ an injective resolution of $A$}$$
 
 으로 정의한다.
 :::

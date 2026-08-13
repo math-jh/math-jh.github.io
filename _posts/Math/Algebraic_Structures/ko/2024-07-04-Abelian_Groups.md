@@ -9,6 +9,7 @@ sidebar:
 
 date: 2024-07-04
 weight: 10
+drift_needed: true
 
 ---
 
@@ -115,13 +116,13 @@ Forgetful functor $U:\Ab \rightarrow \Set$의 left adjoint $F_\Ab:\Set \rightarr
 
 $$(f+g)(x)=f(x)+g(x)\qquad\text{for all $x\in G$}$$
 
-으로 정의하면 된다.
+으로 정의하면 된다. 이 때 $f+g$가 다시 group homomorphism인 것은 $H$가 abelian이기 때문으로, $(f+g)(x+y)=f(x)+f(y)+g(x)+g(y)$의 가운데 두 항을 맞바꾸면 $(f+g)(x)+(f+g)(y)$가 된다. 항등원은 zero map이고 $f$의 역원은 $(-f)(x)=-f(x)$이며, $\Hom_\Ab(G,H)$의 commutativity 또한 $H$의 commutativity에서 따라온다.
 :::
 
-$\Hom_\Ab(-,-)$는 원래 $\Ab^\op\times \Ab$에서 $\Set$으로의 bifunctor로 정의되었지만, 이 명제에 의해 실은 이를 $\Ab$로의 bifunctor로 볼 수도 있다. 즉 $\Hom_\Ab(-,-)$를 internal $\Hom$과 비슷한 것으로 생각할 수 있다. 그러나 지금까지 갖고 있는 언어로만 보았을 때 이는 불가능하다.
+$\Hom_\Ab(-,-)$는 원래 $\Ab^\op\times \Ab$에서 $\Set$으로의 bifunctor로 정의되었지만, 이 명제에 의해 실은 이를 $\Ab$로의 bifunctor로 볼 수도 있다. 즉 $\Hom_\Ab(-,-)$를 [\[범주론\] §수반함자, ⁋정의 8](/ko/math/category_theory/adjoints#def8)의 internal $\Hom$과 비슷한 것으로 생각할 수 있다. 그러나 지금까지 갖고 있는 언어로만 보았을 때 이는 불가능하다.
 
 ::: 예시 10
-$\Ab$는 $\times$에 대해 cartesian monoidal category이다. 그러나 $\Hom_\Ab(-,-)$는 이 구조에 대해 internal $\Hom$으로 생각할 수 없다. 즉
+$\Ab$는 $\times$에 대해 [\[범주론\] §모노이드 범주, ⁋명제 4](/ko/math/category_theory/monoidal_categories#prop4) 직후에서와 같이 cartesian monoidal category이다. 그러나 $\Hom_\Ab(-,-)$는 이 구조에 대해 internal $\Hom$으로 생각할 수 없다. 즉
 
 $$\Hom_\Ab(G\times H, A)\cong \Hom_\Ab(G,\Hom_\Ab(H,A))$$
 
@@ -147,7 +148,7 @@ $$f(x+0,0+y)=f(x,0)+f(0,y)$$
 위의 논증을 살펴보면, $f$의 source의 하나의 성분을 고정했을 때 나오는 함수가 group homomorphism임을 요구하는 것이 꽤나 자연스러워 보인다.
 
 ::: 정의 11
-두 abelian group $G,H$에 대하여, 함수 $f:G\times H \rightarrow A$가 *bilinear<sub>쌍선형</sub>*이라는 것은 다음 두 식
+세 abelian group $G,H,A$에 대하여, 함수 $f:G\times H \rightarrow A$가 *bilinear<sub>쌍선형</sub>*이라는 것은 다음 두 식
 
 $$f(x,y_1+y_2)=f(x,y_1)+f(x,y_2),\qquad f(x_1+x_2,y)=f(x_1,y)+f(x_2,y)$$
 
@@ -178,10 +179,10 @@ Isomorphism $\Bilin(G,H;A)\cong\Hom_\Ab(F_\Ab(G\times H)/S,A)$의 naturality는 
 :::
 
 ::: 정의 13
-[정리 12](#thm12)의 representation을 $G$와 $H$의 *tensor product<sub>텐서곱</sub>*이라 부르고, $A\otimes B$로 적는다.
+[정리 12](#thm12)의 representation을 $G$와 $H$의 *tensor product<sub>텐서곱</sub>*이라 부르고, $G\otimes H$로 적는다.
 :::
 
-$A\otimes B$의 원소는 $a\otimes b$의 꼴의 원소들의 유한한 합으로 나타난다는 것을 알 수 있다. 그럼 $\otimes$가 $\mathbb{Z}$를 tensor unit으로 갖는 monoidal product임을 확인할 수 있다. 
+$G\otimes H$의 원소는 $x\otimes y$의 꼴의 원소들의 유한한 합으로 나타난다는 것을 알 수 있다. 그럼 $\otimes$가 $\mathbb{Z}$를 tensor unit으로 갖는 monoidal product임을 확인할 수 있다. 
 
 ::: 정리 14
 $(\Ab,\otimes, \mathbb{Z})$는 symmetric monoidal category이다.

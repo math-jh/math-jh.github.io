@@ -11,6 +11,8 @@ sidebar:
 date: 2025-01-27
 weight: 2
 
+drift_needed: true
+
 ---
 
 ::: remark 참고 {#rmk}
@@ -42,7 +44,7 @@ $$\Spec\phi: \Spec B \rightarrow \Spec A;\qquad \mathfrak{q}\mapsto \phi^{-1}(\m
 이제 우리는 $\Spec A$ 위에 적절한 위상구조를 정의하자.
 
 ::: 정의 3
-Ring $A$와 그 spectrum $\Spec A$를 고정하자. $A$의임의의 부분집합 $S$에 대하여, $\Spec A$의 부분집합 $Z(S)$을 다음 식
+Ring $A$와 그 spectrum $\Spec A$를 고정하자. $A$의 임의의 부분집합 $S$에 대하여, $\Spec A$의 부분집합 $Z(S)$을 다음 식
 
 $$Z(S)=\{\mathfrak{p}\in\Spec A\mid S\subseteq \mathfrak{p}\}$$
 
@@ -85,7 +87,7 @@ $\Spec A$ 위에 위상구조를 정의할 때 가장 중요한 것은 다음의
 3. $A$의 임의의 ideal $\mathfrak{a},\mathfrak{b}$에 대하여, $Z(\mathfrak{a})\subseteq Z(\mathfrak{b})\iff \sqrt{\mathfrak{a}}\supseteq \sqrt{\mathfrak{b}}$이 성립한다.
 :::
 ::: 증명
-1. $\mathfrak{a}$ 혹은 $\mathfrak{b}$를 포함하는 prime ideal $\mathfrak{p}$는 그보다 작은 ideal $\mathfrak{ab}$ 또한 포함하는 것이 자명하므로, 반대방향 포함관계만 보이면 충분하다. $\mathfrak{p}\supset \mathfrak{ab}$라 가정하자. 만일 $\mathfrak{p}\not\supseteq \mathfrak{b}$라 하면, $b\not\in \mathfrak{p}$인 $\mathfrak{b}$의 원소 $b$를 찾을 수 있다. 한편, 임의의 $a\in \mathfrak{a}$에 대하여, $ab\in \mathfrak{ab}\subseteq \mathfrak{p}$이고, 앞선 가정에 의해 $b\not\in \mathfrak{p}$이므로 반드시 $a\in \mathfrak{p}$이고 따라서 $\mathfrak{a}\subseteq \mathfrak{p}$가 성립한다.
+1. $\mathfrak{a}$ 혹은 $\mathfrak{b}$를 포함하는 prime ideal $\mathfrak{p}$는 그보다 작은 ideal $\mathfrak{ab}$ 또한 포함하는 것이 자명하므로, 반대방향 포함관계만 보이면 충분하다. $\mathfrak{p}\supseteq \mathfrak{ab}$라 가정하자. 만일 $\mathfrak{p}\not\supseteq \mathfrak{b}$라 하면, $b\not\in \mathfrak{p}$인 $\mathfrak{b}$의 원소 $b$를 찾을 수 있다. 한편, 임의의 $a\in \mathfrak{a}$에 대하여, $ab\in \mathfrak{ab}\subseteq \mathfrak{p}$이고, 앞선 가정에 의해 $b\not\in \mathfrak{p}$이므로 반드시 $a\in \mathfrak{p}$이고 따라서 $\mathfrak{a}\subseteq \mathfrak{p}$가 성립한다.
 2. 이는 $\sum \mathfrak{a}_i$가 ideal들 $\mathfrak{a}_i$ 각각을 모두 포함하는 ideal 중 가장 작은 것으로 정의되므로 자명하다.
 3. [\[가환대수학\] §국소화의 성질들, ⁋따름정리 8](/ko/math/commutative_algebra/properties_of_localization#cor8).
 :::
@@ -104,7 +106,7 @@ Zariski topology는 일반적으로 우리가 좋다고 생각했던 위상이 �
 Ring $A$의 spectrum $\Spec A$ 위에 [정의 7](#def7)의 위상구조를 주면, [명제 2](#prop2)의 functor $\Spec: \cRing^\op \rightarrow \Top$은 functor이다. 
 :::
 ::: 증명
-[명제 2](#prop2)에서 추가로 보여야 할 것은 임의의 ring homomorphism $\phi: A \rightarrow B$가 주어졌을 때, $\Spec \phi: \Spec B \rightarrow \Spec A$가 <em-ko>연속</em-ko>함수라는 것이다. 따라서 $\Spec A$의 임의의 닫힌집합을 가져왔을 때, 이 닫힌집합의 $\Spec\phi$에 의한 preimage도 $\Spec B$에서의 닫힌집합임을 보이면 충분하다. ([\[위상수학\] §집합의 내부, 폐포, 경계, ⁋명제 2](/ko/math/topology/other_concepts#prop2))
+[명제 2](#prop2)에서 추가로 보여야 할 것은 임의의 ring homomorphism $\phi: A \rightarrow B$가 주어졌을 때, $\Spec \phi: \Spec B \rightarrow \Spec A$가 <em-ko>연속</em-ko>함수라는 것이다. 따라서 $\Spec A$의 임의의 닫힌집합을 가져왔을 때, 이 닫힌집합의 $\Spec\phi$에 의한 preimage도 $\Spec B$에서의 닫힌집합임을 보이면 충분하다. ([\[위상수학\] §연속함수, ⁋정리 4](/ko/math/topology/continuous_functions#thm4)의 셋째 조건)
 
 한편 $\Spec A$의 임의의 닫힌집합은 모두 $Z(\mathfrak{a})$의 꼴이고, $\Spec B$의 닫힌집합은 모두 $Z(\mathfrak{b})$의 꼴이므로 이를 보이기 위해서는 임의의 $A$의 ideal $\mathfrak{a}$가 주어질 때마다 다음의 식
 
@@ -139,7 +141,7 @@ $$\mathfrak{a}\subseteq \phi^{-1}(\phi(\mathfrak{a}))\subseteq\phi^{-1}(\mathfra
 
 $$(\Spec\pi)\left(Z_{A/\mathfrak{a}}(\mathfrak{b}/\mathfrak{a})\right)=Z_A(\mathfrak{b}),\qquad (\Spec\epsilon)\left(Z_{S^{-1}A}(J)\right)=Z_A(\epsilon^{-1}J)\cap \im(\Spec\epsilon)$$
 
-으로부터 얻어지는데, 첫째 식은 $\mathfrak{q}\supseteq \mathfrak{b}/\mathfrak{a}$와 $\pi^{-1}(\mathfrak{q})\supseteq \mathfrak{b}$가 동치인 것에서, 둘째 식은 $S^{-1}A$의 모든 ideal이 $J=\epsilon(\epsilon^{-1}J)\cdot S^{-1}A$를 만족하는 것에서 따라온다. 두 번째 결과의 경우, $\Spec\pi$의 $\Spec A$에서의 image는 정확히 $Z(\mathfrak{a})$이다. 마지막으로 셋째 결과의 경우, $\Spec\epsilon$의 원소들은 $f$를 포함하지 않는 prime ideal들의 모임이고 이들은 $\Spec A\setminus Z(f)$으로 쓸 수 있다. 
+으로부터 얻어지는데, 첫째 식은 $\mathfrak{q}\supseteq \mathfrak{b}/\mathfrak{a}$와 $\pi^{-1}(\mathfrak{q})\supseteq \mathfrak{b}$가 동치인 것에서, 둘째 식은 $S^{-1}A$의 모든 ideal이 $J=\epsilon(\epsilon^{-1}J)\cdot S^{-1}A$를 만족하는 것에서 따라온다. 두 번째 결과의 경우, $\Spec\pi$의 $\Spec A$에서의 image는 정확히 $Z(\mathfrak{a})$이다. 마지막으로 셋째 결과의 경우, $\Spec\epsilon$의 image의 원소들은 $f$를 포함하지 않는 prime ideal들의 모임이고 이들은 $\Spec A\setminus Z(f)$으로 쓸 수 있다. 
 :::
 
 위상공간으로서 $\Spec A$의 base가 존재하는 것은 당연하지만, 우리는 이 base 또한 $A$의 대수적인 구조와 모종의 관계가 있기를 바란다. 다음을 정의하자.

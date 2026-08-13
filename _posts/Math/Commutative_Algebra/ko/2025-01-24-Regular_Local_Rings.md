@@ -11,6 +11,8 @@ sidebar:
 date: 2025-01-24
 weight: 20
 
+drift_needed: true
+
 ---
 
 ## 정칙국소환
@@ -31,11 +33,11 @@ $$d+1=\dim A=\codim \mathfrak{m}=\codim \mathfrak{p}_i=0$$
 
 이 되어 모순이므로 우리는 반드시 적당한 $a\in \mathfrak{m}$이 존재하여 $a\not\in \mathfrak{m}^2\cup \mathfrak{p}_1\cup\cdots\cup \mathfrak{p}_k$여야 함을 안다. 
 
-이제 $A'=A/(a)$라 하고, $A'$의 maximal ideal $\mathfrak{m}'=\mathfrak{m}A'$를 생각하자. 그럼 $a$의 선택에 의하여, $A'$의 prime ideal들 중에는 $\mathfrak{p}_i$에 대응되는 것이 없으므로 반드시 $\dim A'<\dim A$가 성립하며, 이를 [§매개계, ⁋따름정리 7](/ko/math/commutative_algebra/system_of_parameters#cor7)과 종합하면 $\dim A'=d-1$인 것을 안다. 따라서 다음 식
+이제 $A'=A/(a)$라 하고, $A'$의 maximal ideal $\mathfrak{m}'=\mathfrak{m}A'$를 생각하자. 그럼 $a$의 선택에 의하여, $A'$의 prime ideal들 중에는 $\mathfrak{p}_i$에 대응되는 것이 없으므로 반드시 $\dim A'<\dim A$가 성립하며, 이를 [§매개계, ⁋따름정리 7](/ko/math/commutative_algebra/system_of_parameters#cor7)과 종합하면 $\dim A'=d$인 것을 안다. 따라서 다음 식
 
 $$\mathfrak{m}'/(\mathfrak{m}')^2=\mathfrak{m}/(\mathfrak{m}^2+(a))$$
 
-과 [§정수적 확장, ⁋보조정리 8](/ko/math/commutative_algebra/integral_extension#lem8)로부터 $\mathfrak{m}'$이 $(d-1)$개의 원소로 생성되는 것을 알고, 따라서 귀납적 가정에 의해 $A'$는 integral domain이다. 즉, $(a)$는 prime ideal이며, 따라서 어떤 $i$에 대해 $\mathfrak{p}_i\subsetneq (a)$가 성립한다. 
+과 [§정수적 확장, ⁋보조정리 8](/ko/math/commutative_algebra/integral_extension#lem8)로부터 $\mathfrak{m}'$이 $d$개의 원소로 생성되는 것을 알고, 따라서 귀납적 가정에 의해 $A'$는 integral domain이다. 즉, $(a)$는 prime ideal이며, 따라서 어떤 $i$에 대해 $\mathfrak{p}_i\subsetneq (a)$가 성립한다. 
 
 이제 임의의 $x\in \mathfrak{p}_i$에 대하여, $x=\alpha a$이도록 하는 $\alpha\in A$를 택하자. 그럼 $a\not\in \mathfrak{p}_i$이므로 $\alpha\in \mathfrak{p}_i$이고, 따라서 $\mathfrak{p}_i=a \mathfrak{p}_i$이며 이로부터 $\mathfrak{p}_i=\mathfrak{m}\mathfrak{p}_i$이다. 다시 [§정수적 확장, ⁋보조정리 8](/ko/math/commutative_algebra/integral_extension#lem8)를 적용하면 $\mathfrak{p}_i=0$이므로 $A$는 integral domain이다. 
 :::
@@ -47,10 +49,10 @@ Ring $A$의 원소들 $a_1,\ldots, a_d$가 *$A$-regular sequence* 혹은 간단�
 :::
 
 ::: 따름정리 3
-Regular local Noetherian ring의 regular system of parameters는 $A$-sequence를 이룬다.
+Regular local Noetherian ring $A$의 regular system of parameters는 $A$-sequence를 이룬다.
 :::
 ::: 증명
-각각의 $i$에 대하여 $A/(a_1,\ldots, a_i)$도 regular local ring이고, [따름정리 1](#cor1)에 의해 이는 integral domain이며 $x_{i+1}$은 이 ring의 $0$이 아닌 원소가 된다.
+각각의 $i$에 대하여 $A/(a_1,\ldots, a_i)$도 regular local ring이고, [따름정리 1](#cor1)에 의해 이는 integral domain이며 $a_{i+1}$은 이 ring의 $0$이 아닌 원소가 된다.
 :::
 
 ::: 명제 4
@@ -69,7 +71,7 @@ $$d=\dim A=\dim \im(\phi)=\dim \kappa[[\x_1,\ldots,\x_d]]/\ker\phi\leq \dim \kap
 이제 우리는 $1$차원의 regular local ring $(A,\mathfrak{m})$에 대해 살펴본다. 그럼 정의에 의해 $\mathfrak{m}$은 하나의 원소 $m$으로 생성되어야 하며, 우리는 이를 $A$의 *regular parameter* 혹은 *uniformizing parameter*라 부른다.
 
 ::: 명제 5
-1차원의 regular local ring $(A, \mathfrak{m})$이 주어졌다 하고, $m$이 $A$의 regular parameter라 하자. 그럼 $\Frac(A)$의 임의의 원소 $x$는 
+1차원의 regular local ring $(A, \mathfrak{m})$이 주어졌다 하고, $m$이 $A$의 regular parameter라 하자. 그럼 $\Frac(A)$의 $0$이 아닌 임의의 원소 $x$는 
 
 $$x=a m^k\qquad \text{$k\in \mathbb{Z}$, $a$ a unit of $A$}$$
 
@@ -82,7 +84,7 @@ $$x=a m^k\qquad \text{$k\in \mathbb{Z}$, $a$ a unit of $A$}$$
 
 $$x=\frac{x_1}{x_2}=\frac{a_1m^{k_1}}{a_2m^{k_2}}=a_1a_2^{-1}m^{k_1-k_2}=am^k$$
 
-로 적을 수 있다. 이 때 $a=a_1a_2^{-1}$이 unit이며, 이 표기의 유일성은 거의 자명하다. 
+로 적을 수 있다. 이 때 $a=a_1a_2^{-1}$이 unit이며, 만일 $am^k=bm^l$이고 $k<l$이라면 $a=bm^{l-k}\in \mathfrak{m}$이 되어 $a$가 unit이라는 것에 모순이므로 이 표기는 유일하다. 
 :::
 
 그럼 위에서 증명한 표기의 유일성으로부터, multiplicative group $\Frac(A)^\times$에서 $\mathbb{Z}$로의 group homomorphism 
@@ -92,13 +94,13 @@ $$\nu:\Frac(A)^\times \rightarrow \mathbb{Z};\qquad am^k\mapsto k$$
 를 정의할 수 있다. 더 일반적으로 다음을 정의한다. 
 
 ::: 정의 6
-Integral domain $A$와 totally ordered abelian group $G$에 대하여, group homomorphism $\nu:\Frac(A)^\times \rightarrow G$가 다음 부등식
+Integral domain $A$와 totally ordered abelian group $G$에 대하여, group homomorphism $\nu:\Frac(A)^\times \rightarrow G$가 $x+y\neq 0$일 때마다 다음 부등식
 
 $$\nu(x+y)\geq \min(\nu(x), \nu(y))$$
 
 를 만족한다면 $\nu$를 *valuation<sub>값매김</sub>*이라 부른다. Valuation $\nu$에 대하여, 다음의 ring
 
-$$S=\nu^{-1}\left(\{g\in G\mid g\geq 0\}\right)$$
+$$S=\nu^{-1}\left(\{g\in G\mid g\geq 0\}\right)\cup\{0\}$$
 
 을 $\nu$의 *valuation ring<sub>값매김환</sub>*이라 부른다. 
 
@@ -177,7 +179,7 @@ Noetherian ring $A$가 normal domain들의 (유한한) direct product인 것은 
 ::: 증명
 우선 일반적으로, Noetherian ring $A$가 다른 ring들의 direct product
 
-$$A=A_1\times\cdots A_n$$
+$$A=A_1\times\cdots\times A_n$$
 
 이고, 이 ring의 임의의 prime ideal은 prime ideal $\mathfrak{p}_k\subseteq A_k$에 대해
 

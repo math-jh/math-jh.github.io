@@ -10,6 +10,7 @@ sidebar:
 
 date: 2025-04-07
 weight: 4
+drift_needed: true
 
 ---
 
@@ -50,7 +51,7 @@ $$G=G_1\supset G_2\supset\cdots\supset G_{n+1}=\{e\}$$
 ::: 증명
 $G$의 크기에 대한 귀납법으로 증명한다. 우선 $G=\{e\}$인 경우는 증명할 것이 없다. 이제 $\lvert G\rvert=p^r$보다 작은 모든 $p$-group에서 주어진 주장이 성립한다 하고, $\lvert G\rvert=p^r$인 경우를 증명하자. 앞선 논증으로부터 $Z(G)\neq\{e\}$이므로, 적당한 $x\in Z(G)$가 존재하여 그 order가 $p^s$ ($1\leq s\leq r$)이도록 할 수 있다. 
 
-이제 원소 $x^{p^{s-1}}$로 생성되는 $Z(G)$의 subgroup $H$를 생각하면, $G'=G/H$는 그 크기가 $p^{r-1}$인 $p$-group이므로 귀납적 가정에 의하여 주어진 조건을 만족하는 subgroup들의 series가 존재하며, 이제 이를 canonical projection $p: G \rightarrow G'$의 inverse image로 보낸 것이 원하는 조건을 만족한다. 
+이제 원소 $x^{p^{s-1}}$로 생성되는 $Z(G)$의 subgroup $H$를 생각하면, $G'=G/H$는 그 크기가 $p^{r-1}$인 $p$-group이므로 귀납적 가정에 의하여 주어진 조건을 만족하는 subgroup들의 series가 존재하며, 이제 이를 canonical projection $\pi: G \rightarrow G'$의 inverse image로 보낸 것이 원하는 조건을 만족한다. 다만 이렇게 얻어진 series의 마지막 항은 $\pi^{-1}(\{e\})=H$이므로 여기에 $G_{n+2}=\{e\}$를 한 항 더 이어붙이며, $H\subseteq Z(G)$로부터 $[G, H]=\{e\}$이고 $H/\{e\}\cong H$가 order $p$의 cyclic group이므로 이 마지막 단계에서도 두 조건이 성립한다. 
 :::
 
 따라서 [§군의 열, ⁋명제 7](/ko/math/group_theory/series_of_groups#prop7)의 첫째 조건과 둘째 조건의 동치에 의하여 임의의 $p$-group은 항상 nilpotent임을 안다.
@@ -60,7 +61,7 @@ $G$의 크기에 대한 귀납법으로 증명한다. 우선 $G=\{e\}$인 경우
 ::: 명제 4
 $p$-group $G$와, subgroup $H\subsetneq G$를 고정하자. 
 
-1. $H$의 $G$에서의 normalizer $N_G(H)$는 $N_G(H)\subsetneq G$를 만족한다. 
+1. $H$의 $G$에서의 normalizer $N_G(H)$는 $H\subsetneq N_G(H)$를 만족한다. 
 2. $G$의 적당한 index $p$짜리 normal subgroup $N$이 존재하여 $H$를 포함한다. 
 :::
 
@@ -151,10 +152,10 @@ $$\lvert \Stab(X)\rvert\leq\lvert Xx^{-1}\rvert=\lvert X\rvert=p^r$$
 다음이 성립한다. 
 
 1. $G$의 Sylow $p$-subgroup들은 서로 conjugate하며, 그 개수는 $1$ mod $p$이다.
-2. $G$의 모든 $p$-group은 어떤 Sylow $p$-subgroup에 포함된다.
+2. $G$의 모든 $p$-subgroup은 어떤 Sylow $p$-subgroup에 포함된다.
 :::
 ::: 증명
-$P$를 $G$의 Sylow $p$-subgroup이라 하고, $H$를 $G$의 $p$-subgroup이라 하자. 집합 $E = G/P$위의 $H$의 left translation action을 생각하면, [보조정리 2](#lem2)에 의해 $\lvert E^H\rvert\neq 0$이므로 $Hx=x$인 $x\in G/P$가 존재한다. 이제 $G/P$의 원소 $x$의 representative를 $g\in G$를 택하자. 그러면 임의의 $h \in H$에 대해 $h(gP) = gP$이므로 $g^{-1} h g \in P$이다. 따라서 $H \subseteq gPg^{-1}$이고, 이로써 둘째 주장이 증명된다.
+$P$를 $G$의 Sylow $p$-subgroup이라 하고, $H$를 $G$의 $p$-subgroup이라 하자. 집합 $E = G/P$위의 $H$의 left translation action을 생각하면, $\lvert E\rvert=[G:P]$가 $p$의 배수가 아니므로 [보조정리 2](#lem2)에 의해 $\lvert E^H\rvert\neq 0$이고, 따라서 $Hx=x$인 $x\in G/P$가 존재한다. 이제 $G/P$의 원소 $x$의 representative를 $g\in G$를 택하자. 그러면 임의의 $h \in H$에 대해 $h(gP) = gP$이므로 $g^{-1} h g \in P$이다. 따라서 $H \subseteq gPg^{-1}$이고, 이로써 둘째 주장이 증명된다.
 
 이제 $H$가 Sylow $p$-subgroup이라 하자. 그러면
 
@@ -162,7 +163,7 @@ $$\lvert H \rvert = \lvert P \rvert = \lvert gPg^{-1} \rvert$$
 
 이므로, 위의 포함관계가 $H = gPg^{-1}$가 되어 첫째 주장의 앞부분이 증명된다.
 
-이제 첫째 주장의 뒷부분을 증명하기 위해, $G$가 $\Syl_p(G)$ 위에 inner automorphism으로 작용하게 하자. 그럼 앞선 논증으로부터 임의의 $P \in \Syl_p(G)$는 이 action의 fixed point이며, 우리는 이것이 *유일한* fixed point임을 보인다. 
+이제 첫째 주장의 뒷부분을 증명하기 위해, $P$가 $\Syl_p(G)$ 위에 conjugation으로 작용하게 하자. 그럼 앞선 논증으로부터 $P$ 자신은 이 action의 fixed point이며, 우리는 이것이 *유일한* fixed point임을 보인다. 
 
 결론에 반하여 다른 fixed point $Q \in \Syl_p(G)$가 있다고 가정하자. $Q$는 $G$의 Sylow $p$-subgroup이며, $P$에 의해 normalize된다. 즉 $P\subseteq N_G(Q)$이다. 이제 $P$와 $Q$는 모두 $N_G(Q)$의 Sylow $p$-subgroup들이고, 따라서 앞선 논증에 의해 적당한 $n \in N_G(Q)$가 존재하여
 
@@ -206,9 +207,9 @@ $P\in \Syl_p(G)$를 고정하고, $G' = G/N$, $P$의 $G'$에서의 image를 $P'$
 
 $G$의 $G'/P'$ 위에서의 left translation action을 생각하면 이는 transitive action이므로, $G$의 orbit은 $G'/P'$ 자기 자신 뿐이다. 이제 [\[대수적 구조\] §군의 작용, ⁋정리 14](/ko/math/algebraic_structures/group_actions#thm14)에 의하여
 
-$$\lvert G'/P'\rvert=[G:\Stab(G'/P')]$$
+$$\lvert G'/P'\rvert=[G:\Stab(eP')]$$
 
-이다. 그런데 정의에 의하여 $\Stab(G'/P')$는 $P$를 포함하므로, $[G:\Stab(G'/P')]$는 $p$의 배수가 아니고 따라서 $[G':P']$도 $p$의 배수가 아니다. 한편 $P'$는 $p$-group이므로, 정의에 의해 $P'$는 $G'$의 Sylow $p$-subgroup이다.
+이다. 그런데 정의에 의하여 $\Stab(eP')$는 $P$를 포함하므로, $[G:\Stab(eP')]$는 $p$의 배수가 아니고 따라서 $[G':P']$도 $p$의 배수가 아니다. 한편 $P'$는 $p$-group이므로, 정의에 의해 $P'$는 $G'$의 Sylow $p$-subgroup이다.
 
 반대방향의 경우, $G'$의 다른 Sylow $p$-subgroup $Q'$를 생각하면 적당한 $g' \in G'$에 대해 $Q' = g'P'g'^{-1}$이고, $g'$의 representative $g \in G$를 잡으면 $gPg^{-1}$의 이미지가 $Q'$가 된다.
 :::
@@ -219,7 +220,7 @@ $$\lvert G'/P'\rvert=[G:\Stab(G'/P')]$$
 
 $$n_p=\lvert \Syl_p(G)\rvert=[G:\Stab(P)],\qquad P\in\Syl_p(G)$$
 
-를 얻으며, 특히 $n_p$는 $\lvert G\rvert$를 나눠야 하고, 앞서 살펴본 것과 같이 $n_p$는 $p^r$을 나누지는 않으므로 $n_p$는 반드시 $m$을 나눠야 한다. 
+를 얻으며, 특히 $n_p$는 $\lvert G\rvert$를 나눠야 하고, $n_p\equiv 1\pmod{p}$로부터 $p$가 $n_p$를 나누지 않으므로 $n_p$는 반드시 $m$을 나눠야 한다. 
 
 ::: 예시 13
 크기가 $15$인 finite group $G$를 분류해 보자.
@@ -244,7 +245,7 @@ $$\lvert G\rvert = 15 = 3\times 5$$
 
 $$\frac{P_3P_5}{P_3}\cong P_5/\{e\}\implies \lvert P_3P_5\rvert=\lvert P_3\rvert\lvert P_5\rvert=15=\lvert G\rvert$$
 
-이므로 결국 $G\cong \mathbb{Z}/3\mathbb{Z}\times \mathbb{Z}/5\mathbb{Z}$여야 한다. 
+이므로 $G=P_3P_5$이고, $P_3$과 $P_5$가 모두 normal subgroup이면서 $P_3\cap P_5=\{e\}$이므로 결국 $G\cong \mathbb{Z}/3\mathbb{Z}\times \mathbb{Z}/5\mathbb{Z}$여야 한다. 
 :::
 
 Sylow 정리의 또 다른 강력한 응용으로, alternating group $A_5$가 simple group이라는 사실을 보이자. 이는 [§대칭군, ⁋예시 13](/ko/math/group_theory/symmetric_groups#ex13)에서 이미 conjugacy class의 구조를 직접 조사하여 증명하였다. 거기서는 $A_5$가 그다지 큰 group이 아니라는 점을 이용하여 원소의 종류를 일일이 분류하였는데, 여기서는 동일한 결론을 normal subgroup이 반드시 포함해야 하는 Sylow subgroup들을 세는 방식으로 다시 도출한다.

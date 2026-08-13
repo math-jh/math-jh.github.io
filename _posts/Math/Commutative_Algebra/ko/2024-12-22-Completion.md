@@ -10,6 +10,7 @@ sidebar:
 
 date: 2024-12-22
 weight: 14
+drift_needed: true
 
 ---
 
@@ -25,7 +26,7 @@ $$\widehat{G}_\mathcal{J}=\varprojlim_i G/H_i=\left\{(g_1,g_2,\ldots)\in \prod G
 
 그리고 canonical morphism들 $\rho_i:\widehat{G}_{\mathcal{J}} \rightarrow G/ H_i$들이 주어지며, 이 때 $\rho_{ji}\circ\rho_j=\rho_i$가 모든 $j>i$에 대해 성립한다. 표기의 편의를 위해 $\mathcal{J}$가 문맥에 따라 명확할 경우 이를 간단히 $\widehat{G}$로 쓰기도 한다.
 
-그럼 이들은 [\[범주론\] §극한, ⁋예시 5](/ko/math/category_theory/limits#ex5)에서 살펴본 것과 같이 범주론적인 극한으로 생각할 수 있으며, 따라서 다음의 universal property 또한 만족한다.
+그럼 이들은 [\[범주론\] §극한, ⁋예시 5](/ko/math/category_theory/limits#ex5)에서 살펴본 것과 같이 categorical limit으로 생각할 수 있으며, 따라서 다음의 universal property 또한 만족한다.
 
 > $\rho_{ji}\circ\pi_j=\pi_i$를 만족하는 $K \rightarrow G/H_i$들이 주어질 때마다, 유일한 $\pi:K \rightarrow \widehat{G}$가 존재하여 다음의 diagram
 > 
@@ -36,7 +37,7 @@ $$\widehat{G}_\mathcal{J}=\varprojlim_i G/H_i=\left\{(g_1,g_2,\ldots)\in \prod G
 만일 $G$에 ring 구조가 주어져 있고 $H_i$들이 ideal들이었다면 $\widehat{G}$ 또한 자연스러운 ring 구조를 갖는다. 우리가 살펴볼 상황은 다음과 같은 상황이다. 
 
 ::: 정의 1
-Ring $A$와 ideal $\mathfrak{a}$를 고정하자. 그럼 $A$의 ideal들의 $\mathfrak{a}$-filtration
+Ring $A$와 ideal $\mathfrak{a}$를 고정하자. 그럼 $A$의 ideal들의 $\mathfrak{a}$-filtration ([§부풀림 대수, ⁋정의 3](/ko/math/commutative_algebra/blowup_algebra#def3))
 
 $$\mathcal{J}:\qquad A=\mathfrak{a}_0\supseteq \mathfrak{a}_1\supseteq \mathfrak{a}_2\cdots$$
 
@@ -153,9 +154,9 @@ $$1-\x+\x^2-\cdots+(-1)^i\x^i$$
 
 에 대하여 
 
-$$(1+\x)(1-\x+\x^2-\cdots+(-1)^i\x^i)=1+(-1)^i\x^i\in \mathfrak{m}^i$$
+$$(1+\x)(1-\x+\x^2-\cdots+(-1)^i\x^i)=1+(-1)^i\x^{i+1}$$
 
-이므로, 이 곱은 상수수열 $(1)$과 equivalent하다는 것을 통해 얻어진다.
+이고, 이 곱과 $1$의 차는 $\mathfrak{m}^{i+1}$에 속하므로, 이 곱은 상수수열 $(1)$과 equivalent하다는 것을 통해 얻어진다.
 
 이 계산을 일반화하여 다음의 두 결과를 얻는다.
 
@@ -164,7 +165,7 @@ $A$가 ideal $\mathfrak{a}$에 대해 complete이라 하자. 그럼 다음 집�
 
 $$U=\{1+a\mid a\in \mathfrak{a}\}$$
 
-은 $A$의 unit들의 모임이며, $U$는 multiplicatively closed이다.
+의 모든 원소는 $A$의 unit이며, $U$는 multiplicatively closed이다.
 :::
 ::: 증명
 위의 논증에서 $\x$만 $a$로 바꾸면 된다.
@@ -174,7 +175,7 @@ $$U=\{1+a\mid a\in \mathfrak{a}\}$$
 Local ring $(A, \mathfrak{m})$에 대하여, $A[[\x_1,\ldots, \x_n]]$도 local ring이며, 그 유일한 maximal ideal은 $\mathfrak{m}+(\x_1,\ldots, \x_n)$이다. 
 :::
 ::: 증명
-$\mathfrak{m}+(\x_1,\ldots,\x_n)$ 바깥의 원소는 $0$이 아닌 상수항을 가지므로, [명제 5](#prop5)에 의해 이것이 unit임을 보일 수 있다. 
+$\mathfrak{m}+(\x_1,\ldots,\x_n)$ 바깥의 원소는 상수항이 $\mathfrak{m}$에 속하지 않아 그 상수항이 $A$의 unit이므로, [명제 5](#prop5)에 의해 이것이 unit임을 보일 수 있다. 
 :::
 
 또, 다음이 성립한다.
@@ -187,19 +188,19 @@ $$A=\mathfrak{a}_0\supseteq \mathfrak{a}_1\supseteq\cdots$$
 과 filtration에 대한 associated graded ring $\gr A$를 고정하자. 만일 $A$가 이 filtration에 대해 complete이라 하면, $A$의 ideal $\mathfrak{a}$와 그 원소들 $a_1,\ldots, a_n$에 대하여, $\initial(\mathfrak{a})$가 $\initial(a_1),\ldots, \initial(a_n)$에 의해 생성된다면 $\mathfrak{a}$ 또한 $a_1,\ldots, a_n$에 의해 생성된다.
 :::
 ::: 증명
-원소들 $a_1,\ldots, a_n$에 의해 생성되는 ideal을 $\mathfrak{a}'$라 하고 $\mathfrak{a}=\mathfrak{a}'$임을 보이자. 일반성을 잃지 않고 이들 원소들이 모두 $0$이 아니라 가정할 수 있다. 또, 만일 $a_k\in \mathfrak{a}_i$가 모든 $i$에 대해 성립했다면, canonical morphism $A \rightarrow \widehat{A}$에 의해 $a_k$는 $0\in \widehat{A}$로 옮겨지고, $A$가 complete이므로 이는 $a_k=0$이었다는 것이므로 적당한 $d$를 택하여 $a_k\not\in \mathfrak{a}_i$가 모든 $k$에 대해 성립하도록 할 수 있다.
+원소들 $a_1,\ldots, a_n$에 의해 생성되는 ideal을 $\mathfrak{a}'$라 하고 $\mathfrak{a}=\mathfrak{a}'$임을 보이자. 일반성을 잃지 않고 이들 원소들이 모두 $0$이 아니라 가정할 수 있다. 또, 만일 $a_k\in \mathfrak{a}_i$가 모든 $i$에 대해 성립했다면, canonical morphism $A \rightarrow \widehat{A}$에 의해 $a_k$는 $0\in \widehat{A}$로 옮겨지고, $A$가 complete이므로 이는 $a_k=0$이었다는 것이므로 적당한 $d$를 택하여 $a_k\not\in \mathfrak{a}_d$가 모든 $k$에 대해 성립하도록 할 수 있다.
 
 한편 $\initial(\mathfrak{a})$가 $\initial(a_k)$들에 의해 생성된다는 가정으로부터, 임의의 $a\in \mathfrak{a}$에 대해 다음의 식
 
 $$\initial(a)=\sum_{k=1}^n \beta_k\initial(a_k)\tag{4}$$
 
-를 만족하는 $\beta_k\in \gr_\mathfrak{a}A$들이 존재하며, 위의 식에서 degree를 고려하면 $\beta_k$들은 homogeneous이고 그 degree는
+를 만족하는 $\beta_k\in \gr A$들이 존재하며, 위의 식에서 degree를 고려하면 $\beta_k$들은 homogeneous이고 그 degree는
 
 $$\degree(\beta_k)=\degree (\initial(a))-\degree(\initial(a_k))>\degree(\initial(a))-d$$
 
 여야 함을 안다. 따라서 $\initial(b_k)=\beta_k$를 만족하는 $b_k\in A$들에 대하여 $a-\sum_k b_k a_k$는 $\mathfrak{a}_{\degree(\initial(a))+1}$에 속하게 된다. 이 과정을 반복하여, 
 
-$$a-\underbrace{\sum_k b_k a_k-\cdots}_{=a'} \in \mathfrak{a}_{d+1}$$
+$$a-\underbrace{\left(\sum_k b_k a_k+\cdots\right)}_{=a'} \in \mathfrak{a}_{d+1}$$
 
 이도록 하는 $a'\in \mathfrak{a}'$를 택할 수 있다. 이 때, $a'$는 어차피 $a_k$들로 생성되므로 $a$가 $a_k$들로 생성되는 것은 $a-a'$가 $a_k$들로 생성되는 것을 보이는 것과 같다. 즉, 우리는 일반성을 잃지 않고 $a$가 $\mathfrak{a}_{d+1}$에 속해있다고 가정할 수 있다.
 

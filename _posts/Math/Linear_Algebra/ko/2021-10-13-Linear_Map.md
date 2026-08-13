@@ -13,6 +13,8 @@ date: 2021-10-13
 
 weight: 6
 
+drift_needed: true
+
 ---
 
 이번 글에서는 벡터공간들 간의 함수, 즉 *선형사상*을 정의한다.
@@ -50,12 +52,12 @@ $$L(u-v)=L\bigl(u+(-v)\bigr)=L(u)+L(-v)=L(u)+\bigl(-L(v)\bigr)=L(u)-L(v)$$
 ::: 명제 3
 두 $\mathbb{K}$-벡터공간 $V,W$와 linear map $L:V\rightarrow W$, 스칼라들 $\alpha_1,\ldots,\alpha_n$과 $V$의 벡터들 $v_1,\ldots, v_n$에 대하여
 
-$$L\left(\sum_{i=1}^k\alpha_i v_i\right)=\sum_{i=1}^kL(\alpha_iv_i)$$
+$$L\left(\sum_{i=1}^n\alpha_i v_i\right)=\sum_{i=1}^nL(\alpha_iv_i)$$
 
 이 성립한다.
 :::
 ::: 증명
-$k$에 대한 귀납법에 의하여 자명하다.
+$n=1$인 경우는 자명하고, $n-1$개의 벡터에 대하여 주장이 성립한다고 가정하면 $L$이 덧셈을 보존하므로 $L(\sum_{i=1}^n\alpha_iv_i)=L(\sum_{i=1}^{n-1}\alpha_iv_i)+L(\alpha_nv_n)=\sum_{i=1}^nL(\alpha_iv_i)$가 성립하여 $n$에 대한 귀납법이 완성된다.
 :::
 
 함수의 합성은 함수가 되듯이, linear map의 합성 또한 linear map이 된다. 뿐만 아니라, 나중에 확인하겠지만 linear map이 역함수를 갖는다면 역함수는 자동으로 linear map이 된다. 
@@ -112,7 +114,7 @@ $$L(v_1+v_2)=L(v_1)+L(v_2)=0+0=0$$
 
 이므로 $\alpha v\in\ker L$, $v_1+v_2\in\ker L$이 성립하기 때문이다.
 
-이와 비슷하게, $\im L$은 $W$의 부분공간이다. 임의의 $w,w_1,w_2\in W$와 $\alpha\in\mathbb{K}$를 택해오면, 정의에 의해
+이와 비슷하게, $\im L$은 $W$의 부분공간이다. 임의의 $w,w_1,w_2\in\im L$과 $\alpha\in\mathbb{K}$를 택해오면, 정의에 의해
 
 $$L(v)=w,\quad L(v_1)=w_1,\quad L(v_2)=w_2$$
 
@@ -142,7 +144,7 @@ $$w_1+w_2=L(v_1)+L(v_2)=L(v_1+v_2)\in \im L$$
 
 > $$\ker L=\{0\}\implies\text{$L$ injective}$$
 
-만 보이면 충분하다. $L(v_1)=L(v_2)$인 $v_1,v_2\in V$가 주어졌다 가정하자. 그럼 다시 [명제 3](#prop3)에 의하여,
+만 보이면 충분하다. $L(v_1)=L(v_2)$인 $v_1,v_2\in V$가 주어졌다 가정하자. 그럼 다시 [명제 2](#prop2)에 의하여,
 
 $$0=L(v_1)-L(v_2)=L(v_1-v_2)$$
 
@@ -155,7 +157,7 @@ $$0=L(v_1)-L(v_2)=L(v_1-v_2)$$
 두 $\mathbb{K}$-벡터공간 $V,W$와 linear map $L:V\rightarrow W$가 주어졌다 하자.
 
 1. 만약 $L$이 단사라면, 임의의 일차독립인 부분집합 $S\subseteq V$에 대하여 $L(S)$ 또한 $W$에서 일차독립이다.
-2. 만약 $L$이 전사라면, $\langle S\rangle=V$를 만족하는 $S\subseteq V$에 대해, $L(S)$ 또한 $\span L(S)=W$를 만족한다.
+2. 만약 $L$이 전사라면, $\langle S\rangle=V$를 만족하는 $S\subseteq V$에 대해, $L(S)$ 또한 $\langle L(S)\rangle=W$를 만족한다.
 :::
 ::: 증명
 1. $L(S)$의 원소들 $L(x_1),\ldots, L(x_k)$들에 대하여, 만일
@@ -166,7 +168,7 @@ $$0=L(v_1)-L(v_2)=L(v_1-v_2)$$
 
     $$0=L\left(\sum_{i=1}^k\alpha_ix_i\right)$$
 
-    이므로, 앞선 명제에 의해 $\sum\alpha_ix_i=0$이어야 한다. 이제, $S$는 일차독립인 부분집합이므로, $\alpha_i=0$이 모든 $i$에 대해 성립한다.
+    이므로, [명제 8](#prop8)에 의해 $\sum\alpha_ix_i=0$이어야 한다. 이제, $S$는 일차독립인 부분집합이므로, $\alpha_i=0$이 모든 $i$에 대해 성립한다.
 
 2. 임의의 $w\in W$가 주어졌다 하자. 그럼 $\im L=W$이므로, 적당한 $v\in V$가 존재하여 $L(v)=w$이다. 한편, $\langle S\rangle=V$이므로 $v$를 $S$의 원소들의 일차결합
 
@@ -201,7 +203,7 @@ $$\iota(w)=w\text{ for all $w\in W$}$$
 으로 정의된 $\iota:W\rightarrow V$는 linear map이다. 이번에는 $\im\iota=W$이고, $\ker \iota=\{0\}$이다. 즉, $\iota$는 단사함수이다.
 :::
 
-위의 예시에서 특별히 $W=V$인 경우 $L$은 항등함수 $\id_V$와 같게 된다. ([\[집합론\] §함수들 사이의 연산, ⁋예시 3](/ko/math/set_theory/operation_of_functions#ex3)) 
+위의 예시에서 특별히 $W=V$인 경우 $\iota$는 항등함수 $\id_V$와 같게 된다. ([\[집합론\] §함수들 사이의 연산, ⁋예시 3](/ko/math/set_theory/operation_of_functions#ex3)) 
 
 ::: 예시 12
 임의의 $\mathbb{K}$-벡터공간 $V$, $W$와, 그들의 곱 $V\times W$를 생각하자. 그럼 다음의 식
@@ -226,7 +228,7 @@ $\mathbb{K}[\x]$ 위에 정의된 함수 $D:\mathbb{K}[\x]\rightarrow \mathbb{K}
 
 $$D\left(\sum_{i=0}^\infty a_i\x^i\right)=\sum_{i=1}^\infty ia_i\x^{i-1}$$
 
-으로 정의하자. (여기서 $(a_i)$는 finitely supported이다.) 그럼 $D$는 linear이고, $\im D= \mathbb{K}[\x]$이다. 또, $\ker D$는 모든 constant polynomial들의 모임이다. 
+으로 정의하자. (여기서 $(a_i)$는 finitely supported이다.) 그럼 $D$는 linear이다. 또, $\operatorname{char}\mathbb{K}=0$인 경우 $\im D= \mathbb{K}[\x]$이고 $\ker D$는 모든 constant polynomial들의 모임이다. 
 :::
 
 마지막 예시는 단순한 예시일 뿐만 아니라, 다음 글에서 살펴볼 isomorphism의 원형이라 생각할 수 있다.
@@ -260,7 +262,7 @@ $\ker L$은 $\mathcal{B}$가 일차독립이므로 $\{0\}$이 된다. 한편, �
 
 $$\sum_{i=1}^n\alpha_i x_i$$
 
-은 당연히 $V$에 속하므로, $L$은 단사함수이다. 
+은 당연히 $V$에 속하므로, $L$은 전사함수이다. 
 :::
 
 

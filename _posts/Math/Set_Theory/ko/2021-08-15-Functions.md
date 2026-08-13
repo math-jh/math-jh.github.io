@@ -11,17 +11,19 @@ sidebar:
 date: 2021-08-15
 weight: 5
 
+drift_needed: true
+
 ---
 
 우리는 앞선 글들에서 이항관계를 정의했다. 이 정의에 따르면, 자연수 집합 $\mathbb{N}$에서 정의된 이항관계 $<$는 다음의 집합
 
-$${<}=\{(0,1),(0,2),\ldots, (1,2),(1,3),\ldots, \}$$
+$${<}=\{(0,1),(0,2),\ldots, (1,2),(1,3),\ldots\}$$
 
 을 의미한다. 
 
 {% diagram Math/Set_Theory/Functions-1.svg width="12.56em" alt="elements" %}
 
-이제 [§이항관계, ⁋정의 6](/ko/math/set_theory/binary_relation#def6)의 표기를 따르면 ${<}(1)$은 $(1,n)\in\mathbb{N}$이도록 하는 모든 $n\in\mathbb{N}$들의 모임이고 따라서
+이제 [§이항관계, ⁋정의 6](/ko/math/set_theory/binary_relation#def6)의 표기를 따르면 ${<}(1)$은 $(1,n)\in{<}$이도록 하는 모든 $n\in\mathbb{N}$들의 모임이고 따라서
 
 $${<}(1)=\{2,3,\ldots\}$$
 
@@ -54,7 +56,7 @@ $$F=\{(x,y)\mid (y=f(x))\wedge(x\in A)\}$$
 만일 $f$가 어떠한 집합 $A$에서 $A$로의 함수라면, $x\in A$가 $f$에 의해 *고정된다*는 것은 $f(x)=x$인 것이다. 
 
 ::: 정의 2
-임의의 집합 $A$에 대하여, *항등함수* $\id_A$를 triple $(\Delta_A,A,A)$으로 정의한다. 즉, $\id_A$는 임의의 $x\in A$에 대하여, 식 $f(x)=x$로 정의되는 함수이다.
+임의의 집합 $A$에 대하여, *항등함수* $\id_A$를 triple $(\Delta_A,A,A)$으로 정의한다. 즉, $\id_A$는 임의의 $x\in A$에 대하여, 식 $\id_A(x)=x$로 정의되는 함수이다.
 :::
 
 정의에 의하여, $\id_A$는 $A$의 모든 원소를 고정하는 함수이다.
@@ -118,7 +120,7 @@ $$g(x)=\begin{cases}f(x)&x\in \pr_1F\setminus\pr_1F'\\ f(x)=f'(x)&x\in \pr_1F\ca
 로 정의한다면, 이를 만족하는 $(x,y)$들을 모아둔 $R$은 함수가 되며, 이 함수의 정의역은 $X$가 된다. 따라서 다음과 같이 새로운 함수를 정의할 수 있다.
 
 ::: 정의 5
-위와 같이 정의된 함수 $g$를 $f$의 $A$ 위로의 *restriction<sub>제한</sub>*이라 부르며, 이를 $f\vert_{X}$와 같이 적는다.
+위와 같이 정의된 함수 $R$을 $f$의 $X$ 위로의 *restriction<sub>제한</sub>*이라 부르며, 이를 $f\vert_{X}$와 같이 적는다.
 :::
 
 
@@ -130,4 +132,4 @@ $$g(x)=\begin{cases}f(x)&x\in \pr_1F\setminus\pr_1F'\\ f(x)=f'(x)&x\in \pr_1F\ca
 
 ---
 
-[^1]: 엄밀히 이야기하자면 집합의 크기를 아직 정의하지 않았지만, 이 조건은 $$x,y\in R(a)\implies x=y$$ 등으로 표현할 수 있다. 
+[^1]: 엄밀히 이야기하자면 집합의 크기를 아직 정의하지 않았지만, 이 조건은 $x,y\in R(a)\implies x=y$ 등으로 표현할 수 있다. 

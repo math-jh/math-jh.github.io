@@ -10,6 +10,7 @@ sidebar:
 
 date: 2022-06-15
 weight: 5
+drift_needed: true
 
 ---
 
@@ -57,7 +58,7 @@ $\id_M:M\rightarrow M$은 당연하게 $C^\infty$ 함수이다. 더 일반적으
 그럼 manifold들 사이의 isomorphism은 다음과 같이 정의해야 한다는 것이 명확하다.
 
 ::: 정의 6
-만일 두 manifold $M,N$에 대하여, $F:M\rightarrow N$과 $G:N\rightarrow M$이 각각 존재하여 $G\circ F=\id_M$이고 $F\circ G=\id_N$이라면 $F$와 $G$ 각각을 *diffeomorphism<sub>미분동형사상</sub>*이라 부르고, $F$와 $G$가 *diffeomorphic<sub>미분동형</sub>*이라 말한다.
+만일 두 manifold $M,N$에 대하여, $C^\infty$ 함수 $F:M\rightarrow N$과 $G:N\rightarrow M$이 각각 존재하여 $G\circ F=\id_M$이고 $F\circ G=\id_N$이라면 $F$와 $G$ 각각을 *diffeomorphism<sub>미분동형사상</sub>*이라 부르고, $M$과 $N$이 *diffeomorphic<sub>미분동형</sub>*이라 말한다.
 :::
 
 따라서, manifold들과 smooth function들은 category $\Man$을 이룬다.
@@ -82,7 +83,7 @@ $$(\varphi\circ F^{-1}\circ \psi^{-1})(s)=s$$
 
 Manifold는 기본적으로 미분을 할 수 있는 공간이며, 때문에 manifold 사이의 함수를 알기 위해서는 이 함수가 derivation들, 즉 tangent space의 원소들을 어떠한 방식으로 변환시키는지를 알아야 한다. 
 
-두 manifold 사이의 $C^\infty$ 함수 $F:M\rightarrow N$이 주어졌다 하자. 함수 $F$는 자연스럽게 다음의 식
+두 manifold 사이의 $C^\infty$ 함수 $F:M\rightarrow N$이 주어졌다 하고, 임의의 점 $p\in M$을 고정하자. 함수 $F$는 자연스럽게 다음의 식
 
 $$g\mapsto g\circ F$$
 
@@ -134,7 +135,7 @@ $$\dd{(G\circ F)_p}=(\dd{G_{F(p)}})\circ (\dd{F_p})$$
 Manifold $M$과, $M$의 open submanifold $U$에 대하여, inclusion map $\iota:U\hookrightarrow M$은 모든 $p\in U$에 대하여 tangent space 사이의 isomorphism을 유도한다. 즉, $\dd{\iota_p}$가 항상 isomorphism이다.
 :::
 ::: 증명
-$\iota^\ast$가 $\mathcal{C}^\infty_{U,p}$와 $\mathcal{C}^\infty_{M,\iota(p)}$ 사이의 isomorphism을 만들기 때문에 자명하다. 사실 처음부터 두 벡터공간은 같은 것으로 보아도 무리가 없다.
+Germ은 점의 임의로 작은 근방에서 결정되므로 restriction으로 주어지는 $\iota^\ast:\mathcal{C}^\infty_{M,\iota(p)}\rightarrow\mathcal{C}^\infty_{U,p}$가 $\mathbb{R}$-algebra의 isomorphism이 되고, 따라서 그 dual 또한 isomorphism이면서 라이프니츠 법칙을 양방향으로 보존하므로 $\dd{\iota_p}:T_pU\rightarrow T_{\iota(p)}M$이 isomorphism이다. 사실 처음부터 두 벡터공간은 같은 것으로 보아도 무리가 없다.
 :::
 
 ## 접공간의 기저와 미분사상
@@ -147,9 +148,9 @@ $$\frac{\partial}{\partial r^1}\bigg\vert_p,\cdots,\frac{\partial}{\partial r^m}
 
 $$\frac{\partial}{\partial x^1}\bigg\vert_p,\cdots,\frac{\partial}{\partial x^m}\bigg\vert_p$$
 
-들로 표현하였다. 이 때, 임의의 $f\in C^\infty_p(M)$에 대하여
+들로 표현하였다. 이 때, 임의의 $f\in \mathcal{C}^\infty_{M,p}$에 대하여
 
-$$\frac{\partial}{\partial x^i}\bigg\vert_pf=\frac{\partial}{\partial r^i}\bigg\vert_p (f\circ\varphi^{-1})$$
+$$\frac{\partial}{\partial x^i}\bigg\vert_pf=\frac{\partial}{\partial r^i}\bigg\vert_{\varphi(p)} (f\circ\varphi^{-1})$$
 
 이다. 그런데 [정의 7](#def7)을 염두에 두고 이 식을 다시 살펴보면, 이는 $\varphi^{-1}:\varphi(U)\rightarrow U$의 differential과 동일한 모양임을 알 수 있다.[^1] 즉 tangent space의 basis는 다른 것이 아니라, 단지 $\mathbb{R}^m$의 tangent space $T_{\varphi(p)}\mathbb{R}^m$의 $m$개의 basis들을 differential $\dd{\varphi}^{-1}_{\varphi(p)}$를 통해 옮겨온 것일 뿐이다.
 
@@ -163,7 +164,7 @@ $$\frac{\partial}{\partial x^1}\bigg\vert_p,\cdots,\frac{\partial}{\partial x^m}
 
 $$\dd{F_p}\left(\frac{\partial}{\partial x^i}\bigg\vert_p\right)=a_{1i}\frac{\partial}{\partial y^1}\bigg\vert_{F(p)}+\cdots+a_{ni}\frac{\partial}{\partial y^n}\bigg\vert_{F(p)}$$
 
-의 각 계수들 $a_{ji}$를 구해주면 된다. 그런데 어차피 $\partial/\partial y^j$들은 $\mathfrak{n}/\mathfrak{n}^2$의 원소들 $y^j+\mathfrak{n}^2$의 dual basis이므로, 이를 위해서는 양 변을 함수 $y^j$에 적용해주면 된다.[^2] 즉
+의 각 계수들 $a_{ji}$를 구해주면 된다. 그런데 $\mathcal{C}^\infty_{N,F(p)}$의 maximal ideal을 $\mathfrak{n}$이라 하면, 어차피 [§여접공간, ⁋정의 3](/ko/math/manifolds/cotangent_space#def3)에서 보았듯 $\partial/\partial y^j$들은 $\mathfrak{n}/\mathfrak{n}^2$의 원소들 $y^j+\mathfrak{n}^2$의 dual basis이므로, 이를 위해서는 양 변을 함수 $y^j$에 적용해주면 된다.[^2] 즉
 
 $$\dd{F_p}\left(\frac{\partial}{\partial x^i}\bigg\vert_p\right)y^j=a_{1i}\frac{\partial}{\partial y^1}\bigg\vert_{F(p)}y^j+\cdots+a_{ji}\frac{\partial}{\partial y^j}\bigg\vert_{F(p)}y^j+\cdots+a_{ni}\frac{\partial}{\partial y^n}\bigg\vert_{F(p)}y^j$$
 

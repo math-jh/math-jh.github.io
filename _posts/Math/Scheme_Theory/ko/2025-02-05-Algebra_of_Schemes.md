@@ -10,6 +10,7 @@ sidebar:
 
 date: 2025-02-05
 weight: 7
+drift_needed: true
 ---
 
 Scheme은 기하적인 동시에 대수적인 대상이므로, 이를 잘 알기 위해서는 앞선 글에서 살펴본 scheme의 위상구조 뿐만 아니라 대수적인 구조도 동시에 고려할 필요가 있으며, 우리는 이전 글에서 이러한 철학이 어떻게 반영되는지를 간략하게 살펴보았다. 이번 글에서는 이 철학을 더욱 발전시킨다. 
@@ -114,7 +115,7 @@ $$X=\bigcup_{j=1}^s X_j\tag{$\ast$}$$
 
 $$X_1\cap \Spec A_i,\quad X_2\cap \Spec A_i,\quad\ldots,\quad X_s\cap \Spec A_i$$
 
-중 공집합이 아닌 것들은 $\Spec A_i$의 irreducible component들이 된다. 이제 [§스펙트럼, ⁋명제 16](/ko/math/scheme_theory/spectrums#prop16)에 의하여, 이들 각각은 minimal prime ideal $\mathfrak{q}_j=I(X_j)$를 정의하며 거꾸로 $A_i$의 임의의 minimal prime ideal은 irreducible component $X_j\cap \Spec A_i$를 유일하게 결정한다. 
+중 공집합이 아닌 것들은 $\Spec A_i$의 irreducible component들이 된다. 이제 [§스펙트럼, ⁋따름정리 17](/ko/math/scheme_theory/spectrums#cor17)에 의하여, 이들 각각은 minimal prime ideal $\mathfrak{q}_j=I(X_j\cap \Spec A_i)$를 정의하며 거꾸로 $A_i$의 임의의 minimal prime ideal은 irreducible component $X_j\cap \Spec A_i$를 유일하게 결정한다. 
 
 한편 $s=1$이라면 $X$가 이미 irreducible이므로 보일 것이 없다. 따라서 $s\geq 2$라 하고 irreducible decomposition ($\ast$)에서 두 닫힌집합
 
@@ -184,7 +185,7 @@ Noetherian ring의 spectrum $\Spec A$의 associated point들 중, $\Spec A$의 i
 한편, 정의에 의해 다음이 성립한다.
 
 ::: 명제 10
-Noetherian ring의 spectrum $\Spec A$의 associated point들은 적당한 $f\in A$에 대하여, $\supp(f)$의 irreducible component의 generic point이며, 그 역 또한 성립한다.
+Noetherian ring의 spectrum $\Spec A$의 associated point들은 적당한 $f\in A$에 대하여, [§스킴, ⁋정의 6](/ko/math/scheme_theory/schemes#def6)의 support $\supp(f)$의 irreducible component의 generic point이며, 그 역 또한 성립한다.
 :::
 ::: 증명
 우선 임의의 $g\in A$와 prime ideal $\mathfrak{q}\in \Spec A$에 대하여
@@ -237,7 +238,7 @@ $$\x_2\cdot(p(\x_1)+c\x_2)=p(0)\x_2$$
 
 이므로 $\ann(\x_2)=(\x_1,\x_2)$이다. 이는 $\ann(\x_1)=(\x_2)$를 진부분집합으로 포함하는 ideal로, 기하적으로는 원점에 해당한다. 이는 위의 예시와 달리 $X$의 irreducible component의 generic point로 나타나지 않는 점, 즉 embedded point이다. 
 
-실제로 이 두 점이 $X$의 associated point 전부이다. $f=p(\x_1)+c\x_2$와 $g=q(\x_1)+\dd{\x_2}$에 대하여 $\x_1\x_2=\x_2^2=0$으로부터
+실제로 이 두 점이 $X$의 associated point 전부이다. $f=p(\x_1)+c\x_2$와 $g=q(\x_1)+d\x_2$에 대하여 $\x_1\x_2=\x_2^2=0$으로부터
 
 $$fg=p(\x_1)q(\x_1)+\bigl(dp(0)+cq(0)\bigr)\x_2$$
 

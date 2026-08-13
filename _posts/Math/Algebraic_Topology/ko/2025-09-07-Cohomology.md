@@ -10,12 +10,13 @@ sidebar:
 
 date: 2025-09-07
 weight: 9
+drift_needed: true
 
 ---
 
 Cohomology는, 그 이름에서 알 수 있듯, homology의 dual에 해당하는 개념이라 할 수 있다. 그러나 단순히 공간 $X$의 $k$번째 cohomology $H^k(X)$가 $k$번째 homology $H_k(X)$의 dual이었다면 이를 별도로 생각할 필요가 없을 것이다.
 
-실제로 cohomology는 homology보다 더 정교한 불변량을 주는데, 가령 cohomology 위에는 자연스러운 곱셈 구조가 정의되며, 같은 homology를 갖는 공간이라 하더라도 이 곱셈구조가 다르다면 homtopic하지 않다. 이번 글에서는 cohomology의 정의와 기본적인 성질들에 대해 살펴본다. 
+실제로 cohomology는 homology보다 더 정교한 불변량을 주는데, 가령 cohomology 위에는 자연스러운 곱셈 구조가 정의되며, 같은 homology를 갖는 공간이라 하더라도 이 곱셈구조가 다르다면 homotopic하지 않다. 이번 글에서는 cohomology의 정의와 기본적인 성질들에 대해 살펴본다. 
 
 ## 호몰로지의 보편계수정리
 
@@ -27,7 +28,7 @@ $$C_\bullet(X;A):=C_\bullet(X)\otimes_\mathbb{Z}A,\qquad C_\bullet^\Delta(X;A):=
 
 $$H_k(X;A),\qquad H_k^\Delta(X;A)$$
 
-을 정의할 수 있다는 것을 살펴보았다. 이를 실질적으로 계산하기 위해서는 가령 $H_k(X;A)$ 혹은 $H_k^\Delta(X;A)$가 $H_k(X;A)\otimes_\mathbb{Z}A$ 혹은 $H_k^\Delta(X;A)\otimes_\mathbb{Z}A$와 같은 식으로 나오는지를 추가적으로 살펴보아야 할 것인데, 일반적으로 tensor product는 right-exact이지만 left-exact는 아니므로 이는 과도한 기대일 것이며, 우리는 텐서를 취함으로써 손실되는 정보를 추가로 측정해주어야 할 것이다. 
+을 정의할 수 있다는 것을 살펴보았다. 이를 실질적으로 계산하기 위해서는 가령 $H_k(X;A)$ 혹은 $H_k^\Delta(X;A)$가 $H_k(X)\otimes_\mathbb{Z}A$ 혹은 $H_k^\Delta(X)\otimes_\mathbb{Z}A$와 같은 식으로 나오는지를 추가적으로 살펴보아야 할 것인데, 일반적으로 tensor product는 right-exact이지만 left-exact는 아니므로 이는 과도한 기대일 것이며, 우리는 텐서를 취함으로써 손실되는 정보를 추가로 측정해주어야 할 것이다. 
 
 이를 위해, free abelian group들로 이루어진 chain complex $C_\bullet$을 생각하고, $\Ch_{\geq 0}(\Ab)$에서의 short exact sequence
 
@@ -45,7 +46,7 @@ $$0 \rightarrow Z_\bullet\otimes_\mathbb{Z}A \rightarrow C_\bullet\otimes_\mathb
 
 과 같은 꼴이고 따라서  [\[호몰로지 대수학\] §긴 완전열, ⁋정리 1](/ko/math/homological_algebra/long_exact_sequence#thm1)에 의해 다음의 long exact sequence
 
-$$\cdots B_k\otimes_\mathbb{Z}A\overset{\delta_k}{\longrightarrow}Z_k\otimes_\mathbb{Z}A\rightarrow H_k(C\otimes A)\rightarrow B_{k-1}\otimes_\mathbb{Z}A\overset{\delta_{k-1}}{\longrightarrow} Z_{k-1}\otimes_\mathbb{Z}A\rightarrow\cdots\tag{2}$$
+$$\cdots \rightarrow B_k\otimes_\mathbb{Z}A\overset{\delta_k}{\longrightarrow}Z_k\otimes_\mathbb{Z}A\rightarrow H_k(C\otimes A)\rightarrow B_{k-1}\otimes_\mathbb{Z}A\overset{\delta_{k-1}}{\longrightarrow} Z_{k-1}\otimes_\mathbb{Z}A\rightarrow\cdots\tag{2}$$
 
 를 얻는다. 
 
@@ -55,7 +56,7 @@ $$0 \rightarrow B_k\overset{i_k}{\longrightarrow} Z_k \overset{p_k}{\longrightar
 
 을 생각하자. 그럼, $B_k$과 $Z_k$, 그리고 $0$은 모두 free abelian group이므로 이는 $H_k(C_\bullet)$의 free resolution으로 볼 수 있고, 따라서 정의에 의해 $\delta_k$을 다음의 exact sequence
 
-$$0 \rightarrow \Tor_1^\mathbb{Z}(H_k(C), A)\rightarrow B_k\otimes_\mathbb{Z}A\overset{\delta_k}{\longrightarrow} Z_k\otimes_\mathbb{Z}A\rightarrow H_k\otimes_\mathbb{Z}A\rightarrow 0$$
+$$0 \rightarrow \Tor_1^\mathbb{Z}(H_k(C), A)\rightarrow B_k\otimes_\mathbb{Z}A\overset{\delta_k}{\longrightarrow} Z_k\otimes_\mathbb{Z}A\rightarrow H_k(C)\otimes_\mathbb{Z}A\rightarrow 0$$
 
 에 넣을 수 있다. 즉, 다음의 isomorphism
 
@@ -89,14 +90,14 @@ $$H_k(X;A)\cong \left(H_k(X)\otimes_\mathbb{Z}A\right)\oplus \Tor_1^\mathbb{Z}(H
 ::: 정의 2 (Eilenberg-Steenrod axioms)
 위상공간들의 pair들의 category에서 abelian group들의 category로의 contravariant functor들 $H^k$과, 이들 사이의 natural transformation
 
-$$\delta: H^k(X) \rightarrow H^{k+1}(X,A)$$
+$$\delta: H^k(A) \rightarrow H^{k+1}(X,A)$$
 
 들에 대하여, *Eilenberg-Steenrod axiom*은 다음의 공리들을 뜻한다. 
 
 - (Homotopy) 두 homotopic map $(X,A) \rightarrow (Y,B)$이 주어졌다면, 이들이 유도하는 두 homomorphism들 $H^k(Y,B) \rightarrow H^k(X,A)$들도 동일하다. 
 - (Excision) [§호몰로지의 계산, ⁋정리 2](/ko/math/algebraic_topology/computation_of_homology#thm2)의 조건을 만족하는 $(X,A,Z)$에 대하여, $(X\setminus Z, A\setminus Z)\hookrightarrow (X,A)$는 isomorphism을 유도한다. 
 - (Dimension) One-point space $\ast$에 대하여, $H^k(\ast)=0$이 모든 $k>0$에 대해 성립한다. 
-- (Additivity) 만일 $X=\coprod X_\alpha$라면, $H^k(X)\cong\bigoplus H^k(X_\alpha)$이다. 
+- (Additivity) 만일 $X=\coprod X_\alpha$라면, $H^k(X)\cong\prod H^k(X_\alpha)$이다. 
 - (Exactness) 각각의 pair $(X,A)$와, 두 inclusion $(A,\emptyset) \hookrightarrow (X,\emptyset)$ 그리고 $(X,\emptyset)\hookrightarrow (X,A)$들은 다음의 long exact sequence
     
     $$\cdots \rightarrow H^k(X,A)\rightarrow H^k(X) \rightarrow H^k(A) \rightarrow H^{k+1}(X,A)\rightarrow \cdots$$
@@ -174,7 +175,7 @@ $$\omega=\dd{x}\wedge \dd{y}$$
 
 가령 다음의 집합 
 
-$$S = \{ (x, y, 0) \mid 0 \leq x \leq 1,\, 0 \leq y \leq 1 \}$$
+$$S = \{ (x, y, 0) \mid 0 \leq x \leq 1, 0 \leq y \leq 1 \}$$
 
 이 주어졌다 하자. 그럼 이 집합에서의 $\omega$의 값은 단순히
 
@@ -200,7 +201,7 @@ $$\begin{align*}
 
 와 같은 식으로 적분을 계산할 수 있다. 그럼 differential $2$-form $\omega$는, 이러한 방식으로 $S$나 $\Sigma$와 같은 2차원 부분집합을 받아 숫자를 내놓는 함수라 생각할 수 있다. 
 
-이제 Poincaré lemma에 의하여 우리는 $\mathbb{R}^n$ 위의 임의의 closed $k$-form들은 항상 적당한 $k-1$-form의 exterior derivative로 나온다는 것을 안다. 따라서 임의의 $k>0$에 대하여
+이제 Poincaré lemma에 의하여 우리는 임의의 $k>0$에 대하여 $\mathbb{R}^n$ 위의 closed $k$-form들은 항상 적당한 $k-1$-form의 exterior derivative로 나온다는 것을 안다. 따라서 임의의 $k>0$에 대하여
 
 $$H^k_\dR(\mathbb{R}^n)=0$$
 
@@ -230,14 +231,14 @@ $$H^k(X;\mathbb{R})\cong \Hom_\mathbb{Z}(H_k(X),\mathbb{R})$$
 
 $$C_\bullet(X;A):=C_\bullet(X)\otimes_\mathbb{Z}A,\qquad C_\bullet^\Delta(X;A):=C_\bullet^\Delta(X)\otimes_\mathbb{Z}A$$
 
-들은, 만일 $A$가 ring이었다면, $A$-module들의 chain complex이고, 앞서 정의한 $C^\bullet(X;A)$ 또한 그러하다는 것을 안다.따라서 이들에 homology 혹은 cohomology를 취하면 그 결과 또한 $A$-module이 될 것이다.
+들은, 만일 $A$가 ring이었다면, $A$-module들의 chain complex이고, 앞서 정의한 $C^\bullet(X;A)$ 또한 그러하다는 것을 안다. 따라서 이들에 homology 혹은 cohomology를 취하면 그 결과 또한 $A$-module이 될 것이다.
 
 한편, 우리는 만일 $A$가 principal ideal domain이라면 임의의 free $A$-module의 submodule은 다시 free $A$-module임을 알고 있다. [명제 1](#prop1)의 증명을 다시 살펴보면, $\mathbb{Z}$가 principal ideal domain이므로 free $\mathbb{Z}$-module (즉 free abelian group)의 submodule이 다시 free $\mathbb{Z}$-module이 된다는 사실을 활용한 것이며, 이를 바탕으로 앞선 두 명제를 다음과 같이 일반화할 수 있다.
 
 ::: 정리 4 (Universal coefficient theorem for homology, general version)
 Principal ideal domain $A$와, free $A$-module들의 chain complex $C_\bullet$, 그리고 임의의 $A$-module $M$에 대하여 다음의 short exact sequence
 
-$$0 \rightarrow H_k(C)\otimes_AM\rightarrow H_k(C\otimes_AM)\rightarrow \Tor_1^A(H_{k-1}(C), A)\rightarrow 0$$
+$$0 \rightarrow H_k(C)\otimes_AM\rightarrow H_k(C\otimes_AM)\rightarrow \Tor_1^A(H_{k-1}(C), M)\rightarrow 0$$
 
 이 존재한다. 뿐만 아니라, 이 sequence는 (non-canonical하게) split하며 따라서 다음의 (non-canonical) isomorphism
 
@@ -285,7 +286,7 @@ $$(C\otimes D)_k=\bigoplus_{p+q=k}C_p\otimes_A D_q$$
 
 로 정의하고, differential은 homogeneous element에 대해서는
 
-$$\partial(x,y)=(\partial^Cx,y)+(-1)^{\deg(x)}(x,\partial^Dy)$$
+$$\partial(x\otimes y)=\partial^Cx\otimes y+(-1)^{\deg(x)}x\otimes\partial^Dy$$
 
 으로 정의한 후, 이를 linear하게 확장하여 얻어지는 것이다.
 :::
@@ -295,7 +296,7 @@ $$\partial(x,y)=(\partial^Cx,y)+(-1)^{\deg(x)}(x,\partial^Dy)$$
 그럼 Künneth formula의 대수적인 내용은 다음 보조정리에 담겨있다.
 
 ::: 보조정리 8
-Principal ideal doamin $A$와 $A$-module들의 chain complex $C_\bullet$, $D_\bullet$이 주어졌다 하고 $C_\bullet$이 free $A$-module들의 chain complex라 하자. 그럼 임의의 $k$에 대하여 다음의 short exact sequence
+Principal ideal domain $A$와 $A$-module들의 chain complex $C_\bullet$, $D_\bullet$이 주어졌다 하고 $C_\bullet$이 free $A$-module들의 chain complex라 하자. 그럼 임의의 $k$에 대하여 다음의 short exact sequence
 
 $$0 \rightarrow \bigoplus_{p+q=k}H_p(C)\otimes_AH_q(D)\rightarrow H_k(C\otimes D)\rightarrow \bigoplus_{p+q=k-1}\Tor_1^A(H_p(C),H_q(D))\rightarrow 0$$
 
@@ -375,7 +376,7 @@ $$\sum_p (\pi_X\circ \sigma\vert_{[v_0,\ldots,v_p]})\otimes (\pi_Y\circ \sigma\v
 
 Eilenberg-Zilber map $\EZ:(C(X)\otimes C(Y))_\bullet \rightarrow C_\bullet(X\times Y)$는 simple tensor들에 대하여 다음의 식
 
-$$\EZ(\sigma\otimes\tau)=\sum_{\substack{\alpha_1<\cdots <\alpha_p\\\beta_1<\cdots <\beta_q}}\sgn(\alpha_1,\ldots,\alpha_p,\beta_1,\ldots,\beta_q)(\sigma\circ s_{\alpha_p}\cdots s_{\alpha_1})\times(\tau\circ s_{\beta_q}\cdots s_{\beta_1})$$
+$$\EZ(\sigma\otimes\tau)=\sum_{\substack{\alpha_1<\cdots <\alpha_p,\quad \beta_1<\cdots <\beta_q\\ \{\alpha_1,\ldots,\alpha_p\}\sqcup\{\beta_1,\ldots,\beta_q\}=\{0,1,\ldots,p+q-1\}}}\sgn(\alpha_1,\ldots,\alpha_p,\beta_1,\ldots,\beta_q)(\sigma\circ s_{\beta_q}\cdots s_{\beta_1})\times(\tau\circ s_{\alpha_p}\cdots s_{\alpha_1})$$
 
 로 정의되며, 이는 식으로 보면 복잡하지만 [§호모토피, ⁋명제 6](/ko/math/algebraic_topology/homotopy#prop6)의 증명에서 등장하는 $h_n$ 함수, 즉 prism $\Delta^p\times \Delta^q$를 simplex들로 쪼개주는 방법을 나타낸 것에 불과하다. 그럼 [정리 9](#thm9)의 결과는 다음의 두 식
 
@@ -383,7 +384,7 @@ $$\AW\circ\EZ=\id_{(C(X)\otimes C(Y))_\bullet},\qquad \EZ\circ \AW\simeq \id_{C_
 
 으로부터 나온다.
 
-따라서 [보조정리 8](#lem8)에 [정리 9](#thm9)를 종합하면 다음의 결과를 얻는다.
+[정리 9](#thm9)의 chain homotopy equivalence는 free complex들 사이의 것이므로 $\otimes_\mathbb{Z}A$ 이후에도 유지되고, 이로부터 $C_\bullet(X\times Y)\otimes_\mathbb{Z}A\simeq (C(X)\otimes C(Y))_\bullet\otimes_\mathbb{Z}A\cong C_\bullet(X;A)\otimes_AC_\bullet(Y;A)$를 얻는다. 따라서 [보조정리 8](#lem8)에 [정리 9](#thm9)를 종합하면 다음의 결과를 얻는다.
 
 ::: 따름정리 10 (Künneth)
 위상공간 $X,Y$를 고정하자. 그럼 이들의 곱공간 $X\times Y$와 principal ideal domain $A$에 대하여, 다음의 short exact sequence
@@ -408,4 +409,4 @@ $$H_k(X\times Y;A)\cong \left( \bigoplus_{p+q=k}H_p(X;A)\otimes_AH_q(Y;A)\right)
 
 ---
 
-[^1]: 물론 우리는 이 pairing이 $$H^k(X;A)$$에서 $$\Hom(H_k(X),A)$$로의 homomorphism을 주는 것을 바랄 것이나, 상황이 이처럼 단순하지는 않고 숨겨진 torsion을 담고 있는 $$\Ext$$ 항이 나와야 한다는 것을 [명제 3](#prop3)로부터 알고 있다.
+[^1]: 물론 우리는 이 pairing이 $H^k(X;A)$에서 $\Hom(H_k(X),A)$로의 homomorphism을 주는 것을 바랄 것이나, 상황이 이처럼 단순하지는 않고 숨겨진 torsion을 담고 있는 $\Ext$ 항이 나와야 한다는 것을 [명제 3](#prop3)로부터 알고 있다.

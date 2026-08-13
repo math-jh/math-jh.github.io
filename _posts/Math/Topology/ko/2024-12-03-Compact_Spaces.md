@@ -10,6 +10,7 @@ sidebar:
 
 date: 2024-12-03
 weight: 14
+drift_needed: true
 
 ---
 
@@ -21,7 +22,7 @@ weight: 14
 위상공간 $X$가 *compact<sub>옹골</sub>*인 것은 $X$의 임의의 open covering $(U_i)_{i\in I}$가 주어질 때마다, 유한한 부분집합 $J\subseteq I$가 존재하여 $(U_j)_{j\in J}$가 여전히 $X$의 open covering인 것이다.
 :::
 
-정의에 의해, compact space들의 유한한 합집합은 다시 compact인 것을 안다. 이와 같이 compactness는 적당한 종류의 유한성과 관련이 있다.
+정의에 의해, 한 위상공간의 compact subspace 유한 개의 합집합은 다시 compact인 것을 안다. 이와 같이 compactness는 적당한 종류의 유한성과 관련이 있다.
 
 위상공간 $X$의 부분공간 $Y$를 생각하자. 그럼 $Y$ 또한 위상공간이므로, 이 위상공간이 compact인지를 살펴볼 수 있다. 다음 명제는 $Y$가 compact인 것을 따져보기 위해서는 $X$의 열린집합들로 이루어진 covering을 생각하면 된다는 것을 보여준다.
 
@@ -51,7 +52,7 @@ Compact space $X$, $X$의 닫힌집합 $Y$가 주어졌다 하고 $Y$의 open co
 Hausdorff space $X$가 주어졌다 하고, $X$의 한 점 $x$, 그리고 $x$를 포함하지 않는 $X$의 compact subspace $Y$가 주어졌다 하자. 그럼 두 집합 $\{x\}$와 $Y$는 근방으로 분리가능하다.
 :::
 ::: 증명
-$X$가 Hausdorff space이므로, 각각의 $y\in Y$마다 $x$의 열린근방 $U_{xy}$, $y$의 열린근방 $V_y$가 존재하여 $U_{xy}\cap V_y=\emptyset$이다. 이제 [보조정리 3](#lem3)에 의하여 $(V_y)_{y\in Y}$의 finite subcover $V_{y_1},\ldots,V_{y_n}$이 존재하여 여전히
+$X$가 Hausdorff space이므로, 각각의 $y\in Y$마다 $x$의 열린근방 $U_{xy}$, $y$의 열린근방 $V_y$가 존재하여 $U_{xy}\cap V_y=\emptyset$이다. 이제 [명제 2](#prop2)에 의하여 $(V_y)_{y\in Y}$의 finite subcover $V_{y_1},\ldots,V_{y_n}$이 존재하여 여전히
 
 $$Y\subseteq V_{y_1}\cup\cdots\cup V_{y_n}$$
 

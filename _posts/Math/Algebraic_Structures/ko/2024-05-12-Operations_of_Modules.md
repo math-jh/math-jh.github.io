@@ -10,6 +10,7 @@ sidebar:
 
 date: 2024-05-12
 weight: 202
+drift_needed: true
 
 
 ---
@@ -57,7 +58,7 @@ $\lMod{A}$는 bicomplete category이며, 특히 $A$-module들의 family $(M_i)$�
 
 뿐만 아니라 $\lMod{A}$는 abelian category가 된다. ([\[범주론\] §아벨 카테고리, ⁋정의 3](/ko/math/category_theory/abelian_categories#def3)) 이를 확인하기 위해서는 임의의 monomorphism $u:M \rightarrow N$은 그 cokernel $N \rightarrow N/M$의 kernel과 같고, 임의의 epimorphism $v:M \rightarrow N$은 그 kernel $\ker v$의 cokernel $M \rightarrow M/\ker v$과 같다는 것을 확인하면 된다. 
 
-## free module
+## Free module
 
 [§가군, ⁋예시 5](/ko/math/algebraic_structures/modules#ex5)에서 우리는 ring $A$가 $A$-module의 구조를 가진다는 것을 살펴보았다. 그럼 임의의 $A$-module homomorphism $u:A \rightarrow M$는 $u(1)$에 의해 유일하게 결정된다. 임의의 $\alpha\in A$에 대하여, 
 
@@ -105,9 +106,9 @@ Functor $\Balan_A(M,N;-):\lMod{\mathbb{Z}}=\Ab\rightarrow\Set$은 representable 
 ::: 증명
 Free abelian group $F(M\times N)$의 subgroup $M'$를
 
-$$M'=\left\langle (x, y_1+y_2)-(x,y_1)-(x,y_2), (x_1+x_2,y)-(x_1,y)-(x_2,y), (\alpha x,y)-(x,\alpha y)\right\rangle$$
+$$M'=\left\langle (x, y_1+y_2)-(x,y_1)-(x,y_2), (x_1+x_2,y)-(x_1,y)-(x_2,y), (x\alpha,y)-(x,\alpha y)\right\rangle$$
 
-으로 정의하자. 그럼 free group의 universal property에 의하여, 임의의 함수 $f:M\times N \rightarrow L$이 주어질 때마다 group homomorphism $\hat{f}:F(M\times N)\rightarrow L$이 존재하고, $f$가 $A$-balanced라면 이 $\hat{f}$의 kernel이 $M'$를 포함하므로 $\hat{f}$가 $F(M\times N)/M'$에서 $L$로의 group homomorphism을 정의한다. 
+으로 정의하자. 그럼 free abelian group의 universal property에 의하여, 임의의 함수 $f:M\times N \rightarrow L$이 주어질 때마다 group homomorphism $\hat{f}:F(M\times N)\rightarrow L$이 존재하고, $f$가 $A$-balanced라면 이 $\hat{f}$의 kernel이 $M'$를 포함하므로 $\hat{f}$가 $F(M\times N)/M'$에서 $L$로의 group homomorphism을 정의한다. 
 
 Isomorphism $\Balan_A(M,N;L)\cong\Hom_\Ab(F(M\times N)/M',L)$의 naturality는 추가적으로 보여야 하긴 하지만, 단순한 계산이므로 생략한다. 
 :::
@@ -138,17 +139,17 @@ $$\Hom_{\lMod{A}}\left(M,\prod_{i\in I} N_i\right)\cong\prod_{i\in I}\Hom_{\lMod
 
 $$(x\alpha)\otimes_A y=x\otimes_A(\alpha y)$$
 
-를 $\alpha(x\otimes_Ay)$로 정의하는 것이 자연스럽겠지만, $(\alpha\beta)(x\otimes_Ay)$를 계산해서 나온
+를 $\alpha(x\otimes_Ay)$로 정의하는 것이 자연스럽겠지만, $(\alpha\beta)(x\otimes_Ay)$와 $\alpha(\beta(x\otimes_Ay))$를 계산해서 나온
 
-$$(x\alpha\beta)\otimes_A y,\qquad x\otimes_A(\alpha\beta y)$$
+$$(x\alpha\beta)\otimes_A y,\qquad (x\beta\alpha)\otimes_A y$$
 
 가 서로 다른 원소가 될 것이기 때문이다. Tensor product의 정의에서, $M$은 right module로, $N$은 left module로 두는 것도 이와 비슷한 이유에서이다.
 
 만일 $M$이 right $A$-module의 구조 뿐만 아니라, 이와 호환되는 left $B$-module 구조를 갖고 있다면 $M$을 $(B,A)$-bimodule이라 부른다. 즉, 임의의 $\alpha\in A$, $\beta\in B$, $x\in M$에 대하여 다음 식
 
-$$(\alpha\cdot_A x)\cdot_B\beta=\alpha\cdot_A(x\cdot_B\beta)$$
+$$(\beta\cdot_B x)\cdot_A\alpha=\beta\cdot_B(x\cdot_A\alpha)$$
 
-아 성립해야 하는 것이다. 그럼 다음 식
+이 성립해야 하는 것이다. 그럼 다음 식
 
 $$\beta(x\otimes_A y)=(\beta x)\otimes_Ay$$
 

@@ -10,6 +10,7 @@ sidebar:
 
 date: 2025-02-03
 weight: 6
+drift_needed: true
 ---
 
 ## 일반점
@@ -58,7 +59,7 @@ Scheme $(X,\mathcal{O}_X)$가 주어졌다 하자. 만일 $X$가 위상공간으
 Irreducibility의 경우 다음 예시들을 보자. 
 
 ::: 예시 5
-임의의 integral domain $A$에 대하여, $\Spec A$는 항상 irreducible이다. Generic point $\{0\}$을 생각하면, $\{0\}$를 포함하는 닫힌집합은 오직 $\Spec A$ 자신뿐이어야 하므로, $\Spec A$를 두 개의 proper closed subset의 합집합으로 나타내는 것이 불가능하기 때문이다. 따라서 $A=\mathbb{K}[\x_1,\ldots, \x_n]$으로 두면 affine $n$-space $\mathbb{A}_\mathbb{K}^n$은 irreducible인 것을 안다. 그럼 projective space $\mathbb{P}^n_\mathbb{K}$는 $\mathbb{A}^n_\mathbb{K}$와 isomorphic한 열린집합들 $D_+(\x_i)$로 덮이고, 임의의 $i,j$에 대하여 $D_+(\x_i)\cap D_+(\x_j)=D_+(\x_i\x_j)$는 가령 $\x_i\x_j$를 포함하지 않는 prime ideal $(0)$을 원소로 가져 공집합이 아니므로, [\[위상수학\] §차원, ⁋명제 8](/ko/math/topology/dimension#prop8)에 의해 $\mathbb{P}^n_\mathbb{K}$ 또한 irreducible이다. 
+임의의 integral domain $A$에 대하여, $\Spec A$는 항상 irreducible이다. Generic point $(0)$을 생각하면, $(0)$을 포함하는 닫힌집합은 오직 $\Spec A$ 자신뿐이어야 하므로, $\Spec A$를 두 개의 proper closed subset의 합집합으로 나타내는 것이 불가능하기 때문이다. 따라서 $A=\mathbb{K}[\x_1,\ldots, \x_n]$으로 두면 affine $n$-space $\mathbb{A}_\mathbb{K}^n$은 irreducible인 것을 안다. 그럼 projective space $\mathbb{P}^n_\mathbb{K}$는 $\mathbb{A}^n_\mathbb{K}$와 isomorphic한 열린집합들 $D_+(\x_i)$로 덮이고, 임의의 $i,j$에 대하여 $D_+(\x_i)\cap D_+(\x_j)=D_+(\x_i\x_j)$는 가령 $\x_i\x_j$를 포함하지 않는 prime ideal $(0)$을 원소로 가져 공집합이 아니므로, [\[위상수학\] §차원, ⁋명제 8](/ko/math/topology/dimension#prop8)에 의해 $\mathbb{P}^n_\mathbb{K}$ 또한 irreducible이다. 
 
 거꾸로 affine scheme $\Spec A$의 임의의 irreducible closed set $Z$는 항상 generic point $I(Z)$를 갖는다. ([§스펙트럼, ⁋명제 16](/ko/math/scheme_theory/spectrums#prop16)) 
 :::
@@ -140,7 +141,7 @@ $$\Spec A=\Spec A\setminus Z(f_1,\ldots, f_r)=\Spec A\setminus\bigcap_{i=1}^r Z(
 1. $\Spec A$가 $P_\geo$를 만족한다면, 임의의 principal open set $D(f)$ 또한 $P_\geo$를 만족한다.
 2. $\Spec A$를 덮는 open covering $D(f_1),\ldots, D(f_r)$가 각각 $P_\geo$를 만족한다면, $\Spec A$도 $P_\geo$를 만족한다. 
 
-한편 $\Spec A$의 일반적인 open set은 principal open set들의 합집합으로 나타낼 수 있고 ([§스펙트럼, ⁋보조정리 11](/ko/math/scheme_theory/spectrums#lem11)), 따라서 $\Spec A$가 $P_\geo$를 만족하면 $\Spec A$의 임의의 *affine* open subset 또한 $P_\geo$를 만족한다. 이처럼 principal open set들로 검사하여 결정되는 성질을 *affine-local property*라 부르며, 이를 임의의 scheme의 affine subscheme들에 대한 성질로 일반화한 것이 다음 정의이다. 
+한편 $\Spec A$의 일반적인 open set은 principal open set들의 합집합으로 나타낼 수 있고 ([§스펙트럼, ⁋보조정리 11](/ko/math/scheme_theory/spectrums#lem11)), 따라서 $\Spec A$가 $P_\geo$를 만족하면 $\Spec A$의 임의의 *affine* open subset 또한 $P_\geo$를 만족한다. 실제로 affine open subset $U=\Spec B$는 quasi-compact이므로 ([§스펙트럼, ⁋보조정리 12](/ko/math/scheme_theory/spectrums#lem12)) $U$를 덮는 principal open set들 중 유한개 $D_A(f_1),\ldots, D_A(f_r)$만 남길 수 있고, 각각의 $D_A(f_i)$는 restriction $A \rightarrow B$에 의한 $f_i$의 image $g_i$에 대하여 $B$의 principal open set $D_B(g_i)$이면서 $B_{g_i}\cong A_{f_i}$이므로, $D_B(g_i)$들이 $\Spec B$를 덮는다는 것으로부터 $(g_1,\ldots, g_r)=B$를 얻어 [정의 8](#def8)의 둘째 조건을 $B$에 적용할 수 있다. 이처럼 principal open set들로 검사하여 결정되는 성질을 *affine-local property*라 부르며, 이를 임의의 scheme의 affine subscheme들에 대한 성질로 일반화한 것이 다음 정의이다. 
 
 ::: 정의 9
 Scheme $X$의 적당한 affine subscheme들에 대해 정의된 성질 $P$가 *affine-local property<sub>아핀-국소 성질</sub>*라는 것은 다음 두 조건이 성립하는 것이다. 
@@ -185,13 +186,13 @@ Scheme $X$와 scheme의 affine-local property $P$에 대하여 다음이 모두 
 특히, 만일 $X$가 locally $P$라면 $X$의 임의의 open subscheme이 locally $P$이다. 
 :::
 ::: 증명
-첫째 조건이 성립한다면 각각의 $x$마다 open affine neighborhood $U_x$가 존재한다. 따라서 $\{U_x\}_{x\in X}$가 셋째 조건에서 요구하는 $X$의 affine open covering이 된다. 거꾸로 셋째 조건에 의해 주어지는 affine open covering $\{U_i\}$가 주어진다면, $X$의 임의의 점 $x$가 주어질 때마다 $x\in U_i$를 만족하는 $U_i$를 택할 수 있고, 이렇게 얻어지는 $U_i$가 [정의 9](#def9)에서 요구하는 $x$의 open affine neighborhood가 된다. 따라서 첫째 조건과 셋째 조건은 동치이다. 또, 둘째 조건이 첫째 조건을 함의하는 것은 자명하다. 
+첫째 조건이 성립한다면 각각의 $x$마다 open affine neighborhood $U_x$가 존재한다. 따라서 $\{U_x\}_{x\in X}$가 셋째 조건에서 요구하는 $X$의 affine open covering이 된다. 거꾸로 셋째 조건에 의해 주어지는 affine open covering $\{U_i\}$가 주어진다면, $X$의 임의의 점 $x$가 주어질 때마다 $x\in U_i$를 만족하는 $U_i$를 택할 수 있고, 이렇게 얻어지는 $U_i$가 [정의 10](#def10)에서 요구하는 $x$의 open affine neighborhood가 된다. 따라서 첫째 조건과 셋째 조건은 동치이다. 또, 둘째 조건이 첫째 조건을 함의하는 것은 자명하다. 
 
 이제 셋째 조건이 성립한다 가정하고 둘째 조건이 성립함을 보인다. 셋째 조건을 만족하는 $X$의 affine open covering $\{U_i=\Spec A_i\}$가 주어졌다 하자. 그럼 $X$의 임의의 affine open subset $V=\Spec A$에 대하여, 각각의 $V\cap U_i$들은 $V$의 열린집합이기도 하므로 [보조정리 11](#lem11)로부터 
 
-$$V=\bigcup_{i\in I} V\cap U_i=\bigcup_{i\in I} \bigcup_{j\in J_i} \Spec (A_i)_{f_j}$$
+$$V=\bigcup_{i\in I} V\cap U_i=\bigcup_{i\in I} \bigcup_{j\in J_i} \Spec (A_i)_{f_{ij}}$$
 
-를 만족하는 $f_j\in A_i$들을 찾을 수 있고, $\Spec (A_i)_{f_j}$들 각각은 $\Spec A$의 적당한 localization $\Spec A_{g_j}$들로 둘 수 있다는 것을 알고 [§스펙트럼, ⁋보조정리 12](/ko/math/scheme_theory/spectrums#lem12)를 사용하면 $g_j$들이 유한하게 주어졌다 가정할 수 있다. 이제 [정의 9](#def9) 이전의 논의로부터 $P$가 local이라는 가정으로부터 각각의 $\Spec (A_i)_{f_j}=\Spec A_{g_j}$가 $P$를 만족하는 것을 알고, 이로부터 $\Spec A$가 $P$를 만족하는 것을 안다.
+를 만족하는 $f_{ij}\in A_i$들을 찾을 수 있고, $\Spec (A_i)_{f_{ij}}$들 각각은 $\Spec A$의 적당한 localization $\Spec A_{g_{ij}}$들로 둘 수 있다는 것을 알고 [§스펙트럼, ⁋보조정리 12](/ko/math/scheme_theory/spectrums#lem12)를 사용하면 $g_{ij}$들이 유한하게 주어졌다 가정할 수 있다. 이제 [정의 9](#def9)의 첫째 조건으로부터 각각의 $\Spec (A_i)_{f_{ij}}=\Spec A_{g_{ij}}$가 $P$를 만족하는 것을 알고, 둘째 조건으로부터 $\Spec A$가 $P$를 만족하는 것을 안다.
 
 이상에서 첫째 조건부터 셋째 조건이 모두 동치임을 안다. 
 
@@ -208,7 +209,7 @@ Ring $A$가 Noetherian인 것은 local property이고, 따라서 affine-local pr
 
 첫째 조건은 [\[가환대수학\] §국소화, ⁋따름정리 9](/ko/math/commutative_algebra/localization#cor9)로부터 얻어진다.
 
-둘째 조건을 보자. $A=(f_1,\ldots, f_r)$이고 각 $A_{f_i}$가 Noetherian이라 가정한 뒤, $A$의 임의의 ideal $\mathfrak{a}$가 finitely generated임을 보이면 된다. 각 $i$에 대하여 $A_{f_i}$가 Noetherian이므로 ideal $\mathfrak{a}A_{f_i}$는 finitely generated이며, generator들의 분모를 없애면 $\mathfrak{a}$의 원소 $a_{i1},\ldots, a_{in_i}$이 존재하여 이들의 상이 $\mathfrak{a}A_{f_i}$를 생성하게 할 수 있다. 이제 이 유한개의 원소들 전체가 생성하는 ideal을 $\mathfrak{b}\subseteq \mathfrak{a}$라 하면, 구성에 의하여 모든 $i$에 대해 $\mathfrak{b}A_{f_i}=\mathfrak{a}A_{f_i}$이다.
+둘째 조건을 보자. $A=(f_1,\ldots, f_r)$이고 각 $A_{f_i}$가 Noetherian이라 가정한 뒤, $A$의 임의의 ideal $\mathfrak{a}$가 finitely generated임을 보이면 된다. 각 $i$에 대하여 $A_{f_i}$가 Noetherian이므로 ideal $\mathfrak{a}A_{f_i}$는 finitely generated이며, generator들의 분모를 없애면 $\mathfrak{a}$의 원소 $a_{i1},\ldots, a_{in_i}$이 존재하여 이들의 image가 $\mathfrak{a}A_{f_i}$를 생성하게 할 수 있다. 이제 이 유한개의 원소들 전체가 생성하는 ideal을 $\mathfrak{b}\subseteq \mathfrak{a}$라 하면, 구성에 의하여 모든 $i$에 대해 $\mathfrak{b}A_{f_i}=\mathfrak{a}A_{f_i}$이다.
 
 이제 $\mathfrak{a}=\mathfrak{b}$임을 보이면 된다. Localization이 완전함수이므로 $M=\mathfrak{a}/\mathfrak{b}$는 모든 $i$에 대하여 $M_{f_i}=0$을 만족한다. 임의의 $m\in M$을 잡으면 각 $i$마다 $f_i^{n}m=0$이 되는 $n$이 존재하고, $i$가 유한개이므로 충분히 큰 $n$ 하나를 공통으로 잡을 수 있다. 한편 $D(f_i)=D(f_i^n)$이므로 $D(f_i^n)$들 또한 $\Spec A$를 덮고, 따라서 $f_1^n,\ldots, f_r^n$은 unit ideal을 생성하여 $1=\sum_{i=1}^r g_if_i^n$인 $g_i\in A$가 존재한다. 그럼
 
@@ -250,7 +251,7 @@ $$\mathcal{O}_{X,x}= \varinjlim_{V\ni x} \mathcal{O}_X(V)\cong \varinjlim_{V\ni 
 
 특히 임의의 stalk-local property는 affine-local property이기도 하다. 그러나 이는 다소 주의할 필요가 있는 명제인데, 이는 가령 $X$ 위의 stalk-local property가
 
-$$\text{$X$ is $P$}\iff \text{$\mathcal{O}_{X,x}$ satisfies $Q$}$$
+$$\text{$X$ is $P$}\iff \text{$\mathcal{O}_{X,x}$ satisfies $Q$ for all $x\in X$}$$
 
 로 주어졌을 때, 임의의 affine open subset $U$에 대하여 $\mathcal{O}_X(U)$가 $Q$를 만족한다는 것이 <em-ko>아니라</em-ko>, 임의의 affine open subset $U$와 원소 $x\in U$에 대하여 $\mathcal{O}_{U,x}$가 성질 $Q$를 만족하고 따라서 affine open subscheme $U$가 성질 $P$를 만족한다는 것이다. 
 
@@ -260,7 +261,7 @@ $$X=\Spec A=\Spec\left(\prod_{i=1}^\infty \mathbb{Z}/2\mathbb{Z}\right)$$
 
 을 생각하면 $A$의 임의의 원소 $x$는 $x^2=x$를 만족하고, 따라서 임의의 localization $A_\mathfrak{p}$의 원소도 그러하다. 이제 $A_{\mathfrak{p}}$에서 성립하는 $x(1-x)=0$으로부터 우리는 $x\in \mathfrak{p}A_\mathfrak{p}$이거나 $1-x\in \mathfrak{p}A_\mathfrak{p}$임을 알고, $\mathfrak{p}A_\mathfrak{p}$에 속하지 않는 원소는 unit임을 안다. ([\[가환대수학\] §국소화, ⁋명제 2](/ko/math/commutative_algebra/localization#prop2)) 따라서 $x=0$ 혹은 $x=1$이므로 $A_\mathfrak{p}$의 ideal의 chain은 $(0)\subseteq (1)=A_\mathfrak{p}$ 뿐이다. 이로부터 $A_\mathfrak{p}$ 각각은 Noetherian이지만, 
 
-$$\mathbb{Z}/2\mathbb{Z}\times \{0\}\times\{0\}\times\cdots\subseteq \mathbb{Z}/2\mathbb{Z}\times \mathbb{Z}/2\mathbb{Z}\times\{0\}\subseteq\cdots$$
+$$\mathbb{Z}/2\mathbb{Z}\times \{0\}\times\{0\}\times\cdots\subseteq \mathbb{Z}/2\mathbb{Z}\times \mathbb{Z}/2\mathbb{Z}\times\{0\}\times\{0\}\times\cdots\subseteq\cdots$$
 
 을 생각하면 $A$는 Noetherian이 아니라는 것을 알 수 있다. 
 

@@ -10,6 +10,7 @@ sidebar:
 
 date: 2026-04-13
 weight: 8
+drift_needed: true
 
 ---
 
@@ -24,7 +25,7 @@ weight: 8
 ::: 정의 1
 Abelian category $\mathcal{A}$의 *homotopy category<sub>호모토피 범주</sub>* $\mathbf{K}(\mathcal{A})$는 $\Ch(\mathcal{A})$에서 chain homotopic인 map들을 동일시하여 얻은 quotient category이다. 즉 chain homotopy relation $\sim$에 대하여
 
-$$\Hom_{K(\mathcal{A})}(A^\bullet, B^\bullet) = \Hom_{\Ch(\mathcal{A})}(A^\bullet, B^\bullet) /{\sim}$$
+$$\Hom_{\mathbf{K}(\mathcal{A})}(A^\bullet, B^\bullet) = \Hom_{\Ch(\mathcal{A})}(A^\bullet, B^\bullet) /{\sim}$$
 
 이다. 
 :::
@@ -61,7 +62,7 @@ $$su=th,\qquad fu=gh$$
 
 이 성립하며 $su=th$가 quasi-isomorphism인 것이다. 비슷한 방식으로 roof 두 개의 합성도 정의할 수 있으며 (roof diagram 상에서는 두 roof의 공통의 roof를 잡는 것으로 나타난다) 따라서 $D(\mathcal{A})$의 morphism을 완전하게 이해할 수 있다.
 
-이제 이 언어가 어떻게 좋은 framework를 구성하는지를 보기 위해, 일상적인 $\mathcal{A}$의 원소 $A$가 주어졌다 하자. 그럼 우리는 $A$를 $0$번째 성분에 두고 나머지 성분은 $0$으로 고정한 chain complex
+이제 이 언어가 어떻게 좋은 framework를 구성하는지를 보기 위해, 일상적인 $\mathcal{A}$의 대상 $A$가 주어졌다 하자. 그럼 우리는 $A$를 $0$번째 성분에 두고 나머지 성분은 $0$으로 고정한 chain complex
 
 $$A[0]:\qquad \cdots\rightarrow 0\rightarrow A\rightarrow 0\rightarrow \cdots$$
 
@@ -97,17 +98,17 @@ $$H^i(A[n]) = H^{i+n}(A)$$
 ::: 정의 5
 Complex $P \in \mathbf{K}(\mathcal{A})$가 *$K$-projective*라는 것은, 임의의 quasi-isomorphism $s: A \rightarrow B$ in $\mathbf{K}(\mathcal{A})$에 대해 유도된 map
 
-$$\Hom(s, P):\Hom_{K(\mathcal{A})}(B, P)\rightarrow\Hom_{K(\mathcal{A})}(A, P)$$
+$$\Hom(P, s):\Hom_{\mathbf{K}(\mathcal{A})}(P, A)\rightarrow\Hom_{\mathbf{K}(\mathcal{A})}(P, B)$$
 
 이 isomorphism인 것이다.
 :::
 
-즉 $P$는 $\mathbf{K}(\mathcal{A})$에서 Hom functor $\Hom(-, P)$를 quasi-isomorphism에 대해 invariant하게 만드는 complex로, 이러한 대상들만이 derived category로 잘 떨어질 것은 자명하다. 물론 다음 또한 정의해야 한다.
+즉 $P$는 $\mathbf{K}(\mathcal{A})$에서 Hom functor $\Hom(P, -)$를 quasi-isomorphism에 대해 invariant하게 만드는 complex로, 이러한 대상들만이 derived category로 잘 떨어질 것은 자명하다. 물론 다음 또한 정의해야 한다.
 
 ::: 정의 6
 Complex $I \in \mathbf{K}(\mathcal{A})$가 *$K$-injective*라는 것은, 임의의 quasi-isomorphism $s : A \rightarrow B$에 대해 유도된 map
 
-$$\Hom_{K(\mathcal{A})}(I, A) \xrightarrow{s_\ast} \Hom_{K(\mathcal{A})}(I, B)$$
+$$\Hom(s, I):\Hom_{\mathbf{K}(\mathcal{A})}(B, I) \rightarrow \Hom_{\mathbf{K}(\mathcal{A})}(A, I)$$
 
 이 isomorphism인 것이다.
 :::
@@ -117,8 +118,8 @@ $$\Hom_{K(\mathcal{A})}(I, A) \xrightarrow{s_\ast} \Hom_{K(\mathcal{A})}(I, B)$$
 ::: 명제 7
 다음이 성립한다.
 
-1. 각 항이 injective이고 bounded below인 chain complex는 $K$-injective이다.
-2. 각 항이 projective이고 bounded above인 chain complex는 $K$-projective이다.
+1. 각 항이 injective이고 충분히 작은 $n$에 대하여 $A^n=0$인 chain complex $A^\bullet$은 $K$-injective이다.
+2. 각 항이 projective이고 충분히 큰 $n$에 대하여 $A^n=0$인 chain complex $A^\bullet$은 $K$-projective이다.
 :::
 
 더 일반적으로, enough injective를 갖는 임의의 abelian category의 homotopy category는 enough $K$-injective resolution을 가지며 projective case에 대해서도 마찬가지이다. 이제 우리는 다음을 정의할 준비가 되었다.
@@ -148,7 +149,7 @@ Quasi-isomorphism $s : A^\bullet \rightarrow B^\bullet$이 주어졌다고 하�
 구체적인 예로서, $\mathcal{A}$ 위에서의 Hom functor $\Hom(-, B)$는 contravariant left exact functor이므로 이를 derived하여 complex 수준의 derived Hom $R\Hom$을 정의하면, $R\Hom(A, B)$의 cohomology는 $\Ext^i(A, B)$와 일치한다.
 
 ::: 명제 10
-$\mathcal{A}$가 enough injective를 갖는 abelian category라고 하자. 그럼 모든 $A, B \in \mathcal{A}$에 대해
+$\mathcal{A}$가 enough projective를 갖는 abelian category라고 하자. 그럼 모든 $A, B \in \mathcal{A}$에 대해
 
 $$H^{i}(R\Hom(A, B)) \cong \Ext^i(A, B)$$
 
@@ -159,7 +160,7 @@ $R\Hom(A, B)$를 정확히 정의하자. $A$를 $A[0] \in D(\mathcal{A})$로 보
 
 $$R\Hom(A, B) = \Hom(P_\bullet, B)$$
 
-로 정의한다. 여기서 우변은 complex $\Hom(P_\bullet, B)$를 나타낸다. 그럼 $P_\bullet \rightarrow A$가 projective resolution이므로 [§Ext와 Tor](/ko/math/homological_algebra/ext_and_tor)의 정의에 의해 $H^i(\Hom(P_\bullet, B)) = \Ext^i(A, B)$이다.
+로 정의한다. 여기서 우변은 complex $\Hom(P_\bullet, B)$를 나타낸다. 그럼 $P_\bullet \rightarrow A$가 projective resolution이므로 [§Ext와 Tor, ⁋명제 3](/ko/math/homological_algebra/ext_and_tor#prop3)에 의해 $H^i(\Hom(P_\bullet, B)) = \Ext^i(A, B)$이다.
 :::
 
 비슷하게 tensor product의 left derived functor $L(A \otimes B) = A \otimes^L B$를 정의할 수 있으며, $\Tor_i(A, B) = H^{-i}(A \otimes^L B)$가 성립한다.
@@ -215,7 +216,7 @@ $A \rightarrow B$를 map으로 보고, 이들의 $K$-injective resolution들을 
 Category theory에서 adjunction은 두 functor 사이의 가장 중요한 관계 중 하나이다. Derived category에서도 adjunction이 성립하며, 이를 *derived adjunction*이라 부른다. Derived adjunction $L F \dashv R G$는 일반적인 adjoint 관계를 derived category로 끌어올린 것으로, $F$, $G$가 exact하지 않아도 resolution을 통해 "올바르게" 계산한 결과끼리 여전히 adjoint 관계를 이룬다. Naive하게 $F$나 $G$를 적용하면 exactness가 깨져서 잘못된 homology가 나올 수 있지만, derived version을 사용하면 이 문제를 해결하면서 원래의 adjoint 구조도 유지된다.
 
 ::: 명제 13
-Abelian category $\mathcal{A}, \mathcal{B}$ 사이의 additive functor들 $F : \mathcal{A} \rightarrow \mathcal{B}$ (right exact), $G : \mathcal{B} \rightarrow \mathcal{A}$ (left exact)가 adjoint pair $F \dashv G$를 이룬다고 하자. 그럼 derived category에서
+$\mathcal{A}$가 enough projective를, $\mathcal{B}$가 enough injective를 갖는 abelian category라고 하고, 이들 사이의 additive functor들 $F : \mathcal{A} \rightarrow \mathcal{B}$ (right exact), $G : \mathcal{B} \rightarrow \mathcal{A}$ (left exact)가 adjoint pair $F \dashv G$를 이룬다고 하자. 그럼 derived category에서
 
 $$L F : D^-(\mathcal{A}) \rightarrow D^-(\mathcal{B}), \qquad R G : D^+(\mathcal{B}) \rightarrow D^+(\mathcal{A})$$
 
@@ -230,16 +231,16 @@ $A^\bullet$의 $K$-projective resolution $P_\bullet$과 $B^\bullet$의 $K$-injec
 
 $$\Hom_{\Ch(\mathcal{B})}(F(P_\bullet), I^\bullet) \cong \Hom_{\Ch(\mathcal{A})}(P_\bullet, G(I^\bullet))$$
 
-이 성립한다. 이 동형은 각 차수별 adjunction $\Hom_\mathcal{B}(F(P^n), I^m) \cong \Hom_\mathcal{A}(P^n, G(I^m))$을 모아서 complex 수준으로 얻은 것이다. $P_\bullet$이 $K$-projective이고 $I^\bullet$이 $K$-injective이므로, 좌변은 $\Hom_{K(\mathcal{B})}(F(P_\bullet), I^\bullet) = \Hom_{D(\mathcal{B})}(L F(A^\bullet), B^\bullet)$로, 우변은 $\Hom_{K(\mathcal{A})}(P_\bullet, G(I^\bullet)) = \Hom_{D(\mathcal{A})}(A^\bullet, R G(B^\bullet))$로 환원된다.
+이 성립한다. 이 동형은 각 차수별 adjunction $\Hom_\mathcal{B}(F(P^n), I^m) \cong \Hom_\mathcal{A}(P^n, G(I^m))$을 모아서 complex 수준으로 얻은 것이다. $P_\bullet$이 $K$-projective이고 $I^\bullet$이 $K$-injective이므로, 좌변은 $\Hom_{\mathbf{K}(\mathcal{B})}(F(P_\bullet), I^\bullet) = \Hom_{D(\mathcal{B})}(L F(A^\bullet), B^\bullet)$로, 우변은 $\Hom_{\mathbf{K}(\mathcal{A})}(P_\bullet, G(I^\bullet)) = \Hom_{D(\mathcal{A})}(A^\bullet, R G(B^\bullet))$로 환원된다.
 :::
 
-가장 대표적인 예는 tensor product와 Hom의 adjunction이다. [\[다중선형대수학\] §Hom과 텐서곱](/ko/math/multilinear_algebra/hom_and_tensor)에서 본 abelian category $\mathcal{A}$ 위의 tensor-Hom adjunction
+가장 대표적인 예는 tensor product와 Hom의 adjunction이다. [\[대수적 구조\] §가군의 직접곱과 직합, 텐서곱, ⁋정리 6](/ko/math/algebraic_structures/operations_of_modules#thm6)에서 본 abelian category $\mathcal{A}$ 위의 tensor-Hom adjunction
 
 $$\Hom(A \otimes B, C) \cong \Hom(A, \Hom(B, C))$$
 
 에서, complex $X, Y, Z$에 대해 동일한 형태의 isomorphism을 derived category에서도 얻고 싶을 수 있다. 그러나 raw functor $-\otimes B$와 $\Hom(B,-)$는 quasi-isomorphism을 보존하지 않으므로, 이 adjunction은 naive하게 derived category로 내려오지 않는다. 앞서 derived functor를 정의할 때 projective resolution 또는 injective resolution을 취해야만 $\mathbf{K}(\mathcal{A}) \rightarrow D(\mathcal{A})$로 잘 descend한다는 점을 확인하였는데, 이는 바로 $-\otimes B$가 right exact이고 $\Hom(B,-)$가 left exact이기 때문이다. Quasi-isomorphism에 대한 localization을 거치면 classical adjoint는 자동으로 살아남지 않으므로, 이 exactness의 부족을 보완하는 derived version이 필요하다.
 
-이를 구체적으로 확인하기 위해 $R = \mathbb{Z}$, $M = \mathbb{Z}/n\mathbb{Z}$를 생각하자. $M$은 flat이 아니므로 tensoring이 exact하지 않다. $0 \rightarrow \mathbb{Z} \xrightarrow{\times n} \mathbb{Z} \rightarrow \mathbb{Z}/n\mathbb{Z} \rightarrow 0$에 $-\otimes M$을 적용하면 exactness가 깨지며, 구체적으로 $\Tor_1^\mathbb{Z}(\mathbb{Z}/n\mathbb{Z}, \mathbb{Z}/n\mathbb{Z}) \cong \mathbb{Z}/n\mathbb{Z}$이 존재하므로 naive adjunction은 기대하는 대로 작동하지 않는다. ([§Ext와 Tor](/ko/math/homological_algebra/ext_and_tor))
+이를 구체적으로 확인하기 위해 $R = \mathbb{Z}$, $M = \mathbb{Z}/n\mathbb{Z}$를 생각하자. $M$은 flat이 아니므로 tensoring이 exact하지 않다. $0 \rightarrow \mathbb{Z} \xrightarrow{\times n} \mathbb{Z} \rightarrow \mathbb{Z}/n\mathbb{Z} \rightarrow 0$에 $-\otimes M$을 적용하면 exactness가 깨지며, 구체적으로 $\Tor_1^\mathbb{Z}(\mathbb{Z}/n\mathbb{Z}, \mathbb{Z}/n\mathbb{Z}) \cong \mathbb{Z}/n\mathbb{Z}$이 존재하므로 $-\otimes M$은 quasi-isomorphism을 보존하지 않는다. ([§Ext와 Tor](/ko/math/homological_algebra/ext_and_tor))
 
 이 exactness failure를 해결하기 위해 projective resolution을 사용하여 $\otimes^L$와 $R\Hom$을 구성하면, [명제 13](#prop13)에 의해 adjunction이 복원된다. 구체적으로 $A \otimes^L B$는 $A$의 projective resolution에 $-\otimes B$를 적용한 것이며, $R\Hom(B, C)$는 $B$의 projective resolution에 $\Hom(-, C)$를 적용한 것이다. 이를 통해
 

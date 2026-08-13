@@ -10,6 +10,7 @@ sidebar:
 
 date: 2024-11-19
 weight: 12
+drift_needed: true
 
 ---
 
@@ -32,7 +33,7 @@ weight: 12
 3. 만일 $g\circ f$가 open (resp. closed)이고 $g$가 continuous injection이라면 $f$는 open (resp. closed)이다. 
 :::
 ::: 증명
-1. 자명하다. 
+1. $X$의 임의의 열린집합 (resp. 닫힌집합) $U$에 대하여 $f$가 open (resp. closed)이므로 $f(U)$는 $Y$의 열린집합 (resp. 닫힌집합)이고, 다시 $g$가 open (resp. closed)이므로 $g(f(U))$는 $Z$의 열린집합 (resp. 닫힌집합)이다. 
 2. $Y$의 임의의 열린집합 $V$가 주어졌다 하자. 그럼 $f$는 연속이므로 $f^{-1}(V)$는 $X$의 열린집합이고, 따라서
     
     $$(g\circ f)(f^{-1}(V))=g(f(f^{-1}(V)))=g(V)$$
@@ -56,7 +57,7 @@ weight: 12
 ::: 증명
 첫 번째 결과를 보이기 위해 $f^{-1}(A)$에서의 열린집합 (resp. 닫힌집합)을 택하자. 그럼 $X$에서의 열린집합 (resp. 닫힌집합) $U$가 존재하여 이를 $U\cap f^{-1}(A)$ 꼴로 적을 수 있다. 따라서
 
-$$f\vert_{f^{-1}(A)}(U)=f(U)\cap A$$
+$$f\vert_{f^{-1}(A)}(U\cap f^{-1}(A))=f(U)\cap A$$
 
 이고, 가정에 의하여 $f(U)$가 열린집합 (resp. 닫힌집합)이므로 원하는 결과를 얻는다.
 

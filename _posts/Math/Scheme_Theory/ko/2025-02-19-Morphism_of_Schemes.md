@@ -10,6 +10,7 @@ sidebar:
 
 date: 2025-02-19
 weight: 8
+drift_needed: true
 ---
 
 정의에 의해 $\Sch$는 $\LRS$의 full subcategory이다. ([§스킴, ⁋정의 1](/ko/math/scheme_theory/schemes#def1)) 즉 두 scheme $X,Y$가 주어졌을 때, $X$에서 $Y$로의 scheme morphism은 연속함수 $\varphi: X \rightarrow Y$와 structure sheaf 사이의 morphism $\varphi^\sharp: \mathcal{O}_Y \rightarrow \varphi_\ast \mathcal{O}_X$으로 주어지며, 이 때 $\varphi^\sharp$는 각각의 stalk으로 제한하였을 때 local homomorphism이 되어야 한다. ([§아핀스킴, ⁋정의 2](/ko/math/scheme_theory/affine_schemes#def2)) 
@@ -42,7 +43,7 @@ $$\mathcal{O}_Y(W) \rightarrow \varphi_\ast \mathcal{O}_X(W)=\mathcal{O}_X(\varp
 
 둘째 주장의 경우, gluing condition에 의하여 연속함수 $\varphi_i: U_i \rightarrow V_i\hookrightarrow Y$들이 서로의 겹침 위에서 일치하므로, [\[위상수학\] §준층, ⁋보조정리 1](/ko/math/topology/presheaves#lem1)에 의하여 이들은 연속함수 $\varphi: X \rightarrow Y$로 붙는다. 이제 우리는 sheaf morphism $\varphi^\sharp$을 정의해야 한다. 열린집합 $W\subseteq Y$와 $s\in \mathcal{O}_Y(W)$가 주어질 때마다 얻어지는 section들
 
-$$s_i:=\varphi_i^\sharp(W)(s)\in \mathcal{O}_X(\varphi^{-1}(W)\cap U_i)$$
+$$s_i:=\varphi_i^\sharp(W\cap V_i)(s\vert_{W\cap V_i})\in \mathcal{O}_X(\varphi^{-1}(W)\cap U_i)$$
 
 을 생각하자. 그럼 이들 역시 같은 이유로 서로의 겹침 위에서 일치하고, $\{\varphi^{-1}(W)\cap U_i\}$가 $\varphi^{-1}(W)$의 open covering이므로 [\[위상수학\] §층, ⁋정의 1](/ko/math/topology/sheaves#def1)의 두 조건에 의하여 이들을 붙인 $s'\in \mathcal{O}_X(\varphi^{-1}(W))$가 유일하게 존재한다. 이제 $\varphi^\sharp(W): s\mapsto s'$으로 정의하면 restriction map과의 호환성은 각각의 $U_i$ 위에서 확인하면 충분하고, $\varphi^\sharp$가 $x\in U_i$의 stalk 위에 유도하는 함수는 $\varphi_i^\sharp$가 유도하는 것과 같으므로 local homomorphism이다. 따라서 $\varphi$는 scheme morphism이며, $(\varphi\vert_{U_i})\vert^{V_i}=\varphi_i$라는 조건이 $\varphi$를 완전히 결정하므로 이러한 $\varphi$는 유일하다. 
 :::
@@ -78,11 +79,11 @@ $$\phi_i:\mathbb{K}[\x_{0/i},\ldots, \x_{n/i}]\rightarrow\mathbb{K}[\x_0,\ldots,
 
 에 first isomorphism theorem을 적용하여 정의된 affine scheme 사이의 morphism $\varphi_i$가 원하는 morphism이 된다. 이들이 [명제 1](#prop1)의 조건을 만족하는 것도 약간의 계산을 통해 확인할 수 있다. 이제 [§사영공간과 Proj 구성, §§사영공간](/ko/math/scheme_theory/projective_schemes#사영공간)에서의 표기를 다시 빌려오면, 이들은 각각의 $D(\x_i)$ 위에서 다음 식
 
-$$(x_0,\ldots, x_n) \rightarrow \left[\frac{x_0}{x_i}:\cdots:\frac{x_{i-1}}{x_i}:1:\frac{x_{i+1}}{x_i}:\cdots:\frac{x_n}{x_i} \right]$$
+$$(x_0,\ldots, x_n) \mapsto \left[\frac{x_0}{x_i}:\cdots:\frac{x_{i-1}}{x_i}:1:\frac{x_{i+1}}{x_i}:\cdots:\frac{x_n}{x_i} \right]$$
 
 으로 주어지므로, 이를
 
-$$(x_0,\ldots, x_n)\rightarrow [x_0:\cdots:x_n]$$
+$$(x_0,\ldots, x_n)\mapsto [x_0:\cdots:x_n]$$
 
 으로 표기하면 적절할 것이다. 
 :::
@@ -122,7 +123,7 @@ $$\Hom_\Sch(X, \Spec A)=\Hom_\LRS(X, \Spec A)\cong \Hom_\cRing(A, \Gamma(X, \mat
 이제 [예시 2](#ex2)를 더욱 일반화하는 다음의 예시를 보자.
 
 ::: 예시 5
-Ring $A$와 $A$-scheme $X$를 생각하고, $X$ 위에 정의된 함수들 $f_0,\ldots, f_n\in \Gamma(X, \mathcal{O}_X)$이 주어졌다 하자. 이때 이들이 unit ideal을 생성한다, 즉 $(f_0,\ldots, f_n)=\mathcal{O}_X$를 만족한다 하자. 또한 $X$의 affine open covering $X=\bigcup U_j$를 생각하자. 그럼
+Ring $A$와 $A$-scheme $X$를 생각하고, $X$ 위에 정의된 함수들 $f_0,\ldots, f_n\in \Gamma(X, \mathcal{O}_X)$이 주어졌다 하자. 이때 이들이 생성하는 ideal sheaf가 $\mathcal{O}_X$ 전체이다, 즉 $X=\bigcup_i D(f_i)$를 만족한다 하자. 또한 $X$의 affine open covering $X=\bigcup U_j$를 생각하자. 그럼
 
 $$U_{ij}:=D(f_i)\cap U_j=D(f_i\vert_{U_j})\subseteq U_j$$
 
@@ -130,7 +131,7 @@ $$U_{ij}:=D(f_i)\cap U_j=D(f_i\vert_{U_j})\subseteq U_j$$
 
 $$\mathbb{P}^n_A=\Proj A[\x_0,\ldots, \x_n]$$
 
-을 생각하고, 이 공간의 open covering $D_+(\x_i)$를 생각하자. 이제 $i,j$ 쌍이 주어질 때마다, 함수 $\varphi_{ij}: U_{ij} \rightarrow D_+(\x_i)$를 ring homomorphism
+을 생각하고, 이 공간의 open covering $D_+(\x_i)$를 생각하자. 이제 $i,j$ 쌍이 주어질 때마다, 함수 $\varphi_{ij}: U_{ij} \rightarrow D_+(\x_i)$를 $A$-algebra homomorphism
 
 $$A[\x_0,\ldots, \x_n]_{(\x_i)}\rightarrow \Gamma(U_{ij});\qquad \x_{k/i}\mapsto \frac{f_k\vert_{U_{ij}}}{f_i\vert_{U_{ij}}}$$
 

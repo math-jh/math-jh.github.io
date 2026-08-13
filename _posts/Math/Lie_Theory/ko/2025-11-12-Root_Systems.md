@@ -11,6 +11,8 @@ sidebar:
 date: 2025-11-12
 weight: 3
 
+drift_needed: true
+
 ---
 
 ## Adjoint representation
@@ -73,7 +75,7 @@ Semisimple Lie algebra $\mathfrak{g}$에 대하여, $\mathfrak{g}$의 *Cartan su
 
 두 diagonalizable operator $A,B$가 simultaneously diagonalizable인 것은 이들 두 operator가 commute하는 것과 동치이므로, 정의에 의하여 $\mathfrak{h}$의 모든 원소들은 simultaneously diagonalizable이다. 이제 simultaneously diagonalizable operator들의 family $\{H\in \mathfrak{h}\}$를 사용하여 $\mathfrak{g}$를 분해하자. 만일 simultaneously diagonalizable operator들의 <em-ko>유한한</em-ko> family $A_1,\ldots, A_n$이 주어졌다면, simultaneous eigenspace로 공간을 분해하는 것은 
 
-$$V=\bigoplus V_\alpha,\qquad \text{$A_i v_\alpha=\lambda_i v_\alpha$ for all $v_\alpha\in V$ for all $i$}$$
+$$V=\bigoplus V_\alpha,\qquad \text{$A_i v_\alpha=\lambda_i v_\alpha$ for all $v_\alpha\in V_\alpha$ for all $i$}$$
 
 와 같은 형태이지만, 현재 우리 상황에서는 $\mathfrak{h}$가 벡터공간이므로 linear functional $\alpha: \mathfrak{h}\rightarrow \mathbb{C}$를 택하여 $\alpha(H)$가 각각의 $H$의 고유값 역할을 해주도록 하는 것이 낫다. 따라서 다음과 같이 정의한다. 
 
@@ -231,7 +233,7 @@ $$0=K([H,X_\alpha],X_\beta)+K(X_\alpha, [H,X_\beta])=K(\alpha(H)X_\alpha, X_\bet
 
 을 얻는다. 따라서 $\alpha+\beta\neq 0$이라면 $\mathfrak{g}_\alpha$와 $\mathfrak{g}_\beta$는 $K$에 대해 orthogonal이다. 
 
-이제 셋째 주장을 보이기 위해 임의의 $H\in \mathfrak{h}$에 대하여 $X\in \mathfrak{g}$가 존재하여 $K(H,X)\neq 0$이도록 할 수 있다는 것을 기억하자. 새롭게 보여야 할 것은 $X$를 $\mathfrak{h}$에서 뽑을 수 있다는 것이다. 이를 위해 $X$를 root decomposition $\sum X_\alpha$의 꼴로 쓰면, 우리는 위의 결과에 의하여 $K(H,-)$를 취했을 때 $X_0\in \mathfrak{h}$를 제외한 모든 $X_\alpha$가 $0$을 준다는 것을 안다. 따라서 $K(H,H_0)\neq 0$이다. 
+이제 셋째 주장을 보이기 위해 임의의 nonzero $H\in \mathfrak{h}$에 대하여 $X\in \mathfrak{g}$가 존재하여 $K(H,X)\neq 0$이도록 할 수 있다는 것을 기억하자. 새롭게 보여야 할 것은 $X$를 $\mathfrak{h}$에서 뽑을 수 있다는 것이다. 이를 위해 $X$를 root decomposition $\sum X_\alpha$의 꼴로 쓰면, 우리는 위의 결과에 의하여 $K(H,-)$를 취했을 때 $X_0\in \mathfrak{h}$를 제외한 모든 $X_\alpha$가 $0$을 준다는 것을 안다. 따라서 $K(H,X_0)\neq 0$이다. 
 
 넷째 주장은 셋째 주장과 정확히 동일하게 증명하면 된다.
 :::
@@ -309,13 +311,13 @@ $$K(h_\alpha,h_\beta)=\tr_\mathfrak{g}(\ad h_\alpha\ad h_\beta)=\sum_{\gamma\in\
 
 $$K(h,h)=\tr(\ad_h\ad_h)=\sum_{\gamma\in\Phi}\gamma(h)^2\geq 0$$
 
-을 주므로 우리는 $K$가 $\mathfrak{h}_\mathbb{R}$ 위에서 positive definite인 것을 안다. 특히 이를 다시 $\mathfrak{h}^\ast$로 옮겨주면 $\mathfrak{h}^\ast$에서 $\Phi$의 real span이 Euclidean space를 이룬다는 것을 확인할 수 있고, 이를 보이는 과정에서 우리는 이들 root들이 [정의 9](#def9)의 네 번째 조건을 만족하는 것도 보였다. 이제 우리가 보여야 할 것은 나머지 조건들이다. 
+을 준다. 만일 $K(h,h)=0$이라면 모든 $\gamma\in\Phi$에 대하여 $\gamma(h)=0$이고, $\Phi$가 $\mathfrak{h}^\ast$을 span하므로 $h=0$이다. 따라서 우리는 $K$가 $\mathfrak{h}_\mathbb{R}$ 위에서 positive definite인 것을 안다. 특히 이를 다시 $\mathfrak{h}^\ast$로 옮겨주면 $\mathfrak{h}^\ast$에서 $\Phi$의 real span이 Euclidean space를 이룬다는 것을 확인할 수 있고, 이를 보이는 과정에서 우리는 이들 root들이 [정의 9](#def9)의 네 번째 조건을 만족하는 것도 보였다. 이제 우리가 보여야 할 것은 나머지 조건들이다. 
 
 우선 reflection operator를 적용한
 
 $$s_\alpha(\beta)=\beta-\frac{2K(\alpha,\beta)}{K(\alpha,\alpha)}\alpha$$
 
-가 다시 root가 된다는 것을 보여야 하는데, 이는 $\ad f_\alpha$를 $\lvert \beta(h_\alpha)\rvert$번 작용하면 $\mathfrak{g}_\beta$와 $\mathfrak{g}_{s_\alpha(\beta)}$ 사이의 isomorphism이 얻어지기 때문에 자명하다. 
+가 다시 root가 된다는 것을 보여야 하는데, 이는 $\beta(h_\alpha)\geq 0$이면 $\ad f_\alpha$를, $\beta(h_\alpha)<0$이면 $\ad e_\alpha$를 $\lvert \beta(h_\alpha)\rvert$번 작용하면 $\mathfrak{g}_\beta$와 $\mathfrak{g}_{s_\alpha(\beta)}$ 사이의 isomorphism이 얻어지기 때문에 자명하다. 
 
 둘째 조건의 경우, 만일 $\beta=c\alpha$라 한다면
 
@@ -324,7 +326,7 @@ $$\frac{2K(\alpha,\beta)}{K(\alpha,\alpha)}=2c,\quad \frac{2K(\alpha,\beta)}{K(\
 가 모두 정수이기 위해서는 $c$는 $\pm 1$, $\pm 2$, $\pm 1/2$ 중 하나여야 하고, 다시 이를 $\sl_2$-representation theory로 옮긴 후 integrality를 적용하면 원하는 결과를 얻는다. 즉 우리는 다음을 증명하였다. 
 
 ::: 명제 12
-[정의 5](#def5)에서 정의한 root들의 모임 $\Phi$는 $\mathfrak{h}^\ast$의 root system이다. 
+[정의 5](#def5)에서 정의한 root들의 모임 $\Phi$는 $\mathfrak{h}^\ast$에서 자신의 real span이 이루는 Euclidean space의 root system이다. 
 :::
 
 ## 예시들
@@ -368,7 +370,7 @@ $$e_i-e_k=(e_i-e_j)+(e_j-e_k)$$
 이 성립하며 이로부터 $\Phi(A_n)$을 묘사하기 위해서는 $e_i-e_{i+1}$ 꼴의 원소들만 필요함을 안다. 이와 비슷한 방식으로 우리는 다음을 정의한다. 
 
 ::: 정의 15
-Root system $\Phi$에 대하여, 우리는 $\Phi$의 부분집합 $\Phi^+$가 *positive root<sub>양의 근</sub>*들의 부분집합이라는 것은 각각의 root $\alpha\in \Phi$에 대하여, $\alpha$와 $-\alpha$ 중 정확하게 하나만이 $\Phi^+$에 속하며, 임의의 두 $\alpha,\beta\in \Phi^+$가 주어질 때마다 $\alpha+\beta\in \Phi^+$ 또한 성립하는 것이다. Positive root들의 모임 $\Phi^+$을 고정하였을 때, $\Phi^+$의 원소 $\alpha$가 *simple root<sub>단순근</sub>*라는 것은 $\alpha$를 $\Phi^+$의 두 원소들의 합으로 나타낼 수 없는 것이다. 
+Root system $\Phi$에 대하여, 우리는 $\Phi$의 부분집합 $\Phi^+$가 *positive root<sub>양의 근</sub>*들의 부분집합이라는 것은 각각의 root $\alpha\in \Phi$에 대하여, $\alpha$와 $-\alpha$ 중 정확하게 하나만이 $\Phi^+$에 속하며, 임의의 두 $\alpha,\beta\in \Phi^+$가 주어질 때마다 $\alpha+\beta$가 다시 root라면 $\alpha+\beta\in \Phi^+$ 또한 성립하는 것이다. Positive root들의 모임 $\Phi^+$을 고정하였을 때, $\Phi^+$의 원소 $\alpha$가 *simple root<sub>단순근</sub>*라는 것은 $\alpha$를 $\Phi^+$의 두 원소들의 합으로 나타낼 수 없는 것이다. 
 :::
 
 따라서 simple root들 사이의 정수값들 
@@ -393,11 +395,11 @@ Root system의 정의에 의하여 각각의 성분 $a_{ij}$는 정수이다. �
 
 $$\langle\alpha,\beta\rangle \langle\beta,\alpha\rangle=4\frac{(\alpha,\beta)^2}{\lvert\alpha\rvert^2\lvert\beta\rvert^2}=4(\cos\theta)^2$$
 
-과, 좌변이 정수라는 사실로부터 임의의 두 root $\alpha,\beta$에 대해 $\langle\alpha,\beta\rangle$이 취할 수 있는 값은 $0, \pm 1, \pm 2, \pm 3$ 뿐인 것을 안다. 여기서 $\cos\theta$는 두 root $\alpha,\beta$가 이루는 사잇각이며 이것이 취할 수 있는 값은
+과, 좌변이 정수라는 사실로부터 임의의 두 root $\alpha,\beta$에 대해 $\langle\alpha,\beta\rangle$이 취할 수 있는 값은 $0, \pm 1, \pm 2, \pm 3$ 뿐인 것을 안다. 여기서 $\theta$는 두 root $\alpha,\beta$가 이루는 사잇각이며 $\cos\theta$가 취할 수 있는 값은
 
 $$0, \pm \frac{1}{2}, \pm \frac{\sqrt{2}}{2}, \pm \frac{\sqrt{3}}{2}, \pm 1$$
 
-이 된다. 여기서 $\pm 1$의 경우는 [정의 9](#def9)의 둘째 조건에 의해 배제되므로 root들은 각각 $30$도 (혹은 $150$도), $45$도 (혹은 $135$도), $60$도 (혹은 $120$도)의 각도만 이룰 수 있다. 
+이 된다. 여기서 $\pm 1$의 경우는 [정의 9](#def9)의 둘째 조건에 의해 배제되므로 root들은 각각 $30$도 (혹은 $150$도), $45$도 (혹은 $135$도), $60$도 (혹은 $120$도), $90$도의 각도만 이룰 수 있다. 
 
 예시를 위해 만일 두 root $\alpha,\beta$가 이루는 각이 $30$도이거나 $150$도라 하자. 그럼
 
@@ -419,7 +421,7 @@ Root system $\Phi$의 *Weyl group*은 reflection들 $s_\alpha$ ($\alpha\in\Phi$)
 $$W(\Phi)=\langle s_\alpha\mid \alpha\in\Phi\rangle$$
 :::
 
-Weyl group은 유한군이다. 실제로 $W$는 $\Phi$가 속한 Euclidean space의 orthogonal group의 subgroup이고, $\Phi$가 유한집합이므로 $W$ 역시 유한하다. 또한 [명제 12](#prop12)에서 확인한 것과 같이 reflection $s_\alpha$가 $\alpha$에 수직인 hyperplane에 대한 대칭이동이므로, $W$는 Coxeter group의 구조를 갖는다.
+Weyl group은 유한군이다. 실제로 $W$는 $\Phi$가 속한 Euclidean space의 orthogonal group의 subgroup이고, $\Phi$가 유한집합이므로 $W$ 역시 유한하다. 또한 [정의 9](#def9)의 셋째 조건에 의하여 reflection $s_\alpha$가 $\alpha$에 수직인 hyperplane에 대한 대칭이동이므로, $W$는 Coxeter group의 구조를 갖는다.
 
 ::: 예시 18
 [예시 13](#ex13)에서 살펴본 $\Phi(A_n)$의 경우, reflection $s_{ij}$는 $i$번째와 $j$번째 좌표를 교환하는 transposition에 해당한다. 따라서 $W(\Phi(A_n))\cong S_{n+1}$이다. [예시 14](#ex14)의 $\Phi(D_n)$의 경우, reflection들은 좌표의 교환과 부호 변화를 모두 포함하므로 $W(\Phi(D_n))\cong(\mathbb{Z}/2\mathbb{Z})^{n-1}\rtimes S_n$이다.

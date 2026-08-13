@@ -10,6 +10,7 @@ sidebar:
 
 date: 2024-08-12
 weight: 203
+drift_needed: true
 
 ---
 
@@ -53,7 +54,7 @@ $$\beta'\cdot_B(\beta\otimes_A x)=(\beta'\beta)\otimes_A x$$
 
 을 통해 $B$의 action $\cdot_B$를 정의할 수 있다. 이것이 실제로 action이 된다는 것은 단순계산을 통해서도 어렵지 않게 얻어지며, 혹은 합성
 
-$$B\otimes_\mathbb{Z}(\phi^\ast B\otimes_AM)\cong (B\otimes_\mathbb{Z}\phi^\ast B)\otimes_AM \overset{\mu_B}{\longrightarrow} \phi^\ast B\otimes_AM$$
+$$B\otimes_\mathbb{Z}(\phi^\ast B\otimes_AM)\cong (B\otimes_\mathbb{Z}\phi^\ast B)\otimes_AM \overset{\mu_B\otimes_A\id_M}{\longrightarrow} \phi^\ast B\otimes_AM$$
 
 으로 얻어지는 것으로 생각할 수도 있다.[^1] 또, 임의의 $A$-linear map $u:M \rightarrow M'$에 대하여 $\id_{\phi^\ast B}\otimes_A u$가 이렇게 정의된 두 $B$-module 사이의 $B$-linear map을 정의하는 것을 확인할 수 있다.
 
@@ -83,19 +84,19 @@ Functor $\Hom_A(\phi^\ast B,-): \lMod{A} \rightarrow \lMod{B}$를 *coextension o
 
 ## 수반함자
 
-위에서 정의한 세 functor들 사이에는 특정한 adjoint 관계들이 있다. 우선 다음 보조정리를 보이자.
+위에서 정의한 세 functor들 사이에는 특정한 adjoint 관계들이 있다. ([\[범주론\] §수반함자, ⁋정의 1](/ko/math/category_theory/adjoints#def1)) 우선 다음 보조정리를 보이자.
 
 ::: 보조정리 5
-Right $B$-module $N_1$, left $B$-module $N_2$에 대하여, 두 abelian group $\phi^\ast N_1\otimes_A \phi^\ast N_2$와 $N_1\otimes_B N_2$를 생각하자. 그럼 이들 사이의 유일한 bilinear map $\Phi:\phi^\ast N_1\otimes_A \phi^\ast N_2 \rightarrow N_1\otimes_BN_2$가 존재하여, 임의의 $y_1\otimes_A y_2\in \phi^\ast N_1\otimes_A\phi^\ast N_2$가 $y_1\otimes_B y_2\in N_1\otimes_BN_2$로 옮겨지도록 할 수 있다. 
+Right $B$-module $N_1$, left $B$-module $N_2$에 대하여, 두 abelian group $\phi^\ast N_1\otimes_A \phi^\ast N_2$와 $N_1\otimes_B N_2$를 생각하자. 그럼 이들 사이의 유일한 homomorphism $\Phi:\phi^\ast N_1\otimes_A \phi^\ast N_2 \rightarrow N_1\otimes_BN_2$가 존재하여, 임의의 $y_1\otimes_A y_2\in \phi^\ast N_1\otimes_A\phi^\ast N_2$가 $y_1\otimes_B y_2\in N_1\otimes_BN_2$로 옮겨지도록 할 수 있다. 
 
-만일 $A$가 commutative ring이었다면, $\Phi$는 $A$-linear map $\phi^\ast N_1\otimes_A\phi^\ast N_2 \rightarrow\phi^\ast(N_1\otimes_BN_2)$이 된다.
+만일 $A$와 $B$가 모두 commutative ring이었다면, $\Phi$는 $A$-linear map $\phi^\ast N_1\otimes_A\phi^\ast N_2 \rightarrow\phi^\ast(N_1\otimes_BN_2)$이 된다.
 :::
 ::: 증명
 $\phi^\ast N_1\times\phi^\ast N_2$에서 $N_1\otimes_B N_2$로의 함수를 $(y_1,y_2)\mapsto y_1\otimes_B y_2$로 정의한 후, 이것이 $A$의 스칼라곱에 대해서도 잘 행동하는 것을 보이면 된다. 그런데 $\phi^\ast N_1,\phi^\ast N_2$ 위에서 $A$의 스칼라곱은 $\phi(\alpha)$를 통한 $B$-action으로 정의되므로, 임의의 $\alpha\in A$에 대하여
 
 $$(\alpha\cdot_A y_1,y_2)=(\phi(\alpha)\cdot_B y_1, y_2)\mapsto (\phi(\alpha)\cdot_B y_1)\otimes_B y_2=y_1\otimes_B(\phi(\alpha)\cdot_B y_2)$$
 
-가 성립하며, 따라서 $(\alpha\cdot_A y_1,y_2)$와 $y_1,\alpha\cdot_Ay_2$가 같은 원소로 보내지므로 tensor product의 universal property에 의해 증명이 완료된다.
+가 성립하며, 따라서 $(\alpha\cdot_A y_1,y_2)$와 $(y_1,\alpha\cdot_Ay_2)$가 같은 원소로 보내지므로 tensor product의 universal property에 의해 증명이 완료된다.
 :::
 
 다음 명제들은 일반적인 경우에서도 증명할 수 있지만, 편의를 위해 $A, B$가 모두 commutative ring이라 가정한다. 
@@ -108,11 +109,11 @@ Adjoint $\phi_!\dashv\phi^\ast$가 존재한다.
 
 {% diagram Math/Algebraic_Structures/Change_of_Base_Ring-3.svg width="22.24em" alt="Adjointness-1" %}
 
-을 통해 함수 $M \rightarrow N$을 얻는다. 이 때 $M \rightarrow A\otimes_AM \rightarrow \phi^\ast B\otimes_AM$은 $A$-linear map들의 합성이고, $v:\phi^\ast B\otimes M \rightarrow N$은 $B$-linear map이다. 우선 임의의 $\alpha\in A$와 $x\in M$에 대하여 앞의 $A$-linear map들의 합성을 보면
+을 통해 함수 $M \rightarrow N$을 얻는다. 이 때 $M \rightarrow A\otimes_AM \rightarrow \phi^\ast B\otimes_AM$은 $A$-linear map들의 합성이고, $v:\phi^\ast B\otimes_A M \rightarrow N$은 $B$-linear map이다. 우선 임의의 $\alpha\in A$와 $x\in M$에 대하여 앞의 $A$-linear map들의 합성을 보면
 
 $$\alpha\cdot_Ax\mapsto \alpha\otimes_A x\mapsto \phi(\alpha)\otimes_A x$$
 
-이고, $B$-linear map $f$에 대해서는
+이고, $B$-linear map $v$에 대해서는
 
 $$\phi(\alpha)\otimes_A x=(\phi(\alpha)1)\otimes_A x=\phi(\alpha)\cdot_B(1\otimes_A x)$$
 
@@ -128,9 +129,9 @@ $$v(\phi(\alpha)\otimes_A x)=v(\phi(\alpha)\cdot_B(1\otimes_A x))=\phi(\alpha)\c
 
 을 통해 함수 $\phi_!M \rightarrow N$을 얻는다. 그럼 임의의 $\beta'\in B$와 $\beta\otimes_A x\in \phi^\ast B\otimes_AM$에 대하여, 
 
-$$\Phi(\id_{\phi^\ast B}\otimes_A u(\beta'\cdot_B(\beta\otimes_Ax)))=\Phi((\beta'\beta)\otimes_Ax)=(\beta'\beta)\otimes_B x$$
+$$\Phi((\id_{\phi^\ast B}\otimes_A u)(\beta'\cdot_B(\beta\otimes_Ax)))=\Phi((\beta'\beta)\otimes_Au(x))=(\beta'\beta)\otimes_B u(x)$$
 
-이고, 이는 $B\otimes_BN\cong N$을 통해 $(\beta'\beta)\cdot_Bx=\beta'\cdot_B(\beta\cdot_Bx)$로 옮겨진다. 즉 위에서 정의한 함수는 $B$-linear map이다. 
+이고, 이는 $B\otimes_BN\cong N$을 통해 $(\beta'\beta)\cdot_Bu(x)=\beta'\cdot_B(\beta\cdot_Bu(x))$로 옮겨진다. 즉 위에서 정의한 함수는 $B$-linear map이다. 
 
 이제 위에서 정의된 두 함수가 서로의 역함수임을 확인할 수 있고, 뿐만 아니라 이들이 natural equivalence를 정의한다는 것 또한 확인할 수 있다.
 :::
@@ -151,5 +152,5 @@ Adjoint $\phi^\ast\dashv\phi_\ast$가 존재한다.
 
 ---
 
-[^1]: 엄밀히 말하자면 이 식에서 첫 번째 isomorphism을 말이 되게 하기 위해서는 $$B$$가 $$(A,\mathbb{Z})$$-bimodule이라는 사실을 이용해야 한다.
+[^1]: 엄밀히 말하자면 이 식에서 첫 번째 isomorphism을 말이 되게 하기 위해서는 $$B$$가 $$(\mathbb{Z},A)$$-bimodule이라는 사실을 이용해야 한다.
 

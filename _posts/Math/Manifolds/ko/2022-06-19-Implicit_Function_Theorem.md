@@ -69,7 +69,7 @@ $$F(U)=\left\{q'\in V\mid \text{$w^i(q')=w^i(F(p))=0$ for $i=k+1,\ldots,n$}\righ
 
 {% diagram Math/Manifolds/Implicit_Function_Theorem-1.png width="200px" alt="counterexample" %}
 
-하지만 만일 $M$이 embedding이었다면 $(V,\varphi)$를 적당히 잡아 $F(M)\cap V$가 $V$의 slice가 되도록 할 수 있다. 이러한 관점에서 위 보조정리를 
+하지만 만일 $F$가 embedding이었다면 $(V,\varphi)$를 적당히 잡아 $F(M)\cap V$가 $V$의 slice가 되도록 할 수 있다. 이러한 관점에서 위 보조정리를 
 
 > Immersed submanifold는 locally embedded이다
 
@@ -109,7 +109,7 @@ $$x^1=y^1\circ F,\quad\ldots,\quad x^n=y^n\circ F,\qquad x^{n+1},\quad\ldots,\qu
 
 $$P\cap W=\left\{w\in W\mid x^1(w)=\cdots=x^n(w)=0\right\}$$
 
-이다. 즉 $P\cap W$는 coordinate system $(W,(x^i)_{i=1}^m)$의 slice이다.
+이다. 즉 좌표의 순서를 재배열하면 $P\cap W$는 coordinate system $(W,(x^i)_{i=1}^m)$의 slice이다.
 
 이제 $P$에 $M$의 subspace topology를 주고, 위에서 얻어지는 각각의 slice에 함수
 

@@ -13,6 +13,8 @@ date: 2022-09-18
 
 weight: 16
 
+drift_needed: true
+
 ---
 
 ## 공간의 직합
@@ -42,7 +44,7 @@ $$Av=\sum_{\lambda\in\sigma(A)}\lambda v_\lambda$$
 을 얻는다. 물론 위의 계산이 말이 되기 위해서는 $v$를 $v_\lambda$들의 합으로 나타내는 방법이 유일해야 한다. 이를 다음과 같이 정의한다.
 
 ::: 정의 1
-임의의 $\mathbb{K}$-벡터공간 $V$가 그 부분공간 $(W_i)_{i\in I}$들의 *direct sum<sub>직합</sub>*이라는 것은, 임의의 $v\in V$가 주어질 때마다 적당한 $(v_i)_{i\in I}$가 <em-ko>유일하게</em-ko> 존재하여 
+임의의 $\mathbb{K}$-벡터공간 $V$가 그 부분공간 $(W_i)_{i\in I}$들의 *direct sum<sub>직합</sub>*이라는 것은, 임의의 $v\in V$가 주어질 때마다 적당한 $v_i\in W_i$들의 모임 $(v_i)_{i\in I}$가 <em-ko>유일하게</em-ko> 존재하여 
 
 $$v=\sum_{i\in I} v_i$$
 
@@ -86,7 +88,7 @@ $$e_1+e_2=e_1+e_2+0=0+0+(e_1+e_2)$$
 임의의 $\mathbb{K}$-벡터공간 $V$와, 부분공간 $(W_i)_{i\in I}$에 대하여 $V=\bigoplus_{i\in I} W_i$인 것은 $W_i$의 basis $\mathcal{B}_i$들이 $i\neq j$일 때마다 $\mathcal{B}_i\cap\mathcal{B}_j=\emptyset$을 만족하고, $\bigcup_{i\in I}\mathcal{B}_i$가 $V$의 basis가 되는 것과 동치이다.
 :::
 ::: 증명
-우선 $V=\bigoplus W_i$라 가정하고, $W_i$들의 basis $\mathcal{B}_i$를 택하자. 만일 $\mathcal{B}_i\cap\mathcal{B}_j\neq\emptyset$이라면 $W_i\cap W_j\neq\emptyset$가 되어 [명제 2](#prop2) 이후의 논의에 모순이므로, 반드시 $\mathcal{B}_i\cap\mathcal{B}_j=\emptyset$이어야 한다. 임의의 $v\in V$에 대하여, $V=\bigoplus W_i$로부터 다음의 식
+우선 $V=\bigoplus W_i$라 가정하고, $W_i$들의 basis $\mathcal{B}_i$를 택하자. 만일 $\mathcal{B}_i\cap\mathcal{B}_j\neq\emptyset$이라면 $W_i\cap W_j\neq\{0\}$가 되어 [명제 2](#prop2) 이후의 논의에 모순이므로, 반드시 $\mathcal{B}_i\cap\mathcal{B}_j=\emptyset$이어야 한다. 임의의 $v\in V$에 대하여, $V=\bigoplus W_i$로부터 다음의 식
 
 $$v=\sum_{i\in I} w_i$$
 
@@ -116,7 +118,7 @@ $$\alpha_1x_1+\alpha_2x_2+\cdots+\alpha_mx_m=0\tag{1}$$
 
 을 만족하며 모두 영은 아닌 스칼라들 $\alpha_i$들이 존재한다. 이제 이를 만족하는 $(\alpha_i)_{1\leq i\leq m}$들 중, $\supp(\alpha_i)$가 가장 작도록 하는 모임을 골라 이를 $(\beta_i)_{1\leq i\leq m}$라 하자. 즉, 만일 $\beta_i\neq0$을 만족하는 $i$의 갯수가 $k$개라면, $k$개 미만의 $i$에 대하여 $\alpha_i\neq 0$을 만족하는 $(\alpha_i)_{1\leq i\leq m}$은 위의 식 (1)을 만족하지 않는다.
 
-이제 적어도 2개의 $\beta_i$에 대하여 $\beta_i\neq 0$이므로, 일반성을 잃지 않고 $\beta_m\neq 0$이라 하자. 그럼
+만일 $\beta_i\neq0$인 $i$가 하나뿐이라면 $\beta_ix_i=0$에서 $x_i=0$이 되어 $x_i$가 고유벡터라는 데 모순이므로, 적어도 2개의 $\beta_i$에 대하여 $\beta_i\neq 0$이다. 따라서 일반성을 잃지 않고 $\beta_m\neq 0$이라 하자. 그럼
 
 $$x_m=\sum_{i=1}^{m-1}\left(-\frac{\beta_i}{\beta_m}\right)x_i$$
 
@@ -140,7 +142,7 @@ $$0=\sum_{i=1}^{m-1}\beta_i'(\lambda_i-\lambda_m)x_i$$
 
 $$0=\sum_{i=1}^{m-1}\beta_i(\lambda_i-\lambda_m)x_i$$
 
-이다. 만일 $(\beta''_i)_{1\leq i\leq n}$을 다음의 식
+이다. 만일 $(\beta''_i)_{1\leq i\leq m}$을 다음의 식
 
 $$\beta_i''=\begin{cases}\beta_i(\lambda_i-\lambda_m)&1\leq i\leq m-1\\0&i=m\end{cases}$$
 
@@ -201,7 +203,7 @@ $n\times n$ 행렬 $A$가 주어졌다 하고, $A$의 특성다항식을 $p_A$�
 
 ## 행렬의 대각화
 
-우리는 앞서 임의의 $n\times n$ 행렬 $A$가 주어졌을 때, $A$의 고윳값과 고유공간을 통해 $\mathbb{R}^n$을 분해하는 방법을 살펴보았고, [명제 6](#prop6)으로부터 이러한 분해가 언제 가능한지 또한 알게 되었다. 이를 증명하기 위해 사용했던 [명제 5](#prop5)의 증명을 다시 한 번 살펴보자. 우리는 $E_\lambda$의 basis $x_1,\ldots, x_k$에 $n-k$개의 임의의 벡터를 추가한 후, 이를 통해 행렬 $X=(x_1\mid\cdots\mid x_n)$을 정의한 후 계산을 통해
+우리는 앞서 임의의 $n\times n$ 행렬 $A$가 주어졌을 때, $A$의 고윳값과 고유공간을 통해 $\mathbb{K}^n$을 분해하는 방법을 살펴보았고, [명제 6](#prop6)으로부터 이러한 분해가 언제 가능한지 또한 알게 되었다. 이를 증명하기 위해 사용했던 [명제 5](#prop5)의 증명을 다시 한 번 살펴보자. 우리는 $E_\lambda$의 basis $x_1,\ldots, x_k$에 $n-k$개의 임의의 벡터를 추가한 후, 이를 통해 행렬 $X=(x_1\mid\cdots\mid x_n)$을 정의한 후 계산을 통해
 
 $$X^{-1}AX=\begin{pmatrix}\lambda I_k&B\\0&C\end{pmatrix}$$
 
@@ -212,7 +214,7 @@ $$y_i\cdot x_j=\begin{cases}1&i=j\\0&i\neq j\end{cases}$$
 으로부터 $C$도 대각행렬이 되고, $B$는 영행렬이 된다는 것을 알 수 있다. 따라서 다음이 성립한다.
 
 ::: 명제 7
-[명제 6](#prop6)의 조건을 모두 만족하는 $n\times n$ 행렬 $A$를 생각하고, 고유공간들의 basis로 이루어진 $\mathbb{R}^n$의 basis를 잡아 이를 $x_1,\ldots, x_n$이라 하자. $Ax_i=\lambda_ix_i$라 하고, $X=(x_1\mid\cdots\mid x_n)$이라 하면, 대각행렬
+[명제 6](#prop6)의 조건을 모두 만족하는 $n\times n$ 행렬 $A$를 생각하고, 고유공간들의 basis로 이루어진 $\mathbb{K}^n$의 basis를 잡아 이를 $x_1,\ldots, x_n$이라 하자. $Ax_i=\lambda_ix_i$라 하고, $X=(x_1\mid\cdots\mid x_n)$이라 하면, 대각행렬
 
 $$D=\begin{pmatrix}\lambda_1&0&\cdots&0\\ 0&\lambda_2&\cdots&0\\ \vdots&\vdots&\ddots&\vdots\\0&0&\cdots&\lambda_n\end{pmatrix}$$
 
@@ -225,7 +227,7 @@ $$D=\begin{pmatrix}\lambda_1&0&\cdots&0\\ 0&\lambda_2&\cdots&0\\ \vdots&\vdots&\
 [명제 6](#prop6)의 조건을 모두 만족하는 $n\times n$ 행렬 $A$를 *diagonalizable<sub>대각화가능</sub>*이라 한다.
 :::
 
-혹은, [명제 6](#prop6)은 필요충분조건이었으므로, 대각행렬과 similar를 diagonalizable한 행렬이라 불러도 아무런 문제가 없다. 바꾸어 말하자면 임의의 diagonalizable matrix의 similarity class는 eigenvalue에 의해 완전하게 결정된다. 
+혹은, [명제 6](#prop6)은 필요충분조건이었으므로, 대각행렬과 similar를 diagonalizable한 행렬이라 불러도 아무런 문제가 없다. 바꾸어 말하자면 임의의 diagonalizable matrix의 similarity class는 중복도를 포함한 eigenvalue들에 의해 완전하게 결정된다. 
 
 Diagonalizable matrix들이 개념적으로 중요하다는 것은 위에서 충분히 살펴보았다. 이 뿐만 아니라 diagonalizable matrix들은 계산의 편의성 측면에서도 크게 도움이 된다. 가령 행렬 $A$가 대각화 가능하여 $A=XDX^{-1}$이라면, $A$의 거듭제곱은 $A^k=XD^kX^{-1}$로 주어지며 대각행렬의 거듭제곱은 각 성분의 거듭제곱으로 만들어진 대각행렬에 불과하므로 $A$의 거듭제곱을 계산하는 것은 아주 쉬운 일이 된다. 
 
@@ -333,7 +335,7 @@ $$A\vert_{W_\lambda(A)}: W_\lambda(A) \rightarrow W_\lambda(A)$$
 
 가 잘 정의된다. 그럼 [명제 4](#prop4)로부터, 만일 $w\in W_\lambda(A)$가 고유값 $\mu$를 갖는 $A\vert_{W_\lambda(A)}$의 고유벡터라면 $w$를 $V$의 원소로 본 것 또한 $A$의 (eigenvalue $\mu$에 해당하는) 고유벡터이며 거꾸로 $A$의 고유값 $\mu\neq \lambda$과 그에 해당하는 고유벡터가 주어진다면 이는 $A\vert_{W_\lambda(A)}$의 고유값--고유벡터 쌍으로 볼 수 있다는 것도 안다. 또, $A\vert_{W_\lambda(A)}$의 임의의 고유값 $\mu$에 대하여, 
 
-$$\ker (A_{W_\lambda(A)}-\mu I)=\ker (A_{W_\lambda(A)}-\mu I)^2$$
+$$\ker (A\vert_{W_\lambda(A)}-\mu I)=\ker (A\vert_{W_\lambda(A)}-\mu I)^2$$
 
 도 비슷한 이유로 $W_\lambda(A)$ 위에서 성립하는 것을 안다. 즉, 우리는 이 과정을 귀납적으로 반복할 수 있다. 한편 우리는 $\mathbb{K}$가 algebraically closed임을 가정하고 있으므로 임의의 linear operator $W \rightarrow W$는, $W$가 $0$차원이 아닌 한, 항상 고유값을 가진다는 것을 알고 이로부터 이 귀납법이 <em-ko>정확히</em-ko> $A$의 eigenspace decomposition을 준다는 것을 안다. 
 :::

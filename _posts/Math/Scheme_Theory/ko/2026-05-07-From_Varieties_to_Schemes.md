@@ -8,22 +8,23 @@ sidebar:
     nav: "scheme_theory-ko"
 date: 2026-05-07
 weight: 1
+drift_needed: true
 ---
 
 ## 대수다양체
 
-[대수다양체](/ko/algebraic_varieties/) 카테고리의 글에서는 classical algebraic geometry의 기본적인 틀을 따라 왔다. 즉, algebraically closed field $\mathbb{K}$ 위에서 affine space $\mathbb{A}_\mathbb{K}^n$의 부분집합으로 정의되는 affine variety, 그리고 이들을 적절히 붙여 얻어지는 projective variety의 이론은 여러 방면에서 풍부한 결과를 낳았다. 특히 variety의 coordinate ring과 variety가 정의하는 ideal 사이의 대응 ([\[대수다양체\] §아핀다양체, ⁋명제 18](/ko/math/algebraic_varieties/affine_varieties#prop18)) 등은 기하와 대수의 깊은 연관성을 보여주는 대표적인 예이다.
+[대수다양체](/ko/algebraic_varieties/) 카테고리의 글에서는 classical algebraic geometry의 기본적인 틀을 따라 왔다. 즉, algebraically closed field $\mathbb{K}$ 위에서 affine space $\mathbb{A}_\mathbb{K}^n$의 부분집합으로 정의되는 affine variety, 그리고 이들을 적절히 붙여 얻어지는 projective variety의 이론은 여러 방면에서 풍부한 결과를 낳았다. 특히 variety의 isomorphism과 coordinate ring의 isomorphism 사이의 대응 ([\[대수다양체\] §아핀다양체, ⁋명제 18](/ko/math/algebraic_varieties/affine_varieties#prop18)) 등은 기하와 대수의 깊은 연관성을 보여주는 대표적인 예이다.
 
 Scheme은 이러한 variety들이 놓치는 것들을 극복하기 위해 체계화된 공간이다. 이번 글은 scheme theory를 전개하기 전에, 이것이 어떤 차원에서 variety를 확장하고, 어떠한 새로운 기하학적 직관을 제공하는지를 살펴보아 큰 흐름을 미리 잡아두는 것에 있다. 
 
 이를 위해 간단히 algebraic variety에서의 세팅을 기억하자. 출발점이 되는 대상은 [\[대수다양체\] §아핀다양체, ⁋정의 2](/ko/math/algebraic_varieties/affine_varieties#def2)의 *affine variety*와 [\[대수다양체\] §사영다양체, ⁋정의 3](/ko/math/algebraic_varieties/projective_varieties#def3)의 *projective variety*로, 이들은 각각 algebraically closed field $\mathbb{K}$ 위의 affine space $\mathbb{A}_\mathbb{K}^n$과 projective space $\mathbb{P}_\mathbb{K}^n$의 irreducible algebraic subset으로 정의되었다. 더욱 중요한 것은 이들이 그 위에 정의된 regular function들의 sheaf $\mathcal{O}_V$를 갖는 locally ringed space $(V,\mathcal{O}_V)$로 이해될 수 있다는 것이었다. 
 
-이 세계에서는 모든 점이 closed point였다. 즉, $\mathbb{A}_\mathbb{K}^2$ 위의 점은 단순히 좌표 $(a,b)\in \mathbb{K}^2$에 해당하는 maximal ideal $(\x-a, \y-b)\subseteq \mathbb{K}[\x,\y]$로 완전히 결정되었다. 이는 기하적 직관으로는 타당하다고도 할 수 있지만, 이론을 펼치기에는 썩 좋은 환경은 아닌데 예를 들어 $\mathbb{A}_\mathbb{K}^2$ 위에서 직선 $V(\y)$와 포물선 $V(\y-\x^2)$을 생각하면, 이들이 만나는 점이 $(0,0)$으로 주어진다는 것 자체는 classical algebraic variety에서 잘 보이는 것이지만, 이 만나는 degree가 $1$차가 아니라는 것이 전혀 보이지 않는다. 
+이 세계에서는 모든 점이 closed point였다. 즉, $\mathbb{A}_\mathbb{K}^2$ 위의 점은 단순히 좌표 $(a,b)\in \mathbb{K}^2$에 해당하는 maximal ideal $(\x-a, \y-b)\subseteq \mathbb{K}[\x,\y]$로 완전히 결정되었다. 이는 기하적 직관으로는 타당하다고도 할 수 있지만, 이론을 펼치기에는 썩 좋은 환경은 아닌데 예를 들어 $\mathbb{A}_\mathbb{K}^2$ 위에서 직선 $Z(\y)$와 포물선 $Z(\y-\x^2)$을 생각하면, 이들이 만나는 점이 $(0,0)$으로 주어진다는 것 자체는 classical algebraic variety에서 잘 보이는 것이지만, 이 만나는 degree가 $1$차가 아니라는 것이 전혀 보이지 않는다. 
 
 ::: 예시 1
-Scheme에서 이러한 교차점의 degree를 어떻게 담아내는지를 살펴보자. 우선 교차점이 degree $1$인 경우로 $\mathbb{A}_\mathbb{K}^2$ 위에서 두 곡선 $V(\y-\x)$와 $V(\y)$의 교차를 생각할 수 있다. 그럼 이는 classical algebraic variety 관점에서는 위에서 살펴본 상황과 구별할 수 없다. 즉 이 두 직선은 한 점 $V(\x,\y)=\{(0,0)\}$에서 만난다. 
+Scheme에서 이러한 교차점의 degree를 어떻게 담아내는지를 살펴보자. 우선 교차점이 degree $1$인 경우로 $\mathbb{A}_\mathbb{K}^2$ 위에서 두 곡선 $Z(\y-\x)$와 $Z(\y)$의 교차를 생각할 수 있다. 그럼 이는 classical algebraic variety 관점에서는 위에서 살펴본 상황과 구별할 수 없다. 즉 이 두 직선은 한 점 $Z(\x,\y)=\{(0,0)\}$에서 만난다. 
 
-이 두 직선의 교점이 위의 예시와 어떻게 다른지 살펴보기 위해서는 이들을 정리하는 ideal을 살펴보면 된다. 즉
+이 두 직선의 교점이 위의 예시와 어떻게 다른지 살펴보기 위해서는 이들을 정의하는 ideal을 살펴보면 된다. 즉
 
 $$(\y-\x)+(\y)=(\x,\y),\qquad (\y-\x^2)+(\y)=(\x^2,\y)$$
 
@@ -79,10 +80,10 @@ $$h_X:(\Sch_{/S})^{\op}\rightarrow\Set,\qquad h_X(T)=\Hom_S(T,X)$$
 Classical variety $V$ 위의 $\mathbb{K}$-rational point는 단순히 $\mathbb{K}$-값을 갖는 좌표 $(a_1,\dotsc,a_n)$의 집합으로 이해되었다. 이는 scheme의 언어로는 morphism $\Spec \mathbb{K}\rightarrow V$에 해당한다. Functor of points는 이 관점을 확장하여, $V$의 $T$-valued point를 임의의 scheme $T$로부터의 morphism으로 정의한다.
 
 ::: 예시 4
-Classical variety $V\subseteq\mathbb{A}_\mathbb{K}^n$의 $\mathbb{K}$-rational points의 집합은 $V(\mathbb{K})=\Hom_\mathbb{K}(\Spec \mathbb{K},V)$이다. 이는 functor of points $h_V$를 base scheme $T=\Spec \mathbb{K}$에 대하여 평가한 값 $h_V(\Spec \mathbb{K})$에 해당한다. 그러나 $T=\Spec \mathbb{K}[\epsilon]/(\epsilon^2)$를 대입하면, $h_V(T)$는 $V$의 $\mathbb{K}$-point에서의 tangent vector들을 parameterize하게 된다.
+Classical variety $V\subseteq\mathbb{A}_\mathbb{K}^n$의 $\mathbb{K}$-rational points의 집합은 $V(\mathbb{K})=\Hom_\mathbb{K}(\Spec \mathbb{K},V)$이다. 이는 functor of points $h_V$를 $T=\Spec \mathbb{K}$에 대하여 평가한 값 $h_V(\Spec \mathbb{K})$에 해당한다. 그러나 $T=\Spec \mathbb{K}[\epsilon]/(\epsilon^2)$를 대입하면, $h_V(T)$는 $V$의 $\mathbb{K}$-point에서의 tangent vector들을 parameterize하게 된다.
 :::
 
-특히 projective line $\mathbb{P}_\mathbb{K}^1$의 경우, functor of points를 통해 infinitesimal structure가 어떻게 드러나는지 명확히 볼 수 있다. $\mathbb{P}_\mathbb{K}^1$은 그 자체로 homogeneous coordinate를 갖는 scheme이므로, 임의의 $\mathbb{K}$-algebra $R$에 대하여 $\mathbb{P}_\mathbb{K}^1(R)$는 $R$ 위의 projective line 위의 점들로 정의된다.
+특히 projective line $\mathbb{P}_\mathbb{K}^1$의 경우, functor of points를 통해 infinitesimal structure가 어떻게 드러나는지 명확히 볼 수 있다. $\mathbb{P}_\mathbb{K}^1$은 그 자체로 homogeneous coordinate를 갖는 scheme이므로, 임의의 local $\mathbb{K}$-algebra $R$에 대하여 $\mathbb{P}_\mathbb{K}^1(R)$는 $R$ 위의 projective line 위의 점들로 정의된다.
 
 ::: 예시 5
 $T=\Spec \mathbb{K}[\epsilon]/(\epsilon^2)$라 하자. $\mathbb{P}_\mathbb{K}^1$의 $T$-valued points, 즉 morphism $T\rightarrow\mathbb{P}_\mathbb{K}^1$를 생각하면, 이들은 $\mathbb{P}_\mathbb{K}^1$ 위의 한 점 $P$와 그 점에서의 tangent vector를 동시에 결정한다. 구체적으로, 점 $P$는 closed immersion $\Spec \mathbb{K}\hookrightarrow T$를 $T\rightarrow\mathbb{P}_\mathbb{K}^1$와 합성함으로써 얻어지고, 나머지 정보는 $P$에서의 Zariski tangent space의 원소가 된다. 따라서 $\mathbb{P}_\mathbb{K}^1$의 $\mathbb{K}[\epsilon]/(\epsilon^2)$-points는 $\mathbb{P}_\mathbb{K}^1$의 tangent bundle을 구성하는 점들에 일대일 대응한다.

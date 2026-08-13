@@ -10,6 +10,7 @@ sidebar:
 
 date: 2026-06-25
 weight: 9
+drift_needed: true
 
 ---
 
@@ -58,7 +59,7 @@ $$g(t) = f(x) - \sum_{k=0}^{n}\frac{f^{(k)}(t)}{k!}(x-t)^k, \qquad h(t) = (x - t
 
 $$g'(t) = -\frac{f^{(n+1)}(t)}{n!}(x - t)^n$$
 
-만 남고, $h'(t) = -(n+1)(x-t)^n$이다. [§평균값 정리, ⁋정리 6](/ko/math/calculus/mean_value_theorem#thm6)를 $a$와 $x$ 사이에 적용하면
+만 남고, $h'(t) = -(n+1)(x-t)^n$이다. [§평균값 정리, ⁋정리 6](/ko/math/calculus/mean_value_theorem#thm6)을 $a$와 $x$ 사이에 적용하면
 
 $$\bigl(g(x) - g(a)\bigr)h'(c) = \bigl(h(x) - h(a)\bigr)g'(c)$$
 
@@ -74,7 +75,7 @@ $$(-R_n(x))\bigl(-(n+1)(x-c)^n\bigr) = \bigl(-(x-a)^{n+1}\bigr)\left(-\frac{f^{(
 실제 몇몇 예시에서 이들 계산을 따라가보자.
 
 ::: 예시 3
-$f(x) = e^x$의 임의의 미분은 자기 자신인 것을 확인하였으므로, 임의의 $k$에 대하여 $f^{(k)}(0) = 1$이다. 따라서 테일러 다항식은
+$f(x) = e^x$의 임의의 미분은 자기 자신인 것을 [§미분법](/ko/math/calculus/differentiation_rules)에서 확인하였으므로, 임의의 $k$에 대하여 $f^{(k)}(0) = 1$이다. 따라서 테일러 다항식은
 
 $$P_n(x) = \sum_{k=0}^n \frac{x^k}{k!}$$
 
@@ -112,9 +113,9 @@ $$\ln(1+x) = \sum_{k=1}^\infty \frac{(-1)^{k-1}}{k} x^k \qquad (-1 < x \leq 1)$$
 
 으로, 이를 미분해보면 무한급수의 식
 
-$$\frac{1}{1+x}=\sum_{k=0}^\infty (-1)^{k}x^k$$
+$$\frac{1}{1+x}=\sum_{k=0}^\infty (-1)^{k}x^k \qquad (\lvert x\rvert < 1)$$
 
-을 얻는다. 이는 더 일반적으로, 실수 $\alpha$에 대해 정의된 다음의 일반화된 이항급수
+을 얻는다. ([§미분법, ⁋명제 1](/ko/math/calculus/differentiation_rules#prop1)) 이는 더 일반적으로, 실수 $\alpha$에 대해 정의된 다음의 일반화된 이항급수
 
 $$(1+x)^\alpha = \sum_{k=0}^\infty \binom{\alpha}{k} x^k, \qquad \binom{\alpha}{k} = \frac{\alpha(\alpha-1)\cdots(\alpha-k+1)}{k!} \qquad (\lvert x\rvert < 1)$$
 
@@ -125,7 +126,7 @@ $$\sqrt{1+x} = 1 + \frac{x}{2} - \frac{x^2}{8} + \cdots$$
 를 준다. 
 :::
 
-위의 예시들은 특히 도함수가 유계인 경우 그 테일러 급수가 자기자신과 같다는 것을 보여준다. 이를 정식으로 적으면 다음과 같다. 
+위의 [예시 4](#ex4)처럼 모든 도함수가 하나의 상수로 동시에 유계인 경우에는 그 테일러 급수가 자기자신과 같다. 이를 정식으로 적으면 다음과 같다. 
 
 ::: 명제 6
 $f$가 $a$를 포함하는 구간 $I$에서 무한히 미분가능하고, 어떤 상수 $M$에 대해 모든 $n$과 모든 $x \in I$에서 $\lvert f^{(n)}(x)\rvert \leq M$이면, $f$는 $I$에서 자신의 테일러 급수와 일치한다.
@@ -148,7 +149,7 @@ $$\lvert R_n(x)\rvert = \frac{\lvert f^{(n+1)}(c)\rvert}{(n+1)!}\lvert x-a\rvert
 
 $$\frac{e^x - 1 - x}{x^2} = \frac{x^2/2 + x^3/6 + \cdots}{x^2} = \frac12 + \frac{x}{6} + \cdots \rightarrow \frac12$$
 
-이다. 이는 로피탈 정리를 두 번 적용하여도 확인할 수 있는 결과로, 테일러 전개가 고차식의 정보까지 기억하고 있으므로 이를 분모와 분자 양쪽에서 약분해도 여전히 정보가 남아있기 때문이다. 
+이다. 이는 [§평균값 정리, ⁋정리 18](/ko/math/calculus/mean_value_theorem#thm18)을 두 번 적용하여도 확인할 수 있는 결과로, 테일러 전개가 고차식의 정보까지 기억하고 있으므로 이를 분모와 분자 양쪽에서 약분해도 여전히 정보가 남아있기 때문이다. 
 :::
 
 ---

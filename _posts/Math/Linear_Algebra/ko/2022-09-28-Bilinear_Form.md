@@ -13,6 +13,7 @@ date: 2022-09-28
 
 weight: 20
 
+drift_needed: true
 
 ---
 
@@ -52,7 +53,7 @@ $$\langle v,w\rangle=-\langle w,v\rangle$$
 
 ## 비퇴화 쌍선형형식
 
-유한차원 $\mathbb{K}$-벡터공간 $V$가 주어졌다 하고, 앞서 언급한 canonical pairing $\langle-,-\rangle:V\times V^\ast\rightarrow \mathbb{K}$을 생각하자. 만일 $V$ 위에 non-degenerate pairing $\langle -,-\rangle:V\times V\rightarrow \mathbb{K}$가 주어졌다면, 우리는 [§쌍대공간, ⁋따름정리 5](/ko/math/linear_algebra/dual_space#cor5)로부터 $\langle -,-\rangle$이 isomorphism 
+유한차원 $\mathbb{K}$-벡터공간 $V$가 주어졌다 하고, 앞서 언급한 canonical pairing $\langle-,-\rangle:V\times V^\ast\rightarrow \mathbb{K}$을 생각하자. 만일 $V$ 위에 non-degenerate pairing $\langle -,-\rangle:V\times V\rightarrow \mathbb{K}$가 주어졌다면, 우리는 [§쌍대공간, ⁋명제 4](/ko/math/linear_algebra/dual_space#prop4)와 $\dim V=\dim V^\ast$로부터 $\langle -,-\rangle$이 isomorphism 
 
 $$V\rightarrow V^\ast;\qquad v\mapsto \langle -,v\rangle\tag{1}$$
 
@@ -71,14 +72,14 @@ $$f(v)=\langle v,w\rangle\qquad\text{for all $v\in V$}$$
 그럼 특히 이전 글에서 정의한 orthogonal complement의 개념을 $V$로 가져올 수 있다. 즉, 다음과 같이 정의하자.
 
 ::: 정의 4
-Non-degenerate bilinear form $\langle -,-\rangle$이 주어진 유한차원 $\mathbb{K}$-벡터공간 $V$를 생각하자. 임의의 $v\in V$에 대하여, 다음의 식 $\langle w,v\rangle=0$을 만족하는 모든 $w\in V$들의 모임을 $v$의 *orthogonal complement<sub>직교여공간</sub>*이라 하고, $v^\perp$로 적는다. 더 일반적으로, 임의의 집합 $S$에 대하여, 다음 집합
+Non-degenerate bilinear form $\langle -,-\rangle$이 주어진 유한차원 $\mathbb{K}$-벡터공간 $V$를 생각하자. 임의의 $v\in V$에 대하여, 다음의 식 $\langle w,v\rangle=0$을 만족하는 모든 $w\in V$들의 모임을 $v$의 *orthogonal complement<sub>직교여공간</sub>*이라 하고, $v^\perp$로 적는다. 더 일반적으로, 임의의 부분집합 $S\subseteq V$에 대하여, 다음 집합
 
 $$S^\perp=\bigcap_{v\in S}v^\perp$$
 
 을 $S$의 orthogonal complement로 정의한다.
 :::
 
-벡터 $w\in V$는 [따름정리 3](#cor3)에 의해 $f\in V^\ast$를 유일하게 지정하는데, 위의 정의는 만일 이렇게 얻어진 $f$가 [§쌍대공간, ⁋정의 7](/ko/math/linear_algebra/dual_space#def7)의 의미에서 $v$의 orthogonal complement라면, $w$를 $v$에 직교하는 것으로 생각하고, 이러한 $w$들을 모아둔 것을 orthogonal complement로 생각하겠다는 의미이다. 이러한 과정을 통해 [§쌍대공간](/ko/math/linear_algebra/dual_space)의 결과들을 모두 $V$로 가져올 수 있다. 남은 글에서 우리는 이 과정을 자세히 살펴본다.
+벡터 $w\in V$는 [따름정리 3](#cor3)에 의해 $f\in V^\ast$를 유일하게 지정하는데, 위의 정의는 만일 이렇게 얻어진 $f$가 [§쌍대공간, ⁋정의 7](/ko/math/linear_algebra/dual_space#def7)의 의미에서 $v$의 orthogonal complement에 속한다면, $w$를 $v$에 직교하는 것으로 생각하고, 이러한 $w$들을 모아둔 것을 orthogonal complement로 생각하겠다는 의미이다. 이러한 과정을 통해 [§쌍대공간](/ko/math/linear_algebra/dual_space)의 결과들을 모두 $V$로 가져올 수 있다. 남은 글에서 우리는 이 과정을 자세히 살펴본다.
 
 일반적인 bilinear form에서는 $\langle w,v\rangle=0$으로 정의한 $v^\perp$과 $\langle v,w\rangle=0$으로 정의한 것이 서로 다를 수 있어, $W^\perp$이 왼쪽에서 정의되었는지, 오른쪽에서 정의되었는지에 따라 그 정의가 달라질 수 있다. 이와 같은 현상을 피하기 위해서는 다음과 같은 성질을 생각하는 것이 현명하다. 
 
@@ -154,7 +155,7 @@ $$V\rightarrow W^\ast;\qquad v\mapsto\langle v,-\rangle\vert_W$$
 
 $$\dim(W^\perp)^\perp=\dim V-\dim W^\perp=\dim W$$
 
-이므로 두 공간이 일치하게 되므로 자명하다.
+이므로 두 공간이 일치한다.
 
 마지막으로 [§벡터공간의 차원, ⁋예시 8](/ko/math/linear_algebra/dimension#ex8)과 1번을 결합하면
 
@@ -176,11 +177,11 @@ $$p\vert_{W^\perp}:W^\perp\rightarrow V/W$$
 $W$가 non-degenerate이므로 [명제 8](#prop8)에 의하여 $V=W\oplus W^\perp$이다. Natural projection은 $\ker p=W$를 만족하므로 $p\vert_{W^\perp}$의 kernel은 $W^\perp\cap W=\{0\}$이라 단사이고, $V=W+W^\perp$이므로 임의의 $v=w+w'$ ($w\in W$, $w'\in W^\perp$)에 대하여 $p(w')=w'+W=v+W$이라 전사이다. 따라서 $p\vert_{W^\perp}$은 isomorphism이다.
 :::
 
-곧 direct sum $V=W\oplus W^\perp$에서 $W$를 접어 없애면 $W^\perp$이 정확히 그 quotient $V/W$을 실현하게 된다. 일반적으로 quotient space $V/W$는 $\langle-,-\rangle$ 없이도 정의되는 표준적인 대상인 반면, 이를 $V$ 안에서 실현한 대상인 $W^\perp$은 form에 의존하게 되며 [명제 8](#prop8)의 non-degeneracy 없이는 이러한 표현이 불가능하다. 가령 $W$가 isotropic이면 $W\cap W^\perp\neq\{0\}$이라 $p\vert_{W^\perp}$이 단사가 되지 못한다.
+곧 direct sum $V=W\oplus W^\perp$에서 $W$를 접어 없애면 $W^\perp$이 정확히 그 quotient $V/W$을 실현하게 된다. 일반적으로 quotient space $V/W$는 $\langle-,-\rangle$ 없이도 정의되는 표준적인 대상인 반면, 이를 $V$ 안에서 실현한 대상인 $W^\perp$은 form에 의존하게 되며 [명제 8](#prop8)의 non-degeneracy 없이는 이러한 표현이 불가능하다. 가령 $W\neq\{0\}$이 isotropic이면 $W\cap W^\perp\neq\{0\}$이라 $p\vert_{W^\perp}$이 단사가 되지 못한다.
 
 ## 네 개의 기본공간들
 
-이제 두 유한차원 $\mathbb{K}$-벡터공간 $V,W$ 위에 non-degenerate bilinear form $\langle -,-\rangle_V$와 $\langle -,-\rangle_W$가 주어졌다 하자. 원칙적으로 이 절의 내용들은 이들 bilinear form들이 reflexive여도 전개할 수는 있지만, 이를 뒤에 나올 식 (2)와 같은 형태로 조금 더 깔끔하게 표현하기 위해서는 이들이 symmetric인 것이 편하므로 그렇게 가정하기로 하자. 또, 논의의 편의를 위하여 이들 bilinear form에 의해 결정되는 isomorphism들을 각각
+이제 두 유한차원 $\mathbb{K}$-벡터공간 $V,W$ 위에 non-degenerate bilinear form $\langle -,-\rangle_V$와 $\langle -,-\rangle_W$가 주어졌다 하자. 원칙적으로 이 절의 내용들은 이들 bilinear form들이 reflexive여도 전개할 수는 있지만, 이를 뒤에 나올 식 (2)와 같은 형태로 조금 더 깔끔하게 표현하기 위해서는 이들이 symmetric인 것이 편하므로 그렇게 가정하기로 하자. 또, 논의의 편의를 위하여 이들 bilinear form이 정의하는 식 (1)의 isomorphism들의 역을 각각
 
 $$\varphi_V:V^\ast\rightarrow V,\qquad \varphi_W:W^\ast\rightarrow W$$
 
@@ -206,7 +207,7 @@ $$\begin{aligned}L(x_1)&=\alpha_{11}y_1+\alpha_{21}y_2+\cdots+\alpha_{m1}y_m\\L(
 
 {% diagram Math/Linear_Algebra/Bilinear_Form-1.svg width="8.27em" alt="identification" %}
 
-을 통해 정의되는 $L':W\rightarrow V$를 생각한다면 이 linear map의 두 basis $\mathcal{C}'$, $\mathcal{B}'$에 대한 행렬표현이 $[L']_{\mathcal{B}'}^{\mathcal{C}'}$가 됨을 확인할 수 있다. 
+을 통해 정의되는 $L':W\rightarrow V$를 생각한다면 이 linear map의 두 basis $\mathcal{C}'$, $\mathcal{B}'$에 대한 행렬표현이 $[L']_{\mathcal{B}'}^{\mathcal{C}'}=\bigl([L]_\mathcal{C}^\mathcal{B}\bigr)^t$가 됨을 확인할 수 있다. 
 
 한편, 이렇게 정의한 $L':W\rightarrow V$는 다음 식
 
@@ -214,14 +215,14 @@ $$\langle Lv, w\rangle_W=\langle v,L'w\rangle_V\qquad\text{for all $v\in V$ and 
 
 을 만족하는 것을 알 수 있다. 이는
 
-$$\langle Lv,w\rangle=(\varphi^{-1}(w))(Lv)=(\varphi^{-1}_W(w)\circ L)(v)=(L^\ast(\varphi^{-1}_W(w))(v)=(\varphi^{-1}_V(v)\circ L')(w)=(\varphi^{-1}_V(v))(L'w)=\langle v,L'w\rangle$$
+$$\langle Lv,w\rangle=(\varphi^{-1}_W(w))(Lv)=(\varphi^{-1}_W(w)\circ L)(v)=(L^\ast(\varphi^{-1}_W(w)))(v)=(\varphi^{-1}_V(v)\circ L')(w)=(\varphi^{-1}_V(v))(L'w)=\langle v,L'w\rangle$$
 
 으로부터 확인할 수 있다. 이러한 식을 만족하는 $L'$을 우리는 linear map $L$의 *adjoint*라 부르고, 약간의 abuse of notation을 통해 $L^\ast$으로 적기도 한다. 
 
 [§쌍대공간, §§직교여공간](/ko/math/linear_algebra/dual_space#직교여공간)의 결과들은 모두 canonical pairing에 대한 식 $(Lv,f)=(v,L^\ast f)$로부터 얻어졌다. 따라서, 이를 위에서 얻은 non-degenerate bilinear form $\langle -,-\rangle$들에 대한 식 (2)로 대체하면 다음 결과들을 얻는다.
 
 ::: 명제 10
-Symmetric non-degenerate bilinear form들이 주어진 두 $\mathbb{K}$-벡터공간 $V,W$, linear map $L:V\rightarrow W$와 그 adjoint $L^\ast:W\rightarrow V$가 주어졌다 하자. 그럼
+Symmetric non-degenerate bilinear form들이 주어진 두 유한차원 $\mathbb{K}$-벡터공간 $V,W$, linear map $L:V\rightarrow W$와 그 adjoint $L^\ast:W\rightarrow V$가 주어졌다 하자. 그럼
 
 1. 임의의 부분공간 $U\subseteq V$에 대하여, $L(U)^\perp=(L^\ast)^{-1}(U^\perp)$가 성립한다.
 2. 임의의 부분공간 $U\subseteq W$에 대하여, $L^\ast(U)^\perp=L^{-1}(U^\perp)$가 성립한다.
@@ -248,12 +249,12 @@ Field $\mathbb{K}$가 다음의 조건
 
 $$\underbrace{1+1+\cdots+1}_\text{$p$ times}=0$$
 
-을 만족한다면 $\mathbb{K}$의 *characteristic<sub>표수</sub>*이 $p$라고 하고 이를 $\ch \mathbb{K}=p$로 표기한다. 만일 위의 식을 만족하는 자연수 $p$가 존재하지 않는다면 $\mathbb{K}$는 characteristic 0을 갖는 것으로 생각한다.
+을 만족하는 자연수 $p$가 존재한다면, 그 가운데 가장 작은 것을 $\mathbb{K}$의 *characteristic<sub>표수</sub>*이라 하고 이를 $\ch \mathbb{K}=p$로 표기한다. 만일 위의 식을 만족하는 자연수 $p$가 존재하지 않는다면 $\mathbb{K}$는 characteristic 0을 갖는 것으로 생각한다.
 :::
 
 예를 들어 $\mathbb{R}$은 characteristic 0을 갖는다. 만일 $\mathbb{F}_2=\{0,1\}$에 다음의 식
 
-$$0+0=0,\quad 0+1=1,\quad 1+0=1,\quad 1+1=2$$
+$$0+0=0,\quad 0+1=1,\quad 1+0=1,\quad 1+1=0$$
 
 그리고
 
@@ -262,16 +263,16 @@ $$0\cdot 0=0,\quad 0\cdot 1=0,\quad 1\cdot 0=0,\quad 1\cdot 1=1$$
 으로 덧셈과 곱셈을 각각 정의한다면 $\mathbb{F}_2$는 field의 조건을 만족한다는 것을 확인할 수 있고, 이 때 $\ch\mathbb{F}_2=2$이다. 
 
 ::: 명제 12
-$\ch \mathbb{K}\neq 2$인 field $\mathbb{K}$에 대하여, symmetric non-degenerate bilinear form이 주어진 $\mathbb{K}$-벡터공간 $V$는 항상 orthogonal basis를 갖는다.  
+$\ch \mathbb{K}\neq 2$인 field $\mathbb{K}$에 대하여, symmetric non-degenerate bilinear form이 주어진 유한차원 $\mathbb{K}$-벡터공간 $V$는 항상 orthogonal basis를 갖는다.  
 :::
 ::: 증명
-우선 간단한 보조정리를 보이자. 임의로 고정된 $v\in V$에 대하여, 반드시 $\langle u,v\rangle\neq 0$이도록 하는 $u\in V$가 존재한다. 그럼
+우선 간단한 보조정리를 보이자. 임의로 고정된 $0$이 아닌 $v\in V$에 대하여, 반드시 $\langle u,v\rangle\neq 0$이도록 하는 $u\in V$가 존재한다. 그럼
 
 $$2\langle u,v\rangle=\langle u+v,u+v\rangle-\langle u,u\rangle-\langle v,v\rangle$$
 
 이고, 두 조건 $\langle u,v\rangle\neq 0$과 $\ch \mathbb{K}\neq 2$에서 좌변은 0이 아니다. 따라서 우변의 세 항 $\langle u+v,u+v\rangle, \langle u,u\rangle,\langle v,v\rangle$ 가운데 적어도 하나는 0이 아니다. 따라서,
 
-> Non-degenerate symmetric bilinear form이 주어진 임의의 $\mathbb{K}$-벡터공간에는 $\langle w,w\rangle\neq 0$을 만족하는 $w$가 반드시 존재한다.
+> Non-degenerate symmetric bilinear form이 주어진 임의의 $\{0\}$이 아닌 $\mathbb{K}$-벡터공간에는 $\langle w,w\rangle\neq 0$을 만족하는 $w$가 반드시 존재한다.
 
 원래의 명제는 $V$의 차원에 대한 귀납법으로 증명한다. $\dim V=0$인 경우는 증명할 것이 없다. 이제 $\dim V=k$인 경우 증명이 완료되었다 가정하자. 그럼 $\dim V=k+1$를 만족하는 임의의 벡터공간 $V$에 대하여, $\langle w,w\rangle\neq 0$을 만족하는 벡터 $w$가 존재한다. 
 
@@ -280,7 +281,7 @@ $$2\langle u,v\rangle=\langle u+v,u+v\rangle-\langle u,u\rangle-\langle v,v\rang
 
 ## Gram matrix
 
-임의의 bilinear form $\langle-,-\rangle:V\times V\rightarrow \mathbb{K}$가 주어졌다 하자. 만일 $V$의 basis $\{x_1,\ldots, x_n\}$가 고정되었다고 하면, 임의의 $v=\sum v_ix_i, w=\sum w_jx_j$에 대하여 다음의 식
+임의의 bilinear form $\langle-,-\rangle:V\times V\rightarrow \mathbb{K}$가 주어졌다 하자. 만일 $V$의 basis $\mathcal{B}=\{x_1,\ldots, x_n\}$가 고정되었다고 하면, 임의의 $v=\sum v_ix_i, w=\sum w_jx_j$에 대하여 다음의 식
 
 $$\langle v,w\rangle=\left\langle\sum_{i=1}^nv_ix_i,\sum_{j=1}^n w_jx_j\right\rangle=\sum_{i,j=1}^n v_iw_j\langle x_i,x_j\rangle$$
 
@@ -296,7 +297,7 @@ $$\langle v,w\rangle=[v]^t_\mathcal{B}G_\mathcal{B}[w]_\mathcal{B}=[v]^t_\mathca
 
 라 할 수 있다. 이제 $[v]_\mathcal{C}=[\id]_\mathcal{C}^\mathcal{B}[v]_\mathcal{B}$이므로, 위의 식의 가장 우변은
 
-$$[v]_\mathcal{C}^tG_\mathcal{C}[w]_\mathcal{C}=\left([\id]_\mathcal{C}^\mathcal{B}[v]_\mathcal{B}\right)^tG_\mathcal{B}\left([\id]_\mathcal{C}^\mathcal{B}[w]_\mathcal{B}\right)=[v]_\mathcal{B}^t\left(([\id]_\mathcal{C}^\mathcal{B})^t G_\mathcal{B}[\id]_\mathcal{C}^\mathcal{B}\right)[w]_\mathcal{B}$$
+$$[v]_\mathcal{C}^tG_\mathcal{C}[w]_\mathcal{C}=\left([\id]_\mathcal{C}^\mathcal{B}[v]_\mathcal{B}\right)^tG_\mathcal{C}\left([\id]_\mathcal{C}^\mathcal{B}[w]_\mathcal{B}\right)=[v]_\mathcal{B}^t\left(([\id]_\mathcal{C}^\mathcal{B})^t G_\mathcal{C}[\id]_\mathcal{C}^\mathcal{B}\right)[w]_\mathcal{B}$$
 
 이 된다. 
 

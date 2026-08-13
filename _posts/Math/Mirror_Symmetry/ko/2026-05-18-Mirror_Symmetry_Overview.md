@@ -11,6 +11,8 @@ sidebar:
 date: 2026-05-18
 weight: 1
 
+drift_needed: true
+
 ---
 
 ## 역사적 배경
@@ -42,7 +44,7 @@ $$\sum_{i=1}^m Q_{ji}\, v_i = 0,\qquad j = 1, \ldots, r$$
 
 $$Q = (Q_{ji}) \in \Mat_{r \times m}(\mathbb{Z})$$
 
-이다.
+이다. 이 때 $Q$의 행들은 $v_i$들이 정의하는 morphism $\mathbb{Z}^m \rightarrow \mathbb{Z}^n$의 kernel, 즉 relation lattice의 $\mathbb{Z}$-basis를 이루도록 택하며, 따라서 $Q$는 $\GL_r(\mathbb{Z})$를 왼쪽에서 곱하는 것을 제외하면 유일하게 결정된다.
 :::
 
 Charge matrix는 단순히 ray 관계식의 계수를 모은 행렬이지만, $X_\Sigma$를 Cox construction을 통해 GIT quotient
@@ -73,7 +75,7 @@ $$Q = \begin{pmatrix} 1 & 1 & 0 & 0 \\ 0 & 0 & 1 & 1 \end{pmatrix}$$
 가 된다. 이는 torus가 앞선 factor와 나중 factor $\mathbb{P}^1$ 각각에 standard scaling action으로 작용한다는 정보를 담고 있다. 
 :::
 
-Mirror symmetry의 관점에서 charge matrix는 $B$-model의 데이터를 담고 있다. 다소 주의할 것은 현재 우리가 다루고 있는 상황은 도입부에서 설명한 Calabi-Yau manifold보다 일반적인 상황이라는 사실이다. 일반적으로 smooth projective toric variety $X_\Sigma$는 Calabi-Yau가 아니라 Fano variety로 주어지며, 이 경우 $X_\Sigma$의 mirror dual은 Calabi-Yau가 아니라 *Landau-Ginzburg model*로 표현된다. 
+Mirror symmetry의 관점에서 charge matrix는 $B$-model의 데이터를 담고 있다. 다소 주의할 것은 현재 우리가 다루고 있는 상황은 도입부에서 설명한 Calabi-Yau manifold보다 일반적인 상황이라는 사실이다. Smooth projective toric variety $X_\Sigma$는 결코 Calabi-Yau가 될 수 없으며, 이 글에서는 그 중 Fano인 경우를 다룬다. 이 경우 $X_\Sigma$의 mirror dual은 Calabi-Yau가 아니라 *Landau-Ginzburg model*로 표현된다. 
 
 ::: 정의 3
 *Landau-Ginzburg model<sub>란다우-긴즈부르크 모델</sub>*은 complex manifold $\check{X}$와 그 위에 정의된 holomorphic function $W : \check{X} \rightarrow \mathbb{C}$의 쌍 $(\check{X}, W)$로 주어진다. 이 때, $W$를 *superpotential*이라 부른다.
@@ -81,12 +83,12 @@ Mirror symmetry의 관점에서 charge matrix는 $B$-model의 데이터를 담�
 
 이번 글의 목적은 mirror symmetry의 개념들을 본격적으로 정의하기 전에 가벼운 계산을 통해 이 현상을 살펴보는 것이다. 따라서 우리는 양쪽의 데이터를 정확하게 설명하는 대신, 간략한 아이디어와 직관으로 이를 대체한다. 우선 $B$-model 측면에서, charge matrix는 *Jacobi ring* $\Jac(W_q)$를 정의하며 이는 앞서 언급한 oscillating integral의 classical limit으로 볼 수 있다. 주어진 Landau-Ginzburg model $(\check{X}, W)$에 대하여, 이것의 Jacobi ring은 그 정의에 의해
 
-$$\Jac(W) = \frac{\mathcal{O}(\check{X})}{(\partial_1 W, \ldots, \partial_m W)}$$
+$$\Jac(W) = \frac{\mathcal{O}(\check{X})}{(\partial_1 W, \ldots, \partial_n W)}$$
 
 으로 주어진다. 여기서 $\x_1, \ldots, \x_n$들은 $\check{X}$의 local coordinate이며 $\partial_i$들은 이에 대한 partial derivative들이다. 기하학적으로 $\Jac(W)$는 $W$의 *critical scheme* $\Crit(W) = \{\dd{W} = 0\} \subseteq \check{X}$의 coordinate ring이다. 그럼 [정의 4](#def4)의 Hori-Vafa mirror의 Jacobi ring이 원래의 A-side model의 데이터를 복원한다는 것이 mirror symmetry statement이다. 
 
 ::: 정의 4
-Smooth projective toric Fano variety $X_\Sigma$와 추가적인 데이터 $q=(q_1,\ldots, q_r)\in \mathbb{C}^r$에 대하여, 이것이 정의하는 *Hori-Vafa mirror<sub>호리-바파 거울</sub>*는 다음의 Landau-Ginzburg model을 의미한다.
+Smooth projective toric Fano variety $X_\Sigma$와 추가적인 데이터 $q=(q_1,\ldots, q_r)\in (\mathbb{C}^\ast)^r$에 대하여, 이것이 정의하는 *Hori-Vafa mirror<sub>호리-바파 거울</sub>*는 다음의 Landau-Ginzburg model을 의미한다.
 
 1. *Mirror domain* $\check{X}$는 algebraic torus $(\mathbb{C}^\ast)^m$의 submanifold로, charge matrix $Q$가 부여하는 $r$개의 restriction
     
@@ -112,13 +114,13 @@ $$q^{\beta_0} = e^{2\pi i \int_{\beta_0} t} = e^{2\pi i \int_{\beta_0} B}\, e^{-
 
 로 주어진다. 그럼 $q^{\beta_0}$의 크기 $\lvert q^{\beta_0}\rvert = e^{-2\pi \int_{\beta_0} \omega}$는 곡선 class $\beta_0$의 *symplectic volume* $\int_{\beta_0} \omega$를, phase $\arg q^{\beta_0} = 2\pi \int_{\beta_0} B$는 $B$-field를 담는다. 따라서 symplectic volume이 $0$으로 가는 상황에서는 $q$의 크기가 $1$로 가서 양자적인 효과가 full로 나타나며, 반대로 symplectic volume이 무한대로 가는 상황에서는 $q$의 크기가 $0$으로 가서 양자적인 효과가 사라진다. 
 
-이제 위의 계산에서, $q$ 하나를 정하는 것은 complexified Kähler class $t$를 결정하는 것, 즉 $B$-field와 $\omega$를 각각 정해주는 것과 같다. 그럼 위의 식으로부터 $B$는 $2\pi$만큼의 주기를 가지고, $\omega$는 $B$가 정해주는 방향의 반지름을 정해주므로 $q$의 moduli space (혹은 $t$의 moduli space)는 $r=\dim_\mathbb{R} H^2(X, \mathbb{R})$인 algebraic torus $(\mathbb{C}^\ast)^r$가 된다. 다만 $\omega$는 Kähler form이라 *Kähler cone* 안에 있어야 하므로 (effective curve class $\beta_0$에 대해 $\int_{\beta_0} \omega > 0$, 곧 $\lvert q^{\beta_0}\rvert < 1$), 엄밀히는 moduli가 이 torus 전체가 아니라 $q = 0$인 large volume limit 근방의 열린 영역이고, $(\mathbb{C}^\ast)^r$은 이를 품는 ambient algebraic torus이다. 
+이제 위의 계산에서, $q$ 하나를 정하는 것은 complexified Kähler class $t$를 결정하는 것, 즉 $B$-field와 $\omega$를 각각 정해주는 것과 같다. 그럼 위의 식으로부터 $B$는 $1$만큼의 주기를 가지고, $\omega$는 $B$가 정해주는 방향의 반지름을 정해주므로 $q$의 moduli space (혹은 $t$의 moduli space)는 $r=\dim_\mathbb{R} H^2(X, \mathbb{R})$인 algebraic torus $(\mathbb{C}^\ast)^r$가 된다. 다만 $\omega$는 Kähler form이라 *Kähler cone* 안에 있어야 하므로 (effective curve class $\beta_0$에 대해 $\int_{\beta_0} \omega > 0$, 곧 $\lvert q^{\beta_0}\rvert < 1$), 엄밀히는 moduli가 이 torus 전체가 아니라 $q = 0$인 large volume limit 근방의 열린 영역이고, $(\mathbb{C}^\ast)^r$은 이를 품는 ambient algebraic torus이다. 
 
 B-side에서의 $q$는 위에서 살펴봤듯 superpotential의 계수로 나타났다. 직관적으로 이를 통해 얻어지는 critical point의 방정식이 $\x^k=q$ 꼴인 경우를 생각하면, $\x^k=q$의 해, 즉 critical point는 $q$가 $0$으로 갈 때 한 점으로 degenerate하고, 나머지 경우에는 적당히 분리되어 있는 singularity가 나온다. 
 
 이제 mirror symmetry statement를 잘 적기 위해서는 $X$의 (small) *quantum cohomology*를 정의해야 한다. 구체적으로, $X$의 symplectic structure와 complex structure를 살펴볼 때 필요한 도구 중 하나는 $J$-holomorphic curve들이다. 이들을 이용하면, $X$의 cohomology $H^\ast(X, \mathbb{C})$ 위에 다음의 식
 
-$$\alpha \star_q \beta \;=\; \alpha \smile \beta + \sum_{\beta_0} q^{\beta_0} \sum_\gamma \langle \alpha, \beta, \gamma^\vee \rangle_{0, 3, \beta_0}\, \gamma$$
+$$\alpha \star_q \beta \;=\; \alpha \smile \beta + \sum_{\beta_0 \neq 0} q^{\beta_0} \sum_\gamma \langle \alpha, \beta, \gamma^\vee \rangle_{0, 3, \beta_0}\, \gamma$$
 
 으로 *quantum cup product*를 정의할 수 있고, 이 구조가 $X$의 (small) *quantum cohomology* $QH^\ast(X)$를 준다. 직관적으로, 위의 식에서 $\alpha\smile \beta$가 두 class $\alpha, \beta$의 intersection에 대한 정보를 담는다면, 그 뒤의 항들은 이 intersection이 실제로 일어나지 않고, curve class $\beta_0$을 매개로 만나는 "quantum" intersection들을 함께 고려하는 것이다. 
 
@@ -165,15 +167,15 @@ $$\x_0 \x_1 \x_2 = q$$
 
 을 만족하는 것이며 superpotential은 
 
-$$W_q(\z_1, \z_2) = \z_1 + \z_2 + \frac{q}{\z_1 \z_2}$$
+$$W_q(\x_1, \x_2) = \x_1 + \x_2 + \frac{q}{\x_1 \x_2}$$
 
 로 주어진다. 이제 Critical point는 
 
-$$\partial_{\z_1} W_q = 1 - \frac{q}{\z_1^2 \z_2} = 0, \qquad \partial_{\z_2} W_q = 1 - \frac{q}{\z_1 \z_2^2} = 0$$
+$$\partial_{\x_1} W_q = 1 - \frac{q}{\x_1^2 \x_2} = 0, \qquad \partial_{\x_2} W_q = 1 - \frac{q}{\x_1 \x_2^2} = 0$$
 
-을 풀어 얻어지며, 그 해는 $\z_1=\z_2$, $\z_1^3=q$를 만족하는 세 점으로 주어진다. 이제 Jacobi ring을 명시적으로 계산하면
+을 풀어 얻어지며, 그 해는 $\x_1=\x_2$, $\x_1^3=q$를 만족하는 세 점으로 주어진다. 이제 Jacobi ring을 명시적으로 계산하면
 
-$$\Jac(W_q) = \mathbb{C}[\z_1^\pm, \z_2^\pm, q^\pm] \big/ (\partial_{\z_1} W_q, \partial_{\z_2} W_q) \;\cong\; \mathbb{C}[H, q^\pm]/(H^3 - q)$$
+$$\Jac(W_q) = \mathbb{C}[\x_1^\pm, \x_2^\pm, q^\pm] \big/ (\partial_{\x_1} W_q, \partial_{\x_2} W_q) \;\cong\; \mathbb{C}[H, q^\pm]/(H^3 - q)$$
 
 이다.
 
@@ -181,7 +183,7 @@ $$\Jac(W_q) = \mathbb{C}[\z_1^\pm, \z_2^\pm, q^\pm] \big/ (\partial_{\z_1} W_q, 
 
 $$\langle H, H^2, H^2 \rangle_{0,3,1}^{\mathbb{P}^2} = 1$$
 
-를 사용하면 된다. 기하적으로 이는 (i) 두 generic 점 $P_1, P_2 \in \mathbb{P}^2$를 지나는 $\mathbb{P}^1 \subseteq \mathbb{P}^2$가 유일하게 존재하고, (ii) 이 직선이 generic line $H_1 \subseteq \mathbb{P}^2$과 정확히 한 점에서 만나며, (iii) 이를 통해 얻어지는 세 점이  $f : \mathbb{P}^1 \xrightarrow{\sim} L$을 유일하게 결정한다는 사실을 반영한다. 이를 통해 quantum cohomology가 graded $\mathbb{C}[q]$-polynomial algebra
+를 사용하면 된다. 기하적으로 이는 (i) 두 generic 점 $P_1, P_2 \in \mathbb{P}^2$를 지나는 직선 $L \cong \mathbb{P}^1 \subseteq \mathbb{P}^2$가 유일하게 존재하고, (ii) 이 직선이 generic line $H_1 \subseteq \mathbb{P}^2$과 정확히 한 점에서 만나며, (iii) 이를 통해 얻어지는 세 점이  $f : \mathbb{P}^1 \xrightarrow{\sim} L$을 유일하게 결정한다는 사실을 반영한다. 이를 통해 quantum cohomology가 graded $\mathbb{C}[q]$-polynomial algebra
 
 $$QH^\ast(\mathbb{P}^2) = \mathbb{C}[H, q] \big/ (H^3 - q), \qquad \deg H = 2,\;\; \deg q = 6$$
 

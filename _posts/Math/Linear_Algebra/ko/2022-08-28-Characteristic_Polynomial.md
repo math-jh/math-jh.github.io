@@ -12,6 +12,7 @@ sidebar:
 date: 2022-08-28
 
 weight: 15
+drift_needed: true
 
 ---
 
@@ -64,10 +65,10 @@ $$\det(\x I-A)=\det(\x I-PBP^{-1})=\det(P(\x I-B)P^{-1})=\det P\det(\x I-B)\det 
 를 얻는다. 따라서 $A$와 $B$의 특성다항식은 서로 같다. 이로부터 다음의 따름정리들을 얻는다.
 
 ::: 따름정리 4
-임의의 linear map $L:V\rightarrow V$에 대하여, $L$의 특성다항식을 <phrase>행렬 $[L]_\mathcal{B}^\mathcal{B}$의 특성다항식</phrase>으로 정의한 것이 잘 정의된다.
+임의의 유한차원 벡터공간 $V$와 linear map $L:V\rightarrow V$에 대하여, $L$의 특성다항식을 <phrase>행렬 $[L]_\mathcal{B}^\mathcal{B}$의 특성다항식</phrase>으로 정의한 것이 잘 정의된다.
 :::
 ::: 증명
-즉, $V$의 basis $\mathcal{B}$ 대신 $\mathcal{C}$를 택하여도 $L$의 특성다항식에는 변화가 없다는 것을 보여야 한다. 앞선 논증에 의하여, 이는 [§기저변환, ⁋명제 5](/ko/math/multilinear_algebra/change_of_basis#prop5) 이후의 식으로부터 두 행렬표현 $[L]_\mathcal{B}^\mathcal{B}$와 $[L]_\mathcal{C}^\mathcal{C}$가 서로 similar라는 것을 관찰하는 것으로 충분하다.
+즉, $V$의 basis $\mathcal{B}$ 대신 $\mathcal{C}$를 택하여도 $L$의 특성다항식에는 변화가 없다는 것을 보여야 한다. 앞선 논증에 의하여, 이는 [\[다중선형대수학\] §기저변환, ⁋명제 5](/ko/math/multilinear_algebra/change_of_basis#prop5) 이후의 식으로부터 두 행렬표현 $[L]_\mathcal{B}^\mathcal{B}$와 $[L]_\mathcal{C}^\mathcal{C}$가 서로 similar라는 것을 관찰하는 것으로 충분하다.
 :::
 
 편의상 앞으로의 논의는 모두 행렬에 대한 것으로 통일하지만, 위의 따름정리를 통해 우리는 똑같은 내용을 임의의 linear map $L$에 대하여도 증명할 수 있다.
@@ -86,7 +87,7 @@ $$\det(\x I-A)=\det(\x I-PBP^{-1})=\det(P(\x I-B)P^{-1})=\det P\det(\x I-B)\det 
 고윳값들은 모두 특성다항식의 해지만, 어떤 고윳값들은 다른 고윳값보다 더 큰 중복도를 가질 수 있다. 이는 다음과 같이 정의된다.
 
 ::: 정의 6
-$\mathbb{K}[\x]$의 임의의 다항식 $p(\x)$이 주어졌다 하고, $a\in\mathbb{K}$가 $p(\x)=0$의 해라 하자. 만일 $(\x-a)^k$가 $p(\x)$를 나누지만, $(\x-a)^{k+1}$은 $p(\x)$를 나누지 않는다면 $a$의 *중복도<sub>multiplicity</sub>*를 $k$로 정의한다. 
+$\mathbb{K}[\x]$의 영이 아닌 임의의 다항식 $p(\x)$이 주어졌다 하고, $a\in\mathbb{K}$가 $p(\x)=0$의 해라 하자. 만일 $(\x-a)^k$가 $p(\x)$를 나누지만, $(\x-a)^{k+1}$은 $p(\x)$를 나누지 않는다면 $a$의 *중복도<sub>multiplicity</sub>*를 $k$로 정의한다. 
 :::
 
 $n\times n$ 행렬 $A$의 특성다항식을 $p_A(\x)$라 하고, $\lambda$가 $A$의 한 고윳값이라 하자. 그럼 $p_A$의 해로서의 $\lambda$의 중복도를 $\lambda$의 *대수적 중복도<sub>algebraic multiplicity</sub>*라 부른다. 이는 곧 정의할 *기하적 중복도*와 구분하기 위한 용어이다. 
@@ -101,7 +102,7 @@ $$J=\begin{pmatrix}0&-1\\1&0\end{pmatrix}$$
 을 생각하자. 그럼 $J$의 특성다항식은 $\x^2+1$이며, 이 다항식은 $\mathbb{R}$에서 해를 갖지 않는다. 
 :::
 
-이와 같은 일이 일어나지 않는 field를 *algebraically closed field<sub>대수적으로 닫힌 체</sub>*라 부른다. 다음 *대수학의 기본정리*는 대수적으로 증명할 수도 있고, 해석학을 통해 증명할 수도 있지만 어떠한 방식도 우리의 현재 수준에선 어렵기 때문에 사실로 받아들이고 넘어간다.
+이와 같은 일이 일어나지 않는 field, 즉 상수가 아닌 임의의 다항식이 항상 해를 가지는 field를 *algebraically closed field<sub>대수적으로 닫힌 체</sub>*라 부른다. 다음 *대수학의 기본정리*는 대수적으로 증명할 수도 있고, 해석학을 통해 증명할 수도 있지만 어떠한 방식도 우리의 현재 수준에선 어렵기 때문에 사실로 받아들이고 넘어간다.
 
 ::: 정리 8 (대수학의 기본정리)
 복소수 집합 $\mathbb{C}$는 algebraically closed field이다.
@@ -118,10 +119,10 @@ $$(\lambda I-A)v=0$$
 을 만족하는 영이 아닌 벡터 $v$가 존재한다.
 
 ::: 정의 9
-$n\times n$ 행렬 $A$와 고윳값 $\lambda$에 대하여, $Av=\lambda v$를 만족하는 벡터 $v$를 $\lambda$에 해당하는 $A$의 *고유벡터<sub>eigenvector</sub>*라 부른다. 
+$n\times n$ 행렬 $A$와 고윳값 $\lambda$에 대하여, $Av=\lambda v$를 만족하는 영이 아닌 벡터 $v$를 $\lambda$에 해당하는 $A$의 *고유벡터<sub>eigenvector</sub>*라 부른다. 
 :::
 
-행렬 $A$에 대하여, $\lambda$에 해당하는 고유벡터들을 모두 모아 그 집합을 $E_\lambda$라 하자. 그럼 $E_\lambda$가 벡터공간을 이룬다는 것을 쉽게 확인할 수 있다. 이를 $\lambda$에 해당하는 *고유공간<sub>eigenspace</sub>*이라 부른다. $E_\lambda$는 항상 영이 아닌 벡터를 적어도 하나 포함하므로, $\dim E_\lambda$는 항상 $0$보다 크다. 
+행렬 $A$에 대하여, $\lambda$에 해당하는 고유벡터들과 영벡터를 모두 모아 그 집합을 $E_\lambda$라 하자. 그럼 $E_\lambda$가 벡터공간을 이룬다는 것을 쉽게 확인할 수 있다. 이를 $\lambda$에 해당하는 *고유공간<sub>eigenspace</sub>*이라 부른다. $E_\lambda$는 항상 영이 아닌 벡터를 적어도 하나 포함하므로, $\dim E_\lambda$는 항상 $0$보다 크다. 
 
 ::: 정의 10
 $n\times n$ 행렬 $A$와 고윳값 $\lambda$에 대하여, $E_\lambda$의 차원 $\dim E_\lambda$를 $\lambda$의 *기하적 중복도<sub>geometric multiplicity</sub>*라 부른다. 

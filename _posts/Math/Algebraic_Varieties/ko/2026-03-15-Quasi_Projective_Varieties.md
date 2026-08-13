@@ -10,14 +10,15 @@ sidebar:
 
 date: 2026-03-15
 weight: 3
+drift_needed: true
 
 ---
 
-[§아핀다양체](/ko/math/algebraic_varieties/affine_varieties)와 [§사영다양체](/ko/math/algebraic_varieties/projective_varieties)에서 우리는 각각 아핀공간과 사영공간의 부분집합으로 정의되는 기하적 대상들을 살펴보았다. 그러나 algebraic geometry에서 가장 자연스러운 대상들은 이 둘을 모두 포함하는 더 큰 범주에 속한다. 이 절에서 우리는 *quasi-projective variety*를 정의하고, 이것이 affine variety와 projective variety를 모두 포함함을 보인다. 또 quasi-projective variety들 사이의 morphism을 정의하고 이들이 기존의 개념들과 맞아떨어짐을 보인다. 
+[§아핀다양체](/ko/math/algebraic_varieties/affine_varieties)와 [§사영다양체](/ko/math/algebraic_varieties/projective_varieties)에서 우리는 각각 affine space와 projective space의 부분집합으로 정의되는 기하적 대상들을 살펴보았다. 그러나 algebraic geometry에서 가장 자연스러운 대상들은 이 둘을 모두 포함하는 더 큰 범주에 속한다. 이 절에서 우리는 *quasi-projective variety*를 정의하고, 이것이 affine variety와 projective variety를 모두 포함함을 보인다. 또 quasi-projective variety들 사이의 morphism을 정의하고 이들이 기존의 개념들과 맞아떨어짐을 보인다. 
 
 ## Quasi-projective variety의 정의
 
-Projective space의 열린집합은 자연스러운 기하적 대상이다. 예를 들어, $\mathbb{P}^2$에서 직선 $\x_0=0$을 제거한 standard affine cover $U_0$은 projective variety가 아니지만, 여전히 다항식으로 정의되는 대상이며, 심지어 affine variety이기도 하다. 
+Projective space의 열린집합은 자연스러운 기하적 대상이다. 예를 들어, $\mathbb{P}^2$에서 직선 $\x_0=0$을 제거한 standard open set $U_0$은 projective variety가 아니지만, 여전히 다항식으로 정의되는 대상이며, 심지어 affine variety이기도 하다. 
 
 ::: 정의 1
 Projective variety $Y \subseteq \mathbb{P}^n$의 열린부분집합 $X \subseteq Y$를 *quasi-projective variety<sub>준사영다양체</sub>*라 부른다.
@@ -33,9 +34,9 @@ Projective variety $Y \subseteq \mathbb{P}^n$의 열린부분집합 $X \subseteq
 
 $$i:\mathbb{A}^n\rightarrow \mathbb{P}^n;\qquad (x_1,\ldots, x_n)\mapsto [1:x_1:\cdots:x_n]$$
 
-이 존재함을 이미 알고 있다. ([§사영다양체, ⁋명제 9](/ko/math/algebraic_varieties/projective_varieties#prop9)) 이제 $X$의 $\mathbb{P}^n$에서의 image $i(X)$를 생각하고, $i(X)$의 $\mathbb{P}^n$에서의 closure $\overline{i(X)}$를 생각하자. 그럼 $\overline{i(X)}$는 projective variety이며, 이 안에서 $X$는
+이 존재함을 이미 알고 있다. ([§사영다양체, ⁋명제 9](/ko/math/algebraic_varieties/projective_varieties#prop9)) 이제 $X$의 $\mathbb{P}^n$에서의 image $i(X)$를 생각하고, $i(X)$의 $\mathbb{P}^n$에서의 closure $\overline{i(X)}$를 생각하자. 그럼 $i(X)$가 irreducible이므로 그 closure $\overline{i(X)}$ 또한 irreducible이고, 따라서 $\overline{i(X)}$는 projective variety이며, 이 안에서 $i(X)$는
 
-$$X=\overline{i(X)}\cap U_0$$
+$$i(X)=\overline{i(X)}\cap U_0$$
 
 으로 나타나므로 열린집합이다. 이로부터 증명이 완료된다. 
 :::
@@ -64,7 +65,7 @@ $$Z=X\cap W=(Y\cap U)\cap W=(Y\cap W)\cap U$$
 지금부터 별다른 언급이 없다면 variety는 항상 quasi-projective variety를 의미하는 것으로 생각하자. 우리의 기하학적 직관은 variety $X$의 임의의 점은 항상 affine open neighborhood를 갖는다는 것이다. 이는 affine case와 projective case 각각에서는 이미 증명하였으므로, 이를 quasi-projective case에 대해 확장하기만 하면 된다. 
 
 ::: 명제 4
-임의의 variety $X$와 임의의 $x\in X$에 대하여, affine variety들로 이루어진 $X$의 covering이 존재한다. 
+임의의 variety $X$와 임의의 $x\in X$에 대하여, affine variety들로 이루어진 $X$의 open covering이 존재한다. 
 :::
 ::: 증명
 우선 $X$가 quasi-projective이므로, 적당한 projective variety $Y\subseteq \mathbb{P}^n$이 존재하여 $X$가 $Y$의 열린집합이도록 할 수 있다. 이제 $X$는 standard affine chart들을 사용하여 $X\cap U_i$들로 덮을 수 있고, 이 때 각각의 $X\cap U_i$들은 affine variety $Y\cap U_i$의 열린집합이다. ([§사영다양체, ⁋명제 10](/ko/math/algebraic_varieties/projective_varieties#prop10)) 이제 [§아핀다양체, ⁋명제 6](/ko/math/algebraic_varieties/affine_varieties#prop6)에 의해 affine variety의 임의의 열린집합은 principal open set으로 덮을 수 있으며, 이들은 [§아핀다양체, ⁋명제 7](/ko/math/algebraic_varieties/affine_varieties#prop7)에 의해 affine이므로 증명이 완료된다. 
@@ -88,7 +89,7 @@ Regular function의 예시들을 살펴보자.
 1. Affine variety $X$에서 $\mathcal{O}(X) = \mathbb{K}[X]$이다. 
 2. $\mathbb{P}^n$에서 $\mathcal{O}(\mathbb{P}^n) = \mathbb{K}$이다. 이를 확인하기 위해 standard open cover $U_i = \{x_i \ne 0\}$를 생각하자. 특히 $U_0$에서의 regular function은 $\mathbb{K}[\x_1/\x_0, \ldots, \x_n/\x_0]$의 원소이고, $U_1$에서의 regular function은 $\mathbb{K}[\x_0/\x_1, \x_2/\x_1, \ldots, \x_n/\x_1]$의 원소이다. 따라서 만일 어떠한 함수 $f$가 $\mathbb{P}^n$ 전체에서 regular라면, 이 함수는 $U_0$에서는 $\mathrm{s}_i=\x_i/\x_0$들에 대한 다항식이고 $U_1$에서는 $\mathrm{t}_i=\x_i/\x_1$에 대한 다항식이다. 그런데 $U_0\cap U_1$에서, 우리는 이들 좌표함수들이 다음 식  
     
-    $$\mathrm{t}_0=\frac{1}{\mathrm{s}_1},\qquad \mathrm{t}_j=\frac{\mathrm{s}_j}{\mathrm{s}_1}$$
+    $$\mathrm{t}_0=\frac{1}{\mathrm{s}_1},\qquad \mathrm{t}_j=\frac{\mathrm{s}_j}{\mathrm{s}_1}\quad (j=2,\ldots, n)$$
 
     을 만족하는 것을 안다. 따라서 만일
 
@@ -108,7 +109,7 @@ Regular function의 예시들을 살펴보자.
 
 $$\varphi(q) = [F_0(q) : \cdots : F_m(q)]$$
 
-이 모든 $q \in U$에 대해 성립하는 것이다. 
+이 모든 $q \in U$에 대해 성립하고, 이 때 $F_0, \ldots, F_m$이 $U$의 어느 점에서도 동시에 $0$이 되지 않는 것이다. 
 :::
 
 지금까지 우리는 variety를 이야기할 때 affine space로의 embedding 혹은 projective space로의 embedding을 가정하였고, 위의 정의 또한 이러한 가정의 연장선상에 있다. 이를 통해 우리는 손에 잡히는 계산을 할 수 있지만, 이 정의가 내재적인 것이라 할 수는 없을 것이다. 다음 명제는 이 정의가 regular function의 관점에서 자연스럽게 해석됨을 보여준다.
@@ -180,7 +181,7 @@ Isomorphism의 개념은 기하학적으로 두 variety가 같다는 것을 의�
 
 $$\mathbb{A}^{n+1}\setminus\{(0,\ldots, 0)\}\rightarrow \mathbb{P}^n;\qquad (x_0,\ldots, x_n)\mapsto [x_0:\cdots:x_n]$$
 
-은 quasi-projective variety들 사이의 morphism이다. 또, canonical inclusion
+은 quasi-projective variety들 사이의 morphism이다. 또, 각 $i=0,1,\ldots, n$에 대하여 $i$번째 standard open set $U_i$와의 동일시가 주는 canonical inclusion
 
 $$\iota_i:\mathbb{A}^n\hookrightarrow \mathbb{P}^n$$
 

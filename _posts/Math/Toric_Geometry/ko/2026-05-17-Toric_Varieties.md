@@ -11,6 +11,7 @@ sidebar:
 
 date: 2026-05-17
 weight: 2
+drift_needed: true
 
 ---
 
@@ -23,7 +24,7 @@ weight: 2
 위와 같이 affine toric variety들을 이어붙이기 위해서는 각각의 cone들이 서로 어떻게 만나는지를 제어하는 조합론적인 구조가 필요하다. 이를 위해 우리는 *fan*을 정의한다.
 
 ::: 정의 1
-Lattice $N$에 대해, $N_\mathbb{R}$에 정의된 *fan<sub>부채</sub>* $\Sigma$는 다음 조건을 만족하는 strongly convex rational polyhedral cone들의 모임이다:
+Lattice $N$에 대해, $N_\mathbb{R}$에 정의된 *fan<sub>부채</sub>* $\Sigma$는 다음 조건을 만족하는 strongly convex rational polyhedral cone들의 유한한 모임이다:
 
 1. $\Sigma$에 속하는 임의의 cone $\tau$의 face도 $\Sigma$에 속한다.
 2. $\Sigma$에 속하는 임의의 두 cone $\tau_1, \tau_2$의 교집합 $\tau_1 \cap \tau_2$는 각각의 face이다.
@@ -36,7 +37,7 @@ $N = \mathbb{Z}^2$에서 원점을 중심으로 방사형으로 세 개의 2차�
 
 {% diagram Math/Toric_Geometry/Toric_Varieties-1.svg width="20em" alt="$\mathbb{P}^2$의 fan" %}
 
-각각의 cone은 두 개의 반직선 원소 $\rho_i, \rho_{i+1}$에 의해 생성되며, 이러한 반직선들은 1차원 cone들이 된다. 원점 $\{0\}$ 자체는 0차원 cone으로서 모든 fan에 포함된다. 이 fan은 $\mathbb{P}^2$의 toric variety를 정의하는 가장 기본적인 예시이다.
+각각의 cone은 인접한 두 벡터가 생성하는 반직선에 의해 생성되며, 이러한 반직선들은 1차원 cone들이 된다. 원점 $\{0\}$ 자체는 0차원 cone으로서 모든 fan에 포함된다. 이 fan은 $\mathbb{P}^2$의 toric variety를 정의하는 가장 기본적인 예시이다.
 :::
 
 ## 토릭 다양체의 정의
@@ -75,7 +76,7 @@ Toric variety $X_\Sigma$가 affine toric variety로부터 물려받는 중요한
 
 만일 fan $\Sigma$가 $\bigcup_{\tau \in \Sigma} \tau = N_\mathbb{R}$을 만족한다면 우리는 이를 *complete<sub>완전</sub>* fan이라 부른다. 이 경우 $X_\Sigma$는 *complete<sub>완비</sub>* algebraic variety, 즉 $\Spec(\mathbb{C})$ 위에서 proper한 variety가 됨이 알려져 있다. Completeness는 대수기하에서 compactness에 대응하는 개념이므로, 우리는 이 경우 $X_\Sigma$를 $T_N$의 *equivariant compactification*이라 부른다.
 
-이 작용에 의한 orbit들의 구조는 fan의 조합론과 밀접하게 연관된다. 구체적으로, $d$-차원 cone $\tau \in \Sigma$에 대응하는 orbit $O(\tau)$는 차원 $n-d$의 torus $(\mathbb{C}^\ast)^{n-d}$와 isomorphic하며, 특히 $n$-차원 cone, 즉 maximal cone에 대응하는 orbit는 0차원, 즉 $T_N$-action의 fixed point가 된다.
+이 작용에 의한 orbit들의 구조는 fan의 조합론과 밀접하게 연관된다. 구체적으로, $d$-차원 cone $\tau \in \Sigma$에 대응하는 orbit $O(\tau)$는 차원 $n-d$의 torus $(\mathbb{C}^\ast)^{n-d}$와 isomorphic하며, 특히 $n$-차원 cone에 대응하는 orbit는 0차원, 즉 $T_N$-action의 fixed point가 된다.
 
 ## Normal fan과 projective toric variety
 
@@ -111,7 +112,7 @@ $\Sigma_P$의 임의의 원소 $\tau_F$는 primitive inner normal vector들의 $
 
 $$P_D = \{u \in M_\mathbb{R} \mid \langle u, v_\rho \rangle \ge -a_\rho \text{ for all } \rho \in \Sigma(1)\}$$
 
-으로 정의하면, 위 compatibility는 정확히 $P_D$의 vertex들이 lattice element $m_\sigma$로 주어지는 것에 대응되며, 따라서 $P_D$는 lattice polytope이 된다. 거꾸로 lattice polytope $P$로부터 normal fan $\Sigma_P$를 얻는 과정은 [정의 6](#def6)에서 본 것과 같다. 이 양방향이 toric variety의 projectivity와 polytope 사이를 잇는 다리가 된다.
+으로 정의하면, $\Sigma$가 complete이고 $D$가 very ample인 경우 위 compatibility는 정확히 $P_D$의 vertex들이 lattice element $m_\sigma$로 주어지는 것에 대응되며, 따라서 $P_D$는 lattice polytope이 된다. 거꾸로 lattice polytope $P$로부터 normal fan $\Sigma_P$를 얻는 과정은 [정의 6](#def6)에서 본 것과 같다. 이 양방향이 toric variety의 projectivity와 polytope 사이를 잇는 다리가 된다.
 
 ::: 명제 8
 Toric variety $X_\Sigma$가 projective variety인 것은 $\Sigma$가 어떤 full-dimensional lattice polytope $P$의 normal fan, 즉 $\Sigma = \Sigma_P$인 것과 필요충분조건이다.
@@ -134,7 +135,7 @@ $$\phi_P: T_N \longrightarrow \mathbb{P}^s, \qquad t \longmapsto [\rchi^{m_0}(t)
 을 정의할 수 있다. 여기서 $\rchi^m: T_N \rightarrow \mathbb{C}^\ast$는 $m \in M$에 대응하는 character이다.
 
 ::: 명제 9
-위에서 정의한 $\phi_P$의 image의 Zariski closure가 $X_P$와 isomorphic하다. 즉, $X_P \cong \overline{\phi_P(T_N)}$가 성립한다.
+$P$가 very ample lattice polytope이면, 위에서 정의한 $\phi_P$의 image의 Zariski closure가 $X_P$와 isomorphic하다. 즉, $X_P \cong \overline{\phi_P(T_N)}$가 성립한다.
 :::
 
 ::: 증명

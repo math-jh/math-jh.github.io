@@ -10,6 +10,7 @@ sidebar:
 
 date: 2022-09-10
 weight: 1
+drift_needed: true
 
 ---
 
@@ -112,11 +113,11 @@ $$(p'\circ\eta)\circ h=p'\circ(h'\circ\xi)=(p'\circ h')\circ\xi=0\circ\xi=0$$
 
 {% diagram Math/Homological_Algebra/Diagram_Chasing-6.svg width="14.23em" alt="induced_morphism_cokernel" %}
 
-정의에 의해 $\coker(h)=Y/\im(h), \coker(h')=Y'/\im(h')$이므로, $\eta^\ast$가 $0$을 $0$으로 보내는 것으로부터 $\eta^\sharp$ 또한 잘 정의된다. 마지막으로 $\xi^\ast$의 경우, $p:X'\rightarrow X'/\ker(h')$를 생각하면 
+정의에 의해 $\coker(h)=Y/\im(h), \coker(h')=Y'/\im(h')$이므로, $\eta^\ast$가 $0$을 $0$으로 보내는 것으로부터 $\eta^\sharp$ 또한 잘 정의된다. 마지막으로 $\xi^\ast$의 경우, $q:X'\rightarrow X'/\ker(h')$를 생각하면 
 
-$$\ker(h)\subseteq\ker(p\circ\xi)$$
+$$\ker(h)\subseteq\ker(q\circ\xi)$$
 
-이고, 따라서 $p\circ\xi$가 $\xi^\ast:X/\ker(h)\rightarrow X'/\ker(h')$를 유도한다.
+이고, 따라서 $q\circ\xi$가 $\xi^\ast:X/\ker(h)\rightarrow X'/\ker(h')$를 유도한다.
 :::
 
 이를 이용하면 다음 보조정리를 보일 수 있다.
@@ -141,7 +142,7 @@ $$\ker(\alpha)\overset{f^\sharp}{\longrightarrow}\ker(\beta)\overset{g^\sharp}{\
 
 $$i_C\circ g^\sharp\circ f^\sharp=g\circ i_B\circ f^\sharp=g\circ f\circ i_A=0$$
 
-이고, $i_C$가 단사인 것으로부터 $g^\sharp\circ f^\sharp=0$임을 확인할 수 있다. 비슷하게 $p_A,p_B,p_C$를 각각 $A,B,C$에서 cokernel들로의 자명한 함수들이라 하면, 
+이고, $i_C$가 단사인 것으로부터 $g^\sharp\circ f^\sharp=0$임을 확인할 수 있다. 비슷하게 $p_A,p_B,p_C$를 각각 $A',B',C'$에서 cokernel들로의 자명한 함수들이라 하면, 
 
 $$(g')^\ast\circ(f')^\ast\circ p_A=(g')^\ast\circ p_B\circ f'=p_C\circ g'\circ f'=0$$
 
@@ -212,7 +213,7 @@ $$\ker(\beta)\rightarrow\ker(\gamma)\rightarrow\coker(\alpha)\rightarrow\coker(\
 
 $$((f')^\ast)(a'+\im(\alpha))=f'(a')+\im(\beta)=\beta(b)+\im(\beta)=0$$
 
-가 된다. 따라서 $\ker(\delta)\subseteq\im(g^\sharp)$이고 $\ker(f')^\ast\subseteq\im(\delta)$이라는 것만 보이면 충분하다.
+가 된다. 따라서 $\ker(\delta)\subseteq\im(g^\sharp)$이고 $\ker((f')^\ast)\subseteq\im(\delta)$이라는 것만 보이면 충분하다.
 
 우선 $c\in\ker(\delta)$라 하자. 그럼 $a'$는 $g(b)=c$를 만족하는 $b$에 대해, 식 $f'(a')=\beta(b)$를 만족하는 원소로 정의되므로 $a'\in\im(\alpha)$이다. 이제 $\alpha(a)=a'$를 만족하는 $a\in A$를 택하자. 그럼
 
@@ -224,7 +225,7 @@ $$g^\sharp(b-f(a))=g(b-f(a))=g(b)-g(f(a))=g(b)=c$$
 
 이므로 $c\in\im g^\sharp$가 성립한다. 
 
-비슷하게 $a'\in\ker(f')^\ast$라 하자. 그럼 $f'(a')\in\im(\beta)$이므로 적당한 $b\in B$가 존재하여 $\beta(b)=f'(a')$가 성립하고, 이 $b$에 대하여
+비슷하게 $a'\in\ker((f')^\ast)$라 하자. 그럼 $f'(a')\in\im(\beta)$이므로 적당한 $b\in B$가 존재하여 $\beta(b)=f'(a')$가 성립하고, 이 $b$에 대하여
 
 $$\gamma(g(b))=(g'\circ\beta)(b)=(g'\circ f')(a')=0$$
 
@@ -235,7 +236,7 @@ $$\gamma(g(b))=(g'\circ\beta)(b)=(g'\circ f')(a')=0$$
 
 {% diagram Math/Homological_Algebra/Diagram_Chasing-9.svg width="27.46em" alt="connecting_map_of_snake_diagram" %}
 
-Snake lemma는 보통 다음 글에서와 같이 long exact sequence를 그릴 때 사용되지만, 다음의 또 다른 따름정리 또한 갖는다.
+Snake lemma는 보통 이후의 글에서와 같이 long exact sequence를 그릴 때 사용되지만, 다음의 또 다른 따름정리 또한 갖는다.
 
 ::: 따름정리 7 (The 3×3 lemma)
 각 행이 exact인 commutative diagram

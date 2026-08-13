@@ -10,6 +10,7 @@ sidebar:
 
 date: 2025-02-21
 weight: 9
+drift_needed: true
 ---
 
 앞선 글에서 우리는 scheme morphism을 이해하는 몇 가지 관점을 살펴보았다. 이번 글에서 우리는 본격적으로 scheme morphism이 갖는 성질들을 정의한다. 우선 이들이 공유하는 다음 성질을 정의한다.
@@ -81,7 +82,7 @@ Scheme morphism $\varphi: X \rightarrow Y$에 대하여 다음이 성립한다.
 :::
 ::: 증명
 1. $Y$의 임의의 affine open subset $V$가 주어졌다 하자. 그럼 [§스킴의 위상구조, ⁋보조정리 11](/ko/math/scheme_theory/topology_of_schemes#lem11)에 의하여 $V$와 $V_j$ 각각에서 principal open set이 되는 열린집합들로 $V\cap V_j$를 덮을 수 있고, 이를 모든 $j$에 대해 고려한 후 $V$의 quasi-compactness를 사용하면 이러한 것들 중 유한히 많은 것만 택할 수 있다. 이를 $V=\bigcup W_l$이라 하자.   
-    한편 각각의 $j$에 대하여, $\varphi^{-1}(V_j)$는 quasi-compact이므로, 이를 유한히 많은 affine open subset들 $U_{jk}$들로 덮을 수 있고, 이제 $\varphi^{-1}(W_l)\cap U_{jk}$는 [§스펙트럼, ⁋명제 8](/ko/math/scheme_theory/spectrums#prop8)에 의해 $U_{jk}$의 principal open set이므로 $\varphi^{-1}(W_l)$ 각각을 affine open set들의 유한한 합집합으로 표현할 수 있고, 따라서 $\varphi^{-1}(V)$도 affine open set들의 유한한 합집합으로 표현할 수 있다. 이제 quasi-compact space의 유한한 합집합은 quasi-compact이므로 원하는 결과를 얻는다.
+    한편 각각의 $l$에 대하여 $W_l$을 principal open subset으로 갖는 $V_{j(l)}$을 택하면, $\varphi^{-1}(V_{j(l)})$는 quasi-compact이므로, 이를 유한히 많은 affine open subset들 $U_{j(l)k}$들로 덮을 수 있고, 이제 $\varphi^{-1}(W_l)\cap U_{j(l)k}$는 [§스펙트럼, ⁋명제 8](/ko/math/scheme_theory/spectrums#prop8)에 의해 $U_{j(l)k}$의 principal open set이므로 $\varphi^{-1}(W_l)$ 각각을 affine open set들의 유한한 합집합으로 표현할 수 있고, 따라서 $\varphi^{-1}(V)$도 affine open set들의 유한한 합집합으로 표현할 수 있다. 이제 quasi-compact space의 유한한 합집합은 quasi-compact이므로 원하는 결과를 얻는다.
 2. 우선 scheme $Z$가 quasi-separated인 것은 $Z$의 임의의 두 affine open subset의 교집합이 quasi-compact인 것과 동치이다. Affine scheme은 quasi-compact이므로 한쪽 방향은 자명하고, 거꾸로 $Z$의 임의의 quasi-compact open subset은 유한히 많은 affine open subset의 합집합이므로 두 quasi-compact open subset의 교집합은 유한히 많은 affine끼리의 교집합의 합집합이 되어 quasi-compact이기 때문이다.     
     이제 첫째 결과의 증명에서와 같이 $V$의 유한한 covering $V=\bigcup_{l=1}^n W_l$을 택하여 각각의 $W_l$이 $V$에서도, 적당한 $V_{j(l)}$에서도 principal open subset이 되도록 하자. $\varphi^{-1}(V)$의 두 affine open subset $U_1,U_2$가 주어졌다 하면
     
@@ -173,7 +174,7 @@ $$(\varphi\vert_{\varphi^{-1}(V)})^\sharp(V): \mathcal{O}_V(V) \rightarrow \math
 이 integral ring homomorphism인 것이다. ([\[가환대수학\] §정수적 확장, ⁋정의 3](/ko/math/commutative_algebra/integral_extension#def3)) 
 :::
 
-이제 그 정의로부터 finite morphism과 integral morphism이 합성에 대해 닫혀있다는 것을 안다. 또, 이들이 [정의 1](#def1)의 조건을 만족하는 것은 [\[가환대수학\] §정수적 확장, ⁋명제 14](/ko/math/commutative_algebra/integral_extension#prop14)와 [\[가환대수학\] §정수적 확장, ⁋명제 15](/ko/math/commutative_algebra/integral_extension#prop15)로부터 알 수 있으므로 이들은 모두 affine-local on target이다. 
+이제 그 정의로부터 finite morphism과 integral morphism이 합성에 대해 닫혀있다는 것을 안다. 또, 이들이 [§스킴의 위상구조, ⁋정의 9](/ko/math/scheme_theory/topology_of_schemes#def9)의 affine-local property 조건을 만족하는 것은 [명제 9](#prop9)와 [\[가환대수학\] §정수적 확장, ⁋명제 14](/ko/math/commutative_algebra/integral_extension#prop14), [\[가환대수학\] §정수적 확장, ⁋명제 15](/ko/math/commutative_algebra/integral_extension#prop15)로부터 알 수 있으므로 이들은 모두 affine-local on target이다. 
 
 우리는 [\[가환대수학\] §정수적 확장, ⁋보조정리 4](/ko/math/commutative_algebra/integral_extension#lem4)에 의해 임의의 finite morphism은 integral인 것을 안다. 이제 이 보조정리를 완전하게 대수기하의 언어로 서술하기 위해서는 finite type morphism을 정의해야 한다. 
 
@@ -234,7 +235,7 @@ Scheme morphism $\varphi:X \rightarrow Y$가 finite인 것은 $\varphi$가 integ
 
 {% diagram Math/Scheme_Theory/Properties_of_Scheme_Morphisms-1.svg width="28.04em" alt="finite_type_morphism" %}
 
-이와 관련된 finite morphism의 예시로는 위의 ring homomorphism $\iota:\mathbb{K}[\x]\rightarrow \mathbb{K}[\x,\y]$에 projection map $\pi:\mathbb{K}[\x,\y] \rightarrow \mathbb{K}[\x,\y]/(\x-\y^2)$을 합성한 것이 있다. 그럼 $\mathbb{K}[\x,\y]/(\x-\y^2)$은 $\mathbb{K}[\x]$-module로서 $1$과 $\y$에 의해 생성되므로 $\phi:\mathbb{K}[\x] \rightarrow \mathbb{K}[\x,\y]/(\x-\y^2)$은 finite morphism이다. 
+이와 관련된 finite morphism의 예시로는 위의 ring homomorphism $\iota:\mathbb{K}[\x]\rightarrow \mathbb{K}[\x,\y]$에 projection map $\pi:\mathbb{K}[\x,\y] \rightarrow \mathbb{K}[\x,\y]/(\x-\y^2)$을 합성한 것이 있다. 그럼 $\mathbb{K}[\x,\y]/(\x-\y^2)$은 $\mathbb{K}[\x]$-module로서 $1$과 $\y$에 의해 생성되므로 $\phi:\mathbb{K}[\x] \rightarrow \mathbb{K}[\x,\y]/(\x-\y^2)$은 finite ring homomorphism이다. 
 
 한편 우리는 ring homomorphism $\pi:A \rightarrow A/\mathfrak{a}$는 기하적으로 $\mathfrak{a}$가 정의하는 닫힌집합의 inclusion에 해당하는 것을 안다. 따라서 합성
 
@@ -287,7 +288,7 @@ $$\Hom_{\cRing}(\mathbb{Z}[\x], \Gamma(U,\mathcal{O}_X))\cong \Gamma(U, \mathcal
 Scheme morphism $\varphi: X \rightarrow Y$가 *dominant*라는 것은 $\varphi$의 image가 $Y$에서 dense인 것, 곧 $\cl(\varphi(X))=Y$인 것이다. 
 :::
 
-Surjective morphism은 언제나 dominant이지만 그 역은 성립하지 않는다. 가령 integral domain $A$에 대하여 $\Spec \Frac A \rightarrow \Spec A$의 image는 generic point $(0)$ 하나뿐이지만, [§스펙트럼, ⁋정의 7](/ko/math/scheme_theory/spectrums#def7) 직후에 살펴본 대로 $(0)$을 포함하는 $\Spec A$의 닫힌집합은 $\Spec A$ 자신뿐이므로 이 morphism은 dominant이다. Affine scheme들 사이에서 dominance는 다음과 같이 순수하게 대수적으로 읽힌다.
+Surjective morphism은 언제나 dominant이지만 그 역은 성립하지 않는다. 가령 field가 아닌 integral domain $A$에 대하여 $\Spec \Frac A \rightarrow \Spec A$의 image는 generic point $(0)$ 하나뿐이지만, [§스펙트럼, ⁋정의 7](/ko/math/scheme_theory/spectrums#def7) 직후에 살펴본 대로 $(0)$을 포함하는 $\Spec A$의 닫힌집합은 $\Spec A$ 자신뿐이므로 이 morphism은 dominant이다. Affine scheme들 사이에서 dominance는 다음과 같이 순수하게 대수적으로 읽힌다.
 
 ::: 명제 20
 Ring homomorphism $\phi: B \rightarrow A$와 그에 해당하는 scheme morphism $\varphi=\Spec \phi:\Spec A \rightarrow \Spec B$에 대하여 다음의 식

@@ -10,6 +10,7 @@ sidebar:
 
 date: 2026-05-04
 weight: 17
+drift_needed: true
 
 ---
 
@@ -30,14 +31,14 @@ $$\ell(D) - \ell(K_C - D) = \deg D + 1 - g$$
 우리의 출발점은 다소 추상적으로 보일 수 있는 Euler characteristic을 이용한 정의이다. 이 정의의 장점은 linear equivalence에 대해 불변이라는 사실이 즉시 따라온다는 것으로, 정의 직후 이것이 실제로 교차점의 수를 세고 있음을 확인할 것이다.
 
 ::: 정의 1
-Smooth surface $S$ 위의 두 divisor $C, D$의 *intersection number<sub>교차수</sub>* $C \cdot D$를 다음과 같이 정의한다.
+Smooth projective surface $S$ 위의 두 divisor $C, D$의 *intersection number<sub>교차수</sub>* $C \cdot D$를 다음과 같이 정의한다.
 
 $$C \cdot D = \rchi(\mathcal{O}_S(C + D)) - \rchi(\mathcal{O}_S(C)) - \rchi(\mathcal{O}_S(D)) + \rchi(\mathcal{O}_S)$$
 :::
 
 이들의 기하학적 의미를 살펴보기 위해, $C$와 $D$가 각각 global section $s \in H^0(\mathcal{O}(C))$, $t \in H^0(\mathcal{O}(D))$로 정의되는 effective divisor라 하자. 그럼 이들의 common zero locus는 $C \cap D$이며, 다음 exact sequence가 성립한다.
 
-$$0 \rightarrow \mathcal{O} \xrightarrow{(t,-s)} \mathcal{O}(C) \oplus \mathcal{O}(D) \xrightarrow{(s,t)} \mathcal{O}(C+D) \rightarrow \mathcal{O}_{C \cap D} \rightarrow 0$$
+$$0 \rightarrow \mathcal{O} \xrightarrow{(t,-s)} \mathcal{O}(D) \oplus \mathcal{O}(C) \xrightarrow{(s,t)} \mathcal{O}(C+D) \rightarrow \mathcal{O}_{C \cap D} \rightarrow 0$$
 
 여기서 첫 번째 arrow는 $h \mapsto (ht, -hs)$, 두 번째 arrow는 $(f, g) \mapsto fs + gt$이고, 마지막 arrow는 $\mathcal{O}(C+D)$에서 $C \cap D$ 위로의 자연스러운 restriction map이다. 그럼 Euler characteristic의 additivity에 의하여
 
@@ -45,23 +46,23 @@ $$C \cdot D = \rchi(\mathcal{O}_{C \cap D})$$
 
 이며, 이 때 $C\cap D$는 곡선 두 개의 교집합, 즉 점들이고 따라서 우변의 Euler characteristic은 정확히 $C\cap D$의 점들의 갯수를 세게 된다. 다소 미묘한 부분은 이것이 잘 정의되기 위해서는 $C$와 $D$가 일반적인 위치에 있어야 한다는 것인데, 이를 위해 우리는 두 곡선 $C,D$가 점 $p$에서 *transversally intersect*한다는 것을 다음의 조건
 
-$$T_pC\oplus T_pD\cong T_pS$$
+$$T_pC\oplus T_pD = T_pS$$
 
-으로 정의한다. 가령 $\mathbb{A}^2$에서, $\x=0$은 자기 자신과 transversally intersect하지 않으며 $\y=\x^3$은 $\y=0$과 transversally intersect하지 않는다. 반면 $\y=\x$와 $\y=-\x$는 transversal하게 만난다. 뿐만 아니라, 이 예시는 intersection multiplicity의 직관 또한 제공하는데, $\y=\x$와 $\y=-\x$의 (원점에서의) intersection multiplicity는 $1$이지만 $\y=\x^3$과 $\y=0$의 intersection multiplicity는 $3$이다. 그럼 $C$와 $D$가 transversal하게 만나지 않을 수도 있는 일반적인 경우에서는 
+으로 정의한다. 여기서 $T_pC$와 $T_pD$는 $T_pS$의 부분공간으로 보며, 따라서 위의 조건은 $T_pS$ 안에서의 internal direct sum, 즉 $T_pC + T_pD = T_pS$이면서 $T_pC\cap T_pD = 0$인 것을 뜻한다. 가령 $\mathbb{A}^2$에서, $\x=0$은 자기 자신과 transversally intersect하지 않으며 $\y=\x^3$은 $\y=0$과 transversally intersect하지 않는다. 반면 $\y=\x$와 $\y=-\x$는 transversal하게 만난다. 뿐만 아니라, 이 예시는 intersection multiplicity의 직관 또한 제공하는데, $\y=\x$와 $\y=-\x$의 (원점에서의) intersection multiplicity는 $1$이지만 $\y=\x^3$과 $\y=0$의 intersection multiplicity는 $3$이다. 그럼 $C$와 $D$가 transversal하게 만나지 않을 수도 있는 일반적인 경우에서는 
 
 $$\rchi(\mathcal{O}_{C \cap D}) = \sum_{p \in C \cap D} (C \cdot D)_p$$
 
 가 성립하며, 여기서 $(C \cdot D)_p$는 $p$에서의 local intersection multiplicity이다. 이 때 이 식에서 $C\cap D$가 점들의 유한집합 대신 curve가 되는 상황을 막기 위해서는 (가령 $C=D$인 상황을 막기 위해서는) 우리는 $C,D$가 공통의 component를 갖지 않는다 가정한다. 
 
 ::: 명제 2
-다음은 intersection number의 성질들이다. 
+Smooth projective surface $S$ 위의 divisor들에 대해, 다음은 intersection number의 성질들이다. 
 
 1. *Symmetry.* $C \cdot D = D \cdot C$가 성립한다.
 2. *Bilinearity.* $(aC_1 + bC_2) \cdot D = a(C_1 \cdot D) + b(C_2 \cdot D)$가 성립한다. 
 3. *Linear invariance.* Linearly equivalent한 두 divisor $C \sim C'$에 대해 $C \cdot D = C' \cdot D$가 항상 성립한다.
 :::
 
-Symmetry는 위에서 보인 직관에 의해 자명하며, linear invariance 또한 거의 자명하다. 의외로 가장 덜 자명한 것은 bilinearity인데, 이는 보통 Snapper's theorem으로 설명할 수 있다. Snapper's theorem에 의하면, projective variety 위의 임의의 coherent sheaf $\mathcal{F}$, line bundles $L_1, \ldots, L_k$에 대해, Euler characteristic 
+Symmetry는 [정의 1](#def1)의 식이 $C$와 $D$의 교환에 대해 대칭이라는 것에서 곧바로 따라오고, linear invariance 또한 $C\sim C'$이면 $\mathcal{O}_S(C)\cong\mathcal{O}_S(C')$이고 $\mathcal{O}_S(C+D)\cong\mathcal{O}_S(C'+D)$이므로 정의에 등장하는 네 항이 각각 일치한다는 것에서 따라온다. 의외로 가장 덜 trivial한 것은 bilinearity인데, 이는 보통 Snapper's theorem으로 설명할 수 있다. Snapper's theorem에 의하면, projective variety 위의 임의의 coherent sheaf $\mathcal{F}$, line bundles $L_1, \ldots, L_k$에 대해, Euler characteristic 
 
 $$\rchi(\mathcal{F} \otimes L_1^{\otimes n_1} \otimes \cdots \otimes L_k^{\otimes n_k})$$
 
@@ -154,7 +155,7 @@ Curve의 경우와 마찬가지로, 만약 $D$가 충분히 "양의" 방향이�
 
 $$K_{\mathbb{P}^2} = -3H, \qquad \rchi(\mathcal{O}_{\mathbb{P}^2}) = 1$$
 
-임을 안다.  ([§표준선다발, ⁋명제 7](/ko/math/algebraic_varieties/canonical_bundle#prop7), [§사영공간의 코호몰로지, ⁋따름정리 3](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#cor3)) $\mathbb{P}^2$에서 임의의 두 직선은 일반적으로 한 점에서 만나므로, $H$의 self-intersection number는 1이며 따라서 임의의 divisor $D = dH$에 대해
+임을 안다.  ([§표준선다발, §§$\mathbb{P}^n$의 Canonical Bundle](/ko/math/algebraic_varieties/canonical_bundle#mathbbpn의-canonical-bundle), [§사영공간의 코호몰로지, ⁋따름정리 3](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#cor3)) $\mathbb{P}^2$에서 임의의 두 직선은 일반적으로 한 점에서 만나므로, $H$의 self-intersection number는 1이며 따라서 임의의 divisor $D = dH$에 대해
 
 $$\rchi(\mathcal{O}_{\mathbb{P}^2}(d)) = \frac{1}{2}dH \cdot (dH + 3H) + 1 = \frac{1}{2}d(d+3) + 1$$
 
@@ -173,7 +174,7 @@ $$\rchi(\mathcal{O}_{\widetilde{\mathbb{P}}^2}(dH - kE)) = \frac{1}{2}(dH - kE) 
 임을 계산할 수 있다.
 :::
 
-한편 곡선에서의 Riemann-Roch 정리는 위의 [명제 4](#prop4)에서 [§세르 쌍대성](/ko/math/algebraic_varieties/serre_duality)을 적용하여 $h^1$ 부분을 $h^0$으로 바꾼 것으로, 곡면에서의 경우에도 이를 활용하여 $h^2(\mathcal{O}(D)) = h^0(\omega_S(-D))$로 적을 수 있고, 그럼 Riemann–Roch 공식은 다음의 식
+한편 곡선에서의 Riemann-Roch 정리가 Euler characteristic을 이용한 식에 [§세르 쌍대성](/ko/math/algebraic_varieties/serre_duality)을 적용하여 $h^1$ 부분을 $h^0$으로 바꾼 것이었듯, 곡면에서도 위의 [명제 4](#prop4)에 이를 적용하여 $h^2(\mathcal{O}(D)) = h^0(\omega_S(-D))$로 적을 수 있고, 그럼 Riemann–Roch 공식은 다음의 식
 
 $$h^0(\mathcal{O}(D)) - h^1(\mathcal{O}(D)) + h^0(\omega_S(-D)) = \rchi(\mathcal{O}_S) + \frac{1}{2}(D^2 - D \cdot K_S)$$
 
@@ -252,7 +253,7 @@ $$\rchi(\mathcal{O}(mD)) = \rchi(\mathcal{O}_S) + \frac{m^2 D^2 - m D \cdot K_S}
 
 이제 $D^2\neq 0$임을 보여 증명을 마무리하자. 결론에 반하여 $D^2 = 0$이고 $D \cdot H = 0$이며 $D \not\equiv 0$이라 하면, $D \not\equiv 0$이므로 $D \cdot E \ne 0$인 어떤 divisor $E$가 존재한다. 이제
 
-$$E' = (H^2)\,E - (E \cdot H)\,H$$
+$$E' = (H^2)E - (E \cdot H)H$$
 
 로 정의하면 $E' \cdot H = (H^2)(E \cdot H) - (E \cdot H)(H^2) = 0$이고,  $D \cdot H = 0$이므로
 
@@ -268,7 +269,7 @@ $$F_n^2 = n^2 D^2 + 2n(D \cdot E') + E'^2 = 2n(D \cdot E') + E'^2$$
 그럼 이로부터 다음의 따름정리를 얻는다.
 
 ::: 따름정리 11
-$\Num(S) \otimes \mathbb{R}$ 위의 intersection form은 signature $(1, \rho - 1)$를 갖는다. 
+$\Num(S) \otimes \mathbb{R}$ 위의 intersection form은 signature $(1, \rho - 1)$를 갖는다. 여기서 $\rho$는 $\Num(S) \otimes \mathbb{R}$의 차원이다. 
 :::
 
 ::: 증명
@@ -279,7 +280,7 @@ Ample divisor $H$에 대해 $H^2 > 0$이므로 intersection form은 적어도 �
 
 ## Plurigenera
 
-Curve의 경우, genus $g$는 curve의 birational equivalence class를 완전히 결정한다. Surface에서는 상황이 더 복잡한데, 그 이유는 birational equivalence가 cohomology의 차원을 모두 보존하지 않기 때문이다. 그러나 canonical bundle의 tensor power의 global section 차원은 birational invariant이며, 이 값들이 surface의 birational type에 대한 필수적인 정보를 제공한다.
+Curve의 경우, genus $g$는 가장 기본적인 birational invariant이다. Surface에서는 상황이 더 복잡한데, 그 이유는 birational equivalence가 cohomology의 차원을 모두 보존하지 않기 때문이다. 그러나 canonical bundle의 tensor power의 global section 차원은 birational invariant이며, 이 값들이 surface의 birational type에 대한 필수적인 정보를 제공한다.
 
 ::: 정의 12
 Surface $S$의 *$m$-th plurigenus*는

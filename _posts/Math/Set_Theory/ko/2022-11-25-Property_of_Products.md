@@ -14,6 +14,8 @@ date: 2022-11-25
 
 weight: 11
 
+drift_needed: true
+
 ---
 
 ## 부분곱과 결합법칙
@@ -26,9 +28,9 @@ Family $(A_i)_{i\in I}$와 그 product $\prod_{i\in I} A_i$가 주어졌다고 �
 
 $\prod_{i\in I}A_i$의 부분곱 $\prod_{j\in J}A_j$가 주어졌다 하자. 그럼 임의의 $F\in\prod_{i\in I}A_i$에 대하여, 
 
-$$f\circ\id_J=\biggl(F\circ\Delta_J, J, \bigcup_{j\in J} A_j\biggr)$$
+$$\biggl(F\circ\Delta_J, J, \bigcup_{j\in J} A_j\biggr)$$
 
-은 새로운 함수이며, 각각의 $j$에 대하여 $(f\circ\id_J)(j)=f(j)\in A_j$를 만족한다. 즉 $F\circ\Delta_J$는 $\prod_{j\in J}A_j$의 원소이다. 
+은 새로운 함수이며, 각각의 $j$에 대하여 $(F\circ\Delta_J)(j)=F(j)\in A_j$를 만족한다. 즉 $F\circ\Delta_J$는 $\prod_{j\in J}A_j$의 원소이다. 
 
 위의 문단에 의하여, $F\mapsto F\circ\Delta_J$는 $\prod_{i\in I}A_i$에서 $\prod_{j\in J}A_j$로의 함수를 정의한다. 이를 성분함수의 표기를 빌려 $\pr_J$로 적는다. 그럼 $K\subseteq J\subseteq I$에 대하여, 곱집합 $\prod_{i\in I}A_i$에서 부분곱 $\prod_{j\in J}A_j$로의 $J$번째 성분함수와, 곱집합 $\prod_{j\in J}A_j$에서 이 곱집합의 부분곱 $\prod_{k\in K}A_k$로의 $K$번째 성분함수
 
@@ -49,7 +51,7 @@ $$F=G\cup\biggl(\bigcup_{i\in I\setminus J}\{(i, x_i)\}\biggr)$$
 :::
 
 ::: 명제 3
-공집합이 아닌 index set $I$를 갖는 family $(A_i)_{i\in I}$가 $I\neq\emptyset$가 주어졌다 하자. 만일 $(J_k)_{k\in K}$이 $I$의 분할이라면, $\prod_{i\in I}A_i$에서 $\prod_{k\in K}\left(\prod_{j\in J_k}A_j\right)$로의 함수 $f\mapsto (\pr_{J_k}(f))_{k\in K}$ 또한 전단사함수이다.
+공집합이 아닌 index set $I$를 갖는 family $(A_i)_{i\in I}$가 주어졌다 하자. 만일 $(J_k)_{k\in K}$이 $I$의 분할이라면, $\prod_{i\in I}A_i$에서 $\prod_{k\in K}\left(\prod_{j\in J_k}A_j\right)$로의 함수 $f\mapsto (\pr_{J_k}(f))_{k\in K}$ 또한 전단사함수이다.
 :::
 
 ::: 증명
@@ -101,9 +103,9 @@ $$\pr_{ik}:\prod_{k\in K}\left(\prod_{j\in J_k}A_j\right)\overset{\pr_k}{\longri
 
 이제
 
-$${\pr_i}\circ(\phi\circ\psi)=({\pr_i}\circ\phi)\circ\psi={\pr_{ik}}\circ\psi={\pr_i}\circ({\pr_k}\circ\psi)={\pr_j}\circ{\pr_{J_k}}=\pr_j$$
+$${\pr_i}\circ(\phi\circ\psi)=({\pr_i}\circ\phi)\circ\psi={\pr_{ik}}\circ\psi={\pr_i}\circ({\pr_k}\circ\psi)={\pr_i}\circ{\pr_{J_k}}=\pr_i$$
 
-에서 원하는 결론을 얻는다. (마지막 등식은 $\pr_j$를 $\{j\}\subseteq I$로의 성분함수로 보았다.) 이 식은 복잡해보이지만, 그냥 다음의 diagram이 commute한다는 것을 식으로 쓴 것에 불과하다. 
+에서 원하는 결론을 얻는다. (마지막 등식은 $\pr_i$를 $\{i\}\subseteq I$로의 성분함수로 보았다.) 이 식은 복잡해보이지만, 그냥 다음의 diagram이 commute한다는 것을 식으로 쓴 것에 불과하다. 
 
 {% diagram Math/Set_Theory/Property_of_Products-4.svg width="17.00em" alt="partial_product_pf_4" %}
 :::
@@ -141,7 +143,7 @@ $\id_{A_i}$들의 곱이 $\id_{\prod A_i}$라는 것은 자명하므로, 위의 
 ::: 명제 6
 $((A_{k,i})_{i\in J_k})_{k\in K}$가 집합들의 family들의 family라 하자. 추가로 $K\neq\emptyset$이고, $J_k\neq\emptyset$가 모든 $k\in K$에 대해 성립한다고 하자. 그럼 $I=\prod_{k\in K} J_k\neq\emptyset$에 대하여,
 
-$$\bigcup_{k\in K}\left(\bigcap_{i\in J_k}A_{k,i}\right)=\bigcap_{f\in I}\left(\bigcup_{k\in K}A_{k,f(k)}\right),\quad\bigcap_{k\in K}\left(\bigcup_{i\in J}A_{k,i}\right)=\bigcup_{f\in I}\left(\bigcap_{k\in K}A_{k,f(k)}\right)$$
+$$\bigcup_{k\in K}\left(\bigcap_{i\in J_k}A_{k,i}\right)=\bigcap_{f\in I}\left(\bigcup_{k\in K}A_{k,f(k)}\right),\quad\bigcap_{k\in K}\left(\bigcup_{i\in J_k}A_{k,i}\right)=\bigcup_{f\in I}\left(\bigcap_{k\in K}A_{k,f(k)}\right)$$
 
 이 성립한다.
 :::
@@ -149,7 +151,7 @@ $$\bigcup_{k\in K}\left(\bigcap_{i\in J_k}A_{k,i}\right)=\bigcap_{f\in I}\left(\
 ::: 증명
 우선 $x\in \bigcup_{k\in K}\left(\bigcap_{i\in J_k}A_{k,i}\right)$라 하자. 우리는 $x\in \bigcap_{f\in I}\left(\bigcup_{k\in K}A_{k,f(k)}\right)$, 즉 모든 $f\in I$에 대하여 $x\in \bigcup_{k\in K}A_{k,f(k)}$임을 보여야 한다. 어떤 $k\in K$에 대하여 $x\in \bigcap_{i\in J_k}A_{k,i}$이므로, $x\in A_{k,f(k)}$이다. 따라서 $x\in \bigcup_{k\in K}A_{k,f(k)}$가 모든 $f$에 대하여 성립하고, 따라서 포함관계가 성립한다.  
 
-반대쪽 포함관계를 보이기 위해 대우명제를 사용하자. 즉 $x\not\in \bigcup_{k\in K}\left(\bigcap_{i\in J_k}A_{k,i}\right)$라 하자. 그럼 모든 $k\in K$에 대하여, $x\not\in \bigcap_{i\in J_k}A_{k,i}$이다. 따라서 어떤 $i$가 존재하여, 모든 $k$에 대해 $x\not\in A_{k,i}$이다. 이제 $f(k)$가 그러한 $i$가 되도록 하는 $f\in I$를 잡으면, $x\not\in\bigcup_{k\in K}A_{k,f(k)}$이고 , 따라서 우변에 속하지 않는다. 두 번째 식도 이와 비슷하게 보이면 된다.
+반대쪽 포함관계를 보이기 위해 대우명제를 사용하자. 즉 $x\not\in \bigcup_{k\in K}\left(\bigcap_{i\in J_k}A_{k,i}\right)$라 하자. 그럼 모든 $k\in K$에 대하여, $x\not\in \bigcap_{i\in J_k}A_{k,i}$이다. 따라서 각각의 $k$마다 $i_k\in J_k$가 존재하여 $x\not\in A_{k,i_k}$이다. 이제 $f(k)=i_k$인 $f\in I$를 잡으면, $x\not\in\bigcup_{k\in K}A_{k,f(k)}$이고 , 따라서 우변에 속하지 않는다. 두 번째 식도 이와 비슷하게 보이면 된다.
 :::
 
 Product와 union, 그리고 product와 intersection 사이에도 다음과 같이 분배법칙이 성립하며, 이에 대한 증명은 위와 거의 같으므로 생략한다.
@@ -157,7 +159,7 @@ Product와 union, 그리고 product와 intersection 사이에도 다음과 같�
 ::: 명제 7
 $((A_{k,i})_{i\in J_k})_{k\in K}$가 집합들의 family들의 family이고, $I$를 위의 명제와 동일하게 정의하자. 그럼 
 
-$$\prod_{k\in K}\left(\bigcup_{i\in J_k}A_{k,i}\right)=\bigcup_{f\in I}\left(\prod_{k\in K}A_{k,f(k)}\right),\quad\prod_{k\in K}\left(\bigcap_{i\in J}A_{k,i}\right)=\bigcap_{f\in I}\left(\prod_{k\in K}A_{k,f(k)}\right)$$
+$$\prod_{k\in K}\left(\bigcup_{i\in J_k}A_{k,i}\right)=\bigcup_{f\in I}\left(\prod_{k\in K}A_{k,f(k)}\right),\quad\prod_{k\in K}\left(\bigcap_{i\in J_k}A_{k,i}\right)=\bigcap_{f\in I}\left(\prod_{k\in K}A_{k,f(k)}\right)$$
 
 가 성립한다.
 :::

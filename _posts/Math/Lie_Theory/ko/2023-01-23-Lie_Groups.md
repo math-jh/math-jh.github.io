@@ -10,6 +10,7 @@ sidebar:
 
 date: 2023-01-23
 weight: 1
+drift_needed: true
 
 ---
 
@@ -98,7 +99,7 @@ $$R_g:G\rightarrow G;\qquad x\mapsto xg$$
 우리는 Lie group과 그 위에 정의된 벡터장을 다룰 때 이러한 left translation들에 의해 보존되는 벡터장들에만 관심이 있다. 즉 다음을 정의한다.
 
 ::: 정의 7
-Lie group $G$ 위에 정의된 벡터장 $X$에 대하여, $X$가 *left invariant<sub>좌불변</sub>*라는 것은 $X$가 자기 자신과 $L_g$-related인 것이다.
+Lie group $G$ 위에 정의된 벡터장 $X$에 대하여, $X$가 *left invariant<sub>좌불변</sub>*라는 것은 임의의 $g\in G$에 대하여 $X$가 자기 자신과 $L_g$-related인 것이다.
 :::
 
 즉, 다음의 식
@@ -111,7 +112,7 @@ $$\left(\dd{(L_g)}\right)(X_p)=X_{gp}$$
 
 이 항상 성립하는 것이다. 위의 식으로부터, $G$ 위에 정의된 left invariant인 벡터장 $X$를 명시하기 위해서는 <em-ko>오직 하나의 점</em-ko> $p\in G$에서의 값 $X_p$만 알면 충분하다는 것을 알 수 있으며, 당연하게도 가장 평범한 $p$의 선택은 $G$의 항등원 $e$이다. 또, 각 점에서의 $X$의 값이 이러한 방식으로 정의되었기 때문에, $X$가 left-invariant라는 사실이 $X$의 smoothness를 줄 것이라는 것도 추측할 수 있다. 
 
-바꿔말하면, $G$ 위에서 정의된 left-invariant vector field는 정확하게 $G$의 identity에서의 tangent space $T_eG$와 같은 것이다. 한편 [\[미분다양체\] §리 미분, ⁋정의 5](/ko/math/manifolds/Lie_derivative#def5)에서 우리는 $\mathfrak{X}(G)$를 $C^\infty(G)$-algebra가 되도록 하는 연산 $[-,-]$를 정의했는데, 그렇다면 left-invariant vector field들의 모임이 이 연산에 대한 subalgebra가 되는지 또한 우리의 의문 중 하나이다. 우선 $[-,-]$를 일반화하는 다음의 정의부터 생각하자. 
+바꿔말하면, $G$ 위에서 정의된 left-invariant vector field는 정확하게 $G$의 identity에서의 tangent space $T_eG$와 같은 것이다. 한편 [\[미분다양체\] §리 미분, ⁋정의 5](/ko/math/manifolds/Lie_derivative#def5)에서 우리는 $\mathfrak{X}(G)$를 $\mathbb{R}$ 위의 Lie algebra가 되도록 하는 연산 $[-,-]$를 정의했는데, 그렇다면 left-invariant vector field들의 모임이 이 연산에 대한 subalgebra가 되는지 또한 우리의 의문 중 하나이다. 우선 $[-,-]$를 일반화하는 다음의 정의부터 생각하자. 
 
 ::: 정의 8
 $\mathbb{R}$-벡터공간 $\mathfrak{g}$가 $\mathbb{R}$ 위에 정의된 *Lie algebra<sub>리 대수</sub>*라는 것은 이 위에 다음의 두 조건
@@ -119,7 +120,7 @@ $\mathbb{R}$-벡터공간 $\mathfrak{g}$가 $\mathbb{R}$ 위에 정의된 *Lie a
 1. (anticommutativity) $[x,y]=-[y,x]$,
 2. (Jacobi identity) $[[x,y],z]+[[y,z],x]+[[z,x],y]=0$
 
-을 만족하는 *Lie bracket<sub>리 브라켓</sub>* $[-,-]:\mathfrak{g}\times\mathfrak{g}\rightarrow\mathfrak{g}$가 정의된 것이다.
+을 만족하는 $\mathbb{R}$-bilinear한 *Lie bracket<sub>리 브라켓</sub>* $[-,-]:\mathfrak{g}\times\mathfrak{g}\rightarrow\mathfrak{g}$가 정의된 것이다.
 :::
 
 그럼 다음 명제가 성립한다. 
@@ -230,7 +231,7 @@ $$\det(\exp tX)=\exp(\tr(tX))=\exp(t\cdot\tr X)$$
 다음은 앞서 살펴본 left-invariant vector field의 일반화이다. 
 
 ::: 정의 13
-Lie group $G$ 위에 정의된 form $\omega$가 *left invariant<sub>좌불변</sub>*라는 것은 임의의 $g\in G$에 대하여 $(\dd{L_g})\omega=\omega$가 성립하는 것이다. $G$ 위에 정의된 left invariant $k$-form들의 모임은 $\Omega_\text{l.inv}^k(G)$로 적고, $G$ 위에 정의된 모든 left invariant form들의 모임은 $\Omega_\text{l.inv}^\ast(G)$으로 적는다.
+Lie group $G$ 위에 정의된 form $\omega$가 *left invariant<sub>좌불변</sub>*라는 것은 임의의 $g\in G$에 대하여 $L_g^\ast\omega=\omega$가 성립하는 것이다. $G$ 위에 정의된 left invariant $k$-form들의 모임은 $\Omega_\text{l.inv}^k(G)$로 적고, $G$ 위에 정의된 모든 left invariant form들의 모임은 $\Omega_\text{l.inv}^\ast(G)$으로 적는다.
 :::
 
 특별히 $\Omega_\text{l.inv}^1(G)$의 원소들은 *Maurer-Cartan form*이라 부른다.
@@ -241,7 +242,7 @@ Lie group $G$ 위에 정의된 form $\omega$가 *left invariant<sub>좌불변</s
 Lie group $G$와 $\Omega_\text{l.inv}^\ast(G)$에 대하여 다음이 성립한다.
 
 1. $\Omega_\text{l.inv}^\ast(G)$의 임의의 원소는 $C^\infty$이다. 
-2. $\Omega_\text{l.inv}^\ast(G)$는 $\Omega^\ast(G)$의 $C^\infty(G)$-subalgebra이며, 함수 $\omega\mapsto\omega_e$는 $\Omega_\text{l.inv}^\ast(G)$에서 $\bigwedge(T_e^\ast G)$로의 $C^\infty(G)$-algebra isomorphism이다.
+2. $\Omega_\text{l.inv}^\ast(G)$는 $\Omega^\ast(G)$의 $\mathbb{R}$-subalgebra이며, 함수 $\omega\mapsto\omega_e$는 $\Omega_\text{l.inv}^\ast(G)$에서 $\bigwedge(T_e^\ast G)$로의 $\mathbb{R}$-algebra isomorphism이다.
 3. 임의의 $\omega\in\Omega_\text{l.inv}^1(G)$와 left invariant인 벡터장 $X$에 대하여, $\omega(X)$는 $G$ 위에서 정의된 상수함수이다.
 4. 임의의 $\omega\in\Omega_\text{l.inv}^1(G)$와 $X,Y\in\mathfrak{g}$에 대하여 
     
@@ -324,7 +325,7 @@ $$\ad: \mathfrak{g}\rightarrow \Lie(\Aut(\mathfrak{g}))$$
 을 $\mathfrak{g}$의 *adjoint representation*이라 부른다. 
 :::
 
-그럼 정의에 의해 충분히 작은 범위 내에서 $G$의 adjoint representation은 정확하게 Lie derivative를 보는 것과 같고, 따라서 [\[미분다양체\] §리 미분, ⁋명제 4](/ko/math/manifolds/Lie_derivative#prop4)에 의하여 다음의 식
+그럼 left invariant인 벡터장 $X$의 flow가 right translation $R_{\exp(tX)}$로 주어지므로, 충분히 작은 범위 내에서 $G$의 adjoint representation은 정확하게 Lie derivative를 보는 것과 같고, 따라서 [\[미분다양체\] §리 미분, ⁋명제 4](/ko/math/manifolds/Lie_derivative#prop4)에 의하여 다음의 식
 
 $$\ad(X)Y =[X,Y]$$
 
@@ -333,7 +334,7 @@ $$\ad(X)Y =[X,Y]$$
 ::: 정리 20
 Connected compact Lie group $G$에 대하여 다음이 성립한다.
 
-1. $\dd{(\exp(e))}=\id_\mathfrak{g}$
+1. $\dd{\exp}_0=\id_\mathfrak{g}$
 2. $\Ad\circ\exp=\exp_{\GL(\mathfrak{g})}\circ \ad$
 3. $\rho_x\circ\exp=\exp\circ\Ad(x)$
 :::
@@ -348,7 +349,7 @@ $$G\cong \mathfrak{g}/\ker(\exp)$$
 
 $$G\cong \mathfrak{g}/\ker(\exp)\cong \mathbb{R}^n/\mathbb{Z}^k\cong T^k\times \mathbb{R}^{n-k}$$
 
-이다. 즉, connected abelian Lie group은 반드시 torus와 $\mathbb{R}^k$의 곱이며, 특히 compact connected abelian Lie group은 반드시 torus이다.
+이다. 즉, connected abelian Lie group은 반드시 torus와 $\mathbb{R}^{n-k}$의 곱이며, 특히 compact connected abelian Lie group은 반드시 torus이다.
 
 ---
 

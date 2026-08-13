@@ -10,6 +10,7 @@ sidebar:
 
 date: 2024-09-17
 weight: 1
+drift_needed: true
 
 ---
 
@@ -17,7 +18,7 @@ weight: 1
 
 예컨대 특별히 field $\mathbb{K}$ 위에 정의된 module들, 즉 $\mathbb{K}$-벡터공간들에 대한 결과들은 [\[선형대수학\]](/ko/linear_algebra/)에서 살펴보았었는데, 여기에서 $\mathbb{K}$-벡터공간들의 기저를 잡거나 이를 사용하여 linear map을 행렬로 표현하는 등의 일들은 일반적인 대수적 구조에서 기대하기는 힘든 일들이다. 
 
-이와 같은 관점에서[\[다중선형대수학\]](/ko/multilinear_algebra/) category의 가장 큰 목표는 [\[선형대수학\]](/ko/linear_algebra/)에서의 결과들을 $\mathbb{K}$ 대신 일반적인 ring $A$로 바꾸어 최대한 일반화하는 것이라 할 수 있다. 한편 해당 category의 글들은 비전공자 혹은 저년차 학부생을 염두에 두고 작성한 글들로 특히 [\[범주론\]](/ko/category_theory)의 언어를 거의 사용하지 않았었는데, 이와 같이 [\[선형대수학\]](/ko/linear_algebra/)의 내용들을 현대적인 언어로 바꾸는 것 또한 목표 중 하나이다. 
+이와 같은 관점에서 [\[다중선형대수학\]](/ko/multilinear_algebra/) category의 가장 큰 목표는 [\[선형대수학\]](/ko/linear_algebra/)에서의 결과들을 $\mathbb{K}$ 대신 일반적인 ring $A$로 바꾸어 최대한 일반화하는 것이라 할 수 있다. 한편 해당 category의 글들은 비전공자 혹은 저년차 학부생을 염두에 두고 작성한 글들로 특히 [\[범주론\]](/ko/category_theory)의 언어를 거의 사용하지 않았었는데, 이와 같이 [\[선형대수학\]](/ko/linear_algebra/)의 내용들을 현대적인 언어로 바꾸는 것 또한 목표 중 하나이다. 
 
 이 category의 글들에서 $A$-module은 항상 left $A$-module을 뜻하며, 적절한 방식으로 동일한 논증을 right $A$-module에 대해서도 펼칠 수 있다. 같은 글 안에 left $A$-module과 right $A$-module이 동시에 등장해야 할 경우에는 혼동을 피하기 위해 이렇게 생략하지 않지만, 이러한 경우에도 left $A$-module을 right $A$-module로, right $A$-module을 left $A$-module로 서로 바꾸면 동일한 논증을 펼칠 수 있다.
 
@@ -26,7 +27,7 @@ weight: 1
 이번 글의 목표는 몇 가지 exact sequence들을 소개하고, splitting exact sequence의 개념을 정의하는 것이다. 우선 다음의 간단한 보조정리부터 시작한다.
 
 ::: 보조정리 1
-$A$-module $M$의 submodule들의 family $(N_i)_{i\in I}$에 대하여, 교집합 $\bigcap_{i\in I} N_i$는 $M$의 submodule이다.
+공집합이 아닌 index set $I$에 대하여 $A$-module $M$의 submodule들의 family $(N_i)_{i\in I}$가 주어졌다 하자. 그럼 교집합 $\bigcap_{i\in I} N_i$는 $M$의 submodule이다.
 :::
 ::: 증명
 [\[선형대수학\] §벡터공간의 기저, ⁋보조정리 3](/ko/math/linear_algebra/basis#lem3)의 증명은 $\mathbb{K}$가 field라는 사실을 사용하지 않았으므로 해당 증명을 동일하게 사용하면 된다.
@@ -67,7 +68,7 @@ $$\bigoplus_{i\in I} N_i \rightarrow M \rightarrow M\bigg/\sum_{i\in I} N_i \rig
 
 $$M \rightarrow \prod_{i\in I} M/N_i$$
 
-이 주어진다. 다음 명제 또한 자명하다.
+이 주어진다. 원소 $x\in M$이 이 morphism에 의해 $0$으로 보내지는 것은 각각의 $i\in I$에 대하여 $x+N_i=0$인 것, 즉 $x\in N_i$인 것과 동치이므로 다음이 성립한다.
 
 ::: 명제 5
 위에서 정의한 canonical morphism $M \rightarrow \prod_{i\in I} M/N_i$의 kernel이 $\bigcap N_i$이다.
@@ -87,7 +88,7 @@ $$0 \rightarrow \bigcap_{i\in I} N_i \rightarrow M \rightarrow\prod_{i\in I} M/N
 위와 같은 상황에서 다음이 모두 동치이다.
 
 1. $\sum_{i\in I} N_i=\bigoplus_{i\in I} N_i$이다.
-2. 만일 $x_i\in N_i$를 만족하는 $x_i$들에 대하여 $\sum_{i\in I} x_i=0$이라면 모든 $i$에 대하여 $x_i=0$이다.
+2. 만일 $x_i\in N_i$를 만족하고 유한개를 제외하고는 $x_i=0$인 $x_i$들에 대하여 $\sum_{i\in I} x_i=0$이라면 모든 $i$에 대하여 $x_i=0$이다.
 3. 임의의 $j\in I$에 대하여, $N_j$와 $\sum_{i\neq j} N_i$의 교집합이 $0$이다.
 :::
 ::: 증명

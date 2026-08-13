@@ -10,6 +10,7 @@ sidebar:
 
 date: 2024-08-23
 weight: 4
+drift_needed: true
 
 ---
 
@@ -58,7 +59,7 @@ $$\langle x, \xi_1+\xi_2\rangle=\langle x, \xi_1\rangle+\langle x,\xi_2\rangle=0
 이므로, $M$의 고정된 부분집합 $S$에 대해, $S$의 원소들과 orthogonal한 $M^\ast$의 원소들을 모아두면 이는 $M^\ast$의 submodule이 된다.
 
 ::: 정의 3
-위와 같이 정의한 $M^\ast$의 submodule을 $M$에 orthogonal한 submodule이라 부르고, $S^\perp$라 적는다.
+위와 같이 정의한 $M^\ast$의 submodule을 $S$에 orthogonal한 submodule이라 부르고, $S^\perp$라 적는다.
 :::
 
 임의의 부분집합 $T\subseteq M^\ast$에 대해서도 비슷하게 $T^\perp$를 다음 식
@@ -89,7 +90,7 @@ $$\langle u(x),\xi\rangle=\langle x, u^t\xi\rangle$$
 
 으로 쓸 수 있으며, 거꾸로 이 식이 모든 $x\in M$과 모든 $\xi\in N^\ast$에 대해 성립한다면 $u^t$가 유일하게 결정된다. 
 
-또, $\Hom(-,A)$의 functoriality와 [\[대수적 구조\] §가군, ⁋명제 8](/ko/math/algebraic_structures/modules#prop8)에 의해 다음 명제를 얻는다. 
+또, 두 $A$-linear map $u,v:M \rightarrow N$과 임의의 $\xi\in N^\ast$, $x\in M$에 대하여 $\xi((u+v)(x))=\xi(u(x))+\xi(v(x))$인 것과 $\Hom(-,A)$의 functoriality, 그리고 [\[대수적 구조\] §가군, ⁋명제 8](/ko/math/algebraic_structures/modules#prop8)에 의해 다음 명제를 얻는다. 
 
 ::: 명제 5
 다음이 성립한다.
@@ -102,7 +103,7 @@ $$\langle u(x),\xi\rangle=\langle x, u^t\xi\rangle$$
 
 ## 쌍대기저
 
-$A$-module $M$이 basis $(x_i)_{i\in I}$를 갖는다 하자. ([§기저, ⁋정의 1](/ko/math/multilinear_algebra/basis_of_free_modules#def1)) 즉 다음의 isomorphism
+$A$-module $M$이 basis $(e_i)_{i\in I}$를 갖는다 하자. ([§기저, ⁋정의 1](/ko/math/multilinear_algebra/basis_of_free_modules#def1)) 즉 다음의 isomorphism
 
 $$\varepsilon: A^{\oplus I} \rightarrow M$$
 

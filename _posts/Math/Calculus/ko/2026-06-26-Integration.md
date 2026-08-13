@@ -10,6 +10,7 @@ sidebar:
 
 date: 2026-06-26
 weight: 10
+drift_needed: true
 ---
 
 우리는 지금까지 함수의 극한을 정의하고, 평균변화율의 극한을 이용해 미분을 정의하였다. 이번 글에서 우리는 그 과정의 역연산인 적분을 정리하고 여러가지 성질을 살펴본다. 
@@ -98,7 +99,7 @@ $$\int \tan x \dd{x} = -\int \frac{\dd{u}}{u} = -\ln\lvert\cos x\rvert + C$$
 
 이고, 같은 요령으로 
 
-$$\int \frac{x}{x^2+1} \dd{x} = \ln(x^2+1) + C$$
+$$\int \frac{x}{x^2+1} \dd{x} = \frac{1}{2}\ln(x^2+1) + C$$
 
 를 얻는다.
 
@@ -181,7 +182,7 @@ $$\int \sin^n x \dd{x} = -\frac{1}{n} \sin^{n-1}x\cos x + \frac{n-1}{n}\int \sin
 위에서 살펴본 적분은 미분의 역연산으로 정의되지만, 역사적으로 적분은 다른 방식, 즉 어떠한 양이 누적되었을 때 그 총량을 구하는 문제에서 시작되었다. 예를 들어 곡선 $y = f(x)$ 아래, 구간 $[a,b]$ 위의 넓이를 재는 문제가 이에 해당한다. 이 구간의 넓이를 직사각형으로 잘게 쪼개어 근사하고, 쪼갬을 한없이 세밀하게 하는 것이 다음 정의의 아이디어다. 
 
 ::: 정의 8
-닫힌구간 $[a, b]$의 *분할<sub>partition</sub>*은 유한개의 점 $a = x_0 < x_1 < \cdots < x_n = b$이다. 각 부분구간 $[x_{i-1}, x_i]$의 길이를 $\Delta x_i = x_i - x_{i-1}$, 가장 긴 부분구간의 길이를 분할의 *mesh<sub>너비</sub>* $\lVert P\rVert = \max_i \Delta x_i$라 한다. 각 부분구간에서 표본점 $c_i \in [x_{i-1}, x_i]$을 택했을 때
+닫힌구간 $[a, b]$의 *분할<sub>partition</sub>* $P$는 유한개의 점 $a = x_0 < x_1 < \cdots < x_n = b$이다. 각 부분구간 $[x_{i-1}, x_i]$의 길이를 $\Delta x_i = x_i - x_{i-1}$, 가장 긴 부분구간의 길이를 분할의 *mesh<sub>너비</sub>* $\lVert P\rVert = \max_i \Delta x_i$라 한다. 각 부분구간에서 표본점 $c_i \in [x_{i-1}, x_i]$을 택했을 때
 
 $$S(P, f) = \sum_{i=1}^{n} f(c_i)\Delta x_i$$
 
@@ -303,7 +304,7 @@ $$m\int_a^b \mu(x)\dd{x} \leq \int_a^b f(x)\mu(x) \dd{x}\leq M\int_a^b \mu(x) \d
 
 $$\frac{\int_a^b f(x)\mu(x) \dd{x}}{\int_a^b \mu(x)\dd{x}} \in [m, M]$$
 
-임을 얻고, [§연속함수, ⁋정리 5](/ko/math/calculus/continuity#thm5)로 이 값을 취하는 $c$가 존재한다. 따라서 여기에 $\int_a^b \mu(x)\dd{x}$를 곱하면 증명이 완료된다.
+임을 얻고, [§연속함수, ⁋정리 5](/ko/math/calculus/continuity#thm5)로 이 값을 취하는 $c$가 존재한다. 따라서 양변에 $\int_a^b \mu(x)\dd{x}$를 곱하면 주장하는 등식을 얻는다.
 :::
 
 만일 $\mu \equiv 1$로 두면 가중 평균값 정리는 [명제 12](#prop12)로 환원되므로, [명제 14](#prop14)는 평균값 정리의 일반화로, 일종의 밀도를 추가하는 것으로 생각할 수 있다.

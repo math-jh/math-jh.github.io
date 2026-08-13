@@ -11,9 +11,11 @@ sidebar:
 date: 2025-06-18
 weight: 9
 
+drift_needed: true
+
 ---
 
-우리는 앞서 Galois extension과 Galois group을 정의했다. Galois theory의 핵심적인 결과는 field extension $\mathbb{L}/\mathbb{K}$에 대하여 Galois group $\Gal(\mathbb{L}/\mathbb{K})$의 closed subgroup들의 lattice와, $\mathbb{L}/\mathbb{K}$의 subextension들의 lattice 사이에 포함관계를 뒤집는 bijection이 존재한다는 것이다. 많은 경우에 이 결과는 Galois group $\Gal(\mathbb{L}/\mathbb{K})$이 유한한 경우만 다루지만, 우리는 $\Gal(\mathbb{L}/\mathbb{K})$가 무한할 경우 또한 다룰 것이므로 이를 위해서는 $\Gal(\mathbb{L}/\mathbb{K})$에 적절한 위상구조를 주어야 한다. 
+우리는 앞서 Galois extension과 Galois group을 정의했다. Galois theory의 핵심적인 결과는 Galois extension $\mathbb{L}/\mathbb{K}$에 대하여 Galois group $\Gal(\mathbb{L}/\mathbb{K})$의 closed subgroup들의 lattice와, $\mathbb{L}/\mathbb{K}$의 subextension들의 lattice 사이에 포함관계를 뒤집는 bijection이 존재한다는 것이다. 많은 경우에 이 결과는 Galois group $\Gal(\mathbb{L}/\mathbb{K})$이 유한한 경우만 다루지만, 우리는 $\Gal(\mathbb{L}/\mathbb{K})$가 무한할 경우 또한 다룰 것이므로 이를 위해서는 $\Gal(\mathbb{L}/\mathbb{K})$에 적절한 위상구조를 주어야 한다. 
 
 ## 갈루아 군의 위상구조
 
@@ -25,7 +27,7 @@ $$U_{x,y}=\left\{\sigma\mid\sigma(x)=y \right\}$$
 
 로 쓸 수 있는 집합들의 모임임을 알고 있으므로, 이것의 subspace로서 $\Gal(\mathbb{L}/\mathbb{K})$을 보면, 임의의 $\sigma\in\Gal(\mathbb{L}/\mathbb{K})$에 대하여 다음과 같은 형태
 
-$$U_{x_1,\ldots,x_n}=\left\{\tau\in\Gal(\mathbb{L}/\mathbb{K})\mid \text{$\tau(x_i)=\sigma(x_i)$ for all $i$}\right\}$$
+$$U_{x_1,\ldots,x_n}(\sigma)=\left\{\tau\in\Gal(\mathbb{L}/\mathbb{K})\mid \text{$\tau(x_i)=\sigma(x_i)$ for all $i$}\right\}$$
 
 의 집합들의 모임이 $\sigma$에서의 local base임을 안다. ([\[위상수학\] §위상공간의 기저, ⁋정의 4](/ko/math/topology/topological_bases#def4)) 
 

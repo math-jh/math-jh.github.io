@@ -11,6 +11,8 @@ sidebar:
 date: 2024-11-06
 weight: 6
 
+drift_needed: true
+
 ---
 
 앞선 글에서 우리는 일반적인 left/right exact functor에 대한 right/left derived functor를 정의했다. 이번 글에서 우리는 특별히 $\lMod{A}$에서 정의된 left exact functor $\Hom$, right exact functor $\otimes$의 derived functor에 대해 살펴본다.
@@ -42,10 +44,10 @@ $$\begin{aligned}0 &\rightarrow \Hom_\lMod{A}(M_3, N) \rightarrow \Hom_\lMod{A}(
 
 ## Tor 함자의 정의
 
-임의의 $N\in\rMod{A}$에 대하여, $-\otimes_A N$은 $\lMod{A}$에서 $\Ab$로의 right exact functor이므로, left derived functor를 생각할 수 있다.
+임의의 $N\in\lMod{A}$에 대하여, $-\otimes_A N$은 $\rMod{A}$에서 $\Ab$로의 right exact functor이므로, left derived functor를 생각할 수 있다.
 
 ::: 정의 2
-Right exact functor $-\otimes_A N:\lMod{A} \rightarrow \Ab$의 left derived functor를
+Right exact functor $-\otimes_A N:\rMod{A} \rightarrow \Ab$의 left derived functor를
 
 $$\Tor_i^A(M,N)=L_i(-\otimes_A N)(M)$$
 
@@ -58,19 +60,19 @@ $\Tor$를 계산하기 위해서는 $M$의 projective resolution을 사용해야
 
 본질적으로 $\Hom$과 $\otimes$는 두 개의 대상을 받는 bifunctor이다. 따라서 두 input 중 어느 것을 injective resolution 혹은 projective resolution으로 대체하는지에 따라 다른 결과가 나올 수도 있을 것이며, 이는 그렇게 바람직한 일이 아닐 것이다. 예를 들어 $\Ext_A^i(M,N)$을 계산한다 하였을 때, $M$의 projective resolution $P_\bullet\rightarrow M\rightarrow 0$을 사용하여
 
-$$0\rightarrow \Hom_{\lMod{A}}(M, N)\rightarrow \Hom_{\lMod{A}}(P_0,N)\rightarrow \Hom_{\lMod{A}}(P_1, N)\rightarrow\cdots$$
+$$0\rightarrow \Hom_{\lMod{A}}(P_0,N)\rightarrow \Hom_{\lMod{A}}(P_1, N)\rightarrow\cdots$$
 
 의 $i$번째 cohomology를 생각할 수도 있고, $N$의 injective resolution $0\rightarrow N\rightarrow I^\bullet$을 사용하여
 
-$$0\rightarrow \Hom_{\lMod{A}}(M, N)\rightarrow \Hom_{\lMod{A}}(M, I^0)\rightarrow \Hom_{\lMod{A}}(M, I^1)\rightarrow\cdots$$
+$$0\rightarrow \Hom_{\lMod{A}}(M, I^0)\rightarrow \Hom_{\lMod{A}}(M, I^1)\rightarrow\cdots$$
 
 을 생각할 수도 있을 것인데, 이들 두 결과가 같아야 비로소 $\Ext$를 "잘" 정의했다고 할 수 있을 것이다. 마찬가지로 $\Tor$도 다음의 두 chain complex
 
-$$\cdots\rightarrow P_1\otimes_AN \rightarrow P_0\otimes_AN \rightarrow M\otimes_AN\rightarrow0$$
+$$\cdots\rightarrow P_1\otimes_AN \rightarrow P_0\otimes_AN \rightarrow0$$
 
 와
 
-$$\cdots \rightarrow M\otimes_AN_1\rightarrow M\otimes_AN_0\rightarrow M\otimes_A N\rightarrow0$$
+$$\cdots \rightarrow M\otimes_AN_1\rightarrow M\otimes_AN_0\rightarrow0$$
 
 중 어느 것을 택하는지에 따라 $\Tor^A_i(M,N)$의 값이 달라져서는 안될 것이다.
 
@@ -157,7 +159,7 @@ $$G^q \Tot(K)^k = \bigoplus_{\substack{j \geq q \\ p+j=k}} K^{p,j}$$
 비슷한 방식으로 $\Tor$에 대해서도 balancing을 증명할 수 있다. 증명 구조는 동일하며, 차이는 projective module들이 flat module이므로 ([\[다중선형대수학\] §사영가군, 단사가군, 평탄가군, ⁋정의 7](/ko/math/multilinear_algebra/various_modules#def7)) 이를 사용하여 계산을 처리해주면 된다는 것이다. 자세한 증명은 생략하기로 한다.
 
 ::: 명제 4
-두 $A$-module $M \in \lMod{A}$, $N \in \lMod{A}$, 그리고 이들의 projective resolution $P_\bullet\rightarrow M\rightarrow 0$, $P_\bullet'\rightarrow N\rightarrow 0$에 대하여
+두 $A$-module $M \in \rMod{A}$, $N \in \lMod{A}$, 그리고 이들의 projective resolution $P_\bullet\rightarrow M\rightarrow 0$, $P_\bullet'\rightarrow N\rightarrow 0$에 대하여
 
 $$H_n(P_\bullet \otimes_A N) \cong H_n(M \otimes_A P'_\bullet)$$
 
@@ -169,7 +171,7 @@ $$H_n(P_\bullet \otimes_A N) \cong H_n(M \otimes_A P'_\bullet)$$
 마지막으로 Ext와 Tor의 계산을 조금 더 구체적으로 살펴보자. 
 
 ::: 명제 5
-두 정수 $n, m \in \mathbb{Z}$에 대해, 다음이 성립한다.
+$0$이 아닌 두 정수 $n, m \in \mathbb{Z}$에 대해, 다음이 성립한다.
 
 $$\Tor_i^\mathbb{Z}(\mathbb{Z}/n\mathbb{Z}, \mathbb{Z}/m\mathbb{Z}) \cong \begin{cases} \mathbb{Z}/(n,m)\mathbb{Z} & i = 0, 1\\ 0 & i \geq 2. \end{cases}$$ 
 
@@ -181,13 +183,13 @@ $i=0$인 경우는 표준적인 계산이므로, 다음의 식
 
 $$0 \rightarrow \mathbb{Z}\rightarrow \mathbb{Z}\rightarrow \mathbb{Z}/n\mathbb{Z}\rightarrow 0$$
 
-이 $\mathbb{Z}/n\mathbb{Z}$의 projective resolution $P_\bullet\rightarrow \mathbb{Z}/n\mathbb{Z}\rightarrow 0$을 구성하는 것을 확인하자. 여기서 첫 번째 함수는 $\mathbb{Z}$의 원소를 $n$배하여 보내는 함수이다. 이제 $\Tor$를 계산하기 위해서는 여기에 $-\otimes_\mathbb{Z}\mathbb{Z}/m\mathbb{Z}$를 적용하면 된다. $\mathbb{Z}\otimes_\mathbb{Z}\mathbb{Z}/m\mathbb{Z}=\mathbb{Z}/m\mathbb{Z}$이므로, tensor를 취한 후의 projective resolution은
+이 $\mathbb{Z}/n\mathbb{Z}$의 projective resolution $P_\bullet\rightarrow \mathbb{Z}/n\mathbb{Z}\rightarrow 0$을 구성하는 것을 확인하자. 여기서 첫 번째 함수는 $\mathbb{Z}$의 원소를 $n$배하여 보내는 함수이다. 이제 $\Tor$를 계산하기 위해서는 여기에 $-\otimes_\mathbb{Z}\mathbb{Z}/m\mathbb{Z}$를 적용하면 된다. $\mathbb{Z}\otimes_\mathbb{Z}\mathbb{Z}/m\mathbb{Z}=\mathbb{Z}/m\mathbb{Z}$이므로, tensor를 취한 후의 complex $P_\bullet\otimes_\mathbb{Z}\mathbb{Z}/m\mathbb{Z}$는
 
 $$0\rightarrow \mathbb{Z}/m\mathbb{Z}\rightarrow \mathbb{Z}/m\mathbb{Z}\rightarrow 0$$
 
 이고, 따라서 첫 번째 homology는
 
-$$H_1(P_\bullet)=\ker(\cdot n)= \{a \in \mathbb{Z}/m\mathbb{Z} \mid na \equiv 0 \pmod{m}\}=\mathbb{Z}/(m,n)\mathbb{Z}$$
+$$H_1(P_\bullet\otimes_\mathbb{Z}\mathbb{Z}/m\mathbb{Z})=\ker(\cdot n)= \{a \in \mathbb{Z}/m\mathbb{Z} \mid na \equiv 0 \pmod{m}\}=\mathbb{Z}/(m,n)\mathbb{Z}$$
 
 이므로 원하는 결과를 얻는다. 
 :::
@@ -197,7 +199,7 @@ $$H_1(P_\bullet)=\ker(\cdot n)= \{a \in \mathbb{Z}/m\mathbb{Z} \mid na \equiv 0 
 비슷한 방식으로 $\Ext$에 대한 것도 살펴볼 수 있다.
 
 ::: 명제 6
-임의의 abelian group $A$와 $n \in \mathbb{Z}$에 대해, 다음이 성립한다.
+임의의 abelian group $A$와 $0$이 아닌 $n \in \mathbb{Z}$에 대해, 다음이 성립한다.
 
 $$\Ext^i_\mathbb{Z}(\mathbb{Z}/n\mathbb{Z}, A) \cong \begin{cases} A[n] & i = 0, \\ A/nA & i = 1, \\ 0 & i \geq 2. \end{cases}$$
 
@@ -230,7 +232,7 @@ Commutative ring $A$와 rank $n$ free $A$-module $F$, 그리고 $A$-linear map $
 1. 각각의 $i$에 대하여, $K_i = \bigwedge\nolimits^i F$이다.
 2. 각각의 $i$에 대하여, $d_i: K_i \rightarrow K_{i-1}$는 degree $-1$의 graded derivation으로, 식 $\dd{(f)} = \varphi(f)$와 Leibniz rule
     
-    $$\dd{(\xi \wedge \eta)} = \dd{(\xi)} \wedge \eta + (-1)^{\degree(\xi)} \, \xi \wedge \dd{(\eta)}$$
+    $$\dd{(\xi \wedge \eta)} = \dd{(\xi)} \wedge \eta + (-1)^{\degree(\xi)} \xi \wedge \dd{(\eta)}$$
 
     에 의해 유일하게 결정된다.
 :::
@@ -255,13 +257,13 @@ $$K(\x_1, \ldots, \x_n)_i \cong K'_i \oplus K'_{i-1} \cdot e_n$$
 
 $$d_i = \begin{pmatrix} d'_i & (-1)^i \x_n \\ 0 & d'_{i-1} \end{pmatrix}$$
 
-의 형태를 갖는다. $(\alpha, \beta) \in \ker d_i$라 하면 $d'_{i-1}(\beta) = 0$이므로, 귀납적 가정에 의해 $\beta = d'_i(\gamma)$인 $\gamma$가 존재한다. 또한 $d'_i(\alpha) = (-1)^{i+1} \x_n \beta$이므로 $d'_i(\alpha + (-1)^{i+1} \x_n \gamma) = 0$이고, 다시 귀납적 가정에 의해 $\alpha + (-1)^{i+1} \x_n \gamma \in \im d'_{i+1}$이다. 따라서 $\ker d_i \subseteq \im d_{i+1}$이고, 반대방향 포함관계는 자명하다.
+의 형태를 갖는다. $(\alpha, \beta) \in \ker d_i$라 하면 $d'_{i-1}(\beta) = 0$이므로, 귀납적 가정에 의해 $\beta = d'_i(\gamma)$인 $\gamma$가 존재한다. 또한 $d'_i(\alpha) = (-1)^{i+1} \x_n \beta$이므로 $d'_i(\alpha - (-1)^{i+1} \x_n \gamma) = 0$이고, 다시 귀납적 가정에 의해 $\alpha - (-1)^{i+1} \x_n \gamma \in \im d'_{i+1}$이다. 따라서 $\ker d_i \subseteq \im d_{i+1}$이고, 반대방향 포함관계는 자명하다.
 
-이는 특히 field $\mathbb{K}$ 위의 polynomial algebra $A=\mathbb{K}[\x_1,\ldots, \x_n]$과 regular sequence $(\x_1,\ldots, \x_n)$의 경우에 잘 적용된다. 이 때 $F=\bigoplus_1^nAe_i$이고 augmentation map은 $e_i\mapsto \x_i$로 주어진다. 위의 논의에 의해 Koszul complex는 $\mathbb{K}$의 free resolution이 되며, 각각의 $K_i$는 free $A$-module이므로 $-\otimes_A\mathbb{K}$를 적용하면 다음의 complex
+이는 특히 field $\mathbb{K}$ 위의 polynomial algebra $A=\mathbb{K}[\x_1,\ldots, \x_n]$과 regular sequence $(\x_1,\ldots, \x_n)$의 경우에 잘 적용된다. 이 때 $F=\bigoplus_1^nAe_i$이고 $\varphi$는 $e_i\mapsto \x_i$로 주어진다. 위의 논의에 의해 Koszul complex는 $\mathbb{K}$의 free resolution이 되며, 각각의 $K_i$는 free $A$-module이므로 $-\otimes_A\mathbb{K}$를 적용하면 다음의 complex
 
 $$0 \rightarrow \bigwedge\nolimits^n \mathbb{K}^n \rightarrow \cdots \rightarrow \bigwedge\nolimits^1 \mathbb{K}^n \rightarrow \bigwedge\nolimits^0 \mathbb{K}^n \rightarrow 0$$
 
-을 얻으며, 이는 $A/(\x_1,\ldots, \x_n)\cong \mathbb{K}$의 resolution이다. 한편 $d_i$는 $\varphi$로부터 유도된 것이므로, $-\otimes_A \mathbb{K}$를 적용하면 모든 $\x_j$-계수가 $0$으로 가므로 $d_i \otimes 1 = 0$이다. 따라서
+을 얻는다. 한편 $d_i$는 $\varphi$로부터 유도된 것이므로, $-\otimes_A \mathbb{K}$를 적용하면 모든 $\x_j$-계수가 $0$으로 가므로 $d_i \otimes 1 = 0$이다. 따라서
 
 $$\Tor_i^A(\mathbb{K}, \mathbb{K}) = H_i(K_\bullet \otimes_A \mathbb{K}) = K_i \otimes_A \mathbb{K} \cong \bigwedge\nolimits^i_{\mathbb{K}}(\mathbb{K}^n).$$
 

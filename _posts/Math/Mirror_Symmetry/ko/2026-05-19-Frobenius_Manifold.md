@@ -10,6 +10,7 @@ sidebar:
 
 date: 2026-05-19
 weight: 3
+drift_needed: true
 
 ---
 
@@ -17,14 +18,14 @@ weight: 3
 
 $$\Jac(W_q) \cong QH^\ast(X_\Sigma)$$
 
-로 요약된다는 것을 살펴보았다. 그러나 해당 글에서도 살펴보았듯 quantum cohomology는 이 ring 동형이 잡아내는 것 이상의 구조를 갖는데, 이는 Novikov parameter $q$의 변화에 따라 product 자체가 변형되기 때문이다. 이러한 deformation을 담아낼 수 있는 구조가 Frobenius로, 이번 글에서 우리는 우선 finite-dimensional Frobenius algebra의 정의를 짚은 뒤 Dubrovin의 Frobenius manifold 개념과 WDVV equation을 차례로 살펴본다.
+로 요약된다는 것을 살펴보았다. 그러나 해당 글에서도 살펴보았듯 quantum cohomology는 이 ring 동형이 잡아내는 것 이상의 구조를 갖는데, 이는 Novikov parameter $q$의 변화에 따라 product 자체가 변형되기 때문이다. 이러한 deformation을 담아낼 수 있는 구조가 Frobenius manifold로, 이번 글에서 우리는 우선 finite-dimensional Frobenius algebra의 정의를 짚은 뒤 Dubrovin의 Frobenius manifold 개념과 WDVV equation을 차례로 살펴본다.
 
 ## 프로베니우스 대수
 
 Frobenius manifold는 직관적으로 각 점에서 Frobenius algebra structure를 갖는 manifold이다. 
 
 ::: 정의 1
-Finite-dimensional commutative, associative $\mathbb{C}$-algebra $A$와 그 위에 정의된 non-degenerate symmetric bilinear form $\eta: A \otimes A \rightarrow \mathbb{C}$가 주어졌다 하자. 만일 모든 원소 $x,y,z\in A$에 대하여 다음의 식
+Finite-dimensional commutative, associative, unital $\mathbb{C}$-algebra $A$와 그 위에 정의된 non-degenerate symmetric bilinear form $\eta: A \otimes A \rightarrow \mathbb{C}$가 주어졌다 하자. 만일 모든 원소 $x,y,z\in A$에 대하여 다음의 식
 
 $$\eta(x \cdot y,z) = \eta(x,y \cdot z)$$
 
@@ -42,7 +43,7 @@ $$c(x,y,z) = \eta(x,y \cdot z) = \eta(y \cdot z, x) = c(y,z,x)$$
 이다. 따라서 $c$는 세 변수에 대해 완전히 symmetric하며, 이 trilinear form이 Frobenius structure의 모든 정보를 담고 있다.
 
 ::: 예시 2
-Compact Kähler manifold $X$의 cohomology ring $H^\ast(X, \mathbb{C})$는 cup product와 Poincaré pairing
+$H^{\mathrm{odd}}(X, \mathbb{C}) = 0$인 compact Kähler manifold $X$의 cohomology ring $H^\ast(X, \mathbb{C})$는 cup product와 Poincaré pairing
 
 $$\eta(\alpha, \beta) = \int_X \alpha \smile \beta$$
 
@@ -64,14 +65,14 @@ Holomorphic function $f : \mathbb{C}^n \rightarrow \mathbb{C}$가 원점에서 *
 
 표준적인 예시는 $f(\x) = \x^{k+1}$ ($k \geq 1$)이며, 우리는 이를 $A_k$-type singularity라 부른다. 
 
-이제 다항식 $f:\mathbb{C}^n \rightarrow \mathbb{C}$의 모든 critical point가 isolated hypersurface singularity라 하자. 그럼 우리는 그 *Jacobi ring*
+이제 다항식 $f:\mathbb{C}^n \rightarrow \mathbb{C}$의 모든 critical point가 isolated라 하자. 그럼 우리는 그 *Jacobi ring*
 
 $$\Jac(f) = \mathbb{C}[\x_1, \ldots, \x_n]/(\partial_1 f, \ldots, \partial_n f)$$
 
 을 생각할 수 있다. 그 차원 $\mu(f)=\dim \Jac(f)$는 $f$의 singularity의 개수를 order를 포함해서 센 것으로, 직관적으로는 약간의 perturbation을 통하여 $\mu(f)$개의 simple critical point들을 갖는 것으로 생각할 수도 있다. Singularity theory에서는 이 $\mu(f)$를 $f$의 *Milnor number*라 부른다.
 
 ::: 예시 4
-모든 critical point가 isolated hypersurface singularity인 다항식 $f : \mathbb{C}^n \rightarrow \mathbb{C}$의 Jacobi ring $\Jac(f)$ 위에 *residue pairing* $\eta$를 다음의 식
+모든 critical point가 isolated인 다항식 $f : \mathbb{C}^n \rightarrow \mathbb{C}$의 Jacobi ring $\Jac(f)$ 위에 *residue pairing* $\eta$를 다음의 식
 
 $$\eta(g, h) := \frac{1}{(2\pi i)^n} \oint_{\Gamma_\epsilon} \frac{g(\x) h(\x) \dd{\x_1} \wedge \cdots \wedge \dd{\x_n}}{\partial_1 f \cdots \partial_n f}$$
 
@@ -125,7 +126,7 @@ $$\partial_{\u_1} W_q = \z_1 - q/(\z_1 \z_2), \qquad \partial_{\u_2} W_q = \z_2 
 
 $$\z_k = \omega^k q^{1/3},\qquad k = 0, 1, 2$$
 
-으로 주어지며 $\Jac(W_q) \cong \mathbb{C}[\z, q^{\pm 1}]/(\z^3 - q)$는 basis $\{1, \z, \z^2\}$를 갖는다. Hessian을 계산하기 위해 log coordinate에서 $W_q$의 이계 도함수를 모으면
+으로 주어지며 ($\omega = e^{2\pi i/3}$), $\Jac(W_q) \cong \mathbb{C}[\z, q^{\pm 1}]/(\z^3 - q)$는 basis $\{1, \z, \z^2\}$를 갖는다. Hessian을 계산하기 위해 log coordinate에서 $W_q$의 이계 도함수를 모으면
 
 $$\Hess(W_q) = \begin{pmatrix} \z_1 + \frac{q}{\z_1 \z_2} & \frac{q}{\z_1 \z_2} \\ \frac{q}{\z_1 \z_2} & \z_2 + \frac{q}{\z_1 \z_2} \end{pmatrix}$$
 
@@ -158,13 +159,13 @@ $$\Jac(W_q)\cong QH^\ast(X)$$
 
 이를 위해 우리는 Frobenius manifold의 개념을 정의한다. 당연히 Frobenius manifold는 각 점에서의 tangent space가 Frobenius algebra인 manifold겠지만, 그것이 전부는 아니며, 당연히 이 구조가 base manifold를 따라 매끄럽게 움직여야 한다. 
 
-우선 Frobenius manifold $M$ 위에 정의된 tangent bundle $TM$에 대하여, $TM$의 각 점이 Frobenius algebra여야 하므로, 각각의 점 $p\in M$에서 $T_pM$은 algebra로서의 곱셈 $\circ$, 이 곱셈에 대한 항등원 $e$, 그리고 Frobenius algebra의 pairing $\eta$가 필요하다. 이들이 smooth structure를 구성하기 위해서는 $\circ$는 $p$에 대해 smooth하게 변하는 $\circ_p:T_pM\otimes T_pM\rightarrow T_pM$이며, $\eta$는 smooth non-degenerate bilinear form $\eta$가 되어야 할 것이다. 또, 항등원은 $TM$의 (smooth) section, 즉 vector field가 되어야 한다. 
+우선 Frobenius manifold $M$ 위에 정의된 tangent bundle $TM$에 대하여, $TM$의 각 fiber가 Frobenius algebra여야 하므로, 각각의 점 $p\in M$에서 $T_pM$은 algebra로서의 곱셈 $\circ$, 이 곱셈에 대한 항등원 $e$, 그리고 Frobenius algebra의 pairing $\eta$가 필요하다. 이들이 smooth structure를 구성하기 위해서는 $\circ$는 $p$에 대해 smooth하게 변하는 $\circ_p:T_pM\otimes T_pM\rightarrow T_pM$이며, $\eta$는 smooth non-degenerate bilinear form이 되어야 할 것이다. 또, 항등원은 $TM$의 (smooth) section, 즉 vector field가 되어야 한다. 
 
 미분기하학에서 서로 다른 tangent space를 비교하게 해 주는 것은 connection이었다. ([\[리만기하학\] §접속, ⁋정의 1](/ko/math/riemannian_geometry/connection#def1)) 일반적으로 임의의 pseudo-Riemannian manifold $M$ 위에는 항상 그에 호환되는 Levi-Civita connection $\nabla$가 존재하므로 ([\[리만기하학\] §레비-치비타 접속, ⁋정리 4](/ko/math/riemannian_geometry/Levi-Civita_connection#thm4)) 이를 사용하면 충분하다. 
 
-한편, 임의의 connection $\nabla$가 주어진다면, $M$ 위에 놓여진 곡선 $\gamma$를 통해 곡선의 시작점 $x_0$과 $x_1$을 이어주는 *parallel transport*가 존재했다. ([\[리만기하학\] §레비-치비타 접속, ⁋정의 8](/ko/math/riemannian_geometry/Levi-Civita_connection#def8)) Manifold의 점을 parameter로 삼아 Frobenius algebra를 변형하려면 우리는 이 parallel transport를 사용해야 하는데, 이 변형이 한 점에서 다른 점으로 옮기는 곡선에 의존한다면 이는 별로 좋은 상황은 아닐 것이다. ([\[리만기하학\] §리만 곡률, ⁋예시 1](/ko/math/riemannian_geometry/curvature#ex1)) 즉, 우리는 이 $\nabla$가 *flat*이기를 바란다. ([\[리만기하학\] §리만 곡률, ⁋정의 6](/ko/math/riemannian_geometry/curvature#def6))
+한편, 임의의 connection $\nabla$가 주어진다면, $M$ 위에 놓여진 곡선 $\gamma$를 통해 곡선의 시작점 $x_0$과 끝점 $x_1$을 이어주는 *parallel transport*가 존재했다. ([\[리만기하학\] §레비-치비타 접속, ⁋정의 8](/ko/math/riemannian_geometry/Levi-Civita_connection#def8)) Manifold의 점을 parameter로 삼아 Frobenius algebra를 변형하려면 우리는 이 parallel transport를 사용해야 하는데, 이 변형이 한 점에서 다른 점으로 옮기는 곡선에 의존한다면 이는 별로 좋은 상황은 아닐 것이다. ([\[리만기하학\] §리만 곡률, ⁋예시 1](/ko/math/riemannian_geometry/curvature#ex1)) 즉, 우리는 이 $\nabla$가 *flat*이기를 바란다. ([\[리만기하학\] §리만 곡률, ⁋정의 6](/ko/math/riemannian_geometry/curvature#def6))
 
-마지막으로 $QH^\ast(X)$에는 이미 grading이 주어져있으므로 이를 반영할 데이터가 추가로 필요하다. 여기서 $QH^\ast(X)$의 grading은 classical cohomology $H^\ast(X)$에 Novikov ring의 grading으로부터 나오는 grading을 더하여 얻어졌던 것을 기억하자. 즉 $QH^\ast(X) = H^\ast(X) \otimes_\mathbb{C} \Lambda$라 할 때, 임의의 generator $T_\alpha \otimes q^\beta$의 degree는 $\deg(T_\alpha \otimes q^\beta) = p_\alpha + 2\, c_1 \cdot \beta$로 주어졌었다. ([\[사교기하학\] §양자 코호몰로지, ⁋정의 2](/ko/math/symplectic_geometry/quantum_cohomology#def2))
+마지막으로 $QH^\ast(X)$에는 이미 grading이 주어져있으므로 이를 반영할 데이터가 추가로 필요하다. 여기서 $QH^\ast(X)$의 grading은 classical cohomology $H^\ast(X)$에 Novikov ring의 grading으로부터 나오는 grading을 더하여 얻어졌던 것을 기억하자. 즉 $QH^\ast(X) = H^\ast(X) \otimes_\mathbb{C} \Lambda$라 할 때, 임의의 generator $T_\alpha \otimes q^\beta$의 degree는 $\deg(T_\alpha \otimes q^\beta) = \deg T_\alpha + 2c_1 \cdot \beta$로 주어졌었다. ([\[사교기하학\] §양자 코호몰로지, ⁋정의 2](/ko/math/symplectic_geometry/quantum_cohomology#def2))
 
 이러한 grading 자료를 manifold $M$ 위의 *vector field*로 부호화한 것이 *Euler vector field* $E$이다. $E$의 flow를 따라 곱셈 $\circ$를 흘려보냈을 때 그 *무한소 deformation*이 Lie derivative $\mathcal{L}_E(\circ)$로 주어지는데, [\[사교기하학\] §양자 코호몰로지](/ko/math/symplectic_geometry/quantum_cohomology)에서 살펴본 quantum product가 degree를 respect한다는 사실은 이 deformation이 정확히 $\circ$ 자기 자신과 같다는 식
 
@@ -174,12 +175,12 @@ $$\mathcal{L}_E(\circ) = \circ$$
 
 $$\mathcal{L}_E(\eta) = (2 - d)\eta$$
 
-로 번역된다. 이제 Euler vector field는 $\nabla^2 E=0$을 만족하는 *affine* vector field로, <em-ko>정확하게</em-ko> 이들 두 조건이 $E$를 완전하게 결정한다. 
+로 번역된다. 이제 Euler vector field는 $\nabla^2 E=0$을 만족하는 *affine* vector field로, 이들 두 조건이 $E$에 요구되는 전부이다. 
 
 이제 우리는 Frobenius manifold를 정의하기 위한 모든 재료를 완성했다. 
 
 ::: 정의 5
-쌍 $(M, \eta, \circ, e, E)$가 *Frobenius manifold<sub>프로베니우스 다양체</sub>*라는 것은 다음의 조건이 모두 성립하는 것이다. 
+$(M, \eta, \circ, e, E)$가 *Frobenius manifold<sub>프로베니우스 다양체</sub>*라는 것은 다음의 조건이 모두 성립하는 것이다. 
 
 1. $TM$ 위의 symmetric non-degenerate bilinear form $\eta$가 유도하는 Levi-Civita connection이 flat이다. 
 2. 각 $p\in M$마다 commutative associative product $\circ_p: T_p M \otimes T_p M \rightarrow T_p M$이 존재하며 이는 $p$에 대해 smooth이다. 
@@ -210,7 +211,7 @@ Flat coordinate $t^\alpha$에 대해 $\nabla_{\partial_{t^\delta}}$는 단순한
 
 $$\partial_{t^\delta} c_{\alpha\beta\gamma} = \partial_{t^\alpha} c_{\delta\beta\gamma}$$
 
-가 네 index에 대해 대칭으로 성립한다는 의미이다. 한편 $c$ 자체가 세 index에 대해 대칭이므로, 이를 함께 모으면 1-form $\omega_{\beta\gamma} := \sum_\alpha c_{\alpha\beta\gamma} \dd{t}^\alpha$가 closed임을 얻는다. Poincaré lemma로부터 국소적으로 함수 $G_{\beta\gamma}$가 존재해 $\partial_{t^\alpha} G_{\beta\gamma} = c_{\alpha\beta\gamma}$이며, $c$의 대칭성으로부터 $G_{\beta\gamma} = G_{\gamma\beta}$이고 또한 $\partial_{t^\alpha} G_{\beta\gamma} = \partial_{t^\beta} G_{\alpha\gamma}$가 성립한다. 다시 Poincaré lemma를 한 단계 더 적용하면 함수 $H_\gamma$가 존재해 $\partial_{t^\beta} H_\gamma = G_{\beta\gamma}$이고, $H_\gamma$의 대칭성 $\partial_{t^\delta} H_\gamma = \partial_{t^\gamma} H_\delta$로부터 마지막으로 scalar function $F$가 존재해 $\partial_{t^\gamma} F = H_\gamma$가 성립한다. 종합하면 $\partial_{t^\alpha} \partial_{t^\beta} \partial_{t^\gamma} F = c_{\alpha\beta\gamma}$이다.
+가 네 index에 대해 대칭으로 성립한다는 의미이다. 한편 $c$ 자체가 세 index에 대해 대칭이므로, 이를 함께 모으면 1-form $\omega_{\beta\gamma} := \sum_\alpha c_{\alpha\beta\gamma} \dd{t}^\alpha$가 closed임을 얻는다. Poincaré lemma로부터 국소적으로 함수 $G_{\beta\gamma}$가 존재해 $\partial_{t^\alpha} G_{\beta\gamma} = c_{\alpha\beta\gamma}$이며, $c$의 대칭성으로부터 $G_{\beta\gamma} - G_{\gamma\beta}$가 상수이므로 적분상수를 조정하여 $G_{\beta\gamma} = G_{\gamma\beta}$로 둘 수 있고 또한 $\partial_{t^\alpha} G_{\beta\gamma} = \partial_{t^\beta} G_{\alpha\gamma}$가 성립한다. 다시 Poincaré lemma를 한 단계 더 적용하면 함수 $H_\gamma$가 존재해 $\partial_{t^\beta} H_\gamma = G_{\beta\gamma}$이고, $H_\gamma$의 대칭성 $\partial_{t^\delta} H_\gamma = \partial_{t^\gamma} H_\delta$로부터 마지막으로 scalar function $F$가 존재해 $\partial_{t^\gamma} F = H_\gamma$가 성립한다. 종합하면 $\partial_{t^\alpha} \partial_{t^\beta} \partial_{t^\gamma} F = c_{\alpha\beta\gamma}$이다.
 :::
 
 이러한 $F$를 Frobenius manifold의 *potential*이라 부른다. 이로부터 만일 flat coordinate을 잡고, $\eta^{\alpha\beta}$를 $\eta_{\alpha\beta}$의 역행렬이라 하면 곱셈의 structure constant는
@@ -288,7 +289,7 @@ $$M = H^\ast(X, \mathbb{C})$$
 로 잡고, cohomology basis $\{\sigma^\alpha\}$의 dual로 formal coordinate $t = \sum_\alpha t^\alpha \sigma^\alpha$를 도입하자. $M$이 그 자체로 벡터공간이므로 각 점에서의 tangent space $T_tM$은 $H^\ast(X, \mathbb{C})$와 canonically isomorphic하다. 따라서 여기에 Frobenius manifold 구조를 주는 것은 $T_tM\cong H^\ast(X, \mathbb{C})$ 위에 Frobenius product $\circ_t$를 주는 것과 같고, (당연히) 이를 big quantum cohomology의 곱셈 $\circ_t$, 즉 GW potential $F(t)$의 삼계도함수가 정의하는 곱셈으로 택할 것이다. ([\[사교기하학\] §양자 코호몰로지, ⁋정의 12](/ko/math/symplectic_geometry/quantum_cohomology#def12)) 다음 명제는 이 데이터가 실제로 Frobenius manifold를 이룬다는 것을 보여준다.
 
 ::: 명제 9
-Compact Kähler manifold $X$에 대하여, $M = H^\ast(X, \mathbb{C})$ 위에 big quantum product $\circ_t$ ([\[사교기하학\] §양자 코호몰로지, ⁋정의 12](/ko/math/symplectic_geometry/quantum_cohomology#def12)), Poincaré pairing $\eta$, 항등원 $e = 1 \in H^0(X)$, 그리고 Euler vector field
+$H^{\mathrm{odd}}(X, \mathbb{C}) = 0$인 compact Kähler manifold $X$에 대하여, $M = H^\ast(X, \mathbb{C})$ 위에 big quantum product $\circ_t$ ([\[사교기하학\] §양자 코호몰로지, ⁋정의 12](/ko/math/symplectic_geometry/quantum_cohomology#def12)), Poincaré pairing $\eta$, 항등원 $e = 1 \in H^0(X)$, 그리고 Euler vector field
 
 $$E = \sum_\alpha \Bigl(1 - \frac{1}{2}\deg \sigma^\alpha\Bigr) t^\alpha \partial_{t^\alpha} + \sum_\alpha r^\alpha \partial_{t^\alpha}, \qquad c_1(X) = \sum_\alpha r^\alpha \sigma^\alpha$$
 

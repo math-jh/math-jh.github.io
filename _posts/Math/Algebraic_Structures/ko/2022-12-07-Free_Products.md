@@ -10,6 +10,7 @@ sidebar:
 
 date: 2022-12-07
 weight: 9
+drift_needed: true
 
 
 ---
@@ -56,9 +57,9 @@ $$\Hom_\Set(X, U(G))\cong\Hom_\Grp(F(X), G)$$
 
 대략적인 흐름을 소개한다. 우선 $X$와 disjoint하며 같은 cardinality를 갖는 집합 $X^{-1}$을 생각하자. $X^{-1}$은 어떤 특별한 집합이 될 이유는 없지만, 우리는 bijection $X\rightarrow X^{-1}$ 하나를 골라 $x\in X$의 $X^{-1}$에서의 image를 $x^{-1}$으로 표기할 것이다. 또, $X\cup X^{-1}$과 disjoint한 한원소집합을 하나 골라 이 집합의 원소를 $e$라 하자. 
 
-그럼 group $F$의 원소는 집합 $X\cup X^{-1}\cup \{e\}$에 의해 정의되는 *reduced word*들의 모임이다. 여기서 *word*라는 것은 그저 집합 $X\cup X^{-1}\cup \{e\}$의 원소들의 나열인데, 만일 $xx$와 같이 같은 원소가 두 번 연달아 나열되거나, $xx^{-1}$과 같이 $x$ 직후에 $x^{-1}$이 나열되거나, $xey$와 같이 두 개의 항 사이에 $e$가 있을 경우 이들을 각각 $x^2$, $e$, $xy$으로 줄여 쓸 수 있다. 하지만, 예를 들어 $y\neq x^{-1}$이라면 $xyx$를 줄여 쓸 방법은 없다. 이렇게 줄여 쓴 word를 *reduced word*라 부른다. 
+그럼 group $F$의 원소는 집합 $X\cup X^{-1}\cup \{e\}$에 의해 정의되는 *reduced word*들의 모임이다. 여기서 *word*라는 것은 그저 집합 $X\cup X^{-1}\cup \{e\}$의 원소들의 나열인데, 만일 $xx$와 같이 같은 원소가 두 번 연달아 나열되거나, $xx^{-1}$ 또는 $x^{-1}x$와 같이 서로 역인 두 원소가 연달아 나열되거나, $xey$와 같이 두 항 사이에 혹은 word의 앞뒤 끝에 $e$가 있을 경우 이들을 각각 $x^2$, $e$, $xy$으로 줄여 쓸 수 있다. 하지만, 예를 들어 $y\neq x^{-1}$이라면 $xyx$를 줄여 쓸 방법은 없다. 이렇게 줄여 쓴 word를 *reduced word*라 부른다. 
 
-우리는 모든 word를 reduced word로 줄여 쓸 수 있다.[^1] 이들 사이의 연산과 항등원을 정의하자. 항등원은 당연히 reduced word $e$이다. 연산은 그냥 두 개의 word를 이어쓴 후, 이를 reduced word로 줄여 쓴 것으로 정의된다. 예를 들어 word $x_1x_2$와 $x_3x_4$의 연산은 $x_1x_2x_3x_4$로 주어진다. 그럼 $e$는 이 연산 하에서의 *empty word*로 볼 수도 있다. 이 연산은 자명하게 associative하다. 역원은 원래 주어진 원소의 각 항들의 역원 취한 후, 이를 거꾸로 나열한 것이다. 예를 들어 다음의 word
+우리는 모든 word를 reduced word로 줄여 쓸 수 있다.[^1] 이들 사이의 연산과 항등원을 정의하자. 항등원은 당연히 reduced word $e$이다. 연산은 그냥 두 개의 word를 이어쓴 후, 이를 reduced word로 줄여 쓴 것으로 정의된다. 예를 들어 word $x_1x_2$와 $x_3x_4$의 연산은 $x_1x_2x_3x_4$로 주어진다. 그럼 $e$는 이 연산 하에서의 *empty word*로 볼 수도 있다. 이 연산이 associative하다는 것은 각 word의 reduced form이 소거 순서와 무관하게 유일하다는 사실로부터 따라온다. 역원은 원래 주어진 원소의 각 항들의 역원 취한 후, 이를 거꾸로 나열한 것이다. 예를 들어 다음의 word
 
 $$x_1x_2^{-1}x_3^2$$
 
@@ -68,7 +69,7 @@ $$x_3^{-2}x_2x_1^{-1}$$
 
 이 되며, 실제로 이들 둘을 연산해보면 $e$가 됨을 확인할 수 있다. 
 
-이제 우리는 group $F$를 만들었으며, 여기서 $X$의 원소로 이루어진 길이 1짜리 원소들을 $X$의 원소와 동일시하면 $\iota:X\rightarrow F$ 또한 얻는다. 그럼 이들이 [정의 2](#def2)의 universal property를 만족한다는 것을 쉽게 보일 수 있다. 이를 위해서는 $\bar{f}$를 $F$에 등장하는 원소들 $x\in X$들을 모두 $g(x)$로 바꿔주는 함수로 정의한 후, 이것이 group homomorphism이 된다는 것을 확인하면 된다.
+이제 우리는 group $F$를 만들었으며, 여기서 $X$의 원소로 이루어진 길이 1짜리 원소들을 $X$의 원소와 동일시하면 $\eta_X:X\rightarrow F$ 또한 얻는다. 그럼 이들이 [정의 2](#def2)의 universal property를 만족한다는 것을 쉽게 보일 수 있다. 이를 위해서는 $\hat{f}$를 $F$에 등장하는 원소들 $x\in X$들을 모두 $f(x)$로 바꿔주는 함수로 정의한 후, 이것이 group homomorphism이 된다는 것을 확인하면 된다.
 
 ::: 따름정리 3
 임의의 group $G$는 free group의 homomorphic image이다.
@@ -91,11 +92,11 @@ $$x_1x_2\cdots x_n$$
 
 1. 만일 $n>1$이라면 $x_k$들 가운데 어떤 것도 $e$와 같지 않다. 
 2. 만일 $x_k\in X$라면 $x_k$는 이 원소가 포함된 group $G_i$에서 항등원이 아니다. 
-3. 인접한 두 원소 $x_i, x_{i+1}$은 반드시 서로 다른 group에 속한다.
+3. 인접한 두 원소 $x_k, x_{k+1}$은 반드시 서로 다른 group에 속한다.
 
 임의의 word가 주어졌을 때, 이를 reduced word로 만드는 법은 간단하다. 인접한 원소들이 서로 같은 group에 속하는 원소인지를 모두 체크해본 후, 같은 group에 속하는 원소들은 이 group에서의 연산을 통해 하나의 원소로 합쳐준다. 이 과정에서 (혹은 원래부터) 어떤 group에서의 항등원이 나왔다면, 그 원소는 지워버리면 된다. 
 
-그럼 $\prod^\ast G_i$ 위의 연산은 free group을 정의할 때와 동일하게 <em-ko>이어쓰기</em-ko>연산이며, 어렵지 않게 이 모임이 group structure를 갖는다는 것을 확인할 수 있다. 또, [예시 1](#ex1)과 같은 상황은 더 이상 일어나지 않는데, 이는 두 group $G_1,G_2$가 abelian이라 하더라도 그 free product $G_1\ast G_2$는 더 이상 abelian group이 아니기 때문이다.
+그럼 $\prod^\ast G_i$ 위의 연산은 free group을 정의할 때와 동일하게 <em-ko>이어쓰기</em-ko>연산이며, 어렵지 않게 이 모임이 group structure를 갖는다는 것을 확인할 수 있다. 또, [예시 1](#ex1)과 같은 상황은 더 이상 일어나지 않는데, 이는 자명하지 않은 두 group $G_1,G_2$가 abelian이라 하더라도 그 free product $G_1\ast G_2$는 더 이상 abelian group이 아니기 때문이다.
 
 ::: 예시 4
 [예시 1](#ex1)과 동일한 상황을 생각하자. 대신 표기상의 편의를 위해 $G_1=\langle a\rangle\cong\mathbb{Z}$, $G_2=\langle b\rangle\cong\mathbb{Z}$이라 하자. 그럼 $G_1\ast G_2$의 원소는 다음과 같은 원소들
@@ -117,14 +118,14 @@ $$(a^2b)(bab^2)=a^2bbab^2=a^2b^2ab^2$$
 Free product $\prod^\ast G_i$는 $\Grp$에서의 coproduct이다.
 :::
 ::: 증명
-임의의 group $H$와 group homomorphism들 $f_i:G_i\rightarrow H$가 주어졌다 하자. 그럼 $X=\coprod U(G_i)$의 universal property에 의하여, inclusion map $\iota_i:U(G_i)\rightarrow X$들에 대해 $U(f_i)=f\circ \iota_i$를 만족하는 유일한 함수 $f:X\rightarrow U(H)$가 존재한다. 이제 [정의 2](#def2)의 universal property로부터 group homomorphism $\hat{f}:F(X)\rightarrow H$를 얻으며, 이 때 $f_i$들이 group homomorphism이었다는 사실을 사용하면 $f$가 위의 reduction 과정을 통해 factor하며, 따라서 $\prod^\ast G_i\rightarrow H$를 정의한다는 것을 안다.
+임의의 group $H$와 group homomorphism들 $f_i:G_i\rightarrow H$가 주어졌다 하자. 그럼 $X=\coprod U(G_i)$의 universal property에 의하여, inclusion map $\iota_i:U(G_i)\rightarrow X$들에 대해 $U(f_i)=f\circ \iota_i$를 만족하는 유일한 함수 $f:X\rightarrow U(H)$가 존재한다. 이제 [정의 2](#def2)의 universal property로부터 group homomorphism $\hat{f}:F(X)\rightarrow H$를 얻으며, 이 때 $f_i$들이 group homomorphism이었다는 사실을 사용하면 $\hat{f}$가 위의 reduction 과정을 통해 factor하며, 따라서 $\prod^\ast G_i\rightarrow H$를 정의한다는 것을 안다.
 :::
 
 한편 임의의 group $G$에 대하여, group homomorphism $\mathbb{Z}\rightarrow G$는 $1\in \mathbb{Z}$가 $G$의 어떠한 원소로 옮겨지는지에 의해 유일하게 결정된다. 즉 다음 isomorphism
 
 $$\Hom_\Grp(\mathbb{Z},G)\cong U(G)$$
 
-가 존재하며, [\[범주론\] §표현가능한 함자](/ko/math/category_theory/representable_functors#ex2)와 비슷한 논증으로 위의 isomorphism이 $U$의 representation임을 알 수 있으며, 뿐만 아니라
+가 존재하며, [\[범주론\] §표현가능한 함자, ⁋예시 2](/ko/math/category_theory/representable_functors#ex2)와 비슷한 논증으로 위의 isomorphism이 $U$의 representation임을 알 수 있으며, 뿐만 아니라
 
 $$\Hom_\Grp(\mathbb{Z},G)\cong \Hom_\Set(\ast, U(G))$$
 

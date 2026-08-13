@@ -11,6 +11,7 @@ sidebar:
 
 date: 2024-12-03
 weight: 13
+drift_needed: true
 
 ---
 
@@ -38,7 +39,7 @@ $$n\geq N\implies x_n\in U$$
 
 - 위상공간 $X$의 두 점 $x,y$가 서로 다르다는 것은 $x\neq y$인 것이다. 
 - 위상공간 $X$의 두 점 $x,y$가 *위상적으로 구별가능<sub>topologically distinguishable</sub>*하다는 것은 $\mathcal{N}(x)\neq \mathcal{N}(y)$인 것이다.[^1] ([§열린집합, §§Neighborhood filter](/ko/math/topology/open_sets#neighborhood-filter))
-- 위상공간 $X$의 두 부분집합 $A,B$가 *분리가능<sub>separated</sub>*이라는 것은 $A,B$ 각각이 서로를 포함하지 않는 근방을 갖는 것이다.
+- 위상공간 $X$의 두 부분집합 $A,B$가 *분리가능<sub>separated</sub>*이라는 것은 $A,B$ 각각이 서로와 서로소인 근방을 갖는 것이다.
 - 위상공간 $X$의 두 부분집합 $A,B$가 *근방으로 분리가능<sub>separated by neighborhoods</sub>*이라는 것은 이들이 서로소인 근방을 갖는 것이다.
 - 위상공간 $X$의 두 부분집합 $A,B$가 *닫힌근방으로 분리가능<sub>separated by closed neighborhoods</sub>*이라는 것은 이들이 서로소인 닫힌근방을 갖는 것이다.
 - 위상공간 $X$의 두 부분집합 $A,B$가 *연속함수로 분리가능<sub>separated by continuous functions</sub>*이라는 것은 적당한 연속함수 $f:X \rightarrow \mathbb{R}$이 존재하여 $A\subseteq f^{-1}(\{0\})$이고 $B\subseteq f^{-1}(\{1\})$인 것이다. 
@@ -56,7 +57,7 @@ $$n\geq N\implies x_n\in U$$
 3. $X$가 *$T_1$-space<sub>$T_1$-공간</sub>*, 혹은 *Fréchet space<sub>프레셰 공간</sub>*라는 것은 임의의 서로 다른 두 점이 분리가능한 것이다. 따라서, $X$가 $T_1$인 것과 $X$가 $T_0$이며 $R_0$인 것이 동치이다.
 4. $X$가 *$R_1$-space<sub>$R_1$-공간</sub>*이라는 것은 임의의 두 위상적으로 구별가능한 점들이 근방으로 분리가능한 것이다. 따라서 임의의 $R_1$-space는 $R_0$-space이다.
 5. $X$가 *$T_2$-space<sub>$T_2$-공간</sub>*, 혹은 *Hausdorff space<sub>하우스도르프 공간</sub>*이라는 것은 임의의 서로 다른 두 점이 근방으로 분리가능한 것이다. 따라서, $X$가 $T_2$인 것과 $X$가 $T_0$이며 $R_1$인 것이 동치이고, 임의의 $T_2$-space는 $T_1$이다. 
-6. $X$가 *$T_{2\frac{1}{2}}$-space<sub>$T_{2\frac{1}{2}}$-공간</sub>*, 혹은 *Urysohn space<sub>유리손 공간</sub>*이라는 것은 임의의 두 위상적으로 구별가능한 점들이 닫힌근방으로 분리가능한 것이다. 따라서, 임의의 $T_{2\frac{1}{2}}$-space는 $T_2$이다. 
+6. $X$가 *$T_{2\frac{1}{2}}$-space<sub>$T_{2\frac{1}{2}}$-공간</sub>*, 혹은 *Urysohn space<sub>유리손 공간</sub>*이라는 것은 임의의 서로 다른 두 점이 닫힌근방으로 분리가능한 것이다. 따라서, 임의의 $T_{2\frac{1}{2}}$-space는 $T_2$이다. 
 7. $X$가 *completely $T_2$-space<sub>완전 $T_2$-공간</sub>*, 혹은 *completely Hausdorff space<sub>완전 하우스도르프 공간</sub>*인 것은 임의의 서로 다른 두 점이 연속함수로 분리 가능한 것이다.
 8. $X$가 *regular space<sub>정칙공간</sub>*이라는 것은 임의의 점 $x\in X$와 $x$를 포함하지 않는 닫힌집합 $A\subseteq X$가 항상 근방으로 분리가능한 것이다.
 9. $X$가 *$T_3$-space<sub>$T_3$-공간</sub>*, 혹은 *regular Hausdorff space<sub>정칙 하우스도르프 공간</sub>*이라는 것은 $X$가 $T_0$이며 regular인 것이다. 임의의 $T_3$-space는 $T_{2\frac{1}{2}}$이다. 
@@ -96,7 +97,7 @@ $$\Delta_X=\{(x,x)\mid x\in X\}$$
 이 닫힌집합인 것과 동치이다.
 :::
 ::: 증명
-우선 $X$가 Hausdorff라 가정하자. 그럼 임의의 $(x,y)\not\in\Delta_X$에 대하여, $x\neq y$이므로 $x$와 $y$의 서로소인 근방 $U,V$를 잡을 수 있다. 그럼 $U\times V$는 $(x,y)$를 포함하며 $\Delta_X$와 만나지 않는 열린집합이다. 
+우선 $X$가 Hausdorff라 가정하자. 그럼 임의의 $(x,y)\not\in\Delta_X$에 대하여, $x\neq y$이므로 $x$와 $y$의 서로소인 열린근방 $U,V$를 잡을 수 있다. 그럼 $U\times V$는 $(x,y)$를 포함하며 $\Delta_X$와 만나지 않는 열린집합이다. 
 
 거꾸로 $\Delta_X$가 $X\times X$의 닫힌집합이라면, $x\neq y$인 임의의 $x,y\in X$에 대하여 $(x,y)\not\in\Delta_X$이고, 따라서 $\Delta_X$와 만나지 않는 $(x,y)$의 열린근방이 존재하며, product topology의 base를 생각하면 여기에 포함되는 $U\times V$ 꼴의 열린집합이 존재한다. 
 :::
@@ -135,24 +136,24 @@ $$(x,y)\mapsto f(x),\quad (x,y)\mapsto y$$
 
 ## 하우스도르프 공간의 부분공간과 곱
 
-임의의 Hausdorff space $X$에 대하여, $X$의 부분공간 $A$도 Hausdorff인 것은 쉽게 확인할 수 있다. 이는 임의의 $x,y\in A$가 주어졌을 때, 이들의 $X$에서의 서로소인 열린근방 $U,V$를 잡으면 $U\cap A, V\cap A$가 $A$에서의 $x,y$의 서로소인 열린근방이 되기 때문이다. 한편 Hausdorff space의 곱 또한 Hausdorff이다.
+임의의 Hausdorff space $X$에 대하여, $X$의 부분공간 $A$도 Hausdorff인 것은 쉽게 확인할 수 있다. 이는 임의의 서로 다른 $x,y\in A$가 주어졌을 때, 이들의 $X$에서의 서로소인 열린근방 $U,V$를 잡으면 $U\cap A, V\cap A$가 $A$에서의 $x,y$의 서로소인 열린근방이 되기 때문이다. 한편 Hausdorff space의 곱 또한 Hausdorff이다.
 
 ::: 명제 8
 공집합이 아닌 $X_i$들에 대하여, $X=\prod_{i\in I}X_i$가 Hausdorff인 것과 $X_i$들 각각이 Hausdorff인 것이 동치이다. 
 :::
 ::: 증명
-우선 $X_i$들이 Hausdorff이고 $x,y\in X$가 주어졌다 하면 $x_i\neq y_i$이도록 하는 $i$가 존재하고, 이러한 $X_i$ 안에서 $x_i$와 $y_i$를 분리하는 열린근방 $U,V$를 잡자. 그럼 $i$번째 성분만 각각 $U,V$이고 나머지 $j$번째 성분들은 $X_j$들인 $X=\prod X_i$의 base를 생각하면 이들이 $x,y$를 분리한다. 
+우선 $X_i$들이 Hausdorff이고 서로 다른 $x,y\in X$가 주어졌다 하면 $x_i\neq y_i$이도록 하는 $i$가 존재하고, 이러한 $X_i$ 안에서 $x_i$와 $y_i$를 분리하는 열린근방 $U,V$를 잡자. 그럼 $i$번째 성분만 각각 $U,V$이고 나머지 $j$번째 성분들은 $X_j$들인 $X=\prod X_i$의 base를 생각하면 이들이 $x,y$를 분리한다. 
 
 거꾸로 $X$가 Hausdorff라면, 임의로 택한 $X_j$의 원소들 $x_j$에 대하여, 
 
-$$\prod_{j\in I} A_j,\qquad A_j=\begin{cases}A_i&i=j\\\{x_j\}&\text{otherwise}\end{cases}$$
+$$\prod_{j\in I} A_j,\qquad A_j=\begin{cases}X_i&i=j\\\{x_j\}&\text{otherwise}\end{cases}$$
 
 으로 정의된 $\prod A_j$는 $X_i$와 homeomorphic인 $X$의 부분집합이다. 
 :::
 
 ## 하우스도르프 공간의 몫공간
 
-일반적으로 Hausdorff space $X$의 quotient space $X/R$이 Hausdorff space인 것은 아니다. 뿐만 아니라 $X/R$이 Hausdorff일 필요충분조건 또한 쉽게 알아볼 수 있는데, $X/R$에서의 열린집합은 $R$-saturated인 $X$의 열린집합에 일대일로 대응되므로 $X/R$이 Hausdorff이기 위해서는 서로 다른 equivalence에 속하는 $x,y\in X$에 대해, 이들을 분리하는 $R$-saturated open set이 존재하는 것과 동치이다. 특히 다음이 성립한다.
+일반적으로 Hausdorff space $X$의 quotient space $X/R$이 Hausdorff space인 것은 아니다. 뿐만 아니라 $X/R$이 Hausdorff일 필요충분조건 또한 쉽게 알아볼 수 있는데, $X/R$에서의 열린집합은 $R$-saturated인 $X$의 열린집합에 일대일로 대응되므로 $X/R$이 Hausdorff이기 위해서는 서로 다른 equivalence class에 속하는 $x,y\in X$에 대해, 이들을 분리하는 서로소인 두 $R$-saturated open set이 존재하는 것과 동치이다. 특히 다음이 성립한다.
 
 ::: 명제 9
 연속함수 $f:X \rightarrow Y$에 대하여, 만일 $Y$가 Hausdorff라면 다음 동치관계

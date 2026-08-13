@@ -10,11 +10,12 @@ sidebar:
 
 date: 2025-08-05
 weight: 5
+drift_needed: true
 
 
 ---
 
-우리는 이제 homology를 실질적으로 계산할 수 있는 도구들을 살펴본다. 임의의 공간에 대해 이 공간의 homology를 정의로부터 직접 계산하는 것은 거의 불가능한 일이므로, 우리는 큰 공간들을 작은 공간으로 쪼개고 이들의 homology들로부터 큰 공간의 homology를 계산하는 도구를 개발해야 한다. 가장 직관적인 상황은 [§피복공간, ⁋정리 13](/ko/math/algebraic_topology/covering_spaces#thm13)의 상황일 것이며, 이 경우 우리는 functor $\pi_1:\Top \rightarrow \Grp$이 colimit을 보존하는 것을 살펴보았다. 그런데 abelianization functor $\ab:\Grp \rightarrow \Ab$는 forgetful functor $U:\Ab \rightarrow \Grp$의 left adjoint functor이고 ([\[대수적 구조\] §가환군, ⁋명제 7](/ko/math/algebraic_structures/abelian_groups#prop7)), left adjoint functor는 colimit을 보존하며 ([\[범주론\] §수반함자, ⁋정리 9](/ko/math/category_theory/adjoints#thm9)) first homology functor $H_1:\Top \rightarrow \Ab$는 이들의 합성이다. 실제로 loop $\gamma$를 singular $1$-simplex로 보내는 morphism $\pi_1(X)\rightarrow H_1(X)$는 well-defined이며(같은 homotopy class의 loop가 같은 homology class를 주고, homotopy가 $2$-simplex들의 합으로 그 차이를 boundary로 준다), 그 kernel이 정확히 commutator subgroup $[\pi_1(X),\pi_1(X)]$이므로 $H_1(X)\cong\pi_1(X)^\ab$를 얻는다. 따라서 $H_1$ 또한 colimit을 보존해야 한다. 특별히 [§피복공간, ⁋따름정리 14](/ko/math/algebraic_topology/covering_spaces#cor14)와 같이 위상공간 $X$가 두 connected open subset $U,V$의 합집합으로 나타난다 하자. 그럼 category $\Ab$에서, 두 abelian group의 pushout은 이들의 direct sum의 coequalizer로 주어지므로 다음의 isomorphism 
+우리는 이제 homology를 실질적으로 계산할 수 있는 도구들을 살펴본다. 임의의 공간에 대해 이 공간의 homology를 정의로부터 직접 계산하는 것은 거의 불가능한 일이므로, 우리는 큰 공간들을 작은 공간으로 쪼개고 이들의 homology들로부터 큰 공간의 homology를 계산하는 도구를 개발해야 한다. 가장 직관적인 상황은 [§피복공간, ⁋정리 13](/ko/math/algebraic_topology/covering_spaces#thm13)의 상황일 것이며, 이 경우 우리는 functor $\pi_1:\Top \rightarrow \Grp$이 colimit을 보존하는 것을 살펴보았다. 그런데 abelianization functor $\ab:\Grp \rightarrow \Ab$는 forgetful functor $U:\Ab \rightarrow \Grp$의 left adjoint functor이고 ([\[대수적 구조\] §가환군, ⁋명제 7](/ko/math/algebraic_structures/abelian_groups#prop7)), left adjoint functor는 colimit을 보존하며 ([\[범주론\] §수반함자, ⁋정리 9](/ko/math/category_theory/adjoints#thm9)) first homology functor $H_1:\Top \rightarrow \Ab$는 이들의 합성이다. 실제로 loop $\gamma$를 singular $1$-simplex로 보내는 morphism $\pi_1(X)\rightarrow H_1(X)$는 well-defined이며(같은 homotopy class의 loop가 같은 homology class를 주고, homotopy가 $2$-simplex들의 합으로 그 차이를 boundary로 준다), 그 kernel이 정확히 commutator subgroup $[\pi_1(X),\pi_1(X)]$이므로 $H_1(X)\cong\pi_1(X)^\ab$를 얻는다. 따라서 $H_1$ 또한 colimit을 보존해야 한다. 특별히 [§피복공간, ⁋따름정리 14](/ko/math/algebraic_topology/covering_spaces#cor14)와 같이 위상공간 $X$가 두 connected open subset $U,V$의 합집합으로 나타나고, $U\cap V$ 또한 connected라 하자. 그럼 category $\Ab$에서, 두 abelian group의 pushout은 이들의 direct sum의 coequalizer로 주어지므로, 두 inclusion이 유도하는 $f:H_1(U\cap V)\rightarrow H_1(U)$와 $g:H_1(U\cap V)\rightarrow H_1(V)$에 대하여 다음의 isomorphism 
 
 $$H_1(X)=H_1(U\cup V)\cong \frac{H_1(U)\oplus H_1(V)}{\left\langle (f(x),-g(x))\mid x\in H_1(U\cap V)\right\rangle}\tag{1}$$
 
@@ -52,7 +53,7 @@ $$\cdots \rightarrow H_k(A) \rightarrow H_k(X) \rightarrow H_k(X,A)\rightarrow H
 
 ## Excision theorem
 
-직관적으로 $(X,A)$에 대한 realtive homology $H_\bullet(X,A)$는 inclusion $C_\bullet(A)\hookrightarrow C_\bullet(X)$의 cokernel에 해당하는 chain complex $C_\bullet(X,A)$의 homology이다. 직관적으로 이 과정에서 $C_\bullet(A)$에 대한 정보는 quotient를 취하며 사라지게 되므로, $A$ 안에 들어있는 부분집합을 전체에서 뺀다고 해서 relative homology가 변하지 않을 것이라는 것은 직관적으로는 그럴듯해보인다. 이는 다음의 약한 조건 하에서는 참이다. 
+직관적으로 $(X,A)$에 대한 relative homology $H_\bullet(X,A)$는 inclusion $C_\bullet(A)\hookrightarrow C_\bullet(X)$의 cokernel에 해당하는 chain complex $C_\bullet(X,A)$의 homology이다. 직관적으로 이 과정에서 $C_\bullet(A)$에 대한 정보는 quotient를 취하며 사라지게 되므로, $A$ 안에 들어있는 부분집합을 전체에서 뺀다고 해서 relative homology가 변하지 않을 것이라는 것은 직관적으로는 그럴듯해보인다. 이는 다음의 약한 조건 하에서는 참이다. 
 
 ::: 정리 2 (Excision theorem)
 공간 $X$의 부분공간 $A$와, $A$의 부분공간 $Z$가 $\cl Z\subseteq \interior A$를 만족한다고 하자. 그럼 inclusion
@@ -66,7 +67,7 @@ $$H_k(X\setminus Z, A\setminus Z)\rightarrow H_k(X,A)$$
 는 isomorphism이다. 
 :::
 
-그러나 이 정리가 직관적으로 자명한 것에 비해, 그 증명은 다소 기술적인 부분이 있어 여기에서는 그 증명을 생략하기로 한다. 
+그러나 이 정리가 직관적으로 자명한 것에 비해, 그 증명은 다소 기술적인 부분이 있어 여기에서는 그 증명을 생략하고 [Hat]에 위임한다. 
 
 한편 우리는 기하적인 상황에서 이와 같이 $A$에 들어있는 정보를 무시하는 방법을 알고 있다. 즉, $A$를 하나의 점으로 줄이는 quotient space $X/A$이다. 그럼 homology $H_k(X/A)$와 relative homology $H_k(X,A)$ 사이의 관계가 있다는 것이 합리적인 추측이다. 물론 위의 정리와 마찬가지로 이는 $A$가 아주 이상한 공간은 아니어야 가능하다. 
 
@@ -106,7 +107,7 @@ $$(X\setminus A, U\setminus A)\hookrightarrow (X,U)$$
 
 에 의해 유도되는 $H_k(X\setminus A, U\setminus A)\rightarrow H_k(X,U)$는 isomorphism이며, 마찬가지로 포함관계 $\{[A]\}\subseteq U/A\subseteq X/A$에 [정리 2](#thm2)을 적용하면 다음의 map
 
-$$H_k((X/A)\setminus [A], (U/A)\setminus [A])$$
+$$H_k((X/A)\setminus [A], (U/A)\setminus [A])\rightarrow H_k(X/A,U/A)$$
 
 이 isomorphism이라는 것을 안다. 이들은 마찬가지로 quotient map에 의해 유도되는 다음의 diagram
 
@@ -118,7 +119,7 @@ $$H_k(X,A)\cong H_k(X/A,[A])\tag{2}$$
 
 을 얻는다. 
 
-한편, [§호몰로지, ⁋명제 11](/ko/math/algebraic_topology/homology#prop11)와 [\[호몰로지 대수학\] §Diagram chasing, ⁋따름정리 2 (The five lemma)](/ko/math/homological_algebra/diagram_chasing#cor2)에 의해, 임의의 공간 $X$와 한 점 $x\in X$에 대하여 다음의 long exact sequence
+한편, [§호몰로지, ⁋명제 11](/ko/math/algebraic_topology/homology#prop11)에 의해, 임의의 공간 $X$와 한 점 $x\in X$에 대하여 다음의 long exact sequence
 
 $$\begin{aligned}\cdots &\rightarrow H_k(x)\rightarrow H_k(X)\rightarrow H_k(X,x) \rightarrow H_{k-1}(x)\rightarrow\cdots \\\cdots&\rightarrow H_1(x)\rightarrow H_1(X) \rightarrow H_1(X,x) \rightarrow H_0(x) \rightarrow H_0(X)\rightarrow H_0(X,x)\rightarrow 0\end{aligned}$$
 
@@ -148,7 +149,7 @@ $$H_k(X,A)\cong \widetilde{H}_k(X/A)$$
 
 ## 심플렉스 호몰로지와 특이 호몰로지
 
-한편 relative homology는 정의한 방식은 $\Ch_{\geq 0}(\Ab)$에서의 monomorphism $C_\bullet(A)\rightarrow C_\bullet(X)$에 cokernel을 취한 것이었으므로, 이 과정은 $C^\Delta_\bullet(A) \rightarrow C^\Delta_\bullet(X)$에 대해 반복해도 된다. 그럼 그 결과로 우리는 simplicial homology 버전의 realtive homology $H_n^\Delta(X,A)$를 얻게 된다. 이제 simplicial homology는 "singular하지 않은" chain들이므로, inclusion 
+한편 relative homology를 정의한 방식은 $\Ch_{\geq 0}(\Ab)$에서의 monomorphism $C_\bullet(A)\rightarrow C_\bullet(X)$에 cokernel을 취한 것이었으므로, 이 과정은 $C^\Delta_\bullet(A) \rightarrow C^\Delta_\bullet(X)$에 대해 반복해도 된다. 그럼 그 결과로 우리는 simplicial homology 버전의 relative homology $H_n^\Delta(X,A)$를 얻게 된다. 이제 simplicial homology는 "singular하지 않은" chain들이므로, inclusion 
 
 $$C_\bullet^\Delta(X) \rightarrow C_\bullet(X)$$
 
@@ -158,7 +159,7 @@ $$H_\bullet^\Delta(X)\rightarrow H_\bullet(X)\tag{3}$$
 
 이 존재하며, 비슷하게 다음의 canonical homomorphism들
 
-$$H_\bullet^\Delta(A)\rightarrow H_\bullet^\Delta(A),\qquad H_\bullet^\Delta(X,A)\rightarrow H_\bullet(X,A)$$
+$$H_\bullet^\Delta(A)\rightarrow H_\bullet(A),\qquad H_\bullet^\Delta(X,A)\rightarrow H_\bullet(X,A)$$
 
 이 존재한다. 그럼 이들은 [\[호몰로지 대수학\] §긴 완전열, ⁋명제 2](/ko/math/homological_algebra/long_exact_sequence#prop2)에 의하여 다음의 commutative diagram
 
@@ -172,7 +173,7 @@ $$H_\bullet^\Delta(A)\rightarrow H_\bullet^\Delta(A),\qquad H_\bullet^\Delta(X,A
 ::: 증명
 대략적인 흐름을 소개한다. 위의 commutative diagram에 의하여, $X$의 $\Delta$-complex 구조가 정의하는 filtration
 
-$$X_0\subseteq X_1\subseteq\cdots\subseteq X_l=X$$
+$$X^0\subseteq X^1\subseteq\cdots\subseteq X^l=X$$
 
 을 생각한 후 [\[호몰로지 대수학\] §Diagram chasing, ⁋따름정리 2](/ko/math/homological_algebra/diagram_chasing#cor2)를 다음 diagram
 
@@ -184,7 +185,7 @@ $$H_n^\Delta(X^k, X^{k-1})\rightarrow H_n(X^k, X^{k-1})$$
 
 이 isomorphism임만 보이면 충분하다. 이를 가정하고 나면 우선 [§호몰로지, ⁋명제 11](/ko/math/algebraic_topology/homology#prop11)에 의해 $k=1$일 때 $H_n^\Delta(X^0)\cong H_n(X^0)$가 모든 $n$에 대해 성립하므로 [\[호몰로지 대수학\] §Diagram chasing, ⁋따름정리 2](/ko/math/homological_algebra/diagram_chasing#cor2)에 의해 $H_n^\Delta(X^1)\cong H_n(X^1)$임을 보일 수 있고, 다시 이로부터 귀납적으로 큰 $k$에 대해 원하는 isomorphism을 만들 수 있기 때문이다.
 
-우선 정의에 의하여, $C_\bullet^\Delta(X^k, X^{k-1})$은 오직 $n=k$일 때만 nontrivial하며, 따라서 $H_n^\Delta(X^k, X^{k-1})$은 오직 $n=k$일 때만 ($k$-simplex들로 생성되는) nontrivial free abelian group이고, 다른 경우는 모두 trivial하다. 
+우선 정의에 의하여, $C_n^\Delta(X^k, X^{k-1})$은 오직 $n=k$일 때만 nontrivial하며, 따라서 $H_n^\Delta(X^k, X^{k-1})$은 오직 $n=k$일 때만 ($k$-simplex들로 생성되는) nontrivial free abelian group이고, 다른 경우는 모두 trivial하다. 
   
 Singular homology에 대해서도 비슷한 결과가 성립하는데, 구체적으로 $H_n(\Delta^k,\partial\Delta^k)$는 $n=k$일 때만 free abelian group이며 그 generator는 $\id:\Delta^k \rightarrow \Delta^k$이다. 이를 확인하려면 $\Lambda$를 $\Delta^k$의 모든 $k-1$차원 face 중 하나만 뺀 것으로 정의하고, $(\Delta^k, \partial\Delta^k, \Lambda)$에 해당하는 long exact sequence
 
@@ -196,7 +197,7 @@ $$H_k(\Delta^k, \partial\Delta^{k})\cong H_{k-1}(\Delta^{k-1}, \partial\Delta^{k
 
 을 얻고, 따라서 귀납적으로 원하는 결과를 보일 수 있다.
   
-이 과정을 살펴보면, $H_k(\Delta^k,\partial\Delta^k)$의 (singular homology로서의) generator는 정확히 $k$-simplex $\Delta^k$와 같다는 것을 안다. Pair $(X^k,X^{k-1})$은, 이러한 pair들 $(\Delta^k,\partial\Delta^k)$들의 합집합이므로, [§호몰로지, ⁋명제 9](/ko/math/algebraic_topology/homology#prop9)에 의해 원하는 결과를 얻는다. 
+이 과정을 살펴보면, $H_k(\Delta^k,\partial\Delta^k)$의 (singular homology로서의) generator는 정확히 $k$-simplex $\Delta^k$와 같다는 것을 안다. Pair $(X^k,X^{k-1})$은, 이러한 pair들 $(\Delta^k,\partial\Delta^k)$들의 합집합이므로, [§호몰로지, ⁋명제 9](/ko/math/algebraic_topology/homology#prop9)에 의해 원하는 결과를 얻는다. 각 chain은 유한 개의 simplex만을 포함하고 각 simplex의 image는 compact하므로 적당한 $X^k$ 안에 들어가고, 따라서 무한차원 $\Delta$-complex의 경우에도 위의 결과들에 direct limit을 취하면 같은 결론을 얻는다. 
 :::
 
 ## 메이어-피토리스 열
@@ -221,19 +222,19 @@ $$\partial:H_k(X,A)\rightarrow H_{k-1}(A,\emptyset):=H_{k-1}(A)$$
     에 들어간다. 
 :::
 
-그럼 Eilenberg와 Steenrod의 결과는 이러한 방식으로 정의된 homology theory들은, 만일 *coefficient group* $H_0(\ast)$가 고정된다면 이들은 모두 naturally isomorphic하다는 것을 보여준다. 예를 들어 우리는 앞서 simplicial homology와 singular homology가 $\Delta$-complex 위에서는 일치한다는 것을 증명하였으며, 그 증명을 하나하나 분리해보면 본질적으로 우리가 사용한 것은 위의 [정의 6](#def6)의 공리들임을 확인할 수 있다. Homology의 실용적인 계산을 위해서는 *CW complex* 위에 정의된 *cellular homology*를 도입하는 것이 좋은데, 마찬가지로 이 homology 또한 위의 공리들을 만족하고 따라서 이 또한 simplicial homology, singular homology와 같은 계산을 준다. 
+그럼 Eilenberg와 Steenrod의 결과는 이러한 방식으로 정의된 homology theory들은, 만일 *coefficient group* $H_0(\ast)$가 고정된다면 CW pair들의 category 위에서 이들은 모두 naturally isomorphic하다는 것을 보여준다. 예를 들어 우리는 앞서 simplicial homology와 singular homology가 $\Delta$-complex 위에서는 일치한다는 것을 증명하였으며, 그 증명을 하나하나 분리해보면 본질적으로 우리가 사용한 것은 위의 [정의 6](#def6)의 공리들임을 확인할 수 있다. Homology의 실용적인 계산을 위해서는 *CW complex* 위에 정의된 *cellular homology*를 도입하는 것이 좋은데, 마찬가지로 이 homology 또한 위의 공리들을 만족하고 따라서 이 또한 simplicial homology, singular homology와 같은 계산을 준다. 
 
 한편 이들 homology theory들은 모두 coefficient group이 $\mathbb{Z}$로 고정되어 있는 상태인데, 이를 임의의 abelian group $A$로 바꾸어도 [정의 6](#def6)의 모든 공리는 변함없이 성립한다. 실제로 singular homology 혹은 simplicial homology를 정의할 때, chain group들
 
 $$C^\Delta_\bullet(X),\qquad C_\bullet(X)$$
 
-을 free abelian group이 아니라, free $A$-module들
+을 free abelian group이 아니라, simplex들로 첨자된 $A$의 direct sum들
 
 $$C^\Delta_\bullet(X;A):=C^\Delta_\bullet(X)\otimes_\mathbb{Z}A,\qquad C_\bullet(X;A):=C_\bullet(X)\otimes_\mathbb{Z}A$$
 
 로 잡았더라면 이러한 종류의 homology를 얻었을 것이다. 
 
-Homology의 대부분의 성질들은 [정의 6](#def6)의 공리들로부터 나온다. 예를 들어, 이 글의 목표인 식 (1)의 일반화를 이로브터 유도할 수 있다. 위상공간 $X$가 두 열린집합들의 합집합 $X=U\cup V$로 나타난다 하자. 그럼 다음의 inclusion
+Homology의 대부분의 성질들은 [정의 6](#def6)의 공리들로부터 나온다. 예를 들어, 이 글의 목표인 식 (1)의 일반화를 이로부터 유도할 수 있다. 위상공간 $X$가 두 열린집합들의 합집합 $X=U\cup V$로 나타난다 하자. 그럼 다음의 inclusion
 
 {% diagram Math/Algebraic_Topology/Computation_of_Homology-7.svg width="7.54em" alt="inclusions" %}
 
@@ -245,7 +246,7 @@ $$(V,U\cap V)\rightarrow (X,U)$$
 
 {% diagram Math/Algebraic_Topology/Computation_of_Homology-8.svg width="43.25em" alt="morphism_of_les" %}
 
-을 얻는다. 여기서 $i,j,k$들은 각각의 inclusion에 의해 유도되는 함수들이고, $\partial$들은 connecting map이며 $p$들은 cokernel morphism들이다. 편의를 위해 index들은 생략하였다. 이제 이 long exact sequence morphism을 $\alpha$라 하고, $\alpha$의 mapping cone exact sequence
+을 얻는다. 여기서 $i,j,k$들은 각각의 inclusion에 의해 유도되는 함수들이고, $\partial$들은 connecting map이며 $p$들은 cokernel morphism들이다. 편의를 위해 index들은 생략하였다. 이제 이 long exact sequence morphism을 $\alpha$라 하고, [\[호몰로지 대수학\] §긴 완전열, ⁋정의 8](/ko/math/homological_algebra/long_exact_sequence#def8)이 주는 $\alpha$의 mapping cone exact sequence
 
 $$\begin{aligned}\cdots &\overset{\overline{\partial}}{\longrightarrow} H_{n+1}(X)\oplus H_{n+1}(V, U\cap V)\overset{\overline{\Phi}}{\longrightarrow} H_{n+1}(X,U)\oplus H_n(U\cap V)\overset{\overline{\Psi}}{\longrightarrow} H_n(U)\oplus H_n(V)\\ \phantom{\cdots}&\overset{\overline{\partial}}{\longrightarrow} H_n(X)\oplus H_n(V, U\cap V)\rightarrow \cdots\end{aligned}$$
 
@@ -257,7 +258,7 @@ $$\cdots \rightarrow 0 \rightarrow H_{n+1}(V, U\cap V)\rightarrow H_{n+1}(X,U)\r
 
 $$\cdots \rightarrow H_{n+1}(U)\oplus H_{n+1}(V)\rightarrow H_{n+1}(X)\rightarrow H_n(U\cap V)\rightarrow H_n(U)\oplus H_n(V)\rightarrow\cdots\tag{5}$$
 
-의 direct sum으로 나타낼 수 있다는 것을 안다. 이 때 $\Cone(\alpha)$와 (4)가 모두 exact이므로 (5) 또한 exact이며, (5)의 exact sequence의 differential map들은 mapping cone exact sequence에서 isomorphism들 $i_V$가 정의하는 change of basis를 통해 얻어진다. 이를 명시적으로 계산하면 다음을 얻는다. 
+의 direct sum으로 나타낼 수 있다는 것을 안다. 이 때 $\alpha$가 잇는 두 long exact sequence가 모두 exact이므로 $\alpha$는 quasi-isomorphism이고, 따라서 [\[호몰로지 대수학\] §긴 완전열, ⁋따름정리 9](/ko/math/homological_algebra/long_exact_sequence#cor9)에 의하여 $\Cone(\alpha)$가 exact이다. 그럼 (4) 또한 exact이므로 (5) 또한 exact이며, (5)의 exact sequence의 differential map들은 mapping cone exact sequence에서 isomorphism들 $i_V$가 정의하는 change of basis를 통해 얻어진다. 이를 명시적으로 계산하면 다음을 얻는다. 
 
 ::: 명제 7 (Mayer-Vietoris sequence)
 위상공간 $X$가 두 열린집합들의 합집합 $X=U\cup V$로 나타난다 하고, 이 위에 정의된 homology theory $H$를 생각하자. 그럼 long exact sequence

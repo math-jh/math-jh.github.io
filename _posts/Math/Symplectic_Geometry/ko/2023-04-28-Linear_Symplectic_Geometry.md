@@ -11,6 +11,8 @@ sidebar:
 date: 2023-04-28
 weight: 2
 
+drift_needed: true
+
 ---
 
 물리에서 momentum은 covector로 취급되기 때문에, 수학적으로 phase space를 기술할 때에는 manifold $M$의 cotangent bundle $T^\ast M$을 생각하는 것이 자연스럽다. 
@@ -20,7 +22,7 @@ weight: 2
 ## Symplectic form
 
 ::: 정의 1
-벡터공간 $(V,\omega)$가 *symplectic vector space<sub>사교벡터공간</sub>*라는 것은 $\omega:V\times V\rightarrow \mathbb{R}$이 다음 두 조건을 만족하는 것이다.
+유한차원 벡터공간 $(V,\omega)$가 *symplectic vector space<sub>사교벡터공간</sub>*라는 것은 bilinear map $\omega:V\times V\rightarrow \mathbb{R}$이 다음 두 조건을 만족하는 것이다.
 
 - (Skew-symmetry) 임의의 $v,w\in V$에 대하여, $\omega(v,w)=-\omega(w,v)$이다.
 - (Nondegeneracy) $\omega(v,w)=0$이 모든 $w\in V$에 대해 성립하도록 하는 $v$는 오직 $v=0$ 뿐이다.
@@ -31,7 +33,7 @@ weight: 2
 어렵지 않게 모든 symplectic vector space는 반드시 짝수차원이어야 한다는 사실을 알 수 있다.
 
 ::: 보조정리 2
-임의의 skew-symmetric bilinear map $\omega:V\times V\rightarrow \mathbb{R}$가 주어졌다 하자. 그럼 $V$의 basis $u_1,\ldots, u_k, e_1, \ldots,e_n,f_1,\ldots, f_n$이 존재하여 다음 조건이 모두 만족되도록 할 수 있다.
+유한차원 벡터공간 $V$ 위의 임의의 skew-symmetric bilinear map $\omega:V\times V\rightarrow \mathbb{R}$가 주어졌다 하자. 그럼 $V$의 basis $u_1,\ldots, u_k, e_1, \ldots,e_n,f_1,\ldots, f_n$이 존재하여 다음 조건이 모두 만족되도록 할 수 있다.
 
 - 모든 $v\in V$에 대하여, $\omega(u_i,v)=0$이 성립한다.
 - 모든 $i,j$에 대하여, $\omega(e_i,e_j)=\omega(f_i,f_j)=0$이 성립한다.
@@ -57,7 +59,7 @@ $$\omega(e_{k+1}, e_i)=\lambda_i,\qquad\omega(e_{k+1},f_i)=\eta_i$$
 
 라면, $e_{k+1}$ 대신 다음 벡터
 
-$$e_{k+1}-\sum_{i=1}^k(\lambda_i f_i+\eta_i e_i)$$
+$$e_{k+1}-\sum_{i=1}^k(\eta_i e_i-\lambda_i f_i)$$
 
 을 생각하여 $e_{k+1}$가 다음 조건들
 
@@ -69,7 +71,7 @@ $$\omega(f_{k+1}, e_i)=\lambda_i',\qquad\omega(f_{k+1},f_i)=\eta_i'$$
 
 을 만족한다면, $f_{k+1}$ 대신 다음 벡터
 
-$$f_{k+1}-\sum_{i=1}^k(\lambda_i' f_i+\eta_i' e_i)$$
+$$f_{k+1}-\sum_{i=1}^k(\eta_i' e_i-\lambda_i' f_i)$$
 
 을 생각하여 $f_{k+1}$가 다음 조건들
 
@@ -82,7 +84,7 @@ $$\omega(f_{k+1},e_i)=\omega(f_{k+1},f_i)=0\qquad\text{for all $i=1,\ldots, k$}$
 
 $$e_1,\ldots, e_n, f_1,\ldots, f_n$$
 
-을 *symplectic basis*라 부른다. Symplectic form을 보존하는 linear map을 *(linear) symplectomorphism*이라 부른다면, symplectic basis의 선택에 의하여 임의의 symplectic vector space는 이전 글에서 살펴본 공간 $(\mathbb{R}^{2n},\omega_0)$과 symplectomorphic하다는 것을 확인할 수 있다.
+을 *symplectic basis*라 부른다. Symplectic form을 보존하는 linear map을 *(linear) symplectomorphism*이라 부른다면, symplectic basis의 선택에 의하여 임의의 symplectic vector space는 [§고전역학](/ko/math/symplectic_geometry/classical_mechanics)에서 살펴본 공간 $(\mathbb{R}^{2n},\omega_0)$과 symplectomorphic하다는 것을 확인할 수 있다.
 
 ::: 정의 3
 $(V,\omega)$가 symplectic vector space라 하고, $W\leq V$가 임의의 부분공간이라 하자. 그럼 $W$의 *symplectic complement<sub>사교 여공간</sub>*는
@@ -106,7 +108,7 @@ Symplectic vector space $(V,\omega)$와 그 부분공간 $W$에 대하여, 다�
 4. $W$가 Lagrangian인 것은 $W$가 isotropic이고 $\dim W=\frac{1}{2}\dim V$인 것과 동치이다.
 :::
 ::: 증명
-1. $\omega$는 non-degenerate pairing이므로, $v\mapsto \omega(v,-)$는 $V$에서 $V^\ast$로의 isomorphism을 정의한다. ([\[선형대수학\] §쌍대공간, ⁋명제 4](/ko/math/linear_algebra/dual_space#prop4)) 
+1. $\omega$는 non-degenerate pairing이므로, $v\mapsto \omega(v,-)$는 $V$에서 $V^\ast$로의 단사인 linear map을 정의하고 ([\[선형대수학\] §쌍대공간, ⁋명제 4](/ko/math/linear_algebra/dual_space#prop4)), $\dim V=\dim V^\ast$이므로 이는 isomorphism이다. 
     
     $W$의 annihilator를 $W^\perp\subseteq V^\ast$라 하자. ([\[선형대수학\] §쌍대공간, ⁋정의 7](/ko/math/linear_algebra/dual_space#def7)) 임의의 $u\in W^\omega$에 대하여
     
@@ -124,7 +126,7 @@ Symplectic vector space $(V,\omega)$와 그 부분공간 $W$에 대하여, 다�
 
 2. $(W^\omega)^\omega=W$이므로 $W\cap W^\omega=(W^\omega)^\omega\cap W^\omega$가 성립한다.
 3. 만일 $W\subseteq W^\omega$라면 $(W^\omega)^\omega\subseteq W^\omega$이므로 $W^\omega$는 coisotropic이다.
-4. $W$가 Lagrangian이라면 $W=W^\omega$이므로 $\dim W+\dim W^\omega$로부터 $\dim W=\frac{1}{2}\dim V$이고 $W$는 isotropic subspace이다. 거꾸로 만일 $\dim W=\frac{1}{2}\dim V$라면 $\dim W^\omega$ 또한 $\frac{1}{2}\dim V$이므로, 이러한 차원 조건을 만족하는 isotropic subspace는 Lagrangian이다.
+4. $W$가 Lagrangian이라면 $W=W^\omega$이므로 $\dim W+\dim W^\omega=\dim V$로부터 $\dim W=\frac{1}{2}\dim V$이고 $W$는 isotropic subspace이다. 거꾸로 만일 $\dim W=\frac{1}{2}\dim V$라면 $\dim W^\omega$ 또한 $\frac{1}{2}\dim V$이므로, 이러한 차원 조건을 만족하는 isotropic subspace는 Lagrangian이다.
 :::
 
 ## Symplectic quotient
@@ -139,7 +141,7 @@ $$\overline{\omega}([v_1],[v_2])=\omega(v_1,v_2)$$
 
 $$\omega(v_1+w_1,v_2+w_2)=\omega(v_1,v_2)+\omega(v_1,w_2)+\omega(w_1,v_2)+\omega(w_1,w_2)$$
 
-의 값이 $\omega(v_1,v_2)$와 동일해야 한다. $W$에 어떠한 조건도 걸려있지 않다면, 우변의 뒤쪽 세 항이 $0$이 될 이유는 없으므로 $V/W$에 symplectic form은 일반적으로 잘 정의되지 않는다. 뿐만 아니라, $W$가 symplectic subspace였다 해도 우변의 마지막 항인 $\omega(w_1,w_2)$만 사라지므로 여전히 조건이 부족하다.
+의 값이 $\omega(v_1,v_2)$와 동일해야 한다. $W$에 어떠한 조건도 걸려있지 않다면, 우변의 뒤쪽 세 항이 $0$이 될 이유는 없으므로 $V/W$에 symplectic form은 일반적으로 잘 정의되지 않는다. 뿐만 아니라, $W$가 isotropic subspace였다 해도 우변의 마지막 항인 $\omega(w_1,w_2)$만 사라지므로 여전히 조건이 부족하다.
 
 이를 잘 작동하게 하기 위해서는 다음과 같은 방식으로 quotient space를 정의해주면 된다.
 
@@ -147,11 +149,11 @@ $$\omega(v_1+w_1,v_2+w_2)=\omega(v_1,v_2)+\omega(v_1,w_2)+\omega(w_1,v_2)+\omega
 $(V,\omega)$가 symplectic vector space이고, $W$가 coisotropic subspace라 하자. 그럼 $W/W^\omega$ 위에 유일한 symplectic structure $\overline{\omega}$가 존재하여, projection $W\rightarrow W/W^\omega$에 의한 $\overline{\omega}$의 pullback과, $\omega$의 $W$로의 restriction이 동일하도록 할 수 있다.
 :::
 ::: 증명
-임의의 $[w_1],[w_2]\in W$에 대해 $\overline{\omega}([w_1],[w_2])=\omega(w_1,w_2)$으로 정의하자. 이 식이 잘 정의된 symplectic form을 주기만 한다면 원하는 성질이 성립한다는 것은 자명하다. 우선 임의의 $u_1,u_2\in W^\omega$에 대하여,
+임의의 $[w_1],[w_2]\in W/W^\omega$에 대해 $\overline{\omega}([w_1],[w_2])=\omega(w_1,w_2)$으로 정의하자. 이 식이 잘 정의된 symplectic form을 주기만 한다면 원하는 성질이 성립한다는 것은 자명하다. 우선 임의의 $u_1,u_2\in W^\omega$에 대하여,
 
 $$\omega(w_1+u_1,w_2+u_2)=\omega(w_1,w_2)+\omega(w_1,u_2)+\omega(u_1,w_2)+\omega(u_1,u_2)$$
 
-가 성립하며, $w_1,w_2,u_1,u_2$는 모두 $W$의 원소이고 $u_1,u_2$는 $W^\omega$의 원소이므로 우변의 뒤쪽 세 항이 모두 0이 된다. 따라서 $\overline{\omega}$는 잘 정의된다. $\overline{\omega}$가 skew-symmetric인 것은 정의에 의해 자명하므로, $\overline{\omega}$가 non-degenerate인 것만 보이면 충분하다. 만일 $[w]\in W$가 모든 $[w']\in W$에 대해 $\overline{\omega}([w],[w'])=0$을 만족한다면,
+가 성립하며, $w_1,w_2,u_1,u_2$는 모두 $W$의 원소이고 $u_1,u_2$는 $W^\omega$의 원소이므로 우변의 뒤쪽 세 항이 모두 0이 된다. 따라서 $\overline{\omega}$는 잘 정의된다. $\overline{\omega}$가 skew-symmetric인 것은 정의에 의해 자명하므로, $\overline{\omega}$가 non-degenerate인 것만 보이면 충분하다. 만일 $[w]\in W/W^\omega$가 모든 $[w']\in W/W^\omega$에 대해 $\overline{\omega}([w],[w'])=0$을 만족한다면,
 
 $$0=\overline{\omega}([w],[w'])=\omega(w,w')\qquad\text{for all $w'\in W$}$$
 

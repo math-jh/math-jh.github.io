@@ -10,10 +10,11 @@ sidebar:
 
 date: 2026-02-24
 weight: 2
+drift_needed: true
 
 ---
 
-임의의 유한군 $G$가 주어졌을 때 이를 잘 살펴보는 방법 중 하나는 그 유한차원 representation 
+임의의 finite group $G$가 주어졌을 때 이를 잘 살펴보는 방법 중 하나는 그 유한차원 representation 
 
 $$\rho:G\rightarrow \Aut(V)$$
 
@@ -24,22 +25,22 @@ Lie group의 경우 이러한 표현론적 관점은 더 도움이 되는데, Li
 다만 [\[표현론\] §유한군의 표현론, ⁋정의 1](/ko/math/representation_theory/representations_of_finite_groups#def1)에서처럼 $G$의 representation theory를 정의하면 Lie group $G$ 위에 있는 smooth structure는 놓치게 되므로, 다음과 같이 정의해주어야 한다.
 
 ::: 정의 1
-Lie group $G$에 대하여, $G$의 *representation<sub>표현</sub>*은 유한차원 벡터공간 $V$와, smooth map
+Lie group $G$에 대하여, $G$의 *representation<sub>표현</sub>*은 유한차원 벡터공간 $V$와, smooth homomorphism
 
 $$\rho:G\rightarrow \Aut(V)$$
 
 이 주어진 것이다. 
 :::
 
-만일 $G$를 discrete topology와 자명한 smooth structure가 주어진 Lie group으로 본다면 이 정의는 [\[표현론\] §유한군의 표현론, ⁋정의 1](/ko/math/representation_theory/representations_of_finite_groups#def1)의 일반화라 생각할 수도 있다. 비슷하게 [\[표현론\] §유한군의 표현론, §§표현론의 기본 개념들](/ko/math/representation_theory/representations_of_finite_groups#표현론의-기본-개념들)에 있는 모든 정의를 Lie group에 대해서도 할 수 있다. 
+만일 $G$를 discrete topology와 trivial smooth structure가 주어진 Lie group으로 본다면 이 정의는 [\[표현론\] §유한군의 표현론, ⁋정의 1](/ko/math/representation_theory/representations_of_finite_groups#def1)의 일반화라 생각할 수도 있다. 비슷하게 [\[표현론\] §유한군의 표현론, §§표현론의 기본 개념들](/ko/math/representation_theory/representations_of_finite_groups#표현론의-기본-개념들)에 있는 모든 정의를 Lie group에 대해서도 할 수 있다. 
 
-이 글에서 중요한 역할을 했던 것은 group $G$가 유한군이라는 사실이었다. 가령 $G$의 모든 원소에 대해 평균을 내는 아이디어는 이러한 사실을 바탕으로 했다. 이를 Lie group으로 일반화하기 위해서는 $G$에 어떠한 종류의 유한성을 강제해야 한다. 
+이 글에서 중요한 역할을 했던 것은 group $G$가 finite group이라는 사실이었다. 가령 $G$의 모든 원소에 대해 평균을 내는 아이디어는 이러한 사실을 바탕으로 했다. 이를 Lie group으로 일반화하기 위해서는 $G$에 어떠한 종류의 유한성을 강제해야 한다. 
 
-우리는 따라서 $G$가 *compact* Lie group인 경우를 종종 다루게 된다. 이 경우, locally compact Hausdorff space로서 $G$ 위에는 Haar measure가 존재하며 따라서 $G$의 원소들에 대한 합을 $G$ 전체에 대한 적분으로 바꿔 쓸 수 있다. 물론 이를 위해서는 $\delta_x$ 함수를 잘 정의하고, 함수공간을 적당한 공간으로 일반화하는 작업을 거쳐야 하지만 이러한 작업은 우리의 현재 목적이 아니므로 생략하기로 한다. 중요한 것은 Lie group의 표현론 또한 유한군의 표현론과 같은 방법론을 통해 접근할 수 있다는 것이다. 특히 임의의 finite-dimensional representation은 irreducible decomposition들의 direct sum으로 나타낼 수 있다. 
+우리는 따라서 $G$가 *compact* Lie group인 경우를 종종 다루게 된다. 이 경우, locally compact Hausdorff space로서 $G$ 위에는 Haar measure가 존재하며 따라서 $G$의 원소들에 대한 합을 $G$ 전체에 대한 적분으로 바꿔 쓸 수 있다. 물론 이를 위해서는 $\delta_x$ 함수를 잘 정의하고, 함수공간을 적당한 공간으로 일반화하는 작업을 거쳐야 하지만 이러한 작업은 우리의 현재 목적이 아니므로 생략하기로 한다. 중요한 것은 Lie group의 표현론 또한 finite group의 표현론과 같은 방법론을 통해 접근할 수 있다는 것이다. 특히 임의의 finite-dimensional representation은 irreducible decomposition들의 direct sum으로 나타낼 수 있다. 
 
 한편, 유한차원 representation $G\rightarrow\Aut(V)$가 주어졌다 할 때, 가장 좋은 점은 이들의 image $\rho(g)$들을 (basis의 선택을 통해) 행렬로 생각할 수 있다는 것이다. 따라서 이를 통해 우리는 행렬과 선형사상에 대한 우리의 도구들을 사용하여 이를 탐구할 수 있다. 
 
-선형대수에서 가장 중요한 도구 중 하나는 대각화이다. 따라서 우리는 주어진 Lie group action $\rho:G \rightarrow \Aut(V)$에 대하여, $V$의 basis를 적당히 택하여 $\rho(g)$의 행렬표현을 대각행렬로 만드는 데에 관심이 있다. 만일 $G$가 유한군이었다면, 각각의 $g$에 대해 이러한 basis를 찾아줄 수 있었겠지만 현재는 $G$가 무한하므로 이러한 일을 하기 힘들다. 따라서 우리는 simultaneously diagonalizable인 원소들에 자연스럽게 관심을 갖게 된다. 그런데 [\[선형대수학\] §고유공간분해, ⁋명제 10](/ko/math/linear_algebra/eigenspace_decomposition#prop10)은 두 diagonalizable matrix가 simultaneously diagonalizable일 필요충분조건은 이들이 commute하는 것임을 알고 있으므로, 다음 정의를 내리는 것이 합당하다. 
+선형대수에서 가장 중요한 도구 중 하나는 대각화이다. 따라서 우리는 주어진 Lie group action $\rho:G \rightarrow \Aut(V)$에 대하여, $V$의 basis를 적당히 택하여 $\rho(g)$의 행렬표현을 대각행렬로 만드는 데에 관심이 있다. 만일 $G$가 finite group이었다면, 각각의 $g$에 대해 이러한 basis를 찾아줄 수 있었겠지만 현재는 $G$가 무한하므로 이러한 일을 하기 힘들다. 따라서 우리는 simultaneously diagonalizable인 원소들에 자연스럽게 관심을 갖게 된다. 그런데 [\[선형대수학\] §고유공간분해, ⁋명제 10](/ko/math/linear_algebra/eigenspace_decomposition#prop10)은 서로 commute하는 두 diagonalizable matrix가 simultaneously diagonalizable임을 알고 있으므로, 다음 정의를 내리는 것이 합당하다. 
 
 ::: 정의 2
 Compact, connected Lie group $G$에 대하여, $G$의 subgroup $T$가 *maximal torus<sub>극대 원환면</sub>*라는 것은 $T$가 torus이고, 포함관계에 대하여 maximal인 것이다. 
@@ -71,13 +72,13 @@ $$\rho(t)(v)=\lambda_i(t)v\qquad \lambda_i(t)\in \mathbb{C}^\times$$
 
 로 주어진다. 그런데 이제 $V_i$ 위에서 $T$가 상수배들로 작용한다면, $V_i$의 임의의 부분공간은 $T$-invariant일 것이며 따라서 $V_i$가 irreducible이기 위해서는 반드시 $\dim V_i=1$이어야만 한다. 
 
-이제 $\dim V_i=1$이므로 $\Aut(V_i)\cong \mathbb{C}^\times$이고, 우리는 위의 $\lambda_i: T\rightarrow \mathbb{C}^\times$가 정확하게 $\rho$의 character에 해당하고, 따라서 irreducible decomposition이 직접적으로 character $\lambda_i$에 의해 parametrize되는 것으로 생각할 수 있다. 즉 다음의 식
+이제 $\dim V_i=1$이므로 $\Aut(V_i)\cong \mathbb{C}^\times$이고, 우리는 위의 $\lambda_i: T\rightarrow \mathbb{C}^\times$가 정확하게 $V_i$의 character에 해당하고, 따라서 irreducible decomposition이 직접적으로 character $\lambda_i$에 의해 parametrize되는 것으로 생각할 수 있다. 즉 다음의 식
 
-$$V=\bigoplus_\lambda V_\lambda;\qquad V_\lambda=\{t\cdot v=\lambda(t)v\text{ for all $t\in T$}\}$$
+$$V=\bigoplus_\lambda V_\lambda;\qquad V_\lambda=\{v\in V\mid t\cdot v=\lambda(t)v\text{ for all $t\in T$}\}$$
 
 을 통해 irreducible decomposition이 주어진 것으로 생각하자. 그럼 각각의 $t\in T$에 대하여, $\rho(t)$는 바로 이 decomposition에 의하여 대각화되고, 각각의 eigenspace $V_\lambda$에 해당하는 고유값은 $\lambda(t)$이다. 이와 다른 $t$의 선택은 위의 decomposition은 그대로 두고, 각각의 eigenspace $V_\lambda$에 해당하는 고유값만 바뀌는 것이다. 
 
-직관적으로 $t\mapsto e^{2\pi i\lambda_i(X)}$를 각속도 $\lambda_i(X)$를 갖는 각운동이라 생각할 수 있고, 이러한 관점을 도입하면 우리는 각각의 $X\in \mathfrak{t}$가 주어졌을 때, 이 방향으로의 각속도 $\lambda_i(X)$가 얼마인지를 통해 이 torus action을 설명할 수 있다는 것을 안다. 이 때 각각의 $\lambda_i$들을 우리는 *weight*라 부른다. 그럼 우리는 각각의 weight $\lambda_i$마다 적당한 $V_i$가 존재하여, 이 위에서는 torus action이 $t\cdot v=\rchi_{\lambda_i}(t)v$로 작동하는 것을 안다. 이러한 $V_i$를 *weight space*라 부른다. 
+직관적으로 $t\mapsto e^{2\pi i t\lambda_i(X)}$를 각속도 $\lambda_i(X)$를 갖는 각운동이라 생각할 수 있고, 이러한 관점을 도입하면 우리는 각각의 $X\in \mathfrak{t}$가 주어졌을 때, 이 방향으로의 각속도 $\lambda_i(X)$가 얼마인지를 통해 이 torus action을 설명할 수 있다는 것을 안다. 이 때 각각의 $\lambda_i$들을 우리는 *weight*라 부른다. 그럼 우리는 각각의 weight $\lambda_i$마다 적당한 $V_i$가 존재하여, 이 위에서는 torus action이 $t\cdot v=\rchi_{\lambda_i}(t)v$로 작동하는 것을 안다. 이러한 $V_i$를 *weight space*라 부른다. 
 
 ::: 예시 3
 특별한 예시로, 1차원 torus
@@ -104,13 +105,13 @@ $$\begin{pmatrix}e^{4\pi i t}&0\\0&e^{-2\pi i t}\end{pmatrix}$$
 
 $$\rchi_{\lambda_1}(\exp (X))=e^{2\pi i \lambda_1(X)}\qquad\text{for all $X\in \mathfrak{t}$}$$
 
-을 만족하는 linear functional $\lambda_1:\mathfrak{t}\rightarrow \mathbb{C}$으로 주어진다. 이는 당연히 $1\in \mathbb{R}$을 $2$로 보내는 $\lambda_1(t)=2t$에 의해 정의되며 따라서 이 weight space에 해당하는 weight는 (약간의 abuse of notation을 통해) $2$라 할 수 있다. 이 때 $\lambda$가 위의 식을 만족하기 위해서는, $e^{2\pi i}=1$이므로, 반드시 $\lambda(1)\in \mathbb{\mathbb{Z}}$여야 한다. 
+을 만족하는 linear functional $\lambda_1:\mathfrak{t}\rightarrow \mathbb{R}$으로 주어진다. 이는 당연히 $1\in \mathbb{R}$을 $2$로 보내는 $\lambda_1(t)=2t$에 의해 정의되며 따라서 이 weight space에 해당하는 weight는 (약간의 abuse of notation을 통해) $2$라 할 수 있다. 이 때 $\lambda$가 위의 식을 만족하기 위해서는, $e^{2\pi i}=1$이므로, 반드시 $\lambda(1)\in \mathbb{Z}$여야 한다. 
 
 더 일반적으로 만일 $r$차원 torus의 action이 주어졌다면 $\mathfrak{t}$는 $\mathbb{R}^r$일 것이며, 이 때 torus $T$를
 
 $$T^r=\left\{(e^{2\pi i t_1}, \ldots e^{2\pi i t_r})\mid t_i\in \mathbb{R}/\mathbb{Z}\right\}$$
 
-으로 쓴다면 그 Lie algebra $\mathfrak{t}\cong \mathbb{R}^r$ 중 weight가 될 수 있는 것은 $\mathbb{Z}^r$에 속하는 원소이며 따라서 weight $\lambda$는 다음의 $r$-tuple
+으로 쓴다면 그 Lie algebra의 dual $\mathfrak{t}^\ast\cong \mathbb{R}^r$ 중 weight가 될 수 있는 것은 $\mathbb{Z}^r$에 속하는 원소이며 따라서 weight $\lambda$는 다음의 $r$-tuple
 
 $$\lambda=(n_1, \ldots, n_r)$$
 
@@ -124,7 +125,7 @@ $$e^{2\pi i t}\cdot(z_1, z_2)=(e^{4\pi i t}z_1, e^{4\pi i t} z_2)$$
 를 생각하면 이번에는 2차원 공간 $\mathbb{C}^2$ 위에서 $T$가 weight $2$를 갖는 것처럼 행동하기 때문이다. 이와 같이 서로 같은 weight $\lambda$들을 갖는 성분들을 한데 모아 이를 $V_\lambda$라 하면, 우리는 *weight space decomposition* $V=\bigoplus V_\lambda$를 얻는다. 지금까지의 논의를 엄밀하게 정의로 적으면 다음과 같다. 
 
 ::: 정의 4
-Torus $T$와 complex $T$-module $V$가 주어졌다 하자. Irreducible character $\rchi_\lambda: T \rightarrow S^1$와 그에 해당하는 linear functional $\lambda:\mathfrak{t}\rightarrow\mathbb{C}$에 대하여, $\lambda$가 $V$의 *weight<sub>무게</sub>*이라는 것은 다음 집합
+Torus $T$와 complex $T$-module $V$가 주어졌다 하자. Irreducible character $\rchi_\lambda: T \rightarrow S^1$와 그에 해당하는 linear functional $\lambda:\mathfrak{t}\rightarrow\mathbb{R}$에 대하여, $\lambda$가 $V$의 *weight<sub>무게</sub>*이라는 것은 다음 집합
 
 $$V_\lambda=\left\{v\in V\mid t\cdot v=\rchi_\lambda(t)v\text{ for all $t\in T$}\right\}$$
 
@@ -305,7 +306,7 @@ $T$의 두 원소 $x,y$가 서로 conjugate이라 하자. 즉 적당한 $g\in G$
 $T/W$와 $\Conj(G)$ 사이에는 자연스러운 일대일대응이 존재한다.
 :::
 
-이 일대일대응 하에서, $G$ 위의 conjugation action은 $T/W$ 위에서 자명하게 작용한다. 즉, $G$의 각 원소는 자신이 속한 conjugacy class를 보존한다.
+이 일대일대응 하에서, $G$ 위의 conjugation action은 $T/W$ 위에서 자명하게 작용한다. 즉, $G$의 각 원소에 의한 conjugation은 모든 conjugacy class를 각각 그 자신으로 보낸다.
 
 ## Conjugation action의 분해
 
@@ -353,7 +354,7 @@ $$\SU(2)=\{A\in\GL(2;\mathbb{C})\mid A^\dagger A=I,\det A=1\}=\left\{\begin{pmat
 
 에서 확인해보자. 우선 $\SU(2)$의 maximal torus를 구해야 한다. 우리의 주장은 다음 집합
 
-$$T=\left\{\begin{pmatrix}e^{i\theta}&0\\0&e^{-i\theta}\end{pmatrix}\,\middle\vert \;\theta\in\mathbb{R}/2\pi\mathbb{Z}\right\}$$
+$$T=\left\{\begin{pmatrix}e^{i\theta}&0\\0&e^{-i\theta}\end{pmatrix}\middle\vert \theta\in\mathbb{R}/2\pi\mathbb{Z}\right\}$$
 
 이 $\SU(2)$의 (한) maximal torus라는 것이다. $T$가 $1$차원 torus인 것은 자명하므로, maximality만 보이면 충분하다. 이를 위해 $T$를 포함하는 $\SU(2)$의 abelian subgroup $A$가 주어졌다 하면, 임의의 원소
 
@@ -395,7 +396,7 @@ $$\begin{pmatrix}0&1\\-1&0\end{pmatrix}\begin{pmatrix}e^{i\theta}&0\\0&e^{-i\the
 
 이므로 torus $S^1$ 위에서의 reflection $\theta\mapsto -\theta$에 해당한다.
 
-이제 $\SU(2)$의 $\mathbb{C}^2$ 위에서의 자명한 representation을 생각하면, $\Aut(\mathbb{C}^2)=\GL(2;\mathbb{C})$이며 따라서 representation $\rho:\SU(2)\rightarrow \GL(2;\mathbb{C})$는 inclusion이다. 이를 torus $T$로 제한한 것도 마찬가지이며, 이로부터 $T$의 weight는 각각 $\theta, -\theta$, 그리고 이에 해당되는 weight space는 $\mathbb{C}e_1$, $\mathbb{C}e_2$이며 weight decomposition은 $\mathbb{C}e_1\oplus \mathbb{C}e_2$임을 안다. 이 위에서 Weyl group은 weight를 서로 바꿔주는 것으로 작용함을 확인할 수 있다.
+이제 $\SU(2)$의 $\mathbb{C}^2$ 위에서의 standard representation을 생각하면, $\Aut(\mathbb{C}^2)=\GL(2;\mathbb{C})$이며 따라서 representation $\rho:\SU(2)\rightarrow \GL(2;\mathbb{C})$는 inclusion이다. 이를 torus $T$로 제한한 것도 마찬가지이며, 이로부터 $T$의 weight는 각각 $1, -1$, 그리고 이에 해당되는 weight space는 $\mathbb{C}e_1$, $\mathbb{C}e_2$이며 weight decomposition은 $\mathbb{C}e_1\oplus \mathbb{C}e_2$임을 안다. 이 위에서 Weyl group은 weight를 서로 바꿔주는 것으로 작용함을 확인할 수 있다.
 
 ## Weyl chamber
 
@@ -405,7 +406,7 @@ $$\begin{pmatrix}0&1\\-1&0\end{pmatrix}\begin{pmatrix}e^{i\theta}&0\\0&e^{-i\the
 Maximal torus $T$의 원소 $t$가 *regular*라는 것은 $wtw^{-1}=t$를 만족하는 $w\in W$가 오직 $w=e$뿐인 것이다. 반대로, $wtw^{-1}=t$인 $w\neq e$가 존재하면 $t$를 *singular<sub>특이</sub>*라 한다.
 :::
 
-즉, regular element는 Weyl group action의 stabilizer가 자명한 원소이고, singular element는 비자명한 stabilizer를 갖는 원소이다. 일반적으로 $q$의 mapping degree를 계산하기 위해서는 $q$의 regular value에서의 값을 계산해야 하는데, orbit-stabilizer theorem을 생각하면 preimage가 이와 같이 $\lvert W\rvert$개의 image를 가지기 위해서는 반드시 stabilizer가 trivial해야한다는 것을 안다. 이로부터 이러한 원소를 regular element라 부르는 것이 자연스럽다.
+즉, regular element는 Weyl group action의 stabilizer가 trivial한 원소이고, singular element는 nontrivial한 stabilizer를 갖는 원소이다. 일반적으로 $q$의 mapping degree를 계산하기 위해서는 $q$의 regular value에서의 값을 계산해야 하는데, orbit-stabilizer theorem을 생각하면 preimage가 이와 같이 $\lvert W\rvert$개의 image를 가지기 위해서는 반드시 stabilizer가 trivial해야한다는 것을 안다. 이로부터 이러한 원소를 regular element라 부르는 것이 자연스럽다.
 
 ::: 예시 13
 $\SU(2)$의 경우, $T=\{\text{diag}(e^{i\theta}, e^{-i\theta})\}$이고 $W=\mathbb{Z}_2$가 $\theta\mapsto -\theta$로 작용한다. 따라서:
@@ -431,7 +432,7 @@ Compact connected Lie group $G$의 maximal torus $T$에 대하여:
 (3): 각 $w\neq e$에 대한 fixed point set이 $T$의 closed subgroup이고, $W$가 유한이므로 유한 개의 subgroup들의 합집합이다.
 :::
 
-Singular 원소들이 $T$에서 형성하는 집합은 torus를 여러 조각으로 나눈다. 가령 $\SU(2)$의 경우, singular 원소 두 점이 $S^1$을 두 개의 반원으로 나눈다. 각 반원에서 Weyl group은 free action을 정의하며, Weyl group action은 이들을 서로 대응시켜주는 역할을 한다.
+Singular 원소들이 $T$에서 형성하는 집합은 torus를 여러 조각으로 나눈다. 가령 $\SU(2)$의 경우, singular 원소 두 점이 $S^1$을 두 개의 반원으로 나눈다. Weyl group action은 이 두 반원을 서로 맞바꾸며, regular 원소들 위에서 free action을 정의한다.
 
 이 관점에서 보면, $T$의 regular 원소들의 quotient $T_{\text{reg}}/W$는 연결된 공간이며, 이를 *Weyl chamber*의 개념과 연결할 수 있다. $\SU(2)$의 경우 $T_{\text{reg}}/W \cong (0,\pi)$는 1차원 interval이고, 이것이 바로 1차원 Weyl chamber에 해당한다.
 

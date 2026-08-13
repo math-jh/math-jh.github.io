@@ -10,6 +10,7 @@ sidebar:
 
 date: 2025-02-02
 weight: 5
+drift_needed: true
 ---
 
 [§스킴, ⁋예시 10](/ko/math/scheme_theory/schemes#ex10)에서 우리는 두 개의 affine line $\mathbb{A}^1=\Spec \mathbb{K}[\x]$을 적당한 방식으로 붙여 projective space $\mathbb{P}^1$을 만들었다. 이번에는 이를 일반화하여, graded ring $A_\bullet$으로부터 scheme $\Proj A_\bullet$을 얻어내는 $\Proj$ 구성을 다룬다. 
@@ -20,13 +21,13 @@ weight: 5
 
 우선 우리는 기존에 위상수학에서 정의하던 projective space를 간단히 살펴본다. 위상공간 $\mathbb{P}^n$을 만들기 위해 우리는 위상공간 $\mathbb{R}^{n+1}\setminus \{0\}$을 생각했다. 그럼 이 위에 다음의 동치관계
 
-$$(x_0,\ldots, x_n)\sim (y_0,\ldots, y_n)\iff\text{$x_i=\lambda y_i$ for some $\lambda\neq 0$, for all $i$}$$
+$$(x_0,\ldots, x_n)\sim (y_0,\ldots, y_n)\iff\text{$x_i=\lambda y_i$ for all $i$, for some $\lambda\neq 0$}$$
 
 를 정의하면 projective space $\mathbb{P}^n$은 quotient space $(\mathbb{R}^{n+1}\setminus \{0\})/{\sim}$으로 정의되는 위상공간이며, $(x_0,\ldots, x_n)$을 포함하는 equivalence class를 표기의 편의를 위해 $[x_0:x_1:\cdots:x_n]$으로 표기한다. 
 
 이 때, canonical projection $\pi:\mathbb{R}^{n+1}\setminus\{0\}\rightarrow \mathbb{P}^n$를 생각하자. 그럼 $\mathbb{P}^n$의 한 점 $[x_0:x_1:\cdots:x_n]$의 fiber는 그 정의에 의하여
 
-$$\{(y_0,\ldots, y_n)\mid\text{$x_i=\lambda y_i$ for some $\lambda\neq 0$, for all $i$}\}$$
+$$\{(y_0,\ldots, y_n)\mid\text{$x_i=\lambda y_i$ for all $i$, for some $\lambda\neq 0$}\}$$
 
 즉 원점과 $(x_0,\ldots, x_n)$을 지나는 직선 위의 점들 중, 원점을 제외한 점들의 집합으로 주어진다. 이 때문에 $\mathbb{P}^n$은 종종 $\mathbb{R}^{n+1}$에서의 직선들의 공간으로 생각되기도 한다.
 
@@ -58,7 +59,7 @@ $$(x_{0/i},\ldots, x_{(i-1)/i}, 1, x_{(i+1)/i}, \ldots, x_{n/i})\in P_i,\qquad (
 
 으로 적을 수 있다. 이제 만일 이들 점이 $\mathbb{P}^n$의 어떤 점으로부터 나온 것이라 가정한다면, 그 점은 반드시 $U_i\cap U_j$에 속해 있어야 하고, 이 집합에서 $x_i,x_j\neq 0$이어야 하므로 $x_{j/i}, x_{i/j}\neq 0$이어야 한다. 표기의 편의상 $j>i$라 하고, 이 사실을 이용하면
 
-$$[x_{0/i}:\ldots: x_{(i-1)/i}: 1: x_{(i+1)/i}: \ldots: x_{j/i}:\ldots, x_{n/i}]=\left[\frac{x_{0/i}}{x_{j/i}}:\ldots: \frac{x_{(i-1)/i}}{x_{j/i}}: \frac{1}{x_{j/i}}: \frac{x_{(i+1)/i}}{x_{j/i}}: \ldots: 1:\ldots, \frac{x_{n/i}}{x_{j/i}}\right]$$
+$$[x_{0/i}:\ldots: x_{(i-1)/i}: 1: x_{(i+1)/i}: \ldots: x_{j/i}:\ldots: x_{n/i}]=\left[\frac{x_{0/i}}{x_{j/i}}:\ldots: \frac{x_{(i-1)/i}}{x_{j/i}}: \frac{1}{x_{j/i}}: \frac{x_{(i+1)/i}}{x_{j/i}}: \ldots: 1:\ldots: \frac{x_{n/i}}{x_{j/i}}\right]$$
 
 이다. 따라서 우변의 점이 
 
@@ -152,13 +153,13 @@ Graded ring $A_\bullet$에 대하여 다음이 성립한다.
 ::: 증명 (보조정리 3)
 1. $\mathfrak{a}$ 혹은 $\mathfrak{b}$를 포함하는 homogeneous prime ideal $\mathfrak{p}$는 그보다 작은 homogeneous ideal $\mathfrak{a}\mathfrak{b}$ 또한 포함하는 것이 자명하므로, 반대방향 포함관계만 보이면 충분하다. $\mathfrak{p}\supset \mathfrak{a}\mathfrak{b}$라 가정하자. 만일 $\mathfrak{p}\not\supseteq \mathfrak{b}$라 하면, $b\not\in \mathfrak{p}$인 $\mathfrak{b}$의 원소 $b$를 찾을 수 있다. 그럼 $\mathfrak{b}$가 homogeneous이므로, 이를 homogeneous element들의 합으로 분해하여
     
-    $$b=b_1+\cdots b_n,\qquad \text{$b_i\in \mathfrak{b}$ homogeneous}$$
+    $$b=b_1+\cdots+b_n,\qquad \text{$b_i\in \mathfrak{b}$ homogeneous}$$
 
     으로 쓸 수 있다. 한편, 임의의 homogeneous element $a\in \mathfrak{a}$에 대하여, $ab\in \mathfrak{a}\mathfrak{b}\subseteq \mathfrak{p}$이다. 한편 $\mathfrak{a}\mathfrak{b}\subseteq \mathfrak{p}$의 원소
 
     $$ab=ab_1+\cdots+ab_n$$
 
-    를 생각하면, $\mathfrak{p}$가 homogeneous이므로 $ab_i$들은 모두 $\mathfrak{p}$의 원소이다. 한편 앞선 가정에 의해 $b\not\in \mathfrak{p}$이므로, $b_i\not\in \mathfrak{p}$를 만족하는 $i$가 존재하고, 그럼 $ab_i$는 $\mathfrak{p}$에 속하는 homogeneous element이며 $b_i\not\in \mathfrak{p}$이므로 [\[가환대수학\] §등급환의 국소화, ⁋보조정리 2](/ko/math/commutative_algebra/localization_of_graded_rings#lem2)에 의해 $a\in \mathfrak{p}$이다. 따라서 $\mathfrak{a}\subseteq \mathfrak{p}$가 성립한다. 
+    를 생각하면, $\mathfrak{p}$가 homogeneous이므로 $ab_i$들은 모두 $\mathfrak{p}$의 원소이다. 한편 앞선 가정에 의해 $b\not\in \mathfrak{p}$이므로, $b_i\not\in \mathfrak{p}$를 만족하는 $i$가 존재하고, 그럼 $ab_i$는 $\mathfrak{p}$에 속하는 homogeneous element이며 $b_i\not\in \mathfrak{p}$이므로 $\mathfrak{p}$가 prime ideal인 것으로부터 $a\in \mathfrak{p}$이다. 따라서 [\[대수적 구조\] §등급환, ⁋명제 6](/ko/math/algebraic_structures/graded_rings#prop6)에 의해 $\mathfrak{a}\subseteq \mathfrak{p}$가 성립한다. 
 2. 이는 $\sum \mathfrak{a}_i$가 ideal들 $\mathfrak{a}_i$ 각각을 모두 포함하는 ideal 중 가장 작은 것으로 정의되므로 자명하다.
 3. [\[가환대수학\] §국소화의 성질들, ⁋따름정리 8](/ko/math/commutative_algebra/properties_of_localization#cor8).
 4. 정의에 의해 $Z_+(\mathfrak{a})\subseteq Z_+(\mathfrak{a}\cap A_+)$는 자명하므로 반대방향만 보이면 충분하다. 즉, $\mathfrak{p}$가 $\mathfrak{a}$의 양의 degree를 갖는 homogeneous element들을 모두 가지며, $A_+$를 통째로 포함하지는 않는 prime ideal이라 하고 $\mathfrak{a}\subseteq \mathfrak{p}$임을 보이자. 이를 위해서는 임의의 $a\in \mathfrak{a}\cap A_0$을 택했을 때, 위의 가정으로부터 $a$ 또한 $\mathfrak{p}$에 속함을 보이면 충분하다.  
@@ -171,12 +172,12 @@ Graded ring $A_\bullet$에 대하여 다음이 성립한다.
 Graded ring $A_\bullet$이 주어졌다 하자. 임의의 homogeneous ideal $\mathfrak{a}$에 대하여, $Z_+(\mathfrak{a})$ 꼴의 집합을 닫힌집합으로 갖는 $\Proj A_\bullet$의 (유일한) 위상을 *Zariski topology*라 부른다. 
 :::
 
-또, 이 보조정리의 넷째 결과에 의해, 우리는 $\Proj A_\bullet$을 정의할 때는 $A_+$에 속한 homogeneous ideal들만 고려하면 된다는 것을 안다. 이는 직관적으로도 자명한데, $A=\mathbb{K}[\x_0,\ldots, \x_n]$이라 두면 $A_0$에 들어있는 원소들은 어차피 상수함수이기 때문이다. 
+또, 이 보조정리의 넷째 결과에 의해, 우리는 $\Proj A_\bullet$의 위상을 정의할 때는 $A_+$에 속한 homogeneous ideal들만 고려하면 된다는 것을 안다. 이는 직관적으로도 자명한데, $A=\mathbb{K}[\x_0,\ldots, \x_n]$이라 두면 $A_0$에 들어있는 원소들은 어차피 상수함수이기 때문이다. 
 
 이제 다음을 정의한다.
 
 ::: 정의 5
-Graded ring $A_\bullet$의 임의의 homogeneous element $f$에 대하여, $Z_+(f)$의 $\Proj A_\bullet$에서의 complement $\Proj A_\bullet\setminus Z_+(f)$를 $D_+(f)$라 적는다. 
+Graded ring $A_\bullet$의 임의의 homogeneous element $f$에 대하여, $Z_+(f)$의 $\Proj A_\bullet$에서의 complement $\Proj A_\bullet\setminus Z_+(f)$를 $D_+(f)$라 적는다. 여기에서 homogeneous element $f$에 대한 $Z_+(f)$는 $Z_+((f))$의 축약이며, 마찬가지로 임의의 homogeneous ideal $\mathfrak{a}$에 대하여 $\Proj A_\bullet\setminus Z_+(\mathfrak{a})$를 $D_+(\mathfrak{a})$로 적는다. 
 :::
 
 다음 따름정리는 [보조정리 3](#lem3)의 첫째 결과에 의해 바로 얻어진다. 
@@ -224,7 +225,7 @@ $$\frac{x^{\deg f}}{f^{\deg x}}\in \mathfrak{q}$$
 
 $$xy\in \mathfrak{p}\iff \frac{x^{\deg f}}{f^{\deg x}}\frac{y^{\deg f}}{f^{\deg y}}\in \mathfrak{q}$$
 
-이고, $\mathfrak{q}$가 prime ideal인 것으로부터 $\mathfrak{p}$가 prime ideal인 것을 안다. 또 $f^{\deg f}/f^{\deg f}=1\not\in \mathfrak{q}$이므로 $f\not\in \mathfrak{p}$이고, 따라서 $\mathfrak{p}$는 $A_+$를 포함하지 않아 $\mathfrak{p}\in D_+(f)$이다. 이제 이 대응 $\mathfrak{p}\mapsto \mathfrak{p}A_f\cap A_{(f)}$과 $\mathfrak{q}\mapsto \mathfrak{p}$가 서로의 역함수인 것을 쉽게 확인할 수 있고, $A_\bullet$의 임의의 homogeneous ideal $\mathfrak{a}$에 대하여, $D_+(f)$의 닫힌집합 $Z_+(\mathfrak{a})\cap D_+(f)$는 이 함수에 의하여 $\Spec A_{(f)}$의 닫힌집합 $Z(\mathfrak{a}A_f\cap A_{(f)})$으로 옮기므로 이것이 homeomorphism이 되는 것을 안다.
+이고, $\mathfrak{q}$가 prime ideal인 것과 [\[가환대수학\] §등급환의 국소화, ⁋보조정리 2](/ko/math/commutative_algebra/localization_of_graded_rings#lem2)의 셋째 결과로부터 $\mathfrak{p}$가 prime ideal인 것을 안다. 또 $f^{\deg f}/f^{\deg f}=1\not\in \mathfrak{q}$이므로 $f\not\in \mathfrak{p}$이고, 따라서 $\mathfrak{p}$는 $A_+$를 포함하지 않아 $\mathfrak{p}\in D_+(f)$이다. 이제 이 대응 $\mathfrak{p}\mapsto \mathfrak{p}A_f\cap A_{(f)}$과 $\mathfrak{q}\mapsto \mathfrak{p}$가 서로의 역함수인 것을 쉽게 확인할 수 있고, $A_\bullet$의 임의의 homogeneous ideal $\mathfrak{a}$에 대하여, $D_+(f)$의 닫힌집합 $Z_+(\mathfrak{a})\cap D_+(f)$는 이 함수에 의하여 $\Spec A_{(f)}$의 닫힌집합 $Z(\mathfrak{a}A_f\cap A_{(f)})$으로 옮기므로 이것이 homeomorphism이 되는 것을 안다.
 :::
 
 그럼 이제 $\Proj A_\bullet$에 scheme 구조를 주는 방법은 자명하다. 다음 보조정리의 증명은 [보조정리 8](#lem8)과 거의 유사하다. 

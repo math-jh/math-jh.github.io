@@ -10,6 +10,7 @@ sidebar:
 
 date: 2022-06-17
 weight: 7
+drift_needed: true
 
 ---
 
@@ -27,13 +28,13 @@ weight: 7
 
 함수 $F:N\rightarrow M$이 submanifold라는 것은 직관적으로 $F$가 inclusion $N\hookrightarrow M$의 역할을 하는 것으로 생각할 수 있다. 이 때, $F$의 image $F(N)\subseteq M$에 위상구조를 주는 방법은 두 가지가 있는데, 하나는 전단사함수 $F:N\rightarrow F(N)$을 통해 $N$의 위상을 옮겨오는 것이고, 다른 하나는 $M$에 주어진 위상구조를 subspace topology를 통해 가져오는 것이다. 만일 이 두 위상이 서로 동일하다면 $F$를 *embedded* submanifold라 부르는 것이고, 그렇지 않다면 이를 단순히 submanifold라 부른다.
 
-{% diagram Math/Manifolds/Submanifolds-1.svg width="30.02em" alt="Immersion, submanifold, immersion" %}
+{% diagram Math/Manifolds/Submanifolds-1.svg width="30.02em" alt="Immersion, submanifold, embedded submanifold" %}
 
-예를 들어, 위의 그림에서 $N=\mathbb{R}$, $M=\mathbb{R}^2$이며, (a)는 immersion이지만 submanifold는 아니고, (b)는 submanifold이지만 embedded submanifold는 아니며, (c)는 embedded submanifold이다. 편의상 (b)에서 $t\rightarrow \infty$일 때 $F(t)$가 향하는 점을 $F(0)$이라 하면, $\mathbb{R}$에서 $(-1,1)$은 열린집합이지만, $N$에 주어진 subspace topology 상에서 $F\bigl((-1,1)\bigr)$은 열린집합이 될 수 없다.
+예를 들어, 위의 그림에서 $N=\mathbb{R}$, $M=\mathbb{R}^2$이며, (a)는 immersion이지만 submanifold는 아니고, (b)는 submanifold이지만 embedded submanifold는 아니며, (c)는 embedded submanifold이다. 편의상 (b)에서 $t\rightarrow \infty$일 때 $F(t)$가 향하는 점을 $F(0)$이라 하면, $\mathbb{R}$에서 $(-1,1)$은 열린집합이지만, $F(N)$에 주어진 subspace topology 상에서 $F\bigl((-1,1)\bigr)$은 열린집합이 될 수 없다.
 
 
 ::: 예시 2
-Manifold $M$과 그 open submanifold $U$에 대하여, $\iota:U\hookrightarrow M$은 $M$의 embedded submanifold이다. 모든 $p\in U$에 대하여 $\dd{\iota_p}$가 injective라는 것은 $T_pU$와 $T_{\iota(p)}M$ 사이의 isomorphism이라는 사실로부터 명확하고, 또 open submanifold의 정의에 의해 $\iota(U)$에는 subspace topology가 주어져 있다.
+Manifold $M$과 그 open submanifold $U$에 대하여, $\iota:U\hookrightarrow M$은 $M$의 embedded submanifold이다. 모든 $p\in U$에 대하여 $\dd{\iota_p}$가 injective라는 것은 [§미분사상, ⁋명제 8](/ko/math/manifolds/differentials#prop8), 즉 $\dd{\iota_p}$가 $T_pU$와 $T_{\iota(p)}M$ 사이의 isomorphism이라는 사실로부터 명확하고, 또 open submanifold의 정의에 의해 $\iota(U)$에는 subspace topology가 주어져 있다.
 :::
 
 ::: 예시 3
@@ -74,7 +75,7 @@ $$\tau^{-1}\circ\bigl((\tau\circ F\circ\varphi^{-1})\vert_{U'}\bigr)\circ\varphi
 가 $U$와 $F(U)$ 사이의 diffeomorphism을 정의한다. 
 :::
 
-Manifold $M$과 $p\in M$에 대하여, $C_p^\infty(M)$의 원소들 $y^1, \ldots, y^k$가 주어졌다 하자. 만일 이들의 differential $\dd{y}^i$들이 $T_p^\ast M$의 linearly independent인 부분집합이 된다면 이들을 점 $p$에서 independent한 함수들이라 한다. 
+Manifold $M$과 $p\in M$에 대하여, $\mathcal{C}_{M,p}^\infty$의 원소들 $y^1, \ldots, y^k$가 주어졌다 하자. 만일 이들의 differential $\dd{y}^i$들이 $T_p^\ast M$의 linearly independent인 부분집합이 된다면 이들을 점 $p$에서 *independent한 함수들*이라 한다. 
 
 ::: 따름정리 6
 $m$차원 manifold $M$을 생각하자. 만일 $y^1, \ldots, y^m$들이 점 $p_0\in M$에서 independent라면, $(y^1, \ldots, y^m)$은 $p_0$ 근방에서 coordinate system이 된다.
@@ -112,7 +113,7 @@ $T_{p_0}^\ast M$의 basis를 이루는 집합 $\{\dd{y}^1,\ldots, \dd{y}^k\}$의
 다음 두 따름정리들은 앞으로 *rank theorem*이라는 이름으로 자주 사용하게 된다. 
 
 ::: 따름정리 9 (Rank theorem, Submersion case)
-두 manifold $M,N$과 $C^\infty$ 함수 $F:M\rightarrow N$에 대하여, $\dd{F_p}$가 surjective라 하자. 그럼 점 $F(p)$ 근방에서 정의된 coordinate system $\psi=(y^j)_{j=1}^n$에 대하여 적당한 함수들 $x^{n+1},\ldots, x^m$이 존재하여 다음의 함수들
+$m$차원 manifold $M$과 $n$차원 manifold $N$, $C^\infty$ 함수 $F:M\rightarrow N$과 점 $p\in M$에 대하여, $\dd{F_p}$가 surjective라 하자. 그럼 점 $F(p)$ 근방에서 정의된 coordinate system $\psi=(y^j)_{j=1}^n$에 대하여 적당한 함수들 $x^{n+1},\ldots, x^m$이 존재하여 다음의 함수들
 
 $$x^1=y^1\circ F,\quad x^2=y^2\circ F,\quad\ldots,\quad x^n=y^n\circ F,\qquad x^{n+1},\quad \ldots,\quad x^m$$
 
@@ -127,7 +128,7 @@ $$(\dd{F_p})^\ast(\dd{y}^j\vert_{F(p)})=\dd{y}^j\vert_{F(p)}\circ \dd{F_p}=\dd{(
 :::
 
 ::: 따름정리 10 (Rank theorem, Immersion case)
-두 manifold $M,N$과 $C^\infty$ 함수 $F:M\rightarrow N$에 대하여, $\dd{F_p}$가 injective라 하자. 그럼 점 $F(p)$ 근방에서 정의된 coordinate system $\psi=(y^j)_{j=1}^n$에 대하여, 다음 집합
+Manifold $M$과 $n$차원 manifold $N$, $C^\infty$ 함수 $F:M\rightarrow N$과 점 $p\in M$에 대하여, $\dd{F_p}$가 injective라 하자. 그럼 점 $F(p)$ 근방에서 정의된 coordinate system $\psi=(y^j)_{j=1}^n$에 대하여, 다음 집합
 
 $$\{x^j=y^j\circ F\mid j=1,\ldots, n\}$$
 

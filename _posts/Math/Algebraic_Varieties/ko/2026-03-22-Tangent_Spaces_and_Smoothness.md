@@ -10,6 +10,7 @@ sidebar:
 
 date: 2026-03-22
 weight: 6
+drift_needed: true
 
 
 ---
@@ -45,7 +46,7 @@ $$T_x X = (\mathfrak{m}_x / \mathfrak{m}_x^2)^\ast$$
 우리는 해석학 스타일의 $\epsilon$-$\delta$ 꼴의 미분을 사용하지는 않으나, 본질적으로 variety들은 다항식으로 정의되며 이들의 미분은 형식적으로 $\x^n$을 미분하면 $n\cdot \x^{n-1}$이 나오는 것으로 생각할 수 있다. 특히 affine variety의 경우 이는 더 명확하게 써 줄 수 있다.
 
 ::: 명제 2
-Affine variety $X = Z(f_1, \ldots, f_k) \subseteq \mathbb{A}^n$의 점 $x = (x_1, \ldots, x_n)$에서,
+Affine variety $X = Z(f_1, \ldots, f_k) \subseteq \mathbb{A}^n$이 $I(X) = (f_1, \ldots, f_k)$를 만족한다고 하자. 그럼 $X$의 점 $x = (x_1, \ldots, x_n)$에서,
 
 $$T_x X \cong \{v \in \mathbb{K}^n \mid (\dd{f_i})_x(v) = 0 \text{ for all } i\}$$
 
@@ -57,17 +58,17 @@ $$(\dd{f_i})_x(v) = \sum_{j=1}^n \frac{\partial f_i}{\partial \x_j}(x) v_j$$
 :::
 
 ::: 증명
-$X$의 coordinate ring $\mathbb{K}[X] = \mathbb{K}[\x_1, \ldots, \x_n] / (f_1, \ldots, f_k)$를 생각하자. $\mathfrak{m}_x = (\x_1 - a_1, \x_2 - a_2, \ldots, \x_n - a_n) / (f_1, \ldots, f_k)$이므로,
+$X$의 coordinate ring $\mathbb{K}[X] = \mathbb{K}[\x_1, \ldots, \x_n] / (f_1, \ldots, f_k)$를 생각하자. $\mathfrak{m}_x = (\x_1 - x_1, \x_2 - x_2, \ldots, \x_n - x_n) / (f_1, \ldots, f_k)$이므로,
 
-$$\mathfrak{m}_x / \mathfrak{m}_x^2 \cong (\x_1 - a_1, \x_2 - a_2, \ldots, \x_n - a_n) / \left( (\x_1 - a_1, \x_2 - a_2, \ldots, \x_n - a_n)^2 + (f_1, \ldots, f_k) \right)$$
+$$\mathfrak{m}_x / \mathfrak{m}_x^2 \cong (\x_1 - x_1, \x_2 - x_2, \ldots, \x_n - x_n) / \left( (\x_1 - x_1, \x_2 - x_2, \ldots, \x_n - x_n)^2 + (f_1, \ldots, f_k) \right)$$
 
 이다. 각 $f_i$를 $x$에서 Taylor 전개하면
 
-$$f_i = \sum_{j=1}^n \frac{\partial f_i}{\partial \x_j}(x) (\x_j - a_j) + \text{higher order terms}$$
+$$f_i = \sum_{j=1}^n \frac{\partial f_i}{\partial \x_j}(x) (\x_j - x_j) + \text{higher order terms}$$
 
-이고, higher order terms는 $(\x_1 - a_1, \x_2 - a_2, \ldots, \x_n - a_n)^2$에 속한다. 따라서 $\mathfrak{m}_x / \mathfrak{m}_x^2$에서 $f_i$들의 linear part $\sum_j \frac{\partial f_i}{\partial \x_j}(x) (\x_j - a_j)$가 0이 된다.
+이고, higher order terms는 $(\x_1 - x_1, \x_2 - x_2, \ldots, \x_n - x_n)^2$에 속한다. 따라서 $\mathfrak{m}_x / \mathfrak{m}_x^2$에서 $f_i$들의 linear part $\sum_j \frac{\partial f_i}{\partial \x_j}(x) (\x_j - x_j)$가 0이 된다.
 
-한편, $\mathfrak{m}_x / \mathfrak{m}_x^2$는 $\x_j - a_j$들의 linear combination으로 생성되므로 $\mathbb{K}^n$의 quotient로 볼 수 있다. 이때 differential $(\dd{f_i})_x$의 kernel이 정확히 $\mathfrak{m}_x / \mathfrak{m}_x^2$에서 사라지는 방향들에 해당한다. Dual을 취하면
+한편, $\mathfrak{m}_x / \mathfrak{m}_x^2$는 $\x_j - x_j$들의 linear combination으로 생성되므로 $\mathbb{K}^n$의 quotient로 볼 수 있다. 이때 differential $(\dd{f_i})_x$의 kernel이 정확히 $\mathfrak{m}_x / \mathfrak{m}_x^2$에서 사라지는 방향들에 해당한다. Dual을 취하면
 
 $$T_x X = (\mathfrak{m}_x / \mathfrak{m}_x^2)^\ast \cong \{v \in \mathbb{K}^n \mid (\dd{f_i})_x(v) = 0 \text{ for all } i\}$$
 
@@ -144,7 +145,7 @@ $$\dim T_x X = \dim_{\mathbb{K}}(\mathfrak{m}_x/\mathfrak{m}_x^2) \ge \dim \math
 위의 예시들에서 우리는 다음 명제를 자연스럽게 이용했다.
 
 ::: 명제 8
-(Jacobian Criterion) $X = Z(f_1, \ldots, f_k) \subseteq \mathbb{A}^n$이 irreducible하고 $x \in X$라 하자. 그럼 $x$가 smooth point일 필요충분조건은 Jacobian matrix $J_x$의 rank가 $n - \dim X$인 것이다.
+(Jacobian Criterion) $X = Z(f_1, \ldots, f_k) \subseteq \mathbb{A}^n$이 irreducible하고 $I(X) = (f_1, \ldots, f_k)$이며 $x \in X$라 하자. 그럼 $x$가 smooth point일 필요충분조건은 Jacobian matrix $J_x$의 rank가 $n - \dim X$인 것이다.
 :::
 
 ::: 증명
@@ -166,7 +167,7 @@ Irreducible variety $X$의 *generic point<sub>일반점</sub>* $\eta$는 $X$의 
 Affine case $X = \Spec A$에서, $\eta$는 $A$의 minimal prime ideal (즉, $(0)$ ideal)에 해당하며, local ring $\mathcal{O}_{X,\eta}$는 정확히 function field $\mathbb{K}(X) = \Frac(A)$이다. 기하학적으로, generic point는 $X$의 "가장 일반적인 점"으로, $X$의 어떤 특정한 성질도 갖지 않는 점으로 생각하면 된다. 이러한 아이디어를 다음 증명에서 활용할 수 있다. 
 
 ::: 명제 10
-Variety $X$의 smooth points들의 집합 $X_\sm$은 $X$의 dense open subset이다. 특히, $X_\sm \ne \emptyset$이다.
+Irreducible variety $X$의 smooth points들의 집합 $X_\sm$은 $X$의 dense open subset이다. 특히, $X_\sm \ne \emptyset$이다.
 :::
 
 ::: 증명
@@ -200,7 +201,7 @@ Singular point에서는 tangent space가 너무 커서 variety의 국소적 구�
 이를 위해, 임의의 다항식 $f\in \mathbb{K}[\x_1,\ldots, \x_n]$에 대하여 $f$의 *initial term* $\initial(f)$을 $f$의 homogeneous component 중 가장 작은 degree를 갖는 것으로 정의한다. 그럼 임의의 ideal $\mathfrak{a}$에 대하여, $\mathfrak{a}$의 *initial ideal* $\initial(\mathfrak{a})$를 $\initial(f)$들로 생성되는 homogeneous ideal로 정의한다. 
 
 ::: 정의 13
-임의의 affine variety $X\subseteq \mathbb{A}^n$에 대하여, $\initial(I(X))$이 정의하는 algebraic variety를 $X$의 원점에서의 *tangent cone<sub>접뿔</sub>*이라 정의한다.
+임의의 affine variety $X\subseteq \mathbb{A}^n$에 대하여, $\initial(I(X))$이 정의하는 algebraic variety를 $X$의 원점에서의 *tangent cone<sub>접뿔</sub>*이라 정의하고, 이를 $TC_0 X$로 표기한다.
 :::
 
 더 일반적으로, $f$를 $\x_i-x_i$들에 대한 다항식으로 쓰고 비슷한 정의를 하면 임의의 점에서의 tangent cone을 정의할 수 있다. 이것이 cone이라 불리는 이유는, [§사영다양체, ⁋정의 12](/ko/math/algebraic_varieties/projective_varieties#def12)와 마찬가지로 homogeneous ideal의 zero set이기 때문이다.

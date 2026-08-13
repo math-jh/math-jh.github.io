@@ -10,6 +10,7 @@ sidebar:
 
 date: 2024-08-29
 weight: 9
+drift_needed: true
 
 ---
 
@@ -20,7 +21,7 @@ weight: 9
 Abelian category를 정의하기 위해서는 우선 additive category를 정의해야 한다.
 
 ::: 정의 1
-Category $\mathcal{A}$가 *$\Ab$-category*라는 것은 $\Hom_\mathcal{C}(A,B)$가 모두 abelian group의 구조를 갖고 있으며, 이 때 $(\Hom_\mathcal{C}(A,B),+)$가 합성에 대한 분배법칙을 만족하는 것이다. 즉, 임의의 $g_1,g_2\in\Hom_\mathcal{C}(B,C)$와, 임의의 $f:A\rightarrow B$ 혹은 $h:C\rightarrow D$에 대하여
+Category $\mathcal{A}$가 *$\Ab$-category*라는 것은 $\Hom_\mathcal{A}(A,B)$가 모두 abelian group의 구조를 갖고 있으며, 이 때 $(\Hom_\mathcal{A}(A,B),+)$가 합성에 대한 분배법칙을 만족하는 것이다. 즉, 임의의 $g_1,g_2\in\Hom_\mathcal{A}(B,C)$와, 임의의 $f:A\rightarrow B$ 혹은 $h:C\rightarrow D$에 대하여
 
 $$(g_1+g_2)\circ f=g_1\circ f+g_2\circ f,\qquad h\circ(g_1+g_2)=h\circ g_1+h\circ g_2$$
 
@@ -39,7 +40,7 @@ Zero object $0$에서 $B$로의 morphism $0_{0B}$가 유일하게 존재한다. 
 
 $$0_{AB}+0_{AB}=0_{0B}\circ0_{A0}+0_{0B}\circ0_{A0}=(0_{0B}+0_{0B})\circ 0_{A0}=0_{0B}\circ 0_{A0}=0_{AB}$$
 
-으로부터 자명하다.
+으로부터 따라온다. 실제로 abelian group $\Hom_\mathcal{A}(A,B)$에서 위 식의 양변에 $-0_{AB}$를 더하면 $0_{AB}$가 덧셈에 대한 항등원임을 얻는다.
 :::
 
 ## Abelian category
@@ -49,7 +50,7 @@ $$0_{AB}+0_{AB}=0_{0B}\circ0_{A0}+0_{0B}\circ0_{A0}=(0_{0B}+0_{0B})\circ 0_{A0}=
 ::: 정의 3
 Additive category $\mathcal{A}$가 *abelian category<sub>아벨 카테고리</sub>*라는 것은 다음 조건들이 추가로 성립하는 것이다.
 
-1. 임의의 homomorphism이 kernel과 cokernel을 갖는다.
+1. 임의의 morphism이 kernel과 cokernel을 갖는다.
 2. 임의의 monomorphism $f$는 $\coker f$의 kernel과 같다.
 3. 임의의 epimorphism $f$는 $\ker f$의 cokernel과 같다.
 :::
@@ -64,11 +65,11 @@ $$0 \rightarrow A \rightarrow B \rightarrow C$$
 
 $$A \rightarrow B \rightarrow C \rightarrow 0$$
 
-이 주어졌을 때 $C$를 $A \rightarrow B$의 cokernel과 동일시할 수 있다. Abelian category에서는 임의의 homomorphism $f:A\rightarrow B$에 대해 $f$의 kernel $i:\ker f\rightarrow A$와 cokernel $p:B\rightarrow \coker f$가 존재한다. 
+이 주어졌을 때 $C$를 $A \rightarrow B$의 cokernel과 동일시할 수 있다. Abelian category에서는 임의의 morphism $f:A\rightarrow B$에 대해 $f$의 kernel $i:\ker f\rightarrow A$와 cokernel $p:B\rightarrow \coker f$가 존재한다. 
 
 임의의 abelian category $\mathcal{A}$에서, $f$의 *image*는 다음의 morphism
 
-$$\ker(\coker f)\rightarrow\coker f$$
+$$\ker(\coker f)\rightarrow B$$
 
 으로 정의된다. 비슷하게, $f$의 *coimage*는 다음의 morphism
 
@@ -86,7 +87,7 @@ Additive category $\mathcal{A}$에서 정의된 다음의 데이터를 생각하
 - 대상들의 모임 $(A_n)_{n\in \mathbb{Z}}$,
 - morphism들의 모임 $(d_n:A_n \rightarrow A_{n-1})_{n\in \mathbb{Z}}$
 
-만일 이들 데이터가 조건 $d_n\circ d_{n-1}=0$을 만족한다면, 이를 *chain complex<sub>사슬복합체</sub>*라 부르고 $A_\bullet$으로 적는다. 
+만일 이들 데이터가 조건 $d_n\circ d_{n+1}=0$을 만족한다면, 이를 *chain complex<sub>사슬복합체</sub>*라 부르고 $A_\bullet$으로 적는다. 
 :::
 
 한편, chain complex $A_\bullet$, $B_\bullet$ 사이의 morphism을 *chain map*이라 부르며, 이는 조건 $d_n^B\circ f_n=f_{n-1}\circ d_n^A$를 만족하는 morphism들의 모임 $(f_n: A_n \rightarrow B_n)_{n\in \mathbb{Z}}$으로 주어진다. 이를 통해 chain complex들의 category $\Ch(\mathcal{A})$를 정의할 수 있다.
@@ -95,11 +96,11 @@ $\mathcal{A}$가 abelian category였다면 이를 조금 더 자세히 살펴볼
 
 이들의 kernel과 image를 각각
 
-$$Z_n=\ker(d_{n-1}),\qquad B_n=\im(d_n)$$
+$$Z_n=\ker(d_n),\qquad B_n=\im(d_{n+1})$$
 
-으로 표기하며, 이들의 원소들은 각각 *$n$-cycle*과 *$n$-boundary*라 부른다. $C_n$의 원소는 *$n$-chain*이라 부른다. 어렵지 않게 다음의 monomorphism들
+으로 표기하며, 이들의 원소들은 각각 *$n$-cycle*과 *$n$-boundary*라 부른다. $A_n$의 원소는 *$n$-chain*이라 부른다. 어렵지 않게 다음의 monomorphism들
 
-$$B_n \hookrightarrow Z_n \hookrightarrow C_n$$
+$$B_n \hookrightarrow Z_n \hookrightarrow A_n$$
 
 이 존재함을 확인할 수 있으며, 이 때 cokernel $Z_n/B_n$을 $A_\bullet$의 *$n$-th homology*라 부르고 $H_n(A_\bullet)$ 혹은 간단히 $H_n(A)$로 적는다. 
 
@@ -110,11 +111,11 @@ $\mathcal{A}^\op$에서의 chain complex는 *cochain complex<sub>공사슬복합
 
 $$\cdots \rightarrow A_{n+1}\overset{d_{n+1}}{\longrightarrow}A_n\overset{d_n}{\longrightarrow}A_{n-1}\rightarrow\cdots$$
 
-이 $A_n$에서 *exact<sub>완전</sub>*라는 것은 위의 monomorphism $Z_n \rightarrow B_n$이 isomorphism인 것이다. 모든 곳에서 exact인 chain complex를 *exact sequence*라 부른다.
+이 $A_n$에서 *exact<sub>완전</sub>*라는 것은 위의 monomorphism $B_n \rightarrow Z_n$이 isomorphism인 것이다. 모든 곳에서 exact인 chain complex를 *exact sequence*라 부른다.
 :::
 
 ::: 예시 6
-다음의 chain complex
+다음의 exact sequence
 
 $$\cdots 0 \rightarrow 0 \rightarrow A \rightarrow B \rightarrow C \rightarrow 0 \rightarrow 0 \rightarrow \cdots$$
 
@@ -142,7 +143,7 @@ $$0 \rightarrow F(A) \rightarrow F(B) \rightarrow F(C)$$
 
 가 exact인 것이다. 비슷하게 $F$가 *right exact<sub>오른쪽 완전</sub>*인 것은 위와 같이 임의의 short exact sequence가 주어졌을 때, 다음의 sequence
 
-$$A \rightarrow B \rightarrow C \rightarrow 0$$
+$$F(A) \rightarrow F(B) \rightarrow F(C) \rightarrow 0$$
 
 이 exact인 것이다. Left exact인 동시에 right exact인 functor를 *exact functor<sub>완전 함자</sub>*라 부른다.
 :::
@@ -165,7 +166,7 @@ $F$가 contravariant였더라도 위의 정의와 마찬가지로 left exactness
 임의의 small abelian category $\mathcal{A}$에 대하여, 적당한 ring $A$와 fully faithful, exact functor $F:\mathcal{A}\rightarrow\lMod{A}$이 존재한다.
 :::
 
-따라서, 임의의 abelian category의 대상들을 $A$-module로 생각하고, 이들의 morphism을 $A$-linear map으로 생각한 후 계산을 해도 무관하다.
+따라서, 임의의 small abelian category의 대상들을 $A$-module로 생각하고, 이들의 morphism을 $A$-linear map으로 생각한 후 계산을 해도 무관하다.
 
 ---
 
@@ -173,7 +174,3 @@ $F$가 contravariant였더라도 위의 정의와 마찬가지로 left exactness
 
 **[Wei]** C.A. Weibel. *An Introduction to Homological Algebra*. Cambridge Studies in Advanced Mathematics. Cambridge University Press, 1995.  
 **[Vak]** R. Vakil, *The rising sea: foundations of algebraic geometry*. 2015. Preprint. [링크](http://math.stanford.edu/~vakil/216blog/FOAGnov1817public.pdf)
-
----
-
-[^1]: 이들이 실제로 집합이라는 것은 $B^A$가 집합이라는 사실로부터 자명하다. 따라서, 해당 예시에서 다룬 algebraic structure들의 category는 모두 locally small category이다. 

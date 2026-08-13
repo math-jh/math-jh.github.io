@@ -10,6 +10,7 @@ sidebar:
 
 date: 2026-03-29
 weight: 12
+drift_needed: true
 
 
 ---
@@ -38,21 +39,21 @@ $$\S_A(M^\vee)\otimes_A\kappa(x)=\S_{\kappa(x)} (M^\vee\otimes_A\kappa(x))=\S_{\
 
 이제 $\S_{\kappa(x)}(M_x^\vee)$는 $\kappa(x)$를 계수로 갖고, $M_x^\vee$의 각 원소들을 1차식으로 갖는 polynomial algebra이며, 그렇다면 $V(M)_x$의 fiber는 이들 $M_x^\vee$의 원소들을 coordinate function으로 갖는 점들이고, 따라서 이들 점들은 $M_x$의 double dual이라 생각할 수 있다. 이제 만일 $M$이 finitely generated $A$-module이라면, canonical isomorphism $M_x\cong M_x^{\vee\vee}$이 존재하므로 이로부터 각각의 fiber $V(M)_x$을 $\kappa(x)$-vector space $M_x$로 이해할 수 있다. 
 
-추가적인 계산을 통해 이 데이터가 locally trivial 조건을 만족한다는 것을 확인할 수 있으며, 이로서 우리는 finitely generated $A$-module $M$이 주어졌을 때 이를 $X$ 위에 정의된 vector bundle로 생각할 수 있다는 것을 확인할 수 있다. 
+만일 $M$이 finitely generated projective, 즉 locally free $A$-module이라면 추가적인 계산을 통해 이 데이터가 locally trivial 조건을 만족한다는 것을 확인할 수 있으며, 이로서 우리는 이를 $X$ 위에 정의된 vector bundle로 생각할 수 있다는 것을 확인할 수 있다. 
 
 한편 이 vector bundle이 locally trivial임을 보이는 것은 본질적으로 sheaf의 언어로 이를 살펴보는 것과 같다. 우리는 기하적 직관을 위해 sheaf의 언어를 많이 사용하지는 않았는데, 대략적으로 설명하면 다음과 같다. 
 
-위와 마찬가지로 affine variety $X$와 그 coordinate ring $A$, 그리고 $A$-module $M$이 주어졌을 때, $X$ 위에 정의된 sheaf $\widetilde{M}$을 다음의 식
+위와 마찬가지로 affine variety $X$와 그 coordinate ring $A$, 그리고 $A$-module $M$이 주어졌을 때, $X$ 위에 정의된 sheaf $\widetilde{M}$을 basic open set $U=D(f)$ 위에서 다음의 식
 
 $$\widetilde{M}(U)=M\otimes_A \mathcal{O}_X(U)$$
 
-으로 정의한다. 이는 기본적으로 위에서 $\kappa(x)$를 도입하는 것과 같은 맥락이며, 실제로 우리가 자세히 계산하지는 않았지만 $V(M)$의 local triviality를 보일 때는 이와 같이 structure sheaf를 사용해서 base change를 했을 것이다. 그럼 특히 $X$ 전체에 대해서는 
+으로 정의하고, 일반적인 열린집합 위에서의 값은 sheaf 조건으로 결정한다. 이는 기본적으로 위에서 $\kappa(x)$를 도입하는 것과 같은 맥락이며, 실제로 우리가 자세히 계산하지는 않았지만 $V(M)$의 local triviality를 보일 때는 이와 같이 structure sheaf를 사용해서 base change를 했을 것이다. 그럼 특히 $X$ 전체에 대해서는 
 
 $$\widetilde{M}(X)=M\otimes_A A=M$$
 
 이 되어 $M$이 $\widetilde{M}$의 global section space가 된다. 
 
-이 두 정의는 본질적으로 같은 대상을 다른 기하적 언어로 표현한 것에 불과하다. 즉, affine variety $X$와 그 coordinate ring $A$, finitely generated $A$-module $M$에 대하여, $\widetilde{M}$의 étale space가 곧 $V(M)$이고, $V(M)$의 section sheaf가 $\widetilde{M}$이다. 
+이 두 정의는 본질적으로 같은 대상을 다른 기하적 언어로 표현한 것에 불과하다. 즉, affine variety $X$와 그 coordinate ring $A$, finitely generated projective $A$-module $M$에 대하여, $\widetilde{M}$에 대응하는 total space, 즉 relative Spec이 곧 $V(M)$이고, $V(M)$의 section sheaf가 $\widetilde{M}$이다. 
 
 일반적으로, 구체적인 기하적 언어에 비교했을 때 sheaf 언어의 장점은 더 일반적인 경우에 적용이 가능하다는 것이다. 가령 다음을 정의한다. ([\[가환대수학\] §기본 개념들, ⁋정의 8](/ko/math/commutative_algebra/basic_notions#def8))
 
@@ -60,7 +61,7 @@ $$\widetilde{M}(X)=M\otimes_A A=M$$
 일반적인 variety $X$ 위의 $\mathcal{O}_X$-module $\mathcal{F}$가 *quasi-coherent sheaf<sub>준연접층</sub>*라는 것은, $X$의 affine open cover $\{U_i\}$와 각각의 coordinate ring $A_i=\mathcal{O}_X(U_i)$-module $M_i$가 존재하여 $\mathcal{F}\vert_{U_i}\cong \widetilde{M_i}$가 되는 것이다. 만일 각 $M_i$가 finitely generated $A_i$-module이라면, $\mathcal{F}$를 *coherent sheaf<sub>연접층</sub>*라 부른다.
 :::
 
-일반적으로 quasi-coherent sheaf를 다룰 때는 각각의 affine cover마다 다른 $M$이 붙어있을 수 있으므로 조심해야 하지만, affine case로만 한정할 경우 $M\mapsto \widetilde{M}$은 $\lMod{A}$에서 $\QCoh(X)$로의 categorical equivalence를 정의한다. 이는 임의의 quasi-coherent sheaf $\mathcal{F}$에 대하여, $\widetilde{\Gamma(X,\mathcal{F})}$가 $\mathcal{F}$ 자신을 복원한다는 것을 확인하면 된다. 즉 우리의 슬로건은, affine case에서는 quasi-coherent sheaf는 $A$-module이고, coherent sheaf는 finite rank $A$-module이라는 것이다. 
+일반적으로 quasi-coherent sheaf를 다룰 때는 각각의 affine cover마다 다른 $M$이 붙어있을 수 있으므로 조심해야 하지만, affine case로만 한정할 경우 $M\mapsto \widetilde{M}$은 $\lMod{A}$에서 $\QCoh(X)$로의 categorical equivalence를 정의한다. 이는 임의의 quasi-coherent sheaf $\mathcal{F}$에 대하여, $\widetilde{\Gamma(X,\mathcal{F})}$가 $\mathcal{F}$ 자신을 복원한다는 것을 확인하면 된다. 즉 우리의 슬로건은, affine case에서는 quasi-coherent sheaf는 $A$-module이고, coherent sheaf는 finitely generated $A$-module이라는 것이다. 
 
 이러한 관점에서는 vector bundle은 아주 특수한 경우의 (quasi-)coherent sheaf라 생각할 수 있다. 혹은 반대로 이들 (quasi-)coherent sheaf들을 생각할 때 아주 일반적인 형태의 vector bundle이라 생각해도 된다. 구체적으로, coherent sheaf는 (finite rank) vector bundle들의 category에서 이들이 abelian category의 연산, 즉 kernel이나 image, cokernel 등에 대해 닫혀있도록 하기 위해서 확장한 것이라 생각할 수 있으며 직관적으로는 fiber dimension이 점마다 달라질 수 있는 vector bundle이라 생각할 수 있다. Quasi-coherent sheaf는 여기에서 finite rank 조건까지 뺀 것이다. 
 
@@ -77,7 +78,7 @@ Smooth variety $X$의 *cotangent bundle<sub>여접다발</sub>* $\Omega_X^1$는 
 그럼 우리가 이전 섹션에서 살펴본 construction은 다음을 위한 것이다. 
 
 ::: 명제 3
-Affine variety $X$와 $X$의 coordinate ring $A$에 대하여, $\Omega_X^1$은 $\widetilde{\Omega}_{A/\mathbb{K}}$에 대응되는 vector bundle이다. ([\[가환대수학\] §미분, ⁋정의 3](/ko/math/commutative_algebra/differentials#def3))
+Smooth affine variety $X$와 $X$의 coordinate ring $A$에 대하여, $\Omega_X^1$은 $\widetilde{\Omega_{A/\mathbb{K}}}$에 대응되는 vector bundle이다. ([\[가환대수학\] §미분, ⁋정의 3](/ko/math/commutative_algebra/differentials#def3))
 :::
 
 ::: 증명
@@ -103,7 +104,7 @@ $$\Hom_{\mathcal{O}_X}(\widetilde{\Omega_{A/\mathbb{K}}}, \mathcal{O}_X)\cong\De
 
 $$\widetilde{\Omega_{A/\mathbb{K}}}^\vee\cong \widetilde{\Omega_{A/\mathbb{K}}^\vee}\cong \widetilde{\Der_\mathbb{K}(A,A)}\cong \mathcal{T}_X$$
 
-이므로 원하는 주장이 성립한다. 
+이므로, 여기에 다시 dual을 취하고 locally free sheaf의 reflexivity를 사용하면 $\Omega_X^1=\mathcal{T}_X^\vee\cong \widetilde{\Omega_{A/\mathbb{K}}}$을 얻어 원하는 주장이 성립한다. 
 :::
 
 이 결과는 cotangent bundle이 우리가 상상하는 것처럼 differential $1$-form들로 나타난다는 것을 보여준다. 
@@ -117,7 +118,7 @@ $\mathbb{A}^n$의 cotangent bundle은 $\Omega_{\mathbb{A}^n}^1 \cong \mathcal{O}
 ::: 정의 5
 Smooth variety $X$ of dimension $n$의 *canonical line bundle<sub>표준 선다발</sub>* $\omega_X$를 cotangent bundle의 top exterior power
 
-$$\omega_X = \bigwedge\nolimits^{\!n} \Omega_X^1$$
+$$\omega_X = \bigwedge\nolimits^{n} \Omega_X^1$$
 
 로 정의한다. 
 :::
@@ -156,7 +157,7 @@ $$0 \rightarrow \Omega_{\mathbb{P}^n}^1 \rightarrow \mathcal{O}_{\mathbb{P}^n}(-
 
 $$0\rightarrow E\rightarrow F\rightarrow L\rightarrow 0$$
 
-이 주어졌다 하자. 이때 $E$는 rank $r$, $L$은 rank $1$의 vector bundle이라 하자. 이 sequence에 $\bigwedge\nolimits^{\!r}(-)$를 취하면, determinant가 tensor product와 compatible이라는 사실로부터
+이 주어졌다 하자. 이때 $E$는 rank $r$, $L$은 rank $1$의 vector bundle이라 하자. 이 sequence에 $\bigwedge\nolimits^{r+1}(-)$를 취하면, determinant가 tensor product와 compatible이라는 사실로부터
 
 $$\det(F)\cong \det(E)\otimes \det(L)$$
 
@@ -173,7 +174,7 @@ $$\omega_{\mathbb{P}^n}=\det(\Omega_{\mathbb{P}^n}^1)\cong \mathcal{O}_{\mathbb{
 ::: 예시 8
 위의 계산을 $n$-form의 transition function 관점에서도 확인할 수 있다. $\mathbb{P}^n$의 standard open cover $U_i = \{\x_i \neq 0\}$ 위에서 affine coordinate를 $\y_j^{(i)} = \x_j / \x_i$ ($j \neq i$)로 놓으면, $U_i$ 위의 $n$-form 
 
-$$\dd{\y_1}^{(i)} \wedge \cdots \wedge \widehat{\dd{\y_i}^{(i)}} \wedge \cdots \wedge \dd{\y_n}^{(i)}$$
+$$\dd{\y_0}^{(i)} \wedge \cdots \wedge \widehat{\dd{\y_i}^{(i)}} \wedge \cdots \wedge \dd{\y_n}^{(i)}$$
 
 을 생각할 수 있다. $U_i \cap U_j$ 위에서 $\y_k^{(j)} = \x_k / \x_j = (\x_k / \x_i) / (\x_j / \x_i) = \y_k^{(i)} / \y_j^{(i)}$이므로, $k \neq i, j$에 대해 
 
@@ -216,7 +217,7 @@ $$\omega_D \cong (\omega_X \otimes \mathcal{O}_X(D))\vert_D$$
 이다.
 :::
 
-이로부터 canonical divisor에 대한 주장 또한 바로 따라온다. 어쨌든, 이 명제가 담고 있는 주장은 ambient variety $X$의 canonical bundle $\omega_X$를 normal bundle $\mathcal{O}_X(D)$로 twist한 후 $D$로 restrict하면, subvariety $D$의 canonical bundle $\omega_D$가 나온다. 쉽게 말해, $D$ 위의 differential form은 ambient space의 differential form에 normal direction의 정보를 추가하여 얻어진다는 것이다. 
+이로부터 canonical divisor에 대한 주장 또한 바로 따라온다. 어쨌든, 이 명제가 담고 있는 주장은 ambient variety $X$의 canonical bundle $\omega_X$를 line bundle $\mathcal{O}_X(D)$로 twist한 후 $D$로 restrict하면, subvariety $D$의 canonical bundle $\omega_D$가 나온다. 쉽게 말해, $D$ 위의 differential form은 ambient space의 differential form에 normal direction의 정보를 추가하여 얻어진다는 것이다. 
 
 다음 예시는 이를 사용한 계산을 구체적으로 보여준다. 
 
@@ -246,7 +247,7 @@ Degree-genus formula는, 실은 나중에 살펴 볼 Riemann-Roch theorem의 특
 
 Smooth variety $X$와 codimension $r$ smooth subvariety $Z$에 대하여, $Z$를 따라 $X$를 blowup한 것은 다음의 birational morphism
 
-$$\pi:\widetilde{X}\rightarrow X;$$
+$$\pi:\widetilde{X}\rightarrow X$$
 
 으로 주어지며, 이 때 $\pi$는 $Z$의 fiber 바깥에서는 isomorphism이며 $Z$의 fiber는 *exceptional divisor*
 
@@ -258,7 +259,7 @@ $$E=\mathbb{P}(\mathcal{N}_{Z/X})$$
 
 $$\pi\vert_E: E\rightarrow Z$$
 
-를 생각하자. 이제 $E$의 tangent bundle을 생각하면, 우리는 이를 base space $Z$로부터 오는 수평 방향 $(\pi\vert_E)^\ast T_Z$과 그에 수직인 relative tangent bundle 방향 $T_{E/Z}$으로 나눌 수 있다. 즉 다음의 short exact sequence
+를 생각하고, 이하 이를 $\pi_E$로도 적기로 한다. 이제 $E$의 tangent bundle을 생각하면, 우리는 이를 base space $Z$로부터 오는 수평 방향 $(\pi\vert_E)^\ast T_Z$과 그에 수직인 relative tangent bundle 방향 $T_{E/Z}$으로 나눌 수 있다. 즉 다음의 short exact sequence
 
 $$0 \rightarrow T_{E/Z} \rightarrow T_E \rightarrow \pi_E^\ast T_Z \rightarrow 0\tag{$\ast$}$$
 
@@ -366,7 +367,7 @@ $X = \mathbb{A}^2$의 원점 $Z = \{0\}$에서의 blow-up을 고려하자. $K_{\
 
 $$K_{\widetilde{\mathbb{A}^2}} = E$$
 
-이다. $K_{\widetilde{\mathbb{A}^2}} = E$이므로 exceptional divisor $E$가 canonical divisor의 역할을 함을 알 수 있다.
+이다. 즉 exceptional divisor $E$가 canonical divisor의 역할을 함을 알 수 있다.
 :::
 
 ---

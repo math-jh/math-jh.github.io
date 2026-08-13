@@ -11,13 +11,15 @@ sidebar:
 date: 2024-08-30
 weight: 5
 
+drift_needed: true
+
 ---
 
 이번 글에서 우리는 $\Hom$과 tensor product에 대해 조금 더 자세히 살펴보자. 
 
 ## Hom functor
 
-앞서 우리는 $\Hom_{\lMod{A}}(-,N)$과 $\Hom_\lMod{A}(M,-)$이 left exact functor가 된다는 것을 살펴보았으며, 이들이 각각 exact functor가 되도록 하는 $M$과 $N$을 각각 *projective*, *injective* module이라 불렀다. 다음의 두 명제는 이와는 조금 다른 방향의 명제로, 임의의 *splitting* exact sequence는 $\Hom$을 취하여도 반드시 exact sequence가 된다는 것을 보여준다. 
+앞서 우리는 $\Hom_\lMod{A}(M,-)$과 $\Hom_{\lMod{A}}(-,N)$이 left exact functor가 된다는 것을 살펴보았으며, 이들이 각각 exact functor가 되도록 하는 $M$과 $N$을 각각 *projective*, *injective* module이라 불렀다. 다음의 두 명제는 이와는 조금 다른 방향의 명제로, 임의의 *splitting* exact sequence는 $\Hom$을 취하여도 반드시 exact sequence가 된다는 것을 보여준다. 
 
 ::: 명제 1
 Splitting exact sequence
@@ -35,7 +37,7 @@ $$0 \rightarrow \Hom_\lMod{A}(N,K) \rightarrow\Hom_\lMod{A}(L,K) \rightarrow\Hom
 
 $$\Hom_\lMod{A}(r, \id_K):\Hom_\lMod{A}(M,K) \rightarrow\Hom_\lMod{A}(L,K)$$
 
-를 생각하면, 식 $r\circ u=\id_M$으로부터 $\Hom_\lMod{A}(r,\id_K)$가 section을 갖는다는 사실을 알고 다시 [§완전열, ⁋명제 10](/ko/math/multilinear_algebra/exact_sequences#prop10)를 적용하면 두 번째 sequence가 split한다는 것을 보일 수 있다. 
+를 생각하면, 식 $r\circ u=\id_M$으로부터 $\Hom_\lMod{A}(u,\id_K)$가 section을 갖는다는 사실을 알고 다시 [§완전열, ⁋명제 10](/ko/math/multilinear_algebra/exact_sequences#prop10)를 적용하면 두 번째 sequence가 split한다는 것을 보일 수 있다. 
 
 반대 방향은 $K=M$으로 두고 short exact sequence
 
@@ -66,9 +68,9 @@ $$\nu:\Hom_{\rMod{A}}(M,L)\otimes_A N \rightarrow\Hom_{\rMod{A}}(M,L\otimes_AN)$
 
 을 만들 수 있다. 더 일반적으로 $A,B$가 (commutative일 필요는 없는) ring이고, left $A$-module $M$, left $B$-module $N$, $(A,B)$-bimodule $L$가 주어졌다 하면 다음의 $\mathbb{Z}$-module homomorphism
 
-$$\Hom_{\lMod{A}}(M,L)\otimes_AN \rightarrow \Hom_{\lMod{A}}(M, L\otimes_BN)$$
+$$\Hom_{\lMod{A}}(M,L)\otimes_BN \rightarrow \Hom_{\lMod{A}}(M, L\otimes_BN)$$
 
-을 만들 수 있다. ([\[Bou\] II.4.2]()) 
+을 만들 수 있다. (**[Bou]** II.4.2) 
 
 이는 우선 임의의 $u\in\Hom_{\rMod{A}}(M,L)$와 임의의 $y\in N$에 대하여, 다음 식
 
@@ -117,7 +119,7 @@ $$M^\ast\times M \rightarrow A;\qquad (\xi,x) \mapsto \langle x, \xi\rangle$$
 
 $$\tau: M^\ast\otimes_A M \rightarrow A$$
 
-을 만족한다. 이제 만일 $M$이 finitely generated projective $A$-module이라면 [따름정리 4](#cor4)에 의하여 좌변을 $\End_\rMod{A}(M)=\Hom_\rMod{A}(M,M)$과 identify할 수 있고, 따라서 $\End_\rMod{A}(M)$에서 $A$로 가는 유일한 $A$-linear map이 정의된다.
+을 유도한다. 이제 만일 $M$이 finitely generated projective $A$-module이라면 [따름정리 4](#cor4)에 의하여 좌변을 $\End_\rMod{A}(M)=\Hom_\rMod{A}(M,M)$과 identify할 수 있고, 따라서 이로부터 $\End_\rMod{A}(M)$에서 $A$로 가는 $A$-linear map이 유일하게 결정된다.
 
 ::: 정의 6
 위와 같이 정의된 map을 *trace map<sub>대각합 사상</sub>*이라 하고, $\tr$로 표기한다.

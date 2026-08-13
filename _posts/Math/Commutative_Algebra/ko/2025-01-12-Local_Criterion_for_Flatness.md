@@ -10,6 +10,7 @@ sidebar:
 
 date: 2025-01-12
 weight: 13
+drift_needed: true
 
 toc: false
 
@@ -27,7 +28,7 @@ Noetherian local ring $(A, \mathfrak{m})$을 고정하고, $(E, \mathfrak{n})$�
 
 $$\mathfrak{m}^n(\mathfrak{a}\otimes_AM )\subseteq \mathfrak{n}^n(\mathfrak{a}\otimes_AM)$$	 
 
-이 성립하는 것을 안다. 한편, 이들은 finitely generated $E$-module이므로 [§부풀림 대수, ⁋따름정리 8](/ko/math/commutative_algebra/blowup_algebra#cor8)로부터 
+이 성립하는 것을 안다. 한편, 이들은 finitely generated $E$-module이므로 [§부풀림 대수, ⁋따름정리 8](/ko/math/commutative_algebra/blowup_algebra#cor8)의 1번으로부터 $(1-a)(\bigcap \mathfrak{n}^n(\mathfrak{a}\otimes_AM))=0$이도록 하는 $a\in \mathfrak{n}$이 존재하고, $E$가 local ring이라 $1-a$가 unit이므로 
 
 $$\bigcap \mathfrak{m}^n(\mathfrak{a}\otimes_AM)=\bigcap \mathfrak{n}^n(\mathfrak{a}\otimes_AM)=0$$
 
@@ -81,7 +82,7 @@ $$\cdots \Tor_1^A(A/(\mathfrak{a}+\mathfrak{m}^t), M) \rightarrow \frac{\mathfra
 
 그런데 $A/(\mathfrak{a}+\mathfrak{m}^t)$는 $\mathfrak{m}^t$로 annihilate되고, $\mathfrak{m}^t$는 finitely generated이므로, 이를 통해 $A/(\mathfrak{a}+\mathfrak{m}^t)$이 finite length를 갖는다는 것을 안다. 따라서, 더 일반적으로 유한한 길이를 갖는 임의의 $A$-module $N$이 주어질 때마다 $\Tor_1^A(N, M)=0$이 성립한다는 것을 보이면 원하는 바를 얻는다.
 
-귀납법으로 진행한다. 만일 $N$이 length $1$이라면 [§조르단-횔더 정리, ⁋정의 1](/ko/math/commutative_algebra/Jordan-Holder_theorem#def1) 이후의 논증으로부터 $N=A/\mathfrak{m}$이어야 하고, 따라서 $\Tor_1^A(N, M)=0$인 것은 정확히 정리의 가정과 일치한다.  유한한 length의 $A$-module $N$과, $N$의 임의의 proper submodule $N'$을 택하자. 그럼 다음의 exact sequence
+귀납법으로 진행한다. 만일 $N$이 length $1$이라면 [§조르단-횔더 정리, ⁋정의 1](/ko/math/commutative_algebra/Jordan-Holder_theorem#def1) 이후의 논증으로부터 $N=A/\mathfrak{m}$이어야 하고, 따라서 $\Tor_1^A(N, M)=0$인 것은 정확히 정리의 가정과 일치한다.  유한한 length의 $A$-module $N$과, $N$의 $0$이 아닌 임의의 proper submodule $N'$을 택하자. 그럼 다음의 exact sequence
 
 $$0 \rightarrow N' \rightarrow N \rightarrow N/N' \rightarrow 0$$
 
@@ -89,7 +90,7 @@ $$0 \rightarrow N' \rightarrow N \rightarrow N/N' \rightarrow 0$$
 
 $$\cdots \rightarrow\Tor_1^A(N', M) \rightarrow \Tor_1^A(N, M) \rightarrow \Tor_1^A(N/N', M) \rightarrow \cdots$$
 
-를 얻는다. 이제 귀납적 가정에 의하여 $\Tor_1^A(N, M)=\Tor_1^A(N/N',M)=0$이므로 원하는 결과를 얻는다.
+를 얻는다. 이제 귀납적 가정에 의하여 $\Tor_1^A(N', M)=\Tor_1^A(N/N',M)=0$이므로 원하는 결과를 얻는다.
 :::
 
 한편, $M$이 flat $A$-module이라면 임의의 $A/(a)$-module $N$에 대하여 
@@ -135,7 +136,7 @@ $$N\otimes_{A/(a)} F_i/aF_i=N\otimes_{A/(a)} ((A/(a))\otimes_A F_i)\cong N\otime
 Noetherian local ring $(A, \mathfrak{m})$을 고정하고, $(E, \mathfrak{n})$가 $\mathfrak{m}E\subseteq \mathfrak{n}$를 만족하는 local Noetherian $A$-algebra라 가정하자. 만일 $a\in \mathfrak{m}$이 $A$의 non-zerodivisor인 동시에 finitely generated $E$-module $M$의 non-zerodivisor라면, $M$이 flat $A$-module인 것과 $M/aM$이 flat $A/(a)$-module인 것이 동치이다. 
 :::
 ::: 증명
-$M/aM$이 flat $A/(a)$-module이라 하자. $A$의 residue field를 $A/\mathfrak{m}$에 대하여, 가정으로부터
+$M/aM$이 flat $A/(a)$-module이라 하자. $A/(a)$의 residue field가 $A/\mathfrak{m}$이므로, 가정으로부터
 
 $$\Tor_1^{A/(a)}(A/\mathfrak{m}, M/aM)=0$$
 
@@ -153,7 +154,7 @@ $$A[\mathfrak{a}t]=\bigoplus_{n=0}^\infty \mathfrak{a}^n t^n\subseteq A[t]$$
 
 $$A[\mathfrak{a}t, t^{-1}]=\bigoplus_{n=-\infty}^\infty \mathfrak{a}^nt^n\subseteq A[t, t^{-1}]$$
 
-로 정의한다. 
+로 정의한다. 이때 $n\leq 0$에 대해서는 $\mathfrak{a}^n=A$로 약속한다. 
 :::
 
 그럼 다음 따름정리는 거의 자명하다.

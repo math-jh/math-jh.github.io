@@ -10,6 +10,7 @@ sidebar:
 
 date: 2023-01-12
 weight: 8
+drift_needed: true
 
 ---
 
@@ -17,11 +18,11 @@ weight: 8
 
 ## 부분다양체와 $C^\infty$ 함수
 
-우선 manifold $M$과, 그 submanifold $\Phi:P\rightarrow M$을 고정하자. 또 다른 $C^\infty$ 함수 $F:N\rightarrow M$이 $F(N)\subseteq\Phi(P)$를 만족한다 하면, 위와 같이 정의된 $\bar{\Phi}$를 사용하여 새로운 단사함수 $F_0:N\rightarrow P$를 다음의 식
+우선 manifold $M$과, 그 submanifold $\Phi:P\rightarrow M$을 고정하자. 또 다른 $C^\infty$ 함수 $F:N\rightarrow M$이 $F(N)\subseteq\Phi(P)$를 만족한다 하면, 위와 같이 정의된 $\bar{\Phi}$를 사용하여 새로운 함수 $F_0:N\rightarrow P$를 다음의 식
 
 $$F_0=\bar{\Phi}^{-1}\circ F$$
 
-을 통해 정의할 수 있다. 자연스럽게 이렇게 정의된 함수 $F_0$이 immersion이 되는지를 물어볼 수 있다.
+을 통해 정의할 수 있다. 자연스럽게 이렇게 정의된 함수 $F_0$이 $C^\infty$ 함수가 되는지를 물어볼 수 있다.
 
 Submanifold를 단순히 원래의 manifold의 부분집합으로 본다면, 이 질문은 단순히 임의의 $C^\infty$ 함수 $F:N\rightarrow M$의 치역이 $F(N)\subseteq P\subseteq M$을 만족할 때, $F$의 공역을 $P$로 제한한 것이 $C^\infty$냐는 질문과 같다. 그러나 이 질문은 보기보다 단순하지 않으며, 실제로 항상 이것이 성립하는 것은 아니다.
 
@@ -58,7 +59,7 @@ $$F_0=\bar{\Phi}^{-1}\circ F$$
 ::: 증명
 둘째 주장은 정의이므로 첫 번째 주장만 보이면 충분하다. 
 
-$F_0$가 연속이라 가정하고, $F_0$이 $C^\infty$이기도 하다는 것을 보이자. 즉 임의의 $x\in N$에 대하여, $x$를 중심으로 하는 coordinate system $(U,\varphi)$가 존재하여 $F_0$을 $U$로 제한한 것이 $C^\infty$임을 보여야 한다. 그런데 $F_0$가 연속인 전단사함수임을 가정하였으므로, 이를 보이기 위해서는 임의의 $y\in P$를 포함하는 coordinate system $(V,\psi)$가 존재하여, $\psi\circ F_0$을 <em-ko>열린집합</em-ko> $F_0^{-1}(V)$로 제한한 것이 $C^\infty$임을 보이면 충분하다. 
+$F_0$가 연속이라 가정하고, $F_0$이 $C^\infty$이기도 하다는 것을 보이자. 즉 임의의 $x\in N$에 대하여, $x$를 중심으로 하는 coordinate system $(U,\varphi)$가 존재하여 $F_0$을 $U$로 제한한 것이 $C^\infty$임을 보여야 한다. 그런데 $F_0$가 연속임을 가정하였으므로, 이를 보이기 위해서는 임의의 $y\in P$를 포함하는 coordinate system $(V,\psi)$가 존재하여, $\psi\circ F_0$을 <em-ko>열린집합</em-ko> $F_0^{-1}(V)$로 제한한 것이 $C^\infty$임을 보이면 충분하다. 
 
 이제 $y\in P$가 임의로 주어졌다 하고, $\Phi(y)$를 포함하는 $M$의 coordinate system $(W,z^1,\ldots, z^m)$를 택하자. 그럼 [§부분다양체와 역함수 정리, ⁋따름정리 10](/ko/math/manifolds/submanifolds#cor10)으로부터 집합 $\{z^k\circ\Phi\mid 1\leq k\leq m\}$의 부분집합을 적당한 열린근방 $V$로 제한한 것이 점 $y\in P$의 coordinate system을 이룬다는 것을 안다. 
 
@@ -75,7 +76,7 @@ $$(\pi\circ\gamma\circ\Phi)\circ F_0\vert_{F_0^{-1}(V)}=\pi\circ\gamma\circ F\ve
 Manifold $M$과 두 submanifold $\Phi_1:N_1\rightarrow M$, $\Phi_2:N_2\rightarrow M$이 주어졌다 하자. 이들 둘이 *equivalent*하다는 것은 diffeomorphism $\theta:N_1\rightarrow N_2$가 존재하여 $\Phi_1=\Phi_2\circ\theta$가 성립하는 것이다.
 :::
 
-이렇게 정의된 관계가 $M$의 모든 submanifold들 $(N,\Phi)$들의 집합에 동치관계를 유도한다는 것은 자명하다. 임의의 equivalence class $[(N,\Phi)]$를 택하자. 그럼 처음에 살펴본 것과 같은 쌍 
+이렇게 정의된 관계가 $M$의 모든 submanifold들 $(N,\Phi)$들의 집합에 동치관계를 유도한다는 것은 항등함수가 diffeomorphism이고, diffeomorphism의 역함수와 두 diffeomorphism의 합성 또한 diffeomorphism이라는 사실로부터 따라온다. 임의의 equivalence class $[(N,\Phi)]$를 택하자. 그럼 처음에 살펴본 것과 같은 쌍 
 
 $$A=\Phi(N)\subseteq M, \qquad \iota:A\hookrightarrow M$$
 
@@ -91,11 +92,11 @@ $$\iota=\Phi\circ\bar{\Phi}^{-1}$$
 
 위의 절에서 정의한 $(A,\iota)$는 equivalence class $[(N,\Phi)]$마다 <em-ko>유일하게</em-ko> 결정된다. 우선 [정의 3](#def3)에서의 $\theta$는 diffeomorphism이므로 특히 전단사함수이고, 따라서 
 
-$$\Phi_2(N_2)=\Phi_1(\theta(N_2))=\Phi_1(N_1)$$
+$$\Phi_2(N_2)=\Phi_1(\theta^{-1}(N_2))=\Phi_1(N_1)$$
 
 이 성립하므로 $A$는 유일하게 결정된다. 한편 이렇게 결정되는 $M$의 부분집합 $A$와 inclusion $\iota:A\hookrightarrow M$이 $[(N,\Phi)]$에 속하기 위해서는 $\iota=\Phi\circ\theta$를 만족하는 diffeomorphism $\theta$가 존재해야 하는데, 양 변의 왼쪽에 $\bar{\Phi}^{-1}$을 취해주면 $\theta=\bar{\Phi}^{-1}$이므로 $A$의 manifold 구조는 <em-ko>반드시</em-ko> 위에서 정의한 것과 동일한 방식으로 정의되어야 한다.
 
-반면 manifold $M$의 임의의 부분집합 $\iota:A\hookrightarrow M$에 대하여, $(A,\iota)$를 submanifold로 만드는 $A$의 manifold 구조가 유일하게 존재하는 것은 아니다. 가령 [예시 1](#ex1)과 같이 $M$의 두 submanifold $(N_1,\Phi_1),(N_2,\Phi_2)$가 서로 diffeomorphic하지 않지만 $\Phi_1(N_1)=\Phi_2(N_2)$를 만족한다면, $[(N_1,\Phi_1)]$과 $[(N_2,\Phi_2)]$에서 위의 과정을 통해 얻어지는 $(A,\iota)$ 위의 두 manifold 구조는 서로 달라야 한다. 
+반면 manifold $M$의 임의의 부분집합 $\iota:A\hookrightarrow M$에 대하여, $(A,\iota)$를 submanifold로 만드는 $A$의 manifold 구조가 유일하게 존재하는 것은 아니다. 가령 [예시 1](#ex1)과 같이 $M$의 두 submanifold $(N_1,\Phi_1),(N_2,\Phi_2)$가 서로 equivalent하지 않지만 $\Phi_1(N_1)=\Phi_2(N_2)$를 만족한다면, $[(N_1,\Phi_1)]$과 $[(N_2,\Phi_2)]$에서 위의 과정을 통해 얻어지는 $(A,\iota)$ 위의 두 manifold 구조는 서로 달라야 한다. 
 
 그럼에도 불구하고, $(A,\iota)$가 만족해야 할 조건이 추가된다면 이 위에 submanifold의 구조가 유일하게 결정될 수도 있다. 다음 글에서 소개할 정리들의 결과는 이러한 유일성까지 만족하며, 이 때 다음의 두 명제를 유용하게 사용할 수 있다.
 
@@ -107,7 +108,7 @@ Manifold $M$의 부분집합 $A$와, $A$ 위에 정의된 topology $\mathcal{T}$
 :::
 
 ::: 명제 5
-Manifold $M$의 부분집합 $A$가 주어졌다 하자. 만일 $A$를 $M$의 subspace로 보았을 때, $(A,\iota)$를 $M$의 submanifold로 만드는 미분구조가 존재한다면, 이 미분구조와 subspace topology는 $(A,\iota)$에 줄 수 있는 유일한 manifold의 구조가 된다. 
+Manifold $M$의 부분집합 $A$가 주어졌다 하자. 만일 $A$를 $M$의 subspace로 보았을 때, $(A,\iota)$를 $M$의 submanifold로 만드는 미분구조가 존재한다면, 이 미분구조와 subspace topology는 $(A,\iota)$를 submanifold로 만드는 유일한 구조가 된다. 
 :::
 ::: 증명
 우선 앞선 [명제 4](#prop4)를 subspace topology $\mathcal{T}$에 적용하면, $(A,\mathcal{T},\iota)$를 $M$의 submanifold로 만드는 미분구조는 유일하다. 이를 $\mathcal{A}$라 하자. 이제 $(A,\iota)$를 $M$의 submanifold로 만드는 위상 $\mathcal{T}'$와 미분구조 $\mathcal{A}'$가 주어졌다 하고, 다음 diagram을 생각하자.

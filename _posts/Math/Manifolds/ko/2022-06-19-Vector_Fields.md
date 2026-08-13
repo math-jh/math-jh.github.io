@@ -10,6 +10,7 @@ sidebar:
 
 date: 2022-06-19
 weight: 11
+drift_needed: true
 
 ---
 
@@ -39,11 +40,11 @@ Manifold $M$ 위에서 정의된 벡터장 $X$를 생각하자. 다음이 모두
 ::: 증명
 우선 $X$가 $C^\infty$라면 $X\vert_U$가 $C^\infty$인 것은 자명하다. 한편, $TM$에서 정의된 함수로서 $\dd{x}^i$들은 coordinate system $\tilde{\varphi}:\pi^{-1}(U)\rightarrow\mathbb{R}^{2m}$의 성분함수들이므로 마찬가지로 $C^\infty$이고, 따라서 이들의 합성
 
-$$a^i(p)=\dd{x}^i\left(\sum a^i(p)\frac{\partial}{\partial x^i}\bigg\vert_p\right)=\dd{x}^i\vert_p\circ(X\vert_U)_p$$
+$$a^i(p)=\dd{x}^i\left(\sum_{j=1}^m a^j(p)\frac{\partial}{\partial x^j}\bigg\vert_p\right),\qquad\text{즉}\quad a^i=\dd{x}^i\circ(X\vert_U)$$
 
 또한 $C^\infty$인 것이 자명하다. 
 
-2번 조건이 성립한다 가정하자. 임의의 $p\in V$에 대하여 $X(f)$가 $p$에서 $C^\infty$인 것을 보여야 하므로, 이를 위해서는 $p$를 포함하는 적당한 coordinate system $(U,\varphi)$에 대하여 $X(f)$가 $p$에서 $C^\infty$임을 보이면 충분하다. 이제 2번 조건에 의하여 
+2번 조건이 성립한다 가정하자. 임의의 $p\in V$에 대하여 $X(f)$가 $p$에서 $C^\infty$인 것을 보여야 하므로, 이를 위해서는 $p$를 포함하고 $U\subseteq V$인 적당한 coordinate system $(U,\varphi)$에 대하여 $X(f)$가 $p$에서 $C^\infty$임을 보이면 충분하다. 이제 2번 조건에 의하여 
 
 $$(X\vert_U)_pf=\sum_{i=1}^m a^i(p)\frac{\partial f}{\partial x^i}(p)$$
 
@@ -60,7 +61,7 @@ $$x^i\circ\pi\circ (X\vert_U)=x^i\circ\id_U=x^i,\qquad \dd{x}^i\circ(X\vert_U)=X
 가 성립하므로 이들은 모두 $C^\infty$가 된다.
 :::
 
-$M$ 위에서 정의된 $C^\infty$-벡터장들의 모임을 $\mathfrak{X}(M)$으로 적으며, 앞으로 벡터장은 모두 $C^\infty$인 것으로 가정한다. 한편 partition of unity에 의하여, $M$의 어떠한 열린집합 $U$에서만 정의된 벡터장 또한 $M$ 전체로 확장할 수 있다. ([§접공간, 각주 1](/ko/math/manifolds/tangent_space#fn:1))
+$M$ 위에서 정의된 $C^\infty$-벡터장들의 모임을 $\mathfrak{X}(M)$으로 적으며, 앞으로 벡터장은 모두 $C^\infty$인 것으로 가정한다. 한편 partition of unity에 의하여, $M$의 열린집합 $U$에서만 정의된 벡터장은 각 점 $p\in U$의 충분히 작은 근방 위에서 $M$ 전체에서 정의된 벡터장과 일치하도록 만들 수 있다. ([§접공간, 각주 1](/ko/math/manifolds/tangent_space#fn:1))
 
 ## Local frame
 
@@ -83,7 +84,7 @@ $$X:M\rightarrow TM;\qquad p\mapsto \frac{d}{\dd{x}}\bigg\vert_p$$
 
 $$fX:M\rightarrow TM;\qquad p\mapsto f(p)\frac{d}{\dd{x}}\bigg\vert_p$$
 
-또한 $\mathfrak{X}(M)$에 속하며 ([명제 2](#prop2)) 이 원소는 $f$가 상수함수가 아닌 이상 $fX$는 $X$의 상수배로 표현되지 않는다. 뿐만 아니라 $C^\infty(M)$은 $\mathbb{R}$ 위의 무한차원 벡터공간이므로 $\mathfrak{X}(M)$ 또한 무한차원 벡터공간이다.
+또한 $\mathfrak{X}(M)$에 속하며 ([명제 2](#prop2)) $f$가 상수함수가 아닌 이상 $fX$는 $X$의 상수배로 표현되지 않는다. 뿐만 아니라 $C^\infty(M)$은 $\mathbb{R}$ 위의 무한차원 벡터공간이므로 $\mathfrak{X}(M)$ 또한 무한차원 벡터공간이다.
 :::
 
 위와 같은 상황에서 $\mathfrak{X}(M)$을 $C^\infty(M)$-module로 본다면 $\mathfrak{X}(M)$을 다루는 것이 상대적으로 편해진다. 
@@ -94,7 +95,7 @@ $$fX:M\rightarrow TM;\qquad p\mapsto f(p)\frac{d}{\dd{x}}\bigg\vert_p$$
 
 $2$-manifold $M=S^2$ 위에 정의된 두 vector field $X_1,X_2$가 $\mathfrak{X}(M)$을 $C^\infty(M)$-module로서 생성한다고 가정하자. 그럼 hairy ball theorem으로부터 $X_1(p)=0$인 점 $p\in S^2$가 존재한다. 그럼 $T_pM$은 $\{0,X_2(p)\}$로 생성되어야 하는데, 이는 $T_pM$이 2차원이라는 것에 모순이다. 따라서 $\mathfrak{X}(M)$을 두 벡터장 $\{X_1,X_2\}$으로 생성할 수는 없다. 
 
-반면 충분히 작은 열린집합 $U$에 대하여, $U$ 위에서 정의된 벡터장들의 모임 $\mathfrak{X}(U)$은 $m$개의 벡터장으로 생성되는 $C^\infty(U)$-module로 생각할 수 있다. Tangent bundle $\pi: TM\rightarrow M$에 대하여 열린집합 $U$를 충분히 작게 잡으면 diffeomorphism $h:U\times\mathbb{R}^m\rightarrow\pi^{-1}(U)$을 찾을 수 있으므로, 벡터장 $X_1,\ldots, X_m$을
+반면 충분히 작은 열린집합 $U$에 대하여, $U$ 위에서 정의된 벡터장들의 모임 $\mathfrak{X}(U)$은 $m$개의 벡터장으로 생성되는 $C^\infty(U)$-module로 생각할 수 있다. Tangent bundle $\pi: TM\rightarrow M$에 대하여 열린집합 $U$를 충분히 작게 잡으면 local trivialization $h:U\times\mathbb{R}^m\rightarrow\pi^{-1}(U)$을 찾을 수 있으므로, 벡터장 $X_1,\ldots, X_m$을
 
 $$X_1(p)=h(p, e_1),\quad X_2(p)=h(p,e_2),\quad\ldots,\quad X_m(p)=h(p,e_m)\tag{1}$$
 
@@ -105,7 +106,7 @@ Manifold $M$이 주어졌다 하고, $\dim M=m$이라 하자.
 
 - $X_1,\ldots, X_k$가 $M$의 부분집합 $A$에서 *일차독립<sub>linearly independent</sub>*이라는 것은 각각의 $p\in A$마다 $T_pM$의 벡터들 $X_1(p),\ldots, X_k(p)$이 linearly independent인 것이다.
 - $X_1,\ldots, X_k$가 $M$의 부분집합 $A$에서 tangent bundle $TM$을 *span<sub>생성</sub>*한다는 것은 각각의 $p\in A$마다 $T_pM$의 벡터들 $X_1(p),\ldots, X_k(p)$이 $T_pM$을 생성하는 것이다.
-- 열린집합 $U\subseteq M$에서 정의된 일차독립인 벡터장들 $X_1,\ldots, X_k$이 tangent bundle을 생성한다면 이들을 $M$의 *local frame*이라 부른다.
+- 열린집합 $U\subseteq M$에서 정의된 일차독립인 벡터장들 $X_1,\ldots, X_k$이 $U$에서 tangent bundle을 생성한다면 이들을 $M$의 *local frame*이라 부른다.
 - 위의 정의에서 만일 $U=M$이도록 잡을 수 있다면 이 벡터장들을 $M$의 *global frame*이라 부른다.
 :::
 

@@ -10,6 +10,7 @@ sidebar:
 
 date: 2021-08-23
 weight: 20
+drift_needed: true
 
 ---
 
@@ -21,7 +22,7 @@ weight: 20
 Well-ordered set $A$의 segment들을 모두 모은 집합을 $A^\ast$라 하자. 그럼 $(A^\ast,\subseteq)$ 또한 well-ordered set이며, 함수 $x\mapsto S_x$는 $A$와 $A^\ast\setminus\{A\}$ 간의 order isomorphism이다.
 :::
 ::: 증명
-[§유향집합, ⁋명제 6](/ko/math/set_theory/directed_set#prop6)을 사용한다. $S$가 순증가이고 $s(A)=A^\ast\setminus\{A\}$임을 보이자. 
+[§유향집합, ⁋명제 6](/ko/math/set_theory/directed_set#prop6)을 사용한다. $s\colon x\mapsto S_x$가 순증가이고 $s(A)=A^\ast\setminus\{A\}$임을 보이자. 
 
 $s$가 증가함수인 것은 자명하다. 만약 $x\leq y$이고 $a\in S_x$라면, $a < x\leq y$이므로 $a\in S_y$이기 때문이다. 또, 이 포함관계는 strict한데, 만약 $x < y$라면, $x\not< x$이고 $x < y$이므로 $x\not\in S_x$지만 $x\in S_y$이기 때문이다. 따라서 함수 $s$는 $A$와 그 image 사이의 isomorphism이다. 따라서 [§서수와 정렬집합, ⁋명제 5](/ko/math/set_theory/ordinals#prop5)에 의해 $s(A)=A^\ast\setminus\{A\}$이다.
 
@@ -52,18 +53,18 @@ $\emptyset$은 vacuous하게 ordinal이고, 모든 자연수들도 ordinal이 �
 다음 명제는 이렇게 successor funcion $S$를 도입하는 것보다 더더욱 일반적인 방법으로 <em-ko>더 큰</em-ko> ordinal을 만드는 방법을 보여준다. 
 
 ::: 명제 4
-$(A_i)_{i\in I}$가 well-ordered set들의 family이고, 어떠한 $i,j\in I$에 대해서도 $A_i$와 $A_j$ 중 어느 하나는 다른 하나의 segment라 하자. 그럼 집합 $A=\bigcup_{i\in I}A_i$ 위에서의 유일한 order relation이 존재한다. 이는 well-ordering이고 $A_i$의 segment는 $A$의 segment가 되며, $A$ 자기자신을 제외한 $A$의 segment는 어떤 $A_i$의 segment가 된다.
+$(A_i)_{i\in I}$가 well-ordered set들의 family이고, 어떠한 $i,j\in I$에 대해서도 $A_i$와 $A_j$ 중 어느 하나는 다른 하나의 segment라 하자. 그럼 집합 $A=\bigcup_{i\in I}A_i$ 위에서 각각의 $A_i$의 order relation을 확장하는 order relation이 유일하게 존재한다. 이는 well-ordering이고 $A_i$의 segment는 $A$의 segment가 되며, $A$ 자기자신을 제외한 $A$의 segment는 어떤 $A_i$의 segment가 된다.
 :::
 
 원하는 order relation의 존재성과 유일성을 직접 보이는 대신, 이 조건보다 더 약화된 조건 하에서 더 일반적인 결과를 보이자.
 
 ::: 보조정리 5
-Ordered set들의 family $(A_i)_{i\in I})$가 포함관계에 대하여 right directed이고, $A_i\subseteq A_j$일 때마다 <phrase>$A_j$의 order relation을 $A_i$로 제한한 관계</phrase>가 $A_i$에 주어진 order relation과 동일하다고 하자. 그럼 각각의 order relation 모두를 확장하는 $A=\bigcup_{i\in I} A_i$ 위의 order relation이 유일하게 존재한다.
+Ordered set들의 family $(A_i)_{i\in I}$가 포함관계에 대하여 right directed이고, $A_i\subseteq A_j$일 때마다 <phrase>$A_j$의 order relation을 $A_i$로 제한한 관계</phrase>가 $A_i$에 주어진 order relation과 동일하다고 하자. 그럼 각각의 order relation 모두를 확장하는 $A=\bigcup_{i\in I} A_i$ 위의 order relation이 유일하게 존재한다.
 :::
 ::: 증명
 각각의 $A_i$에 대하여, $R_i$가 order relation이라 하자. 만약 각각의 order relation을 확장하는 $A$ 위의 ordering $R$이 존재한다면, $R_i\subseteq R$이다. 반대로 만일 $(x,y)\in R$라면 $x$와 $y$를 포함하는 $A_i,A_j$가 존재하므로, 어떤 $A_k$가 존재하여 $x$와 $y$를 동시에 포함한다. 한편 $(x,y)\in R_k$이므로 $(x,y)\in\bigcup_{i\in I}R_i$이다. 따라서 만일 그러한 관계가 존재한다면 이는 유일하며 반드시 $\bigcup_{i\in I}R_i$가 되어야 한다.
 
-따라서 $R=\bigcup_{\alpha\in A}R_\alpha$가 실제로 이 조건들을 만족함을 보이면 된다. 우선 정의에 의해 $R$이 모든 $R_i$를 확장하는 것은 자명하므로, $R$가 order relation임을 보이자. 임의의 $x\in A$에 대하여, 만일 $x\in X_i$라면 $(x,x)\in R_i\subseteq R$가 되므로 $(x,x)\in R$이다.  비슷하게 만일 $(x,y)\in R$라면, 어떤 $X_k$가 존재하여 $x$와 $y$를 동시에 포함하며, 이 집합에서의 order relation들의 조건에 의해 $(y,x)\in R_k\subseteq R$이다. Transitivity을 보이기 위해서는, $(x,y)\in R$과 $(y,z)\in R$을 가정한 후, $x$, $y$, $z$를 모두 포함하는 집합 $X_l$를 찾아서, $(x,z)\in R_l$로 결론을 내리면 된다.
+따라서 $R=\bigcup_{i\in I}R_i$가 실제로 이 조건들을 만족함을 보이면 된다. 우선 정의에 의해 $R$이 모든 $R_i$를 확장하는 것은 자명하므로, $R$가 order relation임을 보이자. 임의의 $x\in A$에 대하여, 만일 $x\in A_i$라면 $(x,x)\in R_i\subseteq R$가 되므로 $(x,x)\in R$이다.  비슷하게 만일 $(x,y)\in R$이고 $(y,x)\in R$라면, 어떤 $A_k$가 존재하여 $x$와 $y$를 동시에 포함하며, 이 집합에서의 order relation들의 조건에 의해 $(x,y),(y,x)\in R_k$이므로, $R_k$의 antisymmetry에 의해 $x=y$이다. Transitivity을 보이기 위해서는, $(x,y)\in R$과 $(y,z)\in R$을 가정한 후, $x$, $y$, $z$를 모두 포함하는 집합 $A_l$를 찾아서, $(x,z)\in R_l$로 결론을 내리면 된다.
 :::
 
 이제 이렇게 정의된 order relation이 주어진 성질들을 모두 만족함을 보이면 된다.
@@ -71,7 +72,7 @@ Ordered set들의 family $(A_i)_{i\in I})$가 포함관계에 대하여 right di
 ::: 증명 (명제 4)
 우선 모든 $A_i$와 이들의 segment들이 $A$의 segment가 됨을 보이자. 임의의 $A_i$와 $x\in A_i$에 대하여, 어떠한 $y\in A$가 주어졌다고 하자. 그럼 어떤 $A_j$가 존재하여 $y\in A_j$이다. 이제 $y\leq x$라 하자. 가정에 의해 $A_i$가 $A_j$의 segment이거나 $A_j$가 $A_i$의 segment이다. 만일 $A_i$가 $A_j$의 segment라면, $A_j$의 원소로서 $y\leq x$는 $y\in A_i$이다. 만약 반대로 $A_j$가 $A_i$의 segment였다면, $A_j\subseteq A_i$이고, 특히 $y\in A_i$이다. 어떤 경우이건 $y\in A_i$이고, 따라서 $A_i$는 $A$의 segment이다. $A_i$의 segment들도 비슷하게 $A$의 segment임을 보일 수 있다.
 
-이제 $A$가 well-ordered임을 보이자. $X$가 $A$의 임의의 부분집합이라 하자. 그럼 어떤 $A_i$가 존재하여 $X\cap A_i\neq\emptyset$이다. Well-ordered set $A_i$의 부분집합으로서, $A_i\cap X$의 least element가 존재한다. 이를 $a$라 하자. 이제 $a$가 $X$의 least element임을 보일 것이다. 임의의 $x\in X$에 대하여, $x\in A_j$인 $A_j$가 존재하며, 이는 $A_i$의  segment이거나 $A_i$를 segment로 포함한다. 만일 $A_j$가 $A_i$의 segment라면, $x\in A_i$이고, 따라서 $x\in A_i\cap X$이고 $a\leq x$이다 (minimality of $a$). 반대로 $A_i$가 $A_j$의 segment라면, $x<a$는 불가능하다. 그렇게 된다면 $x\in A_i$이므로 $a$의 minimality에 모순이기 때문이다. 어떠한 경우든, 임의의 $x\in X$에 대하여 $a\leq x$이므로 $a$는 $X$의 least element이다.
+이제 $A$가 well-ordered임을 보이자. $X$가 $A$의 공집합이 아닌 임의의 부분집합이라 하자. 그럼 어떤 $A_i$가 존재하여 $X\cap A_i\neq\emptyset$이다. Well-ordered set $A_i$의 부분집합으로서, $A_i\cap X$의 least element가 존재한다. 이를 $a$라 하자. 이제 $a$가 $X$의 least element임을 보일 것이다. 임의의 $x\in X$에 대하여, $x\in A_j$인 $A_j$가 존재하며, 이는 $A_i$의  segment이거나 $A_i$를 segment로 포함한다. 만일 $A_j$가 $A_i$의 segment라면, $x\in A_i$이고, 따라서 $x\in A_i\cap X$이고 $a\leq x$이다 (minimality of $a$). 반대로 $A_i$가 $A_j$의 segment라면, $x<a$는 불가능하다. 그렇게 된다면 $x\in A_i$이므로 $a$의 minimality에 모순이기 때문이다. 어떠한 경우든, 임의의 $x\in X$에 대하여 $a\leq x$이므로 $a$는 $X$의 least element이다.
 
 마지막으로, 임의의 segment $S$는 $(-\infty, x)$의 꼴이므로, $x\in A_i$이도록 $A_i$를 잡으면 $(-\infty, x)$는 $A_i$의 segment가 된다.
 :::
@@ -93,14 +94,14 @@ $$0,1,2,\cdots; \omega$$
 ::: 보조정리 7 (Transfinite induction)
 $A$가 well-ordered set이고, $\mathcal{S}$가 다음의 조건을 만족하는 segment들의 모임이라 하자.
 
-1. $\mathcal{S}$는 임의의 합집합에 대하여 닫혀있다.
+1. $\mathcal{S}$는 (empty family의 합집합, 곧 $\emptyset\in\mathcal{S}$를 포함하여) 임의의 합집합에 대하여 닫혀있다.
 2. 만일 $S_a\in\mathcal{S}$라면, $S_a\cup\{a\}\in\mathcal{S}$
 
 그럼 $A$의 모든 segment는 $\mathcal{S}$에 속한다.
 :::
 
 ::: 증명
-결론을 부정하여 모순을 찾자. $\mathcal{S}\subseteq A^\ast$이므로, $A^\ast\setminus\mathcal{S}$의 least element $S$가 존재한다. 만일 $S$가 greatest element를 갖지 않는다면, $S=\bigcup_{x\in S}S_x$인데, 최소성에 의해 각각의 $S_x$는 $\mathcal{S}$의 원소이고, 1에 의해, $S\in\mathcal{S}$이다. 만일 $S$가 greatest element $a$를 갖는다면, $S=S_a\cup\{a\}$인데, 다시 최소성에 의해 $S_a\in\mathcal{S}$이다. 이제 (ii)에 의해 $S=S_a\cup\{a\}\in\mathcal{S}$여야 한다. 이는 모순이므로 $A^\ast\setminus\mathcal{S}$의 least element는 존재하지 않고, 따라서 $\mathcal{S}=A^\ast$이다.
+결론을 부정하여 모순을 찾자. $\mathcal{S}\subseteq A^\ast$이므로, $A^\ast\setminus\mathcal{S}$의 least element $S$가 존재한다. 만일 $S$가 greatest element를 갖지 않는다면, $S=\bigcup_{x\in S}S_x$인데, 최소성에 의해 각각의 $S_x$는 $\mathcal{S}$의 원소이고, 1에 의해, $S\in\mathcal{S}$이다. 만일 $S$가 greatest element $a$를 갖는다면, $S=S_a\cup\{a\}$인데, 다시 최소성에 의해 $S_a\in\mathcal{S}$이다. 이제 2에 의해 $S=S_a\cup\{a\}\in\mathcal{S}$여야 한다. 이는 모순이므로 $A^\ast\setminus\mathcal{S}$의 least element는 존재하지 않고, 따라서 $\mathcal{S}=A^\ast$이다.
 :::
 
 여기에서, $A$는 어떤 큰 ordinal (limit ordinal이건 successor ordinal이건 상관 없이)이고, 따라서 귀납법을 일반화할 때 걸리적거렸던 limit ordinal의 존재가 이 보조정리를 통해 해소된다. 이것을 가능하게 만드는 것은 1번의 조건이다. 예를 들어, $\omega$는 $1,2,\ldots$의 무한한 합집합으로 만들 수 있기 때문이다.

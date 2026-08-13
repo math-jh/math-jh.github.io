@@ -10,6 +10,7 @@ sidebar:
 
 date: 2021-09-04
 weight: 23
+drift_needed: true
 
 ---
 
@@ -72,7 +73,7 @@ $A,B$가 두 well-ordered set들이라 하자. 그럼 적어도 다음 중 하�
 
 공집합은 유일하므로, $\card\emptyset$은 정확히 $\emptyset$이다. Cardinal을 다룰 때는 이 집합을 $\mathbf{0}$으로 적는다. 원소 하나짜리 집합들, 예컨대 $\{a\}$와 $\{b\}$들은 모두 서로 equipotent하다. $\{(a,b)\}$가 $\{a\}$에서 $\{b\}$로의 전단사함수이기 때문이다. 이를 $\mathbf{1}$로 적자. 아직 이들이 자연수가 되는 것은 아니지만, 우리는 곧 cardinal들에 연산들을 주어 자연수처럼 볼 것이다.
 
-연산을 정의하기 전에 carinal 간의 대소관계부터 정의하자.
+연산을 정의하기 전에 cardinal 간의 대소관계부터 정의하자.
 
 ::: 정의 3
 Cardinal들 간의 관계
@@ -91,7 +92,7 @@ Cardinal들 간의 관계
 두 cardinal $\mathfrak{a}$와 $\mathfrak{b}$에 대해 $\mathfrak{a}\leq\mathfrak{b}$이고 $\mathfrak{b}\leq\mathfrak{a}$라 가정하자.  
 
 만일 $\mathfrak{a}$에서 $\mathfrak{b}$의 부분집합으로의 전단사함수를 $i$라 하면 $i(\mathfrak{a})\subseteq\mathfrak{b}$이고 $\mathfrak{a}$와 $i(\mathfrak{a})$은 equipotent하다. 따라서 $i(\mathfrak{a})$와 $\mathfrak{b}$ 사이의 전단사함수가 존재함을 보이면 충분하다.  
-$\mathfrak{b}\leq\mathfrak{a}$이므로, $\mathfrak{b}$에서 $\mathfrak{a}$의 부분집합으로의 전단사함수가 존재하고, 이는 $\mathfrak{b}$에서 $\mathfrak{a}$로의 단사함수로 볼 수 있다. 힌퍈. $\mathfrak{a}$는 $i(\mathfrak{a})$와 equipotent하므로, 이 둘 사이의 전단사함수를 앞선 단사함수와 합성하면 $\mathfrak{b}$에서 $i(\mathfrak{a})$로의 단사함수를 얻는다. 이를 $f$라 하자. 이제 $C_0=\mathfrak{b}\setminus i(\mathfrak{a})$라 하고, 귀납적으로 $C_{n+1}=f(C_n)$으로 정의하고 $C=\bigcup C_n$이라 하자. 우리는 $h:\mathfrak{b}\rightarrow i(\mathfrak{a})$를 다음의 식 
+$\mathfrak{b}\leq\mathfrak{a}$이므로, $\mathfrak{b}$에서 $\mathfrak{a}$의 부분집합으로의 전단사함수가 존재하고, 이는 $\mathfrak{b}$에서 $\mathfrak{a}$로의 단사함수로 볼 수 있다. 한편, $\mathfrak{a}$는 $i(\mathfrak{a})$와 equipotent하므로, 이 둘 사이의 전단사함수를 앞선 단사함수와 합성하면 $\mathfrak{b}$에서 $i(\mathfrak{a})$로의 단사함수를 얻는다. 이를 $f$라 하자. 이제 $C_0=\mathfrak{b}\setminus i(\mathfrak{a})$라 하고, 귀납적으로 $C_{n+1}=f(C_n)$으로 정의하고 $C=\bigcup C_n$이라 하자. 우리는 $h:\mathfrak{b}\rightarrow i(\mathfrak{a})$를 다음의 식 
 
 $$h(x)=\begin{cases} f(x)&x\in C\\ x&x\not\in C\end{cases}$$
 
@@ -108,15 +109,15 @@ $$h(x)=\begin{cases} f(x)&x\in C\\ x&x\not\in C\end{cases}$$
 뿐만 아니라, cardinal들의 집합은 well-ordered set이다.
 
 ::: 정리 5
-Cardinal들을 모아둔 임의의 집합 $A$는 least element를 갖는다.
+Cardinal들을 모아둔 공집합이 아닌 임의의 집합 $E$는 least element를 갖는다.
 :::
 ::: 증명
 집합 $A=\bigcup_{\mathfrak{a}\in E}\mathfrak{a}$를 생각하자. 그럼 임의의 cardinal $\mathfrak{a}\in E$는 $A$의 부분집합이다.
 
-Well-ordering principle에 의하여 이 집합 위에 well-order가 존재한다. 이를 $\leq$라 하자. 또, $A$의 임의의 부분집합은 $A$의 segment와 equipotent하다 (Review의 [명제](#prop-0)). 따라서 임의의 cardinal $\mathfrak{a}$에 대하여, 이와 equipotent한 $A$의 segment들의 집합은 공집합이 아니며, 따라서 $A^\ast$의 well-orderedness에 의하여 least element가 존재한다. 이 원소를 $\varphi(\mathfrak{a})$라 하자.  
-만일 우리가 $\mathfrak{a}\leq\mathfrak{b}$가 $\varphi(\mathfrak{a})\subseteq\varphi(\mathfrak{b})$와 동치임을 보인다면, $A$의 well-orderedness로부터 증명이 완료될 것이다. 
+Well-ordering principle에 의하여 이 집합 위에 well-order가 존재한다. 이를 $\leq$라 하자. 또, $A$의 임의의 부분집합은 $A$의 segment와 equipotent하다 (Review의 [명제](#prop-0)). 따라서 임의의 cardinal $\mathfrak{a}$에 대하여, 이와 equipotent한 $A$의 segment들의 집합은 공집합이 아니며, 따라서 $A$의 segment들을 모두 모은 집합 $A^\ast$가 $\subseteq$에 대하여 well-ordered이므로 ([§정렬집합의 성질들, ⁋명제 1](/ko/math/set_theory/well_ordering#prop1)) least element가 존재한다. 이 원소를 $\varphi(\mathfrak{a})$라 하자.  
+만일 우리가 $\mathfrak{a}\leq\mathfrak{b}$가 $\varphi(\mathfrak{a})\subseteq\varphi(\mathfrak{b})$와 동치임을 보인다면, $A^\ast$의 well-orderedness로부터 증명이 완료될 것이다. 
 
-우선 나중의 조건이 첫번째 조건을 imply하는 것은 자명하다. 반대로 만일 $\mathfrak{a}\leq\mathfrak{b}$라면, 즉 $\mathfrak{a}$가 $\mathfrak{b}=\varphi(\mathfrak{b})$ (등호는 cardinal로써 성립) 의 부분집합과 equipotent하다고 가정하자. 만일 $\varphi(\mathfrak{b})\subseteq\varphi(\mathfrak{a})$이고 $\varphi(\mathfrak{a})\neq\varphi(\mathfrak{b})$라면, $\varphi(\mathfrak{b})$의 어떤 segment가 존재하여 $\mathfrak{a}$와 equipotent한 segment를 가질 것이고, 이는 $\varphi(\mathfrak{b})$의 정의에 모순이므로 두 조건은 동치이다.
+우선 나중의 조건이 첫번째 조건을 imply하는 것은 자명하다. 반대로 만일 $\mathfrak{a}\leq\mathfrak{b}$라면, 즉 $\mathfrak{a}$가 $\mathfrak{b}=\varphi(\mathfrak{b})$ (등호는 cardinal로써 성립) 의 부분집합과 equipotent하다고 가정하자. 만일 $\varphi(\mathfrak{b})\subseteq\varphi(\mathfrak{a})$이고 $\varphi(\mathfrak{a})\neq\varphi(\mathfrak{b})$라면, $\varphi(\mathfrak{b})$의 어떤 segment가 $\mathfrak{a}$와 equipotent할 것이고, 이는 $\varphi(\mathfrak{a})$의 최소성에 모순이므로 두 조건은 동치이다.
 :::
 
 ---

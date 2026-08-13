@@ -10,6 +10,7 @@ sidebar:
 
 date: 2026-07-04
 weight: 13
+drift_needed: true
 ---
 
 지금까지 우리가 다룬 함수는 실수를 실수로 보내는 $f:\mathbb{R}\rightarrow\mathbb{R}$ 뿐으로, 냉정하게 말하면 극한의 개념이 $\epsilon$-$\delta$를 사용하여 엄밀하게 정의되었다는 것 외에는 고등학교에서 배운 내용과 큰 차이가 없었다. 우리는 이제 이를 일반화하여 실제로 새로운 내용을 살펴본다. 일반화의 방향은 차원을 늘리는 것으로, 여기에는 정의역의 차원을 올리는 방향과 공역의 차원을 올리는 방향이 있다. 이 글에서는 후자, 곧 한 실수를 여러 실수로 보내는 함수 $\mathbf{r}:\mathbb{R}\rightarrow\mathbb{R}^n$을 먼저 다룬다. 이는 매개변수 하나로 공간 속의 곡선을 그리는 벡터값 함수로, 시간에 따라 움직이는 점의 자취로 볼 수 있어 미분이 속도와 가속도라는 물리적 의미를 얻고 적분이 곡선의 길이를 잰다.
@@ -60,7 +61,7 @@ $$\mathbf{v}\times \mathbf{w}=(v_2w_3-v_3w_2,\ v_3w_1-v_1w_3,\ v_1w_2-v_2w_1)$$
 
 직관적으로 이는 $t$가 변함에 따라 벡터공간의 다른 점이 대응되는 규칙으로, 시간에 따라 움직이는 점의 자취를 표현한 것으로 생각할 수 있다. 
 
-벡터값 함수의 극한은 일차원에서의 함수의 극한과 마찬가지로 정의된다. 즉, 임의의 $\epsilon$이 주어질 때마다, 항상 적당한 $\delta>0$이 존재하여 
+벡터값 함수의 극한은 일차원에서의 함수의 극한과 마찬가지로 정의된다. 즉, 임의의 $\epsilon>0$이 주어질 때마다, 항상 적당한 $\delta>0$이 존재하여 
 
 $$0<\lvert t-t_0\rvert<\delta\implies \lVert \mathbf{r}(t)-\mathbf{v}\rVert<\epsilon$$
 
@@ -93,7 +94,7 @@ $\mathbf{u}, \mathbf{v}\colon I \rightarrow \mathbb{R}^n$이 미분가능하고 
 
 $$(f \mathbf{u})' = f' \mathbf{u} + f \mathbf{u}', \qquad (\mathbf{u} \cdot \mathbf{v})' = \mathbf{u}' \cdot \mathbf{v} + \mathbf{u} \cdot \mathbf{v}', \qquad (\mathbf{u} \circ \varphi)'(t) = \varphi'(t) \mathbf{u}'(\varphi(t))$$
 
-이고, $n = 3$일 때 교차곱에 대해 $(\mathbf{u} \times \mathbf{v})' = \mathbf{u}' \times \mathbf{v} + \mathbf{u} \times \mathbf{v}'$이다.
+이고, $n = 3$일 때 외적에 대해 $(\mathbf{u} \times \mathbf{v})' = \mathbf{u}' \times \mathbf{v} + \mathbf{u} \times \mathbf{v}'$이다.
 :::
 
 ::: 증명
@@ -121,7 +122,7 @@ $$\mathbf{T}(t) = \frac{\mathbf{r}'(t)}{\lVert \mathbf{r}'(t)\rVert}$$
 
 그럼 특히 둘째 조건에 의해 단위접선벡터 $\mathbf{T}$가 어디서나 잘 정의되며, 첫째 조건에 의해 $\mathbf{T}(t)$는 연속이다. 이 글에서는 특별한 언급이 없는 한 일급정칙 곡선을 기본으로 다룬다. 
 
-움직이는 대상이 주어졌을 때, 우리가 궁금한 것 중 하나는 시간동안 움직인 거리다. 이는 1차원에서와 마찬가지로, 속도 벡터를 적분하여 얻을 수 있으며, 엄밀하게는 곡선을 곡선 위의 점들을 잇는 다각형으로 근사하여, 분할 
+움직이는 대상이 주어졌을 때, 우리가 궁금한 것 중 하나는 시간동안 움직인 거리다. 이는 1차원에서와 마찬가지로, 속력을 적분하여 얻을 수 있으며, 엄밀하게는 곡선을 곡선 위의 점들을 잇는 다각형으로 근사하여, 분할 
 
 $$a = t_0 < \cdots < t_m = b$$
 
@@ -143,7 +144,7 @@ $$L = \int_a^b \lVert \mathbf{r}'(t)\rVert \dd{t}$$
 
 $$s(t) = \int_a^t \lVert \mathbf{r}'(\tau)\rVert \dd{\tau}$$
 
-를 *arc length<sub>호의 길이</sub>*라 하며, 미적분의 기본정리에 의해 $s'(t) = \lVert \mathbf{r}'(t)\rVert > 0$이므로 $s$는 증가함수이고, $t$를 $s$로 풀어 곡선을 arc length로 다시 매개화할 수 있다.
+를 *arc length*라 하며, 미적분의 기본정리에 의해 $s'(t) = \lVert \mathbf{r}'(t)\rVert > 0$이므로 $s$는 증가함수이고, $t$를 $s$로 풀어 곡선을 arc length로 다시 매개화할 수 있다.
 
 ::: 명제 6
 곡선을 arc length $s$로 매개화하면 단위속력이다. 즉 $\lVert d\mathbf{r}/\dd{s}\rVert = 1$이다.

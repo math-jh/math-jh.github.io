@@ -10,6 +10,7 @@ sidebar:
 
 date: 2024-05-08
 weight: 104
+drift_needed: true
 
 
 ---
@@ -18,7 +19,7 @@ weight: 104
 
 [\[집합론\] §자연수와 무한집합](/ko/math/set_theory/natural_numbers)에서 정의한 자연수들의 monoid $\mathbb{N}$은 (약간의 기술적인 문제를 제외하면) 집합론의 언어로 쓰여질 수 있었다. 그리고 $\mathbb{Z}$는 commutative monoid $\mathbb{N}$의 Grothendieck group으로 정의되었다. 중학교 때 배우는 수체계를 생각해보면 이 다음 정의해야 할 대상은 유리수 집합 $\mathbb{Q}$이다. 
 
-$\mathbb{Z}$의 덧셈구조를 잊어버리고, 곱셈구조만 기억한다면 $(\mathbb{Z},\cdot,1)$은 commutative monoid이다. 우리가 해야 할 일은 역수들을 추가하는 것이고, $1/0$은 정의되지 않으므로 $S=\mathbb{Z}\setminus\{0\}$으로 두고 [§Grothendieck 군, ⁋정의 7](/ko/math/algebraic_structures/Grothendieck_groups#def7)의 monoid of fractions를 생각하면 multiplicative group $\mathbb{Q}$를 얻게 된다. 
+$\mathbb{Z}$의 덧셈구조를 잊어버리고, 곱셈구조만 기억한다면 $(\mathbb{Z},\cdot,1)$은 commutative monoid이다. 우리가 해야 할 일은 역수들을 추가하는 것이고, $1/0$은 정의되지 않으므로 $S=\mathbb{Z}\setminus\{0\}$으로 두고 [§Grothendieck 군, ⁋정의 7](/ko/math/algebraic_structures/Grothendieck_groups#def7)의 monoid of fractions를 생각하면 multiplicative monoid $\mathbb{Q}$를 얻게 된다. 
 
 일반적으로 이 과정은 다음 정리를 통해 가능하다.
 
@@ -58,7 +59,7 @@ $$x+y=(\epsilon(\alpha\delta)+\epsilon(\beta\gamma))\epsilon(\gamma\delta)^{-1}=
 
     $$(\alpha\delta+\beta\gamma)/\delta\gamma=(\alpha'\delta'+\beta'\gamma')/\gamma'\delta'$$
 
-    이 $A_S$에서 성립하는 것을 보여야 한다. 그런데 $\alpha/\gamma=\alpha'/\gamma',\beta/\delta=\beta'/\delta'$이므로, 정의에 의해 $ap's=a'ps,bq't=b'qt$를 만족하는 $\zeta,\xi\in S'$가 존재한다. 이로부터 
+    이 $A_S$에서 성립하는 것을 보여야 한다. 그런데 $\alpha/\gamma=\alpha'/\gamma',\beta/\delta=\beta'/\delta'$이므로, 정의에 의해 $\alpha\gamma'\zeta=\alpha'\gamma\zeta,\beta\delta'\xi=\beta'\delta\xi$를 만족하는 $\zeta,\xi\in S'$가 존재한다. 이로부터 
 
     $$(\alpha\delta+\beta\gamma)(\gamma'\delta')(\zeta\xi)=(\alpha'\delta'+\beta'\gamma')(\gamma\delta)(\zeta\xi)$$
 
@@ -128,7 +129,7 @@ $$\beta=\beta1=\beta\alpha x=x$$
 
 ## 정역
 
-$\mathbb{Q}$는 그 정의에 의하여 $\mathbb{Z}$의 total ring of fraction이다. 이것이 field가 되는 것은 졍의에 의해 자명하며, 이는 다음과 같이 확장할 수 있다. 
+$\mathbb{Q}$는 그 정의에 의하여 $\mathbb{Z}$의 total ring of fraction이다. 이것이 field가 되는 것은 정의에 의해 자명하며, 이는 다음과 같이 확장할 수 있다. 
 
 ::: 정의 5
 Ring $A$의 원소 $\alpha,\beta$가 $\alpha\beta=0$이지만 $\alpha\neq 0$이고 $\beta\neq 0$일 경우, $\alpha,\beta$를 *zerodivisor<sub>영인자</sub>*라 부른다. Ring $A$가 *integral domain<sub>정역</sub>*이라는 것은 $A$가 commutative이고, $0\neq 1$이며, $A$가 zerodivisor를 갖지 않는 것이다.
@@ -144,7 +145,7 @@ $$(1,0)(0,1)=(0,0)$$
 Integral domain $A$의 total ring of fraction은 field이다.
 :::
 ::: 증명
-$A$가 integral domain이라는 가정으로부터, $S=A\setminus\{0\}$임을 안다. 즉, $S^{-1}A$의 임의의 원소는 $\alpha\in A$, $\beta\in A\setminus\{0\}$에 대하여 $\alpha/\beta$의 꼴로 나타낼 수 있다. 여기에서 $\alpha/\beta\neq 0$이기 위해서는 $\alpha\neq 0$이므로, $\beta/\alpha\in K$도 잘 정의되고 그럼 $\beta/\alpha$가 $\alpha/\beta$의 역원이 된다.
+$A$가 integral domain이라는 가정으로부터, $S=A\setminus\{0\}$임을 안다. 즉, $S^{-1}A$의 임의의 원소는 $\alpha\in A$, $\beta\in A\setminus\{0\}$에 대하여 $\alpha/\beta$의 꼴로 나타낼 수 있다. 여기에서 $\alpha/\beta\neq 0$이기 위해서는 $\alpha\neq 0$이므로, $\beta/\alpha\in S^{-1}A$도 잘 정의되고 그럼 $\beta/\alpha$가 $\alpha/\beta$의 역원이 된다. 한편 $A$가 integral domain이므로 $1/1\neq 0/1$이고, 특히 $S^{-1}A\neq 0$이다.
 :::
 
 ::: 정의 7
@@ -153,7 +154,7 @@ $A$가 integral domain이라는 가정으로부터, $S=A\setminus\{0\}$임을 �
 
 ## 소아이디얼
 
-Ring homomorphism의 fourth isomorphism theorem으로부터, 임의의 ring $A\neq 0$과 maximal left ideal $\mathfrak{m}$에 대하여 $A/\mathfrak{m}$의 유일한 left ideal은 $0$과 $A/\mathfrak{m}$ 자기 자신 뿐임을 안다. 따라서 [명제 4](#prop4)에 의하여 $A/\mathfrak{m}$은 division ring이다. Integral domain 또한 비슷한 식으로 특징지을 수 있다.
+Ring homomorphism의 fourth isomorphism theorem으로부터, 임의의 commutative ring $A\neq 0$과 maximal ideal $\mathfrak{m}$에 대하여 $A/\mathfrak{m}$의 유일한 ideal은 $0$과 $A/\mathfrak{m}$ 자기 자신 뿐임을 안다. 따라서 [명제 4](#prop4)에 의하여 $A/\mathfrak{m}$은 division ring, 즉 field이다. Integral domain 또한 비슷한 식으로 특징지을 수 있다.
 
 ::: 명제 8
 Commutative ring $A$와 ideal $\mathfrak{p}\neq A$에 대하여 다음이 모두 동치이다.
@@ -181,7 +182,7 @@ Commutative ring $A,B$ 사이의 ring homomorphism $\phi:A \rightarrow B$와 $B$
 결론에 반하여 $\alpha\beta\in\phi^{-1}(\mathfrak{p})$이지만 $\alpha,\beta\not\in\phi^{-1}(\mathfrak{p})$인 $\alpha,\beta\in A$가 존재한다 하면, $\phi(\alpha)\phi(\beta)=\phi(\alpha\beta)\in \mathfrak{p}$이지만 $\phi(\alpha),\phi(\beta)\not\in \mathfrak{p}$가 되어 [명제 8](#prop8)의 동치에 모순이다. 
 :::
 
-한편, [명제 8](#prop8)의 2번 동치에 의하여, commutative ring $A$를 $A$를 multiplicative monoid로 본다면, 그 prime ideal $\mathfrak{p}$에 대해 $A\setminus\mathfrak{p}$는 $A$의 submonoid로 볼 수 있다. 따라서 ring of fractions $(A\setminus \mathfrak{p})^{-1}A$가 잘 정의되며, 이 ring의 분모에 들어가는 것은 오직 $A\setminus \mathfrak{p}$의 원소들 뿐이다. 이를 다음과 같이 정의한다.
+한편, [명제 8](#prop8)의 2번 동치에 의하여, commutative ring $A$를 multiplicative monoid로 본다면, 그 prime ideal $\mathfrak{p}$에 대해 $A\setminus\mathfrak{p}$는 $A$의 submonoid로 볼 수 있다. 따라서 ring of fractions $(A\setminus \mathfrak{p})^{-1}A$가 잘 정의되며, 이 ring의 분모에 들어가는 것은 오직 $A\setminus \mathfrak{p}$의 원소들 뿐이다. 이를 다음과 같이 정의한다.
 
 ::: 정의 10
 Commutative ring $A$와 prime ideal $\mathfrak{p}$에 대하여, $A$의 $\mathfrak{p}$에서의 *localization<sub>국소화</sub>*을 $(A\setminus \mathfrak{p})^{-1}A$로 정의하고, 이를 간단히 $A_\mathfrak{p}$로 적는다.
@@ -193,7 +194,7 @@ Commutative ring $A$와 prime ideal $\mathfrak{p}$에 대하여, $A$의 $\mathfr
 Ring $A$의 원소 $\alpha$가 *nilpotent<sub>멱영</sub>*이라는 것은 적당한 $n>0$이 존재하여 $\alpha^n=0$이 성립하는 것이다. 만일 $A$가 영이 아닌 nilpotent element를 갖지 않으면 $A$를 *reduced<sub>기약</sub>*라 부른다.
 :::
 
-정의에 의하여, 영이 아닌 nilpotent element는 zero-divisor이다. 따라서 모든 integral domain은 (commutative) reduced ring이다. 뿐만 아니라, commutative ring으로 한정하면 다음을 얻는다.
+정의에 의하여, 영이 아닌 nilpotent element는 zerodivisor이다. 따라서 모든 integral domain은 (commutative) reduced ring이다. 뿐만 아니라, commutative ring으로 한정하면 다음을 얻는다.
 
 ::: 명제 12
 Commutative ring $A$에 대하여, nilpotent element들의 모임 $\mathfrak{N}$은 ideal이 된다.
@@ -203,7 +204,7 @@ Commutative ring $A$에 대하여, nilpotent element들의 모임 $\mathfrak{N}$
 
 이제 $\mathfrak{N}$이 덧셈에 대해 닫혀있다는 것을 보여야 한다. 임의의 $x,y\in \mathfrak{N}$이 주어졌다 하고, 적당한 $m,n>0$에 대하여 $x^m=0$이고 $y^n=0$이라 하자. 그럼
 
-$$(x+y)^{m+n}=x^{m+n}+\binom{m+n}{1}x^{m+n-1}y+\cdots+\binom{m+n}{n}x^my^n+\binom{m+n}{n+1}x^{m-1}y^{n+1}+\cdots+y^n$$
+$$(x+y)^{m+n}=x^{m+n}+\binom{m+n}{1}x^{m+n-1}y+\cdots+\binom{m+n}{n}x^my^n+\binom{m+n}{n+1}x^{m-1}y^{n+1}+\cdots+y^{m+n}$$
 
 이고, 우변의 모든 항들이 $0$임을 알 수 있다. 이상에서 $x+y\in \mathfrak{N}$이다.
 :::

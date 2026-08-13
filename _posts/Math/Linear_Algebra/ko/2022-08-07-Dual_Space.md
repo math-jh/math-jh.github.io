@@ -13,6 +13,8 @@ date: 2022-08-05
 
 weight: 19
 
+drift_needed: true
+
 ---
 
 ## 쌍대기저
@@ -249,7 +251,7 @@ $$x\in \bigl(L^\ast(U)\bigr)^\perp\iff (x, L^\ast(\upsilon))=0\text{ for all $\u
 두 $\mathbb{K}$-벡터공간 $V,W$, 그리고 linear map $L:V\rightarrow W$와 그 dual $L^\ast:W^\ast\rightarrow V^\ast$가 주어졌다 하자. 그럼 $\bigl(\im L^\ast\bigr)^\perp=\ker L$이 성립한다.
 :::
 ::: 증명
-[명제 10](#prop10)에서 $U=W^\ast$로 두면 된다.
+[명제 10](#prop10)에서 $U=W^\ast$로 두면 된다. Canonical pairing $(-,-)$의 non-degenerate 조건으로부터 $U^\perp=\{0\}$이 되어 원하는 결과를 얻는다.
 :::
 
 ---

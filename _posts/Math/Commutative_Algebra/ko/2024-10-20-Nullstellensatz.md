@@ -10,6 +10,7 @@ sidebar:
 
 date: 2024-10-20
 weight: 10
+drift_needed: true
 
 ---
 
@@ -25,7 +26,7 @@ $$\sqrt{\mathfrak{a}}=\bigcap_\text{\scriptsize$\mathfrak{p}$ prime containing $
 Ring $A$의 임의의 ideal $\mathfrak{a}$가 *radical ideal<sub>근기아이디얼</sub>*이라는 것은 $\mathfrak{a}=\sqrt{\mathfrak{a}}$가 성립하는 것이다. 
 :::
 
-따라서, 위의 관찰은 한마디로 임의의 prime ideal은 radical이라는 것이다. 이 관찰에 대한 증명은 다소 자명한 부분이 있는데, 만일 우리가 $\mathfrak{p}$를 포함하는 prime ideal들의 교집합 대신, [§정수적 확장, §§나카야마 보조정리](/ko/math/commutative_algebra/integral_extension#나카야마-보조정리)에서와 비슷한 방식으로 $\mathfrak{p}$를 포함하는 *maximal* ideal들의 교집합을 생각했다면 이 관찰이 그리 자명하지 않았을 것이며, 실제로 이것이 성립하지도 않는다. 예컨대 $\mathbb{Z}_{(2)}$와 같이 maximal ideal이 아닌 prime ideal을 포함하는 임의의 local ring이 모두 반례가 될 것이다. 
+따라서, 위의 관찰은 한마디로 임의의 prime ideal은 radical이라는 것이다. 이 관찰에 대한 증명은 다소 자명한 부분이 있는데, 만일 우리가 $\mathfrak{p}$를 포함하는 prime ideal들의 교집합 대신, [§정수적 확장, §§나카야마 보조정리](/ko/math/commutative_algebra/integral_extension#나카야마-보조정리)에서와 비슷한 방식으로 $\mathfrak{p}$를 포함하는 *maximal* ideal들의 교집합을 생각했다면 이 관찰이 그리 자명하지 않았을 것이며, 실제로 이것이 성립하지도 않는다. 가령 $\mathbb{Z}_{(2)}$와 같이 maximal ideal이 아닌 prime ideal을 포함하는 임의의 local ring이 모두 반례가 될 것이다. 
 
 ::: 정의 2
 Ring $A$가 *Jacobson ring<sub>제이콥슨 환</sub>*이라는 것은 임의의 prime ideal이 maximal ideal들의 교집합으로 나타나는 것이다.
@@ -40,9 +41,9 @@ Ring $A$에 대하여, 다음이 동치이다.
 2. $A$의 prime ideal $\mathfrak{p}$에 대하여, $(A/\mathfrak{p})[a^{-1}]$이 field이도록 하는 $a\in A/\mathfrak{p}$가 존재한다면, $A/\mathfrak{p}$는 field이다.
 :::
 ::: 증명
-우선 $A$가 Jacobson이라 가정하자. 그럼 그 quotient $A/ \mathfrak{p}$가 Jacobson이 되는 것도 정의에 의해 자명하다. 한편 [\[대수적 구조\] §분수체, ⁋명제 8](/ko/math/algebraic_structures/field_of_fractions#prop8)에 의해 $A/\mathfrak{p}$는 integral domain이고, integral domain에서 $(0)$은 prime ideal이므로 $(0)$을 maximal ideal들의 교집합으로 나타낼 수 있다. 그런데 [§국소화, ⁋명제 8](/ko/math/commutative_algebra/localization#prop8)에 의하여 $(A/\mathfrak{p})[a^{-1}]$의 prime ideal과, $A/\mathfrak{p}$의 prime ideal 중 $a$를 포함하지 않는 것 사이의 일대일대응이 존재하며, 가정에 의해 $(A/\mathfrak{p})[a^{-1}]$의 prime ideal은 $0$뿐이므로, $A/\mathfrak{p}$의 prime ideal 중 $a$를 포함하지 않는 prime ideal 또한 $0$ 뿐이다. 즉, $A/\mathfrak{p}$의 임의의 nonzero prime ideal에는 항상 $a$가 들어가야 한다. 그런데 만일 이러한 prime ideal이 존재한다면, $A/\mathfrak{p}$는 integral domain이므로 
+우선 $A$가 Jacobson이라 가정하자. 그럼 그 quotient $A/ \mathfrak{p}$가 Jacobson이 되는 것도 정의에 의해 자명하다. 한편 [\[대수적 구조\] §분수체, ⁋명제 8](/ko/math/algebraic_structures/field_of_fractions#prop8)에 의해 $A/\mathfrak{p}$는 integral domain이고, integral domain에서 $(0)$은 prime ideal이므로 $(0)$을 maximal ideal들의 교집합으로 나타낼 수 있다. 그런데 [§국소화, ⁋명제 8](/ko/math/commutative_algebra/localization#prop8)에 의하여 $(A/\mathfrak{p})[a^{-1}]$의 prime ideal과, $A/\mathfrak{p}$의 prime ideal 중 $a$를 포함하지 않는 것 사이의 일대일대응이 존재하며, 가정에 의해 $(A/\mathfrak{p})[a^{-1}]$의 prime ideal은 $0$뿐이므로, $A/\mathfrak{p}$의 prime ideal 중 $a$를 포함하지 않는 prime ideal 또한 $0$ 뿐이다. 즉, $A/\mathfrak{p}$의 임의의 nonzero prime ideal에는 항상 $a$가 들어가야 한다. 그런데 만일 이러한 prime ideal이 존재한다면, $(0)$은 maximal ideal이 아니므로 $A/\mathfrak{p}$의 maximal ideal은 모두 nonzero이고 따라서 전부 $a$를 포함하는데, 한편
 
-$$(0)=\mathfrak{N}(A)=\bigcap_\text{\scriptsize$\mathfrak{p}$ a prime} \mathfrak{p}$$
+$$(0)=\bigcap_\text{\scriptsize$\mathfrak{m}$ maximal} \mathfrak{m}$$
 
 이고, 따라서 $a=0$이 되어 모순이다. 
 
@@ -59,7 +60,7 @@ Jacobson ring $A$와, finitely generated $A$-algebra $E$가 주어졌다 하자.
 ::: 증명
 세 단계로 나누어 증명한다.
 
-1. 우선 $A=\mathbb{K}$이고 $E=\mathbb{K}[\x]$인 경우를 보자. 그럼 $E$는 principal ideal domain이고, 특히 $E$의 임의의 prime ideal은 irreducible monic polynomial로 생성된다. 이로부터 임의의 prime ideal은 다른 prime ideal에 포함될 수 없다는 것을 알 수 있으므로, $E$의 임의의 prime ideal이 maximal인 것을 알고, 이러한 ideal은 $1\in \mathbb{K}$를 포함할 수 없으므로 $A=\mathbb{K}$와 교집합하였을 때 반드시 $(0)$이 되어야 한다. 이 때, $E/\mathfrak{n}$은 $\mathfrak{n}$을 정의하는 irreducible polynomial의 degree만큼의 차원을 갖는 $\mathbb{K}$-벡터공간이 된다. 마지막으로 $(0)$이 maximal ideal들의 교집합이라는 것을 보이기 위해서는, $E=\mathbb{K}[\x]$가 무한히 많은 irreducible polynomial들을 가지고 있고, 다항식의 degree는 반드시 유한이므로 이들 모두를 인수로 갖는 다항식은 $0$뿐이라는 논증을 사용하면 된다. 이 때 $E$에서의 irreducible polynomial의 무한성은 유클리드의 소수의 무한성 증명을 그대로 따라하면 된다.
+1. 우선 $A=\mathbb{K}$이고 $E=\mathbb{K}[\x]$인 경우를 보자. 그럼 $E$는 principal ideal domain이고, 특히 $E$의 임의의 nonzero prime ideal은 irreducible monic polynomial로 생성된다. 이로부터 임의의 nonzero prime ideal은 다른 prime ideal에 포함될 수 없다는 것을 알 수 있으므로, $E$의 임의의 nonzero prime ideal이 maximal인 것을 알고, 이러한 ideal은 $1\in \mathbb{K}$를 포함할 수 없으므로 $A=\mathbb{K}$와 교집합하였을 때 반드시 $(0)$이 되어야 한다. 이 때, $E/\mathfrak{n}$은 $\mathfrak{n}$을 정의하는 irreducible polynomial의 degree만큼의 차원을 갖는 $\mathbb{K}$-벡터공간이 된다. 마지막으로 $(0)$이 maximal ideal들의 교집합이라는 것을 보이기 위해서는, $E=\mathbb{K}[\x]$가 무한히 많은 irreducible polynomial들을 가지고 있고, 다항식의 degree는 반드시 유한이므로 이들 모두를 인수로 갖는 다항식은 $0$뿐이라는 논증을 사용하면 된다. 이 때 $E$에서의 irreducible polynomial의 무한성은 유클리드의 소수의 무한성 증명을 그대로 따라하면 된다.
 2. 다음 단계로, 임의의 Jacobson ring $A$와, 하나의 원소로 생성되는 $A$-algebra $E$를 생각하고 $E$가 Jacobson임을 보이기 위해 [보조정리 3](#lem3)의 둘째 조건이 성립함을 보이자. 즉 이번 단계에서 우리의 목표는 다음 명제를 증명하는 것이다.
     > Jacobson ring $A$가 주어졌다 하고, 하나의 원소로 생성되는 $A$-algebra $E$가 주어졌다 하자. 만일 고정된 prime ideal $\mathfrak{q}\subseteq E$에 대하여, $E/\mathfrak{q}$가 영이 아닌 $x\in E/\mathfrak{q}$를 포함하여 $(E/\mathfrak{q})[x^{-1}]$이 field이도록 할 수 있다면, $E/\mathfrak{q}$ 또한 field이다.
 
@@ -70,7 +71,7 @@ Jacobson ring $A$와, finitely generated $A$-algebra $E$가 주어졌다 하자.
     > Integral domain $A'$가 Jacobson이라 하고, 하나의 원소로 생성되는 $A'$-algebra $E'$가 integral domain이며 $A'$를 포함한다 하자. 만일 $E'$가 영이 아닌 $x\in E'$를 포함하여 $E'[x^{-1}]$이 field이도록 할 수 있다면, $E'$ 또한 field이다.
 
     이를 위해 우리는 위의 가정 하에서 $A'$가 field가 되어야 하고, $E'$는 $A'$의 유한한 extension이 됨을 보인다. 위의 명제에서 $E'$는 하나의 원소로 생성되는 $A'$-algebra이므로, $E'=A'[\x]/\mathfrak{q}$라 쓸 수 있다. 우선 $\mathfrak{q}\neq 0$임을 보이자. 결론에 반하여 $\mathfrak{q}=0$이라 하고, 적당한 $x\in E'/(0)=A'[\x]$가 존재하여 $E'[x^{-1}]=A'[\x][x^{-1}]$이 field라 가정하자. $K'=\Frac(A')$라 하면, 이 가정에 의해 $K'[\x][x^{-1}]$ 또한 field이다. 그런데 $K'[\x]$는 첫째 결과에 의해 Jacobson이므로 $K'[\x]$가 field가 되어야 하고 이는 모순이다. 따라서 $\mathfrak{q}\neq 0$이어야 하고, $E'[x^{-1}]=K'[\x]/\mathfrak{q}K'[\x]$는 $K'$의 finite dimensional extension이다.  
-    이제 $p(x)\in \mathfrak{q}$가 $E'$에서 다음의 식
+    이제 $p(\x)\in \mathfrak{q}$가 $E'$에서 다음의 식
 
     $$p(\alpha)=p_n\alpha^n+\cdots+p_0=0$$
 

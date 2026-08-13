@@ -41,7 +41,7 @@ $$\mathfrak{a}_i\cap B=(\x_{d_i+1},\ldots, \x_d)\qquad\text{for $i=1,\ldots, m$}
 ::: 보조정리 2
 Field $\mathbb{K}$와, non-constant polynomial $f\in B=\mathbb{K}[\x_1,\ldots, \x_r]$이 주어졌다 하자. 그럼 적당한 원소들 $\x_1',\ldots, \x_{r-1}'\in B$가 존재하여, 원소들 $\x_1',\ldots, \x_{r-1}', f$로 생성된 $B$의 $\mathbb{K}$-subalgebra를 $B'$라 했을 때 $B$가 finitely generated $B'$-module이도록 할 수 있다. 뿐만 아니라, 이들 원소들은 다음과 같이 택할 수 있다.
 
-1. 충분히 큰 정수 $e$에 대하여, $\x_i'=\x_i-\x_r^{e}$으로 택할 수 있다. 
+1. 충분히 큰 정수 $e$에 대하여, $\x_i'=\x_i-\x_r^{e^i}$으로 택할 수 있다. 
 2. 만일 $\mathbb{K}$가 infinite field라면, 적당한 $a_i\in \mathbb{K}$들에 대해 $\x_i'=\x_i-a_i\x_r$로 택할 수 있다. 
 :::
 
@@ -58,10 +58,10 @@ $$\mathfrak{a}\subseteq \tilde{\mathfrak{a}}_1\subseteq \tilde{\mathfrak{a}}_2\s
 
 으로 볼 수 있으므로 주어진 주장을 polynomial ring $A=\mathbb{K}[\y_1,\ldots, \y_r]$에 대해서만 보이면 충분하다. 이 경우, [§매개계, ⁋따름정리 11](/ko/math/commutative_algebra/system_of_parameters#cor11)에 의하여 $r=d$여야 한다. 
 
-이제 정리의 원소들 $\x_i$들을 만들기 위해 우리는 우선 $\x_i'=\y_i$로 두고, 이들을 바꿔가며 주어진 조건을 만족하는 $\x_d$들을 찾을 것이다. 이를 위해 다음의 두 조건
+이제 정리의 원소들 $\x_i$들을 만들기 위해 우리는 우선 $\x_i'=\y_i$로 두고, 이들을 바꿔가며 주어진 조건을 만족하는 $\x_i$들을 찾을 것이다. 이를 위해 다음의 두 조건
 
 1. $A$는 finitely generated $B_e=\mathbb{K}[\x_1',\ldots, \x_e',\x_{e+1},\ldots, \x_d]$-module이다. 
-2. 각각의 $i$에 대하여 $\mathfrak{a}_i\cap B_e\supset(\x_m,\ldots, \x_d)$이 성립한다. 여기서 $m=\max(d_i+1, e+1)$이다. 
+2. 각각의 $i$에 대하여 $\mathfrak{a}_i\cap B_e\supseteq(\x_k,\ldots, \x_d)$이 성립한다. 여기서 $k=\max(d_i+1, e+1)$이다. 
 
 을 만족하는 원소들 $\x_1',\ldots, \x_e', \x_{e+1},\ldots, \x_d$들이 주어졌다 하고, 이로부터 새로운 원소들 $\x_1',\ldots, \x_{e-1}'$ 그리고 $\x_e$를 찾아 위의 조건이 그대로 유지되도록 할 수 있다는 것을 보인다. 그럼 이 과정을 반복하여 마지막으로 얻어진 $B=B_{d_m}$이 원하는 조건을 만족한다는 것은 둘째 조건의 포함관계가 사실 등식이라는 것을 보이면 자명하며, 이는 양 변에 있는 $B$의 두 ideal들의 차원을 생각하면 당연하다. 
 
@@ -89,16 +89,16 @@ Ring $A$가 integral domain이고, finitely generated $\mathbb{K}$-algebra라 �
 ::: 정리 4
 Finitely generated $\mathbb{K}$-algebra domain $A$와 그 prime ideal $\mathfrak{p}$에 대하여 다음이 성립한다.
 
-$$\dim A/\mathfrak{p}+\operatorname{ht}\mathfrak{p}=\dim A$$
+$$\dim A/\mathfrak{p}+\codim\mathfrak{p}=\dim A$$
 :::
 ::: 증명
-부등식 $\dim A/\mathfrak{p}+\operatorname{ht}\mathfrak{p}\leq\dim A$는 임의의 ring에 대하여 성립하므로 ([§차원, ⁋정의 2](/ko/math/commutative_algebra/Krull_dimension#def2)), 반대 부등식만 보이면 된다. $n=\dim A$, $d=\dim A/\mathfrak{p}=\dim\mathfrak{p}$라 두자. [정리 1](#thm1)을 $A$의 ideal $\mathfrak{a}_1=\mathfrak{p}$ 하나로 이루어진 chain에 적용하면, $A$의 subring $B\cong\mathbb{K}[\x_1,\ldots, \x_n]$이 존재하여 $A$가 finitely generated $B$-module이고 $\mathfrak{p}\cap B=(\x_{d+1},\ldots, \x_n)$을 만족한다. 그럼 $B\hookrightarrow A$가 integral extension이므로 [\[가환대수학\] §정수적 확장과 아이디얼, ⁋명제 1](/ko/math/commutative_algebra/lying_over_and_going_up#prop1)과 [따름정리 4](/ko/math/commutative_algebra/lying_over_and_going_up#cor4)에 의하여 $\operatorname{ht}_A\mathfrak{p}=\operatorname{ht}_B(\mathfrak{p}\cap B)$이다.
+부등식 $\dim A/\mathfrak{p}+\codim\mathfrak{p}\leq\dim A$는 임의의 ring에 대하여 성립하므로 ([§차원, ⁋정의 2](/ko/math/commutative_algebra/Krull_dimension#def2)), 반대 부등식만 보이면 된다. $n=\dim A$, $d=\dim A/\mathfrak{p}=\dim\mathfrak{p}$라 두자. [정리 1](#thm1)을 $A$의 ideal $\mathfrak{a}_1=\mathfrak{p}$ 하나로 이루어진 chain에 적용하면, $A$의 subring $B\cong\mathbb{K}[\x_1,\ldots, \x_n]$이 존재하여 $A$가 finitely generated $B$-module이고 $\mathfrak{p}\cap B=(\x_{d+1},\ldots, \x_n)$을 만족한다. 그럼 $B\hookrightarrow A$가 integral extension이므로 [§정수적 확장과 아이디얼, ⁋명제 1](/ko/math/commutative_algebra/lying_over_and_going_up#prop1)과 [§정수적 확장과 아이디얼, ⁋따름정리 4](/ko/math/commutative_algebra/lying_over_and_going_up#cor4)에 의하여 $\codim_A\mathfrak{p}=\codim_B(\mathfrak{p}\cap B)$이다.
 
 이제 polynomial ring $B=\mathbb{K}[\x_1,\ldots, \x_n]$에서 ideal $(\x_{d+1},\ldots, \x_n)$의 height를 계산하자. Chain
 
 $$(0)\subseteq(\x_n)\subseteq(\x_{n-1},\x_n)\subseteq\cdots\subseteq(\x_{d+1},\ldots, \x_n)$$
 
-은 이 ideal의 height가 적어도 $n-d$임을 보여주며, 몫환 $B/(\x_{d+1},\ldots, \x_n)\cong\mathbb{K}[\x_1,\ldots, \x_d]$가 $d$차원이므로 ([§매개계, ⁋따름정리 11](/ko/math/commutative_algebra/system_of_parameters#cor11)) 부등식 $\dim+\operatorname{ht}\leq n$으로 height는 기껏해야 $n-d$이다. 따라서 $\operatorname{ht}_B(\x_{d+1},\ldots, \x_n)=n-d$이며, 결국 $\operatorname{ht}\mathfrak{p}=n-d=\dim A-\dim A/\mathfrak{p}$이다.
+은 이 ideal의 height가 적어도 $n-d$임을 보여주며, quotient ring $B/(\x_{d+1},\ldots, \x_n)\cong\mathbb{K}[\x_1,\ldots, \x_d]$가 $d$차원이므로 ([§매개계, ⁋따름정리 11](/ko/math/commutative_algebra/system_of_parameters#cor11)) 부등식 $\dim+\codim\leq n$으로 height는 기껏해야 $n-d$이다. 따라서 $\codim_B(\x_{d+1},\ldots, \x_n)=n-d$이며, 결국 $\codim\mathfrak{p}=n-d=\dim A-\dim A/\mathfrak{p}$이다.
 :::
 
 한편 [정리 1](#thm1)이 주는 polynomial subring은 계수의 확대와 잘 호환되므로, finitely generated $\mathbb{K}$-algebra의 차원이 계수체를 키워도 변하지 않는다는 것 또한 얻어진다.
@@ -132,7 +132,7 @@ $$\dim(A\otimes_\mathbb{K}\mathbb{L})=\dim\mathbb{L}[\x_1,\ldots, \x_d]=d$$
 Noetherian integral domain $A$와 finite type $A$-algebra $B$, 그리고 finitely generated $B$-module $M$이 주어졌다 하자. 그럼 $0$이 아닌 $a\in A$가 존재하여 $M_a$가 free $A_a$-module이 된다.
 :::
 ::: 증명
-$B$는 Noetherian integral domain $A$ 위의 finite type 대수이므로 [§기본 개념들, ⁋정리 12](/ko/math/commutative_algebra/basic_notions#thm12)에 의하여 Noetherian ring이다.
+$B$는 Noetherian integral domain $A$ 위의 finite type algebra이므로 [§기본 개념들, ⁋정리 12](/ko/math/commutative_algebra/basic_notions#thm12)에 의하여 Noetherian ring이다.
 
 먼저 [§동반소아이디얼, ⁋보조정리 6](/ko/math/commutative_algebra/associated_primes#lem6)을 $B$와 $M$에 적용하는 dévissage로 문제를 줄인다. 이를 적용하면 filtration
 
@@ -146,7 +146,7 @@ $$0 \longrightarrow (M_{i-1})_a \longrightarrow (M_i)_a \longrightarrow (B/\math
 
 $\varphi: A \rightarrow B$의 kernel이 $0$이 아닌 경우는 곧바로 처리된다. 이때 $0\neq a\in \ker \varphi$를 택하면 $B_a=B\otimes_AA_a$에서 $\varphi(a)=0$이면서 $a$가 unit이므로 $B_a=0$이고, 이는 rank $0$의 free module이다. 따라서 $A\subseteq B$라 가정해도 좋다.
 
-이제 $K=\Frac(A)$라 하면 $B\otimes_AK$는 $A\setminus\{0\}$에서의 $B$의 localization이므로 $0$이 아닌 integral domain이며, $K$ 위의 finite type 대수이다. 남은 주장을 $d=\dim (B\otimes_AK)$에 대한 귀납법으로 보인다.
+이제 $K=\Frac(A)$라 하면 $B\otimes_AK$는 $A\setminus\{0\}$에서의 $B$의 localization이므로 $0$이 아닌 integral domain이며, $K$ 위의 finite type algebra이다. 남은 주장을 $d=\dim (B\otimes_AK)$에 대한 귀납법으로 보인다.
 
 [정리 1](#thm1)을 ideal의 chain 없이 적용하면 algebraically independent한 원소들 $y_1,\ldots, y_d\in B\otimes_AK$가 존재하여 $B\otimes_AK$가 $K[y_1,\ldots,y_d]$ 위의 finite module이다. 각 $y_i$에 $A$의 $0$이 아닌 원소를 곱해도 대수적 독립성과 유한성은 유지되므로, 처음부터 $y_i\in B$라 가정해도 좋다.
 
@@ -154,7 +154,7 @@ $B$를 $A$-algebra로서 생성하는 원소를 $b_1,\ldots, b_m$이라 하면 �
 
 $$C=A_{a_0}[y_1,\ldots, y_d]$$
 
-위에서 integral하고, 따라서 $B_{a_0}$는 finite $C$-module이다. 여기에서 $y_i$들이 $K$ 위에서 대수적으로 독립이므로 $C$는 $A_{a_0}$ 위의 polynomial ring이며, 특히 free $A_{a_0}$-module이다.
+위에서 integral하고, 따라서 $B_{a_0}$는 finite $C$-module이다. 여기에서 $y_i$들이 $K$ 위에서 algebraically independent하므로 $C$는 $A_{a_0}$ 위의 polynomial ring이며, 특히 free $A_{a_0}$-module이다.
 
 이제 dévissage를 Noetherian ring $C$와 finite $C$-module $B_{a_0}$에 다시 적용하면, quotient가 $C/\mathfrak{p}$ 꼴인 finite filtration을 얻는다. 따라서 각 $C/\mathfrak{p}$에 대하여 결론을 보이면 충분하다.
 
@@ -164,7 +164,7 @@ $$C=A_{a_0}[y_1,\ldots, y_d]$$
 
 $$(C/\mathfrak{p})\otimes_{A_{a_0}}K=K[y_1,\ldots,y_d]/\mathfrak{p}K[y_1,\ldots,y_d]$$
 
-인데, $0\neq g\in \mathfrak{p}K[y_1,\ldots,y_d]$를 택하면 이 quotient ring에서 $y_1,\ldots,y_d$의 image들은 $g=0$이라는 대수적 관계를 만족하므로 대수적으로 독립일 수 없다. 그런데 이 quotient ring은 이들 image로 생성되는 $K$-algebra이므로 그 field of fractions의 transcendence degree는 $d$보다 작고, [정리 3](#thm3)에 의하여
+인데, $0\neq g\in \mathfrak{p}K[y_1,\ldots,y_d]$를 택하면 이 quotient ring에서 $y_1,\ldots,y_d$의 image들은 $g=0$이라는 algebraic relation을 만족하므로 algebraically independent할 수 없다. 그런데 이 quotient ring은 이들 image로 생성되는 $K$-algebra이므로 그 field of fractions의 transcendence degree는 $d$보다 작고, [정리 3](#thm3)에 의하여
 
 $$\dim\big((C/\mathfrak{p})\otimes_{A_{a_0}}K\big)<d$$
 

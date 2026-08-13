@@ -12,6 +12,8 @@ date: 2026-06-20
 
 weight: 5
 
+drift_needed: true
+
 ---
 
 이 글에서 우리는 모든 nonzero 원소가 곱셈에 대한 역원을 갖는 ring, 즉 *division ring*을 본격적으로 다룬다. 
@@ -31,7 +33,7 @@ Ring $D\neq 0$이 *division ring<sub>나눗셈환</sub>* 혹은 *skew field<sub>
 Division ring의 첫 번째 성질은 다음과 같다.
 
 ::: 명제 2
-Division ring $D$는 zero divisor를 갖지 않는다. 즉 $ab=0$이면 $a=0$ 또는 $b=0$이다. 특히 모든 field는 integral domain이다.
+Division ring $D$는 nonzero zero divisor를 갖지 않는다. 즉 $ab=0$이면 $a=0$ 또는 $b=0$이다. 특히 모든 field는 integral domain이다.
 :::
 ::: 증명
 $a,b\in D$가 $ab=0$이고 $a\neq 0$이라 하자. $D$가 division ring이므로 $a$는 역원 $a^{-1}$을 가지며, 양변의 왼쪽에 $a^{-1}$을 곱하면
@@ -182,7 +184,7 @@ $$N(q)=q\bar q$$
 
 $$N(q)=q\bar q=a^2+b^2+c^2+d^2\in\mathbb{R}$$
 
-이 된다는 것을 확인할 수 있다. 특히 $N(q)=0$인 것은 $a=b=c=d=0$, 즉 $q=0$인 것과 동치이다. 
+이 된다는 것을 확인할 수 있다. 특히 $N(q)=0$인 것은 $a=b=c=d=0$, 즉 $q=0$인 것과 동치이다. 또, $\bar q$의 conjugate가 다시 $q$이므로 $\bar qq=\bar q\bar{\bar q}=N(\bar q)=a^2+(-b)^2+(-c)^2+(-d)^2=N(q)$이며, 따라서 $q\bar q$와 $\bar qq$는 모두 $N(q)$와 같다. 
 
 Norm의 또 다른 성질 중 하나는 이것이 곱셈을 보존한다는 것이다. 실제로, conjugate가 $\overline{q_1q_2}=\bar q_2\bar q_1$을 만족하는 것은 쉽게 확인할 수 있고, 이를 이용하면
 

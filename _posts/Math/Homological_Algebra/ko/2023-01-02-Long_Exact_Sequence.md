@@ -10,6 +10,7 @@ sidebar:
 
 date: 2023-01-02
 weight: 3
+drift_needed: true
 
 ---
 
@@ -45,13 +46,13 @@ $$\cdots\rightarrow H_n(A)\rightarrow H_n(B)\rightarrow H_n(C)\rightarrow H_{n-1
 
 {% diagram Math/Homological_Algebra/Long_Exact_Sequence-1.svg width="32.84em" alt="long_exact_sequence" %}
 
-을 생각하면 된다. 여기에서 $\partial$들은 모두 $\partial^A(a+\im d^A_{n+1})=d_n^Aa\in\ker d^A_{n-1}$과 같이 정의된 함수들이다. 그럼 위의 diagram에서 $\ker\partial^A$는 $H_{n+1}(A)=\ker d_n^A/\im(d^A_{n+1})$와 같고, $\coker\partial^A$는 $H_{n-1}(A)=\ker d^A_{n-1}/\im d^A_n$과 같다는 것을 쉽게 확인할 수 있다. 
+을 생각하면 된다. 여기에서 $\partial$들은 모두 $\partial^A(a+\im d^A_{n+1})=d_n^Aa\in\ker d^A_{n-1}$과 같이 정의된 함수들이다. 그럼 위의 diagram에서 $\ker\partial^A$는 $H_n(A)=\ker d_n^A/\im(d^A_{n+1})$와 같고, $\coker\partial^A$는 $H_{n-1}(A)=\ker d^A_{n-1}/\im d^A_n$과 같다는 것을 쉽게 확인할 수 있다. 
 
 따라서, 위와 아래의 행이 모두 exact라는 것만 보인다면, snake lemma에 의해 주어진 long exact sequence가 잘 유도된다. 이를 보이기 위해 다시 다음의 diagram
 
 {% diagram Math/Homological_Algebra/Long_Exact_Sequence-2.svg width="22.98em" alt="long_exact_sequence_exactness" %}
 
-을 생각하자. 이 diagram에 snake lemma (더 정확하게는 [§Diagram chasing, ⁋보조정리 5](/ko/math/homological_algebra/diagram_chasing#lem5)) 를 다시 한 번 적용하면, 두 exact sequence
+을 생각하자. 이 diagram에 [§Diagram chasing, ⁋보조정리 5](/ko/math/homological_algebra/diagram_chasing#lem5)를 적용하면, 두 exact sequence
 
 $$0\rightarrow \ker(d_n^A)\rightarrow \ker(d_n^B)\rightarrow \ker(d_n^C)$$
 
@@ -59,7 +60,7 @@ $$0\rightarrow \ker(d_n^A)\rightarrow \ker(d_n^B)\rightarrow \ker(d_n^C)$$
 
 $$\coker(d_n^A)\rightarrow\coker(d_n^B)\rightarrow\coker(d_n^C)\rightarrow 0$$
 
-이 얻어진다.
+이 얻어진다. 이 때 양 끝의 $0$은 각각 $A_n\rightarrow B_n$이 단사이므로 이를 제한하여 얻은 $\ker(d_n^A)\rightarrow\ker(d_n^B)$ 또한 단사라는 것과, $B_{n-1}\rightarrow C_{n-1}$이 전사이므로 이것이 유도하는 $\coker(d_n^B)\rightarrow\coker(d_n^C)$ 또한 전사라는 것에서 온다.
 :::
 
 위에서 만든 long exact sequence는 다음과 같은 센스에서 functoriality를 가진다.
@@ -112,7 +113,7 @@ $$\partial'[h_n(c)]=[f_{n-1}(a)]=H_{n-1}(f)(\partial[c])$$
 지금까지 살펴본 chain complex들 사이의 isomorphism을 어떻게 정의해야 하는지는 명확하다.
 
 ::: 정의 3
-두 chain complex $C_\bullet$, $D_\bullet$이 주어졌다 하자. 그럼 $C_\bullet$과 $D_\bullet$이 *isomorphic*하다는 것은 임의의 두 chain map $f:C_\bullet\rightarrow D_\bullet$, $g:D_\bullet\rightarrow C_\bullet$이 존재하여 $fg=\id_D$이고 $gf=\id_C$인 것이다. 이 때, $f,g$를 두 chain complex 사이의 *isomorphism*이라 부른다.
+두 chain complex $C_\bullet$, $D_\bullet$이 주어졌다 하자. 그럼 $C_\bullet$과 $D_\bullet$이 *isomorphic*하다는 것은 적당한 두 chain map $f:C_\bullet\rightarrow D_\bullet$, $g:D_\bullet\rightarrow C_\bullet$이 존재하여 $fg=\id_D$이고 $gf=\id_C$인 것이다. 이 때, $f,g$를 두 chain complex 사이의 *isomorphism*이라 부른다.
 :::
 
 이는 곧, 각각의 $f_n$들이 모두 isomorphism인 chain map $(f_n)_{n\in\mathbb{Z}}$이 존재한다는 것과 동치이다.
@@ -166,7 +167,7 @@ $$f_n(a)-g_n(a)=d_{n+1}^D(h_n(a))\in\im(d_{n+1}^D)$$
 
 ## Homotopy category
 
-[명제 6](#prop6)에 힘입어, 우리는 *homotopy category* $\mathbf{K}(\mathcal{C})$를 다음 과정을 통해 정의할 수 있다. 우선 다음의 첫 번째 보조정리는 자명하다.
+[명제 6](#prop6)에 힘입어, 우리는 *homotopy category* $\mathbf{K}(\mathcal{C})$를 다음 과정을 통해 정의할 수 있다. 우선 다음의 보조정리는, reflexivity의 경우 $h=0$을, symmetry의 경우 주어진 chain homotopy $h$에 대하여 $-h$를, transitivity의 경우 주어진 두 chain homotopy $h,h'$에 대하여 $h+h'$을 chain homotopy로 택하면 얻어진다.
 
 ::: 보조정리 7
 두 chain map 사이의 homotopy relation은 동치관계다.
@@ -216,9 +217,9 @@ $$0 \longrightarrow D \longrightarrow \cone(f) \overset{\delta}{\longrightarrow}
 
 을 생각하자. 여기서 $D \rightarrow\cone(f)$는 $y$를 $(0,y)$로 보내고, $\delta$는 $(x,y)$를 $-x$로 보낸다. 그럼 이 함수들의 정의에 의하여 위의 sequence가 short exact sequence가 되는 것이 자명하므로, [정리 1](#thm1)에 의하여 다음의 long exact sequence
 
-$$\cdots \rightarrow H_{n+1}(\cone(f)) \rightarrow H_n(B) \rightarrow H_n(C) \rightarrow H_n(\cone(f)) \rightarrow H_{n-1}(B) \rightarrow \cdots$$
+$$\cdots \rightarrow H_{n+1}(\cone(f)) \rightarrow H_n(C) \rightarrow H_n(D) \rightarrow H_n(\cone(f)) \rightarrow H_{n-1}(C) \rightarrow \cdots$$
 
-가 존재한다. 한편 이 정리의 증명을 뜯어보면, 위에서 얻어지는 connecting map $H_n(B) \rightarrow H_n(C)$들이 정확히 $H_n(f)$가 되는 것을 알 수 있다. 따라서 다음이 성립한다.
+가 존재한다. 한편 이 정리의 증명을 뜯어보면, 위에서 얻어지는 connecting map $H_n(C) \rightarrow H_n(D)$들이 정확히 $H_n(f)$가 되는 것을 알 수 있다. 따라서 다음이 성립한다.
 
 ::: 따름정리 9
 Chain map $f: C_\bullet \rightarrow D_\bullet$이 quasi-isomorphism인 것은 $\cone(f)$가 exact sequence인 것과 동치이다. 

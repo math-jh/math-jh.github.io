@@ -11,6 +11,8 @@ sidebar:
 date: 2024-12-15
 weight: 16
 
+drift_needed: true
+
 ---
 
 이제 우리는 옹골성과 관련된 남은 결과인 Tychonoff 정리를 살펴본다. 
@@ -33,15 +35,15 @@ $$A=A\cap X=(A\cap U_{x_1})\cup \cdots\cup (A\cap U_{x_n})\in \mathcal{F}$$
 
 $$X\setminus A=(X\setminus (A\cap U_{x_1}))\cap\cdots\cap (X\setminus (A\cap U_{x_n}))$$
 
-도 $\mathcal{F}$에 속해야 하므로, 이는 $\mathcal{F}$가 maximal이라는 가정에 모순이다. 
+도 $\mathcal{F}$에 속해야 하므로, 이는 $A$와 $X\setminus A$ 가운데 정확히 하나만 $\mathcal{F}$에 속한다는 사실에 모순이다. 
 
-거꾸로 임의의 ultrafilter $\mathcal{F}$가 주어질 때마다 limit point $x$를 찾을 수 있다 하고, finite intersection property를 만족하는 $X$의 닫힌집합들의 family $\mathcal{A}$가 주어졌다 하자. 그럼 $\mathcal{A}$에 의해 생성되는 filter를 포함하는 ultrafilter $\mathcal{F}$를 생각할 수 있으며, 가정에 의해 $\mathcal{F}$는 limit point $x$를 가진다. 즉 $\mathcal{N}(x)\subseteq \mathcal{F}$이며, 따라서 임의의 $F\in \mathcal{F}$마다 적당한 $x$의 근방 $U$가 존재하여 $U\cap F\neq\emptyset$이다. 특히 임의의 $A\in \mathcal{A}$에 대하여 $A\cap U\neq\emptyset$이도록 할 수 있는 $x$의 근방 $U$가 존재하며, 따라서 $x\in \cl(A)=A$가 항상 성립한다. 이로부터 $x\in\bigcap_{A\in \mathcal{A}}A$임을 알고, 따라서 [§옹골공간, ⁋명제 11](/ko/math/topology/compact_spaces#prop11)에 의해 원하는 결과를 얻는다.
+거꾸로 임의의 ultrafilter $\mathcal{F}$가 주어질 때마다 limit point $x$를 찾을 수 있다 하고, finite intersection property를 만족하는 $X$의 닫힌집합들의 family $\mathcal{A}$가 주어졌다 하자. 그럼 $\mathcal{A}$에 의해 생성되는 filter를 포함하는 ultrafilter $\mathcal{F}$를 생각할 수 있으며, 가정에 의해 $\mathcal{F}$는 limit point $x$를 가진다. 즉 $\mathcal{N}(x)\subseteq \mathcal{F}$이며, 따라서 임의의 $F\in \mathcal{F}$와 $x$의 임의의 근방 $U$에 대하여 $U\cap F\neq\emptyset$이다. 특히 임의의 $A\in \mathcal{A}$와 $x$의 임의의 근방 $U$에 대하여 $A\cap U\neq\emptyset$이므로, $x\in \cl(A)=A$가 항상 성립한다. 이로부터 $x\in\bigcap_{A\in \mathcal{A}}A$임을 알고, 따라서 [§옹골공간, ⁋명제 11](/ko/math/topology/compact_spaces#prop11)에 의해 원하는 결과를 얻는다.
 :::
 
 그럼 다음이 성립한다.
 
 ::: 정리 2 (Tychonoff)
-Compact space들 $(X_i)_{i\in I}$의 product $X=\prod_{i\in I} X_i$는 compact이다. 거꾸로, 만일 product space $X$가 compact라면, 각각의 $X_i$들이 모두 compact이다.
+Compact space들 $(X_i)_{i\in I}$의 product $X=\prod_{i\in I} X_i$는 compact이다. 거꾸로, 만일 $X\neq\emptyset$이며 product space $X$가 compact라면, 각각의 $X_i$들이 모두 compact이다.
 :::
 ::: 증명
 만일 $X$가 compact라면, 각각의 $X_i$들이 모두 compact라는 것은 $\pr_i$의 연속성과 [§옹골공간, ⁋명제 8](/ko/math/topology/compact_spaces#prop8)에 의해 자명하다.
@@ -147,7 +149,7 @@ One-point compactification은 어떤 공간에 대해서도 compact 공간을 �
 ::: 증명
 먼저 $X^+$가 Hausdorff라 하자. 부분공간 $X$는 Hausdorff space의 부분공간이므로 Hausdorff이다. 국소적 옹골성을 보이기 위해 $x\in X$를 고정하면, $X^+$의 Hausdorff성에 의해 $x$와 $\infty$를 분리하는 서로소인 열린집합 $U\ni x$와 $W\ni\infty$가 존재한다. $W$는 $\infty$를 품으므로 둘째 종류이고, 따라서 $X$의 compact인 닫힌집합 $C$에 대해 $W=X^+\setminus C$이다. $U\cap W=\emptyset$으로부터 $U\subseteq C$이고, $U$는 $\infty$를 품지 않으므로 $X$에 포함되는 열린집합이다. 따라서 $C$는 $x$를 품는 열린집합 $U$를 포함하는 compact 집합, 곧 $x$의 compact neighborhood이며 $X$는 $x$에서 locally compact이다.
 
-거꾸로 $X$가 LCH라 하자. $X^+$의 서로 다른 두 점을 분리해야 한다. 두 점이 모두 $X$에 속하면 $X$가 Hausdorff이므로 이들을 $X$에서 분리하는 서로소인 열린집합을 얻고, 이들은 [정의 8](#def8)의 첫째 종류로서 $X^+$에서도 열린집합이다. 남은 경우는 한 점이 $x\in X$이고 다른 한 점이 $\infty$인 경우이다. $X$가 Hausdorff이므로 [명제 4](#prop4)에 의하여 $x$의 열린근방 $U$가 존재하여 $K=\cl(U)$가 compact이다. $X$가 Hausdorff이므로 $K$는 닫힌집합이고 ([§옹골공간, ⁋따름정리 5](/ko/math/topology/compact_spaces#cor5)), 따라서 $X^+\setminus K$는 $\infty$를 품는 둘째 종류의 열린집합이다. $U\subseteq K$이므로 $U$와 $X^+\setminus K$는 서로소이며 각각 $x$와 $\infty$를 분리한다.
+거꾸로 $X$가 LCH라 하자. $X^+$의 서로 다른 두 점을 분리해야 한다. 두 점이 모두 $X$에 속하면 $X$가 Hausdorff이므로 이들을 $X$에서 분리하는 서로소인 열린집합을 얻고, 이들은 [정의 8](#def8)의 첫째 종류로서 $X^+$에서도 열린집합이다. 남은 경우는 한 점이 $x\in X$이고 다른 한 점이 $\infty$인 경우이다. $X$가 LCH이므로 [명제 4](#prop4)에 의하여 $x$의 열린근방 $U$가 존재하여 $K=\cl(U)$가 compact이다. $X$가 Hausdorff이므로 $K$는 닫힌집합이고 ([§옹골공간, ⁋따름정리 5](/ko/math/topology/compact_spaces#cor5)), 따라서 $X^+\setminus K$는 $\infty$를 품는 둘째 종류의 열린집합이다. $U\subseteq K$이므로 $U$와 $X^+\setminus K$는 서로소이며 각각 $x$와 $\infty$를 분리한다.
 :::
 
 [정리 10](#thm10)과 [정리 11](#thm11)를 합치면, $X$가 LCH space일 때 $X^+$는 compact Hausdorff space가 되고 [명제 9](#prop9)에 의해 $X$는 그 안에 열린 부분공간으로 매장된다. 특히 $X$가 compact가 아니라면 이 embedding은 조밀하다. 이것이 Alexandroff 정리의 존재 부분, 곧 임의의 LCH space가 어떤 compact Hausdorff space에 조밀한 열린 부분공간으로 매장된다는 사실이다. 남은 것은 이러한 옹골화가 본질적으로 유일하다는 사실이며, 이는 다음의 보편성으로 정식화된다.
@@ -275,7 +277,7 @@ $$\mathcal{V}=(U_i\cap O_k)_{k\geq 1,i\in F_k}$$
 를 생각하자. 각 원소는 열린집합이며 $U_i$에 포함되므로 $\mathcal{V}$는 $\mathcal{U}$의 open refinement이고, $A_k$들이 $\mathbb{R}^n$을 덮으므로 $\mathcal{V}$도 $\mathbb{R}^n$을 덮는다. 끝으로 $\mathcal{V}$가 locally finite임을 본다. 점 $x$에 대하여 $r=\lVert x\rVert$이라 두면 근방 $B_{r+1}=\{y:\lVert y\rVert<r+1\}$은 $O_k$와 만나는 경우 $k-2<r+1$, 곧 $k<r+3$일 때뿐이므로 유한 개의 $k$에 대해서만 $O_k$와 만난다. 각 $k$마다 $\mathcal{V}$의 원소는 유한 개($\lvert F_k\rvert$개)뿐이므로, $B_{r+1}$은 $\mathcal{V}$의 유한히 많은 원소만을 만난다. 따라서 $\mathcal{V}$는 locally finite open refinement이고 $\mathbb{R}^n$은 paracompact이다.
 :::
 
-이 예시의 논증은 $\mathbb{R}^n$의 특수성보다는 두 가지 성질, 곧 국소적 옹골성과 가산 개의 compact 집합으로의 소진에만 의존한다. 실제로 같은 방법으로 임의의 second countable LCH space, 나아가 임의의 $\sigma$-compact LCH space가 paracompact임을 보일 수 있다. 이는 뒤에서 다룰 topological manifold의 paracompactness의 바탕이 된다.
+이 예시의 논증은 $\mathbb{R}^n$의 특수성보다는 두 가지 성질, 곧 국소적 옹골성과 가산 개의 compact 집합으로의 소진에만 의존한다. 실제로 같은 방법으로 임의의 second countable LCH space, 나아가 가산 개의 compact 부분집합의 합집합으로 적히는 임의의 LCH space가 paracompact임을 보일 수 있다. 이는 뒤에서 다룰 topological manifold의 paracompactness의 바탕이 된다.
 
 ## Paracompact Hausdorff 공간의 정규성
 
@@ -326,11 +328,11 @@ $V=\bigcup\mathcal{D}$는 $B$를 포함하는 열린집합이며, $\mathcal{D}$�
 
 Paracompact 공간의 가장 풍부한 공급원 가운데 하나는 metric space이다. 모든 metric space가 normal임은 이미 알고 있으나 ([§Urysohn 보조정리와 Tietze 확장정리, ⁋명제 4](/ko/math/topology/urysohn_and_tietze#prop4)), 사실 이들은 언제나 paracompact이기도 하다. 이는 A. H. Stone의 정리로 알려져 있다.
 
-::: 정리 24
-(Stone) 임의의 metric space는 paracompact이다.
+::: 정리 24 (Stone)
+임의의 metric space는 paracompact이다.
 :::
 ::: 증명
-증명의 핵심 착상만 밝히고 세부는 표준적인 문헌을 따른다. **[Mun]** Metric $d$를 가진 공간 $X$와 open covering $(U_\alpha)_{\alpha\in J}$가 주어졌다 하자. 우선 선택공리를 사용하여 index set $J$에 well-ordering을 준다. 각 정수 $n\geq 1$과 각 $\alpha$에 대하여, $U_\alpha$의 점 가운데 경계로부터 적어도 $2^{-n}$만큼 떨어져 있고, 순서상 앞선 어떤 $U_\beta$의 그러한 대응 집합에도 이미 들어 있지 않은 점들만을 남긴 뒤, 그 점들을 중심으로 반경 $2^{-n-1}$인 열린 공들을 합쳐 집합 $V_{n,\alpha}$을 정의한다. 이때 $\alpha$에 대한 well-ordering과 반경의 기하급수적 축소가 맞물려, family $(V_{n,\alpha})$는 $(U_\alpha)$를 세분하는 열린 덮개가 되며 동시에 locally finite이다. 각 점 $x$에 대하여, $x$가 처음 덮이는 단계의 지표 $n$을 보면 반경 $2^{-n-1}$ 정도의 근방이 유한히 많은 $V_{n',\alpha}$만을 만나기 때문이다. 따라서 $X$는 paracompact이다. 이 구성은 M. E. Rudin이 정리한 형태로 널리 알려져 있다.
+증명의 핵심 착상만 밝히고 세부는 표준적인 문헌을 따른다. **[Mun]** Metric $d$를 가진 공간 $X$와 open covering $(U_\alpha)_{\alpha\in J}$가 주어졌다 하자. 우선 선택공리를 사용하여 index set $J$에 well-ordering을 준다. 각 정수 $n\geq 1$과 각 $\alpha$에 대하여, $U_\alpha$의 점 가운데 경계로부터 적어도 $2^{-n}$만큼 떨어져 있고, 순서상 앞선 어떤 $U_\beta$의 그러한 대응 집합에도 이미 들어 있지 않으며, 이전 단계 $n'<n$에서 이미 덮인 점도 아닌 점들만을 남긴 뒤, 그 점들을 중심으로 반경 $2^{-n-1}$인 열린 공들을 합쳐 집합 $V_{n,\alpha}$을 정의한다. 이때 $\alpha$에 대한 well-ordering과 반경의 기하급수적 축소가 맞물려, family $(V_{n,\alpha})$는 $(U_\alpha)$를 세분하는 열린 덮개가 되며 동시에 locally finite이다. 각 점 $x$에 대하여, $x$가 처음 덮이는 단계의 지표 $n$을 보면 반경 $2^{-n-1}$ 정도의 근방이 유한히 많은 $V_{n',\alpha}$만을 만나기 때문이다. 따라서 $X$는 paracompact이다. 이 구성은 M. E. Rudin이 정리한 형태로 널리 알려져 있다.
 :::
 
 ## 단위분할의 존재
@@ -350,23 +352,23 @@ Paracompact 공간의 가장 풍부한 공급원 가운데 하나는 metric spac
 
 존재 증명의 관건은 정규성만으로는 부족하고, 덮개를 두 번 "수축"시켜 닫힌집합이 여전히 전체를 덮게 만드는 데에 있다. 이를 위한 보조정리를 먼저 마련한다. Family $(U_i)_{i\in I}$가 *point-finite<sub>점별유한</sub>*라는 것은 각 점 $x\in X$가 유한 개의 $U_i$에만 속하는 것을 말하며, locally finite family는 언제나 point-finite이다.
 
-::: 보조정리 26
-(Shrinking lemma) Normal space $X$의 point-finite open covering $(U_\alpha)_{\alpha\in J}$가 주어졌다 하자. 그럼 open covering $(V_\alpha)_{\alpha\in J}$가 존재하여 모든 $\alpha$에 대하여 $\cl(V_\alpha)\subseteq U_\alpha$가 성립한다.
+::: 보조정리 26 (Shrinking lemma)
+Normal space $X$의 point-finite open covering $(U_\alpha)_{\alpha\in J}$가 주어졌다 하자. 그럼 open covering $(V_\alpha)_{\alpha\in J}$가 존재하여 모든 $\alpha$에 대하여 $\cl(V_\alpha)\subseteq U_\alpha$가 성립한다.
 :::
 ::: 증명
 선택공리를 사용하여 index set $J$에 well-ordering을 준다. 우리는 초한귀납법으로 각 $\alpha\in J$마다 열린집합 $V_\alpha$를 정의하되, 다음의 불변식이 모든 단계에서 유지되도록 한다.
 
 $$(\ast_\alpha)\qquad \{V_\beta\mid\beta<\alpha\}\cup\{U_\beta\mid\beta\geq\alpha\}\ \text{가}\ X\ \text{를 덮는다.}$$
 
-먼저 $(\ast_\alpha)$가 임의의 $\alpha$에서 성립함을 point-finiteness로부터 확인한다. $\beta<\alpha$인 각 $\beta$에 대해 이미 $V_\beta$가 $\cl(V_\beta)\subseteq U_\beta$를 만족하도록 정의되었다고 하자. 점 $x\in X$가 주어지면 $x$는 유한 개의 $U_\gamma$에만 속한다. 만일 이들 가운데 $\gamma\geq\alpha$인 것이 있으면 $x$는 $U_\gamma$로 덮인다. 그렇지 않다면 $x\in U_\gamma$인 모든 $\gamma$는 $\alpha$보다 작으며, 이러한 $\gamma$ 가운데 가장 큰 것을 $\gamma_0$이라 하자. 이미 성립하는 $(\ast_{\gamma_0})$에 의하여 $x$는 $\{V_\beta\mid\beta\leq\gamma_0\}\cup\{U_\beta\mid\beta>\gamma_0\}$ 가운데 하나로 덮이는데, $\gamma_0$의 최대성에 의해 $\beta>\gamma_0$이면 $x\notin U_\beta$이므로 $x$는 어떤 $V_\beta$($\beta\leq\gamma_0<\alpha$)로 덮인다. 어느 경우든 $x$는 $(\ast_\alpha)$의 family로 덮이므로 $(\ast_\alpha)$가 성립한다.
+먼저 $(\ast_\alpha)$가 임의의 $\alpha$에서 성립함을 point-finiteness로부터 확인한다. $\beta<\alpha$인 각 $\beta$에 대해 이미 $V_\beta$가 $\cl(V_\beta)\subseteq U_\beta$를 만족하도록 정의되었다고 하자. 점 $x\in X$가 주어지면 $x$는 유한 개의 $U_\gamma$에만 속한다. 만일 이들 가운데 $\gamma\geq\alpha$인 것이 있으면 $x$는 $U_\gamma$로 덮인다. 그렇지 않다면 $x\in U_\gamma$인 모든 $\gamma$는 $\alpha$보다 작으며, 이러한 $\gamma$ 가운데 가장 큰 것을 $\gamma_0$이라 하자. $\gamma_0$ 단계를 마친 뒤 성립하는 덮개성에 의하여 $x$는 $\{V_\beta\mid\beta\leq\gamma_0\}\cup\{U_\beta\mid\beta>\gamma_0\}$ 가운데 하나로 덮이는데, $\gamma_0$의 최대성에 의해 $\beta>\gamma_0$이면 $x\notin U_\beta$이므로 $x$는 어떤 $V_\beta$($\beta\leq\gamma_0<\alpha$)로 덮인다. 어느 경우든 $x$는 $(\ast_\alpha)$의 family로 덮이므로 $(\ast_\alpha)$가 성립한다.
 
 이제 $\beta<\alpha$에 대해 $V_\beta$가 정의되었다 할 때 $V_\alpha$를 정의한다. 집합
 
 $$C_\alpha=X\setminus\Bigl(\bigcup_{\beta<\alpha}V_\beta\cup\bigcup_{\beta>\alpha}U_\beta\Bigr)$$
 
-은 닫힌집합이다. $(\ast_\alpha)$에 의하여 이 여집합의 밖에 있는 점, 곧 $C_\alpha$의 점은 어떤 $V_\beta$($\beta<\alpha$)나 $U_\beta$($\beta>\alpha$)에도 속하지 않으므로 반드시 $U_\alpha$에 속한다. 즉 $C_\alpha\subseteq U_\alpha$이다. $X$가 normal이므로 닫힌집합 $C_\alpha$와 이를 포함하는 열린집합 $U_\alpha$에 대하여 열린집합 $V_\alpha$가 존재하여 $C_\alpha\subseteq V_\alpha\subseteq\cl(V_\alpha)\subseteq U_\alpha$이도록 할 수 있다. ([§Urysohn 보조정리와 Tietze 확장정리, ⁋보조정리 1](/ko/math/topology/urysohn_and_tietze#lem1)) 그럼 $C_\alpha\subseteq V_\alpha$이므로 $\{V_\beta\mid\beta\leq\alpha\}\cup\{U_\beta\mid\beta>\alpha\}$이 $X$를 덮어 다음 단계의 불변식을 잇는다.
+은 닫힌집합이다. $(\ast_\alpha)$에 의하여 이 합집합의 밖에 있는 점, 곧 $C_\alpha$의 점은 어떤 $V_\beta$($\beta<\alpha$)나 $U_\beta$($\beta>\alpha$)에도 속하지 않으므로 반드시 $U_\alpha$에 속한다. 즉 $C_\alpha\subseteq U_\alpha$이다. $X$가 normal이므로 닫힌집합 $C_\alpha$와 이를 포함하는 열린집합 $U_\alpha$에 대하여 열린집합 $V_\alpha$가 존재하여 $C_\alpha\subseteq V_\alpha\subseteq\cl(V_\alpha)\subseteq U_\alpha$이도록 할 수 있다. ([§Urysohn 보조정리와 Tietze 확장정리, ⁋보조정리 1](/ko/math/topology/urysohn_and_tietze#lem1)) 그럼 $C_\alpha\subseteq V_\alpha$이므로 $\{V_\beta\mid\beta\leq\alpha\}\cup\{U_\beta\mid\beta>\alpha\}$이 $X$를 덮어 다음 단계의 불변식을 잇는다.
 
-끝으로 이렇게 얻은 $(V_\alpha)_{\alpha\in J}$이 $X$를 덮음을 본다. 점 $x$가 속하는 $U_\gamma$는 유한 개뿐이므로 그 지표 가운데 가장 큰 것을 $\gamma_0$이라 하면, $(\ast_{\gamma_0})$과 $\gamma_0$의 최대성에 의해 앞에서와 같이 $x$는 어떤 $V_\beta$($\beta\leq\gamma_0$)로 덮인다. 따라서 $(V_\alpha)_{\alpha\in J}$는 $X$의 open covering이며 각 $\alpha$에 대해 $\cl(V_\alpha)\subseteq U_\alpha$를 만족한다.
+끝으로 이렇게 얻은 $(V_\alpha)_{\alpha\in J}$이 $X$를 덮음을 본다. 점 $x$가 속하는 $U_\gamma$는 유한 개뿐이므로 그 지표 가운데 가장 큰 것을 $\gamma_0$이라 하면, $\gamma_0$ 단계를 마친 뒤 성립하는 덮개성과 $\gamma_0$의 최대성에 의해 앞에서와 같이 $x$는 어떤 $V_\beta$($\beta\leq\gamma_0$)로 덮인다. 따라서 $(V_\alpha)_{\alpha\in J}$는 $X$의 open covering이며 각 $\alpha$에 대해 $\cl(V_\alpha)\subseteq U_\alpha$를 만족한다.
 :::
 
 Point-finiteness가 초한귀납의 극한 단계와 최종 단계에서 덮개성을 유지하는 데에 결정적으로 쓰였음에 유의한다. Well-ordering만으로는 무한히 많은 $U_\beta$를 한꺼번에 $V_\beta$로 갈아치울 때 어떤 점이 덮이지 않을 위험이 있으나, 각 점이 유한 개의 조각에만 속한다는 사실이 그 점이 덮이는 단계를 유한한 곳에서 붙들어 준다. 이제 주요 정리를 증명할 준비가 되었다.
@@ -442,7 +444,7 @@ Hausdorff와 second countability를 요구하는 까닭은 다음 정리에서 �
 Hausdorff이고 locally Euclidean인 위상공간 $M$에 대하여, $M$이 second countable인 것은 $M$이 paracompact이고 가산 개의 connected component를 갖는 것과 동치이다. ([§연결공간, ⁋정의 7](/ko/math/topology/connected_spaces#def7))
 :::
 ::: 증명
-핵심 착상만 밝히고 세부는 **[Lee]**를 따른다. Locally Euclidean 조건에서 각 점은 $\mathbb{R}^m$의 열린집합과 위상동형인 근방을 가지므로 그 공간은 각 점에서 locally compact space처럼 행동한다. Second countable이면 [예시 20](#ex20)의 소진 논증을 일반화하여 $M$을 가산 개의 relatively compact 열린집합으로 덮을 수 있고, 이로부터 [명제 19](#prop19)의 유한성 논증과 같은 방식으로 국소유한 세분을 얻어 $M$이 paracompact임과 component가 가산임을 얻는다. 거꾸로 paracompact이고 component가 가산이면 각 component가 Lindelöf가 되어 가산 기저를 가지므로 $M$은 second countable이다.
+핵심 착상만 밝히고 세부는 **[Lee]**를 따른다. Locally Euclidean 조건에서 각 점은 $\mathbb{R}^m$의 열린집합과 위상동형인 근방을 가지므로 그 공간은 각 점에서 locally compact space처럼 행동한다. Second countable이면 [예시 20](#ex20)의 소진 논증을 일반화하여 $M$을 closure가 compact인 가산 개의 열린집합으로 덮을 수 있고, 이로부터 [명제 19](#prop19)의 유한성 논증과 같은 방식으로 국소유한 세분을 얻어 $M$이 paracompact임과 component가 가산임을 얻는다. 거꾸로 paracompact이고 component가 가산이면 각 component가 Lindelöf가 되어 가산 기저를 가지므로 $M$은 second countable이다.
 :::
 
 이 정리의 직접적인 귀결로 임의의 topological manifold $M$은 paracompact Hausdorff space이며, 따라서 [정리 27](#thm27)에 의하여 $M$의 임의의 좌표 덮개에 종속된 partition of unity가 존재한다. 이 사실 덕분에 각 좌표조각에서 Euclidean space의 언어로 정의한 대상을 다양체 전체로 이어 붙이는 일이 가능해지며, 이것이 partition of unity가 다양체론과 다발 이론에서 필수적인 도구로 쓰이는 이유이다.

@@ -13,6 +13,8 @@ date: 2022-10-09
 
 weight: 23
 
+drift_needed: true
+
 
 ---
 
@@ -43,7 +45,7 @@ $$A^tAx=A^ty$$
 을 얻는다. 이 과정을 요약하면 다음과 같다.
 
 ::: 명제 1
-임의의 행렬 $A\in\Mat_{m\times n}(\mathbb{R})$과 $y\in\mathbb{R}^m$에 대하여, 벡터 $x\in\mathbb{R}^n$이 실수 $\lVert Au-y\rVert$의 값을 최소로 하는 것은 다음 방정식
+임의의 행렬 $A\in\Mat_{m\times n}(\mathbb{R})$과 $y\in\mathbb{R}^m$에 대하여, 벡터 $x\in\mathbb{R}^n$이 실수 $\lVert Ax-y\rVert$의 값을 최소로 하는 것은 다음 방정식
 
 $$A^tAx=A^ty$$
 
@@ -53,7 +55,7 @@ $$A^tAx=A^ty$$
 도입부에서 다룬 예시는 다음과 같은 방식으로 풀 수 있다.
 
 ::: 예시 2
-평면 위의 세 점 $(0,1)$, $(1,3)$, $(2,4)$가 주어졌다 하고, 이들을 가장 잘 적합하는 직선 $y=ax+b$를 찾는 문제를 생각하자. 세 점이 모두 한 직선 위에 있다면 미지수 $a,b$에 대한 연립방정식
+평면 위의 세 점 $(0,1)$, $(1,3)$, $(2,4)$가 주어졌다 하고, 이들을 가장 잘 적합하는 직선 $y=a\x+b$를 찾는 문제를 생각하자. 세 점이 모두 한 직선 위에 있다면 미지수 $a,b$에 대한 연립방정식
 
 $$\begin{aligned}a\cdot 0+b&=1\\ a\cdot 1+b&=3\\ a\cdot 2+b&=4\end{aligned}$$
 
@@ -73,7 +75,7 @@ $$A^tA=\begin{pmatrix}5&3\\ 3&3\end{pmatrix},\qquad A^ty=\begin{pmatrix}11\\ 8\e
 
 $$\begin{pmatrix}a\\ b\end{pmatrix}=(A^tA)^{-1}A^ty=\frac{1}{6}\begin{pmatrix}3&-3\\ -3&5\end{pmatrix}\begin{pmatrix}11\\ 8\end{pmatrix}=\frac{1}{6}\begin{pmatrix}9\\ 7\end{pmatrix}=\begin{pmatrix}3/2\\ 7/6\end{pmatrix}$$
 
-을 얻는다. 즉, 주어진 세 점을 최소제곱의 의미에서 가장 잘 표현하는 직선은 $y=\frac{3}{2}x+\frac{7}{6}$이다.
+을 얻는다. 즉, 주어진 세 점을 최소제곱의 의미에서 가장 잘 표현하는 직선은 $y=\frac{3}{2}\x+\frac{7}{6}$이다.
 
 {% diagram Math/Linear_Algebra/Least_Squares_Method-1.svg width="11.95em" alt="linear least squares fit" %}
 :::
@@ -128,13 +130,13 @@ $$0\cdot\left(-\frac{1}{6}\right)+1\cdot\frac{1}{3}+2\cdot\left(-\frac{1}{6}\rig
 
 우선 임의의 $A\in\Mat_{m\times n}(\mathbb{R})$과 $y\in\im(A)$가 주어졌다 하고, $A$가 단사가 아니라 하자. 그럼 $Au=0$을 만족하는 영이 아닌 벡터 $u$들이 존재하며, 따라서 $Ax=y$를 만족하는 벡터 $x$가 하나 주어진다면, $x+u$들 또한 해가 된다는 것을 알 수 있다. 이제 이들 중 가장 작은 norm을 갖는 해를 찾아 이를 *최소노름해<sub>minimum-norm solution</sub>*라 부르자. 즉, $Ax=y$의 해 전체는 한 특수해 $x_0$에 대하여 $x_0+\ker A$의 꼴을 이루며, 우리는 이 affine 부분공간 위에서 norm을 최소로 만드는 점을 찾는다.
 
-이는 [§내적공간, ⁋정리 9](/ko/math/linear_algebra/inner_product_spaces#thm9)의 projection theorem이 다루는 상황과 정확히 같다. 원점에서 affine 부분공간 $x_0+\ker A$까지의 거리를 최소로 만드는 점은 유일하며, 이 점에서 affine 부분공간으로 그은 벡터는 $\ker A$에 수직이다. 따라서 최소노름해는 $(\ker A)^\perp$에 놓인 유일한 해이다. 한편 [§쌍선형형식, ⁋명제 10](/ko/math/linear_algebra/bilinear_form#prop10)에 의하여 $(\ker A)^\perp=\im A^t$이 성립한다. 이를 정리하면 다음과 같다.
+이는 [§내적공간, ⁋정리 9](/ko/math/linear_algebra/inner_product_spaces#thm9)의 projection theorem이 다루는 상황과 정확히 같다. 원점에서 affine 부분공간 $x_0+\ker A$까지의 거리를 최소로 만드는 점은 유일하며, 원점에서 이 점으로 그은 벡터는 $\ker A$에 수직이다. 따라서 최소노름해는 $(\ker A)^\perp$에 놓인 유일한 해이다. 한편 [§쌍선형형식, ⁋명제 10](/ko/math/linear_algebra/bilinear_form#prop10)에 의하여 $(\ker A)^\perp=\im A^t$이 성립한다. 이를 정리하면 다음과 같다.
 
 ::: 명제 5
 임의의 행렬 $A\in\Mat_{m\times n}(\mathbb{R})$과 $y\in\im A$에 대하여, 방정식 $Ax=y$의 해들 중 norm을 최소로 하는 해는 유일하게 존재하며, 이는 $\im A^t$에 속하는 유일한 해이다.
 :::
 ::: 증명
-$y\in\im A$이므로 $Ax_0=y$를 만족하는 $x_0$이 존재하고, $Ax=y$의 해 전체는 $x_0+\ker A$와 같다. [§쌍선형형식, ⁋명제 10](/ko/math/linear_algebra/bilinear_form#prop10)에 의하여
+$y\in\im A$이므로 $Ax_0=y$를 만족하는 $x_0$이 존재하고, $Ax=y$의 해 전체는 $x_0+\ker A$와 같다. [§쌍선형형식, ⁋명제 8](/ko/math/linear_algebra/bilinear_form#prop8)에 의하여
 
 $$\mathbb{R}^n=\ker A\oplus(\ker A)^\perp$$
 
@@ -142,7 +144,7 @@ $$\mathbb{R}^n=\ker A\oplus(\ker A)^\perp$$
 
 $$\lVert x\rVert^2=\lVert p\rVert^2+\lVert u\rVert^2\geq \lVert p\rVert^2$$
 
-이 성립한다. 등호는 $u=0$, 즉 $x=p$일 때만 성립하므로 norm을 최소로 하는 해는 $p$로 유일하다. 또한 같은 명제에 의하여 $(\ker A)^\perp=\im A^t$이므로 $p\in\im A^t$이다.
+이 성립한다. 등호는 $u=0$, 즉 $x=p$일 때만 성립하므로 norm을 최소로 하는 해는 $p$로 유일하다. 또한 [§쌍선형형식, ⁋명제 10](/ko/math/linear_algebra/bilinear_form#prop10)에 의하여 $(\ker A)^\perp=\im A^t$이므로 $p\in\im A^t$이다. 게다가 임의의 해 $p+u$ (단 $u\in\ker A$)가 $\im A^t=(\ker A)^\perp$에 속한다면 $u=(p+u)-p\in(\ker A)^\perp\cap\ker A=\{0\}$이므로, $p$는 $\im A^t$에 속하는 유일한 해이다.
 :::
 
 이제 이 최소노름해를 명시적으로 구할 수 있는 경우를 생각하자. $A$가 *full row rank*, 즉 $\rank A=m$인 경우에는 $\im A=\mathbb{R}^m$이므로 모든 $y\in\mathbb{R}^m$에 대하여 $Ax=y$가 해를 가지며, 위 명제에 따라 최소노름해는 $\im A^t$ 위에서 유일하게 결정된다.

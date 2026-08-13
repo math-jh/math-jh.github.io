@@ -10,6 +10,7 @@ sidebar:
 
 date: 2026-06-02
 weight: 6
+drift_needed: true
 
 
 ---
@@ -68,7 +69,7 @@ $$\lim_{x\rightarrow a}\bigl(f(x)-f(a)\bigr) = f'(a)\cdot 0 = 0$$
 
 $$\frac{f(h)-f(0)}{h} = \frac{\lvert h\rvert}{h}=\begin{cases}1&\text{if $h>0$}\\-1&\text{if $h<0$}\end{cases}$$
 
-이므로, 이 함수의 derivative는 $h \rightarrow 0^+$일 때 $1$, $h \rightarrow 0^-$일 때 $-1$로, 한쪽 극한이 서로 달라 극한이 존재하지 않는다. 
+이므로, 이 함수의 평균변화율은 $h \rightarrow 0^+$일 때 $1$, $h \rightarrow 0^-$일 때 $-1$로, 한쪽 극한이 서로 달라 극한이 존재하지 않는다. 
 
 비슷한 예시로, $f(x) = \sqrt[3]{x}$는 $0$에서 평균변화율이 $h^{-2/3} \rightarrow \infty$로 발산하는 *수직접선<sub>vertical tangent</sub>*을 갖는다.
 
@@ -78,7 +79,7 @@ $$\frac{f(h)-f(0)}{h} = \frac{\lvert h\rvert}{h}=\begin{cases}1&\text{if $h>0$}\
 
 {% diagram Math/Calculus/Derivatives-3.svg width="13.17em" alt="2/3제곱함수의 첨점" %}
 
-이들은 한두 점에서만 미분 불가능한 예이지만, 미분 불가능성은 훨씬 더 심할 수도 있어서 바이어슈트라스의 함수 $W(x) = \sum_{n=0}^\infty a^n\cos(b^n\pi x)$처럼 $\mathbb{R}$ 전체에서 연속이면서 어느 점에서도 접선을 갖지 않는 함수마저 존재한다.
+이들은 한두 점에서만 미분 불가능한 예이지만, 미분 불가능성은 훨씬 더 심할 수도 있어서 바이어슈트라스의 함수 $W(x) = \sum_{n=0}^\infty a^n\cos(b^n\pi x)$ ($0<a<1$이고 $b$가 $ab > 1+3\pi/2$를 만족하는 홀수인 양의 정수)처럼 $\mathbb{R}$ 전체에서 연속이면서 어느 점에서도 접선을 갖지 않는 함수마저 존재한다.
 
 거꾸로 미분가능성은 한 점에서만 성립할 수도 있는 국소적 성질이어서, 다음과 같은 형태의 극단적인 예시도 가능하다. 
 

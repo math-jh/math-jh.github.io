@@ -10,6 +10,7 @@ sidebar:
 
 date: 2024-05-24
 weight: 15
+drift_needed: true
 
 ---
 
@@ -157,7 +158,7 @@ $$\gamma_1=\pi_1\circ \theta=\pi_1\circ \Delta\circ \gamma=\gamma,\qquad \gamma_
 
 거꾸로 임의의 square에 대하여 lifting이 많아야 하나 존재한다고 가정하자. [명제 4](#prop4)에 의하여 $\Delta(X)$가 $X\times_YX$의 닫힌집합임을 보이면 충분하다.
 
-우선 $\cl(\Delta(X))$의 모든 점이 $\Delta(X)$의 어떤 점의 specialization임을 관찰한다. $X$가 Noetherian scheme이므로 위상공간으로서도 Noetherian이고 ([§스킴의 위상구조, ⁋정의 14](/ko/math/scheme_theory/topology_of_schemes#def14)), 따라서 유한히 많은 irreducible component $X_1,\ldots, X_r$를 갖는다. ([\[위상수학\] §차원, ⁋명제 13](/ko/math/topology/dimension#prop13)) 각 $X_i$는 irreducible closed subset이므로 generic point $\eta_i$를 가지며 ([§스펙트럼, ⁋명제 16](/ko/math/scheme_theory/spectrums#prop16)), $X=\bigcup_{i=1}^r\cl(\{\eta_i\})$이다. 이제 $\Delta$가 연속이므로 $\Delta(X)\subseteq \bigcup_{i=1}^r \cl(\{\Delta(\eta_i)\})$이고 우변은 유한합집합이라 닫혀 있으며, 거꾸로 각 $\Delta(\eta_i)$가 $\Delta(X)$에 속하므로
+우선 $\cl(\Delta(X))$의 모든 점이 $\Delta(X)$의 어떤 점의 specialization임을 관찰한다. $X$가 Noetherian scheme이므로 위상공간으로서도 Noetherian이고 ([§스킴의 위상구조, ⁋정의 14](/ko/math/scheme_theory/topology_of_schemes#def14)), 따라서 유한히 많은 irreducible component $X_1,\ldots, X_r$를 갖는다. ([\[위상수학\] §차원, ⁋명제 13](/ko/math/topology/dimension#prop13)) 각 $X_i$는 irreducible closed subset이므로, $X_i$와 만나는 affine open subset $U=\Spec C\subseteq X$를 택하면 $X_i\cap U$는 $U$의 irreducible closed subset으로서 generic point $\eta_i$를 가지며 ([§스펙트럼, ⁋명제 16](/ko/math/scheme_theory/spectrums#prop16)), $X_i\cap U$가 $X_i$에서 dense이므로 $\cl(\{\eta_i\})=X_i$, 곧 $X=\bigcup_{i=1}^r\cl(\{\eta_i\})$이다. 이제 $\Delta$가 연속이므로 $\Delta(X)\subseteq \bigcup_{i=1}^r \cl(\{\Delta(\eta_i)\})$이고 우변은 유한합집합이라 닫혀 있으며, 거꾸로 각 $\Delta(\eta_i)$가 $\Delta(X)$에 속하므로
 
 $$\cl(\Delta(X))=\bigcup_{i=1}^r\cl(\{\Delta(\eta_i)\})$$
 
@@ -210,7 +211,7 @@ Noetherian scheme들에 대하여,
 5. 만일 $\varphi:X \rightarrow Y$, $\psi:Y \rightarrow Z$가 scheme morphism들이고 $\psi\circ \varphi$가 separated morphism이라면 $\varphi$ 또한 separated morphism이다.
 :::
 ::: 증명
-1번은 정의에서 직접 확인한다. $\varphi$가 closed embedding이라면 $Y$의 affine open subset $V=\Spec B$마다 $\varphi^{-1}(V)=\Spec A$이고 $B \rightarrow A$가 surjective이며 ([§닫힌 부분스킴, ⁋명제 3](/ko/math/scheme_theory/closed_subschemes#prop3)), 이러한 $V$를 모두 모으면 $\varphi^{-1}(V)\times_Vf^{-1}(V)$들이 $X\times_YX$를 덮는다. 각각의 위에서 $\Delta$는 [보조정리 5](#lem5)의 계산에 의하여 closed embedding이고, closed embedding은 target에 대해 affine-local하므로 $\Delta$ 자체가 closed embedding이다. $\varphi$가 open immersion이라면 $X$를 $Y$의 open subscheme으로 보고 $Y$의 affine open subset $V=\Spec B$들과 그 안에 들어가는 $X$의 basic open subset $\Spec B_b$들을 생각하자. 그럼 $\Spec B_b\times_V\Spec B_{b'}$들이 $X\times_YX$를 덮으며, 
+1번은 정의에서 직접 확인한다. $\varphi$가 closed embedding이라면 $Y$의 affine open subset $V=\Spec B$마다 $\varphi^{-1}(V)=\Spec A$이고 $B \rightarrow A$가 surjective이며 ([§닫힌 부분스킴, ⁋명제 3](/ko/math/scheme_theory/closed_subschemes#prop3)), 이러한 $V$를 모두 모으면 $\varphi^{-1}(V)\times_V\varphi^{-1}(V)$들이 $X\times_YX$를 덮는다. 각각의 위에서 $\Delta$는 [보조정리 5](#lem5)의 계산에 의하여 closed embedding이고, closed embedding은 target에 대해 affine-local하므로 $\Delta$ 자체가 closed embedding이다. $\varphi$가 open immersion이라면 $X$를 $Y$의 open subscheme으로 보고 $Y$의 affine open subset $V=\Spec B$들과 그 안에 들어가는 $X$의 basic open subset $\Spec B_b$들을 생각하자. 그럼 $\Spec B_b\times_V\Spec B_{b'}$들이 $X\times_YX$를 덮으며, 
 
 $$B_b\otimes_BB_{b'}\cong B_{bb'}=\mathcal{O}(\Spec B_b\cap \Spec B_{b'})$$
 

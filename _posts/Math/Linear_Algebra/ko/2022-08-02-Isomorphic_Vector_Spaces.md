@@ -12,6 +12,7 @@ sidebar:
 date: 2022-08-02
 
 weight: 7
+drift_needed: true
 ---
 
 수학에서 특정한 대상들을 정의한 후에는 보통 이들을 <em-ko>같은</em-ko> 것들끼리 묶어 분류하는 작업을 하게 된다. 예컨대 집합을 다룰 때는 크기가 같은 두 집합 $A,B$를 같은 것으로 취급하며, 이는 정의에 의하여 $A$와 $B$ 사이에 전단사함수가 존재한다는 것이다. 
@@ -51,7 +52,7 @@ $$L^{-1}(\alpha w)=L^{-1}(L(\alpha v))=\alpha v=\alpha L^{-1}(w).$$
 
 1. 우선 임의의 $\mathbb{K}$-벡터공간 $V$에 대하여 $V\cong V$임은 자명하다. $\id_V:V\rightarrow V$가 $V$에서 $V$로의 isomorphism이 되기 때문이다.
 2. 앞선 [보조정리 2](#lem2)에 의해 $\cong$가 symmetric이라는 것이 자명하다.    
-3. 마지막으로 $U\cong V$, $V\cong W$라 하자. 그럼 두 isomorphism $L_1:U\rightarrow V$, $L_2: V\rightarrow W$가 존재하여 
+3. 마지막으로 $U\cong V$, $V\cong W$라 하자. 그럼 두 isomorphism $L_1:U\rightarrow V$, $L_2: V\rightarrow W$가 존재하여, 이들의 역을 각각 $L_1'$, $L_2'$라 하면 $L_2\circ L_1:U\rightarrow W$는 두 linear map의 합성이므로 linear이고 $(L_1'\circ L_2')\circ(L_2\circ L_1)=\id_U$, $(L_2\circ L_1)\circ(L_1'\circ L_2')=\id_W$이므로 $L_2\circ L_1$은 isomorphism이다. 따라서 $U\cong W$이다. 
 :::
 
 위 명제는 자명해보이지만, 모든 유한차원 $\mathbb{K}$-벡터공간을 분류하는 작업 중 덜 자명한 부분을 증명해준다.

@@ -10,6 +10,7 @@ sidebar:
 
 date: 2023-01-09
 weight: 8
+drift_needed: true
 
 
 ---
@@ -68,9 +69,9 @@ Group들의 family $(G_i)$와 이들의 weak direct product $\prod^w G_i$가 주
 
 $$f(x)=\prod_{i\in I} f_i(\pr_ix)$$
 
-으로 정의하자. 이 때 $\prod$는 일반적인 원소들의 곱을 의미한다. $x$는 $\prod^w G_i$의 원소이므로, 우번의 $f_i(\pr_ix)$는 유한개의 $i$를 제외하면 모두 항등원이고, 따라서 이 곱은 잘 정의된다. 
+으로 정의하자. 이 때 $\prod$는 일반적인 원소들의 곱을 의미한다. $x$는 $\prod^w G_i$의 원소이므로, 우변의 $f_i(\pr_ix)$는 유한개의 $i$를 제외하면 모두 항등원이고, 따라서 이 곱은 잘 정의된다. 
 
-식 $f_i=f\circ\iota_i$가 성립하는 것은 자명하고, $f$가 group homomorphism인 것은 임의의 $x,y\in\prod^wG_i$에 대해
+식 $f_i=f\circ\iota_i$가 성립하는 것은 $f(\iota_i(g))=\prod_{j\in I}f_j(\pr_j\iota_i(g))=f_i(g)$로부터 얻어지고, $f$가 group homomorphism인 것은 임의의 $x,y\in\prod^wG_i$에 대해
 
 $$f(xy)=\prod_{i\in I}f_i(\pr_i(xy))=\prod_{i\in I}f_i(\pr_ix)f_i(\pr_iy)$$
 
@@ -82,7 +83,7 @@ $$f_1(\pr_1x)f_1(\pr_1y)f_2(\pr_2x)f_2(\pr_2y)\cdots f_n(\pr_nx)f_n(\pr_ny)$$
 
 $$f_1(\pr_1x)f_2(\pr_2x)\cdots f_n(\pr_nx)f_1(\pr_1y)f_2(\pr_2y)\cdots f_n(\pr_ny)$$
 
-으로 바꾸어 쓸 수 있다. 따라서 $f(xy)=f(x)f(y)$이고 $f$는 group homomorphism이 된다. $f_i=f\circ\iota_i$인 것은 자명하다.
+으로 바꾸어 쓸 수 있다. 따라서 $f(xy)=f(x)f(y)$이고 $f$는 group homomorphism이 된다.
 :::
 
 $f_i$들에 걸려있는 조건
@@ -109,7 +110,7 @@ $G$가 group이고, $(H_i)$들이 $G$의 subgroup들의 family라 하자. 만일
 
 [정리 2](#thm2)에서 만들어낸 homomorphism $f$의 모양을 생각하면, $G$가 $H_i$들의 internal weak direct product인 것은 다음 조건
 
-> 임의의 $x\in G$가 $y_i\in H_i$를 만족하는 finitely supported family $(y_i)_{i\in I}$들의 곱 $\prod y_i$로 나타날 수 있다.
+> 임의의 $x\in G$가 $y_i\in H_i$를 만족하는 finitely supported family $(y_i)_{i\in I}$들의 곱 $\prod y_i$로 유일하게 나타날 수 있다.
 
 과 동치임을 확인할 수 있다. 
 
@@ -119,7 +120,7 @@ $G$가 group이고, $(H_i)$들이 $G$의 subgroup들의 family라 하자. 만일
 Group $G$의 normal subgroup들 $(H_i)$가 다음의 두 조건
 
 1. $G=\bigl\langle\bigcup_{i\in I} H_i\bigr\rangle$,
-2. $$H_k\cap \bigl\langle\bigcup_{i\neq k} H_i\bigr\rangle=\{e\}$$
+2. 각 $k$에 대하여 $H_k\cap \bigl\langle\bigcup_{i\neq k} H_i\bigr\rangle=\{e\}$
 
 을 만족한다면 $G$가 $H_i$들의 internal weak direct product이다.
 :::
@@ -146,7 +147,7 @@ $$\iota(a)=\prod_{i\in I}\iota_i(a_i)=\prod_{i\in I} a_i=e$$
   
 으로부터, 만일 $\supp(a_i)$가 하나 이상의 원소를 갖고, $i\in\supp(a_i)$라 하면
 
-$$a_i^{-1}=\prod_{j\in I\setminus\{i\}}a_j\in H_i\cap \left\langle\bigcup_{j\neq i} H_i\right\rangle=\{e\}$$
+$$a_i^{-1}=\prod_{j\in I\setminus\{i\}}a_j\in H_i\cap \left\langle\bigcup_{j\neq i} H_j\right\rangle=\{e\}$$
 
 가 되어 $i\in\supp(a_i)$라는 가정에 모순이다. 따라서 $\supp(a_i)$는 공집합이고 $a$는 항등원이다. 
 :::

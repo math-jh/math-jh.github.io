@@ -10,6 +10,7 @@ sidebar:
 
 date: 2026-06-09
 weight: 8
+drift_needed: true
 ---
 
 [§Bruhat decomposition](/ko/math/lie_theory/bruhat_decomposition)에서 우리는 partial flag variety $G/P$가 Bruhat cell들로 분해되고, 각 cell의 closure인 Schubert variety가 $G/P$의 기하가 Weyl group의 조합론에 담겨있는 것을 보았다. 이 글에서는 그 분해 위에 자연스럽게 얹히는 두 종류의 부분다양체를 다룬다. 하나는 서로 opposite인 두 Bruhat decomposition의 intersection으로 얻는 *Richardson variety*이고, 다른 하나는 regular nilpotent element 하나가 잘라내는 *Peterson variety*이다. 
@@ -48,7 +49,7 @@ $$\dim(E_i\cap\tilde{E}_j)=\max(0,\,i+j-n)$$
 Open Richardson variety $\mathring{R}_{u,w}$가 비어있지 않을 필요충분조건은 Bruhat order에서 $u\leq w$인 것이다. 이 조건이 성립하면 $\mathring{R}_{u,w}$는 차원 $\ell(w)-\ell(u)$의 smooth irreducible affine variety이고, $R_{u,w}$는 그 Zariski closure이다.
 :::
 
-직관적으로, Schubert variety $X_w$는 한 점 $X_e=\{eP\}$에서 낮은 차원부터 커 가는 방향이고, opposite Schubert variety $X^u$는 $G/P$ 전체에서 큰 차원부터 내려오는 방향인 것을 기억하자. 구체적으로 $\dim X_w=\ell(w)$이고 $\dim X^u=\dim(G/P)-\ell(u)$이므로, 두 variety가 만나기 위해서는 우선 차원의 합이 $\dim(G/P)$ 이상, 곧 $\ell(u)\leq\ell(w)$이어야 하고, 이 때 교집합의 기대차원이 명제의
+직관적으로, Schubert variety $X_w$는 한 점 $X_e=\{eP\}$에서 낮은 차원부터 커 가는 방향이고, opposite Schubert variety $X^u$는 $G/P$ 전체에서 큰 차원부터 내려오는 방향인 것을 기억하자. 구체적으로 $\dim X_w=\ell(w)$이고 $\dim X^u=\dim(G/P)-\ell(u)$이므로, 교집합의 기대차원이 음이 아니려면 우선 차원의 합이 $\dim(G/P)$ 이상, 곧 $\ell(u)\leq\ell(w)$이어야 하고, 이 때 그 기대차원이 명제의
 
 $$\ell(w)+\dim (G/P)-\ell(u)-\dim (G/P)=\ell(w)-\ell(u)$$
 
@@ -76,7 +77,7 @@ $$\int_{G/P}[X_w]\cdot[X^u]=\delta_{u,w}$$
 이므로, opposite Schubert class들 $\{[X^u]\}_{u\in W^P}$은 Schubert class들 $\{[X_w]\}_{w\in W^P}$의 Poincaré dual basis를 이룬다.
 :::
 ::: 증명
-$X_w$와 $X^u$는 $B$와 $B^-$가 주는 generic position에서 transversal하게 만나므로, 그 intersection class는 두 class의 곱과 같다. 이것이 $[X_w]\cdot[X^u]=[R_{u,w}]$이다 (Kleiman generic transversality, [Bri] 참조). $\ell(u)=\ell(w)$인 경우 $R_{u,w}$의 차원은 $\ell(w)-\ell(u)=0$이고, [명제 2](#prop2)에 의해 $u=w$이면 reduced point 하나, $u\neq w$이면 ($u\leq w$가 깨져) 공집합이다. 따라서 그 0차원 class의 degree, 곧 $\int_{G/P}[X_w]\cdot[X^u]$은 $\delta_{u,w}$이다.
+$X_w$와 $X^u$는 $B$와 $B^-$가 주는 generic position에서 transversal하게 만나므로, 그 intersection class는 두 class의 곱과 같다. 이것이 $[X_w]\cdot[X^u]=[R_{u,w}]$이다 ([Bri] 참조). $\ell(u)=\ell(w)$인 경우 $R_{u,w}$의 차원은 $\ell(w)-\ell(u)=0$이고, [명제 2](#prop2)에 의해 $u=w$이면 reduced point 하나, $u\neq w$이면 ($u\leq w$가 깨져) 공집합이다. 따라서 그 0차원 class의 degree, 곧 $\int_{G/P}[X_w]\cdot[X^u]$은 $\delta_{u,w}$이다.
 :::
 
 [명제 3](#prop3)은 Schubert basis의 곱셈 structure constant를 Richardson variety의 degree로 환원한다. 세 class의 곱 $[X_w]\cdot[X^u]\cdot[X_v]$을 적분하면 세 generic position Schubert variety의 intersection number가 나오는데, 이것이 곧 structure constant이고, Grassmannian의 경우에는 Littlewood–Richardson 계수가 되며, 이로부터 classical Schubert calculus가 전개된다.
@@ -100,7 +101,7 @@ $$R_{1324,2413}\cong\mathbb{P}(E_2)\times\mathbb{P}(\tilde{E}_2)\cong\mathbb{P}^
 
 $$V=\operatorname{rowspan}\begin{pmatrix}1&s&0&0\\0&0&1&t\end{pmatrix}\qquad(s,t)\in\mathbb{A}^2$$
 
-로 좌표화되는데, 위 행렬의 jump set이 $\{2,4\}$이므로 $V\in X_{2413}^\circ$이고 둘째 행이 $\tilde{E}_2$ 안에 있으므로 $V\in X^{1324}_\circ$이다. 즉 $\mathring{R}_{1324,2413}$은 이 $(s,t)$-평면의 open subset으로, affine 차원 $2$임이 좌표에서 곧장 드러난다.
+로 좌표화되는데, $s,t\neq0$일 때 위 행렬의 jump set이 $\{2,4\}$이므로 $V\in X_{2413}^\circ$이고 둘째 행이 $\tilde{E}_2$ 안에 있으므로 $V\in X^{1324}_\circ$이다. 즉 $\mathring{R}_{1324,2413}$은 이 $(s,t)$-평면의 open subset으로, affine 차원 $2$임이 좌표에서 곧장 드러난다.
 :::
 
 ## Peterson variety

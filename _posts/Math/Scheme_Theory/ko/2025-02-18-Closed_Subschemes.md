@@ -10,6 +10,7 @@ sidebar:
 
 date: 2025-02-18
 weight: 10
+drift_needed: true
 ---
 
 [§스킴, ⁋보조정리 2](/ko/math/scheme_theory/schemes#lem2)에서 우리는 affine scheme $\Spec A$에 대하여, 임의의 원소 $f$가 open affine subscheme $D(f)\cong \Spec A_f$를 정의하는 것을 살펴보았으며, 특히 이 두 structure sheaf를 비교하기 위해 우리는 $\epsilon: A \rightarrow A_f$로부터 얻어지는
@@ -18,9 +19,9 @@ $$(\Spec\epsilon)^\sharp: \mathcal{O}_{\Spec A} \rightarrow (\Spec \epsilon)_\as
 
 에 [\[위상수학\] §층, ⁋보조정리 11](/ko/math/topology/sheaves#lem11)을 적용하여
 
-$$(\Spec\epsilon \lvert^{D(f)})^\sharp: \mathcal{O}_{D(f)} \rightarrow (\Spec\epsilon\rvert^{D(f)})_\ast \mathcal{O}_{\Spec A_f}$$
+$$(\Spec\epsilon \vert^{D(f)})^\sharp: \mathcal{O}_{D(f)} \rightarrow (\Spec\epsilon\vert^{D(f)})_\ast \mathcal{O}_{\Spec A_f}$$
 
-을 얻고, $\Spec A_f$가 $\Spec A$의 열린집합이라는 사실로부터 이것이 isomorphism이라는 사실을 얻을 수 있었다.
+을 얻고, $\Spec A_f$가 $\Spec A$의 열린집합 $D(f)$와 isomorphic하다는 사실로부터 이것이 isomorphism이라는 사실을 얻을 수 있었다.
 
 한편 [§스펙트럼, ⁋명제 9](/ko/math/scheme_theory/spectrums#prop9)의 둘째 결과에 의해, affine scheme $\Spec A$와 $A$의 ideal $\mathfrak{a}$가 주어지면 $\Spec$ functor를 통해 
 
@@ -178,7 +179,7 @@ $$\Spec (A_i)_{f_i}\cong\Spec (A_j)_{f_j}$$
 이렇게 얻어진 국소적인 closed subscheme들은 잘 붙여진다. 실제로 서로 겹치는 두 조각은 위의 논증에 의하여 겹침을 덮는 principal open subset들 위에서 일치하고, 그 위에서의 identification은 모두 restriction map으로부터 오는 것이므로 겹침 위에서 하나의 사상으로 붙으며 ([\[위상수학\] §층, ⁋정의 1](/ko/math/topology/sheaves#def1)), 따라서 cocycle condition 또한 자동으로 성립한다. 그럼 [§스킴, ⁋보조정리 9](/ko/math/scheme_theory/schemes#lem9)에 의하여 이들은 하나의 scheme $Z$와 closed embedding $Z \rightarrow X$로 붙는다. 유일성은 [명제 3](#prop3)에 의하여 affine open subset 위의 closed subscheme이 그 위의 ideal에 의해 완전히 결정되기 때문이다. 즉 주어진 데이터를 실현하는 두 closed subscheme은 $X$의 affine open covering의 각 조각 위에서 같으며, 따라서 서로 equivalent하다. 
 :::
 
-이제 임의의 scheme $X$와 global section $s\in \Gamma(X, \mathcal{O}_X)$가 주어졌다 하자. 그럼 각각의 affine cover $U\cong\Spec A$에 대하여, $s\vert_U$는 $A$의 ideal $\mathcal{I}(A)=(s\vert_U)$를 정의하며 이렇게 정의된 $\mathcal{I}(A)$들은 [명제 6](#prop6)의 조건을 만족하는 것이 자명하다.
+이제 임의의 scheme $X$와 global section $s\in \Gamma(X, \mathcal{O}_X)$가 주어졌다 하자. 그럼 각각의 affine cover $U\cong\Spec A$에 대하여, $s\vert_U$는 $A$의 ideal $\mathcal{I}(A)=(s\vert_U)$를 정의하며 이렇게 정의된 $\mathcal{I}(A)$들은 $(s\vert_U)A_f=(s\vert_{D(f)})$이므로 [명제 6](#prop6)의 조건을 만족한다.
 
 ::: 정의 7
 Scheme $X$와 $X$의 global section $s\in \Gamma(X, \mathcal{O}_X)$에 대하여, 위와 같이 정의된 scheme $Z(s)$를 $s$의 *vanishing scheme<sub>영점 스킴</sub>*이라 부른다.
@@ -234,7 +235,7 @@ $$\mathcal{I}_{Z/Y} \rightarrow \mathcal{O}_Y \rightarrow \varphi_\ast \mathcal{
 이 $0$이 되는 것이다. 이 때, $\varphi$의 image를 포함하는 $Y$의 closed subscheme 중 가장 작은 것을 $\varphi$의 *scheme-theoretic image*라 부른다.
 :::
 
-만일 위의 식에서 $Y$가 affine scheme $\Spec B$라면, $Y$의 closed subscheme은 $B$의 ideal $\mathfrak{b}$에 의해 완전하게 결정된다. 따라서 이 경우, $Y$의 scheme-theoretic image는 $\mathcal{O}_Y \rightarrow \varphi_\ast \mathcal{O}_X$의 kernel이 정의하는 $Y$의 closed subscheme이 될 것이다. 더 특수한 경우로 만일 $X$도 affine scheme이라면, $\mathcal{O}_Y \rightarrow \varphi_\ast \mathcal{O}_X$는 ring homomorphism $\phi$로부터 나오는 것이므로 명시적인 계산을 해 줄 수 있다.
+만일 위의 식에서 $Y$가 affine scheme $\Spec B$라면, $Y$의 closed subscheme은 $B$의 ideal $\mathfrak{b}$에 의해 완전하게 결정된다. 따라서 이 경우, $\varphi$의 scheme-theoretic image는 $\mathcal{O}_Y \rightarrow \varphi_\ast \mathcal{O}_X$의 kernel이 정의하는 $Y$의 closed subscheme이 될 것이다. 더 특수한 경우로 만일 $X$도 affine scheme이라면, $\mathcal{O}_Y \rightarrow \varphi_\ast \mathcal{O}_X$는 ring homomorphism $\phi$로부터 나오는 것이므로 명시적인 계산을 해 줄 수 있다.
 
 ::: 예시 11
 [예시 1](#ex1)에서 살펴본 closed embedding의 예시 $\Spec\pi: \Spec \mathbb{K}[\x]/(\x^2) \rightarrow \Spec \mathbb{K}[\x]$를 약간 변형한 예시를 살펴보자. 이 예시에서는 구별을 위해 $\mathbb{K}[\x]/(\x^2)$를 $\mathbb{K}[\epsilon]/(\epsilon^2)$으로 적는다. 
@@ -288,19 +289,19 @@ $$\ker\bigl(B_f \rightarrow \mathcal{O}_X(U)_g\bigr)=\ker\bigl(\varphi^\sharp(V)
 ::: 예시 13
 Scheme $X$를 다음의 식
 
-$$X=\coprod_{k\geq 0} \Spec \mathbb{K}[\epsilon]/(\epsilon^k)$$
+$$X=\coprod_{k\geq 1} \Spec \mathbb{K}[\epsilon]/(\epsilon^k)$$
 
 으로 정의하고 $Y=\Spec \mathbb{K}[\x]$이라 하자. 이제 $X$의 각각의 component마다 $\x\mapsto \epsilon$을 통해 scheme morphism $X \rightarrow Y$를 정의할 수 있다. 그럼 [예시 11](#ex11)으로부터 우리는 $X \rightarrow Y$의 (연속함수로서의) image는 한 점 $0\in \mathbb{A}^1$인 것을 안다. 
 
-그러나 scheme morphism $\varphi:X \rightarrow Y$의 scheme-theoretic image는 $0$이 아니다. 이를 위해 structure sheaf들 사이의 morphism $\varphi^\sharp:\mathcal{O}_Y \rightarrow \varphi_\ast \mathcal{O}_X$를 관찰하자. 그럼 $\mathcal{O}_Y$의 원소 $f$가 $\varphi^\sharp(f)=0$을 만족하기 위해서는 임의의 $k$에 대하여 $f$의 $k$차 근사식이 $0$이 되어야 하므로, 반드시 $f=0$이어야 한다. 즉, $\mathcal{I}_{Z/Y}$는 $0$이 되어야 하고 이로부터 $\varphi$의 scheme-theoretic image는 자기 자신임을 안다.
+그러나 scheme morphism $\varphi:X \rightarrow Y$의 scheme-theoretic image는 $0$이 아니다. 이를 위해 structure sheaf들 사이의 morphism $\varphi^\sharp:\mathcal{O}_Y \rightarrow \varphi_\ast \mathcal{O}_X$를 관찰하자. 그럼 $\mathcal{O}_Y$의 원소 $f$가 $\varphi^\sharp(f)=0$을 만족하기 위해서는 임의의 $k$에 대하여 $f$의 $k$차 근사식이 $0$이 되어야 하므로, 반드시 $f=0$이어야 한다. 즉, $\mathcal{I}_{Z/Y}$는 $0$이 되어야 하고 이로부터 $\varphi$의 scheme-theoretic image는 $Y$ 전체임을 안다.
 :::
 
 ## 닫힌집합 위에 정의된 축소스킴구조
 
 이 글의 서두에서 우리는 affine scheme $\Spec A$의 임의의 닫힌집합 $Z(\mathfrak{a})$ 위에 두 개의 structure sheaf $(\Spec\pi)_\ast \mathcal{O}_{\Spec A/\mathfrak{a}}$ 그리고 $\iota^{-1} \mathcal{O}_{\Spec A}$를 정의할 수 있었다. 이 중 $(\Spec\pi)_\ast \mathcal{O}_{\Spec A/ \mathfrak{a}}$를 우리는 $Z(\mathfrak{a})$ 위에 정의된 올바른 scheme 구조로 생각하기로 하였다. 이제 우리는 $\iota^{-1} \mathcal{O}_{\Spec A}$에 대해 살펴본다.
 
-더 일반적으로 임의의 scheme $Y$와 $Y$의 닫힌집합 $X$를 생각하자. 그럼 $Y$의 임의의 열린집합 $\Spec B$에 대하여, $\Spec B$의 닫힌집합 $X\cap \Spec B$는 [§스펙트럼, ⁋정리 15](/ko/math/scheme_theory/spectrums#thm15)에 의하여 
-$B$의 radical ideal $\mathfrak{b}$에 대해 $Z(\mathfrak{b})$의 꼴로 쓸 수 있다. 뿐만 아니라, $\mathfrak{b}$는 정의에 의하여 $X\cap \Spec B= Z(\mathfrak{b}')$이도록 하는 $B$의 ideal들 중 가장 큰 것이므로 [보조정리 9](#lem9)에 의하여 $X\cap \Spec B$에 줄 수 있는 closed subscheme 구조 중 가장 작은 것이다.
+더 일반적으로 임의의 scheme $Y$와 $Y$의 닫힌집합 $X$를 생각하자. 그럼 $Y$의 임의의 affine open subset $\Spec B$에 대하여, $\Spec B$의 닫힌집합 $X\cap \Spec B$는 [§스펙트럼, ⁋정리 15](/ko/math/scheme_theory/spectrums#thm15)에 의하여 
+$B$의 radical ideal $\mathfrak{b}$에 대해 $Z(\mathfrak{b})$의 꼴로 쓸 수 있다. 뿐만 아니라, $\mathfrak{b}$는 정의에 의하여 $X\cap \Spec B= Z(\mathfrak{b}')$이도록 하는 $B$의 ideal들 중 가장 큰 것이므로 [보조정리 9](#lem9)에 의하여 $X\cap \Spec B$에 줄 수 있는 closed subscheme 구조 중 가장 작은 것이다. 또 radical은 localization과 교환하므로 ($\sqrt{\mathfrak{b}}B_f=\sqrt{\mathfrak{b}B_f}$) 이들 ideal은 [명제 6](#prop6)의 조건을 만족하고, 따라서 하나의 closed subscheme으로 붙는다.
 
 ::: 정의 14
 Scheme $Y$의 임의의 닫힌집합 $X$에 대하여, $X$ 위에 앞에서 정의한 scheme 구조를 준 것을 *reduced scheme structure*라 부르고 $X^\red$으로 적는다. 

@@ -10,6 +10,7 @@ sidebar:
 
 date: 2023-02-14
 weight: 11
+drift_needed: true
 
 ---
 
@@ -49,7 +50,7 @@ $$(\alpha\beta)\cdot x=\alpha\cdot(\beta\cdot x),\qquad e\cdot x=x$$
 임의의 마그마 $(M,\ast)$에 대하여, $M$의 *opposite magma<sub>반대 마그마</sub>* $(M^\op,\ast^\op)$는 다음과 같이 정의된 마그마이다.
 
 1. 집합으로서 $M^\op=M$이다.
-2. 임의의 $x,y\in A^\op$에 대하여, $x\ast^\op y$는 $y\ast x$로 정의된다.
+2. 임의의 $x,y\in M^\op$에 대하여, $x\ast^\op y$는 $y\ast x$로 정의된다.
 :::
 
 그럼 right $M$-action은 left $M^\op$-action과 같은 것임을 확인할 수 있다. 이를 다시 쓰자면 
@@ -96,11 +97,11 @@ $$M\overset{\phi}{\longrightarrow}M'\overset{\rho}{\longrightarrow}\End(E)$$
 
 $$(\phi^\ast\rho)(\alpha)(x)=\rho(\phi(\alpha))(x)$$
 
-으로 정의되는 action이다. 이제 두 $M'$-action $\rho:M' \rightarrow \End(E)$와 $\rho':M' \rightarrow \End(E)$가 주어졌다 하고, 이들 사이의 $M'$-homomorphism $f:E \rightarrow E'$가 주어졌다 하자. 그럼 임의의 $\alpha\in M$과 $x\in E$에 대하여,
+으로 정의되는 action이다. 이제 두 $M'$-action $\rho:M' \rightarrow \End(E)$와 $\rho':M' \rightarrow \End(E')$가 주어졌다 하고, 이들 사이의 $M'$-set homomorphism $f:E \rightarrow E'$가 주어졌다 하자. 그럼 임의의 $\alpha\in M$과 $x\in E$에 대하여,
 
-$$f((\phi^\ast\rho)(\alpha)(x))=f(\rho(\phi(\alpha))(x))=\rho'(\phi(\alpha))(f(x))=(\phi^\ast\rho')(f(x))$$
+$$f((\phi^\ast\rho)(\alpha)(x))=f(\rho(\phi(\alpha))(x))=\rho'(\phi(\alpha))(f(x))=(\phi^\ast\rho')(\alpha)(f(x))$$
 
-이 성립한다. 즉 임의의 monoid homomorphism $\phi:M \rightarrow M'$은 $\lset{M'}$에서 $\lset{M}$으로의 functor를 정의한다. 툭별히 $\iota$가 submonoid의 inclusion이라면 이는 monoid action의 restriction이 된다. 
+이 성립한다. 즉 임의의 monoid homomorphism $\phi:M \rightarrow M'$은 $\lset{M'}$에서 $\lset{M}$으로의 functor를 정의한다. 특별히 $\iota$가 submonoid의 inclusion이라면 이는 monoid action의 restriction이 된다. 
 
 
 한편, $(E_i)$들이 $M$-set들의 모임이면 이들의 product $\prod E_i$에 다음의 식
@@ -109,7 +110,7 @@ $$\alpha\cdot(x_i)_{i\in I}=(\alpha\cdot x_i)_{i\in I}$$
 
 을 통해 $M$의 action을 정의한 것이 다시 $M$-set이 된다. 이와 비슷하게 $M$-set $E$의 부분집합 $F$가 다음의 식
 
-$$x\in F\implies \alpha\cdot x\text{ for all $\alpha\in F$}$$
+$$x\in F\implies \alpha\cdot x\in F\text{ for all $\alpha\in M$}$$
 
 을 만족한다면 $F$를 $M$-subset이라 부른다. 또, $M$-set 위에 정의된 동치관계 $\sim$이 $M$의 action과 compatible하다면, 즉
 
@@ -214,7 +215,7 @@ $$(f\circ\rho_g\circ f^{-1})(x)=f(gf^{-1}(x)g^{-1})=f(g)xf(g^{-1})=\rho_{f(g)}(x
 이므로 자명하다. 
 :::
 
-한편, $\rho:G\rightarrow\Inn(G)$는 전사이며, 따라서 first isomorphism theorem에 의하여
+한편, $\rho:G\rightarrow\Inn(G)$는 전사이며, 따라서 [§군 동형사상, ⁋정리 2](/ko/math/algebraic_structures/isomorphism_theorems#thm2)에 의하여
 
 $$G/\ker\rho\cong\Inn(G)$$
 
@@ -271,15 +272,15 @@ $$E^g=\{x\in E\mid g\cdot x=x\}$$
 
 로 정의하면
 
-$$\sum_{g\in G}\lvert E^g\rvert=\# \{(g, x)\in G\times E\mid g\cdot x=x\}=\sum_{x\in X}\lvert \Stab(x)\rvert$$
+$$\sum_{g\in G}\lvert E^g\rvert=\# \{(g, x)\in G\times E\mid g\cdot x=x\}=\sum_{x\in E}\lvert \Stab(x)\rvert$$
 
 이 성립한다. 이제 ($\ast\ast$)로부터 
 
-$$\sum_{x\in X}\lvert \Stab(x)\rvert=\sum_{x\in X}\frac{\lvert G\rvert}{\lvert G\cdot x\rvert}$$
+$$\sum_{x\in E}\lvert \Stab(x)\rvert=\sum_{x\in E}\frac{\lvert G\rvert}{\lvert G\cdot x\rvert}$$
 
 이다. 한편 ($\ast$)로부터 정의되는 quotient set $E/{\sim}$을 생각하면, 위의 합은 다시
 
-$$\sum_{x\in X}\frac{\lvert G\rvert}{\lvert G\cdot x\rvert}=\lvert G\rvert\sum_{O\in E/{\sim}}\sum_{x\in O}\frac{1}{\lvert O\rvert}=\lvert G\rvert\sum_{O\in E/{\sim}} 1=\lvert G\rvert\lvert E/{\sim}\rvert$$
+$$\sum_{x\in E}\frac{\lvert G\rvert}{\lvert G\cdot x\rvert}=\lvert G\rvert\sum_{O\in E/{\sim}}\sum_{x\in O}\frac{1}{\lvert O\rvert}=\lvert G\rvert\sum_{O\in E/{\sim}} 1=\lvert G\rvert\lvert E/{\sim}\rvert$$
 
 로 쓸 수 있다. 이로부터 다음 보조정리를 얻는다.
 

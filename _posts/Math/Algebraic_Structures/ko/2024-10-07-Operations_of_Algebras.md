@@ -10,6 +10,7 @@ sidebar:
 
 date: 2024-10-07
 weight: 302
+drift_needed: true
 
 ---
 
@@ -59,7 +60,7 @@ $$u(xy)=(u_i(xy))_{i\in I}=(u_i(x)u_i(y))_{i\in I}=u(x)u(y)$$
 $A$-module direct sum $\bigoplus_{i\in I}E_i\subseteq\prod_{i\in I}E_i$는 direct product의 곱셈을 제한하면 그 subalgebra, 곧 $A$-algebra가 된다.
 :::
 ::: 증명
-$\bigoplus E_i$의 두 원소 $(x_i),(y_i)$는 각각 finitely supported이므로, 성분별 곱 $(x_iy_i)$에서 $i$번째 성분이 $0$이 아닌 $i$는 $x_i\neq 0$이며 $y_i\neq 0$인 $i$들의 합집합 안에 든다. 이는 유한집합이므로 $(x_iy_i)$도 finitely supported이고, 따라서 $\bigoplus E_i$는 곱셈에 대해 닫혀 $\prod E_i$의 subalgebra이다. ([§대수, ⁋정의 9](/ko/math/algebraic_structures/algebras#def9))
+$\bigoplus E_i$의 두 원소 $(x_i),(y_i)$는 각각 finitely supported이므로, 성분별 곱 $(x_iy_i)$에서 $i$번째 성분이 $0$이 아닌 $i$는 $x_i\neq 0$인 $i$들과 $y_i\neq 0$인 $i$들의 합집합 안에 든다. 이는 유한집합이므로 $(x_iy_i)$도 finitely supported이고, 따라서 $\bigoplus E_i$는 곱셈에 대해 닫혀 $\prod E_i$의 subalgebra이다. ([§대수, ⁋정의 9](/ko/math/algebraic_structures/algebras#def9))
 :::
 
 ::: 정의 5
@@ -76,7 +77,7 @@ $$f_i: E_i\rightarrow A$$
 
 을 commute하도록 하는 $f: E_1\oplus E_2\rightarrow A$가 존재해야 한다. 그런데 임의의 $(a,b)\in E_1\oplus E_2$에 대하여, 
 
-$$f\bigl((a,b)\bigr)=f\bigl((a,0)+(0,b)\bigr)=f\bigl((a,0)\bigr)+f\bigl((0,b)\bigr)=(f\circ i_1)(a)+(f\circ i_2)(b)=a+b$$
+$$f\bigl((a,b)\bigr)=f\bigl((a,0)+(0,b)\bigr)=f\bigl((a,0)\bigr)+f\bigl((0,b)\bigr)=(f\circ\iota_1)(a)+(f\circ\iota_2)(b)=a+b$$
 
 여야 하는데, 다음의 두 계산
 
@@ -86,7 +87,7 @@ $$f\bigl((a,b)(c,d)\bigr)=ac+bd\neq (a+b)(c+d)=f(a,b)f(c,d)$$
 
 ## 대수의 텐서곱
 
-Commutative $A$-algebra들의 category에서 올바른 coproduct의 개념을 주는 것은 tensor product이다. 기본적으로 이는 $A$-module $E\otimes_AE'$ ([§가군의 직접곱과 직합, 텐서곱, ⁋정리 6](/ko/math/algebraic_structures/operations_of_modules#thm6)) 위에 곱셈을 적당히 정의하여 얻어지는 $A$-algebra로, 우리가 원하는 곱셈은 다음의 식
+Commutative $A$-algebra들의 category에서 올바른 coproduct의 개념을 주는 것은 tensor product이다. 기본적으로 이는 $A$-module $E\otimes_AE'$ ([§가군의 직접곱과 직합, 텐서곱, ⁋명제 8](/ko/math/algebraic_structures/operations_of_modules#prop8)) 위에 곱셈을 적당히 정의하여 얻어지는 $A$-algebra로, 우리가 원하는 곱셈은 다음의 식
 
 $$(x\otimes x')(y\otimes y')=xy\otimes x'y'\tag{1}$$
 
@@ -130,7 +131,7 @@ $$\iota:E \rightarrow E\otimes_AE';\quad x\mapsto x\otimes 1_{E'},\qquad \iota':
 우리가 처음 도입했던 것과 같이, tensor product는 commutative $A$-algebra들의 category에서 coproduct가 된다. 이를 설명하는 것이 다음의 정리이다. 
 
 ::: 정리 8
-Commutative $A$-algebra $E,E'$과, 임의의 commutative $A$-algebra $F$, 그리고 $A$-algebra homomorphism들 $u:E \rightarrow F$, $u':E' \rightarrow F$가 주어졌다 하자. 그럼 $w\circ\iota=u$, $w\circ\iota'=u'$을 만족하는 유일한 $A$-algebra homomorphism $w:E\otimes_AE' \rightarrow F$가 존재한다. 
+Commutative $A$-algebra $E,E'$과, 임의의 commutative $A$-algebra $F$, 그리고 항등원을 보존하는 $A$-algebra homomorphism들 $u:E \rightarrow F$, $u':E' \rightarrow F$가 주어졌다 하자. 그럼 $w\circ\iota=u$, $w\circ\iota'=u'$을 만족하는 유일한 $A$-algebra homomorphism $w:E\otimes_AE' \rightarrow F$가 존재한다. 
 :::
 ::: 증명
 함수 $E\times E' \rightarrow F$를 $(x,x')\mapsto u(x)u'(x')$으로 정의하면 이는 $A$-bilinear이므로, $w(x\otimes x')=u(x)u'(x')$이도록 하는 유일한 $A$-linear map $w:E\otimes_AE' \rightarrow F$가 존재한다. $w$가 곱셈을 보존하는 것은 generator들 위에서 확인하면 충분한데,

@@ -10,6 +10,7 @@ sidebar:
 
 date: 2022-11-09
 weight: 3
+drift_needed: true
 
 ---
 
@@ -30,14 +31,14 @@ $X$ 위의 임의의 위상 $\mathcal{T}$에서 $\emptyset$과 $X$는 열린집�
 2. $\mathcal{C}$는 임의의 교집합에 대하여 닫혀있다.
 3. $\mathcal{C}$는 <em-ko>유한한</em-ko> 합집합에 대하여 닫혀있다.
 
-그럼 $\mathcal{C}$의 각 원소들의 여집합을 열린집합으로 갖는 위상 $\mathcal{T}$가 유일하게 존재한다.
+그럼 $\mathcal{C}$의 각 원소들의 여집합들을 정확히 열린집합으로 갖는 위상 $\mathcal{T}$가 유일하게 존재한다.
 :::
 ::: 증명
 다음의 De Morgan 법칙 ([\[집합론\] §합집합과 교집합, ⁋명제 8](/ko/math/set_theory/union_and_intersection#prop8))
 
 $$\left(\bigcap A_i\right)^c=\bigcup A_i^c,\quad\left(\bigcup A_i\right)^c=\bigcap A_i^c$$
 
-으로부터 자명하다.
+으로부터, 여집합을 취하는 대응이 포함관계를 뒤집어 조건 1, 2, 3을 각각 $\mathcal{T}=\{C^c\mid C\in\mathcal{C}\}$가 위상이기 위한 세 공리로 옮기고, 열린집합들의 모임이 이 $\mathcal{T}$로 결정되므로 유일성 또한 따른다.
 :::
 
 앞선 명제의 세 번째 조건을 더 다듬을 수 있다.
@@ -73,7 +74,7 @@ $$V\cap\bigcap_{j\in J} A_j^c$$
 
 $$\interior(A^c)=(\cl(A))^c$$
 
-을 증명해보자. 정의에 의해, $\interior(A^c)$는 $A^c$에 포함된 열린집합 중 가장 큰 것이고, 이는 $A$를 포함하지 않는 열린집합 중 가장 큰 것이라는 말과 동일하다. 한편 $\cl(A)$는 $A$를 포함하는 닫힌집합 중 가장 작은 것이고, 따라서 $(\cl(A))^c$는 $A$를 포함하지 않는 열린집합 중 가장 큰 것이 되어 이 둘은 동일해야 한다. 우리는 이 집합을 $A$의 *exterior<sub>외부</sub>*라 부른다.
+을 증명해보자. 정의에 의해, $\interior(A^c)$는 $A^c$에 포함된 열린집합 중 가장 큰 것이고, 이는 $A$와 만나지 않는 열린집합 중 가장 큰 것이라는 말과 동일하다. 한편 $\cl(A)$는 $A$를 포함하는 닫힌집합 중 가장 작은 것이고, 따라서 $(\cl(A))^c$는 $A$와 만나지 않는 열린집합 중 가장 큰 것이 되어 이 둘은 동일해야 한다. 우리는 이 집합을 $A$의 *exterior<sub>외부</sub>*라 부른다.
 
 위와 같은 논증을 통해 interior와 closure, exterior 중 어느 하나만 있더라도 다른 둘을 만들 수 있다는 것을 안다. 
 
@@ -92,7 +93,7 @@ $$\cl(A\cup B)=\cl(A)\cup\cl(B)$$
 이 서로 동치이다.
 :::
 ::: 증명
-대우명제를 보이는 것이 편하다. $x\not\in\cl A$라 하자. 그럼 $x\in(\cl A)^c=\ext A$는 $x$를 포함하며, $\cl A$와 만나지 않는 열린집합이고, 따라서 $A$와도 만나지 않는 열린집합이 된다. 즉, 명제 <phrase>$A$와 만나지 않는 $x$의 어떠한 근방이 존재한다</phrase>가 참이다. 
+대우명제를 보이는 것이 편하다. $x\not\in\cl A$라 하자. 그럼 $(\cl A)^c=\ext A$는 $x$를 포함하며, $\cl A$와 만나지 않는 열린집합이고, 따라서 $A$와도 만나지 않는 열린집합이 된다. 즉, 명제 <phrase>$A$와 만나지 않는 $x$의 어떠한 근방이 존재한다</phrase>가 참이다. 
 
 거꾸로, $A$와 만나지 않는 $x$의 어떠한 근방이 존재한다 가정하자. 그럼 이 근방에 포함된 $x$의 열린근방 $U$가 $A$와 만나지 않으므로, $U\cap A=\emptyset$이다. 이제 $U^c\cap A=A$이므로 $U^c$는 $A$를 포함하는 닫힌집합이고, closure의 최소성에 의하여 $U^c$는 $\cl A$ 또한 포함한다. 즉, $x\not\in U^c$이면 $x\not\in\cl A$이고, 따라서 반대방향도 성립한다.  
 :::
@@ -112,7 +113,7 @@ $x\in A\cap\cl(B)$라 하자. $A$는 $x$의 열린근방이므로, $x$의 임의
 위상공간 $X$와 $X$의 임의의 부분집합 $A$에 대하여, $x\in X$가 $A$의 *limit point<sub>극한점</sub>*이라는 것은 $x$의 임의의 근방이 $x$ 자기 자신을 제외한 점에서 $A$와 만나는 것이다. 
 :::
 
-그럼 정의에 의하여 $\cl(A)$는 $A$의 limit point들과 $A$의 합집합이다. 만일 $x\in\cl(A)\setminus A$라면, [명제 6](#prop6)에 의하여 $x$는 반드시 $A$의 limit point여야 하는 것을 안다. 반면, $x\in A$라 하면 이것이 반드시 참일 필요가 없다. 이와 같이 $x\in A$에 대하여 적당한 근방 $V$가 존재하여 $V\cap A=\{x\}$이도록 할 수 있다면 $x$가 $A$의 *isolated point<sub>고립접</sub>*이라 부른다. Isolated point를 갖지 않는 닫힌집합을 *perfect set<sub>완전집합</sub>*이라 부른다.
+그럼 $\cl(A)$는 $A$의 limit point들과 $A$의 합집합이다. 만일 $x\in\cl(A)\setminus A$라면, [명제 6](#prop6)에 의하여 $x$는 반드시 $A$의 limit point여야 하고, 거꾸로 $A$의 limit point는 그 임의의 근방이 $A$와 만나므로 다시 [명제 6](#prop6)에 의하여 $\cl(A)$에 속한다는 것을 안다. 반면, $x\in A$라 하면 이것이 반드시 참일 필요가 없다. 이와 같이 $x\in A$에 대하여 적당한 근방 $V$가 존재하여 $V\cap A=\{x\}$이도록 할 수 있다면 $x$를 $A$의 *isolated point<sub>고립점</sub>*이라 부른다. Isolated point를 갖지 않는 닫힌집합을 *perfect set<sub>완전집합</sub>*이라 부른다.
 
 ## 집합의 경계
 
@@ -140,7 +141,7 @@ $$\partial A=\cl A\setminus\interior A$$
 위상공간 $X$의 base $\mathcal{B}$에 대하여, $\card(D)\leq\card(\mathcal{B})$이도록 하는 $X$의 dense subset $D$가 존재한다.
 :::
 ::: 증명
-각각의 $U\in\mathcal{B}$마다 원소 $x_U\in U$를 하나씩 뽑아, 이들의 모임을 $D$로 잡으면 된다. 집합 $D$가 dense인 것은 임의의 열린집합 $V$가 주어질 때마다, 이를 $\mathcal{B}$의 원소들의 합집합으로 표현할 수 있고, 이 합집합은 반드시 어떤 $x_U$를 포함해야 하므로 $V\cap D\neq\emptyset$이기 때문에 성립한다.
+공집합이 아닌 각각의 $U\in\mathcal{B}$마다 원소 $x_U\in U$를 하나씩 뽑아, 이들의 모임을 $D$로 잡으면 된다. 집합 $D$가 dense인 것은 공집합이 아닌 임의의 열린집합 $V$가 주어질 때마다, 이를 $\mathcal{B}$의 원소들의 합집합으로 표현할 수 있고, 이 합집합은 반드시 어떤 $x_U$를 포함해야 하므로 $V\cap D\neq\emptyset$이기 때문에 성립한다.
 :::
 
 ---

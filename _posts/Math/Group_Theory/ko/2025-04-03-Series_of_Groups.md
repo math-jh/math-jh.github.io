@@ -10,6 +10,7 @@ sidebar:
 
 date: 2025-04-03
 weight: 3
+drift_needed: true
 
 ---
 
@@ -18,7 +19,7 @@ weight: 3
 
 우리는 [\[대수적 구조\] §가환군, ⁋정의 3](/ko/math/algebraic_structures/abelian_groups#def3)에서, 임의의 group $G$와 $G$의 두 subgroup $H,H'$에 대하여 이들의 commutator들로 이루어진 subgroup $[H,H']$를 정의하였다. 해당 글에서는 $H=H'=G$인 경우만 생각하였으나, 이번 글에서는 이를 일반화할 것이므로 우선 commutator에 대한 성질을 더 자세히 살펴보자. 
 
-우선 $[h,h']^{-1}=[h',h]$인 것으로부터 $[H,H']=[H',H]$이 항상 성립한다. 만일 $[H,H']=\{e\}$라면, 모든 $h,h'$에 대하여 $hh'=h'h$이므로 $C_G(H)\subseteq H'$이고 $C_G(H')\subseteq H$이며 이들 두 조건 중 하나가 성립하면 $[H,H']=\{e\}$가 성립하는 것 또한 자명하다. 비슷하게, 만일 $[H,H']\subseteq H$라 하면 임의의 $h,h'$에 대하여
+우선 $[h,h']^{-1}=[h',h]$인 것으로부터 $[H,H']=[H',H]$이 항상 성립한다. 만일 $[H,H']=\{e\}$라면, 모든 $h,h'$에 대하여 $hh'=h'h$이므로 $H'\subseteq C_G(H)$이고 $H\subseteq C_G(H')$이며 이들 두 조건 중 하나가 성립하면 $[H,H']=\{e\}$가 성립하는 것 또한 자명하다. 비슷하게, 만일 $[H,H']\subseteq H$라 하면 임의의 $h,h'$에 대하여
 
 $$h^{-1}h'^{-1}hh'\in H\implies h'^{-1}hh'\in H$$
 
@@ -57,11 +58,11 @@ Group $G$의 세 subgroup $H, H', H''$에 대하여 다음이 성립한다.
 
 1. $H$는 $[H,H']$를 normalize한다.
 2. 만일 $[H',H'']$이 $H$을 normalize한다면, $[H,[H',H'']]$은 $[h,[h',h'']]$ 꼴의 원소들로 생성되는 $G$의 subgroup과 같다. 
-3. 만일 $H, H', H''$이 모두 normal이라면 다음 부등식
+3. 만일 $H, H', H''$이 모두 normal이라면 다음의 포함관계
     
     $$[H, [H',H'']]\subseteq[H'',[H',H]][H', [H'',H]]$$
 
-    이 성립한다. 
+    가 성립한다. 
 :::
 ::: 증명
 1. 임의의 generator $[h_1,h']\in [H,H']$와 $h_2\in H$에 대하여 $[h_1,h']^{h_2}\in [H,H']$를 보이면 충분하다. 이는 [보조정리 1](#lem1)의 넷째 결과로부터
@@ -74,7 +75,7 @@ Group $G$의 세 subgroup $H, H', H''$에 대하여 다음이 성립한다.
 
     $$[h, [h',h'']x]=[h,x][h, [h', h'']]^x=[h,x][x,[[h',h''],h]][h, [h',h'']]$$
 
-    이 성립한다. 이제 만일 $[H',H'']$가 $H$를 normalize한다는 가정으로부터 $[[h',h''],h]$는 $H$의 원소이므로, 만일 $x$가 $[H', H'']$의 원소였다면 위의 식의 각 항은 모두 $[H, [H',H'']]$의 원소이다. 따라서 귀납적으로 $[H, [H',H'']]$의 임의의 generator가 $K$에 속한다는 것을 보일 수 있다.
+    이 성립한다. 이제 만일 $[H',H'']$가 $H$를 normalize한다는 가정으로부터 $[[h',h''],h]$는 $H$의 원소이므로, 만일 $x$가 $[H', H'']$의 원소였다면 위의 식의 각 항은 모두 $K$의 원소이다. 따라서 귀납적으로 $[H, [H',H'']]$의 임의의 generator가 $K$에 속한다는 것을 보일 수 있다.
 3. 마지막으로 만일 $H, H', H''$가 normal이라면, 셋째 결과에서 등장하는 모든 group 또한 normal subgroup이다. 따라서, 둘째 결과에 의하여 임의의 $h,h',h''$에 대하여 원소 $[h,[h',h'']]$가 우변에 속한다는 것을 보이면 충분하다. 이제 $u=h^{(h')^{-1}}$이라 하면 다음의 식
 
     $$[h, [h', h'']]=[u^{h'}, [h', h'']]=[(h'')^u, [u, h']]^{-1}[(h')^{h''},[h'',u]]^{-1}$$
@@ -104,7 +105,7 @@ $$x^{-1}y^{-1}xy,\qquad x\in G, y\in C_n(G)$$
 
 꼴의 원소들로 생성되며, 
 
-$$f(x^{-1}y^{-1}xy)=f(x)^{-1}f(y)^{-1}f(x)f(y)\in [G, f(C_n(G))]\subseteq [G, C_n(G')]=C_{n+1}(G')$$
+$$f(x^{-1}y^{-1}xy)=f(x)^{-1}f(y)^{-1}f(x)f(y)\in [G', f(C_n(G))]\subseteq [G', C_n(G')]=C_{n+1}(G')$$
 
 이므로 원하는 결과를 얻는다. 만일 $f$가 surjective라면, $f(G)=G'$이고 위의 귀납법에서 $\subseteq$를 $=$으로 대체할 수 있다.
 :::
@@ -127,7 +128,7 @@ $$[C_m(G), C_{n+1}(G)]=[C_m(G), [C_n(G), G]]\subseteq[G, [C_m(G), C_n(G)]][C_n(G
 
 $$[C_m(G), C_1(G)]\subseteq C_{m+1}(G),\qquad [C_1(G), C_n(G)]\subseteq C_{n+1}(G)$$
 
-이 성립하는 것은 정의로부터 자명하므로 귀납적으로 이 부등식이 모든 $m,n$에 대해 성립하는 것을 안다. 
+이 성립하는 것은 정의로부터 자명하므로 귀납적으로 이 포함관계가 모든 $m,n$에 대해 성립하는 것을 안다. 
 :::
 
 이제 다음을 정의한다. 
@@ -190,7 +191,7 @@ Group homomorphism $f:G \rightarrow G'$에 대하여, $f(D_n(G))\subseteq D_n(G'
 이에 대한 증명은 [명제 4](#prop4)와 마찬가지로 귀납법을 사용하면 된다. Lower central series의 stability condition으로 nilpotent group을 정의한 것과 같이, solvable group은 derived series의 stability condition으로 정의된다. 
 
 ::: 정의 11
-Group $G$가 *solvable<sub>가해</sub>*이라는 것은 적당한 자연수 $n$이 존재하여 $D_{n+1}(G)=\{e\}$인 것이다. 이 조건을 만족하는 자연수 중 가장 작은 $n$을 $G$의 *solvability class*라 부른다.
+Group $G$가 *solvable<sub>가해</sub>*이라는 것은 적당한 자연수 $n$이 존재하여 $D_n(G)=\{e\}$인 것이다. 이 조건을 만족하는 자연수 중 가장 작은 $n$을 $G$의 *solvability class*라 부른다.
 :::
 
 정의에 의하여 $D_0(G)=C_1(G)=G$이고 $D_1(G)=[G,G]=C_2(G)$가 성립한다. 그럼 이 사실과 [명제 5](#prop5)로부터, 귀납적으로 다음의 포함관계
@@ -268,7 +269,7 @@ $$G=G_0\supset G_1\supset \cdots\supset G_n=\{e\},\qquad G=H_0\supset H_1\supset
 에 대하여, 이들 각각의 refinement $G_\bullet', H_\bullet'$가 존재하여 이들 둘이 equivalent하도록 할 수 있다. 
 :::
 ::: 증명
-$G_i$와 $G_{i+1}$ 사이에 $G_i\cap H_j$를 $j$를 움직여 가며 넣고 $H_j$와 $H_{j+1}$ 사이에 $G_i\cap H_j$를 $i$를 움직여가며 각각 끼워넣은 다음 이렇게 만들어진 refinement들이 서로 equivalent하다는 것을 [보조정리 14](#lem14)를 통해 보일 수 있다. 
+$G_i$와 $G_{i+1}$ 사이에 $G_{i+1}(G_i\cap H_j)$를 $j$를 움직여 가며 넣고 $H_j$와 $H_{j+1}$ 사이에 $H_{j+1}(H_j\cap G_i)$를 $i$를 움직여가며 각각 끼워넣은 다음 이렇게 만들어진 refinement들이 서로 equivalent하다는 것을 [보조정리 14](#lem14)를 통해 보일 수 있다. 
 :::
 
 따라서 다음이 성립한다.
@@ -278,10 +279,10 @@ $G_i$와 $G_{i+1}$ 사이에 $G_i\cap H_j$를 $j$를 움직여 가며 넣고 $H_
 :::
 
 ::: 정의 17
-Group $G$의 *length<sub>길이</sub>*는 strictly descending subnormal series의 길이의 upper bound로 정의한다. 
+Group $G$의 *length<sub>길이</sub>*는 strictly descending subnormal series의 길이의 supremum으로 정의한다. 
 :::
 
-그럼 만일 $G$가 composition series를 갖는다면 $G$의 composition series의 길이가 정확히 $G$의 length가 된다는 것을 안다. 따라서 다음의 등식
+그럼 만일 $G$가 composition series를 갖는다면 $G$의 composition series의 길이가 정확히 $G$의 length가 된다는 것을 안다. 따라서 $G$의 normal subgroup $N$에 대하여 다음의 등식
 
 $$\length(G)=\length(G/N)+\length(N)$$
 

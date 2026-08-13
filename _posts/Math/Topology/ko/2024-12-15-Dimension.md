@@ -25,13 +25,13 @@ revising: true
 우선 다음을 정의한다.
 
 ::: 정의 1
-$X$의 부분집합들의 family $(U_i)_{i\in I}$가 $m+1$의 *order*를 갖는다는 것은 $X$의 어떠한 점도 $m+1$개 이상의 $U_i$에 속하지 않으며, $X$의 어떠한 점 하나는 정확히 $m+1$개의 $U_i$들에 속하는 것이다.
+$X$의 부분집합들의 family $(U_i)_{i\in I}$가 $m+1$의 *order*를 갖는다는 것은 $X$의 어떠한 점도 $m+1$개보다 많은 $U_i$에 속하지 않으며, $X$의 어떠한 점 하나는 정확히 $m+1$개의 $U_i$들에 속하는 것이다.
 :::
 
 그럼 공간 $X$의 차원을 다음과 같이 정의할 수 있다. 
 
 ::: 정의 2
-공간 $X$가 *유한차원<sub>finite dimensional</sub>*이라는 것은 적당한 $m$이 존재하여, 임의의 open covering $(U_i)_{i\in I}$가 주어질 때마다, order $m+1$짜리 $(U_i)$의 open refinement $(V_j)_{j\in J}$가 항상 존재하는 것이다. 이것이 가능하도록 하는 최소의 $m$을 $X$의 *차원<sub>dimension</sub>*으로 정의하고 $\dim X$로 적는다. 
+공간 $X$가 *유한차원<sub>finite dimensional</sub>*이라는 것은 적당한 $m$이 존재하여, 임의의 open covering $(U_i)_{i\in I}$가 주어질 때마다, order $m+1$ 이하짜리 $(U_i)$의 open refinement $(V_j)_{j\in J}$가 항상 존재하는 것이다. 이것이 가능하도록 하는 최소의 $m$을 $X$의 *차원<sub>dimension</sub>*으로 정의하고 $\dim X$로 적는다. 
 :::
 
 다소 주의할만한 것은 위상공간은 다음 그림과 같이 상당히 웃기게 생길 수 있으며, 이 때 우리는 이 위상공간의 차원을 두 성분의 차원 중 큰 것이 되도록 정의했다는 것이다.
@@ -50,7 +50,7 @@ $X$가 $d$차원 위상공간이라 하고, $Y$의 임의의 open covering $\{V_
 다음 명제는 [정의 2](#def2) 이후에 언급한 주의점을 더 수학적으로 다듬은 것이다.
 
 ::: 명제 4
-만일 위상공간 $X$의 두 유한차원 closed subspace $Y,Z$가 존재하여 $X=Y\cup Z$라면, $\dim X=\max(\dim Y,\dim Z)$이다. 
+만일 compact space $X$의 두 유한차원 closed subspace $Y,Z$가 존재하여 $X=Y\cup Z$라면, $\dim X=\max(\dim Y,\dim Z)$이다. 
 :::
 ::: 증명
 $Y,Z$가 closed subspace이므로 [명제 3](#prop3)에 의해 $\max(\dim Y,\dim Z)\leq \dim X$이다. 따라서 $m=\max(\dim Y,\dim Z)$라 할 때 $\dim X\leq m$임을 보이면 충분하다.
@@ -126,7 +126,7 @@ $$\operatorname{dist}(x,\sk_{d-1})\leq \lvert x-y\rvert+\lvert y-z\rvert\leq \lv
 4. $X$의 임의의 열린집합이 connected이다.
 :::
 ::: 증명
-첫쨰 조건과 둘쨰 조건은 여집합을 생각하면 동치인 것이 자명하며, 둘째 조건과 셋째 조건이 동치인 것은 $X\setminus \cl U$와 $U$를 생각하면 자명하다. 마지막으로 둘째 조건과 넷째 조건이 정의에 의해 동치이다. 
+첫째 조건과 둘째 조건은 여집합을 생각하면 동치인 것이 자명하며, 둘째 조건과 셋째 조건이 동치인 것은 $X\setminus \cl U$와 $U$를 생각하면 자명하다. 마지막으로 둘째 조건과 넷째 조건이 정의에 의해 동치이다. 
 :::
 
 특히 irreducible space는 Hausdorff가 아니다. 위의 명제의 마지막 동치 때문에 irreducible space는 *hyperconnected space*라 부르기도 한다. 비슷한 맥락에서 다음이 성립한다. (참고: [§연결공간, ⁋명제 3](/ko/math/topology/connected_spaces#prop3))
@@ -139,11 +139,11 @@ $$X=\bigcup_{i\in I} U_i$$
 이고 $U_i\cap U_j\neq \emptyset$이 모든 $i,j$에 대해 성립한다 하자. 그럼 $X$는 irreducible이다.
 :::
 ::: 증명
-임의의 두 열린집합 $V, W$가 주어졌다 하고, $V\cap W\neq\emptyset$임을 보이자. 그럼 주어진 가정으로부터 우선 $U_i\cap V\neq\emptyset$ 그리고 $U_j\cap W\neq\emptyset$을 만족하는 $i,j$가 존재한다. 이제 [명제 7](#prop7)의 셋째 결과와 [§부분공간, ⁋명제 5](/ko/math/topology/subspaces#prop5)로부터 $U_i$도 irreducible이므로, $U_i$의 두 nonempty subset $U_i\cap V$와 $U_i\cap U_j$도 반드시 공집합이 아닌 교집합을 가져야 한다. 즉
+임의의 두 열린집합 $V, W$가 주어졌다 하고, $V\cap W\neq\emptyset$임을 보이자. 그럼 주어진 가정으로부터 우선 $U_i\cap V\neq\emptyset$ 그리고 $U_j\cap W\neq\emptyset$을 만족하는 $i,j$가 존재한다. 이제 $U_i$가 irreducible이므로, $U_i$의 두 nonempty subset $U_i\cap V$와 $U_i\cap U_j$도 반드시 공집합이 아닌 교집합을 가져야 한다. 즉
 
 $$(U_i\cap V)\cap (U_i\cap U_j)=U_i\cap U_j\cap V\neq\emptyset$$
 
-이고, $U_i\cap U_j\cap V$를 $U_j$의 nonempty subset으로 보면 마찬가지로 $U_j$의 irreducibilty로부터 다음의 식
+이고, $U_i\cap U_j\cap V$를 $U_j$의 nonempty subset으로 보면 마찬가지로 $U_j$의 irreducibility로부터 다음의 식
 
 $$(U_i\cap U_j\cap V)\cap (U_j\cap W)=U_i\cap U_j\cap V\cap W\neq\emptyset$$
 
@@ -190,7 +190,7 @@ Noetherian space $X$와 $X$의 open covering $\{U_i\}_{i\in I}$가 주어졌다 
 
 $$\mathcal{C}=\left\{\bigcup_{j\in J} U_j\mid\text{$J$ finite subset of $I$}\right\}$$
 
-라 정의할 수 있다. 이제 $\mathcal{C}$의 임의의 totally ordered subset을 생각하면, 이는 그 여집합들로 이루어진 닫힌집합들의 descending chain과 동치이고 따라서 $X$가 Noetherian이라는 가정으로부터 이는 언젠가 멈춰야 한다. 즉, $\mathcal{C}$는 [\[집합론\] §선택공리, ⁋정리 4](/ko/math/set_theory/axiom_of_choice#thm4)의 조건을 만족하고 따라서 $\mathcal{C}$는 maximal element $U\in \mathcal{C}$를 갖는다. 만일 $X\neq U$라면, $x\in X\setminus U$를 포함하는 $U_j$를 택할 수 있고 그럼 $U\cap U_j$는 $U$를 strict하게 포함하는 $\mathcal{C}$의 원소이므로 $U$의 maximality에 모순이다. 따라서 $U=X$이고 우리는 원하는 결과를 얻는다. 
+라 정의할 수 있다. 이제 $\mathcal{C}$의 임의의 totally ordered subset을 생각하면, 이는 그 여집합들로 이루어진 닫힌집합들의 descending chain과 동치이고 따라서 $X$가 Noetherian이라는 가정으로부터 이는 언젠가 멈춰야 한다. 즉, $\mathcal{C}$는 [\[집합론\] §선택공리, ⁋정리 4](/ko/math/set_theory/axiom_of_choice#thm4)의 조건을 만족하고 따라서 $\mathcal{C}$는 maximal element $U\in \mathcal{C}$를 갖는다. 만일 $X\neq U$라면, $x\in X\setminus U$를 포함하는 $U_j$를 택할 수 있고 그럼 $U\cup U_j$는 $U$를 strict하게 포함하는 $\mathcal{C}$의 원소이므로 $U$의 maximality에 모순이다. 따라서 $U=X$이고 우리는 원하는 결과를 얻는다. 
 :::
 
 추가적으로 Noetherian space에 대해 다음이 성립한다.
@@ -233,7 +233,7 @@ $P$가 성립하지 않는 닫힌집합들의 모임을 $\mathcal{S}$라 하고,
 위상공간 $X$와 열린집합 $U$에 대하여, $U$와 만나는 $X$의 irreducible closed subset과, $U$의 irreducible closed subset 사이의 일대일대응이 존재한다.
 :::
 ::: 증명
-우선 $U\cap Z\neq\emptyset$을 만족하는 $X$의 irreducible subspace $Z$가 주어졌다 하고, $Z\cap U$의 공집합이 아닌 임의의 두 열린집합이 서로소가 아님을 보여야 한다. $Z\cap U$의 임의의 부분집합은 $Z$의 열린집합 $V_1, V_2$에 대하여 $V_1\cap U$, $V_2\cap U$의 꼴이므로, 다음의 식
+우선 $U\cap Z\neq\emptyset$을 만족하는 $X$의 irreducible subspace $Z$가 주어졌다 하고, $Z\cap U$의 공집합이 아닌 임의의 두 열린집합이 서로소가 아님을 보여야 한다. $Z\cap U$의 임의의 열린집합은 $Z$의 열린집합 $V_1, V_2$에 대하여 $V_1\cap U$, $V_2\cap U$의 꼴이므로, 다음의 식
 
 $$(V_1\cap U)\cap (V_2\cap U)=(V_1\cap V_2)\cap U$$
 
@@ -241,11 +241,11 @@ $$(V_1\cap U)\cap (V_2\cap U)=(V_1\cap V_2)\cap U$$
 
 거꾸로 $U$의 irreducible closed subset $Y\subseteq U$가 주어졌다 하면 $Y$의 closure 또한 irreducible이므로 $X$의 irreducible $\cl_X(Y)$가 $U$와 만나는 $X$의 irreducible subset이 된다. 즉 이로부터 두 함수
 
-$$\{\text{irreducible closes subset of $X$ meeting $U$}\}\rightarrow \{\text{irreducible closed subset of $U$}\};\qquad Z\mapsto Z\cap U$$
+$$\{\text{irreducible closed subset of $X$ meeting $U$}\}\rightarrow \{\text{irreducible closed subset of $U$}\};\qquad Z\mapsto Z\cap U$$
 
 그리고 
 
-$$\{\text{irreducible closed subset of $U$}\} \rightarrow \{\text{irreducible closes subset of $X$ meeting $U$}\};\qquad Y\mapsto \cl_X(Y)$$
+$$\{\text{irreducible closed subset of $U$}\} \rightarrow \{\text{irreducible closed subset of $X$ meeting $U$}\};\qquad Y\mapsto \cl_X(Y)$$
 
 를 얻으며, 이들이 서로의 bijection임을 확인할 수 있다.
 :::

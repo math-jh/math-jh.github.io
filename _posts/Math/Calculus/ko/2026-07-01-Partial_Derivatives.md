@@ -10,6 +10,7 @@ sidebar:
 
 date: 2026-07-01
 weight: 14
+drift_needed: true
 ---
 
 앞선 글에서 우리는 공역의 차원을 올려 한 실수를 여러 실수로 보내는 함수, 곧 매개변수로 매개화된 곡선 $\mathbf{r}:\mathbb{R}\rightarrow\mathbb{R}^n$을 다루었다. 이제 거꾸로 정의역의 차원을 올려, 여러 실수를 한 실수로 보내는 다변수함수 $f:\mathbb{R}^m\rightarrow\mathbb{R}$을 다룬다. 미분은 여전히 한 점 근방에서의 일차 근사라는 본질을 갖지만, 정의역이 벡터공간이 되면서 다가오는 방향이 무수히 많아져 방향이 중요해지고, 일차 근사가 숫자 하나가 아닌 선형사상으로 주어진다. 벡터공간과 내적·norm은 [§곡선과 벡터함수](/ko/math/calculus/vector_functions)에서 다루었으므로, 이 글에서는 다변수 미분의 핵심 도구인 선형사상과 행렬, 행렬식을 간략히 정리한 뒤 편미분과 기울기, 미분가능성, 다변수 연쇄법칙, 극값을 다룬다.
@@ -45,7 +46,7 @@ $$\det\begin{pmatrix} a_{11} & a_{12} & a_{13} \\ a_{21} & a_{22} & a_{23} \\ a_
 
 $$0 < \lVert \mathbf{x} - \mathbf{a}\rVert < \delta \quad\implies\quad \lvert f(\mathbf{x}) - L\rvert < \epsilon$$
 
-가 $0 < \lVert \mathbf{x} - \mathbf{a}\rVert < \delta$를 만족하는 모든 $\mathbf{x}$에 대해 성립하는 것이다. 이를 $\lim_{\mathbf{x}\rightarrow\mathbf{a}} f(\mathbf{x}) = L$로 쓰며, 특히 $\lim_{\mathbf{x}\rightarrow\mathbf{a}} f(\mathbf{x}) = f(\mathbf{a})$일 때 $f$는 $\mathbf{a}$에서 *연속<sub>continuous</sub>*이라 한다.
+가 모든 $\mathbf{x}$에 대해 성립하는 것이다. 이를 $\lim_{\mathbf{x}\rightarrow\mathbf{a}} f(\mathbf{x}) = L$로 쓰며, 특히 $\lim_{\mathbf{x}\rightarrow\mathbf{a}} f(\mathbf{x}) = f(\mathbf{a})$일 때 $f$는 $\mathbf{a}$에서 *연속<sub>continuous</sub>*이라 한다.
 :::
 
 이 정의의 형식은 일변수와 본질적으로 같으며, 차이는 $1$차원에서의 거리 $\lvert x - a\rvert$가 $m$차원에서의 거리 $\lVert\mathbf{x} - \mathbf{a}\rVert$로 바뀐 것이 전부다. 그러나, 예를 들어, 주어진 함수의 극한값이 $L$임을 확인하기 위해서는 임의의 방향 $\mathbf{v}=(v_1, \ldots, v_m)$에 대하여 다음 극한
@@ -174,7 +175,7 @@ $$\frac{d}{\dd{t}} f(\mathbf{x}(t)) = \nabla f(\mathbf{x}(t)) \cdot \mathbf{x}'(
 
 $$\frac{f(\mathbf{x}(t+\Delta t))-f(\mathbf{x}(t))-\nabla f(\mathbf{x}(t))\cdot\Delta\mathbf{x}}{\lVert\Delta\mathbf{x}\rVert}\rightarrow 0$$
 
-이다. 양변을 $\Delta t$로 나누면 우변은 일차항 $\nabla f(\mathbf{x}(t))\cdot\frac{\Delta\mathbf{x}}{\Delta t}$과 나머지항으로 갈라지는데, 이 나머지항은 위에서 $0$으로 간 양에 $\lVert\Delta\mathbf{x}\rVert/\Delta t$가 곱해진 것이다. 곡선의 미분가능성으로 $\Delta\mathbf{x}/\Delta t\rightarrow\mathbf{x}'(t)$이므로 $\lVert\Delta\mathbf{x}\rVert/\lvert\Delta t\rvert$가 유계이며, 따라서 나머지항도 $\Delta t\rightarrow 0$에서 $0$으로 사라져 공식을 얻는다.
+이다. 양변을 $\Delta t$로 나누면 우변은 일차항 $\nabla f(\mathbf{x}(t))\cdot\frac{\Delta\mathbf{x}}{\Delta t}$과 나머지항으로 갈라지는데, 이 나머지항은 위에서 $0$으로 간 양에 $\lVert\Delta\mathbf{x}\rVert/\lvert\Delta t\rvert$가 곱해진 것이다. 곡선의 미분가능성으로 $\Delta\mathbf{x}/\Delta t\rightarrow\mathbf{x}'(t)$이므로 $\lVert\Delta\mathbf{x}\rVert/\lvert\Delta t\rvert$가 유계이며, 따라서 나머지항도 $\Delta t\rightarrow 0$에서 $0$으로 사라져 공식을 얻는다.
 :::
 
 [정리 6](#thm6)는 한 변수가 여러 변수에 의존할 때 편미분이 사슬처럼 연결됨을 말하며, 좌표변환에서 주로 쓰인다. 가령 $z = f(x,y)$에서 극좌표 $x = r\cos\theta$, $y = r\sin\theta$로 바꾸면 $\partial z/\partial r = f_x\cos\theta + f_y\sin\theta$가 곧바로 나온다.

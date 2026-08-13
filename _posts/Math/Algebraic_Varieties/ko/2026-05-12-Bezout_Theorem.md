@@ -15,17 +15,17 @@ revising: true
 
 ---
 
-우리는 이번 글에서 algebraic geometry의 고전적인 정리인 Bézout theorem을 소개한다. 직관적으로, 평면 위의 두 곡선 $C,D$가 주어졌다 하자. 그럼 $C$와 $D$가 만나는 교점의 개수는 이들의 degree에 의족하는데, 가령 평면 위에서 정의된 이차곡선 $\y=x^2$과 직선은 일반적으로 두 점에서 만난다. Bézout theorem은 이를 일반화한 결과이다.
+우리는 이번 글에서 algebraic geometry의 고전적인 정리인 Bézout theorem을 소개한다. 직관적으로, 평면 위의 두 곡선 $C,D$가 주어졌다 하자. 그럼 $C$와 $D$가 만나는 교점의 개수는 이들의 degree에 의존하는데, 가령 평면 위에서 정의된 이차곡선 $\y=\x^2$과 직선은 일반적으로 두 점에서 만난다. Bézout theorem은 이를 일반화한 결과이다.
 
 ::: 명제 1 (Bézout)
-Algebraically closed field 위에서 정의된 $\mathbb{P}^n$ 안에서, degree $d_1, \ldots, d_n$의 hypersurface $H_1, \ldots, H_n$이 공통 성분을 갖지 않는다면
+Algebraically closed field 위에서 정의된 $\mathbb{P}^n$ 안에서, degree $d_1, \ldots, d_n$의 hypersurface $H_1, \ldots, H_n$이 공통 성분을 갖지 않고 $H_1 \cap \cdots \cap H_n$이 유한집합이라면
 
 $$\deg(H_1 \cap \cdots \cap H_n) = d_1 \cdots d_n$$
 
 이 성립한다. 여기서 intersection은 multiplicity를 고려한 것이다. 
 :::
 
-특히 $\mathbb{P}^2$ 안에서 degree $m,n$인 두 곡선은 $mn$개의 점에서 만난다. 다소 주의할 것은 이들이 공통 성분을 가지면 안된다는 것으로, 가령 서로 같은 두 곡선은 이를 통해 교집합을 계산할 수 없다. 
+특히 $\mathbb{P}^2$ 안에서 degree $m,n$인 두 곡선은 중복도를 고려하면 $mn$개의 점에서 만난다. 다소 주의할 것은 이들이 공통 성분을 가지면 안된다는 것으로, 가령 서로 같은 두 곡선은 이를 통해 교집합을 계산할 수 없다. 
 
 ::: 예시 2 (두 이차곡선)
 $\mathbb{P}^2$ 안의 두 이차곡선
@@ -46,10 +46,10 @@ Projective variety $X \subseteq \mathbb{P}^n$의 homogeneous coordinate ring $S(
 
 $$P_C(t) = dt + \frac{d(3-d)}{2}$$
 
-이다. 여기서 $P_C$의 degree는 $C$의 차원인 $1$이고, 최고차항 계수는 $\deg C = d$이며, 상수항 $P_C(0) = \frac{d(3-d)}{2} = 1 - \frac{(d-1)(d-2)}{2}$는 $C$의 arithmetic genus이다.
+이다. 여기서 $P_C$의 degree는 $C$의 차원인 $1$이고, 최고차항 계수는 $\deg C = d$이며, 상수항 $P_C(0) = \frac{d(3-d)}{2} = 1 - \frac{(d-1)(d-2)}{2}$로부터 $C$의 arithmetic genus $1 - P_C(0) = \frac{(d-1)(d-2)}{2}$를 얻는다.
 :::
 
-Hilbert 함수 $H(t)$는 degree $t$인 homogeneous polynomial 공간의 원소 가울데 $C$ 위에서 0이 되는 것들을 제거한 후 남은 독립적인 원소의 개수, 즉 $C$ 위에서 서로 다른 함수로 작용하는 homogeneous polynomial들의 개수이다. $t$가 커질수록 이 수는 다항식처럼 자라며, 그 degree는 $C$의 차원인 $1$과 같고, 최고차항 계수는 degree $d$와 비례하며, 상수항은 arithmetic genus $1 - \frac{(d-1)(d-2)}{2}$와 같다.
+Hilbert 함수 $H(t)$는 degree $t$인 homogeneous polynomial 공간의 원소 가운데 $C$ 위에서 0이 되는 것들을 제거한 후 남은 독립적인 원소의 개수, 즉 $C$ 위에서 서로 다른 함수로 작용하는 homogeneous polynomial들의 개수이다. $t$가 커질수록 이 수는 다항식처럼 자라며, 그 degree는 $C$의 차원인 $1$과 같고, 최고차항 계수는 degree $d$와 비례하며, 상수항은 $1$에서 arithmetic genus $\frac{(d-1)(d-2)}{2}$를 뺀 값과 같다.
 
 ::: 증명
 $S = \mathbb{K}[\x_0, \x_1, \x_2]$라 하자. $(S/(F))_t$의 차원은 $S_t$에서 $F$의 배수들을 제거하여 얻는 공간의 차원과 같다. 곱셈 $\cdot F: S(-d) \rightarrow S$는 단사이므로 다음 short exact sequence를 얻는다.
@@ -82,7 +82,7 @@ $\mathbb{P}^2$ 안의 degree $d$ 곡선 $C = Z(F)$에 대하여, 임의의 일�
 이제 명제 1을 증명한다. 핵심은 두 가지이다. 먼저 intersection multiplicity의 합이 전역적인 대수적 대상의 차원과 일치함을 보이고, 둘째로 그 차원을 Hilbert 다항식으로 정확히 $mn$으로 계산하는 것이다.
 
 ::: 명제 5
-(명제 1의 증명) $\mathbb{P}^2$ 안의 degree $m$, $n$인 두 곡선 $C = Z(F)$, $D = Z(G)$가 공통 성분을 갖지 않으면 $\sum_p i_p(C, D) = mn$이다.
+(명제 1의 $\mathbb{P}^2$ 경우) $\mathbb{P}^2$ 안의 degree $m$, $n$인 두 곡선 $C = Z(F)$, $D = Z(G)$가 공통 성분을 갖지 않으면 $\sum_p i_p(C, D) = mn$이다.
 :::
 
 ::: 증명
@@ -92,7 +92,7 @@ $\mathbb{P}^2$ 안의 degree $d$ 곡선 $C = Z(F)$에 대하여, 임의의 일�
 
 > $\sum_{p \in C \cap D} i_p(C, D) = \dim_\mathbb{K} (\mathbb{K}[\x_0, \x_1, \x_2]/(F, G))_t \qquad (t \gg 0)$
 
-$C \cap D$가 유한집합임은 $C$와 $D$가 공통 성분을 갖지 않는다는 가정으로부터 알려져 있다. ([§차원, ⁋예시 14](/ko/math/algebraic_varieties/dimension#ex14)) 점 $p = [a:b:c] \in C \cap D$에 대하여, $c \neq 0$이라 가정하면 $U_2$에서의 좌표로 $p = (a/c, b/c)$이고, $F, G$를 dehomogenize한 $f, g \in \mathbb{K}[\x, \y]$에 대하여
+$C \cap D$가 유한집합임은 $C$와 $D$가 공통 성분을 갖지 않는다는 가정으로부터 알려져 있다. ([§차원, ⁋명제 9](/ko/math/algebraic_varieties/dimension#prop9)) 점 $p = [a:b:c] \in C \cap D$에 대하여, $c \neq 0$이라 가정하면 $U_2$에서의 좌표로 $p = (a/c, b/c)$이고, $F, G$를 dehomogenize한 $f, g \in \mathbb{K}[\x, \y]$에 대하여
 
 $$i_p(C, D) = \dim_\mathbb{K} \mathcal{O}_{\mathbb{A}^2, p}/(f, g)$$
 
@@ -133,7 +133,7 @@ $\mathbb{P}^n$ 안의 두 projective variety $V, W$에 대해
 
 $$\deg(V \cap W) \leq \deg(V) \cdot \deg(W)$$
 
-이 성립한다. 여기서 $\deg(V \cap W)$는 $V \cap W$의 각 irreducible component들의 degree의 합이다. 등호는 $V$와 $W$가 proper intersection을 가질 때 (즉 $V \cap W$의 모든 irreducible component $Z$에 대해 $\operatorname{codim}(Z) = \operatorname{codim}(V) + \operatorname{codim}(W)$일 때) 성립하며, 이 경우 각 성분 $Z$에 intersection multiplicity $m_Z$를 부여하면 $\sum_Z m_Z \deg(Z) = \deg(V) \cdot \deg(W)$이다.
+이 성립한다. 여기서 $\deg(V \cap W)$는 $V \cap W$의 각 irreducible component들의 degree의 합이다. 등호는 $V$와 $W$가 proper intersection을 가지고 (즉 $V \cap W$의 모든 irreducible component $Z$에 대해 $\operatorname{codim}(Z) = \operatorname{codim}(V) + \operatorname{codim}(W)$이고) 각 성분에서의 intersection multiplicity가 모두 $1$일 때 성립하며, 이 경우 각 성분 $Z$에 intersection multiplicity $m_Z$를 부여하면 $\sum_Z m_Z \deg(Z) = \deg(V) \cdot \deg(W)$이다.
 :::
 
 ::: 예시 7 ($\mathbb{P}^3$)
@@ -159,7 +159,7 @@ $\mathbb{P}^2$ 안의 두 세차곡선 $C_1 = Z(F_1)$, $C_2 = Z(F_2)$가 공통 
 ### Pascal의 정리
 
 ::: 명제 9 (Pascal)
-이차곡선 위의 6점 $A, B, C, D, E, F$에 대해, 세 교점
+Irreducible 이차곡선 위의 서로 다른 6점 $A, B, C, D, E, F$에 대해, 세 교점
 
 $$P = \overline{AB} \cap \overline{DE},\quad Q = \overline{BC} \cap \overline{EF},\quad R = \overline{CD} \cap \overline{FA}$$
 
@@ -197,7 +197,7 @@ $$g = \frac{(d-1)(d-2)}{2} - \sum_{i=1}^n \delta_{p_i} = \frac{(d-1)(d-2)}{2} - 
 
 $$n \leq \frac{(d-1)(d-2)}{2}$$
 
-이다. 이 상한은 달성 가능하다. 예를 들어 smooth degree $d$ 곡선을 일반적인 사영(projection)으로 $\mathbb{P}^2$에 놓으면, 정확히 $\frac{(d-1)(d-2)}{2}$개의 ordinary double point를 갖는 irreducible 곡선을 얻는다.
+이다. 이 상한은 달성 가능하다. 예를 들어 $\mathbb{P}^d$ 안의 rational normal curve를 일반적인 사영(projection)으로 $\mathbb{P}^2$에 놓으면, 정확히 $\frac{(d-1)(d-2)}{2}$개의 ordinary double point를 갖는 irreducible 곡선을 얻는다.
 :::
 
 ---

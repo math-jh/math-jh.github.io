@@ -13,6 +13,8 @@ date: 2026-06-28
 
 weight: 27
 
+drift_needed: true
+
 ---
 
 우리가 지금까지 살펴본 것은 내적에서 파생된 여러가지 정리들로, 이를 통해 우리는 내적, 더 나아가 일반적인 bilinear form이 유용하다는 것을 확인했다. 이제 우리는 약간 방향을 바꾸어, $\mathbb{K}=\mathbb{R}$인 경우에 symmetric bilinear form이 적절한 basis 위에서 얼마나 단순한 형태로 표현되는지를 살펴본다. 이 글에서 다루는 모든 bilinear form은 symmetric인 것으로 가정한다. 
@@ -41,14 +43,14 @@ $$\langle v,w\rangle=\frac{1}{2}\bigl(Q(v+w)-Q(v)-Q(w)\bigr)\tag{1}$$
 
 ## 합동과 대각형
 
-$V$ 위에 symmetric bilinear form $\langle -,-\rangle$이 주어졌다 하고, $V$의 basis $\mathcal{B}$를 택하자. 그럼 [§쌍선형형식, §§Gram matrix](/ko/math/linear_algebra/bilinear_form#gram-matrix)에서 살펴본 대로, $(i,j)$ 성분이 $\langle x_i,x_j\rangle$인 Gram matrix $G_\mathcal{B}$에 대하여 $\langle v,w\rangle=[v]_\mathcal{B}^tG_\mathcal{B}[w]_\mathcal{B}$이 성립하며, $\langle-,-\rangle$이 symmetric이므로 $G_\mathcal{B}$는 symmetric matrix이다. 또 다른 basis $\mathcal{C}$를 택하면, change-of-basis matrix $P=[\id]_\mathcal{C}^\mathcal{B}$에 대하여 
+$V$ 위에 symmetric bilinear form $\langle -,-\rangle$이 주어졌다 하고, $V$의 basis $\mathcal{B}=\{x_1,\ldots, x_n\}$을 택하자. 그럼 [§쌍선형형식, §§Gram matrix](/ko/math/linear_algebra/bilinear_form#gram-matrix)에서 살펴본 대로, $(i,j)$ 성분이 $\langle x_i,x_j\rangle$인 Gram matrix $G_\mathcal{B}$에 대하여 $\langle v,w\rangle=[v]_\mathcal{B}^tG_\mathcal{B}[w]_\mathcal{B}$이 성립하며, $\langle-,-\rangle$이 symmetric이므로 $G_\mathcal{B}$는 symmetric matrix이다. 또 다른 basis $\mathcal{C}$를 택하면, change-of-basis matrix $P=[\id]_\mathcal{B}^\mathcal{C}$에 대하여 
 
 $$G_\mathcal{C}=P^tG_\mathcal{B}P$$
 
 이 성립함을 보았다. 이렇게 가역행렬 $P$에 대하여 $G'=P^tGP$의 관계로 이어지는 두 symmetric matrix $G,G'$을 서로 *합동<sub>congruent</sub>*이라 부른다. 즉 같은 bilinear form을 서로 다른 basis로 적은 Gram matrix들은 서로 합동이다. 우리의 목표는 합동인 행렬들 가운데 가장 단순한 대표를 찾는 것이다. 
 
 ::: 명제 2
-$\mathbb{R}$-벡터공간 $V$ 위에 정의된 임의의 symmetric bilinear form $\langle-,-\rangle$에 대하여, $V$의 적당한 basis $\{e_1,\ldots, e_n\}$이 존재하여 $i\neq j$일 때 $\langle e_i,e_j\rangle=0$이고, 각 $\langle e_i,e_i\rangle$은 $1$, $-1$, $0$ 중 하나이다.
+$n$차원 $\mathbb{R}$-벡터공간 $V$ 위에 정의된 임의의 symmetric bilinear form $\langle-,-\rangle$에 대하여, $V$의 적당한 basis $\{e_1,\ldots, e_n\}$이 존재하여 $i\neq j$일 때 $\langle e_i,e_j\rangle=0$이고, 각 $\langle e_i,e_i\rangle$은 $1$, $-1$, $0$ 중 하나이다.
 :::
 ::: 증명
 우선 orthogonal basis의 존재성을 $\dim V$에 대한 귀납법으로 보인다. $\dim V=0$이거나 $\langle-,-\rangle$이 항등적으로 $0$인 경우, $V$의 임의의 basis가 조건을 만족하므로 보일 것이 없다. 그렇지 않다면 $\langle u,v\rangle\neq 0$인 $u,v$가 존재하고, 
@@ -59,7 +61,7 @@ $$2\langle u,v\rangle=\langle u+v,u+v\rangle-\langle u,u\rangle-\langle v,v\rang
 
 $$v=\frac{\langle v,w\rangle}{\langle w,w\rangle}w+\left(v-\frac{\langle v,w\rangle}{\langle w,w\rangle}w\right)$$
 
-으로 적어 $V=W\oplus w^\perp$임을 알 수 있다. ([§쌍선형형식, ⁋명제 12](/ko/math/linear_algebra/bilinear_form#prop12)의 증명과 같다.) 여기서 $w^\perp=\{v\mid\langle v,w\rangle=0\}$이다. $w^\perp$로 제한한 bilinear form도 symmetric이므로 귀납적 가정에 의하여 $w^\perp$의 orthogonal basis가 존재하고, 여기에 $w$를 더하면 $V$의 orthogonal basis $\{f_1,\ldots,f_n\}$을 얻는다. 
+으로 적어 $V=W+w^\perp$임을 알 수 있다. ([§쌍선형형식, ⁋명제 12](/ko/math/linear_algebra/bilinear_form#prop12)의 증명과 같다.) 여기서 $w^\perp=\{v\mid\langle v,w\rangle=0\}$이다. 또 $cw\in w^\perp$이면 $c\langle w,w\rangle=0$이고 $\langle w,w\rangle\neq 0$이므로 $c=0$이며, 따라서 $W\cap w^\perp=\{0\}$이고 $V=W\oplus w^\perp$이다. $w^\perp$로 제한한 bilinear form도 symmetric이므로 귀납적 가정에 의하여 $w^\perp$의 orthogonal basis가 존재하고, 여기에 $w$를 더하면 $V$의 orthogonal basis $\{f_1,\ldots,f_n\}$을 얻는다. 
 
 이제 각 $f_i$를 적절히 스칼라배하여 $\langle f_i,f_i\rangle$을 $1$, $-1$, $0$ 중 하나로 만든다. 만일 $\langle f_i,f_i\rangle=0$이라면 $e_i=f_i$로 두고, 그렇지 않다면 $c=\sqrt{\lvert\langle f_i,f_i\rangle\rvert}$에 대하여 $e_i=f_i/c$로 두면 
 
@@ -72,7 +74,7 @@ $$\langle e_i,e_i\rangle=\frac{\langle f_i,f_i\rangle}{\lvert\langle f_i,f_i\ran
 
 $$\begin{pmatrix}I_p&&\\&-I_q&\\&&0_r\end{pmatrix}$$
 
-로 만들 수 있다. 따라서 임의의 실수 대칭행렬은 이 꼴의 행렬과 합동이다. 이 때 이차형식은 이 basis에 대한 좌표 $v=\sum a_ie_i$로 적었을 때 
+로 만들 수 있다. 따라서 임의의 real symmetric matrix는 이 꼴의 행렬과 합동이다. 이 때 이차형식은 이 basis에 대한 좌표 $v=\sum a_ie_i$로 적었을 때 
 
 $$Q(v)=a_1^2+\cdots+a_p^2-a_{p+1}^2-\cdots-a_{p+q}^2$$
 
@@ -83,7 +85,7 @@ $$Q(v)=a_1^2+\cdots+a_p^2-a_{p+1}^2-\cdots-a_{p+q}^2$$
 [명제 2](#prop2)는 적절한 basis를 택하면 이차형식이 부호 붙은 제곱들의 합으로 환원됨을 보여주지만, 그 과정에서 나타난 $p,q,r$이 basis의 선택에 따라 달라질 수 있는지는 아직 분명하지 않다. 다음 정리는 이 세 수가 사실은 bilinear form 자체의 불변량임을 보여준다. 
 
 ::: 정리 3 (Sylvester's law of inertia)
-$\mathbb{R}$-벡터공간 $V$ 위에 정의된 symmetric bilinear form $\langle-,-\rangle$에 대하여, [명제 2](#prop2)와 같은 basis에서 나타나는 $\langle e_i,e_i\rangle$의 값이 $1$인 것의 개수 $p$, $-1$인 것의 개수 $q$, 그리고 $0$인 것의 개수 $r$은 basis의 선택과 무관하게 결정된다. 
+$n$차원 $\mathbb{R}$-벡터공간 $V$ 위에 정의된 symmetric bilinear form $\langle-,-\rangle$에 대하여, [명제 2](#prop2)와 같은 basis에서 나타나는 $\langle e_i,e_i\rangle$의 값이 $1$인 것의 개수 $p$, $-1$인 것의 개수 $q$, 그리고 $0$인 것의 개수 $r$은 basis의 선택과 무관하게 결정된다. 
 :::
 ::: 증명
 [명제 2](#prop2)의 basis를 $\{e_1,\ldots, e_n\}$이라 하고, $p$개의 $+1$, $q$개의 $-1$, $r$개의 $0$이 나타나도록 재배열하였다 하자. Gram matrix의 rank는 합동변환에 대해 불변이고 ($P$가 가역이면 $\rank(P^tGP)=\rank G$이므로) 이 basis에서 rank는 $p+q$이므로, $p+q$는 basis의 선택과 무관하다. 따라서 $r=n-(p+q)$ 또한 그러하다. 이제 $p$가 불변임을 보이면 $q$도 따라서 불변이다. 
@@ -117,10 +119,10 @@ $\mathbb{R}$-벡터공간 $V$ 위에 정의된 symmetric bilinear form $\langle-
 
 Signature에서 $p+q$는 Gram matrix의 rank이고, $r$은 $\langle-,-\rangle$이 퇴화하는 정도, 즉 모든 벡터와 직교하는 벡터들이 이루는 부분공간의 차원이다. 특히 $\langle-,-\rangle$이 non-degenerate인 것은 $r=0$인 것과 동치이다. 
 
-Sylvester's law는 곧바로 실수 대칭행렬의 합동에 의한 완전한 분류를 준다.
+Sylvester's law는 곧바로 real symmetric matrix의 합동에 의한 완전한 분류를 준다.
 
 ::: 따름정리 5
-두 실수 대칭행렬이 서로 합동인 것은 이들이 정의하는 bilinear form의 signature가 같은 것과 동치이다. 
+두 real symmetric matrix가 서로 합동인 것은 이들이 정의하는 bilinear form의 signature가 같은 것과 동치이다. 
 :::
 ::: 증명
 두 행렬 $G,G'$이 합동이라 하면 이들은 같은 bilinear form을 서로 다른 basis로 적은 것이므로 signature가 같다. 거꾸로 signature가 $(p,q,r)$로 같다면, [명제 2](#prop2)에 의하여 $G$와 $G'$은 모두 $1$이 $p$개, $-1$이 $q$개, $0$이 $r$개인 같은 diagonal matrix와 합동이고, 합동은 동치관계이므로 $G$와 $G'$은 서로 합동이다. 
@@ -131,7 +133,7 @@ Sylvester's law는 곧바로 실수 대칭행렬의 합동에 의한 완전한 �
 Signature가 $(n,0,0)$인 경우, 즉 모든 $0\neq v\in V$에 대하여 $\langle v,v\rangle>0$인 경우가 특별히 중요하다. 이는 Gram matrix가 [§스펙트럼 정리, ⁋정의 8](/ko/math/linear_algebra/spectral_theorem#def8)의 의미에서 positive definite인 것과 같으며, 이때 $\langle-,-\rangle$ 자체를 positive definite이라 한다. 
 
 ::: 명제 6
-$\mathbb{R}$-벡터공간 $V$ 위에 정의된 symmetric bilinear form $\langle-,-\rangle$에 대하여, 다음은 모두 동치이다.
+$n$차원 $\mathbb{R}$-벡터공간 $V$ 위에 정의된 symmetric bilinear form $\langle-,-\rangle$에 대하여, 다음은 모두 동치이다.
 
 1. $\langle-,-\rangle$이 positive definite이다.
 2. $\langle-,-\rangle$의 signature가 $(n,0,0)$이다.

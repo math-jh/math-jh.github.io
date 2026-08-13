@@ -9,6 +9,7 @@ sidebar:
     nav: "algebraic_structures-ko"
 
 date: 2021-09-02
+drift_needed: true
 weight: 1
 
 ---
@@ -20,7 +21,7 @@ weight: 1
 이번 글에서 우리는 이항연산이 하나 주어져 있는 대수적 구조인 *마그마*를 살펴본다. 이 구조는 너무 적은 정보를 가지고 있어서 앞으로 사용할 일은 없지만, 앞으로 새로운 대수적 구조를 정의할 때마다 이번 글에서 정의할 부분구조나 몫구조 등을 생각하게 된다.
 
 ::: 정의 1
-집합 $A$에 대하여, $A\times A$에서 $A$로의 함수 $\star$를 *이항연산*이라 부른다. 이항연산이 주어져 있는 집합을 *마그마*라 부른다.
+공집합이 아닌 집합 $A$에 대하여, $A\times A$에서 $A$로의 함수 $\star$를 *이항연산<sub>binary operation</sub>*이라 부른다. 이항연산이 주어져 있는 집합을 *마그마<sub>magma</sub*라 부른다.
 :::
 
 이항연산 $\star$의 함수값 $\star(x,y)$는 $x\star y$로 줄여쓴다. 마그마는 집합 $A$ 뿐만 아니라 그 위에 정의된 연산까지도 포함하는 구조이므로, 문맥상 명확할 경우를 제외하면 마그마를 나타낼 때에는 $(A,\star)$와 같이 연산과 집합을 모두 표기해준다.
@@ -46,7 +47,7 @@ $$4-(1-2)=5\neq 1=(4-1)-2$$
 
 $$x\star(y\star z)=(x\star y)\star z$$
 
-가 항상 성립하다면, $\star$가 *associative<sub>결합법칙을 만족한다</sub>*하다고 하고, 마그마 $A$를 *결합법칙을 만족하는 마그마<sub>associative magma</sub>*라 부른다.
+가 항상 성립한다면, $\star$가 *associative<sub>결합법칙을 만족한다</sub>*하다고 하고, 마그마 $A$를 *결합법칙을 만족하는 마그마<sub>associative magma</sub>*라 부른다.
 :::
 
 만일 $\star$가 associative하다면, 표현 $x\star y\star z$을 두 가지 방법으로 계산하여도
@@ -168,7 +169,7 @@ $$[x\star y]=[x]\mathbin{\tiny\char"2606}[y]=[x'\star y]$$
 
 가 성립해야 한다. 이 식은
 
-$$x'\star y\equiv x\star y\mod R$$
+$$x'\star y\equiv x\star y\pmod R$$
 
 로 바꾸어 쓸 수 있고, 앞선 정의를 따르자면 이는 정확히 $R$이 연산과 *right* compatible해야 한다는 의미다. 마찬가지 논리로, $[y]$의 representative의 선택에도 연산 $\mathbin{\tiny\char"2606}$의 값이 변하지 않아야 하므로 $R$은 연산과 *left* compatible이어야 한다.
 

@@ -11,6 +11,7 @@ sidebar:
 
 date: 2021-08-22
 weight: 13
+drift_needed: true
 
 ---
 
@@ -67,7 +68,7 @@ $R$이 집합 $A$ 위에서의 동치관계이고, $P$가 $R$과 compatible한 �
 ## 동치관계의 포화
 
 ::: 정의 5
-$R$이 $A$ 위에서의 동치관계이고 $X$가 $A$의 부분집합이라 하자. $X$가 $R$에 대해 *saturated<sub>포화</sub>*되었다는 것은 단항관계 $x\in A$가 $R$과 compatible한 것이다.
+$R$이 $A$ 위에서의 동치관계이고 $X$가 $A$의 부분집합이라 하자. $X$가 $R$에 대해 *saturated<sub>포화</sub>*되었다는 것은 단항관계 $x\in X$가 $R$과 compatible한 것이다.
 :::
 
 {% diagram Math/Set_Theory/Examples_of_Equivalence-1.png width="600px" alt="saturated_set" %}
@@ -77,7 +78,7 @@ $R$이 $A$ 위에서의 동치관계이고 $X$가 $A$의 부분집합이라 하�
 위의 정의에 따르면, 어떤 집합 $X$가 $R$-saturated이기 위해서는 <phrase>$x\in X$라면 $R(x)\subseteq X$</phrase>가 반드시 성립해야 한다. 따라서 $R$-saturated인 부분집합 $X$는 어떠한 부분집합 $B\subseteq A$에 대하여 $\bigcup_{x\in B}R(x)$로 나타낼 수 있는 집합이다. 이로부터 다음의 두 결과를 쉽게 확인할 수 있다.
 
 1. 만일 $(A_i)_{i\in I}$가 $R$-saturated인 부분집합들의 family라면, $\bigcup_{i\in I} A_i$와 $\bigcap_{i\in I} A_i$도 마찬가지다.
-2. $X\subseteq A$가 $R$-saturated라면 $A\setminus X$도 그러하다..
+2. $X\subseteq A$가 $R$-saturated라면 $A\setminus X$도 그러하다.
 
 이번에는 canonical projection $p:A\rightarrow A/R$와 $X\subseteq A$를 생각하자. [§이항관계들 사이의 연산, ⁋명제 7](/ko/math/set_theory/operation_of_binary_relations#prop7)에 의하여 
 
@@ -121,7 +122,7 @@ $$X'=p^{-1}(p(X'))\supseteq p^{-1}(p(X))$$
 
 {% diagram Math/Set_Theory/Examples_of_Equivalence-3.svg width="12.57em" alt="canonical_decomposition" %}
 
-이 때 $\tilde{f}$는 $f$의 공역 $F$를 $f(A)$로 제한하여 얻어지는 함수이고, $j$는 canonical injection이다. 위 diagram의 commutativity로부터 식
+이 때 $\tilde{f}$는 $f$의 공역 $B$를 $f(A)$로 제한하여 얻어지는 함수이고, $j$는 canonical injection이다. 위 diagram의 commutativity로부터 식
 
 $$f=j\circ\tilde{f}=j\circ h\circ p$$
 
@@ -131,7 +132,7 @@ $$f=j\circ\tilde{f}=j\circ h\circ p$$
 
 {% diagram Math/Set_Theory/Examples_of_Equivalence-4.svg width="7.95em" alt="induced_mapping_of_equivalence" %}
 
-만일 $q\circ f$이 $R$과 compatible하다면, $f$가 *$(R,S)$-compatible*하다고 한다. [명제 7](#prop7)에 의해 이는 다시 $h:A/R\rightarrow B/S$가 존재하여 $h\circ p=q\circ f$인 것과 동치이다. 
+만일 $q\circ f$가 $R$과 compatible하다면, $f$가 *$(R,S)$-compatible*하다고 한다. [명제 7](#prop7)에 의해 이는 다시 $h:A/R\rightarrow B/S$가 존재하여 $h\circ p=q\circ f$인 것과 동치이다. 
 
 ## 동치관계의 preimage
 
@@ -153,7 +154,7 @@ $$f=j\circ\tilde{f}=j\circ h\circ p$$
 
 {% diagram Math/Set_Theory/Examples_of_Equivalence-6.svg width="8.11em" alt="third_iso_1" %}
 
-그럼 함수 $p_S$가 전사함수이고, $p_S(x)=p_S(y)\implies p_R(x)=p_R(y)$가 항상 성립한다. 따라서 $p_R=h\circ p_S$이도록 하는 유일한 $h:A/S \rightarrow A/R$이 존재한다. ([§Retraction과 section, ⁋명제 4](/ko/math/set_theory/retraction_and_section#prop4)) 이 때, $h$가 $A/S$ 위에 정의하는 $R$의 $S$에 의한 *quotient*라 부르고, $R/S$로 적는다. Canonical decomposition을 거치면
+그럼 함수 $p_S$가 전사함수이고, $p_S(x)=p_S(y)\implies p_R(x)=p_R(y)$가 항상 성립한다. 따라서 $p_R=h\circ p_S$이도록 하는 유일한 $h:A/S \rightarrow A/R$이 존재한다. ([§Retraction과 section, ⁋명제 4](/ko/math/set_theory/retraction_and_section#prop4)) 이 때, $h$가 $A/S$ 위에 정의하는 동치관계를 $R$의 $S$에 의한 *quotient*라 부르고, $R/S$로 적는다. Canonical decomposition을 거치면
 
 {% diagram Math/Set_Theory/Examples_of_Equivalence-7.svg width="18.05em" alt="third_iso_2" %}
 
@@ -161,7 +162,7 @@ $$f=j\circ\tilde{f}=j\circ h\circ p$$
 
 ## 동치관계의 곱
 
-마지막으로 두 동치관계 $(R,A,A)$, $(R',A',A'$이 주어졌다고 하고, 관계 $(S, A\times A', A\times A')$를
+마지막으로 두 동치관계 $(R,A,A)$, $(R',A',A')$이 주어졌다고 하고, 관계 $(S, A\times A', A\times A')$를
 
 > $u\sim_{\tiny S}v$인 것은 어떠한 $x$, $x'$, $y$, $y'$가 존재하여 $u=(x,x')$, $v=(y,y')$이고 $x\sim_{\tiny R}y$, $x'\sim_{\tiny R'}y'$인 것이다
 
@@ -175,7 +176,7 @@ $$f=j\circ\tilde{f}=j\circ h\circ p$$
 
 두 함수 $f:A\rightarrow B$, $f':A'\rightarrow B'$가 주어졌다고 하고, $R$과 $R'$을 각각 $f$와 $f'$에 의해 유도되는 동치관계라 하자. 그럼 $f\times f':A\times A'\rightarrow B\times B'$가 잘 정의되고, 이 함수를 통해 $A\times A'$ 위에 동치관계를 정의할 수 있다. 이 동치관계를 잠시 $S$라 하면, 임의의 $u=(x,x'),v=(y,y')\in A\times A'$에 대해
 
-$$\begin{aligned}u\sim_{\tiny S}v&\iff (f\times f')(u)=(f\times f')(v)\iff (f(x),f'(x')=(f(y),f'(y'))\\
+$$\begin{aligned}u\sim_{\tiny S}v&\iff (f\times f')(u)=(f\times f')(v)\iff (f(x),f'(x'))=(f(y),f'(y'))\\
 &\iff (f(x)=f(y))\wedge(f'(x')=f'(y'))\iff (x\sim_{\tiny R}y)\wedge(x'\sim_{\tiny R'}y')\\&\iff u\sim_{\tiny R\times R'}v\end{aligned}$$
 
 이므로 $S=R\times R'$이다. 이 때 $f\times f'$에 의한 $A\times A'$의 image는 $f(A)\times f'(A')$와 같으므로, $f\times f'$의 canonical decomposition을 생각하면 $(A\times A')/(R\times R')$과 $f(A)\times f'(A')$ 사이의 전단사함수가 존재한다.
@@ -186,7 +187,7 @@ $$\begin{aligned}u\sim_{\tiny S}v&\iff (f\times f')(u)=(f\times f')(v)\iff (f(x)
 
 {% diagram Math/Set_Theory/Examples_of_Equivalence-9.svg width="20.50em" alt="canonical_bijection_between_product_2" %}
 
-여기서 $A/R\rightarrow f(A)$와 $A'/R'\rightarrow f'(A')$는 각각 $f$와 $f'$의 canonical decomposition들로부터 얻어지는 전단사함수이다. 따라서 이들에 의해 유도되는 함수 $(A/R)\times (A/R')\rightarrow f(A)\times f'(A')$ 또한 전단사함수이다. 
+여기서 $A/R\rightarrow f(A)$와 $A'/R'\rightarrow f'(A')$는 각각 $f$와 $f'$의 canonical decomposition들로부터 얻어지는 전단사함수이다. 따라서 이들에 의해 유도되는 함수 $(A/R)\times (A'/R')\rightarrow f(A)\times f'(A')$ 또한 전단사함수이다. 
 
 위에서 얻어진 두 개의 전단사함수와 그 역들을 적절히 합성해주면 $(A\times A')/(R\times R')$과 $(A/R)\times(A'/R')$ 사이의 전단사함수를 얻을 수 있다. 이 전단사함수들 또한 canonical이라 부른다. 
 

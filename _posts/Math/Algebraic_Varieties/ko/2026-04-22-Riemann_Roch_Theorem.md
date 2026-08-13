@@ -10,10 +10,11 @@ sidebar:
 
 date: 2026-04-22
 weight: 16
+drift_needed: true
 
 ---
 
-우리는 이제 [§선형계, ⁋정의 2](/ko/math/algebraic_varieties/linear_systems#def2)에서 살펴본 line bundle $\mathcal{L}$의 complete linear system $H^0(X, \mathcal{L})$을 더 자세하게 살펴본다. 이는 linear system을 도입한 직후에 소개해도 되었겠지만, 증명을 위해서는 Serre duality가 필요하여 뒤로 두었다. 
+우리는 이제 [§선형계, ⁋정의 2](/ko/math/algebraic_varieties/linear_systems#def2)에서 살펴본 line bundle $\mathcal{L}$의 complete linear system을 만드는 global section space $H^0(X, \mathcal{L})$을 더 자세하게 살펴본다. 이는 linear system을 도입한 직후에 소개해도 되었겠지만, 증명을 위해서는 Serre duality가 필요하여 뒤로 두었다. 
 
 ## 리만-로흐 정리
 
@@ -25,9 +26,9 @@ $$\ell(D) = \dim H^0(C, \mathcal{O}_C(D))$$
 로 정의한다.
 :::
 
-일반적으로 우리는 $\mathcal{O}_X(D)$를 $D$를 따라 order $1$의 pole을 가질 수 있는 rational function들의 sheaf로 생각하므로, 이러한 관점에서 $H^0(C, \mathcal{O}_C(D))$는 $X$ 위에서 정의된 함수들이 이루는 공간이라 생각할 수 있다. 
+일반적으로 우리는 $\mathcal{O}_C(D)$를 $D$를 따라 각 점 $p$에서 order $\operatorname{ord}_p D$ 이하의 pole을 가질 수 있는 rational function들의 sheaf로 생각하므로, 이러한 관점에서 $H^0(C, \mathcal{O}_C(D))$는 $C$ 위에서 정의된 함수들이 이루는 공간이라 생각할 수 있다. 
 
-이 공간 $H^0(C, \mathcal{O}_C(D))$는 [§선형계, ⁋정의 2](/ko/math/algebraic_varieties/linear_systems#def2)에서 처음 도입했던 것을 기억하자. 그에 따르면 공간 $H^0(C, \mathcal{O}_C(D))$는 주어진 divisor $D$와 linearly equivalent한 divisor들의 모임이며, 이를 projectivize하여 $\mathcal{O}_C(D)$의 *complete linear system* $\lvert \mathcal{O}_X(D)\rvert$를 얻을 수 있었다. 이 글에서는 편의상 이를 $\lvert D\rvert$으로 적기로 한다. 그럼 위의 Riemann-Roch dimension은 $\lvert D\rvert$의 projective dimension에 $1$을 더한 값이 된다. 
+이 공간 $H^0(C, \mathcal{O}_C(D))$는 [§선형계, ⁋정의 2](/ko/math/algebraic_varieties/linear_systems#def2)에서 처음 도입했던 것을 기억하자. 그에 따르면 공간 $H^0(C, \mathcal{O}_C(D))$의 nonzero section들은 주어진 divisor $D$와 linearly equivalent한 effective divisor들을 정의하며, 이 공간을 projectivize하여 $\mathcal{O}_C(D)$의 *complete linear system* $\lvert \mathcal{O}_C(D)\rvert$를 얻을 수 있었다. 이 글에서는 편의상 이를 $\lvert D\rvert$으로 적기로 한다. 그럼 위의 Riemann-Roch dimension은 $\lvert D\rvert$의 projective dimension에 $1$을 더한 값이 된다. 
 
 이제 점 $p\in C$를 고정하자. 그럼 $p$를 지나는 $\lvert D\rvert$의 원소들은 그 정의에 의해 $H^0(C,\mathcal{O}_C(D))$의 원소들 중 $s(p)=0$을 만족하는 section들로 생각할 수 있다. 즉, 이러한 $s$는 $\divisor(s)-p\geq 0$을 만족하는 $H^0(C, \mathcal{O}_C(D))$의 원소이며, 이를 통해 정확히 이러한 원소들의 모임이
 
@@ -120,7 +121,7 @@ $$\divisor(f)+D\geq 0$$
 
 을 만족하는 meromorphic function들의 모임이다. 즉 $D$는 $f$의 pole이 $D$의 support 안에서만 일어나도록, 그리고 각 점 $p$에서 극의 차수가 최대 $\operatorname{ord}_p D$가 되도록 강제하며, 따라서 $\deg D$가 커질수록 허용되는 pole의 차수도 커지므로 $\ell(D)$가 커진다. 
 
-뿐만 아니라, 우리의 상황에서 $C$는 $1$차원이므로 (effective) divisor는 $D=\sum n_i p_i$의 꼴이며 이를 이용하면 보다 정량적으로 다음의 부등식
+뿐만 아니라, 우리의 상황에서 $C$는 $1$차원이므로 (effective) divisor는 $D=\sum n_i p_i$의 꼴이며 이를 이용하면 $\ell(D)>0$인 divisor $D$에 대해 보다 정량적으로 다음의 부등식
 
 $$\ell(D)\leq \deg(D)+1\tag{$3$}$$
 
@@ -146,7 +147,7 @@ $$0\longrightarrow \mathcal{O}_C\overset{i}{\longrightarrow} \mathcal{O}_C(D)\ov
 
 $$0\longrightarrow H^0(C,\mathcal{O}_C)\overset{i^\ast}{\longrightarrow} H^0(C,\mathcal{O}_C(D)) \overset{p^\ast}{\longrightarrow} H^0(C,\mathcal{O}_D) \overset{\delta}{\longrightarrow} H^1(C,\mathcal{O}_C)\overset{i^\ast}{\longrightarrow} H^1(C,\mathcal{O}_C(D))\rightarrow 0$$
 
-를 생각하자. 여기서 $C$는 curve이고 $D=\sum n_i p_i$이므로, $\mathcal{O}_D$는 support $\lvert D\rvert$를 갖는 degree $D$의 skyscraper sheaf이며 이로부터 $H^0(C, \mathcal{O}_D)=\bigoplus_i \mathbb{K}^{n_i}$임을 안다. 뿐만 아니라 위에서 살펴본 linear map ($4$)이 실제로 이 long exact sequence에서의 $p^\ast$와 맞아떨어진다는 것을 알고 이로부터 $p^\ast$의 cokernel은 다음 isomorphism들의 chain
+를 생각하자. 여기서 $C$는 curve이고 $D=\sum n_i p_i$이므로, $\mathcal{O}_D$는 $D$의 support를 갖는 degree $\deg D$의 skyscraper sheaf이며 이로부터 $H^0(C, \mathcal{O}_D)=\bigoplus_i \mathbb{K}^{n_i}$임을 안다. 뿐만 아니라 위에서 살펴본 linear map ($4$)이 실제로 이 long exact sequence에서의 $p^\ast$와 맞아떨어진다는 것을 알고 이로부터 $p^\ast$의 cokernel은 다음 isomorphism들의 chain
 
 $$\coker p^\ast=\frac{H^0(C, \mathcal{O}_D)}{\im p^\ast}=\frac{H^0(C, \mathcal{O}_D)}{\ker\delta}\cong \im\delta\cong\ker i^\ast$$
 
@@ -160,7 +161,7 @@ $$\dim\coker p^\ast=\dim H^1(C, \mathcal{O}_C)-\dim H^0(C, \mathcal{O}_C(K_C-D))
 
 임을 안다. 위의 부등식 ($3$)에서 $\deg(D)+1$과 $\ell(D)$의 차이만큼이 cokernel의 차원이므로, 이 계산들이 [명제 3](#prop3)의 결과를 복원한다. 즉, 바꿔말하면 $\ell(K_C-D)$는 $\ell(D)$가 그 upper bound $\deg D+1$로부터 얼마나 떨어지는지를 측정하는 양이며, 이는 본디 $D$를 따라 vanishing하는 $1$-form들의 counting 문제이지만 Serre duality를 사용하여 $\ell(K_C-D)$로 바꾸어 쓴 것이다. 
 
-예로 degree $D$가 매우 커서 $\deg(K_C-D)<0$을 만족하는 경우를 생각하자. 그럼 이 경우 $\ell(K_C-D)=0$이고 따라서 Riemann-Roch theorem은 다음의 식
+예로 $\deg D$가 매우 커서 $\deg(K_C-D)<0$을 만족하는 경우를 생각하자. 그럼 이 경우 $\ell(K_C-D)=0$이고 따라서 Riemann-Roch theorem은 다음의 식
 
 $$\ell(D)=\deg D+1-g$$
 
@@ -179,7 +180,7 @@ $$\ell(K_C)-\ell(0)=\deg K_C +1-g$$
 어쨌든 지금까지의 계산을 정리하면 $\ell(D)$는 $D$의 complete linear system의 차원, $\ell(K_C - D)$는 $K_C$가 $D$ 위에 부과하는 수정항이며, 큰 degree에서는 이 수정항이 사라지고 작은 degree에서는 $K_C$의 기하학적 정보를 반영한다는 것으로 생각할 수 있다.
 
 ::: 예시 4
-**$\mathbb{P}^1$**: $\mathbb{P}^1$의 genus는 $g = 0$이고, canonical divisor는 $K_{\mathbb{P}^1} = -2H$이다 ([§표준선다발, ⁋예시 8](/ko/math/algebraic_varieties/canonical_bundle#ex8)). 한편, 우리는 [§선다발과 벡터다발, ⁋예시 12](/ko/math/algebraic_varieties/line_bundles#ex12)에서 $\mathcal{O}_{\mathbb{P}^1}(d)$의 global section이 degree $d$의 homogeneous polynomial들임을 보였으므로,
+**$\mathbb{P}^1$**: $\mathbb{P}^1$의 genus는 $g = 0$이고, canonical divisor는 $K_{\mathbb{P}^1} = -2H$이다 ([§표준선다발, ⁋예시 8](/ko/math/algebraic_varieties/canonical_bundle#ex8)). 한편, 우리는 [§선다발과 벡터다발, ⁋예시 16](/ko/math/algebraic_varieties/line_bundles#ex16)에서 $\mathcal{O}_{\mathbb{P}^1}(d)$의 global section이 degree $d$의 homogeneous polynomial들임을 보였으므로,
 
 $$\ell(dH) = d+1 \quad (d \ge 0), \qquad \ell(dH) = 0 \quad (d < 0)$$
 
@@ -222,7 +223,7 @@ $$\varphi_{K_C}:C\rightarrow \mathbb{P}^1$$
 
 위의 예시에서 살펴 본 $g=2$의 canonical map $\varphi_{K_C}: C \rightarrow \mathbb{P}^1$은 2:1 branched covering이었다. 더 일반적으로, 우리는 genus $g \ge 2$인 curve 중 $\mathbb{P}^1$로의 degree 2 covering이 존재하는 것을 *hyperelliptic curve<sub>초타원곡선</sub>*라 부르고, 그렇지 않은 경우를 *non-hyperelliptic curve*라 한다. 관례적으로 genus $0,1$인 경우는 hyperelliptic curve에서 제외하는 것에 유의하자.
 
-이제 $g\geq 2$인 $C$에서 canonical bundle $K_C$의 complete linear system $\lvert K_C\rvert$가 정의하는 morphism $\varphi_{K_C} : C \rightarrow \mathbb{P}^{g-1}$의 거동을 살펴보자. 우리는 위에서 $\deg K_C = 2g - 2$이고 $h^0(K_C) = g$인 것을 확인했으므로, $\varphi_{K_C}$의 공역은 $\mathbb{P}^{g-1}$이다. 그러나 이는 일반적으로는 closed embedding이 아니며, 이는 $g=2$인 경우 이것이 $2:1$ covering map이 된다는 것에서 이미 확인하였다. 이를 구체적으로 계산해보면, $\varphi_{K_C}$는 Veronese map $\mathbb{P}^1 \hookrightarrow \mathbb{P}^{g-1}$과 hyperelliptic covering $C\rightarrow \mathbb{P}^1$의 합성으로 나오는 것을 알 수 있다.
+이제 $g\geq 2$인 $C$에서 canonical bundle $K_C$의 complete linear system $\lvert K_C\rvert$가 정의하는 morphism $\varphi_{K_C} : C \rightarrow \mathbb{P}^{g-1}$의 거동을 살펴보자. 우리는 위에서 $\deg K_C = 2g - 2$이고 $h^0(K_C) = g$인 것을 확인했으므로, $\varphi_{K_C}$의 공역은 $\mathbb{P}^{g-1}$이다. 그러나 이는 $C$가 hyperelliptic인 경우 closed embedding이 아니며, 이는 $g=2$인 경우 이것이 $2:1$ covering map이 된다는 것에서 이미 확인하였다. 이를 구체적으로 계산해보면, $\varphi_{K_C}$는 Veronese map $\mathbb{P}^1 \hookrightarrow \mathbb{P}^{g-1}$과 hyperelliptic covering $C\rightarrow \mathbb{P}^1$의 합성으로 나오는 것을 알 수 있다.
 
 ## Degree-genus formula
 

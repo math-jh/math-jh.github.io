@@ -10,6 +10,7 @@ sidebar:
 
 date: 2024-12-11
 weight: 15
+drift_needed: true
 
 ---
 
@@ -25,13 +26,13 @@ weight: 15
 Compact space는 limit point compact이다.
 :::
 ::: 증명
-결론에 반하여 limit point compact가 아닌 compact space $X$를 가정하자. 그럼 limit point를 갖지 않는 무한집합 $A$가 존재하며, 따라서 [§집합의 내부, 폐포, 경계, ⁋정의 8](/ko/math/topology/other_concepts#def8) 이후의 논증에 의하여 $\cl(A)\setminus A=\emptyset$이어야 한다. 즉 $A$는 닫힌집합이어야 하고, 따라서 compact이다. 한편 각각의 $a\in A$ 또한 $A$의 limit point가 아니므로, $a$의 적당한 열린근방 $U_a$가 존재하여 $A\cap U_a=\{a\}$이도록 할 수 있다. 그럼 $(U_a)_{a\in A}$는 finite subcover를 갖지 않는 $A$의 open covering이므로 모순이다.
+결론에 반하여 limit point compact가 아닌 compact space $X$를 가정하자. 그럼 limit point를 갖지 않는 무한집합 $A$가 존재하며, 따라서 [§집합의 내부, 폐포, 경계, ⁋정의 8](/ko/math/topology/other_concepts#def8) 이후의 논증에 의하여 $\cl(A)\setminus A=\emptyset$이어야 한다. 즉 $A$는 닫힌집합이어야 하고, 따라서 compact이다. ([§옹골공간, ⁋보조정리 3](/ko/math/topology/compact_spaces#lem3)) 한편 각각의 $a\in A$ 또한 $A$의 limit point가 아니므로, $a$의 적당한 열린근방 $U_a$가 존재하여 $A\cap U_a=\{a\}$이도록 할 수 있다. 그럼 $(U_a)_{a\in A}$는 finite subcover를 갖지 않는 $A$의 open covering이므로 모순이다.
 :::
 
 그러나 일반적으로 그 역은 성립하지 않는다.
 
 ::: 예시 3
-Trivial topology가 주어진 two-point space $X$와, discrete topology가 주어진 무한집합 $Y$을 생각하자. 그럼 $X\times Y$는 limit point compact이지만 compact가 아니다.
+Trivial topology가 주어진 two-point space $X$와, discrete topology가 주어진 무한집합 $Y$을 생각하자. 그럼 $X\times Y$는 limit point compact이지만 compact가 아니다. 실제로 $X=\{a,b\}$라 하고 $X\times Y$의 무한부분집합 $S$가 $(a,y)$를 원소로 갖는다 하면, $(b,y)$를 포함하는 가장 작은 열린집합이 $X\times \{y\}$이고 이는 $(a,y)$를 포함하므로 $(b,y)$는 $S$의 limit point이며, $a$와 $b$의 역할을 바꾸어도 마찬가지이다. 반면 $(X\times \{y\})_{y\in Y}$는 finite subcover를 갖지 않는 $X\times Y$의 open covering이다.
 :::
 
 또 다음을 정의한다.
@@ -44,7 +45,7 @@ Trivial topology가 주어진 two-point space $X$와, discrete topology가 주�
 Sequentially compact space는 limit point compact이다.
 :::
 ::: 증명
-$X$가 sequentially compact space라 하고, limit point를 갖지 않는 무한집합 $A$가 존재한다고 가정하자. 그럼 $A$의 적당한 countable subset $A'$를 택하여 이를 점열 $(x_n)_{n\geq k}$로 만들 수 있다. 그럼 $X$는 sequentially compact이므로 수렴하는 부분점열을 가지며, 이 점열이 $x$로 수렴한다 하면 $x$가 $A'$의 limit point가 되고 따라서 $A$의 limit point가 되는 것을 확인할 수 있다. 
+$X$가 sequentially compact space라 하고, limit point를 갖지 않는 무한집합 $A$가 존재한다고 가정하자. 그럼 $A$의 적당한 countable subset $A'$를 택하여 이를 점열 $(x_n)_{n\geq 1}$로 만들 수 있다. 그럼 $X$는 sequentially compact이므로 수렴하는 부분점열을 가지며, 이 점열이 $x$로 수렴한다 하면 $x$가 $A'$의 limit point가 되고 따라서 $A$의 limit point가 되는 것을 확인할 수 있다. 
 :::
 
 ## 점열의 수렴
@@ -88,7 +89,7 @@ $$A=\{(x_j)\in \mathbb{R}^J\mid x_j=1\text{ for all but finitely many $j$}\}$$
 으로 정의하자. 그럼 $\mathbb{R}^J$의 원점은 $A$의 closure에 속한다. 이는 원점을 포함하는 $\mathbb{R}^J$의 base는 유한한 index를 제외하고는 모두 $\mathbb{R}$이며, 이 유한한 index들의 성분은 $0$으로 정의하고, 나머지 index의 성분은 $1$인 점이 이 base와 $A$의 교집합에 들어있기 때문이다. 그러나 $A$의 임의의 점열은 원점으로 수렴하지 않는다. 이는 $A$의 임의의 점열이 주어졌을 때, $J$가 uncountable임을 이용하면 이 점열의 모든 항의 $j$번째 성분이 $1$이도록 하는 $j\in J$가 존재한다는 것을 보일 수 있고, 그럼 $j$번째 성분이 $(-1,1)$이고 나머지 성분은 $\mathbb{R}$인 원점의 열린근방이 이 점열의 원소를 하나도 포함하지 않기 때문이다.
 :::
 
-즉, [보조정리 7](#lem7)의 역 또한 일반적으로는 성립하지 않는다. 혹은, 위의 언어를 사용하여 위상공간 $X$와 부분집합 $A$에 대해 일반적으로는 $\scl(A)\subsetneq \cl(A)$라고 할 수 있다. 만일 $\scl(A)=\cl(A)$가 모든 부분집합 $A$에 대해 성립한다면, $X$를 *sequential space*라 부른다.
+즉, [보조정리 7](#lem7)의 역 또한 일반적으로는 성립하지 않는다. 혹은, 위의 언어를 사용하여 위상공간 $X$와 부분집합 $A$에 대해 일반적으로 $\scl(A)\neq \cl(A)$일 수 있다고 말할 수 있다. 만일 $\scl(A)=\cl(A)$가 모든 부분집합 $A$에 대해 성립한다면, $X$를 *Fréchet–Urysohn space*라 부른다.
 
 한편, 다음 명제는 약간의 일반화를 거치긴 했지만, 그래도 여전히 익숙한 것이다.
 
@@ -99,9 +100,9 @@ $$A=\{(x_j)\in \mathbb{R}^J\mid x_j=1\text{ for all but finitely many $j$}\}$$
 $f(x)$의 임의의 열린근방 $V$를 택하자. 그럼 $f$는 연속함수이므로 $f^{-1}(V)$는 $x$의 열린근방이다. 따라서 적당한 $N\in \mathbb{N}$가 존재하여 $n\geq N$이면 $x_n\in f^{-1}(V)$이다. 그럼 $f(x_n)\in V$이므로 $(f(x_n))$은 $f(x)$로 수렴한다.
 :::
 
-한편, 만일 공간 $X$에서 [보조정리 7](#lem7)의 역이 성립한다면, 해당 결과와 [§연속함수, ⁋정리 4](/ko/math/topology/continuous_functions#thm4)의 두 번째 조건을 사용해 [명제 9](#prop9)의 역 또한 보일 수 있다. 즉, 만일 임의의 $x\in A$로 수렴하는 임의의 점열 $(x_n)$에 대하여 $f(x_n)$이 $f(x)$로 수렴한다면, $f$는 점 $x$에서 연속이다.
+한편, 만일 공간 $X$에서 [보조정리 7](#lem7)의 역이 성립한다면, 해당 결과와 [§연속함수, ⁋정리 4](/ko/math/topology/continuous_functions#thm4)의 두 번째 조건을 사용해 [명제 9](#prop9)의 역 또한 보일 수 있다. 즉, 만일 임의의 $x\in X$로 수렴하는 임의의 점열 $(x_n)$에 대하여 $f(x_n)$이 $f(x)$로 수렴한다면, $f$는 점 $x$에서 연속이다.
 
-$X$가 [보조정리 7](#lem7)의 역이 성립한다는 공간이라 하자. 그럼 임의의 $x\in \cl(A)$에 대하여 $x$로 수렴하는 $X$의 점열 $(x_n)$를 잡을 수 있다. 그럼 $Y$의 점열 $f(x_n)$가 $f(x)$로 수렴하므로 [보조정리 7](#lem7)에 의하여 $f(x)\in \cl(f(A))$이고 [§연속함수, ⁋정리 4](/ko/math/topology/continuous_functions#thm4)로부터 원하는 결과를 얻는다.
+$X$가 [보조정리 7](#lem7)의 역이 성립한다는 공간이라 하자. 그럼 임의의 $x\in \cl(A)$에 대하여 $x$로 수렴하는 $A$의 점열 $(x_n)$를 잡을 수 있다. 그럼 $Y$의 점열 $f(x_n)$가 $f(x)$로 수렴하므로 [보조정리 7](#lem7)에 의하여 $f(x)\in \cl(f(A))$이고 [§연속함수, ⁋정리 4](/ko/math/topology/continuous_functions#thm4)로부터 원하는 결과를 얻는다.
 
 ## 가산공리
 
@@ -110,8 +111,8 @@ $X$가 [보조정리 7](#lem7)의 역이 성립한다는 공간이라 하자. �
 ::: 정의 10
 위상공간 $X$에 대하여 다음을 정의한다.
 
-1. $X$가 *first countable<sub>제1 가산</sub>*이라는 것은 $X$의 임의의 점 $x\in X$에 대하여 $x$의 countable local base가 존재하는 것을 의미한다.
-2. $X$가 *second countable<sub>제2 가산</sub>*이라는 것은 $X$의 countable base가 존재하는 것을 의미한다.
+1. $X$가 *first countable<sub>제1 가산</sub>*이라는 것은 $X$의 임의의 점 $x\in X$에 대하여 $x$의 countable local base가 존재하는 것을 의미한다. ([§위상공간의 기저, ⁋정의 4](/ko/math/topology/topological_bases#def4))
+2. $X$가 *second countable<sub>제2 가산</sub>*이라는 것은 $X$의 countable base가 존재하는 것을 의미한다. ([§위상공간의 기저, ⁋정의 1](/ko/math/topology/topological_bases#def1))
 :::
 
 ::: 명제 11
@@ -122,10 +123,10 @@ $X$가 first countable $T_1$이고 limit point compact라면 $X$는 sequentially
 
 한편 $X$는 first countable이므로, $x$의 countable local base $\mathcal{B}(x)$를 생각할 수 있다. $\mathcal{B}(x)$의 원소를 $B_1,B_2,\ldots$와 같이 적는다면, $B_n$을 $B_1\cap\cdots\cap B_n$으로 바꾸어 $B_{n+1}\subseteq B_n$이 모든 $n$에 대해 성립하도록 할 수 있다. 
 
-이제 $B_1$은 $x$를 포함하는 열린집합이고 $x$는 $A$의 limit point이므로, 적당한 $n_1$이 존재하여 $x_{n_1}\in B_1$이도록 할 수 있다. 이제 $X$가 $T_1$이므로 $x$를 포함하지만 $x_1,\ldots,x_{n_1}$을 포함하지 않는 열린집합 $U_2$가 존재한다. 그럼 $U_2\cap B_2$는 다시 $x$를 포함하는 열린집합이고 $x$는 $A$의 limit point이므로, 적당한 $n_2$가 존재하여 $x_{n_2}\in U_2\cap B_2$이도록 할 수 있다. 이 과정을 반복하여 $x$로 수렴하는 $A$의 부분점열을 잡을 수 있다.
+이제 $B_1$은 $x$를 포함하는 열린집합이고 $x$는 $A$의 limit point이므로, 적당한 $n_1$이 존재하여 $x_{n_1}\in B_1$이도록 할 수 있다. 이제 $X$가 $T_1$이므로 $x$를 포함하지만 $x_1,\ldots,x_{n_1}$을 포함하지 않는 열린집합 $U_2$가 존재한다. 그럼 $U_2\cap B_2$는 다시 $x$를 포함하는 열린집합이고 $x$는 $A$의 limit point이므로, 적당한 $n_2$가 존재하여 $x_{n_2}\in U_2\cap B_2$이도록 할 수 있다. 이 과정을 반복하여 $x$로 수렴하는 $(x_n)$의 부분점열을 잡을 수 있다.
 :::
 
-뿐만 아니라 first countable space는 sequential space라는 것을 쉽게 보일 수 있다. 
+뿐만 아니라 first countable space는 Fréchet–Urysohn space라는 것을 쉽게 보일 수 있다. 
 
 ::: 명제 12
 임의의 second countable space $X$는 *Lindelöf<sub>린델뢰프</sub>*이다. 즉, $X$의 임의의 open cover는 countable subcover를 갖는다.
@@ -140,7 +141,7 @@ $X$의 countable base $\mathcal{B}=\{B_1, B_2, \ldots\}$를 고정하고, $X$의
 
 $$B_1\supseteq B_2\supseteq\cdots$$
 
-를 가지며, first countability에 의하여 어떠한 열린집합 $U$가 주어지더라도 충분히 큰 $n$에 대해서는 $B_n\subseteq U$이도록 할 수 있다는 것이다. 즉, 어떤 의미에서는 위의 열린집합들 그 자체가 $x$로 수렴한다고 볼 수도 있다. 이와 같은 관찰을 바탕으로 다음을 정의한다.
+를 가지며, first countability에 의하여 $x$의 어떠한 열린근방 $U$가 주어지더라도 충분히 큰 $n$에 대해서는 $B_n\subseteq U$이도록 할 수 있다는 것이다. 즉, 어떤 의미에서는 위의 열린집합들 그 자체가 $x$로 수렴한다고 볼 수도 있다. 이와 같은 관찰을 바탕으로 다음을 정의한다.
 
 ::: 정의 13
 위상공간 $X$와 그 위에 정의된 filter $\mathcal{F}$를 생각하자. ([§위상공간의 다른 정의들, ⁋정의 3](/ko/math/topology/equivalent_formulations_of_topology#def3)) 그럼 $\mathcal{F}$가 $x\in X$로 *수렴<sub>converge</sub>*한다는 것은 $\mathcal{N}(x)\subseteq \mathcal{F}$가 성립하는 것이다. ([§열린집합, §§Neighborhood filter](/ko/math/topology/open_sets#neighborhood-filter)) 이 때, $x$를 $\mathcal{F}$의 *limit point<sub>극한점</sub>*라 부른다. 
@@ -164,7 +165,7 @@ $$B_1\supseteq B_2\supseteq\cdots$$
 위상공간 $X$와 임의의 부분집합 $A\subseteq X$에 대하여, $x\in\cl(A)$인 것과, $x$로 수렴하는 $A$의 filter $\mathcal{F}$가 존재하는 것이 동치이다.
 :::
 ::: 증명
-우선 $x$로 수렴하는 $A$의 filter $\mathcal{F}$가 존재한다 하자. 즉 $\mathcal{F}$는 원소 $A$와 부분집합 $\mathcal{N}(x)$를 포함한다. 따라서 filter의 정의에 의하여, 임의의 근방 $U\in \mathcal{N}(x)$에 대하여 $U\cap A\neq\emptyset$이다. 
+우선 $x$로 수렴하는 $A$의 filter $\mathcal{F}$가 존재한다 하자. 즉 $\mathcal{F}$의 모든 원소가 $A$와 만나고 $\mathcal{N}(x)\subseteq \mathcal{F}$이다. 따라서 filter의 정의에 의하여, 임의의 근방 $U\in \mathcal{N}(x)$에 대하여 $U\cap A\neq\emptyset$이다. 
 
 거꾸로 $x\in \cl(A)$라 하자. 그럼 $x$의 임의의 근방 $U$에 대하여, $U\cap A\neq\emptyset$이므로 다음 식
 

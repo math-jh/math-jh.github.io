@@ -11,6 +11,8 @@ sidebar:
 date: 2026-07-06
 weight: 17
 
+drift_needed: true
+
 ---
 
 이제 우리는 벡터함수의 적분을 살펴본다. 이를 위한 첫째 단계는 선적분으로, 이는 벡터장이 정의된 공간 $\mathbb{R}^n$ 안에서 정의된 곡선을 따라가며, 각각의 점에서의 벡터가 기여하는 힘들을 모두 더해 누적시키는 것이다. 흥미로운 것은 벡터장이 보존장이었다면 이 적분이 경로에 <em-ko>무관</em-ko>해져서 오직 끝점에만 의존한다는 것으로, 이는 [§미적분의 기본정리](/ko/math/calculus/fundamental_theorem_of_calculus)의 고차원 버전이라 할 수 있다. 
@@ -25,7 +27,7 @@ $$\int_C f\dd{s} = \int_a^b f(\mathbf{r}(t))\lvert \mathbf{r}'(t)\rvert \dd{t}$$
 이다. 여기서 $\dd{s} = \lvert \mathbf{r}'(t)\rvert \dd{t}$는 arc length 원소이다.
 :::
 
-정의에 의해 위의 적분은 arc-length parametrization을 사용한 적분값이므로 이는 곡선의 매개화에 의존하지 않는다. 특수한 경우로 $f \equiv 1$이면 $\int_C \dd{s}$가 곡선의 길이를 줄 것이다. 
+위의 적분은 $C^1$ 매개화를 바꾸어도 치환적분에 의해 값이 보존되므로 곡선의 매개화에 의존하지 않는다. 특수한 경우로 $f \equiv 1$이면 $\int_C \dd{s}$가 곡선의 길이를 줄 것이다. 
 
 이제 이를 벡터함수의 적분으로 올려주기 위해서는 곡선의 방향을 고려하여 다음과 같이 정의해야 한다. 
 
@@ -37,7 +39,7 @@ $$\int_C \mathbf{F} \cdot d\mathbf{r} = \int_a^b \mathbf{F}(\mathbf{r}(t)) \cdot
 이다. 
 :::
 
-이를 단위접선벡터를 활용하여 $\mathbf{T} = \mathbf{r}'/\lvert \mathbf{r}'\rvert$로 쓰면 
+$\mathbf{r}$이 [§곡선과 벡터함수](/ko/math/calculus/vector_functions)의 일급정칙곡선인 경우, 이를 단위접선벡터를 활용하여 $\mathbf{T} = \mathbf{r}'/\lvert \mathbf{r}'\rvert$로 쓰면 
 
 $$\int_C \mathbf{F}\cdot d\mathbf{r} = \int_C (\mathbf{F}\cdot \mathbf{T})\dd{s}$$
 
@@ -78,7 +80,7 @@ $\mathbf{F}$가 연결된 열린 영역 $D$에서 연속일 때, 다음은 동�
 :::
 
 ::: 증명
-$(1 \Rightarrow 3)$은 [정리 3](#thm3)이다. $(3 \Leftrightarrow 2)$는 closed curve를 한 점에서 끊어 두 경로로 보고, 한 경로를 거꾸로 이으면 closed curve가 되므로 자명하다. 
+$(1 \Rightarrow 3)$은 [정리 3](#thm3)이다. 이때 $\mathbf{F} = \nabla f$가 연속이므로 potential $f$는 자동으로 $C^1$이다. $(3 \Leftrightarrow 2)$는 closed curve를 한 점에서 끊어 두 경로로 보고, 한 경로를 거꾸로 이으면 closed curve가 되는 것에서 따라온다. 거꾸로 이은 경로 위의 적분은 $t \mapsto a + b - t$ 치환에 의해 원래 적분에 부호를 붙인 것이므로, closed curve에서의 적분이 $0$이라는 것과 두 경로에서의 적분이 서로 같다는 것이 같은 말이 되기 때문이다. 
 
 따라서 핵심 주장은 $(3 \Rightarrow 1)$이다. 이를 위해 potential을 직접 만들어야 한다. 기준점 $\mathbf{x}_0 \in D$를 고정하고, 임의의 $\mathbf{x}\in D$에 대해서 $f(\mathbf{x})$를 $\mathbf{x}_0$에서 $\mathbf{x}$를 따라 $\mathbf{F}$를 선적분한 값으로 두자. 이는 원래대로라면 $\mathbf{x}_0$과 $\mathbf{x}$를 잇는 곡선 $\mathbf{r}$의 선택에 의존하지만, 우리는 셋째 조건을 가정하고 있으므로 이 정의가 정당하다. 이제 한 좌표방향 $\mathbf{e}_i$로의 평균변화율 
 

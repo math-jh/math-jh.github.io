@@ -14,6 +14,8 @@ date: 2021-08-09
 
 weight: 2
 
+drift_needed: true
+
 ---
 
 ## 집합의 포함관계
@@ -38,7 +40,7 @@ $A\subseteq B$이고 $B\subseteq C$이면 $A\subseteq C$이다.
 우선 전제는 임의의 $x$에 대하여 두 명제 $x\in A\implies x\in B$와 $x\in B\implies x\in C$가 참이라는 것을 뜻한다. 따라서 삼단논법에 의해 $x\in A\implies x\in C$도 참이고, $x$는 임의로 택할 수 있으므로 $A\subseteq C$가 성립한다. 
 :::
 
-위 두 명제로부터 $\subseteq$가 집합들 사이의 order relation이 된다는 것을 안다. ([§순서관계의 정의, ⁋정의 1](/ko/math/set_theory/order_relations#def1))
+위 두 명제로부터 $\subseteq$가 집합들 사이의 order relation이 된다는 것을 안다. ([§순서관계의 정의, ⁋정의 2](/ko/math/set_theory/order_relations#def2))
 
 ## 순서쌍
 
@@ -52,7 +54,7 @@ $$F=\{(x_1,f(x_1)), (x_2,f(x_2)),\cdots\}$$
 
 으로 생각할 수 있고, 아직 정의하지 않은 *동치관계* 또한 이렇게 순서쌍들의 집합으로 나타낼 수 있다. 
 
-하지만 우리가 정의한 집합들 중에는 중고등학교때 배운 순서쌍의 역할을 할 도구가 없다. 예컨대 $\{A,B\}=\{B,A\}$이므로 단순히 axiom of pair를 한 번 사용해서는 $A$와 $B$의 순서를 구별할 수 없다.
+하지만 우리가 정의한 집합들 중에는 중고등학교때 배운 순서쌍의 역할을 할 도구가 없다. 가령 $\{A,B\}=\{B,A\}$이므로 단순히 axiom of pair를 한 번 사용해서는 $A$와 $B$의 순서를 구별할 수 없다.
 
 ::: 정의 4
 *순서쌍<sub>ordered pair</sub>* $(x,y)$를 집합 $\big\{\{x\}, \{x,y\}\big\}$으로 정의한다.
@@ -87,12 +89,12 @@ $$\big\{\{x\},\{x,y\}\big\}=\big\{\{x'\},\{x',y'\}\big\}$$
 
     $$\big\{\{x\},\{x,x\}\big\}=\big\{\{x\},\{x\}\big\}=\big\{\{x\}\big\}$$
 
-    이 되므로  $\big\{\{x\}\big\}=\big\{\{x'\},\{x',y'\}\big\}$이다. 따라서 $\{x\}=\{x'\}=\{x',y'\}$이므로, $x=x'=y'$이고 따라서 $x=x'=y=y'$이다. 즉, $x=x'$이고 $y=y'$이므로 이 경우는 증명 끝.
+    이 되므로  $\big\{\{x\}\big\}=\big\{\{x'\},\{x',y'\}\big\}$이다. 따라서 $\{x\}=\{x'\}=\{x',y'\}$이므로, $x=x'=y'$이고 따라서 $x=x'=y=y'$이다. 즉, $x=x'$이고 $y=y'$이다.
 
-- 남은 경우는 $x\neq y$이다. 이 경우, $\{x,y\}\neq\{x'\}$이므로 두 순서쌍이 같기 위해서는 반드시 $\{x\}=\{x'\}$이고 $\{x,y\}=\{x',y'\}$여야 한다. 그럼 $\{x\}=\{x'\}$에서 $x=x'$여야 하고, 이것과 $\{x,y\}=\{x',y'\}$에서 $y=y'$여야 한다. 따라서 이 경우도 증명 끝.
+- 남은 경우는 $x\neq y$이다. 이 경우, $\{x,y\}\neq\{x'\}$이므로 두 순서쌍이 같기 위해서는 반드시 $\{x\}=\{x'\}$이고 $\{x,y\}=\{x',y'\}$여야 한다. 그럼 $\{x\}=\{x'\}$에서 $x=x'$여야 하고, 이것과 $\{x,y\}=\{x',y'\}$에서 $y=y'$여야 한다.
 :::
 
-집합 
+순서쌍 $z=(x,y)$에 대하여 집합 
 
 $$\bigcup z=\{x\}\cup\{x,y\}=\{x,y\}$$
 
@@ -129,14 +131,14 @@ $$\{z\mid(z=(x,y))\wedge (x\in A)\wedge(y\in B)\}$$
 두 곱집합 $A\times B$와 $A'\times B'$가 동일해질 조건을 알기 위해서는 하나의 곱집합이 다른 곱집합에 언제 <em-ko>포함되는지</em-ko>만 확실하게 결정해주면 된다. 
 
 ::: 명제 9
-공집합이 아닌 두 집합 $A'$, $B'$에 대하여, <phrase>$A'\times B'\subseteq A\times B$인 것</phrase>과 <phrase>$A'\subseteq A$이고 $B'\subseteq B$인 것</phrase>이 동치이다.
+네 집합 $A$, $B$, $A'$, $B'$에 대하여 $A'$와 $B'$가 공집합이 아니라 하면, <phrase>$A'\times B'\subseteq A\times B$인 것</phrase>과 <phrase>$A'\subseteq A$이고 $B'\subseteq B$인 것</phrase>이 동치이다.
 :::
 ::: 증명
 먼저, $A'\times B'\subseteq A\times B$라 가정하자. $A'\subseteq A$를 보여야 하므로, 임의의 $a'\in A'$가 주어졌다 하고 $a'\in A$임을 보이자.  
 $B'$는 공집합이 아니므로, 어떤 원소 $b'\in B'$가 존재한다. 따라서 $(a',b')\in A'\times B'$이고, 이제 $A'\times B'\subseteq A\times B$이므로 $(a',b')\in A\times B$이고 $a'\in A$이다. 이와 비슷하게 $B'\subseteq B$도 보일 수 있다.
 
 반대로 $A'\subseteq A$이고 $B'\subseteq B$라 하자. 임의의 $z'\in A'\times B'$가 주어졌을 때 $z'\in A\times B$임을 보여야 한다.  
-$z'=(a',b')$이라 하자. 즉 $a'\in A'$, $b'\in B'$인데, 가정에 의해 $a'$와 $b'$는 $A$와 $B$의 원소이기도 하므로 $(a,b)\in A\times B$이다.
+$z'=(a',b')$이라 하자. 즉 $a'\in A'$, $b'\in B'$인데, 가정에 의해 $a'$와 $b'$는 $A$와 $B$의 원소이기도 하므로 $(a',b')\in A\times B$이다.
 :::
 
 $A,B$ 둘 중 하나가 공집합일 때는 다음 명제를 적용할 수 있다.
@@ -147,7 +149,7 @@ $A,B$ 둘 중 하나가 공집합일 때는 다음 명제를 적용할 수 있�
 ::: 증명
 우선 $A\times B=\emptyset$이라 하자. 만일 $A$, $B$가 모두 공집합이 아니라 하면, 우리는 어떤 $a\in A$와 $b\in B$를 뽑아올 수 있으므로 $(a,b)\in A\times B$가 되어 모순이다. 
 
-거꾸로 $A$ 혹은 $B$가 공집합이라 가정하자. 이번에도 결론을 부정하에 $A\times B$가 공집합이 아니라면, 어떤 원소 $(a,b)\in A\times B$가 존재한다. 따라서 $a\in A$이고 $b\in B$이므로, 이는 $A$ 혹은 $B$가 공집합이라는 가정에 모순이다. 증명 끝.
+거꾸로 $A$ 혹은 $B$가 공집합이라 가정하자. 이번에도 결론을 부정하에 $A\times B$가 공집합이 아니라면, 어떤 원소 $(a,b)\in A\times B$가 존재한다. 따라서 $a\in A$이고 $b\in B$이므로, 이는 $A$ 혹은 $B$가 공집합이라는 가정에 모순이다.
 :::
 
 ---

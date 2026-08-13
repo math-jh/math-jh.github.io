@@ -10,6 +10,7 @@ sidebar:
 
 date: 2024-11-19
 weight: 8
+drift_needed: true
 
 ---
 
@@ -23,7 +24,7 @@ weight: 8
 두 경우가 해당한다. 거꾸로 이러한 조건을 만족하는 $(A_i)$와 그 위에서 정의된 연속함수들 $f_i$들이 주어졌을 때, 이들이 $X=\bigcup A_i$ 위에서의 연속함수를 지정하는지의 여부를 생각할 수 있다. 
 
 ::: 보조정리 1
-집합 $X$와 [§부분공간, ⁋명제 6](/ko/math/topology/subspaces#prop6)의 두 조건 중 하나를 만족하는 부분집합들의 family $(A_i)$가 주어졌다 하자. 만일 연속함수들의 family $(f_i: A_i \rightarrow Y)$가 다음 조건
+위상공간 $X$와 [§부분공간, ⁋명제 6](/ko/math/topology/subspaces#prop6)의 두 조건 중 하나를 만족하는 부분집합들의 family $(A_i)$가 주어졌다 하자. 만일 연속함수들의 family $(f_i: A_i \rightarrow Y)$가 다음 조건
 
 $$f_i\vert_{A_i\cap A_j}=f_j\vert_{A_i\cap A_j}\qquad\text{for all $i,j$}$$
 
@@ -40,7 +41,7 @@ $$f_i\vert_{A_i\cap A_j}=f_j\vert_{A_i\cap A_j}\qquad\text{for all $i,j$}$$
 Category $\Open(X)$를 ordered set $(\mathcal{T}, \subseteq)$를 category로 본 것으로 정의하자. 즉, 이들의 대상들은 열린집합들이며, $U\subseteq V$일 때마다 arrow $U\hookrightarrow V$가 유일하게 존재한다.
 
 ::: 정의 2
-위상공간 $X$에 대하여, contravariant functor $\mathcal{F}:\Open(X)^\op \rightarrow \Set$을 $X$ 위에 정의된 집합들의 *presheaf<sub>준층</sub>*라 부른다.
+위상공간 $X$에 대하여, contravariant functor $\mathcal{F}:\Open(X) \rightarrow \Set$을 $X$ 위에 정의된 집합들의 *presheaf<sub>준층</sub>*라 부른다.
 :::
 
 참고로, presheaf는 보편적으로 $\mathcal{F}$ 혹은 $\mathcal{F}$와 같이 표기하지만, 이 둘 가운데는 캘리그래피체인 $\mathcal{F}$가 조금 더 자연스럽다. 그러나 우리는 이미 이 글씨체를 위상구조를 나타내는데 사용하고 있으므로, 위상수학 카테고리 내에서는 흘림체를 사용하기로 한다. 
@@ -56,7 +57,7 @@ Category $\Open(X)$를 ordered set $(\mathcal{T}, \subseteq)$를 category로 본
 그럼 $\mathcal{F}$는 presheaf가 된다. 
 :::
 
-특별히 이 정의는 projection $p:Y \rightarrow X$가 주어졌을 때, $X$에서 $Y$로의 continuous section들의 ([\[집합론\] §Retraction과 section, ⁋정의 2](/ko/math/set_theory/retraction_and_section#def2)) presheaf $\mathcal{F}$의 모임을 생각하는 식으로 응용할 수 있다. 이를 일반화하여 다음과 같은 정의를 내린다. 
+특별히 이 정의는 projection $p:Y \rightarrow X$가 주어졌을 때, 열린집합 $U$마다 $U$ 위에서 정의된 $p$의 continuous section들의 ([\[집합론\] §Retraction과 section, ⁋정의 2](/ko/math/set_theory/retraction_and_section#def2)) 모임을 대응시키는 presheaf $\mathcal{F}$를 생각하는 식으로 응용할 수 있다. 이를 일반화하여 다음과 같은 정의를 내린다. 
 
 ::: 정의 4
 위상공간 $X$ 위에서 정의된 presheaf $\mathcal{F}$가 주어졌다 하자. 
@@ -114,7 +115,7 @@ $$\mathcal{F}_x=\varinjlim_{x\in U}\mathcal{F}(U)$$
 으로 정의한다. $\mathcal{F}_x$의 원소들을 점 $x$에서의 *germ<sub>싹</sub>*이라 부른다.
 :::
 
-특히 $\mathcal{F}$가 complete category valued presheaf라면 $\mathcal{F}_x$가 항상 잘 정의된다. 한편 concrete category에서 limit의 표현을 직접적으로 나타내보면
+특히 $\mathcal{F}$가 cocomplete category valued presheaf라면 $\mathcal{F}_x$가 항상 잘 정의된다. 한편 concrete category에서 colimit의 표현을 직접적으로 나타내보면
 
 $$\mathcal{F}_x=\{(s,U)\mid x\in U\in\mathcal{T},s\in\mathcal{F}(U)\}/\mathnormal{\sim}$$
 
@@ -144,7 +145,7 @@ $$\tilde{s}:U \rightarrow \Spe(\mathcal{F}); \quad x\mapsto (x,s_x)$$
 
 우리에게 직관을 주는 [예시 3](#ex3)를 생각해보면, 열린집합 $U$에 대하여 정의된 $\phi(U):\mathcal{F}(U) \rightarrow \mathcal{G}(U)$는 $\phi:\mathcal{F}\rightarrow \mathcal{G}$를 열린집합 $U$로 제한하여 얻어지는 함수라 생각할 수 있으므로, 이를 종종 $\phi(U)$ 대신 $\phi\vert_U$로 적는다. 
 
-한편 limit cone의 universal property에 의해 다음 명제가 성립한다. 
+한편 colimit cone의 universal property에 의해 다음 명제가 성립한다. 
 
 ::: 명제 11
 위상공간 $X$ 위에 정의된 presheaf들 사이의 morphism $\phi:\mathcal{F}\rightarrow\mathcal{G}$가 주어졌다 하자. 그럼 임의의 $x\in X$에 대하여, stalk들 사이의 morphism $\phi_x:\mathcal{F}_x\rightarrow\mathcal{G}_x$가 자연스럽게 유도된다.
@@ -168,7 +169,7 @@ $$\left(\prod_{i\in I} \mathcal{F}_i\right)(U)=\prod_{i\in I} \mathcal{F}_i(U)$$
 으로 정의할 수 있다.
 :::
 
-위와 같은 정의를 이용하여 category $\mathcal{A}$에 정의된 구조, 예를 들면 product나 coproduct, limit, colimit, monoidal product 등을 $\PSh(X; \mathcal{A})$에 옮겨올 수 있다. 특히 $\PSh(X; \Ab)$는 $\Ab$ 위에 정의된 monoidal structure $(\Ab,\otimes, \mathbb{Z})$를 물려받으며 여기에서의 monoidal object는 $\PSh(X; \Ring)$이다. 같은 맥락에서 다음 예시를 이해할 수 있다.
+위와 같은 정의를 이용하여 category $\mathcal{A}$에 정의된 구조, 예를 들면 product나 coproduct, limit, colimit, monoidal product 등을 $\PSh(X; \mathcal{A})$에 옮겨올 수 있다. 특히 $\PSh(X; \Ab)$는 $\Ab$ 위에 정의된 monoidal structure $(\Ab,\otimes, \mathbb{Z})$를 물려받으며 여기에서의 monoid object들의 category는 $\PSh(X; \Ring)$이다. 같은 맥락에서 다음 예시를 이해할 수 있다.
 
 ::: 예시 14
 위상공간 $X$ 위에 정의된 $\Ring$-valued presheaf $\mathcal{O}_X$에 대하여, left $\mathcal{O}_X$-module object $\mathcal{F}\in\PSh(X;\Ab)$을 간단히 $\mathcal{O}_X$-module이라 부른다.
@@ -205,10 +206,10 @@ $$\left(\prod_{i\in I} \mathcal{F}_i\right)(U)=\prod_{i\in I} \mathcal{F}_i(U)$$
 
 {% diagram Math/Topology/Presheaves-2.svg width="21.30em" alt="presheaf_kernel-2" %}
 
-와 kernel의 universal property에 의해 자명하다. 
+와 kernel의 universal property에 의해, 열린집합들 $U\subseteq V\subseteq W$에 대하여 $\rho_{VU}\circ\rho_{WV}$와 $\rho_{WU}$는 모두 합성 $\ker\phi(W) \rightarrow \mathcal{F}(W) \rightarrow \mathcal{F}(U)$를 $\ker\phi(U)$를 통해 분해하는 morphism이므로 유일성에 의해 서로 같다. 
 :::
 
-이와 마찬가지 방법으로, *presheaf cokernel*, *presheaf image*, *presheaf coimage* 혹은 *presheaf quotient* 등등을 모두 정의할 수 있다. 따라서 주어진 위상공간 $X$ 위에서 정의된 abelian presheaf들의 category $\PSh(X;\Ab)$은 abelian category가 된다.
+이와 마찬가지 방법으로, *presheaf cokernel*, *presheaf image*, *presheaf coimage* 혹은 *presheaf quotient* 등등을 모두 정의할 수 있다. 이때 덧셈은 각 열린집합마다 주어지고, coimage에서 image로 가는 morphism 또한 각 열린집합마다 isomorphism이므로, 주어진 위상공간 $X$ 위에서 정의된 abelian presheaf들의 category $\PSh(X;\Ab)$은 abelian category가 된다.
   
 ---
 **참고문헌**

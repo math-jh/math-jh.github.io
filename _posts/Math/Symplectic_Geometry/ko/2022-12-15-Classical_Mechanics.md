@@ -10,6 +10,7 @@ sidebar:
 
 date: 2022-12-15
 weight: 1
+drift_needed: true
 
 ---
 
@@ -67,7 +68,7 @@ $$\dot{x}=\frac{\partial H_t}{\partial y},\quad \dot{y}=-\frac{\partial H_t}{\pa
 ::: 증명
 이를 증명하기 위해, 위치조건 $x_s(t_0)=x_0$, $x_s(t_1)=x_1$을 만족하는 경로들의 1-parameter family $(z_s)=(x_s,y_s)$가 주어졌다 하고, $z_0=z$라 하자. 그럼
 
-$$\begin{aligned}\frac{\partial}{\partial s}\bigg\vert_{s=0}\mathcal{A}_H(z_s)&=\frac{\partial}{\partial s}\bigg\vert_{s=0}\int_{t_0}^{t_1}\langle y_s,\dot{x}_s\rangle-H_t(x_s,y_s)\dd{t}\\&=\int_{t_0}^{t_1}\frac{\partial}{\partial s}\bigg\vert_{s=0}\left(\langle y_s,\dot{x}_s\rangle-H_t(x_s,y_s)\right)\dd{t}\\&=\int_{t_0}^{t_1}\bigl\langle\partial_s y_s\vert_0,\dot{x}\bigr\rangle+\bigl\langle y,\partial_s\dot{x}\vert_0\bigr\rangle-\bigl\langle\partial_sx_s\vert_0,\partial_x H_t\bigr\rangle-\bigl\langle\partial_sy_s\vert_0,\partial_yH_t\bigr\rangle\dd{t}\end{aligned}$$
+$$\begin{aligned}\frac{\partial}{\partial s}\bigg\vert_{s=0}\mathcal{A}_H(z_s)&=\frac{\partial}{\partial s}\bigg\vert_{s=0}\int_{t_0}^{t_1}\langle y_s,\dot{x}_s\rangle-H_t(x_s,y_s)\dd{t}\\&=\int_{t_0}^{t_1}\frac{\partial}{\partial s}\bigg\vert_{s=0}\left(\langle y_s,\dot{x}_s\rangle-H_t(x_s,y_s)\right)\dd{t}\\&=\int_{t_0}^{t_1}\bigl\langle\partial_s y_s\vert_0,\dot{x}\bigr\rangle+\bigl\langle y,\partial_s\dot{x}_s\vert_0\bigr\rangle-\bigl\langle\partial_sx_s\vert_0,\partial_x H_t\bigr\rangle-\bigl\langle\partial_sy_s\vert_0,\partial_yH_t\bigr\rangle\dd{t}\end{aligned}$$
 
 이다. 이제 부분적분
 
@@ -75,7 +76,7 @@ $$\int_{t_0}^{t_1}\langle y,\partial_s\dot{x}_s\vert_0\rangle\dd{t}=\bigl[\langl
 
 을 생각하면, 우변의 첫째 항은 위치조건 $x_s(t_0)=x_0$, $x_s(t_1)=x_1$으로부터 $0$이 된다. 이를 앞선 식에 대입한 후 정리하면,
 
-$$\frac{\partial}{\partial s}\bigg\vert_{s=0}\mathcal{A}_H(z)=\int_{t_0}^{t_1}\langle\partial_sy_s\vert_0,\dot{x}-\partial_yH_t\rangle\dd{t}-\int_{t_0}^{t_1}\langle\partial_sx_s\vert_0,\dot{y}+\partial_xH_t\rangle\dd{t}$$
+$$\frac{\partial}{\partial s}\bigg\vert_{s=0}\mathcal{A}_H(z_s)=\int_{t_0}^{t_1}\langle\partial_sy_s\vert_0,\dot{x}-\partial_yH_t\rangle\dd{t}-\int_{t_0}^{t_1}\langle\partial_sx_s\vert_0,\dot{y}+\partial_xH_t\rangle\dd{t}$$
 
 이고, $\partial_sx_s\vert_0$과 $\partial_sy_s\vert_0$은 임의로 변할 수 있으므로 $z$가 $\mathcal{A}_H$의 극값이 되는 것은 두 식
 
@@ -124,7 +125,7 @@ $$\dd{H}=\omega_0(X_H, -)$$
 
 으로 적을 수 있다. $\omega_0$는 $\mathbb{R}^{2n}$ 위에 정의된 *canonical symplectic form*이라 부르고, 이러한 관점에서 $X_H$를 *symplectic gradient*라고 부르기도 한다. 
 
-일반적인 $\mathbb{R}^{2n}$의 좌표계에서 
+$\mathbb{R}^{2n}$의 standard coordinate에서 
 
 $$\langle-,-\rangle=\sum_{j=1}^n \dd{x}^j\otimes \dd{x}^j+\sum_{j=1}^n \dd{y}^j\otimes \dd{y}^j$$
 

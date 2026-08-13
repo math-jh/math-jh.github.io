@@ -11,9 +11,11 @@ sidebar:
 date: 2026-06-20
 weight: 6
 
+drift_needed: true
+
 ---
 
-앞서 [§중국인의 나머지정리, ⁋명제 6](/ko/math/ring_theory/chinese_remainder_theorem#prop6)에서 우리는 pairwise comaximal two-sided ideal들이 주어진 ring을 quotient ring들의 곱으로 분해한다는 것을 보았다. 그 분해에서 각 인자를 골라내는 역할을 한 것은 $i$번째 성분만 $1$이고 나머지가 $0$인 원소였으며, 이러한 원소는 ring의 center에 놓인 *idempotent*로 특징지어진다. 
+앞서 [§중국인의 나머지정리, ⁋명제 6](/ko/math/ring_theory/chinese_remainder_theorem#prop6)에서 우리는 pairwise comaximal이고 교집합이 $0$인 two-sided ideal들이 주어진 ring을 quotient ring들의 곱으로 분해한다는 것을 보았다. 그 분해에서 각 인자를 골라내는 역할을 한 것은 $i$번째 성분만 $1$이고 나머지가 $0$인 원소였으며, 이러한 원소는 ring의 center에 놓인 *idempotent*로 특징지어진다. 
 
 이 글에서는 이러한 idempotent들을 공식적으로 정의하고, central idempotent의 complete orthogonal set이 ring의 direct product 분해와 일대일대응함을 증명한 뒤, 이로부터 일반 ring에서의 중국인의 나머지정리가 어떻게 복원되는지 살펴본다. 
 

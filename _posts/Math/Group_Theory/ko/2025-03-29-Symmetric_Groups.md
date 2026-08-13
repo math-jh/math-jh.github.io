@@ -10,6 +10,7 @@ sidebar:
 
 date: 2025-03-29
 weight: 1
+drift_needed: true
 
 ---
 
@@ -20,7 +21,7 @@ weight: 1
 [군론](/ko/group_theory) 카테고리에서 처음으로 살펴볼 것은 특정한 group들이다. 
 
 ::: 정의 1
-집합 $[n]=\{1,\ldots, n\}$에 대하여, $[n]$의 $\Set$에서의 automorphism group $\Aut([n])$을 *symmetric group<sub>대칭군</sub>*이라 부르고 $S_n$으로 적는다.  
+집합 $[n]=\{1,\ldots, n\}$에 대하여, $[n]$의 $\Set$에서의 automorphism group $\Aut([n])$을 *symmetric group<sub>대칭군</sub>*이라 부르고 $S_n$으로 적는다. ([\[범주론\] §범주, ⁋정의 9](/ko/math/category_theory/categories#def9))  
 :::
 
 즉 $S_n$의 원소들은 집합 $[n]$에서 $[n]$으로 가는 전단사함수들이며, $S_n$의 연산은 함수의 합성으로 주어진다. $S_n$의 원소들은 *permutation*이라 부른다.
@@ -57,7 +58,7 @@ $S_n$의 원소들의 합성은 함수의 합성이고, 일반적으로 함수�
 Permutation $\sigma_1,\ldots,\sigma_r\in S_n$가 *disjoint<sub>서로소</sub>*라는 것은 만일 어떠한 $i$가 $\sigma_i(k)\neq k$를 만족한다면, 다른 모든 $j\neq i$에 대하여는 $\sigma_j(k)=k$인 것이다. 
 :::
 
-그럼 임의의 disjoint permutation들 $\sigma_1,\ldots,\sigma_r\in S_n$의 곱은 이들의 순서에 의존하지 않음이 자명하다. 뿐만 아니라 다음이 성립한다. 
+그럼 어떠한 $k$에 대하여 $\sigma_i(k)\neq k$라면 $\sigma_i$가 injective이므로 $\sigma_i(\sigma_i(k))\neq \sigma_i(k)$이고, 따라서 [정의 3](#def3)에 의하여 $i$가 아닌 모든 $j$에 대하여 $\sigma_j$는 $k$와 $\sigma_i(k)$를 모두 고정하므로, 임의의 disjoint permutation들 $\sigma_1,\ldots,\sigma_r\in S_n$의 곱은 이들의 순서에 의존하지 않는다. 뿐만 아니라 다음이 성립한다. 
 
 ::: 명제 4
 $S_n$의 임의의 non-identity permutation은 disjoint cycle들의 곱으로 나타낼 수 있다. 
@@ -136,19 +137,19 @@ $$(a_1\;a_2\;\cdots\;a_k)=(a_1\;a_2)(a_2\;a_3)\cdots(a_{k-1}\;a_k)$$
 
 $$L_g: G\rightarrow G,\qquad x\mapsto gx$$
 
-을 정의하자. 그럼 cancellation law에 의하여 $L_g$는 injective homomorphism이다. 한편, 임의의 $x\in G$에 대하여, 
+을 정의하자. 그럼 cancellation law에 의하여 $L_g$는 injective이다. 한편, 임의의 $x\in G$에 대하여, 
 
 $$x=g(g^{-1}x)=L_g(g^{-1}x)$$
 
-이므로, $L_g$는 surjective homomorphism이기도 하다. 즉, $L_g$는 $G$ 위에서 정의된 automorphism이 된다. $\lvert G\rvert=n$이라 하자. 그럼 $G$ 위에 정의된 automorphism은 집합 $G$ 위에 정의된 bijection이기도 하므로, $L_g$들은 모두 $S_n$들의 원소로 볼 수도 있다. 이제 $T:G\rightarrow S_n$을 다음의 식
+이므로, $L_g$는 surjective이기도 하다. 즉, $L_g$는 집합 $G$ 위의 bijection이 된다. $\lvert G\rvert=n$이라 하자. 그럼 $L_g$들은 모두 $S_n$의 원소로 볼 수도 있다. 이제 $T:G\rightarrow S_n$을 다음의 식
 
 $$T(g)=L_g$$ 
 
 으로 정의하면, 임의의 $x\in G$에 대하여
 
-$$T(gh)(x)=L_{gh}(x)=(gh)x=g(h(x))=(T_g\circ T_h)(x)$$
+$$T(gh)(x)=L_{gh}(x)=(gh)x=g(hx)=L_g(L_h(x))=\big(T(g)\circ T(h)\big)(x)$$
 
-가 성립한다. 즉, $T$는 group homomorphism이다. 어렵지 않게 $T$가 injective라는 것도 확인할 수 있으므로, 원하는 결과를 얻는다.  
+가 성립한다. 즉, $T$는 group homomorphism이다. 또 $L_g=L_h$라면 $x=e$를 대입하여 $g=h$를 얻으므로 $T$는 injective이고, 따라서 원하는 결과를 얻는다.  
 :::
 
 ## 교대군
@@ -181,7 +182,7 @@ $$(x_{\sigma(i)}-x_{\sigma(j)})=\begin{cases}(x_{\sigma(i)}-x_{\sigma(j)})&\text
 
 으로 바꾸어 쓸 수 있다. 또, $\sigma$는 bijection이므로, 이렇게 모든 term을 바꾸어 써 주면 $\sigma(\Delta)$는 부호만 제외하면 $\Delta$와 정확하게 같은 polynomial이 됨을 알 수 있다. 따라서 $\sgn(\sigma)=\sigma(\Delta)/\Delta$로 정의하면, $\sgn(\sigma)$는 정확하게 [정의 9](#def9)의 sense에서 정의된 $\sigma$의 parity가 된다.   
 
-정의로부터, $\sigma$가 transposition이라면 $\sgn(\sigma)=-1$인 것은 자명하다. 따라서 만일 $\sgn$이 multiplicative하다는 것만 보인다면, 
+[정의 9](#def9)로부터, $\sigma$가 $a<b$인 두 수 $a$와 $b$를 서로 바꾸는 transposition이라면 그 inversion은 $a<j<b$인 $(a,j)$가 $b-a-1$개, $a<i<b$인 $(i,b)$가 $b-a-1$개, 그리고 $(a,b)$ 하나로 총 $2(b-a)-1$개이므로 $\sgn(\sigma)=-1$이다. 따라서 만일 $\sgn$이 multiplicative하다는 것만 보인다면, 
 
 $$\text{$\sigma$ odd}\iff\text{$\sgn(\sigma)=-1$}\iff\text{$\sigma$ is a product of odd number of transpositions}$$ 
 
@@ -218,7 +219,7 @@ $A_5$는 simple이다. 이는 Sylow theorem을 사용하여 조금 더 고상하
 
 이들 네 종류의 permutation이 서로 다르다는 것은 각 원소들의 order를 보면 되고, 각 종류에 속하는 원소들이 서로 다른 것은 함수값을 직접 보면 된다. 
 
-한편, 일반적으로 group $G$의 subgroup $N$이 normal subgroup이기 위해서는, 정확하게 정의에 의해 $N$이 inner automorphism에 의한 conjugacy class들의 합집합으로 나타나야 한다. 그런데 [보조정리 7](#lem7)을 사용하면, 위에서 3-cycle, 두 disjoint 2-cycle의 곱은 각각 conjugacy class들이 되며, $5$-cycle은 각각 원소 12개를 갖는 두 개의 conjugacy class들로 나뉜다는 것을 알 수 있다. 이제 $A_5$의 normal subgroup의 크기가 $A_5$의 크기 $60$을 나눠야 하는데, 항등원을 포함하며 non-trivial한 conjugacy class들의 합집합으로는 $60$의 약수를 만들 수 없으므로 $A_5$는 non-trivial한 normal subgroup을 갖지 않는다. 
+한편, 일반적으로 group $G$의 subgroup $N$이 normal subgroup이기 위해서는, 정확하게 정의에 의해 $N$이 inner automorphism에 의한 conjugacy class들의 합집합으로 나타나야 한다. 그런데 [보조정리 7](#lem7)을 사용하면, 위에서 3-cycle, 두 disjoint 2-cycle의 곱은 각각 conjugacy class들이 되며, $5$-cycle은 각각 원소 12개를 갖는 두 개의 conjugacy class들로 나뉜다는 것을 알 수 있다. 이제 $A_5$의 normal subgroup의 크기가 $A_5$의 크기 $60$을 나눠야 하는데, 항등원을 포함하며 $A_5$ 전체는 아닌 non-trivial한 conjugacy class들의 합집합으로는 $60$의 약수를 만들 수 없으므로 $A_5$는 non-trivial한 normal subgroup을 갖지 않는다. 
 :::
 
 ---

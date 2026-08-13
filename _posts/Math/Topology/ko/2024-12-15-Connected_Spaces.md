@@ -10,6 +10,7 @@ sidebar:
 
 date: 2024-12-15
 weight: 19
+drift_needed: true
 
 ---
 
@@ -84,10 +85,10 @@ Connected space $X$ 위에 동치관계 $R$이 주어졌다 하자. Canonical pr
 또, 다음이 성립한다.
 
 ::: 명제 6
-Connected space들의 product는 connected이다. 거꾸로, product가 connected라면 각각의 성분들도 connected이다.
+Connected space들의 product는 connected이다. 거꾸로, 비어있지 않은 product가 connected라면 각각의 성분들도 connected이다.
 :::
 ::: 증명
-뒤쪽 방향은 $\pr_i$에 대해 [명제 4](#prop4)를 사용하면 되므로 증명할 것이 없다. 
+뒤쪽 방향은 product가 비어있지 않다면 $\pr_i$가 전사함수이므로, $\pr_i$에 대해 [명제 4](#prop4)를 사용하면 된다. 
 
 따라서 각각의 $X_i$들이 connected라 하고, 결론에 반하여 $X=\prod X_i$가 connected가 아니라 하자. $X=U\cup V$이고 $U\cap V=\emptyset$, $U,V\neq\emptyset$이라 하면 
 
@@ -95,7 +96,7 @@ $$f(x)=\begin{cases}1&\text{if $x\in U$}\\0&\text{if $x\in V$}\end{cases}$$
 
 으로 정의한 함수 $f:X \rightarrow \{0,1\}$은 연속이다. (여기서 $\{0,1\}$은 discrete topology가 주어진 공간이다.) 
 
-이제 원소 $a=(a_i)\in X$를 고정하고, $\iota_i: X_i \rightarrow X$를 $i$번째 성분만 $x$이고, 나머지 성분은 $a$로부터 받아오는 함수로 정하자. 그럼 $f\circ\iota_i$는 $X_i$에서 $\{0,1\}$로의 연속함수이며, $X_i$가 connected라는 가정으로부터 $f\circ\iota_i$는 상수함수여야 하는 것을 안다. 따라서 귀납법에 의하여, 유한 개를 제외한 성분이 모두 $a$와 같은 $X$의 점 $x$들은 $f(x)=f(a)$를 만족해야 한다는 것을 안다. 이러한 점들은 $X$의 dense subset이므로, $f$는 $X$ 전체에서 상수함수여야 하고 이는 모순이다. 
+이제 원소 $a=(a_i)\in X$를 고정하고, $\iota_i: X_i \rightarrow X$를 $i$번째 성분만 $x$이고, 나머지 성분은 $a$로부터 받아오는 함수로 정하자. 이 때 $a$ 자리에는 $X$의 임의의 점을 base point로 두어 같은 방식으로 $\iota_i$를 정의할 수 있다. 그럼 $\iota_i$는 각 성분함수가 항등함수이거나 상수함수이므로 연속이고 ([§곱공간, ⁋명제 2](/ko/math/topology/product_spaces#prop2)), $f\circ\iota_i$는 $X_i$에서 $\{0,1\}$로의 연속함수이며, $X_i$가 connected라는 가정으로부터 $f\circ\iota_i$는 상수함수여야 하는 것을 안다. 따라서 귀납법에 의하여, 유한 개를 제외한 성분이 모두 $a$와 같은 $X$의 점 $x$들은 $f(x)=f(a)$를 만족해야 한다는 것을 안다. 이러한 점들은 $X$의 dense subset이므로, $f$는 $X$ 전체에서 상수함수여야 하고 이는 모순이다. 
 :::
 
 ## 연결성분

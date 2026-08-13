@@ -14,6 +14,8 @@ date: 2021-08-14
 
 weight: 3
 
+drift_needed: true
+
 ---
 
 ## 이항관계
@@ -45,9 +47,9 @@ $R$이 이항관계라 하자. 그럼 유일한 두 개의 집합 $A$, $B$가 �
 </ul>
 :::
 ::: 증명
-$R$이 이항관계라 하고 $\bigcup(\bigcup R)$를 생각하자. 계산을 통해 $(x,y)\in R\implies x,y\in\bigcup(\bigcup R))$임을 알 수 있다. $P$를
+$R$이 이항관계라 하고 $\bigcup(\bigcup R)$를 생각하자. 계산을 통해 $(x,y)\in R\implies x,y\in\bigcup(\bigcup R)$임을 알 수 있다. $P$를
 
-> $P(t)$: 어떠한 $s$가 존재하여 $(s,t)\in R$이다.
+> $P(s)$: 어떠한 $t$가 존재하여 $(s,t)\in R$이다.
 
 로 정의하면, 다음의 집합
 
@@ -55,9 +57,9 @@ $$A=\left\{x\mid\left(x\in\bigcup\left(\bigcup R\right)\right)\wedge P(x)\right\
 
 를 얻는다. 따라서 첫 번째 주장이 성립하며, 이와 유사하게 성질 $Q$를
 
-> $Q(s)$: 어떠한 $t$가 존재하여 $(s,t)\in R$이다.
+> $Q(t)$: 어떠한 $s$가 존재하여 $(s,t)\in R$이다.
 
-로 정의하면 집합 $B$를 얻는다.
+로 정의하면 집합 $B$를 얻는다. 또, 위의 각 조건을 만족하는 두 집합은 원소가 서로 같으므로, extensionality에 의하여 이러한 $A$와 $B$는 유일하다.
 :::
 
 [§순서쌍, ⁋정의 7](/ko/math/set_theory/ordered_pair#def7)과 마찬가지로 이들을 각각 첫 번째와 두 번째 *projection*이라 부르고, $\pr_1R$과 $\pr_2R$로 쓴다.
@@ -75,7 +77,7 @@ $$R\subseteq \pr_1 R\times\pr_2R\subseteq A\times B$$
 ## 이항관계의 정의역과 상
 
 ::: 정의 4
-이항관계 $(R,A,B)$와 부분집합 $A'\subseteq A$를 생각하자. 그럼 <phrase>$R$에 의해 $A'$의 원소와 관계되는 모든 원소들의 집합</phrase>을 $R$에 의한 $A'$의 *image<sub>상</sub>*이라 부르고 , $R(A')$로 표기한다.
+이항관계 $(R,A,B)$와 부분집합 $A'\subseteq A$를 생각하자. 그럼 <phrase>$R$에 의해 $A'$의 원소와 관계되는 모든 원소들의 집합</phrase>을 $R$에 의한 $A'$의 *image<sub>상</sub>*이라 부르고, $R(A')$로 표기한다.
 :::
 
 위의 정의를 식으로 풀어쓰면
@@ -86,7 +88,7 @@ $$R(A')=\bigcup_{x\in A'} \{y\in B\mid(x,y)\in R\}$$
 
 $$\{y\mid(x,y)\in R\}$$
 
-과 같은 형태가 되며, comprehension schema에 의하여 존재성이 보장되는 위의 집합과 달리 이 집합은 존재하지 않을 수도 있다. 
+과 같은 형태가 되며, 위의 집합과 달리 comprehension schema가 요구하는 bounding set이 표기에 드러나지 않는다. 
 
 이와 같은 문제는 집합론을 공부하며 항상 주의해야 한다. 다만 우리는 집합론을 공부하는 게 목적이 아니라, 다른 곳에서 유용하게 사용할 명제들을 증명하는 것이 목적이므로 앞으로 이 정도의 사소한 서술상의 문제는 별 생각없이 넘어가기로 한다.
 

@@ -10,6 +10,7 @@ sidebar:
 
 date: 2025-05-29
 weight: 8
+drift_needed: true
 
 ---
 
@@ -29,7 +30,7 @@ Algebraic extension $\mathbb{L}/\mathbb{K}$과 injective $\mathbb{K}$-homomorphi
     
     이므로 $u(\Phi)\subseteq\Phi$가 성립한다. 그런데 $u$는 zero map이 아니므로 injective이고 ([§체, ⁋명제 2](/ko/math/field_theory/fields#prop2)), 따라서 $u$는 $\Phi$에서 $\Phi$로의 bijection이다. 따라서 $x\in\Phi=u(\Phi)\subseteq u(\mathbb{L})$이고 이로부터 $u(\mathbb{L})=\mathbb{L}$이다.
 
-2. $\overline{\mathbb{K}}$는 $u(\mathbb{L})$과 $\mathbb{L}$의 algebraic closure이므로 [§대수적 폐포, ⁋정리 5](/ko/math/field_theory/algebraically_closed_extensions#thm5)의 universal property로부터 원하는 결과를 얻는다. 
+2. $\overline{\mathbb{K}}$는 $u(\mathbb{L})$과 $\mathbb{L}$의 algebraic closure이므로 [§대수적 폐포, ⁋정리 5](/ko/math/field_theory/algebraically_closed_extensions#thm5)의 universal property로부터 $u$를 확장하는 $\overline{\mathbb{K}}$의 $\mathbb{K}$-endomorphism $w$를 얻는다. 이 때 $w$는 injective이므로 $w(\overline{\mathbb{K}})$는 $\overline{\mathbb{K}}$와 isomorphic하여 algebraically closed이고, $\overline{\mathbb{K}}/\mathbb{K}$가 algebraic이므로 $\overline{\mathbb{K}}$는 $w(\overline{\mathbb{K}})$의 algebraic extension이 되어 [§대수적 폐포, ⁋명제 1](/ko/math/field_theory/algebraically_closed_extensions#prop1)의 넷째 조건으로부터 $w(\overline{\mathbb{K}})=\overline{\mathbb{K}}$, 즉 $w$가 automorphism임을 얻는다. 
 :::
 
 우리의 목적은 고정된 field $\mathbb{K}$의 algebraic extension들을 모두 살펴보는 것이며, 더 정확히는 algebraic extension들의 equivalence class들을 보는 것이다.  
@@ -61,7 +62,7 @@ $$\mathbb{K}(x)\cong \mathbb{K}[\x]/(f)\cong \mathbb{K}(y)$$
 이고, $\mathbb{K}[\x]/(f)$에서 출발하는 두 isomorphism이 $\x$의 class를 각각 $x$와 $y$로 보내므로 이들을 합성하면 $x$를 $y$로 보내는 $\mathbb{K}$-isomorphism $\mathbb{K}(x)\rightarrow \mathbb{K}(y)$를 얻는다. 즉 셋째 조건은 둘째 조건을 함의한다. 마지막으로 둘째 조건을 가정하면 [명제 1](#prop1)로부터 $v$를 확장하는 $\mathbb{K}$-isomorphism $u:\overline{\mathbb{K}}\rightarrow\overline{\mathbb{K}}$이 존재하고 따라서 $x$, $y$가 conjugate이다. 
 :::
 
-이로부터 만일 degree $n$의 algebraic element $x\in \overline{\mathbb{K}}$가 주어졌다면, $x$와 conjugate인 원소들은 반드시 $x$의 minimal polynomial의 해이고 따라서 이러한 원소는 많아야 $n$개 뿐임을 안다. 뿐만 아니라, 여기에서 $x$와 conjugate한 원소가 $n$개 <em-ko>미만</em-ko>인 것은 정확하게 $x$의 minimal polynomial이 separable하지 않은 것과 동치이다. 즉, $\overline{\mathbb{K}}$의 $\mathbb{K}$-automorphism들의 group을 $\Aut_\mathbb{K}(\overline{\mathbb{K}})$라 하고 $\Aut_\mathbb{K}\overline{\mathbb{K}}$가 $\overline{\mathbb{K}}$에 자연스러운 방식으로 act할 때, 이 action에 의해 fix되는 원소들의 모임 $\overline{\mathbb{K}}^{\Aut_{\mathbb{K}}(\overline{\mathbb{K}})}$은 정확히 $\mathbb{K}^{p^{-\infty}}$와 같다. 여기에서 $p$는 $\mathbb{K}$의 characteristic exponent이며, 따라서 $\ch(\mathbb{K})=0$인 경우 이 모임은 $\mathbb{K}$ 자기 자신이다. 
+이로부터 만일 degree $n$의 algebraic element $x\in \overline{\mathbb{K}}$가 주어졌다면, $x$와 conjugate인 원소들은 반드시 $x$의 minimal polynomial의 해이고 따라서 이러한 원소는 많아야 $n$개 뿐임을 안다. 뿐만 아니라, 여기에서 $x$와 conjugate한 원소가 $n$개 <em-ko>미만</em-ko>인 것은 정확하게 $x$의 minimal polynomial이 separable하지 않은 것과 동치이다. 즉, $\overline{\mathbb{K}}$의 $\mathbb{K}$-automorphism들의 group을 $\Aut_\mathbb{K}(\overline{\mathbb{K}})$라 하고 $\Aut_\mathbb{K}\overline{\mathbb{K}}$가 $\overline{\mathbb{K}}$에 자연스러운 방식으로 act할 때, 이 action에 의해 fix되는 원소들의 모임 $\overline{\mathbb{K}}^{\Aut_{\mathbb{K}}(\overline{\mathbb{K}})}$은 정확히 $\mathbb{K}^{p^{-\infty}}$와 같다. 여기에서 $p$는 $\mathbb{K}$의 characteristic exponent이며, 따라서 $\ch(\mathbb{K})=0$인 경우 이 모임은 $\mathbb{K}$ 자기 자신이다. 실제로 $x\in\overline{\mathbb{K}}$가 모든 $\mathbb{K}$-automorphism에 의해 fix되는 것은 $x$의 conjugate이 자기 자신 뿐인 것, 즉 $x$의 minimal polynomial $f$가 $\overline{\mathbb{K}}$에서 유일한 해를 갖는 것과 동치이고, 이는 다시 적당한 $e\geq 0$에 대하여 $f=(\x-x)^{p^e}=\x^{p^e}-x^{p^e}$인 것, 즉 $x$가 $\mathbb{K}$ 위에서 $p$-radical인 것과 동치이다. ([§순수비분리확대체, ⁋보조정리 3](/ko/math/field_theory/purely_inseparable_extensions#lem3)과 [§순수비분리확대체, ⁋명제 2](/ko/math/field_theory/purely_inseparable_extensions#prop2)) 
 
 ## 갈루아 확장
 

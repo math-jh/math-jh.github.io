@@ -10,6 +10,7 @@ sidebar:
 
 date: 2026-04-05
 weight: 13
+drift_needed: true
 
 ---
 
@@ -53,7 +54,7 @@ $$\Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n}(-1)^{\oplus(n+1)}) = 0$$
 
 이지만, $\Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n})=\mathbb{K}$이므로 오른쪽 부분의 surjectivity가 성립할 수 없다.
 
-이를 해결하기 위한 표준적인 방법은 right derived functor를 생각하는 것이다. ([\[호몰로지 대수학\] §유도함자, ⁋정의 9](/ko/math/homological_algebra/derived_functors#def9)). 구체적으로, $X$ 위의 abelian group들의 sheaf들이 이루는 category $\Sh(X)$는 stalk별로 injective object를 잡은 후 sheafification을 취해주면 enough injective를 갖는다는 것을 보일 수 있으므로 임의의 sheaf $\mathcal{F}$는 항상 injective resolution $\mathcal{I}^\bullet$을 가지고, 이로부터 다음의
+이를 해결하기 위한 표준적인 방법은 right derived functor를 생각하는 것이다. ([\[호몰로지 대수학\] §유도함자, ⁋정의 9](/ko/math/homological_algebra/derived_functors#def9)). 구체적으로, $X$ 위의 abelian group들의 sheaf들이 이루는 category $\Sh(X)$는 stalk별로 injective abelian group을 잡아 skyscraper sheaf들의 곱을 취해주면 enough injective를 갖는다는 것을 보일 수 있으므로 임의의 sheaf $\mathcal{F}$는 항상 injective resolution $\mathcal{I}^\bullet$을 가지고, 이로부터 다음의
 
 $$0 \rightarrow \Gamma(X, \mathcal{I}^0) \rightarrow \Gamma(X, \mathcal{I}^1) \rightarrow \Gamma(X, \mathcal{I}^2) \rightarrow \cdots$$
 
@@ -92,7 +93,7 @@ $$0 \rightarrow H^0(X, \mathcal{F}') \rightarrow H^0(X, \mathcal{F}) \rightarrow
 직관적으로 Čech cohomology $\check{H}^i(X, \mathcal{F})$는 국소적인 정보의 gluing의 실패를 측정하는 도구이다. 즉, $\check{H}^0(X, \mathcal{F})$는 정확하게 global section space이며, $\check{H}^1(X, \mathcal{F})$는 local section들을 붙여서 global section을 얻어내는 과정이 얼마나 실패하는지를 알려준다. 이를 엄밀하게 정의하기 위해 다음부터 시작한다.
 
 ::: 정의 3
-위상공간 $X$의 open cover $\mathcal{U} = \{U_i\}_{i \in I}$와 sheaf $\mathcal{F}$가 주어졌다 하고, $I$ 위의 total order $<$를 임의로 고정하자. 그럼 이들 데이터의 *Čech complex<sub>체흐 복합체</sub>* $C^\bullet(\mathcal{U}, \mathcal{F})$는 다음과 같이 정의된다.
+위상공간 $X$의 open cover $\mathcal{U} = \{U_i\}_{i \in I}$와 sheaf $\mathcal{F}$가 주어졌다 하고, $I$ 위의 total order $<$를 임의로 고정하자. 그럼 이들 데이터의 *Čech complex<sub>체흐 복합체</sub>* $\check{C}^\bullet(\mathcal{U}, \mathcal{F})$는 다음과 같이 정의된다.
 
 $$\check{C}^p(\mathcal{U}, \mathcal{F}) = \prod_{i_0 < \cdots < i_p} \mathcal{F}(U_{i_0} \cap \cdots \cap U_{i_p})$$
 
@@ -158,8 +159,7 @@ Variety $X$ 위의 sheaf $\mathcal{F}$에 대하여, 다음을 정의한다.
 
 1. Sheaf $\mathcal{F}$가 *acyclic<sub>비순환</sub>*이라는 것은 모든 $i > 0$에 대해 $H^i(X, \mathcal{F}) = 0$인 것이다.
 2. $\Sh(X)$의 injective object $\mathcal{F}$를 *injective sheaf<sub>단사층</sub>*라 부른다.
-3. 임의의 열린집합 $V\subseteq U$에 대하여, restriction map $$\mathcal{F}(U)
-\rightarrow \mathcal{F}(V)$$가 surjective라면 $\mathcal{F}$를 *flasque sheaf*라 부른다.
+3. 임의의 열린집합 $V\subseteq U$에 대하여, restriction map $\mathcal{F}(U) \rightarrow \mathcal{F}(V)$가 surjective라면 $\mathcal{F}$를 *flasque sheaf*라 부른다.
 :::
 
 우리가 cohomology 단계에서 원하는 조건은 물론 첫 번째 조건이다. 우리는 위의 개념들 사이의 관계를 우선 살펴본다.
@@ -401,7 +401,7 @@ Sheaf cohomology의 가장 강력한 응용 중 하나는 spectral sequence를 �
 
 $$R^q f_\ast \mathcal{F} := H^q(f_\ast \mathcal{I}^\bullet)$$
 
-로 정의할 수 있다. 여기서 $\mathcal{I}^\bullet$은 $\mathcal{F}$의 injective resolution이다. 정의에 의해 $q=0$일 때 $R^0 f_\ast \mathcal{F}=f_\ast \mathcal{F}$이며 $\mathcal{F}$가 injective이면 $\mathcal{F}$ 자체로 injective resolution을 이루므로 $R^qf_\ast \mathcal{F}=0$이 성립한다.
+로 정의할 수 있다. 여기서 $\mathcal{I}^\bullet$은 $\mathcal{F}$의 injective resolution이다. 정의에 의해 $q=0$일 때 $R^0 f_\ast \mathcal{F}=f_\ast \mathcal{F}$이며 $\mathcal{F}$가 injective이면 $\mathcal{F}$ 자체로 injective resolution을 이루므로 모든 $q>0$에 대해 $R^qf_\ast \mathcal{F}=0$이 성립한다.
 
 이제 $\mathcal{F}$의 Godement resolution $\mathcal{G}^\bullet(\mathcal{F})$을 생각하자. 직관적으로 우리가 하고 싶은 것은 $\mathcal{G}^p(\mathcal{F})$ 각각에 대한 injective resolution을 잡은 후, Godement resolution의 differential $\mathcal{G}^p(\mathcal{F})\rightarrow \mathcal{G}^{p+1}(\mathcal{F})$을 [\[호몰로지 대수학\] §분해, ⁋정리 6](/ko/math/homological_algebra/resolutions#thm6)을 통해 horizontal differential을 정의해주는 것이다.
 
@@ -440,7 +440,7 @@ $$E_1^{p,q} = \begin{cases} f_\ast \mathcal{G}^p(\mathcal{F}) & \text{if $q = 0$
 
 이며 $d_1$-differential은 $E_1^{p,0} = f_\ast \mathcal{G}^p(\mathcal{F})$에서 $E_1^{p+1,0} = f_\ast \mathcal{G}^{p+1}(\mathcal{F})$로 가는 morphism으로, Godement resolution의 differential $f_\ast \mathcal{G}^p(\mathcal{F}) \rightarrow f_\ast \mathcal{G}^{p+1}(\mathcal{F})$에 해당한다. 즉, $E_2$ page는 complex
 
-$$0 \rightarrow f_\ast \mathcal{F} \rightarrow f_\ast \mathcal{G}^0(\mathcal{F}) \rightarrow f_\ast \mathcal{G}^1(\mathcal{F}) \rightarrow \cdots$$
+$$0 \rightarrow f_\ast \mathcal{G}^0(\mathcal{F}) \rightarrow f_\ast \mathcal{G}^1(\mathcal{F}) \rightarrow \cdots$$
 
 의 cohomology sheaf이고, 이것은 $R^q f_\ast$의 정의에 의해
 
@@ -539,14 +539,14 @@ $$E_2^{0,1} \overset{d_2}{\rightarrow} E_2^{2,0} \rightarrow H^2(X, \mathcal{F})
 
 $$E_2^{p,q} = \check{H}^p(\mathcal{U}, \mathcal{H}^q(\mathcal{F})) \Rightarrow H^{p+q}(X, \mathcal{F})$$
 
-이 존재한다. 여기서 $\mathcal{H}^q(\mathcal{F})$는 presheaf $U \mapsto H^q(U, \mathcal{F})$의 sheafification이다.
+이 존재한다. 여기서 $\mathcal{H}^q(\mathcal{F})$는 presheaf $U \mapsto H^q(U, \mathcal{F})$이다.
 :::
 
 ::: 증명
 $\mathcal{F}$의 Godement resolution $\mathcal{G}^\bullet(\mathcal{F})$을 잡고, double complex $C^{p,q} = \check{C}^p(\mathcal{U}, \mathcal{G}^q(\mathcal{F}))$를 구성한다. 두 filtration으로부터 얻어지는 두 spectral sequence가 같은 total cohomology $H^{p+q}(X, \mathcal{F})$에 수렴한다는 것은 [\[호몰로지 대수학\] §스펙트럼 열, ⁋예시 11](/ko/math/homological_algebra/spectral_sequences#ex11)에 의한 것이며, 이 때 Godement sheaf $\mathcal{G}^q(\mathcal{F})$가 flasque이므로 [보조정리 10](#lem10)에 의해 Čech-acyclic이 되어 위에서의 계산과 같은 vanishing을 사용하면 된다.
 :::
 
-이 spectral sequence는 [정리 11](#thm11)를 더 넓은 맥락에서 이해할 수 있게 해준다. 만일 $\mathcal{U}$의 모든 유한한 교집합에서 $\mathcal{F}$가 acyclic이면, $\mathcal{H}^q(\mathcal{F}) = 0$이 모든 $q > 0$에 대해 성립하므로, $E_2$ page에서 $q > 0$인 항목이 모두 소멸하여 $E_2^{p,0} = \check{H}^p(\mathcal{U}, \mathcal{F}) \cong H^p(X, \mathcal{F})$를 얻는다. 즉, Čech-to-derived functor spectral sequence는 [정리 11](#thm11)를 포함하는 더 일반적인 결과라 할 수 있다.
+이 spectral sequence는 [정리 11](#thm11)를 더 넓은 맥락에서 이해할 수 있게 해준다. 만일 $\mathcal{U}$의 모든 유한한 교집합에서 $\mathcal{F}$가 acyclic이면, $\check{C}^\bullet(\mathcal{U}, \mathcal{H}^q(\mathcal{F})) = 0$이 모든 $q > 0$에 대해 성립하므로, $E_2$ page에서 $q > 0$인 항목이 모두 소멸하여 $E_2^{p,0} = \check{H}^p(\mathcal{U}, \mathcal{F}) \cong H^p(X, \mathcal{F})$를 얻는다. 즉, Čech-to-derived functor spectral sequence는 [정리 11](#thm11)를 포함하는 더 일반적인 결과라 할 수 있다.
 
 ## Line Bundle의 Classification
 

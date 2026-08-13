@@ -10,6 +10,7 @@ sidebar:
 
 date: 2024-10-20
 weight: 11
+drift_needed: true
 
 ---
 
@@ -46,7 +47,7 @@ Ring $A$와 $A$의 임의의 ideal $\mathfrak{a}$, $A$-module $M$에 대하여 �
 
 $$M=M_0\supseteq M_1\supseteq\cdots$$
 
-이 *$\mathfrak{a}$-filtration<sub>$I$-여과</sub>*라는 것은 모든 $k$에 대하여 $\mathfrak{a}M_k\subseteq M_{k+1}$이 성립하는 것이다. 추가로 만일 어떠한 $n$이 존재하여 $k>n$일 때마다 $\mathfrak{a}M_k=M_{k+1}$이 성립하도록 할 수 있으면 이 filtration이 *$\mathfrak{a}$-stable<sub>$I$-안정적 여과</sub>*이라 한다. 
+이 *$\mathfrak{a}$-filtration<sub>$\mathfrak{a}$-여과</sub>*라는 것은 모든 $k$에 대하여 $\mathfrak{a}M_k\subseteq M_{k+1}$이 성립하는 것이다. 추가로 만일 어떠한 $n$이 존재하여 $k>n$일 때마다 $\mathfrak{a}M_k=M_{k+1}$이 성립하도록 할 수 있으면 이 filtration이 *$\mathfrak{a}$-stable<sub>$\mathfrak{a}$-안정적 여과</sub>*이라 한다. 
 
 이제 임의의 $\mathfrak{a}$-filtration 
 
@@ -59,7 +60,7 @@ $$\gr_\mathcal{J}M=M/M_1\oplus M_1/M_2\oplus\cdots$$
 으로 정의한다.
 :::
 
-위의 정의에서 $\gr_\mathcal{J}M$은 $\gr_\mathfrak{a}A$-module 구조를 가지며, 이는 임의의 $a\in \mathfrak{a}^k/\mathfrak{a}^{k+1}$과 $x\in M_l/M_{l+1}$에 대하여 이들의 representative $\tilde{a}\in \mathfrak{a}^k$, $\tilde{x}\in M_l$을 택한 후 $\tilde{a}\tilde{x}$를 $M_{k+l}/M_{k+l+1}$로 제한시킨 것이며, [보조정리 2](#lem2)와 유사한 계산을 통해 이것이 잘 정의된다는 것을 확인할 수 있다. 특별히 $M=A$이고 $M_i$들이 $A$의 ideal들인 경우, [정의 1](#def1)과 마찬가지로 $\gr_\mathcal{J}A$ 또한 ring의 구조를 가지며, 이 또한 filtration $\mathcal{J}$에 대한 associated graded ring이라 부른다. 
+위의 정의에서 $\gr_\mathcal{J}M$은 $\gr_\mathfrak{a}A$-module 구조를 가지며, 이는 임의의 $a\in \mathfrak{a}^k/\mathfrak{a}^{k+1}$과 $x\in M_l/M_{l+1}$에 대하여 이들의 representative $\tilde{a}\in \mathfrak{a}^k$, $\tilde{x}\in M_l$을 택한 후 $\tilde{a}\tilde{x}$를 $M_{k+l}/M_{k+l+1}$로 제한시킨 것이며, [보조정리 2](#lem2)와 유사한 계산을 통해 이것이 잘 정의된다는 것을 확인할 수 있다. 특별히 $M=A$이고 $M_i$들이 모든 $i,j$에 대하여 $M_iM_j\subseteq M_{i+j}$를 만족하는 $A$의 ideal들인 경우, [정의 1](#def1)과 마찬가지로 $\gr_\mathcal{J}A$ 또한 ring의 구조를 가지며, 이 또한 filtration $\mathcal{J}$에 대한 associated graded ring이라 부른다. 
 
 이제 다음이 성립한다. 
 
@@ -84,14 +85,14 @@ $$\Bl_\mathfrak{a}A=A\oplus \mathfrak{a}\oplus \mathfrak{a}^2\oplus\cdots\cong A
 를 의미한다. 
 :::
 
-그럼 $\Bl_\mathfrak{a}A/\mathfrak{a}\Bl_\mathfrak{a}A=\gr_\mathfrak{a}A$임이 자명하다. 한편 더 일반적으로, 임의의 $A$-module $M$, $\mathfrak{a}$-filtration $\mathcal{J}: M_0\supseteq M_1\supseteq\cdots$에 대하여 다음의 식
+그럼 $\mathfrak{a}\Bl_\mathfrak{a}A=\bigoplus_{n\geq 0}\mathfrak{a}^{n+1}$이므로 $\Bl_\mathfrak{a}A/\mathfrak{a}\Bl_\mathfrak{a}A=\gr_\mathfrak{a}A$이다. 한편 더 일반적으로, 임의의 $A$-module $M$, $\mathfrak{a}$-filtration $\mathcal{J}: M_0\supseteq M_1\supseteq\cdots$에 대하여 다음의 식
 
 $$\Bl_\mathcal{J}M =M\oplus M_1\oplus\cdots$$
 
-으로 정의한 $\Bl_\mathcal{J}M$은 graded $\Bl_\mathfrak{a}A$-module이 된다는 것 또한 쉽게 확인할 수 있다. 이제 다음이 성립한다.
+으로 정의한 $\Bl_\mathcal{J}M$은 $\mathfrak{a}^kM_l\subseteq M_{k+l}$로부터 graded $\Bl_\mathfrak{a}A$-module이 된다. 이제 다음이 성립한다.
 
 ::: 명제 6
-$M$의 $\mathfrak{a}$-filtration $\mathcal{J}$가 $\mathfrak{a}$-stable인 것과, $\Bl_\mathcal{J}M$이 $\Bl_\mathfrak{a}A$-module로서 finitely generated인 것이 동치이다.
+Noetherian ring $A$와 finitely generated $A$-module $M$에 대하여, $M$의 $\mathfrak{a}$-filtration $\mathcal{J}$가 $\mathfrak{a}$-stable인 것과, $\Bl_\mathcal{J}M$이 $\Bl_\mathfrak{a}A$-module로서 finitely generated인 것이 동치이다.
 :::
 ::: 증명
 우선 만일 $\Bl_\mathcal{J}M$이 finitely generated라면, 적당한 $n$이 존재하여 이들 generator들이 $\Bl_\mathcal{J}M$의 앞의 $n$개의 항에 포함되도록 할 수 있다. 이제 이들을 모두 homogeneous element들의 합으로 바꿔두면 이들 homogeneous element들로 $\Bl_\mathcal{J}M$이 생성된다. 이로부터 $\mathcal{J}$가 $\mathfrak{a}$-stable임을 안다. 이 논증은 반대방향으로도 작동한다.
@@ -120,7 +121,7 @@ $\mathcal{J}$가 $\mathfrak{a}$-stable이므로 $\Bl_\mathcal{J}M$은 $\Bl_\math
 Noetherian ring $A$, 그 ideal $\mathfrak{a}$와 finitely generated $A$-module $M$을 고정하자. 그럼 다음이 성립한다.
 
 1. $(1-a)\left(\bigcap_1^\infty \mathfrak{a}^i M\right)=0$이도록 하는 $a\in \mathfrak{a}$가 존재한다.
-2. 만일 $A$가 domain이거나 local ring이고 $\mathfrak{a}$가 proper ideal이라면 $\bigcap \mathfrak{a}^i=0$이 성립한다.
+2. 만일 $\mathfrak{a}$가 proper ideal이고 $A$가 domain이거나 local ring이라면 $\bigcap \mathfrak{a}^i=0$이 성립한다.
 :::
 ::: 증명
 $M$의 $\mathfrak{a}$-stable filtration
@@ -131,15 +132,15 @@ $$M\supseteq \mathfrak{a}M \supseteq \mathfrak{a}^2 M\supseteq\cdots$$
 
 $$\left(\bigcap \mathfrak{a}^iM\right) \cap M\supseteq \left(\bigcap \mathfrak{a}^iM\right)\cap \mathfrak{a}M \supseteq \left(\bigcap \mathfrak{a}^iM\right) \cap \mathfrak{a}^2 M\supseteq\cdots$$
 
-또한 $\mathfrak{a}$-stable이다. 즉, 적당한 $n$에 대하여
+또한 $\mathfrak{a}$-stable이다. 즉, 적당한 $n$이 존재하여 모든 $p>n$에 대하여
 
-$$\mathfrak{a}\left(\left(\bigcap \mathfrak{a}^iM\right)\cap \mathfrak{a}^p M\right)=\left(\bigcap \mathfrak{a}^iM\right)\cap \mathfrak{a}^{n+1} M$$
+$$\mathfrak{a}\left(\left(\bigcap \mathfrak{a}^iM\right)\cap \mathfrak{a}^p M\right)=\left(\bigcap \mathfrak{a}^iM\right)\cap \mathfrak{a}^{p+1} M$$
 
 이도록 할 수 있다. 이제 위 식의 좌변과 우변을 각각 정리하면
 
 $$\mathfrak{a}\left(\bigcap \mathfrak{a}^iM\right)=\left(\bigcap \mathfrak{a}^iM\right)$$
 
-을 얻으므로, [§정수적 확장, ⁋보조정리 7](/ko/math/commutative_algebra/integral_extension#lem7)을 적용하면 첫째 결과를 얻는다. 
+을 얻는다. 이제 $A$가 Noetherian이고 $M$이 finitely generated이므로 $\bigcap \mathfrak{a}^iM$ 또한 finitely generated이고, 따라서 [§정수적 확장, ⁋보조정리 7](/ko/math/commutative_algebra/integral_extension#lem7)을 적용하면 첫째 결과를 얻는다. 
 
 둘째 결과를 보이기 위해 $M=A$로 두자. 첫째 결과에서 얻어진 $a$에 대하여, $1-a$가 zerodivisor가 아님을 보이면 충분하다. 우선 $\mathfrak{a}$가 $A$의 proper ideal이므로 $1-a\neq 0$이고, 이로부터 $A$가 domain인 경우는 더 이상 증명할 것이 없다. 만일 $A$가 local ring이라면 $\mathfrak{a}$는 $A$의 (유일한) maximal ideal $\mathfrak{m}$에 속할 것이므로 $a\in \mathfrak{m}$이고, 이로부터 $1-a$가 unit이어야 한다. 
 :::
@@ -155,7 +156,7 @@ $$\mathcal{J}:\qquad M=M_0\supseteq M_1\supseteq\cdots$$
 
 $$\initial(x)=x+M_{k+1}\quad\text{in $M_k/M_{k+1}$,}\qquad\text{where $k$ is the greatest integer satisfying $x\in M_k$}$$
 
-으로 정의한다. 
+으로 정의한다. 이때 $x\in\bigcap_k M_k$인 경우에는 그러한 $k$가 존재하지 않으며, 이 경우 $\initial(x)=0$으로 정의한다. 
 :::
 
 위와 같은 상황에서, 임의의 $A$-submodule $M'\subseteq M$이 주어졌다 하자. 그럼 $\gr_\mathcal{J}M$를 $\gr_\mathfrak{a}A$-module로 보고, $\initial(M')$을 $x\in M'$들에 대해 $\initial(x)$으로 생성된 $\gr_\mathcal{J}M$의 $\gr_\mathfrak{a}A$-submodule로 정의할 수 있다. 
@@ -174,7 +175,7 @@ $$f(\x,\y)\x^2+g(\x,\y)\y^2$$
 Noetherian local ring $A$와, $A$의 proper ideal $\mathfrak{a}$에 대하여, 만일 $\gr_\mathfrak{a}A$가 domain이라면 $A$ 또한 그러하다.
 :::
 ::: 증명
-$A$에서 $ab=0$임을 가정하고, $a,b=0$임을 보이면 충분하다. 이제 $\gr_\mathfrak{a}A$에서 $\initial(a)\initial(b)=0$이 성립해야 하고, 따라서 $\initial(a)$ 혹은 $\initial(b)$가 $0$이어야 한다. 이제 위의 따름정리로부터 $\bigcap \mathfrak{a}^n=0$이므로, $a=0$이거나 $b=0$이어야 한다. 
+$A$에서 $ab=0$임을 가정하고, $a=0$이거나 $b=0$임을 보이면 충분하다. 이제 $\gr_\mathfrak{a}A$에서 $\initial(a)\initial(b)=0$이 성립해야 하고, 따라서 $\initial(a)$ 혹은 $\initial(b)$가 $0$이어야 한다. 이제 [따름정리 8](#cor8)로부터 $\bigcap \mathfrak{a}^n=0$이므로, $a=0$이거나 $b=0$이어야 한다. 
 :::
 
 ---

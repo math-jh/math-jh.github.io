@@ -10,6 +10,7 @@ sidebar:
 
 date: 2024-10-07
 weight: 11
+drift_needed: true
 
 ---
 
@@ -19,12 +20,12 @@ weight: 11
 
 $$e_J=e_{j_1}\wedge e_{j_2}\wedge\cdots\wedge e_{j_k},\qquad j_1<\cdots < j_k, \quad J=\{j_1,\ldots, j_k\}$$
 
-의 꼴로 나타나는 원소 $e_J$들이 $\bigwedge(M)$의 basis가 되는 것을 확인했다. 특히, $\lvert J\rvert=n$을 만족하는 $J$들을 모아둔다면 이들은 $\bigwedge^n(M)$의 basis가 된다. 
+의 꼴로 나타나는 원소 $e_J$들이 $\bigwedge(M)$의 basis가 되는 것을 확인했다. ([§텐서대수, ⁋명제 13](/ko/math/multilinear_algebra/tensor_algebras#prop13)) 특히, $\lvert J\rvert=n$을 만족하는 $J$들을 모아둔다면 이들은 $\bigwedge^n(M)$의 basis가 된다. 
 
 이제 $M$이 유한한 basis $e_1,\ldots, e_n$을 갖는다 하자. 그럼 $\bigwedge^n(M)$의 basis는 단 하나의 원소 $e_1\wedge\cdots\wedge e_n$ 뿐이다. 한편 임의의 $u\in\End_\rMod{A}(M)$에 대하여, $\bigwedge$의 functoriality로부터 $\bigwedge^n(u):\bigwedge^n(M)\rightarrow\bigwedge^n(M)$이 유도되며, 위의 논의로부터 이 linear map은 반드시 $x\mapsto \alpha x$의 꼴로 쓰여야 한다.
 
 ::: 정의 1
-Free $A$-module $M$이 basis $(e_i)_{i\in I}$를 갖는다 하자. 그럼 임의의 $u:M \rightarrow M$에 대하여, 위의 논의에서 얻어지는 $\alpha\in A$를 $u$의 *행렬식<sub>determinant</sub>*이라 부르고 $\det u$로 적는다.
+Free $A$-module $M$이 유한한 basis $e_1,\ldots, e_n$을 갖는다 하자. 그럼 임의의 $u\in\End_\rMod{A}(M)$에 대하여, 위의 논의에서 얻어지는 $\alpha\in A$를 $u$의 *행렬식<sub>determinant</sub>*이라 부르고 $\det u$로 적는다.
 :::
 
 그럼 정의로부터 다음 명제가 자명하다.
@@ -74,18 +75,18 @@ $$x_j=\sum_{i\in I} \xi_{ij}e_i$$
 
 의 꼴로 쓴 후 행렬 $X=(\xi_{ij})_{(i,j)\in I\times p}\in\Mat_{I\times p}(A)$를 정의하자. 그럼 다음의 식
 
-$$x_1\wedge x_2\wedge\cdots\wedge x_p=\sum_{\lvert J\rvert=p}\det X_{I,J}e_J$$
+$$x_1\wedge x_2\wedge\cdots\wedge x_p=\sum_{\lvert J\rvert=p}\det X_{J,\{1,\ldots, p\}}e_J$$
 
 이 성립한다. 
 :::
 
 ::: 명제 5
-두 free $A$-module $M,N$과 이들의 유한한 basis $(e_i)_{1\leq i\leq m}$, $(f_j)_{1\leq j\leq n}$가 각각 주어졌다 하자. 이제 $\min(m,n)$보다 작은 자연수 $p$에 대하여, $\bigwedge^p(u):\bigwedge^p(M) \rightarrow\bigwedge^p(N)$을 basis $(e_I)_{\lvert I\rvert=p}$, $(f_J)_{\lvert J\rvert=p}$에 대하여 행렬로 표현한 것은 $(\det(X_{J,I}))$로 주어진다.
+두 free $A$-module $M,N$과 이들의 유한한 basis $(e_i)_{1\leq i\leq m}$, $(f_j)_{1\leq j\leq n}$가 각각 주어졌다 하고, $A$-linear map $u:M\rightarrow N$의 이 basis들에 대한 행렬표현을 $X$라 하자. 이제 $\min(m,n)$ 이하의 자연수 $p$에 대하여, $\bigwedge^p(u):\bigwedge^p(M) \rightarrow\bigwedge^p(N)$을 basis $(e_I)_{\lvert I\rvert=p}$, $(f_J)_{\lvert J\rvert=p}$에 대하여 행렬로 표현한 것은 $(\det(X_{J,I}))$로 주어진다.
 :::
 ::: 증명
 주어진 상황에서 $I$의 원소들을 $i_1<\cdots< i_p$로 크기 순으로 나열하자. 그럼 $\bigwedge^p(u)$의 정의에 의하여
 
-$${\bigwedge}^p(u)=u(e_{i_1})\wedge\cdots\wedge u(e_{i_p})$$
+$${\bigwedge}^p(u)(e_I)=u(e_{i_1})\wedge\cdots\wedge u(e_{i_p})$$
 
 이므로, 앞선 보조정리를 적용하면 된다.
 :::
@@ -118,11 +119,11 @@ $$x_P=\gamma_{P,Q}e_{j_1}\wedge\cdots\wedge e_{j_{n-p}}\wedge u(e_{i_1})\wedge\c
 
 로 쓸 수 있다. 여기서 $\gamma_{P,Q}$는 이들의 순서를 바꾸며 생기는 부호이며, 구체적으로는 다음 식
 
-$$\gamma_{P,Q}=(-1)^{\lvert A\rvert},\qquad A=\{(p,q)\in P\times Q\mid p>q\}$$
+$$\gamma_{P,Q}=(-1)^{\lvert S\rvert},\qquad S=\{(i,j)\in P\times Q\mid i< j\}$$
 
 으로 주어진다. 그럼 $X$의 정의와 [보조정리 4](#lem4)에 의해 
 
-$$u(e_{i_1})\wedge\cdots\wedge u(e_{i_p})=\sum_{\lvert I\rvert=p}\det(X_{I,Q})e_Q$$
+$$u(e_{i_1})\wedge\cdots\wedge u(e_{i_p})=\sum_{\lvert I\rvert=p}\det(X_{I,P})e_I$$
 
 이므로, 이를 대입하면
 
@@ -132,7 +133,7 @@ $$x_P=\gamma_{P,Q}\sum_{\lvert I\rvert=p}\det X_{I,P} e_Q\wedge e_I$$
 
 $$x_P=\det (X_{P,P} )e_1\wedge e_2\wedge\cdots\wedge e_n$$
 
-으로 쓸 수 있다. [명제 5](#prop5)에 의하여, 고정된 $p$에 대해 $\lvert P\rvert=p$를 만족하는 모든 $p$에 대해 $\det(X_{p,p})$를 모두 더한 것이 $\tr\left(\bigwedge^k(u)\right)$이므로 이로써 증명이 완료된다. 
+으로 쓸 수 있다. [명제 5](#prop5)에 의하여, 고정된 $p$에 대해 $\lvert P\rvert=p$를 만족하는 모든 $P$에 대해 $\det(X_{P,P})$를 모두 더한 것이 $\tr\left(\bigwedge^p(u)\right)$이므로 이로써 증명이 완료된다. 
 :::
 
 특히 $\alpha=\beta=1$로 두면 $\tr(\bigwedge(u))=\det(\id_M+u)$를 얻는다. 
@@ -201,7 +202,7 @@ $$z=\sum_k (\x^k\otimes_A x_k-1\otimes_A u^k(x_k))=\sum_k (\x^k-\iota_!u^k)(1\ot
 
 인데, 어차피 $\iota_!M=A[\x]\otimes_A M$에서 $\x$는 $A[\x]$ 부분에 작용하고, $\iota_!u$는 $M$에 작용하므로 이들의 곱셈은 순서를 바꿀 수 있다. 즉 위의 식을
 
-$$\sum_k (\x-\iota_!u)\circ\left(\sum_{j=0}^{k-1} \x^j (\iota_!u)^{k-j-1}\right)$$
+$$\sum_k (\x-\iota_!u)\circ\left(\sum_{j=0}^{k-1} \x^j (\iota_!u)^{k-j-1}\right)(1\otimes_A x_k)$$
 
 으로 쓸 수 있으므로 증명이 완료된다. 
 :::
@@ -210,7 +211,7 @@ $$\sum_k (\x-\iota_!u)\circ\left(\sum_{j=0}^{k-1} \x^j (\iota_!u)^{k-j-1}\right)
 
 $$\det (\x-\iota_!u)=\sum_{k=0}^n (-1)^k\tr\left({\bigwedge}^k(\iota_!u)\right)\x^{n-k}$$
 
-을 얻는다. 한편 $u$의 행렬표현 $[u]_\mathcal{B}^\mathcal{B}$는, $M[\x]$의 $A[\x]$-basis $\mathcal{B}'=(1\otimes e_i)_{1\leq i\leq n}$에 대한 $\iota_!u$의 행렬표현 $[\iota_!u]_{\mathcal{B}'}^{\mathcal{B}''}$와 같으므로 위의 식은
+을 얻는다. 한편 $u$의 행렬표현 $[u]_\mathcal{B}^\mathcal{B}$는, $\iota_!M$의 $A[\x]$-basis $\mathcal{B}'=(1\otimes e_i)_{1\leq i\leq n}$에 대한 $\iota_!u$의 행렬표현 $[\iota_!u]_{\mathcal{B}'}^{\mathcal{B}'}$와 같으므로 위의 식은
 
 $$\det (\x-\iota_!u)=\sum_{k=0}^n (-1)^k\tr\left({\bigwedge}^k(u)\right)\x^{n-k}$$
 

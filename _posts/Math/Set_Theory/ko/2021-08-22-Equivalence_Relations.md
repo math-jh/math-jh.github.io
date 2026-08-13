@@ -10,6 +10,7 @@ sidebar:
 
 date: 2021-08-22
 weight: 12
+drift_needed: true
 
 ---
 
@@ -28,7 +29,7 @@ $$(x\mathrel{R}y)\wedge(y\mathrel{R}z)\implies  x\mathrel{R}z$$
 앞으로 $R$이 동치관계일 경우 $x\sim_{\tiny R}y$를 사용하기로 한다. 혼동의 여지가 없을 때에는 $x\sim y$ 혹은 $x\equiv y$와 같이 적기도 한다.
 
 ::: 예시 2
-주어진 집합 $A$ 위에서 관계 <phrase>$x=y$</phrase>는 $A$ 위에서의 동치관계가 되며, 이 때 $R$은 집합 $\Delta_A$와 같다. 한편, 관계 <phrase>$x\in A$이고 $y\in A$</phrase>또한 $A$ 위에서의 동치관계가 된다는 것을 쉽게 확인할 수 있다. 이 관계를 나타내는 집합은 정확하게 $A\times A$와 같다.
+주어진 집합 $A$ 위에서 관계 <phrase>$x=y$</phrase>는 $A$ 위에서의 동치관계가 되며, 이 때 $R$은 집합 $\Delta_A$와 같다. 한편, 관계 <phrase>$x\in A$이고 $y\in A$</phrase> 또한 $A$ 위에서의 동치관계가 된다는 것을 쉽게 확인할 수 있다. 이 관계를 나타내는 집합은 정확하게 $A\times A$와 같다.
 
 집합 $A$ 위에 주어진 임의의 동치관계 $R$을 생각하자. $R$은 reflexive하므로 $\Delta_A\subseteq R$이며, 포함관계 $R\subseteq A\times A$가 성립하는 것은 자명하다. 따라서 위에서 든 두 가지의 예시 중 첫 번째는 $A$ 위에서 정의할 수 있는 동치관계 중 가장 작은 것이고, 두 번째는 가장 큰 것이다.
 :::
@@ -76,7 +77,7 @@ $$\pr_1R=A,\qquad R=R^{-1},\qquad R\circ R=R$$
 ::: 예시 5
 집합 $A$ 위에서 <phrase>$x=y$</phrase>는 동치관계가 됨을 이미 살펴보았다. 이 관계에서 $x$의 equivalence class는 집합 $\{x\}$이다. 한편 동일한 예시에서 <phrase>$x\in A$이고 $y\in A$</phrase> 또한 동치관계였는데, 이 경우 $x$의 equivalence class는 $A$ 전체가 된다. 
 
-우리는 앞선 [예시 2](#ex2)에서 $\Delta_A$가 가장 <em-ko>작고</em-ko>, $A\times A$가 가장 <em-ko>크다</em-ko>고 말했는데, 이렇게 집합간의 포함관계를 따지기보다는 위의 관점에 따라 $\Delta_A$가 가장 *finer*한 동치관계이고, $A\times A$는 가장 *coarser*한 동치관계라고 하는 것이 일반적이다. ([§집합의 합, ⁋정의 1](/ko/math/set_theory/sum_of_sets#def1))
+우리는 앞선 [예시 2](#ex2)에서 $\Delta_A$가 가장 <em-ko>작고</em-ko>, $A\times A$가 가장 <em-ko>크다</em-ko>고 말했는데, 이렇게 집합간의 포함관계를 따지기보다는 위의 관점에 따라 $\Delta_A$가 *finest*한 동치관계이고, $A\times A$는 *coarsest*한 동치관계라고 하는 것이 일반적이다. ([§집합의 합, ⁋정의 1](/ko/math/set_theory/sum_of_sets#def1))
 :::
 
 ::: 보조정리 6
@@ -85,7 +86,7 @@ $$\pr_1R=A,\qquad R=R^{-1},\qquad R\circ R=R$$
 ::: 증명
 우선 위의 식으로 정의된 $p$가 실제로 함수가 된다는 것은 어렵지 않게 보일 수 있다. 여기에서는 동치관계만 보인다.
 
-우선 $x\sim_{\tiny R} y$이라 가정하자. 그럼 $y\in [x]_R=R(x)$로부터 $\{y\}\subseteq R(x)$이고, 따라서 [§이항관계들 사이의 연산, ⁋명제 6](/ko/math/set_theory/operation_of_binary_relations#prop6)과 [명제 3](#prop3)에 의하여
+우선 $x\sim_{\tiny R} y$이라 가정하자. 그럼 $y\in [x]_R=R(x)$로부터 $\{y\}\subseteq R(x)$이고, 따라서 [§이항관계, ⁋명제 5](/ko/math/set_theory/binary_relation#prop5)와 [§이항관계들 사이의 연산, ⁋명제 6](/ko/math/set_theory/operation_of_binary_relations#prop6), [명제 3](#prop3)에 의하여
 
 $$R(y)\subseteq R(R(x))=(R\circ R)(x)=R(x)$$
 
@@ -94,7 +95,7 @@ $$R(y)\subseteq R(R(x))=(R\circ R)(x)=R(x)$$
 반대로 만일 $[x]_R=[y]_R$이라면, $x\in [x]_R=[y]_R$로부터 $y\sim_{\tiny R} x$를 얻고 따라서 보조정리가 성립한다.
 :::
 
-위의 함수 $p$를 canonical projection이라 부른다. 그럼 $A$의 부분집합 $[x]_R\subseteq A$는 quotient set의 원소 $[x]_R\in A/R$의 함수 $p$에 대한 preimage이므로 equivalence class들은 서로소임을 안다. 즉 동치관계 $(R,A,A)$는 $A$의 분할을 유도한다.
+위의 함수 $p$를 canonical projection이라 부른다. 그럼 $A$의 부분집합 $[x]_R\subseteq A$는 quotient set의 원소 $[x]_R\in A/R$의 함수 $p$에 대한 preimage이므로 equivalence class들은 서로소임을 안다. 또 $R$이 reflexive하므로 임의의 $x\in A$가 $[x]_R$에 속하고, 따라서 equivalence class들은 모두 공집합이 아니며 이들의 합집합은 $A$ 전체가 된다. 즉 동치관계 $(R,A,A)$는 $A$의 분할을 유도한다. ([§집합의 합, ⁋정의 4](/ko/math/set_theory/sum_of_sets#def4))
 
 다음 명제는 그 역 또한 성립한다는 것을 보여준다.
 

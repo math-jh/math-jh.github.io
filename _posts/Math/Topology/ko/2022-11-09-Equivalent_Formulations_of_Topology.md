@@ -10,6 +10,7 @@ sidebar:
 
 date: 2022-11-09
 weight: 4
+drift_needed: true
 
 ---
 
@@ -71,7 +72,7 @@ $$\cl(A)\subseteq\cl(A)\cup\cl(B)=\cl(A\cup B)=\cl(B)$$
 
 ## Neighborhood filter
 
-우리는 [§열린집합, ⁋명제 6](/ko/math/topology/open_sets#prop6)에서 각 점 $x$마다 *neighborhood filter* $\mathcal{N}(x)$를 주면, 이 정보 또한 유일한 방식으로 $X$에 위상구조를 준다는 것을 확인했다. 해당 명제에서 $\mathcal{N}(x)$가 만족해야 할 첫 번째부터 세 번째 조건은 filter의 조건이며, 다음 정의 또한 이미 정의하였던 것이지만 나중의 reference를 위해 남겨둔다.
+우리는 [§열린집합, ⁋명제 6](/ko/math/topology/open_sets#prop6)에서 각 점 $x$마다 *neighborhood filter* $\mathcal{N}(x)$를 주면, 이 정보 또한 유일한 방식으로 $X$에 위상구조를 준다는 것을 확인했다. 해당 명제에서 $\mathcal{N}(x)$가 만족해야 할 첫 번째와 두 번째 조건은 filter의 조건이고 세 번째 조건은 $\mathcal{N}(x)$의 각 원소가 $x$를 포함한다는 것이며, 다음 정의 또한 이미 정의하였던 것이지만 나중의 reference를 위해 남겨둔다.
 
 ::: 정의 3
 집합 $X$ 위에서 정의된 *filter*라는 것은 다음의 세 조건을 만족하는 $\mathcal{P}(X)$의 부분집합 $\mathcal{F}$를 뜻한다.
@@ -87,7 +88,7 @@ $$\cl(A)\subseteq\cl(A)\cup\cl(B)=\cl(A\cup B)=\cl(B)$$
 
 Ordered set $(\mathcal{P}(X),\subseteq)$를 생각하면, 위 정의는 [\[집합론\] §필터와 아이디얼, 갈루아 대응, ⁋정의 1](/ko/math/set_theory/filter_and_ideal#def1)에서 정의한 것과 동일하지만 조건 $\emptyset\not\in\mathcal{F}$가 추가된 것으로 생각할 수 있다. 비슷하게, $X$ 위에 정의된 *ultrafilter* 또한 $\emptyset$을 포함하지 않는 maximal filter를 의미하는 것으로 생각한다.
 
-그럼 $\mathcal{N}(x)$가 만족해야 할 네 가지 조건 중 앞의 세 가지는 $\mathcal{N}(x)$가 모든 $x$에 대하여 filter 구조를 갖는다는 것으로 축약할 수 있다. 네 번째 조건은 별도로 이름을 갖는다.
+그럼 $\mathcal{N}(x)$가 만족해야 할 네 가지 조건 중 앞의 세 가지는 모든 $x$에 대하여 $\mathcal{N}(x)$가 각 원소마다 $x$를 포함하는 filter라는 것으로 축약할 수 있다. 네 번째 조건은 별도로 이름을 갖는다.
 
 ::: misc Neighborhood axiom. {#neighborhood-axiom}
 임의의 $z\in X$와, 각각의 원소가 $z$를 포함하는 $X$의 filter $\mathcal{N}(z)$가 주어졌다 하자. 그럼 임의의 $S\in\mathcal{N}(z)$마다 적당한 $S'\in\mathcal{N}(z)$가 존재하여, <phrase>임의의 $x\in S'$마다 $S\in\mathcal{N}(x)$</phrase>가 성립하도록 할 수 있다.
@@ -122,7 +123,7 @@ $$f(\mathcal{F})=\{f(F)\mid F\in \mathcal{F}\}$$
 은 $Y$의 filter base이다.
 :::
 ::: 증명
-이는 $f(F_1\cap F_2)\subseteq f(F_1)\cap f(F_2)$, 그리고 $\emptyset\not\in\mathcal{F}\implies \emptyset\not\in f(\mathcal{F})$로부터 자명하다.
+이는 $f(F_1\cap F_2)\subseteq f(F_1)\cap f(F_2)$, 그리고 $\emptyset\not\in\mathcal{F}\implies \emptyset\not\in f(\mathcal{F})$로부터 따라온다.
 :::
 
 한편 집합 $X$ 위에 정의된 filter $\mathcal{F}$와 임의의 부분집합 $A$에 대하여, 다음 집합

@@ -12,6 +12,8 @@ sidebar:
 date: 2026-06-28
 
 weight: 18
+
+drift_needed: true
 ---
 
 Jordan canonical form을 통해 우리는 임의의 linear operator를 generalized eigenspace 위에서 Jordan block들로 분해하였다. 이러한 구조는 다항식과 linear operator 사이의 관계를 살펴보는 데에도 유용하게 쓰인다. 이번 글에서는 행렬에 다항식을 대입하는 연산을 정의하고, 이를 통해 케일리-해밀턴 정리와 minimal polynomial을 다룬다. 
@@ -85,7 +87,7 @@ $$p_A(A)v=\left(\prod_{\mu\neq\lambda}(A-\mu I)^{d_\mu}\right)(A-\lambda I)^{d_\
 이다. $V$가 $G_\lambda(A)$들의 direct sum이므로 임의의 $v\in V$에 대하여 $p_A(A)v=0$이고, 따라서 $p_A(A)=0$이다. 
 :::
 
-우리는 $\mathbb{K}$가 algebraically closed field인 경우만 생각하였는데, 만일 그렇지 않다면 $\mathbb{K}$를 포함하는 아무 algebraically closed field $\mathbb{L}$를 생각한 후 (가령 $\mathbb{R}$의 경우 $\mathbb{C}$), $p$를 $\mathbb{L}$의 다항식으로 보면 된다. 이 때, $A$의 특성다항식은 $\mathbb{L}$에서도 마찬가지로 $p_A$이므로, 위의 증명에 의해 똑같이 $p_A(A)=0$임을 확인할 수 있으며, 이 다항식은 ($\mathbb{L}$에서의 다항식이라 하기는 하였지만) 모든 성분이 $\mathbb{K}$에 속하므로 이 등식이 $\mathbb{K}$에서도 성립한다. 다만, 이러한 $\mathbb{L}$의 존재성을 보이는 것은 현재 수준에서는 어려운 일이므로 증명 바깥에서 간략히 설명하였다. 어쨌든 직관적으로 케일리-해밀턴 정리는, 특성다항식이 $A$의 모든 eigenvalue를 충분히 높은 중복도로 담고 있어 $A$를 대입하면 각 generalized eigenspace 위에서의 nilpotent 부분까지 모두 소멸시킨다는 것을 말한다. 
+우리는 $\mathbb{K}$가 algebraically closed field인 경우만 생각하였는데, 만일 그렇지 않다면 $\mathbb{K}$를 포함하는 아무 algebraically closed field $\mathbb{L}$를 생각한 후 (가령 $\mathbb{R}$의 경우 $\mathbb{C}$), $p_A$를 $\mathbb{L}$의 다항식으로 보면 된다. 이 때, $A$의 특성다항식은 $\mathbb{L}$에서도 마찬가지로 $p_A$이므로, 위의 증명에 의해 똑같이 $p_A(A)=0$임을 확인할 수 있으며, 이 다항식은 ($\mathbb{L}$에서의 다항식이라 하기는 하였지만) 모든 성분이 $\mathbb{K}$에 속하므로 이 등식이 $\mathbb{K}$에서도 성립한다. 다만, 이러한 $\mathbb{L}$의 존재성을 보이는 것은 현재 수준에서는 어려운 일이므로 증명 바깥에서 간략히 설명하였다. 어쨌든 직관적으로 케일리-해밀턴 정리는, 특성다항식이 $A$의 모든 eigenvalue를 충분히 높은 중복도로 담고 있어 $A$를 대입하면 각 generalized eigenspace 위에서의 nilpotent 부분까지 모두 소멸시킨다는 것을 말한다. 
 
 ## 최소다항식
 
@@ -172,7 +174,7 @@ $$A=\begin{pmatrix}1&1&1\\0&1&1\\0&0&1\end{pmatrix}$$
 
 $$B=\begin{pmatrix}0&1\\1&0\end{pmatrix}$$
 
-의 특성다항식은 $\x^2-1=(\x-1)(\x+1)$이고, $B^2=I$이므로 $(B-I)(B+I)=B^2-I=0$이다. 따라서 $m_B(\x)=(\x-1)(\x+1)$인데, 이는 서로 다른 두 일차식의 곱이므로 [따름정리 9](#cor9)에 의해 $B$는 diagonalizable이다. 즉, 대각화가능성을 가르는 것은 특성다항식이 아니라 minimal polynomial에 중복인수가 남는지의 여부이며, $A$의 경우 $m_A=(\x-1)^3$에 중복인수가 남아 대각화에 실패한다. 
+의 특성다항식은 $\x^2-1=(\x-1)(\x+1)$이고, $B^2=I$이므로 $(B-I)(B+I)=B^2-I=0$이다. [명제 6](#prop6)에 의하여 $m_B\mid(\x-1)(\x+1)$이고, $\pm 1$이 모두 $B$의 eigenvalue이므로 [명제 7](#prop7)에 의하여 둘 다 $m_B$의 root여야 한다. 따라서 $m_B(\x)=(\x-1)(\x+1)$인데, 이는 서로 다른 두 일차식의 곱이므로 [따름정리 9](#cor9)에 의해 $B$는 diagonalizable이다. 즉, 대각화가능성을 가르는 것은 특성다항식이 아니라 minimal polynomial에 중복인수가 남는지의 여부이며, $A$의 경우 $m_A=(\x-1)^3$에 중복인수가 남아 대각화에 실패한다. 
 :::
 
 ## 조르당-슈발레 분해
@@ -186,7 +188,7 @@ $$B=\begin{pmatrix}0&1\\1&0\end{pmatrix}$$
 3. Commute하는 두 nilpotent operator $N,M$의 차는 다시 nilpotent이다. $N^a=M^b=0$이면 $N,M$이 commute하므로 이항정리로부터 $(N-M)^{a+b}=0$이기 때문이다.
 
 ::: 정리 11 (조르당-슈발레 분해)
-$\mathbb{K}$가 algebraically closed라 하자. 임의의 linear operator $A:V\rightarrow V$에 대하여, 다음을 만족하는 diagonalizable 작용소 $A_s$와 nilpotent 작용소 $A_n$이 유일하게 존재한다:
+$\mathbb{K}$가 algebraically closed라 하자. 유한차원 벡터공간 $V$ 위에 정의된 임의의 linear operator $A:V\rightarrow V$에 대하여, 다음을 만족하는 diagonalizable 작용소 $A_s$와 nilpotent 작용소 $A_n$이 유일하게 존재한다:
 
 $$A=A_s+A_n,\qquad A_sA_n=A_nA_s.$$
 
@@ -208,7 +210,7 @@ $$m_A(\x)=\prod_{i=1}^r(\x-\lambda_i)^{e_i}$$
 
 $$p(\x)\equiv\lambda_i\pmod{(\x-\lambda_i)^{e_i}}\quad(i=1,\ldots,r),\qquad p(\x)\equiv 0\pmod{\x}$$
 
-를 모두 만족하는 다항식 $p$가 존재한다는 것부터 시작한다. 이는 중국인의 나머지정리의 일반화로, 그 명확한 statement와 증명은 환론에서 따로 다루게 된다. 어쨌든 이를 받아들이고 나면, 각 $i$에 대하여 $p(\x)-\lambda_i$는 $(\x-\lambda_i)^{e_i}$로 나누어떨어지므로 $G_{\lambda_i}(A)$ 위에서 $(A-\lambda_iI)^{e_i}=0$임을 쓰면 [명제 2](#prop2)로부터 $p(A)-\lambda_iI=0$, 즉 $p(A)=\lambda_iI=A_s$를 얻는다. 따라서 $A_s=p(A)$이고 $p(0)=0$이라 $p$는 상수항이 없으며, $A_n=A-p(A)=q(A)$ ($q(\x)=\x-p(\x)$) 또한 상수항이 없는 $A$의 다항식이다.
+를 모두 만족하는 다항식 $p$가 존재한다는 것부터 시작한다. 이는 중국인의 나머지정리의 일반화로, 그 명확한 statement와 증명은 환론에서 따로 다루게 된다. 여기서 $0$이 eigenvalue가 아니면 $\x$ 또한 나머지 modulus들과 서로소이고, $0=\lambda_j$가 eigenvalue이면 $p\equiv 0\pmod{\x^{e_j}}$가 이미 $p\equiv 0\pmod{\x}$를 함의하므로 마지막 조건은 잉여이다. 어쨌든 이를 받아들이고 나면, 각 $i$에 대하여 $p(\x)-\lambda_i$는 $(\x-\lambda_i)^{e_i}$로 나누어떨어지므로 $G_{\lambda_i}(A)$ 위에서 $(A-\lambda_iI)^{e_i}=0$임을 쓰면 [명제 2](#prop2)로부터 $p(A)-\lambda_iI=0$, 즉 $p(A)=\lambda_iI=A_s$를 얻는다. 따라서 $A_s=p(A)$이고 $p(0)=0$이라 $p$는 상수항이 없으며, $A_n=A-p(A)=q(A)$ ($q(\x)=\x-p(\x)$) 또한 상수항이 없는 $A$의 다항식이다.
 
 마지막으로 유일성을 보이기 위해 $A=S+N$이 같은 조건, 즉 $S$ diagonalizable, $N$ nilpotent, $SN=NS$을 만족한다 하자. 그럼 $S$와 $N$은 $S+N=A$와 commute하므로, $A$의 다항식인 $A_s=p(A)$, $A_n=q(A)$와도 commute한다. 이제 $A=A_s+A_n=S+N$으로부터
 

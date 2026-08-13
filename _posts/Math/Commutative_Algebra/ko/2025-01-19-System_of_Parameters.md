@@ -10,6 +10,7 @@ sidebar:
 
 date: 2025-01-19
 weight: 17
+drift_needed: true
 
 ---
 
@@ -48,12 +49,12 @@ $(A,\mathfrak{m})$이 Krull dimension $d$의 local Noetherian ring이라 하자.
 
 1. $\mathfrak{m}$이 $\mathfrak{a}$를 포함하는 prime ideal들 중 minimal하다.
 2. $\mathfrak{m}=\sqrt{\mathfrak{a}}$이 성립한다.
-3. $\mathfrak{m}$의 어떠한 거듭제곱이 $\mathfrak{a}$에 속한다. 
+3. $\mathfrak{m}$의 어떠한 거듭제곱이 $\mathfrak{a}$에 포함된다. 
 4. $\mathfrak{a}$가 $\mathfrak{m}$-primary ideal이다. 
 
 이 조건이 성립한다면, $a_1,\ldots, a_d$들을 $A$의 *system of parameters<sub>매개계</sub>*라 부르고, $\mathfrak{a}$를 *parameter ideal<sub>매개변수 아이디얼</sub>*이라 부른다.
 
-더 일반적으로, rank $d$의 finitely generated $A$-module $M$에 대하여, $A$-module $M/\mathfrak{a}M$이 유한한 길이를 갖도록 하는 $a_1,\ldots, a_d$들을 $A$의 *system of parameters*라 부르고, $\mathfrak{a}$를 $M$의 *parameter ideal*이라 부른다. 
+더 일반적으로, Krull dimension $d$의 finitely generated $A$-module $M$에 대하여, $A$-module $M/\mathfrak{a}M$이 유한한 길이를 갖도록 하는 $a_1,\ldots, a_d$들을 $M$의 *system of parameters*라 부르고, $\mathfrak{a}$를 $M$의 *parameter ideal*이라 부른다. 
 :::
 
 이들 조건이 모두 동치임을 보이는 것은 앞선 글과 위의 따름정리에서 이미 해왔던 것이다. 한편, local ring $(A, \mathfrak{m})$에 대하여 
@@ -62,7 +63,7 @@ $$d=\dim A=\codim \mathfrak{m}$$
 
 이므로, $A$의 parameter ideal $\mathfrak{a}$는 [§차원, ⁋정리 7](/ko/math/commutative_algebra/Krull_dimension#thm7)에 의하여 반드시 $d$개 이상의 원소로만 생성될 수 있다. 
 
-$A$-module $M$의 parameter ideal $\mathfrak{a}$의 경우, 우리는 [§조르단-횔더 정리, ⁋따름정리 6](/ko/math/commutative_algebra/Jordan-Holder_theorem#cor6)의 첫째 조건과 둘째 조건 사이의 동치에 의해 $M/\mathfrak{a}M$이 유한한 길이를 갖는 것과, $\mathfrak{m}$의 충분히 큰 거듭제곱이 항상 $M/\mathfrak{a}M$을 annihilate하는 것이 동치인 것을 안다. 즉 $\mathfrak{m}^k M \subseteq \mathfrak{a}M$이 성립해야 하고, 이로부터 $A$ 자기자신을 $A$-module로 보았을 때 두 정의가 서로 합치하는 것을 안다. 비슷한 방법으로 우리가 앞서 살펴봤던 ring의 ideal과 차원 사이의 들에 대한 결과를 module의 parameter ideal에 대한 결과로 옮겨올 수 있는데, 이를 위해서 우선 다음의 간단한 보조정리들이 필요하다.
+$A$-module $M$의 parameter ideal $\mathfrak{a}$의 경우, 우리는 [§조르단-횔더 정리, ⁋따름정리 6](/ko/math/commutative_algebra/Jordan-Holder_theorem#cor6)의 첫째 조건과 둘째 조건 사이의 동치에 의해 $M/\mathfrak{a}M$이 유한한 길이를 갖는 것과, $\mathfrak{m}$의 충분히 큰 거듭제곱이 항상 $M/\mathfrak{a}M$을 annihilate하는 것이 동치인 것을 안다. 즉 $\mathfrak{m}^k M \subseteq \mathfrak{a}M$이 성립해야 하고, 이로부터 $A$ 자기자신을 $A$-module로 보았을 때 두 정의가 서로 합치하는 것을 안다. 비슷한 방법으로 우리가 앞서 살펴봤던 ring의 ideal과 차원 사이의 관계에 대한 결과를 module의 parameter ideal에 대한 결과로 옮겨올 수 있는데, 이를 위해서 우선 다음의 간단한 보조정리들이 필요하다.
 
 ::: 보조정리 4
 Noetherian ring $A$와 finitely generated $A$-module $M$, 그리고 $A$의 ideal $\mathfrak{a}$에 대하여, 다음 등식
@@ -72,7 +73,7 @@ $$\sqrt{\ann(M/\mathfrak{a}M)}=\sqrt{\mathfrak{a}+\ann(M)}$$
 이 성립한다.
 :::
 ::: 증명
-[§국소화의 성질들, ⁋따름정리 8](/ko/math/commutative_algebra/properties_of_localization#cor8)에 의하여 $\ann(M/\mathfrak{a}M)$을 포함하는 prime ideal들의 집합과 $\mathfrak{a}+\ann(M)$을 포함하는 prime ideal들의 집합이 정확히 동일하다는 것을 보이면 충분하다. 이제 prime ideal $\mathfrak{p}$가 $\ann(M/\mathfrak{a}M)$을 포함하는 것은 [§국소화, ⁋명제 5](/ko/math/commutative_algebra/localization#prop5)에 의하여 $(M/\mathfrak{a}M)_\mathfrak{p}\neq 0$인 것과 동치이다. 그럼 $(M/\mathfrak{a}M)_\mathfrak{p}=M_\mathfrak{p}/\mathfrak{a}M_\mathfrak{p}\neq 0$인 것은, [§정수적 확장, ⁋보조정리 8](/ko/math/commutative_algebra/integral_extension#lem8)에 의하여, $M_\mathfrak{p}\neq 0$이고 $\mathfrak{a}A_\mathfrak{p}\subseteq \mathfrak{p}A_\mathfrak{p}$인 것과 동치이다. 이는 다시 [§국소화의 성질들, ⁋따름정리 8](/ko/math/commutative_algebra/properties_of_localization#cor8)에 의하여, $\mathfrak{p}\supseteq \ann(M)$이고 $\mathfrak{p}\supseteq \mathfrak{a}$인 것, 즉 $\mathfrak{p}\supseteq \mathfrak{a}+\ann(M)$인 것과 동치이므로 원하는 결과를 얻는다. 
+[§국소화의 성질들, ⁋따름정리 8](/ko/math/commutative_algebra/properties_of_localization#cor8)에 의하여 $\ann(M/\mathfrak{a}M)$을 포함하는 prime ideal들의 집합과 $\mathfrak{a}+\ann(M)$을 포함하는 prime ideal들의 집합이 정확히 동일하다는 것을 보이면 충분하다. 이제 prime ideal $\mathfrak{p}$가 $\ann(M/\mathfrak{a}M)$을 포함하는 것은 [§국소화, ⁋명제 5](/ko/math/commutative_algebra/localization#prop5)에 의하여 $(M/\mathfrak{a}M)_\mathfrak{p}\neq 0$인 것과 동치이다. 그럼 $(M/\mathfrak{a}M)_\mathfrak{p}=M_\mathfrak{p}/\mathfrak{a}M_\mathfrak{p}\neq 0$인 것은, [§정수적 확장, ⁋보조정리 8](/ko/math/commutative_algebra/integral_extension#lem8)에 의하여, $M_\mathfrak{p}\neq 0$이고 $\mathfrak{a}A_\mathfrak{p}\subseteq \mathfrak{p}A_\mathfrak{p}$인 것과 동치이다. 이는 다시 [§국소화, ⁋명제 5](/ko/math/commutative_algebra/localization#prop5)에 의하여, $\mathfrak{p}\supseteq \ann(M)$이고 $\mathfrak{p}\supseteq \mathfrak{a}$인 것, 즉 $\mathfrak{p}\supseteq \mathfrak{a}+\ann(M)$인 것과 동치이므로 원하는 결과를 얻는다. 
 :::
 
 또, 다음이 성립한다.
@@ -104,15 +105,15 @@ Noetherian local ring $(A,\mathfrak{m})$과 그 ideal $\mathfrak{a}$, 그리고 
     $$0 \rightarrow M' \rightarrow M \rightarrow M'' \rightarrow 0$$
 
     에 대하여, $\mathfrak{a}$가 $M$의 parameter ideal인 것과, $\mathfrak{a}$가 $M',M''$의 parameter ideal인 것이 동치이다.
-3. $\dim M$은 $d$개의 원소로 생성되는 $M$의 parameter가 존재하도록 하는 자연수 $d$ 중 가장 작은 것이다. 
+3. $\dim M$은 $d$개의 원소로 생성되는 $M$의 parameter ideal이 존재하도록 하는 자연수 $d$ 중 가장 작은 것이다. 
 :::
 ::: 증명
 1. 우선 $\mathfrak{a}$가 $M$의 parameter ideal이라 가정하자. 그럼 [명제–정의 3](#prop-def3) 직후에 살펴본 논증에 의하여 $\mathfrak{m}$의 충분히 큰 거듭제곱이 항상 $M/\mathfrak{a}M$을 annihilate하는 것을 알고, 이와 [보조정리 4](#lem4)을 종합하면
     
     $$\mathfrak{m}\subseteq \sqrt{\ann(M/\mathfrak{a}M)}=\sqrt{\mathfrak{a}+\ann(M)}$$
 
-    이므로, 충분히 큰 $n$에 대하여 $\mathfrak{m}^n\in(\mathfrak{a}+\ann(M))$이 성립해야 하는 것을 안다.  
-    이제 둘째 조건을 가정하자. 그럼 ring $A'=A/\ann(M)$에서 $\mathfrak{m}+\ann(M)$은 유일한 maximal ideal이고, 가정으로부터 충분히 큰 $n$에 대하여 $(\mathfrak{m}+\ann(M))^n$이 $\mathfrak{a}+\ann(M)$에 속해야 하는 것을 알고 있으므로 $\mathfrak{a}+\ann(M)$은 $A/\ann(M)$의 (ring으로서의) parameter ideal이며, $A/\ann(M)$을 $A$-module로 보면 원하는 결과를 얻는다.  
+    이므로, 충분히 큰 $n$에 대하여 $\mathfrak{m}^n\subseteq(\mathfrak{a}+\ann(M))$이 성립해야 하는 것을 안다.  
+    이제 둘째 조건을 가정하자. 그럼 ring $A'=A/\ann(M)$에서 $\mathfrak{m}+\ann(M)$은 유일한 maximal ideal이고, 가정으로부터 충분히 큰 $n$에 대하여 $(\mathfrak{m}+\ann(M))^n$이 $\mathfrak{a}+\ann(M)$에 포함되어야 하는 것을 알고 있으므로 $\mathfrak{a}+\ann(M)$은 $A/\ann(M)$의 (ring으로서의) parameter ideal이며, $A/\ann(M)$을 $A$-module로 보면 원하는 결과를 얻는다.  
     마지막 동치의 경우, 다음 포함관계
 
     $$\mathfrak{m}\subseteq \sqrt{\mathfrak{a}+\ann(M)}=\sqrt{\ann(M/\mathfrak{a}M)}$$
@@ -138,7 +139,7 @@ $$\dim M/ aM \geq \dim M-1$$
 
 $$\frac{M/aM}{\mathfrak{a}(M/aM)}\cong \frac{M}{((a)+\mathfrak{a})M}=\frac{M}{(a,a_1,\ldots, a_d)M}$$
 
-이 유한한 길이를 가지므로, $(a,a_1,\ldots, a_d)$는 $M$의 parameter ideal이 된다. 따라서 [명제 6](#prop6)의 셋째 조건에 의하여 $\dim M\leq 1+d$이다. 
+이 유한한 길이를 가지므로, $(a,a_1,\ldots, a_d)$는 $M$의 parameter ideal이 된다. 따라서 [명제 6](#prop6)의 셋째 결과에 의하여 $\dim M\leq 1+d$이다. 
 :::
 
 ## 평탄사상과 차원
@@ -146,7 +147,7 @@ $$\frac{M/aM}{\mathfrak{a}(M/aM)}\cong \frac{M}{((a)+\mathfrak{a})M}=\frac{M}{(a
 차원의 정의에 의하여, ring homomorphism $\phi: A \rightarrow B$을 통해 $A$와 $B$의 차원을 비교하기 위해서는 [§정수적 확장과 아이디얼, ⁋명제 1](/ko/math/commutative_algebra/lying_over_and_going_up#prop1)이 필수적이다. 다음 보조정리 또한 이와 비슷한 용도이지만, prime ideal을 만들어내는 방향이 반대이다. 
 
 ::: 보조정리 8 (Going down for flat extensions)
-Noetherian ring들 사이의 ring homomorphism $\phi: A \rightarrow B$가 주어졌다 하고, 이를 통해 $B$가 flat $A$-module 구조를 갖는다 하자. 그럼 prime ideal들 $\mathfrak{p}_2\subseteq\mathfrak{p}_1\subseteq A$와, $\phi^{-1}\mathfrak{q}_1=\mathfrak{p}_1$을 만족하는 $B$의 prime ideal $\mathfrak{q}_1$에 대하여, 적당한 $B$의 prime ideal $\mathfrak{q}_2$가 존재하여 $\phi^{-1}\mathfrak{q}_2=\mathfrak{p}_2$이도록 할 수 있다. 
+Noetherian ring들 사이의 ring homomorphism $\phi: A \rightarrow B$가 주어졌다 하고, 이를 통해 $B$가 flat $A$-module 구조를 갖는다 하자. 그럼 prime ideal들 $\mathfrak{p}_2\subseteq\mathfrak{p}_1\subseteq A$와, $\phi^{-1}\mathfrak{q}_1=\mathfrak{p}_1$을 만족하는 $B$의 prime ideal $\mathfrak{q}_1$에 대하여, 적당한 $B$의 prime ideal $\mathfrak{q}_2\subseteq \mathfrak{q}_1$이 존재하여 $\phi^{-1}\mathfrak{q}_2=\mathfrak{p}_2$이도록 할 수 있다. 
 :::
 ::: 증명
 우선 $\phi: A \rightarrow B$에 $A/\mathfrak{p}_2\otimes_A-$를 취하면 다음의 ring homomorphism
@@ -201,8 +202,8 @@ Noetherian local ring $(A, \mathfrak{m})$과, $\mathfrak{m}$에서의 $A$의 com
 다음이 성립한다.
 
 1. Field $\mathbb{K}$에 대하여, $\dim \mathbb{K}[\x_1,\ldots, \x_r]=r$이다. 
-2. 임의의 ring $A$에 대하여, $\dim A[\x]=1+\dim A$가 성립한다.
-3. $A$의 임의의 prime ideal $\mathfrak{p}$에 대하여, $\mathfrak{q}\cap A=\mathfrak{p}$를 만족하는 $A[\x]$의 prime ideal $\mathfrak{q}$가 존재하며, 이 성질을 만족하는 것들 중 maximal한 $\mathfrak{q}$에 대하여 식 $\dim A[\x]_\mathfrak{q}=1+\dim A_\mathfrak{p}$이 성립한다. 
+2. 임의의 Noetherian ring $A$에 대하여, $\dim A[\x]=1+\dim A$가 성립한다.
+3. Noetherian ring $A$의 임의의 prime ideal $\mathfrak{p}$에 대하여, $\mathfrak{q}\cap A=\mathfrak{p}$를 만족하는 $A[\x]$의 prime ideal $\mathfrak{q}$가 존재하며, 이 성질을 만족하는 것들 중 maximal한 $\mathfrak{q}$에 대하여 식 $\dim A[\x]_\mathfrak{q}=1+\dim A_\mathfrak{p}$이 성립한다. 
 :::
 
 

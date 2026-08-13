@@ -10,6 +10,7 @@ sidebar:
 
 date: 2026-03-12
 weight: 2
+drift_needed: true
 
 
 ---
@@ -38,7 +39,7 @@ Equivalence class $[(x_0, \ldots, x_n)]$은 보통 $[x_0 : \cdots : x_n]$으로 
 
 $$F(x_0, \ldots, x_n)\neq F(\lambda x_0, \ldots, \lambda x_n)$$
 
-이며, 이 계산이 $\mathbb{P}^n$의 모든 점에서 evaluation이 임의의 representative에 대해 잘 정의되도록 하는 유일한 다항식은 상수다항식 뿐이다. 그러나 만일 다항식이 정의하는 zero set에만 관심을 둔다면 이 문제가 해결된다. Homogeneous polynomial $F$ of degree $d$에 대해서는
+이며, $\mathbb{K}$가 무한하다면 이 계산이 $\mathbb{P}^n$의 모든 점에서 evaluation이 임의의 representative에 대해 잘 정의되도록 하는 유일한 다항식은 상수다항식 뿐이다. 그러나 만일 다항식이 정의하는 zero set에만 관심을 둔다면 이 문제가 해결된다. Homogeneous polynomial $F$ of degree $d$에 대해서는
 
 $$F(\lambda x_0, \ldots, \lambda x_n) = \lambda^d F(x_0, \ldots, x_n)$$
 
@@ -56,7 +57,7 @@ $$F(\lambda \x_0, \ldots, \lambda \x_n) = \lambda^d F(\x_0, \ldots, \x_n)$$
 을 만족하는 것이다.
 :::
 
-정의를 복잡하게 해 두긴 했지만, 이는 본질적으로 다항식을 단항식들의 합으로 나타냈을 때, 모든 단항식이 $d$차라는 것이다. 그럼 다음을 정의할 수 있다. 
+정의를 복잡하게 해 두긴 했지만, $\mathbb{K}$가 무한하다면 이는 본질적으로 다항식을 단항식들의 합으로 나타냈을 때, 모든 단항식이 $d$차라는 것이다. 그럼 다음을 정의할 수 있다. 
 
 ::: 정의 3
 Homogeneous polynomials $F_1, \ldots, F_k \in \mathbb{K}[\x_0, \ldots, \x_n]$에 대하여, *projective algebraic set<sub>사영 대수적 집합</sub>* $Z(F_1, \ldots, F_k)$를
@@ -77,7 +78,7 @@ Ideal $\mathfrak{a} \subseteq \mathbb{K}[\x_0, \ldots, \x_n]$이 *homogeneous*�
 Homogeneous ideal $\mathfrak{a}$에 대하여, 그 zero set $Z(\mathfrak{a})$를 $\mathfrak{a}$의 모든 homogeneous polynomial들이 vanish하는 점들로 정의하면, affine case와 마찬가지로 우리는 Zariski topology를 정의할 수 있다. 이를 위해서는 다음 명제가 필요하다. 
 
 ::: 명제 5
-다음이 성립한다.
+Homogeneous ideals $\mathfrak{a}, \mathfrak{b}, \mathfrak{a}_i \subseteq \mathbb{K}[\x_0, \ldots, \x_n]$에 대하여 다음이 성립한다.
 
 1. $Z(0) = \mathbb{P}^n$, $Z(1) = \emptyset$,
 2. $\bigcap_iZ(\mathfrak{a}_i) = Z\left(\sum_i \mathfrak{a}_i\right)$,
@@ -85,7 +86,7 @@ Homogeneous ideal $\mathfrak{a}$에 대하여, 그 zero set $Z(\mathfrak{a})$를
 :::
 
 ::: 증명
-Affine case와의 유일한 차이점은 여기서 다루는 다항식들이 모두 homogeneous라는 점이지만, 증명 논리 자체는 동일하므로 증명을 생략하기로 한다. 
+[§아핀다양체, ⁋명제 4](/ko/math/algebraic_varieties/affine_varieties#prop4)와의 유일한 차이점은 여기서 다루는 다항식들이 모두 homogeneous라는 점이지만, 증명 논리 자체는 동일하므로 증명을 생략하기로 한다. 
 :::
 
 Affine case에서와 마찬가지로, 이는 projective space $\mathbb{P}^n$ 위에 projective algebraic set들을 닫힌집합으로 갖는 위상구조가 존재한다는 것을 보여주며, 우리는 각각의 projective variety에 이를 이용하여 subspace topology를 줄 수 있다. 마찬가지로 이러한 topology를 *Zariski topology*라 부른다. ([§아핀다양체](/ko/math/algebraic_varieties/affine_varieties)에서 affine case의 Zariski topology를 먼저 살펴보았다.) 
@@ -103,11 +104,11 @@ $$I(X) = \{F \in \mathbb{K}[\x_0, \ldots, \x_n] \mid F \text{ is homogeneous and
 ::: 정리 7
 (Projective Nullstellensatz) $\mathbb{K}$가 algebraically closed field이고 $\mathfrak{a} \subseteq \mathbb{K}[\x_0, \ldots, \x_n]$이 homogeneous ideal이라 하자. 그럼
 
-1. $Z(\mathfrak{a}) = \emptyset \iff \mathfrak{a} \supseteq (\x_0, \ldots, \x_n)$,
+1. $Z(\mathfrak{a}) = \emptyset \iff \sqrt{\mathfrak{a}} \supseteq (\x_0, \ldots, \x_n)$,
 2. $I(Z(\mathfrak{a})) = \sqrt{\mathfrak{a}}$ (if $Z(\mathfrak{a}) \ne \emptyset$).
 :::
 
-Affine case와의 차이점은 $Z(\mathfrak{a}) = \emptyset$이 $\mathfrak{a} = (1)$을 의미하지 않고, $\mathfrak{a}$가 *irrelevant ideal* $(\x_0, \ldots, \x_n)$을 포함하는 것을 의미한다는 점이다. 이는 $(\x_0, \ldots, \x_n)$이 $\mathbb{K}^{n+1}$의 원점에 해당하는데, projective space의 정의에서 원점은 제외되었기 때문이다.
+Affine case와의 차이점은 $Z(\mathfrak{a}) = \emptyset$이 $\mathfrak{a} = (1)$을 의미하지 않고, $\sqrt{\mathfrak{a}}$가 *irrelevant ideal* $(\x_0, \ldots, \x_n)$을 포함하는 것을 의미한다는 점이다. 이는 $(\x_0, \ldots, \x_n)$이 $\mathbb{K}^{n+1}$의 원점에 해당하는데, projective space의 정의에서 원점은 제외되었기 때문이다.
 
 ## Standard Affine Cover
 
@@ -144,7 +145,7 @@ $$\varphi_0^{-1}(Z(f)) = \left\{[x_0 : \cdots : x_n] \in U_0 \mid f\left(\frac{x
 
 이다. 이제 만일 $f$가 degree $d$인 다항식이라면, 
 
-$$F(x_0,\ldots, \x_n)=\x_0^d f(\x_1/\x_0, \ldots, \x_n/\x_0)$$
+$$F(\x_0,\ldots, \x_n)=\x_0^d f(\x_1/\x_0, \ldots, \x_n/\x_0)$$
 
 는 homogeneous polynomial이며 $\varphi_0^{-1}(Z(f)) = Z(F) \cap U_0$이다. 이는 $U_0$의 subspace topology에서 닫힌집합이다.
 
@@ -189,7 +190,7 @@ $$\x_0^{d_j} F_j\left(1, \frac{\x_1}{\x_0}, \ldots, \frac{\x_n}{\x_0}\right) = F
 
 물론 처음에 $\x_0\neq 0$을 만족하는 점들을 $\x_0>0$인 상반구로 radial projection, $\x_0=0$인 점들을 $\mathbb{P}^1$으로 갖는 식으로 $\mathbb{P}^2$를 만들 수도 있었을 것이다. 그럼 이 과정에서는 상반구에 두 개의 반원이 그려질 것이나, 이 두 반원의 경계점이 $\x_0=0$인 점들을 identify하는 과정에서 서로 같은 것으로 취급되어 이 그림에서도 $X$는 원이 될 것이다. 
 
-이제 이 관점에서, $U_i$에서의 $X$를 보는 것은 $\mathbb{P}^2$에서 무한대 직선 $\x_i=0$을 빼는 것에 해당한다. 만일 $U_2$에서 $X$를 본다면, 위에서 살펴보았듯 $X$는 무한대 직선 $\x_2=0$과 만나지 않으므로 이 직선을 빼도 온전한 원으로 남는다. 그러나 가령 무한대 직선 $\x_1=0$을 뺀다면, $X$는 $\x_1$과 두 점에서 만나고 있고, 따라서 원 $X$에서 이 두 점을 뺀 후 펼치게 되면 쌍곡선이 나오게 되는 것으로 이해할 수 있다. 
+이제 이 관점에서, $U_i$에서의 $X$를 보는 것은 $\mathbb{P}^2$에서 무한대 직선 $\x_i=0$을 빼는 것에 해당한다. 만일 $U_2$에서 $X$를 본다면, 위에서 살펴보았듯 $X$는 무한대 직선 $\x_2=0$과 만나지 않으므로 이 직선을 빼도 온전한 원으로 남는다. 그러나 가령 무한대 직선 $\x_1=0$을 뺀다면, $X$는 이 직선과 두 점에서 만나고 있고, 따라서 원 $X$에서 이 두 점을 뺀 후 펼치게 되면 쌍곡선이 나오게 되는 것으로 이해할 수 있다. 
 
 {% diagram Math/Algebraic_Varieties/Projective_Varieties-1.png width="50em" alt="sketch" %}
 :::
@@ -217,7 +218,7 @@ Projective variety $X \subseteq \mathbb{P}^n$의 affine cone $C(X)$은 다음 �
 
 1. (Homogeneity) $C(X)$는 원점을 지나는 직선들로 구성된다. 즉, $(x_0, \ldots, x_n) \in C(X)$이고 $\lambda \in \mathbb{K}$이면 $(\lambda x_0, \ldots, \lambda x_n) \in C(X)$이다.
 
-2. (Algebraic structure) $X = Z(F_1, \ldots, F_k)$이면 $C(X) = V(F_1, \ldots, F_k) \subseteq \mathbb{A}^{n+1}$이다. 여기서 $F_i$들을 $\mathbb{A}^{n+1}$의 다항식으로 본다.
+2. (Algebraic structure) $X = Z(F_1, \ldots, F_k)$이면 $C(X) = Z(F_1, \ldots, F_k) \subseteq \mathbb{A}^{n+1}$이다. 여기서 $F_i$들을 $\mathbb{A}^{n+1}$의 다항식으로 본다.
 
 3. (Correspondence) $X \leftrightarrow C(X)$ 대응은 projective variety와 원점을 지나는 직선으로 이루어진 affine algebraic set 사이의 일대일 대응을 준다.
 :::

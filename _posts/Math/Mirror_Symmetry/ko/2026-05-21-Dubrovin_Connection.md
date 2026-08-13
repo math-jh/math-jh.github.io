@@ -10,6 +10,7 @@ sidebar:
 
 date: 2026-05-21
 weight: 4
+drift_needed: true
 
 ---
 이전 글에서 우리는 quantum cohomology $QH^\ast(X)$ 혹은 Jacobi ring $\Jac(W_q)$가 Frobenius algebra 구조를 갖는다는 것을 살펴보고, 이들 isomorphism의 $q$-parameter 방향의 naturality를 담기 위해 이들을 Frobenius manifold 구조로 집어넣었다. Frobenius manifold $M$ 위에 정의된 데이터는 다음의 데이터들
@@ -24,7 +25,7 @@ weight: 4
 
 Dubrovin에 따르면 $\nabla$와 $\circ$은 *Dubrovin connection*이라 부르는, $M\times \mathbb{C}^\ast$ 위의 flat connection $\nabla^z$로 연결되며, 이 connection은 $z\rightarrow 0$일 때 $\circ$을, $z\rightarrow\infty$일 때 $\nabla$를 복원한다. 이것이 말이 되기 위해서는 $\circ$을 connection처럼 취급하는 것이 어떤 것인지를 다소 정당화해야 한다.
 
-일반적으로 connection은 local frame에서 $\nabla_{\partial_\alpha} = \partial_\alpha + A_\alpha$ 꼴로 적히며, 여기서 $A_\alpha$는 fiber 위의 endomorphism인 connection $1$-form이다. ([\[리만기하학\] §접속, ⁋정의 3](/ko/math/riemannian_geometry/connection#def3)) 핵심적인 관찰은 product $\circ$가 각 방향 $\partial_\alpha$에 대해 "$\partial_\alpha$를 곱하는" endomorphism $\mathcal{C}_\alpha = \partial_\alpha \circ -$을 생각하면 그 행렬 성분이 바로 product의 structure constant $c_{\alpha\beta}^\gamma$라는 점이다. 즉, 엄밀히는 $\circ$ 그 자체가 connection인 것이 아니라, 그 structure constant들이 Christoffel symbol의 역할을 맡는 것이다. ([\[리만기하학\] §레비-치비타 접속, ⁋명제 6](/ko/math/riemannian_geometry/Levi-Civita_connection#prop6))
+일반적으로 connection은 local frame에서 $\nabla_{\partial_\alpha} = \partial_\alpha + A_\alpha$ 꼴로 적히며, 여기서 $A_\alpha$는 fiber 위의 endomorphism인 connection $1$-form으로, 그 성분이 [\[리만기하학\] §접속, ⁋정의 3](/ko/math/riemannian_geometry/connection#def3)의 connection coefficient이다. 핵심적인 관찰은 product $\circ$가 각 방향 $\partial_\alpha$에 대해 "$\partial_\alpha$를 곱하는" endomorphism $\mathcal{C}_\alpha = \partial_\alpha \circ -$을 생각하면 그 행렬 성분이 바로 product의 structure constant $c_{\alpha\beta}^\gamma$라는 점이다. 즉, 엄밀히는 $\circ$ 그 자체가 connection인 것이 아니라, 그 structure constant들이 Christoffel symbol의 역할을 맡는 것이다. ([\[리만기하학\] §레비-치비타 접속, ⁋명제 6](/ko/math/riemannian_geometry/Levi-Civita_connection#prop6))
 
 실제로, (flat) coordinate $\{ t^\alpha \}$를 택하면
 
@@ -34,7 +35,7 @@ $$\mathcal{C}_\alpha(\partial_\beta) = \partial_\alpha \circ \partial_\beta = \s
 
 $$\nabla^z_{\partial_\alpha} = \partial_\alpha + \frac{1}{z}\, \mathcal{C}_\alpha$$
 
-를 생각하면, $z \rightarrow \infty$에서는 Levi-Civita connection $\nabla$로 수렴하고 $z \rightarrow 0$에서는 product $\circ$의 classical limit으로 발산하는 하나의 family로 묶을 수 있으며, 실제로 $z\rightarrow 0$인 계산을 할 때는 이를 rescale하여 $z\nabla^z_{\partial_\alpha} = z\partial_\alpha + \mathcal{C}_\alpha$의 $z \rightarrow 0$ leading term으로 빼내면 된다. 어쨌든, 이러한 의미에서 $\nabla^z$는 두 구조를 연결하는 *flat pencil of connections*이며, 물리적으로는 이를 string coupling constant로 해석한다. 
+를 생각하면, $z \rightarrow \infty$에서는 Levi-Civita connection $\nabla$로 수렴하고 $z \rightarrow 0$에서는 $\circ$에 의한 곱셈으로 발산하는 하나의 family로 묶을 수 있으며, 실제로 $z\rightarrow 0$인 계산을 할 때는 이를 rescale하여 $z\nabla^z_{\partial_\alpha} = z\partial_\alpha + \mathcal{C}_\alpha$의 $z \rightarrow 0$ leading term으로 빼내면 된다. 어쨌든, 이러한 의미에서 $\nabla^z$는 두 구조를 연결하는 *flat pencil of connections*이며, 물리적으로는 이를 string coupling constant로 해석한다. 
 
 ::: 정의 1
 Frobenius manifold $M$과 auxiliary complex parameter $z \in \mathbb{C}^\ast$를 생각하자. 그럼 *Dubrovin connection<sub>두브로빈 접속</sub>* $\nabla^z$는 projection
@@ -66,7 +67,7 @@ $$E = \sum_\alpha (1-d_\alpha)t^\alpha \partial_\alpha + \text{(constant terms)}
 
 이므로, $\nabla E$는 eigenvector $\partial_\alpha$에 대응되는 eigenvalue $1-d_\alpha$를 갖는다는 것을 안다. 이제 이를 $\mu = \frac{2-d}{2}I - \nabla E$에 대입하면, 
 
-$$\mu(\partial_\alpha) = \frac{2-d}{2} - (1-d_\alpha) = d_\alpha - d/2$$
+$$\mu(\partial_\alpha) = \left(\frac{2-d}{2} - (1-d_\alpha)\right)\partial_\alpha = (d_\alpha - d/2)\partial_\alpha$$
 
 이므로 $\mu$ 또한 eigenvalue $d_\alpha-d/2$를 갖는다. 여기서 $\frac{2-d}{2}$만큼의 이동은 $\mu$를 $\eta$에 대해 skew-symmetric하게 만들기 위한 것으로, $\eta$가 degree $d_\alpha$인 class를 degree $d - d_\alpha$인 것과 짝짓는 데서 비롯한다.
 
@@ -111,13 +112,13 @@ $\mathcal{M}$ 위에 $\mathcal{O}_B$-module 구조는 보편적으로 함수 $f\
 
 $$\partial(f s) = (\partial f)\, s + f\, \partial s \qquad (f \in \mathcal{O}_B,\ s \in \mathcal{M})$$
 
-을 만족하는 것을 확인할 수 있다. 구체적인 예시로, flat connection $\nabla$가 주어진 vector bundle $E\rightarrow B$가 주어지면, vector field $\partial$의 action을 $\nabla_\partial$로 정의하면 $E$는 $\mathcal{D}_B$-module이 되며, 이 예시에서 $\nabla$의 flatness $[\nabla_\partial, \nabla_{\partial'}] = \nabla_{[\partial, \partial']}$가 정확히 $\mathcal{D}_B$-module의 정의가 요구하는 commutator relation이 된다. 
+을 만족하는 것을 확인할 수 있다. 구체적인 예시로, flat connection $\nabla$가 주어진 vector bundle $V\rightarrow B$가 주어지면, vector field $\partial$의 action을 $\nabla_\partial$로 정의하면 $V$는 $\mathcal{D}_B$-module이 되며, 이 예시에서 $\nabla$의 flatness $[\nabla_\partial, \nabla_{\partial'}] = \nabla_{[\partial, \partial']}$가 정확히 $\mathcal{D}_B$-module의 정의가 요구하는 commutator relation이 된다. 
 
-특별히 우리는 Dubrovin connection $\nabla^z$가 flat인 것을 보았으므로 ([명제 2](#prop2)) 이로부터 $\pr_1^\ast TM$이 $\mathcal{D}_{M\times \mathbb{C}^\ast}$-module이 됨을 확인할 수 있다. 이를 *quantum $D$-module*이라 부른다. 이 때, $\mathcal{D}$-module의 horizontal section, 즉 $\nabla^z s=0$을 만족하는 함수들을 flat coordinate을 이용해 $s=\sum_\alpha s^\alpha\partial_\alpha$로 적으면 다음의 미분방정식
+특별히 우리는 Dubrovin connection $\nabla^z$가 flat인 것을 보았으므로 ([명제 2](#prop2)) 이로부터 $\pr_1^\ast TM$이 $\mathcal{D}_{M\times \mathbb{C}^\ast}$-module이 됨을 확인할 수 있다. 이를 *quantum $D$-module*이라 부른다. 이 때, $\mathcal{D}$-module의 horizontal section, 즉 $\nabla^z s=0$을 만족하는 section들을 flat coordinate을 이용해 $s=\sum_\alpha s^\alpha\partial_\alpha$로 적으면 다음의 미분방정식
 
 $$\partial_\alpha s^\beta + \frac{1}{z} \sum_\gamma c_{\alpha\gamma}^\beta\, s^\gamma = 0$$
 
-을 얻고, 이를 *quantum differential equation*이라 부른다. 한편 위의 방정식은 first order linear ODE이므로, base point $b_0$와 초기조건 $s(b_0)$이 주어지면 경로를 따라 그 해가 유일하게 결정되고, $\nabla^z$가 flat이므로 이 parallel transport가 경로에 무관하여 $b_0$의 simply connected neighborhood에서 well-defined horizontal section을 준다. 따라서 위의 QDE의 solution space는 다발의 rank와 일치하는 $\dim_\mathbb{C} M$차원이 되며, base $M \times \mathbb{C}^\ast$의 $\pi_1$이 평행이동을 통해 이 해 공간에 작용하여 monodromy representation을 준다. 특히 $z$-방향 $\mathbb{C}^\ast$의 loop ($\pi_1 \cong \mathbb{Z}$)은 $z = 0, \infty$의 irregular singularity 둘레 monodromy를, Novikov parameter $q = e^t$의 $q$-방향 loop은 quantum monodromy를 준다. 
+을 얻고, 이를 *quantum differential equation*이라 부른다. 한편 위의 방정식은 first order linear ODE이므로, base point $b_0$와 초기조건 $s(b_0)$이 주어지면 경로를 따라 그 해가 유일하게 결정되고, $\nabla^z$가 flat이므로 이 parallel transport가 경로에 무관하여 $b_0$의 simply connected neighborhood에서 well-defined horizontal section을 준다. 따라서 위의 QDE의 solution space는 다발의 rank와 일치하는 $\dim_\mathbb{C} M$차원이 되며, base $M \times \mathbb{C}^\ast$의 $\pi_1$이 평행이동을 통해 이 해 공간에 작용하여 monodromy representation을 준다. 특히 $z$-방향 $\mathbb{C}^\ast$의 loop ($\pi_1 \cong \mathbb{Z}$)은 $z = 0$의 irregular singularity와 $z = \infty$의 regular singularity 둘레 monodromy를, $H^2$ 방향을 Novikov parameter $q = e^t$로 지수화한 뒤 생기는 $q$-방향 loop은 quantum monodromy를 준다. 
 
 Frobenius manifold의 대표적인 예시는 quantum cohomology의 deformation을 담는 $M = H^\ast(X, \mathbb{C})$의 경우였다. ([§프로베니우스 다양체, ⁋명제 9](/ko/math/mirror_symmetry/frobenius_manifold#prop9)) 이 경우의 Dubrovin connection을 구체적으로 살펴보자. 우선 base manifold는 $M \times \mathbb{C}^\ast$이고, 이 manifold의 점을 $(t,z)\in M\times \mathbb{C}^\ast$으로 쓸 수 있다. 정의에 의하여, 한 점 $(t,z)$ 위의 fiber는 $(\pr_1^\ast TM)_{(t,z)}\cong T_tM$이고, $M$은 원래부터 벡터공간이었으므로 이 fiber는 $H^\ast(X, \mathbb{C})$와 canonically isomorphic하며 이들 각각에 $t$가 정의하는 big quantum product $\circ_t$를 주는 것이 Frobenius manifold의 구조이다. 이 bundle 위에서 Dubrovin connection은 $\nabla^z_{\partial_\alpha} = \partial_\alpha + z^{-1}\mathcal{C}_\alpha$으로 주어지며, $\mathcal{C}_\alpha = \partial_\alpha \circ_t -$는 big quantum product로 곱하는 endomorphism이다. 이렇게 $M = H^\ast(X)$ 전체를 base로 둔 것이 big quantum cohomology에 대응하는 quantum $D$-module이다. 앞선 글에서 살펴봤듯, 우리가 우선적으로 관심있는 대상은 이 중 small quantum cohomology에 해당하는 $H^2$ 방향 deformation이므로, 특별히 $H^2(X)$의 basis를 $\{T_a\}$라 하면, 이 방향의 connection constant는 $\mathcal{C}_a=T_a\qtimes -$이다. 따라서 이 방향의 QDE는
 

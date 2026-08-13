@@ -14,6 +14,8 @@ toc_sticky: false
 date: 2021-08-15
 weight: 7
 
+drift_needed: true
+
 ---
 
 앞선 글의 말미는 단사함수와 전사함수의 새로운 정의를 내릴 수 있도록 해 준다. ([§함수들 사이의 연산, ⁋참고 6](/ko/math/set_theory/operation_of_functions#rmk6))
@@ -21,12 +23,12 @@ weight: 7
 ::: 명제 1
 함수 $f:A\rightarrow B$를 생각하자. 만일 어떠한 $r:B\rightarrow A$가 존재하여 $r\circ f=\id_A$라면 $f$는 단사함수다. 또 어떠한 $s:B\rightarrow A$가 존재하여 $f\circ s=\id_B$라면 $f$는 전사함수다.  
 
-반대로, 만일 $f$가 전사함수라면 어떤 $s:B\rightarrow A$가 존재하여 $f\circ s=\id_B$이고, 만일 $f$가 단사함수라면 어떤 $r:B\rightarrow A$가 존재하여 $r\circ f=\id_A$이다.
+반대로, 만일 $f$가 전사함수라면 어떤 $s:B\rightarrow A$가 존재하여 $f\circ s=\id_B$이고, 만일 $A\neq\emptyset$이고 $f$가 단사함수라면 어떤 $r:B\rightarrow A$가 존재하여 $r\circ f=\id_A$이다.
 :::
 ::: 증명
 두 번째 부분은 이미 이전 글에서 보였다. 따라서 처음 부분만 보이면 된다. 우선 $r\circ f=\id_A$라 하자. 만일 $f(x)=f(y)$라면 
 
-$$x=\id_{A}(x)=(r\circ f)(x)=r\circ(f(x))=r\circ(f(y))=(r\circ f)(y)=\id_{A}(y)=y$$ 
+$$x=\id_{A}(x)=(r\circ f)(x)=r(f(x))=r(f(y))=(r\circ f)(y)=\id_{A}(y)=y$$ 
 
 이므로 $f$는 단사함수이다. 이와 비슷하게, 만일 $f\circ s=\id_{B}$라면 임의의 $y\in B$에 대하여
 
@@ -56,7 +58,7 @@ $f$가 $A$에서 $B$로의 단사함수라 하자. 그럼 $r\circ f=\id_A$를 �
 
 $$X\subseteq f^{-1}(f(X)),\qquad f(f^{-1}(Y))\subseteq Y$$
 
-가 성립하며 그 증명 또한 자명하다. 만일 $f$가 단사라면, [§함수들 사이의 연산, ⁋참고 6](/ko/math/set_theory/operation_of_functions#rmk6)와 같이 정의된 $r$에 대하여
+가 성립한다. 실제로 $x\in X$라면 $f(x)\in f(X)$이므로 $x\in f^{-1}(f(X))$이고, $y\in f(f^{-1}(Y))$라면 $y=f(x)$이도록 하는 $x\in f^{-1}(Y)$가 존재하므로 $y=f(x)\in Y$이다. 만일 $f$가 단사라면, [§함수들 사이의 연산, ⁋참고 6](/ko/math/set_theory/operation_of_functions#rmk6)와 같이 정의된 $r$에 대하여
 
 $$f^{-1}(f(X))=r(f(X))=\id_A(X)=X$$
 
@@ -64,7 +66,7 @@ $$f^{-1}(f(X))=r(f(X))=\id_A(X)=X$$
 
 $$Y=\id_B(Y)=f(s(Y))\subseteq f(f^{-1}(Y))$$
 
-이므로 위의 식들은 등호가 된다. 다음 명제의 증명은 모두 자명하지만, 결과는 기억할 필요가 있다.
+이므로 위의 식들은 등호가 된다. 다음 명제의 증명은 모두 어렵지 않지만, 결과는 기억할 필요가 있다.
 
 ::: 명제 3
 두 함수 $f:A\rightarrow B$와 $f':B\rightarrow C$에 대하여, $f''=f'\circ f$라 하자.
@@ -99,14 +101,16 @@ $$Y=\id_B(Y)=f(s(Y))\subseteq f(f^{-1}(Y))$$
 
     이므로 $r''\circ f'$는 $f$의 retraction이다.
 
-4. $f''$가 전사함수이므로, 어떠한 $c\in C$에 대하여 $f''(a)=c$인 $a\in A$가 존재한다. 따라서 $f'(f(a))=c$이므로, $f(a)=b\in B$가 $f'(b)=c$를 만족한다. 또 임의의 $c\in C$에 대하여  
+4. $f''$가 전사함수이므로, 임의의 $c\in C$에 대하여 $f''(a)=c$인 $a\in A$가 존재한다. 따라서 $f'(f(a))=c$이므로, $f(a)=b\in B$가 $f'(b)=c$를 만족한다. 또 임의의 $c\in C$에 대하여  
 
-     $$(f'\circ(f\circ s''))(c)=(f''\circ s'')(c)=\id_C(c)=c.$$
+     $$(f'\circ(f\circ s''))(c)=(f''\circ s'')(c)=\id_C(c)=c$$
+
+    이므로 $f\circ s''$는 $f'$의 section이다.
 :::
 
 ::: 명제 4
 1. $A,B,C$가 집합이라 하고, 전사함수 $g:A\rightarrow B$와 함수 $f:A\rightarrow C$를 생각하자. 그럼 <phrase>$f=h\circ g$를 만족하는 $h:B\rightarrow C$가 존재하는 것</phrase>은 <phrase>$(g(x)=g(y))\implies(f(x)=f(y))$가 성립하는 것</phrase>과 동치이다.  
-   만약 이 조건들이 만족되면, $f=h\circ g$를 만족하는 $h$는 $h$는 $f$에 의해 유일하게 결정되며, 만일 $s$가 $g$의 section이라면 $h=f\circ s$이다. 
+   만약 이 조건들이 만족되면, $f=h\circ g$를 만족하는 $h$는 $f$에 의해 유일하게 결정되며, 만일 $s$가 $g$의 section이라면 $h=f\circ s$이다. 
 2. $A,B,C$가 집합이고, 단사함수 $g:A\rightarrow B$와 함수 $f:C\rightarrow B$를 생각하자. 그럼 <phrase>어떤 함수 $h:C\rightarrow A$가 존재하여 $f=g\circ h$인 것</phrase>은 <phrase>$f(C)\subseteq g(A)$인 것</phrase>과 동치이다.  
    만약 이 조건들이 만족되면 $h$는 $f$에 의해 유일하게 결정되며, 만일 $r$이 $g$의 retraction이라면 $h=r\circ f$이다.
 :::
@@ -130,7 +134,7 @@ $$Y=\id_B(Y)=f(s(Y))\subseteq f(f^{-1}(Y))$$
     우선 이 조건들이 만족되면 $h$는 유일할 수밖에 없다는 것을 먼저 관찰하자.  
     $h$는 $B$에서의 각각의 원소 $y$들의 함숫값에 의해 결정되는데, $g$가 전사함수이므로 $g$의 어떤 section $s$에 대하여 $s(y)=x$이도록 할 수 있다. 이제  
 
-    $$h(y)=(f\circ s)(y)=f(x)$$  
+    $$h(y)=h(g(s(y)))=(h\circ g)(s(y))=(f\circ s)(y)=f(x)$$  
 
     이다. 또 다른 section $s'$가 존재하여 $s'(y)=x'$라 하더라도, 
 
@@ -148,7 +152,7 @@ $$Y=\id_B(Y)=f(s(Y))\subseteq f(f^{-1}(Y))$$
 
     이므로, 주어진 조건에 의해 $f(s(g(x)))=f(x)$이다. 즉 $h(g(x))=f(x)$이므로 주어진 조건을 만족하는 $h$가 존재한다.
 
-2. 우선 $f=g\circ h$라 하자. 그럼 임의의 $y\in f(C)$에 대하여 $y=f(x)$라 하면 $y=f(x)=g(h(x))\in g(A)$ 이므로 $f(C)\subseteq g(A)$임은 자명하다. 1의 증명과 마찬가지로, 먼저 $h$의 유일성을 보이자. $h$는 $f=g\circ h$를 만족하는 함수로 정의되므로, $h$가 임의의 $y\in G$에 대하여 유일한 함숫값을 가짐을 보이기 위해서는 다음의 식  
+2. 우선 $f=g\circ h$라 하자. 그럼 임의의 $y\in f(C)$에 대하여 $y=f(x)$라 하면 $y=f(x)=g(h(x))\in g(A)$ 이므로 $f(C)\subseteq g(A)$임은 자명하다. 1의 증명과 마찬가지로, 먼저 $h$의 유일성을 보이자. $h$는 $f=g\circ h$를 만족하는 함수로 정의되므로, $h$가 임의의 $y\in C$에 대하여 유일한 함숫값을 가짐을 보이기 위해서는 다음의 식  
 
     $$h(y)=(\id_A\circ h)(y)=((r\circ g)\circ h)(y)=(r \circ f)(y)$$  
 

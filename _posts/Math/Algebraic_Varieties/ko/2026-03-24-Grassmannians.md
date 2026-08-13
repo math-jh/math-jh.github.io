@@ -10,12 +10,13 @@ sidebar:
 
 date: 2026-03-24
 weight: 7
+drift_needed: true
 
 ---
 
 우리는 특수한 variety를 하나 소개하며 algebraic geometry의 기본적인 연구대상들에 대한 소개를 마무리한다. 
 
-정의에 의해 projective space $\mathbb{P}^n$은 $\mathbb{A}^{n+1}$의 직선들의 공간이다. 이번 글에서 소개할 Grassmannian은 이를 일반화한 것으로, $\mathbb{A}^n$의 $k$차원 linear subspace들의 공간이다. 
+정의에 의해 projective space $\mathbb{P}^n$은 $\mathbb{A}^{n+1}$의 원점을 지나는 직선들의 공간이다. 이번 글에서 소개할 Grassmannian은 이를 일반화한 것으로, $\mathbb{A}^n$의 원점을 지나는 $k$차원 linear subspace들의 공간이다. 
 
 ## 그라스만 다양체의 정의
 
@@ -61,9 +62,9 @@ $$A = \begin{pmatrix} I_k & B \end{pmatrix}$$
 과 같이 만들자. 여기서 $B$는 $k \times (n-k)$ 행렬이다. 그럼 $B$의 $k(n-k)$개의 entry들이 $W$를 완전히 결정하며, 이들 사이에 어떤 constraint도 없다. 따라서 $U_I \cong \mathbb{A}^{k(n-k)}$이다.
 :::
 
-이 증명에서 보듯, $U_I$에서의 좌표계는 $k(n-k)$개의 자유로운 parameter들이다. 이들은 $W$를 나타내는 행렬에서 "non-trivial한 부분"에 해당한다. 즉, $I$가 정의하는 $k \times k$ block이 identity로 고정된 후, 나머지 $k \times (n-k)$ block이 자유롭게 변할 수 있다. 
+이 증명에서 보듯, $U_I$에서의 coordinate system은 $k(n-k)$개의 자유로운 parameter들이다. 이들은 $W$를 나타내는 행렬에서 "non-trivial한 부분"에 해당한다. 즉, $I$가 정의하는 $k \times k$ block이 identity로 고정된 후, 나머지 $k \times (n-k)$ block이 자유롭게 변할 수 있다. 
 
-그럼 임의의 $W\in \Gr(k,V)$에 대하여 $W$를 포함하는 affine open cover가 존재함은 자명하다. 뿐만 아니라 $U_I$에서 $U_J$로의 transition map 또한 regular map이라는 것이 자명하므로, 이를 통해 $\Gr(k,V)$ 위에 variety 구조가 주어진다. 물론 이것이 quasi-projective임을 보이기 위해서는 명시적인 projective embedding이 필요하지만, 우선은 다음이 성립한다. 
+$W$를 나타내는 행렬은 rank가 $k$이므로 nonzero인 $k\times k$ minor를 가지며, 따라서 임의의 $W\in \Gr(k,V)$는 적당한 $U_I$에 속해 $U_I$들이 affine open cover를 이룬다. 뿐만 아니라 $U_I$의 coordinate를 $U_J$의 coordinate로 바꾸는 transition map은 Cramer 공식에 의해 $J$에 해당하는 $k\times k$ block의 determinant를 분모로 갖는 유리식으로 주어지고 이 분모는 $U_I\cap U_J$ 위에서 소멸하지 않으므로, transition map 또한 regular map이다. 이를 통해 $\Gr(k,V)$ 위에 variety 구조가 주어진다. 물론 이것이 quasi-projective임을 보이기 위해서는 명시적인 projective embedding이 필요하지만, 우선은 다음이 성립한다. 
 
 ::: 명제 5
 $\dim \Gr(k, V) = k(n - k)$이다.
@@ -88,7 +89,7 @@ Plücker embedding은 well-defined이며 injective이다.
 :::
 
 ::: 증명
-Plücker embedding이 잘 정의된다는 것은 $W$의 다른 basis를 택했을 때 위의 값이 변하지 않는다는 것이다. 그런데 $W$의 다른 basis를 택한다면, $v_1\wedge\cdots\wedge v_k$는 change-of-basis matrix의 determinant만큼만 scaling되므로, 이를 $\mathbb{P}(\bigwedge^k V)$로 보내면 어차피 같은 점을 지정한다. 비슷한 논증을 거꾸로 하면 injectivity 또한 쉽게 보일 수 있다. 
+Plücker embedding이 잘 정의된다는 것은 $W$의 다른 basis를 택했을 때 위의 값이 변하지 않는다는 것이다. 그런데 $W$의 다른 basis를 택한다면, $v_1\wedge\cdots\wedge v_k$는 change-of-basis matrix의 determinant만큼만 scaling되므로, 이를 $\mathbb{P}(\bigwedge^k V)$로 보내면 어차피 같은 점을 지정한다. 한편 $\omega = v_1\wedge\cdots\wedge v_k$에 대해 $W = \{v \in V \mid v\wedge\omega = 0\}$이 성립하므로, $[\omega]$로부터 $W$가 복원되고 따라서 $\iota$는 injective이다. 
 :::
 
 뿐만 아니라, $\iota$는 $\Gr(k,V)$를 $\mathbb{P}(\bigwedge^kV)$의 *closed* subvariety로서 정의한다. 이를 위해 $\iota$의 image를 살펴보면, $\iota$의 image는 정확하게 *decomposable* vector들, 즉 다음의 꼴
@@ -166,9 +167,9 @@ Schubert variety $\Omega_\lambda(F_\bullet)$는 $\Gr(k, V)$의 closed subvariety
 ::: 증명
 $\Omega_\lambda(F_\bullet)$가 closed인 것은 정의 조건이 regular function들의 zero set으로 주어지기 때문이다.
 
-차원을 계산하기 위해, $\Omega_\lambda(F_\bullet)$의 (open) *Schubert cell* $\Omega_\lambda^\circ(F_\bullet)$를 고려한다. 이는 정의 조건에서 부등식을 등식으로 바꾼 것
+차원을 계산하기 위해, $\Omega_\lambda(F_\bullet)$의 (open) *Schubert cell* $\Omega_\lambda^\circ(F_\bullet)$를 고려한다. 이는 정의 조건의 부등식을 등식으로 바꾸고, 나아가 차원이 뛰는 index가 정확히 $n-k+i-\lambda_i$이도록 요구한 것
 
-$$\dim(W \cap F_{n - k + i - \lambda_i}) = i \quad\text{for all } 1 \leq i \leq k$$
+$$\dim(W \cap F_{n - k + i - \lambda_i}) = i,\qquad \dim(W \cap F_{n - k + i - \lambda_i - 1}) = i-1 \quad\text{for all } 1 \leq i \leq k$$
 
 으로 얻어지며, $\Omega_\lambda(F_\bullet)$의 open dense subset이다. 이 cell의 차원을 계산하면 $k(n-k) - (\lambda_1 + \cdots + \lambda_k) = k(n-k) - \lvert \lambda \rvert$이 되며, 따라서 $\Omega_\lambda(F_\bullet)$의 차원 또한 $k(n-k) - \lvert \lambda \rvert$이다.
 :::

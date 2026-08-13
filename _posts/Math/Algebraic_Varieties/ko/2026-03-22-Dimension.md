@@ -11,6 +11,7 @@ sidebar:
 
 date: 2026-03-22
 weight: 5
+drift_needed: true
 
 
 ---
@@ -22,7 +23,7 @@ weight: 5
 Algebraic variety는 이미 위상공간이므로, [\[위상수학\] §차원, ⁋정의 10](/ko/math/topology/dimension#def10)을 사용하여 $X$의 차원을 irreducible closed subset들의 strictly descending chain의 length의 supremum으로 정의할 수 있다. 
 
 ::: 예시 1
-$\mathbb{A}^1$에서 닫힌집합들은 $\mathbb{A}^1$ 전체와 유한집합들뿐이다. 따라서 가장 긴 chain은 $\mathbb{A}^1 \supsetneq \{p\} \supsetneq \emptyset$이며, 이는 length $2$ chain이므로 $\mathbb{A}^1$은 이 정의에 따르면 $1$차원이 된다.
+$\mathbb{K}$가 유한집합이 아닌 한, $\mathbb{A}^1$에서 닫힌집합들은 $\mathbb{A}^1$ 전체와 유한집합들뿐이다. 따라서 가장 긴 chain은 $\mathbb{A}^1 \supsetneq \{p\}$이며, 이는 length $1$ chain이므로 $\mathbb{A}^1$은 이 정의에 따르면 $1$차원이 된다.
 :::
 
 이 정의는 순수하게 위상적인 관점에서 차원을 정의한다는 장점이 있다. 그러나 실제로 계산을 위해서는 irreducible closed subset들의 chain을 모두 알아야하므로 그렇게 효율적이지는 않다. 
@@ -39,7 +40,7 @@ Affine variety $X$의 차원은 coordinate ring $\mathbb{K}[X]$의 Krull dimensi
 [§아핀다양체, ⁋명제 12](/ko/math/algebraic_varieties/affine_varieties#prop12)로부터 affine variety의 irreducible closed subset과 $\mathbb{K}[X]$의 prime ideal 사이의 일대일대응이 존재한다. 
 :::
 ::: 따름정리 3
-$\dim \mathbb{A}^n = n$이다.
+$\mathbb{K}$가 유한집합이 아닌 한, $\dim \mathbb{A}^n = n$이다.
 :::
 
 ::: 증명
@@ -81,11 +82,11 @@ $\mathbb{P}^n$의 cone은 $\mathbb{A}^{n+1}$이고 $\dim \mathbb{A}^{n+1} = n+1$
 Hypersurface는 단일 다항식의 zero set으로 정의되는 variety이다. 직관적으로, 하나의 식을 추가하는 것은 하나의 제약조건을 주는 것과 같으므로 차원을 하나 줄이게 될 것이다. 
 
 ::: 명제 6
-Irreducible polynomial $f \in \mathbb{K}[\x_1, \ldots, \x_n]$에 대해, irreducible hypersurface $Z(f) \subseteq \mathbb{A}^n$의 차원은 $n - 1$이다.
+$\mathbb{K}$가 algebraically closed라 하자. Irreducible polynomial $f \in \mathbb{K}[\x_1, \ldots, \x_n]$에 대해, irreducible hypersurface $Z(f) \subseteq \mathbb{A}^n$의 차원은 $n - 1$이다.
 :::
 
 ::: 증명
-$f$가 irreducible이므로 $(f)$는 prime ideal이고, 따라서 $Z(f)$의 coordinate ring은 $\mathbb{K}[\x_1, \ldots, \x_n]/(f)$이다. 이제 $\mathbb{K}[\x_1, \ldots, \x_n]$에서 $(f)$의 codimension이 1임을 보이자. $(0) \subsetneq (f)$는 길이 1의 chain이므로 $\codim(f) \ge 1$이다. 반면, UFD $\mathbb{K}[\x_1, \ldots, \x_n]$에서 codimension 1인 prime ideal은 모두 principal prime ideal이므로, $(0)$과 $(f)$ 사이에 다른 prime ideal이 존재할 수 없다. 따라서 $\codim(f) = 1$이고,
+$f$가 irreducible이므로 $(f)$는 prime ideal이고, 따라서 $Z(f)$의 coordinate ring은 $\mathbb{K}[\x_1, \ldots, \x_n]/(f)$이다. 이제 $\mathbb{K}[\x_1, \ldots, \x_n]$에서 $(f)$의 codimension이 1임을 보이자. $(0) \subsetneq (f)$는 길이 1의 chain이므로 $\codim(f) \ge 1$이다. 반면 $(0) \subsetneq \mathfrak{q} \subseteq (f)$인 prime ideal $\mathfrak{q}$가 주어지면, $0 \neq g \in \mathfrak{q}$를 UFD $\mathbb{K}[\x_1, \ldots, \x_n]$에서 인수분해하였을 때 어떤 irreducible 인수 $p$가 $\mathfrak{q}$에 속하고, $(p) \subseteq (f)$로부터 $f \mid p$, 즉 $(f) = (p) \subseteq \mathfrak{q}$이므로 $\mathfrak{q} = (f)$이다. 그럼 $(0)$과 $(f)$ 사이에 다른 prime ideal이 존재할 수 없다. 따라서 $\codim(f) = 1$이고,
 
 $$\dim \mathbb{K}[\x_1, \ldots, \x_n]/(f) = \dim \mathbb{K}[\x_1, \ldots, \x_n] - \codim(f) = n - 1$$
 
@@ -94,7 +95,7 @@ $$\dim \mathbb{K}[\x_1, \ldots, \x_n]/(f) = \dim \mathbb{K}[\x_1, \ldots, \x_n] 
 
 ## 함수체를 통한 차원
 
-차원을 정의하는 또 다른 방법은 function field를 사용하는 것이다. Function field $\mathbb{K}(X)$는 variety의 generic point에서의 정보를 담고 있으며, birational invariant이기도 하다. 다음 명제 또한 대수적인 사실로부터 유도된다.
+차원을 정의하는 또 다른 방법은 function field를 사용하는 것이다. Function field $\mathbb{K}(X)$는 variety의 generic point에서의 정보를 담고 있으며, birational invariant이기도 하다. 다음 명제 또한 대수적인 사실로부터 유도된다. ([\[가환대수학\] §뇌터 정규화, ⁋정리 3](/ko/math/commutative_algebra/noether_normalization#thm3))
 
 ::: 명제 7
 Variety $X$의 차원은 function field $\mathbb{K}(X)$의 $\mathbb{K}$ 위에서의 transcendence degree와 같다.
@@ -103,21 +104,21 @@ Variety $X$의 차원은 function field $\mathbb{K}(X)$의 $\mathbb{K}$ 위에�
 ::: 예시 8
 다음은 function field를 통한 차원 계산의 예시들이다.
 
-1. $\mathbb{K}(\mathbb{A}^n) = \mathbb{K}(x_1, \ldots, x_n)$이고, $x_1, \ldots, x_n$은 $\mathbb{K}$ 위에서 algebraically independent이므로 $\dim \mathbb{A}^n = n$이다. 
-2. $\mathbb{K}(V(\y - \x^2)) = \mathbb{K}(x)$이고, $x$는 $\mathbb{K}$ 위에서 algebraically independent이므로 $\dim V(\y - \x^2) = 1$이다. 이는 parabola가 곡선이라는 직관과 일치한다.
+1. $\mathbb{K}(\mathbb{A}^n) = \mathbb{K}(\x_1, \ldots, \x_n)$이고, $\x_1, \ldots, \x_n$은 $\mathbb{K}$ 위에서 algebraically independent이므로 $\dim \mathbb{A}^n = n$이다. 
+2. $\mathbb{K}(V(\y - \x^2)) = \mathbb{K}(\x)$이고, $\x$는 $\mathbb{K}$ 위에서 algebraically independent이므로 $\dim V(\y - \x^2) = 1$이다. 이는 parabola가 곡선이라는 직관과 일치한다.
 3. $\mathbb{K}(\mathbb{P}^n) = \mathbb{K}(\x_1/\x_0, \ldots, \x_n/\x_0)$이고, $\x_1/\x_0, \ldots, \x_n/\x_0$는 $\mathbb{K}$ 위에서 algebraically independent이므로 $\dim \mathbb{P}^n = n$이다. 이는 projective space가 affine space와 birationally equivalent함을 반영한다.
 :::
 
 ## 차원의 기본 성질
 
-차원의 가장 기본적인 성질은 진부분집합의 차원이 더 작다는 것이다. 이는 기하학적으로 자명한 사실이다. 
+차원의 가장 기본적인 성질은 진부분집합의 차원이 더 작다는 것이다. 이는 기하학적으로 trivial한 사실이다. 
 
 ::: 명제 9
 $X$의 closed subvariety $Y \subsetneq X$에 대하여 $\dim Y < \dim X$이 성립한다.
 :::
 
 ::: 증명
-$Y$의 닫힌집합들의 maximal chain 
+$Y$의 closed subvariety들의 maximal chain 
 
 $$Y = Y_0 \supsetneq Y_1 \supsetneq \cdots \supsetneq Y_n \neq \emptyset$$
 
@@ -125,7 +126,7 @@ $$Y = Y_0 \supsetneq Y_1 \supsetneq \cdots \supsetneq Y_n \neq \emptyset$$
 
 $$X \supsetneq Y = Y_0 \supsetneq Y_1 \supsetneq \cdots \supsetneq Y_n$$
 
-은 $X$의 길이가 $n+1$인 chain이다.
+은 $X$가 irreducible이므로 $X$의 closed subvariety들의 길이가 $n+1$인 chain이다.
 :::
 
 이는 [명제 6](#prop6)의 일반화라 생각할 수 있다. 이제 regular map과 차원의 관계에 대해 살펴보자. 
@@ -156,10 +157,10 @@ $$X \supsetneq Y = Y_0 \supsetneq Y_1 \supsetneq \cdots \supsetneq Y_n$$
 Irreducible variety $X, Y$ 사이의 regular map $\varphi: X \rightarrow Y$가 *finite*라는 것은, 모든 affine open $U \subseteq Y$에 대하여 $\varphi^{-1}(U)$가 affine이고, $\mathbb{K}[\varphi^{-1}(U)]$가 $\mathbb{K}[U]$ 위의 finitely generated module인 것을 의미한다.
 :::
 
-Finite morphism은 finite fiber를 갖는다는 것을 보일 수 있다. 그럼 다음이 자명하다. 
+Finite morphism은 finite fiber를 갖는다는 것을 보일 수 있다. 차원에 대해서는 다음이 성립한다. 
 
 ::: 명제 12
-두 variety들 $X, Y$와 finite map $\varphi: X \rightarrow Y$에 대해 $\dim X = \dim Y$이다.
+두 variety들 $X, Y$와 finite surjective map $\varphi: X \rightarrow Y$에 대해 $\dim X = \dim Y$이다.
 :::
 
 ::: 증명
@@ -171,7 +172,7 @@ $\mathbb{A}^n$의 $k$차원 linear subspace $L$은 $\dim L = k$이다. 이는 $L
 :::
 
 ::: 예시 14
-두 variety들 $X, Y \subseteq \mathbb{A}^n$에 대해, 일반적으로
+두 variety들 $X, Y \subseteq \mathbb{A}^n$이 $X \cap Y \neq \emptyset$을 만족할 때, 일반적으로
 
 $$\dim(X \cap Y) \ge \dim X + \dim Y - n$$
 

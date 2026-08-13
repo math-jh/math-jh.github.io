@@ -10,6 +10,7 @@ sidebar:
 
 date: 2026-07-07
 weight: 19
+drift_needed: true
 ---
 
 이제 우리는 선적분에서 변수를 하나 추가하여 곡면의 적분을 정의한다. 
@@ -29,7 +30,7 @@ $u$를 고정하고 $v$만 움직이면 곡면 위의 곡선이 그려지고 그
 
 $$\mathbf{N} = \mathbf{r}_u \times \mathbf{r}_v$$
 
-가 곡면의 normal vector가다. 우리는 $\mathbf{N} \neq 0$인 곡면을 *regular<sub>정칙</sub>*이라 한다.
+가 곡면의 normal vector이다. 우리는 모든 $(u,v) \in D$에 대하여 $\mathbf{N}(u,v) \neq \mathbf{0}$인 매개곡면을 *regular<sub>정칙</sub>*이라 한다.
 
 ## 곡면넓이
 
@@ -69,7 +70,7 @@ $$\iint_S \mathbf{F} \cdot d\mathbf{S} = \iint_S \mathbf{F} \cdot \mathbf{n}\dd{
 
 선속은 단위시간에 곡면을 가로질러 흐르는 양이다. 가령 $\mathbf{F}$가 유체의 속도이면 $\iint_S \mathbf{F}\cdot d\mathbf{S}$는 곡면을 통과하는 유체의 양으로 생각할 수 있다. 그럼 법선 성분 $\mathbf{F}\cdot \mathbf{n}$만이 흐름에 기여하며 곡면에 접하는 성분은 이 양에 기여하지 않는다는 것이 직관적으로 자명하며, 방향을 반대로 잡으면 $\mathbf{n}$이 뒤집혀 선속의 부호가 바뀐다는 것 또한 쉽게 확인할 수 있다.
 
-다음은 이 적분의 두 예시들이다.
+다음은 면적분의 두 예시들이다.
 
 ::: 예시 5 (구의 겉넓이)
 반지름 $R$인 구를 구면좌표

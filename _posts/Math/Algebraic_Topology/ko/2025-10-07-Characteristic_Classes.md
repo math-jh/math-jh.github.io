@@ -10,6 +10,7 @@ sidebar:
 
 date: 2025-10-07
 weight: 14
+drift_needed: true
 
 
 ---
@@ -154,7 +155,7 @@ $$(E, E_0)\simeq (D(E), S(E))$$
 를 얻어내면 된다. 그럼 이를 사용하면 다음을 얻는다.
 
 ::: 정리 5 (Gysin exact sequence)
-Oriented rank $n$ vector bundle $E\rightarrow B$의 sphere bundle $\pi:S(E)\rightarrow B$에 대하여, 다음의 long exact sequence
+Paracompact 밑공간 $B$ 위의 oriented rank $n$ vector bundle $E\rightarrow B$의 sphere bundle $\pi:S(E)\rightarrow B$에 대하여, 다음의 long exact sequence
 
 $$\cdots\rightarrow H^{k-n}(B)\xrightarrow{\ \smile e\ }H^k(B)\xrightarrow{\ \pi^\ast\ }H^k(S(E))\xrightarrow{\ \pi_!\ }H^{k-n+1}(B)\rightarrow H^{k+1}(B)\rightarrow\cdots$$
 
@@ -178,7 +179,7 @@ $$H^k(D(E), S(E))\cong H^k(E, E_0)\cong H^{k-n}(B)$$
 
 $$j^\ast\Phi(\alpha)=j^\ast(p^\ast\alpha\smile u)=p^\ast\alpha\smile j^\ast u$$
 
-이다. 여기서 둘째 등호는 $j^\ast$가 relative cohomology ring의 homomorphism이라 cup product를 보존한다는 것, 곧 $j^\ast p^\ast\alpha=p^\ast\alpha$을 쓴 것이며, 이는 직관적으로 $p^\ast\alpha$는 이미 $H^\ast(E)$ 위에 살고 있으므로 당연하다. 이제 이를 다시 수직방향 identification $H^k(E)\cong H^k(B)$을 통해 내리면 되는데, 이는 zero section $0:B\hookrightarrow E$ ($p\circ 0=\id$)를 통해 이루어지므로
+이다. 여기서 둘째 등호는 $j^\ast:H^\ast(E, E_0)\rightarrow H^\ast(E)$가 $H^\ast(E)$-module homomorphism이라는 것을 쓴 것이며, 이는 직관적으로 $p^\ast\alpha$는 이미 $H^\ast(E)$ 위에 살고 있으므로 당연하다. 이제 이를 다시 수직방향 identification $H^k(E)\cong H^k(B)$을 통해 내리면 되는데, 이는 zero section $0:B\hookrightarrow E$ ($p\circ 0=\id$)를 통해 이루어지므로
 
 $$0^\ast(p^\ast\alpha\smile j^\ast u)=0^\ast p^\ast\alpha\smile 0^\ast j^\ast u=\alpha\smile e(E)$$
 
@@ -207,7 +208,7 @@ $$H^{k-n}(B)=H^{k-n+1}(B)=0$$
 
 계속 살펴보았던 deleted total space $E_0=E\setminus 0(B)$를 생각하자. $E_0$의 한 점은 base의 한 점 $x\in B$와, 이 점에서의 $E$의 fiber $E_x$의 *nonzero* $v\in E_x$의 순서쌍이다. 이제 $E_0$ 위에 *tautological bundle* $\pi_0^\ast E$를 정의하자. 이는 vector bundle $E\rightarrow B$를 projection map $\pi_0:E_0\rightarrow B$를 따라 pullback하여 얻어진 vector bundle이며, 그 정체는 각각의 점 $(x,v)\in E_0$마다 fiber $(\pi_0^\ast E)_{(x,v)}= E_x$를 갖는 vector bundle이다. 즉 $v$는 각각의 점 $(x,v)$에서 fiber로 붙어있는 벡터공간의 원소이기도 하며, nonzero이므로 이 벡터공간 안에서 1차원 부분공간 $\langle v\rangle$을 정의한다. 이제 $E_0$의 모든 점마다 이러한 방식으로 직선을 붙여 line bundle $L\rightarrow E_0$을 만들고, 이것이 $\pi_0^\ast E$ 안에서 정의하는 quotient $(\pi_0^\ast E)/L\rightarrow E_0$을 생각할 수 있다. 이는 각 점 $(x,v)$에서 fiber $E_x/\langle v\rangle$을 갖는 $E_0$ 위의 canonical complex rank $(n-1)$ bundle이며, fiber마다 Hermitian 내적을 주면 $v$의 orthogonal complement $v^\perp\subseteq E_x$로도 실현된다. ([\[선형대수학\] §복소내적공간, ⁋명제 4](/ko/math/linear_algebra/complex_inner_product_spaces#prop4)) 두 실현이 canonically isomorphic하므로, 앞으로 이 rank $(n-1)$ bundle을 표기의 편의상 $L^\perp$로 쓴다.
 
-이제 <em-ko>complex</em-ko> vector bundle $E$가 주어졌다 하고, 이를 (oriented) real vector bundle로 본 것을 $E_\mathbb{R}$로 표기하자. 만일 $E$가 complex dimension $n$이라면 $E_\mathbb{R}$은 real dimension $2n$이다. 그럼 $E_0$는 $E_{\mathbb{R}}$의 sphere bundle $S(E_{\mathbb{R}})$와 homotopy equivalent하므로 [정리 5](#thm5)에 의해
+이제 *complex* vector bundle $E$가 주어졌다 하고, 이를 (oriented) real vector bundle로 본 것을 $E_\mathbb{R}$로 표기하자. 만일 $E$가 complex dimension $n$이라면 $E_\mathbb{R}$은 real dimension $2n$이다. 그럼 $E_0$는 $E_{\mathbb{R}}$의 sphere bundle $S(E_{\mathbb{R}})$와 homotopy equivalent하므로 [정리 5](#thm5)에 의해
 
 $$\cdots\rightarrow H^{k-2n}(B)\xrightarrow{\ \smile e\ }H^k(B)\xrightarrow{\ \pi_0^\ast\ }H^k(E_0)\rightarrow H^{k-2n+1}(B)\rightarrow\cdots$$
 
@@ -272,7 +273,7 @@ $$H^\bullet(\Gr(k,\mathbb{C}^\infty);\mathbb{Z})=\mathbb{Z}[c_1,\ldots,c_k]$$
 한편, Stiefel-Whitney class가 Whitney 합 공식을 따랐던 것처럼, 여기서도 Chern class가 같은 공식을 만족하는 것을 기대하는 것이 자연스러울 것이다. 이를 실제로 증명하는 핵심 스텝은  [§사영다발과 Leray–Hirsch 정리, ⁋정리 5](/ko/math/algebraic_topology/projective_bundles#thm5)인데, 이 정리의 증명은 지금까지의 논의로도 충분히 가능하지만 오직 스토리의 흐름을 위해 이를 다음 글로 따로 묶어둔다. 
 
 ::: 정리 9 (Whitney sum formula)
-두 complex vector bundle $E,E'\rightarrow B$에 대하여
+Paracompact 밑공간 $B$ 위의 두 complex vector bundle $E,E'\rightarrow B$에 대하여
 
 $$c(E\oplus E')=c(E)\smile c(E')$$
 
@@ -330,9 +331,9 @@ $$c_1(f^\ast(\pi_1^\ast\gamma \oplus \pi_2^\ast\gamma))=c_1(f_1^\ast\gamma)+c_1(
 
 $$c_1(\pi_1^\ast\gamma\oplus \pi_2^\ast\gamma)=c_1(\pi_1^\ast\gamma)+c_1(\pi_2^\ast\gamma)$$
 
-를 보이는 것과 같다. 즉, 우리는 $\CP^\infty\times\CP^\infty$ 위의 임의의 두 line bundle $L_1, L_2$에 대해 위 식이 성립하는 것을 보이면 충분하다. 
+를 보이는 것과 같다. 즉, 우리는 $\CP^\infty\times\CP^\infty$ 위의 두 line bundle $L_1=\pi_1^\ast\gamma$, $L_2=\pi_2^\ast\gamma$에 대해 위 식이 성립하는 것을 보이면 충분하다. 
 
-이를 위해 우선 [§코호몰로지, ⁋따름정리 10](/ko/math/algebraic_topology/cohomology#cor10)에 의해 
+이를 위해 우선 [§코호몰로지, ⁋따름정리 10](/ko/math/algebraic_topology/cohomology#cor10)과 [§코호몰로지, ⁋정리 5](/ko/math/algebraic_topology/cohomology#thm5)에 의해 
 
 $$H^2(\CP^\infty\times\CP^\infty;\mathbb{Z})\cong H^2(\CP^\infty;\mathbb{Z})\oplus H^2(\CP^\infty;\mathbb{Z})$$
 
@@ -420,7 +421,7 @@ Real vector bundle $E,F\rightarrow B$에 대하여 다음이 성립한다.
 ::: 증명
 (1)은 complexification이 pullback과 교환하고 [명제 7](#prop7)의 naturality에서 즉시 나온다. (2)도 $(E\oplus F)\otimes\mathbb{C}\cong(E\otimes\mathbb{C})\oplus(F\otimes\mathbb{C})$에 [정리 9](#thm9)를 적용하면 되는데, [정의 12](#def12) 아래 관찰대로 홀수 Chern class가 모두 $2$-torsion이므로 이들이 낀 항은 $2$를 곱하면 소멸하고, 남는 짝수항이 $p(E)\smile p(F)$를 준다.
 
-(3)만 약간의 계산이 필요하다. $E_{\mathbb{R}}\otimes\mathbb{C}$으로 complexify하면, 이 과정에서 complex structure는 $J\in \End(E)$로 나오며, 그 고유값은 $\pm i$이다. 이제 이를 $\mathbb{C}$-linear로 확장하면 그 $\pm i$ 고유공간 분해가 $E_{\mathbb{R}}\otimes\mathbb{C}\cong E\oplus\bar{E}$를 준다. 그럼 이제 [정리 9](#thm9)와 [명제 10](#prop10)으로 $c_2(E_{\mathbb{R}}\otimes\mathbb{C})=c_2(E\oplus\bar{E})=2c_2(E)-c_1(E)^2$이므로 이를 Pontryagin class로 가지고 오면 원하는 결과를 얻는다.
+(3)만 약간의 계산이 필요하다. $E_{\mathbb{R}}\otimes\mathbb{C}$으로 complexify하면, 이 과정에서 complex structure는 $J\in \End(E_{\mathbb{R}})$로 나온다. 이제 이를 $\mathbb{C}$-linear로 확장하면 그 $\pm i$ 고유공간 분해가 $E_{\mathbb{R}}\otimes\mathbb{C}\cong E\oplus\bar{E}$를 준다. 그럼 이제 [정리 9](#thm9)와 [명제 10](#prop10)으로 $c_2(E_{\mathbb{R}}\otimes\mathbb{C})=c_2(E\oplus\bar{E})=2c_2(E)-c_1(E)^2$이므로 이를 Pontryagin class로 가지고 오면 원하는 결과를 얻는다.
 :::
 
 ---
@@ -432,4 +433,4 @@ Real vector bundle $E,F\rightarrow B$에 대하여 다음이 성립한다.
 **[Hat]** A. Hatcher, *Vector Bundles and K-Theory*, online notes, 2017.
 
 ---
-[^1]: $S^\infty$을 $\mathbb{C}^\infty=\bigcup_n\mathbb{C}^n$의 단위구로 보자. Shift morphism $T(x_1,x_2,\ldots)=(0,x_1,x_2,\ldots)$에 대하여, 벡터를 $v\mapsto v/\lvert v\rvert$로 정규화한 두 직선 homotopy $x\mapsto\bigl((1-t)x+tT(x)\bigr)/\lvert(1-t)x+tT(x)\rvert$과 $x\mapsto\bigl((1-t)T(x)+te_1\bigr)/\lvert(1-t)T(x)+te_1\rvert$이 각각 항등사상을 $T$로, 그리고 $T$를 상수사상 $x\mapsto e_1=(1,0,\ldots)$으로 잇는다. 두 분모 모두 $0$이 되지 않는데, 앞의 것은 $x$와 $T(x)$의 좌표가 한 칸 어긋나 $(1-t)x+tT(x)=0$이 $x=0$을 강제하고, 뒤의 것은 합의 첫 좌표가 $t$라 $0$이려면 $t=0$이어야 하며 그럼 $T(x)=0$, 곧 $x=0$이기 때문이다. 이 둘을 이으면 $S^\infty$이 한 점으로 수축한다. 
+[^1]: $S^\infty$을 $\mathbb{C}^\infty=\bigcup_n\mathbb{C}^n$의 단위구로 보자. Shift morphism $T(x_1,x_2,\ldots)=(0,x_1,x_2,\ldots)$에 대하여, 벡터를 $v\mapsto v/\lvert v\rvert$로 normalize한 두 직선 homotopy $x\mapsto\bigl((1-t)x+tT(x)\bigr)/\lvert(1-t)x+tT(x)\rvert$과 $x\mapsto\bigl((1-t)T(x)+te_1\bigr)/\lvert(1-t)T(x)+te_1\rvert$이 각각 항등사상을 $T$로, 그리고 $T$를 상수사상 $x\mapsto e_1=(1,0,\ldots)$으로 잇는다. 두 분모 모두 $0$이 되지 않는데, 앞의 것은 $x$와 $T(x)$의 좌표가 한 칸 어긋나 $(1-t)x+tT(x)=0$이 $x=0$을 강제하고, 뒤의 것은 합의 첫 좌표가 $t$라 $0$이려면 $t=0$이어야 하며 그럼 $T(x)=0$, 곧 $x=0$이기 때문이다. 이 둘을 이으면 $S^\infty$이 한 점으로 수축한다. 

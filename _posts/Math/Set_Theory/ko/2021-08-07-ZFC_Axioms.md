@@ -11,6 +11,8 @@ sidebar:
 date: 2021-08-07
 weight: 1
 
+drift_needed: true
+
 ---
 
 ## 역사적 배경
@@ -124,7 +126,7 @@ $$\{x\in A\mid Q(x)\}$$
 
 역시 이 집합은 extensionality에 의해 유일하며, 이를 $\{A,B\}$로 표기한다. 이제 $A=B=\emptyset$으로 두면, 
 
-$$x\in \{\emptyset\}\iff x=\emptyset\iff (x=\emptyset)\wedge(x=\emptyset)\iff x\in \{\emptyset,\emptyset\}$$
+$$x\in \{\emptyset\}\iff x=\emptyset\iff (x=\emptyset)\vee(x=\emptyset)\iff x\in \{\emptyset,\emptyset\}$$
 
 로부터 $\{\emptyset, \emptyset\}=\{\emptyset\}$임을 안다. 또 $\emptyset\not\in \emptyset$이므로 $\emptyset\neq\{\emptyset\}$이다. 
 
@@ -151,4 +153,4 @@ Wikipedia, [Naive set theory](https://en.wikipedia.org/wiki/Naive_set_theory), [
 
 ---
 
-[^1]: 공리적인 집합론에서 단순히 *$$B$$의 여집합*이라는 것은 존재하지 않는다. 이를 정의하기 위해서는 전체집합이 필요하기 때문이다. 
+[^1]: 공리적인 집합론에서 단순히 *$B$의 여집합*이라는 것은 존재하지 않는다. 이를 정의하기 위해서는 전체집합이 필요하기 때문이다. 

@@ -10,6 +10,7 @@ sidebar:
 
 date: 2026-05-11
 weight: 20
+drift_needed: true
 
 
 ---
@@ -26,13 +27,13 @@ $$i_p(V, W) = \dim_{\mathbb{K}} \mathcal{O}_{\mathbb{A}^n, p} / (I(V) + I(W))$$
 으로 정의한다. 
 :::
 
-정의에 의해 $V$와 $W$는 점 $p$ 근방에서 $I(V), I(W)$의 원소들 각각의 공통 zero set으로 나타난다. 그럼 점 $p$가 이들 두 subvariety에 공통적으로 포함되기 위해서는 $I(V)$와 $I(W)$의 원소들 모두의 zero set으로 나타나야 하므로, 이를 위해 ideal sum $I(V)+I(W)$을 생각하게 된다. 일반적으로 ambient space에 비하여 $V,W$가 너무 작으면 이들은 일반적으로 만나지 않으므로 위의 식이 잘 정의되지 않는다. 즉, 우리는 $\dim V+\dim W=n$이 성립할 때만 위의 식을 사용한다. 일반적으로, 임의의 두 subvariety가 서로 만날 때 그 intersection의 예상 차원은 $\dim V + \dim W -n$이며, 이것이 점으로 나오기 위해서는 반드시 $\dim V+\dim W=n$이어야 함을 안다. 
+정의에 의해 $V$와 $W$는 점 $p$ 근방에서 $I(V), I(W)$의 원소들 각각의 공통 zero set으로 나타난다. 그럼 점 $p$가 이들 두 subvariety에 공통적으로 포함되기 위해서는 $I(V)$와 $I(W)$의 원소들 모두의 zero set으로 나타나야 하므로, 이를 위해 ideal sum $I(V)+I(W)$을 생각하게 된다. 일반적으로 ambient space에 비하여 $V,W$가 너무 크면 이들의 교집합이 양의 차원을 가져 위의 quotient가 무한차원이 되고, 반대로 너무 작으면 한쪽을 일반적으로 조금 움직이는 것만으로 서로 만나지 않게 되어 위의 식이 안정적인 값을 주지 못한다. 즉, 우리는 $\dim V+\dim W=n$이 성립할 때만 위의 식을 사용한다. 일반적으로, 임의의 두 subvariety가 서로 만날 때 그 intersection의 예상 차원은 $\dim V + \dim W -n$이며, 이것이 점으로 나오기 위해서는 반드시 $\dim V+\dim W=n$이어야 함을 안다. 
 
-일반적으로 이 정의는 local complete intersection의 경우에 적용되고, singular한 상황에서는 다음의 *Tor formula*
+일반적으로 이 정의는 local complete intersection의 경우에 적용되고, 그렇지 않은 경우에는 다음의 *Tor formula*
 
 $$i_p(V, W) = \sum_{i \ge 0} (-1)^i \dim_{\mathbb{K}} \Tor_i^{R}\bigl(R/I(V),\ R/I(W)\bigr)$$
 
-가 이를 정의해준다. 위의 식은 $i = 0$ 항에 해당한다. 이 글에서 우리는 단순한 경우만 살펴보므로 위의 [정의 1](#def1)로 충분하다. 
+가 이를 정의해준다. 여기서 $R = \mathcal{O}_{\mathbb{A}^n, p}$이다. 위의 식은 $i = 0$ 항에 해당한다. 이 글에서 우리는 단순한 경우만 살펴보므로 위의 [정의 1](#def1)로 충분하다. 
 
 ::: 예시 2
 $\mathbb{A}^2$에서 $V=\{ \y = 0\}$과 $W=\{\y = \x^2\}$가 원점에서 만난다. 각 곡선을 정의하는 ideal은 $I(V) = (\y)$, $I(W) = (\y - \x^2)$이다. 정의를 따라 원점에서의 local ring에 대한 quotient를 계산하면 
@@ -45,7 +46,7 @@ $$\mathcal{O}_{\mathbb{A}^2, 0} / (\y, \y - \x^2) = \mathcal{O}_{\mathbb{A}^2, 0
 위의 경우는 $2$차원에서 두 $1$차원 subvariety가 만나는 예시로, 우리는 이미 [§곡면에서의 리만-로흐 정리, ⁋정의 1](/ko/math/algebraic_varieties/riemann_roch_surfaces#def1)에서 이를 간략하게 소개한 바 있다. 해당 글에서 우리는 transversal intersection의 개념을 소개했는데, 이를 공식적으로 정의하자.
 
 ::: 정의 3
-두 variety $V, W \subseteq \mathbb{A}^n$이 점 $p \in V \cap W$에서 *transversely intersect*한다는 것은 tangent space의 합이 전체 공간을 채우는 것이다.
+두 variety $V, W \subseteq \mathbb{A}^n$이 양쪽 모두의 smooth point인 점 $p \in V \cap W$에서 *transversely intersect*한다는 것은 tangent space의 합이 전체 공간을 채우는 것이다.
 :::
 
 그럼 다음 두 명제는 [§곡면에서의 리만-로흐 정리, ⁋명제 2](/ko/math/algebraic_varieties/riemann_roch_surfaces#prop2)의 자연스러운 일반화이다. 
@@ -53,9 +54,9 @@ $$\mathcal{O}_{\mathbb{A}^2, 0} / (\y, \y - \x^2) = \mathcal{O}_{\mathbb{A}^2, 0
 ::: 명제 4
 Intersection multiplicity는 다음의 조건을 만족한다. 
 
-1. 임의의 $p$와 $V,W$에 대하여, $0\leq i_p(V,W)<\infty$가 항상 성립하며, $i_p(V,W)=0$은 $p\not\in V\cap W$일 때 성립한다.
+1. $p$가 $V\cap W$의 isolated point인 임의의 $p$와 $V,W$에 대하여 $0\leq i_p(V,W)<\infty$가 성립하며, $p\not\in V\cap W$이면 $i_p(V,W)=0$이다.
 2. $V,W$가 $p$에서 transversally intersect하는 것은 $i_p(V,W)=1$인 것과 동치이다. 
-3. $i_p$는 [§곡면에서의 리만-로흐 정리, ⁋명제 2](/ko/math/algebraic_varieties/riemann_roch_surfaces#prop2)의 모든 조건을 만족한다. 
+3. $i_p$는 [§곡면에서의 리만-로흐 정리, ⁋명제 2](/ko/math/algebraic_varieties/riemann_roch_surfaces#prop2)의 symmetry와 bilinearity를 만족한다. 
 :::
 
 ## Intersection Product의 정의
@@ -70,9 +71,9 @@ $$\codim(V \cap W) = \codim V + \codim W$$
 이 성립한다면 $V,W$가 *properly intersect*한다고 말한다.
 :::
 
-특히 [정의 1](#def1)은 $\codim (V\cap W)=n$인 특수한 경우이다. 이제 우리는 만일 위의 등식이 $V,W$의 모든 component에 대해 성립한다면 이를 사용하여 다음의 식
+특히 [정의 1](#def1)은 $\codim (V\cap W)=n$인 특수한 경우이다. 이제 우리는 만일 위의 등식이 $V\cap W$의 모든 irreducible component에 대해 성립한다면 이를 사용하여 다음의 식
 
-$$V \cdot W = \sum_{T \subseteq V \cap W} i_T(V, W) \, [T]$$
+$$V \cdot W = \sum_{T \subseteq V \cap W} i_T(V, W) [T]$$
 
 으로 정의할 수 있다. 여기서 $i_T(V, W)$는 component $T$에서의 intersection multiplicity로, [정의 1](#def1)의 점에서의 multiplicity를 component $T$로 자연스럽게 확장한 값이다. $T$가 점 $p$라면 $i_T(V, W) = i_p(V, W)$이고, 일반적으로는 $T$ 위의 일반적인 점에서 두 variety가 만나는 정도를 측정한 값으로, generic point에서의 intersection multiplicity로 엄밀하게 정의할 수 있다. 그럼 다음은 intersection multiplicity의 성질들을 intersection product로 올려둔 것이다. 
 
@@ -99,7 +100,7 @@ Intersection product에 의해 $\CH^\ast(X) = \bigoplus_k \CH^k(X)$는 *graded r
 이제 우리의 유일한 문제는 임의의 두 class가 주어졌을 때, 이들이 차원 조건을 만족한다 해도 두 cycle이 실제로 좋게 만나는지는 알 수 없다. 가령 현재 상태에서 우리는 특정한 class의 self-intersection을 정의할 수 없다. 이를 위해서는 더 일반적으로, 임의의 두 cycle이 주어졌을 때 하나를 rational equivalence 안에서 이동시켜 $W$와 properly intersect하도록 해 주어야 한다. 이를 보장하는 정리가 다음의 *moving lemma*이다.
 
 ::: 보조정리 8 (Moving Lemma)
-Smooth quasi-projective variety $X$와 cycle $Z \in \CH^k(X)$, 그리고 임의의 cycle $W \in \CH^l(X)$에 대해, $Z' \sim_{\text{rat}} Z$이고 $Z'$과 $W$가 properly intersect하는 $Z'$가 존재한다.
+Smooth quasi-projective variety $X$와 cycle $Z \in Z^k(X)$, 그리고 임의의 cycle $W \in Z^l(X)$에 대해, $Z' \sim_{\text{rat}} Z$이고 $Z'$과 $W$가 properly intersect하는 $Z'$가 존재한다.
 :::
 
 핵심 아이디어는 다음과 같다. $Z$를 구성하는 irreducible component $V_i$마다, $V_i$를 포함하는 충분히 "일반적인" hypersurface $H_i$로 자르고, $V_i \cap H_1 \cap \cdots \cap H_s$와 같은 형태의 cycle을 취한다. 이때 "일반적"이라는 것은 $H_i$가 $W$와 generic한 위치에서 만나도록 선택한다는 것으로, 이렇게 하면 차원이 적절히 떨어져 proper intersection을 이룬다. [§선형계, ⁋정의 5](/ko/math/algebraic_varieties/linear_systems#def5)에서 보았듯 basepoint-free linear system을 사용하면 이러한 "일반적인" 이동을 regular map으로 실현할 수 있으며, 이 과정이 rational equivalence를 보존함을 보이는 것이 증명의 핵심이다.
@@ -114,7 +115,7 @@ $$Z \cdot W := Z' \cdot W = \sum_{T \subseteq Z' \cap W} i_T(Z', W) [T]$$
 
 Moving lemma는 두 class가 주어졌을 때, 이를 perturb하여 intersection을 계산한다는 점에서 우리의 직관을 현실화한다. 그러나 이 접근은 quasi-projectivity라는 가정에 의존하며, 이를 일반적인 세팅으로 확장하기 위해서는 *deformation to normal cone*을 해야 한다. 
 
-핵심적인 관찰은 다음과 같다. 우선 [§접공간과 매끄러움, ⁋정의 13](/ko/math/algebraic_varieties/tangent_spaces_and_smoothness#def13)에서 tangent cone을 정의했던 것을 기억하자. 이는 singular point에서의 국소적 구조를 이해하는 도구였으며, 이를 일반화하여 우리는 closed embedding $i: Y \hookrightarrow X$에 대해 $Y$의 $X$ 안에서의 *normal cone* $C_{Y/X}$를 정의할 수 있다. 만일 $X$가 $Y$를 따라 smooth하다면 normal cone은 normal bundle $N_{Y/X}$가 되지만, 일반적으로는 cone 구조를 가진다.
+핵심적인 관찰은 다음과 같다. 우선 [§접공간과 매끄러움, ⁋정의 13](/ko/math/algebraic_varieties/tangent_spaces_and_smoothness#def13)에서 tangent cone을 정의했던 것을 기억하자. 이는 singular point에서의 국소적 구조를 이해하는 도구였으며, 이를 일반화하여 우리는 closed embedding $i: Y \hookrightarrow X$에 대해 $Y$의 $X$ 안에서의 *normal cone* $C_{Y/X}$를 정의할 수 있다. 만일 $i$가 regular embedding이라면 (가령 $X$와 $Y$가 모두 smooth하다면) normal cone은 normal bundle $N_{Y/X}$가 되지만, 일반적으로는 cone 구조를 가진다.
 
 ::: 명제 9 (Deformation to Normal Cone)
 Closed embedding $i: Y \hookrightarrow X$에 대해, $\mathbb{A}^1$을 매개변수로 하는 family $M \rightarrow \mathbb{A}^1$을 구성할 수 있다. 구체적으로, $t \neq 0$에서의 fiber $M_t$는 $X$ 자신이며, $t = 0$에서의 fiber $M_0$는 normal cone $C_{Y/X}$이다. 이 family의 존재는 intersection product의 well-definedness를 이 family에 대한 pushforward/pullback의 호환성으로 환원시킨다.
@@ -141,7 +142,7 @@ $$[C] \cdot [D] = \sum_{p \in C \cap D} i_p(C, D) [p] \in \CH^2(S)$$
 
 임을 보았다. 일반적인 surface의 경우 $\CH^2(S)$의 구조는 매우 복잡하며, 일반적으로 intersection multiplicity $C \cdot D = \sum_{p \in C \cap D} i_p(C, D)$는 degree map의 image로서 정수값을 얻지만, 이것의 kernel이 nontrivial일 수 있어 $\CH^2(S)$가 $\mathbb{Z}$이 아닐 수 있다.
 
-그러나 $\mathbb{P}^2$에서는 상황이 단순하다. $\CH^\ast(\mathbb{P}^2) = \mathbb{Z}[H]/(H^3)$이므로 $\CH^2(\mathbb{P}^2) \cong \mathbb{Z}$이고, 교차 수가 완전히 결정된다. Chow ring에서 conic의 class는 $[X] = 2H$이고 직선의 class는 $[L] = H$이므로, $[X] \cdot [L] = 2H \cdot H = 2H^2 = 2[\text{point}]$이다.
+그러나 $\mathbb{P}^2$에서는 상황이 단순하다. $\CH^\ast(\mathbb{P}^2) = \mathbb{Z}[H]/(H^3)$이므로 $\CH^2(\mathbb{P}^2) \cong \mathbb{Z}$이고, 교차 수가 완전히 결정된다. Chow ring에서 conic의 class는 $[C] = 2H$이고 직선의 class는 $[L] = H$이므로, $[C] \cdot [L] = 2H \cdot H = 2H^2 = 2[\text{point}]$이다.
 :::
 
 ::: 예시 12 ($\mathbb{P}^1 \times \mathbb{P}^1$)
@@ -168,7 +169,7 @@ Segre embedding $\sigma: \mathbb{P}^1 \times \mathbb{P}^1 \rightarrow \mathbb{P}
 마지막으로 유용한 다음의 공식을 소개하며 이 글을 마친다.
 
 ::: 명제 14 (Projection Formula)
-Proper morphism $f: X \rightarrow Y$와 $\alpha \in \CH^\ast(X)$, $\beta \in \CH^\ast(Y)$에 대해 
+Smooth variety 사이의 proper morphism $f: X \rightarrow Y$와 $\alpha \in \CH^\ast(X)$, $\beta \in \CH^\ast(Y)$에 대해 
 
 $$f_\ast(\alpha \cdot f^\ast \beta) = f_\ast(\alpha) \cdot \beta$$
 

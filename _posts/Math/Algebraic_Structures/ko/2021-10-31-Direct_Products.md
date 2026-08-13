@@ -1,6 +1,6 @@
 ---
 title: "군의 직접곱"
-description: "군의 직접곱을 범주론적 관점에서 정의하고, 곱집합 위에 성별한 연산으로 직접곱군을 구성하는 과정을 다룬다. 곱의 보편 성질을 증명하고, 군족의 곱이 동형 사상 아래 유일하게 결정됨을 보인다."
+description: "군의 직접곱을 범주론적 관점에서 정의하고, 곱집합 위에 정의한 연산으로 직접곱군을 구성하는 과정을 다룬다. 곱의 보편 성질을 증명하고, 군족의 곱이 동형 사상 아래 유일하게 결정됨을 보인다."
 excerpt: "Direct product of groups"
 
 categories: [Math / Algebraic Structures]
@@ -10,7 +10,7 @@ sidebar:
 
 date: 2021-10-31
 weight: 7
-
+drift_needed: true
 ---
 
 ## 군들의 곱
@@ -18,7 +18,7 @@ weight: 7
 우리는 임의의 category $\mathcal{A}$에서 product를 정의하는 방법을 알고 있다. ([\[범주론\] §극한, ⁋예시 6](/ko/math/category_theory/limits#ex6)) 다음 보조정리는 category $\Grp$의 임의의 product가 항상 존재한다는 것을 보여준다. 
 
 ::: 보조정리 1
-$\Grp$은 cartesian monoidal category이다.
+$\Grp$은 임의의 곱을 가지며, 특히 cartesian monoidal category이다. ([\[범주론\] §모노이드 범주](/ko/math/category_theory/monoidal_categories))
 :::
 ::: 증명
 우선 $\Set$에서 product의 universal property을 만족하는 곱집합 $\prod_{i\in I} G_i$는 이미 [\[집합론\] §집합의 곱, ⁋정의 1](/ko/math/set_theory/product_of_sets#def1)에서 정의했다. 표기상의 편의를 위해 $\prod_{i\in I}G_i$의 원소 $f:I\rightarrow \bigcup G_i$를 순서쌍 $(a_i)_{i\in I}$으로 표기하기로 한다.
@@ -67,14 +67,15 @@ $$x\in\ker f\iff f(x)=e\iff \forall i(\pr_i^H(f(x))=e_i)\iff \forall i((f_i\circ
 
 $$\pr_i^H(y)=\pr_i^H(f(x))=f_i(\pr_i^G(x))\in\im f_i$$
 
-이므로 $\im f=\prod\im f_i$ 또한 성립한다.
+이므로 $\im f\subseteq\prod\im f_i$가 성립한다. 역으로 $y\in\prod\im f_i$가 주어졌다면 각 $i\in I$마다 $f_i(x_i)=\pr_i^H(y)$인 $x_i\in G_i$를 고를 수 있고 ([\[집합론\] §선택공리, ⁋The Axiom of Choice.](/ko/math/set_theory/axiom_of_choice#axiom-choice)), $x=(x_i)_{i\in I}$로 두면 $f(x)=y$가 되므로 $\im f=\prod\im f_i$ 또한 성립한다.
 :::
 
 ::: 따름정리 4
-Group들의 family $(G_i)_{i\in I}$가 주어졌다 하자. 각각의 $i\in I$에 대하여 $H_i$들이 $G_i$의 normal subgroup이라면, $\prod H_i$도 $\prod G_i$의 normal subgroup이고 그 quotient group은 $\prod (G_i/H_i)$와 같다.
+Group들의 family $(G_i)_{i\in I}$가 주어졌다 하자. 각각의 $i\in I$에 대하여 $H_i$들이 $G_i$의 normal subgroup이라면, $\prod H_i$도 $\prod G_i$의 normal subgroup이고 그 quotient group은 $\prod (G_i/H_i)$와 같
+다.
 :::
 ::: 증명
-Canonical homomorphism들 $p_i:G_i\rightarrow G_i/H_i$들에 [따름정리 3](#cor3)를 적용하면 된다.
+Canonical homomorphism들 $p_i:G_i\rightarrow G_i/H_i$들에 [따름정리 3](#cor3)을 적용하면 된다.
 
 {% diagram Math/Algebraic_Structures/Direct_Products-2.svg width="18.32em" alt="product_of_normal_subgroups" %}
 

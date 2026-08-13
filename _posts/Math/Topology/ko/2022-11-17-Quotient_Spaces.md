@@ -11,6 +11,7 @@ sidebar:
 
 date: 2022-11-17
 weight: 10
+drift_needed: true
 
 ---
 
@@ -30,7 +31,7 @@ weight: 10
 3. $A$은 자기 자신의 ($X$에서의) closure $\cl A$에 대하여 열린집합이다.
 :::
 ::: 증명
-우선 $A$가 locally closed라 하고, 임의의 $x\in A$에 대하여 [정의 1](#def1)의 조건을 만족하는 $X$에서의 $x$의 열린근방을 $V_x$라 하자. 그럼 $U=\bigcup_{x\in A} V_x$는 열린집합이다. 또, [§부분공간, ⁋명제 6](/ko/math/topology/subspaces#prop6)을 적용하면 $A$는 $U$에서 닫힌집합임을 안다. 따라서 $X$의 적당한 닫힌집합 $C$에 대하여 $A=U\cap C$이므로 둘째 조건이 성립한다.
+우선 $A$가 locally closed라 하고, 임의의 $x\in A$에 대하여 [정의 1](#def1)의 조건을 만족하는 $X$에서의 $x$의 근방 $V$를 생각하자. $x\in W\subseteq V$인 열린집합 $W$를 택하면 $A\cap W=(A\cap V)\cap W$이므로 $A\cap W$ 또한 $W$에서 닫힌집합이고, 따라서 같은 조건을 만족하는 $x$의 열린근방이 존재한다. 이를 $V_x$라 하자. 그럼 $U=\bigcup_{x\in A} V_x$는 열린집합이다. 또, [§부분공간, ⁋명제 6](/ko/math/topology/subspaces#prop6)을 적용하면 $A$는 $U$에서 닫힌집합임을 안다. 따라서 $X$의 적당한 닫힌집합 $C$에 대하여 $A=U\cap C$이므로 둘째 조건이 성립한다.
 
 이제 $X$의 열린집합 $U$와 닫힌집합 $C$에 대하여 $A=U\cap C$가 성립한다고 가정하자. 그럼 $\cl A\subseteq C$이므로,
 
@@ -61,7 +62,7 @@ $$A\subseteq U\cap\cl A\subseteq U\cap C=A$$
 위상공간 $X$와, $X$ 위에 정의된 두 동치관계 $R,S$를 생각하자. 만일 $S$가 $R$보다 세밀한 동치관계라면, $X/S$ 위에 정의된 동치관계 $R/S$에 대하여 전단사함수 $(X/S)/(R/S)\rightarrow X/R$는 homeomorphism이 된다.
 :::
 ::: 증명
-$(X/S)/(R/S)\rightarrow X/R$이 전단사함수가 되는 것은 [\[집합론\] §동치관계의 예시들, ⁋정의 8](/ko/math/set_theory/examples_of_equivalence#def8)에서 이미 보인 것이다. [명제 4](#prop4)에 의하여, 이 함수가 연속인 것은 $X/S\rightarrow X/R$이 연속인 것과 동치이고, 다시 이 함수의 연속성은 $X\rightarrow X/R$이 연속인 것으로부터 얻어진다. 
+$(X/S)/(R/S)\rightarrow X/R$이 전단사함수가 되는 것은 [\[집합론\] §동치관계의 예시들, §§동치관계의 quotient](/ko/math/set_theory/examples_of_equivalence#동치관계의-quotient)에서 이미 보인 것이다. [명제 4](#prop4)에 의하여, 이 함수가 연속인 것은 $X/S\rightarrow X/R$이 연속인 것과 동치이고, 다시 이 함수의 연속성은 $X\rightarrow X/R$이 연속인 것으로부터 얻어진다. 
 
 이와 유사하게 $X/R\rightarrow(X/S)/(R/S)$의 연속성은 $X\rightarrow(X/S)/(R/S)$의 연속성으로부터 얻어지며, 이 함수는 두 연속함수의 합성
 
@@ -70,7 +71,7 @@ $$X\longrightarrow X/S\longrightarrow (X/S)/(R/S)$$
 과 같으므로 연속이다. 
 :::
 
-한편 위상공간 $X,Y$와 연속함수 $f:X\rightarrow Y$가 주어졌다 하고, $f$에 의해 정의된 동치관계 $R$을 생각하자. ([\[집합론\] §동치관계](/ko/math/set_theory/equivalence_relations)) 그럼 $f$의 canonical decomposition 
+한편 위상공간 $X,Y$와 연속함수 $f:X\rightarrow Y$가 주어졌다 하고, $f$에 의해 정의된 동치관계 $R$을 생각하자. ([\[집합론\] §동치관계의 예시들, ⁋정의 2](/ko/math/set_theory/examples_of_equivalence#def2)) 그럼 $f$의 canonical decomposition 
 
 $$X\overset{p}{\longrightarrow}X/R\overset{\bar{f}}{\longrightarrow}f(X)\overset{i}{\longrightarrow}Y$$
 
@@ -100,7 +101,7 @@ $$(p\circ s)\circ\bar{f}=\id_{X/R}$$
 
 이제 위상공간 $X$와 부분집합 $A$, $X$ 위에 주어진 동치관계 $R$을 생각하자. $p:X\rightarrow X/R$을 canonical projection이라 하면, $p\vert_A:A\rightarrow X/R$의 canonical decomposition
 
-$$A\overset{q}{\longrightarrow}A/(R\vert_A)\overset{\overline{(p\vert_A)}}{\longrightarrow} f(A)\overset{j}{\longrightarrow}X/R$$
+$$A\overset{q}{\longrightarrow}A/(R\vert_A)\overset{\overline{(p\vert_A)}}{\longrightarrow} p(A)\overset{j}{\longrightarrow}X/R$$
 
 이 정의되며 위와 동일한 논증에 의해 $\overline{(p\vert_A)}$는 연속인 bijection이 된다. 다음 명제 또한 거의 자명하다.
 
@@ -120,4 +121,4 @@ $$A\overset{q}{\longrightarrow}A/(R\vert_A)\overset{\overline{(p\vert_A)}}{\long
 
 ---
 
-[^1]: [§부분공간]에서와 마찬가지로, **[Mun]**에서는 이를 몫위상의 정의로 삼는다. 
+[^1]: [§부분공간](/ko/math/topology/subspaces)에서와 마찬가지로, **[Mun]**에서는 이를 quotient topology의 정의로 삼는다. 

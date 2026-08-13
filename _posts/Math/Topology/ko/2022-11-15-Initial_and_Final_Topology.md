@@ -10,6 +10,7 @@ sidebar:
 
 date: 2022-11-15
 weight: 6
+drift_needed: true
 
 ---
 
@@ -21,7 +22,7 @@ $$f^\mathcal{T}(V)=f^{-1}(V)$$
 
 $$f^\text{pre}:\mathcal{P}(Y)\rightarrow\mathcal{P}(X); \qquad V\mapsto f^{-1}(V)$$
 
-는 항상 잘 정의되며, 이를 $\mathcal{P}(Y)$의 부분집합 $\mathcal{T}_Y$로 제한한 것이 정확히 $f^\mathcal{T}$와 같다. 이 때 함수 $f^\text{pre}\vert_{\mathcal{T}(Y)}$의 image가 $\mathcal{T}_X\subseteq \mathcal{P}(X)$에 들어가는 것이 정확하게 $f$가 연속함수일 조건이다. 
+는 항상 잘 정의되며, 이를 $\mathcal{P}(Y)$의 부분집합 $\mathcal{T}_Y$로 제한한 것이 정확히 $f^\mathcal{T}$와 같다. 이 때 함수 $f^\text{pre}\vert_{\mathcal{T}_Y}$의 image가 $\mathcal{T}_X\subseteq \mathcal{P}(X)$에 들어가는 것이 정확하게 $f$가 연속함수일 조건이다. 
 
 특히, 임의의 집합 $X$와 그 위에 정의된 discrete topology $\mathcal{T}_1$, trivial topology $\mathcal{T}_2$를 고정하면, 위상공간 $(X, \mathcal{T}_1)$에서 임의의 위상공간 $(Y, \mathcal{T})$로의 함수가 연속이고, 임의의 위상공간 $(Y,\mathcal{T})$에서 $(X, \mathcal{T}_2)$로의 함수가 항상 연속이다. 
 
@@ -33,19 +34,19 @@ $$f^\text{pre}:\mathcal{P}(Y)\rightarrow\mathcal{P}(X); \qquad V\mapsto f^{-1}(V
 집합 $X$, 그리고 위상공간들의 family $(Y_i,\mathcal{T}_i)_{i\in I}$들이 주어졌다 하고, 각각의 $i$마다 함수 $f_i:X\rightarrow Y_i$들이 주어졌다 하자. 함수 $f_i$들을 모두 연속으로 만드는 집합 $X$ 위의 위상 중 가장 약한 것을 *$f_i$들에 의해 정의된 initial topology*라 부른다. 
 :::
 
-$X$ 위에 정의된 위상 $(\mathcal{T}_j)_{j\in J}$들에 대하여, 위상공간 $(X, \mathcal{T}_j)$에서 $(Y_i,\mathcal{T}_i)$로의 함수들 $f_i$들이 모두 연속이라 하자. 그럼 $\mathcal{T}=\bigcap_{j\in J}\mathcal{T}_j$가 $X$ 위의 위상을 정의하며 이 위상공간 $(X,\mathcal{T})$에서 $(Y_i,\mathcal{T}_i)$로의 함수들 $f_i$들이 모두 연속임을 보일 수 있다. 또, discrete topology를 정의역으로 삼는 임의의 함수는 항상 연속이므로 이러한 조건을 만족하는 위상은 항상 존재하고, 따라서 initial topology가 항상 존재한다는 것은 자명하다. 이런 종류의 논증이 항상 그렇듯이, 이는 initial topology의 존재성을 보여주는 데에는 흠잡을 곳 없는 논증이 되지만 initial topology가 어떻게 생겼는지를 살펴보는데는 별 도움이 되지 않는다. 때문에 조금 더 구체적으로 상황을 살펴볼 필요가 있다.
+$X$ 위에 정의된 위상 $(\mathcal{U}_j)_{j\in J}$들에 대하여, 위상공간 $(X, \mathcal{U}_j)$에서 $(Y_i,\mathcal{T}_i)$로의 함수들 $f_i$들이 모두 연속이라 하자. 그럼 $\mathcal{T}=\bigcap_{j\in J}\mathcal{U}_j$가 $X$ 위의 위상을 정의하며 이 위상공간 $(X,\mathcal{T})$에서 $(Y_i,\mathcal{T}_i)$로의 함수들 $f_i$들이 모두 연속임을 보일 수 있다. 또, discrete topology를 정의역으로 삼는 임의의 함수는 항상 연속이므로 이러한 조건을 만족하는 위상은 항상 존재하고, 따라서 이러한 조건을 만족하는 모든 위상들의 교집합을 취하면 initial topology가 항상 존재한다는 것은 자명하다. 이런 종류의 논증이 항상 그렇듯이, 이는 initial topology의 존재성을 보여주는 데에는 흠잡을 곳 없는 논증이 되지만 initial topology가 어떻게 생겼는지를 살펴보는데는 별 도움이 되지 않는다. 때문에 조금 더 구체적으로 상황을 살펴볼 필요가 있다.
 
-함수 $f_i$가 연속이기 위해서는 $Y_i$의 임의의 열린집합 $U_i$에 대하여 $f_i^{-1}(U_i)$가 $X$에서 열린집합이어야 하므로, 우리가 정의할 initial topology는 $f_i^{-1}(U_i)$꼴의 원소들을 모두 가지고 있어야 한다. 한편, 이들 원소들을 포함하는 위상공간은 이들의 유한한 교집합과 임의의 합집합도 포함해야 한다. 따라서 다음의 명제를 증명할 수 있다.
+함수 $f_i$가 연속이기 위해서는 $Y_i$의 임의의 열린집합 $U_i$에 대하여 $f_i^{-1}(U_i)$가 $X$에서 열린집합이어야 하므로, 우리가 정의할 initial topology는 $f_i^{-1}(U_i)$꼴의 원소들을 모두 가지고 있어야 한다. 한편, 이들 원소들을 포함하는 위상은 이들의 유한한 교집합과 임의의 합집합도 포함해야 한다. 따라서 다음의 명제를 증명할 수 있다.
 
 ::: 명제 2
 [정의 1](#def1)의 initial topology는 정확하게 다음의 집합
 
-$$\mathcal{S}=\{f_i^{-1}(U_i)\mid \text{$U_i$ open in $Y_i$}\}$$
+$$\mathcal{S}=\{f_i^{-1}(U_i)\mid i\in I, \text{$U_i$ open in $Y_i$}\}$$
 
 을 subbase로 하여 생성된 위상과 같다.
 :::
 ::: 증명
-Initial topology를 $\mathcal{T}_\ini$으로 적고, $\mathcal{S}$를 subbase로 하여 생성된 위상을 $\mathcal{T}$로 적자. $\mathcal{T}$는 정의에 의해 $f_i$들을 모두 연속으로 만들기 때문에, $\mathcal{T}_\ini$는 $\mathcal{T}$보다 약한 위상이다. 따라서 $\mathcal{T}$가 $\mathcal{T}_\ini$보다 약한 위상이라는 것만 보이면 충분한데, 이는 $\mathcal{T}$가 $\mathcal{S}$를 포함하는 위상 중 가장 약한 위상이기 때문에 자명하다.
+Initial topology를 $\mathcal{T}_\ini$으로 적고, $\mathcal{S}$를 subbase로 하여 생성된 위상을 $\mathcal{T}$로 적자. $\mathcal{T}$는 정의에 의해 $f_i$들을 모두 연속으로 만들기 때문에, $\mathcal{T}_\ini$는 $\mathcal{T}$보다 약한 위상이다. 따라서 $\mathcal{T}$가 $\mathcal{T}_\ini$보다 약한 위상이라는 것만 보이면 충분한데, $\mathcal{T}_\ini$에 대하여 각각의 $f_i$가 연속이므로 $\mathcal{S}\subseteq\mathcal{T}_\ini$이고, 이는 $\mathcal{T}$가 $\mathcal{S}$를 포함하는 위상 중 가장 약한 위상이기 때문에 자명하다.
 :::
 
 그럼 initial topology는 다음과 같은 종류의 universal property를 갖는다.

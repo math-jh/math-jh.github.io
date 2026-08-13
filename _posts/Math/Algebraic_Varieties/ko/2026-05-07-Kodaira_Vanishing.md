@@ -10,6 +10,7 @@ sidebar:
     
 date: 2026-05-07
 weight: 18
+drift_needed: true
 
 
 ---
@@ -20,10 +21,10 @@ weight: 18
 
 ## 고다이라 소멸정리
 
-우리가 다룰 기본적인 설정은 다음과 같다. $X$는 $n$차원 smooth projective variety이고, $\mathcal{L}$은 $X$ 위의 ample line bundle, $\omega_X = \det \Omega_X^1 = \Omega_X^n$은 canonical line bundle이다. ([§표준선다발, ⁋정의 5](/ko/math/algebraic_varieties/canonical_bundle#def5)) 그럼 Kodaira vanishing theorem은 다음과 같이 쓸 수 있다. 
+우리가 다룰 기본적인 설정은 다음과 같다. $X$는 $n$차원 smooth projective variety이고, $\mathcal{L}$은 $X$ 위의 ample line bundle, $\omega_X = \det \Omega_X^1 = \Omega_X^n$은 canonical line bundle이다. ([§표준선다발, ⁋정의 5](/ko/math/algebraic_varieties/canonical_bundle#def5)) 여기서 $\Omega_X^q = \bigwedge^q \Omega_X^1$이다. 그럼 Kodaira vanishing theorem은 다음과 같이 쓸 수 있다. 
 
 ::: 명제 1 (Kodaira vanishing)
-$n$차원 smooth projective variety $X$, ample line bundle $\mathcal{L}$이 주어졌다 하자. 그럼 모든 $p > 0$에 대하여
+$\operatorname{char}\mathbb{K} = 0$일 때, $n$차원 smooth projective variety $X$, ample line bundle $\mathcal{L}$이 주어졌다 하자. 그럼 모든 $p > 0$에 대하여
  
 $$H^p(X, \omega_X \otimes \mathcal{L}) = 0$$
 
@@ -59,7 +60,7 @@ $$H^p(X, \mathcal{L}^{-1}) \cong H^{n-p}(X, \omega_X \otimes \mathcal{L})^\vee$$
 Kodaira vanishing이 가장 단순한 nontrivial한 예시를 제공하는 것은 projective space $X = \mathbb{P}^n$에서이다. 
 
 ::: 예시 3
-우리는 [§표준선다발, ⁋명제 7](/ko/math/algebraic_varieties/canonical_bundle#prop7)에서
+우리는 [§표준선다발, ⁋명제 7](/ko/math/algebraic_varieties/canonical_bundle#prop7)의 Euler exact sequence로부터
 
 $$\omega_{\mathbb{P}^n} \cong \mathcal{O}(-n-1)$$
 
@@ -92,7 +93,7 @@ $$\rchi(\mathcal{O}_S(D)) = \frac{1}{2} D \cdot (D - K_S) + \rchi(\mathcal{O}_S)
 
 $$\omega_S\otimes \mathcal{L}\cong \mathcal{O}_S(K_S+L)$$
 
-임을 알고 있으며, 이를 위에 대입하면
+임을 알고 있으며, 이를 위에 대입하고 [명제 1](#prop1)로부터 $h^1(S, \omega_S \otimes \mathcal{L}) = h^2(S, \omega_S \otimes \mathcal{L}) = 0$임을 사용하면
 
 $$\rchi(S, \omega_S \otimes \mathcal{L}) = h^0(S, \omega_S \otimes \mathcal{L})$$
 
@@ -100,7 +101,7 @@ $$\rchi(S, \omega_S \otimes \mathcal{L}) = h^0(S, \omega_S \otimes \mathcal{L})$
 
 또 다른 활용은 plurigenus의 계산이다. Smooth projective variety $X$의 plurigenus $P_m(X)$는 geometric genus $p_g(X)$의 일반화로, surface의 birational invariant이다. ([§곡면에서의 리만-로흐 정리, ⁋정의 12](/ko/math/algebraic_varieties/riemann_roch_surfaces#def12)) Kodaira vanishing은 이들 불변량을 계산하는 데 직접적으로 사용될 수 있다.
 
-가령 curve $C$의 경우 우리는 이들의 birational class가 genus에 의해 결정된다는 것을 알고 있으며, plurigenus $P_m(g)$는 $g$ (와 $m$)에 대한 함수로 주어진다. 즉 본질적으로 curve $C$에 대해서는 plurigenus가 흥미로운 불변량은 아니다. 이것이 흥미로운 경우는 surface 등의 고차원의 경우로, 여기서는 birational invariant가 하나의 숫자로 결정되는 것이 아니며 본격적으로 plurigenus 모두가 필요해진다. 
+가령 curve $C$의 경우 우리는 이들의 plurigenus가 genus에 의해 결정된다는 것을 알고 있으며, 실제로 $P_m(g)$는 $g$ (와 $m$)에 대한 함수로 주어진다. 즉 본질적으로 curve $C$에 대해서는 plurigenus가 흥미로운 불변량은 아니다. 이것이 흥미로운 경우는 surface 등의 고차원의 경우로, 여기서는 birational invariant가 하나의 숫자로 결정되는 것이 아니며 본격적으로 plurigenus 모두가 필요해진다. 
 
 [§곡면에서의 리만-로흐 정리](/ko/math/algebraic_varieties/riemann_roch_surfaces)에서 보듯, surface $S$ 위의 divisor $D$에 대해 Riemann-Roch formula는
 
@@ -112,7 +113,7 @@ $$\rchi(\mathcal{O}_S(mK_S)) = \frac{m(m-1)}{2} K_S^2 + \rchi(\mathcal{O}_S)$$
 
 이다. 그런데 만일 $m \geq 2$이고 $K_S$가 ample이면 $(m-1)K_S$도 ample이므로, $mK_S = K_S + (m-1)K_S$에 [명제 1](#prop1)을 적용하여 $h^1 = h^2 = 0$을 얻는다. 따라서 이 formula로부터 직접 $P_m(S) = h^0(S, \mathcal{O}_S(mK_S))$를 계산할 수 있게 된다.
 
-한편 이러한 경우 plurigenera의 식은 asymptotically 2차식인 것으로 생각할 수 있다. 이는 
+한편 이러한 경우 plurigenera의 식은 asymptotically 2차식인 것으로 생각할 수 있다. 이는 다음의 정의로 이어진다.
 
 ::: 정의 4
 Smooth projective variety $X$의 *Kodaira dimension<sub>고다이라 차원</sub>* $\kappa(X)$는 다음과 같이 정의된다. 모든 $m \geq 1$에 대해 $P_m(X) = 0$이면 $\kappa(X) = -\infty$이다. 그렇지 않은 경우, $\kappa(X)$는 $P_m(X) = O(m^\kappa)$를 만족하는 최소의 정수 $\kappa \geq 0$로 정의된다. 즉
@@ -126,7 +127,7 @@ $$\kappa(X) = \limsup_{m \rightarrow \infty} \frac{\log P_m(X)}{\log m}$$
 으로도 쓸 수 있다.
 :::
 
-우리는 위의 계산으로부터, surface의 경우 $\kappa \in \{-\infty, 0, 1, 2\}$인 것을 안다. [Enriques–Kodaira classification](https://en.wikipedia.org/wiki/Enriques-Kodaira_classification)은 surface를 크게는 Kodaira dimension에 의해 분류하고, 여기에 $\kappa=0$과 $\kappa=-\infty$인 경우는 geometric genus $p_g$와 irregularity $q$를 사용하여 추가적인 세부 분류를 해 준다. 
+$\kappa(X) \leq \dim X$가 언제나 성립하므로, surface의 경우 $\kappa \in \{-\infty, 0, 1, 2\}$이다. [Enriques–Kodaira classification](https://en.wikipedia.org/wiki/Enriques-Kodaira_classification)은 surface를 크게는 Kodaira dimension에 의해 분류하고, 여기에 $\kappa=0$과 $\kappa=-\infty$인 경우는 geometric genus $p_g$와 irregularity $q$를 사용하여 추가적인 세부 분류를 해 준다. 
 
 우리는 [§선형계, ⁋정의 9](/ko/math/algebraic_varieties/linear_systems#def9)에서 line bundle $\mathcal{L}$이 very ample이라는 것은 complete linear system $\lvert \mathcal{L} \rvert$가 정의하는 morphism $\varphi_{\mathcal{L}}: X \rightarrow \mathbb{P}(\Gamma(X, \mathcal{L}))$이 closed embedding인 것으로 정의하였다. 당시에는 sheaf cohomology의 언어가 없었으나, 지금은 sheaf cohomology를 도입하였으므로 이를 조금 더 잘 사용할 수 있다. 
 
@@ -146,10 +147,10 @@ $$\{s \in H^0(X, \mathcal{L}) \mid s(p) = 0\} \longrightarrow \mathfrak{m}_p\mat
 의 image가 전체 $\mathfrak{m}_p\mathcal{L}_p / \mathfrak{m}_p^2\mathcal{L}_p$를 span함을 의미한다. 어렵지 않게 이들의 반대방향 또한 성립한다는 것을 확인할 수 있다. 즉 다음이 성립한다. 
 
 ::: 명제 5
-Projective variety $X$ 위의 line bundle $\mathcal{L}$에 대해, $\mathcal{L}$이 very ample인 것은 위의 두 가지 separation 조건을 동시에 만족하는 것과 동치이다.
+Algebraically closed field 위의 projective variety $X$와 그 위의 line bundle $\mathcal{L}$에 대해, $\mathcal{L}$이 very ample인 것은 위의 두 가지 separation 조건을 동시에 만족하는 것과 동치이다.
 :::
 
-이제 이러한 separation 조건들이 cohomology를 통해 검증되는 방식을 살펴 보자. 먼저 (1)의 경우, 두 점 $p \neq q$를 포함하는 closed subvariety $Z = \{p\} \cup \{q\}$를 생각하면, $Z$를 정의하는 ideal sheaf $\mathcal{I}_Z$에 대해 short exact sequence
+이제 이러한 separation 조건들이 cohomology를 통해 검증되는 방식을 살펴 보자. 먼저 (1)의 경우, 두 점 $p \neq q$를 포함하는 closed subset $Z = \{p\} \cup \{q\}$를 생각하면, $Z$를 정의하는 ideal sheaf $\mathcal{I}_Z$에 대해 short exact sequence
 
 $$0 \longrightarrow \mathcal{I}_Z \otimes \mathcal{L}^{\otimes m} \longrightarrow \mathcal{L}^{\otimes m} \longrightarrow \mathcal{L}^{\otimes m} \otimes \mathcal{O}_Z \longrightarrow 0$$
 
@@ -182,7 +183,7 @@ $$S^\mu H^0(X, \mathcal{L}^{\otimes m}) \longrightarrow H^0(X, \mathcal{L}^{\oti
 
 ## 고다이라 매장정리
 
-Kodaira vanishing의 가장 유명한 응용은 Kodaira embedding theorem이다. 다만 이는 complex manifold의 영역으로 나가는 감이 있어 우리 글에서는 간단히만 소개한다. 우선 Compact complex manifold $X$가 **Kähler manifold**라는 것은, $X$ 위에 서로 호환되는 Riemannian metric, symplectic form, complex structure가 정의된 것이다. 이 때, Line bundle $\mathcal{L}$에 Hermitian metric $h$가 주어지면, 그 curvature form $\Theta_h$가 정의되며 $\mathcal{L}$이 **positive**라는 것은 $\frac{i}{2\pi}\Theta_h$가 positive definite $(1,1)$-form이 되는 것이다. 그럼 다음이 성립한다.
+Kodaira vanishing의 가장 유명한 응용은 Kodaira embedding theorem이다. 다만 이는 complex manifold의 영역으로 나가는 감이 있어 우리 글에서는 간단히만 소개한다. 우선 Compact complex manifold $X$가 *Kähler manifold*라는 것은, $X$ 위에 서로 호환되는 Riemannian metric, symplectic form, complex structure가 정의된 것이다. 이 때, Line bundle $\mathcal{L}$에 Hermitian metric $h$가 주어지면, 그 curvature form $\Theta_h$가 정의되며 $\mathcal{L}$이 *positive*라는 것은 $\frac{i}{2\pi}\Theta_h$가 positive definite $(1,1)$-form이 되는 것이다. 그럼 다음이 성립한다.
 
 ::: 명제 6 (Kodaira embedding)
 $X$를 compact Kähler manifold, $\mathcal{L}$을 positive line bundle이라 하자. 그럼 충분히 큰 $k$에 대해 $\mathcal{L}^{\otimes k}$는 very ample이며, 특히 $\mathcal{L}$은 ample line bundle이다. 따라서 $X$는 projective variety이다.

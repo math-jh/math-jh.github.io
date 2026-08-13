@@ -24,12 +24,12 @@ revising: true
 $M$의 submodule $N$이 *primary submodule<sub>으뜸부분가군</sub>*인 것은 $\Ass(M/N)$이 하나의 prime ideal로만 구성된 것이다. 이 때, $\Ass(M/N)=\{\mathfrak{p}\}$라면 $N$을 $\mathfrak{p}$-primary submodule이라 부른다. 만일 $\Ass(M)$이 하나의 prime ideal로만 이루어져 있다면 $M$을 *coprimary submodule<sub>쌍대으뜸부분가군</sub>*이라 부른다. 
 :::
 
-즉, $M/N$이 coprimary submodule이라면 $N$은 primary submodule이 된다. 또, [§동반소아이디얼, ⁋보조정리 5](/ko/math/commutative_algebra/associated_primes#lem5)로부터 임의의 $\mathfrak{p}$-primary submodule들의 유한한 교집합은 $\mathfrak{p}$-primary인 것을 안다. 
+즉, $M/N$이 coprimary module이라면 $N$은 primary submodule이 된다. 또, [§동반소아이디얼, ⁋보조정리 5](/ko/math/commutative_algebra/associated_primes#lem5)로부터 임의의 $\mathfrak{p}$-primary submodule들의 유한한 교집합은 $\mathfrak{p}$-primary인 것을 안다. 
 
 이제 다음이 성립한다.
 
 ::: 명제 2
-Ring $A$와 prime ideal $\mathfrak{p}$에 대하여 다음이 모두 동치이다.
+Ring $A$와 prime ideal $\mathfrak{p}$, 그리고 $0$이 아닌 $A$-module $M$에 대하여 다음이 모두 동치이다.
 
 1. $A$-module $M$이 $\mathfrak{p}$-coprimary module이다.
 2. $\mathfrak{p}$는 $\ann(M)$을 포함하는 prime ideal들 중에서 minimal이며, $\mathfrak{p}$에 속하지 않는 원소들은 $M$의 zero divisor가 아니다.
@@ -38,9 +38,9 @@ Ring $A$와 prime ideal $\mathfrak{p}$에 대하여 다음이 모두 동치이�
 ::: 증명
 우선 첫 번째 조건이 성립한다 하면, 정의에 의하여 $\mathfrak{p}$가 $M$의 유일한 associated prime ideal이다. 이제 [§동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)의 1번 조건에 의하여 $\mathfrak{p}$는 반드시 $\ann(M)$을 포함하는 prime ideal 중 minimal한 것이어야 하며, 2번 조건에 의하여 $\mathfrak{p}$ 바깥에 있는 원소들은 $M$의 zero divisor가 아니다.
 
-이제 두 번째 조건이 성립한다 가정하자. 그럼 $A\setminus \mathfrak{p}$의 원소들은 $M$의 zero divisor가 아니므로, localization $M_\mathfrak{p}$에서 주어진 주장을 증명하면 충분하다. 즉 $(A, \mathfrak{p})$가 local ring이라 가정할 수 있고, 이제 $\mathfrak{p}$가 $\ann(M)$에 대해 minimal하다는 가정과 [§국소화의 성질들, ⁋따름정리 8](/ko/math/commutative_algebra/properties_of_localization#cor8)로부터 원하는 결과를 얻는다.
+이제 두 번째 조건이 성립한다 가정하자. 그럼 $A\setminus \mathfrak{p}$의 원소들은 $M$의 zero divisor가 아니므로, localization $M_\mathfrak{p}$에서 주어진 주장을 증명하면 충분하다. 즉 $(A, \mathfrak{p})$가 local ring이라 가정할 수 있고, 이제 $\mathfrak{p}$가 $\ann(M)$에 대해 minimal하다는 가정과 [§국소화의 성질들, ⁋따름정리 8](/ko/math/commutative_algebra/properties_of_localization#cor8)로부터 $\sqrt{\ann(M)}=\mathfrak{p}$를 얻는다. 그런데 $A$가 Noetherian이므로 $\mathfrak{p}$는 finitely generated이고, 각각의 generator의 적당한 거듭제곱이 $\ann(M)$에 속하므로 그 지수들을 모두 합친 것보다 큰 $k$를 택하면 $\mathfrak{p}^k\subseteq \ann(M)$을 얻는다.
 
-마지막으로 세 번째 조건이 성립한다 하면 $\mathfrak{p}$가 $\ann M$을 포함하는 prime ideal들 가운데 minimal하다는 것은 자명하며, 따라서 [§동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)의 첫째 조건에 의하여 $\mathfrak{p}$는 $M$의 associated prime ideal이다. 또, $\mathfrak{p}$ 바깥에 있는 원소들은 모두 zero divisor가 아니므로, 다시 [§동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)의 둘때 조건에 의하여 임의의 associated prime은 항상 $\mathfrak{p}$ 안에 속한다는 것을 안다. 즉, $\mathfrak{p}$가 $M$의 유일한 associated prime ideal이다.
+마지막으로 세 번째 조건이 성립한다 하면 $\mathfrak{p}$가 $\ann M$을 포함하는 prime ideal들 가운데 minimal하다는 것은 자명하며, 따라서 [§동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)의 첫째 조건에 의하여 $\mathfrak{p}$는 $M$의 associated prime ideal이다. 또, $\mathfrak{p}$ 바깥에 있는 원소들은 모두 zero divisor가 아니므로, 다시 [§동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)의 둘째 조건에 의하여 임의의 associated prime은 항상 $\mathfrak{p}$ 안에 속한다는 것을 안다. 즉, $\mathfrak{p}$가 $M$의 유일한 associated prime ideal이다.
 :::
 
 ## 으뜸분해
@@ -53,11 +53,11 @@ $M$의 임의의 submodule $M'$은 primary submodule들의 교집합이다. 즉,
 1. $M/M'$의 associated prime은 $\mathfrak{p}_k$들 중 하나이다.
 2. 만일 $M'$을 표현할 때, $M_k$들 중 불필요한 것이 없다면 $\mathfrak{p}_i$들은 정확히 $M/M'$의 associated prime이다.
 3. 만일 $M'$을 표현하는 방식 중 더 적은 $M_k$들을 이용하는 방식이 없다면, $M/M'$의 associated prime들은 정확히 index 하나 당 하나의 $\mathfrak{p}_k$가 된다. 만일 여기에 더해 $\mathfrak{p}_i$가 $M/M'$의 annihilator ideal을 포함하는 prime ideal 중 minimal한 것이라면 $M_i$는 $M'$의 $\mathfrak{p}_i$-primary component가 된다. 
-4. 주어진 minimal primary decomposition에 대하여, $A$의 임의의 multiplicative subset $S$에 대해, $\mathfrak{p}_1,\ldots, \mathfrak{p}_m$들이 $S$와 만나지 않는 prim ideal들이라 하자. 그럼
+4. 주어진 minimal primary decomposition에 대하여, $A$의 임의의 multiplicative subset $S$에 대해, $\mathfrak{p}_1,\ldots, \mathfrak{p}_m$들이 $S$와 만나지 않는 prime ideal들이라 하자. 그럼
     
     $$S^{-1}M'=\bigcap_{i=1}^m S^{-1}M_i$$
 
-    은 $S^{-1}A$에 대한 $S^{-1}M$의 minimal primary decomposition이다.
+    은 $S^{-1}A$에 대한 $S^{-1}M'$의 minimal primary decomposition이다.
 :::
 
 특히 $M=A$이고 $M'=\mathfrak a$가 $A$의 ideal인 경우, [정리 3](#thm3)의 셋째 결과에서 $\mathfrak a$를 포함하는 prime ideal들 가운데 포함관계에 대해 minimal한 것들을 $\mathfrak a$의 *minimal prime ideal<sub>극소소아이디얼</sub>*이라 부르며, $\mathfrak a=(0)$일 때는 이를 단순히 $A$의 minimal prime ideal이라 부른다.
@@ -109,7 +109,7 @@ $$\bigcap_{k\neq j} M_k\neq 0$$
 
 이 성립한다. 그럼 $M_j\cap \bigcap_{k\neq j}M_k=0$이므로,
 
-$$\bigcap_{k\neq j} M_k=\left(\bigcap_{k\neq j} M_k\right)\bigg/\left(M_k\cap \bigcap_{k\neq j}M_k\right)\cong \left(\bigcap_{k\neq j} M_k + M_j\right)\bigg/M_j\subseteq M/M_j$$
+$$\bigcap_{k\neq j} M_k=\left(\bigcap_{k\neq j} M_k\right)\bigg/\left(M_j\cap \bigcap_{k\neq j}M_k\right)\cong \left(\bigcap_{k\neq j} M_k + M_j\right)\bigg/M_j\subseteq M/M_j$$
 
 가 되어 $\bigcap_{k\neq j} M_k$는 $\mathfrak{p}_j$-coprimary이다. 이로부터 원하는 결과를 얻는다.
 
@@ -127,7 +127,7 @@ $$M \rightarrow \bigoplus_{k=1}^n M/M_k$$
 
 $$M_{\mathfrak{p}_k} \rightarrow \left(\bigoplus_{k=1}^n M/M_k\right)_{\mathfrak{p}_k} $$
 
-또한 injective이다. 한편, 각각의 $j\neq k$에 대하여 $M/M_j$는 $\mathfrak{p}_j$-coprimary이고, minimality로부터 $\mathfrak{p}_j$는 $\mathfrak{p}_i$에 속하지 않아야 하므로 $(M/M_j)_{\mathfrak{p}_k}=0$이 성립하게 되고, 이렇게 얻어지는 함수가 정확히 $M_{\mathfrak{p}_k}\rightarrow (M/M_k)_{\mathfrak{p}_k}$이므로 원하는 결과를 얻는다.
+또한 injective이다. 한편, 각각의 $j\neq k$에 대하여 $M/M_j$는 $\mathfrak{p}_j$-coprimary이고, minimality로부터 $\mathfrak{p}_j$는 $\mathfrak{p}_k$에 포함되지 않아야 하므로 $(M/M_j)_{\mathfrak{p}_k}=0$이 성립하게 되고, 이렇게 얻어지는 함수가 정확히 $M_{\mathfrak{p}_k}\rightarrow (M/M_k)_{\mathfrak{p}_k}$이므로 원하는 결과를 얻는다.
 
 마지막 주장은 거의 자명하다.
 :::
@@ -139,7 +139,7 @@ $$M_{\mathfrak{p}_k} \rightarrow \left(\bigoplus_{k=1}^n M/M_k\right)_{\mathfrak
 ::: 정리 7
 Noetherian domain $A$에 대해 다음이 성립한다.
 
-1. $f\in A$가 다음 식 $f=u p_1^{e_1}\cdots p_n^{e_n}$으로 인수분해된다 하자. 여기서 $u$는 unit이고 $p_i$는 $(p_i)$들이 서로 다른 prime ideal이도록 하는 원소들이다. 그럼 $(f)=\bigcap(p_i^{e_i})$가 $(f)$의 minimal primary decomposition이다.
+1. $f\in A$가 다음 식 $f=u p_1^{e_1}\cdots p_n^{e_n}$으로 인수분해된다 하자. 여기서 $u$는 unit이고, $e_i\geq 1$이며, $p_i$는 $(p_i)$들이 서로 다른 prime ideal이도록 하는 prime element들이다. 그럼 $(f)=\bigcap(p_i^{e_i})$가 $(f)$의 minimal primary decomposition이다.
 2. $A$가 UFD인 것과, principal ideal에 대한 minimal prime ideal들이 모두 principal인 것이 동치이다.
 :::
 ::: 증명

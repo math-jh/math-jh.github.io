@@ -10,6 +10,7 @@ sidebar:
 
 date: 2025-05-07
 weight: 13
+drift_needed: true
 
 ---
 
@@ -54,7 +55,7 @@ $$\tr_{H/G}(x)=\sum_{\bar{h}\in H/G} \bar{h}x$$
 다음이 성립한다.
 
 1. 임의의 $x\in M^G$와 $h\in H$에 대하여, $hx\in M^{hGh^{-1}}$이고 식 $\tr_{H/hGh^{-1}}(hx)=\tr_{H/G}(x)$이 성립한다. 
-2. Subgroup들 $F\leq G\leq H$에 대하여, $\tr_{H/G}\circ\tr_{G/F}=\tr_{H/F}$가 성립한다. 
+2. 관련된 index가 모두 유한한 subgroup들 $F\leq G\leq H$에 대하여, $\tr_{H/G}\circ\tr_{G/F}=\tr_{H/F}$가 성립한다. 
 3. 임의의 $x\in M^H$에 대하여, $\tr_{H/G}(x)=[H:G].x$가 성립한다. 
 :::
 
@@ -94,15 +95,15 @@ $$x\otimes y=x_1\otimes x_2\otimes \cdots \otimes x_p\otimes y_1\otimes y_2\otim
 
 $$xy=\tr_{S_{p+q}/S_p\times S_q}(x\otimes y)$$
 
-으로 정의하면 $xy\in M^{S_{p+q}}$이고 그 값은 
+으로 정의하면 $xy\in (\T^{p+q}M)^{S_{p+q}}=\Sym^{p+q}(M)$이고 그 값은 
 
-$$\sum_{S_{p+q}/(S_p\times S_q)} \bar{\sigma}(x\otimes y)$$
+$$\sum_{\bar{\sigma}\in S_{p+q}/(S_p\times S_q)} \bar{\sigma}(x\otimes y)$$
 
 이다. 한편, $S_{p,q}$를 다음의 식
 
 $$\sigma(1)<\sigma(2)< \cdots < \sigma(p), \qquad \sigma(p+1)<\sigma(p+2)<\cdots< \sigma(p+q)$$
 
-를 만족하는 $\sigma$들로 이루어진 $S_{p+q}$의 부분집합이라 하면 어렵지 않게 $S_{p+q}/S_p\times S_q$와 $S_{p,q}$ 사이의 bijection을 찾을 수 있다. 이는 꽤나 자연스러운 것이, $S_p\times S_q$의 원소들은 automorphism의 치역을 고정해놓은 후, 그 안에서의 permutation은 마음대로 움직여도 되는 원소들이고 $S_{p,q}$의 원소들은 반대로 automorphism의 치역은 마음대로 택하되 그 안에서의 permutation은 하나로 고정한 것들이기 때문이다. 따라서 위의 식은 다시
+를 만족하는 $\sigma$들로 이루어진 $S_{p+q}$의 부분집합이라 하면 어렵지 않게 $S_{p+q}/S_p\times S_q$와 $S_{p,q}$ 사이의 bijection을 찾을 수 있다. 이는 꽤나 자연스러운 것이, $S_p\times S_q$의 원소들은 두 블록의 image를 고정해놓은 후, 그 안에서의 permutation은 마음대로 움직여도 되는 원소들이고 $S_{p,q}$의 원소들은 반대로 두 블록의 image는 마음대로 택하되 그 안에서의 permutation은 하나로 고정한 것들이기 때문이다. 따라서 위의 식은 다시
 
 $$xy=\sum_{\sigma\in S_{p,q}}\sigma(x\otimes y)$$
 
@@ -112,7 +113,7 @@ $$xy=\sum_{\sigma\in S_{p,q}}\sigma(x\otimes y)$$
 임의의 $A$-module $M$에 대하여 다음이 성립한다.
 
 1. $\Sym(M)$은 위에서 정의한 곱셈에 의해 associative, commutative unital $A$-algebra가 된다. 
-2. 양의 정수 $p_1,\ldots, p_n$에 대하여, 다음의 식
+2. 양의 정수 $p_1,\ldots, p_n$과 $x_i\in \Sym^{p_i}(M)$에 대하여, 다음의 식
     
     $$x_1x_2\cdots x_n=\tr_{S_{p_1+\cdots+p_n}/S_{p_1}\times\cdots\times S_{p_n}}(x_1\otimes \cdots\otimes x_n)$$
 
@@ -125,7 +126,7 @@ $$x_2\cdots x_n=\tr_{S_{p_2+\dots+p_n}/(S_{p_2}\times\cdots\times S_{p_n})}(x_2 
 
 이 성립한다고 가정하자. 이제 $S_{p_1+\cdots+p_n}$의 subgroup들의 tower
 
-$$S_{p_1+\cdots+p_n}\geq S_{p_1}\times S_{p_2+\cdots p_n}\geq \left\{\id_{p_1}\right\}\times S_{p_2+\cdots+p_n}$$
+$$S_{p_1+\cdots+p_n}\geq S_{p_1}\times S_{p_2+\cdots+p_n}\geq \left\{\id_{p_1}\right\}\times S_{p_2+\cdots+p_n}$$
 
 을 생각하면, [명제 2](#prop2)의 결과에 의하여
 
@@ -141,7 +142,7 @@ $$\tr_{S_{p_1+\cdots +p_n}/S_{p_2+\cdots +p_n}}(x_1\otimes\cdots\otimes x_n)=\tr
 
 이 성립한다. 만일 처음 시작을 다음 subgroup들의 tower
 
-$$S_{p_1+\cdots+p_n}\geq S_{p_1+\cdots p_{n-1}}\times S_{p_n}\geq S_{p_1+\cdots p_{n-1}}\times 1$$
+$$S_{p_1+\cdots+p_n}\geq S_{p_1+\cdots+p_{n-1}}\times S_{p_n}\geq S_{p_1+\cdots+p_{n-1}}\times 1$$
 
 로 시작했다면 
 
@@ -171,11 +172,11 @@ $$\gamma_k(x)=\underbrace{x\otimes\cdots\otimes x}_\text{\scriptsize $k$ times}$
     이 성립한다. 
 3. 임의의 $x_1,\ldots, x_n\in M$에 대하여, $p=p_1+\cdots+p_n$이라 하자. 그럼 $\{1,\ldots, p\}=P_1\cup\cdots\cup P_n$이도록 하는 집합 $\{1,\ldots, p\}$의 분할들의 순서쌍들의 집합
 
-    $$\mathscr{P}=\left\{(P_1,\ldots, P_n)\bigg\vert \bigcup_{k=1}^n P_k=\{1,\ldots, p\}, P_i\cap P_j=\emptyset\right\}$$
+    $$\mathscr{P}=\left\{(P_1,\ldots, P_n)\bigg\vert \bigcup_{k=1}^n P_k=\{1,\ldots, p\}, \lvert P_k\rvert=p_k, P_i\cap P_j=\emptyset\text{ for }i\neq j\right\}$$
 
     과, 각각의 $P\in\mathscr{P}$마다 정의된 $i\in P_{\phi(i)}$이도록 하는 함수 $\phi:\{1,\ldots, p\} \rightarrow \{1,\ldots, n\}$에 대하여,
 
-    $$\gamma_{p_1}(x_1)\cdots\gamma_{p_n}(x_n)=\sum_{P\in \mathscr{P}}x_{\phi(1)}\otimes \cdots x_{\phi(p)}$$
+    $$\gamma_{p_1}(x_1)\cdots\gamma_{p_n}(x_n)=\sum_{P\in \mathscr{P}}x_{\phi(1)}\otimes \cdots \otimes x_{\phi(p)}$$
 
     이 성립한다. 
 4. 임의의 $x\in M$과 자연수 $p,q$에 대하여, 식
@@ -205,7 +206,7 @@ $$N_1=\sum_{\omega\in\Omega} Ay_\omega,\qquad N_2=\sum_{b'\in B'}Ab'$$
 
 라 하면 $N=N_1\oplus N_2$이다. 
 
-이제 보여야 할 것은 $N_1=N^H$이다. 가정에 의해 $N_1\subseteq N^H$는 자명하다. 한편 임의의 $y\in N^H$에 대하여, $y$를 $A$-basis $B$의 linear combination $y=\sum \alpha_b b$로 나타내면 모든 $b\in B$와 모든 $h\in H$에 대하여 $\alpha_{bh}=\alpha_b$가 성립해야 하는 것을 안다. 이로부터 $y\in N_1$이어야 한다. 
+이제 보여야 할 것은 $N_1=N^H$이다. 가정에 의해 $N_1\subseteq N^H$는 자명하다. 한편 임의의 $y\in N^H$에 대하여, $y$를 $A$-basis $B$의 linear combination $y=\sum \alpha_b b$로 나타내면 모든 $b\in B$와 모든 $h\in H$에 대하여 $\alpha_{hb}=\alpha_b$가 성립해야 하는 것을 안다. 이로부터 $y\in N_1$이어야 한다. 
 :::
 
 그럼 이를 이용하여 다음의 명제를 보일 수 있다. 
@@ -227,7 +228,7 @@ $A$-module homomorphism $u: M \rightarrow N$에 대하여,
 
 $$\T(u)\vert_{\Sym(M)}:\Sym(M) \rightarrow \Sym(N)$$
 
-이 잘 정의된다. 우리는 $\T(u)\vert_{\Sym(M)}$을 간단히 $\Sym(u)$로 적는다. 그러면 $\Sym$이 functor가 되는 것을 알고, 뿐만 아니라 [§텐서대수](/ko/math/multilinear_algebra/tensor_algebras)의 해당하는 성질들로부터 다음의 natural isomorphism 
+이 잘 정의된다. 우리는 $\T(u)\vert_{\Sym(M)}$을 간단히 $\Sym(u)$로 적는다. 그러면 $\Sym$이 functor가 되는 것을 알고, 뿐만 아니라 [§텐서대수](/ko/math/multilinear_algebra/tensor_algebras)의 해당하는 성질들로부터, 각 $M_i$가 free $A$-module일 때 다음의 natural isomorphism 
 
 $$\bigotimes_{i\in I}\Sym(M_i)\rightarrow \Sym\left(\bigoplus_{i\in I} M_i\right)$$
 
@@ -248,7 +249,7 @@ $$s:\T(M)\rightarrow \Sym(M);\qquad x\mapsto \sum_{\sigma\in S_n}\sigma x$$
 ::: 참고 8
 위와 같은 이유로, 몇몇 reference들에는 처음 symmetric product를 정의할 때부터
 
-$$xy=\frac{1}{p!q!}\tr_{S_{p+q}/(S_p\times S_q)}(x\otimes y)$$
+$$xy=\frac{p!q!}{(p+q)!}\tr_{S_{p+q}/(S_p\times S_q)}(x\otimes y)$$
 
 으로 정의하기도 한다. 이렇게 했을 때 유리한 점은 위와 같은 계수를 더 이상 신경쓸 필요가 없다는 것이나, 위의 표기가 말이 되기 위해서는 처음부터 $\T(M)$ 위에 $\mathbb{Q}$-vector space 구조가 있어야 한다. 
 
@@ -286,10 +287,10 @@ $$t: \Sym(M)\hookrightarrow \T(M)\overset{p}{\longrightarrow}\S(M)$$
 두 $A$-module $M,N$, 자연수 $n$과 $u: M \rightarrow N$이 주어졌다 하자. 만일 $M$이 free $A$-module이라면 다음이 모두 동치이다. 
 
 1. 식 $u(x)=v(x,\ldots, x)$를 만족하는 $n$-linear map $v: M^n \rightarrow N$이 존재한다. 
-2. 식 $u(x)=w(\gamma_n(x))$를 만족하는 linear map $w: \Sym(M) \rightarrow N$이 존재한다. 
+2. 식 $u(x)=w(\gamma_n(x))$를 만족하는 linear map $w: \Sym^n(M) \rightarrow N$이 존재한다. 
 3. $M$의 basis $(e_i)_{i\in I}$, $(\mathbb{N}^{(I)})_n$-indexed family $(y_\nu)$가 존재하여 
     
-    $$u\left(\sum_{i\in I}\lambda_i e_i\right)=\sum_{\nu\in\mathbb{N}^{(I)})_n}\lambda^\nu y_\nu$$
+    $$u\left(\sum_{i\in I}\lambda_i e_i\right)=\sum_{\nu\in(\mathbb{N}^{(I)})_n}\lambda^\nu y_\nu$$
 
     이도록 할 수 있다. 
 4. $M$의 basis $(e_i)_{i\in I}$마다 3번 조건의 식을 만족하는 family $(y_\nu)$를 찾을 수 있다.
@@ -298,7 +299,7 @@ $$t: \Sym(M)\hookrightarrow \T(M)\overset{p}{\longrightarrow}\S(M)$$
 그럼 이 동치조건들을 만족하는 map $u: M \rightarrow N$들을 degree $n$ *homogeneous polynomial mapping*이라 부르고 이들의 모임을 $\Poly^n(M,N)$으로 적는다. 위의 명제의 첫째 조건과 둘째 조건은 각각 $M$에서 $N$으로의 $n$-linear map들의 모임에서 $\Poly^n(M,N)$으로의 surjection, $\Hom_A(\Sym^n(M), N)$에서 $\Poly^n(M,N)$으로의 surjection을 각각 유도하며, 셋째 조건과 넷째 조건은 이 이름 *polynomial mapping*을 정당화한다. 
 
 ::: 예시 11
-$A$-module $N$에 대하여, free $A$-module $A^{(I)}$이 주어졌다 하고 다항식 $u\in N[\x_i]_{i\in I}$를 하나 고정하자. 그럼 다음의 식
+$A$-module $N$에 대하여, free $A$-module $A^{(I)}$이 주어졌다 하고 $n$차 homogeneous polynomial $u\in N[\x_i]_{i\in I}$를 하나 고정하자. 그럼 다음의 식
 
 $$(x_i)_{i\in I} \mapsto u(x_i)\in N$$
 
@@ -314,7 +315,7 @@ $$u(x)=v(x,\ldots, x)$$
 
 을 만족하는 <em-ko>유일한</em-ko> symmetric $n$-linear map $v:M^n \rightarrow N$이 존재한다. 뿐만 아니라, 임의의 $x_1,\ldots, x_n\in M$에 대하여, 명시적으로
 
-$$v(x_1,\ldots, x_n)=\frac{1}{n!}\sum_{H\subseteq \{1,\ldots, n\}}(-1)^{\lvert H\rvert}u\left(\sum_{i\in H} x_i\right)$$
+$$v(x_1,\ldots, x_n)=\frac{1}{n!}\sum_{H\subseteq \{1,\ldots, n\}}(-1)^{n-\lvert H\rvert}u\left(\sum_{i\in H} x_i\right)$$
 
 이 성립한다. 
 :::
@@ -325,7 +326,7 @@ $$v(x_1,\ldots, x_n)=\frac{1}{n!}\sum_{H\subseteq \{1,\ldots, n\}}(-1)^{\lvert H
 [명제 10](#prop10)의 상황을 가정하고, canonical homomorphism $\Hom_A(\Sym^n(M), N) \rightarrow \Poly^n(M,N)$을 생각하자. 그럼 다음이 성립한다.
 
 1. 만일 $A$가 무한집합인 integral domain이고 $N$이 torsion-free라면 이 homomorphism은 isomorphism이다. 
-2. 만일 $y\mapsto n!.y$가 $N$에서 $N$으로의 injective endomorphism이라면 $u$는 isomorphism이다. 
+2. 만일 $y\mapsto n!.y$가 $N$에서 $N$으로의 injective endomorphism이라면 이 homomorphism은 isomorphism이다. 
 :::
 
 ## 대칭함수
@@ -338,22 +339,22 @@ $$\x_i\mapsto \x_{\sigma(i)}$$
 
 을 통해 polynomial ring $A[\x_1,\ldots, \x_n]$의 endomorphism을 정의할 수 있다. 그럼 이 action에 대한 invariant들의 모임
 
-$$A[\x_1,\ldots, \x_n]^{S_n}=\{p\in A[x_1,\ldots, \x_n]\mid \sigma\cdot p=p\}$$
+$$A[\x_1,\ldots, \x_n]^{S_n}=\{p\in A[\x_1,\ldots, \x_n]\mid \sigma\cdot p=p\}$$
 
 을 생각할 수 있다. 우선 우리는 이들이 $A$-algebra로서 다음의 원소들
 
-$$s_k=\sum_{\substack{H\subseteq \{1,\ldots, n\}\\\lvert H\rvert=k}}\prod_{i\in H} x_i$$
+$$s_k=\sum_{\substack{H\subseteq \{1,\ldots, n\}\\\lvert H\rvert=k}}\prod_{i\in H} \x_i$$
 
 로 생성된다는 것을 확인할 수 있다. 명시적으로
 
 $$s_0=1,\quad s_1=\sum_{i=1}^n \x_i,\quad s_2=\sum_{1\leq i< j\leq n} \x_i\x_j,\quad \cdots \quad s_n=\x_1\cdots\x_n$$
 
-으로 주어진다. 그럼 귀납법을 통해 $s_i$들이 $A$ 위에서 
+으로 주어진다. 그럼 귀납법을 통해 $s_1,\ldots, s_n$이 $A$ 위에서 
 Algebraically independent인 것을 보일 수 있다. 즉, 다음의 식
 
-$$u(s_0,\ldots, s_n)=0$$
+$$u(s_1,\ldots, s_n)=0$$
 
-을 만족하는 $u\in A[\x_0,\ldots, \x_n]$은 존재하지 않는다. 또, 다음의 식
+을 만족하는 $0$이 아닌 $u\in A[\x_1,\ldots, \x_n]$은 존재하지 않는다. 또, 다음의 식
 
 $$\x^\nu=\x_1^{\nu(1)}\cdots\x_n^{\nu(n)},\qquad 0\leq\nu(i)< i$$
 
@@ -371,7 +372,7 @@ $$f(\x)=\x^n+a_{n-1}\x^{n-1}+\cdots +a_1\x +a_0$$
 
 에 대하여 다음의 $A$-algebra
 
-$$E_f=A[\x_1,\ldots,\x_n]/\mathfrak{a},\qquad \mathfrak{a}=(s_k+(-1)^{k+1}a_k)$$
+$$E_f=A[\x_1,\ldots,\x_n]/\mathfrak{a},\qquad \mathfrak{a}=(s_k+(-1)^{k+1}a_{n-k})$$
 
 를 생각할 수 있으며, 이 때 $f$는, 계수를 $A$ 대신 $E_f$로 확장하면, 일차식들의 곱으로 완전히 인수분해된다. 뿐만 아니라 $E_f$는 이러한 성질을 갖는 $A$-algebra 중 universal한 대상인데, 이를 엄밀히 적으면 다음과 같다.
 
@@ -397,7 +398,7 @@ Elementary symmetric polynomial이 $\prod_{i=1}^n (1 + \x_i T) = \sum_{k=0}^n e_
 
 $$\prod_{i=1}^n \frac{1}{1 - \x_i T} = \sum_{k \geq 0} h_k T^k$$
 
-로 나타난다. 두 생성함수의 곱이 $1$이라는 사실에서 $e$와 $h$를 잇는 관계 $\sum_{j=0}^k (-1)^j e_j\, h_{k-j} = 0$ ($k \geq 1$) 이 따라오며, $h_1, \ldots, h_n$ 또한 $e_1, \ldots, e_n$과 마찬가지로 대칭다항식 ring $A[\x_1, \ldots, \x_n]^{S_n}$을 생성한다.
+로 나타난다. 첫째 생성함수에서 $T$를 $-T$로 바꾼 $\prod_{i=1}^n (1 - \x_i T)$와 둘째 생성함수의 곱이 $1$이라는 사실에서 $e$와 $h$를 잇는 관계 $\sum_{j=0}^k (-1)^j e_j\, h_{k-j} = 0$ ($k \geq 1$) 이 따라오며, $h_1, \ldots, h_n$ 또한 $e_1, \ldots, e_n$과 마찬가지로 대칭다항식 ring $A[\x_1, \ldots, \x_n]^{S_n}$을 생성한다.
 
 ::: 정의 16
 약감소하는 음 아닌 정수열 $\lambda = (\lambda_1 \geq \lambda_2 \geq \cdots \geq \lambda_n \geq 0)$ — 이를 *partition<sub>분할</sub>*이라 한다 — 에 대하여, *Schur polynomial<sub>슈어 다항식</sub>* $s_\lambda$를 두 교대다항식의 비

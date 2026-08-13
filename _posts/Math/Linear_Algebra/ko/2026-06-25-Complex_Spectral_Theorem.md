@@ -13,6 +13,8 @@ date: 2026-06-25
 
 weight: 25
 
+drift_needed: true
+
 ---
 
 [§스펙트럼 정리](/ko/math/linear_algebra/spectral_theorem)에서 우리는 $\mathbb{R}$-내적공간 위의 self-adjoint operator가 정확히 orthonormal basis로 대각화됨을 보았으며, 그 과정에서 필수적으로 $\mathbb{C}$로 올라가야 했었다. 이제 우리는 복소수 행렬들에 대해 spectral theorem이 어떠한 정리를 주는지를 살펴본다. 
@@ -49,7 +51,7 @@ $$LL^\ast=L^\ast L$$
 ::: 증명
 $\dim V$에 대한 귀납법으로 진행한다. 우리는 $V$의 orthonormal basis $\{e_1,\ldots,e_n\}$이 존재하여 각 $j$에 대해 $Le_j\in\span(e_1,\ldots,e_j)$임을 보여야 한다. $\dim V\leq 1$인 경우는 자명하므로, $\dim V=n\geq 2$라 하자.
 
-$L^\ast$의 특성다항식은 degree가 $1$ 이상이므로 [§특성다항식, ⁋정리 8](/ko/math/linear_algebra/characteristic_polynomial#thm8)에 의하여 근을 가지고, 따라서 $L^\ast$은 $\lVert e_n\rVert=1$인 고유벡터 $e_n$을 가진다. 이제 $V$에서 $e_n$이 span하는 직선의 complement $W=(\span e_n)^\perp$를 생각하자. 그럼
+$L^\ast$의 특성다항식은 degree가 $1$ 이상이므로 [§특성다항식, ⁋정리 8](/ko/math/linear_algebra/characteristic_polynomial#thm8)에 의하여 근을 가지고, 따라서 $L^\ast$은 어떤 고윳값 $\mu$에 대하여 $\lVert e_n\rVert=1$인 고유벡터 $e_n$을 가진다. 이제 $V$에서 $e_n$이 span하는 직선의 complement $W=(\span e_n)^\perp$를 생각하자. 그럼
 
 $$\langle Lw,e_n\rangle=\langle w,L^\ast e_n\rangle=\langle w,\mu e_n\rangle=\mu\langle w,e_n\rangle=0$$
 
@@ -76,7 +78,7 @@ $$\lVert Te_1\rVert^2=\langle Te_1,Te_1\rangle=\langle e_1,T^\ast Te_1\rangle=\l
 이고, 따라서 $\lvert T_{11}\rvert^2=\sum_{j}\lvert T_{1j}\rvert^2$이므로 $j>1$에 대해 $T_{1j}=0$이다. 즉 첫째 행은 대각성분을 제외하면 모두 $0$이다. 그럼 $T$의 둘째 행 이하는 첫째 행·열을 떼어 낸 $(n-1)\times(n-1)$ upper triangular normal matrix를 이루므로, 귀납적으로 그것도 대각이 되어 $T$ 전체가 대각이다. 따라서 $A=UTU^\ast$은 unitary diagonalization이다.
 :::
 
-Schur 분해는 [§조르당 표준형](/ko/math/linear_algebra/Jordan_canonical_form)과 좋은 대조를 이룬다. Jordan canonical form은 일반적으로 unitary가 아닌 기저변환을 써서 행렬을 표준적인 block 형태로 만드는 반면, Schur 분해는 기저변환을 unitary로 제한하는 대신 표준형을 포기하고 upper triangular 형태에 만족한다. 후자는 orthonormality가 보존되어 수치적으로 안정적이라는 장점이 있어 응용에서 자주 쓰인다.
+Schur 분해는 [§조르당 표준형](/ko/math/linear_algebra/Jordan_canonical_form)과 좋은 대조를 이룬다. Jordan canonical form은 일반적으로 unitary가 아닌 change of basis를 써서 행렬을 표준적인 block 형태로 만드는 반면, Schur 분해는 change of basis를 unitary로 제한하는 대신 표준형을 포기하고 upper triangular 형태에 만족한다. 후자는 orthonormality가 보존되어 수치적으로 안정적이라는 장점이 있어 응용에서 자주 쓰인다.
 
 ## 복소 스펙트럼 정리
 
@@ -124,7 +126,7 @@ $$\lVert v\rVert^2=\langle Lv,Lv\rangle=\langle\lambda v,\lambda v\rangle=\bar\l
 이고, $\lVert v\rVert^2>0$이므로 $\lvert\lambda\rvert^2=1$, 즉 $\lvert\lambda\rvert=1$이다.
 :::
 
-복소 spectrum 정리는 실수판인 [§스펙트럼 정리, ⁋정리 5](/ko/math/linear_algebra/spectral_theorem#thm5)를 특수한 경우로 포함한다. 즉, 실수 symmetric matrix $A$는 성분이 실수이므로 복소행렬로 보면 $A^\ast=\bar A^t=A^t=A$가 되어 복소수 상에서도 self-adjoint이고, 따라서 [명제 7](#prop7)에 의하여 그 고윳값은 모두 실수이기 때문이다.  
+복소 spectrum 정리는 실수판인 [§스펙트럼 정리, ⁋정리 5](/ko/math/linear_algebra/spectral_theorem#thm5)를 특수한 경우로 포함한다. 즉, 실수 symmetric matrix $A$는 성분이 실수이므로 복소행렬로 보면 $A^\ast=\bar A^t=A^t=A$가 되어 복소수 상에서도 self-adjoint이고, 따라서 [명제 7](#prop7)에 의하여 그 고윳값은 모두 실수이기 때문이다. 고윳값 $\lambda$가 실수이면 $A-\lambda I$가 실수행렬이므로 그 kernel도 실수 위에서 같은 차원을 가지고, 따라서 고유벡터를 실수 범위에서 택해 orthonormal basis를 만들 수 있다.  
 
 ---
 

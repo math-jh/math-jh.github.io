@@ -10,6 +10,7 @@ sidebar:
 
 date: 2024-10-17
 weight: 8
+drift_needed: true
 
 ---
 
@@ -34,7 +35,7 @@ $$p(\x)=\x^n+p_1\x^{n-1}+\cdots+p_n,\qquad p_k\in \mathfrak{a}^k$$
 Ring $A$에 대하여, ideal $\mathfrak{a}\subseteq A[\x]$이 주어졌다 하고, $B=A[\x]/\mathfrak{a}$, 그리고 $\x+\mathfrak{a}\in B$를 $b$로 표기하자. 그럼 다음이 성립한다.
 
 1. $B$가 $A$-module로서 $n$개 이하의 원소로 생성되는 것과 $\mathfrak{a}$가 $n$차 이하의 monic polynomial을 포함하는 것이 동치이다. 이 때, $B$는 $1,b,\cdots,b^{n-1}$로 생성된다. 
-2. $B$가 $A$-module로서 free module인 것은 $\mathfrak{a}$가 monic polynomial로 생성되는 것과 동치이다. 이 때 $1,b,\cdots,b^{n-1}$가 $B$의 basis가 된다.
+2. $B$가 $A$-module로서 rank $n$의 free module인 것은 $\mathfrak{a}$가 $n$차 monic polynomial로 생성되는 것과 동치이다. 이 때 $1,b,\cdots,b^{n-1}$가 $B$의 basis가 된다.
 :::
 ::: 증명
 1. 한쪽 방향은 자명하다. 거꾸로 $B$가 $A$-module로서 $n$개의 원소로 생성된다 하자. 이제 $B$의 원소에 $b$를 곱하여 얻어지는 $A$-module endomorphism $b:B \rightarrow B$를 생각하자. Ideal $A$에 대해 [정리 1](#thm1)을 적용하면 이 endomorphism이 $n$차 monic polynomial $p(x)$를 만족한다는 것을 알고, 이것은 원소로서 $b$를 대입해도 $0$이 되어야 한다. 따라서 $b$의 정의에 의하여 $p(\x)\in \mathfrak{a}$임을 안다.
@@ -67,12 +68,12 @@ Ring homomorphism $\phi:A\rightarrow E$가 주어졌다 하자.
 2. $E$의 원소 $x$가 $\phi$에 대해 *integral<sub>정수적</sub>*이라는 것은 적당한 monic polynomial $p\in A[\x]$가 존재하여 $(\phi[\x](p))(x)=0$인 것이다. $E$의 모든 원소가 $\phi$에 대해 integral이라면, $\phi$를 *integral homomorphism<sub>정수적 준동형사상</sub>*이라 부른다. 만일 extension $\phi$가 integral homomorphism이라면, $E$를 $A$의 *integral extension<sub>정수적 확장</sub>*이라 부른다. 
 3. $E$의 원소 중, $\phi$에 대해 integral인 원소를 모두 모은 것을 *$E$에서의 $A$의 integral closure<sub>정수적 폐포</sub>* 혹은 *$E$ 안에서의 $A$의 normalization<sub>정규화</sub>*라 부른다. 만일 $A$가 integral domain이라면, $\Frac(A)$ 안에서의 $A$의 integral closure를 별다른 수식어 없이 *$A$의 normalization*이라 부른다. Integral domain $A$가 *normal domain<sub>정규정역</sub>*인 것은 $A$의 normalization이 자기 자신인 것이다. 
 4. $A$-module $\phi^\ast E$가 finitely generated $A$-module이라면, $\phi: A \rightarrow E$를 *finite homomorphism<sub>유한 준동형사상</sub>*이라 부른다. 
-5. $A$-module $\phi^\ast E$가 <em-ko>$A$-algebra로서</em-ko> finitely generated라면, $\phi: A \rightarrow E$를 *finite type homomorphism<sub>유한형 준동형사상</sub>*이라 부른다. 
+5. $A$-algebra $E$가 finitely generated $A$-algebra라면, $\phi: A \rightarrow E$를 *finite type homomorphism<sub>유한형 준동형사상</sub>*이라 부른다. 
 :::
 
 문맥상 structure morphism $\phi: A \rightarrow E$가 명확할 경우, $x$가 $\phi$에 대해 integral이라는 말 대신 $x$가 $A$에 대해 integral이라는 표현을 사용하기도 한다. 비슷하게, 이런 경우에는 $\phi$가 integral homomorphism이라는 말 대신 $E$가 $A$에 대해 integral이라 말한다. 
 
-임의의 finite homomorphism은 그 정의에 의해 finite type homomorphism이다. 한편 finite homomorphism $\phi: A \rightarrow E$에 대하여, $x\times-: E \rightarrow E$는 $A$-algebra endomorphism이므로 [정리 1](#thm1)을 적용하면 $x$가 $\phi$에 대해 integral임을 안다. 즉, finite homomorphism은 integral이기도 하다. 다음 보조정리는 이 역을 보여준다. 
+임의의 finite homomorphism은 그 정의에 의해 finite type homomorphism이다. 한편 finite homomorphism $\phi: A \rightarrow E$와 임의의 $x\in E$에 대하여, $x\times-: E \rightarrow E$는 $A$-module endomorphism이므로 [정리 1](#thm1)을 적용하면 $x$가 $\phi$에 대해 integral임을 안다. 즉, finite homomorphism은 integral이기도 하다. 다음 보조정리는 이 역을 보여준다. 
 
 ::: 보조정리 4
 Ring homomorphism $\phi$가 finite인 것은 $\phi$가 integral homomorphism of finite type인 것과 동치이다.
@@ -84,7 +85,7 @@ Ring homomorphism $\phi$가 finite인 것은 $\phi$가 integral homomorphism of 
 한편 $E$가 $A$에 대하여 integral인 것과, $E$의 각각의 원소들이 integral인 것이 서로 관계가 있기를 기대하는 것이 자연스럽다. 이를 위해 우선 다음 보조정리를 보인다.
 
 ::: 보조정리 5
-Ring homomorphism $\phi: A \rightarrow E$와 $E$의 원소 $x$가 주어졌다 하자. 그럼 $x$가 $A$에 대해 integral인 것은, 적당한 $E$-module $N$과 $N$의 $A$-submodule $M$이 존재하여, $M$은 $E$의 어떠한 nonzero element에 대해서도 annihilate되지 않으며 포함관계 $xM\subseteq M$이 성립하는 것과 동치이다. 
+Ring homomorphism $\phi: A \rightarrow E$와 $E$의 원소 $x$가 주어졌다 하자. 그럼 $x$가 $A$에 대해 integral인 것은, 적당한 $E$-module $N$과, $A$-module로서 finitely generated인 $N$의 $A$-submodule $M$이 존재하여, $M$은 $E$의 어떠한 nonzero element에 대해서도 annihilate되지 않으며 포함관계 $xM\subseteq M$이 성립하는 것과 동치이다. 
 :::
 ::: 증명
 우선 $x$가 $A$에 대하여 integral이라 하자. 그럼 $N=E$로 잡으면 $M=A[x]$는 [명제 2](#prop2)에 의하여 finitely generated인 것을 안다. 반대방향은 [명제 2](#prop2)의 증명과 마찬가지로 $x$를 곱하는 것을 $M$의 endomorphism으로 본 후 [정리 1](#thm1)을 적용하면 된다.
@@ -96,9 +97,9 @@ Ring homomorphism $\phi: A \rightarrow E$와 $E$의 원소 $x$가 주어졌다 �
 $A$-algebra $E$에 대하여, $E$ 안에서 $A$의 integral closure는 다시 $A$-algebra이다. 
 :::
 ::: 증명
-두 원소 $x,y\in E$가 $A$에 대하여 integral이라 하자. 그럼 $x+y$와 $xy$가 $A$에 대하여 integral임을 보여야 한다. 이제 $M=A[x]$, $M'=A[y]$이 $E$의 두 submodule이라 하고, 이들의 원소들의 곱 $xx'$들로 생성되는 $E$의 subalgebra를 $MM'$을 생각하면 $M,M'$ 각각이 finitely generated이므로 $MM'$ 또한 finitely generated이다. 이제
+두 원소 $x,y\in E$가 $A$에 대하여 integral이라 하자. 그럼 $x+y$와 $xy$가 $A$에 대하여 integral임을 보여야 한다. 이제 $M=A[x]$, $M'=A[y]$이 $E$의 두 submodule이라 하고, $M$의 원소와 $M'$의 원소의 곱들로 생성되는 $E$의 subalgebra를 $MM'$을 생각하면 $M,M'$ 각각이 finitely generated이므로 $MM'$ 또한 finitely generated이다. 이제
 
-$$(xx')MM'=(xM)(x'M')\subseteq MM',\qquad (x+x')MM'\subseteq xMM'+M(x'M')\subseteq MM'$$
+$$(xy)MM'=(xM)(yM')\subseteq MM',\qquad (x+y)MM'\subseteq xMM'+M(yM')\subseteq MM'$$
 
 이므로 [보조정리 5](#lem5)를 이용하면 원하는 결과를 얻는다. 
 :::
@@ -162,7 +163,7 @@ $$\left(\frac{a}{b}\right)^n+a_{n-1}\left(\frac{a}{b}\right)^{n-1}+\cdots+a_1\le
 
 $$\x^n+a_{n-1}b \x^{n-1}+\cdots+a_1b^{n-1}\x+a_0b^n\in A[\x]$$
 
-은 $\x=a$를 넣었을 때 $0$이 되는 monic polynomial인 것을 안다. 즉 $a^n$은 $b$로 나누어떨어지며, 이것이 모순이 되지 않기 위해서는 $b=1$, 즉 $A$가 normal domain이어야 한다.
+은 $\x=a$를 넣었을 때 $0$이 되는 monic polynomial인 것을 안다. 즉 $a^n$은 $b$로 나누어떨어지며, 이것이 모순이 되지 않기 위해서는 $b$가 unit이어야 하고, 즉 $A$가 normal domain이어야 한다.
 :::
 
 더 일반적으로 다음이 성립한다.
@@ -171,7 +172,7 @@ $$\x^n+a_{n-1}b \x^{n-1}+\cdots+a_1b^{n-1}\x+a_0b^n\in A[\x]$$
 Ring $A\subseteq B$가 주어졌다 하고 monic polynomial $p\in A[\x]$가 주어졌다 하자. 만일 $B[\x]$ 안에서 $p=q_1q_2$이도록 하는 monic polynomial들 $q_1,q_2\in B[\x]$를 찾을 수 있다면 $q_1,q_2$의 계수들은 $A$에 대해 integral이다.
 :::
 ::: 증명
-방정식의 해를 넣어주는 방법으로 $B$를 포함하는 적당한 ring $C$에 대하여 $C[\x]$ 안에서는 $q_1,q_2$가 모두 $\prod (x-\alpha_i)$, $\prod(x-\beta_j)$의 꼴로 분해되도록 할 수 있다. 그럼 정의에 의해 $\alpha_i,\beta_j$들은 모두 $A$에 대해 integral이므로, 이들로 생성되는 $C$의 subring $C'$는 integral $A$-algebra이다. 한편 $p=q_1q_2$를 전개하여 그 계수를 보면 이들이 $C'$에 속한다는 것을 안다.
+방정식의 해를 넣어주는 방법으로 $B$를 포함하는 적당한 ring $C$에 대하여 $C[\x]$ 안에서는 $q_1,q_2$가 모두 $\prod (\x-\alpha_i)$, $\prod(\x-\beta_j)$의 꼴로 분해되도록 할 수 있다. 그럼 $\alpha_i,\beta_j$들은 모두 $A[\x]$의 monic polynomial $p=q_1q_2$의 근이므로 $A$에 대해 integral이고, 따라서 이들로 생성되는 $C$의 subring $C'$는 integral $A$-algebra이다. 한편 $q_1=\prod(\x-\alpha_i)$와 $q_2=\prod(\x-\beta_j)$를 전개하면 그 계수들이 $\alpha_i,\beta_j$의 elementary symmetric polynomial이므로 $C'$에 속한다는 것을 안다.
 :::
 
 따라서 다음이 성립한다.
@@ -192,7 +193,7 @@ Localization과 관련된 또 다른 결과 중 하나는 [§국소화의 성질
 Semilocal ring $A$와 finitely presented $A$-module $M,N$에 대하여, 만일 $M_\mathfrak{m}\cong N_\mathfrak{m}$이 모든 maximal ideal $\mathfrak{m}$에 대해 성립한다면 $M\cong N$이 성립한다. 
 :::
 ::: 증명
-우선 $A$의 maximal ideal들 $\mathfrak{m}_1,\ldots, \mathfrak{m}_n$이 주어졌다 하고, 각각의 $k$에 대하여 $u_k: M_{\mathfrak{m}_k}\rightarrow N_{\mathfrak{m}_k}$가 주어졌다 하자. 그럼 $A_{\mathfrak{m}_k}$는 flat $A$-module이고, 가정에 의해 $M$이 finitely presented이므로 다음의 isomorphism
+우선 $A$의 maximal ideal들 $\mathfrak{m}_1,\ldots, \mathfrak{m}_n$이 주어졌다 하고, 각각의 $k$에 대하여 isomorphism $u_k: M_{\mathfrak{m}_k}\rightarrow N_{\mathfrak{m}_k}$가 주어졌다 하자. 그럼 $A_{\mathfrak{m}_k}$는 flat $A$-module이고, 가정에 의해 $M$이 finitely presented이므로 다음의 isomorphism
 
 $$\Hom_{A_{\mathfrak{m}_k}}( M_{\mathfrak{m}_k}, N_{\mathfrak{m}_k}) \rightarrow \Hom_A(M,N)_{\mathfrak{m}_k}$$
 

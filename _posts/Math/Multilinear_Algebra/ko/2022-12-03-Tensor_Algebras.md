@@ -10,6 +10,7 @@ sidebar:
 
 date: 2022-12-03
 weight: 10
+drift_needed: true
 
 ---
 
@@ -41,7 +42,7 @@ $$\Hom_{\Alg{A}}(\T(M), \T(M))\cong \Hom_{\rMod{A}}(M, U\T(M))$$
 추가로, 만일 $E$가 $\mathbb{N}$-graded $A$-algebra이고, $u(M)\subseteq E_1$이 성립한다면 위에서 얻어지는 $A$-algebra homomorphism $g$는 $\mathbb{N}$-graded $A$-algebra homomorphism이 된다.
 :::
 
-만일 위의 linear map $u$가 surjective라면, $\T(N)$이 $\T^1(N)$으로 생성되는 것으로부터 $\T(u): \T(M) \rightarrow \T(N)$이 surjective가 되는 것을 안다. 
+만일 $A$-module $N$과 surjective $A$-linear map $u:M \rightarrow N$이 주어졌다면, $\T(N)$이 $\T^1(N)$으로 생성되는 것으로부터 $\T(u): \T(M) \rightarrow \T(N)$이 surjective가 되는 것을 안다. 
 
 ## 텐서대수의 성질들
 
@@ -107,7 +108,7 @@ $$\Hom_\rMod{B}(\phi_!M,\phi_!M)\cong\Hom_\rMod{A}(M, \phi^\ast \phi_!M)$$
 
 $$\iota_{\phi_!M}: \phi_!M \rightarrow \T_B(\phi_!M)$$
 
-을 생각하면 이는 $A$-module $M$에서 $A$-module $\phi^\ast \T_B(\phi_!M)$ (더 정확히는 $U\phi^\ast \T_B(\phi^\ast\phi_!M)$)으로의 $A$-linear map이다. 따라서 [명제 2](#prop2)에 의하여 다음의 diagram
+을 생각하면 이는 $A$-module $M$에서 $A$-module $\phi^\ast \T_B(\phi_!M)$ (더 정확히는 $U\phi^\ast \T_B(\phi_!M)$)으로의 $A$-linear map이다. 따라서 [명제 2](#prop2)에 의하여 다음의 diagram
 
 {% diagram Math/Multilinear_Algebra/Tensor_Algebras-2.svg width="10.30em" alt="Extension_of_scalar_proof" %}
 
@@ -190,11 +191,11 @@ $$u(x)u(y)=u(y)u(x)\qquad\text{for all $x,y\in M$}$$
 주어졌다 하자. 그럼 유일한 $A$-algebra homomorphism $g: \S(M) \rightarrow E$가 존재하여 $u=g \circ\iota$이도록 할 수 있다. 
 :::
 
-더 일반적으로, 임의의 $A$-module $M,N$과 자연수 $n\geq 1$를 고정하자. $M^n$에서 $N$로의 *symmetric linear map*은 다음 조건
+더 일반적으로, 임의의 $A$-module $M,N$과 자연수 $n\geq 1$를 고정하자. $M^n$에서 $N$로의 *symmetric $n$-linear map*은 다음 조건
 
 $$f(x_{\sigma(1)},x_{\sigma(2)},\ldots, x_{\sigma(n)})=f(x_1,x_2,\ldots, x_n),\qquad \sigma\in S_n$$
 
-이 모든 $(x_i)\in M^n$과 $\sigma\in S_n$에 대해 성립하는 것이다. 
+이 모든 $(x_i)\in M^n$과 $\sigma\in S_n$에 대해 성립하는 $n$-linear map $f$이다. 
 
 ::: 명제 7
 두 $A$-module $M,N$에 대하여, 임의의 $A$-linear map $g:\S^n(M) \rightarrow N$에 대하여 다음의 식
@@ -214,7 +215,7 @@ $$(x_1,x_2,\ldots, x_n) \mapsto g(x_1x_2\cdots x_n)$$
 
 $$\S(M)\cong \bigotimes_{i\in I} \S(M_i)$$
 
-를 얻는다. 이는 $S$가 forgetful functor $U:\cAlg{A}\rightarrow \rMod{A}$의 left adjoint이므로 colimit을 보존하고, $\cAlg{A}$에서의 colimit은 ($\cRing$에서의 coproduct가 tensor product이듯) $\otimes_A$로 주어지기 때문이다. 특히 [명제 3](#prop3)과 같이 free $A$-module의 basis $(e_i)$를 고정해두고 나면 다음의 명제를 얻는다.
+를 얻는다. 이는 $S$가 forgetful functor $U:\cAlg{A}\rightarrow \rMod{A}$의 left adjoint이므로 colimit을 보존하고, $\cAlg{A}$에서의 coproduct는 ($\cRing$에서의 coproduct가 tensor product이듯) $\otimes_A$로 주어지기 때문이다. 특히 [명제 3](#prop3)과 같이 free $A$-module의 basis $(e_i)$를 고정해두고 나면 다음의 명제를 얻는다.
 
 ::: 명제 8
 Free $A$-module $M$과 그 basis $(e_i)_{i\in I}$에 대하여, $\alpha:I \rightarrow \mathbb{N}$을 finitely supported function이라 하자. 
@@ -252,13 +253,13 @@ $$u(x)^2=0\qquad\text{for all $x\in M$}$$
 주어졌다 하자. 그럼 유일한 $A$-algebra homomorphism $g: \bigwedge(M) \rightarrow E$가 존재하여 $u=g \circ\iota$이도록 할 수 있다. 
 :::
 
-[명제 7](#prop7)과 비슷한 성질이 exterior algebra에서도 성립한다. 이하 $A$의 표수는 $2$가 아니라고 가정한다. 임의의 $A$-module $M,N$과 정수 $n\geq 1$에 대하여, $f$가 $M^n$에서 $N$로의 *alternating linear map*이라는 것은 다음 조건
+[명제 7](#prop7)과 비슷한 성질이 exterior algebra에서도 성립한다. 이하 $A$의 표수는 $2$가 아니라고 가정한다. 임의의 $A$-module $M,N$과 정수 $n\geq 1$에 대하여, $M^n$에서 $N$로의 $n$-linear map $f$가 *alternating $n$-linear map*이라는 것은 다음 조건
 
 $$f(x_{\sigma(1)},x_{\sigma(2)},\ldots, x_{\sigma(n)})=\epsilon(\sigma)f(x_1,x_2,\ldots, x_n),\qquad \sigma\in S_n$$
 
-이 모든 $(x_i)\in M^n$과 $\sigma\in S_n$에 대해 성립하는 것이다. 이는 임의의 $x_1,\ldots, x_{n-1}$과 $x$에 대하여
+이 모든 $(x_i)\in M^n$과 $\sigma\in S_n$에 대해 성립하는 것이다. 이는 임의의 $x_1,\ldots, x_{n-2}$와 $x$에 대하여
 
-$$f(x_1,\ldots, x_i, x,x,x_{i+1},\ldots, x_{n-1})=0$$
+$$f(x_1,\ldots, x_i, x,x,x_{i+1},\ldots, x_{n-2})=0$$
 
 이 성립하는 것과 동치이다. 
 
@@ -272,7 +273,7 @@ $$(x_1,x_2,\ldots, x_n) \mapsto g(x_1\wedge x_2\wedge\cdots\wedge x_n)$$
 
 ## 외대수의 성질들
 
-마찬가지로 $M=\bigoplus_{i\in I} M_i$가 $A$-module들 $M_i$들의 direct sum이라 하였을 때, $\bigwedge$가 left adjoint인 것으로부터 $\bigwedge(M)$이 $\bigwedge(M_i)$들의 colimit이 되어야 한다는 것을 안다. 이를 엄밀히 하기 위해서는 alternating algebra들의 category에서의 colimit을 정의해야 한다. 이는 $\cAlg{A}$와 유사하게 tensor product로 나오지만, Koszul sign convention이 붙어있다. 이는 별다른 것은 아니고, 정의로부터 exterior algebra의 degree $m,n$의 원소를 곱하면 $(-1)^{mn}$의 부호가 생기게 되므로 이를 반영해주는 것이다. 당장은 이를 엄밀하게 쓸 이유는 없으니 다음 명제만 소개한다. 
+마찬가지로 $M=\bigoplus_{i\in I} M_i$가 $A$-module들 $M_i$들의 direct sum이라 하였을 때, $\bigwedge$가 left adjoint인 것으로부터 $\bigwedge(M)$이 $\bigwedge(M_i)$들의 coproduct가 되어야 한다는 것을 안다. 이를 엄밀히 하기 위해서는 alternating algebra들의 category에서의 coproduct를 정의해야 한다. 이는 $\cAlg{A}$와 유사하게 tensor product로 나오지만, Koszul sign convention이 붙어있다. 이는 별다른 것은 아니고, 정의로부터 exterior algebra의 degree $m,n$의 원소를 곱하면 $(-1)^{mn}$의 부호가 생기게 되므로 이를 반영해주는 것이다. 당장은 이를 엄밀하게 쓸 이유는 없으니 다음 명제만 소개한다. 
 
 ::: 명제 13
 Free $A$-module $M$과 그 basis $(e_i)_{i\in I}$에 대하여, $I$의 total ordering을 하나 고정하자. 임의의 유한한 부분집합 $J\subseteq I$에 대하여

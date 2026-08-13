@@ -18,7 +18,7 @@ drift_needed: true
 
 ---
 
-**[MS]**에서는 symplectic 벡터공간을 소개한 후, 시간을 좀 더 들여서 Maslov class를 소개하는 등등의 일을 한다. 우리는 이를 나중에 Floer theory를 다루며 필요할 때 소개하기로 하고, **[Cd]**를 따라 우선 symplectic manifold를 정의한다.
+**[MS]**에서는 symplectic vector space를 소개한 후, 시간을 좀 더 들여서 Maslov class를 소개하는 등등의 일을 한다. 우리는 이를 나중에 Floer theory를 다루며 필요할 때 소개하기로 하고, **[CdS]**를 따라 우선 symplectic manifold를 정의한다.
 
 ::: 정의 1
 Manifold $M$ 위에 정의된 *symplectic form<sub>사교형식</sub>* $\omega$는 $\dd{\omega}=0$이고 모든 $p\in M$에 대하여 $\omega_p:T_pM\times T_pM\rightarrow \mathbb{R}$이 linear symplectic form이도록 하는 differential $2$-form을 뜻한다. 이 때 $(M,\omega)$를 *symplectic manifold<sub>사교다양체</sub>*라 부른다. 
@@ -70,7 +70,7 @@ $$\omega_p=\sum_{i=1}^n e_i^\ast\wedge f_i^\ast$$
 
 $$\omega_p^n=n!\,e_1^\ast\wedge f_1^\ast\wedge\cdots\wedge e_n^\ast\wedge f_n^\ast\neq 0$$
 
-이다. 따라서 $\omega^n$은 어디서도 사라지지 않는 $2n$-form이고, nowhere-vanishing top-degree form은 곧 volume form이므로 $M$에 방향을 정의한다. ([\[다양체\] §향](/ko/math/manifolds/orientation)) 
+이다. 따라서 $\omega^n$은 어디서도 사라지지 않는 $2n$-form이고, nowhere-vanishing top-degree form은 곧 volume form이므로 $M$에 방향을 정의한다. ([\[미분다양체\] §향](/ko/math/manifolds/orientation)) 
 :::
 
 ::: 참고 4
@@ -78,7 +78,7 @@ $M$이 boundary가 없는 compact symplectic manifold라면, $\omega$는 결코 
 
 $$\omega^n=\dd{\alpha}\wedge\omega^{n-1}=\dd{(\alpha\wedge\omega^{n-1})}$$
 
-이 exact가 되어, Stokes 정리에 의하여 ([\[다양체\] §스토크스 정리, ⁋따름정리 2](/ko/math/manifolds/stokes_theorem#cor2)) $\int_M\omega^n=0$이다. 그런데 [명제 3](#prop3)에서 $\omega^n$은 volume form이므로 그 적분은 $0$이 될 수 없어 모순이다. 이로부터 둘째 cohomology가 소멸하는 closed manifold, 가령 $n\geq 2$인 $S^{2n}$은 symplectic 구조를 가질 수 없음을 안다. 
+이 exact가 되어, Stokes 정리에 의하여 ([\[미분다양체\] §스토크스 정리, ⁋따름정리 2](/ko/math/manifolds/stokes_theorem#cor2)) $\int_M\omega^n=0$이다. 그런데 [명제 3](#prop3)에서 $\omega^n$은 volume form이므로 그 적분은 $0$이 될 수 없어 모순이다. 이로부터 둘째 cohomology가 소멸하는 closed manifold, 가령 $n\geq 2$인 $S^{2n}$은 symplectic 구조를 가질 수 없음을 안다. 
 :::
 
 ## Symplectomorphism
@@ -119,15 +119,15 @@ $$\{f,g\}=\omega(X_f,X_g)$$
 [예시 2](#ex2)의 1번은 단지 국소적인 model이 아니다. 다음 글에서 다룰 *Darboux 정리*는 임의의 symplectic manifold $(M,\omega)$가 각 점 근방에서 $(\mathbb{R}^{2n},\omega_0)$과 symplectomorphic함을 보여준다. 즉 symplectic manifold에는 곡률과 같은 국소 불변량이 존재하지 않으며, 모든 symplectic manifold는 국소적으로 동일하게 생겼다. 이것이 [정의 5](#def5) 이후에 언급한 "국소적 풍부함"의 정확한 의미이다. 
 :::
 
-## Lagrangian 부분다양체
+## Lagrangian submanifold
 
-선형 사교기하에서 Lagrangian subspace가 차지하던 위치를 ([§사교벡터공간, ⁋정의 3](/ko/math/symplectic_geometry/linear_symplectic_geometry#def3)) manifold 수준으로 끌어올린 것이 Lagrangian 부분다양체이다. 이는 사교기하에서 가장 중요한 부분다양체의 종류이다.
+선형 사교기하에서 Lagrangian subspace가 차지하던 위치를 ([§사교벡터공간, ⁋정의 3](/ko/math/symplectic_geometry/linear_symplectic_geometry#def3)) manifold 수준으로 끌어올린 것이 Lagrangian submanifold이다. 이는 사교기하에서 가장 중요한 부분다양체의 종류이다.
 
 ::: 정의 9
 $2n$차원 symplectic manifold $(M,\omega)$의 부분다양체 $L\subseteq M$이 *Lagrangian submanifold<sub>라그랑지안 부분다양체</sub>*라는 것은, 포함사상 $\iota:L\hookrightarrow M$에 대하여 $\iota^\ast\omega=0$이고 $\dim L=n=(\dim M)/2$인 것이다.
 :::
 
-조건 $\iota^\ast\omega=0$은 각 점 $p\in L$에서 tangent space $T_pL\subseteq T_pM$ 위로 $\omega_p$가 항등적으로 $0$이라는 뜻, 곧 $T_pL$이 isotropic subspace라는 뜻이다. 여기에 차원조건이 더해지면 [§사교벡터공간, ⁋보조정리 4](/ko/math/symplectic_geometry/linear_symplectic_geometry#lem4)에 의하여 $T_pL$이 각 점에서 Lagrangian subspace가 된다. 곧 Lagrangian 부분다양체란 tangent space가 점마다 Lagrangian subspace인 부분다양체이다.
+조건 $\iota^\ast\omega=0$은 각 점 $p\in L$에서 tangent space $T_pL\subseteq T_pM$ 위로 $\omega_p$가 항등적으로 $0$이라는 뜻, 곧 $T_pL$이 isotropic subspace라는 뜻이다. 여기에 차원조건이 더해지면 [§사교벡터공간, ⁋보조정리 4](/ko/math/symplectic_geometry/linear_symplectic_geometry#lem4)에 의하여 $T_pL$이 각 점에서 Lagrangian subspace가 된다. 곧 Lagrangian submanifold란 tangent space가 점마다 Lagrangian subspace인 부분다양체이다.
 
 ::: 예시 10
 1. 곡면, 곧 $2$차원 symplectic manifold 위의 임의의 smooth한 곡선 (1차원 부분다양체) 은 Lagrangian이다. $1$차원 공간 위에서 반대칭 $2$-form은 항상 $0$이므로 $\iota^\ast\omega=0$이 자동이고, $\dim=1=(1/2)\cdot 2$이기 때문이다.
@@ -135,7 +135,7 @@ $2n$차원 symplectic manifold $(M,\omega)$의 부분다양체 $L\subseteq M$이
 2. Cotangent bundle $T^\ast Q$ ([예시 2](#ex2)) 의 각 fiber $T_q^\ast Q$는 Lagrangian이다. 국소좌표에서 fiber는 $\{q=\text{const}\}$이고 그 tangent space는 $\partial/\partial p_i$들로 생성되는데, $\omega=\sum_i \dd{q_i}\wedge \dd{p_i}$를 이 위로 제한하면 모든 $\dd{q_i}$가 소멸하여 $0$이 된다. 차원도 $n=(\dim T^\ast Q)/2$이다.
 :::
 
-Cotangent bundle에서는 base $Q$ 방향으로 누운 Lagrangian 부분다양체들이 $1$-form과 정확히 대응하며, 그 가운데 Lagrangian이 되는 것은 closed form뿐이다.
+Cotangent bundle에서는 base $Q$ 방향으로 누운 부분다양체들이 $1$-form과 정확히 대응하며, 그 가운데 Lagrangian이 되는 것은 closed form뿐이다.
 
 ::: 명제 11
 Manifold $Q$ 위의 $1$-form $\alpha$에 대하여, 그 graph
@@ -157,7 +157,7 @@ $$s_\alpha^\ast\omega=s_\alpha^\ast(-\dd{\lambda})=-\dd{(s_\alpha^\ast\lambda)}=
 :::
 
 ::: 참고 12
-Lagrangian 부분다양체는 symplectic manifold 사이의 morphism까지 포섭한다. 두 symplectic manifold $(M,\omega)$, $(M',\omega')$의 곱 $M\times M'$에 symplectic form $\Omega=\pi^\ast\omega-\pi'^\ast\omega'$ ($\pi,\pi'$는 각 인자로의 projection) 를 주면, diffeomorphism $\varphi:M\rightarrow M'$가 symplectomorphism ([정의 5](#def5)) 인 것은 그 graph $\Gamma_\varphi=\{(m,\varphi(m))\}$가 $(M\times M',\Omega)$의 Lagrangian 부분다양체인 것과 동치이다. 실제로 $j:M\rightarrow M\times M'$, $m\mapsto(m,\varphi(m))$에 대하여 $j^\ast\Omega=j^\ast\pi^\ast\omega-j^\ast\pi'^\ast\omega'=\omega-\varphi^\ast\omega'$이고 $\dim\Gamma_\varphi=\dim M=(\dim(M\times M'))/2$이므로, $\Gamma_\varphi$가 Lagrangian인 것이 $\varphi^\ast\omega'=\omega$와 동치이기 때문이다. 이처럼 사교 morphism마저 Lagrangian으로 환원되는 현상을 "symplectic 범주의 morphism은 Lagrangian이다"라는 Weinstein의 표어가 요약한다.
+Lagrangian submanifold는 symplectic manifold 사이의 morphism까지 포섭한다. 두 symplectic manifold $(M,\omega)$, $(M',\omega')$의 곱 $M\times M'$에 symplectic form $\Omega=\pi^\ast\omega-\pi'^\ast\omega'$ ($\pi,\pi'$는 각 인자로의 projection) 를 주면, diffeomorphism $\varphi:M\rightarrow M'$가 symplectomorphism ([정의 5](#def5)) 인 것은 그 graph $\Gamma_\varphi=\{(m,\varphi(m))\}$가 $(M\times M',\Omega)$의 Lagrangian submanifold인 것과 동치이다. 실제로 $j:M\rightarrow M\times M'$, $m\mapsto(m,\varphi(m))$에 대하여 $j^\ast\Omega=j^\ast\pi^\ast\omega-j^\ast\pi'^\ast\omega'=\omega-\varphi^\ast\omega'$이고 $\dim\Gamma_\varphi=\dim M=(\dim(M\times M'))/2$이므로, $\Gamma_\varphi$가 Lagrangian인 것이 $\varphi^\ast\omega'=\omega$와 동치이기 때문이다. 이처럼 사교 morphism마저 Lagrangian으로 환원되는 현상을 "symplectic category의 morphism은 Lagrangian이다"라는 Weinstein의 표어가 요약한다.
 :::
 
 ---

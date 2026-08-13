@@ -11,6 +11,8 @@ sidebar:
 date: 2026-06-15
 weight: 1
 
+drift_needed: true
+
 ---
 
 ## 극한의 정의
@@ -21,7 +23,7 @@ weight: 1
 실수 $a$를 포함하는 어떤 개구간 $(c,d)$ ($c<a<d$)를 점 $a$의 *근방<sub>neighborhood</sub>*이라 부른다.
 :::
 
-점 $a$의 근방은 현재는 이 정도의 정의로 충분하다. 특별히 점 $a$의 근방 중 $a$ 자기 자신이 빠진 집합을 편의상 *삭제된 근방<sub>deleted neighborhood</sub>*라 부른다. 
+점 $a$의 근방은 현재는 이 정도의 정의로 충분하다. 특별히 점 $a$의 근방 중 $a$ 자기 자신이 빠진 집합을 편의상 *삭제된 근방<sub>deleted neighborhood</sub>*이라 부른다. 
 
 ::: 정의 2
 점 $a$의 어떤 삭제된 근방에서 정의된 함수 $f$를 생각하자. 그럼 실수 $L$이 $x \rightarrow a$일 때 $f$의 *극한<sub>limit</sub>*이라는 것은, 임의의 $\epsilon > 0$에 대하여 어떤 $\delta > 0$이 존재하여
@@ -102,7 +104,7 @@ $\lim_{x\rightarrow a} f(x) = L$, $\lim_{x\rightarrow a} g(x) = M$이라 하자.
     
     트릭은 $\epsilon=1$로 두고 [정의 2](#def2)를 $f$와 $g$ 각각에 적용하는 것이다. 그럼 적당한 $\delta_1, \delta_2$가 존재하여
         
-    $$0<\lvert x-a\rvert<\delta_1\implies 0<\lvert f(x)-L\rvert<1\implies \lvert f(x)\rvert< \lvert L\rvert+1$$
+    $$0<\lvert x-a\rvert<\delta_1\implies \lvert f(x)-L\rvert<1\implies \lvert f(x)\rvert< \lvert L\rvert+1$$
 
     이도록 할 수 있고, 비슷하게 $\lvert g(x)\rvert <\lvert M\rvert+1$이도록 하는 $\delta$도 잡을 수 있다. 이제 $\delta$를 이들 두 조건과, 다음 두 조건
     
@@ -138,7 +140,7 @@ $\lim_{x\rightarrow a} f(x) = L$이면
     
     $$u - v = \bigl(u^{1/k}-v^{1/k}\bigr)\bigl(u^{(k-1)/k}+u^{(k-2)/k}v^{1/k}+\cdots+v^{(k-1)/k}\bigr)$$
     
-    를 생각하면 우변 둘째 인자의 각 항은 $\min(u,v)^{(k-1)/k}$보다 크므로
+    를 생각하면 우변 둘째 인자의 각 항은 $\min(u,v)^{(k-1)/k}$보다 크거나 같으므로
     
     $$\bigl\lvert u^{1/k}-v^{1/k}\bigr\rvert \leq \frac{\lvert u-v\rvert}{k \min(u,v)^{(k-1)/k}}$$
     

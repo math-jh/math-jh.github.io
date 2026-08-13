@@ -10,6 +10,7 @@ sidebar:
 
 date: 2026-06-19
 weight: 2
+drift_needed: true
 
 
 ---
@@ -69,7 +70,7 @@ $$\lvert x-a\rvert < \delta\implies\lvert f(x) - b\rvert < \eta$$
 
 $$\lvert \sin x - \sin a\rvert= \left\lvert 2\cos\frac{x+a}{2}\sin\frac{x-a}{2}\right\rvert \leq 2\left\lvert \sin\frac{x-a}{2}\right\rvert$$
 
-이 항상 성립하는 것을 안다. 이제 여기에 [§함수의 극한, ⁋예시 10](/ko/math/calculus/functions_and_limits#ex10)에서 얻은 부등식 $\lvert \sin t\rvert \leq \lvert t\rvert$를 적용하면, 임의의 $a \in \mathbb{R}$에 대해
+이 항상 성립하는 것을 안다. 한편 [§함수의 극한, ⁋예시 10](/ko/math/calculus/functions_and_limits#ex10)에서 얻은 부등식 $\sin t \leq t$ ($0 < t < \pi/2$) 는, $t \geq \pi/2$일 때 $\lvert \sin t\rvert \leq 1 < t$이고 $\sin(-t) = -\sin t$이므로, 모든 실수 $t$에 대한 부등식 $\lvert \sin t\rvert \leq \lvert t\rvert$로 확장된다. 이를 적용하면, 임의의 $a \in \mathbb{R}$에 대해
 
 $$\lvert \sin x - \sin a\rvert\leq\lvert x-a\rvert$$
 

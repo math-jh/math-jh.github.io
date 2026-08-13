@@ -10,6 +10,7 @@ sidebar:
 
 date: 2024-08-18
 weight: 3
+drift_needed: true
 
 ---
 
@@ -50,7 +51,7 @@ $M$이 finitely generated $A$-module인 것은 이러한 family를 유한하게 
 $A$-module $M$이 *monogenous<sub>단일생성</sub>*라는 것은 $M$이 $A$-module로서 하나의 원소 $x$에 의해 생성되는 것이다.
 :::
 
-주의할 점은 $x$가 free element일 필요가 없다는 것이다. 즉, 어떠한 $\alpha\neq 0$이 존재하여 $\alpha x=0$이 될 수도 있으며, 이것이 [\[선형대수학\]](/ko/linear_algebra/)에서 다루던 것과 다른 점이다. 
+주의할 점은 $x$가 free element, 곧 한 원소로 이루어진 family $(x)$가 free family가 되는 원소일 필요가 없다는 것이다. 즉, 어떠한 $\alpha\neq 0$이 존재하여 $\alpha x=0$이 될 수도 있으며, 이것이 [\[선형대수학\]](/ko/linear_algebra/)에서 다루던 것과 다른 점이다. 
 
 ## 불변기저수
 
@@ -80,7 +81,7 @@ $$\card I\leq \card(X\times\mathbb{N})=\card X\cdot\aleph_0\leq \card X$$
 [정의 3](#def3)의 상황에서, $M$의 임의의 원소는 적당한 $\alpha\in A$에 대하여 $\alpha x$의 꼴로 쓸 수 있다. 따라서 이러한 경우 $M$을 $Ax$와 같이 표기하기도 한다. 이 표기를 이용하면, 임의의 $A$-module $M$과 그 원소들의 family $(x_i)_{i\in I}$에 대하여,
 
 - $(x_i)_{i\in I}$가 $M$의 generating family인 것은 $M=\sum_{i\in I}Ax_i$인 것과 동치이다.
-- $(x_i)_{i\in I}$가 $M$의 basis인 것은 위의 sum $\sum_{i\in I}Ax_i$가 direct sum이고, 각각의 $x_i$가 모두 free element인 것과 동치이다.
+- $(x_i)_{i\in I}$가 $M$의 basis인 것은 $M$이 direct sum $\bigoplus_{i\in I}Ax_i$와 같고, 각각의 $x_i$가 모두 free element인 것과 동치이다.
 
 이를 통해 [명제 4](#prop4)를 각각의 $N_i$가 free element에 의해 생성되는 monogenous module인 경우로 한정하면, $A\neq 0$일 때 무한한 basis를 갖는 free $A$-module $M$의 모든 basis는 같은 cardinality를 갖는다는 것을 안다. 그러나 유한한 basis를 갖는 경우 이것이 항상 성립하는 것은 아니다.
 
@@ -115,7 +116,7 @@ Ring $A$가 IBN을 만족한다 하자. 그럼 임의의 free $A$-module $M$에 
 
 편의상 $M$의 basis $(x_i)_{i\in I}$가 주어졌을 때, 이를 통해 얻어지는 free module $F(I)$를 $A^{\oplus I}$와 같이 나타내고, 특별히 $I$가 유한집합이면 $A^m$과 같이 나타내기도 한다. 이 표기법들은 $A$가 IBN property를 갖는다는 보장이 없을 때 사용할 경우 표기법 상의 문제가 있지만, 약간의 표기법의 남용을 통해 이를 눈감기로 한다. 
 
-Basis의 중요한 성질 중 하나는 basis의 원소에서의 함수값들이 linear map을 완전히 결정짓는다는 것이다. 이를 확인하기 위해 free $A$-module $M$을 하나 고정하고, $(x_i)_{i\in I}$가 $M$의 basis라 하자. 즉 집합들 사이의 함수 $e_i: i\mapsto x_i$가 $A$-module isomorphism $\varepsilon:F(I)\cong M$을 유도한다. 한편 또 다른 $A$-module $N$이 주어졌다 하고, $N$의 원소들의 family $(y_i)_{i\in I}$가 주어졌다 하면 함수들 $e_i': i\mapsto y_i$가 $\varepsilon': F(I) \rightarrow N$을 유도한다. 그럼 $u(x_i)=y_i$를 만족하는 유일한 $A$-linear map $u:M \rightarrow N$이 존재하며, 명시적으로 이는 $u=\varepsilon'\circ\varepsilon^{-1}$으로 쓸 수 있다. 
+Basis의 중요한 성질 중 하나는 basis의 원소에서의 함수값들이 linear map을 완전히 결정짓는다는 것이다. 이를 확인하기 위해 free $A$-module $M$을 하나 고정하고, $(x_i)_{i\in I}$가 $M$의 basis라 하자. 즉 집합들 사이의 함수 $e: i\mapsto x_i$가 $A$-module isomorphism $\varepsilon:F(I)\cong M$을 유도한다. 한편 또 다른 $A$-module $N$이 주어졌다 하고, $N$의 원소들의 family $(y_i)_{i\in I}$가 주어졌다 하면 함수 $e': i\mapsto y_i$가 $\varepsilon': F(I) \rightarrow N$을 유도한다. 그럼 $u(x_i)=y_i$를 만족하는 유일한 $A$-linear map $u:M \rightarrow N$이 존재하며, 명시적으로 이는 $u=\varepsilon'\circ\varepsilon^{-1}$으로 쓸 수 있다. 
 
 ## 대수의 기저
 

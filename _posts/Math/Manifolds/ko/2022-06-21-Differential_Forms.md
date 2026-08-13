@@ -10,6 +10,7 @@ sidebar:
 
 date: 2022-06-21
 weight: 12
+drift_needed: true
 
 ---
 
@@ -53,7 +54,7 @@ $$\bigoplus_{i=1}^n V_i^\ast\cong \left(\bigoplus_{i=1}^n V_i\right)^\ast$$
 
 이 성립하고, $\bigwedge(V)$는 오직 유한히 많은 $\bigwedge\nolimits^k(V)$들의 direct sum이므로
 
-$$\bigwedge(T_p^\ast M)=\bigoplus_{k\geq 0}\bigwedge\nolimits^k(T_p^\ast M)=\bigoplus_{k\geq 0}\bigwedge\nolimits^k(T_pM)^\ast\cong\left(\bigwedge(T_pM)\right)^\ast$$
+$$\bigwedge(T_p^\ast M)=\bigoplus_{k\geq 0}\bigwedge\nolimits^k(T_p^\ast M)\cong\bigoplus_{k\geq 0}\bigwedge\nolimits^k(T_pM)^\ast\cong\left(\bigwedge(T_pM)\right)^\ast$$
 
 가 성립한다. 
 
@@ -61,13 +62,13 @@ $$\bigwedge(T_p^\ast M)=\bigoplus_{k\geq 0}\bigwedge\nolimits^k(T_p^\ast M)=\big
 
 위의 [정의 1](#def1) 중 특히 $\Omega^\ast(M)$의 원소들이 관심의 대상이 된다. 정의에 의하여 임의의 differential form $\omega\in\Omega^\ast(M)$은 함수 $M\rightarrow\bigwedge\nolimits^\ast(M)$이며, 이 함수값을
 
-$$p\mapsto \omega_p\in\bigwedge\nolimits^\ast(T_pM)$$
+$$p\mapsto \omega_p\in\bigwedge(T_p^\ast M)$$
 
 으로 적는다. 두 differential form들의 wedge product $\omega\wedge\eta$를 다음의 식
 
 $$(\omega\wedge\eta)_p=\omega_p\wedge\eta_p\qquad\text{for all $p\in M$}$$
 
-으로 정의하면 $\Omega^\ast(M)$은 $\mathbb{N}$-graded $\mathbb{R}$-algebra
+으로 정의하면, $n=\dim M$이라 할 때 $\Omega^\ast(M)$은 $\mathbb{N}$-graded $\mathbb{R}$-algebra
 
 $$\Omega^\ast(M)=\bigoplus_{k=0}^n\Omega^k(M)$$
 
@@ -77,7 +78,7 @@ $$\Omega^\ast(M)=\bigoplus_{k=0}^n\Omega^k(M)$$
 
 $$\bigwedge({\dd{F}}_p^\ast):\bigwedge(T_{F(p)}^\ast N)\rightarrow\bigwedge(T_p^\ast M)$$
 
-를 얻는다. ([\[다중선형대수학\] §텐서대수, ⁋정의 10](/ko/math/multilinear_algebra/tensor_algebras#def10)) 각 점 $p$마다 $\bigwedge({\dd{F}}_p^\ast)$를 대응시켜 얻은 linear map $\Omega^\ast(N)\rightarrow\Omega^\ast(M)$을 $F^\ast$로 적자. 즉 임의의 $\omega\in\Omega^\ast(N)$에 대하여
+를 얻는다. ([\[다중선형대수학\] §텐서대수, ⁋명제 11](/ko/math/multilinear_algebra/tensor_algebras#prop11)) 각 점 $p$마다 $\bigwedge({\dd{F}}_p^\ast)$를 대응시켜 얻은 linear map $\Omega^\ast(N)\rightarrow\Omega^\ast(M)$을 $F^\ast$로 적자. 즉 임의의 $\omega\in\Omega^\ast(N)$에 대하여
 
 $$(F^\ast\omega)_p=\bigwedge({\dd{F}}_p^\ast)(\omega_{F(p)})$$
 
@@ -91,7 +92,7 @@ $$(F^\ast\omega)_p(X_1(p),\ldots, X_k(p))=(F^\ast_p\omega_{F(p)})\bigl(X_1(p),\l
 
 ## 외미분과 드람 코호몰로지
 
-앞서 우리는 $\Omega^0(M)=C^\infty(M)$인 것을 확인했다. 임의의 $f\in C^\infty(M)$에 대하여, 그 differential $\dd{f}$는 각 점 $p\in M$을 받아 $\dd{f_p}:T_pM\rightarrow\mathbb{R}$를 내놓는 함수이다. ([§미분사상의 예시들, ⁋정의 6](/ko/math/manifolds/examples_of_differentials#def6)) 즉, $\dd{f}\in T^\ast M=\Omega^1(M)$이다. 이 operator $d$는 다음과 같이 일반적인 differential form에 대해서도 정의된다.
+각 점 $p$에서 $\bigwedge\nolimits^0(T_p^\ast M)=\mathbb{R}$이므로 [정의 1](#def1)의 $\Omega^0(M)$은 $C^\infty(M)$과 같다. 임의의 $f\in C^\infty(M)$에 대하여, 그 differential $\dd{f}$는 각 점 $p\in M$을 받아 $\dd{f_p}:T_pM\rightarrow\mathbb{R}$를 내놓는 함수이다. ([§미분사상의 예시들, ⁋정의 6](/ko/math/manifolds/examples_of_differentials#def6)) 즉, $\dd{f}\in\Gamma(T^\ast M)=\Omega^1(M)$이다. 이 operator $d$는 다음과 같이 일반적인 differential form에 대해서도 정의된다.
 
 ::: 정리 2
 Manifold $M$에 대하여, degree $1$의 anti-derivation $d:\Omega^\ast(M)\rightarrow\Omega^\ast(M)$가 유일하게 존재하여 다음의 두 조건을 만족한다. (증명은 **[War]**를 보라.)
@@ -104,13 +105,13 @@ Manifold $M$에 대하여, degree $1$의 anti-derivation $d:\Omega^\ast(M)\right
 
 이와 같이 differential $d$가 정의된 graded algebra를 *differential graded algebra*, 혹은 간단하게 *DG-algebra*라고 부른다. 한편 위의 조건 1에 의하여 다음 sequence
 
-$$0\longrightarrow\Omega^0(M)\overset{d}{\longrightarrow}\Omega^1(M)\overset{d}{\longrightarrow}\Omega^2(M)\overset{d}{\longrightarrow}\cdots\overset{d}{\longrightarrow}\Omega^n(M)\longrightarrow 0\tag{2}$$
+$$0\longrightarrow\Omega^0(M)\overset{d}{\longrightarrow}\Omega^1(M)\overset{d}{\longrightarrow}\Omega^2(M)\overset{d}{\longrightarrow}\cdots\overset{d}{\longrightarrow}\Omega^n(M)\longrightarrow 0\tag{1}$$
 
 가 cochain complex가 된다. 또, $d$가 $F^\ast$와 commute하며, $F^\ast$는 graded algebra homomorphism이므로 위의 언어로는 $F^\ast$가 de Rham complex들 사이의 chain map을 유도한다고 이야기할 수 있다. 
 
 {% diagram Math/Manifolds/Differential_Forms-1.svg width="26.08em" alt="Chain_map_in_dR" %}
 
-우리는 (2)의 cochain complex에 해당하는 cohomology group을 *de Rham cohomology group<sub>드람 코호몰로지 군</sub>*이라 부르고 $H^\ast_\text{dR}(M)$으로 적는다. 드람 정리는 이렇게 얻어진 $H_\text{dR}^\ast(M)$이 위상적으로 정의한 다른 cohomology group들과 동일한 정보를 담고 있다는 것을 보여준다.
+우리는 (1)의 cochain complex에 해당하는 cohomology group을 *de Rham cohomology group<sub>드람 코호몰로지 군</sub>*이라 부르고 $H^\ast_\text{dR}(M)$으로 적는다. 드람 정리는 이렇게 얻어진 $H_\text{dR}^\ast(M)$이 위상적으로 정의한 다른 cohomology group들과 동일한 정보를 담고 있다는 것을 보여준다.
 
 ## Interior multiplication
 
@@ -119,7 +120,7 @@ Manifold $M$ 위에 주어진 vector field $X$를 생각하자. 그럼 $\iota_X:
 
 $$(\iota_X\omega)(X_1,\ldots, X_{k-1})=\omega(X,X_1,\ldots, X_{k-1})$$
 
-으로 정의된 $(k-1)$-form $\iota_X\omega$를 대응시키는 함수이다. 이를 $X$에 의한 *interior multiplication<sub>내부곱</sub>*이라 부른다. 
+으로 정의된 $(k-1)$-form $\iota_X\omega$를 대응시키는 함수이다. 단, $k=0$인 경우에는 $\iota_X\omega=0$으로 둔다. 이를 $X$에 의한 *interior multiplication<sub>내부곱</sub>*이라 부른다. 
 :::
 
 ::: 명제 4

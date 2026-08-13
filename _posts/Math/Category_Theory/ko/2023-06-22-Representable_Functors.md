@@ -11,6 +11,8 @@ sidebar:
 date: 2023-06-22
 weight: 4
 
+drift_needed: true
+
 ---
 
 ## Yoneda lemma
@@ -39,7 +41,7 @@ $$\id_\Set\cong\Hom_\Set(\ast,-)$$
 
 $$\id_\Set(A)=A\rightarrow\Hom_\Set(\ast,A)$$
 
-는 $A$의 임의의 원소 $a$를 받아서, 그 image가 $a$인 함수 $a:\ast\rightarrow A$로 주어지며, 거꾸로 함수 $\ast\rightarrow A$의 image를 보면 $A$의 원소를 얻어낼 수 있다. 이 대응의 naturality는 임의의 함수 $f:A \rightarrow B$가 주어졌을 때, 임의의 $a\in A$에 대해 $b=f(a)$라 하면 $\id_\Set(B)\rightarrow\Hom_\Set(\ast,B)$는 그 image가 $b$인 함수 $b:\ast \rightarrow B$이고, 이것이 정확히 합성 $\ast\overset{a}{\longrightarrow}A\overset{f}{\longrightarrow}B$와 같기 때문에 얻어진다.
+는 $A$의 임의의 원소 $a$를 받아서, 그 image가 $a$인 함수 $a:\ast\rightarrow A$로 주어지며, 거꾸로 함수 $\ast\rightarrow A$의 image를 보면 $A$의 원소를 얻어낼 수 있다. 이 대응의 naturality는 임의의 함수 $f:A \rightarrow B$가 주어졌을 때, 임의의 $a\in A$에 대해 $b=f(a)$라 하면 $\id_\Set(B)\rightarrow\Hom_\Set(\ast,B)$에 의한 $b$의 image는 함수 $b:\ast \rightarrow B$이고, 이것이 정확히 합성 $\ast\overset{a}{\longrightarrow}A\overset{f}{\longrightarrow}B$와 같기 때문에 얻어진다.
 :::
 
 이와 관련된 가장 중요한 정리는 다음의 요네다 보조정리이다.
@@ -62,14 +64,14 @@ $$\Phi:\{\text{natural transformations from $\Hom_\mathcal{A}(A,-)$ to $F$}\}\ri
 
 $$\Psi(x)_X(f)=F(f)(\Psi(x)_A(\id_A))$$
 
-가 성립해야 한다. 한편, $\Psi$가 $\Phi$의 역함수이기 위해서는 $(\Psi\circ\Phi)(x)=x$여야 하므로, $\Psi$가 어떻게 정의되었는지를 생각해보면 $\Psi(x)_A(\id_A)$가 정확히 $x$여야 한다는 것을 알 수 있다. 즉, 다음의 식
+가 성립해야 한다. 한편, $\Psi$가 $\Phi$의 역함수이기 위해서는 $(\Phi\circ\Psi)(x)=x$여야 하므로, $\Psi$가 어떻게 정의되었는지를 생각해보면 $\Psi(x)_A(\id_A)$가 정확히 $x$여야 한다는 것을 알 수 있다. 즉, 다음의 식
 
 $$\Psi(x)_X(f)=F(f)(x)$$
 
 를 통하여 $\Psi(x)$를 정의해야만 한다. 이렇게 정의한 $\Psi$가 실제로 natural transformation이 된다는 것을 추가로 보여야 하지만 이는 어렵지 않다. 
 :::
 
-뿐만 아니라, 양 변을 $\mathcal{A}\times\Set^\mathcal{A}$에서 $\Set$으로의 functor로 생각하면 이 bijection은 $\mathcal{A}$와 $\Set^\mathcal{A}$ 각 성분에 대해 natural하다. 이 사실은 지금 당장 사용할 것은 아니므로 언급만 하고 넘어가지만, 그 증명 또한 위의 증명과 마찬가지로 크게 어렵지는 않다. 또, duality에 의해 contravariant functor에 대한 요네다 보조정리도 존재한다. 
+뿐만 아니라, 양 변을 $\mathcal{A}\times\Fun(\mathcal{A},\Set)$에서 $\Set$으로의 functor로 생각하면 이 bijection은 $\mathcal{A}$와 $\Fun(\mathcal{A},\Set)$ 각 성분에 대해 natural하다. 이 사실은 지금 당장 사용할 것은 아니므로 언급만 하고 넘어가지만, 그 증명 또한 위의 증명과 마찬가지로 크게 어렵지는 않다. 또, duality에 의해 contravariant functor에 대한 요네다 보조정리도 존재한다. 
 
 ::: 정리 4 (Yoneda)
 임의의 contravariant functor $F:\mathcal{A}\rightarrow\Set$과, 임의의 $A\in\obj(\mathcal{A})$에 대하여, 집합 사이의 bijection
@@ -86,7 +88,7 @@ $$\Phi:\{\text{natural transformations from $\Hom_\mathcal{A}(-,A)$ to $F$}\}\ri
 [정의 1](#def1)을 보면, 우리는 object $A$와 natural isomorphism $F\cong\Hom_\mathcal{A}(A,-)$의 선택을 통틀어 *representation*이라 부르기로 하였다. 그런데 [정리 3](#thm3)에 의하여 natural isomorphism을 택하는 것은 $F(A)$의 적절한 원소를 하나 뽑아오는 것과 같다. 이를 다음과 같이 정의한다. 
 
 ::: 정의 5
-Representable functor $F:\mathcal{A}\rightarrow\Set$가 주어졌다 하자. Natural isomorphism $\Hom_\mathcal{A}(A,-)\cong F$에 대하여, $F(A)$의 원소 $x\in F(A)$를 *universal element<sub>보편 원소</sub>*라 부르고, $A$와 $x$를 묶어 *universal property*라 부른다. 
+Representable functor $F:\mathcal{A}\rightarrow\Set$가 주어졌다 하자. Natural isomorphism $\alpha:\Hom_\mathcal{A}(A,-)\cong F$에 대하여, [정리 3](#thm3)에 의해 이에 대응되는 원소 $x=\alpha_A(\id_A)\in F(A)$를 *universal element<sub>보편 원소</sub>*라 부르고, $A$와 $x$를 묶어 *universal property*라 부른다. 
 :::
 
 다음 예시를 살펴보면 이를 좀 더 직관적으로 이해할 수 있다.

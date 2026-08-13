@@ -11,6 +11,8 @@ sidebar:
 date: 2021-09-04
 weight: 25
 
+drift_needed: true
+
 ---
 
 ## 자연수의 다른 정의
@@ -35,7 +37,7 @@ $$\mathfrak{b}=\mathfrak{a}+\mathbf{1}\neq\mathfrak{b}+\mathbf{1}$$
 이므로 $\mathfrak{a}$가 유한한 것은 $\mathfrak{b}=\mathfrak{a}+\mathbf{1}$이 유한인 것과 동치이다.
 :::
 
-이제부터 자연수들은 블랙레터 $\mathfrak{a}$, $\mathfrak{b}$ 대신 $m$, $n$ 등과 같은 일반적인 알파벳으로, 그리고 cardinal number인 $\mathbf{0}$과 $\mathbf{1}$도 간단히 $0$과 $1$로 쓰기로 한다. 
+이제부터 자연수들은 블랙레터 $\mathfrak{a}$, $\mathfrak{b}$ 대신 $m$, $n$ 등과 같은 일반적인 알파벳으로, 그리고 cardinal number인 $\mathbf{0}$과 $\mathbf{1}$도 간단히 $0$과 $1$로 쓰기로 한다. 또한 자연수 전체의 집합은 $\mathbb{N}$으로 적는다. 
 
 ## 자연수 사이의 대소관계
 
@@ -94,7 +96,7 @@ $I$가 유한이므로, 임의의 자연수 $a$와 $b$에 대해 $a+b$와 $ab$�
 ## 자연수 집합의 성질들
 
 ::: 정의 8
-$A$가 공집합이 아니고 $X$가 $A$의 부분집합이라 하자. $X$의 *특성함수<sub>characteristic function</sub>*는 함수 $\chi_X:E\rightarrow \{0,1\}$이며, 그 값은 다음의 식
+$A$가 공집합이 아니고 $X$가 $A$의 부분집합이라 하자. $X$의 *특성함수<sub>characteristic function</sub>*는 함수 $\chi_X:A\rightarrow \{0,1\}$이며, 그 값은 다음의 식
 
 $$\chi_X(x)=\begin{cases}1&\text{if $x\in X$}\\ 0&\text{if $x\in A\setminus X$}\end{cases}$$
 
@@ -116,7 +118,7 @@ $$\begin{aligned}
 :::
 
 
-이제 집합론보다는 다른 여러 곳에서 쓸 자연수의 성질을 조금 정리하고 넘어가자. 우선 다음은 유클리드 호제법이라 불리는 나눗셈 알고리즘이다.
+이제 집합론보다는 다른 여러 곳에서 쓸 자연수의 성질을 조금 정리하고 넘어가자. 우선 다음은 Euclidean division이라 불리는 나눗셈 알고리즘이다.
 
 ::: 정리 10
  $a$와 $b$가 $b>0$를 만족하는 자연수들이라 하자. 그럼 유일한 자연수 $q$와 $r$이 존재하여 $a=bq+r$이고 $r< b$이다.
@@ -127,7 +129,7 @@ $$\begin{aligned}
 
 $$r=a-bq<0\quad\text{or}\quad r=a-bq\geq b$$
 
-이 되기 때문이다. 존재성을 보이기 위해, $a<a+1<b(a+1)$라 하자. 그럼 $a<bp$를 만족하는 $p$의 집합은 공집합이 아니다. 이제 well-orderedness에 의해, least element $m$이 존재하므로 $m=q+1$라 하면 $q$가 주어진 조건을 만족한다.
+이 되기 때문이다. 존재성을 보이기 위해, $a<a+1\leq b(a+1)$라 하자. 그럼 $a<bp$를 만족하는 $p$의 집합은 공집합이 아니다. 이제 well-orderedness에 의해, least element $m$이 존재하므로 $m=q+1$라 하면 $q$가 주어진 조건을 만족한다.
 :::
 
 위의 증명처럼, 우리가 정의한 자연수의 연산을 잘 사용하여 나머지나 배수, 약수 등의 개념을 정의할 수 있다. 다음 따름정리 또한 마찬가지 방식으로 쉽게 증명할 수 있으나, 아직 우리는 정수를 정의하지는 않았으므로 증명은 따로 하지 않는다.
@@ -142,7 +144,7 @@ $$r=a-bq<0\quad\text{or}\quad r=a-bq\geq b$$
 집합이 *무한하다<sub>infinite</sub>*는 것은 유한하지 않다는 것이다.
 :::
 
-이제 infinite cardinal의 성질에 대해 살펴보자. 앞서 finite cardinal은 $\mathfrak{a}\neq\mathfrak{a}+1$을 만족했다. 다음 정리는 이와 유사한 infinite cardinal만의 성질이다.
+이제 infinite cardinal의 성질에 대해 살펴보자. 앞서 finite cardinal은 $\mathfrak{a}\neq\mathfrak{a}+1$을 만족했다. 다음 정리는 이와 유사한 infinite cardinal의 성질이다.
 
 ::: 명제 13
 모든 infinite cardinal $\mathfrak{a}$에 대하여 $\mathfrak{a}^2=\mathfrak{a}$가 성립한다.
@@ -163,12 +165,12 @@ $A$의 well-ordering이 존재한다. 자신을 제외한 $\mathbb{N}$의 임의
 ::: 증명
 다음의 수열
 
-$$(1,1),\;\; (1,2),(2,1),\;\; (1,3),(2,2),(3,1),\;\; \cdots$$
+$$(1,1),\quad (1,2),(2,1),\quad (1,3),(2,2),(3,1),\quad \cdots$$
 
 에 의해 자명.
 :::
 
-::: 증명 (명제 12)
+::: 증명 (명제 13)
 $A$가 cardinal $\mathfrak{a}$를 갖는 집합이라 하자. 그럼 첫 번째 보조정리로부터 어떤 $B\subseteq A$는 $\mathbb{N}$과 equipotent하고, 따라서 두 번째 보조정리에 의해 $B\times B$와 $B$ 사이의 전단사함수가 존재한다. 이를 $f$라 하자. 
 
 $B$를 포함하는 $A$의 부분집합 $X$와, 그 위에서 정의된 $f$의 extension $\psi:X\rightarrow X\times X$에 대해 $\mathfrak{M}$이 이러한 쌍 $(X,\psi)$들의 모임이라 하자. 그럼 $\mathfrak{M}$의 임의의 chain에 대하여 가장 큰 정의역을 갖는 쌍이 maximal element가 되므로, $\mathfrak{M}$은 inductive한 집합이고, 따라서 Zorn's lemma에 의해 $\mathfrak{M}$의 maximal element $(F, \tilde{f})$가 존재한다.

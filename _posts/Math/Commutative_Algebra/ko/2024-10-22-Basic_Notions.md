@@ -10,6 +10,7 @@ sidebar:
 
 date: 2024-10-22
 weight: 1
+drift_needed: true
 
 ---
 
@@ -78,7 +79,7 @@ $$M_0\supseteq M_1\supseteq M_2\supseteq\cdots$$
 
 1. $M$이 Noetherian이다.
 2. $M$의 임의의 submodule이 finitely generated이다.
-3. 임의의 $M$의 submodule들의 모임은 항상 포함관계에 대한 maximal element를 갖는다.
+3. 임의의 $M$의 submodule들의 공집합이 아닌 모임은 항상 포함관계에 대한 maximal element를 갖는다.
 :::
 ::: 증명
 우선 1번 조건을 가정하고 2번 조건을 보인다. 결론에 반하여 $M$이 finitely generated가 아닌 submodule $N$을 갖는다 가정하자. 그럼 $N$의 임의의 원소 $x_1\neq 0$을 택할 수 있으며, $N$이 finitely generated가 아니라는 사실로부터 $N\neq \langle x_1\rangle$이므로 $x_2\in N\setminus \langle x_1\rangle$을 택할 수 있다. 이를 계속 반복하여 $N$의 submodule들의 increasing sequence
@@ -113,7 +114,7 @@ $M/N$의 임의의 submodule은 $M$의 적당한 submodule $L$에 대하여 $L/N
 임의의 $A$-module $M$과 임의의 submodule $N$에 대하여, $M$이 Noetherian인 것과 $N,M/N$이 모두 Noetherian인 것이 동치이다.
 :::
 ::: 증명
-한쪽 방향은 이미 증명하였다. 따라서 $N, M/N$이 Noetherian이라 가정하고 $M$이 Noetherian임을 보이면 충분하다. $M$의 임의의 submodule $L$을 고정하자. 그럼 $L$의 $M/N$에서의 image $L/N$은 finitely generated이며, $L\cap N$ 또한 $N$의 submodule이므로 finitely generated이다. 이제 $x_1,\ldots, x_m\in L$을 $L/N$으로 보낸 것이 $L/N$의 generator가 된다 하고, $y_1,\ldots, y_n\in L\cap N$이 $L\cap N$의 generator라 하자. 그럼 임의의 $x\in L$에 대하여 
+한쪽 방향은 이미 증명하였다. 따라서 $N, M/N$이 Noetherian이라 가정하고 $M$이 Noetherian임을 보이면 충분하다. $M$의 임의의 submodule $L$을 고정하자. 그럼 $L$의 $M/N$에서의 image $(L+N)/N$은 finitely generated이며, $L\cap N$ 또한 $N$의 submodule이므로 finitely generated이다. 이제 $x_1,\ldots, x_m\in L$을 $(L+N)/N$으로 보낸 것이 $(L+N)/N$의 generator가 된다 하고, $y_1,\ldots, y_n\in L\cap N$이 $L\cap N$의 generator라 하자. 그럼 임의의 $x\in L$에 대하여 
 
 $$x\equiv \alpha_1x_1+\cdots+\alpha_m x_m\pmod{N}$$
 
@@ -179,7 +180,7 @@ Noetherian ring $A$와 $A$-module $M$에 대하여, 다음이 모두 동치이�
 3. $M$이 coherent이다.
 :::
 ::: 증명
-1번 조건과 2번 조건이 동치인 것은 이미 살펴보았다. 또, 정의에 의해 coherent $A$-module은 항상 finitely generated이다. 따라서 $M$이 finitely generated인 것을 가정하고 $M$이 coherent라는 것을 보이면 충분하다. 이는 임의의 $A$-linear map $A^{\oplus n}\rightarrow M$이 주어졌을 때, 이 linear map의 kernel은 $A^{\oplus n}$의 submodule이고, 여기에 [명제 5](#prop5)를 적용하여 얻어진다.
+1번 조건과 2번 조건이 동치인 것은 이미 살펴보았다. 또, 정의에 의해 coherent $A$-module은 항상 finitely generated이다. 따라서 $M$이 finitely generated인 것을 가정하고 $M$이 coherent라는 것을 보이면 충분하다. 이는 임의의 $A$-linear map $A^{\oplus n}\rightarrow M$이 주어졌을 때, 이 linear map의 kernel은 $A^{\oplus n}$의 submodule이고, [따름정리 6](#cor6)에 의하여 $A^{\oplus n}$이 Noetherian이므로 [정리 3](#thm3)에 의하여 finitely generated인 것으로부터 얻어진다.
 :::
 
 ## 소아이디얼
@@ -215,7 +216,7 @@ Noetherian ring $A$에 대하여, polynomial ring $A[\x]$ 또한 Noetherian이�
 
 우선 $\mathfrak{a}_n$이 $A$의 ideal임을 확인한다. 두 degree $n$의 다항식 $f,g\in I$의 leading coefficient를 각각 $a,b$라 하면, $f+g\in I$는 degree $n$이면서 leading coefficient가 $a+b$이거나, 또는 $a+b=0$이라면 degree가 $n$보다 작으므로, 어느 경우건 $a+b\in \mathfrak{a}_n$이다. 또 임의의 $\lambda\in A$에 대하여 $\lambda f\in I$의 leading coefficient는 $\lambda a$이거나 $0$이므로 $\lambda a\in \mathfrak{a}_n$이다. 한편 $f\in I$가 degree $n$이면 $\x f\in I$는 degree $n+1$이고 leading coefficient가 같으므로, $\mathfrak{a}_n\subseteq \mathfrak{a}_{n+1}$이 성립한다.
 
-이렇게 얻은 ascending chain $\mathfrak{a}_0\subseteq \mathfrak{a}_1\subseteq \cdots$은 $A$가 Noetherian이므로 적당한 $N$에서 안정화되어, 모든 $n\geq N$에 대하여 $\mathfrak{a}_n=\mathfrak{a}_N$이다. 또한 각 $n\leq N$에 대하여 $\mathfrak{a}_n$ 역시 finitely generated이므로, 그 generator를 $a_{n,1},\ldots,a_{n,k_n}$이라 하고, 각 $a_{n,j}$를 leading coefficient로 갖는 degree $n$의 다항식 $f_{n,j}\in I$을 하나씩 택하자.
+이렇게 얻은 ascending chain $\mathfrak{a}_0\subseteq \mathfrak{a}_1\subseteq \cdots$은 $A$가 Noetherian이므로 적당한 $N$에서 안정화되어, 모든 $n\geq N$에 대하여 $\mathfrak{a}_n=\mathfrak{a}_N$이다. 또한 각 $n\leq N$에 대하여 $\mathfrak{a}_n$ 역시 finitely generated이므로, 그 generator를 $0$이 아닌 것들로 택하여 $a_{n,1},\ldots,a_{n,k_n}$이라 하고($\mathfrak{a}_n=0$이면 $k_n=0$이다), 각 $a_{n,j}$를 leading coefficient로 갖는 degree $n$의 다항식 $f_{n,j}\in I$을 하나씩 택하자.
 
 이제 유한집합 $\{f_{n,j}\mid 0\leq n\leq N,\ 1\leq j\leq k_n\}$이 $I$를 생성함을, $I$의 원소의 degree에 대한 induction으로 보인다. $I$의 다항식 $f$의 degree를 $d$, leading coefficient를 $c$라 하자. 만일 $d\leq N$이라면 $c\in \mathfrak{a}_d$이므로 적당한 $\lambda_j\in A$에 대하여 $c=\sum_j \lambda_j a_{d,j}$이고,
 

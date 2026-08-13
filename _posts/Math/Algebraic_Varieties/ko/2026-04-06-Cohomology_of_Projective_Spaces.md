@@ -10,6 +10,7 @@ sidebar:
 
 date: 2026-04-06
 weight: 14
+drift_needed: true
 
 ---
 
@@ -90,7 +91,7 @@ $$N_{<0}(a)\subseteq\{i_0,\ldots, i_p\}$$
 
 $$K^q=\bigoplus_{\substack{J\subseteq N_{\geq 0}(a) \\ \lvert J\rvert=q}}\mathbb{K}\cdot e_J, \qquad \delta(e_J)=\sum_{v\in N_{\geq 0}(a)\setminus J}\pm e_{J\cup\{v\}}$$
 
-를 차수만 $\lvert N_{<0}(a)\rvert$만큼 밀어 놓은 것이다. 
+를 차수만 $\lvert N_{<0}(a)\rvert-1$만큼 밀어 놓은 것이다. 
 
 위의 complex에 대하여, $N_{\geq 0}(a)$가 공집합이 아니면 $K^\bullet$은 exact임을 관찰하자. 이는 $v\in N_{\geq 0}(a)$를 하나 고정하고
 
@@ -115,7 +116,7 @@ $$\x_0^{a_0} \cdots \x_n^{a_n},\qquad  a_i \leq -1, \quad \sum a_i=d$$
 
 로 생성됨을 보았다. ($d$가 음수임에 유의하자.) 이는 각각의 $\x_i^{-1}$들을 새로운 변수 $\y_i=\x_i^{-1}$로 생각하였을 때, 다음 식
 
-$$\y_0^{\lvert a_0\rvert},\cdots \y_n^{\lvert a_n\rvert}\qquad \lvert a_i\rvert\geq 1,\quad \sum \lvert a_i\rvert=\lvert d\rvert$$
+$$\y_0^{\lvert a_0\rvert}\cdots \y_n^{\lvert a_n\rvert}\qquad \lvert a_i\rvert\geq 1,\quad \sum \lvert a_i\rvert=\lvert d\rvert$$
 
 들로 생성되는 공간이라 하여도 된다. 여기서 각각의 $a_i$와 $d$는 모두 음수이므로 $\lvert a_i\rvert=-a_i$, $\lvert d\rvert=-d$이다. 위의 공간은 거의 degree $\lvert d\rvert$ homogeneous polynomial들의 공간과 유사하지만, $\lvert a_i\rvert$들이 $0$이 될 수 없다는 차이점이 있다. 따라서 $b_i=\lvert a_i\rvert-1$으로 치환하면, 우리는 이 공간을
 
@@ -130,7 +131,7 @@ $$\mathbb{K}[\x_0^{-1}, \ldots, \x_n^{-1}]_{-d-n-1}$$
 한편 나중을 위해 우리는 Euler characteristic을 정의한다.
 
 ::: 정의 2
-Variety $X$와 그 위에 정의된 coherent sheaf $\mathcal{F}$에 대하여, $\mathcal{F}$의 *Euler characteristic<sub>오일러 지표</sub>*을 다음의 식
+$n$차원 projective variety $X$와 그 위에 정의된 coherent sheaf $\mathcal{F}$에 대하여, $\mathcal{F}$의 *Euler characteristic<sub>오일러 지표</sub>*을 다음의 식
 
 $$\rchi(X, \mathcal{F}) = \sum_{i=0}^{n} (-1)^i \dim H^i(X, \mathcal{F})$$
 
@@ -199,7 +200,7 @@ $\mathcal{L}$이 ample이므로, 충분히 큰 $m_0$에 대해 $\mathcal{L}^{\ot
 
 $$\check{H}^i(\{X \cap U_j\}, \mathcal{F}) = \check{H}^i(\{U_j\}, i_\ast\mathcal{F})$$
 
-이 성립한다. $X$와 $\mathbb{P}^N$은 separated scheme이므로 ([§층 코호몰로지, ⁋정리 11](/ko/math/algebraic_varieties/sheaf_cohomology#thm11)), quasi-coherent sheaf에 대해 Čech cohomology = sheaf cohomology:
+이 성립한다. $X$와 $\mathbb{P}^N$은 separated variety이고 affine variety 위의 quasi-coherent sheaf는 [§층 코호몰로지, ⁋명제 12](/ko/math/algebraic_varieties/sheaf_cohomology#prop12)에 의해 acyclic이므로, [§층 코호몰로지, ⁋정리 11](/ko/math/algebraic_varieties/sheaf_cohomology#thm11)에 의해 quasi-coherent sheaf에 대해 Čech cohomology = sheaf cohomology:
 
 $H^i(X, \mathcal{F}) = \check{H}^i(\{X \cap U_j\}, \mathcal{F}) = \check{H}^i(\{U_j\}, i_\ast\mathcal{F}) = H^i(\mathbb{P}^N, i_\ast\mathcal{F})$ 따라서 다음을 보이면 충분하다: $\mathbb{P}^N$ 위의 coherent sheaf $\mathcal{G}$에 대해, 충분히 큰 $n$에 대해 $H^i(\mathbb{P}^N, \mathcal{G}(n)) = 0$ ($i > 0$). 여기서 $\mathcal{G}(n) = \mathcal{G} \otimes \mathcal{O}_{\mathbb{P}^N}(n)$이다.
 
@@ -237,7 +238,7 @@ $$H^{j+1}(\mathcal{K}_0(n_1)) \cong H^{j+2}(\mathcal{K}_1) \quad (j \geq 1)$$
 
 $$H^j(\mathcal{G}(n_0)) \cong H^{j+N}(\mathcal{K}_{N-1})$$
 
-을 얻는다. $\mathbb{P}^N$의 cohomological dimension은 $N$이므로 $H^{j+N} = 0$ ($j \geq 1$, $j + N \geq N+1 > N$), 따라서 $H^j(\mathcal{G}(n_0)) = 0$이다.
+을 얻는다. 임의의 coherent sheaf에 대하여 $\mathbb{P}^N$의 cohomological dimension이 $N$이라는 Grothendieck vanishing ([Hart] III.2.7)에 의해 $H^{j+N} = 0$ ($j \geq 1$, $j + N \geq N+1 > N$)이고, 따라서 $H^j(\mathcal{G}(n_0)) = 0$이다.
 
 마지막으로, $\mathcal{G}(n_0)$이 globally generated이므로 $\mathcal{G}(n) = \mathcal{G}(n_0) \otimes \mathcal{O}(n - n_0)$ 역시 $n \geq n_0$에 대해 globally generated이고, 따라서 위와 동일한 resolution 인자를 $\mathcal{G}(n)$에 대해서도 구성할 수 있으므로 vanishing은 $n \geq n_0$인 모든 $n$에 대해 성립한다.
 :::
@@ -249,7 +250,7 @@ $$H^j(\mathcal{G}(n_0)) \cong H^{j+N}(\mathcal{K}_{N-1})$$
 직관적으로 higher cohomology는 낮은 degree cohomology에서의 실패로 인해 생기는 것이므로, 이 twisting은 높은 degree에서는 "덜" 필요하다. 이를 염두에 두면 다음의 정의가 자연스럽다.
 
 ::: 정의 5
-Projective variety $X$와 그 위의 ample line bundle $\mathcal{L}$이 고정되었다고 하자. 그럼 $X$ 위의 coherent sheaf $\mathcal{F}$가 *$m$-regular*라는 것은 모든 $i>0$에 대하여
+Projective variety $X$와 그 위의 very ample line bundle $\mathcal{L}$이 고정되었다고 하자. 그럼 $X$ 위의 coherent sheaf $\mathcal{F}$가 *$m$-regular*라는 것은 모든 $i>0$에 대하여
 
 $$H^i(X, \mathcal{F} \otimes \mathcal{L}^{\otimes m - i}) = 0$$
 
@@ -284,10 +285,10 @@ $$0 \rightarrow \mathcal{F}(d) \rightarrow \mathcal{G}(d) \rightarrow \mathcal{H
 
 
 ::: 명제 7 (Castelnuovo-Mumford Regularity)
-$X$를 projective variety, $\mathcal{L}$을 ample line bundle, $\mathcal{F}$를 coherent sheaf라 하자. $\mathcal{F}$가 $\mathcal{L}$에 대해 $m$-regular이면 다음이 성립한다.
+$X$를 projective variety, $\mathcal{L}$을 very ample line bundle, $\mathcal{F}$를 coherent sheaf라 하자. $\mathcal{F}$가 $\mathcal{L}$에 대해 $m$-regular이면 다음이 성립한다.
 
 1. $\mathcal{F} \otimes \mathcal{L}^{\otimes m}$은 globally generated이다.
-2. $\mathcal{F} \otimes \mathcal{L}^{\otimes p}$는 모든 $p \geq 0$에 대해 $\mathcal{L}$에 대해 $(m+p)$-regular이다.
+2. $\mathcal{F}$는 모든 $p \geq 0$에 대해 $\mathcal{L}$에 대해 $(m+p)$-regular이다.
 :::
 
 ::: 증명
@@ -319,7 +320,7 @@ $$H^i(\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m-i}) = 0$$
 
 **2단계: $\mathcal{F} \otimes \mathcal{L}^{\otimes m}$이 globally generated.** 귀납적 가정을 $D$에 적용한다. $D$는 projective variety이고 $\dim D < \dim X$이며, $\mathcal{L}\vert_D$는 ample line bundle이다. $\mathcal{F}\vert_D$가 $m$-regular이므로 귀납적 가정에 의해 $\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m}$은 $D$ 위에서 globally generated이다.
 
-이제 $\mathcal{F} \otimes \mathcal{L}^{\otimes m}$이 globally generated임을 보이자. 임의의 점 $p \in X$에서 fiber $(\mathcal{F} \otimes \mathcal{L}^{\otimes m})_p$가 global section들의 image로 생성됨을 확인하면 충분하다. $p$를 지나는 일반적인 divisor $D$를 택하고, restriction sequence에서 $k = m$을 대입하면
+이제 $\mathcal{F} \otimes \mathcal{L}^{\otimes m}$이 globally generated임을 보이자. 임의의 점 $x \in X$에서 fiber $(\mathcal{F} \otimes \mathcal{L}^{\otimes m})_x$가 global section들의 image로 생성됨을 확인하면 충분하다. $x$를 지나는 일반적인 divisor $D$를 택하고, restriction sequence에서 $k = m$을 대입하면
 
 $$0 \rightarrow \mathcal{F} \otimes \mathcal{L}^{\otimes m-1} \rightarrow \mathcal{F} \otimes \mathcal{L}^{\otimes m} \rightarrow \mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m} \rightarrow 0$$
 
@@ -327,9 +328,9 @@ $$0 \rightarrow \mathcal{F} \otimes \mathcal{L}^{\otimes m-1} \rightarrow \mathc
 
 $$H^0(\mathcal{F} \otimes \mathcal{L}^{\otimes m}) \rightarrow H^0(\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m})$$
 
-는 surjective이다. 귀납적 가정에 의해 $\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m}$은 $D$ 위에서 globally generated이므로, 이 fiber at $p$는 $H^0(\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m})$의 image로 생성된다. Restriction map이 surjective이므로 $\mathcal{F} \otimes \mathcal{L}^{\otimes m}$의 global section들도 $p$에서의 fiber를 생성한다. 따라서 $\mathcal{F} \otimes \mathcal{L}^{\otimes m}$은 globally generated이다.
+는 surjective이다. 귀납적 가정에 의해 $\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m}$은 $D$ 위에서 globally generated이므로, 이 fiber at $x$는 $H^0(\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m})$의 image로 생성된다. Restriction map이 surjective이므로 $\mathcal{F} \otimes \mathcal{L}^{\otimes m}$의 global section들도 $x$에서의 fiber를 생성한다. 따라서 $\mathcal{F} \otimes \mathcal{L}^{\otimes m}$은 globally generated이다.
 
-**3단계: $\mathcal{F} \otimes \mathcal{L}^{\otimes p}$가 $(m+p)$-regular.** $\mathcal{F} \otimes \mathcal{L}^{\otimes m}$이 globally generated이므로, 적당한 $r_0$에 대하여 다음의 surjection이 존재한다.
+**3단계: $\mathcal{F}$가 $(m+p)$-regular.** $\mathcal{F} \otimes \mathcal{L}^{\otimes m}$이 globally generated이므로, 적당한 $r_0$에 대하여 다음의 surjection이 존재한다.
 
 $$\mathcal{O}_X^{\oplus r_0} \twoheadrightarrow \mathcal{F} \otimes \mathcal{L}^{\otimes m}$$
 
@@ -339,11 +340,11 @@ $$(\mathcal{L}^{\otimes p})^{\oplus r_0} \twoheadrightarrow \mathcal{F} \otimes 
 
 을 얻는다. 따라서 임의의 $i > 0$과 $p \geq 0$에 대해 $H^i(X, \mathcal{L}^{\otimes p}) = 0$이면 $H^i(\mathcal{F} \otimes \mathcal{L}^{\otimes m+p}) = 0$이 성립한다. $p = 0$인 경우 $H^i(\mathcal{F} \otimes \mathcal{L}^{\otimes m}) = 0$ ($i > 0$)은 $\mathcal{F}$의 $m$-regularity 정의 자체에 해당한다. $p \geq 1$인 경우, $\mathcal{L}$이 ample이므로 [명제 4](#prop4)에 의해 충분히 큰 $p$에 대해 $H^i(\mathcal{L}^{\otimes p}) = 0$이지만, $p$가 작은 경우에는 이 인자가 vanish하지 않을 수 있다.
 
-이 문제를 해결하기 위해 $p$에 대한 귀납법을 사용한다. $p = 0$일 때 $\mathcal{F}(m)$이 $m$-regular인 것은 정의이다. $p \geq 1$이라 가정하고, $\mathcal{F}(m+p)$가 $(m+p)$-regular임, 즉 $H^i(\mathcal{F} \otimes \mathcal{L}^{\otimes m+p-i}) = 0$ ($i > 0$)을 보이자. $i = 1$인 경우, restriction sequence에서 $k = m + p - 1$을 대입하면
+이 문제를 해결하기 위해 $p$에 대한 귀납법을 사용한다. $p = 0$일 때 $\mathcal{F}$가 $m$-regular인 것은 정의이다. $p \geq 1$이라 가정하고, $\mathcal{F}$가 $(m+p)$-regular임, 즉 $H^i(\mathcal{F} \otimes \mathcal{L}^{\otimes m+p-i}) = 0$ ($i > 0$)을 보이자. $i = 1$인 경우, restriction sequence에서 $k = m + p - 1$을 대입하면
 
 $$H^0(\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m+p-1}) \rightarrow H^1(\mathcal{F} \otimes \mathcal{L}^{\otimes m+p-2}) \rightarrow H^1(\mathcal{F} \otimes \mathcal{L}^{\otimes m+p-1})$$
 
-이다. 귀납적 가정 ($p-1$에 대한)에 의해 $H^1(\mathcal{F} \otimes \mathcal{L}^{\otimes m+p-2}) = 0$이다. 또한, $\mathcal{F}\vert_D$가 $m$-regular이므로 (2단계) 차원에 대한 귀납적 가정에 의해 $\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes p}$이 $(m+p)$-regular이고, 따라서 $H^1(\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m+p-1}) = 0$이다. 정확한 열에서 $H^1(\mathcal{F} \otimes \mathcal{L}^{\otimes m+p-1})$은 $H^1(\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m+p-1})$에 매장되므로 $H^1(\mathcal{F} \otimes \mathcal{L}^{\otimes m+p-1}) = 0$을 얻는다. $i \geq 2$인 경우, 같은 restriction sequence에서
+이다. 귀납적 가정 ($p-1$에 대한)에 의해 $H^1(\mathcal{F} \otimes \mathcal{L}^{\otimes m+p-2}) = 0$이다. 또한, $\mathcal{F}\vert_D$가 $m$-regular이므로 (1단계) 차원에 대한 귀납적 가정에 의해 $\mathcal{F}\vert_D$가 $(m+p)$-regular이고, 따라서 $H^1(\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m+p-1}) = 0$이다. 정확한 열에서 $H^1(\mathcal{F} \otimes \mathcal{L}^{\otimes m+p-1})$은 $H^1(\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m+p-1})$에 매장되므로 $H^1(\mathcal{F} \otimes \mathcal{L}^{\otimes m+p-1}) = 0$을 얻는다. $i \geq 2$인 경우, 같은 restriction sequence에서
 
 $$H^{i-1}(\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m+p-i}) \rightarrow H^i(\mathcal{F} \otimes \mathcal{L}^{\otimes m+p-i-1}) \rightarrow H^i(\mathcal{F} \otimes \mathcal{L}^{\otimes m+p-i}) \rightarrow H^i(\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m+p-i})$$
 
@@ -359,7 +360,7 @@ $\mathbb{P}^n$ 위의 line bundle $\mathcal{O}(d)$의 regularity를 계산해보
 위의 [명제 4](#prop4)와 [명제 7](#prop7)은 ample line bundle의 성질에 대한 대표적인 결과이다. 우리는 이 글을 ample line bundle과 very ample line bundle에 대한 추가적인 성질을 살펴보며 마무리한다. 
 
 ::: 명제 9
-$\mathcal{L}$이 very ample이고 $\mathcal{M}$이 globally generated이면, $\mathcal{L} \otimes \mathcal{M}$은 very ample이다.
+$\mathcal{L}$이 very ample이고 $\mathcal{M}$이 globally generated line bundle이면, $\mathcal{L} \otimes \mathcal{M}$은 very ample이다.
 :::
 
 ::: 증명

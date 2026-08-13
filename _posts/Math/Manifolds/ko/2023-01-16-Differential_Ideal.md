@@ -10,6 +10,7 @@ sidebar:
 
 date: 2023-01-16
 weight: 15
+drift_needed: true
 
 ---
 
@@ -34,10 +35,10 @@ $$\mathcal{I}(\mathcal{D})=\{\omega\in\Omega^\ast(M)\mid\text{$\omega$ annihilat
 으로 정의한다. 
 
 ::: 명제 2
-Manifold $M$ 위에 정의된 $k$차원 distribution $\mathcal{D}$를 생각하자. 
+$m$차원 manifold $M$ 위에 정의된 $k$차원 $C^\infty$ distribution $\mathcal{D}$를 생각하자. 
 
 1. $\mathcal{I}(\mathcal{D})$는 $\Omega^\ast(M)$의 ideal이다.
-2. $\mathcal{I}(\mathcal{D})$는 국소적으로 $m-k$개의 1-form들로 생성된다.
+2. $\mathcal{I}(\mathcal{D})$는 국소적으로 $m-k$개의 independent 1-form들로 생성된다.
 3. 만일 $\mathcal{I}$가 위의 두 조건을 만족하는 ideal이라면, 유일한 $k$차원 distribution $\mathcal{D}$가 존재하여 $\mathcal{I}=\mathcal{I}(\mathcal{D})$이도록 할 수 있다. 
 :::
 ::: 증명
@@ -63,7 +64,7 @@ $\Omega^\ast(M)$의 ideal $\mathcal{I}$가 *differential ideal<sub>미분 아이
 이제 우리는 앞선 글에서 살펴본 프로베니우스 정리를 differential form의 언어로 서술한다. 이는 별다른 것은 아니고, 벡터장에 대한 것을 그 dual $1$-form들에 대한 것으로 바꾸는 것에 불과하다.
 
 ::: 명제 4
-Manifold $M$ 위에 정의된 distribution $\mathcal{D}$에 대하여, $\mathcal{D}$가 involutive인 것과 $\mathcal{I}(\mathcal{D})$가 differential ideal인 것이 동치이다.
+Manifold $M$ 위에 정의된 $C^\infty$ distribution $\mathcal{D}$에 대하여, $\mathcal{D}$가 involutive인 것과 $\mathcal{I}(\mathcal{D})$가 differential ideal인 것이 동치이다.
 :::
 
 ::: 정의 5
@@ -83,7 +84,7 @@ $m$차원 manifold $M$과, $m-k$개의 independent 1-form들로 생성된 differ
 ::: 정리 7
 두 manifold $M^m,N^n$이 주어졌다 하고, $\pi_1:N\times M\rightarrow N$과 $\pi_2:N\times M\rightarrow M$이 각각 canonical projection이라 하자. 또, $M$에서 정의된 1-form들의 모임이 basis $\{\omega_1,\ldots,\omega_m\}$을 갖는다 가정하자. 
 
-1. 임의의 $f:N\rightarrow M$에 대하여, $\graph(f)$는 다음의 집합
+1. 임의의 $C^\infty$ 함수 $f:N\rightarrow M$에 대하여, $\graph(f)$는 다음의 집합
 
     $$\{(\dd{(f\circ \pi_1)})^\ast(\omega_i)-(\dd{\pi_2})^\ast(\omega_i)\mid i=1,\ldots, m\}$$
 
@@ -119,7 +120,7 @@ $m$차원 manifold $M$과, $m-k$개의 independent 1-form들로 생성된 differ
 
     으로부터 분명하다.
 
-2. 주어진 form들의 집합으로 생성되는 ideal을 $\mathcal{I}$라 하자. 그럼 프로베니우스 정리에 의하여, $\mathcal{I}$는 $(m+n)-m=n$차원의 integral manifold $I$를 갖는다. 이후, 임의의 점 $q\in I$에 대하여, $\dd{\pi_1}$을 $I_q$로 제한한 것이 전단사함수임을 보이면 된다. 
+2. 주어진 form들의 집합으로 생성되는 ideal을 $\mathcal{I}$라 하자. 그럼 프로베니우스 정리에 의하여, $\mathcal{I}$는 $(m+n)-m=n$차원의 integral manifold $I$를 갖는다. 이후, 임의의 점 $q\in I$에 대하여, $\dd{\pi_1}$을 $T_qI$로 제한한 것이 전단사함수임을 보이면 된다. 
 :::
 
 ---

@@ -10,6 +10,7 @@ sidebar:
 
 date: 2024-10-16
 weight: 6
+drift_needed: true
 
 ---
 
@@ -28,7 +29,7 @@ Ring $A$와 $A$-module $M$에 대하여, $A$의 prime ideal $\mathfrak{p}$가 $M
 ::: 보조정리 2 (Prime avoidance lemma)
 $A$의 ideal들 $\mathfrak{a}_1,\ldots, \mathfrak{a}_n, \mathfrak{b}$가 주어졌다 하고, $\mathfrak{b}\subseteq \mathfrak{a}_1\cup\cdots\cup \mathfrak{a}_n$이라 하자. 만일 $A$가 무한한 field를 포함하거나, 많아야 두 개의 $\mathfrak{a}_i$만이 prime ideal이 아니라면 $\mathfrak{b}$는 $\mathfrak{a}_1,\ldots, \mathfrak{a}_n$ 중 하나에 속한다. 
 
-추가로, 만일 $A$가 graded이고 $\mathfrak{b}$가 homogeneous ideal이며 모든 $\mathfrak{a}_i$가 prime ideal이라면, $\mathfrak{b}$의 homogeneous element들이 $\mathfrak{a}_1\cup\cdots\cup \mathfrak{a}_n$에 속하는 것으로 가정해도 결론이 성립한다.
+추가로, 만일 $A$가 graded이고 $\mathfrak{b}$가 양의 degree를 갖는 homogeneous element들로 생성되는 homogeneous ideal이며 모든 $\mathfrak{a}_i$가 prime ideal이라면, $\mathfrak{b}$의 homogeneous element들이 $\mathfrak{a}_1\cup\cdots\cup \mathfrak{a}_n$에 속하는 것으로 가정해도 결론이 성립한다.
 :::
 ::: 증명
 만일 $A$가 무한한 field $\mathbb{K}$를 포함한다면, ideal들 각각을 $\mathbb{K}$-벡터공간으로 본다면 
@@ -43,7 +44,7 @@ $$\mathfrak{b}=\bigcup_{i=1}^n (\mathfrak{b}\cap \mathfrak{a}_i)$$
 
 이제 $n=2$인 경우, $\mathfrak{b}$의 원소 $x_1+x_2$를 생각하자. 만일 $x_1+x_2\in \mathfrak{a}_1$이라면, $x_2=(x_1+x_2)-x_1\in \mathfrak{a}_1$이므로 모순이고, 비슷하게 $x_1+x_2$는 $\mathfrak{a}_2$의 원소일 수도 없다. 이는 $\mathfrak{b}\subseteq \mathfrak{a}_1\cup \mathfrak{a}_2$라는 가정에 모순이다. 
 
-$n\geq 3$인 경우도 비슷한 아이디어를 사용한다. 주어진 조건으로부터 $\mathfrak{a}_1,\ldots, \mathfrak{a}_n$ 중 적어도 하나는 prime ideal이므로, 일반성을 잃지 않고 $\mathfrak{a}_1$이 prime ideal이라 가정할 수 있다. 그럼 원소 $x_1+x_2x_3\cdots x_n$을 생각하고, $\mathfrak{a}_1$이 prime ideal이라는 가정을 잘 사용하면 모순을 얻는다. 
+$n\geq 3$인 경우도 비슷한 아이디어를 사용한다. 주어진 조건으로부터 $\mathfrak{a}_1,\ldots, \mathfrak{a}_n$ 중 적어도 하나는 prime ideal이므로, 일반성을 잃지 않고 $\mathfrak{a}_1$이 prime ideal이라 가정할 수 있다. 그럼 $\mathfrak{a}_1$이 prime ideal이고 $j\geq 2$인 각각에 대하여 $x_j\not\in \mathfrak{a}_1$인 것으로부터 $x_2x_3\cdots x_n\not\in \mathfrak{a}_1$이므로 원소 $x_1+x_2x_3\cdots x_n$은 $\mathfrak{a}_1$에 속하지 않고, $j\geq 2$인 각각에 대해서는 $x_2x_3\cdots x_n\in \mathfrak{a}_j$이고 $x_1\not\in \mathfrak{a}_j$이므로 이 원소가 $\mathfrak{a}_j$에도 속하지 않아 가정에 모순이다. 
 
 Graded ring의 경우는 $x_i$를 $x_2x_3\cdots$과 같은 degree를 갖도록 여러번 곱해서 degree만 맞춰주면 된다. 
 :::
@@ -55,7 +56,7 @@ Graded ring의 경우는 $x_i$를 $x_2x_3\cdots$과 같은 degree를 갖도록 �
 이제 우리는 $\Ass M$에 대해 조금 더 자세히 살펴본다.
 
 ::: 명제 3
-$A$-module $M$을 하나 고정하고, $\mathfrak{a}$가 $\ann(x)$ 꼴의 ideal들 중 maximal이라 가정하자. 그럼 $\mathfrak{a}$는 prime ideal이다. 
+$A$-module $M$을 하나 고정하고, $\mathfrak{a}$가 $0$이 아닌 $x\in M$에 대한 $\ann(x)$ 꼴의 ideal들 중 maximal이라 가정하자. 그럼 $\mathfrak{a}$는 prime ideal이다. 
 :::
 ::: 증명
 $ab\in \mathfrak{a}$라 하고 $b\not\in \mathfrak{a}$라 한 후, $a\in \mathfrak{a}$임을 보여야 한다. $\mathfrak{a}=\ann(x)$라 하자. 그럼 가정에 의해 $abx=0$이고 $bx\neq 0$이다. 이제 $\mathfrak{a}\subseteq\ann(bx)$이므로 $\mathfrak{a}$의 maximality에 의하여 $\mathfrak{a}=\ann(bx)$이다. 이로부터 
@@ -77,7 +78,7 @@ Noetherian ring $A$ 위에서 정의된 module $M$을 생각하자. 그럼 다�
 3. $A$-linear map $u:M \rightarrow N$이 injective인 것은 임의의 $\mathfrak{p}\in \Ass M$에 대하여 $u_\mathfrak{p}$가 injective인 것과 동치이다.
 :::
 ::: 증명
-우선 1번 결과의 경우, $A$가 Noetherian이라는 가정으로부터 임의의 $x\in M$이 주어질 때마다 $\ann(x)$를 포함하는 annihilator ideal들 가운데 maximal인 ideal $\mathfrak{p}$를 하나 택할 수 있으며, [명제 3](#prop3)에 의해 $\mathfrak{p}\in \Ass M$이다. 따라서 $M_\mathfrak{p}$에서 $x/1$은 $0$이 되지 않는다. 2번 결과는 1번 결과에 의해 자명하며, 3번 결과는 2번 결과에서 $L=\ker u$로 두면 된다.
+우선 1번 결과의 경우, $A$가 Noetherian이라는 가정으로부터 $0$이 아닌 임의의 $x\in M$이 주어질 때마다 $\ann(x)$를 포함하는, $0$이 아닌 원소의 annihilator ideal들 가운데 maximal인 ideal $\mathfrak{p}$를 하나 택할 수 있으며, [명제 3](#prop3)에 의해 $\mathfrak{p}\in \Ass M$이다. 따라서 $M_\mathfrak{p}$에서 $x/1$은 $0$이 되지 않는다. 2번 결과는 1번 결과에 의해 자명하며, 3번 결과는 2번 결과에서 $L=\ker u$로 두면 된다.
 :::
 
 이번 글의 목표는 [정리 7](#thm7)을 증명하는 것이다. 이를 위해 다음의 두 보조정리가 필요하다. 
@@ -113,18 +114,18 @@ $$0=M_0\subseteq M_1\subseteq\cdots\subseteq M_n=M,\qquad \text{$M_k/M_{k-1}\con
 :::
 
 ::: 정리 7
-Noetherian ring $A$ 위에 정의된 finitely generated module $M$에 대하여 다음이 성립한다.
+Noetherian ring $A$ 위에 정의된 $0$이 아닌 finitely generated module $M$에 대하여 다음이 성립한다.
 
 1. $\Ass M$은 공집합이 아닌 유한집합이며, 이들 각각의 원소는 $\ann M$을 포함한다. 뿐만 아니라, $\ann M$을 포함하는 prime ideal들의 집합에서 minimal한 prime ideal들은 모두 $\Ass M$에 포함된다.
-2. Associated prime들의 합집합은 $0$과, $M$의 어떤 zero-divisor들의 모임들로 이루어진다.
-3. 다음의 식
+2. Associated prime들의 합집합은 $0$과 $M$의 zero-divisor 전체로 이루어진다.
+3. $A$의 multiplicative subset $S$에 대하여 다음의 식
     
     $$\Ass_{S^{-1}A}S^{-1}M=\{\mathfrak{p}S^{-1}A\mid \mathfrak{p}\in\Ass M, \mathfrak{p}\cap S=\emptyset\}$$
 
     이 성립한다. 
 :::
 ::: 증명
-우선 첫 번째 결과의 경우, $\Ass M$이 공집합이 아닌 것은 [명제 3](#prop3)에 의한 것이며, $\Ass M$이 $\ann M$을 포함한다는 것은 자명하다. 한편, [보조정리 5](#lem5)에 의하여 다음 short exact sequence
+우선 첫 번째 결과의 경우, $\Ass M$이 공집합이 아닌 것은 [명제 3](#prop3)에 의한 것이며, $\Ass M$의 각 원소가 $\ann M$을 포함한다는 것은 자명하다. 한편, [보조정리 5](#lem5)에 의하여 다음 short exact sequence
 
 $$0 \rightarrow M_{n-1} \rightarrow M_n \rightarrow M_n/M_{n-1} \rightarrow 0$$
 
@@ -142,11 +143,11 @@ $$0=q(x+\mathfrak{p})=qx+\mathfrak{p}$$
 
 따라서, 위와 같은 방식으로
 
-$$\Ass M \subseteq \Ass M_{n-1}\cup \{ \mathfrak{p}_{n-1}\}\subseteq \Ass M_{n-2}\cup \{\mathfrak{p}_{n-1},\mathfrak{p}_{n-2}\}\cdots$$
+$$\Ass M \subseteq \Ass M_{n-1}\cup \{ \mathfrak{p}_n\}\subseteq \Ass M_{n-2}\cup \{\mathfrak{p}_n,\mathfrak{p}_{n-1}\}\cdots$$
 
 를 반복하면 첫 번째 결과의 유한성을 얻는다. 
 
-첫 번째 결과의 나머지 부분은 세 번째 결과를 증명하여 얻어진다. 그 전에 두 번째 결과의 경우, 만일 $a\in A$가 어떤 $x\in M$의 annihilator ideal에 속한다면, 이 annihilator ideal을 포함하는 maximal한 annihilator ideal을 생각할 수 있고 이것이 $\Ass M$에 속하므로 자명하다. 세 번째 결과의 경우는 표기법에 유의하며 [§국소화의 성질들, ⁋명제 5](/ko/math/commutative_algebra/properties_of_localization#prop5)를 사용하면 된다. 
+첫 번째 결과의 나머지 부분은 세 번째 결과를 증명하여 얻어진다. 그 전에 두 번째 결과의 경우, 만일 $a\in A$가 $0$이 아닌 어떤 $x\in M$의 annihilator ideal에 속한다면, 이 annihilator ideal을 포함하는, $0$이 아닌 원소의 maximal한 annihilator ideal을 생각할 수 있고 이것이 $\Ass M$에 속하므로 자명하다. 역으로 $\mathfrak{p}=\ann(x)\in \Ass M$이라면 $\mathfrak{p}$가 proper ideal인 것으로부터 $x\neq 0$이고, 따라서 $\mathfrak{p}$의 $0$이 아닌 임의의 원소는 $x$를 소멸시키는 $M$의 zero-divisor이다. 세 번째 결과의 경우는 표기법에 유의하며 [§국소화의 성질들, ⁋명제 5](/ko/math/commutative_algebra/properties_of_localization#prop5)를 사용하면 된다. 
 
 세 번째 결과를 가정하면 남은 부분도 자명하다. 만일 $\mathfrak{p}$가 $\ann M$을 포함하는 prime ideal들 중 minimal한 것이라면, 세 번째 결과를 이용하면 localization $A_\mathfrak{p}$에서의 maximal ideal $\mathfrak{p}$를 생각할 수 있는데, $\ann M$을 포함하는 유일한 prime ideal이 $\mathfrak{p}$ 뿐이므로 반드시 $\mathfrak{p}\in \Ass M$이어야 한다.
 :::
@@ -157,7 +158,7 @@ $$\Ass M \subseteq \Ass M_{n-1}\cup \{ \mathfrak{p}_{n-1}\}\subseteq \Ass M_{n-2
 Reduced Noetherian ring $A$에 대하여, $A$의 total ring of fractions를 $K$라 하자. 그럼 $K$는 field들의 유한한 product이다. 
 :::
 ::: 증명
-우선 $M=A$로 두면 $\ann(A)=\{0\}$이다. 따라서, $A$의 minimal prime ideal $\mathfrak{p}_1,\ldots, \mathfrak{p}_k$들은 모두 $\Ass M$에 포함되며, 이들의 합집합은 $A$의 zero-divisor로 이루어져 있다. 
+우선 $M=A$로 두면 $\ann(A)=\{0\}$이다. 따라서, $A$의 minimal prime ideal $\mathfrak{p}_1,\ldots, \mathfrak{p}_k$들은 모두 $\Ass M$에 속하며, 이들의 합집합은 $A$의 zero-divisor로 이루어져 있다. 
 
 또, 만일 $A$가 reduced ring이라면, 이들의 합집합이 정확히 $A$의 모든 zerodivisor들의 모임과 같다. 이를 확인하기 위해 우선 $A$가 reduced라는 가정으로부터,
 

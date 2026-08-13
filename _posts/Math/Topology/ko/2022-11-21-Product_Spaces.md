@@ -10,6 +10,7 @@ sidebar:
 
 date: 2022-11-21
 weight: 11
+drift_needed: true
 
 ---
 
@@ -40,7 +41,7 @@ $$\prod_{i\in I} U_i,\qquad \text{$U_i$ open in $X_i$, $U_i=X_i$ for all but fin
 이로부터 다음 두 개의 따름정리를 얻는다. 
 
 ::: 따름정리 3
-Index set $I$를 공유하는 두 곱공간 $X=\prod_{i\in I}X_i$, $Y=\prod_{i\in I}Y_i$이 주어졌다 하고, $f_i:X_i\rightarrow Y_i$들이 주어졌다 하자. 그럼 $f:(x_i)\mapsto (f_i(x_i))$이 연속인 것은 각각의 $f_i$가 연속인 것과 동치이다.
+Index set $I$를 공유하는 두 곱공간 $X=\prod_{i\in I}X_i$, $Y=\prod_{i\in I}Y_i$이 주어졌다 하고, $f_i:X_i\rightarrow Y_i$들이 주어졌다 하자. 또한 각각의 $X_i$는 공집합이 아니라 하자. 그럼 $f:(x_i)\mapsto (f_i(x_i))$이 연속인 것은 각각의 $f_i$가 연속인 것과 동치이다.
 :::
 
 임의의 집합 $X, Y$와 함수 $f:X \rightarrow Y$에 대하여, $f$의 *graph* $\graph(f)$는 $X\times Y$의 부분집합
@@ -67,20 +68,20 @@ $$X\rightarrow X\times\{y_0\}$$
 
 $$A\cap (X\times \{y_0\})=\{(x,y)\mid (x,y)\in A,\quad y=y_0\}=\{(x,y_0)\mid (x,y_0)\in A\}$$
 
-이다. 이제 $\graph(f)$는 $X\times Y$의 subspace topology가 주어져 있으므로, 위의 집합은 $A$가 $X\times Y$의 열린집합이라면 $\graph(f)$의 열린집합이 되고, $A$가 $X\times Y$의 닫힌집합이라면 $\graph(f)$의 닫힌집합이 된다. 따라서 다시 [따름정리 4](#cor4)를 적용하여 위의 집합을 $X$로 보내면 해당하는 집합 또한 열린집합 혹은 닫힌집합이 된다. 이 집합을 $A(y_0)\subseteq X$로 적자. 물론 비슷한 논증을 $X$와 $Y$의 역할을 바꾸어 $Y$의 부분집합 $A(x_0)$을 얻을 수도 있다. 
+이다. 이제 $X\times\{y_0\}$는 $X\times Y$의 subspace topology가 주어져 있으므로, 위의 집합은 $A$가 $X\times Y$의 열린집합이라면 $X\times\{y_0\}$의 열린집합이 되고, $A$가 $X\times Y$의 닫힌집합이라면 $X\times\{y_0\}$의 닫힌집합이 된다. 따라서 다시 [따름정리 4](#cor4)를 적용하여 위의 집합을 $X$로 보내면 해당하는 집합 또한 열린집합 혹은 닫힌집합이 된다. 이 집합을 $A(y_0)\subseteq X$로 적자. 물론 비슷한 논증을 $X$와 $Y$의 역할을 바꾸어 $Y$의 부분집합 $A(x_0)$을 얻을 수도 있다. 
 
 ::: 명제 5
 $X\times Y$의 임의의 열린집합 $U$에 대하여, $\pr_X(U)$와 $\pr_Y(U)$는 $X,Y$의 열린집합이 된다.  
 :::
 ::: 증명
-위의 논증과 다음 식
+위의 논증에 의하여 각각의 $U(y)$는 $X$의 열린집합이고 각각의 $U(x)$는 $Y$의 열린집합이다. 따라서 다음 식
 
 $$\pr_X(U)=\bigcup_{y\in Y} U(y),\qquad \pr_Y(U)=\bigcup_{x\in X} U(x)$$
 
-으로부터 자명하다. 
+과, 열린집합들의 임의의 합집합이 열린집합이라는 것에 의하여 $\pr_X(U)$와 $\pr_Y(U)$는 열린집합이다. 
 :::
 
-그러나 닫힌집합들의 임의의 합집합은 닫힌집합일 필요가 없으므로, 위의 명제에서 $A$를 닫힌집합으로 바꾼 주장은 성립하지 않는다. 한편, [따름정리 4](#cor4)에 의하여 다음의 명제 또한 얻는다. 
+그러나 닫힌집합들의 임의의 합집합은 닫힌집합일 필요가 없으므로, 위의 명제에서 $U$를 닫힌집합으로 바꾼 주장은 성립하지 않는다. 한편, [따름정리 4](#cor4)에 의하여 다음의 명제 또한 얻는다. 
 
 ::: 명제 6
 함수 $f:X_1\times X_2 \rightarrow Y$가 $(a_1,a_2)\in X_1\times X_2$에서 연속이라면, 다음의 식

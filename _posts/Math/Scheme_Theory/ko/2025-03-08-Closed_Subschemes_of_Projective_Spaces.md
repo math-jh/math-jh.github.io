@@ -10,6 +10,7 @@ sidebar:
 
 date: 2025-03-08
 weight: 11
+drift_needed: true
 
 ---
 
@@ -39,7 +40,7 @@ $$A_{(\x_i)} \rightarrow (A_\bullet/\mathfrak{a})_{(\bar\x_i)};\qquad \frac{f}{\
 
 $$\mathfrak{a}_{(\x_i)}=\left\{\frac{a}{\x_i^d}\middle\vert\text{$a\in\mathfrak{a}$ homogeneous of degree $d$}\right\}$$
 
-이다. 즉 $\iota$는 각 chart 위에서 $\Spec\bigl(A_{(\x_i)}/\mathfrak{a}_{(\x_i)}\bigr) \rightarrow \Spec A_{(\x_i)}$ 꼴의 closed embedding이고, 이들은 $D_+(\x_i\x_j)$들 위에서 호환된다. 실제로 [§사영공간과 Proj 구성, ⁋보조정리 9](/ko/math/scheme_theory/projective_schemes#lem9)의 identification 하에서 $D_+(\x_i\x_j)$는 $\Spec A_{(\x_i\x_j)}$이고, 위의 ring homomorphism을 $A_{(\x_i)} \rightarrow A_{(\x_i\x_j)}$와 합성한 것은 $f/(\x_i\x_j)^d\mapsto \pi(f)/(\bar\x_i\bar\x_j)^d$로 주어져 $i$와 $j$의 역할에 대해 대칭이기 때문이다. 따라서 이들은 하나의 scheme morphism $\iota$로 붙는다. 한편 [§닫힌 부분스킴, ⁋명제 3](/ko/math/scheme_theory/closed_subschemes#prop3)의 증명이 보여주듯 closed embedding임은 하나의 affine open cover 위에서 확인하면 충분하므로, $\iota$는 closed embedding이다.
+이다. 즉 $\iota$는 각 chart 위에서 $\Spec\bigl(A_{(\x_i)}/\mathfrak{a}_{(\x_i)}\bigr) \rightarrow \Spec A_{(\x_i)}$ 꼴의 closed embedding이고, 이들은 $D_+(\x_i\x_j)$들 위에서 호환된다. 실제로 [§사영공간과 Proj 구성, ⁋보조정리 9](/ko/math/scheme_theory/projective_schemes#lem9)의 identification 하에서 $D_+(\x_i\x_j)$는 $\Spec A_{(\x_i\x_j)}$이고, 위의 ring homomorphism을 $D_+(\x_i\x_j)$ 위로 더 localize한 $A_{(\x_i\x_j)} \rightarrow (A_\bullet/\mathfrak{a})_{(\bar\x_i\bar\x_j)}$은 $f/(\x_i\x_j)^d\mapsto \pi(f)/(\bar\x_i\bar\x_j)^d$로 주어져 $i$와 $j$의 역할에 대해 대칭이기 때문이다. 따라서 이들은 하나의 scheme morphism $\iota$로 붙는다. 한편 [§닫힌 부분스킴, ⁋명제 3](/ko/math/scheme_theory/closed_subschemes#prop3)의 증명이 보여주듯 closed embedding임은 하나의 affine open cover 위에서 확인하면 충분하므로, $\iota$는 closed embedding이다.
 :::
 
 이렇게 얻어진 closed subscheme을 $V_+(\mathfrak{a})$로 적는다. 즉 $V_+(\mathfrak{a})$는 위상공간으로서는 $Z_+(\mathfrak{a})$이고, scheme으로서는 $\Proj(A_\bullet/\mathfrak{a})$이다. 표기에서 짐작할 수 있듯 이는 affine scheme에서의 대응 $\mathfrak{a}\mapsto \Spec(B/\mathfrak{a})$의 projective 버전이다.
@@ -80,7 +81,7 @@ $$\left(\frac{\x_i}{\x_j}\right)^{m_j}h=\frac{\x_i^{m_j}f}{\x_j^{m_j+d}}\in \mat
 
 이다. 그럼 $N=\max_{j\neq i}m_j$로 두면, $\mathfrak{b}_j$가 ideal이므로 모든 $j$에 대하여 $(\x_i^Nf)/\x_j^{N+d}=(\x_i/\x_j)^{N-m_j}\cdot(\x_i^{m_j}f)/\x_j^{m_j+d}\in \mathfrak{b}_j$이고, 따라서 $\x_i^Nf\in T$이다.
 
-종합하면 $Z$와 $V_+(\mathfrak{a})$는 $\mathbb{P}^n$의 closed subscheme으로서 같은 ideal sheaf를 가지므로, [§닫힌 부분스킴, ⁋보조정리 9](/ko/math/scheme_theory/closed_subschemes#lem9)를 양방향으로 적용하면 $Z=V_+(\mathfrak{a})$이다.
+종합하면 $Z$와 $V_+(\mathfrak{a})$는 $\mathbb{P}^n$의 closed subscheme으로서 같은 ideal sheaf를 가지므로, [§닫힌 부분스킴, ⁋보조정리 9](/ko/math/scheme_theory/closed_subschemes#lem9)를 양방향으로 적용하면 서로를 지나는 closed embedding을 얻는다. 그 증명은 이 embedding을 affine open subset $U=\Spec A$ 위에서 두 ideal sheaf의 section이 주는 quotient들 사이의 사상으로 실현하는데, 지금은 그 두 ideal이 같아 이것이 항등사상이므로 얻어진 closed embedding은 isomorphism이고, 따라서 $Z=V_+(\mathfrak{a})$이다.
 :::
 
 Affine의 경우와 달리 이 대응은 일대일이 아니다. 가령 임의의 homogeneous ideal $\mathfrak{a}$와 $N\geq 1$에 대하여 $\mathfrak{a}$와 $\mathfrak{a}A_+^N$은 언제나 같은 closed subscheme을 정의한다. 실제로 $V_+(\mathfrak{a})$는 각 chart $D_+(\x_i)$위에서 [명제 1](#prop1)의 증명이 계산한 ideal $\mathfrak{a}_{(\x_i)}$가 결정하는데, 
@@ -119,7 +120,7 @@ Homogeneous ideal $\mathfrak{a},\mathfrak{b}\subseteq A_\bullet$에 대하여 �
     이므로 반대 포함도 성립한다.
 2. 한 방향은 1번의 결과이다. 역으로 $V_+(\mathfrak{a})=V_+(\mathfrak{b})$라 하고 $f\in \mathfrak{a}^\sat$가 degree $d$의 homogeneous element라 하자. 1번의 계산에 의하여 $f/\x_i^d\in \mathfrak{a}_{(\x_i)}=\mathfrak{b}_{(\x_i)}$이므로, degree $e$의 homogeneous element $g\in \mathfrak{b}$가 존재하여 $A_{(\x_i)}$ 안에서 $f/\x_i^d=g/\x_i^e$이다. $A_\bullet$이 integral domain이라 $A_\bullet \rightarrow A_{\x_i}$가 단사이므로 이는 $\x_i^ef=\x_i^dg\in \mathfrak{b}$를 뜻한다. $i$가 임의였으므로 $f\in \mathfrak{b}^\sat$이고, homogeneous component별로 확인하면 $\mathfrak{a}^\sat\subseteq \mathfrak{b}^\sat$을 얻는다. $\mathfrak{a}$와 $\mathfrak{b}$의 역할을 바꾸면 반대 포함이 나온다.
 
-마지막 주장은 [정리 3](#thm3)과 1번에 의하여 임의의 closed subscheme이 saturated ideal로부터 얻어지고, 2번이 그러한 ideal의 유일성을 주기 때문이다.
+마지막 주장은 [정리 3](#thm3)에 의하여 임의의 closed subscheme이 $V_+(\mathfrak{a})$의 꼴이고, 1번이 주는 $V_+(\mathfrak{a})=V_+(\mathfrak{a}^\sat)$에 2번을 적용하면 $(\mathfrak{a}^\sat)^\sat=\mathfrak{a}^\sat$, 곧 $\mathfrak{a}^\sat$이 saturated이므로 이것이 saturated ideal로부터 얻어지며, 2번이 그러한 ideal의 유일성 또한 주기 때문이다.
 :::
 
 [명제 5](#prop5)의 둘째 결과는 $\mathfrak{a}^\sat$이 $V_+(\mathfrak{a})$를 정의하는 homogeneous ideal 가운데 가장 큰 것임을 말해준다. $V_+(\mathfrak{b})=V_+(\mathfrak{a})$이면 $\mathfrak{b}\subseteq \mathfrak{b}^\sat=\mathfrak{a}^\sat$이기 때문이다. 즉 saturation은 같은 closed subscheme을 정의하는 ideal들 가운데 표준적인 대표를 택하는 연산이고, $\x_i^Nf\in \mathfrak{a}$에서 $N$은 얼마든지 키울 수 있으므로 이 대표는 $\mathfrak{a}$의 충분히 큰 degree 부분만으로 결정된다. 따라서 이 절의 도입부에서 언급했듯, 두 homogeneous ideal이 충분히 큰 degree에서 일치하면 그 saturation이 같고, 따라서 둘은 같은 closed subscheme을 정의한다. 한편 이 관점에서 보면 [정리 3](#thm3)의 증명이 만든 ideal은 이미 saturated인데, 그 증명의 $T$는 모든 $i$에 대하여 $f/\x_i^{\deg f}\in \mathfrak{b}_i$인 homogeneous element $f$들의 모임이었고 위의 계산은 이것이 정확히 $\mathfrak{a}^\sat$의 homogeneous element들임을 말해주기 때문이다.

@@ -10,6 +10,7 @@ sidebar:
 
 date: 2026-02-13
 weight: 1
+drift_needed: true
 
 ---
 
@@ -35,7 +36,7 @@ Finite group $G$를 고정하고, 두 representation $V,W$가 주어졌다 하�
 
 {% diagram Math/Representation_Theory/Representations_of_Finite_Groups-1.svg width="10.05em" alt="G-equivariant_maps" %}
 
-으로 주어진다. 이는, 식으로 표현하면, 간단히
+을 가환으로 만드는 linear map $L:V\rightarrow W$로 주어진다. 이는, 식으로 표현하면, 간단히
 
 $$L(g\cdot v)=g\cdot L(v)\qquad\text{for all $g\in G$ and $v\in V$}$$
 
@@ -59,7 +60,7 @@ $G$-representation $V, W$에 대하여, 다음의 $G$-action을 통해 새로운
 1. Direct sum $V\oplus W$; $G$-action $g\cdot(v,w)=(g\cdot v,g\cdot w)$
 2. Tensor product $V\otimes W$; $G$-action $g\cdot(v\otimes w)=(g\cdot v)\otimes (g\cdot w)$, 그리고 이로부터 얻어지는 exterior power $\bigwedge^k V$, symmetric power $\Sym^k V$와 그 위의 $G$-action들
 3. $\Hom_\mathbb{C}(V,W)$; $G$-action $(g\cdot f)(v)=g\cdot f(g^{-1}\cdot v)$
-4. 3번에서 $W=\mathbb{C}$로 두어 얻어지는 *dual representation<sub>쌍대 표현</sub>* $V^\ast$
+4. 3번에서 $W=\mathbb{C}$를 trivial representation으로 두어 얻어지는 *dual representation<sub>쌍대 표현</sub>* $V^\ast$
 5. 스칼라곱을 conjugate으로 바꾸어 얻어지는 *conjugate representation<sub>켤레표현</sub>* $\overline{V}$ (동일한 $G$-action)
 :::
 
@@ -69,7 +70,7 @@ $G$-representation $V, W$에 대하여, 다음의 $G$-action을 통해 새로운
 
 $$\delta_x(y)=\begin{cases}1&\text{if $y=x$}\\0&\text{otherwise}\end{cases}$$
 
-으로 정의하면, 임의의 $\varphi\in\mathbb{C}[G]$는 
+으로 정의하면, 임의의 $\phi\in\mathbb{C}[G]$는 
 
 $$\phi=\sum_{x\in G}\phi(x)\delta_x$$
 
@@ -85,9 +86,9 @@ $$(\phi\ast \psi)(x)=\sum_{y\in G}\phi(y)\psi(y^{-1}x)$$
 
 $$\left(\sum_{x\in G}\phi(x)\cdot x\right)\left(\sum_{y\in G} \psi(y)\cdot y\right)=\sum_{x,y\in G} \phi(x)\psi(y) \cdot(xy)=\sum_{z\in G}\left(\sum_{x\in G} \phi(x)\psi(x^{-1}z)\right)\cdot z$$
 
-이 성립하므로 이러한 곱셈을 선택하는 것이 자연스럽다. 가령 $\delta_x$와 $\delta_y$의 곱은 $0$이지만, 이 둘의 convolution은 $\delta_{xy}$이므로, group action에 포함되는 다음의 식
+이 성립하므로 이러한 곱셈을 선택하는 것이 자연스럽다. 가령 $x\neq y$인 $\delta_x$와 $\delta_y$의 곱은 $0$이지만, 이 둘의 convolution은 $\delta_{xy}$이므로, group action에 포함되는 다음의 식
 
-$$(\delta_x\ast \delta_y)\cdot v=\delta_x\cdot(\delta_y\ast v)$$
+$$(\delta_x\ast \delta_y)\cdot v=\delta_x\cdot(\delta_y\cdot v)$$
 
 와 같은 것들이 말이 되기 위해서는 이러한 선택이 필연적이다.
 
@@ -175,7 +176,7 @@ $W'$를 $W$의 orthogonal complement로 잡으면, $W'$ 또한 $G$-invariant sub
 
 $$\Rep_\mathbb{C}(G)\cong \lMod{\mathbb{C}[G]}$$
 
-을 살펴보았다. 그럼 [따름정리 7](#cor7)이 주장하는 것은 임의의 유한차원 $G$-representation $V$는 항상 *semisimple* $\mathbb{C}[G]$-module이라는 것이다 ([\[환론\] §Semisimple module, ⁋정의 2](/ko/math/ring_theory/semisimple_modules#def2)). 따라서 $\mathbb{C}[G]$는 그 자체를 regular representation으로 보면 [따름정리 7](#cor7)에 의해 semisimple module이므로 Artinian semisimple ring이 되며, [\[환론\] §Artin-Wedderburn 정리, ⁋정리 11](/ko/math/ring_theory/artin_wedderburn#thm11)에 의하여 simple module들로의 decomposition
+을 살펴보았다. 그럼 [따름정리 7](#cor7)이 주장하는 것은 임의의 유한차원 $G$-representation $V$는 항상 *semisimple* $\mathbb{C}[G]$-module이라는 것이다 ([\[환론\] §Semisimple module, ⁋정의 2](/ko/math/ring_theory/semisimple_modules#def2)). 따라서 $\mathbb{C}[G]$는 그 자체를 regular representation으로 보면 [따름정리 7](#cor7)에 의해 semisimple module이므로 Artinian semisimple ring이 되며, [\[환론\] §Artin-Wedderburn 정리, ⁋정리 11](/ko/math/ring_theory/artin_wedderburn#thm11)에 의하여 simple algebra들의 곱으로의 decomposition
 
 $$\mathbb{C}[G]\cong \bigoplus_{i=1}^r \Mat_{n_i}(\mathbb{C})\tag{1}$$
 
@@ -186,7 +187,7 @@ $$\mathbb{C}[G]\cong \bigoplus_{i=1}^r \Mat_{n_i}(\mathbb{C})\tag{1}$$
 다음 글에서 우리는 decomposition (1)에 표현론적인 의미를 부여한다. 이를 위한 준비작업으로 우리는 다음 보조정리를 증명한다. 
 
 ::: 보조정리 8 (Schur)
-(Compact) group $G$와 irreducible $G$-module들 $V,W$가 주어졌다 하자. 그럼 다음이 성립한다. 
+Finite group $G$와 irreducible $G$-module들 $V,W$가 주어졌다 하자. 그럼 다음이 성립한다. 
 
 1. 임의의 $G$-map $V\rightarrow W$는 zero map이거나 isomorphism이다. 
 2. 임의의 $G$-automorphism $f\in \Aut_G(V)$는 $f(v)=\lambda v$의 꼴이다. 
@@ -201,7 +202,7 @@ $$\mathbb{C}[G]\cong \bigoplus_{i=1}^r \Mat_{n_i}(\mathbb{C})\tag{1}$$
 이를 사용하면 우리는 다음 명제를 얻는다. 
 
 ::: 명제 9
-위와 같은 상황에서, 다음의 함수 
+임의의 유한차원 $G$-representation $V$에 대하여, 다음의 함수 
 
 $$d=\bigoplus_{W\in\Irr(G, \mathbb{C})} d_W:\bigoplus_{W\in \Irr(G, \mathbb{C})}\Hom_G(W,V)\otimes_\mathbb{C}W\rightarrow V$$
 
@@ -218,7 +219,7 @@ $$\Hom_G(W, V)=\Hom_G\left(W, \bigoplus V_j\right)\cong \bigoplus \Hom_G(W, V_j)
 복잡하게 써 두기는 했지만, 위의 $d$는 각각의 irreducible $G$-module $W$(의 isomorphism class)들이 $V$ 안에 얼마나 들어있는지를 세는 것이며, 따라서 다음 정의가 자연스럽다. 
 
 ::: 정의 10
-위의 함수에 의한 $W\in\Irr(G, \mathbb{C})$의 image를 $V$의 *$W$-isotypical summand*라 부르고, $\Hom_G(W, V)$를 $W$의 *multiplicity*라 부른다. 
+$W\in\Irr(G, \mathbb{C})$에 대하여, 위의 함수 $d_W$에 의한 $\Hom_G(W, V)\otimes_\mathbb{C}W$의 image를 $V$의 *$W$-isotypical summand*라 부르고, $\dim_\mathbb{C}\Hom_G(W, V)$를 $W$의 *multiplicity*라 부른다. 
 :::
 
 이 정의는 일반론과 일치한다. $d_W$의 image는 $W$와 isomorphic한 $V$의 simple submodule들이 생성하는 부분공간이므로 정확히 [\[환론\] §Semisimple module, ⁋정의 8](/ko/math/ring_theory/semisimple_modules#def8)의 $W$-isotypic component이고, [같은 글, ⁋명제 9](/ko/math/ring_theory/semisimple_modules#prop9)에 의해 이 분해는 irreducible decomposition의 선택과 무관하게 canonical하다.

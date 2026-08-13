@@ -10,6 +10,7 @@ sidebar:
     
 date: 2021-09-08
 weight: 4
+drift_needed: true
 
 ---
 
@@ -20,11 +21,11 @@ weight: 4
 ::: 명제 1
 임의의 magma homomorphism $f:A\rightarrow A'$가 isomorphism인 것은 $f$가 전단사인 것과 동치이다. 
 
-만일 $A$가 항등원 $e$를 갖고, $f:A\rightarrow A'$가 전단사함수라면 $f(e)$는 $A'$의 항등원이며, 따라서 $f^{-1}$은 $A'$의 항등원을 $A$의 항등원으로 보내는 magma homomorphism이다.
+만일 $A$가 항등원 $e$를 갖고, $f:A\rightarrow A'$가 전단사인 homomorphism이라면 $f(e)$는 $A'$의 항등원이며, 따라서 $f^{-1}$은 $A'$의 항등원을 $A$의 항등원으로 보내는 magma homomorphism이다.
 :::
 
 ::: 증명
-반대쪽 방향만 보이면 충분하다. $f$는 전단사이므로, 함수로써 역함수 $f^{-1}:G'\rightarrow G$가 존재한다. 만일 $f^{-1}$이 homomorphism이기만 하다면, 정의에 의해 $f$는 isomorphism이 될 것이다.
+반대쪽 방향만 보이면 충분하다. $f$는 전단사이므로, 함수로써 역함수 $f^{-1}:A'\rightarrow A$가 존재한다. 만일 $f^{-1}$이 homomorphism이기만 하다면, 정의에 의해 $f$는 isomorphism이 될 것이다.
 
 임의의 $y, y'\in  A'$를 택하자. 그럼 $f$는 전단사이므로, 적당한 $x$, $x'$가 유일하게 존재하여 $f(x)=y$이고 $f(x')=y'$이다. 이제
 
@@ -51,16 +52,16 @@ $$\Eq(f,g)=\{x\in G\mid f(x)=g(x)\}$$
 은 $G$의 subgroup이다.
 :::
 ::: 증명
-만일 $x,y\in \Eq(f,g)$라면,
+만일 $x,y\in \Eq(f,g)$라면, [§반군, 모노이드, 군, ⁋정의 11](/ko/math/algebraic_structures/groups#def11) 직후 논증에 의하여 group들 사이의 monoid homomorphism은 역원을 보존하므로 
 
 $$f(xy^{-1})=f(x)f(y)^{-1}=g(x)g(y)^{-1}=g(xy^{-1})$$
 
-이므로 $xy^{-1}\in\Eq(f,g)$이다. 따라서 [§반군, 모노이드, 군, ⁋명제 15](/ko/math/algebraic_structures/groups#prop15)에 의해 원하는 결과를 얻는다. 
+이므로 $xy^{-1}\in\Eq(f,g)$이다. 또, [§반군, 모노이드, 군, ⁋정의 11](/ko/math/algebraic_structures/groups#def11) 이후에 우리는 group들 사이의 monoid homomorphism이 항등원을 보존한다는 것도 살펴보았고, $H$의 항등원은 유일하므로 $\Eq(f,g)$는 공집합이 아니다. 따라서 [§반군, 모노이드, 군, ⁋명제 15](/ko/math/algebraic_structures/groups#prop15)에 의해 원하는 결과를 얻는다. 
 :::
 
-이렇게 정의한 $i:\Eq(f,g)\rightarrow G$는 다음과 같은 성질을 가진다.
+이렇게 정의한 $\Eq(f,g)$에 대하여, inclusion $i:\Eq(f,g)\rightarrow G$는 다음과 같은 성질을 가진다.
 
-> 만일 group homomorphism $j:G' \rightarrow G$가 $f\circ j=g\circ j$를 만족한다면, 유일한 homomorphism $j': G' \rightarrow G$가 존재하여 $i\circ j'=j$이다.
+> 만일 group homomorphism $j:G' \rightarrow G$가 $f\circ j=g\circ j$를 만족한다면, 유일한 homomorphism $j': G' \rightarrow \Eq(f,g)$가 존재하여 $i\circ j'=j$이다.
 
 이는 정의에 의해 $j$의 image가 $\Eq(f,g)$에 포함되기 때문이다. 따라서 $\Grp$의 임의의 morphism은 equalizer를 갖는다. ([\[범주론\] §극한, ⁋예시 7](/ko/math/category_theory/limits#ex7)) 사실 $\Grp$의 임의의 morphism은 coequalizer 또한 갖지만, 이를 정의하기 위해서는 normal subgroup과 quotient group을 먼저 정의해야 한다. 
 
@@ -119,5 +120,3 @@ $$f(x^{-1})=f(x)^{-1}=y^{-1}$$
 **[Bou]** Bourbaki, N. Algebra I. *Elements of Mathematics*. Springer. 1998.  
 
 ---
-
-[^1]: 지저분한 notation을 피하기 위해 $$a\ker f$$ 대신 $$\bar{a}$$로 적었다.

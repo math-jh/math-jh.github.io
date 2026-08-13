@@ -10,6 +10,7 @@ sidebar:
 
 date: 2026-03-12
 weight: 1
+drift_needed: true
 
 ---
 
@@ -36,7 +37,7 @@ $$\mathbb{A}^n=\{(x_1,\ldots, x_n)\mid x_i\in \mathbb{K}\}$$
 
 $$Z(f_1, \ldots, f_k) = \{x=(x_1, \ldots, x_n) \in \mathbb{A}^n \mid f_1(x) = \cdots = f_k(x) = 0\}$$
 
-으로 정의한다. Affine algebraic set들 가운데 그보다 더 작은 affine algebraic set들의 합집합으로 나타나지 않는 것들을 *affine variety<sub>아핀다양체</sub>*라 부른다.
+으로 정의한다. Affine algebraic set들 가운데 그보다 더 작은 두 affine algebraic set의 합집합으로 나타나지 않는 것들을 *affine variety<sub>아핀다양체</sub>*라 부른다.
 :::
 
 즉, affine algebraic set은 여러 다항식들 $f_1,\ldots, f_k$의 common zero들의 모임이다. 더 일반적으로, $\mathbb{K}[\x_1,\ldots, \x_n]$의 부분집합 $S$에 대하여 $Z(S)$를 위의 정의와 비슷하게 정의할 수 있으며, 그럼 정의에 의해 $S$로 생성되는 $\mathbb{K}[\x_1,\ldots, \x_n]$의 ideal $(S)$는 식
@@ -45,7 +46,7 @@ $$Z(S)=Z((S))$$
 
 을 만족한다. 따라서 우리는 ideal $\mathfrak{a}$들이 정의하는 affine algebraic set들만 신경써도 된다.
 
-일반적으로 공간 $X$가 *irreducible*이라는 것은 $X$가 proper open subset 두 개의 합집합으로 나타나지 않는다는 것이다. ([\[위상수학\] §차원, ⁋정의 6](/ko/math/topology/dimension#def6)) 따라서 우리의 정의는 irreducible affine algebraic set을 affine variety라고 부른다는 뜻이다. 이는 기하학적으로 하나의 연결된 대상을 다루기 위함이다.
+일반적으로 공간 $X$가 *irreducible*이라는 것은 $X$가 proper closed subset 두 개의 합집합으로 나타나지 않는다는 것이다. ([\[위상수학\] §차원, ⁋정의 6](/ko/math/topology/dimension#def6)) 따라서 우리의 정의는 irreducible affine algebraic set을 affine variety라고 부른다는 뜻이다. 이는 기하학적으로 하나의 연결된 대상을 다루기 위함이다.
 
 ::: 예시 3
 우리가 아는 대다수의 기하학적인 대상들은 다항식으로 나타나므로, 이들이 모두 affine variety의 예시가 된다.
@@ -64,7 +65,7 @@ $$Z(S)=Z((S))$$
 1. $Z(0) = \mathbb{A}^n$,
 2. $Z(1) = \emptyset$,
 3. $\mathfrak{a} \subseteq \mathfrak{b} \implies Z(\mathfrak{b}) \subseteq Z(\mathfrak{a})$,
-4. $\displaystyle\bigcap_{i\in I} Z(\mathfrak{a}_i) = Z\left(\sum_i \mathfrak{a}_i\right)$,
+4. $\bigcap_{i\in I} Z(\mathfrak{a}_i) = Z\left(\sum_i \mathfrak{a}_i\right)$,
 5. $Z(\mathfrak{a}) \cup Z(\mathfrak{b}) = Z(\mathfrak{a} \cap \mathfrak{b}) = Z(\mathfrak{a}\mathfrak{b})$.
 :::
 ::: 증명
@@ -72,22 +73,22 @@ $$Z(S)=Z((S))$$
 
 세 번째 결과를 증명하기 위해, $\mathfrak{a}\subseteq \mathfrak{b}$라 하고 $x\in Z(\mathfrak{b})$라 하자. 그럼 모든 $f \in \mathfrak{b}$에 대해 $f(x) = 0$이고, $\mathfrak{a} \subseteq \mathfrak{b}$이므로 특히 모든 $\mathfrak{a}$의 원소에 대해서도 원하는 식이 성립한다.
 
-네 번째 결과의 경우, 점 $x$가 모든 $Z(\mathfrak{a}_i)$에 속한다는 것은 모든 $i$와 모든 $f \in \mathfrak{a}_i$에 대해 $f(x) = 0$이라는 것이다. 이는 $\sum_\alpha I_\alpha$의 모든 원소가 $p$에서 0이라는 것과 동치이다.
+네 번째 결과의 경우, 점 $x$가 모든 $Z(\mathfrak{a}_i)$에 속한다는 것은 모든 $i$와 모든 $f \in \mathfrak{a}_i$에 대해 $f(x) = 0$이라는 것이다. 이는 $\sum_i \mathfrak{a}_i$의 모든 원소가 $x$에서 0이라는 것과 동치이다.
 
 이제 마지막 주장을 보이자. 우선 $x\in Z(\mathfrak{a})\cup Z(\mathfrak{b})$라 하자. 그럼 $x\in Z(\mathfrak{a})$이거나 $x\in Z(\mathfrak{b})$이며, 어느 경우든 $\mathfrak{a}\cap \mathfrak{b}$의 모든 원소는 $x$에서 $0$이므로 $x\in Z(\mathfrak{a}\cap \mathfrak{b})$이 성립한다.  
 이제 $x\in Z(\mathfrak{a}\cap \mathfrak{b})$라 하면, $\mathfrak{a}\mathfrak{b}$의 임의의 원소
 
 $$f_1g_1+\cdots+ f_kg_k,\qquad f_i\in \mathfrak{a}, g_i\in \mathfrak{b}$$
 
-를 $x$에서 계산한 것이 $0$이 되는 것은 자명하다.  
+를 $x$에서 계산하면, $\mathfrak{a}\mathfrak{b}\subseteq \mathfrak{a}\cap \mathfrak{b}$이므로 각 $f_ig_i$가 $x$에서 $0$이고 따라서 그 합 또한 $0$이다.  
 마지막으로 $x\in Z(\mathfrak{a}\mathfrak{b})$라 하자. 만일 결론에 반하여 $x\not\in Z(\mathfrak{a})\cup Z(\mathfrak{b})$라면, 적당한 $f\in \mathfrak{a}$와 적당한 $g\in \mathfrak{b}$가 존재하여 $f(x),g(x)\neq 0$이다. 그런데, 만일 이것이 성립한다면 $f(x)g(x)\neq 0$이므로 $x\in Z(\mathfrak{a}\mathfrak{b})$라는 가정에 모순이다. 
 :::
 
-우선 위 명제의 마지막 결과는 $Z(\mathfrak{a}\mathfrak{b})$가 algebraic variety이기 위해서는 반드시 $\mathfrak{a}=(1)$이거나 $\mathfrak{b}=(1)$이어야 함을 보여준다. 이는 algebraic variety가 무엇인지를 대수적으로 살펴보는데 좋은 직관 중 하나가 된다.
+우선 위 명제의 마지막 결과는 $Z(\mathfrak{a}\mathfrak{b})$가 affine variety이기 위해서는 반드시 $Z(\mathfrak{a})\subseteq Z(\mathfrak{b})$이거나 $Z(\mathfrak{b})\subseteq Z(\mathfrak{a})$이어야 함을 보여준다. 이는 affine variety가 무엇인지를 대수적으로 살펴보는데 좋은 직관 중 하나가 된다.
 
 그보다 중요한 것은 위의 명제에 의해, 만일 $\mathbb{A}^n$ 위에서 정의된 affine algebraic set들을 닫힌집합이라고 선언한다면, [\[위상수학\] §집합의 내부, 폐포, 경계, ⁋명제 2](/ko/math/topology/other_concepts#prop2)의 조건들이 모두 만족되고 따라서 $\mathbb{A}^n$ 위의 위상구조가 유일하게 결정된다는 것이다. 이를 *Zariski topology<sub>자리스키 위상</sub>*이라 부른다. 정의에 의해 임의의 affine variety $X$는 적당한 affine space $\mathbb{A}^n$의 닫힌 부분집합이며, 우리는 $\mathbb{A}^n$에서 정의된 위상의 subspace topology를 통해 $X$에서의 위상을 정의할 수 있다. 
 
-특별한 예시로 $\mathbb{A}^1$에서의 Zariski topology를 보면, $\mathbb{K}$의 임의의 원소는 일차식 $\x-x$의 zero set이므로 임의의 singleton은 닫힌집합이고, 따라서 임의의 유한집합은 닫힌집합이다. 그러나 $\mathbb{K}[\x]$의 $0$이 아닌 임의의 원소는 많아야 유한 개의 해만을 가지므로, 이 위상구조 상에서는 ($\mathbb{K}$가 유한집합이 아닌 한) 무한한 원소를 가진 닫힌집합은 오직 $\mathbb{K}$ 자기자신 뿐이다. 즉 $\mathbb{A}^1$의 Zariski topology는 cofinite topology이며, 이로부터 우리는 Zariski topology가 Hausdorff일 필요가 없다는 것을 관찰할 수 있다. 더 일반적으로 irreducible space는 Hausdorff가 될 수 없고, 우리의 정의에서 affine variety들은 모두 irreducible이므로 임의의 affine variety는 Hausdorff space가 아니다. ([\[위상수학\] §차원, ⁋명제 7](/ko/math/topology/dimension#prop7))
+특별한 예시로 $\mathbb{A}^1$에서의 Zariski topology를 보면, $\mathbb{K}$의 임의의 원소는 일차식 $\x-x$의 zero set이므로 임의의 singleton은 닫힌집합이고, 따라서 임의의 유한집합은 닫힌집합이다. 그러나 $\mathbb{K}[\x]$의 $0$이 아닌 임의의 원소는 많아야 유한 개의 해만을 가지므로, 이 위상구조 상에서는 ($\mathbb{K}$가 유한집합이 아닌 한) 무한한 원소를 가진 닫힌집합은 오직 $\mathbb{K}$ 자기자신 뿐이다. 즉 $\mathbb{A}^1$의 Zariski topology는 cofinite topology이며, 이로부터 우리는 Zariski topology가 Hausdorff일 필요가 없다는 것을 관찰할 수 있다. 더 일반적으로 두 점 이상을 가진 irreducible space는 Hausdorff가 될 수 없고, 우리의 정의에서 affine variety들은 모두 irreducible이므로 두 점 이상을 가진 임의의 affine variety는 Hausdorff space가 아니다. ([\[위상수학\] §차원, ⁋명제 7](/ko/math/topology/dimension#prop7))
 
 이제 우리는 Zariski topology의 열린집합들을 살펴보자.
 
@@ -172,20 +173,20 @@ $$I(X) = \{f \in \mathbb{K}[\x_1, \ldots, \x_n] \mid f(a) = 0 \text{ for all } a
 그럼 임의의 부분집합 $X$에 대하여, $I(X)$는 $\mathbb{K}[\x_1,\ldots, \x_n]$의 ideal이 된다는 것이 자명하다. 뿐만 아니라 다음이 성립한다. 
 
 ::: 명제 9
-$\mathbb{A}^n$의 부분집합들 $X,Y$, $\mathbb{K}[\x_1,\ldots, \x_n]$의 임의의 부분집합 $I$에 대하여 다음이 성립한다.
+$\mathbb{A}^n$의 부분집합들 $X,Y$, $\mathbb{K}[\x_1,\ldots, \x_n]$의 임의의 부분집합 $S$에 대하여 다음이 성립한다.
 
 1. $X \subseteq Y$라면 $I(Y) \subseteq I(X)$이다.
 2. $I(\emptyset) = \mathbb{K}[\x_1, \ldots, \x_n]$이다.
 3. $\mathbb{K}$가 무한하다면 $I(\mathbb{A}^n) = (0)$이다.
 4. $X \subseteq Z(I(X))$가 항상 성립한다.
-5. $I \subseteq I(Z(I))$가 항상 성립한다.
+5. $S \subseteq I(Z(S))$가 항상 성립한다.
 :::
 ::: 증명
 1. $X \subseteq Y$이고 $f \in I(Y)$라면, 모든 $a \in Y$에 대해 $f(a) = 0$이다. 특히 모든 $a \in X$에 대해 $f(a) = 0$이므로 $f \in I(X)$이다.
 2. 자명하다.
 3. $\mathbb{K}$가 무한하다면, 모든 점에서 0인 다항식은 영다항식뿐이다.
 4. $a \in X$이고 $f \in I(X)$라면 $f(a) = 0$이다. 즉 $a \in Z(I(X))$이다.
-5. $f \in I$이고 $a \in Z(I)$라면 $f(a) = 0$이다. 즉 $f \in I(Z(I))$이다.
+5. $f \in S$이고 $a \in Z(S)$라면 $f(a) = 0$이다. 즉 $f \in I(Z(S))$이다.
 :::
 
 즉, $Z$와 $I$는 antitone Galois connection을 정의한다. ([\[집합론\] §필터와 아이디얼, 갈루아 대응, ⁋정의 6](/ko/math/set_theory/filter_and_ideal#def6)) 따라서 두 operator의 합성 $ZI$와 $IZ$ 각각은 closure operator를 정의한다. $ZI$의 경우, 이 closure는 실제로 Zariski topology에서의 closure가 된다. 이는 만일 $X \subseteq Y = Z(J)$이면 $I(Z(J)) \subseteq I(X)$이고, [명제 9](#prop9)의 5번 조건에서 $J \subseteq I(Z(J))$이므로 $ZI(X) \subseteq Z(J) = Y$가 되어, $ZI(X)$가 $X$를 포함하는 Zariski closed set 중 가장 작은 것이 되기 때문이다. $IZ$의 경우에는 바로 보이지 않는데, 이를 위해서는 ideal의 radical 개념이 필요하다. ([\[가환대수학\] §국소화의 성질들, ⁋따름정리 8](/ko/math/commutative_algebra/properties_of_localization#cor8))
@@ -209,7 +210,7 @@ $$Z(\mathfrak{a}^k)=Z(\mathfrak{a}\cap\cdots\cap \mathfrak{a})=Z(\mathfrak{a})$$
 
 한편, $\mathfrak{a}\subseteq \sqrt{\mathfrak{a}}$가 임의의 ideal $\mathfrak{a}$에 대해 성립하므로 [명제 4](#prop4)의 셋째 조건으로부터 $Z(\sqrt{\mathfrak{a}})\subseteq Z(\mathfrak{a})$임을 안다. 그런데 정의에 의하여 임의의 $f\in \sqrt{\mathfrak{a}}$가 주어졌을 때, 적당한 $r$이 존재하여 $f^r\in \mathfrak{a}$이다. 따라서 $x\in Z(\mathfrak{a})$라면 $x\in Z(\sqrt{\mathfrak{a}})$여야 하고 이로부터 $Z(\mathfrak{a})=Z(\sqrt{\mathfrak{a}})$임을 안다. 즉 ideal의 radical은 affine algebraic set을 ideal의 zero set으로 나타낼 때, 이 ideal을 얻어내는 표준적인 방법을 주는 것으로 생각할 수 있으며, 이들 사이의 차이를 구별하기 위해서는 *scheme*을 정의하면 된다. 
 
-이제 [명제 4](#prop4)의 다섯번째 결과와 위의 결과를 종합하면, 우리는 $Z(\mathfrak{a})$가 algebraic variety이기 위해서는 $\sqrt{\mathfrak{a}}$가 prime ideal이어야 함을 알 수 있다. ([\[가환대수학\] §기본 개념들, ⁋정의 10](/ko/math/commutative_algebra/basic_notions#def10)) 즉, $\mathbb{A}^n$의 irreducible closed algebraic set들과 $\mathbb{K}[\x_1,\ldots, \x_n]$의 prime ideal들 사이의 Galois correspondence가 존재한다. 
+이제 [명제 4](#prop4)의 다섯번째 결과와 위의 결과를 종합하면, $\mathbb{K}$가 algebraically closed일 때 우리는 $Z(\mathfrak{a})$가 affine variety이기 위해서는 $\sqrt{\mathfrak{a}}$가 prime ideal이어야 함을 알 수 있다. ([\[가환대수학\] §기본 개념들, ⁋정의 10](/ko/math/commutative_algebra/basic_notions#def10)) 즉, $\mathbb{A}^n$의 irreducible closed algebraic set들과 $\mathbb{K}[\x_1,\ldots, \x_n]$의 prime ideal들 사이의 Galois correspondence가 존재한다. 
 
 ## 좌표환과 정칙성
 
@@ -236,7 +237,7 @@ $$X\rightarrow \mathbb{K};\qquad x\mapsto f(x)$$
 이제 우리는 앞서 논의한 $\mathbb{K}[\x_1,\ldots, \x_n]$의 prime ideal들과 $\mathbb{A}^n$의 closed subvariety들 사이의 일대일 대응을 임의의 affine variety로 확장할 준비가 되었다. 
 
 ::: 명제 12
-Affine variety $X \subseteq \mathbb{A}^n$이 주어졌다 하자. 그럼 coordinate ring $\mathbb{K}[X]$의 prime ideal들과 $X$의 closed subvariety들 사이에는 다음과 같은 일대일대응이 존재한다.
+Algebraically closed field $\mathbb{K}$ 위의 affine variety $X \subseteq \mathbb{A}^n$이 주어졌다 하자. 그럼 coordinate ring $\mathbb{K}[X]$의 prime ideal들과 $X$의 closed subvariety들 사이에는 다음과 같은 일대일대응이 존재한다.
 
 1. Prime ideal $\mathfrak{p} \subseteq \mathbb{K}[X]$에 대하여, $\tilde{\mathfrak{p}}$를 $\mathfrak{p}$의 $\mathbb{K}[\x_1, \ldots, \x_n]$에서의 preimage라 하면, $Z(\tilde{\mathfrak{p}}) \subseteq X$는 $X$의 closed subvariety이다.
 2. Closed subvariety $Y \subseteq X$에 대하여, $I(Y)/I(X) \subseteq \mathbb{K}[X]$는 prime ideal이다.
@@ -262,7 +263,7 @@ $$\mathbb{K}[X]=\mathbb{K}[\x,\y]/(\x\y-1)\cong \mathbb{K}[\x,1/\x]$$
 임의의 affine variety $V\subseteq \mathbb{A}^k$와 그 위에서 정의된 함수 $f:V\rightarrow \mathbb{K}$에 대하여, $f$가 점 $p\in V$에서 *regular*라는 것은 $p$의 적당한 열린근방 $D(h)$와 다항식 $g$가 존재하여, $U$ 위에서 $f=g/h$이 성립하는 것이다. 여기서 $h$는 $U=D(h)$ 위에서 $0$이 되지 않는 다항식이다. 
 :::
 
-그럼 이 정의 하에서, 모든 점에서 regular인 함수를 regular function이라 부르는 것이 자연스러울 것이다. 이 두 정의 [정의 11](#def11)과 [정의 14](#def14)이 동치라는 것에 대한 증명은 다소 귀찮을 수 있으나, 본질적인 내용은 위에서 살펴본 예시에 들어있으므로 그 증명은 하지 않기로 한다. 증명의 핵심은 [정의 14](#def14)에서 [정의 11](#def11)을 얻어내는 것인데, 이는 각각의 $D(h)$에서 $g/h$꼴로 나타나는 함수들을 잘 붙이는 것으로부터 얻어진다. 
+그럼 이 정의 하에서, 모든 점에서 regular인 함수를 regular function이라 부르는 것이 자연스러울 것이다. $\mathbb{K}$가 algebraically closed일 때 이 두 정의 [정의 11](#def11)과 [정의 14](#def14)이 동치라는 것에 대한 증명은 다소 귀찮을 수 있으나, 본질적인 내용은 위에서 살펴본 예시에 들어있으므로 그 증명은 하지 않기로 한다. 증명의 핵심은 [정의 14](#def14)에서 [정의 11](#def11)을 얻어내는 것인데, 이는 각각의 $D(h)$에서 $g/h$꼴로 나타나는 함수들을 잘 붙이는 것으로부터 얻어진다. 
 
 ## 아핀다양체 사이의 사상
 

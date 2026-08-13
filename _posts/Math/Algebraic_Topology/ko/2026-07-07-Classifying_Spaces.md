@@ -10,6 +10,7 @@ sidebar:
 
 date: 2026-07-07
 weight: 16
+drift_needed: true
 
 ---
 
@@ -45,7 +46,7 @@ Topological group $G$에 대하여, fiber bundle $p:P\rightarrow X$와 그 위�
 
 $$g_{ij}(x)g_{jk}(x)=g_{ik}(x),\qquad g_{ii}(x)=e$$
 
-를 만족하며, 두 cocycle $(g_{ij})$와 $(g_{ij}')$이 같은 bundle을 주는 것은 연속함수 $\lambda_i:U_i\rightarrow G$들이 존재하여 $g_{ij}'=\lambda_i g_{ij}\lambda_j^{-1}$인 것과 동치이다. 따라서 open cover $\{U_i\}$ 위에서 trivialize되는 principal $G$-bundle의 isomorphism class들은 nonabelian Čech cohomology $\check{H}^1(X;G)$로 분류되며, $G=\GL(k;\mathbb{R})$인 경우 이는 앞 글의 vector bundle 분류와 정확히 일치한다.
+를 만족하며, 두 cocycle $(g_{ij})$와 $(g_{ij}')$이 같은 bundle을 주는 것은 연속함수 $\lambda_i:U_i\rightarrow G$들이 존재하여 $g_{ij}'=\lambda_i g_{ij}\lambda_j^{-1}$인 것과 동치이다. 따라서 open cover $\mathcal{U}=\{U_i\}$ 위에서 trivialize되는 principal $G$-bundle의 isomorphism class들은 nonabelian Čech cohomology $\check{H}^1(\mathcal{U};G)$로 분류되며, $G=\GL(k;\mathbb{R})$인 경우 이는 앞 글의 vector bundle 분류와 정확히 일치한다.
 
 Vector bundle은 언제나 zero section을 가졌으나, principal bundle은 fiber가 $G$가 아니라 $G$-torsor이므로 이러한 역할을 하는 section을 잡는 것이 자명하지 않다. 실제로 다음 명제는 section의 존재 여부가 principal bundle의 자명성을 완전히 결정한다는 것을 보여준다.
 
@@ -94,7 +95,7 @@ $$[((x,g),v)]\mapsto(x,gv)$$
 
 $$\Fr(E)=\{(x,b)\mid x\in X,b\text{ an ordered basis of $E_x$}\}$$
 
-는 기저를 행렬로 보내는 $\GL(n;\mathbb{R})$의 작용에 대하여 principal $\GL(n;\mathbb{R})$-bundle이 되며, 이를 $E$의 *frame bundle*이라 한다. 다음 명제는 이 두 구성이 서로 역과정임을 보여준다. 
+는 ordered basis에 행렬을 오른쪽에서 곱해 기저를 바꾸는 $\GL(n;\mathbb{R})$의 작용에 대하여 principal $\GL(n;\mathbb{R})$-bundle이 되며, 이를 $E$의 *frame bundle*이라 한다. 다음 명제는 이 두 구성이 서로 역과정임을 보여준다. 
 
 ::: 명제 4
 위상공간 $X$ 위에서, principal $\GL(n;\mathbb{R})$-bundle들의 isomorphism class와 rank $n$ real vector bundle들의 isomorphism class 사이에는 자연스러운 일대일 대응이 존재한다. 이 대응은 principal bundle $P$에 associated bundle $P\times_{\GL(n;\mathbb{R})}\mathbb{R}^n$을, vector bundle $E$에 frame bundle $\Fr(E)$를 대응시킨다.
@@ -113,7 +114,7 @@ $$\Fr(E)\times_{\GL(n;\mathbb{R})}\mathbb{R}^n\rightarrow E,\qquad [(b,v)]\mapst
 두 구성 모두 transition function을 보존하므로 isomorphism class를 보존하고, morphism의 naturality는 pullback과의 호환에서 따라온다.
 :::
 
-이 동치 덕분에 vector bundle에 대한 모든 분류 문제는 principal $\GL(n;\mathbb{R})$-bundle에 대한 문제로 번역된다. 같은 방식으로 complex vector bundle은 principal $\GL(n;\mathbb{C})$-bundle에, oriented real vector bundle은 principal $\GL^+(n,\mathbb{R})$-bundle에 대응한다. 따라서 임의의 구조군 $G$에 대하여 principal $G$-bundle을 분류할 수 있다면, 이 모든 경우가 한꺼번에 해결된다.
+이 동치 덕분에 vector bundle에 대한 모든 분류 문제는 principal $\GL(n;\mathbb{R})$-bundle에 대한 문제로 번역된다. 같은 방식으로 complex vector bundle은 principal $\GL(n;\mathbb{C})$-bundle에, oriented real vector bundle은 principal $\GL^+(n;\mathbb{R})$-bundle에 대응한다. 따라서 임의의 구조군 $G$에 대하여 principal $G$-bundle을 분류할 수 있다면, 이 모든 경우가 한꺼번에 해결된다.
 
 Vector bundle에서와 마찬가지로, 연속함수 $f:X'\rightarrow X$와 principal $G$-bundle $p:P\rightarrow X$가 주어지면 *pullback bundle*
 
@@ -141,7 +142,7 @@ $X$가 paracompact이고 $f_0,f_1:X\rightarrow Y$가 homotopic이라 하자. ([�
 [정리 5](#thm5)는 함수 $f$를 $f^\ast P$로 대응시키는 것이 $f$의 homotopy class에만 의존함을 말해 준다. 따라서, 만일 어떤 고정된 principal $G$-bundle 하나를 모든 다른 bundle이 pullback으로 얻을 수 있는 원천으로 삼을 수 있다면, principal $G$-bundle의 분류는 그 원천 공간으로의 homotopy class를 세는 일로 환원될 것이며, 이는 vector bundle에서 $\Gr(k,\mathbb{R}^\infty)$ 위의 universal bundle이 그러한 원천이었던 것을 일반화한다.
 
 ::: 정의 6
-Topological group $G$에 대하여, principal $G$-bundle $p:\E G\rightarrow \B G$가 *universal bundle<sub>보편다발</sub>*이라는 것은 total space $EG$가 contractible인 것, 곧 $\E G$가 한 점과 homotopy equivalent인 것이다. ([§호모토피, ⁋정의 4](/ko/math/algebraic_topology/homotopy#def4)) 이때 base space $\B G$를 $G$의 *classifying space<sub>분류공간</sub>*라 부른다.
+Topological group $G$에 대하여, principal $G$-bundle $p:\E G\rightarrow \B G$가 *universal bundle<sub>보편다발</sub>*이라는 것은 total space $\E G$가 contractible인 것, 곧 $\E G$가 한 점과 homotopy equivalent인 것이다. ([§호모토피, ⁋정의 4](/ko/math/algebraic_topology/homotopy#def4)) 이때 base space $\B G$를 $G$의 *classifying space<sub>분류공간</sub>*라 부른다.
 :::
 
 즉, universal $G$-bundle은 contractible space 위의 free $G$-action이며, 그 orbit space $\B G=\E G/G$가 base space이며, 여기로의 projection map이 bundle map이다. $\E G$가 contractible이라는 조건은 [정리 8](#thm8)에서 중요하게 사용될 것이다. 그 전에, 우선 다음이 성립한다. 
@@ -177,9 +178,9 @@ $[f]\mapsto f^\ast \E G$가 $[f]$의 대표 선택에 의존하지 않는 것은
 
 $$\widetilde{f}:P\rightarrow \E G,\qquad y\mapsto \sum_i \rho_i(p(y))\psi_i(y)$$
 
-는 잘 정의된 $G$-equivariant map이다. 이 때 $G$-equivariant map은 base space 사이의 morphism $f:X\rightarrow \B G$로 내려가고, $\widetilde{f}$가 fiber마다 동형이므로 $P\cong f^\ast \ EG$를 얻는다.
+는 잘 정의된 $G$-equivariant map이다. 이 때 $G$-equivariant map은 base space 사이의 morphism $f:X\rightarrow \B G$로 내려가고, $\widetilde{f}$가 fiber마다 동형이므로 $P\cong f^\ast\E G$를 얻는다.
 
-이제 injectivity를 보이기 위해 $f_0,f_1:X\rightarrow \B G$에 대하여 $f_0^\ast \E G\cong f_1^\ast \E G=:P$라 하자. 우리는 $f_0$과 $f_1$이 homotopic한 것을 보여야 한다. 각 $f_i$는 bundle map $P\cong f_i^\ast \E G\rightarrow \E G$, 곧 $P$에서 universal bundle로 가는 $G$-equivariant bundle map $\Phi_i:P\rightarrow \E G$을 가진다. 그런데 $\E G$가 contractible이므로, paracompact 공간 위의 principal bundle $P$에서 $EG$로 가는 임의의 두 $G$-equivariant map은 서로 $G$-equivariant homotopic하며, 따라서 $\Phi_0$과 $\Phi_1$을 잇는 $G$-equivariant homotopy $P\times[0,1]\rightarrow \E G$가 존재하고, 이것이 base로 내려가 $f_0$과 $f_1$ 사이의 homotopy를 주므로 $[f_0]=[f_1]$이다. 
+이제 injectivity를 보이기 위해 $f_0,f_1:X\rightarrow \B G$에 대하여 $f_0^\ast \E G\cong f_1^\ast \E G=:P$라 하자. 우리는 $f_0$과 $f_1$이 homotopic한 것을 보여야 한다. 각 $f_i$는 bundle map $P\cong f_i^\ast \E G\rightarrow \E G$, 곧 $P$에서 universal bundle로 가는 $G$-equivariant bundle map $\Phi_i:P\rightarrow \E G$을 가진다. 그런데 $\E G$가 contractible이므로, paracompact 공간 위의 principal bundle $P$에서 $\E G$로 가는 임의의 두 $G$-equivariant map은 서로 $G$-equivariant homotopic하며, 따라서 $\Phi_0$과 $\Phi_1$을 잇는 $G$-equivariant homotopy $P\times[0,1]\rightarrow \E G$가 존재하고, 이것이 base로 내려가 $f_0$과 $f_1$ 사이의 homotopy를 주므로 $[f_0]=[f_1]$이다. 
 :::
 
 이 정리는 principal $G$-bundle의 기하학적 분류를 순수하게 homotopy의 데이터 $[X,\B G]$로 옮긴다. [명제 4](#prop4)와 결합하면 rank $n$ real vector bundle의 분류가 $[X,\B\GL(n;\mathbb{R})]$로, complex의 경우 $[X,\B\GL(n;\mathbb{C})]$로 옮겨지게 되며, 실제로 이들 $\B\GL(n; \mathbb{R})$과 $\B\GL(n; \mathbb{C})$이 실은 (real/complex) Grassmannian인 것을 곧 살펴보게 될 것이다. 
@@ -195,12 +196,12 @@ Classifying space의 구성은 $G$에 대해 functorial이다. 연속적인 grou
 ::: 예시 10
 $G$가 discrete group이라 하자. 그럼 임의의 base $B$ 위에 정의된 principal $G$-bundle은 그 fiber가 discrete이므로 $B$ 위의 covering space가 된다. 그럼 이 이해에서 $G$의 right action은 Deck transformation이 되며, fiber 위에서 Deck group이 transitive하게 작용하므로 이 covering space는 *regular* covering space이다. 
 
-이제 이를 universal bundle $\E G \rightarrow \B G$에 적용하자. 그럼 [§피복공간, ⁋따름정리 12](/ko/math/algebraic_topology/covering_spaces#cor12)에 의해 이 covering space의 Deck transformation group은 $\pi_1(\B G)$와 isomorphic한데, 우리는 앞서 이 Deck group이 곧 $G$가 되어야 하는 것을 살펴보았으므로 $\pi_1(\B G)\cong G$이고, $EG$가 contractible이라 $\B G$의 universal cover 또한 contractible이므로 $\pi_n(\B G)=0$ ($n\geq 2$) 이다. 곧 $\B G$는 Eilenberg–MacLane 공간 $K(G,1)$이다.
+이제 이를 universal bundle $\E G \rightarrow \B G$에 적용하자. 그럼 [§피복공간, ⁋따름정리 12](/ko/math/algebraic_topology/covering_spaces#cor12)에 의해 이 covering space의 Deck transformation group은 $\pi_1(\B G)$와 isomorphic한데, 우리는 앞서 이 Deck group이 곧 $G$가 되어야 하는 것을 살펴보았으므로 $\pi_1(\B G)\cong G$이고, $\E G$가 contractible이라 $\B G$의 universal cover 또한 contractible이므로 $\pi_n(\B G)=0$ ($n\geq 2$) 이다. 곧 $\B G$는 Eilenberg–MacLane 공간 $K(G,1)$이다.
 
 더 구체적인 예시로 $G=\mathbb{Z}/2$인 경우와 $G=\mathbb{Z}$인 경우를 각각 보자. 우선 $\mathbb{Z}/2$의 경우 우리는 $\mathbb{Z}/2$이 free하게 작용하는 contractible space를 찾아야 하는데, $S^\infty$에 antipodal action을 준 게 정확히 이 두 조건을 모두 만족한다. 그럼 이 action의 orbit space는 $\RP^\infty$가 된다. $\mathbb{Z}$의 경우도 이미 우리와 친숙한 예시에서 찾아올 수 있는데, 바로 [§피복공간, ⁋정의 3](/ko/math/algebraic_topology/covering_spaces#def3) 직후에 covering space의 표준적인 예시로 소개한 $\mathbb{R}\rightarrow S^1$이 그러하다. 
 :::
 
-이제 실제로 우리가 관심있는 group들의 classifying space들을 살펴보자. Discrete이 아닌 group 중 가장 기본적인 예는 $G=S^1$이며 이는 보편적으로 $\mathbb{C}^\times$에 들어있는 길이 $1$짜리 복소수들 $e^{2\pi it}$들의 모임으로 생각한다. 그럼 $S^1$은 $\mathbb{C}^\infty\setminus\{0\}$ 위에 스칼라곱으로 free하게 작용한다. 
+이제 실제로 우리가 관심있는 group들의 classifying space들을 살펴보자. Discrete이 아닌 group 중 가장 기본적인 예는 $G=S^1$이며 이는 통상적으로 $\mathbb{C}^\times$에 들어있는 길이 $1$짜리 복소수들 $e^{2\pi it}$들의 모임으로 생각한다. 그럼 $S^1$은 $\mathbb{C}^\infty\setminus\{0\}$ 위에 스칼라곱으로 free하게 작용한다. 
 
 이제 각각의 $\mathbb{C}^n\setminus 0$을 radial deformation retract를 통해 단위구면 
 
@@ -226,7 +227,7 @@ $$P\times_{S^1}\mathbb{C}\rightarrow X$$
 
 가 정의된다. 앞서 살펴보았듯 이는 $P$와 같은 open cover 위에서 fiber가 $\mathbb{C}$이고 transition이 $g_{ij}$의 $\mathbb{C}$ 위에서의 작용으로 주어지는 bundle인데, 스칼라곱은 $\mathbb{C}$-linear하므로 이 transition들은 $S^1\subseteq\mathbb{C}^\times=\GL(1;\mathbb{C})$의 원소들이 주는 linear automorphism들이고, 따라서 $P\times_{S^1}\mathbb{C}$는 complex line bundle이다. 즉 principal $S^1$-bundle은 $\mathbb{C}$를 붙이는 것만으로 자연스럽게 line bundle이 된다. 거꾸로 line bundle $L\rightarrow X$가 주어지면 paracompactness에 의해 Hermitian metric을 잡을 수 있고, 각 fiber의 unit vector들의 모임인 sphere bundle $S(L)\subseteq L$은 $S^1$의 스칼라곱에 대하여 principal $S^1$-bundle이 된다. [명제 4](#prop4)에서 ordered basis를 unit vector로 바꾼 것과 같은 논증으로 이 두 구성이 서로의 역임을 확인할 수 있으며, 이것이 line bundle의 구조군을 $\GL(1;\mathbb{C})$에서 $S^1=\Umat(1)$로 줄여 잡을 수 있는 이유이다. 
 
-이를 명시적으로 universal bundle $ES^1=S^\infty\rightarrow\CP^\infty$에 적용하면 line bundle
+이를 명시적으로 universal bundle $\E S^1=S^\infty\rightarrow\CP^\infty$에 적용하면 line bundle
 
 $$S^\infty\times_{S^1}\mathbb{C}\longrightarrow\CP^\infty$$
 
@@ -317,11 +318,11 @@ $$H^\bullet(\B\Umat(n);\mathbb{Z})=\mathbb{Z}[c_1,\ldots,c_n],\qquad \lvert c_i\
 는 universal complex bundle의 Chern class $c_i$들로 생성되는 polynomial ring이다.
 :::
 ::: 증명
-$\B\Umat(n)=\Gr_n(\mathbb{C}^\infty)$이고, 그 cohomology ring이 universal bundle의 Chern class들로 생성되는 polynomial ring
+$\B\Umat(n)=\Gr(n,\mathbb{C}^\infty)$이고, 그 cohomology ring이 universal bundle의 Chern class들로 생성되는 polynomial ring
 
-$$H^\bullet(\Gr_n(\mathbb{C}^\infty);\mathbb{Z})=\mathbb{Z}[c_1,\ldots,c_n]$$
+$$H^\bullet(\Gr(n,\mathbb{C}^\infty);\mathbb{Z})=\mathbb{Z}[c_1,\ldots,c_n]$$
 
-임은 이미 [\[대수적 위상수학\] §벡터다발의 특성류, ⁋예시 8](/ko/math/algebraic_topology/characteristic_classes#ex8) 이후에 살펴보았다. 따라서 나중의 주장만 보이면 충분하다. 
+임은 이미 [§벡터다발의 특성류, ⁋예시 8](/ko/math/algebraic_topology/characteristic_classes#ex8) 이후에 살펴보았다. 따라서 generator가 Chern class이고 $\lvert c_i\rvert=2i$라는 것만 보이면 충분하다. 
 
 이 계산은 [따름정리 12](#cor12)와 사실상 같은 것으로, 핵심은 앞에서와 똑같이 maximal torus $T=(S^1)^n\subseteq\Umat(n)$을 대각으로 넣어 얻는 $\B T\rightarrow\B\Umat(n)$이다. $\Umat(n)$의 canonical representation $\mathbb{C}^n$을 $T$로 제한하면 좌표축을 따라
 

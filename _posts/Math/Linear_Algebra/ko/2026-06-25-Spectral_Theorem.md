@@ -13,6 +13,8 @@ date: 2026-06-25
 
 weight: 24
 
+drift_needed: true
+
 ---
 
 우리는 [§고유공간분해](/ko/math/linear_algebra/eigenspace_decomposition)에서 어떤 행렬이 대각화 가능한지를 살펴보았다. 추가적으로 공간 위에 내적이 주어져 있다면 이 고유벡터들이 서로 직교하도록, 즉 orthonormal basis를 통해 대각화될 수 있는지를 탐구할 수 있다. 
@@ -88,7 +90,7 @@ $\mathbb{R}$-내적공간 $V$ 위의 self-adjoint operator $L:V\rightarrow V$에
 ::: 증명
 $\dim V$에 대한 귀납법으로 증명한다. $\dim V=0$인 경우는 보일 것이 없다. $\dim V\geq 1$이라 하면, [따름정리 3](#cor3)에 의하여 $L$은 고유벡터를 가지며, 이를 크기로 나누어 $\lVert v_1\rVert=1$인 고유벡터 $v_1$을 얻을 수 있다. 그 고윳값 $\lambda_1$은 [보조정리 2](#lem2)에 의해 실수이다. 
 
-$U=\span v_1$이라 하면 $L(U)\subseteq U$이므로 [보조정리 4](#lem4)에 의하여 $L(U^\perp)\subseteq U^\perp$이다. 한편 [§내적공간, ⁋정리 9](/ko/math/linear_algebra/inner_product_spaces#thm9) 이후의 논의에서 보았듯 $V=U\oplus U^\perp$이고 $\dim U^\perp=\dim V-1$이다. 또 $U^\perp$로 제한한 $L\vert_{U^\perp}:U^\perp\rightarrow U^\perp$은 임의의 $w,w'\in U^\perp$에 대하여 $\langle Lw,w'\rangle=\langle w,Lw'\rangle$을 그대로 만족하므로 $U^\perp$ 위에서 다시 self-adjoint이다. 따라서 귀납적 가정에 의하여 $L\vert_{U^\perp}$의 고유벡터들로 이루어진 $U^\perp$의 orthonormal basis $\{v_2,\ldots, v_n\}$이 존재한다. 
+$U=\span v_1$이라 하면 $L(U)\subseteq U$이므로 [보조정리 4](#lem4)에 의하여 $L(U^\perp)\subseteq U^\perp$이다. 한편 $U$로 제한한 내적이 non-degenerate이므로 [§쌍선형형식, ⁋명제 8](/ko/math/linear_algebra/bilinear_form#prop8)에 의하여 $V=U\oplus U^\perp$이고 $\dim U^\perp=\dim V-1$이다. 또 $U^\perp$로 제한한 $L\vert_{U^\perp}:U^\perp\rightarrow U^\perp$은 임의의 $w,w'\in U^\perp$에 대하여 $\langle Lw,w'\rangle=\langle w,Lw'\rangle$을 그대로 만족하므로 $U^\perp$ 위에서 다시 self-adjoint이다. 따라서 귀납적 가정에 의하여 $L\vert_{U^\perp}$의 고유벡터들로 이루어진 $U^\perp$의 orthonormal basis $\{v_2,\ldots, v_n\}$이 존재한다. 
 
 이 벡터들은 모두 $L$의 고유벡터이기도 하며, $v_1\in U$이고 $v_2,\ldots, v_n\in U^\perp$이므로 $v_1$은 나머지와 직교한다. 따라서 $\{v_1,v_2,\ldots, v_n\}$은 $L$의 고유벡터들로 이루어진 $V$의 orthonormal basis이다. 
 :::

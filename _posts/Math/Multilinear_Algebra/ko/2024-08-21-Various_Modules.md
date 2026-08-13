@@ -11,6 +11,8 @@ sidebar:
 date: 2024-08-21
 weight: 2
 
+drift_needed: true
+
 ---
 
 [\[대수적 구조\]](/ko/algebraic_structures/)에서 우리는 임의의 ring $A$ 위에 정의된 $A$-module을 정의하고, 이에 대한 기본적인 성질들을 살펴보았다. 이제 우리는 (left) $A$-module들에 대한 성질을 더 살펴본다.
@@ -31,7 +33,7 @@ $$\ker \bigoplus u_i=\bigoplus \ker u_i,\qquad \coker \prod u_i=\prod \coker u_i
 
 ## 직접곱과 직합
 
-위의 adjunction을 사용하는 법을 살펴보기 위해 가장 기초적인 예시를 생각한다. 우선 $\Hom$과 $\bigoplus$, $\prod$의 관계를 살펴보자. 이를 위해 left $A$-module $M,N$과 left $A$-module들의 family $(M_i)_{i\in I}$, $(N_j)_{j\in J}$를 고정한다. 그럼 $\Hom$은 right adjoint이므로 limit을 보존한다. ([\[범주론\] §수반함자, ⁋정리 9](/ko/math/category_theory/adjoints#thm9)) 따라서 [\[범주론\] §극한, ⁋명제 10](/ko/math/category_theory/limits#prop10)에 의하여 abelian group들 사이의 isomorphism
+위의 adjunction을 사용하는 법을 살펴보기 위해 가장 기초적인 예시를 생각한다. 우선 $\Hom$과 $\bigoplus$, $\prod$의 관계를 살펴보자. 이를 위해 left $A$-module $M,N$과 left $A$-module들의 family $(M_i)_{i\in I}$, $(N_j)_{j\in J}$를 고정한다. 그럼 $\Hom$은 right adjoint이므로 limit을 보존한다. ([\[범주론\] §수반함자, ⁋정리 9](/ko/math/category_theory/adjoints#thm9)) 따라서 [\[범주론\] §극한, ⁋정리 9](/ko/math/category_theory/limits#thm9)에 의하여 abelian group들 사이의 isomorphism
 
 $$\Hom_{\lMod{A}}\left(M, \prod_{j\in J} N_j \right)\cong\prod_{j\in J} \Hom_{\lMod{A}}(M, N_j),\qquad \Hom_{\lMod{A}}\left(\bigoplus_{i\in I} M_i, N\right)\cong\prod_{i\in I}\Hom_{\lMod{A}}(M_i, N)$$
 
@@ -57,13 +59,13 @@ $$\left(\bigoplus_{i\in I} M_i\right)\otimes_A\left(\bigoplus_{j\in J} N_j\right
 
 $$\Hom_{\lMod{A}}(u,N):\Hom_{\lMod{A}}(M', N) \rightarrow \Hom_{\lMod{A}}(M,N)$$
 
-에 대하여, 그런데 $\Hom$은 right adjoint이므로
+에 대하여, $\Hom$은 right adjoint이므로
 
 $$\ker(\Hom_{\lMod{A}}(u,N))\cong\Hom_{\lMod{A}}(\coker u, N)\tag{2}$$
 
 이 성립한다. 비슷하게 다음의 abelian group homomorphism
 
-$$\Hom_{\lMod{A}}(N, u):\Hom_{\lMod{A}}(M, N) \rightarrow\Hom_{\lMod{A}}(M', N)$$
+$$\Hom_{\lMod{A}}(N, u):\Hom_{\lMod{A}}(N, M) \rightarrow\Hom_{\lMod{A}}(N, M')$$
 
 에 대해서는 
 
@@ -80,7 +82,7 @@ $A$-linear map $u:M \rightarrow M'$이 주어졌다 하자.
 
 그러나 일반적으로, $u$가 surjective이더라도 $\Hom(u, N)$이 surjective는 아닐 수도 있고, $u$가 injective이더라도 $\Hom(N, u)$가 surjective는 아닐 수도 있다. 
 
-한편 $\lMod{A}$는 abelian category이므로, 식 (2)의 isomorphism은 본질적으로 다음의 short exact sequence
+한편 $\lMod{A}$는 abelian category이므로, 식 (2)의 isomorphism은 본질적으로 다음의 exact sequence
 
 $$M_1 \rightarrow M_2 \rightarrow M_3 \rightarrow 0$$
 
@@ -88,7 +90,7 @@ $$M_1 \rightarrow M_2 \rightarrow M_3 \rightarrow 0$$
 
 $$0 \rightarrow \Hom_\lMod{A}(M_3, N) \rightarrow \Hom_\lMod{A}(M_2, N)\rightarrow\Hom_\lMod{A}(M_1,N)$$
 
-가 exact라는 것과 같은 말이다. 비슷하게 식 (3)의 isomorphism은 다음의 short exact sequence
+가 exact라는 것과 같은 말이다. 비슷하게 식 (3)의 isomorphism은 다음의 exact sequence
 
 $$0 \rightarrow M_1 \rightarrow M_2 \rightarrow M_3$$
 
@@ -111,14 +113,14 @@ $$0 \rightarrow \Hom_\lMod{A}(N, M_1)\rightarrow\Hom_\lMod{A}(N, M_2) \rightarro
 2. 만일 $\Hom(P, -)$가 right exact라면 $P$를 *projective module<sub>사영가군</sub>*이라 부른다. 
 :::
 
-그럼 식 (1)로부터 module들의 direct product가 injective인 것과 각각의 성분이 injective인 것이 동치인 것을 알고, module들의 direct sum이 projective인 것은 각각의 direct summand가 projective인 것과 동치임을 안다. 특히 다음의 homomorphism
+그럼 식 (1)로부터 module들의 direct product가 injective인 것과 각각의 성분이 injective인 것이 동치인 것을 알고, module들의 direct sum이 projective인 것은 각각의 성분이 projective인 것과 동치임을 안다. 특히 natural isomorphism $\Hom_{\lMod{A}}(A, M)\cong M$ 하에서 다음의 homomorphism
 
 $$\Hom(A, u):\Hom_{\lMod{A}}(A, M) \rightarrow \Hom_{\lMod{A}}(A, M')$$
 
-이 isomorphism이라는 사실로부터 $A$ 자기 자신은 projective임을 알고, 따라서 임의의 free module은 projective module이다. 
+이 $u$와 같아진다는 사실로부터 $A$ 자기 자신은 projective임을 알고, 따라서 임의의 free module은 projective module이다. 
 
 ::: 명제 4
-Left $A$-module이 projective인 것과 $P$가 free $A$-module의 direct summand인 것이 동치이다.
+Left $A$-module $P$가 projective인 것과 $P$가 free $A$-module의 direct summand인 것이 동치이다.
 :::
 ::: 증명
 임의의 free module의 direct summand가 projective라는 것은 위의 논증으로부터 자명하다. 따라서 $P$가 projective라 가정하자. [§기저, ⁋명제 2](/ko/math/multilinear_algebra/basis_of_free_modules#prop2)에 의하여 적당한 free $A$-module $F$와 surjection $p:F \rightarrow P$를 택할 수 있다. 한편 $P$가 projective라는 것은 다음의 함수

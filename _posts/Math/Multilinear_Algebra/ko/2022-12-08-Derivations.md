@@ -10,6 +10,7 @@ sidebar:
 
 date: 2022-12-12
 weight: 14
+drift_needed: true
 
 ---
 
@@ -37,7 +38,7 @@ $$\varepsilon(p,q)=1,\qquad \varepsilon(p,q)=(-1)^{pq}$$
 
 이제 commutative ring $A$, $\Delta$-graded $A$-module $E$, $E'$, $E''$, $F$, $F'$, $F''$와 $A$-bilinear map들
 
-$$\mu: E \times E' \rightarrow E'', \qquad \lambda_1: F \times E' \rightarrow F', \qquad \lambda_2: E \times F' \rightarrow F''$$
+$$\mu: E \times E' \rightarrow E'', \qquad \lambda_1: F \times E' \rightarrow F'', \qquad \lambda_2: E \times F' \rightarrow F''$$
 
 그리고 이들이 유도하는 $A$-linear map들
 
@@ -74,7 +75,7 @@ $$\dd{(xx')}=(\dd{x})x'+\varepsilon(\delta,\deg(x))x (\dd{x}')$$
 
 로 쓸 수 있으며, 우리가 다루는 대부분의 경우에서는 이 정도 표기법의 남용은 혼동을 주지 않을 것이다. 
 
-만일 위의 두 경우가 모두 성립하여 $E=E'=E''=F=F'=F''$이고 $\lambda_1, \lambda_2$가 $E$에서의 곱셈이며, derivation이 단일한 graded endomorphism $d: E \rightarrow E$인 경우가 가장 많이 등장한다. 그럼 $\varepsilon$-derivation은 $A$에서 $A$로 가는 함수로 생각할 수 있으므로 이 경우 우리는 $\varepsilon$-derivation을 간단히 $A$의 $\varepsilon$-derivation이라 부른다. 
+만일 위의 두 경우가 모두 성립하여 $E=E'=E''=F=F'=F''$이고 $\lambda_1, \lambda_2$가 $E$에서의 곱셈이며, derivation이 단일한 graded endomorphism $d: E \rightarrow E$인 경우가 가장 많이 등장한다. 그럼 $\varepsilon$-derivation은 $E$에서 $E$로 가는 함수로 생각할 수 있으므로 이 경우 우리는 $\varepsilon$-derivation을 간단히 $E$의 $\varepsilon$-derivation이라 부른다. 
 
 한편 우리는 앞에서 $\Delta=\mathbb{Z}$인 경우가 우리의 주된 관심사라 하였는데, 이 경우 non-trivial한 commutation factor $\varepsilon(p,q)=(-1)^{pq}$를 생각하면, 이 $\varepsilon$에 대하여 임의의 짝수 degree $\varepsilon$-derivation은 항상 $\varepsilon$의 영향을 무시할 수 있다는 것을 안다. 홀수 degree의 경우, 임의의 homogeneous element $x\in E$에 대하여 다음의 식
 
@@ -100,7 +101,7 @@ $$\bigwedge(M)=\bigoplus_{d=0}^n{\bigwedge}^d(M)$$
 
 $$\dd{\x_J}=\dd{\x_{j_1}}\wedge \dd{\x_{j_2}}\wedge\cdots\wedge \dd{\x_{j_k}},\qquad j_1<\cdots< j_k$$
 
-의 꼴로 생성되는 free $E$-module이다. ([§텐서대수, ⁋명제 13](/ko/math/multilinear_algebra/tensor_algebras#prop13)) 이제 각각의 basis
+의 꼴로 생성되는 free $E$-module이다. ([§텐서대수, ⁋명제 13](/ko/math/multilinear_algebra/tensor_algebras#prop13)) 이제 각각의 원소
 
 $$f\dd{\x_{j_1}}\wedge \dd{\x_{j_2}}\wedge\cdots\wedge \dd{\x_{j_k}}\in {\bigwedge}^k(M)$$
 
@@ -118,7 +119,7 @@ $$\begin{aligned}(d_2\circ d_1)(xx')&=d_2((d_1x)x'+\varepsilon(\delta_1, \deg(x)
 
 이므로 일반적인 상황에서 $\varepsilon$-derivation들의 합성은 $\varepsilon$-derivation이 아니다. 즉, 일반적으로 $\Delta$-graded $A$-module들의 triple들로 이루어진 category를 생각하고, 고정된 triple $(E,E',E'')$의 endomorphism algebra
 
-$$\End_{\bgr_\Delta \Alg{A}^3}(E, E', E'')$$
+$$\End_{\bgr_\Delta \lMod{A}^3}(E, E', E'')$$
 
 를 생각하면, $\varepsilon$-derivation들의 모임은 이 endomorphism algebra의 subalgebra를 정의하지 않는다. 그러나 위의 계산을 살펴본다면, 이 위에 어떠한 종류의 곱셈을 정의해야 $\varepsilon$-derivation들의 모임을 정의할 수 있는지도 명확하다. 즉 우변의 네 항 중, 가운데의 두 항을 없애주면 $d_2d_1$이 degree $\delta_1+\delta_2$의 $\varepsilon$-derivation이 될 것이다. 
 
@@ -126,12 +127,12 @@ $$\End_{\bgr_\Delta \Alg{A}^3}(E, E', E'')$$
 
 $$[x,y]_\varepsilon=xy-\varepsilon(\deg(x),\deg(y))yx$$
 
-으로 정의하자. 그럼 이를 통해 $G=\End_{\bgr_\Delta \Alg{A}^3}(E, E', E'')$에서의 $\varepsilon$-bracket을 정의할 수 있다. 
+으로 정의하자. 그럼 이를 통해 $G=\End_{\bgr_\Delta \lMod{A}^3}(E, E', E'')$에서의 $\varepsilon$-bracket을 정의할 수 있다. 
 
 ::: 명제 3
 $d_1, d_2$를 $(E, E', E'')$ 위의 $\varepsilon$-derivation들이라 하자. 각각의 degree를 $\delta_1$, $\delta_2$라 하면, 이들의 $\varepsilon$-bracket
 
-$$[d_1, d_2]_\varepsilon = d_1 \circ d_2 - \varepsilon_{\delta_1, \delta_2} \, d_2 \circ d_1$$
+$$[d_1, d_2]_\varepsilon = d_1 \circ d_2 - \varepsilon_{\delta_1, \delta_2} d_2 \circ d_1$$
 
 은 degree $\delta_1 + \delta_2$를 갖는 또 다른 $\varepsilon$-derivation이 된다. 특히, 만일 $d$가 degree $\delta$를 갖는 $\varepsilon$-derivation이고, $\varepsilon_{\delta, \delta} = -1$이라면, $d^2 = d \circ d$는 derivation이다.
 :::
@@ -160,8 +161,8 @@ $$D^2=\partial_i^2+2\partial_i\partial_j+\partial_j^2$$
 와 같이 적을 수도 있다. 다음 명제는 이를 더욱 일반화한 것이다. 
 
 ::: 명제 5
-위 가정과 표기 아래에서, 미지수 $T_1, \dots, T_n, T_1', \dots, T_n'$에 대한 다항식 
-$F \in A[\x_1, \dots, \x_n]$가 주어졌다고 하자. 즉 $F(T)$, $F(T')$는 각각
+위 가정과 표기 아래에서, 미지수 $T_1, \dots, T_n$에 대한 다항식 
+$F \in A[T_1, \dots, T_n]$가 주어졌다고 하자. 즉 $F(T)$, $F(T')$는 각각
 
 $$F(T) = F(T_1, \dots, T_n), \qquad F(T') = F(T_1', \dots, T_n')$$
 
@@ -203,7 +204,7 @@ $$\dd{(1)} = \dd{(1 \cdot 1)} = (d1) \cdot 1 + \varepsilon_{\delta, 0} \cdot 1 \
 이 되어, $\dd{(1)} = 0$임을 알 수 있다.
 :::
 
-따라서 만일 $d_1,d_2$가 $E$에서 $F$로의 degree $\delta$ $\varepsilon$-derivation이고 이들이 $A$의 algebra로서의 generator에서 그 값이 모두 같다면 $d_1=d_2$여야 한다. 한편 역원에 대해서는 다음이 성립한다.
+따라서 만일 $d_1,d_2$가 $E$에서 $F$로의 degree $\delta$ $\varepsilon$-derivation이고 이들이 $E$의 $A$-algebra로서의 generator에서 그 값이 모두 같다면 $d_1=d_2$여야 한다. 한편 역원에 대해서는 다음이 성립한다.
 
 ::: 명제 7
 $E$가 $1$을 갖는 $\Delta$-graded $A$-algebra라 하고, degree $\delta$의 $\varepsilon$-derivation $d:E \rightarrow F$를 생각하자. 만일 $x$가 $E$의 invertible homogeneous element라면, 그 역원 $x^{-1}$에 대하여 다음의 식
@@ -264,7 +265,7 @@ $$v^{-1} \dd{(u)} - v^{-2} u \dd{(v)} = v'^{-1} \dd{(u')} - v'^{-2} u' \dd{(v')}
 
 다음 명제에서, 표기의 편의를 위해 임의의 degree $\delta$ $\varepsilon$-derivation $d:E \rightarrow F$에 대하여 
 
-$$Z_\varepsilon=\{a\in E\mid \text{$xa_d=\varepsilon(\deg(a),\deg(x))a_dx$ for all homogeneous component $a_d$ of $a$ and for all homogeneous $x\in F$.}\}$$
+$$Z_\varepsilon=\{a\in E\mid \text{$xa_d=\varepsilon(d,\deg(x))a_dx$ for all homogeneous component $a_d$ of $a$ and for all homogeneous $x\in F$.}\}$$
 
 으로 정의하자. 
 

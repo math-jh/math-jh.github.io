@@ -10,6 +10,7 @@ sidebar:
 
 date: 2022-06-19
 weight: 10
+drift_needed: true
 
 ---
 
@@ -22,14 +23,14 @@ weight: 10
 
 - *Total space* $E$와 *base space* $B$는 모두 위상공간이며, $\pi:E \rightarrow B$는 연속인 전사함수다.
 - 각각의 $b\in B$에 대하여, $E_b=\pi^{-1}(b)$는 $k$차원 벡터공간의 구조를 갖는다.
-- 각각의 $b_0\in B$마다 적당한 열린근방 $U\subseteq B$, 그리고 homeomorphism $h:U\times\mathbb{R}^k \rightarrow\pi^{-1}(U)$가 존재하여, 모든 $b\in U$마다 $x\mapsto h(b,x)$가 isomorphism이도록 할 수 있다.
+- 각각의 $b_0\in B$마다 적당한 열린근방 $U\subseteq B$, 그리고 homeomorphism $h:U\times\mathbb{R}^k \rightarrow\pi^{-1}(U)$가 존재하여, 모든 $b\in U$마다 $x\mapsto h(b,x)$가 $\mathbb{R}^k$에서 $E_b$로의 isomorphism이도록 할 수 있다.
 
 이 때 $k$를 vector bundle $E\rightarrow B$의 *rank*라 부른다. 셋째 조건의 homeomorphism $h$를 *local trivialization*이라 부르며, 만일 $U=B$로 둘 수 있다면 $E$를 *trivial vector bundle<sub>자명한 벡터다발</sub>*이라 부른다.
 :::
 
 이와 유사하게 manifold 위에도 vector bundle을 정의할 수 있다. 이를 위해서는 $E$와 $B$를 모두 manifold로, $\pi$를 $C^\infty$인 전사함수로 바꾸고, 셋째 조건을
 
-> 각각의 $b_0\in B$마다 적당한 coordinate system $U\subseteq B$, 그리고 diffeomorphism $h:U\times\mathbb{R}^k\rightarrow\pi^{-1}(U)$가 존재하여, 모든 $b\in U$마다 $x\mapsto h(b,x)$가 isomorphism이도록 할 수 있다.
+> 각각의 $b_0\in B$마다 적당한 coordinate system $U\subseteq B$, 그리고 diffeomorphism $h:U\times\mathbb{R}^k\rightarrow\pi^{-1}(U)$가 존재하여, 모든 $b\in U$마다 $x\mapsto h(b,x)$가 $\mathbb{R}^k$에서 $E_b$로의 isomorphism이도록 할 수 있다.
 
 으로 바꾸면 된다. 
 
@@ -74,7 +75,7 @@ $$\{\tilde{\varphi}^{-1}(W)\mid \text{$W$ open in $\mathbb{R}^{2m}$, $(U,\varphi
 
 $$v\vert_p\mapsto (p, \dd{x}^1(v),\ldots, \dd{x}^m(v))$$
 
-으로 정의하면 된다. 고정된 $\pi^{-1}(p)$ 위에서 $\phi$가 벡터공간 사이의 isomorphism이 되는 것은 자명하고, 또 임의의 $v_x$에 대하여 $(\pi\circ\phi)(x,v)=x$임도 자명하다. $\phi$가 diffeomorphism이 된다는 것은 
+으로 정의하면 된다. 고정된 $\pi^{-1}(p)$ 위에서 $\phi$가 벡터공간 사이의 isomorphism이 되는 것은 자명하고, 또 임의의 $(x,v)\in U\times\mathbb{R}^m$에 대하여 $(\pi\circ\phi^{-1})(x,v)=x$임도 자명하다. $\phi$가 diffeomorphism이 된다는 것은 
 
 $$\tilde{\varphi}=(\varphi\times\id_{\mathbb{R}^m})\circ\phi$$
 
@@ -85,7 +86,7 @@ $$\tilde{\varphi}=(\varphi\times\id_{\mathbb{R}^m})\circ\phi$$
 
 ## Smooth functors
 
-Tangent bundle $TM$이 중요한 것은 manifold 위에 정의된 대다수의 vector bundle이 $TM$으로부터 정의되기 때문이다. 가령 cotangent bundle $T^\ast M$은 각각의 $p\in M$마다 tangent space의 dual space인 cotangent space $T_p^\ast M$이 붙어있는 vector bundle이다. 이와 비슷하게, 각 점 $p$마다 선형대수에서의 연산들을 ([예시 5](#ex5)) 통해 다양한 vector bundle이 정의된다. 
+Tangent bundle $TM$이 중요한 것은 manifold 위에 정의된 대다수의 vector bundle이 $TM$으로부터 정의되기 때문이다. 가령 cotangent bundle $T^\ast M$은 각각의 $p\in M$마다 tangent space의 dual space인 cotangent space $T_p^\ast M$이 붙어있는 vector bundle이다. 이와 비슷하게, 각 점 $p$마다 선형대수에서의 연산들을 통해 다양한 vector bundle이 정의된다. ([예시 5](#ex5))
 
 원래대로라면 이들을 정의할 때마다 이들이 vector bundle의 조건을 만족한다는 것을 보여야 하지만, **[Mil]**에 조금 더 근본적인 방식이 있다.
 
@@ -108,7 +109,7 @@ Tangent bundle $TM$이 중요한 것은 manifold 위에 정의된 대다수의 v
 Functor $F:\mathbf{FVect}_\text{iso}\times\mathbf{FVect}_\text{iso}\rightarrow \mathbf{FVect}_\text{iso}$이 *smooth functor<sub>매끄러운 함자</sub>*라는 것은 $F(f,g)$가 $f,g$에 대해 smooth하게 의존하는 것이다.
 :::
 
-만일 $f\in\Hom(V,V'), g\in\Hom(W,W')$라면 $F(f,g)\in\Hom(F(V,W),F(V',W'))$이다. 이들은 모두 벡터공간이므로 [§미분다양체의 예시들, ⁋예시 2](/ko/math/manifolds/examples_of_manifolds#ex2)와 같은 미분구조가 주어져 있고, 이를 통해 위의 정의를 적용할 수 있다. 또, 어렵지 않게 이 정의를 일반적인 $k$-fold product 
+만일 $f\in\Hom(V,V'), g\in\Hom(W,W')$가 isomorphism이라면 $F(f,g)\in\Hom(F(V,W),F(V',W'))$이다. 이들은 모두 벡터공간이므로 [§미분다양체의 예시들, ⁋예시 2](/ko/math/manifolds/examples_of_manifolds#ex2)와 같은 미분구조가 주어져 있고, 이를 통해 위의 정의를 적용할 수 있다. 또, 어렵지 않게 이 정의를 일반적인 $k$-fold product 
 
 $$\mathbf{FVect}_\text{iso}\times\cdots\times\mathbf{FVect}_\text{iso}\rightarrow \mathbf{FVect}_\text{iso}$$
 

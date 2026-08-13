@@ -11,6 +11,8 @@ sidebar:
 date: 2021-08-22
 weight: 14
 
+drift_needed: true
+
 ---
 
 ## 순서관계
@@ -32,7 +34,7 @@ weight: 14
 이 경우, 우리는 $A$가 <em-ko>$R$에 의해 순서가 부여되었다</em-ko>고 하고, 종종 $A$를 *ordered set<sub>순서집합</sub>*이라고 부른다. 또, 동치관계 때와 비슷하게 $x\mathrel{R}y$를 $x\leq_{\tiny R}y$로 적는다. 
 
 ::: 예시 3
-이항관계 <phrase>$x=y$</phrase>는 order relation이다. 관계 <phrase>$x\subseteq y$</phrase> 또한 order relation이다. ([§순서쌍, ⁋명제 2](/ko/math/set_theory/ordered_pair#prop2)와 [§순서쌍, ⁋명제 3](/ko/math/set_theory/ordered_pair#prop3))
+이항관계 <phrase>$x=y$</phrase>는 order relation이다. 관계 <phrase>$x\subseteq y$</phrase> 또한 order relation이다. ([§순서쌍, ⁋명제 2](/ko/math/set_theory/ordered_pair#prop2)와 [§순서쌍, ⁋명제 3](/ko/math/set_theory/ordered_pair#prop3), 그리고 antisymmetry는 [§ZFC 공리계, ⁋The Axiom of Extensionality.](/ko/math/set_theory/zfc_axioms#axiom-extensionality))
 :::
 
 Ordered set은 $\leq$라는 관계가 추가적으로 정의된 집합이므로, 이들 사이의 함수를 생각할 때는 $\leq$ 또한 보존하는 함수를 주로 생각하게 된다. 특별히 다음을 정의한다.
@@ -51,7 +53,7 @@ Ordered set은 $\leq$라는 관계가 추가적으로 정의된 집합이므로,
 $$R\circ R=R,\qquad R\cap R^{-1}=\Delta_A$$
 :::
 ::: 증명
-첫 번째 조건이 transitivity와 동등한 것은 [§동치관계, ⁋명제 3](/ko/math/set_theory/equivalence_relations#prop3)의 증명에서 이미 살펴보았다. 두 번째 조건은 reflexive와 antisymmetry를 섞어둔 것이라는 것도 쉽게 보일 수 있다.
+첫 번째 조건이 transitivity와 동등한 것은 [§동치관계, ⁋명제 3](/ko/math/set_theory/equivalence_relations#prop3)의 증명에서 이미 살펴보았다. 두 번째 조건에서 $\Delta_A\subseteq R\cap R^{-1}$은 reflexivity이고, 반대 포함 $R\cap R^{-1}\subseteq\Delta_A$는 antisymmetry이다.
 :::
 
 ## 원순서관계
@@ -90,7 +92,7 @@ $$\begin{aligned}  (x\mathrel{S}y)\wedge(y\mathrel{S}z)&\iff((x\leq_{\tiny R}y)\
   &\iff(x\leq_{\tiny R}y)\wedge(y\leq_{\tiny R}x)\wedge(y\leq_{\tiny R}z)\wedge(z\leq_{\tiny R}y)\\
   &\iff(x\leq_{\tiny R}y)\wedge(y\leq_{\tiny R}z)\wedge(z\leq_{\tiny R}y)\wedge(y\leq_{\tiny R}x)\\
   &\iff((x\leq_{\tiny R}y)\wedge(y\leq_{\tiny R}z))\wedge((z\leq_{\tiny R}y)\wedge(y\leq_{\tiny R}x))\\
-  &\iff(x\leq_{\tiny R}z)\wedge(z\leq_{\tiny R}x)\\
+  &\implies(x\leq_{\tiny R}z)\wedge(z\leq_{\tiny R}x)\\
   &\iff x\mathrel{S}z
 \end{aligned}$$
 
@@ -99,7 +101,7 @@ $$\begin{aligned}  (x\mathrel{S}y)\wedge(y\mathrel{S}z)&\iff((x\leq_{\tiny R}y)\
 
 ## Strict order
 
-주어진 order relation $\leq$에 대하여, $<$을 <phrase>$x\leq y$이고 $x\neq y$</phrase>로 정의된 관계라 하자. 이 때 $<$는 antisymmetry를 만족하지 않으므로 order relation이 될 수는 없고, 또 reflexive하지도 않으므로 preorder 또한 될 수 없다. 대신 다음을 정의하자.
+주어진 order relation $\leq$에 대하여, $<$을 <phrase>$x\leq y$이고 $x\neq y$</phrase>로 정의된 관계라 하자. 이 때 $<$는 reflexive하지 않으므로 order relation도, preorder도 될 수 없다. 대신 다음을 정의하자.
 
 ::: 정의 9
 관계 $R$이 *asymmetric<sub>비대칭적</sub>*이라는 것은 $x\mathrel{R}y$이면 $y\not \mathrel{R}x$인 것이다. Asymmetric, transitive relation을 *strict order<sub>순순서</sub>*라 부른다.
@@ -122,7 +124,7 @@ $$((x\leq_{\tiny R}y)\wedge(x\neq y))\wedge((y\leq_{\tiny R}x)\wedge(y\neq x))$$
 
 $$((x\leq_{\tiny R}y)\wedge(y\leq_{\tiny R}x))\wedge(x\neq y)$$
 
-이는 $R$의 antisymmetry에 의하여 $(x=y)\wedge(x\neq y)$이고, 이는 항상 거짓이므로 $x\mathrel{S} y$이면 $y\not\mathrel{S}x$이다.
+이는 $R$의 antisymmetry에 의하여 $(x=y)\wedge(x\neq y)$이고, 이는 항상 거짓이므로 $x\mathrel{S} y$이면 $y\not\mathrel{S}x$이다. Transitivity를 보이기 위해 $x\mathrel{S}y$이고 $y\mathrel{S}z$라 하면, $\leq_{\tiny R}$의 transitivity에 의하여 $x\leq_{\tiny R}z$이고, 또 $x=z$라면 $x\leq_{\tiny R}y$와 $y\leq_{\tiny R}x$가 동시에 성립하여 $R$의 antisymmetry에 의해 $x=y$가 되어 $x\neq y$에 모순이므로 $x\neq z$이며, 따라서 $x\mathrel{S}z$이다.
 
 반대로 $S$가 strict order라 하고, 새로운 relation $R$을 <phrase>$x<_{\tiny S}y$이거나 $x=y$</phrase>로 정의하자. 우선 $x=x$이므로, 뒤쪽 조건에 걸려 $x\mathrel{R}x$이다. Antisymmetry를 보이기 위해, $x\mathrel{R}y$와 $y\mathrel{R}x$가 성립한다고 가정하자. 그럼 
 
@@ -139,13 +141,13 @@ $$\begin{aligned}
   &\iff ((x<_{\tiny S}y)\wedge(y<_{\tiny S}z))\vee((x<_{\tiny S}y)\wedge(y=z))\\
   &\phantom{asdfghjkl}\vee((x=y)\wedge (y<_{\tiny S}z))\vee((x=y)\wedge(y=z))\\
   &\implies (x<_{\tiny S}z)\vee(x<_{\tiny S}z)\vee(x<_{\tiny S}z)\vee(x=y=z)\\
-  &\iff x\mathrel{R}z
+  &\implies x\mathrel{R}z
 \end{aligned}$$
 
 이므로 $R$은 transitive하다. 따라서 $R$은 order relation이 된다.
 :::
 
-앞으로 order relation $R$에 의해 얻어지는 strict order를 $<_{\tiny R}$, 그리고 strict order $S$에 의해 얻어지는 order relation을 $\leq_{\tiny S}$으로 적기로 한다.
+앞으로 order relation $R$에 의해 얻어지는 strict order를 $<_{\tiny R}$, 그리고 strict order $S$에 의해 얻어지는 order relation을 $\leq_{\tiny S}$으로 적기로 한다. 또, $x>y$는 $y<x$를 뜻하는 것으로 적는다.
 
 ::: 참고 11
 일반적으로 $x\not\leq y$라 하여 $x>y$인 것은 아니다. $S=\left\{a,b\right\}$라 하고, $\mathcal{P}(S)$ 위에 정의된 relation $\leq$를 부분집합들 간의 포함관계로 정의하자. 그럼 이는 자명하게 order relation이 된다. 이 때, $\left\{a\right\}\not\leq \left\{b\right\}$이지만 $\left\{a\right\}>\left\{b\right\}$ 또한 성립하지 않는다.

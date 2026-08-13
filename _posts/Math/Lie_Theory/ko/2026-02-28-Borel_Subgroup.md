@@ -10,6 +10,7 @@ sidebar:
 
 date: 2026-02-28
 weight: 6
+drift_needed: true
 
 ---
 
@@ -24,7 +25,7 @@ Root system $\Phi$와 simple root들의 모임 $\Delta=\{\alpha_1,\ldots,\alpha_
 
 1. 각 simple root $\alpha_i$에 대해 하나의 vertex를 둔다.
 2. 두 vertex $\alpha_i$, $\alpha_j$ ($i\neq j$) 사이에 $\lvert\langle\alpha_i,\alpha_j\rangle\rvert$개의 edge를 둔다.
-3. 만일 $\lvert\alpha_i\rvert\neq\lvert\alpha_j\rvert$라면, 더 긴 root를 향하는 arrow를 edge에 추가한다.
+3. 만일 $\lvert\alpha_i\rvert\neq\lvert\alpha_j\rvert$라면, 더 짧은 root를 향하는 arrow를 edge에 추가한다.
 :::
 
 Cartan matrix $A=(a_{ij})$에서 $a_{ij}=\langle\alpha_i,\alpha_j\rangle$이므로, Dynkin diagram은 Cartan matrix의 정보를 그래프로 표현한 것이라 생각할 수 있다. [§근계](/ko/math/lie_theory/root_systems)에서 살펴본 것과 같이 $a_{ij}\leq 0$이고 $a_{ij}=0$인 것은 $a_{ji}=0$인 것과 동치이므로, edge의 개수는 대칭적으로 결정된다. 또한 $a_{ij}\in\{0,-1,-2,-3\}$이므로 두 vertex 사이의 edge는 최대 3개이다.
@@ -43,7 +44,7 @@ Dynkin diagram의 핵심 성질은 다음과 같다.
 Dynkin diagram은 연결되어 있거나, connected component들의 disjoint union으로 나타난다. 각 connected component는 irreducible root system에 대응한다.
 :::
 ::: 증명
-Dynkin diagram의 connected component들은 simple root들의 partition $\Delta=\Delta_1\sqcup\cdots\sqcup\Delta_k$를 정의한다. 각 $\Delta_i$로 생성되는 root subsystem $\Phi_i$를 생각하면, [§근계, ⁋명제 6](/ko/math/lie_theory/root_systems#prop6)에 의하여 서로 다른 $\Delta_i$에 속한 root들은 orthogonal이다. 따라서 $\Phi=\Phi_1\sqcup\cdots\sqcup\Phi_k$이고, 각 $\Phi_i$는 irreducible이다.
+Dynkin diagram의 connected component들은 simple root들의 partition $\Delta=\Delta_1\sqcup\cdots\sqcup\Delta_k$를 정의한다. 각 $\Delta_i$로 생성되는 root subsystem $\Phi_i$를 생각하면, [정의 1](#def1)에 의하여 서로 다른 $\Delta_i$에 속한 root들은 orthogonal이다. 따라서 $\Phi=\Phi_1\sqcup\cdots\sqcup\Phi_k$이고, 각 $\Phi_i$는 irreducible이다.
 
 역으로 irreducible root system의 Dynkin diagram이 연결되어 있지 않다면 위의 논증에 의해 reducible이 되어 모순이다.
 :::
@@ -52,7 +53,7 @@ Dynkin diagram의 connected component들은 simple root들의 partition $\Delta=
 Dynkin diagram에 cycle이 존재하지 않는다. 즉, Dynkin diagram은 항상 tree 혹은 forest이다.
 :::
 ::: 증명
-귀류법으로 cycle $\alpha_{i_1},\ldots,\alpha_{i_k}=\alpha_{i_1}$이 존재한다 하자. Cycle 내의 edge 개수를 $k$라 하면, 각 edge에 대해 $\langle\alpha_{i_j},\alpha_{i_{j+1}}\rangle\neq 0$이고 따라서 $\langle\alpha_{i_j},\alpha_{i_{j+1}}\rangle\leq -1$이다.
+귀류법으로 cycle $\alpha_{i_1},\ldots,\alpha_{i_k}=\alpha_{i_1}$이 존재한다 하자. Cycle 내의 edge 개수는 $k-1$이며, 각 edge에 대해 $\langle\alpha_{i_j},\alpha_{i_{j+1}}\rangle\neq 0$이고 따라서 $\langle\alpha_{i_j},\alpha_{i_{j+1}}\rangle\leq -1$이다.
 
 이제 $\alpha=\sum_{j=1}^{k-1}\alpha_{i_j}$를 생각하자. 그럼
 
@@ -87,8 +88,8 @@ Irreducible root system의 Dynkin diagram은 다음 type들 중 하나이다.
 
 1. **Classical types:**
    - $A_n$ ($n\geq 1$): $n$개의 vertex가 chain으로 연결
-   - $B_n$ ($n\geq 2$): $A_n$의 한쪽 끝에 double edge와 arrow 추가
-   - $C_n$ ($n\geq 2$): $A_n$의 한쪽 끝에 double edge와 반대 방향 arrow 추가
+   - $B_n$ ($n\geq 2$): $A_{n-1}$의 한쪽 끝에 vertex 하나를 double edge로 붙이고 arrow 추가
+   - $C_n$ ($n\geq 3$): $A_{n-1}$의 한쪽 끝에 vertex 하나를 double edge로 붙이고 반대 방향 arrow 추가
    - $D_n$ ($n\geq 4$): $A_{n-1}$의 한쪽 끝에서 분기
 
 2. **Exceptional types:**
@@ -123,10 +124,10 @@ Exceptional type들 $E_6, E_7, E_8, F_4, G_2$에 대응하는 Lie algebra들은 
 모든 root의 길이가 같은 root system을 *simply-laced*라 부른다. 이들은 특별한 성질을 갖는다.
 
 ::: 정의 8
-Root system $\Phi$가 *simply-laced*라는 것은 모든 $\alpha,\beta\in\Phi$에 대해 $\lvert\alpha\rvert=\lvert\beta\rvert$인 것이다. Equivalently, Dynkin diagram에 double edge나 triple edge가 없는 것이다.
+Root system $\Phi$가 *simply-laced*라는 것은 모든 $\alpha,\beta\in\Phi$에 대해 $\lvert\alpha\rvert=\lvert\beta\rvert$인 것이다. $\Phi$가 irreducible인 경우, 이는 Dynkin diagram에 double edge나 triple edge가 없는 것과 동치이다.
 :::
 
-Simply-laced root system은 정확히 $A_n$, $D_n$, $E_6$, $E_7$, $E_8$ type이며, 이들을 통칭하여 *ADE type*이라 부른다. ADE type은 다양한 수학적 상황에서 등장한다. 가령 du Val singularity의 분류, Platonic solid의 대칭군, 그리고 2차원 conformal field theory 등에서 ADE pattern이 나타난다.
+Simply-laced root system은 정확히 $A_n$, $D_n$, $E_6$, $E_7$, $E_8$ type이며, 이들을 통칭하여 *ADE type*이라 부른다. ADE type은 다양한 수학적 상황에서 등장한다. 가령 du Val singularity의 분류, Platonic solid의 symmetry group, 그리고 2차원 conformal field theory 등에서 ADE pattern이 나타난다.
 
 이들의 Dynkin diagram은 다음과 같다. 모두 single edge만으로 이루어지며, $A_n$은 chain, $D_n$은 한쪽 끝에서 갈라지는 fork, 그리고 $E_6,E_7,E_8$은 세 갈래가 한 vertex에서 만나는 형태를 갖는다.
 
@@ -156,7 +157,7 @@ Borel subalgebra $\mathfrak{b}$에 대하여 다음이 성립한다.
 ::: 증명
 (1) $\mathfrak{b}$의 derived series를 생각하자. $\mathfrak{b}^{(1)}=[\mathfrak{b},\mathfrak{b}]=\mathfrak{n}$이고, $\mathfrak{n}$은 nilpotent이므로 $\mathfrak{b}$는 solvable이다. 구체적으로 $\mathfrak{n}$은 strictly upper triangular matrix들의 algebra와 유사한 구조를 갖는다.
 
-(2) $\mathfrak{b}$를 포함하는 solvable subalgebra $\mathfrak{s}$가 있다 하자. Root decomposition에 의하여 $\mathfrak{s}=\mathfrak{h}\oplus\bigoplus_{\alpha\in S}\mathfrak{g}_\alpha$의 꼴이어야 한다. 만일 $S$가 어떤 positive root를 포함하지 않는다면 $\mathfrak{s}\subseteq\mathfrak{b}$이고, 만일 $S$가 negative root를 포함한다면 $\mathfrak{s}$는 더 이상 solvable이 아니다. 따라서 $\mathfrak{s}=\mathfrak{b}$이다.
+(2) $\mathfrak{b}$를 포함하는 solvable subalgebra $\mathfrak{s}$가 있다 하자. Root decomposition에 의하여 $\mathfrak{s}=\mathfrak{h}\oplus\bigoplus_{\alpha\in S}\mathfrak{g}_\alpha$의 꼴이어야 한다. 만일 $S$가 어떤 positive root를 포함하지 않는다면 $\mathfrak{s}\subseteq\mathfrak{b}$이고, 만일 $S$가 negative root $-\alpha$를 포함한다면 $\mathfrak{g}_\alpha,\mathfrak{g}_{-\alpha},[\mathfrak{g}_\alpha,\mathfrak{g}_{-\alpha}]$가 $\mathfrak{s}$ 안에서 $\mathfrak{sl}_2$의 사본을 이루고, $\mathfrak{sl}_2$는 simple이므로 $\mathfrak{s}$는 더 이상 solvable이 아니다. 따라서 $\mathfrak{s}=\mathfrak{b}$이다.
 
 (3) $\Ad(g)\mathfrak{b}$는 다시 maximal solvable subalgebra이므로, 위의 (2)에 의하여 어떤 positive system에 대한 Borel subalgebra이다.
 :::
@@ -195,7 +196,7 @@ $$\GL(n;\mathbb{C})/B\hookrightarrow\mathbb{P}(\wedge^1\mathbb{C}^n)\times\mathb
 
 ## Compact form과의 연결
 
-이제 compact Lie group $G$와 그 complexification $G_\mathbb{C}$ 사이의 관계를 살펴보자. 이 연결은 두 관점 — compact group의 $G/T$와 complex group의 $G_\mathbb{C}/B$ — 사이의 bridge를 제공한다.
+이제 compact Lie group $G$와 그 complexification $G_\mathbb{C}$ 사이의 관계를 살펴보자. 이 연결은 두 관점(compact group의 $G/T$와 complex group의 $G_\mathbb{C}/B$) 사이의 bridge를 제공한다.
 
 ::: 정의 14
 Complex Lie group $G_\mathbb{C}$의 *compact form<sub>콤팩트 형식</sub>*은 다음 조건을 만족하는 compact Lie group $G$이다.
@@ -210,7 +211,7 @@ Complex Lie group $G_\mathbb{C}$의 *compact form<sub>콤팩트 형식</sub>*은
 이제 핵심적인 결과를 서술한다.
 
 ::: 명제 15
-Compact connected Lie group $G$와 그 complexification $G_\mathbb{C}$, maximal torus $T\subseteq G$, 그리고 대응하는 Borel subgroup $B\subseteq G_\mathbb{C}$에 대하여, 다음의 inclusion
+Compact connected semisimple Lie group $G$와 그 complexification $G_\mathbb{C}$, maximal torus $T\subseteq G$, 그리고 대응하는 Borel subgroup $B\subseteq G_\mathbb{C}$에 대하여, 다음의 inclusion
 
 $$G/T\hookrightarrow G_\mathbb{C}/B$$
 
@@ -231,7 +232,7 @@ $$G/T\hookrightarrow G_\mathbb{C}/B=(G\cdot A\cdot N)/(T\cdot A\cdot N)\cong G/(
 더 정확히는 $A\cdot N\cong\mathbb{R}^n$ (Euclidean space로 contractible)이므로 $G_\mathbb{C}/B\rightarrow G/T$는 deformation retraction을 유도한다.
 :::
 
-이 결과는 compact Lie group 관점에서의 $G/T$와 complex Lie group 관점에서의 flag variety $G_\mathbb{C}/B$가 본질적으로 같은 대상임을 의미한다. 특히 $G/T$의 위상적 성질 — cohomology, homotopy group 등 — 을 연구하기 위해 flag variety의 대수기하적 성질을 활용할 수 있다.
+이 결과는 compact Lie group 관점에서의 $G/T$와 complex Lie group 관점에서의 flag variety $G_\mathbb{C}/B$가 본질적으로 같은 대상임을 의미한다. 특히 $G/T$의 위상적 성질(cohomology, homotopy group 등)을 연구하기 위해 flag variety의 대수기하적 성질을 활용할 수 있다.
 
 ## Bruhat decomposition
 
@@ -256,7 +257,7 @@ Disjointness를 보기 위해, $BwB=BvB$라 하자. 그럼 $wBw^{-1}=vBv^{-1}$�
 Closure에 대한 진술은 Bruhat order의 정의로부터 따라나온다.
 :::
 
-Bruhat decomposition은 flag variety $G_\mathbb{C}/B$의 cell decomposition을 제공한다. 각 $w\in W$에 대하여 $X_w=BwB/B$는 dimension $\ell(w)$의 affine space와 동형이고, 이들을 모으면 $G_\mathbb{C}/B$의 전체를 덮는다. 여기서 $\ell(w)$는 $w$의 *length*, 즉 $w$를 simple reflection들의 곱으로 표현할 때 필요한 최소 개수이다.
+Bruhat decomposition은 flag variety $G_\mathbb{C}/B$의 cell decomposition을 제공한다. 각 $w\in W$에 대하여 $X_w^\circ=BwB/B$는 dimension $\ell(w)$의 affine space와 동형이고, 이들을 모으면 $G_\mathbb{C}/B$의 전체를 덮는다. 여기서 $\ell(w)$는 $w$의 *length*, 즉 $w$를 simple reflection들의 곱으로 표현할 때 필요한 최소 개수이다.
 
 ::: 예시 17
 $G_\mathbb{C}=\GL(n;\mathbb{C})$인 경우, Weyl group $W\cong S_n$이고 각 permutation $\sigma\in S_n$에 대하여 $\ell(\sigma)$는 inversion의 개수이다. 이 분해의 구체적 모습과 Gauss elimination과의 관련은 [§Bruhat decomposition, ⁋예시 7](/ko/math/lie_theory/bruhat_decomposition#ex7)에서 다룬다.

@@ -10,6 +10,7 @@ sidebar:
 
 date: 2025-09-17
 weight: 10
+drift_needed: true
 
 
 ---
@@ -37,7 +38,7 @@ Category with models $(\mathcal{A},\mathcal{M})$이 주어졌다 하고, covaria
     이 성립하는 것이다.
 :::
 
-예를 들어, standard $n$-simplex들 $\Delta^n$들의 모임 $\mathcal{M}$을 model들로 갖는 category with models $(\Top, \mathcal{M})$을 생각하자. 그럼 각각의 $X\in \Top$마다 singular $n$-simplex들의 chain complex $C_\bullet(X)$을 대응시키는 functor $C_\bullet:\Top \rightarrow \Ab$는 acyclic on $\mathcal{M}$인 동시에 free on $\mathcal{M}$이다.
+예를 들어, standard $n$-simplex들 $\Delta^n$들의 모임 $\mathcal{M}$을 model들로 갖는 category with models $(\Top, \mathcal{M})$을 생각하자. 그럼 각각의 $X\in \Top$마다 singular $n$-simplex들의 chain complex $C_\bullet(X)$을 대응시키는 functor $C_\bullet:\Top \rightarrow \Ch_{\geq0}(\Ab)$는 acyclic on $\mathcal{M}$인 동시에 free on $\mathcal{M}$이다.
 
 - $C_\bullet$이 acyclic on $\mathcal{M}$이라는 것은, 각 model $\Delta^n$이 convex set이라 한 점으로 수축가능하고, 그 직선 수축이 유도하는 cone 연산자가 $C_\bullet(\Delta^n)$을 $i>0$에서 직접 수축시키기 때문으로, 이는 [§호몰로지, ⁋명제 11](/ko/math/algebraic_topology/homology#prop11)의 일반화라 생각할 수 있다. 여기에서 functor $F_\bullet$이 $\mathcal{M}$ 위에서 acyclic하다는 조건은 $F_\bullet(X)$의 $0$번째 homology가 $0$일 것을 <em-ko>요구하지는 않는다</em-ko>는 것에 주의하자. 
 - $C_\bullet$이 free on $\mathcal{M}$이라는 것은 정확히 각각의 $C_n(X)$들이 $\Delta^n \rightarrow X$로 생성되는 free abelian group이므로, 즉 $C_n(X)=\mathbb{Z}\Hom_\Top(\Delta^n,X)$이므로 자명하다. 
@@ -61,7 +62,7 @@ $$f(-)_0:H_0(F(-)) \Rightarrow H_0(G(-))$$
 
 $$f_\bullet(-):F_\bullet(-) \rightarrow G_\bullet(-)$$
 
-가 존재하여 $H_0(f)=f_0$이도록 할 수 있으며, 이러한 natural transformation $f$는 natural chain homotopy에 대하여 유일하게 존재한다. 
+가 존재하여 $H_0(f)=f(-)_0$이도록 할 수 있으며, 이러한 natural transformation $f$는 natural chain homotopy에 대하여 유일하게 존재한다. 
 :::
 
 즉, homology 레벨에서 정의된 $f(X)_0: H_0(F(X))\rightarrow H_0(G(X))$에서부터 시작하여, chain map $f_\bullet(X):F_\bullet(X)\rightarrow G_\bullet(X)$를 만들어야 한다. 이를 위해 우선 $f_\bullet(X)$의 $0$번째 성분 $f_0(X)$를 정의하자. 이는, $F_0(X)$이 free이므로, 각각의 $u:M\rightarrow X$이 어디로 옮겨지는지를 정의하는 것과 같다. 한편 다음의 commutative diagram
@@ -100,7 +101,7 @@ $$f_{n-1}(d_n^{F(M)}(x_n))\in \ker d_{n-1}^{G(M)}=\im d_n^{G(M)}$$
 
 ## Acyclic models theorem의 활용
 
-Acyclic models theorem은 우선, 앞선 글에서 살펴본 퀴네트 정리를 증명할 때 사용된다. 두 위상공간의 pair로 이루어진 category $\Top^2$를 생각하고, 여기에서 $\Ch_{\geq 0}(\lMod{A})$로의 두 functor
+Acyclic models theorem은 우선, [§코호몰로지, ⁋따름정리 10](/ko/math/algebraic_topology/cohomology#cor10)을 증명할 때 사용된다. 두 위상공간의 pair로 이루어진 category $\Top^2$를 생각하고, 여기에서 $\Ch_{\geq 0}(\lMod{A})$로의 두 functor
 
 $$C_\bullet(-\times -;A),\qquad  C_\bullet(-;A)\otimes_A C_\bullet(-;A)$$
 
@@ -118,7 +119,7 @@ $$C_p(X;A)\times C_q(Y;A)\rightarrow C_{p+q}(X\times Y;A);\qquad (\sigma,\tau)\m
 
 $$(X,Y)\mapsto C_\bullet(X\times Y;A),\quad (X,Y)\mapsto C_\bullet(Y\times X;A),\quad (X,Y)\mapsto C_\bullet(X;A)\otimes_AC_\bullet(Y;A),\quad (X,Y)\mapsto C_\bullet(Y;A)\otimes_AC_\bullet(X;A)$$
 
-를 생각하면, 이들 사이의 자명한 함수들을 생각할 수 있으며 이를 [정리 3](#thm3)을 이용하여 lift하면 $\Ch_{\geq0}(\lMod{A})$에서의 commutative diagram
+를 생각하면, 이들 사이의 자명한 함수들을 생각할 수 있으며 이를 [정리 3](#thm3)을 이용하여 lift하면 natural chain homotopy에 대하여 commute하는 $\Ch_{\geq0}(\lMod{A})$에서의 diagram
 
 {% diagram Math/Algebraic_Topology/Acyclic_Models_Theorem-5.svg width="23.79em" alt="flip_map" %}
 

@@ -11,6 +11,8 @@ sidebar:
 date: 2021-08-22
 weight: 15
 
+drift_needed: true
+
 ---
 
 ## 원순서관계의 restriction
@@ -61,7 +63,7 @@ $$x_i\leq y_i\leq z_i\implies x_i\leq z_i$$
 
 $$f< g\iff\forall x\bigl((x\in A)\implies (f(x)<_{\tiny R}g(x))\bigr)$$
 
-로 정의되는 관계와는 <em-ko>다르다</em-ko>. $f<g$는 <em-ko>하나의</em-ko> $y\in A$에 대해서만 $f(y)<_{\tiny R} g(y)$이고. 나머지 모든 $x\in A$에 대해서는 $f(x)\leq_{\tiny R} g(x)$여도 성립한다.
+로 정의되는 관계와는 <em-ko>다르다</em-ko>. $f<g$는 <em-ko>하나의</em-ko> $y\in A$에 대해서만 $f(y)<_{\tiny R} g(y)$이고, 나머지 모든 $x\in A$에 대해서는 $f(x)\leq_{\tiny R} g(x)$여도 성립한다.
 
 ## 단조함수
 
@@ -70,7 +72,7 @@ Preorder $R,R'$가 주어진 집합 $A$와 $A'$를 생각하자. 함수 $f:A\rig
 :::
 
 ::: remark 참고 {#rmk}
-임의의 상수함수는 증가함수인 동시에 감소함수이다. 그러나 이 역이 성립하는 것은 아니다. $A$가 하나 이상의 원소를 갖는 집합이라 하고. 이 위에 정의된 order relation $=$를 생각하자. 그럼 $A$에서 $A$로의 항등함수는 증가함수인 동시에 감소함수지만 상수함수는 아니다.
+임의의 상수함수는 증가함수인 동시에 감소함수이다. 그러나 이 역이 성립하는 것은 아니다. $A$가 둘 이상의 원소를 갖는 집합이라 하고, 이 위에 정의된 order relation $=$를 생각하자. 그럼 $A$에서 $A$로의 항등함수는 증가함수인 동시에 감소함수지만 상수함수는 아니다.
 :::
 
 그리고, $\leq$를 $<$로 바꾸면 다음 정의를 얻는다.
@@ -82,7 +84,7 @@ Strict order $S,S'$가 주어진 집합 $A$와 $A'$를 생각하자. 함수 $f:A
 ::: 참고 6
 정의에 의해 단조인 단사함수는 항상 순단조함수다. 그러나 이 역 또한 항상 성립하는 것은 아니다. 예컨대, $\mathbb{N}$ 위에 strict order $\prec$을 다음의 식
 
-$$m\prec n\iff ((m-n\text{ is even}) \wedge (m<n))$$
+$$m\prec n\iff ((n-m\text{ is even}) \wedge (m<n))$$
 
 으로 정의하고, 이 집합을 $A$라 하자. 즉, $A$에서는 짝수는 짝수끼리, 홀수는 홀수끼리 크기 비교가 가능하지만 짝수와 홀수의 크기 비교는 불가능하다. 또, 자연수 집합 $\mathbb{N}$에 일상적인 strict order $<$를 부여한 ordered set을 $B$라 하자. 그럼 $A$에서 $B$로의 함수 $m\mapsto \lfloor m/2\rfloor$은 순증가지만 단사함수는 아니다.
 :::
@@ -92,7 +94,7 @@ $A$, $A'$가 ordered set이고 $u:A\rightarrow A'$, $v:A'\rightarrow A$가 감�
 :::
 
 ::: 증명
-주어진 가정과 $u$가 감소함수라는 것에서 자명하다. 즉, $u$는 감소함수이므로, $v(u(x))\geq x$에서 $u(v(u(x)))\leq u(x)$가 모든 $x$에 대해 성립하지만, 가정의 두 번째 부분에서 $u(v(u(x)))\geq u(x)$이 성립한다.
+$u$는 감소함수이므로, $v(u(x))\geq x$에서 $u(v(u(x)))\leq u(x)$가 모든 $x$에 대해 성립하지만, 가정의 두 번째 부분에서 $u(v(u(x)))\geq u(x)$이 성립한다. $A'$는 ordered set이므로 antisymmetry에 의하여 $u(v(u(x)))=u(x)$, 즉 $u\circ v\circ u=u$를 얻는다. 같은 논증을 $u$와 $v$를 바꾸어 적용하면 $v\circ u\circ v=v$를 얻는다.
 :::
 
 ---

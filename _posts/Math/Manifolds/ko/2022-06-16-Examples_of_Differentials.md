@@ -10,6 +10,7 @@ sidebar:
 
 date: 2022-06-16
 weight: 6
+drift_needed: true
 
 ---
 
@@ -27,7 +28,7 @@ $$\dd{\gamma_t}\left(\frac{d}{\dd{r}}\bigg\vert_t\right)$$
 
 벡터 $\gamma'(t)$는 $T_{\gamma(t)}M$의 원소로서 $\mathcal{C}^\infty_{M,\gamma(t)}$의 각 원소들 $f$에 작용하는데, differential의 정의를 풀어쓰면
 
-$$\gamma'(t)f=\dd{\gamma_p}\left(\frac{d}{\dd{r}}\bigg\vert_t\right)f=\frac{d}{\dd{r}}\bigg\vert_t (f\circ\gamma)=\frac{\dd{(f\circ \gamma)}}{\dd{r}}(t)=(f\circ\gamma)'(t)$$
+$$\gamma'(t)f=\dd{\gamma_t}\left(\frac{d}{\dd{r}}\bigg\vert_t\right)f=\frac{d}{\dd{r}}\bigg\vert_t (f\circ\gamma)=\frac{\dd{(f\circ \gamma)}}{\dd{r}}(t)=(f\circ\gamma)'(t)$$
 
 임을 알 수 있다. 
 
@@ -98,7 +99,7 @@ $$\dd{F_p}(v)=(F\circ\gamma)'(0)$$
 
 $$\frac{\partial}{\partial r^1}\bigg\vert_x,\cdots,\frac{\partial}{\partial r^m}\bigg\vert_x$$
 
-이 동일한 것임을 이용하면 보일 수 있다. 사실 이 isomorphism은 basis의 선택에 의존하지 않는데, 임의의 $v\in\mathbb{R}^m$에 대하여
+이 동일한 것임을 이용하면 보일 수 있다. 사실 이 isomorphism은 basis의 선택에 의존하지 않는데, 임의의 $v\in V$에 대하여
 
 $$D_v\vert_x: f\mapsto \lim_{t\rightarrow 0}\frac{f(x+tv)-f(x)}{t}$$
 
@@ -117,7 +118,7 @@ $$(D_v\vert_x)f=\lim_{t\rightarrow 0}\frac{f(x+tv)-f(x)}{t}$$
 을 사용하면 된다. 대응 $v\mapsto D_v\vert_x$에 의하여, $v+w$는
 
 $$\begin{aligned}(D_{v+w}\vert_x)f&=\lim_{t\rightarrow 0}\frac{f(x+t(v+w))-f(x)}{t}\\
-&=\lim_{t\rightarrow 0}\left(\frac{f((x+tw)+tv)-f(x+tw)}{t}+\frac{f(x+tv)-f(x)}{t}\right)\\
+&=\lim_{t\rightarrow 0}\left(\frac{f((x+tw)+tv)-f(x+tw)}{t}+\frac{f(x+tw)-f(x)}{t}\right)\\
 &=(D_v\vert_x)f+(D_w\vert_x)f
 \end{aligned}$$
 
@@ -152,9 +153,9 @@ $$(L\circ\gamma)'(0)f=\lim_{t\rightarrow 0}\frac{f(L(x)+tL(v))-f(L(x))}{t}=(D_{L
 를 만족한다. 따라서 주어진 diagram이 commute한다.
 :::
 
-위의 명제에서 만든 isomorphism $V\cong T_xV$는 basis의 선택에 의존하지 않지만, 만일 $V$의 어떤 basis $e_1,\ldots, e_n$과 그 dual basis $r^1,\ldots, r^n$이 주어진다면 이 isomorphism은
+위의 명제에서 만든 isomorphism $V\cong T_xV$는 basis의 선택에 의존하지 않지만, 만일 $V$의 어떤 basis $e_1,\ldots, e_m$과 그 dual basis $r^1,\ldots, r^m$이 주어진다면 이 isomorphism은
 
-$$\sum a_ie_i\leftrightarrow\sum a_i\frac{\partial}{\partial r^i}$$
+$$\sum a_ie_i\leftrightarrow\sum a_i\frac{\partial}{\partial r^i}\bigg\vert_x$$
 
 과 같다는 것을 확인할 수 있다. 
 

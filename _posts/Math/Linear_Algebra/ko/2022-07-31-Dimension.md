@@ -13,6 +13,8 @@ date: 2022-07-31
 
 weight: 5
 
+drift_needed: true
+
 ---
 
 ## 벡터공간의 차원
@@ -47,7 +49,7 @@ $$\alpha_1y_1+\alpha_2y_2+\cdots+\alpha_ny_n=0$$
 
 이 되어, $y_1$, $y_2$, $\ldots$, $y_n$이 일차독립이라는 가정에 모순이기 때문이다. 또, 만일 모든 $\alpha_i$가 0이라면 $\beta_1x_1=0$인데, $\beta_1\neq 0$이므로 $x_1=0$이다. 이 경우 $\{x_1, x_2, \ldots, x_m\}$은 자명하게 일차종속이게 되므로, 어떤 0이 아닌 $\alpha_i$가 존재한다고 가정하자. 그럼 우리는 위의 식 (1)을 변형하여 다음의 식
 
-$$y_i=\frac{\beta_1}{\alpha_i}x_1-\frac{\alpha_1}{\alpha_i}y_1-\cdots-\frac{\alpha_{i-1}}{\alpha_i}y_{i-1}-\frac{\alpha_{i+1}}{\alpha_i}y_{i+1}-\cdots-\frac{\alpha_n}{\alpha_i}y_n$$
+$$y_i=-\frac{\beta_1}{\alpha_i}x_1-\frac{\alpha_1}{\alpha_i}y_1-\cdots-\frac{\alpha_{i-1}}{\alpha_i}y_{i-1}-\frac{\alpha_{i+1}}{\alpha_i}y_{i+1}-\cdots-\frac{\alpha_n}{\alpha_i}y_n$$
 
 을 얻는다. 따라서 만일 우리가 집합 $\{x_1, y_1, y_2, \ldots, y_n\}$에서 $y_i$를 빼더라도 이 집합은 여전히 $V$를 span한다.  
 
@@ -61,11 +63,11 @@ $$x_1=-\frac{\alpha_1'}{\beta_1'}y_1-\frac{\alpha_2'}{\beta_1'}y_2-\cdots-\frac{
 
 을 앞선 식에 대입하면
 
-$$0=\left(\frac{\alpha_1'\beta_1}{\alpha_i\beta_1'}+\frac{\alpha_1}{\alpha_i}\right)y_1+\cdots+\left(\frac{\alpha_{i-1}'\beta_1}{\alpha_i\beta_{i-1}'}+\frac{\alpha_{i-1}}{\alpha_i}\right)y_{i+1}+y_i+\left(\frac{\alpha_{i+1}'\beta_{i+1}}{\alpha_i\beta_{i+1}'}+\frac{\alpha_{i+1}}{\alpha_i}\right)y_{i+1}+\cdots+\left(\frac{\alpha_n'\beta_n}{\alpha_i\beta_n'}+\frac{\alpha_n}{\alpha_i}\right)y_n$$
+$$0=\left(\frac{\alpha_1'\beta_1}{\alpha_i\beta_1'}-\frac{\alpha_1}{\alpha_i}\right)y_1+\cdots+\left(\frac{\alpha_{i-1}'\beta_1}{\alpha_i\beta_1'}-\frac{\alpha_{i-1}}{\alpha_i}\right)y_{i-1}-y_i+\left(\frac{\alpha_{i+1}'\beta_1}{\alpha_i\beta_1'}-\frac{\alpha_{i+1}}{\alpha_i}\right)y_{i+1}+\cdots+\left(\frac{\alpha_n'\beta_1}{\alpha_i\beta_1'}-\frac{\alpha_n}{\alpha_i}\right)y_n$$
 
 을 얻는다. $y_i$의 계수가 $0$이 아니므로 이는 $\{y_1,y_2,\ldots,y_n\}$이 일차독립이라는 가정에 모순이다.
 
-따라서 우리는 $V$의 새로운 basis $\{x_1,y_1,y_2,\ldots,y_{i-1}, y_{i+1},\ldots, y_n\}$을 얻었다. 일반성을 잃지 않고, 우리가 없앤 벡터가 $y_n$이었다고 한다면 이렇게 생긴 새 basis는 $\{x_1, y_1, \ldots, y_{n-1}\}$이다. 이제 다시 이 basis에 $x_2$를 넣어 $\{x_2, x_1, y_1, y_2, \ldots, y_n\}$을 생각하자.
+따라서 우리는 $V$의 새로운 basis $\{x_1,y_1,y_2,\ldots,y_{i-1}, y_{i+1},\ldots, y_n\}$을 얻었다. 일반성을 잃지 않고, 우리가 없앤 벡터가 $y_n$이었다고 한다면 이렇게 생긴 새 basis는 $\{x_1, y_1, \ldots, y_{n-1}\}$이다. 이제 다시 이 basis에 $x_2$를 넣어 $\{x_2, x_1, y_1, y_2, \ldots, y_{n-1}\}$을 생각하자.
 
 $$\beta_2x_2+\beta_1x_1+\alpha_1y_1+\alpha_2y_2+\ldots+\alpha_{n-1}y_{n-1}=0$$
 
@@ -121,7 +123,7 @@ $$\sum_{x\in S_1} \alpha_xx=\sum_{x\in S}\alpha_xx+\alpha_vv=0$$
 
 이라 하면, $\alpha_v\neq 0$일 경우 $\alpha_vv$를 이항한 후 $-\alpha_v^{-1}$를 곱해주면 $v$를 $S$의 원소들의 일차결합으로 나타낼 수 있는데, 이는 $v$의 선택에 모순이기 때문이다. 따라서 $\alpha_v=0$이고, 그럼 $S$의 각 원소들은 일차독립이므로 $\alpha_x=0$이 모든 $x\in S$에 대해 성립한다. 따라서, $\alpha_x=0$이 모든 $x\in S_1$에 대해 성립한다.
 
-이제 만일 $\langle S\rangle_1=V$라면 다시 증명 끝이고, 그렇지 않다면 똑같은 방식으로 $S_2=S_1\cup\{v'\}$을 정의하여 반복할 수 있다. 물론 $S_2$가 일차독립이라는 것을 보여야 하지만, $v'$를 $V\setminus\langle S\rangle_1$에서 뽑아왔기 때문에 이는 위에서 보인 것과 정확하게 같은 논리로 가능하다. 
+이제 만일 $\langle S_1\rangle=V$라면 다시 증명 끝이고, 그렇지 않다면 똑같은 방식으로 $S_2=S_1\cup\{v'\}$을 정의하여 반복할 수 있다. 물론 $S_2$가 일차독립이라는 것을 보여야 하지만, $v'$를 $V\setminus\langle S_1\rangle$에서 뽑아왔기 때문에 이는 위에서 보인 것과 정확하게 같은 논리로 가능하다. 
 
 이 과정은 앞선 [보조정리 2](#lem2)에 의해 많아야 $\dim V$번째 과정 안에 끝나며, 이 과정이 끝날 때 우리는 원하는 basis $S_n$을 얻게 된다.
 :::
@@ -132,19 +134,19 @@ $V$의 basis는 일차독립인 동시에 $V$를 span하는 집합이다. 위의
 $\mathbb{K}$-벡터공간 $V$와, $V$를 span하는 부분집합 $S$에 대하여, $S$의 어떤 부분집합은 $V$의 basis가 된다.
 :::
 ::: 증명
-$S_0=\emptyset$이라 하자. 그럼 $\langle S\rangle_0=\{0\}$이다. 이제 $S\setminus\langle S\rangle_0$의 원소 $x_1$을 택해 $S_1=\{x_1\}=S_0\cup\{x_1\}$이라 하고, 비슷하게 $S\setminus\langle S\rangle_1$의 원소 $x_2$를 택해 $S_2=\{x_1,x_2\}=S_1\cup \{x_2\}$를 만드는 과정을 반복한다.
+$S_0=\emptyset$이라 하자. 그럼 $\langle S_0\rangle=\{0\}$이다. 이제 $S\setminus\langle S_0\rangle$의 원소 $x_1$을 택해 $S_1=\{x_1\}=S_0\cup\{x_1\}$이라 하고, 비슷하게 $S\setminus\langle S_1\rangle$의 원소 $x_2$를 택해 $S_2=\{x_1,x_2\}=S_1\cup \{x_2\}$를 만드는 과정을 반복한다.
 
-이렇게 얻어진 집합 $S_i$들은 정의에 의해 일차독립인 부분집합이 되며, $\langle S\rangle_i$가 $S$와 같지 않은 한 $S_{i+1}$의 원소의 개수는 $S_i$보다 항상 하나 더 많다. 따라서 모든 $i < n = \dim V$에 대하여 $S\setminus\langle S\rangle_i$가 공집합이 아니라는 것을 보이면 충분하다. 
+이렇게 얻어진 집합 $S_i$들은 정의에 의해 일차독립인 부분집합이 되며, $\langle S_i\rangle$가 $S$와 같지 않은 한 $S_{i+1}$의 원소의 개수는 $S_i$보다 항상 하나 더 많다. 따라서 모든 $i < n = \dim V$에 대하여 $S\setminus\langle S_i\rangle$가 공집합이 아니라는 것을 보이면 충분하다. 
 
-자연수 $m$을 $S\setminus\langle S\rangle_m=\emptyset$이도록 택하자. 즉 $S\subseteq\langle S\rangle_m$이다. 이제 [§벡터공간의 기저, ⁋보조정리 4](/ko/math/linear_algebra/basis#lem4)로부터 $\span$을 취하는 것은 집합 사이의 포함관계를 유지한다는 것을 알 수 있으므로
+자연수 $m$을 $S\setminus\langle S_m\rangle=\emptyset$이도록 택하자. 즉 $S\subseteq\langle S_m\rangle$이다. 이제 [§벡터공간의 기저, ⁋보조정리 4](/ko/math/linear_algebra/basis#lem4)로부터 $\span$을 취하는 것은 집합 사이의 포함관계를 유지한다는 것을 알 수 있으므로
 
-$$\langle S\rangle\subseteq\span\bigl(\langle S\rangle_m\bigr)$$
+$$\langle S\rangle\subseteq\span\bigl(\langle S_m\rangle\bigr)$$
 
-이고, 우변의 $\langle S\rangle_m$은 이미 $V$의 부분공간이므로 [§벡터공간의 기저, ⁋정의 2](/ko/math/linear_algebra/basis#def2)으로부터 $\span\bigl(\langle S\rangle\bigr)=\langle S\rangle_m$임을 안다. 따라서
+이고, 우변의 $\langle S_m\rangle$은 이미 $V$의 부분공간이므로 [§벡터공간의 기저, ⁋정의 2](/ko/math/linear_algebra/basis#def2)으로부터 $\span\bigl(\langle S_m\rangle\bigr)=\langle S_m\rangle$임을 안다. 따라서
 
-$$V=\langle S\rangle\subseteq\span\bigl(\langle S\rangle_m\bigr)=\langle S\rangle_m$$
+$$V=\langle S\rangle\subseteq\span\bigl(\langle S_m\rangle\bigr)=\langle S_m\rangle$$
 
-으로부터 $\langle S\rangle_m=V$임을 안다. 
+으로부터 $\langle S_m\rangle=V$임을 안다. 
 :::
 
 마지막으로 두 개의 조금 일반적인 예시를 살펴보자.
@@ -156,7 +158,7 @@ $$(v_1, w_1)+(v_2,w_2)=(v_1+v_2,w_1+w_2),\quad\alpha(v,w)=(\alpha v,\alpha w)$$
 
 으로 주어진다. 어렵지 않게, 만일 $\mathcal{B}_1$, $\mathcal{B}_2$가 각각 $V$, $W$의 basis들이라면, $V\times W$의 부분집합
 
-$$\mathcal{B}=\{(x, y)\mid x\in \mathcal{B}_1\text{ and }y\in \mathcal{B}_2\}$$
+$$\mathcal{B}=\{(x, 0)\mid x\in \mathcal{B}_1\}\cup\{(0, y)\mid y\in \mathcal{B}_2\}$$
 
 이 $V\times W$의 basis가 되는 것을 확인할 수 있다. 특히, 만일 $V$, $W$가 모두 유한차원이라면 $V\times W$도 그러하고 $\dim(V\times W)$는 $(\dim V)+(\dim W)$와 같게 된다.
 :::

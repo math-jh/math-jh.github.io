@@ -10,6 +10,7 @@ sidebar:
 
 date: 2026-01-21
 weight: 17
+drift_needed: true
 
 
 ---
@@ -18,7 +19,7 @@ weight: 17
 
 앞서 우리는 diagonalizable operator $A$가 주어질 때마다 주어진 공간을 eigenspace들로 분해하여 이 위에서는 $A$가 스칼라곱처럼 행동하도록 할 수 있음을 보았다. 그러나 [§고유공간분해, ⁋명제 6](/ko/math/linear_algebra/eigenspace_decomposition#prop6)에서 살펴봤듯, 설령 $\mathbb{K}$가 algebraically closed field라 가정하여도 (그리고, 해당 명제 이후에 살펴봤듯 우리는 항상 이를 가정할 것이다.) 모든 linear operator가 항상 diagonalizable인 것은 아니다. 
 
-[§고유공간분해, ⁋명제 6](/ko/math/linear_algebra/eigenspace_decomposition#prop6)의 둘째 조건은 $A$의 어떤 고유값 $\lambda$에 대하여, $\lambda$의 기하적 중복도가 $\lambda$의 대수적 중복도보다 작을 때 발생한다는 것을 알려준다. ([§고유공간분해, ⁋명제 5](/ko/math/linear_algebra/eigenspace_decomposition#prop5)) 즉, 직관적으로 다음의 벡터공간
+[§고유공간분해, ⁋명제 6](/ko/math/linear_algebra/eigenspace_decomposition#prop6)의 둘째 조건이 깨지는 것은 $A$의 어떤 고유값 $\lambda$에 대하여 $\lambda$의 기하적 중복도가 $\lambda$의 대수적 중복도보다 작을 때이다. ([§고유공간분해, ⁋명제 5](/ko/math/linear_algebra/eigenspace_decomposition#prop5)) 즉, 직관적으로 다음의 벡터공간
 
 $$E_\lambda(A)=\ker(A-\lambda I)$$
 
@@ -36,7 +37,7 @@ $$0=\ker L^0\subsetneq \ker L^1\subsetneq \ker L^2\subsetneq \cdots \subsetneq \
 
 $$L^{i+1}v=L(L^iv)=L(0)=0$$
 
-이므로 $\ker L^i\subseteq \ker L^{i+1}$인 것이 당연하다. 한편 $V$가 유한차원이므로 이 filtration은 언젠가는 증가하기를 멈춰야 한다. 우리가 보여야 할 것은 만일 $\ker L^k=\ker L^{k+1}$이라면, 이 이후의 항들은 <em-ko>모두</em-ko> $\ker L^k$와 같다는 것이다. 이를 위해, $k$가 $\ker L^k=\ker L^{k+1}$을 만족하는 정수 중 가장 작은 것이라 하자. 그럼 그 정의에 의하여 $\ker L^k=\ker L^{k+1}$이며, 우리는 이를 base step으로 삼아 귀납적으로 $\ker L^k=\ker L^{k+j}$가 모든 $j$에 대해 성립하는 것을 보일 수 있다. 즉, $\ker L^k=\ker L^{k+j}$가 성립함을 가정하고 $\ker L^k=\ker L^{k+j+1}$임을 보이자. 이를 위해서는 $\ker L^{k+j+1}\subseteq \ker L^k$임을 보이면 충분하다. 이제 임의의 $v\in \ker L^{k+j+1}$에 대하여, 우리는 $Lv\in \ker L^{k+j}=\ker L^k$임을 알고 있으므로 다음의 계산
+이므로 $\ker L^i\subseteq \ker L^{i+1}$인 것이 당연하다. 한편 $V$가 유한차원이므로 이 filtration은 언젠가는 증가하기를 멈춰야 한다. 우리가 보여야 할 것은 만일 $\ker L^k=\ker L^{k+1}$이라면, 이 이후의 항들은 <em-ko>모두</em-ko> $\ker L^k$와 같다는 것이다. 이를 위해, $k$가 $\ker L^k=\ker L^{k+1}$을 만족하는 정수 중 가장 작은 것이라 하자. 이때 $i<k$이면 $k$의 최소성에 의하여 $\ker L^i\neq \ker L^{i+1}$이므로, 위 filtration의 포함관계가 strict한 것도 따라온다. 그럼 그 정의에 의하여 $\ker L^k=\ker L^{k+1}$이며, 우리는 이를 base step으로 삼아 귀납적으로 $\ker L^k=\ker L^{k+j}$가 모든 $j$에 대해 성립하는 것을 보일 수 있다. 즉, $\ker L^k=\ker L^{k+j}$가 성립함을 가정하고 $\ker L^k=\ker L^{k+j+1}$임을 보이자. 이를 위해서는 $\ker L^{k+j+1}\subseteq \ker L^k$임을 보이면 충분하다. 이제 임의의 $v\in \ker L^{k+j+1}$에 대하여, 우리는 $Lv\in \ker L^{k+j}=\ker L^k$임을 알고 있으므로 다음의 계산
 
 $$L^{k+1}v=L^k(Lv)=0\implies v\in \ker L^{k+1}$$
 
@@ -132,7 +133,7 @@ $$\ker L^k=\ker L^{k+1}=\cdots$$
 
 $$\ker L^k=\ker L^{2k}$$
 
-이 성립하는 것을 알고있다. 바꿔말하면, $L^k:V \rightarrow V$에 대하여 [§고유공간분해, ⁋보조정리 11](/ko/math/linear_algebra/eigenspace_decomposition#lem11)의 전제가 만족되는 것이다. 이를 $L=A-\lambda I$에 적용하여 귀납법의 첫 단계----즉, direct sum decomposition $V=\ker (A-\lambda I)^k \oplus \im (A-\lambda I)^k$를 얻을 수 있다. [§고유공간분해, ⁋명제 12](/ko/math/linear_algebra/eigenspace_decomposition#prop12)의 증명에서와 마찬가지로 이를
+이 성립하는 것을 알고있다. 바꿔말하면, $L^k:V \rightarrow V$에 대하여 [§고유공간분해, ⁋보조정리 11](/ko/math/linear_algebra/eigenspace_decomposition#lem11)의 전제가 만족되는 것이다. 이를 $L=A-\lambda I$에 적용하여 귀납법의 첫 단계, 즉 direct sum decomposition $V=\ker (A-\lambda I)^k \oplus \im (A-\lambda I)^k$를 얻을 수 있다. [§고유공간분해, ⁋명제 12](/ko/math/linear_algebra/eigenspace_decomposition#prop12)의 증명에서와 마찬가지로 이를
 
 $$V=G_\lambda(A)\oplus W_\lambda(A)$$
 
@@ -142,38 +143,38 @@ $$V=G_\lambda(A)\oplus W_\lambda(A)$$
 유한차원 벡터공간 $V$ 위에 정의된 linear operator $A:V\rightarrow V$와 $A$의 서로 다른 두 eigenvalue $\lambda, \mu$에 대하여, $G_\lambda(A)\cap G_\mu(A)=\{0\}$이 성립한다. 
 :::
 ::: 증명
-먼저 $v\in G_{\lambda_i}(L)\cap G_{\lambda_j}(L)$이고 $v\neq 0$이라 가정하자. [따름정리 4](#cor4)로부터 다음 두 식
+먼저 $v\in G_{\lambda}(A)\cap G_{\mu}(A)$이고 $v\neq 0$이라 가정하자. [따름정리 4](#cor4)로부터 다음 두 식
 
-$$G_{\lambda_i}(L)=\ker(L-\lambda_i I)^{k_i},\qquad G_{\lambda_j}(L)=\ker(L-\lambda_j I)^{k_j}$$
+$$G_{\lambda}(A)=\ker(A-\lambda I)^{k},\qquad G_{\mu}(A)=\ker(A-\mu I)^{l}$$
 
-을 만족하는 정수 $k_i, k_j$가 존재한다. 
+을 만족하는 정수 $k, l$이 존재한다. 
 
-이제 정수 $p_i$를 $(L-\lambda_iI)^kv=0$을 만족하는 $k$ 중 가장 작은 것이라 하자. 그럼 다음의 식
+이제 정수 $p$를 $(A-\lambda I)^{m}v=0$을 만족하는 $m$ 중 가장 작은 것이라 하자. 그럼 다음의 식
 
-$$(L-\lambda_iI)^{p_i}v=0\implies L(L-\lambda_iI)^{p_i-1}v=\lambda_i(L-\lambda_iI)^{p_i-1}v$$
+$$(A-\lambda I)^{p}v=0\implies A(A-\lambda I)^{p-1}v=\lambda(A-\lambda I)^{p-1}v$$
 
-으로부터 $w=(L-\lambda_iI)^{p_i-1}v\neq 0$는 $L$의 고유값 $\lambda_i$에 해당하는 고유벡터임을 안다. 한편 $v\in G_{\lambda_j}(L)$이므로 $(L-\lambda_j I)^{k_j}v=0$이고, $(L-\lambda_i I)$와 $(L-\lambda_j I)$는 commute하므로
+으로부터 $w=(A-\lambda I)^{p-1}v\neq 0$는 $A$의 고유값 $\lambda$에 해당하는 고유벡터임을 안다. 한편 $v\in G_{\mu}(A)$이므로 $(A-\mu I)^{l}v=0$이고, $(A-\lambda I)$와 $(A-\mu I)$는 commute하므로
 
-$$(L-\lambda_j I)^{k_j}w=(L-\lambda_j I)^{k_j}(L-\lambda_i I)^{p_i-1}v=(L-\lambda_i I)^{p_i-1}(L-\lambda_j I)^{k_j}v=0$$
+$$(A-\mu I)^{l}w=(A-\mu I)^{l}(A-\lambda I)^{p-1}v=(A-\lambda I)^{p-1}(A-\mu I)^{l}v=0$$
 
-이다. 즉 $w\in G_{\lambda_j}(L)$이므로, $w$는 고유값 $\lambda_i$에 해당하는 고유벡터인 동시에 $G_{\lambda_j}(L)$에 속하는 벡터가 된다. 
+이다. 즉 $w\in G_{\mu}(A)$이므로, $w$는 고유값 $\lambda$에 해당하는 고유벡터인 동시에 $G_{\mu}(A)$에 속하는 벡터가 된다. 
 
-이것이 불가능함을 보이자. 우선 $w\in G_{\lambda_j}(L)$이므로, 그 정의에 의해 $(L-\lambda_jI)^kw=0$이도록 하는 정수 $k$가 존재한다. (가령, $k=k_j$가 이를 만족하는 것을 위에서 보았다.) 이러한 조건을 만족하는 정수 $k$ 중 가장 작은 것을 $p_j$라 하면, 최소성에 의해 $w'=(L-\lambda_jI)^{p_j-1}w\neq 0$이고
+이것이 불가능함을 보이자. 우선 $w\in G_{\mu}(A)$이므로, 그 정의에 의해 $(A-\mu I)^{m}w=0$이도록 하는 정수 $m$이 존재한다. (가령, $m=l$이 이를 만족하는 것을 위에서 보았다.) 이러한 조건을 만족하는 정수 $m$ 중 가장 작은 것을 $q$라 하면, 최소성에 의해 $w'=(A-\mu I)^{q-1}w\neq 0$이고
 
-$$0=(L-\lambda_jI)^{p_j}w=(L-\lambda_jI)w'$$
+$$0=(A-\mu I)^{q}w=(A-\mu I)w'$$
 
-이므로 $w'$는 고유값 $\lambda_j$에 해당하는 고유벡터이다. 한편 $w$가 고유값 $\lambda_i$에 해당하는 고유벡터이므로, 다음 식
+이므로 $w'$는 고유값 $\mu$에 해당하는 고유벡터이다. 한편 $w$가 고유값 $\lambda$에 해당하는 고유벡터이므로, 다음 식
 
-$$Lw'=L(L-\lambda_jI)^{p_j-1}w=(L-\lambda_jI)^{p_j-1}Lw=(L-\lambda_jI)^{p_j-1}\lambda_iw=\lambda_i (L-\lambda_jI)^{p_j-1}w=\lambda_i w'$$
+$$Aw'=A(A-\mu I)^{q-1}w=(A-\mu I)^{q-1}Aw=(A-\mu I)^{q-1}\lambda w=\lambda (A-\mu I)^{q-1}w=\lambda w'$$
 
-으로부터 $w'$ 또한 $\lambda_i$에 해당하는 고유벡터임을 안다. 이는 [§고유공간분해, ⁋명제 4](/ko/math/linear_algebra/eigenspace_decomposition#prop4)에 모순이므로 귀류법에 의하여 $i\neq j$일 때 $G_{\lambda_i}(L)\cap G_{\lambda_j}(L)=\{0\}$임을 안다. 
+으로부터 $w'$ 또한 $\lambda$에 해당하는 고유벡터임을 안다. 이는 [§고유공간분해, ⁋명제 4](/ko/math/linear_algebra/eigenspace_decomposition#prop4)에 모순이므로 귀류법에 의하여 $G_{\lambda}(A)\cap G_{\mu}(A)=\{0\}$임을 안다. 
 :::
 
 그러므로 앞선 분해
 
 $$V=G_\lambda(A)\oplus W_\lambda(A)$$
 
-와 linear operator를 제한한 $A\vert_{W_\lambda(A)}: W_\lambda(A)\rightarrow W_\lambda(A)$를 생각하면 이 linear operator의 eigenvalue는 정확하게 $A$의 eigenvalue 중 $\lambda$가 아닌 것들에 해당하는 것들이다. 즉 귀납법이 잘 작동하고, 따라서 다음이 성립한다. 
+와 linear operator를 제한한 $A\vert_{W_\lambda(A)}: W_\lambda(A)\rightarrow W_\lambda(A)$를 생각하면 이 linear operator의 eigenvalue는 정확하게 $A$의 eigenvalue 중 $\lambda$가 아닌 것들에 해당하는 것들이다. 실제로 $\mu\neq \lambda$가 $A$의 eigenvalue이면 $v\in E_\mu(A)$에 대하여 $(A-\lambda I)^kv=(\mu-\lambda)^kv$이므로 $v=(A-\lambda I)^k\left((\mu-\lambda)^{-k}v\right)\in \im (A-\lambda I)^k=W_\lambda(A)$이고, 따라서 $\mu$는 $A\vert_{W_\lambda(A)}$의 eigenvalue이다. 즉 귀납법이 잘 작동하고, 따라서 다음이 성립한다. 
 
 ::: 정리 6 (제1분해정리)
 유한차원 벡터공간 $V$ 위에 정의된 linear operator $A:V\rightarrow V$에 대하여, $A$의 모든 eigenvalue들을 $\lambda_1,\ldots,\lambda_m$이라 하자. 그럼 다음의 direct sum decomposition
@@ -229,11 +230,11 @@ $$v, \quad Nv, \quad\cdots,\quad N^{k-1}v$$
 ::: 증명
 다음 식
 
-$$a_0v+a_1 Nv+\cdots a_{k-1}N^{k-1}v=0$$
+$$a_0v+a_1 Nv+\cdots +a_{k-1}N^{k-1}v=0$$
 
-이 성립한다 가정하자. 양 변에 $N^{k-1}$을 취하면 $N^k=0$인 것으로부터 $a_0N^{k-1}v=0$임을 안다. 그런데 가정에 의하여 $N^{k-1}v\neq 0$이므로 반드시 $a_0=0$이므로 
+이 성립한다 가정하자. 양 변에 $N^{k-1}$을 취하면 $N^kv=0$인 것으로부터 $a_0N^{k-1}v=0$임을 안다. 그런데 가정에 의하여 $N^{k-1}v\neq 0$이므로 반드시 $a_0=0$이므로 
 
-$$a_1Nv+\cdots a_{k-1}N^{k-1}v=0$$
+$$a_1Nv+\cdots +a_{k-1}N^{k-1}v=0$$
 
 이다. 다시 양 변에 $N^{k-2}$을 취하면 $a_1=0$을 얻고, 이를 반복하면 원하는 결과를 얻는다. 
 :::
@@ -247,7 +248,7 @@ $$\begin{pmatrix}0&1&0&\cdots&0\\ 0&0&1&\cdots&0\\\vdots&\vdots&\vdots&\ddots&\v
 즉, 임의의 벡터공간 $V$와 그 위에 정의된 nilpotent operator $N$이 주어졌을 때, 이를 cyclic subspace들의 direct sum으로 나타내는 것이 우리에게 주어진 일이다. 
 
 ::: 정리 9 (Cyclic decomposition theorem 혹은, 제2분해정리)
-임의의 벡터공간 $V$와 그 위에 정의된 nilpotent operator $N: V\rightarrow V$에 대하여, cyclic subspace로의 decomposition
+임의의 유한차원 벡터공간 $V$와 그 위에 정의된 nilpotent operator $N: V\rightarrow V$에 대하여, cyclic subspace로의 decomposition
 
 $$V=U_1\oplus \cdots\oplus U_e$$
 
@@ -359,7 +360,7 @@ $$T^dv=-(c_0v+c_1Tv+\cdots+c_{d-1}T^{d-1}v)$$
 $J_k(\lambda)$의 경우, $N=J_k(\lambda)-\lambda I$가 index $k$의 nilpotent이므로 $N^{k-1}v\neq 0$인 $v$를 택하면 [보조정리 8](#lem8)에 의하여 $\{v,Nv,\ldots,N^{k-1}v\}$이 기저이다. $J_k(\lambda)=\lambda I+N$이라 $\{v,J_k(\lambda)v,\ldots,J_k(\lambda)^{k-1}v\}$도 같은 공간을 생성하므로 $v$는 cyclic vector이고, $J_k(\lambda)$의 minimal polynomial이 $(\x-\lambda)^k$이므로 위의 결과에 의해 $J_k(\lambda)$는 $(\x-\lambda)^k$의 companion matrix와 닮음이다.
 :::
 
-이것이 실제로 같은 행렬이 되지 않는 이유는 순전히 관례적인 것으로, [정의 14](#def14)의 companion matrix는 basis를 낮은 degree에서 높은 degree로 정렬한 반면 Jordan block은 높은 degree에서 낮은 degree로 정렬했기 때문이다. 그러나 이 두 표준형 모두 뿌리를 깊이 내린 형태들이고, 어느 하나를 다른 하나와 맞추면 이 표준이 깨지므로 이렇게 간략한 remark로만 대체한다. 그럼 더 일반적으로 다음을 얻는다. 
+이것이 실제로 같은 행렬이 되지 않는 것은 두 basis를 서로 다른 operator의 거듭제곱으로 잡았기 때문이다. [정의 14](#def14)의 companion matrix를 주는 basis가 $\{v, Tv, \ldots, T^{d-1}v\}$인 반면 Jordan block을 주는 basis는 $N=T-\lambda I$에 대한 $\{N^{k-1}v, \ldots, Nv, v\}$이고, 정렬 관례의 차이로 설명되는 것은 $\lambda=0$이라 이 둘이 서로 역순의 같은 basis가 되는 경우뿐이다. 그러나 이 두 표준형 모두 뿌리를 깊이 내린 형태들이고, 어느 하나를 다른 하나와 맞추면 이 표준이 깨지므로 이렇게 간략한 remark로만 대체한다. 그럼 더 일반적으로 다음을 얻는다. 
 
 ::: 정리 16 (유리표준형)
 Algebraically closed field 위의 유한차원 벡터공간에 정의된 임의의 linear operator $A$에 대하여, $V$의 적당한 기저를 택하면 $A$의 행렬표현이 companion matrix들의 block diagonal

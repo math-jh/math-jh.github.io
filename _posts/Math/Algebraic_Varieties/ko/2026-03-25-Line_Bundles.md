@@ -11,11 +11,12 @@ sidebar:
 
 date: 2026-03-25
 weight: 10
+drift_needed: true
 
 
 ---
 
-우리는 앞선 글에서 variety $X$ 위의 divisor들을 정의하고, 이들의 linear equivalence class들이 $\Cl(X)$를 이룸을 보았다. 그러나 모든 divisor가 어떤 유리함수의 zero/pole으로부터 오는 것은 아니다. 예를 들어 $\Cl(\mathbb{P}^n) \cong \mathbb{Z}$이므로 ([§인자, ⁋예시 11](/ko/math/algebraic_varieties/divisors#ex11)), $\mathbb{P}^n$에서 일반적인 divisor $dH$는 $d \ge 0$일 때만 어떤 함수의 zero set으로 나온다.
+우리는 앞선 글에서 variety $X$ 위의 divisor들을 정의하고, 이들의 linear equivalence class들이 $\Cl(X)$를 이룸을 보았다. 그러나 모든 divisor가 어떤 유리함수의 zero/pole으로부터 오는 것은 아니다. 예를 들어 $\Cl(\mathbb{P}^n) \cong \mathbb{Z}$이므로 ([§인자, ⁋예시 11](/ko/math/algebraic_varieties/divisors#ex11)), $\mathbb{P}^n$에서 일반적인 divisor $dH$는 $d \ge 0$일 때만 어떤 homogeneous polynomial의 zero set으로 나온다.
 
 이러한 제약을 극복하기 위해 우리는 *line bundle*을 도입한다. Line bundle $\mathcal{L}$은 각 점 $p \in X$에 1차원 벡터공간을 대응시키는 기하학적 대상이며, $\mathcal{L}$의 section $s$는 자연스럽게 divisor $\divisor(s)$를 정의한다. 이 관점에서는 임의의 divisor $D$에 대해 $\mathcal{O}_X(D)$라는 line bundle을 만들 수 있고, 그 section들이 $D$보다 크거나 같은 divisor들에 대응된다. 즉, line bundle은 divisor를 함수의 zero 혹은 pole이라는 제약에서 벗어나 독립적으로 다룰 수 있게 해 준다.
 
@@ -40,11 +41,11 @@ $$\varphi_k \colon \mathcal{O}_{U_k} \rightarrow \mathcal{O}_{U_k}$$
 
 으로 표현될 수 있고, 이들 사이에
 
-$$g^{\mathcal{M}}_{kl} \circ \varphi_l = \varphi_k \circ g^{\mathcal{L}}_{kl}$$
+$$g^{\mathcal{L}}_{kl} \circ \varphi_l = \varphi_k \circ g^{\mathcal{M}}_{kl}$$
 
 이 성립한다. Line bundle의 fiber는 1차원이므로, 각 $\varphi_k$는 적당한 $h_k \in \mathcal{O}_X(U_k)$에 의한 곱셈 $s \mapsto h_k s$로 주어진다. $\varphi$가 각 fiber에서 bijective일 때, 이를 *isomorphism*이라 부르고 $\mathcal{L} \cong \mathcal{M}$으로 표기한다. Fiber가 1차원이므로 이는 각 점에서 nonzero scalar를 주는 것과 같으며, 즉 compatible하게 $h_k \in \mathcal{O}_X(U_k)^\ast$를 선택하는 것과 동치이다.
 
-그럼 다음 명제는 cocycle condition의 정의로부터 직접 확인된다.
+그럼 다음 명제는 transition function의 정의로부터 직접 확인된다.
 
 ::: 명제 2 (Cocycle condition)
 Transition functions $\{g_{ij}\}$는 다음의 *cocycle condition*을 만족한다.
@@ -71,13 +72,13 @@ $$U\mapsto \mathcal{O}_X(\mathcal{L})(U)=\{s: U \rightarrow \mathcal{L} \mid \pi
 이는 다음을 의미한다. 
 
 ::: 정의 4
-Sheaf $\mathcal{F}$가 *invertible*이라는 것은 각 점 $p \in X$의 근방 $U$에서 $\mathcal{F}\vert_U \cong \mathcal{O}_U$인 것이다. 
+$\mathcal{O}_X$-module $\mathcal{F}$가 *invertible*이라는 것은 각 점 $p \in X$의 근방 $U$에서 $\mathcal{O}_U$-module로서 $\mathcal{F}\vert_U \cong \mathcal{O}_U$인 것이다. 
 :::
 
 위에서 우리가 보인 것은 line bundle의 section sheaf는 invertible이라는 것이다. 다음 명제는 그 역 또한 성립한다는 것을 보여준다. 
 
 ::: 명제 5
-Line bundle $\mathcal{L}$의 section sheaf $\mathcal{O}_X(\mathcal{L})$은 invertible sheaf이다. 역으로, 모든 invertible sheaf는 유일한 line bundle로부터 온다.
+Line bundle $\mathcal{L}$의 section sheaf $\mathcal{O}_X(\mathcal{L})$은 invertible sheaf이다. 역으로, 모든 invertible sheaf는 up to isomorphism으로 유일한 line bundle로부터 온다.
 :::
 
 ::: 증명
@@ -88,7 +89,7 @@ Invertible sheaf $\mathcal{F}$에 대하여, local isomorphism $\mathcal{F}\vert
 
 ## Line bundle의 연산
 
-미분기하의 세계에서는 fiberwise하게 선형대수에서의 연산을 가져와서 새로운 bundle을 구성하는 것이 자연스럽다. 대수기하에서도 마찬가지인데, 우선 우리는 line bundle의 경우를 살펴보고 있으므로 지금 살펴봐야 할 것은 $\otimes$와 $\Hom$, 그 중에서도 dual $(-)^\vee$이다. 
+미분기하의 세계에서는 fiberwise하게 선형대수에서의 연산을 가져와서 새로운 bundle을 구성하는 것이 자연스럽다. Algebraic geometry에서도 마찬가지인데, 우선 우리는 line bundle의 경우를 살펴보고 있으므로 지금 살펴봐야 할 것은 $\otimes$와 $\Hom$, 그 중에서도 dual $(-)^\vee$이다. 
 
 ::: 명제 6
 두 line bundle $\mathcal{L}, \mathcal{M}$의 tensor product $\mathcal{L} \otimes \mathcal{M}$도 line bundle이다. 그 transition functions은 $\{g_{ij} h_{ij}\}$이다. 여기서 $\{g_{ij}\}, \{h_{ij}\}$는 각각 $\mathcal{L}, \mathcal{M}$의 transition functions이다.
@@ -179,7 +180,7 @@ $$\mathbb{Z}\rightarrow \Pic(\mathbb{P}^n);\qquad d\mapsto [\mathcal{O}_{\mathbb
 
 $$\mathcal{O}_{\mathbb{P}^n}(d-d')\cong \mathcal{O}_{\mathbb{P}^n}(d)\otimes \mathcal{O}_{\mathbb{P}^n}(-d')\cong \mathcal{O}_{\mathbb{P}^n}(d)\otimes \mathcal{O}_{\mathbb{P}^n}(d')^\vee\cong \mathcal{O}_{\mathbb{P}^n}$$
 
-이기 위해서는 반드시 $d-d'=0$이어야 하므로 이는 injective하기도 하다. 
+을 얻는다. 이제 $e:=d-d'$로 두면, $\mathcal{O}_{\mathbb{P}^n}(e)\cong \mathcal{O}_{\mathbb{P}^n}$이라는 것은 $(\x_i/\x_j)^e=u_i/u_j$를 만족하는 $u_i\in \mathcal{O}(U_i)^\ast$들이 존재한다는 것인데, $U_i\cong \mathbb{A}^n$이므로 $\mathcal{O}(U_i)^\ast=\mathbb{K}^\ast$이고 따라서 $(\x_i/\x_j)^e$가 상수, 즉 $e=0$이어야 한다. 그러므로 이는 injective하기도 하다. 
 :::
 
 직관적으로, $\mathbb{P}^n$의 line bundle $\mathcal{O}_{\mathbb{P}^n}(d)$에서의 정수 $d$는 fiber가 base를 따라 이동할 때 꼬이는 횟수를 측정하는 지표로 이해할 수 있다. $d=0$일 때 $\mathcal{O}(0)$는 trivial bundle이므로 꼬임이 없고, $d>0$이면 한 방향으로 $d$번 꼬이며 $d<0$이면 반대 방향으로 $\lvert d\rvert$번 꼬인다. 이는 transition function $g_{ij}(x) = (x_i/x_j)^d(x)$에서 $d$가 꼬임의 정도를 직접적으로 나타냄을 뜻한다. 다만 이 직관은 다소 부정확할 수 있으므로 [예시 16](#ex16) 이후에 약간의 설명을 보충해야 한다. 
@@ -230,7 +231,7 @@ $$\phi_j(s) = (\x_j/\x_i)\phi_i(s)$$
 
 주의를 기울일 부분은 $d>0$인 경우이다. 이 경우 section들은 [예시 16](#ex16)과 정확히 동일한 계산에 의해 homogeneous polynomial of degree $d$들임을 확인할 수 있다. 특히 $\Gamma(\mathbb{P}^n, \mathcal{O}(d))\neq 0$이며, 이는 [예시 12](#ex12) 이후의 직관이 다소 과하게 단순화되었다는 것을 보여주는 계산이라 생각할 수 있다. 
 
-이 현상에 대한 더 정확한 설명은 다음과 같다. 편의상 $\mathbb{P}^1$에서의 예시를 보자. $\mathcal{O}(-1)$의 section들은 homogeneous of degree $-1$이므로, 특히 다음의 꼴
+이 현상에 대한 더 정확한 설명은 다음과 같다. 편의상 $\mathbb{P}^1$에서의 예시를 보자. $\mathcal{O}(-1)$의 section들은 homogeneous of degree $-1$이므로, 가령 다음과 같은 꼴
 
 $$s([x_0:x_1])=\frac{a}{x_0}+\frac{b}{x_1}$$
 
@@ -238,21 +239,21 @@ $$s([x_0:x_1])=\frac{a}{x_0}+\frac{b}{x_1}$$
 
 $$s([x_0:x_1])=ax_0+bx_1$$
 
-의 함수들이며 위와는 달리 $a,b$에 어떠한 제약도 없다. 직관적으로, $\mathcal{O}(-1)$의 section들은 분모로 인해 zero section을 넘을 수 없고, 따라서 모든 section이 "$1$이 $-1$에 붙는", 꼬임이 만들어내는 문제를 피해갈 수 없다. 이 꼬임은 $\mathcal{O}(1)$에서도 같은 문제를 만든다. 즉 "constant section" $s([x_0:x_1])$은 $\mathcal{O}(1)$에서도 마찬가지로 section이 아니다. 그러나 이번에는 $\mathcal{O}(1)$의 section들이 zero section을 넘어갈 수 있기 때문에 $\Gamma(\mathbb{P}^1, \mathcal{O}(1))\neq 0$이게 된다. 이는 transition function 혹은 trivialization의 관점에서 이해하자면, $\mathcal{O}(d)$는 degree $d$의 다항식 $\x_i^d$를 곱해주므로 degree $d$ 이하의 pole은 이 trivialization이 지워줄 수 있는 것으로 생각할 수도 있다. 
+의 함수들이며 위와는 달리 $a,b$에 어떠한 제약도 없다. 직관적으로, $\mathcal{O}(-1)$의 section들은 분모로 인해 zero section을 넘을 수 없고, 따라서 모든 section이 "$1$이 $-1$에 붙는", 꼬임이 만들어내는 문제를 피해갈 수 없다. 이 꼬임은 $\mathcal{O}(1)$에서도 같은 문제를 만든다. 즉 "constant section" $s([x_0:x_1])=1$은 $\mathcal{O}(1)$에서도 마찬가지로 section이 아니다. 그러나 이번에는 $\mathcal{O}(1)$의 section들이 zero section을 넘어갈 수 있기 때문에 $\Gamma(\mathbb{P}^1, \mathcal{O}(1))\neq 0$이게 된다. 이는 transition function 혹은 trivialization의 관점에서 이해하자면, $\mathcal{O}(d)$는 degree $d$의 다항식 $\x_i^d$를 곱해주므로 degree $d$ 이하의 pole은 이 trivialization이 지워줄 수 있는 것으로 생각할 수도 있다. 
 
 ## Divisor -- Line Bundle correspondence
 
 이제 우리는 divisor와 line bundle 사이의 본질적인 연결을 확립한다. 우선 우리는 Cartier divisor로부터 line bundle을 만들 수 있다는 것을 보인다. 
 
 ::: 정의 17
-Cartier divisor $D = \{(U_i, f_i)\}$에 대하여, line bundle $\mathcal{O}_X(D)$를 transition function들 $g_{ij} = f_i/f_j$로 정의한다.
+Cartier divisor $D = \{(U_i, f_i)\}$에 대하여, line bundle $\mathcal{O}_X(D)$를 transition function들 $g_{ij} = f_j/f_i$로 정의한다.
 :::
 
 즉, $U_i$들 위에서는 trivial bundle로 잡고, 이를 각각의 overlap에서 Cartier divisor가 담고 있는 정확히 그 정보를 이용하여 이어주는 것이다. 만일 $\mathcal{O}_X(D)$를 sheaf로 본다면, 즉 위에서 정의한 line bundle의 sheaf of sections를 생각한다면 각각의 열린집합 $U$ 위에서 $\mathcal{O}_X(D)(U)$는 (sheaf로서) 다음 식
 
 $$\divisor(f)+D\geq 0$$
 
-을 만족하는 함수들의 sheaf이다. 즉 $\mathcal{O}_X(D)$는, 만일 $D$를 codimension $1$ subvariety of $X$로 본다면, $D$를 따라 최대 order $1$의 pole을 가질 수 있는 rational function들의 sheaf이다. 거꾸로 $\mathcal{O}_X(-D)$는 다음의 식
+을 만족하는 함수들의 sheaf이다. 즉 $\mathcal{O}_X(D)$는, 만일 $D$를 codimension $1$ subvariety of $X$로 본다면, $D$를 따라 최대 order $1$의 pole을 가질 수 있는 rational function들의 sheaf이다. 거꾸로 $D$가 effective일 때, $\mathcal{O}_X(-D)$는 다음의 식
 
 $$\divisor(f)-D\geq 0$$
 
@@ -281,16 +282,14 @@ $$0\rightarrow \mathcal{O}_X(-D)\rightarrow \mathcal{O}_X\rightarrow \mathcal{O}
 :::
 
 ::: 증명
-우선 $D \mapsto \mathcal{O}_X(D)$가 $\CaDiv(X)$에서 $\Pic(X)$로의 group homomorphism임을 확인한다. Cartier divisor $D = \{(U_i, f_i)\}$에 대해 $\mathcal{O}_X(D)$의 transition function은 $g_{ij} = f_i/f_j \in \mathcal{O}_X(U_i \cap U_j)^\times$이므로 line bundle을 정의한다. Principal divisor $\divisor(h)$는 transition function이 $1$이므로 trivial bundle에 대응되고, 따라서 $\CaCl(X) = \CaDiv(X)/\Prin(X)$에서 $\Pic(X)$로의 well-defined group homomorphism을 유도한다.
+우선 $D \mapsto \mathcal{O}_X(D)$가 $\CaDiv(X)$에서 $\Pic(X)$로의 group homomorphism임을 확인한다. Cartier divisor $D = \{(U_i, f_i)\}$에 대해 $\mathcal{O}_X(D)$의 transition function은 $g_{ij} = f_j/f_i \in \mathcal{O}_X(U_i \cap U_j)^\times$이므로 line bundle을 정의한다. Principal divisor $\divisor(h)$는 transition function이 $1$이므로 trivial bundle에 대응되고, 따라서 $\CaCl(X) = \CaDiv(X)/\Prin(X)$에서 $\Pic(X)$로의 well-defined group homomorphism을 유도한다.
 
-이것이 isomorphism임을 보이기 위해, 임의의 line bundle $\mathcal{L}$이 주어졌다고 하자. Trivializing open $U \subseteq X$에서 $\mathcal{L}\vert_U \cong \mathcal{O}_U$이므로, $\mathcal{O}_U$의 constant section $1$에 대응되는 $s \in \mathcal{L}(U)$를 잡을 수 있으며, 이 $s$는 nonzero rational section이다. 이제 $\mathcal{L}$의 trivializing cover $\{U_i\}$를 생각하자. 각 $U_i$에서 trivialization $\psi_i\colon \mathcal{L}\vert_{U_i} \cong \mathcal{O}_{U_i}$를 잡고, $f_i := \psi_i(s\vert_{U_i \cap U}) \in \mathcal{O}_X(U_i \cap U) \subseteq \mathbb{K}(X)$를 정의한다. 그러면 $U_i \cap U_j \cap U$ 위에서 $f_i = g_{ij} f_j$이고, $X$가 irreducible이므로 $U_i \cap U_j \cap U$는 $U_i \cap U_j$의 dense open subset이므로 이 관계는 $U_i \cap U_j$ 전체에서 성립한다. 즉 $f_i/f_j = g_{ij} \in \mathcal{O}_X(U_i \cap U_j)^\times$이므로 $D = \{(U_i, f_i)\}$는 Cartier divisor이고, $\mathcal{O}_X(D)$의 transition function이 $\{g_{ij}\}$이므로 $\mathcal{O}_X(D) \cong \mathcal{L}$이다.
+이것이 isomorphism임을 보이기 위해, 임의의 line bundle $\mathcal{L}$이 주어졌다고 하자. Trivializing open $U \subseteq X$에서 $\mathcal{L}\vert_U \cong \mathcal{O}_U$이므로, $\mathcal{O}_U$의 constant section $1$에 대응되는 $s \in \mathcal{L}(U)$를 잡을 수 있으며, 이 $s$는 nonzero rational section이다. 이제 $\mathcal{L}$의 trivializing cover $\{U_i\}$를 생각하자. 각 $U_i$에서 trivialization $\psi_i\colon \mathcal{L}\vert_{U_i} \cong \mathcal{O}_{U_i}$를 잡고, $f_i := \psi_i(s\vert_{U_i \cap U}) \in \mathcal{O}_X(U_i \cap U) \subseteq \mathbb{K}(X)$를 정의한다. 그러면 $U_i \cap U_j \cap U$ 위에서 $f_j = g_{ij} f_i$이고, $X$가 irreducible이므로 $U_i \cap U_j \cap U$는 $U_i \cap U_j$의 dense open subset이므로 이 관계는 $U_i \cap U_j$ 전체에서 성립한다. 즉 $f_j/f_i = g_{ij} \in \mathcal{O}_X(U_i \cap U_j)^\times$이므로 $D = \{(U_i, f_i)\}$는 Cartier divisor이고, $\mathcal{O}_X(D)$의 transition function이 $\{g_{ij}\}$이므로 $\mathcal{O}_X(D) \cong \mathcal{L}$이다.
 
 마지막으로 injectivity를 보인다. $\mathcal{O}_X(D) \cong \mathcal{O}_X(D')$이면 두 line bundle의 transition function이 같으므로 $f_i/f_i' = f_j/f_j'$ on $U_i \cap U_j$ (모든 $i, j$). 다시 $U_i \cap U_j$의 dense open subset에서 이 관계가 성립하므로 $f_i/f_i'$는 모든 $i$에 대해 동일한 rational function $h \in \mathbb{K}(X)^\times$이고, $D - D' = \divisor(h)$이므로 linearly equivalent하다.
 :::
 
-만일 $X$가 smooth라면, $\CaCl(X)\cong \Cl(X)$임을 이미 알고 있다. 이들의 관계는 다음 commutative diagram에 담겨있다. 
-
-img
+만일 $X$가 smooth라면, $\CaCl(X)\cong \Cl(X)$임을 이미 알고 있다. 
 
 ## Pullback of Line Bundles
 
@@ -350,7 +349,7 @@ Line bundle의 정의와 비교하면, 유일한 차이는 fiber가 $\mathbb{A}^
 
 기하학적으로 중요한 대상들은 tangent bundle과 cotangent bundle이다. *Tangent bundle* $\mathcal{T}_X$는 각 점 $p \in X$에 tangent space $T_p X$를 fiber로 갖는 vector bundle로, 만약 $X$가 $n$차원 smooth variety이면 rank $n$ vector bundle이고, local coordinate $\x_1, \ldots, \x_n$에서 $\partial/\partial \x_1, \ldots, \partial/\partial \x_n$이 local frame을 이룬다. *Cotangent bundle* $\Omega_X^1 = \mathcal{T}_X^\vee$는 tangent bundle의 dual이며, local coordinate에서 $\dd{\x_1}, \ldots, \dd{\x_n}$이 local frame을 이룬다.
 
-직관적으로 $\Omega_X^1$은 $X$ 위에 정의된 differential $1$-form들의 bundle이므로, 이들을 $r$번 텐서하여 $r$-form들의 bundle을 얻을 수 있다. 이들 중 제일 흥미로운 것은 top exterior power $\omega_X = \bigwedge^n \Omega_X^1$으로, 이는 rank $1$ vector bundle, 즉 line bundle이며 미분기하학에서였다면 volume form들의 bundle이라 생각할 수 있었을 것이다. 우리는 이를 *canonical line bundle*이라 부른다. 
+직관적으로 $\Omega_X^1$은 $X$ 위에 정의된 differential $1$-form들의 bundle이므로, 이들의 $r$번째 exterior power를 취하여 $r$-form들의 bundle을 얻을 수 있다. 이들 중 제일 흥미로운 것은 top exterior power $\omega_X = \bigwedge^n \Omega_X^1$으로, 이는 rank $1$ vector bundle, 즉 line bundle이며 미분기하학에서였다면 volume form들의 bundle이라 생각할 수 있었을 것이다. 우리는 이를 *canonical line bundle*이라 부른다. 
 :::
 
 위와 같이 vector bundle에 대해서도 line bundle과 유사한 연산을 정의할 수 있다. 두 vector bundle $\mathcal{E}, \mathcal{F}$의 tensor product $\mathcal{E} \otimes \mathcal{F}$는 fiberwise tensor product로 정의되며, 그 transition functions은 $g_{ij}^{\mathcal{E}} \otimes g_{ij}^{\mathcal{F}}$이다. Dual bundle $\mathcal{E}^\vee$의 transition functions은 $\left(g_{ij}^{\mathcal{E}}\right)^{-t}$ (inverse transpose)이다. 또한 direct sum $\mathcal{E} \oplus \mathcal{F}$는 fiberwise direct sum으로 정의되며, 이때 transition functions은 block diagonal matrix $\begin{pmatrix} g_{ij}^{\mathcal{E}} & 0 \\ 0 & g_{ij}^{\mathcal{F}} \end{pmatrix}$이 된다.
@@ -362,7 +361,7 @@ Line bundle의 정의와 비교하면, 유일한 차이는 fiber가 $\mathbb{A}^
 ::: 정의 25
 Grassmannian $\Gr(k, n)$ 위에 다음 두 vector bundle을 정의한다.
 
-1. *Tautological bundle<sub>보편 선다발</sub>* $S$: 각 점 $[V] \in \Gr(k, n)$ (여기서 $V \subseteq \mathbb{A}^n$는 $k$차원 부분공간)에 그 부분공간 $V$ 자체를 fiber로 대응시키는 rank $k$ vector bundle.
+1. *Tautological bundle* $S$: 각 점 $[V] \in \Gr(k, n)$ (여기서 $V \subseteq \mathbb{A}^n$는 $k$차원 부분공간)에 그 부분공간 $V$ 자체를 fiber로 대응시키는 rank $k$ vector bundle.
    $$S = \{([V], v) \in \Gr(k, n) \times \mathbb{A}^n \mid v \in V\}$$
 
 2. *Quotient bundle<sub>몫다발</sub>* $Q$: 각 점 $[V]$에 quotient space $\mathbb{A}^n / V$를 fiber로 대응시키는 rank $n-k$ vector bundle.

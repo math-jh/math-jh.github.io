@@ -10,7 +10,7 @@ sidebar:
 
 date: 2022-11-30
 weight: 6
-
+drift_needed: true
 ---
 
 ## The first isomorphism theorem
@@ -31,6 +31,7 @@ $$f(gxg^{-1})=f(g)f(x)f(g^{-1})=f(g)e'f(g)^{-1}=f(g)f(g)^{-1}=e'.$$
 $$x\sim y\iff xy^{-1}\in\ker f$$
 
 를 생각하면, 다음 식
+
 
 $$f(y)=e'f(y)=f(xy^{-1})f(y)=f(xy^{-1}y)=f(x)$$
 
@@ -69,7 +70,7 @@ Group $G$의 subgroup $K$, normal subgroup $N$이 주어졌다 하자. 그럼 �
 1. 임의의 $n\in N\cap K$와 $k\in K$에 대하여, $knk^{-1}$은 $K$의 원소들의 곱이므로 $K$의 원소이며, 동시에 $N$이 $G$의 normal subgroup이므로 $N$의 원소이다. 따라서 $knk^{-1}\in N\cap K$이다.
 2. $N$은 $N\vee K$의 subgroup임이 자명하다. 또, 임의의 $g\in N\vee K$와 $n\in N$에 대하여 $gng^{-1}\in N$이 성립한다.
 3. 임의의 $nk\in NK$에 대하여, $n,k\in N\vee K$이므로 $nk\in N\vee K$가 성립한다. 따라서 반대방향만 보이면 된다. $N$과 $K$의 원소들의 곱 $n_1k_1\cdots n_rk_r$들을 모두 포함하는 $G$의 부분집합을 생각하자. 이 집합이 subgroup인 것을 쉽게 확인할 수 있으며, 또한 이 subgroup은 $N$과 $K$를 모두 포함하므로 $N\vee K$ 또한 포함한다.[^1]  
-따라서 임의의 $N\vee K$의 원소는 모두 $n_1k_1\cdots n_rk_r$의 꼴로 쓸 수 있다. 이제 $N$이 $N\vee K$의 normal subgroup이므로, $k_1n_2=n_2'k_1$을 만족하는 $n_1'\in N$이 존재한다. 이 과정을 계속해서 반복하면 $n_1k_1\cdots n_rk_r$을 $NK$의 원소의 형태로 바꾸어 쓸 수 있다.
+따라서 임의의 $N\vee K$의 원소는 모두 $n_1k_1\cdots n_rk_r$의 꼴로 쓸 수 있다. 이제 $N$이 $N\vee K$의 normal subgroup이므로, $k_1n_2=n_2'k_1$을 만족하는 $n_2'\in N$이 존재한다. 이 과정을 계속해서 반복하면 $n_1k_1\cdots n_rk_r$을 $NK$의 원소의 형태로 바꾸어 쓸 수 있다.
 :::
 
 ::: 정리 5 (The second isomorphism theorem)
@@ -98,7 +99,7 @@ $$nkN=kn'N=kN=\pi(k)=\pi(\iota(k))\in\im(\pi\iota)$$
 ## The third isomorphism theorem
 
 ::: 정리 6 (The third isomorphism theorem)
-$H$, $K$가 group $G$의 normal subgroup이고, $K<H$라 하자. 그럼 $H/K$는 $G/K$의 normal subgroup이며 $(G/K)/(H/K)\cong G/H$가 성립한다.  
+$H$, $K$가 group $G$의 normal subgroup이고, $K\leq H$라 하자. 그럼 $H/K$는 $G/K$의 normal subgroup이며 $(G/K)/(H/K)\cong G/H$가 성립한다.  
 :::
 ::: 증명
 [\[집합론\] §동치관계의 예시들, ⁋정의 8](/ko/math/set_theory/examples_of_equivalence#def8) 이후의 decomposition.
@@ -106,7 +107,7 @@ $H$, $K$가 group $G$의 normal subgroup이고, $K<H$라 하자. 그럼 $H/K$는
 
 ## The fourth isomorphism theorem
 
-다음 정리는 아주 많이 쓰이고, 그 증명 또한 어렵지는 않지만 보여야 할 것이 너무 많아 증명을 생략하기로 한다.
+다음 정리는 아주 유용하게 쓰이는 형태 중 하나로, group $G$와 $G$의 normal subgroup $N$이 주어졌을 때, $N$을 포함하는 $G$의 subgroup $H$를 받아 $G/N$의 subgroup $H/N$을 내놓는 함수와, 거꾸로 $G/N$의 subgroup $\overline{H}$를 받아 $p^{-1}(\overline{H})$를 내놓는 함수가 서로의 역함수임을 보인다. 이에 대한 증명 자체는 한 줄로 충분하지만, 요지는 이 bijection이 subgroup들 사이의 교집합이나 index, normality 등을 모두 보존한다는 것으로 이들 사실에 대한 증명은 각각 따로 해야 한다. 이들 증명은 순전히 기술적인 것이므로 이에 대한 증명은 생략하기로 한다. 
 
 ::: 정리 7 (The fourth isomorphism theorem)
 $G$가 group이고, $N$이 $G$의 normal subgroup이라 하자. 그럼 *$N$을 포함하는 $G$의 subgroup들의 집합*과 *$G/N$의 subgroup들의 집합* 사이의 inclusion-preserving bijection이 존재한다. 뿐만 아니라, 이 bijection은 교집합이나 index, normal subgroup등의 관계를 모두 보존한다.
@@ -122,9 +123,9 @@ $$f(x)\sim g(x)\qquad\text{for all $x\in G$}$$
 
 에 의해 생성되는 relation으로 준 후, projection $H\rightarrow H/{\sim}$을 생각하면 이것이 coequalizer가 될 것이나 $\Grp$에서는 위에서 정의한 $\sim$이 $H$의 group operation과 compatible한지를 알 수 없다. 즉 다음 subset
 
-$$S=\{f(x)g(x)^{-1}\mid x\in X\}$$
+$$S=\{f(x)g(x)^{-1}\mid x\in G\}$$
 
-이 normal subgroup이 아니므로, $H/S$가 정의되지 않는다. 
+이 일반적으로는 normal subgroup이 아니므로 $H/S$가 정의되지 않는다. 
 
 이를 해결하기 위해 $\overline{S}$를 $S$의 *normal closure*, 즉 $S$를 포함하는 normal subgroup 중 가장 작은 것이라 하자. 그럼 $\overline{S}$에 의한 $H$의 quotient $H/\overline{S}$가 잘 정의된다.
 
@@ -132,11 +133,13 @@ $$S=\{f(x)g(x)^{-1}\mid x\in X\}$$
 위와 같이 정의된 quotient $q: H \rightarrow H/\overline{S}$는 coequalizer이다.
 :::
 ::: 증명
-임의의 group homomorphism $q': G \rightarrow H'$가 존재하여 $q'\circ f=q'\circ g$를 만족한다 하자. 그럼 [보조정리 1](#lem1)에 의해 $\ker q'$는 normal subgroup이고, 조건 $q'\circ f=q'\circ g$에 의하여
+우선 임의의 $x\in G$에 대하여 $f(x)g(x)^{-1}\in S\subseteq\overline{S}=\ker q$이므로 $q(f(x))=q(g(x))$, 즉 $q\circ f=q\circ g$가 성립한다.
+
+임의의 group homomorphism $q': G \rightarrow H$가 존재하여 $q'\circ f=q'\circ g$를 만족한다 하자. 그럼 [보조정리 1](#lem1)에 의해 $\ker q'$는 normal subgroup이고, 조건 $q'\circ f=q'\circ g$에 의하여
 
 $$q'(f(x))=q'(g(x))\iff q'(f(x)g(x)^{-1})=e$$
 
-이므로 $f(x)g(x)^{-1}\in\ker q'$이 모든 $x\in g$에 대해 성립한다. 따라서, $\overline{S}$의 정의에 의해 $\overline{S}\leq\ker q'$이고, [명제 3](#prop3)을 적용하면 원하는 결과를 얻는다.
+이므로 $f(x)g(x)^{-1}\in\ker q'$이 모든 $x\in G$에 대해 성립한다. 따라서, $\overline{S}$의 정의에 의해 $\overline{S}\leq\ker q'$이고, [명제 3](#prop3)을 적용하면 $q'=\overline{q'}\circ q$를 만족하는 $\overline{q'}:H/\overline{S}\rightarrow H'$를 얻는다. 이러한 $\overline{q'}$는 $q$가 전사이므로 유일하다.
 :::
 
 ---

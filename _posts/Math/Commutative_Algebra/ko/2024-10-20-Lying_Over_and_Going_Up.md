@@ -10,6 +10,7 @@ sidebar:
 
 date: 2024-10-20
 weight: 9
+drift_needed: true
 
 toc: false
 
@@ -51,14 +52,14 @@ $$1=\sum_{i=1}^n b_i a_i,\qquad a_i\in \mathfrak{p},\quad b_i\in B$$
 
 $$a_nb^n+\cdots+a_1b+a_0=0,\qquad a_i\in \Frac(A)$$
 
-이도록 할 수 있다. 이제 $a_i$들의 분모들의 최소공배수를 양변에 곱하고, 필요하다면 $b$의 거듭제곱으로 양변을 적절히 나눠서 각각의 $a_i$들이 모두 $A$의 원소이고, $a_0\neq 0$이도록 할 수 있다. 그럼 $a_0$은 $b$로 생성되는 principal ideal에 속한다.
+이도록 할 수 있다. 이제 $a_i$들의 분모들의 곱을 양변에 곱하고, 필요하다면 $b$의 거듭제곱으로 양변을 적절히 나눠서 각각의 $a_i$들이 모두 $A$의 원소이고, $a_0\neq 0$이도록 할 수 있다. 그럼 $a_0$은 $b$로 생성되는 principal ideal에 속한다.
 :::
 
 ::: 따름정리 3
 Integral domain $A$가 주어졌다 하고, integral extension $A \rightarrow B$가 주어졌다 하자. 그럼 $B$의 prime ideal $\mathfrak{q}$이 maximal ideal인 것과 $\mathfrak{q}\cap A$가 $A$의 maximal ideal인 것이 동치이다.
 :::
 ::: 증명
-이 또한 [명제 1](#prop1)의 증명에서와 마찬가지로, $\mathfrak{q}\cap A$와 $\mathfrak{q}$로 각각 quotient를 취해주면, 두 integral domain $A,B$ 그리고 integral extension $A \hookrightarrow B$가 주어졌을 때, $A$가 field인 것과 $B$가 field인 것이 동치라는 것을 보이면 충분하다. 한편, 만일 $A$가 field라면 [보조정리 2](#lem2)에 의하여 $B$는 nonzero ideal을 갖지 않아야 한다. 즉, $B$는 field이다. 
+이 또한 [명제 1](#prop1)의 증명에서와 마찬가지로, $\mathfrak{q}\cap A$와 $\mathfrak{q}$로 각각 quotient를 취해주면, 두 integral domain $A,B$ 그리고 integral extension $A \hookrightarrow B$가 주어졌을 때, $A$가 field인 것과 $B$가 field인 것이 동치라는 것을 보이면 충분하다. 한편, 만일 $A$가 field라면 [보조정리 2](#lem2)에 의하여 $B$는 nonzero proper ideal을 갖지 않아야 한다. 즉, $B$는 field이다. 
 
 따라서 $B$가 field임을 가정하고 $A$가 field임을 보이면 충분하다. $A$의 maximal ideal $\mathfrak{m}$이 주어졌다 하자. 그럼 [명제 1](#prop1)에 의하여, 우리는 적당한 $B$의 prime ideal $\mathfrak{q}$가 존재하여 $\mathfrak{q}\cap A= \mathfrak{m}$이 성립하도록 할 수 있다. 그런데 $B$는 field이므로, $\mathfrak{q}=0$이고 따라서 $\mathfrak{m}=0$이다. 이로부터 원하는 결과를 얻는다. 
 :::
@@ -83,7 +84,7 @@ Integral extension $A\hookrightarrow B$에서 $A$가 integrally closed domain이
 ::: 증명
 $b$가 integral이므로 $b$를 해로 갖는 monic 다항식 $g\in A[\x]$가 존재한다. $K[\x]$에서 $f_b\mid g$이며, $f_b$의 해들은 모두 $g$의 해여서 $A$ 위에서 integral이다. 따라서 이 해들의 대칭식인 $f_b$의 계수들도 $A$ 위에서 integral이고, $A$가 integrally closed이므로 $A$에 속한다.
 
-이제 $b\in\mathfrak{p}B$라 하자. $b=\sum_i p_i b_i$ ($p_i\in\mathfrak{p}, b_i\in B$)라 적고, $b_i$들이 생성하는 $B$의 $A$-subalgebra를 $B'$라 하면 $B'$은 finitely generated $A$-module이다. $b\in\mathfrak{p}B'$이므로 [\[가환대수학\] §정수적 확장, ⁋보조정리 8](/ko/math/commutative_algebra/integral_extension#lem8)에 의하여 $b$를 해로 갖고 최고차항이 아닌 계수들이 모두 $\mathfrak{p}$에 속하는 monic 다항식 $g\in A[\x]$를 얻는다. 앞서 보인 바에 의해 $h=g/f_b\in A[\x]$이고, $g=f_b h$를 $\mathfrak{p}$로 나누면 $(A/\mathfrak{p})[\x]$에서 $\x^{\deg g}=\overline{f_b}\overline{h}$가 된다. $A/\mathfrak{p}$가 domain이므로 $\overline{f_b}$는 $\x$의 거듭제곱이어야 하며, 이는 $f_b$의 최고차항 계수가 아닌 계수들이 $\mathfrak{p}$에 속함을 뜻한다.
+이제 $b\in\mathfrak{p}B$라 하자. $b=\sum_i p_i b_i$ ($p_i\in\mathfrak{p}, b_i\in B$)라 적고, $b_i$들이 생성하는 $B$의 $A$-subalgebra를 $B'$라 하면 $B'$은 finitely generated $A$-module이다. $b\in\mathfrak{p}B'$이므로 [§정수적 확장, ⁋정리 1](/ko/math/commutative_algebra/integral_extension#thm1)에 의하여 $b$를 해로 갖고 최고차항이 아닌 계수들이 모두 $\mathfrak{p}$에 속하는 monic 다항식 $g\in A[\x]$를 얻는다. 앞서 보인 바에 의해 $h=g/f_b\in A[\x]$이고, $g=f_b h$를 $\mathfrak{p}$로 나누면 $(A/\mathfrak{p})[\x]$에서 $\x^{\deg g}=\overline{f_b}\overline{h}$가 된다. $A/\mathfrak{p}$가 domain이므로 $\overline{f_b}$는 $\x$의 거듭제곱이어야 하며, 이는 $f_b$의 최고차항 계수가 아닌 계수들이 $\mathfrak{p}$에 속함을 뜻한다.
 :::
 
 ::: 정리 6 (Going down)

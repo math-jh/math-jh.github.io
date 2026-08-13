@@ -89,12 +89,12 @@ $$\dd{f}=\sum_{s\in S}\frac{\partial f}{\partial \x_s}\dd{\x_s}$$
 가 성립한다. 여기에서 $f$가 유한개의 변수만을 포함하므로 우변은 유한합이다.
 :::
 ::: 증명
-[정의 3](#def3)에 의하여 $\Omega_{R/A}$는 원소들 $\dd{f}$로 생성된다. $d$가 $A$-linear이므로 $f$가 monomial인 경우만 보면 충분하고, 이 경우 Leibniz 법칙을 변수의 개수에 대한 귀납법으로 적용하면 위의 chain rule을 얻는다. 따라서 $\Omega_{R/A}$는 $\dd{\x_s}$들로 생성된다.
+[정의 3](#def3)에 의하여 $\Omega_{R/A}$는 원소들 $\dd{f}$로 생성된다. $d$가 $A$-linear이므로 $f$가 monomial인 경우만 보면 충분하고, 이 경우 Leibniz 법칙을 차수에 대한 귀납법으로 적용하면 위의 chain rule을 얻는다. 따라서 $\Omega_{R/A}$는 $\dd{\x_s}$들로 생성된다.
 
 이들이 $R$ 위에서 일차독립임을 보이기 위해, 각각의 $t\in S$에 대하여 편미분 $\partial/\partial \x_t:R \rightarrow R$을 생각하자. 이는 $A$-derivation이므로 [보조정리 2](#lem2)에 의하여 $R$-linear map $\partial_t:\Omega_{R/A} \rightarrow R$을 유도하며, 정의에 의하여 $\partial_t(\dd{\x_s})=\delta_{st}$이다. 그럼 유한합 $\sum_sf_s\dd{\x_s}=0$에 $\partial_t$를 적용하여 $f_t=0$을 얻는다.
 :::
 
-이는 $M$이 free $A$-module인 경우의 symmetric algebra $\S(M)$에 대한 계산과 같은 것이다. ([\[다중선형대수학\] §미분가군, ⁋예시 10](/ko/math/multilinear_algebra/differential_modules#ex10)) 뿐만 아니라, $\Omega_{E/A}$를 $A$-algebra $A \rightarrow E$를 받아 $\Omega_{E/A}$를 내놓는 functor처럼 생각하면, 다음과 같은 종류의 functoriality 또한 성립한다.
+이는 $M$이 free $A$-module인 경우의 symmetric algebra $\S(M)$에 대한 계산과 같은 것이다. ([\[다중선형대수학\] §미분가군, ⁋예시 10](/ko/math/multilinear_algebra/differential_modules#ex10)) 뿐만 아니라, $\Omega$를 $A$-algebra $A \rightarrow E$를 받아 $\Omega_{E/A}$를 내놓는 functor처럼 생각하면, 다음과 같은 종류의 functoriality 또한 성립한다.
 
 ::: 명제 6
 다음의 ring homomorphism들의 commutative diagram
@@ -108,7 +108,7 @@ $$\dd{f}=\sum_{s\in S}\frac{\partial f}{\partial \x_s}\dd{\x_s}$$
 을 commute하게 하는 유일한 $E$-linear map $\Omega_{\varphi/\phi}:\Omega_{E/A} \rightarrow \Omega_{E'/A'}$이 존재한다.
 :::
 ::: 증명
-$d_{E'/A'}\circ \phi$가 $A$-derivation이므로 [보조정리 2](#lem2)에 의해 자명하다. 
+$d_{E'/A'}\circ \varphi: E \rightarrow \Omega_{E'/A'}$가 $A$-derivation이므로 [보조정리 2](#lem2)에 의하여 유일한 $E$-linear map이 존재한다. 
 :::
 
 한편 $\Omega_{E'/A'}$는 $E'$-module이므로, [\[대수적 구조\] §스칼라의 변환, ⁋명제 6](/ko/math/algebraic_structures/change_of_base_ring#prop6)에 의하여 
@@ -179,9 +179,9 @@ $$\Hom_{S^{-1}E}\bigl(\Omega_{E/A}\otimes_ES^{-1}E, M\bigr)\cong\Hom_E(\Omega_{E
 
 $$\Omega_{\varphi/A}':\Omega_{E/A}\otimes_EE' \rightarrow \Omega_{E'/A}$$
 
-이 된다. 한편, $\varphi:E \rightarrow E'$를 통해 $E'$를 $E$-algebra로 보면 $E'$의 $E$에 대한 Kähler differential module $\Omega_{E'/E}$가 정의되며, 이 때 universal $E$-derivation $d_{E'/E}: E \rightarrow \Omega_{E'/E}$는 $A$-derivation이기도 하므로 다시 [보조정리 2](#lem2)에 의하여 다음 식
+이 된다. 한편, $\varphi:E \rightarrow E'$를 통해 $E'$를 $E$-algebra로 보면 $E'$의 $E$에 대한 Kähler differential module $\Omega_{E'/E}$가 정의되며, 이 때 universal $E$-derivation $d_{E'/E}: E' \rightarrow \Omega_{E'/E}$는 $A$-derivation이기도 하므로 다시 [보조정리 2](#lem2)에 의하여 다음 식
 
-$$d_{E'/E}=E' \overset{d_{E'/A}}{\longrightarrow}\Omega_{E'/A}\overset{\Omega_\varphi}{\longrightarrow}\Omega_{E'/E}$$
+$$E' \overset{d_{E'/A}}{\longrightarrow}\Omega_{E'/A}\overset{\Omega_\varphi}{\longrightarrow}\Omega_{E'/E}$$
 
 과 동일하다. 
 
@@ -210,7 +210,7 @@ $$\pi(d_{E'/A}y')\overset{\psi'}{\longmapsto} d_{E'/E}y'\overset{\psi}{\longmaps
 이므로 이들은 모두 identity이다. 즉 $\psi'$는 isomorphism이고, 따라서 $\ker \Omega_\varphi=N=\im \Omega_{\varphi/A}'$이다.
 :::
 
-또 다른 중요한 exact sequence는 특별히 $\varphi:E \rightarrow E'$가 surjective인 경우에 얻어진다. 이 경우, first isomorphism theorme에 의하여
+또 다른 중요한 exact sequence는 특별히 $\varphi:E \rightarrow E'$가 surjective인 경우에 얻어진다. 이 경우, first isomorphism theorem에 의하여
 
 $$E/\ker \varphi\cong E'$$
 
@@ -316,9 +316,9 @@ $$\varphi(f)-\psi(f)\equiv\sum_{s\in S}\varphi\left(\frac{\partial f}{\partial \
 
 $f,g\in P$라 하고, 편의상 $\alpha=\varphi(f)-\psi(f)$, $\beta=\varphi(g)-\psi(g)\in\mathfrak{I}'$라 적자. 그럼
 
-$$\varphi(fg)-\psi(fg)=\varphi(f)\varphi(g)-\psi(f)\psi(g)=\varphi(f)\beta+\psi(f)\alpha+\alpha\beta-\alpha\beta=\varphi(f)\beta+\varphi(g)\alpha-\alpha\beta$$
+$$\varphi(fg)-\psi(fg)=\varphi(f)\varphi(g)-\psi(f)\psi(g)=\psi(f)\beta+\varphi(g)\alpha=\varphi(f)\beta+\varphi(g)\alpha-\alpha\beta$$
 
-인데, 마지막 등식은 $\psi(f)\alpha=\varphi(f)\alpha-\alpha^2$와 같은 식으로 정리한 것이며 $\alpha^2,\alpha\beta\in\mathfrak{I}'^2$이므로
+인데, 마지막 등식은 $\psi(f)\beta=\varphi(f)\beta-\alpha\beta$와 같은 식으로 정리한 것이며 $\alpha\beta\in\mathfrak{I}'^2$이므로
 
 $$\varphi(fg)-\psi(fg)\equiv\varphi(f)\beta+\varphi(g)\alpha\pmod{\mathfrak{I}'^2}$$
 

@@ -10,6 +10,7 @@ sidebar:
 
 date: 2021-08-15
 weight: 9
+drift_needed: true
 
 ---
 
@@ -49,7 +50,7 @@ $$y=(f_i)(x)=(f_i\vert_{A_i\cap A_j})(x)=(f_j\vert_{A_i\cap A_j})(x)=(f_j)(x)=y'
 이므로 둘째 주장 또한 성립한다.
 :::
 
-위의 명제의 2번을 만족하는 함수 $f$는 첫째 주장에 의하여 유일하다는 것이 자명하다. 또, 특별히 $A_i\cap A_j=\emptyset$가 모든 $i,j$에 대하여 성립한다면 둘째 주장의 전제조건이 항상 만족된다. 이를 다음과 같이 정의한다.
+위의 명제의 2번을 만족하는 함수 $f$는 첫째 주장에 의하여 유일하다는 것이 자명하다. 또, 특별히 $A_i\cap A_j=\emptyset$가 $i\neq j$인 모든 $i,j$에 대하여 성립한다면 둘째 주장의 전제조건이 항상 만족된다. 이를 다음과 같이 정의한다.
 
 ::: 정의 3
 집합 $A$와 $B$가 *서로소<sub>disjoint</sub>*라는 것은 $A\cap B=\emptyset$인 것이다. 더 일반적으로, $(A_i)_{i\in I}$가 *쌍마다 서로소<sub>pairwise disjoint</sub>*라는 것은 임의의 $i, j\in I$에 대하여 $i\neq j$라면 $A_i\cap A_j=\emptyset$인 것이다.
@@ -83,19 +84,19 @@ $S_i$를 <phrase>$x\in A_i$를 만족하는 $(x, i)$들로 이루어진 집합</
 쌍마다 서로소인 family $(A_i)_{i\in I}$를 생각하자. 이들의 합집합을 $A$, 합을 $S$라 하면 $A$와 $S$ 간의 전단사함수가 존재한다.
 :::
 ::: 증명
-$f_i:A_i\rightarrow S_i$가 [명제 5](#prop5)의 조건을 만족하는 전단사함수라면, [명제 2](#prop2)를 통해 $(f_i)_{i\in I}$를 $\bigcup_{i\in I} A_i=A$로 확장하면 된다.
+$f_i:A_i\rightarrow S_i$가 [명제 5](#prop5)의 조건을 만족하는 전단사함수라면, [명제 2](#prop2)를 통해 $(f_i)_{i\in I}$를 $\bigcup_{i\in I} A_i=A$로 확장하면 된다. 이렇게 얻은 $f:A\rightarrow S$는 각 $x\in A$가 유일한 $A_i$에 속하고 $(S_i)_{i\in I}$가 쌍마다 서로소이며 각 $f_i$가 단사함수이므로 단사함수이고, $S=\bigcup_{i\in I} S_i$이며 각 $f_i$가 $S_i$ 위로의 전사함수이므로 전사함수이다.
 :::
 
 이를 집합의 합이라고 부르는 것에 대한 직관은 나중에 나온다. ([§기수들 사이의 연산, ⁋정의 1](/ko/math/set_theory/operation_of_cardinals#def1))
 
 ## Universal property
 
-[정의 6](#def6)에서 우리가 언급하지 않은 사실이 있다. 집합들의 family $(A_i)$들의 합 $X$는 유일하지 않다는 것이다. [명제 5](#prop5)의 조건을 만족하는 집합은 무수히 많다. 예를 들어 해당 명제의 증명에서는 $S$를 $(x,i)$들의 집합으로 두었는데, $(i,x)$들의 집합으로 두어도 합의 정의를 만족한다는 것을 알 수 있다. 때문에 엄밀히 말하자면 $A_i$들의 합을 $\sum A_i$로 적는 것은 잘 정의된 표현이 아니다.
+[정의 6](#def6)에서 우리가 언급하지 않은 사실이 있다. 집합들의 family $(A_i)$들의 합 $S$는 유일하지 않다는 것이다. [명제 5](#prop5)의 조건을 만족하는 집합은 무수히 많다. 예를 들어 해당 명제의 증명에서는 $S$를 $(x,i)$들의 집합으로 두었는데, $(i,x)$들의 집합으로 두어도 합의 정의를 만족한다는 것을 알 수 있다. 때문에 엄밀히 말하자면 $A_i$들의 합을 $\sum A_i$로 적는 것은 잘 정의된 표현이 아니다.
 
 우선 다음과 같이 합의 *universal property<sub>보편성질</sub>*를 살펴보자.
 
 ::: 정리 8 (Universal property of sum)
-집합들의 family $(A_i)$와 [명제 5](#prop5)에서 정의한 집합 $S$, 그리고 단사함수들 $\iota_i:A_i\rightarrow S$가 주어졌다 하자. 그럼, 또 다른 어떤 집합 $B$와, $f_i:A_i\rightarrow B$들이 주어질 때마다, 이에 해당하는 유일한 $f:S\rightarrow B$가 존재하여 $f_i=f\circ\iota_i$가 성립한다. 
+집합들의 family $(A_i)$와 [명제 5](#prop5)에서 정의한 집합 $S$, 그리고 같은 명제의 전단사함수 $A_i\rightarrow S_i$에 포함관계 $S_i\subseteq S$를 합성하여 얻는 함수들 $\iota_i:A_i\rightarrow S$가 주어졌다 하자. 그럼, 또 다른 어떤 집합 $B$와, $f_i:A_i\rightarrow B$들이 주어질 때마다, 이에 해당하는 유일한 $f:S\rightarrow B$가 존재하여 $f_i=f\circ\iota_i$가 성립한다. 
 :::
 ::: 증명
 우선, 이러한 함수 $f$가 (존재한다면) 유일하다는 것을 보이자. 이를 위해서는 임의의 $x\in S$에 대하여, 그 함숫값 $f(x)$가 항상 유일하게 결정된다는 것을 보이면 충분하다. $S$는 쌍마다 서로소인 family $(S_i)$들의 합집합이므로, $x\in S_i$이도록 하는 유일한 $i\in I$가 존재한다. 그럼 $\iota_i:A_i\rightarrow S_i$가 전단사함수이므로, 또 다시 $A_i$의 유일한 원소 $x_i$가 존재하여 $\iota_i(x_i)=x$이도록 할 수 있다. 이제,
@@ -130,7 +131,7 @@ $$f(x)=f(\iota_i(x_i))=(f\circ\iota_i)(x_i)=f_i(x_i)$$
 집합들의 family $(A_i)$에 대하여, $\sum A_i$는 전단사함수에 대하여 유일하다.
 :::
 ::: 증명
-두 개의 합 $S$, $S'$가 주어졌다 하고, $A_i$에서 $S$, $S'$로의 단사함수들을 각각 $\iota_i$, $\iota_i'$라 하자. 우선, 함수 $\iota_i':A_i\rightarrow S'$에 대하여, $S$의 universal property를 적용하면 유일한 $\phi':S\rightarrow S'$가 존재하여 $\iota_i'=\phi'\circ\iota_i$이도록 할 수 있다. 이와 비슷하게, 함수 $\iota_i$들에 $S'$의 universal property를 적용하면, 또 다시 유일한 $\phi:S'\rightarrow S$가 존재하여 $\iota_i=\phi\circ\iota_i'$이도록 할 수 있다. 그럼
+두 개의 합 $S$, $S'$가 주어졌다 하고, $A_i$에서 $S$, $S'$로의 함수들을 각각 $\iota_i$, $\iota_i'$라 하자. 우선, 함수 $\iota_i':A_i\rightarrow S'$에 대하여, $S$의 universal property를 적용하면 유일한 $\phi':S\rightarrow S'$가 존재하여 $\iota_i'=\phi'\circ\iota_i$이도록 할 수 있다. 이와 비슷하게, 함수 $\iota_i$들에 $S'$의 universal property를 적용하면, 또 다시 유일한 $\phi:S'\rightarrow S$가 존재하여 $\iota_i=\phi\circ\iota_i'$이도록 할 수 있다. 그럼
 
 $$\iota_i'=\phi'\circ\iota_i=\phi'\circ(\phi\circ\iota_i')=(\phi'\circ\phi)\circ\iota_i'$$
 

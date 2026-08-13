@@ -10,6 +10,7 @@ sidebar:
 
 date: 2021-08-15
 weight: 8
+drift_needed: true
 
 ---
 
@@ -106,7 +107,7 @@ $$A_{i_0}=\bigcup_{i\in \{i_0\}}A_i\subseteq\bigcup_{j\in J_{k_0}} A_j=\bigcup_{
 
 반대로 만일 $x\in \bigcup_{k\in K}\left(\bigcup_{j\in J_k} A_j\right)$이라면, 어떠한 $k_0\in K$에 대하여 $x\in \bigcup_{j\in J_{k_0}}A_j$이고, 따라서 다시 어떤 $i_0\in J_{k_0}$에 대하여 $x\in A_{i_0}$이다. 이제 $i_0\in I$이므로 $x\in\bigcup_{i\in I} A_i$이다. 
 
-이와 비슷하게 두 번째 식도 보일 수 있다. 만일 $x\in\bigcap_{i\in I} A_i$라면, 모든 $i\in I$에 대하여 $x\in A_i$이다. 임의의 $k\in K$에 대하여 $J_{k}\subseteq I$이므로, 모든 $i\in I$에 대하여 위의 식이 성립한다는 말은 모든 $j\in J_{k}$에 대하여 $x\in A_j$가 성립한다는 말이기도 하다. 임의로 선택된 $k$에 대하여 이것이 성립하므로, 이는 정확히 $x\in\bigcap_{k\in K}\left(\bigcap_{j\in J_{k}}A_j\right)$를 의미한다.
+이와 비슷하게 두 번째 식도 보일 수 있다. 만일 $x\in\bigcap_{i\in I} A_i$라면, 모든 $i\in I$에 대하여 $x\in A_i$이다. 임의의 $k\in K$에 대하여 $J_{k}\subseteq I$이므로, 모든 $i\in I$에 대하여 위의 식이 성립한다는 말은 모든 $j\in J_{k}$에 대하여 $x\in A_j$가 성립한다는 말이기도 하다. 임의로 선택된 $k$에 대하여 이것이 성립하므로, 이는 정확히 $x\in\bigcap_{k\in K}\left(\bigcap_{j\in J_{k}}A_j\right)$를 의미한다. 반대로 만일 $x\in\bigcap_{k\in K}\left(\bigcap_{j\in J_{k}}A_j\right)$이고 $i\in I$라면, $I=\bigcup_{k\in K} J_k$이므로 어떤 $k\in K$에 대하여 $i\in J_k$이고 따라서 $x\in A_i$이다. 즉 $x\in\bigcap_{i\in I}A_i$이다.
 :::
 
 ## 합집합, 교집합의 상
@@ -117,11 +118,13 @@ $$A_{i_0}=\bigcup_{i\in \{i_0\}}A_i\subseteq\bigcup_{j\in J_{k_0}} A_j=\bigcup_{
  $(A_i)_{i\in I}$가 집합 $A$의 부분집합의 family고 $(R,A,B)$가 이항관계라 하자. 그럼
 
 $$R\left(\bigcup_{i\in I} A_i\right)=\bigcup_{i\in I}R(A_i),\quad R\left(\bigcap_{i\in I} A_i\right)\subseteq\bigcap_{i\in I}R(A_i)$$
+
+가 성립한다.
 :::
 ::: 증명
 우선 첫 번째 식을 보이자. 만일 $y\in R\left(\bigcup_{i\in I}A_i\right)$라면, 적당한 $x\in \bigcup_{i\in I}A_i$가 존재하여 $(x,y)\in R$이다. 이제 $x\in A_j$라 하면 $y\in R(A_j)$이므로 $y\in\bigcup_{i\in I}R\left(A_i\right)$가 성립한다. 반대로 만일 $y\in \bigcup_{i\in I}R\left(A_i\right)$라면 어떤 $j$에 대하여 $y\in R\left(A_j\right)$이므로, 적당한 $x\in A_j$가 존재하여 $(x,y)\in R$이다. 따라서 $y\in R\left(\bigcup_{i\in I} A_i\right)$가 성립한다.
 
-두 번째 식은 한쪽 방향만 보이면 충분하다. $y\in R\left(\bigcap_{i\in I}A_i\right)$라 하자. 그럼 어떤 $x\in\bigcap_{i\in I}A_i$가 존재하여 $(x,y)\in R$이다. $x$는 모든 $A_i$에 속하므로, 우리는 $(x,y)\in R(A_i)$가 모든 $A_i$에 대해 성립하는 것을 안다. 즉 $y\in \bigcap_{i\in I}R\left(A_i\right)$이다.
+두 번째 식은 한쪽 방향만 보이면 충분하다. $y\in R\left(\bigcap_{i\in I}A_i\right)$라 하자. 그럼 어떤 $x\in\bigcap_{i\in I}A_i$가 존재하여 $(x,y)\in R$이다. $x$는 모든 $A_i$에 속하므로, 우리는 $y\in R(A_i)$가 모든 $i\in I$에 대해 성립하는 것을 안다. 즉 $y\in \bigcap_{i\in I}R\left(A_i\right)$이다.
 :::
 
 위의 명제의 두 번째 식의 반대쪽 포함관계는 일반적으로 성립하지 않지만, $R$이 함수의 역관계라면 등호가 성립한다.
@@ -143,7 +146,7 @@ $$R\left(\bigcup_{i\in I} A_i\right)=\bigcup_{i\in I}R(A_i),\quad R\left(\bigcap
 ## 드 모르간 법칙
 
 ::: 명제 8 (De Morgan's law)
-집합 $A$의 부분집합들의 Family $(A_i)_{i\in I}$에 대하여, 
+집합 $A$의 부분집합들의 family $(A_i)_{i\in I}$에 대하여, 
   
 $$A\setminus \left(\bigcup_{i\in I}A_i\right)=\bigcap_{i\in I}(A\setminus A_i),\quad A\setminus\left(\bigcap_{i\in I} A_i\right)=\bigcup_{i\in I} (A\setminus A_i)$$
 

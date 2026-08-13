@@ -10,6 +10,7 @@ sidebar:
 
 date: 2026-04-08
 weight: 7
+drift_needed: true
 
 ---
 
@@ -88,7 +89,7 @@ $$E_\infty^{p,q} \cong F^p H^{p+q} / F^{p+1} H^{p+q} = \gr^p H^{p+q}$$
 
 역시 우리가 알고 있는 예시인 double complex의 total complex를 생각하면, 이는 double complex에서 수평방향 filtration을 걸어서 $p$를 $0$으로 보냈을 때, total complex의 homology가 나오던 것을 일반화한 것이라 생각할 수 있다.
 
-만일 각 $n$에 대해 $\bigcap_p F^p H^n = 0$ (Hausdorff 조건), $\bigcup_p F^p H^n = H^n$ (exhaustive 조건), 그리고 spectral sequence가 regular하다면 각 $\gr^p H^{p+q}$의 정보를 모아서 $H^n$을 유일하게 재구성할 수 있다. 이 세 조건을 갖춘 경우 spectral sequence가 $(H^n, F)$에 *strongly converge*한다고 한다. 반면, 이 세 조건 중 하나라도 충족되지 않으면 *weakly converge*한다고 하며, 이 때에는 $E_\infty^{p,q}$만으로는 $H^n$을 유일하게 결정할 수 없다.
+만일 각 $n$에 대해 $\bigcap_p F^p H^n = 0$ (Hausdorff 조건), $\bigcup_p F^p H^n = H^n$ (exhaustive 조건), 그리고 spectral sequence가 regular하다면 $E_\infty^{p,q}$들은 $H^n$ 위에 놓인 filtration의 graded piece를 빠짐없이 기술한다. 이 세 조건을 갖춘 경우 spectral sequence가 $(H^n, F)$에 *strongly converge*한다고 한다. 반면, 이 세 조건 중 하나라도 충족되지 않으면 *weakly converge*한다고 하며, 이 때에는 $E_\infty^{p,q}$만으로는 $H^n$을 유일하게 결정할 수 없다.
 
 일반적으로 spectral sequence의 regularity는 항상 성립하는 것은 아니다. 그러나 만일 모든 $r$에 대하여, $E_r^{p,q}$들이 1사분면에만 존재한다면, 즉 오직 $p,q\geq 0$일 때만 $E_r^{p,q}\neq 0$일 수 있다면 $d_r$을 충분히 취했을 때 점이 2사분면 혹은 4사분면 방향으로 나가버려 $0$으로 가게 되므로 항상 regular하게 된다. 즉 다음이 성립한다.
 
@@ -118,14 +119,14 @@ $$F^p A^{p+q}/F^{p+1}A^{p+q}\rightarrow F^pA^{p+q+1}/F^{p+1}A^{p+q+1}$$
 
 로 factor through하여 얻어진다. 이 때, first isomorphism theorem이 잘 적용된다: $a \in F^{p+1}A^{p+q}$이면 $\dd{(a)} \in F^{p+1}A^{p+q+1}$이므로 공역 quotient $F^p A^{p+q+1}/F^{p+1}A^{p+q+1}$에서 $0$으로 간다.
 
-더 일반적으로, $E_r$페이지에서의 미분 $d_r$ 또한 비슷한 방식으로 정의된다. 본질적으로 $E_r^{p,q}$는 $F^pC^{p+q}$에 여러 단계의 quotient를 취하여 만들어지는 것이므로, $E_r^{p,q}$의 원소는 어떠한 원소 $x\in F^pC^{p+q}$의 적당한 equivalence class $[x]$로 생각할 수 있다. 이제 $d_r^{p,q}: E_r^{p,q}\rightarrow E_r^{p+r, q-r+1}$은 다음의 식
+더 일반적으로, $E_r$페이지에서의 미분 $d_r$ 또한 비슷한 방식으로 정의된다. 본질적으로 $E_r^{p,q}$는 $F^pA^{p+q}$에 여러 단계의 quotient를 취하여 만들어지는 것이므로, $E_r^{p,q}$의 원소는 어떠한 원소 $x\in F^pA^{p+q}$의 적당한 equivalence class $[x]$로 생각할 수 있다. 이제 $d_r^{p,q}: E_r^{p,q}\rightarrow E_r^{p+r, q-r+1}$은 다음의 식
 
 $$d_r^{p,q}([x])=[\dd{x}]\in E_r^{p+r, q-r+1}\tag{$\ast$}$$
 
 로 주어진다. 물론 이 대응이 잘 정의되며 differential을 정의하는 것은 다소 복잡한 계산을 통해 보여야 하지만 ([링크](https://stacks.math.columbia.edu/tag/012K)) 중요한 것은 $E_r^{p,q}$의 원소는 다음의 두 조건
 
-- $\dd{x}\in F^{p+r}C^{p+q+1}$이며,
-- 만일 $x,y\in F^{p}C^{p+q}$들이 $r-1$번째 단계의 boundary만큼만 차이난다면, $x,y$는 같은 것으로 취급한다.
+- $\dd{x}\in F^{p+r}A^{p+q+1}$이며,
+- 만일 $x,y\in F^{p}A^{p+q}$들의 차이가 $r-1$번째 단계의 boundary와 $F^{p+1}A^{p+q}$의 원소의 합으로 적힌다면, $x,y$는 같은 것으로 취급한다.
 
 에 의해 정의될 수 있다는 것이다. 특히 ($\ast$)가 알려주는 것은 $d_r$들이 모두 본질적으로는 $d$와 같은 것이며, 그 index $r$은 filtration을 건너뛰는 정도를 측정해주는 데에만 쓰인다는 것이다. 즉 다음이 성립한다.
 
@@ -140,11 +141,11 @@ $$d_r \circ d_r = 0$$
 뿐만 아니라, 이렇게 정의된 spectral sequence는 일종의 functoriality 또한 갖는다. 
 
 ::: 명제 8
-$f : (A^\bullet, F) \rightarrow (B^\bullet, G)$가 filtered complex 사이의 chain map이라 하자. 즉, 각 $p$에 대해 
+$f : (A^\bullet, F) \rightarrow (B^\bullet, G)$가 filtered complex 사이의 chain map이며, 나아가 각 $p$에 대해 
 
 $$f(F^p A^\bullet) \subseteq G^p B^\bullet$$
 
-이 성립한다. 그럼 $f$는 각 $r$에 대해 well-defined된 morphism $f_r : E_r(A) \rightarrow E_r(B)$를 유도한다.
+이 성립한다고 하자. 그럼 $f$는 각 $r$에 대해 well-defined된 morphism $f_r : E_r(A) \rightarrow E_r(B)$를 유도한다.
 :::
 ::: 증명
 $f$가 chain map이므로 cocycle을 cocycle으로, boundary를 boundary로 보낸다. 또한 $f(F^p) \subseteq G^p$이므로 $f(Z_r^{p,q}(A)) \subseteq Z_r^{p,q}(B)$이고 $f(B_r^{p,q}(A)) \subseteq B_r^{p,q}(B)$이다. 따라서 $f$는 각 $r$에 대해 $E_r$ 상에서 well-defined map을 유도한다.
@@ -158,7 +159,7 @@ Filtered complex $(A^\bullet, F)$이 *bounded*라는 것은 각각의 $n$마다 
 
 즉 [정의 2](#def2)를 degree $n$으로 고정해두고 여기서의 filtration 
 
-$$\cdots\supset F^{p-1}A^n\supset \cdots F^p A^n \supset \cdots F^{p+1}A^n\supset\cdots$$
+$$\cdots\supset F^{p-1}A^n\supset F^p A^n \supset F^{p+1}A^n\supset\cdots$$
 
 을 시작했을 때, 이 filtration이 bounded되는 것을 의미한다. 그럼 각각의 $(p,q)$마다 $F^nA^{p+q}=A^{p+q}$이고 $F^mA^{p+q}=0$이도록 하는 $(m, n)$이 존재하므로, 고정된 $(p,q)$에 대하여, differential $d_r$이 이 구간을 나가버릴 정도로 $r$을 크게 잡으면 bounded filtered complex는 regular라는 것을 확인할 수 있다.
 
@@ -183,15 +184,15 @@ Bounded filtered complex $(A^\bullet, F)$가 주어졌다 하고, 이것이 정�
 
 $$F^p_v \Tot(K)^n = \bigoplus_{j \geq p} K^{n-j, j}$$
 
-로 정의하자. 이 filtration에 대한 associated graded object는 $\mathrm{gr}^p_v \Tot(K)^{p+q} = K^{p,q}$이므로, $E_0$ page는
+로 정의하자. 이 filtration에 대한 associated graded object는 $\mathrm{gr}^p_v \Tot(K)^{p+q} = K^{q,p}$이므로, $E_0$ page는
 
-$$E_0^{p,q} = K^{p,q}$$
+$$E_0^{p,q} = K^{q,p}$$
 
-이며, $d_0$은 degree $(0,1)$의 derivation이며 vertical differential $d_v$에 의해 주어진다. 따라서 $E_1$ page는
+이며, $d_0$은 bidegree $(0,1)$의 differential이며 horizontal differential $d_h$에 의해 주어진다. 따라서 $E_1$ page는
 
-$$E_1^{p,q} = H^q_v(K^{p,\bullet})$$
+$$E_1^{p,q} = H^q_h(K^{\bullet,p})$$
 
-이며, $E_1$ page의 $d_1$은 degree $(1,0)$의 derivation이며 horizontal differential $d_h$에 의해 유도된다. 한편, 이번에는 *horizontal filtration*을
+이며, $E_1$ page의 $d_1$은 bidegree $(1,0)$의 differential이며 vertical differential $d_v$에 의해 유도된다. 한편, 이번에는 *horizontal filtration*을
 
 $$F^p_h \Tot(K)^n = \bigoplus_{i \geq p} K^{i, n-i}$$
 
@@ -199,11 +200,11 @@ $$F^p_h \Tot(K)^n = \bigoplus_{i \geq p} K^{i, n-i}$$
 
 $$E_0^{p,q} = K^{p,q}$$
 
-이며, $d_0$은 horizontal differential $d_h$에 의해 주어진다. 따라서 $E_1$ page는
+이며, $d_0$은 vertical differential $d_v$에 의해 주어진다. 따라서 $E_1$ page는
 
-$$E_1^{p,q} = H^p_h(K^{\bullet, q})$$
+$$E_1^{p,q} = H^q_v(K^{p,\bullet})$$
 
-이며, $d_1$은 vertical differential $d_v$에 의해 유도된다. 
+이며, $d_1$은 horizontal differential $d_h$에 의해 유도된다. 
 :::
 
 특별히 $K^{p,q}$가 first quadrant double complex라 하자. 그럼 두 filtration이 모두 bounded filtered complex를 정의하므로, [명제 10](#prop10)에 의해 각각의 spectral sequence는 $H^\bullet(\Tot(K))$에 수렴한다. 이로부터 우리는 [§Ext와 Tor, ⁋명제 3](/ko/math/homological_algebra/ext_and_tor#prop3)의 증명을 더 fancy한 언어로 다시 복원해낼 수 있다. 

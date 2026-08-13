@@ -10,6 +10,7 @@ sidebar:
 
 date: 2026-07-07
 weight: 20
+drift_needed: true
 ---
 
 우리는 그린 정리를 소개하며 이것이 미적분학의 기본정리의 2차원 analogue라는 것을 보았다. 미적분학의 마지막은 이를 고차원으로 확대하는 것으로, 역시 이들이 공유하는 정신은 영역 interior의 적분과 boundary의 적분이 이어진다는 것이다. 
@@ -33,7 +34,7 @@ $$\iint_{\partial E} (0,0,R)\cdot d\mathbf{S} = \iiint_E \partial R/\partial z\d
 
 를 보이면 $P, Q$도 symmetric하게 처리되어 셋을 더해 정리가 나온다. 
 
-$E$가 $z$방향으로 단순한 입체, 곧 $E = \{(x,y) \in D,\ u_1(x,y) \leq z \leq u_2(x,y)\}$라 하자. 오른쪽 삼중적분은 [§다중적분, ⁋정리 2](/ko/math/calculus/multiple_integrals#thm2)로 $z$를 먼저 적분하면
+$E$가 $z$방향으로 단순한 입체, 곧 $E = \{(x,y,z) \mid (x,y) \in D,\ u_1(x,y) \leq z \leq u_2(x,y)\}$라 하자. 오른쪽 삼중적분은 [§다중적분, ⁋정리 2](/ko/math/calculus/multiple_integrals#thm2)로 $z$를 먼저 적분하면
 
 $$\iiint_E \frac{\partial R}{\partial z}\dd{V} = \iint_D \bigl(R(x,y,u_2) - R(x,y,u_1)\bigr)\dd{A}$$
 
@@ -55,7 +56,7 @@ $$\iint_{\partial E} \mathbf{F}\cdot d\mathbf{S} = \iiint_E 3\dd{V} = 3\cdot\fra
 스토크스 정리는 거의 그린 정리와 같은 것으로, 이는 사실 본질적으로는 $1$차원 boundary로 둘러싸인 $2$차원 영역의 적분에 대한 정리이므로 그린 정리의 적분 영역이 $3$차원 안에서 <em-ko>휘어져서</em-ko> 들어있을 때에도 작동하도록 바꾼 것에 불과하다. 
 
 ::: 정리 3 (스토크스)
-$S$가 조각마다 smooth한 경계곡선 $\partial S$를 갖는 방향지어진 곡면이고 $\mathbf{F}$가 $S$를 포함하는 열린집합에서 $C^1$이면, $\partial S$를 $S$의 방향과 맞게 (곡면을 왼쪽에 두고) 잡을 때
+$S$가 조각마다 smooth한 방향지어진 곡면이고 그 boundary $\partial S$가 조각마다 smooth한 simple closed 곡선이며 $\mathbf{F}$가 $S$를 포함하는 열린집합에서 $C^1$이면, $\partial S$를 $S$의 방향과 맞게 (곡면을 왼쪽에 두고) 잡을 때
 
 $$\oint_{\partial S} \mathbf{F} \cdot d\mathbf{r} = \iint_S \curl \mathbf{F} \cdot d\mathbf{S}$$
 
@@ -63,7 +64,7 @@ $$\oint_{\partial S} \mathbf{F} \cdot d\mathbf{r} = \iint_S \curl \mathbf{F} \cd
 :::
 
 ::: 증명
-$S$가 위로 방향지어진 그래프 $z = g(x,y)$인 경우를 보이면, 일반 곡면은 그런 조각들로 잘라 합쳐 내부 boundary가 상쇄되는 것을 확인하면 된다. 따라서 이 특정 경우만 보자. 우선 boundary 위에서 $z = g(x,y)$이라 $\dd{z} = g_x\dd{x} + g_y\dd{y}$이므로
+$S$가 $C^2$ 함수 $g$의 위로 방향지어진 그래프 $z = g(x,y)$인 경우를 보이면, 일반 곡면은 그런 조각들로 잘라 합쳐 내부 boundary가 상쇄되는 것을 확인하면 된다. 따라서 이 특정 경우만 보자. 우선 boundary 위에서 $z = g(x,y)$이라 $\dd{z} = g_x\dd{x} + g_y\dd{y}$이므로
 
 $$\oint_{\partial S} \mathbf{F}\cdot d\mathbf{r} = \oint_{\partial D} P\dd{x} + Q\dd{y} + R\dd{z} = \oint_{\partial D} (P + R g_x)\dd{x} + (Q + R g_y)\dd{y}$$
 

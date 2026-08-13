@@ -10,6 +10,7 @@ sidebar:
 
 date: 2026-06-21
 weight: 16
+drift_needed: true
 
 ---
 
@@ -57,12 +58,12 @@ $A$-module $M$에 대하여, $\Spec A$의 base $\{D(f)\}_{f\in A}$ 위에서
 
 $$\widetilde M(D(f))=M_f$$
 
-으로 정의하고, $D(f)\subseteq D(g)$에 대한 restriction map을 canonical localization map $M_g \rightarrow M_f$로 정의하자. 그럼 이 데이터는 [§아핀스킴, ⁋보조정리 6](/ko/math/scheme_theory/affine_schemes#lem6)의 두 조건을 만족하여 $\Spec A$ 위의 sheaf로 유일하게 확장되며, 이는 $\mathcal{O}_{\Spec A}$-module이다.
+으로 정의하고, $D(f)\subseteq D(g)$에 대한 restriction map을 canonical localization map $M_g \rightarrow M_f$로 정의하자. 그럼 이 데이터는 [\[위상수학\] §층, ⁋명제 8](/ko/math/topology/sheaves#prop8)의 두 조건을 만족하여 $\Spec A$ 위의 sheaf로 유일하게 확장되며, 이는 $\mathcal{O}_{\Spec A}$-module이다.
 :::
 ::: 증명
 우선 $D(f)\subseteq D(g)$일 때 restriction map이 잘 정의됨을 본다. [§아핀스킴, ⁋보조정리 5](/ko/math/scheme_theory/affine_schemes#lem5)와 같은 논증으로, $D(f)\subseteq D(g)$인 것은 $g$의 image가 $A_f$의 unit인 것과 동치이므로, $A_g$의 universal property로부터 $M_g=M\otimes_A A_g \rightarrow M\otimes_A A_f=M_f$가 유일하게 결정된다. 이 map이 [\[위상수학\] §준층, ⁋정의 2](/ko/math/topology/presheaves#def2)의 restriction 조건을 만족함은 localization의 functoriality로부터 자명하다.
 
-이제 [§아핀스킴, ⁋보조정리 6](/ko/math/scheme_theory/affine_schemes#lem6)의 두 sheaf 조건을 보인다. 그 증명은 [§아핀스킴, ⁋보조정리 6](/ko/math/scheme_theory/affine_schemes#lem6)의 증명을 그대로 따라가되, 등장하는 ring $A$를 module $M$으로 바꾸어 읽으면 된다. 구체적으로 $\Spec A=\bigcup_{i\in I}D(f_i)$를 고정하자. 분리성을 보이기 위해 원소 $s\in M$이 모든 $M_{f_i}$에서 $0$이라 하면, 각각의 $i$마다 $f_i^{m_i}s=0$인 $m_i$가 존재하고, $\Spec A=\bigcup D(f_i^{m_i})$로부터 $1=\sum a_i f_i^{m_i}$인 $a_i\in A$들을 잡으면
+이제 [\[위상수학\] §층, ⁋명제 8](/ko/math/topology/sheaves#prop8)의 두 sheaf 조건을 보인다. 그 증명은 [§아핀스킴, ⁋보조정리 6](/ko/math/scheme_theory/affine_schemes#lem6)의 증명을 그대로 따라가되, 등장하는 ring $A$를 module $M$으로 바꾸어 읽으면 된다. 구체적으로 $\Spec A=\bigcup_{i\in I}D(f_i)$를 고정하자. 분리성을 보이기 위해 원소 $s\in M$이 모든 $M_{f_i}$에서 $0$이라 하면, 각각의 $i$마다 $f_i^{m_i}s=0$인 $m_i$가 존재하고, $\Spec A=\bigcup D(f_i^{m_i})$로부터 $1=\sum a_i f_i^{m_i}$인 $a_i\in A$들을 잡으면
 
 $$s=\Bigl(\sum_i a_if_i^{m_i}\Bigr)s=\sum_i a_i(f_i^{m_i}s)=0$$
 
@@ -177,7 +178,7 @@ $$\theta_f:M_f \rightarrow \mathcal{F}(D(f))$$
 
 가 결정된다. 이들은 base $\{D(f)\}$ 위에서 morphism $\theta:\widetilde M \rightarrow \mathcal{F}$를 정의하므로, $\theta$가 stalk마다 isomorphic함을 보이면 된다.
 
-이를 위해 $\mathcal{F}$의 quasi-coherence를 사용한다. 각 점 $\mathfrak{p}$에 대하여 $\mathfrak{p}\in D(g)$이고 $\mathcal{F}\vert_{D(g)}\cong \widetilde N$인 적당한 $g$와 $A_g$-module $N$이 존재한다. ([정의 8](#def8)에서 affine open neighborhood를 principal open set으로 줄일 수 있는 것은 이들이 base이기 때문이다.) 그럼 $N=\mathcal{F}(D(g))$이고, [명제 5](#prop5)에 의하여 $D(g)$ 위로 제한된 $\theta$는 $\widetilde{M_g} \rightarrow \widetilde N$의 꼴이다. 두 associated sheaf 사이의 morphism은 [정리 7](#thm7)에 의해 그 global section morphism으로 결정되므로, 이 restriction이 isomorphic한 것은 자연스러운 localization morphism $M_g=\mathcal{F}(\Spec A)_g \rightarrow \mathcal{F}(D(g))=N$이 isomorphic한 것과 같다. 이제 이 morphism이 isomorphic함을 확인한다. $\Spec A$가 quasi-compact이므로 그 위에서 $\mathcal{F}$가 associated sheaf가 되는 유한 개의 principal open $D(h_1),\ldots,D(h_m)$으로 $\Spec A$를 덮을 수 있고, sheaf 조건은 exact sequence
+이를 위해 $\mathcal{F}$의 quasi-coherence를 사용한다. 각 점 $\mathfrak{p}$에 대하여 $\mathfrak{p}\in D(g)$이고 $\mathcal{F}\vert_{D(g)}\cong \widetilde N$인 적당한 $g$와 $A_g$-module $N$이 존재한다. ([정의 8](#def8)에서 affine open neighborhood를 principal open set으로 줄일 수 있는 것은, [§스킴, ⁋보조정리 3](/ko/math/scheme_theory/schemes#lem3)의 증명에서와 같이 그 neighborhood 안에서 $\Spec A$의 principal open set이면서 동시에 그 neighborhood 자신의 principal open set이기도 한 근방을 잡을 수 있고, 그 위에서 [명제 5](#prop5)의 둘째 결과에 의하여 다시 associated sheaf가 되기 때문이다.) 그럼 $N=\mathcal{F}(D(g))$이고, [명제 5](#prop5)에 의하여 $D(g)$ 위로 제한된 $\theta$는 $\widetilde{M_g} \rightarrow \widetilde N$의 꼴이다. 두 associated sheaf 사이의 morphism은 [정리 7](#thm7)에 의해 그 global section morphism으로 결정되므로, 이 restriction이 isomorphic한 것은 자연스러운 localization morphism $M_g=\mathcal{F}(\Spec A)_g \rightarrow \mathcal{F}(D(g))=N$이 isomorphic한 것과 같다. 이제 이 morphism이 isomorphic함을 확인한다. $\Spec A$가 quasi-compact이므로 그 위에서 $\mathcal{F}$가 associated sheaf가 되는 유한 개의 principal open $D(h_1),\ldots,D(h_m)$으로 $\Spec A$를 덮을 수 있고, sheaf 조건은 exact sequence
 
 $$0 \rightarrow \mathcal{F}(\Spec A) \rightarrow \prod_i \mathcal{F}(D(h_i)) \rightarrow \prod_{i,j}\mathcal{F}(D(h_ih_j))$$
 

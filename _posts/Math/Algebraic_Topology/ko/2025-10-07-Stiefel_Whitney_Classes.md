@@ -10,6 +10,7 @@ sidebar:
 
 date: 2025-10-07
 weight: 13
+drift_needed: true
 
 
 ---
@@ -49,7 +50,7 @@ $$\phi(x,-):F \rightarrow p^{-1}(x);\qquad v\mapsto \phi(x,v)$$
 
 {% diagram Math/Algebraic_Topology/Stiefel_Whitney_Classes-2.svg width="7.15em" alt="morphism_of_bundles" %}
 
-을 의미한다. 단, 여기에서 $g$를 각각의 $x\in B_1$에 대하여 $p^{-1}(x)\rightarrow p_2^{-1}(f(x)))$로 제한하였을 때 이 함수가 벡터공간들 사이의 linear map이 되어야 한다.  Vector bundle들 사이의 isomorphism을 어떻게 정의해야 하는지는 자명하다. 
+을 의미한다. 단, 여기에서 $g$를 각각의 $x\in B_1$에 대하여 $p_1^{-1}(x)\rightarrow p_2^{-1}(f(x))$로 제한하였을 때 이 함수가 벡터공간들 사이의 linear map이 되어야 한다.  Vector bundle들 사이의 isomorphism을 어떻게 정의해야 하는지는 자명하다. 
 
 한편 위의 [정의 2](#def2)에서, 우리는 $F$가 $\mathbb{R}$-벡터공간인 경우만 생각하여, $\mathbb{R}^n$ 위에 정의된 inner product 구조와 $\mathbb{R}$의 위상구조를 사용하여 이 위에 위상구조를 정의했다. 하지만 엄밀히 말하자면 여기서 필요한 정보는 오직 vector space $F$의 위상구조 뿐으로, $F$를 inner product space로 보았을 때 이는 *Euclidean bundle*이라 부른다. 어쨌든 우리는 대체로 $\mathbb{R}$-벡터공간만 생각할 것이므로 이러한 차이는 넘어가기로 한다. 
 
@@ -83,7 +84,7 @@ $$t(-\mathbf{x})=-t(\mathbf{x})$$
 
 한편 임의의 vector bundle $p:E \rightarrow B$와 임의의 연속함수 $f:B'\rightarrow B$가 주어졌을 때, 우리는 다음의 식
 
-$$f^\ast E=\{(x,v)\in B'\times E\mid f(x)=p(v)\}\subseteq E$$
+$$f^\ast E=\{(x,v)\in B'\times E\mid f(x)=p(v)\}\subseteq B'\times E$$
 
 로 두어 새로운 vector bundle $f^\ast E \rightarrow B'$를 정의할 수 있다. 우리는 이를 *pullback bundle*이라 부르며, 어렵지 않게 임의의 vector bundle $E' \rightarrow B'$가 위의 조건을 만족한다면 $f^\ast E$를 factor through하는 것을 알 수 있다. 
 
@@ -109,7 +110,7 @@ Sheaf cohomology는 sheaf의 global section의 존재에 대한 obstruction을 c
 
 $$\check{C}^p(\mathcal{U},\mathcal{F})=\prod_{i_0,\ldots,i_p}\mathcal{F}(U_{i_0}\cap \cdots\cap U_{i_p})$$
 
-으로 정의된다. 즉 이는 모든 $p$개의 intersection들 위에 정의된 section들의 모임이다. 이 때 differential
+으로 정의된다. 즉 이는 모든 $(p+1)$개의 intersection들 위에 정의된 section들의 모임이다. 이 때 differential
 
 $$\check{C}^p(\mathcal{U},\mathcal{F})\rightarrow \check{C}^{p+1}(\mathcal{U}, \mathcal{F})$$
 
@@ -145,7 +146,7 @@ $$\pi_1(M,x)\rightarrow A^\times$$
 
 $$H_1(M)\rightarrow A^\times$$
 
-으로 factor through하고 이는 [§코호몰로지, ⁋명제 3](/ko/math/algebraic_topology/cohomology#prop3)에 의하여 $H^1(M;A)$의 원소이다. 만일 이 원소가 $0$이라면 monodromy action이 trivial action이라는 것과 같고, 이는 곧 $\Spe(\or_M^A)$이 trivial covering space라는 뜻이 되어 $M$이 $A$-orientable manifold가 되었다. 한편 임의의 commutative ring $A$에 대하여, $\cRing$의 initial object가 $\mathbb{Z}$이므로 임의의 manifold $M$에 대하여 $\mathbb{Z}$-orientation $H_1(M)\rightarrow \mathbb{Z}^\times$가 결정되면 이를 $\mathbb{Z}^\times\rightarrow A^\times$와 합성하여 $A$-orientation $H_1(M)\rightarrow A^\times$를 결정할 수 있으므로, $\Spe(\or_M^A)$가 trivial cover인지에 대한 본질적인 정보는 $H^1(M;\mathbb{Z}/2)$에 들어있는 것을 알고 있으며, $\mathbb{Z}/2$를 $\GL(1;\mathbb{Z})$로 생각하면 이것은 first cohomology가 어떻게 covering space에 대한 정보를 담고있는지에 대한 예시이다.
+으로 factor through하고 이는 [§코호몰로지, ⁋명제 3](/ko/math/algebraic_topology/cohomology#prop3)에 의하여 $H^1(M;A^\times)$의 원소이다. 만일 이 원소가 $0$이라면 monodromy action이 trivial action이라는 것과 같고, 이는 곧 $\Spe(\or_M^A)$이 trivial covering space라는 뜻이 되어 $M$이 $A$-orientable manifold가 되었다. 한편 임의의 commutative ring $A$에 대하여, $\cRing$의 initial object가 $\mathbb{Z}$이므로 임의의 manifold $M$에 대하여 $\mathbb{Z}$-orientation $H_1(M)\rightarrow \mathbb{Z}^\times$가 결정되면 이를 $\mathbb{Z}^\times\rightarrow A^\times$와 합성하여 $A$-orientation $H_1(M)\rightarrow A^\times$를 결정할 수 있으므로, $\Spe(\or_M^A)$가 trivial cover인지에 대한 본질적인 정보는 $H^1(M;\mathbb{Z}/2)$에 들어있는 것을 알고 있으며, $\mathbb{Z}/2$를 $\GL(1;\mathbb{Z})$로 생각하면 이것은 first cohomology가 어떻게 covering space에 대한 정보를 담고있는지에 대한 예시이다.
 
 이러한 방식으로, vector bundle $E\rightarrow B$ of rank $k$에 대한 정보는 $\check{H}^1(B; \underline{\GL(k;\mathbb{R})})$에 담겨있다고 볼 수 있다. 그러나 우리가 사용하는 $B$의 cohomology의 coefficient는 $\mathbb{Z}$이기 때문에 여기에 담겨있는 모든 데이터를 갖고있지는 않다. 대신 우리는 이를 약하게 대체할만한 대상, 즉 invariant들을 cohomology ring $H^\bullet(B)$에서 찾는 것이 목표이다.
 
@@ -182,7 +183,7 @@ Vector bundle $E \rightarrow B$ of rank $n$과 vector bundle $F\rightarrow B$에
 
 흥미로운 관찰은 $S^1$의 line bundle의 isomorphism class는 오직 두 가지, 즉 trivial line bundle과 [예시 3](#ex3)의 line bundle 뿐이라는 것이며, 실제로 $S^1$ 위에 정의된 line bundle 중, "두 번 꼬아" 얻어지는 line bundle은 trivial line bundle과 isomorphic하다는 것을 확인할 수 있다. 이는 [명제 6](#prop6)을 보면 어느정도 예측가능한 것으로, $S^1$ 위의 line bundle의 Stiefel-Whitney class는 $H^1(S^1;\mathbb{Z}/2)$에 존재해야 하며 이는 $\mathbb{Z}/2$와 isomorphic하기 때문이다. 
 
-이들은 $\RP^1$의 tautological line bundle의 pullback이라는 것이다. $S^1$의 trivial line bundle의 경우, $S^1$의 모든 점을 $\RP^1$의 고정된 점으로 보내는 연속함수로의 pullback이며 nontrivial한 line bundle은 quotient map $S^1 \rightarrow \RP^1$을 통한 line bundle의 pullback이다. 
+또 다른 관찰은 이들이 $\RP^1$의 tautological line bundle의 pullback이라는 것이다. $S^1$의 trivial line bundle의 경우, $S^1$의 모든 점을 $\RP^1$의 고정된 점으로 보내는 연속함수로의 pullback이며 nontrivial한 line bundle은 homeomorphism $S^1 \rightarrow \RP^1$을 통한 line bundle의 pullback이다. 
 
 ## 그라스만 다양체
 
@@ -246,10 +247,10 @@ $$\Omega_\lambda(F_\bullet)=\left\{V\in\Gr(k,F_n)\mid\text{$\dim(V\cap F_{n-k+i-
 
 $$\Omega_\lambda(F_\bullet)\hookrightarrow \Gr(k,\mathbb{R}^n)$$
 
-을 통하여 $\Gr(k,\mathbb{R}^n;\mathbb{Z}/2)$의 homology class를 정의한다. 우리는 이들을 *Schubert cycle*이라 부르고, 이들의 Poincaré dual $\sigma_\lambda$을 *Schubert class*라 부른다. 이들은 degree $\lvert \lambda\rvert=\sum \lambda_i$의 cohomology class들이다. 이 때, 각각의 부분공간 $\Omega_\lambda(F_\bullet)$들은 flag $F_\bullet$의 선택에 의존하지만, 이들의 homology에서의 image인 Schubert cycle들은 $F_\bullet$의 선택에 의존하지 않고 따라서 Schubert class들도 그러하다. 또, $H^\bullet(\Gr(k,\mathbb{R}^n);\mathbb{Z}/2)$은 앞선 조건을 만족하는 partition $\lambda$들로 생성되는 polynomial algebra들이며, 따라서 우리는 이들 사이의 cup product 구조만 보면 충분하다.
+을 통하여 $H_\bullet(\Gr(k,\mathbb{R}^n);\mathbb{Z}/2)$의 homology class를 정의한다. 우리는 이들을 *Schubert cycle*이라 부르고, 이들의 Poincaré dual $\sigma_\lambda$을 *Schubert class*라 부른다. 이들은 degree $\lvert \lambda\rvert=\sum \lambda_i$의 cohomology class들이다. 이 때, 각각의 부분공간 $\Omega_\lambda(F_\bullet)$들은 flag $F_\bullet$의 선택에 의존하지만, 이들의 homology에서의 image인 Schubert cycle들은 $F_\bullet$의 선택에 의존하지 않고 따라서 Schubert class들도 그러하다. 또, $H^\bullet(\Gr(k,\mathbb{R}^n);\mathbb{Z}/2)$은 앞선 조건을 만족하는 partition $\lambda$들로 생성되는 polynomial algebra들이며, 따라서 우리는 이들 사이의 cup product 구조만 보면 충분하다.
 
 ::: 예시 7
-예를 들어 $\Gr(2,\mathbb{R}^4;\mathbb{Z}/2)$를 보자. 우리는 여기에서 partition $(1,0)$에 해당하는 Schubert class $\sigma_{(1,0)}$의 제곱 
+예를 들어 $H^\bullet(\Gr(2,\mathbb{R}^4);\mathbb{Z}/2)$를 보자. 우리는 여기에서 partition $(1,0)$에 해당하는 Schubert class $\sigma_{(1,0)}$의 제곱 
 
 $$\sigma_{(1,0)}\smile\sigma_{(1,0)}=\sigma_{(1,1)}+\sigma_{(2,0)}$$
 
@@ -271,14 +272,14 @@ $$G_\bullet:\quad \langle e_1+e_4\rangle\subseteq\langle e_1+e_4,e_2+e_3\rangle\
 
 을 생각하자. 그럼 두 가지의 경우가 있는데, 우선 하나의 경우는 $F_2,F_2'$의 두 line으로 만들어지는 평면이 $G_3$에 포함되어있지 않은 경우이다. 예를 들어 $V$와 $F_2$가 $\span(e_1+e_2)$에서 만나고, $V$와 $F_2'$가 $\span(e_3+e_4)$에서 만나는 경우가 이에 해당한다. 이 경우, $V$는 정확하게 $\span(e_1+e_2,e_3+e_4)$로 쓰여질 수 있으며, 이는 $G_0,G_1$와는 $0$차원, $G_2,G_3$과는 $1$차원, 그리고 $G_4$에서야 $2$차원으로 만난다. 즉 이는 $(1,1)$에 해당하는 경우이다. 
 
-다른 하나의 경우는 $F_2,F_2'$의 두 line으로 만들어지는 평면이 $G_3$에 포함되는 경우이다. 가령 $V$와 $F_2$가 $\span(e_2)$에서 만나고, $V$와 $F_3$이 $\span(e_3)$에서 만나는 경우를 생각하면 $V=\span(e_2,e_3)$이며 이는 $G_3$에 포함된다. 이 경우는 $(2,0)$에 해당된다. 
+다른 하나의 경우는 $F_2,F_2'$의 두 line으로 만들어지는 평면이 $G_3$에 포함되는 경우이다. 가령 $V$와 $F_2$가 $\span(e_2)$에서 만나고, $V$와 $F_2'$이 $\span(e_3)$에서 만나는 경우를 생각하면 $V=\span(e_2,e_3)$이며 이는 $G_3$에 포함된다. 이 경우는 $(2,0)$에 해당된다. 
 :::
 
 더 일반적으로 우리는 이들 partition을 *Young diagram*으로 나타내고, 이를 이용하여 두 Schubert class의 cup product $\sigma_\lambda\smile\sigma_\mu$를 계산했을 때, $\lvert\nu\rvert=\lvert\lambda\rvert+\lvert\mu\rvert$를 만족하는 $\nu$에 대해 $\sigma_\nu$ 앞에 붙는 계수를 계산할 수 있다.
 
 이제 우리는 $\Gr(k,\mathbb{R}^\infty)$와 그 위의 universal bundle을 정의해야 한다. 이를 위해 $\Gr(k,\mathbb{R}^n)$ 위의 tautological bundle을 먼저 정의한다. [예시 3](#ex3)과 같은 방식으로, $\Gr(k,\mathbb{R}^{n+k})$의 각각의 점마다 그 점에 해당하는 vector space를 달아주는 다음의 bundle
 
-$$E(\gamma^k_n)=\left\{([V], x)\in \Gr(k,\mathbb{R}^{n+k})\mid \text{$V$ a $k$-dimensional subspace of $\mathbb{R}^{n+k}$ and $x\in V$}\right\}$$
+$$E(\gamma^k_n)=\left\{([V], x)\in \Gr(k,\mathbb{R}^{n+k})\times \mathbb{R}^{n+k}\mid \text{$V$ a $k$-dimensional subspace of $\mathbb{R}^{n+k}$ and $x\in V$}\right\}$$
 
 이 존재하며 이를 $\Gr(k,\mathbb{R}^{n+k})$의 *tautological bundle*이라 부른다. 
 
@@ -302,7 +303,7 @@ $$E(\gamma_\infty^k)=\varinjlim_{n\geq 0} E(\gamma^k_{k+n})$$
 
 직관적으로 $\Gr(k,\mathbb{R}^\infty)$는 각각의 $\Gr(k,\mathbb{R}^{k+n})$들을 이어붙여 complex 구조를 주는 것으로 생각할 수 있다. 뿐만 아니라 tautological bundle들 $E(\gamma^k_{n+k})$들도 이 구조와 호환되도록 붙어있게 된다. 
 
-Finite Grassmannian의 Schubert class들을 infinite Grassmannian으로 옮기는 것은 방향이 맞지 않다. 그러나, 위에서 설명했듯 infinite Grassmannian은 finite Grassmannian들을 subcomplex로 가지는 공간이며, 위에서 만든 Schubert cycle들은 이 inclusion들에 대해 잘 행동한다. 즉 partition $\lambda$에 해당하는 $\Gr(k,\mathbb{R}^{k+i})$의 Schubert cycle을 $\Gr(k,\mathbb{R}^{k+i})\rightarrow \Gr(k,\mathbb{R}^{k+i+1})$를 통해 집어넣은 것이나, $\Gr(k,\mathbb{R}^{k+i+1})$에서 바로 partition $\lambda$에 해당하는 Schubert cycle을 $\Gr(k,\mathbb{R}^n)\subseteq \Gr(k,\mathbb{R}^{k+i+1})$과 교집합한 것이나 같은 결과를 준다.
+Finite Grassmannian의 Schubert class들을 infinite Grassmannian으로 옮기는 것은 방향이 맞지 않다. 그러나, 위에서 설명했듯 infinite Grassmannian은 finite Grassmannian들을 subcomplex로 가지는 공간이며, 위에서 만든 Schubert cycle들은 이 inclusion들에 대해 잘 행동한다. 즉 partition $\lambda$에 해당하는 $\Gr(k,\mathbb{R}^{k+i})$의 Schubert cycle을 $\Gr(k,\mathbb{R}^{k+i})\rightarrow \Gr(k,\mathbb{R}^{k+i+1})$를 통해 집어넣은 것이나, $\Gr(k,\mathbb{R}^{k+i+1})$에서 바로 partition $\lambda$에 해당하는 Schubert cycle을 $\Gr(k,\mathbb{R}^{k+i})\subseteq \Gr(k,\mathbb{R}^{k+i+1})$과 교집합한 것이나 같은 결과를 준다.
 
 이제 $k$개의 partition들
 

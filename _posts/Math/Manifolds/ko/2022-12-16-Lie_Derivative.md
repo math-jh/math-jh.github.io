@@ -10,6 +10,7 @@ sidebar:
 
 date: 2022-12-16
 weight: 13
+drift_needed: true
 
 ---
 
@@ -28,7 +29,7 @@ $$\lim_{h\rightarrow 0}\frac{f(\gamma(h))-f(p)}{h}\tag{1}$$
 이제 $M$ 위에 벡터장 $X$가 주어졌다 하고, 각 점 $p$에서 $X_p$ 방향으로의 방향미분 $X_pf$를 구하는 문제를 생각해보자. 이는 기하학적으로는 위와 같이 모든 점 $p$마다 $\gamma(0)=p$, $\gamma'(0)=X_p$를 만족하는 곡선 $\gamma_p$를 잡아 위의 식 (1)을 적용하는 것과 같다. 그런데 우리는 이러한 성질을 만족하는 곡선이 반드시 존재한다는 것을 알고 있다. ([§벡터장, ⁋정리 6](/ko/math/manifolds/vector_fields#thm6))
 
 ::: 정의 1
-Manifold $M$과 그 위에 정의된 벡터장 $X$를 고정하고, 함수 $f:M\rightarrow\mathbb{R}$이 주어졌다 하자. 그럼 $f$의 *Lie derivative<sub>리 미분</sub>* $\mathcal{L}_Xf$는 다음의 식
+Manifold $M$과 그 위에 정의된 벡터장 $X$를 고정하고, 함수 $f\in C^\infty(M)$이 주어졌다 하자. 그럼 $f$의 *Lie derivative<sub>리 미분</sub>* $\mathcal{L}_Xf$는 다음의 식
 
 $$(\mathcal{L}_Xf)(p)=\lim_{t\rightarrow 0}\frac{f(\phi^t(p))-f(\phi^0(p))}{t}=\lim_{t\rightarrow 0}\frac{f(\phi^t(p))-f(p)}{t}$$
 
@@ -65,7 +66,7 @@ $$(\mathcal{L}_X\omega)_p=\frac{d}{\dd{t}}\bigg\vert_{t=0}(\phi^t)^\ast\omega_{\
 
 뿐만 아니라, 어렵지 않게 임의의 tensor field로도 이 정의를 확장할 수 있다. 이는 우리가 당장 사용할 내용은 아니므로 넘기기로 한다.
 
-다음 명제의 일부는 이미 증명하였던 것이고, 일부는 새로운 것이지만 증명을 모두 적기에는 길기 때문에 생략한다.
+다음 명제의 일부는 이미 증명하였던 것이고, 일부는 새로운 것이지만 증명을 모두 적기에는 길기 때문에 생략한다. (증명은 **[War]**를 보라.)
 
 ::: 명제 4
 임의의 $X\in\mathfrak{X}(M)$에 대해 다음이 성립한다.
@@ -103,7 +104,7 @@ $$[X,Y]f=X(Yf)-Y(Xf)$$
 으로 정의되는 원소이다.
 :::
 
-물론 이 정의가 말이 되기 위해서는 우변의 식이 실제로 $\mathfrak{X}(M)$의 원소가 된다는 것을 확인해야 하지만, 이는 위에서 계산한 식 (2)에서 $X$와 $Y$의 정의를 바꾸어 $(YX)(fg)$를 얻은 후, 이를 빼면 된다. 애초부터 이 정의는 문제가 되는 두 항을 소거하기 위한 정의였으므로 당연히 라이프니츠 법칙이 성립할 것이다.
+물론 이 정의가 말이 되기 위해서는 우변의 식이 실제로 $\mathfrak{X}(M)$의 원소가 된다는 것을 확인해야 하지만, 이는 위에서 계산한 식 (2)에서 $X$와 $Y$의 정의를 바꾸어 $(YX)(fg)$를 얻은 후, 이를 빼면 된다. 애초부터 이 정의는 문제가 되는 두 항을 소거하기 위한 정의였으므로 당연히 라이프니츠 법칙이 성립할 것이다. 또, 이렇게 얻어진 $[X,Y]$가 $C^\infty$ 벡터장이라는 것은 [§벡터장, ⁋명제 2](/ko/math/manifolds/vector_fields#prop2)의 세 번째 조건에 $X(Yf)-Y(Xf)$를 대입하면 얻어진다.
 
 이렇게 정의된 벡터장 $[X,Y]$를 $X$와 $Y$의 *Lie bracket*이라 부른다. 이 정의는 나중에 아주 중요하게 쓰이므로, 몇 가지 결과를 미리 정리해 두는 것이 좋아보인다.
 
@@ -128,7 +129,7 @@ $$\dd{F_p}(X_p)=Y_{F(p)}$$
 [§벡터장, ⁋명제 2](/ko/math/manifolds/vector_fields#prop2)에서 $X$가 $C^\infty$임을 각각의 함수 $f$에 적용해보아 알 수 있듯, $X$와 $Y$가 $F$-related인지의 여부 또한 마찬가지로 각각의 함수에 적용하여 알아낼 수 있다.
 
 ::: 명제 7
-$F:M\rightarrow N$이 $C^\infty$ 함수라 하고, $X\in\mathfrak{X}(M)$, $Y\in\mathfrak{X}(N)$이라 하자. 그럼 $X,Y$가 $F$-related인 것은 임의의 $f$에 대하여, 다음의 식
+$F:M\rightarrow N$이 $C^\infty$ 함수라 하고, $X\in\mathfrak{X}(M)$, $Y\in\mathfrak{X}(N)$이라 하자. 그럼 $X,Y$가 $F$-related인 것은 임의의 열린집합 $V\subseteq N$과 $f\in C^\infty(V)$에 대하여, 다음의 식
 
 $$X(f\circ F)=(Yf)\circ F$$
 
@@ -176,7 +177,7 @@ $$\dd{F_p}([X_1,X_2]_p)=[Y_1,Y_2]_{F(p)}$$
 $$\begin{aligned}\dd{F_p}([X_1,X_2]_p)f&=[X_1,X_2]_p(f\circ F)\\
 &=(X_1)_p(X_2(f\circ F))-(X_2)_p(X_1(f\circ F))\\
 &=(X_1)_p((Y_2f)\circ F)-(X_2)_p((Y_1f)\circ F)\\
-&=\dd{F_p}(X_1)_p(Y_2f)-\dd{F_p}(X_2)_p(Y_1f)\\
+&=\dd{F_p}\bigl((X_1)_p\bigr)(Y_2f)-\dd{F_p}\bigl((X_2)_p\bigr)(Y_1f)\\
 &=(Y_1)_{F(p)}(Y_2f)-(Y_2)_{F(p)}(Y_1f)\\
 &=[Y_1,Y_2]_{F(p)}f\end{aligned}$$
 

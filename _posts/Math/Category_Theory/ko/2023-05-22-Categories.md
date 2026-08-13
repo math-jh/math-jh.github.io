@@ -10,6 +10,7 @@ sidebar:
 
 date: 2023-05-22
 weight: 1
+drift_needed: true
 
 ---
 
@@ -28,7 +29,7 @@ weight: 1
 
 추가적으로, 이들은 다음의 조건을 만족한다.
 
-- Morphism들의 합성은 associative하다. 즉, $(f\circ g)\circ h=f\circ(g\circ h)$가 성립한다.
+- Morphism들의 합성은 associative하다. 즉, 합성이 정의되는 임의의 morphism $f,g,h$에 대하여 $(f\circ g)\circ h=f\circ(g\circ h)$가 성립한다.
 - 각각의 $A\in\obj(\mathcal{A})$마다 $\id_A\in\Hom_\mathcal{A}(A,A)$가 존재하여, 모든 $f\in\Hom_\mathcal{A}(A,A_1)$ 그리고 모든 $g\in\Hom_\mathcal{A}(A_2,A)$에 대하여
   
   $$f\circ{\id_A}=f,\qquad {\id_A}\circ g=g$$
@@ -39,9 +40,9 @@ weight: 1
 지금까지 우리가 알고 있던 많은 것들이 이 언어로 쓰여질 수 있다. 가령 집합들의 category $\Set$은 다음과 같은 데이터로 이루어진다.
 
 - $\Set$의 대상들은 집합들이다.
-- 두 대상 $A_1,A_2\in\obj(\mathcal{A})$에 대하여, $A_1$에서 $A_2$로의 morphism은 집합 $A_1$에서 $A_2$로의 함수이다. ([\[집합론\] §함수, ⁋정의 1](/ko/math/set_theory/functions#def1))
+- 두 대상 $A_1,A_2\in\obj(\Set)$에 대하여, $A_1$에서 $A_2$로의 morphism은 집합 $A_1$에서 $A_2$로의 함수이다. ([\[집합론\] §함수, ⁋정의 1](/ko/math/set_theory/functions#def1))
 - 두 morphism의 합성은 함수의 합성으로 정의한다. ([\[집합론\] §함수들 사이의 연산, ⁋명제 1](/ko/math/set_theory/operation_of_functions#prop1)) 이 합성이 associative한 것은 [\[집합론\] §이항관계들 사이의 연산, ⁋명제 5](/ko/math/set_theory/operation_of_binary_relations#prop5)에서 살펴보았다.
-- 임의의 대상 $A\in\obj(\mathcal{A})$에 대하여, $\id_A\in\Hom_\Set(A,A)$는 항등함수 $\id_A$이다. ([\[집합론\] §함수, ⁋정의 2](/ko/math/set_theory/functions#def2)) 항등함수가 위의 [정의 1](#def1)의 두 조건을 만족하는 것은 [\[집합론\] §이항관계들 사이의 연산, ⁋정의 9](/ko/math/set_theory/operation_of_binary_relations#def9) 이후에 살펴보았다.
+- 임의의 대상 $A\in\obj(\Set)$에 대하여, $\id_A\in\Hom_\Set(A,A)$는 항등함수 $\id_A$이다. ([\[집합론\] §함수, ⁋정의 2](/ko/math/set_theory/functions#def2)) 항등함수가 위의 [정의 1](#def1)의 두 조건을 만족하는 것은 [\[집합론\] §이항관계들 사이의 연산, ⁋정의 9](/ko/math/set_theory/operation_of_binary_relations#def9) 이후에 살펴보았다.
 
 비슷한 방식으로 다음이 모두 category의 예시가 되는 것을 볼 수 있다.
 
@@ -79,7 +80,7 @@ weight: 1
 
 $$((x \rightarrow y) \rightarrow z)\rightarrow w=x \rightarrow y \rightarrow z \rightarrow w=x \rightarrow (y \rightarrow (z \rightarrow w))$$
 
-으로부터 결합법칙이 나온다. 또, $\preceq$의 reflexivity에 의하여 임의의 $x\in S$에 대해 $\Hom_\mathcal{S}(x,x)$는 유일한 morphism $x \rightarrow x$를 가지며 이것이 $\id_x$의 역할을 하는 것을 확인할 수 있다.
+으로부터 결합법칙이 나온다. 또, $\preceq$의 reflexivity에 의하여 임의의 $x\in S$에 대해 $\Hom_S(x,x)$는 유일한 morphism $x \rightarrow x$를 가지며 이것이 $\id_x$의 역할을 하는 것을 확인할 수 있다.
 :::
 
 앞선 정의에서 $\obj(\mathcal{A})$를 대상들의 <em-ko>집합</em-ko> 대신, <em-ko>모임</em-ko>이라 지칭한 것은 이들의 모임이 실제로 집합이 되지 않을 수도 있기 때문이다. 보통은 이러한 대상들을 *class<sub>클래스</sub>*라 부른다. 모든 집합은 class지만, class들 중에서는 집합이 아닌 것들이 존재한다. 
@@ -96,7 +97,7 @@ Category $\mathcal{A}$가 주어졌다 하자.
 예시들을 소개할 때 우리는 이러한 부분을 신경쓰지 않았으며, 앞으로도 그럴 것이다. 다만 안전을 위해 앞으로 나오는 category는 모두 locally small인 것으로 가정한다.
 
 ::: 정의 5
-Category $\mathcal{C}$에 대하여, $\mathcal{C}$의 *subcategory<sub>부분범주</sub>*라는 것은 $\mathcal{C}$의 대상들과 morphism들의 subcollection으로 이루어진 데이터가 그 자체로 category가 되는 것이다.
+Category $\mathcal{C}$에 대하여, $\mathcal{C}$의 *subcategory<sub>부분범주</sub>*라는 것은 $\mathcal{C}$의 대상들과 morphism들의 subcollection으로 이루어진 데이터가 $\mathcal{C}$의 합성과 identity를 그대로 물려받아 그 자체로 category가 되는 것이다.
 :::
 
 ## 동형사상
@@ -155,7 +156,7 @@ $$g_1=\id_{A_1}\circ g_1=(f^{-1}\circ f)\circ g_1=f^{-1}\circ(f\circ g_1)=f^{-1}
 - $A$에 대한 *automorphism group<sub>자기동형사상 군</sub>*은 $\End_\mathcal{A}(A)$의 원소들 중 isomorphism만을 모아둔 집합 $\Aut_\mathcal{A}(A)$와 합성 $\circ$으로 이루어진 데이터이다.
 :::
 
-어렵지 않게 $\End(A)$와 $\Aut(A)$가 대수적으로 정의된 monoid와 group의 조건을 만족하는 것을 알 수 있다. ([\[대수적 구조\] §반군, 모노이드, 군, ⁋정의 3](/ko/math/algebraic_structures/groups#def3)과 [반군, 모노이드, 군, ⁋정의 11](/ko/math/algebraic_structures/groups#def11)) 범주론에서는 monoid와 group을 다음과 같이 정의할 수 있다.
+어렵지 않게 $\End(A)$와 $\Aut(A)$가 대수적으로 정의된 monoid와 group의 조건을 만족하는 것을 알 수 있다. ([\[대수적 구조\] §반군, 모노이드, 군, ⁋정의 3](/ko/math/algebraic_structures/groups#def3)과 [§반군, 모노이드, 군, ⁋정의 11](/ko/math/algebraic_structures/groups#def11)) 범주론에서는 monoid와 group을 다음과 같이 정의할 수 있다.
 
 ::: 정의 10
 대상이 하나 뿐인 category를 *monoid*라 부른다. 모든 morphism이 isomorphism인 monoid를 *group*이라 부른다. 
@@ -177,9 +178,9 @@ $$g_1=\id_{A_1}\circ g_1=(f^{-1}\circ f)\circ g_1=f^{-1}\circ(f\circ g_1)=f^{-1}
 ::: 예시 12
 두 category $\mathcal{A},\mathcal{B}$가 주어졌다 하자. 이들의 *product category<sub>곱 카테고리</sub>* $\mathcal{A}\times \mathcal{B}$는 다음의 데이터로 이루어진다.
 
-- $\obj(\mathcal{A}\times \mathcal{B})$의 대상들은 쌍 $(A,B)$의 꼴이다.
+- $\obj(\mathcal{A}\times \mathcal{B})$의 대상들은 $A\in\obj(\mathcal{A}),B\in\obj(\mathcal{B})$에 대해 쌍 $(A,B)$의 꼴이다.
 - 임의의 $(A_1,B_1),(A_2,B_2)\in\obj(\mathcal{A}\times \mathcal{B})$에 대하여, $\Hom_{\mathcal{A}\times \mathcal{B}}((A_1,B_1),(A_2,B_2))$는 $f\in\Hom_\mathcal{A}(A_1,A_2),g\in\Hom_\mathcal{B}(B_1,B_2)$에 대해 $(f,g)$의 꼴이다. 
-- 임의의 $A\times B\in \mathcal{A}\times \mathcal{B}$에 대하여, $A\times B$에서의 identity는 $(\id_A,\id_B)$로 주어진다.
+- 임의의 $(A,B)\in\obj(\mathcal{A}\times \mathcal{B})$에 대하여, $(A,B)$에서의 identity는 $(\id_A,\id_B)$로 주어진다.
 - 임의의 $(f_1,g_1):(A_1,B_1)\rightarrow(A_2,B_2)$, $(f_2,g_2):(A_2,B_2)\rightarrow(A_3,B_3)$에 대해, 이들의 합성은 $(f_2\circ f_1,g_2\circ g_1)\in\Hom((A_1,B_1),(A_3,B_3))$으로 주어진다. 
 :::
 
@@ -189,7 +190,7 @@ Category $\mathcal{A}$가 주어졌다 하고, $A\in\obj(\mathcal{A})$를 고정
 - $\mathcal{A}$의 *slice category over $A$<sub>$A$ 위에서의 조각 범주</sub>* $\mathcal{A}_{/A}$는 다음과 같은 데이터로 주어진다.
   - $\mathcal{A}_{/A}$의 object들은 $\mathcal{A}$의 morphism들 $f:A_1\rightarrow A$이다.
   - 임의의 $(A_1\overset{f_1}{\longrightarrow}A)\in\obj(\mathcal{A}_{/A})$와 $(A_2\overset{f_2}{\longrightarrow}A)\in\obj(\mathcal{A}_{/A})$에 대하여, $f_1$에서 $f_2$로의 morphism은 $f_1=f_2\circ g$가 성립하도록 하는 $g:A_1\rightarrow A_2$이다.
-- $\mathcal{A}$의 *slice category under $A$<sub>$A$ 위에서의 쌍대 조각 범주</sub>* ${}_{A/}\mathcal{A}$는 다음과 같은 데이터로 주어진다.
+- $\mathcal{A}$의 *slice category under $A$<sub>쌍대 조각 범주</sub>* ${}_{A/}\mathcal{A}$는 다음과 같은 데이터로 주어진다.
   - ${}_{A/}\mathcal{A}$의 object들은 $\mathcal{A}$의 morphism들 $f:A\rightarrow A_1$이다.
   - 임의의 $(A\overset{f_1}{\longrightarrow}A_1)\in\obj({}_{A/}\mathcal{A})$와 $(A\overset{f_2}{\longrightarrow}A_2)\in\obj({}_{A/}\mathcal{A})$에 대하여, $f_1$에서 $f_2$로의 morphism은 $f_2=g\circ f_1$가 성립하도록 하는 $g:A_1\rightarrow A_2$이다.
 :::

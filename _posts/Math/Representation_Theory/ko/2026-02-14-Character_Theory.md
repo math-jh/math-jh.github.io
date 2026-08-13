@@ -11,6 +11,8 @@ sidebar:
 date: 2026-02-14
 weight: 2
 
+drift_needed: true
+
 ---
 
 이번 글에서 우리는 character function을 정의하고 이들의 성질에 대해 살펴본다. 이들은 representation을 분류하는 우리의 목표에 큰 도움을 줄 것이다. 
@@ -38,9 +40,9 @@ $$L_V:V\rightarrow V,\qquad L_W:W\rightarrow W$$
 ::: 명제 2
 Representation $V, W$에 대해 다음이 성립한다. 
 
-1. $\rchi_{V\oplus W}=\rchi_V\oplus \rchi_W$
+1. $\rchi_{V\oplus W}=\rchi_V+\rchi_W$
 2. $\rchi_{V\otimes W}=\rchi_V\rchi_W$
-3. $\rchi_{V^\ast}=\overline{\rchi}_V$
+3. $\rchi_{V^\ast}=\overline{\rchi_V}$
 :::
 
 특히 첫 번째 식에 의하여, 임의의 representation은 irreducible decomposition
@@ -73,7 +75,7 @@ $$\langle \rchi_1,\rchi_2\rangle=\frac{1}{\lvert G\rvert}\sum_{g\in G} \rchi_1(g
 으로 정의한다. 
 :::
 
-이는 단순히 target space $\mathbb{C}$에 정의된 standard Hermitian product를 $\mathbb{C}_\class(G)$ 위에 옮겨준 것에 불과하다. 한편, 어떠한 representation $\rho$의 character $\rchi_\rho$에 대해서는, 임의의 $g\in G$에 대하여
+이는 단순히 target space $\mathbb{C}$에 정의된 standard Hermitian product를 $\mathbb{C}_\class(G)$ 위에 옮겨준 것에 불과하다. 한편, 어떠한 representation $\rho$의 character $\rchi_\rho$에 대해서는, [§유한군의 표현론, ⁋명제 6](/ko/math/representation_theory/representations_of_finite_groups#prop6)에 의하여 $\rho$를 unitary로 잡을 수 있으므로, 임의의 $g\in G$에 대하여
 
 $$\rchi_\rho(g^{-1})=\tr(\rho(g^{-1}))=\tr(\rho(g)^{-1})=\tr(\rho(g)^\dagger)=\overline{\tr(\rho(g))}=\overline{\rchi_\rho(g)}$$
 
@@ -95,7 +97,7 @@ $$p:U\rightarrow U^G;\qquad u\mapsto \frac{1}{\lvert G\rvert}\sum_{g\in G}g\cdot
 
 이 $U$에서 $U$로의 $G$-invariant projection을 정의하고, 그 image는 $U^G$이다. 그 정의에 의하여, $U^G$ 위에 정의된 subrepresentation은 정확히 trivial representation
 
-$$G\rightarrow \Aut(U^G);\quad g\mapsto \id_{U_G}$$
+$$G\rightarrow \Aut(U^G);\quad g\mapsto \id_{U^G}$$
 
 이므로, 우리는 이로부터 representation $U$를 trivial representation $U^G$와 그렇지 않은 부분 $W$로 분해하여
 
@@ -107,9 +109,9 @@ $$U=U^G\oplus W$$
 
 $$\begin{pmatrix}\id_{U^G}&0\\0&0\end{pmatrix}$$
 
-의 꼴로 나타낼 수 있으므로 $\varphi: U\rightarrow U$의 trace는 $\dim U^G$와 같다. 이제 정의에 의하여,
+의 꼴로 나타낼 수 있으므로 $p: U\rightarrow U$의 trace는 $\dim U^G$와 같다. 이제 정의에 의하여,
 
-$$\dim U^G=\tr(\varphi)=\tr\left(\frac{1}{\lvert G\rvert}\sum_{g\in G}\rho(g)\right)=\frac{1}{\lvert G\rvert}\sum_{g\in G}\tr(\rho(g))=\frac{1}{\lvert G\rvert}\sum_{g\in G}\rchi(g)\tag{1}$$
+$$\dim U^G=\tr(p)=\tr\left(\frac{1}{\lvert G\rvert}\sum_{g\in G}\rho(g)\right)=\frac{1}{\lvert G\rvert}\sum_{g\in G}\tr(\rho(g))=\frac{1}{\lvert G\rvert}\sum_{g\in G}\rchi(g)\tag{1}$$
 
 이다. 
 
@@ -121,13 +123,13 @@ $$(g\cdot f)(v)=g\cdot f(g^{-1}\cdot v)\qquad\text{for all $v\in V$}$$
 
 $$\Hom_\mathbb{C}(V,W)^G=\Hom_G(V,W)$$
 
-이 성립하며, 따라서 식 (1)을 $U=\Hom(V,W)$와 그에 대응되는 trace map $\varphi$에 적용하면
+이 성립하며, 따라서 식 (1)을 $U=\Hom(V,W)$와 그에 대응되는 projection $p$에 적용하면
 
-$$\dim \Hom_G(V,W)=\tr(\varphi)=\frac{1}{\lvert G\rvert}\sum_{g\in G}\rchi_{\Hom(V,W)}(g)$$
+$$\dim \Hom_G(V,W)=\tr(p)=\frac{1}{\lvert G\rvert}\sum_{g\in G}\rchi_{\Hom(V,W)}(g)$$
 
-임을 안다. 한편 $\Hom_G(V,W)=V^\ast\otimes W$임을 활용하면 우변의 character는 다음의 식
+임을 안다. 한편 $\Hom_\mathbb{C}(V,W)\cong V^\ast\otimes W$임을 활용하면 우변의 character는 다음의 식
 
-$$\rchi_{\Hom_G(V,W)}(g)=\overline{\rchi_V(g)}\rchi_W(g)$$
+$$\rchi_{\Hom_\mathbb{C}(V,W)}(g)=\overline{\rchi_V(g)}\rchi_W(g)$$
 
 을 통해 얻어지므로, 위의 식을 다시
 
@@ -145,13 +147,13 @@ $$\langle \rchi_W,\rchi_V\rangle=\delta_{VW}$$
 
 ## Regular representation
 
-이 섹션에서 우리는 지난 글에서 고려했던 Artin-Wedderburn decomposition을 ([§유한군의 표현론](/ko/math/representation_theory/representations_of_finite_groups#cor7)) character를 이용해 얻어낸다. 이를 위해, 우선 $\mathbb{C}[G]$는 자기자신 위에 정의된 left $\mathbb{C}[G]$-module이고 따라서 categorical equivalence
+이 섹션에서 우리는 [§유한군의 표현론, §§마슈케의 정리](/ko/math/representation_theory/representations_of_finite_groups#마슈케의-정리)에서 고려했던 Artin-Wedderburn decomposition을 character를 이용해 얻어낸다. 이를 위해, 우선 $\mathbb{C}[G]$는 자기자신 위에 정의된 left $\mathbb{C}[G]$-module이고 따라서 categorical equivalence
 
 $$\Rep_\mathbb{C}(G)\cong \lMod{\mathbb{C}[G]}$$
 
-로부터 $G$의 representation이기도 하다는 것을 관찰하자. 이는 단순히 $\mathbb{C}[G]$ 위에 정의된 module 구조, 즉 $\mathbb{C}[G]$의 ring으로서의 곱셈 구조를 $G$로 제한하여 얻어지는 것으로, 명시적으로 임의의 $g\in G$의 $\mathbb{C}[G]$에서의 image $\delta_g=\sum_{x\in X}\delta_g(x)x$를 사용하면
+로부터 $G$의 representation이기도 하다는 것을 관찰하자. 이는 단순히 $\mathbb{C}[G]$ 위에 정의된 module 구조, 즉 $\mathbb{C}[G]$의 ring으로서의 곱셈 구조를 $G$로 제한하여 얻어지는 것으로, 명시적으로 임의의 $g\in G$의 $\mathbb{C}[G]$에서의 image $\delta_g=\sum_{x\in G}\delta_g(x)x$를 사용하면
 
-$$g\cdot \left(\sum_{y\in G} \phi(y)y\right)=\left(\sum_{x\in X}\delta_g(x)x\right)\left(\sum_{y\in G}\phi(y)y\right)=\sum_{z\in G}\left(\sum_{x\in G}\delta_g(x)\phi(x^{-1}z)\right)z=\sum_{z\in G}\phi(g^{-1}z)z=\sum_{z\in G}\phi(z)(gz)$$
+$$g\cdot \left(\sum_{y\in G} \phi(y)y\right)=\left(\sum_{x\in G}\delta_g(x)x\right)\left(\sum_{y\in G}\phi(y)y\right)=\sum_{z\in G}\left(\sum_{x\in G}\delta_g(x)\phi(x^{-1}z)\right)z=\sum_{z\in G}\phi(g^{-1}z)z=\sum_{z\in G}\phi(z)(gz)$$
 
 으로 쓸 수 있고, 이러한 representation을 *regular representation*이라 부른다.
 
@@ -161,13 +163,13 @@ $$\rchi_{\mathbb{C}[G]}(g)=\begin{cases}\lvert G\rvert&\text{if $g=e$}\\0&\text{
 
 이다. 이제 만일 $V_i$가 $\mathbb{C}[G]$의 irreducible subrepresentation이라면,
 
-$$\langle\rchi_{\mathbb{C}[G]}, \rchi_{V_i}\rangle=\frac{1}{\lvert G\rvert}\sum_{g\in G}\rchi_{\mathbb{C}[G]}(g)\rchi_{V_i}(g)=\frac{1}{\lvert G\rvert} \rchi_{\mathbb{C}[G]}(e)\rchi_{V_i}(e)=\dim V_i$$
+$$\langle\rchi_{\mathbb{C}[G]}, \rchi_{V_i}\rangle=\frac{1}{\lvert G\rvert}\sum_{g\in G}\rchi_{\mathbb{C}[G]}(g)\overline{\rchi_{V_i}(g)}=\frac{1}{\lvert G\rvert} \rchi_{\mathbb{C}[G]}(e)\overline{\rchi_{V_i}(e)}=\dim V_i$$
 
 이 성립한다. 즉, 우리는 다음의 decomposition
 
-$$\mathbb{C}[G]\cong \bigoplus_{i=1}^r V_i^{\dim V_i}$$
+$$\mathbb{C}[G]\cong \bigoplus_{i=1}^r V_i^{\oplus\dim V_i}$$
 
-을 얻는다. 뿐만 아니라 $\mathbb{C}[G]$는 자기 자신 위에 곱셈으로 작용하고, 이 작용 하에서 [§유한군의 표현론, ⁋보조정리 8](/ko/math/representation_theory/representations_of_finite_groups#lem8) $V_i$는 $V_i$로만 간다는 것을 생각하면 각각의 $V_i^{\dim V_i}$이 정확하게 matrix algebra $\Mat_{d_i}(\mathbb{C})$라는 것을 알고,  Artin-Wedderburn theorem의 유일성으로부터 이것이 곧
+을 얻는다. 뿐만 아니라 $\mathbb{C}[G]$는 자기 자신 위에 곱셈으로 작용하고, 이 작용 하에서 [§유한군의 표현론, ⁋보조정리 8](/ko/math/representation_theory/representations_of_finite_groups#lem8)에 의하여 $V_i$는 $V_i$로만 간다는 것을 생각하면 각각의 $V_i^{\oplus\dim V_i}$이 정확하게 matrix algebra $\Mat_{d_i}(\mathbb{C})$라는 것을 알고,  Artin-Wedderburn theorem의 유일성으로부터 이것이 곧
 
 $$\mathbb{C}[G]\cong \bigoplus_{i=1}^r\Mat_{d_i}(\mathbb{C})$$
 
@@ -218,7 +220,7 @@ $$\left(\sum\overline{\phi(g)}g\right)\cdot \delta_e=\sum_{g\in G}\overline{\phi
 
 ## 예시: $S_3$
 
-우리는 이전 글부터 세운 이론을 살펴보는 예시로 이 글을 마무리한다. 우선 임의의 *abelian* group $G$에 대해서는 irreducible representation이 $1$차원 representation 뿐임이 자명하므로 우리의 이론을 테스트하기 위해서는 non-abelian group이 필요하다. 계산의 편의상 가장 작은 non-abelian group인 $S_3$을 생각하자. 명시적으로
+우리는 이전 글부터 세운 이론을 살펴보는 예시로 이 글을 마무리한다. 우선 임의의 *abelian* group $G$의 irreducible representation $\rho:G\rightarrow\Aut(V)$에서는 각각의 $\rho(h)$가 $G$-map이므로 [§유한군의 표현론, ⁋보조정리 8](/ko/math/representation_theory/representations_of_finite_groups#lem8)에 의하여 scalar로 작용하고, 이로부터 $V$의 임의의 subspace가 subrepresentation이 되어 $V$가 $1$차원임을 안다. 따라서 우리의 이론을 테스트하기 위해서는 non-abelian group이 필요하다. 계산의 편의상 가장 작은 non-abelian group인 $S_3$을 생각하자. 명시적으로
 
 $$S_3=\{(\;),\,(1\;2),\,(1\;3),\,(2\;3),\,(1\;2\;3),\,(1\;3\;2)\}$$
 
@@ -273,7 +275,7 @@ $$\rho_\std((1\;2\;3))=\begin{pmatrix}-1&-1\\1&0\end{pmatrix}$$
 
 이 되어 $\rchi_\std$는 $(2,0,-1)$임을 안다. 
 
-더 편리한 계산방법은 decomposition
+더 편리한 계산방법은, $\rho_0$과 permutation representation의 표현공간을 각각 $V_0$, $V_\perm$이라 적을 때, decomposition
 
 $$V_\perm=V_0\oplus V_\std$$
 
@@ -289,7 +291,7 @@ $$\rchi_0=(1,1,1),\qquad \rchi_\sgn=(1,-1,1),\qquad \rchi_\std=(2,0,-1)$$
 
 우리는 regular representation의 character의 계산으로부터
 
-$$\rho_{\mathbb{C}[S_3]}(g)=\begin{cases}6&\text{if $g=e$}\\0&\text{otherwise}\end{cases}$$
+$$\rchi_{\mathbb{C}[S_3]}(g)=\begin{cases}6&\text{if $g=e$}\\0&\text{otherwise}\end{cases}$$
 
 임을 안다. (식 (2)) 이는 반드시 위의 세 character들의 $\mathbb{Z}_{\geq 0}$-linear combination이어야 할 것이며 실제로 
 

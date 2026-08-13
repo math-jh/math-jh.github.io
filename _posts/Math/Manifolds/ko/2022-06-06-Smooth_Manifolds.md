@@ -10,6 +10,7 @@ sidebar:
 
 date: 2022-06-06
 weight: 1
+drift_needed: true
 
 ---
 
@@ -19,7 +20,7 @@ weight: 1
 
 앞으로 $m$차원의 좌표계를 다룰 일이 많으므로 다음과 같이 표기법을 고정하기로 한다. $\mathbb{R}^m$에 대하여, $i$번째 projection $\pr_i$를 $r^i$로 표기한다. 비슷하게, 임의의 집합 $X$와 함수 $f:X\rightarrow\mathbb{R}^m$에 대하여, $f$의 $i$번째 *성분함수*는 식 $f^i=r^i\circ f$으로 정의된다. 
 
-이제 함수 $f$가 $\mathbb{R}^m$에서 $\mathbb{R}$로의 함수라 하자. 그럼 $f$의 $i$번째 성분에 대한 편미분을 다음의 식
+이제 함수 $f$가 $\mathbb{R}^m$에서 $\mathbb{R}$로의 함수라 하자. 그럼 $f$의 $i$번째 변수에 대한 편미분을 다음의 식
 
 $$\frac{\partial}{\partial r^i}\bigg\vert_t f=\frac{\partial f}{\partial r^i}\bigg\vert_t=\lim_{h\rightarrow 0}\frac{f(t^1,\ldots, t^{i-1}, t^i+h, t^{i+1},\ldots, t^m)-f(t^1,\ldots, t^m)}{h}$$
 
@@ -42,7 +43,7 @@ $$\psi\circ\varphi^{-1}:\varphi(U\cap V)\rightarrow\psi(U\cap V),\qquad\varphi\c
 
 가 모두 $C^k$인 것이다. $C^k$-compatible한 chart들의 모임 $\mathcal{A}=\{(U_\lambda, \varphi_\lambda)\}_{\lambda\in\Lambda}$이 $M=\bigcup U_\lambda$을 만족한다면 $\mathcal{A}$를 *$C^k$-atlas*라 부른다. 
 
-$M$ 위에 정의된 $C^k$-atlas 중, 포함관계에 대해 maximal인 atlas를 *$C^k$-differentiable structure<sub>$k$급 미분구조</sub>*라 부르고, 이 때 $M$을 *$C^k$-differentiable manifold<sub>$k$급 미분다양체</sub>*라 부른다. 특별히 $k=\infty$인 경우 이 구조를 *smooth differentiable manifold<sub>매끄러운 미분다양체</sub>* 혹은 더 간단히 *differentiable manifold<sub>미분다양체</sub>*라 부른다.
+$M$ 위에 정의된 $C^k$-atlas 중, 포함관계에 대해 maximal인 atlas를 *$C^k$-differentiable structure<sub>$k$급 미분구조</sub>*라 부르고, 이 때 $M$을 *$C^k$-differentiable manifold<sub>$k$급 미분다양체</sub>*라 부른다. 특별히 $k=\infty$인 경우 $M$을 *smooth differentiable manifold<sub>매끄러운 미분다양체</sub>* 혹은 더 간단히 *differentiable manifold<sub>미분다양체</sub>*라 부른다.
 :::
 
 이 정의에서 *maximal* atlas가 미분구조를 주는 것으로 생각하는 이유는 maximal atlas가 아닌 두 atlas가 본질적으로 같은 미분구조를 주는 것이 얼마든 가능하기 때문이다. 예를 들어 $\mathbb{R}$은 다음의 $C^\infty$-atlas 
@@ -58,7 +59,7 @@ $$\mathcal{A}'=\{((-\infty, 1), \id_{(-\infty, 1)}), ((-1, \infty),\id_{(-1,\inf
 한편, 수학에서 어떠한 대상을 알기 위해서는 이 대상 위에 정의된 함수를 알면 된다. 앞으로 모든 manifold는 smooth differentiable manifold인 것으로 생각한다. 
 
 ::: 정의 2
-Manifold $M$과 한 점 $p\in M$을 생각하자. $p$의 적당한 열린근방에서 정의된 함수 $f$가 $p$에서 $C^\infty$이라는 것은 $p$를 포함하는 어떤 coordinate chart $(U,\varphi)$에 대하여, 함수 $f\circ\varphi^{-1}:U'\rightarrow \mathbb{R}$이 점 $\varphi(p)$에서 $C^\infty$인 것이다.
+Manifold $M$과 한 점 $p\in M$을 생각하자. $p$의 적당한 열린근방 $W$에서 정의된 함수 $f$가 $p$에서 $C^\infty$이라는 것은 $p$를 포함하는, $M$의 미분구조에 속하는 어떤 coordinate chart $(U,\varphi)$에 대하여, 함수 $f\circ\varphi^{-1}:\varphi(U\cap W)\rightarrow \mathbb{R}$이 점 $\varphi(p)$에서 $C^\infty$인 것이다.
 :::
 
 점 $p$의 또 다른 열린근방에서 coordinate chart $(V,\psi)$가 정의되었다 하자. 만일 $f\circ\varphi^{-1}$이 $\varphi(p)$에서 $C^\infty$이지만 $f\circ\psi^{-1}$은 $\psi(p)$에서 그렇지 않다면 이 정의는 좋은 정의가 아니다. 그러나 $\psi(U\cap V)$에서
@@ -80,11 +81,11 @@ $$\mathcal{A}'=\{(V,\psi)\mid\psi\circ\varphi_\lambda^{-1}, \varphi_\lambda\circ
 
 $$\psi'\circ\psi^{-1}:\psi(V\cap V')\rightarrow\psi'(V\cap V')$$
 
-는 $C^k$이다. 임의의 $p\in\psi(V\cap V')$에 대하여, $p\in U$를 만족하는 $(U,\varphi)\in\mathcal{A}$를 뽑아오면 $U\cap V\cap V'$ 위에서
+는 $C^k$이다. 임의의 $q\in V\cap V'$에 대하여, $q\in U$를 만족하는 $(U,\varphi)\in\mathcal{A}$를 뽑아오면 $\psi(U\cap V\cap V')$ 위에서
 
 $$\psi'\circ\psi^{-1}=(\psi'\circ\varphi^{-1})\circ(\varphi\circ\psi^{-1})$$
 
-가 되어 $\psi'\circ\psi^{-1}$가 점 $p$에서 $C^k$이기 때문이다. 점 $p$는 임의로 택한 점이므로, 이것이 $\psi'\circ\psi^{-1}$이 $C^k$임을 보여준다. 물론 $(V,\psi)$와 $(V',\psi')$의 역할을 바꾸면 반대방향 transition map 또한 $C^k$임을 보일 수 있다. 
+가 되어 $\psi'\circ\psi^{-1}$가 점 $\psi(q)$에서 $C^k$이기 때문이다. 점 $q$는 임의로 택한 점이므로, 이것이 $\psi'\circ\psi^{-1}$이 $C^k$임을 보여준다. 물론 $(V,\psi)$와 $(V',\psi')$의 역할을 바꾸면 반대방향 transition map 또한 $C^k$임을 보일 수 있다. 
 
 당연히 정의에 의해 $\mathcal{A}'$는 maximal $C^k$-atlas가 되고, 이는 유일함을 쉽게 확인할 수 있다. 
 :::
@@ -101,7 +102,7 @@ $$\mathcal{A}_1=\{(\mathbb{R},\id_\mathbb{R})\},\qquad \mathcal{A}_2=\{(\mathbb{
 
 ## Smooth partition of unity
 
-임의의 topological manifold에서는 continuous partition of unity가 존재한다는 것을 보일 수 있었는데, differentiable manifold를 다룰 때는 연속인 partition of unity는 별 도움이 되지 않는다. 가령 임의의 $C^\infty$ 함수를 연속이기만 한 partition of unity와 곱한다면 이 함수의 미분가능한 정도가 바로 약화될 것이다.
+임의의 topological manifold에서는 continuous partition of unity가 존재한다는 것을 보일 수 있었는데 ([\[위상수학\] §Compactness와 paracompactness, ⁋정리 27](/ko/math/topology/compactness#thm27)), differentiable manifold를 다룰 때는 연속인 partition of unity는 별 도움이 되지 않는다. 가령 임의의 $C^\infty$ 함수를 연속이기만 한 partition of unity와 곱한다면 이 함수의 미분가능한 정도가 바로 약화될 것이다.
 
 따라서 우리는 smooth partition of unity를 만들어야 하는데, 이는 다음의 보조정리만 보이면 충분하다.
 
@@ -118,7 +119,7 @@ $$f(t)=\begin{cases}e^{-1/t}&t>0\\0&t\leq 0\end{cases}$$
 
 $$g(t)=\frac{f(t)}{f(t)+f(1-t)}$$
 
-으로 정의하면 $g$는 마찬가지로 항상 음이 아니며, 그 값은 항상 1보다 작거나 같고 특히 $t\geq 1$인 경우 함수값이 항등적으로 1, $t\leq 0$인 경우 함수값이 항등적으로 0이 된다. 따라서 $\psi$를 다음의 식
+으로 정의하자. 분모 $f(t)+f(1-t)$는 $t\leq 0$이면 $f(1-t)>0$이고, $t\geq 1$이면 $f(t)>0$이며, $0<t<1$이면 둘 다 양수이므로 어디에서도 0이 아니고, 따라서 $g$는 $C^\infty$가 된다. 그럼 $g$는 마찬가지로 항상 음이 아니며, 그 값은 항상 1보다 작거나 같고 특히 $t\geq 1$인 경우 함수값이 항등적으로 1, $t\leq 0$인 경우 함수값이 항등적으로 0이 된다. 따라서 $\psi$를 다음의 식
 
 $$\psi(t)=g(t+2)g(2-t)$$
 

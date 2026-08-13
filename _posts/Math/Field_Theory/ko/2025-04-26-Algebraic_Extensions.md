@@ -11,6 +11,8 @@ sidebar:
 date: 2025-04-26
 weight: 2
 
+drift_needed: true
+
 ---
 
 ## 체의 확장
@@ -55,7 +57,7 @@ Field extension $\mathbb{L}_2/\mathbb{L}_1/\mathbb{K}$에 대하여, $[\mathbb{L
 
 $$E \rightarrow E;\qquad y\mapsto xy$$
 
-는 injective이다. 이제 $E$는 유한차원이므로 위의 linear map이 injective인 것은 surjective인 것과 동치이고, 따라서 $xy=1$이도록 하는 $y\in E$가 존재하고 이로부터 원하는 결과를 얻는다. 
+는 injective이다. 이제 $E$는 유한차원이므로 위의 linear map이 injective인 것은 surjective인 것과 동치이고, 따라서 $xy=1$이도록 하는 $y\in E$가 존재한다. 이 때 $L_x, L_y$를 각각 $z\mapsto xz$, $z\mapsto yz$로 정의하면 $L_x$는 bijective이고 $L_x\circ L_y=\id$이므로 $L_y=L_x^{-1}$이며, 따라서 $L_y\circ L_x=\id$에 $z=1$을 대입하면 $yx=1$을 얻고 이로부터 원하는 결과를 얻는다. 
 :::
 
 특히 만일 유한차원 $\mathbb{K}$-algebra $E$가 integral domain이라면, $E$는 반드시 field이다. 
@@ -71,7 +73,7 @@ Field extension $\mathbb{L}/\mathbb{K}$와 부분집합 $A\subseteq \mathbb{L}$�
 ::: 명제 5
  $\mathbb{K}$의 적당한 extension의 두 부분집합 $M,N$에 대하여 다음의 식
 
-$$K(M \cup N) = K(M)(N) = K(N)(M)$$
+$$\mathbb{K}(M \cup N) = \mathbb{K}(M)(N) = \mathbb{K}(N)(M)$$
 
 이 성립한다. 
 :::
@@ -84,7 +86,7 @@ $$K(M \cup N) = K(M)(N) = K(N)(M)$$
  $\mathcal{F}$를 field $E$의 subfield들의 집합이라고 하고, 여기에 포함관계 $\subseteq$를 사용하면 directed set이 된다. 특히, $\mathcal{F}$에 속한 field들의 합집합 $L$은 field이다.
 :::
 
-만일 $\mathbb{L}=\mathbb{K}(A)$이도록 하는 유한집합 $A$가 존재한다면, extension $\mathbb{L}/\mathbb{K}$를 *finite extension*이라 부른다. 그럼 특히 finite degree field extension은 finite extension이다. $\mathbb{L}$을 $\mathbb{K}$-벡터공간으로서의 basis가 $\mathbb{L}$의 field로서의 generator가 될 것이기 때문이다. 
+만일 $\mathbb{L}=\mathbb{K}(A)$이도록 하는 유한집합 $A$가 존재한다면, extension $\mathbb{L}/\mathbb{K}$를 *finite extension*이라 부른다. 그럼 특히 finite degree field extension은 finite extension이다. $\mathbb{L}$의 $\mathbb{K}$-벡터공간으로서의 basis가 $\mathbb{L}$의 field로서의 generator가 될 것이기 때문이다. 
 
 이제 두 개의 $\mathbb{K}$-extension $\mathbb{L}_1/\mathbb{K}$, $\mathbb{L}_2/\mathbb{K}$가 주어졌다 하자. 그럼 우리는 $\mathbb{L}_1$과 $\mathbb{L}_2$를 동시에 포함하는 가장 작은 extension을 생각할 수 있다. 
 
@@ -126,7 +128,7 @@ $\Omega$의 임의의 두 $\mathbb{K}$-subalgebra $E,F$에 대하여, multiplica
 위와 같은 상황에서, multiplication map $\mu: E\otimes_\mathbb{K}F \rightarrow G$가 isomorphism이라면 $E$와 $F$가 *linearly disjoint*라 한다. 
 :::
 
-어렵지 않게 이는 $E$와 $F$의 두 $\mathbb{K}$-basis $(x_i)_{i\in I}$, $(y_j)_{j\in J}$가 주어졌을 때, $(x_iy_j)_{i\in I,j\in J}$가 linearly indepdent가 되는 것과 동치임을 안다. 
+어렵지 않게 이는 $E$와 $F$의 두 $\mathbb{K}$-basis $(x_i)_{i\in I}$, $(y_j)_{j\in J}$가 주어졌을 때, $(x_iy_j)_{i\in I,j\in J}$가 linearly independent가 되는 것과 동치임을 안다. 
 
 특별히 $E,F$가 $\mathbb{K}$-extension인 경우 다음 명제를 얻는다. 
 
@@ -163,14 +165,14 @@ $\Omega$의 임의의 두 $\mathbb{K}$-subalgebra $E,F$에 대하여, multiplica
 
 $$\Frac(\mathbb{K}[\mathbb{L}_1\cup\mathbb{L}_2])=\mathbb{K}(\mathbb{L}_1\cup\mathbb{L}_2)$$
 
-이 성립한다. 더 일반적으로, $S_i\subseteq \mathbb{L}_i$가 $\Frac(S_i)=\mathbb{L}_i$를 만족하는 부분집합들이라 하자. $G$를 $S_1\cup S_2$로 생성되는 ring이라 하면, 우리는 다음의 isomorphism
+이 성립한다. 더 일반적으로, $S_i\subseteq \mathbb{L}_i$가 $\Frac(\mathbb{K}[S_i])=\mathbb{L}_i$를 만족하는 부분집합들이라 하자. $G$를 $\mathbb{K}\cup S_1\cup S_2$로 생성되는 ring이라 하면, 우리는 다음의 isomorphism
 
 $$\Frac(G)\cong \mathbb{K}(\mathbb{L}_1\cup\mathbb{L}_2)$$
 
 을 얻는다. 다음 명제는 이 관찰을 linearly disjoint extension의 언어로 확장한 것이다. 
 
 ::: 명제 11
- 두 $\mathbb{K}$의 두 extension이라 하고, $E_1$, $E_2$가 $\Omega$의 $\mathbb{K}$-subalgebra들이라 하자. $\mathbb{L}_i=\Frac(E_i)$라 하면, $\mathbb{L}_1$와 $\mathbb{L}_2$가 linearly disjoint인 것과 $E_1$와 $E_2$가 linearly disjoint인 것이 동치이다. 
+ $E_1$, $E_2$가 $\Omega$의 $\mathbb{K}$-subalgebra들이라 하자. $\mathbb{L}_i=\Frac(E_i)$라 하면, $\mathbb{L}_1$와 $\mathbb{L}_2$가 linearly disjoint인 것과 $E_1$와 $E_2$가 linearly disjoint인 것이 동치이다. 
 :::
 ::: 증명
 한쪽 방향은 자명하므로 $E_1, E_2$가 linearly disjoint라 가정하자. 그럼 우선 $E_1$과 $\mathbb{L}_2$가 linearly disjoint임을 보일 수 있는데, $\Omega$의 임의의 $E_2$-free family는 $\mathbb{L}_2$-free이기도 하기 때문이다. 이제 같은 논리로 $\mathbb{L}_1$와 $\mathbb{L}_2$가 linearly disjoint이다. 
@@ -179,19 +181,19 @@ $$\Frac(G)\cong \mathbb{K}(\mathbb{L}_1\cup\mathbb{L}_2)$$
 한편, 임의의 family의 linear combination은 (그 family가 무한하더라도) 유한한 합으로만 이루어지므로 다음이 성립한다. 
 
 ::: 명제 12
-두 $\mathbb{K}$-extension $\mathbb{L}_1$, $\mathbb{L}_2$를 field $\mathbb{K}$을 생각하자. 만약 $\mathbb{L}_1$와 $\mathbb{L}_2$가 linearly disjoint하다면, $\mathbb{L}_1$의 모든 subextension과 $\mathbb{L}_2$의 모든 subextension도 $\mathbb{K}$ 위에서 linearly disjoint하다. 거꾸로  $\mathbb{L}_i$들의 모든 finitely generated subextension $\mathbb{L}_i'$들에 대해 $\mathbb{L}_1'$와 $\mathbb{L}_2'$가  linearly disjoint하다면, $\mathbb{L}_1$와 $\mathbb{L}_2$도 linearly disjoint하다.
+Field $\mathbb{K}$의 두 extension $\mathbb{L}_1$, $\mathbb{L}_2$를 생각하자. 만약 $\mathbb{L}_1$와 $\mathbb{L}_2$가 linearly disjoint하다면, $\mathbb{L}_1$의 모든 subextension과 $\mathbb{L}_2$의 모든 subextension도 $\mathbb{K}$ 위에서 linearly disjoint하다. 거꾸로  $\mathbb{L}_i$들의 모든 finitely generated subextension $\mathbb{L}_i'$들에 대해 $\mathbb{L}_1'$와 $\mathbb{L}_2'$가  linearly disjoint하다면, $\mathbb{L}_1$와 $\mathbb{L}_2$도 linearly disjoint하다.
 :::
 
 즉, 임의의 두 extension이 linearly disjoint인지의 여부는 두 extension의 임의의 finite subextension들만 봐도 확인할 수 있다. 
 
 ::: 명제 13
- 세 $\mathbb{K}$-extension $\mathbb{L},\mathbb{M}_1,\mathbb{M}_2$이 주어졌다 하고, $\mathbb{M}_1 \subseteq \mathbb{M}_2$라고 하자. 그럼 $\mathbb{L}$과 $\mathbb{M}_2$가 linearly disjoint인 것과, $\mathbb{L}$와 $\mathbb{M}_1$가 linearly disjoint인 동시에 $\mathbb{L}(\mathbb{M}_1)$와 $\mathbb{M}_2$가 linearly disjoint인 것이 서로 동치이다. 
+ 세 $\mathbb{K}$-extension $\mathbb{L},\mathbb{M}_1,\mathbb{M}_2$이 주어졌다 하고, $\mathbb{M}_1 \subseteq \mathbb{M}_2$라고 하자. 그럼 $\mathbb{L}$과 $\mathbb{M}_2$가 linearly disjoint인 것과, $\mathbb{L}$와 $\mathbb{M}_1$가 linearly disjoint인 동시에 $\mathbb{L}(\mathbb{M}_1)$와 $\mathbb{M}_2$가 $\mathbb{M}_1$ 위에서 linearly disjoint인 것이 서로 동치이다. 
 :::
 
 ::: 증명
-우선  $\mathbb{L}$과 $\mathbb{M}_2$가 linearly disjoint하다고 가정하자. 그럼 [명제 12](#prop12)에 의하여 $\mathbb{L}$와 $\mathbb{M}_1$도 linearly disjoint이다. 한편, $\mathbb{L}$의 $\mathbb{K}$-basis는 $\mathbb{M}_1[\mathbb{L}]$의 $\mathbb{M}_1$-basis이기도 하다. 그런데 가정에 의해 이 basis는 $\mathbb{M}_2$-free이므로, $\mathbb{M}_1[\mathbb{L}]$와 $\mathbb{M}_2$는 linearly disjoint이다. 또, [명제 11](#prop11)에 의해 $\mathbb{L}(\mathbb{M}_1) = \mathbb{M}_1(\mathbb{L})$와 $\mathbb{M}_2$ 역시 linearly disjoint하다.
+우선  $\mathbb{L}$과 $\mathbb{M}_2$가 linearly disjoint하다고 가정하자. 그럼 [명제 12](#prop12)에 의하여 $\mathbb{L}$와 $\mathbb{M}_1$도 linearly disjoint이다. 한편, $\mathbb{L}$의 $\mathbb{K}$-basis는 $\mathbb{M}_1[\mathbb{L}]$의 $\mathbb{M}_1$-basis이기도 하다. 그런데 가정에 의해 이 basis는 $\mathbb{M}_2$-free이므로, $\mathbb{M}_1[\mathbb{L}]$와 $\mathbb{M}_2$는 $\mathbb{M}_1$ 위에서 linearly disjoint이다. 또, [명제 11](#prop11)에 의해 $\mathbb{L}(\mathbb{M}_1) = \mathbb{M}_1(\mathbb{L})$와 $\mathbb{M}_2$ 역시 $\mathbb{M}_1$ 위에서 linearly disjoint하다.
 
-이제 반대방향을 보이자. 위에서와 마찬가지로 $\mathbb{L}$의 $\mathbb{K}$-basis $B$를 생각하면, 가정으로부터 $B$는 $\mathbb{M}_1$-free이다. 따라서 $B$는 $\mathbb{M}_1[\mathbb{L}]$의 $\mathbb{M}_1$-basis이며, 다시 가정에 의해 $\mathbb{M}_1[\mathbb{L}]$와 $\mathbb{M}_2$는 linearly disjoint이므로 원하는 결과를 얻는다.
+이제 반대방향을 보이자. 위에서와 마찬가지로 $\mathbb{L}$의 $\mathbb{K}$-basis $B$를 생각하면, 가정으로부터 $B$는 $\mathbb{M}_1$-free이다. 따라서 $B$는 $\mathbb{M}_1[\mathbb{L}]$의 $\mathbb{M}_1$-basis이며, 다시 가정에 의해 $\mathbb{M}_1[\mathbb{L}]$와 $\mathbb{M}_2$는 $\mathbb{M}_1$ 위에서 linearly disjoint이므로 원하는 결과를 얻는다.
 :::
 
 Field $\mathbb{K}$, $\mathbb{K}$-algebra $E$를 생각하자. 그럼 임의의 $x\in E$에 대하여, 다음 둘 중 정확히 하나가 성립한다.
@@ -202,13 +204,13 @@ Field $\mathbb{K}$, $\mathbb{K}$-algebra $E$를 생각하자. 그럼 임의의 $
 ::: 정의 14
 위와 같은 상황에서, 만일 첫 번째 경우가 성립한다면 $x\in E$가 *transcendental<sub>초월적</sub>*이라 부르고, 두 번째 경우가 성립한다면 $x$를 *algebraic<sub>대수적</sub>*이라 부른다. 
 
-이제 $x\in E$가 algebraic이라 하자. 그럼 $1,x,\ldots, x^{n-1}$이 $\mathbb{K}$-linearly dependent이도록 하는 $n$ 중 가장 작은 것을 $x$의 *degree<sub>차수</sub>*라 하고, 이 때의 linear combination
+이제 $x\in E$가 algebraic이라 하자. 그럼 $1,x,\ldots, x^{n}$이 $\mathbb{K}$-linearly dependent이도록 하는 $n$ 중 가장 작은 것을 $x$의 *degree<sub>차수</sub>*라 하고, 이 때의 linear combination
 
 $$a_nx^n+a_{n-1}x^{n-1}+\cdots+a_1x+a_0=0$$
 
 에 대하여, 다음의 다항식
 
-$$f(\x)=\x^n-\sum_{k=0}^{n-1}\frac{a_k}{a_n}\x^k$$
+$$f(\x)=\x^n+\sum_{k=0}^{n-1}\frac{a_k}{a_n}\x^k$$
 
 을 $x$의 *minimal polynomial<sub>최소다항식</sub>*이라 부른다. 
 :::
@@ -260,7 +262,7 @@ Field extension $\mathbb{M}/\mathbb{L}/\mathbb{K}$에 대하여, $\mathbb{M}$이
 
 우선 가정에 의해 $x$는 $\mathbb{L}$ 위에서 algebraic하다. $g \in \mathbb{L}[\x]$를 $x$의 minimal polynomial이라 하고, $g$의 계수들의 집합을 $A$라 하자. 그러면 $g \in \mathbb{K}(A)[\x]$가 되고, 따라서 $x$는 $\mathbb{K}(A)$ 위에서 algebraic하다.
 
-또한 $\mathbb{K}(A \cup \{x\}) = \mathbb{K}(A)(x)$는 $\mathbb{K}(A)$ 위에서 finite degree를 가진다. $A \subseteq \mathbb{L}$이고, $\mathbb{L}$가 $\mathbb{K}$ 위에서 algebraic이므로 [정리 18](#thm18)에 의해 $\mathbb{K}(A)$는 $\mathbb{K}$ 위에서 finite degree를 가진다. 이로부터 $\mathbb{K}(A \cup \{x\})$는 $\mathbb{K}$ 위에서 finite degree를 가지고, 따라서 $x$가 $\mathbb{K}$에 대해 algebraic이다. 
+또한 $\mathbb{K}(A \cup \{x\}) = \mathbb{K}(A)(x)$는 $\mathbb{K}(A)$ 위에서 finite degree를 가진다. $A$는 $g$의 계수들로 이루어진 유한집합이며 $A \subseteq \mathbb{L}$이고, $\mathbb{L}$가 $\mathbb{K}$ 위에서 algebraic이므로 [정리 18](#thm18)에 의해 $\mathbb{K}(A)$는 $\mathbb{K}$ 위에서 finite degree를 가진다. 이로부터 $\mathbb{K}(A \cup \{x\})$는 $\mathbb{K}$ 위에서 finite degree를 가지고, 따라서 $x$가 $\mathbb{K}$에 대해 algebraic이다. 
 :::
 
 ---

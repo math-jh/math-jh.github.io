@@ -10,11 +10,13 @@ sidebar:
 
 date: 2026-06-20
 
+drift_needed: true
+
 weight: 1
 
 ---
 
-이 글에서 우리는 ring의 곱셈 구조에서 가장 기본적인 두 부류의 원소, 즉 곱셈에 대한 역원을 갖는 *unit*과, 곱하여 $0$을 만드는 짝을 갖는 *zero divisor*를 정리한다. 이 두 개념은 이미 여러 곳에서 암묵적으로 쓰였다. Integral domain은 zero divisor가 없는 commutative ring으로 정의되었고 ([\[대수적 구조\] §분수체, ⁋정의 5](/ko/math/algebraic_structures/field_of_fractions#def5)), field는 모든 nonzero 원소가 unit인 division ring이었다 ([\[대수적 구조\] §분수체, ⁋정의 3](/ko/math/algebraic_structures/field_of_fractions#def3)). 여기서는 unit을 본격적으로 정의하여 그 모임이 group을 이룸을 확인하고, unit과 zero divisor가 서로 배타적임을 보인 뒤, 유한commutative ring에서는 zero divisor가 아닌 모든 원소가 자동으로 unit이 된다는 사실을 증명한다. 그 직접적 귀결로 유한 integral domain이 field임을 얻는다.
+이 글에서 우리는 ring의 곱셈 구조에서 가장 기본적인 두 부류의 원소, 즉 곱셈에 대한 역원을 갖는 *unit*과, 곱하여 $0$을 만드는 짝을 갖는 *zero divisor*를 정리한다. 이 두 개념은 이미 여러 곳에서 암묵적으로 쓰였다. Integral domain은 zero divisor가 없는 commutative ring으로 정의되었고 ([\[대수적 구조\] §분수체, ⁋정의 5](/ko/math/algebraic_structures/field_of_fractions#def5)), field는 모든 nonzero 원소가 unit인 commutative ring이었다 ([\[대수적 구조\] §분수체, ⁋정의 3](/ko/math/algebraic_structures/field_of_fractions#def3)). 여기서는 unit을 본격적으로 정의하여 그 모임이 group을 이룸을 확인하고, unit과 zero divisor가 서로 배타적임을 보인 뒤, finite ring에서는 zero divisor가 아닌 모든 원소가 자동으로 unit이 된다는 사실을 증명한다. 그 직접적 귀결로 finite integral domain이 field임을 얻는다.
 
 별도의 언급이 없는 한 $A$는 항등원 $1\neq 0$을 갖는 ring이며, commutativity는 필요한 곳에서 그때그때 명시한다.
 
@@ -66,11 +68,11 @@ Ring $\mathbb{Z}$에서 $uv=1$을 만족하는 정수 $u,v$는 $u=v=1$ 또는 $u
 Ring $A$의 임의의 unit은 regular element이다.
 :::
 ::: 증명
-결론에 반하여 $u\in A^\times$이라 하고 적당한 $b\neq 0$에 대해 $ub=0$이라 하자. 양변의 왼쪽에 $u^{-1}$을 곱하면
+$u\in A^\times$이라 하고, 결론에 반하여 적당한 $b\neq 0$에 대해 $ub=0$이라 하자. 양변의 왼쪽에 $u^{-1}$을 곱하면
 
 $$b=1\cdot b=(u^{-1}u)b=u^{-1}(ub)=u^{-1}\cdot 0=0$$
 
-이므로 $b=0$이므로 이는 모순이다. 비슷한 논증이 $bu=0$이라 가정해도 성립하며 따라서 $u$는 regular element이다.
+이므로 $b=0$이고, 이는 $b\neq 0$에 모순이다. 비슷한 논증이 $bu=0$이라 가정해도 성립하며 따라서 $u$는 regular element이다.
 :::
 
 위의 [명제 4](#prop4)는 임의의 unit이 regular임을 보여주지만, 일반적으로 그 역은 성립하지 않는다. 가령 $\mathbb{Z}$에서 $2$는 regular element인 것을 쉽게 확인할 수 있지만 $2$는 $\mathbb{Z}$의 unit이 아니다. ([예시 2](#ex2))
@@ -106,7 +108,7 @@ $n\geq 1$에 대해 정의된 ring $\mathbb{Z}/n\mathbb{Z}$를 보자. 이 ring�
 
 $$(a+n\mathbb{Z})(x+n\mathbb{Z})=1+n\mathbb{Z}$$
 
-인 것, 즉 적당한 정수 $x,k$에 대해 $ax-kn=1$이 성립하는 것이다. [\[정수론\] §유클리드 호제법과 Bézout 항등식, ⁋정리 3](/ko/math/number_theory/euclidean_algorithm#thm3)에 의해 이러한 $x,k$가 존재하는 것은 $\gcd(a,n)=1$, 즉 $a$가 $n$과 서로소인 것과 동치이므로,
+인 것, 즉 적당한 정수 $x,k$에 대해 $ax-kn=1$이 성립하는 것이다. [\[정수론\] §유클리드 호제법과 Bézout 항등식, ⁋명제 5](/ko/math/number_theory/euclidean_algorithm#prop5)에 의해 이러한 $x,k$가 존재하는 것은 $\gcd(a,n)=1$, 즉 $a$가 $n$과 서로소인 것과 동치이므로,
 
 $$(\mathbb{Z}/n\mathbb{Z})^\times=\{a+n\mathbb{Z}\mid\gcd(a,n)=1\}$$
 
@@ -118,7 +120,7 @@ $$(a+n\mathbb{Z})(n/d+n\mathbb{Z})=a\cdot(n/d)+n\mathbb{Z}=(a/d)n+n\mathbb{Z}=0+
 
 이기 때문이다. 따라서 $\mathbb{Z}/n\mathbb{Z}$의 모든 nonzero 원소는 unit이거나 zero divisor이며, 이 분류가 다시 [정리 5](#thm5)를 잘 보여준다. 
 
-특히 $n=p$가 소수이면 $1,\ldots,p-1$이 모두 $p$와 서로소이므로 $(\mathbb{Z}/p\mathbb{Z})^\times=\mathbb{Z}/p\mathbb{Z}\setminus\{0+p\mathbb{Z}\}$이고, $\mathbb{Z}/p\mathbb{Z}$는 zero divisor를 갖지 않는 유한 integral domain이다. [따름정리 6](#cor6)에 의해 이는 field이며, 이것이 $p$개의 원소를 갖는 *prime field<sub>소체</sub>* $\mathbb{F}_p$이다 ([\[체론\] §체, §§소체](/ko/math/field_theory/fields#소체)).
+특히 $n=p$가 소수이면 $1,\ldots,p-1$이 모두 $p$와 서로소이므로 $(\mathbb{Z}/p\mathbb{Z})^\times=\mathbb{Z}/p\mathbb{Z}\setminus\{0+p\mathbb{Z}\}$이고, $\mathbb{Z}/p\mathbb{Z}$는 $0$ 이외의 zero divisor를 갖지 않는 finite integral domain이다. [따름정리 6](#cor6)에 의해 이는 field이며, 이것이 $p$개의 원소를 갖는 *prime field<sub>소체</sub>* $\mathbb{F}_p$이다 ([\[체론\] §체, §§소체](/ko/math/field_theory/fields#소체)).
 :::
 
 한편, product ring의 unit group은 성분별로 결정된다. 이는 product ring에서 곱셈이 성분별로 계산되기 때문이다.
@@ -143,11 +145,11 @@ $$A^\times\rightarrow A_1^\times\times\cdots\times A_n^\times;\quad (a_1,\ldots,
 한편 matrix ring의 경우 unit group은 general linear group이 된다.
 
 ::: 예시 9
-Ring $R$을 각 성분으로 갖는 $n\times n$ 행렬들의 ring $\Mat_n(R)$을 생각하자. 정의상 $\Mat_n(R)$의 unit은 곱셈에 대한 양쪽 역원을 갖는 행렬, 즉 invertible matrix이다. 이러한 행렬 전체의 모임을 *general linear group<sub>일반선형군</sub>*이라 부르고 $\GL(n;R)$으로 쓴다. 즉
+Ring $R$의 원소를 각 성분으로 갖는 $n\times n$ 행렬들의 ring $\Mat_n(R)$을 생각하자. 정의상 $\Mat_n(R)$의 unit은 곱셈에 대한 양쪽 역원을 갖는 행렬, 즉 invertible matrix이다. 이러한 행렬 전체의 모임을 *general linear group<sub>일반선형군</sub>*이라 부르고 $\GL(n;R)$으로 쓴다. 즉
 
 $$\Mat_n(R)^\times=\GL(n;R)$$
 
-이다 ([\[다중선형대수학\] §행렬, ⁋정의 1](/ko/math/multilinear_algebra/matrices#def1)). $R$가 commutative ring이면 행렬 $M\in \Mat_n(R)$이 invertible인 것과 그 행렬식 $\det M$이 $R^\times$의 원소인 것이 동치라는 것이 알려져 있다. ([\[다중선형대수학\] §행렬식, ⁋따름정리 3](/ko/math/multilinear_algebra/determinants#cor3)) 즉 이 경우
+이다 ([\[다중선형대수학\] §기저변환, ⁋정의 3](/ko/math/multilinear_algebra/change_of_basis#def3)). $R$가 commutative ring이면 행렬 $M\in \Mat_n(R)$이 invertible인 것과 그 행렬식 $\det M$이 $R^\times$의 원소인 것이 동치라는 것이 알려져 있다. ([\[다중선형대수학\] §행렬식, ⁋따름정리 3](/ko/math/multilinear_algebra/determinants#cor3)) 즉 이 경우
 
 $$\GL(n;R)=\{M\in \Mat_n(R)\mid\det M\in R^\times\}$$
 

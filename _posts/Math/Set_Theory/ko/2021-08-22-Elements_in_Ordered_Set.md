@@ -10,6 +10,7 @@ sidebar:
 
 date: 2021-08-22
 weight: 16
+drift_needed: true
 
 ---
 
@@ -26,7 +27,7 @@ weight: 16
 ## 극대원소와 극소원소
 
 ::: 정의 1
-Ordered set $A$의 원소 $a$가 $A$의 *minimal element<sub>극소원소</sub>* (resp. *maximal element<sub>극대원소</sub>*)라는 것은 모든 $x\in A$에 대하여 $a\leq x$ (resp. $a\geq x$)이면 $x=a$가 성립하는 것이다.
+Ordered set $A$의 원소 $a$가 $A$의 *minimal element<sub>극소원소</sub>* (resp. *maximal element<sub>극대원소</sub>*)라는 것은 모든 $x\in A$에 대하여 $x\leq a$ (resp. $x\geq a$)이면 $x=a$가 성립하는 것이다.
 :::
 
 Minimal element가 유일할 필요는 없다. 예컨대
@@ -50,17 +51,17 @@ Ordered set $A$의 원소 $a$가 $A$의 *least element<sub>최소원소</sub>* (
 ::: 증명
 $A$의 임의의 원소 $x$에 대하여 $a\leq x$가 성립한다. 따라서 만일 $x\leq a$가 성립하는 $x\in A$가 존재한다면, $\leq$의 antisymmetry로부터 $x=a$여야 한다. 이로부터 $a$가 $A$의 minimal element가 된다는 것을 안다. 
 
-만일 $a'$가 $A$의 다른 minimal element이고, $a'\neq a$라면 [정의 1](#def1)의 대우명제로부터 $a'\not\leq a$여야 하는데, 이는 $a$가 least element라는 사실에 모순이므로 $a'=a$여야 한다.
+만일 $a'$가 $A$의 다른 minimal element이고, $a'\neq a$라면 [정의 1](#def1)의 대우명제로부터 $a\not\leq a'$여야 하는데, 이는 $a$가 least element라는 사실에 모순이므로 $a'=a$여야 한다.
 :::
 
 때때로 ordered set의 모든 원소보다 큰 새로운 원소, 혹은 모든 원소보다 작은 새로운 원소를 생각해야 할 필요가 있다. 이러한 가상의 원소는 $\pm\infty$으로 쓰는 것이 보편적이다.
 
 ::: 명제 4
-$A$가 ordered set이고 $A'=A\sqcup\{+\infty\}$이라 하자. 그럼 $A$에서 정의된 order relation을 확장하며, $a$를 greatest element로 갖는 $A'$의 order relation이 존재한다.
+$A$가 ordered set이고 $A'=A\sqcup\{+\infty\}$이라 하자. 그럼 $A$에서 정의된 order relation을 확장하며, $+\infty$를 greatest element로 갖는 $A'$의 order relation이 존재한다.
 :::
 
 ::: 증명
-기존의 order relation에 $\bigcup_{x\in A}\left\{(x, +\infty)\right\}$의 원소들을 추가해주면 된다.
+기존의 order relation에 $\bigcup_{x\in A'}\left\{(x, +\infty)\right\}$의 원소들을 추가해주면 된다.
 :::
 
 ## 상한과 하한
@@ -120,7 +121,7 @@ Ordered set $A$에 대해, 모든 $i\in I$에 대해 $x_i\leq y_i$를 만족하�
 :::
 
 ::: 증명
-$b_k=\sup_{i\in J_k} x_i$라 적자. 우선 $(x_i)_{i\in I}$가 supremum을 갖는다고 하고, 이를 $a$라 하자. 그럼 $a\leq b_k$가 모든 $k$에 대해 성립한다. 또, 만약 $c\geq b_k$가 모든 $k$에 대해 성립한다면, 임의의 $x_i$에 대해서 $i\in J_{k'}$인 $k'$는 $b_{k'}\geq x_i$를 만족하고, 따라서 어떠한 $i$에 대해서도 $c\geq x_i$이다. 이제 $a$의 최소성에 의해 $c\geq a$이어야 하고, 따라서 $a$가 supremum이며 $\sup_{i\in I}x_i=\sup_{k\in K}(\sup_{j\in J_k} x_j)$이다.  
+$b_k=\sup_{i\in J_k} x_i$라 적자. 우선 $(x_i)_{i\in I}$가 supremum을 갖는다고 하고, 이를 $a$라 하자. 그럼 $a\geq b_k$가 모든 $k$에 대해 성립한다. 또, 만약 $c\geq b_k$가 모든 $k$에 대해 성립한다면, 임의의 $x_i$에 대해서 $i\in J_{k'}$인 $k'$는 $b_{k'}\geq x_i$를 만족하고, 따라서 어떠한 $i$에 대해서도 $c\geq x_i$이다. 이제 $a$의 최소성에 의해 $c\geq a$이어야 하고, 따라서 $a$가 supremum이며 $\sup_{i\in I}x_i=\sup_{k\in K}(\sup_{j\in J_k} x_j)$이다.  
 
 반대로 $(b_k)_{k\in K}$가 supremum $a'$를 갖는다 해도 위와 같은 방법으로 증명을 완료할 수 있다.
 :::
@@ -129,9 +130,9 @@ $b_k=\sup_{i\in J_k} x_i$라 적자. 우선 $(x_i)_{i\in I}$가 supremum을 갖�
  Ordered set $(A_i)_{i\in I}$들의 곱 $A=\prod A_i$와 그 부분집합 $X$에 대해 $X_i=\pr_i X$라 하자. 그럼 $\sup_AX$가 존재하는 것과 각각의 $\sup_{A_i}X_i$가 존재하는 것은 동치이며, $\sup_AX=(\sup_{A_i}X_i)$이다.
 :::
 ::: 증명
-우선 $\sup_{A_i} X_i$가 각각의 $i$에 대해 존재한다고 하자. 그럼 $(\sup_{A_i} X_i)_{i\in I}$가 $X$의 upper bound임은 자명하다. 만일 $(c_i)$가 $X$의 다른 upper bound였다면, 각각의 $c_i$는 $X_i$의 upper bound가 될 것이므로 $\sup_{A_i}X_i$의 최소성에 의해 $c_i\geq\sup X_i$이고, 따라서 $(c_i)\geq(\sup X_i)_{i\in I}$이다.  
+우선 $\sup_{A_i} X_i$가 각각의 $i$에 대해 존재한다고 하자. 그럼 임의의 $x=(x_i)_{i\in I}\in X$에 대하여 $x_i\in X_i$이므로 $x_i\leq\sup_{A_i}X_i$이고, 따라서 $(\sup_{A_i} X_i)_{i\in I}$는 $X$의 upper bound이다. 만일 $(c_i)$가 $X$의 다른 upper bound였다면, 각각의 $c_i$는 $X_i$의 upper bound가 될 것이므로 $\sup_{A_i}X_i$의 최소성에 의해 $c_i\geq\sup X_i$이고, 따라서 $(c_i)\geq(\sup X_i)_{i\in I}$이다.  
 
-반대로 $\sup X=(a_i)$가 존재한다고 하자. 모든 $i$에 대해서, $a_i$는 $X_i$의 upper bound이다. 만일 $x_i\in X_i$라면, $i$번째 성분으로 $x_i$를 갖는 $x\in X$가 $x\leq (a_i)$이도록 하는 $x$가 존재하기 때문이다. 이제 임의의 다른 upper bound $a_i'$에 대해, 새로운 원소 $(c_i)$를 $(a_i)$의 $i$번째 성분을 $a_i'$로 바꾸어 정의하면 $c\geq a$이므로 $a_i'\geq a_i$가 된다. 
+반대로 $\sup X=(a_i)$가 존재한다고 하자. 모든 $i$에 대해서, $a_i$는 $X_i$의 upper bound이다. 만일 $x_i\in X_i$라면, $i$번째 성분으로 $x_i$를 갖는 $x\in X$가 존재하고 이 $x$가 $x\leq (a_i)$를 만족하기 때문이다. 이제 임의의 다른 upper bound $a_i'$에 대해, 새로운 원소 $(c_i)$를 $(a_i)$의 $i$번째 성분을 $a_i'$로 바꾸어 정의하면 $c\geq a$이므로 $a_i'\geq a_i$가 된다. 
 :::
 
 ::: remark 참고 {#rmk}
@@ -148,7 +149,7 @@ $b_k=\sup_{i\in J_k} x_i$라 적자. 우선 $(x_i)_{i\in I}$가 supremum을 갖�
  $A$가 ordered set이고, $X'\subseteq X\subseteq A$이라 하자. 만일 $\sup_AX'$와 $\sup_XX'$이 모두 존재한다면 $\sup_AX'\leq\sup_XX'$이다. 만일 $\sup_AX'$이 존재하고 $X$에 속한다면 $\sup_XX'$도 존재하고 이 값은 $\sup_AX'$와 같다.
 :::
 ::: 증명
-$X'$의 $X$에서의 upper bound들의 집합은 $A$에서의 upper bound들의 집합에 포함되고, 따라서 supremum은 더 크다. 만일 $\sup_AX'$가 존재하고 $X$에 속한다면, 이는 자명하게 $X$에서의 $X'$의 supremum이 된다.
+$X'$의 $X$에서의 upper bound들의 집합은 $A$에서의 upper bound들의 집합에 포함되고, 따라서 supremum은 더 크다. 만일 $\sup_AX'$가 존재하고 $X$에 속한다면, 이는 $X'$의 $X$에서의 upper bound이며 $A$에서의 최소성에 의해 $X$에서의 upper bound들 사이에서도 최소성을 가지므로, $X$에서의 $X'$의 supremum이 된다.
 :::
 
 

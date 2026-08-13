@@ -10,6 +10,7 @@ sidebar:
 
 date: 2026-07-03
 weight: 15
+drift_needed: true
 ---
 
 우리는 [§다변수함수와 편미분](/ko/math/calculus/partial_derivatives)에서 다변수함수들을 정의하고, 이들의 미분을 살펴보았다. 이제는 적분을 살펴볼 차례다.
@@ -34,7 +35,7 @@ $$\int\cdots\int_R f(x_1,\ldots,x_n) \dd{x_1}\cdots \dd{x_n}$$
 로도 쓰기도 한다.
 :::
 
-차원에 따라 이 적분은 서로 다른 양을 계산한다. $n=1$이면 익숙한 정적분, 곧 곡선 아래의 넓이를 계산하는 것이다. $n=2$이고 $f\geq 0$이면, 이것이 계산하는 양은 밑면이 영역 $R$이고 윗면이 곡면 $z=f(x,y)$인 입체의 부피가 되며, 이 경우를 특별히 *이중적분<sub>double integral</sub>*이라 부른다. 위의 $\dd{V}$는 $n$-차원 부피를 염두에 둔 표기이지만, $2$차원 부피, 즉 넓이는 우리가 이미 익숙한 대상이므로 이를 나타낼 때는 관례적으로
+차원에 따라 이 적분은 서로 다른 양을 계산한다. $n=1$이면 익숙한 정적분, 곧 곡선 아래의 넓이를 계산하는 것이다. $n=2$이고 $f\geq 0$이면, 이것이 계산하는 양은 밑면이 영역 $R$이고 윗면이 곡면 $z=f(x,y)$인 입체의 부피가 되며, $n=2$인 경우를 특별히 *이중적분<sub>double integral</sub>*이라 부른다. 위의 $\dd{V}$는 $n$-차원 부피를 염두에 둔 표기이지만, $2$차원 부피, 즉 넓이는 우리가 이미 익숙한 대상이므로 이를 나타낼 때는 관례적으로
 
 $$\iint_R f \dd{A}$$
 
@@ -99,7 +100,7 @@ $$\int_0^1 \int_0^y e^{y^2} \dd{x} \dd{y} = \int_0^1 y e^{y^2} \dd{y} = \frac{1}
 한 변수의 치환적분에 대응하는 것이 다변수의 변수변환이며, 길이 비율 $g'$의 자리에 야코비 행렬식이 들어간다.
 
 ::: 정리 4 (변수변환)
-일대일 $C^1$ 사상 $\mathbf{x} = \mathbf{T}(\mathbf{u})$가 영역 $D'\subseteq \mathbb{R}^n$을 $D$로 보내고 야코비 행렬식이 $D'$에서 $0$이 아니면
+$C^1$ 사상 $\mathbf{x} = \mathbf{T}(\mathbf{u})$가 영역 $D'\subseteq \mathbb{R}^n$을 $D$로 보내고 $D'$의 내부에서 일대일이며 야코비 행렬식이 $0$이 아니면, $D$에서 연속인 $f$에 대하여
 
 $$\int_D f(\mathbf{x}) \dd{V} = \int_{D'} f(\mathbf{T}(\mathbf{u})) \lvert \det J_{\mathbf{T}}(\mathbf{u})\rvert \dd{V'}$$
 
@@ -109,9 +110,9 @@ $$J_{\mathbf{T}}=\begin{pmatrix} \partial x_1/\partial u_1 & \cdots & \partial x
 
 이다.
 :::
-역시 이 또한 우리는 선형대수의 내용은 블랙박스로 두기로 하였으므로, 그 증명은 해석학에 미뤄둔다. 어쨌든 중요한 것은 직관으로, 야코비 행렬식 $\lvert\det J_{\mathbf{T}}\rvert$은 $\mathbf{T}$가 부피를 늘이는 국소 비율이다. 즉, $\mathbf{u}$ 공간의 작은 상자가 $\mathbf{T}$에 의해 $\mathbf{x}$ 공간의 작은 평행육면체로 옮겨지는데, 그 부피가 원래 상자의 부피에 $\lvert\det J_{\mathbf{T}}\rvert$를 곱해준 것이 되므로 부피 원소는 $\dd{V} = \lvert\det J_{\mathbf{T}}(\mathbf{u})\rvert \dd{V}'$로 변환된다. $n=2$에서 평행육면체는 평행사변형이 되어, 두 변 $\mathbf{T}_u \Delta u$와 $\mathbf{T}_v \Delta v$ ($\mathbf{T}_u, \mathbf{T}_v$는 $\mathbf{T}$의 편도함수 벡터) 가 이루는 넓이가 바로 $\lvert\det J_{\mathbf{T}}\rvert \Delta u \Delta v$인 것이다. 이 식을 리만 합에 대입해 극한을 취한 것이 [정리 4](#thm4)이며, 절댓값을 붙이는 이유는 부피가 항상 양수이기 때문이다.
+역시 이 또한 우리는 선형대수의 내용은 블랙박스로 두기로 하였으므로, 그 증명은 해석학에 미뤄둔다. 어쨌든 중요한 것은 직관으로, 야코비 행렬식 $\lvert\det J_{\mathbf{T}}\rvert$은 $\mathbf{T}$가 부피를 늘이는 국소 비율이다. 즉, $\mathbf{u}$ 공간의 작은 상자가 $\mathbf{T}$에 의해 $\mathbf{x}$ 공간의 작은 평행육면체로 옮겨지는데, 그 부피가 원래 상자의 부피에 $\lvert\det J_{\mathbf{T}}\rvert$를 곱해준 것이 되므로 부피 원소는 $\dd{V} = \lvert\det J_{\mathbf{T}}(\mathbf{u})\rvert \dd{V'}$로 변환된다. $n=2$에서 평행육면체는 평행사변형이 되어, 두 변 $\mathbf{T}_u \Delta u$와 $\mathbf{T}_v \Delta v$ ($\mathbf{T}_u, \mathbf{T}_v$는 $\mathbf{T}$의 편도함수 벡터) 가 이루는 넓이가 바로 $\lvert\det J_{\mathbf{T}}\rvert \Delta u \Delta v$인 것이다. 이 식을 리만 합에 대입해 극한을 취한 것이 [정리 4](#thm4)이며, 절댓값을 붙이는 이유는 부피가 항상 양수이기 때문이다.
 
-변수변환의 가장 흔한 쓰임은 좌표계를 바꾸는 것으로, 우리는 $2\times 2$ 행렬과 $3\times 3$ 행렬의 행렬식만 도입하였으므로 이들이 우리 예시의 전부이다. 
+변수변환의 가장 흔한 쓰임은 coordinate system을 바꾸는 것으로, 우리는 $2\times 2$ 행렬과 $3\times 3$ 행렬의 행렬식만 도입하였으므로 이들이 우리 예시의 전부이다. 
 
 ::: 예시 5 (이중적분의 변수변환 — 극좌표)
 이중적분에서 가장 흔한 변환은 극좌표 $x = r\cos\theta$, $y = r\sin\theta$이다. 그럼 그 야코비 행렬식은
@@ -127,7 +128,7 @@ $$\iint_D e^{-(x^2+y^2)} \dd{A} = \int_0^{2\pi} \int_0^1 e^{-r^2} r \dd{r}\dd{\t
 
 위의 예시를 이용하면, 우리는 하나의 변수로 풀리지 않던 Gaussian integral의 값을 구할 수 있다.
 
-::: 예시 6 (가우스 적분)
+::: 예시 6 (Gaussian integral)
 적분 $I = \int_{-\infty}^{\infty} e^{-x^2} \dd{x}$의 값을 구하자. 이 값의 제곱 $I^2$을 두 개의 독립 변수에 대한 적분으로 보면
 
 $$\begin{aligned}
@@ -145,7 +146,7 @@ I^2 &= \int_0^{2\pi} \int_0^\infty e^{-r^2} r \dd{r} \dd{\theta} \\
 이므로 $I = \sqrt\pi$이다. 
 :::
 
-$2$차원에서의 고전적인 예시는 극좌표계 하나지만, $3$차원에서는 구면좌표계와 원기둥좌표계의 두 가지 치환방법이 있으며, 이를 적절한 방식으로 계산하는 것이 많은 적분을 계산할 때 도움이 된다.
+$2$차원에서의 고전적인 예시는 극좌표 하나지만, $3$차원에서는 구면좌표와 원기둥좌표의 두 가지 치환방법이 있으며, 이를 적절한 방식으로 계산하는 것이 많은 적분을 계산할 때 도움이 된다.
 
 ::: 예시 7 (삼중적분의 변수변환 — 구면·원기둥 좌표)
 우선 *원기둥좌표<sub>cylindrical coordinates</sub>* $(r, \theta, z)$는 평면의 극좌표에 높이 $z$를 더한 것으로, 

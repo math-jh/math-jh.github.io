@@ -11,13 +11,14 @@ sidebar:
 
 date: 2026-05-18
 weight: 3
+drift_needed: true
 ---
 
 이전 글에서 우리는 toric variety에 대해 살펴보았고, 이미 그 과정에서 toric variety를 정의하는 fan의 조합론적인 데이터가 toric variety의 많은 성질을 결정함을 살펴보았다. 이번 글에서는 특히 toric variety 위에 정의된 (torus-invariant) divisor들을 살펴본다. 
 
 ## 토러스 불변 베유 인자
 
-우리는 이미 toric variety $X_\Sigma$는 algebraic torus $T_N \cong (\mathbb{C}^\ast)^n$을 open dense subset으로 포함하는 것을 알고 있다. 그런데 이 위에서는 divisor가 자명한데, $T_N$의 coordinate ring을 생각해보면 이는 Laurent polynomial ring
+우리는 이미 toric variety $X_\Sigma$는 algebraic torus $T_N \cong (\mathbb{C}^\ast)^n$을 open dense subset으로 포함하는 것을 알고 있다. 그런데 이 위에서는 divisor가 trivial한데, $T_N$의 coordinate ring을 생각해보면 이는 Laurent polynomial ring
 
 $$\mathbb{C}[M] = \mathbb{C}[t_1^{\pm 1}, \ldots, t_n^{\pm 1}]$$
 
@@ -41,7 +42,7 @@ $$\Div_T(X_\Sigma) = \bigoplus_{\rho \in \Sigma(1)} \mathbb{Z} \cdot D_\rho$$
 이다. 임의의 torus-invariant Weil divisor는 $D = \sum_{\rho \in \Sigma(1)} a_\rho D_\rho$의 꼴로 유일하게 표현된다.
 :::
 
-우리는 앞서 $T_N$의 divisor theory가 자명하다는 것을 살펴보았는데, 이를 사용하면 결국 toric variety에서 divisor를 보는 것은 torus-invariant divisor를 보는 것으로 충분하다는 것을 알 수 있다. 임의의 divisor $D \in \Div(X_\Sigma)$를 open dense subset $T_N$ 위로 제한하면 $D \cap T_N$은 $T_N$ 위의 divisor가 되는데, 여기서는 이것이 principal divisor $\divisor(f)$ 꼴이고, 따라서 $D - \divisor(f)$의 support는 boundary $X_\Sigma \setminus T_N = \bigcup_{\rho \in \Sigma(1)} D_\rho$ 안에 들어가게 되어 torus-invariant이기 때문이다. 이로부터 $D$는 어떤 torus-invariant divisor와 linearly equivalent하며, 더 형식적으로는 이를 통해 
+우리는 앞서 $T_N$의 divisor theory가 trivial하다는 것을 살펴보았는데, 이를 사용하면 결국 toric variety에서 divisor를 보는 것은 torus-invariant divisor를 보는 것으로 충분하다는 것을 알 수 있다. 임의의 divisor $D \in \Div(X_\Sigma)$를 open dense subset $T_N$ 위로 제한하면 $D\rvert_{T_N}$은 $T_N$ 위의 divisor가 되는데, 여기서는 이것이 principal divisor $\divisor(f)$ 꼴이고, 따라서 $D - \divisor(f)$의 support는 boundary $X_\Sigma \setminus T_N = \bigcup_{\rho \in \Sigma(1)} D_\rho$ 안에 들어가게 되어 torus-invariant이기 때문이다. 이로부터 $D$는 어떤 torus-invariant divisor와 linearly equivalent하며, 더 형식적으로는 이를 통해 
 
 $$\Div_T(X_\Sigma) \hookrightarrow \Div(X_\Sigma) \twoheadrightarrow \Cl(X_\Sigma)\tag{1}$$
 
@@ -53,7 +54,7 @@ $$\Div_T(X_\Sigma) \hookrightarrow \Div(X_\Sigma) \twoheadrightarrow \Cl(X_\Sigm
 
 정의에 의해 이 kernel은 $\Div_T(X_\Sigma)$의 원소 중 $\Cl(X_\Sigma)$에서 $0$이 되는 것들, 즉 *torus-invariant이면서 동시에 principal*한 divisor들의 모임이다. 그러므로 이는 결국 toric variety 위에서 어떤 rational function이 torus-invariant principal divisor를 정의하는지를 묻는 문제로 귀결된다.
 
-그럼 가장 자연스러운 후보는 lattice $M$의 원소 $m \in M$에 대응하는 *character* $\rchi^m$이다. 각각의 $m \in M$에 대해, character $\rchi^m: T_N \rightarrow \mathbb{C}^\ast$는 $T_N \subseteq X_\Sigma$가 open dense이므로 $X_\Sigma$ 위의 유리함수로 볼 수 있다 ([§아핀 토릭 다양체, ⁋명제 10](/ko/math/toric_geometry/affine_toric_varieties#prop10)). 이 때, $\rchi^m$ 자체는 $T_N$의 작용 하에서 invariant하지 않지만, $t \in T_N$에 대해
+그럼 가장 자연스러운 후보는 lattice $M$의 원소 $m \in M$에 대응하는 *character* $\rchi^m$이다. 각각의 $m \in M$에 대해, character $\rchi^m: T_N \rightarrow \mathbb{C}^\ast$는 $T_N \subseteq X_\Sigma$가 open dense이므로 $X_\Sigma$ 위의 유리함수로 볼 수 있다 ([§아핀 토릭 다양체, ⁋명제 11](/ko/math/toric_geometry/affine_toric_varieties#prop11)). 이 때, $\rchi^m$ 자체는 $T_N$의 작용 하에서 invariant하지 않지만, $t \in T_N$에 대해
 
 $$(t \cdot \rchi^m)(x) = \rchi^m(t x) = \rchi^m(t) \cdot \rchi^m(x)$$
 
@@ -90,12 +91,12 @@ $$0 \longrightarrow M \longrightarrow \Div_T(X_\Sigma) \longrightarrow \Cl(X_\Si
 ::: 증명
 먼저 $M \rightarrow \Div_T(X_\Sigma)$가 injective임을 보인다. 만약 $\divisor(\rchi^m) = 0$이라면 모든 $\rho \in \Sigma(1)$에 대해 $\langle m, v_\rho \rangle = 0$이다. Fan $\Sigma$가 $N_\mathbb{R}$를 span한다고 가정하면, primitive generator들 $\{v_\rho\}$가 $N_\mathbb{R}$를 span하므로 $m = 0$이다.
 
-다음으로 $\Div_T(X_\Sigma) \rightarrow \Cl(X_\Sigma)$의 kernel이 character들의 divisor들과 정확히 일치함을 보인다. 정의에 의해 kernel은 principal divisor이면서 동시에 $T$-invariant인 divisor들의 모임이다. $D = \divisor(f)$가 $T$-invariant라 하자. $T$-invariant divisor의 support는 boundary $X_\Sigma \setminus T_N = \bigcup_{\rho \in \Sigma(1)} D_\rho$에 들어가므로, $f$를 열린 조밀한 부분집합 $T_N$에 제한하면 $\divisor(f \rvert_{T_N}) = 0$이다. 따라서 $f\rvert_{T_N}$은 $T_N$의 coordinate ring $\mathbb{C}[M]$의 unit이다. $\mathbb{C}[M]$의 unit은 정확히 $c \cdot \rchi^m$ ($c \in \mathbb{C}^\ast$, $m \in M$)의 꼴이므로, $f\rvert_{T_N} = c \cdot \rchi^m$이며 $X_\Sigma$의 정규성에 의해 $f = c \cdot \rchi^m$ on $X_\Sigma$이다. 그러므로 $D = \divisor(\rchi^m)$.
+다음으로 $\Div_T(X_\Sigma) \rightarrow \Cl(X_\Sigma)$의 kernel이 character들의 divisor들과 정확히 일치함을 보인다. 정의에 의해 kernel은 principal divisor이면서 동시에 $T$-invariant인 divisor들의 모임이다. $D = \divisor(f)$가 $T$-invariant라 하자. $T$-invariant divisor의 support는 boundary $X_\Sigma \setminus T_N = \bigcup_{\rho \in \Sigma(1)} D_\rho$에 들어가므로, $f$를 열린 조밀한 부분집합 $T_N$에 제한하면 $\divisor(f \rvert_{T_N}) = 0$이다. 따라서 $f\rvert_{T_N}$은 $T_N$의 coordinate ring $\mathbb{C}[M]$의 unit이다. $\mathbb{C}[M]$의 unit은 정확히 $c \cdot \rchi^m$ ($c \in \mathbb{C}^\ast$, $m \in M$)의 꼴이므로, $f\rvert_{T_N} = c \cdot \rchi^m$이며 $T_N$이 $X_\Sigma$에서 조밀하므로 $f = c \cdot \rchi^m$ on $X_\Sigma$이다. 그러므로 $D = \divisor(\rchi^m)$.
 
-마지막으로 surjectivity를 보인다. 임의의 divisor $D \in \Div(X_\Sigma)$에 대해 $T_N$으로의 restriction $D \cap T_N$은 $T_N \cong (\mathbb{C}^\ast)^n$ 위의 divisor이다. $T_N$의 coordinate ring $\mathbb{C}[M]$이 UFD이므로 이는 principal이며, 따라서 어떤 $f \in \mathbb{C}(X_\Sigma)^\times$에 대해 $D - \divisor(f)$의 support가 $X_\Sigma \setminus T_N = \bigcup_{\rho \in \Sigma(1)} D_\rho$ 안에 들어가도록 할 수 있다. 우변은 torus-invariant divisor의 합으로 표현되므로, $[D] = [D - \divisor(f)]$는 torus-invariant representative를 갖는다.
+마지막으로 surjectivity를 보인다. 임의의 divisor $D \in \Div(X_\Sigma)$에 대해 $T_N$으로의 restriction $D\rvert_{T_N}$은 $T_N \cong (\mathbb{C}^\ast)^n$ 위의 divisor이다. $T_N$의 coordinate ring $\mathbb{C}[M]$이 UFD이므로 이는 principal이며, 따라서 어떤 $f \in \mathbb{C}(X_\Sigma)^\times$에 대해 $D - \divisor(f)$의 support가 $X_\Sigma \setminus T_N = \bigcup_{\rho \in \Sigma(1)} D_\rho$ 안에 들어가도록 할 수 있다. 우변은 torus-invariant divisor의 합으로 표현되므로, $[D] = [D - \divisor(f)]$는 torus-invariant representative를 갖는다.
 :::
 
-이 exact sequence는 toric variety의 class group을 명시적으로 계산하는 강력한 도구가 된다. 가정 하에서 $\Div_T(X_\Sigma) \cong \mathbb{Z}^{\Sigma(1)}$은 rank $\lvert \Sigma(1) \rvert$의 free abelian group이고 $M \cong \mathbb{Z}^n$는 rank $n$의 free abelian group으로 그 안에 embed되므로, $\Cl(X_\Sigma) \cong \mathbb{Z}^{\Sigma(1)} / M$은 rank $\lvert \Sigma(1) \rvert - n$의 finitely generated abelian group이다. 다만 일반적으로 torsion을 가질 수 있다는 점을 주의하자—예컨대 $\mathbb{P}(1,1,2)$에서는 $\Cl \cong \mathbb{Z} \oplus \mathbb{Z}/2$이다.
+이 exact sequence는 toric variety의 class group을 명시적으로 계산하는 강력한 도구가 된다. 가정 하에서 $\Div_T(X_\Sigma) \cong \mathbb{Z}^{\Sigma(1)}$은 rank $\lvert \Sigma(1) \rvert$의 free abelian group이고 $M \cong \mathbb{Z}^n$는 rank $n$의 free abelian group으로 그 안에 embed되므로, $\Cl(X_\Sigma) \cong \mathbb{Z}^{\Sigma(1)} / M$은 rank $\lvert \Sigma(1) \rvert - n$의 finitely generated abelian group이다. 다만 일반적으로 torsion을 가질 수 있다는 점을 주의하자. 가령 $\sigma = \mathrm{cone}(e_2, 2e_1 - e_2) \subseteq \mathbb{R}^2$가 정의하는 affine toric variety $U_\sigma \cong \mathbb{C}^2/(\mathbb{Z}/2)$에서는 $\Cl \cong \mathbb{Z}/2$이다.
 
 ## Cartier divisor
 
@@ -157,11 +158,11 @@ $$\divisor(\rchi^m) + D = \sum_{\rho \in \Sigma(1)} (\langle m, v_\rho \rangle +
 이므로, 이 divisor가 effective하기 위한 필요충분조건은 모든 $\rho$에 대해 $\langle m, v_\rho \rangle + a_\rho \ge 0$, 즉 $\langle m, v_\rho \rangle \ge -a_\rho$가 성립하는 것이다. 이러한 $m \in M$들에 해당하는 1차원 character spaces $\mathbb{C} \cdot \rchi^m$들의 direct sum이 global section space 전체를 이룬다.
 :::
 
-[명제 7](#prop7)에 등장하는 조건 <em-ko>$\langle m, v_\rho\rangle \ge -a_\rho$ for all $\rho \in \Sigma(1)$</em-ko>을 생각하면, 우리는 이 조건을 만족하는 $m$들을 모아 $M_\mathbb{R}$ 안의 polyhedron
+[명제 7](#prop7)에 등장하는 조건 *$\langle m, v_\rho\rangle \ge -a_\rho$ for all $\rho \in \Sigma(1)$*을 생각하면, 우리는 이 조건을 만족하는 $m$들을 모아 $M_\mathbb{R}$ 안의 polyhedron
 
 $$\Delta_D = \{m \in M_\mathbb{R} \mid \langle m, v_\rho \rangle \ge -a_\rho \text{ for all } \rho \in \Sigma(1)\}$$
 
-을 정의할 수 있다. 이 때, $\Delta_D$ 내부의 lattice point들의 모임이 summand의 $m$들과 정확히 일치한다는 것을 안다. 
+을 정의할 수 있다. 이 때, $\Delta_D$의 lattice point들의 모임이 summand의 $m$들과 정확히 일치한다는 것을 안다. 
 
 한편 우리는 이렇게 polyhedron 내부의 lattice point들이 기하적인 의미를 갖는 상황을 처음 마주치는 것이 아닌데, [§토릭 다양체의 정의, ⁋명제 9](/ko/math/toric_geometry/toric_varieties#prop9)에서 우리는 lattice polytope $P$의 lattice points $P \cap M = \{m_0, \ldots, m_s\}$로부터 monomial map $\phi_P: T_N \rightarrow \mathbb{P}^s$를 구성하였고, 이 map의 image의 Zariski closure가 $X_P$와 isomorphic함을 보였다. 그럼 이 lattice points들은 위 [명제 7](#prop7)의 관점에서 보면 정확히 $P = \Delta_D$에 대응되는 $H^0(X_\Sigma, \mathcal{O}_{X_\Sigma}(D))$의 character basis와 일치한다. 즉, lattice point가 결정하던 projective embedding은 사실 line bundle $\mathcal{O}_{X_\Sigma}(D)$의 global sections이 결정하는 standard linear system embedding이었던 것이다.
 
@@ -172,7 +173,7 @@ Piecewise linear function $\psi: \lvert \Sigma \rvert \rightarrow \mathbb{R}$가
 
 $$\psi(v) = \langle m_{\sigma_1}, v \rangle \text{ for } v \in \sigma_1, \qquad \psi(v) = \langle m_{\sigma_2}, v \rangle \text{ for } v \in \sigma_2$$
 
-이고, $\sigma_1 \cap \sigma_2$의 relative interior를 제외한 $\sigma_1$의 임의의 점 $v$에 대해
+이고, $\sigma_1 \cap \sigma_2$를 제외한 $\sigma_1$의 임의의 점 $v$에 대해
 
 $$\psi(v) < \langle m_{\sigma_2}, v \rangle$$
 
@@ -200,7 +201,7 @@ $$\Delta_D = \{m \in M_\mathbb{R} \mid \langle m, v_\rho \rangle \ge -a_\rho \te
 마지막으로 toric variety의 Picard group을 기술한다. Picard group은 line bundle들의 isomorphism class들이 tensor product에 의해 형성하는 group이며, Cartier divisor의 linear equivalence class들의 group과 동형이다.
 
 ::: 명제 10
-Toric variety $X_\Sigma$에 대해 다음이 성립한다.
+Fan $\Sigma$의 ray들 $\Sigma(1)$이 $N_\mathbb{R}$를 span한다고 가정하자. 이 때 toric variety $X_\Sigma$에 대해 다음이 성립한다.
 
 1. Picard group $\Pic(X_\Sigma)$는 torus-invariant Cartier divisor들의 linear equivalence class들의 group $\CaDiv_T(X_\Sigma) / M$과 동형이다.
 2. $\Pic(X_\Sigma)$는 $\Cl(X_\Sigma)$의 subgroup이며, 다음의 commutative diagram이 성립한다.
@@ -211,7 +212,7 @@ Toric variety $X_\Sigma$에 대해 다음이 성립한다.
 :::
 
 ::: 증명
-(1) 일반적인 algebraic variety에서 Cartier divisor의 group $\CaDiv(X)$는 line bundle들의 group과 동형이며, principal divisor들로의 quotient가 Picard group을 준다. Toric variety에서 torus-invariant Cartier divisor만으로도 모든 linear equivalence class를 대표할 수 있으므로, $\Pic(X_\Sigma) \cong \CaDiv_T(X_\Sigma) / M$이 성립한다.
+(1) 일반적인 algebraic variety에서 Cartier divisor의 group $\CaDiv(X)$의 principal divisor들로의 quotient가 Picard group을 준다. Toric variety에서 torus-invariant Cartier divisor만으로도 모든 linear equivalence class를 대표할 수 있으므로, $\Pic(X_\Sigma) \cong \CaDiv_T(X_\Sigma) / M$이 성립한다.
 
 (2) $M \rightarrow \Div_T(X_\Sigma)$의 image $\divisor(\rchi^m)$은 principal divisor이므로 자동으로 Cartier이며, 따라서 이 arrow는 $M \rightarrow \CaDiv_T(X_\Sigma)$로 factor된다. 결과적으로 commutative diagram의 좌측 두 column은 동일한 $M$이고, quotient $\Pic(X_\Sigma) = \CaDiv_T(X_\Sigma)/M$이 $\Cl(X_\Sigma) = \Div_T(X_\Sigma)/M$의 subgroup으로 자연스럽게 들어간다. Injectivity는 $\CaDiv_T(X_\Sigma) \hookrightarrow \Div_T(X_\Sigma)$가 injective이고 두 quotient가 동일한 $M$의 image로 나눈 것이라는 사실로부터 따라 나온다.
 :::

@@ -31,7 +31,7 @@ $$\Hom_\Ab(K(M), G)\cong\Hom_\cMon(M, U(G))$$
 >     
 >(Universal mapping problem) 임의의 abelian group $G$와, 임의의 semigroup homomorphism $f:S\rightarrow G$가 주어질 때마다 *group homomorphism* $\bar{f}:K(S)\rightarrow G$가 유일하게 존재하여 $f=\bar{f}\circ\eta_S$이 성립한다.
 
-이를 직관적으로 해석하면 $K(S)$는 $(S,+)$를 포함하는 가장 작은 abelian group이라 생각할 수 있다. 
+이를 직관적으로 해석하면 $K(S)$는 $(S,+)$에서 얻어지는 가장 작은 abelian group이라 생각할 수 있다. 
 
 위의 성질을 만족하는 $K(S)$는 isomorphism에 대해 유일하다.
 
@@ -71,7 +71,7 @@ $S$와 $\id_S$가 자명하게 universal property를 만족하므로, 앞선 [�
 
 ## $K(S)$의 정의
 
-$S$가 abelian group이 될 수 없는 이유는 임의의 원소에 대한 역원이 존재하지 않을 수도 있기 때문이다. 직관적으로 이는 <em-ko>음수</em-ko>를 추가하여 해결할 수 있다.
+$S$가 abelian group이 될 수 없는 이유는 항등원과 임의의 원소에 대한 역원이 존재하지 않을 수도 있기 때문이다. 직관적으로 이는 $0$과 <em-ko>음수</em-ko>를 추가하여 해결할 수 있다.
 
 주어진 commutative semigroup $(S,+)$에 대하여, product semigroup $S\times S$를 생각하자. ([§대수적 구조, ⁋예시 5](/ko/math/algebraic_structures/algebraic_structures#ex5)) $S\times S$의 둘째 부분을 음수처럼 생각하면, 다음 식
 
@@ -156,9 +156,9 @@ Commutative semigroup $(S, +)$에 대하여, 위와 같이 만들어진 abelian 
 
 Universal property를 증명하기 위해, 임의의 abelian group $G$와, semigroup homomorphism $f:S\rightarrow G$가 주어졌다고 하자. 
 
-우선, 만약 주어진 성질을 만족하는 $\bar{f}:K(S)\rightarrow S$가 존재한다면, $\bar{f}$는 반드시 유일해야 한다. 임의의 $[(a,b)]$에 대하여, 
+우선, 만약 주어진 성질을 만족하는 $\bar{f}:K(S)\rightarrow G$가 존재한다면, $\bar{f}$는 반드시 유일해야 한다. 임의의 $[(a,b)]$에 대하여, 
 
-$$\begin{aligned}\bar{f}\left([(a,b)]\right)&=\bar{f}\left([(a+(a+b), b+(a+b))]\right)=\bar{f}\left([(a+a,a)]+[(b, b+b)]\right)\\ &\bar{f}\left([(a+a, a)]\right)+\bar{f}\left([(b,b+b)]\right)=\bar{f}\left(\eta_S(a)\right)-\bar{f}\left(\eta_S(b)\right)\\ &=f(a)-f(b)\end{aligned}$$
+$$\begin{aligned}\bar{f}\left([(a,b)]\right)&=\bar{f}\left([(a+(a+b), b+(a+b))]\right)=\bar{f}\left([(a+a,a)]+[(b, b+b)]\right)\\ &=\bar{f}\left([(a+a, a)]\right)+\bar{f}\left([(b,b+b)]\right)=\bar{f}\left(\eta_S(a)\right)-\bar{f}\left(\eta_S(b)\right)\\ &=f(a)-f(b)\end{aligned}$$
 
 이므로, 각각의 원소들에서의 함수값이 유일하게 정해지기 때문이다. 
 
@@ -181,7 +181,7 @@ $$\begin{aligned}\bar{f}\left([(a_1,b_1)]+[(a_2, b_2)]\right)&=\bar{f}\left([(a_
 마지막으로, $\bar{f}$가 주어진 조건 $f=\bar{f}\circ\eta_S$을 만족한다는 것은 계산해보면 자명하다.
 :::
 
-이렇게, 우리는 원했던 abelian semigroup $K(S)$를 얻었다. 특히 정수를 엄밀한 방식으로 정의할 수 있다.
+이렇게, 우리는 원했던 abelian group $K(S)$를 얻었다. 특히 정수를 엄밀한 방식으로 정의할 수 있다.
 
 ::: 정의 6
 Monoid $(\mathbb{N},+)$에 대하여, 위의 과정을 통해 얻어지는 abelian group을 $(\mathbb{Z},+)$으로 적는다.
@@ -198,10 +198,14 @@ $$(a,p)\equiv (b,q)\pmod{R}\iff aqs=bps\text{ for some $s\in S'$}$$
 를 정의하면, 이 관계는 $E\times S'$ 위의 연산과 compatible한 동치관계이고 따라서 $(E\times S')/R$이 monoid가 된다.
 
 ::: 정의 7
-위와 같이 얻어지는 monoid $(E\times S')/R$을 $S$를 분모로 갖는 $E$의 *monoid of fraction<sub>분수 모노이드</sub>*이라 부르고 $E_S$로 표기한다. 이 monoid의 원소 $(a,p)$는 $a/p$로 표기한다. 
+위와 같이 얻어지는 monoid $(E\times S')/R$을 $S$를 분모로 갖는 $E$의 *monoid of fraction<sub>분수 모노이드</sub>*이라 부르고 $E_S$로 표기한다. 이 monoid의 원소 $(a,p)$를 representative로 갖는 원소를 $a/p$로 표기한다. 
 :::
 
-이 때, $E$는 monoid이므로 위의 논의와는 다르게 항등원 $1$을 가진다. 그럼 [명제 5](#prop5)에서의 homomorphism $\eta_S$은 명시적으로, $a\mapsto a/1$로 생각할 수 있다. 
+이 때, $E$는 monoid이므로 위의 논의와는 다르게 항등원 $1$을 가진다. 그럼 [명제 5](#prop5)에서의 homomorphism $\eta_S$에 대응하는 canonical morphism은 명시적으로 
+
+$$\epsilon:E\rightarrow E_S;\quad a\mapsto a/1$$
+
+로 생각할 수 있다. 
 
 ---
 

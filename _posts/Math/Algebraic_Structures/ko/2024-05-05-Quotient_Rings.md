@@ -10,6 +10,7 @@ sidebar:
 
 date: 2024-05-05
 weight: 102
+drift_needed: true
 
 ---
 
@@ -21,7 +22,7 @@ weight: 102
 
 $$(\alpha+S)(\alpha'+S)\overset{?}{=}\alpha\alpha'+S$$
 
-이 위와 같이 정의되어야 한다. 한편, 임의의 $xx'\in S$에 대하여
+이 위와 같이 정의되어야 한다. 한편, 임의의 $x,x'\in S$에 대하여
 
 $$(\alpha+x)(\alpha'+x')=\alpha\alpha'+x\alpha'+\alpha x'+xx'$$
 
@@ -40,7 +41,7 @@ Ring $A$와 two-sided ideal $\mathfrak{a}$에 대하여 다음이 성립한다.
 2. Ring homomorphism $\phi:A \rightarrow B$에 대하여, 만일 $\phi(\mathfrak{a})=\{0\}$이라면 $A/\mathfrak{a}$에서 $B$로 가는 유일한 $\bar{\phi}$가 존재하여 $\phi=\bar{\phi}\circ\pi$가 성립한다.
 :::
 ::: 증명
-1. $\pi$가 덧셈에 대해 abelian group homomorphism을 정의한다는 것은 [§몫군](/ko/math/algebraic_structures/quotient_groups)의 결과로부터 자명하다. $\pi$가 곱셈을 보존하는 것 또한 위의 논의로부터 자명하며, 따라서 $1+\mathfrak{a}$가 $A/\mathfrak{a}$의 $1$이 되는 것을 확인할 수 있다.
+1. $\pi$가 덧셈에 대해 abelian group homomorphism을 정의한다는 것은 [§몫군](/ko/math/algebraic_structures/quotient_groups)의 결과이다. $\pi$가 곱셈을 보존하는 것은 $\pi(\alpha)\pi(\alpha')=(\alpha+\mathfrak{a})(\alpha'+\mathfrak{a})=\alpha\alpha'+\mathfrak{a}=\pi(\alpha\alpha')$이 성립하기 때문이며, 따라서 $1+\mathfrak{a}$가 $A/\mathfrak{a}$의 $1$이 되는 것을 확인할 수 있다.
 2. 우선 $\phi$를 abelian group homomorphism으로 생각하자. 그럼 주어진 조건에 의하여 $A$의 subgroup $\mathfrak{a}$가 $\ker \phi$에 포함되므로, $A/\mathfrak{a}$에서 $B$로 가는 유일한 *group* homomorphism $\bar{\phi}:A/\mathfrak{a}\rightarrow B$가 존재하여 $\phi=\bar{\phi}\circ\pi$가 성립한다. ([§군 동형사상, ⁋명제 3](/ko/math/algebraic_structures/isomorphism_theorems#prop3))  
     이제 $A/\mathfrak{a}$의 두 원소 $\alpha+\mathfrak{a}, \beta+\mathfrak{a}$를 임의로 택하자. 그럼
 
@@ -59,9 +60,9 @@ Ring $A$와 two-sided ideal $\mathfrak{a}$에 대하여 다음이 성립한다.
 Ring homomorphism $\phi:A \rightarrow B$와 kernel $\ker \phi$, 그리고 image $\im\phi$에 대하여, 다음이 성립한다.
 
 1. $\ker \phi$는 $A$의 two-sided ideal이며, $\alpha+\ker \phi \mapsto \phi(\alpha)$가 잘 정의된 isomorphism $A/\ker \phi \rightarrow \im \phi$을 정의한다.
-2. $A$의 subring $S$에 대하여, $S+\ker \phi=\{\alpha+x\mid\alpha\in S, x\in\ker \phi\}$는 $A$의 subring이고, $S\cap\ker \phi$는 $S$의 two-sided ideal이 되며, isomorphism $(S+\ker \phi)/\ker \phi\cong S/(S\cap \ker f)$이 존재한다. 
+2. $A$의 subring $S$에 대하여, $S+\ker \phi=\{\alpha+x\mid\alpha\in S, x\in\ker \phi\}$는 $A$의 subring이고, $S\cap\ker \phi$는 $S$의 two-sided ideal이 되며, isomorphism $(S+\ker \phi)/\ker \phi\cong S/(S\cap \ker \phi)$이 존재한다. 
 3. $A$의 두 two-sided ideal $\mathfrak{a}, \mathfrak{b}$가 $\mathfrak{b}\subseteq \mathfrak{a}$를 만족한다면, $\mathfrak{a}/\mathfrak{b}$는 $A/\mathfrak{b}$의 two-sided ideal이고 $(A/\mathfrak{b})/(\mathfrak{a}/\mathfrak{b})\cong A/\mathfrak{a}$이 성립한다.
-4. $A$의 two-sided ideal $\mathfrak{a}$에 대하여, $A/\mathfrak{a}$의 two-sided ideal의 집합과, $\mathfrak{a}$를 포함하는 $A$의 ideal들의 집합 사이의 inclusion-preserving bijection이 존재한다.
+4. $A$의 two-sided ideal $\mathfrak{a}$에 대하여, $A/\mathfrak{a}$의 two-sided ideal의 집합과, $\mathfrak{a}$를 포함하는 $A$의 two-sided ideal들의 집합 사이의 inclusion-preserving bijection이 존재한다.
 :::
 
 이에 대한 증명은 앞선 [명제 2](#prop2)와 마찬가지로 [§군 동형사상](/ko/math/algebraic_structures/isomorphism_theorems)에서 다루었던 것과 거의 동일하게 진행하되, 얻어지는 group homomorphism이 실제로 ring homomorphism 또한 된다는 것만 보이면 된다. 

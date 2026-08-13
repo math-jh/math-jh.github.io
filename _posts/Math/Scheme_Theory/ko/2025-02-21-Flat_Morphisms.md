@@ -10,6 +10,7 @@ sidebar:
 
 date: 2025-02-21
 weight: 14
+drift_needed: true
 ---
 
 우리는 scheme morphism $\varphi: X \rightarrow S$를 $S$로 parametrize된 family로 읽기로 하였으며 ([§스킴 사이의 사상, ⁋예시 10](/ko/math/scheme_theory/morphism_of_schemes#ex10)), 이 family의 $s\in S$에서의 member를 fiber $X_s=X\times_S\Spec \kappa(s)$로 정의하였다. ([§올곱, ⁋정의 12](/ko/math/scheme_theory/fiber_products#def12)) 그러나 이 family가 얼마나 좋게 행동할지는 현재로서 우리가 확인할 수 없는 정보이다. 
@@ -303,7 +304,7 @@ $$U_i\cap Z_j\subseteq U_i\cap C_i\subseteq F$$
 
 이다. 한편 $U_i\cap Z_j$는 $Z_j$의 열린 부분집합이며 그 closure가 $Z_j$이므로 공집합이 아니다. $Z_j$는 $Y$의 irreducible closed subset이므로 generic point $\zeta_j$를 가지며, $Z_j$의 공집합이 아닌 열린 부분집합은 언제나 $\zeta_j$를 포함하므로 $\zeta_j\in F$이다.
 
-$F$가 specialization에 대하여 닫혀 있으므로 $Z_j=\overline{\{z_j\}}\subseteq F$이고, 이것이 모든 $j$에 대하여 성립하므로 $Z=\bigcup_j Z_j\subseteq F$이다. $F\subseteq Z$는 자명하므로 $F=Z$는 닫힌집합이다.
+$F$가 specialization에 대하여 닫혀 있으므로 $Z_j=\overline{\{\zeta_j\}}\subseteq F$이고, 이것이 모든 $j$에 대하여 성립하므로 $Z=\bigcup_j Z_j\subseteq F$이다. $F\subseteq Z$는 자명하므로 $F=Z$는 닫힌집합이다.
 :::
 
 ## 평탄 사상의 기하학적 성질

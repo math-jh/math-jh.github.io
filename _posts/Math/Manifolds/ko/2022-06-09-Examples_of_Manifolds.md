@@ -11,6 +11,7 @@ sidebar:
 date: 2022-06-09
 weight: 2
 toc: false
+drift_needed: true
 
 ---
 
@@ -64,7 +65,7 @@ $\Mat_{n}(\mathbb{R})$의 원소들 중, 역행렬을 갖는 $n\times n$ 행렬�
 
 $$\graph(f)=\{(x,y)\in\mathbb{R}^m\times\mathbb{R}^n\mid \text{$x\in U$, $y=f(x)$}\}$$
 
-으로 정의하자. 그럼 $f:U\rightarrow\graph(f)$와, 앞의 $m$개의 좌표로의 projection $\pr:\graph(f)\rightarrow U$가 모두 연속이고, 서로의 역함수가 되므로 $\graph(f)$와 $U$는 homeomorphic이다. 따라서 $\graph(f)$는 topological manifold이며, 특히 projection $\pr:\graph(f)\rightarrow U$이 하나의 chart로 이루어진 atlas $\{(\graph(f),\pr)\}$를 이루므로 자연스러운 (differentiable) manifold 구조 또한 갖는다. 
+으로 정의하자. 그럼 $\tilde{f}:U\rightarrow\graph(f)$, $\tilde{f}(x)=(x,f(x))$와, 앞의 $m$개의 좌표로의 projection $\pr:\graph(f)\rightarrow U$가 모두 연속이고, 서로의 역함수가 되므로 $\graph(f)$와 $U$는 homeomorphic이다. 따라서 $\graph(f)$는 topological manifold이며, 특히 projection $\pr:\graph(f)\rightarrow U$이 하나의 chart로 이루어진 atlas $\{(\graph(f),\pr)\}$를 이루므로 자연스러운 (differentiable) manifold 구조 또한 갖는다. 
 :::
 
 지금까지의 예시에서는 모두 하나의 chart만을 갖는 atlas를 통해 미분구조를 주었는데, 이는 곧 manifold가 국소적으로 $\mathbb{R}^m$과 닮아있을 뿐만 아니라, 전체적으로도 $\mathbb{R}^m$과 닮아있다는 뜻이므로 사실 그렇게 흥미로운 상황이 아니다. 
@@ -74,11 +75,11 @@ $\mathbb{R}^{n+1}$에 들어있는 $n$차원 구면 $S^n$을 생각하자. $S^n$
 
 임의의 $p\in S^n$을 고르자. $0\not\in S^n$이므로, $p$의 어떤 좌표는 반드시 0이 아니다. 일반성을 잃지 않고, 이 좌표가 $n+1$ 번째 좌표라 하고, 또 양수라 하자. 즉 $p$는 다음의 집합
 
-$$U_{n+1}^+=\{(x^1, x^2, \ldots, x^{n+1})\in\mathbb{R}^{n+1}\mid x^{n+1}>0\}$$
+$$U_{n+1}^+=\{(x^1, x^2, \ldots, x^{n+1})\in S^n\mid x^{n+1}>0\}$$
 
 의 원소이다. 
 
-그림으로 보면 거의 자명하게 $U_{n+1}^+$와 $D^n$이 homeomorphic하다는 것을 알 수 있다.
+그림으로 보면 거의 자명하게 $U_{n+1}^+$와 열린 단위공 $D^n=\{x\in\mathbb{R}^n\mid\lvert x\rvert<1\}$이 homeomorphic하다는 것을 알 수 있다.
 
 {% diagram Math/Manifolds/Examples_of_Manifolds-1.png width="300px" alt="sphere_chart" %}
 <cap markdown="1">[Lee], p.6. Fig. 1.3.</cap>
@@ -94,7 +95,7 @@ $$f(x)=\sqrt{1-\lvert x\rvert^2}$$
 
 $$\mathcal{A}=\{(U_i^\pm, \varphi_i^\pm)\mid i=1,2,\ldots, n+1\}$$
 
-이 atlas가 된다. 이를 위해서는 위 atlas를 구성하는 chart들이 모두 $C^\infty$-compatible이라는 것을 보여야 한다. $U_i^+$와 $U_i^-$는 만나지 않으므로 자명하게 서로 $C^\infty$-compatible하다. 서로 다른 index $i,j$를 갖는 두 chart $(U_i^\pm, \varphi_i^\pm)$와 $(U_j^\pm,\varphi_j^\pm)$가 주어졌다 하자. 그럼 우선 $(\varphi_i^\pm)^{-1}$에 의하여
+이 atlas가 된다. 이를 위해서는 위 atlas를 구성하는 chart들이 모두 $C^\infty$-compatible이라는 것을 보여야 한다. $U_i^+$와 $U_i^-$는 만나지 않으므로 자명하게 서로 $C^\infty$-compatible하다. 서로 다른 index $i,j$를 갖는 두 chart $(U_i^\pm, \varphi_i^\pm)$와 $(U_j^\pm,\varphi_j^\pm)$가 주어졌다 하자. 일반성을 잃지 않고 $j<i$라 하자. 그럼 우선 $(\varphi_i^\pm)^{-1}$에 의하여
 
 $$(x^1, x^2, \ldots, x^n)\mapsto (x^1, x^2, \ldots, x^{i-1}, \pm \sqrt{1-\lvert x\rvert^2}, x^i, \ldots, x^n)$$
 
@@ -108,17 +109,17 @@ $$(x^1, x^2, \ldots, x^{i-1}, \pm \sqrt{1-\lvert x\rvert^2}, x^i, \ldots, x^n)\m
 $S^n$ 위에 정의된 미분구조는 manifold의 전형적인 예시이다. 다음 예시는 위의 예시와는 다른 방법으로 $S^n$에 (동일한) 미분구조를 부여하는데, differential을 정의하고, 이 예시를 더욱 일반화하여 manifold 구조를 줄 수 있다. 
 
 ::: 예시 7
-$\mathbb{R}^n$의 부분집합 $U$와, $U$ 위에서 정의된 $C^\infty$ 함수 $F$가 주어졌다 하자. 그럼 *level set* $M=F^{-1}(c)$가 잘 정의된다. 만일 여기에 더하여, 다음의 *Jacobian matrix* 
+$\mathbb{R}^n$의 열린집합 $U$와, $U$ 위에서 정의된 $C^\infty$ 함수 $F:U\rightarrow\mathbb{R}$, 그리고 $c\in\mathbb{R}$가 주어졌다 하자. 그럼 *level set* $M=F^{-1}(c)$가 잘 정의된다. 만일 여기에 더하여, 다음의 *Jacobian matrix* 
 
 $$\begin{pmatrix}\frac{\partial F}{\partial x^1}&\frac{\partial F}{\partial x^2}&\cdots&\frac{\partial F}{\partial x^n}\end{pmatrix}$$
 
-가 항상 0이 아니라 하자. 즉, 각 점 $a\in M$마다 어떠한 $i$가 존재하여, $\frac{\partial F}{\partial x^i}$가 $0$이 아니도록 할 수 있다. 그럼 음함수 정리에 의하여, 점 $a$의 적당한 열린근방 $U$에서는 $M$이 
+가 항상 0이 아니라 하자. 즉, 각 점 $a\in M$마다 어떠한 $i$가 존재하여, $\frac{\partial F}{\partial x^i}$가 $0$이 아니도록 할 수 있다. 그럼 음함수 정리에 의하여, 점 $a$의 적당한 열린근방 $V$에서는 $M$이 
 
 $$x^i=f(x^1,\ldots, \hat{x}^i,\ldots, x^n)$$
 
 의 그래프이도록 하는 함수 $f$가 존재한다. 
 
-이제 [예시 6](#ex6)과 마찬가지로, $M$에 subspace topology를 주고, 방금 만든 $(U, f)$들을 이용해 chart를 만들면 $M$이 $(n-1)$차원 manifold가 된다는 것을 확인할 수 있다.
+이제 [예시 6](#ex6)과 마찬가지로, $M$에 subspace topology를 주고, 방금 만든 $(V, f)$들을 이용해 chart를 만들면 $M$이 $(n-1)$차원 manifold가 된다는 것을 확인할 수 있다.
 :::
 
 [예시 7](#ex7)을 이용하여 $S^n$을 $\mathbb{R}^{n+1}$ 위에서 정의된 함수
@@ -128,13 +129,13 @@ $$F(x^1,\ldots, x^{n+1})=(x^1)^2+(x^2)^2+\cdots+(x^{n+1})^2-1$$
 의 zero set으로 볼 수 있으므로 [예시 6](#ex6)은 위 예시의 특별한 경우로 볼 수 있다.
 
 ::: 예시 8
-집합 $\mathbb{R}^{n+1}\setminus\{0\}$에 $x\sim y\iff \exists\lambda(x=\lambda y)$으로 정의된 relation이 주어졌다 하자. 어렵지 않게 $\sim$이 equivalence relation임을 확인할 수 있다. 이제 quotient set $\RP^n=(\mathbb{R}^{n+1}\setminus\{0\})/\sim$을 canonical projection $\pi:\mathbb{R}^{n+1}\setminus\{0\}\rightarrow \RP^n$을 통해 정의된 quotient topology로 생각하고, $[x]$가 $x\in\mathbb{R}^{n+1}\setminus\{0\}$의 representative라 하자. 
+집합 $\mathbb{R}^{n+1}\setminus\{0\}$에 $x\sim y\iff \exists\lambda\in\mathbb{R}\setminus\{0\}(x=\lambda y)$으로 정의된 relation이 주어졌다 하자. 어렵지 않게 $\sim$이 equivalence relation임을 확인할 수 있다. 이제 quotient set $\RP^n=(\mathbb{R}^{n+1}\setminus\{0\})/\sim$을 canonical projection $\pi:\mathbb{R}^{n+1}\setminus\{0\}\rightarrow \RP^n$을 통해 정의된 quotient topology로 생각하고, $x\in\mathbb{R}^{n+1}\setminus\{0\}$의 equivalence class를 $[x]$로 적자. 
 
 각각의 $i=1,\ldots, n+1$에 대하여, $\mathbb{R}^{n+1}\setminus\{0\}$의 열린집합 
 
 $$\tilde{U}_i=\{(x^1,\ldots, x^{n+1})\mid x^i\neq 0\}$$
 
-을 생각하자. 그럼 $\tilde{U}_i$는 saturated인 열린집합이므로, [\[위상수학\] §몫공간, ⁋명제 7](/ko/math/topology/quotient_spaces#prop7)에 의하여 quotient map $\pi$가 $\tilde{U}_i$로 잘 제한된다. 따라서, 함수 $\varphi_i:U_i\rightarrow\mathbb{R}^n$을
+을 생각하자. 그럼 $\tilde{U}_i$는 saturated인 열린집합이므로, [\[위상수학\] §몫공간, ⁋명제 7](/ko/math/topology/quotient_spaces#prop7)에 의하여 quotient map $\pi$가 $\tilde{U}_i$로 잘 제한된다. 따라서 $U_i=\pi(\tilde{U}_i)$로 두고, 함수 $\varphi_i:U_i\rightarrow\mathbb{R}^n$을
 
 $$\varphi_i[x^1,\ldots, x^{n+1}]=\left(\frac{x^1}{x^i},\ldots,\frac{x^{i-1}}{x^i},\frac{x^{i+1}}{x^i},\ldots, \frac{x^{n+1}}{x^i}\right)$$
 
@@ -183,4 +184,4 @@ $$\mathcal{A}=\{(U_\alpha\times V_\beta,\varphi_\alpha\times\psi_\beta)\mid (U_\
 
 ---
 
-[^1]: 사실은 이 함수는 $\RP^n$의 부분집합에서 $\mathbb{R}^n$으로의 함수이므로, 우변의 결과가 representative의 선택에 의존하지 않는 것을 보여야 한다. 즉 만일 $[\lambda x^1,\ldots, \lambda x^{n+1}]$을 representative로 택했어도 같은 결과가 나와야 하는데, 이는 식으로부터 명확하다.
+[^1]: 사실은 이 함수는 $\RP^n$의 부분집합에서 $\mathbb{R}^n$으로의 함수이므로, 우변의 결과가 representative의 선택에 의존하지 않는 것을 보여야 한다. 즉 만일 $(\lambda x^1,\ldots, \lambda x^{n+1})$을 representative로 택했어도 같은 결과가 나와야 하는데, 이는 식으로부터 명확하다.
