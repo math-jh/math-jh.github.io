@@ -10,6 +10,7 @@ sidebar:
 
 date: 2026-06-21
 weight: 19
+drift_needed: true
 
 ---
 
@@ -21,7 +22,7 @@ weight: 19
 
 $$\Der_A(B, M)\cong \Hom_B(\Omega_{B/A}, M)$$
 
-을 통해 characterize된다. ([\[가환대수학\] §미분, ⁋보조정리 2](/ko/math/commutative_algebra/differentials#lem2)) 즉, $\Omega_{B/A}$는 원소들 $\dd{b}$로 생성되며, 라이프니츠 법칙 $\dd{(xy)}=x\dd{y}+y\dd{x}$과 $A$-linearity를 relation으로 가지는 $B$-module이며, 직관적으로 $\Omega_{B/A}$는 $A$의 원소들은 상수로 생각하고, $B$의 각 원소들은 함수로 생각한 후 이에 따라 라이프니츠 법칙을 요구하는 것으로 생각할 수 있다. 
+을 통해 characterize된다. ([\[가환대수학\] §미분, ⁋보조정리 2](/ko/math/commutative_algebra/differentials#lem2)) 즉, $\Omega_{B/A}$는 원소들 $\dd{b}$로 생성되며, Leibniz 법칙 $\dd{(xy)}=x\dd{y}+y\dd{x}$과 $A$-linearity를 relation으로 가지는 $B$-module이며, 직관적으로 $\Omega_{B/A}$는 $A$의 원소들은 상수로 생각하고, $B$의 각 원소들은 함수로 생각한 후 이에 따라 Leibniz 법칙을 요구하는 것으로 생각할 수 있다. 
 
 위의 $B$-module은 $B$의 $A$-algebra 구조, 혹은 다른 말로 하면 ring homomorphism $A\rightarrow B$로부터 오는 것이므로, 이는 scheme morphism $\Spec B\rightarrow \Spec A$로 생각할 수 있다. 그럼 위에서 정의한 $B$-module $\Omega_{B/A}$는, scheme의 언어에서는 $\Spec B$ 위에 정의된 quasi-coherent sheaf $\widetilde{\Omega_{B/A}}$로 번역될 것이며, 일반적인 scheme morphism $\varphi:X\rightarrow S$에 대해서는 이들을 이어붙여 $\Omega_{X/S}$를 만들게 된다. ([§스킴 사이의 사상, ⁋명제 1](/ko/math/scheme_theory/morphism_of_schemes#prop1)) 그럼 위의 직관에 따르면, 이는 base $S$ 방향은 고정한채로, $\varphi:X\rightarrow S$의 fiber방향만 함수로 생각하여 미분을 한 것이라 생각할 수 있다. 
 

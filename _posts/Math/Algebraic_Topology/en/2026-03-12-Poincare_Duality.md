@@ -301,7 +301,7 @@ $$\cdots\rightarrow H^k(M,M\setminus(K\cap L);A)\rightarrow H^k(M,M\setminus K;A
 
 and then applying excision and taking limits, we obtain the following commutative diagram
 
-{% diagram Math/Algebraic_Topology/Poincare_Duality-4.svg width="38.08em" alt="MVseq_duality" %}
+{% diagram Math/Algebraic_Topology/Poincare_Duality-4.svg width="39.02em" alt="MVseq_duality" %}
 
 and the induction is completed by the inductive process and [\[Homological Algebra\] §Diagram chasing, ⁋Corollary 2 (The five lemma)](/en/math/homological_algebra/diagram_chasing#cor2).
 

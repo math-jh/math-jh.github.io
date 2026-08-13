@@ -10,9 +10,10 @@ sidebar:
 
 date: 2026-07-06
 weight: 16
+drift_needed: true
 ---
 
-우리가 궁극적으로 다루고 싶은 것은 일반적인 함수 $\mathbb{R}^m\rightarrow\mathbb{R}^n$의 미적분학이다. 우리는 우선 [§곡선과 벡터함수](/ko/math/calculus/vector_functions)에서는 공역의 차원을, [§다변수함수와 편미분](/ko/math/calculus/partial_derivatives) 이후에서는 정의역의 차원을 올려 이를 준비했다. 이제 두 방향을 하나로 합쳐 정의역과 공역이 모두 여러 차원인 일반적인 경우를 시작한다. 특히 우리가 관심있는 경우는 정의역과 공역의 차원이 같은 $\mathbb{R}^n\rightarrow\mathbb{R}^n$이 가장 자연스러운 대상으로, 그럼 이 함수는 $n$차원 벡터를 받아 $n$차원 벡터를 내놓는 함수이다. 
+우리가 궁극적으로 다루고 싶은 것은 일반적인 함수 $\mathbb{R}^m\rightarrow\mathbb{R}^n$의 미적분학이다. 우리는 우선 [§곡선과 벡터함수](/ko/math/calculus/vector_functions)에서는 공역의 차원을, [§다변수함수와 편미분](/ko/math/calculus/partial_derivatives) 이후에서는 정의역의 차원을 올려 이를 준비했다. 이제 두 방향을 하나로 합쳐 정의역과 공역이 모두 여러 차원인 일반적인 경우를 시작한다. 특히 정의역과 공역의 차원이 같은 $\mathbb{R}^n\rightarrow\mathbb{R}^n$이 가장 자연스러운 대상으로, 그럼 이 함수는 $n$차원 벡터를 받아 $n$차원 벡터를 내놓는 함수이다. 
 
 ## 벡터장
 
@@ -67,7 +68,7 @@ $\nabla f = (f_x, f_y, f_z)$의 회전의 첫 성분은 $\partial_y f_z - \parti
 
 $$\partial_x(R_y - Q_z) + \partial_y(P_z - R_x) + \partial_z(Q_x - P_y) = (R_{yx} - R_{xy}) + (P_{zy} - P_{yz}) + (Q_{xz} - Q_{zx})$$
 
-로 묶이고, 각 괄호에 다시 [§다변수함수와 편미분, ⁋정리 7](/ko/math/calculus/partial_derivatives#thm7)를 적용하여 $0$임을 보일 수 있다.
+로 묶이고, 각 괄호에 다시 [§다변수함수와 편미분, ⁋정리 7](/ko/math/calculus/partial_derivatives#thm7)을 적용하여 $0$임을 보일 수 있다.
 :::
 
 첫 항등식은 보존장 판정의 필요조건을 준다. 만일 $\mathbf{F} = \nabla f$이면 $\curl \mathbf{F} = \curl(\nabla f) = 0$이므로, 회전이 $0$이 아닌 벡터장은 결코 보존장이 될 수 없기 때문이다. 즉 다음이 성립한다. 

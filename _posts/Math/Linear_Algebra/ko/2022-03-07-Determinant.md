@@ -13,9 +13,11 @@ date: 2022-03-07
 
 weight: 13
 
+drift_needed: true
+
 ---
 
-우리의 가장 큰 질문은 행렬 $A$가 주어졌을 때, $A$에서 얻을 수 있는 어떠한 정보가 $A$를 up to $\sim$으로, 그러니까 linear operator로서 유일하게 결정하는지에 대한 것이다. 이에 대한 답은 행렬의 eigenvalue와 eigenvector에 (거의) 들어있으며, 이들을 정의하기 위해서는 우선 행렬식을 정의해야 한다. 
+우리의 가장 큰 질문은 행렬 $A$가 주어졌을 때, $A$에서 얻을 수 있는 어떠한 정보가 $A$를 up to similarity로, 그러니까 linear operator로서 유일하게 결정하는지에 대한 것이다. 이에 대한 답은 행렬의 eigenvalue와 eigenvector에 (거의) 들어있으며, 이들을 정의하기 위해서는 우선 행렬식을 정의해야 한다. 
 
 ## 행렬식의 정의
 
@@ -57,7 +59,7 @@ Multilinear map $f:V\times\cdots\times V\rightarrow W$가 alternating인 것은 
 ::: 증명
 우선 $f$가 alternating이라 가정하자. 그럼 임의의 $v_i=v_j$를 만족하는 임의의 $v_1,\ldots, v_n\in V$에 대하여
 
-$$\begin{aligned}f(v_1,\ldots,v_i,\ldots, v_j,\ldots, v_n)&=f(v_1\ldots, v_j,\ldots,v_i,\ldots, v_n)\\&=-f(v_1,\ldots, v_i,\ldots, v_j,\ldots, v_n)\end{aligned}$$
+$$\begin{aligned}f(v_1,\ldots,v_i,\ldots, v_j,\ldots, v_n)&=f(v_1,\ldots, v_j,\ldots,v_i,\ldots, v_n)\\&=-f(v_1,\ldots, v_i,\ldots, v_j,\ldots, v_n)\end{aligned}$$
 
 이 성립하므로 $f$는 antisymmetric이기도 하다. (첫째 등식은 $v_i=v_j$라는 사실을, 둘째 등식은 $f$가 alternating이라는 사실을 사용하였다.)
 
@@ -90,7 +92,7 @@ $D(e_1,\ldots, e_n)=1$을 만족하는 alternating multilinear map $D:(\mathbb{K
 
 위의 정의 또한 마찬가지로 해당 도형들의 넓이를 구하는 하나의 방법일 뿐이다. 넓이와 부피에 대한 올바른 정의를 하는 것이 행렬식에 기하학적 의미를 부여해준다.
 
-$n$차원 공간에서 일차독립인 $n$개의 벡터가 주어졌다 하자. 그럼 이들은 $n$차원의 입방체를 만들게 된다. 가령 $n=3$인 경우, 세 개의 벡터 $v_1,v_2,v_3$은 다음과 같이 평행육면체를 만든다.
+$n$차원 공간에서 일차독립인 $n$개의 벡터가 주어졌다 하자. 그럼 이들은 $n$차원의 나란히꼴을 만들게 된다. 가령 $n=3$인 경우, 세 개의 벡터 $v_1,v_2,v_3$은 다음과 같이 평행육면체를 만든다.
 
 {% diagram Math/Linear_Algebra/Determinant-1.svg width="16em" alt="parallelepiped" %}
 

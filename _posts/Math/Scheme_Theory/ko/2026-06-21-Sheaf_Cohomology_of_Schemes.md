@@ -11,6 +11,8 @@ sidebar:
 date: 2026-06-21
 weight: 18
 
+drift_needed: true
+
 ---
 
 우리는 [\[대수다양체\] §층 코호몰로지](/ko/math/algebraic_varieties/sheaf_cohomology)에서 (quasi-projective) variety 위의 sheaf cohomology를 derived functor로 정의하고, Čech cohomology와의 비교 및 Leray 정리를 통해 quasi-coherent sheaf의 cohomology를 계산하는 방법을 살펴보았다. 이제 우리는 quasi-coherent sheaf를 scheme의 언어로 정리하였으므로, 같은 일을 scheme에서도 할 수 있다. 핵심적인 것은 위 글에서의 quasi-projective 가정은 과도한 것이라는 것으로, separatedness와 affine scheme 위 quasi-coherent sheaf의 vanishing theorem을 보이고 나면 해당 글과 마찬가지의 결과들을 증명할 수 있다. 
@@ -297,7 +299,7 @@ $$b_{ij}=t_{ij}/s_i^N, \qquad t_{ij}\in\Gamma(X, \mathcal{L}^{\otimes mN})$$
 
 이를 위해 $\mathcal{L}^{\otimes m}$의 trivializing affine open cover $V_1,\ldots, V_p$를 택하고 각각의 $V_l=\Spec A_l$ 위에서 trivialization을 하나 고정하면, $s_i$는 함수 $g_{il}\in A_l$에 대응하고 $X_{s_i}\cap V_l=D(g_{il})$이다. 그럼 $X_{s_i}$ 위의 함수들 $b_{ij}$의 $D(g_{il})$로의 restriction은 $(A_l)_{g_{il}}$의 원소이므로, $g_{il}$의 적당한 거듭제곱을 곱하면 $A_l$의 원소가 되며, 이때의 지수는 $i$와 $j$, $l$에 대해 유한 개이므로 그 최댓값 $N_0$을 취하면 모든 $l$에 대해 $s_i^{N_0}b_{ij}$가 $V_l$ 위에서 $\mathcal{L}^{\otimes mN_0}$의 section으로 extend되도록 할 수 있다. 이제 남은 것은 이들을 붙여 global section $t_{ij}$로 만들 수 있다는 것을 보이는 것이다. 
 
-이를 위해 두 chart $V_l$과 $V_{l'}$에서 얻은 extension을 보면, 이들은 $X_{s_i}\cap V_l\cap V_{l'}$ 위에서 일치하지만 이것이 $V_l\cap V_{l'}$ 전체에서 일치할 이유는 없다. 이를 해결하기 위해 $\mathcal{L}^{\otimes m}$과 $\mathcal{L}^{\otimes mN_0}$을 동시에 trivialize하는 affine open cover를 잡고, 이들이 $V_l\cap V_{l'}$을 덮도록 하자. $X$가 Noetherian이므로, 이러한 affine open set들이 유한히 많도록 할 수 있다. 그럼 이러한 affine open set $\Spec C$ 위에서, $s_i$는 함수 $g\in C$에 대응하며, $V_l$과 $V_{l'}$에서의 두 extension의 차는 $D(g)$ 위에서 소멸하는 원소 $h\in C$가 된다. 그럼 $C_g$에서 $h=0$이므로 적당한 지수 $c$에 대해 $g^ch=0$이고, 곧 두 extension에 $s_i^c$를 곱하면 $V_l\cap V_{l'}$ 전체에서 일치한다. 이러한 지수 또한 유한 개이므로 그 최댓값 $c_0$을 취하여 $N=N_0+c_0$으로 두면, $s_i^{N_0}b_{ij}$의 chart별 extension에 $s_i^{c_0}$을 곱한 것들이 서로 일치하여 하나의 $t_{ij}\in\Gamma(X, \mathcal{L}^{\otimes mN})$으로 붙으며, 구성에 의하여 $t_{ij}$의 $X_{s_i}$로의 restriction은 $s_i^Nb_{ij}$이고, 이 때 이들이 $\mathcal{L}^{\otimes mN}$을 globally generate하는 것은 이미 $X_{s_i}$가 $X$를 덮으므로 자명하다. 위에서의 논의에 따르면 이것이 원하는 결과를 얻기 위한 마지막 스텝이었으므로 증명이 완료된다. 
+이를 위해 두 chart $V_l$과 $V_{l'}$에서 얻은 extension을 보면, 이들은 $X_{s_i}\cap V_l\cap V_{l'}$ 위에서 일치하지만 이것이 $V_l\cap V_{l'}$ 전체에서 일치할 이유는 없다. 이를 해결하기 위해 $\mathcal{L}^{\otimes m}$과 $\mathcal{L}^{\otimes mN_0}$을 동시에 trivialize하는 affine open cover를 잡고, 이들이 $V_l\cap V_{l'}$을 덮도록 하자. $X$가 Noetherian이므로, 이러한 affine open set들이 유한히 많도록 할 수 있다. 그럼 이러한 affine open set $\Spec C$ 위에서, $s_i$는 함수 $g\in C$에 대응하며, $V_l$과 $V_{l'}$에서의 두 extension의 차는 $D(g)$ 위에서 소멸하는 원소 $h\in C$가 된다. 그럼 $C_g$에서 $h=0$이므로 적당한 지수 $c$에 대해 $g^ch=0$이고, 곧 두 extension에 $s_i^c$를 곱하면 $V_l\cap V_{l'}$ 전체에서 일치한다. 이러한 지수 또한 유한 개이므로 그 최댓값 $c_0$을 취하여 $N=N_0+c_0$으로 두면, $s_i^{N_0}b_{ij}$의 chart별 extension에 $s_i^{c_0}$을 곱한 것들이 서로 일치하여 하나의 $t_{ij}\in\Gamma(X, \mathcal{L}^{\otimes mN})$으로 붙으며, 구성에 의하여 $t_{ij}$의 $X_{s_i}$로의 restriction은 $s_i^Nb_{ij}$이고, 이 때 이들이 $\mathcal{L}^{\otimes mN}$을 globally generate하는 것은 이미 $X_{s_i}$가 $X$를 덮으므로 자명하다. 
 :::
 
 [§인자와 선형계, ⁋명제 19](/ko/math/scheme_theory/divisors_and_linear_systems#prop19)의 2번에 의하여 $\mathcal{L}$이 ample인 것은 임의의 $m\geq1$에 대해 $\mathcal{L}^{\otimes m}$이 ample인 것과 동치이므로, [정리 11](#thm11)은 두 개념의 차이가 오직 거듭제곱을 취하는 것에서만 온다는 것을 말해준다. 여기에 [정리 9](#thm9)을 더하면 ampleness를 cohomology의 소멸만으로 판정할 수 있다.

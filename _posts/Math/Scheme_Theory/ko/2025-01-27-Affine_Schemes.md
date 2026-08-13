@@ -10,6 +10,7 @@ sidebar:
 
 date: 2025-01-27
 weight: 3
+drift_needed: true
 
 ---
 
@@ -218,7 +219,7 @@ $$A_\mathfrak{p}\cong \mathcal{O}_{\Spec A, \mathfrak{p}}=\varinjlim_\text{\scri
 이 commute한다. 
 :::
 ::: 증명
-[\[위상수학\] §위상공간의 기저, ⁋명제 2](/ko/math/topology/topological_bases#prop2)에 의하여 $D(f)$들이 $\Spec A$의 base이므로, [\[위상수학\] §위상공간의 기저, ⁋명제 5](/ko/math/topology/topological_bases#prop5)에 의하여 
+[§스펙트럼, ⁋보조정리 11](/ko/math/scheme_theory/spectrums#lem11)에 의하여 $D(f)$들이 $\Spec A$의 base이므로, [\[위상수학\] §위상공간의 기저, ⁋명제 5](/ko/math/topology/topological_bases#prop5)에 의하여 
 
 $$\mathcal{O}_{\Spec A, \mathfrak{p}}=\varinjlim_{D(f)\ni\mathfrak{p}} \mathcal{O}_{\Spec A}(D(f))$$
 
@@ -236,7 +237,7 @@ $$A_\mathfrak{p}\cong \varinjlim_{\mathfrak{p}\not\ni f} A_f\tag{$\ast\ast$}$$
 이제 드디어 $\Spec$의 functoriality를 우리가 원하는 형태로 적을 준비가 되었다. 
 
 ::: 명제 9
-대응 $A\mapsto (\Spec A, \mathcal{O}_{\Spec A})$는 contravariant functor $\Spec: \cRing^\op \rightarrow \LRS$를 정의한다. 
+대응 $A\mapsto (\Spec A, \mathcal{O}_{\Spec A})$는 functor $\Spec: \cRing^\op \rightarrow \LRS$를 정의한다. 
 :::
 ::: 증명
 우리는 이미 ring homomorphism $\phi: A \rightarrow B$가 연속함수 $\Spec\phi: \Spec B \rightarrow \Spec A$를 유도하는 것을 안다. ([§스펙트럼, ⁋명제 8](/ko/math/scheme_theory/spectrums#prop8)) 따라서 
@@ -286,7 +287,7 @@ $$(\Spec\phi)^\sharp_\mathfrak{q}:\mathcal{O}_{\Spec A, (\Spec \phi)(\mathfrak{q
 [명제 9](#prop9)의 functor $\Spec:\cRing^\op \rightarrow \LRS$의 essential image를 *affine scheme<sub>아핀스킴</sub>*으로 정의한다. 
 :::
 
-Affine scheme들의 category를 $\AffSch$로 적는다. 그럼 contravariant functor $\Spec:\cRing^\op \rightarrow \AffSch$는 그 정의에 의해 essentially surjective이다. ([\[범주론\] §자연변환, ⁋정리 5](/ko/math/category_theory/natural_transformations#thm5)) 또, 만일 $(\varphi, \varphi^\sharp): (\Spec B, \mathcal{O}_{\Spec B}) \rightarrow (\Spec A, \mathcal{O}_{\Spec A})$이 어떠한 ring homomorphism $\phi$로부터 유도된 것이라면, [명제 9](#prop9)의 증명에서 $1=f\in A$로 잡으면
+Affine scheme들의 category를 $\AffSch$로 적는다. 그럼 functor $\Spec:\cRing^\op \rightarrow \AffSch$는 그 정의에 의해 essentially surjective이다. ([\[범주론\] §자연변환, ⁋정리 5](/ko/math/category_theory/natural_transformations#thm5)) 또, 만일 $(\varphi, \varphi^\sharp): (\Spec B, \mathcal{O}_{\Spec B}) \rightarrow (\Spec A, \mathcal{O}_{\Spec A})$이 어떠한 ring homomorphism $\phi$로부터 유도된 것이라면, [명제 9](#prop9)의 증명에서 $1=f\in A$로 잡으면
 
 $$\varphi^\sharp(D(1))= \bigl(A \overset{\phi}{\longrightarrow} B \overset{\id_B}{\longrightarrow} B_{\phi(1)}=B\bigr)=\phi$$
 

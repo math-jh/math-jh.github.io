@@ -10,6 +10,7 @@ sidebar:
 
 date: 2025-03-29
 weight: 2
+drift_needed: true
 
 ---
 
@@ -112,7 +113,7 @@ $$(x_1,y_1)(x_2,y_2)=(x_1\tau(y_1)(x_2), y_1y_2)$$
 
 $$i(x)=(x, e_H),\qquad p(x,y)=y$$
 
-으로 정의하자. 그럼 이 함수들은 group homomorphim이며, 이들로부터 얻어지는
+으로 정의하자. 그럼 이 함수들은 group homomorphism이며, 이들로부터 얻어지는
 
 $$\mathcal{E}_\tau: N \overset{i}{\rightarrow} N\rtimes_\tau H\overset{p}{\rightarrow} H$$
 
