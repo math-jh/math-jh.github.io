@@ -5296,3 +5296,7 @@ Decide whether each one is a definition and add it to `_data/terms.yml` (then ru
 ## term_extract_worker 2026-08-13 11:00
 
 - _posts/Math/Scheme_Theory/ko/2024-05-24-Valuative_Criteria.md: 주요 용어 'Noetherian' ko 미상 — 보류
+
+## term_extract_worker 2026-08-13 15:31
+
+- _posts/Math/Scheme_Theory/ko/2025-02-05-Algebra_of_Schemes.md: 주요 용어 'Noetherian' ko 미상 — 보류

@@ -8852,6 +8852,13 @@ I:
   defs:
   - label: '[미분다양체] §Distribution'
     url: /ko/math/manifolds/distribution
+- id: integral_scheme
+  en: integral scheme
+  ko: 정역스킴
+  primary: en
+  defs:
+  - label: '[스킴] §스킴의 대수구조'
+    url: /ko/math/scheme_theory/algebra_of_schemes
 - id: integral_with_variable_upper_limit
   en: integral with variable upper limit
   ko: 가변상한 적분
@@ -12351,6 +12358,13 @@ N:
     url: /ko/math/commutative_algebra/regular_local_rings
   - label: '[가환대수학] §인자'
     url: /ko/math/commutative_algebra/divisors
+- id: normal_scheme
+  en: normal scheme
+  ko: 정규스킴
+  primary: en
+  defs:
+  - label: '[스킴] §스킴의 대수구조'
+    url: /ko/math/scheme_theory/algebra_of_schemes
 - id: normal_space
   en: normal space
   ko: 정규공간
