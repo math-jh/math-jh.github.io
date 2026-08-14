@@ -154,7 +154,7 @@ $$H_\bullet^\Delta(A)\rightarrow H_\bullet(A),\qquad H_\bullet^\Delta(X,A)\right
 
 exist. Then by [\[Homological Algebra\] §Long Exact Sequence, ⁋Proposition 2](/en/math/homological_algebra/long_exact_sequence#prop2), these define the following commutative diagram:
 
-{% diagram Math/Algebraic_Topology/Computation_of_Homology-5.svg width="35.64em" alt="functoriality" %}
+{% diagram Math/Algebraic_Topology/Computation_of_Homology-5.svg width="36.61em" alt="functoriality" %}
 
 Using this, the following holds.
 

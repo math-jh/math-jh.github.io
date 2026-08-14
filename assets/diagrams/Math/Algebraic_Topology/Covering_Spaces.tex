@@ -41,8 +41,7 @@
 
 %%FIG general_union_colimit (Covering_Spaces-4.svg)
 \begin{tikzcd}
-  U_i\rar[hook]&X\\
-  U_i\cap U_j\uar[hook]\rar[hook]&U_j\uar[hook]
+  \coprod_{i,j}(U_i\cap U_j)\rar[shift left]\rar[shift right]&\coprod_i U_i\rar&X
 \end{tikzcd}
 
 %%FIG van_Kampen (Covering_Spaces-5.svg)

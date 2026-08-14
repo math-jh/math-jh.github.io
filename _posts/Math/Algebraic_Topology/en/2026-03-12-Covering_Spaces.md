@@ -213,7 +213,7 @@ The simplest such method is the case where a space $X$ is expressed as the union
 
 is a colimit diagram. In this case, our goal is to represent $\Pi_1(X)$ using $\Pi_1(U)$, $\Pi_1(V)$, and $\Pi_1(U\cap V)$ by applying the fundamental groupoid functor $\Pi_1$ to this diagram. On the other hand, [\[Topology\] §Presheaves, ⁋Lemma 1](/en/math/topology/presheaves#lem1) tells us that for any open covering $(U_i)$, the following diagram
 
-{% diagram Math/Algebraic_Topology/Covering_Spaces-4.svg width="8.27em" alt="general_union_colimit" %}
+{% diagram Math/Algebraic_Topology/Covering_Spaces-4.svg width="17.30em" alt="general_union_colimit" %}
 
 is a colimit diagram. Our claim is that if the fundamental groupoids of $(U_i)$ and their finite intersections are all known, then we can compute the fundamental groupoid of $\Pi_1(X)$ from them.
 
