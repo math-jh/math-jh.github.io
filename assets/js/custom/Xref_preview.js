@@ -80,8 +80,13 @@
     if (!box) return;
     var c = getCard();
     c.innerHTML = box.outerHTML;
-    // 복제본의 중복 id 제거 (원본 앵커와 충돌 방지)
-    c.querySelectorAll('[id]').forEach(function (e) { e.removeAttribute('id'); });
+    // 복제본의 중복 id 제거 (원본 앵커와 충돌 방지). 단 svg 안은 건드리지 않는다 —
+    // 도식 svg 는 <defs> 에 글리프를 두고 <use xlink:href="#…"> 로 참조하므로, id 를
+    // 지우면 참조가 전부 끊겨 카드에 아무것도 안 그려진다.
+    c.querySelectorAll('[id]').forEach(function (e) {
+      if (e.closest('svg')) return;
+      e.removeAttribute('id');
+    });
     if (needRender) renderMath(c);
 
     c.classList.add('is-visible');
