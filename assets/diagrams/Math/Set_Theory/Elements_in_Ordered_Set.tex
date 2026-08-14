@@ -19,9 +19,19 @@ b
 b&&c
 \end{tikzcd}
 
-%%FIG diagram (Elements_in_Ordered_Set-3.svg)
-\begin{tikzcd}
-\cdots\rar[-,"\leq"]&a_{-1}\rar[-,"\leq"]&a_0\rar[-,"\leq"]&a_1\rar[-,"\leq"]&\cdots
-\end{tikzcd}
+%%FIG upper_and_lower_bounds (Elements_in_Ordered_Set-3.svg)
+\begin{tikzpicture}[x=0.85cm, y=0.85cm, line width=0.7pt]
+\draw[rounded corners=3pt, fill=accent1!20] (-0.45,-0.45) rectangle (1.45,1.45);
+\node (a) at (1,2) {$a$};
+\node (b) at (2,2) {$b$};
+\node (c) at (0,1) {$c$};
+\node (d) at (1,1) {$d$};
+\node (e) at (0,0) {$e$};
+\draw (a) -- (c);
+\draw (a) -- (d);
+\draw (b) -- (d);
+\draw (c) -- (e);
+\draw (d) -- (e);
+\end{tikzpicture}
 
 \end{document}

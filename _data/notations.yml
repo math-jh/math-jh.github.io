@@ -2299,7 +2299,7 @@
       url: /ko/math/homological_algebra/derived_categories
     - label: §아벨 카테고리
       url: /ko/math/category_theory/abelian_categories
-  - symbol: \cone(f)
+  - symbol: \Cone(f)
     meaning: mapping cone
     defs:
     - label: §긴 완전열

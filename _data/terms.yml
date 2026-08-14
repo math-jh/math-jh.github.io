@@ -525,7 +525,7 @@ A:
   ko: 대수적 공간
   primary: en
   defs:
-  - label: '[스택] §대수적 stack과 quotient stack'
+  - label: '[스택] §Algebraic stack과 quotient stack'
     url: /ko/math/stacks/algebraic_stacks
 - id: algebraic_surface
   en: algebraic surface
@@ -815,7 +815,7 @@ A:
   ko: 아틴 스택
   primary: en
   defs:
-  - label: '[스택] §대수적 stack과 quotient stack'
+  - label: '[스택] §Algebraic stack과 quotient stack'
     url: /ko/math/stacks/algebraic_stacks
 - id: artin-wedderburn_theorem
   en: Artin-Wedderburn theorem
@@ -994,7 +994,7 @@ A:
   defs:
   - label: '[미분다양체] §미분다양체'
     url: /ko/math/manifolds/smooth_manifolds
-  - label: '[스택] §대수적 stack과 quotient stack'
+  - label: '[스택] §Algebraic stack과 quotient stack'
     url: /ko/math/stacks/algebraic_stacks
 - id: augmentation_map
   en: augmentation map
@@ -1188,7 +1188,7 @@ B:
   ko: $\bar\partial$-닫힌
   primary: ko
   defs:
-  - label: '[복소기하학] §Dolbeault 코호몰로지'
+  - label: '[복소기하학] §돌보 코호몰로지'
     url: /ko/math/complex_geometry/dolbeault_cohomology
   see:
   - label: Dolbeault cohomology
@@ -1200,7 +1200,7 @@ B:
   ko: $\bar\partial$-완전
   primary: ko
   defs:
-  - label: '[복소기하학] §Dolbeault 코호몰로지'
+  - label: '[복소기하학] §돌보 코호몰로지'
     url: /ko/math/complex_geometry/dolbeault_cohomology
   see:
   - label: Dolbeault cohomology
@@ -3841,7 +3841,7 @@ C:
   ko: 여접층
   primary: en
   defs:
-  - label: '[스킴] §Kähler 미분과 여접층'
+  - label: '[스킴] §Kähler differential과 여접층'
     url: /ko/math/scheme_theory/sheaf_of_differentials
 - id: cotangent_space
   en: cotangent space
@@ -4336,7 +4336,7 @@ D:
   ko: 들리뉴-멈퍼드 스택
   primary: en
   defs:
-  - label: '[스택] §대수적 stack과 quotient stack'
+  - label: '[스택] §Algebraic stack과 quotient stack'
     url: /ko/math/stacks/algebraic_stacks
   see:
   - label: Artin stack
@@ -5048,17 +5048,17 @@ D:
     id: principal_divisor
 - id: dolbeault_cohomology
   en: Dolbeault cohomology
-  ko: Dolbeault 코호몰로지
+  ko: 돌보 코호몰로지
   primary: en
   defs:
-  - label: '[복소기하학] §Dolbeault 코호몰로지'
+  - label: '[복소기하학] §돌보 코호몰로지'
     url: /ko/math/complex_geometry/dolbeault_cohomology
 - id: dolbeault_complex
   en: Dolbeault complex
   ko: Dolbeault 복합체
   primary: en
   defs:
-  - label: '[복소기하학] §Dolbeault 코호몰로지'
+  - label: '[복소기하학] §돌보 코호몰로지'
     url: /ko/math/complex_geometry/dolbeault_cohomology
 - id: domain
   en: domain
@@ -5651,7 +5651,7 @@ E:
   ko: 에탈
   primary: en
   defs:
-  - label: '[스킴] §매끄러운 사상과 étale 사상'
+  - label: '[스킴] §매끄러운 사상과 에탈 사상'
     url: /ko/math/scheme_theory/smooth_and_etale_morphisms
 - id: étale_algebra
   en: 'étale algebra'
@@ -5978,7 +5978,7 @@ F:
   ko: 2-올곱
   primary: en
   defs:
-  - label: '[스택] §대수적 stack과 quotient stack'
+  - label: '[스택] §Algebraic stack과 quotient stack'
     url: /ko/math/stacks/algebraic_stacks
   see:
   - label: Pullback
@@ -6248,7 +6248,7 @@ F:
   ko: 미세층
   primary: ko
   defs:
-  - label: '[복소기하학] §Dolbeault 코호몰로지'
+  - label: '[복소기하학] §돌보 코호몰로지'
     url: /ko/math/complex_geometry/dolbeault_cohomology
 - id: finer
   en: finer
@@ -6992,8 +6992,8 @@ G:
     url: /ko/math/calculus/improper_integrals
 - id: gauss_curvature
   en: Gauss curvature
-  ko: Gauss 곡률
-  primary: ko
+  ko: 가우스 곡률
+  primary: en
   defs:
   - label: '[리만기하학] §Theorema Egregium'
     url: /ko/math/riemannian_geometry/theorema_egregium
@@ -7921,7 +7921,7 @@ H:
   ko: 호지 수
   primary: en
   defs:
-  - label: '[복소기하학] §Dolbeault 코호몰로지'
+  - label: '[복소기하학] §돌보 코호몰로지'
     url: /ko/math/complex_geometry/dolbeault_cohomology
 - id: hodge_star_operator
   en: Hodge star operator
@@ -7932,8 +7932,8 @@ H:
     url: /ko/math/complex_geometry/hodge_theory
 - id: hodge_subspace
   en: Hodge subspace
-  ko: Hodge 부분공간
-  primary: ko
+  ko: 호지 부분공간
+  primary: en
   defs:
   - label: '[복소기하학] §Hodge 이론'
     url: /ko/math/complex_geometry/hodge_theory
@@ -7984,7 +7984,7 @@ H:
   ko: 정칙 $p$-형식
   primary: en
   defs:
-  - label: '[복소기하학] §Dolbeault 코호몰로지'
+  - label: '[복소기하학] §돌보 코호몰로지'
     url: /ko/math/complex_geometry/dolbeault_cohomology
 - id: holomorphic_tangent_bundle
   en: holomorphic tangent bundle
@@ -9660,7 +9660,7 @@ K:
   ko: Kähler 미분
   primary: en
   defs:
-  - label: '[스킴] §Kähler 미분과 여접층'
+  - label: '[스킴] §Kähler differential과 여접층'
     url: /ko/math/scheme_theory/sheaf_of_differentials
   see:
   - label: Kähler differential module
@@ -10128,8 +10128,8 @@ L:
     url: /ko/math/analysis/completeness_of_reals
 - id: lefschetz_decomposition
   en: Lefschetz decomposition
-  ko: Lefschetz 분해
-  primary: ko
+  ko: 레프셰츠 분해
+  primary: en
   defs:
   - label: '[복소기하학] §Hodge 이론'
     url: /ko/math/complex_geometry/hodge_theory
@@ -10602,7 +10602,7 @@ L:
     url: /ko/math/toric_geometry/cox_construction
 - id: linearly_dependent
   en: linearly dependent
-  ko: 일차독립
+  ko: 일차종속
   primary: ko
   defs:
   - label: '[선형대수학] §벡터공간의 기저'
@@ -10629,7 +10629,7 @@ L:
     url: /ko/math/algebraic_varieties/divisors
 - id: linearly_independent
   en: linearly independent
-  ko: 일차종속
+  ko: 일차독립
   primary: ko
   defs:
   - label: '[선형대수학] §벡터공간의 기저'
@@ -13116,7 +13116,7 @@ P:
   ko: $\bar{\partial}$-연산자
   primary: ko
   defs:
-  - label: '[복소기하학] §Dolbeault 코호몰로지'
+  - label: '[복소기하학] §돌보 코호몰로지'
     url: /ko/math/complex_geometry/dolbeault_cohomology
   see:
   - label: Dolbeault complex
@@ -13126,7 +13126,7 @@ P:
   ko: $\partial$-연산자
   primary: ko
   defs:
-  - label: '[복소기하학] §Dolbeault 코호몰로지'
+  - label: '[복소기하학] §돌보 코호몰로지'
     url: /ko/math/complex_geometry/dolbeault_cohomology
   see:
   - label: Exterior derivative
@@ -14114,7 +14114,7 @@ P:
 - id: pseudo-hyperbolic_distance
   en: pseudo-hyperbolic distance
   ko: 유사쌍곡거리
-  primary: ko
+  primary: en
   defs:
   - label: '[복소해석학] §등각사상과 Möbius 변환'
     url: /ko/math/complex_analysis/conformal_maps
@@ -14523,7 +14523,7 @@ Q:
   ko: 몫 스택
   primary: en
   defs:
-  - label: '[스택] §대수적 stack과 quotient stack'
+  - label: '[스택] §Algebraic stack과 quotient stack'
     url: /ko/math/stacks/algebraic_stacks
 - id: quotient_topology
   en: quotient topology
@@ -15061,7 +15061,7 @@ R:
   ko: 상대차원
   primary: ko
   defs:
-  - label: '[스킴] §매끄러운 사상과 étale 사상'
+  - label: '[스킴] §매끄러운 사상과 에탈 사상'
     url: /ko/math/scheme_theory/smooth_and_etale_morphisms
 - id: relative_homology
   en: relative homology
@@ -15142,7 +15142,7 @@ R:
   defs:
   - label: '[스킴] §점함자'
     url: /ko/math/scheme_theory/functor_of_points
-  - label: '[스택] §대수적 stack과 quotient stack'
+  - label: '[스택] §Algebraic stack과 quotient stack'
     url: /ko/math/stacks/algebraic_stacks
 - id: representable_functor
   en: representable functor
@@ -15306,7 +15306,7 @@ R:
     url: /ko/math/complex_geometry/kodaira_embedding_theorem
 - id: riemann_curvature_tensor
   en: Riemann curvature tensor
-  ko: Riemann 곡률 텐서
+  ko: 리만 곡률 텐서
   primary: ko
   defs:
   - label: '[리만기하학] §리만 곡률'
@@ -16169,7 +16169,7 @@ S:
   ko: 상대 미분층
   primary: en
   defs:
-  - label: '[스킴] §Kähler 미분과 여접층'
+  - label: '[스킴] §Kähler differential과 여접층'
     url: /ko/math/scheme_theory/sheaf_of_differentials
 - id: sheafification
   en: sheafification
@@ -16562,7 +16562,7 @@ S:
   defs:
   - label: '[미적분학] §미분과 도함수'
     url: /ko/math/calculus/derivatives
-  - label: '[스킴] §매끄러운 사상과 étale 사상'
+  - label: '[스킴] §매끄러운 사상과 에탈 사상'
     url: /ko/math/scheme_theory/smooth_and_etale_morphisms
   - label: '[토릭 기하학] §아핀 토릭 다양체'
     url: /ko/math/toric_geometry/affine_toric_varieties
@@ -16853,7 +16853,7 @@ S:
   ko: 표준 에탈
   primary: en
   defs:
-  - label: '[스킴] §매끄러운 사상과 étale 사상'
+  - label: '[스킴] §매끄러운 사상과 에탈 사상'
     url: /ko/math/scheme_theory/smooth_and_etale_morphisms
 - id: standard_log_point
   en: standard log point
@@ -17675,7 +17675,7 @@ T:
   ko: 접층
   primary: en
   defs:
-  - label: '[스킴] §Kähler 미분과 여접층'
+  - label: '[스킴] §Kähler differential과 여접층'
     url: /ko/math/scheme_theory/sheaf_of_differentials
 - id: tangent_space
   en: tangent space
@@ -18525,7 +18525,7 @@ U:
   ko: 보편 미분
   primary: en
   defs:
-  - label: '[스킴] §Kähler 미분과 여접층'
+  - label: '[스킴] §Kähler differential과 여접층'
     url: /ko/math/scheme_theory/sheaf_of_differentials
 - id: universal_element
   en: universal element
@@ -18588,7 +18588,7 @@ U:
   ko: 비분기
   primary: en
   defs:
-  - label: '[스킴] §매끄러운 사상과 étale 사상'
+  - label: '[스킴] §매끄러운 사상과 에탈 사상'
     url: /ko/math/scheme_theory/smooth_and_etale_morphisms
   see:
   - label: 'Étale'
@@ -19192,7 +19192,7 @@ Z:
   defs:
   - label: '[대수다양체] §접공간과 매끄러움'
     url: /ko/math/algebraic_varieties/tangent_spaces_and_smoothness
-  - label: '[스킴] §Kähler 미분과 여접층'
+  - label: '[스킴] §Kähler differential과 여접층'
     url: /ko/math/scheme_theory/sheaf_of_differentials
   see:
   - label: Tangent space
