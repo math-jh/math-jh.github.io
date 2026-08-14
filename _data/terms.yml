@@ -1669,7 +1669,7 @@ B:
   ko: 유계함수
   primary: en
   defs:
-  - label: '[해석학] §Riemann 적분'
+  - label: '[해석학] §Riemann integral'
     url: /ko/math/analysis/riemann_integral
 - id: bounded_sequence
   en: bounded sequence
@@ -3194,7 +3194,7 @@ C:
   defs:
   - label: '[가환대수학] §완비화'
     url: /ko/math/commutative_algebra/completion
-  - label: '[리 이론] §Weyl 지표 공식'
+  - label: '[리 이론] §Weyl character formula'
     url: /ko/math/lie_theory/weyl_character_formula
 - id: complex_algebraic_variety
   en: complex algebraic variety
@@ -3558,7 +3558,7 @@ C:
   defs:
   - label: '[스킴] §평탄사상'
     url: /ko/math/scheme_theory/flat_morphisms
-  - label: '[층론] §Verdier 쌍대성'
+  - label: '[층론] §Verdier duality'
     url: /ko/math/sheaf_theory/verdier_duality
 - id: contact_order
   en: contact order
@@ -4111,7 +4111,7 @@ D:
   ko: 다르부 합
   primary: en
   defs:
-  - label: '[해석학] §Riemann 적분'
+  - label: '[해석학] §Riemann integral'
     url: /ko/math/analysis/riemann_integral
   see:
   - label: 리만 합
@@ -5207,7 +5207,7 @@ D:
   ko: 쌍대화 복합체
   primary: en
   defs:
-  - label: '[층론] §Verdier 쌍대성'
+  - label: '[층론] §Verdier duality'
     url: /ko/math/sheaf_theory/verdier_duality
 - id: dualizing_sheaf
   en: dualizing sheaf
@@ -5567,7 +5567,7 @@ E:
   ko: 동변 천 특성류
   primary: en
   defs:
-  - label: '[토릭 기하학] §Atiyah–Bott 국소화 정리'
+  - label: '[토릭 기하학] §Atiyah–Bott localization 정리'
     url: /ko/math/toric_geometry/atiyah_bott_localization
 - id: equivariant_cohomology
   en: equivariant cohomology
@@ -5581,14 +5581,14 @@ E:
   ko: 동변 오일러 특성류
   primary: en
   defs:
-  - label: '[토릭 기하학] §Atiyah–Bott 국소화 정리'
+  - label: '[토릭 기하학] §Atiyah–Bott localization 정리'
     url: /ko/math/toric_geometry/atiyah_bott_localization
 - id: equivariant_integration
   en: equivariant integration
   ko: 동변 적분
   primary: en
   defs:
-  - label: '[토릭 기하학] §Atiyah–Bott 국소화 정리'
+  - label: '[토릭 기하학] §Atiyah–Bott localization 정리'
     url: /ko/math/toric_geometry/atiyah_bott_localization
 - id: equivariantly_formal
   en: equivariantly formal
@@ -5630,7 +5630,7 @@ E:
   ko: 본질적 확대
   primary: en
   defs:
-  - label: '[가환대수학] §단사가군과 Matlis 쌍대성'
+  - label: '[가환대수학] §단사가군과 Matlis duality'
     url: /ko/math/commutative_algebra/matlis_duality
 - id: essential_singularity
   en: essential singularity
@@ -5740,14 +5740,14 @@ E:
   ko: 오일러 정리
   primary: ko
   defs:
-  - label: '[정수론] §오일러 정리와 phi 함수'
+  - label: '[정수론] §오일러 정리와 phi function'
     url: /ko/math/number_theory/euler_theorem
 - id: euler_s_totient
   en: 'Euler''s totient'
   ko: 오일러 phi 함수
   primary: ko
   defs:
-  - label: '[정수론] §오일러 정리와 phi 함수'
+  - label: '[정수론] §오일러 정리와 phi function'
     url: /ko/math/number_theory/euler_theorem
 - id: evaluation
   en: evaluation
@@ -6537,7 +6537,7 @@ F:
   ko: 형식 지표
   primary: en
   defs:
-  - label: '[리 이론] §Weyl 지표 공식'
+  - label: '[리 이론] §Weyl character formula'
     url: /ko/math/lie_theory/weyl_character_formula
 - id: formal_power_series
   en: formal power series
@@ -6697,14 +6697,14 @@ F:
   ko: Fubini–Study 형식
   primary: en
   defs:
-  - label: '[복소기하학] §Kähler 다양체'
+  - label: '[복소기하학] §Kähler manifold'
     url: /ko/math/complex_geometry/kahler_manifolds
 - id: fubini_study_metric
   en: Fubini–Study metric
   ko: Fubini–Study 계량
   primary: ko
   defs:
-  - label: '[복소기하학] §Kähler 다양체'
+  - label: '[복소기하학] §Kähler manifold'
     url: /ko/math/complex_geometry/kahler_manifolds
 - id: full
   en: full
@@ -6788,7 +6788,7 @@ F:
   ko: 기본형식
   primary: ko
   defs:
-  - label: '[복소기하학] §Kähler 다양체'
+  - label: '[복소기하학] §Kähler manifold'
     url: /ko/math/complex_geometry/kahler_manifolds
 - id: fundamental_group
   en: fundamental group
@@ -7737,7 +7737,7 @@ H:
   ko: 에르미트 형식
   primary: en
   defs:
-  - label: '[복소기하학] §Kähler 다양체'
+  - label: '[복소기하학] §Kähler manifold'
     url: /ko/math/complex_geometry/kahler_manifolds
   see:
   - label: Hermitian inner product
@@ -7769,7 +7769,7 @@ H:
   ko: 에르미트 다양체
   primary: en
   defs:
-  - label: '[복소기하학] §Kähler 다양체'
+  - label: '[복소기하학] §Kähler manifold'
     url: /ko/math/complex_geometry/kahler_manifolds
   see:
   - label: Complex manifold
@@ -7779,7 +7779,7 @@ H:
   ko: 에르미트 계량
   primary: en
   defs:
-  - label: '[복소기하학] §Kähler 다양체'
+  - label: '[복소기하학] §Kähler manifold'
     url: /ko/math/complex_geometry/kahler_manifolds
   see:
   - label: Kähler metric
@@ -8598,7 +8598,7 @@ I:
   ko: 비동차좌표
   primary: en
   defs:
-  - label: '[복소기하학] §Kähler 다양체'
+  - label: '[복소기하학] §Kähler manifold'
     url: /ko/math/complex_geometry/kahler_manifolds
   see:
   - label: Homogeneous coordinates
@@ -8687,7 +8687,7 @@ I:
   ko: 단사껍질
   primary: en
   defs:
-  - label: '[가환대수학] §단사가군과 Matlis 쌍대성'
+  - label: '[가환대수학] §단사가군과 Matlis duality'
     url: /ko/math/commutative_algebra/matlis_duality
 - id: injective_limit
   en: injective limit
@@ -9425,7 +9425,7 @@ J:
   ko: $J$-불변성
   primary: en
   defs:
-  - label: '[복소기하학] §Kähler 다양체'
+  - label: '[복소기하학] §Kähler manifold'
     url: /ko/math/complex_geometry/kahler_manifolds
 - id: jacobi_equation
   en: Jacobi equation
@@ -9640,7 +9640,7 @@ K:
   ko: 켈러 류
   primary: en
   defs:
-  - label: '[복소기하학] §Kähler 다양체'
+  - label: '[복소기하학] §Kähler manifold'
     url: /ko/math/complex_geometry/kahler_manifolds
   see:
   - label: Kähler form
@@ -9687,7 +9687,7 @@ K:
   ko: 켈러 형식
   primary: en
   defs:
-  - label: '[복소기하학] §Kähler 다양체'
+  - label: '[복소기하학] §Kähler manifold'
     url: /ko/math/complex_geometry/kahler_manifolds
   see:
   - label: Symplectic form
@@ -9699,7 +9699,7 @@ K:
   ko: 켈러 다양체
   primary: en
   defs:
-  - label: '[복소기하학] §Kähler 다양체'
+  - label: '[복소기하학] §Kähler manifold'
     url: /ko/math/complex_geometry/kahler_manifolds
   see:
   - label: Complex manifold
@@ -9715,7 +9715,7 @@ K:
   ko: 켈러 계량
   primary: en
   defs:
-  - label: '[복소기하학] §Kähler 다양체'
+  - label: '[복소기하학] §Kähler manifold'
     url: /ko/math/complex_geometry/kahler_manifolds
   see:
   - label: Hermitian metric
@@ -9727,7 +9727,7 @@ K:
   ko: 켈러 퍼텐셜
   primary: en
   defs:
-  - label: '[복소기하학] §Kähler 다양체'
+  - label: '[복소기하학] §Kähler manifold'
     url: /ko/math/complex_geometry/kahler_manifolds
   see:
   - label: Kähler form
@@ -9796,7 +9796,7 @@ K:
   ko: 코스탄트 분할 함수
   primary: en
   defs:
-  - label: '[리 이론] §Weyl 지표 공식'
+  - label: '[리 이론] §Weyl character formula'
     url: /ko/math/lie_theory/weyl_character_formula
 - id: koszul_complex
   en: Koszul complex
@@ -11044,7 +11044,7 @@ L:
   ko: 하합
   primary: ko
   defs:
-  - label: '[해석학] §Riemann 적분'
+  - label: '[해석학] §Riemann integral'
     url: /ko/math/analysis/riemann_integral
 - id: lower_triangular_matrix
   en: lower triangular matrix
@@ -11178,7 +11178,7 @@ M:
   ko: Matlis 쌍대성
   primary: en
   defs:
-  - label: '[가환대수학] §단사가군과 Matlis 쌍대성'
+  - label: '[가환대수학] §단사가군과 Matlis duality'
     url: /ko/math/commutative_algebra/matlis_duality
   see:
   - label: Duality
@@ -13706,10 +13706,10 @@ P:
   ko: 소체
   primary: en
   defs:
-  - label: '[체론] §체'
-    url: /ko/math/field_theory/fields
   - label: '[환론] §가역원과 영인자'
     url: /ko/math/ring_theory/units_and_zero_divisors
+  - label: '[체론] §체'
+    url: /ko/math/field_theory/fields
 - id: prime_filter
   en: prime filter
   ko: 소필터
@@ -14814,7 +14814,7 @@ R:
   ko: 기약잉여계
   primary: ko
   defs:
-  - label: '[정수론] §오일러 정리와 phi 함수'
+  - label: '[정수론] §오일러 정리와 phi function'
     url: /ko/math/number_theory/euler_theorem
   see:
   - label: Reduced residue class
@@ -14897,7 +14897,7 @@ R:
   ko: 세분화
   primary: en
   defs:
-  - label: '[해석학] §Riemann 적분'
+  - label: '[해석학] §Riemann integral'
     url: /ko/math/analysis/riemann_integral
   - label: '[위상수학] §Compactness와 paracompactness'
     url: /ko/math/topology/compactness
@@ -16918,7 +16918,7 @@ S:
   ko: 층화
   primary: en
   defs:
-  - label: '[층론] §Verdier 쌍대성'
+  - label: '[층론] §Verdier duality'
     url: /ko/math/sheaf_theory/verdier_duality
 - id: strict_order
   en: strict order
@@ -18632,7 +18632,7 @@ U:
   ko: 상합
   primary: ko
   defs:
-  - label: '[해석학] §Riemann 적분'
+  - label: '[해석학] §Riemann integral'
     url: /ko/math/analysis/riemann_integral
   see:
   - label: 하합
@@ -18874,7 +18874,7 @@ V:
   ko: 베르디에 쌍대
   primary: en
   defs:
-  - label: '[층론] §Verdier 쌍대성'
+  - label: '[층론] §Verdier duality'
     url: /ko/math/sheaf_theory/verdier_duality
   see:
   - label: Verdier duality
@@ -18886,7 +18886,7 @@ V:
   ko: Verdier 쌍대 함자
   primary: en
   defs:
-  - label: '[층론] §Verdier 쌍대성'
+  - label: '[층론] §Verdier duality'
     url: /ko/math/sheaf_theory/verdier_duality
   see:
   - label: Verdier dual
@@ -18896,7 +18896,7 @@ V:
   ko: Verdier 쌍대성
   primary: en
   defs:
-  - label: '[층론] §Verdier 쌍대성'
+  - label: '[층론] §Verdier duality'
     url: /ko/math/sheaf_theory/verdier_duality
 - id: verma_module
   en: Verma module
@@ -19124,7 +19124,7 @@ W:
   ko: 바일 분모
   primary: en
   defs:
-  - label: '[리 이론] §Weyl 지표 공식'
+  - label: '[리 이론] §Weyl character formula'
     url: /ko/math/lie_theory/weyl_character_formula
   see:
   - label: Weyl group
@@ -19148,7 +19148,7 @@ W:
   ko: 바일 벡터
   primary: en
   defs:
-  - label: '[리 이론] §Weyl 지표 공식'
+  - label: '[리 이론] §Weyl character formula'
     url: /ko/math/lie_theory/weyl_character_formula
   see:
   - label: Weyl group
