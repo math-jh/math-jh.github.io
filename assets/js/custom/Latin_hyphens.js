@@ -37,6 +37,8 @@
 
   window.hyphenateLatin = function (root) {
     if (!root || !root.querySelectorAll) return;
+    // EN 페이지는 문서 lang 이 이미 en 이라 감쌀 이유가 없다 (_page.scss 의 :lang(en) 규칙)
+    if ((document.documentElement.lang || '').slice(0, 2) === 'en') return;
 
     // 양끝맞춤이 걸리는 문단·목록만 대상으로 한다 (제목·캡션은 제외)
     root.querySelectorAll('p, li').forEach(function (block) {
