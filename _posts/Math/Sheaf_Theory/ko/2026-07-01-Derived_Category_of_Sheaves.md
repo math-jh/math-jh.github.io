@@ -1,6 +1,6 @@
 ---
 title: "층의 유도 범주와 유도 functor"
-description: "공간 위 층의 abelian 범주가 충분한 injective를 가짐을 확인하고, 그 유도 범주에서 Rf_*·Lf^*·⊗^L·RHom을 정의하여 층 코호몰로지와 Leray 스펙트럼 열을 derived functor의 언어로 통합한다."
+description: "공간 위 층의 abelian 범주가 충분한 injective를 가짐을 확인하고, 그 유도 범주에서 Rf_*·Lf^*·⊗^L·RHom을 정의하여 층 코호몰로지와 Leray spectral sequence을 derived functor의 언어로 통합한다."
 excerpt: "D(Sh(X)), the derived functors Rf_*, Lf^*, ⊗^L, RHom, and their adjunctions"
 
 categories: [Math / Sheaf Theory]
@@ -34,7 +34,7 @@ $$(\ker \phi)_x = \ker(\phi_x), \qquad (\coker \phi)_x = \coker(\phi_x), \qquad 
 로 주어진다.
 :::
 ::: 증명
-Sheaf morphism $\phi$의 presheaf 차원 kernel $U \mapsto \ker(\phi(U))$는 그 자체로 sheaf이며, 따라서 sheaf morphism의 kernel은 이 presheaf kernel로 정의한다 ([\[위상수학\] §층, ⁋정의 7](/ko/math/topology/sheaves#def7)). 이는 sheaf 공리가 국소적으로 section을 이어붙이는 조건이기 때문이다. 호환되는 local section $s_i \in \ker(\phi(U_i))$가 주어지면 $\mathcal{F}$가 sheaf이므로 이들은 유일한 $s \in \mathcal{F}(U)$로 이어붙고, $\phi(U)(s)$는 각 $U_i$ 위에서 $\phi(U_i)(s_i) = 0$으로 제한되므로 $\mathcal{G}$의 separatedness에 의해 $\phi(U)(s) = 0$, 즉 $s \in \ker(\phi(U))$이다. Cokernel과 image는 presheaf 차원의 $U \mapsto \coker(\phi(U))$, $U \mapsto \im(\phi(U))$를 sheafify하여 정의한다. Sheafification은 stalk를 보존하고 ([\[위상수학\] §층, ⁋정의 5](/ko/math/topology/sheaves#def5) 직후의 universal property로부터 $(\mathcal{P}^\dagger)_x = \mathcal{P}_x$) stalk functor $\mathcal{F} \mapsto \mathcal{F}_x$는 exact하므로, 위의 stalk 공식이 따라 나온다.
+Sheaf morphism $\phi$의 presheaf dimension kernel $U \mapsto \ker(\phi(U))$는 그 자체로 sheaf이며, 따라서 sheaf morphism의 kernel은 이 presheaf kernel로 정의한다 ([\[위상수학\] §층, ⁋정의 7](/ko/math/topology/sheaves#def7)). 이는 sheaf 공리가 국소적으로 section을 이어붙이는 조건이기 때문이다. 호환되는 local section $s_i \in \ker(\phi(U_i))$가 주어지면 $\mathcal{F}$가 sheaf이므로 이들은 유일한 $s \in \mathcal{F}(U)$로 이어붙고, $\phi(U)(s)$는 각 $U_i$ 위에서 $\phi(U_i)(s_i) = 0$으로 제한되므로 $\mathcal{G}$의 separatedness에 의해 $\phi(U)(s) = 0$, 즉 $s \in \ker(\phi(U))$이다. Cokernel과 image는 presheaf 차원의 $U \mapsto \coker(\phi(U))$, $U \mapsto \im(\phi(U))$를 sheafify하여 정의한다. Sheafification은 stalk를 보존하고 ([\[위상수학\] §층, ⁋정의 5](/ko/math/topology/sheaves#def5) 직후의 universal property로부터 $(\mathcal{P}^\dagger)_x = \mathcal{P}_x$) stalk functor $\mathcal{F} \mapsto \mathcal{F}_x$는 exact하므로, 위의 stalk 공식이 따라 나온다.
 
 이제 abelian category의 공리를 확인하자. $\Sh(X)$는 additive category이고 모든 morphism이 kernel과 cokernel을 가진다. 임의의 monomorphism이 자신의 cokernel의 kernel이고 임의의 epimorphism이 자신의 kernel의 cokernel이라는 조건은 stalk에서 확인하면 되는데, $\mathbb{Z}$-module(또는 $\mathcal{O}_{X,x}$-module)의 category가 abelian이므로 각 stalk에서 성립하고, sheaf morphism의 동형은 stalk 동형으로 판정되므로 ([\[위상수학\] §층, ⁋명제 4](/ko/math/topology/sheaves#prop4)) sheaf 차원에서도 성립한다. $\operatorname{Mod}(\mathcal{O}_X)$의 경우도 동일하다.
 :::
@@ -182,7 +182,7 @@ $$E_2^{p,q} = R^p g_\ast (R^q f_\ast \mathcal{F}) \Rightarrow R^{p+q}(gf)_\ast \
 $$E_2^{p,q} = H^p(Y, R^q f_\ast \mathcal{F}) \Rightarrow H^{p+q}(X, \mathcal{F})$$
 를 얻는다. 이것이 바로 [\[대수다양체\] §층 코호몰로지, ⁋명제 19](/ko/math/algebraic_varieties/sheaf_cohomology#prop19)에서 Cartan-Eilenberg resolution을 통해 직접 구성하였던 Leray spectral sequence이다. Derived category의 관점에서 보면 Leray spectral sequence는 독립된 정리가 아니라 합성 동형 $R(gf)_\ast \cong Rg_\ast Rf_\ast$의 cohomology를 계산하는 한 가지 방법일 뿐이다. 같은 논법을 $R\Gamma(X, R\mathcal{H}om(\mathcal{F}, \mathcal{G}))$에 적용하면 local-to-global $\Ext$ spectral sequence $E_2^{p,q} = H^p(X, \mathcal{E}xt^q(\mathcal{F}, \mathcal{G})) \Rightarrow \Ext^{p+q}(\mathcal{F}, \mathcal{G})$를 같은 방식으로 얻는다.
 
-## Torus 위의 유도 당김과 Leray 분해
+## Torus 위의 유도 당김과 Leray decomposition
 
 지금까지의 기계를 구체적인 계산으로 점검한다. 가장 단순하면서도 비자명한 $R^1$을 드러내는 예로 원과 torus 위의 constant sheaf를 다룬다. $\mathbb{Z}_X$로 stalk $\mathbb{Z}$를 갖는 constant sheaf를 적는다.
 

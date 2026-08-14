@@ -14,7 +14,7 @@ weight: 11
 published: false
 ---
 
-[§오일러 정리와 phi 함수](/ko/math/number_theory/euler_theorem)는 $\gcd(a, n) = 1$일 때 $a^{\varphi(n)} \equiv 1$임을 말했다. 그렇다면 자연스러운 물음은 $a$의 거듭제곱이 $1$로 돌아오는 가장 작은 지수가 무엇인지, 그리고 그 거듭제곱이 기약잉여계 전체를 훑을 수 있는지의 여부이다. 이 물음이 coset의 곱셈 구조를 드러낸다.
+[§오일러 정리와 phi function](/ko/math/number_theory/euler_theorem)는 $\gcd(a, n) = 1$일 때 $a^{\varphi(n)} \equiv 1$임을 말했다. 그렇다면 자연스러운 물음은 $a$의 거듭제곱이 $1$로 돌아오는 가장 작은 지수가 무엇인지, 그리고 그 거듭제곱이 기약잉여계 전체를 훑을 수 있는지의 여부이다. 이 물음이 coset의 곱셈 구조를 드러낸다.
 
 ## 위수
 

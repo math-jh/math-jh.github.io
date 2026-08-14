@@ -29,7 +29,7 @@ $A$-module $M$이 *indecomposable<sub>분해불가능</sub>*이라는 것은 $M\
 
 $\Rep(Q)\cong\lMod{kQ}$ 아래에서 representation의 direct sum이 module의 direct sum에 대응하므로 ([§Quiver와 경로대수, ⁋정의 11](/ko/math/representation_theory/path_algebras#def11)), representation $V$가 indecomposable인 것과 대응하는 $kQ$-module이 indecomposable인 것은 동치이다. 따라서 두 정의는 동치의 양변에서 같은 개념을 가리킨다.
 
-한 module이 둘 이상의 submodule의 direct sum $M=M_1\oplus\cdots\oplus M_r$로 적힐 때, 각 $M_i$가 다시 indecomposable이면 이를 $M$의 *indecomposable 분해*라 부른다. Indecomposable의 정의는 이러한 분해를 더 이상 정련할 수 없게 만드는 최소 단위를 골라낸 것이다. Direct sum의 projection과 포함을 통해, $M=M_1\oplus M_2$인 nonzero 분해가 존재한다는 것은 $M$ 위에 $\id_M$도 $0$도 아닌 idempotent endomorphism이 존재한다는 것과 동치인데, 이 관점은 [보조정리 3](#lem3) 이후에 다시 쓰인다.
+한 module이 둘 이상의 submodule의 direct sum $M=M_1\oplus\cdots\oplus M_r$로 적힐 때, 각 $M_i$가 다시 indecomposable이면 이를 $M$의 *indecomposable decomposition*라 부른다. Indecomposable의 정의는 이러한 분해를 더 이상 정련할 수 없게 만드는 최소 단위를 골라낸 것이다. Direct sum의 projection과 포함을 통해, $M=M_1\oplus M_2$인 nonzero 분해가 존재한다는 것은 $M$ 위에 $\id_M$도 $0$도 아닌 idempotent endomorphism이 존재한다는 것과 동치인데, 이 관점은 [보조정리 3](#lem3) 이후에 다시 쓰인다.
 
 ::: 예시 2
 Simple module은 indecomposable이다. $M$이 simple이면 ([\[가환대수학\] §조르단-횔더 정리, ⁋정의 1](/ko/math/commutative_algebra/Jordan-Holder_theorem#def1)) submodule이 $0$과 $M$ 뿐이므로 $M=M_1\oplus M_2$일 때 $M_1,M_2$ 각각이 $0$ 또는 $M$이고, 둘이 direct sum을 이루려면 그중 하나는 $0$이어야 한다. 그러나 그 역은 성립하지 않는다. 선형 $A_2$ quiver $1\xrightarrow{\ \alpha\ }2$ ([§Quiver와 경로대수, ⁋예시 6](/ko/math/representation_theory/path_algebras#ex6)) 에서 representation
@@ -69,7 +69,7 @@ $$x=\bigl(x-\varphi^n(z)\bigr)+\varphi^n(z)$$
 
 인데, 우변 첫째 항은 $\varphi^n\bigl(x-\varphi^n(z)\bigr)=\varphi^n(x)-\varphi^{2n}(z)=0$이므로 $N$에 속하고, 둘째 항은 $I$에 속한다. 따라서 $M=N\oplus I=\ker\varphi^n\oplus\im\varphi^n$이다.
 
-이제 $M$이 indecomposable이라 하자. 위의 direct sum에서 indecomposable의 정의에 의하여 $N$과 $I$ 중 하나는 $0$이다. $N=\ker\varphi^n=0$이면 $\varphi^n$이 단사이고, 유한차원이 아니어도 유한 길이 module 위의 단사 endomorphism은 전사이다. 실제로 $\im\varphi^n=\im\varphi^{2n}$과 $\ker\varphi^n=0$으로부터, 임의의 $x$에 대하여 $\varphi^n(x)=\varphi^{2n}(z)$인 $z$를 잡으면 $\varphi^n\bigl(x-\varphi^n(z)\bigr)=0$이어서 $x=\varphi^n(z)\in\im\varphi^n$이므로 $\varphi^n$은 전사이다. 따라서 $\varphi^n$이 isomorphic이고, 그럼 $\varphi$ 또한 isomorphic, 곧 automorphism이다. 반대로 $I=\im\varphi^n=0$이면 $\varphi^n=0$이므로 $\varphi$는 nilpotent이다. 두 경우가 indecomposable에서 망라되므로 결론을 얻는다.
+이제 $M$이 indecomposable이라 하자. 위의 direct sum에서 indecomposable의 정의에 의하여 $N$과 $I$ 중 하나는 $0$이다. $N=\ker\varphi^n=0$이면 $\varphi^n$이 단사이고, 유한차원이 아니어도 유한 길이 module 위의 injective endomorphism은 전사이다. 실제로 $\im\varphi^n=\im\varphi^{2n}$과 $\ker\varphi^n=0$으로부터, 임의의 $x$에 대하여 $\varphi^n(x)=\varphi^{2n}(z)$인 $z$를 잡으면 $\varphi^n\bigl(x-\varphi^n(z)\bigr)=0$이어서 $x=\varphi^n(z)\in\im\varphi^n$이므로 $\varphi^n$은 전사이다. 따라서 $\varphi^n$이 isomorphic이고, 그럼 $\varphi$ 또한 isomorphic, 곧 automorphism이다. 반대로 $I=\im\varphi^n=0$이면 $\varphi^n=0$이므로 $\varphi$는 nilpotent이다. 두 경우가 indecomposable에서 망라되므로 결론을 얻는다.
 :::
 
 위 증명에서 direct sum $M=\ker\varphi^n\oplus\im\varphi^n$이 indecomposable 가정 아래 둘 중 하나가 사라지도록 강제된다는 점이 본질적이다. $N=0$인 경우가 automorphism, $I=0$인 경우가 nilpotent에 해당하며, 이 두 경우 사이에는 중간 지대가 없다. 이로부터 indecomposable의 endomorphism ring의 구조가 곧바로 결정된다.
@@ -80,7 +80,7 @@ $M$이 유한 길이를 갖는 indecomposable $A$-module이면, endomorphism rin
 ::: 증명
 [보조정리 3](#lem3)에 의하여 $\mathfrak{m}$은 정확히 nilpotent endomorphism들의 집합이다. Local ring임을 보이려면 $\mathfrak{m}$이 양측 ideal이고 두 비가역원의 합이 다시 비가역임을 보이면 충분하다. 비가역원들의 집합이 ideal을 이루면 그것이 모든 proper left ideal을 포함하므로 유일한 maximal left ideal이 되기 때문이다.
 
-$\varphi\in\mathfrak{m}$이고 $\psi\in\End_A(M)$이라 하자. $\psi\varphi$가 automorphism이라 가정하면 $\varphi$가 단사이고, [보조정리 3](#lem3)의 증명에서 보았듯 유한 길이 module 위의 단사 endomorphism은 전사이므로 $\varphi$가 automorphism이 되어 가정에 모순이다. 따라서 $\psi\varphi\in\mathfrak{m}$이다. 마찬가지로 $\varphi\psi$가 automorphism이면 $\varphi$가 전사이고, 유한 길이 module 위의 전사 endomorphism은 단사이므로 ($\length(\im\varphi)=\length(M)$이려면 $\ker\varphi=0$이어야 한다) $\varphi$가 automorphism이 되어 모순이다. 따라서 $\varphi\psi\in\mathfrak{m}$이며, $\mathfrak{m}$은 곱셈에 대하여 닫혀 있다.
+$\varphi\in\mathfrak{m}$이고 $\psi\in\End_A(M)$이라 하자. $\psi\varphi$가 automorphism이라 가정하면 $\varphi$가 단사이고, [보조정리 3](#lem3)의 증명에서 보았듯 유한 길이 module 위의 injective endomorphism은 전사이므로 $\varphi$가 automorphism이 되어 가정에 모순이다. 따라서 $\psi\varphi\in\mathfrak{m}$이다. 마찬가지로 $\varphi\psi$가 automorphism이면 $\varphi$가 전사이고, 유한 길이 module 위의 surjective endomorphism은 단사이므로 ($\length(\im\varphi)=\length(M)$이려면 $\ker\varphi=0$이어야 한다) $\varphi$가 automorphism이 되어 모순이다. 따라서 $\varphi\psi\in\mathfrak{m}$이며, $\mathfrak{m}$은 곱셈에 대하여 닫혀 있다.
 
 이제 $\varphi,\psi\in\mathfrak{m}$이고 $\varphi+\psi$가 automorphism이라 가정하여 모순을 이끈다. $\eta=(\varphi+\psi)^{-1}$로 두면 $\eta\varphi+\eta\psi=\id_M$이다. 앞 문단에서 보인 대로 $\eta\varphi,\eta\psi\in\mathfrak{m}$, 곧 둘 다 nilpotent이다. $\rho=\eta\varphi$로 두면 $\eta\psi=\id_M-\rho$이다. $\rho$가 nilpotent, 곧 적당한 $N$에 대하여 $\rho^N=0$이면
 
@@ -117,14 +117,14 @@ $$(\theta^{-1}\iota_j)\circ\pi_j=\theta^{-1}(\iota_j\pi_j)=\theta^{-1}\theta=\id
 
 $$M=M_1\oplus M_2\oplus\cdots\oplus M_r$$
 
-으로 적힌다. 또한 이 분해는 isomorphism과 순서를 무시하면 유일하다. 곧 다른 indecomposable 분해 $M=N_1\oplus\cdots\oplus N_s$가 주어지면 $r=s$이고, 적절한 permutation $\sigma$가 존재하여 모든 $i$에 대하여 $M_i\cong N_{\sigma(i)}$이다.
+으로 적힌다. 또한 이 분해는 isomorphism과 순서를 무시하면 유일하다. 곧 다른 indecomposable decomposition $M=N_1\oplus\cdots\oplus N_s$가 주어지면 $r=s$이고, 적절한 permutation $\sigma$가 존재하여 모든 $i$에 대하여 $M_i\cong N_{\sigma(i)}$이다.
 
 특히 quiver $Q$의 임의의 nonzero 유한차원 representation은 indecomposable representation들의 direct sum으로 적히며, 그 분해는 isomorphism과 순서를 무시하면 유일하다.
 :::
 ::: 증명
 **존재성.** $\length(M)$에 대한 귀납으로 보인다. $M$이 indecomposable이면 자기 자신이 길이 $1$짜리 indecomposable 분해이다. 그렇지 않으면 $M=M'\oplus M''$인 nonzero submodule $M',M''$이 있고, direct sum에서 각 인자의 길이가 진성으로 작으므로 $\length(M')<\length(M)$이고 $\length(M'')<\length(M)$이다. 귀납가정에 의하여 $M'$과 $M''$이 각각 indecomposable 분해를 가지고, 이들을 합치면 $M$의 indecomposable 분해를 얻는다. 길이가 유한이므로 이 과정은 유한 번에 끝난다.
 
-**유일성.** 두 indecomposable 분해
+**유일성.** 두 indecomposable decomposition
 
 $$M=M_1\oplus\cdots\oplus M_r=N_1\oplus\cdots\oplus N_s$$
 

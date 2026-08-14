@@ -10,6 +10,8 @@ sidebar:
 
 date: 2024-05-24
 weight: 15
+published: false
+revising: true
 drift_needed: true
 
 ---
@@ -29,7 +31,7 @@ Scheme morphism $\varphi: X \rightarrow Y$가 주어졌다 하자.
 본격적인 이야기를 시작하기 전에 다음 예시를 살펴보는 것이 좋다. 
 
 ::: 예시 2
-Ring $A$가 field $K$의 subring으로서 discrete valuation ring이라 하자. 즉 임의의 $x\in K^\times$에 대해 $x\in A$이거나 $x^{-1}\in A$이며, $A$는 Noetherian이고 그 maximal ideal $\mathfrak{m}$은 principal이다. ([\[가환대수학\] §인자, ⁋정의 5](/ko/math/commutative_algebra/divisors#def5)) 임의의 $x\in K^\times$가 $x$ 또는 $x^{-1}$을 통해 $A$의 원소들의 비로 표현되므로 $K=\Frac(A)$이다. 또 $A$는 $\mathfrak{m}$을 유일한 maximal ideal로 갖는 local ring이고 ([\[가환대수학\] §인자, ⁋명제 6](/ko/math/commutative_algebra/divisors#prop6)), uniformizer $\pi$를 하나 잡으면 임의의 $f\in K^\times$가 정수 $n$과 unit $u$에 대해 $f=\pi^nu$로 유일하게 표현되므로 ([\[가환대수학\] §인자, ⁋명제 8](/ko/math/commutative_algebra/divisors#prop8)) $A$의 nonzero ideal은 모두 $(\pi^n)$ 꼴이다. 특히 $A$는 principal ideal domain이며 그 prime ideal은 $(0)$과 $\mathfrak{m}=(\pi)$ 둘 뿐이다.
+Ring $A$가 field $K$의 subring으로서 discrete valuation ring이라 하자. 즉 임의의 $x\in K^\times$에 대해 $x\in A$이거나 $x^{-1}\in A$이며, $A$는 Noetherian이고 그 maximal ideal $\mathfrak{m}$은 principal이다. ([\[가환대수학\] §인자, ⁋정의 5](/ko/math/commutative_algebra/divisors#def5)) 이 정의는 $A=K$인 경우도 허용하므로, 아래에서는 $A$가 field가 아닌 경우만 생각한다. 임의의 $x\in K^\times$가 $x$ 또는 $x^{-1}$을 통해 $A$의 원소들의 비로 표현되므로 $K=\Frac(A)$이다. 또 $A$는 $\mathfrak{m}$을 유일한 maximal ideal로 갖는 local ring이고 ([\[가환대수학\] §인자, ⁋명제 6](/ko/math/commutative_algebra/divisors#prop6)), uniformizer $\pi$를 하나 잡으면 임의의 $f\in K^\times$가 정수 $n$과 unit $u$에 대해 $f=\pi^nu$로 유일하게 표현되므로 ([\[가환대수학\] §인자, ⁋명제 8](/ko/math/commutative_algebra/divisors#prop8)) $A$의 nonzero ideal은 모두 $(\pi^n)$ 꼴이다. 특히 $A$는 principal ideal domain이며 그 prime ideal은 $(0)$과 $\mathfrak{m}=(\pi)$ 둘 뿐이다.
 
 이로부터 $\Spec A$는 두 개의 점 $(0)$, $\mathfrak{m}$으로 이루어져 있으며,
 
@@ -217,11 +219,15 @@ $$B_b\otimes_BB_{b'}\cong B_{bb'}=\mathcal{O}(\Spec B_b\cap \Spec B_{b'})$$
 
 이므로 $\Delta$는 각각의 위에서 isomorphism이고 특히 closed embedding이다.
 
-나머지는 [정리 6](#thm6)의 판정법으로 얻어진다. 곧 lifting의 유일성이 물려받아진다는 것만 확인하면 된다.
+2번과 5번은 [정리 6](#thm6)의 판정법으로 얻어진다. 곧 lifting의 유일성이 물려받아진다는 것만 확인하면 된다. 3번은 판정법을 거치지 않고 [정의 3](#def3)에서 직접 얻어진다.
 
 2번의 경우 $\psi\circ \varphi$에 대한 바깥쪽 square $\alpha:\Spec K \rightarrow X$, $\beta:\Spec A \rightarrow Z$와 두 lifting $\gamma_1,\gamma_2:\Spec A \rightarrow X$가 주어졌다 하자. 그럼 $\varphi\circ \gamma_1$과 $\varphi\circ \gamma_2$는 $\alpha' = \varphi\circ \alpha$와 $\beta$가 주는 $\psi$에 대한 square의 두 lifting이므로 $\varphi\circ \gamma_1=\varphi\circ \gamma_2$이고, 그럼 $\gamma_1,\gamma_2$는 $\alpha$와 $\varphi\circ \gamma_1$이 주는 $\varphi$에 대한 square의 두 lifting이므로 $\gamma_1=\gamma_2$이다.
 
-3번의 경우 $Y' \rightarrow Y$와 $X'=X\times_YY'$, $\varphi':X' \rightarrow Y'$에 대하여 $\varphi'$에 대한 square와 그 두 lifting $\gamma_1',\gamma_2':\Spec A \rightarrow X'$가 주어졌다 하자. 이들을 $X' \rightarrow X$와 합성한 것은 $\varphi$에 대한 square의 두 lifting이므로 서로 같고, $Y'$로 가는 두 합성 또한 square가 주는 같은 morphism이므로, fiber product의 universal property의 유일성에서 $\gamma_1'=\gamma_2'$이다.
+3번의 경우 $Y' \rightarrow Y$와 $X'=X\times_YY'$, $\varphi':X' \rightarrow Y'$에 대하여 fiber product의 universal property로부터
+
+$$X'\times_{Y'}X'=(X\times_YX)\times_YY'$$
+
+이고, 이 동일시 아래에서 $\Delta_{X'/Y'}$는 $\Delta_{X/Y}$를 $Y' \rightarrow Y$를 따라 base change한 것이다. Closed embedding은 base change에 대해 안정적이므로 ([정리 6](#thm6)의 증명) $\Delta_{X'/Y'}$ 또한 closed embedding이고, 따라서 $\varphi'$는 separated이다. 이 논증에는 판정법이 쓰이지 않으므로 $X'$가 Noetherian인지를 따지지 않아도 된다.
 
 5번의 경우 $\varphi$에 대한 square와 두 lifting $\gamma_1,\gamma_2$가 주어지면, $\Spec A \rightarrow Y$를 $\psi$와 합성하여 $\psi\circ \varphi$에 대한 square를 얻고 $\gamma_1,\gamma_2$는 그 두 lifting이므로 $\gamma_1=\gamma_2$이다.
 
@@ -398,7 +404,7 @@ $$b_j:=a_j/a_k\in A$$
 
 $$\mathbb{Z}[\x_0/\x_k,\ldots,\x_n/\x_k] \longrightarrow A;\qquad \x_j/\x_k\mapsto b_j$$
 
-가 정의되고, 이는 morphism $\Spec A \rightarrow U_k\subseteq\mathbb{P}^n_\mathbb{Z}$를 준다. 이것이 lifting임을 보이려면 $A\hookrightarrow K$와의 합성이 처음 주어진 morphism과 같음을 확인하면 된다. $a_k\neq 0$이므로 처음의 ring homomorphism은 $\x_k/\x_i$를 $K$의 unit $a_k$로 보내고, 따라서 처음 morphism의 image는 $D(\x_k/\x_i)=U_i\cap U_k$에 들어간다. 그럼 $U_k$ 위에서 이 morphism은 transition 관계
+가 정의되고, 이는 morphism $\Spec A \rightarrow U_k\subseteq\mathbb{P}^n_\mathbb{Z}$를 준다. 이것이 lifting임을 보이려면 $A\hookrightarrow K$와의 합성이 처음 주어진 morphism과 같음을 확인하면 된다. $a_k\neq 0$이므로 처음의 ring homomorphism은 $\x_k/\x_i$를 $K$의 unit $a_k$로 보내고, 따라서 처음 morphism의 image는 $D(\x_k/\x_i)=U_i\cap U_k$에 들어간다. 그럼 $U_k$ 위에서 이 morphism은 transition relation
 
 $$\x_j/\x_k=(\x_j/\x_i)\cdot(\x_k/\x_i)^{-1}$$
 

@@ -10,6 +10,8 @@ sidebar:
 
 date: 2025-01-19
 weight: 17
+published: false
+revising: true
 drift_needed: true
 
 ---
@@ -39,7 +41,7 @@ $$\dim_K(\mathfrak{m}/\mathfrak{m}^2) \ge \dim A$$
 이다. 여기서 $K = A/\mathfrak{m}$이다.
 :::
 ::: 증명
-$\dim A = d$라 하자. 그럼 system of parameters $x_1, \ldots, x_d \in \mathfrak{m}$이 존재한다. Nakayama's lemma에 의해 이들의 image들이 $\mathfrak{m}/\mathfrak{m}^2$에서 linearly independent이다. 따라서 $\dim_K(\mathfrak{m}/\mathfrak{m}^2) \ge d$.
+$n=\dim_K(\mathfrak{m}/\mathfrak{m}^2)$라 하고, $\mathfrak{m}/\mathfrak{m}^2$의 basis 하나를 택해 그 원소들을 $y_1,\ldots, y_n\in \mathfrak{m}$으로 들어올리자. $A$가 Noetherian이므로 $\mathfrak{m}$은 finitely generated이고, 따라서 [§정수적 확장, ⁋보조정리 8](/ko/math/commutative_algebra/integral_extension#lem8)의 둘째 결과에 의하여 $y_1,\ldots, y_n$은 $\mathfrak{m}$을 생성한다. 그럼 임의의 $k\geq 1$에 대하여 $\mathfrak{m}^k\subseteq \mathfrak{m}=(y_1,\ldots, y_n)$이므로, [따름정리 1](#cor1)에 의하여 $\dim A\leq n$이다.
 :::
 
 이제 다음을 정의한다. 
@@ -97,29 +99,29 @@ $a\in\ann(M)$이라 하면, 임의의 $x'\in M'$에 대하여 $u(ax')=au(x')=0$�
 Noetherian local ring $(A,\mathfrak{m})$과 그 ideal $\mathfrak{a}$, 그리고 finitely generated $A$-module $M$에 대하여 다음이 성립한다.
 
 1. 다음이 모두 동치이다.
-  - $\mathfrak{a}$가 $M$의 parameter ideal이다. 
+  - $M/\mathfrak{a}M$이 유한한 길이를 갖는다. 
   - 충분히 큰 $n$에 대하여, 항상 $(\mathfrak{a}+\ann(M))\supseteq \mathfrak{m}^n$이 성립한다.
-  - $\mathfrak{a}$는 $A/\ann(M)$의 parameter ideal이다.
+  - $A$-module $A/(\mathfrak{a}+\ann(M))$이 유한한 길이를 갖는다.
 2. $A$-module들의 short exact sequence 
     
     $$0 \rightarrow M' \rightarrow M \rightarrow M'' \rightarrow 0$$
 
-    에 대하여, $\mathfrak{a}$가 $M$의 parameter ideal인 것과, $\mathfrak{a}$가 $M',M''$의 parameter ideal인 것이 동치이다.
-3. $\dim M$은 $d$개의 원소로 생성되는 $M$의 parameter ideal이 존재하도록 하는 자연수 $d$ 중 가장 작은 것이다. 
+    에 대하여, $M/\mathfrak{a}M$이 유한한 길이를 갖는 것과, $M'/\mathfrak{a}M'$과 $M''/\mathfrak{a}M''$이 모두 유한한 길이를 갖는 것이 동치이다.
+3. $\dim M$은, $d$개의 원소로 생성되면서 $M/\mathfrak{b}M$이 유한한 길이를 갖도록 하는 ideal $\mathfrak{b}$가 존재하는 자연수 $d$ 중 가장 작은 것이다. 
 :::
 ::: 증명
-1. 우선 $\mathfrak{a}$가 $M$의 parameter ideal이라 가정하자. 그럼 [명제–정의 3](#prop-def3) 직후에 살펴본 논증에 의하여 $\mathfrak{m}$의 충분히 큰 거듭제곱이 항상 $M/\mathfrak{a}M$을 annihilate하는 것을 알고, 이와 [보조정리 4](#lem4)을 종합하면
+1. 우선 $M/\mathfrak{a}M$이 유한한 길이를 갖는다 가정하자. 그럼 [명제–정의 3](#prop-def3) 직후에 살펴본 논증에 의하여 $\mathfrak{m}$의 충분히 큰 거듭제곱이 항상 $M/\mathfrak{a}M$을 annihilate하는 것을 알고, 이와 [보조정리 4](#lem4)을 종합하면
     
     $$\mathfrak{m}\subseteq \sqrt{\ann(M/\mathfrak{a}M)}=\sqrt{\mathfrak{a}+\ann(M)}$$
 
     이므로, 충분히 큰 $n$에 대하여 $\mathfrak{m}^n\subseteq(\mathfrak{a}+\ann(M))$이 성립해야 하는 것을 안다.  
-    이제 둘째 조건을 가정하자. 그럼 ring $A'=A/\ann(M)$에서 $\mathfrak{m}+\ann(M)$은 유일한 maximal ideal이고, 가정으로부터 충분히 큰 $n$에 대하여 $(\mathfrak{m}+\ann(M))^n$이 $\mathfrak{a}+\ann(M)$에 포함되어야 하는 것을 알고 있으므로 $\mathfrak{a}+\ann(M)$은 $A/\ann(M)$의 (ring으로서의) parameter ideal이며, $A/\ann(M)$을 $A$-module로 보면 원하는 결과를 얻는다.  
+    이제 둘째 조건을 가정하자. 그럼 충분히 큰 $n$에 대하여 maximal ideal들의 곱 $\mathfrak{m}^n$이 $A$-module $A/(\mathfrak{a}+\ann(M))$을 annihilate하므로, [§조르단-횔더 정리, ⁋따름정리 6](/ko/math/commutative_algebra/Jordan-Holder_theorem#cor6)의 첫째 조건과 둘째 조건의 동치에 의하여 $A/(\mathfrak{a}+\ann(M))$은 유한한 길이를 갖는다.  
     마지막 동치의 경우, 다음 포함관계
 
     $$\mathfrak{m}\subseteq \sqrt{\mathfrak{a}+\ann(M)}=\sqrt{\ann(M/\mathfrak{a}M)}$$
 
     로부터 자명하다. 
-2. $\mathfrak{a}$가 $M$의 parameter ideal이라 하자. 그럼 [보조정리 5](#lem5)에 의하여 $\ann(M)\subseteq \ann(M')\cap \ann(M'')$이므로 $\mathfrak{a}$가 이들의 parameter ideal인 것이 자명하다. 거꾸로 $A/\mathfrak{a}\otimes-$를 취해 얻어지는 다음의 exact sequence
+2. $M/\mathfrak{a}M$이 유한한 길이를 갖는다 하자. 그럼 첫째 결과에 의하여 충분히 큰 $n$에 대하여 $\mathfrak{m}^n\subseteq \mathfrak{a}+\ann(M)$이고, [보조정리 5](#lem5)에 의하여 $\ann(M)\subseteq \ann(M')\cap \ann(M'')$이므로 같은 포함관계가 $M'$과 $M''$에 대해서도 성립한다. 따라서 다시 첫째 결과에 의하여 $M'/\mathfrak{a}M'$과 $M''/\mathfrak{a}M''$은 유한한 길이를 갖는다. 거꾸로 $A/\mathfrak{a}\otimes-$를 취해 얻어지는 다음의 exact sequence
     
     $$M'/\mathfrak{a}M' \rightarrow M/ \mathfrak{a}M \rightarrow M''/\mathfrak{a}M'' \rightarrow 0$$
 
@@ -139,7 +141,7 @@ $$\dim M/ aM \geq \dim M-1$$
 
 $$\frac{M/aM}{\mathfrak{a}(M/aM)}\cong \frac{M}{((a)+\mathfrak{a})M}=\frac{M}{(a,a_1,\ldots, a_d)M}$$
 
-이 유한한 길이를 가지므로, $(a,a_1,\ldots, a_d)$는 $M$의 parameter ideal이 된다. 따라서 [명제 6](#prop6)의 셋째 결과에 의하여 $\dim M\leq 1+d$이다. 
+이 유한한 길이를 가지므로, $(a,a_1,\ldots, a_d)$는 $d+1$개의 원소로 생성되면서 $M/(a,a_1,\ldots, a_d)M$이 유한한 길이를 갖도록 하는 ideal이다. 따라서 [명제 6](#prop6)의 셋째 결과에 의하여 $\dim M\leq 1+d$이다. 
 :::
 
 ## 평탄사상과 차원

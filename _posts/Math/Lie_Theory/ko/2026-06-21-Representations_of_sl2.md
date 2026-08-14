@@ -176,7 +176,7 @@ $$A=\{\varphi\in\Hom_{\mathbb{C}}(U,V)\mid \pi\circ\varphi=\lambda\cdot\id_U\ \t
 
 [정리 9](#thm9)는 [정의 1](#def1) 이후에 미루어 둔 weight 분해의 일반적 성립을 확립한다. 임의의 유한차원 representation은 weight space들의 직합이고, 각 weight은 정수이며, representation 전체는 그 안에 나타나는 기약 인자들의 중복도에 의해 결정된다. 어떤 기약 인자가 몇 번 나타나는지는 Casimir operator $C$의 고유공간 분해와 각 weight space의 차원으로부터 읽어낼 수 있다.
 
-## Clebsch–Gordan 분해
+## Clebsch–Gordan decomposition
 
 완전가약성에 의해 두 irreducible representation의 tensor product $V(m)\otimes V(n)$도 irreducible representation들의 직합으로 분해된다. Tensor product 위의 $\sl_2$-작용은 Lie algebra의 표준적인 작용, 곧 $x\cdot(u\otimes w)=(x\cdot u)\otimes w+u\otimes(x\cdot w)$로 주어진다. 이 작용에서 $h$의 고윳값은 두 인자의 weight의 합이므로, tensor product의 weight들과 그 multiplicity를 먼저 세는 것으로 분해를 결정할 수 있다.
 
@@ -203,7 +203,7 @@ $$V(m)\otimes V(n)\cong\bigoplus_{r\in\{m-n,m-n+2,\dots,m+n\}}V(r)=\bigoplus_{k=
 
 가장 단순한 경우인 $V(1)\otimes V(1)$을 보면, $\min(1,1)=1$이므로 분해는 $V(2)\oplus V(0)$이다. 이는 $\mathbb{C}^2\otimes\mathbb{C}^2$가 대칭부분 $\Sym^2\mathbb{C}^2\cong V(2)$와 반대칭부분 $\textstyle\bigwedge^2\mathbb{C}^2\cong V(0)$으로 갈라지는 친숙한 사실과 일치한다. 더 일반적으로 $\Sym^n\mathbb{C}^2\cong V(n)$이 성립하며, 따라서 standard representation $V(1)=\mathbb{C}^2$의 대칭곱들이 모든 irreducible representation을 실현한다.
 
-이로써 $\sl_2$의 유한차원 표현론은 완결된다. 각 차원마다 유일한 irreducible representation이 존재하고, 모든 representation이 이들의 직합이며, tensor product는 Clebsch–Gordan 공식으로 분해된다. 일반적인 semisimple Lie algebra의 highest weight 이론은 Cartan subalgebra에 대한 weight 분해, dominant integral weight에 의한 irreducible representation의 분류, Casimir element를 통한 완전가약성이라는 동일한 세 축 위에 세워지며, 그 각 축은 root별 $\sl_{2,\alpha}$의 표현론을 국소모형으로 삼는다.
+이로써 $\sl_2$의 유한차원 표현론은 완결된다. 각 차원마다 유일한 irreducible representation이 존재하고, 모든 representation이 이들의 직합이며, tensor product는 Clebsch–Gordan 공식으로 분해된다. 일반적인 semisimple Lie algebra의 highest weight 이론은 Cartan subalgebra에 대한 weight decomposition, dominant integral weight에 의한 irreducible representation의 분류, Casimir element를 통한 완전가약성이라는 동일한 세 축 위에 세워지며, 그 각 축은 root별 $\sl_{2,\alpha}$의 표현론을 국소모형으로 삼는다.
 
 ---
 

@@ -15,11 +15,11 @@ drift_needed: true
 
 ---
 
-이 시리즈에서 우리는 Noetherian local ring 위의 finitely generated module에 대하여 [§Depth](/ko/math/commutative_algebra/depth)에서 depth를, [§힐베르트-사무엘 함수](/ko/math/commutative_algebra/hilbert-samuel_function)에서 차원을, 그리고 [§단사가군과 Matlis 쌍대성](/ko/math/commutative_algebra/matlis_duality)에서 injective module의 구조론을 각각 세워 왔다. 이 글에서는 module에서 ideal의 거듭제곱에 의해 소멸되는 부분만을 도려내는 torsion functor를 도입하고, 그 right derived functor로 local cohomology를 정의한다. Injective module의 구조론은 이 derived functor를 유한한 localization들의 complex, 곧 Čech complex로 계산할 수 있게 해 주며, 그 결과 depth는 local cohomology가 처음으로 살아나는 차수로, 차원은 그 위로는 전부 소멸하는 상한으로 각각 나타난다. 특히 Cohen--Macaulay module의 local cohomology는 단 한 차수에 집중된다.
+이 시리즈에서 우리는 Noetherian local ring 위의 finitely generated module에 대하여 [§Depth](/ko/math/commutative_algebra/depth)에서 depth를, [§힐베르트-사무엘 함수](/ko/math/commutative_algebra/hilbert-samuel_function)에서 차원을, 그리고 [§단사가군과 Matlis duality](/ko/math/commutative_algebra/matlis_duality)에서 injective module의 구조론을 각각 세워 왔다. 이 글에서는 module에서 ideal의 거듭제곱에 의해 소멸되는 부분만을 도려내는 torsion functor를 도입하고, 그 right derived functor로 local cohomology를 정의한다. Injective module의 구조론은 이 derived functor를 finite localization들의 complex, 곧 Čech complex로 계산할 수 있게 해 주며, 그 결과 depth는 local cohomology가 처음으로 살아나는 차수로, 차원은 그 위로는 전부 소멸하는 상한으로 각각 나타난다. 특히 Cohen--Macaulay module의 local cohomology는 단 한 차수에 집중된다.
 
 ## Torsion functor와 국소 코호몰로지
 
-이 글 전체에서 $A$는 Noetherian ring이고 $\mathfrak{a}\subseteq A$는 ideal이며, module에는 특별한 언급이 없는 한 유한성 조건을 가정하지 않는다. [§단사가군과 Matlis 쌍대성, ⁋보조정리 10](/ko/math/commutative_algebra/matlis_duality#lem10)에서 우리는 Noetherian local ring의 residue field의 injective hull $E(\kappa)$가 $\mathfrak{m}$의 거듭제곱들에 의해 소멸되는 원소들의 증가하는 합집합 $\bigcup_n(0:_E\mathfrak{m}^n)$과 일치한다는 것을 보았다. 임의의 module에서 이러한 부분을 모으는 조작은 functor를 이루며, 이 functor가 이 글의 출발점이다.
+이 글 전체에서 $A$는 Noetherian ring이고 $\mathfrak{a}\subseteq A$는 ideal이며, module에는 특별한 언급이 없는 한 유한성 조건을 가정하지 않는다. [§단사가군과 Matlis duality, ⁋보조정리 10](/ko/math/commutative_algebra/matlis_duality#lem10)에서 우리는 Noetherian local ring의 residue field의 injective hull $E(\kappa)$가 $\mathfrak{m}$의 거듭제곱들에 의해 소멸되는 원소들의 증가하는 합집합 $\bigcup_n(0:_E\mathfrak{m}^n)$과 일치한다는 것을 보았다. 임의의 module에서 이러한 부분을 모으는 조작은 functor를 이루며, 이 functor가 이 글의 출발점이다.
 
 ::: 정의 1
 Ring $A$의 ideal $\mathfrak{a}$와 $A$-module $M$에 대하여, $M$의 *$\mathfrak{a}$-torsion* submodule을 다음의 식
@@ -29,7 +29,7 @@ $$\Gamma_\mathfrak{a}(M)=\{m\in M\mid \text{$\mathfrak{a}^nm=0$ for some $n\geq 
 으로 정의한다. 만일 $\Gamma_\mathfrak{a}(M)=M$이라면 $M$을 *$\mathfrak{a}$-torsion module*이라 부른다.
 :::
 
-우선 $\Gamma_\mathfrak{a}(M)$이 실제로 $M$의 submodule인 것을 확인하자. $\mathfrak{a}^nm=0$이고 $\mathfrak{a}^{n'}m'=0$이라면 $k=\max(n,n')$에 대하여 $\mathfrak{a}^k(m+m')=0$이고, 임의의 $a\in A$에 대하여 $\mathfrak{a}^n(am)=a(\mathfrak{a}^nm)=0$이기 때문이다. 또, 각각의 $n$에 대하여 $(0:_M\mathfrak{a}^n)$은 $\Hom_A(A/\mathfrak{a}^n,M)$과 자연스럽게 동일시된다. $A/\mathfrak{a}^n$에서 출발하는 homomorphism은 $1+\mathfrak{a}^n$의 image로 결정되고, 그 image로는 $\mathfrak{a}^n$에 의해 소멸되는 원소가 정확히 허용되기 때문이다. 이는 [§단사가군과 Matlis 쌍대성, ⁋보조정리 8](/ko/math/commutative_algebra/matlis_duality#lem8)에서 사용한 동일시와 같은 것이다.
+우선 $\Gamma_\mathfrak{a}(M)$이 실제로 $M$의 submodule인 것을 확인하자. $\mathfrak{a}^nm=0$이고 $\mathfrak{a}^{n'}m'=0$이라면 $k=\max(n,n')$에 대하여 $\mathfrak{a}^k(m+m')=0$이고, 임의의 $a\in A$에 대하여 $\mathfrak{a}^n(am)=a(\mathfrak{a}^nm)=0$이기 때문이다. 또, 각각의 $n$에 대하여 $(0:_M\mathfrak{a}^n)$은 $\Hom_A(A/\mathfrak{a}^n,M)$과 자연스럽게 동일시된다. $A/\mathfrak{a}^n$에서 출발하는 homomorphism은 $1+\mathfrak{a}^n$의 image로 결정되고, 그 image로는 $\mathfrak{a}^n$에 의해 소멸되는 원소가 정확히 허용되기 때문이다. 이는 [§단사가군과 Matlis duality, ⁋보조정리 8](/ko/math/commutative_algebra/matlis_duality#lem8)에서 사용한 동일시와 같은 것이다.
 
 $A$-linear map $f:M \rightarrow N$은 $\Gamma_\mathfrak{a}(M)$을 $\Gamma_\mathfrak{a}(N)$으로 보낸다. $\mathfrak{a}^nm=0$이면 $\mathfrak{a}^nf(m)=f(\mathfrak{a}^nm)=0$이기 때문이다. 따라서 $f$의 제한을 $\Gamma_\mathfrak{a}(f)$로 두면 $\Gamma_\mathfrak{a}$는 $\lMod{A}$에서 $\lMod{A}$로의 functor가 되며, 다음이 성립한다.
 
@@ -80,7 +80,7 @@ $\mathfrak{a}$-torsion module들은 기본적인 조작에 대해 닫혀 있다.
 
 ## Injective module에서의 계산과 Čech complex
 
-Derived functor의 정의는 injective resolution을 요구하므로 그 자체로는 계산 도구가 되지 못한다. 그러나 [§단사가군과 Matlis 쌍대성, ⁋정리 6](/ko/math/commutative_algebra/matlis_duality#thm6)의 구조정리는 Noetherian ring 위의 injective module을 prime ideal마다의 injective hull $E(A/\mathfrak{p})$들로 완전히 분해하므로, $\Gamma_\mathfrak{a}$의 injective module에서의 값은 각 $E(A/\mathfrak{p})$에서의 값으로 환원된다. 다음 보조정리가 그 값을 결정한다.
+Derived functor의 정의는 injective resolution을 요구하므로 그 자체로는 계산 도구가 되지 못한다. 그러나 [§단사가군과 Matlis duality, ⁋정리 6](/ko/math/commutative_algebra/matlis_duality#thm6)의 구조정리는 Noetherian ring 위의 injective module을 prime ideal마다의 injective hull $E(A/\mathfrak{p})$들로 완전히 분해하므로, $\Gamma_\mathfrak{a}$의 injective module에서의 값은 각 $E(A/\mathfrak{p})$에서의 값으로 환원된다. 다음 보조정리가 그 값을 결정한다.
 
 ::: 보조정리 5
 Noetherian ring $A$와 prime ideal $\mathfrak{p}$, 그리고 $E=E(A/\mathfrak{p})$에 대하여 다음이 성립한다.
@@ -90,9 +90,9 @@ Noetherian ring $A$와 prime ideal $\mathfrak{p}$, 그리고 $E=E(A/\mathfrak{p}
 3. $\mathfrak{a}\subseteq\mathfrak{p}$이면 $\Gamma_\mathfrak{a}(E)=E$이고, $\mathfrak{a}\not\subseteq\mathfrak{p}$이면 $\Gamma_\mathfrak{a}(E)=0$이다.
 :::
 ::: 증명
-첫째 결과를 보이자. $0\neq y\in E$라 하고 cyclic submodule $Ay$를 생각하면, $Ay$는 $0$이 아닌 finitely generated module이므로 [§동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)에 의하여 $\Ass(Ay)\neq\emptyset$이고, [§동반소아이디얼, ⁋보조정리 5](/ko/math/commutative_algebra/associated_primes#lem5)와 [§단사가군과 Matlis 쌍대성, ⁋보조정리 5](/ko/math/commutative_algebra/matlis_duality#lem5)에 의하여 $\Ass(Ay)\subseteq\Ass E=\{\mathfrak{p}\}$이므로 $\Ass(Ay)=\{\mathfrak{p}\}$이다. [§동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)의 첫째 결과에 의하여 $\mathfrak{p}\supseteq\ann(Ay)$이고, $\ann(Ay)$를 포함하는 prime ideal 중 minimal한 것들은 모두 $\Ass(Ay)=\{\mathfrak{p}\}$에 속한다. 한편 $\ann(Ay)$를 포함하는 임의의 prime ideal은 그에 포함되는 minimal한 것을 포함하므로 ([\[집합론\] §선택공리, ⁋정리 4](/ko/math/set_theory/axiom_of_choice#thm4)) 반드시 $\mathfrak{p}$를 포함하고, 따라서 [§국소화의 성질들, ⁋따름정리 8](/ko/math/commutative_algebra/properties_of_localization#cor8)에 의하여 $\sqrt{\ann(Ay)}=\mathfrak{p}$이다. $A$가 Noetherian이라 $\mathfrak{p}$는 finitely generated이고 각 generator의 어떤 거듭제곱이 $\ann(Ay)$에 속하므로, [명제 4](#prop4)의 증명에서 살펴본 논증에 의하여 $\mathfrak{p}^k\subseteq\ann(Ay)$인 $k$가 존재한다. 곧 $\mathfrak{p}^ky=0$이다.
+첫째 결과를 보이자. $0\neq y\in E$라 하고 cyclic submodule $Ay$를 생각하면, $Ay$는 $0$이 아닌 finitely generated module이므로 [§동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)에 의하여 $\Ass(Ay)\neq\emptyset$이고, [§동반소아이디얼, ⁋보조정리 5](/ko/math/commutative_algebra/associated_primes#lem5)와 [§단사가군과 Matlis duality, ⁋보조정리 5](/ko/math/commutative_algebra/matlis_duality#lem5)에 의하여 $\Ass(Ay)\subseteq\Ass E=\{\mathfrak{p}\}$이므로 $\Ass(Ay)=\{\mathfrak{p}\}$이다. [§동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)의 첫째 결과에 의하여 $\mathfrak{p}\supseteq\ann(Ay)$이고, $\ann(Ay)$를 포함하는 prime ideal 중 minimal한 것들은 모두 $\Ass(Ay)=\{\mathfrak{p}\}$에 속한다. 한편 $\ann(Ay)$를 포함하는 임의의 prime ideal은 그에 포함되는 minimal한 것을 포함하므로 ([\[집합론\] §선택공리, ⁋정리 4](/ko/math/set_theory/axiom_of_choice#thm4)) 반드시 $\mathfrak{p}$를 포함하고, 따라서 [§국소화의 성질들, ⁋따름정리 8](/ko/math/commutative_algebra/properties_of_localization#cor8)에 의하여 $\sqrt{\ann(Ay)}=\mathfrak{p}$이다. $A$가 Noetherian이라 $\mathfrak{p}$는 finitely generated이고 각 generator의 어떤 거듭제곱이 $\ann(Ay)$에 속하므로, [명제 4](#prop4)의 증명에서 살펴본 논증에 의하여 $\mathfrak{p}^k\subseteq\ann(Ay)$인 $k$가 존재한다. 곧 $\mathfrak{p}^ky=0$이다.
 
-둘째 결과를 보이자. 우선 injectivity를 본다. $K=(0:_Ex)$라 하면, $K\cap(A/\mathfrak{p})$의 $0$이 아닌 원소 $w$는 integral domain $A/\mathfrak{p}$에서 $0$이 아닌 원소 $x+\mathfrak{p}$와의 곱이 $0$이 되어 모순이므로 $K\cap(A/\mathfrak{p})=0$이고, $A/\mathfrak{p}\subseteq E$가 essential extension이므로 ([§단사가군과 Matlis 쌍대성, ⁋정의 1](/ko/math/commutative_algebra/matlis_duality#def1)) $K=0$이다. 이제 surjectivity를 본다. 곱하기 $x$가 injective이므로 $xE\cong E$는 injective module이고, identity $\id_{xE}$를 inclusion $xE\hookrightarrow E$를 따라 확장하면 $r:E \rightarrow xE$가 존재하여 $r$의 $xE$로의 제한이 identity가 된다. 그럼 임의의 $e\in E$가 $e=r(e)+(e-r(e))$로 분해되고 $xE\cap\ker r=0$이므로 $E=xE\oplus C$ ($C=\ker r$)이다. 만일 $C\neq 0$이라면 essential성에 의하여 $0\neq w\in C\cap(A/\mathfrak{p})$가 존재하는데, $xw$는 $C$의 원소이면서 $xE$의 원소이므로 $xw=0$이고, injectivity에 의하여 $w=0$이 되어 모순이다. 따라서 $C=0$이고 $xE=E$이다.
+둘째 결과를 보이자. 우선 injectivity를 본다. $K=(0:_Ex)$라 하면, $K\cap(A/\mathfrak{p})$의 $0$이 아닌 원소 $w$는 integral domain $A/\mathfrak{p}$에서 $0$이 아닌 원소 $x+\mathfrak{p}$와의 곱이 $0$이 되어 모순이므로 $K\cap(A/\mathfrak{p})=0$이고, $A/\mathfrak{p}\subseteq E$가 essential extension이므로 ([§단사가군과 Matlis duality, ⁋정의 1](/ko/math/commutative_algebra/matlis_duality#def1)) $K=0$이다. 이제 surjectivity를 본다. 곱하기 $x$가 injective이므로 $xE\cong E$는 injective module이고, identity $\id_{xE}$를 inclusion $xE\hookrightarrow E$를 따라 확장하면 $r:E \rightarrow xE$가 존재하여 $r$의 $xE$로의 제한이 identity가 된다. 그럼 임의의 $e\in E$가 $e=r(e)+(e-r(e))$로 분해되고 $xE\cap\ker r=0$이므로 $E=xE\oplus C$ ($C=\ker r$)이다. 만일 $C\neq 0$이라면 essential성에 의하여 $0\neq w\in C\cap(A/\mathfrak{p})$가 존재하는데, $xw$는 $C$의 원소이면서 $xE$의 원소이므로 $xw=0$이고, injectivity에 의하여 $w=0$이 되어 모순이다. 따라서 $C=0$이고 $xE=E$이다.
 
 셋째 결과를 보이자. $\mathfrak{a}\subseteq\mathfrak{p}$라면 임의의 $y\in E$에 대하여 첫째 결과가 주는 $k$에 대해 $\mathfrak{a}^ky\subseteq\mathfrak{p}^ky=0$이므로 $\Gamma_\mathfrak{a}(E)=E$이다. $\mathfrak{a}\not\subseteq\mathfrak{p}$라면 $x\in\mathfrak{a}\setminus\mathfrak{p}$를 택할 수 있고, $y\in\Gamma_\mathfrak{a}(E)$가 $\mathfrak{a}^ny=0$을 만족한다면 특히 $x^ny=0$인데, 둘째 결과에 의하여 곱하기 $x^n$이 bijective이므로 $y=0$이다.
 :::
@@ -103,11 +103,11 @@ Noetherian ring $A$와 prime ideal $\mathfrak{p}$, 그리고 $E=E(A/\mathfrak{p}
 $\mathfrak{a}$-torsion module $T$에 대하여 $H_\mathfrak{a}^0(T)=T$이고, $i\geq 1$에서 $H_\mathfrak{a}^i(T)=0$이다.
 :::
 ::: 증명
-우선 임의의 $\mathfrak{a}$-torsion module $N$에 대하여 $\Gamma_\mathfrak{a}(E(N))$이 injective module임을 주장한다. 여기서 $E(N)$은 $N$의 injective hull이다. ([§단사가군과 Matlis 쌍대성, ⁋정리 3](/ko/math/commutative_algebra/matlis_duality#thm3)) 실제로 [§단사가군과 Matlis 쌍대성, ⁋정리 6](/ko/math/commutative_algebra/matlis_duality#thm6)에 의하여 $E(N)\cong\bigoplus_\lambda E(A/\mathfrak{p}_\lambda)$로 분해되고, $\Gamma_\mathfrak{a}$가 direct sum과 교환하므로 [보조정리 5](#lem5)의 셋째 결과에 의하여
+우선 임의의 $\mathfrak{a}$-torsion module $N$에 대하여 $\Gamma_\mathfrak{a}(E(N))$이 injective module임을 주장한다. 여기서 $E(N)$은 $N$의 injective hull이다. ([§단사가군과 Matlis duality, ⁋정리 3](/ko/math/commutative_algebra/matlis_duality#thm3)) 실제로 [§단사가군과 Matlis duality, ⁋정리 6](/ko/math/commutative_algebra/matlis_duality#thm6)에 의하여 $E(N)\cong\bigoplus_\lambda E(A/\mathfrak{p}_\lambda)$로 분해되고, $\Gamma_\mathfrak{a}$가 direct sum과 교환하므로 [보조정리 5](#lem5)의 셋째 결과에 의하여
 
 $$\Gamma_\mathfrak{a}(E(N))\cong\bigoplus_{\mathfrak{a}\subseteq\mathfrak{p}_\lambda}E(A/\mathfrak{p}_\lambda)$$
 
-이다. $A$가 Noetherian이므로 injective module들의 direct sum은 injective이고 ([§단사가군과 Matlis 쌍대성, ⁋명제 4](/ko/math/commutative_algebra/matlis_duality#prop4)), 주장을 얻는다. 또, $N$이 $\mathfrak{a}$-torsion이므로 $N\subseteq\Gamma_\mathfrak{a}(E(N))$이고, quotient $\Gamma_\mathfrak{a}(E(N))/N$은 $\mathfrak{a}$-torsion module의 quotient라 다시 $\mathfrak{a}$-torsion이다.
+이다. $A$가 Noetherian이므로 injective module들의 direct sum은 injective이고 ([§단사가군과 Matlis duality, ⁋명제 4](/ko/math/commutative_algebra/matlis_duality#prop4)), 주장을 얻는다. 또, $N$이 $\mathfrak{a}$-torsion이므로 $N\subseteq\Gamma_\mathfrak{a}(E(N))$이고, quotient $\Gamma_\mathfrak{a}(E(N))/N$은 $\mathfrak{a}$-torsion module의 quotient라 다시 $\mathfrak{a}$-torsion이다.
 
 이제 $I^0=\Gamma_\mathfrak{a}(E(T))$, $C^1=I^0/T$로 두고, 귀납적으로 $I^j=\Gamma_\mathfrak{a}(E(C^j))$, $C^{j+1}=I^j/C^j$로 두자. 위의 주장에 의하여 각 $I^j$는 $\mathfrak{a}$-torsion인 injective module이고, [\[호몰로지 대수학\] §분해, ⁋명제 3](/ko/math/homological_algebra/resolutions#prop3)의 구성에서와 같이 이들을 이어 붙이면 injective resolution
 
@@ -142,7 +142,7 @@ $$0 \rightarrow A \rightarrow A_{x_1}\oplus A_{x_2} \rightarrow A_{x_1x_2} \righ
 
 다음 정리가 이 글의 계산적 기초이다.
 
-::: 정리 8 (Čech 표현)
+::: 정리 8 (Čech representation)
 Noetherian ring $A$와 $\mathfrak{a}=(x_1,\ldots,x_r)$, 그리고 임의의 $A$-module $M$에 대하여, $M$에 대해 자연스러운 isomorphism
 
 $$H_\mathfrak{a}^i(M)\cong H^i(\check{C}(x;M))$$
@@ -154,7 +154,7 @@ $$H_\mathfrak{a}^i(M)\cong H^i(\check{C}(x;M))$$
 
 **($H^0$의 동일시)** 임의의 $M$에 대하여 $H^0(\check{C}(x;M))=\ker(M \rightarrow \bigoplus_iM_{x_i})$이다. $M_{x_i}$에서 $m/1=0$인 것은 적당한 $n_i$에 대하여 $x_i^{n_i}m=0$인 것과 동치이므로 ([§국소화, ⁋명제 5](/ko/math/commutative_algebra/localization#prop5)), 이 kernel은 모든 $i$에서 $x_i$의 어떤 거듭제곱에 의해 소멸되는 원소들의 모임이다. $\mathfrak{a}^nm=0$이면 $x_i^nm=0$이 각 $i$에서 성립하고, 거꾸로 $x_i^{n_i}m=0$이 모든 $i$에서 성립하면 $n=\max_in_i$와 $N=r(n-1)+1$에 대하여 $\mathfrak{a}^N$을 생성하는 $N$차 monomial들 각각이 어떤 $x_i$를 $n$번 이상 포함하므로 $\mathfrak{a}^Nm=0$이다. 따라서 $H^0(\check{C}(x;M))=\Gamma_\mathfrak{a}(M)=H_\mathfrak{a}^0(M)$이고, 이 동일시는 $M$에 대해 자연스럽다.
 
-**(Injective module의 경우)** $E$가 injective module일 때 $i\geq 1$에서 $H^i(\check{C}(x;E))=0$임을 보인다. [§단사가군과 Matlis 쌍대성, ⁋정리 6](/ko/math/commutative_algebra/matlis_duality#thm6)에 의하여 $E\cong\bigoplus_\lambda E(A/\mathfrak{p}_\lambda)$이다. Localization은 direct sum과 교환하고 (원소가 유한히 많은 성분만 가지며, $t(x_S^{k'}m-x_S^km')=0$ 꼴의 조건이 성분별로 검사되기 때문이다) canonical map들도 성분별로 작동하므로, complex $\check{C}(x;E)$는 $\check{C}(x;E(A/\mathfrak{p}_\lambda))$들의 direct sum이고 cohomology도 성분별로 계산된다. 따라서 $E=E(A/\mathfrak{p})$인 경우로 환원된다.
+**(Injective module의 경우)** $E$가 injective module일 때 $i\geq 1$에서 $H^i(\check{C}(x;E))=0$임을 보인다. [§단사가군과 Matlis duality, ⁋정리 6](/ko/math/commutative_algebra/matlis_duality#thm6)에 의하여 $E\cong\bigoplus_\lambda E(A/\mathfrak{p}_\lambda)$이다. Localization은 direct sum과 교환하고 (원소가 유한히 많은 성분만 가지며, $t(x_S^{k'}m-x_S^km')=0$ 꼴의 조건이 성분별로 검사되기 때문이다) canonical map들도 성분별로 작동하므로, complex $\check{C}(x;E)$는 $\check{C}(x;E(A/\mathfrak{p}_\lambda))$들의 direct sum이고 cohomology도 성분별로 계산된다. 따라서 $E=E(A/\mathfrak{p})$인 경우로 환원된다.
 
 $T=\{i\mid x_i\notin\mathfrak{p}\}$로 두자. $S\subseteq T$이면 [보조정리 5](#lem5)의 둘째 결과에 의하여 곱하기 $x_S$가 $E$ 위에서 bijective이므로 canonical map $\iota_S:E \rightarrow E_{x_S}$는 isomorphism이다. 실제로 [§국소화, ⁋명제 5](/ko/math/commutative_algebra/localization#prop5)에 의하여 $\ker\iota_S$는 $x_S$의 거듭제곱에 의해 소멸되는 원소들이므로 $0$이고, 임의의 $y/x_S^k$에 대하여 $x_S^kz=y$인 유일한 $z\in E$를 취하면 $y/x_S^k=z/1$이다. 반면 $S\not\subseteq T$이면 어떤 $i\in S$에 대하여 $x_i\in\mathfrak{p}$이고, [보조정리 5](#lem5)의 첫째 결과에 의하여 임의의 $y\in E$가 $\mathfrak{p}^k y=0$인 $k$를 가지므로 $x_S^ky=0$이 되어 $E_{x_S}=0$이다.
 
@@ -299,11 +299,11 @@ $\operatorname{depth}M=\dim M$이므로 [따름정리 11](#cor11)에 의하여 $
 시리즈에서 다루어 온 ring들에서 이 결과들을 구체적으로 확인한다.
 
 ::: 예시 14
-1. $A=\mathbb{K}[[\x]]$를 생각하자. 이는 maximal ideal $\mathfrak{m}=(\x)$를 갖는 $1$차원 Noetherian local domain이고 ([§단사가군과 Matlis 쌍대성, ⁋예시 13](/ko/math/commutative_algebra/matlis_duality#ex13)), $\mathfrak{m}$이 한 개의 원소로 생성되므로 regular local ring이다. ([§차원, ⁋정의 12](/ko/math/commutative_algebra/Krull_dimension#def12)) 따라서 [§Cohen-Macaulay 환, ⁋따름정리 5](/ko/math/commutative_algebra/cohen_macaulay_rings#cor5)와 [따름정리 13](#cor13)에 의하여 $H_\mathfrak{m}^i(A)$는 $i=1$에서만 $0$이 아니다. [정리 8](#thm8)로 그 값을 직접 계산하면, $\mathfrak{m}=(\x)$의 Čech complex는 $0 \rightarrow A \rightarrow A_\x \rightarrow 0$이고, [§정칙국소환, ⁋명제 5](/ko/math/commutative_algebra/regular_local_rings#prop5)에 의하여 $\Frac(A)$의 임의의 원소가 $u\x^k$ ($u$ unit, $k\in\mathbb{Z}$) 꼴이므로 $A_\x=\Frac(A)=\mathbb{K}((\x))$이다. 따라서
+1. $A=\mathbb{K}[[\x]]$를 생각하자. 이는 maximal ideal $\mathfrak{m}=(\x)$를 갖는 $1$차원 Noetherian local domain이고 ([§단사가군과 Matlis duality, ⁋예시 13](/ko/math/commutative_algebra/matlis_duality#ex13)), $\mathfrak{m}$이 한 개의 원소로 생성되므로 regular local ring이다. ([§차원, ⁋정의 12](/ko/math/commutative_algebra/Krull_dimension#def12)) 따라서 [§Cohen-Macaulay 환, ⁋따름정리 5](/ko/math/commutative_algebra/cohen_macaulay_rings#cor5)와 [따름정리 13](#cor13)에 의하여 $H_\mathfrak{m}^i(A)$는 $i=1$에서만 $0$이 아니다. [정리 8](#thm8)로 그 값을 직접 계산하면, $\mathfrak{m}=(\x)$의 Čech complex는 $0 \rightarrow A \rightarrow A_\x \rightarrow 0$이고, [§정칙국소환, ⁋명제 5](/ko/math/commutative_algebra/regular_local_rings#prop5)에 의하여 $\Frac(A)$의 임의의 원소가 $u\x^k$ ($u$ unit, $k\in\mathbb{Z}$) 꼴이므로 $A_\x=\Frac(A)=\mathbb{K}((\x))$이다. 따라서
 
 	$$H_\mathfrak{m}^1(A)\cong A_\x/A=\mathbb{K}((\x))/\mathbb{K}[[\x]]$$
 
-	인데, 이는 [§단사가군과 Matlis 쌍대성, ⁋예시 13](/ko/math/commutative_algebra/matlis_duality#ex13)에서 본 residue field의 injective hull $E(\kappa)$ 그 자체이다. 최고 차수의 local cohomology가 injective hull을 재생산하는 것이다.
+	인데, 이는 [§단사가군과 Matlis duality, ⁋예시 13](/ko/math/commutative_algebra/matlis_duality#ex13)에서 본 residue field의 injective hull $E(\kappa)$ 그 자체이다. 최고 차수의 local cohomology가 injective hull을 재생산하는 것이다.
 
 2. $A=\mathbb{K}[[\x,\y]]$를 생각하자. [§Depth, ⁋예시 11](/ko/math/commutative_algebra/depth#ex11)의 서두에서와 같이 $A$는 $2$차원 Noetherian local ring이고, maximal ideal은 $\mathfrak{m}=(\x,\y)$이다. ([§완비화, ⁋따름정리 6](/ko/math/commutative_algebra/completion#cor6)) $\mathfrak{m}$이 두 개의 원소로 생성되므로 $A$는 regular local ring이고 ([§차원, ⁋정의 12](/ko/math/commutative_algebra/Krull_dimension#def12)), [§Cohen-Macaulay 환, ⁋따름정리 5](/ko/math/commutative_algebra/cohen_macaulay_rings#cor5)와 [따름정리 13](#cor13)에 의하여 $H_\mathfrak{m}^0(A)=H_\mathfrak{m}^1(A)=0$이고 $H_\mathfrak{m}^2(A)\neq 0$이다.
 

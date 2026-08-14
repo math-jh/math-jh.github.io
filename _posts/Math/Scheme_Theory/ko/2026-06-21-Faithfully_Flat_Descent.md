@@ -1,6 +1,6 @@
 ---
 title: "충실평탄 하강"
-description: "충실평탄 사상을 따라 대수적·기하학적 데이터를 내려보내는 Grothendieck의 하강 이론을 다룬다. Amitsur 복합체의 정확성으로부터 가군의 하강 정리를 유도하고, descent datum의 범주가 밑환 위의 가군 범주와 동치임을 보인 뒤, 이를 fpqc 위상 위의 준연접층과 사상의 하강으로 확장한다."
+description: "충실평탄 사상을 따라 대수적·기하학적 데이터를 내려보내는 Grothendieck의 하강 이론을 다룬다. Amitsur 복합체의 정확성으로부터 가군의 하강 정리를 유도하고, descent datum의 범주가 밑환 위의 가군 범주와 동치임을 보인 뒤, 이를 fpqc topology 위의 준연접층과 사상의 하강으로 확장한다."
 excerpt: "Faithfully flat descent, descent datum, the cocycle condition, fpqc topology and effective descent"
 
 categories: [Math / Scheme Theory]
@@ -15,7 +15,7 @@ published: false
 drift_needed: true
 ---
 
-Algebraic geometry에서 어떤 대상이 국소적으로 주어졌을 때 이를 전역적으로 붙여 하나의 대상으로 만드는 일은 흔하다. 가장 익숙한 예는 open cover를 따라 sheaf의 section을 붙이는 것이다. 그런데 open cover는 본질적으로 단사적인 localization에 불과하여, 실제로 다루고 싶은 많은 상황을 포착하지 못한다. 예를 들어 field extension $\mathbb{K}\subseteq L$을 따라 $L$ 위에서 정의된 대상을 $\mathbb{K}$ 위로 내려보내는 일이나, 어떤 covering space 위의 데이터를 밑공간 위로 모으는 일은 open cover의 언어로는 표현되지 않는다. Grothendieck은 이러한 상황을 통일적으로 다루기 위해, open immersion보다 훨씬 넓은 *faithfully flat morphism<sub>충실평탄 사상</sub>*을 일종의 covering으로 받아들이는 관점을 도입하였다. 핵심은 faithfully flat morphism이 정확성을 정확히 반영한다는 대수적 사실이며, 이로부터 base ring 위의 module을 그보다 큰 ring 위의 module과 적절한 접합 조건으로 완전히 복원할 수 있다는 *하강<sub>descent</sub>* 정리가 따라온다. 이번 글에서는 먼저 module 수준에서 이 정리를 확립하고, 이어 그 sheaf적·기하학적 형태인 fpqc 위상 위의 하강으로 끌어올린다.
+Algebraic geometry에서 어떤 대상이 국소적으로 주어졌을 때 이를 전역적으로 붙여 하나의 대상으로 만드는 일은 흔하다. 가장 익숙한 예는 open cover를 따라 sheaf의 section을 붙이는 것이다. 그런데 open cover는 본질적으로 injective localization에 불과하여, 실제로 다루고 싶은 많은 상황을 포착하지 못한다. 예를 들어 field extension $\mathbb{K}\subseteq L$을 따라 $L$ 위에서 정의된 대상을 $\mathbb{K}$ 위로 내려보내는 일이나, 어떤 covering space 위의 데이터를 밑공간 위로 모으는 일은 open cover의 언어로는 표현되지 않는다. Grothendieck은 이러한 상황을 통일적으로 다루기 위해, open immersion보다 훨씬 넓은 *faithfully flat morphism<sub>충실평탄 사상</sub>*을 일종의 covering으로 받아들이는 관점을 도입하였다. 핵심은 faithfully flat morphism이 정확성을 정확히 반영한다는 대수적 사실이며, 이로부터 base ring 위의 module을 그보다 큰 ring 위의 module과 적절한 접합 조건으로 완전히 복원할 수 있다는 *하강<sub>descent</sub>* 정리가 따라온다. 이번 글에서는 먼저 module 수준에서 이 정리를 확립하고, 이어 그 sheaf적·기하학적 형태인 fpqc topology 위의 하강으로 끌어올린다.
 
 ## 충실평탄 사상
 
@@ -210,7 +210,7 @@ Flat의 경우, $M$이 flat임을 보이려면 임의의 단사 $A$-module morph
 지금까지의 affine 위의 결과를 일반적인 scheme 위로 옮기려면, faithfully flat morphism을 적절한 Grothendieck 위상의 covering으로 받아들여야 한다. 그 위상이 fpqc 위상이다. 이름은 *fidèlement plat quasi-compact*, 즉 faithfully flat이며 quasi-compact라는 뜻이다.
 
 ::: 정의 8
-Scheme $X$ 위의 morphism들의 모임 $\{\psi_i: U_i \rightarrow X\}_{i\in I}$이 *fpqc cover<sub>fpqc 덮개</sub>*라는 것은, 각 $\psi_i$가 flat이고, 합 $\coprod_i U_i \rightarrow X$가 surjective이며, 각 affine open $V\subseteq X$가 유한히 많은 $U_i$의 affine open들 $W_{ij}$의 image로 덮이는 quasi-compact 조건을 만족하는 것이다. 이러한 covering들이 정의하는 $\Sch$ 위의 Grothendieck 위상을 *fpqc 위상*이라 부른다.
+Scheme $X$ 위의 morphism들의 모임 $\{\psi_i: U_i \rightarrow X\}_{i\in I}$이 *fpqc cover<sub>fpqc 덮개</sub>*라는 것은, 각 $\psi_i$가 flat이고, 합 $\coprod_i U_i \rightarrow X$가 surjective이며, 각 affine open $V\subseteq X$가 유한히 많은 $U_i$의 affine open들 $W_{ij}$의 image로 덮이는 quasi-compact 조건을 만족하는 것이다. 이러한 covering들이 정의하는 $\Sch$ 위의 Grothendieck 위상을 *fpqc topology*이라 부른다.
 :::
 
 Fpqc 위상에서 한 affine scheme $\Spec A$를 덮는 가장 단순한 covering은 faithfully flat ring homomorphism $A \rightarrow B$ 하나로 이루어진 $\{\Spec B \rightarrow \Spec A\}$이다. 이 경우 [정리 6](#thm6)이 곧바로 sheaf 조건의 형태로 다시 쓰인다. 우리는 quasi-coherent sheaf가 이 위상에 대한 sheaf임을 주장한다. ([§준연접층, ⁋정의 8](/ko/math/scheme_theory/quasicoherent_sheaves#def8))
@@ -227,7 +227,7 @@ $$\Gamma(T, \psi^\ast\mathcal{F}) \rightarrow \prod_i \Gamma(T_i, \psi_i^\ast\ma
 는 정확하다.
 :::
 ::: 증명
-문제가 국소적이고 quasi-compact 조건 덕분에 유한 covering으로 환원되므로, $T=\Spec A$가 affine이고 covering이 단일 faithfully flat morphism $\{\Spec B \rightarrow \Spec A\}$인 경우만 보이면 충분하다. 이 때 $\mathcal{F}=\widetilde M$인 $A$-module $M$이 있고 ([§준연접층, ⁋정리 9](/ko/math/scheme_theory/quasicoherent_sheaves#thm9)), pullback이 base change로 주어지므로 ([§준연접층, ⁋명제 15](/ko/math/scheme_theory/quasicoherent_sheaves#prop15)) 위 sequence는
+문제가 국소적이고 quasi-compact 조건 덕분에 finite covering으로 환원되므로, $T=\Spec A$가 affine이고 covering이 단일 faithfully flat morphism $\{\Spec B \rightarrow \Spec A\}$인 경우만 보이면 충분하다. 이 때 $\mathcal{F}=\widetilde M$인 $A$-module $M$이 있고 ([§준연접층, ⁋정리 9](/ko/math/scheme_theory/quasicoherent_sheaves#thm9)), pullback이 base change로 주어지므로 ([§준연접층, ⁋명제 15](/ko/math/scheme_theory/quasicoherent_sheaves#prop15)) 위 sequence는
 
 $$M \rightarrow M\otimes_A B \rightrightarrows M\otimes_A B\otimes_A B$$
 
@@ -270,7 +270,7 @@ Affine morphism $V_i \rightarrow U_i$은 $U_i$ 위의 준연접 $\mathcal{O}_{U_
 $\{Y_i \rightarrow Y\}$를 fpqc cover라 하고 $\psi: X \rightarrow Y$를 scheme morphism이라 하자. 그럼 $\psi$가 다음 성질들 가운데 하나를 가지는 것은, 각 base change $\psi_i: X\times_Y Y_i \rightarrow Y_i$가 그 성질을 가지는 것과 동치이다: flat, faithfully flat, 그리고 affine, locally of finite type, locally of finite presentation, 그리고 surjective.
 :::
 ::: 증명
-각 성질이 base change에 대해 보존됨은 표준적이므로 (flatness의 경우 [§평탄사상, ⁋명제 3](/ko/math/scheme_theory/flat_morphisms#prop3)), fpqc cover 위에서 성립하면 원래 morphism에서도 성립함만 보이면 된다. 문제가 $Y$ 위에서 국소적이고 quasi-compact 조건으로 유한 covering으로 환원되므로, $Y=\Spec A$, covering이 단일 faithfully flat $\Spec A' \rightarrow \Spec A$인 경우만 본다.
+각 성질이 base change에 대해 보존됨은 표준적이므로 (flatness의 경우 [§평탄사상, ⁋명제 3](/ko/math/scheme_theory/flat_morphisms#prop3)), fpqc cover 위에서 성립하면 원래 morphism에서도 성립함만 보이면 된다. 문제가 $Y$ 위에서 국소적이고 quasi-compact 조건으로 finite covering으로 환원되므로, $Y=\Spec A$, covering이 단일 faithfully flat $\Spec A' \rightarrow \Spec A$인 경우만 본다.
 
 Flatness의 경우, 이는 affine 위에서 $X$를 덮는 각 $\Spec B \rightarrow \Spec A$에 대한 $B$의 $A$-flatness로 판정된다. $B\otimes_A A'$가 $A'$-flat이라 가정하면, $A \rightarrow A'$가 faithfully flat이므로 임의의 단사 $A$-module morphism $M' \hookrightarrow M''$에 대하여 $(M'\otimes_A B \rightarrow M''\otimes_A B)\otimes_A A'$이 단사이고 ($B\otimes_A A'$ flat), [명제 2](#prop2)로 단사성을 $A$ 위로 반영하면 $M'\otimes_A B \rightarrow M''\otimes_A B$가 단사이므로 $B$는 $A$-flat이다. Faithful flatness는 flatness에 surjective를 더한 것이고, surjective는 $\coprod (X\times_Y Y_i) \rightarrow \coprod Y_i \rightarrow Y$의 합성이 전사임과 $\coprod Y_i \rightarrow Y$가 전사임으로부터 $X \rightarrow Y$의 전사가 따라오므로 성립한다.
 

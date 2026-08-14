@@ -44,7 +44,7 @@ $$H_G^\bullet(X;R):=H^\bullet(X_G;R)$$
 
 $X_G$는 정확히 principal $G$-bundle $EG\rightarrow BG$에 fiber $X$를 붙인 associated bundle이다. ([\[대수적 위상수학\] §분류공간, ⁋정의 3](/ko/math/algebraic_topology/classifying_spaces#def3)) 계수환 $R$을 고정한 동안에는 이를 생략하고 $H_G^\bullet(X)$로 적는다. Cohomology의 cup product가 $H^\bullet(X_G)$에 graded-commutative $R$-algebra 구조를 주므로 ([\[대수적 위상수학\] §합곱, ⁋정의 1](/ko/math/algebraic_topology/cup_products#def1)) $H_G^\bullet(X)$ 역시 graded-commutative $R$-algebra이다.
 
-이 구성은 두 가지 방향으로 functorial하다. 첫째, $X$에 대해 contravariant이다. $G$-equivariant 연속함수 $f:X\rightarrow Y$는 $\id\times f:EG\times X\rightarrow EG\times Y$를 주고, 이것이 $G$-작용과 호환되므로 quotient 사이의 morphism $f_G:X_G\rightarrow Y_G$로 내려간다. 따라서 $f^\ast:H_G^\bullet(Y)\rightarrow H_G^\bullet(X)$를 얻으며, 항등사상과 합성을 보존한다. 둘째, $G$에 대해서도 contravariant이다. 연속적인 group homomorphism $\phi:H\rightarrow G$가 주어지면 $G$-space $X$는 $\phi$를 통해 $H$-space가 되고, $BH\rightarrow BG$를 덮는 $H$-equivariant morphism $EH\rightarrow EG$가 존재한다. ([\[대수적 위상수학\] §분류공간, ⁋보조정리 9](/ko/math/algebraic_topology/classifying_spaces#lem9)) 이 morphism이 $X_H=EH\times_H X\rightarrow EG\times_G X=X_G$를 유도하여 $H_G^\bullet(X)\rightarrow H_H^\bullet(X)$를 준다. 특히 $H=\{e\}$인 경우가 곧 아래에서 다룰 ordinary cohomology로의 restriction이다.
+이 구성은 두 가지 방향으로 functorial하다. 첫째, $X$에 대해 contravariant이다. $G$-equivariant 연속함수 $f:X\rightarrow Y$는 $\id\times f:EG\times X\rightarrow EG\times Y$를 주고, 이것이 $G$-작용과 호환되므로 quotient 사이의 morphism $f_G:X_G\rightarrow Y_G$로 내려간다. 따라서 $f^\ast:H_G^\bullet(Y)\rightarrow H_G^\bullet(X)$를 얻으며, 항등사상과 합성을 보존한다. 둘째, $G$에 대해서도 contravariant이다. Continuous group homomorphism $\phi:H\rightarrow G$가 주어지면 $G$-space $X$는 $\phi$를 통해 $H$-space가 되고, $BH\rightarrow BG$를 덮는 $H$-equivariant morphism $EH\rightarrow EG$가 존재한다. ([\[대수적 위상수학\] §분류공간, ⁋보조정리 9](/ko/math/algebraic_topology/classifying_spaces#lem9)) 이 morphism이 $X_H=EH\times_H X\rightarrow EG\times_G X=X_G$를 유도하여 $H_G^\bullet(X)\rightarrow H_H^\bullet(X)$를 준다. 특히 $H=\{e\}$인 경우가 곧 아래에서 다룰 ordinary cohomology로의 restriction이다.
 
 ## 동변 코호몰로지의 기본 성질
 
@@ -71,7 +71,7 @@ $$\mathrm{pt}_G=EG\times_G\mathrm{pt}=EG/G=BG$$
 (3) $EG$의 한 점 $e_0$을 고정하면, 그 image $b_0=[e_0]\in BG$ 위의 fiber는 $\pi^{-1}(b_0)=\{[e_0,x]\mid x\in X\}$이고, $x\mapsto[e_0,x]$가 $X$와 이 fiber 사이의 homeomorphism을 준다. 이 포함 $\iota:X\hookrightarrow X_G$의 pullback $\iota^\ast:H_G^\bullet(X)\rightarrow H^\bullet(X)$이 restriction이다. $EG$가 path-connected이므로 $e_0$의 선택을 바꾸어도 $\iota$의 homotopy class, 따라서 $\iota^\ast$는 변하지 않는다.
 :::
 
-성질 (2)는 equivariant cohomology가 단순한 $R$-module이 아니라 항상 $H^\bullet(BG)$ 위의 algebra라는, 이 이론의 가장 중요한 구조적 특징을 말한다. 이 base ring $H^\bullet(BG)=H_G^\bullet(\mathrm{pt})$이 작용의 정보를 담는 좌표 역할을 하며, 이후 torus의 경우 이것이 character lattice 위의 polynomial ring으로 구체화된다. 성질 (3)의 restriction $\iota^\ast$은 작용을 잊고 보통의 cohomology로 내려가는 morphism이며, $H^\bullet(BG)$의 양의 degree 부분을 $0$으로 보내는 augmentation과 호환된다.
+성질 (2)는 equivariant cohomology가 단순한 $R$-module이 아니라 항상 $H^\bullet(BG)$ 위의 algebra라는, 이 이론의 가장 중요한 구조적 특징을 말한다. 이 base ring $H^\bullet(BG)=H_G^\bullet(\mathrm{pt})$이 작용의 정보를 담는 좌표 역할을 하며, 이후 torus의 경우 이것이 character lattice 위의 polynomial ring으로 구체화된다. 성질 (3)의 restriction $\iota^\ast$은 작용을 잊고 보통의 cohomology로 내려가는 morphism이며, $H^\bullet(BG)$의 positive degree 부분을 $0$으로 보내는 augmentation과 호환된다.
 
 작용이 free일 때 equivariant cohomology가 orbit space의 cohomology로 환원된다는, 도입부에서 요구한 성질을 이제 증명한다.
 
@@ -222,7 +222,7 @@ $$\mathbb{Z}[t_0,\ldots,t_n][h]\Big/\prod_{i}(h-t_i)\xrightarrow{t_i\mapsto 0}\m
 위 두 계산의 공통된 특징은 $H_T^\bullet(X)$이 $H_T^\bullet(\mathrm{pt})$ 위의 free module이고, $t_i=0$을 대입하면 정확히 $H^\bullet(X)$가 회복된다는 점이었다. 이 성질은 모든 작용에서 성립하지는 않으나, 성립할 때는 equivariant cohomology와 ordinary cohomology의 관계가 가장 단순해진다.
 
 ::: 정의 8
-Torus $T$가 작용하는 공간 $X$ (cohomology가 각 degree에서 finitely generated)가 *equivariantly formal<sub>동변 형식적</sub>*이라는 것은 $H_T^\bullet(X)$이 $H_T^\bullet(\mathrm{pt})$ 위의 free module이고, augmentation $H_T^\bullet(\mathrm{pt})\rightarrow\mathbb{Z}$ (양의 degree를 $0$으로 보내는 morphism) 에 대하여 자연스러운 morphism
+Torus $T$가 작용하는 공간 $X$ (cohomology가 각 degree에서 finitely generated)가 *equivariantly formal<sub>동변 형식적</sub>*이라는 것은 $H_T^\bullet(X)$이 $H_T^\bullet(\mathrm{pt})$ 위의 free module이고, augmentation $H_T^\bullet(\mathrm{pt})\rightarrow\mathbb{Z}$ (positive degree를 $0$으로 보내는 morphism) 에 대하여 자연스러운 morphism
 
 $$H_T^\bullet(X)\otimes_{H_T^\bullet(\mathrm{pt})}\mathbb{Z}\xrightarrow{\cong}H^\bullet(X)$$
 
@@ -240,7 +240,7 @@ $X$가 smooth variety이고 $G$가 compact Lie group으로 매끄럽게 작용�
 
 $$\Omega_G^\bullet(X)=\big(\mathrm{Sym}(\mathfrak{g}^\ast)\otimes\Omega^\bullet(X)\big)^G$$
 
-와 그 위의 equivariant 미분 $d_G$을 사용하며, Weil model은 $EG$ 위의 connection과 그 curvature를 명시적으로 도입한다. 이들은 Lie algebra $\mathfrak{g}$와 connection 데이터를 필요로 하므로 smooth 범주에 한정된다. 우리는 임의의 topological group과 임의의 paracompact space에 적용되는 위상적 Borel model만을 사용한다. 두 model의 동치성과 de Rham 판본의 자세한 전개는 [AB]와 [GS]를 따른다.
+와 그 위의 equivariant differential $d_G$을 사용하며, Weil model은 $EG$ 위의 connection과 그 curvature를 명시적으로 도입한다. 이들은 Lie algebra $\mathfrak{g}$와 connection 데이터를 필요로 하므로 smooth 범주에 한정된다. 우리는 임의의 topological group과 임의의 paracompact space에 적용되는 위상적 Borel model만을 사용한다. 두 model의 동치성과 de Rham 판본의 자세한 전개는 [AB]와 [GS]를 따른다.
 :::
 
 ---

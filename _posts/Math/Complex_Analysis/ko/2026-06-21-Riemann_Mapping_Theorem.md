@@ -14,11 +14,11 @@ weight: 12
 published: false
 ---
 
-두 영역 사이에 holomorphic bijection이 존재하는지, 곧 두 영역이 conformal equivalence인지를 묻는 문제는 complex analysis의 한 중심에 놓인다. Holomorphic bijection은 도함수가 어디서도 소멸하지 않아 conformal map이 되므로 ([§등각사상과 Möbius 변환, ⁋명제 3](/ko/math/complex_analysis/conformal_maps#prop3)), 한 영역 위의 holomorphic 함수론 전체가 conformal isomorphism을 통해 다른 영역으로 고스란히 옮겨진다. 그런데 등각동형의 후보가 될 수 있는 영역은 놀랍도록 적다. Riemann 사상정리는 $\mathbb{C}$ 전체가 아닌 단순연결 열린집합이라면, 그 모양이 아무리 복잡하더라도 예외 없이 단위원판과 등각동형임을 단언한다. 곧 위상적 조건인 단순연결성 하나만으로 등각형 분류가 끝나며, $\mathbb{C}$와 그 진부분집합이라는 단 두 개의 등각동형류만 남는다. 이 글은 그 증명을 전개한다. 핵심 도구는 국소적으로 bounded인 holomorphic function 족이 정규족을 이룬다는 Montel 정리이며, 이를 써서 단위원판으로 가는 단사 holomorphic 사상 가운데 한 점에서 도함수의 절댓값을 최대화하는 극값사상을 추출하고, 그 극값성이 사상을 전사로 강제함을 보인다. 단사성은 Hurwitz 정리가 보장한다.
+두 영역 사이에 holomorphic bijection이 존재하는지, 곧 두 영역이 conformal equivalence인지를 묻는 문제는 complex analysis의 한 중심에 놓인다. Holomorphic bijection은 도함수가 어디서도 소멸하지 않아 conformal map이 되므로 ([§등각사상과 Möbius 변환, ⁋명제 3](/ko/math/complex_analysis/conformal_maps#prop3)), 한 영역 위의 holomorphic 함수론 전체가 conformal isomorphism을 통해 다른 영역으로 고스란히 옮겨진다. 그런데 등각동형의 후보가 될 수 있는 영역은 놀랍도록 적다. Riemann 사상정리는 $\mathbb{C}$ 전체가 아닌 단순연결 열린집합이라면, 그 모양이 아무리 복잡하더라도 예외 없이 단위원판과 등각동형임을 단언한다. 곧 위상적 조건인 단순연결성 하나만으로 등각형 분류가 끝나며, $\mathbb{C}$와 그 진부분집합이라는 단 두 개의 등각동형류만 남는다. 이 글은 그 증명을 전개한다. 핵심 도구는 국소적으로 bounded인 holomorphic function 족이 정규족을 이룬다는 Montel 정리이며, 이를 써서 단위원판으로 가는 injective holomorphic morphism 가운데 한 점에서 도함수의 절댓값을 최대화하는 극값사상을 추출하고, 그 극값성이 사상을 전사로 강제함을 보인다. 단사성은 Hurwitz 정리가 보장한다.
 
 ## 정규족과 Montel 정리
 
-증명의 전략은 변분적이다. 단위원판으로 가는 적당한 holomorphic 사상들의 모임을 잡고 그 안에서 어떤 양을 최대화하는 원소를 찾는데, 이 최대화가 의미를 가지려면 최대화 수열의 극한이 다시 같은 모임 안에 머물러야 한다. 함수열의 극한을 다루는 콤팩트성의 언어가 정규족이다. 한 함수족이 정규족이라는 것은 그 안의 어떤 함수열에서든 콤팩트 집합 위에서 균등수렴하는 부분열을 뽑아낼 수 있다는 뜻이며, 이는 bounded 수열에서 수렴 부분열을 뽑는 Bolzano–Weierstrass 정리의 함수공간 판본에 해당한다.
+증명의 전략은 변분적이다. 단위원판으로 가는 적당한 holomorphic morphism들의 모임을 잡고 그 안에서 어떤 양을 최대화하는 원소를 찾는데, 이 최대화가 의미를 가지려면 최대화 수열의 극한이 다시 같은 모임 안에 머물러야 한다. 함수열의 극한을 다루는 콤팩트성의 언어가 정규족이다. 한 함수족이 정규족이라는 것은 그 안의 어떤 함수열에서든 콤팩트 집합 위에서 균등수렴하는 부분열을 뽑아낼 수 있다는 뜻이며, 이는 bounded 수열에서 수렴 부분열을 뽑는 Bolzano–Weierstrass 정리의 함수공간 판본에 해당한다.
 
 ::: 정의 1 (정규족)
 열린집합 $\Omega \subseteq \mathbb{C}$ 위의 holomorphic function들의 모임 $\mathcal{F}$가 *normal family<sub>정규족</sub>*라는 것은, $\mathcal{F}$의 임의의 함수열 $(f_n)$이 $\Omega$의 모든 콤팩트 부분집합 위에서 균등수렴하는 부분열 $(f_{n_k})$을 가지는 것을 뜻한다. 그 극한함수가 $\mathcal{F}$에 속할 것까지는 요구하지 않는다.
@@ -59,7 +59,7 @@ $\mathcal{F}$의 임의의 함수열 $(f_n)$을 잡아, $\Omega$의 모든 콤�
 
 먼저 $\Omega$ 안의 가산조밀집합 $E = \{w_1, w_2, \dots\}$을 택한다 (가령 $\Omega$에 속하는 유리좌표점 전체). 수열 $(f_n(w_1))$은 가정의 국소유계성에서 ($\{w_1\}$이 콤팩트이므로) bounded인 복소수열이고, Bolzano–Weierstrass 정리에 의해 수렴 부분열 $(f_{n}^{(1)})$을 가진다. 이 부분열에서 다시 점 $w_2$에서의 값이 수렴하도록 부분열 $(f_n^{(2)})$을 뽑고, 이를 거듭하면 부분열의 사슬 $(f_n^{(1)}) \supseteq (f_n^{(2)}) \supseteq \cdots$을 얻는데, $(f_n^{(k)})$은 $w_1, \dots, w_k$ 모두에서 수렴한다. 대각선열 $g_n = f_n^{(n)}$을 잡으면, 각 $j$에 대해 $(g_n)$은 $n \geq j$부터 $(f_n^{(j)})$의 부분열이므로 $w_j$에서 수렴한다. 곧 $(g_n)$은 $E$의 모든 점에서 수렴하는 $(f_n)$의 부분열이다.
 
-이제 $(g_n)$이 $\Omega$의 임의의 콤팩트 집합 $K$ 위에서 균등수렴함을 보인다. 콤팩트성을 다루기 위해 $K$을 조금 부풀린 콤팩트 집합 $K' = \{z \mid \operatorname{dist}(z, K) \leq \rho\} \subseteq \Omega$ ($\rho > 0$ 충분히 작게) 위에서 작업한다. $\varepsilon > 0$이 주어졌을 때, 보조정리 2에 의해 $K'$ 위에서 $\mathcal{F}$이 동등연속이므로 어떤 $\delta \in (0, \rho)$이 있어 $z, w \in K'$, $\lvert z - w\rvert < \delta$이면 모든 $n$에서 $\lvert g_n(z) - g_n(w)\rvert < \varepsilon/3$이다. $K$이 콤팩트이므로 반지름 $\delta$인 원판들로 유한 covering을 이루고, 각 원판의 중심을 $E$의 점으로 잡을 수 있다 ($E$이 조밀하므로). 이렇게 얻은 유한 개의 점 $w_{j_1}, \dots, w_{j_p} \in E \cap K'$은 $K$의 각 점이 그 가운데 적어도 하나와 거리 $\delta$ 안에 있도록 한다.
+이제 $(g_n)$이 $\Omega$의 임의의 콤팩트 집합 $K$ 위에서 균등수렴함을 보인다. 콤팩트성을 다루기 위해 $K$을 조금 부풀린 콤팩트 집합 $K' = \{z \mid \operatorname{dist}(z, K) \leq \rho\} \subseteq \Omega$ ($\rho > 0$ 충분히 작게) 위에서 작업한다. $\varepsilon > 0$이 주어졌을 때, 보조정리 2에 의해 $K'$ 위에서 $\mathcal{F}$이 동등연속이므로 어떤 $\delta \in (0, \rho)$이 있어 $z, w \in K'$, $\lvert z - w\rvert < \delta$이면 모든 $n$에서 $\lvert g_n(z) - g_n(w)\rvert < \varepsilon/3$이다. $K$이 콤팩트이므로 반지름 $\delta$인 원판들로 finite covering을 이루고, 각 원판의 중심을 $E$의 점으로 잡을 수 있다 ($E$이 조밀하므로). 이렇게 얻은 유한 개의 점 $w_{j_1}, \dots, w_{j_p} \in E \cap K'$은 $K$의 각 점이 그 가운데 적어도 하나와 거리 $\delta$ 안에 있도록 한다.
 
 유한 개의 점 $w_{j_1}, \dots, w_{j_p}$ 각각에서 $(g_n)$이 수렴하므로 Cauchy 수열이고, 따라서 어떤 $N$이 있어 $m, n \geq N$이면 모든 $i = 1, \dots, p$에서 $\lvert g_n(w_{j_i}) - g_m(w_{j_i})\rvert < \varepsilon/3$이다. 이제 임의의 $z \in K$을 잡고, $\lvert z - w_{j_i}\rvert < \delta$인 중심 $w_{j_i}$을 고른다. $m, n \geq N$에 대해 삼각부등식으로
 
@@ -68,11 +68,11 @@ $$\lvert g_n(z) - g_m(z)\rvert \leq \lvert g_n(z) - g_n(w_{j_i})\rvert + \lvert 
 이다. 첫째와 셋째 항은 동등연속성에서, 둘째 항은 유한 개 점에서의 Cauchy 성질에서 나왔다. 이 어림이 $z \in K$에 무관한 $N$으로 성립하므로, $(g_n)$은 $K$ 위에서 균등 Cauchy 수열이고, $\mathbb{C}$의 완비성에 의해 $K$ 위에서 균등수렴한다. $K$이 임의의 콤팩트 집합이었으므로 $(g_n)$은 $\Omega$의 모든 콤팩트 부분집합 위에서 균등수렴한다. 따라서 $\mathcal{F}$은 정규족이다.
 :::
 
-Montel 정리는 holomorphic function 족에 대한 콤팩트성 판정을 함숫값의 boundedness라는 검증하기 쉬운 조건으로 환원한다. 단위원판으로 가는 사상들은 그 값이 절댓값 $1$ 이하로 한꺼번에 bounded이므로 자동으로 국소유계하고, 따라서 Montel 정리에 의해 정규족을 이룬다. 이것이 증명에서 극값사상을 추출할 때 쓰는 콤팩트성의 원천이다. 한편 극한사상이 다시 단사임을 보장하려면 단사 holomorphic function 열의 극한에 관한 사실이 필요한데, 그것이 Hurwitz 정리이다.
+Montel 정리는 holomorphic function 족에 대한 콤팩트성 판정을 함숫값의 boundedness라는 검증하기 쉬운 조건으로 환원한다. 단위원판으로 가는 사상들은 그 값이 절댓값 $1$ 이하로 한꺼번에 bounded이므로 자동으로 국소유계하고, 따라서 Montel 정리에 의해 정규족을 이룬다. 이것이 증명에서 극값사상을 추출할 때 쓰는 콤팩트성의 원천이다. 한편 극한사상이 다시 단사임을 보장하려면 injective holomorphic function 열의 극한에 관한 사실이 필요한데, 그것이 Hurwitz 정리이다.
 
 ## Hurwitz 정리
 
-정규족에서 뽑은 극한이 단사성을 잃지 않는지를 통제하려면, 단사 holomorphic function 열의 국소균등극한이 단사이거나 상수임을 알아야 한다. 이는 영점의 개수가 국소균등수렴 아래 안정적이라는 더 일반적인 사실의 특수한 경우이며, 그 안정성은 영점 수를 경계적분으로 세는 편각원리에서 나온다. 함수열이 균등수렴하면 그 대수적 미분 $f_n'/f_n$도 균등수렴하므로, boundary 위의 적분이 극한과 어울려 영점 수가 보존된다.
+정규족에서 뽑은 극한이 단사성을 잃지 않는지를 통제하려면, injective holomorphic function 열의 국소균등극한이 단사이거나 상수임을 알아야 한다. 이는 영점의 개수가 국소균등수렴 아래 안정적이라는 더 일반적인 사실의 특수한 경우이며, 그 안정성은 영점 수를 경계적분으로 세는 편각원리에서 나온다. 함수열이 균등수렴하면 그 대수적 미분 $f_n'/f_n$도 균등수렴하므로, boundary 위의 적분이 극한과 어울려 영점 수가 보존된다.
 
 ::: 정리 4 (Hurwitz)
 $\Omega \subseteq \mathbb{C}$가 connected 열린집합이고 holomorphic function 열 $(f_n)$이 $\Omega$의 콤팩트 부분집합 위에서 holomorphic function $f$로 균등수렴한다고 하자. 만일 각 $f_n$이 $\Omega$에서 영점을 갖지 않으면, $f$은 $\Omega$에서 항등적으로 $0$이거나 영점을 갖지 않는다.
@@ -88,10 +88,10 @@ $$\mu = \min_{z \in \gamma}\lvert f(z)\rvert > 0$$
 $(f_n)$이 $\gamma$ 위에서 $f$로 균등수렴하므로, 충분히 큰 $n$에 대해 $\gamma$ 위의 모든 점에서 $\lvert f_n(z) - f(z)\rvert < \mu \leq \lvert f(z)\rvert$이다. $\overline{D(z_0, \rho)}$이 콤팩트이므로 $\Omega$ 안에 그것을 품는 조금 더 큰 열린 원판이 있고, 이 원판은 단순연결이라 그 위에서 [§편각원리와 Rouché 정리, ⁋명제 5](/ko/math/complex_analysis/argument_principle#prop5)를 $f$ (우세항) 과 $f_n - f$ (보정) 에 적용하면, $f_n = f + (f_n - f)$은 $D(z_0, \rho)$ 안에서 $f$과 같은 개수의 영점을 가진다. $f$은 그 안에서 $z_0$이라는 영점을 (위수만큼) 적어도 하나 가지므로, $f_n$도 $D(z_0, \rho)$ 안에서 적어도 하나의 영점을 가진다. 이는 $f_n$이 영점을 갖지 않는다는 가정에 어긋난다. 따라서 $f$은 $\Omega$에서 영점을 갖지 않는다.
 :::
 
-Hurwitz 정리는 영점을 갖지 않는다는 성질이 국소균등극한 아래 보존됨을 말하되, 극한이 통째로 $0$으로 무너지는 퇴화의 가능성만을 예외로 남긴다. 이 정리에서 단사성에 관한 따름정리가 곧장 나온다. 단사 holomorphic function 열의 극한은 단사이거나 상수인데, 단사성을 깨는 유일한 길이 상수로 무너지는 것이기 때문이다.
+Hurwitz 정리는 영점을 갖지 않는다는 성질이 국소균등극한 아래 보존됨을 말하되, 극한이 통째로 $0$으로 무너지는 퇴화의 가능성만을 예외로 남긴다. 이 정리에서 단사성에 관한 따름정리가 곧장 나온다. Injective holomorphic function 열의 극한은 단사이거나 상수인데, 단사성을 깨는 유일한 길이 상수로 무너지는 것이기 때문이다.
 
 ::: 따름정리 5 (단사성의 보존)
-$\Omega \subseteq \mathbb{C}$가 connected 열린집합이고 단사 holomorphic function 열 $(f_n)$이 $\Omega$의 콤팩트 부분집합 위에서 holomorphic function $f$로 균등수렴한다고 하자. 그러면 $f$은 단사이거나 상수이다.
+$\Omega \subseteq \mathbb{C}$가 connected 열린집합이고 injective holomorphic function 열 $(f_n)$이 $\Omega$의 콤팩트 부분집합 위에서 holomorphic function $f$로 균등수렴한다고 하자. 그러면 $f$은 단사이거나 상수이다.
 :::
 
 ::: 증명
@@ -106,14 +106,14 @@ $$g(z) = f(z) - c$$
 로 균등수렴한다. 점 $a \in \Omega'$에서 $g(a) = f(a) - c = 0$이므로 $g$은 $\Omega'$에서 영점을 가진다. Hurwitz 정리 (정리 4) 에 의해, $\Omega'$에서 영점을 갖지 않는 $g_n$들의 극한 $g$이 영점을 가지려면 $g$이 $\Omega'$에서 항등적으로 $0$이어야 한다. 곧 $\Omega'$에서 $f \equiv c$이고, 연속성에서 $\Omega$ 전체에서 $f \equiv c$이라 $f$이 상수이다. 이는 $f$이 상수가 아니라는 가정에 어긋난다. 따라서 $f$은 단사이다.
 :::
 
-따름정리 5는 극값사상을 추출할 때 그 극한이 단사성을 유지하도록 보장하는 마지막 부품이다. 단사 holomorphic 사상들의 모임에서 콤팩트성으로 극한을 뽑으면, 그 극한은 상수가 아니기만 하면 다시 단사여서 같은 모임에 머문다. 이제 Montel 정리와 따름정리 5를 손에 쥐었으니, 이를 결합하여 Riemann 사상정리를 증명한다.
+따름정리 5는 극값사상을 추출할 때 그 극한이 단사성을 유지하도록 보장하는 마지막 부품이다. Injective holomorphic morphism들의 모임에서 콤팩트성으로 극한을 뽑으면, 그 극한은 상수가 아니기만 하면 다시 단사여서 같은 모임에 머문다. 이제 Montel 정리와 따름정리 5를 손에 쥐었으니, 이를 결합하여 Riemann 사상정리를 증명한다.
 
 ## Riemann 사상정리
 
 정리의 진술부터 정확히 한다. $\mathbb{C}$ 전체는 단위원판과 등각동형일 수 없는데, $\mathbb{C}$ 위의 bounded entire function이 상수뿐이라는 Liouville 정리가 단위원판으로 가는 비상수 사상의 존재를 막기 때문이다. 따라서 영역이 $\mathbb{C}$의 진부분집합이라는 조건이 필수적이며, 단순연결성과 함께 이 둘이 정확히 충분조건이 됨이 정리의 내용이다. 사상의 유일성을 위해 한 점에서의 normalization을 덧붙인다.
 
 ::: 정리 6 (Riemann 사상정리)
-$\Omega \subsetneq \mathbb{C}$가 공집합이 아닌 단순연결 열린집합이라 하자. 그러면 임의로 고정한 점 $z_0 \in \Omega$에 대하여, $\Omega$를 단위원판 $\mathbb{D} = \{z : \lvert z\rvert < 1\}$ 위로 보내는 holomorphic 전단사사상 $f : \Omega \rightarrow \mathbb{D}$이 존재하며, 그 가운데
+$\Omega \subsetneq \mathbb{C}$가 공집합이 아닌 단순연결 열린집합이라 하자. 그러면 임의로 고정한 점 $z_0 \in \Omega$에 대하여, $\Omega$를 단위원판 $\mathbb{D} = \{z : \lvert z\rvert < 1\}$ 위로 보내는 holomorphic bijection $f : \Omega \rightarrow \mathbb{D}$이 존재하며, 그 가운데
 
 $$f(z_0) = 0, \qquad f'(z_0) > 0$$
 
@@ -128,11 +128,11 @@ $f, g : \Omega \rightarrow \mathbb{D}$이 모두 normalization 조건을 만족�
 이제 normalization의 둘째 조건을 쓴다. $g = h \circ f$이므로 연쇄법칙으로 $g'(z_0) = h'(f(z_0))f'(z_0) = h'(0)f'(z_0) = e^{i\theta}f'(z_0)$이다. 가정에서 $f'(z_0) > 0$과 $g'(z_0) > 0$이 모두 양의 실수이므로, $e^{i\theta} = g'(z_0)/f'(z_0)$도 양의 실수이고 절댓값이 $1$이라 $e^{i\theta} = 1$이다. 따라서 $h = \id$이고 $g = f$이다.
 :::
 
-유일성의 논증은 두 normalization 사상의 차이가 원점을 고정하는 automorphism, 곧 회전으로 환원되고, 도함수가 양의 실수라는 조건이 그 회전을 항등으로 못 박음을 보인다. Normalization 조건 $f'(z_0) > 0$은 사상을 회전의 자유도만큼 고정하는 위상고정 장치인 셈이다. 남은 것은 존재성이며, 이를 위해 단위원판으로 가는 단사 holomorphic 사상들의 모임을 도입한다.
+유일성의 논증은 두 normalization 사상의 차이가 원점을 고정하는 automorphism, 곧 회전으로 환원되고, 도함수가 양의 실수라는 조건이 그 회전을 항등으로 못 박음을 보인다. Normalization 조건 $f'(z_0) > 0$은 사상을 회전의 자유도만큼 고정하는 위상고정 장치인 셈이다. 남은 것은 존재성이며, 이를 위해 단위원판으로 가는 injective holomorphic morphism들의 모임을 도입한다.
 
 ## 후보족의 비어 있지 않음
 
-존재성 증명의 무대는 다음 함수족이다. $z_0 \in \Omega$을 고정한 채, $\Omega$를 단위원판 안으로 단사로 보내며 $z_0$을 원점으로 옮기는 holomorphic 사상 전체를 모은다.
+존재성 증명의 무대는 다음 함수족이다. $z_0 \in \Omega$을 고정한 채, $\Omega$를 단위원판 안으로 단사로 보내며 $z_0$을 원점으로 옮기는 holomorphic morphism 전체를 모은다.
 
 $$\mathcal{F} = \{f : \Omega \rightarrow \mathbb{D} \mid f \text{ 정칙},\ f \text{ 단사},\ f(z_0) = 0\}.$$
 
@@ -191,7 +191,7 @@ $$\lvert f'(z_0)\rvert = \left\lvert\frac{1}{2\pi i}\oint_{\lvert z - z_0\rvert 
 
 이라 $M \leq 1/\rho < \infty$이다. Supremum의 정의에서 $\lvert f_n'(z_0)\rvert \rightarrow M$인 함수열 $(f_n) \subseteq \mathcal{F}$을 택한다. $\mathcal{F}$의 모든 함수가 절댓값 $1$로 bounded라 국소유계하므로 Montel 정리 (정리 3) 에 의해 $\mathcal{F}$은 정규족이고, $(f_n)$의 부분열이 $\Omega$의 콤팩트 부분집합 위에서 어떤 holomorphic function $f^\ast$로 균등수렴한다. 이 부분열을 다시 $(f_n)$이라 적는다.
 
-$f^\ast$이 $\mathcal{F}$에 속함을 확인한다. 국소균등수렴에서 도함수도 국소균등수렴하므로 $f^\ast{}'(z_0) = \lim_n f_n'(z_0)$이고 $\lvert f^\ast{}'(z_0)\rvert = M > 0$이라 $f^\ast$은 비상수이다. 각 $f_n$이 단사이므로 따름정리 5에 의해 그 극한 $f^\ast$은 단사이거나 상수인데, 방금 비상수임을 보았으니 단사이다. 또 각 $f_n$이 $\mathbb{D}$로 가므로 $\lvert f^\ast\rvert \leq 1$이고, $f^\ast$이 비상수 holomorphic 사상이라 open mapping이므로 ([§편각원리와 Rouché 정리, ⁋정리 8](/ko/math/complex_analysis/argument_principle#thm8)) 그 image가 열려 있어 boundary $\lvert w\rvert = 1$에 닿을 수 없다. 따라서 $\lvert f^\ast\rvert < 1$, 곧 $f^\ast : \Omega \rightarrow \mathbb{D}$이다. 끝으로 $f^\ast(z_0) = \lim_n f_n(z_0) = 0$이다. 그러므로 $f^\ast \in \mathcal{F}$이고 $\lvert f^\ast{}'(z_0)\rvert = M$이라 supremum이 달성된다.
+$f^\ast$이 $\mathcal{F}$에 속함을 확인한다. 국소균등수렴에서 도함수도 국소균등수렴하므로 $f^\ast{}'(z_0) = \lim_n f_n'(z_0)$이고 $\lvert f^\ast{}'(z_0)\rvert = M > 0$이라 $f^\ast$은 비상수이다. 각 $f_n$이 단사이므로 따름정리 5에 의해 그 극한 $f^\ast$은 단사이거나 상수인데, 방금 비상수임을 보았으니 단사이다. 또 각 $f_n$이 $\mathbb{D}$로 가므로 $\lvert f^\ast\rvert \leq 1$이고, $f^\ast$이 비상수 holomorphic morphism이라 open mapping이므로 ([§편각원리와 Rouché 정리, ⁋정리 8](/ko/math/complex_analysis/argument_principle#thm8)) 그 image가 열려 있어 boundary $\lvert w\rvert = 1$에 닿을 수 없다. 따라서 $\lvert f^\ast\rvert < 1$, 곧 $f^\ast : \Omega \rightarrow \mathbb{D}$이다. 끝으로 $f^\ast(z_0) = \lim_n f_n(z_0) = 0$이다. 그러므로 $f^\ast \in \mathcal{F}$이고 $\lvert f^\ast{}'(z_0)\rvert = M$이라 supremum이 달성된다.
 
 이제 $f^\ast$이 전사임을 보인다. 전사가 아니라고 가정하여, 어떤 $\alpha \in \mathbb{D}$이 $f^\ast$의 image에 들지 않는다고 하자. 곧 모든 $z \in \Omega$에서 $f^\ast(z) \neq \alpha$이다. 이때 $\lvert f^\ast{}'(z_0)\rvert$을 더 크게 만드는 $\mathcal{F}$의 원소를 짜내어 극값성에 모순을 일으킨다. [§등각사상과 Möbius 변환, ⁋명제 11](/ko/math/complex_analysis/conformal_maps#prop11)의 단위원판 automorphism $\varphi_\alpha(w) = (w - \alpha)/(1 - \bar\alpha w)$을 합성한 함수
 
@@ -211,9 +211,9 @@ $$h(z) = \frac{G(z) - \beta}{1 - \bar\beta G(z)}$$
 
 $$f^\ast = \varphi_\alpha^{-1} \circ s \circ \varphi_\beta^{-1} \circ h =: \Phi \circ h, \qquad \Phi = \varphi_\alpha^{-1} \circ s \circ \varphi_\beta^{-1}$$
 
-이 성립한다 (실제로 $\varphi_\beta^{-1}(h) = G$, $s(G) = G^2 = F$, $\varphi_\alpha^{-1}(F) = f^\ast$). 여기서 $\Phi : \mathbb{D} \rightarrow \mathbb{D}$은 holomorphic이고 $\Phi(0) = \varphi_\alpha^{-1}(s(\varphi_\beta^{-1}(0))) = \varphi_\alpha^{-1}(s(\beta))$인데, $s(\beta) = \beta^2 = G(z_0)^2 = F(z_0) = \varphi_\alpha(f^\ast(z_0)) = \varphi_\alpha(0)$이므로 $\Phi(0) = \varphi_\alpha^{-1}(\varphi_\alpha(0)) = 0$이다. 곧 $\Phi$은 원점을 고정하는 $\mathbb{D} \rightarrow \mathbb{D}$ holomorphic 사상이다.
+이 성립한다 (실제로 $\varphi_\beta^{-1}(h) = G$, $s(G) = G^2 = F$, $\varphi_\alpha^{-1}(F) = f^\ast$). 여기서 $\Phi : \mathbb{D} \rightarrow \mathbb{D}$은 holomorphic이고 $\Phi(0) = \varphi_\alpha^{-1}(s(\varphi_\beta^{-1}(0))) = \varphi_\alpha^{-1}(s(\beta))$인데, $s(\beta) = \beta^2 = G(z_0)^2 = F(z_0) = \varphi_\alpha(f^\ast(z_0)) = \varphi_\alpha(0)$이므로 $\Phi(0) = \varphi_\alpha^{-1}(\varphi_\alpha(0)) = 0$이다. 곧 $\Phi$은 원점을 고정하는 $\mathbb{D} \rightarrow \mathbb{D}$ holomorphic morphism이다.
 
-$\Phi$은 automorphism이 아니다. Automorphism들의 합성 사이에 제곱사상 $s(w) = w^2$이 끼어 있는데, $s$은 $\mathbb{D}$ 위에서 단사가 아니라 ($\pm w$이 같은 값을 주므로) automorphism이 될 수 없고, 따라서 그 합성 $\Phi$도 단사가 아니어서 automorphism이 아니다. 그러므로 [§영점과 일치정리, ⁋정리 7](/ko/math/complex_analysis/zeros_and_identity_theorem#thm7)의 등호조건에서, 원점을 고정하지만 회전이 아닌 holomorphic 사상은 도함수의 절댓값이 엄격히 $1$ 미만이다. 곧
+$\Phi$은 automorphism이 아니다. Automorphism들의 합성 사이에 제곱사상 $s(w) = w^2$이 끼어 있는데, $s$은 $\mathbb{D}$ 위에서 단사가 아니라 ($\pm w$이 같은 값을 주므로) automorphism이 될 수 없고, 따라서 그 합성 $\Phi$도 단사가 아니어서 automorphism이 아니다. 그러므로 [§영점과 일치정리, ⁋정리 7](/ko/math/complex_analysis/zeros_and_identity_theorem#thm7)의 등호조건에서, 원점을 고정하지만 회전이 아닌 holomorphic morphism은 도함수의 절댓값이 엄격히 $1$ 미만이다. 곧
 
 $$\lvert \Phi'(0)\rvert < 1$$
 
@@ -230,7 +230,7 @@ $$M = \lvert f^\ast{}'(z_0)\rvert = \lvert \Phi'(0)\rvert\lvert h'(z_0)\rvert < 
 
 $$f'(z_0) = e^{-i\vartheta}f^\ast{}'(z_0) = e^{-i\vartheta}\lvert f^\ast{}'(z_0)\rvert e^{i\vartheta} = \lvert f^\ast{}'(z_0)\rvert = M > 0$$
 
-이라 $f'(z_0) > 0$이다. 따라서 normalization 조건을 만족하는 holomorphic 전단사사상 $f : \Omega \rightarrow \mathbb{D}$이 존재하고, 이미 보인 유일성과 합쳐 정리 6이 증명된다. $\Omega$이 $\mathbb{D}$와 등각동형이라는 결론은 holomorphic 전단사사상 $f$이 등각사상이라는 [§등각사상과 Möbius 변환, ⁋명제 3](/ko/math/complex_analysis/conformal_maps#prop3)에서 곧장 따라 나온다.
+이라 $f'(z_0) > 0$이다. 따라서 normalization 조건을 만족하는 holomorphic bijection $f : \Omega \rightarrow \mathbb{D}$이 존재하고, 이미 보인 유일성과 합쳐 정리 6이 증명된다. $\Omega$이 $\mathbb{D}$와 등각동형이라는 결론은 holomorphic bijection $f$이 등각사상이라는 [§등각사상과 Möbius 변환, ⁋명제 3](/ko/math/complex_analysis/conformal_maps#prop3)에서 곧장 따라 나온다.
 
 ::: 참고 9 (경계 거동)
 Riemann 사상정리는 conformal isomorphism의 존재만을 단언할 뿐, 그 사상이 영역의 boundary까지 연속적으로 확장되는지는 말하지 않는다. Boundary가 충분히 좋은 경우, 가령 $\partial\Omega$이 Jordan 곡선이면 사상이 closure $\overline{\Omega}$에서 $\overline{\mathbb{D}}$로의 homeomorphism으로 확장된다는 것이 Carathéodory의 정리이지만, 일반적인 단순연결 영역에서는 boundary가 프랙탈처럼 거칠어 그러한 extension이 성립하지 않을 수 있다. 본문의 변분적 증명은 interior에서의 등각동형만을 다루므로 boundary 거동과는 무관하게 작동한다.

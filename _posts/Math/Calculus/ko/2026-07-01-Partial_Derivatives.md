@@ -10,6 +10,8 @@ sidebar:
 
 date: 2026-07-01
 weight: 14
+published: false
+revising: true
 drift_needed: true
 ---
 
@@ -55,7 +57,7 @@ $$\lim_{t\rightarrow 0}f(\mathbf{a}+t\mathbf{v})=L$$
 
 인 것만 확인하면 <em-ko>안된다</em-ko>. 가령 함수 $f:\mathbb{R}^2\rightarrow \mathbb{R}$
 
-$$f(\mathbf{x})=\begin{cases}1&\text{if $y=x^2$,}\\ 0&\text{otherwise}\end{cases}$$
+$$f(x,y)=\begin{cases}1&\text{if $y=x^2$,}\\ 0&\text{otherwise}\end{cases}$$
 
 으로 정의한다면 이 함수는 모든 직선 방향에서 그 극한이 $0$이지만 곡선 $y=x^2$을 따라가는 경로에서는 극한값이 $1$이다. 이 주의는 특히 이번 글의 나머지에서 편미분을 정의한 후 다변수함수의 미분을 논할 때 특히 신경써야 한다. 
 
@@ -66,13 +68,13 @@ $$f(\mathbf{x})=\begin{cases}1&\text{if $y=x^2$,}\\ 0&\text{otherwise}\end{cases
 가장 단순한 변화율은 한 좌표축 방향으로만 움직일 때의 것이다.
 
 ::: 정의 2
-다변수함수 $f(x_1, \ldots, x_n)$의 점 $\mathbf{a}$에서 변수 $x_i$에 대한 *편미분<sub>partial derivative</sub>*은 나머지 변수를 고정한 채 $x_i$로만 미분한 것이다. 즉, 
+다변수함수 $f(x_1, \ldots, x_m)$의 점 $\mathbf{a}$에서 변수 $x_i$에 대한 *편미분<sub>partial derivative</sub>*은 나머지 변수를 고정한 채 $x_i$로만 미분한 것이다. 즉, 
 
 $$\frac{\partial f}{\partial x_i}(  \mathbf{a}) = \lim_{h\rightarrow 0}\frac{f(\mathbf{a} + h \mathbf{e}_i) - f(\mathbf{a})}{h}$$
 
 으로 주어지며, 여기서 $\mathbf{e}_i$는 $i$번째 성분만 $1$, 나머지 성분은 $0$인 표준기저벡터이다. 모든 편미분을 모은 벡터 
 
-$$\nabla f(\mathbf{a}) = \left(\frac{\partial f}{\partial x_1}(\mathbf{a}), \ldots, \frac{\partial f}{\partial x_n}(\mathbf{a})\right)$$
+$$\nabla f(\mathbf{a}) = \left(\frac{\partial f}{\partial x_1}(\mathbf{a}), \ldots, \frac{\partial f}{\partial x_m}(\mathbf{a})\right)$$
 
 를 $f$의 *기울기<sub>gradient</sub>*라 한다.
 :::
@@ -132,13 +134,17 @@ $f$가 점 $\mathbf{a}$에서 미분가능하면, [정의 3](#def3)의 벡터 $\
 
 $$\lim_{t \rightarrow 0}\frac{f(\mathbf{a} + t \mathbf{e}_i) - f(\mathbf{a}) - \mathbf{n}\cdot (t \mathbf{e}_i)}{\lvert t\rvert} = 0$$
 
-이다. $\mathbf{n}\cdot (t \mathbf{e}_i) = t n_i$이다. $t>0$일 때 $\lvert t\rvert = t$이므로 위 극한의 분자를 $t$로 정리하면 $\frac{f(\mathbf{a} + t \mathbf{e}_i) - f(\mathbf{a})}{t} - n_i$이고, 이는 편미분의 정의에 의해 $\frac{\partial f}{\partial x_i}(\mathbf{a}) - n_i$로 수렴한다. $t<0$일 때도 같은 논리로 같은 결론이므로, 위 극한이 $0$이 되려면 $n_i = \frac{\partial f}{\partial x_i}(\mathbf{a})$이어야 한다. 모든 $i$에 대해 이를 모으면 $\mathbf{n} = \nabla f(\mathbf{a})$이다.
+이다. $\mathbf{n}\cdot (t \mathbf{e}_i) = t n_i$이므로, $t>0$일 때 $\lvert t\rvert = t$라 위 극한의 분수는 $\frac{f(\mathbf{a} + t \mathbf{e}_i) - f(\mathbf{a})}{t} - n_i$와 같고, $t<0$일 때는 $\lvert t\rvert = -t$라 이 식의 부호만 뒤집힌 것이다. 따라서 어느 쪽이든 위 극한이 $0$이라는 것은
+
+$$\lim_{t\rightarrow 0}\frac{f(\mathbf{a} + t \mathbf{e}_i) - f(\mathbf{a})}{t} = n_i$$
+
+를 뜻하며, 좌변의 극한이 존재한다는 것 자체가 편미분의 정의이므로 $\frac{\partial f}{\partial x_i}(\mathbf{a})$가 존재하고 그 값이 $n_i$이다. 모든 $i$에 대해 이를 모으면 $\nabla f(\mathbf{a})$가 잘 정의되고 $\mathbf{n} = \nabla f(\mathbf{a})$이다.
 :::
 
-여기에서 [정의 3](#def3)과 [명제 4](#prop4)를 명확하게 분리하여 서술했다는 것을 주목하자. [명제 4](#prop4)는, <em-ko>만일</em-ko> 함수 $f$가 미분가능하다면, 그 조건을 만족하는 $\mathbf{n}$이 $\nabla f$라는 것이며, 이를 거꾸로 해석하여 모든 편미분이 존재하여 $\nabla f$가 잘 정의되면 함수 $f$가 미분가능하다고 이해하면 <em-ko>안된다.</em-ko> 대신 다음의 조건은 각각의 편미분이 연속이라면 연속함수 $f$가 미분가능하다는 것을 보여준다. 
+여기에서 [정의 3](#def3)과 [명제 4](#prop4)를 명확하게 분리하여 서술했다는 것을 주목하자. [명제 4](#prop4)는, <em-ko>만일</em-ko> 함수 $f$가 미분가능하다면, 그 조건을 만족하는 $\mathbf{n}$이 $\nabla f$라는 것이며, 이를 거꾸로 해석하여 모든 편미분이 존재하여 $\nabla f$가 잘 정의되면 함수 $f$가 미분가능하다고 이해하면 <em-ko>안된다.</em-ko> 대신 다음의 조건은 각각의 편미분이 연속이라면 $f$가 미분가능하다는 것을 보여준다. 
 
 ::: 명제 5
-연속함수 $f$의 모든 편미분이 $\mathbf{a}$ 근방에서 존재하고, 이들이 모두 $\mathbf{a}$에서 연속이라면 $f$는 $\mathbf{a}$에서 미분가능하다.
+$f$의 모든 편미분이 $\mathbf{a}$ 근방에서 존재하고, 이들이 모두 $\mathbf{a}$에서 연속이라면 $f$는 $\mathbf{a}$에서 미분가능하다.
 :::
 ::: 증명
 표기를 간단히 하기 위해 두 변수 $f(x,y)$와 점 $(a,b)$에서 보이자. 일반 차원도 같은 논법을 좌표마다 반복하면 된다. 벡터 $(h,k)$를 한 좌표씩 움직여
@@ -156,16 +162,18 @@ $$f(a+h,b+k) - f(a,b) - \nabla f(a,b)\cdot(h,k) = \bigl(f_x(a+\theta_1 h, b+k) -
 를 얻는다. 그럼 $f_x, f_y$가 $(a,b)$에서 연속이므로 $(h,k)\rightarrow(0,0)$일 때 두 괄호가 모두 $0$으로 가고, $\lvert h\rvert, \lvert k\rvert \le \lVert(h,k)\rVert$이므로 [정의 3](#def3)의 극한이 성립한다. 즉, $f$는 $(a,b)$에서 미분가능하고 그 기울기는 $\nabla f(a,b)$이다.
 :::
 
+이렇게 편미분의 존재와 연속성을 함께 요구하는 상황은 앞으로도 반복해서 나타나므로, [§미분과 도함수, ⁋정의 5](/ko/math/calculus/derivatives#def5)의 이름을 다변수로 옮겨 쓰기로 한다. 즉 어떤 영역에서 $k$계 이하의 모든 편미분이 존재하고 연속이면 $f$가 그 영역에서 *$C^k$급*이라 하며, 이 말로 다시 적으면 [명제 5](#prop5)는 $C^1$급 함수가 미분가능하다는 것이다.
+
 ## 연쇄법칙과 혼합편미분
 
 이제 우리는 다변수함수의 연쇄법칙을 살펴본다. 만일 다변수함수가 입력으로 받는 변수 중 하나만이 다른 함수와의 합성으로 나타난다면 이는 해당 변수에 대한 편미분을 사용하여 일변수미분과 동일하게 연쇄법칙을 적용할 수 있지만, 문제는 다변수함수가 입력으로 받는 변수 여럿이 다른 함수를 거쳐 정의되었을 때 나타난다. 
 
-이를 위해서는 하나의 매개변수 $t$로 매개화된 곡선 $\mathbf{x}(t) = (x_1(t), \ldots, x_n(t))$이 필요한데, 이는 [§곡선과 벡터함수, ⁋명제 2](/ko/math/calculus/vector_functions#prop2)에서 정의한 대로 각 성분 $x_i(t)$가 일변수 함수로서 미분가능할 때 미분가능하며, 그 접벡터 $\mathbf{x}'(t) = (x_1'(t), \ldots, x_n'(t))$가 잘 정의된다. 이 하에서 다음이 성립한다.
+이를 위해서는 하나의 매개변수 $t$로 매개화된 곡선 $\mathbf{x}(t) = (x_1(t), \ldots, x_m(t))$이 필요한데, 이는 [§곡선과 벡터함수, ⁋명제 2](/ko/math/calculus/vector_functions#prop2)에서 정의한 대로 각 성분 $x_i(t)$가 일변수 함수로서 미분가능할 때 미분가능하며, 그 접벡터 $\mathbf{x}'(t) = (x_1'(t), \ldots, x_m'(t))$가 잘 정의된다. 이 하에서 다음이 성립한다.
 
 ::: 정리 6 (다변수 연쇄법칙)
-$f$가 미분가능하고 $\mathbf{x}(t) = (x_1(t), \ldots, x_n(t))$가 미분가능한 곡선이면, 합성 $t \mapsto f(\mathbf{x}(t))$도 미분가능하고
+$f$가 미분가능하고 $\mathbf{x}(t) = (x_1(t), \ldots, x_m(t))$가 미분가능한 곡선이면, 합성 $t \mapsto f(\mathbf{x}(t))$도 미분가능하고
 
-$$\frac{d}{\dd{t}} f(\mathbf{x}(t)) = \nabla f(\mathbf{x}(t)) \cdot \mathbf{x}'(t) = \sum_{i=1}^n \frac{\partial f}{\partial x_i} \frac{\dd{x_i}}{\dd{t}}$$
+$$\frac{d}{\dd{t}} f(\mathbf{x}(t)) = \nabla f(\mathbf{x}(t)) \cdot \mathbf{x}'(t) = \sum_{i=1}^m \frac{\partial f}{\partial x_i} \frac{\dd{x_i}}{\dd{t}}$$
 
 이다.
 :::
@@ -239,7 +247,7 @@ $$H = \begin{pmatrix} f_{xx} & f_{xy} \\ f_{yx} & f_{yy}\end{pmatrix}$$
 으로 주어진다. Critical point의 증감은 이 이차형식의 부호가 정하며, 이를 우리 상황에 맞추어 판별식의 언어로 풀어 설명하면 다음과 같다. 
 
 ::: 명제 9 (이계도함수 판정)
-$f$가 $C^2$이고 $\mathbf{a}$가 critical point($\nabla f(\mathbf{a}) = 0$)이라 하고, 위 헤세 행렬의 판별식  $D = f_{xx}f_{yy} - f_{xy}^2 = \det H$을 생각하자.
+$f$가 $C^2$급이고 $\mathbf{a}$가 critical point($\nabla f(\mathbf{a}) = 0$)이라 하고, 위 헤세 행렬의 판별식  $D = f_{xx}f_{yy} - f_{xy}^2 = \det H$을 생각하자.
 
 1. $D > 0$이고 $f_{xx} > 0$이면 $\mathbf{a}$는 극소이다. 
 2. $D > 0$이고 $f_{xx} < 0$이면 이 점은 극대이다. 
@@ -256,6 +264,12 @@ f_{xx}h_1^2 + 2f_{xy}h_1 h_2 + f_{yy}h_2^2
 \end{aligned}$$
 
 이며, 따라서 첫째 항의 부호는 $f_{xx}$를 따르고, 둘째 항의 부호는 $D/f_{xx}$를 따른다. 특히 $D > 0$이면 $D/f_{xx}$가 $f_{xx}$와 같은 부호여서 두 항의 부호가 일치한다. 추가적으로 $f_{xx} > 0$이면, 이차항들이 $0$이 아닌 한 항상 양수라 $\mathbf{a}$ 근방에서 함숫값이 더 커져 이 점이 극소점이 되며, 반대로 $f_{xx} < 0$이면 항상 음수라 극대이다. 반면 $D < 0$이면 두 항의 부호가 반대이므로 $h_1, h_2$의 비율에 따라 이차항이 양과 음 양쪽 값을 모두 가지며, $\mathbf{a}$는 안장점이다.
+
+남은 것은 $f_{xx} = 0$인 경우인데, 이때는 $D = -f_{xy}^2 \leq 0$이므로 위의 세 경우 중 셋째만 따지면 된다. $D<0$이면 $f_{xy} \neq 0$이고 이차항은
+
+$$2f_{xy}h_1 h_2 + f_{yy}h_2^2 = h_2\bigl(2f_{xy}h_1 + f_{yy}h_2\bigr)$$
+
+이므로, $h_2$를 $0$이 아닌 값으로 고정한 채 $\lvert h_1\rvert$을 충분히 크게 잡으면 괄호 안의 부호가 $f_{xy}h_1$을 따라가고, 따라서 $h_1$의 부호를 바꾸는 것만으로 이차항이 양과 음 양쪽 값을 모두 가진다. 이차형식은 $(h_1,h_2)$를 같은 비율로 줄여도 부호가 변하지 않으므로 이는 $\mathbf{a}$에 얼마든지 가까운 곳에서 일어나며, 이 경우에도 $\mathbf{a}$는 안장점이다.
 :::
 
 판별식이 음일 때 나타나는 안장점은 방향에 따라 함수가 오르내리는 가장 단순한 critical point라 할 수 있다.
@@ -273,14 +287,14 @@ $f(x,y) = x^2 - y^2$은 $\nabla f = (2x, -2y) = 0$에서 critical point $(0,0)$�
 미분법의 좋은 응용 중 하나는 주어진 구간 $[a,b]$ 안에서 함수의 극값을 찾는 것이었다. 우리는 이를 다변수함수에서 다룬다. 차이점은 이제 변수가 단순한 구간이 아니라는 것이며, 예를 들어 변수가 어떤 제약 $g(\mathbf{x}) = c$를 만족해야 하는 상황 또한 생각하게 된다. 이를테면 주어진 곡면 위에서 원점에 가장 가까운 점을 찾거나 고정된 자원 안에서 비용을 최소화하는 문제가 그렇다. 이러한 *제약극값<sub>constrained extremum</sub>*을 찾는 표준 도구가 라그랑주 승수법이다.
 
 ::: 명제 11 (라그랑주 승수)
-$f, g:\mathbb{R}^n\rightarrow\mathbb{R}$가 $C^1$이고, 점 $\mathbf{a}$가 제약 $g(\mathbf{x}) = c$를 만족하는 점들 위에서 $f$의 극값이며 $\nabla g(\mathbf{a}) \neq 0$이라 하자. 그러면 어떤 실수 $\lambda$에 대해
+$f, g:\mathbb{R}^m\rightarrow\mathbb{R}$가 $C^1$급이고, 점 $\mathbf{a}$가 제약 $g(\mathbf{x}) = c$를 만족하는 점들 위에서 $f$의 극값이며 $\nabla g(\mathbf{a}) \neq 0$이라 하자. 그러면 어떤 실수 $\lambda$에 대해
 
 $$\nabla f(\mathbf{a}) = \lambda \nabla g(\mathbf{a})$$
 
 가 성립한다.
 :::
 ::: 증명
-제약면 $\{g = c\}$ 위에서 $\mathbf{a}$를 지나는 임의의 smooth 곡선 $\mathbf{x}(t)$ ($\mathbf{x}(0) = \mathbf{a}$)를 잡자. $g(\mathbf{x}(t)) = c$가 상수이므로 [정리 6](#thm6)으로 미분하면 $\nabla g(\mathbf{a}) \cdot \mathbf{x}'(0) = 0$이고, 한편 $\mathbf{a}$가 제약 아래에서 $f$의 극값을 주므로 $t \mapsto f(\mathbf{x}(t))$도 $t = 0$에서 극값을 가지고, 따라서 $\nabla f(\mathbf{a}) \cdot \mathbf{x}'(0) = 0$이다. 즉, 두 벡터 $\nabla f(\mathbf{a})$와 $\nabla g(\mathbf{a})$ 모두가 제약면의 tangent space에 직교한다. 그런데 전체 공간이 $n$차원이고, 제약면의 tangent space가 $n-1$차원이므로 이러한 방향은 하나 뿐이고, 따라서 $\nabla f(\mathbf{a}) = \lambda \nabla g(\mathbf{a})$인 실수 $\lambda$가 존재한다.
+아래의 논증은 가설 $\nabla g(\mathbf{a}) \neq 0$ 하에서 제약면 $\{g = c\}$가 $\mathbf{a}$ 근방에서 $(m-1)$차원의 smooth한 곡면이 되고, $\mathbf{a}$에서의 접방향이 모두 제약면 위를 지나는 곡선의 속도벡터로 실현된다는 사실을 쓴다. 제약면 위에서 $\mathbf{a}$를 지나는 임의의 smooth curve $\mathbf{x}(t)$ ($\mathbf{x}(0) = \mathbf{a}$)를 잡자. $g(\mathbf{x}(t)) = c$가 상수이므로 [정리 6](#thm6)으로 미분하면 $\nabla g(\mathbf{a}) \cdot \mathbf{x}'(0) = 0$이고, 한편 $\mathbf{a}$가 제약 아래에서 $f$의 극값을 주므로 $t \mapsto f(\mathbf{x}(t))$도 $t = 0$에서 극값을 가지고, 따라서 $\nabla f(\mathbf{a}) \cdot \mathbf{x}'(0) = 0$이다. 즉, 두 벡터 $\nabla f(\mathbf{a})$와 $\nabla g(\mathbf{a})$ 모두가 제약면의 tangent space에 직교한다. 그런데 전체 공간이 $m$차원이고, 제약면의 tangent space가 $m-1$차원이므로 이러한 방향은 하나 뿐이고, 따라서 $\nabla f(\mathbf{a}) = \lambda \nabla g(\mathbf{a})$인 실수 $\lambda$가 존재한다.
 :::
 
 실제 계산에서는 새로 도입된 실수 $\lambda$를 미지수로 추가하여 $\nabla f = \lambda \nabla g$와 제약식 $g = c$를 함께 연립하여 푸는데, 이 $\lambda$를 *라그랑주 승수<sub>Lagrange multiplier</sub>*라 부른다.
@@ -293,7 +307,7 @@ y &= 2\lambda x, \\
 x &= 2\lambda y
 \end{aligned}$$
 
-이다. 두 식을 곱하면 $xy = 4\lambda^2 xy$이므로 $xy = 0$이거나 $\lambda^2 = 1/4$이다. $xy = 0$이면 제약식에서 $(\pm 1, 0)$ 또는 $(0, \pm 1)$이 나오고 이때 $f = 0$이다. $\lambda = \pm 1/2$이면 $y = \pm x$이고 제약식 $2x^2 = 1$에서 $x = \pm 1/\sqrt2$이므로 $f = xy = \pm 1/2$이다. 따라서 단위원 위에서 $f = xy$의 최댓값은 $1/2$, 최솟값은 $-1/2$이다.
+이다. 두 식을 곱하면 $xy = 4\lambda^2 xy$이므로 $xy = 0$이거나 $\lambda^2 = 1/4$이다. $xy = 0$이면 두 식에서 $x = y = 0$이 강제되어 제약식을 만족할 수 없으므로 이 경우는 배제된다. $\lambda = \pm 1/2$이면 $y = \pm x$이고 제약식 $2x^2 = 1$에서 $x = \pm 1/\sqrt2$이므로 $f = xy = \pm 1/2$이다. 따라서 단위원 위에서 $f = xy$의 최댓값은 $1/2$, 최솟값은 $-1/2$이다.
 :::
 
 ---

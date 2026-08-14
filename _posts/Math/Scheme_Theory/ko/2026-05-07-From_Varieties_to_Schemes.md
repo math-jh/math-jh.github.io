@@ -8,6 +8,8 @@ sidebar:
     nav: "scheme_theory-ko"
 date: 2026-05-07
 weight: 1
+published: false
+revising: true
 drift_needed: true
 ---
 
@@ -17,7 +19,7 @@ drift_needed: true
 
 Scheme은 이러한 variety들이 놓치는 것들을 극복하기 위해 체계화된 공간이다. 이번 글은 scheme theory를 전개하기 전에, 이것이 어떤 차원에서 variety를 확장하고, 어떠한 새로운 기하학적 직관을 제공하는지를 살펴보아 큰 흐름을 미리 잡아두는 것에 있다. 
 
-이를 위해 간단히 algebraic variety에서의 세팅을 기억하자. 출발점이 되는 대상은 [\[대수다양체\] §아핀다양체, ⁋정의 2](/ko/math/algebraic_varieties/affine_varieties#def2)의 *affine variety*와 [\[대수다양체\] §사영다양체, ⁋정의 3](/ko/math/algebraic_varieties/projective_varieties#def3)의 *projective variety*로, 이들은 각각 algebraically closed field $\mathbb{K}$ 위의 affine space $\mathbb{A}_\mathbb{K}^n$과 projective space $\mathbb{P}_\mathbb{K}^n$의 irreducible algebraic subset으로 정의되었다. 더욱 중요한 것은 이들이 그 위에 정의된 regular function들의 sheaf $\mathcal{O}_V$를 갖는 locally ringed space $(V,\mathcal{O}_V)$로 이해될 수 있다는 것이었다. 
+이를 위해 간단히 algebraic variety에서의 세팅을 기억하자. 출발점이 되는 대상은 [\[대수다양체\] §아핀다양체, ⁋정의 2](/ko/math/algebraic_varieties/affine_varieties#def2)의 *affine variety*와 [\[대수다양체\] §사영다양체, ⁋정의 3](/ko/math/algebraic_varieties/projective_varieties#def3)의 *projective variety*로, 이들은 각각 algebraically closed field $\mathbb{K}$ 위의 affine space $\mathbb{A}_\mathbb{K}^n$과 projective space $\mathbb{P}_\mathbb{K}^n$의 irreducible algebraic subset으로 정의되었다. 더욱 중요한 것은 이들이 그 위에 정의된 regular function들의 sheaf $\mathcal{O}_V$를 갖는 공간 $(V,\mathcal{O}_V)$로 이해될 수 있다는 것이었다. 각 점 $p$에서 regular function들의 germ이 이루는 $\mathcal{O}_{V,p}$가 local ring이므로, 이 구조는 아래에서 scheme의 바탕이 되는 locally ringed space의 형태를 이미 갖추고 있다. 
 
 이 세계에서는 모든 점이 closed point였다. 즉, $\mathbb{A}_\mathbb{K}^2$ 위의 점은 단순히 좌표 $(a,b)\in \mathbb{K}^2$에 해당하는 maximal ideal $(\x-a, \y-b)\subseteq \mathbb{K}[\x,\y]$로 완전히 결정되었다. 이는 기하적 직관으로는 타당하다고도 할 수 있지만, 이론을 펼치기에는 썩 좋은 환경은 아닌데 예를 들어 $\mathbb{A}_\mathbb{K}^2$ 위에서 직선 $Z(\y)$와 포물선 $Z(\y-\x^2)$을 생각하면, 이들이 만나는 점이 $(0,0)$으로 주어진다는 것 자체는 classical algebraic variety에서 잘 보이는 것이지만, 이 만나는 degree가 $1$차가 아니라는 것이 전혀 보이지 않는다. 
 
@@ -53,12 +55,12 @@ Scheme theory는 이 모든 문제를 해결하기 위해 탄생했다. Scheme�
 
 구체적으로, 위에서 우리는 classical variety가 점을 maximal ideal로만 보고 radical ideal을 취해 nilpotent를 모두 버렸다는 한계를 살펴보고, 이들을 살려 fat point로 보면 손실되는 정보가 없어진다는 것을 보았다. Scheme은 이 수정을 전체에 걸쳐 체계화한 것으로, 여기에서 우리는 점을 maximal ideal이 아니라 <em-ko>모든 prime ideal</em-ko>로 삼고, 각 점 위에 local ring을 올려 함수를 그 section으로 정의한다. 
 
-그 결과로 나타나는 것 중 가장 비직관적인 것 중 하나는 generic point의 존재이다. 예를 들어 $\Spec \mathbb{K}[\x,\y]$에서는 closed point $(\x-a,\y-b)$ 외에도 $(\x)$, $(\y)$, 그리고 $(0)$와 같은 non-closed point들이 존재한다. 이 가운데 어떤 점 $\mathfrak{p}\in\Spec A$의 closure $\overline{\{\mathfrak{p}\}}=Z(\mathfrak{p})$이 irreducible closed subset이 될 때, $\mathfrak{p}$를 그 irreducible closed subset의 *generic point*라 부르며, $A$가 integral domain이면 $(0)$이 $\Spec A$ 전체의 generic point가 된다. 
+그 결과로 나타나는 것 중 가장 비직관적인 것 중 하나는 generic point의 존재이다. 예를 들어 $\Spec \mathbb{K}[\x,\y]$에서는 closed point $(\x-a,\y-b)$ 외에도 $(\x)$, $(\y)$, 그리고 $(0)$와 같은 non-closed point들이 존재한다. 일반적으로 점 $\mathfrak{p}\in\Spec A$의 closure는 $\overline{\{\mathfrak{p}\}}=Z(\mathfrak{p})$로 주어지며, 거꾸로 $\Spec A$의 irreducible closed subset $Y$마다 $\overline{\{\mathfrak{p}\}}=Y$인 점 $\mathfrak{p}$가 유일하게 존재한다. 이 $\mathfrak{p}$를 $Y$의 *generic point*라 부르며, $A$가 integral domain이면 $(0)$이 $\Spec A$ 전체의 generic point가 된다. 
 
 ::: 예시 3
 $\Spec \mathbb{Z}[\x]$를 생각하자. 이 scheme은 $\mathbb{Z}$ 위에서 정의되는 직선 $\mathbb{A}_{\mathbb{Z}}^1$에 해당한다. 이 예시에서 우리는 이 공간의 몇몇 점들을 살펴본다. 
 
-먼저 $(0)$는 전체 공간의 generic point이다. $(\x)$는 $x$-축 위의 generic point로, 모든 fiber 위에서 $x=0$인 직선의 보편적인 성질을 담고 있다. $(p)$는 소수 $p$에 해당하는 vertical fiber의 generic point이며, $(p,\x)$는 그 fiber 위의 원점이라는 closed point이다. 이처럼 non-closed point들은 geometric object의 보편적이고 relative한 성질을 포착하는 데 필수적이다.
+먼저 $(0)$는 전체 공간의 generic point이다. $(\x)$는 zero section $Z(\x)$의 generic point로, 모든 fiber 위에서 $\x=0$인 직선의 보편적인 성질을 담고 있다. $(p)$는 소수 $p$에 해당하는 vertical fiber의 generic point이며, $(p,\x)$는 그 fiber 위의 원점이라는 closed point이다. 이처럼 non-closed point들은 geometric object의 보편적이고 relative한 성질을 포착하는 데 필수적이다.
 :::
 
 즉, 직관적으로 generic point는 classical에서 prime ideal이 정의하던 irreducible subvariety를 **하나의 점으로 대표**시킨 것으로, 그 점의 닫힘이 바로 원래의 subvariety를 복원한다.
@@ -77,10 +79,10 @@ $$h_X:(\Sch_{/S})^{\op}\rightarrow\Set,\qquad h_X(T)=\Hom_S(T,X)$$
 
 로 파악하면, 이 정리는 $h_X$가 scheme $X$를 손실 없이 완전히 결정한다는 것을 보여주며, 이러한 관점에서 scheme을 $S$-scheme들의 category $\Sch_{/S}$ 위에서 정의된 contravariant functor로 이해할 수도 있다. 
 
-Classical variety $V$ 위의 $\mathbb{K}$-rational point는 단순히 $\mathbb{K}$-값을 갖는 좌표 $(a_1,\dotsc,a_n)$의 집합으로 이해되었다. 이는 scheme의 언어로는 morphism $\Spec \mathbb{K}\rightarrow V$에 해당한다. Functor of points는 이 관점을 확장하여, $V$의 $T$-valued point를 임의의 scheme $T$로부터의 morphism으로 정의한다.
+Classical variety $V$ 위의 $\mathbb{K}$-point는 단순히 $\mathbb{K}$-값을 갖는 좌표 $(a_1,\dotsc,a_n)$의 집합으로 이해되었다. 이는 scheme의 언어로는 morphism $\Spec \mathbb{K}\rightarrow V$에 해당한다. Functor of points는 이 관점을 확장하여, $V$의 $T$-valued point를 임의의 scheme $T$로부터의 morphism으로 정의한다.
 
 ::: 예시 4
-Classical variety $V\subseteq\mathbb{A}_\mathbb{K}^n$의 $\mathbb{K}$-rational points의 집합은 $V(\mathbb{K})=\Hom_\mathbb{K}(\Spec \mathbb{K},V)$이다. 이는 functor of points $h_V$를 $T=\Spec \mathbb{K}$에 대하여 평가한 값 $h_V(\Spec \mathbb{K})$에 해당한다. 그러나 $T=\Spec \mathbb{K}[\epsilon]/(\epsilon^2)$를 대입하면, $h_V(T)$는 $V$의 $\mathbb{K}$-point에서의 tangent vector들을 parameterize하게 된다.
+Classical variety $V\subseteq\mathbb{A}_\mathbb{K}^n$의 $\mathbb{K}$-point들의 집합은 $V(\mathbb{K})=\Hom_\mathbb{K}(\Spec \mathbb{K},V)$이다. 이는 functor of points $h_V$를 $T=\Spec \mathbb{K}$에 대하여 평가한 값 $h_V(\Spec \mathbb{K})$에 해당한다. 그러나 $T=\Spec \mathbb{K}[\epsilon]/(\epsilon^2)$를 대입하면, $h_V(T)$는 $V$의 $\mathbb{K}$-point에서의 tangent vector들을 parameterize하게 된다.
 :::
 
 특히 projective line $\mathbb{P}_\mathbb{K}^1$의 경우, functor of points를 통해 infinitesimal structure가 어떻게 드러나는지 명확히 볼 수 있다. $\mathbb{P}_\mathbb{K}^1$은 그 자체로 homogeneous coordinate를 갖는 scheme이므로, 임의의 local $\mathbb{K}$-algebra $R$에 대하여 $\mathbb{P}_\mathbb{K}^1(R)$는 $R$ 위의 projective line 위의 점들로 정의된다.

@@ -44,15 +44,15 @@ $$Z(f_1, \ldots, f_k) = \{x=(x_1, \ldots, x_n) \in \mathbb{A}^n \mid f_1(x) = \c
 
 $$Z(S)=Z((S))$$
 
-을 만족한다. 따라서 우리는 ideal $\mathfrak{a}$들이 정의하는 affine algebraic set들만 신경써도 된다.
+을 만족한다. 거꾸로 field $\mathbb{K}$는 Noetherian이므로 [\[가환대수학\] §기본 개념들, ⁋정리 12](/ko/math/commutative_algebra/basic_notions#thm12)를 반복하여 적용하면 $\mathbb{K}[\x_1,\ldots, \x_n]$ 또한 Noetherian이고, 따라서 임의의 ideal $\mathfrak{a}$는 유한 개의 다항식 $f_1,\ldots, f_k$로 생성되어 $Z(\mathfrak{a})=Z(f_1,\ldots, f_k)$가 성립한다. 즉 [정의 2](#def2)의 뜻에서의 affine algebraic set들과 ideal의 zero set들은 정확히 같은 모임을 이루며, 따라서 우리는 ideal $\mathfrak{a}$들이 정의하는 affine algebraic set들만 신경써도 된다.
 
-일반적으로 공간 $X$가 *irreducible*이라는 것은 $X$가 proper closed subset 두 개의 합집합으로 나타나지 않는다는 것이다. ([\[위상수학\] §차원, ⁋정의 6](/ko/math/topology/dimension#def6)) 따라서 우리의 정의는 irreducible affine algebraic set을 affine variety라고 부른다는 뜻이다. 이는 기하학적으로 하나의 연결된 대상을 다루기 위함이다.
+일반적으로 공간 $X$가 *irreducible*이라는 것은 $X$가 proper closed subset 두 개의 합집합으로 나타나지 않는다는 것이다. ([\[위상수학\] §차원, ⁋정의 6](/ko/math/topology/dimension#def6)) 따라서 우리의 정의는 irreducible affine algebraic set을 affine variety라고 부른다는 뜻이다. 이는 기하학적으로 여러 조각으로 나뉘지 않는 하나의 대상만을 다루기 위함이다.
 
 ::: 예시 3
-우리가 아는 대다수의 기하학적인 대상들은 다항식으로 나타나므로, 이들이 모두 affine variety의 예시가 된다.
+우리가 아는 대다수의 기하학적인 대상들은 다항식으로 나타나므로, 이들이 모두 affine algebraic set의 예시가 된다.
 
 1. $\mathbb{A}^2$ 안에서 정의된 affine variety $Z(\x^2+\y^2-1)$을 생각하자. 정의에 의해, 이 집합은 식 $\x^2+\y^2-1=0$을 만족하는 $\mathbb{A}^2$의 점들의 모임이므로, 단위원을 나타낸다.
-2. 일반적으로, 임의의 affine space $\mathbb{A}^n$와 임의의 다항식 $f\in \mathbb{K}[\x_1,\ldots, \x_n]$에 대하여, $Z(f)$는 *hypersurface<sub>초곡면</sub>*를 정의한다.
+2. 일반적으로, 임의의 affine space $\mathbb{A}^n$와 상수가 아닌 임의의 다항식 $f\in \mathbb{K}[\x_1,\ldots, \x_n]$에 대하여, affine algebraic set $Z(f)$를 *hypersurface<sub>초곡면</sub>*라 부른다. 이것이 언제나 affine variety인 것은 아니어서, 가령 $Z(\x\y)=Z(\x)\cup Z(\y)$는 두 직선의 합집합이다. 다만 $\mathbb{K}$가 algebraically closed이고 $f$가 irreducible이라면 뒤에서 살펴볼 [정리 10](#thm10)에 의하여 $Z(f)$는 affine variety가 된다.
 3. 또 다른 중요한 예시로, $\mathbb{A}^3$ 위에 정의된 *twisted cubic*이 있다. 이는 $\mathbb{A}^3$ 위에 정의된 두 다항식 $\y-\x^2$, $\z-\x^3$으로 정의되는 곡선으로, 매개화 $(t,t^2,t^3)$을 통해 $\mathbb{A}^1$과 일대일로 대응된다.
 4. Affine space $\mathbb{A}^n$ 자기자신과 공집합은 affine variety이다. 이는 $Z(0)=\mathbb{A}^n$, $Z(1)=\emptyset$으로부터 자명하다. 이는 [명제 4](#prop4)에서 Zariski topology를 정의할 때 중요하게 사용된다.
 :::
@@ -126,10 +126,10 @@ $$\mathbb{A}^n \setminus Z(\mathfrak{a}) = \bigcup_{f \in \mathfrak{a}} D(f)$$
 이다. 따라서 $U = \bigcup_{f \in \mathfrak{a}} (D(f) \cap X)$이다.
 :::
 
-일반적으로 affine variety의 열린집합은 affine variety일 필요가 없으며, 실제로도 그렇지 않다. 그러나 affine variety의 principal open subset은 반드시 affine variety이다.
+일반적으로 affine variety의 열린집합은 affine variety일 필요가 없으며, 실제로도 그렇지 않다. 그러나 affine variety의 공집합이 아닌 principal open subset은 반드시 affine variety이다.
 
 ::: 명제 7
-Affine variety $X \subseteq \mathbb{A}^n$과 다항식 $f \in \mathbb{K}[\x_1, \ldots, \x_n]$에 대하여, $D(f) \cap X$는 affine variety이다.
+Affine variety $X \subseteq \mathbb{A}^n$과 $D(f)\cap X\neq\emptyset$을 만족하는 다항식 $f \in \mathbb{K}[\x_1, \ldots, \x_n]$에 대하여, $D(f) \cap X$는 affine variety이다.
 :::
 
 ::: 증명
@@ -150,6 +150,8 @@ $$Z(\mathfrak{b})=\{(x_1,\ldots, x_n, y)\in \mathbb{A}^{n+1}\mid x\in X, 1-f(x)y
 $$(x_1,\ldots, x_n,y)\mapsto (x_1,\ldots, x_n)$$
 
 을 얻는다. 이것이 homeomorphism인 것은 자명하다. 
+
+마지막으로 $Z(\mathfrak{b})$가 irreducible임을 보이자. 가정에 의하여 $D(f)\cap X$는 $X$의 공집합이 아닌 열린 부분집합이고, $D(f)\cap X$의 공집합이 아닌 두 열린집합은 $X$의 공집합이 아닌 열린집합이기도 하므로, $X$가 irreducible이라는 것과 [\[위상수학\] §차원, ⁋명제 7](/ko/math/topology/dimension#prop7)의 둘째 조건으로부터 서로 만난다. 즉 $D(f)\cap X$는 irreducible이고, 위의 homeomorphism에 의하여 $Z(\mathfrak{b})$ 또한 irreducible이다. 
 :::
 
 이쯤에서 짚고 넘어가야 할 사실은, affine variety에 대한 우리의 정의가 엄밀하게는 ambient space $\mathbb{A}^n$에 의존한다는 사실이다. 가령 $\mathbb{A}^1$의 principal open set $D(\x)$는, 위의 명제에 따르면, affine variety이다. 그러나 우리는 이미 $\mathbb{A}^1$의 Zariski topology는 cofinite topology임을 살펴보았고, 따라서 $D(\x)$는 $\mathbb{K}[\x]$ 안에서의 다항식의 zero set들로 정의될 수 없다. 실제로 [명제 7](#prop7)의 증명을 뜯어보면, $D(\x)$가 affine variety라는 사실은 isomorphism

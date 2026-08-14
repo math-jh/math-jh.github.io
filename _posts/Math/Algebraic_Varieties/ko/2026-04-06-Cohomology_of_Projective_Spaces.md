@@ -14,7 +14,7 @@ drift_needed: true
 
 ---
 
-우리는 일찍이 [§선다발과 벡터다발, ⁋예시 12](/ko/math/algebraic_varieties/line_bundles#ex12)에서 line bundle $\mathcal{O}(d)$를 정의하고, [§선다발과 벡터다발, ⁋예시 16](/ko/math/algebraic_varieties/line_bundles#ex16)의 계산을 통해 그 global section $H^0(\mathbb{P}^n, \mathcal{O}(d))$이 degree $d$의 homogeneous polynomial들과 동형임을 확인하였다. 그러나 우리가 이전 글에서 도입한 [§층 코호몰로지, ⁋정의 1](/ko/math/algebraic_varieties/sheaf_cohomology#def1)의 sheaf cohomology는 $H^0$뿐만 아니라 higher cohomology group들 $H^1, H^2, \ldots$까지 포함하는 더 풍부한 불변량이므로, 이제 우리는 $H^0$ 뿐만 아니라 higher cohomology group들을 사용하여 $\mathcal{O}(d)$의 정보를 모두 알아낼 것이다.
+우리는 일찍이 [§선다발과 벡터다발, ⁋예시 12](/ko/math/algebraic_varieties/line_bundles#ex12)에서 line bundle $\mathcal{O}(d)$를 정의하고, [§선다발과 벡터다발, ⁋예시 16](/ko/math/algebraic_varieties/line_bundles#ex16) 직후의 계산을 통해 그 global section $H^0(\mathbb{P}^n, \mathcal{O}(d))$이 degree $d$의 homogeneous polynomial들과 동형임을 확인하였다. 그러나 우리가 이전 글에서 도입한 [§층 코호몰로지, ⁋정의 1](/ko/math/algebraic_varieties/sheaf_cohomology#def1)의 sheaf cohomology는 $H^0$뿐만 아니라 higher cohomology group들 $H^1, H^2, \ldots$까지 포함하는 더 풍부한 불변량이므로, 이제 우리는 $H^0$ 뿐만 아니라 higher cohomology group들을 사용하여 $\mathcal{O}(d)$의 정보를 모두 알아낼 것이다.
 
 ## Bott's Formula
 
@@ -59,7 +59,7 @@ $$\check{C}^0=\mathcal{O}(d)(U_0)\oplus \mathcal{O}(d)(U_1),\qquad \check{C}^1=\
 
 $$\mathcal{O}(d)(U_0) = \x_0^d \cdot \mathbb{K}[\x_1/\x_0], \qquad \mathcal{O}(d)(U_1) = \x_1^d \cdot \mathbb{K}[\x_0/\x_1], \qquad \mathcal{O}(d)(U_0 \cap U_1) = \mathbb{K}[\x_0^{\pm 1}, \x_1^{\pm 1}]_d$$
 
-이다. 우선 $\check{C}^0$에서의 cohomology를 계산하기 위해 $\ker\delta$를 분석하자. $H^0(\mathbb{P}^n, \mathcal{O}(d))=\Gamma(\mathbb{P}^n, \mathcal{O}(d))$이므로 이는 사실 [§선다발과 벡터다발, ⁋예시 16](/ko/math/algebraic_varieties/line_bundles#ex16)의 계산을 재확인하는 것에 불과하지만, 별도의 예시 대신 이 증명에서 Čech cohomology의 계산을 하는 것으로 하자.
+이다. 우선 $\check{C}^0$에서의 cohomology를 계산하기 위해 $\ker\delta$를 분석하자. $H^0(\mathbb{P}^n, \mathcal{O}(d))=\Gamma(\mathbb{P}^n, \mathcal{O}(d))$이므로 이는 사실 [§선다발과 벡터다발, ⁋예시 16](/ko/math/algebraic_varieties/line_bundles#ex16) 직후의 계산을 재확인하는 것에 불과하지만, 별도의 예시 대신 이 증명에서 Čech cohomology의 계산을 하는 것으로 하자.
 
 정의에 의해 cochain $(f_0, f_1) \in \check{C}^0$이 $\ker \delta$에 속한다는 것은 $f_0 = f_1$이 $\mathcal{O}(d)(U_0 \cap U_1)$에서 성립한다는 뜻이다. 우선 $U_0$ 부분을 보면, 임의의 monomial이 $\mathcal{O}(d)(U_0)$에 속하기 위해서는 반드시 적당한 $a\geq 0$에 대하여 $\x_0^{d-a}\x_1^a$ 꼴임을 안다. 비슷하게 어떠한 monomial이 $\mathcal{O}(d)(U_1)$에 속하기 위해서는 적당한 $b\geq 0$에 대하여 $\x_0^b\x_1^{d-b}$의 꼴이어야 한다. 이제 특정 cocycle $(f_0,f_1)$이 $\ker\delta$에 속하기 위해서는 $f_0=f_1$이어야 하고, 따라서 $a+b=d$를 만족하는 monomial들만이 $\ker\delta$에 속할 수 있다. 즉, 다음의 monomial들
 
@@ -200,9 +200,15 @@ $\mathcal{L}$이 ample이므로, 충분히 큰 $m_0$에 대해 $\mathcal{L}^{\ot
 
 $$\check{H}^i(\{X \cap U_j\}, \mathcal{F}) = \check{H}^i(\{U_j\}, i_\ast\mathcal{F})$$
 
-이 성립한다. $X$와 $\mathbb{P}^N$은 separated variety이고 affine variety 위의 quasi-coherent sheaf는 [§층 코호몰로지, ⁋명제 12](/ko/math/algebraic_varieties/sheaf_cohomology#prop12)에 의해 acyclic이므로, [§층 코호몰로지, ⁋정리 11](/ko/math/algebraic_varieties/sheaf_cohomology#thm11)에 의해 quasi-coherent sheaf에 대해 Čech cohomology = sheaf cohomology:
+이 성립한다. $X$와 $\mathbb{P}^N$은 separated variety이고 affine variety 위의 quasi-coherent sheaf는 [§층 코호몰로지, ⁋명제 12](/ko/math/algebraic_varieties/sheaf_cohomology#prop12)에 의해 acyclic이므로, [§층 코호몰로지, ⁋정리 11](/ko/math/algebraic_varieties/sheaf_cohomology#thm11)에 의해 quasi-coherent sheaf에 대해서는 Čech cohomology와 sheaf cohomology가 일치하고, 따라서 다음의 식
 
-$H^i(X, \mathcal{F}) = \check{H}^i(\{X \cap U_j\}, \mathcal{F}) = \check{H}^i(\{U_j\}, i_\ast\mathcal{F}) = H^i(\mathbb{P}^N, i_\ast\mathcal{F})$ 따라서 다음을 보이면 충분하다: $\mathbb{P}^N$ 위의 coherent sheaf $\mathcal{G}$에 대해, 충분히 큰 $n$에 대해 $H^i(\mathbb{P}^N, \mathcal{G}(n)) = 0$ ($i > 0$). 여기서 $\mathcal{G}(n) = \mathcal{G} \otimes \mathcal{O}_{\mathbb{P}^N}(n)$이다.
+$$H^i(X, \mathcal{F}) = \check{H}^i(\{X \cap U_j\}, \mathcal{F}) = \check{H}^i(\{U_j\}, i_\ast\mathcal{F}) = H^i(\mathbb{P}^N, i_\ast\mathcal{F})$$
+
+이 성립한다. 이 식을 $\mathcal{F}$ 자리에 $\mathcal{F} \otimes \mathcal{L}^{\otimes m}$을 넣어 적용하자. 주어진 $m$을 $m = m_0 n + r$ ($0 \leq r < m_0$)로 나누어 쓰면 $\mathcal{L}^{\otimes m} = \mathcal{L}^{\otimes r} \otimes i^\ast\mathcal{O}(n)$이므로, projection formula에 의해
+
+$$i_\ast(\mathcal{F} \otimes \mathcal{L}^{\otimes m}) = i_\ast(\mathcal{F} \otimes \mathcal{L}^{\otimes r}) \otimes \mathcal{O}(n) = \mathcal{G}_r(n), \qquad \mathcal{G}_r := i_\ast(\mathcal{F} \otimes \mathcal{L}^{\otimes r})$$
+
+이고 따라서 $H^i(X, \mathcal{F} \otimes \mathcal{L}^{\otimes m}) = H^i(\mathbb{P}^N, \mathcal{G}_r(n))$이다. 여기서 $\mathcal{G}(n) = \mathcal{G} \otimes \mathcal{O}_{\mathbb{P}^N}(n)$으로 적었다. $\mathcal{G}_r$은 $r = 0, \ldots, m_0-1$의 유한 개이고 각각 $\mathbb{P}^N$ 위의 coherent sheaf이므로, $\mathbb{P}^N$ 위의 임의의 coherent sheaf $\mathcal{G}$에 대하여 충분히 큰 모든 $n$에서 $H^i(\mathbb{P}^N, \mathcal{G}(n)) = 0$ ($i > 0$)이 성립함을 보이면, 이를 각각의 $\mathcal{G}_r$에 적용하고 그 하한들의 최댓값을 취하여 충분히 큰 모든 $m$에 대한 결론을 얻는다.
 
 **핵심 보조정리**. $\mathcal{G}(n)$이 충분히 큰 $n$에 대해 globally generated임을 보인다. (아래 [정의 6](#def6) 참조.)
 
@@ -210,37 +216,17 @@ $S = \mathbb{K}[\x_0, \ldots, \x_N]$로 하고, $M = \bigoplus_{n \in \mathbb{Z}
 
 **Vanishing**. 이제 $H^i(\mathbb{P}^N, \mathcal{G}(n)) = 0$ ($i > 0$, $n \gg 0$)을 보인다.
 
-$N = 0$인 경우 $\mathbb{P}^0$은 한 점이므로 자명하다. $N \geq 1$이라 하자. 위의 보조정리에 의해 $\mathcal{G}(n_0)$은 globally generated ($n_0 \gg 0$)이므로, 적당한 surjection
+$N = 0$인 경우 $\mathbb{P}^0$은 한 점이므로 자명하다. $N \geq 1$이라 하자. 위의 보조정리에 의해 임의의 coherent sheaf $\mathcal{G}$에 대하여 $\mathcal{G}(a)$가 globally generated인 $a \gg 0$을 택할 수 있고, 이로부터 얻어지는 surjection $\mathcal{O}^{\oplus r} \twoheadrightarrow \mathcal{G}(a)$에 $\mathcal{O}(-a)$를 tensor하면
 
-$$\mathcal{O}_{\mathbb{P}^N}^{\oplus r_0} \twoheadrightarrow \mathcal{G}(n_0)$$
+$$\mathcal{E} := \mathcal{O}(-a)^{\oplus r} \twoheadrightarrow \mathcal{G}$$
 
-이 존재한다. Kernel $\mathcal{K}_0$는 coherent하다. Short exact sequence
+를 얻는다. 즉 임의의 coherent sheaf는 line bundle들의 direct sum의 quotient이며, 이 surjection의 kernel $\mathcal{K}$ 역시 coherent이다.
 
-$$0 \rightarrow \mathcal{K}_0 \rightarrow \mathcal{O}^{\oplus r_0} \rightarrow \mathcal{G}(n_0) \rightarrow 0$$
+이제 $\mathbb{P}^N$ 위의 임의의 coherent sheaf $\mathcal{G}$에 대하여 충분히 큰 모든 $n$에서 $H^i(\mathbb{P}^N, \mathcal{G}(n)) = 0$이 성립함을 $i$에 대한 하향 귀납법으로 보인다. 임의의 coherent sheaf에 대하여 $\mathbb{P}^N$의 cohomological dimension이 $N$이라는 Grothendieck vanishing ([Hart] III.2.7)에 의해 $i > N$인 경우에는 twist 없이도 $H^i$가 사라지므로, $0 < i \leq N$이고 $i+1$에 대해서는 모든 coherent sheaf에 대하여 주장이 성립한다고 가정하자. Short exact sequence $0 \rightarrow \mathcal{K} \rightarrow \mathcal{E} \rightarrow \mathcal{G} \rightarrow 0$에 $\mathcal{O}(n)$을 tensor한 것의 long exact sequence는
 
-의 long exact sequence에서, [명제 1](#prop1)에 의해 $H^j(\mathbb{P}^N, \mathcal{O}^{\oplus r_0}) = 0$ ($j > 0$)이므로,
+$$H^i(\mathcal{E}(n)) \rightarrow H^i(\mathcal{G}(n)) \rightarrow H^{i+1}(\mathcal{K}(n))$$
 
-$$H^j(\mathcal{G}(n_0)) \cong H^{j+1}(\mathcal{K}_0) \quad (j \geq 1)$$
-
-을 얻는다. 이제 $\mathcal{K}_0$에 대해 같은 과정을 반복한다. 즉, $\mathcal{K}_0(n_1)$이 globally generated인 $n_1 \gg 0$을 택하고, surjection
-
-$$\mathcal{O}^{\oplus r_1} \twoheadrightarrow \mathcal{K}_0(n_1)$$
-
-의 kernel $\mathcal{K}_1$에 대해
-
-$$0 \rightarrow \mathcal{K}_1 \rightarrow \mathcal{O}^{\oplus r_1} \rightarrow \mathcal{K}_0(n_1) \rightarrow 0$$
-
-의 long exact sequence에서
-
-$$H^{j+1}(\mathcal{K}_0(n_1)) \cong H^{j+2}(\mathcal{K}_1) \quad (j \geq 1)$$
-
-을 얻는다. 이 과정을 $N$회 반복하면
-
-$$H^j(\mathcal{G}(n_0)) \cong H^{j+N}(\mathcal{K}_{N-1})$$
-
-을 얻는다. 임의의 coherent sheaf에 대하여 $\mathbb{P}^N$의 cohomological dimension이 $N$이라는 Grothendieck vanishing ([Hart] III.2.7)에 의해 $H^{j+N} = 0$ ($j \geq 1$, $j + N \geq N+1 > N$)이고, 따라서 $H^j(\mathcal{G}(n_0)) = 0$이다.
-
-마지막으로, $\mathcal{G}(n_0)$이 globally generated이므로 $\mathcal{G}(n) = \mathcal{G}(n_0) \otimes \mathcal{O}(n - n_0)$ 역시 $n \geq n_0$에 대해 globally generated이고, 따라서 위와 동일한 resolution 인자를 $\mathcal{G}(n)$에 대해서도 구성할 수 있으므로 vanishing은 $n \geq n_0$인 모든 $n$에 대해 성립한다.
+을 준다. $\mathcal{E}(n) = \mathcal{O}(n-a)^{\oplus r}$이므로 [명제 1](#prop1)에 의해 $n - a \geq -N$이면 좌측 항이 사라지고, $\mathcal{K}$에 대한 귀납적 가정에 의해 충분히 큰 모든 $n$에서 우측 항이 사라진다. 따라서 충분히 큰 모든 $n$에 대해 $H^i(\mathcal{G}(n)) = 0$을 얻는다. $i$는 $1$부터 $N$까지의 유한 개이므로 각각에서 얻은 하한의 최댓값을 취하면 모든 $i > 0$에 대해 동시에 vanishing이 성립하는 $n_0$이 존재한다.
 :::
 
 ## Regularity
@@ -292,7 +278,7 @@ $X$를 projective variety, $\mathcal{L}$을 very ample line bundle, $\mathcal{F}
 :::
 
 ::: 증명
-$X$의 차원에 대한 귀납법으로 증명한다. $\dim X = 0$인 경우 $X$는 한 점이고 coherent sheaf $\mathcal{F}$는 finite-dimensional vector space이므로 $H^0$ 이외의 cohomology는 자동으로 사라진다. 이제 $\dim X \geq 1$이라 가정하자.
+$n = \dim X$로 두고, $X$의 차원에 대한 귀납법으로 증명한다. $\dim X = 0$인 경우 $X$는 한 점이고 coherent sheaf $\mathcal{F}$는 finite-dimensional vector space이므로 $H^0$ 이외의 cohomology는 자동으로 사라진다. 이제 $\dim X \geq 1$이라 가정하자.
 
 핵심은 $\mathcal{L}$의 global section $s \in H^0(X, \mathcal{L})$으로 정의되는 effective divisor $D$에 대한 restriction exact sequence를 이용하는 것이다. 일반적인 $s$를 택하면 Bertini의 정리에 의해 $D$는 smooth이며, 다음 short exact sequence를 얻는다.
 
@@ -338,7 +324,11 @@ $$\mathcal{O}_X^{\oplus r_0} \twoheadrightarrow \mathcal{F} \otimes \mathcal{L}^
 
 $$(\mathcal{L}^{\otimes p})^{\oplus r_0} \twoheadrightarrow \mathcal{F} \otimes \mathcal{L}^{\otimes m+p}$$
 
-을 얻는다. 따라서 임의의 $i > 0$과 $p \geq 0$에 대해 $H^i(X, \mathcal{L}^{\otimes p}) = 0$이면 $H^i(\mathcal{F} \otimes \mathcal{L}^{\otimes m+p}) = 0$이 성립한다. $p = 0$인 경우 $H^i(\mathcal{F} \otimes \mathcal{L}^{\otimes m}) = 0$ ($i > 0$)은 $\mathcal{F}$의 $m$-regularity 정의 자체에 해당한다. $p \geq 1$인 경우, $\mathcal{L}$이 ample이므로 [명제 4](#prop4)에 의해 충분히 큰 $p$에 대해 $H^i(\mathcal{L}^{\otimes p}) = 0$이지만, $p$가 작은 경우에는 이 인자가 vanish하지 않을 수 있다.
+을 얻는다. 그러나 이 surjection의 kernel을 $\mathcal{K}$라 할 때 long exact sequence가 주는 것은
+
+$$H^i((\mathcal{L}^{\otimes p})^{\oplus r_0}) \rightarrow H^i(\mathcal{F} \otimes \mathcal{L}^{\otimes m+p}) \rightarrow H^{i+1}(\mathcal{K} \otimes \mathcal{L}^{\otimes p})$$
+
+이므로, 좌측 항이 사라지더라도 우측 항을 통제하지 못하면 가운데 항의 소멸이 따라오지 않는다. 게다가 좌측 항은 $H^i(X, \mathcal{L}^{\otimes p})$의 direct sum인데, $\mathcal{L}$이 ample이므로 [명제 4](#prop4)에 의해 충분히 큰 $p$에 대해서는 이것이 사라지지만 $p$가 작은 경우에는 사라지지 않을 수 있다. 따라서 이 경로로는 결론을 얻을 수 없다.
 
 이 문제를 해결하기 위해 $p$에 대한 귀납법을 사용한다. $p = 0$일 때 $\mathcal{F}$가 $m$-regular인 것은 정의이다. $p \geq 1$이라 가정하고, $\mathcal{F}$가 $(m+p)$-regular임, 즉 $H^i(\mathcal{F} \otimes \mathcal{L}^{\otimes m+p-i}) = 0$ ($i > 0$)을 보이자. $i = 1$인 경우, restriction sequence에서 $k = m + p - 1$을 대입하면
 
@@ -346,13 +336,13 @@ $$H^0(\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m+p-1}) \rightarr
 
 이다. 귀납적 가정 ($p-1$에 대한)에 의해 $H^1(\mathcal{F} \otimes \mathcal{L}^{\otimes m+p-2}) = 0$이다. 또한, $\mathcal{F}\vert_D$가 $m$-regular이므로 (1단계) 차원에 대한 귀납적 가정에 의해 $\mathcal{F}\vert_D$가 $(m+p)$-regular이고, 따라서 $H^1(\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m+p-1}) = 0$이다. 정확한 열에서 $H^1(\mathcal{F} \otimes \mathcal{L}^{\otimes m+p-1})$은 $H^1(\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m+p-1})$에 매장되므로 $H^1(\mathcal{F} \otimes \mathcal{L}^{\otimes m+p-1}) = 0$을 얻는다. $i \geq 2$인 경우, 같은 restriction sequence에서
 
-$$H^{i-1}(\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m+p-i}) \rightarrow H^i(\mathcal{F} \otimes \mathcal{L}^{\otimes m+p-i-1}) \rightarrow H^i(\mathcal{F} \otimes \mathcal{L}^{\otimes m+p-i}) \rightarrow H^i(\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m+p-i})$$
+$$H^i(\mathcal{F} \otimes \mathcal{L}^{\otimes m+p-i-1}) \rightarrow H^i(\mathcal{F} \otimes \mathcal{L}^{\otimes m+p-i}) \rightarrow H^i(\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m+p-i})$$
 
-이다. 귀납적 가정에 의해 $H^i(\mathcal{F} \otimes \mathcal{L}^{\otimes m+p-i-1}) = 0$ ($p' = p-1$, $j = i$에 대한 가정)이고, $\mathcal{F}\vert_D$에 대한 귀납적 가정 (차원에 대한 귀납)에 의해 $H^{i-1}(\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m+p-i}) = 0$과 $H^i(\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m+p-i}) = 0$이 $i-1 \geq 1$, $i \leq n-1$에 대해 성립한다. 따라서 $H^i(\mathcal{F} \otimes \mathcal{L}^{\otimes m+p-i}) = 0$을 얻는다.
+이다. 귀납적 가정 ($p-1$에 대한)에 의해 좌측 항이 사라진다. 우측 항의 경우, $i \leq n-1$이면 차원에 대한 귀납적 가정에 의해 $\mathcal{F}\vert_D$가 $(m+p)$-regular이므로 $H^i(\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m+p-i}) = 0$이고, $i \geq n$이면 $\dim D = n-1$이므로 Grothendieck vanishing ([Hart] III.2.7)에 의해 같은 항이 자동으로 사라진다. 어느 경우에나 $H^i(\mathcal{F} \otimes \mathcal{L}^{\otimes m+p-i}) = 0$을 얻는다.
 :::
 
 ::: 예시 8
-$\mathbb{P}^n$ 위의 line bundle $\mathcal{O}(d)$의 regularity를 계산해보자. 여기서 $\mathcal{L} = \mathcal{O}(1)$이므로 twist는 $\mathcal{O}(d) \otimes \mathcal{O}(m) = \mathcal{O}(d+m)$이다. $m$-regularity 조건은 $H^i(\mathbb{P}^n, \mathcal{O}(d+m-i)) = 0$ ($i > 0$)이다. $d \geq 0$이고 $m = 0$을 택하면 $H^i(\mathcal{O}(d-i))$를 확인해야 하는데, $i = 1$일 때 $H^1(\mathcal{O}(d-1))$은 $d \geq 1$이면 $0$이고 $d = 0$이면 $H^1(\mathcal{O}(-1)) = 0$ (Bott's formula에서 $-1 \geq -n$이므로 모든 cohomology가 $0$)이다. 일반적으로 $d \geq 0$이고 $i > 0$일 때 $d - i \geq -n$이면 $H^i(\mathcal{O}(d-i)) = 0$이고, $d - i < -n$, 즉 $i > d + n$인 경우에는 $i > n$이 되어 어차피 $H^i = 0$이다. 따라서 $\mathcal{O}(d)$는 $\mathcal{L} = \mathcal{O}(1)$에 대해 $0$-regular이다. 반면 $d < 0$인 경우, $\mathcal{O}(d)$는 $(-d)$-regular이다. [명제 7](#prop7)에 의해 $\mathcal{O}(d) \otimes \mathcal{L}^{\otimes 0} = \mathcal{O}(d)$는 $d \geq 0$일 때 globally generated이며, 이는 [§선다발과 벡터다발, ⁋예시 16](/ko/math/algebraic_varieties/line_bundles#ex16)에서 확인한 바와 일치한다.
+$\mathbb{P}^n$ 위의 line bundle $\mathcal{O}(d)$의 regularity를 계산해보자. 여기서 $\mathcal{L} = \mathcal{O}(1)$이므로 twist는 $\mathcal{O}(d) \otimes \mathcal{O}(m) = \mathcal{O}(d+m)$이다. $m$-regularity 조건은 $H^i(\mathbb{P}^n, \mathcal{O}(d+m-i)) = 0$ ($i > 0$)이다. $d \geq 0$이고 $m = 0$을 택하면 $H^i(\mathcal{O}(d-i))$를 확인해야 하는데, $i = 1$일 때 $H^1(\mathcal{O}(d-1))$은 $d \geq 1$이면 $0$이고 $d = 0$이면 $H^1(\mathcal{O}(-1)) = 0$ (Bott's formula에서 $-1 \geq -n$이므로 모든 cohomology가 $0$)이다. 일반적으로 $d \geq 0$이고 $i > 0$일 때 $d - i \geq -n$이면 $H^i(\mathcal{O}(d-i)) = 0$이고, $d - i < -n$, 즉 $i > d + n$인 경우에는 $i > n$이 되어 어차피 $H^i = 0$이다. 따라서 $\mathcal{O}(d)$는 $\mathcal{L} = \mathcal{O}(1)$에 대해 $0$-regular이다. 반면 $d < 0$인 경우, $\mathcal{O}(d)$는 $(-d)$-regular이다. [명제 7](#prop7)에 의해 $\mathcal{O}(d) \otimes \mathcal{L}^{\otimes 0} = \mathcal{O}(d)$는 $d \geq 0$일 때 globally generated이며, 이는 [§선다발과 벡터다발, ⁋예시 16](/ko/math/algebraic_varieties/line_bundles#ex16) 직후의 계산에서 확인한 바와 일치한다.
 :::
 
 ## Very ample과 ample의 성질
@@ -384,7 +374,11 @@ Projective variety $X$ 위에 정의된 ample line bundle $\mathcal{L}$과 임�
 :::
 
 ::: 증명
-우선 $\mathcal{L}$이 ample이므로 적당한 $m>0$에 대해 $\mathcal{L}^{\otimes m}$이 very ample이다. 한편, [명제 4](#prop4)에 의해 우리는 충분히 큰 $k$에 대해서는 $\mathcal{M}\otimes \mathcal{L}^{\otimes k}$의 higher cohomology가 사라지도록 할 수 있으므로, 이러한 $k$에 대해서 $\mathcal{M}\otimes \mathcal{L}^{\otimes k}$는 globally generated이다. 이제 [명제 9](#prop9)에 의해 
+우선 $\mathcal{L}$이 ample이므로 적당한 $m>0$에 대해 $\mathcal{L}^{\otimes m}$이 very ample이다. 한편 [명제 4](#prop4)에 의해 적당한 $k_0$가 존재하여 모든 $k \geq k_0$와 $i > 0$에 대해 $H^i(X, \mathcal{M} \otimes \mathcal{L}^{\otimes k}) = 0$이 성립한다. 이제 $k = k_0 + m\dim X$로 두면 $1 \leq i \leq \dim X$에 대해 $k - mi \geq k_0$이므로
+
+$$H^i(\mathcal{M} \otimes \mathcal{L}^{\otimes k} \otimes (\mathcal{L}^{\otimes m})^{\otimes -i}) = H^i(\mathcal{M} \otimes \mathcal{L}^{\otimes k-mi}) = 0$$
+
+이고, $i > \dim X$에 대해서는 Grothendieck vanishing ([Hart] III.2.7)에 의해 이 cohomology가 자동으로 사라진다. 즉 $\mathcal{M} \otimes \mathcal{L}^{\otimes k}$는 very ample line bundle $\mathcal{L}^{\otimes m}$에 대해 $0$-regular이므로, [명제 7](#prop7)에 의해 globally generated이다. 이제 [명제 9](#prop9)에 의해 
 
 $$(\mathcal{M} \otimes \mathcal{L}^{\otimes k}) \otimes \mathcal{L}^{\otimes m} = \mathcal{M} \otimes \mathcal{L}^{\otimes (k+m)}$$
 

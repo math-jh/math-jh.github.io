@@ -50,7 +50,7 @@ $$\length(\gamma)^2 = \left(\int_a^b \lVert \dot\gamma(t)\rVert_g \dd{t}\right)^
 
 ## 에너지의 제1변분
 
-에너지의 임계 곡선을 찾기 위해 곡선을 한 매개변수만큼 흔드는 변분을 도입한다. 곡선 $\gamma : [a, b] \rightarrow M$의 *변분<sub>variation</sub>*이란 smooth 함수 $\Gamma : (-\varepsilon, \varepsilon) \times [a, b] \rightarrow M$으로서 $\Gamma(0, t) = \gamma(t)$를 만족하는 것을 말한다. 각 $s$에 대해 $\gamma_s(t) := \Gamma(s, t)$는 곡선이며, $s = 0$에서의 무한소 변화량
+에너지의 임계 곡선을 찾기 위해 곡선을 한 매개변수만큼 흔드는 변분을 도입한다. 곡선 $\gamma : [a, b] \rightarrow M$의 *변분<sub>variation</sub>*이란 smooth function $\Gamma : (-\varepsilon, \varepsilon) \times [a, b] \rightarrow M$으로서 $\Gamma(0, t) = \gamma(t)$를 만족하는 것을 말한다. 각 $s$에 대해 $\gamma_s(t) := \Gamma(s, t)$는 곡선이며, $s = 0$에서의 무한소 변화량
 
 $$V(t) := \left.\frac{\partial \Gamma}{\partial s}\right\vert_{s = 0}(t) \in T_{\gamma(t)} M$$
 

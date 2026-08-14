@@ -49,10 +49,10 @@ $$\operatorname{Hess}_p(f) = \left[\frac{\partial^2 f}{\partial x_i\partial x_j}
 Critical point $p$가 *non-degenerate<sub>비퇴화</sub>*라는 것은 $\operatorname{Hess}_p(f)$가 비퇴화 대칭 bilinear form인 것, 즉 좌표를 잡았을 때 이 Hessian 행렬이 가역인 것을 뜻한다. 모든 critical point가 non-degenerate인 smooth function $f:M\rightarrow\mathbb{R}$을 *Morse function<sub>모스 함수</sub>*이라 부른다.
 :::
 
-Non-degenerate critical point $p$에서 $\operatorname{Hess}_p(f)$의 signature는 좌표 변환에 대한 불변량이다. 양의 eigenvalue의 개수와 음의 eigenvalue의 개수가 좌표 선택에 의존하지 않으므로 다음 정의가 의미를 가진다.
+Non-degenerate critical point $p$에서 $\operatorname{Hess}_p(f)$의 signature는 좌표 변환에 대한 불변량이다. Positive eigenvalue의 개수와 음의 eigenvalue의 개수가 좌표 선택에 의존하지 않으므로 다음 정의가 의미를 가진다.
 
 ::: 정의 4
-Non-degenerate critical point $p$의 *Morse index<sub>모스 지수</sub>* $\lambda_p$는 $\operatorname{Hess}_p(f)$의 음의 eigenvalue의 개수이다. 또 $\operatorname{Hess}_p(f)$의 *signature<sub>부호수</sub>* $\sigma_p$는 양의 eigenvalue의 개수에서 음의 eigenvalue의 개수를 뺀 값이다. 즉 $n=\dim M$일 때
+Non-degenerate critical point $p$의 *Morse index<sub>모스 지수</sub>* $\lambda_p$는 $\operatorname{Hess}_p(f)$의 음의 eigenvalue의 개수이다. 또 $\operatorname{Hess}_p(f)$의 *signature<sub>부호수</sub>* $\sigma_p$는 positive eigenvalue의 개수에서 음의 eigenvalue의 개수를 뺀 값이다. 즉 $n=\dim M$일 때
 
 $$\sigma_p = n - 2\lambda_p$$
 
@@ -199,7 +199,7 @@ $$I(\hbar) = (2\pi\hbar)^{n/2}\,\frac{e^{i\phi(p)/\hbar}\,e^{i\pi\sigma_p/4}}{\s
 을 얻는다. 1단계의 partition of unity에 의해 여러 critical point가 있는 일반적인 경우 위 leading term이 각 점에서 합산되어 원하는 공식이 성립한다.
 :::
 
-[정리 10](#thm10)의 본질은 다음과 같이 요약된다. Oscillating integral의 $\hbar\rightarrow 0$ 점근은 *critical point의 국소 데이터*인 (1) critical value $\phi(p)$, (2) Hessian의 determinant 절댓값, (3) Hessian의 signature, 그리고 (4) amplitude의 critical point에서의 값으로 완전히 결정된다. Signature가 위상 인자 $e^{i\pi\sigma_p/4}$로 나타나는 것은 Fresnel 적분의 부호별 위상회전이 누적된 결과이며, 이는 *Maslov index*가 등장하는 가장 단순한 정황이기도 하다.
+[정리 10](#thm10)의 본질은 다음과 같이 요약된다. Oscillating integral의 $\hbar\rightarrow 0$ 점근은 *critical point의 국소 데이터*인 (1) critical value $\phi(p)$, (2) Hessian의 determinant modulus, (3) Hessian의 signature, 그리고 (4) amplitude의 critical point에서의 값으로 완전히 결정된다. Signature가 위상 인자 $e^{i\pi\sigma_p/4}$로 나타나는 것은 Fresnel 적분의 부호별 위상회전이 누적된 결과이며, 이는 *Maslov index*가 등장하는 가장 단순한 정황이기도 하다.
 
 ::: 참고 11
 위 정리는 leading order만을 진술하였으나, 동일한 방법은 모든 차수의 점근전개를 제공한다. 즉
@@ -298,7 +298,7 @@ $$\int_{\Gamma_p} e^{W(x)/\hbar}\,\omega = (2\pi\hbar)^{n/2}\,\frac{e^{W(p)/\hba
 :::
 
 ::: 증명
-$p$ 근방에서 holomorphic Morse lemma (즉 [정리 6](#thm6)의 복소 버전)에 의해 holomorphic 좌표 $z=(z_1,\ldots,z_n)$이 존재하여
+$p$ 근방에서 holomorphic Morse lemma (즉 [정리 6](#thm6)의 복소 버전)에 의해 holomorphic coordinate $z=(z_1,\ldots,z_n)$이 존재하여
 
 $$W(z) = W(p) + \frac12\sum_{i=1}^n z_i^2$$
 

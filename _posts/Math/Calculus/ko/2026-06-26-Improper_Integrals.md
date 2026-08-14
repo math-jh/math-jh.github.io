@@ -10,6 +10,8 @@ sidebar:
 
 date: 2026-06-26
 weight: 12
+published: false
+revising: true
 drift_needed: true
 ---
 
@@ -64,15 +66,15 @@ $$\lim_{t\rightarrow\infty}\int_{-t}^t \sgn(x)\dd{x}=0$$
 비슷하게 우리는 한 점에서 발산하는 함수의 적분 또한 극한값으로 정의한다. 
 
 ::: 정의 2
-$f$가 $c$에서 무한히 커지지만 모든 $t < c$에서 $[a, t]$에서 적분가능할 때, *특이적분*을
+$f$가 $c$ 근처에서 유계가 아니지만 모든 $a \leq t < c$에서 $[a, t]$에서 적분가능할 때, *특이적분*을
 
 $$\int_a^c f(x) \dd{x} = \lim_{t \rightarrow c^-}\int_a^t f(x) \dd{x}$$
 
-으로 정의한다. 비슷하게 만일 $f$가 $c$에서 무한히 커지지만 모든 $c<t$에서 $[t, b]$에서 적분가능할 때, 그 특이적분을
+으로 정의한다. 비슷하게 만일 $f$가 $c$ 근처에서 유계가 아니지만 모든 $c < t \leq b$에서 $[t, b]$에서 적분가능할 때, 그 특이적분을
 
 $$\int_c^b f(x) \dd{x} = \lim_{t \rightarrow c^+}\int_t^b f(x) \dd{x}$$
 
-으로 정의한다. 만일 $[a,b]$ 내부의 점 $c$에서 $f$가 무한히 커지는 경우, 이 특이적분을
+으로 정의한다. 만일 $[a,b]$ 내부의 점 $c$ 근처에서 $f$가 유계가 아닌 경우, 이 특이적분을
 
 $$\int_a^b f(x)\dd{x}=\lim_{t\rightarrow c^-}\int_a^t f(x)\dd{x}+\lim_{s\rightarrow c^+} \int_s^b f(x)\dd{x}$$
 
@@ -117,7 +119,7 @@ $f$가 모든 $t > a$에서 $[a, t]$에서 적분가능하고 $\int_a^\infty \lv
 $0 \leq f + \lvert f\rvert \leq 2\lvert f\rvert$이므로 [명제 3](#prop3)으로 $\int_a^\infty (f(x) + \lvert f(x)\rvert) \dd{x}$이 수렴하고, $\int_a^\infty f(x) \dd{x} = \int_a^\infty (f(x) + \lvert f(x)\rvert) \dd{x} - \int_a^\infty \lvert f(x)\rvert \dd{x}$도 수렴한다.
 :::
 
-역은 성립하지 않는다. $\int_0^\infty \frac{\sin x}{x} \dd{x} = \frac\pi2$는 수렴하지만 $\int_0^\infty \lvert \sin x/x\rvert \dd{x}$는 발산하므로 *조건수렴*이며, 이는 급수의 조건수렴에 대응한다.
+역은 성립하지 않는다. $\int_0^\infty \frac{\sin x}{x} \dd{x}$는 수렴하지만 $\int_0^\infty \lvert \sin x/x\rvert \dd{x}$는 발산하므로 *조건수렴*이며, 이는 급수의 조건수렴에 대응한다.
 
 위의 두 판정은 무한구간 적분에 대해 서술했지만, 치환을 거치면 끝점에서 발산하는 특이적분에도 그대로 적용된다. $f$가 좌측 끝점 $c$에서 특이한 $\int_c^b f(x) \dd{x}$에서 $u = 1/(x - c)$로 두면 $x \rightarrow c^+$가 $u \rightarrow \infty$에 대응하고, 적분구간의 방향까지 맞추면
 

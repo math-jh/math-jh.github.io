@@ -10,6 +10,8 @@ sidebar:
 
 date: 2023-05-22
 weight: 1
+published: false
+revising: true
 drift_needed: true
 
 ---
@@ -44,6 +46,8 @@ drift_needed: true
 - 두 morphism의 합성은 함수의 합성으로 정의한다. ([\[집합론\] §함수들 사이의 연산, ⁋명제 1](/ko/math/set_theory/operation_of_functions#prop1)) 이 합성이 associative한 것은 [\[집합론\] §이항관계들 사이의 연산, ⁋명제 5](/ko/math/set_theory/operation_of_binary_relations#prop5)에서 살펴보았다.
 - 임의의 대상 $A\in\obj(\Set)$에 대하여, $\id_A\in\Hom_\Set(A,A)$는 항등함수 $\id_A$이다. ([\[집합론\] §함수, ⁋정의 2](/ko/math/set_theory/functions#def2)) 항등함수가 위의 [정의 1](#def1)의 두 조건을 만족하는 것은 [\[집합론\] §이항관계들 사이의 연산, ⁋정의 9](/ko/math/set_theory/operation_of_binary_relations#def9) 이후에 살펴보았다.
 
+한 가지 주의할 점은 위에서 인용한 함수의 정의가 정의역이 공집합이 아닐 것을 요구한다는 것이다. 이대로라면 임의의 집합 $B$에 대하여 $\Hom_\Set(\emptyset,B)$가 공집합이 되어 $\id_\emptyset$이 존재하지 않는다. 앞으로는 임의의 $B$에 대하여 triple $(\emptyset,\emptyset,B)$ 또한 $\emptyset$에서 $B$로의 함수인 것으로 약속하며, 그럼 이것이 $\emptyset$에서 $B$로의 유일한 함수가 되어 $\id_\emptyset$을 얻는다.
+
 비슷한 방식으로 다음이 모두 category의 예시가 되는 것을 볼 수 있다.
 
 ::: 예시 2 (Concrete categories)
@@ -54,7 +58,7 @@ drift_needed: true
 - Group들과 group homomorphism들의 category $\Grp$
 - Abelian group들과 group homomorphism들의 category $\Ab$
 - Ring들과 ring homomorphism들의 category $\Ring$
-- Field들과 field extension들의 category $\Field$
+- Field들과 field homomorphism들의 category $\Field$
 - Left, right $G$-set들과 $G$-set homomorphism들의 category $\lset{G},\rset{G}$
 - Left, right $R$-module들과 $R$-module homomorphism들의 category $\lMod{R},\rMod{R}$
 - $k$-벡터공간들과 linear map들의 category $\Vect_k$

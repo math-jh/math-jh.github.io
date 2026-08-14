@@ -15,7 +15,7 @@ drift_needed: true
 
 ---
 
-임의의 finitely generated $A$-module $M$은 유한한 generator와 그 사이의 relation이 주어지는 presentation을 가지며, 이 자료는 두 free module 사이의 하나의 $A$-linear map $\varphi$로 압축된다. 이 글의 출발점은 $\varphi$를 행렬로 적었을 때 그 소행렬식들이 생성하는 ideal이 presentation의 선택에 전혀 의존하지 않는다는 관찰이다. 앞선 글에서 free resolution이 담는 정보가 그 길이에 그치지 않으며 resolution을 이루는 행렬 자체를 정밀하게 읽어내는 도구가 필요하다고 예고하였는데, 그 도구가 바로 이 ideal이다. 우리는 이를 Fitting ideal로 정의하고 presentation의 선택에 대한 독립성을 증명한 뒤, base change와 annihilator, 그리고 free module 판정으로 그 쓰임을 살펴본다.
+임의의 finitely generated $A$-module $M$은 finite generator와 그 사이의 relation이 주어지는 presentation을 가지며, 이 자료는 두 free module 사이의 하나의 $A$-linear map $\varphi$로 압축된다. 이 글의 출발점은 $\varphi$를 행렬로 적었을 때 그 소행렬식들이 생성하는 ideal이 presentation의 선택에 전혀 의존하지 않는다는 관찰이다. 앞선 글에서 free resolution이 담는 정보가 그 길이에 그치지 않으며 resolution을 이루는 행렬 자체를 정밀하게 읽어내는 도구가 필요하다고 예고하였는데, 그 도구가 바로 이 ideal이다. 우리는 이를 Fitting ideal로 정의하고 presentation의 선택에 대한 독립성을 증명한 뒤, base change와 annihilator, 그리고 free module 판정으로 그 쓰임을 살펴본다.
 
 ## Finite presentation과 소행렬식 아이디얼
 

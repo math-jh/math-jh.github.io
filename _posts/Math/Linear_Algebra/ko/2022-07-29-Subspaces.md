@@ -12,6 +12,8 @@ sidebar:
 date: 2022-07-29
 
 weight: 3
+published: false
+revising: true
 
 drift_needed: true
 
@@ -82,11 +84,11 @@ $$\alpha_1v_1+\cdots+\alpha_nv_n$$
 
 $$\sum_{i\in I}\alpha_iv_i\qquad\text{$\alpha_i=0$ for all but finitely many $i$}$$
 
-으로 정의된다. 예를 들어, [§벡터공간, ⁋예시 4](/ko/math/linear_algebra/vector_spaces#ex4)와 같이 $\mathbb{R}$을 $\mathbb{Q}$-벡터공간으로 본다면, $0.111\ldots$는 다음 벡터들
+으로 정의된다. 예를 들어, [§벡터공간, ⁋예시 4](/ko/math/linear_algebra/vector_spaces#ex4)와 같이 $\mathbb{R}$을 $\mathbb{Q}$-벡터공간으로 본다면, $\sqrt2-1=0.4142\ldots$는 다음 벡터들
 
 $$0.1,\quad 0.01,\quad0.001,\quad\cdots$$
 
-의 일차결합이 <em-ko>아니다</em-ko>. 이들을 사용하여 $0.111\ldots$를 위와 같이 무한합으로 나타낸다면 그 계수들이 모두 $0$이 아니기 때문이다. 이와 비슷한 맥락에서 다음 예시를 살펴보자.
+의 일차결합이 <em-ko>아니다</em-ko>. 소수 전개를 따라 $\sqrt2-1=4\cdot0.1+1\cdot0.01+4\cdot0.001+\cdots$와 같이 무한합으로 나타낼 수는 있으나, 이 무한합에서는 $0$이 아닌 계수가 무한히 많으므로 이는 위에서 정의한 일차결합이 아니다. 뿐만 아니라 나열된 벡터들이 모두 유리수이므로 이들의 유한한 일차결합은 언제나 유리수이고, 무리수인 $\sqrt2-1$은 어떤 방식으로도 이들의 일차결합으로 나타낼 수 없다. 이와 비슷한 맥락에서 다음 예시를 살펴보자.
 
 ::: 예시 5
 집합 $\mathbb{K}[\x]$를 

@@ -240,7 +240,7 @@ $$(\id_V \otimes \Delta)\Delta_V(v_j) = \sum_k v_k \otimes \Delta(a_{kj}) = \sum
 역으로 comodule structure $\Delta_V$가 주어지면 $\Delta_V(v_j) = \sum_i v_i \otimes a_{ij}$로 $a_{ij} \in A$를 정의하고 $\rho(g) = (a_{ij}(g))$로 두자. Counit 조건은 $\rho(e)$가 항등행렬임을 주고, coassociativity를 위와 같이 전개한 뒤 $v_k$들이 basis라는 것을 쓰면 $\Delta(a_{kj}) = \sum_i a_{ki} \otimes a_{ij}$, 곧 $\rho(gh) = \rho(g)\rho(h)$를 얻는다. 특히 $\rho(g)\rho(g^{-1})$이 항등행렬이므로 각 $\rho(g)$는 가역이다. 성분 $a_{ij}$가 regular function이므로 $\rho$는 $G$에서 $\mathbb{A}^{n^2}$로 가는 morphism이고 그 image가 열린집합 $\GL(n;\mathbb{K})$에 들어가므로, $\rho: G \rightarrow \GL(n;\mathbb{K})$는 morphism이다. ([§준사영다양체, ⁋명제 12](/ko/math/algebraic_varieties/quasi_projective_varieties#prop12)) 두 구성이 서로 역이라는 것은 정의에서 곧바로 확인된다.
 :::
 
-Representation을 comodule로 바꾸어 놓으면 무한차원의 comodule $A$ 자신을 유한차원 조각들로 자를 수 있게 되고, 이것이 affine algebraic group의 구조를 결정한다.
+Representation을 comodule로 바꾸어 놓으면 infinite-dimensional comodule $A$ 자신을 유한차원 조각들로 자를 수 있게 되고, 이것이 affine algebraic group의 구조를 결정한다.
 
 ::: 명제 15
 $G$가 affine algebraic group이고 $(V, \Delta_V)$가 comodule이라 하자. 그럼 $V$의 임의의 유한차원 부분공간 $W$는 $\Delta_V(W') \subseteq W' \otimes_\mathbb{K} A$를 만족하는 유한차원 부분공간 $W' \supseteq W$에 포함된다.
@@ -453,7 +453,7 @@ $$H = \{g \in G \mid \rho(g)L = L\}$$
 이 되도록 할 수 있다는 것이다. 이를 얻고 나면 $G$는 $V$의 직선들의 공간 $\mathbb{P}(V)$ 위에 작용하고 ([§그라스만 다양체, ⁋예시 2](/ko/math/algebraic_varieties/grassmannians#ex2)), $L$에 해당하는 점의 orbit이 [명제 22](#prop22)와 같은 논증으로 locally closed subset이 되므로 이것을 $G/H$로 삼으면 된다. 차원에 대한 주장 역시 같은 문헌에 함께 있다.
 :::
 
-$\operatorname{char}\mathbb{K} = 0$일 때에는 더 나아가, $G$가 $X$ 위에 transitive하게 작용하면 $x \in X$에 대해 $gG_x \mapsto g \cdot x$가 유도하는 morphism $G/G_x \rightarrow X$가 isomorphism이 된다. 양의 characteristic에서는 이것이 bijective morphism이기는 하나 isomorphism이 아닐 수 있다. Transitive한 action이 주어진 variety를 *homogeneous space*라 부르며, 위의 사실은 homogeneous space가 언제나 $G/H$ 꼴로 나타남을 말해준다.
+$\operatorname{char}\mathbb{K} = 0$일 때에는 더 나아가, $G$가 $X$ 위에 transitive하게 작용하면 $x \in X$에 대해 $gG_x \mapsto g \cdot x$가 유도하는 morphism $G/G_x \rightarrow X$가 isomorphism이 된다. Positive characteristic에서는 이것이 bijective morphism이기는 하나 isomorphism이 아닐 수 있다. Transitive한 action이 주어진 variety를 *homogeneous space*라 부르며, 위의 사실은 homogeneous space가 언제나 $G/H$ 꼴로 나타남을 말해준다.
 
 ::: 예시 25
 이 예시에서는 $\operatorname{char}\mathbb{K} = 0$을 가정한다. $\GL(n;\mathbb{K})$는 Grassmannian $\Gr(k, n)$ 위에 $g \cdot W = g(W)$로 작용한다. ([§그라스만 다양체, ⁋정의 1](/ko/math/algebraic_varieties/grassmannians#def1)) 임의의 $k$차원 부분공간의 basis를 전체 공간의 basis로 확장할 수 있으므로 이 action은 transitive하다. Standard subspace $W_0 = \operatorname{span}(e_1, \ldots, e_k)$의 stabilizer는 $W_0$을 보존하는 가역행렬들, 곧 왼쪽 아래 $(n-k) \times k$ block이 $0$인 행렬들의 집합
@@ -468,7 +468,7 @@ $$\Gr(k, n) \cong \GL(n;\mathbb{K})/P$$
 
 $$\dim \Gr(k, n) = n^2 - \dim P = k(n-k)$$
 
-이고, 이는 [§그라스만 다양체, ⁋명제 5](/ko/math/algebraic_varieties/grassmannians#prop5)와 일치한다. $k = 1$인 경우가 $\mathbb{P}^{n-1} \cong \GL(n;\mathbb{K})/P$이다. 양의 characteristic에서도 같은 isomorphism이 성립하지만, 그것을 확인하려면 orbit map $\GL(n;\mathbb{K}) \rightarrow \Gr(k, n)$이 separable이라는 사실이 필요하므로 여기서는 [Spr]에 맡긴다.
+이고, 이는 [§그라스만 다양체, ⁋명제 5](/ko/math/algebraic_varieties/grassmannians#prop5)와 일치한다. $k = 1$인 경우가 $\mathbb{P}^{n-1} \cong \GL(n;\mathbb{K})/P$이다. Positive characteristic에서도 같은 isomorphism이 성립하지만, 그것을 확인하려면 orbit map $\GL(n;\mathbb{K}) \rightarrow \Gr(k, n)$이 separable이라는 사실이 필요하므로 여기서는 [Spr]에 맡긴다.
 :::
 
 ---

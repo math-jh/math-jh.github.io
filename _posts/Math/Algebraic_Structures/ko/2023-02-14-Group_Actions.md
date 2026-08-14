@@ -173,7 +173,7 @@ Group $G$가 집합 $E$에 act할 때, 임의의 $x\in E$에 대하여 $g^{-1}\c
 
 이제 우리는 집합 $E$ 위에 추가적인 구조가 주어진 경우를 생각한다. 가령 $E$ 또한 monoid 구조를 가진다 하고, 주어진 monoid $M$이 $E$ 위에 act한다 하면, $M$-action은 monoid homomorphism $M \rightarrow\End(E)=\End_\Mon(E)$로 주어진다. 
 
-특별히 group $G$가 자기 자신 위에 act하는 경우를 생각하자. Homomorphism $\rho:G\rightarrow\End(G)=\End_\Grp(G)$가 주어져 있다 하면, 전단사인 group homomorphism은 항상 group isomorphism이므로 ([§대수적 구조, ⁋정의 6](/ko/math/algebraic_structures/algebraic_structures#def6)) $G$가 자기 자신 위에 act한다면 이는 반드시 group homomorphism $G \rightarrow \Aut(G)$와 같은 형태로 나타나야 한다는 것을 안다.
+특별히 group $G$가 자기 자신 위에 act하는 경우를 생각하자. Homomorphism $\rho:G\rightarrow\End(G)=\End_\Grp(G)$가 주어져 있다 하면, bijective group homomorphism은 항상 group isomorphism이므로 ([§대수적 구조, ⁋정의 6](/ko/math/algebraic_structures/algebraic_structures#def6)) $G$가 자기 자신 위에 act한다면 이는 반드시 group homomorphism $G \rightarrow \Aut(G)$와 같은 형태로 나타나야 한다는 것을 안다.
 
 자기 자신 위에서 정의된 group action 중 특히 다음의 예시는 기억해둘 만한 가치가 있다.
 

@@ -138,7 +138,7 @@ $$d(x_m, x_n) = \left\lvert \frac1m - \frac1n \right\rvert \leq \frac1m + \frac1
 이라 Cauchy이다. 그러나 $X$ 안에는 이 점열의 극한이 없다. 만일 $x_n \rightarrow L \in (0,1)$이라면 $\mathbb{R}$에서 [명제 6](#prop6)의 극한 유일성에 의해 $L = 0$이어야 하는데 $0 \notin (0,1)$이기 때문이다. 따라서 $(0,1)$은 완비가 아니다. 반면 닫힌구간 $[0,1]$에서는 같은 점열이 $0$으로 수렴하며, 실제로 $[0,1]$은 완비이다. 닫힌구간은 그 극한들을 모두 품고 있기 때문이다.
 :::
 
-[예시 2](#ex2)의 연속함수 공간 sup 거리는 무한차원 거리공간의 대표적 예이며, 그 완비성이 해석학의 여러 존재 정리를 떠받친다. $C[a,b]$에 sup 거리 $d(f, g) = \sup_{x \in [a,b]} \lvert f(x) - g(x)\rvert$를 주면, 이 거리에서 $f_n \rightarrow f$라는 것은 $\sup_{x \in [a,b]} \lvert f_n(x) - f(x)\rvert \rightarrow 0$, 곧 $(f_n)$이 $f$로 *균등수렴*한다는 것과 정확히 같다. $(f_n)$이 sup 거리에서 Cauchy이면 각 점 $x$에서 $(f_n(x))$가 실수의 Cauchy 수열이라 점별 극한 $f(x)$가 존재하고, sup-Cauchy 조건에서 $f_n \rightarrow f$의 수렴이 균등하다. 균등수렴하는 연속함수열의 극한은 다시 연속이므로 $C[a,b]$의 모든 sup-Cauchy 함수열은 어떤 연속함수로 수렴하며, 따라서 $(C[a,b], d)$는 완비 거리공간이다.
+[예시 2](#ex2)의 연속함수 공간 sup 거리는 무한차원 거리공간의 대표적 예이며, 그 완비성이 해석학의 여러 존재 정리를 떠받친다. $C[a,b]$에 sup metric $d(f, g) = \sup_{x \in [a,b]} \lvert f(x) - g(x)\rvert$를 주면, 이 거리에서 $f_n \rightarrow f$라는 것은 $\sup_{x \in [a,b]} \lvert f_n(x) - f(x)\rvert \rightarrow 0$, 곧 $(f_n)$이 $f$로 *균등수렴*한다는 것과 정확히 같다. $(f_n)$이 sup 거리에서 Cauchy이면 각 점 $x$에서 $(f_n(x))$가 실수의 Cauchy 수열이라 점별 극한 $f(x)$가 존재하고, sup-Cauchy 조건에서 $f_n \rightarrow f$의 수렴이 균등하다. 균등수렴하는 연속함수열의 극한은 다시 연속이므로 $C[a,b]$의 모든 sup-Cauchy 함수열은 어떤 연속함수로 수렴하며, 따라서 $(C[a,b], d)$는 완비 거리공간이다.
 
 ## 응용: 닫힌 부분공간과 고정점
 

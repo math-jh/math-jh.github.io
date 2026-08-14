@@ -23,9 +23,9 @@ drift_needed: true
 ::: 정리 1 (Noether normalization lemma)
 Finitely generated $d$-dimensional $\mathbb{K}$-algebra $A$에 대하여, 다음의 부등식
 
-$$d_1>d_2>\cdots>d_m>0$$
+$$d_1>d_2>\cdots>d_m\geq 0$$
 
-을 만족하는 자연수들과, $\dim \mathfrak{a}_i=d_i$를 만족하는 $A$의 ideal들의 descending chain
+을 만족하는 음이 아닌 정수들과, $\dim \mathfrak{a}_i=d_i$를 만족하는 $A$의 ideal들의 descending chain
 
 $$\mathfrak{a}_1\subseteq \mathfrak{a}_2\subseteq\cdots\subseteq \mathfrak{a}_m$$
 
@@ -56,14 +56,16 @@ $$\tilde{\mathfrak{a}}_1\subseteq \tilde{\mathfrak{a}}_2\subseteq\cdots\subseteq
 
 $$\mathfrak{a}\subseteq \tilde{\mathfrak{a}}_1\subseteq \tilde{\mathfrak{a}}_2\subseteq\cdots\subseteq  \tilde{\mathfrak{a}}_m$$
 
-으로 볼 수 있으므로 주어진 주장을 polynomial ring $A=\mathbb{K}[\y_1,\ldots, \y_r]$에 대해서만 보이면 충분하다. 이 경우, [§매개계, ⁋따름정리 11](/ko/math/commutative_algebra/system_of_parameters#cor11)에 의하여 $r=d$여야 한다. 
+으로 볼 수 있으므로 주어진 주장을 polynomial ring $A=\mathbb{K}[\y_1,\ldots, \y_r]$에 대해서만 보이면 충분하다. 이 때 새로 끼워넣은 $\mathfrak{a}_0$의 dimension은 $d_0=\dim \mathfrak{a}_0=\dim A$이고, 환원된 상황에서 정리의 $d$ 자리에 오는 것은 새로운 ambient ring의 dimension, 곧 [§매개계, ⁋따름정리 11](/ko/math/commutative_algebra/system_of_parameters#cor11)의 첫째 결과가 주는 $\dim \mathbb{K}[\y_1,\ldots, \y_r]=r$이다. 따라서 아래에서는 $d=r$로 두고, 원래의 $\dim A$는 $d_0$로 적는다.
+
+Polynomial ring에 대한 결론을 알고 있다 하면 원래의 주장은 다음과 같이 따라온다. $\mathbb{K}[\y_1,\ldots, \y_r]$의 subring $B\cong \mathbb{K}[\x_1,\ldots, \x_r]$이 존재하여 $\mathbb{K}[\y_1,\ldots, \y_r]$이 finitely generated $B$-module이고 $\mathfrak{a}_0\cap B=(\x_{d_0+1},\ldots, \x_r)$, $\tilde{\mathfrak{a}}_i\cap B=(\x_{d_i+1},\ldots, \x_r)$이 성립한다 하자. Quotient map을 $\pi:\mathbb{K}[\y_1,\ldots, \y_r] \rightarrow A$라 하고 $\bar{B}=\pi(B)$라 하면, $\pi$를 $B$로 제한한 것의 kernel이 $\mathfrak{a}_0\cap B$이므로 $\bar{B}\cong B/(\mathfrak{a}_0\cap B)\cong \mathbb{K}[\x_1,\ldots, \x_{d_0}]$이고, $\mathbb{K}[\y_1,\ldots, \y_r]$이 $B$ 위에서 finite이므로 그 quotient인 $A$는 $\bar{B}$ 위에서 finite이다. 또, $b\in B$에 대하여 $\pi(b)\in \mathfrak{a}_i$인 것과 $b\in \tilde{\mathfrak{a}}_i$인 것이 동치이므로 $\mathfrak{a}_i\cap \bar{B}=\pi(\tilde{\mathfrak{a}}_i\cap B)$이고, $\x_{d_0+1},\ldots, \x_r$이 모두 $\pi$의 kernel에 속하므로 이는 $(\pi(\x_{d_i+1}),\ldots, \pi(\x_{d_0}))$과 같다. 즉 $\bar{B}$가 원래의 $A$에 대해 정리가 요구하는 subring이다.
 
 이제 정리의 원소들 $\x_i$들을 만들기 위해 우리는 우선 $\x_i'=\y_i$로 두고, 이들을 바꿔가며 주어진 조건을 만족하는 $\x_i$들을 찾을 것이다. 이를 위해 다음의 두 조건
 
 1. $A$는 finitely generated $B_e=\mathbb{K}[\x_1',\ldots, \x_e',\x_{e+1},\ldots, \x_d]$-module이다. 
 2. 각각의 $i$에 대하여 $\mathfrak{a}_i\cap B_e\supseteq(\x_k,\ldots, \x_d)$이 성립한다. 여기서 $k=\max(d_i+1, e+1)$이다. 
 
-을 만족하는 원소들 $\x_1',\ldots, \x_e', \x_{e+1},\ldots, \x_d$들이 주어졌다 하고, 이로부터 새로운 원소들 $\x_1',\ldots, \x_{e-1}'$ 그리고 $\x_e$를 찾아 위의 조건이 그대로 유지되도록 할 수 있다는 것을 보인다. 그럼 이 과정을 반복하여 마지막으로 얻어진 $B=B_{d_m}$이 원하는 조건을 만족한다는 것은 둘째 조건의 포함관계가 사실 등식이라는 것을 보이면 자명하며, 이는 양 변에 있는 $B$의 두 ideal들의 차원을 생각하면 당연하다. 
+을 만족하는 원소들 $\x_1',\ldots, \x_e', \x_{e+1},\ldots, \x_d$들이 주어졌다 하고, 이로부터 새로운 원소들 $\x_1',\ldots, \x_{e-1}'$ 그리고 $\x_e$를 찾아 위의 조건이 그대로 유지되도록 할 수 있다는 것을 보인다. 그럼 이 과정을 반복하여 마지막으로 얻어진 $B=B_{d_m}$이 원하는 조건을 만족한다는 것은 둘째 조건의 포함관계가 사실 등식이라는 것을 보이면 되며, 이는 다음과 같다. 우선 $A$가 finitely generated $B$-module이므로 [§정수적 확장, ⁋보조정리 4](/ko/math/commutative_algebra/integral_extension#lem4)에 의하여 $B\hookrightarrow A$는 integral extension이고, 따라서 [§차원, ⁋명제 4](/ko/math/commutative_algebra/Krull_dimension#prop4)에 의하여 $\dim(\mathfrak{a}_i\cap B)=\dim \mathfrak{a}_i=d_i$이다. 한편 $B=B_{d_m}$에 대한 둘째 조건은 $\mathfrak{a}_i\cap B\supseteq(\x_{d_i+1},\ldots, \x_d)$이므로, $R=B/(\x_{d_i+1},\ldots, \x_d)\cong \mathbb{K}[\x_1,\ldots, \x_{d_i}]$에서의 $\mathfrak{a}_i\cap B$의 image를 $J$라 하면 $B/(\mathfrak{a}_i\cap B)\cong R/J$이고, 특히 $\dim R/J=d_i$이다. 그런데 $\dim \mathfrak{a}_i=d_i$이므로 $\mathfrak{a}_i$는 proper ideal이고 따라서 $J$ 또한 $R$의 proper ideal이므로, 만일 $J\neq 0$이라면 $J$에 속하는 $0$이 아닌 원소 $g$는 unit이 아닌, 곧 상수가 아닌 다항식이다. 이제 $J$를 포함하는 임의의 prime ideal $\mathfrak{p}$는 $g$를 포함하므로 $(g)$를 포함하는 minimal prime ideal 중 $\mathfrak{p}$에 포함되는 것 $\mathfrak{q}$를 가지며, [§차원, ⁋정리 6](/ko/math/commutative_algebra/Krull_dimension#thm6)에 의하여 $\codim \mathfrak{q}\leq 1$인데 $R$이 domain이고 $g\neq 0$이므로 $\mathfrak{q}\neq(0)$, 곧 $\codim \mathfrak{q}=1$이다. 그럼 부등식 $\dim \mathfrak{q}+\codim \mathfrak{q}\leq \dim R=d_i$로부터 ([§차원, ⁋정의 2](/ko/math/commutative_algebra/Krull_dimension#def2), [§매개계, ⁋따름정리 11](/ko/math/commutative_algebra/system_of_parameters#cor11)) $\dim R/\mathfrak{p}\leq \dim \mathfrak{q}\leq d_i-1$이고, 이러한 $\mathfrak{p}$들에 대한 supremum을 취하면 $\dim R/J\leq d_i-1$이 되어 모순이다. 따라서 $J=0$이고, 곧 $\mathfrak{a}_i\cap B=(\x_{d_i+1},\ldots, \x_d)$이다. 
 
 이제 이 귀납법을 완성하기 위해, $d\geq e>d_m$을 만족하는 $e$에 대하여, 위의 두 조건을 만족하는 $\x_1',\ldots, \x_e', \x_{e+1},\ldots, \x_d$들이 주어졌다 하고, $i$가 $e>d_i$를 만족하는 것들 중 가장 작은 index라 가정하자. 그럼
 
@@ -73,7 +75,9 @@ $$\mathfrak{a}_i\cap \mathbb{K}[\x_1',\ldots, \x_e']\neq 0$$
 
 $$\mathfrak{a}_i\cap B_e\supseteq (\x_{e+1},\ldots, \x_d)$$
 
-이 성립하는데, 좌변의 ideal은 $d_i$-차원이고, 우변의 ideal의 차원은 $e$가 되어 모순이기 때문이다. 이제 $\x_e$를 위의 교집합에 속하는 아무 nonzero polynomial로 잡은 후, [보조정리 2](#lem2)를 사용하여 새로운 원소들 $\x_1',\ldots, \x_{e-1}'$들도 새로운 원소로 교체해주면 된다.
+이 성립하는데, 좌변의 ideal은 $d_i$-차원이고, 우변의 ideal의 차원은 $e$가 되어 모순이기 때문이다. 이제 $\x_e$를 위의 교집합에 속하는 아무 nonzero polynomial로 잡자. $\mathfrak{a}_i$가 proper ideal이므로 $\x_e$는 상수가 아니다. 여기서 $A$가 $B_e$ 위에서 finite이므로 [§차원, ⁋명제 4](/ko/math/commutative_algebra/Krull_dimension#prop4)에 의하여 $\dim B_e=\dim A=d$이고, $B_e$는 $d$개의 원소로 생성되는 $\mathbb{K}$-algebra이므로 $d$변수 polynomial ring의 quotient인데, $0$이 아닌 proper ideal로 quotient를 취하면 차원이 떨어진다는 앞의 논증에 의하여 이 quotient map의 kernel은 $0$이어야 한다. 즉 $\x_1',\ldots, \x_e',\x_{e+1},\ldots, \x_d$는 algebraically independent하고, 특히 $\mathbb{K}[\x_1',\ldots, \x_e']$가 polynomial ring이므로 여기에 $f=\x_e$로 두어 [보조정리 2](#lem2)를 적용할 수 있다. 그럼 새로운 원소들 $\x_1',\ldots, \x_{e-1}'$을 얻어 $\mathbb{K}[\x_1',\ldots, \x_e']$가 $\mathbb{K}[\x_1',\ldots, \x_{e-1}', \x_e]$ 위에서 finite이도록 할 수 있다.
+
+이렇게 얻어진 $B_{e-1}=\mathbb{K}[\x_1',\ldots, \x_{e-1}',\x_e,\x_{e+1},\ldots, \x_d]$가 위의 두 조건을 그대로 만족한다는 것은 다음과 같이 확인된다. 첫째 조건의 경우, $B_e$가 $B_{e-1}$ 위에서 finite이고 $A$가 $B_e$ 위에서 finite이므로 $A$는 $B_{e-1}$ 위에서도 finite이다. 둘째 조건의 경우 $B_{e-1}$에 대해 요구되는 것은 $\mathfrak{a}_j\cap B_{e-1}\supseteq(\x_k,\ldots, \x_d)$, $k=\max(d_j+1, e)$이므로 $j\geq i$와 $j<i$를 나누어 보면 된다. 우선 $j\geq i$이면 $d_j\leq d_i<e$이므로 $k=e$이고, $\x_e\in \mathfrak{a}_i\subseteq \mathfrak{a}_j$이며 $\x_{e+1},\ldots, \x_d$는 $B_e$에 대한 둘째 조건에 의해 이미 $\mathfrak{a}_j$에 속하므로 원하는 포함관계를 얻는다. 반면 $j<i$이면 $i$가 $e>d_i$를 만족하는 가장 작은 index라는 것에서 $d_j\geq e$이므로 $k=d_j+1$이고, 이 때 요구되는 generator $\x_{d_j+1},\ldots, \x_d$들은 모두 이번 단계에서 건드리지 않은 변수 $\x_{e+1},\ldots, \x_d$ 중에 있어 $B_{e-1}$에 속하며, 이들이 $\mathfrak{a}_j$에 속한다는 것이 곧 $B_e$에 대한 둘째 조건이다.
 :::
 
 ## 결과들
@@ -92,7 +96,7 @@ Finitely generated $\mathbb{K}$-algebra domain $A$와 그 prime ideal $\mathfrak
 $$\dim A/\mathfrak{p}+\codim\mathfrak{p}=\dim A$$
 :::
 ::: 증명
-부등식 $\dim A/\mathfrak{p}+\codim\mathfrak{p}\leq\dim A$는 임의의 ring에 대하여 성립하므로 ([§차원, ⁋정의 2](/ko/math/commutative_algebra/Krull_dimension#def2)), 반대 부등식만 보이면 된다. $n=\dim A$, $d=\dim A/\mathfrak{p}=\dim\mathfrak{p}$라 두자. [정리 1](#thm1)을 $A$의 ideal $\mathfrak{a}_1=\mathfrak{p}$ 하나로 이루어진 chain에 적용하면, $A$의 subring $B\cong\mathbb{K}[\x_1,\ldots, \x_n]$이 존재하여 $A$가 finitely generated $B$-module이고 $\mathfrak{p}\cap B=(\x_{d+1},\ldots, \x_n)$을 만족한다. 그럼 $B\hookrightarrow A$가 integral extension이므로 [§정수적 확장과 아이디얼, ⁋명제 1](/ko/math/commutative_algebra/lying_over_and_going_up#prop1)과 [§정수적 확장과 아이디얼, ⁋따름정리 4](/ko/math/commutative_algebra/lying_over_and_going_up#cor4)에 의하여 $\codim_A\mathfrak{p}=\codim_B(\mathfrak{p}\cap B)$이다.
+부등식 $\dim A/\mathfrak{p}+\codim\mathfrak{p}\leq\dim A$는 임의의 ring에 대하여 성립하므로 ([§차원, ⁋정의 2](/ko/math/commutative_algebra/Krull_dimension#def2)), 반대 부등식만 보이면 된다. $n=\dim A$, $d=\dim A/\mathfrak{p}=\dim\mathfrak{p}$라 두자. [정리 1](#thm1)을 $A$의 ideal $\mathfrak{a}_1=\mathfrak{p}$ 하나로 이루어진 chain에 적용하면, $A$의 subring $B\cong\mathbb{K}[\x_1,\ldots, \x_n]$이 존재하여 $A$가 finitely generated $B$-module이고 $\mathfrak{p}\cap B=(\x_{d+1},\ldots, \x_n)$을 만족한다. 그럼 $B\hookrightarrow A$는 integral extension이다. 여기서 $\mathfrak{p}$에서 시작하는 $A$의 prime ideal들의 chain을 $B$로 contract하면 [§정수적 확장과 아이디얼, ⁋따름정리 4](/ko/math/commutative_algebra/lying_over_and_going_up#cor4)에 의하여 포함관계가 strict하게 유지되므로 $\codim_A\mathfrak{p}\leq\codim_B(\mathfrak{p}\cap B)$를 얻는다. 우리에게 필요한 반대 방향은 $\mathfrak{p}\cap B$에서 시작하는 $B$의 chain을 $\mathfrak{p}$ 아래로 들어올리는 것으로 going-down에 해당하는데, $B$는 polynomial ring이라 UFD이고 ([\[환론\] §다항식환, ⁋정리 16](/ko/math/ring_theory/polynomial_rings#thm16)) 따라서 normal domain이며 ([§정수적 확장, ⁋명제 9](/ko/math/commutative_algebra/integral_extension#prop9)) $A$는 가정에 의해 domain이므로, [§정수적 확장과 아이디얼, ⁋정리 6](/ko/math/commutative_algebra/lying_over_and_going_up#thm6)을 반복해서 적용하면 $\mathfrak{p}\cap B$ 아래의 chain이 주어질 때마다 그 위에 놓인 $\mathfrak{p}$ 아래의 chain을 얻는다. 이 chain의 원소들은 서로 다른 prime ideal로 contract되므로 다시 strict이며, 따라서 $\codim_A\mathfrak{p}=\codim_B(\mathfrak{p}\cap B)$이다.
 
 이제 polynomial ring $B=\mathbb{K}[\x_1,\ldots, \x_n]$에서 ideal $(\x_{d+1},\ldots, \x_n)$의 height를 계산하자. Chain
 

@@ -1,7 +1,7 @@
 ---
-title: "Dolbeault 코호몰로지"
-description: "복소다양체 위에서 외미분이 d = ∂ + ∂̄로 갈라지는 구조를 세우고, d² = 0으로부터 ∂² = ∂̄² = 0과 ∂∂̄ + ∂̄∂ = 0을 유도한다. ∂̄-복합체로 Dolbeault 코호몰로지 H^{p,q}를 정의하고, ∂̄-Poincaré 보조정리(Dolbeault–Grothendieck)를 거쳐 Dolbeault 정리 H^{p,q} ≅ H^q(X, Ω^p)를 fine resolution으로 증명한다. ℂ^n과 콤팩트 Riemann 곡면의 Hodge 수를 예시로 계산한다."
-excerpt: "del과 del-bar 연산자, d = ∂ + ∂̄ 분해, Dolbeault 복합체, Dolbeault 코호몰로지, Hodge 수, ∂̄-Poincaré 보조정리, Dolbeault–Grothendieck, Dolbeault 정리, fine resolution, 복소정칙 p-형식 층, Riemann 곡면 genus"
+title: "돌보 코호몰로지"
+description: "복소다양체 위에서 외미분이 d = ∂ + ∂̄로 갈라지는 구조를 세우고, d² = 0으로부터 ∂² = ∂̄² = 0과 ∂∂̄ + ∂̄∂ = 0을 유도한다. ∂̄-복합체로 Dolbeault cohomology H^{p,q}를 정의하고, ∂̄-Poincaré 보조정리(Dolbeault–Grothendieck)를 거쳐 Dolbeault 정리 H^{p,q} ≅ H^q(X, Ω^p)를 fine resolution으로 증명한다. ℂ^n과 콤팩트 Riemann 곡면의 Hodge 수를 예시로 계산한다."
+excerpt: "del과 del-bar 연산자, d = ∂ + ∂̄ 분해, Dolbeault 복합체, Dolbeault cohomology, Hodge 수, ∂̄-Poincaré 보조정리, Dolbeault–Grothendieck, Dolbeault 정리, fine resolution, 복소정칙 p-형식 층, Riemann 곡면 genus"
 
 categories: [Math / Complex Geometry]
 permalink: /ko/math/complex_geometry/dolbeault_cohomology
@@ -20,7 +20,7 @@ published: false
 
 ## $\partial$와 $\bar\partial$ 연산자
 
-Complex manifold $X$ 위에서 exterior derivative $d$는 복소화 형식에도 $\mathbb{C}$-선형으로 확장된다. 국소 holomorphic 좌표 $z_1, \ldots, z_n$에서 $(p,q)$-형식은
+Complex manifold $X$ 위에서 exterior derivative $d$는 복소화 형식에도 $\mathbb{C}$-선형으로 확장된다. 국소 holomorphic coordinate $z_1, \ldots, z_n$에서 $(p,q)$-형식은
 
 $$
 \omega = \sum_{\lvert I \rvert = p,\ \lvert J \rvert = q} f_{IJ}\dd{z_I} \wedge \dd{\bar{z}_J}, \qquad
@@ -106,7 +106,7 @@ $$
 
 각 $p$를 고정하고 $q$만 변화시키면, 세로 방향 arrow들만 모아 $\bar\partial^2 = 0$인 복합체를 얻는다. 이것이 Dolbeault 복합체이다.
 
-## Dolbeault 코호몰로지
+## 돌보 코호몰로지
 
 고정된 $p$에 대하여 $\bar\partial$는 $\Omega^{p,q}$들을 $q$에 대해 한 칸씩 밀어 올리며 $\bar\partial^2 = 0$을 만족하므로, 이들은 cochain complex를 이룬다.
 
@@ -123,7 +123,7 @@ $$
 H^{p,q}_{\bar\partial}(X) = \frac{\ker\left( \bar\partial : \Omega^{p,q}(X) \rightarrow \Omega^{p,q+1}(X) \right)}{\Img\left( \bar\partial : \Omega^{p,q-1}(X) \rightarrow \Omega^{p,q}(X) \right)}
 $$
 
-를 $X$의 *Dolbeault cohomology<sub>Dolbeault 코호몰로지</sub>*라 한다. 그 복소차원 $h^{p,q}(X) = \dim_{\mathbb{C}} H^{p,q}_{\bar\partial}(X)$를 *Hodge number<sub>호지 수</sub>*라 한다.
+를 $X$의 *Dolbeault cohomology<sub>돌보 코호몰로지</sub>*라 한다. 그 복소차원 $h^{p,q}(X) = \dim_{\mathbb{C}} H^{p,q}_{\bar\partial}(X)$를 *Hodge number<sub>호지 수</sub>*라 한다.
 :::
 
 $\bar\partial\omega = 0$인 형식을 *$\bar\partial$-closed<sub>$\bar\partial$-닫힌</sub>* 형식, $\omega = \bar\partial\eta$ 꼴인 형식을 *$\bar\partial$-exact<sub>$\bar\partial$-완전</sub>* 형식이라 한다. Dolbeault cohomology는 $\bar\partial$-closed 형식을 $\bar\partial$-exact 형식으로 나눈 것이며, de Rham cohomology가 $d$에 대해 측정하는 것과 같은 종류의 양을 $\bar\partial$에 대해 측정한다. 분모와 분자가 모두 잘 정의됨은 $\bar\partial^2 = 0$에서 따라온다. 곧 exact 형식 $\bar\partial\eta$는 $\bar\partial(\bar\partial\eta) = 0$이므로 항상 닫혀 있어, $\Img \subseteq \ker$이고 quotient가 의미를 가진다.
@@ -173,7 +173,7 @@ $$
 \frac{\partial u_1}{\partial \bar{\zeta}}(\zeta) = \frac{1}{2\pi i} \int_{\mathbb{C}} \frac{1}{s} \frac{\partial (\chi f)}{\partial \bar{\zeta}}(\zeta + s)\dd{s} \wedge \dd{\bar{s}} = \frac{1}{2\pi i} \int_{D'} \frac{1}{w - \zeta} \frac{\partial (\chi f)}{\partial \bar{w}}(w)\dd{w} \wedge \dd{\bar{w}}
 $$
 
-이다 (다시 $s = w - \zeta$로 되돌리고, $\chi f$의 support를 품는 큰 원판 $D'$로 적분영역을 줄였다). 이제 일반화된 Cauchy 적분공식을 적용한다. Smooth 함수 $g$와 영역 $D'$에 대하여 Cauchy–Pompeiu 공식
+이다 (다시 $s = w - \zeta$로 되돌리고, $\chi f$의 support를 품는 큰 원판 $D'$로 적분영역을 줄였다). 이제 일반화된 Cauchy 적분공식을 적용한다. Smooth function $g$와 영역 $D'$에 대하여 Cauchy–Pompeiu 공식
 
 $$
 g(\zeta) = \frac{1}{2\pi i} \int_{\partial D'} \frac{g(w)}{w - \zeta}\dd{w} + \frac{1}{2\pi i} \int_{D'} \frac{1}{w - \zeta} \frac{\partial g}{\partial \bar{w}}\dd{w} \wedge \dd{\bar{w}}
@@ -289,7 +289,7 @@ $$
 0 \longrightarrow \Omega^p \longrightarrow \mathcal{A}^{p,0} \xrightarrow{\ \bar\partial\ } \mathcal{A}^{p,1} \xrightarrow{\ \bar\partial\ } \cdots
 $$
 
-는 $\Omega^p$의 분해이고, 각 $\mathcal{A}^{p,q}$는 fine sheaf라 $\Gamma(X, -)$-acyclic하다 (fine sheaf는 모든 양의 degree sheaf cohomology가 소멸한다). 따라서 이는 acyclic resolution이다.
+는 $\Omega^p$의 분해이고, 각 $\mathcal{A}^{p,q}$는 fine sheaf라 $\Gamma(X, -)$-acyclic하다 (fine sheaf는 모든 positive degree sheaf cohomology가 소멸한다). 따라서 이는 acyclic resolution이다.
 
 Acyclic resolution에 대한 추상 de Rham 정리는, $0 \rightarrow \mathcal{F} \rightarrow \mathcal{A}^0 \rightarrow \mathcal{A}^1 \rightarrow \cdots$이 $\Gamma(X,-)$-acyclic resolution이면
 
@@ -318,7 +318,7 @@ $$
 
 가 성립하기를 기대할 수 있다. 그러나 이 분해는 일반적인 complex manifold에서는 성립하지 않는다. 문제는 $d = \partial + \bar\partial$의 닫힘조건 $\dd{\omega} = 0$이 $\partial\omega = 0$과 $\bar\partial\omega = 0$을 따로 함의하지 않는다는 데 있다. $d$-closed 형식을 차수별로 쪼개면 각 조각이 $\bar\partial$-닫힌지가 보장되지 않으므로, $d$-cohomology class를 $\bar\partial$-cohomology class들로 자연히 분해할 수 없다.
 
-이 분해가 성립하려면 우선 $X$가 콤팩트해야 하고, 그 위에 추가 구조가 더 필요하다. 콤팩트하고 적절한 추가 기하구조를 갖춘 경우에는 위 직합 분해(Hodge 분해)와 더불어 $H^{p,q}$와 $H^{q,p}$ 사이의 켤레 대칭이 성립하며, 그 결과 de Rham Betti 수가 Hodge 수들의 합 $b_k = \sum_{p+q=k} h^{p,q}$로 쪼개진다. 일반적인 콤팩트 complex manifold에서는 이 등식이 깨지고 부등식 $b_k \leq \sum_{p+q=k} h^{p,q}$만 남는 것이 보통이다. 추가 구조가 무엇이고 그 아래에서 분해가 왜 성립하는지는 별도의 이론을 요구한다.
+이 분해가 성립하려면 우선 $X$가 콤팩트해야 하고, 그 위에 추가 구조가 더 필요하다. 콤팩트하고 적절한 추가 기하구조를 갖춘 경우에는 위 직합 분해(Hodge decomposition)와 더불어 $H^{p,q}$와 $H^{q,p}$ 사이의 켤레 대칭이 성립하며, 그 결과 de Rham Betti 수가 Hodge 수들의 합 $b_k = \sum_{p+q=k} h^{p,q}$로 쪼개진다. 일반적인 콤팩트 complex manifold에서는 이 등식이 깨지고 부등식 $b_k \leq \sum_{p+q=k} h^{p,q}$만 남는 것이 보통이다. 추가 구조가 무엇이고 그 아래에서 분해가 왜 성립하는지는 별도의 이론을 요구한다.
 
 ## 예시
 
@@ -344,7 +344,7 @@ $X$를 genus $g$의 콤팩트 connected Riemann 곡면이라 하자. 복소차�
 정리하면 콤팩트 Riemann 곡면의 Hodge 수는 $h^{0,0} = h^{1,1} = 1$, $h^{1,0} = h^{0,1} = g$이다. 한편 위상적으로 $X$의 Betti 수는 $b_0 = b_2 = 1$, $b_1 = 2g$이므로, $b_1 = h^{1,0} + h^{0,1} = 2g$로 degree $1$에서 Hodge 분해가 실제로 성립함을 확인할 수 있다. 곧 Riemann 곡면에서는 앞 절에서 일반적으로 깨진다고 한 분해가 회복되며, 이는 복소차원 $1$ 콤팩트 complex manifold가 갖추는 추가 기하구조의 한 귀결이다.
 :::
 
-이 두 예시는 Dolbeault cohomology의 두 얼굴을 보여준다. $\mathbb{C}^n$에서는 $\bar\partial$-Poincaré가 모든 고차 cohomology를 죽여 순전히 국소적인 holomorphic 형식만 남고, 콤팩트 곡면에서는 콤팩트성과 Serre duality가 맞물려 Hodge 수가 genus라는 위상적 불변량으로 결정된다. 전자는 국소 자명성을, 후자는 대역적 강성을 대표한다. 일반 차원의 콤팩트 complex manifold에서 Hodge 수들이 만드는 대칭과 그 위상적 의미는 추가 기하구조를 갖춘 manifold에서 비로소 온전히 드러난다.
+이 두 예시는 Dolbeault cohomology의 두 얼굴을 보여준다. $\mathbb{C}^n$에서는 $\bar\partial$-Poincaré가 모든 고차 cohomology를 죽여 순전히 local holomorphic 형식만 남고, 콤팩트 곡면에서는 콤팩트성과 Serre duality가 맞물려 Hodge 수가 genus라는 위상적 불변량으로 결정된다. 전자는 국소 자명성을, 후자는 대역적 강성을 대표한다. 일반 차원의 콤팩트 complex manifold에서 Hodge 수들이 만드는 대칭과 그 위상적 의미는 추가 기하구조를 갖춘 manifold에서 비로소 온전히 드러난다.
 
 ---
 

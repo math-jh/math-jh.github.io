@@ -1,7 +1,7 @@
 ---
 title: "거의 복소구조"
 description: "실벡터다발의 자기준동형 J로서 J²=-id를 만족하는 거의 복소구조를 정의하고, 복소다양체의 표준 J가 그 예임을 보인다. J의 ±i 고유공간 분해로 복소화 접다발을 (1,0)·(0,1) 부분으로 나누고 (p,q)-형식의 분해를 얻는다. Nijenhuis 텐서로 적분가능성을 특징짓고, 그 소멸이 복소구조의 존재와 동치라는 Newlander–Nirenberg 정리를 서술한다."
-excerpt: "거의 복소구조, J²=-id, 거의 복소다양체, 복소화 접다발, T^{1,0}, (p,q)-형식, 적분가능성, Nijenhuis 텐서, involutive 분포, Newlander–Nirenberg 정리, S^6, S^4"
+excerpt: "거의 복소구조, J²=-id, 거의 복소다양체, 복소화 접다발, T^{1,0}, (p,q)-형식, 적분가능성, Nijenhuis 텐서, involutive distribution, Newlander–Nirenberg 정리, S^6, S^4"
 
 categories: [Math / Complex Geometry]
 permalink: /ko/math/complex_geometry/almost_complex_structures
@@ -14,7 +14,7 @@ weight: 2
 published: false
 ---
 
-Complex manifold는 holomorphic transition function을 갖는 좌표계로 정의되었고, 그 강성의 거의 모든 출처가 이 holomorphicity였다 ([§복소다양체, ⁋정의 3](/ko/math/complex_geometry/complex_manifolds#def3)). 그러나 복소구조가 tangent space 수준에서 무엇을 하는지는 좌표계의 언어만으로는 잘 보이지 않는다. 각 점에서 holomorphic 좌표 $z_j = x_j + i y_j$의 곱셈 $i$는 실 tangent space $T_p M$ 위의 한 선형사상, 곧 $\partial/\partial x_j$를 $\partial/\partial y_j$로, $\partial/\partial y_j$를 $-\partial/\partial x_j$로 보내는 morphism으로 나타난다. 이 morphism을 $J_p$라 하면 $J_p^2 = -\id$이고, 점이 변할 때 $J_p$는 매끄럽게 변한다. 이렇게 추출된 자료 $J$가 거의 복소구조이다.
+Complex manifold는 holomorphic transition function을 갖는 좌표계로 정의되었고, 그 강성의 거의 모든 출처가 이 holomorphicity였다 ([§복소다양체, ⁋정의 3](/ko/math/complex_geometry/complex_manifolds#def3)). 그러나 복소구조가 tangent space 수준에서 무엇을 하는지는 좌표계의 언어만으로는 잘 보이지 않는다. 각 점에서 holomorphic coordinate $z_j = x_j + i y_j$의 곱셈 $i$는 실 tangent space $T_p M$ 위의 한 선형사상, 곧 $\partial/\partial x_j$를 $\partial/\partial y_j$로, $\partial/\partial y_j$를 $-\partial/\partial x_j$로 보내는 morphism으로 나타난다. 이 morphism을 $J_p$라 하면 $J_p^2 = -\id$이고, 점이 변할 때 $J_p$는 매끄럽게 변한다. 이렇게 추출된 자료 $J$가 거의 복소구조이다.
 
 이 글의 목표는 거의 복소구조를 복소구조와 독립적으로 정의하고, 복소구조에서 오는 $J$가 이를 만족함을 보인 뒤, 거꾸로 어떤 $J$가 복소구조에서 오는가 하는 *적분가능성* 물음에 답하는 것이다. 답의 핵심은 Nijenhuis 텐서의 소멸이며, 이것이 복소구조의 존재와 동치라는 Newlander–Nirenberg 정리가 이 글의 정점이다. 거의 복소구조는 복소구조보다 약하므로 위상적 제약만으로 존재 여부가 갈리는 일도 있으며, 짝수차원이라도 거의 복소구조를 전혀 갖지 못하는 manifold가 있다는 사실도 함께 다룬다.
 
@@ -52,10 +52,10 @@ $$
 
 ## 복소다양체의 표준 거의 복소구조
 
-Complex manifold $M$은 실차원 $2n$의 smooth manifold이기도 하다. Holomorphic 좌표 $z_j = x_j + i y_j$가 주는 실좌표 $(x_1, y_1, \ldots, x_n, y_n)$에서, 곱셈 $i$를 tangent space 위의 선형사상으로 옮긴 것이 표준 거의 복소구조이다.
+Complex manifold $M$은 실차원 $2n$의 smooth manifold이기도 하다. Holomorphic coordinate $z_j = x_j + i y_j$가 주는 실좌표 $(x_1, y_1, \ldots, x_n, y_n)$에서, 곱셈 $i$를 tangent space 위의 선형사상으로 옮긴 것이 표준 거의 복소구조이다.
 
 ::: 명제 3
-$M$을 complex manifold라 하고, 각 점 $p$에서 holomorphic 좌표 $z_j = x_j + i y_j$에 대하여 $T_p M$ 위의 선형사상 $J_p$를
+$M$을 complex manifold라 하고, 각 점 $p$에서 holomorphic coordinate $z_j = x_j + i y_j$에 대하여 $T_p M$ 위의 선형사상 $J_p$를
 
 $$
 J_p\!\left( \frac{\partial}{\partial x_j} \right) = \frac{\partial}{\partial y_j}, \qquad
@@ -75,7 +75,7 @@ $$
 
 이므로 기저 위에서 $J_p^2 = -\id$이고, 선형성으로 $T_p M$ 전체에서 성립한다. 매끄러움은 $J$의 성분이 좌표기저에 대해 상수($0$ 또는 $\pm 1$)이므로 자명하다.
 
-좌표 무관성을 보인다. 다른 holomorphic 좌표 $w_k = u_k + i v_k$를 잡자. Wirtinger 미분으로 표현하면, $J_p$는 $\partial/\partial z_j = \frac{1}{2}(\partial/\partial x_j - i\, \partial/\partial y_j)$에 대하여
+좌표 무관성을 보인다. 다른 holomorphic coordinate $w_k = u_k + i v_k$를 잡자. Wirtinger 미분으로 표현하면, $J_p$는 $\partial/\partial z_j = \frac{1}{2}(\partial/\partial x_j - i\, \partial/\partial y_j)$에 대하여
 
 $$
 J_p\!\left( \frac{\partial}{\partial z_j} \right) = i\, \frac{\partial}{\partial z_j}, \qquad

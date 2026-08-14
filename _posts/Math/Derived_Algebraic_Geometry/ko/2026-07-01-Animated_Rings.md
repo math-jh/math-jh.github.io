@@ -25,7 +25,7 @@ published: false
 Homotopy 이론적 정련의 출발점은 대상을 하나의 고정된 집합이나 모듈이 아니라, 첨자 위에서 정합적으로 붙은 대상들의 열, 곧 *simplicial* 대상으로 보는 것이다. 그 첨자를 지배하는 것이 다음의 조합적 범주이다.
 
 ::: 정의 1
-*단체 첨자 범주<sub>simplicial index category</sub>* $\Delta$는 대상이 각 정수 $n\geq0$에 대한 유한 ordered set $[n]=\{0<1<\cdots<n\}$이고, morphism이 순서를 보존하는 함수인 범주이다. 범주 $\mathcal{C}$에서의 *simplicial object<sub>단체 대상</sub>*란 functor $X:\Delta^{\op}\rightarrow\mathcal{C}$를 뜻하며, $X_n=X([n])$이라 적는다. $\mathcal{C}=\Set$일 때 이를 *simplicial set<sub>단체 집합</sub>*, $\mathcal{C}$가 $A$-module들의 범주일 때 *simplicial module<sub>단체 가군</sub>*이라 부른다.
+*단체 첨자 범주<sub>simplicial index category</sub>* $\Delta$는 대상이 각 정수 $n\geq0$에 대한 finite ordered set $[n]=\{0<1<\cdots<n\}$이고, morphism이 순서를 보존하는 함수인 범주이다. 범주 $\mathcal{C}$에서의 *simplicial object<sub>단체 대상</sub>*란 functor $X:\Delta^{\op}\rightarrow\mathcal{C}$를 뜻하며, $X_n=X([n])$이라 적는다. $\mathcal{C}=\Set$일 때 이를 *simplicial set<sub>단체 집합</sub>*, $\mathcal{C}$가 $A$-module들의 범주일 때 *simplicial module<sub>단체 가군</sub>*이라 부른다.
 
 $\Delta$의 morphism은 $i$번째 원소를 건너뛰는 단사 *coface<sub>여면</sub>* $\delta^i:[n-1]\rightarrow[n]$과 $i$번째 원소를 겹치는 전사 *codegeneracy<sub>여퇴화</sub>* $\sigma^i:[n+1]\rightarrow[n]$으로 생성되므로, simplicial object $X$는 그 image $X_n$들과 함께 *face map<sub>면 사상</sub>* $d_i=X(\delta^i):X_n\rightarrow X_{n-1}$과 *degeneracy map<sub>퇴화 사상</sub>* $s_i=X(\sigma^i):X_n\rightarrow X_{n+1}$ ($0\leq i\leq n$)으로 완전히 결정되며, 이들은 *simplicial identity<sub>단체 항등식</sub>*, 곧 face 사이의 $d_id_j=d_{j-1}d_i$ ($i<j$), face와 degeneracy 사이의 $d_is_j=s_{j-1}d_i$ ($i<j$)와 $d_js_j=d_{j+1}s_j=\id$와 $d_is_j=s_jd_{i-1}$ ($i>j+1$), 그리고 degeneracy 사이의 $s_is_j=s_{j+1}s_i$ ($i\leq j$)를 만족한다.
 :::
@@ -54,7 +54,7 @@ Inverse functor $\Gamma:\operatorname{Ch}_{\geq0}(A)\rightarrow\operatorname{sMo
 
 $$\Gamma(C)_n=\bigoplus_{[n]\twoheadrightarrow[k]}C_k$$
 
-로 두는데, 여기서 direct sum은 $\Delta$의 모든 전사 $\eta:[n]\rightarrow[k]$ 위에서 취한다. Simplicial 구조는 $\Delta$의 임의의 morphism을 (단사)$\circ$(전사)로 유일하게 분해하는 성질과 $C$의 미분을 사용하여 정의한다. $N\circ\Gamma\cong\id$은 정의상 곧바로 나오고, $\Gamma\circ N\cong\id$은 각 $M_n$이 그 normalization 조각들의 direct sum $M_n\cong\bigoplus_{\eta:[n]\twoheadrightarrow[k]}N(M)_k$로 분해된다는 사실, 곧 *Eilenberg–Zilber 분해* 또는 Moore 분해로부터 나온다. 이 direct sum decomposition은 degeneracy들이 서로 독립적으로 image를 채운다는 조합적 관찰에서 귀납적으로 세워진다. Homotopy의 대응은 두 functor가 모두 텐서-hom 수반 구조를 보존함으로부터 따르며, 자세한 구성은 ([Qui], [Stacks, Simplicial Methods])에 있다.
+로 두는데, 여기서 direct sum은 $\Delta$의 모든 전사 $\eta:[n]\rightarrow[k]$ 위에서 취한다. Simplicial 구조는 $\Delta$의 임의의 morphism을 (단사)$\circ$(전사)로 유일하게 분해하는 성질과 $C$의 미분을 사용하여 정의한다. $N\circ\Gamma\cong\id$은 정의상 곧바로 나오고, $\Gamma\circ N\cong\id$은 각 $M_n$이 그 normalization 조각들의 direct sum $M_n\cong\bigoplus_{\eta:[n]\twoheadrightarrow[k]}N(M)_k$로 분해된다는 사실, 곧 *Eilenberg–Zilber decomposition* 또는 Moore 분해로부터 나온다. 이 direct sum decomposition은 degeneracy들이 서로 독립적으로 image를 채운다는 조합적 관찰에서 귀납적으로 세워진다. Homotopy의 대응은 두 functor가 모두 텐서-hom adjoint 구조를 보존함으로부터 따르며, 자세한 구성은 ([Qui], [Stacks, Simplicial Methods])에 있다.
 :::
 
 Dold–Kan 대응은 이 글의 전략 전체를 떠받친다. Simplicial module이라는 homotopy 이론적 대상이 connective 사슬 복합체라는 순수 대수적 대상과 완전히 같은 정보를 담으므로, 우리는 이후 simplicial 분해와 사슬 복합체를 자유롭게 오갈 수 있다. 특히 뒤에서 여접 복합체를 simplicial 분해로 정의하면서도 그 결과를 derived category $D(B)$의 한 대상으로 읽을 수 있는 것이 바로 이 대응 덕분이다 ([\[호몰로지 대수학\] §유도카테고리](/ko/math/homological_algebra/derived_categories)).
@@ -106,7 +106,7 @@ $$B\otimes_A^{\mathbb{L}}C=B\amalg_AC$$
 
 {% diagram Math/Derived_Algebraic_Geometry/Animated_Rings-1.svg width="8.24em" alt="유도 tensor product의 homotopy pushout" %}
 
-위 사각형은 ordinary pushout 사각형과 형태가 같지만, 오른쪽 아래 모서리가 homotopy pushout이라는 점에서 다르다. Free 분해 $P_\bullet\rightarrow B$의 각 항이 polynomial $A$-algebra이므로 $P_n\otimes_AC$는 $C$ 위의 polynomial algebra이고, 따라서 $P_\bullet\otimes_AC$는 다시 free simplicial $C$-algebra가 되어 그 homotopy가 잘 정의된다. 이 유도된 연산이 classical tensor product와 어떻게 갈라지는지는 곧바로 homotopy group으로 읽힌다.
+위 사각형은 ordinary pushout 사각형과 형태가 같지만, 오른쪽 아래 모서리가 homotopy pushout이라는 점에서 다르다. Free resolution $P_\bullet\rightarrow B$의 각 항이 polynomial $A$-algebra이므로 $P_n\otimes_AC$는 $C$ 위의 polynomial algebra이고, 따라서 $P_\bullet\otimes_AC$는 다시 free simplicial $C$-algebra가 되어 그 homotopy가 잘 정의된다. 이 유도된 연산이 classical tensor product와 어떻게 갈라지는지는 곧바로 homotopy group으로 읽힌다.
 
 ::: 명제 8
 Ordinary $A$-algebra $B,C$에 대하여, 유도 tensor product의 homotopy group은 Tor로 주어진다.
@@ -126,7 +126,7 @@ $$\pi_n(P_\bullet\otimes_AC)=H_n\bigl(N(P_\bullet)\otimes_AC\bigr)=\Tor_n^A(B,C)
 곧 유도 tensor product는 classical tensor product를 $\pi_0$으로 복원하면서, 그 위에 $\Tor$를 higher homotopy로 자동으로 실어 나른다. 이것이 "Tor가 처음부터 내장되었다"는 말의 정확한 의미이다. 이 현상의 가장 깨끗한 사례는 한 점을 자기 자신과 유도적으로 교차시킬 때 나타난다.
 
 ::: 예시 9 (점의 유도 자기교차)
-$A=k[\x]$ 위에서 원점의 coordinate ring $k=k[\x]/(\x)$을 자기 자신과 유도적으로 텐서한 $k\otimes_{k[\x]}^{\mathbb{L}}k$를 계산한다. $\x$는 $k[\x]$의 nonzerodivisor이므로, [\[호몰로지 대수학\] §Ext와 Tor, ⁋정의 7](/ko/math/homological_algebra/ext_and_tor#def7)의 Koszul 분해
+$A=k[\x]$ 위에서 원점의 coordinate ring $k=k[\x]/(\x)$을 자기 자신과 유도적으로 텐서한 $k\otimes_{k[\x]}^{\mathbb{L}}k$를 계산한다. $\x$는 $k[\x]$의 nonzerodivisor이므로, [\[호몰로지 대수학\] §Ext와 Tor, ⁋정의 7](/ko/math/homological_algebra/ext_and_tor#def7)의 Koszul resolution
 
 $$0\longrightarrow k[\x]\overset{\times\x}{\longrightarrow}k[\x]\longrightarrow k\longrightarrow0$$
 
@@ -143,10 +143,10 @@ $$\pi_\ast\bigl(k\otimes_{k[\x]}^{\mathbb{L}}k\bigr)\cong\Lambda_k[\varepsilon],
 
 ## 완전한 여접 복합체
 
-이제 목표였던 여접 복합체를 구성한다. Naive 여접 복합체는 $B$를 polynomial algebra의 quotient로 한 번 표현한 뒤 conormal sequence의 두 항을 취한 것이었다 ([\[가환대수학\] §미분, ⁋정의 10](/ko/math/commutative_algebra/differentials#def10)). 완전한 여접 복합체는 그 "한 번의 표현"을 simplicial 자유 분해로 승격하여, Kähler 미분을 각 항에서 취한 뒤 normalize한다.
+이제 목표였던 여접 복합체를 구성한다. Naive 여접 복합체는 $B$를 polynomial algebra의 quotient로 한 번 표현한 뒤 conormal sequence의 두 항을 취한 것이었다 ([\[가환대수학\] §미분, ⁋정의 10](/ko/math/commutative_algebra/differentials#def10)). 완전한 여접 복합체는 그 "한 번의 표현"을 simplicial 자유 분해로 승격하여, Kähler differential을 각 항에서 취한 뒤 normalize한다.
 
 ::: 정의 10
-$A$-algebra $B$에 대하여, 각 항 $P_n$이 polynomial $A$-algebra이고 약한 동치 $P_\bullet\overset{\sim}{\rightarrow}B$를 이루는 free simplicial 분해를 택하자 (곧 $\pi_0(P_\bullet)=B$, $\pi_{>0}(P_\bullet)=0$). 이때 $B$의 $A$ 위에서의 *cotangent complex<sub>여접 복합체</sub>* $L_{B/A}$는 각 항의 Kähler 미분을 $B$로 base change한 simplicial $B$-module
+$A$-algebra $B$에 대하여, 각 항 $P_n$이 polynomial $A$-algebra이고 약한 동치 $P_\bullet\overset{\sim}{\rightarrow}B$를 이루는 free simplicial 분해를 택하자 (곧 $\pi_0(P_\bullet)=B$, $\pi_{>0}(P_\bullet)=0$). 이때 $B$의 $A$ 위에서의 *cotangent complex<sub>여접 복합체</sub>* $L_{B/A}$는 각 항의 Kähler differential을 $B$로 base change한 simplicial $B$-module
 
 $$L_{B/A}=\Omega_{P_\bullet/A}\otimes_{P_\bullet}B$$
 
@@ -156,7 +156,7 @@ $$L_{B/A}=\Omega_{P_\bullet/A}\otimes_{P_\bullet}B$$
 각 $P_n$이 polynomial algebra이므로 $\Omega_{P_n/A}$는 free $P_n$-module이고, 따라서 $\Omega_{P_n/A}\otimes_{P_n}B$는 free $B$-module이다. 곧 $L_{B/A}$는 각 degree에서 free인 connective 복합체로 실현되며, naive 여접 복합체가 하나의 presentation만 쓴 것과 달리 모든 higher degree에 항을 가진다. 이 구성이 의미를 가지려면 분해의 선택에 무관해야 하고, 낮은 degree에서 옛 불변량을 복원해야 한다.
 
 ::: 정리 11
-[정의 10](#def10)의 $L_{B/A}\in D(B)$는 free simplicial 분해 $P_\bullet\rightarrow B$의 선택에 quasi-isomorphism을 무시하면 무관하다. 나아가
+[정의 10](#def10)의 $L_{B/A}\in D(B)$는 free simplicial resolution $P_\bullet\rightarrow B$의 선택에 quasi-isomorphism을 무시하면 무관하다. 나아가
 
 $$H_0(L_{B/A})\cong\Omega_{B/A}$$
 
@@ -165,7 +165,7 @@ $$H_0(L_{B/A})\cong\Omega_{B/A}$$
 $$\tau_{\leq1}L_{B/A}\simeq\operatorname{NL}_{B/A}$$
 :::
 ::: 증명
-무관성은 두 free simplicial 분해 사이에 언제나 세 번째 공통 정련이 존재하고, [\[가환대수학\] §미분, ⁋정리 14](/ko/math/commutative_algebra/differentials#thm14)이 각 단계에서 준 homotopy 무관성을 simplicial degree 전체에 걸쳐 정합적으로 이어 붙임으로써 나온다. 곧 $L_{B/A}$는 abelianization functor의 왼쪽 유도 functor (nonabelian derived functor)로서 잘 정의되며, cofibrant 분해의 선택에 무관하다.
+무관성은 두 free simplicial resolution 사이에 언제나 세 번째 공통 정련이 존재하고, [\[가환대수학\] §미분, ⁋정리 14](/ko/math/commutative_algebra/differentials#thm14)이 각 단계에서 준 homotopy 무관성을 simplicial degree 전체에 걸쳐 정합적으로 이어 붙임으로써 나온다. 곧 $L_{B/A}$는 abelianization functor의 왼쪽 유도 functor (nonabelian derived functor)로서 잘 정의되며, cofibrant 분해의 선택에 무관하다.
 
 $H_0$의 계산은 다음과 같다. $\Omega_{P_\bullet/A}\otimes_{P_\bullet}B$의 normalization 복합체에서 $H_0$은 $\Omega_{P_0/A}\otimes_{P_0}B$를 두 face의 image로 quotient한 것인데, $P_0\rightarrow B$가 전사이고 $P_1$이 relation들을 준다는 점에서 이는 정확히 conormal sequence의 cokernel, 곧 [\[가환대수학\] §미분, ⁋명제 11](/ko/math/commutative_algebra/differentials#prop11)에서와 같은 $\Omega_{B/A}$이다. 마지막으로 $P_\bullet$의 처음 두 항 $P_1\rightrightarrows P_0\rightarrow B$만 남겨 절단하면 그로부터 얻는 두 항 복합체가 $\operatorname{NL}_{B/A}$의 정의와 일치하므로 $\tau_{\leq1}L_{B/A}\simeq\operatorname{NL}_{B/A}$이다. 완전한 논증은 ([Qui], [Ill], [Stacks, Cotangent Complex])에 있다.
 :::
@@ -188,7 +188,7 @@ $$L_{C/B}\simeq (I/I^2)[1]$$
 로 집중된다.
 :::
 ::: 증명
-삼각형은 free simplicial 분해의 base change로부터 나온다. $P_\bullet\rightarrow B$를 $A$ 위의 free 분해, $Q_\bullet\rightarrow C$를 $B$ 위의 free 분해로 잡고 이들을 합성하여 $C$의 $A$ 위 free 분해를 구성하면, 각 simplicial degree에서 [\[다중선형대수학\] §미분가군, ⁋명제 13](/ko/math/multilinear_algebra/differential_modules#prop13)의 transition exact sequence가 split short exact sequence가 되고 (polynomial algebra 사이의 morphism이므로), 이를 normalize하면 short exact sequence들의 열이 사슬 복합체들의 short exact sequence를 이루어 그 long exact sequence가 위 삼각형이 된다. 오른쪽에서만 exact했던 옛 transition exact sequence가 이렇게 완전한 삼각형으로 승격되는 것이 완전한 여접 복합체를 도입한 핵심 동기였다 ([§변형이론과 여접 복합체, ⁋참고 14](/ko/math/derived_algebraic_geometry/deformation_theory#rmk14)).
+삼각형은 free simplicial 분해의 base change로부터 나온다. $P_\bullet\rightarrow B$를 $A$ 위의 free resolution, $Q_\bullet\rightarrow C$를 $B$ 위의 free 분해로 잡고 이들을 합성하여 $C$의 $A$ 위 free 분해를 구성하면, 각 simplicial degree에서 [\[다중선형대수학\] §미분가군, ⁋명제 13](/ko/math/multilinear_algebra/differential_modules#prop13)의 transition exact sequence가 split short exact sequence가 되고 (polynomial algebra 사이의 morphism이므로), 이를 normalize하면 short exact sequence들의 열이 사슬 복합체들의 short exact sequence를 이루어 그 long exact sequence가 위 삼각형이 된다. 오른쪽에서만 exact했던 옛 transition exact sequence가 이렇게 완전한 삼각형으로 승격되는 것이 완전한 여접 복합체를 도입한 핵심 동기였다 ([§변형이론과 여접 복합체, ⁋참고 14](/ko/math/derived_algebraic_geometry/deformation_theory#rmk14)).
 
 전사 $B\rightarrow C=B/I$의 경우 $\Omega_{C/B}=0$이므로 $H_0(L_{C/B})=0$이고, $H_1(L_{C/B})=I/I^2$은 conormal module이 여접 복합체의 첫 nonzero homology로 나타남을 말한다. $I=(f_1,\ldots,f_r)$이 regular sequence이면 Koszul 분해가 $C$의 free 분해를 주고, 그 미분을 취한 여접 복합체가 정확히 $(I/I^2)[1]$ 한 항으로 축약된다. 세부는 ([Qui], [Ill])에 있다.
 :::

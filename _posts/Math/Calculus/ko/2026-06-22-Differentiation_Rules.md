@@ -10,6 +10,8 @@ sidebar:
 
 date: 2026-06-22
 weight: 7
+published: false
+revising: true
 drift_needed: true
 
 ---
@@ -116,7 +118,7 @@ $$\frac{g(f(a+h)) - g(f(a))}{h} = \varphi(f(a+h)) \frac{f(a+h) - f(a)}{h}$$
 
 이제 quotient rule은 곱의 미분법과 연쇄법칙의 따름정리로 따라온다.
 
-::: 따름정리 5 (몫의 미분법)
+::: 따름정리 5 (quotient rule)
 $f, g$가 $a$에서 미분가능하고 $g(a) \neq 0$이면 $f/g$도 $a$에서 미분가능하고
 
 $$\left(\frac{f}{g}\right)'(a) = \frac{f'(a) g(a) - f(a) g'(a)}{g(a)^2}$$
@@ -145,7 +147,13 @@ $$(f^{-1})'(b) = \frac{1}{f'(a)} = \frac{1}{f'(f^{-1}(b))}$$
 :::
 
 ::: 증명
-$f^{-1}$이 $b$에서 미분가능함을 받아들이면, 항등식 $f(f^{-1}(y)) = y$의 양변을 연쇄법칙으로 미분하여 $f'(f^{-1}(b))\cdot(f^{-1})'(b) = 1$을 얻고, $f'(a) \neq 0$이므로 증명이 완료된다.
+$f$가 정의된 구간을 $I$, 그 image를 $J = f(I)$라 하자. $f$는 단조이면서 역함수를 가져 단사이므로 순단조이고, 따라서 [§연속함수, ⁋명제 7](/ko/math/calculus/continuity#prop7)에 의해 $f^{-1} : J \rightarrow I$는 연속이다.
+
+이제 $y \in J$가 $y \neq b$이면 $x = f^{-1}(y)$는 단사성에 의해 $a = f^{-1}(b)$와 다르므로, $f^{-1}$의 평균변화율을
+
+$$\frac{f^{-1}(y) - f^{-1}(b)}{y - b} = \frac{x - a}{f(x) - f(a)} = \left(\frac{f(x)-f(a)}{x-a}\right)^{-1}$$
+
+로 고쳐 쓸 수 있다. $y \rightarrow b$일 때 $f^{-1}$의 연속성에 의해 $x \rightarrow a$이고 우변의 괄호 안은 $f'(a)$로 수렴하므로, $f'(a) \neq 0$과 [§함수의 극한, ⁋명제 5](/ko/math/calculus/functions_and_limits#prop5)의 4에 의해 위 평균변화율은 $1/f'(a)$로 수렴한다. 즉 $f^{-1}$은 $b$에서 미분가능하고 $(f^{-1})'(b) = 1/f'(a)$이다.
 :::
 
 이로써 우리는 앞에서 살펴본 함수들의 역함수에 대한 미분 또한 진행할 수 있다. 가령, $e^x$의 역함수 $\ln$에 대해 $(e^x)' = e^x$이므로 $(\ln y)' = 1/e^{\ln y} = 1/y$이고, $\sin$을 $(-\pi/2, \pi/2)$로 제한한 역함수 $\arcsin$에 대해서는 $f'(x) = \cos x = \sqrt{1 - \sin^2 x} > 0$이므로

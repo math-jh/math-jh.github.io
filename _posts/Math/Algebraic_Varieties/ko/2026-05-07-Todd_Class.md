@@ -10,14 +10,14 @@ weight: 23
 published: false
 ---
 
-**Hirzebruch-Riemann-Roch (HRR)** 정리는 smooth projective variety $X$ 위의 벡터 bundle $E$에 대하여, 그 Euler characteristic $\chi(X,E)$를 $X$의 intersection theory 위에서 적분으로 표현한다. 구체적으로 HRR 정리는
+**Hirzebruch-Riemann-Roch (HRR)** 정리는 smooth projective variety $X$ 위의 vector bundle $E$에 대하여, 그 Euler characteristic $\chi(X,E)$를 $X$의 intersection theory 위에서 적분으로 표현한다. 구체적으로 HRR 정리는
 
 $$\chi(X,E)=\int_X \operatorname{ch}(E)\cdot\operatorname{td}(T_X)$$
 
 의 형태를 갖는다. 여기서 우변을 구성하는 두 가지 핵심적인 불변량이 바로 **Chern character** $\operatorname{ch}(E)$와 **Todd class** $\operatorname{td}(T_X)$이다. 본 글에서는 이들의 정의, 기본 성질, 그리고 저차원에서의 명시적인 계산을 다룬다.
 
 ::: 정의 1 (Chern character)
-벡터 bundle $E$가 Chern roots $x_1,\ldots,x_r$을 갖는다고 하자. 그러면 $E$의 **Chern character** $\operatorname{ch}(E)$는
+vector bundle $E$가 Chern roots $x_1,\ldots,x_r$을 갖는다고 하자. 그러면 $E$의 **Chern character** $\operatorname{ch}(E)$는
 
 $$\operatorname{ch}(E)=\sum_{i=1}^r e^{x_i}$$
 
@@ -31,7 +31,7 @@ $$\operatorname{ch}(E)=\operatorname{rk}(E)+c_1(E)+\frac{c_1(E)^2-2c_2(E)}{2}+\f
 을 얻는다. 앞의 몇 항만 확인하면, $e^{x_i}$의 전개에서 0차 항은 $\sum 1 = r = \operatorname{rk}(E)$이고, 1차 항은 $\sum x_i = c_1(E)$이며, 2차 항은 $\frac{1}{2}\sum x_i^2$이다. 한편 $(\sum x_i)^2 = \sum x_i^2 + 2\sum_{i<j} x_i x_j$이므로 $c_1^2 - 2c_2 = \sum x_i^2$이 성립하여 위의 식이 따라온다.
 
 ::: 명제 2
-벡터 bundle들의 short exact sequence
+vector bundle들의 short exact sequence
 
 $$0\longrightarrow E'\longrightarrow E\longrightarrow E''\longrightarrow 0$$
 
@@ -39,7 +39,7 @@ $$0\longrightarrow E'\longrightarrow E\longrightarrow E''\longrightarrow 0$$
 
 $$\operatorname{ch}(E)=\operatorname{ch}(E')+\operatorname{ch}(E'').$$
 
-또한 임의의 두 벡터 bundle $E$, $F$에 대하여
+또한 임의의 두 vector bundle $E$, $F$에 대하여
 
 $$\operatorname{ch}(E\otimes F)=\operatorname{ch}(E)\cdot\operatorname{ch}(F)$$
 
@@ -66,7 +66,7 @@ $$\operatorname{ch}: K_0(X)\longrightarrow A^\bullet(X)\otimes_\mathbb{Z}\mathbb
 다음으로 Todd class를 정의한다.
 
 ::: 정의 3 (Todd class)
-벡터 bundle $E$가 Chern roots $x_1,\ldots,x_r$을 갖는다고 하자. 그러면 $E$의 **Todd class** $\operatorname{td}(E)$는
+vector bundle $E$가 Chern roots $x_1,\ldots,x_r$을 갖는다고 하자. 그러면 $E$의 **Todd class** $\operatorname{td}(E)$는
 
 $$\operatorname{td}(E)=\prod_{i=1}^r \frac{x_i}{1-e^{-x_i}}$$
 
@@ -84,7 +84,7 @@ $$\frac{x}{1-e^{-x}}=1+\frac{1}{2}x+\sum_{k=1}^\infty \frac{B_{2k}}{(2k)!}x^{2k}
 으로 전개되며, $B_2=1/6$, $B_4=-1/30$, $B_6=1/42$ 등이 그에 해당한다.
 
 ::: 명제 4
-벡터 bundle들의 short exact sequence
+vector bundle들의 short exact sequence
 
 $$0\longrightarrow E'\longrightarrow E\longrightarrow E''\longrightarrow 0$$
 

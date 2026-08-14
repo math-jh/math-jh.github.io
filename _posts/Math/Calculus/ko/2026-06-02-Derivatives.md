@@ -10,6 +10,8 @@ sidebar:
 
 date: 2026-06-02
 weight: 6
+published: false
+revising: true
 drift_needed: true
 
 
@@ -88,7 +90,7 @@ $$\frac{f(h)-f(0)}{h} = \frac{\lvert h\rvert}{h}=\begin{cases}1&\text{if $h>0$}\
 
 $$f(x) = \begin{cases} x^2 & (x \in \mathbb{Q}) \\ 0 & (x \notin \mathbb{Q}) \end{cases}$$
 
-를 보자. $a \neq 0$에서는 $a$에 수렴하는 유리수열과 무리수열을 따라 함숫값이 각각 $a^2$과 $0$으로 갈라지므로 $f$는 불연속이고, [명제 2](#prop2)의 대우에 의해 미분가능하지 않다. 반면 $0$에서는 $\lvert f(x)\rvert \leq x^2$이라 연속이며, 평균변화율이
+를 보자. $a \neq 0$에서는 $\epsilon = a^2/4$로 두면 어떤 $\delta > 0$을 잡아도 $\lvert x - a\rvert < \delta$이면서 $\lvert f(x) - f(a)\rvert > \epsilon$인 $x$가 있다. 실제로 $\delta \leq \lvert a\rvert/2$인 경우만 보면 충분한데, $a$가 유리수이면 그 범위 안의 무리수 $x$가 $\lvert f(x) - f(a)\rvert = a^2 > \epsilon$을 주고, $a$가 무리수이면 그 범위 안의 유리수 $x$가 $\lvert x\rvert > \lvert a\rvert/2$를 만족하므로 $\lvert f(x) - f(a)\rvert = x^2 > \epsilon$을 준다. 따라서 $f$는 $a$에서 불연속이고, [명제 2](#prop2)의 대우에 의해 미분가능하지 않다. 반면 $0$에서는 $\lvert f(x)\rvert \leq x^2$이라 연속이며, 평균변화율이
 
 $$\left\lvert \frac{f(x) - f(0)}{x - 0} \right\rvert = \frac{\lvert f(x)\rvert}{\lvert x\rvert} \leq \lvert x\rvert \rightarrow 0$$
 
@@ -130,10 +132,10 @@ $f$의 도함수 $f'$이 미분가능하면 그 도함수를 *이계도함수* $
 
 $$f'_+(a) := \lim_{h \rightarrow 0^+} \frac{f(a+h) - f(a)}{h}, \qquad f'_-(a) := \lim_{h \rightarrow 0^-} \frac{f(a+h) - f(a)}{h}$$
 
-로 정의한다. 두 한쪽 derivative가 모두 존재하고 서로 같으면, 그리고 오직 그때에만, $f$는 $a$에서 미분가능하고 그 공통값이 $f'(a)$이다.
+로 정의한다.
 :::
 
-이는 양쪽 극한이 일치할 때에만 극한이 존재한다는 사실을 평균변화율에 적용한 것에 지나지 않는다. ([§함수의 극한](/ko/math/calculus/functions_and_limits)) 절댓값함수 $f(x) = \lvert x\rvert$를 다시 보면 $f'_+(0) = 1$, $f'_-(0) = -1$로 둘이 달라 $0$에서 미분 불가능함이 곧바로 확인된다. 한쪽 derivative는 정의역의 끝점에서 미분가능성을 논할 때에도 자연스럽게 쓰이는데, 가령 $[0, \infty)$에서 정의된 $f(x) = \sqrt x$의 $0$에서의 거동은 우미분계수로만 의미를 갖는다.
+두 한쪽 derivative가 모두 존재하고 서로 같으면, 그리고 오직 그때에만, $f$는 $a$에서 미분가능하고 그 공통값이 $f'(a)$이다. 이는 양쪽 극한이 일치할 때에만 극한이 존재한다는 사실을 평균변화율에 적용한 것에 지나지 않는다. ([§함수의 극한](/ko/math/calculus/functions_and_limits)) 절댓값함수 $f(x) = \lvert x\rvert$를 다시 보면 $f'_+(0) = 1$, $f'_-(0) = -1$로 둘이 달라 $0$에서 미분 불가능함이 곧바로 확인된다. 한쪽 derivative는 정의역의 끝점에서 미분가능성을 논할 때에도 자연스럽게 쓰이는데, 가령 $[0, \infty)$에서 정의된 $f(x) = \sqrt x$의 $0$에서의 거동은 우미분계수로만 의미를 갖는다.
 
 ---
 

@@ -132,7 +132,7 @@ $$\nabla_X Y = \sum_{k=1}^n X(Y^k) \frac{\partial}{\partial x^k}$$
 Connection이 있는 임의의 vector bundle 위에서는 곡선을 따라 벡터를 *상수처럼* 옮기는 자료 — *parallel transport* — 가 정의된다.
 
 ::: 정의 8
-Manifold $M$ 위의 tangent bundle $TM$ 위의 connection $\nabla$와 smooth 곡선 $\gamma : I \rightarrow M$이 주어졌다 하자. $\gamma$ 위의 벡터장 $V : I \rightarrow TM$ (즉 $V(t) \in T_{\gamma(t)} M$인 smooth 함수)이 다음의 식
+Manifold $M$ 위의 tangent bundle $TM$ 위의 connection $\nabla$와 smooth curve $\gamma : I \rightarrow M$이 주어졌다 하자. $\gamma$ 위의 벡터장 $V : I \rightarrow TM$ (즉 $V(t) \in T_{\gamma(t)} M$인 smooth function)이 다음의 식
 
 $$\nabla_{\dot\gamma(t)} V = 0$$
 
@@ -169,7 +169,7 @@ $$\langle P_\gamma^{t_0, t_1}(v), P_\gamma^{t_0, t_1}(w)\rangle = \langle v, w\r
 $V, W$를 $\gamma$ 위의 parallel 벡터장으로 잡고 $f(t) := \langle V(t), W(t)\rangle$을 보면 [명제 2](#prop2)의 (3)에서 $f$는 상수이다.
 :::
 
-Parallel transport는 임의의 곡선 $\gamma$에 대해 정의되지만, 일반적으로 두 끝점 $p = \gamma(t_0), q = \gamma(t_1)$ 사이에 여러 곡선이 존재하는 경우 곡선마다 다른 isomorphism $P_\gamma^{t_0, t_1}$이 얻어진다. 이 *path-dependence*가 어떻게 측정되는지를 다루는 자료가 [§리만 곡률](/ko/math/riemannian_geometry/curvature)에서 정의되는 *Riemann 곡률 텐서*이다.
+Parallel transport는 임의의 곡선 $\gamma$에 대해 정의되지만, 일반적으로 두 끝점 $p = \gamma(t_0), q = \gamma(t_1)$ 사이에 여러 곡선이 존재하는 경우 곡선마다 다른 isomorphism $P_\gamma^{t_0, t_1}$이 얻어진다. 이 *path-dependence*가 어떻게 측정되는지를 다루는 자료가 [§리만 곡률](/ko/math/riemannian_geometry/curvature)에서 정의되는 *리만 곡률 텐서*이다.
 
 ---
 

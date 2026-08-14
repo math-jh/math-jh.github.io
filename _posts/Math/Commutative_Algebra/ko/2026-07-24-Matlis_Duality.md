@@ -1,5 +1,5 @@
 ---
-title: "단사가군과 Matlis 쌍대성"
+title: "단사가군과 Matlis duality"
 description: "Noetherian ring 위에서 injective module을 essential extension과 injective hull로 분석하여 indecomposable injective를 prime마다의 injective hull로 분류하고, local ring에서 injective dimension을 residue field와의 Ext로 읽어낸 뒤 Matlis duality를 확립한다."
 excerpt: "Injective hull의 구조론과 Matlis duality"
 

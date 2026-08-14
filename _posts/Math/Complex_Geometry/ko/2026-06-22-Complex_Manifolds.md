@@ -1,7 +1,7 @@
 ---
 title: "복소다양체"
 description: "여러 변수 복소정칙함수에서 출발하여 복소다양체를 위상다양체에 복소정칙 전이함수를 갖는 holomorphic atlas로 정의한다. 복소사영공간, 복소토러스, Riemann 곡면 등의 예시를 다루고, 복소정칙접공간과 holomorphic tangent bundle을 도입한다. 끝으로 콤팩트 연결 복소다양체 위의 복소정칙함수가 상수임을 최대원리로 증명한다."
-excerpt: "여러 변수 복소정칙함수, holomorphic atlas, 복소차원, CP^n, 복소토러스, Riemann 곡면, holomorphic tangent space, Wirtinger 미분, 최대원리"
+excerpt: "여러 변수 복소정칙함수, holomorphic atlas, 복소차원, CP^n, 복소토러스, Riemann 곡면, holomorphic tangent space, Wirtinger derivative, 최대원리"
 
 categories: [Math / Complex Geometry]
 permalink: /ko/math/complex_geometry/complex_manifolds
@@ -48,7 +48,7 @@ $\mathbb{C}^n$ 사이의 morphism의 holomorphicity는 성분별로 정의한다
 
 Biholomorphism은 복소해석적 isomorphism에 해당한다. 두 열린집합이 biholomorphic하게 동치이면 그 위의 holomorphic 함수론은 완전히 같다. Complex manifold란 바로 이런 biholomorphic 동치를 풀로 삼아 $\mathbb{C}^n$의 조각들을 이어 붙인 공간이다.
 
-한 변수의 Wirtinger 미분 ([\[복소해석학\] §복소정칙함수, ⁋정의 7](/ko/math/complex_analysis/holomorphic_functions#def7)) 은 변수마다 그대로 복제된다. 좌표 $z_j = x_j + i y_j$에 대하여
+한 변수의 Wirtinger derivative ([\[복소해석학\] §복소정칙함수, ⁋정의 7](/ko/math/complex_analysis/holomorphic_functions#def7)) 은 변수마다 그대로 복제된다. 좌표 $z_j = x_j + i y_j$에 대하여
 
 $$
 \frac{\partial}{\partial z_j} = \frac{1}{2}\left( \frac{\partial}{\partial x_j} - i \frac{\partial}{\partial y_j} \right), \qquad
@@ -88,7 +88,7 @@ $$
 \psi \circ f \circ \varphi^{-1} : \varphi(U) \longrightarrow \psi(V)
 $$
 
-이 [정의 2](#def2)의 의미로 holomorphic인 것이다. 특히 $N = \mathbb{C}$인 경우의 holomorphic morphism을 $M$ 위의 *holomorphic function<sub>정칙함수</sub>*이라 하고, 그 전체를 $\mathcal{O}(M)$으로 적는다. Holomorphic 전단사사상 $f : M \rightarrow N$으로 역사상도 holomorphic인 것을 *biholomorphism*이라 하며, 그러한 morphism이 존재하면 $M, N$은 *biholomorphic<sub>쌍정칙</sub>*하다 한다.
+이 [정의 2](#def2)의 의미로 holomorphic인 것이다. 특히 $N = \mathbb{C}$인 경우의 holomorphic morphism을 $M$ 위의 *holomorphic function<sub>정칙함수</sub>*이라 하고, 그 전체를 $\mathcal{O}(M)$으로 적는다. Holomorphic bijection $f : M \rightarrow N$으로 역사상도 holomorphic인 것을 *biholomorphism*이라 하며, 그러한 morphism이 존재하면 $M, N$은 *biholomorphic<sub>쌍정칙</sub>*하다 한다.
 :::
 
 이 정의는 차트의 선택에 무관하다. 다른 차트를 잡으면 두 국소 표현은 holomorphic인 transition function을 좌우에서 합성한 것만큼 차이가 나고, holomorphic morphism의 합성은 다시 holomorphic이기 때문이다. Holomorphic function 전체 $\mathcal{O}(M)$은 점별 덧셈과 곱셈에 대해 $\mathbb{C}$-대수를 이룬다. 미분다양체에서 smooth 함수의 대수 $C^\infty(M)$이 풍부했던 것과 달리, 콤팩트 complex manifold에서는 $\mathcal{O}(M)$이 상수함수밖에 없을 만큼 빈약해진다. 이 사실은 [정리 14](#thm14)에서 증명한다.
@@ -218,7 +218,7 @@ $$
 로 정의한다.
 :::
 
-집합 $\{\partial/\partial z_j, \partial/\partial \bar{z}_j\}_j$는 $\{\partial/\partial x_j, \partial/\partial y_j\}_j$와 가역 일차변환으로 이어지므로, 이들은 $T_p M \otimes_{\mathbb{R}} \mathbb{C}$의 복소 기저이다. 따라서 direct sum 분해
+집합 $\{\partial/\partial z_j, \partial/\partial \bar{z}_j\}_j$는 $\{\partial/\partial x_j, \partial/\partial y_j\}_j$와 가역 일차변환으로 이어지므로, 이들은 $T_p M \otimes_{\mathbb{R}} \mathbb{C}$의 복소 기저이다. 따라서 direct sum decomposition
 
 $$
 T_p M \otimes_{\mathbb{R}} \mathbb{C} = T_p^{1,0} M \oplus T_p^{0,1} M
@@ -283,7 +283,7 @@ $$
 
 먼저 $S \neq \emptyset$을 보인다. $\lvert f \rvert$가 $p$에서 전역 최댓값을 가지므로, $p$를 포함하는 차트 $(U, \varphi)$를 잡아 $U$를 connected로 택하면, $g = f \circ \varphi^{-1} : \varphi(U) \rightarrow \mathbb{C}$는 holomorphic이고 $\lvert g \rvert$가 interior point $\varphi(p)$에서 (적어도 국소) 최댓값을 가진다. [명제 12](#prop12)에 의해 $g$는 connected 열린집합 $\varphi(U)$에서 상수이므로 $f$는 $U$에서 상수이고, 따라서 $p \in S$이다.
 
-다음으로 $S$가 닫혀 있음을 보인다. $q_0 \in M$이 $S$의 limit point라 하자. $q_0$를 포함하는 connected 차트 $(V, \psi)$를 잡으면 $h = f \circ \psi^{-1} : \psi(V) \rightarrow \mathbb{C}$는 holomorphic이다. $S$의 한 점 $q_1 \in V \cap S$가 존재하고, $f$는 $q_1$의 근방에서 상수 $c = f(q_1)$이다. 그러면 $h - c$는 $\psi(V)$의 한 열린 부분집합 ($q_1$의 근방의 상) 에서 항등적으로 $0$이다. [명제 12](#prop12)의 증명에서 쓴 해석성 논법에 의해, holomorphic function $h - c$가 connected 열린집합 $\psi(V)$의 어떤 열린 부분집합에서 소멸하면 $\psi(V)$ 전체에서 소멸한다. 따라서 $f \equiv c$가 $V$에서 성립하고, 특히 $q_0$의 근방에서 $f$가 상수이므로 $q_0 \in S$이다.
+다음으로 $S$가 닫혀 있음을 보인다. $q_0 \in M$이 $S$의 limit point라 하자. $q_0$를 포함하는 connected chart $(V, \psi)$를 잡으면 $h = f \circ \psi^{-1} : \psi(V) \rightarrow \mathbb{C}$는 holomorphic이다. $S$의 한 점 $q_1 \in V \cap S$가 존재하고, $f$는 $q_1$의 근방에서 상수 $c = f(q_1)$이다. 그러면 $h - c$는 $\psi(V)$의 한 열린 부분집합 ($q_1$의 근방의 상) 에서 항등적으로 $0$이다. [명제 12](#prop12)의 증명에서 쓴 해석성 논법에 의해, holomorphic function $h - c$가 connected 열린집합 $\psi(V)$의 어떤 열린 부분집합에서 소멸하면 $\psi(V)$ 전체에서 소멸한다. 따라서 $f \equiv c$가 $V$에서 성립하고, 특히 $q_0$의 근방에서 $f$가 상수이므로 $q_0 \in S$이다.
 
 이로써 $S$는 비어 있지 않고 열려 있으며 닫혀 있다. $M$이 connected이므로 $S = M$이고, $f$는 $M$ 전체에서 (한 근방마다 상수이며 connected이므로) 상수이다.
 :::

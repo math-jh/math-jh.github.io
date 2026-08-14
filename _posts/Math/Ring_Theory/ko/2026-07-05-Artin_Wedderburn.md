@@ -44,7 +44,7 @@ $R$이 semisimple ring이면 $R$은 유한개의 simple left ideal의 직합이�
 $R=\bigoplus_{i\in I}L_i$를 simple left ideal들의 직합이라 하자. 항등원을 이 분해에 따라 $1=\sum_{i\in F}x_i$로 쓰면 $F$는 유한집합이다. 그럼 임의의 $r\in R$에 대하여 $r=r\cdot 1\in\sum_{i\in F}L_i$이므로 $R=\bigoplus_{i\in F}L_i$이다.
 :::
 
-따라서 semisimple ring은 left module로서 유한한 composition series를 갖는다 ([\[가환대수학\] §조르단-횔더 정리, ⁋정의 2](/ko/math/commutative_algebra/Jordan-Holder_theorem#def2)). 직합 인자를 하나씩 쌓은 chain이 그것이며, 특히 semisimple ring은 left Artinian이자 left Noetherian이다.
+따라서 semisimple ring은 left module로서 finite composition series를 갖는다 ([\[가환대수학\] §조르단-횔더 정리, ⁋정의 2](/ko/math/commutative_algebra/Jordan-Holder_theorem#def2)). 직합 인자를 하나씩 쌓은 chain이 그것이며, 특히 semisimple ring은 left Artinian이자 left Noetherian이다.
 
 ## Division ring 위의 행렬환
 
@@ -186,7 +186,7 @@ $$E_i\cong\End_R(W_i)^{\mathrm{op}}\cong\End_R(S_i)^{\mathrm{op}}=\Delta_i^{\mat
 $R\cong\prod_{i=1}^k\Mat_{n_i}(D_i)$가 semisimple ring이라 하자. 그럼 simple left $R$-module은 isomorphism을 무시하면 정확히 $V_1,\ldots,V_k$ ($V_i=D_i^{n_i}$)뿐이고, 임의의 left $R$-module은 이들의 복사본들의 직합이다.
 :::
 ::: 증명
-[명제 2](#prop2)에 의해 모든 module이 semisimple이므로 simple들의 직합이고, [명제 5](#prop5)와 [명제 10](#prop10)에 의해 각 $V_i$는 simple이다. 거꾸로 $M$이 simple이면 $0\neq x\in M$에 대해 $M=Rx$이므로 전사 $R\rightarrow M$이 존재하고, left module 분해 $R\cong\bigoplus_iV_i^{n_i}$의 어떤 인자 $V_i$ 위에서 이 전사가 nonzero가 된다. 그럼 simple module 사이의 nonzero homomorphism $V_i\rightarrow M$이 존재하므로 [§나눗셈환, ⁋보조정리 10](/ko/math/ring_theory/division_rings#lem10)에 의해 $M\cong V_i$이다.
+[명제 2](#prop2)에 의해 모든 module이 semisimple이므로 simple들의 직합이고, [명제 5](#prop5)와 [명제 10](#prop10)에 의해 각 $V_i$는 simple이다. 거꾸로 $M$이 simple이면 $0\neq x\in M$에 대해 $M=Rx$이므로 전사 $R\rightarrow M$이 존재하고, left module decomposition $R\cong\bigoplus_iV_i^{n_i}$의 어떤 인자 $V_i$ 위에서 이 전사가 nonzero가 된다. 그럼 simple module 사이의 nonzero homomorphism $V_i\rightarrow M$이 존재하므로 [§나눗셈환, ⁋보조정리 10](/ko/math/ring_theory/division_rings#lem10)에 의해 $M\cong V_i$이다.
 :::
 
 ::: 참고 13

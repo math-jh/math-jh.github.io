@@ -58,7 +58,7 @@ $$\mu:M\rightarrow\mathfrak{g}^\ast$$
 
 여기서 $\mathfrak{g}^\ast$ 위의 *coadjoint action* $\Ad^\ast$는 [\[리 이론\] §리 군, ⁋정의 19](/ko/math/lie_theory/Lie_groups#def19)의 adjoint action의 dual로 정의된다. 즉 $\xi\in\mathfrak{g}^\ast$, $X\in\mathfrak{g}$에 대하여 $\langle\Ad_g^\ast\xi,X\rangle=\langle\xi,\Ad_{g^{-1}}X\rangle$이다. 역원 $g^{-1}$이 들어가는 것은 $g\mapsto\Ad_g^\ast$가 left action이 되도록 하기 위함이다.
 
-조건 1은 정의 2 직전의 관찰을 정합적으로 만든 것이다. 각 $X$마다 $X_M$의 Hamiltonian 함수 $\mu^X$를 주되, 그 함수가 $X$에 선형으로 의존하도록 $\mathfrak{g}^\ast$-값 morphism 하나로 묶은 것이다. $\mu^X$가 $X$에 선형임은 $\mu(p)$가 $\mathfrak{g}^\ast$의 원소라는 데에 이미 담겨 있다. 조건 2는 운동량 사상이 group의 대칭성과 양립함을 요구하는데, 다음 명제에서 보듯 이는 조건 1을 만족하는 $\mu$에 대하여 $X\mapsto\mu^X$이 Lie algebra 준동형이라는 조건과 동치이다.
+조건 1은 정의 2 직전의 관찰을 정합적으로 만든 것이다. 각 $X$마다 $X_M$의 Hamiltonian function $\mu^X$를 주되, 그 함수가 $X$에 선형으로 의존하도록 $\mathfrak{g}^\ast$-값 morphism 하나로 묶은 것이다. $\mu^X$가 $X$에 선형임은 $\mu(p)$가 $\mathfrak{g}^\ast$의 원소라는 데에 이미 담겨 있다. 조건 2는 운동량 사상이 group의 대칭성과 양립함을 요구하는데, 다음 명제에서 보듯 이는 조건 1을 만족하는 $\mu$에 대하여 $X\mapsto\mu^X$이 Lie algebra 준동형이라는 조건과 동치이다.
 
 운동량 사상의 가장 중요한 해석은 보존량이다. $G$-불변 함수 $H\in C^\infty(M)$, 즉 $H\circ\psi_g=H$인 함수를 Hamiltonian으로 갖는 흐름을 생각하면, $\mu$는 그 흐름을 따라 보존된다.
 
@@ -127,7 +127,7 @@ $S^1$의 Lie algebra $\mathfrak{g}=\mathbb{R}$의 표준 generator $X=1$의 fund
 
 $$\mu(\theta,h)=h$$
 
-로 두면 $\dd{\mu}^X=\dd{h}=\iota_{X_{S^2}}\omega$가 성립한다. $S^1$이 abelian이므로 coadjoint action은 자명하고 equivariance는 자동이다. 따라서 운동량 사상은 곧 *height 함수*이며, 그 image $\mu(S^2)=[-1,1]$은 두 fixed point $h=\pm1$ (북극과 남극)의 image $\{-1,1\}$의 convex hull이다.
+로 두면 $\dd{\mu}^X=\dd{h}=\iota_{X_{S^2}}\omega$가 성립한다. $S^1$이 abelian이므로 coadjoint action은 자명하고 equivariance는 자동이다. 따라서 운동량 사상은 곧 *height function*이며, 그 image $\mu(S^2)=[-1,1]$은 두 fixed point $h=\pm1$ (북극과 남극)의 image $\{-1,1\}$의 convex hull이다.
 :::
 
 다음 예시는 $\mathbb{C}^n$ 위의 표준 torus action으로, toric 기하의 출발점이다.

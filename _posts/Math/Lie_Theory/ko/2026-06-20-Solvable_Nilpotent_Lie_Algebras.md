@@ -263,7 +263,7 @@ $$\mathfrak{g}^{m+1}=[\mathfrak{g},\mathfrak{g}^{m}]\subseteq[\mathfrak{g},Z(\ma
 
 ## Lie의 정리
 
-Engel의 정리가 임의의 체에서 성립하는 것과 달리, solvable Lie algebra에 대한 동시 상삼각화는 기반 체에 대한 제약을 요구한다. Lie의 정리는 $k$가 대수적으로 닫혀 있고 characteristic이 $0$일 때, solvable Lie algebra of endomorphisms가 공통 eigenvector를 가짐을 보인다. Characteristic $0$이라는 가정은 아래 [보조정리 19](#lem19)의 증명에서 어떤 정수로 나누는 단계에 본질적으로 쓰이며, 양의 characteristic에서는 정리가 성립하지 않는 반례가 알려져 있다.
+Engel의 정리가 임의의 체에서 성립하는 것과 달리, solvable Lie algebra에 대한 동시 상삼각화는 기반 체에 대한 제약을 요구한다. Lie의 정리는 $k$가 대수적으로 닫혀 있고 characteristic이 $0$일 때, solvable Lie algebra of endomorphisms가 공통 eigenvector를 가짐을 보인다. Characteristic $0$이라는 가정은 아래 [보조정리 19](#lem19)의 증명에서 어떤 정수로 나누는 단계에 본질적으로 쓰이며, positive characteristic에서는 정리가 성립하지 않는 반례가 알려져 있다.
 
 증명의 핵심은 ideal에 대한 공통 eigenvalue가 정의하는 eigenspace가 전체 Lie algebra의 action에 의해 보존된다는 다음 invariance 보조정리이다.
 

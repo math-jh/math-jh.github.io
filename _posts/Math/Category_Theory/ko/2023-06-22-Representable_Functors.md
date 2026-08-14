@@ -10,6 +10,8 @@ sidebar:
 
 date: 2023-06-22
 weight: 4
+published: false
+revising: true
 
 drift_needed: true
 
@@ -68,7 +70,15 @@ $$\Psi(x)_X(f)=F(f)(\Psi(x)_A(\id_A))$$
 
 $$\Psi(x)_X(f)=F(f)(x)$$
 
-를 통하여 $\Psi(x)$를 정의해야만 한다. 이렇게 정의한 $\Psi$가 실제로 natural transformation이 된다는 것을 추가로 보여야 하지만 이는 어렵지 않다. 
+를 통하여 $\Psi(x)$를 정의해야만 한다.
+
+이렇게 정의한 $\Psi(x)$가 실제로 natural transformation이 된다는 것은 $F$의 functoriality에서 곧바로 나온다. 임의의 morphism $g:X\rightarrow Y$와 임의의 $f\in\Hom_\mathcal{A}(A,X)$에 대하여
+
+$$\Psi(x)_Y(g\circ f)=F(g\circ f)(x)=F(g)(F(f)(x))=F(g)(\Psi(x)_X(f))$$
+
+이고, $\Hom_\mathcal{A}(A,g)(f)=g\circ f$이므로 $\Psi(x)$가 요구하는 naturality square가 commute한다.
+
+이제 $\Phi$와 $\Psi$가 서로의 역함수임을 확인하자. 우선 임의의 $x\in F(A)$에 대하여, $\Psi$의 정의와 $F(\id_A)=\id_{F(A)}$로부터 $\Phi(\Psi(x))=\Psi(x)_A(\id_A)=F(\id_A)(x)=x$를 얻으므로 $\Phi\circ\Psi=\id_{F(A)}$이다. 거꾸로 $\Hom_\mathcal{A}(A,-)$에서 $F$로의 임의의 natural transformation $\alpha$를 택하면, 위에서 $\Psi(x)$에 대해 했던 계산은 naturality만을 사용한 것이므로 $\alpha$에도 그대로 적용되어 $\alpha_X(f)=F(f)(\alpha_A(\id_A))$가 성립한다. 그런데 우변은 $\Psi(\Phi(\alpha))_X(f)$와 같고 $X$와 $f$는 임의로 택한 것이었으므로, $\alpha=\Psi(\Phi(\alpha))$, 즉 $\Psi\circ\Phi$ 또한 항등함수이다. 
 :::
 
 뿐만 아니라, 양 변을 $\mathcal{A}\times\Fun(\mathcal{A},\Set)$에서 $\Set$으로의 functor로 생각하면 이 bijection은 $\mathcal{A}$와 $\Fun(\mathcal{A},\Set)$ 각 성분에 대해 natural하다. 이 사실은 지금 당장 사용할 것은 아니므로 언급만 하고 넘어가지만, 그 증명 또한 위의 증명과 마찬가지로 크게 어렵지는 않다. 또, duality에 의해 contravariant functor에 대한 요네다 보조정리도 존재한다. 

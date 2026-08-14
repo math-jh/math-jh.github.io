@@ -12,6 +12,8 @@ sidebar:
 date: 2022-07-28
 
 weight: 2
+published: false
+revising: true
 
 drift_needed: true
 
@@ -84,7 +86,7 @@ $$(-1)v+v=(-1)v+1v=((-1)+1)v=0v=0$$
 이제 벡터공간의 몇 가지 예시를 살펴보자.
 
 ::: 예시 4
-가장 간단한 벡터공간의 예시는 $\{0\}$이다. 이 집합에 더하기 구조를 줄 수 있는 방법은 하나 뿐이고 (즉 $0+0=0$), 이 구조 하에서 이 집합은 abelian group의 구조를 갖는다. 뿐만 아니라, 어떤 field $\mathbb{K}$를 가져오더라도 이 집합에 스칼라곱을 정의할 수 있는 방법 또한 하나 뿐이며 (즉 $\alpha 0=0$), 이렇게 정의된 스칼라곱은 $\{0\}$를 $\mathbb{K}$-벡터공간으로 만든다. 이를 *trivial space*이라 부른다.
+가장 간단한 벡터공간의 예시는 $\{0\}$이다. 이 집합에 더하기 구조를 줄 수 있는 방법은 하나 뿐이고 (즉 $0+0=0$), 이 구조 하에서 이 집합은 abelian group의 구조를 갖는다. 뿐만 아니라, 어떤 field $\mathbb{K}$를 가져오더라도 이 집합에 스칼라곱을 정의할 수 있는 방법 또한 하나 뿐이며 (즉 $\alpha 0=0$), 이렇게 정의된 스칼라곱은 $\{0\}$를 $\mathbb{K}$-벡터공간으로 만든다. 이를 *trivial space*라 부른다.
 
 조금 덜 자명한 예시는 field 그 자체다. 임의의 field $\mathbb{K}$에 대하여, $\mathbb{K}$는 $\mathbb{K}$-벡터공간이다. $\mathbb{K}$는 field이므로, 덧셈에 대해 abelian group이 된다는 것은 자명하다. 여기에 스칼라곱 구조만 주면 충분한데, 이는 그냥 $\mathbb{K}$에서의 곱하기 $\mathbb{K}\times \mathbb{K}\rightarrow \mathbb{K}$로 주면 된다. 이렇게 정의하면 스칼라곱이 [정의 1](#def1)의 조건들을 모두 만족한다는 것을 확인할 수 있고, 따라서 $\mathbb{K}$는 그 자체로 $\mathbb{K}$-벡터공간이다. 
 
@@ -92,7 +94,7 @@ $$(-1)v+v=(-1)v+1v=((-1)+1)v=0v=0$$
 :::
 
 ::: 예시 5
-이번에는 field $\mathbb{K}$가 주어졌다고 하자. 그럼 *유클리드 $n$차원 공간*은 다음의 $n$-순서쌍
+이번에는 field $\mathbb{K}$가 주어졌다고 하자. 그럼 *유클리드 $n$-공간*은 다음의 $n$-순서쌍
 
 $$\begin{pmatrix}a_1\\a_2\\\vdots\\a_n\end{pmatrix},\qquad a_i\in\mathbb{K}\text{ for all $i$}$$
 

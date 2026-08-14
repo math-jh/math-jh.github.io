@@ -10,6 +10,8 @@ sidebar:
 
 date: 2024-06-14
 weight: 7
+published: false
+revising: true
 drift_needed: true
 
 ---
@@ -62,7 +64,7 @@ $$\mu(\eta(1)\otimes m)=\mu((\eta\otimes\id_M)(1\otimes m))=\lambda_M(1\otimes m
 
 그리고 비슷하게 right unitor를 사용하면 $\mu(m\otimes\eta(1))=m$도 보일 수 있기 때문이다.
 
-임의의 monoidal category $\mathcal{A}$에 대하여, 이 위에 정의된 monoid object들 사이의 morphism도 정의할 수 있고, 따라서 monoid object들의 category 또한 생각할 수 있다. 그러나 이 방향으로 monoid category를 정의하거나 하지는 않을 것이다.
+임의의 monoidal category $\mathcal{A}$에 대하여, 이 위에 정의된 monoid object들 사이의 morphism도 정의할 수 있고, 따라서 monoid object들의 category 또한 생각할 수 있다. 그러나 이 방향으로 monoid object들의 category를 정의하거나 하지는 않을 것이다.
 
 ## 군 대상
 
@@ -79,7 +81,7 @@ $$\mu(\eta(1)\otimes m)=\mu((\eta\otimes\id_M)(1\otimes m))=\lambda_M(1\otimes m
 
 {% diagram Math/Category_Theory/Monoid_Objects-3.svg width="9.69em" alt="group_axiom" %}
 
-가 되어야 할 것이다. 여기에서 $e_G$는 $G$의 모든 원소를 $G$의 항등원으로 보내는 group homomorphism이고, $(-)^{-1}\times \id_G$는 두 map $(-)^{-1}:G \rightarrow G$와 $\id_G:G \rightarrow G$의 곱이다. 물론 두 데이터를 전부 추가해서 이를 group object라 할 수도 있겠지만, 그렇게 한다면 예컨대 (monoid object로서의) unit $\eta:I \rightarrow G$와 새로 정의한 morphism $e_G$가 서로 아무런 관련이 없을 것이기 때문에 좋은 해결책이 아니다.
+가 되어야 할 것이다. 여기에서 $e_G$는 $G$의 모든 원소를 $G$의 항등원으로 보내는 group homomorphism이고, $((-)^{-1},\id_G)$는 두 map $(-)^{-1}:G \rightarrow G$와 $\id_G:G \rightarrow G$가 함께 결정하는 morphism, 즉 원소 $g$를 $(g^{-1},g)$로 보내는 map이다.[^2] 물론 두 데이터를 전부 추가해서 이를 group object라 할 수도 있겠지만, 그렇게 한다면 예컨대 (monoid object로서의) unit $\eta:I \rightarrow G$와 새로 정의한 morphism $e_G$가 서로 아무런 관련이 없을 것이기 때문에 좋은 해결책이 아니다.
 
 그런데 만일 원래의 category가 monoidal category가 아니라, cartesian monoidal category였다면 이 모든 문제가 깔끔하게 해결된다. 우선 $e_G$의 경우는 다음의 합성
 
@@ -89,7 +91,7 @@ $$G\overset{\epsilon_G}{\longrightarrow}\{e\}\overset{\eta}{\longrightarrow}G$$
 
 {% diagram Math/Category_Theory/Monoid_Objects-4.svg width="11.93em" alt="inverse_morphism" %}
 
-을 통해 $(-)^{-1}\times \id_G$이 잘 정의된다. 
+을 통해 $((-)^{-1},\id_G)$이 잘 정의된다. 
 
 ::: 정의 3
 Cartesian monoidal category $(\mathcal{A},\times, I)$에 대하여, 이 category에서의 *group object<sub>군 대상</sub>*은 다음과 같은 데이터
@@ -124,7 +126,7 @@ Cartesian monoidal category $(\mathcal{A},\times, I)$에 대하여, 이 category
 - $\Grp$에서의 group object는 abelian group이다.
 :::
 
-마지막 예시만이 조금 덜 자명해보일 수 있지만, 이는 inverse $\iota$가 group homomorphism이 되어야하기 때문에 이 조건으로부터 commutativity가 나오게 된다는 것을 확인할 수 있다. 
+마지막 예시만이 조금 덜 자명해보일 수 있지만, 이는 multiplication $\mu:G\times G \rightarrow G$가 group homomorphism이어야 한다는 조건에서 나온다. $\Grp$의 terminal object는 trivial group이므로 unit $\eta$의 image는 $G$의 항등원 $e$이고, [정의 3](#def3)의 둘째 조건에 의해 $e$는 $\mu$에 대한 항등원이기도 하다. 한편 $G\times G$의 연산이 성분별로 주어지므로, $\mu$가 group homomorphism이라는 것은 임의의 $x,y,z,w\in G$에 대하여 $\mu(xz,yw)=\mu(x,y)\mu(z,w)$가 성립한다는 뜻이고, 이는 곧 $\mu$와 $G$의 원래 곱 사이의 interchange law이다. 같은 항등원을 갖는 두 연산이 interchange law를 만족하므로 Eckmann–Hilton 논법에 의해 $\mu$는 원래의 곱과 일치하고 이 곱은 commutative이다. 
 
 ## Hopf monoid
 
@@ -173,4 +175,4 @@ $\iota$에 대한 조건을 명시적으로 쓰기 위해서는 [정의 3](#def3
 ---
 
 [^1]: 이전 글에서 motivation을 위해 살펴보았던 monoid의 associativity에 대한 diagram에서는 $(M\times M)\times M$과 $M\times(M\times M)$을 모두 같은 것으로 보아 diagram이 사각형이었지만, 여기에서는 $(M\otimes M)\otimes M$과 $M\otimes(M\otimes M)$이 다른 대상이므로 오각형이 되었다.
-[^2]: 두 morphism의 곱은 product category에서부터 나온다고 착각할 수도 있는데, 두 morphism $f:G\rightarrow G$와 $g:G\rightarrow G$를 곱하면 $(f,g):G\times G \rightarrow G\times G$가 나온다. 뒤쪽 $G\times G$에 monoidal product $\otimes$를 적용하면 $(f,g)$의 target을 $G\otimes G$로 만들어줄 수는 있지만, 
+[^2]: 이러한 morphism이 product category에서부터 나온다고 착각할 수도 있다. 두 morphism $f:G\rightarrow G$와 $g:G\rightarrow G$는 product category $\mathcal{A}\times\mathcal{A}$에서 대상 $(G,G)$를 자기 자신으로 보내는 morphism $(f,g)$를 이루고, 여기에 bifunctor $\otimes$를 적용하면 $f\otimes g:G\otimes G \rightarrow G\otimes G$를 얻는다. 그러나 이렇게 얻어지는 morphism의 source는 $G$가 아니라 $G\otimes G$이므로, 우리에게 필요한 $G\rightarrow G\otimes G$는 이 방법으로 얻어지지 않는다.

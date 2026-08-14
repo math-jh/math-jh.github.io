@@ -51,7 +51,7 @@ $$\lim_{n\rightarrow\infty}\int_a^b f_n = \int_a^b f = \int_a^b \lim_{n\rightarr
 :::
 
 ::: 증명
-$f$는 [정리 2](#thm2)로 연속이므로 적분가능하다 ([§Riemann 적분, ⁋정리 4](/ko/math/analysis/riemann_integral#thm4)). 단조성에 의해
+$f$는 [정리 2](#thm2)로 연속이므로 적분가능하다 ([§Riemann integral, ⁋정리 4](/ko/math/analysis/riemann_integral#thm4)). 단조성에 의해
 
 $$\left\lvert\int_a^b f_n - \int_a^b f\right\rvert \leq \int_a^b \lvert f_n - f\rvert \leq \lVert f_n - f\rVert_\infty (b - a) \rightarrow 0$$
 

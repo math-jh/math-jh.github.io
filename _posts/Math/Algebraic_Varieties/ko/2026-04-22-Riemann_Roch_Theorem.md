@@ -46,7 +46,7 @@ $$\ell(D)-\ell(K_C-D)=\deg D+1-g$$
 
 $$H^1(C, \mathcal{O}_C(D)) \cong H^0(C, \omega_C \otimes \mathcal{O}_C(-D))^\vee = H^0(C, \mathcal{O}_C(K_C - D))^\vee\tag{$1$}$$
 
-이 성립한다 ([§세르 쌍대성, ⁋명제 2](/ko/math/algebraic_varieties/serre_duality#prop2)). 여기서 canonical divisor $K_C$는 canonical line bundle에 대응되는 divisor였던 것을 기억하자. 그럼 다음 보조정리에 의해 $\mathcal{O}_C(D)$의 Euler characteristic에서 등장하는 항은 단 두 개 뿐임을 유도할 수 있다. 이 글에서 우리는 $\mathbb{K}$가 *infinite* field임을 가정한다. 
+이 성립한다 ([§세르 쌍대성, ⁋명제 2](/ko/math/algebraic_varieties/serre_duality#prop2) 직후에 서술된 임의의 smooth projective variety에서의 형태). 여기서 canonical divisor $K_C$는 canonical line bundle에 대응되는 divisor였던 것을 기억하자. 그럼 다음 보조정리에 의해 $\mathcal{O}_C(D)$의 Euler characteristic에서 등장하는 항은 단 두 개 뿐임을 유도할 수 있다. 이 글에서 우리는 $\mathbb{K}$가 *infinite* field임을 가정한다. 
 
 ::: 보조정리 2
 Smooth projective curve $C$ 위의 임의의 coherent sheaf $\mathcal{F}$에 대해
@@ -81,7 +81,7 @@ Algebraic geometry에서 우리는 보편적으로 underlying field $\mathbb{K}$
 
 $$\rchi(\mathcal{O}_{C_S})=h^0(C_S, \mathcal{O}_{C_S})-h^1(C_S, \mathcal{O}_{C_S})$$
 
-으로 주어진다. 한편, 위상수학에서 $1$차원 구멍이 $H^1$을 통해 나타나듯 대수기하에서의 1차원 구멍, 즉 위상수학 관점에서의 2차원 구멍인 genus는 $g=h^1(C_S, \mathcal{O}_{C_S})$로 정의되며, global section은 상수함수 뿐이므로 $C_S$의 Euler characteristic은
+으로 주어진다. 한편, 위상수학에서 $1$차원 구멍이 $H^1$을 통해 나타나듯 대수기하에서의 1차원 구멍인 genus는 $g=h^1(C_S, \mathcal{O}_{C_S})$로 정의되며, global section은 상수함수 뿐이므로 $C_S$의 Euler characteristic은
 
 $$\rchi(\mathcal{O}_{C_S})=h^0(C_S, \mathcal{O}_{C_S})-h^1(C_S, \mathcal{O}_{C_S})=1-g$$
 
@@ -208,7 +208,7 @@ $K_C \sim 0$이므로 elliptic curve에서 Riemann-Roch는 특히 단순해진�
 
 $$\ell(p)-\ell(K_C-p)=2-g$$
 
-이므로 $\ell(K_C-p)=\ell(K_C)-1<\ell(K_C)$이므로 canonical map
+를 얻는다. 이 때 $\ell(p)\ge 2$라면 degree 1 morphism $C\rightarrow\mathbb{P}^1$이 존재하여 $C\cong\mathbb{P}^1$이 되고 이는 $g=2$에 모순이므로 $\ell(p)=1$이며, 위의 식에서 $2-g=0$이므로 $\ell(K_C-p)=\ell(p)=1=\ell(K_C)-1<\ell(K_C)$이다. 이것이 모든 $p\in C$에 대해 성립하므로 $\lvert K_C\rvert$는 basepoint-free이고, 따라서 canonical map
 
 $$\varphi_{K_C}:C\rightarrow \mathbb{P}^1$$
 
@@ -216,7 +216,7 @@ $$\varphi_{K_C}:C\rightarrow \mathbb{P}^1$$
 
 이제 한 점 $p$의 배수 $D=d\cdot p$에 Riemann-Roch를 적용하여 $\ell(D)$가 $d$에 따라 어떻게 변하는지 살펴 보자. 작은 $d$, 즉 $\ell(K_C-D)$가 살아있는 곳에서는 특수한 현상이 나타나지만, $d$가 커지면 $\ell(D)$는 선형적으로 안정화된다.
 
-1. $d=1$의 경우, $\ell(p)\ge 2$라면 degree 1 morphism $C\rightarrow\mathbb{P}^1$이 존재하여 $C\cong\mathbb{P}^1$이 되지만 $g=2$와 모순이므로 $\ell(p)=1$이다. Riemann-Roch에 의해 $\ell(K_C-p)=1$이다.
+1. $d=1$의 경우는 위에서 이미 살펴본 것으로, $\ell(p)=1$이고 Riemann-Roch에 의해 $\ell(K_C-p)=1$이다.
 2. $d=2$의 경우, 만약 $2p\sim K_C$이면 $\ell(2p)=2$이다. 이 경우 $p$를 *Weierstrass point*라 부르는데, 이 조건은 정확히 위의 canonical map $\varphi_{K_C}$에 대한 어떤 점의 preimage가 $p$로 겹쳐있는 상황에 해당한다. 일반적인 점에서는 $2p\not\sim K_C$이므로 $\ell(2p)=1$이다.
 3. $d\ge 3$이면 $\deg(K_C-D)=2-d<0$이므로 $\ell(K_C-D)=0$이고, 따라서 $\ell(D)=d-1$이다.
 :::
@@ -245,7 +245,7 @@ $$d(d-3) = 2g - 2 \implies g = \frac{d(d-3) + 2}{2} = \frac{(d-1)(d-2)}{2}$$
 을 얻는다.
 :::
 
-이 공식은 평면곡선의 기하학적 성질을 직접적으로 계산해준다. 예를 들어 smooth plane cubic의 genus는 1이므로, 이는 [예시 5](#ex5)에서 다룬 elliptic curve와 같다. 반면 $d = 1, 2$인 경우에는 $g = 0$으로, 직선과 원뿔곡선이 모두 $\mathbb{P}^1$과 birationally equivalent임을 반영한다 ([§유리사상, ⁋명제 10](/ko/math/algebraic_varieties/rational_maps#prop10)).
+이 공식은 평면곡선의 기하학적 성질을 직접적으로 계산해준다. 예를 들어 smooth plane cubic의 genus는 1이므로, 이는 [예시 5](#ex5)에서 다룬 elliptic curve와 같다. 반면 $d = 1, 2$인 경우에는 $g = 0$으로, 직선과 원뿔곡선이 모두 $\mathbb{P}^1$과 birationally equivalent임을 반영한다. 직선은 그 자체로 $\mathbb{P}^1$과 isomorphic하고, smooth conic의 경우 그 위의 한 점에서의 projection이 conic과 $\mathbb{P}^1$ 사이의 birational map을 주므로, [§유리사상, ⁋명제 10](/ko/math/algebraic_varieties/rational_maps#prop10)에 의해 이는 이들의 function field가 서로 isomorphic하다는 것과 동치이다.
 
 ::: 예시 8
 Degree $d$에 따른 genus를 계산해보면, degree 3 (cubic)의 경우 $g = \frac{2 \cdot 1}{2} = 1$로 elliptic curve이고, degree 4 (quartic)의 경우 $g = \frac{3 \cdot 2}{2} = 3$, degree 5 (quintic)의 경우 $g = \frac{4 \cdot 3}{2} = 6$이다. Genus가 degree에 따라 빠르게 증가하므로, 높은 degree의 smooth plane curve는 점점 더 복잡한 위상적 구조를 갖는다.

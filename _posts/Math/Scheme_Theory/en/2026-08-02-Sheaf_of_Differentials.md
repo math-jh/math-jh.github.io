@@ -10,6 +10,8 @@ sidebar:
 
 date: 2026-06-21
 weight: 19
+published: false
+revising: true
 translated_at: 2026-08-07T10:15:05+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-08-07T10:15:05+00:00
@@ -230,7 +232,7 @@ For a scheme $X$ over a field $\mathbb{K}$ and a point $x\in X$, we define the *
 $$T_xX=\bigl(\Omega_{X/\mathbb{K}}\otimes_{\mathcal{O}_X}\kappa(x)\bigr)^\vee=\Hom_{\kappa(x)}\bigl(\Omega_{X/\mathbb{K}}\otimes_{\mathcal{O}_X}\kappa(x), \kappa(x)\bigr).$$
 :::
 
-This definition agrees with the description in terms of the maximal ideal of the local ring on a variety. ([[Algebraic Varieties] §Tangent Spaces and Smoothness, ⁋Definition 1](/en/math/algebraic_varieties/tangent_spaces_and_smoothness#def1)) Suppose $x$ is a point with residue field $\kappa(x)=\mathbb{K}$, that is, a $\mathbb{K}$-rational point, and let $(\mathcal{O}_{X,x}, \mathfrak{m}_x)$ be its local ring. Analyzing the conormal exact sequence at the stalk yields that the canonical map $\mathfrak{m}_x/\mathfrak{m}_x^2 \rightarrow \Omega_{X/\mathbb{K}}\otimes\kappa(x)$ is surjective; this sequence has no reason to be exact on the left, so injectivity must come from elsewhere. It is the hypothesis of being $\mathbb{K}$-rational that provides it: in this case $\mathcal{O}_{X,x} \rightarrow \kappa(x)=\mathbb{K}$ splits as a $\mathbb{K}$-algebra homomorphism, so $f\mapsto (f-\bar f)+\mathfrak{m}_x^2$ becomes a $\mathbb{K}$-derivation inducing an inverse to the above map, and therefore $\Omega_{X/\mathbb{K}}\otimes \kappa(x)\cong \mathfrak{m}_x/\mathfrak{m}_x^2$ holds. Then the Zariski tangent space is $(\mathfrak{m}_x/\mathfrak{m}_x^2)^\vee$, that is, the dual of the cotangent space $\mathfrak{m}_x/\mathfrak{m}_x^2$. Whether the dimension $\dim_{\kappa(x)}T_xX$ at a point equals the local dimension $\dim \mathcal{O}_{X,x}$ at that point is the criterion for whether the point is nonsingular, and if $\mathcal{O}_{X,x}$ is Noetherian then in general $\dim_{\kappa(x)}T_xX\geq \dim \mathcal{O}_{X,x}$.
+This definition agrees with the description in terms of the maximal ideal of the local ring on a variety. ([[Algebraic Varieties] §Tangent Spaces and Smoothness, ⁋Definition 1](/en/math/algebraic_varieties/tangent_spaces_and_smoothness#def1)) Suppose $x$ is a point with residue field $\kappa(x)=\mathbb{K}$, that is, a $\mathbb{K}$-point, and let $(\mathcal{O}_{X,x}, \mathfrak{m}_x)$ be its local ring. Analyzing the conormal exact sequence at the stalk yields that the canonical map $\mathfrak{m}_x/\mathfrak{m}_x^2 \rightarrow \Omega_{X/\mathbb{K}}\otimes\kappa(x)$ is surjective; this sequence has no reason to be exact on the left, so injectivity must come from elsewhere. It is the hypothesis of being a $\mathbb{K}$-point that provides it: in this case $\mathcal{O}_{X,x} \rightarrow \kappa(x)=\mathbb{K}$ splits as a $\mathbb{K}$-algebra homomorphism, so $f\mapsto (f-\bar f)+\mathfrak{m}_x^2$ becomes a $\mathbb{K}$-derivation inducing an inverse to the above map, and therefore $\Omega_{X/\mathbb{K}}\otimes \kappa(x)\cong \mathfrak{m}_x/\mathfrak{m}_x^2$ holds. Then the Zariski tangent space is $(\mathfrak{m}_x/\mathfrak{m}_x^2)^\vee$, that is, the dual of the cotangent space $\mathfrak{m}_x/\mathfrak{m}_x^2$. Whether the dimension $\dim_{\kappa(x)}T_xX$ at a point equals the local dimension $\dim \mathcal{O}_{X,x}$ at that point is the criterion for whether the point is nonsingular, and if $\mathcal{O}_{X,x}$ is Noetherian then in general $\dim_{\kappa(x)}T_xX\geq \dim \mathcal{O}_{X,x}$.
 
 ## Sheaves of Differentials on Affine and Projective Spaces
 

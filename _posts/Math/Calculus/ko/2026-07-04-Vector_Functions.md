@@ -10,6 +10,8 @@ sidebar:
 
 date: 2026-07-04
 weight: 13
+published: false
+revising: true
 drift_needed: true
 ---
 
@@ -193,21 +195,21 @@ $v = \lVert \mathbf{r}'\rVert = \dd{s}/\dd{t}$로 두면 $\mathbf{r}' = v\mathbf
 
 $$\mathbf{r}'' = v'\mathbf{T} + v\mathbf{T}'(t)$$
 
-이고, 연쇄법칙 $\mathbf{T}'(t) = (d\mathbf{T}/\dd{s})v$와 $\lVert d\mathbf{T}/\dd{s}\rVert = \kappa$에서 $\mathbf{T}'(t) = \kappa v\mathbf{N}$이다. 따라서
+이고, 연쇄법칙 $\mathbf{T}'(t) = (d\mathbf{T}/\dd{s})v$와 $\lVert d\mathbf{T}/\dd{s}\rVert = \kappa$에서 $\lVert \mathbf{T}'(t)\rVert = \kappa v$이다. 따라서
 
-$$\mathbf{r}' \times \mathbf{r}'' = (v\mathbf{T}) \times (v'\mathbf{T} + \kappa v^2\mathbf{N}) = v^3 \kappa(\mathbf{T} \times \mathbf{N})$$
+$$\mathbf{r}' \times \mathbf{r}'' = (v\mathbf{T}) \times (v'\mathbf{T} + v\mathbf{T}'(t)) = v^2(\mathbf{T} \times \mathbf{T}'(t))$$
 
-이다. 여기서 둘째 등호는 $\mathbf{T}\times \mathbf{T}=0$으로부터 얻어진다. 이제 $\mathbf{T} \perp \mathbf{N}$이고 둘 다 단위벡터라 $\lVert \mathbf{T} \times \mathbf{N}\rVert = 1$이므로, 
+이다. 여기서 둘째 등호는 $\mathbf{T}\times \mathbf{T}=0$으로부터 얻어진다. 이제 $\mathbf{T}$는 단위벡터이고, 길이가 일정한 벡터의 변화율은 그 벡터에 수직이라는 [명제 3](#prop3) 직후의 관찰에 의해 $\mathbf{T} \perp \mathbf{T}'(t)$이므로 $\lVert \mathbf{T} \times \mathbf{T}'(t)\rVert = \lVert \mathbf{T}'(t)\rVert = \kappa v$이고, 
 
 $$\lVert \mathbf{r}' \times \mathbf{r}''\rVert = v^3 \kappa = \lVert \mathbf{r}'\rVert^3 \kappa$$
 
 가 되어 원하는 등식을 얻는다. 평면곡선 $y = f(x)$에 대한 공식은 $\mathbf{r}(x) = (x, f(x),0)$으로 두고 $3$차원에서의 공식을 그대로 적용하면 된다. 
 :::
 
-증명에 등장한 $\mathbf{r}' = v\mathbf{T}$를 한 번 더 미분한 $\mathbf{r}'' = v'\mathbf{T} + \kappa v^2\mathbf{N}$은 그 자체로 의미가 깊다. 가속도가 접선 방향 성분과 법선 방향 성분으로 갈라지는 것이다. 이를 다음과 같은 별도의 명제로 적어두자. 
+증명에 등장한 $\mathbf{r}' = v\mathbf{T}$를 한 번 더 미분한 $\mathbf{r}'' = v'\mathbf{T} + v\mathbf{T}'(t)$는 $\kappa \neq 0$인 점에서 $d\mathbf{T}/\dd{s} = \kappa\mathbf{N}$이라 $\mathbf{T}'(t) = \kappa v\mathbf{N}$이 되므로, 거기서는 $\mathbf{r}'' = v'\mathbf{T} + \kappa v^2\mathbf{N}$으로 적힌다. 이 식은 그 자체로 의미가 깊다. 가속도가 접선 방향 성분과 법선 방향 성분으로 갈라지는 것이다. 이를 다음과 같은 별도의 명제로 적어두자. 
 
 ::: 명제 9 (가속도의 분해)
-이급정칙곡선의 가속도는 
+이급정칙곡선의 $\kappa \neq 0$인 점에서 가속도는 
 
 $$\mathbf{r}'' = \frac{\dd{v}}{\dd{t}}\mathbf{T} + \kappa v^2\mathbf{N}$$
 

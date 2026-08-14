@@ -10,6 +10,8 @@ sidebar:
 
 date: 2023-01-02
 weight: 3
+published: false
+revising: true
 translated_at: 2026-07-14T00:00:02+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-07-14T00:00:02+00:00
@@ -192,27 +194,27 @@ However, in general $\mathbf{K}(\mathcal{C})$ is not an abelian category.
 In [Definition 4](#def4), we called chain complexes with isomorphic homology quasi-isomorphic and decided to treat them as the same. The mapping cone is a tool for determining whether a given chain map $f:C_\bullet \rightarrow D_\bullet$ is a quasi-isomorphism.
 
 ::: Definition 8
-For any chain map $f:C_\bullet\rightarrow D_\bullet$, the *mapping cone* $\cone(f)$ of $f$ is the following chain complex
+For any chain map $f:C_\bullet\rightarrow D_\bullet$, the *mapping cone* $\Cone(f)$ of $f$ is the following chain complex
 
-$$\cdots\longrightarrow\underbrace{C_n\oplus D_{n+1}}_{\cone(f)_{n+1}}\overset{d_{n+1}}{\longrightarrow}\underbrace{C_{n-1}\oplus D_n}_{\cone(f)_n}\overset{d_n}{\longrightarrow}\underbrace{C_{n-2}\oplus D_{n-1}}_{\cone(f)_{n-1}}\longrightarrow\cdots$$
+$$\cdots\longrightarrow\underbrace{C_n\oplus D_{n+1}}_{\Cone(f)_{n+1}}\overset{d_{n+1}}{\longrightarrow}\underbrace{C_{n-1}\oplus D_n}_{\Cone(f)_n}\overset{d_n}{\longrightarrow}\underbrace{C_{n-2}\oplus D_{n-1}}_{\Cone(f)_{n-1}}\longrightarrow\cdots$$
 
 Here, the differential is given by the formula
 
 $$d_n(x,y)=(-d_{n-1}(x), d_n(y)-f_{n-1}(x))\qquad (x\in C_{n-1},y\in D_n)$$
 :::
 
-Given a chain map $f: C_\bullet \rightarrow D_\bullet$ and its mapping cone $\cone(f)$, consider the sequence of chain complexes
+Given a chain map $f: C_\bullet \rightarrow D_\bullet$ and its mapping cone $\Cone(f)$, consider the sequence of chain complexes
 
-$$0 \longrightarrow D \longrightarrow \cone(f) \overset{\delta}{\longrightarrow} C[-1] \longrightarrow0$$
+$$0 \longrightarrow D \longrightarrow \Cone(f) \overset{\delta}{\longrightarrow} C[-1] \longrightarrow0$$
 
-Here, $D \rightarrow\cone(f)$ sends $y$ to $(0,y)$, and $\delta$ sends $(x,y)$ to $-x$. Then by the definitions of these functions, it is trivial that the above sequence is a short exact sequence, so by [Theorem 1](#thm1) the following long exact sequence exists
+Here, $D \rightarrow\Cone(f)$ sends $y$ to $(0,y)$, and $\delta$ sends $(x,y)$ to $-x$. Then by the definitions of these functions, it is trivial that the above sequence is a short exact sequence, so by [Theorem 1](#thm1) the following long exact sequence exists
 
-$$\cdots \rightarrow H_{n+1}(\cone(f)) \rightarrow H_n(B) \rightarrow H_n(C) \rightarrow H_n(\cone(f)) \rightarrow H_{n-1}(B) \rightarrow \cdots$$
+$$\cdots \rightarrow H_{n+1}(\Cone(f)) \rightarrow H_n(B) \rightarrow H_n(C) \rightarrow H_n(\Cone(f)) \rightarrow H_{n-1}(B) \rightarrow \cdots$$
 
 On the other hand, examining the proof of this theorem, one can see that the connecting maps $H_n(B) \rightarrow H_n(C)$ obtained above are exactly $H_n(f)$. Therefore, the following holds.
 
 ::: Corollary 9
-A chain map $f: C_\bullet \rightarrow D_\bullet$ is a quasi-isomorphism if and only if $\cone(f)$ is an exact sequence.
+A chain map $f: C_\bullet \rightarrow D_\bullet$ is a quasi-isomorphism if and only if $\Cone(f)$ is an exact sequence.
 :::
 
 

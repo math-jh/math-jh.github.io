@@ -126,10 +126,12 @@ $$\varphi_{p'}\circ\varphi_p^{-1}:a\mapsto \bigl(\text{$x'\circ x^{-1}(0,a)$의 
 마지막으로 이러한 manifold 구조의 유일성은 [§부분다양체의 유일성, ⁋명제 5](/ko/math/manifolds/uniqueness_of_submanifold#prop5)로부터 나온다. $(P,\iota)$가 subspace topology에 대해 $M$의 submanifold가 되는 미분구조를 가지므로, 이 구조는 $(P,\iota)$를 $M$의 submanifold로 만드는 유일한 manifold 구조이기 때문이다.
 :::
 
-다음 따름정리의 가정은 앞선 따름정리의 가정보다 약하기 때문에 더 잘 사용할 수 있다.
+다음 따름정리는 $\dd{F_p}$가 surjective일 것을 요구하지 않고 rank가 일정하기만 하면 되므로, 앞선 따름정리가 적용되지 않는 경우에도 쓸 수 있다.
 
 ::: 따름정리 5 (Constant-rank level set theorem)
-$F:M\rightarrow N$이 $C^\infty$라 하고, 각각의 $p\in P$마다 정의되는 $\dd{F_p}:T_pM\rightarrow T_{F(p)}N$이 모든 점 $p\in P$에서 같은 rank를 가진다고 하자. 그럼 $F:M\rightarrow N$은 embedded submanifold이다.
+$F:M\rightarrow N$이 $C^\infty$라 하고, $\dd{F_p}:T_pM\rightarrow T_{F(p)}N$이 모든 점 $p\in M$에서 같은 rank $r$을 가진다고 하자. $q\in F(M)$를 고정하고 $P=F^{-1}(q)$라 하면, $P$ 위에 정의된 유일한 manifold 구조가 존재하여 canonical injection $\iota:P\hookrightarrow M$이 submanifold가 된다.
+
+또, 이 때 $\iota$는 embedding이고, $P$의 codimension $\dim M-\dim P$가 $r$과 동일해진다.
 :::
 
 이 정리들을 통해 주어진 manifold $M$의 특정한 부분집합이 embedded submanifold라는 것을 보일 수 있는데, 이는 대표적으로 다음과 같은 논증을 따른다.
@@ -143,7 +145,7 @@ $$f(x)=\lvert x\rvert^2=\sum_{i=1}^{n+1} r^i(x)^2$$
 
 $$\dd{f_x}(v)=v(f)=\sum v^i\frac{\partial f}{\partial r^i}\bigg\vert_{x}=2\sum r^i(x) v^i$$
 
-이 성립하며, 이로부터 $x$가 원점이 아니라면 $v$를 조절하여 $\dd{f_x}(v)$가 임의의 실수값을 갖도록 할 수 있음을 안다. 즉, $\dd{f_x}$가 원점을 제외하면 항상 surjective이므로, $f^{-1}(1)$이 $\mathbb{R}^{n+1}$의 submanifold이도록 하는 유일한 manifold 구조가 존재한다. 유일성에 의하여 이 구조는 $S^n$에 주어진 manifold 구조와 동일하며, 다시 [따름정리 5](#cor5)에 의해 이 구조는 $\mathbb{R}^{n+1}$의 embedded submanifold임을 알 수 있다.
+이 성립하며, 이로부터 $x$가 원점이 아니라면 $v$를 조절하여 $\dd{f_x}(v)$가 임의의 실수값을 갖도록 할 수 있음을 안다. 즉, $\dd{f_x}$가 원점을 제외하면 항상 surjective이므로, $f^{-1}(1)$이 $\mathbb{R}^{n+1}$의 submanifold이도록 하는 유일한 manifold 구조가 존재한다. 유일성에 의하여 이 구조는 $S^n$에 주어진 manifold 구조와 동일하며, 다시 [따름정리 4](#cor4)에 의해 이 구조는 $\mathbb{R}^{n+1}$의 embedded submanifold임을 알 수 있다.
 :::
 
 ---

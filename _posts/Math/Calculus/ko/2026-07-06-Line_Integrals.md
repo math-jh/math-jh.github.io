@@ -10,6 +10,8 @@ sidebar:
 
 date: 2026-07-06
 weight: 17
+published: false
+revising: true
 
 drift_needed: true
 
@@ -20,7 +22,7 @@ drift_needed: true
 ## 선적분
 
 ::: 정의 1
-$C^1$ 곡선 $\mathbf{r}\colon [a, b] \rightarrow \mathbb{R}^n$ 위에서 연속인 scalar field $f$의 *선적분<sub>line integral</sub>*은
+$C^1$ 곡선 $\mathbf{r}\colon [a, b] \rightarrow \mathbb{R}^n$ 위에서 continuous scalar field $f$의 *선적분<sub>line integral</sub>*은
 
 $$\int_C f\dd{s} = \int_a^b f(\mathbf{r}(t))\lvert \mathbf{r}'(t)\rvert \dd{t}$$
 
@@ -38,6 +40,8 @@ $$\int_C \mathbf{F} \cdot d\mathbf{r} = \int_a^b \mathbf{F}(\mathbf{r}(t)) \cdot
 
 이다. 
 :::
+
+$\mathbf{F}$가 힘을 나타내는 벡터장인 경우, 위의 적분은 그 힘이 곡선 $C$를 따라 움직이는 물체에 한 *일<sub>work</sub>*이 된다. 힘이 일정하고 변위가 $\mathbf{d}$일 때의 일이 $\mathbf{F}\cdot \mathbf{d}$인 것에서 출발해, 각 순간의 변위를 $\mathbf{r}'(t)\dd{t}$로 근사하여 힘과의 내적을 곡선 전체에 걸쳐 더한 것이 위의 정의이기 때문이다. 
 
 $\mathbf{r}$이 [§곡선과 벡터함수](/ko/math/calculus/vector_functions)의 일급정칙곡선인 경우, 이를 단위접선벡터를 활용하여 $\mathbf{T} = \mathbf{r}'/\lvert \mathbf{r}'\rvert$로 쓰면 
 

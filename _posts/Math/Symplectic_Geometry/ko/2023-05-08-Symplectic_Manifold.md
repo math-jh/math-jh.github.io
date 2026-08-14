@@ -105,6 +105,12 @@ $$\iota_{X_H}\omega=\dd{H}$$
 
 위에서 본 대응이 isomorphism이므로 이러한 $X_H$는 실제로 유일하게 존재한다. $M=\mathbb{R}^{2n}$에 canonical form $\omega_0$를 준 경우 이 정의는 [§고전역학, ⁋명제 1](/ko/math/symplectic_geometry/classical_mechanics#prop1)의 Hamilton 방정식이 정의하던 바로 그 벡터장으로 환원되며, 따라서 $X_H$의 integral flow는 에너지 $H$ 아래에서의 물체의 운동을 기술한다. 
 
+이 flow는 $\omega$를 보존한다. 실제로 [\[미분다양체\] §리 미분, ⁋명제 4](/ko/math/manifolds/Lie_derivative#prop4)의 Cartan's formula와 $\dd{\omega}=0$으로부터 
+
+$$\mathcal{L}_{X_H}\omega=\iota_{X_H}\dd{\omega}+\dd{(\iota_{X_H}\omega)}=\dd{(\dd{H})}=0$$
+
+이고, $X_H$의 flow $\varphi^t$에 대하여 $(\varphi^t)^\ast\omega$의 $t$에 대한 미분이 $(\varphi^t)^\ast(\mathcal{L}_{X_H}\omega)$이므로 $(\varphi^t)^\ast\omega=\omega$가 flow가 정의되는 범위에서 성립하기 때문이다. 곧 각각의 함수 $H\in C^\infty(M)$마다 symplectomorphism들의 $1$-parameter family가 하나씩 얻어진다. 
+
 ::: 정의 7
 Symplectic manifold $(M,\omega)$와 두 함수 $f,g\in C^\infty(M)$에 대하여, 이들의 *Poisson 괄호<sub>Poisson bracket</sub>* $\{f,g\}$를 
 
@@ -116,7 +122,7 @@ $$\{f,g\}=\omega(X_f,X_g)$$
 정의로부터 $\{f,g\}=(\iota_{X_f}\omega)(X_g)=\dd{f}(X_g)=X_g f$이므로, Poisson 괄호는 $g$를 따라 흐를 때의 $f$의 변화율이기도 하다. $\omega$가 antisymmetric이므로 $\{f,g\}=-\{g,f\}$이고, $X_f$가 derivation이므로 각 변수에 대해 Leibniz 법칙 $\{f,gh\}=\{f,g\}h+g\{f,h\}$가 성립한다. 뿐만 아니라 $\dd{\omega}=0$이라는 조건이 정확히 Jacobi 항등식 $\{f,\{g,h\}\}+\{g,\{h,f\}\}+\{h,\{f,g\}\}=0$과 동치임을 보일 수 있으며, 따라서 $(C^\infty(M),\{-,-\})$는 Lie 대수를 이룬다. 
 
 ::: 참고 8
-[예시 2](#ex2)의 1번은 단지 국소적인 model이 아니다. 다음 글에서 다룰 *Darboux 정리*는 임의의 symplectic manifold $(M,\omega)$가 각 점 근방에서 $(\mathbb{R}^{2n},\omega_0)$과 symplectomorphic함을 보여준다. 즉 symplectic manifold에는 곡률과 같은 국소 불변량이 존재하지 않으며, 모든 symplectic manifold는 국소적으로 동일하게 생겼다. 이것이 [정의 5](#def5) 이후에 언급한 "국소적 풍부함"의 정확한 의미이다. 
+[예시 2](#ex2)의 1번은 단지 local model이 아니다. 다음 글에서 다룰 *Darboux 정리*는 임의의 symplectic manifold $(M,\omega)$가 각 점 근방에서 $(\mathbb{R}^{2n},\omega_0)$과 symplectomorphic함을 보여준다. 즉 symplectic manifold에는 곡률과 같은 국소 불변량이 존재하지 않으며, 모든 symplectic manifold는 국소적으로 동일하게 생겼다. 이것이 [정의 5](#def5) 이후에 언급한 "국소적 풍부함"의 정확한 의미이다. 
 :::
 
 ## Lagrangian submanifold

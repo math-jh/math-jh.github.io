@@ -24,7 +24,7 @@ $$\ell(D) - \ell(K_C - D) = \deg D + 1 - g$$
 
 직관적으로, 위 식의 우변에서 등장하는 $\deg D$는 일종의 선형인 항이라 생각할 수 있으나, 이렇게 곡면에서의 일반화를 하는 과정에서 우리는 추가적인 <em-ko>이차항들</em-ko> $D\cdot D$, $D\cdot K_S$ 등을 고려하게 된다. 이들은 surface 위의 두 divisor가 얼마나 교차하는지를 담고 있는 양으로, curve case에서의 divisor들, 즉 점들은 곡선 안에서 일반적으로 만나지 않지만, 곡면에서의 divisor들, 즉 곡선들은 이 곡면 안에서 일반적으로 유한 개의 점에서 만나기 때문에 생겨난다. 
 
-이 글에서는 intersection number의 정의와 그 기본 성질을 다루고, Riemann–Roch 공식을 엄밀하게 유도한 뒤, 이를 활용하여 Hodge index theorem과 plurigenera에 대한 부등식을 증명한다. 또한 intersection form이 surface의 birational geometry에서 갖는 의미를 살펴본다.
+이 글에서는 intersection number의 정의와 그 기본 성질을 다루고, Riemann–Roch 공식을 엄밀하게 유도한 뒤, 이를 활용하여 Hodge index theorem을 증명한다. 또한 intersection form이 surface의 birational geometry에서 갖는 의미를 살펴보고, birational invariant인 plurigenera를 정의한다.
 
 ## 교차수
 
@@ -70,7 +70,19 @@ $$\rchi(\mathcal{F} \otimes L_1^{\otimes n_1} \otimes \cdots \otimes L_k^{\otime
 
 ## 곡면에서의 리만-로흐 정리
 
-이제 우리는 Riemann-Roch 정리를 곡면으로 확장할 때 필요한 언어를 전부 가지고 있다. 이제 우리에게 필요한 것은 다음의 보조정리이다. 
+이제 우리는 Riemann-Roch 정리를 곡면으로 확장할 때 필요한 언어를 전부 가지고 있다. 그 전에, intersection number를 curve 위의 line bundle의 degree로 읽는 다음의 등식을 확립해두자. $S$ 위의 smooth irreducible curve $D$와 임의의 divisor $C$에 대해
+
+$$\deg(\mathcal{O}_S(C)\vert_D) = C \cdot D$$
+
+가 성립한다. 실제로 $D$가 effective divisor이므로 $D$를 정의하는 $\mathcal{O}_S(D)$의 section을 곱하는 것으로부터 short exact sequence
+
+$$0 \rightarrow \mathcal{O}_S(C) \rightarrow \mathcal{O}_S(C+D) \rightarrow \mathcal{O}_S(C+D)\vert_D \rightarrow 0$$
+
+를 얻고, Euler characteristic의 additivity에 의해 $\rchi(\mathcal{O}_S(C+D)\vert_D) = \rchi(\mathcal{O}_S(C+D)) - \rchi(\mathcal{O}_S(C))$이다. 여기에 $C=0$인 경우의 등식을 빼면 우변은 [정의 1](#def1)에 의해 정확히 $C \cdot D$가 되고, 좌변은 $D$ 위의 line bundle들에 [§곡선에서의 리만-로흐 정리, ⁋명제 3](/ko/math/algebraic_varieties/riemann_roch_theorem#prop3)을 적용하면
+
+$$\big(\deg(\mathcal{O}_S(C+D)\vert_D) + 1 - g(D)\big) - \big(\deg(\mathcal{O}_S(D)\vert_D) + 1 - g(D)\big) = \deg(\mathcal{O}_S(C)\vert_D)$$
+
+가 되므로 원하는 등식이 따라온다. 이제 우리에게 필요한 것은 다음의 보조정리이다. 
 
 ::: 보조정리 3 (Genus formula)
 Smooth projective surface $S$ 위의 smooth irreducible curve $D$에 대해
@@ -89,7 +101,7 @@ $$\omega_D \cong (\omega_S \otimes \mathcal{O}_S(D))\vert_D$$
 
 $$\deg(\omega_D) = \deg(\omega_S\vert_D) + \deg(\mathcal{O}_D(D))$$
 
-이다. 우리는 앞서 [§곡선에서의 리만-로흐 정리, ⁋명제 3](/ko/math/algebraic_varieties/riemann_roch_theorem#prop3)의 결과로 $\deg(\omega_D)=2g-2$라는 것을 유도하였으며 우변의 두 항만 intersection number로 해석하면 된다. 우선 $\omega_S\vert_D$는 $D$ 위로 restriction된 canonical bundle로, 이는 $D$와 canonical divisor $K_S$의 intersection number를 측정한다. 구체적으로 $K_S$가 $\omega_S$에 대응하는 divisor이므로, $\omega_S\vert_D$의 degree는 $D$ 위에서 $K_S$가 차지하는 점들의 수, 즉 $D \cdot K_S$가 된다. 비슷하게 $\mathcal{O}_D(D)$는 $D$의 normal bundle $\mathcal{N}_{D/S}$에 해당하며, 이는 $D$가 $S$ 안에서 자기 자신과 만나는 정도를 측정한다. 이 bundle의 degree는 $D$의 self-intersection number $D^2$와 일치한다. 이들을 종합하면
+이다. 우리는 앞서 [§곡선에서의 리만-로흐 정리, ⁋명제 3](/ko/math/algebraic_varieties/riemann_roch_theorem#prop3)의 결과로 $\deg(\omega_D)=2g-2$라는 것을 유도하였으며 우변의 두 항만 intersection number로 해석하면 된다. 우선 $\omega_S$에 대응하는 divisor가 canonical divisor $K_S$이므로 $\omega_S\vert_D = \mathcal{O}_S(K_S)\vert_D$이고, 따라서 앞서 확립한 등식에 $C=K_S$를 넣으면 $\deg(\omega_S\vert_D) = K_S \cdot D$이다. 비슷하게 $\mathcal{O}_D(D) = \mathcal{O}_S(D)\vert_D$이므로 같은 등식에 $C=D$를 넣어 $\deg(\mathcal{O}_D(D)) = D^2$을 얻는다. 후자는 $D$의 normal bundle $\mathcal{N}_{D/S}$의 degree이기도 하며, 기하학적으로 이는 $D$가 $S$ 안에서 자기 자신과 만나는 정도를 재는 양이다. 이들을 종합하면
 
 $$2g(D) - 2 = D \cdot K_S + D^2$$
 
@@ -141,7 +153,7 @@ $$H^1(S, \mathcal{O}_S(D + nH)) = H^2(S, \mathcal{O}_S(D + nH)) = 0$$
 
 $$\rchi(\mathcal{O}_S(D + nH)) = h^0(\mathcal{O}_S(D + nH))$$
 
-가 성립한다. 한편 $D+nH$는 effective divisor이므로, 앞선 논증에 의해 $D+nH$에 대해서는 원하는 등식이 성립한다. 따라서 $n$에 대한 두 함수 $f(n) = \rchi(\mathcal{O}(D+nH))$와 $g(n) = \frac{1}{2}(D+nH)\cdot(D+nH-K_S) + \rchi(\mathcal{O}_S)$를 생각하면 이들은 충분히 큰 $n$에 대해서는 항상 일치한다. 그런데 앞서 언급한 Snapper's theorem에 의해 $\rchi(\mathcal{O}_S(D+nH))$는 $n$에 대한 다항식이고, 무한히 많은 점들에 대해 그 값이 일치하는 다항식은 서로 같으므로 $f$와 $g$는 사실 같은 다항식이다. 즉, 모든 $n$에 대해 $f(n) = g(n)$이며 특히 $n = 0$을 대입하면
+가 성립한다. 한편 $n$을 더 키우면 [§사영공간의 코호몰로지, ⁋명제 10](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop10)에 의해 $D+nH$가 very ample이도록 할 수 있고, 그럼 linear system $\lvert D+nH\rvert$는 비어 있지 않다. 그런데 Bertini의 정리에 의해 이 linear system의 일반적인 원소 $D'$은 smooth irreducible curve이고, $D' \sim D+nH$이므로 $\mathcal{O}_S(D')\cong\mathcal{O}_S(D+nH)$에서 두 divisor의 Euler characteristic이 같으며 [명제 2](#prop2)의 linear invariance에 의해 이들이 만드는 intersection number 또한 같다. 따라서 앞선 논증을 $D'$에 적용하면 $D+nH$에 대해서도 원하는 등식이 성립한다. 그럼 $n$에 대한 두 함수 $f(n) = \rchi(\mathcal{O}(D+nH))$와 $g(n) = \frac{1}{2}(D+nH)\cdot(D+nH-K_S) + \rchi(\mathcal{O}_S)$를 생각하면 이들은 충분히 큰 $n$에 대해서는 항상 일치한다. 그런데 앞서 언급한 Snapper's theorem에 의해 $\rchi(\mathcal{O}_S(D+nH))$는 $n$에 대한 다항식이고, 무한히 많은 점들에 대해 그 값이 일치하는 다항식은 서로 같으므로 $f$와 $g$는 사실 같은 다항식이다. 즉, 모든 $n$에 대해 $f(n) = g(n)$이며 특히 $n = 0$을 대입하면
 
 $$\rchi(\mathcal{O}(D)) = \frac{1}{2}D\cdot(D-K_S) + \rchi(\mathcal{O}_S)$$
 
@@ -212,7 +224,7 @@ $$\rchi(\mathcal{O}(D)) = 1 + \frac{1}{2}(2ab + 2a + 2b) = (a+1)(b+1)$$
 
 ## 호지 지표 정리
 
-고정된 smooth variety $X$에 대하여, 우리는 $X$의 divisor들의 모임 $\Pic(X)$이 $1$차원의 cohomology에 해당하는 것을 안다. ([§층 코호몰로지, ⁋명제 22](/ko/math/algebraic_varieties/sheaf_cohomology#prop22)) 한편 cohomology 위에 정의된 cup product는 일반적으로 intersection product의 dual이므로 ([\[대수적 위상수학\] §푸앵카레 쌍대성, ⁋예시 16](/ko/math/algebraic_topology/Poincare_duality#ex16)) cohomology를 algebra로서 이해하기 위해서는 intersection product를 이해하면 충분하다. 그런데 우리는 곡면의 경우를 탐구하고 있으므로, nontrivial한 원소가 등장하는 것은 오직 세 개의 차원 $H^0, H^1, H^2$에서 뿐이며, cup product는 graded multiplication이므로 이들의 곱이 nontrivial하게 의미가 있는 것은 $1$차원의 원소들을 서로 곱할 때, 즉 divisor들의 intersection product에 해당하는 경우뿐이다.
+고정된 smooth projective variety $X$에 대하여, 우리는 $X$의 divisor들의 모임 $\Pic(X)$이 $\mathcal{O}_X^\times$의 $1$차 cohomology에 해당하는 것을 안다. ([§층 코호몰로지, ⁋명제 22](/ko/math/algebraic_varieties/sheaf_cohomology#prop22)) 한편 divisor는 $X$ 안에서 복소 codimension이 $1$인, 즉 실 codimension이 $2$인 cycle이므로 Poincaré duality를 통해 위상적인 $2$차 cohomology의 class를 주며, 이 대응 아래에서 cup product는 정확히 두 cycle의 intersection에 해당한다. ([\[대수적 위상수학\] §푸앵카레 쌍대성, ⁋예시 16](/ko/math/algebraic_topology/Poincare_duality#ex16)) 그런데 우리는 곡면의 경우를 탐구하고 있으므로 $X$는 실 $4$차원이고, 따라서 divisor가 주는 두 $2$차 class의 cup product는 top degree인 $4$차로 떨어져 하나의 수가 된다. 즉 divisor들이 만들어내는 곱셈구조는 이 intersection product 하나로 전부 기술된다.
 
 따라서 우리는 divisor들을 모아두고, 이들의 intersection product가 무엇인지 살펴보아 cohomology ring의 곱셈구조를 살펴볼 수 있다. 이를 위해 우선 다음을 정의한다. 
 

@@ -10,6 +10,8 @@ sidebar:
 
 date: 2021-08-22
 weight: 14
+published: false
+revising: true
 
 drift_needed: true
 
@@ -40,7 +42,7 @@ drift_needed: true
 Ordered set은 $\leq$라는 관계가 추가적으로 정의된 집합이므로, 이들 사이의 함수를 생각할 때는 $\leq$ 또한 보존하는 함수를 주로 생각하게 된다. 특별히 다음을 정의한다.
 
 ::: 정의 4
-만일 두 order relation $(R, A, A)$과 $(R', A',A')$에 대해 어떠한 전단사함수 $f$가 존재하여 $x\leq_{\tiny R}y$와 $f(x)\leq_{\tiny R'}f(y)$가 동치라면 $f$를 *order isomorphism*이라 부른다. 
+두 order relation $(R, A, A)$과 $(R', A',A')$, 그리고 전단사함수 $f:A\rightarrow A'$이 주어졌다고 하자. 만일 임의의 $x,y\in A$에 대하여 $x\leq_{\tiny R}y$와 $f(x)\leq_{\tiny R'}f(y)$가 동치라면 $f$를 *order isomorphism*이라 부른다. 
 :::
 
 앞으로 ordered set들 사이에서 isomorphism이라 하면 항상 order isomorphism을 뜻하는 것으로 이해한다. 

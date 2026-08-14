@@ -10,6 +10,8 @@ sidebar:
 
 date: 2026-06-26
 weight: 11
+published: false
+revising: true
 drift_needed: true
 ---
 
@@ -28,7 +30,7 @@ $f$가 $[a,b]$에서 연속이고 $F(x) = \int_a^x f(t)\dd{t}$로 정의하면, 
 
 $$F'(x) = f(x)$$
 
-이다.
+이다. 여기서 끝점 $a, b$에서의 미분가능성은 [§미분과 도함수, ⁋정의 6](/ko/math/calculus/derivatives#def6)의 우미분계수·좌미분계수를 뜻한다.
 :::
 
 ::: 증명

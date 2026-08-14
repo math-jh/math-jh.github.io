@@ -26,7 +26,7 @@ published: false
 거듭제곱근을 다루기 위한 첫 번째 재료는 1의 거듭제곱근들이다. 우선 다음의 일반적인 보조정리를 살펴보자.
 
 ::: 보조정리 1
-Field $\mathbb{K}$의 multiplicative group $\mathbb{K}^\times$의 임의의 유한한 subgroup $G$는 cyclic group이다.
+Field $\mathbb{K}$의 multiplicative group $\mathbb{K}^\times$의 임의의 finite subgroup $G$는 cyclic group이다.
 :::
 ::: 증명
 $G$의 원소들의 order들의 최소공배수를 $n$이라 하자. 우선 order가 $n$인 원소가 존재함을 보인다. 이를 위해 order가 각각 $r,s$인 $x,y\in G$에 대하여 order가 $\lcm(r,s)$인 원소가 존재함을 보이면, 이를 반복하여 원하는 원소를 얻는다.
@@ -123,14 +123,14 @@ Derived series를 $D_n$으로 적자. $H\leq G$에 대하여 inclusion $H \hookr
 :::
 
 ::: 보조정리 9
-유한한 solvable group $G$는 모든 quotient가 cyclic인 subnormal series
+Finite solvable group $G$는 모든 quotient가 cyclic인 subnormal series
 
 $$G=H_0\supseteq H_1\supseteq\cdots\supseteq H_r=\{e\}$$
 
 를 갖는다. 즉 각각의 $H_{i+1}$은 $H_i$의 normal subgroup이고 $H_i/H_{i+1}$은 cyclic group이다.
 :::
 ::: 증명
-우선 유한한 abelian group $A$가 이러한 series를 갖는 것을 $\lvert A\rvert$에 대한 귀납법으로 보이자. $A$가 trivial이면 자명하다. 그렇지 않다면 $e$가 아닌 원소 $a\in A$를 택하고 quotient $A/\langle a\rangle$을 생각하면, 귀납가정에 의해 $A/\langle a\rangle$은 cyclic quotient들을 갖는 series를 갖고, quotient group의 subgroup correspondence로 이를 $A$의 series로 끌어올린 후 마지막에 $\langle a\rangle\supseteq\{e\}$를 붙이면 된다. $A$가 abelian이므로 모든 subgroup이 normal이고, 끌어올린 series의 quotient들은 원래 series의 quotient들과 isomorphic하다.
+우선 finite abelian group $A$가 이러한 series를 갖는 것을 $\lvert A\rvert$에 대한 귀납법으로 보이자. $A$가 trivial이면 자명하다. 그렇지 않다면 $e$가 아닌 원소 $a\in A$를 택하고 quotient $A/\langle a\rangle$을 생각하면, 귀납가정에 의해 $A/\langle a\rangle$은 cyclic quotient들을 갖는 series를 갖고, quotient group의 subgroup correspondence로 이를 $A$의 series로 끌어올린 후 마지막에 $\langle a\rangle\supseteq\{e\}$를 붙이면 된다. $A$가 abelian이므로 모든 subgroup이 normal이고, 끌어올린 series의 quotient들은 원래 series의 quotient들과 isomorphic하다.
 
 이제 일반적인 solvable group $G$에 대하여, derived series
 

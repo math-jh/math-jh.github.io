@@ -1,6 +1,6 @@
 ---
 title: "미적분의 기본정리"
-description: "Riemann 적분 위에서 미적분의 기본정리를 엄밀하게 증명한다. 가변상한 적분이 연속이며 피적분함수가 연속인 점에서 미분가능함을 보이고, 원시함수를 통한 정적분의 평가정리를 확립한다."
+description: "Riemann integral 위에서 미적분의 기본정리를 엄밀하게 증명한다. 가변상한 적분이 연속이며 피적분함수가 연속인 점에서 미분가능함을 보이고, 원시함수를 통한 정적분의 평가정리를 확립한다."
 excerpt: "가변상한 적분의 미분, 평가정리, 미분과 적분의 역관계"
 
 categories: [Math / Analysis]
@@ -16,7 +16,7 @@ drift_needed: true
 published: false
 ---
 
-[§Riemann 적분](/ko/math/analysis/riemann_integral)에서 적분을 엄밀하게 정초하고, [§미분](/ko/math/analysis/differentiation)에서 미분을 다시 세웠다. 미적분의 기본정리는 이 둘이 서로의 역연산임을 밝히며, [\[미적분학\] §미적분의 기본정리](/ko/math/calculus/fundamental_theorem_of_calculus)에서 다룬 내용을 이제 완비성 위에서 증명한다.
+[§Riemann integral](/ko/math/analysis/riemann_integral)에서 적분을 엄밀하게 정초하고, [§미분](/ko/math/analysis/differentiation)에서 미분을 다시 세웠다. 미적분의 기본정리는 이 둘이 서로의 역연산임을 밝히며, [\[미적분학\] §미적분의 기본정리](/ko/math/calculus/fundamental_theorem_of_calculus)에서 다룬 내용을 이제 완비성 위에서 증명한다.
 
 미분은 한 점에서의 순간 변화율을, 적분은 한 구간 위에서의 누적량을 잰다. 표면적으로 이 둘은 서로 무관해 보인다 — 하나는 국소적이고 다른 하나는 대역적이며, 미분은 difference quotient의 극한으로, 적분은 분할에 따른 하합의 supremum과 상합의 infimum으로 정의된다. 미적분의 기본정리가 말하는 바는, 그럼에도 두 연산이 서로를 정확히 되돌린다는 것이다. 누적량을 상한에 대해 미분하면 원래의 피적분함수가 되살아나고(제1형), 거꾸로 한 함수의 도함수를 적분하면 그 함수의 증분이 복원된다(제2형).
 
@@ -28,7 +28,7 @@ published: false
 
 $$F(x) = \int_a^x f$$
 
-가 정의된다. 이를 $f$의 *가변상한 적분<sub>integral with variable upper limit</sub>*이라 부른다. 앞으로 상한이 하한보다 작은 경우도 함께 다루기 위해 $x > y$일 때 $\int_x^y f = -\int_y^x f$로, 그리고 $\int_x^x f = 0$으로 약속한다. 이 약속 아래 [§Riemann 적분, ⁋명제 8](/ko/math/analysis/riemann_integral#prop8)은 세 끝점의 대소 관계와 무관하게 $\int_x^y f + \int_y^z f = \int_x^z f$ 꼴이 되며, 아래에서 증분이 음수인 difference quotient를 다룰 때 이 형태를 쓴다. 직관적으로 $F(x)$는 $a$에서 $x$까지 누적된 넓이이며, 우리가 가장 먼저 밝힐 것은 이 누적이 상한의 변화에 대해 얼마나 매끄럽게 반응하는가이다. 먼저 $F$가 연속임을, 그다음 $f$가 연속인 점에서는 $F$가 미분가능함을 본다.
+가 정의된다. 이를 $f$의 *가변상한 적분<sub>integral with variable upper limit</sub>*이라 부른다. 앞으로 상한이 하한보다 작은 경우도 함께 다루기 위해 $x > y$일 때 $\int_x^y f = -\int_y^x f$로, 그리고 $\int_x^x f = 0$으로 약속한다. 이 약속 아래 [§Riemann integral, ⁋명제 8](/ko/math/analysis/riemann_integral#prop8)은 세 끝점의 대소 관계와 무관하게 $\int_x^y f + \int_y^z f = \int_x^z f$ 꼴이 되며, 아래에서 증분이 음수인 difference quotient를 다룰 때 이 형태를 쓴다. 직관적으로 $F(x)$는 $a$에서 $x$까지 누적된 넓이이며, 우리가 가장 먼저 밝힐 것은 이 누적이 상한의 변화에 대해 얼마나 매끄럽게 반응하는가이다. 먼저 $F$가 연속임을, 그다음 $f$가 연속인 점에서는 $F$가 미분가능함을 본다.
 
 ::: 명제 1
 $f$가 $[a,b]$에서 Riemann 적분가능하면 $F(x) = \int_a^x f$는 $[a,b]$에서 (립시츠) 연속이다.

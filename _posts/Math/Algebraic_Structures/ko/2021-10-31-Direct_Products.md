@@ -79,7 +79,7 @@ Canonical homomorphism들 $p_i:G_i\rightarrow G_i/H_i$들에 [따름정리 3](#c
 
 {% diagram Math/Algebraic_Structures/Direct_Products-2.svg width="18.32em" alt="product_of_normal_subgroups" %}
 
-$p_i\circ\pr_i$들 각각은 전사인 homomorphism들의 합성이므로 전사이고 따라서 앞선 따름정리에 의해 $\im p$는 $\prod(G_i/H_i)$와 같다. 또, $p_i$들 각각의 kernel은 $H_i$와 같다. 따라서 first isomorphism theorem에 의하여
+$p_i\circ\pr_i$들 각각은 surjective homomorphism들의 합성이므로 전사이고 따라서 앞선 따름정리에 의해 $\im p$는 $\prod(G_i/H_i)$와 같다. 또, $p_i$들 각각의 kernel은 $H_i$와 같다. 따라서 first isomorphism theorem에 의하여
 
 $$\biggl(\prod_{i\in I} G_i\biggr)\bigg/\biggl(\prod_{i\in I}H_i\biggr)\cong\prod_{i\in I} (G_i/H_i)$$
 

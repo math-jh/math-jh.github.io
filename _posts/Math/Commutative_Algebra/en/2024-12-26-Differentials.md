@@ -71,7 +71,7 @@ Suppose we are given the commutative diagram of ring homomorphisms
 
 and regard $E$ and $E'$ as an $A$-algebra and an $A'$-algebra via $\rho$ and $\rho'$, respectively. Then there exists a unique $E$-linear map $\Omega_{\varphi/\phi}:\Omega_{E/A} \rightarrow \Omega_{E'/A'}$ making the following diagram
 
-{% diagram Math/Commutative_Algebra/Differentials-2.svg width="11.39em" alt="functoriality" %}
+{% diagram Math/Commutative_Algebra/Differentials-2.svg width="11.54em" alt="functoriality" %}
 
 commute.
 :::

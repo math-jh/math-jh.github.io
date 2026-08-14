@@ -10,6 +10,8 @@ sidebar:
 
 date: 2024-08-29
 weight: 9
+published: false
+revising: true
 drift_needed: true
 
 ---
@@ -45,6 +47,8 @@ $$0_{AB}+0_{AB}=0_{0B}\circ0_{A0}+0_{0B}\circ0_{A0}=(0_{0B}+0_{0B})\circ 0_{A0}=
 
 ## Abelian category
 
+Additive category $\mathcal{A}$의 임의의 morphism $f:A \rightarrow B$의 kernel은 $0:A \rightarrow B$와의 equalizer $\Eq(f,0)$으로 정의되며, 비슷하게 $f$의 cokernel은 $0$과의 coequalizer $\CoEq(f,0)$으로 정의된다.
+
 이제 abelian category를 정의할 수 있다.
 
 ::: 정의 3
@@ -55,9 +59,7 @@ Additive category $\mathcal{A}$가 *abelian category<sub>아벨 카테고리</su
 3. 임의의 epimorphism $f$는 $\ker f$의 cokernel과 같다.
 :::
 
-Additive category $\mathcal{A}$의 임의의 morphism $f:A \rightarrow B$의 kernel은 $0:A \rightarrow B$와의 equalizer $\Eq(f,0)$으로 정의되며, 비슷하게 $f$의 cokernel은 $0$과의 coequalizer $\CoEq(f,0)$으로 정의된다. 
-
-특히, 이러한 상황에서는 다음의 exact sequence
+특히, 이러한 상황에서는 [정의 5](#def5)에서 정의할 다음의 exact sequence
 
 $$0 \rightarrow A \rightarrow B \rightarrow C$$
 
@@ -130,7 +132,7 @@ Additive functor $F:\mathcal{A}\rightarrow \mathcal{B}$가 주어졌다 하자. 
 
 $$\cdots \rightarrow F(A_{n+1}) \overset{F(d_{n+1})}{\longrightarrow} F(A_n) \overset{F(d_n)}{\longrightarrow} F(A_{n-1})\rightarrow\cdots$$
 
-가 chain complex가 된다는 것을 쉽게 확인할 수 있다. 즉 additive functor $F$는 functor $\Ch(\mathcal{A})\rightarrow \Ch(\mathcal{B})$를 유도한다. 그러나 일반적인 functor에 대하여, 원래의 chain complex $A_\bullet$이 exact라는 것이 위와 같이 얻어진 새로운 complex $F(A_\bullet)$가 exact라는 것을 보장해주지는 않는다.
+가 chain complex가 된다는 것을 쉽게 확인할 수 있다. 즉 additive functor $F$는 functor $\Ch(\mathcal{A})\rightarrow \Ch(\mathcal{B})$를 유도한다. 그러나 일반적인 additive functor에 대하여, 원래의 chain complex $A_\bullet$이 exact라는 것이 위와 같이 얻어진 새로운 complex $F(A_\bullet)$가 exact라는 것을 보장해주지는 않는다.
 
 ::: 정의 7
 Additive functor $F: \mathcal{A} \rightarrow \mathcal{B}$가 *left exact<sub>왼쪽 완전</sub>*인 것은 임의의 short exact sequence

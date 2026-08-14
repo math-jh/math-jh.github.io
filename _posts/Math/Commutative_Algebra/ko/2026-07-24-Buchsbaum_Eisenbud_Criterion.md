@@ -1,6 +1,6 @@
 ---
 title: "Buchsbaum-Eisenbud 판정법"
-description: "유한 자유복합체의 exactness가 각 행렬의 rank 등식과 소행렬식 아이디얼의 grade 조건만으로 판정된다는 Buchsbaum-Eisenbud 정리를 McCoy 정리와 Peskine-Szpiro acyclicity 보조정리로부터 증명하고, 응용으로 projective dimension 2인 아이디얼의 자유분해를 결정하는 Hilbert-Burch 정리를 다룬다."
+description: "유한 자유복합체의 exactness가 각 행렬의 rank 등식과 소행렬식 ideal의 grade 조건만으로 판정된다는 Buchsbaum-Eisenbud 정리를 McCoy 정리와 Peskine-Szpiro acyclicity 보조정리로부터 증명하고, 응용으로 projective dimension 2인 ideal의 자유분해를 결정하는 Hilbert-Burch 정리를 다룬다."
 excerpt: "Free complex의 exactness 판정과 Hilbert-Burch 정리"
 
 categories: [Math / Commutative Algebra]
@@ -38,14 +38,14 @@ $I_0(\varphi)=A\neq 0$이므로 $\rank\varphi$는 잘 정의되고 $0\leq \rank\
 첫 준비물은 unit 성분이 있는 행렬을 잘라내는 보조정리이다.
 
 ::: 보조정리 2
-$\varphi:A^m \rightarrow A^n$의 행렬의 어떤 성분이 $A$의 unit이라 하자. 그럼 $A^m$과 $A^n$의 basis를 바꾸어 $\varphi$의 행렬을 block 행렬
+$\varphi:A^m \rightarrow A^n$의 행렬의 어떤 성분이 $A$의 unit이라 하자. 그럼 $A^m$과 $A^n$의 basis를 바꾸어 $\varphi$의 행렬을 block matrix
 
 $$\begin{pmatrix}1&0\\0&\varphi'\end{pmatrix},\qquad \varphi':A^{m-1} \rightarrow A^{n-1}$$
 
 의 꼴로 만들 수 있으며, 이 때 모든 $r\geq 1$에 대하여 $I_r(\varphi)=I_{r-1}(\varphi')$이다.
 :::
 ::: 증명
-우선 basis 변경이 모든 $I_r$를 보존함을 확인한다. Basis 변경은 행렬 $X$를 invertible 행렬 $P,Q$에 대한 $PXQ$로 바꾼다. ([\[다중선형대수학\] §기저변환, ⁋명제 4](/ko/math/multilinear_algebra/change_of_basis#prop4), [\[다중선형대수학\] §기저변환, ⁋명제 5](/ko/math/multilinear_algebra/change_of_basis#prop5)) $PX$의 각 행은 $X$의 행들의 $A$-linear combination이므로, $PX$의 $r\times r$ 소행렬식을 행에 대한 multilinearity로 전개하면 $X$의 행 $r$개를 고른 행렬식들의 combination이 되고, 행이 겹치는 항은 alternating 성질로 소멸하므로 남는 항들은 $X$의 $r\times r$ 소행렬식들이다. 이는 [§Fitting 아이디얼, ⁋정리 3](/ko/math/commutative_algebra/fitting_ideals#thm3)의 증명에서 열에 대해 수행한 논증과 같다. 따라서 $I_r(PX)\subseteq I_r(X)$이고, $P$가 invertible이므로 반대 포함도 성립하며, 열에 대해서도 마찬가지이므로 $I_r(PXQ)=I_r(X)$이다.
+우선 basis 변경이 모든 $I_r$를 보존함을 확인한다. Basis 변경은 행렬 $X$를 invertible matrix $P,Q$에 대한 $PXQ$로 바꾼다. ([\[다중선형대수학\] §기저변환, ⁋명제 4](/ko/math/multilinear_algebra/change_of_basis#prop4), [\[다중선형대수학\] §기저변환, ⁋명제 5](/ko/math/multilinear_algebra/change_of_basis#prop5)) $PX$의 각 행은 $X$의 행들의 $A$-linear combination이므로, $PX$의 $r\times r$ 소행렬식을 행에 대한 multilinearity로 전개하면 $X$의 행 $r$개를 고른 행렬식들의 combination이 되고, 행이 겹치는 항은 alternating 성질로 소멸하므로 남는 항들은 $X$의 $r\times r$ 소행렬식들이다. 이는 [§Fitting 아이디얼, ⁋정리 3](/ko/math/commutative_algebra/fitting_ideals#thm3)의 증명에서 열에 대해 수행한 논증과 같다. 따라서 $I_r(PX)\subseteq I_r(X)$이고, $P$가 invertible이므로 반대 포함도 성립하며, 열에 대해서도 마찬가지이므로 $I_r(PXQ)=I_r(X)$이다.
 
 이제 unit 성분을 basis vector들의 재배열로 $(1,1)$ 자리로 옮기고, target의 첫 basis vector를 unit배로 바꾸어 그 성분을 $1$로 만들자. 첫 열의 나머지 성분들은 첫 행을 다른 행에 더하는 elementary 연산으로, 첫 행의 나머지 성분들은 첫 열을 다른 열에 더하는 elementary 연산으로 소거할 수 있고, 이들은 모두 invertible 행렬을 곱하는 것이므로 basis 변경이다. 결과가 주어진 block 꼴이다.
 
@@ -116,7 +116,7 @@ $$\operatorname{grade}(\mathfrak{a})=\operatorname{depth}_\mathfrak{a}(A)$$
 
 이 값을 문헌에서는 흔히 $\mathfrak{a}$의 grade라 부르며, 우리는 $\operatorname{depth}_\mathfrak{a}(A)$와 병용한다. [§Depth, ⁋정리 2](/ko/math/commutative_algebra/depth#thm2)에 의하여 $\operatorname{grade}(\mathfrak{a})=\min\{i\mid\Ext_A^i(A/\mathfrak{a},A)\neq 0\}$이고, 특히 proper ideal의 grade는 유한하다. $\operatorname{grade}(A)=\infty$ 관례는 뒤에서 판정법의 조건을 예외 없이 서술하기 위한 것이다. 같은 이유로 이 글에서는 zero module의 depth를 $\infty$로 약속한다. Local ring $(A,\mathfrak{m})$의 proper ideal $\mathfrak{a}$의 경우 $\mathfrak{a}$ 안의 $A$-sequence는 $\mathfrak{m}$ 안의 $A$-sequence이고 maximal한 것으로 연장되므로, 언제나 $\operatorname{grade}(\mathfrak{a})\leq\operatorname{depth}A$이다.
 
-Grade는 다음과 같이 국소적인 depth들의 최솟값으로 계산된다.
+Grade는 다음과 같이 local depth들의 최솟값으로 계산된다.
 
 ::: 보조정리 7
 Noetherian ring $A$의 proper ideal $\mathfrak{a}$에 대하여 다음의 등식

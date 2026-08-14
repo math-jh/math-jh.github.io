@@ -1,5 +1,5 @@
 ---
-title: "Atiyah–Bott 국소화 정리"
+title: "Atiyah–Bott localization 정리"
 description: "Torus가 작용하는 콤팩트 다양체의 동변 코호몰로지가 고정점 자리의 것으로 국소화됨을 보이고, 동변 적분을 고정점에서의 기여의 합으로 주는 Atiyah–Bott–Berline–Vergne 공식을 다룬다."
 excerpt: "The localization theorem and the ABBV integration formula via torus fixed points"
 
@@ -104,7 +104,7 @@ $j_F:F\hookrightarrow M$을 fixed component의 포함, $\pi_M:M\rightarrow\mathr
 3. (함자성) $\pi_{M\ast}\circ j_{F\ast}=\pi_{F\ast}$, 곧 $\int_M j_{F\ast}\beta=\int_F\beta$이다.
 :::
 ::: 증명
-(1) 동변 Thom class를 통한 자기교차 공식이다. Closed 부분다양체 $F$의 동변 tubular neighborhood는 $N_F$의 disk bundle과 동일시되고 (명제 1), 그 동변 Thom class $u\in H_T^{\mathrm{codim}F}(N_F,N_F^\circ)$의 zero section으로의 restriction이 동변 Euler class $e_T(N_F)$이다. ([\[대수적 위상수학\] §벡터다발의 특성류, ⁋정리 2](/ko/math/algebraic_topology/characteristic_classes#thm2)의 동변 판본) Pushforward $j_{F\ast}$은 Thom class와의 곱 뒤 확장으로 정의되므로, 그 즉시 되돌려 제한하면 $j_F^\ast j_{F\ast}\beta=e_T(N_F)\smile\beta$를 얻는다.
+(1) 동변 Thom class를 통한 자기교차 공식이다. Closed submanifold $F$의 동변 tubular neighborhood는 $N_F$의 disk bundle과 동일시되고 (명제 1), 그 동변 Thom class $u\in H_T^{\mathrm{codim}F}(N_F,N_F^\circ)$의 zero section으로의 restriction이 동변 Euler class $e_T(N_F)$이다. ([\[대수적 위상수학\] §벡터다발의 특성류, ⁋정리 2](/ko/math/algebraic_topology/characteristic_classes#thm2)의 동변 판본) Pushforward $j_{F\ast}$은 Thom class와의 곱 뒤 확장으로 정의되므로, 그 즉시 되돌려 제한하면 $j_F^\ast j_{F\ast}\beta=e_T(N_F)\smile\beta$를 얻는다.
 
 (2) $F$와 $G$가 서로소이므로 $j_{G\ast}\beta$는 $G$의 한 근방에 support를 갖는 class로 표현되고, 그것을 $F$로 제한하면 $0$이다.
 
@@ -167,11 +167,11 @@ $$\alpha=\sum_F j_{F\ast}\left(\frac{i_F^\ast\alpha}{e_T(N_F)}\right)\quad\text{
 
 이 항상 성립한다. 이는 [§동변 코호몰로지, ⁋예시 6](/ko/math/toric_geometry/equivariant_cohomology#ex6)에서 관찰한 "fixed point로의 restriction이 거의 단사"라는 현상의 정확한 형태이다. Equivariantly formal한 경우 ([§동변 코호몰로지, ⁋정의 8](/ko/math/toric_geometry/equivariant_cohomology#def8)) 에는 restriction map이 localization 이전에도 단사이므로, localization은 단사성을 전사성까지 끌어올리는 역할만 한다.
 
-## Atiyah–Bott–Berline–Vergne 적분 공식
+## Atiyah–Bott–Berline–Vergne integration formula
 
 Localization 정리에 equivariant integration을 결합하면, $M$ 전체에서의 적분이 fixed component 각각에서의 국소 적분의 합으로 분해된다.
 
-::: 정리 8 (ABBV 적분 공식)
+::: 정리 8 (ABBV integration formula)
 $\alpha\in H_T^\bullet(M)$에 대하여
 
 $$\int_M\alpha=\sum_F\int_F\frac{i_F^\ast\alpha}{e_T(N_F)}$$

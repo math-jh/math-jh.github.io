@@ -72,7 +72,7 @@ $0\rightarrow A\xrightarrow{f}B\xrightarrow{g}C\rightarrow 0$이 almost split se
 이 존재한다.
 :::
 ::: 증명
-먼저 $C$가 indecomposable임을 보인다. $C=C_1\oplus C_2$가 nonzero direct sum이라 하면, 각 인자의 포함 $\iota_t:C_t\rightarrow C$ ($t=1,2$)는 split mono이고, $C$가 nonzero direct sum으로 갈라지므로 $\iota_t$는 retraction이 아니다. (만일 $\iota_t$가 retraction이면 $\iota_t$는 전사이자 단사인 isomorphism이 되어 $C_t=C$, 곧 다른 인자가 $0$이 되어 모순이다.) 따라서 $\iota_t$는 $g$를 통하여 인수분해되어 $\iota_t=gs_t$인 $s_t:C_t\rightarrow B$가 있다. 이들을 모으면 $s=(s_1,s_2):C_1\oplus C_2\rightarrow B$가 $gs=\id_C$를 만족하므로 $g$가 retraction이 되는데, 이는 almost split sequence가 split하지 않는다는 가정에 모순이다. 따라서 $C$는 indecomposable이다. Symmetric으로 $f$가 left almost split이라는 조건으로부터 $A$가 indecomposable임을 얻는다.
+먼저 $C$가 indecomposable임을 보인다. $C=C_1\oplus C_2$가 nonzero direct sum이라 하면, 각 인자의 포함 $\iota_t:C_t\rightarrow C$ ($t=1,2$)는 split mono이고, $C$가 nonzero direct sum으로 갈라지므로 $\iota_t$는 retraction이 아니다. (만일 $\iota_t$가 retraction이면 $\iota_t$는 전사이자 단사이므로 isomorphism이 되어 $C_t=C$, 곧 다른 인자가 $0$이 되어 모순이다.) 따라서 $\iota_t$는 $g$를 통하여 인수분해되어 $\iota_t=gs_t$인 $s_t:C_t\rightarrow B$가 있다. 이들을 모으면 $s=(s_1,s_2):C_1\oplus C_2\rightarrow B$가 $gs=\id_C$를 만족하므로 $g$가 retraction이 되는데, 이는 almost split sequence가 split하지 않는다는 가정에 모순이다. 따라서 $C$는 indecomposable이다. Symmetric으로 $f$가 left almost split이라는 조건으로부터 $A$가 indecomposable임을 얻는다.
 
 $C$가 projective가 아님을 보인다. $C$가 projective이면 전사 $g:B\rightarrow C$가 분할되어 $g$가 retraction이 되는데, 이는 right almost split의 정의에 모순이다. Symmetric으로 $A$가 injective이면 단사 $f:A\rightarrow B$가 분할되어 $f$가 section이 되어 left almost split에 모순이므로, $A$는 injective가 아니다.
 

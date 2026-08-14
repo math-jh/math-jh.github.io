@@ -53,7 +53,7 @@ $${\prod_{i\in I}}^w G_i$$
 
 $$\left\langle\bigcup \iota_i(G_i)\right\rangle={\prod_{i\in I}}^w G_i$$
 
-이 성립한다. 특히 $\iota_i$의 image는 $\prod^w G_i$에 포함되므로, 앞으로 $\iota_i$는 $\prod^w G_i$로 가는 단사 homomorphism으로 본다. 또, 만일 $I$가 유한집합이라면 weak direct product는 보통의 direct product와 동일하다.
+이 성립한다. 특히 $\iota_i$의 image는 $\prod^w G_i$에 포함되므로, 앞으로 $\iota_i$는 $\prod^w G_i$로 가는 injective homomorphism으로 본다. 또, 만일 $I$가 유한집합이라면 weak direct product는 보통의 direct product와 동일하다.
 
 그럼 $\prod^wG_i$는 다음과 같은 universal property를 갖는다.
 

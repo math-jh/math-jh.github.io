@@ -2,7 +2,7 @@
 
 title: "하우스도르프 공간"
 description: "점열의 수렴 개념을 위상공간에서 정의하고, Hausdorff 분리 공리를 통해 극한의 유일성이 보장되는 공간 구조를 살펴본다."
-excerpt: "점열의 수렴과 Hausdorff 공리"
+excerpt: "점열의 수렴과 Hausdorff axiom"
 
 categories: [Math / Topology]
 permalink: /ko/math/topology/Hausdorff_spaces
@@ -11,6 +11,8 @@ sidebar:
 
 date: 2024-12-03
 weight: 13
+published: false
+revising: true
 drift_needed: true
 
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Cox 구성과 GIT quotient"
 description: "fan과 homogeneous coordinate ring을 통해 toric variety를 재구성하는 Cox의 방법을 다루며, toric variety 위의 line bundle과 coherent sheaf를 이해하는 데 핵심적인 GIT quotient의 역할을 설명한다."
-excerpt: "토릭 다양체의 homogeneous coordinate ring과 GIT quotient 표현"
+excerpt: "토릭 다양체의 homogeneous coordinate ring과 GIT quotient representation"
 
 categories: [Math / Toric Geometry]
 permalink: /ko/math/toric_geometry/cox_construction
@@ -63,7 +63,7 @@ $A^G$의 finite generation은 *Hilbert finiteness theorem*의 결과이다. $G$�
 
 $$A = A^G \oplus A_0.$$
 
-이로부터 $A^G$ 방향으로의 *Reynolds operator* $R: A \rightarrow A^G$가 정의된다. Reynolds operator는 $A^G$-module homomorphism이며 $A^G$ 위에서 항등이다. 이를 이용하면 임의의 $G$-불변 ideal $I \subseteq A$의 inverse image와 $R(I) = I \cap A^G$의 관계로부터 $A^G$의 ideal에 관한 ascending chain condition이 $A$의 그것에서 따라나오므로, $A$가 Noetherian이면 $A^G$도 Noetherian이다. 더 강한 finite generation은 $A$가 finitely generated $\mathbb{C}$-algebra일 때 $A^G$가 적당한 $G$-stable finitely generated subalgebra의 invariants와 일치함을 보임으로써 얻어진다 ([Mum] §1.1 또는 [New] §3.4).
+이로부터 $A^G$ 방향으로의 *Reynolds operator* $R: A \rightarrow A^G$가 정의된다. Reynolds operator는 $A^G$-module homomorphism이며 $A^G$ 위에서 항등이다. 이를 이용하면 임의의 $G$-invariant ideal $I \subseteq A$의 inverse image와 $R(I) = I \cap A^G$의 관계로부터 $A^G$의 ideal에 관한 ascending chain condition이 $A$의 그것에서 따라나오므로, $A$가 Noetherian이면 $A^G$도 Noetherian이다. 더 강한 finite generation은 $A$가 finitely generated $\mathbb{C}$-algebra일 때 $A^G$가 적당한 $G$-stable finitely generated subalgebra의 invariants와 일치함을 보임으로써 얻어진다 ([Mum] §1.1 또는 [New] §3.4).
 
 이제 $\varphi$의 categorical quotient 성질을 본다. $G$-invariant morphism $f: X \rightarrow Z = \Spec B$가 주어지면 이에 대응하는 ring homomorphism $f^\sharp: B \rightarrow A$의 image는 $G$-invariant element로 이루어지므로 $A^G$에 포함된다. 따라서 $f^\sharp$는 $B \rightarrow A^G$를 거쳐 분해되고, 이는 $f$가 $\varphi$를 통해 유일하게 분해됨을 뜻한다. 일반적인 $Z$에 대해서는 affine cover로 환원하면 동일한 결론이 따른다.
 
@@ -85,7 +85,7 @@ $G = \mathbb{C}^\ast$가 $X = \mathbb{C}^2$ 위에 scaling
 
 $$t \cdot (z_1, z_2) = (tz_1, tz_2)$$
 
-으로 작용한다고 하자. 우선 자명한 linearization, 즉 character $\chi = 1$의 경우 affine GIT을 본다. Coordinate ring $A = \mathbb{C}[\z_1, \z_2]$ 위의 $G$-action은 (이 글에서는 자매 글인 [§아핀 토릭 다양체](/ko/math/toric_geometry/affine_toric_varieties)의 *inverse 없는* convention $t \cdot f = f \circ t$와는 반대로, 표준 GIT 컨벤션을 따라 $(t \cdot f)(x) = f(t^{-1} x)$를 채택한다) $\z_i$를 $t^{-1}\z_i$로 보내며, 임의의 monomial $\z_1^a \z_2^b$는 $t^{-(a+b)}$ 배가 된다. 따라서
+으로 작용한다고 하자. 우선 trivial linearization, 즉 character $\chi = 1$의 경우 affine GIT을 본다. Coordinate ring $A = \mathbb{C}[\z_1, \z_2]$ 위의 $G$-action은 (이 글에서는 자매 글인 [§아핀 토릭 다양체](/ko/math/toric_geometry/affine_toric_varieties)의 *inverse 없는* convention $t \cdot f = f \circ t$와는 반대로, 표준 GIT 컨벤션을 따라 $(t \cdot f)(x) = f(t^{-1} x)$를 채택한다) $\z_i$를 $t^{-1}\z_i$로 보내며, 임의의 monomial $\z_1^a \z_2^b$는 $t^{-(a+b)}$ 배가 된다. 따라서
 
 $$A^G = \mathbb{C}$$
 
@@ -107,7 +107,7 @@ $$\bigoplus_{n \ge 0} H^0(X, L^{\otimes n})^{G, \chi^n} = \mathbb{C}[\z_1, \z_2]
 
 $$\mathbb{C}^2 /\!/_\chi \mathbb{C}^\ast = \Proj \mathbb{C}[\z_1, \z_2] = \mathbb{P}^1$$
 
-이다. 주어진 linearization $L_\chi$에 대해 점 $x \in X$가 *semistable*이라는 것은 양의 degree의 invariant section 가운데 $x$에서 $0$이 아닌 값을 갖는 것이 존재한다는 뜻이고, 여기에 orbit $G \cdot x$가 semistable 점들의 집합 안에서 닫혀 있고 stabilizer $G_x$가 유한하다는 조건까지 붙은 것이 *stable*이며, semistable이 아닌 점을 *unstable*이라 부른다. 이 예시에서 직접 확인하면 $(z_1, z_2) \ne (0, 0)$인 모든 점이 semistable이고 원점은 unstable이다. 즉
+이다. 주어진 linearization $L_\chi$에 대해 점 $x \in X$가 *semistable*이라는 것은 positive degree의 invariant section 가운데 $x$에서 $0$이 아닌 값을 갖는 것이 존재한다는 뜻이고, 여기에 orbit $G \cdot x$가 semistable 점들의 집합 안에서 닫혀 있고 stabilizer $G_x$가 유한하다는 조건까지 붙은 것이 *stable*이며, semistable이 아닌 점을 *unstable*이라 부른다. 이 예시에서 직접 확인하면 $(z_1, z_2) \ne (0, 0)$인 모든 점이 semistable이고 원점은 unstable이다. 즉
 
 $$X^{\mathrm{ss}}(L_\chi) = X^{\mathrm{s}}(L_\chi) = \mathbb{C}^2 \setminus \{0\}$$
 

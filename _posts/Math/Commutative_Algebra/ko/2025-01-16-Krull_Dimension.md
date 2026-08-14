@@ -10,6 +10,8 @@ sidebar:
 
 date: 2025-01-16
 weight: 16
+published: false
+revising: true
 drift_needed: true
 
 ---
@@ -66,13 +68,13 @@ $$\dim \mathfrak{a}+\codim \mathfrak{a}\leq \dim A$$
 Noetherian ring $A$에 대하여, $\dim A =0$인 것과 $A$가 Artinian인 것이 동치이다. 
 :::
 
-한편, 우리는 다음 명제에 의하여, 일반적으로 $\phi:A \rightarrow B$가 integral이면 dimension이 변하지 않는다는 것을 안다.
+한편, 우리는 다음 명제에 의하여, 일반적으로 $\phi:A \rightarrow B$가 integral이면 $B$의 ideal의 dimension이 그 preimage의 dimension과 같다는 것을 안다.
 
 ::: 명제 4
 $\phi: A \rightarrow B$가 integral이라 하자. 그럼 $\ker\phi$를 포함하는 $A$의 임의의 prime ideal $\mathfrak{p}$에 대하여, $\mathfrak{p}=\phi^{-1} \mathfrak{q}$이도록 하는 $B$의 prime ideal $\mathfrak{q}$이 존재한다. 뿐만 아니라, $B$의 임의의 ideal $\mathfrak{b}$에 대하여 $\dim \mathfrak{b}=\dim \phi^{-1} \mathfrak{b}$이다.
 :::
 ::: 증명
-첫 번째 결과는 단순히 [§정수적 확장과 아이디얼, ⁋명제 1](/ko/math/commutative_algebra/lying_over_and_going_up#prop1)이다. 두 번째 결과의 경우, $\dim \mathfrak{b}\geq \dim \phi^{-1}\mathfrak{b}$는 [§정수적 확장과 아이디얼, ⁋명제 1](/ko/math/commutative_algebra/lying_over_and_going_up#prop1)의 두 번째 결과에 의해 성립하고, 반대방향 부등식은 [§정수적 확장과 아이디얼, ⁋따름정리 4](/ko/math/commutative_algebra/lying_over_and_going_up#cor4)에 의해 성립한다. 
+$\phi$가 integral이므로 이것이 유도하는 injective ring homomorphism $A/\ker\phi\hookrightarrow B$ 또한 integral extension이고, $\ker\phi$를 포함하는 $A$의 prime ideal들은 $A/\ker\phi$의 prime ideal들에 대응한다. 따라서 첫 번째 결과는 단순히 [§정수적 확장과 아이디얼, ⁋명제 1](/ko/math/commutative_algebra/lying_over_and_going_up#prop1)이다. 두 번째 결과의 경우, $\phi^{-1}\mathfrak{b}$가 합성 $A \rightarrow B \rightarrow B/\mathfrak{b}$의 kernel이므로 $A/\phi^{-1}\mathfrak{b}\hookrightarrow B/\mathfrak{b}$ 역시 integral extension이며, $\dim \mathfrak{b}\geq \dim \phi^{-1}\mathfrak{b}$는 [§정수적 확장과 아이디얼, ⁋명제 1](/ko/math/commutative_algebra/lying_over_and_going_up#prop1)의 두 번째 결과에 의해 성립하고, 반대방향 부등식은 [§정수적 확장과 아이디얼, ⁋따름정리 4](/ko/math/commutative_algebra/lying_over_and_going_up#cor4)에 의해 성립한다. 
 :::
 
 이제 우리는 관심을 돌려 1차원에서 일어나는 일들을 살펴본다. 그 전에 다소 기술적인 다음의 정의를 내린다.
@@ -168,10 +170,10 @@ $$\dim A/\mathfrak{p}\leq\dim A-1$$
 
 ## 등급환에서의 차원
 
-Graded ring $R = \bigoplus_{d \ge 0} R_d$에서 차원을 계산할 때 유용한 성질들을 살펴보자. 우선 다음 정의를 기억하자. ([§등급환의 국소화](/ko/math/commutative_algebra/localization_of_graded_rings))
+Graded ring $R = \bigoplus_{d \ge 0} R_d$에서 차원을 계산할 때 유용한 성질들을 살펴보자. Homogeneous ideal은 [\[대수적 구조\] §등급환, ⁋명제 6](/ko/math/algebraic_structures/graded_rings#prop6)의 동치조건과 함께 이미 정의하였으며, 특히 homogeneous ideal의 원소는 자신의 homogeneous component들을 모두 그 ideal 안에 갖는다. 우리는 여기에 이름을 하나 더 붙인다.
 
 ::: 정의 9
-Graded ring $R$의 ideal $\mathfrak{a}$가 *homogeneous<sub>동차</sub>*라는 것은 $\mathfrak{a}$가 homogeneous element들로 생성되는 것이다. Prime ideal $\mathfrak{p}$가 *homogeneous prime ideal<sub>동차 소아이디얼</sub>*이라는 것은 $\mathfrak{p}$가 homogeneous ideal이면서 prime인 것이다.
+Graded ring $R$의 prime ideal $\mathfrak{p}$가 *homogeneous prime ideal<sub>동차 소아이디얼</sub>*이라는 것은 $\mathfrak{p}$가 homogeneous ideal인 것이다.
 :::
 
 Graded ring에서 핵심적인 관찰은 irrelevant ideal $\mathfrak{m} = \bigoplus_{d > 0} R_d$를 포함하는 prime ideal들이 항상 homogeneous라는 것이다.
@@ -189,22 +191,18 @@ $$\mathfrak{p}^\ast = \langle x \in \mathfrak{p} \mid x \text{ homogeneous}\rang
 $x$를 homogeneous decomposition $x = \sum_{d} x_d$로 쓰자. $x_+ = \sum_{d > 0} x_d \in \mathfrak{m} \subseteq \mathfrak{p}$이므로, $x_0 = x - x_+ \in \mathfrak{p}$이다. 이제 $x' = x - x_0 = x_+ \in \mathfrak{p}$이고, 같은 방식으로 $x_1 \in \mathfrak{p}$임을 보일 수 있다. 귀납적으로 각 $x_d \in \mathfrak{p}$이고, 따라서 $x \in \mathfrak{p}^\ast$이다.
 :::
 
-[명제 10](#prop10)으로부터 irrelevant ideal $\mathfrak{m}$을 포함하는 prime ideal은 homogeneous하다는 것을 알았다. 반대로 $\mathfrak{m}$을 포함하지 않는 homogeneous prime ideal들은 $\operatorname{Proj} R$의 점들에 해당한다. 이제 우리는 임의의 prime ideal chain이 homogeneous prime ideal chain으로 refine 가능하다는 것을 보일 것이다.
+[명제 10](#prop10)으로부터 irrelevant ideal $\mathfrak{m}$을 포함하는 prime ideal은 homogeneous하다는 것을 알았다. 반대로 $\mathfrak{m}$을 포함하지 않는 homogeneous prime ideal들은 $\operatorname{Proj} R$의 점들에 해당한다. 이제 우리는 임의의 prime ideal에 homogeneous prime ideal을 대응시키는 조작을 살펴본다.
 
-::: 명제 11 (Graded prime ideal로 refinement)
-Graded ring $R$의 임의의 prime ideal chain은 homogeneous prime ideal chain으로 refine할 수 있다. 즉, prime ideal chain $\mathfrak{p}_0 \supsetneq \cdots \supsetneq \mathfrak{p}_s$에 대하여, homogeneous prime ideal chain $\mathfrak{p}_0^\ast \supsetneq \mathfrak{p}_1^\ast \supsetneq \cdots \supsetneq \mathfrak{p}_s^\ast$가 존재한다.
+::: 명제 11
+Graded ring $R$의 prime ideal $\mathfrak{p}$에 대하여, $\mathfrak{p}$에 속하는 homogeneous element들로 생성되는 ideal $\mathfrak{p}^\ast$는 $\mathfrak{p}$에 포함되는 가장 큰 homogeneous ideal이며, 또한 prime ideal이다.
 :::
 ::: 증명
-Prime ideal chain $\mathfrak{p}_0 \supsetneq \mathfrak{p}_1 \supsetneq \cdots \supsetneq \mathfrak{p}_s$을 생각하자. 각 $\mathfrak{p}_i$에 대하여 그 homogeneous element들로 생성된 ideal
+정의에 의하여 $\mathfrak{p}^\ast$는 homogeneous element들로 생성되므로 homogeneous ideal이고, 그 generator가 모두 $\mathfrak{p}$에 속하므로 $\mathfrak{p}^\ast \subseteq \mathfrak{p}$이다. 이제 $\mathfrak{a}\subseteq \mathfrak{p}$가 homogeneous ideal이라 하면 [\[대수적 구조\] §등급환, ⁋명제 6](/ko/math/algebraic_structures/graded_rings#prop6)의 셋째 조건에 의하여 $\mathfrak{a}$는 homogeneous element들로 생성되고, 이 generator들은 모두 $\mathfrak{p}$에 속하는 homogeneous element이므로 $\mathfrak{a}\subseteq \mathfrak{p}^\ast$이다. 즉 $\mathfrak{p}^\ast$는 $\mathfrak{p}$에 포함되는 가장 큰 homogeneous ideal이다.
 
-$$\mathfrak{p}_i^\ast = \langle f \in \mathfrak{p}_i : f \text{는 homogeneous} \rangle$$
-
-을 정의하자. 각 $\mathfrak{p}_i^\ast$는 homogeneous prime ideal이다. 또한 $\mathfrak{p}_i \supsetneq \mathfrak{p}_{i+1}$이면 $\mathfrak{p}_i^\ast \supseteq \mathfrak{p}_{i+1}^\ast$이다.
-
-이제 $\mathfrak{p}_i^\ast \supseteq \mathfrak{p}_{i+1}^\ast$가 strict inclusion임을 보이자. $\mathfrak{p}_i \supsetneq \mathfrak{p}_{i+1}$이므로 $\mathfrak{p}_i \setminus \mathfrak{p}_{i+1}$에 속하는 원소 $f$가 존재한다. $f$를 homogeneous component들의 합 $f = f_{d_1} + \cdots + f_{d_k}$로 쓰면, 각 $f_{d_j}$ 중 적어도 하나는 $\mathfrak{p}_{i+1}$에 속하지 않는다 (그렇지 않으면 $f \in \mathfrak{p}_{i+1}$). 따라서 이 $f_{d_j} \in \mathfrak{p}_i^\ast \setminus \mathfrak{p}_{i+1}^\ast$이다.
-
-결론적으로 $\mathfrak{p}_0^\ast \supsetneq \mathfrak{p}_1^\ast \supsetneq \cdots \supsetneq \mathfrak{p}_s^\ast$는 homogeneous prime ideal chain이다.
+이제 $\mathfrak{p}^\ast$가 prime인 것을 보이자. 우선 $\mathfrak{p}^\ast \subseteq \mathfrak{p}\subsetneq R$이므로 $\mathfrak{p}^\ast\neq R$이다. 그럼 [§등급환의 국소화, ⁋보조정리 2](/ko/math/commutative_algebra/localization_of_graded_rings#lem2)의 셋째 조건에 의하여, $ab\in \mathfrak{p}^\ast$를 만족하는 임의의 homogeneous element $a,b\in R$에 대하여 $a\in \mathfrak{p}^\ast$ 혹은 $b\in \mathfrak{p}^\ast$임을 보이면 충분하다. 그런데 $ab\in \mathfrak{p}^\ast\subseteq \mathfrak{p}$이고 $\mathfrak{p}$가 prime이므로 $a\in \mathfrak{p}$ 혹은 $b\in \mathfrak{p}$이며, $a$와 $b$가 homogeneous이므로 $\mathfrak{p}$에 속하는 쪽은 $\mathfrak{p}^\ast$의 generator, 특히 $\mathfrak{p}^\ast$의 원소이다.
 :::
+
+임의의 prime ideal chain $\mathfrak{p}_0 \supsetneq \cdots \supsetneq \mathfrak{p}_s$에 대하여 $\mathfrak{p}_0^\ast \supseteq \cdots \supseteq \mathfrak{p}_s^\ast$가 성립하지만, 이 포함관계는 strict가 아닐 수 있다. $R=\mathbb{K}[\x]$를 표준 grading으로 둘 때 $(\x-1)$의 원소는 $\x=1$에서 모두 $0$이 되는 반면 homogeneous element $c\x^n$의 $\x=1$에서의 값은 $c$이므로, $(\x-1)$에 속하는 homogeneous element는 $0$뿐이다. 따라서 chain $(\x-1)\supsetneq (0)$의 두 항이 모두 $(0)$으로 보내진다. 다만 irrelevant ideal $\mathfrak{m}$을 포함하는 prime ideal들로 이루어진 chain이라면 [명제 10](#prop10)에 의하여 각 항이 이미 homogeneous이므로 그 자체가 homogeneous prime ideal들의 chain이다.
 
 ## 정칙국소환
 

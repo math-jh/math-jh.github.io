@@ -10,6 +10,8 @@ sidebar:
 
 date: 2025-05-29
 weight: 8
+published: false
+revising: true
 drift_needed: true
 
 ---
@@ -18,7 +20,7 @@ drift_needed: true
 
 
 ::: 명제 1
-Algebraic extension $\mathbb{L}/\mathbb{K}$과 injective $\mathbb{K}$-homomorphism $u:\mathbb{L}\rightarrow \overline{\mathbb{K}}$를 생각하자. 
+Algebraic extension $\mathbb{L}/\mathbb{K}$과 $\mathbb{K}$-homomorphism $u:\mathbb{L}\rightarrow \overline{\mathbb{K}}$를 생각하자. 
 
 1. 만일 $u(\mathbb{L})\subseteq \mathbb{L}$이라면 $u$는 $\mathbb{L}$에서 $\mathbb{L}$로의 $\mathbb{K}$-automorphism이다. 
 2. $u$를 확장하는 $\overline{\mathbb{K}}$의 $\mathbb{K}$-automorphism이 존재한다. 

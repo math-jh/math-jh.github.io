@@ -20,7 +20,7 @@ Semisimple Lie algebra $\mathfrak{g}$의 표현론은 Weyl의 완전가약성 �
 
 ## Borel subalgebra와 weight
 
-분류의 무대를 마련하기 위해 root 분해로부터 positive root들이 정하는 subalgebra를 떼어낸다. Cartan subalgebra $\mathfrak{h}$와 root system $\Phi$, 그리고 root space 분해
+분류의 무대를 마련하기 위해 root 분해로부터 positive root들이 정하는 subalgebra를 떼어낸다. Cartan subalgebra $\mathfrak{h}$와 root system $\Phi$, 그리고 root space decomposition
 
 $$\mathfrak{g}=\mathfrak{h}\oplus\bigoplus_{\alpha\in\Phi}\mathfrak{g}_\alpha$$
 
@@ -54,7 +54,7 @@ $$V_\lambda=\{v\in V\mid H\cdot v=\lambda(H)\,v\ \text{ for all }H\in\mathfrak{h
 을 *weight $\lambda$의 weight space*라 부른다. $V_\lambda\neq 0$인 $\lambda$를 $V$의 *weight<sub>무게</sub>*라 하고, $\dim V_\lambda$를 그 weight의 *multiplicity<sub>중복도</sub>*라 부른다. $V=\bigoplus_{\lambda\in\mathfrak{h}^\ast}V_\lambda$로 분해되는 module을 *weight module<sub>무게 가군</sub>*이라 부른다.
 :::
 
-Root space $\mathfrak{g}_\alpha$가 adjoint action에 대한 weight $\alpha$의 weight space라는 점에서, root 분해 자신이 adjoint representation의 weight 분해이다. 일반적인 module의 action 위에서 root vector들이 weight를 어떻게 옮기는지는 root 분해의 bracket 관계가 그대로 결정한다. 다음 명제는 [§sl₂의 표현론, ⁋명제 2](/ko/math/lie_theory/representations_of_sl2#prop2)에서 $e,f$가 weight를 $\pm2$만큼 옮긴다는 사실을 임의의 root vector로 확장한다.
+Root space $\mathfrak{g}_\alpha$가 adjoint action에 대한 weight $\alpha$의 weight space라는 점에서, root decomposition 자신이 adjoint representation의 weight 분해이다. 일반적인 module의 action 위에서 root vector들이 weight를 어떻게 옮기는지는 root 분해의 bracket 관계가 그대로 결정한다. 다음 명제는 [§sl₂의 표현론, ⁋명제 2](/ko/math/lie_theory/representations_of_sl2#prop2)에서 $e,f$가 weight를 $\pm2$만큼 옮긴다는 사실을 임의의 root vector로 확장한다.
 
 ::: 명제 3
 $\mathfrak{g}$-module $V$, weight $\lambda\in\mathfrak{h}^\ast$, 그리고 root $\alpha\in\Phi$에 대하여
@@ -139,7 +139,7 @@ $$f_1^{\,m_1}\cdots f_N^{\,m_N}\,H_1^{\,p_1}\cdots H_l^{\,p_l}\,e_1^{\,q_1}\cdot
 끝으로 weight 구조를 본다. $f_k\in\mathfrak{g}_{-\beta_k}$이므로 [명제 3](#prop3)에 의하여 $f_1^{\,m_1}\cdots f_N^{\,m_N}\cdot v_\lambda^+$는 weight $\lambda-\sum_k m_k\beta_k$를 갖는다. 고정된 weight $\mu=\lambda-\sum_k m_k\beta_k$를 주는 지수 $(m_1,\ldots,m_N)$의 개수는 유한하므로 각 weight space는 유한차원이며, $M(\lambda)=\bigoplus_\mu M(\lambda)_\mu$는 weight module이다.
 :::
 
-명제 7은 $M(\lambda)$가 $\sl_2$에서의 highest weight 사슬을 정확히 일반화함을 보여준다. $\sl_2$의 highest weight vector에서 $f$를 반복 적용하여 얻은 사슬이 ([§sl₂의 표현론, ⁋명제 4](/ko/math/lie_theory/representations_of_sl2#prop4)) 여기에서는 여러 lowering operator의 모든 정렬된 곱으로 대체되며, 그 결과 $M(\lambda)$는 무한차원의 weight module이 된다. Highest weight space $M(\lambda)_\lambda$는 $v_\lambda^+$ 하나로 생성되는 $1$차원이고, 다른 모든 weight는 $\lambda$에서 positive root들을 빼서 얻어지므로 $\lambda$보다 "아래"에 놓인다.
+명제 7은 $M(\lambda)$가 $\sl_2$에서의 highest weight 사슬을 정확히 일반화함을 보여준다. $\sl_2$의 highest weight vector에서 $f$를 반복 적용하여 얻은 사슬이 ([§sl₂의 표현론, ⁋명제 4](/ko/math/lie_theory/representations_of_sl2#prop4)) 여기에서는 여러 lowering operator의 모든 정렬된 곱으로 대체되며, 그 결과 $M(\lambda)$는 infinite-dimensional weight module이 된다. Highest weight space $M(\lambda)_\lambda$는 $v_\lambda^+$ 하나로 생성되는 $1$차원이고, 다른 모든 weight는 $\lambda$에서 positive root들을 빼서 얻어지므로 $\lambda$보다 "아래"에 놓인다.
 
 ## Irreducible quotient
 
@@ -212,7 +212,7 @@ $$e_i\cdot\bigl(f_i^{\,n_i+1}\cdot v\bigr)=(n_i+1)\,(n_i-n_i)\,f_i^{\,n_i}\cdot 
 (3) 단사성과 전사성을 정리한다. (1)에서 모든 $0$이 아닌 유한차원 irreducible representation이 어떤 dominant integral $\lambda$에 대한 $L(\lambda)$와 isomorphic임을 보였으므로 대응 $\lambda\mapsto L(\lambda)$는 전사이다. (2)에서 dominant integral $\lambda$마다 $L(\lambda)$가 실제로 유한차원 irreducible representation임을 보였으므로 이 대응은 잘 정의된다. 단사성은 [명제 10](#prop10)에서 $L(\mu)\cong L(\lambda)$이면 $\mu=\lambda$임을 이미 보였으므로 성립한다. 따라서 대응은 전단사이다.
 :::
 
-증명의 핵심은 각 simple root 방향에서 representation을 $\sl_{2,\alpha_i}$-module로 잘라 $\sl_2$의 표현론을 적용하는 데에 있다. Dominant integral 조건 $\lambda(h_i)\in\mathbb{Z}_{\geq 0}$은 각 방향의 highest weight 사슬이 $\sl_2$에서처럼 음이 아닌 정수 단계에서 닫히도록 강제하며, 이것이 무한차원이던 $M(\lambda)$의 irreducible quotient $L(\lambda)$를 유한차원으로 떨어뜨린다. Weyl group 대칭이 이렇게 잘린 유한한 weight 집합을 하나로 묶어 representation 전체의 유한차원성을 보장한다. 
+증명의 핵심은 각 simple root 방향에서 representation을 $\sl_{2,\alpha_i}$-module로 잘라 $\sl_2$의 표현론을 적용하는 데에 있다. Dominant integral 조건 $\lambda(h_i)\in\mathbb{Z}_{\geq 0}$은 각 방향의 highest weight 사슬이 $\sl_2$에서처럼 음이 아닌 정수 단계에서 닫히도록 강제하며, 이것이 무한차원이던 $M(\lambda)$의 irreducible quotient $L(\lambda)$를 유한차원으로 떨어뜨린다. Weyl group 대칭이 이렇게 잘린 finite weight 집합을 하나로 묶어 representation 전체의 유한차원성을 보장한다. 
 
 이 정리로 semisimple Lie algebra의 유한차원 표현론은 완결된 그림을 얻는다. [§Weyl 완전가약성 정리, ⁋정리 7](/ko/math/lie_theory/weyl_complete_reducibility#thm7)에 의해 임의의 유한차원 representation은 irreducible representation들의 direct sum이고, 그 irreducible 인자들은 정리 12에 의해 dominant integral weight들로 색인된다. 따라서 임의의 유한차원 representation은 각 dominant integral weight $\lambda$에 대한 $L(\lambda)$의 multiplicity로 완전히 결정되며, 표현론의 모든 질문은 이 multiplicity를 계산하는 문제로 환원된다. $\sl_2$에서 모든 irreducible representation이 음이 아닌 정수 $n$으로 색인되고 $L(n)=V(n)$이었던 것이 이 일반적 그림의 가장 단순한 경우이다. ([§sl₂의 표현론, ⁋정의 5](/ko/math/lie_theory/representations_of_sl2#def5))
 

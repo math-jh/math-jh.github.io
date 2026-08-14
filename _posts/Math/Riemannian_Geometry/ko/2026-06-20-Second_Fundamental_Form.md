@@ -87,12 +87,12 @@ $$\mathrm{II}(X, fY) = \bar\nabla_X(fY) - \nabla_X(fY) = \bigl(f\bar\nabla_X Y +
 
 [명제 3](#prop3)에서 $\mathrm{II}$가 텐서임이 중요하다. 정의에는 $X, Y$를 $\bar M$ 위로 확장하는 절차가 들어 있지만, 결과는 extension과 무관하게 $T_p M$의 두 벡터 $X_p, Y_p$에만 의존한다. 이로써 우리는 $\mathrm{II}_p : T_p M \times T_p M \rightarrow N_p M$을 각 점에서의 대칭 쌍선형사상으로 다룰 수 있다.
 
-## Weingarten 사상
+## Weingarten morphism
 
 제2기본형식은 normal bundle에 값을 갖는다. 한 법벡터 방향을 고정하여 이를 tangent space 위의 endomorphism으로 바꾸면 다루기가 편해진다. 이를 위해 법선 방향의 미분을 도입한다. $M$ 위의 법벡터장 $N$, 즉 $NM$의 section과 접 벡터장 $X$에 대해 주변 미분 $\bar\nabla_X N$을 계산하면, 이는 다시 접성분과 법성분으로 쪼개진다. 그 접성분이 다음 사상을 준다.
 
 ::: 정의 4
-$M \subseteq \bar M$의 점 $p$에서 법벡터 $\nu \in N_p M$이 주어졌다 하자. $\nu$를 $p$ 근방에서 smooth 법벡터장 $N$으로 확장할 때, 점 $p$에서의 *Weingarten 사상<sub>Weingarten map</sub>* 혹은 *shape operator<sub>모양연산자</sub>* $S_\nu : T_p M \rightarrow T_p M$은 다음의 식
+$M \subseteq \bar M$의 점 $p$에서 법벡터 $\nu \in N_p M$이 주어졌다 하자. $\nu$를 $p$ 근방에서 smooth 법벡터장 $N$으로 확장할 때, 점 $p$에서의 *Weingarten morphism<sub>Weingarten map</sub>* 혹은 *shape operator<sub>모양연산자</sub>* $S_\nu : T_p M \rightarrow T_p M$은 다음의 식
 
 $$S_\nu(X) := -(\bar\nabla_X N)^\top$$
 
@@ -121,7 +121,7 @@ $$0 = \langle \mathrm{II}(X, Y), N\rangle_{\bar g} - \langle S_\nu(X), Y\rangle_
 가 되어 점 $p$에서 $\langle S_\nu(X), Y\rangle = \langle \mathrm{II}(X, Y), \nu\rangle$를 얻는다. 우변은 extension $N$을 전혀 포함하지 않으므로 좌변 $\langle S_\nu(X), Y\rangle$도 모든 $Y$에 대해 extension과 무관하며, 따라서 $S_\nu(X)$ 자체가 extension과 무관하게 결정된다. 끝으로 [명제 3](#prop3)의 대칭성으로부터 $\langle S_\nu(X), Y\rangle = \langle \mathrm{II}(X, Y), \nu\rangle = \langle \mathrm{II}(Y, X), \nu\rangle = \langle S_\nu(Y), X\rangle$이므로 $S_\nu$는 self-adjoint이다.
 :::
 
-Weingarten 방정식은 제2기본형식 $\mathrm{II}$와 Weingarten 사상 $S_\nu$가 본질적으로 같은 자료의 두 표현임을 말해 준다. $\mathrm{II}$는 두 접 벡터를 받아 법벡터를 내놓고, $S_\nu$는 법선 방향 $\nu$를 하나 고정한 뒤 접 벡터를 받아 접 벡터를 내놓는다. $S_\nu$가 self-adjoint이므로 직교대각화가 가능하며, 그 고윳값들을 $\nu$ 방향의 *principal curvature<sub>주곡률</sub>*, 고유 벡터들이 펼치는 방향을 *principal direction<sub>주방향</sub>*이라 부른다. Codimension이 $1$인 hypersurface의 경우 각 점에서 법선 방향이 (부호를 빼면) 하나뿐이므로 $S_\nu$ 하나가 외재적 곡률 정보를 모두 담는다.
+Weingarten 방정식은 제2기본형식 $\mathrm{II}$와 Weingarten morphism $S_\nu$가 본질적으로 같은 자료의 두 표현임을 말해 준다. $\mathrm{II}$는 두 접 벡터를 받아 법벡터를 내놓고, $S_\nu$는 법선 방향 $\nu$를 하나 고정한 뒤 접 벡터를 받아 접 벡터를 내놓는다. $S_\nu$가 self-adjoint이므로 직교대각화가 가능하며, 그 고윳값들을 $\nu$ 방향의 *principal curvature<sub>주곡률</sub>*, 고유 벡터들이 펼치는 방향을 *principal direction<sub>주방향</sub>*이라 부른다. Codimension이 $1$인 hypersurface의 경우 각 점에서 법선 방향이 (부호를 빼면) 하나뿐이므로 $S_\nu$ 하나가 외재적 곡률 정보를 모두 담는다.
 
 ## Gauss 방정식
 
@@ -161,7 +161,7 @@ $$\begin{aligned}
 을 얻는다.
 :::
 
-Gauss 방정식은 $M$의 내재적 곡률 $R$이 주변 곡률 $\bar R$로부터 제2기본형식의 이차식만큼의 보정을 거쳐 결정됨을 말한다. 특히 주변 공간이 평탄한 경우, 즉 $\bar M = \mathbb{R}^{n+1}$이고 $\bar R = 0$인 경우에는 $M$의 모든 곡률이 순전히 제2기본형식으로부터 나온다. 이것이 Gauss의 *Theorema Egregium*의 일반적 형태로, 곡면의 Gauss 곡률이 주변 공간에 어떻게 embedding되었는지가 아니라 제1기본형식만으로 결정되는 *내재적* 양이라는 사실의 고차원 일반화이다.
+Gauss 방정식은 $M$의 내재적 곡률 $R$이 주변 곡률 $\bar R$로부터 제2기본형식의 이차식만큼의 보정을 거쳐 결정됨을 말한다. 특히 주변 공간이 평탄한 경우, 즉 $\bar M = \mathbb{R}^{n+1}$이고 $\bar R = 0$인 경우에는 $M$의 모든 곡률이 순전히 제2기본형식으로부터 나온다. 이것이 Gauss의 *Theorema Egregium*의 일반적 형태로, 곡면의 Gauss curvature이 주변 공간에 어떻게 embedding되었는지가 아니라 제1기본형식만으로 결정되는 *내재적* 양이라는 사실의 고차원 일반화이다.
 
 ::: 참고 7
 [§비교 정리, ⁋정의 1](/ko/math/riemannian_geometry/comparison_theorems#def1)에서 정의할 sectional curvature의 언어로 Gauss 방정식을 다시 읽으면 더 기하학적인 형태를 얻는다. $M$의 한 점에서 정규직교 벡터 $X, Y \in T_p M$이 펼치는 평면의 sectional curvature $K(X, Y)$와 같은 평면을 $\bar M$ 안에서 본 $\bar K(X, Y)$ 사이에

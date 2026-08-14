@@ -48,11 +48,11 @@ Ring $A$와 prime ideal $\mathfrak{p}$, 그리고 $0$이 아닌 $A$-module $M$�
 이번 글에서 우리의 목표는 다음 정리를 보이는 것이다. 
 
 ::: 정리 3 (Primary decomposition)
-$M$의 임의의 submodule $M'$은 primary submodule들의 교집합이다. 즉, prime ideal들 $\mathfrak{p}_1,\ldots, \mathfrak{p}_n$과 $\mathfrak{p}_k$-primary submodule들 $M_k$에 대하여, $M'=\bigcap_{k=1}^n M_k$으로 적을 수 있다. 이를 *primary decomposition<sub>으뜸분해</sub>*이라 부르며, 그럼 다음이 성립한다. 
+$M$의 임의의 proper submodule $M'$은 primary submodule들의 교집합이다. 즉, prime ideal들 $\mathfrak{p}_1,\ldots, \mathfrak{p}_n$과 $\mathfrak{p}_k$-primary submodule들 $M_k$에 대하여, $M'=\bigcap_{k=1}^n M_k$으로 적을 수 있다. 이를 *primary decomposition<sub>으뜸분해</sub>*이라 부르며, 그럼 다음이 성립한다. 
 
 1. $M/M'$의 associated prime은 $\mathfrak{p}_k$들 중 하나이다.
 2. 만일 $M'$을 표현할 때, $M_k$들 중 불필요한 것이 없다면 $\mathfrak{p}_i$들은 정확히 $M/M'$의 associated prime이다.
-3. 만일 $M'$을 표현하는 방식 중 더 적은 $M_k$들을 이용하는 방식이 없다면, $M/M'$의 associated prime들은 정확히 index 하나 당 하나의 $\mathfrak{p}_k$가 된다. 만일 여기에 더해 $\mathfrak{p}_i$가 $M/M'$의 annihilator ideal을 포함하는 prime ideal 중 minimal한 것이라면 $M_i$는 $M'$의 $\mathfrak{p}_i$-primary component가 된다. 
+3. 만일 $M'$을 표현하는 방식 중 더 적은 $M_k$들을 이용하는 방식이 없다면, $M/M'$의 associated prime들은 정확히 index 하나 당 하나의 $\mathfrak{p}_k$가 된다. 만일 여기에 더해 $\mathfrak{p}_i$가 $M/M'$의 annihilator ideal을 포함하는 prime ideal 중 minimal한 것이라면 $M_i/M'$은 $M/M' \rightarrow (M/M')_{\mathfrak{p}_i}$의 kernel과 같고, 따라서 $M_i$는 $M'$과 $\mathfrak{p}_i$만으로 결정된다. 
 4. 주어진 minimal primary decomposition에 대하여, $A$의 임의의 multiplicative subset $S$에 대해, $\mathfrak{p}_1,\ldots, \mathfrak{p}_m$들이 $S$와 만나지 않는 prime ideal들이라 하자. 그럼
     
     $$S^{-1}M'=\bigcap_{i=1}^m S^{-1}M_i$$
@@ -65,19 +65,19 @@ $M$의 임의의 submodule $M'$은 primary submodule들의 교집합이다. 즉,
 이를 증명하기 위해, 우선 우리는 module의 irreducible decomposition을 정의한다.
 
 ::: 정의 4
-$A$-module $M$의 임의의 submodule $N$이 *irreducible<sub>기약</sub>*이라는 것은 $N=N_1\cap N_2$이도록 하는 $N_1,N_2\supsetneq N$이 존재하지 않는 것이다.
+$A$-module $M$의 임의의 proper submodule $N$이 *irreducible<sub>기약</sub>*이라는 것은 $N=N_1\cap N_2$이도록 하는 $N_1,N_2\supsetneq N$이 존재하지 않는 것이다.
 :::
 
 그럼 다음이 성립한다.
 
 ::: 보조정리 5 (Noether)
-$M$의 임의의 submodule은 irreducible submodule들의 교집합으로 나타난다. 
+$M$의 임의의 proper submodule은 irreducible submodule들의 교집합으로 나타난다. 
 :::
 ::: 증명
-귀류법을 사용하자. 그럼 $M$이 Noetherian이므로, irreducible submodule들의 교집합으로 나타나지 않는 submodule들 중 maximal한 것을 택할 수 있다. 이를 $N$이라 하자. 그럼 $N$은 irreducible submodule이 아니므로, $N=N_1\cap N_2$이도록 하는 $N_1,N_2\supsetneq N$이 존재한다. 그런데 $N$의 maximality에 의하여 $N_1,N_2$는 모두 irreducible submodule의 교집합으로 나타나고, 따라서 $N$도 그러하므로 모순이다. 
+귀류법을 사용하자. 그럼 $M$이 Noetherian이므로, irreducible submodule들의 교집합으로 나타나지 않는 proper submodule들 중 maximal한 것을 택할 수 있다. 이를 $N$이라 하자. 그럼 $N$은 irreducible submodule이 아니므로, $N=N_1\cap N_2$이도록 하는 $N_1,N_2\supsetneq N$이 존재한다. 이 때 $N_1=M$이라면 $N=N_2$가 되어 $N_2\supsetneq N$에 모순이고 $N_2=M$인 경우도 마찬가지이므로, $N_1,N_2$는 모두 proper submodule이다. 그런데 $N$의 maximality에 의하여 $N_1,N_2$는 모두 irreducible submodule의 교집합으로 나타나고, 따라서 $N$도 그러하므로 모순이다. 
 :::
 
-이로부터 우리는 $M$의 임의의 submodule $M'$에 대하여, $M'$의 *irreducible decomposition<sub>기약분해</sub>*
+이로부터 우리는 $M$의 임의의 proper submodule $M'$에 대하여, $M'$의 *irreducible decomposition<sub>기약분해</sub>*
 
 $$M'=\bigcap_{k=1}^n M_k,\qquad \text{$M_k$ irreducible}$$
 
@@ -87,10 +87,10 @@ $$M'=\bigcap_{k=1}^n M_k,\qquad \text{$M_k$ irreducible}$$
 위의 irreducible decomposition은 primary decomposition이다.
 :::
 ::: 증명
-이를 위해서는 임의의 irreducible submodule $P$이 primary submodule임을 보이면 충분하고, 이는 $M/P$가 coprimary submodule인 것을 보이는 것과 같다. 결론에 반하여 $M/P$가 두 개의 associated prime $\mathfrak{p},\mathfrak{q}$를 갖는다 가정하자. 그럼 $M/P$는 $A/\mathfrak{p}$, $A/\mathfrak{q}$와 각각 isomorphic한 submodule들을 갖는다. 그럼 정의에 의해 $A/\mathfrak{p}$의 $0$이 아닌 임의의 원소의 annihilator는 $\mathfrak{p}$이고, $A/\mathfrak{q}$의 $0$이 아닌 임의의 원소의 annihilator는 $\mathfrak{q}$이므로 이들은 오직 $0$만을 공통의 원소로 갖는다. 즉, $M/P$의 zero submodule $0$은 reducible submodule이다. 이로부터 $M$에서는 $P$이 reducible submodule이 되어 모순이 얻어진다.
+이를 위해서는 임의의 irreducible submodule $P$이 primary submodule임을 보이면 충분하고, 이는 $M/P$가 coprimary submodule인 것을 보이는 것과 같다. 우선 $P$가 proper submodule이므로 $M/P\neq 0$이고, [§동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)의 첫째 결과에 의하여 $\Ass(M/P)$는 공집합이 아니다. 따라서 결론에 반하여 $M/P$가 서로 다른 두 associated prime $\mathfrak{p},\mathfrak{q}$를 갖는다 가정하자. 그럼 $M/P$는 $A/\mathfrak{p}$, $A/\mathfrak{q}$와 각각 isomorphic한 submodule들을 갖는다. 그럼 정의에 의해 $A/\mathfrak{p}$의 $0$이 아닌 임의의 원소의 annihilator는 $\mathfrak{p}$이고, $A/\mathfrak{q}$의 $0$이 아닌 임의의 원소의 annihilator는 $\mathfrak{q}$이므로 이들은 오직 $0$만을 공통의 원소로 갖는다. 즉, $M/P$의 zero submodule $0$은 reducible submodule이다. 이로부터 $M$에서는 $P$이 reducible submodule이 되어 모순이 얻어진다.
 :::
 
-따라서 $M$의 임의의 submodule은 항상 primary decomposition을 갖는다. 이제 [정리 3](#thm3)의 나머지 부분을 증명해야 한다. 앞선 보조정리의 증명과 마찬가지로, 이들을 증명할 때는 $M/M'$에 대해 증명하면 충분하므로, 일반성을 잃지 않고 $M'=0$으로 가정해도 충분하다.
+따라서 $M$의 임의의 proper submodule은 항상 primary decomposition을 갖는다. 이제 [정리 3](#thm3)의 나머지 부분을 증명해야 한다. 앞선 보조정리의 증명과 마찬가지로, 이들을 증명할 때는 $M/M'$에 대해 증명하면 충분하므로, 일반성을 잃지 않고 $M'=0$으로 가정해도 충분하다.
 
 ::: 증명 (정리 3)
 우선 첫째 결과를 보이기 위해, $M$의 zero submodule $0$의 primary decomposition
@@ -113,7 +113,7 @@ $$\bigcap_{k\neq j} M_k=\left(\bigcap_{k\neq j} M_k\right)\bigg/\left(M_j\cap \b
 
 가 되어 $\bigcap_{k\neq j} M_k$는 $\mathfrak{p}_j$-coprimary이다. 이로부터 원하는 결과를 얻는다.
 
-이제 세 번째 결과를 보이자. 일반적으로 $\mathfrak{p}$-primary submodule들의 교집합 또한 $\mathfrak{p}$-primary이므로, 주어진 조건을 만족하기 위해서는 $\mathfrak{p}_k$들이 모두 다른 prime ideal들이어야 한다. 이제 $\mathfrak{p}_k$들이 annihilator ideal을 포함하는 것 중 minimal한 것이라 가정하고, $\Ass(M/M_k)=\{\mathfrak{p}_k\}$임을 보이자. 이를 위해서는 $0$이 아닌 임의의 $x+M_k\in M/M_k$에 대하여 $\ann(x)=\mathfrak{p}_k$가 성립해야 하는 것을 보여야 하므로, [§국소화, ⁋명제 5](/ko/math/commutative_algebra/localization#prop5)에 의하여 이는 $\varepsilon: M \rightarrow M_{\mathfrak{p}_k}$의 kernel이 $M_k$임을 보이면 충분하다. 
+이제 세 번째 결과를 보이자. 일반적으로 $\mathfrak{p}$-primary submodule들의 교집합 또한 $\mathfrak{p}$-primary이므로, 주어진 조건을 만족하기 위해서는 $\mathfrak{p}_k$들이 모두 다른 prime ideal들이어야 한다. 이제 $\mathfrak{p}_k$들이 annihilator ideal을 포함하는 것 중 minimal한 것이라 가정하자. 이 때 보여야 하는 것은 $M_k$가 $M$과 $\mathfrak{p}_k$만으로 결정된다는 것인데, $\varepsilon: M \rightarrow M_{\mathfrak{p}_k}$의 kernel은 [§국소화, ⁋명제 5](/ko/math/commutative_algebra/localization#prop5)에 의하여 $sx=0$이도록 하는 $s\in A\setminus \mathfrak{p}_k$가 존재하는 $x$들의 모임이므로 $M$과 $\mathfrak{p}_k$만으로 결정되고, 따라서 $\varepsilon$의 kernel이 $M_k$임을 보이면 충분하다. 
 
 이제 다음의 commutative diagram
 
@@ -129,7 +129,9 @@ $$M_{\mathfrak{p}_k} \rightarrow \left(\bigoplus_{k=1}^n M/M_k\right)_{\mathfrak
 
 또한 injective이다. 한편, 각각의 $j\neq k$에 대하여 $M/M_j$는 $\mathfrak{p}_j$-coprimary이고, minimality로부터 $\mathfrak{p}_j$는 $\mathfrak{p}_k$에 포함되지 않아야 하므로 $(M/M_j)_{\mathfrak{p}_k}=0$이 성립하게 되고, 이렇게 얻어지는 함수가 정확히 $M_{\mathfrak{p}_k}\rightarrow (M/M_k)_{\mathfrak{p}_k}$이므로 원하는 결과를 얻는다.
 
-마지막 주장은 거의 자명하다.
+마지막으로 넷째 결과를 보이자. 앞서와 같이 $M'=0$으로 가정해도 좋다. 우선 localization은 exact functor이므로 ([§국소화의 성질들, ⁋명제 2](/ko/math/commutative_algebra/properties_of_localization#prop2)) 유한한 교집합과 교환하고, 따라서 $0=\bigcap_{k=1}^n S^{-1}M_k$를 얻는다. 이제 $\mathfrak{p}_j\cap S\neq\emptyset$인 $j$에 대해서는 $M/M_j$가 $\mathfrak{p}_j$-coprimary이므로 [명제 2](#prop2)의 셋째 조건에 의하여 적당한 $t$에 대해 $\mathfrak{p}_j^t$가 $M/M_j$를 annihilate하고, $s\in \mathfrak{p}_j\cap S$를 택하면 $s^t\in \mathfrak{p}_j^t$ 또한 $M/M_j$를 annihilate하므로 [§국소화, ⁋명제 5](/ko/math/commutative_algebra/localization#prop5)에 의하여 $S^{-1}(M/M_j)=0$, 즉 $S^{-1}M_j=S^{-1}M$이다. 즉 이러한 성분들은 위의 교집합에서 아무런 역할을 하지 않으므로 $0=\bigcap_{i=1}^m S^{-1}M_i$이다. 한편 $i\leq m$인 각각에 대해서는 $\Ass(M/M_i)=\{\mathfrak{p}_i\}$이고 $\mathfrak{p}_i\cap S=\emptyset$이므로, [§동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)의 셋째 결과에 의하여 $\Ass_{S^{-1}A}S^{-1}(M/M_i)=\{\mathfrak{p}_iS^{-1}A\}$이고, 따라서 $S^{-1}M_i$는 $\mathfrak{p}_iS^{-1}A$-primary submodule이다.
+
+이제 이 분해가 minimal임을 보이면 된다. [§국소화, ⁋명제 8](/ko/math/commutative_algebra/localization#prop8)에 의하여 $S$와 만나지 않는 $A$의 prime ideal들은 $S^{-1}A$의 prime ideal들과 일대일대응하므로 $\mathfrak{p}_1S^{-1}A,\ldots, \mathfrak{p}_mS^{-1}A$는 서로 다른 $m$개의 prime ideal이며, 같은 명제의 1번에 의하여 $S^{-1}A$의 임의의 ideal $\mathfrak{b}$는 $\mathfrak{b}$의 $A$에서의 preimage의 image로 생성되므로 $A$가 Noetherian이라는 것으로부터 $S^{-1}A$ 또한 Noetherian이고, $M$의 generator들의 image가 $S^{-1}M$을 생성하므로 $S^{-1}M$은 finitely generated $S^{-1}A$-module이다. 그럼 [§동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)의 셋째 결과와 이미 보인 둘째 결과로부터 $\Ass_{S^{-1}A}S^{-1}M$이 정확히 이 $m$개의 prime ideal들로 이루어지고, 첫째 결과를 $S^{-1}A$ 위에서 적용하면 $S^{-1}M$의 zero submodule의 임의의 primary decomposition은 이들을 모두 그 prime ideal들 가운데 가져야 하므로 적어도 $m$개의 성분을 갖는다. 즉 위의 분해는 minimal이다.
 :::
 
 ## 으뜸분해와 인수분해
@@ -153,7 +155,7 @@ Noetherian domain $A$에 대해 다음이 성립한다.
 
 거꾸로 principal ideal에 대해 minimal한 prime ideal들이 모두 principal이라 가정하자. 우선 $A$가 Noetherian이므로 임의의 nonzero, non-unit 원소는 irreducible element들의 곱으로 표현된다. 그렇지 않다 가정하면, irreducible element들의 곱으로 표현되지 않는 nonzero, non-unit 원소 $a$들이 만드는 principal ideal $(a)$들의 모임이 공집합이 아니므로 Noetherian 조건에 의해 이 모임의 maximal element $(a)$를 택할 수 있다. 그럼 $a$는 irreducible이 아니므로 non-unit $b,c$에 대해 $a=bc$로 쓸 수 있는데, 만일 $(a)=(b)$라면 적당한 $d$에 대해 $b=ad$이고 $a=adc$가 되어 $A$가 domain이라는 것으로부터 $c$가 unit이 되어 모순이므로 $(a)\subsetneq (b)$이고, 같은 이유로 $(a)\subsetneq(c)$이다. 그럼 $(a)$의 maximality에 의해 $b,c$는 모두 irreducible element들의 곱으로 표현되고, 따라서 $a=bc$도 그러하므로 모순이다.
 
-다음으로 임의의 irreducible element $p$가 prime임을 보이자. $A$가 Noetherian이므로 $(p)$를 포함하는 prime ideal들 중 minimal한 것이 존재하며 ([§동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)), 이를 $\mathfrak{p}$라 하면 가정에 의해 $\mathfrak{p}=(q)$는 principal이다. 그럼 $p\in (q)$로부터 $p=qc$로 쓸 수 있는데, $p$가 irreducible이고 $q$가 non-unit이므로 $c$는 unit이고 따라서 $(p)=(q)=\mathfrak{p}$가 prime ideal이다. 즉 $p$는 prime element이다.
+다음으로 임의의 irreducible element $p$가 prime임을 보이자. $A$가 Noetherian이므로 $(p)$를 포함하는 prime ideal들 중 minimal한 것이 존재하며, 이를 $\mathfrak{p}$라 하면 가정에 의해 $\mathfrak{p}=(q)$는 principal이다. 그럼 $p\in (q)$로부터 $p=qc$로 쓸 수 있는데, $p$가 irreducible이고 $q$가 non-unit이므로 $c$는 unit이고 따라서 $(p)=(q)=\mathfrak{p}$가 prime ideal이다. 즉 $p$는 prime element이다.
 
 마지막으로 인수분해의 유일성을 보이자. $up_1\cdots p_m=vq_1\cdots q_k$가 irreducible element들의 곱이고 $u,v$가 unit이라 하면, $m$에 대한 귀납법을 사용한다. $m=0$이면 좌변이 unit이므로 $k=0$이어야 한다. $m\geq 1$이면 $p_m$이 prime이므로 적당한 $j$에 대하여 $p_m\mid q_j$이고, $q_j$가 irreducible이며 $p_m$이 non-unit이므로 $q_j=wp_m$이도록 하는 unit $w$가 존재한다. 그럼 $A$가 domain이므로 양변에서 $p_m$을 소거하여 귀납가정을 적용하면 적절한 재배열 하에서 각 $p_i$와 $q_i$가 associate임을 얻는다. 따라서 $A$는 UFD이다. ([\[환론\] §정역, ⁋정의 16](/ko/math/ring_theory/integral_domains#def16))
 :::

@@ -1,6 +1,6 @@
 ---
 title: "Killing 형식과 Cartan 판정법"
-description: "Lie algebra 위의 Killing form을 adjoint representation의 trace로 정의하고 그 invariance와 ideal 제한 성질을 정리한 뒤, trace form lemma로부터 Cartan의 가해성 판정법과 반단순성 판정법을 증명한다. 반단순 Lie algebra가 simple ideal들의 직합으로 분해됨도 보인다."
+description: "Lie algebra 위의 Killing form을 adjoint representation의 trace로 정의하고 그 invariance와 ideal restriction 성질을 정리한 뒤, trace form lemma로부터 Cartan의 가해성 판정법과 반단순성 판정법을 증명한다. 반단순 Lie algebra가 simple ideal들의 직합으로 분해됨도 보인다."
 excerpt: "Killing form, invariance, Cartan의 가해성·반단순성 판정, simple ideal 직합 분해"
 
 categories: [Math / Lie Theory]
@@ -101,7 +101,7 @@ $$\mathfrak{g}^{\perp}=\left\{x\in\mathfrak{g}\mid \kappa(x,y)=0\text{ for all }
 
 은 그 자체로 $\mathfrak{g}$의 ideal이 된다. 임의의 $x\in\mathfrak{g}^{\perp}$, $z\in\mathfrak{g}$에 대하여 [명제 2](#prop2)의 invariance로부터 $\kappa([z,x],y)=-\kappa(x,[z,y])=0$이 모든 $y$에 대해 성립하기 때문이다. Killing form이 nondegenerate라는 것은 정확히 $\mathfrak{g}^{\perp}=0$이라는 것이며, 아래에서 이 조건이 semisimplicity와 동치임을 본다.
 
-## Jordan–Chevalley 분해
+## Jordan–Chevalley decomposition
 
 Cartan의 판정법의 증명은 단 한 번, endomorphism을 semisimple 부분과 nilpotent 부분으로 쪼개는 분해에 의존한다. 우리는 이를 선형대수의 사실로서 상기한다.
 

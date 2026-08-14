@@ -14,7 +14,7 @@ weight: 7
 published: false
 ---
 
-Holomorphic function이 각 점 근방에서 자신의 Taylor 급수와 일치한다는 사실은 ([§멱급수와 해석성, ⁋정리 3](/ko/math/complex_analysis/power_series_and_analyticity#thm3)) 그 국소적 거동에 강한 제약을 건다. 가장 먼저 드러나는 것이 영점의 거동이다. 항등적으로 $0$이 아닌 holomorphic function의 영점에서는 Taylor 급수의 상수항이 사라지되 어느 유한한 degree의 계수는 살아남아야 하고, 이로부터 영점이 $(z - z_0)^m$이라는 정확한 인수를 내놓으며 ([§멱급수와 해석성, ⁋명제 6](/ko/math/complex_analysis/power_series_and_analyticity#prop6)) 서로 떨어져 고립된다는 결론이 나온다. 영점이 고립된다는 이 국소적 사실을 연결성과 결합하면, 두 holomorphic function이 집적점을 갖는 작은 집합에서만 일치해도 영역 전체에서 일치한다는 일치정리에 이른다. Holomorphic function은 이렇듯 극히 적은 자료로 완전히 결정되는 강직한 대상이며, 이 강직성은 최대절댓값 원리와 단위원판의 자기사상을 통제하는 Schwarz 보조정리로 이어진다. 이 글에서 다루는 결과들은 모두 멱급수 전개라는 하나의 원천에서 흘러나온다.
+Holomorphic function이 각 점 근방에서 자신의 Taylor 급수와 일치한다는 사실은 ([§멱급수와 해석성, ⁋정리 3](/ko/math/complex_analysis/power_series_and_analyticity#thm3)) 그 국소적 거동에 강한 제약을 건다. 가장 먼저 드러나는 것이 영점의 거동이다. 항등적으로 $0$이 아닌 holomorphic function의 영점에서는 Taylor 급수의 상수항이 사라지되 어느 finite degree의 계수는 살아남아야 하고, 이로부터 영점이 $(z - z_0)^m$이라는 정확한 인수를 내놓으며 ([§멱급수와 해석성, ⁋명제 6](/ko/math/complex_analysis/power_series_and_analyticity#prop6)) 서로 떨어져 고립된다는 결론이 나온다. 영점이 고립된다는 이 국소적 사실을 연결성과 결합하면, 두 holomorphic function이 집적점을 갖는 작은 집합에서만 일치해도 영역 전체에서 일치한다는 일치정리에 이른다. Holomorphic function은 이렇듯 극히 적은 자료로 완전히 결정되는 강직한 대상이며, 이 강직성은 최대절댓값 원리와 단위원판의 자기사상을 통제하는 Schwarz 보조정리로 이어진다. 이 글에서 다루는 결과들은 모두 멱급수 전개라는 하나의 원천에서 흘러나온다.
 
 ## 영점의 고립성
 
@@ -168,7 +168,7 @@ $$\lvert g(z)\rvert \leq 1, \qquad z \in \mathbb{D}$$
 (2)를 위해 등호의 경우를 본다. 어떤 $z_0 \neq 0$에서 $\lvert f(z_0)\rvert = \lvert z_0\rvert$이면 $\lvert g(z_0)\rvert = 1$이고, $\lvert f'(0)\rvert = 1$이면 $\lvert g(0)\rvert = 1$이다. 어느 경우든 $\mathbb{D}$ 안의 한 점에서 $\lvert g\rvert$가 그 상한 $1$에 이르므로, $\lvert g\rvert$가 interior point에서 최댓값 $1$을 가진다. 최대절댓값 원리 ([정리 5](#thm5)) 에 의해 $g$는 connected 영역 $\mathbb{D}$에서 상수이고, 그 절댓값이 $1$이므로 $g(z) \equiv \lambda$ ($\lvert\lambda\rvert = 1$) 이다. 따라서 $f(z) = \lambda z$이다.
 :::
 
-Schwarz 보조정리는 원점을 고정하는 단위원판의 자기사상이 원점 근방에서 항등사상보다 더 빠르게 자랄 수 없음을 말한다. $\lvert f(z)\rvert \leq \lvert z\rvert$은 각 점에서 함수값이 원점에서 더 멀어지지 않음을, $\lvert f'(0)\rvert \leq 1$은 원점에서의 확대율이 $1$을 넘지 못함을 뜻한다. 등호의 경우가 회전 $f(z) = \lambda z$뿐이라는 두 번째 진술은 이 부등식이 회전이 아닌 자기사상에 대해서는 결코 포화되지 않는 엄격한 부등식임을 말해 준다. 이 보조정리는 단위원판의 holomorphic automorphism을 분류하는 출발점이 되며, 그로부터 단위원판 위의 자연스러운 거리인 쌍곡거리가 holomorphic 사상에 의해 늘어나지 않는다는 사실로 이어진다.
+Schwarz 보조정리는 원점을 고정하는 단위원판의 자기사상이 원점 근방에서 항등사상보다 더 빠르게 자랄 수 없음을 말한다. $\lvert f(z)\rvert \leq \lvert z\rvert$은 각 점에서 함수값이 원점에서 더 멀어지지 않음을, $\lvert f'(0)\rvert \leq 1$은 원점에서의 확대율이 $1$을 넘지 못함을 뜻한다. 등호의 경우가 회전 $f(z) = \lambda z$뿐이라는 두 번째 진술은 이 부등식이 회전이 아닌 자기사상에 대해서는 결코 포화되지 않는 엄격한 부등식임을 말해 준다. 이 보조정리는 단위원판의 holomorphic automorphism을 분류하는 출발점이 되며, 그로부터 단위원판 위의 자연스러운 거리인 쌍곡거리가 holomorphic morphism에 의해 늘어나지 않는다는 사실로 이어진다.
 
 ::: 예시 8 (원점을 고정하는 automorphism)
 $f : \mathbb{D} \rightarrow \mathbb{D}$가 holomorphic인 전단사이고 그 역함수도 holomorphic이며 $f(0) = 0$이라 하자. 곧 $f$는 원점을 고정하는 단위원판의 holomorphic automorphism이다. 이러한 $f$가 회전뿐임을 Schwarz 보조정리로 보인다. $f$와 그 역함수 $f^{-1}$ 모두 $\mathbb{D}$를 $\mathbb{D}$로 보내고 원점을 고정하므로, 정리 7의 (1)을 양쪽에 적용하면

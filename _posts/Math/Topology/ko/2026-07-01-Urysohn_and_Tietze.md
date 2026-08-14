@@ -222,7 +222,7 @@ $$F:X\rightarrow[0,1]^{\mathbb{N}},\qquad F(x)=(f_1(x),f_2(x),\ldots)$$
 
 이 정리는 second countable이라는 가산성 조건이 붙는 순간 위상적 separation axiom과 거리 구조가 사실상 같은 것임을 말해 준다. 이로써 우리는 추상적인 위상공간과 익숙한 metric space 사이의 간극이 생각보다 좁다는 사실을 확인한다.
 
-Urysohn 보조정리로 얻어지는 연속함수는 이후 다양한 국소적 구성을 전역적으로 이어 붙이는 데에 쓰인다. 특히 open covering에 종속되어 합이 항상 $1$이 되는 연속함수들의 모임인 partition of unity의 존재가 바로 이러한 Urysohn 함수 위에 세워진다.
+Urysohn 보조정리로 얻어지는 연속함수는 이후 다양한 국소적 구성을 전역적으로 이어 붙이는 데에 쓰인다. 특히 open covering에 종속되어 합이 항상 $1$이 되는 연속함수들의 모임인 partition of unity의 존재가 바로 이러한 Urysohn function 위에 세워진다.
 
 ---
 

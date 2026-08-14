@@ -149,12 +149,12 @@ $\dim V$에 대한 귀납법으로 보인다. $V=0$이면 빈 direct sum으로�
 완전가약성의 직접적인 귀결로, semisimple Lie algebra가 자기 자신 위에 작용하는 adjoint representation도 완전가약이며, 이것이 [§Killing 형식과 Cartan 판정법, ⁋정리 10](/ko/math/lie_theory/killing_form_and_cartan_criterion#thm10)에서 얻은 simple ideal 분해를 표현론의 언어로 다시 본 것이다.
 
 ::: 따름정리 8
-$\mathfrak{g}$가 semisimple이면, adjoint representation $\ad:\mathfrak{g}\rightarrow\gl(\mathfrak{g})$는 완전가약이다. 그 irreducible component는 정확히 [§Killing 형식과 Cartan 판정법, ⁋정리 10](/ko/math/lie_theory/killing_form_and_cartan_criterion#thm10)의 simple ideal 분해 $\mathfrak{g}=\mathfrak{g}_1\oplus\cdots\oplus\mathfrak{g}_r$의 각 $\mathfrak{g}_i$이다.
+$\mathfrak{g}$가 semisimple이면, adjoint representation $\ad:\mathfrak{g}\rightarrow\gl(\mathfrak{g})$는 완전가약이다. 그 irreducible component는 정확히 [§Killing 형식과 Cartan 판정법, ⁋정리 10](/ko/math/lie_theory/killing_form_and_cartan_criterion#thm10)의 simple ideal decomposition $\mathfrak{g}=\mathfrak{g}_1\oplus\cdots\oplus\mathfrak{g}_r$의 각 $\mathfrak{g}_i$이다.
 :::
 ::: 증명
 [정리 7](#thm7)을 representation $\ad:\mathfrak{g}\rightarrow\gl(\mathfrak{g})$에 적용하면 $\mathfrak{g}$가 adjoint action에 대한 irreducible subrepresentation들의 direct sum으로 분해된다. Adjoint action에 대한 subrepresentation이란 정확히 $\ad(\mathfrak{g})$-불변 부분공간, 곧 $\mathfrak{g}$의 ideal이며, 그것이 irreducible이라는 것은 $0$이 아닌 진부분 ideal을 갖지 않는다는 것이다. Abelian이 아닌 ideal 가운데 그러한 것이 simple ideal이므로, irreducible component들은 simple ideal이다. (자명 representation으로 나타나는 abelian 성분이 있다면 그것은 $\mathfrak{g}$의 $0$이 아닌 abelian, 따라서 solvable인 ideal이 되어 semisimple성에 모순이므로 존재하지 않는다.)
 
-따라서 분해의 각 성분은 simple ideal이고, [§Killing 형식과 Cartan 판정법, ⁋정리 10](/ko/math/lie_theory/killing_form_and_cartan_criterion#thm10)에 의해 $\mathfrak{g}$의 simple ideal들은 유일하게 결정되므로, adjoint representation의 irreducible decomposition은 simple ideal 분해 $\mathfrak{g}=\mathfrak{g}_1\oplus\cdots\oplus\mathfrak{g}_r$과 일치한다.
+따라서 분해의 각 성분은 simple ideal이고, [§Killing 형식과 Cartan 판정법, ⁋정리 10](/ko/math/lie_theory/killing_form_and_cartan_criterion#thm10)에 의해 $\mathfrak{g}$의 simple ideal들은 유일하게 결정되므로, adjoint representation의 irreducible decomposition은 simple ideal decomposition $\mathfrak{g}=\mathfrak{g}_1\oplus\cdots\oplus\mathfrak{g}_r$과 일치한다.
 :::
 
 Weyl의 정리는 semisimple Lie algebra의 표현론을 irreducible representation의 분류 문제로 환원한다. 임의의 representation은 그 안에 나타나는 irreducible representation들과 각각의 multiplicity로 완전히 결정되며, 따라서 남은 과제는 irreducible representation 자체를 분류하는 것이다.

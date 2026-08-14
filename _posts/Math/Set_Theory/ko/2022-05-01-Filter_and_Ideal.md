@@ -1,6 +1,6 @@
 ---
 title: "필터와 아이디얼, 갈루아 대응"
-description: "정렬된 집합과 격자에서 필터와 아이디얼의 개념을 정의하고, 주필터·주아이디얼·소아이디얼의 성질을 살펴본다."
+description: "순서집합과 격자에서 필터와 아이디얼의 개념을 정의하고, 주필터·주아이디얼·소아이디얼의 성질을 살펴본다."
 excerpt: "Filter와 ideal"
 
 categories: [Math / Set Theory]
@@ -10,6 +10,8 @@ sidebar:
 
 date: 2022-05-01
 weight: 18
+published: false
+revising: true
 drift_needed: true
 
 ---
@@ -64,6 +66,8 @@ Lattice $A$가 주어졌다 하고, $I$와 $F$가 각각 $A$의 proper ideal과 
 :::
 
 혹은, $I$가 prime ideal이라는 것은 $A\setminus I$가 filter라는 것으로 정의하여도 동등한 정의를 얻는다. 
+
+여기서 *maximal ideal*이란 proper ideal들의 모임에 포함관계로 순서를 주었을 때의 maximal element를 뜻하며, *maximal filter*도 같은 방식으로 정의한다.
 
 ::: 명제 5
 두 연산 $\vee$와 $\wedge$ 사이의 분배법칙이 성립하는 lattice $A$가 주어졌다 하자. 그럼 임의의 maximal ideal은 prime ideal이고 임의의 maximal filter는 prime filter이다.
@@ -152,7 +156,7 @@ $$GFGF(x)=GF(x)$$
 
 정의에 의하여, $x,y$가 각각 $GF$와 $FG$에 대해 closed라는 것은 각각 $GF(x)=x$, 그리고 $FG(y)=y$가 성립한다는 것이다. 우리는 [명제 7](#prop7)로부터 $F$와 $G$의 image에 속한 원소들은 모두 closed라는 것을 안다. 거꾸로 임의의 원소 $x$가 $GF$에 대해 closed라면 $GF(x)=x$로부터 $x$가 $G$의 image에 속한다는 것을 알고, 비슷하게 $FG$에 대한 명제 또한 증명할 수 있다.
 
-우리는 이 과정을 통해 ordered set $A,B$ 사이의 Galois connection에 대해, closed인 원소들의 모임 $A'\subseteq A$, $B'\subseteq B$를 만들 수 있으며, $F$와 $G$를 이 모임에 제한한 것이 잘 정의된다. 뿐만 아니라 이들 $F\vert_{A'}$와 $G\vert_{B'}$는 일대일 대응이며, *anti-isomorphism*이 된다. 이들을 특별히 *Galois correspondence<sub>갈루아 대응</sub>*라 부른다.
+우리는 이 과정을 통해 ordered set $A,B$ 사이의 antitone Galois connection에 대해, closed인 원소들의 모임 $A'\subseteq A$, $B'\subseteq B$를 만들 수 있으며, $F$와 $G$를 이 모임에 제한한 것이 잘 정의된다. 뿐만 아니라 이들 $F\vert_{A'}$와 $G\vert_{B'}$는 일대일 대응이며, *anti-isomorphism*이 된다. 이들을 특별히 *Galois correspondence<sub>갈루아 대응</sub>*라 부른다.
 
 
 ---

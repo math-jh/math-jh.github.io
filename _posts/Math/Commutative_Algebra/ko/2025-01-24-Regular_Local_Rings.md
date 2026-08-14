@@ -10,6 +10,8 @@ sidebar:
 
 date: 2025-01-24
 weight: 20
+published: false
+revising: true
 
 drift_needed: true
 
@@ -52,14 +54,16 @@ Ring $A$의 원소들 $a_1,\ldots, a_d$가 *$A$-regular sequence* 혹은 간단�
 Regular local Noetherian ring $A$의 regular system of parameters는 $A$-sequence를 이룬다.
 :::
 ::: 증명
-각각의 $i$에 대하여 $A/(a_1,\ldots, a_i)$도 regular local ring이고, [따름정리 1](#cor1)에 의해 이는 integral domain이며 $a_{i+1}$은 이 ring의 $0$이 아닌 원소가 된다.
+$A$의 maximal ideal을 $\mathfrak{m}$이라 하고 $d=\dim A$라 한 뒤, $a_1,\ldots, a_d$가 $\mathfrak{m}$을 생성하는 regular system of parameters라 하자. 그럼 $(a_1,\ldots, a_d)=\mathfrak{m}$은 proper이다. 이제 각각의 $i$에 대하여 $A_i=A/(a_1,\ldots, a_i)$라 하면, $A_i$는 Noetherian local ring이고 그 maximal ideal $\mathfrak{m}A_i$는 $a_{i+1},\ldots, a_d$의 image들, 곧 $d-i$개의 원소로 생성되므로 [§차원, ⁋정리 7](/ko/math/commutative_algebra/Krull_dimension#thm7)에 의하여 $\dim A_i\leq d-i$이다. 거꾸로 [§매개계, ⁋따름정리 7](/ko/math/commutative_algebra/system_of_parameters#cor7)을 $i$번 적용하면 $\dim A_i\geq d-i$이므로, $\dim A_i=d-i$이고 따라서 $A_i$도 regular local ring이다.
+
+그럼 [따름정리 1](#cor1)에 의해 각각의 $A_i$는 integral domain이므로, $a_{i+1}$의 image가 $A_i$에서 $0$이 아니라는 것만 보이면 된다. 만일 $a_{i+1}\in (a_1,\ldots, a_i)$라면 $\mathfrak{m}$은 $a_1,\ldots, a_d$에서 $a_{i+1}$을 제외한 $d-1$개의 원소로 생성되고, 이는 $\dim A=d$인 Noetherian local ring의 maximal ideal이 $d$개 이상의 원소로만 생성될 수 있다는 것에 모순이다. ([§차원, ⁋정리 7](/ko/math/commutative_algebra/Krull_dimension#thm7))
 :::
 
 ::: 명제 4
 Complete regular local Noetherian ring $(A, \mathfrak{m})$의 차원이 $d$이고, residue field $\kappa=A/\mathfrak{m}$라 하자. 만일 $A$가 어떠한 field를 포함한다면 $A\cong \kappa[[\x_1,\ldots, \x_d]]$이며, 이 isomorphism은 각각의 변수 $\x_i$들과 $A$의 regular system of parameters를 대응시킨다.
 :::
 ::: 증명
-[§완비화의 성질들, ⁋정리 8](/ko/math/commutative_algebra/properties_of_completion#thm8)에 의하여, 주어진 가정으로부터 $A$가 $\kappa$를 포함해야 한다는 것을 안다. 이제 [§완비화의 성질들, ⁋정리 5](/ko/math/commutative_algebra/properties_of_completion#thm5)의 첫째 결과에 의하여 $\kappa$-algebra homomorphism $\phi:\kappa[[\x_1,\ldots, \x_d]]\rightarrow A$를 얻으며, 둘째 결과에 의하여 $\phi$는 surjective이다. 한편 $\kappa[[\x_1,\ldots, \x_d]]$는 [따름정리 1](#cor1)에 의하여 $d$차원이므로 
+[§완비화의 성질들, ⁋정리 8](/ko/math/commutative_algebra/properties_of_completion#thm8)에 의하여, 주어진 가정으로부터 $A$가 $\kappa$를 포함해야 한다는 것을 안다. 이제 [§완비화의 성질들, ⁋정리 5](/ko/math/commutative_algebra/properties_of_completion#thm5)의 첫째 결과에 의하여 $\kappa$-algebra homomorphism $\phi:\kappa[[\x_1,\ldots, \x_d]]\rightarrow A$를 얻으며, 둘째 결과에 의하여 $\phi$는 surjective이다. 한편 $\kappa[[\x_1,\ldots, \x_d]]$는 [§완비화, ⁋예시 4](/ko/math/commutative_algebra/completion#ex4)의 formal power series ring, 곧 $\kappa[\x_1,\ldots, \x_d]$의 $(\x_1,\ldots, \x_d)$에 대한 completion이므로 [§완비화의 성질들, ⁋정리 1](/ko/math/commutative_algebra/properties_of_completion#thm1)의 첫째 결과에 의하여 Noetherian이고, [§완비화, ⁋따름정리 6](/ko/math/commutative_algebra/completion#cor6)에 의하여 $(\x_1,\ldots, \x_d)$를 유일한 maximal ideal로 갖는 local ring이다. 그럼 [§차원, ⁋정리 7](/ko/math/commutative_algebra/Krull_dimension#thm7)에 의하여 $\dim \kappa[[\x_1,\ldots, \x_d]]\leq d$이고, $\phi$가 surjective이므로 $\dim \kappa[[\x_1,\ldots, \x_d]]\geq \dim A=d$이다. 따라서 $\kappa[[\x_1,\ldots, \x_d]]$는 $d$차원의 regular local ring이며, 이로부터 
 
 $$d=\dim A=\dim \im(\phi)=\dim \kappa[[\x_1,\ldots,\x_d]]/\ker\phi\leq \dim \kappa[[\x_1,\ldots, \x_d]]-\codim \ker\phi=d-\codim\ker\phi$$
 
@@ -104,14 +108,20 @@ $$S=\nu^{-1}\left(\{g\in G\mid g\geq 0\}\right)\cup\{0\}$$
 
 을 $\nu$의 *valuation ring<sub>값매김환</sub>*이라 부른다. 
 
-특히 만일 $G=\mathbb{Z}$일 경우에는 이를 *discrete valuation<sub>이산값매김</sub>*이라 부르고, $\nu$의 valuation ring을 *discrete valuation ring<sub>이산값매김환</sub>*이라 부른다. 
+특히 만일 $G=\mathbb{Z}$이고 $\nu$가 surjective일 경우에는 이를 *discrete valuation<sub>이산값매김</sub>*이라 부르고, $\nu$의 valuation ring을 *discrete valuation ring<sub>이산값매김환</sub>*이라 부른다. 
 :::
 
-그럼 위에서 정의한 $\nu:\Frac(A)^\times \rightarrow \mathbb{Z}$가 discrete valuation이 된다는 것은 다음의 식
+그럼 위에서 정의한 $\nu:\Frac(A)^\times \rightarrow \mathbb{Z}$는 $\nu(m)=1$이므로 surjective이며, 이것이 valuation의 부등식을 만족한다는 것은 다음의 식
 
 $$am^k+bm^l=(am^{k-\min(k,l)}+bm^{l-\min(k,l)})m^{\min(k,l)}$$
 
-에 의해 자명하다. 그럼 [명제 4](#prop4)에 의하여, 두 complete discrete valuation ring이 각각 field를 포함하고, isomorphic한 residue field를 갖는다면 이들은 서로 isomorphic하다는 것을 안다. 그러나 일반적으로 complete하지 않은 discrete valuation ring들 사이에는 이러한 종류의 classification이 존재하지 않는다.
+에 의해 자명하다. 또, [명제 5](#prop5)에 의하여 $\nu$의 값이 $0$ 이상인 $\Frac(A)^\times$의 원소들은 정확히 $A$의 $0$이 아닌 원소들이므로, $A$ 자신이 $\nu$의 valuation ring이다.
+
+거꾸로 integral domain $B$ 위의 discrete valuation $\nu:\Frac(B)^\times \rightarrow \mathbb{Z}$와 그 valuation ring $S$가 주어졌다 하자. $\nu(x)<0$인 $x$에 대해서는 $x^{-1}\in S$이므로 $\Frac(S)=\Frac(B)$이다. 이제 $\nu$가 surjective이므로 $\nu(m)=1$인 $m\in S$를 택할 수 있고, $S$의 $0$이 아닌 원소 $x$에 대하여 $k=\nu(x)\geq 0$이라 하면 $xm^{-k}$와 그 inverse가 모두 $\nu$의 값 $0$을 가지므로 $xm^{-k}$는 $S$의 unit이다. 즉 $S$의 $0$이 아닌 원소는 모두 $am^k$ ($a$ a unit of $S$, $k\geq 0$)의 꼴이고, 이로부터 $S$의 ideal은 $0$과 $(m^k)$들뿐임을 안다. 따라서 $S$는 Noetherian local ring이고 그 maximal ideal은 $(m)$이며, prime ideal은 $0$과 $(m)$뿐이므로 $\dim S=1$이다. 즉 discrete valuation ring은 정확히 $1$차원의 regular local ring이고, $m$은 $S$의 regular parameter이다.
+
+또한 $S$는 normal domain이다. 만일 $\Frac(S)$의 원소 $x$가 $S$ 위에서 integral이면서 $k=\nu(x)<0$이라면, $c_i\in S$에 대한 monic 방정식 $x^n+c_{n-1}x^{n-1}+\cdots+c_0=0$에서 $\nu(x^n)=nk$인 반면 $0$이 아닌 나머지 항들은 $\nu(c_ix^i)\geq ik\geq (n-1)k>nk$를 만족하므로, [정의 6](#def6)의 부등식을 $x^n=-(c_{n-1}x^{n-1}+\cdots+c_0)$에 적용하면 $nk>nk$가 되어 모순이다.
+
+그럼 [명제 4](#prop4)에 의하여, 두 complete discrete valuation ring이 각각 field를 포함하고, isomorphic한 residue field를 갖는다면 이들은 서로 isomorphic하다는 것을 안다. 그러나 일반적으로 complete하지 않은 discrete valuation ring들 사이에는 이러한 종류의 classification이 존재하지 않는다.
 
 ## 세르의 정규화 조건
 
@@ -140,7 +150,7 @@ Noetherian integral domain $A$가 normal domain인 것은 다음 조건과 동�
 ($\ast$) 임의의 prime ideal $\mathfrak{p}$ associated to a principal ideal에 대하여, $\mathfrak{p}A_\mathfrak{p}$는 $A_\mathfrak{p}$의 principal ideal이다. 
 :::
 ::: 증명
-우선 ($\ast$)를 가정하고 $A$가 normal domain임을 보인다. 그런데 공통의 quotient field를 갖는 normal domain들이 주어졌다 하면, 이들의 교집합 또한 normal domain이 되는 것이 자명하다. 따라서 다음 식
+우선 ($\ast$)를 가정하고 $A$가 normal domain임을 보인다. 그런데 공통의 quotient field를 갖는 normal domain들이 주어졌다 하면, 이들의 교집합 또한 normal domain이 되는 것이 자명하다. 이 때 principal ideal에 associated인 각각의 prime ideal $\mathfrak{p}$에 대하여 $A_\mathfrak{p}$가 normal domain인 것은 다음과 같이 ($\ast$)로부터 따라온다. 가정에 의해 $\mathfrak{p}A_\mathfrak{p}$는 principal이므로 [§차원, ⁋정리 7](/ko/math/commutative_algebra/Krull_dimension#thm7)에 의하여 $\dim A_\mathfrak{p}\leq 1$이고, 따라서 $A_\mathfrak{p}$는 field이거나 maximal ideal이 principal인 $1$차원의 regular local ring, 곧 discrete valuation ring이다. 앞 절에서 살펴본 것처럼 discrete valuation ring은 normal domain이며, field 또한 그러하다. 따라서 다음 식
 
 $$A=\bigcap_\text{\scriptsize$\mathfrak{p}$ associated to a principal ideal}A_\mathfrak{p}$$
 
@@ -150,7 +160,7 @@ $$A=\bigcap_\text{\scriptsize$\mathfrak{p}$ associated to a principal ideal}A_\m
 
 $$\mathfrak{p}=\ann(b+\mathfrak{a})$$
 
-이며, 우리는 $\mathfrak{p}A_\mathfrak{p}$가 $A_\mathfrak{p}$의 principal ideal인 것을 보여야 한다. 이는 어차피 localization에 대한 것이므로, $(A,\mathfrak{p})$가 local ring이었다고 가정해도 상관 없으며, 이 때 $K$를 $A$의 field of fraction이라 하고, $\mathfrak{p}$의 inverse
+이며, 우리는 $\mathfrak{p}A_\mathfrak{p}$가 $A_\mathfrak{p}$의 principal ideal인 것을 보여야 한다. 이는 어차피 localization에 대한 것이고, [§정수적 확장, ⁋명제 12](/ko/math/commutative_algebra/integral_extension#prop12)에 의하여 normal domain의 localization은 다시 normal domain이므로, $(A,\mathfrak{p})$가 local ring이었다고 가정해도 상관 없으며, 이 때 $K$를 $A$의 field of fraction이라 하고, $\mathfrak{p}$의 inverse
 
 $$\mathfrak{p}^{-1}=\{x\in K\mid x \mathfrak{p}\subseteq A\}$$
 
@@ -197,7 +207,11 @@ $$a=(a_1,\ldots, a_n),\qquad\text{$a_i$ a non-zerodivisor of $A_i$}$$
 
 $$0=\bigcap \mathfrak{q}_i,\qquad\text{$\mathfrak{q}_i$ a $\mathfrak{p}_i$-primary ideal}$$
 
-가 $0$의 minimal primary decomposition이라면 여기에 등장하는 $\mathfrak{p}_i$들은 모두 S2 조건에 의해 codimension $0$ ideal들이고, R1 조건에 의해 여기에서의 localization이 field임을 안다. 따라서 [명제 7](#prop7)을 적용할 수 있고, 여기에 [§조르단-횔더 정리, ⁋정리 5](/ko/math/commutative_algebra/Jordan-Holder_theorem#thm5)를 적용해주면 원하는 결과를 얻는다. 
+가 $0$의 minimal primary decomposition이라면 여기에 등장하는 $\mathfrak{p}_i$들은 모두 S2 조건에 의해 codimension $0$ ideal들이고, R1 조건에 의해 여기에서의 localization이 field임을 안다. 그럼 각각의 $i$에 대하여 $\mathfrak{q}_i=\mathfrak{p}_i$인데, 이는 $\mathfrak{p}_iA_{\mathfrak{p}_i}=0$이므로 임의의 $a\in \mathfrak{p}_i$에 대하여 $sa=0\in \mathfrak{q}_i$이도록 하는 $s\not\in \mathfrak{p}_i$가 존재하고, $\mathfrak{q}_i$가 $\mathfrak{p}_i$-primary이면서 $s\not\in \sqrt{\mathfrak{q}_i}=\mathfrak{p}_i$이므로 $a\in \mathfrak{q}_i$이기 때문이다. 따라서 $0=\bigcap \mathfrak{p}_i$는 prime ideal들의 교집합이고, $A$는 reduced이다. 
+
+이제 [명제 7](#prop7)을 적용할 수 있다. S2 조건에 의하여 non-zerodivisor에 associated인 prime ideal $\mathfrak{p}$는 모두 codimension $1$이고, R1 조건에 의하여 $A_\mathfrak{p}$는 discrete valuation ring이다. 그럼 $A$의 total ring of fractions $K$의 원소 $x$가 $A$ 위에서 integral이라면, $x$의 $K_\mathfrak{p}$에서의 image는 $A_\mathfrak{p}$ 위에서 integral이고 discrete valuation ring이 normal domain이므로 이는 $A_\mathfrak{p}$에 속한다. 따라서 [명제 7](#prop7)에 의하여 $x\in A$이고, 곧 $A$는 $K$ 안에서 integrally closed이다. 
+
+한편 $A$가 reduced이므로 $K$는 field들의 유한한 direct product $K_1\times\cdots\times K_n$이고 ([§동반소아이디얼, ⁋따름정리 8](/ko/math/commutative_algebra/associated_primes#cor8)), 각각의 성분에 대응하는 idempotent $e_i\in K$는 monic polynomial $\x^2-\x$의 근이므로 $A$ 위에서 integral이며, 따라서 $e_i\in A$이다. 그럼 $A$의 임의의 maximal ideal $\mathfrak{m}$에 대하여 $A_\mathfrak{m}$은 local ring이므로 그 idempotent는 $0$과 $1$뿐이고, $\sum_i e_i=1$이므로 $e_i$들의 image 중 정확히 하나만이 $1$이고 나머지는 $0$이며, 이로부터 $A_\mathfrak{m}$은 field $K_i$의 subring $Ae_i$의 localization으로서 domain이다. 이제 [§조르단-횔더 정리, ⁋정리 5](/ko/math/commutative_algebra/Jordan-Holder_theorem#thm5)에 의하여 $A$는 domain들의 유한한 direct product이고, $K$는 각 factor의 total ring of fractions들의 product이므로 $A$가 $K$ 안에서 integrally closed이라는 것은 각각의 factor가 자신의 total ring of fractions 안에서 integrally closed이라는 뜻이다. 즉 $A$는 normal domain들의 유한한 direct product이다. 
 :::
 
 ---

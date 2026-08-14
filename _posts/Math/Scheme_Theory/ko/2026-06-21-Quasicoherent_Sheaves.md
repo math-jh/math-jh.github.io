@@ -10,6 +10,8 @@ sidebar:
 
 date: 2026-06-21
 weight: 16
+published: false
+revising: true
 drift_needed: true
 
 ---
@@ -182,7 +184,7 @@ $$\theta_f:M_f \rightarrow \mathcal{F}(D(f))$$
 
 $$0 \rightarrow \mathcal{F}(\Spec A) \rightarrow \prod_i \mathcal{F}(D(h_i)) \rightarrow \prod_{i,j}\mathcal{F}(D(h_ih_j))$$
 
-을 준다. 각 $D(h_i)$·$D(h_ih_j)$ 위에서 $\mathcal{F}$가 associated sheaf이라 그 section은 $A$-module이고 곱이 유한하므로, 완전한 localization $(-)\otimes_A A_g$은 이 열의 완전성을 보존할 뿐 아니라 곱을 통과한다. 그 결과 위 열을 $g$에서 localize한 것은 covering $\{D(h_ig)\}$에 대한 $D(g)$ 위의 sheaf 조건과 정확히 일치하는 exact sequence가 되어 $M_g\cong \mathcal{F}(D(g))=N$을 얻는다. 여기서 $\Spec A$의 quasi-compactness가 유한 covering을 보장하는 데 본질적으로 쓰였다. 따라서 $\theta$는 각 $D(g)$ 위에서 isomorphic하고, 이로부터 모든 stalk에서 isomorphic하므로 $\theta:\widetilde M \rightarrow \mathcal{F}$는 sheaf의 isomorphism이다.
+을 준다. 각 $D(h_i)$·$D(h_ih_j)$ 위에서 $\mathcal{F}$가 associated sheaf이라 그 section은 $A$-module이고 곱이 유한하므로, 완전한 localization $(-)\otimes_A A_g$은 이 열의 완전성을 보존할 뿐 아니라 곱을 통과한다. 그 결과 위 열을 $g$에서 localize한 것은 covering $\{D(h_ig)\}$에 대한 $D(g)$ 위의 sheaf 조건과 정확히 일치하는 exact sequence가 되어 $M_g\cong \mathcal{F}(D(g))=N$을 얻는다. 여기서 $\Spec A$의 quasi-compactness가 finite covering을 보장하는 데 본질적으로 쓰였다. 따라서 $\theta$는 각 $D(g)$ 위에서 isomorphic하고, 이로부터 모든 stalk에서 isomorphic하므로 $\theta:\widetilde M \rightarrow \mathcal{F}$는 sheaf의 isomorphism이다.
 :::
 
 [정리 9](#thm9)는 affine scheme 위에서 quasi-coherent sheaf를 다루는 것이 곧 module을 다루는 것과 같음을 말해준다. 즉 $\Spec A$ 위의 모든 quasi-coherent sheaf는 그 global section module $M=\Gamma(\Spec A, \mathcal{F})$으로 완전히 복원되며, 이 대응은 [명제 6](#prop6)의 exactness와 위에서 언급한 tensor product와의 호환성을 통해 module의 대수와 sheaf의 대수를 일치시킨다.
@@ -210,7 +212,7 @@ $\mathcal{F}$의 quasi-coherence에 의하여 $U$의 각 점 $x$마다 ($X$에�
 Quasi-coherent sheaf 가운데 특히 affine 위에서 finitely generated module 또는 finitely presented module에 대응하는 것들을 따로 구별한다. 이는 Noetherian 가정 아래에서 가장 잘 작동한다.
 
 ::: 정의 11
-Scheme $X$ 위의 quasi-coherent sheaf $\mathcal{F}$가 *finite type<sub>유한형</sub>*이라는 것은, 각 점이 affine open neighborhood $U\cong \Spec A$를 가져 $\mathcal{F}\vert_U\cong \widetilde M$이고 $M$이 finitely generated $A$-module인 것이다. 만일 추가로 모든 affine open 위에서 $M$이 finitely presented module이 되도록 할 수 있다면, $\mathcal{F}$를 *coherent sheaf<sub>연접층</sub>*라 부른다.
+Scheme $X$ 위의 quasi-coherent sheaf $\mathcal{F}$가 *finite type<sub>유한형</sub>*이라는 것은, 각 점이 affine open neighborhood $U\cong \Spec A$를 가져 $\mathcal{F}\vert_U\cong \widetilde M$이고 $M$이 finitely generated $A$-module인 것이다. 만일 추가로 각 점이 이러한 affine open neighborhood를 가지되 $M$을 finitely presented $A$-module로 잡을 수 있다면, $\mathcal{F}$를 *coherent sheaf<sub>연접층</sub>*라 부른다.
 :::
 
 Locally Noetherian scheme 위에서는 finitely generated와 finitely presented가 일치하므로, 이 경우 coherent sheaf는 곧 finite type quasi-coherent sheaf이다. $X$ 위의 coherent sheaves는 $\QCoh(X)$의 full subcategory $\Coh(X)$를 이룬다. 가장 단순한 예시는 $\mathcal{O}_X$ 자기 자신으로, 이는 affine 위에서 $\widetilde A$이고 $A$는 자기 자신 위의 free module이므로 coherent sheaf이다.

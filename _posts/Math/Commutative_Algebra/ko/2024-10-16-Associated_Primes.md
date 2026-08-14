@@ -10,6 +10,8 @@ sidebar:
 
 date: 2024-10-16
 weight: 6
+published: false
+revising: true
 drift_needed: true
 
 ---
@@ -27,16 +29,16 @@ Ring $A$와 $A$-module $M$에 대하여, $A$의 prime ideal $\mathfrak{p}$가 $M
 이번 글에서 우리는 associated prime ideal에 대한 다양한 성질들을 살펴본다. 그 과정에서 중요한 역할을 하는 것은 다음의 보조정리이다.
 
 ::: 보조정리 2 (Prime avoidance lemma)
-$A$의 ideal들 $\mathfrak{a}_1,\ldots, \mathfrak{a}_n, \mathfrak{b}$가 주어졌다 하고, $\mathfrak{b}\subseteq \mathfrak{a}_1\cup\cdots\cup \mathfrak{a}_n$이라 하자. 만일 $A$가 무한한 field를 포함하거나, 많아야 두 개의 $\mathfrak{a}_i$만이 prime ideal이 아니라면 $\mathfrak{b}$는 $\mathfrak{a}_1,\ldots, \mathfrak{a}_n$ 중 하나에 속한다. 
+$A$의 ideal들 $\mathfrak{a}_1,\ldots, \mathfrak{a}_n, \mathfrak{b}$가 주어졌다 하고, $\mathfrak{b}\subseteq \mathfrak{a}_1\cup\cdots\cup \mathfrak{a}_n$이라 하자. 만일 $A$가 infinite field를 포함하거나, 많아야 두 개의 $\mathfrak{a}_i$만이 prime ideal이 아니라면 $\mathfrak{b}$는 $\mathfrak{a}_1,\ldots, \mathfrak{a}_n$ 중 하나에 속한다. 
 
-추가로, 만일 $A$가 graded이고 $\mathfrak{b}$가 양의 degree를 갖는 homogeneous element들로 생성되는 homogeneous ideal이며 모든 $\mathfrak{a}_i$가 prime ideal이라면, $\mathfrak{b}$의 homogeneous element들이 $\mathfrak{a}_1\cup\cdots\cup \mathfrak{a}_n$에 속하는 것으로 가정해도 결론이 성립한다.
+추가로, 만일 $A$가 graded이고 $\mathfrak{b}$가 positive degree를 갖는 homogeneous element들로 생성되는 homogeneous ideal이며 모든 $\mathfrak{a}_i$가 prime ideal이라면, $\mathfrak{b}$의 homogeneous element들이 $\mathfrak{a}_1\cup\cdots\cup \mathfrak{a}_n$에 속하는 것으로 가정해도 결론이 성립한다.
 :::
 ::: 증명
-만일 $A$가 무한한 field $\mathbb{K}$를 포함한다면, ideal들 각각을 $\mathbb{K}$-벡터공간으로 본다면 
+만일 $A$가 infinite field $\mathbb{K}$를 포함한다면, ideal들 각각을 $\mathbb{K}$-벡터공간으로 본다면 
 
 $$\mathfrak{b}=\bigcup_{i=1}^n (\mathfrak{b}\cap \mathfrak{a}_i)$$
 
-이고 임의의 $\mathbb{K}$-벡터공간은 자기 자신의 proper subspace들의 유한한 union으로 표현할 수 없으므로 자명하다. 
+이고 임의의 $\mathbb{K}$-벡터공간은 자기 자신의 proper subspace들의 finite union으로 표현할 수 없으므로 자명하다. 
 
 나머지 경우는 $n$에 대한 귀납법으로 증명한다. $n=1$일 경우는 증명할 것이 없다. 
 
@@ -155,7 +157,7 @@ $$\Ass M \subseteq \Ass M_{n-1}\cup \{ \mathfrak{p}_n\}\subseteq \Ass M_{n-2}\cu
 이를 통해 $M$에 대한 많은 정보를 얻어올 수 있다. 가령 $M=A$이고 $A$가 reduced인 경우 다음 따름정리를 얻는다.
 
 ::: 따름정리 8
-Reduced Noetherian ring $A$에 대하여, $A$의 total ring of fractions를 $K$라 하자. 그럼 $K$는 field들의 유한한 product이다. 
+Reduced Noetherian ring $A$에 대하여, $A$의 total ring of fractions를 $K$라 하자. 그럼 $K$는 field들의 finite product이다. 
 :::
 ::: 증명
 우선 $M=A$로 두면 $\ann(A)=\{0\}$이다. 따라서, $A$의 minimal prime ideal $\mathfrak{p}_1,\ldots, \mathfrak{p}_k$들은 모두 $\Ass M$에 속하며, 이들의 합집합은 $A$의 zero-divisor로 이루어져 있다. 
@@ -166,7 +168,15 @@ $$(0)=\mathfrak{N}(A)=\bigcap_\text{\scriptsize$\mathfrak{p}$ a prime}\mathfrak{
 
 임을 관찰하자. 그럼 임의의 zerodivisor $a\neq 0$과, $ab=0$이도록 하는 $b\neq 0$에 대하여, $b\not\in \mathfrak{p}_i$이도록 하는 $\mathfrak{p}_i$가 존재해야만 하고, 이 때 $ab=0\in \mathfrak{p}_i$이므로 $a\in \mathfrak{p}_i$여야만 한다.
 
-따라서, $A$의 total ring of fractions $K$는 $S=A\setminus(\mathfrak{p}_1\cup\cdots\cup \mathfrak{p}_k)$에 대하여 $K=S^{-1}A$이고, 이 ring의 prime ideal은 정확히 $\mathfrak{p}_i$들의 image이며 $K$는 $S^{-1}A/\mathfrak{p}_iS^{-1}A$들의 product임을 보일 수 있다.
+따라서, $A$의 total ring of fractions $K$는 $S=A\setminus(\mathfrak{p}_1\cup\cdots\cup \mathfrak{p}_k)$에 대하여 $K=S^{-1}A$이다.
+
+이제 [§국소화, ⁋명제 8](/ko/math/commutative_algebra/localization#prop8)에 의하여 $S^{-1}A$의 prime ideal들은 $S$와 만나지 않는 $A$의 prime ideal들, 곧 $\mathfrak{p}\subseteq \mathfrak{p}_1\cup\cdots\cup \mathfrak{p}_k$를 만족하는 prime ideal $\mathfrak{p}$들에 대응한다. 이러한 $\mathfrak{p}$에 [보조정리 2](#lem2)를 적용하면, $\mathfrak{p}_i$들이 모두 prime ideal이므로 전제조건이 만족되어 적당한 $i$에 대하여 $\mathfrak{p}\subseteq \mathfrak{p}_i$이고, $\mathfrak{p}_i$가 minimal prime ideal인 것으로부터 $\mathfrak{p}=\mathfrak{p}_i$를 얻는다. 즉 $S^{-1}A$의 prime ideal은 정확히 $\mathfrak{p}_1S^{-1}A,\ldots,\mathfrak{p}_kS^{-1}A$이며, 위의 대응이 포함관계를 보존하고 서로 다른 minimal prime ideal 사이에는 포함관계가 없으므로 이들 각각은 $S^{-1}A$의 maximal ideal이고 따라서 pairwise comaximal이다.
+
+한편 $A$가 reduced이므로 $S^{-1}A$ 또한 reduced이다. 만일 $(a/s)^n=0$이라면 적당한 $t\in S$에 대하여 $ta^n=0$이고, 그럼 $(ta)^n=t^{n-1}(ta^n)=0$이므로 $A$가 reduced인 것으로부터 $ta=0$, 즉 $a/s=0$이기 때문이다. 그럼 $S^{-1}A$의 nilradical이 $0$인 것과 위에서 얻은 prime ideal들의 목록으로부터 $\bigcap_{i=1}^k\mathfrak{p}_iS^{-1}A=0$이므로, [\[환론\] §중국인의 나머지정리, ⁋명제 6](/ko/math/ring_theory/chinese_remainder_theorem#prop6)에 의하여
+
+$$K=S^{-1}A\cong \prod_{i=1}^k S^{-1}A/\mathfrak{p}_iS^{-1}A$$
+
+를 얻으며, 각각의 $\mathfrak{p}_iS^{-1}A$가 maximal ideal이므로 우변의 인자들은 모두 field이다.
 :::
 
 ---

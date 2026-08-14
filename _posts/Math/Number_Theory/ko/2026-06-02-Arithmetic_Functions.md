@@ -14,9 +14,9 @@ weight: 10
 published: false
 ---
 
-[§오일러 정리와 phi 함수](/ko/math/number_theory/euler_theorem)에서 $\varphi$가 서로소인 인수에 대해 곱으로 분해됨을 보았다. 이런 성질을 가진 함수들은 정수론에서 거듭 나타나며, 그들 사이의 관계는 합성곱이라는 연산으로 깔끔하게 기술된다.
+[§오일러 정리와 phi function](/ko/math/number_theory/euler_theorem)에서 $\varphi$가 서로소인 인수에 대해 곱으로 분해됨을 보았다. 이런 성질을 가진 함수들은 정수론에서 거듭 나타나며, 그들 사이의 관계는 합성곱이라는 연산으로 깔끔하게 기술된다.
 
-## Multiplicative 함수
+## Multiplicative function
 
 ::: 정의 1
 양의 정수에서 정의된 함수를 *산술적 함수<sub>arithmetic function</sub>*라 한다. 산술적 함수 $f$가 항등적으로 $0$은 아니면서 $\gcd(m, n) = 1$일 때마다 $f(mn) = f(m)f(n)$을 만족하면 *multiplicative<sub>곱셈적</sub>*라 한다.
@@ -79,10 +79,10 @@ $$g(n) = \sum_{d \mid n} f(d) \quad\Longleftrightarrow\quad f(n) = \sum_{d \mid 
 :::
 
 ::: 예시 7
-약수에 걸친 $\varphi$의 합은 $\sum_{d \mid n}\varphi(d) = n$이다. ([§오일러 정리와 phi 함수, ⁋명제 9](/ko/math/number_theory/euler_theorem#prop9)) 실제로 $1$부터 $n$까지의 각 정수 $m$을 $\gcd(m, n) = n/d$에 따라 분류하면, $\gcd(m,n) = n/d$인 $m$의 개수가 $\varphi(d)$이므로 전체 합이 $n$이 된다. 이 관계 $\mathbf{1}\ast\varphi = \id$에 뫼비우스 반전을 적용하면 $\varphi = \mu \ast \id$, 즉 $\varphi(n) = \sum_{d\mid n}\mu(d)(n/d)$이라는 $\varphi$의 또 다른 공식을 얻는다.
+약수에 걸친 $\varphi$의 합은 $\sum_{d \mid n}\varphi(d) = n$이다. ([§오일러 정리와 phi function, ⁋명제 9](/ko/math/number_theory/euler_theorem#prop9)) 실제로 $1$부터 $n$까지의 각 정수 $m$을 $\gcd(m, n) = n/d$에 따라 분류하면, $\gcd(m,n) = n/d$인 $m$의 개수가 $\varphi(d)$이므로 전체 합이 $n$이 된다. 이 관계 $\mathbf{1}\ast\varphi = \id$에 뫼비우스 반전을 적용하면 $\varphi = \mu \ast \id$, 즉 $\varphi(n) = \sum_{d\mid n}\mu(d)(n/d)$이라는 $\varphi$의 또 다른 공식을 얻는다.
 :::
 
-마지막 식을 곱셈성과 결합하면 $\varphi$의 곱공식이 다시 나온다. $\varphi = \mu \ast \id$가 multiplicative 함수 두 개의 합성곱이므로 (아래 [명제 9](#prop9)) multiplicative이고, 소수 거듭제곱에서
+마지막 식을 곱셈성과 결합하면 $\varphi$의 곱공식이 다시 나온다. $\varphi = \mu \ast \id$가 multiplicative function 두 개의 합성곱이므로 (아래 [명제 9](#prop9)) multiplicative이고, 소수 거듭제곱에서
 
 $$\varphi(p^e) = \sum_{j=0}^{e}\mu(p^j)\,p^{e-j} = \mu(1)\,p^e + \mu(p)\,p^{e-1} = p^e - p^{e-1} = p^{e-1}(p-1)$$
 
@@ -90,7 +90,7 @@ $$\varphi(p^e) = \sum_{j=0}^{e}\mu(p^j)\,p^{e-j} = \mu(1)\,p^e + \mu(p)\,p^{e-1}
 
 $$\varphi(n) = \prod_i p_i^{e_i - 1}(p_i - 1) = n\prod_{p \mid n}\Bigl(1 - \frac1p\Bigr)$$
 
-이라는 익숙한 형태를 얻는다. 합성곱과 반전이라는 대수적 도구만으로 [§오일러 정리와 phi 함수](/ko/math/number_theory/euler_theorem)에서 직접 센 결과가 재생산되는 것이다.
+이라는 익숙한 형태를 얻는다. 합성곱과 반전이라는 대수적 도구만으로 [§오일러 정리와 phi function](/ko/math/number_theory/euler_theorem)에서 직접 센 결과가 재생산되는 것이다.
 
 ## 합성곱의 대수적 구조
 

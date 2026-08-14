@@ -106,7 +106,7 @@ $z_0 \in \Omega$을 임의로 잡으면 $\Omega$가 열려 있어 $\overline{D(z
 
 ## Cauchy 부등식과 Liouville 정리
 
-미분공식은 도함수 $f^{(n)}(z_0)$을 경계원 위의 적분으로 표현하므로, ML 부등식으로 그 크기를 boundary 위 $f$의 최댓값으로 직접 어림할 수 있다. 이렇게 얻는 Cauchy 부등식은 도함수의 성장을 함숫값의 크기로 통제하며, 이로부터 평면 전체에서 유계인 holomorphic function이 상수일 수밖에 없다는 Liouville 정리가 따라 나온다.
+미분공식은 도함수 $f^{(n)}(z_0)$을 경계원 위의 적분으로 표현하므로, ML 부등식으로 그 크기를 boundary 위 $f$의 최댓값으로 직접 어림할 수 있다. 이렇게 얻는 Cauchy 부등식은 도함수의 성장을 함숫값의 크기로 통제하며, 이로부터 평면 전체에서 bounded holomorphic function이 상수일 수밖에 없다는 Liouville 정리가 따라 나온다.
 
 ::: 정리 4 (Cauchy 부등식)
 $f$가 closed 원판 $\overline{D(z_0, r)}$를 품는 영역에서 holomorphic이고, 경계원 $\lvert w - z_0\rvert = r$ 위에서 $\lvert f(w)\rvert \leq M$이라 하자. 그러면 모든 정수 $n \geq 0$에 대하여
@@ -143,7 +143,7 @@ $f$가 entire function이므로 ([§복소정칙함수, ⁋정의 2](/ko/math/co
 
 $$\bigl\lvert f'(z_0)\bigr\rvert \leq \frac{1!M}{r} = \frac{M}{r}$$
 
-이다. $f$가 평면 전체에서 holomorphic이므로 $r$을 임의로 크게 잡을 수 있고, $r \rightarrow \infty$이면 우변이 $0$으로 가므로 $f'(z_0) = 0$이다. $z_0$이 임의였으므로 $f' \equiv 0$이다. 도함수가 항상 $0$인 holomorphic function은 연결된 영역에서 상수이므로 (실수부와 허수부의 모든 편미분이 $0$이라 Cauchy–Riemann 관계 아래 $u, v$가 상수이다), $f$는 $\mathbb{C}$에서 상수함수이다.
+이다. $f$가 평면 전체에서 holomorphic이므로 $r$을 임의로 크게 잡을 수 있고, $r \rightarrow \infty$이면 우변이 $0$으로 가므로 $f'(z_0) = 0$이다. $z_0$이 임의였으므로 $f' \equiv 0$이다. 도함수가 항상 $0$인 holomorphic function은 연결된 영역에서 상수이므로 (실수부와 허수부의 모든 편미분이 $0$이라 Cauchy–Riemann relation 아래 $u, v$가 상수이다), $f$는 $\mathbb{C}$에서 상수함수이다.
 :::
 
 Liouville 정리는 holomorphicity와 boundedness가 양립하기에는 너무 강한 조건임을 말한다. Entire function이 상수가 아니라면 그 절댓값은 어딘가에서 반드시 무한히 커져야 한다. 가령 $\sin z$나 $e^z$ 같은 비상수 entire function은 ([§복소정칙함수, ⁋정의 10](/ko/math/complex_analysis/holomorphic_functions#def10)) 실축 위에서는 유계로 보이더라도 허수방향으로 가면 절댓값이 폭발한다. 이 단순한 정리가 대수학에서 가장 기본적인 사실 하나를 증명하는 열쇠가 된다.

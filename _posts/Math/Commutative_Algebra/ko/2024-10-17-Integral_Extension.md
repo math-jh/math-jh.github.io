@@ -10,6 +10,8 @@ sidebar:
 
 date: 2024-10-17
 weight: 8
+published: false
+revising: true
 drift_needed: true
 
 ---
@@ -26,7 +28,15 @@ $$p(\x)=\x^n+p_1\x^{n-1}+\cdots+p_n,\qquad p_k\in \mathfrak{a}^k$$
 이 존재하여 $p(u)=0$을 만족한다.
 :::
 ::: 증명
-[\[다중선형대수학\] §행렬식, ⁋명제 9](/ko/math/multilinear_algebra/determinants#prop9)에서 $M$은 free module일 필요가 없다.
+가정 $u(M)\subseteq \mathfrak{a}M$과 $\mathfrak{a}M=\sum_j \mathfrak{a}e_j$로부터, 각각의 $i$에 대하여 $u(e_i)=\sum_j a_{ij}e_j$이도록 하는 $a_{ij}\in \mathfrak{a}$를 고를 수 있다. 이제 $A^n$의 standard basis를 $\epsilon_1,\ldots,\epsilon_n$이라 하고, $\epsilon_i\mapsto e_i$로 주어지는 surjection $\pi: A^n \rightarrow M$과 $\tilde u(\epsilon_i)=\sum_j a_{ij}\epsilon_j$로 주어지는 $\tilde u\in \End_\rMod{A}(A^n)$을 생각하면 $\pi\circ \tilde u=u\circ \pi$가 성립한다.
+
+한편 $A^n$은 free module이므로 [\[다중선형대수학\] §행렬식, ⁋명제 9](/ko/math/multilinear_algebra/determinants#prop9)를 $\tilde u$에 적용할 수 있고, 따라서 $\tilde u$의 characteristic polynomial $p=\chi_{\tilde u}$는 $p(\tilde u)=0$을 만족하는 $n$차 monic polynomial이다. 그럼 위의 교환관계로부터 $p(u)\circ \pi=\pi\circ p(\tilde u)=0$이고, $\pi$가 surjective이므로 $p(u)=0$을 얻는다.
+
+남은 것은 $p$의 계수들에 대한 조건인데, 이는 characteristic polynomial의 계수들이 다음의 식
+
+$$p(\x)=\sum_{k=0}^n (-1)^k\tr\left({\bigwedge}^k(\tilde u)\right)\x^{n-k}$$
+
+으로 주어지는 것에서 나온다. $\tilde u$의 행렬표현의 성분들이 모두 $a_{ij}$들이므로, ${\bigwedge}^k(\tilde u)$의 행렬표현의 대각성분들은 이 행렬의 $k\times k$ minor들이고, 이들은 각각 $\mathfrak{a}$의 원소 $k$개의 곱들의 합이다. 즉 $p_k=(-1)^k\tr({\bigwedge}^k(\tilde u))\in \mathfrak{a}^k$이다.
 :::
 
 그럼 다음이 성립한다.
@@ -106,7 +116,7 @@ $$(xy)MM'=(xM)(yM')\subseteq MM',\qquad (x+y)MM'\subseteq xMM'+M(yM')\subseteq M
 
 ## 나카야마 보조정리
 
-이제 우리는 아주 유용한 보조정리를 증명한다. 우선 ring $A$의 *nilradical<sub>영근기</sub>* $\mathfrak{N}(A)=\sqrt{(0)}$은 다음 식
+이제 우리는 아주 유용한 보조정리를 증명한다. 우선 [\[대수적 구조\] §분수체, ⁋정의 13](/ko/math/algebraic_structures/field_of_fractions#def13)의 *nilradical* $\mathfrak{N}(A)=\sqrt{(0)}$은 다음 식
 
 $$\mathfrak{N}(A)=\bigcap_\text{\scriptsize$\mathfrak{p}$ prime} \mathfrak{p}$$
 
@@ -207,7 +217,7 @@ $$\bigcap_{l\neq k} \mathfrak{m}_l\not\subseteq \mathfrak{m}_k$$
 
 더 일반적으로 우리는 임의의 local ring $(B, \mathfrak{n})$과 finitely generated $B$-module 사이의 map들 $s,t:K \rightarrow L$에 대하여, 만일 $s$가 isomorphism이고 $t(K)\subseteq \mathfrak{n}L$이라면 $s+t$도 isomorphism인 것을 보인다. 그럼 이 결과를 local ring $(A_{\mathfrak{m}_k}, \mathfrak{m}_kA_{\mathfrak{m}_k})$, 그리고 $M_{\mathfrak{m}_k}$에서 $N_{\mathfrak{m}_k}$로의 함수들 $s=a_k v_k$와 $t=\sum_{l\neq k} a_lv_l$에 적용하면 증명이 완료될 것이다. 
 
-이 주장을 증명하자. 우선 $t$는 $K$에서 $L/\mathfrak{n}L$로의 zero map으로 볼 수 있고, $s$는 $K$에서 $L/\mathfrak{n}L$로의 epimorphism으로 볼 수 있으므로 $s+t$ 또한 $K$에서 $L/\mathfrak{n}L$로의 epimorphism으로 볼 수 있다. 그럼 [보조정리 8](#lem8)에 의해 $K$에서 $L$로의 morphism $s+t$도 epimorphism이다. 이제 isomorphism $s$의 inverse $s^{-1}$을 취하여 surjective endomorphism $s^{-1}(s+t): K \rightarrow K$를 생각하자. 그럼 [정리 1](#thm1)에 의하여 $s^{-1}(s+t)$는 isomorphism이기도 하고, 따라서 $s+t$는 monomorphism이므로 원하는 결과를 얻는다. 
+이 주장을 증명하자. 우선 $t$는 $K$에서 $L/\mathfrak{n}L$로의 zero map으로 볼 수 있고, $s$는 $K$에서 $L/\mathfrak{n}L$로의 epimorphism으로 볼 수 있으므로 $s+t$ 또한 $K$에서 $L/\mathfrak{n}L$로의 epimorphism으로 볼 수 있다. 그럼 [보조정리 8](#lem8)에 의해 $K$에서 $L$로의 morphism $s+t$도 epimorphism이다. 이제 isomorphism $s$의 inverse $s^{-1}$을 취하여 surjective endomorphism $w=s^{-1}(s+t): K \rightarrow K$를 생각하자. 그럼 $K$를 $\x$가 $w$로 작용하는 $B[\x]$-module로 볼 수 있고, $K$가 $B$-module로서 유한하게 생성되므로 $B[\x]$-module로서도 그러하다. 한편 $w$가 surjective이므로 ideal $\mathfrak{a}=(\x)\subseteq B[\x]$에 대하여 $\mathfrak{a}K=w(K)=K$이고, 따라서 [보조정리 7](#lem7)에 의하여 적당한 $q\in B[\x]$가 존재하여 $(1-\x q(\x))K=0$, 즉 $q(w)\circ w=\id_K$이다. 이로부터 $w$는 monomorphism이기도 하여 isomorphism이고, 따라서 $s+t$는 monomorphism이므로 원하는 결과를 얻는다. 
 :::
 
 이제 [정의 3](#def3)에서의 ring homomorphism들에 대한 성질들을 조금 더 살펴보자. 우선 다음의 명제부터 시작한다.
@@ -250,7 +260,9 @@ Ring homomorphism $\phi: A \rightarrow E$와 $x\in E$에 대하여, $x$가 $\phi
 
 $$x^d+\phi_\mathfrak{p}(a_{d-1})x^{d-1}+\cdots+\phi_\mathfrak{p}(a_0)=0$$
 
-이도록 하는 $a_i\in A_\mathfrak{p}$들이 존재한다. 이제 $\phi_\mathfrak{p}(a_k)$들의 분모를 통분하면, 우리는 적절한 $f\in A\setminus \mathfrak{p}$에 대하여 각각의 $a_k$들이 모두 $A_f$에 속하는 것으로 볼 수 있고, 그럼 위의 방정식은 $E_f$에서 성립하는 식이 되고, 이로부터 $A_f \rightarrow E_f'$가 finite homomorphism인 것을 안다. 
+이도록 하는 $a_i\in A_\mathfrak{p}$들이 존재한다. 이제 $\phi_\mathfrak{p}(a_k)$들의 분모를 통분하면, 우리는 적절한 $f\in A\setminus \mathfrak{p}$에 대하여 각각의 $a_k$들이 모두 $A_f$에 속하는 것으로 볼 수 있다. 그런데 위의 방정식은 $E_\mathfrak{p}$에서 성립하는 식이므로, 그 좌변을 $E_f$의 원소로 보면 이것이 $E_f$에서 $0$이라고 말할 수는 없고 $E_\mathfrak{p}$로 보냈을 때 $0$이 된다는 것만을 안다. $E_\mathfrak{p}$가 $E_f$의 $A\setminus \mathfrak{p}$의 image에 대한 localization이므로, 적당한 $h\in A\setminus \mathfrak{p}$가 존재하여 이 좌변에 $h$를 곱한 것이 $E_f$에서 $0$이 되고, 따라서 $f$를 $fh$로 바꾸면 위의 방정식은 $E_f$에서 성립하는 식이 된다. 그럼 $x$의 $E_f$에서의 image가 $A_f$에 대해 integral이고 $E_f'$가 $A_f$-algebra로서 이 원소로 생성되므로, [보조정리 4](#lem4)에 의하여 $A_f \rightarrow E_f'$가 finite homomorphism인 것을 안다. 
+
+이렇게 각각의 prime ideal $\mathfrak{p}$마다 원소 $f_\mathfrak{p}\in A\setminus \mathfrak{p}$를 하나씩 얻는데, 이들이 생성하는 $A$의 ideal은 어떠한 prime ideal에도 포함되지 않으므로 $A$ 자기 자신이다. 따라서 유한히 많은 prime ideal들 $\mathfrak{p}_1,\ldots, \mathfrak{p}_m$을 골라 $(f_{\mathfrak{p}_1},\ldots, f_{\mathfrak{p}_m})=A$이도록 할 수 있고, 각각의 $A_{f_{\mathfrak{p}_i}} \rightarrow E_{f_{\mathfrak{p}_i}}'$가 finite이므로 integral이다. 그럼 [명제 15](#prop15)에 의하여 $A \rightarrow E'$가 integral이고, 특히 $x$가 $\phi$에 대해 integral이다. 
 :::
 
 ---

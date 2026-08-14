@@ -134,11 +134,11 @@ $$\langle H^2, H^2, H^2, H^2, H^2 \rangle_{0, 5, 2}^{\mathbb{P}^2} = 1$$
 
 [명제 6](#prop6)의 WDVV equation에 의해 $\mathbb{P}^2$의 *모든* genus-0 rational curve count가 $d = 1$ case ($= 1$)과 4-point invariant들의 splitting으로부터 재귀적으로 결정된다는 것이 Kontsevich (1994)의 유명한 결과이다.
 
-## 더 멀리: virtual class와 비-symplectic 확장
+## 더 멀리: virtual class와 비-symplectic extension
 
 $X$가 Calabi-Yau ($c_1(TX) = 0$)일 때 expected dimension은 $g, n$에만 의존하며, 일반적으로 $\dim X = 3$이면 genus $0$ point-free invariant가 *유한 개의 rational curve*를 세는 enumerative 의미를 갖는다.
 
-Higher genus 및 K-theoretic 확장 (Givental, Lee, Okounkov), open/relative GW invariant (Solomon, Joyce-Song), Donaldson-Thomas invariant와의 동치 (MNOP conjecture) 등은 본 글의 범위를 넘어선다.
+Higher genus 및 K-theoretic extension (Givental, Lee, Okounkov), open/relative GW invariant (Solomon, Joyce-Song), Donaldson-Thomas invariant와의 동치 (MNOP conjecture) 등은 본 글의 범위를 넘어선다.
 
 ---
 

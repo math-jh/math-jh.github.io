@@ -1,7 +1,7 @@
 ---
 title: "부풀림 대수"
-description: "환의 아이들로부터 associated graded ring과 associated graded module을 구성하고, 여과와 안정적 여과의 개념을 통해 유한 생성 모듈의 구조를 분석한다."
-excerpt: "Ideal로부터 만드는 Rees algebra와 associated graded ring"
+description: "환의 ideal들로부터 associated graded ring과 associated graded module을 구성하고, 여과와 안정적 여과의 개념을 통해 유한 생성 모듈의 구조를 분석한다."
+excerpt: "Ideal로부터 만드는 blowup algebra와 associated graded ring"
 
 categories: [Math / Commutative Algebra]
 permalink: /ko/math/commutative_algebra/blowup_algebra
@@ -10,6 +10,8 @@ sidebar:
 
 date: 2024-10-20
 weight: 11
+published: false
+revising: true
 drift_needed: true
 
 ---
@@ -169,7 +171,7 @@ $$f(\x,\y)\x^2+g(\x,\y)\y^2$$
 의 꼴이므로, $\initial(\mathfrak{b})$는 $\x^2, \y^2$으로 생성되는 $\gr_\mathfrak{a}A$의 homogeneous ideal이다. 
 :::
 
-그러나 일반적으로 $\initial(M')$은 $M'$의 generator들의 initial form들로 생성되지는 않는다. 
+그러나 일반적으로 $\initial(M')$은 $M'$의 generator들의 initial form들로 생성되지는 않는다. 가령 위와 같은 $A$와 $\mathfrak{a}$에 대하여 $\mathfrak{c}=(\x^2-\y^3, \x\y)$를 생각하면 두 generator의 initial form은 각각 $\x^2$과 $\x\y$이다. 그럼 $\x(\x\y)-\y(\x^2-\y^3)=\y^4$이므로 $\y^4\in \mathfrak{c}$이고 따라서 $\initial(\y^4)=\y^4$은 $\initial(\mathfrak{c})$에 속하는데, $(\x^2,\x\y)$의 원소는 모두 $\x$로 나누어지므로 $\y^4$은 여기에 속하지 않는다. 
 
 ::: 따름정리 11
 Noetherian local ring $A$와, $A$의 proper ideal $\mathfrak{a}$에 대하여, 만일 $\gr_\mathfrak{a}A$가 domain이라면 $A$ 또한 그러하다.

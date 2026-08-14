@@ -10,11 +10,13 @@ sidebar:
 
 date: 2024-10-22
 weight: 1
+published: false
+revising: true
 drift_needed: true
 
 ---
 
-이 category의 모든 글에서 등장하는 ring은 commutative ring이다. 또, 임의의 $A$-algebra는 항상 commutative associative unital $A$-algebra인 것으로 생각한다. 특히 우리는 [\[대수적 구조\] §대수, ⁋정의 1](/ko/math/algebraic_structures/algebras#def1) 이후에 associative unital $A$-algebra $E$와, ring homomorphism $A\rightarrow Z(E)$가 같은 것임을 살펴보았으므로, 앞으로의 논의에서 $A$-algebra는 ring homomorphism $A\rightarrow E$로 생각해도 충분하다. 
+이 category의 모든 글에서 등장하는 ring은 commutative ring이다. 또, 임의의 $A$-algebra는 항상 commutative associative unital $A$-algebra인 것으로 생각한다. 특히 우리는 [\[대수적 구조\] §대수, ⁋정의 1](/ko/math/algebraic_structures/algebras#def1) 이후에 ring homomorphism $A\rightarrow Z(E)$가 주어질 때마다 restriction of scalar를 통해 $E$가 associative unital $A$-algebra가 되는 것을 살펴보았고, 거꾸로 임의의 associative unital $A$-algebra $E$에 대하여 $\alpha\mapsto \alpha\cdot 1_E$가 ring homomorphism $A\rightarrow Z(E)$를 주므로, 앞으로의 논의에서 $A$-algebra는 ring homomorphism $A\rightarrow E$로 생각해도 충분하다. 
 
 ## 기본 정의들
 
@@ -94,11 +96,15 @@ $$M_0\subseteq M_1\subseteq M_2\subseteq\cdots$$
 
 이 주어졌다 하고 $M'=\bigcup M_k$라 하면 $M'$은 finitely generated이므로 $M'=\langle x_1,\ldots, x_n\rangle$이라 하자. 그럼 이제 각각의 $i$에 대하여, $k_i$를 $x_i\in M_{k_i}$가 성립하도록 잡을 수 있고 이제 이러한 $k_i$들 중 가장 큰 것을 $k$라 하면 $M_k$는 반드시 $M'$과 같게 된다.
 
-이제 1번 조건과 3번 조건이 동치임을 보인다. 우선 1번 조건이 만족된다면 이는 $M$의 임의의 submodule들의 모임이 주어질 때마다 ACC에 의하여 [\[집합론\] §선택공리, ⁋정리 4](/ko/math/set_theory/axiom_of_choice#thm4)의 전제조건이 만족되므로 3번이 성립하는 것이 자명하다. 거꾸로 3번 조건을 만족할 경우, $M$의 submodule들의 ascending chain
+이제 1번 조건과 3번 조건이 동치임을 보인다. 우선 1번 조건을 가정하고, $M$의 submodule들의 공집합이 아닌 모임 $\Sigma$가 maximal element를 갖지 않는다 하자. 그럼 임의의 $N\in \Sigma$에 대하여 $N\subsetneq N'$인 $N'\in\Sigma$가 존재하므로, $\Sigma$의 원소 $N_0$을 하나 택한 후 이를 계속 반복하여 $\Sigma$의 원소들로 이루어진 increasing sequence
+
+$$N_0\subsetneq N_1\subsetneq N_2\subsetneq\cdots$$
+
+를 얻는다. 이는 $M$이 Noetherian이라는 가정에 모순이므로 $\Sigma$는 maximal element를 갖는다. 거꾸로 3번 조건을 만족할 경우, $M$의 submodule들의 ascending chain
 
 $$M_0\subseteq M_1\subseteq M_2\subseteq\cdots$$
 
-이 주어졌을 때 이들 모임의 maximal element가 존재해야 하므로 1번 조건이 성립한다. 
+이 주어졌을 때 $\{M_k\}$는 공집합이 아닌 submodule들의 모임이므로 maximal element $M_k$를 가지며, 임의의 $l\geq k$에 대하여 $M_k\subseteq M_l$이므로 maximality에 의하여 $M_k=M_l$이다. 따라서 1번 조건이 성립한다. 
 :::
 
 따라서 Noetherian module의 임의의 submodule 또한 Noetherian임이 자명하다. 뿐만 아니라 다음이 성립한다.

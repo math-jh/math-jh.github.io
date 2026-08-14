@@ -77,7 +77,7 @@ $$\su(n)\oplus i\,\su(n)=\{X\in\Mat_n(\mathbb{C})\mid\tr X=0\}=\sl(n;\mathbb{C})
 이다. 따라서 $\su(n)$은 $\sl(n;\mathbb{C})$의 real form이다. $\su(n)$ 위의 Killing form은 $\kappa(X,Y)=2n\tr(XY)$로 계산되며, $X\in\su(n)$이 $0$이 아니면 $\tr(X^2)=-\tr(X^\ast X)=-\sum_{i,j}\lvert X_{ij}\rvert^2<0$이므로 $\kappa$가 음의 정부호이다. 곧 $\su(n)$은 $\sl(n;\mathbb{C})$의 compact real form이고, 대응하는 group $\SU(n)$은 compact이다.
 :::
 
-같은 방식으로 다른 고전적 compact group의 Lie algebra가 그 복소화의 compact real form이 된다. 실 skew-symmetric 행렬들의 대수 $\so(n)=\{X\in\Mat_n(\mathbb{R})\mid X^{\mathsf T}=-X\}$은 복소화하면 복소 skew-symmetric 행렬들의 대수 $\so(n;\mathbb{C})$가 되어 $\so(n)$이 그 real form이고, $\kappa(X,Y)=(n-2)\tr(XY)$ ($n\geq 3$)이 음의 정부호이므로 $\so(n)$은 compact real form이다. 사원수 위의 unitary group의 Lie algebra인 compact symplectic 대수 $\sp(n)=\{X\in\Mat_n(\mathbb{H})\mid X^\ast=-X\}$ 역시 $\sp(2n;\mathbb{C})$의 compact real form이며, 대응하는 group $\mathrm{Sp}(n)$이 compact이다. 이들은 모두 어떤 양의 정부호 Hermitian (또는 그 실·사원수 판본) 형식을 보존하는 group의 Lie algebra이고, 그 보존 조건이 곧 $X^\ast=-X$로 나타나 Killing form의 음의 정부호성을 보장한다.
+같은 방식으로 다른 고전적 compact group의 Lie algebra가 그 복소화의 compact real form이 된다. 실 skew-symmetric 행렬들의 대수 $\so(n)=\{X\in\Mat_n(\mathbb{R})\mid X^{\mathsf T}=-X\}$은 복소화하면 복소 skew-symmetric 행렬들의 대수 $\so(n;\mathbb{C})$가 되어 $\so(n)$이 그 real form이고, $\kappa(X,Y)=(n-2)\tr(XY)$ ($n\geq 3$)이 음의 정부호이므로 $\so(n)$은 compact real form이다. 사원수 위의 unitary group의 Lie algebra인 compact symplectic algebra $\sp(n)=\{X\in\Mat_n(\mathbb{H})\mid X^\ast=-X\}$ 역시 $\sp(2n;\mathbb{C})$의 compact real form이며, 대응하는 group $\mathrm{Sp}(n)$이 compact이다. 이들은 모두 어떤 양의 정부호 Hermitian (또는 그 실·사원수 판본) 형식을 보존하는 group의 Lie algebra이고, 그 보존 조건이 곧 $X^\ast=-X$로 나타나 Killing form의 음의 정부호성을 보장한다.
 
 ## 존재성
 
@@ -107,7 +107,7 @@ $$\mathfrak{u}=\span_{\mathbb{R}}\bigl(\{i h_\alpha\mid\alpha\in\Phi^+\}\cup\{e_
 ::: 증명
 먼저 $\mathfrak{u}$가 $\mathfrak{g}$의 real form임을 보인다. $\Phi^+$를 positive root들의 모임이라 하면 ([§근계, ⁋정의 15](/ko/math/lie_theory/root_systems#def15)) $\{h_\alpha\mid\alpha\in\Phi^+\}$는 $\mathfrak{h}$를 $\mathbb{C}$-생성하고 (simple root들에 대응하는 것만 남기면 basis가 된다), $\{e_\alpha\}_{\alpha\in\Phi}$가 root space들의 basis이므로, 위 세 묶음의 원소들은 $\mathfrak{g}$를 $\mathbb{C}$-생성한다. 실제로 $ih_\alpha$, $e_\alpha-e_{-\alpha}$, $i(e_\alpha+e_{-\alpha})$ 및 그 $i$배인 $h_\alpha$, $i(e_\alpha-e_{-\alpha})$, $-(e_\alpha+e_{-\alpha})$를 합치면 $\{h_\alpha,e_\alpha,e_{-\alpha}\}$ 전체를 $\mathbb{C}$-생성하므로, $\mathfrak{u}+i\mathfrak{u}=\mathfrak{g}$이다.
 
-$\mathfrak{u}$가 bracket에 대해 닫혀 있음을 확인한다. 이는 conjugation $\tau$를 통해 깔끔하게 처리된다. $\mathfrak{g}$ 위의 conjugate-linear 사상 $\tau$를 basis 위에서
+$\mathfrak{u}$가 bracket에 대해 닫혀 있음을 확인한다. 이는 conjugation $\tau$를 통해 깔끔하게 처리된다. $\mathfrak{g}$ 위의 conjugate-linear morphism $\tau$를 basis 위에서
 
 $$\tau(h_\alpha)=-h_\alpha,\qquad \tau(e_\alpha)=-e_{-\alpha}$$
 

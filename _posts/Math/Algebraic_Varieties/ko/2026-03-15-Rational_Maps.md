@@ -15,7 +15,7 @@ drift_needed: true
 
 ---
 
-[§준사영다양체, ⁋정의 7](/ko/math/algebraic_varieties/quasi_projective_varieties#def7)에서 우리는 quasi-projective variety 사이의 함수인 regular map을 정의하였다. 무엇보다 이는 정의역의 모든 점에서 정의되는 함수로, 설령 [§아핀다양체, ⁋정의 14](/ko/math/algebraic_varieties/affine_varieties#def14)와 같은 형태로 $D(f)$ 위에서 유리식 형태로 써 주더라도 그 분모에 들어갈 수 있는 것은 $f$의 거듭제곱꼴 뿐이기 때문에 모든 점에서 정의된다. 
+[§준사영다양체, ⁋정의 7](/ko/math/algebraic_varieties/quasi_projective_varieties#def7)에서 우리는 quasi-projective variety 사이의 함수인 regular map을 정의하였다. 무엇보다 이는 정의역의 모든 점에서 정의되는 함수로, 설령 [§아핀다양체, ⁋정의 14](/ko/math/algebraic_varieties/affine_varieties#def14)와 같은 형태로 $D(f)$ 위에서 유리식 형태로 써 주더라도 그 분모에 들어갈 수 있는 것은 $f$의 거듭제곱꼴 뿐이기 때문에 모든 점에서 정의된다. 분모에 대한 이 제약은 [§아핀다양체, ⁋명제 7](/ko/math/algebraic_varieties/affine_varieties#prop7)의 증명에서 온다. 그 증명은 affine variety $X$의 principal open set $D(f)\cap X$를 $1-f\y=0$을 덧붙여 $\mathbb{A}^{n+1}$의 affine variety로 나타내며, 이로부터 $D(f)\cap X$의 coordinate ring이 $\mathbb{K}[X][\y]/(1-f\y)$, 즉 $f$의 거듭제곱들에서의 localization $\mathbb{K}[X]_f$가 되기 때문이다. ([\[가환대수학\] §국소화, ⁋정의 4](/ko/math/commutative_algebra/localization#def4)) 
 
 그러나, 여전히 많은 종류의 함수들이 regular map이 아닌 형태로 주어진다. 예를 들어, $(x, y) \mapsto [x : y]$는 원점에서 정의되지 않으므로 regular map이 아니지만 충분히 자연스러운 함수처럼 보인다. 이 글에서 우리는 <em-ko>대부분의 점에서</em-ko> 정의되는 함수인 *rational map*을 살펴본다. 
 
@@ -35,7 +35,7 @@ $X$ 위의 모든 rational function들의 equivalence class들의 집합을 $\ma
 Affine variety $X$에 대하여, $\mathbb{K}(X)=\Frac\mathbb{K}[X]$이 성립한다.
 :::
 
-이 명제의 핵심적인 부분은 임의의 열린집합 $U$와 그 위에서 정의된 임의의 regular function $f:U\rightarrow \mathbb{K}$를 실제로 분수꼴로 나타내는 것인데, 어차피 $U$는 $D(g_i)$들의 합집합으로 나타낼 수 있고 ([§아핀다양체, ⁋명제 6](/ko/math/algebraic_varieties/affine_varieties#prop6)) 이 위의 regular function은 $g_i$의 거듭제곱을 분모로 갖는 유리식의 꼴이므로 증명이 어렵지 않다.
+이 명제의 핵심적인 부분은 임의의 열린집합 $U$와 그 위에서 정의된 임의의 regular function $f:U\rightarrow \mathbb{K}$를 실제로 분수꼴로 나타내는 것인데, 어차피 $U$는 $D(g_i)$들의 합집합으로 나타낼 수 있고 ([§아핀다양체, ⁋명제 6](/ko/math/algebraic_varieties/affine_varieties#prop6)), 앞서 살펴본 것처럼 $D(g_i)\cap X$의 coordinate ring이 $\mathbb{K}[X]_{g_i}$이므로 이 위의 regular function은 $g_i$의 거듭제곱을 분모로 갖는 유리식의 꼴이 되어 증명이 어렵지 않다.
 
 중요한 것은, 이 명제가 rational function을 계산하는 실질적인 방법을 제공한다는 것이다. 예를 들어, $X = V(\y - \x^2)$의 coordinate ring은 $\mathbb{K}[\x, \y]/(\y - \x^2) \cong \mathbb{K}[\x]$이고, 따라서 $\mathbb{K}(X) = \Frac(\mathbb{K}[\x]) = \mathbb{K}(\x)$이다.
 
@@ -61,7 +61,7 @@ $\mathbb{P}^n$의 function field $\mathbb{K}(\mathbb{P}^n)$을 생각하면, [�
 두 variety $X, Y$ 사이의 *rational map<sub>유리사상</sub>*은 $X$의 공집합이 아닌 열린집합 $U$와 그 위에서 정의된 regular map $\varphi: U \rightarrow Y$의 pair $(U,\varphi)$를 말한다. 
 :::
 
-앞서와 마찬가지로 두 rational map $\varphi: U \rightarrow Y$와 $\psi: V \rightarrow Y$는 $U \cap V$에서 일치할 때 같은 것으로 본다. Rational map은 보통 $\varphi: X \dashrightarrow Y$로 표기하며, 점선은 <em-ko>모든 점에서 정의되지 않을 수 있음</em-ko>을 나타낸다. 정의되지 않는 점들을 *base points*라 부른다. 
+앞서와 마찬가지로 두 rational map $\varphi: U \rightarrow Y$와 $\psi: V \rightarrow Y$는 $U \cap V$에서 일치할 때 같은 것으로 본다. Rational map은 보통 $\varphi: X \dashrightarrow Y$로 표기하며, 점선은 <em-ko>모든 점에서 정의되지 않을 수 있음</em-ko>을 나타낸다. 정의되지 않는 점들의 집합을 *indeterminacy locus*라 부른다. 
 
 한편 rational map $\varphi:U\rightarrow Y$에 대하여, 우리는 $(U,\varphi)$와 equivalent한 rational map들을 생각할 수 있다. 그럼 이들 rational map들의 domain을 모두 합집합하면 우리는 $\varphi$가 정의될 수 있는 <em-ko>가장 큰</em-ko> 열린집합을 얻는다. 
 
@@ -86,11 +86,13 @@ $$[x_0:x_1:x_2]\mapsto [x_0:x_1]$$
 Regular map의 isomorphism이 두 variety가 완전히 같은 구조를 갖는다는 것을 의미한다면, birational equivalence는 두 variety가 대체로 같은 구조를 갖는다는 것을 의미한다. 많은 기하학적 성질들은, isomorphic한 variety에서 보존되는 것 뿐만 아니라 birationally equivalent한 variety들 사이에서도 보존된다.
 
 ::: 정의 8
-Rational map $\varphi: X \dashrightarrow Y$가 *dominant*라는 것은 $\varphi$의 image가 $Y$에서 dense한 것이다. 즉, $\overline{\varphi(X)} = Y$이 성립한다.
+Rational map $\varphi: X \dashrightarrow Y$가 *dominant*라는 것은 $\varphi$의 image가 $Y$에서 dense한 것이다. 즉, $\overline{\varphi(\dom(\varphi))} = Y$이 성립한다.
 :::
 
+Dominant라는 조건이 필요한 이유는 rational map의 합성이 일반적으로 정의되지 않기 때문이다. 두 rational map $\varphi: X\dashrightarrow Y$와 $\psi: Y \dashrightarrow Z$에 대하여, $\varphi$의 image가 $\dom(\psi)$와 만나지 않으면 $\psi\circ \varphi$를 정의할 방법이 아예 없다. 그러나 $\varphi$가 dominant라면 $\varphi(\dom(\varphi))$가 $Y$에서 dense하므로 공집합이 아닌 열린집합 $\dom(\psi)$와 반드시 만나고, 따라서 $W=\varphi^{-1}(\dom(\psi))$는 $\dom(\varphi)$의 공집합이 아닌 열린집합이 되어 그 위에서 $\psi\circ\varphi$가 regular map으로 정의된다. 이렇게 얻어진 $\psi\circ\varphi$가 다시 dominant인 것도 확인할 수 있다. $X$가 irreducible이므로 $W$는 $\dom(\varphi)$에서 dense하고, $\varphi^{-1}(\overline{\varphi(W)})$는 $W$를 포함하는 $\dom(\varphi)$의 닫힌집합이므로 $\varphi(\dom(\varphi))\subseteq \overline{\varphi(W)}$, 곧 $\overline{\varphi(W)}=Y$이다. 그럼 $\varphi(W)$는 $\dom(\psi)$에서도 dense하므로, 같은 논증을 $\psi$와 $\varphi(W)$에 한 번 더 적용하면 $\overline{\psi(\varphi(W))}=Z$를 얻는다. 이후 우리는 dominant rational map들에 한하여 합성을 생각한다.
+
 ::: 정의 9
-Rational map $\varphi: X \dashrightarrow Y$가 *birational map<sub>쌍유리 사상</sub>*이라는 것은 또다른 rational map $\psi: Y \dashrightarrow X$가 존재하여 $\psi \circ \varphi = \id_X$와 $\varphi \circ \psi = \id_Y$가 (정의되는 곳에서) 성립하는 것이다. 두 variety $X, Y$가 *birationally equivalent<sub>쌍유리 동치</sub>*라는 것은 둘 사이에 birational map이 존재하는 것이다.
+Dominant rational map $\varphi: X \dashrightarrow Y$가 *birational map<sub>쌍유리 사상</sub>*이라는 것은 또다른 dominant rational map $\psi: Y \dashrightarrow X$가 존재하여 $\psi \circ \varphi = \id_X$와 $\varphi \circ \psi = \id_Y$가 (정의되는 곳에서) 성립하는 것이다. 두 variety $X, Y$가 *birationally equivalent<sub>쌍유리 동치</sub>*라는 것은 둘 사이에 birational map이 존재하는 것이다.
 :::
 
 Birationally equivalent한 두 variety들은 "대부분의 점에서" isomorphic하다. 구체적으로, 다음 명제에서 보듯 두 variety의 isomorphic한 열린집합들이 존재한다. 이는 birational equivalence가 isomorphism보다 약하지만 여전히 강력한 관계임을 보여준다.
@@ -99,13 +101,19 @@ Birationally equivalent한 두 variety들은 "대부분의 점에서" isomorphic
 두 variety $X, Y$에 대하여 다음이 동치이다.
 
 1. $X$와 $Y$는 birationally equivalent하다.
-2. $\mathbb{K}(X) \cong \mathbb{K}(Y)$이 성립한다.
+2. $\mathbb{K}$-algebra로서 $\mathbb{K}(X) \cong \mathbb{K}(Y)$이 성립한다.
 3. $X$와 $Y$의 isomorphic한 비어있지 않은 열린부분집합들이 존재한다.
 :::
 ::: 증명
-우선 $X, Y$가 birationally equivalent하다고 하자. 그럼 birational map $\varphi: X\dashrightarrow Y$의 정의역 $\dom(\varphi)$를 생각하면 $\varphi$가 유도하는 function field의 homomorphism $\varphi^\ast: \mathbb{K}(Y)\rightarrow \mathbb{K}(\dom(\varphi))$가 존재한다. 비슷한 방식으로 $\varphi$의 birational inverse $\psi: Y\dashrightarrow X$는 $\psi^\ast: \mathbb{K}(X)\rightarrow \mathbb{K}(\dom(\psi))$를 정의한다. 이제 [명제 3](#prop3)에 의해 $\mathbb{K}(\dom(\varphi))=\mathbb{K}(X)$, $\mathbb{K}(\dom(\psi))=\mathbb{K}(Y)$이므로 이를 사용하면 $\mathbb{K}(X)\cong \mathbb{K}(Y)$임을 안다.
+우선 $X, Y$가 birationally equivalent하다고 하자. Birational map $\varphi: X\dashrightarrow Y$는 dominant이므로, $\mathbb{K}(Y)$의 원소가 $Y$의 공집합이 아닌 열린집합 $W$ 위의 regular function $s$로 주어졌다면 $\varphi^{-1}(W)$는 $\dom(\varphi)$의 공집합이 아닌 열린집합이고 $s\circ \varphi$는 그 위의 regular function이 된다. 즉 $\varphi$는 $\mathbb{K}$-algebra homomorphism $\varphi^\ast: \mathbb{K}(Y)\rightarrow \mathbb{K}(\dom(\varphi))$를 유도한다. 비슷한 방식으로 $\varphi$의 birational inverse $\psi: Y\dashrightarrow X$는 $\psi^\ast: \mathbb{K}(X)\rightarrow \mathbb{K}(\dom(\psi))$를 정의한다. 이제 [명제 3](#prop3)에 의해 $\mathbb{K}(\dom(\varphi))=\mathbb{K}(X)$, $\mathbb{K}(\dom(\psi))=\mathbb{K}(Y)$이므로 이들을 $\mathbb{K}(X)$와 $\mathbb{K}(Y)$ 사이의 homomorphism으로 볼 수 있으며, $\psi\circ\varphi=\id_X$와 $\varphi\circ\psi=\id_Y$로부터
 
-이제 field isomorphism $\Phi: \mathbb{K}(X) \rightarrow \mathbb{K}(Y)$가 주어졌다 하자. $X$의 임의의 affine open subset $U \subseteq X$에 대하여, coordinate ring $\mathbb{K}[U]$는 $\mathbb{K}(X)$의 finitely generated $\mathbb{K}$-subalgebra이다. 이제 이들의 generator들의 $\Phi$에 대한 image들이 모두 regular이도록 하는 $Y$의 affine open subset $V\subseteq Y$를 잡고, 이를 통해 $\Phi\vert_{\mathbb{K}[U]}:\mathbb{K}[U]\rightarrow \mathbb{K}[V]$를 정의할 수 있다. 한편, 비슷한 방식으로 $\Phi^{-1}$을 이용해 $\Phi^{-1}\vert_{\mathbb{K}[V]}:\mathbb{K}[V]\rightarrow \mathbb{K}[U']$를 잡을 수 있고, 이 때 $U'\subseteq U$가 성립한다. 이제 $\Phi$가 isomorphism이라는 가정으로부터 $\mathbb{K}[U]=\mathbb{K}[U']$이고 $\mathbb{K}[U]\cong \mathbb{K}[V]$여야 한다.
+$$\varphi^\ast\circ \psi^\ast=(\psi\circ\varphi)^\ast=\id,\qquad \psi^\ast\circ \varphi^\ast=(\varphi\circ\psi)^\ast=\id$$
+
+이므로 $\varphi^\ast$와 $\psi^\ast$는 서로 역인 $\mathbb{K}$-algebra isomorphism이다.
+
+이제 $\mathbb{K}$-algebra isomorphism $\Phi: \mathbb{K}(X) \rightarrow \mathbb{K}(Y)$가 주어졌다 하자. $X$의 affine open subset $U$와 $Y$의 affine open subset $V$를 각각 하나씩 잡으면 [명제 3](#prop3)에 의해 $\mathbb{K}(U)=\mathbb{K}(X)$, $\mathbb{K}(V)=\mathbb{K}(Y)$이고, coordinate ring $\mathbb{K}[U]$는 $\mathbb{K}(X)$의 finitely generated $\mathbb{K}$-subalgebra이다. 그럼 $\mathbb{K}[U]$의 generator $u_1,\ldots, u_n$의 image $\Phi(u_i)$들은 각각 $V$의 공집합이 아닌 열린집합 위에서 regular하므로, 이들이 모두 regular인 principal open subset $V_g=D(g)\cap V$를 잡을 수 있다. ([§아핀다양체, ⁋명제 6](/ko/math/algebraic_varieties/affine_varieties#prop6)) 앞서 살펴본 것처럼 $\mathbb{K}[V_g]=\mathbb{K}[V]_g$이므로 이는 $\Phi(\mathbb{K}[U])\subseteq \mathbb{K}[V]_g$를 뜻한다. 같은 방식으로 $\mathbb{K}[V]_g$의 generator들에 $\Phi^{-1}$을 적용하면, $\Phi^{-1}(\mathbb{K}[V]_g)\subseteq \mathbb{K}[U]_f$를 만족하는 $0$이 아닌 $f\in \mathbb{K}[U]$를 얻는다.
+
+두 포함관계에서 등호를 얻기 위해서는 $U$와 $V_g$를 한 번 더 줄여야 한다. $h=\Phi(f)\in \mathbb{K}[V]_g$로 두자. 그럼 $\Phi(\mathbb{K}[U])\subseteq \mathbb{K}[V]_g$와 $\Phi(1/f)=1/h$로부터 $\Phi(\mathbb{K}[U]_f)\subseteq (\mathbb{K}[V]_g)_h$이고, 마찬가지로 $\Phi^{-1}(\mathbb{K}[V]_g)\subseteq \mathbb{K}[U]_f$와 $\Phi^{-1}(1/h)=1/f$로부터 $\Phi^{-1}((\mathbb{K}[V]_g)_h)\subseteq \mathbb{K}[U]_f$이다. 두 포함관계를 합치면 $\Phi$는 $\mathbb{K}[U]_f$와 $(\mathbb{K}[V]_g)_h$ 사이의 $\mathbb{K}$-algebra isomorphism으로 제한된다. 그런데 $D(f)\cap U$와 $D(h)\cap V_g$는 각각 $X$와 $Y$의 공집합이 아닌 affine open subset이고 ([§아핀다양체, ⁋명제 7](/ko/math/algebraic_varieties/affine_varieties#prop7)) 그 coordinate ring이 각각 $\mathbb{K}[U]_f$와 $(\mathbb{K}[V]_g)_h$이므로, 이 둘은 서로 isomorphic하다. ([§아핀다양체, ⁋명제 18](/ko/math/algebraic_varieties/affine_varieties#prop18))
 
 마지막 조건이 첫째 조건을 함의하는 것은 [명제 3](#prop3)에 의해 자명하다. 
 :::
@@ -124,7 +132,7 @@ $\mathbb{P}^1 \times \mathbb{P}^1$과, $\mathbb{P}^3$에서의 quadric surface $
 
 ## Blow-up
 
-Rational map은 base point들에서 정의되지 않는다는 한계가 있다. 이 한계를 해결하는 대표적인 도구가 *blow-up*이다. 이에 대한 motivation은 우리가 가장 처음 살펴본 함수 $(x,y)\mapsto [x:y]$이다. 이 함수는 $\mathbb{A}^2$의 점 $(x,y)$를 넣으면, 이 점과 원점 $(0,0)\in \mathbb{A}^2$를 잇는 직선의 기울기를 주는 함수로, 이것이 원점에서 정의되지 않는 이유는 직선을 정의하기 위해서는 서로 다른 두 점이 필요하기 때문이다. 이런 경우, 우리는 보통 원점 $(0,0)$을 고정해두고, 다른 점 $(x,y)$를 $(0,0)$을 향해 가도록 취해서 그 극한값을 계산하겠지만 이 경우 $(0,0)$으로 향하는 방향이 무한히 많으므로 극한이 잘 정의되지 않는다. 
+Rational map은 indeterminacy locus에서 정의되지 않는다는 한계가 있다. 이 한계를 해결하는 대표적인 도구가 *blow-up*이다. 이에 대한 motivation은 우리가 가장 처음 살펴본 함수 $(x,y)\mapsto [x:y]$이다. 이 함수는 $\mathbb{A}^2$의 점 $(x,y)$를 넣으면, 이 점과 원점 $(0,0)\in \mathbb{A}^2$를 잇는 직선의 기울기를 주는 함수로, 이것이 원점에서 정의되지 않는 이유는 직선을 정의하기 위해서는 서로 다른 두 점이 필요하기 때문이다. 이런 경우, 우리는 보통 원점 $(0,0)$을 고정해두고, 다른 점 $(x,y)$를 $(0,0)$을 향해 가도록 취해서 그 극한값을 계산하겠지만 이 경우 $(0,0)$으로 향하는 방향이 무한히 많으므로 극한이 잘 정의되지 않는다. 
 
 Blowup의 아이디어는 간단하다. $(0,0)$으로 향하는 방향을 모두 따로 기록하는 것이다. 
 
@@ -145,7 +153,7 @@ $$\Bl_{(0,0)} \mathbb{A}^2 = \{((x, y), [u : v]) \in \mathbb{A}^2 \times \mathbb
 
 이로부터 원점을 제외한 평면의 나머지 부분에서는 두 variety $\mathbb{A}^2$와 $\Bl_{(0,0)}\mathbb{A}^2$가 isomorphic하므로 $\pi$는 birational map이다. 
 
-이제 앞서 언급한 rational map $\varphi: \mathbb{A}^2 \dashrightarrow \mathbb{P}^1$, $(x, y) \mapsto [x : y]$를 생각하자. 이는 원점 $(0, 0)$에서 정의되지 않지만, 그러나 blow-up $\Bl_{(0,0)} \mathbb{A}^2$에서 보면 이는 그저 $\mathbb{P}^1$ factor로의 projection $\pr_2$에 불과하며 특히 이는 regular map이다. 이러한 방식으로 우리는 rational map이 정의되지 않는 base point를 해소해줄 수 있다. 
+이제 앞서 언급한 rational map $\varphi: \mathbb{A}^2 \dashrightarrow \mathbb{P}^1$, $(x, y) \mapsto [x : y]$를 생각하자. 이는 원점 $(0, 0)$에서 정의되지 않지만, 그러나 blow-up $\Bl_{(0,0)} \mathbb{A}^2$에서 보면 이는 그저 $\mathbb{P}^1$ factor로의 projection $\pr_2$에 불과하며 특히 이는 regular map이다. 이러한 방식으로 우리는 rational map의 indeterminacy locus를 해소해줄 수 있다. 
 :::
 
 ---

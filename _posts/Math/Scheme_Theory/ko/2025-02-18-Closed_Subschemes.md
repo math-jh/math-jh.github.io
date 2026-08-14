@@ -10,6 +10,8 @@ sidebar:
 
 date: 2025-02-18
 weight: 10
+published: false
+revising: true
 drift_needed: true
 ---
 
@@ -136,7 +138,7 @@ $$\varphi(X)\cap V=Z(\mathfrak{b})$$
 
 ## 닫힌 매장의 성질들
 
-[명제 3](#prop3)에 의하여 임의의 closed embedding은 항상 affine-local on target이고, closed embedding은 합성에 대해서도 닫혀있다는 것을 안다. 뿐만 아니라 다음이 성립한다.
+[명제 3](#prop3)에 의하여 임의의 closed embedding은 항상 affine-local on target이고, closed embedding은 합성에 대해서도 닫혀있다는 것을 안다. 이 때 [명제 3](#prop3)의 둘째 조건은 $Y$의 임의의 affine open subset에 대하여 요구되는 것이지만, 둘째 조건으로부터 첫째 조건을 이끌어낸 논증은 $Y$의 affine open covering $\{V_i\}$ 하나만을 사용하였다. 따라서 scheme morphism $\varphi: X \rightarrow Y$에 대하여 $Y$의 어떤 affine open covering $\{V_i=\Spec B_i\}$가 존재하여 각각의 preimage $\varphi^{-1}(V_i)\cong \Spec A_i$가 affine이고 이에 대응되는 $B_i \rightarrow A_i$가 surjective이면, $\varphi$는 closed embedding이고 다시 [명제 3](#prop3)에 의하여 $Y$의 임의의 affine open subset에 대해서도 둘째 조건이 성립한다. 뿐만 아니라 다음이 성립한다.
 
 ::: 명제 4
 임의의 closed embedding은 항상 finite morphism이다.

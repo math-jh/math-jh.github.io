@@ -177,13 +177,13 @@ $$\mu^{-1}(0)=\Bigl\{z\in\mathbb{C}^{n+1}:\sum_{j=0}^n\lvert z_j\rvert^2=1\Bigr\
 
 $$\mathbb{C}^{n+1} /\!\!/ S^1=S^{2n+1}/S^1=\mathbb{CP}^n$$
 
-으로, 대각 $S^1$로 나눈 구면은 정의에 의해 complex projective space이다. 차원은 $\dim\mathbb{C}^{n+1}-2\dim S^1=2(n+1)-2=2n$으로 $\mathbb{CP}^n$의 실차원과 일치한다. 정리가 주는 symplectic form $\omega_{\mathrm{red}}$은 정확히 $\mathbb{CP}^n$ 위의 *Fubini-Study form* $\omega_{\mathrm{FS}}$이며, 등식 $\pi^\ast\omega_{\mathrm{FS}}=\iota^\ast\omega$은 구면 위로 당겨 온 표준형식이 Hopf 사영 $\pi:S^{2n+1}\rightarrow\mathbb{CP}^n$을 통해 Fubini-Study form으로 내려옴을 말한다.
+으로, 대각 $S^1$로 나눈 구면은 정의에 의해 complex projective space이다. 차원은 $\dim\mathbb{C}^{n+1}-2\dim S^1=2(n+1)-2=2n$으로 $\mathbb{CP}^n$의 실차원과 일치한다. 정리가 주는 symplectic form $\omega_{\mathrm{red}}$은 정확히 $\mathbb{CP}^n$ 위의 *Fubini-Study form* $\omega_{\mathrm{FS}}$이며, 등식 $\pi^\ast\omega_{\mathrm{FS}}=\iota^\ast\omega$은 구면 위로 당겨 온 표준형식이 Hopf projection $\pi:S^{2n+1}\rightarrow\mathbb{CP}^n$을 통해 Fubini-Study form으로 내려옴을 말한다.
 :::
 
 이 예시는 [§운동량 사상, ⁋예시 8](/ko/math/symplectic_geometry/moment_map#ex8) 뒤에서 윤곽만 그렸던 절차를 사교 축약의 언어로 완성한다. 거기서는 $T^{n+1}$ 작용을 다루며 대각 $S^1$을 나눈 뒤 남은 $T^n=T^{n+1}/S^1$의 운동량 다면체가 단체가 됨을 보였는데, 그 "대각 $S^1$을 나누는" 단계가 바로 위의 $\mathbb{C}^{n+1} /\!\!/ S^1=\mathbb{CP}^n$이다. 더 일반적으로, 원작용을 $\pi$보다 작은 운동량 값 $\xi$에서 축약하면 구면의 반지름이 바뀌어 Fubini-Study form이 상수배만큼 재조정된 $\mathbb{CP}^n$을 얻으며, 이렇게 운동량 값을 변화시키며 얻는 축약공간들의 족이 사교 축약을 토릭 기하 및 기하학적 불변식론과 잇는 다리가 된다.
 
 ::: 참고 7
-사교 축약은 [§운동량 사상, ⁋명제 3](/ko/math/symplectic_geometry/moment_map#prop3)와 같은 뿌리에서 나온 쌍둥이 절차이다. Noether 정리가 대칭성으로부터 보존량 $\mu$을 얻어 그 값을 고정하는 것이라면, 사교 축약은 그렇게 고정한 등위면 $\mu^{-1}(\xi)$ 위에서 대칭의 작용으로 나누어 자유도를 실제로 제거하는 것이다. $G$-불변 Hamiltonian $H$은 $\mu^{-1}(\xi)$ 위로 제한되고 다시 축약공간 $M /\!\!/_{\!\xi}\,G$ 위의 함수 $H_{\mathrm{red}}$으로 내려오며, $M$ 위의 $H$-흐름은 정확히 축약공간 위의 $H_{\mathrm{red}}$-흐름으로 사영된다. 이것이 고전역학에서 보존량을 이용해 phase space의 차원을 낮추는 절차의 좌표 없는 정식화이다.
+사교 축약은 [§운동량 사상, ⁋명제 3](/ko/math/symplectic_geometry/moment_map#prop3)와 같은 뿌리에서 나온 쌍둥이 절차이다. Noether 정리가 대칭성으로부터 보존량 $\mu$을 얻어 그 값을 고정하는 것이라면, 사교 축약은 그렇게 고정한 등위면 $\mu^{-1}(\xi)$ 위에서 대칭의 작용으로 나누어 자유도를 실제로 제거하는 것이다. $G$-invariant Hamiltonian $H$은 $\mu^{-1}(\xi)$ 위로 제한되고 다시 축약공간 $M /\!\!/_{\!\xi}\,G$ 위의 함수 $H_{\mathrm{red}}$으로 내려오며, $M$ 위의 $H$-흐름은 정확히 축약공간 위의 $H_{\mathrm{red}}$-흐름으로 사영된다. 이것이 고전역학에서 보존량을 이용해 phase space의 차원을 낮추는 절차의 좌표 없는 정식화이다.
 :::
 
 ---

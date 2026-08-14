@@ -21,7 +21,7 @@ drift_needed: true
 ::: 명제 1
 임의의 magma homomorphism $f:A\rightarrow A'$가 isomorphism인 것은 $f$가 전단사인 것과 동치이다. 
 
-만일 $A$가 항등원 $e$를 갖고, $f:A\rightarrow A'$가 전단사인 homomorphism이라면 $f(e)$는 $A'$의 항등원이며, 따라서 $f^{-1}$은 $A'$의 항등원을 $A$의 항등원으로 보내는 magma homomorphism이다.
+만일 $A$가 항등원 $e$를 갖고, $f:A\rightarrow A'$가 bijective homomorphism이라면 $f(e)$는 $A'$의 항등원이며, 따라서 $f^{-1}$은 $A'$의 항등원을 $A$의 항등원으로 보내는 magma homomorphism이다.
 :::
 
 ::: 증명

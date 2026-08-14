@@ -123,7 +123,7 @@ $$G'(z) = \sum_{n=0}^{\infty} \frac{a_n}{n+1}\cdot(n+1)(z - z_0)^n = \sum_{n=0}^
 
 ## 영점의 위수
 
-해석성은 holomorphic function이 영점 근방에서 어떻게 사라지는지를 정밀하게 기술하게 해 준다. $f(z_0) = 0$이면 Taylor 급수의 상수항이 사라지고, 더 높은 degree의 계수까지 차례로 사라지는 정도가 영점의 깊이를 잰다. 항등적으로 $0$이 아닌 holomorphic function에서는 이 사라짐이 유한한 degree에서 멈추며, 그 degree가 영점의 order이다.
+해석성은 holomorphic function이 영점 근방에서 어떻게 사라지는지를 정밀하게 기술하게 해 준다. $f(z_0) = 0$이면 Taylor 급수의 상수항이 사라지고, 더 높은 degree의 계수까지 차례로 사라지는 정도가 영점의 깊이를 잰다. 항등적으로 $0$이 아닌 holomorphic function에서는 이 사라짐이 finite degree에서 멈추며, 그 degree가 영점의 order이다.
 
 ::: 정의 5 (영점의 위수)
 $f$가 $z_0$에서 holomorphic이고 $f(z_0) = 0$이며 $z_0$의 어떤 근방에서 $f$가 항등적으로 $0$은 아니라 하자. $z_0$에서의 Taylor 계수 $a_n = f^{(n)}(z_0)/n!$ 가운데 $0$이 아닌 것이 처음 나타나는 지수, 곧

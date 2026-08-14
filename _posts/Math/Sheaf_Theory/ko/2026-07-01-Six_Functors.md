@@ -22,7 +22,7 @@ published: false
 
 이 글에서 우리는 compact support를 따르는 *고유 받음<sub>proper direct image</sub>* $Rf_!$와 그 오른쪽 수반인 *예외 역상<sub>exceptional inverse image</sub>* $f^!$를 도입한다. $Rf_\ast$, $Rf_!$, $Lf^\ast$, $f^!$, $\otimes^L$, $R\mathcal{H}om$의 여섯 functor와 그들 사이의 두 adjunction, proper base change, projection formula가 이루는 구조를 *six-functor formalism<sub>여섯 함자 형식</sub>*이라 부르며, 이것이 Verdier duality를 비롯한 sheaf 이론의 핵심 정리들이 작동하는 무대이다. 추상적 derived category와 앞의 네 functor는 [§층의 유도 범주와 유도 functor](/ko/math/sheaf_theory/derived_category_of_sheaves)에서 세웠으므로 여기서는 인용하고, 새로운 두 functor $Rf_!$와 $f^!$의 구성과 그들이 완성하는 형식에 집중한다.
 
-이 글 전체에서 위상공간은 locally compact Hausdorff이고 가산 무한대를 가지며 유한한 cohomological dimension을 갖는 것으로 한정하고, morphism은 모두 연속인 separated map으로 한정한다. 이 조건들은 $Rf_!$가 유한한 cohomological amplitude를 가지고 잘 정의되도록 하는 표준적인 가설이다. 계수로는 별도의 언급이 없으면 abelian group의 sheaf, 즉 $\mathcal{O}_X = \mathbb{Z}_X$인 경우를 다루며, 이 경우 [§층의 유도 범주와 유도 functor, ⁋명제 5](/ko/math/sheaf_theory/derived_category_of_sheaves#prop5)에 의해 $Lf^\ast = f^{-1}$이 derivation 없이 정의된다.
+이 글 전체에서 위상공간은 locally compact Hausdorff이고 가산 무한대를 가지며 유한한 cohomological dimension을 갖는 것으로 한정하고, morphism은 모두 continuous separated map으로 한정한다. 이 조건들은 $Rf_!$가 유한한 cohomological amplitude를 가지고 잘 정의되도록 하는 표준적인 가설이다. 계수로는 별도의 언급이 없으면 abelian group의 sheaf, 즉 $\mathcal{O}_X = \mathbb{Z}_X$인 경우를 다루며, 이 경우 [§층의 유도 범주와 유도 functor, ⁋명제 5](/ko/math/sheaf_theory/derived_category_of_sheaves#prop5)에 의해 $Lf^\ast = f^{-1}$이 derivation 없이 정의된다.
 
 ## 고유 받음의 정의
 
@@ -115,7 +115,7 @@ $$f^! \mathcal{G}^\bullet \cong f^{-1}\mathcal{G}^\bullet \otimes \operatorname{
 
 $Y = \{\ast\}$이고 $X$가 $d$차원 manifold인 특수한 경우, $\omega_X := a_X^! \mathbb{Z} \cong \operatorname{or}_X[d]$를 $X$의 *dualizing complex*라 부른다. $X$가 orientable하면 $\omega_X \cong \mathbb{Z}_X[d]$이며, 이 동형이 곧 manifold의 Poincaré duality를 sheaf 차원에서 진술하는 형태이다. 일반적인 (manifold가 아닐 수 있는) 공간에 대해서도 $\omega_X = a_X^! \mathbb{Z}$가 정의되어 dualizing complex의 역할을 하며, 이를 이용한 $R\mathcal{H}om(-, \omega_X)$ 형태의 duality가 Verdier duality이다.
 
-Complex manifold의 경우를 별도로 언급할 필요가 있다. $f$가 복소 상대 차원 $m$인 정칙 submersion이면 실 차원으로는 $d = 2m$이고, complex manifold는 표준적으로 방향지어지므로 $\operatorname{or}_{X/Y} \cong \mathbb{Z}_X$이며 $f^! \mathcal{G}^\bullet \cong f^{-1}\mathcal{G}^\bullet[2m]$이 된다. Degree 이동이 복소 차원의 두 배인 것은 이 글에서 다루는 cohomology가 실 위상 cohomology이기 때문이다.
+Complex manifold의 경우를 별도로 언급할 필요가 있다. $f$가 복소 상대 차원 $m$인 regular submersion이면 실 차원으로는 $d = 2m$이고, complex manifold는 표준적으로 방향지어지므로 $\operatorname{or}_{X/Y} \cong \mathbb{Z}_X$이며 $f^! \mathcal{G}^\bullet \cong f^{-1}\mathcal{G}^\bullet[2m]$이 된다. Degree 이동이 복소 차원의 두 배인 것은 이 글에서 다루는 cohomology가 실 위상 cohomology이기 때문이다.
 
 ## 여섯 함자 형식
 

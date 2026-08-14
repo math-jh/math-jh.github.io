@@ -1,6 +1,6 @@
 ---
 title: "스토크스 정리"
-description: "경계가 있는 oriented 다양체 위에서 미분형식의 외미분의 적분이 경계에서의 적분과 일치한다는 스토크스 정리를 증명한다."
+description: "경계가 있는 oriented manifold 위에서 미분형식의 외미분의 적분이 경계에서의 적분과 일치한다는 스토크스 정리를 증명한다."
 excerpt: "미적분학의 기본정리의 일반화인 Stokes 정리"
 
 categories: [Math / Manifolds]
@@ -92,7 +92,7 @@ $$\int_{\partial M}\iota^\ast\omega=(-1)^m\int_{\mathbb{R}^{m-1}}f_m(r',0)\dd{r}
 
 이 되어 두 값이 일치한다.
 
-마지막으로 $m=1$인 경우를 살펴보자. $\omega$는 compactly supported 함수 $f$이고, $\supp f$가 chart $(U,x)$에 들어간다고 하자. Chart의 부호를 $\epsilon=\pm1$이라 하면 적분의 정의에 의해
+마지막으로 $m=1$인 경우를 살펴보자. $\omega$는 compactly supported function $f$이고, $\supp f$가 chart $(U,x)$에 들어간다고 하자. Chart의 부호를 $\epsilon=\pm1$이라 하면 적분의 정의에 의해
 
 $$\int_M\dd{f}=\epsilon\int_{x(U)}\dd{\bigl((x^{-1})^\ast f\bigr)}$$
 
@@ -100,7 +100,7 @@ $$\int_M\dd{f}=\epsilon\int_{x(U)}\dd{\bigl((x^{-1})^\ast f\bigr)}$$
 
 $$\int_0^\infty g'(t)\dd{t}=-g(0)=-f(p)$$
 
-이다. 여기서 $p=x^{-1}(0)\in\partial M$이다. 즉 $\int_M\dd{f}=-\epsilon f(p)$이다. 한편 chart $x$에 대하여 inward 벡터는 $\partial/\partial x$이므로 outward 벡터 $-\partial/\partial x$가 positively oriented인 것은 $\epsilon=-1$인 것과 동치이고, 따라서 [§경계가 있는 다양체, ⁋정의 9](/ko/math/manifolds/manifolds_with_boundary#def9)에 의해 $p$의 부호는 $\epsilon(p)=-\epsilon$이다. 그럼
+이다. 여기서 $p=x^{-1}(0)\in\partial M$이다. 즉 $\int_M\dd{f}=-\epsilon f(p)$이다. 한편 chart $x$에 대하여 inward 벡터는 $\partial/\partial x$이므로 outward vector $-\partial/\partial x$가 positively oriented인 것은 $\epsilon=-1$인 것과 동치이고, 따라서 [§경계가 있는 다양체, ⁋정의 9](/ko/math/manifolds/manifolds_with_boundary#def9)에 의해 $p$의 부호는 $\epsilon(p)=-\epsilon$이다. 그럼
 
 $$\int_{\partial M}\iota^\ast\omega=\epsilon(p)f(p)=-\epsilon f(p)=\int_M\dd{f}$$
 
@@ -117,7 +117,7 @@ Boundary가 없는 oriented manifold $M$ 위의 compactly supported $(m-1)$-form
 :::
 
 ::: 예시 3
-$M=[0,1]$에 표준적인 orientation, 즉 $\interior M=(0,1)$에 $\mathbb{R}$의 표준 orientation을 주자. [§경계가 있는 다양체, ⁋예시 5](/ko/math/manifolds/manifolds_with_boundary#ex5)에서 살펴본 것과 같이 $\partial M=\{0,1\}$이고, 점 $1$에서는 outward 벡터 $\partial/\partial t$가 positively oriented이므로 $\epsilon(1)=+1$, 점 $0$에서는 outward 벡터가 $-\partial/\partial t$이므로 $\epsilon(0)=-1$이다. 따라서 임의의 $C^\infty$ 함수 $f$에 대하여 [정리 1](#thm1)은
+$M=[0,1]$에 표준적인 orientation, 즉 $\interior M=(0,1)$에 $\mathbb{R}$의 표준 orientation을 주자. [§경계가 있는 다양체, ⁋예시 5](/ko/math/manifolds/manifolds_with_boundary#ex5)에서 살펴본 것과 같이 $\partial M=\{0,1\}$이고, 점 $1$에서는 outward vector $\partial/\partial t$가 positively oriented이므로 $\epsilon(1)=+1$, 점 $0$에서는 outward 벡터가 $-\partial/\partial t$이므로 $\epsilon(0)=-1$이다. 따라서 임의의 $C^\infty$ 함수 $f$에 대하여 [정리 1](#thm1)은
 
 $$\int_{[0,1]}\dd{f}=f(1)-f(0)$$
 

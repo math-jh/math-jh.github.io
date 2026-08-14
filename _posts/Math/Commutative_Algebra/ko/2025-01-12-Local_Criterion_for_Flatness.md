@@ -1,6 +1,6 @@
 ---
 title: "평탄성과 국소화"
-description: "뇌터 국소환 위의 유한 생성 가군이 평탄한지 판단하는 기준을 다루며, 극대 ideal에서의 평탄성만 확인하면 충분함을 보여준다."
+description: "뇌터 국소환 위의 유한 생성 가군이 평탄한지 판단하는 기준을 다루며, maximal ideal에서의 평탄성만 확인하면 충분함을 보여준다."
 excerpt: "Maximal ideal에서의 점검을 통한 flatness의 local criterion"
 
 categories: [Math / Commutative Algebra]
@@ -10,13 +10,15 @@ sidebar:
 
 date: 2025-01-12
 weight: 13
+published: false
+revising: true
 drift_needed: true
 
 toc: false
 
 ---
 
-앞선 글에서 우리는 $A$-module $M$이 언제 flat인지를 판단하는 몇 가지 기준들을 살펴보았는데, 이번 글에서는 특별히 localization을 통해 이를 판단하는 기준을 살펴본다. 다음 정리는 [§평탄성, ⁋명제 1](/ko/math/commutative_algebra/flatness#prop1)을 maximal ideal에 대해서만 확인해도 충분하다는 것을 보여준다.
+앞선 글에서 우리는 $A$-module $M$이 언제 flat인지를 판단하는 몇 가지 기준들을 살펴보았는데, 이번 글에서는 특별히 Noetherian local ring $(A, \mathfrak{m})$ 위에서 이를 판단하는 기준을 살펴본다. 다음 정리는 $\mathfrak{m}E\subseteq \mathfrak{n}$를 만족하는 local Noetherian $A$-algebra $(E, \mathfrak{n})$ 위의 finitely generated module에 대하여 [§평탄성, ⁋명제 1](/ko/math/commutative_algebra/flatness#prop1)을 maximal ideal에 대해서만 확인해도 충분하다는 것을 보여준다.
 
 ::: 정리 1
 Noetherian local ring $(A, \mathfrak{m})$을 고정하고, $(E, \mathfrak{n})$가 $\mathfrak{m}E\subseteq \mathfrak{n}$를 만족하는 local Noetherian $A$-algebra라 가정하자. 그럼 finitely generated $E$-module $M$에 대하여, $M$이 flat $A$-module인 것과 $\Tor_1^A(A/\mathfrak{m}, M)=0$인 것이 동치이다. 
@@ -82,7 +84,7 @@ $$\cdots \Tor_1^A(A/(\mathfrak{a}+\mathfrak{m}^t), M) \rightarrow \frac{\mathfra
 
 그런데 $A/(\mathfrak{a}+\mathfrak{m}^t)$는 $\mathfrak{m}^t$로 annihilate되고, $\mathfrak{m}^t$는 finitely generated이므로, 이를 통해 $A/(\mathfrak{a}+\mathfrak{m}^t)$이 finite length를 갖는다는 것을 안다. 따라서, 더 일반적으로 유한한 길이를 갖는 임의의 $A$-module $N$이 주어질 때마다 $\Tor_1^A(N, M)=0$이 성립한다는 것을 보이면 원하는 바를 얻는다.
 
-귀납법으로 진행한다. 만일 $N$이 length $1$이라면 [§조르단-횔더 정리, ⁋정의 1](/ko/math/commutative_algebra/Jordan-Holder_theorem#def1) 이후의 논증으로부터 $N=A/\mathfrak{m}$이어야 하고, 따라서 $\Tor_1^A(N, M)=0$인 것은 정확히 정리의 가정과 일치한다.  유한한 length의 $A$-module $N$과, $N$의 $0$이 아닌 임의의 proper submodule $N'$을 택하자. 그럼 다음의 exact sequence
+귀납법으로 진행한다. 만일 $N$이 length $1$이라면 [§조르단-횔더 정리, ⁋정의 1](/ko/math/commutative_algebra/Jordan-Holder_theorem#def1) 이후의 논증으로부터 $N=A/\mathfrak{m}$이어야 하고, 따라서 $\Tor_1^A(N, M)=0$인 것은 정확히 정리의 가정과 일치한다.  finite length의 $A$-module $N$과, $N$의 $0$이 아닌 임의의 proper submodule $N'$을 택하자. 그럼 다음의 exact sequence
 
 $$0 \rightarrow N' \rightarrow N \rightarrow N/N' \rightarrow 0$$
 
@@ -157,10 +159,10 @@ $$A[\mathfrak{a}t, t^{-1}]=\bigoplus_{n=-\infty}^\infty \mathfrak{a}^nt^n\subset
 로 정의한다. 이때 $n\leq 0$에 대해서는 $\mathfrak{a}^n=A$로 약속한다. 
 :::
 
-그럼 다음 따름정리는 거의 자명하다.
+$A$가 field $\mathbb{K}$ 위의 algebra이면 extended Rees algebra는 $t^{-1}$을 포함하므로 $\mathbb{K}[t^{-1}]$-algebra가 되고, 이때 다음이 성립한다.
 
 ::: 명제 5
-Field $\mathbb{K}$와 $\mathbb{K}$-algebra $A$를 고정하자. 그럼 Rees algebra $A[\mathfrak{a}t, t^{-1}]$은 flat $\mathbb{K}[t]$-module이다. 또, 만일 $\bigcap \mathfrak{a}^i=0$이라면, $1-t s$ ($s\in S$) 꼴의 원소들은 모두 $A[\mathfrak{a}t, t^{-1}]$에서 non-zerodivisor이다. 
+Field $\mathbb{K}$와 $\mathbb{K}$-algebra $A$, 그리고 $A$의 ideal $\mathfrak{a}$를 고정하고 $R=A[\mathfrak{a}t, t^{-1}]$이라 쓰자. 그럼 extended Rees algebra $R$은 flat $\mathbb{K}[t^{-1}]$-module이다. 또, 만일 $\bigcap \mathfrak{a}^i=0$이라면, $1-t^{-1}s$ ($s\in R$) 꼴의 원소들은 모두 $R$에서 non-zerodivisor이다. 
 :::
 
 ---

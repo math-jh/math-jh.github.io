@@ -10,6 +10,8 @@ sidebar:
 
 date: 2026-06-26
 weight: 10
+published: false
+revising: true
 drift_needed: true
 ---
 
@@ -78,7 +80,7 @@ $$\tan^2 x = \sec^2 x - 1$$
 특히 유용하게 쓰이는 치환적분과 부분적분은 각각 [§미분법, ⁋정리 4](/ko/math/calculus/differentiation_rules#thm4)와 [§미분법, ⁋명제 3](/ko/math/calculus/differentiation_rules#prop3)을 거꾸로 읽은 것이다.
 
 ::: 정리 4 (치환적분)
-$g$가 미분가능하고 $f$가 연속이면
+$f$가 구간 $I$에서 원시함수를 가지고, $g$가 미분가능하며 모든 $x$에 대해 $g(x) \in I$이면
 
 $$\int f(g(x)) g'(x) \dd{x} = \int f(u) \dd{u} \quad (u = g(x))$$
 
@@ -219,7 +221,7 @@ $$\int_0^1 x^2\dd{x} = \lim_{n\rightarrow\infty}\sum_{i=1}^n \frac{i^2}{n^3} = \
 $[a, b]$에서 연속인 함수는 적분가능하다.
 :::
 
-이 정리의 증명 또한 현재 우리의 범위를 벗어나므로 받아들이고 넘어가야만 한다. 
+이 정리의 증명 또한 현재 우리의 범위를 벗어나므로 받아들이고 넘어가야만 한다. 적분가능성에 관한 다음의 세 사실도 같은 수준의 것이므로 이후의 논증에서 함께 인정하고 쓴다. $[a,b]$에서 적분가능한 함수는 임의의 부분구간에서도 적분가능하고, $f$가 적분가능하면 $\lvert f\rvert$도 적분가능하며, 적분가능한 두 함수의 곱 또한 적분가능하다. 
 
 ## 정적분의 성질
 
@@ -260,7 +262,7 @@ $$\int_a^b f(x)\dd{x} = f(c)(b-a)$$
 
 $$\frac{1}{b-a}\int_a^b f(x)\dd{x}$$
 
-가 $[m, M]$에 속하므로, [§연속함수, ⁋정리 5](/ko/math/calculus/continuity#thm5)에 의해 그 값을 취하는 $c$, 즉 $f(c) = \frac{1}{b-a}\int_a^b f(x)\dd{x}$인 $c$가 존재한다.
+가 $[m, M]$에 속한다. 이 값이 $m$이거나 $M$이면 최솟값 또는 최댓값을 주는 점을 $c$로 택하면 되고 ($f$가 상수라 $m = M$인 경우도 여기에 포함된다), 그렇지 않으면 최솟값과 최댓값을 주는 두 점 사이의 구간에 [§연속함수, ⁋정리 5](/ko/math/calculus/continuity#thm5)를 적용하여 그 값을 취하는 $c$, 즉 $f(c) = \frac{1}{b-a}\int_a^b f(x)\dd{x}$인 $c$를 얻는다.
 :::
 
 여기서 
@@ -304,7 +306,7 @@ $$m\int_a^b \mu(x)\dd{x} \leq \int_a^b f(x)\mu(x) \dd{x}\leq M\int_a^b \mu(x) \d
 
 $$\frac{\int_a^b f(x)\mu(x) \dd{x}}{\int_a^b \mu(x)\dd{x}} \in [m, M]$$
 
-임을 얻고, [§연속함수, ⁋정리 5](/ko/math/calculus/continuity#thm5)로 이 값을 취하는 $c$가 존재한다. 따라서 양변에 $\int_a^b \mu(x)\dd{x}$를 곱하면 주장하는 등식을 얻는다.
+임을 얻는다. 이 값이 $m$이거나 $M$이면 최솟값 또는 최댓값을 주는 점을 $c$로 택하면 되고, 그렇지 않으면 최솟값과 최댓값을 주는 두 점 사이의 구간에 [§연속함수, ⁋정리 5](/ko/math/calculus/continuity#thm5)를 적용하여 이 값을 취하는 $c$를 얻는다. 따라서 양변에 $\int_a^b \mu(x)\dd{x}$를 곱하면 주장하는 등식을 얻는다.
 :::
 
 만일 $\mu \equiv 1$로 두면 가중 평균값 정리는 [명제 12](#prop12)로 환원되므로, [명제 14](#prop14)는 평균값 정리의 일반화로, 일종의 밀도를 추가하는 것으로 생각할 수 있다.

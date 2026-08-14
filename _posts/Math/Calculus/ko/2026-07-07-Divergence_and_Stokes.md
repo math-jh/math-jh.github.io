@@ -10,6 +10,8 @@ sidebar:
 
 date: 2026-07-07
 weight: 20
+published: false
+revising: true
 drift_needed: true
 ---
 
@@ -34,7 +36,7 @@ $$\iint_{\partial E} (0,0,R)\cdot d\mathbf{S} = \iiint_E \partial R/\partial z\d
 
 를 보이면 $P, Q$도 symmetric하게 처리되어 셋을 더해 정리가 나온다. 
 
-$E$가 $z$방향으로 단순한 입체, 곧 $E = \{(x,y,z) \mid (x,y) \in D,\ u_1(x,y) \leq z \leq u_2(x,y)\}$라 하자. 오른쪽 삼중적분은 [§다중적분, ⁋정리 2](/ko/math/calculus/multiple_integrals#thm2)로 $z$를 먼저 적분하면
+$E$가 세 좌표방향 모두로 단순한 입체, 특히 $z$방향으로는 $E = \{(x,y,z) \mid (x,y) \in D,\ u_1(x,y) \leq z \leq u_2(x,y)\}$라 하자. 오른쪽 삼중적분은 [§다중적분, ⁋정리 2](/ko/math/calculus/multiple_integrals#thm2)로 $z$를 먼저 적분하면
 
 $$\iiint_E \frac{\partial R}{\partial z}\dd{V} = \iint_D \bigl(R(x,y,u_2) - R(x,y,u_1)\bigr)\dd{A}$$
 
@@ -90,7 +92,7 @@ $$\iint_D \curl \mathbf{F}\cdot \mathbf{N}\dd{A} = \iint_S \curl \mathbf{F}\cdot
 :::
 
 ::: 증명
-$D$가 단순연결이므로 $D$ 안의 임의의 closed 곡선 $C$는 $D$ 안에 놓인 곡면 $S$의 boundary로 채울 수 있다. 스토크스 정리로 
+$D$가 단순연결이므로 $D$ 안의 임의의 closed curve $C$는 $D$ 안에 놓인 곡면 $S$의 boundary로 채울 수 있다. 스토크스 정리로 
 
 $$\oint_C \mathbf{F}\cdot d\mathbf{r} = \iint_S \curl \mathbf{F}\cdot d\mathbf{S} = 0$$
 

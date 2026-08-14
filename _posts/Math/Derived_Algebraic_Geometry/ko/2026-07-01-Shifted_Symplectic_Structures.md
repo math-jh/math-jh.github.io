@@ -36,7 +36,7 @@ $$\omega\in H^n\bigl(X,\wedge^pL_X\bigr)=\pi_0\mathcal{A}^p(X,n)$$
 에 해당한다.
 :::
 
-여기서 $\wedge^pL_X$은 여접 복합체의 $p$번째 exterior power로, perfect 복합체의 exterior power이므로 다시 perfect이다. $X$이 smooth 고전적 variety이면 $L_X=\Omega_X$이 degree $0$에 집중된 국소자유 sheaf이므로 $\wedge^pL_X=\Omega_X^p$이 고전적 $p$-형식 다발이 되고, $\mathcal{A}^p(X,0)$의 $\pi_0$은 대역 $p$-형식들의 $k$-vector space $H^0(X,\Omega_X^p)$으로 되돌아온다. 반면 $X$이 stack이거나 유도 두께를 가지면 $L_X$이 음·양의 degree에 항을 가지므로, degree $n\neq0$의 형식이 자연스럽게 등장한다. 이제 우리에게 필요한 것은 이 형식들 가운데 "닫힌" 것을 가려내는 일이다.
+여기서 $\wedge^pL_X$은 여접 복합체의 $p$번째 exterior power로, perfect 복합체의 exterior power이므로 다시 perfect이다. $X$이 smooth 고전적 variety이면 $L_X=\Omega_X$이 degree $0$에 집중된 국소자유 sheaf이므로 $\wedge^pL_X=\Omega_X^p$이 고전적 $p$-형식 다발이 되고, $\mathcal{A}^p(X,0)$의 $\pi_0$은 대역 $p$-형식들의 $k$-vector space $H^0(X,\Omega_X^p)$으로 되돌아온다. 반면 $X$이 stack이거나 유도 두께를 가지면 $L_X$이 음·positive degree에 항을 가지므로, degree $n\neq0$의 형식이 자연스럽게 등장한다. 이제 우리에게 필요한 것은 이 형식들 가운데 "닫힌" 것을 가려내는 일이다.
 
 ## 닫힌 형식과 de Rham 복합체
 
@@ -47,7 +47,7 @@ Derived stack $X$의 *de Rham 복합체<sub>de Rham complex</sub>*는 weight로 
 
 $$\dR(X)=\bigoplus_{p\geq0}(\wedge^pL_X)[-p]$$
 
-으로, 각 $\wedge^pL_X$의 내부 미분 $d$과 함께, weight를 $1$ 올리는 *de Rham 미분* $\epsilon=d_{\dR}:\wedge^pL_X\rightarrow\wedge^{p+1}L_X$을 mixed 구조로 가진다. 이때 $X$ 위의 *degree $n$의 closed $p$-형식<sub>closed $p$-form of degree $n$</sub>*들의 공간 $\mathcal{A}^{p,\mathrm{cl}}(X,n)$을, 총복합체
+으로, 각 $\wedge^pL_X$의 내부 미분 $d$과 함께, weight를 $1$ 올리는 *de Rham differential* $\epsilon=d_{\dR}:\wedge^pL_X\rightarrow\wedge^{p+1}L_X$을 mixed 구조로 가진다. 이때 $X$ 위의 *degree $n$의 closed $p$-형식<sub>closed $p$-form of degree $n$</sub>*들의 공간 $\mathcal{A}^{p,\mathrm{cl}}(X,n)$을, 총복합체
 
 $$\Bigl(\prod_{i\geq0}(\wedge^{p+i}L_X)[n-i],\quad d-d_{\dR}\Bigr)$$
 
@@ -62,7 +62,7 @@ $$\mathcal{A}^{p,\mathrm{cl}}(X,n)\longrightarrow\mathcal{A}^p(X,n)$$
 을 준다.
 :::
 
-이 정의의 핵심은 관계식 $d_{\dR}\omega_0=\dd{\omega_1}$이 읽히는 방식에 있다. 그것은 밑에 깔린 형식의 de Rham 미분 $d_{\dR}\omega_0$이 $0$과 *같다*는 성질이 아니라, $d_{\dR}\omega_0$을 $0$으로 축약하는 명시적 nullhomotopy $\omega_1$이 주어졌다는 *자료*이다. 나아가 $\omega_2,\omega_3,\ldots$은 이 nullhomotopy가 더 높은 weight에서도 정합적임을 보장하는 higher homotopy들이다. 따라서 closed $p$-형식은 밑에 깔린 형식 하나가 아니라, 그 형식을 닫는 무한한 정합 자료 전체를 나른다.
+이 정의의 핵심은 관계식 $d_{\dR}\omega_0=\dd{\omega_1}$이 읽히는 방식에 있다. 그것은 밑에 깔린 형식의 de Rham differential $d_{\dR}\omega_0$이 $0$과 *같다*는 성질이 아니라, $d_{\dR}\omega_0$을 $0$으로 축약하는 명시적 nullhomotopy $\omega_1$이 주어졌다는 *자료*이다. 나아가 $\omega_2,\omega_3,\ldots$은 이 nullhomotopy가 더 높은 weight에서도 정합적임을 보장하는 higher homotopy들이다. 따라서 closed $p$-형식은 밑에 깔린 형식 하나가 아니라, 그 형식을 닫는 무한한 정합 자료 전체를 나른다.
 
 ::: 참고 3
 망각 morphism $\mathcal{A}^{p,\mathrm{cl}}(X,n)\rightarrow\mathcal{A}^p(X,n)$은 일반적으로 동치가 아니며, 단사조차 아니다. 그 homotopy fiber가 "주어진 형식 $\omega_0$을 닫는 방법들의 공간"이고, 이 공간은 비어 있을 수도, 여러 connected component를 가질 수도 있다. 이것이 고전적 상황과 결정적으로 갈라지는 지점이다. Smooth 고전적 variety 위에서는 $L_X=\Omega_X$이 degree $0$에 집중되어 higher homotopy가 소멸하므로, $\omega_0$을 닫는 방법의 공간은 $d_{\dR}\omega_0=0$일 때 (본질적으로 유일하게) 존재하고 그렇지 않으면 비어 있다. 곧 이 경우에 한하여 닫힘은 다시 성질로 환원되어 고전적 개념과 일치한다. 그러나 stack이나 유도 두께가 있으면 닫힘은 참으로 자료가 되며, 서로 다른 닫힘을 준 두 형식은 밑에 깔린 형식이 같더라도 closed 형식으로서는 다르다. 이 때문에 우리는 처음부터 형식이 아니라 형식의 *공간*을 다루고, symplectic 구조를 하나의 점이 아니라 자료를 갖춘 대상으로 취급한다.
@@ -73,7 +73,7 @@ $$\mathcal{A}^{p,\mathrm{cl}}(X,n)\longrightarrow\mathcal{A}^p(X,n)$$
 이제 symplectic 구조를 정의한다. 고전적 symplectic 형식의 본질은 비축퇴성, 곧 형식이 tangent space와 cotangent space를 동형으로 잇는다는 데 있었다. 이 선형대수적 조건을 먼저 분리해 두자.
 
 ::: 정의 4
-$k$ 위의 유한차원 vector space $V$에 대하여, *alternating $2$-form<sub>교대 $2$-형식</sub>*이란 원소 $\omega\in\wedge^2V^\ast$을 뜻하며, 이는 $\omega(v,v)=0$을 만족하는 bilinear form과 같다. 그 *flat 사상*을
+$k$ 위의 유한차원 vector space $V$에 대하여, *alternating $2$-form<sub>교대 $2$-형식</sub>*이란 원소 $\omega\in\wedge^2V^\ast$을 뜻하며, 이는 $\omega(v,v)=0$을 만족하는 bilinear form과 같다. 그 *flat morphism*을
 
 $$\omega^\flat:V\longrightarrow V^\ast,\qquad \omega^\flat(v)=\omega(v,-)$$
 
@@ -112,7 +112,7 @@ $0$-shifted 구조가 고전적 symplectic 기하를 그대로 담고 $2$-shifte
 
 ## Derived critical locus의 (-1)-shifted 구조
 
-Smooth variety $U$ 위의 함수 $f:U\rightarrow\mathbb{A}^1$에 대하여, 그 미분 $\dd{f}$은 cotangent bundle $\Omega_U$의 절단이고, derived critical locus $\Crit(f)$은 $\dd{f}$의 유도 영점자리로 정의되었다. ([§Derived scheme과 derived stack, ⁋예시 17](/ko/math/derived_algebraic_geometry/derived_schemes#ex17)) 이 대상은 quasi-smooth이고 virtual 차원 $0$이며, 그 접복합체가 Hessian의 대칭성 때문에 여접 복합체와 자기쌍대적이라는 점을 우리는 이미 관찰하였다. 이 self-duality가 정확히 $(-1)$-shifted symplectic 구조로 정착됨을 이제 밝힌다.
+Smooth variety $U$ 위의 함수 $f:U\rightarrow\mathbb{A}^1$에 대하여, 그 미분 $\dd{f}$은 cotangent bundle $\Omega_U$의 절단이고, derived critical locus $\Crit(f)$은 $\dd{f}$의 유도 영점자리로 정의되었다. ([§Derived scheme과 derived stack, ⁋예시 17](/ko/math/derived_algebraic_geometry/derived_schemes#ex17)) 이 대상은 quasi-smooth이고 virtual dimension $0$이며, 그 접복합체가 Hessian의 대칭성 때문에 여접 복합체와 자기쌍대적이라는 점을 우리는 이미 관찰하였다. 이 self-duality가 정확히 $(-1)$-shifted symplectic 구조로 정착됨을 이제 밝힌다.
 
 ::: 정리 8
 $U$을 smooth $k$-scheme, $f:U\rightarrow\mathbb{A}^1$을 함수라 하자. Derived critical locus $\Crit(f)$은 canonically $(-1)$-shifted symplectic이다. 그 밑에 깔린 $2$-형식이 유도하는 nondegeneracy 동치
@@ -149,7 +149,7 @@ $$X\vert_{\text{국소}}\simeq\Crit(f)$$
 와 그 표준적 $(-1)$-shifted symplectic 구조에 동치이다. 그 결과 고전적 truncation $t_0(X)$은 자연스럽게 algebraic d-critical locus의 구조를 물려받는다.
 :::
 ::: 증명
-증명은 $X$을 국소적으로 표준 좌표를 갖는 affine derived scheme $\Spec A$으로 실현하는 데 있다. $A$을 smooth 대수 위의 free graded-commutative cdga로 cofibrant하게 놓으면, degree $-1$의 symplectic 형식은 Poincaré 보조정리의 shifted 판본에 의하여 국소적으로 $\omega=\dd{\lambda}$의 형태로 normalize되어 Darboux 좌표에서 표준형이 되고, 이때 $A$의 미분이 어떤 degree $0$의 Hamiltonian $\Phi$과의 Poisson bracket $\{\Phi,-\}$으로 주어짐을 보인다. 이 $\Phi$이 곧 smooth 국소 모형 $U$ 위의 함수 $f$이며, 표준형 cdga가 정확히 $\Crit(\Phi)$의 Koszul 복합체와 일치한다. Truncation이 d-critical 구조를 얻는 것은, 서로 다른 국소 표현에서 나온 함수 $f$들이 정합적으로 접착되어 $t_0(X)$ 위의 하나의 canonical section을 이루기 때문이다. 완전한 논증은 ([BBJ])에 있다.
+증명은 $X$을 국소적으로 표준 좌표를 갖는 affine derived scheme $\Spec A$으로 실현하는 데 있다. $A$을 smooth algebra 위의 free graded-commutative cdga로 cofibrant하게 놓으면, degree $-1$의 symplectic 형식은 Poincaré 보조정리의 shifted 판본에 의하여 국소적으로 $\omega=\dd{\lambda}$의 형태로 normalize되어 Darboux 좌표에서 표준형이 되고, 이때 $A$의 미분이 어떤 degree $0$의 Hamiltonian $\Phi$과의 Poisson bracket $\{\Phi,-\}$으로 주어짐을 보인다. 이 $\Phi$이 곧 smooth 국소 모형 $U$ 위의 함수 $f$이며, 표준형 cdga가 정확히 $\Crit(\Phi)$의 Koszul 복합체와 일치한다. Truncation이 d-critical 구조를 얻는 것은, 서로 다른 국소 표현에서 나온 함수 $f$들이 정합적으로 접착되어 $t_0(X)$ 위의 하나의 canonical section을 이루기 때문이다. 완전한 논증은 ([BBJ])에 있다.
 :::
 
 Darboux 정리는 $(-1)$-shifted symplectic 기하가 왜 열거기하와 맞닿는지를 설명한다. Calabi–Yau 3-fold 위의 안정층의 moduli는 PTVV에 의하여 $(-1)$-shifted symplectic이고 ([정리 12](#thm12) 뒤의 논의), [정리 9](#thm9)에 의하여 국소적으로 $\Crit(f)$이므로, 그 위에서 $f$이 정의하는 vanishing cycle sheaf이나 Behrend 함수가 대역적으로 접착되어 Donaldson–Thomas 불변량의 categorified·motivic 판본을 낳는다. 곧 $(-1)$-shifted 구조는 DT 이론의 국소 재료인 critical point 자료를 기하적으로 조직하는 언어이다.
@@ -225,7 +225,7 @@ Derived stack $X$과 정수 $n$에 대하여, *$n$-shifted 여접 stack*을 $X$ 
 
 $$T^\ast[n]X=\Spec_{\mathcal{O}_X}\Sym_{\mathcal{O}_X}\bigl(T_X[-n]\bigr)$$
 
-으로 정의한다. 이는 여접 복합체 $L_X[n]$의 전체 공간에 해당하며, degree $n$의 canonical Liouville $1$-형식 $\lambda$을 가지고, 그 de Rham 미분 $\omega=d_{\dR}\lambda$이 $T^\ast[n]X$ 위의 $n$-shifted symplectic 구조를 준다. $n=0$이고 $X$이 smooth 고전적 variety이면 $T^\ast[0]X=T^\ast X$은 [예시 6](#ex6)의 통상적 cotangent bundle과 그 Liouville symplectic 구조로 되돌아온다. 반면 $n\neq0$이면 base $X$ 자체가 stack이거나 유도 두께를 가져도 되므로, 이 구성은 임의의 유도 대상 위에 표준적 shifted symplectic 두께를 자유롭게 공급한다. 특히 $X=\mathbf{B}G$, $n=1$이면 $T^\ast[1]\mathbf{B}G\simeq[\mathfrak{g}^\ast/G]$이 coadjoint quotient로서 $1$-shifted symplectic이 되어, 고전적 moment map 기하의 유도 판본을 준다.
+으로 정의한다. 이는 여접 복합체 $L_X[n]$의 전체 공간에 해당하며, degree $n$의 canonical Liouville $1$-형식 $\lambda$을 가지고, 그 de Rham differential $\omega=d_{\dR}\lambda$이 $T^\ast[n]X$ 위의 $n$-shifted symplectic 구조를 준다. $n=0$이고 $X$이 smooth 고전적 variety이면 $T^\ast[0]X=T^\ast X$은 [예시 6](#ex6)의 통상적 cotangent bundle과 그 Liouville symplectic 구조로 되돌아온다. 반면 $n\neq0$이면 base $X$ 자체가 stack이거나 유도 두께를 가져도 되므로, 이 구성은 임의의 유도 대상 위에 표준적 shifted symplectic 두께를 자유롭게 공급한다. 특히 $X=\mathbf{B}G$, $n=1$이면 $T^\ast[1]\mathbf{B}G\simeq[\mathfrak{g}^\ast/G]$이 coadjoint quotient로서 $1$-shifted symplectic이 되어, 고전적 moment map 기하의 유도 판본을 준다.
 :::
 
 ::: 예시 15 (local system의 moduli)

@@ -106,7 +106,7 @@ $$g\circ f=\id_A,\qquad f\circ g=\id_{A'}$$
 가 성립한다면, $f$와 $g$가 서로의 *역<sub>inverse</sub>*이라 부르고, $f$와 $g$를 *isomorphism<sub>동형사상</sub>*이라 부른다. 이 때, $A$와 $A'$는 *isomorphic<sub>동형</sub>*하다고 부르고, 기호로 $A\cong A'$와 같이 표기한다.
 :::
 
-어렵지 않게 전단사인 magma homomorphism은 magma isomorphism이라는 것을 안다. 또, 다음이 성립한다.
+어렵지 않게 bijective magma homomorphism은 magma isomorphism이라는 것을 안다. 또, 다음이 성립한다.
 
 ::: 명제 7
 Magma homomorphism $f:A_1\rightarrow A_2$, $g:A_2\rightarrow A_3$에 대하여 합성 $g\circ f$는 magma homomorphism이다.

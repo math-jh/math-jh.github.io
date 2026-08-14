@@ -34,17 +34,17 @@ $n$차원 벡터공간 $V$의 $k$차원 부분공간들의 집합을 *Grassmanni
 기존에 없던 예시 중 가장 간단한 것은 $\Gr(2,4)$이다. 이는 $4$차원 공간의 $2$차원 부분공간들의 모임이다. Grassmannian을 다룰 때는 이 예시가 toy example로서 기능할 것이다. 
 :::
 
-언제나 그렇듯이 variety 구조를 주기 위해서는 affine cover를 생각해서 affine-local하게 접근하면 된다. 이를 위해 다음을 정의한다. 
+언제나 그렇듯이 variety 구조를 주기 위해서는 affine cover를 생각해서 affine-local하게 접근하면 된다. 이를 위해 $V$의 basis $e_1,\ldots, e_n$을 하나 고정하고 다음을 정의한다. 
 
 ::: 정의 3
-각 $k$개의 index들 $I = \{i_1 < \cdots < i_k\}$에 대해 open set $U_I$를
+각 $k$개의 index들 $I = \{i_1 < \cdots < i_k\}$에 대해 부분집합 $U_I$를
 
 $$U_I = \{W \in \Gr(k, V) \mid \text{projection } W \rightarrow \operatorname{span}(e_{i_1}, \ldots, e_{i_k}) \text{ is an isomorphism}\}$$
 
 으로 정의한다.
 :::
 
-$V$의 basis $e_1,\ldots, e_n$을 고정하고, $W$를 span하는 각각의 벡터들 $w_1,\ldots, w_k$을 사용하면 $W$는 다음 $k\times n$ 행렬
+$W$를 span하는 각각의 벡터들 $w_1,\ldots, w_k$을 이 basis에 대한 성분으로 적으면 $W$는 다음 $k\times n$ 행렬
 
 $$\begin{pmatrix}w_1\\\vdots\\w_k\end{pmatrix}=\begin{pmatrix}w_{1,1}&w_{1,2}&\cdots &w_{1,n}\\ \vdots&\vdots&\ddots&\vdots\\ w_{k,1}&w_{k,2}&\cdots&w_{k,n}\end{pmatrix}$$
 
@@ -64,7 +64,7 @@ $$A = \begin{pmatrix} I_k & B \end{pmatrix}$$
 
 이 증명에서 보듯, $U_I$에서의 coordinate system은 $k(n-k)$개의 자유로운 parameter들이다. 이들은 $W$를 나타내는 행렬에서 "non-trivial한 부분"에 해당한다. 즉, $I$가 정의하는 $k \times k$ block이 identity로 고정된 후, 나머지 $k \times (n-k)$ block이 자유롭게 변할 수 있다. 
 
-$W$를 나타내는 행렬은 rank가 $k$이므로 nonzero인 $k\times k$ minor를 가지며, 따라서 임의의 $W\in \Gr(k,V)$는 적당한 $U_I$에 속해 $U_I$들이 affine open cover를 이룬다. 뿐만 아니라 $U_I$의 coordinate를 $U_J$의 coordinate로 바꾸는 transition map은 Cramer 공식에 의해 $J$에 해당하는 $k\times k$ block의 determinant를 분모로 갖는 유리식으로 주어지고 이 분모는 $U_I\cap U_J$ 위에서 소멸하지 않으므로, transition map 또한 regular map이다. 이를 통해 $\Gr(k,V)$ 위에 variety 구조가 주어진다. 물론 이것이 quasi-projective임을 보이기 위해서는 명시적인 projective embedding이 필요하지만, 우선은 다음이 성립한다. 
+$W$를 나타내는 행렬은 rank가 $k$이므로 nonzero인 $k\times k$ minor를 가지며, 따라서 임의의 $W\in \Gr(k,V)$는 적당한 $U_I$에 속해 $U_I$들이 $\Gr(k,V)$를 덮는다. 뿐만 아니라 $U_I$의 coordinate를 $U_J$의 coordinate로 바꾸는 transition map은 Cramer 공식에 의해 $J$에 해당하는 $k\times k$ block의 determinant를 분모로 갖는 유리식으로 주어지고 이 분모는 $U_I\cap U_J$ 위에서 소멸하지 않으므로, transition map 또한 regular map이다. 이를 통해 $\Gr(k,V)$ 위에 variety 구조가 주어지며, 각 $U_I$는 이 구조에서 affine open subset이 되어 $U_I$들이 affine open cover를 이룬다. 물론 이것이 quasi-projective임을 보이기 위해서는 명시적인 projective embedding이 필요하지만, 우선은 다음이 성립한다. 
 
 ::: 명제 5
 $\dim \Gr(k, V) = k(n - k)$이다.
@@ -96,7 +96,15 @@ Plücker embedding이 잘 정의된다는 것은 $W$의 다른 basis를 택했�
 
 $$v_1\wedge\cdots\wedge v_k$$
 
-로 나타나는 벡터들로 이루어진 것을 알 수 있다. 따라서 $\iota$의 image가 closed subvariety임을 주장하기 위해서는 이들을 zero set으로 갖는 다항식을 정의하면 되고, 이는 wedge product의 성질로부터 다음의 *Plücker relations*
+로 나타나는 벡터들로 이루어진 것을 알 수 있다.
+
+고정한 basis $e_1,\ldots,e_n$에 대해 $\bigwedge^kV$는 $i_1<\cdots<i_k$인 $e_{i_1}\wedge\cdots\wedge e_{i_k}$들을 basis로 가지므로 $\dim\bigwedge^kV=\binom{n}{k}$이고, 따라서 $\mathbb{P}(\bigwedge^kV)\cong\mathbb{P}^{\binom{n}{k}-1}$이다. 이 basis에 대한 전개
+
+$$v_1\wedge\cdots\wedge v_k=\sum_{i_1<\cdots<i_k}p_{i_1\cdots i_k}e_{i_1}\wedge\cdots\wedge e_{i_k}$$
+
+의 계수 $p_{i_1\cdots i_k}$를 $W$의 *Plücker coordinates*라 부른다. 이는 $W$를 나타내는 $k\times n$ 행렬에서 $i_1,\ldots,i_k$번째 column을 골라 만든 $k\times k$ minor이고, $W$의 basis를 바꾸면 [명제 7](#prop7)의 증명에서 보았듯 이들 전체가 같은 scalar배가 되므로 $\mathbb{P}^{\binom{n}{k}-1}$의 homogeneous coordinates가 된다. 앞으로 index가 증가 순서로 주어지지 않은 경우에는 $p$를 index에 대해 antisymmetric하게 연장한 것으로 이해하며, 같은 index가 반복되면 $0$으로 둔다.
+
+따라서 $\iota$의 image가 closed subvariety임을 주장하기 위해서는 이들을 zero set으로 갖는 다항식을 정의하면 되고, 이는 wedge product의 성질로부터 다음의 *Plücker relations*
 
 $$\sum_{r=1}^{k+1} (-1)^r p_{i_1 \cdots i_{k-1} j_r} p_{j_1 \cdots \widehat{j_r} \cdots j_{k+1}} = 0\tag{$\ast$}$$
 

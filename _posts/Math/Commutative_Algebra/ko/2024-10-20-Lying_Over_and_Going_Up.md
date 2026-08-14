@@ -10,6 +10,8 @@ sidebar:
 
 date: 2024-10-20
 weight: 9
+published: false
+revising: true
 drift_needed: true
 
 toc: false
@@ -56,10 +58,10 @@ $$a_nb^n+\cdots+a_1b+a_0=0,\qquad a_i\in \Frac(A)$$
 :::
 
 ::: 따름정리 3
-Integral domain $A$가 주어졌다 하고, integral extension $A \rightarrow B$가 주어졌다 하자. 그럼 $B$의 prime ideal $\mathfrak{q}$이 maximal ideal인 것과 $\mathfrak{q}\cap A$가 $A$의 maximal ideal인 것이 동치이다.
+Integral extension $A\hookrightarrow B$가 주어졌다 하자. 그럼 $B$의 prime ideal $\mathfrak{q}$이 maximal ideal인 것과 $\mathfrak{q}\cap A$가 $A$의 maximal ideal인 것이 동치이다.
 :::
 ::: 증명
-이 또한 [명제 1](#prop1)의 증명에서와 마찬가지로, $\mathfrak{q}\cap A$와 $\mathfrak{q}$로 각각 quotient를 취해주면, 두 integral domain $A,B$ 그리고 integral extension $A \hookrightarrow B$가 주어졌을 때, $A$가 field인 것과 $B$가 field인 것이 동치라는 것을 보이면 충분하다. 한편, 만일 $A$가 field라면 [보조정리 2](#lem2)에 의하여 $B$는 nonzero proper ideal을 갖지 않아야 한다. 즉, $B$는 field이다. 
+이 또한 [명제 1](#prop1)의 증명에서와 마찬가지로 $\mathfrak{q}\cap A$와 $\mathfrak{q}$로 각각 quotient를 취해주면 되는데, $\mathfrak{q}$가 prime이므로 $B/\mathfrak{q}$는 domain이고 $A/(\mathfrak{q}\cap A)$는 그 subring이라 역시 domain이다. 따라서 두 integral domain $A,B$ 그리고 integral extension $A \hookrightarrow B$가 주어졌을 때, $A$가 field인 것과 $B$가 field인 것이 동치라는 것을 보이면 충분하다. 한편, 만일 $A$가 field라면 [보조정리 2](#lem2)에 의하여 $B$는 nonzero proper ideal을 갖지 않아야 한다. 즉, $B$는 field이다. 
 
 따라서 $B$가 field임을 가정하고 $A$가 field임을 보이면 충분하다. $A$의 maximal ideal $\mathfrak{m}$이 주어졌다 하자. 그럼 [명제 1](#prop1)에 의하여, 우리는 적당한 $B$의 prime ideal $\mathfrak{q}$가 존재하여 $\mathfrak{q}\cap A= \mathfrak{m}$이 성립하도록 할 수 있다. 그런데 $B$는 field이므로, $\mathfrak{q}=0$이고 따라서 $\mathfrak{m}=0$이다. 이로부터 원하는 결과를 얻는다. 
 :::
@@ -73,7 +75,7 @@ Integral extension $A\hookrightarrow B$에 대하여, 만일 $B$의 두 prime id
 결론에 반하여 $\mathfrak{q}_1\subseteq \mathfrak{q}_2$라 가정하고 $A\cap \mathfrak{q}_1=A\cap \mathfrak{q}_2=\mathfrak{p}$라 하자. 그럼 $A$에서는 $\mathfrak{p}$로, $B$에서는 $\mathfrak{q}_1$으로 quotient를 취하여, 주어진 상황을 integral domain $B$와 $\mathfrak{q}_1=0$, 그리고 $\mathfrak{q}_2\cap A=0$이 성립하도록 바꿔줄 수 있다. 그런데 $B$의 원소들에 대해 성립하는 integral equation들은 $\mathfrak{p}$로 quotient를 취하여도 그대로 integral equation이 되며, 특히 $\Frac(B)$가 $\Frac(A)$의 algebraic extension이 된다. 따라서 [보조정리 2](#lem2)에 의하여 원하는 결과를 얻는다.
 :::
 
-[명제 1](#prop1)과 [따름정리 4](#cor4)가 prime ideal chain을 위로 올리는 방향이라면, 반대 방향의 *going-down*은 일반적인 integral extension에서는 성립하지 않는다. 다만 base가 integrally closed일 때 성립하며, 그 증명은 다음 보조정리에 기반한다.
+[명제 1](#prop1)과 [따름정리 4](#cor4)가 prime ideal chain을 위로 올리는 방향이라면, 반대 방향의 *going-down*은 일반적인 integral extension에서는 성립하지 않는다. 다만 base가 integrally closed domain, 곧 normal domain일 때 성립하며 ([§정수적 확장, ⁋정의 3](/ko/math/commutative_algebra/integral_extension#def3)), 그 증명은 다음 보조정리에 기반한다.
 
 ::: 보조정리 5
 Integral extension $A\hookrightarrow B$에서 $A$가 integrally closed domain이고 $B$도 domain이라 하자. 임의의 $b\in B$의 $K=\Frac(A)$ 위 minimal polynomial을 $f_b\in K[\x]$라 하자.

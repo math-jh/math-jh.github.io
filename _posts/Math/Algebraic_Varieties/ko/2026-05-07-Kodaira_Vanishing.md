@@ -35,7 +35,7 @@ $$H^p(X, \Omega^q\otimes \mathcal{L})=0$$
 이 성립한다. 
 :::
 
-첫째 주장은 둘째 주장에서 $q=n$으로 두어 얻어지는 것이다. 이 명제에 대한 증명은 꽤나 기술적인 부분이 있어 이번 글에서는 이를 엄밀하게 증명하기보다는 algebraic geometry에서 어떻게 사용되는지에 초점을 맞춘다. 
+첫째 주장은 둘째 주장에서 $q=n$으로 두어 얻어지는 것이며, [§곡면에서의 리만-로흐 정리, ⁋명제 7](/ko/math/algebraic_varieties/riemann_roch_surfaces#prop7)에서 이미 진술한 것이다. 둘째 주장은 이를 임의의 form degree $q$로 확장한 것으로, Akizuki-Nakano vanishing이라 부른다. 이 명제에 대한 증명은 꽤나 기술적인 부분이 있어 이번 글에서는 이를 엄밀하게 증명하기보다는 algebraic geometry에서 어떻게 사용되는지에 초점을 맞춘다. 
 
 명제의 서술에서 알 수 있듯, Kodaira vanishing은 canonical bundle에 대한 twist 이후의 higher cohomology를 제거한다. Serre duality를 사용하면 이는 다음의 동치된 서술로 바꾸어 쓸 수 있다.
 
@@ -127,7 +127,7 @@ $$\kappa(X) = \limsup_{m \rightarrow \infty} \frac{\log P_m(X)}{\log m}$$
 으로도 쓸 수 있다.
 :::
 
-$\kappa(X) \leq \dim X$가 언제나 성립하므로, surface의 경우 $\kappa \in \{-\infty, 0, 1, 2\}$이다. [Enriques–Kodaira classification](https://en.wikipedia.org/wiki/Enriques-Kodaira_classification)은 surface를 크게는 Kodaira dimension에 의해 분류하고, 여기에 $\kappa=0$과 $\kappa=-\infty$인 경우는 geometric genus $p_g$와 irregularity $q$를 사용하여 추가적인 세부 분류를 해 준다. 
+위 정의에서 최소값을 취하는 집합이 공집합이 아닌 것은 임의의 smooth projective variety에 대해 $P_m(X) = O(m^{\dim X})$가 성립하기 때문이며, 이로부터 $\kappa(X)$가 잘 정의되고 동시에 $\kappa(X) \leq \dim X$가 언제나 성립함을 안다. 따라서 surface의 경우 $\kappa \in \{-\infty, 0, 1, 2\}$이다. [Enriques–Kodaira classification](https://en.wikipedia.org/wiki/Enriques-Kodaira_classification)은 surface를 크게는 Kodaira dimension에 의해 분류하고, 여기에 $\kappa=0$과 $\kappa=-\infty$인 경우는 geometric genus $p_g$와 irregularity $q$를 사용하여 추가적인 세부 분류를 해 준다. 
 
 우리는 [§선형계, ⁋정의 9](/ko/math/algebraic_varieties/linear_systems#def9)에서 line bundle $\mathcal{L}$이 very ample이라는 것은 complete linear system $\lvert \mathcal{L} \rvert$가 정의하는 morphism $\varphi_{\mathcal{L}}: X \rightarrow \mathbb{P}(\Gamma(X, \mathcal{L}))$이 closed embedding인 것으로 정의하였다. 당시에는 sheaf cohomology의 언어가 없었으나, 지금은 sheaf cohomology를 도입하였으므로 이를 조금 더 잘 사용할 수 있다. 
 
@@ -174,11 +174,13 @@ $$H^0(X, \mathcal{L}^{\otimes m}) \longrightarrow H^0(X, \mathcal{L}^{\otimes m}
 
 를 고려하면, $H^1(X, \mathcal{I}_p^2 \otimes \mathcal{L}^{\otimes m}) = 0$이면 separation of tangent vectors가 성립한다.
 
-구체적으로, $\mathcal{L}$이 ample이면 Kodaira vanishing은 $H^i(X, \omega_X \otimes \mathcal{L}^{\otimes m}) = 0$ ($i > 0$)을 보장한다. 적절한 twist와 Serre duality를 사용하면 위의 $H^1$들 역시 vanishing하게 되어, 충분히 큰 $m$에서 $\mathcal{L}^{\otimes m}$의 sections가 위의 separation 조건들을 만족함을 보일 수 있다. 이는 [명제 6](#prop6)의 증명에서 핵심적으로 사용되는 바이다. 더 나아가 $\mathcal{L}^{\otimes m}$이 very ample일 뿐만 아니라 그에 의한 embedding이 projectively normal이 되도록 하는 조건도, Kodaira vanishing을 통해 관련된 multiplication map
+그런데 이렇게 요구되는 vanishing의 대상인 $\mathcal{I}_Z$와 $\mathcal{I}_p^2$는 $Z$와 $p$를 따라 locally free가 아니어서 $\omega_X$와 line bundle의 tensor product 꼴이 아니고, 따라서 [명제 1](#prop1)이 이들에 직접 적용되지는 않는다. 대신 이들은 coherent sheaf이므로 [§사영공간의 코호몰로지, ⁋명제 4](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop4)를 $\mathcal{F} = \mathcal{I}_Z$와 $\mathcal{F} = \mathcal{I}_p^2$에 그대로 적용할 수 있으며, 이로부터 충분히 큰 $m$에 대해 위의 두 $H^1$이 모두 사라져 $\mathcal{L}^{\otimes m}$의 section들이 두 separation 조건을 만족함을 얻는다. 즉 이 논법을 움직이는 것은 Kodaira vanishing이 아니라 Serre vanishing이다.
+
+Kodaira vanishing이 [명제 6](#prop6)의 고전적인 증명에 들어오는 것은 조금 다른 방식을 통해서이다. 그 증명에서는 $p$와 $q$를 blow-up한 $\pi: \widetilde{X} \rightarrow X$ 위에서 exceptional divisor만큼 twist를 낮춘 line bundle에 vanishing을 적용하므로, vanishing의 대상이 다시 line bundle이 되어 [명제 1](#prop1)의 형태로 환원된다. 더 나아가 $\mathcal{L}^{\otimes m}$이 very ample일 뿐만 아니라 그에 의한 embedding이 projectively normal이 되도록 하는 조건도 관련된 multiplication map
 
 $$S^\mu H^0(X, \mathcal{L}^{\otimes m}) \longrightarrow H^0(X, \mathcal{L}^{\otimes \mu m})$$
 
-의 surjectivity를 검증함으로써 얻을 수 있다. 이러한 vanishing은 higher cohomology가 sections의 생성을 방해하지 않음을 보장하여, linear system의 풍부함을 정량적으로 다룰 수 있게 한다.
+의 surjectivity를 검증함으로써 얻을 수 있는데, 이때 필요한 vanishing을 구체적인 $m$의 범위와 함께 주는 것은 [§사영공간의 코호몰로지, §§Regularity](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#regularity)의 Castelnuovo-Mumford regularity이다. 이러한 vanishing은 higher cohomology가 sections의 생성을 방해하지 않음을 보장하여, linear system의 풍부함을 정량적으로 다룰 수 있게 한다.
 
 
 ## 고다이라 매장정리

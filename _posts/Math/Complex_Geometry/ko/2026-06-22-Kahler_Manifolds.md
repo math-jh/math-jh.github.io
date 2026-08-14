@@ -1,5 +1,5 @@
 ---
-title: "Kähler 다양체"
+title: "Kähler manifold"
 description: "복소다양체 위에서 J와 양립하는 Hermitian 계량과 그 동반 기본형식 ω를 정의하고, ω가 닫힘(dω=0)이라는 Kähler 조건을 도입한다. Kähler 조건이 Levi-Civita 접속에 대한 J의 평행성, 국소 표준 osculation, 국소 Kähler 퍼텐셜과 동치임을 보이고, ℂ^n·복소토러스·Fubini–Study 계량을 갖춘 ℂP^n이 Kähler임을 확인한다. Kähler 다양체가 사교다양체이며 콤팩트 Kähler의 짝수 코호몰로지가 비자명함을 유도하고, Kähler 항등식을 서술한다."
 excerpt: "Hermitian 계량, J-불변 리만계량, 기본형식, Kähler 조건, dω=0, ∇J=0, Kähler 퍼텐셜, Fubini–Study 계량, CP^n, 복소토러스, 사영다양체, Kähler⟹symplectic, b_2≥1, Kähler 항등식"
 
@@ -78,7 +78,7 @@ $$
 
 조건 $\dd{\omega} = 0$은 $\omega$가 de Rham cohomology class $[\omega] \in H^2(X, \mathbb{R})$를 정의하게 하며, 이 류를 $X$의 *Kähler class<sub>켈러 류</sub>*라 한다. 모든 complex manifold가 Hermitian 계량을 갖는 것과 달리, Kähler 계량의 존재는 진정한 제약이다. 아래에서 보듯 콤팩트 Kähler manifold는 짝수 degree의 cohomology가 모두 비자명해야 하므로, 이 조건을 어기는 콤팩트 complex manifold는 Kähler 계량을 전혀 가질 수 없다.
 
-좌표에서 Kähler 조건은 계량 성분의 미분에 대한 깔끔한 대칭으로 번역된다. 기본형식 $\omega = \frac{i}{2}\sum g_{j\bar{k}}\dd{z_j} \wedge \dd{\bar{z}_k}$에 exterior derivative를 적용하면 [§Dolbeault 코호몰로지, ⁋명제 2](/ko/math/complex_geometry/dolbeault_cohomology#prop2)의 $d = \partial + \bar\partial$에 의해 $\dd{\omega}$는 $(2,1)$-성분 $\partial\omega$와 $(1,2)$-성분 $\bar\partial\omega$로 갈라진다. $\omega$가 real form이므로 $\partial\omega = 0$과 $\bar\partial\omega = 0$은 켤레로 동치이고, 따라서 $\dd{\omega} = 0$은 $\partial\omega = 0$ 하나와 동치이다. 이를 좌표로 풀면 다음 명제가 된다.
+좌표에서 Kähler 조건은 계량 성분의 미분에 대한 깔끔한 대칭으로 번역된다. 기본형식 $\omega = \frac{i}{2}\sum g_{j\bar{k}}\dd{z_j} \wedge \dd{\bar{z}_k}$에 exterior derivative를 적용하면 [§돌보 코호몰로지, ⁋명제 2](/ko/math/complex_geometry/dolbeault_cohomology#prop2)의 $d = \partial + \bar\partial$에 의해 $\dd{\omega}$는 $(2,1)$-성분 $\partial\omega$와 $(1,2)$-성분 $\bar\partial\omega$로 갈라진다. $\omega$가 real form이므로 $\partial\omega = 0$과 $\bar\partial\omega = 0$은 켤레로 동치이고, 따라서 $\dd{\omega} = 0$은 $\partial\omega = 0$ 하나와 동치이다. 이를 좌표로 풀면 다음 명제가 된다.
 
 ::: 명제 4
 Hermitian manifold $(X, J, g)$에 대하여, 기본형식을 $\omega = \frac{i}{2}\sum_{j,k} g_{j\bar{k}}\dd{z_j} \wedge \dd{\bar{z}_k}$로 쓸 때 다음이 동치이다.
@@ -119,7 +119,7 @@ Hermitian manifold $(X, J, g)$에 대하여 다음 네 조건이 서로 동치�
 :::
 
 ::: 증명
-(1) ⟺ (4)를 먼저 보인다. (4) ⟹ (1)은 [§Dolbeault 코호몰로지, ⁋명제 3](/ko/math/complex_geometry/dolbeault_cohomology#prop3)의 $\bar\partial\partial = -\partial\bar\partial$와 $\partial^2 = \bar\partial^2 = 0$에서 따라온다. $\omega = i\partial\bar\partial\varphi$이면
+(1) ⟺ (4)를 먼저 보인다. (4) ⟹ (1)은 [§돌보 코호몰로지, ⁋명제 3](/ko/math/complex_geometry/dolbeault_cohomology#prop3)의 $\bar\partial\partial = -\partial\bar\partial$와 $\partial^2 = \bar\partial^2 = 0$에서 따라온다. $\omega = i\partial\bar\partial\varphi$이면
 
 $$
 \dd{\omega} = (\partial + \bar\partial)(i\partial\bar\partial\varphi) = i\partial^2\bar\partial\varphi + i\bar\partial\partial\bar\partial\varphi = 0 + i\bar\partial\partial\bar\partial\varphi
@@ -127,7 +127,7 @@ $$
 
 이고, $\bar\partial\partial = -\partial\bar\partial$와 $\bar\partial^2 = 0$으로 $\bar\partial\partial\bar\partial\varphi = -\partial\bar\partial\bar\partial\varphi = 0$이므로 $\dd{\omega} = 0$이다. 또 $i\partial\bar\partial\varphi = i\sum_{j,k}(\partial^2\varphi/\partial z_j\partial\bar{z}_k)\dd{z_j} \wedge \dd{\bar{z}_k}$이므로, 계수를 $\frac{i}{2}g_{j\bar{k}}$와 맞추면 $\frac{i}{2}g_{j\bar{k}} = i\,\partial^2\varphi/\partial z_j\partial\bar{z}_k$, 곧 $g_{j\bar{k}} = 2\,\partial^2\varphi/\partial z_j\partial\bar{z}_k$이다.
 
-역으로 (1) ⟹ (4)는 [명제 4](#prop4)의 조건 (2)에서 나온다. $\dd{\omega} = 0$이면 $\partial g_{j\bar{k}}/\partial z_l$이 $j, l$에 대칭이고, 켤레를 취하면 $\partial g_{j\bar{k}}/\partial\bar{z}_l$이 $k, l$에 대칭이다. 이 대칭성 아래에서, $\dd{\omega} = 0$인 $\omega$는 폴리디스크에서 Poincaré 보조정리로 $\omega = \dd{\beta}$인 실 $1$-형식 $\beta$를 가지고, $\beta$의 $(0,1)$-성분을 [§Dolbeault 코호몰로지, ⁋보조정리 6](/ko/math/complex_geometry/dolbeault_cohomology#lem6)으로, $(1,0)$-성분을 그 켤레로 풀면 실값 함수 $\varphi$로서 $\omega = i\partial\bar\partial\varphi$가 국소적으로 성립한다. 구체적으로, $\dd{\omega} = 0$인 실 $(1,1)$-형식은 국소적으로 $\omega = \dd{\beta} = (\partial + \bar\partial)(\beta^{1,0} + \beta^{0,1})$로 쓰이고, 차수별로 $\partial\beta^{1,0} = 0$, $\bar\partial\beta^{0,1} = 0$, $\omega = \partial\beta^{0,1} + \bar\partial\beta^{1,0}$이 된다. $\partial$-Poincaré로 $\beta^{1,0} = \partial f$, $\bar\partial$-Poincaré로 $\beta^{0,1} = \bar\partial h$ ($h = \bar{f}$로 택할 수 있다)를 얻으면 $\omega = \partial\bar\partial h + \bar\partial\partial f = \bar\partial\partial(f - h)$이고, $\varphi = i(f - h)$를 실값이 되도록 조정하면 $\omega = i\partial\bar\partial\varphi$이다.
+역으로 (1) ⟹ (4)는 [명제 4](#prop4)의 조건 (2)에서 나온다. $\dd{\omega} = 0$이면 $\partial g_{j\bar{k}}/\partial z_l$이 $j, l$에 대칭이고, 켤레를 취하면 $\partial g_{j\bar{k}}/\partial\bar{z}_l$이 $k, l$에 대칭이다. 이 대칭성 아래에서, $\dd{\omega} = 0$인 $\omega$는 폴리디스크에서 Poincaré 보조정리로 $\omega = \dd{\beta}$인 실 $1$-형식 $\beta$를 가지고, $\beta$의 $(0,1)$-성분을 [§돌보 코호몰로지, ⁋보조정리 6](/ko/math/complex_geometry/dolbeault_cohomology#lem6)으로, $(1,0)$-성분을 그 켤레로 풀면 실값 함수 $\varphi$로서 $\omega = i\partial\bar\partial\varphi$가 국소적으로 성립한다. 구체적으로, $\dd{\omega} = 0$인 실 $(1,1)$-형식은 국소적으로 $\omega = \dd{\beta} = (\partial + \bar\partial)(\beta^{1,0} + \beta^{0,1})$로 쓰이고, 차수별로 $\partial\beta^{1,0} = 0$, $\bar\partial\beta^{0,1} = 0$, $\omega = \partial\beta^{0,1} + \bar\partial\beta^{1,0}$이 된다. $\partial$-Poincaré로 $\beta^{1,0} = \partial f$, $\bar\partial$-Poincaré로 $\beta^{0,1} = \bar\partial h$ ($h = \bar{f}$로 택할 수 있다)를 얻으면 $\omega = \partial\bar\partial h + \bar\partial\partial f = \bar\partial\partial(f - h)$이고, $\varphi = i(f - h)$를 실값이 되도록 조정하면 $\omega = i\partial\bar\partial\varphi$이다.
 
 (1) ⟺ (3)을 본다. (3) ⟹ (1)은 즉각적이다. 점 $p$에서 계량의 일차 미분이 모두 소멸하면, [명제 4](#prop4)의 조건 (2) $\partial g_{j\bar{k}}/\partial z_l = \partial g_{l\bar{k}}/\partial z_j$가 $p$에서 양변 $0$으로 성립하므로 $\dd{\omega}$가 $p$에서 소멸한다. $p$가 임의였으므로 $\dd{\omega} = 0$이다. (1) ⟹ (3)은 (4)를 거친다. (4)에 의해 local potential $\varphi$가 존재하므로, $p$를 원점으로 하는 holomorphic coordinates에서 $\varphi$의 Taylor 전개를 holomorphic 좌표변환으로 normalize한다. $\varphi = \varphi(p) + 2\Real\big(\text{정칙항}\big) + \frac{1}{2}\sum_{j,k} g_{j\bar{k}}(p) z_j\bar{z}_k + (\text{삼차 이상})$에서, holomorphic 항은 $\partial\bar\partial$로 죽으므로 무시할 수 있고, 이차항의 Hermitian 부분을 표준형으로 보내는 $\mathbb{C}$-선형 좌표변환으로 $g_{j\bar{k}}(p) = \delta_{jk}$를 만든다. 남은 삼차 이상 항 가운데 $z_j z_k \bar{z}_l$ 꼴의 혼합 삼차항을 holomorphic 이차 좌표변환 $z_j \mapsto z_j + (\text{이차 정칙})$으로 흡수하면 $g_{j\bar{k}}$의 일차 미분이 $p$에서 모두 소멸한다. 이 normalization이 가능한 것이 바로 Kähler 조건이며, 이렇게 얻은 좌표를 *normal coordinate*라 한다.
 
@@ -202,7 +202,7 @@ $$
 특히 smooth projective variety $Y \subseteq \mathbb{CP}^n$은 [예시 8](#ex8)의 Kähler manifold $\mathbb{CP}^n$의 복소 부분다양체이므로, 위 논법에 의해 유도된 Fubini–Study 계량에 대해 Kähler manifold이다.
 :::
 
-이 명제는 Kähler manifold의 세계가 얼마나 넓은지를 보여준다. 사영대수기하의 모든 smooth 대상, 곧 곡선·곡면·고차원 projective variety가 자동으로 Kähler 구조를 가지므로, Kähler 기하는 복소대수기하 전체를 포괄하는 해석적 틀이 된다. 동시에 [예시 7](#ex7)의 비사영적 복소토러스가 보여주듯 Kähler는 사영보다 진정으로 넓어, 대수기하 바깥의 콤팩트 complex manifold까지 담는다.
+이 명제는 Kähler manifold의 세계가 얼마나 넓은지를 보여준다. 사영대수기하의 모든 smooth object, 곧 곡선·곡면·고차원 projective variety가 자동으로 Kähler 구조를 가지므로, Kähler 기하는 복소대수기하 전체를 포괄하는 해석적 틀이 된다. 동시에 [예시 7](#ex7)의 비사영적 복소토러스가 보여주듯 Kähler는 사영보다 진정으로 넓어, 대수기하 바깥의 콤팩트 complex manifold까지 담는다.
 
 ## 사교구조와 위상적 귀결
 
@@ -268,7 +268,7 @@ $$
 일반 Kähler manifold에서는 [정리 5](#thm5)의 조건 (3)을 쓴다. 임의의 점 $p$에서 normal coordinate를 택하면 계량이 $p$에서 표준 Hermitian 계량과 이차까지 일치하므로, $L$, $\Lambda$와 $\partial$, $\bar\partial$, 그리고 그 수반작용소들이 $p$에서 평탄한 경우와 같은 일차 자료를 가진다. 위 항등식은 작용소들의 일차 미분 정보만으로 결정되는 일차 관계식이므로, $p$에서 평탄한 model의 항등식이 그대로 성립한다. $p$가 임의였으므로 항등식이 $X$ 전체에서 성립한다. Normal coordinate가 존재한다는 것, 곧 계량을 한 점에서 이차까지 표준형으로 만들 수 있다는 것이 바로 Kähler 조건이며, 이것이 평탄 model에서 일반 manifold로 항등식을 전파하는 다리이다.
 :::
 
-이 항등식들은 표면상 작은 교환관계이지만, 그 귀결은 콤팩트 Kähler manifold의 cohomology 구조 전체를 규정한다. $\partial$·$\bar\partial$·$d$에 딸린 Laplace 작용소들이 Kähler 항등식을 통해 서로 상수배로 묶이며, 이로부터 조화형식의 차수분해와 Hodge 수의 대칭이 따라온다. 곧 [§Dolbeault 코호몰로지, ⁋정의 4](/ko/math/complex_geometry/dolbeault_cohomology#def4)의 Dolbeault cohomology가 콤팩트 Kähler manifold에서 de Rham cohomology를 차수별로 쪼개는 분해를 낳는다. 이 분해와 그것이 콤팩트 Kähler manifold의 위상에 부과하는 제약은 별도의 이론을 이룬다. 여기서는 Kähler 조건이 그러한 해석적 강성의 출발점인 교환관계를 어떻게 보장하는지를 확인하는 데서 멈춘다.
+이 항등식들은 표면상 작은 교환관계이지만, 그 귀결은 콤팩트 Kähler manifold의 cohomology 구조 전체를 규정한다. $\partial$·$\bar\partial$·$d$에 딸린 Laplace 작용소들이 Kähler 항등식을 통해 서로 상수배로 묶이며, 이로부터 조화형식의 차수분해와 Hodge 수의 대칭이 따라온다. 곧 [§돌보 코호몰로지, ⁋정의 4](/ko/math/complex_geometry/dolbeault_cohomology#def4)의 Dolbeault cohomology가 콤팩트 Kähler manifold에서 de Rham cohomology를 차수별로 쪼개는 분해를 낳는다. 이 분해와 그것이 콤팩트 Kähler manifold의 위상에 부과하는 제약은 별도의 이론을 이룬다. 여기서는 Kähler 조건이 그러한 해석적 강성의 출발점인 교환관계를 어떻게 보장하는지를 확인하는 데서 멈춘다.
 
 ---
 

@@ -65,7 +65,7 @@ $$\widetilde{M}(X)=M\otimes_A A=M$$
 
 이러한 관점에서는 vector bundle은 아주 특수한 경우의 (quasi-)coherent sheaf라 생각할 수 있다. 혹은 반대로 이들 (quasi-)coherent sheaf들을 생각할 때 아주 일반적인 형태의 vector bundle이라 생각해도 된다. 구체적으로, coherent sheaf는 (finite rank) vector bundle들의 category에서 이들이 abelian category의 연산, 즉 kernel이나 image, cokernel 등에 대해 닫혀있도록 하기 위해서 확장한 것이라 생각할 수 있으며 직관적으로는 fiber dimension이 점마다 달라질 수 있는 vector bundle이라 생각할 수 있다. Quasi-coherent sheaf는 여기에서 finite rank 조건까지 뺀 것이다. 
 
-다만 위의 직관에서 다소 주의할 부분은 [\[가환대수학\] §기본 개념들, ⁋명제 9](/ko/math/commutative_algebra/basic_notions#prop9)가 기하학적 상황에서는 정확히 맞아떨어지지는 않는다는 것이다. 가령, smooth variety 위에 정의된 임의의 coherent sheaf는 유한한 길이의 locally free resolution을 갖지만, singular variety에서는 그렇지 않다. 
+Variety의 coordinate ring은 Noetherian이므로 [\[가환대수학\] §기본 개념들, ⁋명제 9](/ko/math/commutative_algebra/basic_notions#prop9)에 의하여 coherent 조건과 finitely generated 조건이 일치하는 것은 singular variety 위에서도 마찬가지이며, 따라서 위의 슬로건은 기하학적 상황에서도 그대로 성립한다. 다만 위의 직관에서 다소 주의할 부분은 coherent sheaf가 vector bundle에 얼마나 가까운지가 $X$의 기하에 따라 달라진다는 것이다. Smooth variety 위에 정의된 임의의 coherent sheaf는 유한한 길이의 locally free resolution을 갖지만, singular variety에서는 그렇지 않다. 
 
 ## Canonical Bundle
 
@@ -113,7 +113,7 @@ $$\widetilde{\Omega_{A/\mathbb{K}}}^\vee\cong \widetilde{\Omega_{A/\mathbb{K}}^\
 $\mathbb{A}^n$의 cotangent bundle은 $\Omega_{\mathbb{A}^n}^1 \cong \mathcal{O}_{\mathbb{A}^n}^{\oplus n}$이다. 대수적으로, 만일 $\mathbb{A}^n$의 coordinate ring $\mathbb{K}[\x_1, \ldots, \x_n]$을 고정하면 이 $\mathbb{K}$-algebra의 Kähler differentials는 free module $\bigoplus_{i=1}^n \mathbb{K}[\x_1, \ldots, \x_n]  \dd{\x_i}$이므로, 이 결과는 우리의 직관과 잘 맞아떨어진다.
 :::
 
-한편 우리는 임의의 smooth variety $X$ of dimension $n$과 그 위의 cotangent bundle $\Omega_X^1$에 대하여, $\Omega_X^1$의 각 fiber는 $n$차원이므로 이를 $n$번 exterior product한 것은 line bundle이 되는 것을 안다.
+한편 우리는 임의의 smooth variety $X$ of dimension $n$과 그 위의 cotangent bundle $\Omega_X^1$에 대하여, $\Omega_X^1$의 각 fiber는 $n$차원이므로 이를 $n$번 exterior product한 것은 line bundle이 되는 것을 안다. 이 line bundle은 [§선다발과 벡터다발, ⁋예시 24](/ko/math/algebraic_varieties/line_bundles#ex24)에서 이미 이름과 함께 등장했지만, [정의 2](#def2)와 마찬가지로 완결성을 위해 다시 소개한다.
 
 ::: 정의 5
 Smooth variety $X$ of dimension $n$의 *canonical line bundle<sub>표준 선다발</sub>* $\omega_X$를 cotangent bundle의 top exterior power
@@ -176,15 +176,21 @@ $$\omega_{\mathbb{P}^n}=\det(\Omega_{\mathbb{P}^n}^1)\cong \mathcal{O}_{\mathbb{
 
 $$\dd{\y_0}^{(i)} \wedge \cdots \wedge \widehat{\dd{\y_i}^{(i)}} \wedge \cdots \wedge \dd{\y_n}^{(i)}$$
 
-을 생각할 수 있다. $U_i \cap U_j$ 위에서 $\y_k^{(j)} = \x_k / \x_j = (\x_k / \x_i) / (\x_j / \x_i) = \y_k^{(i)} / \y_j^{(i)}$이므로, $k \neq i, j$에 대해 
+을 생각할 수 있다. $U_i \cap U_j$ 위에서 $\y_k^{(j)} = \x_k / \x_j = (\x_k / \x_i) / (\x_j / \x_i) = \y_k^{(i)} / \y_j^{(i)}$이므로, 편의상 $t = \y_j^{(i)}$로 적으면 $k \neq i, j$에 대해 
 
-$$\dd{\y_k}^{(j)} = \dd{(\y_k^{(i)} / \y_j^{(i)})} = \frac{\y_j^{(i)} \dd{\y_k}^{(i)} - \y_k^{(i)}  \dd{\y_j}^{(i)}}{(\y_j^{(i)})^2}$$
+$$\dd{\y_k}^{(j)} = \dd{(\y_k^{(i)} / t)} = \frac{t \dd{\y_k}^{(i)} - \y_k^{(i)}  \dd{t}}{t^2}$$
 
-이다. 따라서 $U_j$ 위의 $n$-form은 $U_i \cap U_j$에서
+이다. 한편 $k=i$인 경우는 위의 계산에 포함되지 않는데, 이 경우에는 $\y_i^{(j)} = \x_i / \x_j = 1/t$이므로
 
-$$\bigwedge_{k \neq j} \dd{\y_k}^{(j)} = (\y_j^{(i)})^{-(n+1)} \cdot \bigwedge_{k \neq i} \dd{\y_k}^{(i)}$$
+$$\dd{\y_i}^{(j)} = -t^{-2}\dd{t}$$
 
-로 변환된다. 여기서 $(\y_j^{(i)})^{-(n+1)} = (\x_j / \x_i)^{-(n+1)}$이므로, transition function이 $g_{ij} = (\x_i / \x_j)^{-(n+1)}$임을 확인할 수 있다. 이는 $\mathcal{O}_{\mathbb{P}^n}(-n-1)$의 transition function과 일치한다.
+가 된다. 이제 $U_j$ 위의 $n$-form $\bigwedge_{k \neq j} \dd{\y_k}^{(j)}$을 계산하면, 이 exterior product는 $k=i$인 인자를 포함하고 이것이 $\dd{t}$의 배수이므로 나머지 인자들에서 $\dd{t}$가 붙은 항은 모두 소거되어 $t^{-1}\dd{\y_k}^{(i)}$만 남는다. 따라서 $k \neq i, j$인 $n-1$개의 인자로부터 $t^{-(n-1)}$이, $k=i$인 인자로부터 $-t^{-2}\dd{t} = -t^{-2}\dd{\y_j}^{(i)}$가 나오고, 이들을 다시 배열하면 $U_j$ 위의 $n$-form은 $U_i \cap U_j$에서
+
+$$\bigwedge_{k \neq j} \dd{\y_k}^{(j)} = (-1)^{i+j}(\y_j^{(i)})^{-(n+1)} \cdot \bigwedge_{k \neq i} \dd{\y_k}^{(i)}$$
+
+로 변환된다. 여기서 $(-1)^{i+j}$는 $k=i$인 인자의 부호까지 모아 인자들을 순서대로 다시 배열하며 붙는 부호이며, 각 $U_i$ 위의 $n$-form을 $(-1)^i$배 하여 흡수할 수 있으므로 이하 무시한다. 
+
+그럼 $U_i$ 위의 $n$-form들은 $\alpha_i = \bigwedge_{k \neq i} \dd{\y_k}^{(i)}$을 frame으로 가지며, 위의 계산은 두 frame 사이의 관계 $\alpha_j = c_{ij}\alpha_i$가 $c_{ij} = (\y_j^{(i)})^{-(n+1)} = (\x_j / \x_i)^{-(n+1)}$로 주어진다는 것을 말한다. 이제 section을 $s = f_i\alpha_i = f_j\alpha_j$로 적으면 $f_i = c_{ij}f_j$이므로, [§선다발과 벡터다발, ⁋예시 12](/ko/math/algebraic_varieties/line_bundles#ex12)의 컨벤션에서 trivialize된 함수들 사이의 transition function은 그 역수 $g_{ij} = c_{ij}^{-1} = (\x_i / \x_j)^{-(n+1)}$이다. 이는 $\mathcal{O}_{\mathbb{P}^n}(-n-1)$의 transition function과 일치한다.
 :::
 
 ## Adjunction Formula
@@ -226,7 +232,7 @@ $C \subseteq \mathbb{P}^2$가 degree $d$의 smooth curve라 하자. Adjunction f
 
 $$\omega_C \cong \omega_{\mathbb{P}^2}\vert_C \otimes \mathcal{O}_{\mathbb{P}^2}(C)\vert_C \cong \mathcal{O}_{\mathbb{P}^2}(-3)\vert_C \otimes \mathcal{O}_{\mathbb{P}^2}(d)\vert_C \cong \mathcal{O}_C(d-3)$$
 
-이다. 따라서 $K_C \sim (d-3)H\vert_C$이며, 이 때 $H\vert_C$의 degree가 $d$이므로 $\deg K_C = d(d-3)$이다. 
+이다. 따라서 $K_C \sim (d-3)H\vert_C$이며, 이 때 $H\vert_C$의 degree는 $d$이다. 이는 $C$를 포함하지 않는 line $H=V(\ell)$을 잡으면 $H\vert_C$가 $\mathcal{O}_C(1)$의 section $\ell\vert_C$의 zero divisor이고, 각 점 $p$에서의 vanishing order가 $\dim_\mathbb{K} \mathcal{O}_{\mathbb{P}^2, p}/(F, \ell)$, 즉 $C$를 정의하는 degree $d$의 homogeneous polynomial $F$를 $H\cong \mathbb{P}^1$ 위로 restrict한 $F\vert_H$의 zero의 중복도와 같은데, $F\vert_H$는 두 변수의 nonzero homogeneous form of degree $d$이므로 중복도를 세면 정확히 $d$개의 zero를 갖기 때문이다. 그러므로 $\deg K_C = d(d-3)$이다. 
 
 한편, classical한 algebraic geometry에서 plane curve (즉 projective curve in $\mathbb{P}^2$)의 genus는 그 degree로부터 
 
@@ -287,11 +293,15 @@ $$0 \rightarrow \mathcal{O}\rightarrow \mathcal{O}(1)\otimes \pi^\ast V \rightar
 
 $$\mathcal{Q}\otimes \mathcal{O}(1)\cong \Hom(\mathcal{O}(-1),\mathcal{Q})$$
 
-부분을 살펴보면, 우리는 이미 [명제 7](#prop7)의 증명에서 $\mathbb{P}^n$의 line이 어떠한 quotient로 가는지를 보는 것이 곧 tangent space임을 보았으므로 이 또한
+부분을 살펴보자. 점 $[\ell]\in \mathbb{P}(V)$가 $b\in B$ 위에 있다 하면, $T_{\mathbb{P}(V)/B}$의 이 점에서의 fiber는 정의에 의해 fiber $\mathbb{P}(V_b)$의 $[\ell]$에서의 tangent space이다. 이제 $V_b=\ell\oplus W$가 되도록 complement $W$를 하나 잡으면, $W$와 원점에서만 만나는 직선들은 정확히 linear map $\ell\rightarrow W$의 graph들이고 이들은 $[\ell]$의 열린 근방을 이루므로, 이 근방은 affine space $\Hom(\ell, W)$와 동일시되며 $[\ell]$ 자신은 zero map에 대응한다. 따라서
+
+$$T_{[\ell]}\mathbb{P}(V_b)\cong \Hom(\ell, W)\cong \Hom(\ell, V_b/\ell)$$
+
+이고, 마지막 동일시는 $W$의 선택에 무관하다. 그런데 $\mathcal{O}(-1)$과 $\mathcal{Q}$의 $[\ell]$에서의 fiber는 각각 $\ell$과 $V_b/\ell$이므로 이들 isomorphism은 $[\ell]$이 움직임에 따라 모여
 
 $$\Hom(\mathcal{O}(-1),\mathcal{Q})\cong T_{\mathbb{P}(V)/B}$$
 
-가 얻어지고, 이로부터 *relative* Euler sequence
+를 주고, 이로부터 *relative* Euler sequence
 
 $$0\rightarrow \mathcal{O}\rightarrow \pi^\ast V\otimes \mathcal{O}(1)\rightarrow T_{\mathbb{P}(V)/B}\rightarrow 0$$
 

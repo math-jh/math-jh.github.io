@@ -84,7 +84,7 @@ $$Z=\Spec\bigl(k\otimes_{k[\x]}^{\mathbb{L}}k\bigr)$$
 
 $$\pi_n\bigl(k\otimes_{k[\x]}^{\mathbb{L}}k\bigr)=\Tor_n^{k[\x]}(k,k)=\begin{cases}k&n=0,1\\0&n\geq2\end{cases}$$
 
-이다. 따라서 $Z$의 밑공간은 한 점이고, 그 truncation은 고전적 교차 $t_0(Z)=\Spec(k\otimes_{k[\x]}k)=\Spec k$, 곧 원점 한 점이다. 그러나 $\pi_1\mathcal{O}_Z=k\neq0$이라, $Z$은 고전적으로 한 점으로 보이는 자리에 degree $1$의 유도 두께를 하나 얹은, discrete하지 않은 derived scheme이다. 이 $\pi_1$이 affine 직선 안에서 원점을 자기 자신과 겹칠 때의 excess를 기록하며, 뒤에서 이것이 virtual 차원 $-1$의 유도 올곱임을 본다. ([예시 18](#ex18)에서 같은 현상을 곡선 차원에서 다시 만난다.)
+이다. 따라서 $Z$의 밑공간은 한 점이고, 그 truncation은 고전적 교차 $t_0(Z)=\Spec(k\otimes_{k[\x]}k)=\Spec k$, 곧 원점 한 점이다. 그러나 $\pi_1\mathcal{O}_Z=k\neq0$이라, $Z$은 고전적으로 한 점으로 보이는 자리에 degree $1$의 유도 두께를 하나 얹은, discrete하지 않은 derived scheme이다. 이 $\pi_1$이 affine 직선 안에서 원점을 자기 자신과 겹칠 때의 excess를 기록하며, 뒤에서 이것이 virtual dimension $-1$의 유도 올곱임을 본다. ([예시 18](#ex18)에서 같은 현상을 곡선 차원에서 다시 만난다.)
 :::
 
 ## Derived stack
@@ -105,19 +105,19 @@ $$F(R)\overset{\sim}{\longrightarrow}\lim_{[n]\in \Delta}F(R_n)$$
 Yoneda embedding $X\mapsto \operatorname{Map}_{\mathrm{dSch}}(-,X)\vert_{\mathrm{dAff}}$은 완전 충실한 포함 $\mathrm{dSch}\hookrightarrow \mathrm{dSt}$을 주며, derived scheme과 (뒤에서 정의할) geometric derived stack에 대하여 truncation functor $t_0$이 이들의 밑에 깔린 고전적 scheme·algebraic stack을 준다. 특히 고전적 algebraic stack은 discrete ring 위에서 truncated groupoid값을 갖는 derived stack으로서 $\mathrm{dSt}$에 완전 충실하게 들어간다.
 :::
 ::: 증명
-점functor가 étale hyperdescent를 만족함은 [명제 2](#prop2)의 localization이 étale localization으로 확장되고 fpqc 하강이 étale 하강을 함의하기 때문이며, 이는 [\[Stacks\] §Grothendieck 위상과 site, ⁋정리 17](/ko/math/stacks/grothendieck_topology#thm17)의 유도 판본이다. 완전 충실성은 Yoneda 보조정리의 $\infty$-범주 판본에서 나온다. ([\[스킴\] §점함자, ⁋정리 1](/ko/math/scheme_theory/functor_of_points#thm1)의 space값 승격) 고전적 algebraic stack $\mathcal{X}$을 derived stack으로 보려면, 그 functor를 discrete ring에 제한하고 groupoid를 $1$-truncated space로 보면 되며, hyperdescent가 $1$-truncated sheaf에서 통상적 stack 하강으로 환원됨을 확인하면 된다. ([\[Stacks\] §대수적 stack과 quotient stack, ⁋정의 6](/ko/math/stacks/algebraic_stacks#def6)) 자세한 논증은 ([TV], [Lur, SAG])에 있다.
+점functor가 étale hyperdescent를 만족함은 [명제 2](#prop2)의 localization이 étale localization으로 확장되고 fpqc 하강이 étale 하강을 함의하기 때문이며, 이는 [\[Stacks\] §Grothendieck 위상과 site, ⁋정리 17](/ko/math/stacks/grothendieck_topology#thm17)의 유도 판본이다. 완전 충실성은 Yoneda 보조정리의 $\infty$-범주 판본에서 나온다. ([\[스킴\] §점함자, ⁋정리 1](/ko/math/scheme_theory/functor_of_points#thm1)의 space값 승격) 고전적 algebraic stack $\mathcal{X}$을 derived stack으로 보려면, 그 functor를 discrete ring에 제한하고 groupoid를 $1$-truncated space로 보면 되며, hyperdescent가 $1$-truncated sheaf에서 통상적 stack 하강으로 환원됨을 확인하면 된다. ([\[Stacks\] §Algebraic stack과 quotient stack, ⁋정의 6](/ko/math/stacks/algebraic_stacks#def6)) 자세한 논증은 ([TV], [Lur, SAG])에 있다.
 :::
 
 Derived stack 가운데 기하를 논할 수 있는 부류는 고전적 경우와 마찬가지로 atlas로 가려낸다. 다만 atlas의 source가 derived scheme이고, 차원·매끄러움은 유도 판본으로 읽는다.
 
 ::: 정의 8
-Derived stack $\mathcal{X}$이 *geometric* (또는 *derived Artin stack<sub>유도 아틴 스택</sub>*)이라는 것은, 그 대각선이 representable하고, derived scheme $U$으로부터의 smooth 전사 morphism $u:U\rightarrow \mathcal{X}$, 곧 *atlas*가 존재하는 것을 뜻한다. Atlas를 étale 전사로 잡을 수 있으면 $\mathcal{X}$을 *derived Deligne–Mumford stack*이라 부른다.
+Derived stack $\mathcal{X}$이 *geometric* (또는 *derived Artin stack<sub>유도 아틴 스택</sub>*)이라는 것은, 그 대각선이 representable하고, derived scheme $U$으로부터의 smooth surjective morphism $u:U\rightarrow \mathcal{X}$, 곧 *atlas*가 존재하는 것을 뜻한다. Atlas를 étale 전사로 잡을 수 있으면 $\mathcal{X}$을 *derived Deligne–Mumford stack*이라 부른다.
 :::
 
-이는 고전적 algebraic stack의 정의를 derived scheme을 국소 모형으로 삼아 옮긴 것이다. ([\[Stacks\] §대수적 stack과 quotient stack, ⁋정의 6](/ko/math/stacks/algebraic_stacks#def6)) 여기서 morphism $u:U\rightarrow \mathcal{X}$의 smooth·étale 성질은 뒤에서 여접 복합체로 특징짓는데, 곧 상대 여접 복합체 $L_u$이 degree $0$에 집중된 국소자유 sheaf인 경우가 smooth이다. Atlas가 있으면 $\mathcal{X}$의 truncation $t_0(\mathcal{X})$은 atlas의 truncation $t_0(U)$을 atlas로 갖는 고전적 algebraic stack이 되어, geometric derived stack이 고전적 algebraic stack 위에 얹힌 유도 두께임이 다시 확인된다. 가장 기본적인 예는 고전적 stack 자체가 discrete derived stack으로 들어앉는 경우이다.
+이는 고전적 algebraic stack의 정의를 derived scheme을 국소 모형으로 삼아 옮긴 것이다. ([\[Stacks\] §Algebraic stack과 quotient stack, ⁋정의 6](/ko/math/stacks/algebraic_stacks#def6)) 여기서 morphism $u:U\rightarrow \mathcal{X}$의 smooth·étale 성질은 뒤에서 여접 복합체로 특징짓는데, 곧 상대 여접 복합체 $L_u$이 degree $0$에 집중된 국소자유 sheaf인 경우가 smooth이다. Atlas가 있으면 $\mathcal{X}$의 truncation $t_0(\mathcal{X})$은 atlas의 truncation $t_0(U)$을 atlas로 갖는 고전적 algebraic stack이 되어, geometric derived stack이 고전적 algebraic stack 위에 얹힌 유도 두께임이 다시 확인된다. 가장 기본적인 예는 고전적 stack 자체가 discrete derived stack으로 들어앉는 경우이다.
 
 ::: 예시 9 (분류 stack $\mathbf{B}G$)
-$G$을 $k$ 위의 smooth affine group scheme이라 하자. Derived stack $\mathbf{B}G$을, animated ring $R$에 $\Spec \pi_0(R)$ 위의 $G$-torsor들의 groupoid를 대응시키는 functor로 정의한다. $G$이 smooth하므로 그 atlas $\Spec k\rightarrow \mathbf{B}G$은 smooth 전사이고, 그 base change는 $G\rightrightarrows \Spec k$이라 $\mathbf{B}G$은 geometric derived stack이다. 이 경우 구조가 discrete ring 위에서 정해지므로 $\mathbf{B}G$은 사실 고전적 algebraic stack $\mathbf{B}G$과 같고 ([\[Stacks\] §대수적 stack과 quotient stack, ⁋정의 8](/ko/math/stacks/algebraic_stacks#def8)에서 $X=\Spec k$인 quotient stack), $t_0(\mathbf{B}G)=\mathbf{B}G$은 자기 자신이다. 곧 순전히 stack 방향의 대칭(automorphism $G$)만으로는 유도 두께가 생기지 않는다. 유도 정보는 대신 $G$이 작용하는 대상 쪽에서, 예컨대 $G$-action을 받는 derived scheme의 유도 올곱을 quotient한 $[Z/G]$에서 나타난다. 이러한 유도 올곱을 다음 두 절에서 다룬다.
+$G$을 $k$ 위의 smooth affine group scheme이라 하자. Derived stack $\mathbf{B}G$을, animated ring $R$에 $\Spec \pi_0(R)$ 위의 $G$-torsor들의 groupoid를 대응시키는 functor로 정의한다. $G$이 smooth하므로 그 atlas $\Spec k\rightarrow \mathbf{B}G$은 smooth 전사이고, 그 base change는 $G\rightrightarrows \Spec k$이라 $\mathbf{B}G$은 geometric derived stack이다. 이 경우 구조가 discrete ring 위에서 정해지므로 $\mathbf{B}G$은 사실 고전적 algebraic stack $\mathbf{B}G$과 같고 ([\[Stacks\] §Algebraic stack과 quotient stack, ⁋정의 8](/ko/math/stacks/algebraic_stacks#def8)에서 $X=\Spec k$인 quotient stack), $t_0(\mathbf{B}G)=\mathbf{B}G$은 자기 자신이다. 곧 순전히 stack 방향의 대칭(automorphism $G$)만으로는 유도 두께가 생기지 않는다. 유도 정보는 대신 $G$이 작용하는 대상 쪽에서, 예컨대 $G$-action을 받는 derived scheme의 유도 올곱을 quotient한 $[Z/G]$에서 나타난다. 이러한 유도 올곱을 다음 두 절에서 다룬다.
 :::
 
 ## 여접 복합체와 접복합체
@@ -125,7 +125,7 @@ $G$을 $k$ 위의 smooth affine group scheme이라 하자. Derived stack $\mathb
 Derived scheme과 derived stack 위에서 미분 기하를 하려면, 각 affine 조각에서 이미 세운 여접 복합체 $L_{R/k}$을 대역적 대상으로 이어붙여야 한다. ([§Simplicial 가환환과 animation, ⁋정의 10](/ko/math/derived_algebraic_geometry/animated_rings#def10)) 여접 복합체는 localization과 étale morphism에 대하여 잘 행동하므로 이 접착은 곧바로 가능하다.
 
 ::: 정의 10
-Derived scheme의 morphism $f:X\rightarrow Y$에 대하여, 각 affine 조각 $\Spec R\subseteq X$이 $\Spec S\subseteq Y$ 위로 갈 때의 여접 복합체 $L_{R/S}$을 이어붙여 얻는 $\mathcal{O}_X$-module의 sheaf를 $f$의 *상대 여접 복합체<sub>relative cotangent complex</sub>* $L_f=L_{X/Y}\in \QCoh(X)$이라 한다. $Y=\Spec k$일 때 이를 $X$의 *절대 여접 복합체* $L_X=L_{X/k}$이라 적는다. $L_X$의 $\mathcal{O}_X$-쌍대
+Derived scheme의 morphism $f:X\rightarrow Y$에 대하여, 각 affine slice $\Spec R\subseteq X$이 $\Spec S\subseteq Y$ 위로 갈 때의 여접 복합체 $L_{R/S}$을 이어붙여 얻는 $\mathcal{O}_X$-module의 sheaf를 $f$의 *상대 여접 복합체<sub>relative cotangent complex</sub>* $L_f=L_{X/Y}\in \QCoh(X)$이라 한다. $Y=\Spec k$일 때 이를 $X$의 *절대 여접 복합체* $L_X=L_{X/k}$이라 적는다. $L_X$의 $\mathcal{O}_X$-쌍대
 
 $$T_X=L_X^\vee=\mathcal{R}\mathcal{H}om_{\mathcal{O}_X}(L_X,\mathcal{O}_X)$$
 
@@ -151,7 +151,7 @@ $$f^\ast L_{Y/Z}\longrightarrow L_{X/Z}\longrightarrow L_{X/Y}\longrightarrow f^
 
 추이 삼각형과 base change는 여접 복합체를 계산 가능한 대상으로 만들며, 특히 base change invariance는 유도 올곱 위의 여접 복합체가 원래 morphism의 여접 복합체를 그대로 물려받음을 말한다. 이 두 성질이 다음 절에서 quasi-smooth morphism이 유도 올곱에 대하여 닫혀 있음을 보장한다.
 
-## Quasi-smooth 사상과 virtual 차원
+## Quasi-smooth 사상과 virtual dimension
 
 Smooth morphism은 여접 복합체가 degree $0$의 국소자유 sheaf인 경우였다. ([§Simplicial 가환환과 animation, ⁋명제 14](/ko/math/derived_algebraic_geometry/animated_rings#prop14)) 이를 degree $1$까지 허용하여 한 단계 넓힌 것이 quasi-smooth morphism이며, derived algebraic geometry에서 virtual 구조를 나르는 morphism의 부류가 정확히 이것이다.
 
@@ -164,10 +164,10 @@ $$L_f\simeq\bigl[E_1\longrightarrow E_0\bigr],\qquad E_0\text{ (degree }0),\quad
 
 $$\operatorname{vdim}(f)=\rank E_0-\rank E_1$$
 
-으로 정의하고, $X$이 $\Spec k$ 위에서 quasi-smooth할 때 $\operatorname{vdim}(X)=\operatorname{vdim}(X/k)$을 $X$의 *virtual 차원*이라 부른다.
+으로 정의하고, $X$이 $\Spec k$ 위에서 quasi-smooth할 때 $\operatorname{vdim}(X)=\operatorname{vdim}(X/k)$을 $X$의 *virtual dimension*이라 부른다.
 :::
 
-Tor-amplitude $[-1,0]$은 cohomological 규약의 표현이며, 우리가 쓰는 connective(homological) 규약에서는 $L_f$이 degree $0,1$의 두 항에 집중됨을 뜻한다. Degree $0$의 $E_0$은 smooth 접방향, 곧 Kähler 미분에 해당하고, degree $1$의 $E_1$은 conormal 방향, 곧 방정식이 만드는 장애에 해당한다. 이 degree $1$ 방향이 변형이론에서 변형의 연장을 막는 장애가 사는 자리이며, quasi-smooth morphism은 그 장애가 여접 복합체 한 단계 안에 완전히 담기는 morphism이다. ([§변형이론과 여접 복합체, ⁋정리 9](/ko/math/derived_algebraic_geometry/deformation_theory#thm9)) 그러므로 $\operatorname{vdim}(f)$은 "접방향의 수에서 방정식의 수를 뺀 것"으로, 고전적 codimension 계산의 유도 판본이다. 이 정의가 실제로 무엇을 재는지는 고전적 lci 및 regular embedding과의 관계에서 분명해진다.
+Tor-amplitude $[-1,0]$은 cohomological 규약의 표현이며, 우리가 쓰는 connective(homological) 규약에서는 $L_f$이 degree $0,1$의 두 항에 집중됨을 뜻한다. Degree $0$의 $E_0$은 smooth 접방향, 곧 Kähler differential에 해당하고, degree $1$의 $E_1$은 conormal orientation, 곧 방정식이 만드는 장애에 해당한다. 이 degree $1$ 방향이 변형이론에서 변형의 연장을 막는 장애가 사는 자리이며, quasi-smooth morphism은 그 장애가 여접 복합체 한 단계 안에 완전히 담기는 morphism이다. ([§변형이론과 여접 복합체, ⁋정리 9](/ko/math/derived_algebraic_geometry/deformation_theory#thm9)) 그러므로 $\operatorname{vdim}(f)$은 "접방향의 수에서 방정식의 수를 뺀 것"으로, 고전적 codimension 계산의 유도 판본이다. 이 정의가 실제로 무엇을 재는지는 고전적 lci 및 regular embedding과의 관계에서 분명해진다.
 
 ::: 명제 13
 $f:X\rightarrow Y$을 derived scheme의 morphism이라 하자.
@@ -234,7 +234,7 @@ $$i_p(X,Y)=\sum_{n\geq0}(-1)^n\operatorname{length}\pi_n(\mathcal{O}_{W,p})=\sum
 ::: 증명
 **(1)** $\pi_0$이 유도 tensor product를 고전적 tensor product로 truncate하므로 ([§Simplicial 가환환과 animation, ⁋명제 8](/ko/math/derived_algebraic_geometry/animated_rings#prop8)) $\pi_0\mathcal{O}_W=B\otimes_AC$이고, $t_0$이 $\pi_0$-sheaf만 보므로 $t_0(W)$이 고전적 올곱이다. Higher homotopy $\pi_n\mathcal{O}_W=\Tor_n^A(B,C)$도 같은 명제이다.
 
-**(2)** Quasi-smooth의 base change 안정성과 virtual 상대차원 보존은 [명제 13](#prop13)의 셋째 항이다. $X,Y$이 smooth $Z$-scheme(closed embedding)이면 $f$의 상대 여접 복합체는 conormal 방향 $N_{X/Z}^\vee[1]$과 접방향의 조합이 되어 $\operatorname{vdim}(f)=d_X-d_Z$이고, base change로 $\operatorname{vdim}(W/Y)=d_X-d_Z$, 따라서 $\operatorname{vdim}(W)=d_Y+(d_X-d_Z)$이다.
+**(2)** Quasi-smooth의 base change 안정성과 virtual 상대차원 보존은 [명제 13](#prop13)의 셋째 항이다. $X,Y$이 smooth $Z$-scheme(closed embedding)이면 $f$의 상대 여접 복합체는 conormal orientation $N_{X/Z}^\vee[1]$과 접방향의 조합이 되어 $\operatorname{vdim}(f)=d_X-d_Z$이고, base change로 $\operatorname{vdim}(W/Y)=d_X-d_Z$, 따라서 $\operatorname{vdim}(W)=d_Y+(d_X-d_Z)$이다.
 
 **(3)** $W$이 quasi-smooth이므로 그 여접 복합체의 절단이 $t_0(W)$ 위에 perfect obstruction 이론 $L_W\vert_{t_0(W)}\rightarrow L_{t_0(W)}$을 주고, 이 자료로부터 intrinsic normal cone을 obstruction 다발의 전체 공간 안으로 끊어 virtual fundamental class $[W]^{\mathrm{vir}}$을 얻는다. $Z$이 smooth이고 교차가 proper이면 이 class의 pushforward가 교차곱의 정의와 일치함은 deformation to the normal cone과 대조하여 나온다. ([\[대수다양체\] §교차곱, ⁋정의 1](/ko/math/algebraic_varieties/intersection_product#def1)) isolated point $p$에서는 $[W]^{\mathrm{vir}}$의 길이가 $\mathcal{O}_{W,p}$의 Euler characteristic $\sum(-1)^n\operatorname{length}\pi_n$이고, $\pi_n=\Tor_n^A(B,C)$이므로 Serre의 Tor 공식과 일치한다. 완전한 논증은 ([TV], [Kha])에 있다.
 :::
@@ -259,7 +259,7 @@ $$\pi_n\mathcal{O}_{\mathcal{L}X}\cong\Omega_X^n$$
 
 $$Z=\{0\}\times_{\mathbb{A}^1}^h\{0\}=\Spec\bigl(k\otimes_{k[\x]}^{\mathbb{L}}k\bigr)$$
 
-은 [명제 15](#prop15)에 의하여 virtual 차원
+은 [명제 15](#prop15)에 의하여 virtual dimension
 
 $$\operatorname{vdim}(Z)=0+0-1=-1$$
 
@@ -286,16 +286,16 @@ $$V\times_{\mathbb{A}^2}^hW=\Spec\bigl(k[\x,\y]/(\y)\otimes_{k[\x,\y]}^{\mathbb{
 
 $$\pi_0=k[\x]/(\x^2)\quad(\text{length }2),\qquad \pi_n=0\quad(n\geq1)$$
 
-이다. 곧 [명제 15](#prop15)에 따라 $V\times_{\mathbb{A}^2}^hW$은 virtual 차원 $1+1-2=0$의 quasi-smooth derived scheme이고, higher homotopy가 없어 유도 교차가 고전적 교차 $\Spec k[\x]/(\x^2)$과 일치하며, 그 virtual class의 길이 $2$가 접촉 중복도 $2$를 정확히 준다. 비횡단적이지만 두 곡선이 공통 성분을 갖지 않아 proper하게 만나는 이 상황에서는, 초과 정보가 higher homotopy가 아니라 $\pi_0$의 nilpotent 두께로 나타난다.
+이다. 곧 [명제 15](#prop15)에 따라 $V\times_{\mathbb{A}^2}^hW$은 virtual dimension $1+1-2=0$의 quasi-smooth derived scheme이고, higher homotopy가 없어 유도 교차가 고전적 교차 $\Spec k[\x]/(\x^2)$과 일치하며, 그 virtual class의 길이 $2$가 접촉 중복도 $2$를 정확히 준다. 비횡단적이지만 두 곡선이 공통 성분을 갖지 않아 proper하게 만나는 이 상황에서는, 초과 정보가 higher homotopy가 아니라 $\pi_0$의 nilpotent 두께로 나타난다.
 
 반면 두 곡선이 아예 겹치는 자기교차 $V\times_{\mathbb{A}^2}^hV$에서는 초과분이 higher homotopy로 옮겨간다. $V$을 자르는 방정식 $\y$이 $k[\x]$ 위에서 $0$으로 내려오므로, Koszul 계산이
 
 $$\pi_0=k[\x]=\mathcal{O}_V,\qquad \pi_1=k[\x]\cong N_{V/\mathbb{A}^2}\quad(\text{자명 normal bundle}),\qquad \pi_{\geq2}=0$$
 
-을 준다. 이제 $t_0=V$은 차원 $1$이라 virtual 차원 $1+1-2=0$을 초과하며, 그 초과 차원 $1$이 $\pi_1=\mathcal{O}_V$으로 정확히 기록된다. Virtual class는 $[V\times_{\mathbb{A}^2}^hV]^{\mathrm{vir}}=e(N_{V/\mathbb{A}^2})\cap[V]$, 곧 normal bundle의 Euler class인데, $\mathbb{A}^2$ 안에서 $V$의 normal bundle이 자명하여 $e(N_{V/\mathbb{A}^2})=0$이므로 $V\cdot V=0$이다. 이는 곡선이 affine 평면 안에서 자기 자신으로부터 자유롭게 이동할 수 있어 self-intersection number가 $0$이라는 고전적 사실의 유도적 실현이며, [예시 5](#ex5)의 점 차원 현상이 곡선 차원에서 반복된 것이다.
+을 준다. 이제 $t_0=V$은 차원 $1$이라 virtual dimension $1+1-2=0$을 초과하며, 그 초과 차원 $1$이 $\pi_1=\mathcal{O}_V$으로 정확히 기록된다. Virtual class는 $[V\times_{\mathbb{A}^2}^hV]^{\mathrm{vir}}=e(N_{V/\mathbb{A}^2})\cap[V]$, 곧 normal bundle의 Euler class인데, $\mathbb{A}^2$ 안에서 $V$의 normal bundle이 자명하여 $e(N_{V/\mathbb{A}^2})=0$이므로 $V\cdot V=0$이다. 이는 곡선이 affine 평면 안에서 자기 자신으로부터 자유롭게 이동할 수 있어 self-intersection number가 $0$이라는 고전적 사실의 유도적 실현이며, [예시 5](#ex5)의 점 차원 현상이 곡선 차원에서 반복된 것이다.
 :::
 
-이 세 예시는 유도 올곱이 세 가지 초과 현상을 하나의 언어로 붙듦을 보여준다. [예시 5](#ex5)의 낮은 차원에서의 음의 virtual 차원, [예시 17](#ex17)의 regular sequence 실패가 낳는 higher homotopy, 그리고 [예시 18](#ex18)의 자기교차의 초과 차원이 그것이다. 고전적 올곱이 $\pi_0$만 보아 이 정보들을 잃던 자리에서, animated ring을 이어붙여 세운 derived scheme과 그 위의 유도 올곱은 virtual 차원과 virtual class를 통해 교차의 참된 기하를 복원한다. 이것이 derived algebraic geometry가 고전 intersection theory에 주는 가장 직접적인 기여이다.
+이 세 예시는 유도 올곱이 세 가지 초과 현상을 하나의 언어로 붙듦을 보여준다. [예시 5](#ex5)의 낮은 차원에서의 음의 virtual dimension, [예시 17](#ex17)의 regular sequence 실패가 낳는 higher homotopy, 그리고 [예시 18](#ex18)의 자기교차의 초과 차원이 그것이다. 고전적 올곱이 $\pi_0$만 보아 이 정보들을 잃던 자리에서, animated ring을 이어붙여 세운 derived scheme과 그 위의 유도 올곱은 virtual 차원과 virtual class를 통해 교차의 참된 기하를 복원한다. 이것이 derived algebraic geometry가 고전 intersection theory에 주는 가장 직접적인 기여이다.
 
 ---
 

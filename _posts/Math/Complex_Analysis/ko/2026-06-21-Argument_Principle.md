@@ -14,7 +14,7 @@ weight: 10
 published: false
 ---
 
-Holomorphic function의 영점은 고립되어 유한 order를 가지며 ([§영점과 일치정리, ⁋명제 2](/ko/math/complex_analysis/zeros_and_identity_theorem#prop2)), 유리형함수의 극 역시 유한 order를 가진다 ([§고립특이점과 Laurent 급수, ⁋명제 6](/ko/math/complex_analysis/isolated_singularities#prop6)). 한 영역 안에서 이러한 영점과 극이 각각 몇 개나 있는지를 세는 일은 함수의 거동을 파악하는 데 핵심적이지만, 영점과 극의 위치를 일일이 찾지 않고 그 개수만을 알아내는 길이 있다면 훨씬 강력하다. 편각원리는 바로 그 길을 연다. 대수적 미분 $f'/f$을 closed 경로를 따라 적분하면, 그 값이 경로 안의 영점 수에서 극 수를 뺀 것을 정확히 세어 준다. 이 양은 동시에 상곡선 $f \circ \gamma$이 원점을 감는 횟수, 곧 편각의 총 증가량으로도 읽히므로 위상적 의미를 가진다. 편각원리는 그 자체로 영점·극의 계수를 주는 동시에, 함수를 작게 섭동해도 영점 수가 변하지 않는다는 Rouché 정리를 낳고, 거기서 다시 비상수 holomorphic function이 열린집합을 열린집합으로 보낸다는 open mapping 정리와 단사 holomorphic function의 역의 holomorphicity가 흘러나온다. 이 글은 유수정리를 출발점으로 삼아 이 일련의 결과를 차례로 확립한다.
+Holomorphic function의 영점은 고립되어 finite order를 가지며 ([§영점과 일치정리, ⁋명제 2](/ko/math/complex_analysis/zeros_and_identity_theorem#prop2)), 유리형함수의 극 역시 finite order를 가진다 ([§고립특이점과 Laurent 급수, ⁋명제 6](/ko/math/complex_analysis/isolated_singularities#prop6)). 한 영역 안에서 이러한 영점과 극이 각각 몇 개나 있는지를 세는 일은 함수의 거동을 파악하는 데 핵심적이지만, 영점과 극의 위치를 일일이 찾지 않고 그 개수만을 알아내는 길이 있다면 훨씬 강력하다. 편각원리는 바로 그 길을 연다. 대수적 미분 $f'/f$을 closed 경로를 따라 적분하면, 그 값이 경로 안의 영점 수에서 극 수를 뺀 것을 정확히 세어 준다. 이 양은 동시에 상곡선 $f \circ \gamma$이 원점을 감는 횟수, 곧 편각의 총 증가량으로도 읽히므로 위상적 의미를 가진다. 편각원리는 그 자체로 영점·극의 계수를 주는 동시에, 함수를 작게 섭동해도 영점 수가 변하지 않는다는 Rouché 정리를 낳고, 거기서 다시 비상수 holomorphic function이 열린집합을 열린집합으로 보낸다는 open mapping 정리와 injective holomorphic function의 역의 holomorphicity가 흘러나온다. 이 글은 유수정리를 출발점으로 삼아 이 일련의 결과를 차례로 확립한다.
 
 ## 유리형함수와 편각원리
 
@@ -173,7 +173,7 @@ $\Omega \subseteq \mathbb{C}$가 connected 열린집합이고 $f$이 $\Omega$에
 :::
 
 ::: 증명
-$U \subseteq \Omega$이 열려 있다고 하고, $w_0 \in f(U)$을 임의로 잡아 $f(U)$이 $w_0$의 한 근방을 포함함을 보이면 된다. $w_0 = f(z_0)$인 $z_0 \in U$을 택한다. $f$이 connected 열린집합 $\Omega$에서 상수가 아니므로, [§영점과 일치정리, ⁋정리 3](/ko/math/complex_analysis/zeros_and_identity_theorem#thm3)에 의해 $f - w_0$은 어떤 근방에서도 항등적으로 $0$이 아니고, 따라서 $z_0$에서 유한한 order $m \geq 1$인 영점을 가진다.
+$U \subseteq \Omega$이 열려 있다고 하고, $w_0 \in f(U)$을 임의로 잡아 $f(U)$이 $w_0$의 한 근방을 포함함을 보이면 된다. $w_0 = f(z_0)$인 $z_0 \in U$을 택한다. $f$이 connected 열린집합 $\Omega$에서 상수가 아니므로, [§영점과 일치정리, ⁋정리 3](/ko/math/complex_analysis/zeros_and_identity_theorem#thm3)에 의해 $f - w_0$은 어떤 근방에서도 항등적으로 $0$이 아니고, 따라서 $z_0$에서 finite order $m \geq 1$인 영점을 가진다.
 
 정리 7을 $f$과 $z_0$에 적용한다. 정리 7이 주는 $\delta > 0$과 $\varepsilon > 0$을, $\overline{D(z_0, \delta)} \subseteq U$이 되도록 $\delta$을 더 줄여 잡을 수 있다 ($U$이 열려 있으므로). 그러면 $0 < \lvert w - w_0\rvert < \varepsilon$인 모든 $w$에 대해 $f(z) = w$인 해가 $D(z_0, \delta) \subseteq U$ 안에 (적어도 하나) 존재하므로 $w \in f(U)$이다. 또 $w = w_0$ 자신도 $f(z_0)$으로서 $f(U)$에 든다. 따라서
 
@@ -182,7 +182,7 @@ $$D(w_0, \varepsilon) \subseteq f(U)$$
 이고, $w_0 \in f(U)$이 임의였으므로 $f(U)$의 모든 점이 interior point이다. 곧 $f(U)$이 열려 있다.
 :::
 
-Open mapping 정리는 holomorphic function의 image가 결코 찌부러질 수 없음을 말한다. 실변수의 smooth 함수는 가령 상수가 아니면서도 image가 한 구간으로 닫혀 있을 수 있지만, 비상수 holomorphic function의 image에는 그런 일이 없어 항상 열린집합으로 퍼진다. 이 정리에서 두 가지 중요한 귀결이 곧장 나온다. 하나는 단사 holomorphic function의 역사상이 자동으로 holomorphic이 된다는 사실이고, 다른 하나는 최대절댓값 원리의 새로운 증명이다. 먼저 역사상의 holomorphicity를 본다.
+Open mapping 정리는 holomorphic function의 image가 결코 찌부러질 수 없음을 말한다. 실변수의 smooth 함수는 가령 상수가 아니면서도 image가 한 구간으로 닫혀 있을 수 있지만, 비상수 holomorphic function의 image에는 그런 일이 없어 항상 열린집합으로 퍼진다. 이 정리에서 두 가지 중요한 귀결이 곧장 나온다. 하나는 injective holomorphic function의 역사상이 자동으로 holomorphic이 된다는 사실이고, 다른 하나는 최대절댓값 원리의 새로운 증명이다. 먼저 역사상의 holomorphicity를 본다.
 
 ::: 따름정리 9 (역사상의 holomorphicity)
 $\Omega \subseteq \mathbb{C}$가 열린집합이고 $f : \Omega \rightarrow \mathbb{C}$이 holomorphic인 단사사상이라 하자. 그러면 image $\Omega' = f(\Omega)$이 열린집합이고, 역사상 $f^{-1} : \Omega' \rightarrow \Omega$이 holomorphic이며 그 도함수는

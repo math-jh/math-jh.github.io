@@ -109,7 +109,7 @@ $$\frac{1}{\lvert h\rvert}\cdot \varepsilon \cdot \mathrm{length}([z, z+h]) = \f
 정리 3은 holomorphicity라는 미분 조건을, 적분의 경로 독립성을 보장하는 원시함수의 존재로 번역한다. 그 다리가 바로 Goursat 정리이며, 원시함수의 차분비가 작은 삼각형 위의 적분으로 표현되고 그 적분이 $0$이라는 사실이 미분가능성을 낳는다. 원시함수가 존재하면 [§복소적분, ⁋따름정리 9](/ko/math/complex_analysis/complex_integration#cor9)에 의해 closed 경로 적분이 곧바로 소멸하므로, 다음 형태의 Cauchy 정리가 따라 나온다.
 
 ::: 따름정리 4 (Cauchy 정리, star-shaped 형태)
-$\Omega \subseteq \mathbb{C}$가 star-shaped 영역이고 $f$가 $\Omega$에서 holomorphic이라 하자. 그러면 자취가 $\Omega$에 들어 있는 임의의 closed piecewise $C^1$ 곡선 $\gamma$에 대하여
+$\Omega \subseteq \mathbb{C}$가 star-shaped 영역이고 $f$가 $\Omega$에서 holomorphic이라 하자. 그러면 자취가 $\Omega$에 들어 있는 임의의 closed piecewise $C^1$ curve $\gamma$에 대하여
 
 $$\oint_\gamma f(z)\dd{z} = 0$$
 
@@ -117,12 +117,12 @@ $$\oint_\gamma f(z)\dd{z} = 0$$
 :::
 
 ::: 증명
-정리 3에 의해 $f$는 $\Omega$에서 원시함수 $F$를 가진다. 자취가 $\Omega$에 들어 있는 closed 곡선 $\gamma$에 대해, [§복소적분, ⁋따름정리 9](/ko/math/complex_analysis/complex_integration#cor9)의 closed 경로 적분 소멸을 적용하면 $\oint_\gamma f\dd{z} = 0$이다.
+정리 3에 의해 $f$는 $\Omega$에서 원시함수 $F$를 가진다. 자취가 $\Omega$에 들어 있는 closed curve $\gamma$에 대해, [§복소적분, ⁋따름정리 9](/ko/math/complex_analysis/complex_integration#cor9)의 closed 경로 적분 소멸을 적용하면 $\oint_\gamma f\dd{z} = 0$이다.
 :::
 
 따름정리 4는 closed 곡선의 모양에 아무런 제약을 두지 않는다. 영역이 star-shaped이기만 하면, 그 안의 어떤 복잡한 closed 경로를 따라 holomorphic function을 적분해도 결과가 $0$이다. 가령 열린 원판 위에서 holomorphic인 함수는 그 원판 안의 어떤 closed 경로에서도 적분이 소멸한다. 다만 이 결론은 영역의 star-shapedness에 결정적으로 기댄다. $1/z$은 $\mathbb{C}\setminus\{0\}$에서 holomorphic이지만 이 영역이 star-shaped가 아니므로 정리가 적용되지 않고, 실제로 원점을 감는 원에서의 적분이 $2\pi i \neq 0$이다. 영역의 어떤 위상적 성질이 star-shapedness를 대신할 수 있는가가 다음 절의 물음이다.
 
-## Homotopy 불변성
+## Homotopy invariance
 
 따름정리 4의 star-shaped 조건은 영역의 *모양*에 대한 구체적 요구라 다루기 번거롭다. 더 본질적인 조건은 위상적인 것으로, 두 경로가 영역 안에서 서로 연속적으로 변형될 수 있는가, 그리고 closed 경로가 영역 안에서 한 점으로 수축될 수 있는가이다. 이 변형 가능성을 homotopy로 정식화하면, holomorphic function의 적분이 경로의 연속적 변형에 무관함을 보일 수 있다. 먼저 같은 끝점을 갖는 두 경로 사이의 homotopy를 정의한다.
 
@@ -175,7 +175,7 @@ Null-homotopic한 closed 곡선의 경우, closed 곡선에 대한 homotopy를 �
 단순연결 영역은 직관적으로 "구멍이 없는" 영역으로, 그 안의 어떤 고리도 영역을 벗어나지 않고 졸라매어 점으로 만들 수 있다. Star-shaped 영역은 모두 단순연결이며, 따라서 열린 원판이나 평면 전체, 반평면이 단순연결의 예이다. 반면 원점을 뺀 평면이나 환형 영역(annulus)은 구멍을 감는 고리가 수축되지 못하므로 단순연결이 아니다. 정리 6을 이 정의에 적용하면 Cauchy 정리의 가장 표준적인 형태가 나온다.
 
 ::: 따름정리 8 (Cauchy 정리, 단순연결 형태)
-$\Omega \subseteq \mathbb{C}$가 단순연결 영역이고 $f$가 $\Omega$에서 holomorphic이라 하자. 그러면 자취가 $\Omega$에 들어 있는 임의의 closed piecewise $C^1$ 곡선 $\gamma$에 대하여
+$\Omega \subseteq \mathbb{C}$가 단순연결 영역이고 $f$가 $\Omega$에서 holomorphic이라 하자. 그러면 자취가 $\Omega$에 들어 있는 임의의 closed piecewise $C^1$ curve $\gamma$에 대하여
 
 $$\oint_\gamma f(z)\dd{z} = 0$$
 
@@ -183,7 +183,7 @@ $$\oint_\gamma f(z)\dd{z} = 0$$
 :::
 
 ::: 증명
-$\Omega$가 단순연결이므로 자취가 $\Omega$에 들어 있는 임의의 closed 곡선 $\gamma$는 $\Omega$ 안에서 null-homotopic하고, 정리 6에 의해 $\oint_\gamma f\dd{z} = 0$이다. 모든 closed 경로에서 적분이 소멸하므로 적분이 경로에 무관하며, 기준점 $z_0 \in \Omega$를 하나 고정하고 $z_0$에서 $z$까지 자취가 $\Omega$에 든 임의의 곡선을 따라 $F(z) = \int f\dd{\zeta}$로 정의하면 (영역은 연결되어 있어 경로가 존재하고, 경로 독립성으로 값이 잘 정의된다) 정리 3의 증명과 같은 국소 논증으로 $F' = f$임이 따라 나와 $F$가 원시함수이다.
+$\Omega$가 단순연결이므로 자취가 $\Omega$에 들어 있는 임의의 closed curve $\gamma$는 $\Omega$ 안에서 null-homotopic하고, 정리 6에 의해 $\oint_\gamma f\dd{z} = 0$이다. 모든 closed 경로에서 적분이 소멸하므로 적분이 경로에 무관하며, 기준점 $z_0 \in \Omega$를 하나 고정하고 $z_0$에서 $z$까지 자취가 $\Omega$에 든 임의의 곡선을 따라 $F(z) = \int f\dd{\zeta}$로 정의하면 (영역은 연결되어 있어 경로가 존재하고, 경로 독립성으로 값이 잘 정의된다) 정리 3의 증명과 같은 국소 논증으로 $F' = f$임이 따라 나와 $F$가 원시함수이다.
 :::
 
 따름정리 8은 영역의 위상만으로 holomorphic function의 적분 거동을 완전히 결정한다. 단순연결이라는 전역적 조건과 holomorphicity라는 국소적 조건이 만나면, 경로의 형태와 무관하게 닫힌 적분이 소멸하고 원시함수가 전역적으로 존재한다. 이는 정리 3의 star-shaped 가정을 위상적으로 가장 약화한 형태이며, 가령 단순연결 영역에서는 $0$이 아닌 holomorphic function이 로그와 거듭제곱근을 단일하게 정의받는 등 여러 전역적 구성을 가능하게 한다. 단순연결이 아닌 영역에서 적분이 얼마나 어긋나는지는 closed 경로가 구멍을 감는 횟수로 측정되며, 이를 재는 양이 회전수이다.

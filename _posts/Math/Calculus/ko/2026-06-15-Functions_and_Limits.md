@@ -10,6 +10,8 @@ sidebar:
 
 date: 2026-06-15
 weight: 1
+published: false
+revising: true
 
 drift_needed: true
 
@@ -214,7 +216,9 @@ $$\frac{1}{2}\sin x \leq \frac{1}{2}x \leq \frac{1}{2}\tan x$$
 
 $$\cos x \leq \frac{\sin x}{x} \leq 1$$
 
-임을 안다. 우리의 주장은 $\cos x \rightarrow 1$이라는 것이다. 이를 위해 삼각함수의 반각공식과 위에서 얻은 $\sin(x/2) \leq x/2$를 쓰면
+임을 안다. 이 부등식은 $0 < x < \pi/2$에서 얻은 것이지만, $\cos(-x) = \cos x$이고 $\sin(-x)/(-x) = (\sin x)/x$이므로 $-\pi/2 < x < 0$에서도 그대로 성립하며, 따라서 $0 < \lvert x\rvert < \pi/2$ 전체에서 성립한다. 한편 위에서 얻은 $\sin x \leq x$ 역시 $\sin(-t) = -\sin t$이므로 $0 < \lvert t\rvert < \pi/2$인 모든 $t$에 대한 부등식 $\lvert \sin t\rvert \leq \lvert t\rvert$로 확장된다.
+
+우리의 주장은 $\cos x \rightarrow 1$이라는 것이다. 이를 위해 삼각함수의 반각공식과 위에서 얻은 $\lvert \sin(x/2)\rvert \leq \lvert x/2\rvert$를 쓰면
 
 $$0 \leq \lvert 1 - \cos x\rvert = \left\lvert2\sin^2\frac{x}{2}\right\rvert \leq 2\left(\frac{x}{2}\right)^2 = \frac{x^2}{2}$$
 
@@ -251,7 +255,7 @@ $$a-\delta < x < a \implies \lvert f(x) - L\rvert < \epsilon$$
 으로 정의하고 $\lim_{x\rightarrow a^-} f(x) = L$로 적는다.
 :::
 
-극한 $\lim_{x\rightarrow a} f(x)$가 존재하는 것은 두 한쪽 극한이 모두 존재하고 서로 같은 것과 동치이다. 가령 $f(x) = \lvert x\rvert/x$는 $x \rightarrow 0^+$에서 $1$, $x \rightarrow 0^-$에서 $-1$로 두 한쪽 극한이 다르므로 $x \rightarrow 0$에서의 극한은 존재하지 않는다. 이렇게 두 한쪽 극한이 유한하지만 서로 다른 점을 함수의 *jump<sub>도약</sub>* 불연속점이라 부른다.
+극한 $\lim_{x\rightarrow a} f(x)$가 존재하는 것은 두 한쪽 극한이 모두 존재하고 서로 같은 것과 동치이다. 가령 $f(x) = \lvert x\rvert/x$는 $x \rightarrow 0^+$에서 $1$, $x \rightarrow 0^-$에서 $-1$로 두 한쪽 극한이 다르므로 $x \rightarrow 0$에서의 극한은 존재하지 않는다. 이렇게 두 한쪽 극한이 유한하지만 서로 다른 점을 함수의 jump discontinuity라 부른다.
 
 ::: 정의 13
 실수 $a$의 삭제된 근방에서 정의된 함수 $f$에 대해, $\lim_{x\rightarrow a} f(x) = \infty$란 임의의 $M > 0$에 대해 어떤 $\delta > 0$이 존재하여 $0 < \lvert x-a\rvert < \delta$이면 $f(x) > M$인 것이다. 비슷하게 $\lim_{x\rightarrow a} f(x) = -\infty$란 임의의 $M > 0$에 대해 어떤 $\delta > 0$이 존재하여 $0 < \lvert x-a\rvert < \delta$이면 $f(x) < -M$인 것이다.
@@ -268,7 +272,7 @@ $$x > N\implies\lvert f(x) - L\rvert < \epsilon$$
 
 $$x < N\implies\lvert f(x) - L\rvert < \epsilon$$
 
-이도록 하는 $N$이 존재하는 것이다.
+이도록 하는 $N < N_0$이 존재하는 것이다.
 :::
 
 가령 $\lim_{x\rightarrow\infty}1/x = 0$이고, 유리함수에서는 최고차항이 그 행동을 지배하여 $\lim_{x\rightarrow\infty}(2x^2 + 1)/(3x^2 - x) = 2/3$이다. 이러한 유한 극한 $L$이 존재하면 직선 $y = L$이 그래프의 *수평점근선<sub>horizontal asymptote</sub>*이 된다.

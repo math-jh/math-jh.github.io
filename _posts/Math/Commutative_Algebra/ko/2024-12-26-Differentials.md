@@ -103,7 +103,7 @@ $$\dd{f}=\sum_{s\in S}\frac{\partial f}{\partial \x_s}\dd{\x_s}$$
 
 이 주어졌다 하고, $\rho$와 $\rho'$를 통해 $E, E'$를 각각 $A$-algebra와 $A'$-algebra로 보자. 그럼 다음의 diagram
 
-{% diagram Math/Commutative_Algebra/Differentials-2.svg width="11.39em" alt="functoriality" %}
+{% diagram Math/Commutative_Algebra/Differentials-2.svg width="11.54em" alt="functoriality" %}
 
 을 commute하게 하는 유일한 $E$-linear map $\Omega_{\varphi/\phi}:\Omega_{E/A} \rightarrow \Omega_{E'/A'}$이 존재한다.
 :::
@@ -135,7 +135,7 @@ $$\Omega_{\varphi/\id_A}':\Omega_{E/A}\otimes_ES^{-1}E \longrightarrow \Omega_{S
 
 $$\varphi^\ast:\Der_A(S^{-1}E, M) \longrightarrow \Der_A(E, M)$$
 
-이 bijection임을 보인다. $M$이 $S^{-1}E$-module이므로 $S$의 원소들은 $M$ 위에서 가역인 action을 주며, 아래에서 $M$의 원소를 $S$의 원소로 나누는 것은 이 action의 역을 뜻한다.
+이 bijection임을 보인다. $M$이 $S^{-1}E$-module이므로 $S$의 원소들은 $M$ 위에서 invertible action을 주며, 아래에서 $M$의 원소를 $S$의 원소로 나누는 것은 이 action의 역을 뜻한다.
 
 $D\in\Der_A(S^{-1}E, M)$와 $x\in E$, $s\in S$에 대하여 $x=s(x/s)$에 Leibniz 법칙을 적용하면 $D(x)=sD(x/s)+(x/s)D(s)$이므로
 
@@ -153,7 +153,11 @@ $$tD(x)+xD(t)=sD(y)+yD(s)$$
 
 $$\bigl(D(x)-(x/s)D(s)\bigr)/s=\bigl(D(y)-(y/t)D(t)\bigr)/t$$
 
-와 같은 것이며, 따라서 $\widetilde D$는 well-defined이다. 이것이 $A$-linear라는 것은 정의에서 바로 따라나오고, Leibniz 법칙은
+와 같은 것이며, 따라서 $\widetilde D$는 well-defined이다. 이것이 $A$의 원소에 대한 스칼라곱을 보존하는 것은 $D$가 $A$-linear라는 것과 정의식에서 바로 따라나오고, 덧셈의 보존은 $x/s+y/t=(tx+sy)/(st)$에 정의식을 적용한
+
+$$\widetilde D\Bigl(\frac{tx+sy}{st}\Bigr)=\frac{tD(x)+xD(t)+sD(y)+yD(s)}{st}-\Bigl(\frac{x}{s}+\frac{y}{t}\Bigr)\Bigl(\frac{D(s)}{s}+\frac{D(t)}{t}\Bigr)$$
+
+에서 $xD(t)/(st)$와 $yD(s)/(st)$가 상쇄되어 $\widetilde D(x/s)+\widetilde D(y/t)$만 남는 것으로 확인된다. 남은 Leibniz 법칙은
 
 $$\begin{aligned}
 \widetilde D\Bigl(\frac{xy}{st}\Bigr)&=\frac{D(xy)}{st}-\frac{xy}{(st)^2}D(st)\\
@@ -179,7 +183,11 @@ $$\Hom_{S^{-1}E}\bigl(\Omega_{E/A}\otimes_ES^{-1}E, M\bigr)\cong\Hom_E(\Omega_{E
 
 $$\Omega_{\varphi/A}':\Omega_{E/A}\otimes_EE' \rightarrow \Omega_{E'/A}$$
 
-이 된다. 한편, $\varphi:E \rightarrow E'$를 통해 $E'$를 $E$-algebra로 보면 $E'$의 $E$에 대한 Kähler differential module $\Omega_{E'/E}$가 정의되며, 이 때 universal $E$-derivation $d_{E'/E}: E' \rightarrow \Omega_{E'/E}$는 $A$-derivation이기도 하므로 다시 [보조정리 2](#lem2)에 의하여 다음 식
+이 된다. 한편, $\varphi:E \rightarrow E'$를 통해 $E'$를 $E$-algebra로 보면 $E'$의 $E$에 대한 Kähler differential module $\Omega_{E'/E}$가 정의되며, 이 때 universal $E$-derivation $d_{E'/E}: E' \rightarrow \Omega_{E'/E}$는 $A$-derivation이기도 하므로 다시 [보조정리 2](#lem2)에 의하여 $d_{E'/E}=\Omega_\varphi\circ d_{E'/A}$를 만족하는 유일한 $E'$-linear map
+
+$$\Omega_\varphi:\Omega_{E'/A} \rightarrow \Omega_{E'/E}$$
+
+가 존재한다. 즉 $d_{E'/E}$는 다음의 합성
 
 $$E' \overset{d_{E'/A}}{\longrightarrow}\Omega_{E'/A}\overset{\Omega_\varphi}{\longrightarrow}\Omega_{E'/E}$$
 
@@ -376,7 +384,7 @@ $$\operatorname{NL}_{E/A}=\Bigl[E\overline{f}\overset{\bar{d}}{\longrightarrow}E
 
 $$H_0(\operatorname{NL}_{E/A})=\Omega_{E/A}\cong E/(\overline{Df}),\qquad H_1(\operatorname{NL}_{E/A})\cong\ann_E(\overline{Df})$$
 
-이다. 가령 $A=\mathbb{K}$가 characteristic이 $2$가 아닌 field이고 $f=\x^2$이라면 $\overline{Df}=2\overline{\x}$이므로 $H_1\cong\ann_E(2\overline{\x})=(\overline{\x})\neq0$이다. 반면 $f$와 $Df$가 $A[\x]$에서 서로소인 경우, 즉 $f$가 separable polynomial인 경우에는 $\overline{Df}$가 $E$의 unit이 되어 $H_0=H_1=0$이다. 즉 $H_1$은 $\Omega_{E/A}$만으로는 보이지 않는, presentation의 relation들이 갖는 중복도에 대한 정보를 담고 있다.
+이다. 가령 $A=\mathbb{K}$가 characteristic이 $2$가 아닌 field이고 $f=\x^2$이라면 $\overline{Df}=2\overline{\x}$이므로 $H_1\cong\ann_E(2\overline{\x})=(\overline{\x})\neq0$이다. 반면 $f$와 $Df$가 생성하는 ideal이 $A[\x]$ 전체인 경우, 곧 $uf+vDf=1$인 $u,v\in A[\x]$가 존재하는 경우에는 $\overline{Df}$가 $E$의 unit이 되어 $H_0=H_1=0$이다. $A=\mathbb{K}$가 field라면 $A[\x]$가 PID이므로 이 조건은 $f$가 separable polynomial이라는 것과 같다. 즉 $H_1$은 $\Omega_{E/A}$만으로는 보이지 않는, presentation의 relation들이 갖는 중복도에 대한 정보를 담고 있다.
 :::
 
 ::: 참고 16

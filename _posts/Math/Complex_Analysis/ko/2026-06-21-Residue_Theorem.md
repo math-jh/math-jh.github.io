@@ -35,7 +35,7 @@ $$\operatorname{Res}_{z = z_0} f = a_{-1} = \frac{1}{2\pi i}\oint_{\lvert z - z_
 이 되어, 유수가 작은 원을 따른 적분과 직결됨을 곧장 본다. 곧 한 singular point를 반시계방향으로 한 번 감는 작은 원에서의 적분은 정확히 그 점에서의 유수에 $2\pi i$을 곱한 것이다. 유수정리는 이 국소적 관찰을 임의의 closed 경로로 끌어올린다. 경로 안에 여러 singular point가 있으면 각 singular point를 작은 원으로 도려내고, 그 사이의 영역에서 holomorphicity와 Cauchy 정리를 써서 큰 경로의 적분을 작은 원들의 적분 합으로 분해한다.
 
 ::: 정리 2 (유수정리)
-$\Omega \subseteq \mathbb{C}$가 단순연결 영역이고, $z_1, \dots, z_k$이 $\Omega$ 안의 서로 다른 유한개의 점이라 하자. $f$가 $\Omega \setminus \{z_1, \dots, z_k\}$에서 holomorphic이고 각 $z_j$에서 isolated singularity를 가진다고 하자. 그러면 자취가 $\Omega \setminus \{z_1, \dots, z_k\}$에 들어 있는 임의의 closed piecewise $C^1$ 곡선 $\gamma$에 대하여
+$\Omega \subseteq \mathbb{C}$가 단순연결 영역이고, $z_1, \dots, z_k$이 $\Omega$ 안의 서로 다른 유한개의 점이라 하자. $f$가 $\Omega \setminus \{z_1, \dots, z_k\}$에서 holomorphic이고 각 $z_j$에서 isolated singularity를 가진다고 하자. 그러면 자취가 $\Omega \setminus \{z_1, \dots, z_k\}$에 들어 있는 임의의 closed piecewise $C^1$ curve $\gamma$에 대하여
 
 $$\oint_\gamma f(z)\dd{z} = 2\pi i \sum_{j=1}^{k} n(\gamma, z_j)\operatorname{Res}_{z = z_j} f$$
 
@@ -186,7 +186,7 @@ $$\left\lvert \int_{C_R} f(z)e^{iaz}\dd{z}\right\rvert \leq M(R)R\cdot 2\cdot\fr
 
 보조정리 6의 핵심은 $\sin\theta \geq 2\theta/\pi$라는 부등식으로 지수 감소를 끌어내어, 적분 $\int_0^\pi e^{-aR\sin\theta}\dd{\theta}$이 $R$에 반비례하여 작아짐을 보인 데 있다. 이 $1/R$ 인자가 $C_R$의 길이에서 오는 $R$ 인자와 상쇄되어, $\lvert f\rvert$이 단지 $0$으로 가기만 하면 ($\lvert f\rvert \sim 1/R^2$일 필요 없이) 적분이 소멸한다. 덕분에 oscillating integral에서는 degree 조건이 $\deg Q \geq \deg P + 1$로 약화된다. 이를 Fourier 변환형 적분에 적용한다.
 
-::: 예시 7 (Fourier 적분)
+::: 예시 7 (Fourier integral)
 적분 $\int_{-\infty}^{\infty}\cos x/(x^2 + 1)\dd{x}$를 계산한다. $\cos x = \Real(e^{ix})$이므로 복소화하여 $f(z) = e^{iz}/(z^2 + 1)$을 상반평면 반원 경로에서 적분한다. 분모 $z^2 + 1 = (z - i)(z + i)$의 영점 가운데 상반평면에 있는 것은 $z = i$ 하나이고, 이는 단순극이다. 명제 3의 단순극 공식으로
 
 $$\operatorname{Res}_{z = i} f = \frac{e^{iz}}{(z^2 + 1)'}\bigg\rvert_{z = i} = \frac{e^{iz}}{2z}\bigg\rvert_{z = i} = \frac{e^{i\cdot i}}{2i} = \frac{e^{-1}}{2i}$$

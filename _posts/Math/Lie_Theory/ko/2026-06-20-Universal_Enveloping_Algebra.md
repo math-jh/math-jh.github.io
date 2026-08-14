@@ -223,7 +223,7 @@ $$\sum_{\lvert S\rvert=n}\lambda_S x_{i_1^S}\cdots x_{i_n^S}\in U_{n-1}$$
 을 뜻한다. $U_{n-1}$은 길이 $n-1$ 이하의 정렬된 단항식들로 생성되므로, 위 식을 옮기면 길이 $n$인 정렬된 단항식들과 길이 $n-1$ 이하의 정렬된 단항식들 사이의 일차관계가 된다. [정리 9](#thm9)에 의하여 $U(\mathfrak{g})$의 모든 정렬된 단항식은 일차독립이므로, 특히 길이 $n$짜리 계수들 $\lambda_S$는 모두 $0$이어야 한다. 따라서 $\omega$는 각 degree에서 단사이고, 전체로서 동형이다.
 :::
 
-정리 9와 정리 10은 동일한 사실의 두 표현이다. 정렬된 단항식이 $U(\mathfrak{g})$의 기저를 이룬다는 진술은, 여과의 각 층 $U_n/U_{n-1}$이 길이 $n$짜리 정렬 단항식으로 정확히 생성된다는 것이고, 이는 $\gr U(\mathfrak{g})$가 $\S(\mathfrak{g})$와 isomorphic하다는 것과 같다. 어느 형태로 쓰든 본질적인 내용은 commutator 관계 $xy-yx=[x,y]$가 $U(\mathfrak{g})$를 $\S(\mathfrak{g})$보다 "작게" 만들지 않는다는 것이며, 그 증명은 Jacobi identity가 무모순성을 보장하는 데에 의존한다.
+정리 9와 정리 10은 동일한 사실의 두 표현이다. 정렬된 단항식이 $U(\mathfrak{g})$의 기저를 이룬다는 진술은, 여과의 각 층 $U_n/U_{n-1}$이 길이 $n$짜리 정렬 단항식으로 정확히 생성된다는 것이고, 이는 $\gr U(\mathfrak{g})$가 $\S(\mathfrak{g})$와 isomorphic하다는 것과 같다. 어느 형태로 쓰든 본질적인 내용은 commutator relation $xy-yx=[x,y]$가 $U(\mathfrak{g})$를 $\S(\mathfrak{g})$보다 "작게" 만들지 않는다는 것이며, 그 증명은 Jacobi identity가 무모순성을 보장하는 데에 의존한다.
 
 가장 자주 인용되는 따름정리는 $\iota$의 단사성이다. 이는 일견 당연해 보이지만, $U(\mathfrak{g})$가 비자명한 관계로 quotient를 취해 얻어졌으므로 선험적으로 보장되지 않는다.
 

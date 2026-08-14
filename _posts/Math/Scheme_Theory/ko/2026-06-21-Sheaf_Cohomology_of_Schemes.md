@@ -1,6 +1,6 @@
 ---
 title: "스킴의 층 코호몰로지"
-description: '대수다양체 위에서 도입한 층 코호몰로지를 임의의 스킴 위의 준연접층으로 끌어올린다. Abelian sheaf 범주의 유도 함자로서의 정의와 affine 덮개에 대한 Čech 코호몰로지를 다루고, affine scheme 위 준연접층의 소멸 정리로부터 separated scheme 위에서 두 코호몰로지가 일치함을 보인다. 사영공간 위 $$\mathcal{O}(d)$$의 코호몰로지를 재계산하고, Noetherian projective scheme 위 연접층의 유한성과 Serre vanishing을 증명한다. 이어 ample invertible sheaf를 higher cohomology의 소멸로 특징짓는 Serre의 판정법을 얻고, Euler characteristic과 Hilbert polynomial을 도입하여 사영 부분스킴의 degree를 정의한다.'
+description: '대수다양체 위에서 도입한 층 코호몰로지를 임의의 스킴 위의 준연접층으로 끌어올린다. Abelian sheaf 범주의 유도 함자로서의 정의와 affine 덮개에 대한 Čech 코호몰로지를 다루고, affine scheme 위 준연접층의 소멸 정리로부터 separated scheme 위에서 두 코호몰로지가 일치함을 보인다. 사영공간 위 $\mathcal{O}(d)$의 코호몰로지를 재계산하고, Noetherian projective scheme 위 연접층의 유한성과 Serre vanishing을 증명한다. 이어 ample invertible sheaf를 higher cohomology의 소멸로 특징짓는 Serre의 판정법을 얻고, Euler characteristic과 Hilbert polynomial을 도입하여 사영 부분스킴의 degree를 정의한다.'
 excerpt: "Cohomology of quasi-coherent sheaves, Serre vanishing, the cohomological criterion for ampleness, and Hilbert polynomials"
 
 categories: [Math / Scheme Theory]
@@ -10,6 +10,8 @@ sidebar:
 
 date: 2026-06-21
 weight: 18
+published: false
+revising: true
 
 drift_needed: true
 
@@ -76,11 +78,11 @@ $$H^i(\Spec A, \widetilde M)\cong H^i\bigl(\Gamma(\Spec A, \widetilde{I^\bullet}
 
 을 얻는다. 여기에서 두 번째 등식은 associated sheaf의 global section이 원래의 module이라는 것에서 따라오며 ([§준연접층, ⁋정의 4](/ko/math/scheme_theory/quasicoherent_sheaves#def4)), $M \rightarrow I^\bullet$이 quasi-isomorphism이므로 우변의 cohomology는 $i>0$에서 모두 소멸한다. 따라서 $H^i(\Spec A, \widetilde M)=0$ ($i>0$)이다.
 
-남은 것은 injective $A$-module $I$의 associated sheaf $\widetilde I$이 acyclic이라는 것이다. 이를 위해 우리는 $\widetilde I$이 flasque임을 보인다. ([\[대수다양체\] §층 코호몰로지, ⁋명제 16](/ko/math/algebraic_varieties/sheaf_cohomology#prop16)) $\Spec A$의 열린집합은 모두 $U=\Spec A\setminus Z(\mathfrak{a})$의 꼴이므로, 각각에 대하여 restriction $\widetilde I(\Spec A)=I\rightarrow\widetilde I(U)$이 surjective임을 보이면 된다. Quasi-coherent sheaf의 section을 local cohomology와 잇는 exact sequence
+남은 것은 injective $A$-module $I$의 associated sheaf $\widetilde I$이 acyclic이라는 것이다. 이를 위해 우리는 $\widetilde I$이 flasque임을 보인다. ([\[대수다양체\] §층 코호몰로지, ⁋명제 16](/ko/math/algebraic_varieties/sheaf_cohomology#prop16)) $\Spec A$의 열린집합은 모두 $U=\Spec A\setminus Z(\mathfrak{a})$의 꼴이므로, 각각에 대하여 restriction $\widetilde I(\Spec A)=I\rightarrow\widetilde I(U)$이 surjective임을 보이면 된다. $A$가 Noetherian이므로, 임의의 $A$-module $M$에 대하여 $U$ 위의 section은
 
-$$I\longrightarrow\widetilde I(U)\longrightarrow H^1_{\mathfrak{a}}(I)\longrightarrow 0$$
+$$\Gamma(U, \widetilde M)=\varinjlim_n\Hom_A(\mathfrak{a}^n, M)$$
 
-이 성립하는데, 여기서 $H^i_{\mathfrak{a}}(M)=\varinjlim_n\Ext^i_A(A/\mathfrak{a}^n,M)$이다. $I$가 injective이므로 모든 $n$에서 $\Ext^1_A(A/\mathfrak{a}^n,I)=0$이어서 $H^1_{\mathfrak{a}}(I)=0$이고, 따라서 위 restriction이 surjective이다. 그럼 임의의 두 열린집합 $V\subseteq U$에 대하여 $I \rightarrow \widetilde I(V)$이 $\widetilde I(U)$를 지나 인수분해되므로 $\widetilde I(U) \rightarrow \widetilde I(V)$ 또한 surjective이고, 곧 $\widetilde I$은 flasque이다.
+으로 기술된다. 여기에서 colimit은 포함 $\mathfrak{a}^{n+1}\subseteq\mathfrak{a}^n$이 유도하는 restriction들을 따라 취한 것이다. 이 동일시 아래에서, 포함 $\mathfrak{a}^n\hookrightarrow A$을 따른 restriction이 $M=\Hom_A(A, M)$으로부터 유도하는 map은 정확히 sheaf의 restriction map $\Gamma(\Spec A, \widetilde M) \rightarrow \Gamma(U, \widetilde M)$이다. 그런데 $I$가 injective이라는 것은 monomorphism $\mathfrak{a}^n\hookrightarrow A$에 대하여 $\Hom_A(A, I) \rightarrow \Hom_A(\mathfrak{a}^n, I)$이 surjective라는 것이고, colimit의 각 원소는 유한한 단계에서 표현되므로 $I \rightarrow \widetilde I(U)$ 또한 surjective이다. 그럼 임의의 두 열린집합 $V\subseteq U$에 대하여 $I \rightarrow \widetilde I(V)$이 $\widetilde I(U)$를 지나 인수분해되므로 $\widetilde I(U) \rightarrow \widetilde I(V)$ 또한 surjective이고, 곧 $\widetilde I$은 flasque이다.
 :::
 
 [정리 3](#thm3)에서 Noetherian 가정은 증명의 편의를 위한 것으로, 실은 그 결과는 임의의 ring $A$에 대하여 성립한다. 다만 이는 이 글의 범위를 벗어나므로 증명은 싣지 않고, Noetherian 가정 없이 진술되는 아래의 [따름정리 4](#cor4)와 임의의 ring 위의 projective space를 다루는 [정리 6](#thm6)에서만 이 일반적인 형태를 사용한다.
@@ -380,7 +382,7 @@ $$\rchi(X, \mathcal{F})=\sum_{i\geq 0}(-1)^i\dim_\mathbb{K}H^i(X, \mathcal{F})$$
 Field $\mathbb{K}$ 위의 Noetherian projective scheme $X$ 위의 coherent sheaf들에 대하여 다음이 성립한다.
 
 1. Short exact sequence $0 \rightarrow \mathcal{F}' \rightarrow \mathcal{F} \rightarrow \mathcal{F}'' \rightarrow 0$에 대하여 $\rchi(\mathcal{F})=\rchi(\mathcal{F}')+\rchi(\mathcal{F}'')$이다.
-2. 유한 exact sequence $0 \rightarrow \mathcal{F}_k \rightarrow \cdots \rightarrow \mathcal{F}_1 \rightarrow \mathcal{F}_0 \rightarrow 0$에 대하여 $\sum_{j=0}^k(-1)^j\rchi(\mathcal{F}_j)=0$이다.
+2. Finite exact sequence $0 \rightarrow \mathcal{F}_k \rightarrow \cdots \rightarrow \mathcal{F}_1 \rightarrow \mathcal{F}_0 \rightarrow 0$에 대하여 $\sum_{j=0}^k(-1)^j\rchi(\mathcal{F}_j)=0$이다.
 :::
 ::: 증명
 먼저 유한차원 벡터공간들의 exact sequence $0 \rightarrow V_0 \rightarrow V_1 \rightarrow \cdots \rightarrow V_t \rightarrow 0$을 보자. $j$번째 선형사상의 rank를 $r_j$라 하면 ($r_{-1}=r_t=0$) exactness가 $\dim V_j=r_{j-1}+r_j$를 주므로, 교대합 $\sum_j(-1)^j\dim V_j$에서 이웃한 항들이 서로 소거되어 $0$이 된다.
@@ -398,7 +400,7 @@ $$0 \rightarrow \mathcal{Z}_j \rightarrow \mathcal{F}_j \rightarrow \mathcal{Z}_
 을 얻는다. 여기에 1번을 적용하여 얻은 $\rchi(\mathcal{F}_j)=\rchi(\mathcal{Z}_j)+\rchi(\mathcal{Z}_{j-1})$을 부호를 번갈아 더하면 중간항이 모두 소거되어 $\sum_{j=1}^k(-1)^j\rchi(\mathcal{F}_j)=-\rchi(\mathcal{Z}_0)=-\rchi(\mathcal{F}_0)$을 얻는다.
 :::
 
-특히 coherent sheaf $\mathcal{F}$가 유한 resolution $0 \rightarrow \mathcal{E}_k \rightarrow \cdots \rightarrow \mathcal{E}_0 \rightarrow \mathcal{F} \rightarrow 0$을 가지면 [명제 14](#prop14)의 2번에서 $\rchi(\mathcal{F})=\sum_{j=0}^k(-1)^j\rchi(\mathcal{E}_j)$을 얻는다. 이것이 Euler characteristic을 실제로 계산하는 표준적인 경로이며, 그 출발점은 projective space 위의 line bundle이다.
+특히 coherent sheaf $\mathcal{F}$가 finite resolution $0 \rightarrow \mathcal{E}_k \rightarrow \cdots \rightarrow \mathcal{E}_0 \rightarrow \mathcal{F} \rightarrow 0$을 가지면 [명제 14](#prop14)의 2번에서 $\rchi(\mathcal{F})=\sum_{j=0}^k(-1)^j\rchi(\mathcal{E}_j)$을 얻는다. 이것이 Euler characteristic을 실제로 계산하는 표준적인 경로이며, 그 출발점은 projective space 위의 line bundle이다.
 
 ::: 따름정리 15
 Field $\mathbb{K}$ 위의 projective space $\mathbb{P}^n_\mathbb{K}$와 임의의 정수 $d$에 대하여

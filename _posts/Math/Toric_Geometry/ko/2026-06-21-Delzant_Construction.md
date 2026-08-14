@@ -34,7 +34,7 @@ Torus의 차원 $n$이 정확히 $(\dim M)/2$이라는 점이 결정적이다. �
 $\mathbb{R}^n$의 convex polytope $\Delta$가 *Delzant 다면체<sub>Delzant polytope</sub>*라는 것은 다음 세 조건을 만족하는 것이다.
 
 1. (*simple*) 각 꼭짓점에서 정확히 $n$개의 facet이 만난다 (동치로, $n$개의 모서리가 만난다).
-2. (*rational<sub>유리</sub>*) 각 꼭짓점에서 만나는 모서리들의 방향을 $\mathbb{Z}^n$의 원소인 primitive 벡터 $v_1,\ldots,v_n\in\mathbb{Z}^n$으로 택할 수 있다.
+2. (*rational<sub>유리</sub>*) 각 꼭짓점에서 만나는 모서리들의 방향을 $\mathbb{Z}^n$의 원소인 primitive vector $v_1,\ldots,v_n\in\mathbb{Z}^n$으로 택할 수 있다.
 3. (*smooth*, 또는 *unimodular*) 각 꼭짓점에서 위 $v_1,\ldots,v_n$을 $\mathbb{Z}^n$의 $\mathbb{Z}$-basis가 되도록 택할 수 있다.
 :::
 
@@ -86,7 +86,7 @@ $$0\longrightarrow N\longrightarrow\mathbb{T}^d\overset{\bar\beta}{\longrightarr
 ::: 증명
 $\Delta$의 한 꼭짓점 $p$을 택하면, simple 조건에 의해 $p$에서 정확히 $n$개의 facet $F_{i_1},\ldots,F_{i_n}$이 만나고, smooth 조건에 의해 그 법선 $u_{i_1},\ldots,u_{i_n}$은 $\mathbb{Z}^n$의 $\mathbb{Z}$-basis를 이룬다. 이 $n$개의 벡터가 이미 $\beta(\mathbb{Z}^d)$ 안에서 $\mathbb{Z}^n$ 전체를 생성하므로 $\beta$은 전사이다.
 
-전사인 $\mathbb{Z}$-module 사상 $\beta:\mathbb{Z}^d\rightarrow\mathbb{Z}^n$에 대하여, $\mathbb{Z}^n$이 자유이므로 short exact sequence $0\rightarrow\ker\beta\rightarrow\mathbb{Z}^d\rightarrow\mathbb{Z}^n\rightarrow0$은 분할된다. 따라서 $\mathbb{Z}^d\cong\ker\beta\oplus\mathbb{Z}^n$이고 $\mathfrak{n}=\ker\beta$은 rank $d-n$의 자유 direct sum 인자이다. 분할성에 의해 $\mathbb{R}^d=\mathfrak{n}_\mathbb{R}\oplus(\mathbb{Z}^n\text{의 들어올림})$이므로 실수계수 exact sequence도 곧바로 따라온다.
+전사인 $\mathbb{Z}$-module morphism $\beta:\mathbb{Z}^d\rightarrow\mathbb{Z}^n$에 대하여, $\mathbb{Z}^n$이 자유이므로 short exact sequence $0\rightarrow\ker\beta\rightarrow\mathbb{Z}^d\rightarrow\mathbb{Z}^n\rightarrow0$은 분할된다. 따라서 $\mathbb{Z}^d\cong\ker\beta\oplus\mathbb{Z}^n$이고 $\mathfrak{n}=\ker\beta$은 rank $d-n$의 자유 direct sum 인자이다. 분할성에 의해 $\mathbb{R}^d=\mathfrak{n}_\mathbb{R}\oplus(\mathbb{Z}^n\text{의 들어올림})$이므로 실수계수 exact sequence도 곧바로 따라온다.
 
 마지막으로 functor $V\mapsto V/(\text{격자})$을 적용한다. $\mathfrak{n}$이 $\mathbb{Z}^d$의 direct sum 인자이므로 $N=\mathfrak{n}_\mathbb{R}/\mathfrak{n}$은 $\mathbb{T}^d=\mathbb{R}^d/\mathbb{Z}^d$의 closed 부분 torus이고, quotient $\mathbb{T}^d/N$은 $\mathbb{R}^n/\mathbb{Z}^n=\mathbb{T}^n$과 isomorphic하다. 분할성 덕분에 torsion이 생기지 않아 $N$은 연결된 차원 $d-n$의 torus이며, 지수화한 열 $0\rightarrow N\rightarrow\mathbb{T}^d\rightarrow\mathbb{T}^n\rightarrow0$이 완전하다.
 :::
@@ -156,7 +156,7 @@ $\Delta$의 simple 조건은 $\Sigma_\Delta$의 모든 maximal cone이 simplicia
 
 Diffeomorphism은 양쪽 모두의 stratification이 $\Delta$의 face lattice와 같은 조합론으로 색인된다는 데에서 나온다. [정리 6](#thm6)의 증명에서 본 대로 $M_\Delta$의 점은 좌표 소멸 패턴 $I(z)=\{k\mid x\in F_k\}$으로 층화되며, 다면체의 face $F$마다 그 상대 내부 위에 놓이는 점들이 한 $\mathbb{T}^n$-orbit을 이룬다. 한편 $X_{\Sigma_\Delta}$의 orbit은 [§토릭 다양체의 정의, ⁋명제 5](/ko/math/toric_geometry/toric_varieties#prop5) 직후에서 본 대로 $\Sigma_\Delta$의 cone, 곧 $\Delta$의 face로 색인된다. 두 층화가 같은 색인 위에서 국소적으로 표준 모형 (꼭짓점 근방에서 $\mathbb{C}^n$의 표준 toric chart)으로 일치하므로, 이를 붙여 $\mathbb{T}^n$-동변 diffeomorphism $M_\Delta\cong X_{\Sigma_\Delta}$을 얻는다.
 
-마지막 주장은 사교 축약이 주는 형식과 toric divisor가 주는 형식이 같은 부류임을 말한다. 가정에 의해 $\lambda_k$이 모두 정수이므로, $\Delta$의 facet 데이터 $\langle x,u_k\rangle\geq-\lambda_k$은 [§토러스 인자와 선다발, ⁋명제 9](/ko/math/toric_geometry/toric_divisors#prop9)의 strictly convex piecewise linear 함수, 곧 ample divisor $D=\sum_k\lambda_k D_{\rho_k}$을 정의하며, 그 polytope $\Delta_D$이 정확히 $\Delta$이다. 축약으로 얻은 $\omega_\Delta$의 운동량 다면체가 $\Delta$이라는 [정리 6](#thm6)의 결론은, Atiyah-Guillemin-Sternberg 그림에서 $[\omega_\Delta]$이 이 ample 부류와 같은 $\mathbb{T}^n$-equivariant cohomology류로 표현됨과 동치이다. 따라서 $\omega_\Delta$은 $\mathcal{O}(D)$의 Chern 형식을 대표하는 Kähler 형식과 같은 부류이다.
+마지막 주장은 사교 축약이 주는 형식과 toric divisor가 주는 형식이 같은 부류임을 말한다. 가정에 의해 $\lambda_k$이 모두 정수이므로, $\Delta$의 facet 데이터 $\langle x,u_k\rangle\geq-\lambda_k$은 [§토러스 인자와 선다발, ⁋명제 9](/ko/math/toric_geometry/toric_divisors#prop9)의 strictly convex piecewise linear function, 곧 ample divisor $D=\sum_k\lambda_k D_{\rho_k}$을 정의하며, 그 polytope $\Delta_D$이 정확히 $\Delta$이다. 축약으로 얻은 $\omega_\Delta$의 운동량 다면체가 $\Delta$이라는 [정리 6](#thm6)의 결론은, Atiyah-Guillemin-Sternberg 그림에서 $[\omega_\Delta]$이 이 ample 부류와 같은 $\mathbb{T}^n$-equivariant cohomology류로 표현됨과 동치이다. 따라서 $\omega_\Delta$은 $\mathcal{O}(D)$의 Chern 형식을 대표하는 Kähler 형식과 같은 부류이다.
 :::
 
 이 명제는 사교기하와 대수기하의 두 toric 세계가 Delzant 다면체라는 하나의 조합론적 데이터 위에서 만남을 보여 준다. 대수 쪽은 다면체로부터 normal fan을 거쳐 complex manifold를 짓고, 사교 쪽은 같은 다면체의 facet으로부터 부분 torus를 거쳐 symplectic manifold를 짓는다. 둘은 같은 smooth variety이며, 다면체의 크기를 담은 상수 $\lambda_i$들이 한쪽에서는 ample line bundle의 선택으로, 다른 쪽에서는 symplectic form의 부피로 나타난다. 다면체가 lattice polytope이라는 조건(상수 $\lambda_i$가 정수가 되도록 함)은 대수 쪽에서 line bundle이 실제로 존재하기 위한 정수성 조건이며, 사교 쪽에서는 형식이 정수 cohomology류를 갖는 prequantization 조건에 해당한다.

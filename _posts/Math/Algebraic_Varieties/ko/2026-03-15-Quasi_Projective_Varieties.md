@@ -53,11 +53,11 @@ $X$가 projective variety $Y\subseteq \mathbb{P}^n$의 열린집합이라 하자
 
 $$X=Y\cap U,\qquad \text{$U$ open in $\mathbb{P}^n$}$$
 
-이라 하고, $X$의 임의의 irreducible closed set $Z$가 주어졌다 하자. 그럼 $\mathbb{P}^n$의 적당한 irreducible closed subset $W$이 존재하여
+이라 하고, $X$의 임의의 irreducible closed set $Z$가 주어졌다 하자. 이제 $Z$의 $\mathbb{P}^n$에서의 closure $\overline{Z}$를 생각하면, $Z$가 irreducible이므로 $\overline{Z}$ 또한 irreducible closed set이다. 또 $Z\subseteq X\subseteq Y$이고 $Y$가 $\mathbb{P}^n$의 닫힌집합이므로 $\overline{Z}\subseteq Y$이고, 따라서 $\overline{Z}$는 그 자체로 projective variety이다. 한편 $Z$가 $X$의 닫힌집합이므로 $\mathbb{P}^n$의 적당한 닫힌집합 $C$에 대하여 $Z=X\cap C$이고, 그럼 $Z\subseteq X\cap \overline{Z}\subseteq X\cap C=Z$로부터
 
-$$Z=X\cap W=(Y\cap U)\cap W=(Y\cap W)\cap U$$
+$$Z=X\cap \overline{Z}=(Y\cap U)\cap \overline{Z}=\overline{Z}\cap U$$
 
-이다. 이로부터 $Z$는 projective variety $Y\cap W$의 열린집합이다. 
+를 얻는다. 이로부터 $Z$는 projective variety $\overline{Z}$의 열린집합이다. 
 :::
 
 ## 정칙함수와 정칙사상
@@ -68,7 +68,7 @@ $$Z=X\cap W=(Y\cap U)\cap W=(Y\cap W)\cap U$$
 임의의 variety $X$와 임의의 $x\in X$에 대하여, affine variety들로 이루어진 $X$의 open covering이 존재한다. 
 :::
 ::: 증명
-우선 $X$가 quasi-projective이므로, 적당한 projective variety $Y\subseteq \mathbb{P}^n$이 존재하여 $X$가 $Y$의 열린집합이도록 할 수 있다. 이제 $X$는 standard affine chart들을 사용하여 $X\cap U_i$들로 덮을 수 있고, 이 때 각각의 $X\cap U_i$들은 affine variety $Y\cap U_i$의 열린집합이다. ([§사영다양체, ⁋명제 10](/ko/math/algebraic_varieties/projective_varieties#prop10)) 이제 [§아핀다양체, ⁋명제 6](/ko/math/algebraic_varieties/affine_varieties#prop6)에 의해 affine variety의 임의의 열린집합은 principal open set으로 덮을 수 있으며, 이들은 [§아핀다양체, ⁋명제 7](/ko/math/algebraic_varieties/affine_varieties#prop7)에 의해 affine이므로 증명이 완료된다. 
+우선 $X$가 quasi-projective이므로, 적당한 projective variety $Y\subseteq \mathbb{P}^n$이 존재하여 $X$가 $Y$의 열린집합이도록 할 수 있다. 이제 $X$는 standard affine chart들을 사용하여 $X\cap U_i$들로 덮을 수 있다. 여기에서 $Y\cap U_i$가 비어 있는 $i$는 $X\cap U_i$ 또한 비어 있으므로 빼고 생각하면, 각각의 $X\cap U_i$들은 affine variety $Y\cap U_i$의 열린집합이다. ([§사영다양체, ⁋명제 10](/ko/math/algebraic_varieties/projective_varieties#prop10)) 이제 [§아핀다양체, ⁋명제 6](/ko/math/algebraic_varieties/affine_varieties#prop6)에 의해 affine variety의 임의의 열린집합은 principal open set으로 덮을 수 있으며, 이들은 [§아핀다양체, ⁋명제 7](/ko/math/algebraic_varieties/affine_varieties#prop7)에 의해 affine이므로 증명이 완료된다. 
 :::
 
 이제 위의 명제에 의해, 다음과 같이 정의할 수 있다.
@@ -86,7 +86,7 @@ $$f\vert_{U_i}:U_i\rightarrow\mathbb{K}$$
 ::: 예시 6
 Regular function의 예시들을 살펴보자.
 
-1. Affine variety $X$에서 $\mathcal{O}(X) = \mathbb{K}[X]$이다. 
+1. Affine variety $X$에서 $\mathcal{O}(X) = \mathbb{K}[X]$이다. [정의 5](#def5)에서 $X$ 자기 자신을 open affine cover로 택할 수 있으므로 $\mathbb{K}[X]\subseteq \mathcal{O}(X)$이고, 반대 방향의 포함은 각 점의 근방에서 유리식으로 쓰이는 함수가 다시 coordinate ring의 원소가 된다는 것, 즉 [§아핀다양체, ⁋정의 11](/ko/math/algebraic_varieties/affine_varieties#def11)과 [§아핀다양체, ⁋정의 14](/ko/math/algebraic_varieties/affine_varieties#def14)의 동치성이다. 
 2. $\mathbb{P}^n$에서 $\mathcal{O}(\mathbb{P}^n) = \mathbb{K}$이다. 이를 확인하기 위해 standard open cover $U_i = \{x_i \ne 0\}$를 생각하자. 특히 $U_0$에서의 regular function은 $\mathbb{K}[\x_1/\x_0, \ldots, \x_n/\x_0]$의 원소이고, $U_1$에서의 regular function은 $\mathbb{K}[\x_0/\x_1, \x_2/\x_1, \ldots, \x_n/\x_1]$의 원소이다. 따라서 만일 어떠한 함수 $f$가 $\mathbb{P}^n$ 전체에서 regular라면, 이 함수는 $U_0$에서는 $\mathrm{s}_i=\x_i/\x_0$들에 대한 다항식이고 $U_1$에서는 $\mathrm{t}_i=\x_i/\x_1$에 대한 다항식이다. 그런데 $U_0\cap U_1$에서, 우리는 이들 좌표함수들이 다음 식  
     
     $$\mathrm{t}_0=\frac{1}{\mathrm{s}_1},\qquad \mathrm{t}_j=\frac{\mathrm{s}_j}{\mathrm{s}_1}\quad (j=2,\ldots, n)$$
@@ -115,16 +115,22 @@ $$\varphi(q) = [F_0(q) : \cdots : F_m(q)]$$
 지금까지 우리는 variety를 이야기할 때 affine space로의 embedding 혹은 projective space로의 embedding을 가정하였고, 위의 정의 또한 이러한 가정의 연장선상에 있다. 이를 통해 우리는 손에 잡히는 계산을 할 수 있지만, 이 정의가 내재적인 것이라 할 수는 없을 것이다. 다음 명제는 이 정의가 regular function의 관점에서 자연스럽게 해석됨을 보여준다.
 
 ::: 명제 8
-함수 $\varphi: X \rightarrow Y$가 morphism인 필요충분조건은 $Y$의 임의의 affine open set $V$와 regular function $f \in \mathcal{O}_Y(V)$에 대해, $f \circ \varphi: \varphi^{-1}(V) \rightarrow \mathbb{K}$가 regular function인 것이다.
+함수 $\varphi: X \rightarrow Y$가 morphism인 필요충분조건은 $\varphi$가 연속이고, $Y$의 임의의 affine open set $V$와 regular function $f \in \mathcal{O}_Y(V)$에 대해 $f \circ \varphi: \varphi^{-1}(V) \rightarrow \mathbb{K}$가 regular function인 것이다.
 :::
 
-증명의 핵심은 morphism이 국소적으로 homogeneous polynomials로 표현되며, $Y$ 위의 regular function은 (dehomogenization 과정을 생각하면) 같은 degree $d$의 homogeneous polynomial $F,G$에 대하여 $F/G$의 꼴로 쓸 수 있으므로 이들을 합성한 것도 regular function이어야 한다는 것이다. 그럼 이를 활용하여 다음을 보일 수 있다. 
+연속성을 조건에 넣어야 하는 이유는 $\varphi^{-1}(V)$가 열린집합이어야 그 위에서 regular function을 이야기할 수 있기 때문이며, 이 조건이 morphism 쪽에서는 저절로 따라온다는 것은 [명제 10](#prop10)에서 보인다. 증명의 핵심은 morphism이 국소적으로 homogeneous polynomials로 표현되며, $Y$ 위의 regular function은 (dehomogenization 과정을 생각하면) 같은 degree $d$의 homogeneous polynomial $F,G$에 대하여 $F/G$의 꼴로 쓸 수 있으므로 이들을 합성한 것도 regular function이어야 한다는 것이다. 후자는 $Y$가 $\mathbb{P}^m$의 부분집합일 때 affine chart $Y\cap U_i$ 위의 regular function이 $\x_j/\x_i$들에 대한 다항식이라는 데에서 오는데, 이를 통분하면 적당한 $d$와 degree $d$의 homogeneous polynomial $F$에 대하여 $F/\x_i^d$의 꼴이 된다. 그럼 이를 활용하여 다음을 보일 수 있다. 
 
 ::: 명제 9
 Affine variety들 사이의 regular map들은 정확하게 이들을 quasi-projective variety로 봤을 때의 regular map들과 같다. 
 :::
 
-이는 본질적으로 [§아핀다양체, ⁋정의 15](/ko/math/algebraic_varieties/affine_varieties#def15)에 의한 것이다. 
+이는 본질적으로 [§아핀다양체, ⁋정의 15](/ko/math/algebraic_varieties/affine_varieties#def15)에 의한 것이나, 두 방향의 사정은 서로 다르다. Affine variety들 $X\subseteq \mathbb{A}^n$과 $Y\subseteq \mathbb{A}^m$ 사이의 regular map이 다항식들 $f_1,\ldots, f_m$으로 주어졌다 하고 $d=\max_j \deg f_j$라 두면, [명제 2](#prop2)의 embedding 아래에서 $\varphi$는
+
+$$\varphi=\left[\x_0^d:\x_0^df_1\left(\frac{\x_1}{\x_0},\ldots, \frac{\x_n}{\x_0}\right):\cdots:\x_0^df_m\left(\frac{\x_1}{\x_0},\ldots, \frac{\x_n}{\x_0}\right)\right]$$
+
+의 꼴로 쓰인다. 각 성분은 degree $d$의 homogeneous polynomial이고 $i(X)$가 $U_0$에 들어 있어 첫 성분 $\x_0^d$가 어디에서도 $0$이 되지 않으므로, 이는 [정의 7](#def7)의 조건을 만족한다. 
+
+역방향은 quasi-projective variety로서의 morphism $\varphi: X\rightarrow Y$가 다항식으로 주어진다는 것을 보여야 하므로 정의만으로는 얻어지지 않는다. $Y$의 $j$번째 좌표함수는 $Y$ 위의 regular function이므로 [명제 8](#prop8)에 의해 이를 $\varphi$와 합성한 것은 $\mathcal{O}(X)$의 원소이고, [예시 6](#ex6)의 첫 번째 계산에 의해 $\mathcal{O}(X)=\mathbb{K}[X]$이므로 이는 $X$ 위의 다항식함수이다. 따라서 $\varphi$는 $m$개의 다항식으로 표현되며, 이것이 곧 affine variety들 사이의 morphism이라는 조건이다. 
 
 ## 정칙사상의 성질들
 
@@ -133,15 +139,13 @@ Regular map $\varphi: X \rightarrow Y$는 연속함수이다.
 :::
 
 ::: 증명
-$Z \subseteq Y$가 닫힌집합이라면, $Z$는 $Y$의 어떤 open cover $\{V_\alpha\}$에서 각 $V_\alpha$마다 regular function들 $f_{\alpha,1}, \ldots, f_{\alpha,k_\alpha}$이 존재하여
+$C \subseteq Y$가 닫힌집합이라 하자. 그럼 $\mathbb{K}[\x_0, \ldots, \x_m]$의 homogeneous polynomial들 $G_1, \ldots, G_r$이 존재하여 $C = Y \cap Z(G_1, \ldots, G_r)$이고, $\varphi$의 image가 $Y$에 들어 있으므로 $\varphi^{-1}(C) = \varphi^{-1}(Z(G_1, \ldots, G_r))$이다.
 
-$$Z \cap V_\alpha = \{y \in V_\alpha \mid f_{\alpha,1}(y) = \cdots = f_{\alpha,k_\alpha}(y) = 0\}$$
+이제 임의의 $x \in X$에 대하여 [정의 7](#def7)이 주는 열린근방 $U \subseteq X$와 같은 degree의 homogeneous polynomial들 $F_0, \ldots, F_m$을 택하자. $U$ 위에서 $\varphi = [F_0 : \cdots : F_m]$이므로
 
-이다. 그럼
+$$\varphi^{-1}(C) \cap U = \{q \in U \mid G_1(F_0(q), \ldots, F_m(q)) = \cdots = G_r(F_0(q), \ldots, F_m(q)) = 0\}$$
 
-$$\varphi^{-1}(Z) \cap \varphi^{-1}(V_\alpha) = \{x \in \varphi^{-1}(V_\alpha) \mid f_{\alpha,1}(\varphi(x)) = \cdots = f_{\alpha,k_\alpha}(\varphi(x)) = 0\}$$
-
-이다. $\varphi$가 regular map이므로 각 $f_{\alpha,i} \circ \varphi$는 $\varphi^{-1}(V_\alpha)$에서 regular function이다. 따라서 $\varphi^{-1}(Z) \cap \varphi^{-1}(V_\alpha)$는 $\varphi^{-1}(V_\alpha)$의 닫힌집합이고, $\{\varphi^{-1}(V_\alpha)\}$가 $X$의 open cover이므로 $\varphi^{-1}(Z)$는 $X$의 닫힌집합이다.
+이고, 각 $G_k(F_0, \ldots, F_m)$은 다시 $\x_0, \ldots, \x_n$에 대한 homogeneous polynomial이므로 우변은 $\mathbb{P}^n$의 닫힌집합과 $U$의 교집합이다. 즉 $\varphi^{-1}(C) \cap U$는 $U$의 닫힌집합이며, 이러한 $U$들이 $X$를 덮으므로 $\varphi^{-1}(C)$는 $X$의 닫힌집합이다.
 :::
 
 ::: 명제 11
@@ -161,13 +165,13 @@ $$f \circ (\psi \circ \varphi) \in \mathcal{O}((\psi \circ \varphi)^{-1}(W))$$
 따라서 quasi-projective variety들과 regular map들은 category를 이룬다.
 
 ::: 명제 12
-닫힌집합으로의 regular map의 restriction은 regular map이다. 열린집합으로의 regular map의 restriction도 regular map이다.
+Regular map $\varphi: X \rightarrow Y$와 $X$의 열린집합 또는 irreducible closed subset $W$에 대하여, restriction $\varphi\vert_W: W \rightarrow Y$는 regular map이다. 또, $Y$의 열린집합 또는 irreducible closed subset $Z$가 $\varphi(X) \subseteq Z$를 만족한다면 $\varphi$를 $X \rightarrow Z$로 본 것 또한 regular map이다.
 :::
 
 ::: 증명
-$\varphi: X \rightarrow Y$가 regular map이고 $Z \subseteq Y$가 닫힌집합이라 하자. $\psi = \varphi\vert_{\varphi^{-1}(Z)}: \varphi^{-1}(Z) \rightarrow Z$를 생각하자. $f$가 $Z$의 열린집합 $V$에서 regular function이라면, $f$는 $Y$의 어떤 열린집합 $V' \supseteq V$로 확장되어 regular function이 된다 (적어도 국소적으로). 구체적으로, $V$를 $Z$의 open affine cover로 교차하여 각 조각에서 regular function을 정의하면, 이들을 정칙적으로 이어붙여 $Y$의 열린근방 $V'$에서의 regular function을 얻을 수 있다. 이는 regular function이 본질적으로 유리함수의 국소적 표현이므로, affine chart 위에서의 정의가 Zariski open cover의 교집합에서도 일관되게 합쳐지기 때문이다. 그럼 $f \circ \psi = (f \circ \varphi)\vert_{\varphi^{-1}(Z)}$이고, $f \circ \varphi$는 $\varphi^{-1}(V')$에서 regular이므로 그 restriction도 regular이다.
+[명제 3](#prop3)에 의해 $W$와 $Z$는 모두 quasi-projective variety이므로 두 주장이 모두 의미를 가진다. 이제 [정의 7](#def7)의 조건이 정의역의 각 점의 열린근방에서 확인되는 것이고, 그 근방에서 $\varphi$의 값을 ambient projective space의 homogeneous coordinate로 어떻게 쓰는지에만 의존한다는 것을 관찰하면 된다.
 
-열린집합의 경우는 더 간단하다. $U \subseteq Y$가 열린집합이면, $f$가 $V \subseteq U$에서 regular이면 $f \circ \varphi$는 $\varphi^{-1}(V)$에서 regular이다.
+첫 번째 주장의 경우, 임의의 $x \in W$에 대하여 [정의 7](#def7)이 주는 $X$에서의 열린근방 $U$와 homogeneous polynomial들 $F_0, \ldots, F_m$을 택하면 $U \cap W$는 $W$에서의 $x$의 열린근방이고, 그 위에서 $\varphi\vert_W = [F_0 : \cdots : F_m]$이며 $F_0, \ldots, F_m$은 $U \cap W$의 어느 점에서도 동시에 $0$이 되지 않는다. 두 번째 주장의 경우 정의역이 그대로이고 $\varphi(X) \subseteq Z$이므로, 같은 $U$와 $F_0, \ldots, F_m$이 그대로 [정의 7](#def7)의 조건을 준다.
 :::
 
 ::: 정의 13

@@ -1,7 +1,7 @@
 ---
 title: "Semisimple module"
 description: "Simple module들의 직합으로 분해되는 semisimple module을 정의하고, 세 가지 동치 특징(합·직합·모든 submodule이 direct summand)을 Zorn 보조정리로 증명한다. Isotypic 성분에 의한 canonical 분해와, 유한 직합 분해의 유일성을 Schur 보조정리로부터 유도한다."
-excerpt: "Semisimple module의 동치 특징, isotypic 분해, 그리고 분해의 유일성"
+excerpt: "Semisimple module의 동치 특징, isotypic decomposition, 그리고 분해의 유일성"
 
 categories: [Math / Ring Theory]
 permalink: /ko/math/ring_theory/semisimple_modules
@@ -87,7 +87,7 @@ Semisimple module $M$의 모든 submodule과 quotient는 semisimple이다.
 Submodule $N$의 경우, [보조정리 4](#lem4)에 의해 $M=N\oplus\bigoplus_{j\in J}S_j$인 $J$가 존재하므로 $N\cong M/\bigoplus_{j\in J}S_j$이고, 방금 보인 quotient의 경우로 환원된다.
 :::
 
-## Isotypic 분해
+## Isotypic decomposition
 
 [예시 3](#ex3)의 벡터 space에서 보듯 semisimple module의 direct sum 분해는 기저의 선택만큼이나 유일하지 않다. 그러나 서로 isomorphic한 인자들을 한데 모으면 분해는 canonical해진다. 이를 정확히 하기 위해 먼저 simple submodule들의 합 안에 어떤 simple submodule들이 살 수 있는지를 확인한다.
 

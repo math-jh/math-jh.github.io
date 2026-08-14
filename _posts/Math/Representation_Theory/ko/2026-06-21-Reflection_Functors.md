@@ -1,7 +1,7 @@
 ---
 title: "반사 함자"
 description: "Sink과 source에서의 Bernstein–Gelfand–Ponomarev reflection functor S_k^+, S_k^-를 정의하고, dimension vector에 대한 효과가 root lattice 위의 simple reflection s_k의 작용과 일치함을 증명한다. 두 함자가 simple projective/injective를 제외하고 서로 quasi-inverse임을 보이고, Coxeter 함자와 preprojective·preinjective module을 도입한 뒤 Euler form 및 Gabriel 정리와의 관계를 서술한다."
-excerpt: "BGP reflection functor, sink/source 반사, dimension vector와 simple reflection, Coxeter 함자, preprojective module"
+excerpt: "BGP reflection functor, sink/source 반사, dimension vector와 simple reflection, Coxeter functor, preprojective module"
 
 categories: [Math / Representation Theory]
 permalink: /ko/math/representation_theory/reflection_functors
@@ -16,7 +16,7 @@ published: false
 
 유한차원 representation을 분류하는 문제는 indecomposable들을 찾는 문제로 환원되며 ([§Krull–Schmidt 정리, ⁋정리 6](/ko/math/representation_theory/krull_schmidt#thm6)), 같은 quiver라도 arrow의 방향을 바꾸면 그 indecomposable들의 모임이 어떻게 달라지는지를 묻는 것은 자연스럽다. *Reflection functor*는 이 물음에 답하는 도구이다. Quiver $Q$의 한 vertex $k$가 모든 arrow를 받기만 하는 *sink*이거나 내보내기만 하는 *source*일 때, 그 vertex에 인접한 arrow를 모두 뒤집어 새 quiver $\sigma_k Q$를 얻고, 동시에 representation을 $\Rep(Q)$에서 $\Rep(\sigma_k Q)$로 옮기는 functor $S_k^+$ 또는 $S_k^-$를 구성한다. 핵심은 이 조작이 dimension vector 위에서 정확히 root lattice의 simple reflection $s_k$로 작용한다는 것이며, 이로써 quiver의 representation 이론과 root system의 조합론이 직접 연결된다. 이 연결은 Gabriel 정리, 곧 representation-finite quiver가 정확히 type $A$, $D$, $E$의 Dynkin quiver임을 밝히는 정리의 핵심 도구가 된다.
 
-이 글에서 $k$는 field를 가리키고 (vertex를 가리킬 때는 문맥에서 구별된다), $Q=(Q_0,Q_1,s,t)$는 oriented cycle을 가지지 않는 유한 quiver이며 ([§Quiver와 경로대수, ⁋정의 1](/ko/math/representation_theory/path_algebras#def1)), representation이라 하면 유한차원 representation을 뜻한다 ([§Quiver와 경로대수, ⁋정의 9](/ko/math/representation_theory/path_algebras#def9)). Root system과 그 위의 reflection, root lattice의 일반론은 [\[리 이론\] §근계](/ko/math/lie_theory/root_systems)를 따른다.
+이 글에서 $k$는 field를 가리키고 (vertex를 가리킬 때는 문맥에서 구별된다), $Q=(Q_0,Q_1,s,t)$는 oriented cycle을 가지지 않는 finite quiver이며 ([§Quiver와 경로대수, ⁋정의 1](/ko/math/representation_theory/path_algebras#def1)), representation이라 하면 유한차원 representation을 뜻한다 ([§Quiver와 경로대수, ⁋정의 9](/ko/math/representation_theory/path_algebras#def9)). Root system과 그 위의 reflection, root lattice의 일반론은 [\[리 이론\] §근계](/ko/math/lie_theory/root_systems)를 따른다.
 
 ## Sink과 source, 그리고 quiver의 반사
 
@@ -135,7 +135,7 @@ $$s_k(\underline\dim V)_k=\dim_k V_k-\Bigl(2\dim_k V_k-\sum_{\alpha:i\rightarrow
 
 명제 7에서 simple representation $S_k$를 제외해야 하는 이유는 분명하다. $V=S_k$이면 $V_{\mathrm{in}}$은 $0\rightarrow V_k$ (들어오는 arrow 쪽 공간이 모두 $0$) 이므로 전사가 아니고, 실제로 $S_k^+ S_k=0$이 되어 dimension vector가 보존되지 않는다. 반면 $s_k(e_k)=-e_k$는 음의 좌표를 가져 어떤 representation의 dimension vector도 될 수 없다. 이 한 예외를 제외하면 $S_k^+$는 indecomposable을 indecomposable로 보내며 dimension vector 위에서 정확히 $s_k$로 작용한다.
 
-## 두 functor의 quasi-inverse 관계
+## 두 functor의 quasi-inverse relation
 
 Sink에서의 $S_k^+$와 source에서의 $S_k^-$는 서로 반대 방향의 quiver 사이를 오가므로 합성할 수 있다. $k$가 $Q$의 sink이면 $S_k^+:\Rep(Q)\rightarrow\Rep(\sigma_k Q)$이고, $\sigma_k Q$에서 $k$는 source이므로 $S_k^-:\Rep(\sigma_k Q)\rightarrow\Rep(\sigma_k\sigma_k Q)=\Rep(Q)$이다. 두 functor를 잇따라 적용하면 $S_k$를 제외한 곳에서 원래 representation을 회복한다.
 
@@ -232,12 +232,12 @@ $$V\longmapsto\underline\dim V$$
 ::: 증명
 완전한 증명은 길어 여기서 재구성하지 않으며, 그 골격만 적고 [ASS, Chapter VII]과 [Br, §5]의 논증을 따른다. 반사 functor가 증명의 두 방향 모두에서 중심 역할을 한다.
 
-$Q$가 Dynkin이면 Tits form은 positive definite이므로 ([정의 6](#def6)) $q(d)=1$인 정수 vector는 유한개뿐이고, 이들이 type $A$, $D$, $E$ root system의 양의 root들에 대응한다. Indecomposable의 dimension vector가 항상 root임은 다음과 같이 본다. Admissible sink sequence를 잡아 Coxeter functor $C^+$를 만들면, 임의의 indecomposable $V$에 대하여 $(C^+)^m V=0$이 되는 $m$이 존재하여 $V$는 preprojective이다 ([정의 11](#def11)). 곧 $V$는 어떤 indecomposable projective $P$에 대하여 $(C^-)^j P$의 꼴이며, projective의 dimension vector에 명제 10의 reflection들을 적용하여 얻어진다. Projective의 dimension vector는 root이고 reflection이 root를 root로, Tits form을 보존하므로 ([명제 12](#prop12)) $V$의 dimension vector도 root이다. 이로써 $V\mapsto\underline\dim V$가 indecomposable에서 양의 root로 가는 morphism임을 안다. 이 morphism이 단사이고 전사임은, 각 양의 root에 대하여 그것을 dimension vector로 가지는 indecomposable이 정확히 하나 존재함을 반사 functor로 추적하여 보인다. Root는 simple reflection들로 simple root $e_k$까지 줄일 수 있고 ([\[리 이론\] §근계](/ko/math/lie_theory/root_systems)), $e_k$는 simple representation $S_k$의 dimension vector이므로, 이 reflection의 자취를 반사 functor로 들어 올리면 해당 indecomposable이 유일하게 복원된다. Root가 유한개이므로 indecomposable도 유한개이다.
+$Q$가 Dynkin이면 Tits form은 positive definite이므로 ([정의 6](#def6)) $q(d)=1$인 정수 vector는 유한개뿐이고, 이들이 type $A$, $D$, $E$ root system의 positive root들에 대응한다. Indecomposable의 dimension vector가 항상 root임은 다음과 같이 본다. Admissible sink sequence를 잡아 Coxeter functor $C^+$를 만들면, 임의의 indecomposable $V$에 대하여 $(C^+)^m V=0$이 되는 $m$이 존재하여 $V$는 preprojective이다 ([정의 11](#def11)). 곧 $V$는 어떤 indecomposable projective $P$에 대하여 $(C^-)^j P$의 꼴이며, projective의 dimension vector에 명제 10의 reflection들을 적용하여 얻어진다. Projective의 dimension vector는 root이고 reflection이 root를 root로, Tits form을 보존하므로 ([명제 12](#prop12)) $V$의 dimension vector도 root이다. 이로써 $V\mapsto\underline\dim V$가 indecomposable에서 positive root로 가는 morphism임을 안다. 이 morphism이 단사이고 전사임은, 각 positive root에 대하여 그것을 dimension vector로 가지는 indecomposable이 정확히 하나 존재함을 반사 functor로 추적하여 보인다. Root는 simple reflection들로 simple root $e_k$까지 줄일 수 있고 ([\[리 이론\] §근계](/ko/math/lie_theory/root_systems)), $e_k$는 simple representation $S_k$의 dimension vector이므로, 이 reflection의 자취를 반사 functor로 들어 올리면 해당 indecomposable이 유일하게 복원된다. Root가 유한개이므로 indecomposable도 유한개이다.
 
 역으로 $Q$가 Dynkin이 아니면 그 underlying graph는 extended Dynkin diagram을 포함하고, 그 위에서 Tits form은 positive definite가 아니어서 $q(d)\leq 1$을 만족하는 dimension vector가 무한히 많은 indecomposable을 허용한다. 따라서 $Q$는 representation-finite가 아니다.
 :::
 
-정리 13은 반사 functor가 어디에 쓰이는지를 가장 선명하게 보여 준다. 한 vertex에서의 반사가 dimension vector 위에서 simple reflection으로 작용한다는 명제 7의 등식이, indecomposable의 분류를 root system의 조합론으로 옮겨 주는 다리가 된다. Indecomposable마다 하나의 양의 root가 대응하고, 그 root는 Weyl group의 action으로 simple root까지 환원되며, 그 환원의 매 단계가 곧 하나의 반사 functor이다. 이렇게 quiver의 representation 이론과 finite root system의 분류가 정확히 포개진다는 것이 Gabriel 정리의 내용이다.
+정리 13은 반사 functor가 어디에 쓰이는지를 가장 선명하게 보여 준다. 한 vertex에서의 반사가 dimension vector 위에서 simple reflection으로 작용한다는 명제 7의 등식이, indecomposable의 분류를 root system의 조합론으로 옮겨 주는 다리가 된다. Indecomposable마다 하나의 positive root가 대응하고, 그 root는 Weyl group의 action으로 simple root까지 환원되며, 그 환원의 매 단계가 곧 하나의 반사 functor이다. 이렇게 quiver의 representation 이론과 finite root system의 분류가 정확히 포개진다는 것이 Gabriel 정리의 내용이다.
 
 ---
 

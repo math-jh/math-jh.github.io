@@ -10,6 +10,8 @@ sidebar:
 
 date: 2023-05-28
 weight: 3
+published: false
+revising: true
 drift_needed: true
 
 ---
@@ -58,7 +60,7 @@ $\mathcal{A}$가 small category라 하자. 그럼 집합 $\obj(\mathcal{A})$에�
 Category $\mathcal{A}$의 *skeleton<sub>뼈대</sub>*은 $\mathcal{A}$의 full subcategory 중 skeletal category이면서 임의의 $A\in\obj(\mathcal{A})$가 그 subcategory의 어떤 object와 isomorphic하도록 하는 것을 의미한다. 이를 $\sk(\mathcal{A})$으로 적는다.
 :::
 
-다음 정리의 증명은 길고 지루하여 별도로 적어두지 않는다. 그러나 조금만 생각을 해 보면 이 증명에 별도의 아이디어는 필요가 없으며, 꽤나 자명하기까지 하다. 많은 경우에는 equivalence의 정의를 아예 이것으로 받아들이기도 한다.
+다음 정리의 증명은 길고 지루하여 별도로 적어두지 않는다. 증명에 별도의 아이디어가 필요하지는 않으나, fully faithful이면서 essentially surjective인 functor $F:\mathcal{A}\rightarrow\mathcal{B}$로부터 [정의 2](#def2)의 조건을 만족하는 $G:\mathcal{B}\rightarrow\mathcal{A}$를 만드는 방향에서는 각각의 $B\in\obj(\mathcal{B})$마다 $F(A)\cong B$인 $A\in\obj(\mathcal{A})$와 그 isomorphism을 하나씩 골라야 하므로 선택공리를 쓴다. 많은 경우에는 equivalence의 정의를 아예 이것으로 받아들이기도 한다.
 
 ::: 정리 5
 Functor $F:\mathcal{A}\rightarrow\mathcal{B}$가 category들 사이의 equivalence인 것은 $F$가 fully faithful functor이면서, 다음과 같은 센스에서 *essentially surjective<sub>본질적 전사 함자</sub>*인 것과 동치이다.
@@ -66,11 +68,13 @@ Functor $F:\mathcal{A}\rightarrow\mathcal{B}$가 category들 사이의 equivalen
 > 임의의 $B\in\obj(\mathcal{B})$마다 적당한 $A\in\obj(\mathcal{A})$가 존재하여 $F(A)\cong B$가 성립하도록 할 수 있다.
 :::
 
-이를 받아들인다면 다음 따름정리 또한 자명하다.
+$\mathcal{A}$의 skeleton을 생각하면, inclusion functor $\sk(\mathcal{A})\hookrightarrow\mathcal{A}$는 full subcategory의 inclusion이므로 fully faithful이고, [정의 4](#def4)의 마지막 조건이 곧 이 functor가 essentially surjective라는 것이다. 따라서 [정리 5](#thm5)에 의하여 이 inclusion은 equivalence이고, $\mathcal{A}\simeq\sk(\mathcal{A})$가 성립한다. 이로부터 다음을 얻는다.
 
 ::: 따름정리 6
 두 small category $\mathcal{A}$와 $\mathcal{B}$가 equivalent한 것은 이들의 skeletal subcategory $\sk(\mathcal{A})$와 $\sk(\mathcal{B})$가 isomorphic한 것이다.
 :::
+
+만일 $\sk(\mathcal{A})\cong\sk(\mathcal{B})$라면 category들 사이의 isomorphism은 equivalence이기도 하고 equivalence들의 합성 또한 equivalence이므로 $\mathcal{A}\simeq\sk(\mathcal{A})\simeq\sk(\mathcal{B})\simeq\mathcal{B}$를 얻는다. 역으로 $\mathcal{A}\simeq\mathcal{B}$인 경우, [정의 2](#def2)의 조건이 두 functor에 대하여 대칭이므로 $\sk(\mathcal{A})\simeq\mathcal{A}\simeq\mathcal{B}\simeq\sk(\mathcal{B})$이고, 따라서 equivalence $F:\sk(\mathcal{A})\rightarrow\sk(\mathcal{B})$가 존재한다. 이때 $F(S_1)$에서 $F(S_2)$로의 isomorphism이 주어지면, $F$가 full이므로 이 isomorphism과 그 inverse는 각각 적당한 $g:S_1\rightarrow S_2$와 $h:S_2\rightarrow S_1$에 대하여 $F(g)$와 $F(h)$의 꼴로 적히고, $F(h\circ g)=F(\id_{S_1})$과 $F(g\circ h)=F(\id_{S_2})$에 $F$의 faithfulness를 적용하면 $g$가 isomorphism임을 얻는다. 그럼 $\sk(\mathcal{A})$가 skeletal이므로 $S_1=S_2$이다. 또 $F$가 essentially surjective이므로 임의의 $T\in\obj(\sk(\mathcal{B}))$마다 $F(S)\cong T$인 $S$가 존재하고, $\sk(\mathcal{B})$가 skeletal이므로 $F(S)=T$이다. 그럼 $F$는 object에 대하여 전단사이면서 fully faithful이므로 두 category 사이의 isomorphism이다.
 
 ---
 

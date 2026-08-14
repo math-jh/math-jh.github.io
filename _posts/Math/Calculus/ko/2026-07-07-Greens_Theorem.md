@@ -10,6 +10,8 @@ sidebar:
 
 date: 2026-07-07
 weight: 18
+published: false
+revising: true
 
 drift_needed: true
 
@@ -22,7 +24,7 @@ drift_needed: true
 우선 우리는 평면 영역 $D$의 경계곡선 $\partial D$에는 두 방향 중, 영역을 왼쪽에 두고 도는 방향, 곧 바깥 boundary는 반시계방향으로 도는 것을 *양의 방향<sub>positive orientation</sub>*이라 정의한다. 그럼 다음이 성립한다.
 
 ::: 정리 1 (그린)
-$D$가 조각마다 smooth한 simple closed 곡선 $C = \partial D$로 둘러싸인 평면 영역이고 $P, Q$가 $D$를 포함하는 열린집합에서 $C^1$이면, $C$를 양의 방향으로 잡을 때
+$D$가 조각마다 smooth한 simple closed curve $C = \partial D$로 둘러싸인 평면 영역이고 $P, Q$가 $D$를 포함하는 열린집합에서 $C^1$이면, $C$를 양의 방향으로 잡을 때
 
 $$\oint_C P\dd{x} + Q\dd{y} = \iint_D \left(\frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y}\right)\dd{A}$$
 
@@ -38,7 +40,7 @@ $$D = \{(x,y) \mid a \leq x \leq b,\ g_1(x) \leq y \leq g_2(x)\}$$
 
 $$\oint_C P\dd{x} = -\iint_D \partial P/\partial y\dd{A}$$
 
-를 보인다. 이중적분 쪽은 [§다중적분, ⁋정리 2](/ko/math/calculus/multiple_integrals#thm2)로 안쪽을 먼저 적분하면
+를 보인다. 이중적분 쪽은 [§다중적분, §§푸비니 정리](/ko/math/calculus/multiple_integrals#푸비니-정리)의 반복적분 공식으로 안쪽을 먼저 적분하면
 
 $$\iint_D \frac{\partial P}{\partial y}\dd{A} = \int_a^b \bigl(P(x, g_2(x)) - P(x, g_1(x))\bigr)\dd{x}$$
 
@@ -79,7 +81,7 @@ $$\oint_C -y\dd{x} = \area(D)$$
 이다. 셋째 식은 이 둘을 평균낸 것이다.
 :::
 
-한편, 그린 정리는 평면벡터장 $\mathbf{F} = (P, Q)$의 두 미분량을 각각 boundary 적분으로 해석하는 두 형태로 다시 적힌다.
+한편, 그린 정리는 평면벡터장 $\mathbf{F} = (P, Q)$의 두 미분량을 각각 boundary 적분으로 해석하는 두 형태로 다시 적힌다. 이때 평면벡터장의 발산은 회전의 경우와 마찬가지로 $\mathbf{F}$를 $z$에 무관한 $(P, Q, 0)$으로 보아 얻는 $\divergence \mathbf{F} = \partial P/\partial x + \partial Q/\partial y$이다. ([§벡터장, ⁋정의 3](/ko/math/calculus/vector_fields#def3))
 
 ::: 명제 3
 $D$의 boundary $C$가 양의 방향이고 $\mathbf{F} = (P, Q)$가 $C^1$이면, 단위접선 $\mathbf{T}$와 바깥 단위법선 $\mathbf{n}$에 대해
@@ -116,7 +118,7 @@ $$\iint_D (P_x + Q_y)\dd{A} = \iint_D \divergence \mathbf{F}\dd{A}$$
 :::
 
 ::: 증명
-영역이 단순연결이므로 그 안의 임의의 simple closed 곡선 $C$가 둘러싸는 영역 $D$ 전체가 다시 영역 안에 들어간다. 이제 
+영역이 단순연결이므로 그 안의 임의의 simple closed curve $C$가 둘러싸는 영역 $D$ 전체가 다시 영역 안에 들어간다. 이제 
 
 $$\oint_C \mathbf{F}\cdot d\mathbf{r} = \iint_D (Q_x - P_y)\dd{A} = 0$$
 

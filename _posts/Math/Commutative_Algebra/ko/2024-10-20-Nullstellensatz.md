@@ -10,6 +10,8 @@ sidebar:
 
 date: 2024-10-20
 weight: 10
+published: false
+revising: true
 drift_needed: true
 
 ---
@@ -70,7 +72,7 @@ Jacobson ring $A$와, finitely generated $A$-algebra $E$가 주어졌다 하자.
     이렇게 quotient를 취하는 과정에서, $A$는 $A'=A/(A\cap \mathfrak{q})$로 바뀌게 되며 이 또한 Jacobson ring이므로, 결과적으로 우리가 보여야 하는 것은 다음 명제이다.
     > Integral domain $A'$가 Jacobson이라 하고, 하나의 원소로 생성되는 $A'$-algebra $E'$가 integral domain이며 $A'$를 포함한다 하자. 만일 $E'$가 영이 아닌 $x\in E'$를 포함하여 $E'[x^{-1}]$이 field이도록 할 수 있다면, $E'$ 또한 field이다.
 
-    이를 위해 우리는 위의 가정 하에서 $A'$가 field가 되어야 하고, $E'$는 $A'$의 유한한 extension이 됨을 보인다. 위의 명제에서 $E'$는 하나의 원소로 생성되는 $A'$-algebra이므로, $E'=A'[\x]/\mathfrak{q}$라 쓸 수 있다. 우선 $\mathfrak{q}\neq 0$임을 보이자. 결론에 반하여 $\mathfrak{q}=0$이라 하고, 적당한 $x\in E'/(0)=A'[\x]$가 존재하여 $E'[x^{-1}]=A'[\x][x^{-1}]$이 field라 가정하자. $K'=\Frac(A')$라 하면, 이 가정에 의해 $K'[\x][x^{-1}]$ 또한 field이다. 그런데 $K'[\x]$는 첫째 결과에 의해 Jacobson이므로 $K'[\x]$가 field가 되어야 하고 이는 모순이다. 따라서 $\mathfrak{q}\neq 0$이어야 하고, $E'[x^{-1}]=K'[\x]/\mathfrak{q}K'[\x]$는 $K'$의 finite dimensional extension이다.  
+    이를 위해 우리는 위의 가정 하에서 $A'$가 field가 되어야 하고, $E'$는 $A'$의 finite extension이 됨을 보인다. 위의 명제에서 $E'$는 하나의 원소로 생성되는 $A'$-algebra이므로, $E'=A'[\x]/\mathfrak{q}$라 쓸 수 있다. 우선 $\mathfrak{q}\neq 0$임을 보이자. 결론에 반하여 $\mathfrak{q}=0$이라 하고, 적당한 $x\in E'/(0)=A'[\x]$가 존재하여 $E'[x^{-1}]=A'[\x][x^{-1}]$이 field라 가정하자. $K'=\Frac(A')$라 하면, 이 가정에 의해 $K'[\x][x^{-1}]$ 또한 field이다. 그런데 $K'[\x]$는 첫째 결과에 의해 Jacobson이므로 $K'[\x]$가 field가 되어야 하고 이는 모순이다. 따라서 $\mathfrak{q}\neq 0$이어야 하고, $E'[x^{-1}]=K'[\x]/\mathfrak{q}K'[\x]$는 $K'$의 finite dimensional extension이다.  
     이제 $p(\x)\in \mathfrak{q}$가 $E'$에서 다음의 식
 
     $$p(\alpha)=p_n\alpha^n+\cdots+p_0=0$$
@@ -84,7 +86,11 @@ Jacobson ring $A$와, finitely generated $A$-algebra $E$가 주어졌다 하자.
     $$\left(\frac{1}{x}\right)^m+\frac{q_1}{q_0}\left(\frac{1}{x}\right)^{m-1}+\cdots+\frac{q_m}{q_0}=0$$
 
     으로부터 $E'[x^{-1}]$이 integral $A'[(p_nq_0)^{-1}]$-algebra임을 안다. 이제 [§정수적 확장과 아이디얼, ⁋따름정리 3](/ko/math/commutative_algebra/lying_over_and_going_up#cor3)으로부터 $A'[(p_nq_0)^{-1}]$는 field이고, 가정에 의해 $A'$는 Jacobson이므로 [보조정리 3](#lem3)에 의해 $A'$는 field이다. 따라서 $E'$는 integral $A'$-algebra이고 다시 [§정수적 확장과 아이디얼, ⁋따름정리 3](/ko/math/commutative_algebra/lying_over_and_going_up#cor3)으로부터 $E'$가 field임을 안다. 
-3. 이제 마지막 경우는 둘째 결과를 사용해 induction을 진행하면 된다. 
+3. 마지막으로 일반적인 경우는 generator의 개수에 대한 induction으로 얻어진다. $E=A[\alpha_1,\ldots, \alpha_n]$이라 하자. $n=0$인 경우, 즉 $E$가 $A$의 quotient인 경우에는 $E$가 Jacobson이고, $E$의 maximal ideal $\mathfrak{n}$에 대하여 $\mathfrak{m}=\mathfrak{n}\cap A$는 canonical surjection $A\rightarrow E$에 의한 $\mathfrak{n}$의 preimage이므로 $A$의 maximal ideal이며, $E/\mathfrak{n}\cong A/\mathfrak{m}$이므로 원하는 결론이 모두 성립한다. 이제 $n\geq 1$이라 하고 $B=A[\alpha_1,\ldots, \alpha_{n-1}]$이라 하면, induction 가정에 의해 $B$는 Jacobson ring이고 $E=B[\alpha_n]$은 하나의 원소로 생성되는 $B$-algebra이므로, 둘째 결과에 의해 $E$ 또한 Jacobson ring이다.
+
+    다음으로 $E$의 maximal ideal $\mathfrak{n}$을 고정하고 $\mathfrak{n}'=\mathfrak{n}\cap B$라 하자. 그럼 $E/\mathfrak{n}$은 field이고, $B/\mathfrak{n}'$은 여기에 포함되는 integral domain이면서 Jacobson ring이며, $E/\mathfrak{n}$은 $\alpha_n$의 image 하나로 생성되는 $B/\mathfrak{n}'$-algebra이다. $E/\mathfrak{n}$이 이미 field이므로 영이 아닌 아무 원소 $x$를 잡아도 $(E/\mathfrak{n})[x^{-1}]=E/\mathfrak{n}$이 field이고, 따라서 둘째 단계의 논증을 $A'=B/\mathfrak{n}'$과 $E'=E/\mathfrak{n}$에 적용할 수 있다. 이로부터 $B/\mathfrak{n}'$이 field, 즉 $\mathfrak{n}'$이 $B$의 maximal ideal이라는 것과, $E/\mathfrak{n}$이 $B/\mathfrak{n}'$의 finite extension이라는 것을 얻는다.
+
+    이제 induction 가정을 $B$와 그 maximal ideal $\mathfrak{n}'$에 적용하면 $\mathfrak{m}=\mathfrak{n}'\cap A=\mathfrak{n}\cap A$가 $A$의 maximal ideal이고 $B/\mathfrak{n}'$이 $A/\mathfrak{m}$의 finite extension임을 안다. 그럼 $E/\mathfrak{n}$은 $B/\mathfrak{n}'$-벡터공간으로서 유한차원이고 $B/\mathfrak{n}'$은 $A/\mathfrak{m}$-벡터공간으로서 유한차원이므로 $E/\mathfrak{n}$은 $A/\mathfrak{m}$-벡터공간으로서도 유한차원이며, 따라서 $E/\mathfrak{n}$은 $A/\mathfrak{m}$의 finite extension이다. 
 :::
 
 특별히 $A=\mathbb{K}$이고 $E=\mathbb{K}[\x_1,\ldots, \x_n]$인 경우를 생각하자. 그럼 임의의 

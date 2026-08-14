@@ -1,7 +1,7 @@
 ---
 title: "Darboux 정리"
-description: "Moser의 방법을 이용하여 모든 symplectic manifold가 국소적으로 표준 모델과 symplectomorphic함을 보이는 Darboux 정리를 증명하고, 그 대역적 일반화인 Moser 안정성 정리를 다룬다."
-excerpt: "Moser의 trick으로 증명하는 Darboux 정리와 Moser 안정성"
+description: "Moser의 방법을 이용하여 모든 symplectic manifold가 국소적으로 표준 모델과 symplectomorphic함을 보이는 Darboux 정리를 증명하고, 그 대역적 일반화인 Moser stability 정리를 다룬다."
+excerpt: "Moser의 trick으로 증명하는 Darboux 정리와 Moser stability"
 
 categories: [Math / Symplectic Geometry]
 permalink: /ko/math/symplectic_geometry/darboux_theorem
@@ -115,17 +115,17 @@ $$\phi_1^\ast\omega_1=\phi_0^\ast\omega_0=\id^\ast\omega_0=\omega_0$$
 이다. 한편 $\omega_1=\omega$이므로, $\phi_1$은 원점을 고정하는 diffeomorphism이며 $\phi_1^\ast\omega=\omega_0$을 만족한다. 따라서 $\varphi=\phi_1$로 두면 $\varphi^\ast\omega_0$이 아니라 $\phi_1^\ast\omega=\omega_0$을 얻으므로, 원하는 좌표사상은 $\varphi=\phi_1^{-1}$이다. 실제로 $\phi_1^\ast\omega=\omega_0$의 양변에 $(\phi_1^{-1})^\ast$를 적용하면 $\omega=(\phi_1^{-1})^\ast\omega_0$, 즉 $(\phi_1^{-1})^\ast\omega_0=\omega$이고, $\phi_1^{-1}$은 원점을 고정한다. 처음에 잡은 coordinate system과 1단계의 선형변환을 합성하면, 이는 곧 $M$의 원래 점 $p$ 근방에서 $\varphi(p)=0$, $\varphi^\ast\omega_0=\omega$를 만족하는 좌표사상을 준다.
 :::
 
-위 증명에서 얻은 좌표 $(x_1,\ldots,x_n,y_1,\ldots,y_n)$을 *Darboux 좌표<sub>Darboux coordinates</sub>*라 부른다. 이 좌표에서 [§사교다양체, ⁋정의 6](/ko/math/symplectic_geometry/symplectic_manifold#def6)의 Hamiltonian 벡터장은 [§고전역학, ⁋명제 1](/ko/math/symplectic_geometry/classical_mechanics#prop1)의 Hamilton 방정식 그대로 적히므로, Darboux 정리는 모든 symplectic manifold가 국소적으로 고전역학의 phase space와 동일함을 말한다.
+위 증명에서 얻은 좌표 $(x_1,\ldots,x_n,y_1,\ldots,y_n)$을 *Darboux coordinate<sub>Darboux coordinates</sub>*라 부른다. 이 좌표에서 [§사교다양체, ⁋정의 6](/ko/math/symplectic_geometry/symplectic_manifold#def6)의 Hamiltonian 벡터장은 [§고전역학, ⁋명제 1](/ko/math/symplectic_geometry/classical_mechanics#prop1)의 Hamilton 방정식 그대로 적히므로, Darboux 정리는 모든 symplectic manifold가 국소적으로 고전역학의 phase space와 동일함을 말한다.
 
 ::: 참고 3
 Moser의 방법의 핵심은 두 군데에서 nondegeneracy를 사용한다는 점이다. 첫째로 경로 $\omega_t$ 전체가 작은 근방에서 symplectic이어야 하며, 둘째로 그래야만 $(\ast)$에서 $1$-form $\alpha$를 벡터장 $X_t$로 풀어낼 수 있다. 만일 $\omega$가 nondegenerate가 아니었다면, 가령 일반적인 closed $2$-form에 대해서는 이 방법이 작동하지 않으며, 실제로 그러한 form에는 국소 불변량 (가령 각 점에서의 rank의 변화)이 존재할 수 있다. 또한 증명은 본질적으로 *왜* 국소 불변량이 없는지를 설명한다. 두 symplectic form을 잇는 직선경로가 항상 symplectic으로 유지되며, 그 경로를 따라 흐름으로 옮길 수 있기 때문이다.
 :::
 
-## Moser 안정성 정리
+## Moser stability 정리
 
 Moser의 방법은 한 점 근방이 아니라 compact manifold 전체에서도 작동하며, 이때 얻어지는 결과가 Moser stability 정리이다. Darboux 정리에서는 두 form $\omega_0$과 $\omega$이 한 점에서 일치한다는 사실로부터 $\alpha$가 그 점에서 사라지게 만들어 흐름이 그 점의 근방에서 모든 $t\in[0,1]$에 대해 존재함을 보장하였다. 대역적인 경우에는 $M$이 compact라는 가정이 흐름의 대역적 존재를 보장하는 역할을 대신하며, $\omega-\omega_0$이 exact라는 조건이 $\alpha$의 존재를 준다.
 
-::: 정리 4 (Moser 안정성)
+::: 정리 4 (Moser stability)
 $M$이 boundary가 없는 compact manifold이고, $\{\omega_t\}_{t\in[0,1]}$이 $M$ 위의 symplectic form들의 $C^\infty$ 경로라 하자. 만일 de Rham cohomology class $[\omega_t]\in H^2_{\mathrm{dR}}(M)$이 모든 $t$에 대해 일정하다면, isotopy $\{\phi_t\}_{t\in[0,1]}$이 존재하여 $\phi_0=\id$이고
 
 $$\phi_t^\ast\omega_t=\omega_0$$

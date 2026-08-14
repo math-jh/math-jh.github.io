@@ -19,7 +19,7 @@ drift_needed: true
 
 ## Injective dimension이 유한한 local ring
 
-[§단사가군과 Matlis 쌍대성, ⁋명제 7](/ko/math/commutative_algebra/matlis_duality#prop7)은 Noetherian local ring $(A,\mathfrak{m},\kappa)$ 위의 finitely generated module의 injective dimension을 오직 residue field와의 $\Ext$의 소멸 차수로 읽어낸다. 이 판정과 [§코쥴 복합체](/ko/math/commutative_algebra/koszul_complex)의 도구를 결합하면, injective dimension이 유한할 때 그 값이 정확히 무엇인지가 결정된다.
+[§단사가군과 Matlis duality, ⁋명제 7](/ko/math/commutative_algebra/matlis_duality#prop7)은 Noetherian local ring $(A,\mathfrak{m},\kappa)$ 위의 finitely generated module의 injective dimension을 오직 residue field와의 $\Ext$의 소멸 차수로 읽어낸다. 이 판정과 [§코쥴 복합체](/ko/math/commutative_algebra/koszul_complex)의 도구를 결합하면, injective dimension이 유한할 때 그 값이 정확히 무엇인지가 결정된다.
 
 ::: 정리 1 (Bass)
 Noetherian local ring $(A,\mathfrak{m},\kappa)$ 위의 $0$이 아닌 finitely generated $A$-module $M$이 $\operatorname{injdim}_AM<\infty$를 만족하면
@@ -39,7 +39,7 @@ $$H^t(x;M)\cong H_0(x;M)=M/xM$$
 $$0\rightarrow\kappa\rightarrow A/(x)\rightarrow C\rightarrow 0$$
 을 얻고, 여기에 $\Hom_A(-,M)$의 long exact sequence를 적용한
 $$\Ext_A^s(A/(x),M)\rightarrow\Ext_A^s(\kappa,M)\rightarrow\Ext_A^{s+1}(C,M)$$
-에서 $s+1>\operatorname{injdim}_AM$이므로 [§호몰로지 차원, ⁋명제 3](/ko/math/commutative_algebra/homological_dimension#prop3)에 의하여 $\Ext_A^{s+1}(C,M)=0$이고, 따라서 첫째 map은 surjective이다. 한편 [§단사가군과 Matlis 쌍대성, ⁋명제 7](/ko/math/commutative_algebra/matlis_duality#prop7)에 의하여 $s=\sup\{i\mid\Ext_A^i(\kappa,M)\neq 0\}$이므로 $\Ext_A^s(\kappa,M)\neq 0$이고, surjectivity로부터 $\Ext_A^s(A/(x),M)\neq 0$이다. 그런데 $\Ext_A^s(A/(x),M)\cong H^s(x;M)$이고 Koszul cochain complex $K^\bullet(x;M)$은 $0\leq\bullet\leq t$에서만 $0$이 아닐 수 있으므로 $H^s(x;M)\neq 0$은 $s\leq t$를 강제한다. 종합하면 $s=t=\operatorname{depth}A$이다.
+에서 $s+1>\operatorname{injdim}_AM$이므로 [§호몰로지 차원, ⁋명제 3](/ko/math/commutative_algebra/homological_dimension#prop3)에 의하여 $\Ext_A^{s+1}(C,M)=0$이고, 따라서 첫째 map은 surjective이다. 한편 [§단사가군과 Matlis duality, ⁋명제 7](/ko/math/commutative_algebra/matlis_duality#prop7)에 의하여 $s=\sup\{i\mid\Ext_A^i(\kappa,M)\neq 0\}$이므로 $\Ext_A^s(\kappa,M)\neq 0$이고, surjectivity로부터 $\Ext_A^s(A/(x),M)\neq 0$이다. 그런데 $\Ext_A^s(A/(x),M)\cong H^s(x;M)$이고 Koszul cochain complex $K^\bullet(x;M)$은 $0\leq\bullet\leq t$에서만 $0$이 아닐 수 있으므로 $H^s(x;M)\neq 0$은 $s\leq t$를 강제한다. 종합하면 $s=t=\operatorname{depth}A$이다.
 :::
 
 이 정리에서 injective dimension이 유한하다는 가정은 결론을 위해 필수적이다. 값이 유한하기만 하면 그것이 무엇인지는 module의 세부 구조와 무관하게 오직 base ring의 depth로 결정된다. 특히 $M=A$인 경우가 이 글의 주인공이다.
@@ -97,7 +97,7 @@ Gorenstein local ring $(A,\mathfrak{m})$은 Cohen--Macaulay local ring이다.
 ::: 증명
 $d=\dim A$로 두고 $\operatorname{injdim}_AA\geq d$를 보이면, [정리 1](#thm1)에 의하여 $\operatorname{depth}A=\operatorname{injdim}_AA\geq d$이고 [§Depth, ⁋따름정리 8](/ko/math/commutative_algebra/depth#cor8)의 $\operatorname{depth}A\leq\dim A=d$와 종합하여 $\operatorname{depth}A=\dim A$, 곧 [§Cohen-Macaulay 환, ⁋정의 1](/ko/math/commutative_algebra/cohen_macaulay_rings#def1)의 의미에서 $A$가 Cohen--Macaulay라는 결론을 얻는다.
 
-길이 $d$의 prime ideal chain $\mathfrak{p}_0\subsetneq\mathfrak{p}_1\subsetneq\cdots\subsetneq\mathfrak{p}_d=\mathfrak{m}$을 택하자. ($\dim A=\codim\mathfrak{m}=d$이므로 $\mathfrak{m}$에서 끝나는 이러한 chain이 존재한다.) 각 $j$에 대하여 [따름정리 4](#cor4)에 의하여 $A_{\mathfrak{p}_j}$는 Gorenstein이므로 $d_j:=\operatorname{injdim}_{A_{\mathfrak{p}_j}}A_{\mathfrak{p}_j}$는 유한하고, [§단사가군과 Matlis 쌍대성, ⁋명제 7](/ko/math/commutative_algebra/matlis_duality#prop7)을 $A_{\mathfrak{p}_j}$에 적용하면
+길이 $d$의 prime ideal chain $\mathfrak{p}_0\subsetneq\mathfrak{p}_1\subsetneq\cdots\subsetneq\mathfrak{p}_d=\mathfrak{m}$을 택하자. ($\dim A=\codim\mathfrak{m}=d$이므로 $\mathfrak{m}$에서 끝나는 이러한 chain이 존재한다.) 각 $j$에 대하여 [따름정리 4](#cor4)에 의하여 $A_{\mathfrak{p}_j}$는 Gorenstein이므로 $d_j:=\operatorname{injdim}_{A_{\mathfrak{p}_j}}A_{\mathfrak{p}_j}$는 유한하고, [§단사가군과 Matlis duality, ⁋명제 7](/ko/math/commutative_algebra/matlis_duality#prop7)을 $A_{\mathfrak{p}_j}$에 적용하면
 $$d_j=\sup\{i\mid\Ext_{A_{\mathfrak{p}_j}}^i(\kappa(\mathfrak{p}_j),A_{\mathfrak{p}_j})\neq 0\}$$
 이므로 $\Ext_{A_{\mathfrak{p}_j}}^{d_j}(\kappa(\mathfrak{p}_j),A_{\mathfrak{p}_j})\neq 0$이다.
 
@@ -147,7 +147,7 @@ $$\operatorname{injdim}_{A/xA}(A/xA)=\operatorname{injdim}_A(A)-1$$
 ::: 증명
 $\overline{A}=A/xA$, $\kappa=A/\mathfrak{m}$으로 두자. $x\in\mathfrak{m}$이므로 $\kappa$는 $\overline{A}$-module이고, [보조정리 7](#lem7)을 $N=\kappa$에 적용하면 각 $j\geq 0$에서 $\Ext_{\overline{A}}^j(\kappa,\overline{A})\cong\Ext_A^{j+1}(\kappa,A)$이다. 한편 $x\in\mathfrak{m}$이 $A$-regular이므로 $\Hom_A(\kappa,A)=(0:_A\mathfrak{m})=0$이고, 곧 $\Ext_A^0(\kappa,A)=0$이다.
 
-[§단사가군과 Matlis 쌍대성, ⁋명제 7](/ko/math/commutative_algebra/matlis_duality#prop7)을 $A$에 적용하면 $\operatorname{injdim}_AA=\sup\{i\mid\Ext_A^i(\kappa,A)\neq 0\}$인데, 방금 본 $\Ext_A^0(\kappa,A)=0$에 의하여 이 supremum은 $i\geq 1$에서 취해진다. 그럼 Rees isomorphism $\Ext_A^{j+1}(\kappa,A)\cong\Ext_{\overline{A}}^j(\kappa,\overline{A})$와 다시 같은 명제를 $\overline{A}$에 적용한 결과로부터
+[§단사가군과 Matlis duality, ⁋명제 7](/ko/math/commutative_algebra/matlis_duality#prop7)을 $A$에 적용하면 $\operatorname{injdim}_AA=\sup\{i\mid\Ext_A^i(\kappa,A)\neq 0\}$인데, 방금 본 $\Ext_A^0(\kappa,A)=0$에 의하여 이 supremum은 $i\geq 1$에서 취해진다. 그럼 Rees isomorphism $\Ext_A^{j+1}(\kappa,A)\cong\Ext_{\overline{A}}^j(\kappa,\overline{A})$와 다시 같은 명제를 $\overline{A}$에 적용한 결과로부터
 $$\operatorname{injdim}_AA=1+\sup\{j\geq 0\mid\Ext_{\overline{A}}^j(\kappa,\overline{A})\neq 0\}=1+\operatorname{injdim}_{\overline{A}}\overline{A}$$
 이다. 이 등식의 양변은 함께 유한하거나 함께 무한하므로 두 Gorenstein 조건이 동치이고, 유한한 경우 $\operatorname{injdim}_{\overline{A}}\overline{A}=\operatorname{injdim}_AA-1$이다.
 :::
@@ -189,13 +189,13 @@ $A$가 Artinian이므로 [§조르단-횔더 정리, ⁋정리 4](/ko/math/commu
 
 (1)과 (2)의 동치를 보자. $A$가 Gorenstein이면 [정리 1](#thm1)에 의하여 $\operatorname{injdim}_AA=\operatorname{depth}A$인데, [§Depth, ⁋따름정리 8](/ko/math/commutative_algebra/depth#cor8)에 의하여 $\operatorname{depth}A\leq\dim A=0$이므로 $\operatorname{injdim}_AA=0$, 곧 $A$는 injective이다. 거꾸로 $A$가 injective이면 $\operatorname{injdim}_AA=0<\infty$이므로 Gorenstein이다.
 
-(2)가 (4)를 함의함을 보자. $A$가 $0$이 아닌 injective module이므로 [§단사가군과 Matlis 쌍대성, ⁋정리 6](/ko/math/commutative_algebra/matlis_duality#thm6)에 의하여 prime ideal들의 족 $(\mathfrak{p}_\lambda)$에 대하여 $A\cong\bigoplus_\lambda E(A/\mathfrak{p}_\lambda)$이다. $A$가 Artinian local이라 그 유일한 prime ideal은 $\mathfrak{m}$이므로 ([§조르단-횔더 정리, ⁋정리 4](/ko/math/commutative_algebra/Jordan-Holder_theorem#thm4)) 각 $\mathfrak{p}_\lambda=\mathfrak{m}$이고, 따라서 $A\cong E(\kappa)^{\oplus k}$이다. 한편 $A$는 $A$-module로서 indecomposable인데, direct summand로의 분해는 $\Hom_A(A,A)\cong A$의 idempotent에 대응하고 local ring $A$의 idempotent는 $0$과 $1$ 뿐이기 때문이다 ($e^2=e$이면 $e(1-e)=0$이고 $e$와 $1-e$ 중 하나는 unit이므로 $e\in\{0,1\}$이다). 그러므로 $k=1$이고 $A\cong E(\kappa)$이다.
+(2)가 (4)를 함의함을 보자. $A$가 $0$이 아닌 injective module이므로 [§단사가군과 Matlis duality, ⁋정리 6](/ko/math/commutative_algebra/matlis_duality#thm6)에 의하여 prime ideal들의 족 $(\mathfrak{p}_\lambda)$에 대하여 $A\cong\bigoplus_\lambda E(A/\mathfrak{p}_\lambda)$이다. $A$가 Artinian local이라 그 유일한 prime ideal은 $\mathfrak{m}$이므로 ([§조르단-횔더 정리, ⁋정리 4](/ko/math/commutative_algebra/Jordan-Holder_theorem#thm4)) 각 $\mathfrak{p}_\lambda=\mathfrak{m}$이고, 따라서 $A\cong E(\kappa)^{\oplus k}$이다. 한편 $A$는 $A$-module로서 indecomposable인데, direct summand로의 분해는 $\Hom_A(A,A)\cong A$의 idempotent에 대응하고 local ring $A$의 idempotent는 $0$과 $1$ 뿐이기 때문이다 ($e^2=e$이면 $e(1-e)=0$이고 $e$와 $1-e$ 중 하나는 unit이므로 $e\in\{0,1\}$이다). 그러므로 $k=1$이고 $A\cong E(\kappa)$이다.
 
-(4)가 (3)을 함의함을 보자. $A\cong E(\kappa)$이면 [§단사가군과 Matlis 쌍대성, ⁋보조정리 8](/ko/math/commutative_algebra/matlis_duality#lem8)에 의하여 $(0:_A\mathfrak{m})=\Hom_A(\kappa,A)\cong\Hom_A(\kappa,E(\kappa))\cong\kappa$이므로 $\dim_\kappa(0:_A\mathfrak{m})=1$이다.
+(4)가 (3)을 함의함을 보자. $A\cong E(\kappa)$이면 [§단사가군과 Matlis duality, ⁋보조정리 8](/ko/math/commutative_algebra/matlis_duality#lem8)에 의하여 $(0:_A\mathfrak{m})=\Hom_A(\kappa,A)\cong\Hom_A(\kappa,E(\kappa))\cong\kappa$이므로 $\dim_\kappa(0:_A\mathfrak{m})=1$이다.
 
-(3)이 (2)를 함의함을 보자. $\dim_\kappa(0:_A\mathfrak{m})=1$이라 하자. $A$의 $0$이 아닌 임의의 submodule $N$은 Artinian이므로 minimal한 $0$이 아닌 submodule, 곧 simple submodule $S$를 포함하며 ([§조르단-횔더 정리, ⁋정의 2](/ko/math/commutative_algebra/Jordan-Holder_theorem#def2)), $S$의 annihilator는 maximal ideal이라 $\mathfrak{m}$이므로 $S\subseteq(0:_A\mathfrak{m})$이다. $(0:_A\mathfrak{m})$이 $1$차원이라 그 안의 simple submodule은 $(0:_A\mathfrak{m})$ 자신뿐이므로 $S=(0:_A\mathfrak{m})$이고, 곧 $A$의 모든 $0$이 아닌 submodule이 $(0:_A\mathfrak{m})$을 포함한다. 이는 $(0:_A\mathfrak{m})\cong\kappa$가 $A$의 essential submodule이라는 뜻이므로 ([§단사가군과 Matlis 쌍대성, ⁋정의 1](/ko/math/commutative_algebra/matlis_duality#def1)), [§단사가군과 Matlis 쌍대성, ⁋정리 3](/ko/math/commutative_algebra/matlis_duality#thm3)의 injective hull 유일성에 의하여 $E(A)\cong E(\kappa)$이다.
+(3)이 (2)를 함의함을 보자. $\dim_\kappa(0:_A\mathfrak{m})=1$이라 하자. $A$의 $0$이 아닌 임의의 submodule $N$은 Artinian이므로 minimal한 $0$이 아닌 submodule, 곧 simple submodule $S$를 포함하며 ([§조르단-횔더 정리, ⁋정의 2](/ko/math/commutative_algebra/Jordan-Holder_theorem#def2)), $S$의 annihilator는 maximal ideal이라 $\mathfrak{m}$이므로 $S\subseteq(0:_A\mathfrak{m})$이다. $(0:_A\mathfrak{m})$이 $1$차원이라 그 안의 simple submodule은 $(0:_A\mathfrak{m})$ 자신뿐이므로 $S=(0:_A\mathfrak{m})$이고, 곧 $A$의 모든 $0$이 아닌 submodule이 $(0:_A\mathfrak{m})$을 포함한다. 이는 $(0:_A\mathfrak{m})\cong\kappa$가 $A$의 essential submodule이라는 뜻이므로 ([§단사가군과 Matlis duality, ⁋정의 1](/ko/math/commutative_algebra/matlis_duality#def1)), [§단사가군과 Matlis duality, ⁋정리 3](/ko/math/commutative_algebra/matlis_duality#thm3)의 injective hull 유일성에 의하여 $E(A)\cong E(\kappa)$이다.
 
-이제 길이를 비교한다. $A$가 Artinian이라 유한한 길이를 가지므로 [§단사가군과 Matlis 쌍대성, ⁋명제 9](/ko/math/commutative_algebra/matlis_duality#prop9)를 $M=A$에 적용하면, Matlis dual $\Hom_A(A,E(\kappa))\cong E(\kappa)$가 $\length E(\kappa)=\length A$인 유한한 길이의 module이다. 그럼 essential embedding $A\hookrightarrow E(A)\cong E(\kappa)$의 양변이 같은 유한한 길이를 가지므로 $A=E(\kappa)$이고, 따라서 $A$는 injective이다.
+이제 길이를 비교한다. $A$가 Artinian이라 유한한 길이를 가지므로 [§단사가군과 Matlis duality, ⁋명제 9](/ko/math/commutative_algebra/matlis_duality#prop9)를 $M=A$에 적용하면, Matlis dual $\Hom_A(A,E(\kappa))\cong E(\kappa)$가 $\length E(\kappa)=\length A$인 유한한 길이의 module이다. 그럼 essential embedding $A\hookrightarrow E(A)\cong E(\kappa)$의 양변이 같은 유한한 길이를 가지므로 $A=E(\kappa)$이고, 따라서 $A$는 injective이다.
 :::
 
 Socle이 $1$차원이라는 조건은 $A$가 유일한 minimal한 $0$이 아닌 submodule을 갖는다는 것이다. Local ring $A$는 언제나 유일한 maximal submodule $\mathfrak{m}$을 가지므로, socle 조건은 이 극대성을 뒤집은 최소성의 형태이며, Matlis dual $D(-)=\Hom_A(-,E(\kappa))$가 유한한 길이 module 위에서 정확히 이 둘을 맞바꾼다. 다음 예시들은 이 판정을 구체적인 local ring에서 적용한다.

@@ -10,6 +10,8 @@ sidebar:
 
 date: 2026-07-06
 weight: 16
+published: false
+revising: true
 drift_needed: true
 ---
 
@@ -26,7 +28,7 @@ drift_needed: true
 벡터장은 각 점에 그 점에서 출발하는 arrow를 꽂은 그림으로 이해하는 것이 가장 직관적이다. 가령, 유체의 흐름이라면 각 점에서의 유속을 표현한 것은 벡터장을 이룬다. 우리는 이미 이런 대상을 하나 알고 있다. ([§다변수함수와 편미분, ⁋정의 2](/ko/math/calculus/partial_derivatives#def2))
 
 ::: 정의 2
-$C^1$ 스칼라함수 $f$의 기울기 $\nabla f = (\partial f/\partial x_1, \ldots, \partial f/\partial x_n)$로 주어지는 벡터장을 $f$의 *기울기장<sub>gradient field</sub>*이라 한다. 어떤 스칼라함수 $f$에 대해 $\mathbf{F} = \nabla f$로 쓸 수 있는 벡터장 $\mathbf{F}$를 *보존장<sub>conservative field</sub>*이라 하고, 그 $f$를 $\mathbf{F}$의 *potential<sub>퍼텐셜</sub>*이라 한다.
+$C^1$ scalar field $f$의 기울기 $\nabla f = (\partial f/\partial x_1, \ldots, \partial f/\partial x_n)$로 주어지는 벡터장을 $f$의 *기울기장<sub>gradient field</sub>*이라 한다. 어떤 scalar field $f$에 대해 $\mathbf{F} = \nabla f$로 쓸 수 있는 벡터장 $\mathbf{F}$를 *보존장<sub>conservative field</sub>*이라 하고, 그 $f$를 $\mathbf{F}$의 *potential<sub>퍼텐셜</sub>*이라 한다.
 :::
 
 ## 발산과 회전
@@ -42,7 +44,7 @@ $$\divergence \mathbf{F} = \nabla \cdot \mathbf{F} = \frac{\partial P}{\partial 
 
 $$\curl \mathbf{F} = \nabla \times \mathbf{F} = \left(\frac{\partial R}{\partial y} - \frac{\partial Q}{\partial z},\ \frac{\partial P}{\partial z} - \frac{\partial R}{\partial x},\ \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y}\right)$$
 
-이다. 
+이다. 평면벡터장 $\mathbf{F} = (P, Q)$는 $z$에 무관한 $(P, Q, 0)$으로 보아 $\curl \mathbf{F} = (0, 0, \partial Q/\partial x - \partial P/\partial y)$이며, 이 마지막 성분을 평면벡터장의 회전이라 한다. 
 :::
 
 위의 두 표기 $\nabla\cdot \mathbf{F}$와 $\nabla \times \mathbf{F}$는 형식적인 것으로, $\nabla = (\partial_x, \partial_y, \partial_z)$를 벡터로 보아 내적과 외적을 취한 것이다.

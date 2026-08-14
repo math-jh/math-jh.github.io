@@ -1,7 +1,7 @@
 ---
-title: "오일러 정리와 phi 함수"
+title: "오일러 정리와 phi function"
 description: "n과 서로소인 잉여류의 개수를 세는 오일러 phi 함수를 정의하고, 임의의 법에 대해 a^φ(n) ≡ 1이 성립한다는 오일러 정리를 증명한다. 중국인의 나머지 정리로부터 φ의 곱셈성과 명시 공식을 끌어낸다."
-excerpt: "오일러 phi 함수, 오일러 정리, φ의 곱셈성과 공식"
+excerpt: "오일러 phi function, 오일러 정리, φ의 곱셈성과 공식"
 
 categories: [Math / Number Theory]
 permalink: /ko/math/number_theory/euler_theorem
@@ -16,10 +16,10 @@ published: false
 
 [§페르마 소정리](/ko/math/number_theory/fermat_little_theorem)는 법이 소수일 때 $a^{p-1} \equiv 1$임을 말했다. 그 증명의 핵심은 $0$이 아닌 coset이 $p-1$개라는 것과 그들이 곱셈에 대해 닫혀 있다는 점이었다. 법이 합성수이면 곱셈 역원을 갖는 coset만이 이런 성질을 가지므로, 그 개수를 세는 함수가 필요하다.
 
-## 오일러 phi 함수
+## 오일러 phi function
 
 ::: 정의 1
-양의 정수 $n$에 대하여, $1 \leq a \leq n$이면서 $\gcd(a, n) = 1$인 정수 $a$의 개수를 *오일러 phi 함수<sub>Euler's totient</sub>* $\varphi(n)$이라 한다. $n$과 서로소인 coset들의 대표 모임 $\{a_1, \ldots, a_{\varphi(n)}\}$을 법 $n$의 *기약잉여계<sub>reduced residue system</sub>*라 한다.
+양의 정수 $n$에 대하여, $1 \leq a \leq n$이면서 $\gcd(a, n) = 1$인 정수 $a$의 개수를 *오일러 phi function<sub>Euler's totient</sub>* $\varphi(n)$이라 한다. $n$과 서로소인 coset들의 대표 모임 $\{a_1, \ldots, a_{\varphi(n)}\}$을 법 $n$의 *기약잉여계<sub>reduced residue system</sub>*라 한다.
 :::
 
 곱셈 역원을 갖는 coset이 정확히 $n$과 서로소인 것들이므로 ([§합동식, ⁋명제 7](/ko/math/number_theory/congruences#prop7)), $\varphi(n)$은 $\mathbb{Z}/n\mathbb{Z}$에서 역원을 갖는 원소의 개수이다. 예컨대 $\varphi(1) = 1$, $\varphi(p) = p - 1$ ($p$ 소수), $\varphi(12) = 4$ ($1, 5, 7, 11$) 이다.

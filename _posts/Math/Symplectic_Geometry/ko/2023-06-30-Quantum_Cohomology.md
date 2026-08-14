@@ -105,11 +105,11 @@ $$\begin{aligned}
 
 이 명제는 quantum product가 classical cup product의 *graded* deformation임을 보장한다. $q^\beta$의 degree 정의가 정확히 GW invariant의 dimension 조건과 맞물려 있다는 점이 본질적이다.
 
-## Ring 공리
+## Ring axiom
 
 Quantum product가 unit, associativity, super-commutativity의 세 가지 ring 공리를 모두 만족한다는 사실이 이 곱셈을 *quantum cohomology ring*이라 부를 수 있게 한다.
 
-::: 정리 6 (Quantum cohomology의 ring 공리)
+::: 정리 6 (Quantum cohomology의 ring axiom)
 $X$를 closed symplectic manifold라 하자. Small quantum product $\ast_q$는 다음을 만족한다.
 
 (1) **Unit**: 모든 $T_a \in H^\ast(X)$에 대해 $1 \ast_q T_a = T_a$.

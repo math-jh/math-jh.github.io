@@ -10,6 +10,8 @@ sidebar:
 
 date: 2025-03-08
 weight: 12
+published: false
+revising: true
 translated_at: 2026-07-27T01:15:03+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-07-27T01:15:03+00:00
@@ -72,15 +74,15 @@ Given affine schemes $X, Y, Z$, and an open subscheme $Y'\hookrightarrow Y$ of $
 ::: Proof
 First, from [Lemma 2](#lem2) we know that the following fiber diagram exists:
 
-{% diagram Math/Scheme_Theory/Fiber_Products-4.svg width="9.32em" alt="open_fiber_product-1" %}
+{% diagram Math/Scheme_Theory/Fiber_Products-4.svg width="9.39em" alt="open_fiber_product-1" %}
 
 Now, considering the data
 
-{% diagram Math/Scheme_Theory/Fiber_Products-5.svg width="8.55em" alt="open_fiber_product-2" %}
+{% diagram Math/Scheme_Theory/Fiber_Products-5.svg width="8.62em" alt="open_fiber_product-2" %}
 
 we can verify from [Lemma 3](#lem3) that the open subscheme $\rho_Y^{-1}(Y')$ of $X\times_ZY$ is the fiber product. In general, if the two small squares in the following diagram
 
-{% diagram Math/Scheme_Theory/Fiber_Products-6.svg width="8.55em" alt="magic_square" %}
+{% diagram Math/Scheme_Theory/Fiber_Products-6.svg width="8.62em" alt="magic_square" %}
 
 are fiber diagrams, then the outer large square is also a fiber diagram, so we obtain the desired result.
 :::

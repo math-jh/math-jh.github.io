@@ -1,7 +1,7 @@
 ---
 title: "복소정칙함수"
 description: "복소미분가능성을 한 변수 차분비의 극한으로 정의하고, 영역에서 복소미분가능한 복소정칙함수를 도입한다. Cauchy–Riemann 방정식과 Wirtinger 미분으로 실미분가능성과의 관계를 밝히고, 멱급수·지수·삼각함수의 복소정칙성과 실수부·허수부가 이루는 조화함수를 다룬다."
-excerpt: "복소미분가능성, 복소정칙함수, Cauchy–Riemann 방정식, Wirtinger 미분, 멱급수, 조화함수"
+excerpt: "복소미분가능성, 복소정칙함수, Cauchy–Riemann 방정식, Wirtinger derivative, 멱급수, 조화함수"
 
 categories: [Math / Complex Analysis]
 permalink: /ko/math/complex_analysis/holomorphic_functions
@@ -145,12 +145,12 @@ $\Omega \subseteq \mathbb{C}$가 열려 있고 $f = u + iv : \Omega \rightarrow 
 
 따름정리 6은 실제 계산에서 holomorphicity를 확인하는 가장 흔한 도구이다. 가령 다항식이나 $e^x(\cos y + i\sin y)$처럼 성분이 smooth한 함수에 대해서는 편미분의 연속성이 자동이므로, Cauchy–Riemann 두 등식만 점검하면 된다. 이 판정을 더 간결하게 적는 표기가 다음 절의 Wirtinger 미분이다.
 
-## Wirtinger 미분
+## Wirtinger derivative
 
 Cauchy–Riemann 방정식의 두 등식은 적절한 미분연산자를 도입하면 단 하나의 등식으로 압축된다. 발상은 함수를 실변수 $x, y$가 아니라 형식적으로 $z = x + iy$와 $\bar{z} = x - iy$의 함수로 보고, 이 두 변수에 대한 미분을 정의하는 것이다.
 
 ::: 정의 7
-$\Omega \subseteq \mathbb{C}$에서 실미분가능한 함수 $f$에 대하여 *Wirtinger 미분<sub>Wirtinger derivative</sub>*을
+$\Omega \subseteq \mathbb{C}$에서 실미분가능한 함수 $f$에 대하여 *Wirtinger derivative<sub>Wirtinger derivative</sub>*을
 
 $$\frac{\partial f}{\partial z} = \frac{1}{2}\left(\frac{\partial f}{\partial x} - i\frac{\partial f}{\partial y}\right), \qquad \frac{\partial f}{\partial \bar{z}} = \frac{1}{2}\left(\frac{\partial f}{\partial x} + i\frac{\partial f}{\partial y}\right)$$
 

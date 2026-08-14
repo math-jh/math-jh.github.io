@@ -221,7 +221,7 @@ $$\Hom(\mathcal{F}^a, \mathcal{G})\xrightarrow{\ \sim\ }\Hom(\mathcal{F}, \mathc
 
 [정리 17](#thm17)은 [§Grothendieck 위상과 site, ⁋정리 14](/ko/math/stacks/grothendieck_topology#thm14)의 sheafification adjunction의 2-범주 판본이다. Sheafification이 presheaf를 sheaf로 보내는 left adjoint였듯, stackification은 CFG를 stack으로 보내는 2-범주적 reflection이다. 이 조작 덕분에 우리는 moduli 문제를 우선 CFG로 자유롭게 적은 뒤, 필요하면 stackify하여 하강이 성립하는 대상으로 바꿀 수 있다. 다음 예시가 그 전형이다.
 
-이제 group이 작용하는 대상의 분류 stack을 구성한다. 그 기본 단위가 torsor이다. Site 위의 sheaf of group $G$ (즉 $\Sh(\mathcal{C}; \tau)$의 group 대상)에 대하여, $G$-torsor는 group bundle의 sheaf적 일반화이다.
+이제 group이 작용하는 대상의 분류 stack을 구성한다. 그 기본 단위가 torsor이다. Site 위의 sheaf of group $G$ (즉 $\Sh(\mathcal{C}; \tau)$의 group object)에 대하여, $G$-torsor는 group bundle의 sheaf적 일반화이다.
 
 ::: 정의 18
 Site $(\mathcal{C}, \tau)$ 위의 sheaf of group $G$에 대하여, 대상 $T\in \mathcal{C}$ 위의 *$G$-torsor* (또는 *principal $G$-bundle*)란, $\mathcal{C}/T$ 위의 sheaf $P$과 $G\vert_T$의 좌작용 $G\vert_T\times P \rightarrow P$으로서 다음을 만족하는 것이다.
@@ -232,7 +232,7 @@ Site $(\mathcal{C}, \tau)$ 위의 sheaf of group $G$에 대하여, 대상 $T\in 
 두 $G$-torsor 사이의 morphism은 $G$-동변 sheaf morphism이며 (이는 자동으로 isomorphism이다), $T$ 위의 $G$-torsor들은 groupoid $\mathbf{B}G(T)$을 이룬다. 대응 $T\mapsto \mathbf{B}G(T)$이 정의하는 CFG를 *classifying stack<sub>분류 스택</sub>* $\mathbf{B}G$로 적는다.
 :::
 
-두 조건은 $P$이 국소적으로 $G$ 자신과 같음, 곧 어떤 covering 위에서 $P\vert_{T_i}\cong G\vert_{T_i}$ ($G$의 left translation 작용)임과 동치이다. 실제로 조건 1로 각 $T_i$ 위에 절단 $s_i\in P(T_i)$을 잡으면, 조건 2가 $g\mapsto g\cdot s_i$이 동형 $G\vert_{T_i}\xrightarrow{\sim}P\vert_{T_i}$임을 준다. 두 절단의 비교는 $T_{ij}$ 위의 $G$-값 transition 자료 $g_{ij}\in G(T_{ij})$을 낳고, 이것이 cocycle을 이룬다. $\mathbf{B}G$의 한 점의 automorphism group은 $\Aut(P)\cong G(T)$이므로 ($P$이 자명한 경우), $\mathbf{B}G$은 자명한 대상 하나에 group $G$이 automorphism으로 붙은 stack, 곧 $\mathbf{B}G(T)$의 isomorphism class는 $H^1(T, G)$으로 분류된다. 가장 중요한 경우가 $G=\mathbb{G}_m$이며, 이것이 [예시 2](#ex2)에서 예고한 line bundle의 분류이다.
+두 조건은 $P$이 국소적으로 $G$ 자신과 같음, 곧 어떤 covering 위에서 $P\vert_{T_i}\cong G\vert_{T_i}$ ($G$의 left translation action)임과 동치이다. 실제로 조건 1로 각 $T_i$ 위에 절단 $s_i\in P(T_i)$을 잡으면, 조건 2가 $g\mapsto g\cdot s_i$이 동형 $G\vert_{T_i}\xrightarrow{\sim}P\vert_{T_i}$임을 준다. 두 절단의 비교는 $T_{ij}$ 위의 $G$-값 transition 자료 $g_{ij}\in G(T_{ij})$을 낳고, 이것이 cocycle을 이룬다. $\mathbf{B}G$의 한 점의 automorphism group은 $\Aut(P)\cong G(T)$이므로 ($P$이 자명한 경우), $\mathbf{B}G$은 자명한 대상 하나에 group $G$이 automorphism으로 붙은 stack, 곧 $\mathbf{B}G(T)$의 isomorphism class는 $H^1(T, G)$으로 분류된다. 가장 중요한 경우가 $G=\mathbb{G}_m$이며, 이것이 [예시 2](#ex2)에서 예고한 line bundle의 분류이다.
 
 분류 문제를 집합으로 다루려는 순진한 시도가 왜 실패하는지를 $\mathbb{G}_m$에서 명확히 볼 수 있다. Isomorphism class만 기억하는 presheaf $T\mapsto \Pic(T)$은 sheaf가 아니다. 두 line bundle은 한 covering의 각 조각 위에서 동형이어도 ($\Pic(T_i)$에서 같은 류) 대역적으로 동형이 아닐 수 있는데 ($\Pic(T)$에서 다른 류), 이는 국소 동형들 $\psi_i$을 붙이는 데 필요한 transition 자료가 집합 $\Pic$에는 담기지 않기 때문이다. 그 transition 자료가 바로 automorphism $\mathbb{G}_m(T_{ij})$의 원소이며, isomorphism class로 뭉개는 순간 사라진다. 따라서 line bundle은 sheaf로는 분류되지 않고 stack $\mathbf{B}\mathbb{G}_m$으로 분류된다. 이 stack이 실제로 stack 조건을 만족함을 line bundle의 하강으로 확인하는 것이 마지막 정리이다.
 

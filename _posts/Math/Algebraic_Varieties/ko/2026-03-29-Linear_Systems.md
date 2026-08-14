@@ -21,7 +21,7 @@ drift_needed: true
 위에서 우리는 서술의 편의상 Weil divisor에 대한 논의만 하였지만, Cartier divisor에 대해서도 비슷한 논증을 할 수 있으며, 그 결과로 나오는 정의는 다음과 같다. 
 
 ::: 정의 1
-Variety $X$ 위에 정의된 Weil divisor $D=\sum n_i D_i$가 *effective*라는 것은 모든 $i$에 대해 $n_i\geq 0$인 것이다. Cartier divisor $\{(U_i, f_i)\}$가 *effective*라는 것은 모든 $i$에 대해 $f_i$가 $U_i$ 위에서 regular인 것이다. 
+Variety $X$ 위에 정의된 Weil divisor $D=\sum n_i D_i$가 *effective*라는 것은 [§인자, ⁋정의 2](/ko/math/algebraic_varieties/divisors#def2)에서 정의하였듯 모든 $i$에 대해 $n_i\geq 0$인 것이다. Cartier divisor $\{(U_i, f_i)\}$가 *effective*라는 것은 모든 $i$에 대해 $f_i$가 $U_i$ 위에서 regular인 것이다. 
 :::
 
 그렇다면 우리의 목적은 divisor $D$의 divisor class 안에서 어떠한 effective divisor가 존재하는지 살펴보는 것이다. 이를 위해 divisor $D$가 정의하는 line bundle $\mathcal{L}=\mathcal{O}_X(D)$를 생각하자. ([§선다발과 벡터다발, ⁋정의 17](/ko/math/algebraic_varieties/line_bundles#def17)) 우리는 $\mathcal{L}$의 각각의 nonzero global section $s\in \Gamma(X, \mathcal{L})$는 pole이 없으므로 effective divisor $\divisor(s)$를 정의하며, 이는 원래의 $D$와 trivialization만큼만 차이나는 것을 확인할 수 있으므로 $D$와 linearly equivalent하다. 즉 $D$와 linearly equivalent한 effective divisor를 찾기 위해선 $\mathcal{O}_X(D)$의 nonzero global section을 보면 된다. 다만 주의할 사항은 $\divisor(s)$가 $s$의 nonzero scalar 배에 의존하지 않는다는 것으로, 이때문에 우리가 관심을 가져야할 대상은 $\Gamma(X, \mathcal{L})$ 자체가 아니라 그 projectivization이다. 
@@ -177,7 +177,7 @@ $$\nu_d^{-1}(H_0) = \{[s:t] \in \mathbb{P}^1 \mid s^d = 0\}$$
 
 $$\nu_d^{-1}(H_1) = \{[s:t] \in \mathbb{P}^1 \mid s^d - t^d = 0\}$$
 
-이고, $s^d - t^d$는 $d$개의 서로 다른 linear factor의 곱으로 분해되므로(가령 $\mathbb{K}=\mathbb{C}$라면 $s^d-t^d=\prod_{k=0}^{d-1}(s-\zeta^k t)$) $\nu_d^{-1}(H_1)$은 $\mathbb{P}^1$ 위의 서로 다른 $d$개의 점으로 이루어진 effective divisor이다. 어떤 경우에도 이 preimage들은 $\lvert \mathcal{O}_{\mathbb{P}^1}(d)\rvert$에 속하는 degree $d$ effective divisor이다.
+이고, $\operatorname{char}\mathbb{K}\nmid d$이면 $s^d - t^d$는 $d$개의 서로 다른 linear factor의 곱으로 분해되므로(가령 $\mathbb{K}=\mathbb{C}$라면 $s^d-t^d=\prod_{k=0}^{d-1}(s-\zeta^k t)$) $\nu_d^{-1}(H_1)$은 $\mathbb{P}^1$ 위의 서로 다른 $d$개의 점으로 이루어진 effective divisor이다. 어떤 경우에도 이 preimage들은 $\lvert \mathcal{O}_{\mathbb{P}^1}(d)\rvert$에 속하는 degree $d$ effective divisor이다.
 :::
 
 ## Ample line bundle
@@ -189,10 +189,10 @@ $$\nu_d^{-1}(H_1) = \{[s:t] \in \mathbb{P}^1 \mid s^d - t^d = 0\}$$
 그러나 추상적인 variety에서도 line bundle과 linear system 등등을 모두 정의할 수 있다. 그럼 특히 [명제 6](#prop6)을 사용하면 projective space로의 적절한 함수를 정의할 수 있게 된다. 다음 정의의 중요성은 이러한 맥락에서 이해해야 한다.
 
 ::: 정의 9
-Line bundle $\mathcal{L}$ (또는 대응하는 linear system $\lvert \mathcal{L} \rvert$)이 *very ample*이라는 것은, complete linear system $\lvert \mathcal{L} \rvert = \mathbb{P}(\Gamma(X, \mathcal{L}))$이 정의하는 regular map $\varphi_{\mathcal{L}}: X \rightarrow \mathbb{P}(\Gamma(X, \mathcal{L}))$이 closed embedding인 것이다.
+Line bundle $\mathcal{L}$ (또는 대응하는 linear system $\lvert \mathcal{L} \rvert$)이 *very ample*이라는 것은, complete linear system $\lvert \mathcal{L} \rvert = \mathbb{P}(\Gamma(X, \mathcal{L}))$이 정의하는 regular map $\varphi_{\mathcal{L}}: X \rightarrow \mathbb{P}(\Gamma(X, \mathcal{L})^\ast)$이 closed embedding인 것이다.
 :::
 
-$\varphi_L$은 basis의 선택에 따라 $\mathbb{P}^r$의 automorphism만큼 달라지므로, 이것이 closed embedding인지의 여부는 basis의 선택에 의존하지 않는다. 
+여기서 target이 $\Gamma(X, \mathcal{L})$의 projectivization이 아니라 그 dual의 projectivization인 것은, [명제 6](#prop6)에서 보았듯 linear system의 원소들이 target의 hyperplane들에 대응하기 때문이다. $\Gamma(X, \mathcal{L})$의 basis $s_0,\ldots,s_r$을 택하고 그 dual basis를 좌표로 삼으면 $\mathbb{P}(\Gamma(X, \mathcal{L})^\ast)\cong \mathbb{P}^r$이 되며, 이 좌표에서 $\varphi_{\mathcal{L}}$은 $x\mapsto [s_0(x):\cdots:s_r(x)]$로 주어진다. $\varphi_L$은 basis의 선택에 따라 $\mathbb{P}^r$의 automorphism만큼 달라지므로, 이것이 closed embedding인지의 여부는 basis의 선택에 의존하지 않는다. 
 
 Very ample의 정의에서 핵심은 사상이 단순한 morphism이 아니라 *closed* embedding이라는 점이다. 즉, 위에서 설명한 것과 같이 추상적인 variety의 세계에서도 이를 사용하여 projective variety를 정의하고, 심지어 very ample line bundle $\mathcal{L}$을 사용하면 $X$를 이 ambient projective space에서 명시적인 좌표로 표현할 수도 있게 된다. 
 

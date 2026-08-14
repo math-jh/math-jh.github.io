@@ -126,7 +126,7 @@ $\mathcal{L} \otimes \mathcal{L}^\vee$의 transition functions은 $g_{ij} \cdot 
 
 $$\pi\vert_{\pi^{-1}(U_i)}:\pi^{-1}(U_i) \rightarrow U_i$$
 
-는 affine variety 사이의 함수이고 따라서 [§아핀다양체, ⁋명제 16](/ko/math/algebraic_varieties/affine_varieties#prop16)로부터 coordinate ring 사이의 ring homomorphism이 유도된다. 이 ring homomorphism은 $\pi^{-1}(U_i)$의 coordinate ring을 $U_i$의 coordinate ring을 계수로 갖는 module로 만들고, 차원을 고려해보면 그 rank는 1이다. $U_i$의 임의의 열린집합에서도 $\mathcal{L}$은 trivial하므로, 우리는 line bundle은 affine-local하게는 coordinate ring 위의 invertible module이 된다는 것을 확인할 수 있다. ([\[가환대수학\] §분수아이디얼, ⁋정의 1](/ko/math/commutative_algebra/fractional_ideals#def1)) 그럼 이 때 line bundle들 위에서 정의되는 연산 $\otimes$와 $\vee$는 각각 [\[가환대수학\] §분수아이디얼, ⁋정리 3](/ko/math/commutative_algebra/fractional_ideals#thm3)의 연산으로부터 오는 것이며, 따라서 [\[가환대수학\] §분수아이디얼, ⁋정의 5](/ko/math/commutative_algebra/fractional_ideals#def5)을 따라 다음의 이름을 붙이는 것이 어색하지 않다.
+는 affine variety 사이의 함수이고 따라서 [§아핀다양체, ⁋명제 16](/ko/math/algebraic_varieties/affine_varieties#prop16)로부터 coordinate ring 사이의 ring homomorphism이 유도된다. 이 ring homomorphism은 $\pi^{-1}(U_i)$의 coordinate ring을 $U_i$의 coordinate ring $A$ 위의 algebra로 만드는데, $\mathcal{L}\vert_{U_i}$가 trivial하므로 $\pi^{-1}(U_i)\cong U_i\times \mathbb{A}^1$이고 따라서 이 algebra는 $A[t]$이다. 여기서 rank가 $1$인 것은 이 coordinate ring이 아니라 $\pi$의 section들이 이루는 $A$-module $\mathcal{O}_X(\mathcal{L})(U_i)$로, trivialization $\phi_i$가 이를 $A$와 동일시하므로 이는 rank $1$의 free module이다. $U_i$의 임의의 열린집합에서도 $\mathcal{L}$은 trivial하므로 임의의 affine open subset 위에서 section들의 module은 국소적으로 rank $1$의 free module, 즉 rank $1$의 projective module이며, 이로부터 우리는 line bundle은 affine-local하게는 coordinate ring 위의 invertible module이 된다는 것을 확인할 수 있다. ([\[가환대수학\] §분수아이디얼, ⁋정의 1](/ko/math/commutative_algebra/fractional_ideals#def1)) 그럼 이 때 line bundle들 위에서 정의되는 연산 $\otimes$와 $\vee$는 각각 [\[가환대수학\] §분수아이디얼, ⁋정리 3](/ko/math/commutative_algebra/fractional_ideals#thm3)의 연산으로부터 오는 것이며, 따라서 [\[가환대수학\] §분수아이디얼, ⁋정의 5](/ko/math/commutative_algebra/fractional_ideals#def5)을 따라 다음의 이름을 붙이는 것이 어색하지 않다.
 
 ::: 정의 9
 Variety $X$의 *Picard group* $\Pic(X)$는 $X$ 위의 line bundle들의 isomorphism class들의 집합에 tensor product를 연산으로 하여 얻어진 group이다. 항등원은 trivial bundle $\mathcal{O}_X$이고, $\mathcal{L}$의 inverse는 $\mathcal{L}^\vee$이다.
@@ -145,7 +145,7 @@ $\Pic(X)$는 abelian group이다.
 앞선 글에서와 마찬가지로, 우리의 toy example은 $\mathbb{A}^n$과 $\mathbb{P}^n$이다. 
 
 ::: 예시 11
-$\mathbb{A}^n$의 coordinate ring $R = \mathbb{K}[\x_1, \ldots, \x_n]$은 UFD이며, 위 논의에 의해 $\mathbb{A}^n$ 위의 line bundle은 $R$ 위의 invertible module과 correspondence한다. [\[가환대수학\] §분수아이디얼, ⁋정리 4](/ko/math/commutative_algebra/fractional_ideals#thm4)에 의해 UFD 위의 invertible module은 free이므로, $\Pic(\mathbb{A}^n) = 0$이다.
+$\mathbb{A}^n$의 coordinate ring $R = \mathbb{K}[\x_1, \ldots, \x_n]$은 Noetherian UFD이며, 위 논의에 의해 $\mathbb{A}^n$ 위의 line bundle은 $R$ 위의 invertible module과 correspondence한다. [\[가환대수학\] §분수아이디얼, ⁋정리 4](/ko/math/commutative_algebra/fractional_ideals#thm4)에 의해 Noetherian UFD 위의 invertible module은 free이므로, $\Pic(\mathbb{A}^n) = 0$이다.
 :::
 
 
@@ -176,7 +176,11 @@ $$\mathbb{Z}\rightarrow \Pic(\mathbb{P}^n);\qquad d\mapsto [\mathcal{O}_{\mathbb
 
 을 정의할 수 있다. 
 
-우리의 주장은 이것이 isomorphism이라는 것이다. 우선 임의의 line bundle $\mathcal{L}$에 대하여, $\mathcal{L}\vert_{U_i}$는 [예시 11](#ex11)에 의해 trivial line bundle과 isomorphic하므로, 각각의 $U_i\cap U_j$의 transition function $h_{ij}$가 $\mathcal{L}$을 완전히 결정한다. 그런데 정의에 의해 $U_i\cap U_j$에서 $h_{ij}\in \mathcal{O}_{\mathbb{P}^n}(U_i\cap U_j)^\ast$이므로 $h_{ij}$는 반드시 $c_{ij}(\x_i/\x_j)^d$ 꼴이다. 이 때 transition function이 상수배인 line bundle은 trivial하므로 이로부터 위의 group homomorphism이 surjective인 것을 안다. 비슷하게, $\mathcal{O}_{\mathbb{P}^n}(d)\cong \mathcal{O}_{\mathbb{P}^n}(d')$라 두고 transition function을 비교해보면, 
+우리의 주장은 이것이 isomorphism이라는 것이다. 우선 임의의 line bundle $\mathcal{L}$에 대하여, $\mathcal{L}\vert_{U_i}$는 [예시 11](#ex11)에 의해 trivial line bundle과 isomorphic하므로, 각각의 $U_i\cap U_j$의 transition function $h_{ij}$가 $\mathcal{L}$을 완전히 결정한다. 그런데 정의에 의해 $U_i\cap U_j$에서 $h_{ij}\in \mathcal{O}_{\mathbb{P}^n}(U_i\cap U_j)^\ast$인데, $\mathcal{O}(U_i\cap U_j)=\mathbb{K}[\x_0/\x_i, \ldots, \widehat{\x_i/\x_i}, \ldots, \x_n/\x_i][(\x_j/\x_i)^{-1}]$의 unit들은 $c(\x_i/\x_j)^m$ ($c\in \mathbb{K}^\ast$, $m\in \mathbb{Z}$)의 꼴이므로 $h_{ij}=c_{ij}(\x_i/\x_j)^{d_{ij}}$로 적을 수 있다. 이 때 지수 $d_{ij}$가 $(i,j)$에 무관하다는 것은 아직 확인되지 않았는데, [명제 2](#prop2)의 세 번째 조건이 주는 등식
+
+$$c_{ij}c_{jk}(\x_i/\x_j)^{d_{ij}}(\x_j/\x_k)^{d_{jk}}=c_{ik}(\x_i/\x_k)^{d_{ik}}$$
+
+의 양변을 $U_i\cap U_j\cap U_k$의 coordinate ring에서 monomial끼리 비교하면 $d_{ij}=d_{jk}=d_{ik}$와 $c_{ij}c_{jk}=c_{ik}$를 얻는다. 그럼 이 공통의 지수를 $d$라 둘 수 있고, 이제 $\{h_{ij}\}$는 $\mathcal{O}_{\mathbb{P}^n}(d)$의 transition function과 상수 $c_{ij}$만큼만 다르다. 여기서 $c_i:=c_{i0}$으로 두면 방금 얻은 관계와 [명제 2](#prop2)의 두 번째 조건에 의해 $c_{ij}=c_{i0}c_{0j}=c_i/c_j$이므로, [정의 1](#def1) 직후에 본 대로 $h_i=c_i$들이 isomorphism $\mathcal{L}\cong \mathcal{O}_{\mathbb{P}^n}(d)$를 정의한다. 이로부터 위의 group homomorphism이 surjective인 것을 안다. 비슷하게, $\mathcal{O}_{\mathbb{P}^n}(d)\cong \mathcal{O}_{\mathbb{P}^n}(d')$라 두고 transition function을 비교해보면, 
 
 $$\mathcal{O}_{\mathbb{P}^n}(d-d')\cong \mathcal{O}_{\mathbb{P}^n}(d)\otimes \mathcal{O}_{\mathbb{P}^n}(-d')\cong \mathcal{O}_{\mathbb{P}^n}(d)\otimes \mathcal{O}_{\mathbb{P}^n}(d')^\vee\cong \mathcal{O}_{\mathbb{P}^n}$$
 
@@ -272,7 +276,11 @@ $$0\rightarrow \mathcal{O}_X(-D)\rightarrow \mathcal{O}_X\rightarrow \mathcal{O}
 :::
 
 ::: 증명
-두 Cartier divisor $\{(U_i, f_i)\}$와 $\{(V_j, g_j)\}$가 동치이면, $f_i/g_j \in \mathcal{O}_X(U_i \cap V_j)^\ast$이다. 이들로부터 정의되는 line bundle들의 transition functions은 서로 compatible하므로 isomorphic한 line bundle을 정의한다.
+두 Cartier divisor $\{(U_i, f_i)\}$와 $\{(V_j, g_j)\}$가 동치이면, $f_i/g_j \in \mathcal{O}_X(U_i \cap V_j)^\ast$이다. 두 line bundle을 공통의 refinement $\{U_i \cap V_j\}$ 위에서 비교하기로 하고 $u_{ij} := g_j/f_i \in \mathcal{O}_X(U_i \cap V_j)^\ast$로 두면, $(U_i \cap V_j) \cap (U_k \cap V_l)$ 위에서 두 line bundle의 transition function은 각각 $f_k/f_i$와
+
+$$\frac{g_l}{g_j} = \frac{u_{kl} f_k}{u_{ij} f_i} = \frac{u_{kl}}{u_{ij}} \cdot \frac{f_k}{f_i}$$
+
+이다. 즉 이 둘은 unit들 $\{u_{ij}\}$만큼만 다르고, 따라서 이들이 정의하는 isomorphism에 의해 두 line bundle이 동일시된다.
 :::
 
 예를 들어, 임의의 principal divisor $\divisor(f)$에 대하여 transition function은 $1$이므로 trivial bundle이 된다. 이제 line bundle과 Cartier divisor 사이의 관계를 정리한다.
@@ -282,11 +290,15 @@ $$0\rightarrow \mathcal{O}_X(-D)\rightarrow \mathcal{O}_X\rightarrow \mathcal{O}
 :::
 
 ::: 증명
-우선 $D \mapsto \mathcal{O}_X(D)$가 $\CaDiv(X)$에서 $\Pic(X)$로의 group homomorphism임을 확인한다. Cartier divisor $D = \{(U_i, f_i)\}$에 대해 $\mathcal{O}_X(D)$의 transition function은 $g_{ij} = f_j/f_i \in \mathcal{O}_X(U_i \cap U_j)^\times$이므로 line bundle을 정의한다. Principal divisor $\divisor(h)$는 transition function이 $1$이므로 trivial bundle에 대응되고, 따라서 $\CaCl(X) = \CaDiv(X)/\Prin(X)$에서 $\Pic(X)$로의 well-defined group homomorphism을 유도한다.
+우선 $D \mapsto \mathcal{O}_X(D)$가 $\CaDiv(X)$에서 $\Pic(X)$로의 group homomorphism임을 확인한다. Cartier divisor $D = \{(U_i, f_i)\}$에 대해 $\mathcal{O}_X(D)$의 transition function은 $g_{ij} = f_j/f_i \in \mathcal{O}_X(U_i \cap U_j)^\times$이므로 line bundle을 정의한다. 또한 두 Cartier divisor $D = \{(U_i, f_i)\}$와 $D' = \{(U_i, f_i')\}$를 공통의 refinement 위에서 같은 cover로 적으면 $D + D' = \{(U_i, f_i f_i')\}$이고 그 transition function은 $(f_j f_j')/(f_i f_i') = g_{ij} g_{ij}'$이므로, [명제 6](#prop6)에 의해 $\mathcal{O}_X(D + D') \cong \mathcal{O}_X(D) \otimes \mathcal{O}_X(D')$이다. 즉 $D \mapsto \mathcal{O}_X(D)$는 가법적이다. Principal divisor $\divisor(h)$는 transition function이 $1$이므로 trivial bundle에 대응되고, 따라서 $\CaCl(X) = \CaDiv(X)/\Prin(X)$에서 $\Pic(X)$로의 well-defined group homomorphism을 유도한다.
 
 이것이 isomorphism임을 보이기 위해, 임의의 line bundle $\mathcal{L}$이 주어졌다고 하자. Trivializing open $U \subseteq X$에서 $\mathcal{L}\vert_U \cong \mathcal{O}_U$이므로, $\mathcal{O}_U$의 constant section $1$에 대응되는 $s \in \mathcal{L}(U)$를 잡을 수 있으며, 이 $s$는 nonzero rational section이다. 이제 $\mathcal{L}$의 trivializing cover $\{U_i\}$를 생각하자. 각 $U_i$에서 trivialization $\psi_i\colon \mathcal{L}\vert_{U_i} \cong \mathcal{O}_{U_i}$를 잡고, $f_i := \psi_i(s\vert_{U_i \cap U}) \in \mathcal{O}_X(U_i \cap U) \subseteq \mathbb{K}(X)$를 정의한다. 그러면 $U_i \cap U_j \cap U$ 위에서 $f_j = g_{ij} f_i$이고, $X$가 irreducible이므로 $U_i \cap U_j \cap U$는 $U_i \cap U_j$의 dense open subset이므로 이 관계는 $U_i \cap U_j$ 전체에서 성립한다. 즉 $f_j/f_i = g_{ij} \in \mathcal{O}_X(U_i \cap U_j)^\times$이므로 $D = \{(U_i, f_i)\}$는 Cartier divisor이고, $\mathcal{O}_X(D)$의 transition function이 $\{g_{ij}\}$이므로 $\mathcal{O}_X(D) \cong \mathcal{L}$이다.
 
-마지막으로 injectivity를 보인다. $\mathcal{O}_X(D) \cong \mathcal{O}_X(D')$이면 두 line bundle의 transition function이 같으므로 $f_i/f_i' = f_j/f_j'$ on $U_i \cap U_j$ (모든 $i, j$). 다시 $U_i \cap U_j$의 dense open subset에서 이 관계가 성립하므로 $f_i/f_i'$는 모든 $i$에 대해 동일한 rational function $h \in \mathbb{K}(X)^\times$이고, $D - D' = \divisor(h)$이므로 linearly equivalent하다.
+마지막으로 injectivity를 보인다. 두 Cartier divisor $D = \{(U_i, f_i)\}$와 $D' = \{(U_i, f_i')\}$를 공통의 refinement 위에서 같은 cover로 적고 $\mathcal{O}_X(D) \cong \mathcal{O}_X(D')$이라 하자. Isomorphic한 두 line bundle의 transition function은 서로 같은 것이 아니라 적당한 unit들 $u_i \in \mathcal{O}_X(U_i)^\times$에 의해
+
+$$\frac{f_j'}{f_i'} = \frac{u_j}{u_i} \cdot \frac{f_j}{f_i}$$
+
+만큼 다르다. 이 관계를 다시 쓰면 $U_i \cap U_j$ 위에서 $u_i f_i/f_i' = u_j f_j/f_j'$이므로, $h := u_i f_i/f_i'$는 $i$의 선택에 무관한 하나의 rational function $h \in \mathbb{K}(X)^\times$을 정의한다. 각 $U_i$ 위에서 $u_i$는 unit이라 $\divisor(u_i) = 0$이고 $\divisor(h) = \divisor(f_i) - \divisor(f_i')$이므로, $D - D' = \divisor(h)$, 즉 두 Cartier divisor는 linearly equivalent하다.
 :::
 
 만일 $X$가 smooth라면, $\CaCl(X)\cong \Cl(X)$임을 이미 알고 있다. 
@@ -322,7 +334,7 @@ $\varphi^\ast(\mathcal{L} \otimes \mathcal{M}) \cong \varphi^\ast \mathcal{L} \o
 :::
 
 ::: 예시 22
-Embedding $i: C \hookrightarrow \mathbb{P}^n$에 대해, $i^\ast \mathcal{O}_{\mathbb{P}^n}(1)$은 curve $C$ 위의 line bundle이다. 이를 $C$ 위의 *hyperplane bundle*이라 부르며, $\mathcal{O}_C(1)$로 표기한다. 일반적으로 $\mathcal{O}_C(1)$은 nontrivial인데, 예를 들어 $C = \mathbb{P}^1 \subseteq \mathbb{P}^n$일 때 $\mathcal{O}_C(1) = \mathcal{O}_{\mathbb{P}^1}(1)$은 [예시 12](#ex12)에서 본 바와 같이 nontrivial line bundle이다. "Hyperplane bundle"이라는 이름은, $\mathbb{P}^n$의 hypersurface 중 degree $1$인 것, 즉 hyperplane $H$에 대응하는 line bundle $\mathcal{O}_{\mathbb{P}^n}(1)$을 $C$ 위로 당겼을 때 얻어지는 bundle이라는 의미에서 붙여졌다.
+Embedding $i: C \hookrightarrow \mathbb{P}^n$에 대해, $i^\ast \mathcal{O}_{\mathbb{P}^n}(1)$은 curve $C$ 위의 line bundle이다. 이를 $C$ 위의 *hyperplane bundle*이라 부르며, $\mathcal{O}_C(1)$로 표기한다. 일반적으로 $\mathcal{O}_C(1)$은 nontrivial인데, 예를 들어 $\mathbb{P}^1$이 $\mathbb{P}^n$에 직선으로 embed된 경우 $C = \mathbb{P}^1$에 대해 $\mathcal{O}_C(1) = \mathcal{O}_{\mathbb{P}^1}(1)$은 [예시 12](#ex12)에서 본 바와 같이 nontrivial line bundle이다. "Hyperplane bundle"이라는 이름은, $\mathbb{P}^n$의 hypersurface 중 degree $1$인 것, 즉 hyperplane $H$에 대응하는 line bundle $\mathcal{O}_{\mathbb{P}^n}(1)$을 $C$ 위로 당겼을 때 얻어지는 bundle이라는 의미에서 붙여졌다.
 :::
 
 ## Vector Bundle

@@ -1,7 +1,7 @@
 ---
 title: "리만 곡률"
 description: "평행 운반의 경로 의존성을 점별로 측정하는 리만 곡률 텐서를 정의하고, 구면 위 측지 삼각형 예시를 통해 곡률 텐서가 홀로노미를 어떻게 지배하는지 살펴본다."
-excerpt: "Parallel transport의 path-dependence를 측정하는 Riemann 곡률 텐서"
+excerpt: "Parallel transport의 path-dependence를 측정하는 리만 곡률 텐서"
 
 categories: [Math / Riemannian Geometry]
 permalink: /ko/math/riemannian_geometry/curvature
@@ -14,7 +14,7 @@ published: false
 
 ---
 
-[§레비-치비타 접속, ⁋정의 8](/ko/math/riemannian_geometry/Levi-Civita_connection#def8)에서 우리는 Riemannian manifold $(M, g)$ 위에서 곡선 $\gamma$를 따라 벡터를 *상수처럼* 옮기는 parallel transport $P_\gamma$를 정의했다. 그러나 일반적으로 같은 두 점 $p, q$ 사이를 잇는 두 곡선 $\gamma_1, \gamma_2$에 대해 $P_{\gamma_1} \ne P_{\gamma_2}$일 수 있다. 즉 어떤 길을 따라 벡터를 옮기느냐에 따라 도착한 벡터가 달라진다. 이 *path-dependence*를 점별 정보로 측정하는 텐서가 *Riemann 곡률 텐서*이다.
+[§레비-치비타 접속, ⁋정의 8](/ko/math/riemannian_geometry/Levi-Civita_connection#def8)에서 우리는 Riemannian manifold $(M, g)$ 위에서 곡선 $\gamma$를 따라 벡터를 *상수처럼* 옮기는 parallel transport $P_\gamma$를 정의했다. 그러나 일반적으로 같은 두 점 $p, q$ 사이를 잇는 두 곡선 $\gamma_1, \gamma_2$에 대해 $P_{\gamma_1} \ne P_{\gamma_2}$일 수 있다. 즉 어떤 길을 따라 벡터를 옮기느냐에 따라 도착한 벡터가 달라진다. 이 *path-dependence*를 점별 정보로 측정하는 텐서가 *리만 곡률 텐서*이다.
 
 ## 평행 운반의 path-dependence
 
@@ -45,7 +45,7 @@ published: false
 위 예시에서처럼 작은 *닫힌 곡선* (loop)를 따라 parallel transport했을 때 벡터가 얼마나 회전하는지를 *무한소* 수준에서 측정하는 자료가 곡률 텐서이다. 이를 형식적으로 정의하면 다음과 같다.
 
 ::: 정의 2
-Manifold $M$ 위의 tangent bundle $TM$ 위의 connection $\nabla$가 주어졌다 하자. $\nabla$의 *Riemann 곡률 텐서<sub>Riemann curvature tensor</sub>* $R$은 다음의 식
+Manifold $M$ 위의 tangent bundle $TM$ 위의 connection $\nabla$가 주어졌다 하자. $\nabla$의 *리만 곡률 텐서<sub>Riemann curvature tensor</sub>* $R$은 다음의 식
 
 $$R(X, Y) Z := \nabla_X \nabla_Y Z - \nabla_Y \nabla_X Z - \nabla_{[X, Y]} Z$$
 

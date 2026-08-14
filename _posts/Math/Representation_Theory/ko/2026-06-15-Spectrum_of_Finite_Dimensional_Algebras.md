@@ -166,7 +166,7 @@ $$M_{ab}\vert_{A_\lambda}=\lambda(ab)\id+(\text{nilpotent})=\lambda(a)\lambda(b)
 
 정리 8은 추상적인 대수의 원소 $a$를 연산자 $M_a$로 실현했을 때, 그 고유값들이 character들의 값으로 완전히 결정됨을 말해 준다. 이는 단일 연산자의 고유값 이론을 대수 전체의 character 이론으로 일반화한 것으로 볼 수 있다. 다음 절에서 우리는 이 분해를 더 정교하게 다듬어, 분해가 대수적으로도 곱대수 구조를 준다는 것을 본다.
 
-## 구조분해와 reduced 대수
+## 구조분해와 reduced algebra
 
 정리 8의 direct sum 분해는 단순한 벡터공간 분해가 아니라 대수의 분해이기도 하다. 이를 정리하기 위해 direct sum 분해에 따르는 idempotent들을 도입한다.
 
@@ -188,7 +188,7 @@ $$\dim A=\sum_\chi \dim A_\chi$$
 ::: 증명
 각 $A_\chi$가 ideal임을 보이자. $x\in A_\chi$이고 $b\in A$라 하자. $M_b$는 다른 모든 $M_a$와 commute하므로 $A_\chi$를 보존한다. 즉 $bx=M_b(x)\in A_\chi$이며, 따라서 $A_\chi$는 ideal이다.
 
-[정리 8](#thm8)의 direct sum 분해 $A=\bigoplus_\chi A_\chi$에서 $1\in A$를 성분별로 분해하여 $1=\sum_\chi e_\chi$라 쓰자. 여기서 $e_\chi\in A_\chi$이다. 임의의 $x\in A_{\chi'}$에 대하여 $x=1\cdot x=\sum_\chi e_\chi x$인데, $A_\chi$가 ideal이므로 $e_\chi x\in A_\chi\cap A_{\chi'}$이고, direct sum이므로 $\chi\neq\chi'$이면 $A_\chi\cap A_{\chi'}=0$이다. 따라서 $e_\chi x=0$ ($\chi\neq\chi'$) 이고 $e_{\chi'}x=x$이다. 특히 $x=e_{\chi'}$로 두면 $e_{\chi'}e_{\chi'}=e_{\chi'}$, $x=e_\chi$ ($\chi\neq \chi'$) 로 두면 $e_{\chi'}e_\chi=0$을 얻으므로 $e_\chi e_{\chi'}=\delta_{\chi\chi'}e_\chi$이다. 또 위 계산은 $e_{\chi'}$이 $A_{\chi'}$ 위에서 항등원처럼 작용함을 보이므로 $A_{\chi'}=e_{\chi'}A$이고, 각 $A_\chi$는 항등원 $e_\chi$를 갖는 unital algebra이다. Morphism
+[정리 8](#thm8)의 direct sum decomposition $A=\bigoplus_\chi A_\chi$에서 $1\in A$를 성분별로 분해하여 $1=\sum_\chi e_\chi$라 쓰자. 여기서 $e_\chi\in A_\chi$이다. 임의의 $x\in A_{\chi'}$에 대하여 $x=1\cdot x=\sum_\chi e_\chi x$인데, $A_\chi$가 ideal이므로 $e_\chi x\in A_\chi\cap A_{\chi'}$이고, direct sum이므로 $\chi\neq\chi'$이면 $A_\chi\cap A_{\chi'}=0$이다. 따라서 $e_\chi x=0$ ($\chi\neq\chi'$) 이고 $e_{\chi'}x=x$이다. 특히 $x=e_{\chi'}$로 두면 $e_{\chi'}e_{\chi'}=e_{\chi'}$, $x=e_\chi$ ($\chi\neq \chi'$) 로 두면 $e_{\chi'}e_\chi=0$을 얻으므로 $e_\chi e_{\chi'}=\delta_{\chi\chi'}e_\chi$이다. 또 위 계산은 $e_{\chi'}$이 $A_{\chi'}$ 위에서 항등원처럼 작용함을 보이므로 $A_{\chi'}=e_{\chi'}A$이고, 각 $A_\chi$는 항등원 $e_\chi$를 갖는 unital algebra이다. Morphism
 
 $$A\longrightarrow \prod_\chi A_\chi;\qquad x\longmapsto (e_\chi x)_\chi$$
 
@@ -295,7 +295,7 @@ $$A\cong k\times k$$
 마지막으로 첫 두 글에서 다룬 유한군의 표현론과의 다리를 놓는 예시를 본다.
 
 ::: 예시 16
-유한 abelian group $\mathbb{Z}/n$의 group algebra를 $k=\mathbb{C}$ 위에서 생각하자. Generator $\sigma$가 만족하는 유일한 관계는 $\sigma^n=1$이므로
+Finite abelian group $\mathbb{Z}/n$의 group algebra를 $k=\mathbb{C}$ 위에서 생각하자. Generator $\sigma$가 만족하는 유일한 관계는 $\sigma^n=1$이므로
 
 $$\mathbb{C}[\mathbb{Z}/n]\cong\mathbb{C}[\sigma]/(\sigma^n-1)$$
 

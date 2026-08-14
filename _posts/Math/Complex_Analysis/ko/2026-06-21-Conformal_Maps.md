@@ -18,7 +18,7 @@ Holomorphic function의 미분이 한 점에서 평면을 회전·확대하는 �
 
 ## 등각성
 
-곡선이 한 점에서 이루는 각이라는 개념부터 정확히 한다. 점 $z_0$을 지나는 smooth 곡선 $\gamma(t)$ ($\gamma(t_0) = z_0$, $\gamma'(t_0) \neq 0$) 의 그 점에서의 tangent vector는 복소수 $\gamma'(t_0)$이고, 그 편각 $\arg \gamma'(t_0)$이 곡선이 그 점에서 향하는 방향을 준다. 두 곡선 $\gamma_1, \gamma_2$이 $z_0$에서 이루는 각은 두 tangent vector의 편각의 차 $\arg \gamma_2'(t_0) - \arg \gamma_1'(t_0)$로 정의되며, 부호까지 포함한 이 차가 방향이 매겨진 각이다.
+곡선이 한 점에서 이루는 각이라는 개념부터 정확히 한다. 점 $z_0$을 지나는 smooth curve $\gamma(t)$ ($\gamma(t_0) = z_0$, $\gamma'(t_0) \neq 0$) 의 그 점에서의 tangent vector는 복소수 $\gamma'(t_0)$이고, 그 편각 $\arg \gamma'(t_0)$이 곡선이 그 점에서 향하는 방향을 준다. 두 곡선 $\gamma_1, \gamma_2$이 $z_0$에서 이루는 각은 두 tangent vector의 편각의 차 $\arg \gamma_2'(t_0) - \arg \gamma_1'(t_0)$로 정의되며, 부호까지 포함한 이 차가 방향이 매겨진 각이다.
 
 ::: 정의 1
 열린집합 $\Omega \subseteq \mathbb{C}$ 위의 사상 $f : \Omega \rightarrow \mathbb{C}$가 점 $z_0$에서 *conformal<sub>등각</sub>*하다는 것은, $z_0$을 지나는 임의의 두 smooth 곡선이 $z_0$에서 이루는 (방향이 매겨진) 각이 그 상곡선들이 $f(z_0)$에서 이루는 각과 같은 것을 뜻한다. $f$가 $\Omega$의 모든 점에서 등각하면 $f$를 $\Omega$ 위의 *등각사상<sub>conformal map</sub>*이라 한다.
@@ -31,7 +31,7 @@ $\Omega \subseteq \mathbb{C}$가 열려 있고 $f : \Omega \rightarrow \mathbb{C
 :::
 
 ::: 증명
-먼저 $f'(z_0) \neq 0$이라 하자. $z_0$을 지나는 smooth 곡선 $\gamma(t)$ ($\gamma(t_0) = z_0$, $\gamma'(t_0) \neq 0$) 에 대하여 상곡선 $(f \circ \gamma)(t) = f(\gamma(t))$의 tangent vector는 [§복소정칙함수, ⁋명제 3](/ko/math/complex_analysis/holomorphic_functions#prop3)의 연쇄법칙에 의해
+먼저 $f'(z_0) \neq 0$이라 하자. $z_0$을 지나는 smooth curve $\gamma(t)$ ($\gamma(t_0) = z_0$, $\gamma'(t_0) \neq 0$) 에 대하여 상곡선 $(f \circ \gamma)(t) = f(\gamma(t))$의 tangent vector는 [§복소정칙함수, ⁋명제 3](/ko/math/complex_analysis/holomorphic_functions#prop3)의 연쇄법칙에 의해
 
 $$(f \circ \gamma)'(t_0) = f'(z_0)\,\gamma'(t_0)$$
 
@@ -246,7 +246,7 @@ $$f = g \circ \varphi_a, \qquad f(z) = e^{i\theta}\,\varphi_a(z) = e^{i\theta}\,
 역으로 $f(z) = e^{i\theta}\varphi_a(z)$ 꼴이면, $\varphi_a$이 $\mathbb{D}$의 automorphism이고 ([명제 11](#prop11)) 회전 $z \mapsto e^{i\theta}z$도 그러하므로, 그 합성인 $f$도 $\mathbb{D}$의 holomorphic automorphism이다.
 :::
 
-정리 12는 단위원판의 holomorphic automorphism 전체가 두 매개변수, 곧 $a \in \mathbb{D}$와 회전각 $\theta$로 매개됨을 말한다. 이 automorphism들은 모두 Möbius 변환이므로 단위원판의 automorphism group은 $\mathrm{PSL}(2, \mathbb{C})$의 한 subgroup이며, 그 안에서 단위원을 보존하는 변환들로 이루어진다. 같은 분류는 단위원판 위의 holomorphic 사상이 자연스러운 거리를 늘리지 않는다는 정량적 결과로 이어지는데, 이것이 Schwarz–Pick 정리이다.
+정리 12는 단위원판의 holomorphic automorphism 전체가 두 매개변수, 곧 $a \in \mathbb{D}$와 회전각 $\theta$로 매개됨을 말한다. 이 automorphism들은 모두 Möbius 변환이므로 단위원판의 automorphism group은 $\mathrm{PSL}(2, \mathbb{C})$의 한 subgroup이며, 그 안에서 단위원을 보존하는 변환들로 이루어진다. 같은 분류는 단위원판 위의 holomorphic morphism이 자연스러운 거리를 늘리지 않는다는 정량적 결과로 이어지는데, 이것이 Schwarz–Pick 정리이다.
 
 ::: 정리 13 (Schwarz–Pick)
 $f : \mathbb{D} \rightarrow \mathbb{D}$가 holomorphic이라 하자. 그러면 모든 $z, w \in \mathbb{D}$에 대하여
@@ -269,7 +269,7 @@ $$F = \varphi_{f(w)} \circ f \circ \varphi_{-w} = \varphi_{f(w)} \circ f \circ \
 
 $$F(0) = \varphi_{f(w)}(f(\varphi_{-w}(0))) = \varphi_{f(w)}(f(w)) = 0$$
 
-이다 ($\varphi_{f(w)}$이 $f(w)$를 $0$으로 보내므로). 곧 $F$는 원점을 고정하는 $\mathbb{D} \rightarrow \mathbb{D}$ holomorphic 사상이라, [§영점과 일치정리, ⁋정리 7](/ko/math/complex_analysis/zeros_and_identity_theorem#thm7)에 의해 모든 $\zeta \in \mathbb{D}$에서 $\lvert F(\zeta)\rvert \leq \lvert \zeta\rvert$이고 $\lvert F'(0)\rvert \leq 1$이다.
+이다 ($\varphi_{f(w)}$이 $f(w)$를 $0$으로 보내므로). 곧 $F$는 원점을 고정하는 $\mathbb{D} \rightarrow \mathbb{D}$ holomorphic morphism이라, [§영점과 일치정리, ⁋정리 7](/ko/math/complex_analysis/zeros_and_identity_theorem#thm7)에 의해 모든 $\zeta \in \mathbb{D}$에서 $\lvert F(\zeta)\rvert \leq \lvert \zeta\rvert$이고 $\lvert F'(0)\rvert \leq 1$이다.
 
 이제 $\zeta = \varphi_w(z)$를 대입한다. 정의상 $\zeta = (z - w)/(1 - \bar w z)$이고, $\varphi_{-w} = \varphi_w^{-1}$이므로 $\varphi_{-w}(\zeta) = z$, 따라서
 
@@ -292,7 +292,7 @@ Schwarz–Pick 정리는 Schwarz 보조정리를 원점이라는 특정 점에 �
 
 $$\rho(z, w) = \left\lvert \frac{z - w}{1 - \bar w z} \right\rvert$$
 
-은 단위원판 위의 두 점 사이의 *유사쌍곡거리<sub>pseudo-hyperbolic distance</sub>*라 불리며, 정리 13의 첫 부등식은 임의의 holomorphic 사상 $f : \mathbb{D} \rightarrow \mathbb{D}$이 이 거리를 늘리지 않음을 뜻한다. 미분형은 같은 사실을 무한소 수준에서 적은 것으로, 단위원판에 $\dd{s} = \lvert \dd{z}\rvert/(1 - \lvert z\rvert^2)$ 꼴의 거리 (쌍곡거리) 를 줄 때 holomorphic 사상이 그 거리를 늘리지 않으며, automorphism일 때만 정확히 보존한다는 진술이다. 등호가 automorphism에서만 성립한다는 사실은 단위원판의 automorphism group이 이 쌍곡거리의 등거리변환 가운데 방향을 보존하는 것들과 정확히 일치함을 시사한다.
+은 단위원판 위의 두 점 사이의 *pseudo-hyperbolic distance<sub>유사쌍곡거리</sub>*라 불리며, 정리 13의 첫 부등식은 임의의 holomorphic morphism $f : \mathbb{D} \rightarrow \mathbb{D}$이 이 거리를 늘리지 않음을 뜻한다. 미분형은 같은 사실을 무한소 수준에서 적은 것으로, 단위원판에 $\dd{s} = \lvert \dd{z}\rvert/(1 - \lvert z\rvert^2)$ 꼴의 거리 (쌍곡거리) 를 줄 때 holomorphic morphism이 그 거리를 늘리지 않으며, automorphism일 때만 정확히 보존한다는 진술이다. 등호가 automorphism에서만 성립한다는 사실은 단위원판의 automorphism group이 이 쌍곡거리의 등거리변환 가운데 방향을 보존하는 것들과 정확히 일치함을 시사한다.
 
 ## 상반평면과 Cayley 변환
 

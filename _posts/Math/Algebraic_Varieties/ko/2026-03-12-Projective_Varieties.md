@@ -64,7 +64,7 @@ Homogeneous polynomials $F_1, \ldots, F_k \in \mathbb{K}[\x_0, \ldots, \x_n]$에
 
 $$Z(F_1, \ldots, F_k) = \{[x_0 : \cdots : x_n] \in \mathbb{P}^n \mid F_1(x) = \cdots = F_k(x) = 0\}$$
 
-으로 정의한다. Projective algebraic set들 가운데 그보다 더 작은 projective algebraic set들의 합집합으로 나타나지 않는 것들을 *projective variety<sub>사영다양체</sub>*라 부른다.
+으로 정의한다. Projective algebraic set들 가운데 그보다 더 작은 유한 개의 projective algebraic set들의 합집합으로 나타나지 않는 것들을 *projective variety<sub>사영다양체</sub>*라 부른다.
 :::
 
 위에서 설명했듯, 각각의 $F_i$들이 homogeneous이므로 이것이 잘 정의되는 것을 확인할 수 있다. 
@@ -94,9 +94,9 @@ Affine case에서와 마찬가지로, 이는 projective space $\mathbb{P}^n$ 위
 ## Projective Nullstellensatz
 
 ::: 정의 6
-부분집합 $X \subseteq \mathbb{P}^n$의 *homogeneous ideal* $I(X)$를
+부분집합 $X \subseteq \mathbb{P}^n$의 *homogeneous ideal* $I(X)$를, $X$의 모든 점에서 vanish하는 homogeneous polynomial들이 생성하는 ideal
 
-$$I(X) = \{F \in \mathbb{K}[\x_0, \ldots, \x_n] \mid F \text{ is homogeneous and } F(x) = 0 \text{ for all } x \in X\}$$
+$$I(X) = \left(\{F \in \mathbb{K}[\x_0, \ldots, \x_n] \mid F \text{ is homogeneous and } F(x) = 0 \text{ for all } x \in X\}\right)$$
 
 으로 정의한다.
 :::
@@ -161,19 +161,21 @@ $$\psi_0^{-1}(Z(F) \cap U_0) = \{(x_1, \ldots, x_n) \in \mathbb{A}^n \mid F(1, x
 즉, 직관적으로 우리는 $U_i$를 좌표 $x_i$가 무한대가 아닌 점들로 생각할 수 있다. 또, $\mathbb{P}^n = U_0 \cup \cdots \cup U_n$이고, 위의 명제에 의해 각 $U_i \cong \mathbb{A}^n$이다. 위의 명제의 증명 과정에서 핵심적인 것은 다음의 명제였으므로, 이를 따로 분리해두자.
 
 ::: 명제 10
-Projective variety $X \subseteq \mathbb{P}^n$과 standard open set $U_i$에 대하여, $X \cap U_i$는 $U_i \cong \mathbb{A}^n$ 위의 affine variety이다.
+Projective variety $X \subseteq \mathbb{P}^n$과 standard open set $U_i$에 대하여, $X \cap U_i$가 비어 있지 않다면 이는 $U_i \cong \mathbb{A}^n$ 위의 affine variety이다.
 :::
 
 ::: 증명
-$U_0$의 경우, $X = Z(F_1, \ldots, F_k)$이고 각 $F_j$가 homogeneous of degree $d_j$라 하자. 그럼 $X \cap U_0$는 $\mathbb{A}^n$에서
+표기의 편의를 위해 $i=0$인 경우를 증명한다. $X = Z(F_1, \ldots, F_k)$이고 각 $F_j$가 homogeneous of degree $d_j$라 하자. 이제
 
-$$F_j\left(1, \frac{\x_1}{\x_0}, \ldots, \frac{\x_n}{\x_0}\right) = 0, \quad j = 1, \ldots, k$$
+$$f_j(\x_1, \ldots, \x_n) = F_j(1, \x_1, \ldots, \x_n)$$
 
-을 만족하는 점들이다. 양변에 $\x_0^{d_j}$를 곱하면
+이라 두면, $F_j$의 동차성으로부터 $x_0 \ne 0$인 임의의 점에 대하여
 
-$$\x_0^{d_j} F_j\left(1, \frac{\x_1}{\x_0}, \ldots, \frac{\x_n}{\x_0}\right) = F_j(\x_0, \x_1, \ldots, \x_n) = 0$$
+$$F_j(x_0, x_1, \ldots, x_n) = x_0^{d_j} f_j\left(\frac{x_1}{x_0}, \ldots, \frac{x_n}{x_0}\right)$$
 
-이다. 이제 $f_j(\x_1, \ldots, \x_n) = F_j(1, \x_1, \ldots, \x_n)$라 두면, $X \cap U_0 = Z(f_1, \ldots, f_k) \subseteq \mathbb{A}^n$이다.
+이 성립한다. 따라서 $[x_0 : \cdots : x_n] \in U_0$가 모든 $F_j$의 zero set에 속하는 것과 [명제 9](#prop9)의 homeomorphism $\varphi_0$가 이 점에 대응시키는 $\mathbb{A}^n$의 점 $(x_1/x_0, \ldots, x_n/x_0)$가 모든 $f_j$의 zero set에 속하는 것은 서로 동치이며, 이로부터 $\varphi_0(X \cap U_0) = Z(f_1, \ldots, f_k) \subseteq \mathbb{A}^n$을 얻는다.
+
+남은 것은 기약성이다. $U_0$는 $\mathbb{P}^n$의 열린집합이므로 $X \cap U_0$는 $X$의 열린 부분집합이고, 가정에 의해 비어 있지 않다. Irreducible한 공간의 비어 있지 않은 열린 부분집합은 irreducible이므로 $X \cap U_0$가 irreducible이며, homeomorphism은 irreducibility를 보존하므로 $Z(f_1, \ldots, f_k)$ 역시 irreducible이다. 즉 $X \cap U_0$는 affine variety이다.
 :::
 
 ::: 예시 11
@@ -220,7 +222,7 @@ Projective variety $X \subseteq \mathbb{P}^n$의 affine cone $C(X)$은 다음 �
 
 2. (Algebraic structure) $X = Z(F_1, \ldots, F_k)$이면 $C(X) = Z(F_1, \ldots, F_k) \subseteq \mathbb{A}^{n+1}$이다. 여기서 $F_i$들을 $\mathbb{A}^{n+1}$의 다항식으로 본다.
 
-3. (Correspondence) $X \leftrightarrow C(X)$ 대응은 projective variety와 원점을 지나는 직선으로 이루어진 affine algebraic set 사이의 일대일 대응을 준다.
+3. (Correspondence) $X \leftrightarrow C(X)$ 대응은 projective variety와 원점을 지나는 직선들로 이루어진 $\{0\}$이 아닌 irreducible affine algebraic set 사이의 일대일 대응을 준다.
 :::
 
 이 명제를 통해 우리는 affine cone $C(X)$의 성질을 연구하여 $X$의 성질을 간접적으로 파악할 수 있다. 
@@ -230,29 +232,29 @@ Projective variety $X \subseteq \mathbb{P}^n$의 affine cone $C(X)$은 다음 �
 마지막으로 우리는 projective variety들의 morphism을 정의한다. 앞서 우리는 projective algebraic set을 정의할 때 다항식들의 zero set이 projective space의 집합을 잘 정의하지 않는 것을 확인하였는데, 비슷한 일이 morphism을 정의할 때도 일어나며 그 해결책은 이번에도 homogeneous polynomial이다. 
 
 ::: 정의 15
-함수 $\varphi: X \rightarrow Y$가 projective variety $X \subseteq \mathbb{P}^n$과 $Y \subseteq \mathbb{P}^m$ 사이의 *morphism<sub>사상</sub>*이라는 것은, 각각의 점 $x$마다 적당한 homogeneous polynomials $F_0, \ldots, F_m$ of the same degree가 존재하여
+함수 $\varphi: X \rightarrow Y$가 projective variety $X \subseteq \mathbb{P}^n$과 $Y \subseteq \mathbb{P}^m$ 사이의 *morphism<sub>사상</sub>*이라는 것은, 각각의 점 $x \in X$마다 $x$를 포함하는 $X$의 열린집합 $U$와 적당한 homogeneous polynomials $F_0, \ldots, F_m \in \mathbb{K}[\x_0, \ldots, \x_n]$ of the same degree가 존재하여, 모든 $y \in U$에 대해 $F_i(y)$들이 동시에 $0$이 아니고
 
-$$\varphi(x) = [F_0(x) : \cdots : F_m(x)]$$
+$$\varphi(y) = [F_0(y) : \cdots : F_m(y)]$$
 
-이고, 모든 $x \in X$에 대해 $F_i(x)$들이 동시에 $0$이 아닌 것이다.
+가 성립하는 것이다.
 :::
 
 만일 $F_0, \ldots, F_m$이 모두 같은 degree $d$의 homogeneous polynomial이라면, $F_i(\lambda x) = \lambda^d F_i(x)$이므로
 
 $$[F_0(\lambda x) : \cdots : F_m(\lambda x)] = [\lambda^d F_0(x) : \cdots : \lambda^d F_m(x)] = [F_0(x) : \cdots : F_m(x)]$$
 
-가 되어 well-definedness가 보장된다는 것을 확인할 수 있다. 다음 예시들은 대표적인 morphism들이다. 
+가 되어 well-definedness가 보장된다는 것을 확인할 수 있다. 한편 [§아핀다양체, ⁋정의 17](/ko/math/algebraic_varieties/affine_varieties#def17)에서와 마찬가지로, morphism $\varphi: X \rightarrow Y$의 역함수 $\psi: Y \rightarrow X$가 존재하고 이 역시 morphism일 때 $\varphi$를 *isomorphism*이라 부르며, 이러한 $\varphi$가 존재하는 두 projective variety를 서로 *isomorphic*하다고 한다. 다음 예시들은 대표적인 morphism들이다. 
 
 ::: 예시 16
 우선 $\mathbb{P}^1$에서 $\mathbb{P}^2$로의 *Veronese embedding* (of degree 2)을
 
 $$[x:y]\mapsto [x^2: xy:y^2]$$
 
-으로 정의하면, 이는 projective space들 사이의 morphism이 된다. 또 다른 예시로, $\mathbb{P}^1\times \mathbb{P}^1$에서 $\mathbb{P}^3$의 *Segre embedding*은 다음 식
+으로 정의하면, 이는 projective space들 사이의 morphism이 된다. 또 다른 예시로, $\mathbb{P}^1\times \mathbb{P}^1$에서 $\mathbb{P}^3$으로의 *Segre embedding*은 다음 식
 
 $$([x:y], [u:v])\mapsto [xu: xv: yu: yv]$$
 
-으로 주어지는 morphism이다. 
+으로 주어진다. 다만 우리는 아직 두 projective variety의 곱을 projective space의 부분집합으로 실현한 적이 없고, 위 식의 각 성분도 두 변수쌍 각각에 대해서만 동차이므로, 이것은 [정의 15](#def15)의 의미에서의 morphism은 아니다. 이 식의 image는 $\mathbb{P}^3$ 안의 quadric $Z(\x_0\x_3 - \x_1\x_2)$이며, 실제로 $[z_0 : z_1 : z_2 : z_3]$이 $z_0z_3 = z_1z_2$를 만족하고 가령 $z_0 \ne 0$이라면 $([z_0 : z_2], [z_0 : z_1])$이 이 점으로 보내진다. 
 :::
 
 ::: 예시 17

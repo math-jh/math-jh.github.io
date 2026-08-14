@@ -17,7 +17,7 @@ drift_needed: true
 
 [§Depth](/ko/math/commutative_algebra/depth)에서 우리는 Noetherian local ring 위의 finitely generated module에 대하여 항상 $\operatorname{depth}M\leq \dim M$이 성립함을 보았고 ([§Depth, ⁋따름정리 8](/ko/math/commutative_algebra/depth#cor8)), 이 부등식에서 등호가 성립하는 대상을 Cohen--Macaulay라 이름 붙였다. 이 개념은 depth라는 대수적 불변량과 차원이라는 기하적 불변량이 정확히 맞아떨어지는, 다시 말해 module이 그 support의 모든 방향에서 균질하게 두꺼운 상황을 포착한다. 이 글에서는 Cohen--Macaulay module을 정식으로 정의하고, 이 조건이 system of parameters가 곧 regular sequence라는 사실과 동치임을 보인 뒤, 여기에서 따라오는 localization에 대한 안정성과 차원 공식, catenary 성질을 살펴본다. 마지막으로 이 이론이 중복도의 계산에서 어떻게 나타나는지를 다룬다.
 
-## Cohen-Macaulay 가군
+## Cohen-Macaulay module
 
 이 글 전체에서 $(A,\mathfrak{m})$은 Noetherian local ring이고, 특별한 언급이 없는 한 $M$은 $0$이 아닌 finitely generated $A$-module이다. [§Depth, ⁋따름정리 8](/ko/math/commutative_algebra/depth#cor8)의 부등식에서 등호가 성립하는 경우를 다음과 같이 이름 붙인다.
 

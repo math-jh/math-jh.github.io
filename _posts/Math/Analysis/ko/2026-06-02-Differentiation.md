@@ -1,7 +1,7 @@
 ---
 title: "미분"
 description: "미분가능성을 Carathéodory의 연속인자 형태로 정식화하여, 미분이 연속을 함의함과 연쇄법칙을 깔끔하게 증명한다. 미적분학에서 다룬 미분을 실수의 완비성 위에서 엄밀하게 재정초한다."
-excerpt: "Carathéodory 미분, 미분가능성과 연속, 연쇄법칙"
+excerpt: "Carathéodory derivative, 미분가능성과 연속, 연쇄법칙"
 
 categories: [Math / Analysis]
 permalink: /ko/math/analysis/differentiation
@@ -17,7 +17,7 @@ published: false
 
 [\[미적분학\] §미분과 도함수](/ko/math/calculus/derivatives)에서 미분을 difference quotient의 극한으로 정의하였다. 이제 극한과 연속의 엄밀한 이론을 갖추었으므로, 미분을 다시 정초하되 difference quotient의 분모가 사라지는 번거로움을 피하는 Carathéodory의 동치 형태를 채택한다.
 
-## Carathéodory 미분
+## Carathéodory derivative
 
 ::: 명제 1
 구간 $I$에서 정의된 $f$가 $a \in I$에서 미분가능한 것은, $a$에서 연속인 함수 $\varphi : I \rightarrow \mathbb{R}$가 존재하여 모든 $x \in I$에 대해

@@ -1,7 +1,7 @@
 ---
-title: "Weyl 지표 공식"
-description: "유한차원 표현의 weight 중복도를 group ring Z[P]의 원소로 묶은 형식 지표를 도입하고, Verma module의 형식 지표 e^μ/∏(1−e^{−α})로부터 dominant integral λ에 대한 기약 표현 L(λ)의 지표가 교대합 ∑_w(−1)^{ℓ(w)}e^{w(λ+ρ)}를 Weyl denominator로 나눈 것임을 보이는 Weyl 지표 공식을 확립한다. 그 따름으로 차원 공식 dim L(λ)=∏_{α>0}⟨λ+ρ,α⟩/⟨ρ,α⟩을 얻고 sl₂·sl₃에서 검산한다."
-excerpt: "formal character, group ring Z[P], Verma module의 지표, Weyl denominator, Weyl vector ρ, Weyl 지표 공식, Weyl 차원 공식, sl₂, sl₃"
+title: "Weyl character formula"
+description: "유한차원 표현의 weight 중복도를 group ring Z[P]의 원소로 묶은 형식 지표를 도입하고, Verma module의 형식 지표 e^μ/∏(1−e^{−α})로부터 dominant integral λ에 대한 기약 표현 L(λ)의 지표가 교대합 ∑_w(−1)^{ℓ(w)}e^{w(λ+ρ)}를 Weyl denominator로 나눈 것임을 보이는 Weyl character formula을 확립한다. 그 따름으로 차원 공식 dim L(λ)=∏_{α>0}⟨λ+ρ,α⟩/⟨ρ,α⟩을 얻고 sl₂·sl₃에서 검산한다."
+excerpt: "formal character, group ring Z[P], Verma module의 지표, Weyl denominator, Weyl vector ρ, Weyl character formula, Weyl dimension formula, sl₂, sl₃"
 
 categories: [Math / Lie Theory]
 permalink: /ko/math/lie_theory/weyl_character_formula
@@ -14,17 +14,17 @@ weight: 13
 published: false
 ---
 
-최고 무게 정리는 유한차원 기약 representation이 정확히 dominant integral weight $\lambda$에 대한 $L(\lambda)$들로 분류됨을 확립하였고, 이로써 표현론의 모든 질문은 각 $L(\lambda)$의 weight 구조, 곧 어떤 weight $\mu$가 어떤 multiplicity로 나타나는지를 계산하는 문제로 환원되었다 ([§최고 무게 가군, ⁋정리 12](/ko/math/lie_theory/highest_weight_modules#thm12)). $\sl_2$에서 이 정보는 단순하였다. Highest weight $m$의 기약 representation은 $m, m-2, \ldots, -m$의 weight를 각각 중복도 $1$로 가졌다 ([§sl₂의 표현론, ⁋정의 5](/ko/math/lie_theory/representations_of_sl2#def5)). 그러나 rank가 큰 semisimple Lie algebra에서는 weight 중복도가 더 이상 자명하지 않으며, 이를 닫힌 형태로 주는 것이 Weyl character 공식이다.
+최고 무게 정리는 유한차원 irreducible representation이 정확히 dominant integral weight $\lambda$에 대한 $L(\lambda)$들로 분류됨을 확립하였고, 이로써 표현론의 모든 질문은 각 $L(\lambda)$의 weight 구조, 곧 어떤 weight $\mu$가 어떤 multiplicity로 나타나는지를 계산하는 문제로 환원되었다 ([§최고 무게 가군, ⁋정리 12](/ko/math/lie_theory/highest_weight_modules#thm12)). $\sl_2$에서 이 정보는 단순하였다. Highest weight $m$의 irreducible representation은 $m, m-2, \ldots, -m$의 weight를 각각 중복도 $1$로 가졌다 ([§sl₂의 표현론, ⁋정의 5](/ko/math/lie_theory/representations_of_sl2#def5)). 그러나 rank가 큰 semisimple Lie algebra에서는 weight 중복도가 더 이상 자명하지 않으며, 이를 닫힌 형태로 주는 것이 Weyl character formula이다.
 
 이 글에서 우리는 representation $V$의 모든 weight 중복도를 한꺼번에 담는 *formal character*를 weight lattice의 group ring 안의 원소로 정의하고, Verma module $M(\mu)$의 formal character가 $e^\mu/\prod_{\alpha>0}(1-e^{-\alpha})$라는 명료한 닫힌 형태를 가짐을 본다. 그런 뒤 Casimir 원소가 정하는 central character를 이용하여 $\mathrm{ch}\,L(\lambda)$를 Verma module character들의 교대합으로 풀고, 이를 정리하면 dominant integral $\lambda$에 대하여
 
 $$\mathrm{ch}\,L(\lambda)=\frac{\sum_{w\in W}(-1)^{\ell(w)}e^{w(\lambda+\rho)}}{\sum_{w\in W}(-1)^{\ell(w)}e^{w\rho}}$$
 
-라는 Weyl character 공식을 얻는다. 그 직접적 귀결로 차원 공식이 따라오며, $\sl_2$와 $\sl_3$에서 두 공식을 검산한다. 이 글 전체에서 $\mathfrak{g}$는 characteristic $0$의 algebraically closed field (편의상 $\mathbb{C}$) 위의 유한차원 semisimple Lie algebra이고, $\mathfrak{h}$는 그 Cartan subalgebra, $\Phi\subseteq\mathfrak{h}^\ast$는 root system, $\Phi^+$는 고정된 positive root들의 모임, $W$는 그 Weyl group이다 ([§근계, ⁋정의 17](/ko/math/lie_theory/root_systems#def17)).
+라는 Weyl character formula을 얻는다. 그 직접적 귀결로 차원 공식이 따라오며, $\sl_2$와 $\sl_3$에서 두 공식을 검산한다. 이 글 전체에서 $\mathfrak{g}$는 characteristic $0$의 algebraically closed field (편의상 $\mathbb{C}$) 위의 유한차원 semisimple Lie algebra이고, $\mathfrak{h}$는 그 Cartan subalgebra, $\Phi\subseteq\mathfrak{h}^\ast$는 root system, $\Phi^+$는 고정된 positive root들의 모임, $W$는 그 Weyl group이다 ([§근계, ⁋정의 17](/ko/math/lie_theory/root_systems#def17)).
 
 ## 형식 지표
 
-Representation $V$의 weight 중복도 전체를 하나의 대수적 대상으로 묶기 위해, weight들이 사는 lattice의 group ring을 도입한다. 우선 무대가 될 lattice를 정한다. Weight $\lambda\in\mathfrak{h}^\ast$이 모든 simple coroot $h_i$ 위에서 정숫값 $\lambda(h_i)\in\mathbb{Z}$을 가질 때 이를 integral weight이라 부르며, 그러한 weight들의 모임
+Representation $V$의 weight multiplicity 전체를 하나의 대수적 대상으로 묶기 위해, weight들이 사는 lattice의 group ring을 도입한다. 우선 무대가 될 lattice를 정한다. Weight $\lambda\in\mathfrak{h}^\ast$이 모든 simple coroot $h_i$ 위에서 정숫값 $\lambda(h_i)\in\mathbb{Z}$을 가질 때 이를 integral weight이라 부르며, 그러한 weight들의 모임
 
 $$P=\{\lambda\in\mathfrak{h}^\ast\mid\lambda(h_i)\in\mathbb{Z}\ \text{ for all simple roots }\alpha_i\}$$
 
@@ -41,7 +41,7 @@ $$e^\mu\cdot e^\nu=e^{\mu+\nu},\qquad e^0=1$$
 기호 $e^\mu$는 단지 lattice 원소 $\mu$를 multiplicative group의 원소로 옮긴 형식적 지수일 뿐이며, $\mathbb{Z}[P]$는 추상적으로 Laurent polynomial ring $\mathbb{Z}[x_1^{\pm 1},\ldots,x_l^{\pm 1}]$과 동형이다. 여기에서 $x_i=e^{\varpi_i}$는 lattice $P$의 basis, 곧 fundamental weight들에 대응한다. Weyl group $W$는 $\mathfrak{h}^\ast$ 위에 작용하고 $P$를 보존하므로 $w\cdot e^\mu=e^{w\mu}$로 $\mathbb{Z}[P]$ 위에 ring automorphism으로 작용한다. 이 $W$-작용이 character 공식의 분자와 분모를 떠받치는 대칭이다.
 
 ::: 정의 2
-유한차원 representation $V$의 weight 분해 $V=\bigoplus_{\mu}V_\mu$에 대하여, $V$의 *formal character<sub>형식 지표</sub>*는 $\mathbb{Z}[P]$의 원소
+유한차원 representation $V$의 weight decomposition $V=\bigoplus_{\mu}V_\mu$에 대하여, $V$의 *formal character<sub>형식 지표</sub>*는 $\mathbb{Z}[P]$의 원소
 
 $$\mathrm{ch}\,V=\sum_{\mu\in P}(\dim V_\mu)\,e^\mu$$
 
@@ -58,7 +58,7 @@ $$\varepsilon(\mathrm{ch}\,V)=\sum_\mu\dim V_\mu=\dim V$$
 
 로 표현된다. 차원 공식은 바로 이 평가를 character 공식에 적용하여 얻어질 것이다.
 
-무한차원 representation에서는 weight 집합이 아래로만 유계여서 $\mathrm{ch}\,V$가 무한합이 되므로 $\mathbb{Z}[P]$에 머무르지 못한다. Verma module의 character를 다루기 위해 약간 더 넓은 ring이 필요하다.
+Infinite-dimensional representation에서는 weight 집합이 아래로만 유계여서 $\mathrm{ch}\,V$가 무한합이 되므로 $\mathbb{Z}[P]$에 머무르지 못한다. Verma module의 character를 다루기 위해 약간 더 넓은 ring이 필요하다.
 
 ::: 정의 3
 $\mathbb{Z}[P]$의 *completion<sub>완비화</sub>* $\widehat{\mathbb{Z}[P]}$는 유한 개의 weight $\lambda_1,\ldots,\lambda_r$이 존재하여 그 support가 $\bigcup_i(\lambda_i-Q^+)$ 안에 들어가는 형식합 $\sum_\mu c_\mu e^\mu$들의 집합이다. 여기에서 $Q^+=\sum_{\alpha\in\Phi^+}\mathbb{Z}_{\geq 0}\,\alpha$는 positive root들의 음이 아닌 정수 결합으로 이루어진 cone이다.
@@ -68,7 +68,7 @@ $\mathbb{Z}[P]$의 *completion<sub>완비화</sub>* $\widehat{\mathbb{Z}[P]}$는
 
 ## Verma module의 형식 지표
 
-기약 representation의 character를 직접 다루기는 어렵지만, 그것을 덮는 Verma module $M(\mu)$의 character는 PBW basis가 곧장 닫힌 형태로 내어준다. Verma module은 $U(\mathfrak{n}^-)$ 위의 free module이고 그 weight들이 $\mu$에서 positive root들을 빼서 얻어지므로 ([§최고 무게 가군, ⁋명제 7](/ko/math/lie_theory/highest_weight_modules#prop7)), 각 weight space의 차원은 순수한 조합론적 양이 된다.
+Irreducible representation의 character를 직접 다루기는 어렵지만, 그것을 덮는 Verma module $M(\mu)$의 character는 PBW basis가 곧장 닫힌 형태로 내어준다. Verma module은 $U(\mathfrak{n}^-)$ 위의 free module이고 그 weight들이 $\mu$에서 positive root들을 빼서 얻어지므로 ([§최고 무게 가군, ⁋명제 7](/ko/math/lie_theory/highest_weight_modules#prop7)), 각 weight space의 차원은 순수한 조합론적 양이 된다.
 
 ::: 정의 4
 음이 아닌 정수에 값을 갖는 함수 $\mathcal{P}:Q^+\rightarrow\mathbb{Z}_{\geq 0}$을, $\nu\in Q^+$를 positive root들의 합 $\nu=\sum_{\alpha\in\Phi^+}k_\alpha\alpha$ ($k_\alpha\in\mathbb{Z}_{\geq 0}$)로 나타내는 방법의 수로 정의하고 이를 *Kostant partition function<sub>코스탄트 분할 함수</sub>*이라 부른다. $\nu\notin Q^+$이면 $\mathcal{P}(\nu)=0$으로 둔다.
@@ -142,9 +142,9 @@ $$s_i\Delta=\prod_{\alpha\in\Phi^+}\bigl(e^{s_i\alpha/2}-e^{-s_i\alpha/2}\bigr)$
 
 따라서 highest weight $\mu$를 $\mu+\rho$로 옮긴 frame에서 모든 Verma module character는 공통 분모 $\Delta=\sum_w(-1)^{\ell(w)}e^{w\rho}$ 위의 분자 $e^{\mu+\rho}$ 하나로 적힌다. 이 $\rho$-이동된 좌표가 character 공식을 깔끔한 교대합으로 만든다.
 
-## Weyl 지표 공식
+## Weyl character formula
 
-이제 기약 representation의 character를 Verma module character들로 표현한다. 발상은 두 가지 사실을 결합하는 것이다. 첫째, 임의의 highest weight module은 Jordan–Hölder 인자가 모두 기약 highest weight module $L(\nu)$들이므로, formal character의 수준에서 $\mathrm{ch}\,M(\mu)=\sum_\nu[M(\mu):L(\nu)]\,\mathrm{ch}\,L(\nu)$이고, 이 관계는 $\mathrm{ch}\,L(\lambda)$를 $\mathrm{ch}\,M(\mu)$들의 정수계수 결합으로 거꾸로 푸는 것을 허용한다. 둘째, 그 결합에 어떤 $M(\mu)$가 실제로 들어올 수 있는지를 Casimir 원소의 central character가 강하게 제약한다.
+이제 irreducible representation의 character를 Verma module character들로 표현한다. 발상은 두 가지 사실을 결합하는 것이다. 첫째, 임의의 highest weight module은 Jordan–Hölder 인자가 모두 기약 highest weight module $L(\nu)$들이므로, formal character의 수준에서 $\mathrm{ch}\,M(\mu)=\sum_\nu[M(\mu):L(\nu)]\,\mathrm{ch}\,L(\nu)$이고, 이 관계는 $\mathrm{ch}\,L(\lambda)$를 $\mathrm{ch}\,M(\mu)$들의 정수계수 결합으로 거꾸로 푸는 것을 허용한다. 둘째, 그 결합에 어떤 $M(\mu)$가 실제로 들어올 수 있는지를 Casimir 원소의 central character가 강하게 제약한다.
 
 ::: 명제 8
 $\mathfrak{g}$의 Casimir 원소 $\Omega\in U(\mathfrak{g})$는 Verma module $M(\mu)$ 위에서 스칼라 $\langle\mu+\rho,\mu+\rho\rangle-\langle\rho,\rho\rangle$로 작용한다. 여기에서 $\langle-,-\rangle$은 Killing form이 $\mathfrak{h}^\ast$ 위에 유도하는 $W$-불변 내적이다. 특히 $\mu'+\rho$가 $\mu+\rho$의 Weyl group orbit 위에 놓이면 $M(\mu)$와 $M(\mu')$ 위의 $\Omega$의 고윳값이 같고, 거꾸로 두 고윳값이 같으면 $\langle\mu+\rho,\mu+\rho\rangle=\langle\mu'+\rho,\mu'+\rho\rangle$이다.
@@ -161,8 +161,8 @@ $$\Omega=\sum_iH_iH^i+2t_\rho+2\sum_{\alpha\in\Phi^+}f_\alpha e_\alpha$$
 
 이제 central character가 같은 Verma module만이 한 블록에 묶인다는 사실과 Verma character가 $\widehat{\mathbb{Z}[P]}$에서 가역 분모를 갖는다는 사실을 결합하여, character 공식을 끌어낸다.
 
-::: 정리 9 (Weyl 지표 공식)
-Dominant integral weight $\lambda$에 대하여, 기약 representation $L(\lambda)$의 formal character는
+::: 정리 9 (Weyl character formula)
+Dominant integral weight $\lambda$에 대하여, irreducible representation $L(\lambda)$의 formal character는
 
 $$\mathrm{ch}\,L(\lambda)=\frac{\sum_{w\in W}(-1)^{\ell(w)}\,e^{w(\lambda+\rho)}}{\sum_{w\in W}(-1)^{\ell(w)}\,e^{w\rho}}=\frac{\sum_{w\in W}(-1)^{\ell(w)}\,e^{w(\lambda+\rho)}}{\prod_{\alpha\in\Phi^+}\bigl(e^{\alpha/2}-e^{-\alpha/2}\bigr)}$$
 
@@ -202,11 +202,11 @@ $$\Delta\cdot\mathrm{ch}\,L(\lambda)=\sum_{w\in W}(-1)^{\ell(w)}e^{w(\lambda+\rh
 
 분자와 분모는 각각 $W$-반대칭인 $\widehat{\mathbb{Z}[P]}$의 원소이고, 그 quotient가 $W$-불변인 formal character를 준다는 점이 공식의 구조를 떠받친다. 분모를 $\rho$의 orbit 합으로, 분자를 $\lambda+\rho$의 orbit 합으로 적으면 두 교대합이 같은 꼴을 가지므로, 분자를 분모로 형식적으로 나누는 계산이 곧 weight 중복도를 산출한다. $\lambda=0$이면 분자와 분모가 같아 $\mathrm{ch}\,L(0)=1$, 곧 trivial representation을 정확히 회복한다.
 
-## Weyl 차원 공식
+## Weyl dimension formula
 
 Character 공식의 양변을 차원으로 평가하면 닫힌 차원 공식이 따라온다. 차원은 모든 형식기호를 $1$로 보내는 평가 $\varepsilon$로 얻어지지만 ([정의 2](#def2) 이후의 논의), 분자와 분모가 $\varepsilon$에서 모두 $0$이 되므로 곧바로 대입할 수는 없다. 대신 $e^\mu\mapsto e^{t\langle\mu,\rho^\vee\rangle}$ 류의 일변수 변형을 거쳐 극한을 취하는 방식으로 부정형을 해소한다.
 
-::: 따름정리 10 (Weyl 차원 공식)
+::: 따름정리 10 (Weyl dimension formula)
 Dominant integral weight $\lambda$에 대하여
 
 $$\dim L(\lambda)=\prod_{\alpha\in\Phi^+}\frac{\langle\lambda+\rho,\alpha\rangle}{\langle\rho,\alpha\rangle}$$
@@ -233,7 +233,7 @@ $$F_t(\mathrm{ch}\,L(\lambda))\longrightarrow\prod_{\alpha\in\Phi^+}\frac{\langl
 이고, 좌변의 극한은 $\dim L(\lambda)$이므로 주장한 등식을 얻는다. 분자와 분모의 인자 수가 모두 $\lvert\Phi^+\rvert$로 같아 $t$의 거듭제곱이 상쇄되고 상수항만 남는다.
 :::
 
-차원 공식은 각 positive root $\alpha$가 비율 $\langle\lambda+\rho,\alpha\rangle/\langle\rho,\alpha\rangle$을 기여하고 그 곱이 차원이 된다는 명료한 그림을 준다. $\lambda=0$이면 모든 비율이 $1$이어서 $\dim L(0)=1$이 되고, $\lambda$가 한 fundamental weight 방향으로 커질수록 그 방향과 짝하는 root들의 기여가 선형으로 늘어 차원이 다항식적으로 증가한다. 이 공식은 weight 중복도 전체를 알 필요 없이 차원만을 root 데이터에서 직접 읽게 해 준다.
+차원 공식은 각 positive root $\alpha$가 비율 $\langle\lambda+\rho,\alpha\rangle/\langle\rho,\alpha\rangle$을 기여하고 그 곱이 차원이 된다는 명료한 그림을 준다. $\lambda=0$이면 모든 비율이 $1$이어서 $\dim L(0)=1$이 되고, $\lambda$가 한 fundamental weight 방향으로 커질수록 그 방향과 짝하는 root들의 기여가 선형으로 늘어 차원이 다항식적으로 증가한다. 이 공식은 weight multiplicity 전체를 알 필요 없이 차원만을 root 데이터에서 직접 읽게 해 준다.
 
 ## 예시
 
@@ -263,7 +263,7 @@ $$\dim L(\theta)=\frac{2}{1}\cdot\frac{2}{1}\cdot\frac{4}{2}=8$$
 로, $\sl_3$ 자신의 차원 $3^2-1=8$과 일치한다. 이 $8$차원 representation에서 weight $0$은 Cartan subalgebra에 대응하여 중복도 $2$로 나타나는데, character 공식 [정리 9](#thm9)에서 분자 $\sum_w(-1)^{\ell(w)}e^{w(\theta+\rho)}$를 분모로 나누어 $e^0$의 계수를 추출하면 정확히 이 중복도 $2$가 나온다. 이는 차원 합 $6\cdot 1+1\cdot 2=8$로도 맞아떨어진다 (영이 아닌 여섯 root weight가 각 중복도 $1$, weight $0$이 중복도 $2$).
 :::
 
-$\sl_3$의 adjoint representation은 weight $0$의 중복도가 $1$을 넘는 첫 예로, character 공식이 단순한 weight 나열을 넘어 중복도까지 정확히 산출함을 보여준다. 일반적으로 $\mathfrak{g}$의 rank가 커질수록 weight 중복도는 Kostant partition function이 정하는 복잡한 양이 되며, Weyl character 공식의 분자를 분모로 나누는 형식 계산이 이 모든 중복도를 한꺼번에 결정한다. 차원 공식은 그 가운데 전체 차원이라는 한 정보만을 root 데이터에서 곧바로 읽어내는 specialization이다.
+$\sl_3$의 adjoint representation은 weight $0$의 중복도가 $1$을 넘는 첫 예로, character 공식이 단순한 weight 나열을 넘어 중복도까지 정확히 산출함을 보여준다. 일반적으로 $\mathfrak{g}$의 rank가 커질수록 weight 중복도는 Kostant partition function이 정하는 복잡한 양이 되며, Weyl character formula의 분자를 분모로 나누는 형식 계산이 이 모든 중복도를 한꺼번에 결정한다. 차원 공식은 그 가운데 전체 차원이라는 한 정보만을 root 데이터에서 곧바로 읽어내는 specialization이다.
 
 ---
 

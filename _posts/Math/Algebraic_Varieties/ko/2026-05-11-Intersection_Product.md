@@ -78,7 +78,7 @@ $$V \cdot W = \sum_{T \subseteq V \cap W} i_T(V, W) [T]$$
 으로 정의할 수 있다. 여기서 $i_T(V, W)$는 component $T$에서의 intersection multiplicity로, [정의 1](#def1)의 점에서의 multiplicity를 component $T$로 자연스럽게 확장한 값이다. $T$가 점 $p$라면 $i_T(V, W) = i_p(V, W)$이고, 일반적으로는 $T$ 위의 일반적인 점에서 두 variety가 만나는 정도를 측정한 값으로, generic point에서의 intersection multiplicity로 엄밀하게 정의할 수 있다. 그럼 다음은 intersection multiplicity의 성질들을 intersection product로 올려둔 것이다. 
 
 ::: 명제 6
-Smooth irreducible variety $X$ 위에서 codimension $k$, $l$의 두 cycle $Z, W$에 대하여, 위의 식으로부터 *intersection product* 
+Smooth irreducible quasi-projective variety $X$ 위에서 codimension $k$, $l$의 두 cycle $Z, W$에 대하여, 이들이 properly intersect하는 경우에는 위의 식으로부터, 그렇지 않은 경우에는 아래의 [보조정리 8](#lem8)로 한쪽을 옮긴 후 같은 식으로부터 *intersection product* 
 
 $$Z \cdot W \in \CH^{k+l}(X)$$
 
@@ -92,7 +92,7 @@ $$Z \cdot W \in \CH^{k+l}(X)$$
 그럼 다음 정의는 앞선 글에서부터 예견되었던 것이다. 
 
 ::: 정의 7
-Intersection product에 의해 $\CH^\ast(X) = \bigoplus_k \CH^k(X)$는 *graded ring*이 된다. 이를 *Chow ring<sub>저우 환</sub>*이라 부른다.
+Smooth quasi-projective variety $X$에 대하여, intersection product에 의해 $\CH^\ast(X) = \bigoplus_k \CH^k(X)$는 *graded ring*이 된다. 이를 *Chow ring<sub>저우 환</sub>*이라 부른다.
 :::
 
 ## Moving Lemma
@@ -103,7 +103,7 @@ Intersection product에 의해 $\CH^\ast(X) = \bigoplus_k \CH^k(X)$는 *graded r
 Smooth quasi-projective variety $X$와 cycle $Z \in Z^k(X)$, 그리고 임의의 cycle $W \in Z^l(X)$에 대해, $Z' \sim_{\text{rat}} Z$이고 $Z'$과 $W$가 properly intersect하는 $Z'$가 존재한다.
 :::
 
-핵심 아이디어는 다음과 같다. $Z$를 구성하는 irreducible component $V_i$마다, $V_i$를 포함하는 충분히 "일반적인" hypersurface $H_i$로 자르고, $V_i \cap H_1 \cap \cdots \cap H_s$와 같은 형태의 cycle을 취한다. 이때 "일반적"이라는 것은 $H_i$가 $W$와 generic한 위치에서 만나도록 선택한다는 것으로, 이렇게 하면 차원이 적절히 떨어져 proper intersection을 이룬다. [§선형계, ⁋정의 5](/ko/math/algebraic_varieties/linear_systems#def5)에서 보았듯 basepoint-free linear system을 사용하면 이러한 "일반적인" 이동을 regular map으로 실현할 수 있으며, 이 과정이 rational equivalence를 보존함을 보이는 것이 증명의 핵심이다.
+핵심 아이디어는 $Z$를 구성하는 irreducible component $V_i$를 직접 움직이는 대신, 이를 더 큰 cycle에서 잘라내어 표현하는 것이다. $X$를 $\mathbb{P}^n$ 안에 embed해 두고 일반적인 linear subspace $L$을 vertex로 하는 $V_i$ 위의 cone $C_L(V_i)$를 잡으면, 차원이 맞아떨어져 $C_L(V_i)$와 $X$가 properly intersect하고 cycle 수준에서 $C_L(V_i) \cdot X = V_i + R_i$의 꼴로 residual cycle $R_i$가 남는다. 그럼 $C_L(V_i)$를 $\mathbb{P}^n$ 안에서 일반적인 위치의 cycle $C$로 옮기는 rational equivalence로부터 $V_i \sim_{\text{rat}} C \cdot X - R_i$를 얻고, 우변의 첫 항은 이미 $W$와 properly intersect한다. 남은 $R_i$에 대해서는 $L$을 일반적으로 잡을 때 $R_i$가 $W$에 대해 갖는 excess, 즉 교집합의 차원이 기대 차원을 초과하는 정도가 $V_i$의 것보다 엄격히 작아지므로, 이 excess에 대한 induction으로 원하는 $Z'$를 얻는다. [§선형계, ⁋정의 5](/ko/math/algebraic_varieties/linear_systems#def5)에서 보았듯 basepoint-free linear system을 사용하면 이러한 "일반적인" 이동을 regular map으로 실현할 수 있으며, 이 과정이 rational equivalence를 보존함을 보이는 것이 증명의 핵심이다.
 
 그럼 우리는 위의 보조정리를 사용하여 $Z$를 $Z'$로 옮겨준 후, 다음의 식
 

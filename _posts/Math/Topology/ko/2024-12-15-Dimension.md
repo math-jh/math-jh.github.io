@@ -112,7 +112,7 @@ $$\operatorname{dist}(x,\sk_{d-1})\leq \lvert x-y\rvert+\lvert y-z\rvert\leq \lv
 한편 우리는 algebraic geometry에서 사용하는 차원의 개념을 정의할 것인데, algebraic geometry에서 관심을 갖는 공간은 일반적으로 생각하는 위상구조와는 다른 위상구조가 주어져 있어서 이 정의는 다소 비직관적이다. 특히, 일상적인 위상구조가 주어진 $\mathbb{R}^n$은 항상 $0$차원이다. 그러나 어쨌든 이 정의를 위상수학의 언어로 할 수 있는 것은 사실이므로 이 페이지에 같이 적어두기로 한다.
 
 ::: 정의 6
-위상공간 $X$가 *irreducible<sub>기약</sub>*이라는 것은 $X$가 공집합이 아니고, $X=A\cup B$이도록 하는 $X$의 비자명한 닫힌집합 $A,B$가 존재하지 않는 것이다. 
+위상공간 $X$가 *irreducible<sub>기약</sub>*이라는 것은 $X$가 공집합이 아니고, $X=A\cup B$이도록 하는 $X$의 진부분 닫힌집합 $A,B$가 존재하지 않는 것이다. 
 :::
 
 그럼 다음이 모두 동치이다.
@@ -153,10 +153,10 @@ $$(U_i\cap U_j\cap V)\cap (U_j\cap W)=U_i\cap U_j\cap V\cap W\neq\emptyset$$
 Connected component와 비슷하게 다음을 정의할 수 있다.
 
 ::: 정의 9
-위상공간 $X$의 부분집합 $A$에 대하여, $A$를 포함하는 *irreducible component<sub>기약성분</sub>*는 $A$를 포함하는 irreducible subset 중 가장 큰 것을 의미한다. 
+위상공간 $X$의 부분집합 $A$에 대하여, $A$를 포함하는 *irreducible component<sub>기약성분</sub>*는 $A$를 포함하는 irreducible subset들 가운데 포함관계에 대하여 maximal인 것을 의미한다. 
 :::
 
-그럼 [§연결공간, ⁋명제 2](/ko/math/topology/connected_spaces#prop2)과 비슷한 논증에 의하여, irreducible set의 closure는 irreducible인 것을 보일 수 있으므로 irreducible component는 반드시 closed subset이다. 
+$A$를 포함하는 irreducible subset들의 공집합이 아닌 totally ordered subset이 주어졌다면 그 합집합 $Y$도 irreducible인데, $Y$의 공집합이 아닌 두 열린집합이 각각 그 모임의 원소 $Y_1, Y_2$와 만난다 하고 $Y_1\subseteq Y_2$라 하면, 두 열린집합과 $Y_2$의 교집합이 $Y_2$의 공집합이 아닌 열린집합이므로 [명제 7](#prop7)의 둘째 조건에 의하여 서로 만나기 때문이다. 따라서 $A$가 irreducible이라면 공집합인 totally ordered subset은 $A$ 자신을 upper bound로 가지므로, [\[집합론\] §선택공리, ⁋정리 4](/ko/math/set_theory/axiom_of_choice#thm4)에 의하여 $A$를 포함하는 irreducible component가 존재한다. 다만 connected component와 달리 maximal인 것이 유일할 이유가 없으므로, $A$를 포함하는 irreducible component는 여럿일 수 있다. 한편 [§연결공간, ⁋명제 2](/ko/math/topology/connected_spaces#prop2)과 비슷한 논증에 의하여, irreducible set의 closure는 irreducible인 것을 보일 수 있으므로 irreducible component는 반드시 closed subset이다. 
 
 ::: 정의 10
 위상공간 $X$에 대하여, $X$의 irreducible closed subset들의 strictly descending chain
@@ -170,7 +170,7 @@ $$\dim X=\sup\{\text{length of strictly descending chains of irreducible closed 
 으로 정의한다. 만일 무한한 길이의 strictly descending chain이 존재한다면 $\dim X=\infty$로 정의하고, $X=\emptyset$인 경우 $\dim X=-\infty$로 정의한다. 
 :::
 
-그럼 다음과 같은 상황에서는 $X$의 Krull dimension은 항상 유한하다. 특히 Hausdorff space에서는 오직 singleton만이 irreducible subset이므로 Hausdorff space의 Krull dimension은 $0$이다. 
+Hausdorff space에서는 오직 singleton만이 irreducible subset이므로, 공집합이 아닌 Hausdorff space의 Krull dimension은 항상 $0$이다. 한편 algebraic geometry에서 다루는 공간들은 다음의 유한성 조건을 만족하는 경우가 많다. 
 
 ::: 정의 11
 위상공간 $X$가 *Noetherian<sub>뇌터 공간</sub>*이라는 것은 임의의 닫힌집합들의 chain
@@ -179,6 +179,10 @@ $$A_1\supseteq A_2\supseteq\cdots$$
 
 이 주어질 때마다, 적당한 $n$이 존재하여 $A_n=A_{n+1}=\cdots$이도록 할 수 있는 것이다.
 :::
+
+이 조건이 Krull dimension의 유한성까지 주지는 않는다. 가령 $X=\mathbb{N}$에 $\emptyset$과 $X$, 그리고 유한한 initial segment $\{1,\ldots,n\}$들을 닫힌집합으로 하는 위상을 주면, 닫힌집합들의 strictly descending chain에서는 $n$이 감소해야 하므로 $X$는 Noetherian이다. 그러나 각각의 $\{1,\ldots,n\}$은 $\{n\}$의 closure이므로 irreducible이고, 따라서 $\{1\}\subsetneq\{1,2\}\subsetneq\cdots$가 임의로 긴 chain을 주어 $\dim X=\infty$이다.
+
+또한 $X$가 Noetherian이라면, $X$의 닫힌집합들로 이루어진 공집합이 아닌 임의의 모임 $\mathcal{S}$는 포함관계에 대하여 minimal element를 갖는다. 그렇지 않다면 각각의 $A\in\mathcal{S}$마다 $A\supsetneq A'$인 $A'\in\mathcal{S}$를 택할 수 있고, 이를 반복하여 안정화하지 않는 닫힌집합들의 descending chain을 얻기 때문이다.
 
 Noetherian 조건은 강력한 유한성의 조건을 준다. 가령 다음이 성립한다.
 
@@ -190,7 +194,7 @@ Noetherian space $X$와 $X$의 open covering $\{U_i\}_{i\in I}$가 주어졌다 
 
 $$\mathcal{C}=\left\{\bigcup_{j\in J} U_j\mid\text{$J$ finite subset of $I$}\right\}$$
 
-라 정의할 수 있다. 이제 $\mathcal{C}$의 임의의 totally ordered subset을 생각하면, 이는 그 여집합들로 이루어진 닫힌집합들의 descending chain과 동치이고 따라서 $X$가 Noetherian이라는 가정으로부터 이는 언젠가 멈춰야 한다. 즉, $\mathcal{C}$는 [\[집합론\] §선택공리, ⁋정리 4](/ko/math/set_theory/axiom_of_choice#thm4)의 조건을 만족하고 따라서 $\mathcal{C}$는 maximal element $U\in \mathcal{C}$를 갖는다. 만일 $X\neq U$라면, $x\in X\setminus U$를 포함하는 $U_j$를 택할 수 있고 그럼 $U\cup U_j$는 $U$를 strict하게 포함하는 $\mathcal{C}$의 원소이므로 $U$의 maximality에 모순이다. 따라서 $U=X$이고 우리는 원하는 결과를 얻는다. 
+라 정의할 수 있다. 이제 $\mathcal{C}$의 임의의 totally ordered subset $\mathcal{D}$가 주어졌다 하자. $\mathcal{D}$가 공집합이라면 $J=\emptyset$에 대응하는 $\emptyset\in\mathcal{C}$가 $\mathcal{D}$의 upper bound이고, 그렇지 않다면 $\mathcal{D}$의 원소들의 여집합들이 $X$의 닫힌집합들로 이루어진 공집합이 아닌 모임이므로 위에서 본 것과 같이 minimal element를 가지며, $\mathcal{D}$가 totally ordered이므로 그 여집합은 $\mathcal{D}$에서 가장 큰 원소, 특히 $\mathcal{D}$의 upper bound이다. 즉 $\mathcal{C}$의 임의의 totally ordered subset이 upper bound를 가지므로, [\[집합론\] §선택공리, ⁋정리 4](/ko/math/set_theory/axiom_of_choice#thm4)에 의하여 $\mathcal{C}$는 maximal element $U\in \mathcal{C}$를 갖는다. 만일 $X\neq U$라면, $x\in X\setminus U$를 포함하는 $U_j$를 택할 수 있고 그럼 $U\cup U_j$는 $U$를 strict하게 포함하는 $\mathcal{C}$의 원소이므로 $U$의 maximality에 모순이다. 따라서 $U=X$이고 우리는 원하는 결과를 얻는다. 
 :::
 
 추가적으로 Noetherian space에 대해 다음이 성립한다.
@@ -208,23 +212,23 @@ Noetherian topological space $X$에 대하여, 다음이 성립한다.
     $$A_1\supseteq A_2\supseteq \cdots$$
 
     가 주어졌다 하자. 그럼 $A_i=A_i' \cap Y$를 만족하는 $X$의 닫힌집합 $A_i'$들이 존재한다. 이제 $B_i=A_1'\cap\cdots\cap A_i'$라 하면, $B_i\cap Y=A_i$이고 $B_i$는 $X$의 닫힌집합들의 descending chain이다. 
-2. $\mathcal{C}$를 $X$의 닫힌집합 중, 유한히 많은 irreducible component들의 합집합으로 나타낼 수 없는 집합들의 모임이라 하자. 그럼 $\mathcal{C}=\emptyset$임을 보이면 된다. 결론에 반하여 $\mathcal{C}$가 공집합이 아니라 하면, [명제 12](#prop12)의 증명에서와 마찬가지 방법으로 $\mathcal{C}$가 minimal element $A$를 갖는다는 것을 안다. 이제 $A$는 irreducible이 아니므로, 두 닫힌집합 $B_1,B_2$에 대해 $A=B_1\cup B_2$로 나타낼 수 있고 $B_1,B_2\not\in \mathcal{C}$라는 가정으로부터 이들 각각은 유한한 irreducible component를 갖는다. 약간의 계산을 통해 이 irreducible decomposition들을 사용하여 $A=B_1\cup B_2$의 유한한 irreducible decomposition을 찾을 수 있고, 이는 모순이므로 $\mathcal{C}=\emptyset$이어야 한다.
-3. $X=A_1\cup\cdots\cup A_n$이 irreducible decomposition이라 하고, $X\setminus (A_2\cup\cdots\cup A_n)$을 생각하면 이 집합이 $A_1$에 포함되는 공집합이 아닌 $X$의 열린집합이다. 
+2. $\mathcal{C}$를 $X$의 닫힌집합 중, 유한히 많은 irreducible closed subset들의 합집합으로 나타낼 수 없는 집합들의 모임이라 하자. 그럼 $\mathcal{C}=\emptyset$임을 보이면 된다. 결론에 반하여 $\mathcal{C}$가 공집합이 아니라 하면, 위에서 본 minimal element의 존재로부터 $\mathcal{C}$는 minimal element $A$를 갖는다. 공집합은 공집합인 모임의 합집합이므로 $A\neq\emptyset$이고, $A$가 irreducible이라면 $A$ 자기 자신이 하나짜리 합집합이 되므로 $A$는 irreducible이 아니다. 따라서 [정의 6](#def6)에 의하여 $A=B_1\cup B_2$이도록 하는 $A$의 진부분 닫힌집합 $B_1,B_2$가 존재하고, $A$의 minimality로부터 $B_1,B_2\not\in\mathcal{C}$이므로 이들 각각은 유한히 많은 irreducible closed subset의 합집합이며, 이 둘을 합치면 $A$ 또한 그러한 합집합이 되어 모순이다. 즉 $\mathcal{C}=\emptyset$이고, 특히 $X=A_1\cup\cdots\cup A_n$이도록 하는 $X$의 irreducible closed subset들 $A_1,\ldots,A_n$이 존재한다. 어떤 $A_i$가 다른 $A_j$에 포함된다면 그것을 지워도 되므로 처음부터 $A_i$들 사이에 포함관계가 없다고 가정하면, $X$의 임의의 irreducible closed subset $B$에 대하여 $B=\bigcup_i (B\cap A_i)$는 $B$의 닫힌집합들의 유한한 합집합이므로 [정의 6](#def6)을 반복 적용하여 $B\subseteq A_i$인 $i$가 존재한다. 그럼 $X$의 irreducible component는 [정의 9](#def9)에 의하여 maximal인 irreducible subset이고 앞서 보았듯 닫힌집합이므로 어떤 $A_i$에 포함되며, $A_i$ 자신이 irreducible이므로 maximality로부터 $A_i$와 같다. 따라서 $X$의 irreducible component는 많아야 $n$개이다.
+3. (2)에서 얻은 $X=A_1\cup\cdots\cup A_n$을 $A_i$들 사이에 포함관계가 없도록 택하자. 만일 $A_1\subseteq A_2\cup\cdots\cup A_n$이라면 $A_1=\bigcup_{j\geq 2}(A_1\cap A_j)$이므로 위와 같이 $A_1\subseteq A_j$인 $j\geq 2$가 존재하여 포함관계가 없다는 것에 모순이고, 따라서 $X\setminus (A_2\cup\cdots\cup A_n)$은 $A_1$에 포함되는 공집합이 아닌 $X$의 열린집합이다. 각각의 irreducible component가 어떤 $A_i$와 같으므로, 같은 논증을 모든 $i$에 적용하면 된다. 
 :::
 
 그럼 만일 $X$가 Noetherian이라면, $X$의 irreducible decomposition
 
 $$X=\bigcup_{i=1}^r X_i$$
 
-이 존재하며, $X_i$들은 모두 닫힌집합이고, $X_i$의 여집합도 닫힌집합들의 유한한 합집합이므로 $X_i$는 열린집합이기도 하다. 
+이 존재하며, $X_i$들은 모두 닫힌집합이다. 그러나 서로 다른 irreducible component들은 서로 만날 수 있어 $X\setminus X_i$가 $\bigcup_{j\neq i}X_j$보다 작을 수 있으므로, $X_i$가 열린집합일 이유는 없다. 실제로 $X_i$가 열린집합이면서 다른 component $X_j$와 만난다면 $X_i\cap X_j$는 $X_j$의 공집합이 아닌 열린집합이므로 [명제 7](#prop7)의 셋째 조건에 의하여 $X_j$에서 dense이고, $X_i$가 닫힌집합이므로 $X_j\subseteq X_i$가 되어 $X_j$의 maximality로부터 $X_i=X_j$이다. 즉 $X_i$가 열린집합인 것은 $X_i$가 다른 component와 만나지 않는 경우뿐이다. 
 
-명제 12와 명제 13의 증명에서 우리는 닫힌집합들의 공집합이 아닌 모임이 언제나 minimal element를 가진다는 사실을 사용하였다. 이를 하나의 귀납 원리로 정리하면, Noetherian 공간 위에서 닫힌집합에 대한 성질을 증명하는 표준적인 도구를 얻는다.
+닫힌집합들의 공집합이 아닌 모임이 언제나 minimal element를 가진다는 위의 사실을 하나의 귀납 원리로 정리하면, Noetherian space 위에서 닫힌집합에 대한 성질을 증명하는 표준적인 도구를 얻는다.
 
 ::: 명제 14 (Noetherian induction)
 Noetherian topological space $X$와, $X$의 닫힌집합에 대한 성질 $P$가 주어졌다 하자. 만일 임의의 닫힌집합 $Z\subseteq X$에 대하여, 모든 진부분 닫힌집합 $Z'\subsetneq Z$에서 $P(Z')$가 성립할 때마다 $P(Z)$ 또한 성립한다면, $P$는 $X$의 모든 닫힌집합에서 성립한다.
 :::
 ::: 증명
-$P$가 성립하지 않는 닫힌집합들의 모임을 $\mathcal{S}$라 하고, 결론에 반하여 $\mathcal{S}\neq\emptyset$이라 하자. [명제 12](#prop12)의 증명에서와 같은 방법으로 $\mathcal{S}$는 minimal element $Z_0$을 가진다. 그럼 $Z_0$이 minimal이므로 임의의 진부분 닫힌집합 $Z'\subsetneq Z_0$은 $\mathcal{S}$에 속하지 않아 $P(Z')$가 성립하고, 따라서 가정에 의하여 $P(Z_0)$이 성립한다. 이는 $Z_0\in\mathcal{S}$에 모순이므로 $\mathcal{S}=\emptyset$이며, 곧 $P$는 $X$의 모든 닫힌집합에서 성립한다.
+$P$가 성립하지 않는 닫힌집합들의 모임을 $\mathcal{S}$라 하고, 결론에 반하여 $\mathcal{S}\neq\emptyset$이라 하자. 위에서 본 것과 같이 $\mathcal{S}$는 minimal element $Z_0$을 가진다. 그럼 $Z_0$이 minimal이므로 임의의 진부분 닫힌집합 $Z'\subsetneq Z_0$은 $\mathcal{S}$에 속하지 않아 $P(Z')$가 성립하고, 따라서 가정에 의하여 $P(Z_0)$이 성립한다. 이는 $Z_0\in\mathcal{S}$에 모순이므로 $\mathcal{S}=\emptyset$이며, 곧 $P$는 $X$의 모든 닫힌집합에서 성립한다.
 :::
 
 이는 자연수에 대한 강한 귀납법의 위상적 유비로, 닫힌집합들이 descending chain condition을 만족한다는 Noetherian 조건이 귀납을 가능하게 한다. 실제 사용에서는 임의의 닫힌집합 $Z$에 대해 그 진부분 닫힌집합들에서 성질이 성립한다고 가정하고 $Z$에서 성립함을 보이며, 특히 $Z=X$의 경우가 결론에 포함된다.

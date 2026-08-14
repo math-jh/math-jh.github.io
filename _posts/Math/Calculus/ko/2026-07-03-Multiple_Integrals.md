@@ -10,6 +10,8 @@ sidebar:
 
 date: 2026-07-03
 weight: 15
+published: false
+revising: true
 drift_needed: true
 ---
 
@@ -59,7 +61,7 @@ $$\int_R f \dd{V} = \int_{a_1}^{b_1}\left(\int_{a_2}^{b_2}\cdots\left(\int_{a_n}
 이며, 적분 순서는 임의로 바꿀 수 있다.
 :::
 
-엄밀한 증명은 $f$가 콤팩트인 상자 $R$ 위에서 균등연속이라는 해석학적 사실에 본질적으로 기대므로, 이 글에서는 생략한다. 어쨌든, 위 정리의 우변에 있는 안쪽 적분은 한 변수를 상수로 고정하고 다른 변수로 적분하는 보통의 정적분이므로, 다중적분은 [§미적분의 기본정리](/ko/math/calculus/fundamental_theorem_of_calculus)와 적분법으로 푸는 한 변수 적분들의 반복이 된다. 피적분함수가 $f(x_1,\ldots,x_n) = g_1(x_1)\cdots g_n(x_n)$처럼 변수분리되고 영역이 상자이면 한 단계 더 나아가, 다중적분은 $n$개의 한 변수 적분의 곱 
+엄밀한 증명은 closed 상자 $R$ 위에서 연속함수가 갖는 해석학적 성질에 본질적으로 기대므로, 이 글에서는 생략한다. 어쨌든, 위 정리의 우변에 있는 안쪽 적분은 한 변수를 상수로 고정하고 다른 변수로 적분하는 보통의 정적분이므로, 다중적분은 [§미적분의 기본정리](/ko/math/calculus/fundamental_theorem_of_calculus)와 적분법으로 푸는 한 변수 적분들의 반복이 된다. 피적분함수가 $f(x_1,\ldots,x_n) = g_1(x_1)\cdots g_n(x_n)$처럼 변수분리되고 영역이 상자이면 한 단계 더 나아가, 다중적분은 $n$개의 한 변수 적분의 곱 
 
 $$(\int_{a_1}^{b_1} g_1)\cdots(\int_{a_n}^{b_n} g_n)$$
 
@@ -129,21 +131,19 @@ $$\iint_D e^{-(x^2+y^2)} \dd{A} = \int_0^{2\pi} \int_0^1 e^{-r^2} r \dd{r}\dd{\t
 위의 예시를 이용하면, 우리는 하나의 변수로 풀리지 않던 Gaussian integral의 값을 구할 수 있다.
 
 ::: 예시 6 (Gaussian integral)
-적분 $I = \int_{-\infty}^{\infty} e^{-x^2} \dd{x}$의 값을 구하자. 이 값의 제곱 $I^2$을 두 개의 독립 변수에 대한 적분으로 보면
+적분 $I = \int_{-\infty}^{\infty} e^{-x^2} \dd{x}$의 값을 구하자. $x \geq 1$에서 $e^{-x^2} \leq e^{-x}$이고 $\int_1^\infty e^{-x} \dd{x}$가 수렴하므로 [§이상적분, ⁋명제 3](/ko/math/calculus/improper_integrals#prop3)에 의하여 $\int_0^\infty e^{-x^2} \dd{x}$가 수렴하고, $e^{-x^2}$은 $x$와 $-x$에서 같은 값을 가지므로 $\int_{-\infty}^0 e^{-x^2} \dd{x}$도 수렴한다. 따라서 이 이상적분은 수렴한다. 이제 정사각형 $Q_t = [-t,t]\times[-t,t]$ 위에서는 피적분함수가 변수분리되므로 [정리 2](#thm2)에 의하여
 
-$$\begin{aligned}
-I^2 &= \left(\int_{-\infty}^\infty e^{-x^2} \dd{x}\right) \left(\int_{-\infty}^\infty e^{-y^2} \dd{y}\right) \\
-&= \iint_{\mathbb{R}^2} e^{-x^2}e^{-y^2} \dd{A} = \iint_{\mathbb{R}^2} e^{-(x^2+y^2)} \dd{A}
-\end{aligned}$$
+$$\left(\int_{-t}^{t} e^{-x^2} \dd{x}\right)^2 = \left(\int_{-t}^{t} e^{-x^2} \dd{x}\right)\left(\int_{-t}^{t} e^{-y^2} \dd{y}\right) = \iint_{Q_t} e^{-(x^2+y^2)} \dd{A}$$
 
-이고, 이를 극좌표로 바꾸면 $x^2 + y^2 = r^2$이라
+이다. 두 이상적분이 모두 수렴하므로 $t \rightarrow \infty$에서 $\int_{-t}^{t} e^{-x^2} \dd{x}$가 $I$로 가고, 따라서 위 식의 좌변은 $I^2$으로 간다. 한편 반지름 $s$인 원판 $B_s$ 위에서는 [예시 5](#ex5)의 계산이 그대로 되풀이되어
 
-$$\begin{aligned}
-I^2 &= \int_0^{2\pi} \int_0^\infty e^{-r^2} r \dd{r} \dd{\theta} \\
-&= \int_0^{2\pi} \Bigl[-\frac{1}{2} e^{-r^2}\Bigr]_{r=0}^{r=\infty} \dd{\theta} = \int_0^{2\pi}\frac{1}{2} \dd{\theta} = \pi
-\end{aligned}$$
+$$\iint_{B_s} e^{-(x^2+y^2)} \dd{A} = \int_0^{2\pi} \int_0^s e^{-r^2} r \dd{r} \dd{\theta} = \pi(1 - e^{-s^2})$$
 
-이므로 $I = \sqrt\pi$이다. 
+이다. 이제 $B_t \subseteq Q_t \subseteq B_{\sqrt{2}t}$이고 피적분함수가 양수라 적분값이 영역에 대해 단조증가하므로
+
+$$\pi(1 - e^{-t^2}) \leq \left(\int_{-t}^{t} e^{-x^2} \dd{x}\right)^2 \leq \pi(1 - e^{-2t^2})$$
+
+을 얻고, $t \rightarrow \infty$에서 양 끝이 모두 $\pi$로 가므로 $I^2 = \pi$, 곧 $I = \sqrt\pi$이다. 
 :::
 
 $2$차원에서의 고전적인 예시는 극좌표 하나지만, $3$차원에서는 구면좌표와 원기둥좌표의 두 가지 치환방법이 있으며, 이를 적절한 방식으로 계산하는 것이 많은 적분을 계산할 때 도움이 된다.

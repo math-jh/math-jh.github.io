@@ -1,6 +1,6 @@
 ---
-title: "Verdier 쌍대성"
-description: "Dualizing complex와 Verdier 쌍대 함자를 도입하고, Rf_!와 f^!의 수반에서 나오는 Verdier 쌍대성 정리를 진술하여 다양체의 Poincaré 쌍대성을 특수한 경우로 회복한다."
+title: "Verdier duality"
+description: "Dualizing complex와 Verdier 쌍대 함자를 도입하고, Rf_!와 f^!의 수반에서 나오는 Verdier duality 정리를 진술하여 다양체의 Poincaré 쌍대성을 특수한 경우로 회복한다."
 excerpt: "The dualizing complex, the Verdier dual D_X, and Poincaré duality as a special case"
 
 categories: [Math / Sheaf Theory]
@@ -16,7 +16,7 @@ published: false
 
 ---
 
-[§고유 받음과 여섯 함자](/ko/math/sheaf_theory/six_functors)에서 우리는 compact support를 따르는 고유 받음 $Rf_!$과 그 오른쪽 수반인 예외 역상 $f^!$을 도입하여, $Rf_\ast$, $Lf^\ast$, $\otimes^L$, $R\mathcal{H}om$과 함께 여섯 functor 형식을 완성하였다. 그 글의 도입부에서 예고하였듯이, 이 형식을 세운 가장 큰 동기는 비콤팩트 공간과 singular point를 가진 공간에까지 Poincaré duality를 확장하는 데 있다. 이 글에서 우리는 그 확장을 완성하는 정리, 곧 *Verdier duality<sub>Verdier 쌍대성</sub>*를 진술하고 증명한다.
+[§고유 받음과 여섯 함자](/ko/math/sheaf_theory/six_functors)에서 우리는 compact support를 따르는 고유 받음 $Rf_!$과 그 오른쪽 수반인 예외 역상 $f^!$을 도입하여, $Rf_\ast$, $Lf^\ast$, $\otimes^L$, $R\mathcal{H}om$과 함께 여섯 functor 형식을 완성하였다. 그 글의 도입부에서 예고하였듯이, 이 형식을 세운 가장 큰 동기는 비콤팩트 공간과 singular point를 가진 공간에까지 Poincaré duality를 확장하는 데 있다. 이 글에서 우리는 그 확장을 완성하는 정리, 곧 *Verdier duality<sub>Verdier duality</sub>*를 진술하고 증명한다.
 
 고전적인 Poincaré duality는 방향지어진 closed $n$차원 manifold $M$에 대해 $H^p(M) \cong H_{n-p}(M)$이라는 cohomology와 homology 사이의 동형으로 나타나며, 그 boundary를 가진 형태인 Poincaré–Lefschetz duality는 compact support를 허용하여 비콤팩트 manifold로 일부 확장된다. 그러나 이 고전적 진술은 두 방향에서 한계를 가진다. 첫째, 그것은 상수 계수 또는 국소계 계수에 대해서만 진술되며 임의의 sheaf complex의 cohomology를 다루지 못한다. 둘째, 그것은 manifold, 즉 모든 점이 $\mathbb{R}^n$과 국소적으로 homeomorphic인 공간에 대해서만 성립하며, singular point를 가진 공간에서는 그대로 무너진다. Verdier duality는 이 두 한계를 한꺼번에 해소한다. 그 핵심은 manifold의 fundamental class가 떠맡던 역할을 한 점으로의 morphism $a_X: X \rightarrow \{\ast\}$에 대한 $f^!$이 대신하도록 만드는 것이다. $a_X^!$이 상수 sheaf에 주는 값을 *dualizing complex*라 부르고, 이것을 축으로 한 내부 Hom이 duality를 매개한다.
 
@@ -55,7 +55,7 @@ $a_U = a_X \circ j$이므로 [§고유 받음과 여섯 함자, ⁋명제 5](/ko
 
 같은 논증은 closed embedding에는 적용되지 않는다. Closed embedding $i: Z \hookrightarrow X$에 대해 $i^! \omega_X \cong \omega_Z$은 여전히 성립하지만 ($a_Z = a_X i$이므로), 통상적 restriction $i^{-1}\omega_X$는 일반적으로 $\omega_Z$과 다르며 바로 이 차이가 singular point에서의 비자명한 현상을 만든다. 이 점은 [예시 10](#ex10)에서 분명해진다.
 
-## Verdier 쌍대성 정리
+## Verdier duality 정리
 
 이제 이 글의 중심 정리를 진술한다. Verdier duality는 [§고유 받음과 여섯 함자, ⁋정의 6](/ko/math/sheaf_theory/six_functors#def6)의 $(Rf_!, f^!)$ 수반을 내부 Hom의 차원으로 끌어올린 것으로, 앞 글에서 확보한 모든 형식, 즉 두 adjunction과 projection formula가 한 줄의 동형으로 결집하는 지점이다. 진술은 두 층위로 주어진다. 먼저 $Y$ 위의 sheaf complex로서의 동형을 주는 국소적 형태이고, 거기에 전역 단면을 취해 얻는 대역적 형태이다.
 
@@ -105,7 +105,7 @@ Cohomological 형태 $H^j(X, \mathbf{D}_X \mathcal{F}) \cong H^{-j}_c(X, \mathca
 [따름정리 5](#cor5)는 임의의 $\mathcal{F}^\bullet$에 대해 성립하지만, $\mathbf{D}_X$가 진정한 의미의 duality, 즉 두 번 적용하면 항등으로 돌아오는 involution이 되려면 대상을 적절히 제한해야 한다. 임의의 sheaf complex는 너무 거칠어서 $\mathbf{D}_X \mathbf{D}_X \mathcal{F}^\bullet$이 $\mathcal{F}^\bullet$으로 돌아오지 않을 수 있다. 올바른 정의역은 위상적으로 잘 통제된 complex, 곧 constructible complex이다.
 
 ::: 정의 6
-위상공간 $X$의 *stratification<sub>층화</sub>*은 국소 유한한 locally closed 부분공간들의 분할 $X = \bigsqcup_\alpha S_\alpha$로서, 각 $\overline{S_\alpha}$가 stratum들의 합집합이 되는 것을 말한다. 유계 complex $\mathcal{F}^\bullet \in D^b(\Sh(X))$가 *constructible<sub>구성가능</sub>*하다는 것은 어떤 stratification $\{S_\alpha\}$가 존재하여, 모든 $j$와 모든 $\alpha$에 대해 cohomology sheaf의 restriction $\mathcal{H}^j(\mathcal{F}^\bullet)\vert_{S_\alpha}$이 유한 rank의 locally constant sheaf가 되는 것이다. Constructible complex들이 이루는 $D^b(\Sh(X))$의 충만한 부분삼각범주를 $D^b_c(X)$로 적는다.
+위상공간 $X$의 *stratification<sub>층화</sub>*은 국소 유한한 locally closed 부분공간들의 분할 $X = \bigsqcup_\alpha S_\alpha$로서, 각 $\overline{S_\alpha}$가 stratum들의 합집합이 되는 것을 말한다. 유계 complex $\mathcal{F}^\bullet \in D^b(\Sh(X))$가 *constructible<sub>구성가능</sub>*하다는 것은 어떤 stratification $\{S_\alpha\}$가 존재하여, 모든 $j$와 모든 $\alpha$에 대해 cohomology sheaf의 restriction $\mathcal{H}^j(\mathcal{F}^\bullet)\vert_{S_\alpha}$이 finite rank의 locally constant sheaf가 되는 것이다. Constructible complex들이 이루는 $D^b(\Sh(X))$의 충만한 부분삼각범주를 $D^b_c(X)$로 적는다.
 :::
 
 직관적으로 constructible complex는 공간을 유한히 많은 조각으로 잘랐을 때 각 조각 위에서 국소상수가 되는 complex이다. 상수 sheaf $k_X$ (전체를 한 stratum으로), 닫힌 부분다양체에 support를 가진 상수 sheaf, 그리고 [예시 10](#ex10)에서 다룰 특이공간의 dualizing complex가 모두 이 부류에 속한다. 우리가 가정한 공간 위에서 $D^b_c(X)$는 여섯 functor 모두에 대해 닫혀 있으며, 특히 $\omega_X \in D^b_c(X)$이고 $\mathbf{D}_X$가 $D^b_c(X)$를 자기 자신으로 보낸다. 이 사실의 증명은 stratification에 대한 귀납과 [§고유 받음과 여섯 함자, ⁋정리 10](/ko/math/sheaf_theory/six_functors#thm10)을 사용하며, 그 자체로 상당한 분량이므로 여기서는 결과만 인용하고 [KS]의 §3.4와 [Dim]의 §4를 참조한다.
@@ -116,7 +116,7 @@ $$\mathcal{F}^\bullet \xrightarrow{\ \sim\ } \mathbf{D}_X \mathbf{D}_X \mathcal{
 이 성립한다. 따라서 $\mathbf{D}_X: D^b_c(X)^{\op} \rightarrow D^b_c(X)$는 삼각범주의 anti-equivalence이며 $\mathbf{D}_X^2 \cong \id$이다.
 :::
 ::: 증명
-자연 morphism $\mathcal{F}^\bullet \rightarrow \mathbf{D}_X \mathbf{D}_X \mathcal{F}^\bullet$은 tensor-hom adjunction의 evaluation, 즉 $\mathcal{F}^\bullet \otimes^L R\mathcal{H}om(\mathcal{F}^\bullet, \omega_X) \rightarrow \omega_X$에 대응하는 morphism으로 표준적으로 존재한다 ([§층의 유도 범주와 유도 functor, ⁋명제 8](/ko/math/sheaf_theory/derived_category_of_sheaves#prop8)). 이것이 동형임을 보이는 것이 핵심이며, 동형 여부는 [§층의 유도 범주와 유도 functor, ⁋명제 1](/ko/math/sheaf_theory/derived_category_of_sheaves#prop1)의 stalk 판정에 의해 국소적인 문제이다. Stratification에 대한 귀납으로 환원되는데, 가장 낮은 차원의 stratum은 manifold이므로 그 위에서는 $\omega$가 shift된 국소계가 되어 ([§고유 받음과 여섯 함자, ⁋정리 7](/ko/math/sheaf_theory/six_functors#thm7)) biduality가 유한차원 vector space의 표준 동형 $V \cong (V^\vee)^\vee$으로 귀착되고, 이는 $\mathcal{H}^j(\mathcal{F}^\bullet)$의 stalk가 유한 rank라는 constructibility 가정에서 성립한다. 높은 차원의 stratum으로는 [§고유 받음과 여섯 함자, ⁋정리 10](/ko/math/sheaf_theory/six_functors#thm10)을 따라 $\mathbf{D}_X$가 두 변을 동형으로 보냄을 이어 올린다. 유한 rank 조건이 빠지면 $V \cong (V^\vee)^\vee$이 깨지므로 constructibility는 필수적이다. 자세한 논증은 [KS]의 Proposition 3.4.3을 따른다.
+자연 morphism $\mathcal{F}^\bullet \rightarrow \mathbf{D}_X \mathbf{D}_X \mathcal{F}^\bullet$은 tensor-hom adjunction의 evaluation, 즉 $\mathcal{F}^\bullet \otimes^L R\mathcal{H}om(\mathcal{F}^\bullet, \omega_X) \rightarrow \omega_X$에 대응하는 morphism으로 표준적으로 존재한다 ([§층의 유도 범주와 유도 functor, ⁋명제 8](/ko/math/sheaf_theory/derived_category_of_sheaves#prop8)). 이것이 동형임을 보이는 것이 핵심이며, 동형 여부는 [§층의 유도 범주와 유도 functor, ⁋명제 1](/ko/math/sheaf_theory/derived_category_of_sheaves#prop1)의 stalk 판정에 의해 국소적인 문제이다. Stratification에 대한 귀납으로 환원되는데, 가장 낮은 차원의 stratum은 manifold이므로 그 위에서는 $\omega$가 shift된 국소계가 되어 ([§고유 받음과 여섯 함자, ⁋정리 7](/ko/math/sheaf_theory/six_functors#thm7)) biduality가 유한차원 vector space의 표준 동형 $V \cong (V^\vee)^\vee$으로 귀착되고, 이는 $\mathcal{H}^j(\mathcal{F}^\bullet)$의 stalk가 finite rank라는 constructibility 가정에서 성립한다. 높은 차원의 stratum으로는 [§고유 받음과 여섯 함자, ⁋정리 10](/ko/math/sheaf_theory/six_functors#thm10)을 따라 $\mathbf{D}_X$가 두 변을 동형으로 보냄을 이어 올린다. Finite rank 조건이 빠지면 $V \cong (V^\vee)^\vee$이 깨지므로 constructibility는 필수적이다. 자세한 논증은 [KS]의 Proposition 3.4.3을 따른다.
 :::
 
 Biduality가 성립하면 $\mathbf{D}_X$는 다른 다섯 functor와의 호환 관계를 통해 그들을 짝지어 교환한다. 다음 명제는 Verdier duality의 형식적 귀결로서, $\mathbf{D}$가 $Rf_\ast$와 $Rf_!$을, 그리고 $Lf^\ast$와 $f^!$을 서로 맞바꾼다는 것을 말한다.

@@ -132,7 +132,7 @@ Noetherian local ring $(A,\mathfrak{m})$에 대하여 다음이 성립한다.
 첫째 결과는 [정리 3](#thm3)과 $\operatorname{depth}M\geq 0$으로부터 $\pd_A M=\operatorname{depth}A-\operatorname{depth}M\leq\operatorname{depth}A$이다. 둘째 결과의 경우, $\operatorname{depth}A=0$이면 첫째 결과에 의하여 $\pd_A M\leq 0$, 곧 $\pd_A M=0$이므로 [§호몰로지 차원, ⁋명제 11](/ko/math/commutative_algebra/homological_dimension#prop11)에 의하여 minimal free resolution이 $F_0$에서 끝나 $M\cong F_0$은 free이다. Artinian local ring $(A,\mathfrak{m})$은 [§조르단-횔더 정리, ⁋정리 4](/ko/math/commutative_algebra/Jordan-Holder_theorem#thm4)에 의하여 모든 prime ideal이 maximal이므로 $\dim A=0$이고, [§Depth, ⁋따름정리 8](/ko/math/commutative_algebra/depth#cor8)에 의하여 $\operatorname{depth}A\leq\dim A=0$이 되어 앞의 경우에 해당한다.
 :::
 
-Regular local ring에서는 모든 module이 유한한 projective dimension을 가지므로 공식이 아무런 유한성 가정 없이 적용되고, projective dimension이 depth만으로 완전히 결정된다.
+Regular local ring에서는 모든 module이 finite projective dimension을 가지므로 공식이 아무런 유한성 가정 없이 적용되고, projective dimension이 depth만으로 완전히 결정된다.
 
 ::: 따름정리 5
 $d$차원 regular local ring $(A,\mathfrak{m})$ 위의 $0$이 아닌 finitely generated $A$-module $M$은 언제나 $\pd_A M<\infty$이고
@@ -163,7 +163,7 @@ $$\operatorname{depth}\mathfrak{m}=\operatorname{depth}A-\pd_A\mathfrak{m}=2-1=1
 이를 직접 확인해 보자. $A$가 domain이고 $\mathfrak{m}\subseteq A$이므로 곱하기 $\x$는 $\mathfrak{m}$ 위에서 injective이고, [§Depth, ⁋따름정리 4](/ko/math/commutative_algebra/depth#cor4)의 둘째 결과에 의하여 $\operatorname{depth}\mathfrak{m}=\operatorname{depth}(\mathfrak{m}/\x\mathfrak{m})+1$이다. $\mathfrak{m}/\x\mathfrak{m}$에서 $\x$의 class를 $\overline{\x}$라 하면, $\x\in\x\mathfrak{m}=(\x^2,\x\y)$일 경우 $\x=\x(a\x+b\y)$로부터 domain에서 $1=a\x+b\y\in\mathfrak{m}$이 되어 모순이므로 $\overline{\x}\neq 0$이다. 한편 $\x\cdot\overline{\x}=\x^2\in\x\mathfrak{m}$과 $\y\cdot\overline{\x}=\x\y\in\x\mathfrak{m}$으로부터 $\mathfrak{m}\overline{\x}=0$이므로 $\ann(\overline{\x})=\mathfrak{m}$이 되어 $\mathfrak{m}\in\Ass(\mathfrak{m}/\x\mathfrak{m})$이다. 따라서 [§Depth, ⁋따름정리 4](/ko/math/commutative_algebra/depth#cor4)의 첫째 결과에 의하여 $\operatorname{depth}(\mathfrak{m}/\x\mathfrak{m})=0$이고, $\operatorname{depth}\mathfrak{m}=0+1=1$로 공식과 부합한다.
 :::
 
-다음 예시는 $\pd_A M<\infty$라는 가정을 떼면 공식이 실패한다는 것을, projective dimension이 무한한 module로 보여준다.
+다음 예시는 $\pd_A M<\infty$라는 가정을 떼면 공식이 실패한다는 것을, projective dimension이 infinite module로 보여준다.
 
 ::: 예시 7
 Field $\mathbb{K}$에 대하여 $A=\mathbb{K}[[\x,\y]]/(\x\y)$를 생각하자. 이는 [§Depth, ⁋예시 11](/ko/math/commutative_algebra/depth#ex11)에서 살펴본 것처럼 $\operatorname{depth}A=1=\dim A$인 Cohen--Macaulay local ring이다. $\x,\y$의 image를 각각 $\overline{\x},\overline{\y}$로 적고 $M=A/(\overline{\x})$를 생각하자.
@@ -177,7 +177,7 @@ $$\cdots\overset{\cdot\overline{\y}}{\longrightarrow}A\overset{\cdot\overline{\x
 한편 $M=A/(\overline{\x})\cong\mathbb{K}[[\x,\y]]/(\x\y,\x)=\mathbb{K}[[\x,\y]]/(\x)\cong\mathbb{K}[[\y]]$는 $1$차원 integral domain이고 그 위에서 곱하기 $\overline{\y}$가 injective이므로 $\operatorname{depth}_A M\geq 1$이며, [§Depth, ⁋따름정리 8](/ko/math/commutative_algebra/depth#cor8)에 의하여 $\operatorname{depth}M\leq\dim M=1$이므로 $\operatorname{depth}M=1$이다. 만일 [정리 3](#thm3)의 공식이 $M$에 대해 성립한다면 $\pd_A M=\operatorname{depth}A-\operatorname{depth}M=1-1=0$이 되어 $M$이 free여야 한다. 그러나 $\overline{\x}\neq 0$이 $\ann_A(M)=(\overline{\x})$의 원소이므로 $M$의 annihilator는 $0$이 아니고, $A\neq 0$인 free module의 annihilator는 $0$이므로 $M$은 free가 아니다. 이 모순은 $\pd_A M<\infty$라는 가정이 공식에서 생략될 수 없음을 보여준다.
 :::
 
-모든 finitely generated module이 유한한 projective dimension을 갖는 Noetherian local ring이 정확히 regular local ring이라는 특징화가 다음 글의 주제이다.
+모든 finitely generated module이 finite projective dimension을 갖는 Noetherian local ring이 정확히 regular local ring이라는 특징화가 다음 글의 주제이다.
 
 ---
 

@@ -140,7 +140,15 @@ $$s_{ij} + s_{jk} = s_{ik} \qquad\text{on}\quad U_i \cap U_j \cap U_k$$
 따라서 $\check{H}^1(\mathcal{U}, \mathcal{F})$의 nontrivial한 원소는 이들 세 데이터 $s_{ij}, s_{jk}, s_{ik}$를 붙이려 할 때 나타나는 차이를 반영하는 것이며, 이것이 위에서 언급한 gluing의 failure라 할 수 있다.
 :::
 
-지금까지 우리는 하나의 open cover $\mathcal{U}$에 대하여 Čech cohomology $\check{H}^p(\mathcal{U}, \mathcal{F})$를 정의하였다. 그러나 일반적으로 서로 다른 open cover는 서로 다른 Čech cohomology를 줄 수 있다. 가령 하나의 열린집합 $U_0 = X$으로 이루어진 cover에서는 모든 교집합이 $X$이므로 $\check{H}^p$가 $p = 0$에서만 0이 아닌 값을 갖는다. 더 조밀한 cover를 사용할수록 더 많은 위상적 정보를 포착할 수 있으므로, 우리는 open cover들 사이의 관계를 규명하고 모든 open cover에 대한 정보를 종합할 필요가 있다. 즉, <em-ko>모든</em-ko> open cover들에, refinement를 사용하여 order relation을 주자. 그럼 refinement $\mathcal{V} \preceq \mathcal{U}$에 대하여 natural map $\check{H}^p(\mathcal{U}, \mathcal{F}) \rightarrow \check{H}^p(\mathcal{V}, \mathcal{F})$가 존재한다는 것이 자명하며, 따라서 모든 open cover들을 index set 삼아 direct system $\check{H}^p(\mathcal{U}, \mathcal{F})$을 정의할 수 있다. 이로부터 다음을 정의한다.
+지금까지 우리는 하나의 open cover $\mathcal{U}$에 대하여 Čech cohomology $\check{H}^p(\mathcal{U}, \mathcal{F})$를 정의하였다. 그러나 일반적으로 서로 다른 open cover는 서로 다른 Čech cohomology를 줄 수 있다. 가령 하나의 열린집합 $U_0 = X$으로 이루어진 cover에서는 모든 교집합이 $X$이므로 $\check{H}^p$가 $p = 0$에서만 0이 아닌 값을 갖는다. 더 조밀한 cover를 사용할수록 더 많은 위상적 정보를 포착할 수 있으므로, 우리는 open cover들 사이의 관계를 규명하고 모든 open cover에 대한 정보를 종합할 필요가 있다. 즉, <em-ko>모든</em-ko> open cover들에, refinement를 사용하여 order relation을 주자. 그럼 refinement $\mathcal{V} = \{V_j\}_{j \in J} \preceq \mathcal{U} = \{U_i\}_{i \in I}$에 대하여, 각각의 $j$마다 $V_j \subseteq U_{\lambda(j)}$가 되는 함수 $\lambda: J \rightarrow I$를 택하면 cochain 수준의 map $\lambda^\ast: \check{C}^p(\mathcal{U}, \mathcal{F}) \rightarrow \check{C}^p(\mathcal{V}, \mathcal{F})$를
+
+$$(\lambda^\ast\alpha)_{j_0 \cdots j_p} = \alpha_{\lambda(j_0) \cdots \lambda(j_p)}\vert_{V_{j_0} \cap \cdots \cap V_{j_p}}$$
+
+으로 정의할 수 있다. 이 map은 $\lambda$의 선택에 의존하지만, 같은 조건을 만족하는 또 다른 $\mu: J \rightarrow I$에 대하여
+
+$$h(\alpha)_{j_0 \cdots j_{p-1}} = \sum_{k=0}^{p-1} (-1)^k \alpha_{\lambda(j_0) \cdots \lambda(j_k) \mu(j_k) \cdots \mu(j_{p-1})}\vert_{V_{j_0} \cap \cdots \cap V_{j_{p-1}}}$$
+
+이 $\lambda^\ast$와 $\mu^\ast$ 사이의 chain homotopy를 주므로, cohomology 수준에서는 선택과 무관한 하나의 map $\check{H}^p(\mathcal{U}, \mathcal{F}) \rightarrow \check{H}^p(\mathcal{V}, \mathcal{F})$이 결정된다. 같은 이유로 이들 map은 refinement의 합성과도 compatible하며, 따라서 모든 open cover들을 index set 삼아 direct system $\check{H}^p(\mathcal{U}, \mathcal{F})$을 정의할 수 있다. 이로부터 다음을 정의한다.
 
 ::: 정의 7
 $X$의 *Čech cohomology*를 모든 open cover에 대한 direct limit
@@ -181,9 +189,13 @@ $$i^U: U \hookrightarrow X,\qquad i^V: V \hookrightarrow X$$
 
 $$\Hom_{\Sh(X)}(i^U_!\mathbb{Z}_U, \mathcal{F}) \cong \Hom_{\Sh(U)}(\mathbb{Z}_U, \mathcal{F}\vert_U)$$
 
-이 성립한다. 이제 $\mathbb{Z}_U$는 $U$ 위의 constant sheaf이므로 임의의 열린집합 $W \subseteq U$에 대해 $\mathbb{Z}_U(W) = \mathbb{Z}$이며, 모든 section은 상수 함수의 restriction으로 주어진다. 따라서 sheaf morphism $\varphi: \mathbb{Z}_U \rightarrow \mathcal{F}\vert_U$는 global section의 image $\varphi_U(1) \in \mathcal{F}(U)$에 의해 완전히 결정된다. 역으로, 임의의 $s \in \mathcal{F}(U)$에 대해 각 $W \subseteq U$에서 $\mathbb{Z}_U(W) \rightarrow \mathcal{F}(W),\; n \mapsto n \cdot s\vert_W$로 정의하면 well-defined된 sheaf morphism이 된다. 따라서
+이 성립한다. 이제 $\mathbb{Z}_U$는 각 열린집합에 $\mathbb{Z}$를 대응시키는 constant presheaf $\underline{\mathbb{Z}}$의 sheafification이고, sheafification은 inclusion $\Sh(U) \rightarrow \PSh(U)$의 left adjoint이므로
 
-$$\Hom_{\Sh(U)}(\mathbb{Z}_U, \mathcal{F}\vert_U) \cong \Hom_{\Ab}(\mathbb{Z}, \mathcal{F}(U)) \cong \mathcal{F}(U)$$
+$$\Hom_{\Sh(U)}(\mathbb{Z}_U, \mathcal{F}\vert_U) \cong \Hom_{\PSh(U)}(\underline{\mathbb{Z}}, \mathcal{F}\vert_U)$$
+
+가 성립한다. 그런데 $\underline{\mathbb{Z}}$의 restriction map들은 모두 $\mathbb{Z}$ 위의 identity이므로, presheaf morphism $\varphi: \underline{\mathbb{Z}} \rightarrow \mathcal{F}\vert_U$는 각 $W \subseteq U$에서 $\varphi_W(1) = \varphi_U(1)\vert_W$를 만족해야 하고 따라서 $\varphi_U(1) \in \mathcal{F}(U)$에 의해 완전히 결정된다. 역으로, 임의의 $s \in \mathcal{F}(U)$에 대해 각 $W \subseteq U$에서 $n \mapsto n \cdot s\vert_W$로 정의하면 presheaf morphism이 얻어진다. 따라서
+
+$$\Hom_{\Sh(U)}(\mathbb{Z}_U, \mathcal{F}\vert_U) \cong \mathcal{F}(U)$$
 
 이 성립한다. 마찬가지로 $\Hom_{\Sh(X)}(i^V_!\mathbb{Z}_V, \mathcal{F}) \cong \mathcal{F}(V)$이며, 이제 naturality로부터 이들 사이의 함수가 정확히 restriction $\mathcal{F}(U)\rightarrow \mathcal{F}(V)$와 일치함을 안다. 이제 $\mathcal{F}$가 injective라는 가정으로부터 이것이 surjective이므로 증명이 완료된다.
 :::
@@ -193,27 +205,27 @@ Flasque sheaf $\mathcal{F}$는 임의의 open cover $\mathcal{U}$에 대해 Čec
 :::
 
 ::: 증명
-Augmented Čech complex
+Čech complex를 sheaf 수준으로 올려서 생각하자. 즉 각각의 열린집합 $V \subseteq X$에 대하여
 
-$$0 \rightarrow \mathcal{F}(U) \xrightarrow{\epsilon} \check{C}^0(\mathcal{U}, \mathcal{F}) \xrightarrow{d^0} \check{C}^1(\mathcal{U}, \mathcal{F}) \xrightarrow{d^1} \cdots$$
+$$\mathcal{C}^p(V) = \prod_{i_0 < \cdots < i_p} \mathcal{F}(V \cap U_{i_0} \cap \cdots \cap U_{i_p})$$
 
-를 생각하자. 우리가 보여야 할 것은 $p>0$에서 이것이 exact라는 것이므로, identity chain map이 nullhomotopic임을 보이면 된다. 이를 위해 각각의 $p\geq 1$에 대하여 homotopy operator $s^p : \check{C}^p(\mathcal{U}, \mathcal{F}) \rightarrow \check{C}^{p-1}(\mathcal{U}, \mathcal{F})$를 명시적으로 구성해야 한다.
+으로 정의되는 sheaf $\mathcal{C}^p$를 생각하면, 정의에 의해 $\Gamma(X, \mathcal{C}^p) = \check{C}^p(\mathcal{U}, \mathcal{F})$이고 Čech coboundary map은 각각의 $V$에서 같은 식으로 정의되어 sheaf morphism $\mathcal{C}^p \rightarrow \mathcal{C}^{p+1}$을 준다. 또, restriction들의 모임 $\epsilon : \mathcal{F} \rightarrow \mathcal{C}^0$을 augmentation으로 삼아 complex
 
-이 함수를 정의하기 위해서는 우리는 각각의
+$$0 \rightarrow \mathcal{F} \xrightarrow{\epsilon} \mathcal{C}^0 \xrightarrow{d^0} \mathcal{C}^1 \xrightarrow{d^1} \cdots$$
 
-$$t=(t_{j_0<\cdots< j_p})\in \check{C}^p(\mathcal{U}, \mathcal{F})$$
+를 얻는다. 우리가 보여야 할 것은 여기에 $\Gamma(X,-)$를 취한 것이 $p>0$에서 exact라는 것이다.
 
-가 주어졌을 때, $s^p(t)$의 각 성분
+우선 이 complex 자체가 exact임을 보이자. Index $i_0 \in I$을 하나 고정하고 $V \subseteq U_{i_0}$인 열린집합만을 생각하면, 각각의 $t \in \mathcal{C}^p(V)$에 대하여
 
-$$s^p(t)_{j_0<\cdots< j_{p-1}}$$
+$$s^p(t)_{j_0 < \cdots < j_{p-1}} = t_{i_0 j_0 \cdots j_{p-1}}\tag{$\ast$}$$
 
-이 어떻게 정의되는지를 설명해야 한다. 본질적으로 우리가 하고 싶은 것은, chain homotopy를 정의하기 위해 항상 그러하듯, index $i_0$을 하나 고정한 후 이를 $j_0<\cdots< j_{p-1}$에 끼워넣어서 (편의상 $i_0< j_0<\cdots< j_{p-1}$이라 하자.)
+으로 정의되는 함수 $s^p : \mathcal{C}^p(V) \rightarrow \mathcal{C}^{p-1}(V)$를 얻는다. 우변은 $V \cap U_{i_0} \cap U_{j_0} \cap \cdots \cap U_{j_{p-1}}$ 위에서의 section이지만 $V \subseteq U_{i_0}$이므로 이 집합은 좌변이 놓여야 할 $V \cap U_{j_0} \cap \cdots \cap U_{j_{p-1}}$과 같고, 따라서 식 ($\ast$)에는 어떠한 extension도 개입하지 않는다. 그럼 이렇게 정의한 $s^p$가 chain homotopy가 된다는 것은 직접 계산을 해 보면 $d^{p-1}s^p$에서 $i_0$을 생략해주는 항과, $s^{p+1}d^p$에서 $i_0$을 넣어주는 항이 부호가 상쇄되어 사라지는 것을 통해 확인할 수 있다. 즉 위 complex의 $V$에서의 section들이 이루는 complex는 exact이며, $\mathcal{U}$가 $X$를 덮으므로 임의의 점은 이러한 $V$를 근방으로 가져 모든 stalk에서의 exactness를 얻는다. 약간의 기술적인 문제는 우리가 고정한 index $i_0$이 $j_0<\cdots< j_{p-1}$에 포함되는 경우가 존재할 수 있다는 것이다. 이를 위해 우리는 보편적인 Čech complex 대신 그냥 $I$의 $p+1$개의 원소 $i_0,\ldots, i_p\in I$로 좌표를 주는 *non-alternating* Čech complex를 사용한다. 이는 원래의 Čech complex와 quasi-isomorphic하며 따라서 이렇게 우회하는 것이 정당화된다.
 
-$$s^p(t)_{j_0<\cdots< j_{p-1}}=t_{i_0< j_0<\cdots < j_{p-1}}\tag{$\ast$}$$
+이제 $\mathcal{F}$가 flasque라는 가정을 쓰자. 각각의 $\mathcal{C}^p$의 restriction map은 $\mathcal{F}$의 restriction map들의 product이므로 surjective이고, 따라서 $\mathcal{C}^p$ 또한 flasque이다. 즉 $\mathcal{C}^\bullet$은 $\mathcal{F}$의 flasque resolution이므로, [명제 16](#prop16)에 의해 각 항이 $\Gamma(X,-)$-acyclic이고 [명제 17](#prop17)에 의해
 
-으로 정의하는 것이다. 이 때, $s^p(t)_{j_0<\cdots< j_{p-1}}$는 그 정의에 의해 $U_{j_0}\cap\cdots\cap U_{j_{p-1}}$ 위에서의 section이지만, 우변의 $t_{i_0< j_0<\cdots < j_{p-1}}$는 그보다 작은 집합 $U_{i_0}\cap U_{j_0}\cap\cdots\cap U_{j_{p-1}}$에서의 section임을 주목하자. 일반적인 $\mathcal{F}$에 대해서는 이렇게 정의하는 것이 불가능하겠지만, 우리는 $\mathcal{F}$가 flasque임을 가정하고 있으므로 항상 이 함수를 extension하여 $U_{j_0}\cap\cdots\cap U_{j_{p-1}}$의 section이도록 해줄 수 있으며 식 ($\ast$) 또한 이러한 방식으로 이해해야 한다. 그럼 이렇게 정의한 $s^p$가 실제로 chain homotopy가 된다는 것은 직접 계산을 해 보면 $d^{p-1}s^p$에서 $i_0$을 생략해주는 항과, $s^{p+1}d^p$에서 $i_0$을 넣어주는 항이 부호가 상쇄되어 사라지는 것을 통해 확인할 수 있다.
+$$\check{H}^p(\mathcal{U}, \mathcal{F}) = H^p(\Gamma(X, \mathcal{C}^\bullet)) \cong H^p(X, \mathcal{F})$$
 
-약간의 기술적인 문제는 우리가 고정한 index $i_0$이 $j_0<\cdots< j_{p-1}$에 포함되는 경우가 존재할 수 있다는 것이다. 이를 위해 우리는 보편적인 Čech complex 대신 그냥 $I$의 $p+1$개의 원소 $i_0,\ldots, i_p\in I$로 좌표를 주는 *non-alternating* Čech complex를 사용한다. 이는 원래의 Čech complex와 quasi-isomorphic하며 따라서 이렇게 우회하는 것이 정당화된다.
+이다. 다시 $\mathcal{F}$가 flasque이므로 [명제 16](#prop16)에 의해 우변이 $p>0$에서 소멸한다. 여기서 사용한 두 명제의 증명은 이 보조정리에 의존하지 않는다.
 :::
 
 ::: 정리 11 (Leray)
@@ -262,7 +274,7 @@ $$\check{H}^n(\mathcal{U}, \mathcal{F}) \cong H^n(X, \mathcal{F})$$
 Affine variety $X$ 위의 quasi-coherent sheaf $\mathcal{F} = \widetilde{M}$에 대하여, $H^i(X, \mathcal{F}) = 0$이 모든 $i > 0$에 대해 성립한다.
 :::
 
-이에 대한 증명은, $X$의 coordinate ring을 $A$라 할 때, $\lMod{A}$ category에서 $M$의 injective resolution $I^\bullet$을 찾으면 이것이 $X$ 위의 sheaf들의 resolution $\widetilde{I^\bullet}$을 주며, 이 때 injective module이 주는 sheaf는 항상 flasque이고, 따라서 acyclic이기 때문이다.
+이에 대한 증명은, $X$의 coordinate ring을 $A$라 할 때, $\lMod{A}$ category에서 $M$의 injective resolution $I^\bullet$을 찾으면 이것이 $X$ 위의 sheaf들의 resolution $\widetilde{I^\bullet}$을 주며, 이 때 $A$가 finitely generated $\mathbb{K}$-algebra이므로 Noetherian이고 Noetherian ring 위의 injective module이 주는 sheaf는 항상 flasque이므로, 아래의 [명제 16](#prop16)과 [명제 17](#prop17)에 의하여 이 flasque resolution이 $H^i(X, \mathcal{F})$를 계산해주기 때문이다. 여기서 인용한 두 명제의 증명은 이 명제를 사용하지 않는다.
 
 이제 임의의 variety $X$와 그 위에 정의된 quasi-coherent sheaf $\mathcal{F}$를 생각하고, $X$의 affine open cover $\mathcal{U}$가 주어졌다 하자. 그럼 이들 데이터가 [정리 11](#thm11)의 전제조건을 만족하기 위해서는 $\mathcal{U}$의 임의의 유한한 교집합이 다시 affine이어야 하는 것이다. 만일, diagonal
 
@@ -333,11 +345,11 @@ $i$에 대한 induction으로 진행한다. 우선 $i=1$인 경우를 보이자.
 
 $$0 \rightarrow \mathcal{F}\rightarrow\mathcal{I}\rightarrow\mathcal{Q}\rightarrow0$$
 
-을 생각한다. 우리 주장은 $\mathcal{Q}$가 flasque라는 것이며, 이는 임의의 열린집합 $V\subseteq U$에 대하여 다음의 commutative diagram
+을 생각한다. 우리 주장은 임의의 열린집합 $V$에 대하여 $\mathcal{I}(V)\rightarrow \mathcal{Q}(V)$가 surjective라는 것, 그리고 이로부터 $\mathcal{Q}$ 또한 flasque라는 것이다. 뒤의 것은 앞의 것을 인정하면 임의의 열린집합 $V\subseteq U$에 대하여 다음의 commutative diagram
 
 {% diagram Math/Algebraic_Varieties/Sheaf_Cohomology-1.svg width="23.07em" alt="Commutative diagram" %}
 
-에서 diagram chase를 하면 된다. 여기서 $\mathcal{F}$는 가정에 의해 flasque이며 $\mathcal{I}$는 injective이므로 flasque이다. 이제 임의의 $s\in \mathcal{Q}(V)$에 대하여, $\mathcal{I}(V)\rightarrow \mathcal{Q}(V)$가 surjective이므로 $s$를 $t\in \mathcal{I}(V)$로 lift할 수 있으며, 다시 $\mathcal{I}$가 flasque임을 이용하여 $t$를 $\overline{t}\in\mathcal{I}(U)$로 올린 후 이를 $\mathcal{Q}$로 옮겨주어 $\overline{s}\in \mathcal{Q}(U)$를 정의하면 된다. $\overline{t}$가 $t$의 확장이므로 $\overline{t}\vert_V=t$이고, 따라서 $\overline{s}\vert_V$는 $t$가 $\mathcal{Q}(V)$로 옮겨간 것, 곧 $s$와 같다. 그러므로 $\overline{s}$가 정확히 $s\in \mathcal{Q}(V)$로 restrict하며 이로부터 $\mathcal{Q}$의 flasqueness를 얻는다.
+에서 diagram chase를 하면 된다. 여기서 $\mathcal{F}$는 가정에 의해 flasque이며 $\mathcal{I}$는 injective이므로 flasque이다. 이제 임의의 $s\in \mathcal{Q}(V)$에 대하여, 우리가 주장한 surjectivity에 의해 $s$를 $t\in \mathcal{I}(V)$로 lift할 수 있으며, 다시 $\mathcal{I}$가 flasque임을 이용하여 $t$를 $\overline{t}\in\mathcal{I}(U)$로 올린 후 이를 $\mathcal{Q}$로 옮겨주어 $\overline{s}\in \mathcal{Q}(U)$를 정의하면 된다. $\overline{t}$가 $t$의 확장이므로 $\overline{t}\vert_V=t$이고, 따라서 $\overline{s}\vert_V$는 $t$가 $\mathcal{Q}(V)$로 옮겨간 것, 곧 $s$와 같다. 그러므로 $\overline{s}$가 정확히 $s\in \mathcal{Q}(V)$로 restrict하며 이로부터 $\mathcal{Q}$의 flasqueness를 얻는다.
 
 이제 $\Gamma(X, -)$를 적용하여 long exact sequence
 
@@ -347,12 +359,11 @@ $$0 \rightarrow \Gamma(X, \mathcal{F}) \rightarrow \Gamma(X, \mathcal{I}) \right
 
 $$H^1(X, \mathcal{F}) \cong \coker(\Gamma(X, \mathcal{I}) \rightarrow \Gamma(X, \mathcal{Q}))$$
 
-이며, 이것이 $0$이 된다는 것을 보이기 위해 우리는 $\Gamma(X, \mathcal{I})\rightarrow \Gamma(X, \mathcal{Q})$가 surjective임을 보여야 한다. 이를 위해 임의의 $s\in \Gamma(X, \mathcal{Q})$가 주어졌다 하자. 그럼 임의의 $x\in X$에 대하여, stalk 레벨에서는 $\mathcal{I}\rightarrow \mathcal{Q}$가 surjective하므로 각각의 $x\in X$마다 적당한 $t_x\in \mathcal{I}_x$가 존재하여 $t_x$가 $s_x\in \mathcal{Q}_x$로 가도록 할 수 있다. 이제 $x$의 적당한 근방 $U_x$ 위에서 $t_x$의 한 representative를 택하여, $t_x$가 $\mathcal{I}(U_x)$의 원소
-인 것으로 생각하면 $\mathcal{I}$가 flasque이므로 이들 각각을 $X$에서의 global section $T_x$들로 확장할 수 있으며, 그럼 $T_x\mid_{U_x}=s\mid_{U_x}$이다.
+이며, 이것이 $0$이 된다는 것을 보이기 위해 우리는 $\Gamma(X, \mathcal{I})\rightarrow \Gamma(X, \mathcal{Q})$가 surjective임을 보여야 한다. 우리는 이를 임의의 열린집합에 대하여 보인다. 즉 열린집합 $U\subseteq X$와 $s\in \mathcal{Q}(U)$가 주어졌다 하고, $U$의 열린 부분집합 $V$와 $\mathcal{Q}(V)$에서 $s\vert_V$로 가는 $t\in \mathcal{I}(V)$의 쌍 $(V, t)$들의 모임 $P$를 생각하자. 여기에 $(V, t)\leq (V', t')$를 $V\subseteq V'$이고 $t'\vert_V=t$인 것으로 정의하면 $P$는 partially ordered set이 된다. Stalk 레벨에서 $\mathcal{I}\rightarrow \mathcal{Q}$가 surjective하므로 각 점의 적당한 근방 위에서 $s$의 lift가 존재하여 $P$는 공집합이 아니고, $P$의 chain에 속하는 쌍들의 $t$는 겹치는 곳에서 서로 일치하므로 $\mathcal{I}$의 gluing axiom으로 이들을 붙이면 그 chain의 upper bound를 얻는다. 따라서 Zorn's lemma에 의해 $P$의 극대원 $(V, t)$가 존재한다.
 
-이제 $T_x$들의 $\Gamma(X,\mathcal{Q})$에서의 image를 $S_x$라 하자. 그럼 $S_x-S_y$는 $U_x\cap U_y$에서 identically zero이며, 따라서 이를 $U_x\cap U_y$ 위에서 $\mathcal{F}$의 section $f_{xy}$로 lift할 수 있다. 다시 $\mathcal{F}$의 flasqueness를 사용하면 이를 $f_x\in \mathcal{F}(U_x)$와 $f_y\in \mathcal{F}(U_y)$ 각각으로 확장할 수 있고, 그럼 이 상황에서 $T_x$를 $T'_x=T_x-f_x$들로 대체하면 이것이 compatibility condition을 만족하고 따라서 이들을 붙인 것이 $s$의 preimage인 것을 안다.
+이제 $V=U$임을 보이면 된다. 만일 $x\in U\setminus V$가 존재한다면, $x$의 적당한 근방 $W\subseteq U$와 $s\vert_W$로 가는 $t'\in \mathcal{I}(W)$를 택할 수 있다. 그럼 $t\vert_{V\cap W}-t'\vert_{V\cap W}$는 $\mathcal{Q}(V\cap W)$에서 $0$이 되므로 적당한 $f\in \mathcal{F}(V\cap W)$에서 오며, $\mathcal{F}$가 flasque이므로 이를 $\widetilde{f}\in \mathcal{F}(W)$로 확장할 수 있다. 이제 $t'$를 $t'+\widetilde{f}$로 대체하면 이것 또한 $s\vert_W$로 가면서 $V\cap W$ 위에서 $t$와 일치하므로, 둘을 붙여 $V\cup W$ 위에서의 $s$의 lift를 얻는다. 이는 $(V, t)$의 극대성에 모순이므로 $V=U$이다. 특히 $U=X$인 경우가 우리가 필요로 했던 $\Gamma(X, \mathcal{I})\rightarrow \Gamma(X, \mathcal{Q})$의 surjectivity이며, 동시에 위에서 미루어 둔 $\mathcal{Q}$의 flasqueness 또한 얻어진다.
 
-마지막으로, long exact sequence에 의하여
+마지막으로 $i\geq 2$인 경우, long exact sequence의 양옆에 오는 $H^{i-1}(X, \mathcal{I})$와 $H^i(X, \mathcal{I})$가 $\mathcal{I}$의 injectivity에 의해 소멸하므로
 
 $$H^i(X, \mathcal{F})\cong H^{i-1}(X, \mathcal{Q})$$
 
@@ -411,14 +422,17 @@ Abelian category에서 cochain complex $K^\bullet$의 *Cartan-Eilenberg resoluti
 1. 각 열 $I^{p,\bullet}$은 $K^p$의 injective resolution이다.
 2. 각 행의 cohomology $H^p(I^{\bullet,q})$는 $H^p(K^\bullet)$의 injective resolution을 이룬다. 즉, chain complex
 
-    $$\cdots \rightarrow H^p(I^{\bullet,q-1}) \rightarrow H^p(I^{\bullet,q}) \rightarrow H^p(I^{\bullet,q+1}) \rightarrow \cdots$$
+    $$0 \rightarrow H^p(K^\bullet) \rightarrow H^p(I^{\bullet,0}) \rightarrow H^p(I^{\bullet,1}) \rightarrow \cdots$$
 
     은 $H^p(K^\bullet)$의 injective resolution이다.
+3. 마찬가지로 각 $p$에 대하여 $q$를 따라 늘어놓은 $B^p(I^{\bullet,q})$와 $Z^p(I^{\bullet,q})$가 각각 $B^p(K^\bullet)$와 $Z^p(K^\bullet)$의 injective resolution을 이룬다.
 :::
 
-이 정의의 핵심은 위에서 언급한 직관만으로는 Cartan-Eilenberg resolution이 얻어지지 않는다는 것으로, 특히 각 행의 cohomology가 $H^p(K^\bullet)$의 horizontal resolution을 이룬다는 것이 존재성의 증명에 핵심적인 요소이다. 우리는 Cartan-Eilenberg resolution의 존재성은 별도로 증명하지 않지만, 기본적으로는 [\[호몰로지 대수학\] §분해, ⁋보조정리 7](/ko/math/homological_algebra/resolutions#lem7)를 반복적으로 적용하여 얻을 수 있다.
+이 정의의 핵심은 위에서 언급한 직관만으로는 Cartan-Eilenberg resolution이 얻어지지 않는다는 것으로, 특히 각 행의 cohomology가 $H^p(K^\bullet)$의 horizontal resolution을 이룬다는 것이 존재성의 증명에 핵심적인 요소이다. 우리는 Cartan-Eilenberg resolution의 존재성은 별도로 증명하지 않지만, 기본적으로는 [\[호몰로지 대수학\] §분해, ⁋보조정리 7](/ko/math/homological_algebra/resolutions#lem7)를 반복적으로 적용하여 얻을 수 있다. 한편 세 번째 조건은 각 행의 short exact sequence $0\rightarrow Z^p(I^{\bullet,q})\rightarrow I^{p,q}\rightarrow B^{p+1}(I^{\bullet,q})\rightarrow 0$과 $0\rightarrow B^p(I^{\bullet,q})\rightarrow Z^p(I^{\bullet,q})\rightarrow H^p(I^{\bullet,q})\rightarrow 0$의 왼쪽 항 $Z^p(I^{\bullet,q})$와 $B^p(I^{\bullet,q})$가 injective가 되도록 하여 두 sequence가 모두 split되고, 따라서 각 행이 injective object들의 direct sum으로 분할되게 하며, 이는 아래에서 left exact functor가 행 방향 cohomology와 교환하는 근거가 된다.
 
 이제 complex $f_\ast\mathcal{G}^\bullet(\mathcal{F})$의 Cartan-Eilenberg resolution $\mathcal{I}^{p,q}$을 고정하자. 그럼 정의에 의해 각 열 $\mathcal{I}^{p,\bullet}$은 $f_\ast\mathcal{G}^p(\mathcal{F})$의 injective resolution이며, 각 행의 horizontal cohomology $H^p(\mathcal{I}^{\bullet,q})$는 $H^p(f_\ast\mathcal{G}^\bullet(\mathcal{F})) = R^p f_\ast\mathcal{F}$의 injective resolution을 이룬다.
+
+여기서 등식 $H^p(f_\ast\mathcal{G}^\bullet(\mathcal{F})) = R^p f_\ast\mathcal{F}$는 $R^pf_\ast$의 정의로부터 곧바로 나오는 것이 아니다. 정의는 injective resolution을 쓰는 반면 $\mathcal{G}^\bullet(\mathcal{F})$은 flasque resolution이기 때문으로, 우리에게 필요한 것은 flasque sheaf가 $f_\ast$-acyclic이라는 사실이다. 이를 확인하기 위해 flasque sheaf $\mathcal{E}$를 injective sheaf $\mathcal{K}$에 넣고 그 cokernel $\mathcal{Q}$를 생각하면, [명제 16](#prop16)의 증명에서 보았듯 $\mathcal{Q}$는 flasque이고 임의의 열린집합 $W\subseteq X$에 대하여 $\mathcal{K}(W)\rightarrow \mathcal{Q}(W)$가 surjective이므로, 각각의 열린집합 $V\subseteq Y$에서 $f_\ast\mathcal{K}(V)=\mathcal{K}(f^{-1}(V))\rightarrow \mathcal{Q}(f^{-1}(V))=f_\ast\mathcal{Q}(V)$ 또한 surjective이다. 따라서 long exact sequence에서 $R^1f_\ast\mathcal{E}=0$을 얻고, $i\geq 2$에서는 $R^if_\ast\mathcal{E}\cong R^{i-1}f_\ast\mathcal{Q}$이므로 $\mathcal{Q}$의 flasqueness와 함께 귀납법을 쓰면 모든 $q>0$에 대해 $R^qf_\ast\mathcal{E}=0$이다. 그럼 [명제 17](#prop17)의 증명을 $\Gamma(X,-)$ 대신 $f_\ast$에 대해 그대로 반복하여 flasque resolution이 $R^pf_\ast$를 계산해준다는 것을 안다.
 
 우리는 이 spectral sequence가 1사분면에 있으므로, total complex $\Tot(\mathcal{I})^\bullet$의 cohomology로 수렴한다는 것을 안다. 구체적인 계산을 위해 Godement 방향의 $p$로 filtration을 걸자. 그럼 우리는 우선 $E_1$ page를
 
@@ -428,7 +442,7 @@ $$\mathcal{H}^{p,q} := H^p(\mathcal{I}^{\bullet, q})$$
 
 $$E_2^{p,q} = H^q(\mathcal{H}^{p,\bullet})$$
 
-이다. 한편 $\mathcal{I}^{\bullet,\bullet}$이 Cartan resolution이라는 것으로부터, 우리는 각각의 $\mathcal{H}^{p,\bullet}$이 $R^p f_\ast \mathcal{F}$의 injective resolution임을 안다. 우리는 이 spectral sequence를 *Leray spectral sequence*라 부른다.
+이다. 한편 $\mathcal{I}^{\bullet,\bullet}$이 Cartan resolution이라는 것으로부터, 우리는 각각의 $\mathcal{H}^{p,\bullet}$이 $R^p f_\ast \mathcal{F}$의 injective resolution임을 안다.
 
 한편 $q$방향의 filtration으로부터 오는 spectral sequence를 생각하면, 그 $E_1$ page는
 
@@ -442,7 +456,7 @@ $$E_1^{p,q} = \begin{cases} f_\ast \mathcal{G}^p(\mathcal{F}) & \text{if $q = 0$
 
 $$0 \rightarrow f_\ast \mathcal{G}^0(\mathcal{F}) \rightarrow f_\ast \mathcal{G}^1(\mathcal{F}) \rightarrow \cdots$$
 
-의 cohomology sheaf이고, 이것은 $R^q f_\ast$의 정의에 의해
+의 cohomology sheaf이고, 이것은 앞서 확인한 $H^p(f_\ast \mathcal{G}^\bullet(\mathcal{F})) = R^p f_\ast \mathcal{F}$에 의해
 
 $$E_2^{p,q} = \begin{cases} R^p f_\ast \mathcal{F} & \text{if $q = 0$} \\ 0 & \text{if $q > 0$} \end{cases}$$
 
@@ -456,13 +470,13 @@ $$\mathcal{J}^{p,q}=\Gamma(Y, \mathcal{I}^{p,q})$$
 
 $$E_1^{p,q}=H^p(\mathcal{J}^{\bullet, q})=\Gamma(Y, \mathcal{H}^{p,q})$$
 
-이며, $\mathcal{H}^{p,q}$는 $R^pf_\ast \mathcal{F}$의 injective resolution이므로 그 cohomology가 $H^q(Y, R^p f_\ast \mathcal{F})$으로 나오는 것을 안다.
+이다. 여기서 두 번째 등호는 [정의 18](#def18)의 세 번째 조건에 의해 각 행이 injective object들로 분할되어 $\Gamma(Y,-)$가 행 방향 cohomology와 교환하기 때문에 성립한다. 또, $\mathcal{H}^{p,q}$는 $R^pf_\ast \mathcal{F}$의 injective resolution이므로 그 cohomology가 $H^q(Y, R^p f_\ast \mathcal{F})$으로 나오는 것을 안다.
 
 한편, $q$ 방향 filtration의 경우 $E_1$ page는
 
 $$E_1^{p,q}=H^q(\Gamma(Y, \mathcal{I}^{p,\bullet}))$$
 
-이며, 이 때 각각의 $\mathcal{I}^{p,\bullet}$은 Cartan-Eilenberg resolution의 정의에 의하여 injective resolution이므로 flasque이고 ([보조정리 9](#lem9)), flasque sheaf는 $\Gamma$-acyclic이므로 $q>0$에서의 항들이 소멸하며 남는 것은
+이며, 이 때 각각의 $\mathcal{I}^{p,\bullet}$은 Cartan-Eilenberg resolution의 정의에 의하여 $f_\ast \mathcal{G}^p(\mathcal{F})$의 injective resolution이므로 $E_1^{p,q}=H^q(Y, f_\ast \mathcal{G}^p(\mathcal{F}))$이다. 그런데 $\mathcal{G}^p(\mathcal{F})$가 flasque이고 $f_\ast$는 flasqueness를 보존하므로 $f_\ast \mathcal{G}^p(\mathcal{F})$ 또한 flasque이며, 따라서 [명제 16](#prop16)에 의하여 $q>0$에서의 항들이 소멸하고 남는 것은
 
 $$E_1^{p,0}=\Gamma(Y, f_\ast \mathcal{G}^p (\mathcal{F}))=\Gamma(X, \mathcal{G}^p(\mathcal{F}))$$
 
@@ -470,7 +484,7 @@ $$E_1^{p,0}=\Gamma(Y, f_\ast \mathcal{G}^p (\mathcal{F}))=\Gamma(X, \mathcal{G}^
 
 $$E_2^{n,0}=H^n(\Gamma(X, \mathcal{G}^\bullet(\mathcal{F})))=H^n(X, \mathcal{F})$$
 
-가 되며, 따라서 다음을 얻는다.
+가 된다. 한편 앞서 $p$방향 filtration이 준 $E_2$ page는 $E_2^{p,q}=H^q(Y, R^p f_\ast \mathcal{F})$였으므로, 아래에서는 표준적인 표기를 따라 두 index의 이름을 서로 바꾸어 적기로 한다. 이렇게 얻어지는 spectral sequence를 *Leray spectral sequence*라 부르며, 따라서 다음을 얻는다.
 
 ::: 명제 19 (Leray Spectral Sequence)
 연속함수 $f : X \rightarrow Y$와 sheaf $\mathcal{F}$에 대하여, 다음의 $E_2$ page를 가지는 spectral sequence가 존재한다.
@@ -552,7 +566,7 @@ $\mathcal{F}$의 Godement resolution $\mathcal{G}^\bullet(\mathcal{F})$을 잡�
 
 앞서 우리는 line bundle이 transition function $g_{ij} \in \mathcal{O}_X^\times(U_i \cap U_j)$들로 결정된다는 것을 보았다 ([§선다발과 벡터다발, ⁋명제 2](/ko/math/algebraic_varieties/line_bundles#prop2)). Transition function들은 cocycle condition $g_{ij}g_{jk} = g_{ik}$을 만족하는데, 이는 multiplicative notation으로 쓴 Čech 1-cocycle condition에 정확히 해당한다. 또한 line bundle의 isomorphism은 각 $U_i$ 위에서의 함수 $h_i \in \mathcal{O}_X^\times(U_i)$에 의해 $g_{ij} \mapsto h_i g_{ij} h_j^{-1}$로 transition function이 변하는 것이므로, 이 역시 Čech 1-coboundary에 의한 동치관계와 일치한다. 즉, line bundle의 isomorphism class는 $\check{H}^1(X, \mathcal{O}_X^\times)$의 원소와 자연스럽게 대응된다.
 
-이 관찰을 엄밀하게 정리하면 다음을 얻는다. 여기서 주의할 점은 $\mathcal{O}_X^\times$가 multiplicative 구조를 갖는 sheaf of (abelian) groups이므로, Čech cohomology에서 coboundary 관계가 덧셈적이 아닌 multiplicative로 표현된다는 것이다. 구체적으로 1-coboundary는 $(g_{ij}) = (h_i \cdot h_j^{-1})$의 꼴이다.
+이 관찰을 엄밀하게 정리하면 다음을 얻는다. 여기서 주의할 점은 $\mathcal{O}_X^\times$가 multiplicative 구조를 갖는 sheaf of (abelian) groups이므로, Čech cohomology에서 coboundary 관계가 덧셈적이 아닌 multiplicative로 표현된다는 것이다. 구체적으로 1-coboundary는 $(g_{ij}) = (h_i \cdot h_j^{-1})$의 꼴이다. [예시 5](#ex5)에서 고정한 덧셈 convention $(\dd{s})_{ij} = s_j - s_i$를 그대로 곱셈으로 옮기면 $h_j h_i^{-1}$이 되지만, $h_i$를 $h_i^{-1}$로 바꾸는 것이 두 꼴을 서로 옮겨주므로 coboundary들이 이루는 subgroup은 같으며, 여기서는 위에서 적은 transition function의 변환과 맞추어 앞의 꼴로 쓴다.
 
 ::: 명제 22
 $\check{H}^1(X, \mathcal{O}_X^\times) \cong \Pic(X)$이다.
@@ -567,7 +581,9 @@ $$g_{ij}^{\mathcal{M}} \cdot \varphi_j(v) = g_{ij}^{\mathcal{M}} h_j^{-1} v = h_
 
 에서 확인할 수 있으며, 따라서 map $\check{H}^1(\mathcal{U}, \mathcal{O}_X^\times) \rightarrow \Pic(X)$가 well-defined이다.
 
-역으로, 임의의 line bundle $\mathcal{L}$은 [§선다발과 벡터다발, ⁋정의 1](/ko/math/algebraic_varieties/line_bundles#def1)에 의해 적당한 open cover $\mathcal{U}$ 위에서 transition function $g_{ij}$로 표현되며, 이는 Čech 1-cocycle을 이룬다. Line bundle isomorphism은 정확히 coboundary에 의한 동치관계에 해당하므로, 이 map의 kernel은 coboundary들이다. 따라서 $\check{H}^1(\mathcal{U}, \mathcal{O}_X^\times) \rightarrow \Pic(X)$는 injective이다. 이제 direct limit을 취하면 $\check{H}^1(X, \mathcal{O}_X^\times) \cong \Pic(X)$를 얻는다.
+이제 이 map이 injective임을 보이자. Cocycle $(g_{ij})$가 정의하는 line bundle이 trivial하다면 각 $U_i$ 위의 trivialization으로부터 $h_i \in \mathcal{O}_X^\times(U_i)$를 얻어 $g_{ij} = h_i h_j^{-1}$이 되므로, $(g_{ij})$는 coboundary이다. 즉 이 map의 kernel은 정확히 coboundary들이고 따라서 $\check{H}^1(\mathcal{U}, \mathcal{O}_X^\times) \rightarrow \Pic(X)$는 injective이다.
+
+한편 surjectivity는 하나의 open cover $\mathcal{U}$만 놓고 보면 성립하지 않을 수 있다. 임의의 line bundle $\mathcal{L}$은 [§선다발과 벡터다발, ⁋정의 1](/ko/math/algebraic_varieties/line_bundles#def1)에 의해 적당한 open cover 위에서 trivialize되고 그 cover 위에서의 transition function이 $\mathcal{L}$로 가는 Čech 1-cocycle을 주지만, 그 cover가 $\mathcal{U}$일 이유는 없기 때문이다. 그러나 모든 open cover에 대한 direct limit을 취하면 이러한 $\mathcal{L}$이 모두 image에 들어오므로 surjectivity가 얻어지고, 이로부터 $\check{H}^1(X, \mathcal{O}_X^\times) \cong \Pic(X)$이다.
 :::
 
 이 명제는 line bundle의 classification이 cohomology의 계산으로 귀결된다는 것을 보여준다. 즉, $\Pic(X)$의 원소를 분류하는 문제는 이제 $\mathcal{O}_X^\times$-valued Čech 1-cocycle을 분류하는 문제가 되며, 이는 어쨌든 명시적인 계산이 가능하다는 점에서 고무적이다. 다음 글 [§사영공간의 코호몰로지](/ko/math/algebraic_varieties/cohomology_of_projective_spaces)에서 우리는 $\mathbb{P}^n$ 위의 line bundle $\mathcal{O}(d)$의 cohomology를 계산한다.

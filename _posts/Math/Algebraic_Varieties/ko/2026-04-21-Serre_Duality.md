@@ -38,13 +38,13 @@ $$H^n(X, \omega_X)\cong \mathbb{K}$$
 
 일반적으로 이는 명시적으로 $\x_0^{-1}\cdots\x_n^{-1}$을 basis로 두는 isomorphism으로 이해되지만, scalar multiplication에 대해서만 유일하게 결정된다. 이렇게 normalization을 택하는 것은 구체적으로 *trace map* $\tr:H^n(\mathbb{P}^n, \omega_{\mathbb{P}^n}) \rightarrow \mathbb{K}$을 택하는 것과 같다. 
 
-이제 duality pairing을 얻기 위해서는 cup product를 정의해야 한다. 편의상 Čech cohomology 레벨에서 생각하자. 임의의 위상공간 $X$와 $X$의 open cover $\mathcal{U}$, 그리고 $X$ 위에 정의된 sheaf $\mathcal{F}$, $\mathcal{G}$에 대하여, 두 Čech cochain $\alpha \in \check{C}^i(\mathcal{U}, \mathcal{F})$, $\beta \in \check{C}^j(\mathcal{U}, \mathcal{G})$의 cup product를 다음의 식
+이제 duality pairing을 얻기 위해서는 cup product를 정의해야 한다. 편의상 Čech cohomology 레벨에서 생각하자. 임의의 위상공간 $X$와 $X$의 open cover $\mathcal{U}$, 그리고 $X$ 위에 정의된 sheaf $\mathcal{F}$, $\mathcal{G}$에 대하여, 두 Čech cochain $\alpha \in \check{C}^p(\mathcal{U}, \mathcal{F})$, $\beta \in \check{C}^q(\mathcal{U}, \mathcal{G})$의 cup product를 다음의 식
 
-$$(\alpha \smile \beta)_{i_0, \ldots, i_{i+j}} = \alpha_{i_0,\ldots,i_i}\big\vert_{U_{i_0,\ldots,i_{i+j}}} \otimes \beta_{i_i,\ldots,i_{i+j}}\big\vert_{U_{i_0,\ldots,i_{i+j}}}\in \check{C}^{i+j}(\mathcal{U}, \mathcal{F}\otimes\mathcal{G})$$
+$$(\alpha \smile \beta)_{i_0, \ldots, i_{p+q}} = \alpha_{i_0,\ldots,i_p}\big\vert_{U_{i_0,\ldots,i_{p+q}}} \otimes \beta_{i_p,\ldots,i_{p+q}}\big\vert_{U_{i_0,\ldots,i_{p+q}}}\in \check{C}^{p+q}(\mathcal{U}, \mathcal{F}\otimes\mathcal{G})$$
 
 으로 정의한다. 우리는 이것이 cohomology 레벨로 떨어진다는 것을 명시적으로 계산할 수 있으며, 이로부터 다음의 함수
 
-$$\smile:\check{H}^i(\mathcal{U}, \mathcal{F}) \times \check{H}^j(\mathcal{U}, \mathcal{G}) \rightarrow \check{H}^{i+j}(\mathcal{U}, \mathcal{F} \otimes \mathcal{G})$$
+$$\smile:\check{H}^p(\mathcal{U}, \mathcal{F}) \times \check{H}^q(\mathcal{U}, \mathcal{G}) \rightarrow \check{H}^{p+q}(\mathcal{U}, \mathcal{F} \otimes \mathcal{G})$$
 
 가 정의된다. Sheaf cohomology 레벨에서도 $\mathcal{F}$와 $\mathcal{G}$의 flat resolution $\mathcal{I}^\bullet$, $\mathcal{J}^\bullet$을 각각 잡은 후, 이들의 tensor product complex (즉 각각의 성분이 $\mathcal{I}^p\otimes \mathcal{J}^q$인 double complex의 total complex)를 이용하면 이를 정의할 수 있다. 
 
@@ -104,13 +104,13 @@ $$\binom{2+(-4)}{2}=\binom{-2}{2} = 3$$
 
 ## 세르 쌍대성의 일반화
 
-우리는 지금까지의 논의를 일반화시킨다. 가장 처음으로 할 수 있는 것은 locally free sheaf $\mathcal{E}$를 임의의 coherent sheaf $\mathcal{E}$로 확장하는 것이다. 이는 생각보다 어려운 일은 아닌데, smooth variety에서는 임의의 coherent sheaf가 finite length locally free resolution을 갖기 때문으로, Serre duality의 주장을 귀납적으로 사용하면 된다. ([§표준선다발](/ko/math/algebraic_varieties/canonical_bundle))
+우리는 지금까지의 논의를 일반화시킨다. 가장 처음으로 할 수 있는 것은 locally free sheaf $\mathcal{E}$를 임의의 coherent sheaf $\mathcal{E}$로 확장하는 것이다. 이는 생각보다 어려운 일은 아닌데, smooth variety에서는 임의의 coherent sheaf가 finite length locally free resolution을 갖기 때문으로, resolution의 각 항에서 성립하는 Serre duality를 resolution을 따라 귀납적으로 옮기면 된다. ([§표준선다발](/ko/math/algebraic_varieties/canonical_bundle)) 다만 이렇게 옮겨진 주장은 $H^i(X,\mathcal{E})$와 $H^{n-i}(X,\omega_X\otimes\mathcal{E}^\vee)$ 사이의 duality가 아니라, 아래에서 보게 될 $\Ext$를 사용하는 형태를 갖는다.
 
 그 후 우리는 $X$에서 smooth 조건을 포기한다. 이 경우 크게 두 가지의 문제가 있는데, 처음으로 보이는 문제는 $X$가 canonical line bundle을 갖지 않는다는 사실이다. 또 다른 문제는 약간 미묘한 것으로, 우리는 perfect pairing에서 명시적인 isomorphism을 얻어낼 때 다소 implicit하게 다음의 isomorphism
 
 $$\mathcal{H}om(\mathcal{E}, \mathcal{F})\cong \mathcal{E}^\vee\otimes \mathcal{F}$$
 
-를 사용하였으나, 실제로 이는 $\mathcal{E}$가 locally free이기 때문에 가능한 것으로, 만일 $\mathcal{E}$가 coherent sheaf이고 $X$가 singular라면 $\mathcal{E}$가 finite length locally free resolution을 갖는다는 보장이 없으므로 이 isomorphism이 성립하지 않는다. 때문에 우리는 다시 derived functor를 도입하여, $X$ 위의 모든 coherent sheaf $\mathcal{F}$와 모든 $i$에 대하여 다음의 식
+를 사용하였으나, 실제로 이는 $\mathcal{E}$가 locally free이기 때문에 가능한 것으로, locally free가 아닌 coherent sheaf $\mathcal{E}$에 대하여는 $X$가 smooth이더라도 이 isomorphism이 일반적으로 성립하지 않는다. 가령 $X=\mathbb{A}^1$ 위에서 원점의 skyscraper sheaf $\mathcal{E}=\mathcal{O}_X/\mathfrak{m}_0$을 잡으면 $\mathcal{E}^\vee=0$이지만 $\mathcal{H}om(\mathcal{E},\mathcal{E})\cong\mathcal{E}$는 $0$이 아니다. $X$가 smooth인 경우에는 앞서와 같이 finite length locally free resolution을 따라 locally free인 경우로 옮기는 논법이 남아 있지만, $X$가 singular라면 그러한 resolution이 유한한 길이를 갖는다는 보장조차 없다. 때문에 우리는 다시 derived functor를 도입하여, $X$ 위의 모든 coherent sheaf $\mathcal{F}$와 모든 $i$에 대하여 다음의 식
 
 $$\Ext^i_X(\mathcal{F},\omega_X)\cong H^{n-i}(X,\mathcal{F})^\ast$$
 
@@ -123,14 +123,14 @@ Affine variety $X$가 $\mathbb{K}$ 위에서 정의되었다는 것은 그 coord
 Relative Serre duality는 이 세팅을 일반화하는 것으로, target인 한 점 $\Spec\mathbb{K}$를 또 다른 variety로 바꿔준다. 우선 임의의 variety $X,Y$에 대하여, morphism $f:X\rightarrow Y$가 *smooth projective morphism*이라는 것을 $f$가 flat proper morphism이면서 각각의 $y\in Y$ 위에서의 fiber $f^{-1}(y)$가 smooth projective variety가 되는 것으로 정의하자. 그럼 이 경우, $f^{-1}(y)$는 smooth projective variety로서 canonical line bundle $\omega_{X_y}$가 존재할 것이며, 이들을 일관적으로 모은 *relative dualizing sheaf* $\omega_{X/Y}$가 $X$ 위에 정의된다. 즉 $\omega_{X/Y}$는 각각의 $y$에 대하여 $\omega_{X/Y}\vert_{X_y}\cong\omega_{X_y}$을 만족하는 sheaf이다. 그럼 이 때의 일반화는 다음과 같다. 
 
 ::: 명제 4 (Relative Serre duality)
-Smooth projective morphism $f \colon X \rightarrow Y$에서 $n = \dim X - \dim Y$라 하자. 그럼
+Smooth projective morphism $f \colon X \rightarrow Y$에서 $n = \dim X - \dim Y$라 하고, 모든 $j$에 대하여 $R^j f_\ast \mathcal{O}_X$가 locally free라 하자.[^1] 그럼 모든 $i$에 대하여 isomorphism
 
-$$R^n f_\ast \omega_{X/Y} \cong \mathcal{O}_Y$$
+$$R^i f_\ast \omega_{X/Y} \cong (R^{n-i} f_\ast \mathcal{O}_X)^\vee$$
 
-이며, $i \neq n$에 대해서는 $R^i f_\ast \omega_{X/Y} = 0$이다.
+이 존재한다. 특히 각각의 fiber는 variety이므로 connected이고, 따라서 $f_\ast \mathcal{O}_X \cong \mathcal{O}_Y$가 되어 $i = n$인 경우 $R^n f_\ast \omega_{X/Y} \cong \mathcal{O}_Y$이다.
 :::
 
-## Grothendieck Duality
+## Grothendieck duality
 
 앞서 Serre duality를 일반화하는 과정들을 되짚어보자. 우리는 먼저 $\mathbb{P}^n$ 위에서 trace map과 cup product를 사용하여 Serre duality를 증명하였고 ([명제 2](#prop2)), 이를 finite morphism을 통해 임의의 smooth projective variety로 확장하였다. 이후 coherent sheaf로의 확장은 locally free resolution을 통한 귀납으로 처리하였고, singular variety로의 확장은 dualizing sheaf의 도입으로 처리하였다. [명제 4](#prop4)는 target을 point에서 임의의 variety로 바꾼 일반화였다.
 
@@ -168,3 +168,5 @@ $$R f_\ast R\mathcal{H}om_{\mathcal{O}_X}(\mathcal{F}, f^! \mathcal{G}) \cong R\
 **[Ser]** J.-P. Serre, *Faisceaux algébriques cohérents*, Annals of Mathematics, 1955.
 
 ---
+
+[^1]: 이 조건은 $\operatorname{char}\mathbb{K}=0$이면 Hodge-de Rham spectral sequence의 degeneration으로부터 항상 성립한다. Characteristic $p$에서는 깨질 수 있다.

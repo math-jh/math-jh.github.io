@@ -101,7 +101,11 @@ Irreducible variety $X$의 임의의 점 $x$에 대해 $\dim T_x X \ge \dim X$�
 :::
 
 ::: 증명
-Affine case만 보인다. $X = Z(f_1, \ldots, f_k) \subseteq \mathbb{A}^n$이 irreducible하고 $\dim X = d$라 하자. 점 $x \in X$에서의 local ring $\mathcal{O}_{X,x} = \mathbb{K}[X]_{\mathfrak{m}_x}$를 생각하자. Localization은 차원을 보존하므로 $\dim \mathcal{O}_{X,x} = \dim X = d$이다. ([§차원](/ko/math/algebraic_varieties/dimension))
+Affine case만 보인다. $X = Z(f_1, \ldots, f_k) \subseteq \mathbb{A}^n$이 irreducible하고 $\dim X = d$라 하자. 점 $x \in X$에서의 local ring $\mathcal{O}_{X,x} = \mathbb{K}[X]_{\mathfrak{m}_x}$를 생각하자. $X$가 irreducible이므로 $\mathbb{K}[X]$는 finitely generated $\mathbb{K}$-algebra인 동시에 domain이고, $\mathfrak{m}_x$가 maximal ideal이므로 $\dim \mathbb{K}[X]/\mathfrak{m}_x = 0$이다. 따라서 [\[가환대수학\] §뇌터 정규화, ⁋정리 4](/ko/math/commutative_algebra/noether_normalization#thm4)의 차원 공식은 $\codim \mathfrak{m}_x = \dim \mathbb{K}[X]$를 주며, prime ideal의 codimension은 그 ideal에서의 localization의 차원으로 정의되었으므로 ([\[가환대수학\] §차원, ⁋정의 2](/ko/math/commutative_algebra/Krull_dimension#def2)) 다음의 식
+
+$$\dim \mathcal{O}_{X,x} = \codim \mathfrak{m}_x = \dim \mathbb{K}[X] = \dim X = d$$
+
+을 얻는다. 여기서 셋째 등식은 [§차원, ⁋명제 2](/ko/math/algebraic_varieties/dimension#prop2)에 의한 것이다.
 
 일반적으로 Noetherian local ring $(R, \mathfrak{m})$에 대하여 $\dim_{\mathbb{K}}(\mathfrak{m}/\mathfrak{m}^2) \ge \dim R$이다. ([\[가환대수학\] §매개계, ⁋명제 2](/ko/math/commutative_algebra/system_of_parameters#prop2)) 따라서
 
@@ -161,10 +165,14 @@ $$n - \rank(J_x) = \dim X$$
 임의의 algebraic variety는 대부분의 점에서 매끄럽다. 이를 보이기 위해 *generic point*의 개념이 필요하다.
 
 ::: 정의 9
-Irreducible variety $X$의 *generic point<sub>일반점</sub>* $\eta$는 $X$의 모든 nonempty open subset에 속하는 유일한 점이다.
+Irreducible affine variety $X$에 대하여 $\mathbb{K}[X]$는 domain이므로 $(0)$은 prime ideal이며, [§아핀다양체, ⁋명제 12](/ko/math/algebraic_varieties/affine_varieties#prop12)의 대응에서 이는 closed subvariety $X$ 자기 자신에 해당한다. 이 prime ideal이 나타내는 형식적인 점을 $X$의 *generic point<sub>일반점</sub>* $\eta$라 부르고, 그 local ring을
+
+$$\mathcal{O}_{X,\eta} = \mathbb{K}[X]_{(0)} = \mathbb{K}(X)$$
+
+으로 정의한다.
 :::
 
-Affine case $X = \Spec A$에서, $\eta$는 $A$의 minimal prime ideal (즉, $(0)$ ideal)에 해당하며, local ring $\mathcal{O}_{X,\eta}$는 정확히 function field $\mathbb{K}(X) = \Frac(A)$이다. 기하학적으로, generic point는 $X$의 "가장 일반적인 점"으로, $X$의 어떤 특정한 성질도 갖지 않는 점으로 생각하면 된다. 이러한 아이디어를 다음 증명에서 활용할 수 있다. 
+이는 점 $x \in X$가 maximal ideal $\mathfrak{m}_x$에 해당하고 그 local ring이 $\mathbb{K}[X]_{\mathfrak{m}_x}$였던 것과 같은 방식이다. 다만 $\eta$에 대응하는 closed subvariety가 $X$ 전체이므로, $\eta$는 $X$의 어떠한 진부분 closed subvariety에도 속하지 않고 따라서 $X$의 비어있지 않은 모든 열린집합에 속한다. 즉 $\eta$는 $X$의 점들 가운데에서 찾을 수 있는 것이 아니라, $X$ 전체를 하나의 점으로 본 것이다. 기하학적으로, generic point는 $X$의 "가장 일반적인 점"으로, $X$의 어떤 특정한 성질도 갖지 않는 점으로 생각하면 된다. 이러한 아이디어를 다음 증명에서 활용할 수 있다. 
 
 ::: 명제 10
 Irreducible variety $X$의 smooth points들의 집합 $X_\sm$은 $X$의 dense open subset이다. 특히, $X_\sm \ne \emptyset$이다.
@@ -175,7 +183,7 @@ $X = Z(f_1, \ldots, f_k) \subseteq \mathbb{A}^n$의 차원이 $\dim X = d$라 �
 
 $$X_\sm = \{x \in X \mid \rank(J_x) = n - d\}$$
 
-이다. 이제 이 집합이 dense open subset임을 보인다. 우선 $X_\sm$이 열린집합인 것은 상대적으로 자명하다.  Rank가 정확히 $n-d$라는 것은 두 조건의 동시 성립을 의미한다. 첫째, rank가 $n-d$ *이상*이라는 것은, 어떤 $(n-d) \times (n-d)$ 부분행렬의 행렬식이 0이 아닌 것과 동치이고, 이는 Zariski 위상에서 열린조건이다. 둘째, rank가 $n-d$ *이하*라는 것은, 모든 $(n-d+1) \times (n-d+1)$ 부분행렬의 행렬식이 0인 것과 동치이고, 이는 닫힌조건이다. 따라서 rank가 정확히 $n-d$인 점들의 집합은 $X$의 열린집합이다.
+이다. 이제 이 집합이 dense open subset임을 보인다. 우선 $X_\sm$이 열린집합인 것은 상대적으로 자명하다. [명제 3](#prop3)과 [명제 4](#prop4)에 의하여 $X$의 임의의 점에서 $n - \rank(J_x) = \dim T_x X \ge d$, 즉 $\rank(J_x) \le n-d$가 자동으로 성립하므로, $X$ 위에서 rank가 정확히 $n-d$라는 조건은 rank가 $n-d$ 이상이라는 조건과 같다. 그런데 후자는 어떤 $(n-d) \times (n-d)$ 부분행렬의 행렬식이 $0$이 아닌 것과 동치이고, 이는 Zariski 위상에서 열린조건이다. 따라서 $X_\sm$은 $X$의 열린집합이다.
 
 $X_\sm$이 공집합이 아님을 보이는 것이 다소 기술적인데, 아이디어는 일반적인 점이 smooth point가 되어야 하므로, $X$의 generic point $\eta$를 생각하는 것이다. $\eta$에서의 localization을 생각하면, local ring $\mathcal{O}_{X,\eta} = \mathbb{K}(X)$는 field이므로 regular local ring이다. 그런데 [\[가환대수학\] §매개계, ⁋명제 2](/ko/math/commutative_algebra/system_of_parameters#prop2)에 의해
 
@@ -224,7 +232,7 @@ $$TC_0 X = Z(\y^2)$$
 이다. 이는 $\y = 0$ 직선을 두 번 count한 것이며, cusp가 $\x$-축 방향으로 뾰족하게 끝남을 보여준다. 비교하면, tangent space $T_0 X = \mathbb{K}^2$는 모든 방향을 포함하여 너무 크다.
 :::
 
-일반적으로, [§유리사상, ⁋예시 12](/ko/math/algebraic_varieties/rational_maps#ex12)을 생각하면 nodal curve의 singularity는 blowup을 통해 해소할 수 있다. 즉 blowup을 하고 나면 원점에서 두 갈래 직선 $\y-\x$와 $\y+\x$는 $\mathbb{P}^1$에 의해 갈라지게 된다. 그러나 cusp은 그렇지 못하므로, 일반적으로 cusp이 node보다 좋지 않은 singularity로 생각한다. 
+일반적으로, [§유리사상, ⁋예시 12](/ko/math/algebraic_varieties/rational_maps#ex12)을 생각하면 nodal curve의 singularity는 blowup을 통해 해소할 수 있다. 즉 blowup을 하고 나면 원점에서 두 갈래 직선 $\y-\x$와 $\y+\x$는 $\mathbb{P}^1$에 의해 갈라지게 된다. 그러나 cusp의 경우 원점 근처에서 곡선이 두 갈래로 갈라지지 않으므로 blowup을 하여도 원점 위로 올라오는 점은 $\mathbb{P}^1$의 한 점뿐이며, 이러한 의미에서 일반적으로 cusp이 node보다 좋지 않은 singularity로 생각한다. 
 
 ---
 

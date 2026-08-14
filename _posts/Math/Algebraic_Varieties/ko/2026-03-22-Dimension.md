@@ -33,7 +33,7 @@ $\mathbb{K}$가 유한집합이 아닌 한, $\mathbb{A}^1$에서 닫힌집합들
 한편 우리는 이미 algebraic variety와 그 위에 정의된 함수들 사이의 관계가 아주 긴밀하다는 것을 알고 있다. 그렇다면, algebraic variety 위의 함수들의 대수구조가 차원에 대한 정보를 담고있다고 하여도 그렇게 놀라운 일은 아닐 것이다. 이러한 관점을 통해 접근하려면 그 coordinate ring $\mathbb{K}[X]$가 깔끔하게 주어지는 *affine* variety의 경우를 보는 것이 좋을 것이다. 
 
 ::: 명제 2
-Affine variety $X$의 차원은 coordinate ring $\mathbb{K}[X]$의 Krull dimension과 같다. ([\[가환대수학\] §차원, ⁋정의 1](/ko/math/commutative_algebra/Krull_dimension#def1))
+$\mathbb{K}$가 algebraically closed라 하자. Affine variety $X$의 차원은 coordinate ring $\mathbb{K}[X]$의 Krull dimension과 같다. ([\[가환대수학\] §차원, ⁋정의 1](/ko/math/commutative_algebra/Krull_dimension#def1))
 :::
 
 ::: 증명
@@ -55,7 +55,7 @@ $$\dim \mathbb{K}[\x_1,\ldots, \x_n]/\mathfrak{p}+\codim \mathfrak{p}=\dim \math
 
 ## Projective variety의 차원
 
-문제는 projective variety로 넘어가면서부터 발생한다. $\mathbb{P}^n$의 global function은 오직 상수함수들 뿐이었음을 기억하자. 이러한 상황에서 projective variety의 차원을 정의하기 위해서는 affine chart를 잡으면 된다. 즉 $X\subseteq \mathbb{P}^n$이 주어졌을 때, $\mathbb{P}^n$의 affine open chart $U_i$를 택한 후, $X_i=X\cap U_i$의 affine variety로서의 차원을 생각하면 된다. 그러나 이 정의를 위해서는 임의의 열린집합의 차원이 원래 variety의 차원과 같다는 것을 보여야하므로 아직은 이를 정의로 택할 수 없다. 그 대신 우리는 $X$의 *affine cone* $C(X)$를 이용한다.
+문제는 projective variety로 넘어가면서부터 발생한다. $\mathbb{P}^n$의 global function은 오직 상수함수들 뿐이었음을 기억하자. Projective variety $X\subseteq \mathbb{P}^n$의 차원은 이미 위상공간의 차원으로 정의되어 있으므로 남는 문제는 이를 계산하는 방법이고, 이러한 상황에서 가장 먼저 떠오르는 것은 affine chart를 잡는 것이다. 즉 $\mathbb{P}^n$의 affine open chart $U_i$를 택한 후, $X_i=X\cap U_i$의 affine variety로서의 차원을 생각하면 된다. 그러나 이 방법이 옳음을 보이기 위해서는 임의의 열린집합의 차원이 원래 variety의 차원과 같다는 것을 보여야하므로 아직은 이를 쓸 수 없다. 그 대신 우리는 $X$의 *affine cone* $C(X)$를 이용한다.
 
 Projective variety $X\subseteq \mathbb{P}^n$에 대하여, affine cone $C(X)\subseteq \mathbb{A}^{n+1}$은 $X$를 정의하는 homogeneous ideal을 $\mathbb{K}[\x_0,\ldots, \x_n]$의 ideal로 봤을 때 이것이 정의하는 $\mathbb{A}^{n+1}$의 affine variety이다. 즉 $X$가 정의하는 homogeneous ideal $I(X)$에 대하여, ring $S(X)$를
 
@@ -129,7 +129,7 @@ $$X \supsetneq Y = Y_0 \supsetneq Y_1 \supsetneq \cdots \supsetneq Y_n$$
 은 $X$가 irreducible이므로 $X$의 closed subvariety들의 길이가 $n+1$인 chain이다.
 :::
 
-이는 [명제 6](#prop6)의 일반화라 생각할 수 있다. 이제 regular map과 차원의 관계에 대해 살펴보자. 
+이는 [명제 6](#prop6)의 약한 형태의 일반화라 생각할 수 있다. Hypersurface $Z(f)\subsetneq \mathbb{A}^n$에 적용하면 $\dim Z(f)\leq n-1$만이 나오므로, 하나의 방정식이 차원을 정확히 하나 떨어뜨린다는 것까지는 이로부터 얻을 수 없다. 이제 regular map과 차원의 관계에 대해 살펴보자. 
 
 ::: 명제 10
 두 variety $X, Y$와 regular map $\varphi: X \rightarrow Y$에 대해 다음이 성립한다.
@@ -139,16 +139,17 @@ $$X \supsetneq Y = Y_0 \supsetneq Y_1 \supsetneq \cdots \supsetneq Y_n$$
 :::
 
 ::: 증명
-1. $\varphi(X)$의 닫힌집합들의 chain  
-    
-    $$Z_0 \supsetneq Z_1 \supsetneq \cdots \supsetneq Z_n$$
+둘째 결과부터 보이자. $\varphi$가 dominant라면, pullback $\varphi^\ast: \mathbb{K}(Y)\rightarrow \mathbb{K}(X)$가 injective이고, 따라서 [명제 7](#prop7)로부터 원하는 결과를 얻는다. 
 
-    에 대하여, 이들의 preimage
+첫째 결과는 이로부터 따라온다. $X$가 irreducible이고 $\varphi$가 연속이므로 $\varphi(X)$ 또한 irreducible이고, 따라서 $Y$에서의 closure $\overline{\varphi(X)}$는 $Y$의 closed subvariety이다. $\varphi$의 공역을 $\overline{\varphi(X)}$로 제한하여 얻은 regular map은 정의에 의해 dominant이므로, 방금 보인 둘째 결과로부터 $\dim \overline{\varphi(X)}\leq \dim X$를 얻는다. 한편 $\varphi(X)$의 irreducible closed subset들의 chain
 
-    $$\varphi^{-1}(Z_0) \supsetneq \varphi^{-1}(Z_1) \supsetneq \cdots \supsetneq \varphi^{-1}(Z_n)$$
+$$Z_0 \supsetneq Z_1 \supsetneq \cdots \supsetneq Z_n$$
 
-    은 $X$의 닫힌집합들의 chain이다. 
-2. $\varphi$가 dominant라면, pullback $\varphi^\ast: \mathbb{K}(Y)\rightarrow \mathbb{K}(X)$가 injective이고, 따라서 [명제 7](#prop7)로부터 원하는 결과를 얻는다. 
+이 주어지면, 각 $Z_i$는 $\varphi(X)$의 닫힌집합이므로 $Y$에서의 closure $\overline{Z_i}$에 대하여 $\overline{Z_i}\cap \varphi(X)=Z_i$이고, 따라서 strict inclusion이 보존되어
+
+$$\overline{Z_0} \supsetneq \overline{Z_1} \supsetneq \cdots \supsetneq \overline{Z_n}$$
+
+은 $\overline{\varphi(X)}$의 irreducible closed subset들의 chain이다. 그럼 $\dim \varphi(X)\leq \dim \overline{\varphi(X)}$이므로 원하는 결과를 얻는다. 
 :::
 
 첫째 결과는 일반적으로 기하적인 함수가 차원을 높일 수 없다는 우리의 직관을 뒷받침한다. 둘째 결과는 대략적으로 $\varphi$가 (up to birational equivalence) surjective라면 target의 차원이 domain의 차원보다 높을 수 없다는 것을 보여준다.

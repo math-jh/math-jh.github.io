@@ -1,7 +1,7 @@
 ---
 title: "토릭 다양체 위의 로그 미분형식"
 description: "토릭 다양체 위에서 경계를 따라 로그 극점을 허용하는 로그 미분형식을 다루며, 캐릭터 격자를 통한 완전한 자명화로부터 canonical class 공식과 표준 부피 형식을 유도한다."
-excerpt: "Fan으로부터 유도되는 logarithmic differential forms와 canonical class의 toric 표현"
+excerpt: "Fan으로부터 유도되는 logarithmic differential forms와 canonical class의 toric representation"
 
 categories: [Math / Toric Geometry]
 permalink: /ko/math/toric_geometry/logarithmic_differentials
@@ -23,7 +23,7 @@ published: false
 
 먼저 toric variety $X_\Sigma$가 open dense subset으로 포함하는 algebraic torus $T_N = N \otimes_\mathbb{Z} \mathbb{C}^\ast$ 위에서 자연스럽게 등장하는 differential form들을 살펴본다. ([§아핀 토릭 다양체, ⁋명제 11](/ko/math/toric_geometry/affine_toric_varieties#prop11)) $T_N \cong (\mathbb{C}^\ast)^n$이므로 ($n = \rank N$), $N$의 임의의 $\mathbb{Z}$-기저 $e_1, \ldots, e_n$을 잡으면 coordinate $\x_i \in \mathbb{C}^\ast$들이 $T_N$의 좌표가 된다.
 
-$T_N$ 위에서는 $\x_i \neq 0$이므로 $\dd{\x_i}/\x_i$가 well-defined holomorphic 1-form이다. 이는 affine 좌표 $\dd{\x_i}$와 달리 torus action에 대해 invariant라는 결정적인 성질을 가진다. 구체적으로 $t \in T_N$의 action $\x_i \mapsto t_i \x_i$ 하에서
+$T_N$ 위에서는 $\x_i \neq 0$이므로 $\dd{\x_i}/\x_i$가 well-defined holomorphic 1-form이다. 이는 affine coordinate $\dd{\x_i}$와 달리 torus action에 대해 invariant라는 결정적인 성질을 가진다. 구체적으로 $t \in T_N$의 action $\x_i \mapsto t_i \x_i$ 하에서
 
 $$t^\ast\left(\frac{\dd{\x_i}}{\x_i}\right) = \frac{\dd{(t_i \x_i)}}{t_i \x_i} = \frac{t_i \dd{\x_i}}{t_i \x_i} = \frac{\dd{\x_i}}{\x_i}$$
 
@@ -180,7 +180,7 @@ $X_\Sigma = \mathbb{P}^1 \times \mathbb{P}^1$의 경우 $N = \mathbb{Z}^2$이고
 
 $$\Omega^1_{\mathbb{P}^1 \times \mathbb{P}^1}(\log D) \cong \mathcal{O}^{\oplus 2};\qquad \text{기저: } \frac{\dd{\x}}{\x}, \frac{\dd{\y}}{\y}$$
 
-이 된다. Künneth 분해
+이 된다. Künneth decomposition
 
 $$\Omega^1_{\mathbb{P}^1 \times \mathbb{P}^1}(\log D) = \pr_1^\ast \Omega^1_{\mathbb{P}^1}(\log D_{\mathbb{P}^1}) \oplus \pr_2^\ast \Omega^1_{\mathbb{P}^1}(\log D_{\mathbb{P}^1})$$
 

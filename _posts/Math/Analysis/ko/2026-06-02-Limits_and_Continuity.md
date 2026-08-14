@@ -138,7 +138,7 @@ $$d(x, p) \leq d(x, y) + d(y, p), \qquad d(y, p) \leq d(y, x) + d(x, p)$$
 
 $$\lvert f(x) - f(y)\rvert = \lvert d(x, p) - d(y, p)\rvert \leq d(x, y)$$
 
-를 얻는다. 따라서 임의의 $\varepsilon > 0$에 대해 $\delta = \varepsilon$으로 두면 $d(x, y) < \delta$일 때 $\lvert f(x) - f(y)\rvert < \varepsilon$이므로 $f$는 연속이다. 이렇게 $\delta$를 점에 무관하게 잡을 수 있는 함수를 *균등연속<sub>uniformly continuous</sub>*이라 하며, 어떤 상수 $C > 0$에 대해 $\lvert f(x) - f(y)\rvert \leq Cd(x, y)$가 성립하는 특수한 경우를 *Lipschitz 함수*라 한다. 위의 거리함수는 $C = 1$로 잡을 수 있는 경우이다.
+를 얻는다. 따라서 임의의 $\varepsilon > 0$에 대해 $\delta = \varepsilon$으로 두면 $d(x, y) < \delta$일 때 $\lvert f(x) - f(y)\rvert < \varepsilon$이므로 $f$는 연속이다. 이렇게 $\delta$를 점에 무관하게 잡을 수 있는 함수를 *균등연속<sub>uniformly continuous</sub>*이라 하며, 어떤 상수 $C > 0$에 대해 $\lvert f(x) - f(y)\rvert \leq Cd(x, y)$가 성립하는 특수한 경우를 *Lipschitz function*라 한다. 위의 거리함수는 $C = 1$로 잡을 수 있는 경우이다.
 :::
 
 연속이 점열을 보존한다는 [명제 2](#prop2)는 극한을 계산하는 실용적 도구이기도 하다. $g$가 연속이고 $x_n \rightarrow a$이면

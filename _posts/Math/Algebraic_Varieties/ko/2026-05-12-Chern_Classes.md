@@ -153,7 +153,7 @@ $$\chern(\mathcal{E} \otimes \mathcal{F}) = \sum_{i,j} e^{x_i + y_j} = \Bigl(\su
 
 이 성질 덕분에 Chern character는 vector bundle들의 Grothendieck group에서 cohomology로 가는 ring homomorphism을 주며, 이것이 Riemann–Roch 류의 정리에서 Chern character가 자연스러운 언어가 되는 이유이다.
 
-## 접다발의 천 특성류와 Euler 지표
+## 접다발의 천 특성류와 Euler characteristic
 
 Chern class의 대표적 응용은 variety 자신의 tangent bundle에 적용하여 위상 불변량을 얻는 것이다.
 
@@ -166,7 +166,7 @@ $$\rchi_{\mathrm{top}}(X) = \int_X c_n(T_X)$$
 :::
 
 ::: 증명
-Top Chern class $c_n(T_X)$는 복소 rank $n$ 다발 $T_X$를 실 rank $2n$의 oriented 다발로 보았을 때의 Euler class $e(T_X)$와 일치한다. Euler class의 적분은 generic section의 영점 수를 부호와 함께 센 것이고, $T_X$의 generic section은 generic 벡터 field이므로 그 영점 수는 Poincaré–Hopf 정리에 의해 $\rchi_{\mathrm{top}}(X)$와 같다. 따라서 $\int_X c_n(T_X) = \int_X e(T_X) = \rchi_{\mathrm{top}}(X)$이다. 위상적 논증의 자세한 내용은 [BT]로 미룬다.
+Top Chern class $c_n(T_X)$는 complex rank $n$ vector bundle $T_X$를 rank $2n$ oriented real vector bundle로 보았을 때의 Euler class $e(T_X)$와 일치한다. Euler class의 적분은 generic section의 영점 수를 부호와 함께 센 것이고, $T_X$의 generic section은 generic vector field이므로 그 영점 수는 Poincaré–Hopf 정리에 의해 $\rchi_{\mathrm{top}}(X)$와 같다. 따라서 $\int_X c_n(T_X) = \int_X e(T_X) = \rchi_{\mathrm{top}}(X)$이다. 위상적 논증의 자세한 내용은 [BT]로 미룬다.
 :::
 
 ::: 예시 11

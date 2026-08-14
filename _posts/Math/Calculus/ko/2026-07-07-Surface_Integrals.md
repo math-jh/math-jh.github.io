@@ -10,6 +10,8 @@ sidebar:
 
 date: 2026-07-07
 weight: 19
+published: false
+revising: true
 drift_needed: true
 ---
 
@@ -44,17 +46,19 @@ $$\iint_D \lvert \mathbf{r}_u \times \mathbf{r}_v\rvert \dd{u}\dd{v}$$
 이고, area element를 $\dd{S} = \lvert \mathbf{r}_u \times \mathbf{r}_v\rvert \dd{u}\dd{v}$로 적는다.
 :::
 
+우리가 다룰 매개화는 regular 조건을 $D$ 전체에서 만족하지 않는 경우가 많다. 유한 개의 점과 곡선에서 $\mathbf{N}$이 $\mathbf{0}$이 되거나 서로 다른 매개변수가 같은 점으로 가더라도, 그 예외 집합은 넓이가 $0$이라 위 이중적분의 값에 기여하지 않는다. 그러므로 앞으로 곡면넓이와 면적분을 말할 때에는 유한 개의 점과 곡선을 제외하고 regular이며 단사인 매개화, 즉 곡면을 한 번만 덮는 매개화까지 허용하기로 한다.
+
 Area element $\dd{S}$는 다중적분의 야코비 행렬식과 같은 역할을 하는 것으로, 이렇게 정의한 area element $\dd{S}$로 곡면 위에 분포한 스칼라량을 적분할 수 있다.
 
 ::: 정의 3
-곡면 $S$ 위에서 연속인 scalar field $f$의 *면적분<sub>surface integral</sub>*은
+Regular 매개곡면 $\mathbf{r}\colon D \rightarrow \mathbb{R}^3$의 image $S = \mathbf{r}(D)$ 위에서 continuous scalar field $f$의 *면적분<sub>surface integral</sub>*은
 
 $$\iint_S f\dd{S} = \iint_D f(\mathbf{r}(u,v))\lvert \mathbf{r}_u \times \mathbf{r}_v\rvert \dd{u}\dd{v}$$
 
 이다.
 :::
 
-선적분이 arc length parametrization으로 적분하여 곡선의 매개화에 무관했듯, 면적분도 area element로 적분하여 곡면의 매개화에 무관하다. 
+선적분이 arc length parametrization으로 적분하여 곡선의 매개화에 무관했듯, 면적분도 area element로 적분하여 곡면의 매개화에 무관하다. 실제로 두 매개곡면 $\mathbf{r}(u,v)$와 $\tilde{\mathbf{r}}(s,t)$가 같은 image를 주고 $C^1$ 변수변환 $(u,v) \mapsto (s,t)$로 이어져 있으면, 연쇄법칙에서 $\mathbf{r}_u \times \mathbf{r}_v = (\partial(s,t)/\partial(u,v))(\tilde{\mathbf{r}}_s \times \tilde{\mathbf{r}}_t)$이므로 크기를 취해 [§다중적분, ⁋정리 4](/ko/math/calculus/multiple_integrals#thm4)를 적용하면 두 매개화가 주는 이중적분이 서로 같다. 
 
 ## 선속
 

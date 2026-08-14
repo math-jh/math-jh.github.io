@@ -41,7 +41,7 @@ $$\langle f_i\rangle=\{f: V \rightarrow U\mid f=f_i\circ g\text{ for some }i\in 
 이며, 이를 $\{f_i\}$가 *생성하는 sieve*라 부른다. 우리는 곧 "covering"를 이러한 covering family로 줄 수도 있고, 그것이 생성하는 covering sieve로 줄 수도 있음을 보게 된다. 먼저 sieve를 이용한 정의를 제시한다.
 
 ::: 정의 2
-범주 $\mathcal{C}$ 위의 *Grothendieck 위상*이란, 각 대상 $U\in \mathcal{C}$에 $U$ 위의 sieve들의 모임 $J(U)$을 대응시키는 것으로서, 그 원소를 *covering sieve<sub>덮개 체</sub>*라 부르며 다음 세 조건을 만족하는 것이다.
+범주 $\mathcal{C}$ 위의 *Grothendieck topology*이란, 각 대상 $U\in \mathcal{C}$에 $U$ 위의 sieve들의 모임 $J(U)$을 대응시키는 것으로서, 그 원소를 *covering sieve<sub>덮개 체</sub>*라 부르며 다음 세 조건을 만족하는 것이다.
 
 1. (Maximality) 임의의 $U$에 대하여 maximal sieve $t_U$는 $J(U)$에 속한다.
 2. (Stability) $S\in J(U)$이고 $g: V \rightarrow U$가 임의의 morphism이면 $g^\ast S\in J(V)$이다.
@@ -79,10 +79,10 @@ Stability. $S\in J(U)$이면 $\langle f_i\rangle\subseteq S$인 covering family 
 Transitivity. $S\in J(U)$이고, $U$ 위의 sieve $R$이 모든 $(f: V \rightarrow U)\in S$에 대하여 $f^\ast R\in J(V)$를 만족한다 하자. $\langle f_i\rangle\subseteq S$인 covering family $\{f_i: U_i \rightarrow U\}$를 잡으면, 각 $f_i\in S$이므로 $f_i^\ast R\in J(U_i)$이고, 따라서 $\langle g_{ij}\rangle\subseteq f_i^\ast R$인 covering family $\{g_{ij}: U_{ij} \rightarrow U_i\}$가 있다. $g_{ij}\in f_i^\ast R$이라는 것은 $f_i\circ g_{ij}\in R$이라는 뜻이므로, transitivity 조건으로 얻은 covering family $\{f_i\circ g_{ij}: U_{ij} \rightarrow U\}$의 모든 원소가 $R$에 속한다. 그것이 생성하는 sieve가 $R$에 포함되므로 $R\in J(U)$이다.
 :::
 
-[명제 4](#prop4)로 얻은 위상에서 covering sieve은 곧 어떤 covering family를 "포함하는" sieve이며, 따라서 sheaf 조건처럼 covering sieve 전체에 대해 진술되는 성질도 생성 covering family만으로 검사할 수 있게 된다. 이 환원은 다음 절의 sheaf 조건에서 본질적으로 사용된다. 한편 서로 다른 두 pretopology가 같은 위상을 생성할 수 있는데, 가령 한 affine scheme의 모든 principal open으로 이루어진 covering과 모든 유한 affine open cover는 같은 Zariski 위상을 준다.
+[명제 4](#prop4)로 얻은 위상에서 covering sieve은 곧 어떤 covering family를 "포함하는" sieve이며, 따라서 sheaf 조건처럼 covering sieve 전체에 대해 진술되는 성질도 generating covering family만으로 검사할 수 있게 된다. 이 환원은 다음 절의 sheaf 조건에서 본질적으로 사용된다. 한편 서로 다른 두 pretopology가 같은 위상을 생성할 수 있는데, 가령 한 affine scheme의 모든 principal open으로 이루어진 covering과 모든 finite affine open cover는 같은 Zariski 위상을 준다.
 
 ::: 정의 5
-범주 $\mathcal{C}$와 그 위의 Grothendieck 위상 $\tau$의 쌍 $(\mathcal{C}, \tau)$을 *site<sub>사이트</sub>*라 부른다. 위상이 pretopology로 주어진 경우에도 ([명제 4](#prop4)로 얻는 위상을 통해) 그 쌍을 site라 부른다.
+범주 $\mathcal{C}$와 그 위의 Grothendieck topology $\tau$의 쌍 $(\mathcal{C}, \tau)$을 *site<sub>사이트</sub>*라 부른다. 위상이 pretopology로 주어진 경우에도 ([명제 4](#prop4)로 얻는 위상을 통해) 그 쌍을 site라 부른다.
 :::
 
 엄밀하게는 sheaf의 값을 이루는 곱과 limit이 잘 존재하도록 $\mathcal{C}$가 작은 범주이거나 적절한 집합론적 크기 조건을 만족할 것을 요구하지만, 이 글에서는 이러한 set-theoretic 문제를 다루지 않고 필요한 곱과 limit이 존재한다고 전제한다. 이제 구체적인 site의 예시들을 살펴본다.
@@ -104,7 +104,7 @@ Scheme $X$에 대하여 두 가지 site가 있다. *작은 Zariski site* $X_{\Za
 작은 Zariski site는 열린집합이 너무 적어서, 가령 모든 점의 잔여체가 같은 경우조차 구별하지 못하는 등의 한계를 가진다. 이를 극복하기 위해 열린포함보다 넓은 종류의 morphism을 covering으로 허용하는 것이 다음의 étale 위상이다.
 
 ::: 예시 8 (étale site)
-Scheme $X$의 *작은 étale site* $X_{\et}$는 대상이 étale morphism $U \rightarrow X$이고, morphism이 그 위의 $X$-morphism이며 (étale morphism 사이의 $X$-morphism은 자동으로 étale이다), covering family가 jointly surjective한 étale 사상족 $\{U_i \rightarrow U\}$인 site이다. ([\[스킴\] §매끄러운 사상과 étale 사상, ⁋정의 7](/ko/math/scheme_theory/smooth_and_etale_morphisms#def7)) 더 일반적으로 *큰 étale site*는 $\Sch/X$ 위에서 jointly surjective한 étale 사상족을 covering family로 삼는다. 두 경우 모두 base change 조건은 étale morphism이 base change에 대해 닫혀 있음으로부터, transitivity는 étale morphism의 합성이 étale임으로부터 따른다.
+Scheme $X$의 *작은 étale site* $X_{\et}$는 대상이 étale morphism $U \rightarrow X$이고, morphism이 그 위의 $X$-morphism이며 (étale morphism 사이의 $X$-morphism은 자동으로 étale이다), covering family가 jointly surjective한 étale morphism족 $\{U_i \rightarrow U\}$인 site이다. ([\[스킴\] §매끄러운 사상과 에탈 사상, ⁋정의 7](/ko/math/scheme_theory/smooth_and_etale_morphisms#def7)) 더 일반적으로 *큰 étale site*는 $\Sch/X$ 위에서 jointly surjective한 étale morphism족을 covering family로 삼는다. 두 경우 모두 base change 조건은 étale morphism이 base change에 대해 닫혀 있음으로부터, transitivity는 étale morphism의 합성이 étale임으로부터 따른다.
 :::
 
 [예시 8](#ex8)의 covering에서 morphism $U_i \rightarrow U$은 더 이상 단사가 아니며, fiber가 여러 점을 가질 수 있다. 가령 유한 분리 가능한 체확대 $\Spec L \rightarrow \Spec K$나, 밑에서 $n$이 가역일 때 multiplicative group의 $n$제곱 morphism은 étale covering의 전형적인 예이다. 이렇게 단사가 아닌 covering을 허용하기에 étale site의 sheaf 조건은 두 겹 겹침 $U_i\times_U U_i$가 대각선 $U_i$에 그치지 않는 비자명한 자료를 담게 되고, 이것이 étale cohomology가 Zariski cohomology보다 풍부한 근본 이유이다. étale보다 더 넓은 flat morphism을 covering으로 삼으면 fppf와 fpqc 위상을 얻는다.
@@ -142,7 +142,7 @@ $$F(U) \xrightarrow{\ e\ } \prod_i F(U_i) \underset{q}{\overset{p}{\rightrightar
 이 equalizer인 것과 동치이다. 여기에서 $e(x)=(F(f_i)(x))_i$이고, 두 morphism $p, q$는 각각 두 projection $\operatorname{pr}_1: U_i\times_U U_j \rightarrow U_i$와 $\operatorname{pr}_2: U_i\times_U U_j \rightarrow U_j$를 따른 restriction $p((s_i)_i)=(F(\operatorname{pr}_1)(s_i))_{i, j}$, $q((s_i)_i)=(F(\operatorname{pr}_2)(s_j))_{i, j}$이다. $F$가 separated인 것은 같은 도식에서 $e$가 단사인 것과 동치이다.
 :::
 ::: 증명
-생성 covering sieve $S=\langle f_i\rangle$ 위의 matching family와 위 equalizer의 자료가 일대일로 대응함을 보이면 충분하다.
+Generating covering sieve $S=\langle f_i\rangle$ 위의 matching family와 위 equalizer의 자료가 일대일로 대응함을 보이면 충분하다.
 
 $S$ 위의 matching family $(x_f)_{f\in S}$가 주어지면, 특히 각 $f_i\in S$에 대한 $s_i=x_{f_i}\in F(U_i)$들의 족 $(s_i)\in \prod_i F(U_i)$을 얻는다. 두 projection $\operatorname{pr}_1: U_i\times_U U_j \rightarrow U_i$와 $\operatorname{pr}_2: U_i\times_U U_j \rightarrow U_j$에 각각 $f_i$와 $f_j$를 합성한 $f_i\circ \operatorname{pr}_1=f_j\circ \operatorname{pr}_2$은 같은 morphism이고 $S$에 속하므로, matching 조건을 $g=\operatorname{pr}_1$과 $g=\operatorname{pr}_2$에 각각 적용하면
 
@@ -154,7 +154,7 @@ $$F(\operatorname{pr}_1)(s_i)=x_{f_i\circ \operatorname{pr}_1}=x_{f_j\circ \oper
 
 따라서 amalgamation $x\in F(U)$의 존재·유일성은 정확히 $e$가 equalizer로의 전단사임과 같다. Sheaf 조건은 amalgamation의 존재와 유일성이므로 $e$가 equalizer 위로의 전단사, 즉 위 도식이 equalizer인 것과 동치이고, separated 조건은 유일성뿐이므로 $e$가 단사인 것과 동치이다.
 
-마지막으로 $J(U)$의 covering sieve $S'$은 생성 covering sieve $\langle f_i\rangle$을 포함할 뿐 그와 같을 필요는 없으므로, $S'$ 위의 matching family를 $\langle f_i\rangle$로 제한하여 얻은 $x$가 $S'$ 전체의 amalgamation임을 확인해야 한다. 임의의 $(f: V \rightarrow U)\in S'$에 대하여 base change한 covering family $\{\operatorname{pr}_2: U_i\times_U V \rightarrow V\}$을 잡으면 $f\circ \operatorname{pr}_2=f_i\circ \operatorname{pr}_1\in \langle f_i\rangle$이므로 $F(\operatorname{pr}_2)(F(f)(x))=x_{f\circ \operatorname{pr}_2}=F(\operatorname{pr}_2)(x_f)$이고, 이 covering family에 대한 $e$의 단사성으로 $F(f)(x)=x_f$를 얻는다.
+마지막으로 $J(U)$의 covering sieve $S'$은 generating covering sieve $\langle f_i\rangle$을 포함할 뿐 그와 같을 필요는 없으므로, $S'$ 위의 matching family를 $\langle f_i\rangle$로 제한하여 얻은 $x$가 $S'$ 전체의 amalgamation임을 확인해야 한다. 임의의 $(f: V \rightarrow U)\in S'$에 대하여 base change한 covering family $\{\operatorname{pr}_2: U_i\times_U V \rightarrow V\}$을 잡으면 $f\circ \operatorname{pr}_2=f_i\circ \operatorname{pr}_1\in \langle f_i\rangle$이므로 $F(\operatorname{pr}_2)(F(f)(x))=x_{f\circ \operatorname{pr}_2}=F(\operatorname{pr}_2)(x_f)$이고, 이 covering family에 대한 $e$의 단사성으로 $F(f)(x)=x_f$를 얻는다.
 :::
 
 [명제 11](#prop11)은 site 위의 sheaf 조건이 위상공간 위의 그것과 형식적으로 동일함을 보여준다. ([\[위상수학\] §층, ⁋정의 1](/ko/math/topology/sheaves#def1)) 다만 두 겹 겹침이 교집합 $U_i\cap U_j$ 대신 fiber product $U_i\times_U U_j$로 바뀐다. 위상공간에서는 covering의 morphism이 모두 단사여서 $U_i\times_U U_i=U_i$이지만, étale이나 fpqc covering에서는 $U_i\times_U U_i$이 $U_i$보다 클 수 있고, 바로 이 차이가 비단사 covering 위의 하강을 가능하게 한다. 특히 단일 morphism으로 이루어진 fpqc covering $\{\Spec B \rightarrow \Spec A\}$에 대해서는 이 equalizer가 faithfully flat descent의 Amitsur 정확열로 환원되는데, 이는 아래에서 다시 다룬다.
@@ -194,7 +194,7 @@ $$\check{H}^0(\{U_i \rightarrow U\}, F)=\operatorname{eq}\Big(\prod_i F(U_i)\rig
 
 $$\Hom_{\Sh}(F^{++}, G)\cong \Hom_{\PSh}(F, G)$$
 
-이 성립한다. 나아가 $a$는 유한 limit을 보존한다.
+이 성립한다. 나아가 $a$는 finite limit을 보존한다.
 :::
 ::: 증명
 전개가 길어 핵심만 제시한다. 자세한 논증은 [Stacks]나 [MM]을 참조하라.
@@ -203,10 +203,10 @@ $$\Hom_{\Sh}(F^{++}, G)\cong \Hom_{\PSh}(F, G)$$
 
 (2) $F$가 separated라 하자. $U$ 위의 covering sieve $S$ 위의 $F^+$의 matching family가 주어지면, 각 마디 위의 자료를 더 미세한 covering으로 대표하고 transitivity로 합쳐, $S$를 세분하는 covering sieve $S'$ 위의 $F$의 matching family를 얻는다. 여기에서 $F$의 separatedness가 이 합침이 모순 없이 이루어지도록(겹치는 부분에서 representative가 일치하도록) 보장한다. 이 $S'$ 위의 $F$의 matching family가 정의하는 $F^+(U)$의 원소가 원하는 amalgamation이며, (1)의 separatedness로 유일하다. 따라서 $F^+$은 sheaf이다. 임의의 $F$에 대해 (1)로 $F^+$이 separated이므로 (2)를 다시 적용하면 $F^{++}$이 sheaf이다.
 
-(3) Sheaf $G$에 대하여 $G \rightarrow G^+$이 isomorphism임은 sheaf 조건이 곧 모든 covering sieve 위의 matching family가 유일한 amalgamation을 가짐, 즉 colimit의 각 항 $\operatorname{Match}(S, G)\cong G(U)$이 모두 같음을 뜻하기 때문이다. 따라서 $G^{++}\cong G$이다. 이제 presheaf morphism $F \rightarrow \iota G$가 주어지면 plus construction의 functoriality로 $F^{++} \rightarrow G^{++}\cong G$을 얻고, 역으로 sheaf morphism $F^{++} \rightarrow G$에 unit $F \rightarrow F^{++}$을 합성하면 $F \rightarrow \iota G$을 얻는다. 이 두 대응이 서로 역임을 unit의 보편성으로 확인하면 adjunction $\Hom_{\Sh}(F^{++}, G)\cong \Hom_{\PSh}(F, \iota G)$을 얻는다. 마지막으로 $F^+$이 filtered colimit으로 정의되고 $\Set$에서 filtered colimit은 유한 limit과 교환하므로, $a=(-)^{++}$은 유한 limit을 보존한다.
+(3) Sheaf $G$에 대하여 $G \rightarrow G^+$이 isomorphism임은 sheaf 조건이 곧 모든 covering sieve 위의 matching family가 유일한 amalgamation을 가짐, 즉 colimit의 각 항 $\operatorname{Match}(S, G)\cong G(U)$이 모두 같음을 뜻하기 때문이다. 따라서 $G^{++}\cong G$이다. 이제 presheaf morphism $F \rightarrow \iota G$가 주어지면 plus construction의 functoriality로 $F^{++} \rightarrow G^{++}\cong G$을 얻고, 역으로 sheaf morphism $F^{++} \rightarrow G$에 unit $F \rightarrow F^{++}$을 합성하면 $F \rightarrow \iota G$을 얻는다. 이 두 대응이 서로 역임을 unit의 보편성으로 확인하면 adjunction $\Hom_{\Sh}(F^{++}, G)\cong \Hom_{\PSh}(F, \iota G)$을 얻는다. 마지막으로 $F^+$이 filtered colimit으로 정의되고 $\Set$에서 filtered colimit은 finite limit과 교환하므로, $a=(-)^{++}$은 finite limit을 보존한다.
 :::
 
-[정리 14](#thm14)는 [\[위상수학\] §층, ⁋정의 5](/ko/math/topology/sheaves#def5)에서 다룬 sheafification adjunction을 임의의 site로 확장한다. Left adjoint $a$가 유한 limit을 보존한다는 사실은 특히 중요한데, 이로부터 sheaf 범주가 위상공간의 sheaf 범주와 같은 종류의 좋은 구조를 가짐이 따라온다.
+[정리 14](#thm14)는 [\[위상수학\] §층, ⁋정의 5](/ko/math/topology/sheaves#def5)에서 다룬 sheafification adjunction을 임의의 site로 확장한다. Left adjoint $a$가 finite limit을 보존한다는 사실은 특히 중요한데, 이로부터 sheaf 범주가 위상공간의 sheaf 범주와 같은 종류의 좋은 구조를 가짐이 따라온다.
 
 ::: 참고 15
 Site $(\mathcal{C}, \tau)$ 위의 sheaf 범주 $\Sh(\mathcal{C}; \tau)$를 *Grothendieck topos<sub>그로텐디크 토포스</sub>*라 부른다. 이는 작은 site 위의 sheaf 범주와 동치인 범주로 정의되며, 모든 작은 limit과 colimit을 가지고, cartesian closed이며, subobject classifier를 가지는 등 집합 범주 $\Set$이 누리는 형식적 성질의 대부분을 공유한다. $\Set$ 자신은 한원소 위상공간(또는 trivial site) 위의 sheaf 범주로서 가장 단순한 topos이다. Topos 이론은 그 자체로 방대한 주제이므로 여기에서는 정의를 언급하는 데 그치고, 이후 stack의 맥락에서 필요한 만큼만 다룬다.
@@ -242,7 +242,7 @@ $$\Hom_{\Ring}(R, A) \rightarrow \Hom_{\Ring}(R, B)\rightrightarrows \Hom_{\Ring
 
 이다. Faithful flatness로 sequence $0 \rightarrow A \rightarrow B \rightrightarrows B\otimes_A B$이 정확하므로 ([\[스킴\] §충실평탄 하강, ⁋보조정리 3](/ko/math/scheme_theory/faithfully_flat_descent#lem3)), 즉 $A$가 $d^0, d^1: B \rightrightarrows B\otimes_A B$의 equalizer이므로, $\Hom_{\Ring}(R, -)$을 적용하면 $\varphi: R \rightarrow B$가 $d^0\circ \varphi=d^1\circ \varphi$를 만족하는 것과 $\varphi$가 유일하게 $R \rightarrow A$를 거쳐 인수분해되는 것이 동치임을 얻는다. 이것이 곧 위 equalizer이다. 이는 structure sheaf $\mathcal{O}$이 fpqc sheaf임을 보이는 [\[스킴\] §충실평탄 하강, ⁋정리 9](/ko/math/scheme_theory/faithfully_flat_descent#thm9)과 평행한 논증으로, $\Hom_{\Ring}(R, -)$이 같은 Amitsur equalizer를 보존한다는 데에서 따른다.
 
-일반적인 $X$에 대해서는 다음과 같이 붙인다. 두 morphism $g_1, g_2:\Spec B \rightarrow X$이 $\Spec(B\otimes_A B)$ 위에서 일치한다 하자. 위 affine 경우를 $X$의 affine open들에 적용하면 우선 두 morphism이 위상공간 사이의 연속함수로서 일치하고, 이어 각 affine open 위에서 structure sheaf에 대한 위 equalizer로부터 $g_1=g_2$임과, 정합적으로 주어진 morphism이 $\Spec A \rightarrow X$로 유일하게 내려옴을 얻는다. 여기에서 morphism의 상이 faithfully flat base change에 대해 잘 행동함과 quasi-compact 조건이 유한 affine covering으로의 환원을 가능하게 함을 사용한다. 따라서 $h_X$은 fpqc sheaf이다. Fpqc보다 거친 위상의 covering은 fpqc covering이므로 이들에 대해서도 sheaf 조건이 따라온다.
+일반적인 $X$에 대해서는 다음과 같이 붙인다. 두 morphism $g_1, g_2:\Spec B \rightarrow X$이 $\Spec(B\otimes_A B)$ 위에서 일치한다 하자. 위 affine 경우를 $X$의 affine open들에 적용하면 우선 두 morphism이 위상공간 사이의 연속함수로서 일치하고, 이어 각 affine open 위에서 structure sheaf에 대한 위 equalizer로부터 $g_1=g_2$임과, 정합적으로 주어진 morphism이 $\Spec A \rightarrow X$로 유일하게 내려옴을 얻는다. 여기에서 morphism의 상이 faithfully flat base change에 대해 잘 행동함과 quasi-compact 조건이 finite affine covering으로의 환원을 가능하게 함을 사용한다. 따라서 $h_X$은 fpqc sheaf이다. Fpqc보다 거친 위상의 covering은 fpqc covering이므로 이들에 대해서도 sheaf 조건이 따라온다.
 :::
 
 [정리 17](#thm17)이 stack 이론으로 가는 길을 연다. Scheme $X$를 그 functor of points $h_X:\Sch^\op \rightarrow \Set$과 동일시하면 ([\[스킴\] §점함자, ⁋정리 1](/ko/math/scheme_theory/functor_of_points#thm1)), scheme은 fpqc site $\Sch$ 위의 sheaf 가운데 특별한 것, 즉 적절한 representability 조건을 만족하는 sheaf로 자리매김한다. Functorially 정의된 moduli 문제 $F:\Sch^\op \rightarrow \Set$이 scheme을 표현하는지를 묻는 일은, 먼저 $F$가 fpqc sheaf인지를 확인하고 ([\[스킴\] §충실평탄 하강, ⁋정리 9](/ko/math/scheme_theory/faithfully_flat_descent#thm9)의 하강 논증과 같은 방식으로) 이어 그것이 국소적으로 representable한지를 보는 두 단계로 나뉜다. Stack은 이 그림에서 sheaf의 값을 집합 대신 groupoid로 확장하여, 점들이 비자명한 automorphism을 가지는 moduli 문제까지 포착하는 일반화이다. 그 정의와 전개는 이후의 글로 미룬다.
