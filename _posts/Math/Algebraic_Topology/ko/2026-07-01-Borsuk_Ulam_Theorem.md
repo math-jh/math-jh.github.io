@@ -1,6 +1,6 @@
 ---
 title: "Borsuk–Ulam 정리"
-description: "antipode를 보존하는 사상의 차수가 홀수임을 이용해 Borsuk–Ulam 정리의 여러 동치형을 증명하고, 그로부터 ham sandwich 정리와 Lusternik–Schnirelmann 덮개 정리 등의 귀결을 얻는다."
+description: "antipode를 보존하는 사상의 차수가 홀수임을 이용해 Borsuk–Ulam 정리의 여러 동치형을 증명하고, 그로부터 ham sandwich 정리와 Lusternik–Schnirelmann covering 정리 등의 귀결을 얻는다."
 excerpt: "The Borsuk–Ulam theorem, odd maps, and the ham sandwich theorem"
 
 categories: [Math / Algebraic Topology]
@@ -138,14 +138,14 @@ Antipodal map $g:S^n\rightarrow S^{n-1}$이 존재한다고 가정하자. $S^{n-
 Borsuk–Ulam 정리의 첫 귀결은 측도들을 동시에 이등분하는 hyperplane의 존재이다. 이름은 빵과 햄과 치즈로 이루어진 샌드위치를 한 번의 칼질로 세 재료 모두 정확히 반씩 나눌 수 있다는 삼차원의 그림에서 왔다. 이를 엄밀히 진술하려면 이등분의 대상이 될 측도의 조건을 정해야 한다. 우리는 각 hyperplane에 측도 $0$을 주는 유한 Borel measure를 다루는데, 이 조건은 가령 Lebesgue measure에 대해 절대연속인 유한측도가 모두 만족하며, hyperplane 위에 질량이 뭉쳐 있지 않아 이등분이 연속적으로 변한다는 것을 보장한다.
 
 ::: 정리 8 (Ham sandwich)
-$\mathbb{R}^n$ 위의 유한 Borel measure $\mu_1,\ldots,\mu_n$이 각각 모든 hyperplane에 측도 $0$을 준다고 하자. 그럼 하나의 affine hyperplane이 존재하여 이들 $n$개의 측도를 동시에 이등분한다. 곧 그 hyperplane이 결정하는 두 closed 반공간 $H,H'$에 대하여 모든 $i$에서
+$\mathbb{R}^n$ 위의 유한 Borel measure $\mu_1,\ldots,\mu_n$이 각각 모든 hyperplane에 측도 $0$을 준다고 하자. 그럼 하나의 affine hyperplane이 존재하여 이들 $n$개의 측도를 동시에 이등분한다. 곧 그 hyperplane이 결정하는 두 closed half-space $H,H'$에 대하여 모든 $i$에서
 
 $$\mu_i(H)=\mu_i(H')=\frac12\mu_i(\mathbb{R}^n)$$
 
 이 성립한다.
 :::
 ::: 증명
-Hyperplane 전체를 구 $S^n$으로 매개변수화한다. $u=(u_0,u_1,\ldots,u_n)\in S^n\subseteq\mathbb{R}^{n+1}$에 대하여 closed 반공간
+Hyperplane 전체를 구 $S^n$으로 매개변수화한다. $u=(u_0,u_1,\ldots,u_n)\in S^n\subseteq\mathbb{R}^{n+1}$에 대하여 closed half-space
 
 $$H_u=\{x\in\mathbb{R}^n\mid u_1x_1+\cdots+u_nx_n\leq u_0\}$$
 

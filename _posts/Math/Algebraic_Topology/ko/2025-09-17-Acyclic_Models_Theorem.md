@@ -31,19 +31,17 @@ Homology 이론을 전개할 때 우리는 보통 $n$-simplex들을 사용하게
 Category with models $(\mathcal{A},\mathcal{M})$이 주어졌다 하고, covariant functor $F_\bullet:\mathcal{A}\rightarrow \Ch_{\geq0}(\lMod{A})$가 주어졌다 하자. 
 
 1. Functor $F_\bullet$가 *acyclic on $\mathcal{M}$<sub>$\mathcal{M}$ 위에서 비순환</sub>*이라는 것은 각각의 $M\in\mathcal{M}$에 대하여, $H_i(F(M))=0$이 모든 $i>0$에 대하여 성립하는 것이다. 
-2. Functor $F_\bullet$가 *free on $\mathcal{M}$<sub>$\mathcal{M}$ 위에서 자유</sub>*이라는 것은 각각의 $n$에 대하여, 다음의 natural isomorphism
+2. Functor $F_\bullet$가 *free on $\mathcal{M}$<sub>$\mathcal{M}$ 위에서 자유</sub>*이라는 것은 각각의 $n$에 대하여 model들의 family $(M_j)_{j\in J_n}$이 존재하여, 다음의 natural isomorphism
     
-    $$F_n(-)\cong \bigoplus_{M\in \mathcal{M}}\mathbb{Z}\Hom_\mathcal{A}(M,-)$$
+    $$F_n(-)\cong \bigoplus_{j\in J_n}A[\Hom_\mathcal{A}(M_j,-)]$$
 
-    이 성립하는 것이다.
+    이 성립하는 것이다. 여기에서 $A[S]$는 집합 $S$를 basis로 갖는 free $A$-module을 뜻하고, 각 family $(M_j)_{j\in J_n}$은 같은 model을 여러 번 포함할 수 있다.
 :::
 
 예를 들어, standard $n$-simplex들 $\Delta^n$들의 모임 $\mathcal{M}$을 model들로 갖는 category with models $(\Top, \mathcal{M})$을 생각하자. 그럼 각각의 $X\in \Top$마다 singular $n$-simplex들의 chain complex $C_\bullet(X)$을 대응시키는 functor $C_\bullet:\Top \rightarrow \Ch_{\geq0}(\Ab)$는 acyclic on $\mathcal{M}$인 동시에 free on $\mathcal{M}$이다.
 
 - $C_\bullet$이 acyclic on $\mathcal{M}$이라는 것은, 각 model $\Delta^n$이 convex set이라 한 점으로 수축가능하고, 그 직선 수축이 유도하는 cone 연산자가 $C_\bullet(\Delta^n)$을 $i>0$에서 직접 수축시키기 때문으로, 이는 [§호몰로지, ⁋명제 11](/ko/math/algebraic_topology/homology#prop11)의 일반화라 생각할 수 있다. 여기에서 functor $F_\bullet$이 $\mathcal{M}$ 위에서 acyclic하다는 조건은 $F_\bullet(X)$의 $0$번째 homology가 $0$일 것을 <em-ko>요구하지는 않는다</em-ko>는 것에 주의하자. 
-- $C_\bullet$이 free on $\mathcal{M}$이라는 것은 정확히 각각의 $C_n(X)$들이 $\Delta^n \rightarrow X$로 생성되는 free abelian group이므로, 즉 $C_n(X)=\mathbb{Z}\Hom_\Top(\Delta^n,X)$이므로 자명하다. 
-
-
+- $C_\bullet$이 free on $\mathcal{M}$이라는 것은 각각의 $C_n(X)$가 정확히 singular $n$-simplex $\Delta^n \rightarrow X$들을 basis로 갖는 free abelian group, 즉 $C_n(X)=\mathbb{Z}[\Hom_\Top(\Delta^n,X)]$이라는 것으로부터 따라온다. 이 때 각각의 $n$에 대하여 잡는 model들의 족은 $\Delta^n$ 하나만으로 이루어진 족이다. 
 
 ## Acyclic models theorem
 
@@ -69,7 +67,7 @@ $$f_\bullet(-):F_\bullet(-) \rightarrow G_\bullet(-)$$
 
 {% diagram Math/Algebraic_Topology/Acyclic_Models_Theorem-1.svg width="13.49em" alt="lifting" %}
 
-에 의하여, $F_0(X)\rightarrow H_0(G(X))$는 자명한 방식으로 정의되고, $p_G$가 surjective이므로 이로부터 lifting $F_0(X)\rightarrow G_0(X)$를 정의할 수 있다. 
+에 의하여, 합성 $F_0(X)\rightarrow H_0(F(X))\rightarrow H_0(G(X))$가 주어지고, $p_G$가 surjective이므로 이로부터 lifting $F_0(X)\rightarrow G_0(X)$를 얻을 수 있다. 다만 각각의 $X$마다 lifting을 따로 고르면 이들이 서로 naturality를 만족한다는 보장이 없으며, 이를 해결하는 것이 model $\mathcal{M}$의 역할이다. 즉, 각각의 model $M$에 대하여 $\id_M$에 해당하는 $F_0(M)$의 원소가 어디로 옮겨지는지, 즉 $f_0(M)(\id_M)$만을 고른 뒤, 나머지 generator $u:M\rightarrow X$에 대해서는 $f_0(X)(u):=(G_0(u)\circ f_0(M))(\id_M)$으로 정의하는 것이다. 이렇게 정의한 $f_0$는 $G_0$의 functoriality로부터 natural하며, 이것이 여전히 $f(X)_0$의 lift라는 것은 $f(-)_0$의 naturality로부터 따라온다. 
 
 그러나 더 높은 degree에서 $f_\bullet(X)$를 정의하려면 약간의 문제가 있다. 귀납적으로 $f_{n-1}(X)$까지의 성분이 정의되었다고 하고 $f_n(X)$를 정의하자. 즉 다음의 diagram 
 
@@ -89,7 +87,7 @@ $$d_n^{G(X)}\circ f_n(X)=f_{n-1}(X)\circ d_n^{F(X)}$$
 
 {% diagram Math/Algebraic_Topology/Acyclic_Models_Theorem-4.svg width="24.72em" alt="lifting_reduced" %}
 
-을 lift하는 것이다. 그런데 이제 임의의 $x_n\in F_n(M)$에 대하여, 
+을 lift하는 것이다. 그런데 $n\geq2$이면 임의의 $x_n\in F_n(M)$에 대하여, 
 
 $$0=(f_{n-2}(M)\circ d_{n-1}^{F(M)}\circ d_n^{F(M)})(x_n)=(d_{n-1}^{G(M)}\circ f_{n-1}(M)\circ d_n^{F(M)})(x_n)$$
 
@@ -97,7 +95,9 @@ $$0=(f_{n-2}(M)\circ d_{n-1}^{F(M)}\circ d_n^{F(M)})(x_n)=(d_{n-1}^{G(M)}\circ f
 
 $$f_{n-1}(d_n^{F(M)}(x_n))\in \ker d_{n-1}^{G(M)}=\im d_n^{G(M)}$$
 
-이고, 따라서 $d_n^{G(M)}(y_n)=f_{n-1}(d_n^{F(M)}(x_n))$을 만족하는 $y_n$을 찾을 수 있으며 이로부터 chain map $f_\bullet(M)$의 $n$번째 성분을 만들어줄 수 있다. 이 때 서로 다른 $y_n$의 선택은 서로 다른 lift $f_n$을 주며, 이들의 차이가 곧 chain homotopy를 정의한다. 
+이고, 따라서 $d_n^{G(M)}(y_n)=f_{n-1}(d_n^{F(M)}(x_n))$을 만족하는 $y_n$을 찾을 수 있으며 이로부터 chain map $f_\bullet(M)$의 $n$번째 성분을 만들어줄 수 있다. 
+
+$n=1$의 경우, 임의의 $x_1\in F_1(M)$에 대하여 $d_1^{F(M)}(x_1)$은 $F(M)$에서 boundary이므로 $H_0(F(M))$에서 $0$이고, $f_0$는 $f(M)_0$를 lift하도록 잡았으므로 $f_0(d_1^{F(M)}(x_1))$이 $H_0(G(M))$에서 정하는 class 또한 $0$이다. 즉 $f_0(d_1^{F(M)}(x_1))\in \ker p_G=\im d_1^{G(M)}$이고, 따라서 위와 같은 방식으로 $y_1$을 찾을 수 있다. 물론 이렇게 얻은 $f_\bullet$는 $y_n$의 선택에 의존하므로 유일하지 않지만, 두 선택의 차이는 natural chain homotopy로 흡수되는 것을 확인할 수 있다.
 
 ## Acyclic models theorem의 활용
 
@@ -109,11 +109,11 @@ $$C_\bullet(-\times -;A),\qquad  C_\bullet(-;A)\otimes_A C_\bullet(-;A)$$
 
 $$(\Delta^p, \Delta^q)\in\Top^2$$
 
-들의 모임으로 잡으면, 이들은 모두 free on $\mathcal{M}$, acyclic on $\mathcal{M}$이다. 이제 다음의 함수
+들의 모임으로 잡으면, 이들은 모두 free on $\mathcal{M}$, acyclic on $\mathcal{M}$이다. 이제 $0$-simplex $\sigma,\tau$에 대하여 $[\sigma]\otimes[\tau]$를 $[(\sigma,\tau)]$로 옮기는 대응이 정하는 natural transformation
 
-$$C_p(X;A)\times C_q(Y;A)\rightarrow C_{p+q}(X\times Y;A);\qquad (\sigma,\tau)\mapsto \sigma\times\tau$$
+$$H_0(C_\bullet(X;A)\otimes_AC_\bullet(Y;A))\cong H_0(X;A)\otimes_AH_0(Y;A)\rightarrow H_0(X\times Y;A)$$
 
-가 $H_0$에서는 isomorphism인 것을 알 수 있고, 그럼 이 함수의 lifting이 Eilenberg-Zilber map, 그리고 이 함수의 inverse의 lifting이 Alexander-Whitney map이 된다. 
+는 $\pi_0(X\times Y)=\pi_0(X)\times\pi_0(Y)$이므로 isomorphism이고, 그럼 이것의 lifting이 Eilenberg-Zilber map, 그리고 이것의 inverse의 lifting이 Alexander-Whitney map이 된다. 단, chain 레벨에서 $\sigma\times\tau$를 곧바로 적을 수는 없다는 것에 주의해야 한다. 이는 $\sigma:\Delta^p\rightarrow X$와 $\tau:\Delta^q\rightarrow Y$의 곱은 prism $\Delta^p\times\Delta^q$ 위에서 정의되지 $\Delta^{p+q}$ 위에서 정의되지 않으며, 이 prism을 simplex들로 쪼개는 것이 바로 Eilenberg-Zilber map이 하는 일이기 때문이다. 
 
 비슷한 예시로, $\Top^2$에서 $\Ch_{\geq 0}(\lMod{A})$로의 네 functor
 

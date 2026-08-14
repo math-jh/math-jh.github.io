@@ -61,7 +61,7 @@ $$x\mapsto (x,f(x)),\qquad (x,f(x))\mapsto x$$
 가 서로의 inverse이므로 $\graph(f)$와 $U$가 homeomorphic하기 때문이다. 
 :::
 
-[\[위상수학\] §하우스도르프 공간, ⁋따름정리 7](/ko/math/topology/Hausdorff_spaces#cor7)에 의해 $\graph(f)$는 $\mathbb{R}^{n+k}$의 닫힌집합이므로, 이는 [예시 3](#ex3)과는 다소 다른 결의 예시를 준다. 
+[\[위상수학\] §하우스도르프 공간, ⁋따름정리 7](/ko/math/topology/Hausdorff_spaces#cor7)에 의해 $\graph(f)$는 $U\times \mathbb{R}^k$의 닫힌집합이며, 특히 $U=\mathbb{R}^n$인 경우 $\graph(f)$는 $\mathbb{R}^{n+k}$의 닫힌집합이므로 이는 [예시 3](#ex3)과는 다소 다른 결의 예시를 준다. 
 
 한편 product topology에 대해서도 다음이 성립한다. 
 

@@ -26,7 +26,7 @@ $$g_{ij}: U_i\cap U_j\rightarrow \GL(k;\mathbb{R})$$
 
 를 명시해주면 되었으며, 이 관점은 예를 들어, $\GL(k;\mathbb{R})$을 $\GL^+(k;\mathbb{R})$로 바꿔주면 *oriented* vector bundle 또한 설명할 수 있다는 점에서 강력했다. 
 
-이번 글의 목적은 이 두 관점을 이어주는 것이다. 즉 우리는 더 일반적으로, structure group이 (topological) group $G$인 경우 나타나는 *principal $G$-bundle*을 정의하고, 이러한 것들을 분류하는 공간인 *classifying space* $\B G$를 정의할 것이다. 이번 글에서 $G$는 항상 topological group을 의미하며, 별다른 언급이 없는 한 base space는 paracompact인 것으로 가정한다.
+이번 글의 목적은 이 두 관점을 이어주는 것이다. 즉 우리는 더 일반적으로, structure group이 (topological) group $G$인 경우 나타나는 *principal $G$-bundle*을 정의하고, 이러한 것들을 분류하는 공간인 *classifying space* $\B G$를 정의할 것이다. 이번 글에서 $G$는 항상 topological group을 의미하며, 별다른 언급이 없는 한 base space는 paracompact Hausdorff인 것으로 가정한다.
 
 ## Principal bundle의 정의
 
@@ -46,7 +46,7 @@ Topological group $G$에 대하여, fiber bundle $p:P\rightarrow X$와 그 위�
 
 $$g_{ij}(x)g_{jk}(x)=g_{ik}(x),\qquad g_{ii}(x)=e$$
 
-를 만족하며, 두 cocycle $(g_{ij})$와 $(g_{ij}')$이 같은 bundle을 주는 것은 연속함수 $\lambda_i:U_i\rightarrow G$들이 존재하여 $g_{ij}'=\lambda_i g_{ij}\lambda_j^{-1}$인 것과 동치이다. 따라서 open cover $\mathcal{U}=\{U_i\}$ 위에서 trivialize되는 principal $G$-bundle의 isomorphism class들은 nonabelian Čech cohomology $\check{H}^1(\mathcal{U};G)$로 분류되며, $G=\GL(k;\mathbb{R})$인 경우 이는 앞 글의 vector bundle 분류와 정확히 일치한다.
+를 만족하며, 두 cocycle $(g_{ij})$와 $(g_{ij}')$이 같은 bundle을 주는 것은 연속함수 $\lambda_i:U_i\rightarrow G$들이 존재하여 $g_{ij}'=\lambda_i g_{ij}\lambda_j^{-1}$인 것과 동치이다. 따라서 open cover $\mathcal{U}=\{U_i\}$ 위에서 trivialize되는 principal $G$-bundle의 isomorphism class들은 (nonabelian) Čech cohomology $\check{H}^1(\mathcal{U};G)$로 분류되며, $G=\GL(k;\mathbb{R})$인 경우 이는 앞 글의 vector bundle 분류와 정확히 일치한다.
 
 Vector bundle은 언제나 zero section을 가졌으나, principal bundle은 fiber가 $G$가 아니라 $G$-torsor이므로 이러한 역할을 하는 section을 잡는 것이 자명하지 않다. 실제로 다음 명제는 section의 존재 여부가 principal bundle의 자명성을 완전히 결정한다는 것을 보여준다.
 
@@ -122,20 +122,20 @@ $$f^\ast P=\{(x',y)\in X'\times P\mid f(x')=p(y)\}$$
 
 이 정의된다. 여기에 $(x',y)\cdot g=(x',y\cdot g)$로 작용을 주면 $f^\ast P\rightarrow X'$은 다시 principal $G$-bundle이 되며, 이는 transition function의 관점에서는 $g_{ij}$를 $g_{ij}\circ f$로 끌어당기는 것에 해당한다. 핵심적인 사실은 이 pullback이 $f$의 homotopy class에만 의존한다는 사실이다.
 
-::: 정리 5 (Pullback의 homotopy 불변성)
-$X$가 paracompact이고 $f_0,f_1:X\rightarrow Y$가 homotopic이라 하자. ([§호모토피, ⁋정의 2](/ko/math/algebraic_topology/homotopy#def2)) 그럼 임의의 principal $G$-bundle $p:P\rightarrow Y$에 대하여 $f_0^\ast P$와 $f_1^\ast P$는 $X$ 위에서 isomorphic하다.
+::: 정리 5 (Pullback의 homotopy invariance)
+$X$가 paracompact Hausdorff이고 $f_0,f_1:X\rightarrow Y$가 homotopic이라 하자. ([§호모토피, ⁋정의 2](/ko/math/algebraic_topology/homotopy#def2)) 그럼 임의의 principal $G$-bundle $p:P\rightarrow Y$에 대하여 $f_0^\ast P$와 $f_1^\ast P$는 $X$ 위에서 isomorphic하다.
 :::
 ::: 증명
 핵심은 다음의 사실이다. 
 
-> $X$가 paracompact일 때, $X\times[0,1]$ 위의 principal $G$-bundle $Q$는 $X\times\{0\}$으로의 restriction을 projection $X\times[0,1]\rightarrow X\times\{0\}$으로 pullback한 것과 isomorphic하다.
+> $X$가 paracompact Hausdorff일 때, $X\times[0,1]$ 위의 principal $G$-bundle $Q$는 $X\times\{0\}$으로의 restriction을 projection $X\times[0,1]\rightarrow X\times\{0\}$으로 pullback한 것과 isomorphic하다.
 
-이는 bundle의 covering homotopy property로, paracompact base 위의 trivializing cover가 locally finite partition of unity를 갖는다는 사실에 따른 것이다. 증명의 골자는 $[0,1]$을 작은 구간들로 나누어 각 구간 위에서 trivialization을 잇고, partition of unity로 이 local isomorphism들을 붙이는 것이다. 
+이는 bundle의 covering homotopy property로, paracompact Hausdorff base 위의 trivializing cover가 locally finite partition of unity를 갖는다는 사실에 따른 것이다. 증명의 골자는 $[0,1]$을 작은 구간들로 나누어 각 구간 위에서 trivialization을 잇고, partition of unity로 이 local isomorphism들을 붙이는 것이다. 
 
 이제 homotopy $H:X\times[0,1]\rightarrow Y$가 $f_0,f_1$을 잇는다 하고 $Q=H^\ast P$로 정의하자. 위 사실에 의해 $Q$는 $Q\vert_{X\times\{0\}}=f_0^\ast P$를 projection으로 끌어당긴 것과 isomorphic하고, 같은 논증을 $X\times\{1\}$ 끝에서 반복하면 $Q\vert_{X\times\{1\}}=f_1^\ast P$ 역시 같은 bundle과 isomorphic이다. 
 :::
 
-특히 $X$가 contractible이면 항등사상이 상수사상과 homotopic하므로 $X$ 위의 모든 principal $G$-bundle은 trivial이다. 일반적으로 CW complex는 항상 paracompact이므로 우리가 다루려는 base들에 대해서는 위 정리의 가정이 자동으로 성립한다.
+특히 $X$가 contractible이면 항등사상이 상수사상과 homotopic하므로 $X$ 위의 모든 principal $G$-bundle은 trivial이다. 일반적으로 CW complex는 항상 paracompact Hausdorff이므로 우리가 다루려는 base들에 대해서는 위 정리의 가정이 자동으로 성립한다.
 
 ## Universal bundle과 classifying space
 
@@ -151,18 +151,18 @@ Topological group $G$에 대하여, principal $G$-bundle $p:\E G\rightarrow \B G
 임의의 topological group $G$에 대하여 universal bundle $\E G\rightarrow \B G$가 존재한다.
 :::
 
-이에 대한 증명은 $G$의 무한 join 
+이에 대한 증명은 $G$의 infinite join 
 
 $$\E G=G\ast G\ast G\ast\cdots$$
 
-를 사용하며, 이 공간은 임의의 $n$에 대해 $n$-connected이고, 따라서 weakly contractible이 되며 CW 구조 하에서 contractible이라는 것이 요지이다. 자세한 내용은 [Mil]에 맡겨둔다.
+를 사용하며, 이 공간은 임의의 $n$에 대해 $n$-connected이고, 따라서 weakly contractible이 되며 CW 구조 하에서 contractible이라는 것이 요지이다.
 
-한편, universal bundle은 본질적으로 유일하다. 두 universal bundle $\E G\rightarrow \B G$와 $\E G'\rightarrow \B G'$이 주어지면, $\E G'$이 contractible이므로 [정리 5](#thm5)에 의해 $\B G$로 끌어내린 분류사상이 존재하고, 이 논증을 양방향으로 적용하면 $\B G$와 $\B G'$이 서로 homotopy inverse인 morphism으로 연결되기 때문이다. 따라서 $\B G$는 homotopy equivalence를 넘어서는 모호함 없이 결정되며, 우리는 $\B G$를 *the* classifying space라 부른다.
+한편, universal bundle은 본질적으로 유일하다. 두 universal bundle $\E G\rightarrow \B G$와 $\E G'\rightarrow \B G'$이 주어졌다 하자. $\E G'\rightarrow\B G'$이 universal이므로 아래에서 보일 [정리 8](#thm8)에 의하여 $\B G$ 위의 principal $G$-bundle $\E G$를 분류하는 morphism $u:\B G\rightarrow \B G'$이 존재하여 $\E G\cong u^\ast\E G'$이고, 두 bundle의 역할을 바꾸면 마찬가지로 $\E G'\cong v^\ast\E G$인 $v:\B G'\rightarrow \B G$가 존재한다. 그럼 $(v\circ u)^\ast\E G\cong u^\ast\E G'\cong\E G$인데 항등사상 또한 $\E G$를 분류하므로, 같은 정리의 단사성에 의하여 $v\circ u$는 $\B G$의 항등사상과 homotopic하고 같은 이유로 $u\circ v$는 $\B G'$의 항등사상과 homotopic하다. 따라서 $\B G$는 homotopy equivalence를 넘어서는 모호함 없이 결정되며, 우리는 $\B G$를 *the* classifying space라 부른다.
 
-그럼 이 글의 가장 핵심적인 결과는, 당연히 다음의 정리이다.
+꼭 이 논증의 재료라서가 아니더라도, 이 글의 가장 핵심적인 결과는 당연히 다음의 정리이다.
 
 ::: 정리 8 (분류정리)
-Paracompact space $X$와 topological group $G$에 대하여, $[X,\B G]$를 $X$에서 $\B G$로의 free homotopy class들의 집합이라 하자. 그럼 universal bundle $\E G\rightarrow \B G$를 pullback하는 morphism
+Paracompact Hausdorff space $X$와 topological group $G$에 대하여, $[X,\B G]$를 $X$에서 $\B G$로의 free homotopy class들의 집합이라 하자. 그럼 universal bundle $\E G\rightarrow \B G$를 pullback하는 morphism
 
 $$[X,\B G]\rightarrow\{\text{principal $G$-bundles over $X$}\}/{\cong};\qquad [f]\mapsto f^\ast \E G$$
 
@@ -174,7 +174,7 @@ $$[X,\B G]\rightarrow\{\text{principal $G$-bundles over $X$}\}/{\cong};\qquad [f
 ::: 증명
 $[f]\mapsto f^\ast \E G$가 $[f]$의 대표 선택에 의존하지 않는 것은 [정리 5](#thm5)에 의한 것이다. 우리는 이것이 전단사임을 간략히 살펴본다.
 
-우선 $X$ 위의 principal $G$-bundle $P$가 주어졌다 하자. $X$가 paracompact이므로, [\[위상수학\] §Compactness와 paracompactness, ⁋정리 27](/ko/math/topology/compactness#thm27)에 의하여 $P$를 trivialize하는 open cover $\{U_i\}$와 이에 종속된 locally finite partition of unity $\{\rho_i\}$를 함께 잡을 수 있다. 각 $U_i$ 위의 trivialization은 $G$-equivariant map $\psi_i:p^{-1}(U_i)\rightarrow G$를 주므로,
+우선 $X$ 위의 principal $G$-bundle $P$가 주어졌다 하자. $X$가 paracompact Hausdorff이므로, [\[위상수학\] §Compactness와 paracompactness, ⁋정리 27](/ko/math/topology/compactness#thm27)에 의하여 $P$를 trivialize하는 open cover $\{U_i\}$와 이에 종속된 locally finite partition of unity $\{\rho_i\}$를 함께 잡을 수 있다. 각 $U_i$ 위의 trivialization은 $G$-equivariant map $\psi_i:p^{-1}(U_i)\rightarrow G$를 주므로, $\E G$를 [정리 7](#thm7)의 join으로 두어 그 점을 $\sum_i t_ig_i$의 꼴로 적으면
 
 $$\widetilde{f}:P\rightarrow \E G,\qquad y\mapsto \sum_i \rho_i(p(y))\psi_i(y)$$
 
@@ -186,7 +186,14 @@ $$\widetilde{f}:P\rightarrow \E G,\qquad y\mapsto \sum_i \rho_i(p(y))\psi_i(y)$$
 이 정리는 principal $G$-bundle의 기하학적 분류를 순수하게 homotopy의 데이터 $[X,\B G]$로 옮긴다. [명제 4](#prop4)와 결합하면 rank $n$ real vector bundle의 분류가 $[X,\B\GL(n;\mathbb{R})]$로, complex의 경우 $[X,\B\GL(n;\mathbb{C})]$로 옮겨지게 되며, 실제로 이들 $\B\GL(n; \mathbb{R})$과 $\B\GL(n; \mathbb{C})$이 실은 (real/complex) Grassmannian인 것을 곧 살펴보게 될 것이다. 
 
 ::: 보조정리 9
-Classifying space의 구성은 $G$에 대해 functorial이다. 연속적인 group homomorphism $\phi:G\rightarrow H$가 주어지면, $\E G$ 위의 $G$-작용을 $\phi$를 통해 $H$-action으로 바꾸어 얻는 associated bundle $\E G\times_G H$를 분류하는 morphism이 $\B\phi:\B G\rightarrow \B H$를 유도한다. 이는 $\B(\psi\circ\phi)\simeq \B\psi\circ \B\phi$를 만족하여, $G\mapsto \B G$가 homotopy category 위의 functor가 되게 한다. 가령 inclusion $\Umat(n)\hookrightarrow\GL(n;\mathbb{C})$이 유도하는 $\B\Umat(n)\rightarrow \B\GL(n;\mathbb{C})$이 아래에서 쓰인다.
+Classifying space의 구성은 $G$에 대해 functorial이다. Continuous group homomorphism $\phi:G\rightarrow H$가 주어지면, $\E G$ 위의 $G$-작용을 $\phi$를 통해 $H$-action으로 바꾸어 얻는 associated bundle $\E G\times_G H$를 분류하는 morphism이 $\B\phi:\B G\rightarrow \B H$를 유도한다. 이는 $\B(\psi\circ\phi)\simeq \B\psi\circ \B\phi$를 만족하여, $G\mapsto \B G$가 homotopy category 위의 functor가 되게 한다. 가령 inclusion $\Umat(n)\hookrightarrow\GL(n;\mathbb{C})$이 유도하는 $\B\Umat(n)\rightarrow \B\GL(n;\mathbb{C})$이 아래에서 쓰인다.
+:::
+::: 증명
+[정리 7](#thm7)의 $\B G$는 CW complex이므로 paracompact Hausdorff이고, 따라서 $\B G$ 위의 principal bundle들에 대하여 [정리 8](#thm8)을 쓸 수 있다. 이제 $\B\phi$가 $\B\phi^\ast\E H\cong\E G\times_G H$로 정해진다는 것과, associated bundle을 만드는 것이 pullback과 교환한다는 것으로부터 continuous group homomorphism $\psi:H\rightarrow K$에 대하여
+
+$$(\B\psi\circ\B\phi)^\ast\E K\cong\B\phi^\ast\left(\E H\times_H K\right)\cong\left(\B\phi^\ast\E H\right)\times_H K\cong\left(\E G\times_G H\right)\times_H K\cong \E G\times_G K$$
+
+를 얻는다. 마지막 항에서 $G$가 $K$에 작용하는 방식은 $\psi\circ\phi$를 통한 것이므로 이는 정확히 $\B(\psi\circ\phi)$가 분류하는 bundle이고, 따라서 $\B\psi\circ\B\phi$와 $\B(\psi\circ\phi)$는 $\B G$ 위의 같은 principal $K$-bundle을 분류한다. 그럼 [정리 8](#thm8)의 단사성에 의하여 이들은 homotopic하다. 
 :::
 
 ## 분류공간의 예
@@ -196,12 +203,12 @@ Classifying space의 구성은 $G$에 대해 functorial이다. 연속적인 grou
 ::: 예시 10
 $G$가 discrete group이라 하자. 그럼 임의의 base $B$ 위에 정의된 principal $G$-bundle은 그 fiber가 discrete이므로 $B$ 위의 covering space가 된다. 그럼 이 이해에서 $G$의 right action은 Deck transformation이 되며, fiber 위에서 Deck group이 transitive하게 작용하므로 이 covering space는 *regular* covering space이다. 
 
-이제 이를 universal bundle $\E G \rightarrow \B G$에 적용하자. 그럼 [§피복공간, ⁋따름정리 12](/ko/math/algebraic_topology/covering_spaces#cor12)에 의해 이 covering space의 Deck transformation group은 $\pi_1(\B G)$와 isomorphic한데, 우리는 앞서 이 Deck group이 곧 $G$가 되어야 하는 것을 살펴보았으므로 $\pi_1(\B G)\cong G$이고, $\E G$가 contractible이라 $\B G$의 universal cover 또한 contractible이므로 $\pi_n(\B G)=0$ ($n\geq 2$) 이다. 곧 $\B G$는 Eilenberg–MacLane 공간 $K(G,1)$이다.
+이제 이를 universal bundle $\E G \rightarrow \B G$에 적용하자. $\E G$가 contractible이므로 이는 $\B G$의 universal cover이며, [정리 7](#thm7)의 $\B G$는 connected CW complex이므로 covering space 이론이 요구하는 path-connected, locally path-connected, semi-locally simply connected 조건이 모두 성립한다. 그럼 [§피복공간, §§피복공간의 기본정리](/ko/math/algebraic_topology/covering_spaces#피복공간의-기본정리)에서 살펴본 대로 이 covering space의 Deck transformation group은 $\pi_1(\B G)$와 isomorphic한데, 우리는 앞서 이 Deck group이 곧 $G$가 되어야 하는 것을 살펴보았으므로 $\pi_1(\B G)\cong G$이고, $\E G$가 contractible이라 $\B G$의 universal cover 또한 contractible이므로 $\pi_n(\B G)=0$ ($n\geq 2$) 이다. 곧 $\B G$는 Eilenberg–MacLane 공간 $K(G,1)$이다.
 
 더 구체적인 예시로 $G=\mathbb{Z}/2$인 경우와 $G=\mathbb{Z}$인 경우를 각각 보자. 우선 $\mathbb{Z}/2$의 경우 우리는 $\mathbb{Z}/2$이 free하게 작용하는 contractible space를 찾아야 하는데, $S^\infty$에 antipodal action을 준 게 정확히 이 두 조건을 모두 만족한다. 그럼 이 action의 orbit space는 $\RP^\infty$가 된다. $\mathbb{Z}$의 경우도 이미 우리와 친숙한 예시에서 찾아올 수 있는데, 바로 [§피복공간, ⁋정의 3](/ko/math/algebraic_topology/covering_spaces#def3) 직후에 covering space의 표준적인 예시로 소개한 $\mathbb{R}\rightarrow S^1$이 그러하다. 
 :::
 
-이제 실제로 우리가 관심있는 group들의 classifying space들을 살펴보자. Discrete이 아닌 group 중 가장 기본적인 예는 $G=S^1$이며 이는 통상적으로 $\mathbb{C}^\times$에 들어있는 길이 $1$짜리 복소수들 $e^{2\pi it}$들의 모임으로 생각한다. 그럼 $S^1$은 $\mathbb{C}^\infty\setminus\{0\}$ 위에 스칼라곱으로 free하게 작용한다. 
+이제 실제로 우리가 관심있는 group들의 classifying space들을 살펴보자. Discrete이 아닌 group 중 가장 기본적인 예는 $G=S^1$이며 이는 보편적으로 $\mathbb{C}^\times$에 들어있는 길이 $1$짜리 복소수들 $e^{2\pi it}$들의 모임으로 생각한다. 그럼 $S^1$은 $\mathbb{C}^\infty\setminus\{0\}$ 위에 스칼라곱으로 free하게 작용한다. 
 
 이제 각각의 $\mathbb{C}^n\setminus 0$을 radial deformation retract를 통해 단위구면 
 
@@ -234,7 +241,7 @@ $$S^\infty\times_{S^1}\mathbb{C}\longrightarrow\CP^\infty$$
 을 얻는다. 점 $[\ell]\in\CP^\infty$ 위의 fiber를 살피면 equivalence class $[e,z]$는 unit vector $e$가 결정하는 직선 $\ell=\mathbb{C}e$의 원소 $ze\in\ell$와 같으므로, 이는 각 직선을 그 자신을 fiber로 갖는 tautological line bundle $\gamma$이다. 즉 [§벡터다발의 특성류, ⁋예시 8](/ko/math/algebraic_topology/characteristic_classes#ex8)에서 $\gamma$가 complex line bundle의 universal family가 되었던 것은 universal principal $S^1$-bundle에 $\mathbb{C}$를 붙인 결과가 정확히 $\gamma$이기 때문이며, 거꾸로 그곳에서 $\gamma$의 sphere bundle로 등장했던 $S^\infty$가 바로 $\E S^1$이다.
 
 ::: 예시 11 (선형군의 분류공간)
-위의 논의는 임의의 rank $n$ bundle로 일반화된다. 우선 일반적으로 topological group $G$의 연속적인 representation 
+위의 논의는 임의의 rank $n$ bundle로 일반화된다. 우선 일반적으로 topological group $G$의 continuous representation 
 
 $$G\rightarrow\GL(n;\mathbb{C})$$
 
@@ -291,11 +298,11 @@ $$H^\bullet(\B T;\mathbb{Z})=\mathbb{Z}[t_1,\ldots,t_n],\qquad \lvert t_i\rvert=
 는 $n$개의 degree $2$ generator로 이루어진 polynomial ring이다. 더 나아가 degree $2$ 부분 $H^2(\B T;\mathbb{Z})$은 $\Hom(T,S^1)$과 표준적으로 isomorphic하다.
 :::
 ::: 증명
-$\B T=(\CP^\infty)^n$이므로 $i$번째 인자로의 projection을 $\pi_i:\B T\rightarrow\CP^\infty$라 하자. 앞 절의 $\B S^1=\CP^\infty$ 계산으로부터 각 인자의 cohomology $H^\bullet(\CP^\infty;\mathbb{Z})=\mathbb{Z}[t]$는 각 degree에서 free abelian group이므로 [§코호몰로지, ⁋따름정리 10](/ko/math/algebraic_topology/cohomology#cor10)를 적용할 때 Tor 항이 나타나지 않는다. 따라서 cross product가 cohomology ring isomorphism
+$\B T=(\CP^\infty)^n$이므로 $i$번째 인자로의 projection을 $\pi_i:\B T\rightarrow\CP^\infty$라 하자. 앞 절의 $\B S^1=\CP^\infty$ 계산으로부터 각 인자의 cohomology $H^\bullet(\CP^\infty;\mathbb{Z})=\mathbb{Z}[t]$는 각 degree에서 finite rank의 free abelian group이므로, [§코호몰로지, ⁋따름정리 10](/ko/math/algebraic_topology/cohomology#cor10)과 [§코호몰로지, ⁋정리 5](/ko/math/algebraic_topology/cohomology#thm5)이 함께 주는 cohomology 판본의 Künneth 공식에서 $\Tor$ 항과 $\Ext$ 항이 모두 사라진다. 따라서 cross product가 각 degree에서 isomorphism이고 이는 [§합곱, ⁋명제 3](/ko/math/algebraic_topology/cup_products#prop3)에 의하여 graded algebra homomorphism이므로, 인자의 개수에 대한 귀납으로 ring isomorphism
 
 $$H^\bullet(\B T;\mathbb{Z})\cong\bigotimes_{i=1}^n \mathbb{Z}[t_i]=\mathbb{Z}[t_1,\ldots,t_n]$$
 
-을 주며 ([§합곱, ⁋명제 3](/ko/math/algebraic_topology/cup_products#prop3)), 여기서 generator $t_i$는 $i$번째 인자의 generator $t$를 $\pi_i$로 끌어당긴 것, 곧 $t_i=\pi_i^\ast t$이다.
+을 얻으며, 여기서 generator $t_i$는 $i$번째 인자의 generator $t$를 $\pi_i$로 끌어당긴 것, 곧 $t_i=\pi_i^\ast t$이다.
 
 이제 degree $2$ 부분을 보자. *Character* $\rchi:T\rightarrow S^1$는 functoriality에 의해
 
@@ -341,8 +348,5 @@ $$c(E)\vert_{\B T}=\prod_{i=1}^n(1+t_i);\qquad c_i\vert_{\B T}=e_i(t_1,\ldots,t_
 
 **참고문헌**
 
-**[Mil]** J. W. Milnor, *Construction of universal bundles, II*, Annals of Mathematics **63** (1956), 430–436.  
-**[MS]** J. W. Milnor and J. D. Stasheff, *Characteristic Classes*, Annals of Mathematics Studies 76, Princeton University Press, 1974.  
-**[Hat]** A. Hatcher, *Algebraic Topology*, Cambridge University Press, 2002.  
-**[tD]** T. tom Dieck, *Algebraic Topology*, EMS Textbooks in Mathematics, European Mathematical Society, 2008.  
-**[Hus]** D. Husemoller, *Fibre Bundles*, 3rd ed., Graduate Texts in Mathematics 20, Springer, 1994.
+**[Hat]** A. Hatcher, *Vector Bundles and K-Theory*, online notes, 2017.  
+**[MS]** J. W. Milnor and J. D. Stasheff, *Characteristic Classes*, Annals of Mathematics Studies 76, Princeton University Press, 1974.

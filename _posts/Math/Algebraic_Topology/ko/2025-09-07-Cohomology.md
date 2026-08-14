@@ -40,7 +40,7 @@ $$0 \rightarrow Z_\bullet \rightarrow C_\bullet \rightarrow B_{\bullet-1}\righta
 
 $$0 \rightarrow Z_\bullet\otimes_\mathbb{Z}A \rightarrow C_\bullet\otimes_\mathbb{Z}A \rightarrow B_{\bullet-1}\otimes_\mathbb{Z}A\rightarrow 0$$
 
-또한 split short exact sequence이다. Splitting은 direct sum 분해 $C_\bullet\cong Z_\bullet\oplus B_{\bullet-1}$을 주고 tensor는 direct sum과 교환하므로, 이 분해가 $\otimes_\mathbb{Z}A$ 이후에도 그대로 유지되기 때문이다. 이 때, 이들을 풀어쓰면 다음의 commutative diagram 
+또한 split short exact sequence이다. Splitting은 direct sum decomposition $C_\bullet\cong Z_\bullet\oplus B_{\bullet-1}$을 주고 tensor는 direct sum과 교환하므로, 이 분해가 $\otimes_\mathbb{Z}A$ 이후에도 그대로 유지되기 때문이다. 이 때, 이들을 풀어쓰면 다음의 commutative diagram 
 
 {% diagram Math/Algebraic_Topology/Cohomology-1.svg width="31.09em" alt="snake_lemma" %}
 
@@ -113,7 +113,7 @@ $$C_\bullet(X):\qquad\cdots \rightarrow C_{k+1}(X)\rightarrow C_k(X) \rightarrow
 
 $$(C^\vee)^\bullet(X;A):\qquad\cdots \leftarrow \Hom_\mathbb{Z}(C_{k+1}(X), A)\leftarrow\Hom_\mathbb{Z}(C_k(X),A)\leftarrow\Hom_\mathbb{Z}(C_{k-1}(X),A)\leftarrow\cdots$$
 
-를 생각할 수 있다. 이는 [\[대수적 구조\] §가군의 직접곱과 직합, 텐서곱, ⁋정리 6](/ko/math/algebraic_structures/operations_of_modules#thm6)에 의하여 
+를 생각할 수 있다. 만일 $A$가 commutative ring이라면, ring homomorphism $\mathbb{Z}\rightarrow A$에 대한 [\[대수적 구조\] §스칼라의 변환, ⁋명제 6](/ko/math/algebraic_structures/change_of_base_ring#prop6)의 adjunction은 임의의 abelian group $M$과 $A$-module $N$에 대하여 isomorphism $\Hom_A(M\otimes_\mathbb{Z}A,N)\cong\Hom_\mathbb{Z}(M,N)$을 준다. 따라서 이 경우 위의 chain complex를 
 
 $$\qquad \cdots\leftarrow\Hom_A(C_{k+1}(X;A),A)\leftarrow \Hom_A(C_k(X;A),A)\leftarrow \Hom_A(C_{k-1}(X;A),A)\leftarrow\cdots$$
 
@@ -211,7 +211,7 @@ $$H^0_\dR(\mathbb{R}^n)=\mathbb{R}$$
 
 이다. 
 
-이러한 방식으로 정의된 de Rham cohomology 또한 [정의 2](#def2)의 모든 조건들을 만족하며, 따라서 cohomology theory의 유일성 (그리고 임의의 singular chain을 smooth chain으로 근사할 수 있다는 사실)에 의해 $\mathbb{R}$ 계수의 singular cohomology와 de Rham cohomology가 같다는 것을 확인할 수 있다. 위의 계산은 그럼 [§호몰로지, ⁋명제 11](/ko/math/algebraic_topology/homology#prop11)의 계산을 [명제 3](#prop3)을 통해 $\mathbb{R}$-valued cohomology로 옮겨온 것에 불과하다. 
+이러한 방식으로 정의된 de Rham cohomology 또한 smooth manifold들의 pair들의 category 위에서 [정의 2](#def2)의 모든 조건들을 만족하며, 따라서 cohomology theory의 유일성, 임의의 singular chain을 smooth chain으로 근사할 수 있다는 사실에 의해 $\mathbb{R}$ 계수의 singular cohomology와 de Rham cohomology가 같다는 것을 확인할 수 있다. 위의 계산은 그럼 [§호몰로지, ⁋명제 11](/ko/math/algebraic_topology/homology#prop11)의 계산을 [명제 3](#prop3)을 통해 $\mathbb{R}$-valued cohomology로 옮겨온 것에 불과하다. 
  
 ## (코)호몰로지의 계수
 

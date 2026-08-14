@@ -26,7 +26,7 @@ drift_needed: true
 여기서 fiber bundle이란 [§호모토피의 계산, ⁋참고 5](/ko/math/algebraic_topology/fibrations#rmk5)에서와 같이 밑공간이 열린집합들로 덮여 각 $U$ 위에서 $\pi^{-1}(U)$가 $U\times F$와 자연스럽게 homeomorphic한, 국소적으로 자명한 사상을 뜻한다. 이러한 $U$를 *trivializing open*이라 부르자.
 
 ::: 정리 1 (Leray–Hirsch)
-Paracompact 밑공간 $B$ 위의 fiber bundle $\pi:E\rightarrow B$의 fiber $F$에 대하여, $H^\bullet(F;\mathbb{Z})$가 유한 rank의 자유 abelian group이라 하자. 만일 class들 $a_1,\ldots,a_r\in H^\bullet(E;\mathbb{Z})$이 존재하여 각 fiber로의 restriction $a_1\vert_F,\ldots,a_r\vert_F$이 $H^\bullet(F;\mathbb{Z})$의 basis를 이룬다면, $H^\bullet(E;\mathbb{Z})$은 $a_1,\ldots,a_r$을 basis로 하는 $H^\bullet(B;\mathbb{Z})$ 위의 free module이다.
+Paracompact 밑공간 $B$ 위의 fiber bundle $\pi:E\rightarrow B$의 fiber $F$에 대하여, $H^\bullet(F;\mathbb{Z})$가 finite rank의 자유 abelian group이라 하자. 만일 class들 $a_1,\ldots,a_r\in H^\bullet(E;\mathbb{Z})$이 존재하여 각 fiber로의 restriction $a_1\vert_F,\ldots,a_r\vert_F$이 $H^\bullet(F;\mathbb{Z})$의 basis를 이룬다면, $H^\bullet(E;\mathbb{Z})$은 $a_1,\ldots,a_r$을 basis로 하는 $H^\bullet(B;\mathbb{Z})$ 위의 free module이다.
 :::
 
 즉, 각 원소 $\xi\in H^\bullet(E)$는 $\xi=\sum_j\pi^\ast(\alpha_j)\smile a_j$의 꼴로 밑공간의 class $\alpha_j\in H^\bullet(B)$을 계수로 하여 유일하게 적힌다. 이를 morphism의 언어로 다시 적으면, $a_j\vert_F$이 $H^\bullet(F)$의 basis이므로 이들로 $H^\bullet(F)$를 식별하여 얻는
@@ -42,11 +42,11 @@ $$\Phi_U:H^\bullet(U)\otimes H^\bullet(F)\rightarrow H^\bullet(E_U),\qquad \Phi_
 
 을 생각하자. $a_j\vert_{E_U}$은 여전히 각 fiber로 제한하면 basis를 주므로, 우리가 보일 것은 $U=B$에서 $\Phi_B=\Phi$가 isomorphism이라는 것이다. 이를 $B$의 유한 trivializing covering의 크기에 대한 귀납으로 보인다.
 
-우선 $U$가 하나의 trivializing open인 경우, $E_U\cong U\times F$이고 $\pi$는 projection이 된다. $H^\bullet(F)$가 유한 rank의 자유 abelian group이므로 [§코호몰로지, ⁋따름정리 10](/ko/math/algebraic_topology/cohomology#cor10)과 [§코호몰로지, ⁋정리 5](/ko/math/algebraic_topology/cohomology#thm5)이 함께 주는 cohomology 판본의 Künneth 공식에 의하여
+우선 $U$가 하나의 trivializing open인 경우, $E_U\cong U\times F$이고 $\pi$는 projection이 된다. $H^\bullet(F)$가 finite rank의 자유 abelian group이므로 [§코호몰로지, ⁋따름정리 10](/ko/math/algebraic_topology/cohomology#cor10)과 [§코호몰로지, ⁋정리 5](/ko/math/algebraic_topology/cohomology#thm5)이 함께 주는 cohomology 판본의 Künneth 공식에 의하여
 
 $$H^\bullet(U\times F)\cong H^\bullet(U)\otimes H^\bullet(F)$$
 
-이 성립하고, 따라서 $H^\bullet(U\times F)$는 $\{1\times(a_k\vert_F)\}_k$을 basis로 하는 유한 rank의 자유 $H^\bullet(U)$-module이다. $H^\bullet(U)\otimes H^\bullet(F)$ 또한 $\{1\otimes(a_k\vert_F)\}_k$을 basis로 하는 같은 rank의 자유 $H^\bullet(U)$-module이며, $\Phi_U$는 이를 원소 $a_j\vert_{E_U}\in H^\bullet(U\times F)$들로 보낸다. 그런데 $a_j\vert_{E_U}$을 한 fiber $\{u\}\times F$로 제한하면 $a_j\vert_F$이 되므로, Künneth 분해에서
+이 성립하고, 따라서 $H^\bullet(U\times F)$는 $\{1\times(a_k\vert_F)\}_k$을 basis로 하는 finite rank의 자유 $H^\bullet(U)$-module이다. $H^\bullet(U)\otimes H^\bullet(F)$ 또한 $\{1\otimes(a_k\vert_F)\}_k$을 basis로 하는 같은 rank의 자유 $H^\bullet(U)$-module이며, $\Phi_U$는 이를 원소 $a_j\vert_{E_U}\in H^\bullet(U\times F)$들로 보낸다. 그런데 $a_j\vert_{E_U}$을 한 fiber $\{u\}\times F$로 제한하면 $a_j\vert_F$이 되므로, Künneth 분해에서
 
 $$a_j\vert_{E_U}=1\times(a_j\vert_F)+(\text{$U$의 차수가 양인 항들})$$
 
@@ -88,7 +88,7 @@ Paracompact 밑공간 $B$ 위의 complex rank $n$ vector bundle $E\rightarrow B$
 
 $$H^\bullet(\CP^{n-1};\mathbb{Z})=\mathbb{Z}[c_1(\gamma)]/(c_1(\gamma)^n)$$
 
-이다. 따라서 $1,a,\ldots,a^{n-1}$의 fiber로의 restriction은 $H^\bullet(\CP^{n-1})$의 basis를 이룬다. $H^\bullet(\CP^{n-1})$은 유한 rank의 free module이므로 [정리 1](#thm1)에 의하여 $H^\bullet(\mathbb{P}(E))$은 $1,a,\ldots,a^{n-1}$을 basis로 하는 $H^\bullet(B)$ 위의 free module이다. 이 basis에서 $1$에 대응하는 성분이 $\pi^\ast\alpha=\pi^\ast\alpha\smile 1$이고 $\Phi$가 isomorphism이므로 $\pi^\ast$은 단사이다.
+이다. 따라서 $1,a,\ldots,a^{n-1}$의 fiber로의 restriction은 $H^\bullet(\CP^{n-1})$의 basis를 이룬다. $H^\bullet(\CP^{n-1})$은 finite rank의 free module이므로 [정리 1](#thm1)에 의하여 $H^\bullet(\mathbb{P}(E))$은 $1,a,\ldots,a^{n-1}$을 basis로 하는 $H^\bullet(B)$ 위의 free module이다. 이 basis에서 $1$에 대응하는 성분이 $\pi^\ast\alpha=\pi^\ast\alpha\smile 1$이고 $\Phi$가 isomorphism이므로 $\pi^\ast$은 단사이다.
 :::
 
 Generator로 $a=c_1(\gamma_E)$ 대신 그 dual $\gamma_E^\vee$의 first Chern class를 택해도 거듭제곱들이 같은 free module의 basis를 이루므로 결과는 같다. [정리 3](#thm3)은 projective bundle의 cohomology가 밑공간의 cohomology 위에서 tautological class $a$의 거듭제곱들로 완전히 펼쳐짐을 뜻한다.

@@ -44,7 +44,7 @@ $$\widetilde{f}(\mathrm{x})=\begin{cases}f_{\lvert\mathrm{x}\rvert}(\mathrm{x}/\
 남은 글에서 우리는 편의상 path-connected space들만 생각한다. Simply connected가 아닌 공간의 fundamental group을 계산하기 위해서는 여러 방법이 필요한데, 가장 기초적이고 핵심적인 방법 중 하나는 covering space를 사용하는 것이다. 
 
 ::: 정의 3
-Continuous surjection $p:E \rightarrow B$에 대하여, $B$의 열린집합 $U$가 $p$에 의해 *evenly covered<sub>고르게 덮임</sub>*이라는 것은 $p^{-1}(U)$를 $E$의 서로소인 열린집합들의 합집합 $\coprod_j V_j$로 쓸 수 있어 각각의 $p\vert_{V_j}:V_j\rightarrow U$가 homeomorphism이도록 할 수 있는 것이다. 만일 임의의 $x\in B$마다 $p$에 의해 evenly covered인 적당한 open neighborhood $U$가 존재한다면 $p$를 *covering map<sub>피복 사상</sub>*이라 부르고, $E$를 *covering space<sub>피복공간</sub>*라 부른다. 
+Continuous map $p:E \rightarrow B$에 대하여, $B$의 열린집합 $U$가 $p$에 의해 *evenly covered<sub>고르게 덮임</sub>*이라는 것은 $p^{-1}(U)$를 $E$의 서로소인 열린집합들의 합집합 $\coprod_j V_j$로 쓸 수 있어 각각의 $p\vert_{V_j}:V_j\rightarrow U$가 homeomorphism이도록 할 수 있는 것이다. 만일 임의의 $x\in B$마다 $p$에 의해 evenly covered인 적당한 open neighborhood $U$가 존재한다면 $p$를 *covering map<sub>피복 사상</sub>*이라 부르고, $E$를 *covering space<sub>피복공간</sub>*라 부른다. 
 :::
 
 정의는 다소 복잡하지만, 본질적으로는 다음의 그림을 염두에 두면 편하다. 
@@ -63,6 +63,18 @@ $$p:\mathbb{R}\rightarrow S^1;\quad t\mapsto (\cos 2\pi t, \sin 2\pi t)$$
 1. Covering map $p:E \rightarrow B$와 $B$의 부분공간 $A$에 대하여, $p\vert_{p^{-1}(A)}:p^{-1}(A) \rightarrow A$는 covering map이다. 
 2. 두 covering map $p_1:E_1 \rightarrow B_1$, $p_2:E_2\rightarrow B_2$에 대하여, $p_1\times p_2:E_1\times E_2 \rightarrow B_1\times B_2$는 covering map이다. 
 :::
+::: 증명
+1. 임의의 $x\in A$에 대하여 $p$에 의해 evenly covered인 $x$의 열린근방 $U\subseteq B$를 잡고 $p^{-1}(U)=\coprod_j V_j$라 하면, $U\cap A$는 $A$의 열린집합이고 다음의 식
+
+    $$p^{-1}(U\cap A)=\coprod_j \left(V_j\cap p^{-1}(A)\right)$$
+
+    이 성립하며, 각각의 $V_j\cap p^{-1}(A) \rightarrow U\cap A$는 homeomorphism $p\vert_{V_j}$를 부분공간으로 제한한 것이므로 다시 homeomorphism이다. 
+2. 마찬가지로 임의의 $(x_1,x_2)\in B_1\times B_2$에 대하여 evenly covered인 열린근방들 $U_1,U_2$를 잡아 $p_i^{-1}(U_i)=\coprod_j V^i_j$라 하면 다음의 식
+
+    $$(p_1\times p_2)^{-1}(U_1\times U_2)=\coprod_{j,k}V^1_j\times V^2_k$$
+
+    이 성립하며, $p_1\times p_2$를 각각의 $V^1_j\times V^2_k$로 제한한 것은 두 homeomorphism의 곱이므로 다시 homeomorphism이다. 
+:::
 
 ## 피복공간의 기본정리
 
@@ -70,11 +82,11 @@ Fundamental groupoid $\Pi_1:\Top \rightarrow \Grpd$의 functoriality를 이용�
 
 $$\Pi_1(p):\Pi_1(E) \rightarrow \Pi_1(B)$$
 
-을 정의한다. 특히 임의의 $y_0, y_1\in E$에 대하여, 다음의 homomorphism
+을 정의한다. 특히 임의의 $y_0, y_1\in E$에 대하여, 다음의 함수
 
 $$\Hom_{\Pi_1(E)}(y_0, y_1)\rightarrow \Hom_{\Pi_1(B)}(p(y_0), p(y_1))\tag{$\ast$}$$
 
-이 잘 정의된다. 만일 $B$가 path-connected이고 $p(y_0)=p(y_1)$라면, 이는 fundamental group $\pi_1(B)$로의 (groupoid) homomorphism이 될 것이다. 만일 $E$가 $B$의 fundamental group (혹은 groupoid)에 대한 정보를 모두 가지고 있다면 적어도 이 homomorphism이 surjective여야 한다. 
+가 잘 정의된다. 만일 $p(y_0)=p(y_1)=x$라면 ($\ast$)의 공역은 fundamental group $\pi_1(B,x)$이며, 특히 $y_0=y_1$인 경우 ($\ast$)는 group homomorphism $\pi_1(E,y_0)\rightarrow \pi_1(B,x)$가 된다. 만일 $E$가 $B$의 fundamental group (혹은 groupoid)에 대한 정보를 모두 가지고 있다면 적어도 이 함수가 surjective여야 한다. 
 
 ::: 정의 5
 Continuous map $p:E\rightarrow B$를 고정하자. 그럼 임의의 continuous map $f:X \rightarrow B$에 대하여, $f$의 $p$에 대한 *lifting<sub>올림</sub>*이란 식 $p\circ\widetilde{f}=f$를 만족하는 $\widetilde{f}:X\rightarrow E$를 의미한다. 
@@ -86,7 +98,7 @@ Continuous map $p:E\rightarrow B$를 고정하자. 그럼 임의의 continuous m
 Covering map $p:E \rightarrow B$와 $E$의 임의의 한 점 $y_0$를 생각하자. 그럼 $x_0=p(y_0)$에서 시작하는 임의의 path $\alpha:I \rightarrow B$가 주어질 때마다, $y_0$에서 시작하는 lifting $\widetilde{\alpha}:I \rightarrow E$가 유일하게 존재한다. 
 :::
 ::: 증명
-우선 $p$가 covering map이라는 가정으로부터, $B$의 open covering $(U_i)$이 존재하여 각각의 $U_i$들이 $p$에 의해 evenly covered이도록 할 수 있다. 이제 $(\alpha^{-1}(U_i))$는 $I$의 open covering이므로 $I$를 덮는 finite subcover가 존재한다. 이제 Lebesgue 수 보조정리를 사용하여, $I$의 subdivision 
+우선 $p$가 covering map이라는 가정으로부터, $B$의 open covering $(U_i)$이 존재하여 각각의 $U_i$들이 $p$에 의해 evenly covered이도록 할 수 있다. 이제 $(\alpha^{-1}(U_i))$는 $I$의 open covering이므로 $I$를 덮는 finite subcover가 존재한다. 이제 Lebesgue number lemma를 사용하여, $I$의 subdivision 
 
 $$0=s_0<s_1<\cdots<s_n=1$$
 
@@ -186,7 +198,7 @@ $$\left\{\text{isomorphism classes of connected covering spaces of $B$}\right\}\
 
 $$\left\{\text{isomorphism classes of connected covering spaces of $B$}\right\}\simeq \left\{\text{conjugacy classes of subgroups of $\pi_1(B,x)$}\right\}$$
 
-를 얻는다. 이제 이들 각각의 category를 살펴보면, 이들은 그저 partially ordered set에 불과하며 ([\[범주론\] §범주, ⁋예시 3](/ko/math/category_theory/categories#ex3)) 이 equivalence는 poset 사이의 isomorphism임을 안다. 즉 다음의 결과를 얻는다. 
+를 얻는다. 이제 이들 각각에 한쪽에서 다른 쪽으로의 morphism이 존재한다는 관계로 순서를 주면, 이들은 그저 partially ordered set에 불과하며 ([\[범주론\] §범주, ⁋예시 3](/ko/math/category_theory/categories#ex3)) 이 equivalence는 poset 사이의 isomorphism임을 안다. 즉 다음의 결과를 얻는다. 
 
 ::: 따름정리 12 (Fundamental theorem of covering spaces, classical version)
 Path-connected, locally path-connected, semi-locally simply connected space $B$에 대하여, connected covering space들의 isomorphism class들의 집합과, $\pi_1(B)$의 subgroup의 conjugacy class들 사이의 Galois correspondence가 존재한다. 
@@ -200,7 +212,7 @@ $$\left\{\text{isomorphism classes of connected \textit{pointed} covering spaces
 
 $$\Aut(E_H/B)\cong N_{\pi_1(B,x)}(H)/H$$
 
-이 성립한다. 이를 $E_H$의 *Deck transformation group*이라 부른다. 더 일반적으로 (fiber $p^{-1}(x)$의 서로 다른 원소를 택하여 얻어지는) covering space들의 automorphism은 $\pi_1(B,x)$의 subgroup들에 inner automorphism을 취하는 것에 대응되며, 우리는 이를 *Deck transformation*이라 부른다.
+이 성립한다. 이를 $E_H$의 *Deck transformation group*이라 부르고, 그 원소를 *Deck transformation*이라 부른다.
 
 한편 $\pi_1(B,x)$의 subgroup(들의 conjugacy class들)의 poset에는 minimal한 원소 $\left\{e\right\}$가 존재한다. 그럼 위의 Galois correspondence에 의해 여기에 대응되는 *universal cover* $\widetilde{B}$가 존재한다. 이 covering space의 Deck transformation group은 $\pi_1(B,x)$와 isomorphic하며, $\widetilde{B}$는 simply connected이다.
 
@@ -212,17 +224,17 @@ $$\Aut(E_H/B)\cong N_{\pi_1(B,x)}(H)/H$$
 
 {% diagram Math/Algebraic_Topology/Covering_Spaces-3.svg width="7.54em" alt="union_as_colimit" %}
 
-이 colimit diagram인 것을 안다. 이 경우 우리는 이 diagram에 fundamental groupoid functor $\Pi_1$을 취해 $\Pi_1(X)$를 $\Pi_1(U)$, $\Pi_1(V)$, 그리고 $\Pi_1(U\cap V)$를 이용하여 나타내는 것을 목표로 할 것이다. 한편 [\[위상수학\] §준층, ⁋보조정리 1](/ko/math/topology/presheaves#lem1)는 임의의 open covering $(U_i)$에 대하여 다음의 diagram 
+이 colimit diagram인 것을 안다. 이 경우 우리는 이 diagram에 fundamental groupoid functor $\Pi_1$을 취해 $\Pi_1(X)$를 $\Pi_1(U)$, $\Pi_1(V)$, 그리고 $\Pi_1(U\cap V)$를 이용하여 나타내는 것을 목표로 할 것이다. 한편 [\[위상수학\] §준층, ⁋보조정리 1](/ko/math/topology/presheaves#lem1)에 의하여, 임의의 open covering $(U_i)$에 대하여 다음의 diagram 
   
-{% diagram Math/Algebraic_Topology/Covering_Spaces-4.svg width="8.27em" alt="general_union_colimit" %}
+{% diagram Math/Algebraic_Topology/Covering_Spaces-4.svg width="17.30em" alt="general_union_colimit" %}
 
 이 colimit diagram임을 안다. 우리의 주장은 만일 $(U_i)$와 이들의 finite intersection들의 fundamental groupoid가 모두 알려져 있다면 이들로부터 $\Pi_1(X)$의 fundamental groupoid를 계산할 수 있다는 것이다. 
 
 ::: 정리 13 (Seifert-van Kampen)
-위상공간 $X$의 path-connected open cover $\mathcal{O}=(U_i)$가 주어졌다 하고, $\mathcal{O}$의 원소들의 유한한 교집합이 다시 $\mathcal{O}$에 속한다고 가정하자. 그럼 $\mathcal{O}$-shaped diagram $\Pi_1:\mathcal{O}\rightarrow\Grpd$의 colimit이 존재하며 이는 $\Pi_1(X)$와 isomorphic하다. 
+위상공간 $X$의 open cover $\mathcal{O}=(U_i)$가 주어졌다 하고, $\mathcal{O}$의 원소들의 유한한 교집합이 다시 $\mathcal{O}$에 속한다고 가정하자. 그럼 $\mathcal{O}$-shaped diagram $\Pi_1:\mathcal{O}\rightarrow\Grpd$의 colimit이 존재하며 이는 $\Pi_1(X)$와 isomorphic하다. 
 :::
 ::: 증명
-즉 임의의 groupoid $\mathcal{G}\in\Grpd$와 임의의 cocone $\lambda:\Pi_1\vert_\mathcal{O}\Rightarrow \mathcal{G}$에 대하여, 각각의 $U\in \mathcal{O}$마다 $\widetilde{\lambda}$와 $\lambda$가 같아지도록 하는 $\widetilde{\lambda}$가 존재한다는 것을 보이면 된다. 당연히 우리는 임의의 $x\in X$마다, $x\in U$를 만족하는 $U$를 찾은 뒤 이 위에서는 $\lambda_U$가 정의되므로 $\widetilde{\lambda}(x)$를 이 값 $\lambda_U(x)$로 정의하면 된다. 이것이 $U$의 선택에 무관하다는 것은 $x$를 포함하는 임의의 $U_1,U_2$에 대해 $\lambda_{U_1}(x)$와 $\lambda_{U_2}(x)$는 모두 $\lambda_{U_1\cap U_2}(x)$와 같은 값을 가져야 한다는 것으로부터 자명하다. 한편 morphism에 대하여도 비슷한 식으로 정의를 할 수 있는데, 어떠한 $U\in \mathcal{O}$에 완전하게 포함되는 path $f$에 대해서는 위와 마찬가지 이유로 이 정의가 잘 정의되며, 유일하게 보여야 하는 것은 path가 단일한 $U\in \mathcal{O}$에 속해있지 않은 경우 어떻게 정의해야 할지에 대한 것이다. 그런데 이 경우 그냥 path의 concatenation을 사용하면 된다. 이것이 항상 정의되며 잘 정의된다는 것을 보이면 된다. 
+즉 임의의 groupoid $\mathcal{G}\in\Grpd$와 임의의 cocone $\lambda:\Pi_1\vert_\mathcal{O}\Rightarrow \mathcal{G}$에 대하여, 각각의 $U\in \mathcal{O}$마다 $\widetilde{\lambda}$와 $\lambda_U$가 같아지도록 하는 $\widetilde{\lambda}:\Pi_1(X)\rightarrow \mathcal{G}$가 유일하게 존재한다는 것을 보이면 된다. 당연히 우리는 임의의 $x\in X$마다, $x\in U$를 만족하는 $U$를 찾은 뒤, $U$ 위에서는 $\lambda_U$가 정의되므로 $\widetilde{\lambda}(x)$를 이 값 $\lambda_U(x)$로 정의하면 된다. 한편 morphism에 대하여도 비슷한 식으로 정의를 할 수 있는데, 어떠한 $U\in \mathcal{O}$에 완전하게 포함되는 path $f$에 대해서는 위와 마찬가지 이유로 이 정의가 잘 정의되며, 유일하게 보여야 하는 것은 path가 단일한 $U\in \mathcal{O}$에 속해있지 않은 경우 어떻게 정의해야 할지에 대한 것이다. 그런데 이 경우 그냥 path의 concatenation을 사용하면 된다. 이것이 항상 정의되며 잘 정의된다는 것을 보이면 된다. 
 :::
 
 이제 위의 [따름정리 12](#cor12)를 얻어낼 때와 마찬가지로 하나의 대상에서만 이 정리를 적용하고, 따라서 $\Grpd$를 $\Grp$로 바꿔준 후, $\Grp$의 pushout이 amalgamated free product임을 사용하면 다음의 결과를 얻는다. 

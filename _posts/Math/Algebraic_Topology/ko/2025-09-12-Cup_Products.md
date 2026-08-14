@@ -101,6 +101,12 @@ $$(H^\bullet(X;A), {\smile}, 1)$$
 
 위에서 증명한 성질은 functor $H^\bullet(-;A)$의 대상들이, 처음 정의할 때는 $\lMod{A}$로의 functor로 정의하였지만, 최종적으로는 $\gr_{\mathbb{N}}\Alg{A}$에 도착한다는 것을 보여준다. 그렇다면 $H^\bullet(-;A)$가 $\Top$에서 $\gr_\mathbb{N}\Alg{A}$로의 functor인지를 궁금해하는 것이 당연하다. 
 
+이를 다루기 위해서는 우선 $\times$의 정의역인 $H^\bullet(X;A)\otimes_A H^\bullet(Y;A)$를 어떤 $A$-algebra로 볼 것인지를 정해야 한다. 이를 위해 우리는 이 위에 graded tensor product의 곱, 즉 homogeneous class들 $\alpha_1,\alpha_2\in H^\bullet(X;A)$와 $\beta_1,\beta_2\in H^\bullet(Y;A)$에 대하여
+
+$$(\alpha_1\otimes\beta_1)(\alpha_2\otimes\beta_2)=(-1)^{\lvert\beta_1\rvert\lvert\alpha_2\rvert}(\alpha_1\smile\alpha_2)\otimes(\beta_1\smile\beta_2)$$
+
+로 정의된 곱셈을 준다. 
+
 ::: 명제 3
 임의의 위상공간 $X,Y$와 commutative ring $A$에 대하여, 
 
@@ -113,11 +119,15 @@ $$\times: H^\bullet(X;A)\otimes_A H^\bullet(Y;A) \rightarrow H^\bullet(X\times Y
 
 {% diagram Math/Algebraic_Topology/Cup_Products-1.svg width="41.10em" alt="functoriality_of_cup_products" %}
 
-의 commutativity이다. 이는 임의의 $\alpha_1,\alpha_2\in H^\bullet(X;A)$와 임의의 $\beta_1,\beta_2\in H^\bullet(Y;A)$에 대하여, 
+의 commutativity이며, 왼쪽 세로 화살표 $\smile\otimes\smile$는 위에서 부여한 graded tensor product의 곱셈을 뜻한다. 식으로 풀어쓰면 이는 임의의 homogeneous class들 $\alpha_1,\alpha_2\in H^\bullet(X;A)$와 $\beta_1,\beta_2\in H^\bullet(Y;A)$에 대하여, 
 
-$$(\alpha_1\times\beta_1)(\alpha_2\times\beta_2)=\Delta_{X\times Y}^\ast ((\alpha_1\times\beta_1)\times(\alpha_2\times\beta_2))$$
+$$(\alpha_1\times\beta_1)(\alpha_2\times\beta_2)=\Delta_{X\times Y}^\ast (\alpha_1\times\beta_1\times\alpha_2\times\beta_2)=(-1)^{\lvert\beta_1\rvert\lvert\alpha_2\rvert}(\alpha_1\smile\alpha_2)\times(\beta_1\smile\beta_2)$$
 
-이고, 이제 우변이 $\alpha_1\times\beta_1\times\alpha_2\times\beta_2$의 꼴이므로 이를 다시 적절하게 묶어주면 된다. 이것이 graded homomorphism인 것은 $\times$가 $H^p(X;A)\otimes_A H^q(Y;A)$를 $H^{p+q}(X\times Y;A)$로 보내는 데에서, $1$을 보존하는 것은 $X\times Y$의 임의의 singular 0-simplex가 $\AW$에 의해 그 두 projection의 tensor로 보내지는 데에서 나온다.
+이 성립함을 보이는 것과 같다. 두 번째 등호를 위해 가운데 두 factor를 맞바꾸는 homeomorphism $T:X\times X\times Y\times Y\rightarrow X\times Y\times X\times Y$를 생각하면, $\Delta_{X\times Y}=T\circ(\Delta_X\times\Delta_Y)$이므로 가운데 항은 $(\Delta_X\times\Delta_Y)^\ast T^\ast(\alpha_1\times\beta_1\times\alpha_2\times\beta_2)$와 같다. 그럼 두 factor를 맞바꾸는 homeomorphism $\tau:X\times Y\rightarrow Y\times X$에 대하여 [명제 2](#prop2)와 같은 acyclic models 논증이 주는 식 $\tau^\ast(\beta\times\alpha)=(-1)^{\lvert\alpha\rvert\lvert\beta\rvert}\alpha\times\beta$를 $T=\id_X\times\tau\times\id_Y$에 적용하면
+
+$$T^\ast(\alpha_1\times\beta_1\times\alpha_2\times\beta_2)=(-1)^{\lvert\beta_1\rvert\lvert\alpha_2\rvert}\alpha_1\times\alpha_2\times\beta_1\times\beta_2$$
+
+를 얻고, 마지막으로 cochain 레벨에서 $\AW$와 $\Hom_A(-,A)$가 functorial이므로, $\times$의 naturality $(f\times g)^\ast(\mu\times\nu)=(f^\ast\mu)\times(g^\ast\nu)$를 $\Delta_X\times\Delta_Y$에 적용하면 $\Delta_X^\ast(\alpha_1\times\alpha_2)=\alpha_1\smile\alpha_2$와 $\Delta_Y^\ast(\beta_1\times\beta_2)=\beta_1\smile\beta_2$로부터 원하는 식이 나온다. 이것이 graded homomorphism인 것은 $\times$가 $H^p(X;A)\otimes_A H^q(Y;A)$를 $H^{p+q}(X\times Y;A)$로 보내는 데에서, $1$을 보존하는 것은 $X\times Y$의 임의의 singular 0-simplex가 $\AW$에 의해 그 두 projection의 tensor로 보내지는 데에서 나온다.
 :::
 
 그럼 이를 바탕으로 cup product의 functoriality 또한 보일 수 있다.
@@ -130,7 +140,7 @@ $$f^\ast(\alpha\smile\beta)=(f^\ast\alpha)\smile(f^\ast\beta)$$
 이 성립한다. 
 :::
 
-앞선 [명제 3](#prop3)에 의해 우리는 다음 diagram
+앞선 증명에서 쓴 $\times$의 naturality $(f\times f)^\ast(\alpha\times\beta)=(f^\ast\alpha)\times(f^\ast\beta)$에 의해 우리는 가로 방향이 $\times$이고 세로 방향이 각각 $f^\ast\otimes f^\ast$와 $(f\times f)^\ast$인 다음 diagram
 
 {% diagram Math/Algebraic_Topology/Cup_Products-2.svg width="21.22em" alt="functoriality_1" %}
 
@@ -169,21 +179,32 @@ $$\beta\frown \sigma=\sum_i(-1)^{\lvert\beta\rvert\lvert\sigma_i\rvert}\beta(\ta
 ::: 정의 5
 위와 같이 정의된 함수
 
-$$\frown:H^p(X;A)\otimes H_{p+q}(X;A) \rightarrow H_q(X;A)$$
+$${\frown}:H^p(X;A)\otimes H_{p+q}(X;A) \rightarrow H_q(X;A)$$
 
-를 *cap product<sub>교적</sub>*라 부른다. 
+를 *cap product<sub>교곱</sub>*라 부른다. 
 :::
 
 즉 $\frown$은 degree $p+q$의 homology chain과 degree $p$의 cohomology chain을 받아서, homology chain의 degree $p$인 부분과 cohomology chain을 Kronecker pairing을 통해 연산한 후, 이 상수를 남아있는 degree $q$의 homology chain에 scalar multiplication을 해 주어 얻어지는 것이다. 이는 다소 작위적인 정의로 보일 수 있으나 [§Acyclic models theorem, ⁋정리 3](/ko/math/algebraic_topology/acyclic_models_theorem#thm3)의 유일성에 의해 유일하게 말이 되는 정의라 할 수 있다. 뿐만 아니라, 이 표현으로부터 이것이 정확하게 interior product에 해당하는 연산임을 안다.
 
-그럼 다음이 성립한다.
+한편 Alexander-Whitney map은 부분공간 $X_0\subseteq X$의 chain을 다시 $X_0$의 chain들의 tensor로 보내므로, 위의 구성은 pair에 대해서도 그대로 작동한다. 실제로 $\beta$가 $C_p(X_0)$ 위에서 소멸한다면 $X_0$의 chain $\sigma$에 대하여 $\beta(\tau_i)$들이 모두 $0$이 되어 $\beta\frown\sigma=0$이므로, $\frown$은 relative chain들로 내려간다. 이렇게 얻어지는 *relative cap product*
+
+$${\frown}:H^p(X,X_0;A)\otimes H_{p+q}(X,X_0;A) \rightarrow H_q(X;A)$$
+
+또한 앞으로 같은 기호로 적기로 하며, $X_0=\emptyset$인 경우가 [정의 5](#def5)이다. 그럼 다음이 성립한다.
 
 ::: 명제 6 (Projection formula)
-연속함수 $f:X \rightarrow Y$와 $\beta\in H^q(Y;A)$, 그리고 $\sigma\in H_{p+q}(X;A)$에 대하여 다음의 식
+Pair들 사이의 연속함수 $f:(X,X_0) \rightarrow (Y,Y_0)$와 $\beta\in H^q(Y,Y_0;A)$, 그리고 $\sigma\in H_{p+q}(X,X_0;A)$에 대하여 다음의 식
 
 $$f_\ast(f^\ast\beta\frown\sigma)=\beta\frown f_\ast\sigma$$
 
 이 성립한다. 
+:::
+::: 증명
+$\sigma$를 대표하는 relative cycle에 Alexander-Whitney map을 취해 $\AW(\sigma)=\sum_i\sigma_i\otimes\tau_i$로 적자. 그럼 $(f^\ast\beta)(\tau_i)=\beta(C_\bullet(f)(\tau_i))$이므로 [정의 5](#def5)를 유도할 때의 명시식으로부터
+
+$$C_\bullet(f)(f^\ast\beta\frown\sigma)=\sum_i(-1)^{\lvert\beta\rvert\lvert\sigma_i\rvert}\beta(C_\bullet(f)(\tau_i))C_\bullet(f)(\sigma_i)$$
+
+를 얻는다. 한편 $\AW$는 natural이므로 $\AW(C_\bullet(f)(\sigma))=\sum_i C_\bullet(f)(\sigma_i)\otimes C_\bullet(f)(\tau_i)$이고 $C_\bullet(f)$는 degree를 보존하므로, 같은 명시식을 $\beta$와 $C_\bullet(f)(\sigma)$에 적용하면 $\beta\frown C_\bullet(f)(\sigma)$ 또한 위와 같은 식이 된다. 마지막으로 $f$가 $X_0$를 $Y_0$ 안으로 보내므로 $C_\bullet(f)$는 $C_\bullet(X_0)$를 $C_\bullet(Y_0)$로 보내고, 따라서 $\beta$가 $C_\bullet(Y_0)$ 위에서 소멸하면 $f^\ast\beta$ 또한 $C_\bullet(X_0)$ 위에서 소멸한다. 즉 양변의 cap product가 모두 relative class 위에서 뜻을 가지며, 이를 homology로 내리면 원하는 식을 얻는다. 
 :::
 
 --- 

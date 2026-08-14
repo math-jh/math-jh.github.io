@@ -23,7 +23,7 @@ drift_needed: true
 이제 우리는 이를 더 일반화하여 $p^{-1}(x)$ 위에 (discrete set이 아닌) 추가적인 구조가 있는 경우를 살펴본다. 가장 일반적인 정의는 다음과 같다. 
 
 ::: 정의 1
-위상공간 사이의 continuous surjection $p:E \rightarrow B$, 그리고 위상공간 $F$에 대하여 *fiber bundle<sub>올다발</sub>*이라는 것은 각각의 $x\in B$마다 열린집합 $U$가 존재하여, 다음의 diagram
+위상공간 사이의 continuous surjection $p:E \rightarrow B$와 위상공간 $F$에 대하여, $p$가 fiber space $F$를 갖는 *fiber bundle<sub>올다발</sub>*이라는 것은 각각의 $x\in B$마다 $x$를 포함하는 열린집합 $U$가 존재하여, 다음의 diagram
 
 {% diagram Math/Algebraic_Topology/Stiefel_Whitney_Classes-1.svg width="10.09em" alt="fiber_bundle" %}
 
@@ -39,11 +39,11 @@ drift_needed: true
 우선 우리는 $F$가 벡터공간일 경우를 생각한다. Fiber $F$가 topological group일 경우, $F$는 이미 위상구조가 부여되어 있으므로 [정의 1](#def1)에서 product space $U\times F$의 위상구조가 명확하지만 벡터공간일 경우는 다소 애매하다. 가장 일반적인 세팅으로는 topological ring $\mathbb{K}$이 작용하는 topological vector space $V$ 개념을 사용하면 되지만, 우리는 편의를 위해 당장은 $F$의 base field가 $\mathbb{R}$이고, $F$는 canonical inner product로부터 오는 metric topology가 부여된 공간인 경우만 생각하기로 한다.
 
 ::: 정의 2
-Fiber bundle $p:E \rightarrow B$에 대하여, fiber space $F$가 위와 같이 위상구조가 주어진 $\mathbb{R}$-벡터공간이고, 추가로 임의의 $x\in B$와, [정의 1](#def1)의 homeomorphism $\phi:U\times  F\rightarrow p^{-1}(U)$에 대하여 다음의 함수
+Fiber bundle $p:E \rightarrow B$가 *vector bundle<sub>벡터다발</sub>*이라는 것은, fiber space $F$가 위와 같이 위상구조가 주어진 $\mathbb{R}$-벡터공간이고, 추가로 각각의 $x\in B$마다 $x$를 포함하는 열린집합 $U$와 [정의 1](#def1)의 homeomorphism $\phi:U\times  F\rightarrow p^{-1}(U)$가 존재하여 다음의 함수
 
 $$\phi(x,-):F \rightarrow p^{-1}(x);\qquad v\mapsto \phi(x,v)$$
 
-가 벡터공간 사이의 isomorphism인 것이다. 
+가 벡터공간 사이의 isomorphism이 되는 것이다. 
 :::
 
 이를 통해 각각의 fiber $p^{-1}(x)$에는 $F$로부터 물려받는 vector space 구조가 정의된다. 일반적으로 두 vector bundle $p_1:E_1 \rightarrow B_1$과 $p_2:E_2\rightarrow B_2$가 주어졌을 때, 이들 사이의 *morphism*은 연속함수들의 commutative diagram
@@ -55,7 +55,7 @@ $$\phi(x,-):F \rightarrow p^{-1}(x);\qquad v\mapsto \phi(x,v)$$
 한편 위의 [정의 2](#def2)에서, 우리는 $F$가 $\mathbb{R}$-벡터공간인 경우만 생각하여, $\mathbb{R}^n$ 위에 정의된 inner product 구조와 $\mathbb{R}$의 위상구조를 사용하여 이 위에 위상구조를 정의했다. 하지만 엄밀히 말하자면 여기서 필요한 정보는 오직 vector space $F$의 위상구조 뿐으로, $F$를 inner product space로 보았을 때 이는 *Euclidean bundle*이라 부른다. 어쨌든 우리는 대체로 $\mathbb{R}$-벡터공간만 생각할 것이므로 이러한 차이는 넘어가기로 한다. 
 
 ::: 예시 3
-Trivial bundle이 아닌 예시로는 뫼비우스 띠의 orientation double cover가 있다. 한편 [§푸앵카레 쌍대성, ⁋예시 5](/ko/math/algebraic_topology/Poincare_duality#ex5)에서 우리는 $S^1$의 non-trivial cover또한 생각했었는데, 이는 다음과 같이 기하학적으로 일반화할 수 있다. 
+Trivial bundle이 아닌 예시로는 $S^1$ 위의 line bundle로 생각한 뫼비우스 띠가 있다. 한편 [§푸앵카레 쌍대성, ⁋예시 5](/ko/math/algebraic_topology/Poincare_duality#ex5)에서 우리는 $S^1$의 non-trivial cover또한 생각했었는데, 이는 다음과 같이 기하학적으로 일반화할 수 있다. 
 
 $n+1$차원 벡터공간 $\mathbb{R}^{n+1}$에 대하여, 원점을 지나는 직선들의 공간을 우리는 *projective $n$-space*라 부르고 $\RP^n$으로 표기한다. 원점을 지나는 직선 위의 점들 중, 원점까지의 거리가 $1$인 두 점은 같은 직선을 지정하므로, 우리는 이를 unit $n$-sphere $S^n$ 위의 antipodal point들을 identify하여 얻어지는 quotient space로 생각할 수 있다. 
 
@@ -65,7 +65,7 @@ $$E(\gamma_n^1)=\{(x,v)\in \RP^n\times \mathbb{R}^{n+1}\mid v\in \span(x)\}$$
 
 으로 정의되며, projection $\gamma_n^1:E(\gamma_n^1)\rightarrow \RP^n$는 첫 번째 좌표로의 projection이다. 즉 $\gamma_n^1$는 각 점 $x\in \RP^n$마다, $x$가 원래 $\mathbb{R}^{n+1}$에 있을 때 속해있던 바로 그 직선을 붙여준 것이다.
 
-이는 trivial bundle이 아니다. 만일 이것이 trivial bundle이었다면, non-vanishing continuous section $\RP^n\rightarrow E(\gamma_n^1)$이 존재했을 것이다. 가령 $B$의 모든 점에 fiber의 $1$을 대응시키는 함수가 그러하다. 그런데 임의의 section $s:\RP^n \rightarrow E(\gamma_n^1)$이 주어졌다 하고, quotient map $q:S^n \rightarrow \RP^n$을 사용한 다음의 합성
+$n\geq 1$일 때 이는 trivial bundle이 아니다. 만일 이것이 trivial bundle이었다면, non-vanishing continuous section $\RP^n\rightarrow E(\gamma_n^1)$이 존재했을 것이다. 가령 $B$의 모든 점에 fiber의 $1$을 대응시키는 함수가 그러하다. 그런데 임의의 section $s:\RP^n \rightarrow E(\gamma_n^1)$이 주어졌다 하고, quotient map $q:S^n \rightarrow \RP^n$을 사용한 다음의 합성
 
 $$S^n \overset{q}{\longrightarrow} \RP^n \overset{s}{\longrightarrow} E\overset{\pr_2}{\longrightarrow} \mathbb{R}^{n+1}$$
 
@@ -81,12 +81,21 @@ $$t(-\mathbf{x})=-t(\mathbf{x})$$
 ::: 명제 4
 위상공간 $B$ 위에 정의된 vector bundle $E$ of rank $n$에 대하여, $E$가 trivial bundle인 것은 everywhere linearly independent인 $n$개의 section들 $s_1,\ldots, s_n$이 존재하는 것과 동치이다. 
 :::
+::: 증명
+$E$가 trivial bundle이라면 isomorphism $\psi:B\times\mathbb{R}^n\rightarrow E$를 잡고 $s_i(x)=\psi(x,e_i)$로 두면, 각각의 $x$마다 $\psi(x,-)$가 isomorphism이므로 이들은 everywhere linearly independent인 section들이 된다. 
+
+거꾸로 그러한 section들이 주어졌다 하고
+
+$$\varphi:B\times\mathbb{R}^n\rightarrow E;\qquad (x,a)\mapsto \sum_i a_is_i(x)$$
+
+로 두자. 그럼 $\varphi$는 $\id_B$를 덮는 연속함수이고 각각의 fiber 위에서 linear이며, $s_1(x),\ldots,s_n(x)$가 일차독립이므로 이들이 $p^{-1}(x)$의 basis를 이루어 $\varphi(x,-)$는 isomorphism이 된다. 남은 것은 $\varphi^{-1}$의 연속성으로, [정의 2](#def2)의 local trivialization $\phi:U\times\mathbb{R}^n \rightarrow p^{-1}(U)$를 하나 잡아 $\phi^{-1}\circ\varphi$를 보면 이는 $(x,a)\mapsto (x,A(x)a)$의 꼴이고 여기서 $A:U\rightarrow \GL(n;\mathbb{R})$은 연속이다. 행렬의 역원을 취하는 연산이 연속이므로 $x\mapsto A(x)^{-1}$ 또한 연속이고, 따라서 $\varphi^{-1}$은 각각의 $U$ 위에서 연속이다. 
+:::
 
 한편 임의의 vector bundle $p:E \rightarrow B$와 임의의 연속함수 $f:B'\rightarrow B$가 주어졌을 때, 우리는 다음의 식
 
 $$f^\ast E=\{(x,v)\in B'\times E\mid f(x)=p(v)\}\subseteq B'\times E$$
 
-로 두어 새로운 vector bundle $f^\ast E \rightarrow B'$를 정의할 수 있다. 우리는 이를 *pullback bundle*이라 부르며, 어렵지 않게 임의의 vector bundle $E' \rightarrow B'$가 위의 조건을 만족한다면 $f^\ast E$를 factor through하는 것을 알 수 있다. 
+로 두어 새로운 vector bundle $f^\ast E \rightarrow B'$를 정의할 수 있다. 우리는 이를 *pullback bundle*이라 부르며, 어렵지 않게 임의의 vector bundle $E' \rightarrow B'$에 대하여 $f$를 덮는 bundle map $E'\rightarrow E$가 주어졌다면 이것이 $E'\rightarrow f^\ast E \rightarrow E$로 유일하게 factor through하는 것을 알 수 있다. 
 
 한편 임의의 두 vector bundle $p_1:E_1\rightarrow B_1$, $p_2:E_2\rightarrow B_2$가 주어진다면 이들의 곱 
 
@@ -136,7 +145,7 @@ $$g_{ij}:U_{ij}=U_i\cap U_j \rightarrow \GL(n;\mathbb{R})$$
 
 $$g_{ij}\cdot g_{jk}\cdot g_{ki}=\id$$
 
-을 만족해야 하며, 만일 이 조건이 없다면 triple intersection $U_i\cap U_j\cap U_k$에서, $U_i$의 local trivialization을 $g_{ij}$를 통해 $U_j$로, 이를 다시 $g_{jk}$를 통해 $U_k$로, 이를 다시 $g_{ki}$를 통해 $U_i$로 가져왔을 때 trivialization이 달라져 있겠지만 실제로는 그렇지 않다는 것을 의미한다. 그럼 transition function들 $g_{ij}$들은 Čech 1-cochain들이 되며, 따라서 local trivialization $U_i\rightarrow \GL(n;\mathbb{R})$을 고정하면 rank $n$ vector bundle들의 isomorphism class들과 $1$-cochain들 사이의 일대일 대응이 있는 것을 안다. 즉, open cover $U$ 위에서 trivializable한 rank $n$ vector bundle들의 isomorphism class들과 $\check{H}^1(\mathcal{U}, \GL(n;\mathbb{R}))$ 사이의 일대일 대응이 있다.
+을 만족해야 하며, 만일 이 조건이 없다면 triple intersection $U_i\cap U_j\cap U_k$에서, $U_i$의 local trivialization을 $g_{ij}$를 통해 $U_j$로, 이를 다시 $g_{jk}$를 통해 $U_k$로, 이를 다시 $g_{ki}$를 통해 $U_i$로 가져왔을 때 trivialization이 달라져 있겠지만 실제로는 그렇지 않다는 것을 의미한다. 그럼 transition function들 $g_{ij}$들은 위의 조건에 의하여 Čech 1-cocycle을 이룬다. 이 때 각각의 $U_i$ 위의 local trivialization을 함수 $h_i:U_i\rightarrow \GL(n;\mathbb{R})$만큼 바꾸면 $g_{ij}$는 $h_ig_{ij}h_j^{-1}$로 바뀌므로, 같은 vector bundle을 주는 cocycle들은 이 관계로 identify되어야 한다. 즉, open cover $\mathcal{U}$ 위에서 trivializable한 rank $n$ vector bundle들의 isomorphism class들과 $\check{H}^1(\mathcal{U}, \GL(n;\mathbb{R}))$ 사이의 일대일 대응이 있다. 다만 $\GL(n;\mathbb{R})$은 비가환군이므로 여기에서의 $\check{H}^1$은 위의 differential로 정의되는 cohomology group이 아니라, cocycle 조건 $g_{ij}g_{jk}g_{ki}=\id$와 방금의 동치관계로 따로 정의되는 pointed set이다.
 
 앞서 우리는 [§푸앵카레 쌍대성, ⁋명제 7](/ko/math/algebraic_topology/Poincare_duality#prop7)에서 manifold $M$의 $A$-orientability가 다음의 group homomorphism
 
@@ -169,13 +178,13 @@ Vector bundle $E \rightarrow B$ of rank $n$과 vector bundle $F\rightarrow B$에
 4. (Normalization) [예시 3](#ex3)의 tautological line bundle $\gamma_1^1:E(\gamma_1^1)\rightarrow \RP^1$에 대하여, $w_1(\gamma_1^1)\neq 0$이다. 
 :::
 
-그럼 다음 결과들이 자명하다. 
+그럼 다음 결과들을 얻는다. 
 
 ::: 명제 6
-두 vector bundle $p_1:E_1\rightarrow B_1$, $p_2:E_2\rightarrow B_2$에 대하여, 만일 $p_1,p_2$이 isomorphic하다면 $w(E_1)=w(E_2)$이다. 특히, 만일 $p:E\rightarrow B$가 trivial bundle이라면 $w(E)=1$이다. 
+위상공간 $B$ 위에 정의된 두 vector bundle $p_1:E_1\rightarrow B$, $p_2:E_2\rightarrow B$에 대하여, 만일 $p_1,p_2$이 isomorphic하다면 $w(E_1)=w(E_2)$이다. 특히, 만일 $p:E\rightarrow B$가 trivial bundle이라면 $w(E)=1$이다. 
 :::
 
-첫째 주장은 자명하다. 둘째 주장의 경우, trivial bundle은 다음의 pullback
+첫째 주장의 경우, $E_1$과 $E_2$ 사이의 isomorphism은 $E_1\cong \id_B^\ast E_2$를 주므로, [정의 5](#def5)의 naturality에 의하여 $w(E_1)=\id_B^\ast w(E_2)=w(E_2)$가 된다. 둘째 주장의 경우, trivial bundle은 다음의 pullback
 
 {% diagram Math/Algebraic_Topology/Stiefel_Whitney_Classes-3.svg width="5.34em" alt="trivial_bundle" %}
 
@@ -187,7 +196,7 @@ Vector bundle $E \rightarrow B$ of rank $n$과 vector bundle $F\rightarrow B$에
 
 ## 그라스만 다양체
 
-더 일반적으로, 임의의 공간 위의 rank $k$ vector bundle은 *infinite Grassmannian* $\Gr(k,\mathbb{R}^\infty)$의 universal bundle $\gamma^k_\infty:E(\gamma_\infty^k)\rightarrow \Gr(k,\mathbb{R}^\infty)$을 pullback하여 얻어진다. 즉 임의의 vector bundle $p:E \rightarrow B$가 주어졌다면, $p$에서 $\gamma_k^\infty$로의 유일한 bundle map이 존재하여 다음의 diagram
+더 일반적으로, paracompact space 위의 임의의 rank $k$ vector bundle은 *infinite Grassmannian* $\Gr(k,\mathbb{R}^\infty)$의 universal bundle $\gamma^k_\infty:E(\gamma_\infty^k)\rightarrow \Gr(k,\mathbb{R}^\infty)$을 pullback하여 얻어진다. 즉 paracompact space $B$ 위의 임의의 vector bundle $p:E \rightarrow B$가 주어졌다면, $p$에서 $\gamma^k_\infty$로의 bundle map이 homotopy에 대해 유일하게 존재하여 다음의 diagram
 
 {% diagram Math/Algebraic_Topology/Stiefel_Whitney_Classes-4.svg width="8.86em" alt="universality" %}
 
@@ -233,21 +242,21 @@ $$\dim(X\cap F_{n-k+i-\lambda_i})\geq i$$
 
 $$F_0\subseteq F_1\subseteq\cdots\subseteq F_n$$
 
-를 고정했을 때 $X\cap F_i$의 차원이 언제 뛰었는지를 보여준다. 예를 들어 $X=F_k$일 때 이에 해당하는 partition은 $(0,0,\ldots,0)$이며, 이는 $X\cap F_i$들이 딜레이 없이, $i$가 증가함에 따라 처음 $k$개의 항에서 모든 차원의 점프가 완료된다는 뜻이다. 가령 $(0,1,0,\ldots,0)$은, $X\cap F_1$은 1차원, $X\cap F_2$도 $1$차원, $X\cap F_3$은 2차원이며 그 후로는 차원이 하나씩 딜레이 없이 뛴다는 것이다. 
+를 고정했을 때 $X\cap F_i$의 차원이 얼마나 일찍 뛰었는지를 보여준다. 즉 $\lambda_i=n-k+i-\sigma_i$는 $i$번째 점프가 가능한 가장 늦은 위치 $\sigma_i=n-k+i$로부터 얼마나 앞당겨졌는지를 재며, 이 때문에 $\lambda_i-\lambda_{i+1}=\sigma_{i+1}-\sigma_i-1\geq 0$이 되어 $\lambda$가 자동으로 감소수열이 된다. 예를 들어 $\lambda=(0,0,\ldots,0)$은 모든 점프가 가장 늦게 일어나는 generic한 경우로, 그 조건 $\dim(X\cap F_{n-k+i})\geq i$는 임의의 $k$-plane이 만족하므로 $\Omega_{(0,\ldots,0)}$은 Grassmannian 전체가 된다. 반대로 $X=F_k$일 때에는 $\dim(F_k\cap F_j)=\min(k,j)$이므로 $\sigma_i=i$, 즉 $\lambda_i=n-k$가 되어 이에 해당하는 partition은 full rectangle $(n-k,\ldots,n-k)$이고, 이는 Grassmannian의 한 점에 해당하는 가장 작은 경우이다. 
 
 이제 이를 바탕으로 다음의 부분집합
 
-$$\Omega_\lambda^\circ(F_\bullet)=\left\{V\in\Gr(k,F_n)\mid\text{$\dim(V\cap F_{n-k+i-\lambda_i})= i$ for all $1\leq i\leq k$}\right\}$$
+$$\Omega_\lambda^\circ(F_\bullet)=\left\{V\in\Gr(k,F_n)\mid\text{$\dim(V\cap F_{n-k+i-\lambda_i})= i$ and $\dim(V\cap F_{n-k+i-\lambda_i-1})= i-1$ for all $1\leq i\leq k$}\right\}$$
 
 을 생각하면, 이들은 각각 그 closure
 
 $$\Omega_\lambda(F_\bullet)=\left\{V\in\Gr(k,F_n)\mid\text{$\dim(V\cap F_{n-k+i-\lambda_i})\geq i$ for all $1\leq i\leq k$}\right\}$$
 
-안에서 open submanifold이며, 이들 $\Omega_\lambda(F_\bullet)$들은 inclusion 
+안에서 조밀한 열린 부분집합이며, 이들 $\Omega_\lambda(F_\bullet)$들은 그 mod $2$ fundamental class를 inclusion 
 
 $$\Omega_\lambda(F_\bullet)\hookrightarrow \Gr(k,\mathbb{R}^n)$$
 
-을 통하여 $H_\bullet(\Gr(k,\mathbb{R}^n);\mathbb{Z}/2)$의 homology class를 정의한다. 우리는 이들을 *Schubert cycle*이라 부르고, 이들의 Poincaré dual $\sigma_\lambda$을 *Schubert class*라 부른다. 이들은 degree $\lvert \lambda\rvert=\sum \lambda_i$의 cohomology class들이다. 이 때, 각각의 부분공간 $\Omega_\lambda(F_\bullet)$들은 flag $F_\bullet$의 선택에 의존하지만, 이들의 homology에서의 image인 Schubert cycle들은 $F_\bullet$의 선택에 의존하지 않고 따라서 Schubert class들도 그러하다. 또, $H^\bullet(\Gr(k,\mathbb{R}^n);\mathbb{Z}/2)$은 앞선 조건을 만족하는 partition $\lambda$들로 생성되는 polynomial algebra들이며, 따라서 우리는 이들 사이의 cup product 구조만 보면 충분하다.
+을 따라 밀어 $H_\bullet(\Gr(k,\mathbb{R}^n);\mathbb{Z}/2)$의 homology class를 정의한다. 우리는 부분공간 $\Omega_\lambda(F_\bullet)$을 *Schubert cycle*이라 부르고, 이렇게 얻어지는 homology class의 Poincaré dual $\sigma_\lambda$을 *Schubert class*라 부른다. 이들은 degree $\lvert \lambda\rvert=\sum \lambda_i$의 cohomology class들이다. 이 때, Schubert cycle 자체는 flag $F_\bullet$의 선택에 의존하지만, 이것이 정의하는 Schubert class는 $F_\bullet$의 선택에 의존하지 않는다. 또, $H^\bullet(\Gr(k,\mathbb{R}^n);\mathbb{Z}/2)$은 앞선 조건을 만족하는 partition $\lambda$들의 Schubert class $\sigma_\lambda$들을 $\mathbb{Z}/2$-module로서의 기저로 가지며, 따라서 우리는 이들 사이의 cup product 구조만 보면 충분하다.
 
 ::: 예시 7
 예를 들어 $H^\bullet(\Gr(2,\mathbb{R}^4);\mathbb{Z}/2)$를 보자. 우리는 여기에서 partition $(1,0)$에 해당하는 Schubert class $\sigma_{(1,0)}$의 제곱 
@@ -270,12 +279,16 @@ $$F_\bullet:\quad \langle e_1\rangle\subseteq \langle e_1,e_2\rangle\subseteq \l
 
 $$G_\bullet:\quad \langle e_1+e_4\rangle\subseteq\langle e_1+e_4,e_2+e_3\rangle\subseteq \langle e_1+e_4,e_2+e_3,e_2-e_3\rangle$$
 
-을 생각하자. 그럼 두 가지의 경우가 있는데, 우선 하나의 경우는 $F_2,F_2'$의 두 line으로 만들어지는 평면이 $G_3$에 포함되어있지 않은 경우이다. 예를 들어 $V$와 $F_2$가 $\span(e_1+e_2)$에서 만나고, $V$와 $F_2'$가 $\span(e_3+e_4)$에서 만나는 경우가 이에 해당한다. 이 경우, $V$는 정확하게 $\span(e_1+e_2,e_3+e_4)$로 쓰여질 수 있으며, 이는 $G_0,G_1$와는 $0$차원, $G_2,G_3$과는 $1$차원, 그리고 $G_4$에서야 $2$차원으로 만난다. 즉 이는 $(1,1)$에 해당하는 경우이다. 
+을 생각하자. 우선 $F_2\cap F_2'=0$이므로, 두 조건 $\dim(V\cap F_2)\geq 1$과 $\dim(V\cap F_2')\geq 1$을 함께 만족하는 $2$차원 부분공간은 정확히 $F_2$의 line $L$과 $F_2'$의 line $L'$의 합으로 나타난다. 즉 두 Schubert cycle의 교차는
 
-다른 하나의 경우는 $F_2,F_2'$의 두 line으로 만들어지는 평면이 $G_3$에 포함되는 경우이다. 가령 $V$와 $F_2$가 $\span(e_2)$에서 만나고, $V$와 $F_2'$이 $\span(e_3)$에서 만나는 경우를 생각하면 $V=\span(e_2,e_3)$이며 이는 $G_3$에 포함된다. 이 경우는 $(2,0)$에 해당된다. 
+$$S=\left\{L\oplus L'\mid L\subseteq F_2,\ L'\subseteq F_2'\right\}\cong \mathbb{P}^1\times\mathbb{P}^1$$
+
+이며, 우변의 두 항 앞에 계수 $1$이 하나씩 붙는 것은 $S$가 $G_\bullet$이 정하는 두 Schubert cycle 각각과 정확히 한 점에서 만나기 때문이다. 
+
+실제로 $\Omega_{(1,1)}(G)$의 조건은 $V\subseteq G_3=\left\{x\mid x_1=x_4\right\}$이므로, $L\oplus L'$이 여기에 속하려면 $L$과 $L'$ 각각에서 $x_1=x_4=0$이 강제되어 $L=\span(e_2)$와 $L'=\span(e_3)$만이 남는다. 반면 $\Omega_{(2,0)}(G)$의 조건은 $G_1=\langle e_1+e_4\rangle\subseteq V$인데, $e_1+e_4$를 $F_2\oplus F_2'$를 따라 쪼개면 $e_1$과 $e_4$가 나오므로 이번에는 $L=\span(e_1)$과 $L'=\span(e_4)$가 강제된다. 즉 두 교점은 각각 $\span(e_2,e_3)$과 $\span(e_1,e_4)$ 하나씩이고, 이것이 $\sigma_{(1,1)}$과 $\sigma_{(2,0)}$이 계수 $1$로 나타나는 이유이다. 
 :::
 
-더 일반적으로 우리는 이들 partition을 *Young diagram*으로 나타내고, 이를 이용하여 두 Schubert class의 cup product $\sigma_\lambda\smile\sigma_\mu$를 계산했을 때, $\lvert\nu\rvert=\lvert\lambda\rvert+\lvert\mu\rvert$를 만족하는 $\nu$에 대해 $\sigma_\nu$ 앞에 붙는 계수를 계산할 수 있다.
+더 일반적으로 우리는 이들 partition을 *Young diagram*으로 나타내고, 이를 이용하여 두 Schubert class의 cup product $\sigma_\lambda\smile\sigma_\mu$를 계산했을 때, $\lvert\nu\rvert=\lvert\lambda\rvert+\lvert\mu\rvert$를 만족하는 $\nu$에 대해 $\sigma_\nu$ 앞에 붙는 계수를 계산할 수 있다. 이 계수를 Young diagram으로부터 읽어내는 규칙을 *Littlewood-Richardson rule*이라 부른다.
 
 이제 우리는 $\Gr(k,\mathbb{R}^\infty)$와 그 위의 universal bundle을 정의해야 한다. 이를 위해 $\Gr(k,\mathbb{R}^n)$ 위의 tautological bundle을 먼저 정의한다. [예시 3](#ex3)과 같은 방식으로, $\Gr(k,\mathbb{R}^{n+k})$의 각각의 점마다 그 점에 해당하는 vector space를 달아주는 다음의 bundle
 
@@ -303,25 +316,23 @@ $$E(\gamma_\infty^k)=\varinjlim_{n\geq 0} E(\gamma^k_{k+n})$$
 
 직관적으로 $\Gr(k,\mathbb{R}^\infty)$는 각각의 $\Gr(k,\mathbb{R}^{k+n})$들을 이어붙여 complex 구조를 주는 것으로 생각할 수 있다. 뿐만 아니라 tautological bundle들 $E(\gamma^k_{n+k})$들도 이 구조와 호환되도록 붙어있게 된다. 
 
-Finite Grassmannian의 Schubert class들을 infinite Grassmannian으로 옮기는 것은 방향이 맞지 않다. 그러나, 위에서 설명했듯 infinite Grassmannian은 finite Grassmannian들을 subcomplex로 가지는 공간이며, 위에서 만든 Schubert cycle들은 이 inclusion들에 대해 잘 행동한다. 즉 partition $\lambda$에 해당하는 $\Gr(k,\mathbb{R}^{k+i})$의 Schubert cycle을 $\Gr(k,\mathbb{R}^{k+i})\rightarrow \Gr(k,\mathbb{R}^{k+i+1})$를 통해 집어넣은 것이나, $\Gr(k,\mathbb{R}^{k+i+1})$에서 바로 partition $\lambda$에 해당하는 Schubert cycle을 $\Gr(k,\mathbb{R}^{k+i})\subseteq \Gr(k,\mathbb{R}^{k+i+1})$과 교집합한 것이나 같은 결과를 준다.
+Finite Grassmannian의 Schubert cycle들을 infinite Grassmannian으로 옮기는 것은 방향이 맞지 않다. 우리의 convention에서 $\Omega_\lambda(F_\bullet)$은 codimension $\lvert\lambda\rvert$이므로 그 차원이 $n$과 함께 커지기 때문이다. 그러나, 위에서 설명했듯 infinite Grassmannian은 finite Grassmannian들을 subcomplex로 가지는 공간이며, 위에서 만든 Schubert class들은 이 inclusion들에 대해 잘 행동한다. 즉 새 방향을 flag의 맨 아래에 붙여 $F'_1$을 그 방향으로, $F'_{j+1}=F'_1\oplus F_j$로 잡으면 $\Omega_\lambda(F'_\bullet)$을 정의하는 조건을 $\Gr(k,\mathbb{R}^{k+i})$의 원소에 대해 읽은 것이 $\Omega_\lambda(F_\bullet)$을 정의하는 조건과 같아지므로, inclusion $\iota:\Gr(k,\mathbb{R}^{k+i})\hookrightarrow \Gr(k,\mathbb{R}^{k+i+1})$에 대하여 $\iota^\ast\sigma_\lambda=\sigma_\lambda$이다. 이렇게 각각의 $\lambda$마다 $\Gr(k,\mathbb{R}^\infty)$의 cohomology class $\sigma_\lambda$가 결정된다. 
 
 이제 $k$개의 partition들
 
-$$\lambda_1=(1,0,\cdots, 0),\quad \lambda_2=(2,0,\cdots,0),\qquad \lambda_k=(k,0,\cdots,0)$$
+$$\lambda_1=(1,0,\cdots, 0),\quad \lambda_2=(1,1,0,\cdots,0),\qquad \lambda_k=(1,\cdots,1)$$
 
-을 생각하자. 그럼 이들은 위의 논증에 의하여 $\Gr(k,\mathbb{R}^\infty)$의 homology class들이 되어 다음의 함수
-
-$$w_i: H_\bullet(\Gr(k,\mathbb{R}^\infty);\mathbb{Z}/2)\rightarrow \mathbb{Z}/2; \qquad \text{$w_i(\Omega_{\lambda_i}(F_\bullet))=1$ and is $0$ otherwise}$$
-
-들이 $i$번째 cohomology class $H^i(\Gr(k,\mathbb{R}^\infty);\mathbb{Z}/2)$에 있으며, 따라서 우리는 
+을 생각하자. 그럼 이들에 해당하는 Schubert class
 
 $$w_1\in H^1(\Gr(k,\mathbb{R}^\infty);\mathbb{Z}/2),\cdots, w_k\in H^k(\Gr(k,\mathbb{R}^\infty);\mathbb{Z}/2)$$
 
-임을 안다. 그럼 $H^\bullet(\Gr(k,\mathbb{R}^\infty);\mathbb{Z}/2)$는 *polynomial algebra로서* 이들 $w_i$에 의해 생성된다. 가령, 임의의 partition $(a_1,\cdots,a_n)$은 다음 monomial
+를 얻는다. $\Gr(k,\mathbb{R}^n)$에서 $\lambda_i$가 부여하는 조건은 $\dim(V\cap F_{n-k+i-1})\geq i$ 하나로 축약되며, 이는 tautological bundle의 $k-i+1$개 section이 독립성을 잃는 곳이므로, 앞에서 $w_i$를 그러한 section을 고르는 데 대한 obstruction class로 읽은 것이 바로 이것임을 안다. 반면 한 행짜리 $(i,0,\cdots,0)$의 Schubert class는 $w(\gamma^k_\infty)$의 형식적 역원 $\bar w$의 degree $i$ 성분이어서, $\bar w_2=w_1^2+w_2$와 같이 $i\geq 2$부터는 $w_i$와 다르다. 
+
+그럼 $H^\bullet(\Gr(k,\mathbb{R}^\infty);\mathbb{Z}/2)$는 <em-ko>polynomial algebra로서</em-ko> 이들 $w_i$에 의해 생성된다. 가령, monomial
 
 $$w_1^{a_1}w_2^{a_2}\cdots w_k^{a_k}$$
 
-에 대응되며 이는 $H^\bullet(\Gr(k,\mathbb{R}^\infty);\mathbb{Z}/2)$의 (무한히 많은) *$\mathbb{Z}/2$-module로서의* generator 중 하나가 되며 이는 앞에서 언급한 Littlewood-Richardson rule에 의해 계산된다. 이제 이들 $w_i$들은 Stiefel-Whitney class가 만족하는 공리들을 모두 만족하며, 이것이 pullback에 의해 보존되는 것으로부터 존재성이 증명된다.
+들은 이 ring의 (무한히 많은) <em-ko>$\mathbb{Z}/2$-module로서의</em-ko> 기저를 이루며, 앞에서 만든 Schubert class $\sigma_\lambda$들 또한 그러하다. 다만 각각의 degree에서 두 기저의 원소의 개수가 같을 뿐 이들은 서로 다른 기저이므로, partition의 항을 그대로 지수로 읽어 $\sigma_\lambda$를 monomial에 대응시킬 수는 없으며, 이들 사이의 cup product는 앞에서 언급한 Littlewood-Richardson rule에 의해 계산된다. 이제 이들 $w_i$들은 Stiefel-Whitney class가 만족하는 공리들을 모두 만족하며, 이것이 pullback에 의해 보존되는 것으로부터 존재성이 증명된다. 
 
 ---
 

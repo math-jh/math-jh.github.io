@@ -280,7 +280,7 @@ $$\pi_3(S^2)\cong\pi_3(S^3)\cong H_3(S^3)\cong\mathbb{Z}$$
 
 이 예시는 [명제 13](#prop13)가 주는 $\pi_i(S^n)=0$ ($i<n$) 이라는 소극적 정보 너머에서 구의 homotopy group이 얼마나 복잡할 수 있는지를 보여준다. 실제로 이러한 fibration을 겹겹이 쌓아 얻는 계산을 체계화하면, 밑공간과 fiber의 homology로부터 전공간의 homology (그리고 homotopy) 를 근사하는 강력한 장치인 Serre spectral sequence에 이르게 되며, 이것이 고차 homotopy group에 대한 현대적 계산의 출발점이 된다.
 
-## Serre 스펙트럼 열
+## Serre spectral sequence
 
 이 계산을 체계화하는 장치가 Serre spectral sequence로, 밑공간과 fiber의 cohomology에서 출발하여 전공간의 cohomology를 근사해 나가는 [\[호몰로지 대수학\] §스펙트럼 열, ⁋정의 1](/ko/math/homological_algebra/spectral_sequences#def1)의 spectral sequence이다. 우리는 이 글에서 이를 증명 없이 서술하고 그 구성의 출처만 밝힌다.
 

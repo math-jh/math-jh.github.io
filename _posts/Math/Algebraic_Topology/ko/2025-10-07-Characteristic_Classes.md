@@ -155,7 +155,7 @@ $$(E, E_0)\simeq (D(E), S(E))$$
 를 얻어내면 된다. 그럼 이를 사용하면 다음을 얻는다.
 
 ::: 정리 5 (Gysin exact sequence)
-Paracompact 밑공간 $B$ 위의 oriented rank $n$ vector bundle $E\rightarrow B$의 sphere bundle $\pi:S(E)\rightarrow B$에 대하여, 다음의 long exact sequence
+Paracompact base space $B$ 위의 oriented rank $n$ vector bundle $E\rightarrow B$의 sphere bundle $\pi:S(E)\rightarrow B$에 대하여, 다음의 long exact sequence
 
 $$\cdots\rightarrow H^{k-n}(B)\xrightarrow{\ \smile e\ }H^k(B)\xrightarrow{\ \pi^\ast\ }H^k(S(E))\xrightarrow{\ \pi_!\ }H^{k-n+1}(B)\rightarrow H^{k+1}(B)\rightarrow\cdots$$
 
@@ -188,7 +188,7 @@ $$0^\ast(p^\ast\alpha\smile j^\ast u)=0^\ast p^\ast\alpha\smile 0^\ast j^\ast u=
 
 세 번째 morphism $\pi_!:H^k(S(E))\rightarrow H^{k-n+1}(B)$는 조금 특별한 성질을 갖는다. 보통 연속사상 $\pi:S(E)\rightarrow B$가 cohomology에 주는 자연스러운 morphism은 pullback $\pi^\ast:H^\ast(B)\rightarrow H^\ast(S(E))$로, $\pi$의 역방향이며 degree를 보존한다. 반면 $\pi_!$는 $\pi$와 같은 방향으로 가면서 degree를 $(n-1)$만큼 낮추는데, 이와 같이 연속함수에 의해 마땅히 유도되어야 할 방향의 반대방향으로 거스르는 morphism을 *wrong way map*이라 하고 첨자 $!$를 붙여 표기하는 것이 관례이다.
 
-이 morphism의 직관은 [정리 2](#thm2)를 뒤집는 데 있다. Thom isomorphism $\alpha\mapsto p^\ast\alpha\smile u$가 base의 class $\alpha$를 fiber 위 각 점에 복사($p^\ast\alpha$)한 뒤 fiber 방향 class $u$를 곱해 degree를 올리는, fiber 방향으로의 lift였다면, $\pi_!$는 그 역이라고 생각하면 된다. 즉 $S(E)$의 class를 base 방향 성분과 fiber 방향 성분으로 보면, fiber 방향 성분은 각 fiber $S^{n-1}$을 따라 적분해 밖으로 빼고 (그래서 fiber 차원 $n-1$만큼 degree가 깎인다), 남은 base 방향 class는 그대로 돌려놓는 것이다. 이 성질을 수학적으로 엄밀하게 적은 것이 바로 *projection formula*
+이 morphism의 직관은 [정리 2](#thm2)를 뒤집는 데 있다. Thom isomorphism $\alpha\mapsto p^\ast\alpha\smile u$가 base의 class $\alpha$를 fiber 위 각 점에 $p^\ast\alpha$를 통해 복사한 뒤 fiber 방향 class $u$를 곱해 degree를 올리는, fiber 방향으로의 lift였다면, $\pi_!$는 그 역이라고 생각하면 된다. 즉 $S(E)$의 class를 base 방향 성분과 fiber 방향 성분으로 보면, fiber 방향 성분은 각 fiber $S^{n-1}$을 따라 적분해 밖으로 빼고, 남은 base 방향 class는 그대로 돌려놓는 것이며 그 과정에서 fiber dimension $n-1$이 빠지게 된다. 이 성질을 수학적으로 엄밀하게 적은 것이 바로 *projection formula*
 
 $$\pi_!(\pi^\ast\alpha\smile\beta)=\alpha\smile\pi_!\beta,\qquad \alpha\in H^\ast(B), \quad\beta\in H^\ast(S(E))$$
 
@@ -206,9 +206,9 @@ $$H^{k-n}(B)=H^{k-n+1}(B)=0$$
 
 이므로 $\pi^\ast:H^k(B)\rightarrow H^k(S(E))$가 isomorphism이라는 것이다. 즉, sphere bundle의 cohomology는 낮은 차원에서는 정확히 base의 cohomology와 일치하며, 그 이후부터는 base의 cohomology에서 오는 것에 더해 Euler class가 추가적인 기여를 한다. 
 
-계속 살펴보았던 deleted total space $E_0=E\setminus 0(B)$를 생각하자. $E_0$의 한 점은 base의 한 점 $x\in B$와, 이 점에서의 $E$의 fiber $E_x$의 *nonzero* $v\in E_x$의 순서쌍이다. 이제 $E_0$ 위에 *tautological bundle* $\pi_0^\ast E$를 정의하자. 이는 vector bundle $E\rightarrow B$를 projection map $\pi_0:E_0\rightarrow B$를 따라 pullback하여 얻어진 vector bundle이며, 그 정체는 각각의 점 $(x,v)\in E_0$마다 fiber $(\pi_0^\ast E)_{(x,v)}= E_x$를 갖는 vector bundle이다. 즉 $v$는 각각의 점 $(x,v)$에서 fiber로 붙어있는 벡터공간의 원소이기도 하며, nonzero이므로 이 벡터공간 안에서 1차원 부분공간 $\langle v\rangle$을 정의한다. 이제 $E_0$의 모든 점마다 이러한 방식으로 직선을 붙여 line bundle $L\rightarrow E_0$을 만들고, 이것이 $\pi_0^\ast E$ 안에서 정의하는 quotient $(\pi_0^\ast E)/L\rightarrow E_0$을 생각할 수 있다. 이는 각 점 $(x,v)$에서 fiber $E_x/\langle v\rangle$을 갖는 $E_0$ 위의 canonical complex rank $(n-1)$ bundle이며, fiber마다 Hermitian 내적을 주면 $v$의 orthogonal complement $v^\perp\subseteq E_x$로도 실현된다. ([\[선형대수학\] §복소내적공간, ⁋명제 4](/ko/math/linear_algebra/complex_inner_product_spaces#prop4)) 두 실현이 canonically isomorphic하므로, 앞으로 이 rank $(n-1)$ bundle을 표기의 편의상 $L^\perp$로 쓴다.
+앞으로 $E\rightarrow B$는 *complex* rank $n$ vector bundle이라 하고, 계속 살펴보았던 deleted total space $E_0=E\setminus 0(B)$를 생각하자. $E_0$의 한 점은 base의 한 점 $x\in B$와, 이 점에서의 $E$의 fiber $E_x$의 *nonzero* $v\in E_x$의 순서쌍이다. 이제 $E_0$ 위에 *tautological bundle* $\pi_0^\ast E$를 정의하자. 이는 vector bundle $E\rightarrow B$를 projection map $\pi_0:E_0\rightarrow B$를 따라 pullback하여 얻어진 vector bundle이며, 그 정체는 각각의 점 $(x,v)\in E_0$마다 fiber $(\pi_0^\ast E)_{(x,v)}= E_x$를 갖는 vector bundle이다. 즉 $v$는 각각의 점 $(x,v)$에서 fiber로 붙어있는 벡터공간의 원소이기도 하며, nonzero이므로 이 벡터공간 안에서 1차원 부분공간 $\langle v\rangle$을 정의한다. 이제 $E_0$의 모든 점마다 이러한 방식으로 직선을 붙여 line bundle $L\rightarrow E_0$을 만들고, 이것이 $\pi_0^\ast E$ 안에서 정의하는 quotient $(\pi_0^\ast E)/L\rightarrow E_0$을 생각할 수 있다. 이는 각 점 $(x,v)$에서 fiber $E_x/\langle v\rangle$을 갖는 $E_0$ 위의 canonical complex rank $(n-1)$ bundle이며, fiber마다 Hermitian inner product를 주면 $v$의 orthogonal complement $v^\perp\subseteq E_x$로도 실현된다. ([\[선형대수학\] §복소내적공간, ⁋명제 4](/ko/math/linear_algebra/complex_inner_product_spaces#prop4)) 두 실현이 canonically isomorphic하므로, 앞으로 이 rank $(n-1)$ bundle을 표기의 편의상 $L^\perp$로 쓴다.
 
-이제 *complex* vector bundle $E$가 주어졌다 하고, 이를 (oriented) real vector bundle로 본 것을 $E_\mathbb{R}$로 표기하자. 만일 $E$가 complex dimension $n$이라면 $E_\mathbb{R}$은 real dimension $2n$이다. 그럼 $E_0$는 $E_{\mathbb{R}}$의 sphere bundle $S(E_{\mathbb{R}})$와 homotopy equivalent하므로 [정리 5](#thm5)에 의해
+이제 $E$를 (oriented) real vector bundle로 본 것을 $E_\mathbb{R}$로 표기하자. $E$가 complex dimension $n$이므로 $E_\mathbb{R}$은 real dimension $2n$이다. 그럼 $E_0$는 $E_{\mathbb{R}}$의 sphere bundle $S(E_{\mathbb{R}})$와 homotopy equivalent하므로 [정리 5](#thm5)에 의해
 
 $$\cdots\rightarrow H^{k-2n}(B)\xrightarrow{\ \smile e\ }H^k(B)\xrightarrow{\ \pi_0^\ast\ }H^k(E_0)\rightarrow H^{k-2n+1}(B)\rightarrow\cdots$$
 
@@ -273,7 +273,7 @@ $$H^\bullet(\Gr(k,\mathbb{C}^\infty);\mathbb{Z})=\mathbb{Z}[c_1,\ldots,c_k]$$
 한편, Stiefel-Whitney class가 Whitney 합 공식을 따랐던 것처럼, 여기서도 Chern class가 같은 공식을 만족하는 것을 기대하는 것이 자연스러울 것이다. 이를 실제로 증명하는 핵심 스텝은  [§사영다발과 Leray–Hirsch 정리, ⁋정리 5](/ko/math/algebraic_topology/projective_bundles#thm5)인데, 이 정리의 증명은 지금까지의 논의로도 충분히 가능하지만 오직 스토리의 흐름을 위해 이를 다음 글로 따로 묶어둔다. 
 
 ::: 정리 9 (Whitney sum formula)
-Paracompact 밑공간 $B$ 위의 두 complex vector bundle $E,E'\rightarrow B$에 대하여
+Paracompact base space $B$ 위의 두 complex vector bundle $E,E'\rightarrow B$에 대하여
 
 $$c(E\oplus E')=c(E)\smile c(E')$$
 
@@ -346,6 +346,12 @@ $$j_1^\ast c_1(L_1\oplus L_2)=c_1(\gamma\oplus\varepsilon^1)=c_1(\gamma)=j_1^\as
 $$c_1(L_1\oplus L_2)=c_1(L_1)+c_1(L_2)$$
 
 이며, 위에서 보았듯 여기에 naturality를 더하면 임의의 $L,L'$에 대해서도 성립한다. 
+
+이제 임의의 vector bundle과 line bundle의 합 공식을 보이면 귀납법을 사용할 수 있다. 우선 $X=(\CP^\infty)^n$과 각각의 projection $\pi_i:X\rightarrow\CP^\infty$에 대하여 $L_i=\pi_i^\ast\gamma$, $x_i=c_1(L_i)$로 두자. 이 경우 $H^\bullet(X;\mathbb{Z})=\mathbb{Z}[x_1,\ldots,x_n]$임을 계산할 수 있고, 위와 같은 논증을 통해 우리는 이 위에서만 공식을 보이면 충분하다. 이제 $j$번째 coordinate를 아무 점으로 고정하여 얻어지는 inclusion $\iota_j:(\CP^\infty)^{n-1}\rightarrow X$를 생각하면 $\iota_j^\ast L_j$는 trivial이므로 $\iota_j^\ast x_j=0$이며, 따라서 여기에 위에서 보인 $c(E\oplus\varepsilon^1)=c(E)$를 통해 $n-1$에 대한 귀납적 가정을 사용하면
+
+$$\iota_j^\ast\left(c(L_1\oplus\cdots\oplus L_n)-\prod_{i=1}^n(1+x_i)\right)=0$$
+
+을 얻는다. 그런데 $\iota_j^\ast$는 나머지 $x_i$들은 그대로 두므로 그 kernel은 ideal $(x_j)$이고, $\iota_j^\ast$ 안의 차는 $x_j$의 배수여야 한다. 그런데 같은 논증이 모든 $j$에 대해 성립하므로 이 차는 $x_1\cdots x_n$의 배수이며, $L_1\oplus\cdots L_n$의 rank를 고려하면 이 차가 정확히  $x_1\cdots x_n$의 정수배여야 한다. 그런데 최고차항에서 $c(L_1\oplus\cdots \oplus L_n)$은 Euler class와 같아야 하므로 $x_1\cdots x_n$이어야 하고, 따라서 뒤의 곱을 전개하여 계산해주면 이 정수는 $0$이다. 즉 $c(L_1\oplus\cdots\oplus L_n)=\prod_{i=1}^n(1+x_i)$이다.
 :::
 
 앞서 우리는 complex vector bundle $E$와 그 켤레 $\bar{E}$, 곧 같은 underlying real bundle에 scalar 곱을 $z\cdot v=\bar{z}v$로 뒤틀어 준 bundle을 Chern class가 구별할 수 있다고 하였다. 이제 이 주장을 정확하게 만들 수 있다.
