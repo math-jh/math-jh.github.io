@@ -11,7 +11,6 @@ sidebar:
 
 date: 2026-03-25
 weight: 10
-drift_needed: true
 
 
 ---
@@ -34,6 +33,8 @@ Variety $X$ 위의 *line bundle* $\mathcal{L}$은 다음과 같은 데이터로 
 
     는 적당한 *transition function* $g_{ij} \in \mathcal{O}_X(U_i \cap U_j)^\times$에 대하여 $(p, t) \mapsto (p, g_{ij}(p)t)$의 꼴이다.
 :::
+
+Sheaf $\mathcal{F}$가 *$\mathcal{O}_X$-module*이라는 것은 각 열린집합 $U$에서 $\mathcal{F}(U)$가 $\mathcal{O}_X(U)$-module이고 이 곱셈이 restriction map과 호환되는 것, 즉 국소적으로 정의된 regular function을 section에 곱할 수 있는 것이다. 두 $\mathcal{O}_X$-module 사이의 *morphism*은 각 $U$에서 이 곱셈을 보존하는, 즉 $\mathcal{O}_X(U)$-module homomorphism인 sheaf morphism이다. 
 
 두 line bundle $\mathcal{L}, \mathcal{M} \rightarrow X$ 사이의 *morphism* $\varphi \colon \mathcal{L} \rightarrow \mathcal{M}$은 각 점 $p \in X$에서 fiber 사이의 $\mathbb{K}$-linear map $\varphi_p \colon \mathcal{L}_p \rightarrow \mathcal{M}_p$를 정의하며, 적당한 open cover $\{U_k\}$ 위에서 $\mathcal{O}_X(U_k)$-module homomorphism
 
@@ -89,7 +90,7 @@ Invertible sheaf $\mathcal{F}$에 대하여, local isomorphism $\mathcal{F}\vert
 
 ## Line bundle의 연산
 
-미분기하의 세계에서는 fiberwise하게 선형대수에서의 연산을 가져와서 새로운 bundle을 구성하는 것이 자연스럽다. Algebraic geometry에서도 마찬가지인데, 우선 우리는 line bundle의 경우를 살펴보고 있으므로 지금 살펴봐야 할 것은 $\otimes$와 $\Hom$, 그 중에서도 dual $(-)^\vee$이다. 
+미분기하의 세계에서는 fiberwise하게 선형대수에서의 연산을 가져와서 새로운 bundle을 구성하는 것이 자연스럽다. 대수기하에서도 마찬가지인데, 우선 우리는 line bundle의 경우를 살펴보고 있으므로 지금 살펴봐야 할 것은 $\otimes$와 $\Hom$, 그 중에서도 dual $(-)^\vee$이다. 
 
 ::: 명제 6
 두 line bundle $\mathcal{L}, \mathcal{M}$의 tensor product $\mathcal{L} \otimes \mathcal{M}$도 line bundle이다. 그 transition functions은 $\{g_{ij} h_{ij}\}$이다. 여기서 $\{g_{ij}\}, \{h_{ij}\}$는 각각 $\mathcal{L}, \mathcal{M}$의 transition functions이다.
@@ -126,7 +127,7 @@ $\mathcal{L} \otimes \mathcal{L}^\vee$의 transition functions은 $g_{ij} \cdot 
 
 $$\pi\vert_{\pi^{-1}(U_i)}:\pi^{-1}(U_i) \rightarrow U_i$$
 
-는 affine variety 사이의 함수이고 따라서 [§아핀다양체, ⁋명제 16](/ko/math/algebraic_varieties/affine_varieties#prop16)로부터 coordinate ring 사이의 ring homomorphism이 유도된다. 이 ring homomorphism은 $\pi^{-1}(U_i)$의 coordinate ring을 $U_i$의 coordinate ring $A$ 위의 algebra로 만드는데, $\mathcal{L}\vert_{U_i}$가 trivial하므로 $\pi^{-1}(U_i)\cong U_i\times \mathbb{A}^1$이고 따라서 이 algebra는 $A[t]$이다. 여기서 rank가 $1$인 것은 이 coordinate ring이 아니라 $\pi$의 section들이 이루는 $A$-module $\mathcal{O}_X(\mathcal{L})(U_i)$로, trivialization $\phi_i$가 이를 $A$와 동일시하므로 이는 rank $1$의 free module이다. $U_i$의 임의의 열린집합에서도 $\mathcal{L}$은 trivial하므로 임의의 affine open subset 위에서 section들의 module은 국소적으로 rank $1$의 free module, 즉 rank $1$의 projective module이며, 이로부터 우리는 line bundle은 affine-local하게는 coordinate ring 위의 invertible module이 된다는 것을 확인할 수 있다. ([\[가환대수학\] §분수아이디얼, ⁋정의 1](/ko/math/commutative_algebra/fractional_ideals#def1)) 그럼 이 때 line bundle들 위에서 정의되는 연산 $\otimes$와 $\vee$는 각각 [\[가환대수학\] §분수아이디얼, ⁋정리 3](/ko/math/commutative_algebra/fractional_ideals#thm3)의 연산으로부터 오는 것이며, 따라서 [\[가환대수학\] §분수아이디얼, ⁋정의 5](/ko/math/commutative_algebra/fractional_ideals#def5)을 따라 다음의 이름을 붙이는 것이 어색하지 않다.
+는 affine variety 사이의 함수이고 따라서 [§아핀다양체, ⁋명제 16](/ko/math/algebraic_varieties/affine_varieties#prop16)로부터 coordinate ring 사이의 ring homomorphism이 유도된다. 이 ring homomorphism은 $\pi^{-1}(U_i)$의 coordinate ring을 $U_i$의 coordinate ring $A$ 위의 algebra로 만들며, $\pi$의 section들이 이루는 $A$-module $\mathcal{O}_X(\mathcal{L})(U_i)$는 trivialization $\phi_i$에 의해 $A$와 동일시되므로 rank $1$의 free module이다. $U_i$의 임의의 열린집합에서도 $\mathcal{L}$은 trivial하므로, 우리는 line bundle은 affine-local하게는 coordinate ring 위의 invertible module이 된다는 것을 확인할 수 있다. ([\[가환대수학\] §분수아이디얼, ⁋정의 1](/ko/math/commutative_algebra/fractional_ideals#def1)) 그럼 이 때 line bundle들 위에서 정의되는 연산 $\otimes$와 $\vee$는 각각 [\[가환대수학\] §분수아이디얼, ⁋정리 3](/ko/math/commutative_algebra/fractional_ideals#thm3)의 연산으로부터 오는 것이며, 따라서 [\[가환대수학\] §분수아이디얼, ⁋정의 5](/ko/math/commutative_algebra/fractional_ideals#def5)을 따라 다음의 이름을 붙이는 것이 어색하지 않다.
 
 ::: 정의 9
 Variety $X$의 *Picard group* $\Pic(X)$는 $X$ 위의 line bundle들의 isomorphism class들의 집합에 tensor product를 연산으로 하여 얻어진 group이다. 항등원은 trivial bundle $\mathcal{O}_X$이고, $\mathcal{L}$의 inverse는 $\mathcal{L}^\vee$이다.
@@ -176,11 +177,7 @@ $$\mathbb{Z}\rightarrow \Pic(\mathbb{P}^n);\qquad d\mapsto [\mathcal{O}_{\mathbb
 
 을 정의할 수 있다. 
 
-우리의 주장은 이것이 isomorphism이라는 것이다. 우선 임의의 line bundle $\mathcal{L}$에 대하여, $\mathcal{L}\vert_{U_i}$는 [예시 11](#ex11)에 의해 trivial line bundle과 isomorphic하므로, 각각의 $U_i\cap U_j$의 transition function $h_{ij}$가 $\mathcal{L}$을 완전히 결정한다. 그런데 정의에 의해 $U_i\cap U_j$에서 $h_{ij}\in \mathcal{O}_{\mathbb{P}^n}(U_i\cap U_j)^\ast$인데, $\mathcal{O}(U_i\cap U_j)=\mathbb{K}[\x_0/\x_i, \ldots, \widehat{\x_i/\x_i}, \ldots, \x_n/\x_i][(\x_j/\x_i)^{-1}]$의 unit들은 $c(\x_i/\x_j)^m$ ($c\in \mathbb{K}^\ast$, $m\in \mathbb{Z}$)의 꼴이므로 $h_{ij}=c_{ij}(\x_i/\x_j)^{d_{ij}}$로 적을 수 있다. 이 때 지수 $d_{ij}$가 $(i,j)$에 무관하다는 것은 아직 확인되지 않았는데, [명제 2](#prop2)의 세 번째 조건이 주는 등식
-
-$$c_{ij}c_{jk}(\x_i/\x_j)^{d_{ij}}(\x_j/\x_k)^{d_{jk}}=c_{ik}(\x_i/\x_k)^{d_{ik}}$$
-
-의 양변을 $U_i\cap U_j\cap U_k$의 coordinate ring에서 monomial끼리 비교하면 $d_{ij}=d_{jk}=d_{ik}$와 $c_{ij}c_{jk}=c_{ik}$를 얻는다. 그럼 이 공통의 지수를 $d$라 둘 수 있고, 이제 $\{h_{ij}\}$는 $\mathcal{O}_{\mathbb{P}^n}(d)$의 transition function과 상수 $c_{ij}$만큼만 다르다. 여기서 $c_i:=c_{i0}$으로 두면 방금 얻은 관계와 [명제 2](#prop2)의 두 번째 조건에 의해 $c_{ij}=c_{i0}c_{0j}=c_i/c_j$이므로, [정의 1](#def1) 직후에 본 대로 $h_i=c_i$들이 isomorphism $\mathcal{L}\cong \mathcal{O}_{\mathbb{P}^n}(d)$를 정의한다. 이로부터 위의 group homomorphism이 surjective인 것을 안다. 비슷하게, $\mathcal{O}_{\mathbb{P}^n}(d)\cong \mathcal{O}_{\mathbb{P}^n}(d')$라 두고 transition function을 비교해보면, 
+우리의 주장은 이것이 isomorphism이라는 것이다. 우선 임의의 line bundle $\mathcal{L}$에 대하여, $\mathcal{L}\vert_{U_i}$는 [예시 11](#ex11)에 의해 trivial line bundle과 isomorphic하므로, 각각의 $U_i\cap U_j$의 transition function $h_{ij}$가 $\mathcal{L}$을 완전히 결정한다. 그런데 정의에 의해 $U_i\cap U_j$에서 $h_{ij}\in \mathcal{O}_{\mathbb{P}^n}(U_i\cap U_j)^\ast$이므로 $h_{ij}$는 반드시 $c_{ij}(\x_i/\x_j)^d$ 꼴이다. 이 때 transition function이 상수배인 line bundle은 trivial하므로 이로부터 위의 group homomorphism이 surjective인 것을 안다. 비슷하게, $\mathcal{O}_{\mathbb{P}^n}(d)\cong \mathcal{O}_{\mathbb{P}^n}(d')$라 두고 transition function을 비교해보면, 
 
 $$\mathcal{O}_{\mathbb{P}^n}(d-d')\cong \mathcal{O}_{\mathbb{P}^n}(d)\otimes \mathcal{O}_{\mathbb{P}^n}(-d')\cong \mathcal{O}_{\mathbb{P}^n}(d)\otimes \mathcal{O}_{\mathbb{P}^n}(d')^\vee\cong \mathcal{O}_{\mathbb{P}^n}$$
 
@@ -290,11 +287,11 @@ $$\frac{g_l}{g_j} = \frac{u_{kl} f_k}{u_{ij} f_i} = \frac{u_{kl}}{u_{ij}} \cdot 
 :::
 
 ::: 증명
-우선 $D \mapsto \mathcal{O}_X(D)$가 $\CaDiv(X)$에서 $\Pic(X)$로의 group homomorphism임을 확인한다. Cartier divisor $D = \{(U_i, f_i)\}$에 대해 $\mathcal{O}_X(D)$의 transition function은 $g_{ij} = f_j/f_i \in \mathcal{O}_X(U_i \cap U_j)^\times$이므로 line bundle을 정의한다. 또한 두 Cartier divisor $D = \{(U_i, f_i)\}$와 $D' = \{(U_i, f_i')\}$를 공통의 refinement 위에서 같은 cover로 적으면 $D + D' = \{(U_i, f_i f_i')\}$이고 그 transition function은 $(f_j f_j')/(f_i f_i') = g_{ij} g_{ij}'$이므로, [명제 6](#prop6)에 의해 $\mathcal{O}_X(D + D') \cong \mathcal{O}_X(D) \otimes \mathcal{O}_X(D')$이다. 즉 $D \mapsto \mathcal{O}_X(D)$는 가법적이다. Principal divisor $\divisor(h)$는 transition function이 $1$이므로 trivial bundle에 대응되고, 따라서 $\CaCl(X) = \CaDiv(X)/\Prin(X)$에서 $\Pic(X)$로의 well-defined group homomorphism을 유도한다.
+우선 $D \mapsto \mathcal{O}_X(D)$가 $\CaDiv(X)$에서 $\Pic(X)$로의 group homomorphism임을 확인한다. Cartier divisor $D = \{(U_i, f_i)\}$에 대해 $\mathcal{O}_X(D)$의 transition function은 $g_{ij} = f_j/f_i \in \mathcal{O}_X(U_i \cap U_j)^\times$이므로 line bundle을 정의한다. 또한 두 Cartier divisor $D = \{(U_i, f_i)\}$와 $D' = \{(U_i, f_i')\}$를 공통의 refinement 위에서 같은 cover로 적으면 $D + D' = \{(U_i, f_i f_i')\}$이고 그 transition function은 $(f_j f_j')/(f_i f_i') = g_{ij} g_{ij}'$이므로, [명제 6](#prop6)에 의해 $\mathcal{O}_X(D + D') \cong \mathcal{O}_X(D) \otimes \mathcal{O}_X(D')$이다. 즉 $D \mapsto \mathcal{O}_X(D)$는 additive하다. Principal divisor $\divisor(h)$는 transition function이 $1$이므로 trivial bundle에 대응되고, 따라서 $\CaCl(X) = \CaDiv(X)/\Prin(X)$에서 $\Pic(X)$로의 well-defined group homomorphism을 유도한다.
 
 이것이 isomorphism임을 보이기 위해, 임의의 line bundle $\mathcal{L}$이 주어졌다고 하자. Trivializing open $U \subseteq X$에서 $\mathcal{L}\vert_U \cong \mathcal{O}_U$이므로, $\mathcal{O}_U$의 constant section $1$에 대응되는 $s \in \mathcal{L}(U)$를 잡을 수 있으며, 이 $s$는 nonzero rational section이다. 이제 $\mathcal{L}$의 trivializing cover $\{U_i\}$를 생각하자. 각 $U_i$에서 trivialization $\psi_i\colon \mathcal{L}\vert_{U_i} \cong \mathcal{O}_{U_i}$를 잡고, $f_i := \psi_i(s\vert_{U_i \cap U}) \in \mathcal{O}_X(U_i \cap U) \subseteq \mathbb{K}(X)$를 정의한다. 그러면 $U_i \cap U_j \cap U$ 위에서 $f_j = g_{ij} f_i$이고, $X$가 irreducible이므로 $U_i \cap U_j \cap U$는 $U_i \cap U_j$의 dense open subset이므로 이 관계는 $U_i \cap U_j$ 전체에서 성립한다. 즉 $f_j/f_i = g_{ij} \in \mathcal{O}_X(U_i \cap U_j)^\times$이므로 $D = \{(U_i, f_i)\}$는 Cartier divisor이고, $\mathcal{O}_X(D)$의 transition function이 $\{g_{ij}\}$이므로 $\mathcal{O}_X(D) \cong \mathcal{L}$이다.
 
-마지막으로 injectivity를 보인다. 두 Cartier divisor $D = \{(U_i, f_i)\}$와 $D' = \{(U_i, f_i')\}$를 공통의 refinement 위에서 같은 cover로 적고 $\mathcal{O}_X(D) \cong \mathcal{O}_X(D')$이라 하자. Isomorphic한 두 line bundle의 transition function은 서로 같은 것이 아니라 적당한 unit들 $u_i \in \mathcal{O}_X(U_i)^\times$에 의해
+마지막으로 injectivity를 보인다. 두 Cartier divisor $D = \{(U_i, f_i)\}$와 $D' = \{(U_i, f_i')\}$를 공통의 refinement 위에서 같은 cover로 적고 $\mathcal{O}_X(D) \cong \mathcal{O}_X(D')$이라 하자. Isomorphic한 두 line bundle의 transition function은 적당한 unit들 $u_i \in \mathcal{O}_X(U_i)^\times$에 의해
 
 $$\frac{f_j'}{f_i'} = \frac{u_j}{u_i} \cdot \frac{f_j}{f_i}$$
 
