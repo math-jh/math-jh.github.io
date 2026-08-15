@@ -10,7 +10,6 @@ sidebar:
 
 date: 2026-03-24
 weight: 7
-drift_needed: true
 
 ---
 
@@ -37,7 +36,7 @@ $n$차원 벡터공간 $V$의 $k$차원 부분공간들의 집합을 *Grassmanni
 언제나 그렇듯이 variety 구조를 주기 위해서는 affine cover를 생각해서 affine-local하게 접근하면 된다. 이를 위해 $V$의 basis $e_1,\ldots, e_n$을 하나 고정하고 다음을 정의한다. 
 
 ::: 정의 3
-각 $k$개의 index들 $I = \{i_1 < \cdots < i_k\}$에 대해 부분집합 $U_I$를
+각 $k$개의 index들 $I = \{i_1 < \cdots < i_k\}$에 대해 $\Gr(k, V)$의 부분집합 $U_I$를
 
 $$U_I = \{W \in \Gr(k, V) \mid \text{projection } W \rightarrow \operatorname{span}(e_{i_1}, \ldots, e_{i_k}) \text{ is an isomorphism}\}$$
 
@@ -64,7 +63,7 @@ $$A = \begin{pmatrix} I_k & B \end{pmatrix}$$
 
 이 증명에서 보듯, $U_I$에서의 coordinate system은 $k(n-k)$개의 자유로운 parameter들이다. 이들은 $W$를 나타내는 행렬에서 "non-trivial한 부분"에 해당한다. 즉, $I$가 정의하는 $k \times k$ block이 identity로 고정된 후, 나머지 $k \times (n-k)$ block이 자유롭게 변할 수 있다. 
 
-$W$를 나타내는 행렬은 rank가 $k$이므로 nonzero인 $k\times k$ minor를 가지며, 따라서 임의의 $W\in \Gr(k,V)$는 적당한 $U_I$에 속해 $U_I$들이 $\Gr(k,V)$를 덮는다. 뿐만 아니라 $U_I$의 coordinate를 $U_J$의 coordinate로 바꾸는 transition map은 Cramer 공식에 의해 $J$에 해당하는 $k\times k$ block의 determinant를 분모로 갖는 유리식으로 주어지고 이 분모는 $U_I\cap U_J$ 위에서 소멸하지 않으므로, transition map 또한 regular map이다. 이를 통해 $\Gr(k,V)$ 위에 variety 구조가 주어지며, 각 $U_I$는 이 구조에서 affine open subset이 되어 $U_I$들이 affine open cover를 이룬다. 물론 이것이 quasi-projective임을 보이기 위해서는 명시적인 projective embedding이 필요하지만, 우선은 다음이 성립한다. 
+그럼 임의의 $W\in \Gr(k,V)$에 대하여 $W$를 포함하는 affine open cover가 존재함은 자명하다. 뿐만 아니라 $U_I$에서 $U_J$로의 transition map 또한 regular map이라는 것이 자명하므로, 이를 통해 $\Gr(k,V)$ 위에 variety 구조가 주어지며 각 $U_I$는 이 구조에서 열린집합이 된다. 물론 이것이 quasi-projective임을 보이기 위해서는 명시적인 projective embedding이 필요하지만, 우선은 다음이 성립한다. 
 
 ::: 명제 5
 $\dim \Gr(k, V) = k(n - k)$이다.
