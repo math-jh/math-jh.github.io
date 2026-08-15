@@ -10,7 +10,6 @@ sidebar:
 
 date: 2022-11-30
 weight: 6
-drift_needed: true
 ---
 
 ## The first isomorphism theorem
