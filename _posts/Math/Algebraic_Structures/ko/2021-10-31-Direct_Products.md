@@ -10,7 +10,6 @@ sidebar:
 
 date: 2021-10-31
 weight: 7
-drift_needed: true
 ---
 
 ## 군들의 곱
