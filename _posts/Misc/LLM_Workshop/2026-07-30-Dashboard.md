@@ -14,7 +14,7 @@ sidebar:
 author: Marvin
 
 date: 2026-07-30
-last_modified_at: 2026-08-02
+last_modified_at: 2026-08-15
 weight: 35
 
 ---
@@ -153,3 +153,63 @@ return 0
 {: data-filename="scripts/term-extraction/term_extract_worker.py"}
 
 `audit_letter` 쪽도 같은 이유로 한 줄이 붙었다. 바꾼 게 없는 틱은 원래도 `log(f"감사 {letter}: 추가 없음 ...")`을 남기고 있었는데, 정작 바꾼 게 있어서 `terms.yml`을 실제로 쓰는 틱에는 그 대응 로그가 없었다. `tmp.replace(TERMS_PATH)` 다음에 같은 형식의 `log(f"감사 {letter}: " + " · ".join(changes) + f" (다음 {nxt})")`를 더해, 일한 틱과 안 한 틱이 로그 위에서 똑같이 보이게 맞췄다. [커밋](https://github.com/math-jh/math-jh.github.io/commit/521857c529c0d673b20c5113705c2fb98f8ff248)은 diff로 보면 여덟 줄짜리다. 침묵도 결과 중 하나라고 여기고 있었는데, 판정 한 줄을 보는 쪽에서는 그 침묵과 죽음을 구분할 방법이 없었던 셈이다.
+
+## crontab을 안 건드리는 정지 버튼
+
+대시보드에 `cron` 섹션이 새로 생겼다. 번역 워커·용어 추출·pagefind 재색인 같은 크론 잡을 목록으로 보여주고, 잡마다 정지·재개 버튼을 단다. 버튼을 눌러도 서버는 crontab 파일에 손대지 않는다. crontab은 director·sync_slots·safety_net이 락 없이 통째로 다시 쓰는 파일이라, 웹 핸들러가 거기 끼어들면 lost update가 난다는 근거가 주석으로 남아 있다.
+
+```python
+# 정지/재개는 crontab 을 고치지 않는다. crontab 에 박힌 cron-gate 가 상태파일
+# 하나를 보고 뒤 명령을 돌릴지 말지 정하고, 이 서버는 그 CLI 만 호출한다.
+# crontab 은 director/sync_slots/safety_net 이 락 없이 rewrite 하므로 웹에서
+# 건드리면 lost update 가 난다 (2026-07-18 번역워커 라인 소실 사고).
+CRON_GATE = os.path.expanduser("~/.local/bin/cron-gate")
+CRON_JOBS = [
+    dict(id="blog-translation", name="번역 워커", worker="translation"),
+    dict(id="blog-devbot",      name="개발 노트 봇", worker="blogdev"),
+    # ... 나머지 아홉 잡
+    dict(id="timer:blog-autopush", name="autopush", worker=None),
+]
+CRON_IDS = {j["id"] for j in CRON_JOBS}
+```
+{: data-filename="scripts/dashboard/server.py"}
+
+정지 상태는 크론 라인 앞에 이미 붙어 있는 `cron-gate` CLI가 관리하는 파일 하나에 쓴다. 서버는 그 CLI를 호출만 하고, 상태 파일을 직접 읽거나 쓰지 않는다. 어떤 잡을 건드릴 수 있는지는 `CRON_JOBS` 목록의 id가 화이트리스트로 정하고, POST 바디의 `id`가 이 집합에 없으면 400으로 끝난다. 임의 문자열을 받아 파일 경로를 조립하는 대신, 허용된 id 몇 개로 쓰기 범위를 미리 좁혀둔 셈이다.
+
+정지·재개는 POST라 CSRF도 신경 써야 했다. 대시보드는 Cloudflare Access 뒤에 있고, Access 쿠키는 cross-site POST에도 그대로 실린다.
+
+```python
+def _reject_write(self):
+    origin = self.headers.get("Origin") or ""
+    host = self.headers.get("Host") or ""
+    if not origin or not host:
+        return "Origin 헤더 없음"
+    o = urllib.parse.urlsplit("//" + urllib.parse.urlsplit(origin).netloc).hostname
+    h = urllib.parse.urlsplit("//" + host).hostname
+    if not o or not h or o.lower() != h.lower():
+        return "Origin 불일치"
+    if self.headers.get("X-Dash-Action") != "1":
+        return "X-Dash-Action 헤더 없음"
+    return None
+```
+{: data-filename="scripts/dashboard/server.py"}
+
+Origin과 Host를 그대로 비교하면 정상 요청까지 막힌다. nginx가 Host를 `$host:$server_port`로 넘기는 반면 브라우저 Origin은 기본 포트를 생략하기 때문에, 포트를 뺀 hostname끼리만 비교한다. `X-Dash-Action` 커스텀 헤더를 필수로 둔 것도 같은 계산에서 나왔다. 커스텀 헤더가 붙은 요청은 브라우저가 프리플라이트를 먼저 보내는데, 다른 사이트에서 날아온 cross-origin 요청은 그 프리플라이트를 통과하지 못한다. 반대로 같은 uid로 loopback을 때리는 로컬 프로세스는 이 가드를 그냥 통과한다. 그 지점에서는 이미 `crontab -e`가 가능하니 권한 상승이 아니라는 게 주석의 판단이다.
+
+## 정지 워커는 stale이 아니다
+
+워커 판정 로직도 같은 커밋에서 손이 갔다. 정지된 워커는 로그가 정상 주기보다 늙는 게 당연한데, 판정 한 줄은 그 늙음만 보고 경고로 뒤집었었다.
+
+```js
+function badWorkers(d) {
+  return (d.workers || []).filter(function (w) {
+    if (w.paused) return false;
+    return w.status === 'stale' || w.status === 'missing' || w.err;
+  });
+}
+```
+{: data-filename="scripts/dashboard/app.js"}
+
+`paused` 플래그를 워커 응답에 얹고, 판정에서 그 워커를 먼저 걸러냈다. 대신 개요 한 줄 옆에 "일시정지 N건은 따로 세지 않았다"는 문구를 붙여서, 정지 사실 자체는 숨기지 않는다. 의도된 정지와 고장을 같은 빨간불로 뭉뚱그리지 않게 된 것이다.
+
+같은 커밋에는 GSC 색인 추천 로직도 손이 갔다. 대시보드가 자체적으로 계산하던 추천 URL 순위를 `index-monitor`의 `index_ranking` 모듈로 옮겨 그대로 import해 쓰게 됐다. 규칙을 두 곳에 복제해두면 index-monitor 쪽 규칙이 바뀔 때 대시보드만 옛 기준으로 남는다는 게 이유다. 오늘 03:00 배치가 이미 뽑아 둔 추천이 있으면 그걸 그대로 쓰고, 없으면 같은 모듈로 지금 다시 계산한다. 배치는 GSC 실측을 거치고 뽑히면서 쿨다운까지 걸어두므로, 배치를 무시하고 매번 새로 계산하면 다른 순번이 나오기 때문이다. 추천 목록의 URL을 누르면 이동 대신 완결된 링크가 클립보드로 복사되도록도 바뀌었다. 그대로 GSC 검색창에 붙여넣고 색인 요청을 누르는 동선이다. [커밋](https://github.com/math-jh/math-jh.github.io/commit/6256feea51d03b4129b37aaaa4071aee4f246068).
