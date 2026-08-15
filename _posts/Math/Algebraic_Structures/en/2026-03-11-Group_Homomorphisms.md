@@ -51,11 +51,11 @@ $$\Eq(f,g)=\{x\in G\mid f(x)=g(x)\}$$
 is a subgroup of $G$.
 :::
 ::: Proof
-If $x,y\in \Eq(f,g)$, then by the argument immediately following [§Semigroups, Monoids, Groups, ⁋Definition 11](/en/math/algebraic_structures/groups#def11), a monoid homomorphism between groups preserves inverses, so
+If $x,y\in \Eq(f,g)$, then by the argument immediately following [§Semigroups, Monoids, and Groups, ⁋Definition 11](/en/math/algebraic_structures/groups#def11), a monoid homomorphism between groups preserves inverses, so
 
 $$f(xy^{-1})=f(x)f(y)^{-1}=g(x)g(y)^{-1}=g(xy^{-1})$$
 
-and thus $xy^{-1}\in\Eq(f,g)$. Also, after [§Semigroups, Monoids, Groups, ⁋Definition 11](/en/math/algebraic_structures/groups#def11) we observed that a monoid homomorphism between groups preserves the identity element, and since the identity element of $H$ is unique, $\Eq(f,g)$ is nonempty. Therefore, by [§Semigroups, Monoids, Groups, ⁋Proposition 15](/en/math/algebraic_structures/groups#prop15), we obtain the desired result.
+and thus $xy^{-1}\in\Eq(f,g)$. Also, after [§Semigroups, Monoids, and Groups, ⁋Definition 11](/en/math/algebraic_structures/groups#def11) we observed that a monoid homomorphism between groups preserves the identity element, and since the identity element of $H$ is unique, $\Eq(f,g)$ is nonempty. Therefore, by [§Semigroups, Monoids, and Groups, ⁋Proposition 15](/en/math/algebraic_structures/groups#prop15), we obtain the desired result.
 :::
 
 For this $\Eq(f,g)$, the inclusion $i:\Eq(f,g)\rightarrow G$ has the following property.
@@ -104,7 +104,7 @@ On the other hand, when any magma homomorphism $f:A\rightarrow A'$ is given, we 
 For any homomorphism $f:G\rightarrow G'$, $\im f$ is a subgroup of $G'$.
 :::
 ::: Proof
-We already know that $\im f$ is a submagma of $G'$, so by [§Semigroups, Monoids, Groups, ⁋Proposition 15](/en/math/algebraic_structures/groups#prop15) it suffices to show that $\im f$ is closed under taking inverses. Let $y\in\im f$ and suppose $x\in G$ satisfies $f(x)=y$. Then from
+We already know that $\im f$ is a submagma of $G'$, so by [§Semigroups, Monoids, and Groups, ⁋Proposition 15](/en/math/algebraic_structures/groups#prop15) it suffices to show that $\im f$ is closed under taking inverses. Let $y\in\im f$ and suppose $x\in G$ satisfies $f(x)=y$. Then from
 
 $$f(x^{-1})=f(x)^{-1}=y^{-1}$$
 

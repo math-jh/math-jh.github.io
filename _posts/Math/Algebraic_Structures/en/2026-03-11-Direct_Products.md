@@ -57,7 +57,7 @@ Let $(G_i)$ and $(H_i)$ be families of groups indexed by the same set $I$, and s
 commute. In this case, $\ker f=\prod\ker f_i$ and $\im f=\prod\im f_i$.
 :::
 ::: Proof
-$\prod H_i$ is the terminal object of the collection of cones satisfying the given condition. ([[Category Theory] §Limits, §§Universal Property of Limits](/en/math/category_theory/limits#극한의-보편성질)) From the commutative diagram thus defined,
+$\prod H_i$ is the terminal object of the collection of cones satisfying the given condition. ([[Category Theory] §Limits, §§Universal Property of Limits](/en/math/category_theory/limits#universal-property-of-limits)) From the commutative diagram thus defined,
 
 $$x\in\ker f\iff f(x)=e\iff \forall i(\pr_i^H(f(x))=e_i)\iff \forall i((f_i\circ \pr_i^G)(x)=e_i)\iff \forall i(\pr_i^G(x)\in\ker f_i),$$
 

@@ -93,7 +93,7 @@ $$\dim_{\kappa(z)}\bigl(\Omega_{X_{\overline{s}}/\mathbb{K}}\otimes \kappa(z)\bi
 
 를 뜻한다. 이는 regular local ring이기 위해서는 maximal ideal이 $\dim$개의 원소로 생성되는 Noetherian local ring이어야 하는데 ([\[가환대수학\] §차원, ⁋정의 12](/ko/math/commutative_algebra/Krull_dimension#def12)), [\[가환대수학\] §정수적 확장, ⁋보조정리 8](/ko/math/commutative_algebra/integral_extension#lem8)에 의하여 이는 $\dim_{\kappa(z)}\mathfrak{m}_z/\mathfrak{m}_z^2=\dim \mathcal{O}_{X_{\overline{s}},z}$와 동치이기 때문이다. 우리는 $z$가 closed라고 가정하였으므로, 우변은 local dimension $\dim_zX_{\overline{s}}$와 같다. 
 
-이제 $X_{\overline{s}}$의 non-closed point들로 위의 계산을 확대하여야 한다. 우선 $X_{\overline{s}}$의 local ring들은 regular이므로 특히 domain이고 ([\[가환대수학\] §정칙국소환, ⁋따름정리 1](/ko/math/commutative_algebra/regular_local_rings#cor1)) 따라서 서로 다른 irreducible component끼리 만나지 않는다. 즉, 각 component는 열린 동시에 닫힌집합이고 그 위에서 local dimension은 일정하므로, $\overline{x}$를 담는 component를 $Z$, $d=\dim Z$로 두어 irreducible인 경우만 생각해도 충분하다. 이제 [§평탄사상, ⁋명제 22](/ko/math/scheme_theory/flat_morphisms#prop22)에 의해 
+이제 $X_{\overline{s}}$의 non-closed point들로 위의 계산을 확대하여야 한다. 우선 $X_{\overline{s}}$의 local ring들은 regular이므로 특히 domain이고 ([\[가환대수학\] §정칙국소환, ⁋따름정리 1](/ko/math/commutative_algebra/regular_local_rings#cor1)) 따라서 서로 다른 irreducible component끼리 만나지 않는다. 즉, 각 component는 clopen set들이고 그 위에서 local dimension은 일정하므로, $\overline{x}$를 담는 component를 $Z$, $d=\dim Z$로 두어 irreducible인 경우만 생각해도 충분하다. 이제 [§평탄사상, ⁋명제 22](/ko/math/scheme_theory/flat_morphisms#prop22)에 의해 
 
 $$\mu(v)=\dim_{\kappa(v)}\bigl(\Omega_{X_{\overline{s}}/\mathbb{K}}\otimes \kappa(v)\bigr)$$
 
