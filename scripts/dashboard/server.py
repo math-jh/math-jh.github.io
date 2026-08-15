@@ -47,6 +47,17 @@ try:
 except Exception:
     index_ranking = None
 
+# KO-TYPOS 파싱도 워커와 **같은 모듈**을 쓴다. 복제해 두면 한쪽만 늙는다 —
+# 2026-08-15 실측: 대시보드 사본에 legacy fallback 이 없어 워커가 보는 8건 중
+# 1건만 보였다. import 가 실패하면 지적을 빈 목록으로 두고(사본을 되살리지 않고)
+# 넘어간다.
+sys.path.insert(0, f"{ROOT}/scripts/translation")
+try:
+    from ko_typos import extract_ko_typos as _ko_typos
+except Exception:
+    def _ko_typos(_verdict):
+        return []
+
 # ── 워커 정의 ────────────────────────────────────────────────────────────────
 # interval: cron 주기(초). age > 2.5*interval 이면 stale(빨간불) 판정.
 WORKERS = [
@@ -366,32 +377,6 @@ def sec_workers():
                         status=status, age=age, last_ts=ts, err=err, tail=lines,
                         runs=runs, has_log=bool(w.get("log")),
                         paused=bool(p.get("paused")), cron_id=p.get("id")))
-    return out
-
-
-# "(none detected)" / "(none identified)" / "None." 류의 빈 목록 마커. 규칙의
-# 정본은 translate_worker.py :: _KO_TYPO_NONE_RE 다 — 그쪽은 워커 전용 의존성
-# (yaml·md_lint)을 끌고 와서 import 하지 않고 같은 패턴만 옮겨 둔다. 한쪽만
-# 고치면 대시보드가 "지적 0건"을 지적으로 세어 없는 일을 만든다.
-_KO_TYPO_NONE_RE = re.compile(r"^\(?\s*none\b[^()]*\)?\s*\.?$", re.I)
-
-
-def _ko_typos(verdict):
-    """verify verdict의 KO-TYPOS 섹션에서 실제 지적 항목만 뽑는다.
-    '(none detected)' 류 한 줄이나 빈 섹션은 [] 로 취급한다."""
-    out, on = [], False
-    for ln in str(verdict).splitlines():
-        s = ln.strip()
-        if s.upper().startswith("KO-TYPOS"):
-            on = True
-            continue
-        if on:
-            if s.startswith("- "):
-                item = s[2:].strip()
-                if item and not _KO_TYPO_NONE_RE.match(item):
-                    out.append(item)
-            elif not s.startswith("-"):
-                break
     return out
 
 

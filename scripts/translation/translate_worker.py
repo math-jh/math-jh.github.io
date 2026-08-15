@@ -166,9 +166,94 @@ def release_lock() -> None:
 # scripts/term-extraction/term_extract_worker.py 의 load_translation_ts 가
 # files/status=="done"/last_attempt_ts 를 읽는다.
 # 키를 바꾸면 저쪽 tripwire 경고를 확인할 것.
+# state 의 키는 KO 파일 경로다. 글을 개명·이동하면(날짜 접두사 수정, 카테고리
+# rename, Title_Case 정규화) 워커는 새 키를 만들고 옛 키는 그대로 남아, 번역 이력이
+# 옛 키에 갇힌 채 --status·대시보드 숫자만 부푼다 (2026-08-15 실측 618키 중 187).
+# 아래 마이그레이션이 기동 때 그 키들을 따라간다.
+_MIGRATE_HIST_FIELDS = (
+    "translated_at", "en_path", "in_chars", "out_chars", "verify_verdict",
+    "warnings", "lossy_retry_count", "reason", "ko_git_commit_ts",
+    "verify_ko_typos", "verify_ko_typos_review", "needs_review",
+)
+_migrated_keys = 0          # main() 이 이 값을 보고 즉시 저장한다
+
+
+def _slug_key(name) -> str:
+    """날짜 접두사·대소문자·구분자를 지운 파일명 — 개명 추적용 동일성 판정."""
+    stem = re.sub(r"^\d{4}-\d{2}-\d{2}-", "", Path(name).name)
+    return re.sub(r"[^a-z0-9]", "", stem.lower().removesuffix(".md"))
+
+
+def _date_prefix(name) -> Optional[str]:
+    m = re.match(r"^(\d{4}-\d{2}-\d{2})-", Path(name).name)
+    return m.group(1) if m else None
+
+
+def migrate_state_keys(state: dict) -> int:
+    """파일이 옮겨간 state 키를 현재 경로로 따라가게 한다. 옮긴 개수를 돌려준다.
+
+    **유일하게 확정될 때만** 옮긴다 — slug 가 여러 파일에 걸리면 날짜 접두사,
+    그래도 갈리면 카테고리로 좁히고, 그래도 남으면 손대지 않는다 (실측으로 slug
+    충돌이 20건 있었고 그중 13건은 두 단계를 다 거쳐야 갈렸다). 대상 파일이 아예
+    없는 키도 건드리지 않는다 — 병합으로 사라진 것인지 판단하려면 git 이력을
+    봐야 하고, 그건 사람이 할 일이다.
+    """
+    files = state.get("files", {})
+    missing = [k for k in files if not (BLOG_ROOT / k).exists()]
+    if not missing:
+        return 0                      # 정상 상태에서는 디스크를 훑지도 않는다
+    disk: dict = {}
+    for p in BLOG_ROOT.glob("_posts/**/ko/*.md"):
+        disk.setdefault(_slug_key(p.name), []).append(str(p.relative_to(BLOG_ROOT)))
+
+    moved = 0
+    for old in missing:
+        cands = disk.get(_slug_key(old), [])
+        if len(cands) > 1:
+            same = [c for c in cands if _date_prefix(c) == _date_prefix(old)]
+            if len(same) != 1:
+                same = [c for c in cands
+                        if Path(c).parts[:-2] == Path(old).parts[:-2]]
+            cands = same
+        if len(cands) != 1:
+            continue
+        new = cands[0]
+        dead, live = files[old], files.get(new, {})
+        dead_newer = (dead.get("last_attempt_ts") or 0) > (live.get("last_attempt_ts") or 0)
+        base, over = (dict(live), dead) if dead_newer else (dict(dead), live)
+        base.update(over)             # 최신 관찰이 status·타임스탬프를 정한다
+        for f in _MIGRATE_HIST_FIELDS:   # 한쪽에만 있는 이력은 잃지 않는다
+            if f not in base:
+                if f in dead:
+                    base[f] = dead[f]
+                elif f in live:
+                    base[f] = live[f]
+        ep = base.get("en_path")
+        if ep and not (BLOG_ROOT / ep).exists():
+            en_dir = BLOG_ROOT / Path(new).parent.parent / "en"
+            hit = [str(p.relative_to(BLOG_ROOT)) for p in en_dir.glob("*.md")
+                   if _slug_key(p.name) == _slug_key(ep)] if en_dir.is_dir() else []
+            if len(hit) == 1:
+                base["en_path"] = hit[0]
+        files[new] = base
+        del files[old]
+        moved += 1
+        # 대량 rename 뒤에는 이게 100줄을 넘는다 — 앞쪽만 남기고 나머지는 수로 센다.
+        if moved <= 10:
+            log(f"state 키 이관: {old} → {new}")
+        elif moved == 11:
+            log("state 키 이관: … (이하 생략, 아래 합계 참고)")
+    if moved:
+        log(f"state 키 {moved}건 이관 (남은 미해소 {len(missing) - moved}건은 그대로 둔다)")
+    return moved
+
+
 def load_state() -> dict:
+    global _migrated_keys
     if STATE_PATH.exists():
-        return json.loads(STATE_PATH.read_text(encoding="utf-8"))
+        state = json.loads(STATE_PATH.read_text(encoding="utf-8"))
+        _migrated_keys = migrate_state_keys(state)
+        return state
     return {
         "files": {},
         "stats": {"total_done": 0, "total_in_chars": 0, "total_out_chars": 0},
@@ -2276,57 +2361,10 @@ def lint_structure(ko_text: str, en_text: str) -> list:
     return out
 
 
-# The verifier is asked (VERIFY_SEM_INSTRUCTIONS) to list errors it found in the
-# *Korean* under a KO-TYPOS heading. Those reports used to be thrown away: they
-# arrive attached to a SAFE verdict (the EN is fine — it is the KO that is wrong),
-# and the telegram policy suppresses SAFE. On 2026-07-13 a sweep of the stored
-# verdicts found 19 posts with such reports, 16 of them never surfaced, and
-# source-checking them turned up 13 real KO errors (\cap for \cup in Seifert-van
-# Kampen, \mathbb{2} for \mathbb{K}, varprojlim for varinjlim, "infumum", …).
-# So parse them out and always report, independently of the verdict.
-_KO_TYPO_HEAD_RE = re.compile(r"^\s*KO-TYPOS\s*:?\s*$", re.M)
-# Fallback for verdicts written before the KO-TYPOS section existed, where the
-# report is buried in a FINDINGS line.
-_KO_TYPO_INLINE_RE = re.compile(
-    r"\b(typos?"                                    # plural too: "apparent typos in ..."
-    r"|corrects?\s+(?:an?\s+)?(?:evident\s+|apparent\s+|minor\s+)?(?:typos?|errors?)"
-    r"|errors?\s+in\s+the\s+Korean"
-    r"|Korean\s+(?:source\s+)?(?:has|contains)\s+(?:a\s+)?"
-    r"(?:genuine\s+)?(?:mathematical\s+)?(?:errors?|typos?))\b", re.I)
-
-
-# "(none detected)" / "(none found)" / "None detected." 류의 빈 목록 마커.
-_KO_TYPO_NONE_RE = re.compile(r"^\(?\s*none\b[^()]*\)?\s*\.?$", re.I)
-
-
-def extract_ko_typos(verdict_text: str) -> list:
-    """Errors the verifier spotted in the KO source. Reported whether the verdict
-    was safe or lossy — a KO typo is not an EN defect, so it never shows up as
-    'lossy', which is exactly why these went unnoticed for so long.
-
-    KO-TYPOS 섹션 헤더가 있으면 그 섹션만 믿는다 — 비어 있어도 legacy
-    fallback 으로 넘어가지 않는다. 예전엔 빈 섹션이 fallback 을 타면서
-    `\\btypos?\\b` 가 "KO-TYPOS:" 헤더 자체에 매치돼, 오타 0건이
-    "FLAGGED — 1 ko-typo"(내용은 헤더 문자열)로 둔갑했다 (2026-07-22
-    로그 리뷰에서 확인 — 최근 플래그 8건 중 7건이 이 오탐)."""
-    if not verdict_text:
-        return []
-    m = _KO_TYPO_HEAD_RE.search(verdict_text)
-    if m:
-        out = []
-        for line in verdict_text[m.end():].splitlines():
-            s = line.strip()
-            if not s:
-                continue
-            if not s.startswith("-"):      # next section began
-                break
-            item = s.lstrip("- ").strip()
-            if item and not _KO_TYPO_NONE_RE.match(item):
-                out.append(item)
-        return out
-    # Legacy / narrated form (KO-TYPOS 섹션이 아예 없던 옛 verdict 전용).
-    return [ln.strip().lstrip("- ").strip()
-            for ln in verdict_text.splitlines() if _KO_TYPO_INLINE_RE.search(ln)]
+# KO-TYPOS 파싱 규칙은 ko_typos 모듈이 단일 출처다 — 대시보드
+# (server.py :: sec_translation)가 같은 모듈을 import 한다. 여기 복제하면
+# 두 목록이 조용히 갈라진다.
+from ko_typos import extract_ko_typos  # noqa: E402
 
 
 def run_verify(state: dict, ko_path: Path, en_path: Path, key: str) -> int:
@@ -2484,6 +2522,11 @@ def main() -> int:
     if not acquire_lock():
         log("another instance running, exit")
         return 0
+
+    # 키 이관은 락을 잡은 직후 바로 굳힌다 — 이후 단계가 실패해도 이관은 남는다.
+    # (--status·--dry-run 은 여기까지 오지 않으므로 읽기 전용이 유지된다.)
+    if _migrated_keys:
+        save_state(state)
 
     try:
         target = find_next_target(state)
