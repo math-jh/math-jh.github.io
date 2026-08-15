@@ -6040,9 +6040,18 @@ F:
   defs:
   - label: '[스킴] §평탄사상'
     url: /ko/math/scheme_theory/flat_morphisms
+  - label: '[스킴] §충실평탄 하강'
+    url: /ko/math/scheme_theory/faithfully_flat_descent
   see:
   - label: Flat
     id: flat
+- id: faithfully_flat_morphism
+  en: faithfully flat morphism
+  ko: 충실평탄 사상
+  primary: en
+  defs:
+  - label: '[스킴] §충실평탄 하강'
+    url: /ko/math/scheme_theory/faithfully_flat_descent
 - id: family_of_sets
   en: family of sets
   ko: 집합족
