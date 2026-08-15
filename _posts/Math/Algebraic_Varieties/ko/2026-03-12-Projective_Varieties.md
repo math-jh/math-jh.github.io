@@ -10,7 +10,6 @@ sidebar:
 
 date: 2026-03-12
 weight: 2
-drift_needed: true
 
 
 ---
@@ -94,11 +93,11 @@ Affine case에서와 마찬가지로, 이는 projective space $\mathbb{P}^n$ 위
 ## Projective Nullstellensatz
 
 ::: 정의 6
-부분집합 $X \subseteq \mathbb{P}^n$의 *homogeneous ideal* $I(X)$를, $X$의 모든 점에서 vanish하는 homogeneous polynomial들이 생성하는 ideal
+부분집합 $X \subseteq \mathbb{P}^n$의 *homogeneous ideal*을
 
-$$I(X) = \left(\{F \in \mathbb{K}[\x_0, \ldots, \x_n] \mid F \text{ is homogeneous and } F(x) = 0 \text{ for all } x \in X\}\right)$$
+$$\{F \in \mathbb{K}[\x_0, \ldots, \x_n] \mid F \text{ is homogeneous and } F(x) = 0 \text{ for all } x \in X\}$$
 
-으로 정의한다.
+으로 생성되는 ideal로 정의하고, $I(X)$로 적는다.
 :::
 
 ::: 정리 7
@@ -232,11 +231,11 @@ Projective variety $X \subseteq \mathbb{P}^n$의 affine cone $C(X)$은 다음 �
 마지막으로 우리는 projective variety들의 morphism을 정의한다. 앞서 우리는 projective algebraic set을 정의할 때 다항식들의 zero set이 projective space의 집합을 잘 정의하지 않는 것을 확인하였는데, 비슷한 일이 morphism을 정의할 때도 일어나며 그 해결책은 이번에도 homogeneous polynomial이다. 
 
 ::: 정의 15
-함수 $\varphi: X \rightarrow Y$가 projective variety $X \subseteq \mathbb{P}^n$과 $Y \subseteq \mathbb{P}^m$ 사이의 *morphism<sub>사상</sub>*이라는 것은, 각각의 점 $x \in X$마다 $x$를 포함하는 $X$의 열린집합 $U$와 적당한 homogeneous polynomials $F_0, \ldots, F_m \in \mathbb{K}[\x_0, \ldots, \x_n]$ of the same degree가 존재하여, 모든 $y \in U$에 대해 $F_i(y)$들이 동시에 $0$이 아니고
+함수 $\varphi: X \rightarrow Y$가 projective variety $X \subseteq \mathbb{P}^n$과 $Y \subseteq \mathbb{P}^m$ 사이의 *morphism<sub>사상</sub>*이라는 것은, 각각의 점 $x \in X$마다 $x$를 포함하는 $X$의 열린집합 $U$와 적당한 homogeneous polynomials $F_0, \ldots, F_m \in \mathbb{K}[\x_0, \ldots, \x_n]$ of the same degree가 존재하여, 모든 $y \in U$에 대하여
 
-$$\varphi(y) = [F_0(y) : \cdots : F_m(y)]$$
+$$\varphi(y) = [F_0(y) : \cdots : F_m(y)] \in \mathbb{P}^m$$
 
-가 성립하는 것이다.
+이 성립하는 것이다.
 :::
 
 만일 $F_0, \ldots, F_m$이 모두 같은 degree $d$의 homogeneous polynomial이라면, $F_i(\lambda x) = \lambda^d F_i(x)$이므로
@@ -254,7 +253,7 @@ $$[x:y]\mapsto [x^2: xy:y^2]$$
 
 $$([x:y], [u:v])\mapsto [xu: xv: yu: yv]$$
 
-으로 주어진다. 다만 우리는 아직 두 projective variety의 곱을 projective space의 부분집합으로 실현한 적이 없고, 위 식의 각 성분도 두 변수쌍 각각에 대해서만 동차이므로, 이것은 [정의 15](#def15)의 의미에서의 morphism은 아니다. 이 식의 image는 $\mathbb{P}^3$ 안의 quadric $Z(\x_0\x_3 - \x_1\x_2)$이며, 실제로 $[z_0 : z_1 : z_2 : z_3]$이 $z_0z_3 = z_1z_2$를 만족하고 가령 $z_0 \ne 0$이라면 $([z_0 : z_2], [z_0 : z_1])$이 이 점으로 보내진다. 
+으로 주어진다. 다만 우리는 아직 두 projective variety의 곱을 정의하지 않았으므로, 이것이 실제로 morphism을 정의하는지를 확인하는 것은 다음으로 미루기로 한다. 
 :::
 
 ::: 예시 17
