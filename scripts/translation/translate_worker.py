@@ -1694,6 +1694,10 @@ Rules:
 - Do NOT alter math spans (`$...$`, `$$...$$`), display blocks, or `\\tag{}`.
 - A `§Section Name` citation must match the target post's `title:` exactly —
   read the target file to get it rather than guessing.
+- Residual Korean: translate leftover Korean prose, and replace a Korean anchor
+  on an `/en/` link with the target page's actual English heading slug (read the
+  target file). But some Korean is intentional — a Korean bibliography entry, or
+  a Korean term deliberately glossed. Leave those alone and count them as left.
 - Use the Edit tool on the file in place. Do not create files.
 
 When done, output exactly one final line and nothing else:
@@ -1745,6 +1749,29 @@ def _flat(s) -> str:
     return " ".join(str(s).split())
 
 
+def _hangul_findings(en_path: Path) -> List[str]:
+    """EN 파일 하나에서 한글 잔존·한글 앵커 지적을 다시 뽑는다.
+
+    번역 직후(out_body 기준) 계산한 것과 같은 규칙 — 수식·병기 <sub>·참고문헌
+    블록은 제외한다. 게이트가 고친 뒤 **최종 파일 내용으로** 재판정하는 데 쓴다.
+    """
+    out = []
+    try:
+        body = _body_after_frontmatter(en_path.read_text(encoding="utf-8")).strip()
+    except OSError:
+        return out
+    body_wo_refs, _ = extract_refs_block(body)
+    hangul = re.findall(r"[가-힣]", _strip_math_and_glosses(body_wo_refs))
+    if hangul:
+        out.append(f"{len(hangul)} Hangul chars in body (≤{HANGUL_RESIDUE_MAX}, "
+                   f"needs review) — e.g. {''.join(hangul[:20])!r}")
+    anchors = re.findall(r"\]\(/en/[^)\s#]*#[^)\s]*[가-힣][^)\s]*\)", body)
+    if anchors:
+        out.append(f"{len(anchors)} Hangul anchor(s) on /en/ links, "
+                   f"e.g. {anchors[0]!r}")
+    return out
+
+
 def _fixup_pass(en_path: Path, ko_path: Path, key: str,
                 findings: List[str]) -> List[str]:
     """opus 한 패스로 지적을 고치고, **게이트를 다시 돌려** 남은 지적을 반환한다.
@@ -1766,7 +1793,7 @@ def _fixup_pass(en_path: Path, ko_path: Path, key: str,
 
     from section_anchor_gate import run_gate
     res = run_gate(en_path, ko_path, apply=True, mdlint=True)
-    remain = res.fails + res.mdlint_lines
+    remain = res.fails + res.mdlint_lines + _hangul_findings(en_path)
     log(f"GATE-OPUS ({key}): 재검사 — 지적 {len(findings)}건 중 "
         f"{len(findings) - len(remain)}건 해소, 잔여 {len(remain)}건")
     return remain
@@ -2490,6 +2517,35 @@ def main() -> int:
             # 현재 KO 로부터 EN 을 만들었으므로 drift 는 이미 해소된 상태이고,
             # 남겨 두면 다음 tick 이 같은 글을 통째로 재번역한다.
             clear_drift_flag(ko_path)
+        # ── 게이트: 결정론 수리 → opus 잔여 수리 → 재검사 ─────────────────
+        # 상태 기록·알림보다 **먼저** 돈다. 게이트가 고칠 수 있는 것까지 경고로
+        # 올리면 이미 해소된 일로 알림이 나가고 needs_review 마커가 남는다.
+        # 게이트 실패는 번역을 죽이지 않는다 — 커밋은 진행하고 잔여만 넘긴다.
+        hangul_warns = [w for w in warnings if "Hangul" in w]
+        gate_residual: List[str] = list(hangul_warns)
+        try:
+            from section_anchor_gate import run_gate
+            gres = run_gate(en_path, ko_path, apply=True, mdlint=True)
+            for ln in gres.log_lines:
+                log(f"GATE ({key}): {ln}")
+            # opus 로 넘기는 입력은 결정론 게이트의 잔여 + 한글 경고다. 한글
+            # 경고는 **게이트가 돈 뒤 파일로 다시 뽑는다** — 한글 앵커는 게이트가
+            # 결정론으로 고치는 부류라, 번역 단계의 낡은 경고를 그대로 넘기면
+            # 이미 고쳐진 것을 고치라고 부르는 헛돈이 된다. 수식 개수 불일치는
+            # 넣지 않는다 — 프롬프트가 수식을 못 만지게 돼 있고, 그쪽은
+            # verify_math_mismatch 라는 자기 검증 경로가 따로 있다.
+            residual = gres.fails + gres.mdlint_lines + _hangul_findings(en_path)
+            gate_residual = _fixup_pass(en_path, ko_path, key, residual) \
+                if residual else []
+        except Exception as e:
+            log(f"GATE exception (non-fatal): {_flat(e)[:160]}")
+
+        # 한글 경고는 최종 파일로 재판정한다. 게이트가 고쳤으면 알림에서도
+        # needs_review 에서도 빠져야 한다 (마커만 남아 --status 를 오염시킨 사례 있음).
+        warnings = [w for w in warnings if "Hangul" not in w] \
+            + _hangul_findings(en_path)
+        hangul_warns = [w for w in warnings if "Hangul" in w]
+
         state["files"][key] = {
             "status": "done",
             "last_attempt_ts": time.time(),
@@ -2505,13 +2561,16 @@ def main() -> int:
             state["files"][key]["lossy_retry_count"] = len(lossy_history)
         if verdict_text:
             state["files"][key]["verify_verdict"] = verdict_text[:4000]
-        hangul_warns = [w for w in warnings if "Hangul" in w]
         if hangul_warns:
-            # 사용자 확인 전까지 남는 마커 — 임계 미만 한글 잔존·한글 앵커는
-            # 정오 판단에 사람이 필요하다. 확인 후 손으로 지운다.
+            # 게이트를 거치고도 남은 한글만 여기 온다 — 임계 미만 한글 잔존·한글
+            # 앵커는 정오 판단에 사람이 필요하다. 확인 후 손으로 지운다.
             state["files"][key]["needs_review"] = hangul_warns
 
-        if warnings:
+        # 게이트가 못 고치고 남긴 것도 같은 알림에 싣는다 (한글 경고와 중복되지
+        # 않게 warnings 에 없는 것만).
+        gate_only = [x for x in gate_residual if x not in warnings]
+
+        if warnings or gate_only:
             # Suppress telegram only when the verdict is safe AND every warning
             # is a math-count mismatch ("safe" means the divergence is
             # rephrasing). Hangul warnings (residual prose, Korean anchors)
@@ -2522,7 +2581,7 @@ def main() -> int:
                 and re.search(r"^VERDICT:\s*safe\b",
                               verdict_text, re.MULTILINE | re.IGNORECASE)
             )
-            only_math = all(
+            only_math = not gate_only and all(
                 w.startswith("math block count mismatch") for w in warnings
             )
             if verdict_safe and only_math:
@@ -2530,6 +2589,7 @@ def main() -> int:
             else:
                 body_lines = [key, f"→ {en_path.relative_to(BLOG_ROOT)}", ""]
                 body_lines += [f"• {w}" for w in warnings]
+                body_lines += [f"• (게이트 잔여) {x}" for x in gate_only]
                 if lossy_history:
                     final_lossy = bool(re.search(
                         r"^VERDICT:\s*lossy\b", verdict_text,
@@ -2552,40 +2612,18 @@ def main() -> int:
         stats["total_out_chars"] = stats.get("total_out_chars", 0) + out_chars
         save_state(state)
 
-        # ── 섹션(§§) 앵커 게이트: 결정론 검증+수리 (section_anchor_gate.py) ──
-        # 커밋 전에 EN 파일을 in-place 수리해 같은 커밋에 싣는다. 게이트 실패는
-        # 번역을 죽이지 않는다 — 커밋은 진행하고 사람 몫만 텔레그램으로 넘긴다.
-        try:
-            from section_anchor_gate import run_gate, sweep_target
-            gres = run_gate(en_path, ko_path, apply=True, mdlint=True)
-            for ln in gres.log_lines:
-                log(f"GATE ({key}): {ln}")
-
-            # 결정론 게이트가 못 고치고 남긴 지적은 opus 한 패스에 넘긴다. 판정은
-            # 모델의 자기 보고가 아니라 **게이트 재실행**이 한다 — 재실행 후에도
-            # 남은 것만 사람에게 넘어간다.
-            residual = gres.fails + gres.mdlint_lines
-            if residual:
-                residual = _fixup_pass(en_path, ko_path, key, residual)
-
-            if residual:
-                _notify_telegram(
-                    f"[translate-worker] section-anchor gate: {reason}",
-                    "\n".join([key, ""] + [f"• {x}" for x in residual]))
-        except Exception as e:
-            log(f"GATE exception (non-fatal): {e!r}")
-
         log(f"DONE: {en_path.relative_to(BLOG_ROOT)} (in={in_chars}c, out={out_chars}c)")
         commit_translation(ko_path, en_path, reason)
 
         # 이 글을 가리키던 유보(EN 미번역 대상) 섹션 앵커의 자가 치유. 수리된
         # 형제 파일은 커밋하지 않는다 — 워킹트리에 남아 다음 autopush 가 가져간다.
         try:
+            from section_anchor_gate import sweep_target
             sres = sweep_target(en_path, apply=True)
             for ln in sres.log_lines:
                 log(f"SWEEP ({key}): {ln}")
         except Exception as e:
-            log(f"SWEEP exception (non-fatal): {e!r}")
+            log(f"SWEEP exception (non-fatal): {_flat(e)[:160]}")
         return 0
     finally:
         release_lock()
