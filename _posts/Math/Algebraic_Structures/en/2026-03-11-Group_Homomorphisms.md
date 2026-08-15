@@ -1,38 +1,38 @@
 ---
 title: "Group Homomorphisms"
-excerpt: "Definition and properties of group homomorphisms, kernels and images"
+description: "This post covers the definition of a group homomorphism and isomorphism, and shows that a magma homomorphism is an isomorphism if and only if it is bijective. It also examines the property that the equalizer of a homomorphism forms a subgroup."
+excerpt: "Definitions and properties of group homomorphisms, kernels and images"
 
 categories: [Math / Algebraic Structures]
 permalink: /en/math/algebraic_structures/group_homomorphisms
-sidebar:
+sidebar: 
     nav: "algebraic_structures-en"
-
-date: 2026-03-11
+    
+date: 2021-09-08
 weight: 4
-translated_at: 2026-05-29T02:00:58+00:00
+translated_at: 2026-08-15T03:46:36+00:00
 translation_source: kimi-cli
-last_polished_at: 2026-05-24T08:00:03+00:00
 ---
-For the time being, we explore properties of groups. Thus, we will simply refer to group homomorphisms between groups as homomorphisms.
+For now, we investigate the properties of groups. Therefore, a group homomorphism between groups will simply be called a homomorphism.
 
-From [§Algebraic Structures, ⁋Definition 6](/en/math/algebraic_structures/algebraic_structures#def6), we can also define (group) isomorphisms, and from this definition and [\[Set Theory\] §Operations on Functions, ⁋Proposition 5](/en/math/set_theory/operation_of_functions#prop5), it is clear that any isomorphism must be a bijection. In many cases, the converse also holds.
+From [§Algebraic Structures, ⁋Definition 6](/en/math/algebraic_structures/algebraic_structures#def6), a (group) isomorphism can also be defined, and from this definition and [[Set Theory] §Operations Between Functions, ⁋Proposition 5](/en/math/set_theory/operation_of_functions#prop5), it is obvious that any isomorphism must be a bijection. In many cases, the converse also holds.
 
 ::: Proposition 1
-A magma homomorphism $f:A\rightarrow A'$ is an isomorphism if and only if $f$ is a bijection.
+A magma homomorphism $f:A\rightarrow A'$ is an isomorphism if and only if $f$ is bijective.
 
-If $A$ has an identity element $e$ and $f:A\rightarrow A'$ is a bijection, then $f(e)$ is the identity element of $A'$, and consequently $f^{-1}$ is a magma homomorphism that sends the identity element of $A'$ to the identity element of $A$.
+If $A$ has an identity element $e$ and $f:A\rightarrow A'$ is a bijective homomorphism, then $f(e)$ is the identity element of $A'$, and thus $f^{-1}$ is a magma homomorphism sending the identity element of $A'$ to that of $A$.
 :::
 
 ::: Proof
-It suffices to prove the converse. Since $f$ is a bijection, there exists an inverse function $f^{-1}:G'\rightarrow G$. If $f^{-1}$ is a homomorphism, then by definition $f$ is an isomorphism.
+It suffices to show the reverse direction. Since $f$ is bijective, the inverse function $f^{-1}:A'\rightarrow A$ exists as a function. If only $f^{-1}$ is a homomorphism, then by definition $f$ will be an isomorphism.
 
-Take arbitrary $y, y'\in  A'$. Since $f$ is a bijection, there exist unique $x$ and $x'$ such that $f(x)=y$ and $f(x')=y'$. Now
+Choose arbitrary $y, y'\in A'$. Then since $f$ is bijective, there exist unique $x$, $x'$ such that $f(x)=y$ and $f(x')=y'$. Now
 
 $$f^{-1}(yy')=f^{-1}(f(x)f(x'))=f^{-1}(f(xx'))=xx'=f^{-1}(y)f^{-1}(y')$$
 
 so $f^{-1}$ is a homomorphism, and therefore $f$ is an isomorphism.
 
-On the other hand, if $f:A\rightarrow A'$ is a bijection, then for any $y\in A'$, there exists a unique $x\in A$ such that $f(x)=y$. Now
+On the other hand, if $f:A\rightarrow A'$ is a bijection, then for any $y\in A'$ there exists a unique $x\in A$ satisfying $f(x)=y$. Now
 
 $$y=f(x)=f(xe)=f(x)f(e),\qquad y=f(x)=f(ex)=f(e)f(x)$$
 
@@ -44,52 +44,52 @@ so $f(e)$ is the identity element of $A'$.
 The following holds.
 
 ::: Proposition 2
-Let $f,g:G \rightarrow H$ be group homomorphisms. Then
+Let group homomorphisms $f,g:G \rightarrow H$ be given. Then
 
 $$\Eq(f,g)=\{x\in G\mid f(x)=g(x)\}$$
 
 is a subgroup of $G$.
 :::
 ::: Proof
-If $x,y\in \Eq(f,g)$, then
+If $x,y\in \Eq(f,g)$, then by the argument immediately following [§Semigroups, Monoids, Groups, ⁋Definition 11](/en/math/algebraic_structures/groups#def11), a monoid homomorphism between groups preserves inverses, so
 
 $$f(xy^{-1})=f(x)f(y)^{-1}=g(x)g(y)^{-1}=g(xy^{-1})$$
 
-so $xy^{-1}\in\Eq(f,g)$. Therefore, by [§Semigroups, Monoids, and Groups, ⁋Proposition 15](/en/math/algebraic_structures/groups#prop15), we obtain the desired result.
+and thus $xy^{-1}\in\Eq(f,g)$. Also, after [§Semigroups, Monoids, Groups, ⁋Definition 11](/en/math/algebraic_structures/groups#def11) we observed that a monoid homomorphism between groups preserves the identity element, and since the identity element of $H$ is unique, $\Eq(f,g)$ is nonempty. Therefore, by [§Semigroups, Monoids, Groups, ⁋Proposition 15](/en/math/algebraic_structures/groups#prop15), we obtain the desired result.
 :::
 
-The map $i:\Eq(f,g)\rightarrow G$ defined in this way has the following property.
+For this $\Eq(f,g)$, the inclusion $i:\Eq(f,g)\rightarrow G$ has the following property.
 
-> If a group homomorphism $j:G' \rightarrow G$ satisfies $f\circ j=g\circ j$, then there exists a unique homomorphism $j': G' \rightarrow G$ such that $i\circ j'=j$.
+> If a group homomorphism $j:G' \rightarrow G$ satisfies $f\circ j=g\circ j$, then there exists a unique homomorphism $j': G' \rightarrow \Eq(f,g)$ such that $i\circ j'=j$.
 
-This is because the image of $j$ is contained in $\Eq(f,g)$ by definition. Thus every morphism in $\Grp$ has an equalizer. ([\[Category Theory\] §Limits, ⁋Example 7](/en/math/category_theory/limits#ex7)) In fact, every morphism in $\Grp$ also has a coequalizer, but to define this, we first need to define normal subgroups and quotient groups.
+This is because by definition the image of $j$ is contained in $\Eq(f,g)$. Thus any morphism in $\Grp$ has an equalizer. ([[Category Theory] §Limits, ⁋Example 7](/en/math/category_theory/limits#ex7)) In fact, any morphism in $\Grp$ also has a coequalizer, but to define this we must first define normal subgroups and quotient groups.
 
-## Kernel and Image of Homomorphisms
+## Kernel and Image of a Homomorphism
 
 The group $\{e\}$ is a zero object in the category $\Grp$. Therefore, for any groups $G,H$, the zero map $e:G \rightarrow H$ is defined as the composite $G\rightarrow\{e\}\rightarrow H$.
 
-Meanwhile, whether a group homomorphism $f$ is injective can be expressed as follows.
+On the other hand, the condition that a group homomorphism $f$ is injective can be expressed as follows.
 
 ::: Proposition 3
 A homomorphism $f:G\rightarrow G'$ is injective if and only if $f^{-1}(e')=\{e\}$.
 :::
 ::: Proof
-If $f$ is injective, then it is clear that $f^{-1}(e')=\{e\}$.
+That $f^{-1}(e')=\{e\}$ must hold if $f$ is injective is obvious.
 
-Conversely, suppose $f^{-1}(e')=\{e\}$. Let $x,y\in G$ satisfy $f(x)=f(y)$. Then
+Conversely, assume that $f^{-1}(e')=\{e\}$. Suppose $x,y\in G$ satisfy $f(x)=f(y)$. Then
 
 $$e'=f(x)f(y)^{-1}=f(xy^{-1})$$
 
-and by assumption, $xy^{-1}=e$. Hence $x=y$.
+and by assumption $xy^{-1}=e$. From this we know that $x=y$.
 :::
 
-For any homomorphism $f:G\rightarrow G'$, the set $f^{-1}(e')$ above shows how far $f$ is from being injective. This set is named as follows.
+For any homomorphism $f:G\rightarrow G'$, the above set $f^{-1}(e')$ indicates how far $f$ is from being injective. This set is called the following.
 
 ::: Definition 4
-The *kernel* of a homomorphism $f:G\rightarrow G'$ is defined as the set $f^{-1}(e')$ and denoted by $\ker f$.
+The *kernel* of a homomorphism $f:G\rightarrow G'$ is defined as the set $f^{-1}(e')$, and is denoted $\ker f$.
 :::
 
-Then $f^{-1}(e')$ is not merely a set but a subgroup of $G$.
+Then $f^{-1}(e')$ is not merely a set, but becomes a subgroup of $G$.
 
 ::: Proposition 5
 For any homomorphism $f:G\rightarrow G'$, $\ker f$ is a subgroup of $G$.
@@ -98,26 +98,23 @@ For any homomorphism $f:G\rightarrow G'$, $\ker f$ is a subgroup of $G$.
 By definition, $\ker f=\Eq(f,e)$.
 :::
 
-On the other hand, we verified that for any magma homomorphism $f:A\rightarrow A'$, its image $\im f$ is a submagma of $A'$. (See the calculation before [§Algebraic Structures, ⁋Definition 8](/en/math/algebraic_structures/algebraic_structures#def8)) However, a submagma of a group is not necessarily a subgroup in general, so the following proposition requires a separate proof.
+On the other hand, when any magma homomorphism $f:A\rightarrow A'$ is given, we have verified that its image $\im f$ is a submagma of $A'$. (calculation before [§Algebraic Structures, ⁋Definition 8](/en/math/algebraic_structures/algebraic_structures#def8)) However, since a submagma of a group need not be a subgroup in general, the following proposition must be proved separately.
 
 ::: Proposition 6
 For any homomorphism $f:G\rightarrow G'$, $\im f$ is a subgroup of $G'$.
 :::
 ::: Proof
-We already know that $\im f$ is a submagma of $G'$, so by [§Semigroups, Monoids, and Groups, ⁋Proposition 15](/en/math/algebraic_structures/groups#prop15), it suffices to show that $\im f$ is closed under taking inverses. Let $y\in\im f$ and suppose $x\in G$ satisfies $f(x)=y$. Then
+We already know that $\im f$ is a submagma of $G'$, so by [§Semigroups, Monoids, Groups, ⁋Proposition 15](/en/math/algebraic_structures/groups#prop15) it suffices to show that $\im f$ is closed under taking inverses. Let $y\in\im f$ and suppose $x\in G$ satisfies $f(x)=y$. Then from
 
 $$f(x^{-1})=f(x)^{-1}=y^{-1}$$
 
-so $y^{-1}\in\im f$.
+we know that $y^{-1}\in\im f$.
 :::
-
 
 ---
 
 **References**
 
-**[Bou]** Bourbaki, N. Algebra I. *Elements of Mathematics*. Springer. 1998.
+**[Bou]** Bourbaki, N. Algebra I. *Elements of Mathematics*. Springer. 1998.  
 
 ---
-
-[^1]: To avoid cluttered notation, we wrote $$\bar{a}$$ instead of $$a\ker f$$.
