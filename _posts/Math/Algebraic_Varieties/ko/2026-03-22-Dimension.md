@@ -11,7 +11,6 @@ sidebar:
 
 date: 2026-03-22
 weight: 5
-drift_needed: true
 
 
 ---
@@ -23,7 +22,7 @@ drift_needed: true
 Algebraic variety는 이미 위상공간이므로, [\[위상수학\] §차원, ⁋정의 10](/ko/math/topology/dimension#def10)을 사용하여 $X$의 차원을 irreducible closed subset들의 strictly descending chain의 length의 supremum으로 정의할 수 있다. 
 
 ::: 예시 1
-$\mathbb{K}$가 유한집합이 아닌 한, $\mathbb{A}^1$에서 닫힌집합들은 $\mathbb{A}^1$ 전체와 유한집합들뿐이다. 따라서 가장 긴 chain은 $\mathbb{A}^1 \supsetneq \{p\}$이며, 이는 length $1$ chain이므로 $\mathbb{A}^1$은 이 정의에 따르면 $1$차원이 된다.
+Infinite field $\mathbb{K}$에 대하여, $\mathbb{A}^1$에서 닫힌집합들은 $\mathbb{A}^1$ 전체와 유한집합들뿐이다. 따라서 가장 긴 chain은 $\mathbb{A}^1 \supsetneq \{p\}$이며, 이는 length $1$ chain이므로 $\mathbb{A}^1$은 이 정의에 따르면 $1$차원이 된다.
 :::
 
 이 정의는 순수하게 위상적인 관점에서 차원을 정의한다는 장점이 있다. 그러나 실제로 계산을 위해서는 irreducible closed subset들의 chain을 모두 알아야하므로 그렇게 효율적이지는 않다. 
@@ -33,14 +32,14 @@ $\mathbb{K}$가 유한집합이 아닌 한, $\mathbb{A}^1$에서 닫힌집합들
 한편 우리는 이미 algebraic variety와 그 위에 정의된 함수들 사이의 관계가 아주 긴밀하다는 것을 알고 있다. 그렇다면, algebraic variety 위의 함수들의 대수구조가 차원에 대한 정보를 담고있다고 하여도 그렇게 놀라운 일은 아닐 것이다. 이러한 관점을 통해 접근하려면 그 coordinate ring $\mathbb{K}[X]$가 깔끔하게 주어지는 *affine* variety의 경우를 보는 것이 좋을 것이다. 
 
 ::: 명제 2
-$\mathbb{K}$가 algebraically closed라 하자. Affine variety $X$의 차원은 coordinate ring $\mathbb{K}[X]$의 Krull dimension과 같다. ([\[가환대수학\] §차원, ⁋정의 1](/ko/math/commutative_algebra/Krull_dimension#def1))
+Algebraically closed field $\mathbb{K}$ 위에 정의된 affine variety $X$의 차원은 coordinate ring $\mathbb{K}[X]$의 Krull dimension과 같다. ([\[가환대수학\] §차원, ⁋정의 1](/ko/math/commutative_algebra/Krull_dimension#def1))
 :::
 
 ::: 증명
 [§아핀다양체, ⁋명제 12](/ko/math/algebraic_varieties/affine_varieties#prop12)로부터 affine variety의 irreducible closed subset과 $\mathbb{K}[X]$의 prime ideal 사이의 일대일대응이 존재한다. 
 :::
 ::: 따름정리 3
-$\mathbb{K}$가 유한집합이 아닌 한, $\dim \mathbb{A}^n = n$이다.
+Infinite field $\mathbb{K}$에 대하여, $\dim \mathbb{A}^n = n$이다.
 :::
 
 ::: 증명
@@ -82,7 +81,7 @@ $\mathbb{P}^n$의 cone은 $\mathbb{A}^{n+1}$이고 $\dim \mathbb{A}^{n+1} = n+1$
 Hypersurface는 단일 다항식의 zero set으로 정의되는 variety이다. 직관적으로, 하나의 식을 추가하는 것은 하나의 제약조건을 주는 것과 같으므로 차원을 하나 줄이게 될 것이다. 
 
 ::: 명제 6
-$\mathbb{K}$가 algebraically closed라 하자. Irreducible polynomial $f \in \mathbb{K}[\x_1, \ldots, \x_n]$에 대해, irreducible hypersurface $Z(f) \subseteq \mathbb{A}^n$의 차원은 $n - 1$이다.
+Algebraically closed field $\mathbb{K}$와 그 위의 irreducible polynomial $f \in \mathbb{K}[\x_1, \ldots, \x_n]$에 대하여, irreducible hypersurface $Z(f) \subseteq \mathbb{A}^n$의 차원은 $n - 1$이다.
 :::
 
 ::: 증명
@@ -111,10 +110,10 @@ Variety $X$의 차원은 function field $\mathbb{K}(X)$의 $\mathbb{K}$ 위에�
 
 ## 차원의 기본 성질
 
-차원의 가장 기본적인 성질은 진부분집합의 차원이 더 작다는 것이다. 이는 기하학적으로 trivial한 사실이다. 
+차원의 가장 기본적인 성질은 진부분집합의 차원이 더 작다는 것이다. 이는 기하학적으로 자명한 사실이다. 
 
 ::: 명제 9
-$X$의 closed subvariety $Y \subsetneq X$에 대하여 $\dim Y < \dim X$이 성립한다.
+Variety $X$의 closed subvariety $Y \subsetneq X$에 대하여 $\dim Y < \dim X$이 성립한다.
 :::
 
 ::: 증명
@@ -122,11 +121,11 @@ $Y$의 closed subvariety들의 maximal chain
 
 $$Y = Y_0 \supsetneq Y_1 \supsetneq \cdots \supsetneq Y_n \neq \emptyset$$
 
-을 생각하면
+을 생각하면, $X$가 irreducible이므로
 
 $$X \supsetneq Y = Y_0 \supsetneq Y_1 \supsetneq \cdots \supsetneq Y_n$$
 
-은 $X$가 irreducible이므로 $X$의 closed subvariety들의 길이가 $n+1$인 chain이다.
+은 $X$의 closed subvariety들의 길이가 $n+1$인 chain이다.
 :::
 
 이는 [명제 6](#prop6)의 약한 형태의 일반화라 생각할 수 있다. Hypersurface $Z(f)\subsetneq \mathbb{A}^n$에 적용하면 $\dim Z(f)\leq n-1$만이 나오므로, 하나의 방정식이 차원을 정확히 하나 떨어뜨린다는 것까지는 이로부터 얻을 수 없다. 이제 regular map과 차원의 관계에 대해 살펴보자. 
