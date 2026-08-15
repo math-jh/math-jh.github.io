@@ -250,6 +250,9 @@ pre.log{background:var(--code-bg);border:1px solid var(--rule);padding:.8rem .9r
 
 /* ── 지표 ── */
 .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-bottom:1.4rem}
+/* 마지막 줄에 타일이 하나만 남으면 줄을 채운다 — 조건부 타일이 붙어 개수가
+   3의 배수를 벗어날 때 칸이 비어 보이지 않게. */
+.grid3>.metric:last-child:nth-child(3n+1){grid-column:1/-1}
 .metric{color:inherit;display:block}
 .metric:hover{border-color:var(--brass)}
 .metric__n{font-family:var(--sans);font-size:2.1rem;font-weight:bold;line-height:1.1;letter-spacing:-.02em;font-variant-numeric:tabular-nums}

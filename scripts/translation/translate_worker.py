@@ -1680,7 +1680,8 @@ def call_claude_verify(prompt: str) -> str:
 
 _FIXUP_PROMPT = """You are fixing lint findings on one English post of a bilingual math blog.
 
-File to edit: @@PATH@@
+File to edit:    @@PATH@@
+Korean original: @@KO_PATH@@
 
 Findings (from the repo's own linters — each is a real violation of the house
 guidelines in GUIDELINE.md):
@@ -1698,6 +1699,11 @@ Rules:
   on an `/en/` link with the target page's actual English heading slug (read the
   target file). But some Korean is intentional — a Korean bibliography entry, or
   a Korean term deliberately glossed. Leave those alone and count them as left.
+- The Korean original is listed above for one purpose only: when a finding is
+  about residual Korean, open it to see what that passage actually says, so your
+  replacement matches the source rather than paraphrasing. Do not diff the two
+  files, do not import anything else from it, and do not re-translate any passage
+  that no finding names.
 - Use the Edit tool on the file in place. Do not create files.
 
 When done, output exactly one final line and nothing else:
@@ -1705,7 +1711,7 @@ FIXUP: <n> fixed / <m> left  — <short reason if any left>
 """
 
 
-def call_claude_fixup(en_path: Path, findings: List[str]) -> str:
+def call_claude_fixup(en_path: Path, ko_path: Path, findings: List[str]) -> str:
     """Run one lint-repair pass over `en_path` with `claude -p --model opus`.
 
     Returns the model's terse summary line. Raises RuntimeError on nonzero exit.
@@ -1718,6 +1724,7 @@ def call_claude_fixup(en_path: Path, findings: List[str]) -> str:
     # range" 로 게이트가 통째로 죽었다).
     prompt = (_FIXUP_PROMPT
               .replace("@@PATH@@", str(en_path.relative_to(BLOG_ROOT)))
+              .replace("@@KO_PATH@@", str(ko_path.relative_to(BLOG_ROOT)))
               .replace("@@FINDINGS@@",
                        "\n".join(f"- {f}" for f in findings)))
     claude_bin = shutil.which("claude") or str(Path.home() / ".local/bin/claude")
@@ -1747,6 +1754,100 @@ def _flat(s) -> str:
     """로그 한 줄로 접는다 — 여러 줄 출력은 대시보드의 마지막-실행 오류 판정을
     통째로 오염시킨다 (blog-worker-log-timestamp 계약)."""
     return " ".join(str(s).split())
+
+
+_KO_TYPO_REVIEW_PROMPT = """A weaker model compared a Korean math post with its English translation and
+claimed the *Korean* source contains errors. Judge each claim against the Korean
+text below. You are reviewing only — do not propose rewrites of anything else.
+
+Korean source (@@KO_PATH@@):
+--- BEGIN ---
+@@KO_BODY@@
+--- END ---
+
+Claims:
+
+@@CLAIMS@@
+
+For each claim, decide:
+  VALID  — the Korean really is wrong and the proposed correction is right.
+  FALSE  — the Korean is correct as written, or the claim misreads it (a
+           convention it dislikes, a deliberate notation, a hallucinated quote).
+  UNSURE — you cannot locate the quoted Korean, or judging needs context outside
+           this file.
+
+Output exactly one line per claim, in order, and nothing else:
+<n>. VALID|FALSE|UNSURE — <one clause of reasoning>
+"""
+
+_KO_TYPO_VERDICT_RE = re.compile(
+    r"^\s*(?P<n>\d+)\s*[.)]\s*(?P<verdict>VALID|FALSE|UNSURE)\b[\s—:-]*(?P<why>.*)$",
+    re.I)
+KO_TYPO_BODY_MAX = 40_000        # 프롬프트에 싣는 KO 본문 상한
+KO_TYPO_MAX_CLAIMS = 10
+
+
+def call_claude_ko_typo_review(ko_path: Path, claims: List[str]) -> List[str]:
+    """KO 오타 주장들을 opus 한 번에 넘겨 타당성만 판정받는다.
+
+    **도구 없이** 돈다 — KO 본문을 프롬프트에 붙여 넣고 판정문만 받는다.
+    사용자가 쓴 원문이라 봇이 고칠 대상이 아니고, 도구를 안 주면 고칠 수단
+    자체가 없다. 반환값은 `<n>. VERDICT — 사유` 줄들.
+    """
+    body = _body_after_frontmatter(ko_path.read_text(encoding="utf-8")).strip()
+    prompt = (_KO_TYPO_REVIEW_PROMPT
+              .replace("@@KO_PATH@@", str(ko_path.relative_to(BLOG_ROOT)))
+              .replace("@@KO_BODY@@", body[:KO_TYPO_BODY_MAX])
+              .replace("@@CLAIMS@@",
+                       "\n".join(f"{i}. {c}" for i, c in enumerate(claims, 1))))
+    claude_bin = shutil.which("claude") or str(Path.home() / ".local/bin/claude")
+    env = {**os.environ, "CLAUDE_CODE_DISABLE_ADVISOR_TOOL": "1"}
+    proc = subprocess.run(
+        [claude_bin, "-p", "--model", FIXUP_MODEL, "--output-format", "text"],
+        input="[cron]\n\n" + prompt + "\n\nDo not use any tools.\n",
+        capture_output=True, text=True, timeout=FIXUP_TIMEOUT_SEC,
+        cwd=str(BLOG_ROOT), env=env,
+    )
+    if proc.returncode != 0:
+        raise RuntimeError(f"claude -p ko-typo review exited {proc.returncode}: "
+                           f"{proc.stderr.strip()[:200]!r}")
+    return [l.strip() for l in _FENCE_RE.sub("", proc.stdout).splitlines() if l.strip()]
+
+
+def review_ko_typos(ko_path: Path, key: str, claims: List[str]) -> List[dict]:
+    """각 주장에 opus 판정을 붙여 돌려준다. 실패하면 판정 없이 원 주장만.
+
+    KO 파일이 바뀌지 않았는지 해시로 확인한다 — 검토 전용 계약이 프롬프트로만
+    걸려 있으면 지켜졌는지 알 수 없다. 사용자가 쓴 본문이므로 봇이 고치는 것은
+    별도 절차(published:false + revising:true + drift_needed:true) 없이는 금지다.
+    """
+    out = [{"claim": c} for c in claims]
+    if len(claims) > KO_TYPO_MAX_CLAIMS:
+        log(f"GATE-KO-TYPO ({key}): 주장 {len(claims)}건 — 상한 "
+            f"{KO_TYPO_MAX_CLAIMS} 초과라 검토 생략")
+        return out
+    before = hashlib.sha256(ko_path.read_bytes()).hexdigest()
+    try:
+        lines = call_claude_ko_typo_review(ko_path, claims)
+    except Exception as e:
+        log(f"GATE-KO-TYPO ({key}): 호출 실패 — {_flat(e)[:160]}")
+        return out
+    if hashlib.sha256(ko_path.read_bytes()).hexdigest() != before:
+        log(f"GATE-KO-TYPO ({key}): KO 파일이 변경됨 — 검토 전용 계약 위반")
+        _notify_telegram("[translate-worker] KO 검토가 원문을 수정함",
+                         f"{key}\n검토 전용이어야 하는 단계가 KO 원문을 바꿨다. 확인 필요.")
+    for ln in lines:
+        m = _KO_TYPO_VERDICT_RE.match(ln)
+        if not m:
+            continue
+        i = int(m.group("n")) - 1
+        if 0 <= i < len(out):
+            out[i]["verdict"] = m.group("verdict").upper()
+            out[i]["why"] = m.group("why").strip()[:200]
+    tally = collections.Counter(o.get("verdict", "?") for o in out)
+    log(f"GATE-KO-TYPO ({key}): 주장 {len(claims)}건 판정 — "
+        + " ".join(f"{k}={v}" for k, v in sorted(tally.items())))
+    return out
 
 
 def _hangul_findings(en_path: Path) -> List[str]:
@@ -1785,7 +1886,7 @@ def _fixup_pass(en_path: Path, ko_path: Path, key: str,
             f"{FIXUP_MAX_FINDINGS} 초과라 넘기지 않는다 (번역 자체 재검토 대상)")
         return findings
     try:
-        summary = call_claude_fixup(en_path, findings)
+        summary = call_claude_fixup(en_path, ko_path, findings)
     except Exception as e:
         log(f"GATE-OPUS ({key}): 호출 실패 — {_flat(e)[:160]}")
         return findings
@@ -2546,6 +2647,15 @@ def main() -> int:
             + _hangul_findings(en_path)
         hangul_warns = [w for w in warnings if "Hangul" in w]
 
+        # 검증기가 KO 원문의 오류를 지적했으면 opus 에게 타당성만 판정받는다.
+        # 검증기는 약한 모델이라 오탐이 섞이고, 이 지적은 SAFE verdict 에 붙어
+        # 오므로 사람이 걸러 줄 다른 관문이 없다. 판정만 하고 원문은 고치지
+        # 않는다 — 사용자가 쓴 본문이다.
+        ko_typo_review: List[dict] = []
+        ko_typo_claims = extract_ko_typos(verdict_text)
+        if ko_typo_claims:
+            ko_typo_review = review_ko_typos(ko_path, key, ko_typo_claims)
+
         state["files"][key] = {
             "status": "done",
             "last_attempt_ts": time.time(),
@@ -2565,12 +2675,21 @@ def main() -> int:
             # 게이트를 거치고도 남은 한글만 여기 온다 — 임계 미만 한글 잔존·한글
             # 앵커는 정오 판단에 사람이 필요하다. 확인 후 손으로 지운다.
             state["files"][key]["needs_review"] = hangul_warns
+        if ko_typo_review:
+            # FALSE 판정도 지운 채로 저장하지 않는다 — 대시보드의 '수정' 체크
+            # 흐름과 사용자의 최종 판단이 전체 목록을 본다. 주석을 다는 것이지
+            # 거르는 것이 아니다.
+            state["files"][key]["verify_ko_typos"] = ko_typo_claims[:20]
+            state["files"][key]["verify_ko_typos_review"] = ko_typo_review[:20]
 
         # 게이트가 못 고치고 남긴 것도 같은 알림에 싣는다 (한글 경고와 중복되지
         # 않게 warnings 에 없는 것만).
         gate_only = [x for x in gate_residual if x not in warnings]
+        # 판정이 붙은 KO 오타 지적. FALSE 만 남으면 알릴 것이 없다.
+        ko_actionable = [o for o in ko_typo_review
+                         if o.get("verdict", "UNSURE") != "FALSE"]
 
-        if warnings or gate_only:
+        if warnings or gate_only or ko_actionable:
             # Suppress telegram only when the verdict is safe AND every warning
             # is a math-count mismatch ("safe" means the divergence is
             # rephrasing). Hangul warnings (residual prose, Korean anchors)
@@ -2581,7 +2700,7 @@ def main() -> int:
                 and re.search(r"^VERDICT:\s*safe\b",
                               verdict_text, re.MULTILINE | re.IGNORECASE)
             )
-            only_math = not gate_only and all(
+            only_math = not gate_only and not ko_actionable and all(
                 w.startswith("math block count mismatch") for w in warnings
             )
             if verdict_safe and only_math:
@@ -2590,6 +2709,14 @@ def main() -> int:
                 body_lines = [key, f"→ {en_path.relative_to(BLOG_ROOT)}", ""]
                 body_lines += [f"• {w}" for w in warnings]
                 body_lines += [f"• (게이트 잔여) {x}" for x in gate_only]
+                if ko_typo_review:
+                    n_false = len(ko_typo_review) - len(ko_actionable)
+                    body_lines += ["", f"KO 오타 지적 {len(ko_typo_review)}건 "
+                                       f"(opus 오탐 판정 {n_false}건 제외):"]
+                    for o in ko_actionable:
+                        body_lines.append(
+                            f"• [{o.get('verdict', 'UNSURE')}] {o['claim']}"
+                            + (f"\n    → {o['why']}" if o.get("why") else ""))
                 if lossy_history:
                     final_lossy = bool(re.search(
                         r"^VERDICT:\s*lossy\b", verdict_text,

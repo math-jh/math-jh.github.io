@@ -293,8 +293,11 @@ def _mdlint_filtered(en_path: Path) -> list[str]:
                            capture_output=True, text=True, timeout=120)
     except Exception as e:
         return [f"md_lint 실행 실패: {e!r}"]
-    lines = [l.strip("- ").strip() for l in (r.stdout + r.stderr).splitlines()
-             if l.strip() and "자동 검사 경고" not in l]
+    # md_lint 출력은 `<경로>:` 헤더 한 줄 + `  - <지적>` 들이다. 헤더를 지적으로
+    # 세면 목록에 파일명만 든 항목이 섞이고, 그게 그대로 텔레그램·opus 프롬프트에
+    # 지적인 척 들어간다 (건수 상한·"n fixed / m left" 산수도 같이 어긋난다).
+    lines = [l.strip()[2:].strip() for l in (r.stdout + r.stderr).splitlines()
+             if l.strip().startswith("- ") and "자동 검사 경고" not in l]
     kept = []
     for l in lines:
         mm = re.search(r"참조 대상 글 없음: (/en/[^\s]+)", l)

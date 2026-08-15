@@ -369,6 +369,13 @@ def sec_workers():
     return out
 
 
+# "(none detected)" / "(none identified)" / "None." 류의 빈 목록 마커. 규칙의
+# 정본은 translate_worker.py :: _KO_TYPO_NONE_RE 다 — 그쪽은 워커 전용 의존성
+# (yaml·md_lint)을 끌고 와서 import 하지 않고 같은 패턴만 옮겨 둔다. 한쪽만
+# 고치면 대시보드가 "지적 0건"을 지적으로 세어 없는 일을 만든다.
+_KO_TYPO_NONE_RE = re.compile(r"^\(?\s*none\b[^()]*\)?\s*\.?$", re.I)
+
+
 def _ko_typos(verdict):
     """verify verdict의 KO-TYPOS 섹션에서 실제 지적 항목만 뽑는다.
     '(none detected)' 류 한 줄이나 빈 섹션은 [] 로 취급한다."""
@@ -380,7 +387,9 @@ def _ko_typos(verdict):
             continue
         if on:
             if s.startswith("- "):
-                out.append(s[2:])
+                item = s[2:].strip()
+                if item and not _KO_TYPO_NONE_RE.match(item):
+                    out.append(item)
             elif not s.startswith("-"):
                 break
     return out
@@ -396,6 +405,7 @@ def sec_translation():
     by_status = {}
     recent = []
     ko_typos = []
+    n_actionable = n_false = n_unreviewed = 0
     for path, v in files.items():
         st = v.get("status", "?")
         by_status[st] = by_status.get(st, 0) + 1
@@ -404,13 +414,33 @@ def sec_translation():
                            retries=v.get("retries") or v.get("retry") or 0,
                            verdict=v.get("verdict") or v.get("verify_verdict") or ""))
         typos = _ko_typos(v.get("verdict") or v.get("verify_verdict") or "")
-        if typos:
-            ko_typos.append(dict(path=path, items=typos,
-                                 verified_at=v.get("verified_at") or ""))
+        if not typos:
+            continue
+        # opus 판정(translate_worker :: review_ko_typos)이 있으면 항목에 붙인다.
+        # 판정은 주장 문자열로 맞춘다 — 저장 순서에 기대면 목록이 어긋났을 때
+        # 엉뚱한 항목에 VALID 가 붙는다.
+        by_claim = {r.get("claim"): r for r in (v.get("verify_ko_typos_review") or [])}
+        items = []
+        for t in typos:
+            r = by_claim.get(t) or {}
+            verdict = (r.get("verdict") or "").upper()
+            items.append(dict(text=t, verdict=verdict or None, why=r.get("why") or ""))
+            if verdict == "FALSE":
+                n_false += 1
+            elif verdict:
+                n_actionable += 1
+            else:
+                n_unreviewed += 1
+        live = [i for i in items if i["verdict"] != "FALSE"]
+        ko_typos.append(dict(path=path, items=[i["text"] for i in items],
+                             detail=items, live=len(live),
+                             verified_at=v.get("verified_at") or ""))
     recent.sort(key=lambda r: r["ts"], reverse=True)
     ko_typos.sort(key=lambda r: r["verified_at"], reverse=True)
     return dict(stats=d.get("stats", {}), by_status=by_status,
-                recent=recent[:15], ko_typos=ko_typos, state_mtime=mtime(p))
+                recent=recent[:15], ko_typos=ko_typos,
+                ko_typo_actionable=n_actionable, ko_typo_false=n_false,
+                ko_typo_unreviewed=n_unreviewed, state_mtime=mtime(p))
 
 
 def sec_comments():

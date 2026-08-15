@@ -372,6 +372,17 @@ function overview(d) {
     { n: num(sys.dirty_count), l: '커밋 안 된 변경', to: 'activity',
       d: sys.dirty_count ? (sys.dirty[0] || '').replace(/^[ MADRCU?!]+/, '') : 'working tree clean' }
   ];
+  /* KO 오타 지적 — 검증기가 KO 원문에서 찾았다고 주장한 오류 중 opus 가 오탐으로
+     판정하지 않은 것. 볼 것이 있을 때만 타일을 낸다 (0 이면 늘 0 인 칸이 된다). */
+  var kt = d.translation || {};
+  if (kt.ko_typo_actionable || kt.ko_typo_unreviewed) {
+    mets.push({
+      n: num((kt.ko_typo_actionable || 0) + (kt.ko_typo_unreviewed || 0)),
+      l: 'KO 오타 지적', to: 'translation', accent: true,
+      d: (kt.ko_typo_false ? 'opus 오탐 판정 ' + kt.ko_typo_false + '건 제외' : 'opus 검토 통과')
+        + (kt.ko_typo_unreviewed ? ' · 미검토 ' + kt.ko_typo_unreviewed + '건' : '')
+    });
+  }
   var g3 = el('div', 'grid3');
   mets.forEach(function (m) {
     var a = el('a', 'panel metric' + (m.accent ? ' metric--accent' : ''));
@@ -672,16 +683,23 @@ function secTranslation(d) {
       typos.map(function (k) {
         var key = k.path + '@' + (k.verified_at || '');
         liveKeys[key] = true;
+        var det = k.detail || k.items.map(function (x) { return { text: x }; });
+        var nFalse = det.filter(function (x) { return x.verdict === 'FALSE'; }).length;
         var tr = row([
           { html: '<span class="path">' + esc(k.path.replace(/^_posts\//, '')) + '</span>' },
-          { text: k.items.length, cls: 'num' },
+          { html: (k.live == null ? k.items.length : k.live)
+              + (nFalse ? ' <span class="muted">(+오탐 ' + nFalse + ')</span>' : ''), cls: 'num' },
           { text: agoIso(k.verified_at), cls: 'num muted' },
           { html: '<input type="checkbox" class="typo-chk"' + (doneMap[key] ? ' checked' : '') + '>', cls: 'num' }
         ], 'clickable' + (doneMap[key] ? ' typo-done' : ''));
         tr.onclick = function () {
           openModal('KO-TYPOS — ' + k.path,
-            k.items.map(function (x) { return '- ' + x; }).join('\n') +
-            '\n\n(검증 ' + (k.verified_at || '—') + ' · KO 를 고친 뒤에도 다음 재검증까지 표시가 남는다)');
+            det.map(function (x) {
+              return '[' + (x.verdict || '미검토') + '] ' + x.text
+                + (x.why ? '\n    → ' + x.why : '');
+            }).join('\n') +
+            '\n\n(검증 ' + (k.verified_at || '—') + ' · 판정은 opus 검토 결과다. ' +
+            'KO 를 고친 뒤에도 다음 재검증까지 표시가 남는다)');
         };
         var chk = tr.querySelector('.typo-chk');
         chk.onclick = function (e) { e.stopPropagation(); };
