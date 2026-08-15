@@ -14,7 +14,7 @@ sidebar:
 author: Marvin
 
 date: 2026-05-26
-last_modified_at: 2026-08-11
+last_modified_at: 2026-08-15
 
 weight: 15
 
@@ -193,3 +193,46 @@ push는 하지 않는다. autopush가 워킹트리를 통째로 haiku 분류기�
 `term_extract_worker.py`는 한영 병기 표기를 다듬으면서 글 본문 자체도 고친다. 처리 전에 그 글이 이미 dirty했다면(사용자가 편집 중이었다면) 커밋 목록에서 뺀다. 넣으면 작업 중인 원고가 `[lastmod-skip]` 붙은 봇 커밋에 딸려 들어가기 때문이다.
 
 같은 변경에 재검사 빈도 조정도 딸려 왔다. `term_extract_worker.py`는 한 번 스캔한 글도 14일이 지나면 다시 검사 대상에 올리는데, 1차 수확이 끝나 대부분의 글이 이미 스캔된 뒤로는 이 재검사가 안 바뀐 글에도 매번 LLM을 불러 같은 답을 받아오는 낭비가 됐다. 이제는 마지막 검사 이후 그 글이 실제로 바뀐 경우에만 stale 대상에 넣는다. 글마다 `git log`로 커밋 시각을 물으면 600여 개 경로에 600번 프로세스를 띄우는 셈이라, 전체 히스토리를 한 번에 훑어 경로 → 최신 커밋 시각 dict를 만든다. `terms.yml` 자체를 순회하는 감사도 짝수 시각(하루 23회)에서 하루 한 번으로 줄었다. 짝수 시각 조건 그대로 두면 하루 23회 LLM을 불러 see 링크를 228건 밀어 넣는 정도였다.
+
+## 인명 대문자 드리프트와 장식 매크로
+
+항목 등재는 손으로도 들어온다. `module`(가군)과 `associated sheaf`(연관층) 두 항목이 `primary: en`으로 [등재됐고](https://github.com/math-jh/math-jh.github.io/commit/36b36288), 정렬은 `terms_lint --fix`가 맞췄다. 같은 커밋에 `mech_ambig.txt`가 아홉 줄에서 한 줄로 줄었는데, 기계 스윕이 판정을 못 해 사람에게 넘긴 잔량이 그만큼 정리됐다는 뜻이다. 여기까지는 표에 줄을 더하는 일이다.
+
+문제는 이미 들어간 줄이다. 추출 시점에는 `terms_common._PROPER_FORMS`가 인명 파생 고유명사를 정본 대문자형으로 교정한다. `noetherian`은 `Noetherian`이 되고 `hausdorff`는 `Hausdorff`가 된다. 그런데 그 교정은 새로 뽑는 항목에만 걸리므로, 표에 이미 소문자로 앉아 있는 것들은 아무도 다시 보지 않았다. [CASE 검사](https://github.com/math-jh/math-jh.github.io/commit/820acb7d)는 그 표를 **기존 항목에도** 매일 들이대는 검사다.
+
+```python
+def check_case(text: str) -> list[Issue]:
+    """en 표기의 인명 파생 고유명사 소문자 드리프트 (_PROPER_FORMS 기준)."""
+    _, groups = split_file(text)
+    out = []
+    for chunks in groups.values():
+        for c in chunks:
+            en = chunk_field(c, "en")
+            if not en:
+                continue
+            fixed = normalize_proper_case(en)
+            if fixed != en:
+                out.append(Issue("E", "CASE",
+                                 f"{chunk_id(c)}: en {en!r} → {fixed!r}",
+                                 fixable=True))
+    return out
+```
+{: data-filename="scripts/term-extraction/terms_lint.py"}
+
+검사와 교정이 같은 함수를 부르므로 `--fix`는 검사가 지적한 것과 정확히 같은 값을 쓴다. `normalize_proper_case`는 `$...$` 구간을 건너뛰고 표에 없는 관용 소문자 형용사(`abelian` 등)는 그대로 두며, 이미 올바른 표기에 다시 걸어도 같은 값이 나온다. 표에는 25개가 더해졌고 `Cartesian` 하나는 관용 소문자 예외에서 대문자 확정으로 자리를 옮겼다.
+
+같은 커밋에 `fold`도 손봤다. `fold`는 수식과 발음기호를 접어 평문으로 만드는 공통 전처리인데, `$\bar{\partial}$`가 `bar`로 시작하는 문자열로 접히는 바람에 B 그룹에 분류되고 있었다. 장식 매크로를 벗겨 인자만 남기면 `partial`이 되어 P 그룹으로 간다. 그런데 같은 `fold`를 중복 판정에도 쓰고 있었고, 거기서 장식을 벗기면 `$\partial$`와 `$\bar{\partial}$`가 한 키로 접혀 서로를 중복이라고 우긴다. 두 요구가 반대 방향이라 플래그 하나로 갈랐다.
+
+```python
+def fold(s: str, strip_decor: bool = True) -> str:
+    ...
+    if strip_decor:
+        s = _DECOR_RE.sub(r"\1", s)
+
+def dedup_key(s: str) -> str:
+    """대소문자·발음기호·수식 무시 중복 판정 키."""
+    return re.sub(r"[^a-z0-9]", "", fold(s, strip_decor=False).casefold())
+```
+{: data-filename="scripts/term-extraction/terms_common.py"}
+
+분류와 정렬은 벗긴 쪽을, 중복 판정은 남긴 쪽을 쓴다. 한 함수가 두 답을 내야 하는 자리였고, 기본값을 벗기는 쪽에 둔 것은 부르는 자리가 그쪽이 더 많아서다.

@@ -14,6 +14,8 @@ sidebar:
 author: Marvin
 
 date: 2026-05-28
+last_modified_at: 2026-08-15
+
 weight: 11
 
 ---
@@ -124,3 +126,52 @@ end
 같은 결과를 글 작성 시점의 사람의 규율로 보장할 수도 있고, 별도의 audit script로 보장할 수도 있다. 빌드 시점에 끼어드는 방식은 그 둘과 다른 장점이 있다 — source는 수정되지 않고, 잘못된 표기가 배포물에 도달하지 못한다. GitHub Pages 기본 빌드 위에선 못 했을 일이고, Actions로 옮긴 김에 가능해진 일이다.
 
 플러그인을 추가한 첫 commit에서 빌드를 돌리고 audit summary를 봤더니 463건이 잡혔다. 그 중 459건이 cosmetic/label-enrich, 즉 사용자가 짧게 쓴 라벨에 부연이 자동으로 붙은 사례였다. 의도된 동작이고, 글 사이의 표기 일관성이 source 수정 없이 개선됐다. 369줄짜리 플러그인이 한 일이 대체로 괄호를 더하는 것이었다고 하면 김이 빠지긴 한다.
+
+## 사후: 코드 안의 링크와 빈 카테고리 맵
+
+[7월 말의 한 커밋](https://github.com/math-jh/math-jh.github.io/commit/46b277a2)이 감사 목록의 오탐 두 종류를 걷어냈다.
+
+첫째는 코드다. 이 플러그인은 본문에서 `[표시명](/url#anchor)` 꼴을 찾아 표시명을 대상 글의 현재 제목으로 갈아 끼우는데, 링크 문법이 코드 블록 안에 인용돼 있으면 그것도 실제 링크로 봤다. LLM Workshop 글은 링크 문법 자체를 예시로 적는 일이 잦으니, 남의 글에 적힌 설명문이 조용히 고쳐지고 감사 목록에도 올라왔다. 해법은 치환 전에 코드를 통째로 빼내는 것이다.
+
+```ruby
+def mask_code(content)
+  stash = []
+  out = +""
+  fence = nil
+  content.each_line do |line|
+    opens = line.match(/\A[ \t]{0,3}(`{3,}|~{3,})/)
+    if fence || opens
+      nl = line.end_with?("\n") ? "\n" : ""
+      stash << line.chomp("\n")
+      out << "\x00LNMASK#{stash.size - 1}\x00#{nl}"
+      ...
+    else
+      out << line.gsub(/`[^`\n]+`/) do |code|
+        stash << code
+        "\x00LNMASK#{stash.size - 1}\x00"
+      end
+    end
+  end
+  [out, stash]
+end
+```
+{: data-filename="_plugins/link_normalizer.rb"}
+
+펜스 블록은 줄 단위로, 인라인 코드는 백틱 쌍 단위로 NUL로 감싼 자리표시자에 넣어 두고, 치환이 끝나면 되돌린다. 자리표시자에 NUL을 쓴 것은 본문에 나올 수 없는 바이트라 마스크 경계가 본문과 충돌하지 않기 때문이다. 마스킹된 구간은 `LINK_RE`가 아예 보지 못하므로 고쳐지지도, 감사에 기록되지도 않는다.
+
+둘째는 회귀다. 카테고리 표시명 맵을 네비게이션 데이터에서 만들고 있었는데, 7월 10일에 사이드바 정리를 하면서 그 데이터의 모양이 바뀌었다. 맵이 빈 채로 만들어졌고, 그러면 cross-category 링크의 `[대수기하]` 같은 브래킷이 전부 "모르는 카테고리"가 되어 탈락했다. 에러는 나지 않았다. 맵이 비어 있다는 것은 링크가 하나도 카테고리를 안 가졌다는 것과 구분되지 않는다.
+
+```ruby
+subjects = (site.data["categories"] || {})["subjects"] || {}
+subjects.each do |key, meta|
+  en_name = key.to_s.split(" / ").last.to_s.strip
+  slug = en_name.downcase.gsub(/[^a-z0-9]+/, "_").gsub(/\A_|_\z/, "")
+  @category_by_lang["en"][slug] = en_name
+  ko_name = meta.is_a?(Hash) ? (meta["ko"] || "").to_s.strip : ""
+  @category_by_lang["ko"][slug] = ko_name unless ko_name.empty?
+```
+{: data-filename="_plugins/link_normalizer.rb"}
+
+맵을 `categories.yml`의 `subjects`에서 파생하게 옮겼다. 키의 `" / "` 뒤가 EN 이름이고 `ko` 필드가 KO 이름이며, URL 슬러그는 EN 이름의 비영숫자를 `_`로 접어 얻는다. 카테고리 목록의 정본이 그 파일이니 표시 이름도 거기서 나오는 게 맞다. 네비게이션은 표시 순서를 정하는 파일이지 이름을 정하는 파일이 아니었다.
+
+각주도 같이 붙었다. 대상 글의 `[^N]:` 정의를 훑어 `#fn:N` 앵커 집합을 만들어 두고, 링크가 살아 있는 각주를 가리키면 `, 각주 N` 꼬리를 원문 그대로 보존한다. 없어진 각주를 가리키면 꼬리를 떼고 `footnote-stripped`로 따로 태그해서, 라벨이나 H2 앵커가 깨진 것과 구분되게 남긴다.

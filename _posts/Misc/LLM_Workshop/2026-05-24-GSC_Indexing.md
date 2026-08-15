@@ -14,6 +14,8 @@ sidebar:
 author: Marvin
 
 date: 2026-05-24
+last_modified_at: 2026-08-15
+
 weight: 10
 
 ---
@@ -100,3 +102,26 @@ Webmasters API로 sitemap entry를 DELETE 후 PUT으로 reset도 해봤다. `las
 조회 대상은 이제 `math-jh.com` 하나다. `math-jh.github.io`는 그쪽으로 301-리다이렉트되니 같은 글을 두 주소로 찍을 이유가 없다.
 
 색인 큐에 밀어넣는 자동화를 짰다가, 무엇이 안 들어갔는지 매일 알려주는 자동화로 갈아탄 셈이다. 미는 일을 접고 세는 일로 물러났다.
+
+## 사후: 구글 아닌 곳들
+
+구글만 보고 있었다. [8월 초에 나머지를 등록했다](https://github.com/math-jh/math-jh.github.io/commit/f42ae11e).
+
+Bing은 `_config.yml`의 `bing_site_verification`에 토큰을 채우면 `seo.html`이 `msvalidate.01` meta로 방출한다. 네이버도 같은 자리에 토큰을 두는데, 이쪽은 기존 것이 만료돼 서치어드바이저에서 [재발급받아 갈아 끼웠다](https://github.com/math-jh/math-jh.github.io/commit/dcb086ef). meta 태그 방식은 이 정도로 끝난다.
+
+IndexNow는 방식이 다르다. meta 태그가 아니라 루트에 놓인 키 파일의 HTTP 응답으로 인증한다.
+
+```yaml
+# IndexNow(Bing·Naver·Yandex·Seznam·Yep 공용)는 meta 태그가 아니라 루트의 키 파일로
+# 인증한다: /059d61933cc601464ea45413f398ad2b.txt
+# 제출기는 scripts/indexnow/submit.py (로컬 전용, .git/info/exclude 등재).
+```
+{: data-filename="_config.yml"}
+
+파일 이름이 키이고 내용도 같은 키다. 그 URL이 200을 반환하는지로 소유를 확인하므로, 이 파일은 레포에 커밋되어 배포까지 가야 한다. 참여 엔진 다섯 곳이 한 키를 공유해서 한 곳에 제출하면 서로 돌려 본다.
+
+제출기 자체는 레포에 없다. `scripts/indexnow/submit.py`는 `.git/info/exclude`에 올라가 있는 로컬 전용 스크립트이고, 매일 03:10에 크론으로 돈다. 하는 일은 프로덕션 사이트맵의 `lastmod`를 이전 실행분과 비교해 바뀐 URL만 통보하는 것이다.
+
+기준을 로컬 `_site`가 아니라 배포된 `https://math-jh.com/sitemap.xml`로 잡은 것이 이 스크립트의 유일한 설계 결정이다. 로컬을 보면 아직 발행하지 않은 글이 사이트맵에 잡혀 새어나갈 수 있고, preview 호스트를 보면 미발행분이 통째로 들어간다. 배포된 사이트맵만 보면 실제로 라이브가 된 뒤에만 제출된다. 상태는 `{url: lastmod}` 하나짜리 JSON이고 의존성은 표준 라이브러리뿐이다.
+
+구글은 IndexNow에 참여하지 않으므로 이 경로와 무관하다. 그쪽은 여전히 이 글이 다룬 색인 모니터의 몫이고, 둘의 역할이 겹치지 않는다.

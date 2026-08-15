@@ -213,3 +213,49 @@ function badWorkers(d) {
 `paused` 플래그를 워커 응답에 얹고, 판정에서 그 워커를 먼저 걸러냈다. 대신 개요 한 줄 옆에 "일시정지 N건은 따로 세지 않았다"는 문구를 붙여서, 정지 사실 자체는 숨기지 않는다. 의도된 정지와 고장을 같은 빨간불로 뭉뚱그리지 않게 된 것이다.
 
 같은 커밋에는 GSC 색인 추천 로직도 손이 갔다. 대시보드가 자체적으로 계산하던 추천 URL 순위를 `index-monitor`의 `index_ranking` 모듈로 옮겨 그대로 import해 쓰게 됐다. 규칙을 두 곳에 복제해두면 index-monitor 쪽 규칙이 바뀔 때 대시보드만 옛 기준으로 남는다는 게 이유다. 오늘 03:00 배치가 이미 뽑아 둔 추천이 있으면 그걸 그대로 쓰고, 없으면 같은 모듈로 지금 다시 계산한다. 배치는 GSC 실측을 거치고 뽑히면서 쿨다운까지 걸어두므로, 배치를 무시하고 매번 새로 계산하면 다른 순번이 나오기 때문이다. 추천 목록의 URL을 누르면 이동 대신 완결된 링크가 클립보드로 복사되도록도 바뀌었다. 그대로 GSC 검색창에 붙여넣고 색인 요청을 누르는 동선이다. [커밋](https://github.com/math-jh/math-jh.github.io/commit/6256feea51d03b4129b37aaaa4071aee4f246068).
+
+## 오류 판정이 보는 범위
+
+워커 카드의 빨간불은 로그 꼬리에서 오류 문구를 찾아 켰다. 판정 범위가 "마지막 10줄"이었으니, 사흘 전에 한 번 죽고 그 뒤로 멀쩡히 도는 워커도 그 트레이스백이 꼬리에 남아 있는 한 계속 빨간불이었다. 불이 꺼지려면 로그가 열 줄 넘게 더 쌓이기를 기다려야 한다. [이 커밋](https://github.com/math-jh/math-jh.github.io/commit/3fc8a0e6)이 범위를 마지막 실행분으로 좁혔다.
+
+```python
+_ERR_RE = re.compile(r"traceback|\bexception\b|\bfail(ed|ure)\b|\berrors?\s*[:=]\s*[1-9]"
+                     r"|\berror\b(?!s?\s*[:=]\s*0)", re.I)
+
+
+def _last_run_lines(path, interval, n=10):
+    ...
+    gap = max(300, interval * 0.25)
+    start = stamps[0][0]
+    for (i, ts), (_, prev) in zip(stamps[1:], stamps):
+        if ts - prev > gap:
+            start = i
+    return lines[start:]
+```
+{: data-filename="scripts/dashboard/server.py"}
+
+실행 경계는 타임스탬프 간격으로 잡는다. 간격이 `max(300초, 크론주기/4)`를 넘으면 다른 실행이다. 이 값은 양쪽에서 눌린다. 한 실행 안의 줄 간격보다는 커야 하고(GSC 전체 스윕은 10분 넘게 벌어진다), 실행 사이 간격보다는 작아야 한다. 타임스탬프가 없는 줄은 직전 줄의 실행에 붙이는데, 그래야 마지막 줄 뒤에 붙은 크래시 트레이스백이 그 실행에 잡힌다.
+
+정규식도 같이 좁혔다. `errors=0`처럼 "오류 없음"을 보고하는 정상 요약줄이 `error`라는 문자열을 들고 있다는 이유로 불을 켜고 있었다. 뒤에 `0`이 오는 경우를 부정 전방탐색으로 뺐다.
+
+이 판정은 워커가 타임스탬프를 찍는다는 약속 위에 서 있다. 안 찍으면 폴백으로 조용히 "마지막 10줄"로 돌아가므로, 같은 커밋에서 안 찍던 두 곳을 맞췄다. `blogdev-bot/lib.sh`의 `log()`는 시각만 찍고 날짜가 없어 하루가 넘어가면 경계 계산이 어긋났고, `audit/check_links.py`는 아예 접두사가 없었다. 후자에는 시작 줄을 새로 넣었다. 시작 줄이 있어야 도중에 죽어 남은 트레이스백이 그 실행에 붙는다.
+
+## 파비콘 세 개, 프레임 하나
+
+탭이 여러 개 열려 있으면 어느 것이 프로덕션이고 어느 것이 로컬 미리보기인지 제목만으로는 잘 안 보인다. [파비콘을 셋으로 갈랐다](https://github.com/math-jh/math-jh.github.io/commit/e955c7f1). 본사이트는 원래의 마크, preview는 네모 안에 망치, 그리고 이 대시보드는 네모 안에 계기판이다.
+
+본사이트 쪽 분기는 빌드 환경으로 한다.
+
+{% raw %}
+```liquid
+{% if jekyll.environment == "production" %}
+{% else %}
+<link rel="icon" type="image/svg+xml" href='data:image/svg+xml,%3Csvg …%3E'>
+{% endif %}
+```
+{: data-filename="_includes/head.html"}
+{% endraw %}
+
+CI 빌드는 `JEKYLL_ENV=production`이라 기본 마크를 그대로 쓰고, 로컬 serve는 그 분기에 안 걸려 망치가 붙는다. SVG는 파일이 아니라 data URI로 인라인이고, 색은 `site.data.brand`의 navy와 brass에서 Liquid로 꽂는다. 브랜드 색이 한 파일에 모여 있으니 파비콘도 거기서 받아 쓴다.
+
+셋이 형제로 보이려면 다른 것보다 같은 것이 많아야 한다. 네이비 타일, 그 위 브래스 네모, 그리고 그 네모의 좌표계(8/16/stroke 3)를 셋이 공유하고, 안에 들어가는 그림만 다르다. 대시보드 것은 후보를 여럿 그려놓고 고른 결과이고, 확정 뒤에 탈락한 SVG 아홉 개를 지웠다. 아이콘 하나 고르는 데 열 개를 그린 셈인데, 16픽셀에서 바늘이 보이느냐 마느냐는 그려보기 전에는 알 수 없다.
