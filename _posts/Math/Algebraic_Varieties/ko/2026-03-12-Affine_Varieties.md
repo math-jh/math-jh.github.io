@@ -10,7 +10,6 @@ sidebar:
 
 date: 2026-03-12
 weight: 1
-drift_needed: true
 
 ---
 
@@ -52,7 +51,7 @@ $$Z(S)=Z((S))$$
 우리가 아는 대다수의 기하학적인 대상들은 다항식으로 나타나므로, 이들이 모두 affine algebraic set의 예시가 된다.
 
 1. $\mathbb{A}^2$ 안에서 정의된 affine variety $Z(\x^2+\y^2-1)$을 생각하자. 정의에 의해, 이 집합은 식 $\x^2+\y^2-1=0$을 만족하는 $\mathbb{A}^2$의 점들의 모임이므로, 단위원을 나타낸다.
-2. 일반적으로, 임의의 affine space $\mathbb{A}^n$와 상수가 아닌 임의의 다항식 $f\in \mathbb{K}[\x_1,\ldots, \x_n]$에 대하여, affine algebraic set $Z(f)$를 *hypersurface<sub>초곡면</sub>*라 부른다. 이것이 언제나 affine variety인 것은 아니어서, 가령 $Z(\x\y)=Z(\x)\cup Z(\y)$는 두 직선의 합집합이다. 다만 $\mathbb{K}$가 algebraically closed이고 $f$가 irreducible이라면 뒤에서 살펴볼 [정리 10](#thm10)에 의하여 $Z(f)$는 affine variety가 된다.
+2. 일반적으로, 임의의 affine space $\mathbb{A}^n$와 상수가 아닌 임의의 다항식 $f\in \mathbb{K}[\x_1,\ldots, \x_n]$에 대하여, affine algebraic set $Z(f)$를 *hypersurface<sub>초곡면</sub>*라 부른다.
 3. 또 다른 중요한 예시로, $\mathbb{A}^3$ 위에 정의된 *twisted cubic*이 있다. 이는 $\mathbb{A}^3$ 위에 정의된 두 다항식 $\y-\x^2$, $\z-\x^3$으로 정의되는 곡선으로, 매개화 $(t,t^2,t^3)$을 통해 $\mathbb{A}^1$과 일대일로 대응된다.
 4. Affine space $\mathbb{A}^n$ 자기자신과 공집합은 affine variety이다. 이는 $Z(0)=\mathbb{A}^n$, $Z(1)=\emptyset$으로부터 자명하다. 이는 [명제 4](#prop4)에서 Zariski topology를 정의할 때 중요하게 사용된다.
 :::
@@ -65,7 +64,7 @@ $$Z(S)=Z((S))$$
 1. $Z(0) = \mathbb{A}^n$,
 2. $Z(1) = \emptyset$,
 3. $\mathfrak{a} \subseteq \mathfrak{b} \implies Z(\mathfrak{b}) \subseteq Z(\mathfrak{a})$,
-4. $\bigcap_{i\in I} Z(\mathfrak{a}_i) = Z\left(\sum_i \mathfrak{a}_i\right)$,
+4. $\displaystyle\bigcap_{i\in I} Z(\mathfrak{a}_i) = Z\left(\sum_i \mathfrak{a}_i\right)$,
 5. $Z(\mathfrak{a}) \cup Z(\mathfrak{b}) = Z(\mathfrak{a} \cap \mathfrak{b}) = Z(\mathfrak{a}\mathfrak{b})$.
 :::
 ::: 증명
@@ -88,7 +87,7 @@ $$f_1g_1+\cdots+ f_kg_k,\qquad f_i\in \mathfrak{a}, g_i\in \mathfrak{b}$$
 
 그보다 중요한 것은 위의 명제에 의해, 만일 $\mathbb{A}^n$ 위에서 정의된 affine algebraic set들을 닫힌집합이라고 선언한다면, [\[위상수학\] §집합의 내부, 폐포, 경계, ⁋명제 2](/ko/math/topology/other_concepts#prop2)의 조건들이 모두 만족되고 따라서 $\mathbb{A}^n$ 위의 위상구조가 유일하게 결정된다는 것이다. 이를 *Zariski topology<sub>자리스키 위상</sub>*이라 부른다. 정의에 의해 임의의 affine variety $X$는 적당한 affine space $\mathbb{A}^n$의 닫힌 부분집합이며, 우리는 $\mathbb{A}^n$에서 정의된 위상의 subspace topology를 통해 $X$에서의 위상을 정의할 수 있다. 
 
-특별한 예시로 $\mathbb{A}^1$에서의 Zariski topology를 보면, $\mathbb{K}$의 임의의 원소는 일차식 $\x-x$의 zero set이므로 임의의 singleton은 닫힌집합이고, 따라서 임의의 유한집합은 닫힌집합이다. 그러나 $\mathbb{K}[\x]$의 $0$이 아닌 임의의 원소는 많아야 유한 개의 해만을 가지므로, 이 위상구조 상에서는 ($\mathbb{K}$가 유한집합이 아닌 한) 무한한 원소를 가진 닫힌집합은 오직 $\mathbb{K}$ 자기자신 뿐이다. 즉 $\mathbb{A}^1$의 Zariski topology는 cofinite topology이며, 이로부터 우리는 Zariski topology가 Hausdorff일 필요가 없다는 것을 관찰할 수 있다. 더 일반적으로 두 점 이상을 가진 irreducible space는 Hausdorff가 될 수 없고, 우리의 정의에서 affine variety들은 모두 irreducible이므로 두 점 이상을 가진 임의의 affine variety는 Hausdorff space가 아니다. ([\[위상수학\] §차원, ⁋명제 7](/ko/math/topology/dimension#prop7))
+특별한 예시로 $\mathbb{A}^1$에서의 Zariski topology를 보면, $\mathbb{K}$의 임의의 원소는 일차식 $\x-x$의 zero set이므로 임의의 singleton은 닫힌집합이고, 따라서 임의의 유한집합은 닫힌집합이다. 그러나 $\mathbb{K}[\x]$의 $0$이 아닌 임의의 원소는 많아야 유한 개의 해만을 가지므로, 이 위상구조 상에서는 ($\mathbb{K}$가 유한집합이 아닌 한) 무한한 원소를 가진 닫힌집합은 오직 $\mathbb{K}$ 자기자신 뿐이다. 즉 $\mathbb{A}^1$의 Zariski topology는 cofinite topology이며, 이로부터 우리는 Zariski topology가 Hausdorff일 필요가 없다는 것을 관찰할 수 있다. 더 일반적으로 irreducible space는 한점공간이 아닌 한 Hausdorff가 될 수 없고, 우리의 정의에서 affine variety들은 모두 irreducible이므로 임의의 affine variety는 Hausdorff space가 아니다. ([\[위상수학\] §차원, ⁋명제 7](/ko/math/topology/dimension#prop7))
 
 이제 우리는 Zariski topology의 열린집합들을 살펴보자.
 
@@ -151,7 +150,7 @@ $$(x_1,\ldots, x_n,y)\mapsto (x_1,\ldots, x_n)$$
 
 을 얻는다. 이것이 homeomorphism인 것은 자명하다. 
 
-마지막으로 $Z(\mathfrak{b})$가 irreducible임을 보이자. 가정에 의하여 $D(f)\cap X$는 $X$의 공집합이 아닌 열린 부분집합이고, $D(f)\cap X$의 공집합이 아닌 두 열린집합은 $X$의 공집합이 아닌 열린집합이기도 하므로, $X$가 irreducible이라는 것과 [\[위상수학\] §차원, ⁋명제 7](/ko/math/topology/dimension#prop7)의 둘째 조건으로부터 서로 만난다. 즉 $D(f)\cap X$는 irreducible이고, 위의 homeomorphism에 의하여 $Z(\mathfrak{b})$ 또한 irreducible이다. 
+마지막으로 $Z(\mathfrak{b})$가 irreducible임을 보이자. 가정에 의하여 $D(f)\cap X$는 $X$의 공집합이 아닌 열린 부분집합이다. 그럼 $D(f)\cap X$의 공집합이 아닌 두 열린집합은 $X$의 공집합이 아닌 열린집합이기도 하므로, $X$가 irreducible이라는 것과 [\[위상수학\] §차원, ⁋명제 7](/ko/math/topology/dimension#prop7)의 둘째 조건으로부터 이 둘은 서로 만난다. 즉 $D(f)\cap X$는 irreducible이고, 위의 homeomorphism에 의하여 $Z(\mathfrak{b})$ 또한 irreducible이다. 
 :::
 
 이쯤에서 짚고 넘어가야 할 사실은, affine variety에 대한 우리의 정의가 엄밀하게는 ambient space $\mathbb{A}^n$에 의존한다는 사실이다. 가령 $\mathbb{A}^1$의 principal open set $D(\x)$는, 위의 명제에 따르면, affine variety이다. 그러나 우리는 이미 $\mathbb{A}^1$의 Zariski topology는 cofinite topology임을 살펴보았고, 따라서 $D(\x)$는 $\mathbb{K}[\x]$ 안에서의 다항식의 zero set들로 정의될 수 없다. 실제로 [명제 7](#prop7)의 증명을 뜯어보면, $D(\x)$가 affine variety라는 사실은 isomorphism
@@ -212,7 +211,9 @@ $$Z(\mathfrak{a}^k)=Z(\mathfrak{a}\cap\cdots\cap \mathfrak{a})=Z(\mathfrak{a})$$
 
 한편, $\mathfrak{a}\subseteq \sqrt{\mathfrak{a}}$가 임의의 ideal $\mathfrak{a}$에 대해 성립하므로 [명제 4](#prop4)의 셋째 조건으로부터 $Z(\sqrt{\mathfrak{a}})\subseteq Z(\mathfrak{a})$임을 안다. 그런데 정의에 의하여 임의의 $f\in \sqrt{\mathfrak{a}}$가 주어졌을 때, 적당한 $r$이 존재하여 $f^r\in \mathfrak{a}$이다. 따라서 $x\in Z(\mathfrak{a})$라면 $x\in Z(\sqrt{\mathfrak{a}})$여야 하고 이로부터 $Z(\mathfrak{a})=Z(\sqrt{\mathfrak{a}})$임을 안다. 즉 ideal의 radical은 affine algebraic set을 ideal의 zero set으로 나타낼 때, 이 ideal을 얻어내는 표준적인 방법을 주는 것으로 생각할 수 있으며, 이들 사이의 차이를 구별하기 위해서는 *scheme*을 정의하면 된다. 
 
-이제 [명제 4](#prop4)의 다섯번째 결과와 위의 결과를 종합하면, $\mathbb{K}$가 algebraically closed일 때 우리는 $Z(\mathfrak{a})$가 affine variety이기 위해서는 $\sqrt{\mathfrak{a}}$가 prime ideal이어야 함을 알 수 있다. ([\[가환대수학\] §기본 개념들, ⁋정의 10](/ko/math/commutative_algebra/basic_notions#def10)) 즉, $\mathbb{A}^n$의 irreducible closed algebraic set들과 $\mathbb{K}[\x_1,\ldots, \x_n]$의 prime ideal들 사이의 Galois correspondence가 존재한다. 
+앞으로 우리는 [정리 10](#thm10)을 자유롭게 사용하기 위하여, 별다른 언급이 없는 한 $\mathbb{K}$가 algebraically closed field인 것으로 가정하기로 한다.
+
+이제 [명제 4](#prop4)의 다섯번째 결과와 위의 결과를 종합하면, 우리는 $Z(\mathfrak{a})$가 affine variety이기 위해서는 $\sqrt{\mathfrak{a}}$가 prime ideal이어야 함을 알 수 있다. ([\[가환대수학\] §기본 개념들, ⁋정의 10](/ko/math/commutative_algebra/basic_notions#def10)) 즉, $\mathbb{A}^n$의 irreducible closed algebraic set들과 $\mathbb{K}[\x_1,\ldots, \x_n]$의 prime ideal들 사이의 Galois correspondence가 존재한다. 
 
 ## 좌표환과 정칙성
 
