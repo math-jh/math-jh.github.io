@@ -10,7 +10,6 @@ sidebar:
 
 date: 2026-03-22
 weight: 6
-drift_needed: true
 
 
 ---
@@ -46,7 +45,7 @@ $$T_x X = (\mathfrak{m}_x / \mathfrak{m}_x^2)^\ast$$
 우리는 해석학 스타일의 $\epsilon$-$\delta$ 꼴의 미분을 사용하지는 않으나, 본질적으로 variety들은 다항식으로 정의되며 이들의 미분은 형식적으로 $\x^n$을 미분하면 $n\cdot \x^{n-1}$이 나오는 것으로 생각할 수 있다. 특히 affine variety의 경우 이는 더 명확하게 써 줄 수 있다.
 
 ::: 명제 2
-Affine variety $X = Z(f_1, \ldots, f_k) \subseteq \mathbb{A}^n$이 $I(X) = (f_1, \ldots, f_k)$를 만족한다고 하자. 그럼 $X$의 점 $x = (x_1, \ldots, x_n)$에서,
+Affine variety $X = Z(f_1, \ldots, f_k) \subseteq \mathbb{A}^n$와 이에 대응되는 ideal $I(X) = (f_1, \ldots, f_k)$을 생각하자. 그럼 $X$의 점 $x = (x_1, \ldots, x_n)$에서,
 
 $$T_x X \cong \{v \in \mathbb{K}^n \mid (\dd{f_i})_x(v) = 0 \text{ for all } i\}$$
 
@@ -148,8 +147,8 @@ $$\dim T_x X = \dim_{\mathbb{K}}(\mathfrak{m}_x/\mathfrak{m}_x^2) \ge \dim \math
 
 위의 예시들에서 우리는 다음 명제를 자연스럽게 이용했다.
 
-::: 명제 8
-(Jacobian Criterion) $X = Z(f_1, \ldots, f_k) \subseteq \mathbb{A}^n$이 irreducible하고 $I(X) = (f_1, \ldots, f_k)$이며 $x \in X$라 하자. 그럼 $x$가 smooth point일 필요충분조건은 Jacobian matrix $J_x$의 rank가 $n - \dim X$인 것이다.
+::: 명제 8 (Jacobian criterion)
+Affine variety $X = Z(f_1, \ldots, f_k) \subseteq \mathbb{A}^n$와 이에 대응되는 ideal $I(X) = (f_1, \ldots, f_k)$을 생각하자. 그럼 점 $x \in X$가 smooth point일 필요충분조건은 Jacobian matrix $J_x$의 rank가 $n - \dim X$인 것이다.
 :::
 
 ::: 증명
@@ -165,21 +164,17 @@ $$n - \rank(J_x) = \dim X$$
 임의의 algebraic variety는 대부분의 점에서 매끄럽다. 이를 보이기 위해 *generic point*의 개념이 필요하다.
 
 ::: 정의 9
-Irreducible affine variety $X$에 대하여 $\mathbb{K}[X]$는 domain이므로 $(0)$은 prime ideal이며, [§아핀다양체, ⁋명제 12](/ko/math/algebraic_varieties/affine_varieties#prop12)의 대응에서 이는 closed subvariety $X$ 자기 자신에 해당한다. 이 prime ideal이 나타내는 형식적인 점을 $X$의 *generic point<sub>일반점</sub>* $\eta$라 부르고, 그 local ring을
-
-$$\mathcal{O}_{X,\eta} = \mathbb{K}[X]_{(0)} = \mathbb{K}(X)$$
-
-으로 정의한다.
+Irreducible variety $X$의 *generic point<sub>일반점</sub>* $\eta$는 $X$의 모든 nonempty open subset에 속하는 유일한 점이다.
 :::
 
-이는 점 $x \in X$가 maximal ideal $\mathfrak{m}_x$에 해당하고 그 local ring이 $\mathbb{K}[X]_{\mathfrak{m}_x}$였던 것과 같은 방식이다. 다만 $\eta$에 대응하는 closed subvariety가 $X$ 전체이므로, $\eta$는 $X$의 어떠한 진부분 closed subvariety에도 속하지 않고 따라서 $X$의 비어있지 않은 모든 열린집합에 속한다. 즉 $\eta$는 $X$의 점들 가운데에서 찾을 수 있는 것이 아니라, $X$ 전체를 하나의 점으로 본 것이다. 기하학적으로, generic point는 $X$의 "가장 일반적인 점"으로, $X$의 어떤 특정한 성질도 갖지 않는 점으로 생각하면 된다. 이러한 아이디어를 다음 증명에서 활용할 수 있다. 
+Affine case $X = \Spec A$에서, $\eta$는 $A$의 minimal prime ideal (즉, $(0)$ ideal)에 해당하며, local ring $\mathcal{O}_{X,\eta}$는 정확히 function field $\mathbb{K}(X) = \Frac(A)$이다. 기하학적으로, generic point는 $X$의 "가장 일반적인 점"으로, $X$의 어떤 특정한 성질도 갖지 않는 점으로 생각하면 된다. 이러한 아이디어를 다음 증명에서 활용할 수 있다. 
 
 ::: 명제 10
-Irreducible variety $X$의 smooth points들의 집합 $X_\sm$은 $X$의 dense open subset이다. 특히, $X_\sm \ne \emptyset$이다.
+Variety $X$의 smooth points들의 집합 $X_\sm$은 $X$의 dense open subset이다. 특히, $X_\sm \ne \emptyset$이다.
 :::
 
 ::: 증명
-$X = Z(f_1, \ldots, f_k) \subseteq \mathbb{A}^n$의 차원이 $\dim X = d$라 하자. [명제 8](#prop8)의 Jacobian criterion에 의해
+$X = Z(f_1, \ldots, f_k) \subseteq \mathbb{A}^n$의 차원이 $\dim X = d$라 하자. [명제 8](#prop8)에 의해
 
 $$X_\sm = \{x \in X \mid \rank(J_x) = n - d\}$$
 
