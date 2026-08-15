@@ -40,7 +40,7 @@ import time
 import yaml
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Optional, Tuple
+from typing import List, Optional, Tuple
 
 # ---------------------------------------------------------------------------
 # Paths
@@ -88,6 +88,13 @@ CLAUDE_VERIFY_SCRIPT       = str(SCRIPT_DIR / "verify_session.sh")
 CLAUDE_VERIFY_DIR          = Path("/tmp/translation-verify")
 CLAUDE_VERIFY_SEND_TIMEOUT = 120             # cold launch (spawn + wait_ready) headroom
 CLAUDE_VERIFY_DONE_TIMEOUT = 240             # max wait for the session to write `.done`
+
+# 잔여 지적 수리 게이트 (opus). 결정론 게이트(section_anchor_gate)가 못 고치고
+# 남긴 md_lint·앵커 지적만 넘겨 고치게 한다. 지적이 없으면 호출하지 않는다 —
+# 워커가 :15/:45 로 도는 이상 무조건 호출은 대부분의 틱에서 헛돈이다.
+FIXUP_MODEL       = "opus"
+FIXUP_TIMEOUT_SEC = 600                      # 도구 사용 세션이라 verify 보다 넉넉히
+FIXUP_MAX_FINDINGS = 12                      # 이보다 많으면 번역 자체가 틀어진 것 — 사람 몫
 
 # Set True once a verify session is used in a run; main() tears the session down
 # at the end of the run (it is reused across calls *within* a run, then killed so
@@ -1671,6 +1678,100 @@ def call_claude_verify(prompt: str) -> str:
     return out
 
 
+_FIXUP_PROMPT = """You are fixing lint findings on one English post of a bilingual math blog.
+
+File to edit: @@PATH@@
+
+Findings (from the repo's own linters — each is a real violation of the house
+guidelines in GUIDELINE.md):
+
+@@FINDINGS@@
+
+Rules:
+- Fix ONLY the findings listed above. Make the smallest edit that resolves each.
+- Do NOT rewrite, restructure, retitle, or renumber anything else.
+- Do NOT touch the References/참고문헌 section under any circumstance.
+- Do NOT alter math spans (`$...$`, `$$...$$`), display blocks, or `\\tag{}`.
+- A `§Section Name` citation must match the target post's `title:` exactly —
+  read the target file to get it rather than guessing.
+- Use the Edit tool on the file in place. Do not create files.
+
+When done, output exactly one final line and nothing else:
+FIXUP: <n> fixed / <m> left  — <short reason if any left>
+"""
+
+
+def call_claude_fixup(en_path: Path, findings: List[str]) -> str:
+    """Run one lint-repair pass over `en_path` with `claude -p --model opus`.
+
+    Returns the model's terse summary line. Raises RuntimeError on nonzero exit.
+    Editing needs tools, so unlike call_claude_verify this session runs with
+    bypassPermissions and a working directory — the title-mismatch class can
+    only be fixed by reading the cited post's frontmatter.
+    """
+    # str.format 을 쓰지 않는다 — 프롬프트 본문에 리터럴 중괄호(`\\tag{}`, `$...$`)가
+    # 있어 포맷 자리표시자로 해석된다 (2026-08-15 실측: "Replacement index 0 out of
+    # range" 로 게이트가 통째로 죽었다).
+    prompt = (_FIXUP_PROMPT
+              .replace("@@PATH@@", str(en_path.relative_to(BLOG_ROOT)))
+              .replace("@@FINDINGS@@",
+                       "\n".join(f"- {f}" for f in findings)))
+    claude_bin = shutil.which("claude") or str(Path.home() / ".local/bin/claude")
+    # advisorModel(fable) 이 전역 기본값이라, 막지 않으면 opus 세션에도 상담이
+    # 붙는다 (부착 조건 base_rank <= advisor_rank). cron 은 advisor 를 쓰지 않는다
+    # — call_claude_verify 의 같은 주석 참고.
+    env = {**os.environ, "CLAUDE_CODE_DISABLE_ADVISOR_TOOL": "1"}
+    proc = subprocess.run(
+        [claude_bin, "-p", "--model", FIXUP_MODEL,
+         "--permission-mode", "bypassPermissions", "--output-format", "text"],
+        # 첫 user 메시지의 리터럴 `[cron]` 은 세션 트랜스크립트 리퍼의 봇 턴
+        # 식별 규약이다 (call_claude_verify 와 동일).
+        input="[cron]\n\n" + prompt, capture_output=True, text=True,
+        timeout=FIXUP_TIMEOUT_SEC, cwd=str(BLOG_ROOT), env=env,
+    )
+    if proc.returncode != 0:
+        raise RuntimeError(
+            f"claude -p fixup exited {proc.returncode}: "
+            f"{proc.stderr.strip()[:200]!r}"
+        )
+    out = _FENCE_RE.sub("", proc.stdout).strip()
+    tail = [l.strip() for l in out.splitlines() if l.strip()]
+    return tail[-1][:200] if tail else "(no summary)"
+
+
+def _flat(s) -> str:
+    """로그 한 줄로 접는다 — 여러 줄 출력은 대시보드의 마지막-실행 오류 판정을
+    통째로 오염시킨다 (blog-worker-log-timestamp 계약)."""
+    return " ".join(str(s).split())
+
+
+def _fixup_pass(en_path: Path, ko_path: Path, key: str,
+                findings: List[str]) -> List[str]:
+    """opus 한 패스로 지적을 고치고, **게이트를 다시 돌려** 남은 지적을 반환한다.
+
+    판정은 모델의 자기 보고가 아니라 재검사 결과다. 호출 실패·타임아웃은 원래
+    지적을 그대로 돌려주므로, 이 게이트가 죽어도 파이프라인은 게이트 도입 전과
+    똑같이 동작한다 (커밋은 진행, 지적은 텔레그램).
+    """
+    if len(findings) > FIXUP_MAX_FINDINGS:
+        log(f"GATE-OPUS ({key}): 지적 {len(findings)}건 — 상한 "
+            f"{FIXUP_MAX_FINDINGS} 초과라 넘기지 않는다 (번역 자체 재검토 대상)")
+        return findings
+    try:
+        summary = call_claude_fixup(en_path, findings)
+    except Exception as e:
+        log(f"GATE-OPUS ({key}): 호출 실패 — {_flat(e)[:160]}")
+        return findings
+    log(f"GATE-OPUS ({key}): {_flat(summary)[:160]}")
+
+    from section_anchor_gate import run_gate
+    res = run_gate(en_path, ko_path, apply=True, mdlint=True)
+    remain = res.fails + res.mdlint_lines
+    log(f"GATE-OPUS ({key}): 재검사 — 지적 {len(findings)}건 중 "
+        f"{len(findings) - len(remain)}건 해소, 잔여 {len(remain)}건")
+    return remain
+
+
 def verify_math_mismatch(
     ko_content: str, en_new: str, ko_count: int, en_count: int,
     *, en_old: Optional[str] = None,   # unused; kept for call-site compatibility
@@ -2459,12 +2560,18 @@ def main() -> int:
             gres = run_gate(en_path, ko_path, apply=True, mdlint=True)
             for ln in gres.log_lines:
                 log(f"GATE ({key}): {ln}")
-            if gres.fails or gres.mdlint_lines:
+
+            # 결정론 게이트가 못 고치고 남긴 지적은 opus 한 패스에 넘긴다. 판정은
+            # 모델의 자기 보고가 아니라 **게이트 재실행**이 한다 — 재실행 후에도
+            # 남은 것만 사람에게 넘어간다.
+            residual = gres.fails + gres.mdlint_lines
+            if residual:
+                residual = _fixup_pass(en_path, ko_path, key, residual)
+
+            if residual:
                 _notify_telegram(
                     f"[translate-worker] section-anchor gate: {reason}",
-                    "\n".join([key, ""]
-                              + [f"• FAIL {x}" for x in gres.fails]
-                              + [f"• md_lint {x}" for x in gres.mdlint_lines]))
+                    "\n".join([key, ""] + [f"• {x}" for x in residual]))
         except Exception as e:
             log(f"GATE exception (non-fatal): {e!r}")
 

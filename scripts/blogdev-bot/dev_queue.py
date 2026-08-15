@@ -7,16 +7,30 @@ state.json·git log를 읽고 클러스터링한 뒤에야 "nothing to cover"로
 `[dev]` 태그만 보고** 기계적으로 판정하므로, 쓸 게 없는 날은 모델을 아예
 띄우지 않는다.
 
-워터마크가 둘인 이유 (written.log 의 마지막 기록들에서 계산):
+원장(ledger) 방식
+-----------------
+검토 범위는 워터마크가 아니라 **커밋별 해소 상태**로 정한다.
 
-  gate  = 모든 기록(wrote/augment/skip/seed) 중 가장 최신 sha
-          → 이보다 새로운 `[dev]` 커밋이 없으면 **LLM을 띄우지 않는다**.
-  scan  = `wrote`/`augment`/`seed` 기록 중 가장 최신 sha
-          → Marvin이 *검토할* 범위의 시작점.
+    검토 범위 = (baseline 이후의 모든 `[dev]` 커밋) − covered − dismissed
 
-둘을 분리해야 "주제가 아직 빈약해서 스킵" 이 제대로 동작한다. skip은 gate만
-전진시키므로 같은 얇은 커밋으로 매일 모델이 깨어나지 않고, scan은 그대로 있으니
-나중에 같은 주제 커밋이 더 쌓이면 이전 것들과 **합쳐서** 한 편으로 다룬다.
+한 틱이 다룬 주제의 커밋만 covered 로 빠지므로, 같은 범위에 있던 다른
+주제는 순서와 무관하게 남는다. 워터마크 하나로 범위를 자르면 한 틱이 여러
+주제를 만났을 때 **다루지 않은 주제가 조용히 범위 밖으로 밀려난다**
+(2026-08-15 실측: 그렇게 묻힌 주제 10건 — 양끝맞춤 4커밋, 검색엔진 등록
+2커밋 등). 그래서 범위는 워터마크가 아니라 원장이 정한다.
+
+해소 상태는 셋이다.
+
+  covered   `wrote`/`augment` — 글로 다뤘다. 범위에서 빠진다.
+  dismissed `dismiss` — 열어 보니 주제가 못 된다(오타·주석·한두 줄). 영구히 뺀다.
+  deferred  `skip` — 아직 얇다. **범위에는 남기고** 모델만 안 깨운다.
+
+deferred 가 범위에 남는 것이 핵심이다. 같은 주제의 커밋이 더 쌓여 모델이
+깨어나면 그때 이전 것과 **합쳐서** 한 편으로 다룬다. 모델을 깨우는 조건은
+"범위에 deferred 아닌 커밋이 있는가" 하나다.
+
+baseline 은 가장 최근 `seed` 기록의 sha 다. 그보다 오래된 기록은 원장 계산에서
+무시한다(v1 워터마크 기록과의 경계). git log 비용 상한 역할도 겸한다.
 
 주의 — `git log --grep='[dev]'` 은 정규식이라 `[dev]`가 문자클래스(d|e|v)로
 해석돼 사실상 전 커밋에 매칭된다 (2026-07-25 실측: 200/200). 반드시 `-F`.
@@ -24,25 +38,34 @@ state.json·git log를 읽고 클러스터링한 뒤에야 "nothing to cover"로
 사용법:
   dev_queue.py                    큐 출력. exit 0 = 쓸 것 있음, 3 = 없음(조용히 종료)
   dev_queue.py --json             같은 내용을 JSON으로
-  dev_queue.py --record wrote  --sha <sha> --slug <slug> --detail <path>
-  dev_queue.py --record augment --sha <sha> --slug <slug> --detail <path>
-  dev_queue.py --record skip    --sha <sha> --detail "<이유>"
-  dev_queue.py --seed [<sha>]     워터마크 초기화 (기본 HEAD)
+  dev_queue.py --record wrote    --shas <a,b,c> --slug <slug> --detail <path>
+  dev_queue.py --record augment  --shas <a,b,c> --slug <slug> --detail <path>
+  dev_queue.py --record dismiss  --shas <a,b,c> --detail "<이유>"
+  dev_queue.py --record skip    [--shas <a,b,c>] --detail "<이유>"
+  dev_queue.py --seed [<sha>]     원장 baseline 재설정 (기본 HEAD)
+
+--record wrote/augment/dismiss 는 --shas 가 현재 미해소 목록 안에 있는지
+검사한다. 범위 밖 sha 를 넘기면 거부한다 — 있지도 않은 커밋을 covered 로
+적어 범위를 통째로 날리는 것이 옛 방식의 실패였다.
 """
 import argparse
 import json
+import os
 import subprocess
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[2]
-LOG = Path(__file__).resolve().parent / "written.log"
+LOG = Path(os.environ.get("BLOGDEV_LOG")
+           or Path(__file__).resolve().parent / "written.log")
 WORKSHOP = REPO / "_posts/Misc/LLM_Workshop"
 
 DEV_MARKER = "[dev]"
-MAX_QUEUE = 40          # 첫 실행에서 히스토리가 길 때의 상한 (잘리면 로그로 알린다)
-ADVANCING = ("wrote", "augment", "seed")   # scan 워터마크를 전진시키는 액션
+MAX_QUEUE = 40          # 범위가 비정상적으로 길 때의 상한 (잘리면 로그로 알린다)
+RESOLVING = ("wrote", "augment")     # 범위에서 빼는 액션 — 글로 다뤘다
+DISMISSING = ("dismiss",)            # 범위에서 빼는 액션 — 주제가 아니다
+DEFERRING = ("skip",)                # 범위에 남기고 모델만 안 깨우는 액션
 EXIT_NOTHING = 3        # drive.sh 가 이 코드를 보고 조용히 종료한다
 
 
@@ -64,7 +87,11 @@ def known(sha):
 
 
 def read_records():
-    """written.log 를 오래된 것 → 최신 순 리스트로. 형식 깨진 줄은 건너뛴다."""
+    """written.log 를 오래된 것 → 최신 순 리스트로. 형식 깨진 줄은 건너뛴다.
+
+    sha 칸은 쉼표로 여러 개를 담을 수 있다(v2). v1 기록은 한 개짜리로 읽히며,
+    baseline seed 보다 오래되면 원장 계산에서 어차피 무시된다.
+    """
     if not LOG.exists():
         return []
     out = []
@@ -74,18 +101,31 @@ def read_records():
         cols = line.split("\t")
         if len(cols) < 3:
             continue
-        out.append({"ts": cols[0], "action": cols[1], "sha": cols[2],
+        shas = [s.strip() for s in cols[2].split(",") if s.strip() and s.strip() != "-"]
+        out.append({"ts": cols[0], "action": cols[1], "shas": shas,
                     "slug": cols[3] if len(cols) > 3 else "-",
                     "detail": cols[4] if len(cols) > 4 else ""})
     return out
 
 
-def watermarks(records):
-    """(gate_sha, scan_sha) — 히스토리에 실재하는 가장 최신 기록 기준."""
-    gate = next((r["sha"] for r in reversed(records) if known(r["sha"])), None)
-    scan = next((r["sha"] for r in reversed(records)
-                 if r["action"] in ADVANCING and known(r["sha"])), None)
-    return gate, scan
+def ledger(records):
+    """(baseline, covered, dismissed, deferred) — baseline 이후 기록만 반영한다."""
+    start = 0
+    baseline = None
+    for i, r in enumerate(records):
+        if r["action"] == "seed" and r["shas"] and known(r["shas"][0]):
+            baseline, start = r["shas"][0], i + 1
+    covered, dismissed, deferred = set(), set(), set()
+    for r in records[start:]:
+        target = (covered if r["action"] in RESOLVING else
+                  dismissed if r["action"] in DISMISSING else
+                  deferred if r["action"] in DEFERRING else None)
+        if target is None:
+            continue
+        target.update(s for s in r["shas"] if known(s))
+    # 나중에 글로 다룬 커밋은 defer 상태를 벗는다 (기록 순서와 무관하게).
+    deferred -= covered | dismissed
+    return baseline, covered, dismissed, deferred
 
 
 def dev_commits(since):
@@ -100,12 +140,30 @@ def dev_commits(since):
             continue
         sha, iso, subject = line.split("\x1f", 2)
         commits.append({"sha": sha, "date": iso[:10], "subject": subject, "files": []})
+    return commits
+
+
+def unresolved(records):
+    """미해소 `[dev]` 커밋 전체 — 오래된 것부터, 상한 없이. 파일 목록은 안 붙인다.
+
+    표시용 큐는 MAX_QUEUE 로 자르지만 `--shas` 검사는 이 목록을 쓴다. 잘린
+    목록으로 검사하면 상한 너머의 커밋이 "범위 밖"으로 거부되는데, 정작 그것들은
+    아직 해소되지 않은 것들이라 기록을 막을 이유가 없다.
+    """
+    baseline, covered, dismissed, deferred = ledger(records)
+    return [c for c in dev_commits(baseline)
+            if c["sha"] not in covered and c["sha"] not in dismissed], deferred
+
+
+def review_queue(records):
+    """(review, deferred_shas, truncated) — 표시용. 오래된 것부터 MAX_QUEUE 까지."""
+    commits, deferred = unresolved(records)
     truncated = max(0, len(commits) - MAX_QUEUE)
     commits = commits[:MAX_QUEUE]
     for c in commits:
-        files = git("show", "--name-only", "--format=", c["sha"]).split()
-        c["files"] = files
-    return commits, truncated
+        c["files"] = git("show", "--name-only", "--format=", c["sha"]).split()
+        c["deferred"] = c["sha"] in deferred
+    return commits, deferred, truncated
 
 
 def workshop_inventory():
@@ -127,73 +185,114 @@ def workshop_inventory():
     return items
 
 
-def append(action, sha, slug, detail):
+def append(action, shas, slug, detail):
     ts = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     LOG.parent.mkdir(parents=True, exist_ok=True)
     new = not LOG.exists()
+    joined = ",".join(shas) if shas else "-"
     with LOG.open("a", encoding="utf-8") as fh:
         if new:
-            fh.write("# blogdev-bot 집필 기록 — <utc>\\t<action>\\t<covered_sha>"
+            fh.write("# blogdev-bot 집필 기록 — <utc>\\t<action>\\t<sha[,sha…]>"
                      "\\t<slug>\\t<detail>\n"
-                     "# action: seed | wrote | augment | skip\n")
-        fh.write(f"{ts}\t{action}\t{sha}\t{slug or '-'}\t{detail or ''}\n")
-    print(f"기록: {action} {sha[:8]} {slug or '-'} {detail or ''}")
+                     "# action: seed | wrote | augment | dismiss | skip\n")
+        fh.write(f"{ts}\t{action}\t{joined}\t{slug or '-'}\t{detail or ''}\n")
+    short = ",".join(s[:8] for s in shas) if shas else "-"
+    print(f"기록: {action} {short} {slug or '-'} {detail or ''}")
+
+
+def resolve_shas(raw, records, action):
+    """--shas 를 full sha 로 펴고, 현재 미해소 목록 안에 있는지 검사한다."""
+    commits, _ = unresolved(records)
+    order = [c["sha"] for c in commits]
+    pending = set(order)
+    if raw is None:
+        if action not in DEFERRING:
+            sys.exit(f"--record {action} 에는 --shas 가 필요하다 "
+                     "(다룬 주제에 속한 커밋을 전부 나열할 것)")
+        # skip 은 생략하면 "지금 범위 전체를 훑었고 쓸 게 없다"는 뜻이다.
+        return order
+    out, bad = [], []
+    for token in raw.split(","):
+        token = token.strip()
+        if not token:
+            continue
+        p = subprocess.run(["git", "-C", str(REPO), "rev-parse", f"{token}^{{commit}}"],
+                           capture_output=True, text=True)
+        if p.returncode != 0:
+            bad.append(f"{token} (해석 실패)")
+            continue
+        sha = p.stdout.strip()
+        if sha not in pending:
+            bad.append(f"{token} (검토 범위 밖)")
+            continue
+        out.append(sha)
+    if bad:
+        sys.exit("--shas 거부: " + "; ".join(bad) +
+                 "\n검토 범위 안의 sha 만 기록할 수 있다 — 범위 밖을 covered 로 "
+                 "적으면 다루지 않은 주제가 통째로 묻힌다.")
+    if not out:
+        sys.exit("--shas 가 비었다")
+    return out
 
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
     ap.add_argument("--json", action="store_true")
-    ap.add_argument("--record", choices=["wrote", "augment", "skip"])
-    ap.add_argument("--sha")
+    ap.add_argument("--record", choices=["wrote", "augment", "dismiss", "skip"])
+    ap.add_argument("--shas", help="쉼표로 구분한 커밋 sha 목록")
     ap.add_argument("--slug", default="-")
     ap.add_argument("--detail", default="")
     ap.add_argument("--seed", nargs="?", const="HEAD", default=None,
-                    help="워터마크 초기화 (기본 HEAD)")
+                    help="원장 baseline 재설정 (기본 HEAD)")
     args = ap.parse_args()
 
     if args.seed is not None:
-        sha = git("rev-parse", args.seed).strip()
-        append("seed", sha, "-", "watermark 초기화")
+        sha = git("rev-parse", f"{args.seed}^{{commit}}").strip()
+        append("seed", [sha], "-", "원장 baseline 재설정")
         return 0
 
     if args.record:
-        if not args.sha:
-            sys.exit("--record 에는 --sha 가 필요하다")
-        sha = git("rev-parse", args.sha).strip()
-        append(args.record, sha, args.slug, args.detail)
+        records = read_records()
+        shas = resolve_shas(args.shas, records, args.record)
+        append(args.record, shas, args.slug, args.detail)
         return 0
 
     records = read_records()
-    gate, scan = watermarks(records)
-    pending, truncated = dev_commits(gate)
+    baseline, covered, dismissed, deferred = ledger(records)
+    review, _, truncated = review_queue(records)
+    wake = [c for c in review if not c["deferred"]]
 
-    if not pending:
-        msg = (f"새 [dev] 커밋 없음 (gate={gate[:8] if gate else 'none'}) "
-               "— LLM 호출 없이 종료")
+    if not wake:
+        where = f"baseline={baseline[:8] if baseline else 'none'}"
+        msg = (f"모델을 깨울 [dev] 커밋 없음 — 미해소 {len(review)}건이 전부 "
+               f"deferred ({where}), LLM 호출 없이 종료") if review else (
+               f"새 [dev] 커밋 없음 ({where}) — LLM 호출 없이 종료")
         if args.json:
             print(json.dumps({"pending": [], "reason": msg}, ensure_ascii=False))
         else:
             print(msg)
         return EXIT_NOTHING
 
-    # 검토 범위는 scan 부터 — skip 으로 넘긴 얇은 커밋들을 새 커밋과 합쳐 볼 수 있게.
-    review, _ = dev_commits(scan)
     if truncated:
-        print(f"경고: [dev] 커밋이 상한({MAX_QUEUE})을 넘어 {truncated}건 잘렸다",
+        print(f"경고: 미해소 [dev] 커밋이 상한({MAX_QUEUE})을 넘어 {truncated}건 잘렸다",
               file=sys.stderr)
 
     if args.json:
-        print(json.dumps({"gate": gate, "scan": scan, "pending": pending,
-                          "review": review, "truncated": truncated,
+        print(json.dumps({"baseline": baseline, "review": review,
+                          "pending": wake, "deferred": sorted(deferred),
+                          "covered": len(covered), "dismissed": len(dismissed),
+                          "truncated": truncated,
                           "workshop": workshop_inventory()},
                          ensure_ascii=False, indent=2))
         return 0
 
-    print(f"gate={gate[:8] if gate else 'none'}  scan={scan[:8] if scan else 'none'}  "
-          f"새 [dev]={len(pending)}건  검토범위={len(review)}건")
-    print(f"\n=== 검토 범위 [dev] 커밋 (오래된 것부터 — 이 순서로 다룬다) ===")
+    print(f"baseline={baseline[:8] if baseline else 'none'}  "
+          f"검토범위={len(review)}건 (deferred {len(review) - len(wake)}건 포함)  "
+          f"해소됨 covered={len(covered)} dismissed={len(dismissed)}")
+    print("\n=== 검토 범위 [dev] 커밋 (오래된 것부터 — 이 순서로 다룬다) ===")
     for c in review:
-        print(f"\n{c['sha'][:8]}  {c['date']}  {c['subject']}")
+        flag = "  [deferred]" if c["deferred"] else ""
+        print(f"\n{c['sha'][:8]}  {c['date']}  {c['subject']}{flag}")
         for f in c["files"][:25]:
             print(f"    {f}")
         if len(c["files"]) > 25:

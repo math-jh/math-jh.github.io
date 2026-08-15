@@ -57,8 +57,17 @@ MDLINT = ROOT / ".claude" / "hooks" / "md_lint.py"
 # md_lint 와 동일한 라벨 앵커 문법 (유도형). 명시형 id는 대상 글에서 실측.
 LABEL_ANCHOR_RE = re.compile(r"^(?:prop-def|def|ex|prop|thm|lem|cor|rmk|conj)\d+$")
 
+# 링크 텍스트는 bare `]` 를 허용하지 않되, 맨 앞의 `[범주]` 접두 한 겹만 예외로
+# 둔다 — 타 카테고리 인용의 하우스 형식이 `[\[Category\] §Title, ⁋Definition 1]`
+# 인데, 번역 엔진이 EN 에서 백슬래시를 떨어뜨려 `[[Category] §Title, …]` 로 나온다
+# (KO 원문은 전량 이스케이프 형태, EN 에만 322 건). 접두를 못 읽으면 그 링크는
+# 게이트에 아예 안 보여 앵커 검증이 통째로 건너뛰어진다 — 2026-08-15 에 그 경로로
+# 한글 앵커 `#극한의-보편성질` 이 EN 본문까지 나갔다.
+# 중첩을 일반 허용하지 말 것: 수식 속 `[1, \infty)` 같은 여는 괄호에서 매치가
+# 시작돼 진짜 링크를 삼킨다 (실측 4건 회귀).
 LINK_RE = re.compile(
-    r"\[(?P<text>(?:\\.|[^\\\]\n])*)\]\((?P<path>/(?:ko|en)/[^)\s#]*)#(?P<anchor>[^)\s]+)\)"
+    r"\[(?P<text>(?:\[[^\]\n]*\])?(?:\\.|[^\\\]\n])*)\]"
+    r"\((?P<path>/(?:ko|en)/[^)\s#]*)#(?P<anchor>[^)\s]+)\)"
 )
 HEADING_RE = re.compile(r"^(#{1,6})[ \t]+(.+?)(?:[ \t]*\{#([^}]+)\})?[ \t]*$")
 
