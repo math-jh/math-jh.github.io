@@ -1,65 +1,65 @@
 ---
 title: "Group Actions"
-excerpt: "Group action"
+description: "We examine how monoids and groups act on sets, covering the definitions of left and right actions and explaining the relationship between the two via the opposite magma."
+excerpt: "Group actions on sets"
 
 categories: [Math / Algebraic Structures]
 permalink: /en/math/algebraic_structures/group_actions
 sidebar: 
     nav: "algebraic_structures-en"
 
-date: 2026-03-11
+date: 2023-02-14
 weight: 11
-translated_at: 2026-05-29T02:00:58+00:00
+translated_at: 2026-08-15T07:48:25+00:00
 translation_source: kimi-cli
-last_polished_at: 2026-05-24T17:30:03+00:00
 ---
-When dealing with complex algebraic structures, one effective strategy is to examine how a given algebraic object acts on another, rather than analyzing the structure directly. We are particularly interested in group actions; but as always, we first consider the more general case of a monoid acting on a set.
+One effective strategy when dealing with complex algebraic structures is to study how a given algebraic object acts on other algebraic objects, rather than analyzing the structure directly. We are particularly interested in group actions; as always, we first consider the slightly more general case of a monoid acting on a set.
 
-## Monoids Acting on Sets
+## Monoid acting on a set
 
 ::: Definition 1
-Fix a monoidal category $(\mathcal{A},\otimes, I)$ and a monoid object $(A,\cdot, 1)$ in $\mathcal{A}$. A morphism $\rho: A\otimes E\rightarrow E$ is called a *left action* of $A$ on an object $E\in\obj(\mathcal{A})$ if the following two diagrams commute.
+Fix a monoidal category $(\mathcal{A},\otimes, I)$ and a monoid object $(A,\cdot, 1)$ in $\mathcal{A}$. Then a morphism $\rho: A\otimes E\rightarrow E$ is called a *left action* of $A$ on an object $E\in\obj(\mathcal{A})$ if the following two diagrams both commute.
 
 {% diagram Math/Algebraic_Structures/Group_Actions-1.svg width="31.84em" alt="left_module" %}
 
-Here, $I\otimes E \rightarrow E$ is the left unitor. We denote this situation by $A\circlearrowright E$.
+Here $I\otimes E \rightarrow E$ is the left unitor. We write this situation as $A\circlearrowright E$.
 
-Similarly, a morphism $\rho: E\otimes A\rightarrow E$ is called a *right action* of $A$ on an object $E\in\obj(\mathcal{A})$ if the following two diagrams commute.
+Similarly, a morphism $\rho: E\otimes A\rightarrow E$ is called a *right action* of $A$ on an object $E\in\obj(\mathcal{A})$ if the following two diagrams both commute.
 
 {% diagram Math/Algebraic_Structures/Group_Actions-2.svg width="31.84em" alt="right_module" %}
 
-Again, $E\otimes I \rightarrow E$ is the right unitor. We denote this situation by $E \circlearrowleft A$.
+Likewise $E\otimes I \rightarrow E$ is the right unitor. We write this situation as $E \circlearrowleft A$.
 :::
 
-Fix a monoid object $(M,\cdot,1)$ in the monoidal category $(\Set,\times, I)$. Then we may consider a left action of $M$ on an arbitrary set $E$. By [\[Set Theory\] §Product of Sets, ⁋Proposition 4](/en/math/set_theory/product_of_sets#prop4), we have
+Fix a monoid object $(M,\cdot,1)$ in the monoidal category $(\Set,\times, I)$. Then we can consider a left action of $M$ on an arbitrary set $E$. Since $M\times E\cong E\times M$ by swapping the factors, applying [\[Set Theory\] §Product of Sets, ⁋Proposition 4](/en/math/set_theory/product_of_sets#prop4) gives
 
 $$\Hom_\Set(M\times E,E)\cong\Hom_\Set(M,\Hom_\Set(E,E))\cong\Hom_\Set(M, \End(E))$$
 
 so any left action defines a function $M \rightarrow \End(E)$. The commutativity of the two diagrams in [Definition 1](#def1) is equivalent to this function being a monoid homomorphism.
 
-In other words, for $M$ to act on $E$ from the left means that, for any $\alpha,\beta\in M$ and $x\in E$, the equalities
+In other words, saying that $M$ acts on $E$ from the left means that for arbitrary $\alpha,\beta\in M$ and $x\in E$, the following identities
 
 $$(\alpha\beta)\cdot x=\alpha\cdot(\beta\cdot x),\qquad e\cdot x=x$$
 
 hold.
 
-In general, we consider actions from the left as above, but sometimes acting from the right is more natural. The following definition shows that these are in fact equivalent.
+In general, we consider the situation where a given object acts on another object from the left as above, but sometimes it is more natural to act from the right. As the following definition shows, these are essentially the same thing.
 
 ::: Definition 2
-For any magma $(M,\ast)$, the *opposite magma* $(M^\op,\ast^\op)$ is defined as follows:
+For an arbitrary magma $(M,\ast)$, the *opposite magma* $(M^\op,\ast^\op)$ of $M$ is the magma defined as follows.
 
 1. As a set, $M^\op=M$.
-2. For any $x,y\in A^\op$, we define $x\ast^\op y$ to be $y\ast x$.
+2. For arbitrary $x,y\in M^\op$, the product $x\ast^\op y$ is defined to be $y\ast x$.
 :::
 
-We can verify that a right $M$-action is the same as a left $M^\op$-action. Rewriting this, we have
+Then one can verify that a right $M$-action is the same as a left $M^\op$-action. Rewriting this, we have
 
 $$x\cdot(\beta\alpha)=(x\cdot\beta)\cdot\alpha,\qquad x\cdot e=x$$
 
-Thus left actions and right actions differ only in notation and are essentially the same concept. Henceforth, when developing general theory, we assume all actions are left actions.
+Thus left actions and right actions differ only in notation and are essentially the same. Therefore, in developing the general theory below, we assume that every action is a left action.
 
 ::: Example 3
-Let a monoid $M$ and an $M$-set $E$ be given. Then $\mathcal{P}(E)$ naturally carries an $M$-set structure. For any $\alpha\in M$ and $A\in \mathcal{P}(E)$, define $\alpha\cdot A$ by the formula
+Suppose a monoid $M$ acts on a set $E$. Then there is a natural $M$-action on $\mathcal{P}(E)$ as well. For arbitrary $\alpha\in M$ and $A\in \mathcal{P}(E)$, define $\alpha\cdot A$ by the formula
 
 $$\alpha\cdot A=\{\alpha\cdot a\mid a\in A\}$$
 
@@ -67,16 +67,16 @@ Then
 
 $$(\alpha\beta)\cdot A=\{(\alpha\beta)\cdot a\mid a\in A\}=\{\alpha\cdot(\beta\cdot a)\mid a\in A\}=\alpha\cdot\{\beta\cdot a\mid a\in A\}=\alpha\cdot(\beta\cdot A)$$
 
-so this defines an $M$-action on $\mathcal{P}(E)$.
+and $e\cdot A=\{e\cdot a\mid a\in A\}=A$, so this defines an $M$-action on $\mathcal{P}(E)$.
 :::
 
-For convenience, we make the following definition.
+For convenience of discussion, we make the following definition.
 
 ::: Definition 4
 When a monoid $M$ defines a left action on a set $E$, we call $E$ together with this action a (left) $M$-set.
 :::
 
-## $M$-set Homomorphisms
+## $M$-set homomorphism
 
 ::: Definition 5
 Fix a monoid $M$, and let $E,E'$ be $M$-sets. A function $f:E\rightarrow E'$ is called an *$M$-set homomorphism* if for all $x\in E$ and $\alpha\in M$,
@@ -86,60 +86,60 @@ $$f(\alpha\cdot x)=\alpha\cdot f(x)$$
 holds.
 :::
 
-We easily verify that the composition of $M$-set homomorphisms is again an $M$-set homomorphism, and that the identity function is an $M$-set homomorphism. Thus the collection of (left) $M$-sets forms a category, which we denote by $\lset{M}$.
+It is easy to verify that the composition of $M$-set homomorphisms is an $M$-set homomorphism, and that the identity function is an $M$-set homomorphism. That is, the collection of (left) $M$-sets forms a category. We denote this by $\lset{M}$.
 
-Fix a monoid homomorphism $\phi:M \rightarrow M'$. Then for any $M'$-set $E$, the composition
+Fix an arbitrary monoid homomorphism $\phi:M \rightarrow M'$. Then for any $M'$-set $E$, we can regard $E$ as an $M$-set via the composition
 
 $$M\overset{\phi}{\longrightarrow}M'\overset{\rho}{\longrightarrow}\End(E)$$
 
-allows us to regard $E$ as an $M$-set. We denote this action by $\phi^\ast\rho$. Explicitly, $\phi^\ast\rho$ is the action defined for any $\alpha\in M$ and $x\in E$ by
+Let us write the action defined in this way as $\phi^\ast\rho$. Then explicitly, $\phi^\ast\rho$ is the action defined by
 
 $$(\phi^\ast\rho)(\alpha)(x)=\rho(\phi(\alpha))(x)$$
 
-Now suppose that two $M'$-actions $\rho:M' \rightarrow \End(E)$ and $\rho':M' \rightarrow \End(E)$ are given, along with an $M'$-homomorphism $f:E \rightarrow E'$ between them. Then for any $\alpha\in M$ and $x\in E$,
+for arbitrary $\alpha\in M$ and $x\in E$. Now suppose two $M'$-actions $\rho:M' \rightarrow \End(E)$ and $\rho':M' \rightarrow \End(E')$ are given, and an $M'$-set homomorphism $f:E \rightarrow E'$ between them is given. Then for arbitrary $\alpha\in M$ and $x\in E$,
 
-$$f((\phi^\ast\rho)(\alpha)(x))=f(\rho(\phi(\alpha))(x))=\rho'(\phi(\alpha))(f(x))=(\phi^\ast\rho')(f(x))$$
+$$f((\phi^\ast\rho)(\alpha)(x))=f(\rho(\phi(\alpha))(x))=\rho'(\phi(\alpha))(f(x))=(\phi^\ast\rho')(\alpha)(f(x))$$
 
-holds. Thus any monoid homomorphism $\phi:M \rightarrow M'$ defines a functor from $\lset{M'}$ to $\lset{M}$. In particular, if $\iota$ is the inclusion of a submonoid, this is precisely the restriction of the monoid action.
+holds. That is, any monoid homomorphism $\phi:M \rightarrow M'$ defines a functor from $\lset{M'}$ to $\lset{M}$. In particular, if $\iota$ is the inclusion of a submonoid, this becomes the restriction of a monoid action.
 
-On the other hand, if $(E_i)$ is a collection of $M$-sets, their product $\prod E_i$ becomes an $M$-set under the action defined by
+On the other hand, if $(E_i)$ is a collection of $M$-sets, then their product $\prod E_i$ with the $M$-action defined by the formula
 
 $$\alpha\cdot(x_i)_{i\in I}=(\alpha\cdot x_i)_{i\in I}$$
 
-Similarly, a subset $F$ of an $M$-set $E$ is called an $M$-subset if it satisfies
+is again an $M$-set. Similarly, if a subset $F$ of an $M$-set $E$ satisfies the condition
 
-$$x\in F\implies \alpha\cdot x\text{ for all $\alpha\in F$}$$
+$$x\in F\implies \alpha\cdot x\in F\text{ for all $\alpha\in M$}$$
 
-Also, if an equivalence relation $\sim$ on an $M$-set is compatible with the $M$-action, that is, if
+then we call $F$ an $M$-subset. Also, if an equivalence relation $\sim$ on an $M$-set is compatible with the action of $M$, that is, if
 
 $$x\sim y\implies\alpha\cdot x\sim\alpha\cdot y$$
 
-always holds, then $E/\mathnormal{\sim}$ naturally carries an $M$-set structure.
+always holds, then $E/\mathnormal{\sim}$ naturally carries the structure of an $M$-set.
 
-## Stabilizer, Fixer
+## Stabilizer, fixer
 
 ::: Definition 6
 Let $A$ be a subset of an $M$-set $E$.
-- The *stabilizer* of $A$ is the set of all $\alpha$ such that $\alpha A\subseteq A$, denoted $\stab (A)$.
-- The *strict stabilizer* of $A$ is the set of all $\alpha$ such that $\alpha A=A$, denoted $\Stab(A)$.
-- The *fixer* of $A$ is the set of all $\alpha$ such that $\alpha a=a$ for all $a\in A$, denoted $\Fix(A)$.
+- The *stabilizer* of $A$ is the set of $\alpha$ satisfying $\alpha A\subseteq A$, denoted $\stab (A)$.
+- The *strict stabilizer* of $A$ is the set of $\alpha$ satisfying $\alpha A=A$, denoted $\Stab(A)$.
+- The *fixer* of $A$ is the set of $\alpha$ satisfying $\alpha a=a$ for all $a\in A$, denoted $\Fix(A)$.
 :::
 
-For any subset $A$, we have $\Fix(A)\subseteq \Stab(A)\subseteq \stab(A)$. Also, $e\in\Fix(A)$ is immediate.
+For any subset $A$, we have $\Fix(A)\subseteq \Stab(A)\subseteq \stab(A)$. Also, $e\in\Fix(A)$ is obvious.
 
 ::: Proposition 7
 For an $M$-set $E$ and its subset $A$, the sets $\stab(A)$, $\Stab (A)$, and $\Fix(A)$ are submonoids of $M$.
 :::
 ::: Proof
-It suffices to show that these sets are closed under multiplication. If $\alpha,\beta\in\stab(A)$, then
+It suffices to show that these sets are closed under the operation. If $\alpha,\beta\in\stab(A)$, then from
 
 $$(\alpha\beta)A=\alpha(\beta A)\subseteq \alpha A\subseteq A$$
 
-so $\alpha\beta\in \stab(A)$. Similarly, if $\alpha,\beta\in\Stab(A)$, then
+we see that $\alpha\beta\in \stab(A)$. Similarly, if $\alpha,\beta\in\Stab(A)$, then
 
 $$(\alpha\beta)A=\alpha(\beta A)=\alpha A=A$$
 
-so $\alpha\beta\in \Stab(A)$. Finally, if $\alpha,\beta\in\Fix(A)$, then for any $a\in A$,
+so $\alpha\beta\in \Stab(A)$ and the claim holds. Finally, if $\alpha,\beta\in\Fix(A)$, then for arbitrary $a\in A$,
 
 $$(\alpha\beta)a=\alpha(\beta a)=\alpha a=a$$
 
@@ -147,139 +147,139 @@ so $\alpha\beta\in \Fix(A)$.
 :::
 
 ::: Corollary 8
-Let $G$ be a group. For a $G$-set $E$ and a subset $A\subseteq E$, the sets $\Stab (A)$ and $\Fix(A)$ are subgroups of $G$, and in particular $\Fix(A)$ is a normal subgroup of $\Stab(A)$.
+Let a group $G$ be given. For a $G$-set $E$ and its subset $A$, the sets $\Stab (A)$ and $\Fix(A)$ are subgroups of $G$, and in particular $\Fix(A)$ is a normal subgroup of $\Stab(A)$.
 :::
 ::: Proof
-For the first claim, it suffices to show that these sets are closed under taking inverses. For any $\alpha\in\Stab(A)$, we have
+For the first claim, it suffices to show that the given sets are closed under inverses, and this is obvious from the following identities: for arbitrary $\alpha\in\Stab(A)$,
 
 $$A=(\alpha^{-1}\alpha)A=\alpha^{-1}(\alpha A)=\alpha^{-1}A$$
 
-and for any $\alpha\in\Fix(A)$ and $a\in A$,
+holds, and for arbitrary $\alpha\in\Fix(A)$ and $a\in A$,
 
 $$a=(\alpha^{-1}\alpha)a=\alpha^{-1}(\alpha a)=\alpha^{-1}a$$
 
-which establishes the first claim. For the second claim, let $\alpha\in\Fix(A)$ and $\beta\in\Stab(A)$. Then for any $a\in A$, we compute
+holds. For the second claim, given arbitrary $\alpha\in\Fix(A)$ and $\beta\in\Stab(A)$, computing $(\beta\alpha\beta^{-1})a$ for arbitrary $a\in A$ gives
 
 $$(\beta\alpha\beta^{-1})a=\beta(\alpha(\beta^{-1}a))=\beta\beta^{-1}a=a$$
 
 so $\beta\alpha\beta^{-1}\in\Fix(A)$, as desired.
 :::
 
-From the proof of the above corollary, we see that when a group $G$ acts on a set $E$, each $\rho_g$ is necessarily bijective. That is, $\im\rho\subseteq \Aut(E)$ always holds.
+When a group $G$ acts on a set $E$, for any $x\in E$ we have $g^{-1}\cdot(g\cdot x)=(g^{-1}g)\cdot x=x$, so $\rho_{g^{-1}}$ is the inverse function of $\rho_g$. Hence $\rho_g$ is necessarily bijective, and therefore $\im\rho\subseteq \Aut(E)$ always holds.
 
-## Inner Automorphisms
+## Inner automorphisms
 
-We now consider the case where the set $E$ carries additional structure. For instance, suppose $E$ itself has a monoid structure and a monoid $M$ acts on $E$. Then the $M$-action is given by a monoid homomorphism $M \rightarrow\End(E)=\End_\Mon(E)$.
+We now consider the case where the set $E$ carries additional structure. For instance, suppose $E$ itself has a monoid structure, and a given monoid $M$ acts on $E$; then the $M$-action is given by a monoid homomorphism $M \rightarrow\End(E)=\End_\Mon(E)$.
 
-In particular, consider the case where a group $G$ acts on itself. That is, suppose $\rho:G\rightarrow\End(G)=\End_\Grp(G)$ is given. From the proof of [Corollary 8](#cor8), we know that the image of $\rho$ consists entirely of bijections. Since a bijective group homomorphism is always a group isomorphism ([§Algebraic Structures, ⁋Definition 6](/en/math/algebraic_structures/algebraic_structures#def6)), if $G$ acts on itself then this action must be of the form of a group homomorphism $G \rightarrow \Aut(G)$.
+Let us consider in particular the case where a group $G$ acts on itself. If a homomorphism $\rho:G\rightarrow\End(G)=\End_\Grp(G)$ is given, then since a bijective group homomorphism is always a group isomorphism ([§Algebraic Structures, ⁋Definition 6](/en/math/algebraic_structures/algebraic_structures#def6)), we know that if $G$ acts on itself, this must necessarily be represented in the form of a group homomorphism $G \rightarrow \Aut(G)$.
 
-Among group actions on itself, the following is particularly worth remembering.
+Among group actions defined on itself, the following example is especially worth remembering.
 
 ::: Proposition 9
-For any element $g$ in a group $G$, define $\rho_g\in\Aut(G)$ by the formula
+For any element $g$ of a group $G$, define $\rho_g\in\Aut(G)$ by the formula
 
 $$\rho_g(x)=gxg^{-1}$$
 
-Then the map $\rho:g\mapsto \rho_g$ is a group homomorphism.
+Then the correspondence $\rho:g\mapsto \rho_g$ is a group homomorphism.
 :::
 ::: Proof
-For any $x,y\in G$,
+For arbitrary $x,y\in G$,
 
 $$\rho_g(xy)=g(xy)g^{-1}=(gxg^{-1})(gyg^{-1})=\rho_g(x)\rho_g(y)$$
 
-so $\rho_g$ is a group homomorphism, and hence $\im\rho\subseteq\Aut(G)$.
+holds, so we see that $\rho_g$ is a group homomorphism.
 
-Moreover, for any $g,h\in G$ and $x\in G$,
+On the other hand, for arbitrary $g,h\in G$ and $x\in G$,
 
 $$\rho_{gh}(x)=(gh)x(gh)^{-1}=g(hxh^{-1})g^{-1}=(\rho_g\circ\rho_h)(x)$$
 
-so $\rho_{gh}=\rho_g\circ\rho_h$. Thus the map $\rho:g\mapsto \rho_g$ is a group homomorphism from $G$ to $\Aut(G)$.
+so $\rho_{gh}=\rho_g\circ\rho_h$. In particular, substituting $h=g^{-1}$ gives $\rho_g\circ\rho_{g^{-1}}=\rho_e=\id_G$, so each $\rho_g$ is bijective, and therefore $\im\rho\subseteq\Aut(G)$ holds. That is, $\rho:g\mapsto \rho_g$ is a group homomorphism from $G$ to $\Aut(G)$.
 :::
 
 ::: Definition 10
-Let $G$ be a group. The automorphism $\rho_g$ from [Proposition 9](#prop9) is called the *inner automorphism* defined by $g$, and the set of all such automorphisms is denoted by $\Inn(G)$.
+Let a group $G$ be given. We call the automorphism $\rho_g$ from [Proposition 9](#prop9) the *inner automorphism* defined by $g$, and denote the collection of these by $\Inn(G)$.
 :::
 
 ::: Proposition 11
-For a group $G$, the set $\Inn(G)$ of inner automorphisms is a normal subgroup of $\Aut(G)$.
+For a group $G$, the collection $\Inn(G)$ of inner automorphisms is a normal subgroup of $\Aut(G)$.
 :::
 ::: Proof
-Since $\Inn(G)$ is the image of the group homomorphism $\rho:G\rightarrow\Aut(G)$, it is clearly a subgroup of $\Aut(G)$. Thus it suffices to show that $\Inn(G)$ is a *normal* subgroup.
+Since $\Inn(G)$ is the image of the group homomorphism $\rho:G\rightarrow\Aut(G)$, it is obviously a subgroup of $\Aut(G)$; thus it suffices to show that $\Inn(G)$ is a *normal* subgroup.
 
-Fix any $f\in\Aut(G)$ and $g\in G$. We must show that $f\circ\rho_g\circ f^{-1}\in \Inn(G)$. For any $x\in G$,
+Choose arbitrary $f\in\Aut(G)$, and fix $g\in G$ arbitrarily. We must show that $f\circ\rho_g\circ f^{-1}\in \Inn(G)$. For arbitrary $x\in G$,
 
 $$(f\circ\rho_g\circ f^{-1})(x)=f(gf^{-1}(x)g^{-1})=f(g)xf(g^{-1})=\rho_{f(g)}(x)$$
 
-which is clear.
+so this is obvious.
 :::
 
-Moreover, $\rho:G\rightarrow\Inn(G)$ is surjective, so by the first isomorphism theorem,
+On the other hand, $\rho:G\rightarrow\Inn(G)$ is surjective, and therefore by [§Group Homomorphisms, ⁋Theorem 2](/en/math/algebraic_structures/isomorphism_theorems#thm2),
 
 $$G/\ker\rho\cong\Inn(G)$$
 
 holds. The kernel $\ker\rho$ also has a special name.
 
 ::: Definition 12
-Let $G$ be a group. For the group homomorphism $\rho:G\rightarrow\Inn(G)$ defined in [Proposition 9](#prop9), the kernel $\ker\rho$ is called the *center* of $G$ and is denoted by $Z(G)$.
+For a group $G$ and the group homomorphism $\rho:G\rightarrow\Inn(G)$ defined in [Proposition 9](#prop9), we call $\ker\rho$ the *center* of $G$ and denote it by $Z(G)$.
 :::
 
 By definition,
 
 $$g\in\ker\rho\iff\rho_g=\id_G\iff gxg^{-1}=x\quad\text{for all $x\in G$}$$
 
-so the fixer $\Fix(G)$ in the situation where $G$ acts on itself by inner automorphisms is precisely $Z(G)$. More generally, for any subset $A\subseteq G$ we define the *centralizer* $C_G(A)$ of $A$ to be its fixer $\Fix(A)$. Similarly, we define the *normalizer* $N_G(A)$ of $A$ to be $\Stab(A)$.
+so the fixer $\Fix(G)$ in the situation where $G$ acts on itself by inner automorphisms is exactly $Z(G)$. More generally, for an arbitrary subset $A\subseteq G$, we define the fixer $\Fix(A)$ of $A$ to be the *centralizer* $C_G(A)$ of $A$. Similarly, we define the *normalizer* $N_G(A)$ of $A$ to be $\Stab(A)$.
 
-## Orbit-Stabilizer Theorem
+## Orbit-stabilizer theorem
 
-We now return to group actions on general sets. First, we make the following definition.
+We now return to considering a group action on a general set $E$. First, let us make the following definition.
 
 ::: Definition 13
-Let a group $G$ act on a set $E$. The *orbit* of an element $x\in E$ is the set
+Suppose an action of a group $G$ on a set $E$ is given. Then the *orbit* of an element $x\in E$ is the set
 
 $$G\cdot x=\{g\cdot x\mid g\in G\}$$
 :::
 
-Then the relation on $E$ defined by
+Then the following relation on $E$
 
 $$x\sim y\iff G\cdot x=G\cdot y\tag{$\ast$}$$
 
-is an equivalence relation, so the quotient set $E/{\sim}$ is defined and consists of orbits.
+is an equivalence relation, so the quotient set $E/{\sim}$ is defined, and this is the set of orbits.
 
 ::: Theorem 14 (Orbit-stabilizer theorem)
-Let a group $G$ act on a set $E$. Then
+Suppose an action of a group $G$ on a set $E$ is given. Then the identity
 
 $$\lvert G\cdot x\rvert=[G:\Stab(x)]$$
 
 holds.
 :::
 ::: Proof
-Define a function $p:G \rightarrow G\cdot x$ by $g\mapsto g\cdot x$. By definition of $G\cdot x$, this function is surjective. Moreover, $p(g_1)=p(g_2)\iff g_1^{-1}g_2\in \Stab(x)$, so the desired result follows from the canonical decomposition discussed after [\[Set Theory\] §Examples of Equivalence Relations, ⁋Proposition 7](/en/math/set_theory/examples_of_equivalence#prop7).
+Define a function $p:G \rightarrow G\cdot x$ by $g\mapsto g\cdot x$; by the definition of $G\cdot x$, this function is surjective. On the other hand, $p(g_1)=p(g_2)\iff g_1^{-1}g_2\in \Stab(x)$, so the desired result follows from the canonical decomposition given after [\[Set Theory\] §Examples of Equivalence Relations, ⁋Proposition 7](/en/math/set_theory/examples_of_equivalence#prop7).
 :::
 
-Therefore, if $G$ is finite, then by [§Quotient Groups, ⁋Proposition 5](/en/math/algebraic_structures/quotient_groups#prop5) we obtain
+Therefore, if $G$ is finite, then by [§Quotient Groups, ⁋Proposition 5](/en/math/algebraic_structures/quotient_groups#prop5) we obtain the identity
 
 $$\lvert G\cdot x\rvert=\frac{\lvert G\rvert}{\lvert\Stab(x)\rvert}\tag{$\ast\ast$}$$
 
-Similarly, suppose $G$ is finite and acts on a finite set $E$. Define $E^g$ to be the set of elements fixed by $g$:
+Likewise, suppose $G$ is finite and acts on a finite set $E$. Define $E^g$ to be the elements fixed by $g$,
 
 $$E^g=\{x\in E\mid g\cdot x=x\}$$
 
-Then
+then
 
-$$\sum_{g\in G}\lvert E^g\rvert=\# \{(g, x)\in G\times E\mid g\cdot x=x\}=\sum_{x\in X}\lvert \Stab(x)\rvert$$
+$$\sum_{g\in G}\lvert E^g\rvert=\# \{(g, x)\in G\times E\mid g\cdot x=x\}=\sum_{x\in E}\lvert \Stab(x)\rvert$$
 
-holds. From $(\ast\ast)$ we have
+holds. Now from ($\ast\ast$),
 
-$$\sum_{x\in X}\lvert \Stab(x)\rvert=\sum_{x\in X}\frac{\lvert G\rvert}{\lvert G\cdot x\rvert}$$
+$$\sum_{x\in E}\lvert \Stab(x)\rvert=\sum_{x\in E}\frac{\lvert G\rvert}{\lvert G\cdot x\rvert}$$
 
-On the other hand, considering the quotient set $E/{\sim}$ defined by $(\ast)$, the above sum becomes
+On the other hand, considering the quotient set $E/{\sim}$ defined from ($\ast$), the above sum can be rewritten as
 
-$$\sum_{x\in X}\frac{\lvert G\rvert}{\lvert G\cdot x\rvert}=\lvert G\rvert\sum_{O\in E/{\sim}}\sum_{x\in O}\frac{1}{\lvert O\rvert}=\lvert G\rvert\sum_{O\in E/{\sim}} 1=\lvert G\rvert\lvert E/{\sim}\rvert$$
+$$\sum_{x\in E}\frac{\lvert G\rvert}{\lvert G\cdot x\rvert}=\lvert G\rvert\sum_{O\in E/{\sim}}\sum_{x\in O}\frac{1}{\lvert O\rvert}=\lvert G\rvert\sum_{O\in E/{\sim}} 1=\lvert G\rvert\lvert E/{\sim}\rvert$$
 
 From this we obtain the following lemma.
 
 ::: Lemma 15
-Let a finite group $G$ act on a finite set $E$, and let $E/{\sim}$ be the quotient set of $E$ consisting of orbits. Then
+Suppose a finite group $G$ acts on a finite set $E$, and let $E/{\sim}$ be the quotient set of $E$ consisting of orbits. Then the identity
 
 $$\lvert E/{\sim}\rvert=\frac{1}{\lvert G\rvert}\sum_{g\in G}\lvert E^g\rvert$$
 
