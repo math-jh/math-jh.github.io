@@ -10,8 +10,9 @@ sidebar:
 
 date: 2021-10-31
 weight: 7
-translated_at: 2026-08-15T04:16:35+00:00
+translated_at: 2026-08-16T10:15:04+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-08-16T10:15:04+00:00
 ---
 ## Products of Groups
 
@@ -21,26 +22,26 @@ We know how to define products in an arbitrary category $\mathcal{A}$. ([[Catego
 $\Grp$ has arbitrary products; in particular, it is a cartesian monoidal category. ([[Category Theory] §Monoidal Categories](/en/math/category_theory/monoidal_categories))
 :::
 ::: Proof
-First, the product set $\prod_{i\in I} G_i$ satisfying the universal property of products in $\Set$ was already defined in [[Set Theory] §Product of Sets, ⁋Definition 1](/en/math/set_theory/product_of_sets#def1). For notational convenience, we shall write an element $f:I\rightarrow \bigcup G_i$ of $\prod_{i\in I}G_i$ as a tuple $(a_i)_{i\in I}$.
+First, the product set $\prod_{i\in I} G_i$ satisfying the universal property of products in $\Set$ was already defined in [[Set Theory] §Product of Sets, ⁋Definition 1](/en/math/set_theory/product_of_sets#def1). For notational convenience, we write an element $f:I\rightarrow \bigcup G_i$ of $\prod_{i\in I}G_i$ as a tuple $(a_i)_{i\in I}$.
 
-Now for any two elements $x=(x_i)_{i\in I},y=(y_i)_{i\in I}$ of the set $\prod_{i\in I}G_i$, define
+Now, for any two elements $x=(x_i)_{i\in I}$ and $y=(y_i)_{i\in I}$ of the set $\prod_{i\in I}G_i$, define
 
 $$xy=(x_i)_{i\in I}(y_i)_{i\in I}=(x_iy_i)_{i\in I}.$$
 
-Then $\prod_{i\in I}G_i$ becomes a group under this operation; the identity element is $(e_i)_{i\in I}$, and the inverse of $x=(x_i)_{i\in I}$ is $(x_i^{-1})_{i\in I}$. Moreover, for any $j\in I$,
+Then $\prod_{i\in I}G_i$ becomes a group under this operation; its identity element is $(e_i)_{i\in I}$, and the inverse of $x=(x_i)_{i\in I}$ is $(x_i^{-1})_{i\in I}$. Moreover, for any $j\in I$,
 
 $$\pr_j(xy)=\pr_j(x_iy_i)_{i\in I}=x_jy_j=\pr_j(x)\pr_j(y),$$
 
-so $\pr_j$ is a group homomorphism.
+so each $\pr_j$ is a group homomorphism.
 
-We now prove that $(G=\prod_{i\in I}G_i,(\pr_i)_{i\in I})$ satisfies the universal property. For this, it suffices to show that the map $f:H\rightarrow G$ obtained from the universal property of the product set is a group homomorphism. For any $x,y\in H$ and any $i\in I$,
+We now prove that $(G=\prod_{i\in I}G_i,(\pr_i)_{i\in I})$ satisfies the universal property. For this, it suffices to show that the map $f:H\rightarrow G$ furnished by the universal property of the product set is a group homomorphism. For any $x,y\in H$ and any $i\in I$,
 
 $$f(xy)=(f_i(xy))_{i\in I}=(f_i(x)f_i(y))_{i\in I}=(f_i(x))_{i\in I}(f_i(y))_{i\in I}=f(x)f(y),$$
 
-so $f$ is a group homomorphism, and therefore $(G=\prod_{i\in I}G_i,(\pr_i)_{i\in I})$ satisfies the universal property.
+so $f$ is a group homomorphism; therefore $(G=\prod_{i\in I}G_i,(\pr_i)_{i\in I})$ satisfies the universal property.
 :::
 
-The following corollaries are also immediate from the universal property of products.
+The following corollaries are also immediate consequences of the universal property of products.
 
 ::: Corollary 2
 For a family of groups $(G_i)$, the product of this family is uniquely determined up to a unique isomorphism.
@@ -61,13 +62,13 @@ $\prod H_i$ is the terminal object of the collection of cones satisfying the giv
 
 $$x\in\ker f\iff f(x)=e\iff \forall i(\pr_i^H(f(x))=e_i)\iff \forall i((f_i\circ \pr_i^G)(x)=e_i)\iff \forall i(\pr_i^G(x)\in\ker f_i),$$
 
-so $\ker f=\prod\ker f_i$ holds.
+so $\ker f=\prod\ker f_i$.
 
 Similarly, for $y\in\prod H_i$, the condition $y\in\im f$ is equivalent to the existence of $x\in\prod G_i$ with $y=f(x)$, and for such $x$,
 
 $$\pr_i^H(y)=\pr_i^H(f(x))=f_i(\pr_i^G(x))\in\im f_i,$$
 
-so $\im f\subseteq\prod\im f_i$ holds. Conversely, given $y\in\prod\im f_i$, for each $i\in I$ we can choose $x_i\in G_i$ such that $f_i(x_i)=\pr_i^H(y)$ ([[Set Theory] §Axiom of Choice, ⁋The Axiom of Choice.](/en/math/set_theory/axiom_of_choice#axiom-choice)); setting $x=(x_i)_{i\in I}$, we get $f(x)=y$, so $\im f=\prod\im f_i$ also holds.
+so $\im f\subseteq\prod\im f_i$. Conversely, given $y\in\prod\im f_i$, for each $i\in I$ we can choose $x_i\in G_i$ such that $f_i(x_i)=\pr_i^H(y)$ ([[Set Theory] §Axiom of Choice, ⁋The Axiom of Choice.](/en/math/set_theory/axiom_of_choice#axiom-choice)); setting $x=(x_i)_{i\in I}$, we obtain $f(x)=y$, so $\im f=\prod\im f_i$ also holds.
 :::
 
 ::: Corollary 4
@@ -78,7 +79,7 @@ Apply [Corollary 3](#cor3) to the canonical homomorphisms $p_i:G_i\rightarrow G_
 
 {% diagram Math/Algebraic_Structures/Direct_Products-2.svg width="18.32em" alt="product_of_normal_subgroups" %}
 
-Each $p_i\circ\pr_i$ is a composition of surjective homomorphisms, hence surjective, and therefore by the preceding corollary $\im p$ equals $\prod(G_i/H_i)$. Also, the kernel of each $p_i$ is $H_i$. Thus by the first isomorphism theorem,
+Each $p_i\circ\pr_i$ is a composition of surjective homomorphisms, hence surjective, and therefore by the preceding corollary $\im p$ equals $\prod(G_i/H_i)$. Also, the kernel of each $p_i$ is $H_i$. Thus, by the first isomorphism theorem,
 
 $$\biggl(\prod_{i\in I} G_i\biggr)\bigg/\biggl(\prod_{i\in I}H_i\biggr)\cong\prod_{i\in I} (G_i/H_i)$$
 
@@ -98,7 +99,7 @@ Applying [Corollary 3](#cor3) to the inclusion homomorphisms $\iota_i:H_i\hookri
 
 The above corollaries are especially useful in the following situation.
 
-Let $(G_i)_{i\in I}$ be a family of groups, and consider a subset $J$ of $I$. Then the product $\prod_{j\in J}G_j$ is well defined. On the other hand, define a family of groups $(G_i')$ by
+Let $(G_i)_{i\in I}$ be a family of groups, and consider a subset $J\subseteq I$. Then the product $\prod_{j\in J}G_j$ is well defined. On the other hand, define a family of groups $(G_i')$ by
 
 $$G_i'=\begin{cases} G_i&i\in J\\ \{e\}&i\not\in J\end{cases}$$
 
@@ -106,7 +107,7 @@ and consider the group homomorphisms $f_i:G_i'\rightarrow G_i$ given by
 
 $$f_i=\begin{cases} \id_{G_i}&i\in J\\ \iota_i&i\not\in J\end{cases}.$$
 
-Then one can easily show that $\prod_{i\in I}G_i'\cong\prod_{j\in J}G_j$, and thus by [Corollary 4](#cor4) one verifies that
+Then one easily shows that $\prod_{i\in I}G_i'\cong\prod_{j\in J}G_j$, and thus by [Corollary 4](#cor4) one verifies that
 
 $$\biggl(\prod_{i\in I}G_i\biggr)\bigg/\biggl(\prod_{j\in J}G_j\biggr)\cong\prod_{i\in I\setminus J} G_i$$
 
