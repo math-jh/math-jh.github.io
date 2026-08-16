@@ -10,12 +10,11 @@ sidebar:
     
 date: 2026-05-07
 weight: 18
-drift_needed: true
 
 
 ---
 
-[§사영공간의 코호몰로지, ⁋명제 4](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop4)의 Serre vanishing theorem은 projective variety 위의 ample line bundle $\mathcal{L}$과 coherent sheaf $\mathcal{F}$에 대해, 충분히 큰 $m$에 대하여 $H^i(X, \mathcal{F} \otimes \mathcal{L}^{\otimes m}) = 0$ ($i > 0$)이 성립함을 보장한다. 그러나 이 결과는 단지 asymptotic한 성질에 불과하며, 구체적으로 어떤 $m$에서부터 vanishing이 시작되는지에 대해서는 아무 정보도 주지 않는다.
+[§사영공간의 코호몰로지, ⁋명제 5](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop5)의 Serre vanishing theorem은 projective variety 위의 ample line bundle $\mathcal{L}$과 coherent sheaf $\mathcal{F}$에 대해, 충분히 큰 $m$에 대하여 $H^i(X, \mathcal{F} \otimes \mathcal{L}^{\otimes m}) = 0$ ($i > 0$)이 성립함을 보장한다. 그러나 이 결과는 단지 asymptotic한 성질에 불과하며, 구체적으로 어떤 $m$에서부터 vanishing이 시작되는지에 대해서는 아무 정보도 주지 않는다.
 
  Kodaira vanishing theorem은 이보다 훨씬 더 정교한 결과로, canonical bundle $\omega_X$와 ample line bundle $\mathcal{L}$의 tensor product $\omega_X \otimes \mathcal{L}$에 대해 higher cohomology가 *항상* 사라진다는 사실을 보장한다. 우리는 이 글에서 Kodaira vanishing theorem과 그 응용, 그리고 이 정리가 algebraic geometry에서 어떻게 활용되는지를 살펴 본다.
 
@@ -174,7 +173,7 @@ $$H^0(X, \mathcal{L}^{\otimes m}) \longrightarrow H^0(X, \mathcal{L}^{\otimes m}
 
 를 고려하면, $H^1(X, \mathcal{I}_p^2 \otimes \mathcal{L}^{\otimes m}) = 0$이면 separation of tangent vectors가 성립한다.
 
-그런데 이렇게 요구되는 vanishing의 대상인 $\mathcal{I}_Z$와 $\mathcal{I}_p^2$는 $Z$와 $p$를 따라 locally free가 아니어서 $\omega_X$와 line bundle의 tensor product 꼴이 아니고, 따라서 [명제 1](#prop1)이 이들에 직접 적용되지는 않는다. 대신 이들은 coherent sheaf이므로 [§사영공간의 코호몰로지, ⁋명제 4](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop4)를 $\mathcal{F} = \mathcal{I}_Z$와 $\mathcal{F} = \mathcal{I}_p^2$에 그대로 적용할 수 있으며, 이로부터 충분히 큰 $m$에 대해 위의 두 $H^1$이 모두 사라져 $\mathcal{L}^{\otimes m}$의 section들이 두 separation 조건을 만족함을 얻는다. 즉 이 논법을 움직이는 것은 Kodaira vanishing이 아니라 Serre vanishing이다.
+그런데 이렇게 요구되는 vanishing의 대상인 $\mathcal{I}_Z$와 $\mathcal{I}_p^2$는 $Z$와 $p$를 따라 locally free가 아니어서 $\omega_X$와 line bundle의 tensor product 꼴이 아니고, 따라서 [명제 1](#prop1)이 이들에 직접 적용되지는 않는다. 대신 이들은 coherent sheaf이므로 [§사영공간의 코호몰로지, ⁋명제 5](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop5)를 $\mathcal{F} = \mathcal{I}_Z$와 $\mathcal{F} = \mathcal{I}_p^2$에 그대로 적용할 수 있으며, 이로부터 충분히 큰 $m$에 대해 위의 두 $H^1$이 모두 사라져 $\mathcal{L}^{\otimes m}$의 section들이 두 separation 조건을 만족함을 얻는다. 즉 이 논법을 움직이는 것은 Kodaira vanishing이 아니라 Serre vanishing이다.
 
 Kodaira vanishing이 [명제 6](#prop6)의 고전적인 증명에 들어오는 것은 조금 다른 방식을 통해서이다. 그 증명에서는 $p$와 $q$를 blow-up한 $\pi: \widetilde{X} \rightarrow X$ 위에서 exceptional divisor만큼 twist를 낮춘 line bundle에 vanishing을 적용하므로, vanishing의 대상이 다시 line bundle이 되어 [명제 1](#prop1)의 형태로 환원된다. 더 나아가 $\mathcal{L}^{\otimes m}$이 very ample일 뿐만 아니라 그에 의한 embedding이 projectively normal이 되도록 하는 조건도 관련된 multiplication map
 
