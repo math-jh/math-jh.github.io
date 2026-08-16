@@ -10,8 +10,6 @@ sidebar:
 
 date: 2026-06-25
 weight: 9
-published: false
-revising: true
 drift_needed: true
 
 ---
@@ -93,7 +91,7 @@ $$\lvert R_n(x)\rvert \leq \frac{e^{\lvert x\rvert}\lvert x\rvert^{n+1}}{(n+1)!}
 
 $$e^x = \sum_{k=0}^{\infty}\frac{x^k}{k!}$$
 
-이 성립한다. 이 급수는 [§멱급수, ⁋예시 3](/ko/math/calculus/power_series#ex3)에서 $e^x$의 정의로 삼았던 것이므로 위의 계산이 새로운 등식을 주지는 않으나, 급수로 정의한 함수의 테일러 급수가 다시 자기 자신으로 돌아온다는 것을 확인해준다. 특히 $x = 1$이면 $e = \sum_{k=0}^\infty 1/k!$이다.
+이 성립한다. 특히 $x = 1$이면 $e = \sum_{k=0}^\infty 1/k!$이다.
 :::
 
 비슷하게, 우리가 알고 있는 삼각함수에서도 다음이 성립한다. 

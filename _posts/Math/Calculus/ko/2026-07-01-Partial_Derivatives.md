@@ -10,8 +10,6 @@ sidebar:
 
 date: 2026-07-01
 weight: 14
-published: false
-revising: true
 drift_needed: true
 ---
 
@@ -294,7 +292,7 @@ $$\nabla f(\mathbf{a}) = \lambda \nabla g(\mathbf{a})$$
 가 성립한다.
 :::
 ::: 증명
-아래의 논증은 가설 $\nabla g(\mathbf{a}) \neq 0$ 하에서 제약면 $\{g = c\}$가 $\mathbf{a}$ 근방에서 $(m-1)$차원의 smooth한 곡면이 되고, $\mathbf{a}$에서의 접방향이 모두 제약면 위를 지나는 곡선의 속도벡터로 실현된다는 사실을 쓴다. 제약면 위에서 $\mathbf{a}$를 지나는 임의의 smooth curve $\mathbf{x}(t)$ ($\mathbf{x}(0) = \mathbf{a}$)를 잡자. $g(\mathbf{x}(t)) = c$가 상수이므로 [정리 6](#thm6)으로 미분하면 $\nabla g(\mathbf{a}) \cdot \mathbf{x}'(0) = 0$이고, 한편 $\mathbf{a}$가 제약 아래에서 $f$의 극값을 주므로 $t \mapsto f(\mathbf{x}(t))$도 $t = 0$에서 극값을 가지고, 따라서 $\nabla f(\mathbf{a}) \cdot \mathbf{x}'(0) = 0$이다. 즉, 두 벡터 $\nabla f(\mathbf{a})$와 $\nabla g(\mathbf{a})$ 모두가 제약면의 tangent space에 직교한다. 그런데 전체 공간이 $m$차원이고, 제약면의 tangent space가 $m-1$차원이므로 이러한 방향은 하나 뿐이고, 따라서 $\nabla f(\mathbf{a}) = \lambda \nabla g(\mathbf{a})$인 실수 $\lambda$가 존재한다.
+제약면 $\{g = c\}$ 위에서 $\mathbf{a}$를 지나는 임의의 smooth curve $\mathbf{x}(t)$ ($\mathbf{x}(0) = \mathbf{a}$)를 잡자. $g(\mathbf{x}(t)) = c$가 상수이므로 [정리 6](#thm6)으로 미분하면 $\nabla g(\mathbf{a}) \cdot \mathbf{x}'(0) = 0$이고, 한편 $\mathbf{a}$가 제약 아래에서 $f$의 극값을 주므로 $t \mapsto f(\mathbf{x}(t))$도 $t = 0$에서 극값을 가지고, 따라서 $\nabla f(\mathbf{a}) \cdot \mathbf{x}'(0) = 0$이다. 즉, 두 벡터 $\nabla f(\mathbf{a})$와 $\nabla g(\mathbf{a})$ 모두가 제약면의 tangent space에 직교한다. 그런데 전체 공간이 $m$차원이고, 제약면의 tangent space가 $m-1$차원이므로 이러한 방향은 하나 뿐이고, 따라서 $\nabla f(\mathbf{a}) = \lambda \nabla g(\mathbf{a})$인 실수 $\lambda$가 존재한다.
 :::
 
 실제 계산에서는 새로 도입된 실수 $\lambda$를 미지수로 추가하여 $\nabla f = \lambda \nabla g$와 제약식 $g = c$를 함께 연립하여 푸는데, 이 $\lambda$를 *라그랑주 승수<sub>Lagrange multiplier</sub>*라 부른다.

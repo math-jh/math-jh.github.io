@@ -10,8 +10,6 @@ sidebar:
 
 date: 2026-06-02
 weight: 6
-published: false
-revising: true
 drift_needed: true
 
 
@@ -71,7 +69,7 @@ $$\lim_{x\rightarrow a}\bigl(f(x)-f(a)\bigr) = f'(a)\cdot 0 = 0$$
 
 $$\frac{f(h)-f(0)}{h} = \frac{\lvert h\rvert}{h}=\begin{cases}1&\text{if $h>0$}\\-1&\text{if $h<0$}\end{cases}$$
 
-이므로, 이 함수의 평균변화율은 $h \rightarrow 0^+$일 때 $1$, $h \rightarrow 0^-$일 때 $-1$로, 한쪽 극한이 서로 달라 극한이 존재하지 않는다. 
+이므로, 이 함수의 평균변화율의 극한은 $h \rightarrow 0^+$일 때 $1$, $h \rightarrow 0^-$일 때 $-1$로 서로 달라 극한이 존재하지 않는다. 
 
 비슷한 예시로, $f(x) = \sqrt[3]{x}$는 $0$에서 평균변화율이 $h^{-2/3} \rightarrow \infty$로 발산하는 *수직접선<sub>vertical tangent</sub>*을 갖는다.
 
@@ -81,7 +79,7 @@ $$\frac{f(h)-f(0)}{h} = \frac{\lvert h\rvert}{h}=\begin{cases}1&\text{if $h>0$}\
 
 {% diagram Math/Calculus/Derivatives-3.svg width="13.17em" alt="2/3제곱함수의 첨점" %}
 
-이들은 한두 점에서만 미분 불가능한 예이지만, 미분 불가능성은 훨씬 더 심할 수도 있어서 바이어슈트라스의 함수 $W(x) = \sum_{n=0}^\infty a^n\cos(b^n\pi x)$ ($0<a<1$이고 $b$가 $ab > 1+3\pi/2$를 만족하는 홀수인 양의 정수)처럼 $\mathbb{R}$ 전체에서 연속이면서 어느 점에서도 접선을 갖지 않는 함수마저 존재한다.
+이들은 한두 점에서만 미분 불가능한 예이지만, 미분 불가능성은 훨씬 더 심할 수도 있어서 바이어슈트라스의 함수처럼 $\mathbb{R}$ 전체에서 연속이면서 어느 점에서도 접선을 갖지 않는 함수마저 존재한다.
 
 거꾸로 미분가능성은 한 점에서만 성립할 수도 있는 국소적 성질이어서, 다음과 같은 형태의 극단적인 예시도 가능하다. 
 
@@ -90,7 +88,7 @@ $$\frac{f(h)-f(0)}{h} = \frac{\lvert h\rvert}{h}=\begin{cases}1&\text{if $h>0$}\
 
 $$f(x) = \begin{cases} x^2 & (x \in \mathbb{Q}) \\ 0 & (x \notin \mathbb{Q}) \end{cases}$$
 
-를 보자. $a \neq 0$에서는 $\epsilon = a^2/4$로 두면 어떤 $\delta > 0$을 잡아도 $\lvert x - a\rvert < \delta$이면서 $\lvert f(x) - f(a)\rvert > \epsilon$인 $x$가 있다. 실제로 $\delta \leq \lvert a\rvert/2$인 경우만 보면 충분한데, $a$가 유리수이면 그 범위 안의 무리수 $x$가 $\lvert f(x) - f(a)\rvert = a^2 > \epsilon$을 주고, $a$가 무리수이면 그 범위 안의 유리수 $x$가 $\lvert x\rvert > \lvert a\rvert/2$를 만족하므로 $\lvert f(x) - f(a)\rvert = x^2 > \epsilon$을 준다. 따라서 $f$는 $a$에서 불연속이고, [명제 2](#prop2)의 대우에 의해 미분가능하지 않다. 반면 $0$에서는 $\lvert f(x)\rvert \leq x^2$이라 연속이며, 평균변화율이
+를 보자. $a \neq 0$에서는 $a$에 수렴하는 유리수열과 무리수열을 따라 함숫값이 각각 $a^2$과 $0$으로 갈라지므로 $f$는 불연속이고, [명제 2](#prop2)의 대우에 의해 미분가능하지 않다. 반면 $0$에서는 $\lvert f(x)\rvert \leq x^2$이라 연속이며, 평균변화율이
 
 $$\left\lvert \frac{f(x) - f(0)}{x - 0} \right\rvert = \frac{\lvert f(x)\rvert}{\lvert x\rvert} \leq \lvert x\rvert \rightarrow 0$$
 
@@ -135,7 +133,7 @@ $$f'_+(a) := \lim_{h \rightarrow 0^+} \frac{f(a+h) - f(a)}{h}, \qquad f'_-(a) :=
 로 정의한다.
 :::
 
-두 한쪽 derivative가 모두 존재하고 서로 같으면, 그리고 오직 그때에만, $f$는 $a$에서 미분가능하고 그 공통값이 $f'(a)$이다. 이는 양쪽 극한이 일치할 때에만 극한이 존재한다는 사실을 평균변화율에 적용한 것에 지나지 않는다. ([§함수의 극한](/ko/math/calculus/functions_and_limits)) 절댓값함수 $f(x) = \lvert x\rvert$를 다시 보면 $f'_+(0) = 1$, $f'_-(0) = -1$로 둘이 달라 $0$에서 미분 불가능함이 곧바로 확인된다. 한쪽 derivative는 정의역의 끝점에서 미분가능성을 논할 때에도 자연스럽게 쓰이는데, 가령 $[0, \infty)$에서 정의된 $f(x) = \sqrt x$의 $0$에서의 거동은 우미분계수로만 의미를 갖는다.
+두 한쪽 derivative가 모두 존재하고 서로 같으면, 그리고 오직 그때에만, $f$는 $a$에서 미분가능하고 그 공통값이 $f'(a)$이다. 이는 양쪽 극한이 일치할 때에만 극한이 존재한다는 사실을 평균변화율에 적용한 것에 지나지 않는다. ([§함수의 극한](/ko/math/calculus/functions_and_limits)) 절댓값함수 $f(x) = \lvert x\rvert$를 다시 보면 $f'_+(0) = 1$, $f'_-(0) = -1$로 둘이 달라 $0$에서 미분 불가능함이 곧바로 확인된다. 한쪽 derivative는 정의역의 끝점에서 미분가능성을 논할 때에도 자연스럽게 쓰이는데, 가령 $[0, \infty)$에서 정의된 $f(x) = \sqrt x$의 $0$에서의 미분가능성은 우미분계수로만 의미를 갖는다.
 
 ---
 

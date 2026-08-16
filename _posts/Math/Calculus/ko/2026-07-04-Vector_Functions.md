@@ -10,8 +10,6 @@ sidebar:
 
 date: 2026-07-04
 weight: 13
-published: false
-revising: true
 drift_needed: true
 ---
 

@@ -10,8 +10,6 @@ sidebar:
 
 date: 2026-07-06
 weight: 17
-published: false
-revising: true
 
 drift_needed: true
 
@@ -43,7 +41,7 @@ $$\int_C \mathbf{F} \cdot d\mathbf{r} = \int_a^b \mathbf{F}(\mathbf{r}(t)) \cdot
 
 $\mathbf{F}$가 힘을 나타내는 벡터장인 경우, 위의 적분은 그 힘이 곡선 $C$를 따라 움직이는 물체에 한 *일<sub>work</sub>*이 된다. 힘이 일정하고 변위가 $\mathbf{d}$일 때의 일이 $\mathbf{F}\cdot \mathbf{d}$인 것에서 출발해, 각 순간의 변위를 $\mathbf{r}'(t)\dd{t}$로 근사하여 힘과의 내적을 곡선 전체에 걸쳐 더한 것이 위의 정의이기 때문이다. 
 
-$\mathbf{r}$이 [§곡선과 벡터함수](/ko/math/calculus/vector_functions)의 일급정칙곡선인 경우, 이를 단위접선벡터를 활용하여 $\mathbf{T} = \mathbf{r}'/\lvert \mathbf{r}'\rvert$로 쓰면 
+$\mathbf{r}$이 일급정칙곡선인 경우, 이를 단위접선벡터를 활용하여 $\mathbf{T} = \mathbf{r}'/\lvert \mathbf{r}'\rvert$로 쓰면 
 
 $$\int_C \mathbf{F}\cdot d\mathbf{r} = \int_C (\mathbf{F}\cdot \mathbf{T})\dd{s}$$
 
@@ -84,7 +82,7 @@ $\mathbf{F}$가 연결된 열린 영역 $D$에서 연속일 때, 다음은 동�
 :::
 
 ::: 증명
-$(1 \Rightarrow 3)$은 [정리 3](#thm3)이다. 이때 $\mathbf{F} = \nabla f$가 연속이므로 potential $f$는 자동으로 $C^1$이다. $(3 \Leftrightarrow 2)$는 closed curve를 한 점에서 끊어 두 경로로 보고, 한 경로를 거꾸로 이으면 closed curve가 되는 것에서 따라온다. 거꾸로 이은 경로 위의 적분은 $t \mapsto a + b - t$ 치환에 의해 원래 적분에 부호를 붙인 것이므로, closed curve에서의 적분이 $0$이라는 것과 두 경로에서의 적분이 서로 같다는 것이 같은 말이 되기 때문이다. 
+$(1 \Rightarrow 3)$은 [정리 3](#thm3)이다. 이때 $\mathbf{F} = \nabla f$가 연속이므로 potential $f$는 자동으로 $C^1$이다. $(3 \Leftrightarrow 2)$는 closed curve를 한 점에서 끊어 두 경로로 보고, 한 경로를 거꾸로 이으면 closed curve가 되는 것에서 따라온다. 이 경로 위의 적분은 $t \mapsto a + b - t$ 치환에 의해 원래 적분에 부호를 붙인 것이므로, closed curve에서의 적분이 $0$이라는 것과 두 경로에서의 적분이 서로 같다는 것이 같은 말이 되기 때문이다. 
 
 따라서 핵심 주장은 $(3 \Rightarrow 1)$이다. 이를 위해 potential을 직접 만들어야 한다. 기준점 $\mathbf{x}_0 \in D$를 고정하고, 임의의 $\mathbf{x}\in D$에 대해서 $f(\mathbf{x})$를 $\mathbf{x}_0$에서 $\mathbf{x}$를 따라 $\mathbf{F}$를 선적분한 값으로 두자. 이는 원래대로라면 $\mathbf{x}_0$과 $\mathbf{x}$를 잇는 곡선 $\mathbf{r}$의 선택에 의존하지만, 우리는 셋째 조건을 가정하고 있으므로 이 정의가 정당하다. 이제 한 좌표방향 $\mathbf{e}_i$로의 평균변화율 
 

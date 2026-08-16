@@ -10,8 +10,6 @@ sidebar:
 
 date: 2026-07-03
 weight: 15
-published: false
-revising: true
 drift_needed: true
 ---
 
@@ -61,7 +59,7 @@ $$\int_R f \dd{V} = \int_{a_1}^{b_1}\left(\int_{a_2}^{b_2}\cdots\left(\int_{a_n}
 이며, 적분 순서는 임의로 바꿀 수 있다.
 :::
 
-엄밀한 증명은 closed 상자 $R$ 위에서 연속함수가 갖는 해석학적 성질에 본질적으로 기대므로, 이 글에서는 생략한다. 어쨌든, 위 정리의 우변에 있는 안쪽 적분은 한 변수를 상수로 고정하고 다른 변수로 적분하는 보통의 정적분이므로, 다중적분은 [§미적분의 기본정리](/ko/math/calculus/fundamental_theorem_of_calculus)와 적분법으로 푸는 한 변수 적분들의 반복이 된다. 피적분함수가 $f(x_1,\ldots,x_n) = g_1(x_1)\cdots g_n(x_n)$처럼 변수분리되고 영역이 상자이면 한 단계 더 나아가, 다중적분은 $n$개의 한 변수 적분의 곱 
+엄밀한 증명은 연속함수가 갖는 해석학적 성질에 본질적으로 기대므로, 이 글에서는 생략한다. 어쨌든, 위 정리의 우변에 있는 안쪽 적분은 한 변수를 상수로 고정하고 다른 변수로 적분하는 보통의 정적분이므로, 다중적분은 [§미적분의 기본정리](/ko/math/calculus/fundamental_theorem_of_calculus)와 적분법으로 푸는 한 변수 적분들의 반복이 된다. 피적분함수가 $f(x_1,\ldots,x_n) = g_1(x_1)\cdots g_n(x_n)$처럼 변수분리되고 영역이 상자이면 한 단계 더 나아가, 다중적분은 $n$개의 한 변수 적분의 곱 
 
 $$(\int_{a_1}^{b_1} g_1)\cdots(\int_{a_n}^{b_n} g_n)$$
 

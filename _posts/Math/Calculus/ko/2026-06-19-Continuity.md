@@ -10,8 +10,6 @@ sidebar:
 
 date: 2026-06-19
 weight: 2
-published: false
-revising: true
 drift_needed: true
 
 
@@ -99,10 +97,10 @@ $f$가 닫힌구간 $[a,b]$에서 연속이고 $f(a) \neq f(b)$이면, $f(a)$와
 
 [정리 5](#thm5)에서 사이라는 말은 양 끝값 $f(a)$와 $f(b)$를 제외한다는 뜻이고, 그래서 결론의 $c$도 열린구간 $(a,b)$에서 얻어진다. $y$가 두 끝값 중 하나와 같거나 $f(a) = f(b)$인 경우까지 함께 적으려면 $f(c) = y$인 $c$를 닫힌구간 $[a,b]$에서 찾으면 되며, 이때는 $c$로 $a$나 $b$를 잡으면 된다.
 
-마지막으로, 연속이 깨지는 방식을 분류해 두면 함수의 거동을 기술하는 데 편리하다. [§함수의 극한](/ko/math/calculus/functions_and_limits)에서 $\lvert x\rvert/x$를 두고 언급한 jump discontinuity가 그중 한 종류이다.
+마지막으로, 연속이 깨지는 방식을 분류해 두면 함수의 성질을 기술하는 데 편리하다. [§함수의 극한](/ko/math/calculus/functions_and_limits)에서 $\lvert x\rvert/x$를 두고 언급한 jump discontinuity가 그중 한 종류이다.
 
 ::: 정의 6 (불연속의 분류)
-함수 $f$가 $a$의 어떤 삭제된 근방에서 정의되어 있고, $a$에서 연속이 아니거나 $f(a)$가 정의되어 있지 않다고 하자. 그럼 두 한쪽 극한 $\lim_{x\rightarrow a^\pm} f(x)$의 거동에 따라 이 불연속점을 다음 셋으로 나눈다.
+함수 $f$가 $a$의 어떤 삭제된 근방에서 정의되어 있고, $a$에서 연속이 아니거나 $f(a)$가 정의되어 있지 않다고 하자. 그럼 두 한쪽 극한 $\lim_{x\rightarrow a^\pm} f(x)$의 존재와 일치 여부에 따라 이 불연속점을 다음 셋으로 나눈다.
 
 1. *removable discontinuity<sub>제거가능 불연속</sub>*: 극한 $\lim_{x\rightarrow a} f(x)$가 존재하나 $f(a)$와 다르거나 $f(a)$가 정의되지 않은 경우. $f(a)$를 극한값으로 (재)정의하면 연속이 된다. 예: $(x^2-1)/(x-1)$ ($a=1$).
 2. *jump discontinuity<sub>도약 불연속</sub>*: 두 한쪽 극한이 모두 존재하나 서로 다른 경우. 예: $\lvert x\rvert/x$ ($a=0$).
