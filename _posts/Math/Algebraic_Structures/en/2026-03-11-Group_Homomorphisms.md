@@ -10,8 +10,9 @@ sidebar:
     
 date: 2021-09-08
 weight: 4
-translated_at: 2026-08-15T03:46:36+00:00
+translated_at: 2026-08-16T09:45:04+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-08-16T09:45:04+00:00
 ---
 For now, we investigate the properties of groups. Therefore, a group homomorphism between groups will simply be called a homomorphism.
 
@@ -24,7 +25,7 @@ If $A$ has an identity element $e$ and $f:A\rightarrow A'$ is a bijective homomo
 :::
 
 ::: Proof
-It suffices to show the reverse direction. Since $f$ is bijective, the inverse function $f^{-1}:A'\rightarrow A$ exists as a function. If only $f^{-1}$ is a homomorphism, then by definition $f$ will be an isomorphism.
+It suffices to show the reverse direction. Since $f$ is bijective, the inverse function $f^{-1}:A'\rightarrow A$ exists as a function. If $f^{-1}$ is a homomorphism, then by definition $f$ is an isomorphism.
 
 Choose arbitrary $y, y'\in A'$. Then since $f$ is bijective, there exist unique $x$, $x'$ such that $f(x)=y$ and $f(x')=y'$. Now
 
