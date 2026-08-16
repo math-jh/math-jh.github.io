@@ -10,6 +10,7 @@ sidebar:
 
 date: 2026-05-11
 weight: 20
+drift_needed: true
 
 
 ---
@@ -77,11 +78,11 @@ $$V \cdot W = \sum_{T \subseteq V \cap W} i_T(V, W) [T]$$
 으로 정의할 수 있다. 여기서 $i_T(V, W)$는 component $T$에서의 intersection multiplicity로, [정의 1](#def1)의 점에서의 multiplicity를 component $T$로 자연스럽게 확장한 값이다. $T$가 점 $p$라면 $i_T(V, W) = i_p(V, W)$이고, 일반적으로는 $T$ 위의 일반적인 점에서 두 variety가 만나는 정도를 측정한 값으로, generic point에서의 intersection multiplicity로 엄밀하게 정의할 수 있다. 그럼 다음은 intersection multiplicity의 성질들을 intersection product로 올려둔 것이다. 
 
 ::: 명제 6
-Smooth irreducible quasi-projective variety $X$ 위에서 codimension $k$, $l$의 두 cycle $Z, W$에 대하여, 이들이 properly intersect하는 경우에는 위의 식으로부터, 그렇지 않은 경우에는 아래의 [보조정리 8](#lem8)로 한쪽을 옮긴 후 같은 식으로부터 *intersection product* 
+Smooth irreducible quasi-projective variety $X$ 위에서 codimension $k$, $l$의 두 cycle $Z, W$가 properly intersect하면, 위의 식은 *intersection product* 
 
 $$Z \cdot W \in \CH^{k+l}(X)$$
 
-가 잘 정의된다. 뿐만 아니라, 이는 다음의 성질들을 만족한다. 
+를 잘 정의한다. 뿐만 아니라, 이는 다음의 성질들을 만족한다. 
 
 1. *Symmetry.* $Z \cdot W = W \cdot Z$가 성립한다.
 2. *Bilinearity.* $(aZ_1 + bZ_2) \cdot W = a(Z_1 \cdot W) + b(Z_2 \cdot W)$가 성립한다. 
@@ -102,7 +103,7 @@ Smooth quasi-projective variety $X$에 대하여, intersection product에 의해
 Smooth quasi-projective variety $X$와 cycle $Z \in Z^k(X)$, 그리고 임의의 cycle $W \in Z^l(X)$에 대해, $Z' \sim_{\text{rat}} Z$이고 $Z'$과 $W$가 properly intersect하는 $Z'$가 존재한다.
 :::
 
-핵심 아이디어는 $Z$를 구성하는 irreducible component $V_i$를 직접 움직이는 대신, 이를 더 큰 cycle에서 잘라내어 표현하는 것이다. $X$를 $\mathbb{P}^n$ 안에 embed해 두고 일반적인 linear subspace $L$을 vertex로 하는 $V_i$ 위의 cone $C_L(V_i)$를 잡으면, 차원이 맞아떨어져 $C_L(V_i)$와 $X$가 properly intersect하고 cycle 수준에서 $C_L(V_i) \cdot X = V_i + R_i$의 꼴로 residual cycle $R_i$가 남는다. 그럼 $C_L(V_i)$를 $\mathbb{P}^n$ 안에서 일반적인 위치의 cycle $C$로 옮기는 rational equivalence로부터 $V_i \sim_{\text{rat}} C \cdot X - R_i$를 얻고, 우변의 첫 항은 이미 $W$와 properly intersect한다. 남은 $R_i$에 대해서는 $L$을 일반적으로 잡을 때 $R_i$가 $W$에 대해 갖는 excess, 즉 교집합의 차원이 기대 차원을 초과하는 정도가 $V_i$의 것보다 엄격히 작아지므로, 이 excess에 대한 induction으로 원하는 $Z'$를 얻는다. [§선형계, ⁋정의 5](/ko/math/algebraic_varieties/linear_systems#def5)에서 보았듯 basepoint-free linear system을 사용하면 이러한 "일반적인" 이동을 regular map으로 실현할 수 있으며, 이 과정이 rational equivalence를 보존함을 보이는 것이 증명의 핵심이다.
+핵심 아이디어는 $Z$를 구성하는 irreducible component $V_i$를 직접 움직이는 대신, 이를 더 큰 cycle에서 잘라내어 표현하는 것이다. $X$를 $\mathbb{P}^n$ 안에 embed해 두고 일반적인 linear subspace $L$을 vertex로 하는 $V_i$ 위의 cone $C_L(V_i)$를 잡으면, 차원이 맞아떨어져 $C_L(V_i)$와 $X$가 properly intersect하고 cycle 수준에서 $C_L(V_i) \cdot X = V_i + R_i$의 꼴로 residual cycle $R_i$가 남는다. 그럼 $C_L(V_i)$를 $\mathbb{P}^n$ 안에서 일반적인 위치의 cycle $C$로 옮기는 rational equivalence로부터 $V_i \sim_{\text{rat}} C \cdot X - R_i$를 얻고, 우변의 첫 항은 이미 $W$와 properly intersect한다. 남은 $R_i$에 대해서는 $L$을 일반적으로 잡을 때 $R_i$가 $W$에 대해 갖는 excess, 즉 교집합의 차원이 기대 차원을 초과하는 정도가 $V_i$의 것보다 엄격히 작아지므로, 이 excess에 대한 induction으로 원하는 $Z'$를 얻는다. [§선형계, ⁋정의 5](/ko/math/algebraic_varieties/linear_systems#def5)에서 보았듯 basepoint-free linear system을 사용하면 이러한 <em-ko>일반적인</em-ko> 이동을 regular map으로 실현할 수 있으며, 이 과정이 rational equivalence를 보존함을 보이는 것이 증명의 핵심이다.
 
 그럼 우리는 위의 보조정리를 사용하여 $Z$를 $Z'$로 옮겨준 후, 다음의 식
 
@@ -124,7 +125,7 @@ Closed embedding $i: Y \hookrightarrow X$에 대해, $\mathbb{A}^1$을 매개변
 구성은 blow-up을 사용한다. 먼저 $X \times \mathbb{A}^1$ 안에서 $Y \times \{0\}$를 따라 blow-up하여 $\widetilde{M} = \Bl_{Y \times \{0\}}(X \times \mathbb{A}^1)$을 얻고, 그 후 $X \times \{0\}$의 proper transform을 제거하여 $M = \widetilde{M} \setminus \widetilde{X \times \{0\}}$로 정의한다. 이 blow-up의 exceptional divisor는 $\mathbb{P}(C_{Y/X} \oplus \mathcal{O}_Y)$이며, proper transform을 제거하면 $t=0$ fiber에서 정확히 normal cone $C_{Y/X}$가 남는다. $t \neq 0$에서는 blow-up이 isomorphism이므로 fiber가 $X$ 그대로이다. 따라서 $M \rightarrow \mathbb{A}^1$은 $t=1$에서의 $X$를 $t=0$에서의 $C_{Y/X}$로 연결하는 deformation을 제공한다. Chow group에서 $M$ 위의 specialization map $\sigma: \CH^\ast(X) \rightarrow \CH^\ast(C_{Y/X})$을 정의할 수 있고, normal cone이 vector bundle 구조를 가질 때 (즉 regular embedding의 경우) Thom isomorphism에 의해 $\CH^\ast(C_{Y/X}) \cong \CH^\ast(Y)$가 되어 intersection product의 well-definedness가 확립된다.
 :::
 
-이 방법의 아이디어는 $X$를 연속적으로 변형하여 $Y$의 normal cone으로 수축시키는 것이다. 기하적으로, $t=1$에서는 원래 공간 $X$를 보고, $t$가 $0$으로 갈수록 $X$가 $Y$를 따라 점점 더 "펴지면서" 결국 $t=0$에서는 $Y$를 따라 벌어진 normal cone이 된다. [§유리사상, ⁋예시 12](/ko/math/algebraic_varieties/rational_maps#ex12)의 blow-up이 한 점을 $\mathbb{P}^1$로 펼쳐 놓는 변형이었다면, deformation to normal cone은 이를 더 일반적인 embedding에 대해 수행하는 것이다.
+이 방법의 아이디어는 $X$를 연속적으로 변형하여 $Y$의 normal cone으로 수축시키는 것이다. 기하적으로, $t=1$에서는 원래 공간 $X$를 보고, $t$가 $0$으로 갈수록 $X$가 $Y$를 따라 점점 더 <em-ko>펴지면서</em-ko> 결국 $t=0$에서는 $Y$를 따라 벌어진 normal cone이 된다. [§유리사상, ⁋예시 12](/ko/math/algebraic_varieties/rational_maps#ex12)의 blow-up이 한 점을 $\mathbb{P}^1$로 펼쳐 놓는 변형이었다면, deformation to normal cone은 이를 더 일반적인 embedding에 대해 수행하는 것이다.
 
 ## 예시들
 
@@ -141,7 +142,7 @@ $$[C] \cdot [D] = \sum_{p \in C \cap D} i_p(C, D) [p] \in \CH^2(S)$$
 
 임을 보았다. 일반적인 surface의 경우 $\CH^2(S)$의 구조는 매우 복잡하며, 일반적으로 intersection multiplicity $C \cdot D = \sum_{p \in C \cap D} i_p(C, D)$는 degree map의 image로서 정수값을 얻지만, 이것의 kernel이 nontrivial일 수 있어 $\CH^2(S)$가 $\mathbb{Z}$이 아닐 수 있다.
 
-그러나 $\mathbb{P}^2$에서는 상황이 단순하다. $\CH^\ast(\mathbb{P}^2) = \mathbb{Z}[H]/(H^3)$이므로 $\CH^2(\mathbb{P}^2) \cong \mathbb{Z}$이고, 교차 수가 완전히 결정된다. Chow ring에서 conic의 class는 $[C] = 2H$이고 직선의 class는 $[L] = H$이므로, $[C] \cdot [L] = 2H \cdot H = 2H^2 = 2[\text{point}]$이다.
+그러나 $\mathbb{P}^2$에서는 상황이 단순하다. $\CH^\ast(\mathbb{P}^2) = \mathbb{Z}[H]/(H^3)$이므로 $\CH^2(\mathbb{P}^2) \cong \mathbb{Z}$이고, 교차 수가 완전히 결정된다. Chow ring에서 conic의 class는 $[C] = 2H$이고 직선의 class는 $[L] = H$이므로, $[C] \cdot [L] = 2H \cdot H = 2H^2 = 2[\text{pt}]$이다.
 :::
 
 ::: 예시 12 ($\mathbb{P}^1 \times \mathbb{P}^1$)

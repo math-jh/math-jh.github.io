@@ -10,6 +10,7 @@ sidebar:
 
 date: 2026-04-22
 weight: 16
+drift_needed: true
 
 ---
 
@@ -45,7 +46,7 @@ $$\ell(D)-\ell(K_C-D)=\deg D+1-g$$
 
 $$H^1(C, \mathcal{O}_C(D)) \cong H^0(C, \omega_C \otimes \mathcal{O}_C(-D))^\vee = H^0(C, \mathcal{O}_C(K_C - D))^\vee\tag{$1$}$$
 
-이 성립한다 ([§세르 쌍대성, ⁋명제 2](/ko/math/algebraic_varieties/serre_duality#prop2) 직후에 서술된 임의의 smooth projective variety에서의 형태). 여기서 canonical divisor $K_C$는 canonical line bundle에 대응되는 divisor였던 것을 기억하자. 그럼 다음 보조정리에 의해 $\mathcal{O}_C(D)$의 Euler characteristic에서 등장하는 항은 단 두 개 뿐임을 유도할 수 있다. 이 글에서 우리는 $\mathbb{K}$가 *infinite* field임을 가정한다. 
+이 성립한다 ([§세르 쌍대성, ⁋명제 2](/ko/math/algebraic_varieties/serre_duality#prop2)). 여기서 canonical divisor $K_C$는 canonical line bundle에 대응되는 divisor였던 것을 기억하자. 그럼 다음 보조정리에 의해 $\mathcal{O}_C(D)$의 Euler characteristic에서 등장하는 항은 단 두 개 뿐임을 유도할 수 있다. 이 글에서 우리는 $\mathbb{K}$가 *infinite* field임을 가정한다. 
 
 ::: 보조정리 2
 Smooth projective curve $C$ 위의 임의의 coherent sheaf $\mathcal{F}$에 대해

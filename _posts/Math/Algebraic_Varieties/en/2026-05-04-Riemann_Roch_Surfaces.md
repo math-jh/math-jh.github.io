@@ -144,7 +144,7 @@ $$\rchi(\mathcal{O}_S(D)) = \rchi(\mathcal{O}_S) + \frac{1}{2}D \cdot (D - K_S)$
 
 is obtained.
 
-We now need to generalize this to a general divisor $D$. First fix an ample divisor $H$ on $S$. Then by [§Cohomology of Projective Space, ⁋Proposition 5](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop5), for sufficiently large $n$,
+We now need to generalize this to a general divisor $D$. First fix an ample divisor $H$ on $S$. Then by [§Cohomology of Projective Space, ⁋Proposition 7](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop7), for sufficiently large $n$,
 
 $$H^1(S, \mathcal{O}_S(D + nH)) = H^2(S, \mathcal{O}_S(D + nH)) = 0$$
 
@@ -152,7 +152,7 @@ Hence
 
 $$\rchi(\mathcal{O}_S(D + nH)) = h^0(\mathcal{O}_S(D + nH))$$
 
-holds. On the other hand, by taking $n$ even larger, [§Cohomology of Projective Space, ⁋Proposition 10](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop10) allows us to make $D+nH$ very ample, so the linear system $\lvert D+nH\rvert$ is non-empty. Then by Bertini's theorem, a general element $D'$ of this linear system is a smooth irreducible curve, and since $D' \sim D+nH$, we have $\mathcal{O}_S(D')\cong\mathcal{O}_S(D+nH)$, so the Euler characteristics of the two divisors are equal, and by linear invariance from [Proposition 2](#prop2) their intersection numbers are also equal. Thus applying the previous argument to $D'$, the desired identity also holds for $D+nH$. Now consider the two functions in $n$, $f(n) = \rchi(\mathcal{O}(D+nH))$ and $g(n) = \frac{1}{2}(D+nH)\cdot(D+nH-K_S) + \rchi(\mathcal{O}_S)$; these agree for all sufficiently large $n$. But by Snapper's theorem mentioned earlier, $\rchi(\mathcal{O}_S(D+nH))$ is a polynomial in $n$, and polynomials that agree at infinitely many points are identical. That is, $f(n) = g(n)$ for all $n$, and in particular substituting $n = 0$ gives
+holds. On the other hand, by taking $n$ even larger, [§Cohomology of Projective Space, ⁋Proposition 13](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop13) allows us to make $D+nH$ very ample, so the linear system $\lvert D+nH\rvert$ is non-empty. Then by Bertini's theorem, a general element $D'$ of this linear system is a smooth irreducible curve, and since $D' \sim D+nH$, we have $\mathcal{O}_S(D')\cong\mathcal{O}_S(D+nH)$, so the Euler characteristics of the two divisors are equal, and by linear invariance from [Proposition 2](#prop2) their intersection numbers are also equal. Thus applying the previous argument to $D'$, the desired identity also holds for $D+nH$. Now consider the two functions in $n$, $f(n) = \rchi(\mathcal{O}(D+nH))$ and $g(n) = \frac{1}{2}(D+nH)\cdot(D+nH-K_S) + \rchi(\mathcal{O}_S)$; these agree for all sufficiently large $n$. But by Snapper's theorem mentioned earlier, $\rchi(\mathcal{O}_S(D+nH))$ is a polynomial in $n$, and polynomials that agree at infinitely many points are identical. That is, $f(n) = g(n)$ for all $n$, and in particular substituting $n = 0$ gives
 
 $$\rchi(\mathcal{O}(D)) = \frac{1}{2}D\cdot(D-K_S) + \rchi(\mathcal{O}_S)$$
 :::
@@ -242,7 +242,7 @@ Fix a smooth projective surface $S$ and an ample divisor $H$. If a divisor $D$ s
 :::
 
 ::: Proof
-First assume $D^2>0$. Using [§Cohomology of Projective Space, ⁋Proposition 10](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop10), we can make $H_n=D+nH$ very ample. Then
+First assume $D^2>0$. Using [§Cohomology of Projective Space, ⁋Proposition 13](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop13), we can make $H_n=D+nH$ very ample. Then
 
 $$D \cdot H_n = D^2 + n(D \cdot H) = D^2 > 0$$
 

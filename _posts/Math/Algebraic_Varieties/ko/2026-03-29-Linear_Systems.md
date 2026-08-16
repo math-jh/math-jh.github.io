@@ -10,6 +10,7 @@ sidebar:
 
 date: 2026-03-29
 weight: 11
+drift_needed: true
 
 ---
 
@@ -204,6 +205,31 @@ $\mathcal{L}$이 *ample<sub>풍부한</sub>*이라는 것은 어떤 $m > 0$에 �
 :::
 
 이 정의의 유용성을 보려면 ample이지만 very ample은 아닌 line bundle을 갖는 공간을 생각해야겠지만, 아직은 그러한 공간을 소개하기에는 다소 이르다. 하지만 머지 않아 그러한 공간을 다루게 되면 ampleness가 본격적으로 그 쓸모를 증명하게 된다. 
+
+## 일반적인 원소
+
+Linear system의 원소는 nonzero section을 상수배만큼의 차이로 본 것이고 ([정의 2](#def2)), 각각의 원소가 실제로 우리에게 주는 것은 그 section의 zero locus였다. 그럼 이 zero locus가 어떻게 생긴 공간인지를 묻는 것이 자연스럽다. [예시 3](#ex3)의 pencil을 다시 보면, 이는 $G_1=\x_0^2+\x_1^2-5\x_2^2$와 $G_2=\x_0\x_2$가 생성하므로 그 원소들은 conic $Z(\lambda G_1+\mu G_2)$이다. 이 quadratic form에 대응하는 symmetric matrix의 행렬식은 $-\lambda(20\lambda^2+\mu^2)/4$이고, conic이 singular인 것은 이 값이 $0$인 것과 같으므로, 나쁜 원소는 $[\lambda:\mu]$가 세 점 $[0:1]$, $[1:\pm 2\sqrt{5}i]$일 때뿐이다. 가령 $\lambda=0$인 원소는 두 직선 $Z(\x_0)$과 $Z(\x_2)$로 쪼개져 그 교점에서 singular point를 갖는다. 나머지 원소는 모두 smooth conic이며, 우리가 알고 싶은 것은 이렇게 <em-ko>거의 모든</em-ko> 원소가 갖는 성질이다. 
+
+$\mathcal{L}$이 very ample이면 이 질문은 hyperplane에 대한 질문으로 번역된다. $X$는 $\varphi_{\mathcal{L}}$을 통해 $\mathbb{P}^N = \mathbb{P}(\Gamma(X,\mathcal{L})^\ast)$의 closed subvariety가 되고, [명제 6](#prop6)에 의해 $\lvert \mathcal{L}\rvert$의 원소들은 정확히 hyperplane $H\subseteq \mathbb{P}^N$이 $X$를 자른 자취 $X\cap H$이기 때문이다. 즉 $\lvert \mathcal{L}\rvert$은 dual projective space $(\mathbb{P}^N)^\ast$와 동일시되고, 따라서 우리의 질문은 일반적인 hyperplane이 $X$를 어떻게 자르는지를 묻는 것이 된다. 이에 대한 답이 다음의 정리이다. 
+
+::: 명제 11 (Bertini's theorem)
+Projective variety $X\subseteq \mathbb{P}^N$에 대하여, dual projective space $(\mathbb{P}^N)^\ast$의 dense open subset $U$가 존재하여 모든 $H\in U$에 대해 다음이 성립한다. 
+
+1. $X\cap H$의 singular point는 모두 $X$의 singular point이다. 특히 $X$가 smooth이면 $X\cap H$ 또한 smooth이다.
+2. $\dim X\geq 2$이면 $X\cap H$는 irreducible이다.
+:::
+
+첫째 결과는 직관적으로는 다음과 같은 의미이다. $H$가 $X$의 smooth point $x$에서 $X\cap H$에 singular point를 만드는 것은 $H$가 $x$에서 $X$에 접하는 것과 같은데, $n=\dim X$라 두면 고정된 $x$에서 접하는 $H$들은 $(\mathbb{P}^N)^\ast$ 안에서 $(N-n-1)$차원을 이루므로, 이를 $x\in X$ 전체에 대해 모아도 차원은 많아야 $N-1$이다. 즉 $X$에 어딘가에서 접하는 hyperplane들은 $N$차원인 $(\mathbb{P}^N)^\ast$를 채울 수 없고, 나머지가 우리가 찾는 dense open subset이 된다. 이를 엄밀하게 만들려면 이렇게 모은 $H$들이 이루는 incidence variety의 차원을 실제로 재야 하고 둘째 결과의 irreducibility는 이보다 더 깊은 사실이므로, 우리는 두 결과를 모두 증명 없이 가져다 쓰기로 한다. 
+
+앞으로 우리는 linear system의 어떤 dense open subset에 속하는 원소를 그 linear system의 "일반적인 원소"라 부르기로 한다. 그럼 위의 명제를 원래의 언어로 되돌려 다음을 얻는다. 
+
+::: 따름정리 12
+Smooth projective variety $X$와 very ample line bundle $\mathcal{L}$에 대하여, complete linear system $\lvert \mathcal{L}\rvert$의 일반적인 원소는 smooth이며, $\dim X\geq 2$이면 irreducible이다. 
+:::
+
+::: 증명
+[정의 9](#def9)에 의해 $\varphi_{\mathcal{L}}$은 closed embedding이므로 $X$를 $\mathbb{P}^N$의 closed subvariety로 볼 수 있고, [명제 6](#prop6)에 의해 이 동일시 아래에서 $\lvert \mathcal{L}\rvert$의 원소는 hyperplane $H$에 대한 $X\cap H$의 꼴이다. 여기에 [명제 11](#prop11)을 적용하면 된다. 
+:::
 
 ---
 

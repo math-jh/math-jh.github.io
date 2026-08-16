@@ -10,17 +10,18 @@ sidebar:
     
 date: 2026-05-07
 weight: 18
+drift_needed: true
 
 
 ---
 
-[§사영공간의 코호몰로지, ⁋명제 5](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop5)의 Serre vanishing theorem은 projective variety 위의 ample line bundle $\mathcal{L}$과 coherent sheaf $\mathcal{F}$에 대해, 충분히 큰 $m$에 대하여 $H^i(X, \mathcal{F} \otimes \mathcal{L}^{\otimes m}) = 0$ ($i > 0$)이 성립함을 보장한다. 그러나 이 결과는 단지 asymptotic한 성질에 불과하며, 구체적으로 어떤 $m$에서부터 vanishing이 시작되는지에 대해서는 아무 정보도 주지 않는다.
+[§사영공간의 코호몰로지, ⁋명제 7](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop7)의 Serre vanishing theorem은 projective variety 위의 ample line bundle $\mathcal{L}$과 coherent sheaf $\mathcal{F}$에 대해, 충분히 큰 $m$에 대하여 $H^i(X, \mathcal{F} \otimes \mathcal{L}^{\otimes m}) = 0$ ($i > 0$)이 성립함을 보장한다. 그러나 이 결과는 단지 asymptotic한 성질에 불과하며, 구체적으로 어떤 $m$에서부터 vanishing이 시작되는지에 대해서는 아무 정보도 주지 않는다.
 
  Kodaira vanishing theorem은 이보다 훨씬 더 정교한 결과로, canonical bundle $\omega_X$와 ample line bundle $\mathcal{L}$의 tensor product $\omega_X \otimes \mathcal{L}$에 대해 higher cohomology가 *항상* 사라진다는 사실을 보장한다. 우리는 이 글에서 Kodaira vanishing theorem과 그 응용, 그리고 이 정리가 algebraic geometry에서 어떻게 활용되는지를 살펴 본다.
 
 ## 고다이라 소멸정리
 
-우리가 다룰 기본적인 설정은 다음과 같다. $X$는 $n$차원 smooth projective variety이고, $\mathcal{L}$은 $X$ 위의 ample line bundle, $\omega_X = \det \Omega_X^1 = \Omega_X^n$은 canonical line bundle이다. ([§표준선다발, ⁋정의 5](/ko/math/algebraic_varieties/canonical_bundle#def5)) 여기서 $\Omega_X^q = \bigwedge^q \Omega_X^1$이다. 그럼 Kodaira vanishing theorem은 다음과 같이 쓸 수 있다. 
+우리가 다룰 기본적인 설정은 다음과 같다. $X$는 $n$차원 smooth projective variety이고, $\mathcal{L}$은 $X$ 위의 ample line bundle, $\omega_X = \det \Omega_X^1 = \Omega_X^n$은 canonical line bundle이다. ([§표준선다발, ⁋정의 5](/ko/math/algebraic_varieties/canonical_bundle#def5)) 그럼 Kodaira vanishing theorem은 다음과 같이 쓸 수 있다. 
 
 ::: 명제 1 (Kodaira vanishing)
 $\operatorname{char}\mathbb{K} = 0$일 때, $n$차원 smooth projective variety $X$, ample line bundle $\mathcal{L}$이 주어졌다 하자. 그럼 모든 $p > 0$에 대하여
@@ -34,7 +35,7 @@ $$H^p(X, \Omega^q\otimes \mathcal{L})=0$$
 이 성립한다. 
 :::
 
-첫째 주장은 둘째 주장에서 $q=n$으로 두어 얻어지는 것이며, [§곡면에서의 리만-로흐 정리, ⁋명제 7](/ko/math/algebraic_varieties/riemann_roch_surfaces#prop7)에서 이미 진술한 것이다. 둘째 주장은 이를 임의의 form degree $q$로 확장한 것으로, Akizuki-Nakano vanishing이라 부른다. 이 명제에 대한 증명은 꽤나 기술적인 부분이 있어 이번 글에서는 이를 엄밀하게 증명하기보다는 algebraic geometry에서 어떻게 사용되는지에 초점을 맞춘다. 
+첫째 주장은 둘째 주장에서 $q=n$으로 두어 얻어지는 것이며, [§곡면에서의 리만-로흐 정리, ⁋명제 7](/ko/math/algebraic_varieties/riemann_roch_surfaces#prop7)에서 이미 살펴본 것이다. 둘째 주장은 이를 임의의 form degree $q$로 확장한 것으로, Akizuki-Nakano vanishing이라 부른다. 이 명제에 대한 증명은 꽤나 기술적인 부분이 있어 이번 글에서는 이를 엄밀하게 증명하기보다는 algebraic geometry에서 어떻게 사용되는지에 초점을 맞춘다. 
 
 명제의 서술에서 알 수 있듯, Kodaira vanishing은 canonical bundle에 대한 twist 이후의 higher cohomology를 제거한다. Serre duality를 사용하면 이는 다음의 동치된 서술로 바꾸어 쓸 수 있다.
 
@@ -149,7 +150,7 @@ $$\{s \in H^0(X, \mathcal{L}) \mid s(p) = 0\} \longrightarrow \mathfrak{m}_p\mat
 Algebraically closed field 위의 projective variety $X$와 그 위의 line bundle $\mathcal{L}$에 대해, $\mathcal{L}$이 very ample인 것은 위의 두 가지 separation 조건을 동시에 만족하는 것과 동치이다.
 :::
 
-이제 이러한 separation 조건들이 cohomology를 통해 검증되는 방식을 살펴 보자. 먼저 (1)의 경우, 두 점 $p \neq q$를 포함하는 closed subset $Z = \{p\} \cup \{q\}$를 생각하면, $Z$를 정의하는 ideal sheaf $\mathcal{I}_Z$에 대해 short exact sequence
+이제 $\mathcal{L}$이 ample line bundle이라 하고, 이러한 separation 조건들이 $\mathcal{L}^{\otimes m}$에 대해 cohomology를 통해 검증되는 방식을 살펴 보자. 먼저 (1)의 경우, 두 점 $p \neq q$를 포함하는 closed subset $Z = \{p\} \cup \{q\}$를 생각하면, $Z$를 정의하는 ideal sheaf $\mathcal{I}_Z$에 대해 short exact sequence
 
 $$0 \longrightarrow \mathcal{I}_Z \otimes \mathcal{L}^{\otimes m} \longrightarrow \mathcal{L}^{\otimes m} \longrightarrow \mathcal{L}^{\otimes m} \otimes \mathcal{O}_Z \longrightarrow 0$$
 
@@ -173,9 +174,9 @@ $$H^0(X, \mathcal{L}^{\otimes m}) \longrightarrow H^0(X, \mathcal{L}^{\otimes m}
 
 를 고려하면, $H^1(X, \mathcal{I}_p^2 \otimes \mathcal{L}^{\otimes m}) = 0$이면 separation of tangent vectors가 성립한다.
 
-그런데 이렇게 요구되는 vanishing의 대상인 $\mathcal{I}_Z$와 $\mathcal{I}_p^2$는 $Z$와 $p$를 따라 locally free가 아니어서 $\omega_X$와 line bundle의 tensor product 꼴이 아니고, 따라서 [명제 1](#prop1)이 이들에 직접 적용되지는 않는다. 대신 이들은 coherent sheaf이므로 [§사영공간의 코호몰로지, ⁋명제 5](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop5)를 $\mathcal{F} = \mathcal{I}_Z$와 $\mathcal{F} = \mathcal{I}_p^2$에 그대로 적용할 수 있으며, 이로부터 충분히 큰 $m$에 대해 위의 두 $H^1$이 모두 사라져 $\mathcal{L}^{\otimes m}$의 section들이 두 separation 조건을 만족함을 얻는다. 즉 이 논법을 움직이는 것은 Kodaira vanishing이 아니라 Serre vanishing이다.
+$\mathcal{I}_Z$와 $\mathcal{I}_p^2$는 coherent sheaf이므로, [§사영공간의 코호몰로지, ⁋명제 7](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop7)을 $\mathcal{F} = \mathcal{I}_Z$와 $\mathcal{F} = \mathcal{I}_p^2$에 적용하면 충분히 큰 $m$에 대해 위의 두 $H^1$이 모두 사라진다. 따라서 $\mathcal{L}^{\otimes m}$의 section들이 두 separation 조건을 모두 만족하고, [명제 5](#prop5)에 의해 $\mathcal{L}^{\otimes m}$은 very ample이다. 즉 ample line bundle에 대해서는 충분히 큰 <em-ko>모든</em-ko> $m$에서 $\mathcal{L}^{\otimes m}$이 very ample이다.
 
-Kodaira vanishing이 [명제 6](#prop6)의 고전적인 증명에 들어오는 것은 조금 다른 방식을 통해서이다. 그 증명에서는 $p$와 $q$를 blow-up한 $\pi: \widetilde{X} \rightarrow X$ 위에서 exceptional divisor만큼 twist를 낮춘 line bundle에 vanishing을 적용하므로, vanishing의 대상이 다시 line bundle이 되어 [명제 1](#prop1)의 형태로 환원된다. 더 나아가 $\mathcal{L}^{\otimes m}$이 very ample일 뿐만 아니라 그에 의한 embedding이 projectively normal이 되도록 하는 조건도 관련된 multiplication map
+한편 Kodaira vanishing은 [명제 6](#prop6)의 고전적인 증명에 다른 방식으로 들어온다. 그 증명에서는 $p$와 $q$를 blow-up한 $\pi: \widetilde{X} \rightarrow X$ 위에서 exceptional divisor만큼 twist를 낮춘 line bundle에 vanishing을 적용하므로, vanishing의 대상이 다시 line bundle이 되어 [명제 1](#prop1)의 형태로 환원된다. 더 나아가 $\mathcal{L}^{\otimes m}$이 very ample일 뿐만 아니라 그에 의한 embedding이 projectively normal이 되도록 하는 조건도 관련된 multiplication map
 
 $$S^\mu H^0(X, \mathcal{L}^{\otimes m}) \longrightarrow H^0(X, \mathcal{L}^{\otimes \mu m})$$
 

@@ -10,6 +10,7 @@ sidebar:
 
 date: 2026-05-04
 weight: 17
+drift_needed: true
 
 ---
 
@@ -23,7 +24,7 @@ $$\ell(D) - \ell(K_C - D) = \deg D + 1 - g$$
 
 직관적으로, 위 식의 우변에서 등장하는 $\deg D$는 일종의 선형인 항이라 생각할 수 있으나, 이렇게 곡면에서의 일반화를 하는 과정에서 우리는 추가적인 <em-ko>이차항들</em-ko> $D\cdot D$, $D\cdot K_S$ 등을 고려하게 된다. 이들은 surface 위의 두 divisor가 얼마나 교차하는지를 담고 있는 양으로, curve case에서의 divisor들, 즉 점들은 곡선 안에서 일반적으로 만나지 않지만, 곡면에서의 divisor들, 즉 곡선들은 이 곡면 안에서 일반적으로 유한 개의 점에서 만나기 때문에 생겨난다. 
 
-이 글에서는 intersection number의 정의와 그 기본 성질을 다루고, Riemann–Roch 공식을 엄밀하게 유도한 뒤, 이를 활용하여 Hodge index theorem을 증명한다. 또한 intersection form이 surface의 birational geometry에서 갖는 의미를 살펴보고, birational invariant인 plurigenera를 정의한다.
+이 글에서는 intersection number의 정의와 그 기본 성질을 다루고, Riemann–Roch 공식을 엄밀하게 유도한 뒤, 이를 활용하여 Hodge index theorem을 증명한다.
 
 ## 교차수
 
@@ -54,7 +55,7 @@ $$\rchi(\mathcal{O}_{C \cap D}) = \sum_{p \in C \cap D} (C \cdot D)_p$$
 가 성립하며, 여기서 $(C \cdot D)_p$는 $p$에서의 local intersection multiplicity이다. 이 때 이 식에서 $C\cap D$가 점들의 유한집합 대신 curve가 되는 상황을 막기 위해서는 (가령 $C=D$인 상황을 막기 위해서는) 우리는 $C,D$가 공통의 component를 갖지 않는다 가정한다. 
 
 ::: 명제 2
-Smooth projective surface $S$ 위의 divisor들에 대해, 다음은 intersection number의 성질들이다. 
+Smooth projective surface $S$ 위의 divisor들에 대해, 다음이 성립한다. 
 
 1. *Symmetry.* $C \cdot D = D \cdot C$가 성립한다.
 2. *Bilinearity.* $(aC_1 + bC_2) \cdot D = a(C_1 \cdot D) + b(C_2 \cdot D)$가 성립한다. 
@@ -69,15 +70,15 @@ $$\rchi(\mathcal{F} \otimes L_1^{\otimes n_1} \otimes \cdots \otimes L_k^{\otime
 
 ## 곡면에서의 리만-로흐 정리
 
-이제 우리는 Riemann-Roch 정리를 곡면으로 확장할 때 필요한 언어를 전부 가지고 있다. 그 전에, intersection number를 curve 위의 line bundle의 degree로 읽는 다음의 등식을 확립해두자. $S$ 위의 smooth irreducible curve $D$와 임의의 divisor $C$에 대해
+이제 우리는 Riemann-Roch 정리를 곡면으로 확장할 때 필요한 언어를 전부 가지고 있다. 그 전에, intersection number를 curve 위의 line bundle의 degree로 읽는 방식을 살펴볼 필요가 있다. $S$ 위의 smooth irreducible curve $D$와 임의의 divisor $C$에 대해
 
 $$\deg(\mathcal{O}_S(C)\vert_D) = C \cdot D$$
 
-가 성립한다. 실제로 $D$가 effective divisor이므로 $D$를 정의하는 $\mathcal{O}_S(D)$의 section을 곱하는 것으로부터 short exact sequence
+가 성립하며, 이는 $D$가 effective divisor이므로 $D$를 정의하는 $\mathcal{O}_S(D)$의 section을 곱하는 것으로부터 short exact sequence
 
 $$0 \rightarrow \mathcal{O}_S(C) \rightarrow \mathcal{O}_S(C+D) \rightarrow \mathcal{O}_S(C+D)\vert_D \rightarrow 0$$
 
-를 얻고, Euler characteristic의 additivity에 의해 $\rchi(\mathcal{O}_S(C+D)\vert_D) = \rchi(\mathcal{O}_S(C+D)) - \rchi(\mathcal{O}_S(C))$이다. 여기에 $C=0$인 경우의 등식을 빼면 우변은 [정의 1](#def1)에 의해 정확히 $C \cdot D$가 되고, 좌변은 $D$ 위의 line bundle들에 [§곡선에서의 리만-로흐 정리, ⁋명제 3](/ko/math/algebraic_varieties/riemann_roch_theorem#prop3)을 적용하면
+를 얻고, Euler characteristic의 additivity에 의해 $\rchi(\mathcal{O}_S(C+D)\vert_D) = \rchi(\mathcal{O}_S(C+D)) - \rchi(\mathcal{O}_S(C))$인 것으로부터 나오는 것이다. 실제로 $C=0$인 경우의 등식을 빼면 우변은 [정의 1](#def1)에 의해 정확히 $C \cdot D$가 되고, 좌변은 $D$ 위의 line bundle들에 [§곡선에서의 리만-로흐 정리, ⁋명제 3](/ko/math/algebraic_varieties/riemann_roch_theorem#prop3)을 적용하면
 
 $$\big(\deg(\mathcal{O}_S(C+D)\vert_D) + 1 - g(D)\big) - \big(\deg(\mathcal{O}_S(D)\vert_D) + 1 - g(D)\big) = \deg(\mathcal{O}_S(C)\vert_D)$$
 
@@ -144,7 +145,7 @@ $$\rchi(\mathcal{O}_S(D)) = \rchi(\mathcal{O}_S) + \frac{1}{2}D \cdot (D - K_S)$
 
 를 얻는다.
 
-이제 우리는 이를 일반적인 divisor $D$에 대해 이를 일반화해야 한다. 우리는 우선 $S$ 위의 ample divisor $H$를 고정하자. 그럼 [§사영공간의 코호몰로지, ⁋명제 5](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop5)에 의해, 충분히 큰 $n$에 대해 
+이제 우리는 이를 일반적인 divisor $D$에 대해 이를 일반화해야 한다. 우리는 우선 $S$ 위의 ample divisor $H$를 고정하자. 그럼 [§사영공간의 코호몰로지, ⁋명제 7](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop7)에 의해, 충분히 큰 $n$에 대해 
 
 $$H^1(S, \mathcal{O}_S(D + nH)) = H^2(S, \mathcal{O}_S(D + nH)) = 0$$
 
@@ -152,7 +153,7 @@ $$H^1(S, \mathcal{O}_S(D + nH)) = H^2(S, \mathcal{O}_S(D + nH)) = 0$$
 
 $$\rchi(\mathcal{O}_S(D + nH)) = h^0(\mathcal{O}_S(D + nH))$$
 
-가 성립한다. 한편 $n$을 더 키우면 [§사영공간의 코호몰로지, ⁋명제 10](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop10)에 의해 $D+nH$가 very ample이도록 할 수 있고, 그럼 linear system $\lvert D+nH\rvert$는 비어 있지 않다. 그런데 Bertini의 정리에 의해 이 linear system의 일반적인 원소 $D'$은 smooth irreducible curve이고, $D' \sim D+nH$이므로 $\mathcal{O}_S(D')\cong\mathcal{O}_S(D+nH)$에서 두 divisor의 Euler characteristic이 같으며 [명제 2](#prop2)의 linear invariance에 의해 이들이 만드는 intersection number 또한 같다. 따라서 앞선 논증을 $D'$에 적용하면 $D+nH$에 대해서도 원하는 등식이 성립한다. 그럼 $n$에 대한 두 함수 $f(n) = \rchi(\mathcal{O}(D+nH))$와 $g(n) = \frac{1}{2}(D+nH)\cdot(D+nH-K_S) + \rchi(\mathcal{O}_S)$를 생각하면 이들은 충분히 큰 $n$에 대해서는 항상 일치한다. 그런데 앞서 언급한 Snapper's theorem에 의해 $\rchi(\mathcal{O}_S(D+nH))$는 $n$에 대한 다항식이고, 무한히 많은 점들에 대해 그 값이 일치하는 다항식은 서로 같으므로 $f$와 $g$는 사실 같은 다항식이다. 즉, 모든 $n$에 대해 $f(n) = g(n)$이며 특히 $n = 0$을 대입하면
+가 성립한다. 한편 $n$을 더 키우면 [§사영공간의 코호몰로지, ⁋명제 13](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop13)에 의해 $D+nH$가 very ample이도록 할 수 있고, 그럼 linear system $\lvert D+nH\rvert$는 비어 있지 않다. 그런데 [§선형계, ⁋따름정리 12](/ko/math/algebraic_varieties/linear_systems#cor12)에 의해 이 linear system의 일반적인 원소 $D'$은 smooth irreducible curve이고, $D' \sim D+nH$이므로 $\mathcal{O}_S(D')\cong\mathcal{O}_S(D+nH)$에서 두 divisor의 Euler characteristic이 같으며 [명제 2](#prop2)의 linear invariance에 의해 이들이 만드는 intersection number 또한 같다. 따라서 앞선 논증을 $D'$에 적용하면 $D+nH$에 대해서도 원하는 등식이 성립한다. 그럼 $n$에 대한 두 함수 $f(n) = \rchi(\mathcal{O}(D+nH))$와 $g(n) = \frac{1}{2}(D+nH)\cdot(D+nH-K_S) + \rchi(\mathcal{O}_S)$를 생각하면 이들은 충분히 큰 $n$에 대해서는 항상 일치한다. 그런데 앞서 언급한 Snapper's theorem에 의해 $\rchi(\mathcal{O}_S(D+nH))$는 $n$에 대한 다항식이고, 무한히 많은 점들에 대해 그 값이 일치하는 다항식은 서로 같으므로 $f$와 $g$는 사실 같은 다항식이다. 즉, 모든 $n$에 대해 $f(n) = g(n)$이며 특히 $n = 0$을 대입하면
 
 $$\rchi(\mathcal{O}(D)) = \frac{1}{2}D\cdot(D-K_S) + \rchi(\mathcal{O}_S)$$
 
@@ -244,7 +245,7 @@ Smooth projective surface $S$와 ample divisor $H$를 고정하자. 만일 divis
 :::
 
 ::: 증명
-우선 $D^2>0$이라 가정하자. [§사영공간의 코호몰로지, ⁋명제 10](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop10)를 사용하면 우리는 $H_n=D+nH$가 very ample이도록 할 수 있다. 그럼
+우선 $D^2>0$이라 가정하자. [§사영공간의 코호몰로지, ⁋명제 13](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop13)을 사용하면 우리는 $H_n=D+nH$가 very ample이도록 할 수 있다. 그럼
 
 $$D \cdot H_n = D^2 + n(D \cdot H) = D^2 > 0$$
 

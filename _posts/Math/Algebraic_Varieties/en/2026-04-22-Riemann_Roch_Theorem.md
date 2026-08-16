@@ -44,7 +44,7 @@ To see this, we first apply Serre duality to obtain
 
 $$H^1(C, \mathcal{O}_C(D)) \cong H^0(C, \omega_C \otimes \mathcal{O}_C(-D))^\vee = H^0(C, \mathcal{O}_C(K_C - D))^\vee\tag{$1$}$$
 
-(the form for an arbitrary smooth projective variety described right after [§Serre Duality, ⁋Proposition 2](/en/math/algebraic_varieties/serre_duality#prop2)). Recall here that the canonical divisor $K_C$ is the divisor corresponding to the canonical line bundle. Then the following lemma allows us to deduce that the terms appearing in the Euler characteristic of $\mathcal{O}_C(D)$ are only two. In this post we assume that $\mathbb{K}$ is an *infinite* field.
+([§Serre Duality, ⁋Proposition 2](/en/math/algebraic_varieties/serre_duality#prop2)). Recall here that the canonical divisor $K_C$ is the divisor corresponding to the canonical line bundle. Then the following lemma allows us to deduce that the terms appearing in the Euler characteristic of $\mathcal{O}_C(D)$ are only two. In this post we assume that $\mathbb{K}$ is an *infinite* field.
 
 ::: Lemma 2
 For any coherent sheaf $\mathcal{F}$ on a smooth projective curve $C$,

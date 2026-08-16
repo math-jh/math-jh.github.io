@@ -10,6 +10,7 @@ sidebar:
 
 date: 2026-05-11
 weight: 19
+drift_needed: true
 ---
 
 앞서 우리는 [§곡면에서의 리만-로흐 정리, ⁋정의 1](/ko/math/algebraic_varieties/riemann_roch_surfaces#def1)에서 두 divisor의 intersection number를 정의했다. 이는 당연히 아주 흥미로운 개념으로, 이번 글에서 우리는 임의의 variety 위에서 이 개념을 일반화하기 위해 *Chow group*을 정의한다. 
@@ -33,14 +34,16 @@ Variety $X$의 $(k+1)$-dimensional closed irreducible subvariety $Y \subseteq X$
 
 $$\divisor(f) = \sum_{V \subseteq Y, \dim V = k} v_V(f) \cdot V$$
 
-으로 정의한다. 여기서 $v_V(f)$는 $f$가 $V$를 따라 갖는 zero 또는 pole의 order로, $Y$의 normalization $\nu: \tilde{Y}\rightarrow Y$를 통해 정의한다. ([\[가환대수학\] §정칙국소환, ⁋정의 9](/ko/math/commutative_algebra/regular_local_rings#def9)) 곧
-
-$$v_V(f) = \sum_{\nu(\tilde{V})=V} [\mathbb{K}(\tilde{V}):\mathbb{K}(V)]\cdot v_{\tilde{V}}(\nu^\ast f)$$
-
-이며, 이 합은 $\nu^{-1}(V)$의 $k$-dimensional irreducible component $\tilde{V}$들에 대한 것이다. $\tilde{Y}$는 normal이므로 각 $v_{\tilde{V}}$는 $\tilde{V}$의 generic point에서의 local ring $\mathcal{O}_{\tilde{Y}, \eta_{\tilde{V}}}$가 주는 valuation이고, $\mathcal{O}_{Y, \eta_V}$ 자체가 discrete valuation ring인 경우 $v_V(f)$는 그 valuation과 일치한다.
+으로 정의한다. 여기서 $v_V(f)$는 $f$가 $V$를 따라 갖는 zero 또는 pole의 order이다.
 :::
 
-직관적으로 이 정의는 [§인자, ⁋정의 3](/ko/math/algebraic_varieties/divisors#def3)을, $Y$를 ambient variety 삼아 반복한 것에 불과하며 따라서 해당 정의의 자연스러운 일반화이다. 다소 미묘한 부분은 해당 글의 도입에서 언급한 normality로, $X$가 좋은 (가령 normal) variety라 하더라도 $X$의 임의의 subvariety는 그러한 성질을 물려받지 않을 수 있으므로 위 정의에서 normalization이 조금 더 필수적으로 들어간다는 것이다. 이를 염두에 두고 다음을 정의한다. 
+직관적으로 이 정의는 [§인자, ⁋정의 3](/ko/math/algebraic_varieties/divisors#def3)을, $Y$를 ambient variety 삼아 반복한 것에 불과하며 따라서 해당 정의의 자연스러운 일반화이다. 다소 미묘한 부분은 해당 글의 도입에서 언급한 normality로, $X$가 좋은 (가령 normal) variety라 하더라도 $X$의 임의의 subvariety는 그러한 성질을 물려받지 않을 수 있으므로 위 정의에서 normalization이 조금 더 필수적으로 들어간다는 것이다.
+
+즉 위에서 order $v_V(f)$는 $Y$의 normalization $\nu: \widetilde{Y}\rightarrow Y$를 통해 정의한다. ([\[가환대수학\] §정칙국소환, ⁋정의 9](/ko/math/commutative_algebra/regular_local_rings#def9)) 곧
+
+$$v_V(f) = \sum_{\nu(\widetilde{V})=V} [\mathbb{K}(\widetilde{V}):\mathbb{K}(V)]\cdot v_{\widetilde{V}}(\nu^\ast f)$$
+
+이며, 이 합은 $\nu^{-1}(V)$의 $k$-dimensional irreducible component $\widetilde{V}$들에 대한 것이다. $\widetilde{Y}$는 normal이므로 각 $v_{\widetilde{V}}$는 $\widetilde{V}$의 generic point에서의 local ring $\mathcal{O}_{\widetilde{Y}, \eta_{\widetilde{V}}}$가 주는 valuation이고 ([§접공간과 매끄러움, ⁋정의 9](/ko/math/algebraic_varieties/tangent_spaces_and_smoothness#def9)), $\mathcal{O}_{Y, \eta_V}$ 자체가 discrete valuation ring인 경우 $v_V(f)$는 그 valuation과 일치한다. 이를 염두에 두고 다음을 정의한다. 
 
 ::: 정의 3
 두 $k$-cycle $Z_1, Z_2$가 *rationally equivalent<sub>유리 동치</sub>*라는 것은, $X$의 $(k+1)$-dimensional closed irreducible subvariety $Y_j$와 그 위의 rational function $f_j \in \mathbb{K}(Y_j)^\times$들이 존재하여
@@ -96,11 +99,11 @@ $$f_\ast[V]=\deg(V/f(V))[f(V)]$$
 Flat morphism $f: X \rightarrow Y$에 대해 pullback $f^\ast: \CH^k(Y) \rightarrow \CH^k(X)$가 존재한다. Subvariety $V \subseteq Y$에 대해 $f^\ast[V] = [f^{-1}(V)]$이다.
 :::
 
-여기서 $f^{-1}(V)$는 set으로서의 inverse image가 아니라 $V$의 ideal이 $X$ 위에서 생성하는 ideal로 잘라낸 scheme-theoretic inverse image이고, $[f^{-1}(V)]$는 그 irreducible component $W_i$들에 multiplicity를 계수로 붙인 cycle
+여기서 $f^{-1}(V)$는 set으로서의 inverse image가 아니라 $V$의 ideal이 $X$ 위에서 생성하는 ideal $\mathcal{I}$가 잘라내는 것으로 읽어야 하며, $[f^{-1}(V)]$는 그 irreducible component $W_i$들에 multiplicity를 계수로 붙인 cycle
 
-$$[f^{-1}(V)] = \sum_i \length(\mathcal{O}_{f^{-1}(V), \xi_i})\cdot W_i$$
+$$[f^{-1}(V)] = \sum_i \length(\mathcal{O}_{X, \xi_i}/\mathcal{I}_{\xi_i})\cdot W_i$$
 
-이다. 여기서 $\xi_i$는 $W_i$의 generic point이고 $\length$는 local ring을 자기 자신 위의 module로 볼 때의 length이다. ([\[가환대수학\] §조르단-횔더 정리, ⁋정의 2](/ko/math/commutative_algebra/Jordan-Holder_theorem#def2)) 이 규약이 없으면 $f^{-1}(V)$가 reduced가 아닌 경우를 잡아내지 못한다. 가령 [예시 10](#ex10)의 $f$와 점 $p = [0:1]$에 대해 $f^{-1}(p)$는 집합으로서는 한 점 $q = [0:1]$뿐이지만, $f^\ast[p] = d\cdot[q]$가 되어야 한다.
+이다. 여기서 $\xi_i$는 $W_i$의 generic point이고 ([§접공간과 매끄러움, ⁋정의 9](/ko/math/algebraic_varieties/tangent_spaces_and_smoothness#def9)), $\length$는 local ring을 자기 자신 위의 module로 볼 때의 length이다. ([\[가환대수학\] §조르단-횔더 정리, ⁋정의 2](/ko/math/commutative_algebra/Jordan-Holder_theorem#def2)) $W_i$가 $\mathcal{I}$의 zero set의 irreducible component이므로 $\mathcal{I}_{\xi_i}$는 $\mathcal{O}_{X,\xi_i}$의 maximal ideal에 대한 primary ideal이고, 따라서 이 length는 유한하다. 이 규약이 없으면 $f^{-1}(V)$가 reduced가 아닌 경우를 잡아내지 못한다. 가령 [예시 10](#ex10)의 $f$와 점 $p = [0:1]$에 대해 $f^{-1}(p)$는 집합으로서는 한 점 $q = [0:1]$뿐이지만, $f^\ast[p] = d\cdot[q]$가 되어야 한다.
 
 ## 저우 군의 계산
 
@@ -116,11 +119,7 @@ $$\CH_k(Z) \xrightarrow{i_\ast} \CH_k(X) \xrightarrow{j^\ast} \CH_k(U) \rightarr
 여기서 $i: Z \hookrightarrow X$는 closed embedding이고 $j: U \hookrightarrow X$는 open embedding이다.
 :::
 
-이 exact sequence가 성립하는 이유는 다음과 같다. 먼저 $U$의 $k$-dimensional closed irreducible subvariety $V$에 대해 $X$에서의 closure $\overline{V}$를 잡으면 $j^\ast[\overline{V}]=[V]$이므로 $j^\ast$는 surjective이다. 더 중요한 것은 $\ker j^\ast=\im i_\ast$인 것으로, $U$에서 사라지는 cycle은 반드시 $Z$를 따라 쌓여있는 cycle들 뿐이라는 의미이다. 여기서 주의할 것은, cycle 수준에서 $j^\ast\alpha=0$인 $\alpha\in Z_k(X)$가 $Z$ 위의 cycle인 것은 $U=X\setminus Z$라는 정의에서 곧바로 따라오지만, $\CH_k(X)$에서 $\alpha$의 class가 $\ker j^\ast$에 있다는 것은 그보다 약한 조건이라는 점이다. 이는 $j^\ast\alpha$가 0인 것이 아니라 $U$ 위에서 rationally equivalent to 0인 것, 곧 $U$의 $(k+1)$-dimensional closed irreducible subvariety $W_j$와 $f_j\in\mathbb{K}(W_j)^\times$들에 대해 $j^\ast\alpha=\sum_j\divisor_{W_j}(f_j)$인 것을 뜻한다. 이 경우 $X$에서의 closure $\overline{W_j}$를 잡으면 $\mathbb{K}(\overline{W_j})=\mathbb{K}(W_j)$이므로 $f_j$는 $\overline{W_j}$ 위의 rational function이고, 따라서
-
-$$\beta=\alpha-\sum_j\divisor_{\overline{W_j}}(f_j)$$
-
-는 $X$에서 $\alpha$와 rationally equivalent하면서 $j^\ast\beta=0$을 만족한다. 그럼 $\beta$의 support는 $Z$에 들어가므로 $\alpha$의 class는 $\im i_\ast$에 속한다. 
+이 exact sequence가 성립하는 이유는 다음과 같다. 먼저 $U$의 $k$-dimensional closed irreducible subvariety $V$에 대해 $X$에서의 closure $\overline{V}$를 잡으면 $j^\ast[\overline{V}]=[V]$이므로 $j^\ast$는 surjective이다. 더 중요한 것은 $\ker j^\ast=\im i_\ast$인 것으로, $U$에서 사라지는 cycle은 반드시 $Z$를 따라 쌓여있는 cycle들 뿐이라는 의미이다. Cycle 수준에서 $j^\ast\alpha=0$인 $\alpha$의 support가 $Z$에 들어가는 것은 $U=X\setminus Z$라는 정의에서 곧바로 따라온다. 반면 class 수준에서는 $j^\ast\alpha$가 $U$ 위에서 rationally equivalent to 0이기만 하면 되는데, 이 rational equivalence를 주는 $U$의 subvariety들의 $X$에서의 closure를 잡으면 function field가 변하지 않아 같은 rational function을 그대로 쓸 수 있으므로, 그만큼을 $\alpha$에서 빼면 $\alpha$와 rationally equivalent하면서 support가 $Z$에 들어가는 cycle을 얻는다. 
 
 다음 예시는 여러 Chow group을 계산할 때 기본 출발점이 된다. 
 

@@ -10,6 +10,7 @@ sidebar:
 
 date: 2026-04-21
 weight: 15
+drift_needed: true
 
 
 
@@ -43,7 +44,7 @@ $$(\alpha \smile \beta)_{i_0, \ldots, i_{p+q}} = \alpha_{i_0,\ldots,i_p}\big\ver
 
 으로 정의한다. 우리는 이것이 cohomology 레벨로 떨어진다는 것을 명시적으로 계산할 수 있으며, 이로부터 다음의 함수
 
-$$\smile:\check{H}^p(\mathcal{U}, \mathcal{F}) \times \check{H}^q(\mathcal{U}, \mathcal{G}) \rightarrow \check{H}^{p+q}(\mathcal{U}, \mathcal{F} \otimes \mathcal{G})$$
+$${\smile}:\check{H}^p(\mathcal{U}, \mathcal{F}) \times \check{H}^q(\mathcal{U}, \mathcal{G}) \rightarrow \check{H}^{p+q}(\mathcal{U}, \mathcal{F} \otimes \mathcal{G})$$
 
 가 정의된다. Sheaf cohomology 레벨에서도 $\mathcal{F}$와 $\mathcal{G}$의 flat resolution $\mathcal{I}^\bullet$, $\mathcal{J}^\bullet$을 각각 잡은 후, 이들의 tensor product complex (즉 각각의 성분이 $\mathcal{I}^p\otimes \mathcal{J}^q$인 double complex의 total complex)를 이용하면 이를 정의할 수 있다. 
 
@@ -109,7 +110,7 @@ $$\binom{2+(-4)}{2}=\binom{-2}{2} = 3$$
 
 $$\mathcal{H}om(\mathcal{E}, \mathcal{F})\cong \mathcal{E}^\vee\otimes \mathcal{F}$$
 
-를 사용하였으나, 실제로 이는 $\mathcal{E}$가 locally free이기 때문에 가능한 것으로, locally free가 아닌 coherent sheaf $\mathcal{E}$에 대하여는 $X$가 smooth이더라도 이 isomorphism이 일반적으로 성립하지 않는다. 가령 $X=\mathbb{A}^1$ 위에서 원점의 skyscraper sheaf $\mathcal{E}=\mathcal{O}_X/\mathfrak{m}_0$을 잡으면 $\mathcal{E}^\vee=0$이지만 $\mathcal{H}om(\mathcal{E},\mathcal{E})\cong\mathcal{E}$는 $0$이 아니다. $X$가 smooth인 경우에는 앞서와 같이 finite length locally free resolution을 따라 locally free인 경우로 옮기는 논법이 남아 있지만, $X$가 singular라면 그러한 resolution이 유한한 길이를 갖는다는 보장조차 없다. 때문에 우리는 다시 derived functor를 도입하여, $X$ 위의 모든 coherent sheaf $\mathcal{F}$와 모든 $i$에 대하여 다음의 식
+를 사용하였으나, 실제로 이는 $\mathcal{E}$가 locally free이기 때문에 가능한 것으로, locally free가 아닌 coherent sheaf $\mathcal{E}$에 대하여는 $X$가 smooth이더라도 이 isomorphism이 일반적으로 성립하지 않는다. 가령 $X=\mathbb{A}^1$ 위 원점의 skyscraper sheaf $\mathcal{E}=\mathcal{O}_X/\mathfrak{m}_0$은 $\mathcal{E}^\vee=0$이지만 $\mathcal{H}om(\mathcal{E},\mathcal{E})\cong\mathcal{E}$는 $0$이 아니며, $X$가 singular라면 앞서 사용한 finite length locally free resolution을 따라 옮기는 논법마저 쓸 수 없다. 때문에 우리는 다시 derived functor를 도입하여, $X$ 위의 모든 coherent sheaf $\mathcal{F}$와 모든 $i$에 대하여 다음의 식
 
 $$\Ext^i_X(\mathcal{F},\omega_X)\cong H^{n-i}(X,\mathcal{F})^\ast$$
 

@@ -39,7 +39,7 @@ $$(\alpha \smile \beta)_{i_0, \ldots, i_{p+q}} = \alpha_{i_0,\ldots,i_p}\big\ver
 
 We can explicitly compute that this descends to the cohomology level, and from this the map
 
-$$\smile:\check{H}^p(\mathcal{U}, \mathcal{F}) \times \check{H}^q(\mathcal{U}, \mathcal{G}) \rightarrow \check{H}^{p+q}(\mathcal{U}, \mathcal{F} \otimes \mathcal{G})$$
+$${\smile}:\check{H}^p(\mathcal{U}, \mathcal{F}) \times \check{H}^q(\mathcal{U}, \mathcal{G}) \rightarrow \check{H}^{p+q}(\mathcal{U}, \mathcal{F} \otimes \mathcal{G})$$
 
 is defined. At the sheaf cohomology level one can also define this by taking flat resolutions $\mathcal{I}^\bullet$, $\mathcal{J}^\bullet$ of $\mathcal{F}$ and $\mathcal{G}$ respectively, and then using the tensor product complex (that is, the total complex of the double complex whose components are $\mathcal{I}^p\otimes \mathcal{J}^q$).
 
@@ -101,7 +101,7 @@ Next we drop the smoothness condition on $X$. In this case there are broadly two
 
 $$\mathcal{H}om(\mathcal{E}, \mathcal{F})\cong \mathcal{E}^\vee\otimes \mathcal{F},$$
 
-but in reality this is possible only because $\mathcal{E}$ is locally free, and for a coherent sheaf $\mathcal{E}$ that is not locally free this isomorphism does not generally hold even if $X$ is smooth. For example, if we take the skyscraper sheaf $\mathcal{E}=\mathcal{O}_X/\mathfrak{m}_0$ at the origin on $X=\mathbb{A}^1$, then $\mathcal{E}^\vee=0$ but $\mathcal{H}om(\mathcal{E},\mathcal{E})\cong\mathcal{E}$ is not $0$. When $X$ is smooth, the argument of carrying over to the locally free case via a finite length locally free resolution remains as before, but if $X$ is singular there is not even any guarantee that such a resolution has finite length. Therefore we introduce derived functors again, and call $\omega_X$ the *dualizing sheaf* of $X$ if it satisfies
+but in reality this is possible only because $\mathcal{E}$ is locally free, and for a coherent sheaf $\mathcal{E}$ that is not locally free this isomorphism does not generally hold even if $X$ is smooth. For example, the skyscraper sheaf $\mathcal{E}=\mathcal{O}_X/\mathfrak{m}_0$ at the origin on $X=\mathbb{A}^1$ has $\mathcal{E}^\vee=0$ while $\mathcal{H}om(\mathcal{E},\mathcal{E})\cong\mathcal{E}$ is not $0$, and if $X$ is singular we cannot even fall back on the argument of carrying everything over along a finite length locally free resolution. Therefore we introduce derived functors again, and call $\omega_X$ the *dualizing sheaf* of $X$ if it satisfies
 
 $$\Ext^i_X(\mathcal{F},\omega_X)\cong H^{n-i}(X,\mathcal{F})^\ast$$
 
