@@ -10,7 +10,6 @@ sidebar:
 
 date: 2026-03-29
 weight: 11
-drift_needed: true
 
 ---
 
@@ -21,7 +20,7 @@ drift_needed: true
 위에서 우리는 서술의 편의상 Weil divisor에 대한 논의만 하였지만, Cartier divisor에 대해서도 비슷한 논증을 할 수 있으며, 그 결과로 나오는 정의는 다음과 같다. 
 
 ::: 정의 1
-Variety $X$ 위에 정의된 Weil divisor $D=\sum n_i D_i$가 *effective*라는 것은 [§인자, ⁋정의 2](/ko/math/algebraic_varieties/divisors#def2)에서 정의하였듯 모든 $i$에 대해 $n_i\geq 0$인 것이다. Cartier divisor $\{(U_i, f_i)\}$가 *effective*라는 것은 모든 $i$에 대해 $f_i$가 $U_i$ 위에서 regular인 것이다. 
+Variety $X$ 위에 정의된 Weil divisor $D=\sum n_i D_i$가 *effective*라는 것은 모든 $i$에 대해 $n_i\geq 0$인 것이다. Cartier divisor $\{(U_i, f_i)\}$가 *effective*라는 것은 모든 $i$에 대해 $f_i$가 $U_i$ 위에서 regular인 것이다. 
 :::
 
 그렇다면 우리의 목적은 divisor $D$의 divisor class 안에서 어떠한 effective divisor가 존재하는지 살펴보는 것이다. 이를 위해 divisor $D$가 정의하는 line bundle $\mathcal{L}=\mathcal{O}_X(D)$를 생각하자. ([§선다발과 벡터다발, ⁋정의 17](/ko/math/algebraic_varieties/line_bundles#def17)) 우리는 $\mathcal{L}$의 각각의 nonzero global section $s\in \Gamma(X, \mathcal{L})$는 pole이 없으므로 effective divisor $\divisor(s)$를 정의하며, 이는 원래의 $D$와 trivialization만큼만 차이나는 것을 확인할 수 있으므로 $D$와 linearly equivalent하다. 즉 $D$와 linearly equivalent한 effective divisor를 찾기 위해선 $\mathcal{O}_X(D)$의 nonzero global section을 보면 된다. 다만 주의할 사항은 $\divisor(s)$가 $s$의 nonzero scalar 배에 의존하지 않는다는 것으로, 이때문에 우리가 관심을 가져야할 대상은 $\Gamma(X, \mathcal{L})$ 자체가 아니라 그 projectivization이다. 
@@ -92,11 +91,11 @@ $$0=F(1,-i,0)=a_{00}-a_{11}-ia_{01}$$
 
 $$\Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n}(d)) \rightarrow \Gamma(X, \mathcal{O}_{\mathbb{P}^n}(d)\vert_X)$$
 
-은 homogeneous polynomial $F \in \mathbb{K}[\x_0, \ldots, \x_n]_d$를 $X$ 위의 section으로 보내며, 그 kernel은 $I(X)$의 degree $d$인 homogeneous part $I(X)_d$이다. 따라서
+은 homogeneous polynomial $F \in \mathbb{K}[\x_0, \ldots, \x_n]_d$를 $X$ 위의 section으로 보내며, 그 kernel은 $I(X)$의 degree $d$인 homogeneous part $I(X)_d$이다. 따라서 만일 이 restriction map이 surjective라면
 
-$$\mathbb{K}[\x_0, \ldots, \x_n]_d / I(X)_d \hookrightarrow \Gamma(X, \mathcal{O}_{\mathbb{P}^n}(d)\vert_X)$$
+$$\Gamma(X, \mathcal{O}_{\mathbb{P}^n}(d)\vert_X) \cong \mathbb{K}[\x_0, \ldots, \x_n]_d / I(X)_d$$
 
-는 단사이며 ($d$가 충분히 크면 이는 isomorphism이다), 이를 통해 $\mathbb{P}^n$에서와 본질적으로 동일한 계산이 가능하다. 특히 $F - G \in I(X)$일 때 같은 교차를 정의하므로, parameter space는 $\mathbb{P}(V/(V \cap I(X)))$가 된다.
+로서 $\mathbb{P}^n$에서와 본질적으로 동일한 계산이 가능하다. 실제로 $d$가 충분히 크면 이 surjectivity가 성립한다는 것이 알려져 있다. 특히 $F - G \in I(X)$일 때 같은 교차를 정의하므로, parameter space는 $\mathbb{P}(V/(V \cap I(X)))$가 된다.
 
 ## Base Locus
 
