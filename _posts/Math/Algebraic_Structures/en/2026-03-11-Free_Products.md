@@ -10,19 +10,20 @@ sidebar:
 
 date: 2022-12-07
 weight: 9
-translated_at: 2026-08-15T06:46:32+00:00
+translated_at: 2026-08-16T12:45:04+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-08-16T12:45:04+00:00
 ---
-Unlike the case for abelian groups, the weak direct product defined in the previous post does not satisfy the universal property for general groups.
+Unlike the case of abelian groups, the weak direct product defined in the previous post does not satisfy the universal property for general groups.
 
 ::: Example 1
 Consider an arbitrary nonabelian group $G$, and let $a,b\in G$ satisfy $ab\neq ba$. Define group homomorphisms $f_1, f_2: (\mathbb{Z},+)\rightarrow (G,\cdot)$ by
 
 $$f_1(1)=a, \qquad f_2(1)=b.$$
 
-Since the index set $I=\{1,2\}$ is finite, the weak direct product of two copies of $(\mathbb{Z},+)$ is simply $\mathbb{Z}\times\mathbb{Z}$.
+Since the index set $I=\{1,2\}$ is finite, the weak direct product of two copies of $(\mathbb{Z},+)$ coincides with $\mathbb{Z}\times\mathbb{Z}$.
 
-However, we can see that there is no map $f:\mathbb{Z}\times\mathbb{Z}\rightarrow G$ making the following diagram
+However, we see that there is no map $f:\mathbb{Z}\times\mathbb{Z}\rightarrow G$ making the following diagram
 
 {% diagram Math/Algebraic_Structures/Free_Products-1.svg width="11.41em" alt="counterexample" %}
 
@@ -35,15 +36,15 @@ $$\begin{aligned}ab&=f_1(1)f_2(1)=f(\iota_1(1))f(\iota_2(1))=f(\iota_1(1)+\iota_
 which contradicts the choice of $a$ and $b$.
 :::
 
-Therefore, to find an object satisfying the universal property among general groups, just as the direct sum does, we must introduce a new construction. To do this, we first define the free group.
+Therefore, to find an object satisfying the universal property among general groups, just as the direct sum does, we must introduce a new construction. To this end, we first define the free group.
 
 ## Free group
 
-Any group $G$ can be thought of as a set equipped with a binary operation, an identity element, and inverses. Moreover, any group homomorphism can naturally be viewed as a function between sets. That is, there is a forgetful functor $U: \Grp \rightarrow\Set$. In this section we define the left adjoint $F:\Set \rightarrow\Grp$ of $U$. By the definition of a left adjoint functor, this is a functor satisfying the natural isomorphism
+Any group $G$ can be regarded as a set equipped with a binary operation, an identity element, and inverses. Moreover, any group homomorphism can naturally be viewed as a function between sets. That is, there is a forgetful functor $U: \Grp \rightarrow\Set$. In this section we define the left adjoint $F:\Set \rightarrow\Grp$ of $U$. By the definition of a left adjoint functor, this is a functor satisfying the natural isomorphism
 
 $$\Hom_\Set(X, U(G))\cong\Hom_\Grp(F(X), G)$$
 
-([\[Category Theory\] §Adjoint Functors, ⁋Definition 1](/en/math/category_theory/adjoints#def1)). In other words, the functor $F$ gives, for any set $X$ and any group $G$, a bijection that uniquely assigns to each $f\in\Hom_\Set(X, U(G))$ an element of $\Hom_\Grp(F(X),G)$. Rewriting this, we have the following.
+([\[Category Theory\] §Adjoint Functors, ⁋Definition 1](/en/math/category_theory/adjoints#def1)). In other words, for any set $X$ and any group $G$, the functor $F$ yields a bijection that uniquely assigns to each $f\in\Hom_\Set(X, U(G))$ an element of $\Hom_\Grp(F(X),G)$. Rewriting this, we obtain the following.
 
 ::: Definition 2
 For a set $X$, the *free group* $F(X)$ defined by $X$ is the solution $(F(X), \eta_X\in\Hom_\Set(X,UF(X)))$ of the following universal mapping problem.
@@ -137,4 +138,4 @@ $$F(X)=F\left(\coprod_{x\in X} \{x\}\right)\cong \coprod_{x\in X} F(\ast)={\prod
 
 ---
 
-[^1]: It is not strictly necessary to introduce reduced words in order to define an operation on words, but it is convenient to do so for the sake of uniqueness of representation.
+[^1]: It is not strictly necessary to introduce reduced words in order to define an operation on words, but doing so is convenient for the sake of uniqueness of representation.
