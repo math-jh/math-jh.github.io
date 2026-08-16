@@ -10,8 +10,6 @@ sidebar:
 
 date: 2023-05-22
 weight: 1
-published: false
-revising: true
 drift_needed: true
 
 ---
@@ -31,7 +29,7 @@ drift_needed: true
 
 추가적으로, 이들은 다음의 조건을 만족한다.
 
-- Morphism들의 합성은 associative하다. 즉, 합성이 정의되는 임의의 morphism $f,g,h$에 대하여 $(f\circ g)\circ h=f\circ(g\circ h)$가 성립한다.
+- Morphism들의 합성은 associative하다. 즉, $(f\circ g)\circ h=f\circ(g\circ h)$가 성립한다.
 - 각각의 $A\in\obj(\mathcal{A})$마다 $\id_A\in\Hom_\mathcal{A}(A,A)$가 존재하여, 모든 $f\in\Hom_\mathcal{A}(A,A_1)$ 그리고 모든 $g\in\Hom_\mathcal{A}(A_2,A)$에 대하여
   
   $$f\circ{\id_A}=f,\qquad {\id_A}\circ g=g$$

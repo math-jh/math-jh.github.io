@@ -10,9 +10,6 @@ sidebar:
 
 date: 2024-06-12
 weight: 6
-published: false
-revising: true
-
 drift_needed: true
 
 ---
@@ -65,7 +62,7 @@ $$\mu(a,\mu(b,c))=\mu(a,b\cdot c)=a\cdot(b\cdot c)$$
     
     $$\alpha_{A,B,C}:A\otimes(B\otimes C)\rightarrow (A\otimes B)\otimes C$$
 
-    이 존재한다. 이를 *associator<sub>결합자</sub>*라 부른다. 문헌에 따라서는 반대 방향의 natural isomorphism $(A\otimes B)\otimes C\rightarrow A\otimes(B\otimes C)$을 associator로 잡기도 하며, 두 규약은 서로의 inverse를 취하는 것만 다르다.
+    이 존재한다. 이를 *associator<sub>결합자</sub>*라 부른다.
 2. $\mathcal{A}$에서 $\mathcal{A}$로의 세 functor $I\otimes-$, $-\otimes I$, $\id_\mathcal{A}$들 간의 natural isomorphism들
 
     $$\lambda_A:I\otimes A\rightarrow A,\qquad \rho_A:A\otimes I\rightarrow A$$
@@ -78,7 +75,7 @@ $$\mu(a,\mu(b,c))=\mu(a,b\cdot c)=a\cdot(b\cdot c)$$
 - (Unitor)
   {% diagram Math/Category_Theory/Monoidal_Categories-4.svg width="21.81em" alt="unitor_diagram" %}
 
-만일 monoidal category $(\mathcal{A},\otimes,I)$에 추가적으로 $\otimes$의 symmetric 조건이 추가되면 이를 *symmetric monoidal category<sub>대칭 모노이드 범주</sub>*라 부른다. 이는 natural isomorphism (*symmetry*) $\gamma_{A,B}:A\otimes B \rightarrow B\otimes A$과, 다음의 추가적인 coherence condition들
+만일 monoidal category $(\mathcal{A},\otimes,I)$에 추가적으로 $\otimes$의 symmetric 조건이 추가되면 이를 *symmetric monoidal category<sub>대칭 모노이드 범주</sub>*라 부른다. 이는 natural isomorphism (*symmetor<sub>대칭자</sub>*) $\gamma_{A,B}:A\otimes B \rightarrow B\otimes A$과, 다음의 추가적인 coherence condition들
 
 - (Associativity coherence)
   {% diagram Math/Category_Theory/Monoidal_Categories-5.svg width="26.70em" alt="associativity_coherence" %}
@@ -96,7 +93,7 @@ $$\gamma_{A,B\otimes C}=\alpha_{B,C,A}\circ(\id_B\otimes\gamma_{A,C})\circ\alpha
 
 이 성립하면, 이 데이터를 *braided monoidal category*라 부른다. 두 hexagon은 일반적으로 서로 독립된 조건이어서 한쪽만으로는 나머지가 따라오지 않지만, inverse law가 성립하면 하나에서 나머지가 따라온다. [정의 1](#def1)이 symmetric monoidal category에 hexagon을 하나만 요구한 것은 이 때문이며, 따라서 symmetric monoidal category란 braided monoidal category 중 inverse law를 만족하는 것들이다.
 
-Associator와 unitor들의 coherence condition은 Mac Lane의 coherence theorem을 증명할 때 사용된다. 대략적으로 말해서, 이는 $n$개의 대상들의 곱 $A_1\otimes\cdots\otimes A_n$이 주어졌을 때, 이를 어떤 것부터 계산하거나 (symmetric monoidal category의 경우) 배열된 순서를 바꾸어 계산하더라도 그 결과들이 naturally isomorphic하며, 이것이 associator, unitor, (symmetric monoidal category인 경우) symmetry들의 합성으로 유일하게 나타난다는 것이다. 다만 symmetric monoidal category에서의 유일성은 대상들의 같은 permutation을 유도하는 합성들 사이에서만 성립한다. 가령 $A_1=A_2=A$인 경우 $A\otimes A$에서 자기 자신으로 가는 합성으로 $\id_{A\otimes A}$와 $\gamma_{A,A}$가 모두 나타난다. 
+Associator와 unitor들의 coherence condition은 Mac Lane의 coherence theorem을 증명할 때 사용된다. 대략적으로 말해서, 이는 $n$개의 대상들의 곱 $A_1\otimes\cdots\otimes A_n$이 주어졌을 때, 이를 어떤 것부터 계산하거나 (symmetric monoidal category의 경우) 배열된 순서를 바꾸어 계산하더라도 그 결과들이 naturally isomorphic하며, 이것이 associator, unitor, (symmetric monoidal category인 경우) symmetor들의 합성으로 유일하게 나타난다는 것이다. 다만 symmetric monoidal category에서의 유일성은 대상들의 같은 permutation을 유도하는 합성들 사이에서만 성립한다. 가령 $A_1=A_2=A$인 경우 $A\otimes A$에서 자기 자신으로 가는 합성으로 $\id_{A\otimes A}$와 $\gamma_{A,A}$가 모두 나타난다. 
 
 어쨌든 coherence theorem 덕분에 우리는 monoidal product가 계산순서 혹은 이들이 나열된 순서에 의존하지 않는다는 것을 알고 있으므로 이제 이들 natural isomorphism은 상대적으로 덜 신경써도 된다. 
 
@@ -113,7 +110,7 @@ Associator와 unitor들의 coherence condition은 Mac Lane의 coherence theorem�
 [예시 2](#ex2)의 앞의 두 예시는 일반화가 가능하다. 우선 다음을 정의하자.
 
 ::: 정의 3
-Category $\mathcal{A}$의 대상들의 유한한 family가 항상 categorical product를 갖는다면 (여기서 유한한 family는 빈 family를 포함하며, 따라서 $\mathcal{A}$는 특히 terminal object를 갖는다), 이 category를 *cartesian category<sub>데카르트 범주</sub>*라 부른다. 
+Category $\mathcal{A}$의 대상들의 유한한 family가 항상 categorical product를 갖는다면, 이 category를 *cartesian category<sub>데카르트 범주</sub>*라 부른다. 
 :::
 
 그럼 앞선 예시에서, $\Set$과 $\Grp$은 cartesian category가 된다. 마찬가지로 $\Top$이나 $\Man^\infty$ 등도 모두 cartesian category이다.
@@ -122,9 +119,7 @@ Category $\mathcal{A}$의 대상들의 유한한 family가 항상 categorical pr
 임의의 cartesian category는 monoidal category의 구조를 갖는다. 
 :::
 
-$\mathcal{A}$가 cartesian category라면 $\otimes$로 binary product를, $I$로 빈 family의 product인 terminal object를 가져오면 된다. Product는 morphism들에 대해서도 universal property로 정의되므로 bifunctor $\mathcal{A}\times\mathcal{A}\rightarrow\mathcal{A}$를 이룬다. 임의의 $A,B,C$에 대하여 $A\times(B\times C)$와 $(A\times B)\times C$는 모두 $A$, $B$, $C$로의 projection을 갖추고 이 세 대상의 product의 universal property를 만족하므로, projection들과 호환되는 유일한 isomorphism $\alpha_{A,B,C}:A\times(B\times C)\rightarrow (A\times B)\times C$가 존재하고, 같은 유일성이 $\alpha$의 naturality를 준다. 또 $I$가 terminal object이므로 $\lambda_A=\pr_2:I\times A\rightarrow A$와 $\rho_A=\pr_1:A\times I\rightarrow A$는 isomorphism이 되는데, 가령 $\lambda_A$의 inverse는 $A \rightarrow I$인 유일한 morphism과 $\id_A$가 universal property로 유도하는 morphism이다.
-
-Coherence condition도 같은 유일성에서 나온다. [정의 1](#def1)의 (Associator) diagram이 주는 두 합성은 모두 $A\times(B\times(C\times D))$에서 $((A\times B)\times C)\times D$로 가면서 $A$, $B$, $C$, $D$로의 projection과 호환되는 morphism인데, 도착 대상이 이 네 대상의 product이므로 그러한 morphism은 하나뿐이다. (Unitor) diagram의 두 합성 또한 $A\times(I\times B)$에서 $A\times B$로 가면서 $A$와 $B$로의 projection과 호환되므로 같은 이유로 서로 일치한다. 이와 같이, monoidal product가 product로 주어진 monoidal category를 *cartesian monoidal category*라 부른다. 
+이 명제의 증명을 위해서는 많은 말을 덧붙여야 하긴 하지만, 본질적으로 이는 $(A\times B)\times C\cong A\times(B\times C)$와 $I\times M\cong M\cong M\times I$들이 어떻게 나왔는지를 떠올린 후, 계산들을 반복하면 된다. 이와 같이, monoidal product가 product로 주어진 monoidal category를 *cartesian monoidal category*라 부른다. 
 
 Cartesian monoidal category가 일반적인 monoidal category와 다른 점 중 하나는 몇 가지 자연스러운 morphism들이 잘 정의가 된다는 것이다. 가령 일반적인 monoidal category에서는 잘 정의되지 않는 diagonal morphism $\Delta_X:X \rightarrow X\times X$이나 augmentation morphism $\epsilon_X:X \rightarrow I$가 잘 정의된다. $\epsilon_X$는 $I$가 terminal object이므로 자연스럽게 정의되고, $\Delta_X$는 다음 diagram을 통해 얻어진다.
 
