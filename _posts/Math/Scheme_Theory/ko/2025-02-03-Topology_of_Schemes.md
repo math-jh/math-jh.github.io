@@ -10,7 +10,6 @@ sidebar:
 
 date: 2025-02-03
 weight: 6
-drift_needed: true
 ---
 
 ## 일반점
