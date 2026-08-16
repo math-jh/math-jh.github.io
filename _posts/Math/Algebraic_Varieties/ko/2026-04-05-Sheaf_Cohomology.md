@@ -10,7 +10,6 @@ sidebar:
 
 date: 2026-04-05
 weight: 13
-drift_needed: true
 
 ---
 
@@ -428,11 +427,17 @@ Abelian category에서 cochain complex $K^\bullet$의 *Cartan-Eilenberg resoluti
 3. 마찬가지로 각 $p$에 대하여 $q$를 따라 늘어놓은 $B^p(I^{\bullet,q})$와 $Z^p(I^{\bullet,q})$가 각각 $B^p(K^\bullet)$와 $Z^p(K^\bullet)$의 injective resolution을 이룬다.
 :::
 
-이 정의의 핵심은 위에서 언급한 직관만으로는 Cartan-Eilenberg resolution이 얻어지지 않는다는 것으로, 특히 각 행의 cohomology가 $H^p(K^\bullet)$의 horizontal resolution을 이룬다는 것이 존재성의 증명에 핵심적인 요소이다. 우리는 Cartan-Eilenberg resolution의 존재성은 별도로 증명하지 않지만, 기본적으로는 [\[호몰로지 대수학\] §분해, ⁋보조정리 7](/ko/math/homological_algebra/resolutions#lem7)를 반복적으로 적용하여 얻을 수 있다. 한편 세 번째 조건은 각 행의 short exact sequence $0\rightarrow Z^p(I^{\bullet,q})\rightarrow I^{p,q}\rightarrow B^{p+1}(I^{\bullet,q})\rightarrow 0$과 $0\rightarrow B^p(I^{\bullet,q})\rightarrow Z^p(I^{\bullet,q})\rightarrow H^p(I^{\bullet,q})\rightarrow 0$의 왼쪽 항 $Z^p(I^{\bullet,q})$와 $B^p(I^{\bullet,q})$가 injective가 되도록 하여 두 sequence가 모두 split되고, 따라서 각 행이 injective object들의 direct sum으로 분할되게 하며, 이는 아래에서 left exact functor가 행 방향 cohomology와 교환하는 근거가 된다.
+이 정의의 핵심은 위에서 언급한 직관만으로는 Cartan-Eilenberg resolution이 얻어지지 않는다는 것으로, 특히 각 행의 cohomology가 $H^p(K^\bullet)$의 horizontal resolution을 이룬다는 것이 존재성의 증명에 핵심적인 요소이다. 우리는 Cartan-Eilenberg resolution의 존재성은 별도로 증명하지 않지만, 기본적으로는 [\[호몰로지 대수학\] §분해, ⁋보조정리 7](/ko/math/homological_algebra/resolutions#lem7)를 반복적으로 적용하여 얻을 수 있다.
+
+한편 세 번째 조건은 각 행의 두 short exact sequence
+
+$$0\rightarrow Z^p(I^{\bullet,q})\rightarrow I^{p,q}\rightarrow B^{p+1}(I^{\bullet,q})\rightarrow 0$$
+
+$$0\rightarrow B^p(I^{\bullet,q})\rightarrow Z^p(I^{\bullet,q})\rightarrow H^p(I^{\bullet,q})\rightarrow 0$$
+
+의 왼쪽 항 $Z^p(I^{\bullet,q})$와 $B^p(I^{\bullet,q})$가 injective가 되도록 하여 두 sequence가 모두 split되고, 따라서 각 행이 injective object들의 direct sum으로 분할되게 하며, 이는 아래에서 left exact functor가 행 방향 cohomology와 교환하는 근거가 된다.
 
 이제 complex $f_\ast\mathcal{G}^\bullet(\mathcal{F})$의 Cartan-Eilenberg resolution $\mathcal{I}^{p,q}$을 고정하자. 그럼 정의에 의해 각 열 $\mathcal{I}^{p,\bullet}$은 $f_\ast\mathcal{G}^p(\mathcal{F})$의 injective resolution이며, 각 행의 horizontal cohomology $H^p(\mathcal{I}^{\bullet,q})$는 $H^p(f_\ast\mathcal{G}^\bullet(\mathcal{F})) = R^p f_\ast\mathcal{F}$의 injective resolution을 이룬다.
-
-여기서 등식 $H^p(f_\ast\mathcal{G}^\bullet(\mathcal{F})) = R^p f_\ast\mathcal{F}$는 $R^pf_\ast$의 정의로부터 곧바로 나오는 것이 아니다. 정의는 injective resolution을 쓰는 반면 $\mathcal{G}^\bullet(\mathcal{F})$은 flasque resolution이기 때문으로, 우리에게 필요한 것은 flasque sheaf가 $f_\ast$-acyclic이라는 사실이다. 이를 확인하기 위해 flasque sheaf $\mathcal{E}$를 injective sheaf $\mathcal{K}$에 넣고 그 cokernel $\mathcal{Q}$를 생각하면, [명제 16](#prop16)의 증명에서 보았듯 $\mathcal{Q}$는 flasque이고 임의의 열린집합 $W\subseteq X$에 대하여 $\mathcal{K}(W)\rightarrow \mathcal{Q}(W)$가 surjective이므로, 각각의 열린집합 $V\subseteq Y$에서 $f_\ast\mathcal{K}(V)=\mathcal{K}(f^{-1}(V))\rightarrow \mathcal{Q}(f^{-1}(V))=f_\ast\mathcal{Q}(V)$ 또한 surjective이다. 따라서 long exact sequence에서 $R^1f_\ast\mathcal{E}=0$을 얻고, $i\geq 2$에서는 $R^if_\ast\mathcal{E}\cong R^{i-1}f_\ast\mathcal{Q}$이므로 $\mathcal{Q}$의 flasqueness와 함께 귀납법을 쓰면 모든 $q>0$에 대해 $R^qf_\ast\mathcal{E}=0$이다. 그럼 [명제 17](#prop17)의 증명을 $\Gamma(X,-)$ 대신 $f_\ast$에 대해 그대로 반복하여 flasque resolution이 $R^pf_\ast$를 계산해준다는 것을 안다.
 
 우리는 이 spectral sequence가 1사분면에 있으므로, total complex $\Tot(\mathcal{I})^\bullet$의 cohomology로 수렴한다는 것을 안다. 구체적인 계산을 위해 Godement 방향의 $p$로 filtration을 걸자. 그럼 우리는 우선 $E_1$ page를
 
@@ -456,7 +461,7 @@ $$E_1^{p,q} = \begin{cases} f_\ast \mathcal{G}^p(\mathcal{F}) & \text{if $q = 0$
 
 $$0 \rightarrow f_\ast \mathcal{G}^0(\mathcal{F}) \rightarrow f_\ast \mathcal{G}^1(\mathcal{F}) \rightarrow \cdots$$
 
-의 cohomology sheaf이고, 이것은 앞서 확인한 $H^p(f_\ast \mathcal{G}^\bullet(\mathcal{F})) = R^p f_\ast \mathcal{F}$에 의해
+의 cohomology sheaf이고, 이것은 $R^q f_\ast$의 정의에 의해
 
 $$E_2^{p,q} = \begin{cases} R^p f_\ast \mathcal{F} & \text{if $q = 0$} \\ 0 & \text{if $q > 0$} \end{cases}$$
 
@@ -566,7 +571,7 @@ $\mathcal{F}$의 Godement resolution $\mathcal{G}^\bullet(\mathcal{F})$을 잡�
 
 앞서 우리는 line bundle이 transition function $g_{ij} \in \mathcal{O}_X^\times(U_i \cap U_j)$들로 결정된다는 것을 보았다 ([§선다발과 벡터다발, ⁋명제 2](/ko/math/algebraic_varieties/line_bundles#prop2)). Transition function들은 cocycle condition $g_{ij}g_{jk} = g_{ik}$을 만족하는데, 이는 multiplicative notation으로 쓴 Čech 1-cocycle condition에 정확히 해당한다. 또한 line bundle의 isomorphism은 각 $U_i$ 위에서의 함수 $h_i \in \mathcal{O}_X^\times(U_i)$에 의해 $g_{ij} \mapsto h_i g_{ij} h_j^{-1}$로 transition function이 변하는 것이므로, 이 역시 Čech 1-coboundary에 의한 동치관계와 일치한다. 즉, line bundle의 isomorphism class는 $\check{H}^1(X, \mathcal{O}_X^\times)$의 원소와 자연스럽게 대응된다.
 
-이 관찰을 엄밀하게 정리하면 다음을 얻는다. 여기서 주의할 점은 $\mathcal{O}_X^\times$가 multiplicative 구조를 갖는 sheaf of (abelian) groups이므로, Čech cohomology에서 coboundary 관계가 덧셈적이 아닌 multiplicative로 표현된다는 것이다. 구체적으로 1-coboundary는 $(g_{ij}) = (h_i \cdot h_j^{-1})$의 꼴이다. [예시 5](#ex5)에서 고정한 덧셈 convention $(\dd{s})_{ij} = s_j - s_i$를 그대로 곱셈으로 옮기면 $h_j h_i^{-1}$이 되지만, $h_i$를 $h_i^{-1}$로 바꾸는 것이 두 꼴을 서로 옮겨주므로 coboundary들이 이루는 subgroup은 같으며, 여기서는 위에서 적은 transition function의 변환과 맞추어 앞의 꼴로 쓴다.
+이 관찰을 엄밀하게 정리하면 다음을 얻는다. 여기서 주의할 점은 $\mathcal{O}_X^\times$가 multiplicative 구조를 갖는 sheaf of (abelian) groups이므로, Čech cohomology에서 coboundary 관계가 덧셈적이 아닌 multiplicative로 표현된다는 것이다. 구체적으로 1-coboundary는 $(g_{ij}) = (h_i \cdot h_j^{-1})$의 꼴이다.
 
 ::: 명제 22
 $\check{H}^1(X, \mathcal{O}_X^\times) \cong \Pic(X)$이다.
@@ -581,9 +586,7 @@ $$g_{ij}^{\mathcal{M}} \cdot \varphi_j(v) = g_{ij}^{\mathcal{M}} h_j^{-1} v = h_
 
 에서 확인할 수 있으며, 따라서 map $\check{H}^1(\mathcal{U}, \mathcal{O}_X^\times) \rightarrow \Pic(X)$가 well-defined이다.
 
-이제 이 map이 injective임을 보이자. Cocycle $(g_{ij})$가 정의하는 line bundle이 trivial하다면 각 $U_i$ 위의 trivialization으로부터 $h_i \in \mathcal{O}_X^\times(U_i)$를 얻어 $g_{ij} = h_i h_j^{-1}$이 되므로, $(g_{ij})$는 coboundary이다. 즉 이 map의 kernel은 정확히 coboundary들이고 따라서 $\check{H}^1(\mathcal{U}, \mathcal{O}_X^\times) \rightarrow \Pic(X)$는 injective이다.
-
-한편 surjectivity는 하나의 open cover $\mathcal{U}$만 놓고 보면 성립하지 않을 수 있다. 임의의 line bundle $\mathcal{L}$은 [§선다발과 벡터다발, ⁋정의 1](/ko/math/algebraic_varieties/line_bundles#def1)에 의해 적당한 open cover 위에서 trivialize되고 그 cover 위에서의 transition function이 $\mathcal{L}$로 가는 Čech 1-cocycle을 주지만, 그 cover가 $\mathcal{U}$일 이유는 없기 때문이다. 그러나 모든 open cover에 대한 direct limit을 취하면 이러한 $\mathcal{L}$이 모두 image에 들어오므로 surjectivity가 얻어지고, 이로부터 $\check{H}^1(X, \mathcal{O}_X^\times) \cong \Pic(X)$이다.
+역으로, 임의의 line bundle $\mathcal{L}$은 [§선다발과 벡터다발, ⁋정의 1](/ko/math/algebraic_varieties/line_bundles#def1)에 의해 적당한 open cover 위에서 transition function $g_{ij}$로 표현되며, 이는 Čech 1-cocycle을 이룬다. Line bundle isomorphism은 정확히 coboundary에 의한 동치관계에 해당하므로, 이 map의 kernel은 coboundary들이다. 따라서 $\check{H}^1(\mathcal{U}, \mathcal{O}_X^\times) \rightarrow \Pic(X)$는 injective이다. 이제 direct limit을 취하면 $\check{H}^1(X, \mathcal{O}_X^\times) \cong \Pic(X)$를 얻는다.
 :::
 
 이 명제는 line bundle의 classification이 cohomology의 계산으로 귀결된다는 것을 보여준다. 즉, $\Pic(X)$의 원소를 분류하는 문제는 이제 $\mathcal{O}_X^\times$-valued Čech 1-cocycle을 분류하는 문제가 되며, 이는 어쨌든 명시적인 계산이 가능하다는 점에서 고무적이다. 다음 글 [§사영공간의 코호몰로지](/ko/math/algebraic_varieties/cohomology_of_projective_spaces)에서 우리는 $\mathbb{P}^n$ 위의 line bundle $\mathcal{O}(d)$의 cohomology를 계산한다.
