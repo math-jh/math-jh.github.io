@@ -10,8 +10,9 @@ sidebar:
 
 date: 2022-11-30
 weight: 5
-translated_at: 2026-08-15T05:46:23+00:00
+translated_at: 2026-08-16T11:45:04+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-08-16T11:45:04+00:00
 ---
 We previously proved in [§Algebraic Structures, §§Quotient Structures](/en/math/algebraic_structures/algebraic_structures#quotient-structures) that when an equivalence relation $R$ is compatible with the operation of a magma $A$, the quotient set $A/R$ can be endowed with a natural magma structure; moreover, at the end of [§Semigroups, Monoids, and Groups](/en/math/algebraic_structures/groups) we saw that if $A$ is a group, then the magma $A/R$ constructed in this way is also a group. This group $A/R$ is called a *quotient group*.
 
