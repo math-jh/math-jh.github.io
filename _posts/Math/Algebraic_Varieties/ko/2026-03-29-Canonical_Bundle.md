@@ -10,7 +10,6 @@ sidebar:
 
 date: 2026-03-29
 weight: 12
-drift_needed: true
 
 
 ---
@@ -47,13 +46,13 @@ $$\S_A(M^\vee)\otimes_A\kappa(x)=\S_{\kappa(x)} (M^\vee\otimes_A\kappa(x))=\S_{\
 
 $$\widetilde{M}(U)=M\otimes_A \mathcal{O}_X(U)$$
 
-으로 정의하고, 일반적인 열린집합 위에서의 값은 sheaf 조건으로 결정한다. 이는 기본적으로 위에서 $\kappa(x)$를 도입하는 것과 같은 맥락이며, 실제로 우리가 자세히 계산하지는 않았지만 $V(M)$의 local triviality를 보일 때는 이와 같이 structure sheaf를 사용해서 base change를 했을 것이다. 그럼 특히 $X$ 전체에 대해서는 
+으로 정의한다. 이는 기본적으로 위에서 $\kappa(x)$를 도입하는 것과 같은 맥락이며, 실제로 우리가 자세히 계산하지는 않았지만 $V(M)$의 local triviality를 보일 때는 이와 같이 structure sheaf를 사용해서 base change를 했을 것이다. 그럼 특히 $X$ 전체에 대해서는 
 
 $$\widetilde{M}(X)=M\otimes_A A=M$$
 
 이 되어 $M$이 $\widetilde{M}$의 global section space가 된다. 
 
-이 두 정의는 본질적으로 같은 대상을 다른 기하적 언어로 표현한 것에 불과하다. 즉, affine variety $X$와 그 coordinate ring $A$, finitely generated projective $A$-module $M$에 대하여, $\widetilde{M}$에 대응하는 total space, 즉 relative Spec이 곧 $V(M)$이고, $V(M)$의 section sheaf가 $\widetilde{M}$이다. 
+이 두 정의는 본질적으로 같은 대상을 다른 기하적 언어로 표현한 것에 불과하다. 즉, affine variety $X$와 그 coordinate ring $A$, finitely generated projective $A$-module $M$에 대하여, $\widetilde{M}$에 대응하는 total space가 곧 $V(M)$이고, $V(M)$의 section sheaf가 $\widetilde{M}$이다. 
 
 일반적으로, 구체적인 기하적 언어에 비교했을 때 sheaf 언어의 장점은 더 일반적인 경우에 적용이 가능하다는 것이다. 가령 다음을 정의한다. ([\[가환대수학\] §기본 개념들, ⁋정의 8](/ko/math/commutative_algebra/basic_notions#def8))
 
@@ -104,7 +103,7 @@ $$\Hom_{\mathcal{O}_X}(\widetilde{\Omega_{A/\mathbb{K}}}, \mathcal{O}_X)\cong\De
 
 $$\widetilde{\Omega_{A/\mathbb{K}}}^\vee\cong \widetilde{\Omega_{A/\mathbb{K}}^\vee}\cong \widetilde{\Der_\mathbb{K}(A,A)}\cong \mathcal{T}_X$$
 
-이므로, 여기에 다시 dual을 취하고 locally free sheaf의 reflexivity를 사용하면 $\Omega_X^1=\mathcal{T}_X^\vee\cong \widetilde{\Omega_{A/\mathbb{K}}}$을 얻어 원하는 주장이 성립한다. 
+이므로 원하는 주장이 성립한다. 
 :::
 
 이 결과는 cotangent bundle이 우리가 상상하는 것처럼 differential $1$-form들로 나타난다는 것을 보여준다. 
@@ -113,7 +112,7 @@ $$\widetilde{\Omega_{A/\mathbb{K}}}^\vee\cong \widetilde{\Omega_{A/\mathbb{K}}^\
 $\mathbb{A}^n$의 cotangent bundle은 $\Omega_{\mathbb{A}^n}^1 \cong \mathcal{O}_{\mathbb{A}^n}^{\oplus n}$이다. 대수적으로, 만일 $\mathbb{A}^n$의 coordinate ring $\mathbb{K}[\x_1, \ldots, \x_n]$을 고정하면 이 $\mathbb{K}$-algebra의 Kähler differentials는 free module $\bigoplus_{i=1}^n \mathbb{K}[\x_1, \ldots, \x_n]  \dd{\x_i}$이므로, 이 결과는 우리의 직관과 잘 맞아떨어진다.
 :::
 
-한편 우리는 임의의 smooth variety $X$ of dimension $n$과 그 위의 cotangent bundle $\Omega_X^1$에 대하여, $\Omega_X^1$의 각 fiber는 $n$차원이므로 이를 $n$번 exterior product한 것은 line bundle이 되는 것을 안다. 이 line bundle은 [§선다발과 벡터다발, ⁋예시 24](/ko/math/algebraic_varieties/line_bundles#ex24)에서 이미 이름과 함께 등장했지만, [정의 2](#def2)와 마찬가지로 완결성을 위해 다시 소개한다.
+한편 우리는 임의의 smooth variety $X$ of dimension $n$과 그 위의 cotangent bundle $\Omega_X^1$에 대하여, $\Omega_X^1$의 각 fiber는 $n$차원이므로 이를 $n$번 exterior product한 것은 line bundle이 되는 것을 안다. ([§선다발과 벡터다발, ⁋예시 24](/ko/math/algebraic_varieties/line_bundles#ex24))
 
 ::: 정의 5
 Smooth variety $X$ of dimension $n$의 *canonical line bundle<sub>표준 선다발</sub>* $\omega_X$를 cotangent bundle의 top exterior power
@@ -188,7 +187,7 @@ $$\dd{\y_i}^{(j)} = -t^{-2}\dd{t}$$
 
 $$\bigwedge_{k \neq j} \dd{\y_k}^{(j)} = (-1)^{i+j}(\y_j^{(i)})^{-(n+1)} \cdot \bigwedge_{k \neq i} \dd{\y_k}^{(i)}$$
 
-로 변환된다. 여기서 $(-1)^{i+j}$는 $k=i$인 인자의 부호까지 모아 인자들을 순서대로 다시 배열하며 붙는 부호이며, 각 $U_i$ 위의 $n$-form을 $(-1)^i$배 하여 흡수할 수 있으므로 이하 무시한다. 
+로 변환된다. 여기서 $(-1)^{i+j}$는 $k=i$인 인자의 부호까지 모아 인자들을 순서대로 다시 배열하며 붙는 부호이며, 각 $U_i$ 위의 $n$-form을 $(-1)^i$배 하여 흡수할 수 있으므로 무시해도 안전하다. 
 
 그럼 $U_i$ 위의 $n$-form들은 $\alpha_i = \bigwedge_{k \neq i} \dd{\y_k}^{(i)}$을 frame으로 가지며, 위의 계산은 두 frame 사이의 관계 $\alpha_j = c_{ij}\alpha_i$가 $c_{ij} = (\y_j^{(i)})^{-(n+1)} = (\x_j / \x_i)^{-(n+1)}$로 주어진다는 것을 말한다. 이제 section을 $s = f_i\alpha_i = f_j\alpha_j$로 적으면 $f_i = c_{ij}f_j$이므로, [§선다발과 벡터다발, ⁋예시 12](/ko/math/algebraic_varieties/line_bundles#ex12)의 컨벤션에서 trivialize된 함수들 사이의 transition function은 그 역수 $g_{ij} = c_{ij}^{-1} = (\x_i / \x_j)^{-(n+1)}$이다. 이는 $\mathcal{O}_{\mathbb{P}^n}(-n-1)$의 transition function과 일치한다.
 :::
@@ -232,7 +231,7 @@ $C \subseteq \mathbb{P}^2$가 degree $d$의 smooth curve라 하자. Adjunction f
 
 $$\omega_C \cong \omega_{\mathbb{P}^2}\vert_C \otimes \mathcal{O}_{\mathbb{P}^2}(C)\vert_C \cong \mathcal{O}_{\mathbb{P}^2}(-3)\vert_C \otimes \mathcal{O}_{\mathbb{P}^2}(d)\vert_C \cong \mathcal{O}_C(d-3)$$
 
-이다. 따라서 $K_C \sim (d-3)H\vert_C$이며, 이 때 $H\vert_C$의 degree는 $d$이다. 이는 $C$를 포함하지 않는 line $H=V(\ell)$을 잡으면 $H\vert_C$가 $\mathcal{O}_C(1)$의 section $\ell\vert_C$의 zero divisor이고, 각 점 $p$에서의 vanishing order가 $\dim_\mathbb{K} \mathcal{O}_{\mathbb{P}^2, p}/(F, \ell)$, 즉 $C$를 정의하는 degree $d$의 homogeneous polynomial $F$를 $H\cong \mathbb{P}^1$ 위로 restrict한 $F\vert_H$의 zero의 중복도와 같은데, $F\vert_H$는 두 변수의 nonzero homogeneous form of degree $d$이므로 중복도를 세면 정확히 $d$개의 zero를 갖기 때문이다. 그러므로 $\deg K_C = d(d-3)$이다. 
+이다. 따라서 $K_C \sim (d-3)H\vert_C$이며, 이 때 $H\vert_C$의 degree가 $d$이므로 $\deg K_C = d(d-3)$이다. 
 
 한편, classical한 algebraic geometry에서 plane curve (즉 projective curve in $\mathbb{P}^2$)의 genus는 그 degree로부터 
 
@@ -265,7 +264,7 @@ $$E=\mathbb{P}(\mathcal{N}_{Z/X})$$
 
 $$\pi\vert_E: E\rightarrow Z$$
 
-를 생각하고, 이하 이를 $\pi_E$로도 적기로 한다. 이제 $E$의 tangent bundle을 생각하면, 우리는 이를 base space $Z$로부터 오는 수평 방향 $(\pi\vert_E)^\ast T_Z$과 그에 수직인 relative tangent bundle 방향 $T_{E/Z}$으로 나눌 수 있다. 즉 다음의 short exact sequence
+를 생각하자. 이를 표기의 편의상 $\pi_E$로 간략하게 나타낸다. 이제 $E$의 tangent bundle을 생각하면, 우리는 이를 base space $Z$로부터 오는 수평 방향 $(\pi\vert_E)^\ast T_Z$과 그에 수직인 relative tangent bundle 방향 $T_{E/Z}$으로 나눌 수 있다. 즉 다음의 short exact sequence
 
 $$0 \rightarrow T_{E/Z} \rightarrow T_E \rightarrow \pi_E^\ast T_Z \rightarrow 0\tag{$\ast$}$$
 
@@ -293,15 +292,11 @@ $$0 \rightarrow \mathcal{O}\rightarrow \mathcal{O}(1)\otimes \pi^\ast V \rightar
 
 $$\mathcal{Q}\otimes \mathcal{O}(1)\cong \Hom(\mathcal{O}(-1),\mathcal{Q})$$
 
-부분을 살펴보자. 점 $[\ell]\in \mathbb{P}(V)$가 $b\in B$ 위에 있다 하면, $T_{\mathbb{P}(V)/B}$의 이 점에서의 fiber는 정의에 의해 fiber $\mathbb{P}(V_b)$의 $[\ell]$에서의 tangent space이다. 이제 $V_b=\ell\oplus W$가 되도록 complement $W$를 하나 잡으면, $W$와 원점에서만 만나는 직선들은 정확히 linear map $\ell\rightarrow W$의 graph들이고 이들은 $[\ell]$의 열린 근방을 이루므로, 이 근방은 affine space $\Hom(\ell, W)$와 동일시되며 $[\ell]$ 자신은 zero map에 대응한다. 따라서
-
-$$T_{[\ell]}\mathbb{P}(V_b)\cong \Hom(\ell, W)\cong \Hom(\ell, V_b/\ell)$$
-
-이고, 마지막 동일시는 $W$의 선택에 무관하다. 그런데 $\mathcal{O}(-1)$과 $\mathcal{Q}$의 $[\ell]$에서의 fiber는 각각 $\ell$과 $V_b/\ell$이므로 이들 isomorphism은 $[\ell]$이 움직임에 따라 모여
+부분을 살펴보면, 우리는 이미 [명제 7](#prop7)의 증명에서 $\mathbb{P}^n$의 line이 어떠한 quotient로 가는지를 보는 것이 곧 tangent space임을 보았으므로 이 또한
 
 $$\Hom(\mathcal{O}(-1),\mathcal{Q})\cong T_{\mathbb{P}(V)/B}$$
 
-를 주고, 이로부터 *relative* Euler sequence
+가 얻어지고, 이로부터 *relative* Euler sequence
 
 $$0\rightarrow \mathcal{O}\rightarrow \pi^\ast V\otimes \mathcal{O}(1)\rightarrow T_{\mathbb{P}(V)/B}\rightarrow 0$$
 
