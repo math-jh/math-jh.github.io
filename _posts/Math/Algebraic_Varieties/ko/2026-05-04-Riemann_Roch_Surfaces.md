@@ -10,7 +10,6 @@ sidebar:
 
 date: 2026-05-04
 weight: 17
-drift_needed: true
 
 ---
 
@@ -145,7 +144,7 @@ $$\rchi(\mathcal{O}_S(D)) = \rchi(\mathcal{O}_S) + \frac{1}{2}D \cdot (D - K_S)$
 
 를 얻는다.
 
-이제 우리는 이를 일반적인 divisor $D$에 대해 이를 일반화해야 한다. 우리는 우선 $S$ 위의 ample divisor $H$를 고정하자. 그럼 [§사영공간의 코호몰로지, ⁋명제 4](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop4)에 의해, 충분히 큰 $n$에 대해 
+이제 우리는 이를 일반적인 divisor $D$에 대해 이를 일반화해야 한다. 우리는 우선 $S$ 위의 ample divisor $H$를 고정하자. 그럼 [§사영공간의 코호몰로지, ⁋명제 5](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop5)에 의해, 충분히 큰 $n$에 대해 
 
 $$H^1(S, \mathcal{O}_S(D + nH)) = H^2(S, \mathcal{O}_S(D + nH)) = 0$$
 
