@@ -13,7 +13,6 @@ date: 2026-06-19
 
 weight: 8
 
-drift_needed: true
 
 ---
 
