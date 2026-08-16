@@ -10,7 +10,6 @@ sidebar:
 
 date: 2026-04-22
 weight: 16
-drift_needed: true
 
 ---
 
@@ -223,7 +222,7 @@ $$\varphi_{K_C}:C\rightarrow \mathbb{P}^1$$
 
 위의 예시에서 살펴 본 $g=2$의 canonical map $\varphi_{K_C}: C \rightarrow \mathbb{P}^1$은 2:1 branched covering이었다. 더 일반적으로, 우리는 genus $g \ge 2$인 curve 중 $\mathbb{P}^1$로의 degree 2 covering이 존재하는 것을 *hyperelliptic curve<sub>초타원곡선</sub>*라 부르고, 그렇지 않은 경우를 *non-hyperelliptic curve*라 한다. 관례적으로 genus $0,1$인 경우는 hyperelliptic curve에서 제외하는 것에 유의하자.
 
-이제 $g\geq 2$인 $C$에서 canonical bundle $K_C$의 complete linear system $\lvert K_C\rvert$가 정의하는 morphism $\varphi_{K_C} : C \rightarrow \mathbb{P}^{g-1}$의 거동을 살펴보자. 우리는 위에서 $\deg K_C = 2g - 2$이고 $h^0(K_C) = g$인 것을 확인했으므로, $\varphi_{K_C}$의 공역은 $\mathbb{P}^{g-1}$이다. 그러나 이는 $C$가 hyperelliptic인 경우 closed embedding이 아니며, 이는 $g=2$인 경우 이것이 $2:1$ covering map이 된다는 것에서 이미 확인하였다. 이를 구체적으로 계산해보면, $\varphi_{K_C}$는 Veronese map $\mathbb{P}^1 \hookrightarrow \mathbb{P}^{g-1}$과 hyperelliptic covering $C\rightarrow \mathbb{P}^1$의 합성으로 나오는 것을 알 수 있다.
+이제 $g\geq 2$인 $C$에서 canonical bundle $K_C$의 complete linear system $\lvert K_C\rvert$가 정의하는 morphism $\varphi_{K_C} : C \rightarrow \mathbb{P}^{g-1}$의 성질을 살펴보자. 우리는 위에서 $\deg K_C = 2g - 2$이고 $h^0(K_C) = g$인 것을 확인했으므로, $\varphi_{K_C}$의 공역은 $\mathbb{P}^{g-1}$이다. 그러나 이는 $C$가 hyperelliptic인 경우 closed embedding이 아니며, 이는 $g=2$인 경우 이것이 $2:1$ covering map이 된다는 것에서 이미 확인하였다. 이를 구체적으로 계산해보면, $\varphi_{K_C}$는 Veronese map $\mathbb{P}^1 \hookrightarrow \mathbb{P}^{g-1}$과 hyperelliptic covering $C\rightarrow \mathbb{P}^1$의 합성으로 나오는 것을 알 수 있다.
 
 ## Degree-genus formula
 
