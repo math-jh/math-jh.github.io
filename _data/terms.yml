@@ -16089,6 +16089,8 @@ S:
     url: /ko/math/analysis/convergence_of_sequences
   - label: '[위상수학] §하우스도르프 공간'
     url: /ko/math/topology/Hausdorff_spaces
+  - label: '[미적분학] §수열의 극한'
+    url: /ko/math/calculus/sequences
 - id: sequential_compactness
   en: sequential compactness
   ko: 점렬컴팩트성

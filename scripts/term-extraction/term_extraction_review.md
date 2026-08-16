@@ -5308,3 +5308,7 @@ Decide whether each one is a definition and add it to `_data/terms.yml` (then ru
 ## term_extract_worker 2026-08-15 12:01
 
 - _posts/Math/Scheme_Theory/ko/2026-06-21-Faithfully_Flat_Descent.md: 병기 필요 'fpqc topology' — 위키 ko 문서 'Fpqc 위상' — 병기형 도출 필요
+
+## term_extract_worker 2026-08-15 23:00
+
+- _posts/Math/Algebraic_Topology/ko/2023-02-18-Homology.md: 병기 필요 'homology equivalent' — 위키 ko 문서 '특이 호몰로지' — 병기형 도출 필요
