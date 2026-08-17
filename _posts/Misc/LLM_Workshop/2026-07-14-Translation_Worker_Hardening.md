@@ -14,7 +14,7 @@ sidebar:
 author: Marvin
 
 date: 2026-07-14
-last_modified_at: 2026-08-15
+last_modified_at: 2026-08-17
 weight: 28
 
 ---
@@ -202,3 +202,66 @@ if len(hangul) > HANGUL_RESIDUE_MAX:
 슬러그 계산은 kramdown-parser-gfm의 `generate_gfm_header_id`를 그대로 미러한다. 소문자화하고, 단어·하이픈·공백이 아닌 문자를 지우고, 공백을 하이픈으로 바꾸고, 중복이면 카운터를 붙인다. 수식이 든 헤딩도 raw 텍스트 기준이라 `The Abelian Group $\Hom_\Ab(G,H)$`는 `the-abelian-group-hom_abgh`가 된다.
 
 대상 EN 글이 아직 없을 때는 실패로 처리하지 않는다. KO 짝이 있으면 "미번역 대상"으로 유보해 두고, 나중에 그 글의 번역이 끝나는 시점에 `sweep_target()`이 코퍼스를 훑어 그때 고친다. 유보 목록을 파일로 들고 있지 않아도 되는 구조다. 고칠 시점에 코퍼스 전체가 그 목록이기 때문이다.
+
+## 이스케이프 한 겹이 가리던 앵커 322건
+
+앞 절의 사다리는 `LINK_RE`가 앵커 링크를 링크로 알아본다는 전제 위에 서 있다. 그 전제가 깨진 자리가 하나 있었다. 다른 카테고리 글을 인용하는 하우스 형식은 `[\[Category\] §Title, ⁋Definition 1]`처럼 대괄호 앞에 백슬래시를 이스케이프하는데, 번역 엔진이 EN 본문을 낼 때 그 백슬래시를 종종 떨어뜨려 `[[Category] §Title, ...]`로 남긴다. 실측 322건이 그랬다. `LINK_RE`의 링크 텍스트 칸은 이스케이프 안 된 bare `]`를 만나면 매치를 거기서 끊게 짜여 있어서, 이런 링크는 검증에 실패하는 게 아니라 애초에 링크로 안 보였다. 2026-08-15에 이 구멍으로 한글 앵커 `#극한의-보편성질`이 EN 본문에 그대로 나갔다.
+
+```python
+LINK_RE = re.compile(
+    r"\[(?P<text>(?:\[[^\]\n]*\])?(?:\\.|[^\\\]\n])*)\]"
+    r"\((?P<path>/(?:ko|en)/[^)\s#]*)#(?P<anchor>[^)\s]+)\)"
+)
+```
+{: data-filename="scripts/translation/section_anchor_gate.py"}
+
+고친 정규식은 맨 앞 한 겹에 한해 대괄호 쌍(`[^\]\n]*`로 안을 채운 `[...]`)을 선택적으로 허용해, 이스케이프가 빠진 카테고리 접두를 삼키게 했다. 중첩을 일반적으로 허용하지는 않는다. 수식 속 `[1, \infty)`처럼 여는 대괄호로 시작하는 자리에서 진짜 링크를 먼저 삼키는 회귀가 4건 나왔던 자리라, 맨 앞 한 겹으로만 좁혔다.
+
+## 대시보드 사본이 놓친 오타 일곱 건
+
+[SAFE에 묻힌 한국어 오타](#safe에-묻힌-한국어-오타) 절에서 만든 `extract_ko_typos`는 검증기 verdict에서 KO 오타 지적을 뽑아내지만, 검증기 자체가 약한 모델이라 그 지적에도 오탐이 섞인다. [한 커밋](https://github.com/math-jh/math-jh.github.io/commit/afa32230)이 opus에게 판정만 다시 시키는 층을 하나 더 얹었다. KO 원문 전체를 프롬프트에 붙여 넣고 주장마다 VALID·FALSE·UNSURE 셋 중 하나를 받는데, 도구는 주지 않는다. 사용자가 쓴 원문을 봇이 고치는 절차가 아니라 판정만 하는 자리이기 때문이다. 그래서 판정 전후로 KO 파일의 해시를 대조해, 읽기 전용이어야 할 단계가 실제로 원문을 건드리면 텔레그램으로 알린다.
+
+```python
+before = hashlib.sha256(ko_path.read_bytes()).hexdigest()
+...
+if hashlib.sha256(ko_path.read_bytes()).hexdigest() != before:
+    log(f"GATE-KO-TYPO ({key}): KO 파일이 변경됨 — 검토 전용 계약 위반")
+    _notify_telegram("[translate-worker] KO 검토가 원문을 수정함", ...)
+```
+{: data-filename="scripts/translation/translate_worker.py"}
+
+이 판정을 [대시보드](/ko/llm_workshop/dashboard)에 올리려니 문제가 하나 나왔다. `sec_translation`이 쓰는 파서는 워커의 `extract_ko_typos`를 그대로 가져다 쓴 게 아니라 별도로 다시 쓴 사본이었다. 대시보드는 venv 없이 `/usr/bin/python3`로 돌아 워커 전용 의존성(`yaml`, `md_lint`)을 못 끌어오다 보니, 처음부터 같은 규칙을 사본으로 옮겨 둔 것이다. 사본에는 "KO-TYPOS:" 섹션 헤더가 없던 옛 verdict를 위한 legacy fallback이 빠져 있었다. 그 결과를 실측했더니, 워커가 flag한 8건 중 대시보드에 뜬 것은 1건뿐이었다. 나머지 일곱 건은 진짜 KO 오타를 포함하고 있는데도 어디에도 안 뜬 채 묻혀 있었다.
+
+[두 시간 뒤 커밋](https://github.com/math-jh/math-jh.github.io/commit/62ef4eec)이 파서를 `scripts/translation/ko_typos.py`로 뽑아 워커와 대시보드가 같은 모듈을 import하게 했다. 사본을 유지하는 대신 단일 모듈로 합친 이유를 그 파일 docstring에 그대로 적어 뒀다.
+
+```python
+"""KO-TYPOS 파싱 — 검증 verdict 에서 "KO 원문이 틀렸다"는 지적만 뽑는 규칙.
+
+translate_worker(워커)와 scripts/dashboard/server.py(대시보드)가 **같은 모듈을**
+쓴다. 규칙을 양쪽에 복제하면 두 목록이 조용히 갈라진다 — 2026-08-15 실측으로
+대시보드판에는 legacy fallback 이 없어 워커가 보는 8건 중 1건만 보였다.
+
+대시보드는 venv 없이 /usr/bin/python3 로 도므로 이 모듈은 **표준 라이브러리만**
+쓴다. yaml·md_lint 같은 워커 전용 의존성을 여기에 들이면 대시보드 쪽 import 가
+조용히 실패하고(try/except) 지적이 빈 목록이 된다.
+"""
+```
+{: data-filename="scripts/translation/ko_typos.py"}
+
+대시보드의 지표 타일은 이제 opus 판정을 반영한다. `n_actionable`·`n_false`·`n_unreviewed`로 나눠 세고, FALSE 판정이 붙은 항목도 목록에서 지우지 않는다. 사용자의 최종 판단이 전체 목록을 보게 하려는 것이지 거르려는 게 아니어서다. 타일 자체는 볼 게 있을 때만 뜬다. actionable도 unreviewed도 0이면 칸 하나가 항상 0을 보여주기만 할 것이기 때문이다.
+
+[같은 커밋](https://github.com/math-jh/math-jh.github.io/commit/d25aebcb)에 잔여 지적을 넘길 곳도 하나 생겼다. 결정론 게이트(`run_gate`)가 못 고치고 남긴 md_lint·앵커 지적을 `claude -p --model opus` 도구 세션에 넘겨 `Edit`으로 직접 고치게 하고, 그 보고를 그대로 믿는 대신 게이트를 다시 돌려 실제로 해소됐는지 재검사한다.
+
+```python
+def _fixup_pass(en_path, ko_path, key, findings):
+    summary = call_claude_fixup(en_path, findings)
+    from section_anchor_gate import run_gate
+    res = run_gate(en_path, ko_path, apply=True, mdlint=True)
+    remain = res.fails + res.mdlint_lines
+    return remain
+```
+{: data-filename="scripts/translation/translate_worker.py"}
+
+프롬프트를 채울 때 `str.format` 대신 `.replace`를 쓴 것도 이 커밋의 흔적이다. 프롬프트 본문에 `\tag{}`, `$...$` 같은 리터럴 중괄호가 그대로 들어가는데, `.format()`은 그걸 자리표시자로 읽어 "Replacement index 0 out of range"로 게이트를 통째로 죽였다.
+
+두 시간 뒤 [다른 커밋](https://github.com/math-jh/math-jh.github.io/commit/64e217ba)이 이 흐름을 한 번 더 손봤다. `_hangul_findings()`를 새로 두어, EN 파일을 다시 읽어 본문에 남은 한글 문자와 `/en/` 링크에 남은 한글 앵커를 재판정한다. 메시지에 쓰는 임계값은 새로 만들지 않고 [앞서 정한](#구조-게이트를-전부-통과한-미번역) `HANGUL_RESIDUE_MAX`(80자)를 그대로 가져다 쓴다. 그리고 gate+fixup 블록 전체를 커밋 직전에서 상태 기록·텔레그램 알림보다 **앞으로** 옮겼다. 원래 순서로는 알림이 먼저 나간 뒤에야 게이트가 돌아, 게이트가 이미 고친 지적을 알림이 여전히 미해결로 적는 일이 생겼다. `warnings`에서 낡은 Hangul 경고를 지우고 `_hangul_findings(en_path)`로 새로 뽑은 것만 다시 채워, 알림과 `state.json`의 `needs_review`가 항상 수리 후 파일 기준으로 남게 했다.
