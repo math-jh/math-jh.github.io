@@ -6385,6 +6385,8 @@ F:
 - id: finitely_presented
   en: finitely presented
   ko: 유한표시가군
+  alias:
+  - 유한표시
   primary: en
   defs:
   - label: '[가환대수학] §기본 개념들'
@@ -8591,7 +8593,7 @@ I:
 - id: infinitesimal_deformation
   en: infinitesimal deformation
   ko: 무한소 변형
-  primary: ko
+  primary: en
   defs:
   - label: '[유도대수기하학] §변형이론과 여접 복합체'
     url: /ko/math/derived_algebraic_geometry/deformation_theory
@@ -10871,6 +10873,10 @@ L:
 - id: locally_free_sheaf
   en: locally free sheaf
   ko: 국소 자유층
+  alias:
+  - 국소자유층
+  - 국소자유성
+  - 국소자유
   primary: en
   defs:
   - label: '[대수다양체] §선다발과 벡터다발'
@@ -11469,7 +11475,7 @@ M:
 - id: minor
   en: minor
   ko: 소행렬식
-  primary: ko
+  primary: en
   defs:
   - label: '[다중선형대수학] §행렬식'
     url: /ko/math/multilinear_algebra/determinants
@@ -15068,7 +15074,7 @@ R:
 - id: relative_dimension
   en: relative dimension
   ko: 상대차원
-  primary: ko
+  primary: en
   defs:
   - label: '[스킴] §매끄러운 사상과 에탈 사상'
     url: /ko/math/scheme_theory/smooth_and_etale_morphisms
@@ -16085,12 +16091,12 @@ S:
   ko: 점열
   primary: ko
   defs:
+  - label: '[미적분학] §수열의 극한'
+    url: /ko/math/calculus/sequences
   - label: '[해석학] §수열의 수렴'
     url: /ko/math/analysis/convergence_of_sequences
   - label: '[위상수학] §하우스도르프 공간'
     url: /ko/math/topology/Hausdorff_spaces
-  - label: '[미적분학] §수열의 극한'
-    url: /ko/math/calculus/sequences
 - id: sequential_compactness
   en: sequential compactness
   ko: 점렬컴팩트성
@@ -18181,6 +18187,11 @@ T:
   en: trivial
   ko: 자명한
   primary: en
+  note: >-
+    수학적 대상을 수식하는 trivial(trivial lifting·trivial group·trivial
+    bundle 등)만 영어로 쓴다. 서술어 '자명하다'(obvious)는 같은 낱말이
+    아니므로 한국어를 유지한다. 다만 증명에서 논증을 대신하는 '자명하다'는
+    GUIDELINE §7이 따로 금지한다.
   defs:
   - label: '[환론] §멱등원과 곱분해'
     url: /ko/math/ring_theory/idempotents
