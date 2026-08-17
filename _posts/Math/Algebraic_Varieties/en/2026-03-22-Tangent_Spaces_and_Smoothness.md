@@ -1,6 +1,6 @@
 ---
 title: "Tangent Spaces and Smoothness"
-description: "We generalize the notion of tangent spaces from differential geometry to algebraic varieties, defining the Zariski tangent space and cotangent space, and for affine varieties we explicitly describe tangent vectors as differentials of functions."
+description: "We generalize the notion of tangent spaces from differential geometry to algebraic varieties, defining Zariski tangent and cotangent spaces. For affine varieties, we describe tangent vectors explicitly as differentials of functions."
 excerpt: "Tangent spaces and smoothness of algebraic varieties"
 
 categories: [Math / Algebraic Varieties]
@@ -10,38 +10,38 @@ sidebar:
 
 date: 2026-03-22
 weight: 6
-translated_at: 2026-08-15T22:18:15+00:00
+translated_at: 2026-08-17T09:46:26+00:00
 translation_source: kimi-cli
 ---
-Just as in differential geometry, the tangent space is a central tool for understanding the local structure of a variety in algebraic geometry.
+As in differential geometry, the tangent space is also a central tool in algebraic geometry for understanding the local structure of a variety.
 
 ## Definition of the Tangent Space
 
-In differential geometry, we considered the sheaf $\mathcal{C}^\infty_M$ of smooth functions on a manifold $M$ and verified that the collection of all germs vanishing at a point $x\in M$,
+In differential geometry, we considered the sheaf $\mathcal{C}^\infty_M$ of smooth functions on a manifold $M$ and observed that the set of all germs vanishing at a point $x\in M$,
 
 $$\mathfrak{m}_x=\{\mathbf{f}\in \mathcal{C}^\infty_x\mid \mathbf{f}(x)=0\}$$
 
 is a maximal ideal. We then proved that the tangent space can be identified with
 
-$$(\mathfrak{m}_x/\mathfrak{m}_x^2)^\ast$$
+$$(\mathfrak{m}_x/\mathfrak{m}_x^2)^\ast.$$
 
-([\[Differential Manifolds\] §Cotangent Space, ⁋Lemma 1](/en/math/manifolds/cotangent_space#lem1)). This construction is often glossed over in differential geometry, but it provides a powerful framework for generalization to algebraic varieties. Namely, (fixing the affine case for convenience) we already know what functions on algebraic varieties are ([§Quasi-Projective Varieties, ⁋Definition 5](/en/math/algebraic_varieties/quasi_projective_varieties#def5)), and we also know that the collection of all functions vanishing at a point $x\in X$ corresponds to the maximal ideal of $\mathbb{K}[X]$ at that point. Thus we define
+([\[Differentiable Manifolds\] §Cotangent Space, ⁋Lemma 1](/en/math/manifolds/cotangent_space#lem1)) This construction is usually not emphasized in differential geometry, but it is extremely helpful for generalization to algebraic varieties. Namely, (fixing the affine case for convenience) we already know what a function on an algebraic variety is ([§Quasi-Projective Varieties, ⁋Definition 5](/en/math/algebraic_varieties/quasi_projective_varieties#def5)), and we also know that the set of all functions vanishing at a point $x\in X$ corresponds to the maximal ideal of $\mathbb{K}[X]$ at that point. Thus we define
 
 $$\mathfrak{m}_x=\{f\in \mathbb{K}[X]\mid f(x)=0\}$$
 
-and consider the localization $\mathbb{K}[X]_{\mathfrak{m}_x}=\mathcal{O}_{X,x}$ of this maximal ideal in $\mathbb{K}[X]$. ([\[Commutative Algebra\] §Localization, ⁋Definition 4](/en/math/commutative_algebra/localization#def4)) Geometrically, by [§Affine Varieties, ⁋Definition 14](/en/math/algebraic_varieties/affine_varieties#def14), these can be regarded as germs of regular functions at the point $x$.
+and consider the localization $\mathbb{K}[X]_{\mathfrak{m}_x}=\mathcal{O}_{X,x}$ of $\mathbb{K}[X]$ at this maximal ideal. ([\[Commutative Algebra\] §Localization, ⁋Definition 4](/en/math/commutative_algebra/localization#def4)) Geometrically, keeping [§Affine Varieties, ⁋Definition 14](/en/math/algebraic_varieties/affine_varieties#def14) in mind, these can be defined as germs of regular functions at the point $x$.
 
 ::: Definition 1
 We define the *Zariski tangent space* $T_x X$ of a variety $X$ at a point $x$ by
 
 $$T_x X = (\mathfrak{m}_x / \mathfrak{m}_x^2)^\ast$$
 
-where $\mathfrak{m}_x$ is the unique maximal ideal of the local ring $\mathcal{O}_{X,x}$ at $x$.
+where $\mathfrak{m}_x$ is the unique maximal ideal of the local ring $\mathcal{O}_{X,x}$ at the point $x$.
 :::
 
-The essence of this definition is that the quotient $\mathfrak{m}_x / \mathfrak{m}_x^2$ encodes the first-order infinitesimal data at $x$, which we call the *Zariski cotangent space* $T_x^\ast X$. Its dual $T_x X$ is the space of linear functionals acting on this data, i.e., directional derivative operators, and this definition agrees with defining $T_xX=\Der_\mathbb{K}(\mathcal{O}_{X,x}, \mathbb{K})$.
+The key point of this definition is that the quotient $\mathfrak{m}_x / \mathfrak{m}_x^2$ encodes the first-order infinitesimal data at $x$, so we call it the *Zariski cotangent space* $T_x^\ast X$. Its dual $T_x X$ is then the space of linear functionals acting on this data, i.e., the space of directional derivative operators, and this definition agrees with defining $T_xX=\Der_\mathbb{K}(\mathcal{O}_{X,x}, \mathbb{K})$.
 
-We do not use an analysis-style $\epsilon$-$\delta$ formulation of differentiation, but essentially varieties are defined by polynomials, and their derivatives can be thought of formally: differentiating $\x^n$ yields $n\cdot \x^{n-1}$. In particular, for an affine variety this can be written more explicitly.
+We do not use the analysis-style $\epsilon$-$\delta$ notion of differentiation, but essentially varieties are defined by polynomials and their derivatives can be thought of formally: differentiating $\x^n$ yields $n\cdot \x^{n-1}$. In the affine case this can be made particularly explicit.
 
 ::: Proposition 2
 Consider an affine variety $X = Z(f_1, \ldots, f_k) \subseteq \mathbb{A}^n$ with corresponding ideal $I(X) = (f_1, \ldots, f_k)$. Then at a point $x = (x_1, \ldots, x_n)$ of $X$,
@@ -50,71 +50,68 @@ $$T_x X \cong \{v \in \mathbb{K}^n \mid (\dd{f_i})_x(v) = 0 \text{ for all } i\}
 
 where $(\dd{f_i})_x$ is the differential of $f_i$ at $x$, given by
 
-$$(\dd{f_i})_x(v) = \sum_{j=1}^n \frac{\partial f_i}{\partial \x_j}(x) v_j$$
-
+$$(\dd{f_i})_x(v) = \sum_{j=1}^n \frac{\partial f_i}{\partial \x_j}(x) v_j.$$
 :::
+
 ::: Proof
 Consider the coordinate ring $\mathbb{K}[X] = \mathbb{K}[\x_1, \ldots, \x_n] / (f_1, \ldots, f_k)$. Since $\mathfrak{m}_x = (\x_1 - x_1, \x_2 - x_2, \ldots, \x_n - x_n) / (f_1, \ldots, f_k)$, we have
 
-$$\mathfrak{m}_x / \mathfrak{m}_x^2 \cong (\x_1 - x_1, \x_2 - x_2, \ldots, \x_n - x_n) / \left( (\x_1 - x_1, \x_2 - x_2, \ldots, \x_n - x_n)^2 + (f_1, \ldots, f_k) \right)$$
+$$\mathfrak{m}_x / \mathfrak{m}_x^2 \cong (\x_1 - x_1, \x_2 - x_2, \ldots, \x_n - x_n) / \left( (\x_1 - x_1, \x_2 - x_2, \ldots, \x_n - x_n)^2 + (f_1, \ldots, f_k) \right).$$
 
-Expanding each $f_i$ in a Taylor series at $x$ gives
+Taylor expanding each $f_i$ at $x$ gives
 
-$$f_i = \sum_{j=1}^n \frac{\partial f_i}{\partial \x_j}(x) (\x_j - x_j) + \text{higher order terms}$$
+$$f_i = \sum_{j=1}^n \frac{\partial f_i}{\partial \x_j}(x) (\x_j - x_j) + \text{higher order terms},$$
 
-and the higher order terms lie in $(\x_1 - x_1, \x_2 - x_2, \ldots, \x_n - x_n)^2$. Hence in $\mathfrak{m}_x / \mathfrak{m}_x^2$, the linear part $\sum_j \frac{\partial f_i}{\partial \x_j}(x) (\x_j - x_j)$ of each $f_i$ becomes zero.
+and the higher order terms lie in $(\x_1 - x_1, \x_2 - x_2, \ldots, \x_n - x_n)^2$. Thus in $\mathfrak{m}_x / \mathfrak{m}_x^2$, the linear parts $\sum_j \frac{\partial f_i}{\partial \x_j}(x) (\x_j - x_j)$ of the $f_i$ become zero.
 
-On the other hand, $\mathfrak{m}_x / \mathfrak{m}_x^2$ is generated by linear combinations of the $\x_j - x_j$, so it can be viewed as a quotient of $\mathbb{K}^n$. The kernel of the differential $(\dd{f_i})_x$ then corresponds exactly to the directions that vanish in $\mathfrak{m}_x / \mathfrak{m}_x^2$. Taking the dual, we obtain
+On the other hand, $\mathfrak{m}_x / \mathfrak{m}_x^2$ is generated by linear combinations of the $\x_j - x_j$, so it can be viewed as a quotient of $\mathbb{K}^n$. The kernel of the differential $(\dd{f_i})_x$ then corresponds exactly to the directions that vanish in $\mathfrak{m}_x / \mathfrak{m}_x^2$. Taking duals, we obtain
 
-$$T_x X = (\mathfrak{m}_x / \mathfrak{m}_x^2)^\ast \cong \{v \in \mathbb{K}^n \mid (\dd{f_i})_x(v) = 0 \text{ for all } i\}$$
-
+$$T_x X = (\mathfrak{m}_x / \mathfrak{m}_x^2)^\ast \cong \{v \in \mathbb{K}^n \mid (\dd{f_i})_x(v) = 0 \text{ for all } i\}.$$
 :::
 
-Although the proof is written in the elaborate language of maximal ideals, its philosophy is simple if we think of $X=Z(f_i)$. In this case, $(\dd{f_i})_x(v)=0$ is precisely the (ordinary) tangent space of the hypersurface $Z(f_i)$ in $\mathbb{A}^n$ (viewing $\mathbb{K}^n$ as $\mathbb{A}^n$). [Proposition 2](#prop2) applies directly only to affine varieties, but since any point $x$ of an arbitrary variety $X$ has an affine neighborhood, it essentially applies to all varieties. The following proposition about the dimension of the tangent space is likewise universal.
+Although the proof is written in the language of maximal ideals and looks complicated, the philosophy is simple if one thinks of $X=Z(f_i)$. In this case, $(\dd{f_i})_x(v)=0$ is precisely the (ordinary) tangent space in $\mathbb{A}^n$ of the hypersurface $Z(f_i)$ (viewing $\mathbb{K}^n$ as $\mathbb{A}^n$). [Proposition 2](#prop2) applies directly only to affine varieties, but since any point $x$ of an arbitrary variety $X$ has an affine neighborhood, it essentially applies to all varieties. The same is true of the following proposition on the dimension of the tangent space.
 
 ::: Proposition 3
 $T_x X$ is a $\mathbb{K}$-vector space, and its dimension is $n - \rank(J_x)$, where $J_x$ is the $k \times n$ Jacobian matrix
 
-$$J_x = \left(\frac{\partial f_i}{\partial \x_j}(x)\right)_{1 \le i \le k, 1 \le j \le n}$$
-
+$$J_x = \left(\frac{\partial f_i}{\partial \x_j}(x)\right)_{1 \le i \le k, 1 \le j \le n}.$$
 :::
 ::: Proof
-Each $(\dd{f_i})_x: \mathbb{K}^n \rightarrow \mathbb{K}$ is a linear functional. By [Proposition 2](#prop2), $T_x X$ is the intersection of their kernels, hence a subspace of $\mathbb{K}^n$. The rows of the Jacobian matrix $J_x$ are the coordinate representations of these linear functionals, so
+Each $(\dd{f_i})_x: \mathbb{K}^n \rightarrow \mathbb{K}$ is a linear functional. By [Proposition 2](#prop2), $T_x X$ is the intersection of their kernels, hence a subspace of $\mathbb{K}^n$. The rows of the Jacobian matrix $J_x$ are the coordinate expressions of these linear functionals, so
 
-$$T_x X = \ker(J_x) = \{v \in \mathbb{K}^n \mid J_x v = 0\}$$
+$$T_x X = \ker(J_x) = \{v \in \mathbb{K}^n \mid J_x v = 0\}.$$
 
 By the rank-nullity theorem, $\dim T_x X = n - \rank(J_x)$.
 :::
 
 ## Smooth Points and Singular Points
 
-In differential geometry, the dimension of the tangent space at any point always equals the dimension of the manifold. However, this is because the definition of a manifold is rather stringent, and in algebraic geometry even an affine variety defined by a single polynomial may fail to be a manifold (in the classical picture). ([Example 6](#ex6), [Example 7](#ex7)) Nevertheless, the dimension of the tangent space is not unrelated to the dimension of the variety.
+In differential geometry, the dimension of the tangent space at any point always equals the dimension of the manifold. However, this is because the definition of a manifold is rather restrictive; in algebraic geometry, even an affine variety defined by a single polynomial may fail to be a manifold (in the classical picture). ([Example 6](#ex6), [Example 7](#ex7)) Nevertheless, the dimension of the tangent space is not completely unrelated to the dimension of the variety.
 
 ::: Proposition 4
 For any point $x$ of an irreducible variety $X$, we have $\dim T_x X \ge \dim X$.
 :::
 
 ::: Proof
-We prove only the affine case. Let $X = Z(f_1, \ldots, f_k) \subseteq \mathbb{A}^n$ be irreducible with $\dim X = d$. Consider the local ring $\mathcal{O}_{X,x} = \mathbb{K}[X]_{\mathfrak{m}_x}$ at $x\in X$. Since $X$ is irreducible, $\mathbb{K}[X]$ is a finitely generated $\mathbb{K}$-algebra and a domain, and since $\mathfrak{m}_x$ is maximal, $\dim \mathbb{K}[X]/\mathfrak{m}_x = 0$. Hence the dimension formula of [\[Commutative Algebra\] §Noether Normalization, ⁋Theorem 4](/en/math/commutative_algebra/noether_normalization#thm4) gives $\codim \mathfrak{m}_x = \dim \mathbb{K}[X]$, and since the codimension of a prime ideal was defined as the dimension of its localization ([\[Commutative Algebra\] §Dimension, ⁋Definition 2](/en/math/commutative_algebra/Krull_dimension#def2)), we obtain
+We prove only the affine case. Let $X = Z(f_1, \ldots, f_k) \subseteq \mathbb{A}^n$ be irreducible with $\dim X = d$. Consider the local ring $\mathcal{O}_{X,x} = \mathbb{K}[X]_{\mathfrak{m}_x}$ at the point $x$. Since $X$ is irreducible, $\mathbb{K}[X]$ is a finitely generated $\mathbb{K}$-algebra and a domain, and since $\mathfrak{m}_x$ is a maximal ideal, $\dim \mathbb{K}[X]/\mathfrak{m}_x = 0$. Hence the dimension formula of [\[Commutative Algebra\] §Noether Normalization, ⁋Theorem 4](/en/math/commutative_algebra/noether_normalization#thm4) gives $\codim \mathfrak{m}_x = \dim \mathbb{K}[X]$, and since the codimension of a prime ideal is defined as the dimension of its localization ([\[Commutative Algebra\] §Dimension, ⁋Definition 2](/en/math/commutative_algebra/Krull_dimension#def2)), we obtain
 
-$$\dim \mathcal{O}_{X,x} = \codim \mathfrak{m}_x = \dim \mathbb{K}[X] = \dim X = d$$
+$$\dim \mathcal{O}_{X,x} = \codim \mathfrak{m}_x = \dim \mathbb{K}[X] = \dim X = d.$$
 
-where the third equality is by [§Dimension, ⁋Proposition 2](/en/math/algebraic_varieties/dimension#prop2).
+Here the third equality follows from [§Dimension, ⁋Proposition 2](/en/math/algebraic_varieties/dimension#prop2).
 
-In general, for a Noetherian local ring $(R, \mathfrak{m})$ we have $\dim_{\mathbb{K}}(\mathfrak{m}/\mathfrak{m}^2) \ge \dim R$. ([\[Commutative Algebra\] §System of Parameters, ⁋Proposition 2](/en/math/commutative_algebra/system_of_parameters#prop2)) Therefore,
+In general, for a Noetherian local ring $(R, \mathfrak{m})$, we have $\dim_{\mathbb{K}}(\mathfrak{m}/\mathfrak{m}^2) \ge \dim R$. ([\[Commutative Algebra\] §System of Parameters, ⁋Proposition 2](/en/math/commutative_algebra/system_of_parameters#prop2)) Therefore,
 
-$$\dim T_x X = \dim_{\mathbb{K}}(\mathfrak{m}_x/\mathfrak{m}_x^2) \ge \dim \mathcal{O}_{X,x} = d = \dim X$$
-
+$$\dim T_x X = \dim_{\mathbb{K}}(\mathfrak{m}_x/\mathfrak{m}_x^2) \ge \dim \mathcal{O}_{X,x} = d = \dim X.$$
 :::
 
-To sharpen our intuition, it is useful to examine when this inequality is strict. We call such points singular points.
+To build our intuition, it is good to examine when this inequality is strict. Such points are called singular points.
 
 ::: Definition 5
 A point $x \in X$ is called a *smooth point* (or *nonsingular point*) if $\dim T_x X = \dim X$. Otherwise (i.e., if $\dim T_x X > \dim X$), it is called a *singular point*.
 :::
 
 ::: Example 6 (Smooth points)
-1. Every point of $\mathbb{A}^n$ is a smooth point. Since $\mathbb{A}^n$ has no defining equations, $T_x \mathbb{A}^n = \mathbb{K}^n$ and $\dim T_x \mathbb{A}^n = n = \dim \mathbb{A}^n$.
+1. Every point of $\mathbb{A}^n$ is a smooth point. Since $\mathbb{A}^n$ has no defining equations, $T_x \mathbb{A}^n = \mathbb{K}^n$, and $\dim T_x \mathbb{A}^n = n = \dim \mathbb{A}^n$.
 2. Every point of the parabola $Z(\y - \x^2)$ is a smooth point. For $f = \y - \x^2$, we have $J_{(x,y)} = (-2x, 1)$, which is nonzero at every point. Hence $\dim T_x X = 2 - 1 = 1 = \dim X$.
 :::
 
@@ -127,7 +124,7 @@ A point $x \in X$ is called a *smooth point* (or *nonsingular point*) if $\dim T
 
     $$J_{(x,y)} = \begin{pmatrix} -2x - 3x^2 & 2y \end{pmatrix}$$
 
-    so at the origin the Jacobian is $(0,0)$, and thus by [Proposition 3](#prop3) the origin is a singular point. Geometrically, the tangent space being 2-dimensional means that both tangent directions of the two branches are included. Specifically, since $\y^2 - \x^2(\x+1) \approx \y^2 - \x^2 = (\y-\x)(\y+\x)$, near the origin the curve looks like the union of the two lines $\y = \x$ and $\y = -\x$. A node is one of the "mildest" singular points.
+    so at the origin the Jacobian is $(0,0)$, and thus by [Proposition 3](#prop3) the origin is a singular point. Geometrically, the fact that the tangent space is 2-dimensional means that both tangent directions of the two branches are included. Concretely, since $\y^2 - \x^2(\x+1) \approx \y^2 - \x^2 = (\y-\x)(\y+\x)$, near the origin the curve looks like the union of the two lines $\y = \x$ and $\y = -\x$. The node is one of the "mildest" singular points.
 2. (Cusp) Now consider $Z(\y^2 - \x^3)\subseteq \mathbb{A}^2$.
 
     {% diagram Math/Algebraic_Varieties/Tangent_Spaces_and_Smoothness-2.svg width="18.80em" alt="cusp" %}
@@ -136,7 +133,7 @@ A point $x \in X$ is called a *smooth point* (or *nonsingular point*) if $\dim T
 
     $$J_{(x,y)}=\begin{pmatrix}-3x^2&2y\end{pmatrix}$$
 
-    we have $\nabla f(0,0) = (0, 0)$ at the origin. Geometrically, the tangent space being 2-dimensional here means that every direction is "tangent" at the origin, indicating that the curve is too sharp to define a tangent in any direction.
+    we have $\nabla f(0,0) = (0, 0)$ at the origin. Geometrically, the fact that the tangent space is 2-dimensional here means that "every direction is tangent" at the origin, indicating that the curve is too sharp to define a tangent in any direction.
 :::
 
 In the examples above, we naturally used the following proposition.
@@ -146,11 +143,11 @@ Consider an affine variety $X = Z(f_1, \ldots, f_k) \subseteq \mathbb{A}^n$ with
 :::
 
 ::: Proof
-By [Proposition 3](#prop3), we showed that $\dim T_x X = n - \rank(J_x)$. By [Definition 5](#def5), $x$ being a smooth point means $\dim T_x X = \dim X$. Hence $x$ is a smooth point if and only if
+In [Proposition 3](#prop3) we showed that $\dim T_x X = n - \rank(J_x)$. By [Definition 5](#def5), $x$ is a smooth point if and only if $\dim T_x X = \dim X$. Hence $x$ is a smooth point if and only if
 
-$$n - \rank(J_x) = \dim X$$
+$$n - \rank(J_x) = \dim X,$$
 
-that is, $\rank(J_x) = n - \dim X$.
+i.e., $\rank(J_x) = n - \dim X$.
 :::
 
 ## Existence of Smooth Points
@@ -161,7 +158,7 @@ Any algebraic variety is smooth at most of its points. To show this, we need the
 The *generic point* $\eta$ of an irreducible variety $X$ is the unique point belonging to every nonempty open subset of $X$.
 :::
 
-In the affine case $X = \Spec A$, the generic point $\eta$ corresponds to the minimal prime ideal of $A$ (namely, the $(0)$ ideal), and the local ring $\mathcal{O}_{X,\eta}$ is exactly the function field $\mathbb{K}(X) = \Frac(A)$. Geometrically, the generic point is the "most general" point of $X$, a point possessing no particular property of $X$. We can exploit this idea in the following proof.
+In the affine case $X = \Spec A$, the generic point $\eta$ corresponds to the minimal prime ideal of $A$ (namely, the ideal $(0)$), and the local ring $\mathcal{O}_{X,\eta}$ is exactly the function field $\mathbb{K}(X) = \Frac(A)$. Geometrically, the generic point is the "most general point" of $X$, thought of as a point having no particular property of $X$. We can exploit this idea in the following proof.
 
 ::: Proposition 10
 The set $X_\sm$ of smooth points of a variety $X$ is a dense open subset of $X$. In particular, $X_\sm \ne \emptyset$.
@@ -170,13 +167,13 @@ The set $X_\sm$ of smooth points of a variety $X$ is a dense open subset of $X$.
 ::: Proof
 Let $X = Z(f_1, \ldots, f_k) \subseteq \mathbb{A}^n$ have dimension $\dim X = d$. By [Proposition 8](#prop8),
 
-$$X_\sm = \{x \in X \mid \rank(J_x) = n - d\}$$
+$$X_\sm = \{x \in X \mid \rank(J_x) = n - d\}.$$
 
-We show that this set is a dense open subset. First, that $X_\sm$ is open is relatively clear. By [Proposition 3](#prop3) and [Proposition 4](#prop4), at any point of $X$ we automatically have $n - \rank(J_x) = \dim T_x X \ge d$, i.e., $\rank(J_x) \le n-d$. Hence the condition that the rank is exactly $n-d$ is equivalent to the rank being at least $n-d$. But the latter is equivalent to some $(n-d) \times (n-d)$ minor having nonzero determinant, which is an open condition in the Zariski topology. Therefore $X_\sm$ is an open subset of $X$.
+We now show that this set is a dense open subset. That $X_\sm$ is open is relatively clear. By [Proposition 3](#prop3) and [Proposition 4](#prop4), at any point of $X$ we automatically have $n - \rank(J_x) = \dim T_x X \ge d$, i.e., $\rank(J_x) \le n-d$. Hence the condition that the rank is exactly $n-d$ is equivalent to the condition that the rank is at least $n-d$. But the latter is equivalent to the nonvanishing of the determinant of some $(n-d) \times (n-d)$ minor, which is an open condition in the Zariski topology. Thus $X_\sm$ is an open subset of $X$.
 
-Showing that $X_\sm$ is nonempty is somewhat technical; the idea is that a generic point should be a smooth point, so we consider the generic point $\eta$ of $X$. Thinking in terms of the localization at $\eta$, the local ring $\mathcal{O}_{X,\eta} = \mathbb{K}(X)$ is a field, hence a regular local ring. But by [\[Commutative Algebra\] §System of Parameters, ⁋Proposition 2](/en/math/commutative_algebra/system_of_parameters#prop2),
+Showing that $X_\sm$ is nonempty is somewhat technical; the idea is that a general point should be smooth, so we consider the generic point $\eta$ of $X$. Considering the localization at $\eta$, the local ring $\mathcal{O}_{X,\eta} = \mathbb{K}(X)$ is a field, hence a regular local ring. But by [\[Commutative Algebra\] §System of Parameters, ⁋Proposition 2](/en/math/commutative_algebra/system_of_parameters#prop2),
 
-$$\dim_{\mathbb{K}}(\mathfrak{m}_\eta/\mathfrak{m}_\eta^2) \ge \dim \mathcal{O}_{X,\eta} = d$$
+$$\dim_{\mathbb{K}}(\mathfrak{m}_\eta/\mathfrak{m}_\eta^2) \ge \dim \mathcal{O}_{X,\eta} = d,$$
 
 and by [Proposition 4](#prop4) the reverse inequality also holds, so $\dim T_\eta X = d$. Hence $\eta \in X_\sm$. Now any nonempty open subset is dense by irreducibility.
 :::
@@ -188,40 +185,40 @@ A variety $X$ is called *smooth* (or *nonsingular*) if every point is a smooth p
 :::
 
 ::: Example 12
-The varieties of [Example 6](#ex6) are all smooth, and all varieties of [Example 7](#ex7) are singular.
+The varieties in [Example 6](#ex6) are all smooth, and all the varieties in [Example 7](#ex7) are singular.
 :::
 
 ## Tangent Cones
 
-At a singular point, the tangent space is too large to accurately reflect the local structure of the variety. In this case the *tangent cone* provides more precise information. Intuitively, the tangent space being too large corresponds to the Jacobian having too small a rank, which happens, for example, because the linear approximation of the given functions carries no information. Thus considering higher-degree approximations of the given functions may change the situation.
+At a singular point, the tangent space is too large to accurately reflect the local structure of the variety. In this case the *tangent cone* provides more precise information. Intuitively, the tangent space being too large corresponds to the Jacobian having too small a rank, which happens, for example, because the linear approximation of a given function carries no information. Thus considering higher-degree approximations of the given functions might change the situation.
 
-To this end, for any polynomial $f\in \mathbb{K}[\x_1,\ldots, \x_n]$, we define the *initial term* $\initial(f)$ of $f$ to be the homogeneous component of $f$ of smallest degree. Then for any ideal $\mathfrak{a}$, we define the *initial ideal* $\initial(\mathfrak{a})$ of $\mathfrak{a}$ to be the homogeneous ideal generated by the $\initial(f)$.
+To this end, for any polynomial $f\in \mathbb{K}[\x_1,\ldots, \x_n]$, we define the *initial term* $\initial(f)$ of $f$ to be the homogeneous component of $f$ of smallest degree. Then for any ideal $\mathfrak{a}$, we define the *initial ideal* $\initial(\mathfrak{a})$ to be the homogeneous ideal generated by the $\initial(f)$.
 
 ::: Definition 13
 For any affine variety $X\subseteq \mathbb{A}^n$, we define the algebraic variety defined by $\initial(I(X))$ to be the *tangent cone* of $X$ at the origin, and denote it by $TC_0 X$.
 :::
 
-More generally, by writing $f$ as a polynomial in the $\x_i-x_i$ and making a similar definition, one can define the tangent cone at an arbitrary point. It is called a cone because, just as in [§Projective Varieties, ⁋Definition 12](/en/math/algebraic_varieties/projective_varieties#def12), it is the zero set of a homogeneous ideal.
+More generally, by writing $f$ as a polynomial in the $\x_i-x_i$ and making the analogous definition, one can define the tangent cone at an arbitrary point. The reason this is called a cone is that, just as in [§Projective Varieties, ⁋Definition 12](/en/math/algebraic_varieties/projective_varieties#def12), it is the zero set of a homogeneous ideal.
 
-Now let us see how this provides a finer classification of singular points.
+Let us now see how this gives a finer classification of singular points.
 
 ::: Example 14
-For the nodal curve $X = Z(\y^2 - \x^2(\x+1))$ of [Example 7](#ex7), the lowest degree term of $f$ is $\y^2 - \x^2 = (\y-\x)(\y+\x)$, so
+For the nodal curve $X = Z(\y^2 - \x^2(\x+1))$ from [Example 7](#ex7), the lowest degree term of $f$ is $\y^2 - \x^2 = (\y-\x)(\y+\x)$, so
 
-$$TC_0 X = Z(\y-\x) \cup Z(\y+\x)$$
+$$TC_0 X = Z(\y-\x) \cup Z(\y+\x).$$
 
 This precisely exhibits the node as splitting in the directions of the two lines $\y = \x$ and $\y = -\x$.
 :::
 
 ::: Example 15
-For the curve $X = Z(\y^2 - \x^3)$ of [Example 7](#ex7), the lowest degree term of $f$ is $\y^2$, so
+For the curve $X = Z(\y^2 - \x^3)$ from [Example 7](#ex7), the lowest degree term of $f$ is $\y^2$, so
 
-$$TC_0 X = Z(\y^2)$$
+$$TC_0 X = Z(\y^2).$$
 
-This is the line $\y = 0$ counted twice, showing that the cusp ends sharply in the $\x$-axis direction. By contrast, the tangent space $T_0 X = \mathbb{K}^2$ is too large, containing every direction.
+This is the line $\y = 0$ counted twice, and it shows that the cusp ends sharply in the $\x$-axis direction. By comparison, the tangent space $T_0 X = \mathbb{K}^2$ is too large, containing all directions.
 :::
 
-In general, by [§Rational Maps, ⁋Example 12](/en/math/algebraic_varieties/rational_maps#ex12), the singularity of a nodal curve can be resolved by blowup. That is, after blowing up, the two branches $\y-\x$ and $\y+\x$ at the origin are separated by a $\mathbb{P}^1$. However, in the case of a cusp, the curve does not split into two branches near the origin, so even after blowup the point lying over the origin is a single point of $\mathbb{P}^1$; in this sense a cusp is generally regarded as a worse singularity than a node.
+In general, keeping [§Rational Maps, ⁋Example 12](/en/math/algebraic_varieties/rational_maps#ex12) in mind, the singularity of a nodal curve can be resolved by blowup. That is, after blowing up, the two branches $\y-\x$ and $\y+\x$ at the origin are separated by a $\mathbb{P}^1$. However, for a cusp the curve does not split into two branches near the origin, so even after blowup the point lying over the origin is only a single point of $\mathbb{P}^1$; in this sense one generally regards a cusp as a worse singularity than a node.
 
 ---
 
