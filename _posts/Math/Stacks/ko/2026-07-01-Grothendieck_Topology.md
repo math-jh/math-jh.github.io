@@ -98,7 +98,7 @@ Transitivity. $S\in J(U)$이고, $U$ 위의 sieve $R$이 모든 $(f: V \rightarr
 [예시 6](#ex6)에서 covering family $\{U_i\hookrightarrow U\}$가 생성하는 covering sieve은 어떤 $U_i$ 안에 포함되는 열린집합 전체로 이루어진 sieve이며, 이는 $\{U_i\}$가 위상공간으로서 $U$를 덮는다는 정보와 동치이다. 이 site의 특징은 모든 morphism이 monomorphism(포함)이라는 점인데, 일반적인 site에서는 covering의 morphism이 단사일 필요가 없고, 바로 이 점이 다음의 algebraic geometry 예시들을 고전적 위상과 구별짓는다.
 
 ::: 예시 7 (Zariski site)
-Scheme $X$에 대하여 두 가지 site가 있다. *작은 Zariski site* $X_{\Zar}$는 대상이 $X$의 열린집합(열린 부분scheme)이고 morphism이 열린포함이며, covering family가 open cover인 site로, 이는 위상공간 $X$의 site $\Op(X)$와 본질적으로 같다. *큰 Zariski site*는 slice 범주 $\Sch/X$를 밑범주로 삼고, $X$-scheme들의 족 $\{U_i \rightarrow T\}$이 각 $U_i \rightarrow T$가 열린 immersion이고 합 $\coprod U_i \rightarrow T$가 전사일 때 covering family로 선언한 site이다. 큰 site는 $X$ 위의 모든 scheme을 동시에 다루므로 functorially 정의된 대상의 sheaf 성질을 논하기에 적합하다.
+Scheme $X$에 대하여 두 가지 site가 있다. *작은 Zariski site* $X_{\Zar}$는 대상이 $X$의 열린집합(open subscheme)이고 morphism이 열린포함이며, covering family가 open cover인 site로, 이는 위상공간 $X$의 site $\Op(X)$와 본질적으로 같다. *큰 Zariski site*는 slice 범주 $\Sch/X$를 밑범주로 삼고, $X$-scheme들의 족 $\{U_i \rightarrow T\}$이 각 $U_i \rightarrow T$가 열린 immersion이고 합 $\coprod U_i \rightarrow T$가 전사일 때 covering family로 선언한 site이다. 큰 site는 $X$ 위의 모든 scheme을 동시에 다루므로 functorially 정의된 대상의 sheaf 성질을 논하기에 적합하다.
 :::
 
 작은 Zariski site는 열린집합이 너무 적어서, 가령 모든 점의 잔여체가 같은 경우조차 구별하지 못하는 등의 한계를 가진다. 이를 극복하기 위해 열린포함보다 넓은 종류의 morphism을 covering으로 허용하는 것이 다음의 étale 위상이다.

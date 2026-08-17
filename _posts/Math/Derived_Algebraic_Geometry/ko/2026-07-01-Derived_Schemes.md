@@ -114,7 +114,7 @@ Derived stack 가운데 기하를 논할 수 있는 부류는 고전적 경우�
 Derived stack $\mathcal{X}$이 *geometric* (또는 *derived Artin stack<sub>유도 아틴 스택</sub>*)이라는 것은, 그 대각선이 representable하고, derived scheme $U$으로부터의 smooth surjective morphism $u:U\rightarrow \mathcal{X}$, 곧 *atlas*가 존재하는 것을 뜻한다. Atlas를 étale 전사로 잡을 수 있으면 $\mathcal{X}$을 *derived Deligne–Mumford stack*이라 부른다.
 :::
 
-이는 고전적 algebraic stack의 정의를 derived scheme을 국소 모형으로 삼아 옮긴 것이다. ([\[Stacks\] §Algebraic stack과 quotient stack, ⁋정의 6](/ko/math/stacks/algebraic_stacks#def6)) 여기서 morphism $u:U\rightarrow \mathcal{X}$의 smooth·étale 성질은 뒤에서 여접 복합체로 특징짓는데, 곧 상대 여접 복합체 $L_u$이 degree $0$에 집중된 국소자유 sheaf인 경우가 smooth이다. Atlas가 있으면 $\mathcal{X}$의 truncation $t_0(\mathcal{X})$은 atlas의 truncation $t_0(U)$을 atlas로 갖는 고전적 algebraic stack이 되어, geometric derived stack이 고전적 algebraic stack 위에 얹힌 유도 두께임이 다시 확인된다. 가장 기본적인 예는 고전적 stack 자체가 discrete derived stack으로 들어앉는 경우이다.
+이는 고전적 algebraic stack의 정의를 derived scheme을 국소 모형으로 삼아 옮긴 것이다. ([\[Stacks\] §Algebraic stack과 quotient stack, ⁋정의 6](/ko/math/stacks/algebraic_stacks#def6)) 여기서 morphism $u:U\rightarrow \mathcal{X}$의 smooth·étale 성질은 뒤에서 여접 복합체로 특징짓는데, 곧 상대 여접 복합체 $L_u$이 degree $0$에 집중된 locally free sheaf인 경우가 smooth이다. Atlas가 있으면 $\mathcal{X}$의 truncation $t_0(\mathcal{X})$은 atlas의 truncation $t_0(U)$을 atlas로 갖는 고전적 algebraic stack이 되어, geometric derived stack이 고전적 algebraic stack 위에 얹힌 유도 두께임이 다시 확인된다. 가장 기본적인 예는 고전적 stack 자체가 discrete derived stack으로 들어앉는 경우이다.
 
 ::: 예시 9 (분류 stack $\mathbf{B}G$)
 $G$을 $k$ 위의 smooth affine group scheme이라 하자. Derived stack $\mathbf{B}G$을, animated ring $R$에 $\Spec \pi_0(R)$ 위의 $G$-torsor들의 groupoid를 대응시키는 functor로 정의한다. $G$이 smooth하므로 그 atlas $\Spec k\rightarrow \mathbf{B}G$은 smooth 전사이고, 그 base change는 $G\rightrightarrows \Spec k$이라 $\mathbf{B}G$은 geometric derived stack이다. 이 경우 구조가 discrete ring 위에서 정해지므로 $\mathbf{B}G$은 사실 고전적 algebraic stack $\mathbf{B}G$과 같고 ([\[Stacks\] §Algebraic stack과 quotient stack, ⁋정의 8](/ko/math/stacks/algebraic_stacks#def8)에서 $X=\Spec k$인 quotient stack), $t_0(\mathbf{B}G)=\mathbf{B}G$은 자기 자신이다. 곧 순전히 stack 방향의 대칭(automorphism $G$)만으로는 유도 두께가 생기지 않는다. 유도 정보는 대신 $G$이 작용하는 대상 쪽에서, 예컨대 $G$-action을 받는 derived scheme의 유도 올곱을 quotient한 $[Z/G]$에서 나타난다. 이러한 유도 올곱을 다음 두 절에서 다룬다.
@@ -132,7 +132,7 @@ $$T_X=L_X^\vee=\mathcal{R}\mathcal{H}om_{\mathcal{O}_X}(L_X,\mathcal{O}_X)$$
 을 $X$의 *접복합체<sub>tangent complex</sub>*라 부른다. Geometric derived stack $\mathcal{X}$에 대해서는 atlas $u:U\rightarrow \mathcal{X}$을 따라 pullback한 $u^\ast L_{\mathcal{X}}$이 삼각형 $u^\ast L_{\mathcal{X}}\rightarrow L_U\rightarrow L_{U/\mathcal{X}}$을 채우도록 하는 유일한 대상으로 $L_{\mathcal{X}}$을 정의한다.
 :::
 
-접착이 잘 정의됨은 여접 복합체가 étale morphism에 대하여 소멸하고 localization과 교환한다는 사실, 곧 étale $R\rightarrow R'$에 대하여 $L_{R'/R}\simeq0$이고 $L_{R/k}\otimes_R R'\simeq L_{R'/k}$이라는 데서 나온다. ([§Simplicial 가환환과 animation, ⁋명제 14](/ko/math/derived_algebraic_geometry/animated_rings#prop14)의 매끄러움 판정과 추이 삼각형이 이를 준다.) Affine 경우 $X=\Spec R$이면 $L_X$은 단순히 $L_{R/k}$의 sheafification이고, $X$이 smooth한 고전적 scheme이면 $L_X\simeq \Omega_X$이 degree $0$에 집중된 국소자유 sheaf이다. Stack의 경우 atlas 삼각형에서 $L_{U/\mathcal{X}}$이 atlas morphism의 상대 여접 복합체이므로, $\mathcal{X}$이 smooth할 때 $L_{\mathcal{X}}$은 degree $0$의 접방향과 함께 stack 방향에서 오는 음의 degree 항, 곧 $\mathbf{B}G$ 유형의 automorphism이 주는 $\mathfrak{g}^\vee[-1]$ 꼴의 항을 가질 수 있다.
+접착이 잘 정의됨은 여접 복합체가 étale morphism에 대하여 소멸하고 localization과 교환한다는 사실, 곧 étale $R\rightarrow R'$에 대하여 $L_{R'/R}\simeq0$이고 $L_{R/k}\otimes_R R'\simeq L_{R'/k}$이라는 데서 나온다. ([§Simplicial 가환환과 animation, ⁋명제 14](/ko/math/derived_algebraic_geometry/animated_rings#prop14)의 매끄러움 판정과 추이 삼각형이 이를 준다.) Affine 경우 $X=\Spec R$이면 $L_X$은 단순히 $L_{R/k}$의 sheafification이고, $X$이 smooth한 고전적 scheme이면 $L_X\simeq \Omega_X$이 degree $0$에 집중된 locally free sheaf이다. Stack의 경우 atlas 삼각형에서 $L_{U/\mathcal{X}}$이 atlas morphism의 상대 여접 복합체이므로, $\mathcal{X}$이 smooth할 때 $L_{\mathcal{X}}$은 degree $0$의 접방향과 함께 stack 방향에서 오는 음의 degree 항, 곧 $\mathbf{B}G$ 유형의 automorphism이 주는 $\mathfrak{g}^\vee[-1]$ 꼴의 항을 가질 수 있다.
 
 ::: 명제 11
 여접 복합체는 다음을 만족한다.
@@ -153,14 +153,14 @@ $$f^\ast L_{Y/Z}\longrightarrow L_{X/Z}\longrightarrow L_{X/Y}\longrightarrow f^
 
 ## Quasi-smooth 사상과 virtual dimension
 
-Smooth morphism은 여접 복합체가 degree $0$의 국소자유 sheaf인 경우였다. ([§Simplicial 가환환과 animation, ⁋명제 14](/ko/math/derived_algebraic_geometry/animated_rings#prop14)) 이를 degree $1$까지 허용하여 한 단계 넓힌 것이 quasi-smooth morphism이며, derived algebraic geometry에서 virtual 구조를 나르는 morphism의 부류가 정확히 이것이다.
+Smooth morphism은 여접 복합체가 degree $0$의 locally free sheaf인 경우였다. ([§Simplicial 가환환과 animation, ⁋명제 14](/ko/math/derived_algebraic_geometry/animated_rings#prop14)) 이를 degree $1$까지 허용하여 한 단계 넓힌 것이 quasi-smooth morphism이며, derived algebraic geometry에서 virtual 구조를 나르는 morphism의 부류가 정확히 이것이다.
 
 ::: 정의 12
 Derived scheme(또는 geometric derived stack)의 morphism $f:X\rightarrow Y$이 *quasi-smooth<sub>유사매끄러움</sub>*하다는 것은, $f$이 유한표현이고 상대 여접 복합체 $L_f$이 perfect이며 그 Tor-amplitude가 $[-1,0]$에 놓이는 것, 곧 $L_f$이 국소적으로
 
 $$L_f\simeq\bigl[E_1\longrightarrow E_0\bigr],\qquad E_0\text{ (degree }0),\quad E_1\text{ (degree }1)$$
 
-의 꼴로 두 항의 국소자유 sheaf로 표현되는 것을 뜻한다. 이때 $f$의 *virtual 상대차원<sub>virtual relative dimension</sub>*을 $L_f$의 K-이론적 계수
+의 꼴로 두 항의 locally free sheaf로 표현되는 것을 뜻한다. 이때 $f$의 *virtual 상대차원<sub>virtual relative dimension</sub>*을 $L_f$의 K-이론적 계수
 
 $$\operatorname{vdim}(f)=\rank E_0-\rank E_1$$
 
@@ -183,11 +183,11 @@ $$X\simeq Z(s)=P\times_{E}^hP$$
 3. Quasi-smooth morphism은 임의의 base change에 대하여 닫혀 있고, virtual 상대차원을 보존한다. 곧 $f$이 quasi-smooth이고 $Y'\rightarrow Y$이 임의의 morphism이면 $f':X\times_Y^hY'\rightarrow Y'$도 quasi-smooth이며 $\operatorname{vdim}(f')=\operatorname{vdim}(f)$이다.
 :::
 ::: 증명
-**(1)** 절단 $s:P\rightarrow E$의 유도 영점자리 $Z(s)=P\times_E^hP$은 국소적으로 $E$을 rank $r$의 자명 다발로 놓아 $s=(s_1,\ldots,s_r)$으로 쓰면 $\mathcal{O}_{Z(s)}=\operatorname{Kos}(\mathcal{O}_P;s_1,\ldots,s_r)$, 곧 $s_i$들에 대한 Koszul 복합체이다. Embedding $Z(s)\hookrightarrow P$의 여접 복합체는 [명제 11](#prop11)의 base change로 계산되어 $L_{Z(s)/P}\simeq(E^\vee\vert_{Z(s)})[1]$, 곧 degree $1$에 집중된 국소자유 sheaf이다. $P$이 $Y$ 위에서 smooth하므로 $L_{P/Y}$은 degree $0$의 국소자유 sheaf이고, [명제 11](#prop11)의 추이 삼각형이 $L_{X/Y}$을 degree $0,1$의 두 항으로 준다. 따라서 $Z(s)$은 quasi-smooth이다. 역으로 $f$이 quasi-smooth이면 $L_f\simeq[E_1\rightarrow E_0]$의 $E_0$을 실현하는 smooth 인수 $P$을 국소적으로 잡고, $E_1$을 실현하는 절단 $s$을 그 위에서 택하여 위 인수분해를 얻는다. 세부는 ([Kha], [Lur, SAG])에 있다.
+**(1)** 절단 $s:P\rightarrow E$의 유도 영점자리 $Z(s)=P\times_E^hP$은 국소적으로 $E$을 rank $r$의 자명 다발로 놓아 $s=(s_1,\ldots,s_r)$으로 쓰면 $\mathcal{O}_{Z(s)}=\operatorname{Kos}(\mathcal{O}_P;s_1,\ldots,s_r)$, 곧 $s_i$들에 대한 Koszul 복합체이다. Embedding $Z(s)\hookrightarrow P$의 여접 복합체는 [명제 11](#prop11)의 base change로 계산되어 $L_{Z(s)/P}\simeq(E^\vee\vert_{Z(s)})[1]$, 곧 degree $1$에 집중된 locally free sheaf이다. $P$이 $Y$ 위에서 smooth하므로 $L_{P/Y}$은 degree $0$의 locally free sheaf이고, [명제 11](#prop11)의 추이 삼각형이 $L_{X/Y}$을 degree $0,1$의 두 항으로 준다. 따라서 $Z(s)$은 quasi-smooth이다. 역으로 $f$이 quasi-smooth이면 $L_f\simeq[E_1\rightarrow E_0]$의 $E_0$을 실현하는 smooth 인수 $P$을 국소적으로 잡고, $E_1$을 실현하는 절단 $s$을 그 위에서 택하여 위 인수분해를 얻는다. 세부는 ([Kha], [Lur, SAG])에 있다.
 
 **(2)** $X=Z(s)$이면 $t_0(X)=\{s=0\}$은 $P$의 고전적 영점자리이고, 이는 국소적으로 $r$개의 방정식으로 잘린 것이며, 그 방정식들이 regular sequence를 이룰 때 고전적 lci가 된다. $X$이 discrete함은 $s_1,\ldots,s_r$이 regular sequence를 이루어 Koszul 복합체가 $\pi_0$에 집중되는 것, 곧 $\pi_1(\mathcal{O}_X)=0$인 것과 동치이다. Regular sequence가 아니면 Koszul homology가 $\pi_{\geq1}\mathcal{O}_X\neq0$을 낳아 $X$은 discrete하지 않다.
 
-**(3)** Base change 안정성은 유도 올곱이 여접 복합체를 pullback으로 보존하고 ([명제 11](#prop11)의 base change), pullback이 perfect 복합체의 Tor-amplitude를 넓히지 않으며 국소자유 sheaf의 rank를 보존하는 데서 따른다. 따라서 $L_{f'}\simeq g^\ast L_f$이 다시 Tor-amplitude $[-1,0]$이고 $\operatorname{vdim}$이 rank로 정해지므로 보존된다.
+**(3)** Base change 안정성은 유도 올곱이 여접 복합체를 pullback으로 보존하고 ([명제 11](#prop11)의 base change), pullback이 perfect 복합체의 Tor-amplitude를 넓히지 않으며 locally free sheaf의 rank를 보존하는 데서 따른다. 따라서 $L_{f'}\simeq g^\ast L_f$이 다시 Tor-amplitude $[-1,0]$이고 $\operatorname{vdim}$이 rank로 정해지므로 보존된다.
 :::
 
 [명제 13](#prop13)은 quasi-smooth morphism이 고전적 lci를 유도 세계로 정확히 확장한 것임을 밝힌다. 고전적 lci morphism은 regular sequence로 잘린 것이었고, quasi-smooth morphism은 그 regularity 조건을 떼어 낸 것, 곧 아무 절단의 유도 영점자리이다. Regular sequence이면 유도 영점자리가 discrete하여 고전적 영점자리와 일치하고, regular sequence가 아니면 Koszul homology가 $\pi_{\geq1}$로 살아남아 초과분을 기록한다. 이 초과분이야말로 유도 기하가 붙드는 정보이며, 그 자연스러운 무대가 유도 올곱이다.

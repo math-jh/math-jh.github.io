@@ -151,7 +151,7 @@ $$\Gamma(V,\mathcal{O}_X(D))=f_i^{-1}\Gamma(V,\mathcal{O}_X)$$
 
 이고, $f_i\in K(X)^\times$이므로 $g\mapsto gf_i$는 $\mathcal{O}_X(D)\vert_{U_i} \rightarrow \mathcal{O}_{U_i}$의 isomorphism이다. 즉 $\mathcal{O}_X(D)$는 rank $1$의 locally free sheaf이다.
 
-2번의 경우, $D'=\{(V_j,g_j)\}$라 하고 $D+D'$을 $\{(U_i\cap V_j, f_ig_j)\}$로 계산하면 1번에 의하여 세 sheaf는 $U_i\cap V_j$ 위에서 각각 $f_i^{-1}$, $g_j^{-1}$, $(f_ig_j)^{-1}$이 생성하는 자유 module이다. 곱셈 $\mathcal{O}_X(D)\otimes \mathcal{O}_X(D') \rightarrow \mathcal{O}_X(D+D')$은 generator를 generator로 보내므로 각 조각 위에서 isomorphism이고, 따라서 전체에서 isomorphism이다.
+2번의 경우, $D'=\{(V_j,g_j)\}$라 하고 $D+D'$을 $\{(U_i\cap V_j, f_ig_j)\}$로 계산하면 1번에 의하여 세 sheaf는 $U_i\cap V_j$ 위에서 각각 $f_i^{-1}$, $g_j^{-1}$, $(f_ig_j)^{-1}$이 생성하는 free module이다. 곱셈 $\mathcal{O}_X(D)\otimes \mathcal{O}_X(D') \rightarrow \mathcal{O}_X(D+D')$은 generator를 generator로 보내므로 각 조각 위에서 isomorphism이고, 따라서 전체에서 isomorphism이다.
 
 3번의 경우, $D=\divisor(h)$라면 $\mathcal{O}_X(D)=h^{-1}\mathcal{O}_X\cong \mathcal{O}_X$이다. 거꾸로 isomorphism $\psi:\mathcal{O}_X \rightarrow \mathcal{O}_X(D)$가 주어졌다 하고 $h=\psi(1)\in \Gamma(X,\mathcal{O}_X(D))\subseteq K(X)$라 하자. 그럼 $h$는 각각의 $U_i$ 위에서 $\mathcal{O}_X(D)$를 생성하므로 1번과 비교하면 $h$와 $f_i^{-1}$은 $\mathcal{O}_X^\times$의 section만큼 차이나며, 곧 $f_i/h^{-1}=hf_i$가 $U_i$ 위의 invertible section이다. 따라서 [정의 6](#def6)의 동치관계에 의하여 $\{(U_i,f_i)\}$와 $\{(X,h^{-1})\}$은 같은 Cartier divisor를 정의하여 $D=\divisor(h^{-1})$이다.
 :::

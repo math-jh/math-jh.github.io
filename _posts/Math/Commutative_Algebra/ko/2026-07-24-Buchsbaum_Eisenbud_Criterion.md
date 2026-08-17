@@ -15,7 +15,7 @@ drift_needed: true
 
 ---
 
-[§Fitting 아이디얼](/ko/math/commutative_algebra/fitting_ideals)의 끝에서 우리는 free resolution의 각 행렬에서 뽑은 소행렬식 ideal의 depth가 complex의 exactness 자체를 판정한다고 예고하였다. 이 판정이 Buchsbaum과 Eisenbud의 1973년 논문 "What makes a complex exact?"의 주정리이다. 이 글에서 우리는 free module 사이의 map의 rank를 소행렬식 ideal로 정의하고, McCoy의 정리와 Peskine--Szpiro의 acyclicity 보조정리를 준비한 뒤 이 판정법을 증명한다. 응용으로는 regular sequence의 Koszul complex의 exactness를 판정법으로 재확인하고, projective dimension이 $2$인 ideal의 free resolution이 한 행렬의 소행렬식들로 완전히 결정된다는 Hilbert--Burch 정리를 다룬다.
+[§Fitting 아이디얼](/ko/math/commutative_algebra/fitting_ideals)의 끝에서 우리는 free resolution의 각 행렬에서 뽑은 minor ideal의 depth가 complex의 exactness 자체를 판정한다고 예고하였다. 이 판정이 Buchsbaum과 Eisenbud의 1973년 논문 "What makes a complex exact?"의 주정리이다. 이 글에서 우리는 free module 사이의 map의 rank를 minor ideal로 정의하고, McCoy의 정리와 Peskine--Szpiro의 acyclicity 보조정리를 준비한 뒤 이 판정법을 증명한다. 응용으로는 regular sequence의 Koszul complex의 exactness를 판정법으로 재확인하고, projective dimension이 $2$인 ideal의 free resolution이 한 행렬의 minor들로 완전히 결정된다는 Hilbert--Burch 정리를 다룬다.
 
 ## 자유복합체와 rank
 
@@ -23,7 +23,7 @@ drift_needed: true
 
 $$F_\bullet:\quad 0 \rightarrow F_n\overset{\varphi_n}{\longrightarrow}F_{n-1}\overset{\varphi_{n-1}}{\longrightarrow}\cdots\overset{\varphi_2}{\longrightarrow}F_1\overset{\varphi_1}{\longrightarrow}F_0$$
 
-이다. 목표는 이 complex가 언제 exact인지, 곧 언제 각각의 $1\leq i\leq n$에서 $H_i(F_\bullet)=0$인지를 ([\[호몰로지 대수학\] §호몰로지, ⁋정의 2](/ko/math/homological_algebra/homology#def2)) $\varphi_i$들의 행렬 자료만으로 판정하는 것이다. 여기서 행렬 자료란 [§Fitting 아이디얼, ⁋정의 1](/ko/math/commutative_algebra/fitting_ideals#def1)에서 도입한 소행렬식 ideal $I_r(\varphi)$를 뜻한다. $\varphi:A^m \rightarrow A^n$을 표준 basis에 대한 $n\times m$ 행렬로 보면 ([\[다중선형대수학\] §행렬과 선형사상, ⁋정의 1](/ko/math/multilinear_algebra/matrices_and_linear_maps#def1)), $1\leq r\leq \min(m,n)$에서 $I_r(\varphi)$는 $r\times r$ 소행렬식들이 생성하는 ideal이고, $r\leq 0$이면 $I_r(\varphi)=A$, $r>\min(m,n)$이면 $I_r(\varphi)=0$이며, 언제나 $I_{r+1}(\varphi)\subseteq I_r(\varphi)$이다. ([§Fitting 아이디얼, ⁋정의 1](/ko/math/commutative_algebra/fitting_ideals#def1) 직후의 포함관계)
+이다. 목표는 이 complex가 언제 exact인지, 곧 언제 각각의 $1\leq i\leq n$에서 $H_i(F_\bullet)=0$인지를 ([\[호몰로지 대수학\] §호몰로지, ⁋정의 2](/ko/math/homological_algebra/homology#def2)) $\varphi_i$들의 행렬 자료만으로 판정하는 것이다. 여기서 행렬 자료란 [§Fitting 아이디얼, ⁋정의 1](/ko/math/commutative_algebra/fitting_ideals#def1)에서 도입한 minor ideal $I_r(\varphi)$를 뜻한다. $\varphi:A^m \rightarrow A^n$을 표준 basis에 대한 $n\times m$ 행렬로 보면 ([\[다중선형대수학\] §행렬과 선형사상, ⁋정의 1](/ko/math/multilinear_algebra/matrices_and_linear_maps#def1)), $1\leq r\leq \min(m,n)$에서 $I_r(\varphi)$는 $r\times r$ minor들이 생성하는 ideal이고, $r\leq 0$이면 $I_r(\varphi)=A$, $r>\min(m,n)$이면 $I_r(\varphi)=0$이며, 언제나 $I_{r+1}(\varphi)\subseteq I_r(\varphi)$이다. ([§Fitting 아이디얼, ⁋정의 1](/ko/math/commutative_algebra/fitting_ideals#def1) 직후의 포함관계)
 
 ::: 정의 1
 Free module 사이의 $A$-linear map $\varphi:A^m \rightarrow A^n$에 대하여, $\varphi$의 *rank*와 ideal $I(\varphi)$를 다음의 식
@@ -33,7 +33,7 @@ $$\rank\varphi=\max\{r\geq 0\mid I_r(\varphi)\neq 0\},\qquad I(\varphi)=I_{\rank
 으로 정의한다.
 :::
 
-$I_0(\varphi)=A\neq 0$이므로 $\rank\varphi$는 잘 정의되고 $0\leq \rank\varphi\leq\min(m,n)$이다. 특히 zero map은 rank $0$을 가지며, 이 때 $I(0)=I_0=A$이다. Field 위에서는 $r\times r$ 소행렬식이 전부 $0$인 것과 행렬의 보통의 rank가 $r$ 미만인 것이 동치이므로 이 정의는 선형대수학의 rank와 일치한다. 일반적인 ring 위에서 $\rank\varphi$는 말하자면 generic한 rank이고, ideal $I(\varphi)$는 이 rank가 어디에서 무너지는지를 기록하는 자료이다. 이 두 자료가 판정법의 전부가 된다.
+$I_0(\varphi)=A\neq 0$이므로 $\rank\varphi$는 잘 정의되고 $0\leq \rank\varphi\leq\min(m,n)$이다. 특히 zero map은 rank $0$을 가지며, 이 때 $I(0)=I_0=A$이다. Field 위에서는 $r\times r$ minor가 전부 $0$인 것과 행렬의 보통의 rank가 $r$ 미만인 것이 동치이므로 이 정의는 선형대수학의 rank와 일치한다. 일반적인 ring 위에서 $\rank\varphi$는 말하자면 generic한 rank이고, ideal $I(\varphi)$는 이 rank가 어디에서 무너지는지를 기록하는 자료이다. 이 두 자료가 판정법의 전부가 된다.
 
 첫 준비물은 unit 성분이 있는 행렬을 잘라내는 보조정리이다.
 
@@ -45,11 +45,11 @@ $$\begin{pmatrix}1&0\\0&\varphi'\end{pmatrix},\qquad \varphi':A^{m-1} \rightarro
 의 꼴로 만들 수 있으며, 이 때 모든 $r\geq 1$에 대하여 $I_r(\varphi)=I_{r-1}(\varphi')$이다.
 :::
 ::: 증명
-우선 basis 변경이 모든 $I_r$를 보존함을 확인한다. Basis 변경은 행렬 $X$를 invertible matrix $P,Q$에 대한 $PXQ$로 바꾼다. ([\[다중선형대수학\] §기저변환, ⁋명제 4](/ko/math/multilinear_algebra/change_of_basis#prop4), [\[다중선형대수학\] §기저변환, ⁋명제 5](/ko/math/multilinear_algebra/change_of_basis#prop5)) $PX$의 각 행은 $X$의 행들의 $A$-linear combination이므로, $PX$의 $r\times r$ 소행렬식을 행에 대한 multilinearity로 전개하면 $X$의 행 $r$개를 고른 행렬식들의 combination이 되고, 행이 겹치는 항은 alternating 성질로 소멸하므로 남는 항들은 $X$의 $r\times r$ 소행렬식들이다. 이는 [§Fitting 아이디얼, ⁋정리 3](/ko/math/commutative_algebra/fitting_ideals#thm3)의 증명에서 열에 대해 수행한 논증과 같다. 따라서 $I_r(PX)\subseteq I_r(X)$이고, $P$가 invertible이므로 반대 포함도 성립하며, 열에 대해서도 마찬가지이므로 $I_r(PXQ)=I_r(X)$이다.
+우선 basis 변경이 모든 $I_r$를 보존함을 확인한다. Basis 변경은 행렬 $X$를 invertible matrix $P,Q$에 대한 $PXQ$로 바꾼다. ([\[다중선형대수학\] §기저변환, ⁋명제 4](/ko/math/multilinear_algebra/change_of_basis#prop4), [\[다중선형대수학\] §기저변환, ⁋명제 5](/ko/math/multilinear_algebra/change_of_basis#prop5)) $PX$의 각 행은 $X$의 행들의 $A$-linear combination이므로, $PX$의 $r\times r$ minor를 행에 대한 multilinearity로 전개하면 $X$의 행 $r$개를 고른 행렬식들의 combination이 되고, 행이 겹치는 항은 alternating 성질로 소멸하므로 남는 항들은 $X$의 $r\times r$ minor들이다. 이는 [§Fitting 아이디얼, ⁋정리 3](/ko/math/commutative_algebra/fitting_ideals#thm3)의 증명에서 열에 대해 수행한 논증과 같다. 따라서 $I_r(PX)\subseteq I_r(X)$이고, $P$가 invertible이므로 반대 포함도 성립하며, 열에 대해서도 마찬가지이므로 $I_r(PXQ)=I_r(X)$이다.
 
 이제 unit 성분을 basis vector들의 재배열로 $(1,1)$ 자리로 옮기고, target의 첫 basis vector를 unit배로 바꾸어 그 성분을 $1$로 만들자. 첫 열의 나머지 성분들은 첫 행을 다른 행에 더하는 elementary 연산으로, 첫 행의 나머지 성분들은 첫 열을 다른 열에 더하는 elementary 연산으로 소거할 수 있고, 이들은 모두 invertible 행렬을 곱하는 것이므로 basis 변경이다. 결과가 주어진 block 꼴이다.
 
-마지막으로 block 행렬의 $r\times r$ 소행렬식을 분류하자. 첫 행과 첫 열을 모두 포함하는 소행렬식은 첫 행에 대해 전개하면 $\varphi'$의 $(r-1)\times(r-1)$ 소행렬식이고, 첫 행이나 첫 열 중 하나만 포함하는 것은 $0$인 행 또는 열을 가져 $0$이며, 둘 다 포함하지 않는 것은 $\varphi'$의 $r\times r$ 소행렬식이다. 따라서
+마지막으로 block 행렬의 $r\times r$ minor를 분류하자. 첫 행과 첫 열을 모두 포함하는 minor는 첫 행에 대해 전개하면 $\varphi'$의 $(r-1)\times(r-1)$ minor이고, 첫 행이나 첫 열 중 하나만 포함하는 것은 $0$인 행 또는 열을 가져 $0$이며, 둘 다 포함하지 않는 것은 $\varphi'$의 $r\times r$ minor이다. 따라서
 
 $$I_r(\varphi)=I_{r-1}(\varphi')+I_r(\varphi')=I_{r-1}(\varphi')$$
 
@@ -63,7 +63,7 @@ Noetherian local ring $(A,\mathfrak{m})$과 $\varphi:A^m \rightarrow A^n$, 그�
 $r$에 대한 귀납법을 사용한다. $I_r(\varphi)\subseteq I_1(\varphi)$이므로 $I_1(\varphi)=A$인데, $\varphi$의 모든 성분이 $\mathfrak{m}$에 속한다면 $I_1(\varphi)\subseteq\mathfrak{m}$이 되어 모순이므로 어떤 성분은 unit이다. [보조정리 2](#lem2)로 $\varphi$를 $\id_A\oplus\varphi'$의 꼴로 만들면 $I_{r-1}(\varphi')=I_r(\varphi)=A$이므로 귀납적 가정을 $\varphi'$에 적용할 수 있고, $r$번의 분할 끝에 $\varphi\cong\id_{A^r}\oplus\varphi''$과 $I_s(\varphi'')=I_{r+s}(\varphi)$를 얻는다.
 :::
 
-다음은 free module 사이 map의 injectivity를 소행렬식으로 판정하는 McCoy의 정리이다. Exactness 판정의 가장 낮은 단계, 곧 complex의 왼쪽 끝에서의 exactness가 이미 이 정리로 소행렬식의 언어로 옮겨진다.
+다음은 free module 사이 map의 injectivity를 minor로 판정하는 McCoy의 정리이다. Exactness 판정의 가장 낮은 단계, 곧 complex의 왼쪽 끝에서의 exactness가 이미 이 정리로 minor의 언어로 옮겨진다.
 
 ::: 정리 4 (McCoy)
 $A$-linear map $\varphi:A^m \rightarrow A^n$에 대하여, $\varphi$가 injective인 것은 $\ann_A(I_m(\varphi))=0$인 것과 동치이다.
@@ -71,7 +71,7 @@ $A$-linear map $\varphi:A^m \rightarrow A^n$에 대하여, $\varphi$가 injectiv
 ::: 증명
 우선 $\ann_A(I_m(\varphi))=0$이라 가정하고 $v\in\ker\varphi$가 주어졌다 하자. $\varphi$의 행렬에서 $m$개의 행을 골라 만든 임의의 $m\times m$ 부분행렬 $\psi$에 대하여, $\varphi v=0$의 해당 행들을 읽으면 $\psi v=0$이다. 수반행렬은 $\operatorname{adj}(\psi)\psi=(\det\psi)I$를 만족하므로 ([§Fitting 아이디얼, ⁋명제 6](/ko/math/commutative_algebra/fitting_ideals#prop6)에서와 같이 [\[다중선형대수학\] §행렬식, ⁋명제 9](/ko/math/multilinear_algebra/determinants#prop9)의 증명의 항등식), 왼쪽에 $\operatorname{adj}(\psi)$를 곱하면 $(\det\psi)v=0$이다. 이러한 $\det\psi$들이 $I_m(\varphi)$를 생성하므로 $v$의 각 좌표 $v_j$는 $I_m(\varphi)v_j=0$을 만족하고, 곧 $v_j\in\ann(I_m(\varphi))=0$이다. 따라서 $v=0$이고 $\varphi$는 injective이다.
 
-거꾸로 $0\neq a\in\ann(I_m(\varphi))$가 존재한다고 가정하고 $\ker\varphi\neq 0$을 보인다. 만일 $aI_1(\varphi)=0$이라면 $\varphi$의 모든 성분이 $a$를 죽이므로 $\varphi(ae_1)=0$인데, $ae_1$은 첫 좌표가 $a\neq 0$이라 $0$이 아니므로 끝난다. 이제 $aI_1(\varphi)\neq 0$이라 하고, $aI_r(\varphi)\neq 0$인 가장 큰 $r\geq 1$을 잡자. $a\in\ann(I_m(\varphi))$이므로 $r<m$이다. $a\delta\neq 0$인 $r\times r$ 소행렬식 $\delta$를 고정하고 그 행 집합을 $R$, 열 집합을 $C$라 하자. $r<m$이므로 $C$에 속하지 않는 열 $c_0$를 하나 택할 수 있다. $C\cup\{c_0\}$의 원소들을 $j_1<\cdots<j_{r+1}$로 나열하고, 각각의 $k$에 대하여 행 집합 $R$과 열 집합 $(C\cup\{c_0\})\setminus\{j_k\}$로 만든 $r\times r$ 소행렬식을 $\Delta_k$라 한 뒤
+거꾸로 $0\neq a\in\ann(I_m(\varphi))$가 존재한다고 가정하고 $\ker\varphi\neq 0$을 보인다. 만일 $aI_1(\varphi)=0$이라면 $\varphi$의 모든 성분이 $a$를 죽이므로 $\varphi(ae_1)=0$인데, $ae_1$은 첫 좌표가 $a\neq 0$이라 $0$이 아니므로 끝난다. 이제 $aI_1(\varphi)\neq 0$이라 하고, $aI_r(\varphi)\neq 0$인 가장 큰 $r\geq 1$을 잡자. $a\in\ann(I_m(\varphi))$이므로 $r<m$이다. $a\delta\neq 0$인 $r\times r$ minor $\delta$를 고정하고 그 행 집합을 $R$, 열 집합을 $C$라 하자. $r<m$이므로 $C$에 속하지 않는 열 $c_0$를 하나 택할 수 있다. $C\cup\{c_0\}$의 원소들을 $j_1<\cdots<j_{r+1}$로 나열하고, 각각의 $k$에 대하여 행 집합 $R$과 열 집합 $(C\cup\{c_0\})\setminus\{j_k\}$로 만든 $r\times r$ minor를 $\Delta_k$라 한 뒤
 
 $$v=\sum_{k=1}^{r+1}(-1)^ka\Delta_ke_{j_k}\in A^m$$
 
@@ -79,7 +79,7 @@ $$v=\sum_{k=1}^{r+1}(-1)^ka\Delta_ke_{j_k}\in A^m$$
 
 $$\det M_i=\sum_{k=1}^{r+1}(-1)^{(r+1)+k}\varphi_{ij_k}\Delta_k$$
 
-이므로 $(\varphi v)_i=\pm a\det M_i$이다. 만일 $i\in R$이라면 $M_i$는 같은 행을 두 번 가지므로 $\det M_i=0$이고, $i\notin R$이라면 $\det M_i$는 행의 순서를 재배열하면 $\varphi$의 $(r+1)\times(r+1)$ 소행렬식에 부호를 붙인 것이므로 $r$의 최대성에 의하여 $a\det M_i=0$이다. 따라서 $\varphi v=0$이고 $\varphi$는 injective가 아니다.
+이므로 $(\varphi v)_i=\pm a\det M_i$이다. 만일 $i\in R$이라면 $M_i$는 같은 행을 두 번 가지므로 $\det M_i=0$이고, $i\notin R$이라면 $\det M_i$는 행의 순서를 재배열하면 $\varphi$의 $(r+1)\times(r+1)$ minor에 부호를 붙인 것이므로 $r$의 최대성에 의하여 $a\det M_i=0$이다. 따라서 $\varphi v=0$이고 $\varphi$는 injective가 아니다.
 :::
 
 $m>n$인 경우 $I_m(\varphi)=0$이고 $\ann(0)=A\neq 0$이므로, 정리는 $A^m$이 $A^n$에 embed될 수 없다는 고전적인 사실을 포함한다. 앞으로 필요한 것은 대부분 다음의 특수한 경우이다. Local ring $(A,\mathfrak{m})$에서 $\varphi$가 injective인데 그 성분이 전부 $\mathfrak{m}$에 속한다면, $\mathfrak{m}$을 죽이는 $0$이 아닌 원소는 존재할 수 없다. 실제로 $s\mathfrak{m}=0$이고 $s\neq 0$이면 $\varphi(se_1)=s\cdot(\text{첫 열의 성분들})=0$이 되어 injectivity에 모순이기 때문이다.
@@ -95,12 +95,12 @@ Ring $A$ 위의 finite free complex $F_\bullet$과 $1\leq i\leq n$에 대하여 
 ::: 증명
 [보조정리 2](#lem2)를 $\varphi_i$에 적용하여 $F_i$의 basis $e_1',\ldots,e_{n_i}'$와 $F_{i-1}$의 basis $f_1',\ldots,f_{n_{i-1}}'$를 잡되, $\varphi_i(e_1')=f_1'$이고 $\varphi_i$가 $e_2',\ldots$의 span $F_i'$를 $f_2',\ldots$의 span $F_{i-1}'$로 보내도록 하자. 이 $F_i' \rightarrow F_{i-1}'$의 restriction이 $\varphi_i'$이며, 둘째 주장의 앞부분은 [보조정리 2](#lem2)가 준다.
 
-인접한 differential들이 이 분해와 호환됨을 본다. 임의의 $g\in F_{i+1}$에 대하여 $\varphi_{i+1}(g)=\alpha(g)e_1'+\beta(g)$ ($\beta(g)\in F_i'$)로 적으면, $\varphi_i\varphi_{i+1}=0$으로부터 $\alpha(g)f_1'+\varphi_i'(\beta(g))=0$인데 $f_1'$과 $F_{i-1}'$은 direct sum을 이루므로 $\alpha(g)=0$이고 $\varphi_i'(\beta(g))=0$이다. 곧 $\varphi_{i+1}$은 $F_i'$에 값을 가지며, 새 basis에 대한 행렬은 첫 행이 $0$이다. 마찬가지로 $\varphi_{i-1}(f_1')=\varphi_{i-1}\varphi_i(e_1')=0$이므로 $\varphi_{i-1}$의 새 basis에 대한 행렬은 첫 열이 $0$이고, $F_{i-1}'$로의 restriction이 잘 정의된다. 따라서 $F_\bullet$은 $Ae_1' \rightarrow Af_1'$ 부분과 나머지 부분의 direct sum으로 분해된다. $0$인 행 혹은 열을 지우는 것은 소행렬식 ideal을 바꾸지 않으므로 (그 행이나 열을 쓰는 소행렬식은 $0$이다) 둘째 주장의 나머지가 성립한다.
+인접한 differential들이 이 분해와 호환됨을 본다. 임의의 $g\in F_{i+1}$에 대하여 $\varphi_{i+1}(g)=\alpha(g)e_1'+\beta(g)$ ($\beta(g)\in F_i'$)로 적으면, $\varphi_i\varphi_{i+1}=0$으로부터 $\alpha(g)f_1'+\varphi_i'(\beta(g))=0$인데 $f_1'$과 $F_{i-1}'$은 direct sum을 이루므로 $\alpha(g)=0$이고 $\varphi_i'(\beta(g))=0$이다. 곧 $\varphi_{i+1}$은 $F_i'$에 값을 가지며, 새 basis에 대한 행렬은 첫 행이 $0$이다. 마찬가지로 $\varphi_{i-1}(f_1')=\varphi_{i-1}\varphi_i(e_1')=0$이므로 $\varphi_{i-1}$의 새 basis에 대한 행렬은 첫 열이 $0$이고, $F_{i-1}'$로의 restriction이 잘 정의된다. 따라서 $F_\bullet$은 $Ae_1' \rightarrow Af_1'$ 부분과 나머지 부분의 direct sum으로 분해된다. $0$인 행 혹은 열을 지우는 것은 minor ideal을 바꾸지 않으므로 (그 행이나 열을 쓰는 minor는 $0$이다) 둘째 주장의 나머지가 성립한다.
 
 첫째 주장의 경우, direct sum complex의 kernel과 image는 성분별로 갈라지므로 $H_j(F_\bullet)\cong H_j(D_\bullet)\oplus H_j(F_\bullet')$인데, $D_\bullet$의 differential이 isomorphism이라 $H_j(D_\bullet)=0$이기 때문이다.
 :::
 
-이 소거를 반복하면, local ring 위의 finite free complex는 homology와 소행렬식 자료를 보존하면서 모든 differential의 성분이 $\mathfrak{m}$에 속하는 *minimal*한 것으로 축소된다. 이 축소가 판정법 증명의 엔진이다.
+이 소거를 반복하면, local ring 위의 finite free complex는 homology와 minor 자료를 보존하면서 모든 differential의 성분이 $\mathfrak{m}$에 속하는 *minimal*한 것으로 축소된다. 이 축소가 판정법 증명의 엔진이다.
 
 ## Grade와 Peskine-Szpiro acyclicity
 
@@ -204,9 +204,9 @@ $$F_\bullet:\quad 0 \rightarrow F_n\overset{\varphi_n}{\longrightarrow}F_{n-1}\o
 2. 각각의 $1\leq i\leq n$에서 $\rank\varphi_i+\rank\varphi_{i+1}=n_i$이고 $\operatorname{grade}I(\varphi_i)\geq i$이다.
 :::
 ::: 증명
-정수들 $r_i=\sum_{k=i}^n(-1)^{k-i}n_k$ ($1\leq i\leq n+1$, 특히 $r_{n+1}=0$)를 도입하면 $r_i+r_{i+1}=n_i$이다. 조건 (2)의 rank 등식들은 모든 $i$에서 $\rank\varphi_i=r_i$인 것과 동치이다. 실제로 후자가 성립하면 rank 등식들은 $r_i+r_{i+1}=n_i$이고, 거꾸로 rank 등식들이 성립하면 $\rank\varphi_{n+1}=0=r_{n+1}$에서 시작하여 $\rank\varphi_i=n_i-\rank\varphi_{i+1}$로 내려오는 귀납으로 $\rank\varphi_i=r_i$를 얻기 때문이다. 또, 임의의 ring homomorphism $A \rightarrow B$에 대하여 $I_r(\varphi\otimes_AB)=I_r(\varphi)B$임을 기억해 두자. ([§Fitting 아이디얼, ⁋명제 5](/ko/math/commutative_algebra/fitting_ideals#prop5)의 증명) 특히 소행렬식 ideal은 localization과 교환한다.
+정수들 $r_i=\sum_{k=i}^n(-1)^{k-i}n_k$ ($1\leq i\leq n+1$, 특히 $r_{n+1}=0$)를 도입하면 $r_i+r_{i+1}=n_i$이다. 조건 (2)의 rank 등식들은 모든 $i$에서 $\rank\varphi_i=r_i$인 것과 동치이다. 실제로 후자가 성립하면 rank 등식들은 $r_i+r_{i+1}=n_i$이고, 거꾸로 rank 등식들이 성립하면 $\rank\varphi_{n+1}=0=r_{n+1}$에서 시작하여 $\rank\varphi_i=n_i-\rank\varphi_{i+1}$로 내려오는 귀납으로 $\rank\varphi_i=r_i$를 얻기 때문이다. 또, 임의의 ring homomorphism $A \rightarrow B$에 대하여 $I_r(\varphi\otimes_AB)=I_r(\varphi)B$임을 기억해 두자. ([§Fitting 아이디얼, ⁋명제 5](/ko/math/commutative_algebra/fitting_ideals#prop5)의 증명) 특히 minor ideal은 localization과 교환한다.
 
-[(1)$\Rightarrow$(2)] 우선 $\mathfrak{p}\in\Ass A$를 고정하고 $B=A_\mathfrak{p}$로 localize한 complex $(F_\bullet)_\mathfrak{p}$를 분석한다. Localization은 exact이므로 ([§국소화의 성질들, ⁋명제 2](/ko/math/commutative_algebra/properties_of_localization#prop2)) 이 complex는 exact이다. $\mathfrak{p}=\ann_A(z)$로 적으면 [보조정리 7](#lem7)의 증명의 localization 논증을 $(x)=0$인 경우에 적용하여 $\mathfrak{p}B=\ann_B(z/1)$이고 $z/1\neq 0$임을 알며, 곧 $\mathfrak{p}B\in\Ass B$이므로 $\mathfrak{p}B\cdot s=0$인 $s\neq 0$이 존재한다. 이제 degree $1$ 이상의 항들의 rank의 합이 $0$이 될 때까지 [보조정리 5](#lem5)의 소거를 반복할 수 있음을 주장한다. 현재 complex에서 degree $i\geq 1$의 항이 $0$이 아닌 가장 큰 $i$를 잡으면, $i$의 최대성과 exactness에 의하여 $i$번째 differential은 injective이다. 만일 그 성분이 전부 $\mathfrak{p}B$에 속한다면 첫 basis vector $g_1$에 대하여 $s g_1\neq 0$이 kernel에 속하게 되어 모순이므로 ([정리 4](#thm4) 직후의 관찰) 어떤 성분은 unit이고, [보조정리 5](#lem5)로 소거하면 rank의 합이 줄어든 exact complex를 얻는다. 위치 $i$에서 수행된 소거의 횟수를 $t_i$라 하면, 최종 상태에서 degree $1$ 이상의 항이 모두 $0$이므로 $1\leq i\leq n$에서 $n_i=t_i+t_{i+1}$ ($t_{n+1}=0$)이고, 이를 풀면 $t_i=r_i$이다. 한편 [보조정리 5](#lem5)의 둘째 결과를 소거마다 추적하면 $I_r(\varphi_i)_\mathfrak{p}$는 $r\leq t_i$에서 $B$와 같고 $r>t_i$에서 최종 상태의 zero map의 소행렬식 ideal이 되어 $0$이다. 곧 임의의 $\mathfrak{p}\in\Ass A$에서
+[(1)$\Rightarrow$(2)] 우선 $\mathfrak{p}\in\Ass A$를 고정하고 $B=A_\mathfrak{p}$로 localize한 complex $(F_\bullet)_\mathfrak{p}$를 분석한다. Localization은 exact이므로 ([§국소화의 성질들, ⁋명제 2](/ko/math/commutative_algebra/properties_of_localization#prop2)) 이 complex는 exact이다. $\mathfrak{p}=\ann_A(z)$로 적으면 [보조정리 7](#lem7)의 증명의 localization 논증을 $(x)=0$인 경우에 적용하여 $\mathfrak{p}B=\ann_B(z/1)$이고 $z/1\neq 0$임을 알며, 곧 $\mathfrak{p}B\in\Ass B$이므로 $\mathfrak{p}B\cdot s=0$인 $s\neq 0$이 존재한다. 이제 degree $1$ 이상의 항들의 rank의 합이 $0$이 될 때까지 [보조정리 5](#lem5)의 소거를 반복할 수 있음을 주장한다. 현재 complex에서 degree $i\geq 1$의 항이 $0$이 아닌 가장 큰 $i$를 잡으면, $i$의 최대성과 exactness에 의하여 $i$번째 differential은 injective이다. 만일 그 성분이 전부 $\mathfrak{p}B$에 속한다면 첫 basis vector $g_1$에 대하여 $s g_1\neq 0$이 kernel에 속하게 되어 모순이므로 ([정리 4](#thm4) 직후의 관찰) 어떤 성분은 unit이고, [보조정리 5](#lem5)로 소거하면 rank의 합이 줄어든 exact complex를 얻는다. 위치 $i$에서 수행된 소거의 횟수를 $t_i$라 하면, 최종 상태에서 degree $1$ 이상의 항이 모두 $0$이므로 $1\leq i\leq n$에서 $n_i=t_i+t_{i+1}$ ($t_{n+1}=0$)이고, 이를 풀면 $t_i=r_i$이다. 한편 [보조정리 5](#lem5)의 둘째 결과를 소거마다 추적하면 $I_r(\varphi_i)_\mathfrak{p}$는 $r\leq t_i$에서 $B$와 같고 $r>t_i$에서 최종 상태의 zero map의 minor ideal이 되어 $0$이다. 곧 임의의 $\mathfrak{p}\in\Ass A$에서
 
 $$I_{r_i}(\varphi_i)_\mathfrak{p}=A_\mathfrak{p},\qquad I_{r_i+1}(\varphi_i)_\mathfrak{p}=0$$
 
@@ -230,7 +230,7 @@ $$\operatorname{grade}I(\varphi_i)=1+\operatorname{grade}_{\overline{A}}(I(\varp
 
 [(2)$\Rightarrow$(1)] 우선 조건 (2)가 임의의 prime $\mathfrak{q}$에서의 localization에서 보존됨을 관찰한다. $I_{r_i+1}(\varphi_i)=0$은 localize되어도 $0$이고, $I_{r_i}(\varphi_i)$는 $A$이거나 (grade 조건에 의하여) non-zerodivisor $y$를 포함하는데 후자의 경우 $sy=0$인 $s\notin\mathfrak{q}$는 있을 수 없어 $y/1\neq 0$이므로, 어느 쪽이든 $I_{r_i}(\varphi_i)_\mathfrak{q}\neq 0$이다. 곧 $\rank_{A_\mathfrak{q}}(\varphi_i)_\mathfrak{q}=r_i$이고 rank 등식들이 유지된다. Grade 조건은 [따름정리 8](#cor8)의 둘째 결과가 준다. 한편 localization이 exact이므로 $H_i(F_\bullet)_\mathfrak{m}\cong H_i((F_\bullet)_\mathfrak{m})$이고, [§국소화의 성질들, ⁋보조정리 3](/ko/math/commutative_algebra/properties_of_localization#lem3)에 의하여 $H_i(F_\bullet)=0$은 모든 maximal ideal $\mathfrak{m}$에서 $H_i((F_\bullet)_\mathfrak{m})=0$인 것과 동치이다. 따라서 $A$가 Noetherian local ring인 경우만 증명하면 충분하다.
 
-이제 $(A,\mathfrak{m})$이 local이라 하고 $\dim A$에 대한 귀납법을 사용한다 ($\dim A$는 [§차원, ⁋정리 7](/ko/math/commutative_algebra/Krull_dimension#thm7)에 의하여 유한하다). 어떤 $\varphi_i$가 unit 성분을 갖는 한 [보조정리 5](#lem5)로 소거하자. 소거는 homology를 보존하고, 조건 (2)도 보존한다. 실제로 소거된 $\varphi_i'$는 $I_r(\varphi_i')=I_{r+1}(\varphi_i)$를 만족하므로 $\rank\varphi_i'=r_i-1$이고 $I(\varphi_i')=I_{r_i}(\varphi_i)=I(\varphi_i)$이며, 나머지 map들의 소행렬식 자료는 그대로이므로, 새 complex는 $n_i,n_{i-1}$이 $1$씩 줄어든 rank 등식들과 같은 grade 조건들을 만족한다. 이 소거가 끝난 complex를 $G_\bullet$ (differential $\psi_j$)라 하면 $G_\bullet$은 minimal, 곧 $0$이 아닌 모든 $\psi_j$의 성분이 $\mathfrak{m}$에 속한다.
+이제 $(A,\mathfrak{m})$이 local이라 하고 $\dim A$에 대한 귀납법을 사용한다 ($\dim A$는 [§차원, ⁋정리 7](/ko/math/commutative_algebra/Krull_dimension#thm7)에 의하여 유한하다). 어떤 $\varphi_i$가 unit 성분을 갖는 한 [보조정리 5](#lem5)로 소거하자. 소거는 homology를 보존하고, 조건 (2)도 보존한다. 실제로 소거된 $\varphi_i'$는 $I_r(\varphi_i')=I_{r+1}(\varphi_i)$를 만족하므로 $\rank\varphi_i'=r_i-1$이고 $I(\varphi_i')=I_{r_i}(\varphi_i)=I(\varphi_i)$이며, 나머지 map들의 minor 자료는 그대로이므로, 새 complex는 $n_i,n_{i-1}$이 $1$씩 줄어든 rank 등식들과 같은 grade 조건들을 만족한다. 이 소거가 끝난 complex를 $G_\bullet$ (differential $\psi_j$)라 하면 $G_\bullet$은 minimal, 곧 $0$이 아닌 모든 $\psi_j$의 성분이 $\mathfrak{m}$에 속한다.
 
 만일 모든 $j\geq 1$에서 $G_j=0$이라면 $H_j(F_\bullet)\cong H_j(G_\bullet)=0$이므로 끝난다. 아니라면 $G_e\neq 0$인 가장 큰 $e\geq 1$을 잡자. $G_{e+1}=0$이므로 rank 등식에 의하여 $\rank\psi_e$는 free module $G_e$의 rank와 같고, $G_e\neq 0$이라 이 값은 $1$ 이상이다. 특히 $\psi_e\neq 0$이므로 minimality에 의하여 $I(\psi_e)\subseteq I_1(\psi_e)\subseteq\mathfrak{m}$은 proper이다. 그럼 grade 조건과 [정의 6](#def6) 직후의 관찰로
 
@@ -241,7 +241,7 @@ $$e\leq\operatorname{grade}I(\psi_e)\leq\operatorname{depth}A$$
 마지막으로 [보조정리 9](#lem9)를 complex $0 \rightarrow G_n \rightarrow\cdots \rightarrow G_1 \rightarrow G_0$에 적용한다. $0$이 아닌 $G_j$는 free module $A^{k_j}$ ($k_j\geq 1$)인데, 원소들 $x_1,\ldots,x_d$가 $A$-sequence인 것과 $A^{k_j}$-sequence인 것은 곱셈의 injectivity와 quotient의 비소멸이 성분별로 판정되므로 동치이고, 따라서 $\operatorname{depth}A^{k_j}=\operatorname{depth}A\geq e\geq j$가 $j\leq e$에서 성립하며 $j>e$에서는 $G_j=0$이라 depth 조건이 공허하게 성립한다. 각 homology는 $0$이거나 depth $0$임을 보였으므로 [보조정리 9](#lem9)에 의하여 모든 $j\geq 1$에서 $H_j(G_\bullet)=0$이고, 곧 $F_\bullet$은 exact이다.
 :::
 
-이 정리의 조건 (2)는 온전히 행렬들의 소행렬식으로 표현된다. Rank 등식은 exact complex에서 기대되는 덧셈 관계이고, grade 조건은 rank가 무너지는 곳이 complex의 왼쪽으로 갈수록, 정확히 위치 $i$만큼 깊어야 한다는 요구이다. 조건에 등장하는 ideal이 $A$ 전체가 되는 경우는 grade를 $\infty$로 약속하였으므로 자동으로 통과되는데, 증명에서 본 것처럼 이는 해당 위치에서 complex가 국소적으로 분할되는 상황에 대응한다.
+이 정리의 조건 (2)는 온전히 행렬들의 minor로 표현된다. Rank 등식은 exact complex에서 기대되는 덧셈 관계이고, grade 조건은 rank가 무너지는 곳이 complex의 왼쪽으로 갈수록, 정확히 위치 $i$만큼 깊어야 한다는 요구이다. 조건에 등장하는 ideal이 $A$ 전체가 되는 경우는 grade를 $\infty$로 약속하였으므로 자동으로 통과되는데, 증명에서 본 것처럼 이는 해당 위치에서 complex가 국소적으로 분할되는 상황에 대응한다.
 
 첫 응용으로 regular sequence의 Koszul complex를 판정법에 통과시켜 본다.
 
@@ -253,7 +253,7 @@ $K_i=\bigwedge\nolimits^iA^n$은 rank $\binom{n}{i}$의 free module이고, diffe
 
 우선 각각의 $j$에 대하여 $x_j^{c_i}\in I_{c_i}(d_i)$임을 본다. 행을 $j\notin K$인 $K$들로, 열을 $j\in J$인 $J$들로 제한하면 대응 $K\mapsto K\cup\{j\}$가 행과 열의 일대일대응을 주고 그 크기는 $c_i$이다. 이 부분행렬에서 대각 성분 $(K,K\cup\{j\})$는 $\pm x_j$이며, 비대각 성분 $(K,J)$는 $e_K$가 $\dd{(e_J)}$에 나타나려면 $K=J\setminus\{l\}$이어야 하는데 $j\notin K$와 $j\in J$로부터 $l=j$, 곧 $J=K\cup\{j\}$가 강제되므로 $0$이다. 따라서 이 부분행렬은 대각행렬이고 그 행렬식은 $\pm x_j^{c_i}$이다.
 
-다음으로 $\rank d_i=c_i$임을 본다. 변수들 $t_1,\ldots,t_n$에 대한 polynomial ring $\mathbb{Z}[t_1,\ldots,t_n]$은 Noetherian이고 ([§기본 개념들, ⁋정리 12](/ko/math/commutative_algebra/basic_notions#thm12)) $t_1,\ldots,t_n$은 그 안의 regular sequence이므로 (각 단계의 quotient가 다시 polynomial ring이라 integral domain이다) [§코쥴 복합체, ⁋정리 7](/ko/math/commutative_algebra/koszul_complex#thm7)에 의하여 $K(t_1,\ldots,t_n)$은 degree $1$ 이상에서 exact이다. [정리 10](#thm10)의 (1)$\Rightarrow$(2)의 rank 결론을 위에서부터 풀면 $\rank d_n^{(t)}=\binom{n}{n}=1=c_n$이고 내려오면서 $\rank d_i^{(t)}=\binom{n}{i}-c_{i+1}=c_i$이므로, $d_i^{(t)}$의 모든 $(c_i+1)\times(c_i+1)$ 소행렬식은 $\mathbb{Z}[t]$에서 $0$이다. Ring homomorphism $\mathbb{Z}[t] \rightarrow A$, $t_j\mapsto x_j$가 두 Koszul complex의 행렬들을 대응시키므로 ([§Fitting 아이디얼, ⁋명제 5](/ko/math/commutative_algebra/fitting_ideals#prop5)의 증명) $I_{c_i+1}(d_i)=0$이고, 한편 $x_1$이 non-zerodivisor라 $x_1^{c_i}\neq 0$이므로 $I_{c_i}(d_i)\neq 0$이다. 따라서 $\rank d_i=c_i$이고 rank 등식들이 성립한다.
+다음으로 $\rank d_i=c_i$임을 본다. 변수들 $t_1,\ldots,t_n$에 대한 polynomial ring $\mathbb{Z}[t_1,\ldots,t_n]$은 Noetherian이고 ([§기본 개념들, ⁋정리 12](/ko/math/commutative_algebra/basic_notions#thm12)) $t_1,\ldots,t_n$은 그 안의 regular sequence이므로 (각 단계의 quotient가 다시 polynomial ring이라 integral domain이다) [§코쥴 복합체, ⁋정리 7](/ko/math/commutative_algebra/koszul_complex#thm7)에 의하여 $K(t_1,\ldots,t_n)$은 degree $1$ 이상에서 exact이다. [정리 10](#thm10)의 (1)$\Rightarrow$(2)의 rank 결론을 위에서부터 풀면 $\rank d_n^{(t)}=\binom{n}{n}=1=c_n$이고 내려오면서 $\rank d_i^{(t)}=\binom{n}{i}-c_{i+1}=c_i$이므로, $d_i^{(t)}$의 모든 $(c_i+1)\times(c_i+1)$ minor는 $\mathbb{Z}[t]$에서 $0$이다. Ring homomorphism $\mathbb{Z}[t] \rightarrow A$, $t_j\mapsto x_j$가 두 Koszul complex의 행렬들을 대응시키므로 ([§Fitting 아이디얼, ⁋명제 5](/ko/math/commutative_algebra/fitting_ideals#prop5)의 증명) $I_{c_i+1}(d_i)=0$이고, 한편 $x_1$이 non-zerodivisor라 $x_1^{c_i}\neq 0$이므로 $I_{c_i}(d_i)\neq 0$이다. 따라서 $\rank d_i=c_i$이고 rank 등식들이 성립한다.
 
 마지막으로 grade 조건을 본다. $I(d_i)=I_{c_i}(d_i)\subseteq I_1(d_i)\subseteq(x_1,\ldots,x_n)$은 proper이고, $\mathfrak{p}\in V(I(d_i))$이면 $x_j^{c_i}\in\mathfrak{p}$로부터 모든 $x_j$가 $\mathfrak{p}$에 속하므로 $V(I(d_i))\subseteq V((x_1,\ldots,x_n))$이다. 그럼 [보조정리 7](#lem7)에 의하여
 
@@ -264,7 +264,7 @@ $$\operatorname{grade}I(d_i)\geq\operatorname{grade}(x_1,\ldots,x_n)\geq n\geq i
 
 ## Hilbert-Burch 정리
 
-판정법의 대표적인 응용은 projective dimension이 $2$인 cyclic module의 free resolution이 완전히 결정된다는 것이다. 준비로 기호를 하나 도입한다. $A$-linear map $\varphi:A^{n-1} \rightarrow A^n$이 주어지면, $\varphi$의 행렬에서 $i$번째 행을 지운 $(n-1)\times(n-1)$ 소행렬식을 $\delta_i$라 하고
+판정법의 대표적인 응용은 projective dimension이 $2$인 cyclic module의 free resolution이 완전히 결정된다는 것이다. 준비로 기호를 하나 도입한다. $A$-linear map $\varphi:A^{n-1} \rightarrow A^n$이 주어지면, $\varphi$의 행렬에서 $i$번째 행을 지운 $(n-1)\times(n-1)$ minor를 $\delta_i$라 하고
 
 $$\Delta:A^n \rightarrow A;\qquad \Delta(e_i)=(-1)^{i+1}\delta_i$$
 
@@ -307,7 +307,7 @@ $$I=\im\psi=a\cdot\im\Delta=aJ$$
 이다. 마지막으로 $a$가 $A$-regular임을 본다. $\operatorname{grade}(I)\geq 1$이므로 $I$는 non-zerodivisor $w'$를 포함하고, $w'=aj$ ($j\in J$)로 적으면 $ba=0$인 $b$에 대하여 $bw'=baj=0$이므로 $b=0$이다.
 :::
 
-이 정리에서 map $\varphi$는 resolution의 <em-ko>마지막</em-ko> 행렬이고, ideal $I$의 generator들은 그 행렬의 maximal 소행렬식들에 공통 인자 $a$를 곱한 것들로 강제된다. 곧 pd $2$의 cyclic module의 resolution은 행렬 하나로 완전히 재구성된다. 거꾸로의 방향은 grade $2$ 조건만 갖추면 어떤 행렬에서 출발하든 이러한 resolution이 실제로 만들어진다는 생성 장치를 준다. 다음 예시에서 이 장치를 돌려본다.
+이 정리에서 map $\varphi$는 resolution의 <em-ko>마지막</em-ko> 행렬이고, ideal $I$의 generator들은 그 행렬의 maximal minor들에 공통 인자 $a$를 곱한 것들로 강제된다. 곧 pd $2$의 cyclic module의 resolution은 행렬 하나로 완전히 재구성된다. 거꾸로의 방향은 grade $2$ 조건만 갖추면 어떤 행렬에서 출발하든 이러한 resolution이 실제로 만들어진다는 생성 장치를 준다. 다음 예시에서 이 장치를 돌려본다.
 
 ::: 예시 13
 Field $\mathbb{K}$에 대하여 $A=\mathbb{K}[[\x,\y,\z]]$와 ideal $I=(\y\z,\x\z,\x\y)$를 생각하자. $V(I)$는 세 좌표축의 합집합이다. [§Depth, ⁋예시 11](/ko/math/commutative_algebra/depth#ex11)에서 본 것처럼 $A$는 차원 $3$의 Noetherian local ring이고, maximal ideal $(\x,\y,\z)$가 정확히 $3$개의 원소로 생성되므로 regular local ring이다. ([§차원, ⁋정의 12](/ko/math/commutative_algebra/Krull_dimension#def12))
@@ -316,7 +316,7 @@ $A$-linear map $\varphi:A^2 \rightarrow A^3$을 행렬
 
 $$\varphi=\begin{pmatrix}\x&0\\-\y&\y\\0&-\z\end{pmatrix}$$
 
-로 정의하자. 세 개의 $2\times 2$ 소행렬식은 행 $\{1,2\}$에서 $\x\y$, 행 $\{1,3\}$에서 $-\x\z$, 행 $\{2,3\}$에서 $\y\z$이므로 $I_2(\varphi)=I$이고, $\delta_1=\y\z$, $\delta_2=-\x\z$, $\delta_3=\x\y$이므로
+로 정의하자. 세 개의 $2\times 2$ minor는 행 $\{1,2\}$에서 $\x\y$, 행 $\{1,3\}$에서 $-\x\z$, 행 $\{2,3\}$에서 $\y\z$이므로 $I_2(\varphi)=I$이고, $\delta_1=\y\z$, $\delta_2=-\x\z$, $\delta_3=\x\y$이므로
 
 $$\Delta=(\y\z,\ \x\z,\ \x\y)$$
 

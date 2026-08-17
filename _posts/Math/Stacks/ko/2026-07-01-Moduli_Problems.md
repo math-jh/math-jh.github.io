@@ -16,7 +16,7 @@ published: false
 
 ---
 
-기하학의 많은 문제는 "주어진 종류의 대상을 모두 분류하라"는 형태를 띤다. 종수 $g$의 smooth projective curve, 고정된 variety 위의 일정한 rank의 vector bundle, projective space 안의 일정한 Hilbert 다항식을 가진 부분스킴 따위가 그러하다. 이러한 분류 문제에서 우리가 바라는 것은 단순히 isomorphism class들의 집합을 나열하는 일이 아니라, 그 isomorphism class들이 어떻게 **연속적으로 변형되는지**를 담는 기하적 대상, 곧 *moduli space*를 구성하는 일이다. 한 점이 한 isomorphism class에 대응하고, 그 점들이 모인 공간의 기하가 변형의 기하를 반영하기를 우리는 원한다.
+기하학의 많은 문제는 "주어진 종류의 대상을 모두 분류하라"는 형태를 띤다. 종수 $g$의 smooth projective curve, 고정된 variety 위의 일정한 rank의 vector bundle, projective space 안의 일정한 Hilbert 다항식을 가진 subscheme 따위가 그러하다. 이러한 분류 문제에서 우리가 바라는 것은 단순히 isomorphism class들의 집합을 나열하는 일이 아니라, 그 isomorphism class들이 어떻게 **연속적으로 변형되는지**를 담는 기하적 대상, 곧 *moduli space*를 구성하는 일이다. 한 점이 한 isomorphism class에 대응하고, 그 점들이 모인 공간의 기하가 변형의 기하를 반영하기를 우리는 원한다.
 
 이 글에서는 분류 문제를 functor의 언어로 정식화하고, 그 functor를 표현하는 이상적인 답인 fine moduli space의 정의와 그것이 실제로 존재하는 비자명한 예들을 살펴본다. 이어서 분류 대상이 비자명한 automorphism을 가질 때 fine moduli가 어떻게 원리적으로 막히는지를 분석하고, 그 장애를 우회하는 두 가지 길, 곧 automorphism을 기억하는 moduli stack과 isomorphism class만을 남기는 coarse moduli space를 도입한다. 마지막으로 타원곡선의 moduli $\mathcal{M}_{1, 1}$을 중심 예로 삼아, 같은 분류 문제가 stack 수준에서는 보편 족을 가지지만 coarse 공간인 $j$-직선 위에서는 가지지 못하는 까닭을 정밀하게 설명한다.
 

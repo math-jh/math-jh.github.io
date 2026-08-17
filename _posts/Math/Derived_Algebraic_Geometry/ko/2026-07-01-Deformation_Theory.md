@@ -16,7 +16,7 @@ published: false
 
 ---
 
-대수기하의 한 대상이 주어졌을 때, 그것을 무한소만큼 흔들었을 때 무엇이 일어나는지를 묻는 것은 자연스럽다. Singular variety가 인접한 smooth variety의 극한인지, moduli space의 한 점에서 tangent space와 그 위의 곡률이 무엇인지, 주어진 family를 한 단계 더 두꺼운 base 위로 연장할 수 있는지 같은 질문들이 모두 이 범주에 속한다. 이러한 질문은 모두 *무한소 변형<sub>infinitesimal deformation</sub>*의 분류와, 그 변형을 더 두꺼운 base 위로 연장하는 데 따르는 *장애<sub>obstruction</sub>*의 계산으로 환원된다.
+대수기하의 한 대상이 주어졌을 때, 그것을 무한소만큼 흔들었을 때 무엇이 일어나는지를 묻는 것은 자연스럽다. Singular variety가 인접한 smooth variety의 극한인지, moduli space의 한 점에서 tangent space와 그 위의 곡률이 무엇인지, 주어진 family를 한 단계 더 두꺼운 base 위로 연장할 수 있는지 같은 질문들이 모두 이 범주에 속한다. 이러한 질문은 모두 *infinitesimal deformation<sub>infinitesimal deformation</sub>*의 분류와, 그 변형을 더 두꺼운 base 위로 연장하는 데 따르는 *장애<sub>obstruction</sub>*의 계산으로 환원된다.
 
 우리는 이 글에서 commutative ring $A$ 위의 algebra $B$, 즉 affine scheme $\Spec B \rightarrow \Spec A$를 변형의 대상으로 삼는다. 변형의 무한소 방향은 Kähler differential $\Omega_{B/A}$가 어느 정도까지 통제하지만, $\Omega$만으로는 두 가지 지점에서 부족하다. 첫째, [\[다중선형대수학\] §미분가군, ⁋명제 14](/ko/math/multilinear_algebra/differential_modules#prop14)의 conormal exact sequence는 오른쪽 끝에서만 exact이어서, 변형을 막는 relation들의 정보가 그 왼쪽 kernel에 숨어 보이지 않는다. 둘째, $\Omega$는 일차 정보만 담으므로 변형의 연장 가능성, 곧 장애를 측정하지 못한다. 이 두 부족분을 메우는 것이 여접 복합체이며, 그 가장 거친 근사인 naive 여접 복합체의 $H_0, H_1$이 변형이론에서 정확히 무엇을 재는지가 이 글의 중심 주제이다.
 
@@ -34,7 +34,7 @@ $$0\longrightarrow M\longrightarrow A'\overset{\pi}{\longrightarrow}A\longrighta
 으로 적는다.
 :::
 
-조건 $M^2=0$은 $M$ 위의 $A'$-action이 $M$의 원소를 곱하는 부분을 모두 죽인다는 뜻이므로, $M$의 $A'$-module 구조가 $A$-module 구조로 내려온다는 마지막 조건은 자동으로 따라온다. 기하적으로 $\Spec A\hookrightarrow\Spec A'$는 정의 ideal의 제곱이 $0$인 closed immersion, 곧 첫 번째 무한소 이웃 수준의 두꺼워짐이다. 이러한 확대는 [\[스킴\] §매끄러운 사상과 에탈 사상, ⁋정리 16](/ko/math/scheme_theory/smooth_and_etale_morphisms#thm16)에서 무한소 lifting 판정의 무대로 이미 등장하였다.
+조건 $M^2=0$은 $M$ 위의 $A'$-action이 $M$의 원소를 곱하는 부분을 모두 죽인다는 뜻이므로, $M$의 $A'$-module 구조가 $A$-module 구조로 내려온다는 마지막 조건은 자동으로 따라온다. 기하적으로 $\Spec A\hookrightarrow\Spec A'$는 defining ideal의 제곱이 $0$인 closed immersion, 곧 첫 번째 무한소 이웃 수준의 두꺼워짐이다. 이러한 확대는 [\[스킴\] §매끄러운 사상과 에탈 사상, ⁋정리 16](/ko/math/scheme_theory/smooth_and_etale_morphisms#thm16)에서 infinitesimal lifting 판정의 무대로 이미 등장하였다.
 
 ::: 예시 2
 가장 기본적인 square-zero extension은 $M=A$에 대한 *trivial extension*
@@ -85,7 +85,7 @@ $$\sum_jA_jF_j=\sum_ja_jf_j+\epsilon\Bigl(\sum_ja_jg_j-\sum_jc_jf_j\Bigr)=0$$
 이므로 syzygy $(a_j)$가 $(F_j)$의 syzygy로 들어올려진다.
 :::
 
-이 명제는 flat한 first-order deformation을 매우 구체적으로 기술한다. 곧 flatness는 정확히 "원래 방정식들 사이의 모든 관계가 흔들린 방정식들 사이의 관계로 살아남는다"는 조건이며, 이것이 [\[스킴\] §매끄러운 사상과 에탈 사상, ⁋정리 16](/ko/math/scheme_theory/smooth_and_etale_morphisms#thm16)에서 본 무한소 lifting의 대수적 핵심이다. 한 가지 관찰을 덧붙이면, $\sum_ja_jf_j=0$인 syzygy에 대하여 조건 $\sum_ja_jg_j\in I$는 $B$ 위에서 $\sum_j\overline{a_j}\overline{g_j}=0$으로 적힌다. 따라서 대응 $\overline{f_j}\mapsto\overline{g_j}$는 $B$-module homomorphism
+이 명제는 flat한 first-order deformation을 매우 구체적으로 기술한다. 곧 flatness는 정확히 "원래 방정식들 사이의 모든 관계가 흔들린 방정식들 사이의 관계로 살아남는다"는 조건이며, 이것이 [\[스킴\] §매끄러운 사상과 에탈 사상, ⁋정리 16](/ko/math/scheme_theory/smooth_and_etale_morphisms#thm16)에서 본 infinitesimal lifting의 대수적 핵심이다. 한 가지 관찰을 덧붙이면, $\sum_ja_jf_j=0$인 syzygy에 대하여 조건 $\sum_ja_jg_j\in I$는 $B$ 위에서 $\sum_j\overline{a_j}\overline{g_j}=0$으로 적힌다. 따라서 대응 $\overline{f_j}\mapsto\overline{g_j}$는 $B$-module homomorphism
 
 $$\varphi:I/I^2\longrightarrow B$$
 
@@ -199,7 +199,7 @@ $$0\longrightarrow I/I^2\overset{\overline{d}}{\longrightarrow}\Omega_{P/k}\otim
 이 결론은 [\[스킴\] §매끄러운 사상과 에탈 사상, ⁋정리 16](/ko/math/scheme_theory/smooth_and_etale_morphisms#thm16)과 정확히 일치한다. Smooth는 모든 square-zero 확대에 대한 lifting의 존재($T^2=0$, unobstructed)와 그 lifting의 일대일적 통제($T^1=0$, 동형 유일)에 해당하기 때문이다.
 :::
 
-조금 더 약한 가정인 *local complete intersection*에서도 장애는 사라진다. $B=P/I$에서 $I$가 국소적으로 regular sequence로 생성되면 완전한 여접 복합체 $L_{B/k}$가 $[0,1]$ 두 degree에 projective module로 집중되어, 그 dual의 둘째 cohomology가 자동으로 $0$이 되기 때문이다. 곧 $T^2(B/k,M)=0$이고 lci singular point는 항상 *unobstructed<sub>장애 없음</sub>*이다. 다만 lci라고 해서 $H_1(\operatorname{NL}_{B/k})$이 소멸하는 것은 아니며, 반대로 아래 [예시 11](#ex11)처럼 singular한 lci가 $H_1(\operatorname{NL}_{B/k})=0$을 만족하기도 한다. 곧 $H_1(\operatorname{NL})$의 소멸만으로는 lci 여부가 판정되지 않으며, smoothness는 $H_1(\operatorname{NL}_{B/k})=0$과 $\Omega_{B/k}$의 국소자유성이 함께 성립하는 것으로 특징지어진다.
+조금 더 약한 가정인 *local complete intersection*에서도 장애는 사라진다. $B=P/I$에서 $I$가 국소적으로 regular sequence로 생성되면 완전한 여접 복합체 $L_{B/k}$가 $[0,1]$ 두 degree에 projective module로 집중되어, 그 dual의 둘째 cohomology가 자동으로 $0$이 되기 때문이다. 곧 $T^2(B/k,M)=0$이고 lci singular point는 항상 *unobstructed<sub>장애 없음</sub>*이다. 다만 lci라고 해서 $H_1(\operatorname{NL}_{B/k})$이 소멸하는 것은 아니며, 반대로 아래 [예시 11](#ex11)처럼 singular한 lci가 $H_1(\operatorname{NL}_{B/k})=0$을 만족하기도 한다. 곧 $H_1(\operatorname{NL})$의 소멸만으로는 lci 여부가 판정되지 않으며, smoothness는 $H_1(\operatorname{NL}_{B/k})=0$과 $\Omega_{B/k}$가 locally free라는 것이 함께 성립하는 것으로 특징지어진다.
 
 ## 예시: 매끄러운 변형부터 장애까지
 

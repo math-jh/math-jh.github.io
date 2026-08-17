@@ -15,7 +15,7 @@ drift_needed: true
 
 ---
 
-임의의 finitely generated $A$-module $M$은 finite generator와 그 사이의 relation이 주어지는 presentation을 가지며, 이 자료는 두 free module 사이의 하나의 $A$-linear map $\varphi$로 압축된다. 이 글의 출발점은 $\varphi$를 행렬로 적었을 때 그 소행렬식들이 생성하는 ideal이 presentation의 선택에 전혀 의존하지 않는다는 관찰이다. 앞선 글에서 free resolution이 담는 정보가 그 길이에 그치지 않으며 resolution을 이루는 행렬 자체를 정밀하게 읽어내는 도구가 필요하다고 예고하였는데, 그 도구가 바로 이 ideal이다. 우리는 이를 Fitting ideal로 정의하고 presentation의 선택에 대한 독립성을 증명한 뒤, base change와 annihilator, 그리고 free module 판정으로 그 쓰임을 살펴본다.
+임의의 finitely generated $A$-module $M$은 finite generator와 그 사이의 relation이 주어지는 presentation을 가지며, 이 자료는 두 free module 사이의 하나의 $A$-linear map $\varphi$로 압축된다. 이 글의 출발점은 $\varphi$를 행렬로 적었을 때 그 minor들이 생성하는 ideal이 presentation의 선택에 전혀 의존하지 않는다는 관찰이다. 앞선 글에서 free resolution이 담는 정보가 그 길이에 그치지 않으며 resolution을 이루는 행렬 자체를 정밀하게 읽어내는 도구가 필요하다고 예고하였는데, 그 도구가 바로 이 ideal이다. 우리는 이를 Fitting ideal로 정의하고 presentation의 선택에 대한 독립성을 증명한 뒤, base change와 annihilator, 그리고 free module 판정으로 그 쓰임을 살펴본다.
 
 ## Finite presentation과 소행렬식 아이디얼
 
@@ -23,17 +23,17 @@ Noetherian ring $A$ 위에서 finitely generated $A$-module은 언제나 finitel
 
 $$A^m\overset{\varphi}{\longrightarrow}A^n\longrightarrow M\longrightarrow 0$$
 
-을 presentation으로 가진다. 여기서 $A^n\to M$의 상은 $M$의 $n$개의 generator를 주고, $\varphi$의 상은 이 generator들 사이의 relation 전체를 이룬다. 우리는 $\varphi$를 표준 basis에 대한 $n\times m$ 행렬로 보고 ([\[다중선형대수학\] §행렬과 선형사상, ⁋정의 1](/ko/math/multilinear_algebra/matrices_and_linear_maps#def1)), 이 행렬의 소행렬식을 다룬다.
+을 presentation으로 가진다. 여기서 $A^n\to M$의 상은 $M$의 $n$개의 generator를 주고, $\varphi$의 상은 이 generator들 사이의 relation 전체를 이룬다. 우리는 $\varphi$를 표준 basis에 대한 $n\times m$ 행렬로 보고 ([\[다중선형대수학\] §행렬과 선형사상, ⁋정의 1](/ko/math/multilinear_algebra/matrices_and_linear_maps#def1)), 이 행렬의 minor를 다룬다.
 
 ::: 정의 1
-Free module 사이의 $A$-linear map $\varphi:A^m\to A^n$과 정수 $r$에 대하여, $\varphi$의 *ideal of minors* $I_r(\varphi)$를 다음과 같이 정의한다. $\varphi$를 표준 basis에 대한 $n\times m$ 행렬로 볼 때, $1\le r\le\min(m,n)$이면 $I_r(\varphi)$는 $\varphi$의 모든 $r\times r$ 소행렬식으로 생성되는 $A$의 ideal이고, $r\le 0$이면 $I_r(\varphi)=A$, $r>\min(m,n)$이면 $I_r(\varphi)=0$으로 둔다.
+Free module 사이의 $A$-linear map $\varphi:A^m\to A^n$과 정수 $r$에 대하여, $\varphi$의 *ideal of minors* $I_r(\varphi)$를 다음과 같이 정의한다. $\varphi$를 표준 basis에 대한 $n\times m$ 행렬로 볼 때, $1\le r\le\min(m,n)$이면 $I_r(\varphi)$는 $\varphi$의 모든 $r\times r$ minor로 생성되는 $A$의 ideal이고, $r\le 0$이면 $I_r(\varphi)=A$, $r>\min(m,n)$이면 $I_r(\varphi)=0$으로 둔다.
 :::
 
-여기서 $r\times r$ 소행렬식이란 $\varphi$의 행렬에서 $r$개의 행과 $r$개의 열을 골라 만든 부분행렬의 행렬식을 뜻한다 ([\[다중선형대수학\] §행렬식, ⁋보조정리 4](/ko/math/multilinear_algebra/determinants#lem4)). 관례 $I_0(\varphi)=A$는 빈 부분행렬의 행렬식을 $1$로 본 것이고, 행이나 열의 수보다 큰 크기의 부분행렬은 존재하지 않으므로 $r>\min(m,n)$에서 $I_r(\varphi)=0$이다. 또한 각각의 $r$에 대하여
+여기서 $r\times r$ minor란 $\varphi$의 행렬에서 $r$개의 행과 $r$개의 열을 골라 만든 부분행렬의 행렬식을 뜻한다 ([\[다중선형대수학\] §행렬식, ⁋보조정리 4](/ko/math/multilinear_algebra/determinants#lem4)). 관례 $I_0(\varphi)=A$는 빈 부분행렬의 행렬식을 $1$로 본 것이고, 행이나 열의 수보다 큰 크기의 부분행렬은 존재하지 않으므로 $r>\min(m,n)$에서 $I_r(\varphi)=0$이다. 또한 각각의 $r$에 대하여
 
 $$I_{r+1}(\varphi)\subseteq I_r(\varphi)$$
 
-가 성립한다. 행렬식은 각 행에 대하여 multilinear이고 두 행이 같으면 $0$이 되므로, $(r+1)\times(r+1)$ 부분행렬의 행렬식을 한 행에 대하여 전개하면 그 행의 성분들과 $r\times r$ 소행렬식들의 곱의 합이 되어 $I_r(\varphi)$에 속하기 때문이다.
+가 성립한다. 행렬식은 각 행에 대하여 multilinear이고 두 행이 같으면 $0$이 되므로, $(r+1)\times(r+1)$ 부분행렬의 행렬식을 한 행에 대하여 전개하면 그 행의 성분들과 $r\times r$ minor들의 곱의 합이 되어 $I_r(\varphi)$에 속하기 때문이다.
 
 이제 module의 불변량이 될 대상을 정의한다.
 
@@ -45,7 +45,7 @@ $$\operatorname{Fitt}_i(M)=I_{n-i}(\varphi)$$
 로 정의한다.
 :::
 
-정의를 그대로 따르면 $\operatorname{Fitt}_i(M)=I_{n-i}(\varphi)$이므로, $i\ge n$에서는 $n-i\le0$이 되어 $\operatorname{Fitt}_i(M)=A$이고, 소행렬식 ideal의 포함관계 $I_{r+1}\subseteq I_r$로부터
+정의를 그대로 따르면 $\operatorname{Fitt}_i(M)=I_{n-i}(\varphi)$이므로, $i\ge n$에서는 $n-i\le0$이 되어 $\operatorname{Fitt}_i(M)=A$이고, minor ideal의 포함관계 $I_{r+1}\subseteq I_r$로부터
 
 $$\operatorname{Fitt}_0(M)\subseteq\operatorname{Fitt}_1(M)\subseteq\cdots\subseteq\operatorname{Fitt}_n(M)=A$$
 
@@ -57,7 +57,7 @@ Finitely presented $A$-module $M$의 Fitting ideal $\operatorname{Fitt}_i(M)$은
 ::: 증명
 두 presentation이 같은 generating set에서 오는 경우를 먼저 다룬다. Surjection $\pi:A^n\to M$을 고정하고 $R=\ker\pi$라 하자. 상이 $R$인 두 $A$-linear map $\varphi:A^m\to A^n$, $\varphi':A^{m'}\to A^n$에 대하여 $I_{n-i}(\varphi)=I_{n-i}(\varphi')$임을 보인다.
 
-우선 한 열을 덧붙이는 연산을 살펴본다. $\varphi$의 열들을 $c_1,\ldots,c_m\in A^n$이라 하고, $v\in\operatorname{im}\varphi$인 열 $v$를 오른쪽에 덧붙여 얻은 $n\times(m+1)$ 행렬을 $[\varphi\mid v]$라 하자. $\varphi$의 소행렬식은 $[\varphi\mid v]$의 소행렬식이기도 하므로 $I_r(\varphi)\subseteq I_r([\varphi\mid v])$이다. 거꾸로 $[\varphi\mid v]$의 $r\times r$ 소행렬식을 하나 고정하자. 이 소행렬식이 마지막 열 $v$를 쓰지 않으면 이는 $\varphi$의 소행렬식이다. $v$를 쓰는 경우, $v=\sum_k a_kc_k$로 적고 $v$가 놓인 열에 대한 행렬식의 multilinearity를 쓰면 이 소행렬식은 $v$를 $c_k$로 바꾼 소행렬식들에 $a_k$를 곱해 더한 것이 된다. $c_k$가 이미 선택된 다른 열에 나타나면 그 항은 두 열이 같아 $0$이고, 그렇지 않으면 $\varphi$의 $r\times r$ 소행렬식에 부호를 붙인 것이다. 어느 경우든 그 값은 $I_r(\varphi)$에 속하므로 $I_r([\varphi\mid v])\subseteq I_r(\varphi)$, 곧 $I_r([\varphi\mid v])=I_r(\varphi)$이다.
+우선 한 열을 덧붙이는 연산을 살펴본다. $\varphi$의 열들을 $c_1,\ldots,c_m\in A^n$이라 하고, $v\in\operatorname{im}\varphi$인 열 $v$를 오른쪽에 덧붙여 얻은 $n\times(m+1)$ 행렬을 $[\varphi\mid v]$라 하자. $\varphi$의 minor는 $[\varphi\mid v]$의 minor이기도 하므로 $I_r(\varphi)\subseteq I_r([\varphi\mid v])$이다. 거꾸로 $[\varphi\mid v]$의 $r\times r$ minor를 하나 고정하자. 이 minor가 마지막 열 $v$를 쓰지 않으면 이는 $\varphi$의 minor이다. $v$를 쓰는 경우, $v=\sum_k a_kc_k$로 적고 $v$가 놓인 열에 대한 행렬식의 multilinearity를 쓰면 이 minor는 $v$를 $c_k$로 바꾼 minor들에 $a_k$를 곱해 더한 것이 된다. $c_k$가 이미 선택된 다른 열에 나타나면 그 항은 두 열이 같아 $0$이고, 그렇지 않으면 $\varphi$의 $r\times r$ minor에 부호를 붙인 것이다. 어느 경우든 그 값은 $I_r(\varphi)$에 속하므로 $I_r([\varphi\mid v])\subseteq I_r(\varphi)$, 곧 $I_r([\varphi\mid v])=I_r(\varphi)$이다.
 
 이제 $\varphi'$의 각 열은 $R=\operatorname{im}\varphi$에 속하므로, 이들을 하나씩 $\varphi$에 덧붙이면 $I_r([\varphi\mid\varphi'])=I_r(\varphi)$이고, 같은 논증을 $\varphi'$에 대해 반복하면 $I_r([\varphi\mid\varphi'])=I_r(\varphi')$이다. 따라서 모든 $r$에 대하여 $I_r(\varphi)=I_r(\varphi')$이다.
 
@@ -73,7 +73,7 @@ $$\varphi'=\begin{pmatrix}\varphi&b\\0&-1\end{pmatrix}$$
 
 $$\begin{pmatrix}\varphi&0\\0&-1\end{pmatrix}$$
 
-로 바꾼다. 이 블록 행렬의 $\big((n+1)-i\big)\times\big((n+1)-i\big)$ 소행렬식을 생각하자. 마지막 행과 마지막 열은 오른쪽 아래 성분에만 $-1$을 갖고 나머지는 $0$이다. 소행렬식이 마지막 행과 마지막 열을 모두 포함하면 그 행에 대해 전개하여 $-1$ 곱하기 $\varphi$의 $\big(n-i\big)\times\big(n-i\big)$ 소행렬식을 얻고, 마지막 행만 또는 마지막 열만 포함하면 그 행 혹은 열이 $0$이 되어 소행렬식이 $0$이며, 둘 다 포함하지 않으면 $\varphi$의 $\big((n+1)-i\big)\times\big((n+1)-i\big)$ 소행렬식이다. 따라서
+로 바꾼다. 이 블록 행렬의 $\big((n+1)-i\big)\times\big((n+1)-i\big)$ minor를 생각하자. 마지막 행과 마지막 열은 오른쪽 아래 성분에만 $-1$을 갖고 나머지는 $0$이다. minor가 마지막 행과 마지막 열을 모두 포함하면 그 행에 대해 전개하여 $-1$ 곱하기 $\varphi$의 $\big(n-i\big)\times\big(n-i\big)$ minor를 얻고, 마지막 행만 또는 마지막 열만 포함하면 그 행 혹은 열이 $0$이 되어 minor가 $0$이며, 둘 다 포함하지 않으면 $\varphi$의 $\big((n+1)-i\big)\times\big((n+1)-i\big)$ minor이다. 따라서
 
 $$I_{(n+1)-i}(\varphi')=I_{n-i}(\varphi)+I_{(n+1)-i}(\varphi)=I_{n-i}(\varphi)$$
 
@@ -112,7 +112,7 @@ $M$의 presentation $A^m\overset{\varphi}{\to}A^n\to M\to0$에 $B\otimes_A-$를 
 
 $$B^m\overset{\varphi_B}{\longrightarrow}B^n\longrightarrow M\otimes_AB\longrightarrow0$$
 
-을 얻는다. 이는 $B$-module $M\otimes_AB$의 presentation이며, $\varphi_B$의 행렬은 $\varphi$의 행렬의 각 성분을 $A\to B$로 보낸 것이다. 소행렬식은 성분들의 다항식이고 $A\to B$가 ring homomorphism이므로, $\varphi_B$의 $r\times r$ 소행렬식은 $\varphi$의 대응하는 소행렬식의 image이다. 따라서 $I_r(\varphi_B)$는 $I_r(\varphi)$의 generator들의 image로 생성되는 $B$의 ideal, 곧 $I_r(\varphi)B$이고,
+을 얻는다. 이는 $B$-module $M\otimes_AB$의 presentation이며, $\varphi_B$의 행렬은 $\varphi$의 행렬의 각 성분을 $A\to B$로 보낸 것이다. minor는 성분들의 다항식이고 $A\to B$가 ring homomorphism이므로, $\varphi_B$의 $r\times r$ minor는 $\varphi$의 대응하는 minor의 image이다. 따라서 $I_r(\varphi_B)$는 $I_r(\varphi)$의 generator들의 image로 생성되는 $B$의 ideal, 곧 $I_r(\varphi)B$이고,
 
 $$\operatorname{Fitt}_i(M\otimes_AB)=I_{n-i}(\varphi_B)=I_{n-i}(\varphi)B=\operatorname{Fitt}_i(M)B$$
 
@@ -143,7 +143,7 @@ $$0=g\psi\operatorname{adj}(\psi)=(\det\psi)g$$
 
 $$(a_1e_1)\wedge\cdots\wedge(a_ne_n)=a_1\cdots a_n(e_1\wedge\cdots\wedge e_n)$$
 
-인데, 좌변의 각 $a_je_j$를 $c_k$들의 조합으로 전개하면 이는 $c_{k_1}\wedge\cdots\wedge c_{k_n}$ 꼴의 항들의 $A$-linear combination이 되고, [\[다중선형대수학\] §행렬식, ⁋보조정리 4](/ko/math/multilinear_algebra/determinants#lem4)에 의하여 각 항은 $\varphi$의 $n\times n$ 소행렬식에 $e_1\wedge\cdots\wedge e_n$을 곱한 것이다. 두 표현의 $e_1\wedge\cdots\wedge e_n$ 계수를 비교하면 $a_1\cdots a_n\in I_n(\varphi)=\operatorname{Fitt}_0(M)$이다. 이러한 곱들이 $\ann(M)^n$을 생성하므로 $\ann(M)^n\subseteq\operatorname{Fitt}_0(M)$이다.
+인데, 좌변의 각 $a_je_j$를 $c_k$들의 조합으로 전개하면 이는 $c_{k_1}\wedge\cdots\wedge c_{k_n}$ 꼴의 항들의 $A$-linear combination이 되고, [\[다중선형대수학\] §행렬식, ⁋보조정리 4](/ko/math/multilinear_algebra/determinants#lem4)에 의하여 각 항은 $\varphi$의 $n\times n$ minor에 $e_1\wedge\cdots\wedge e_n$을 곱한 것이다. 두 표현의 $e_1\wedge\cdots\wedge e_n$ 계수를 비교하면 $a_1\cdots a_n\in I_n(\varphi)=\operatorname{Fitt}_0(M)$이다. 이러한 곱들이 $\ann(M)^n$을 생성하므로 $\ann(M)^n\subseteq\operatorname{Fitt}_0(M)$이다.
 :::
 
 두 포함관계에 radical을 취하고 $\sqrt{\ann(M)^n}=\sqrt{\ann(M)}$임을 쓰면 $\sqrt{\operatorname{Fitt}_0(M)}=\sqrt{\ann(M)}$을 얻는다. 곧 $\operatorname{Fitt}_0(M)$은 annihilator와 같은 radical을 가지므로, radical의 수준에서 $M$이 소멸하는 곳을 그대로 기억한다.
@@ -164,7 +164,7 @@ $$A^s\overset{\varphi}{\longrightarrow}A^\mu\longrightarrow M\longrightarrow0$$
 
 을 얻는다. Minimal이라는 것은 $\varphi$의 상이 $\mathfrak{m}A^\mu$에 포함된다는 것이므로 ([§호몰로지 차원, ⁋정의 8](/ko/math/commutative_algebra/homological_dimension#def8)), $\varphi$의 모든 성분이 $\mathfrak{m}$에 속한다. 여기서 $n=\mu$이다.
 
-$i\ge\mu$이면 $\operatorname{Fitt}_i(M)=I_{\mu-i}(\varphi)$이고 $\mu-i\le0$이므로 $\operatorname{Fitt}_i(M)=A$이다. $i<\mu$이면 $\operatorname{Fitt}_i(M)=I_{\mu-i}(\varphi)$이고 $\mu-i\ge1$인데, $\varphi$의 성분이 모두 $\mathfrak{m}$에 속하므로 $(\mu-i)\times(\mu-i)$ 소행렬식은 $\mathfrak{m}$의 원소들의 곱의 합, 곧 $\mathfrak{m}$의 원소이다. 따라서 $\operatorname{Fitt}_i(M)\subseteq\mathfrak{m}\subsetneq A$이다. 종합하면 $\operatorname{Fitt}_i(M)=A$인 것은 $i\ge\mu$인 것과 동치이다.
+$i\ge\mu$이면 $\operatorname{Fitt}_i(M)=I_{\mu-i}(\varphi)$이고 $\mu-i\le0$이므로 $\operatorname{Fitt}_i(M)=A$이다. $i<\mu$이면 $\operatorname{Fitt}_i(M)=I_{\mu-i}(\varphi)$이고 $\mu-i\ge1$인데, $\varphi$의 성분이 모두 $\mathfrak{m}$에 속하므로 $(\mu-i)\times(\mu-i)$ minor는 $\mathfrak{m}$의 원소들의 곱의 합, 곧 $\mathfrak{m}$의 원소이다. 따라서 $\operatorname{Fitt}_i(M)\subseteq\mathfrak{m}\subsetneq A$이다. 종합하면 $\operatorname{Fitt}_i(M)=A$인 것은 $i\ge\mu$인 것과 동치이다.
 :::
 
 이 판정은 localization을 통해 일반적인 Noetherian ring으로 옮겨진다. Finitely generated $M$과 prime ideal $\mathfrak{p}$에 대하여 $\operatorname{Fitt}_i(M)_\mathfrak{p}=\operatorname{Fitt}_i(M_\mathfrak{p})$이므로 ([명제 5](#prop5)), $\operatorname{Fitt}_i(M)\not\subseteq\mathfrak{p}$인 것은 $\operatorname{Fitt}_i(M_\mathfrak{p})=A_\mathfrak{p}$인 것, 곧 [명제 7](#prop7)에 의하여 $M_\mathfrak{p}$가 $i$개 이하의 원소로 생성되는 것과 동치이다. 따라서 $M_\mathfrak{p}$의 최소 generating set의 크기 $\mu(M_\mathfrak{p})$는 $\operatorname{Fitt}_i(M)\not\subseteq\mathfrak{p}$를 만족하는 가장 작은 $i$로 읽힌다.
@@ -178,7 +178,7 @@ Noetherian local ring $(A,\mathfrak{m})$ 위의 finitely generated $A$-module $M
 2. $\operatorname{Fitt}_{r-1}(M)=0$이고 $\operatorname{Fitt}_r(M)=A$이다.
 :::
 ::: 증명
-첫째 조건을 가정하자. $M\cong A^r$이면 relation이 없는 presentation $A^0\overset{\varphi}{\to}A^r\to M\to0$을 가지며, $\varphi$는 열이 없는 행렬이다. 따라서 $1\times1$ 소행렬식이 없어 $\operatorname{Fitt}_{r-1}(M)=I_1(\varphi)=0$이고, $\operatorname{Fitt}_r(M)=I_0(\varphi)=A$이다.
+첫째 조건을 가정하자. $M\cong A^r$이면 relation이 없는 presentation $A^0\overset{\varphi}{\to}A^r\to M\to0$을 가지며, $\varphi$는 열이 없는 행렬이다. 따라서 $1\times1$ minor가 없어 $\operatorname{Fitt}_{r-1}(M)=I_1(\varphi)=0$이고, $\operatorname{Fitt}_r(M)=I_0(\varphi)=A$이다.
 
 둘째 조건을 가정하자. $\operatorname{Fitt}_r(M)=A$이므로 [명제 7](#prop7)에 의하여 $\mu(M)\le r$이고, $\operatorname{Fitt}_{r-1}(M)=0\ne A$이므로 같은 명제에 의하여 $r-1<\mu(M)$, 곧 $\mu(M)\ge r$이다. 따라서 $\mu(M)=r$이며, minimal free resolution의 첫 두 항이 주는 presentation $A^s\overset{\varphi}{\to}A^r\to M\to0$은 성분이 모두 $\mathfrak{m}$에 속하는 $\varphi$를 갖는다. 그런데
 
@@ -196,12 +196,12 @@ $r=1$인 경우가 특히 중요하다. $\operatorname{Fitt}_0(M)=0$이고 $\ope
 
     $$A\overset{\varphi}{\longrightarrow}A^2\longrightarrow\mathfrak{m}\longrightarrow0,\qquad\varphi(1)=(-\y,\x)$$
 
-    에서 $\varphi$는 $2\times1$ 행렬이므로 $2\times2$ 소행렬식이 없어 $\operatorname{Fitt}_0(\mathfrak{m})=I_2(\varphi)=0$이고, $\operatorname{Fitt}_1(\mathfrak{m})=I_1(\varphi)=(-\y,\x)=\mathfrak{m}$이다. $\operatorname{Fitt}_1(\mathfrak{m})=\mathfrak{m}\ne A$이므로 [명제 7](#prop7)에 의하여 $\mu(\mathfrak{m})\ge2$이고, 따라서 $\mathfrak{m}$은 [정리 8](#thm8)에 의하여 rank $1$의 free module이 아니다. 곧 Fitting ideal은 $2$차원 regular local ring의 maximal ideal이 principal ideal이 아니라는 사실을 즉시 감지한다.
+    에서 $\varphi$는 $2\times1$ 행렬이므로 $2\times2$ minor가 없어 $\operatorname{Fitt}_0(\mathfrak{m})=I_2(\varphi)=0$이고, $\operatorname{Fitt}_1(\mathfrak{m})=I_1(\varphi)=(-\y,\x)=\mathfrak{m}$이다. $\operatorname{Fitt}_1(\mathfrak{m})=\mathfrak{m}\ne A$이므로 [명제 7](#prop7)에 의하여 $\mu(\mathfrak{m})\ge2$이고, 따라서 $\mathfrak{m}$은 [정리 8](#thm8)에 의하여 rank $1$의 free module이 아니다. 곧 Fitting ideal은 $2$차원 regular local ring의 maximal ideal이 principal ideal이 아니라는 사실을 즉시 감지한다.
 
 2. $B=\mathbb{K}[\x]$ 위에서 두 module $M=B/(\x^2)$과 $M'=B/(\x)\oplus B/(\x)$을 비교하자. presentation $B\overset{\x^2}{\to}B\to M\to0$에서 $\operatorname{Fitt}_0(M)=(\x^2)$이고 $\operatorname{Fitt}_1(M)=I_0(\varphi)=B$이다. 한편 presentation $B^2\overset{\operatorname{diag}(\x,\x)}{\longrightarrow}B^2\to M'\to0$에서 $\operatorname{Fitt}_0(M')=I_2=(\x^2)$이고 $\operatorname{Fitt}_1(M')=I_1=(\x)$이다. 두 module은 같은 $\operatorname{Fitt}_0=(\x^2)$을 갖지만 $\operatorname{Fitt}_1$이 각각 $B$와 $(\x)$로 달라, Fitting ideal의 전체 열이 이 두 length $2$ module의 구조를 구별한다.
 :::
 
-Free resolution의 각 행렬에서 뽑은 소행렬식 ideal의 depth가 그 complex의 exactness 자체를 판정한다는 Buchsbaum--Eisenbud 정리가 이 방법의 다음 장을 이룬다.
+Free resolution의 각 행렬에서 뽑은 minor ideal의 depth가 그 complex의 exactness 자체를 판정한다는 Buchsbaum--Eisenbud 정리가 이 방법의 다음 장을 이룬다.
 
 ---
 
