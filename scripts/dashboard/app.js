@@ -212,11 +212,16 @@ function settingsMenu() {
     parent.classList.toggle('open');
   };
 
+  /* 판본 비교기는 SPA 밖의 독립 문서라 hash 라우트로 못 간다 — 메뉴에서 직접 건다. */
+  var cmp = el('li');
+  cmp.innerHTML = '<span>판본 비교</span><i class="material-icons go">arrow_forward</i>';
+  cmp.onclick = function () { location.href = '/dash/compare.html'; };
+
   var blog = el('li');
   blog.innerHTML = '<span>블로그</span><i class="material-icons go">arrow_forward</i>';
   blog.onclick = function () { location.href = '/'; };
 
-  ul.appendChild(parent); ul.appendChild(sub); ul.appendChild(blog);
+  ul.appendChild(parent); ul.appendChild(sub); ul.appendChild(cmp); ul.appendChild(blog);
   btn.onclick = function (e) { e.stopPropagation(); ul.classList.toggle('show'); };
   box.appendChild(btn); box.appendChild(ul);
   return box;
@@ -358,11 +363,20 @@ function overview(d) {
   vp.appendChild(left); vp.appendChild(right); frag.appendChild(vp);
 
   var driftDrafts = drafts.filter(function (x) { return x.drift; }).length;
+  /* KO 오타 지적은 재번역 대기와 같은 칸에 붙인다. 둘 다 번역 큐에서 나오는 같은
+     일이고, 지적이 없는 날이 대부분이라 따로 두면 칸 하나가 사라졌다 나타난다.
+     세는 것은 opus 가 오탐(FALSE)으로 판정하지 않은 것뿐이다. */
+  var kt = d.translation || {};
+  var ktLive = (kt.ko_typo_actionable || 0) + (kt.ko_typo_unreviewed || 0);
+  var ktNote = ktLive
+    ? ' · KO 오타 지적 ' + ktLive + '건'
+      + (kt.ko_typo_unreviewed ? ' (미검토 ' + kt.ko_typo_unreviewed + ')' : '')
+    : '';
   var mets = [
     { n: num(s.unpublished), l: '미발행 초안', to: 'drafts', accent: true,
       d: (drafts[0] ? '최근 수정 ' + ago(drafts[0].mtime) : '초안 없음') + ' · drift 표시 ' + driftDrafts + '편' },
     { n: num(s.drift), l: '재번역 대기', to: 'translation', accent: true,
-      d: 'ko 가 바뀐 뒤 en 이 따라오지 않은 글' },
+      d: 'ko 가 바뀐 뒤 en 이 따라오지 않은 글' + ktNote },
     { n: num(g ? g.actionable : null), l: '색인 조치 대상', to: 'index', accent: true,
       d: 'Crawled·Discovered 이면서 미색인' },
     { n: num(s.published), l: '발행 ko', to: 'weights',
@@ -372,21 +386,10 @@ function overview(d) {
     { n: num(sys.dirty_count), l: '커밋 안 된 변경', to: 'activity',
       d: sys.dirty_count ? (sys.dirty[0] || '').replace(/^[ MADRCU?!]+/, '') : 'working tree clean' }
   ];
-  /* KO 오타 지적 — 검증기가 KO 원문에서 찾았다고 주장한 오류 중 opus 가 오탐으로
-     판정하지 않은 것. 볼 것이 있을 때만 타일을 낸다 (0 이면 늘 0 인 칸이 된다). */
-  var kt = d.translation || {};
-  if (kt.ko_typo_actionable || kt.ko_typo_unreviewed) {
-    mets.push({
-      n: num((kt.ko_typo_actionable || 0) + (kt.ko_typo_unreviewed || 0)),
-      l: 'KO 오타 지적', to: 'translation', accent: true,
-      d: (kt.ko_typo_false ? 'opus 오탐 판정 ' + kt.ko_typo_false + '건 제외' : 'opus 검토 통과')
-        + (kt.ko_typo_unreviewed ? ' · 미검토 ' + kt.ko_typo_unreviewed + '건' : '')
-    });
-  }
   var g3 = el('div', 'grid3');
   mets.forEach(function (m) {
     var a = el('a', 'panel metric' + (m.accent ? ' metric--accent' : ''));
-    a.href = link(m.to);
+    a.href = m.href || link(m.to);
     a.innerHTML = '<div class="panel__t">' + esc(m.l) + '</div><div class="metric__n">' + m.n +
       '</div><div class="metric__d">' + esc(m.d) + '</div>';
     g3.appendChild(a);

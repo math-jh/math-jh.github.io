@@ -10,9 +10,11 @@ nginx(4000)의 /dash/ location이 여기로 proxy_pass 한다 — Jekyll을 거�
     GET /api/log?name=<key> 워커 로그 tail (기본 200줄)
     GET /api/lint?path=<p>  단일 글에 md_lint.py CLI 실행 (발행 준비도)
     GET/POST /api/kotypo    KO-TYPOS '수정' 체크 상태 (전체 map 교체 방식)
+    GET /api/compare/*      판본 비교기 — 목록·diff·감사 지적 전문·판본별 매크로
+    POST /api/review        비교기의 검토 판정 (항목 단위 병합 저장)
 
-레포에는 아무것도 쓰지 않는다 — 유일한 쓰기는 kotypo 체크 상태로,
-~/.local/state/blog_dashboard_kotypo.json 에 저장된다.
+레포에는 아무것도 쓰지 않는다 — 쓰기는 두 상태 파일뿐이다:
+~/.local/state/blog_dashboard_kotypo.json 과 …_review.json.
 """
 import json
 import os
@@ -57,6 +59,14 @@ try:
 except Exception:
     def _ko_typos(_verdict):
         return []
+
+# 판본 비교기(#compare)의 데이터층. bs4 가 없으면 비교기만 죽고 나머지는 그대로 산다.
+sys.path.insert(0, HERE)
+try:
+    import compare as _compare
+except Exception as _e:  # noqa: BLE001
+    _compare = None
+    _compare_err = str(_e)
 
 # ── 워커 정의 ────────────────────────────────────────────────────────────────
 # interval: cron 주기(초). age > 2.5*interval 이면 stale(빨간불) 판정.
@@ -117,7 +127,7 @@ def run(cmd, cwd=None, timeout=20):
 # ── 글 스캔 ──────────────────────────────────────────────────────────────────
 _FM_SPLIT = re.compile(r"^---\s*$", re.M)
 _SIMPLE_KEYS = ("title", "permalink", "weight", "published", "date",
-                "drift_needed", "last_modified_at", "categories")
+                "drift_needed", "last_modified_at", "categories", "revising")
 
 
 def parse_post(path):
@@ -171,6 +181,9 @@ def parse_post(path):
         permalink=meta.get("permalink", ""),
         weight=weight,
         published=meta.get("published", "true").lower() != "false",
+        # 개정 중 표시 — CI 의 freeze_revising_posts.py 가 이 글들을 직전 발행 판본으로
+        # 되돌려 내보낸다. 즉 프로덕션에 아직 안 나간 수정본이 이것들이다.
+        revising=meta.get("revising", "").lower() == "true",
         date=meta.get("date", ""),
         drift=meta.get("drift_needed", "").lower() == "true",
         chars=len(body),
@@ -662,7 +675,31 @@ def summary_cached():
 STATIC = {"/": ("index.html", "text/html; charset=utf-8"),
           "/index.html": ("index.html", "text/html; charset=utf-8"),
           "/dashboard.css": ("dashboard.css", "text/css; charset=utf-8"),
-          "/app.js": ("app.js", "application/javascript; charset=utf-8")}
+          "/app.js": ("app.js", "application/javascript; charset=utf-8"),
+          # 판본 비교기는 SPA 밖의 독립 문서다 — pane 이 블로그 스타일시트를
+          # 통째로 물어야 해서 대시보드 스킨과 한 문서에 둘 수 없다.
+          # audit-2026-08.* 는 이번 전수 감사 검토 전용 판이다 (감사 지적 레일·
+          # 지적↔변경 잇기가 notes/audit-2026-08 에 묶여 있다). 감사와 무관한
+          # 범용 비교기는 compare.* 로 따로 만든다.
+          "/audit-2026-08.html": ("audit-2026-08.html", "text/html; charset=utf-8"),
+          "/audit-2026-08.css": ("audit-2026-08.css", "text/css; charset=utf-8"),
+          "/audit-2026-08.js": ("audit-2026-08.js", "application/javascript; charset=utf-8"),
+          # 범용 판본 비교기 (감사와 무관하게 임의 판본을 비교한다)
+          "/compare.html": ("compare.html", "text/html; charset=utf-8"),
+          "/compare.css": ("compare.css", "text/css; charset=utf-8"),
+          "/compare.js": ("compare.js", "application/javascript; charset=utf-8")}
+
+
+# 비교 대상 글의 permalink 를 찾기 위한 얕은 캐시 (frontmatter 스캔은 0.1s 남짓).
+_posts_cache = {"ts": 0.0, "by_path": {}, "all": []}
+
+
+def posts_indexed():
+    now = time.time()
+    if now - _posts_cache["ts"] > CACHE_TTL:
+        allp = scan_posts()
+        _posts_cache.update(ts=now, all=allp, by_path={p["path"]: p for p in allp})
+    return _posts_cache
 
 # 구 상세 경로 — 라우팅은 hash(#workers …)로 넘어갔지만, 북마크된 구 경로에도
 # index.html 을 줘야 app.js 가 hash 라우트로 리다이렉트할 수 있다.
@@ -746,16 +783,138 @@ class Handler(BaseHTTPRequestHandler):
             return self._send(200, json.dumps(
                 {"path": rel, "rc": rc, "out": out, "err": err}, ensure_ascii=False))
 
+        if path.startswith("/api/compare/"):
+            return self._compare(path, q)
+
+        return self._send(404, "not found", "text/plain; charset=utf-8")
+
+    # ── 판본 비교기 ─────────────────────────────────────────────────────
+    def _versions(self, old, new):
+        """임의 ref(브랜치·sha·HEAD~3)를 스냅샷 키로 바꾼다.
+
+        아직 안 구운 판본이면 409 로 알려서 클라이언트가 빌드를 걸게 한다 —
+        요청 하나가 100 초를 붙잡고 있으면 서버가 다른 요청을 못 받는다.
+        """
+        out = []
+        for v in (old, new):
+            if v in ("", None):
+                out.append("")
+                continue
+            info = _compare.resolve_ref(v)
+            if not info:
+                raise ValueError(json.dumps({"error": f"알 수 없는 ref: {v}"},
+                                            ensure_ascii=False))
+            short = info["short"]
+            if short != "worktree" and _compare.snapshot_status(short)["state"] != "ready":
+                raise ValueError(json.dumps(
+                    {"error": "스냅샷 없음", "need_build": short, "ref": v,
+                     "subject": info.get("subject", "")}, ensure_ascii=False))
+            out.append(short)
+        return out[0], out[1]
+
+    def _compare(self, path, q):
+        if _compare is None:
+            return self._send(503, json.dumps(
+                {"error": f"compare 모듈 로드 실패: {_compare_err}"}, ensure_ascii=False))
+        one = lambda k, d="": (q.get(k) or [d])[0]      # noqa: E731
+
+        if path == "/api/compare/list":
+            try:
+                old, new = self._versions(one("old"), one("new"))
+            except ValueError as e:
+                return self._send(409, str(e))
+            return self._send(200, json.dumps(
+                _compare.post_list(posts_indexed()["all"], old, new, one("audit")),
+                ensure_ascii=False))
+
+        if path == "/api/compare/refs":
+            return self._send(200, json.dumps(_compare.git_refs(), ensure_ascii=False))
+
+        if path == "/api/compare/audits":
+            return self._send(200, json.dumps(_compare.audit_runs(), ensure_ascii=False))
+
+        if path == "/api/compare/prefs":
+            return self._send(200, json.dumps(_compare.prefs(), ensure_ascii=False))
+
+        if path == "/api/compare/snapshot":
+            info = _compare.resolve_ref(one("ref"))
+            if not info:
+                return self._send(404, json.dumps({"error": "알 수 없는 ref"},
+                                                  ensure_ascii=False))
+            st = _compare.snapshot_status(info["short"])
+            st.update(subject=info.get("subject", ""), committed=info.get("committed", ""))
+            return self._send(200, json.dumps(st, ensure_ascii=False))
+
+        if path == "/api/compare/macros":
+            ver = one("v", "worktree")
+            if not re.fullmatch(r"worktree|[0-9a-f]{7,40}", ver):
+                return self._send(400, "bad version", "text/plain; charset=utf-8")
+            return self._send(200, _compare.macros(ver),
+                              "application/javascript; charset=utf-8")
+
+        if path == "/api/compare/instructions":
+            rel = one("path")
+            paths = [rel] if rel else None
+            # 어느 두 판본을 보고 쓴 지시인지 머리에 박아 준다 — 받는 쪽이 같은 자리를
+            # 직접 대조할 수 있어야 한다.
+            return self._send(200,
+                              _compare.instructions(paths, one("old"), one("new")),
+                              "text/plain; charset=utf-8")
+
+        if path == "/api/compare/finding":
+            key, iid = one("key"), one("id")
+            if not re.fullmatch(r"[\w.-]{1,120}", key or "") \
+                    or not re.fullmatch(r"[A-Z]+-\d+[a-z]?", iid or ""):
+                return self._send(400, json.dumps({"error": "bad key"}))
+            return self._send(200, json.dumps(
+                {"key": key, "id": iid, "text": _compare.finding_detail(key, iid)},
+                ensure_ascii=False))
+
+        if path == "/api/compare/diff":
+            rel = one("path")
+            meta = posts_indexed()["by_path"].get(rel)
+            if not meta or not meta.get("permalink"):
+                return self._send(400, json.dumps({"error": "알 수 없는 글"},
+                                                  ensure_ascii=False))
+            try:
+                old, new = self._versions(one("old"), one("new", "worktree"))
+            except ValueError as e:
+                return self._send(409, str(e))
+            try:
+                data = _compare.diff(rel, old, new, meta["permalink"], one("audit"))
+            except FileNotFoundError as e:
+                return self._send(404, json.dumps({"error": str(e)}, ensure_ascii=False))
+            except Exception as e:  # noqa: BLE001
+                return self._send(500, json.dumps({"error": f"{type(e).__name__}: {e}"},
+                                                  ensure_ascii=False))
+            data["post"]["title"] = meta.get("title", "")
+            return self._send(200, json.dumps(data, ensure_ascii=False))
+
         return self._send(404, "not found", "text/plain; charset=utf-8")
 
     def do_POST(self):
         path = urllib.parse.urlparse(self.path).path.rstrip("/")
-        if path not in ("/api/kotypo", "/api/cron/pause", "/api/cron/resume"):
+        if path not in ("/api/kotypo", "/api/cron/pause", "/api/cron/resume",
+                        "/api/review", "/api/compare/snapshot",
+                        "/api/compare/snapshot-delete", "/api/compare/prefs"):
             return self._send(404, "not found", "text/plain; charset=utf-8")
         why = self._reject_write()
         if why:
             return self._send(403, json.dumps({"ok": False, "error": why},
                                               ensure_ascii=False))
+        if path == "/api/compare/prefs":
+            try:
+                n = int(self.headers.get("Content-Length") or 0)
+                body = json.loads(self.rfile.read(n).decode("utf-8") or "{}") if n else {}
+                cur = _compare.set_prefs(body)
+            except Exception as e:  # noqa: BLE001
+                return self._send(400, json.dumps({"ok": False, "error": str(e)},
+                                                  ensure_ascii=False))
+            return self._send(200, json.dumps({"ok": True, **cur}, ensure_ascii=False))
+        if path.startswith("/api/compare/snapshot"):
+            return self._snapshot_action(path)
+        if path == "/api/review":
+            return self._review()
         if path != "/api/kotypo":
             return self._cron_action(path)
         # 클라이언트가 전체 map 을 보내 통째로 교체한다 (키 (path@verified_at) → 1).
@@ -799,6 +958,54 @@ class Handler(BaseHTTPRequestHandler):
         if self.headers.get("X-Dash-Action") != "1":
             return "X-Dash-Action 헤더 없음"
         return None
+
+    def _snapshot_action(self, path):
+        """판본 굽기·지우기. 굽기는 백그라운드 스레드라 즉시 돌아온다(진행은 폴링)."""
+        if _compare is None:
+            return self._send(503, json.dumps({"ok": False, "error": "compare 없음"},
+                                              ensure_ascii=False))
+        try:
+            n = int(self.headers.get("Content-Length") or 0)
+            body = json.loads(self.rfile.read(n).decode("utf-8") or "{}") if n else {}
+        except Exception:  # noqa: BLE001
+            return self._send(400, json.dumps({"ok": False, "error": "bad body"}))
+        if path.endswith("snapshot-delete"):
+            ok = _compare.delete_snapshot(str(body.get("short", "")))
+            return self._send(200 if ok else 400,
+                              json.dumps({"ok": ok}, ensure_ascii=False))
+        try:
+            st = _compare.start_snapshot(str(body.get("ref", "")))
+        except ValueError as e:
+            return self._send(400, json.dumps({"ok": False, "error": str(e)},
+                                              ensure_ascii=False))
+        return self._send(200, json.dumps({"ok": True, **st}, ensure_ascii=False))
+
+    def _review(self):
+        """검토 판정 — 항목 단위 **병합** 저장.
+
+        kotypo 처럼 전체 map 을 교체하지 않는다. 이 상태는 나중 세션이 실행 목록으로
+        읽는 지시서라, 다른 탭이 열려 있다는 이유로 판정이 통째로 날아가면 안 된다.
+        """
+        if _compare is None:
+            return self._send(503, json.dumps({"ok": False, "error": "compare 없음"},
+                                              ensure_ascii=False))
+        try:
+            n = int(self.headers.get("Content-Length") or 0)
+            if not 0 <= n <= 8192:
+                raise ValueError
+            patch = json.loads(self.rfile.read(n).decode("utf-8") or "{}")
+            rel = patch.get("path", "")
+            # 메모 삭제·완료는 id 로만 오므로 경로 검사 대상이 아니다.
+            if patch.get("kind") not in ("note-del", "note-done"):
+                full = os.path.normpath(os.path.join(ROOT, rel))
+                if not full.startswith(f"{ROOT}/_posts/") or not full.endswith(".md"):
+                    raise ValueError("bad path")
+            state = _compare.review_update(patch)
+        except Exception as e:  # noqa: BLE001
+            return self._send(400, json.dumps({"ok": False, "error": str(e)},
+                                              ensure_ascii=False))
+        return self._send(200, json.dumps({"ok": True, "state": state},
+                                          ensure_ascii=False))
 
     def _cron_action(self, path):
         try:

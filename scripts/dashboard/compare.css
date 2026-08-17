@@ -1,0 +1,218 @@
+/* 판본 비교기 크롬 — 본문 pane 자체는 블로그 main.css 가 그린다.
+   여기서는 틀(바·목록·레일)과 diff 표시만 얹는다.
+
+   팔레트는 dashboard.css 의 :root 와 같은 값이다. 이 페이지는 SPA 밖의 독립
+   문서라 dashboard.css 를 물릴 수 없어(블로그 CSS 와 body·제목 규칙이 부딪힌다)
+   토큰만 옮겨 적었다 — 대시보드 팔레트를 바꾸면 여기도 같이 고칠 것. */
+:root {
+  --paper:#edeae1; --ink:#1a2233; --muted:#5a6276; --rule:#d7d2c5; --navy:#0a1120;
+  --brass:#ad7a2e; --link:#1f4fd0; --panel:#f4f2ec; --ok:#4a745a; --bad:#cd4b31;
+  --gone:#8a3a28; --cmp-bar:52px;
+}
+[data-theme="dark"] {
+  --paper:#0b0d12; --ink:#e7e3d8; --muted:#aeb6c6; --rule:#20242d; --navy:#05080f;
+  --brass:#d2a24e; --link:#82c8ff; --panel:#12151c; --ok:#87b898; --bad:#f2744c;
+  --gone:#d98a72;
+}
+
+html.cmp-root, body.cmp-body { height:100%; margin:0; overflow:hidden; }
+body.cmp-body { background:var(--paper); color:var(--ink); }
+
+/* 블로그 CSS 와 같은 문서에 산다 — 아래 두 가지는 반드시 되돌려 놔야 한다.
+   (1) [hidden] 은 display 규칙에 밀린다. 클래스로 display 를 주는 패널마다
+       [hidden] 을 다시 이겨줘야 모달·원문 패널이 처음부터 떠 있지 않다.
+   (2) 폼 요소는 본문 조판(label 블록화·여백)을 그대로 물려받아 겹쳐 보인다. */
+[hidden] { display:none !important; }
+.cmp-body label { display:inline-flex; align-items:center; gap:6px; margin:0;
+                  font-size:inherit; font-weight:inherit; }
+.cmp-body input[type=checkbox] { margin:0; width:auto; }
+/* 본문 CSS 의 `form { padding:1em; background-color:$form-background-color }` 는
+   블로그 검색·댓글 폼용이다. 메모 폼이 그걸 물면 패널 안에서 그 줄만 중성 회색으로
+   떠 보인다 (실측: 패널 #f4f2ec 위에 폼만 #f2f3f3). */
+.cmp-body form { margin:0; background:none; }   /* padding 은 .cmp-noteform 이 정한다 */
+
+/* ── 상단 바 ─────────────────────────────────────────────────────── */
+.cmp-bar {
+  height:var(--cmp-bar); box-sizing:border-box; display:flex; align-items:center;
+  gap:14px; padding:0 14px; border-bottom:1px solid var(--rule);
+  background:var(--panel); font-size:13px; white-space:nowrap; overflow-x:auto;
+}
+.cmp-back { color:var(--muted); text-decoration:none; }
+.cmp-back:hover { color:var(--link); }
+.cmp-title { font-weight:600; letter-spacing:.02em; }
+.cmp-field { color:var(--muted); display:inline-flex; align-items:center; gap:6px; }
+.cmp-field--static { border:1px solid var(--rule); padding:2px 8px; color:var(--ink); }
+.cmp-arrow { color:var(--muted); }
+.cmp-bar select, .cmp-bar input[type=search] {
+  font:inherit; color:var(--ink); background:var(--paper);
+  border:1px solid var(--rule); border-radius:0; padding:2px 6px;
+}
+.cmp-btn {
+  font:inherit; font-size:12px; color:var(--ink); background:var(--paper);
+  border:1px solid var(--rule); border-radius:0; padding:3px 9px; cursor:pointer;
+}
+.cmp-btn:hover { border-color:var(--brass); }
+.cmp-btn.is-on { background:var(--navy); color:var(--paper); border-color:var(--navy); }
+.cmp-check { color:var(--muted); }
+.cmp-stats { margin-left:auto; color:var(--muted); font-variant-numeric:tabular-nums; }
+.cmp-navgroup { display:inline-flex; align-items:center; gap:4px; }
+.cmp-pos { min-width:56px; text-align:center; color:var(--muted);
+           font-variant-numeric:tabular-nums; font-size:12px; }
+
+/* ── 본체 3 열 ───────────────────────────────────────────────────── */
+.cmp-main {
+  height:calc(100% - var(--cmp-bar)); display:grid;
+  grid-template-columns:260px minmax(0,1fr) 320px;
+}
+/* grid·flex 아이템의 기본 min-height 는 auto 다 — 안 풀어주면 칸이 내용 높이만큼
+   늘어나 안쪽 overflow 가 발생하지 않는다. body 가 overflow:hidden 이라 그러면
+   스크롤이 아니라 잘림이 된다. */
+.cmp-main > * { min-height:0; }
+.cmp-main.no-rail { grid-template-columns:260px minmax(0,1fr) 0; }
+.cmp-main.no-rail .cmp-rail { display:none; }
+
+/* ── 글 목록 ─────────────────────────────────────────────────────── */
+.cmp-list { border-right:1px solid var(--rule); display:flex; flex-direction:column;
+            min-height:0; background:var(--panel); }
+.cmp-listhead { padding:10px; border-bottom:1px solid var(--rule); }
+.cmp-listhead input[type=search] { width:100%; box-sizing:border-box; font:inherit;
+  font-size:13px; padding:3px 6px; border:1px solid var(--rule); background:var(--paper);
+  color:var(--ink); border-radius:0; }
+.cmp-filters { margin-top:8px; display:flex; flex-direction:column; gap:3px;
+               font-size:12px; color:var(--muted); }
+.cmp-counts { margin-top:8px; font-size:12px; color:var(--muted);
+              font-variant-numeric:tabular-nums; }
+.cmp-rows { list-style:none; margin:0; padding:0; overflow-y:auto; flex:1; }
+.cmp-row { padding:7px 10px; border-bottom:1px solid var(--rule); cursor:pointer;
+           font-size:13px; line-height:1.35; }
+.cmp-row:hover { background:var(--paper); }
+.cmp-row.is-active { background:var(--paper); box-shadow:inset 3px 0 0 var(--brass); }
+.cmp-row .r-title { display:block; }
+.cmp-row .r-meta { display:block; margin-top:2px; font-size:11px; color:var(--muted);
+                   font-variant-numeric:tabular-nums; }
+.cmp-row.is-done .r-title { color:var(--muted); text-decoration:line-through; }
+.r-badge { display:inline-block; margin-left:5px; padding:0 4px; font-size:10px;
+           border:1px solid var(--rule); color:var(--muted); }
+.r-badge.b-open { color:var(--bad); border-color:var(--bad); }
+.r-badge.b-user { color:var(--brass); border-color:var(--brass); }
+.r-badge.b-rev { color:var(--ink); border-color:var(--ink); }
+
+/* ── 두 pane ─────────────────────────────────────────────────────── */
+.cmp-panes { display:grid; grid-template-columns:1fr 1fr; min-height:0; }
+.cmp-pane { min-width:0; min-height:0; overflow:hidden;
+            display:flex; flex-direction:column; border-right:1px solid var(--rule); }
+.cmp-panehead { padding:5px 12px; font-size:11px; color:var(--muted);
+                border-bottom:1px solid var(--rule); background:var(--panel);
+                white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.cmp-doc { overflow-y:auto; padding:18px 20px 60vh; flex:1; }
+/* 본문 폭 제한(.page__content 는 사이트에서 넓은 열을 쓴다)만 조정한다 */
+.cmp-doc { font-size:15px; }
+.cmp-doc img, .cmp-doc svg, .cmp-doc figure { max-width:100%; }
+
+/* ── diff 표시 ───────────────────────────────────────────────────── */
+/* 글자만 붉게. 배경 tint 는 블록을 찾기 위한 최소한으로만 쓴다.
+   본문 CSS 는 <ins> 를 두 번 전용한다 — 전역(_base)에서 밑줄 2px + margin-right 1em,
+   정리 박스 안(_notices)에서는 굵은 산세리프 라벨. 둘 다 여기서 되돌리지 않으면
+   삽입 표시가 라벨처럼 보이고 낱말 사이가 1em 씩 벌어진다. */
+.cmp-doc .d-tok { text-decoration:none; }
+.cmp-doc del.d-tok { color:var(--gone); text-decoration:line-through;
+                     text-decoration-thickness:1px; }
+.cmp-doc ins.d-tok {
+  color:var(--bad); text-decoration:none; border-bottom:0;
+  margin:0; padding:0; font-family:inherit; font-weight:inherit;
+  box-shadow:inset 0 -1px 0 var(--bad);
+}
+.cmp-doc del.d-tok .katex, .cmp-doc ins.d-tok .katex { color:inherit; }
+
+.d-edit { box-shadow:inset 2px 0 0 var(--brass); padding-left:10px; margin-left:-12px; }
+.d-gone { box-shadow:inset 2px 0 0 var(--gone); padding-left:10px; margin-left:-12px;
+          opacity:.75; }
+.d-new  { box-shadow:inset 2px 0 0 var(--bad); padding-left:10px; margin-left:-12px; }
+.d-blk.is-cur { background:color-mix(in srgb, var(--brass) 12%, transparent); }
+.d-bare { margin:1em 0; }
+
+/* ── 작업 패널 ────────────────────────────────────────────────────── */
+/* 여기는 **작업 지시서만** 둔다 — 위에 고정된 메모 폼, 아래로 쌓이는 메모, 맨 밑에
+   지시서 복사. 지적·변경 내용을 읽는 건 전부 호버 카드 몫이다. */
+.cmp-rail { border-left:1px solid var(--rule); background:var(--panel); font-size:12.5px;
+            display:flex; flex-direction:column; min-height:0; }
+.cmp-noteform { padding:10px 12px; border-bottom:1px solid var(--rule); flex:0 0 auto; }
+#rail-notes { flex:1 1 auto; overflow-y:auto; min-height:0; }
+.cmp-railfoot { flex:0 0 auto; padding:9px 12px; border-top:1px solid var(--rule);
+                background:var(--panel);
+                /* 패널 오른쪽 끝에 붙인다 — 본문에서 가장 먼 자리라 오조작이 적다 */
+                display:flex; justify-content:flex-end; gap:4px; }
+.cmp-noteloc { color:var(--muted); font-size:11.5px; line-height:1.4; margin-bottom:6px; }
+.cmp-noteloc b { color:var(--ink); }
+.cmp-noteform textarea {
+  width:100%; box-sizing:border-box; font:inherit; font-size:12.5px; line-height:1.5;
+  border:1px solid var(--rule); border-radius:0; background:var(--paper); color:var(--ink);
+  padding:6px 7px; resize:vertical;
+}
+.cmp-noteacts { margin-top:6px; display:flex; gap:4px; flex-wrap:wrap; }
+.cmp-noteshead { padding:8px 12px 4px; color:var(--muted); font-size:11.5px; }
+.note { padding:9px 12px; border-bottom:1px solid var(--rule); }
+.note.is-done { opacity:.5; }
+.note-loc { color:var(--muted); font-size:11px; }
+.note-quote { margin:3px 0; padding-left:7px; border-left:2px solid var(--rule);
+              color:var(--muted); font-size:11.5px; line-height:1.4; }
+.note-text { margin:4px 0 0; line-height:1.45; white-space:pre-wrap; }
+.rail-item { padding:10px 12px; border-bottom:1px solid var(--rule); }
+.rail-item.is-open { background:color-mix(in srgb, var(--bad) 6%, transparent); }
+.rail-id { font-weight:600; letter-spacing:.02em; }
+.rail-lines { color:var(--muted); margin-left:6px; font-size:11px; }
+.rail-sum { margin:5px 0 0; line-height:1.45; }
+.rail-fix { margin:4px 0 0; color:var(--muted); line-height:1.4; }
+.rail-res { margin:4px 0 0; color:var(--ok); font-size:11.5px; }
+.rail-res.is-none { color:var(--bad); }
+.rail-acts { margin-top:6px; display:flex; gap:4px; flex-wrap:wrap; }
+.rail-acts .cmp-btn { font-size:11px; padding:2px 6px; }
+.rail-note { margin-top:5px; width:100%; box-sizing:border-box; font:inherit;
+             font-size:11.5px; border:1px solid var(--rule); background:var(--paper);
+             color:var(--ink); border-radius:0; padding:3px 5px; }
+
+/* ── 원문 diff · 모달 ────────────────────────────────────────────── */
+.cmp-src { position:fixed; right:0; bottom:0; width:min(760px,60vw); max-height:52vh;
+           display:flex; flex-direction:column; background:var(--panel);
+           border-top:1px solid var(--rule); border-left:1px solid var(--rule); z-index:20; }
+.cmp-srchead { display:flex; justify-content:space-between; align-items:center;
+               padding:6px 10px; border-bottom:1px solid var(--rule); font-size:12px; }
+.cmp-src pre { margin:0; overflow:auto; padding:10px; font-size:12px; line-height:1.45; }
+.cmp-dim { color:var(--muted); }
+.cmp-warn { color:var(--bad); }
+
+/* 호버 툴팁 — 이 변경이 어느 지적에서 왔는지 */
+.cmp-tip {
+  position:fixed; z-index:35; width:370px; max-height:46vh; overflow:auto;
+  background:var(--paper); border:1px solid var(--rule); box-shadow:0 2px 0 rgba(0,0,0,.08);
+  padding:9px 11px; font-size:12.5px; line-height:1.45; pointer-events:none;
+}
+.cmp-tip p { margin:4px 0 0; }
+.tip-item + .tip-item { margin-top:8px; padding-top:8px; border-top:1px solid var(--rule); }
+.tip-none { margin-top:4px; color:var(--bad); }
+/* 감사 전문 — 레일이 지시를 쓰는 자리가 됐으므로 읽을 것은 여기서 끝난다. */
+.tip-detail { margin-top:6px; padding-top:6px; border-top:1px solid var(--rule);
+              color:var(--muted); font-size:11.5px; line-height:1.5; }
+.tip-detail h4 { margin:6px 0 2px; font-size:11.5px; color:var(--ink); }
+.tip-detail code { font-family:var(--mono, monospace); font-size:11px; }
+
+.cmp-modal { position:fixed; inset:0; background:rgba(10,17,32,.45); z-index:40;
+             display:flex; align-items:center; justify-content:center; }
+.cmp-modalbox { background:var(--paper); border:1px solid var(--rule);
+                width:min(860px,92vw); max-height:82vh; display:flex; flex-direction:column; }
+.cmp-modalhead { display:flex; justify-content:space-between; align-items:center;
+                 padding:8px 12px; border-bottom:1px solid var(--rule); font-size:13px; }
+.cmp-modalbody { overflow:auto; padding:14px 16px; line-height:1.6; font-size:14px; }
+.cmp-modalbody h2 { font-size:15px; margin:1em 0 .4em; }
+
+/* ── 범용 비교기 전용 ─────────────────────────────────────────────── */
+/* 본문 CSS 가 `input { width:100% }` 를 걸어 두어(블로그 검색 폼용) 바 안에서 칸이
+   찌그러진다. 판본 입력은 sha·브랜치명이 보여야 하므로 폭을 직접 준다. */
+.cmp-bar input[list] { font:inherit; font-size:12px; color:var(--ink); width:15em;
+  flex:0 0 auto; background:var(--paper); border:1px solid var(--rule);
+  border-radius:0; padding:2px 6px; }
+.cmp-build { color:var(--muted); font-size:12px; }
+.cmp-build .cmp-btn { border-color:var(--brass); }
+.js-suspects { cursor:pointer; text-decoration:underline; text-underline-offset:2px; }
+.tip-suspect { margin-top:4px; padding:3px 6px; font-size:11.5px;
+  color:var(--bad); border:1px solid var(--bad); }

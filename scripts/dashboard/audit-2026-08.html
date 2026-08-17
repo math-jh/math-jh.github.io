@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>감사 검토 (2026-08) · Blackbox</title>
+<link rel="icon" type="image/svg+xml" href="/dash/favicon-gauge5.svg">
+
+<!-- 본문 pane 은 블로그 스타일시트로 그린다 — "구워진 그대로" 를 보는 게 목적이다.
+     대시보드 스킨(dashboard.css)을 같이 물리면 body·제목 규칙이 부딪히므로, 이
+     페이지는 SPA 밖의 독립 문서로 두고 크롬만 compare.css 로 얹는다. -->
+<link rel="stylesheet" id="theme-light" href="/assets/css/main.css">
+<link rel="stylesheet" id="theme-dark" href="/assets/css/main_dark.css">
+<link rel="stylesheet" href="/assets/katex/katex.min.css">
+<link rel="stylesheet" href="/dash/audit-2026-08.css">
+<script>
+/* pre-paint 테마 — 블로그·대시보드와 같은 MTHEME 쿠키(auto|light|dark).
+   로직 원본은 블로그의 _includes/js/theme-core.js.
+   대시보드와 달리 여기서는 data-theme 만으로 끝나지 않는다. 본문 pane 이 블로그
+   스타일시트를 쓰므로 **안 쓰는 쪽 링크를 disabled 로 꺼야** 한다 — 둘 다 살려두면
+   나중 것(main_dark)이 이겨 밝은 배경 위에 밝은 글자가 얹힌다 (정리 박스 안 본문이
+   유령처럼 사라진다). */
+(function () {
+  var m = (document.cookie.split('; ').find(function (c) { return c.indexOf('MTHEME=') === 0; }) || '').slice(7);
+  if (m !== 'light' && m !== 'dark' && m !== 'auto') m = 'auto';
+  var dark = m === 'dark' || (m === 'auto' && window.matchMedia
+    && window.matchMedia('(prefers-color-scheme: dark)').matches);
+  document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+  document.documentElement.classList.add('cmp-root');
+  // 링크가 이 스크립트보다 위에 있으므로 여기서 바로 잡힌다 (FOUC 없음).
+  var d = document.getElementById('theme-dark'), l = document.getElementById('theme-light');
+  if (d) d.disabled = !dark;
+  if (l) l.disabled = dark;
+})();
+</script>
+</head>
+<body class="cmp-body">
+
+<header class="cmp-bar">
+  <a class="cmp-back" href="/dash/#">← 개요</a>
+  <span class="cmp-title">감사 검토 <span class="cmp-dim">2026-08</span></span>
+
+  <label class="cmp-field">이전
+    <select id="old-ver"></select>
+  </label>
+  <span class="cmp-arrow">↔</span>
+  <label class="cmp-field">이후
+    <select id="new-ver"></select>
+  </label>
+
+  <span id="cmp-stats" class="cmp-stats"></span>
+
+  <span class="cmp-navgroup">
+    <button id="prev-h" class="cmp-btn" title="이전 변경 (p)">◂</button>
+    <span id="hunk-pos" class="cmp-pos">–</span>
+    <button id="next-h" class="cmp-btn" title="다음 변경 (n)">▸</button>
+  </span>
+
+  <label class="cmp-check"><input type="checkbox" id="sync" checked> 스크롤 동기화</label>
+  <button id="src-toggle" class="cmp-btn">원문 diff</button>
+  <button id="done-toggle" class="cmp-btn">검토함</button>
+  <button id="rail-toggle" class="cmp-btn" title="지적 레일 접기/펴기">지적</button>
+</header>
+
+<div class="cmp-main">
+  <nav class="cmp-list" id="list-pane">
+    <div class="cmp-listhead">
+      <input id="q" type="search" placeholder="글 검색" autocomplete="off">
+      <div class="cmp-filters">
+        <label><input type="checkbox" id="f-changed" checked> 변경된 것만</label>
+        <label><input type="checkbox" id="f-ko" checked> KO만</label>
+        <label><input type="checkbox" id="f-undone"> 미검토만</label>
+        <!-- revising: true = CI 가 프로덕션에 직전 판본을 내보내는 글. 즉 이 수정본이
+             아직 사이트에 안 나간 것들이라, 발행 재개 판단이 걸린 목록이다. -->
+        <label><input type="checkbox" id="f-revising"> 개정 중(revising)만</label>
+      </div>
+      <div id="list-counts" class="cmp-counts"></div>
+    </div>
+    <ol id="list" class="cmp-rows"></ol>
+  </nav>
+
+  <main class="cmp-panes" id="panes">
+    <section class="cmp-pane" id="pane-l">
+      <div class="cmp-panehead" id="head-l">이전</div>
+      <div class="page__content cmp-doc" id="left"></div>
+    </section>
+    <section class="cmp-pane" id="pane-r">
+      <div class="cmp-panehead" id="head-r">이후</div>
+      <div class="page__content cmp-doc" id="right"></div>
+    </section>
+  </main>
+
+  <!-- 작업 패널 = **작업 지시서만**. 지적·변경 내용은 전부 호버 카드가 맡는다.
+       위에 고정된 메모 폼, 아래로 쌓이는 메모, 맨 밑에 지시서 복사. -->
+  <aside class="cmp-rail" id="rail">
+    <form id="note-form" class="cmp-noteform" autocomplete="off">
+      <div class="cmp-noteloc" id="note-loc">본문에서 문장을 끌어 선택하면 그 자리에 메모가 달린다.</div>
+      <textarea id="note-text" rows="3" placeholder="여기에 지시를 쓴다 (⌘/Ctrl+Enter 로 저장)"></textarea>
+      <div class="cmp-noteacts">
+        <button type="submit" class="cmp-btn">메모 저장</button>
+        <button type="button" id="note-clear" class="cmp-btn">위치 지우기</button>
+      </div>
+    </form>
+
+    <div id="rail-notes"></div>
+
+    <div class="cmp-railfoot">
+      <button type="button" id="copy-inst" class="cmp-btn">지시서 복사</button>
+    </div>
+  </aside>
+</div>
+
+<div id="src-panel" class="cmp-src" hidden>
+  <div class="cmp-srchead">
+    <span>원문 diff <span class="cmp-dim">(git · 정본)</span></span>
+    <button id="src-close" class="cmp-btn">닫기</button>
+  </div>
+  <pre id="src-body"></pre>
+</div>
+
+<div id="tip" class="cmp-tip" hidden></div>
+
+<div id="modal" class="cmp-modal" hidden>
+  <div class="cmp-modalbox">
+    <div class="cmp-modalhead"><span id="modal-title"></span>
+      <button id="modal-close" class="cmp-btn">닫기</button></div>
+    <div id="modal-body" class="cmp-modalbody"></div>
+  </div>
+</div>
+
+<script src="/assets/katex/katex.min.js"></script>
+<script src="/assets/katex/contrib/auto-render.min.js"></script>
+<!-- 본문 조판을 사이트와 같게 맞추려면 필요하다 — 양끝맞춤은 영문 낱말을 감싼
+     lang=en 스팬이 있어야 하이픈이 걸린다 (_page.scss 의 :lang(ko) 규칙). -->
+<script src="/assets/js/custom/Latin_hyphens.js"></script>
+<script src="/dash/audit-2026-08.js"></script>
+</body>
+</html>
