@@ -10,7 +10,6 @@ sidebar:
 
 date: 2026-07-03
 weight: 15
-drift_needed: true
 ---
 
 우리는 [§다변수함수와 편미분](/ko/math/calculus/partial_derivatives)에서 다변수함수들을 정의하고, 이들의 미분을 살펴보았다. 이제는 적분을 살펴볼 차례다.
