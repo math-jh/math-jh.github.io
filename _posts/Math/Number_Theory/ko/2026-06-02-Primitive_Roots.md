@@ -111,7 +111,7 @@ $$\begin{aligned}
 
 명제 7에 따르면 법 $7$의 원시근은 $\varphi(\varphi(7)) = \varphi(6) = 2$개이어야 한다. 실제로 명제 6으로 $\gcd(k, 6) = 1$인 $k = 1, 5$에 대한 $3^1 \equiv 3$과 $3^5 \equiv 5$가 원시근이며, 나머지 $3^2 \equiv 2$ (order $3$), $3^3 \equiv 6$ (order $2$), $3^4 \equiv 4$ (order $3$), $3^6 \equiv 1$ (order $1$) 은 모두 order가 $6$보다 작다.
 
-::: 예시 9 (위수가 합성수일 때의 거동)
+::: 예시 9 (위수가 합성수일 때)
 명제 6은 큰 order에서 작은 order를 만들어 낸다. 법 $7$에서 원시근 $3$은 order $6$이므로
 
 $$\ord_7(3^2) = \frac{6}{\gcd(6,2)} = \frac{6}{2} = 3, \qquad \ord_7(3^3) = \frac{6}{\gcd(6,3)} = \frac{6}{3} = 2$$

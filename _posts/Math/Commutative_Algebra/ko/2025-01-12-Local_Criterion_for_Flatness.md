@@ -145,9 +145,38 @@ $$\Tor_1^{A/(a)}(A/\mathfrak{m}, M/aM)=0$$
 이 성립하고, 이제 [보조정리 2](#lem2)를 적용하면 $\Tor_1^A(A/\mathfrak{m}, M)=0$이 성립하는 것을 안다. 따라서 [정리 1](#thm1)에 의하여 $M$은 flat $A$-module이다.
 :::
 
+[따름정리 3](#cor3)이 base 쪽의 원소로 자르는 것이었다면, 반대로 fiber 쪽의 원소로 자르는 다음 형태가 flatness를 fiber에서 base 방향으로 들어올리는 데 쓰인다.
+
+::: 따름정리 4
+Noetherian local ring $(A, \mathfrak{m})$을 고정하고, $(E, \mathfrak{n})$가 $\mathfrak{m}E\subseteq \mathfrak{n}$를 만족하는 local Noetherian $A$-algebra라 가정하자. Flat $A$-module인 finitely generated $E$-module $M$과 원소 $f\in \mathfrak{n}$에 대하여 $f$의 image가 $M/\mathfrak{m}M$에서 non-zerodivisor라 하면, $f$는 $M$에서 non-zerodivisor이고 $M/fM$은 flat $A$-module이다. 특히 $f_1,\ldots, f_r\in \mathfrak{n}$의 image가 $M/\mathfrak{m}M$의 regular sequence를 이루면 $f_1,\ldots, f_r$은 $M$의 regular sequence이고 $M/(f_1,\ldots, f_r)M$은 flat $A$-module이다.
+:::
+::: 증명
+$\kappa=A/\mathfrak{m}$이라 쓰고 $K=\ker(f:M \rightarrow M)$, $C=M/fM$이라 하자.
+
+먼저 exact sequence $0 \rightarrow K \rightarrow M \rightarrow fM \rightarrow 0$에 $-\otimes_A\kappa$를 적용하면 tensor product가 right exact이므로 $M\otimes_A\kappa \rightarrow fM\otimes_A\kappa$는 전사이다. 한편 이 morphism에 포함 $fM\hookrightarrow M$이 유도하는 $fM\otimes_A\kappa \rightarrow M\otimes_A\kappa$를 합성한 것은 $M\otimes_A\kappa=M/\mathfrak{m}M$ 위의 $f$ 곱셈이고, 가정에 의하여 이것이 단사이므로 $M\otimes_A\kappa \rightarrow fM\otimes_A\kappa$ 또한 단사, 곧 isomorphism이다. 따라서 $fM\otimes_A\kappa \rightarrow M\otimes_A\kappa$도 단사이다.
+
+이제 exact sequence $0 \rightarrow fM \rightarrow M \rightarrow C \rightarrow 0$에 $\Tor^A_\bullet(\kappa, -)$의 long exact sequence를 적용한다. $M$이 flat이므로 $\Tor_1^A(\kappa, M)=0$이고 ([§평탄성, ⁋명제 1](/ko/math/commutative_algebra/flatness#prop1)), 따라서
+
+$$0 \rightarrow \Tor_1^A(\kappa, C) \rightarrow fM\otimes_A\kappa \rightarrow M\otimes_A\kappa$$
+
+이 exact이다. 오른쪽 morphism이 단사임을 앞에서 보았으므로 $\Tor_1^A(\kappa, C)=0$이며, $C$가 finitely generated $E$-module이므로 [정리 1](#thm1)에 의하여 $C=M/fM$은 flat $A$-module이다.
+
+남은 것은 $K=0$이다. $C$가 flat이므로 임의의 $A$-module $N$에 대하여 $\Tor_i^A(N, C)$를 $N$의 projective resolution으로 계산하면 $-\otimes_AC$가 exact이라 $i\geq 1$에서 소멸하고, 마찬가지로 $\Tor_1^A(N,M)=0$이다. 그럼 $0 \rightarrow fM \rightarrow M \rightarrow C \rightarrow 0$의 long exact sequence에서
+
+$$0=\Tor_2^A(N,C) \rightarrow \Tor_1^A(N, fM) \rightarrow \Tor_1^A(N,M)=0$$
+
+이므로 $\Tor_1^A(N, fM)=0$이고, [§평탄성, ⁋명제 1](/ko/math/commutative_algebra/flatness#prop1)에 의하여 $fM$ 또한 flat $A$-module이다. 따라서 $0 \rightarrow K \rightarrow M \rightarrow fM \rightarrow 0$에 $-\otimes_A\kappa$를 적용한 sequence는 왼쪽에서도 exact이 되어 $K\otimes_A\kappa \rightarrow M\otimes_A\kappa$가 단사인데, 그 image는 $M\otimes_A\kappa \rightarrow fM\otimes_A\kappa$의 kernel이고 이 morphism이 isomorphism이므로 image는 영이다. 곧 $K\otimes_A\kappa=K/\mathfrak{m}K=0$이고, $K$가 finitely generated $E$-module이며 $\mathfrak{m}K\subseteq \mathfrak{n}K$이므로 Nakayama 보조정리에 의하여 ([§정수적 확장, ⁋보조정리 8](/ko/math/commutative_algebra/integral_extension#lem8)) $K=0$이다.
+
+마지막 주장은 $r$에 대한 induction으로 얻는다. 위에서 $M/f_1M$이 flat $A$-module임을 보았고
+
+$$(M/f_1M)/\mathfrak{m}(M/f_1M)=(M/\mathfrak{m}M)/f_1(M/\mathfrak{m}M)$$
+
+이므로, $f_2,\ldots, f_r$의 image가 이 quotient의 regular sequence를 이루어 같은 논증을 반복할 수 있다.
+:::
+
 ## Rees algebra
 
-::: 정의 4
+::: 정의 5
 Ring $A$와 ideal $\mathfrak{a}$에 대하여, *Rees algebra<sub>리스 대수</sub>*는 
 
 $$A[\mathfrak{a}t]=\bigoplus_{n=0}^\infty \mathfrak{a}^n t^n\subseteq A[t]$$
@@ -161,7 +190,7 @@ $$A[\mathfrak{a}t, t^{-1}]=\bigoplus_{n=-\infty}^\infty \mathfrak{a}^nt^n\subset
 
 $A$가 field $\mathbb{K}$ 위의 algebra이면 extended Rees algebra는 $t^{-1}$을 포함하므로 $\mathbb{K}[t^{-1}]$-algebra가 되고, 이때 다음이 성립한다.
 
-::: 명제 5
+::: 명제 6
 Field $\mathbb{K}$와 $\mathbb{K}$-algebra $A$, 그리고 $A$의 ideal $\mathfrak{a}$를 고정하고 $R=A[\mathfrak{a}t, t^{-1}]$이라 쓰자. 그럼 extended Rees algebra $R$은 flat $\mathbb{K}[t^{-1}]$-module이다. 또, 만일 $\bigcap \mathfrak{a}^i=0$이라면, $1-t^{-1}s$ ($s\in R$) 꼴의 원소들은 모두 $R$에서 non-zerodivisor이다. 
 :::
 

@@ -113,7 +113,7 @@ What we wish to show is the commutativity of the following diagram
 
 {% diagram Math/Algebraic_Topology/Cup_Products-1.svg width="41.10em" alt="functoriality_of_cup_products" %}
 
-where the left vertical arrow $\smile\otimes\smile$ denotes the graded tensor product structure defined above. Spelled out in formulas, this amounts to showing that for any homogeneous classes $\alpha_1,\alpha_2\in H^\bullet(X;A)$ and $\beta_1,\beta_2\in H^\bullet(Y;A)$,
+where the left vertical arrow ${\smile}\otimes{\smile}$ denotes the graded tensor product structure defined above. Spelled out in formulas, this amounts to showing that for any homogeneous classes $\alpha_1,\alpha_2\in H^\bullet(X;A)$ and $\beta_1,\beta_2\in H^\bullet(Y;A)$,
 
 $$(\alpha_1\times\beta_1)(\alpha_2\times\beta_2)=\Delta_{X\times Y}^\ast (\alpha_1\times\beta_1\times\alpha_2\times\beta_2)=(-1)^{\lvert\beta_1\rvert\lvert\alpha_2\rvert}(\alpha_1\smile\alpha_2)\times(\beta_1\smile\beta_2)$$
 

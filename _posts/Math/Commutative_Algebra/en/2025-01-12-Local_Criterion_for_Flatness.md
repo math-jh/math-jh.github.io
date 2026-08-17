@@ -143,7 +143,7 @@ and applying [Lemma 2](#lem2) we deduce that $\Tor_1^A(A/\mathfrak{m}, M)=0$. He
 
 ## Rees algebra
 
-::: Definition 4
+::: Definition 5
 For a ring $A$ and an ideal $\mathfrak{a}$, the *Rees algebra* is
 
 $$A[\mathfrak{a}t]=\bigoplus_{n=0}^\infty \mathfrak{a}^n t^n\subseteq A[t].$$
@@ -155,7 +155,7 @@ $$A[\mathfrak{a}t, t^{-1}]=\bigoplus_{n=-\infty}^\infty \mathfrak{a}^nt^n\subset
 
 Then the following corollary is almost obvious.
 
-::: Proposition 5
+::: Proposition 6
 Fix a field $\mathbb{K}$ and a $\mathbb{K}$-algebra $A$. Then the Rees algebra $A[\mathfrak{a}t, t^{-1}]$ is a flat $\mathbb{K}[t]$-module. Moreover, if $\bigcap \mathfrak{a}^i=0$, then every element of the form $1-t s$ ($s\in S$) is a non-zerodivisor in $A[\mathfrak{a}t, t^{-1}]$.
 :::
 

@@ -14,7 +14,7 @@ weight: 7
 published: false
 ---
 
-Holomorphic function이 각 점 근방에서 자신의 Taylor 급수와 일치한다는 사실은 ([§멱급수와 해석성, ⁋정리 3](/ko/math/complex_analysis/power_series_and_analyticity#thm3)) 그 국소적 거동에 강한 제약을 건다. 가장 먼저 드러나는 것이 영점의 거동이다. 항등적으로 $0$이 아닌 holomorphic function의 영점에서는 Taylor 급수의 상수항이 사라지되 어느 finite degree의 계수는 살아남아야 하고, 이로부터 영점이 $(z - z_0)^m$이라는 정확한 인수를 내놓으며 ([§멱급수와 해석성, ⁋명제 6](/ko/math/complex_analysis/power_series_and_analyticity#prop6)) 서로 떨어져 고립된다는 결론이 나온다. 영점이 고립된다는 이 국소적 사실을 연결성과 결합하면, 두 holomorphic function이 집적점을 갖는 작은 집합에서만 일치해도 영역 전체에서 일치한다는 일치정리에 이른다. Holomorphic function은 이렇듯 극히 적은 자료로 완전히 결정되는 강직한 대상이며, 이 강직성은 최대절댓값 원리와 단위원판의 자기사상을 통제하는 Schwarz 보조정리로 이어진다. 이 글에서 다루는 결과들은 모두 멱급수 전개라는 하나의 원천에서 흘러나온다.
+Holomorphic function이 각 점 근방에서 자신의 Taylor 급수와 일치한다는 사실은 ([§멱급수와 해석성, ⁋정리 3](/ko/math/complex_analysis/power_series_and_analyticity#thm3)) 그 국소적 성질에 강한 제약을 건다. 가장 먼저 드러나는 것이 영점이 놓이는 방식이다. 항등적으로 $0$이 아닌 holomorphic function의 영점에서는 Taylor 급수의 상수항이 사라지되 어느 finite degree의 계수는 살아남아야 하고, 이로부터 영점이 $(z - z_0)^m$이라는 정확한 인수를 내놓으며 ([§멱급수와 해석성, ⁋명제 6](/ko/math/complex_analysis/power_series_and_analyticity#prop6)) 서로 떨어져 고립된다는 결론이 나온다. 영점이 고립된다는 이 국소적 사실을 연결성과 결합하면, 두 holomorphic function이 집적점을 갖는 작은 집합에서만 일치해도 영역 전체에서 일치한다는 일치정리에 이른다. Holomorphic function은 이렇듯 극히 적은 자료로 완전히 결정되는 강직한 대상이며, 이 강직성은 최대절댓값 원리와 단위원판의 자기사상을 통제하는 Schwarz 보조정리로 이어진다. 이 글에서 다루는 결과들은 모두 멱급수 전개라는 하나의 원천에서 흘러나온다.
 
 ## 영점의 고립성
 
@@ -93,7 +93,7 @@ $$F(z) = e^{z+w}, \qquad G(z) = e^z e^w$$
 
 ## 최대절댓값 원리
 
-Holomorphic function의 강직성은 그 절댓값의 거동에도 나타난다. 비상수 holomorphic function의 절댓값은 영역 interior의 어느 점에서도 국소적 최댓값에 이를 수 없으며, 따라서 bounded domain에서 절댓값의 최댓값은 항상 boundary에서 달성된다. 이 최대절댓값 원리는 평균값 성질에서 곧장 따라 나온다. Holomorphic function의 한 점에서의 값은 그 점을 center로 하는 임의의 원 위에서의 평균이므로 ([§Cauchy 적분공식, ⁋따름정리 7](/ko/math/complex_analysis/cauchy_integral_formula#cor7)), center에서의 절댓값이 원 위 모든 값보다 작지 않다면 원 위에서 절댓값이 줄곧 같은 값을 유지할 수밖에 없기 때문이다.
+Holomorphic function의 강직성은 그 절댓값에도 나타난다. 비상수 holomorphic function의 절댓값은 영역 interior의 어느 점에서도 국소적 최댓값에 이를 수 없으며, 따라서 bounded domain에서 절댓값의 최댓값은 항상 boundary에서 달성된다. 이 최대절댓값 원리는 평균값 성질에서 곧장 따라 나온다. Holomorphic function의 한 점에서의 값은 그 점을 center로 하는 임의의 원 위에서의 평균이므로 ([§Cauchy 적분공식, ⁋따름정리 7](/ko/math/complex_analysis/cauchy_integral_formula#cor7)), center에서의 절댓값이 원 위 모든 값보다 작지 않다면 원 위에서 절댓값이 줄곧 같은 값을 유지할 수밖에 없기 때문이다.
 
 ::: 정리 5 (최대절댓값 원리)
 $\Omega \subseteq \mathbb{C}$가 connected 열린집합이고 $f$가 $\Omega$에서 holomorphic이라 하자. 만일 $\lvert f\rvert$가 $\Omega$의 어떤 점 $z_0$에서 국소적 최댓값에 이르면, 곧 $z_0$의 어떤 근방 안의 모든 $z$에서 $\lvert f(z)\rvert \leq \lvert f(z_0)\rvert$이면, $f$는 $\Omega$에서 상수이다.

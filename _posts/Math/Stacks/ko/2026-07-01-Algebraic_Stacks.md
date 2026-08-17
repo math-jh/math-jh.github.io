@@ -107,7 +107,7 @@ Site $(\Sch, \mathrm{fppf})$ 위의 stack $\mathcal{X}$ (base scheme $S$ 위)이
 1. (representable 대각선) 대각선 $\Delta:\mathcal{X} \rightarrow \mathcal{X}\times_S \mathcal{X}$이 algebraic space에 의해 representable하다.
 2. (smooth atlas) scheme $U$과 representable smooth surjective morphism $\pi: U \rightarrow \mathcal{X}$이 존재한다. 이 $\pi$을 $\mathcal{X}$의 *atlas<sub>아틀라스</sub>* (또는 *presentation*)라 부른다.
 
-나아가 $\mathcal{X}$이 *Deligne–Mumford stack<sub>들리뉴-멈퍼드 스택</sub>* (이하 *DM stack*)이라는 것은, 조건 2의 atlas $\pi: U \rightarrow \mathcal{X}$을 smooth 대신 *étale* 전사로 잡을 수 있는 것이다. ([\[스킴\] §매끄러운 사상과 에탈 사상, ⁋정의 7](/ko/math/scheme_theory/smooth_and_etale_morphisms#def7))
+나아가 $\mathcal{X}$이 *Deligne–Mumford stack<sub>들리뉴-멈퍼드 스택</sub>* (이하 *DM stack*)이라는 것은, 조건 2의 atlas $\pi: U \rightarrow \mathcal{X}$을 smooth 대신 *étale* 전사로 잡을 수 있는 것이다. ([\[스킴\] §매끄러운 사상과 에탈 사상, ⁋정의 11](/ko/math/scheme_theory/smooth_and_etale_morphisms#def11))
 :::
 
 조건 1에 의해 atlas morphism $\pi$은 자동으로 representable하므로 ([명제 5](#prop5)) 그 매끄러움·전사성이 [정의 3](#def3)의 의미로 잘 정의된다. Atlas는 scheme이 좌표근방으로 덮이는 것의 stack 판본으로, $\mathcal{X}$ 위의 기하학적 성질을 $U$ 위에서 검사하게 한다. 가령 $\mathcal{X}$의 차원은 $\dim \mathcal{X}=\dim U-d$ ($d$은 $\pi$의 상대차원)로 정의되며, 이는 atlas의 선택에 의존하지 않는다. Smooth morphism이 flat하고 smooth fiber를 가지므로 smooth atlas는 stack을 "두꺼운" scheme으로 덮는 셈이고, 이때 fiber의 양의 차원에는 각 점에 붙은 stabilizer의 차원이 함께 담긴다.
@@ -115,10 +115,10 @@ Site $(\Sch, \mathrm{fppf})$ 위의 stack $\mathcal{X}$ (base scheme $S$ 위)이
 DM stack과 Artin stack의 차이는 정확히 이 stabilizer가 양의 차원을 가질 수 있는지에 있다. Étale atlas는 상대차원 $0$의 atlas이므로, DM stack에서는 각 점의 automorphism group이 유한하고 무한소 변형을 갖지 않는다. 이 직관을 정밀하게 다듬은 것이 다음의 동치들이다.
 
 ::: 참고 7
-Algebraic stack $\mathcal{X}$에 대하여 다음 조건들이 동치임이 알려져 있다 (증명은 [\[스킴\] §매끄러운 사상과 에탈 사상, ⁋정리 12](/ko/math/scheme_theory/smooth_and_etale_morphisms#thm12)과 group scheme의 매끄러움 이론을 쓰며, 자세한 논증은 [Ols] 또는 [LMB]를 참조하라).
+Algebraic stack $\mathcal{X}$에 대하여 다음 조건들이 동치임이 알려져 있다 (증명은 [\[스킴\] §매끄러운 사상과 에탈 사상, ⁋정리 16](/ko/math/scheme_theory/smooth_and_etale_morphisms#thm16)과 group scheme의 매끄러움 이론을 쓰며, 자세한 논증은 [Ols] 또는 [LMB]를 참조하라).
 
 1. $\mathcal{X}$이 DM stack이다.
-2. 대각선 $\Delta:\mathcal{X} \rightarrow \mathcal{X}\times_S \mathcal{X}$이 unramified하다. ([\[스킴\] §매끄러운 사상과 에탈 사상, ⁋정의 5](/ko/math/scheme_theory/smooth_and_etale_morphisms#def5))
+2. 대각선 $\Delta:\mathcal{X} \rightarrow \mathcal{X}\times_S \mathcal{X}$이 unramified하다. ([\[스킴\] §매끄러운 사상과 에탈 사상, ⁋정의 9](/ko/math/scheme_theory/smooth_and_etale_morphisms#def9))
 3. 모든 geometric point의 stabilizer group scheme $\operatorname{\underline{Aut}}$이 유한이고 unramified(곧 étale)하다.
 
 특히 base가 characteristic $0$의 field이면, 모든 finite type group scheme이 매끄럽다는 사실(Cartier 정리)에 의해 조건 3은 *stabilizer가 유한*인 것으로 단순화된다. Characteristic $p$에서는 stabilizer가 유한해도 무한소 automorphism(가령 $\mu_p$ 같은 비환원 group scheme)을 가질 수 있어 DM이 아닌 Artin stack이 생긴다. 즉 DM stack은 "유한하고 환원적인 automorphism만을 가지는" algebraic stack이다.
@@ -196,7 +196,7 @@ $$\operatorname{\underline{Isom}}_T((G_T, \varphi_a), (G_T, \varphi_{a'}))(T')=\
 
 **smooth atlas.** $\pi: X \rightarrow [X/G]$은 representable하다 (대각선 representability와 [명제 5](#prop5)). 그 매끄러움·전사성을 보이려면 임의의 $T \rightarrow [X/G]$에 대한 base change $X\times_{[X/G]}T \rightarrow T$이 smooth 전사임을 보여야 한다. $T$의 점은 torsor $(P, \varphi)$이고, $P$이 fppf covering $\{T_i \rightarrow T\}$ 위에서 자명해지므로, 그 covering 위에서 $T_i \rightarrow [X/G]$은 $\pi$을 거쳐 인수분해되어 $X\times_{[X/G]}T_i\cong X\times_{[X/G]}X\times_X T_i\cong(G\times_S X)\times_X T_i$이 된다 ([명제 10](#prop10)을 사용). 우변에서 $(G\times_S X) \rightarrow X$은 사영, 곧 $G \rightarrow S$의 base change이므로 smooth 전사이고 ($G$이 $S$ 위에서 smooth하고 단위절단으로 전사하므로), 따라서 $X\times_{[X/G]}T_i \rightarrow T_i$이 smooth 전사이다. Smooth성과 전사성이 target에 대해 fppf-국소적이므로 ([\[스킴\] §충실평탄 하강, ⁋명제 12](/ko/math/scheme_theory/faithfully_flat_descent#prop12)) $X\times_{[X/G]}T \rightarrow T$이 smooth 전사이다. 그러므로 $\pi$은 representable smooth 전사, 곧 atlas이다. 이로써 [정의 6](#def6)의 두 조건이 모두 성립하여 $[X/G]$은 algebraic stack이다.
 
-**DM 판정.** Stabilizer가 유한·étale하면 [참고 7](#rmk7)의 조건 3이 성립하여 $[X/G]$이 DM stack이다. 직접적으로는, 위 atlas의 상대차원이 $\dim G$이고, stabilizer가 étale(상대차원 $0$)이면 작용 groupoid에서 étale slice를 잡아 étale atlas를 구성할 수 있다. $G$이 유한 étale하면 $\pi$ 자체가 이미 상대차원 $0$의 étale morphism이므로 $X \rightarrow [X/G]$이 곧 étale atlas이다. ([\[스킴\] §매끄러운 사상과 에탈 사상, ⁋정의 7](/ko/math/scheme_theory/smooth_and_etale_morphisms#def7)) 일반의 경우 자세한 논증은 [LMB]를 참조하라.
+**DM 판정.** Stabilizer가 유한·étale하면 [참고 7](#rmk7)의 조건 3이 성립하여 $[X/G]$이 DM stack이다. 직접적으로는, 위 atlas의 상대차원이 $\dim G$이고, stabilizer가 étale(상대차원 $0$)이면 작용 groupoid에서 étale slice를 잡아 étale atlas를 구성할 수 있다. $G$이 유한 étale하면 $\pi$ 자체가 이미 상대차원 $0$의 étale morphism이므로 $X \rightarrow [X/G]$이 곧 étale atlas이다. ([\[스킴\] §매끄러운 사상과 에탈 사상, ⁋정의 11](/ko/math/scheme_theory/smooth_and_etale_morphisms#def11)) 일반의 경우 자세한 논증은 [LMB]를 참조하라.
 :::
 
 [정리 11](#thm11)은 algebraic group의 작용이 자동으로 algebraic stack을 낳음을 보장한다. 대각선의 representability는 isomorphism 조건이 $G$ 안에서 부분scheme으로 잘려 나옴에서, atlas의 매끄러움은 $\pi$의 base change가 사영 $G\times_S X \rightarrow X$이라는 점에서 따라온다. 이 두 사실은 모두 [명제 10](#prop10)의 groupoid presentation으로 환원된다.
@@ -212,7 +212,7 @@ Base를 field $k$로 둔다.
 
 1. $\mathbf{B}\mathbb{G}_m=[\Spec k/\mathbb{G}_m]$은 algebraic stack이다. $\mathbb{G}_m$이 affine·smooth하므로 ([\[스킴\] §군 스킴, §§군 스킴](/ko/math/scheme_theory/group_schemes#군-스킴)) [정리 11](#thm11)이 적용되고, atlas는 $\Spec k \rightarrow \mathbf{B}\mathbb{G}_m$이며 그 base change는 $\mathbb{G}_m \rightrightarrows \Spec k$이다. $\mathbf{B}\mathbb{G}_m(T)$은 $T$ 위의 line bundle들의 groupoid이고 ([§Fibered category와 stack, ⁋정리 19](/ko/math/stacks/fibered_categories_and_stacks#thm19)), 한 점의 stabilizer는 $\mathbb{G}_m$이다. Stabilizer가 $1$차원이라 무한소 변형을 가지므로 $\mathbf{B}\mathbb{G}_m$은 DM이 아닌 Artin stack이며, 그 차원은 $\dim \Spec k-\dim \mathbb{G}_m=0-1=-1$이다. 음의 차원은 stabilizer가 점보다 "더 큰" algebraic stack의 특징이다.
 
-2. $\mathbb{Z}/n$을 상수 group scheme으로 볼 때 $\mathbf{B}(\mathbb{Z}/n)=[\Spec k/(\mathbb{Z}/n)]$은 DM stack이다. $\mathbb{Z}/n$은 유한 étale하므로 ([\[스킴\] §매끄러운 사상과 에탈 사상, ⁋예시 10](/ko/math/scheme_theory/smooth_and_etale_morphisms#ex10)에서 분리 확대가 étale함과 같은 이유로 상수군은 étale하다) atlas $\Spec k \rightarrow \mathbf{B}(\mathbb{Z}/n)$이 étale 전사이고 ([정리 11](#thm11)의 DM 판정), 그 base change는 $n$개의 점의 disjoint union $\mathbb{Z}/n\times \Spec k\rightrightarrows \Spec k$이다. $\mathbf{B}(\mathbb{Z}/n)(T)$은 $T$ 위의 $\mathbb{Z}/n$-torsor, 곧 degree $n$의 cyclic étale covering의 groupoid이며, 한 점의 stabilizer는 유한군 $\mathbb{Z}/n$이다. $\operatorname{char}k\nmid n$이면 $\mu_n$ 또한 유한 étale하여 $\mathbf{B}(\mathbb{Z}/n)$과 $\mathbf{B}\mu_n$이 모두 DM이지만, $\operatorname{char}k\mid n$이면 $\mu_n$이 비환원이 되어 $\mathbf{B}\mu_n$은 (DM이 아닌) Artin stack이 되는 반면 상수군 $\mathbf{B}(\mathbb{Z}/n)$은 여전히 DM이다. 이 분리가 characteristic $p$에서 étale·infinitesimal stabilizer의 차이를 드러낸다.
+2. $\mathbb{Z}/n$을 상수 group scheme으로 볼 때 $\mathbf{B}(\mathbb{Z}/n)=[\Spec k/(\mathbb{Z}/n)]$은 DM stack이다. $\mathbb{Z}/n$은 유한 étale하므로 ([\[스킴\] §매끄러운 사상과 에탈 사상, ⁋예시 14](/ko/math/scheme_theory/smooth_and_etale_morphisms#ex14)에서 분리 확대가 étale함과 같은 이유로 상수군은 étale하다) atlas $\Spec k \rightarrow \mathbf{B}(\mathbb{Z}/n)$이 étale 전사이고 ([정리 11](#thm11)의 DM 판정), 그 base change는 $n$개의 점의 disjoint union $\mathbb{Z}/n\times \Spec k\rightrightarrows \Spec k$이다. $\mathbf{B}(\mathbb{Z}/n)(T)$은 $T$ 위의 $\mathbb{Z}/n$-torsor, 곧 degree $n$의 cyclic étale covering의 groupoid이며, 한 점의 stabilizer는 유한군 $\mathbb{Z}/n$이다. $\operatorname{char}k\nmid n$이면 $\mu_n$ 또한 유한 étale하여 $\mathbf{B}(\mathbb{Z}/n)$과 $\mathbf{B}\mu_n$이 모두 DM이지만, $\operatorname{char}k\mid n$이면 $\mu_n$이 비환원이 되어 $\mathbf{B}\mu_n$은 (DM이 아닌) Artin stack이 되는 반면 상수군 $\mathbf{B}(\mathbb{Z}/n)$은 여전히 DM이다. 이 분리가 characteristic $p$에서 étale·infinitesimal stabilizer의 차이를 드러낸다.
 :::
 
 다음은 stabilizer가 점마다 도약하는 작용의 표준적인 예로, coarse quotient가 잃어버리는 정보를 stack이 어떻게 보존하는지를 보여준다.

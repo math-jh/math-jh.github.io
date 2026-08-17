@@ -164,7 +164,7 @@ Fix the hyperplane class $H$ in $\mathbb{P}^2$; we know
 
 $$K_{\mathbb{P}^2} = -3H, \qquad \rchi(\mathcal{O}_{\mathbb{P}^2}) = 1$$
 
-([§Canonical Line Bundle, §§The Canonical Bundle of $\mathbb{P}^n$](/en/math/algebraic_varieties/canonical_bundle#the-canonical-bundle-of-mathbbpn), [§Cohomology of Projective Space, ⁋Corollary 3](/en/math/algebraic_varieties/cohomology_of_projective_spaces#cor3)) Since any two lines in $\mathbb{P}^2$ generally meet at one point, the self-intersection number of $H$ is $1$, and thus for any divisor $D = dH$,
+([§Canonical Line Bundle, §§Canonical Bundle of $\mathbb{P}^n$](/en/math/algebraic_varieties/canonical_bundle#canonical-bundle-of-mathbbpn), [§Cohomology of Projective Space, ⁋Corollary 3](/en/math/algebraic_varieties/cohomology_of_projective_spaces#cor3)) Since any two lines in $\mathbb{P}^2$ generally meet at one point, the self-intersection number of $H$ is $1$, and thus for any divisor $D = dH$,
 
 $$\rchi(\mathcal{O}_{\mathbb{P}^2}(d)) = \frac{1}{2}dH \cdot (dH + 3H) + 1 = \frac{1}{2}d(d+3) + 1$$
 

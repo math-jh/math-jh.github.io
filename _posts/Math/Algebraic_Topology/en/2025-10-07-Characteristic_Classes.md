@@ -155,7 +155,7 @@ Using this, we obtain the following.
 ::: Theorem 5 (Gysin exact sequence)
 For the sphere bundle $\pi:S(E)\rightarrow B$ of an oriented rank $n$ vector bundle $E\rightarrow B$ over a paracompact base space $B$, the following long exact sequence
 
-$$\cdots\rightarrow H^{k-n}(B)\xrightarrow{\ \smile e\ }H^k(B)\xrightarrow{\ \pi^\ast\ }H^k(S(E))\xrightarrow{\ \pi_!\ }H^{k-n+1}(B)\rightarrow H^{k+1}(B)\rightarrow\cdots$$
+$$\cdots\rightarrow H^{k-n}(B)\xrightarrow{\ {\smile}e\ }H^k(B)\xrightarrow{\ \pi^\ast\ }H^k(S(E))\xrightarrow{\ \pi_!\ }H^{k-n+1}(B)\rightarrow H^{k+1}(B)\rightarrow\cdots$$
 
 exists. Here $e=e(E)$ is the Euler class, $\pi^\ast$ is the pullback, and $\pi_!$ is integration along the fiber.
 :::
@@ -192,7 +192,7 @@ $$\pi_!(\pi^\ast\alpha\smile\beta)=\alpha\smile\pi_!\beta,\qquad \alpha\in H^\as
 
 To see this in action, consider the tangent bundle $TS^2$ of $S^2$ examined above. Then in the Gysin sequence
 
-$$\smile e:H^0(S^2)\rightarrow H^2(S^2)$$
+$${\smile}e:H^0(S^2)\rightarrow H^2(S^2)$$
 
 is given by the $\times 2$ map, and its cokernel $\mathbb{Z}/2$ appears as torsion in $H^2$ of the sphere bundle $S(TS^2)$. On the other hand, if we had started with the trivial bundle $E$ over $S^2$, this part would have been $\mathbb{Z}$; thus the trace of the Euler class pushing the sphere bundle away from the product is encoded precisely in this torsion.
 
@@ -206,7 +206,7 @@ Henceforth let $E\rightarrow B$ be a *complex* rank $n$ vector bundle, and consi
 
 Now write $E_\mathbb{R}$ for $E$ viewed as an (oriented) real vector bundle. Since $E$ has complex dimension $n$, $E_\mathbb{R}$ has real dimension $2n$. Then $E_0$ is homotopy equivalent to the sphere bundle $S(E_{\mathbb{R}})$ of $E_{\mathbb{R}}$, so by [Theorem 5](#thm5)
 
-$$\cdots\rightarrow H^{k-2n}(B)\xrightarrow{\ \smile e\ }H^k(B)\xrightarrow{\ \pi_0^\ast\ }H^k(E_0)\rightarrow H^{k-2n+1}(B)\rightarrow\cdots$$
+$$\cdots\rightarrow H^{k-2n}(B)\xrightarrow{\ {\smile}e\ }H^k(B)\xrightarrow{\ \pi_0^\ast\ }H^k(E_0)\rightarrow H^{k-2n+1}(B)\rightarrow\cdots$$
 
 holds, and as seen above, for $k\leq 2n-2$ the outer terms $H^{k-2n}(B)$ and $H^{k-2n+1}(B)$ both have negative degree hence are $0$, so $\pi_0^\ast:H^k(B)\rightarrow H^k(E_0)$ is an isomorphism.
 
@@ -245,7 +245,7 @@ That is, the Chern class satisfies axiomatic properties of a similar kind to the
 ::: Example 8
 As the complex analogue of the real tautological line bundle in [§Stiefel-Whitney Characteristic Classes, ⁋Example 3](/en/math/algebraic_topology/stiefel_whitney_classes#ex3), consider the tautological complex line bundle $\gamma$ over $\CP^\infty=\Gr(1,\mathbb{C}^\infty)$. Then the sphere bundle of $\gamma$ is the unit sphere $S^\infty$ in $\mathbb{C}^\infty$, which is contractible,[^1] so $H^k(S^\infty)=0$ for all $k>0$. Therefore, by [Theorem 5](#thm5) we have $H^1(\CP^\infty)=0$ and
 
-$$\smile c_1(\gamma):H^{k-2}(\CP^\infty)\rightarrow H^k(\CP^\infty)$$
+$${\smile}c_1(\gamma):H^{k-2}(\CP^\infty)\rightarrow H^k(\CP^\infty)$$
 
 is an isomorphism for $k\geq 2$. Starting from $H^0(\CP^\infty)=\mathbb{Z}$, we obtain that $c_1(\gamma)$ is a generator of $H^2(\CP^\infty;\mathbb{Z})\cong\mathbb{Z}$, and
 

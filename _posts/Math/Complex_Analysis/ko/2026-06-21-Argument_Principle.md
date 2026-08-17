@@ -14,17 +14,17 @@ weight: 10
 published: false
 ---
 
-Holomorphic function의 영점은 고립되어 finite order를 가지며 ([§영점과 일치정리, ⁋명제 2](/ko/math/complex_analysis/zeros_and_identity_theorem#prop2)), 유리형함수의 극 역시 finite order를 가진다 ([§고립특이점과 Laurent 급수, ⁋명제 6](/ko/math/complex_analysis/isolated_singularities#prop6)). 한 영역 안에서 이러한 영점과 극이 각각 몇 개나 있는지를 세는 일은 함수의 거동을 파악하는 데 핵심적이지만, 영점과 극의 위치를 일일이 찾지 않고 그 개수만을 알아내는 길이 있다면 훨씬 강력하다. 편각원리는 바로 그 길을 연다. 대수적 미분 $f'/f$을 closed 경로를 따라 적분하면, 그 값이 경로 안의 영점 수에서 극 수를 뺀 것을 정확히 세어 준다. 이 양은 동시에 상곡선 $f \circ \gamma$이 원점을 감는 횟수, 곧 편각의 총 증가량으로도 읽히므로 위상적 의미를 가진다. 편각원리는 그 자체로 영점·극의 계수를 주는 동시에, 함수를 작게 섭동해도 영점 수가 변하지 않는다는 Rouché 정리를 낳고, 거기서 다시 비상수 holomorphic function이 열린집합을 열린집합으로 보낸다는 open mapping 정리와 injective holomorphic function의 역의 holomorphicity가 흘러나온다. 이 글은 유수정리를 출발점으로 삼아 이 일련의 결과를 차례로 확립한다.
+Holomorphic function의 영점은 고립되어 finite order를 가지며 ([§영점과 일치정리, ⁋명제 2](/ko/math/complex_analysis/zeros_and_identity_theorem#prop2)), 유리형함수의 극 역시 finite order를 가진다 ([§고립특이점과 Laurent 급수, ⁋명제 6](/ko/math/complex_analysis/isolated_singularities#prop6)). 한 영역 안에서 이러한 영점과 극이 각각 몇 개나 있는지를 세는 일은 함수의 성질을 파악하는 데 핵심적이지만, 영점과 극의 위치를 일일이 찾지 않고 그 개수만을 알아내는 길이 있다면 훨씬 강력하다. 편각원리는 바로 그 길을 연다. 대수적 미분 $f'/f$을 closed 경로를 따라 적분하면, 그 값이 경로 안의 영점 수에서 극 수를 뺀 것을 정확히 세어 준다. 이 양은 동시에 상곡선 $f \circ \gamma$이 원점을 감는 횟수, 곧 편각의 총 증가량으로도 읽히므로 위상적 의미를 가진다. 편각원리는 그 자체로 영점·극의 계수를 주는 동시에, 함수를 작게 섭동해도 영점 수가 변하지 않는다는 Rouché 정리를 낳고, 거기서 다시 비상수 holomorphic function이 열린집합을 열린집합으로 보낸다는 open mapping 정리와 injective holomorphic function의 역의 holomorphicity가 흘러나온다. 이 글은 유수정리를 출발점으로 삼아 이 일련의 결과를 차례로 확립한다.
 
 ## 유리형함수와 편각원리
 
-편각원리를 진술하려면 영점과 극을 한꺼번에 다루는 함수 부류가 필요하다. 한 영역에서 isolated 극을 제외하면 holomorphic인 함수를 유리형함수라 부르며, 유리함수와 $\tan z$, $1/\sin z$ 같은 함수가 모두 여기에 속한다. 영점과 극은 모두 $(z - z_0)$의 정수 멱으로 표현되는 국소적 거동이므로, order를 부호까지 포함한 하나의 정수로 다루면 둘을 통일적으로 셀 수 있다.
+편각원리를 진술하려면 영점과 극을 한꺼번에 다루는 함수 부류가 필요하다. 한 영역에서 isolated 극을 제외하면 holomorphic인 함수를 유리형함수라 부르며, 유리함수와 $\tan z$, $1/\sin z$ 같은 함수가 모두 여기에 속한다. 영점과 극은 모두 $(z - z_0)$의 정수 멱으로 표현되므로, order를 부호까지 포함한 하나의 정수로 다루면 둘을 통일적으로 셀 수 있다.
 
 ::: 정의 1 (유리형함수)
 열린집합 $\Omega \subseteq \mathbb{C}$ 위의 함수 $f$가 $\Omega$에서 *meromorphic<sub>유리형</sub>*이라는 것은, $\Omega$ 안에 집적점을 갖지 않는 어떤 부분집합 $P \subseteq \Omega$이 있어 $f$가 $\Omega \setminus P$에서 holomorphic이고 $P$의 각 점에서 극을 가지는 것을 뜻한다.
 :::
 
-극집합 $P$이 $\Omega$ 안에 집적점을 갖지 않는다는 조건은 극이 서로 떨어져 흩어져 있음을 보장하며, 따라서 $\Omega$의 임의의 콤팩트 부분집합 안에는 유한개의 극만 들어 있다. 유리형함수의 영점 역시 항등적으로 $0$이 아닌 한 고립되어 있으므로 ([§영점과 일치정리, ⁋명제 2](/ko/math/complex_analysis/zeros_and_identity_theorem#prop2)), 영점과 극은 모두 콤팩트 영역 안에서 유한하다. 영점 $z_0$ 근방에서는 order $m \geq 1$에 대해 $f(z) = (z - z_0)^m g(z)$ ($g(z_0) \neq 0$, $g$ holomorphic) 이고 ([§멱급수와 해석성, ⁋명제 6](/ko/math/complex_analysis/power_series_and_analyticity#prop6)), 극 $z_0$ 근방에서는 order $m \geq 1$에 대해 $f(z) = (z - z_0)^{-m} h(z)$ ($h(z_0) \neq 0$, $h$ holomorphic) 이다 ([§고립특이점과 Laurent 급수, ⁋명제 6](/ko/math/complex_analysis/isolated_singularities#prop6)). 두 경우를 통일하여, 영점에서는 양의 정수, 극에서는 음의 정수, 그 밖에서는 $0$인 부호 있는 order를 도입하면 다음 보조정리가 $f'/f$의 거동을 결정한다.
+극집합 $P$이 $\Omega$ 안에 집적점을 갖지 않는다는 조건은 극이 서로 떨어져 흩어져 있음을 보장하며, 따라서 $\Omega$의 임의의 콤팩트 부분집합 안에는 유한개의 극만 들어 있다. 유리형함수의 영점 역시 항등적으로 $0$이 아닌 한 고립되어 있으므로 ([§영점과 일치정리, ⁋명제 2](/ko/math/complex_analysis/zeros_and_identity_theorem#prop2)), 영점과 극은 모두 콤팩트 영역 안에서 유한하다. 영점 $z_0$ 근방에서는 order $m \geq 1$에 대해 $f(z) = (z - z_0)^m g(z)$ ($g(z_0) \neq 0$, $g$ holomorphic) 이고 ([§멱급수와 해석성, ⁋명제 6](/ko/math/complex_analysis/power_series_and_analyticity#prop6)), 극 $z_0$ 근방에서는 order $m \geq 1$에 대해 $f(z) = (z - z_0)^{-m} h(z)$ ($h(z_0) \neq 0$, $h$ holomorphic) 이다 ([§고립특이점과 Laurent 급수, ⁋명제 6](/ko/math/complex_analysis/isolated_singularities#prop6)). 두 경우를 통일하여, 영점에서는 양의 정수, 극에서는 음의 정수, 그 밖에서는 $0$인 부호 있는 order를 도입하면 다음 보조정리가 $f'/f$의 국소적 형태를 결정한다.
 
 ::: 보조정리 2 (대수적 미분의 유수)
 $f$가 $z_0$의 한 근방에서 유리형이고 $z_0$에서 항등적으로 $0$이 아니라 하자. $z_0$이 $f$의 order $m$인 영점이면 $f'/f$은 $z_0$에서 유수 $m$인 단순극을 가지고, $z_0$이 order $m$인 극이면 $f'/f$은 $z_0$에서 유수 $-m$인 단순극을 가진다. 곧 어느 경우든

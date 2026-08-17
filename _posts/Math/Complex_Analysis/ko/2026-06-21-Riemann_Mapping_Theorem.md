@@ -232,8 +232,8 @@ $$f'(z_0) = e^{-i\vartheta}f^\ast{}'(z_0) = e^{-i\vartheta}\lvert f^\ast{}'(z_0)
 
 이라 $f'(z_0) > 0$이다. 따라서 normalization 조건을 만족하는 holomorphic bijection $f : \Omega \rightarrow \mathbb{D}$이 존재하고, 이미 보인 유일성과 합쳐 정리 6이 증명된다. $\Omega$이 $\mathbb{D}$와 등각동형이라는 결론은 holomorphic bijection $f$이 등각사상이라는 [§등각사상과 Möbius 변환, ⁋명제 3](/ko/math/complex_analysis/conformal_maps#prop3)에서 곧장 따라 나온다.
 
-::: 참고 9 (경계 거동)
-Riemann 사상정리는 conformal isomorphism의 존재만을 단언할 뿐, 그 사상이 영역의 boundary까지 연속적으로 확장되는지는 말하지 않는다. Boundary가 충분히 좋은 경우, 가령 $\partial\Omega$이 Jordan 곡선이면 사상이 closure $\overline{\Omega}$에서 $\overline{\mathbb{D}}$로의 homeomorphism으로 확장된다는 것이 Carathéodory의 정리이지만, 일반적인 단순연결 영역에서는 boundary가 프랙탈처럼 거칠어 그러한 extension이 성립하지 않을 수 있다. 본문의 변분적 증명은 interior에서의 등각동형만을 다루므로 boundary 거동과는 무관하게 작동한다.
+::: 참고 9 (경계로의 확장)
+Riemann 사상정리는 conformal isomorphism의 존재만을 단언할 뿐, 그 사상이 영역의 boundary까지 연속적으로 확장되는지는 말하지 않는다. Boundary가 충분히 좋은 경우, 가령 $\partial\Omega$이 Jordan 곡선이면 사상이 closure $\overline{\Omega}$에서 $\overline{\mathbb{D}}$로의 homeomorphism으로 확장된다는 것이 Carathéodory의 정리이지만, 일반적인 단순연결 영역에서는 boundary가 프랙탈처럼 거칠어 그러한 extension이 성립하지 않을 수 있다. 본문의 변분적 증명은 interior에서의 등각동형만을 다루므로 boundary로의 확장과는 무관하게 작동한다.
 :::
 
 참고 9가 강조하듯, 정리의 내용은 철저히 영역 interior에 관한 것이다. 단순연결성이라는 위상적 가정만으로 interior의 등각형이 단위원판 하나로 통일된다는 사실은, complex analysis에서 위상과 등각기하가 맞물리는 가장 깊은 지점 가운데 하나이다. 단순연결이 아닌 영역에서는 사정이 전혀 달라, 가령 환형 영역들은 그 안팎 반지름의 비라는 등각불변량으로 서로 구별되어 단 하나의 표준영역으로 환원되지 않는다.

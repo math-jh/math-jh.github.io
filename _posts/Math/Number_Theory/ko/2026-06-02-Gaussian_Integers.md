@@ -60,11 +60,11 @@ $p \equiv 3 \pmod 4$이면, $x^2 + y^2 \equiv 0 \pmod p$에서 $p \nmid x$라면
 $p \equiv 1 \pmod 4$이면 $\left(\frac{-1}{p}\right) = 1$이므로 $m^2 \equiv -1 \pmod p$인 $m$이 있다. 그러면 $p \mid m^2 + 1 = (m+i)(m-i)$이지만, $p$는 $(m\pm i)/p = m/p \pm i/p \notin \mathbb{Z}[i]$이므로 $m + i$도 $m - i$도 나누지 못한다. 즉 $p$는 $\mathbb{Z}[i]$에서 소수가 아니어서 두 비단원의 곱 $p = \alpha\beta$로 분해되고, norm을 취하면 $p^2 = N(\alpha)N(\beta)$인데 $N(\alpha), N(\beta) > 1$이므로 $N(\alpha) = N(\beta) = p$, 곧 $\alpha = x + yi$에 대해 $p = x^2 + y^2$이다. 이때 $p = N(\alpha) = \alpha\overline{\alpha}$이므로 $\beta = \overline{\alpha}$이기도 하다.
 :::
 
-여기서 $p = 2 = 1^2 + 1^2$은 특별하다. $2 = -i(1+i)^2$이므로 $2$의 norm $N(1+i) = 2$인 인수 $1+i$가 단원을 곱한 차이로 자기 켤레와 같아지는, 이른바 *분기<sub>ramification</sub>*가 일어나는 유일한 소수이다. 이제 이러한 거동을 모든 소수에 대해 분류하여 $\mathbb{Z}[i]$의 소수(가우스 소수)가 무엇인지 완전히 기술하자.
+여기서 $p = 2 = 1^2 + 1^2$은 특별하다. $2 = -i(1+i)^2$이므로 $2$의 norm $N(1+i) = 2$인 인수 $1+i$가 단원을 곱한 차이로 자기 켤레와 같아지는, 이른바 *분기<sub>ramification</sub>*가 일어나는 유일한 소수이다. 이제 이러한 분해 방식을 모든 소수에 대해 분류하여 $\mathbb{Z}[i]$의 소수(가우스 소수)가 무엇인지 완전히 기술하자.
 
 ## 가우스 소수의 분류
 
-정리 4의 증명은 홀수 소수 $p$의 $\mathbb{Z}[i]$에서의 거동이 $p \bmod 4$에 따라 둘로 갈림을 보였다. $p \equiv 1$이면 $p = \pi\overline{\pi}$로 쪼개지고, $p \equiv 3$이면 쪼개지지 않는다. 이를 norm을 길잡이로 하나의 명제로 모은다.
+정리 4의 증명은 홀수 소수 $p$의 $\mathbb{Z}[i]$에서의 분해가 $p \bmod 4$에 따라 둘로 갈림을 보였다. $p \equiv 1$이면 $p = \pi\overline{\pi}$로 쪼개지고, $p \equiv 3$이면 쪼개지지 않는다. 이를 norm을 길잡이로 하나의 명제로 모은다.
 
 ::: 정리 5 (가우스 소수의 분류)
 단원을 무시하면 $\mathbb{Z}[i]$의 소수는 정확히 다음 셋으로 나뉜다.

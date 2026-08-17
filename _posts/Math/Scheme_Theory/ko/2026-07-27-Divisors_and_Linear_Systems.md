@@ -54,7 +54,7 @@ Effective Cartier divisor의 가장 기본적인 성질은 그 codimension이 �
 Locally Noetherian scheme $X$ 위의 effective Cartier divisor $\iota:Z\hookrightarrow X$에 대하여, $Z$의 모든 irreducible component는 $X$에서 codimension $1$을 갖는다.
 :::
 ::: 증명
-Codimension은 국소적으로 계산되므로, [정의 1](#def1)의 affine open cover $\{U_i=\Spec A_i\}$ 가운데 하나를 택하여 $Z\cap U_i=Z(s_i)$이고 $s_i\in A_i$가 non-zerodivisor인 경우만 보면 충분하다. $Z$의 irreducible component $W$가 $U_i$와 만난다면 $W\cap U_i$는 $Z(s_i)$의 irreducible component이다. [§차원, ⁋명제 12](/ko/math/scheme_theory/dimension#prop12)에 의하여 $Z(s_i)$의 component는 $U_i$에서 codimension $0$이거나 $1$인데, codimension $0$인 component는 $U_i$ 자신의 irreducible component, 즉 $A_i$의 minimal prime ideal $\mathfrak{p}$에 대응된다. 만일 $W\cap U_i$가 그러한 component라면 $s_i$가 그 위에서 소멸하므로 $s_i\in \mathfrak{p}$이다. 그런데 Noetherian ring에서 non-zerodivisor는 어떠한 minimal prime ideal에도 속하지 않으므로 ([\[가환대수학\] §동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)) 이는 $s_i$가 non-zerodivisor라는 가정에 모순이다. 따라서 $W\cap U_i$의 codimension은 $1$이고, [§차원, ⁋명제 8](/ko/math/scheme_theory/dimension#prop8)에 의하여 $W$의 $X$에서의 codimension 또한 $1$이다.
+Codimension은 국소적으로 계산되므로, [정의 1](#def1)의 affine open cover $\{U_i=\Spec A_i\}$ 가운데 하나를 택하여 $Z\cap U_i=Z(s_i)$이고 $s_i\in A_i$가 non-zerodivisor인 경우만 보면 충분하다. $Z$의 irreducible component $W$가 $U_i$와 만난다면 $W\cap U_i$는 $Z(s_i)$의 irreducible component이다. [§차원, ⁋명제 13](/ko/math/scheme_theory/dimension#prop13)에 의하여 $Z(s_i)$의 component는 $U_i$에서 codimension $0$이거나 $1$인데, codimension $0$인 component는 $U_i$ 자신의 irreducible component, 즉 $A_i$의 minimal prime ideal $\mathfrak{p}$에 대응된다. 만일 $W\cap U_i$가 그러한 component라면 $s_i$가 그 위에서 소멸하므로 $s_i\in \mathfrak{p}$이다. 그런데 Noetherian ring에서 non-zerodivisor는 어떠한 minimal prime ideal에도 속하지 않으므로 ([\[가환대수학\] §동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)) 이는 $s_i$가 non-zerodivisor라는 가정에 모순이다. 따라서 $W\cap U_i$의 codimension은 $1$이고, [§차원, ⁋명제 8](/ko/math/scheme_theory/dimension#prop8)에 의하여 $W$의 $X$에서의 codimension 또한 $1$이다.
 :::
 
 증명에서 $s_i$가 non-zerodivisor라는 요구가 쓰인 곳은 $s_i$가 $A_i$의 어떠한 minimal prime ideal에도 속하지 않는다는 것뿐이었다. 기하적으로 이는 $s_i$가 $X$의 irreducible component 위에서 통째로 소멸하지 않는다는 것이다. [정의 1](#def1)에서 이 요구를 덜어내면 방정식 $s_i$가 component 하나를 자르는 대신 그것을 통째로 삼킬 수 있고, 그러면 $Z$는 codimension $1$이 아니라 $X$의 component 자체가 된다. 다음 예시에서 이러한 상황을 확인하자.
@@ -287,7 +287,7 @@ $$\lvert \mathcal{L}\rvert=\mathbb{P}(\Gamma(X,\mathcal{L}))$$
 
 ## Ample invertible sheaf
 
-$\mathcal{O}_X$-module $\mathcal{F}$가 *globally generated*라는 것은 각 점 $x$에서 stalk $\mathcal{F}_x$가 global section들의 germ으로 $\mathcal{O}_{X,x}$-module로서 생성되는 것이다. 이는 [\[대수다양체\] §사영공간의 코호몰로지, ⁋정의 6](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#def6)의 evaluation map이 surjective라는 조건을 scheme 위로 옮긴 것이며, invertible sheaf $\mathcal{L}$의 경우 linear system $\mathbb{P}(V)$의 base locus가 공집합인 것과 $V$의 section들이 $\mathcal{L}$을 globally generate하는 것이 같은 조건이다.
+$\mathcal{O}_X$-module $\mathcal{F}$가 *globally generated*라는 것은 각 점 $x$에서 stalk $\mathcal{F}_x$가 global section들의 germ으로 $\mathcal{O}_{X,x}$-module로서 생성되는 것이다. 이는 [\[대수다양체\] §사영공간의 코호몰로지, ⁋정의 4](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#def4)의 evaluation map이 surjective라는 조건을 scheme 위로 옮긴 것이며, invertible sheaf $\mathcal{L}$의 경우 linear system $\mathbb{P}(V)$의 base locus가 공집합인 것과 $V$의 section들이 $\mathcal{L}$을 globally generate하는 것이 같은 조건이다.
 
 Generating section들은 projective space로의 morphism을 결정한다. Ring $A$ 위의 scheme $X$와 invertible sheaf $\mathcal{L}$, 그리고 이를 globally generate하는 section $s_0,\ldots, s_n\in \Gamma(X,\mathcal{L})$이 주어졌다 하자. 각각의 $i$에 대하여
 

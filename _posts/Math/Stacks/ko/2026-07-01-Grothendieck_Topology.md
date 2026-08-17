@@ -104,7 +104,7 @@ Scheme $X$에 대하여 두 가지 site가 있다. *작은 Zariski site* $X_{\Za
 작은 Zariski site는 열린집합이 너무 적어서, 가령 모든 점의 잔여체가 같은 경우조차 구별하지 못하는 등의 한계를 가진다. 이를 극복하기 위해 열린포함보다 넓은 종류의 morphism을 covering으로 허용하는 것이 다음의 étale 위상이다.
 
 ::: 예시 8 (étale site)
-Scheme $X$의 *작은 étale site* $X_{\et}$는 대상이 étale morphism $U \rightarrow X$이고, morphism이 그 위의 $X$-morphism이며 (étale morphism 사이의 $X$-morphism은 자동으로 étale이다), covering family가 jointly surjective한 étale morphism족 $\{U_i \rightarrow U\}$인 site이다. ([\[스킴\] §매끄러운 사상과 에탈 사상, ⁋정의 7](/ko/math/scheme_theory/smooth_and_etale_morphisms#def7)) 더 일반적으로 *큰 étale site*는 $\Sch/X$ 위에서 jointly surjective한 étale morphism족을 covering family로 삼는다. 두 경우 모두 base change 조건은 étale morphism이 base change에 대해 닫혀 있음으로부터, transitivity는 étale morphism의 합성이 étale임으로부터 따른다.
+Scheme $X$의 *작은 étale site* $X_{\et}$는 대상이 étale morphism $U \rightarrow X$이고, morphism이 그 위의 $X$-morphism이며 (étale morphism 사이의 $X$-morphism은 자동으로 étale이다), covering family가 jointly surjective한 étale morphism족 $\{U_i \rightarrow U\}$인 site이다. ([\[스킴\] §매끄러운 사상과 에탈 사상, ⁋정의 11](/ko/math/scheme_theory/smooth_and_etale_morphisms#def11)) 더 일반적으로 *큰 étale site*는 $\Sch/X$ 위에서 jointly surjective한 étale morphism족을 covering family로 삼는다. 두 경우 모두 base change 조건은 étale morphism이 base change에 대해 닫혀 있음으로부터, transitivity는 étale morphism의 합성이 étale임으로부터 따른다.
 :::
 
 [예시 8](#ex8)의 covering에서 morphism $U_i \rightarrow U$은 더 이상 단사가 아니며, fiber가 여러 점을 가질 수 있다. 가령 유한 분리 가능한 체확대 $\Spec L \rightarrow \Spec K$나, 밑에서 $n$이 가역일 때 multiplicative group의 $n$제곱 morphism은 étale covering의 전형적인 예이다. 이렇게 단사가 아닌 covering을 허용하기에 étale site의 sheaf 조건은 두 겹 겹침 $U_i\times_U U_i$가 대각선 $U_i$에 그치지 않는 비자명한 자료를 담게 되고, 이것이 étale cohomology가 Zariski cohomology보다 풍부한 근본 이유이다. étale보다 더 넓은 flat morphism을 covering으로 삼으면 fppf와 fpqc 위상을 얻는다.

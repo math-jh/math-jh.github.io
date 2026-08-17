@@ -76,7 +76,7 @@ $$T(z) = \frac{az + b}{cz + d}$$
 
 $$T'(z) = \frac{a(cz + d) - c(az + b)}{(cz + d)^2} = \frac{ad - bc}{(cz + d)^2}$$
 
-이므로, $ad - bc \neq 0$인 한 $T'$는 분모가 정의되는 모든 점에서 $0$이 아니다. 따라서 Möbius 변환은 그 holomorphic한 영역에서 명제 2에 의해 등각사상이다. $\infty$를 포함한 거동까지 합쳐 보면 Möbius 변환은 $\widehat{\mathbb{C}}$ 전체의 automorphism이 되며, 이들이 group을 이룸을 행렬과의 대응으로 가장 깔끔하게 본다.
+이므로, $ad - bc \neq 0$인 한 $T'$는 분모가 정의되는 모든 점에서 $0$이 아니다. 따라서 Möbius 변환은 그 holomorphic한 영역에서 명제 2에 의해 등각사상이다. $\infty$에서의 대응까지 합쳐 보면 Möbius 변환은 $\widehat{\mathbb{C}}$ 전체의 automorphism이 되며, 이들이 group을 이룸을 행렬과의 대응으로 가장 깔끔하게 본다.
 
 ::: 명제 5
 Möbius 변환 전체의 모임은 사상의 합성에 대하여 group을 이룬다. 행렬 $\begin{pmatrix} a & b \\ c & d \end{pmatrix} \in \mathrm{GL}(2, \mathbb{C})$에 Möbius 변환 $z \mapsto (az+b)/(cz+d)$를 대응시키는 사상은 group의 homomorphism이며, 그 kernel은 $0$이 아닌 스칼라배의 항등행렬들 $\{\lambda I \mid \lambda \in \mathbb{C}^\times\}$이다. 따라서 Möbius 변환군은
@@ -100,7 +100,7 @@ $$AA' = \begin{pmatrix} aa' + bc' & ab' + bd' \\ ca' + dc' & cb' + dd' \end{pmat
 대응 $A \mapsto T_A$이 homomorphism임은 위에서 보았다. 그 kernel을 구한다. $T_A(z) = z$이 모든 $z$에서 성립하려면 $az + b = z(cz + d)$, 곧 $cz^2 + (d - a)z - b = 0$이 모든 $z$에서 성립해야 하므로 $c = 0$, $b = 0$, $a = d$이다. 곧 $A = aI$ ($a \neq 0$) 꼴이다. 역으로 그러한 $A$는 항등사상을 준다. 따라서 kernel은 $\{\lambda I \mid \lambda \in \mathbb{C}^\times\}$이고, 준동형정리에 의해 Möbius 변환군은 $\mathrm{GL}(2, \mathbb{C})/\{\lambda I\} = \mathrm{PGL}(2, \mathbb{C})$와 isomorphic하다. 한편 임의의 $A \in \mathrm{GL}(2, \mathbb{C})$는 $\mu^2 = \det A$인 $\mu$로 나누어 $A/\mu \in \mathrm{SL}(2, \mathbb{C})$로 만들 수 있고 이것이 같은 Möbius 변환을 주므로, $\mathrm{PGL}(2, \mathbb{C})$는 $\mathrm{SL}(2, \mathbb{C})$을 그 중심 $\{\pm I\}$로 나눈 $\mathrm{PSL}(2, \mathbb{C})$와 isomorphic하다.
 :::
 
-명제 5는 Möbius 변환의 합성이 행렬곱으로 번역됨을 말하며, 이로써 일차분수변환의 대수가 $2 \times 2$ 가역행렬의 대수로 환원된다. 행렬과 그 스칼라배가 같은 변환을 주므로, 변환을 행렬로 다룰 때는 언제든 $\det A = 1$이 되도록 normalize할 수 있다. Group $\mathrm{PSL}(2, \mathbb{C})$이 정확히 $\widehat{\mathbb{C}}$의 모든 holomorphic automorphism을 이룬다는 사실까지 알려져 있는데, 그 증명은 무한대에서의 거동 분석을 요구하므로 여기서는 Möbius 변환이 automorphism임을 확인하는 데 그친다. Möbius 변환의 구조를 더 들여다보기 위해, 임의의 변환이 몇 가지 기본 변환의 합성으로 쪼개짐을 본다.
+명제 5는 Möbius 변환의 합성이 행렬곱으로 번역됨을 말하며, 이로써 일차분수변환의 대수가 $2 \times 2$ 가역행렬의 대수로 환원된다. 행렬과 그 스칼라배가 같은 변환을 주므로, 변환을 행렬로 다룰 때는 언제든 $\det A = 1$이 되도록 normalize할 수 있다. Group $\mathrm{PSL}(2, \mathbb{C})$이 정확히 $\widehat{\mathbb{C}}$의 모든 holomorphic automorphism을 이룬다는 사실까지 알려져 있는데, 그 증명은 무한대 근방의 분석을 요구하므로 여기서는 Möbius 변환이 automorphism임을 확인하는 데 그친다. Möbius 변환의 구조를 더 들여다보기 위해, 임의의 변환이 몇 가지 기본 변환의 합성으로 쪼개짐을 본다.
 
 ::: 명제 6
 임의의 Möbius 변환은 평행이동 $z \mapsto z + \beta$, 확대·회전 $z \mapsto \alpha z$ ($\alpha \neq 0$), inversion $z \mapsto 1/z$의 합성으로 표현된다.
@@ -116,7 +116,7 @@ $$T(z) = \frac{az + b}{cz + d} = \frac{a}{c} + \frac{b - \frac{ad}{c}}{cz + d} =
 을 쓴다. 이는 다음 합성으로 읽힌다. 먼저 $z_1 = cz + d$ (확대·회전 $z \mapsto cz$와 평행이동 $z \mapsto z + d$의 합성), 다음 $z_2 = 1/z_1$ (inversion), 다음 $z_3 = -\frac{ad - bc}{c} z_2$ (확대·회전), 끝으로 $z_4 = z_3 + a/c$ (평행이동) 을 차례로 적용하면 $z_4 = T(z)$이다. 각 단계가 세 종류의 기본 변환 가운데 하나이므로 증명이 끝난다.
 :::
 
-이 분해는 Möbius 변환의 기하적 성질을 기본 변환들로부터 조립하게 해 준다. 평행이동과 확대·회전이 직선을 직선으로, 원을 원으로 보냄은 자명하므로, 비자명한 부분은 inversion $z \mapsto 1/z$의 거동뿐이다. 다음 명제가 그 핵심을 담는다.
+이 분해는 Möbius 변환의 기하적 성질을 기본 변환들로부터 조립하게 해 준다. 평행이동과 확대·회전이 직선을 직선으로, 원을 원으로 보냄은 자명하므로, 비자명한 부분은 inversion $z \mapsto 1/z$의 경우뿐이다. 다음 명제가 그 핵심을 담는다.
 
 ::: 정리 7
 모든 Möbius 변환은 $\widehat{\mathbb{C}}$에서 *원-직선<sub>circle or line</sub>*을 원-직선으로 보낸다. 곧 평면의 원과 직선을 통틀어 부르면, 임의의 Möbius 변환은 그러한 도형 하나를 다시 그러한 도형 하나로 옮긴다.
@@ -165,7 +165,7 @@ $$(Tz_1, Tz_2; Tz_3, Tz_4) = (z_1, z_2; z_3, z_4)$$
 :::
 
 ::: 증명
-명제 6에 의해 $T$가 평행이동, 확대·회전, inversion의 합성이므로, 이 세 기본 변환 각각이 교차비를 보존함을 보이면 합성인 $T$도 보존한다. 두 점 $z, w$의 차에 대한 거동을 보면 충분하다. 평행이동 $T(z) = z + \beta$에 대해서는 $Tz - Tw = (z + \beta) - (w + \beta) = z - w$이므로 정의 8의 네 차가 모두 그대로이고 교차비가 불변이다. 확대·회전 $T(z) = \alpha z$에 대해서는 $Tz - Tw = \alpha(z - w)$이므로 네 차에 각각 $\alpha$가 곱해지는데, 교차비는 두 차의 곱을 다른 두 차의 곱으로 나눈 것이라 $\alpha$가 분자·분모에서 상쇄되어 불변이다. Inversion $T(z) = 1/z$에 대해서는
+명제 6에 의해 $T$가 평행이동, 확대·회전, inversion의 합성이므로, 이 세 기본 변환 각각이 교차비를 보존함을 보이면 합성인 $T$도 보존한다. 두 점 $z, w$의 차가 어떻게 바뀌는지 보면 충분하다. 평행이동 $T(z) = z + \beta$에 대해서는 $Tz - Tw = (z + \beta) - (w + \beta) = z - w$이므로 정의 8의 네 차가 모두 그대로이고 교차비가 불변이다. 확대·회전 $T(z) = \alpha z$에 대해서는 $Tz - Tw = \alpha(z - w)$이므로 네 차에 각각 $\alpha$가 곱해지는데, 교차비는 두 차의 곱을 다른 두 차의 곱으로 나눈 것이라 $\alpha$가 분자·분모에서 상쇄되어 불변이다. Inversion $T(z) = 1/z$에 대해서는
 
 $$Tz_i - Tz_j = \frac{1}{z_i} - \frac{1}{z_j} = \frac{z_j - z_i}{z_i z_j}$$
 

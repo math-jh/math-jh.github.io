@@ -101,7 +101,7 @@ $J(t_0) = 0$인 Jacobi field는 정확히 $\gamma(t_0)$에서 출발하는 측�
 
 ## Index form과 에너지의 제2변분
 
-측지선이 길이 또는 에너지를 *최소화*하는지를 판정하려면 [§측지선, ⁋정리 3](/ko/math/riemannian_geometry/geodesics#thm3)의 제1변분만으로는 부족하고, critical point에서의 이차 거동, 즉 제2변분을 보아야 한다. 그 이차형식이 index form이다. 먼저 그것을 정의한다.
+측지선이 길이 또는 에너지를 *최소화*하는지를 판정하려면 [§측지선, ⁋정리 3](/ko/math/riemannian_geometry/geodesics#thm3)의 제1변분만으로는 부족하고, critical point에서의 이차 변화, 즉 제2변분을 보아야 한다. 그 이차형식이 index form이다. 먼저 그것을 정의한다.
 
 측지선 $\gamma : [a, b] \rightarrow M$에 대해, $\gamma$를 따른 벡터장 중 양 끝에서 소멸하고 ($V(a) = V(b) = 0$) 조각마다 smooth 것들의 공간을 생각하자. 그 위에서 다음 대칭 bilinear form을 정의한다.
 
@@ -259,7 +259,7 @@ $M$이 complete이므로 Hopf-Rinow 정리에 의해 모든 측지선이 $\mathb
 $\exp_p$가 전단사이므로 임의의 $q \in M$에 대해 $q = \exp_p(v)$인 $v$가 유일하게 존재하고, 그 측지선 $\gamma_v$가 $p$와 $q$를 잇는 유일한 측지선이다. [§지수사상, ⁋정리 9](/ko/math/riemannian_geometry/exponential_map#thm9)가 함의하듯 $\exp_p$가 diffeomorphism이 되는 영역에서 방사 측지선은 길이를 최소화하므로, 이 유일한 측지선이 $p$와 $q$ 사이의 최단 곡선이다.
 :::
 
-[정리 11](#thm11)은 sectional curvature가 비양인 단순연결 완비 manifold가 위상적으로 가장 단순한 manifold, 즉 $\mathbb{R}^n$임을 말한다. 이런 manifold를 *Cartan–Hadamard manifold*라 부르며, 유클리드 공간 $\mathbb{R}^n$ ($K \equiv 0$)과 hyperbolic space $\mathbb{H}^n$ ($K \equiv -1$)이 대표적인 예이다. 두 정리를 나란히 놓으면 곡률의 부호가 전역 위상에 미치는 영향이 선명하다. Ricci curvature의 양의 하한은 manifold를 콤팩트하게 닫아 fundamental group을 유한하게 만들고, sectional curvature의 비양성은 단순연결인 경우 manifold를 콤팩트성과 정반대인 $\mathbb{R}^n$으로 완전히 펼친다. Sectional curvature의 부호가 [명제 4](#prop4) 뒤에서 본 Jacobi field의 수렴·발산 양상을 통해 측지선 다발의 거동을 지배하고, 그 거동이 다시 전역 구조로 번역되는 것이다.
+[정리 11](#thm11)은 sectional curvature가 비양인 단순연결 완비 manifold가 위상적으로 가장 단순한 manifold, 즉 $\mathbb{R}^n$임을 말한다. 이런 manifold를 *Cartan–Hadamard manifold*라 부르며, 유클리드 공간 $\mathbb{R}^n$ ($K \equiv 0$)과 hyperbolic space $\mathbb{H}^n$ ($K \equiv -1$)이 대표적인 예이다. 두 정리를 나란히 놓으면 곡률의 부호가 전역 위상에 미치는 영향이 선명하다. Ricci curvature의 양의 하한은 manifold를 콤팩트하게 닫아 fundamental group을 유한하게 만들고, sectional curvature의 비양성은 단순연결인 경우 manifold를 콤팩트성과 정반대인 $\mathbb{R}^n$으로 완전히 펼친다. Sectional curvature의 부호가 [명제 4](#prop4) 뒤에서 본 Jacobi field의 수렴·발산 양상을 통해 측지선 다발이 벌어지는 정도를 지배하고, 그것이 다시 전역 구조로 번역되는 것이다.
 
 ---
 

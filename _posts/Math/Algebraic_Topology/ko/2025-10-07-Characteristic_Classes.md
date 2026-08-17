@@ -156,7 +156,7 @@ $$(E, E_0)\simeq (D(E), S(E))$$
 ::: 정리 5 (Gysin exact sequence)
 Paracompact base space $B$ 위의 oriented rank $n$ vector bundle $E\rightarrow B$의 sphere bundle $\pi:S(E)\rightarrow B$에 대하여, 다음의 long exact sequence
 
-$$\cdots\rightarrow H^{k-n}(B)\xrightarrow{\ \smile e\ }H^k(B)\xrightarrow{\ \pi^\ast\ }H^k(S(E))\xrightarrow{\ \pi_!\ }H^{k-n+1}(B)\rightarrow H^{k+1}(B)\rightarrow\cdots$$
+$$\cdots\rightarrow H^{k-n}(B)\xrightarrow{\ {\smile}e\ }H^k(B)\xrightarrow{\ \pi^\ast\ }H^k(S(E))\xrightarrow{\ \pi_!\ }H^{k-n+1}(B)\rightarrow H^{k+1}(B)\rightarrow\cdots$$
 
 가 존재한다. 여기서 $e=e(E)$는 Euler class, $\pi^\ast$는 pullback, $\pi_!$는 fiber를 따른 적분이다.
 :::
@@ -195,7 +195,7 @@ $$\pi_!(\pi^\ast\alpha\smile\beta)=\alpha\smile\pi_!\beta,\qquad \alpha\in H^\as
 
 이를 실제로 사용하기 위해 위에서 살펴본 $S^2$의 tangent bundle $TS^2$를 보자. 그럼 Gysin sequence에서 
 
-$$\smile e:H^0(S^2)\rightarrow H^2(S^2)$$ 
+$${\smile}e:H^0(S^2)\rightarrow H^2(S^2)$$ 
 
 는 $\times 2$ map으로 주어지며, 그 cokernel $\mathbb{Z}/2$가 sphere bundle $S(TS^2)$의 $H^2$에 torsion으로 나타난다. 반면 $S^2$의 trivial bundle $E$로 시작했다면, 이 부분은 $\mathbb{Z}$였을 것이므로, Euler class가 sphere bundle을 product로부터 밀어낸 흔적이 바로 이 torsion에 담겨있는 것이다. 
 
@@ -209,7 +209,7 @@ $$H^{k-n}(B)=H^{k-n+1}(B)=0$$
 
 이제 $E$를 (oriented) real vector bundle로 본 것을 $E_\mathbb{R}$로 표기하자. $E$가 complex dimension $n$이므로 $E_\mathbb{R}$은 real dimension $2n$이다. 그럼 $E_0$는 $E_{\mathbb{R}}$의 sphere bundle $S(E_{\mathbb{R}})$와 homotopy equivalent하므로 [정리 5](#thm5)에 의해
 
-$$\cdots\rightarrow H^{k-2n}(B)\xrightarrow{\ \smile e\ }H^k(B)\xrightarrow{\ \pi_0^\ast\ }H^k(E_0)\rightarrow H^{k-2n+1}(B)\rightarrow\cdots$$
+$$\cdots\rightarrow H^{k-2n}(B)\xrightarrow{\ {\smile}e\ }H^k(B)\xrightarrow{\ \pi_0^\ast\ }H^k(E_0)\rightarrow H^{k-2n+1}(B)\rightarrow\cdots$$
 
 이 성립하고, 위에서 살펴본 것과 같이 $k\leq 2n-2$이면 양 끝의 $H^{k-2n}(B)$와 $H^{k-2n+1}(B)$가 모두 음의 degree라 $0$이므로, $\pi_0^\ast:H^k(B)\rightarrow H^k(E_0)$는 isomorphism이다.
 
@@ -248,7 +248,7 @@ Chern class는 다음을 만족한다.
 ::: 예시 8
 [§슈티펠-휘트니 특성류, ⁋예시 3](/ko/math/algebraic_topology/stiefel_whitney_classes#ex3)의 real tautological line bundle의 complex analogue로, $\CP^\infty=\Gr(1,\mathbb{C}^\infty)$ 위의 tautological complex line bundle $\gamma$를 생각하자. 그럼 $\gamma$의 sphere bundle은 $\mathbb{C}^\infty$의 단위구 $S^\infty$이며 이는 contractible이므로[^1] 모든 $k>0$에 대해 $H^k(S^\infty)=0$이다. 따라서, [정리 5](#thm5)에 의해 $H^1(\CP^\infty)=0$이고 
 
-$$\smile c_1(\gamma):H^{k-2}(\CP^\infty)\rightarrow H^k(\CP^\infty)$$
+$${\smile}c_1(\gamma):H^{k-2}(\CP^\infty)\rightarrow H^k(\CP^\infty)$$
 
 이 $k\geq 2$에서 isomorphism이다. 이제 $H^0(\CP^\infty)=\mathbb{Z}$에서 출발하면 $c_1(\gamma)$가 $H^2(\CP^\infty;\mathbb{Z})\cong\mathbb{Z}$의 generator이며, 
 

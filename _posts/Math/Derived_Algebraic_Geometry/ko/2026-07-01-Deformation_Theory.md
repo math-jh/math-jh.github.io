@@ -34,7 +34,7 @@ $$0\longrightarrow M\longrightarrow A'\overset{\pi}{\longrightarrow}A\longrighta
 으로 적는다.
 :::
 
-조건 $M^2=0$은 $M$ 위의 $A'$-action이 $M$의 원소를 곱하는 부분을 모두 죽인다는 뜻이므로, $M$의 $A'$-module 구조가 $A$-module 구조로 내려온다는 마지막 조건은 자동으로 따라온다. 기하적으로 $\Spec A\hookrightarrow\Spec A'$는 정의 ideal의 제곱이 $0$인 closed immersion, 곧 첫 번째 무한소 이웃 수준의 두꺼워짐이다. 이러한 확대는 [\[스킴\] §매끄러운 사상과 에탈 사상, ⁋정리 12](/ko/math/scheme_theory/smooth_and_etale_morphisms#thm12)에서 무한소 lifting 판정의 무대로 이미 등장하였다.
+조건 $M^2=0$은 $M$ 위의 $A'$-action이 $M$의 원소를 곱하는 부분을 모두 죽인다는 뜻이므로, $M$의 $A'$-module 구조가 $A$-module 구조로 내려온다는 마지막 조건은 자동으로 따라온다. 기하적으로 $\Spec A\hookrightarrow\Spec A'$는 정의 ideal의 제곱이 $0$인 closed immersion, 곧 첫 번째 무한소 이웃 수준의 두꺼워짐이다. 이러한 확대는 [\[스킴\] §매끄러운 사상과 에탈 사상, ⁋정리 16](/ko/math/scheme_theory/smooth_and_etale_morphisms#thm16)에서 무한소 lifting 판정의 무대로 이미 등장하였다.
 
 ::: 예시 2
 가장 기본적인 square-zero extension은 $M=A$에 대한 *trivial extension*
@@ -85,7 +85,7 @@ $$\sum_jA_jF_j=\sum_ja_jf_j+\epsilon\Bigl(\sum_ja_jg_j-\sum_jc_jf_j\Bigr)=0$$
 이므로 syzygy $(a_j)$가 $(F_j)$의 syzygy로 들어올려진다.
 :::
 
-이 명제는 flat한 first-order deformation을 매우 구체적으로 기술한다. 곧 flatness는 정확히 "원래 방정식들 사이의 모든 관계가 흔들린 방정식들 사이의 관계로 살아남는다"는 조건이며, 이것이 [\[스킴\] §매끄러운 사상과 에탈 사상, ⁋정리 12](/ko/math/scheme_theory/smooth_and_etale_morphisms#thm12)에서 본 무한소 lifting의 대수적 핵심이다. 한 가지 관찰을 덧붙이면, $\sum_ja_jf_j=0$인 syzygy에 대하여 조건 $\sum_ja_jg_j\in I$는 $B$ 위에서 $\sum_j\overline{a_j}\overline{g_j}=0$으로 적힌다. 따라서 대응 $\overline{f_j}\mapsto\overline{g_j}$는 $B$-module homomorphism
+이 명제는 flat한 first-order deformation을 매우 구체적으로 기술한다. 곧 flatness는 정확히 "원래 방정식들 사이의 모든 관계가 흔들린 방정식들 사이의 관계로 살아남는다"는 조건이며, 이것이 [\[스킴\] §매끄러운 사상과 에탈 사상, ⁋정리 16](/ko/math/scheme_theory/smooth_and_etale_morphisms#thm16)에서 본 무한소 lifting의 대수적 핵심이다. 한 가지 관찰을 덧붙이면, $\sum_ja_jf_j=0$인 syzygy에 대하여 조건 $\sum_ja_jg_j\in I$는 $B$ 위에서 $\sum_j\overline{a_j}\overline{g_j}=0$으로 적힌다. 따라서 대응 $\overline{f_j}\mapsto\overline{g_j}$는 $B$-module homomorphism
 
 $$\varphi:I/I^2\longrightarrow B$$
 
@@ -190,13 +190,13 @@ $$T^1(B/k,M)=T^2(B/k,M)=0\qquad(\text{모든 }B\text{-module }M)$$
 이다. 곧 smooth한 $B$의 변형은 어떤 square-zero extension 위로도 동형을 무시하면 유일하게 (장애 없이) 존재하며, 그 무한소 automorphism은 vector field $\Der_k(B,B)$가 통제한다.
 :::
 ::: 증명
-$B$가 smooth하면 ([\[스킴\] §매끄러운 사상과 에탈 사상, ⁋명제 4](/ko/math/scheme_theory/smooth_and_etale_morphisms#prop4)) conormal exact sequence
+$B$가 smooth하면 ([\[스킴\] §매끄러운 사상과 에탈 사상, ⁋명제 8](/ko/math/scheme_theory/smooth_and_etale_morphisms#prop8)) conormal exact sequence
 
 $$0\longrightarrow I/I^2\overset{\overline{d}}{\longrightarrow}\Omega_{P/k}\otimes_PB\longrightarrow\Omega_{B/k}\longrightarrow0$$
 
 이 왼쪽에서도 split되는 short exact sequence가 되어 $\overline{d}$가 injective이고 그 cokernel $\Omega_{B/k}$이 projective이다. 따라서 $H_1(\operatorname{NL}_{B/k})=\ker\overline{d}=0$이고 $\operatorname{NL}_{B/k}$은 projective module $\Omega_{B/k}$ 하나에 quasi-isomorphic하다. 그럼 $\Hom_B(\operatorname{NL}_{B/k},M)$이 $\Hom_B(\Omega_{B/k},M)$ 한 항에 집중되어 $T^1=0$이다. $T^2=0$은 [참고 6](#rmk6)의 $T^i(B/k,M)=\Ext^i_B(L_{B/k},M)$과, smooth한 $B$에 대하여 $L_{B/k}$가 이 projective module $\Omega_{B/k}$ 하나에 quasi-isomorphic하다는 사실로부터 따른다. 무한소 automorphism에 관한 주장은 [정리 7](#thm7)의 일반 형태이다.
 
-이 결론은 [\[스킴\] §매끄러운 사상과 에탈 사상, ⁋정리 12](/ko/math/scheme_theory/smooth_and_etale_morphisms#thm12)과 정확히 일치한다. Smooth는 모든 square-zero 확대에 대한 lifting의 존재($T^2=0$, unobstructed)와 그 lifting의 일대일적 통제($T^1=0$, 동형 유일)에 해당하기 때문이다.
+이 결론은 [\[스킴\] §매끄러운 사상과 에탈 사상, ⁋정리 16](/ko/math/scheme_theory/smooth_and_etale_morphisms#thm16)과 정확히 일치한다. Smooth는 모든 square-zero 확대에 대한 lifting의 존재($T^2=0$, unobstructed)와 그 lifting의 일대일적 통제($T^1=0$, 동형 유일)에 해당하기 때문이다.
 :::
 
 조금 더 약한 가정인 *local complete intersection*에서도 장애는 사라진다. $B=P/I$에서 $I$가 국소적으로 regular sequence로 생성되면 완전한 여접 복합체 $L_{B/k}$가 $[0,1]$ 두 degree에 projective module로 집중되어, 그 dual의 둘째 cohomology가 자동으로 $0$이 되기 때문이다. 곧 $T^2(B/k,M)=0$이고 lci singular point는 항상 *unobstructed<sub>장애 없음</sub>*이다. 다만 lci라고 해서 $H_1(\operatorname{NL}_{B/k})$이 소멸하는 것은 아니며, 반대로 아래 [예시 11](#ex11)처럼 singular한 lci가 $H_1(\operatorname{NL}_{B/k})=0$을 만족하기도 한다. 곧 $H_1(\operatorname{NL})$의 소멸만으로는 lci 여부가 판정되지 않으며, smoothness는 $H_1(\operatorname{NL}_{B/k})=0$과 $\Omega_{B/k}$의 국소자유성이 함께 성립하는 것으로 특징지어진다.

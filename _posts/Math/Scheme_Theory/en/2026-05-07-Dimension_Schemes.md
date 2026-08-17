@@ -240,7 +240,7 @@ Let $\mathbb{K}$ be an arbitrary field and $A$ a finitely generated $\mathbb{K}$
 
 The results from [[Commutative Algebra] §Integral Extensions and Ideals](/en/math/commutative_algebra/lying_over_and_going_up) are of course the most importantly used results in the above claims. On the other hand, using the dimension formula [[Commutative Algebra] §Noether Normalization, ⁋Theorem 4](/en/math/commutative_algebra/noether_normalization#thm4), we obtain the following.
 
-::: Proposition 11
+::: Proposition 12
 Let $\mathbb{K}$ be an arbitrary field and $A$ a finitely generated $\mathbb{K}$-algebra. If $A$ is an integral domain and $f\in A$ is a nonzero non-unit, then $\dim A/(f)=\dim A-1$ holds.
 :::
 ::: Proof
@@ -251,7 +251,7 @@ Choose a minimal prime $\mathfrak{p}$ of $A$ containing $(f)$. By [[Commutative 
 
 Earlier we saw that for a finite type affine integral $\mathbb{K}$-scheme $X=\Spec A$, the closed subscheme $Z(f)$ defined by a nonzero non-unit $f$ of $A$ has dimension one less than $X$. This is clearly a useful result, but we can examine its consequences in more general cases as follows.
 
-::: Proposition 12
+::: Proposition 13
 For a locally Noetherian scheme $X$ and a function $f$ on $X$, the irreducible components of $Z(f)$ have codimension $0$ or $1$.
 :::
 ::: Proof
@@ -264,7 +264,7 @@ $$\codim_XW=\dim\mathcal{O}_{X,w}=\dim\mathcal{O}_{U,w}=\codim_U(W\cap U)$$
 Now since the codimension of the point $\mathfrak{p}$ in $\Spec A$ equals $\codim\mathfrak{p}$ in the ring $A$ ([[Commutative Algebra] §Dimension, ⁋Definition 2](/en/math/commutative_algebra/Krull_dimension#def2)), we eventually have $\codim_XW=\codim\mathfrak{p}\leq 1$.
 :::
 
-The condition $\codim_XW=0$ means that $W$ is an irreducible component of $X$ itself, that is, $f$ vanishes identically on that component. Therefore if $f$ does not vanish identically on any irreducible component of $X$, then all components of $Z(f)$ have codimension exactly $1$, and this is the role played by the assumptions in [Proposition 11](#prop11) that $A$ is an integral domain and $f$ is nonzero.
+The condition $\codim_XW=0$ means that $W$ is an irreducible component of $X$ itself, that is, $f$ vanishes identically on that component. Therefore if $f$ does not vanish identically on any irreducible component of $X$, then all components of $Z(f)$ have codimension exactly $1$, and this is the role played by the assumptions in [Proposition 12](#prop12) that $A$ is an integral domain and $f$ is nonzero.
 
 ---
 

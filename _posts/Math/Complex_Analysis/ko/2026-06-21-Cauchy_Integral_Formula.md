@@ -163,7 +163,7 @@ $$g(z) = \frac{1}{p(z)}$$
 
 이 잘 정의된다. 다항식은 entire function이고 ([§복소정칙함수, ⁋명제 3](/ko/math/complex_analysis/holomorphic_functions#prop3)에서 다항식의 holomorphicity) 분모가 $0$이 되지 않으므로 그 역수 $g$도 $\mathbb{C}$ 전체에서 holomorphic이다.
 
-$g$가 유계임을 보인다. $\lvert z\rvert$이 클 때 $p$의 거동을 보면,
+$g$가 유계임을 보인다. $\lvert z\rvert$이 클 때 $p$의 크기를 보면,
 
 $$p(z) = a_n z^n\left( 1 + \frac{a_{n-1}}{a_n z} + \cdots + \frac{a_0}{a_n z^n} \right)$$
 

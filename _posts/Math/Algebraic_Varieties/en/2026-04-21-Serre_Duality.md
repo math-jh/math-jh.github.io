@@ -23,7 +23,7 @@ In this post we examine Serre duality, the algebraic geometry version of duality
 
 ## Serre Duality on Projective Space
 
-We first look carefully at the case $X=\mathbb{P}^n$. We know that every line bundle defined on $\mathbb{P}^n$ is of the form $\mathcal{O}(d)$, and in particular we saw in [§Canonical Line Bundle, §§The Canonical Bundle of $\mathbb{P}^n$](/en/math/algebraic_varieties/canonical_bundle#the-canonical-bundle-of-mathbbpn) that this is $\mathcal{O}(-n-1)$. Then from [§Cohomology of Projective Space, ⁋Proposition 1](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop1) we obtain the following.
+We first look carefully at the case $X=\mathbb{P}^n$. We know that every line bundle defined on $\mathbb{P}^n$ is of the form $\mathcal{O}(d)$, and in particular we saw in [§Canonical Line Bundle, §§Canonical Bundle of $\mathbb{P}^n$](/en/math/algebraic_varieties/canonical_bundle#canonical-bundle-of-mathbbpn) that this is $\mathcal{O}(-n-1)$. Then from [§Cohomology of Projective Space, ⁋Proposition 1](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop1) we obtain the following.
 
 ::: Proposition 1
 For the canonical line bundle $\omega_X$ on projective space $X=\mathbb{P}^n$, there exists an isomorphism

@@ -118,7 +118,7 @@ $$\times: H^\bullet(X;A)\otimes_A H^\bullet(Y;A) \rightarrow H^\bullet(X\times Y
 
 {% diagram Math/Algebraic_Topology/Cup_Products-1.svg width="41.10em" alt="functoriality_of_cup_products" %}
 
-의 commutativity이며, 왼쪽 세로 화살표 $\smile\otimes\smile$는 위에서 부여한 graded tensor product의 곱셈을 뜻한다. 식으로 풀어쓰면 이는 임의의 homogeneous class들 $\alpha_1,\alpha_2\in H^\bullet(X;A)$와 $\beta_1,\beta_2\in H^\bullet(Y;A)$에 대하여, 
+의 commutativity이며, 왼쪽 세로 화살표 ${\smile}\otimes{\smile}$는 위에서 부여한 graded tensor product의 곱셈을 뜻한다. 식으로 풀어쓰면 이는 임의의 homogeneous class들 $\alpha_1,\alpha_2\in H^\bullet(X;A)$와 $\beta_1,\beta_2\in H^\bullet(Y;A)$에 대하여, 
 
 $$(\alpha_1\times\beta_1)(\alpha_2\times\beta_2)=\Delta_{X\times Y}^\ast (\alpha_1\times\beta_1\times\alpha_2\times\beta_2)=(-1)^{\lvert\beta_1\rvert\lvert\alpha_2\rvert}(\alpha_1\smile\alpha_2)\times(\beta_1\smile\beta_2)$$
 

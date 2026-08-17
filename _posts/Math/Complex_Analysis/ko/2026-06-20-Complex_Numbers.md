@@ -226,7 +226,7 @@ $\mathbb{C}$의 부분집합 $K$가 점렬컴팩트인 것은 $K$가 닫혀 있�
 따라서 닫힌 원판 $\overline{B}(z_0, R) = \{z \in \mathbb{C} : \lvert z - z_0\rvert \leq R\}$이나 원 $\{z : \lvert z\rvert = 1\}$ 같은 집합은 컴팩트이고, 반면 열린 원판이나 $\mathbb{C}$ 전체는 컴팩트가 아니다. 이 컴팩트성은 곧 연속함수가 컴팩트집합 위에서 최댓값을 가진다는 결과로 이어져, 최대절댓값원리나 Liouville 정리 같은 complex analysis의 정리들이 서는 발판이 된다.
 
 ::: 예시 12 (등비점열의 수렴과 발산)
-복소수 $z$에 대해 점열 $(z^n)$의 거동은 절댓값 $\lvert z\rvert$로 완전히 결정된다. 명제 4에 의해 $\lvert z^n\rvert = \lvert z\rvert^n$이므로, $\lvert z\rvert < 1$이면
+복소수 $z$에 대해 점열 $(z^n)$은 절댓값 $\lvert z\rvert$에 따라 셋으로 갈린다. 명제 4에 의해 $\lvert z^n\rvert = \lvert z\rvert^n$이므로, $\lvert z\rvert < 1$이면
 
 $$\lvert z^n - 0\rvert = \lvert z\rvert^n \rightarrow 0$$
 
@@ -275,7 +275,7 @@ $$\lvert z_n - z\rvert = \frac{\sqrt{1 + \lvert z_n\rvert^2}\,\sqrt{1 + \lvert z
 이다. 따라서 두 거리는 $\mathbb{C}$ 위에서 같은 수렴을 정의하며, 같은 위상을 준다.
 :::
 
-명제 15는 $\widehat{\mathbb{C}}$가 $\mathbb{C}$를 위상적으로 변형 없이 품으면서 무한대에 한 점을 더해 컴팩트하게 만든 공간임을 말한다. 실제로 $\widehat{\mathbb{C}}$는 구면 $S^2$와 등거리동형이고 $S^2$는 $\mathbb{R}^3$의 closed bounded set이므로, Heine–Borel 정리에 의해 $(\widehat{\mathbb{C}}, \chi)$는 컴팩트한 거리공간이다. 컴팩트하지 않은 $\mathbb{C}$에 점 하나를 더해 컴팩트한 공간을 얻는 이 구성은 위상수학의 *한 점 컴팩트화<sub>one-point compactification</sub>*의 가장 중요한 예이며, 무한대에서의 함수의 거동을 유한한 점에서의 거동과 동등하게 다룰 수 있게 해 준다. 유리형함수를 $\widehat{\mathbb{C}}$ 사이의 morphism으로 보는 관점이 여기서 출발한다.
+명제 15는 $\widehat{\mathbb{C}}$가 $\mathbb{C}$를 위상적으로 변형 없이 품으면서 무한대에 한 점을 더해 컴팩트하게 만든 공간임을 말한다. 실제로 $\widehat{\mathbb{C}}$는 구면 $S^2$와 등거리동형이고 $S^2$는 $\mathbb{R}^3$의 closed bounded set이므로, Heine–Borel 정리에 의해 $(\widehat{\mathbb{C}}, \chi)$는 컴팩트한 거리공간이다. 컴팩트하지 않은 $\mathbb{C}$에 점 하나를 더해 컴팩트한 공간을 얻는 이 구성은 위상수학의 *한 점 컴팩트화<sub>one-point compactification</sub>*의 가장 중요한 예이며, 무한대에서의 함수의 모습을 유한한 점에서의 모습과 동등하게 다룰 수 있게 해 준다. 유리형함수를 $\widehat{\mathbb{C}}$ 사이의 morphism으로 보는 관점이 여기서 출발한다.
 
 ---
 

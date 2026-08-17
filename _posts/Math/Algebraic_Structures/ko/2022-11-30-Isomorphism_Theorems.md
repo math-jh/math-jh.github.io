@@ -134,7 +134,7 @@ $$S=\{f(x)g(x)^{-1}\mid x\in G\}$$
 ::: 증명
 우선 임의의 $x\in G$에 대하여 $f(x)g(x)^{-1}\in S\subseteq\overline{S}=\ker q$이므로 $q(f(x))=q(g(x))$, 즉 $q\circ f=q\circ g$가 성립한다.
 
-임의의 group homomorphism $q': G \rightarrow H$가 존재하여 $q'\circ f=q'\circ g$를 만족한다 하자. 그럼 [보조정리 1](#lem1)에 의해 $\ker q'$는 normal subgroup이고, 조건 $q'\circ f=q'\circ g$에 의하여
+임의의 group homomorphism $q': H \rightarrow H'$가 존재하여 $q'\circ f=q'\circ g$를 만족한다 하자. 그럼 [보조정리 1](#lem1)에 의해 $\ker q'$는 normal subgroup이고, 조건 $q'\circ f=q'\circ g$에 의하여
 
 $$q'(f(x))=q'(g(x))\iff q'(f(x)g(x)^{-1})=e$$
 

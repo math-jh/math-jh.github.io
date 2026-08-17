@@ -167,7 +167,7 @@ $L$이 irreducible이면 $\operatorname{IC}_Z(L)$이 단순함을 보인다. $0 
 
 ## 분해정리
 
-IC sheaf의 위력이 가장 극적으로 드러나는 곳이 proper morphism에 대한 받음의 거동이다. Complex algebraic variety 사이의 proper morphism에서 받음 $Rf_\ast$이 IC sheaf를 어떻게 분해하는지를 기술하는 것이 Beilinson–Bernstein–Deligne–Gabber의 분해정리이며, 이는 Deligne의 projective variety에 대한 spectral sequence 퇴화 정리와 hard Lefschetz 정리를 perverse sheaf의 언어로 통합하고 특이공간으로까지 확장한 결과이다.
+IC sheaf의 위력이 가장 극적으로 드러나는 곳이 proper morphism에 대한 받음이다. Complex algebraic variety 사이의 proper morphism에서 받음 $Rf_\ast$이 IC sheaf를 어떻게 분해하는지를 기술하는 것이 Beilinson–Bernstein–Deligne–Gabber의 분해정리이며, 이는 Deligne의 projective variety에 대한 spectral sequence 퇴화 정리와 hard Lefschetz 정리를 perverse sheaf의 언어로 통합하고 특이공간으로까지 확장한 결과이다.
 
 ::: 정리 13 (분해정리)
 $f: X \rightarrow Y$를 complex algebraic variety 사이의 proper morphism이라 하자. 그럼 $D^b_c(Y)$ 안에서 자연스러운 direct sum decomposition

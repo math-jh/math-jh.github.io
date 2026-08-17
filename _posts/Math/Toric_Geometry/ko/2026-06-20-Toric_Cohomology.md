@@ -87,7 +87,7 @@ $X_\Sigma$의 affine open cover로 maximal cone들이 주는 $\{U_\sigma\}_{\sig
 
 ## Demazure vanishing
 
-이제 nef divisor에 대한 고차 cohomology 소멸을 본다. Divisor $D$가 *nef<sub>numerically effective</sub>*라는 것은 모든 irreducible complete curve $C \subseteq X_\Sigma$에 대해 intersection number $D \cdot C \ge 0$인 것이다. Complete toric variety에서 nef 조건은 $D$가 Cartier일 때 그에 대응하는 piecewise linear function ([§토러스 인자와 선다발, ⁋명제 6](/ko/math/toric_geometry/toric_divisors#prop6)) $\psi_D$가 *convex*한 것, 즉 $\psi_D$가 위로 볼록인 것과 동치이다. 이는 ample에 대응하는 strictly convex의 부등호를 등호 허용으로 완화한 조건이다 ([§토러스 인자와 선다발, ⁋정의 8](/ko/math/toric_geometry/toric_divisors#def8)). Nef인 Cartier divisor는 동치로 basepoint-free, 즉 대응 line bundle이 globally generated인 것으로도 특징지어진다 ([\[대수다양체\] §사영공간의 코호몰로지, ⁋정의 6](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#def6)).
+이제 nef divisor에 대한 고차 cohomology 소멸을 본다. Divisor $D$가 *nef<sub>numerically effective</sub>*라는 것은 모든 irreducible complete curve $C \subseteq X_\Sigma$에 대해 intersection number $D \cdot C \ge 0$인 것이다. Complete toric variety에서 nef 조건은 $D$가 Cartier일 때 그에 대응하는 piecewise linear function ([§토러스 인자와 선다발, ⁋명제 6](/ko/math/toric_geometry/toric_divisors#prop6)) $\psi_D$가 *convex*한 것, 즉 $\psi_D$가 위로 볼록인 것과 동치이다. 이는 ample에 대응하는 strictly convex의 부등호를 등호 허용으로 완화한 조건이다 ([§토러스 인자와 선다발, ⁋정의 8](/ko/math/toric_geometry/toric_divisors#def8)). Nef인 Cartier divisor는 동치로 basepoint-free, 즉 대응 line bundle이 globally generated인 것으로도 특징지어진다 ([\[대수다양체\] §사영공간의 코호몰로지, ⁋정의 4](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#def4)).
 
 ::: 정리 5 (Demazure vanishing)
 $X_\Sigma$가 complete toric variety이고 $D$가 nef인 torus-invariant Cartier divisor라 하자. 그러면
@@ -115,7 +115,7 @@ $$h_m(v) = \max_{\sigma} \langle m - m_\sigma, v \rangle$$
 그러므로 모든 $i > 0$과 모든 $m \in M$에 대해 $H^i(X_\Sigma, \mathcal{O}_{X_\Sigma}(D))_m = \widetilde{H}^{i-1}(V_{D, m}; \mathbb{C}) = 0$이고, weight를 모두 합하면 $H^i(X_\Sigma, \mathcal{O}_{X_\Sigma}(D)) = 0$을 얻는다. Smooth인 경우 Cartier와 Weil이 일치하므로 nef Weil divisor에 대해서도 같은 결론이 성립한다.
 :::
 
-Demazure vanishing은 toric variety에서 nef line bundle이 acyclic임을 말한다. 이는 일반적인 projective variety에서 ample line bundle에 대한 [\[대수다양체\] §사영공간의 코호몰로지, ⁋명제 4](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop4)가 "충분히 큰 twist에 대해서만" 소멸을 주는 것에 비해 훨씬 강하다. Toric의 조합론적 강성 덕분에 twist 없이 nef 자체에서 즉시 소멸이 일어나며, 이는 nef cone의 모든 lattice point에서 cohomology가 $H^0$에 집중됨을 뜻한다. 한 가지 직접적 귀결로, nef divisor의 Euler characteristic이 $H^0$의 차원과 같아져 lattice point counting $\#(P_D \cap M)$로 계산된다.
+Demazure vanishing은 toric variety에서 nef line bundle이 acyclic임을 말한다. 이는 일반적인 projective variety에서 ample line bundle에 대한 [\[대수다양체\] §사영공간의 코호몰로지, ⁋명제 7](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop7)이 "충분히 큰 twist에 대해서만" 소멸을 주는 것에 비해 훨씬 강하다. Toric의 조합론적 강성 덕분에 twist 없이 nef 자체에서 즉시 소멸이 일어나며, 이는 nef cone의 모든 lattice point에서 cohomology가 $H^0$에 집중됨을 뜻한다. 한 가지 직접적 귀결로, nef divisor의 Euler characteristic이 $H^0$의 차원과 같아져 lattice point counting $\#(P_D \cap M)$로 계산된다.
 
 ::: 따름정리 6
 $X_\Sigma$가 complete toric variety이고 $D$가 nef Cartier divisor이면
