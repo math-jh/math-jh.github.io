@@ -13,7 +13,6 @@ sidebar:
 date: 2021-08-14
 
 weight: 3
-published: false
 revising: true
 
 drift_needed: true

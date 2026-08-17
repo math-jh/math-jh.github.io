@@ -1,11 +1,15 @@
 #!/usr/bin/env python3
 """프로덕션 빌드 직전, 개정 중인 글을 "마지막으로 healthy했던 판본"으로 되돌린다.
 
-발행된 글을 고칠 때의 규약은 `published: false` + `revising: true` + `drift_needed: true`다.
-`published: false`만으로는 그 글이 프로덕션에서 통째로 사라져(404) 인바운드 링크·사이트맵·
-검색 색인이 개정 기간 내내 깨진다. 이 스크립트는 CI 체크아웃(일회용 워킹트리)에서만 돌면서
+발행된 글을 고칠 때의 규약은 `revising: true` + `drift_needed: true`다. `published: false`는
+쓰지 않는다 — 그것만으로는 그 글이 프로덕션에서 통째로 사라져(404) 인바운드 링크·사이트맵·
+검색 색인이 개정 기간 내내 깨지고, 두 키를 함께 쓰던 옛 규약에서는 대시보드·워커가 개정 중인
+글을 미발행 초안으로 셌다. 이 스크립트는 CI 체크아웃(일회용 워킹트리)에서만 돌면서
 
-    published: false + revising: true  →  마지막으로 발행 상태였던 커밋의 blob으로 교체
+    revising: true  →  마지막으로 발행 상태였던 커밋의 blob으로 교체
+
+를 수행한다. 그래서 **이 단계가 곧 개정 중 원고의 유일한 차단막이다** — 되살릴 판본을 못 찾으면
+경고가 아니라 배포를 중단한다(2026-08-17 이전에는 `published: false`가 뒤를 받치고 있었다).
 
 를 수행하므로, dev 서버(`serve --unpublished`, 워킹트리 그대로)는 개정 중인 최신 원고를,
 프로덕션은 마지막 healthy 판본을 서빙하게 된다.
@@ -181,10 +185,6 @@ def main() -> int:
         fm = frontmatter((ROOT / rel).read_text(encoding="utf-8"))
         if not REVISING_RE.search(fm):
             continue
-        if not UNPUB_RE.search(fm):
-            # 이대로 빌드하면 개정 중인 원고가 그대로 프로덕션에 나간다. 배포를 막는다.
-            fatal.append((rel, "revising: true 인데 published: false 가 없다"))
-            continue
         targets.append(rel)
 
     log: list[str] = []
@@ -192,8 +192,14 @@ def main() -> int:
     for rel in sorted(targets):
         found = last_healthy(rel)
         if not found:
-            # 위험하지는 않다 (계속 숨겨질 뿐이다). 플래그가 남아 있다는 것만 알린다.
-            warn.append((rel, "revising: true 인데 발행됐던 이력이 없다 (그냥 초안이면 revising 키를 뺄 것)"))
+            # 되살릴 판본이 없는데 revising 만 붙어 있으면 그 원고가 그대로 나간다.
+            # `published: false` 가 이 자리를 막고 있던 시절에는 경고로 충분했다.
+            if UNPUB_RE.search(frontmatter((ROOT / rel).read_text(encoding="utf-8"))):
+                warn.append((rel, "revising: true 인데 발행됐던 이력이 없다 "
+                                  "(published: false 가 가리고 있다 — 그냥 초안이면 revising 키를 뺄 것)"))
+            else:
+                fatal.append((rel, "revising: true 인데 되살릴 발행 판본이 없다 "
+                                   "(발행된 적 없는 초안이면 revising 대신 published: false 를 쓴다)"))
             continue
         sha, hist_path, blob = found
         date = (git("log", "-1", "--format=%cs", sha) or "").strip()

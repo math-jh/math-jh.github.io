@@ -272,6 +272,9 @@ def save_state(state: dict) -> None:
 
 _DATE_PREFIX_RE = re.compile(r"^\d{4}-\d{2}-\d{2}-")
 _FRONTMATTER_RE = re.compile(r"^---\s*\n(.*?)\n---\s*\n", re.DOTALL)
+# 개정 중 표시. CI 의 freeze_revising_posts.py 가 이 키를 보고 프로덕션을 직전 발행
+# 판본으로 되돌린다 (is_draft 참고).
+_REVISING_RE = re.compile(r"^revising:\s*true\s*$", re.M)
 
 
 def topic_slug(path: Path) -> str:
@@ -317,9 +320,17 @@ def _ko_body_length(ko_path: Path) -> int:
 
 
 def is_draft(ko_path: Path) -> bool:
-    """True if frontmatter has `published: false`. Drafts are skipped.
-    판정은 단일 출처 terms_common.published_false_in_fm."""
-    return _published_false_in_fm(_read_frontmatter(ko_path))
+    """번역을 걸지 않을 글. 초안(`published: false`)과 개정 중(`revising: true`)이다.
+
+    `published: false` 판정은 단일 출처 terms_common.published_false_in_fm.
+
+    개정 중을 여기서 막는 이유: 2026-08-17 이전에는 개정 중인 글에 `published: false`가
+    함께 붙어 있어 이 검사가 자동으로 걸렀다. 그 키를 걷어낸 뒤로는 개정 중인 글이
+    발행 글로 보이므로, 막지 않으면 워커가 **고치는 중인 원고**를 번역해 EN 을 덮어쓴다.
+    개정이 끝나 revising 키가 빠지면 그때 drift_needed 가 재번역을 부른다.
+    """
+    fm = _read_frontmatter(ko_path)
+    return _published_false_in_fm(fm) or bool(_REVISING_RE.search(fm))
 
 
 def ko_wants_drift(ko_path: Path) -> bool:

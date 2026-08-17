@@ -10,7 +10,6 @@ sidebar:
 
 date: 2024-11-03
 weight: 5
-published: false
 revising: true
 translated_at: 2026-05-31T14:00:05+00:00
 translation_source: kimi-cli

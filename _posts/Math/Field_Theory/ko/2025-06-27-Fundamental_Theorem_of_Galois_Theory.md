@@ -11,7 +11,6 @@ sidebar:
 
 date: 2025-06-27
 weight: 10
-published: false
 revising: true
 
 --- 

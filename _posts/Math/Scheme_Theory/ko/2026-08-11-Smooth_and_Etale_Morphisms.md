@@ -99,9 +99,7 @@ $$\Omega_{X_{\overline{s}}/\mathbb{K}}\otimes\kappa(z)\cong\mathfrak{m}_z/\mathf
 
 이 성립하는 것을 확인하였다.
 
-이제 $z$의 $X_s$에서의 image를 $x$라 하자. $\Omega_{X/S}$가 locally free이므로 그 $x$에서의 fiber dimension은 가정에 의하
-
-여 $\dim_xX_s$이고, [보조정리 2](#lem2)는 좌변의 차원 또한 이 값임과 $\dim_xX_s=\dim_zX_{\overline{s}}$임을 준다. 한편 $z$가 closed point이므로 [\[가환대수학\] §뇌터 정규화, ⁋정리 4](/ko/math/commutative_algebra/noether_normalization#thm4)에 의하여 $\dim_zX_{\overline{s}}=\dim\mathcal{O}_{X_{\overline{s}},z}$이며, 따라서
+이제 $z$의 $X_s$에서의 image를 $x$라 하자. $\Omega_{X/S}$가 locally free이므로 그 $x$에서의 fiber dimension은 rank와 같고, 가정에 의하여 이 값은 다시 $\dim_s X_s$와 같으므로, [보조정리 2](#lem2)는 좌변의 차원 또한 이 값과 같으며 따라서 $\dim_xX_s=\dim_zX_{\overline{s}}$임을 준다. 한편 $z$가 closed point이므로 $\dim_zX_{\overline{s}}=\dim\mathcal{O}_{X_{\overline{s}},z}$이며, 따라서
 
 $$\dim_{\kappa(z)}\mathfrak{m}_z/\mathfrak{m}_z^2=\dim \mathcal{O}_{X_{\overline{s}},z}$$
 
