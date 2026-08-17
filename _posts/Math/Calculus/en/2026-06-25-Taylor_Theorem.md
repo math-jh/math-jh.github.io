@@ -13,7 +13,7 @@ weight: 9
 translated_at: 2026-08-17T20:15:05+00:00
 translation_source: kimi-cli
 ---
-In [§Derivatives](/en/math/calculus/derivatives), we saw that differentiating a function once gives its derivative, which yields the tangent line
+In [§Differentiation and Derivatives](/en/math/calculus/derivatives), we saw that differentiating a function once gives its derivative, which yields the tangent line
 
 $$f(x) \approx f(a) + f'(a)(x-a)$$
 
@@ -74,7 +74,7 @@ Therefore, if we now compute the remainder term in the above theorem and show th
 Let us follow through these calculations in a few concrete examples.
 
 ::: Example 3
-Since any derivative of $f(x) = e^x$ is itself, as verified in [§Differentiation Rules](/en/math/calculus/differentiation_rules), we have $f^{(k)}(0) = 1$ for every $k$. Hence the Taylor polynomial is
+Since any derivative of $f(x) = e^x$ is itself, as verified in [§Differentiation](/en/math/calculus/differentiation_rules), we have $f^{(k)}(0) = 1$ for every $k$. Hence the Taylor polynomial is
 
 $$P_n(x) = \sum_{k=0}^n \frac{x^k}{k!}.$$
 
@@ -112,7 +112,7 @@ and differentiating this gives the infinite series identity
 
 $$\frac{1}{1+x}=\sum_{k=0}^\infty (-1)^{k}x^k \qquad (\lvert x\rvert < 1).$$
 
-([§Differentiation Rules, ⁋Proposition 1](/en/math/calculus/differentiation_rules#prop1)) This is the case $\alpha = -1$ of the more general binomial series defined for real $\alpha$:
+([§Differentiation, ⁋Proposition 1](/en/math/calculus/differentiation_rules#prop1)) This is the case $\alpha = -1$ of the more general binomial series defined for real $\alpha$:
 
 $$(1+x)^\alpha = \sum_{k=0}^\infty \binom{\alpha}{k} x^k, \qquad \binom{\alpha}{k} = \frac{\alpha(\alpha-1)\cdots(\alpha-k+1)}{k!} \qquad (\lvert x\rvert < 1).$$
 
@@ -145,6 +145,7 @@ Let us find the limit $\lim_{x\rightarrow 0}(e^x - 1 - x)/x^2$. From [Example 3]
 $$\frac{e^x - 1 - x}{x^2} = \frac{x^2/2 + x^3/6 + \cdots}{x^2} = \frac12 + \frac{x}{6} + \cdots \rightarrow \frac12.$$
 
 This is a result that can also be checked by applying [§Mean Value Theorem, ⁋Theorem 18](/en/math/calculus/mean_value_theorem#thm18) twice, and the reason Taylor expansion succeeds is that it retains information from higher-degree terms, so after canceling with the denominator and numerator, information still remains.
+:::
 
 ---
 
