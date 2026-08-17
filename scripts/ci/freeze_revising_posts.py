@@ -98,12 +98,18 @@ def history(path: str) -> list[tuple[str, str]]:
 
 
 def last_healthy(path: str):
-    """마지막으로 `published: false`가 아니었던 (sha, 그 시점 경로, 본문)."""
+    """마지막으로 **발행 중이고 개정 중도 아니었던** (sha, 그 시점 경로, 본문).
+
+    `revising`까지 보는 것이 핵심이다. 판정을 `published: false` 하나로 두면, 개정 중
+    표시가 한 키로 바뀐 뒤(2026-08-17)에는 지금 커밋 자체가 healthy로 잡혀 **고치는
+    중인 원고가 그대로 복원된다** — 동결이 no-op이 되고 프로덕션이 초안을 띄운다.
+    """
     for sha, hist_path in history(path):
         blob = git("show", f"{sha}:{hist_path}")
         if not blob:
             continue
-        if not UNPUB_RE.search(frontmatter(blob)):
+        fm = frontmatter(blob)
+        if not UNPUB_RE.search(fm) and not REVISING_RE.search(fm):
             return sha, hist_path, blob
     return None
 

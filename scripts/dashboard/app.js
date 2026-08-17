@@ -374,7 +374,8 @@ function overview(d) {
     : '';
   var mets = [
     { n: num(s.unpublished), l: '미발행 초안', to: 'drafts', accent: true,
-      d: (drafts[0] ? '최근 수정 ' + ago(drafts[0].mtime) : '초안 없음') + ' · drift 표시 ' + driftDrafts + '편' },
+      d: (drafts[0] ? '최근 수정 ' + ago(drafts[0].mtime) : '초안 없음') + ' · drift 표시 ' + driftDrafts + '편'
+        + (s.revising ? ' · 개정 중 ' + s.revising + '편 (발행 상태)' : '') },
     { n: num(s.drift), l: '재번역 대기', to: 'translation', accent: true,
       d: 'ko 가 바뀐 뒤 en 이 따라오지 않은 글' + ktNote },
     { n: num(g ? g.actionable : null), l: '색인 조치 대상', to: 'index', accent: true,

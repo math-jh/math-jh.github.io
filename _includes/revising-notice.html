@@ -7,8 +7,9 @@
     - production: scripts/ci/freeze_revising_posts.py restores the last healthy
       version of the post and stamps `revising_snapshot` (that version's date),
       so the notice can say which version the reader is looking at.
-    - dev (`serve --unpublished`): the working copy has `revising: true` but no
-      snapshot date, so the dateless variant is used.
+    - dev: the working copy has `revising: true` but no snapshot date, so the
+      dateless variant is used. (Since 2026-08-17 these posts no longer carry
+      `published: false`, so they render without `--unpublished` too.)
 {% endcomment %}
 {% if page.revising %}
   {% assign _lang = site.locale %}

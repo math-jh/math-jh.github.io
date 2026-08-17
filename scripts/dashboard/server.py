@@ -275,6 +275,10 @@ def sec_posts(posts):
         ko=len(ko), en=len(en),
         published=sum(1 for p in ko if p["published"]),
         unpublished=len(unpub),
+        # 개정 중은 미발행이 **아니다**. `revising: true` 한 키가 규약이 된
+        # 2026-08-17 이후로 이 글들은 발행 글로 세어지고, 프로덕션에는 CI 가
+        # 되살린 직전 판본이 떠 있다. 개요는 이 수를 미발행 칸에 덧붙여 낸다.
+        revising=sum(1 for p in ko if p["revising"]),
         categories=len(cats),
         drift=sum(1 for p in ko if p["drift"]),
         # 신규 판정은 frontmatter date 기준 — 자동 커밋이 파일을 상시 건드려

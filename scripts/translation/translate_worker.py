@@ -1915,7 +1915,7 @@ def review_ko_typos(ko_path: Path, key: str, claims: List[str]) -> List[dict]:
 
     KO 파일이 바뀌지 않았는지 해시로 확인한다 — 검토 전용 계약이 프롬프트로만
     걸려 있으면 지켜졌는지 알 수 없다. 사용자가 쓴 본문이므로 봇이 고치는 것은
-    별도 절차(published:false + revising:true + drift_needed:true) 없이는 금지다.
+    별도 절차(revising:true + drift_needed:true) 없이는 금지다.
     """
     out = [{"claim": c} for c in claims]
     if len(claims) > KO_TYPO_MAX_CLAIMS:
