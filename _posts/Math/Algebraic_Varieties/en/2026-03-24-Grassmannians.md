@@ -10,7 +10,7 @@ sidebar:
 
 date: 2026-03-24
 weight: 7
-translated_at: 2026-08-15T22:47:42+00:00
+translated_at: 2026-08-17T10:15:04+00:00
 translation_source: kimi-cli
 ---
 We introduce a special variety and finish our overview of the basic objects of study in algebraic geometry.
@@ -36,33 +36,33 @@ The simplest new example is $\Gr(2,4)$. This is the collection of $2$-dimensiona
 As always, to endow it with a variety structure, we can consider an affine cover and work affine-locally. To this end, we fix a basis $e_1,\ldots, e_n$ of $V$ and make the following definition.
 
 ::: Definition 3
-For each set of $k$ indices $I = \{i_1 < \cdots < i_k\}$, we define the subset $U_I$ of $\Gr(k, V)$ by
+For each set of $k$ indices $I = \{i_1 < \cdots < i_k\}$, we define a subset $U_I$ of $\Gr(k, V)$ by
 
 $$U_I = \{W \in \Gr(k, V) \mid \text{projection } W \rightarrow \operatorname{span}(e_{i_1}, \ldots, e_{i_k}) \text{ is an isomorphism}\}.$$
 
 :::
 
-Writing the vectors $w_1,\ldots, w_k$ spanning $W$ in terms of their components with respect to this basis, $W$ is the row space of the following $k \times n$ matrix
+Writing each vector $w_1,\ldots, w_k$ spanning $W$ in terms of its components with respect to this basis, $W$ is the row space of the following $k \times n$ matrix
 
 $$\begin{pmatrix}w_1\\\vdots\\w_k\end{pmatrix}=\begin{pmatrix}w_{1,1}&w_{1,2}&\cdots &w_{1,n}\\ \vdots&\vdots&\ddots&\vdots\\ w_{k,1}&w_{k,2}&\cdots&w_{k,n}\end{pmatrix}.$$
 
-Then the condition defining $U_I$ is equivalent to the $k \times k$ matrix formed by the columns $i_1,\ldots, i_k$ corresponding to the index set $I$ being invertible. Then the following holds.
+Then the condition defining $U_I$ is equivalent to the $k \times k$ matrix formed using the columns $i_1,\ldots, i_k$ corresponding to the index set $I$ being invertible. Then the following holds.
 
 ::: Proposition 4
 Each $U_I \cong \mathbb{A}^{k(n-k)}$.
 :::
 
 ::: Proof
-Without loss of generality, let us show the case $I = \{1, 2, \ldots, k\}$. That is, for the $k \times n$ matrix $A$ representing $W \in U_I$, the left $k \times k$ minor is nonzero. By row operations, we bring this minor to the form
+Without loss of generality, we show the case $I = \{1, 2, \ldots, k\}$. That is, for the $k \times n$ matrix $A$ representing $W \in U_I$, the left $k \times k$ minor is nonzero. By row operations, we may bring this minor into the form
 
-$$A = \begin{pmatrix} I_k & B \end{pmatrix}.$$
+$$A = \begin{pmatrix} I_k & B \end{pmatrix}$$
 
-Here $B$ is a $k \times (n-k)$ matrix. Then the $k(n-k)$ entries of $B$ completely determine $W$, and there are no constraints among them. Therefore $U_I \cong \mathbb{A}^{k(n-k)}$.
+where $B$ is a $k \times (n-k)$ matrix. Then the $k(n-k)$ entries of $B$ completely determine $W$, and there are no constraints among them. Therefore $U_I \cong \mathbb{A}^{k(n-k)}$.
 :::
 
-As seen in this proof, the coordinate system on $U_I$ consists of $k(n-k)$ free parameters. These correspond to the "non-trivial part" of the matrix representing $W$; that is, once the $k \times k$ block determined by $I$ is fixed to be the identity, the remaining $k \times (n-k)$ block can vary freely.
+As seen in this proof, the coordinate system on $U_I$ consists of $k(n-k)$ free parameters. These correspond to the "non-trivial part" of the matrix representing $W$. That is, once the $k \times k$ block determined by $I$ is fixed as the identity, the remaining $k \times (n-k)$ block can vary freely.
 
-Then it is obvious that for any $W\in \Gr(k,V)$, there exists an affine open cover containing $W$. Moreover, since the transition map from $U_I$ to $U_J$ is also obviously a regular map, this endows $\Gr(k,V)$ with a variety structure, and each $U_I$ becomes an open subset in this structure. Of course, to show that this is quasi-projective, an explicit projective embedding is needed, but for now the following holds.
+Then it is obvious that for any $W \in \Gr(k,V)$, there exists an affine open cover containing $W$. Moreover, since the transition map from $U_I$ to $U_J$ is also obviously a regular map, this endows $\Gr(k,V)$ with a variety structure, and each $U_I$ becomes an open set in this structure. Of course, to show that this is quasi-projective, an explicit projective embedding is needed; nevertheless, the following holds first.
 
 ::: Proposition 5
 $\dim \Gr(k, V) = k(n - k)$.
