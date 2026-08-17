@@ -197,24 +197,35 @@ def _post_title_for(pathname: str) -> str:
     return pathname.rsplit("/", 1)[-1].replace("_", " ").replace("-", " ").title()
 
 
+def _err(msg: str) -> None:
+    """오류도 성공 줄과 같은 접두사로 찍는다.
+
+    대시보드(scripts/dashboard/server.py)는 타임스탬프로 실행 구간을 가르므로,
+    시각 없는 줄은 **직전 실행**에 붙는다. 그대로 두면 성공으로 끝난 실행이
+    빨갛게 뜨고(2026-08-18 GitHub 503 실사례), 반대로 실행 첫머리에서 죽으면
+    그 오류가 이전 실행 몫으로 기록된다.
+    """
+    print(f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] {msg}", file=sys.stderr)
+
+
 def main() -> int:
     _assert_pathname_mapping()
     token = _load_token()
     if not token:
-        print("error: no GitHub token. Run `gh auth login` or set MATHJH_GH_TOKEN.", file=sys.stderr)
+        _err("error: no GitHub token. Run `gh auth login` or set MATHJH_GH_TOKEN.")
         return 2
 
     try:
         data = _gql(token)
     except urllib.error.HTTPError as e:
-        print(f"error: GitHub API HTTP {e.code}: {e.read()[:200].decode(errors='ignore')}", file=sys.stderr)
+        _err(f"error: GitHub API HTTP {e.code}: {e.read()[:200].decode(errors='ignore')}")
         return 3
     except (urllib.error.URLError, TimeoutError) as e:
-        print(f"error: GitHub API request failed: {e}", file=sys.stderr)
+        _err(f"error: GitHub API request failed: {e}")
         return 3
 
     if "errors" in data:
-        print(f"error: GraphQL errors: {data['errors']}", file=sys.stderr)
+        _err(f"error: GraphQL errors: {data['errors']}")
         return 4
 
     discussions = (data.get("data") or {}).get("repository", {}).get("discussions", {}).get("nodes", [])

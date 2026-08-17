@@ -326,6 +326,12 @@ def _log_runs(path, now, window=86400):
 _ERR_RE = re.compile(r"traceback|\bexception\b|\bfail(ed|ure)\b|\berrors?\s*[:=]\s*[1-9]"
                      r"|\berror\b(?!s?\s*[:=]\s*0)", re.I)
 
+# 모델이 쓴 문장을 그대로 실은 줄. 오류 스캔에서 뺀다 — 번역 검증기의 verdict 전문이
+# 같은 로그에 들어오는데, 그 영어 산문에 error·failure 가 흔하다 (2026-08-17 실측:
+# "interpretation of gluing failure conveyed identically" 한 줄로 정상 실행이 고장으로
+# 떴다). 워커 자신의 상태 줄은 `attempt N/3:` 처럼 시도 횟수를 함께 적으므로 남는다.
+_LOG_ECHO_RE = re.compile(r"\bVERIFY \([^)]*\) attempt \d+: ")
+
 
 def _last_run_lines(path, interval, n=10):
     """마지막 실행이 남긴 줄만 돌려준다. 오류 판정 범위를 여기로 좁히면,
@@ -387,7 +393,8 @@ def sec_workers():
         # 표시용 꼬리는 10 줄이지만 오류 판정은 마지막 실행분만 본다.
         # errors=0 / error_count: 0 같은 정상 요약줄을 오탐하지 않도록 좁게 잡는다.
         # quota-gate blocked 는 설계된 스킵이지 오류가 아니다.
-        err = any(_ERR_RE.search(ln)
+        # 모델 출력을 그대로 실은 줄(_LOG_ECHO_RE)은 스캔에서 뺀다.
+        err = any(_ERR_RE.search(ln) and not _LOG_ECHO_RE.search(ln)
                   for ln in (_last_run_lines(w["log"], w["interval"]) if w.get("log") else []))
         p = paused_of.get(w["key"]) or {}
         out.append(dict(key=w["key"], name=w["name"], schedule=w["schedule"],
