@@ -4566,6 +4566,8 @@ D:
     url: /ko/math/linear_algebra/determinant
   - label: '[다중선형대수학] §행렬식'
     url: /ko/math/multilinear_algebra/determinants
+  - label: '[미적분학] §다변수함수와 편미분'
+    url: /ko/math/calculus/partial_derivatives
 - id: developable_surface
   en: developable surface
   ko: 전개가능 곡면
@@ -4673,6 +4675,8 @@ D:
     url: /ko/math/calculus/derivatives
   - label: '[해석학] §다변수 미분'
     url: /ko/math/analysis/multivariable_differentiation
+  - label: '[미적분학] §다변수함수와 편미분'
+    url: /ko/math/calculus/partial_derivatives
 - id: differentiable_manifold
   en: differentiable manifold
   ko: 미분다양체
