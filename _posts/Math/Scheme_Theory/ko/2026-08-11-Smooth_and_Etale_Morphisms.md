@@ -108,13 +108,17 @@ $$\dim_{\kappa(z)}\mathfrak{m}_z/\mathfrak{m}_z^2=\dim \mathcal{O}_{X_{\overline
 이제 임의의 점 $\overline{x}\in X_{\overline{s}}$에 대하여 $\overline{\{\overline{x}\}}$ 안의 closed point $z$를 택하면 ([§차원, ⁋명제 11](/ko/math/scheme_theory/dimension#prop11)에 의하여 공집합이 아닌 locally closed subset은 언제나 closed point를 담는다), $z$의 열린근방은 모두 $\overline{x}$를 담으므로 $\mathcal{O}_{X_{\overline{s}},\overline{x}}$는 $\mathcal{O}_{X_{\overline{s}},z}$의 localization이다. Regular local ring의 localization은 regular이므로 ([\[가환대수학\] §정칙성의 호몰로지 판정, ⁋따름정리 4](/ko/math/commutative_algebra/homological_criterion_for_regularity#cor4)) $\mathcal{O}_{X_{\overline{s}},\overline{x}}$ 또한 regular local ring이고, 곧 $X_{\overline{s}}$는 regular scheme이다.
 :::
 
-[명제 3](#prop3)의 조건 아래에서 $\Omega_{X/S}$의 rank를 $\varphi$의 *상대차원<sub>relative dimension</sub>*이라 부른다. 아래 [정리 7](#thm7)에서 이 조건이 smoothness와 동치임을 보이므로, 이 이름은 결국 임의의 smooth morphism에 대하여 정의된다.
+[명제 3](#prop3)의 조건 아래에서 $\Omega_{X/S}$의 rank를 $\varphi$의 *상대차원<sub>relative dimension</sub>*이라 부른다. 직관적으로 이것이 보는 것은 $\varphi$의 fiber 방향 tangent space의 차원이다. 즉 relative tangent bundle $\Omega_{X/S}^\vee$의 $x$에서의 fiber가 곧 $X_s$의 $x$에서의 Zariski tangent space이므로 ([§Kähler differential과 여접층, ⁋정의 8](/ko/math/scheme_theory/sheaf_of_differentials#def8)), 상대차원이 $r$이라는 것은 각 점에서 이 tangent space가 $r$차원이라는 것이다.
 
-이로써 smooth morphism은 fiber다발처럼 다룰 수 있다. $\Omega_{X/S}$가 rank $r$의 locally free sheaf라는 것은 $X$가 국소적으로 $S$ 위의 $r$차원 affine space처럼 보인다는 직관을 정확히 표현한다. 실제로 가장 기본적인 예는 affine space로의 projection이며, $\mathbb{A}^r_S \rightarrow S$는 flat하고 $\Omega_{\mathbb{A}^r_S/S}\cong \mathcal{O}^{\oplus r}$이므로 ([§Kähler differential과 여접층, ⁋명제 9](/ko/math/scheme_theory/sheaf_of_differentials#prop9)) 상대차원 $r$의 smooth morphism이다.
+이제 임의의 locally of finite type인 scheme morphism $\varphi: X \rightarrow S$에 대하여, 우리는 국소적으로는 이 morphism을
+
+$$\Spec\bigl(A[\x_1,\ldots, \x_{n}]/(f_1,\ldots, f_r)\bigr)\rightarrow \Spec A$$
+
+의 형태로 바꾸어 쓸 수 있는 것을 안다. 
 
 [명제 3](#prop3)을 적용하려면 flatness와 $\Omega_{X/S}$의 국소자유성을 모두 확인하여야 하는데, affine space 안에서 방정식으로 잘린 경우에는 이 두 조건이 Jacobian 하나의 rank 조건으로 묶인다. 이것이 미분기하의 implicit function theorem에 대응하는 대수적 판정이며, smooth 여부를 좌표 계산으로 확인하게 해 준다.
 
-::: 정리 4 (Jacobian 판정)
+::: 정리 4 (Jacobian criterion)
 $S=\Spec A$ 위에서
 
 $$X=\Spec\bigl(A[\x_1,\ldots, \x_{n}]/(f_1,\ldots, f_r)\bigr)$$
