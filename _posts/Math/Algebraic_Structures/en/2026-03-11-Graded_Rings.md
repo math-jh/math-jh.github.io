@@ -10,8 +10,9 @@ sidebar:
 
 date: 2024-08-11
 weight: 105
-translated_at: 2026-08-15T11:15:04+00:00
+translated_at: 2026-08-18T09:45:05+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-08-18T09:45:05+00:00
 ---
 Graded Rings
 
