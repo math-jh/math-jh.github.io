@@ -10,18 +10,19 @@ sidebar:
 
 date: 2024-05-05
 weight: 102
-translated_at: 2026-08-15T08:15:05+00:00
+translated_at: 2026-08-18T06:45:05+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-08-18T06:45:05+00:00
 ---
-In this post we define the notion of a quotient ring. Recalling how we defined [§Quotient Groups](/en/math/algebraic_structures/quotient_groups), for any group $G$ and any subgroup $H$, the set $G/H$ was always defined as a set, but it did not always carry a group structure; for that we needed the condition that $H$ be a normal subgroup. Likewise, for a ring $A$, the way in which a quotient can be defined is also restricted.
+In this post we define the notion of a quotient ring. Recalling how [§Quotient Groups](/en/math/algebraic_structures/quotient_groups) was defined, for any group $G$ and any subgroup $H$, the quotient $G/H$ always exists as a set, but it does not always carry a group structure; for that we needed the condition that $H$ be a normal subgroup. Likewise, for a ring $A$, the manner in which a quotient can be defined is also restricted.
 
 ## Definition of Quotient Rings
 
-First, if $A$ is an abelian group and $S$ is a subgroup of it, then $A/S$ has an abelian group structure. For a ring structure to be defined on top of this, a similar property must hold for the multiplication as well. That is, for any two elements $\alpha+S$, $\alpha'+S$ of $A/S$, their product
+First, if $A$ is an abelian group and $S$ is a subgroup, then $A/S$ carries an abelian group structure. For a ring structure to be defined on top of this, a similar property must hold for multiplication as well. That is, for any two elements $\alpha+S$, $\alpha'+S$ of $A/S$, their product
 
 $$(\alpha+S)(\alpha'+S)\overset{?}{=}\alpha\alpha'+S$$
 
-must be defined as above. On the other hand, for any $x,x'\in S$ we have
+should be defined as above. On the other hand, for any $x,x'\in S$ we have
 
 $$(\alpha+x)(\alpha'+x')=\alpha\alpha'+x\alpha'+\alpha x'+xx',$$
 
@@ -46,7 +47,7 @@ For a ring $A$ and a two-sided ideal $\mathfrak{a}$, the following hold.
     
     and at this point one can check that $1+\mathfrak{a}$ becomes the multiplicative identity of $A/\mathfrak{a}$.
 2. First regard $\phi$ as an abelian group homomorphism. Then the given condition implies that the subgroup $\mathfrak{a}$ of $A$ is contained in $\ker \phi$, so there exists a unique *group* homomorphism $\bar{\phi}:A/\mathfrak{a}\rightarrow B$ such that $\phi=\bar{\phi}\circ\pi$. ([§Group Homomorphisms, ⁋Proposition 3](/en/math/algebraic_structures/isomorphism_theorems#prop3))  
-    Now choose arbitrary two elements $\alpha+\mathfrak{a}, \beta+\mathfrak{a}$ of $A/\mathfrak{a}$. Then
+    Now choose two arbitrary elements $\alpha+\mathfrak{a}, \beta+\mathfrak{a}$ of $A/\mathfrak{a}$. Then
 
     $$(\alpha+\mathfrak{a})(\beta+\mathfrak{a})=\alpha\beta+\mathfrak{a}=\pi(\alpha\beta)$$
 
