@@ -10,8 +10,9 @@ sidebar:
 
 date: 2026-04-05
 weight: 13
-translated_at: 2026-08-17T12:47:11+00:00
+translated_at: 2026-08-18T23:45:04+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-08-18T23:45:04+00:00
 ---
 We have verified that line bundles can be used to construct various invariants. For instance, in [§Line Bundles and Vector Bundles](/en/math/algebraic_varieties/line_bundles), we defined the global section space $\Gamma(X, \mathcal{L})$ of a line bundle $\mathcal{L}$. In particular, in [§Linear Systems, ⁋Definition 9](/en/math/algebraic_varieties/linear_systems#def9), we saw that the dimension of this space plays a key role in determining the dimension of the complete linear system and, further, the projective embedding of the variety.
 
