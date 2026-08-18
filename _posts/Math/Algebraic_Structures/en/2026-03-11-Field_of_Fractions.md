@@ -10,8 +10,9 @@ sidebar:
 
 date: 2024-05-08
 weight: 104
-translated_at: 2026-08-15T08:48:31+00:00
+translated_at: 2026-08-18T07:15:05+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-08-18T07:15:05+00:00
 ---
 ## Fraction Rings
 
