@@ -10,10 +10,11 @@ sidebar:
 
 date: 2025-09-23
 weight: 12
-translated_at: 2026-08-15T17:50:15+00:00
+translated_at: 2026-08-18T16:15:05+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-08-18T16:15:05+00:00
 ---
-In this post we discuss Poincaré duality, a beautiful theorem in algebraic topology. As mentioned in the previous post, Poincaré duality exhibits a duality between homology and cohomology. In the case of [§Cohomology, ⁋Theorem 5](/en/math/algebraic_topology/cohomology#thm5) that we have already seen, the result was somewhat expected when $C^\bullet(X;A)$ was defined as the dual of $C_\bullet(X;A)$, but Poincaré duality carries a more geometric meaning.
+In this post we discuss Poincaré duality, a beautiful theorem of algebraic topology. As mentioned in the previous post, Poincaré duality exhibits a duality between homology and cohomology. The case of [§Cohomology, ⁋Theorem 5](/en/math/algebraic_topology/cohomology#thm5), which we have already examined, was somewhat expected when $C^\bullet(X;A)$ was defined as the dual of $C_\bullet(X;A)$, but Poincaré duality carries a deeper geometric meaning.
 
 ## Orientation Sheaf
 
@@ -23,11 +24,11 @@ Given any topological manifold $M$ of dimension $m$ and an open set $U$, the ass
 
 $$U\mapsto H_m(M, M\setminus U;\mathbb{Z})\tag{1}$$
 
-together with the natural restriction map
+carries a natural restriction map
 
 $$H_m(M, M\setminus V;\mathbb{Z})\rightarrow H_m(M,M\setminus U;\mathbb{Z})$$
 
-for any $U\subseteq V$, forms a presheaf.
+for every $U\subseteq V$, and hence forms a presheaf.
 
 ::: Definition 1
 The sheafification of the assignment (1) is called the *orientation sheaf* and is denoted $\or_M$. ([\[Topology\] §Sheaves, ⁋Definition 5](/en/math/topology/sheaves#def5))
@@ -37,7 +38,7 @@ Then for any $x\in M$ and any open neighborhood $U$ of $x$, there is a canonical
 
 $$H_m(M,M\setminus U;\mathbb{Z})\rightarrow H_m(M,M\setminus\{x\};\mathbb{Z}).$$
 
-These behave well with respect to the restriction maps above, and hence induce a map of direct limits
+These are compatible with the restriction maps above, and therefore induce a map of direct limits
 
 $$\or_{M,x}=\varinjlim_{x\in U} H_m(M,M\setminus U;\mathbb{Z})\rightarrow H_m(M,M\setminus \{x\};\mathbb{Z})$$
 
@@ -59,11 +60,11 @@ The relative homology group $H_m(M, M\setminus \{x\};\mathbb{Z})$ is called the 
 
 ## Constant Sheaves, Covering Spaces, and Orientation-Generator Sheaves
 
-To examine the orientation sheaf $\or_M$ defined above in more detail, we need to look more closely at constant and locally constant sheaves. First, consider an arbitrary abelian group $A$ equipped with the discrete topology, regarded as a topological space. Then the projection map $X\times A \rightarrow X$ between topological spaces is a trivial covering space, and the sheaf of sections of this covering map is precisely the constant sheaf $\underline{A}$. Conversely, given a constant sheaf $\underline{A}$, one can check that its étale space $\Spe(\underline{A})$ is the covering space $X\times A \rightarrow X$. ([\[Topology\] §Presheaves](/en/math/topology/presheaves)) Thus a locally constant sheaf is nothing more than a sheaf whose étale space is a covering space.
+To examine the orientation sheaf $\or_M$ defined above in more detail, we need to look more closely at constant and locally constant sheaves. First, consider an arbitrary abelian group $A$ equipped with the discrete topology, regarded as a topological space. Then the projection $X\times A \rightarrow X$ is a trivial covering space, and the sheaf of sections of this covering map is precisely the constant sheaf $\underline{A}$. Conversely, given a constant sheaf $\underline{A}$, one can check that its étale space $\Spe(\underline{A})$ is the covering space $X\times A \rightarrow X$. ([\[Topology\] §Presheaves](/en/math/topology/presheaves)) Thus a locally constant sheaf is nothing more than a sheaf whose étale space is a covering space.
 
-Intuitively, $H_m(M,M\setminus\{x\};\mathbb{Z})\cong \mathbb{Z}$ tells us how many times an $m$-simplex $\sigma:\Delta^m\rightarrow M$ with $x$ in its interior covers $x$. On the other hand, $\Delta^m$ can be given a sign depending on how an ordering is assigned to its vertices; then via this isomorphism, when we assign an element of $\mathbb{Z}$ to such $m$-simplices, the sign difference between two $m$-simplices can be thought of as either the sources $\Delta^m$ being assigned opposite orientations, or, fixing the orientation of $\Delta^m$, the two simplex maps specifying different directions. That is, $H_m(M,M\setminus\{x\};\mathbb{Z})$ encodes information about the orientation at the point $x$.
+Intuitively, $H_m(M,M\setminus\{x\};\mathbb{Z})\cong \mathbb{Z}$ records how many times an $m$-simplex $\sigma:\Delta^m\rightarrow M$ having $x$ in its interior covers $x$. On the other hand, $\Delta^m$ can be given a sign depending on how an ordering is assigned to its vertices; then via this isomorphism, when we assign an element of $\mathbb{Z}$ to such $m$-simplices, the sign difference between two $m$-simplices can be interpreted as either their sources $\Delta^m$ being assigned opposite orientations, or, fixing the orientation of $\Delta^m$, the two simplex maps specifying different directions. In other words, $H_m(M,M\setminus\{x\};\mathbb{Z})$ encodes information about the orientation at the point $x$.
 
-Then a natural question is whether, for every point $x\in M$, we can choose an orientation so that these orientations patch together to give a global orientation on $M$. For this we first need a reference copy of $\mathbb{Z}$. Fix a constant sheaf $\underline{\mathbb{Z}}$ on $M$. ([\[Topology\] §Sheaves, ⁋Example 9](/en/math/topology/sheaves#ex9)) Then for each $x\in M$, its stalk $\underline{\mathbb{Z}}_x$ can be thought of as having the generator $1$ chosen in a consistent manner, and thus choosing an isomorphism
+Then a natural question is whether, for every point $x\in M$, we can choose an orientation so that these orientations patch together to yield a global orientation on $M$. For this we first need a reference copy of $\mathbb{Z}$. Fix a constant sheaf $\underline{\mathbb{Z}}$ on $M$. ([\[Topology\] §Sheaves, ⁋Example 9](/en/math/topology/sheaves#ex9)) Then for each $x\in M$, its stalk $\underline{\mathbb{Z}}_x$ can be thought of as having the generator $1$ chosen in a consistent manner, and thus choosing an isomorphism
 
 $$\Iso_\mathbb{Z}(H_m(M, M\setminus\{x\}), \underline{\mathbb{Z}}_x)$$
 
@@ -105,7 +106,7 @@ To observe this, consider the orientation cover of the Möbius strip $M$. Just a
 But attempting to glue these together over all of $M$ runs into a problem: if we glue the two covers shown in this figure while respecting orientation, proceeding counterclockwise, then upon returning to $x$ the points $(x,+)$ and $(x,-)$ have been interchanged, so we must cross-glue the upper and lower components. The resulting double cover of $M$ is homeomorphic to a cylinder.
 :::
 
-By definition, $M$ is orientable if and only if $\omega_M$ admits a global section, which is equivalent to $\Spe(\omega_M)$ being a trivial covering space, which in turn is equivalent to $\omega_M$ being a constant sheaf. Applying [§Covering Spaces, ⁋Corollary 12 (Fundamental theorem of covering spaces, classical version)](/en/math/algebraic_topology/covering_spaces#cor12) to this, we obtain the following proposition.
+By definition, $M$ is orientable if and only if $\omega_M$ admits a global section, which is equivalent to $\Spe(\omega_M)$ being a trivial covering space, which in turn is equivalent to $\omega_M$ being a constant sheaf. Applying [§Covering Spaces, ⁋Corollary 12 (Fundamental theorem of covering spaces, classical version)](/en/math/algebraic_topology/covering_spaces#cor12), we obtain the following proposition.
 
 ::: Proposition 6
 For a (connected) topological manifold $M$, the following are equivalent.
@@ -155,7 +156,7 @@ $$H_m(M; A)\rightarrow H_m(M,M\setminus\{x\};A)\tag{2}$$
 
 any top homology class $\alpha\in H_m(M;A)$ defines an element $\alpha_x\in H_m(M,M\setminus\{x\};A)$ in the local homology group. Then one natural question is whether, regarding the given local orientations $s_x$ at each $x\in M$ as elements of $A^\times$ and hence as elements of $H_m(M,M\setminus\{x\};A)$, there exists $\alpha\in H_m(M;A)$ whose image in $H_m(M,M\setminus\{x\};A)$ equals $s_x$ for every $x\in M$.
 
-The two paragraphs above illustrate what Poincaré duality looks like. A global section $s:M \rightarrow \Spe(\omega_M^A)$ is essentially a function defined over all of $M$, corresponding to the notion of $0$th cohomology. On the other hand, $\alpha\in H_m(M;A)$ is an element of $m$th homology. Poincaré duality states that these two notions are equivalent, and more generally, it exhibits a duality between $k$th cohomology and $(m-k)$th homology.
+The two paragraphs above illustrate the shape of Poincaré duality. A global section $s:M \rightarrow \Spe(\omega_M^A)$ is essentially a function defined over all of $M$, corresponding to the notion of $0$th cohomology. On the other hand, $\alpha\in H_m(M;A)$ is an element of $m$th homology. Poincaré duality states that these two notions are equivalent, and, more generally, it exhibits a duality between $k$th cohomology and $(m-k)$th homology.
 
 For the remainder of this post, our task splits into two main parts.
 
