@@ -4562,12 +4562,12 @@ D:
   ko: 행렬식
   primary: ko
   defs:
+  - label: '[미적분학] §다변수함수와 편미분'
+    url: /ko/math/calculus/partial_derivatives
   - label: '[선형대수학] §행렬식'
     url: /ko/math/linear_algebra/determinant
   - label: '[다중선형대수학] §행렬식'
     url: /ko/math/multilinear_algebra/determinants
-  - label: '[미적분학] §다변수함수와 편미분'
-    url: /ko/math/calculus/partial_derivatives
 - id: developable_surface
   en: developable surface
   ko: 전개가능 곡면
@@ -4673,10 +4673,10 @@ D:
   defs:
   - label: '[미적분학] §미분과 도함수'
     url: /ko/math/calculus/derivatives
-  - label: '[해석학] §다변수 미분'
-    url: /ko/math/analysis/multivariable_differentiation
   - label: '[미적분학] §다변수함수와 편미분'
     url: /ko/math/calculus/partial_derivatives
+  - label: '[해석학] §다변수 미분'
+    url: /ko/math/analysis/multivariable_differentiation
 - id: differentiable_manifold
   en: differentiable manifold
   ko: 미분다양체
@@ -18799,10 +18799,10 @@ V:
   ko: 벡터다발
   primary: en
   defs:
-  - label: '[미분다양체] §접다발과 여접다발'
-    url: /ko/math/manifolds/tangent_and_cotangent_bundles
   - label: '[대수적 위상수학] §슈티펠-휘트니 특성류'
     url: /ko/math/algebraic_topology/stiefel_whitney_classes
+  - label: '[미분다양체] §접다발과 여접다발'
+    url: /ko/math/manifolds/tangent_and_cotangent_bundles
   see:
   - label: Fiber bundle
     id: fiber_bundle
