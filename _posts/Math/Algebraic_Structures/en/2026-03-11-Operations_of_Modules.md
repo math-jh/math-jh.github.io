@@ -10,18 +10,19 @@ sidebar:
 
 date: 2024-05-12
 weight: 202
-translated_at: 2026-08-15T09:47:35+00:00
+translated_at: 2026-08-18T08:15:04+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-08-18T08:15:04+00:00
 ---
 ## Direct Products and Direct Sums of Modules
 
-The category $\lMod{A}$ is a bicomplete category. To show this, we need to construct arbitrary products and coproducts in $\lMod{A}$, and for this it suffices to show that there are natural $A$-actions on the product and coproduct in $\Ab$.
+The category $\lMod{A}$ is bicomplete. To show this, we must construct arbitrary products and coproducts in $\lMod{A}$, and for this it suffices to exhibit natural $A$-actions on the product and coproduct taken in $\Ab$.
 
 Let $(M_i)_{i\in I}$ be a family of $A$-modules. Then the action on $\prod M_i$ is given by the formula
 
 $$A\otimes\left(\prod_{i\in I}M_i\right)\overset{\id_A\otimes\pr_i}{\longrightarrow} A\otimes M_i \overset{\rho_i}{\longrightarrow} M_i $$
 
-which defines $A\otimes\left(\prod M_i\right) \rightarrow M_i$, and then using the universal property of the product in $\Ab$ we obtain $A\otimes\left(\prod M_i\right) \rightarrow \prod M_i$ and verify that this satisfies the action axioms.
+which defines $A\otimes\left(\prod M_i\right) \rightarrow M_i$, and then by the universal property of the product in $\Ab$ we obtain $A\otimes\left(\prod M_i\right) \rightarrow \prod M_i$ and verify that this satisfies the action axioms.
 
 For the coproduct, since $A\otimes-$ is a left adjoint from $\Ab$ to $\Ab$, it preserves colimits, and therefore
 
@@ -41,7 +42,7 @@ That is, the following holds.
 $\lMod{A}$ is a bicomplete category; in particular, the product of a family $(M_i)$ of $A$-modules is their direct product, and the coproduct is their direct sum.
 :::
 
-Then the direct product preserves kernels, and the direct sum preserves cokernels. ([[Category Theory] §Limits, ⁋Proposition 10](/en/math/category_theory/limits#prop10)) Additionally, they also satisfy the following proposition.
+Thus the direct product preserves kernels, and the direct sum preserves cokernels. ([[Category Theory] §Limits, ⁋Proposition 10](/en/math/category_theory/limits#prop10)) Moreover, they satisfy the following further property.
 
 ::: Proposition 2
 Let $(M_i)_{i\in I},(N_i)_{i\in I}$ be two families of $A$-modules and let $u_i: M_i \rightarrow N_i$ be linear maps between them; consider the induced maps $\bigoplus u_i:\bigoplus M_i \rightarrow \bigoplus N_i$ and $\prod u_i: \prod M_i \rightarrow \prod N_i$. Then the following hold.
@@ -50,15 +51,15 @@ Let $(M_i)_{i\in I},(N_i)_{i\in I}$ be two families of $A$-modules and let $u_i:
 2. If each $u_i$ is injective, then $\bigoplus u_i$ is also injective, and conversely.
 :::
 
-The proof of this follows by writing out $\prod u_i$ and $\bigoplus u_i$ directly coordinatewise. In particular, from this proposition we see that the direct product also preserves cokernels, and the direct sum also preserves kernels.
+The proof follows by writing out $\prod u_i$ and $\bigoplus u_i$ coordinatewise. In particular, from this proposition we see that the direct product also preserves cokernels, and the direct sum also preserves kernels.
 
-Earlier we observed that for arbitrary $M,N\in\lMod{A}$, the set $\Hom_{\lMod{A}}(M,N)$ is an abelian group. It is not difficult to check that this addition behaves well with respect to composition, and that the category $\lMod{A}$ is an additive category with the zero module $0$ as zero object. ([[Category Theory] §Abelian Categories, ⁋Definition 1](/en/math/category_theory/abelian_categories#def1))
+We have already observed that for arbitrary $M,N\in\lMod{A}$, the set $\Hom_{\lMod{A}}(M,N)$ is an abelian group. It is easy to check that this addition is compatible with composition, and that the category $\lMod{A}$ is an additive category with the zero module $0$ as zero object. ([[Category Theory] §Abelian Categories, ⁋Definition 1](/en/math/category_theory/abelian_categories#def1))
 
-Moreover, $\lMod{A}$ is an abelian category. ([[Category Theory] §Abelian Categories, ⁋Definition 3](/en/math/category_theory/abelian_categories#def3)) To verify this, we need to check that any monomorphism $u:M \rightarrow N$ is the kernel of its cokernel $N \rightarrow N/M$, and any epimorphism $v:M \rightarrow N$ is the cokernel of its kernel $\ker v$, namely $M \rightarrow M/\ker v$.
+Moreover, $\lMod{A}$ is an abelian category. ([[Category Theory] §Abelian Categories, ⁋Definition 3](/en/math/category_theory/abelian_categories#def3)) To verify this, one checks that any monomorphism $u:M \rightarrow N$ is the kernel of its cokernel $N \rightarrow N/M$, and any epimorphism $v:M \rightarrow N$ is the cokernel of its kernel $\ker v$, namely $M \rightarrow M/\ker v$.
 
 ## Free Modules
 
-In [[§Modules, ⁋Example 5](/en/math/algebraic_structures/modules#ex5)] we observed that a ring $A$ carries the structure of an $A$-module. Then any $A$-module homomorphism $u:A \rightarrow M$ is uniquely determined by $u(1)$. For any $\alpha\in A$,
+In [[§Modules, ⁋Example 5](/en/math/algebraic_structures/modules#ex5)] we observed that a ring $A$ carries the structure of an $A$-module. Hence any $A$-module homomorphism $u:A \rightarrow M$ is uniquely determined by $u(1)$. For any $\alpha\in A$,
 
 $$u(\alpha)=u(\alpha\cdot 1)=\alpha\cdot u(1)$$
 
@@ -72,17 +73,17 @@ On the other hand, since we have verified that $\lMod{A}$ has coproducts $\bigop
 
 $$F(X)=F\left(\coprod_{x\in X} \{x\}\right)\cong\bigoplus_{x\in X} F(\{x\})$$
 
-must hold, and using the representation above we know that we must define $F(X)=\bigoplus_{x\in X}Ax$. Conversely, defining $F(X)$ in this way and defining $F(u)$ for a function $u:X\rightarrow Y$ to be the linear map sending each generator to its image, the universal property of the coproduct together with the representation above yield, for any $A$-module $M$, the isomorphism
+must hold, and using the representation above we know that we must define $F(X)=\bigoplus_{x\in X}Ax$. Conversely, defining $F(X)$ in this way and, for a function $u:X\rightarrow Y$, defining $F(u)$ to be the linear map sending each generator to its image, the universal property of the coproduct together with the representation above yield, for any $A$-module $M$, the isomorphism
 
 $$\Hom_A\biggl(\bigoplus_{x\in X}Ax,M\biggr)\cong\prod_{x\in X}\Hom_A(A,M)\cong\prod_{x\in X}U(M)\cong\Hom_\Set(X,U(M))$$
 
-Since each correspondence here is given only by composition of linear maps and composition of functions, it is natural in both $X$ and $M$, and therefore we obtain the following.
+Since each correspondence here is given only by composition of linear maps and of functions, it is natural in both $X$ and $M$, and therefore we obtain the following.
 
 ::: Proposition 3
 For the forgetful functor $U:\lMod{A} \rightarrow\Set$ and the free functor $F:\Set \rightarrow\lMod{A}$ defined above, the adjunction $F\dashv U$ exists.
 :::
 
-For any set $X$, $A$-modules isomorphic to $F(X)$ are called *free $A$-modules*.
+For any set $X$, an $A$-module isomorphic to $F(X)$ is called a *free $A$-module*.
 
 ## Tensor Products of Modules
 
@@ -110,7 +111,7 @@ $$M'=\left\langle (x, y_1+y_2)-(x,y_1)-(x,y_2), (x_1+x_2,y)-(x_1,y)-(x_2,y), (x\
 
 Then by the universal property of the free abelian group, for any function $f:M\times N \rightarrow L$ there exists a group homomorphism $\hat{f}:F(M\times N)\rightarrow L$, and if $f$ is $A$-balanced then the kernel of this $\hat{f}$ contains $M'$, so $\hat{f}$ defines a group homomorphism from $F(M\times N)/M'$ to $L$.
 
-The naturality of the isomorphism $\Balan_A(M,N;L)\cong\Hom_\Ab(F(M\times N)/M',L)$ still needs to be shown, but this is a straightforward computation so we omit it.
+The naturality of the isomorphism $\Balan_A(M,N;L)\cong\Hom_\Ab(F(M\times N)/M',L)$ still needs to be checked, but this is a straightforward computation so we omit it.
 :::
 
 We write the representation thus obtained as $M\otimes_AN$. Then the following holds.
@@ -123,7 +124,7 @@ $$\Hom_\mathbb{Z}(M\otimes_A N, L)\cong\Hom_{\rMod{A}}(M,\Hom_\mathbb{Z}(N, L))\
 exists.
 :::
 
-The proof of this is obtained by associating to an $A$-balanced map $f:M\times N\rightarrow L$ the map $x\mapsto f(x,-)$, which gives $\tilde{f}(x\alpha)=\tilde{f}(x)\alpha$ and hence $\Balan_A(M,N;L)\cong\Hom_{\rMod{A}}(M,\Hom_\mathbb{Z}(N,L))$; fixing the second variable similarly yields $\Hom_{\lMod{A}}(N,\Hom_\mathbb{Z}(M,L))$.
+The proof is obtained by associating to an $A$-balanced map $f:M\times N\rightarrow L$ the map $x\mapsto f(x,-)$, which gives $\tilde{f}(x\alpha)=\tilde{f}(x)\alpha$ and hence $\Balan_A(M,N;L)\cong\Hom_{\rMod{A}}(M,\Hom_\mathbb{Z}(N,L))$; fixing the second variable similarly yields $\Hom_{\lMod{A}}(N,\Hom_\mathbb{Z}(M,L))$.
 
 Therefore $\otimes$ commutes with colimits, and $\Hom$ commutes with limits. In particular, we obtain the following isomorphisms of abelian groups
 
