@@ -80,6 +80,10 @@ module FencedTheoremBlocks
   # 접기 박스(<details>). 라벨 번호가 없어 KIND_MAP 에는 없지만, 박스 어휘를 쓰는
   # 소비처(Xref_preview.js 의 셀렉터, _notices.scss)는 이것도 알아야 한다.
   COLLAPSIBLE_CLASSES = VOCAB["collapsible_classes"].freeze
+  # 증명 <details> 의 초기 상태. production(CI)만 접힌 채로 나가고, dev 서버와
+  # snapshot 빌드(둘 다 JEKYLL_ENV=development)는 펼친 채로 낸다 — 글을 고치는
+  # 동안 접힌 안쪽을 매번 열지 않아도 된다. 펼침/접힘 토글 자체는 그대로 쓴다.
+  PROOF_OPEN_ATTR = Jekyll.env == "production" ? "" : " open"
   EXPLICIT_ALT     = EXPLICIT_CLASSES.map { |c| Regexp.escape(c) }.join("|")
   EXPLICIT_RE      = /\A(#{EXPLICIT_ALT})[ \t]+(.+?)[ \t]*\{#([^}]+)\}[ \t]*\z/
 
@@ -245,7 +249,7 @@ module FencedTheoremBlocks
   def render_proof(block)
     body = strip_blank_edges(block[:body])
     lines = []
-    lines << %(<details class="#{block[:cls]}" markdown="1">)
+    lines << %(<details class="#{block[:cls]}"#{PROOF_OPEN_ATTR} markdown="1">)
     # summary 텍스트도 .thm-tag(라벨 칩)로 감싼다(박스 라벨과 통일; 폰트는 그대로).
     lines << %(<summary><span class="thm-tag">#{block[:summary]}</span></summary>)
     lines << ""
