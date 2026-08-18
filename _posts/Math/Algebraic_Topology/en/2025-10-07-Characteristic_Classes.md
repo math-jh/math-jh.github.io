@@ -10,8 +10,9 @@ sidebar:
 
 date: 2025-10-07
 weight: 14
-translated_at: 2026-08-15T18:20:16+00:00
+translated_at: 2026-08-18T16:45:04+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-08-18T16:45:04+00:00
 ---
 ## Euler Class
 
@@ -31,7 +32,7 @@ In differential geometry the top-dimensional cohomology of a manifold contains t
 
 However, the most familiar way to orient a vector space is to fix a reference ordered basis and declare that another ordered basis is negatively oriented if the change-of-basis matrix to the reference basis has negative determinant. The trouble with such a definition is that it carries too much information: what we actually see is only the sign of the $\det$ of the change of basis. This viewpoint is closely connected to the Čech cohomology explained earlier in [§Stiefel-Whitney Characteristic Classes, §§Čech Cohomology](/en/math/algebraic_topology/stiefel_whitney_classes#čech-cohomology). That is, we defined an arbitrary vector bundle by a trivializing open cover $\{U_i\}$ and transition functions $g_{ij}: U_{ij}\rightarrow \GL(n;\mathbb{R})$ over $U_{ij}$; choosing one of the two signs of $\det$ is then the same as reducing the structure group from $\GL(n;\mathbb{R})$ to $\GL^+(n;\mathbb{R})$. In other words, when passing from one chart to another via the transition functions, a negative determinant (that is, a reversal of orientation) is no longer allowed, and this restriction filters out the non-orientable vector bundles.
 
-When this is possible is told by $\pi_0(\GL(n;\mathbb{R}))\cong \mathbb{Z}/2$ seen earlier. Namely, the only information about orientation remaining from each transition function is the sign $\varepsilon_{ij}=\operatorname{sgn}\det g_{ij}:U_{ij}\rightarrow \{\pm 1\}$, and the class $[\varepsilon_{ij}]\in H^1(B;\mathbb{Z}/2)$ obtained by gluing these together becomes the obstruction to reducing to $\GL^+$. This class is exactly $w_1(E)$ ([§Stiefel-Whitney Characteristic Classes, ⁋Definition 5](/en/math/algebraic_topology/stiefel_whitney_classes#def5)), and one should think of this as the rank-$n$ version of the fact that $H^1(M;\mathbb{Z}/2)$ carried the orientation information of covering spaces. That is, $E$ being orientable is equivalent to $w_1(E)=0$.
+Whether this is possible is determined by $\pi_0(\GL(n;\mathbb{R}))\cong \mathbb{Z}/2$ seen earlier. Namely, the only information about orientation remaining from each transition function is the sign $\varepsilon_{ij}=\operatorname{sgn}\det g_{ij}:U_{ij}\rightarrow \{\pm 1\}$, and the class $[\varepsilon_{ij}]\in H^1(B;\mathbb{Z}/2)$ obtained by gluing these together becomes the obstruction to reducing to $\GL^+$. This class is exactly $w_1(E)$ ([§Stiefel-Whitney Characteristic Classes, ⁋Definition 5](/en/math/algebraic_topology/stiefel_whitney_classes#def5)), and one should think of this as the rank-$n$ version of the fact that $H^1(M;\mathbb{Z}/2)$ carried the orientation information of covering spaces. That is, $E$ being orientable is equivalent to $w_1(E)=0$.
 
 Henceforth we assume that all bundles discussed in this section are oriented. Once an orientation is given, the generators $u_x$ that were scattered over the individual fibers coalesce into a single cohomology class.
 
@@ -65,7 +66,7 @@ for the zero section $0:B\rightarrow E$ and the Thom class $u$ of [Theorem 2](#t
 
 Then $0^\ast:H^n(E)\rightarrow H^n(B)$ is an isomorphism because $p$ is a homotopy equivalence.
 
-Above we explained that the Thom class is the Poincaré dual of the zero section. Then the Euler class $e(E)$ is obtained by restricting this back onto the zero section; that is, viewing it again as a Poincaré dual, one pushes the zero section slightly to a generic section and takes its intersection with the original zero section (namely the self-intersection of the zero section), which can be thought of as the vanishing locus of a generic section. This intuition is made precise as follows.
+Above we explained that the Thom class is the Poincaré dual of the zero section. Then the Euler class $e(E)$ is obtained by restricting this back onto the zero section; that is, viewing it again as a Poincaré dual, one pushes the zero section slightly to a generic section and takes its intersection with the original zero section—namely the self-intersection of the zero section—which can be thought of as the vanishing locus of a generic section. This intuition is made precise as follows.
 
 ::: Proposition 4
 The Euler class satisfies the following.
@@ -184,7 +185,7 @@ $$0^\ast(p^\ast\alpha\smile j^\ast u)=0^\ast p^\ast\alpha\smile 0^\ast j^\ast u=
 ([Definition 3](#def3)) Similarly, the second map $H^k(D(E))=H^k(B)\rightarrow H^k(S(E))$ is the restriction, that is $\pi^\ast$, and the Gysin map $\pi_!$ is the connecting homomorphism $\delta$ transported by the Thom isomorphism $H^{k+1}(D(E), S(E))\cong H^{k-n+1}(B)$.
 :::
 
-The third morphism $\pi_!:H^k(S(E))\rightarrow H^{k-n+1}(B)$ has a somewhat special property. The natural morphism that a continuous map $\pi:S(E)\rightarrow B$ induces on cohomology is usually the pullback $\pi^\ast:H^\ast(B)\rightarrow H^\ast(S(E))$, which goes in the reverse direction of $\pi$ and preserves degree. By contrast, $\pi_!$ goes in the same direction as $\pi$ while lowering degree by $(n-1)$; a morphism that goes against the direction naturally induced by a continuous function is conventionally called a *wrong way map* and denoted with the subscript $!$.
+The third morphism $\pi_!:H^k(S(E))\rightarrow H^{k-n+1}(B)$ has a somewhat special property. The natural morphism that a continuous map $\pi:S(E)\rightarrow B$ induces on cohomology is usually the pullback $\pi^\ast:H^\ast(B)\rightarrow H^\ast(S(E))$, which goes in the reverse direction of $\pi$ and preserves degree. By contrast, $\pi_!$ goes in the same direction as $\pi$ while lowering degree by $(n-1)$; a morphism that goes against the direction naturally induced by a continuous function is conventionally called a *wrong-way map* and denoted with the subscript $!$.
 
 The intuition for this morphism lies in reversing [Theorem 2](#thm2). If the Thom isomorphism $\alpha\mapsto p^\ast\alpha\smile u$ was a lift in the fiber direction, copying the base class $\alpha$ to each point of the fiber via $p^\ast\alpha$ and then multiplying by the fiber-direction class $u$ to raise degree, then $\pi_!$ should be thought of as its inverse. That is, viewing a class on $S(E)$ as having a base-direction component and a fiber-direction component, the fiber-direction component is integrated out along each fiber $S^{n-1}$, and the remaining base-direction class is returned as-is; in this process the fiber dimension $n-1$ is lost. The precise mathematical formulation of this property is the *projection formula*
 
