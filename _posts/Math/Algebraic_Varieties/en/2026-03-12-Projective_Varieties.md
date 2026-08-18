@@ -10,12 +10,13 @@ sidebar:
 
 date: 2026-03-12
 weight: 2
-translated_at: 2026-08-17T07:45:51+00:00
+translated_at: 2026-08-18T18:45:05+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-08-18T18:45:05+00:00
 ---
 ## Definition of Projective Space
 
-We now define projective variety, another important class of algebraic varieties. We begin with the following.
+We now define projective varieties, another important class of algebraic varieties. We begin with the following.
 
 ::: Definition 1
 We define the *projective $n$-space* $\mathbb{P}^n_{\mathbb{K}}$ over a field $\mathbb{K}$ as follows. As a set,
@@ -33,11 +34,11 @@ An equivalence class $[(x_0, \ldots, x_n)]$ is usually denoted by $[x_0 : \cdots
 
 ## Homogeneous Polynomials and Projective Space
 
-As in the affine case, we now need to equip $\mathbb{P}^n$ with a topology. In projective space as well, we will define closed sets as zero sets of polynomials, but the point to be careful about is that since $\mathbb{P}^n$ is defined as a quotient set, a polynomial does not in general define a function on $\mathbb{P}^n$. That is, for arbitrary $F \in \mathbb{K}[x_0, \ldots, x_n]$, although $[x_0 : \cdots : x_n] = [\lambda x_0 : \cdots : \lambda x_n]$, in general
+As in the affine case, we must now equip $\mathbb{P}^n$ with a topology. Again, we will define closed sets as zero sets of polynomials, but care is needed: since $\mathbb{P}^n$ is defined as a quotient set, a polynomial does not in general define a function on $\mathbb{P}^n$. That is, for arbitrary $F \in \mathbb{K}[x_0, \ldots, x_n]$, although $[x_0 : \cdots : x_n] = [\lambda x_0 : \cdots : \lambda x_n]$, in general
 
 $$F(x_0, \ldots, x_n) \neq F(\lambda x_0, \ldots, \lambda x_n)$$
 
-and if $\mathbb{K}$ is infinite, the only polynomial for which evaluation at every point of $\mathbb{P}^n$ is well-defined regardless of the representative is a constant polynomial. However, if we are only interested in the zero set defined by a polynomial, this problem is resolved. For a homogeneous polynomial $F$ of degree $d$,
+and if $\mathbb{K}$ is infinite, the only polynomial whose evaluation at every point of $\mathbb{P}^n$ is well-defined independent of the representative is a constant polynomial. However, if we are only interested in the zero set defined by a polynomial, this problem is resolved. For a homogeneous polynomial $F$ of degree $d$,
 
 $$F(\lambda x_0, \ldots, \lambda x_n) = \lambda^d F(x_0, \ldots, x_n)$$
 
@@ -45,7 +46,7 @@ so
 
 $$F(\lambda x_0, \ldots, \lambda x_n) = 0 \iff F(x_0, \ldots, x_n) = 0$$
 
-Therefore, the zero set of a homogeneous polynomial is well-defined on projective space.
+Therefore, the zero set of a homogeneous polynomial is well defined on projective space.
 
 ::: Definition 2
 A polynomial $F \in \mathbb{K}[\x_0, \ldots, \x_n]$ is said to be *homogeneous of degree $d$* if for all $\lambda \in \mathbb{K}$,
@@ -53,7 +54,7 @@ A polynomial $F \in \mathbb{K}[\x_0, \ldots, \x_n]$ is said to be *homogeneous o
 $$F(\lambda \x_0, \ldots, \lambda \x_n) = \lambda^d F(\x_0, \ldots, \x_n)$$
 :::
 
-Although we have made the definition look complicated, if $\mathbb{K}$ is infinite, this is essentially the condition that when the polynomial is expressed as a sum of monomials, every monomial has degree $d$. Then we can define the following.
+Although we have made the definition appear complicated, if $\mathbb{K}$ is infinite, this is essentially the condition that when the polynomial is expressed as a sum of monomials, every monomial has degree $d$. We may then define the following.
 
 ::: Definition 3
 Given homogeneous polynomials $F_1, \ldots, F_k \in \mathbb{K}[\x_0, \ldots, \x_n]$, we define the *projective algebraic set* $Z(F_1, \ldots, F_k)$ by
@@ -63,9 +64,9 @@ $$Z(F_1, \ldots, F_k) = \{[x_0 : \cdots : x_n] \in \mathbb{P}^n \mid F_1(x) = \c
 Among projective algebraic sets, those that cannot be expressed as a union of finitely many strictly smaller projective algebraic sets are called *projective varieties*.
 :::
 
-As explained above, since each $F_i$ is homogeneous, one can verify that this is well-defined.
+As explained above, since each $F_i$ is homogeneous, one verifies that this is well defined.
 
-Meanwhile, we recall that when dealing with affine varieties, it sufficed to consider only ideals rather than arbitrary subsets of $\mathbb{K}[\x_1, \ldots, \x_n]$. In the projective case, this philosophy is similar, but with the additional assumption of homogeneity, we can define the notion of a homogeneous ideal.
+Meanwhile, we recall that when dealing with affine varieties, it sufficed to consider only ideals rather than arbitrary subsets of $\mathbb{K}[\x_1, \ldots, \x_n]$. In the projective case, the same philosophy applies, but with the additional hypothesis of homogeneity, leading to the notion of a homogeneous ideal.
 
 ::: Definition 4
 An ideal $\mathfrak{a} \subseteq \mathbb{K}[\x_0, \ldots, \x_n]$ is said to be *homogeneous* if $\mathfrak{a}$ is generated by homogeneous polynomials.
@@ -82,10 +83,10 @@ For homogeneous ideals $\mathfrak{a}, \mathfrak{b}, \mathfrak{a}_i \subseteq \ma
 :::
 
 ::: Proof
-The only difference from [§Affine Varieties, ⁋Proposition 4](/en/math/algebraic_varieties/affine_varieties#prop4) is that the polynomials considered here are all homogeneous, but the proof logic itself is identical, so we omit the proof.
+The only difference from [§Affine Varieties, ⁋Proposition 4](/en/math/algebraic_varieties/affine_varieties#prop4) is that the polynomials considered here are all homogeneous, but the proof itself is identical, so we omit it.
 :::
 
-As in the affine case, this shows that there exists a topology on projective space $\mathbb{P}^n$ whose closed sets are projective algebraic sets, and we can give each projective variety the subspace topology induced from this. Likewise, we call this topology the *Zariski topology*. (We first examined the Zariski topology in the affine case in [§Affine Varieties](/en/math/algebraic_varieties/affine_varieties).)
+As in the affine case, this shows that there exists a topology on projective space $\mathbb{P}^n$ whose closed sets are the projective algebraic sets, and we may endow each projective variety with the induced subspace topology. We call this topology the *Zariski topology*. (We first examined the Zariski topology in the affine case in [§Affine Varieties](/en/math/algebraic_varieties/affine_varieties).)
 
 ## Projective Nullstellensatz
 
@@ -104,7 +105,7 @@ and is denoted by $I(X)$.
 2. $I(Z(\mathfrak{a})) = \sqrt{\mathfrak{a}}$ (if $Z(\mathfrak{a}) \ne \emptyset$).
 :::
 
-The difference from the affine case is that $Z(\mathfrak{a}) = \emptyset$ does not mean $\mathfrak{a} = (1)$, but rather that $\sqrt{\mathfrak{a}}$ contains the *irrelevant ideal* $(\x_0, \ldots, \x_n)$. This is because $(\x_0, \ldots, \x_n)$ corresponds to the origin of $\mathbb{K}^{n+1}$, which is excluded in the definition of projective space.
+The difference from the affine case is that $Z(\mathfrak{a}) = \emptyset$ does not mean $\mathfrak{a} = (1)$, but rather that $\sqrt{\mathfrak{a}}$ contains the *irrelevant ideal* $(\x_0, \ldots, \x_n)$. This is because $(\x_0, \ldots, \x_n)$ corresponds to the origin of $\mathbb{K}^{n+1}$, which is excluded from the definition of projective space.
 
 ## Standard Affine Cover
 
@@ -116,14 +117,14 @@ For $i = 0, 1, \ldots, n$, we define the *$i$-th standard open set* $U_i$ by
 $$U_i = \{[x_0 : \cdots : x_n] \in \mathbb{P}^n \mid x_i \ne 0\}$$
 :::
 
-Give each $U_i$ the subspace topology inherited from $\mathbb{P}^n$. Then the following holds.
+Endow each $U_i$ with the subspace topology inherited from $\mathbb{P}^n$. Then the following holds.
 
 ::: Proposition 9
 Each $U_i$ is homeomorphic to affine space $\mathbb{A}^n$ (in the subspace topology).
 :::
 
 ::: Proof
-For notational convenience, we prove the case $i=0$. For $U_0$, define the map $\varphi_0: U_0 \rightarrow \mathbb{A}^n$ by
+For notational convenience, we treat the case $i=0$. Define the map $\varphi_0: U_0 \rightarrow \mathbb{A}^n$ by
 
 $$\varphi_0([x_0 : x_1 : \cdots : x_n]) = \left(\frac{x_1}{x_0}, \ldots, \frac{x_n}{x_0}\right)$$
 
@@ -131,7 +132,7 @@ The inverse map $\psi_0: \mathbb{A}^n \rightarrow U_0$ is given by
 
 $$\psi_0(a_1, \ldots, a_n) = [1 : a_1 : \cdots : a_n]$$
 
-That these are mutual inverses is obvious from the definitions. We now need to show that both $\varphi_0$ and $\psi_0$ are continuous.
+That these are mutual inverses is obvious from the definitions. We now show that both $\varphi_0$ and $\psi_0$ are continuous.
 
 First, to show the continuity of $\varphi_0$, consider a closed set $Z(f)$ in $\mathbb{A}^n$. Then
 
@@ -143,7 +144,7 @@ $$F(\x_0,\ldots, \x_n)=\x_0^d f(\x_1/\x_0, \ldots, \x_n/\x_0)$$
 
 is a homogeneous polynomial, and $\varphi_0^{-1}(Z(f)) = Z(F) \cap U_0$. This is a closed set in the subspace topology on $U_0$.
 
-Now we show the continuity of its inverse $\psi_0$. Consider a closed set $Z(F) \cap U_0$ in $U_0$, where $F$ is a homogeneous polynomial of degree $d$. Then
+Now we show the continuity of the inverse $\psi_0$. Consider a closed set $Z(F) \cap U_0$ in $U_0$, where $F$ is a homogeneous polynomial of degree $d$. Then
 
 $$\psi_0^{-1}(Z(F) \cap U_0) = \{(x_1, \ldots, x_n) \in \mathbb{A}^n \mid F(1, x_1, \ldots, x_n) = 0\}$$
 
@@ -152,14 +153,14 @@ Since $F(1, \x_1, \ldots, \x_n)$ is a polynomial in $\mathbb{K}[\x_1, \ldots, \x
 Therefore, since $\varphi_0$ and $\psi_0$ are mutual inverses and both are continuous, $\varphi_0$ is a homeomorphism.
 :::
 
-Intuitively, we can think of $U_i$ as the set of points where the coordinate $x_i$ is not at infinity. Also, $\mathbb{P}^n = U_0 \cup \cdots \cup U_n$, and by the above proposition, each $U_i \cong \mathbb{A}^n$. Since the key ingredient in the proof of the above proposition was the following proposition, we separate it out.
+Intuitively, we may think of $U_i$ as the set of points where the coordinate $x_i$ is not at infinity. Also, $\mathbb{P}^n = U_0 \cup \cdots \cup U_n$, and by the above proposition each $U_i \cong \mathbb{A}^n$. Since the key ingredient in the proof above was the following proposition, we separate it out.
 
 ::: Proposition 10
-For a projective variety $X \subseteq \mathbb{P}^n$ and a standard open set $U_i$, if $X \cap U_i$ is nonempty, then it is an affine variety on $U_i \cong \mathbb{A}^n$.
+For a projective variety $X \subseteq \mathbb{P}^n$ and a standard open set $U_i$, if $X \cap U_i$ is nonempty, then it is an affine variety in $U_i \cong \mathbb{A}^n$.
 :::
 
 ::: Proof
-For notational convenience, we prove the case $i=0$. Let $X = Z(F_1, \ldots, F_k)$ with each $F_j$ homogeneous of degree $d_j$. Now set
+For notational convenience, we treat the case $i=0$. Let $X = Z(F_1, \ldots, F_k)$ with each $F_j$ homogeneous of degree $d_j$. Set
 
 $$f_j(\x_1, \ldots, \x_n) = F_j(1, \x_1, \ldots, \x_n)$$
 
@@ -167,26 +168,26 @@ Then by the homogeneity of $F_j$, for any point with $x_0 \ne 0$,
 
 $$F_j(x_0, x_1, \ldots, x_n) = x_0^{d_j} f_j\left(\frac{x_1}{x_0}, \ldots, \frac{x_n}{x_0}\right)$$
 
-Therefore, $[x_0 : \cdots : x_n] \in U_0$ belonging to the zero set of all $F_j$ is equivalent to the point $(x_1/x_0, \ldots, x_n/x_0)$ in $\mathbb{A}^n$ corresponding to this point via the homeomorphism $\varphi_0$ of [Proposition 9](#prop9) belonging to the zero set of all $f_j$, and from this we obtain $\varphi_0(X \cap U_0) = Z(f_1, \ldots, f_k) \subseteq \mathbb{A}^n$.
+Hence $[x_0 : \cdots : x_n] \in U_0$ belonging to the zero set of all $F_j$ is equivalent to the point $(x_1/x_0, \ldots, x_n/x_0)$ in $\mathbb{A}^n$ (the image of this point under the homeomorphism $\varphi_0$ of [Proposition 9](#prop9)) belonging to the zero set of all $f_j$, and from this we obtain $\varphi_0(X \cap U_0) = Z(f_1, \ldots, f_k) \subseteq \mathbb{A}^n$.
 
-It remains to verify irreducibility. Since $U_0$ is an open subset of $\mathbb{P}^n$, $X \cap U_0$ is a nonempty open subset of $X$ by assumption. A nonempty open subset of an irreducible space is irreducible, so $X \cap U_0$ is irreducible, and since a homeomorphism preserves irreducibility, $Z(f_1, \ldots, f_k)$ is also irreducible. That is, $X \cap U_0$ is an affine variety.
+It remains to verify irreducibility. Since $U_0$ is an open subset of $\mathbb{P}^n$, $X \cap U_0$ is a nonempty open subset of $X$ by assumption. A nonempty open subset of an irreducible space is irreducible, so $X \cap U_0$ is irreducible, and since a homeomorphism preserves irreducibility, $Z(f_1, \ldots, f_k)$ is also irreducible. Thus $X \cap U_0$ is an affine variety.
 :::
 
 ::: Example 11
 To interpret the above proposition geometrically, let $\mathbb{K}=\mathbb{R}$ and consider the conic $X = Z(\x_0^2 + \x_1^2 - \x_2^2)$ in $\mathbb{P}^2$.
 
-This conic is the cone $\x_0^2 + \x_1^2 = \x_2^2$ in $\mathbb{A}^3$ expressed in homogeneous coordinates. Then we can see how $X$ looks in the standard open sets from [Proposition 10](#prop10). That is, to see what $X$ looks like in $U_i$, we simply substitute $1$ in place of $\x_i$ and think of the remaining $n$ variables as coordinates of $\mathbb{A}^n$. In particular, we obtain the following results:
+This conic is the cone $\x_0^2 + \x_1^2 = \x_2^2$ in $\mathbb{A}^3$ expressed in homogeneous coordinates. We can see how $X$ looks in the standard open sets from [Proposition 10](#prop10). That is, to see what $X$ looks like in $U_i$, we simply substitute $1$ for $\x_i$ and regard the remaining $n$ variables as coordinates on $\mathbb{A}^n$. In particular, we obtain the following:
 
-1. In $U_0, U_1$, the conic $X$ is the hyperbolas $1+y^2-z^2=0$, $x^2+1-z^2=0$.
+1. In $U_0$ and $U_1$, the conic $X$ is the hyperbolas $1+y^2-z^2=0$ and $x^2+1-z^2=0$.
 2. In $U_2$, the conic $X$ is the circle $x^2+y^2=1$.
 
-This happens because the equation $\x_0^2 + \x_1^2 = \x_2^2$ in $\mathbb{A}^3$ is a cone, and its traces cut by the planes $\x_0=1, \x_1=1, \x_2=1$ become hyperbolas and a circle.
+This happens because the equation $\x_0^2 + \x_1^2 = \x_2^2$ in $\mathbb{A}^3$ defines a cone, and its traces cut by the planes $\x_0=1$, $\x_1=1$, $\x_2=1$ become hyperbolas and a circle.
 
-On the other hand, we can also interpret this directly in $\mathbb{P}^2$. To do this, we construct $\mathbb{P}^2$ as follows. For points with $\x_2 \neq 0$, we radially project to the upper hemisphere satisfying $\x_2 > 0$, and for points with $\x_2 = 0$, we identify antipodal points. Through this, we can think of $\mathbb{P}^2$ as the "line at infinity" $\mathbb{P}^1$ together with the plane $\mathbb{A}^2$ corresponding to the surface of the upper hemisphere. Then the given cone first becomes a circle contained in the upper hemisphere through the first radial projection, and from this we know that $X$ appears as a circle in $\mathbb{P}^2$.
+On the other hand, we can also interpret this directly in $\mathbb{P}^2$. To do so, we construct $\mathbb{P}^2$ as follows. For points with $\x_2 \neq 0$, we radially project onto the upper hemisphere satisfying $\x_2 > 0$, and for points with $\x_2 = 0$, we identify antipodal points. Through this, we may think of $\mathbb{P}^2$ as the "line at infinity" $\mathbb{P}^1$ together with the plane $\mathbb{A}^2$ corresponding to the surface of the upper hemisphere. Then the given cone first becomes a circle contained in the upper hemisphere via the radial projection, and from this we see that $X$ appears as a circle in $\mathbb{P}^2$.
 
-Of course, we could have constructed $\mathbb{P}^2$ by radially projecting points satisfying $\x_0 \neq 0$ to the upper hemisphere with $\x_0 > 0$, and taking points with $\x_0 = 0$ as $\mathbb{P}^1$. In this process, two semicircles would be drawn on the upper hemisphere, but the boundary points of these two semicircles would be identified as the same in the process of identifying points with $\x_0 = 0$, so in this picture too $X$ would become a circle.
+Of course, we could have constructed $\mathbb{P}^2$ by radially projecting points satisfying $\x_0 \neq 0$ onto the upper hemisphere with $\x_0 > 0$, and taking points with $\x_0 = 0$ as $\mathbb{P}^1$. In this process, two semicircles would be drawn on the upper hemisphere, but the boundary points of these two semicircles would be identified as the same in the process of identifying points with $\x_0 = 0$, so in this picture too $X$ becomes a circle.
 
-From this perspective, viewing $X$ in $U_i$ corresponds to removing the line at infinity $\x_i = 0$ from $\mathbb{P}^2$. If we view $X$ in $U_2$, then as we saw above, $X$ does not meet the line at infinity $\x_2 = 0$, so removing this line leaves a complete circle. However, if for example we remove the line at infinity $\x_1 = 0$, then $X$ meets this line at two points, and so removing these two points from the circle $X$ and unfolding it, one can understand that a hyperbola results.
+From this perspective, viewing $X$ in $U_i$ corresponds to removing the line at infinity $\x_i = 0$ from $\mathbb{P}^2$. If we view $X$ in $U_2$, then as we saw above, $X$ does not meet the line at infinity $\x_2 = 0$, so removing this line leaves a complete circle. However, if for example we remove the line at infinity $\x_1 = 0$, then $X$ meets this line at two points, and so removing these two points from the circle $X$ and unfolding it yields a hyperbola.
 
 {% diagram Math/Algebraic_Varieties/Projective_Varieties-1.png width="50em" alt="sketch" %}
 :::
@@ -207,7 +208,7 @@ That is, $C(X)$ is the union of the points in $\mathbb{A}^{n+1}$ that appear whe
 The affine cone $C(X)$ of the conic $X = Z(\x_0^2 + \x_1^2 - \x_2^2) \subseteq \mathbb{P}^2$ from [Example 11](#ex11) is the cone $\x_0^2 + \x_1^2 = \x_2^2$ in $\mathbb{A}^3$.
 :::
 
-Then the following holds, and their proofs are not difficult either.
+The following then holds, and the proofs are not difficult either.
 
 ::: Proposition 14
 The affine cone $C(X)$ of a projective variety $X \subseteq \mathbb{P}^n$ satisfies the following properties:
@@ -223,7 +224,7 @@ Through this proposition, we can indirectly understand properties of $X$ by stud
 
 ## Morphisms of Projective Varieties
 
-Finally, we define morphisms of projective varieties. Earlier, when we defined projective algebraic sets, we saw that polynomials do not in general define functions on projective space, and a similar phenomenon occurs when defining morphisms; the solution is again homogeneous polynomials.
+Finally, we define morphisms of projective varieties. Earlier, when we defined projective algebraic sets, we saw that polynomials do not in general define functions on projective space; a similar phenomenon occurs when defining morphisms, and the solution is again homogeneous polynomials.
 
 ::: Definition 15
 A function $\varphi: X \rightarrow Y$ is called a *morphism* between projective varieties $X \subseteq \mathbb{P}^n$ and $Y \subseteq \mathbb{P}^m$ if for each point $x \in X$, there exists an open subset $U$ of $X$ containing $x$ and suitable homogeneous polynomials $F_0, \ldots, F_m \in \mathbb{K}[\x_0, \ldots, \x_n]$ of the same degree such that for all $y \in U$,
@@ -235,7 +236,7 @@ If $F_0, \ldots, F_m$ are all homogeneous polynomials of the same degree $d$, th
 
 $$[F_0(\lambda x) : \cdots : F_m(\lambda x)] = [\lambda^d F_0(x) : \cdots : \lambda^d F_m(x)] = [F_0(x) : \cdots : F_m(x)]$$
 
-so one can verify that well-definedness is guaranteed. On the other hand, as in [§Affine Varieties, ⁋Definition 17](/en/math/algebraic_varieties/affine_varieties#def17), if the inverse map $\psi: Y \rightarrow X$ of a morphism $\varphi: X \rightarrow Y$ exists and is also a morphism, then we call $\varphi$ an *isomorphism*, and two projective varieties for which such a $\varphi$ exists are said to be *isomorphic* to each other. The following examples are representative morphisms.
+so one verifies that well-definedness is guaranteed. On the other hand, as in [§Affine Varieties, ⁋Definition 17](/en/math/algebraic_varieties/affine_varieties#def17), if the inverse map $\psi: Y \rightarrow X$ of a morphism $\varphi: X \rightarrow Y$ exists and is also a morphism, then we call $\varphi$ an *isomorphism*, and two projective varieties for which such a $\varphi$ exists are said to be *isomorphic* to each other. The following examples are representative morphisms.
 
 ::: Example 16
 First, the *Veronese embedding* (of degree 2) from $\mathbb{P}^1$ to $\mathbb{P}^2$ defined by
