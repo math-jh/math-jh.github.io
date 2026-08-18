@@ -10,8 +10,9 @@ sidebar:
 
 date: 2026-03-29
 weight: 11
-translated_at: 2026-08-17T12:15:04+00:00
+translated_at: 2026-08-18T23:15:05+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-08-18T23:15:05+00:00
 ---
 Previously, we defined a (Weil) divisor on a variety $X$ in [§Divisors, ⁋Definition 1](/en/math/algebraic_varieties/divisors#def1). By the definition of the Zariski topology, this can essentially be thought of as the zero set of some *function* defined on $X$, with the orders of these zeros added in, and to make this well defined even in cases such as $\mathbb{P}^n$, we generalized the *function* to a *section of a suitable line bundle*.
 
