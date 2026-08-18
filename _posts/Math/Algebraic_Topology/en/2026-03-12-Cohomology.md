@@ -10,12 +10,13 @@ sidebar:
 
 date: 2025-09-07
 weight: 9
-translated_at: 2026-08-15T16:19:21+00:00
+translated_at: 2026-08-18T14:45:05+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-08-18T14:45:05+00:00
 ---
 As its name suggests, cohomology may be regarded as the dual of homology. However, if the $k$th cohomology $H^k(X)$ of a space $X$ were simply the dual of the $k$th homology $H_k(X)$, there would be little reason to consider it separately.
 
-In fact, cohomology provides a more refined invariant than homology: for instance, cohomology carries a natural product structure, and two spaces with the same homology may nevertheless fail to be homotopic if their cohomology rings differ. In this post, we review the definition of cohomology and its basic properties.
+In fact, cohomology provides a more refined invariant than homology: for instance, it carries a natural product structure, and two spaces with the same homology may nevertheless fail to be homotopic if their cohomology rings differ. In this post, we review the definition of cohomology and its basic properties.
 
 ## The Universal Coefficient Theorem for Homology
 
@@ -63,7 +64,7 @@ and substituting these into (2) yields the short exact sequence
 
 $$0 \rightarrow H_k(C)\otimes_\mathbb{Z}A\rightarrow H_k(C;A)\rightarrow \Tor_1^\mathbb{Z}(H_{k-1}(C), A)\rightarrow 0$$
 
-On the other hand, since (1) is a splitting short exact sequence, we may choose a retraction $r_k:C_k\rightarrow Z_k$. ([\[Multilinear Algebra\] §Exact Sequences, ⁋Proposition 10](/en/math/multilinear_algebra/exact_sequences#prop10)) With this choice, $(p_k\circ r_k)\otimes\id_A$ induces a map $H_k(C;A)\rightarrow H_k(C)\otimes_\mathbb{Z} A$ on homology, and one checks that this is a retraction of the map $H_k(C)\otimes_\mathbb{Z}A\rightarrow H_k(C;A)$ above. Thus we obtain:
+On the other hand, since (1) is a split short exact sequence, we may choose a retraction $r_k:C_k\rightarrow Z_k$. ([\[Multilinear Algebra\] §Exact Sequences, ⁋Proposition 10](/en/math/multilinear_algebra/exact_sequences#prop10)) With this choice, $(p_k\circ r_k)\otimes\id_A$ induces a map $H_k(C;A)\rightarrow H_k(C)\otimes_\mathbb{Z} A$ on homology, and one checks that this is a retraction of the map $H_k(C)\otimes_\mathbb{Z}A\rightarrow H_k(C;A)$ above. Thus we obtain:
 
 ::: Proposition 1 (Universal coefficient theorem for homology)
 For any topological space $X$ and abelian group $A$, there exists a short exact sequence
