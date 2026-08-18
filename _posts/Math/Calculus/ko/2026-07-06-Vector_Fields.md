@@ -10,7 +10,6 @@ sidebar:
 
 date: 2026-07-06
 weight: 16
-drift_needed: true
 ---
 
 우리가 궁극적으로 다루고 싶은 것은 일반적인 함수 $\mathbb{R}^m\rightarrow\mathbb{R}^n$의 미적분학이다. 우리는 우선 [§곡선과 벡터함수](/ko/math/calculus/vector_functions)에서는 공역의 차원을, [§다변수함수와 편미분](/ko/math/calculus/partial_derivatives) 이후에서는 정의역의 차원을 올려 이를 준비했다. 이제 두 방향을 하나로 합쳐 정의역과 공역이 모두 여러 차원인 일반적인 경우를 시작한다. 특히 정의역과 공역의 차원이 같은 $\mathbb{R}^n\rightarrow\mathbb{R}^n$이 가장 자연스러운 대상으로, 그럼 이 함수는 $n$차원 벡터를 받아 $n$차원 벡터를 내놓는 함수이다. 
