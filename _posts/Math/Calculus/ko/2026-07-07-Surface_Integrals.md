@@ -10,7 +10,6 @@ sidebar:
 
 date: 2026-07-07
 weight: 19
-drift_needed: true
 ---
 
 이제 우리는 선적분에서 변수를 하나 추가하여 곡면의 적분을 정의한다. 
