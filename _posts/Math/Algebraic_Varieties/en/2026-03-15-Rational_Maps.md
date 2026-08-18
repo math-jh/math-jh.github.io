@@ -10,8 +10,9 @@ sidebar:
 
 date: 2026-03-15
 weight: 4
-translated_at: 2026-08-17T08:47:23+00:00
+translated_at: 2026-08-18T19:45:05+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-08-18T19:45:05+00:00
 ---
 In [§Quasi-Projective Varieties, ⁋Definition 7](/en/math/algebraic_varieties/quasi_projective_varieties#def7) we defined regular maps between quasi-projective varieties as functions that are defined at every point of their domain. Even if they are written in rational form over $D(f)$ as in [§Affine Varieties, ⁋Definition 14](/en/math/algebraic_varieties/affine_varieties#def14), the only possible denominators are powers of $f$, so they are defined everywhere.
 
@@ -41,7 +42,7 @@ What is important is that this proposition provides a practical way to compute r
 For a variety $X$ and a nonempty open subset $U$, we have $\mathbb{K}(U) = \mathbb{K}(X)$.
 :::
 ::: Proof
-First, the inclusion $\iota: U \hookrightarrow X$ obviously induces an embedding $\iota^\ast: \mathbb{K}(X)\rightarrow \mathbb{K}(U)$ of function fields. Since any nonzero field homomorphism is an inclusion, it suffices to show that $\iota^\ast$ is surjective. ([\[Field Theory\] §Fields, ⁋Proposition 2](/en/math/field_theory/fields#prop2))
+First, the inclusion $\iota: U \hookrightarrow X$ obviously induces an embedding $\iota^\ast: \mathbb{K}(X)\rightarrow \mathbb{K}(U)$ of function fields. Since any nonzero field homomorphism is injective, it suffices to show that $\iota^\ast$ is surjective. ([\[Field Theory\] §Fields, ⁋Proposition 2](/en/math/field_theory/fields#prop2))
 
 Now for any $f \in \mathbb{K}(U)$, $f$ is a regular function on some nonempty open subset $V$ of $U$. Then $V$ is also open in $X$, so the pair $(V,f)$ belongs to $\mathbb{K}(X)$.
 :::
