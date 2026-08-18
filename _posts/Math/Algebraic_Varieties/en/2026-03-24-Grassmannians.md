@@ -10,8 +10,9 @@ sidebar:
 
 date: 2026-03-24
 weight: 7
-translated_at: 2026-08-17T10:15:04+00:00
+translated_at: 2026-08-18T21:15:04+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-08-18T21:15:04+00:00
 ---
 We introduce a special variety and finish our overview of the basic objects of study in algebraic geometry.
 
@@ -23,17 +24,17 @@ By definition, the projective space $\mathbb{P}^n$ is the space of lines through
 The set of $k$-dimensional subspaces of an $n$-dimensional vector space $V$ is called the *Grassmannian* $\Gr(k, V)$, or $\Gr(k, n)$.
 :::
 
-Throughout this post, we always assume that $V$ is an $n$-dimensional space.
+Throughout this post, we always assume that $V$ is $n$-dimensional.
 
-Of course, one must separately verify that this carries a variety structure, but the key result is that not only does it have a variety structure, but because this structure preserves the relative position of each $k$-plane in $\mathbb{A}^n$, it behaves exactly as we want without requiring much care.
+Of course, one must separately verify that this carries a variety structure, but the key point is that it not only admits one, but this structure also preserves the relative position of each $k$-plane in $\mathbb{A}^n$, so it behaves exactly as we expect without requiring much care.
 
 ::: Example 2
-For instance, $\Gr(1, n+1)$ is the space of lines in the $(n+1)$-dimensional vector space $\mathbb{K}^{n+1}$, so by definition it coincides with $\mathbb{P}^n$. Once we define the variety structure on the Grassmannian, we will see that these two structures are exactly the same.
+For instance, $\Gr(1, n+1)$ is the space of lines in the $(n+1)$-dimensional vector space $\mathbb{K}^{n+1}$, so by definition it coincides with $\mathbb{P}^n$. Once we define the variety structure on the Grassmannian, we will see that these two structures agree exactly.
 
 The simplest new example is $\Gr(2,4)$. This is the collection of $2$-dimensional subspaces of a $4$-dimensional space. When we study Grassmannians, this example will serve as a toy example.
 :::
 
-As always, to endow it with a variety structure, we can consider an affine cover and work affine-locally. To this end, we fix a basis $e_1,\ldots, e_n$ of $V$ and make the following definition.
+As always, to endow it with a variety structure, we consider an affine cover and work affine-locally. To this end, we fix a basis $e_1,\ldots, e_n$ of $V$ and make the following definition.
 
 ::: Definition 3
 For each set of $k$ indices $I = \{i_1 < \cdots < i_k\}$, we define a subset $U_I$ of $\Gr(k, V)$ by
