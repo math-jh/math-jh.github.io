@@ -18801,6 +18801,8 @@ V:
   defs:
   - label: '[미분다양체] §접다발과 여접다발'
     url: /ko/math/manifolds/tangent_and_cotangent_bundles
+  - label: '[대수적 위상수학] §슈티펠-휘트니 특성류'
+    url: /ko/math/algebraic_topology/stiefel_whitney_classes
   see:
   - label: Fiber bundle
     id: fiber_bundle
