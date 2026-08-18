@@ -10,8 +10,9 @@ sidebar:
 
 date: 2025-08-05
 weight: 5
-translated_at: 2026-08-15T15:48:11+00:00
+translated_at: 2026-08-18T14:15:05+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-08-18T14:15:05+00:00
 ---
 We now examine tools that allow us to compute homology in practice. Directly calculating the homology of an arbitrary space from the definition is nearly impossible, so we must develop methods for breaking large spaces into smaller pieces and computing the homology of the large space from those of the pieces. The most intuitive situation is that of [§Covering Spaces, ⁋Theorem 13](/en/math/algebraic_topology/covering_spaces#thm13), where we saw that the functor $\pi_1:\Top_\ast \rightarrow \Grp$ preserves colimits. Now the abelianization functor $\ab:\Grp \rightarrow \Ab$ is the left adjoint of the forgetful functor $U:\Ab \rightarrow \Grp$ ([[Algebraic Structures] §Abelian Groups, ⁋Proposition 7](/en/math/algebraic_structures/abelian_groups#prop7)), left adjoints preserve colimits ([[Category Theory] §Adjoints, ⁋Theorem 9](/en/math/category_theory/adjoints#thm9)), and the first homology functor $H_1:\Top \rightarrow \Ab$ is the composite of these. Indeed, the map $\pi_1(X)\rightarrow H_1(X)$ sending a loop $\gamma$ to a singular $1$-simplex is well-defined, and when $X$ is path-connected its kernel is exactly the commutator subgroup $[\pi_1(X),\pi_1(X)]$, yielding $H_1(X)\cong\pi_1(X)^\ab$. Thus for pushouts of the type given by [§Covering Spaces, ⁋Corollary 14](/en/math/algebraic_topology/covering_spaces#cor14), we can expect an analogous result for $H_1$. In particular, suppose as in [§Covering Spaces, ⁋Corollary 14](/en/math/algebraic_topology/covering_spaces#cor14) that a topological space $X$ is the union of two connected open subsets $U,V$ with $U\cap V$ also connected. Then in the category $\Ab$, the pushout of two abelian groups is given by the coequalizer of their direct sum, so for the maps $f:H_1(U\cap V)\rightarrow H_1(U)$ and $g:H_1(U\cap V)\rightarrow H_1(V)$ induced by the two inclusions, we have the isomorphism
 
@@ -66,7 +67,7 @@ However, despite this theorem being intuitively obvious, its proof involves some
 On the other hand, in geometric situations we already know a way to ignore information contained in $A$ in this manner: namely the quotient space $X/A$ obtained by collapsing $A$ to a point. It is then reasonable to conjecture that there is a relationship between the homology $H_k(X/A)$ and the relative homology $H_k(X,A)$. Of course, as with the theorem above, this is only possible if $A$ is not too pathological.
 
 ::: Definition 3
-For a space $X$ and a nonempty subspace $A$, the pair $(X,A)$ is called a *good pair* if $A$ is a closed subset and there exists a suitable open subset $U$ of $X$ such that $A\subseteq U$ and $A$ is a strong deformation retract of $U$.
+For a space $X$ and a nonempty subspace $A$, the pair $(X,A)$ is called a *good pair* if $A$ is closed and there exists an open subset $U$ of $X$ such that $A\subseteq U$ and $A$ is a strong deformation retract of $U$.
 :::
 
 Given a good pair $(X,A)$, let $U$ be an open subset satisfying the hypothesis of [Definition 3](#def3). Then in the following diagram
