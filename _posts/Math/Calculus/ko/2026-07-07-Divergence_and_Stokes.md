@@ -10,7 +10,6 @@ sidebar:
 
 date: 2026-07-07
 weight: 20
-drift_needed: true
 ---
 
 우리는 그린 정리를 소개하며 이것이 미적분학의 기본정리의 2차원 analogue라는 것을 보았다. 미적분학의 마지막은 이를 고차원으로 확대하는 것으로, 역시 이들이 공유하는 정신은 영역 interior의 적분과 boundary의 적분이 이어진다는 것이다. 
