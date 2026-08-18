@@ -138,9 +138,17 @@ $$\mathfrak{a}/\mathfrak{a}^2 \overset{\bar d}{\longrightarrow} \Omega_{B/A}\oti
 
 에서 $\Omega_{B/A}\otimes_BC$는 $\dd{\x_1},\ldots, \dd{\x_n}$을 기저로 하는 rank $n$의 free $C$-module이다. ([§Kähler differential과 여접층, ⁋명제 9](/ko/math/scheme_theory/sheaf_of_differentials#prop9)) 이 때 첫째 morphism $\bar d$는 
 
-$f_i+\mathfrak{a}^2\mapsto \dd{f_i}=\sum_j\frac{\partial f_i}{\partial \x_j}\dd{\x_j}$
+$$f_i+\mathfrak{a}^2\mapsto \dd{f_i}=\sum_j\frac{\partial f_i}{\partial \x_j}\dd{\x_j}$$
 
-로 주어지는 것이다. 한편 $\mathfrak{a}$가 $f_1,\ldots, f_r$로 생성되므로 $e_i\mapsto f_i+\mathfrak{a}^2$은 전사사상 $\pi:C^{\oplus r} \rightarrow \mathfrak{a}/\mathfrak{a}^2$을 정의하며, 합성 $\bar d\circ\pi$를 $e_i$와 $\dd{\x_j}$ 기저에 대하여 표현한 행렬이 정확히 Jacobian $J$의 transpose이다.
+로 주어지는 것이다. 한편, 가정에 의해 
+
+$$\pi: C^{\oplus r} \rightarrow \mathfrak{a}/\mathfrak{a}^2;\qquad e_i\mapsto f_i+\mathfrak{a}^2$$
+
+은 surjective $C$-module homomorphism이며, 그럼 합성 
+
+$$\overline{d}\circ\pi: C^{\oplus r}\rightarrow \mathfrak{a}/\mathfrak{a}^2\rightarrow \Omega_{B/A}\otimes_BC$$
+
+ $\mathfrak{a}$가 $f_1,\ldots, f_r$로 생성되므로 $e_i\mapsto f_i+\mathfrak{a}^2$은 전사사상 $\pi:C^{\oplus r} \rightarrow \mathfrak{a}/\mathfrak{a}^2$을 정의하며, 합성 $\bar d\circ\pi$를 $e_i$와 $\dd{\x_j}$ 기저에 대하여 표현한 행렬이 정확히 Jacobian $J$의 transpose이다.
 
 이 행렬 표현으로부터 첫 번째 목표, 곧 $\Omega_{C/A}$가 locally free라는 것이 얻어진다. 가정에 의하여 $J$의 어떤 $r\times r$ minor $g$가 $x$에서 영이 아니다. $D(g)=\Spec C_g$ 위에서는 해당 부분행렬이 가역이므로, 그 $r$개 좌표로의 projection과 $(\bar d\circ\pi)_g$의 합성이 $C_g^{\oplus r}$의 invertible endomorphism이 되어 $(\bar d\circ\pi)_g$는 split injection이다. 특히 $\pi_g$는 단사이고 이미 전사였으므로 동형이며, 따라서 $(\mathfrak{a}/\mathfrak{a}^2)_g$는 rank $r$의 free module이고 $\bar d_g$는 free module 사이의 split injection이다. 그럼 그 cokernel $\Omega_{C/A}\otimes_CC_g$는 $C_g^{\oplus n}$의 direct summand이므로, $\Omega_{C/A}$는 $D(g)$ 위에서 rank $n-r$의 locally free이다.
 
