@@ -19210,6 +19210,13 @@ W:
   defs:
   - label: '[복소해석학] §복소정칙함수'
     url: /ko/math/complex_analysis/holomorphic_functions
+- id: work
+  en: work
+  ko: 일
+  primary: ko
+  defs:
+  - label: '[미적분학] §선적분'
+    url: /ko/math/calculus/line_integrals
 Z:
 - id: zariski_tangent_space
   en: Zariski tangent space
