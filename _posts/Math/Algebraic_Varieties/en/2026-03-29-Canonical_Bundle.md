@@ -10,34 +10,35 @@ sidebar:
 
 date: 2026-03-29
 weight: 12
-translated_at: 2026-08-17T11:48:12+00:00
+translated_at: 2026-08-18T22:45:05+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-08-18T22:45:05+00:00
 ---
 In [§Linear Systems](/en/math/algebraic_varieties/linear_systems), we saw that a basepoint-free complete linear system of a line bundle can be used to embed a variety into projective space, and when this defines a closed embedding, such a line bundle is called *very ample*.
 
-Despite the significant geometric influence that line bundles exert, we have not yet properly examined how to define a line bundle on an arbitrary variety in general. If $X$ is a *smooth* variety, we can consider the cotangent bundle $\Omega_X^1$ defined on it via [§Line Bundles and Vector Bundles, ⁋Example 24](/en/math/algebraic_varieties/line_bundles#ex24), and by taking its top exterior power we obtain the *canonical bundle* $\omega_X$. The goal of this post is to study this bundle $\omega_X$.
+Despite the considerable geometric influence that line bundles exert, we have not yet properly examined how to define a line bundle on an arbitrary variety in general. If $X$ is a *smooth* variety, we can consider the cotangent bundle $\Omega_X^1$ defined on it via [§Line Bundles and Vector Bundles, ⁋Example 24](/en/math/algebraic_varieties/line_bundles#ex24), and by taking its top exterior power we obtain the *canonical bundle* $\omega_X$. The goal of this post is to study this bundle $\omega_X$.
 
 ## Vector Bundles and Quasi-Coherent Sheaves
 
 As mentioned above, to define $\omega_X$ we start from the cotangent bundle $\Omega_X^1$. We have already seen that this is the bundle of differential forms on $X$. Let us verify that this aligns with differentiation in the algebraic setting. ([[Commutative Algebra] §Differentials, ⁋Definition 3](/en/math/commutative_algebra/differentials#def3)) For this, we need to examine the process of transferring an $A$-module $M$ to a vector bundle over $X$, given an affine variety $X$ with coordinate ring $A$ and an $A$-module $M$.
 
-Our basic philosophy, using [§Affine Varieties](/en/math/algebraic_varieties/affine_varieties), is that a homomorphism between coordinate *rings* can be transferred to a morphism between varieties in the opposite direction, and thus we can obtain a bundle over $X$. However, the problem is that $M$ is not a ring. That is, multiplication is not defined on $M$. Yet, according to [[Multilinear Algebra] §Tensor Algebras, ⁋Definition 5](/en/math/multilinear_algebra/tensor_algebras#def5), we can consider the symmetric algebra $\S(M)$, which forcibly introduces a (commutative) multiplication on $M$.
+Our basic philosophy, using [§Affine Varieties](/en/math/algebraic_varieties/affine_varieties), is that a homomorphism between coordinate *rings* can be transferred to a morphism between varieties in the opposite direction, and thus we can obtain a bundle over $X$. However, the problem is that $M$ is not a ring: multiplication is not defined on $M$. Yet, according to [[Multilinear Algebra] §Tensor Algebras, ⁋Definition 5](/en/math/multilinear_algebra/tensor_algebras#def5), we can consider the symmetric algebra $\S(M)$, which forcibly introduces a (commutative) multiplication on $M$.
 
-However, there is a problem in applying this directly. Recall that our goal is to view $M$ as a vector bundle over $X$. Roughly speaking, our goal is to attach $M$ nicely over each point of $X$, and according to [§Affine Varieties](/en/math/algebraic_varieties/affine_varieties), if $M$ appears in the world of varieties (as fibers), then the coordinate ring defining it should be its coordinate functions. That is, we must use $M^\vee$ instead of $M$, and therefore we consider $\S_A(M^\vee)$ rather than $\S_A(M)$. Then this is an $A$-algebra, so we obtain a map of coordinate rings $A\rightarrow \S_A(M^\vee)$, and applying [§Affine Varieties](/en/math/algebraic_varieties/affine_varieties) to this gives a morphism from some variety $V(M)$ to $X$.
+However, there is a problem in applying this directly. Recall that our goal is to view $M$ as a vector bundle over $X$. Roughly speaking, we want to attach $M$ nicely over each point of $X$, and according to [§Affine Varieties](/en/math/algebraic_varieties/affine_varieties), if $M$ appears in the world of varieties (as fibers), then the coordinate ring defining it should be its coordinate functions. That is, we must use $M^\vee$ instead of $M$, and therefore we consider $\S_A(M^\vee)$ rather than $\S_A(M)$. This is an $A$-algebra, so we obtain a map of coordinate rings $A\rightarrow \S_A(M^\vee)$, and applying [§Affine Varieties](/en/math/algebraic_varieties/affine_varieties) to this gives a morphism from some variety $V(M)$ to $X$.
 
 Let us verify that this morphism actually carries a vector bundle structure over $X$. A point $x\in X$ corresponds to a maximal ideal $\mathfrak{m}_x$ of the coordinate ring $A$, and thus the set-theoretic fiber $V(M)_x = \pi^{-1}(x)$ over $x$ in $V(M) \rightarrow X$ consists of the maximal ideals of $\S_A(M^\vee)$ containing $\mathfrak{m}_x\cdot \S_A(M^\vee)$.
 
-Algebraically, to obtain the coordinate ring defining this fiber, we must first think about what functions are defined on it. Now, the functions contained in the maximal ideal $\mathfrak{m}_x$ defining $x\in X$ all vanish at $x$, so it is reasonable to think of functions defined on this fiber as $A/\mathfrak{m}_x$-valued functions. We call this field $\kappa(x)=A/\mathfrak{m}_x$ the *residue field* at $x$, and thus in general $\kappa(x)$ is an algebraic extension of $\mathbb{K}$. ([[Commutative Algebra] §Nullstellensatz, ⁋Theorem 4](/en/math/commutative_algebra/nullstellensatz#thm4)) Since we usually consider the case where $\mathbb{K}$ is an algebraically closed field, we may simply think of $\kappa(x)$ as $\mathbb{K}$.
+Algebraically, to obtain the coordinate ring defining this fiber, we must first ask what functions are defined on it. Now, the functions contained in the maximal ideal $\mathfrak{m}_x$ defining $x\in X$ all vanish at $x$, so it is reasonable to regard functions defined on this fiber as $A/\mathfrak{m}_x$-valued functions. We call this field $\kappa(x)=A/\mathfrak{m}_x$ the *residue field* at $x$; in general, $\kappa(x)$ is an algebraic extension of $\mathbb{K}$. ([[Commutative Algebra] §Nullstellensatz, ⁋Theorem 4](/en/math/commutative_algebra/nullstellensatz#thm4)) Since we usually consider the case where $\mathbb{K}$ is an algebraically closed field, we may simply regard $\kappa(x)$ as $\mathbb{K}$.
 
-Now, from the above discussion, we know that we should consider the collection of $\kappa(x)$-valued functions on $\S_A(M^\vee)$, namely $\S_A(M^\vee)\otimes_A\kappa(x)$. Then, from the fact that symmetric algebra commutes with tensor product, we obtain the identity
+Now, from the above discussion, we know that we should consider the collection of $\kappa(x)$-valued functions on $\S_A(M^\vee)$, namely $\S_A(M^\vee)\otimes_A\kappa(x)$. Then, from the fact that the symmetric algebra commutes with tensor products, we obtain the identity
 
 $$\S_A(M^\vee)\otimes_A\kappa(x)=\S_{\kappa(x)} (M^\vee\otimes_A\kappa(x))=\S_{\kappa(x)}(M_x^\vee)$$
 
 where on the right-hand side $M_x = M \otimes_A \kappa(x)$, and the tensor products appearing here can be thought of, roughly as explained above, as viewing all objects as $\mathbb{K}$-vector spaces (more precisely, $\kappa(x)$-vector spaces).
 
-Now $\S_{\kappa(x)}(M_x^\vee)$ is a polynomial algebra with coefficients in $\kappa(x)$ and with linear terms given by the elements of $M_x^\vee$, and thus the fiber $V(M)_x$ consists of points having the elements of $M_x^\vee$ as coordinate functions, so these points can be thought of as the double dual of $M_x$. Now if $M$ is a finitely generated $A$-module, the canonical isomorphism $M_x\cong M_x^{\vee\vee}$ exists, and from this we can understand each fiber $V(M)_x$ as the $\kappa(x)$-vector space $M_x$.
+Now $\S_{\kappa(x)}(M_x^\vee)$ is a polynomial algebra with coefficients in $\kappa(x)$ and with linear terms given by the elements of $M_x^\vee$, and thus the fiber $V(M)_x$ consists of points having the elements of $M_x^\vee$ as coordinate functions, so these points can be thought of as the double dual of $M_x$. Now if $M$ is a finitely generated $A$-module, the canonical isomorphism $M_x\cong M_x^{\vee\vee}$ exists, and from this we can identify each fiber $V(M)_x$ with the $\kappa(x)$-vector space $M_x$.
 
-If $M$ is finitely generated projective, that is, a locally free $A$-module, then through additional computation we can verify that this data satisfies the locally trivial condition, and thereby we can confirm that we may think of this as a vector bundle over $X$.
+If $M$ is finitely generated projective, that is, a locally free $A$-module, then through additional computation we can verify that this data satisfies the locally trivial condition, and thereby we can confirm that we may regard this as a vector bundle over $X$.
 
 On the other hand, showing that this vector bundle is locally trivial is essentially the same as examining it in the language of sheaves. We have not used the language of sheaves much for geometric intuition, but roughly speaking, it is as follows.
 
@@ -45,13 +46,13 @@ As above, given an affine variety $X$ with coordinate ring $A$ and an $A$-module
 
 $$\widetilde{M}(U)=M\otimes_A \mathcal{O}_X(U)$$
 
-This is basically the same context as introducing $\kappa(x)$ above, and although we have not computed it in detail, when showing the local triviality of $V(M)$ we would have base changed using the structure sheaf in this manner. Then in particular for all of $X$ we have
+This is basically the same context as introducing $\kappa(x)$ above, and although we have not computed it in detail, when showing the local triviality of $V(M)$ we would have base-changed using the structure sheaf in this manner. Then in particular for all of $X$ we have
 
 $$\widetilde{M}(X)=M\otimes_A A=M$$
 
-so that $M$ becomes the global section space of $\widetilde{M}$.
+so that $M$ becomes the space of global sections of $\widetilde{M}$.
 
-These two definitions are merely expressing the same object in different geometric languages. That is, for an affine variety $X$ with coordinate ring $A$ and a finitely generated projective $A$-module $M$, the total space corresponding to $\widetilde{M}$ is precisely $V(M)$, and the section sheaf of $V(M)$ is $\widetilde{M}$.
+These two definitions merely express the same object in different geometric languages. That is, for an affine variety $X$ with coordinate ring $A$ and a finitely generated projective $A$-module $M$, the total space corresponding to $\widetilde{M}$ is precisely $V(M)$, and the sheaf of sections of $V(M)$ is $\widetilde{M}$.
 
 In general, compared to concrete geometric language, the advantage of sheaf language is that it can be applied in more general situations. For example, we define the following. ([[Commutative Algebra] §Basic Notions, ⁋Definition 8](/en/math/commutative_algebra/basic_notions#def8))
 
@@ -61,7 +62,7 @@ An $\mathcal{O}_X$-module $\mathcal{F}$ on a general variety $X$ is called a *qu
 
 When dealing with quasi-coherent sheaves in general, one must be careful because different $M$'s may be attached on each affine cover, but when restricted to the affine case, $M\mapsto \widetilde{M}$ defines a categorical equivalence from $\lMod{A}$ to $\QCoh(X)$. This can be verified by checking that for any quasi-coherent sheaf $\mathcal{F}$, $\widetilde{\Gamma(X,\mathcal{F})}$ recovers $\mathcal{F}$ itself. That is, our slogan is: in the affine case, a quasi-coherent sheaf is an $A$-module, and a coherent sheaf is a finitely generated $A$-module.
 
-From this perspective, a vector bundle can be thought of as a very special case of a (quasi-)coherent sheaf. Or conversely, when thinking of these (quasi-)coherent sheaves, one may think of them as very general forms of vector bundles. Specifically, a coherent sheaf can be thought of as an extension of the category of (finite rank) vector bundles so that it is closed under the operations of an abelian category, namely kernels, images, cokernels, etc., and intuitively it can be thought of as a vector bundle whose fiber dimension may vary from point to point. A quasi-coherent sheaf is what remains after removing the finite rank condition.
+From this perspective, a vector bundle can be thought of as a very special case of a (quasi-)coherent sheaf. Or conversely, when thinking of these (quasi-)coherent sheaves, one may regard them as very general forms of vector bundles. Specifically, a coherent sheaf can be thought of as an extension of the category of (finite rank) vector bundles so that it is closed under the operations of an abelian category, namely kernels, images, cokernels, etc., and intuitively it can be thought of as a vector bundle whose fiber dimension may vary from point to point. A quasi-coherent sheaf is what remains after removing the finite rank condition.
 
 Since the coordinate ring of a variety is Noetherian, by [[Commutative Algebra] §Basic Notions, ⁋Proposition 9](/en/math/commutative_algebra/basic_notions#prop9) the coherent condition and the finitely generated condition coincide even on a singular variety, and thus the above slogan holds just as well in geometric situations. However, one somewhat cautionary point from the above intuition is that how close a coherent sheaf is to a vector bundle depends on the geometry of $X$. Any coherent sheaf on a smooth variety admits a locally free resolution of finite length, but this is not the case on a singular variety.
 
@@ -82,7 +83,7 @@ For a smooth affine variety $X$ with coordinate ring $A$, $\Omega_X^1$ is the ve
 ::: Proof
 For this, it will be convenient to rewrite the previously defined tangent bundle and cotangent bundle in the language of sheaves. First, let us define the tangent sheaf $\mathcal{T}_X$. For an open subset $U$ of $X$, we define the sheaf given by the collection of $\mathbb{K}$-derivations $\Der_\mathbb{K}(\mathcal{O}_X(U),\mathcal{O}_X(U))$ on $\mathcal{O}_X(U)$ as the tangent sheaf.
 
-Our main tool is the universal property of Kähler differentials. ([[Commutative Algebra] §Differentials, ⁋Lemma 2](/en/math/commutative_algebra/differentials#lem2)) That is, for any $A$-module $N$, let us use the natural isomorphism
+Our main tool is the universal property of Kähler differentials. ([[Commutative Algebra] §Differentials, ⁋Lemma 2](/en/math/commutative_algebra/differentials#lem2)) That is, for any $A$-module $N$, we use the natural isomorphism
 
 $$\Der_\mathbb{K}(A,N)\cong\Hom_A(\Omega_{A/\mathbb{K}},N)$$
 
