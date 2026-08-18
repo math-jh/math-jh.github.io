@@ -11,16 +11,17 @@ sidebar:
 
 date: 2026-03-25
 weight: 10
-translated_at: 2026-08-17T11:17:25+00:00
+translated_at: 2026-08-18T22:15:05+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-08-18T22:15:05+00:00
 ---
-In the previous post we defined divisors on a variety $X$ and saw that their linear equivalence classes form $\Cl(X)$. However, not every divisor arises as the zero/pole locus of some rational function. For instance, since $\Cl(\mathbb{P}^n) \cong \mathbb{Z}$ ([§Divisors, ⁋Example 11](/en/math/algebraic_varieties/divisors#ex11)), a general divisor $dH$ on $\mathbb{P}^n$ comes from a homogeneous polynomial only when $d \ge 0$.
+In the previous post we defined divisors on a variety $X$ and saw that their linear equivalence classes form $\Cl(X)$. However, not every divisor arises as the zero or pole locus of some rational function. For instance, since $\Cl(\mathbb{P}^n) \cong \mathbb{Z}$ ([§Divisors, ⁋Example 11](/en/math/algebraic_varieties/divisors#ex11)), a general divisor $dH$ on $\mathbb{P}^n$ is the zero set of a homogeneous polynomial only when $d \ge 0$.
 
-To overcome this restriction we introduce *line bundles*. A line bundle $\mathcal{L}$ is a geometric object that assigns a one-dimensional vector space to each point $p \in X$, and a section $s$ of $\mathcal{L}$ naturally defines a divisor $\divisor(s)$. From this viewpoint, for any divisor $D$ we can construct a line bundle $\mathcal{O}_X(D)$, whose sections correspond to divisors greater than or equal to $D$. In other words, line bundles allow us to treat divisors independently of the constraint that they be zeros or poles of a function.
+To overcome this restriction we introduce *line bundles*. A line bundle $\mathcal{L}$ is a geometric object that assigns a one-dimensional vector space to each point $p \in X$, and a section $s$ of $\mathcal{L}$ naturally defines a divisor $\divisor(s)$. From this viewpoint, for any divisor $D$ we can construct a line bundle $\mathcal{O}_X(D)$ whose sections correspond to divisors greater than or equal to $D$. In other words, line bundles allow us to treat divisors independently of the constraint that they be zeros or poles of a function.
 
 ## Definition of Line Bundle
 
-Line bundles, and more generally vector bundles which we will define later in this post, are defined in the same way as in differential geometry and other fields. ([\[Differential Manifolds\] §Tangent and Cotangent Bundles, ⁋Definition 1](/en/math/manifolds/tangent_and_cotangent_bundles#def1) or [\[Algebraic Topology\] §Stiefel-Whitney Characteristic Classes, ⁋Definition 2](/en/math/algebraic_topology/stiefel_whitney_classes#def2), etc.)
+Line bundles, and more generally vector bundles, which we will define later in this post, are defined in the same way as in differential geometry and other fields. ([\[Differential Manifolds\] §Tangent and Cotangent Bundles, ⁋Definition 1](/en/math/manifolds/tangent_and_cotangent_bundles#def1) or [\[Algebraic Topology\] §Stiefel-Whitney Characteristic Classes, ⁋Definition 2](/en/math/algebraic_topology/stiefel_whitney_classes#def2), etc.)
 
 ::: Definition 1
 A *line bundle* $\mathcal{L}$ on a variety $X$ consists of the following data.
