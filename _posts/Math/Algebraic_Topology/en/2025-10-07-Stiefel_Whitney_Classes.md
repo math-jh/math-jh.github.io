@@ -10,10 +10,11 @@ sidebar:
 
 date: 2025-10-07
 weight: 13
-translated_at: 2026-08-15T18:45:04+00:00
+translated_at: 2026-08-18T17:15:05+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-08-18T17:15:05+00:00
 ---
-In the previous post, the map $p:\Spe(\or_M^A)\rightarrow M$ played an important role as a covering space, and these had the following properties.
+In the previous post, the map $p:\Spe(\or_M^A)\rightarrow M$ played an important role as a covering space, and it had the following properties.
 
 1. For any $x\in M$, we have $p^{-1}(x)\cong \{x\}\times A^\times$.
 2. Moreover, for any $x\in M$, there exists a suitable open set $U$ such that $p^{-1}(U)\cong U\times A^\times$.
@@ -28,7 +29,7 @@ For a continuous surjection $p:E \rightarrow B$ between topological spaces and a
 commute.
 :::
 
-Here, $B$ is called the *base space*, $E$ the *total space*, and $F$ the *fiber* of this bundle; if we can take $U=B$, then this fiber bundle is called a *trivial bundle*. For instance, in the previous example, $M$ is the base space, $\Spe(\or_M^A)$ is the total space, and $A^\times$ equipped with the discrete topology is the fiber. More generally, any covering space can be regarded as a fiber bundle whose fiber has the discrete topology.
+Here, $B$ is called the *base space*, $E$ the *total space*, and $F$ the *fiber* of this bundle; if we can take $U=B$, then this fiber bundle is called a *trivial bundle*. For instance, in the preceding example, $M$ is the base space, $\Spe(\or_M^A)$ is the total space, and $A^\times$ equipped with the discrete topology is the fiber. More generally, any covering space can be regarded as a fiber bundle whose fiber carries the discrete topology.
 
 The two cases of particular interest to us are when the fiber $F$ is a vector space, and when it is a topological group. For convenience, we henceforth assume that $B$ is connected.
 
