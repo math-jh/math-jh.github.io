@@ -10,14 +10,15 @@ sidebar:
 
 date: 2026-07-03
 weight: 15
-translated_at: 2026-08-17T22:46:49+00:00
+translated_at: 2026-08-19T10:15:05+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-08-19T10:15:05+00:00
 ---
-We defined multivariable functions and examined their derivatives in [§Functions of Several Variables and Partial Derivatives](/en/math/calculus/partial_derivatives). Now it is time to look at integration.
+We defined multivariable functions and examined their derivatives in [§Functions of Several Variables and Partial Derivatives](/en/math/calculus/partial_derivatives). Now we turn to integration.
 
 ## Multiple Integrals
 
-Just as the single-variable definite integral sums function values over an interval, in several variables we sum function values over a region. Let us start with closed boxes in $\mathbb{R}^n$.
+Just as the single-variable definite integral sums function values over an interval, in several variables we sum function values over a region. Let us begin with closed boxes in $\mathbb{R}^n$.
 
 ::: Definition 1
 For a bounded function $f$ on a closed box $R = [a_1,b_1]\times\cdots\times[a_n,b_n]\subseteq \mathbb{R}^n$, partition $R$ into small boxes (of volume $\Delta V$), choose a sample point $\mathbf{x}^\ast$ in each piece, and form the Riemann sum
