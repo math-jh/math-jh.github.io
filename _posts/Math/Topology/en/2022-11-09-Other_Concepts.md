@@ -10,10 +10,11 @@ sidebar:
 
 date: 2022-11-09
 weight: 3
-translated_at: 2026-08-16T08:45:05+00:00
+translated_at: 2026-08-19T21:15:04+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-08-19T21:15:04+00:00
 ---
-Before we begin treating continuous functions, sequences, and related notions in earnest, we introduce the remaining language used in topology.
+Before we begin treating continuous functions, sequences, and related notions in earnest, we introduce the remaining language of topology.
 
 ## Closed Sets
 
@@ -21,7 +22,7 @@ Before we begin treating continuous functions, sequences, and related notions in
 For a topological space $X$, a set $A$ is called a *closed set* if its complement $A^c = X \setminus A$ is an open set.
 :::
 
-In any topology $\mathcal{T}$ on $X$, both $\emptyset$ and $X$ are simultaneously open and closed, and if we give the discrete topology then every subset is simultaneously open and closed. Thus closed sets and open sets are not opposite concepts; rather, they are closer to being the same thing expressed in different ways. For instance, a topology $\mathcal{T}$ can in fact be defined using closed sets as follows.
+In any topology $\mathcal{T}$ on $X$, both $\emptyset$ and $X$ are simultaneously open and closed, and if the discrete topology is given then every subset is simultaneously open and closed. Thus closed sets and open sets are not opposite concepts; rather, they are closer to being the same thing expressed in different ways. For instance, a topology $\mathcal{T}$ can in fact be defined using closed sets as follows.
 
 ::: Proposition 2
 Suppose a collection $\mathcal{C}$ on a set $X$ is given satisfying the following conditions.
@@ -33,7 +34,7 @@ Suppose a collection $\mathcal{C}$ on a set $X$ is given satisfying the followin
 Then there exists a unique topology $\mathcal{T}$ whose open sets are exactly the complements of the elements of $\mathcal{C}$.
 :::
 ::: Proof
-From the De Morgan laws ([\[Set Theory\] §Unions and Intersections, ⁋Proposition 8](/en/math/set_theory/union_and_intersection#prop8))
+From De Morgan's laws ([\[Set Theory\] §Union and Intersection, ⁋Proposition 8](/en/math/set_theory/union_and_intersection#prop8))
 
 $$\left(\bigcap A_i\right)^c=\bigcup A_i^c,\quad\left(\bigcup A_i\right)^c=\bigcap A_i^c$$
 
