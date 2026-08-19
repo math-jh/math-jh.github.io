@@ -10,8 +10,9 @@ sidebar:
 
 date: 2026-05-11
 weight: 19
-translated_at: 2026-08-17T15:47:41+00:00
+translated_at: 2026-08-19T02:45:04+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-08-19T02:45:04+00:00
 ---
 Previously, we defined the intersection number of two divisors in [§The Riemann–Roch Theorem for Surfaces, ⁋Definition 1](/en/math/algebraic_varieties/riemann_roch_surfaces#def1). This is of course a very interesting notion, and in this post we define the *Chow group* in order to generalize this concept to arbitrary varieties.
 
