@@ -10,12 +10,13 @@ sidebar:
 
 date: 2023-05-28
 weight: 3
-translated_at: 2026-08-18T02:45:04+00:00
+translated_at: 2026-08-19T14:15:04+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-08-19T14:15:04+00:00
 ---
 ## Definition of Natural Transformations
 
-We have seen earlier that a category of categories exists. Keeping with the faith that everything is a category, we can also believe to some extent that for two categories $\mathcal{A},\mathcal{B}$, there exists a category $\Fun(\mathcal{A},\mathcal{B})$ of functors from $\mathcal{A}$ to $\mathcal{B}$. The question we must answer is: given two functors $F,G:\mathcal{A}\rightarrow \mathcal{B}$, what is a morphism from $F$ to $G$? This is precisely what we define in this post as a natural transformation.
+We have seen earlier that a category of categories exists. Keeping faith with the conviction that everything is a category, we can also believe, to some extent, that for two categories $\mathcal{A},\mathcal{B}$, there exists a category $\Fun(\mathcal{A},\mathcal{B})$ of functors from $\mathcal{A}$ to $\mathcal{B}$. The question we must answer is: given two functors $F,G:\mathcal{A}\rightarrow \mathcal{B}$, what is a morphism from $F$ to $G$? This is precisely what we define in this post as a natural transformation.
 
 ::: Definition 1
 Suppose two categories $\mathcal{A},\mathcal{B}$ are given, and let $F,G$ be two functors from $\mathcal{A}$ to $\mathcal{B}$. If the family of morphisms indexed by $\obj(\mathcal{A})$
@@ -35,21 +36,21 @@ Based on this, we can define the *functor category* $\Fun(\mathcal{A},\mathcal{B
 
 ## Equivalent Categories
 
-The notion of being *equivalent*, which is frequently used between categories, is not given by isomorphism in $\Cat$. ([§Functors, ⁋Definition 9](/en/math/category_theory/functors#def9)) This is because isomorphism between categories is too strong a condition, so that two categories that appear sufficiently similar are treated as different.
+The notion of being *equivalent*, which is frequently used between categories, is not given by isomorphism in $\Cat$. ([§Functor, ⁋Definition 9](/en/math/category_theory/functors#def9)) This is because isomorphism between categories is too strong a condition: two categories that appear sufficiently similar may still be treated as different.
 
 ::: Definition 2
 A functor $F$ from a category $\mathcal{A}$ to a category $\mathcal{B}$ is called an *equivalence of categories* if there exists a functor $G:\mathcal{B}\rightarrow \mathcal{A}$ such that $\id_\mathcal{A}\simeq G\circ F$ and $\id_\mathcal{B}\simeq F\circ G$. If there exists an equivalence from $\mathcal{A}$ to $\mathcal{B}$, we say that these two categories are *equivalent* and write $\mathcal{A}\simeq\mathcal{B}$.
 :::
 
-Let us examine in what sense this notion of an equivalence between categories gives a sufficiently good notion of *sameness*. To do this, we first need to define the following.
+Let us examine in what sense this notion of equivalence between categories furnishes a sufficiently good notion of *sameness*. To do so, we first need the following definition.
 
 ::: Definition 3
 A category $\mathcal{A}$ is called a *skeletal category* if, for every $A\in\obj(\mathcal{A})$, the only object of $\mathcal{A}$ isomorphic to $A$ is $A$ itself.
 :::
 
-Let $\mathcal{A}$ be a small category. Then, from the set $\obj(\mathcal{A})$, we may identify isomorphic objects as the same, pick out only the distinct ones, and form a subset $\mathcal{S}$ of $\obj(\mathcal{A})$. For any $S_1,S_2\in\mathcal{S}$, set $\Hom_\mathcal{S}(S_1,S_2)=\Hom_\mathcal{A}(S_1,S_2)$. By definition, $\mathcal{S}$ is a subcategory of $\mathcal{A}$, and the obviously defined inclusion functor $\mathcal{S}\hookrightarrow\mathcal{A}$ is a faithful functor. ([§Categories, ⁋Definition 5](/en/math/category_theory/categories#def5)) If this functor is also full, we call $\mathcal{S}$ a *full subcategory*. ([§Functors, ⁋Definition 10](/en/math/category_theory/functors#def10))
+Let $\mathcal{A}$ be a small category. Then from the set $\obj(\mathcal{A})$, we may identify isomorphic objects as the same, pick out only the distinct ones, and form a subset $\mathcal{S}$ of $\obj(\mathcal{A})$. For any $S_1,S_2\in\mathcal{S}$, set $\Hom_\mathcal{S}(S_1,S_2)=\Hom_\mathcal{A}(S_1,S_2)$. By definition, $\mathcal{S}$ is a subcategory of $\mathcal{A}$, and the obviously defined inclusion functor $\mathcal{S}\hookrightarrow\mathcal{A}$ is a faithful functor. ([§Category, ⁋Definition 5](/en/math/category_theory/categories#def5)) If this functor is also full, we call $\mathcal{S}$ a *full subcategory*. ([§Functor, ⁋Definition 10](/en/math/category_theory/functors#def10))
 
-When we construct a subcategory $\mathcal{S}$ from a small category $\mathcal{A}$ as above, it is natural to ask whether $\mathcal{S}$ retains enough information to describe $\mathcal{A}$. For instance, if a morphism $f:A_1\rightarrow A_2$ exists in $\mathcal{A}$, but choosing objects $A_1',A_2'$ isomorphic to $A_1,A_2$ yields no morphism $A_1'\rightarrow A_2'$, then one might say that $\mathcal{S}$ has lost information present in $\mathcal{A}$. But a moment's thought shows that this can never happen. For whenever a morphism $f:A_1\rightarrow A_2$ is given, we can compose it with isomorphisms $A_1'\rightarrow A_1$ and $A_2\rightarrow A_2'$ to produce a morphism $A_1'\rightarrow A_2'$.
+When we construct a subcategory $\mathcal{S}$ from a small category $\mathcal{A}$ as above, it is natural to ask whether $\mathcal{S}$ retains enough information to describe $\mathcal{A}$. For instance, if a morphism $f:A_1\rightarrow A_2$ exists in $\mathcal{A}$, but choosing objects $A_1',A_2'$ isomorphic to $A_1,A_2$ yields no morphism $A_1'\rightarrow A_2'$, then one might say that $\mathcal{S}$ has lost information present in $\mathcal{A}$. But a moment's thought shows that this can never happen: whenever a morphism $f:A_1\rightarrow A_2$ is given, we can compose it with isomorphisms $A_1'\rightarrow A_1$ and $A_2\rightarrow A_2'$ to produce a morphism $A_1'\rightarrow A_2'$.
 
 From this perspective, the category $\mathcal{S}$ constructed above can be thought of as essentially containing all the information of $\mathcal{A}$. Of course, $\mathcal{S}$ itself will vary depending on which representative we choose from each isomorphism class, but it is easy to prove that any category obtained from a different choice is necessarily isomorphic to $\mathcal{S}$.
 
