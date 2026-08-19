@@ -10,10 +10,11 @@ sidebar:
 
 date: 2026-05-11
 weight: 20
-translated_at: 2026-08-17T16:16:09+00:00
+translated_at: 2026-08-19T03:15:04+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-08-19T03:15:04+00:00
 ---
-In [§Chow Groups](/en/math/algebraic_varieties/chow_groups) we defined the Chow group $\CH^\ast(X)$. At the end of that post we claimed that one can define an intersection product on it to give it a ring structure; in this post we define this product and examine its properties.
+In [§Chow Groups](/en/math/algebraic_varieties/chow_groups) we defined the Chow group $\CH^\ast(X)$. At the end of that post we claimed that one can define an intersection product on it, thereby giving it a ring structure; in this post we construct this product and examine its properties.
 
 The following definition shows what the intersection of two varieties $V,W$ near a point $p$ is. By definition this is a local matter at $p$, so it suffices to pick an affine chart and take the ambient space to be $\mathbb{A}^n$.
 
@@ -23,7 +24,7 @@ At a point $p$ of affine space $\mathbb{A}^n$, the *intersection multiplicity* $
 $$i_p(V, W) = \dim_{\mathbb{K}} \mathcal{O}_{\mathbb{A}^n, p} / (I(V) + I(W)).$$
 :::
 
-By definition, $V$ and $W$ are represented near $p$ as the common zero set of elements of $I(V)$ and $I(W)$ respectively. Thus for $p$ to lie in both subvarieties it must appear as the zero set of all elements of both $I(V)$ and $I(W)$, which leads us to consider the ideal sum $I(V)+I(W)$. In general, if $V,W$ are too large relative to the ambient space then their intersection has positive dimension and the above quotient becomes infinite-dimensional, while if they are too small then a generic small perturbation of one will make them disjoint so that the formula fails to give a stable value. Hence we use the above formula only when $\dim V+\dim W=n$. In general, when two arbitrary subvarieties meet the expected dimension of their intersection is $\dim V + \dim W - n$, and for this to be a point we must have $\dim V+\dim W=n$.
+By definition, near $p$ the varieties $V$ and $W$ are represented as the common zero loci of elements of $I(V)$ and $I(W)$ respectively. Thus for $p$ to lie in both subvarieties it must be a common zero of all elements of $I(V)$ and $I(W)$, which leads us to consider the ideal sum $I(V)+I(W)$. In general, if $V,W$ are too large relative to the ambient space then their intersection has positive dimension and the above quotient becomes infinite-dimensional, while if they are too small then a generic small perturbation of one will make them disjoint, so the formula fails to give a stable value. Hence we use the above formula only when $\dim V+\dim W=n$. In general, when two arbitrary subvarieties meet the expected dimension of their intersection is $\dim V + \dim W - n$, and for this to be a point we must have $\dim V+\dim W=n$.
 
 In general this definition applies in the local complete intersection case; when this is not the case the following *Tor formula*
 
@@ -99,7 +100,7 @@ Our only remaining problem is that, given two arbitrary classes, even if they sa
 For a smooth quasi-projective variety $X$, a cycle $Z \in Z^k(X)$, and any cycle $W \in Z^l(X)$, there exists $Z' \sim_{\text{rat}} Z$ such that $Z'$ and $W$ intersect properly.
 :::
 
-The key idea is that, rather than moving the irreducible components $V_i$ constituting $Z$ directly, we represent them by cutting out from a larger cycle. Embedding $X$ in $\mathbb{P}^n$ and taking the cone $C_L(V_i)$ over $V_i$ with a general linear subspace $L$ as vertex, the dimensions match so that $C_L(V_i)$ and $X$ intersect properly and at the cycle level we obtain $C_L(V_i) \cdot X = V_i + R_i$ with a residual cycle $R_i$ left over. Then from the rational equivalence moving $C_L(V_i)$ to a cycle $C$ in general position in $\mathbb{P}^n$ we obtain $V_i \sim_{\text{rat}} C \cdot X - R_i$, and the first term on the right already intersects $W$ properly. For the remaining $R_i$, when $L$ is chosen generally the excess that $R_i$ has with respect to $W$ (that is, the amount by which the dimension of the intersection exceeds the expected dimension) becomes strictly smaller than that of $V_i$, so by induction on this excess we obtain the desired $Z'$. As we saw in [§Linear Systems, ⁋Definition 5](/en/math/algebraic_varieties/linear_systems#def5), using a basepoint-free linear system one can realize such a *general* move by a regular map, and the heart of the proof is showing that this process preserves rational equivalence.
+The key idea is that, rather than moving the irreducible components $V_i$ constituting $Z$ directly, we represent them by cutting them out from a larger cycle. Embedding $X$ in $\mathbb{P}^n$ and taking the cone $C_L(V_i)$ over $V_i$ with a general linear subspace $L$ as vertex, the dimensions match so that $C_L(V_i)$ and $X$ intersect properly and at the cycle level we obtain $C_L(V_i) \cdot X = V_i + R_i$ with a residual cycle $R_i$ left over. Then from the rational equivalence moving $C_L(V_i)$ to a cycle $C$ in general position in $\mathbb{P}^n$ we obtain $V_i \sim_{\text{rat}} C \cdot X - R_i$, and the first term on the right already intersects $W$ properly. For the remaining $R_i$, when $L$ is chosen generally the excess that $R_i$ has with respect to $W$ (that is, the amount by which the dimension of the intersection exceeds the expected dimension) becomes strictly smaller than that of $V_i$, so by induction on this excess we obtain the desired $Z'$. As we saw in [§Linear Systems, ⁋Definition 5](/en/math/algebraic_varieties/linear_systems#def5), using a basepoint-free linear system one can realize such a *general* move by a regular map, and the heart of the proof is showing that this process preserves rational equivalence.
 
 Then using the above lemma we move $Z$ to $Z'$ and define the intersection by the formula
 
