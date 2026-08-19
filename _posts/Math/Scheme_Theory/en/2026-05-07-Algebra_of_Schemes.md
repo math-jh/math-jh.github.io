@@ -19,7 +19,7 @@ Since a scheme is simultaneously a geometric and an algebraic object, understand
 ## Reduced and Integral Schemes
 
 ::: Definition 1
-A scheme $X$ is called a *reduced scheme* if for every open subset $U$, the ring $\mathcal{O}_X(U)$ is reduced. ([\[Algebraic Structures\] §Field of Fractions, ⁋Definition 11](/en/math/algebraic_structures/field_of_fractions#def11)) Similarly, $X$ is called *integral* if for every nonempty open subset $U$, the ring $\mathcal{O}_X(U)$ is an integral domain. ([\[Algebraic Structures\] §Field of Fractions, ⁋Definition 5](/en/math/algebraic_structures/field_of_fractions#def5))
+A scheme $X$ is called a *reduced scheme* if for every open subset $U$, the ring $\mathcal{O}_X(U)$ is reduced. ([\[Algebraic Structures\] §Field of Fractions, ⁋Definition 12](/en/math/algebraic_structures/field_of_fractions#def12)) Similarly, $X$ is called *integral* if for every nonempty open subset $U$, the ring $\mathcal{O}_X(U)$ is an integral domain. ([\[Algebraic Structures\] §Field of Fractions, ⁋Definition 5](/en/math/algebraic_structures/field_of_fractions#def5))
 :::
 
 Then the following holds.
@@ -60,7 +60,7 @@ That $\Spec A$ is irreducible is equivalent to the condition that for any two ba
 
 $$D(f)\neq\emptyset\iff f\not\in \mathfrak{p}\text{ for some $\mathfrak{p}$}\iff f\not\in \mathfrak{N}(A)$$
 
-([\[Algebraic Structures\] §Field of Fractions, ⁋Proposition 14](/en/math/algebraic_structures/field_of_fractions#prop14)) we know that the proposition $D(f),D(g)\neq\emptyset\implies D(fg)\neq\emptyset$ is equivalent to the following proposition:
+([\[Algebraic Structures\] §Field of Fractions, ⁋Proposition 15](/en/math/algebraic_structures/field_of_fractions#prop15)) we know that the proposition $D(f),D(g)\neq\emptyset\implies D(fg)\neq\emptyset$ is equivalent to the following proposition:
 
 $$f,g\not\in \mathfrak{N}(A)\implies fg\not\in \mathfrak{N}(A).$$
 :::

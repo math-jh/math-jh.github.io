@@ -26,7 +26,7 @@ In this post we define the spectrum, the most fundamental object in algebraic ge
 For a ring $A$, $\Spec A$ is the collection of all prime ideals of $A$, and we call it the *spectrum* of $A$.
 :::
 
-Now suppose a ring homomorphism $\phi: A \rightarrow B$ is given. Then by [[Algebraic Structures] §Field of Fractions, ⁋Proposition 9](/en/math/algebraic_structures/field_of_fractions#prop9), the function
+Now suppose a ring homomorphism $\phi: A \rightarrow B$ is given. Then by [[Algebraic Structures] §Field of Fractions, ⁋Proposition 10](/en/math/algebraic_structures/field_of_fractions#prop10), the function
 
 $$\Spec\phi: \Spec B \rightarrow \Spec A;\qquad \mathfrak{q}\mapsto \phi^{-1}(\mathfrak{q})$$
 

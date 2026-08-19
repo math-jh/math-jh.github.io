@@ -58,7 +58,7 @@ $$X\vee(Y\wedge Z)=(X\vee Y)\wedge(X\vee Z),\qquad X\wedge(Y\vee Z)=(X\wedge Y)\
 :::
 
 ::: Definition 4
-Let a lattice $A$ be given, and let $I$ and $F$ be a proper ideal and a proper filter of $E$, respectively. $I$ is a *prime ideal* if for any $x,y\in A$, whenever $x\wedge y\in I$, then either $x\in I$ or $y\in I$. Similarly, $F$ is a *prime filter* if for any $x,y\in A$, whenever $x\vee y\in F$, then either $x\in F$ or $y\in F$. ([\[Algebraic Structures\] §Field of Fractions, ⁋Proposition 8](/en/math/algebraic_structures/field_of_fractions#prop8))
+Let a lattice $A$ be given, and let $I$ and $F$ be a proper ideal and a proper filter of $E$, respectively. $I$ is a *prime ideal* if for any $x,y\in A$, whenever $x\wedge y\in I$, then either $x\in I$ or $y\in I$. Similarly, $F$ is a *prime filter* if for any $x,y\in A$, whenever $x\vee y\in F$, then either $x\in F$ or $y\in F$. ([\[Algebraic Structures\] §Field of Fractions, ⁋Proposition 9](/en/math/algebraic_structures/field_of_fractions#prop9))
 :::
 
 Equivalently, one may define $I$ to be a prime ideal by requiring that $A\setminus I$ be a filter.

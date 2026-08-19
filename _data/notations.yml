@@ -1349,7 +1349,7 @@
     meaning: localization
     defs:
     - label: §분수체
-      url: /ko/math/algebraic_structures/field_of_fractions#def10
+      url: /ko/math/algebraic_structures/field_of_fractions#def11
     - label: §국소화
       url: /ko/math/commutative_algebra/localization
   - symbol: A[\x]
@@ -1684,7 +1684,7 @@
     meaning: nilradical
     defs:
     - label: §분수체
-      url: /ko/math/algebraic_structures/field_of_fractions#def13
+      url: /ko/math/algebraic_structures/field_of_fractions#def14
   - symbol: \phi^\ast
     meaning: restriction of scalar 함자
     defs:

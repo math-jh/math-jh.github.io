@@ -110,7 +110,7 @@ Let two $\mathbb{K}$-extensions $\mathbb{L}_1, \mathbb{L}_2$ be given.
 2. Conversely, for any prime ideal $\mathfrak{p}$ of $\mathbb{L}_1\otimes_\mathbb{K} \mathbb{L}_2$, there exist a suitable composite field $\mathbb{M}$ and extensions $u_i: \mathbb{L}_i \rightarrow \mathbb{M}$ such that $\mathfrak{p}$ is the kernel of $u_1\ast u_2$.
 :::
 ::: Proof
-1. The image $\im(u_1\ast u_2)$ of $u_1\ast u_2$ is a subring of the field $\mathbb{M}$, and hence an integral domain. The given claim is now obvious from [\[Algebraic Structures\] §Field of Fractions, ⁋Proposition 8](/en/math/algebraic_structures/field_of_fractions#prop8) and [\[Algebraic Structures\] §Quotient Rings and Ring Homomorphisms, ⁋Theorem 3](/en/math/algebraic_structures/quotient_rings#thm3).
+1. The image $\im(u_1\ast u_2)$ of $u_1\ast u_2$ is a subring of the field $\mathbb{M}$, and hence an integral domain. The given claim is now obvious from [\[Algebraic Structures\] §Field of Fractions, ⁋Proposition 9](/en/math/algebraic_structures/field_of_fractions#prop9) and [\[Algebraic Structures\] §Quotient Rings and Ring Homomorphisms, ⁋Theorem 3](/en/math/algebraic_structures/quotient_rings#thm3).
 
 2. Conversely, let $\mathfrak{p}$ be a prime ideal of $\mathbb{L}_1\otimes_\mathbb{K}\mathbb{L}_2$, and let $\mathbb{M}=\Frac((\mathbb{L}_1\otimes_\mathbb{K}\mathbb{L}_2)/\mathfrak{p})$ be the field of fractions of the integral domain $(\mathbb{L}_1\otimes_\mathbb{K}\mathbb{L}_2)/\mathfrak{p}$. Then for each $x_1\in \mathbb{L}_1$ and $x_2\in \mathbb{L}_2$, defining $u_1(x_1)$ to be the image of $x_1\otimes 1$ in $\mathbb{M}$ and $u_2(x_2)$ to be the image of $1\otimes x_2$ in $\mathbb{M}$, we see that these satisfy the required conditions.
 :::

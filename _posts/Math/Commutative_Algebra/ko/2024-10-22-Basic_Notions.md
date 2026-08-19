@@ -190,7 +190,7 @@ Noetherian ring $A$와 $A$-module $M$에 대하여, 다음이 모두 동치이�
 
 ## 소아이디얼
 
-마지막으로 우리는 [\[대수적 구조\] §분수체, ⁋명제 8](/ko/math/algebraic_structures/field_of_fractions#prop8)에서 정의한 *prime ideal*의 개념이 필요하다. 
+마지막으로 우리는 [\[대수적 구조\] §분수체, ⁋명제 9](/ko/math/algebraic_structures/field_of_fractions#prop9)에서 정의한 *prime ideal*의 개념이 필요하다. 
 
 ::: 정의 10
 Ring $A$의 ideal $\mathfrak{p}\subsetneq A$가 *prime ideal*이라는 것은, 만일 $ab\in \mathfrak{p}$라면 반드시 $a\in \mathfrak{p}$이거나 $b\in \mathfrak{p}$가 성립하는 것이다.
@@ -206,7 +206,7 @@ Ring $A$의 임의의 ideal $\mathfrak{a}$에 대하여, $A/\mathfrak{a}$의 pri
 
 $$A/\mathfrak{p}\cong \frac{A/\mathfrak{a}}{\mathfrak{p}/\mathfrak{a}}$$
 
-이 성립하며, 그 후 [\[대수적 구조\] §분수체, ⁋명제 8](/ko/math/algebraic_structures/field_of_fractions#prop8)의 동치조건을 사용하면 된다. 
+이 성립하며, 그 후 [\[대수적 구조\] §분수체, ⁋명제 9](/ko/math/algebraic_structures/field_of_fractions#prop9)의 동치조건을 사용하면 된다. 
 :::
 
 ## Hilbert 기저 정리

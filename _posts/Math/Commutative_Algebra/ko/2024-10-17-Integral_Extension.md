@@ -115,7 +115,7 @@ $$(xy)MM'=(xM)(yM')\subseteq MM',\qquad (x+y)MM'\subseteq xMM'+M(yM')\subseteq M
 
 ## 나카야마 보조정리
 
-이제 우리는 아주 유용한 보조정리를 증명한다. 우선 [\[대수적 구조\] §분수체, ⁋정의 13](/ko/math/algebraic_structures/field_of_fractions#def13)의 *nilradical* $\mathfrak{N}(A)=\sqrt{(0)}$은 다음 식
+이제 우리는 아주 유용한 보조정리를 증명한다. 우선 [\[대수적 구조\] §분수체, ⁋정의 14](/ko/math/algebraic_structures/field_of_fractions#def14)의 *nilradical* $\mathfrak{N}(A)=\sqrt{(0)}$은 다음 식
 
 $$\mathfrak{N}(A)=\bigcap_\text{\scriptsize$\mathfrak{p}$ prime} \mathfrak{p}$$
 

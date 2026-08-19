@@ -64,7 +64,7 @@ $$S(f)=\{h\in A\mid D(f)\subseteq D(h)\}$$
 
 $$D(h_1h_2)=\Spec A\setminus Z(h_1h_2)=\Spec A\setminus (Z(h_1)\cup Z(h_2))=(\Spec A\setminus Z(h_1))\cap (\Spec A\setminus Z(h_2))=D(h_1)\cap D(h_2)$$
 
-으로부터 $D(f)\subseteq D(h_1)\cap D(h_2)=D(h_1h_2)$임을 안다. 이 식은 단지 [\[대수적 구조\] §분수체, ⁋명제 8](/ko/math/algebraic_structures/field_of_fractions#prop8)을 기하학적으로 설명한 것에 불과하다. 
+으로부터 $D(f)\subseteq D(h_1)\cap D(h_2)=D(h_1h_2)$임을 안다. 이 식은 단지 [\[대수적 구조\] §분수체, ⁋명제 9](/ko/math/algebraic_structures/field_of_fractions#prop9)를 기하학적으로 설명한 것에 불과하다. 
 :::
 
 이제 $\Spec A$의 부분집합 $D(f)$ 위에 정의된 대수적인 함수들의 모임을 $S(f)^{-1}A$로 정의해야 함이 직관적이며, 실제로 그렇게 정의할 것이다. 그 전에 우리는 다음 보조정리를 보인다. 
@@ -383,7 +383,7 @@ $$\Phi(\varphi,\varphi^\sharp)=\varphi^\sharp(\Spec A): A=\mathcal{O}_{\Spec A}(
 
 를 얻는다. 
 
-거꾸로 ring homomorphism $\phi:A \rightarrow \Gamma(X)$가 주어졌다 하자. 각각의 $x\in X$마다 $\phi$와 germ을 취하는 함수 $\Gamma(X) \rightarrow \mathcal{O}_{X,x}$를 합성하여 얻어지는 ring homomorphism을 $\phi_x:A \rightarrow \mathcal{O}_{X,x}$라 적자. 즉 $\phi_x(a)=\phi(a)_x$이다. 이제 $(X,\mathcal{O}_X)$가 locally ringed space이므로 $\mathcal{O}_{X,x}$는 유일한 maximal ideal $\mathfrak{m}_x$를 갖는 local ring이고, 따라서 [\[대수적 구조\] §분수체, ⁋명제 9](/ko/math/algebraic_structures/field_of_fractions#prop9)에 의하여
+거꾸로 ring homomorphism $\phi:A \rightarrow \Gamma(X)$가 주어졌다 하자. 각각의 $x\in X$마다 $\phi$와 germ을 취하는 함수 $\Gamma(X) \rightarrow \mathcal{O}_{X,x}$를 합성하여 얻어지는 ring homomorphism을 $\phi_x:A \rightarrow \mathcal{O}_{X,x}$라 적자. 즉 $\phi_x(a)=\phi(a)_x$이다. 이제 $(X,\mathcal{O}_X)$가 locally ringed space이므로 $\mathcal{O}_{X,x}$는 유일한 maximal ideal $\mathfrak{m}_x$를 갖는 local ring이고, 따라서 [\[대수적 구조\] §분수체, ⁋명제 10](/ko/math/algebraic_structures/field_of_fractions#prop10)에 의하여
 
 $$\varphi(x)=\phi_x^{-1}(\mathfrak{m}_x)$$
 

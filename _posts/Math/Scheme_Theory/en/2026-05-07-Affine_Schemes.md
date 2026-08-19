@@ -58,7 +58,7 @@ Since $D(1)=\Spec A$, it is obvious that $S(f)$ contains the empty product $1$. 
 
 $$D(h_1h_2)=\Spec A\setminus Z(h_1h_2)=\Spec A\setminus (Z(h_1)\cup Z(h_2))=(\Spec A\setminus Z(h_1))\cap (\Spec A\setminus Z(h_2))=D(h_1)\cap D(h_2)$$
 
-we see that $D(f)\subseteq D(h_1)\cap D(h_2)=D(h_1h_2)$. This identity is merely a geometric interpretation of [[Algebraic Structures] §Field of Fractions, ⁋Proposition 8]](/en/math/algebraic_structures/field_of_fractions#prop8).
+we see that $D(f)\subseteq D(h_1)\cap D(h_2)=D(h_1h_2)$. This identity is merely a geometric interpretation of [[Algebraic Structures] §Field of Fractions, ⁋Proposition 9]](/en/math/algebraic_structures/field_of_fractions#prop9).
 :::
 
 It is now intuitively clear, and indeed we shall define it so, that the collection of algebraic functions on the subset $D(f)$ of $\Spec A$ should be $S(f)^{-1}A$. Before doing so, we prove the following lemma.
@@ -365,7 +365,7 @@ First define two correspondences $\Phi$ and $\Psi$, then show they are inverses 
 
 $$\Phi(\varphi,\varphi^\sharp)=\varphi^\sharp(\Spec A): A=\mathcal{O}_{\Spec A}(\Spec A) \rightarrow (\varphi_\ast\mathcal{O}_X)(\Spec A)=\mathcal{O}_X(X)=\Gamma(X)$$
 
-Conversely, suppose a ring homomorphism $\phi:A \rightarrow \Gamma(X)$ is given. For each $x\in X$, write $\phi_x:A \rightarrow \mathcal{O}_{X,x}$ for the ring homomorphism obtained by composing $\phi$ with the germ map $\Gamma(X) \rightarrow \mathcal{O}_{X,x}$. That is, $\phi_x(a)=\phi(a)_x$. Since $(X,\mathcal{O}_X)$ is a locally ringed space, $\mathcal{O}_{X,x}$ is a local ring with unique maximal ideal $\mathfrak{m}_x$, so by [[Algebraic Structures] §Field of Fractions, ⁋Proposition 9]](/en/math/algebraic_structures/field_of_fractions#prop9),
+Conversely, suppose a ring homomorphism $\phi:A \rightarrow \Gamma(X)$ is given. For each $x\in X$, write $\phi_x:A \rightarrow \mathcal{O}_{X,x}$ for the ring homomorphism obtained by composing $\phi$ with the germ map $\Gamma(X) \rightarrow \mathcal{O}_{X,x}$. That is, $\phi_x(a)=\phi(a)_x$. Since $(X,\mathcal{O}_X)$ is a locally ringed space, $\mathcal{O}_{X,x}$ is a local ring with unique maximal ideal $\mathfrak{m}_x$, so by [[Algebraic Structures] §Field of Fractions, ⁋Proposition 10]](/en/math/algebraic_structures/field_of_fractions#prop10),
 
 $$\varphi(x)=\phi_x^{-1}(\mathfrak{m}_x)$$
 
