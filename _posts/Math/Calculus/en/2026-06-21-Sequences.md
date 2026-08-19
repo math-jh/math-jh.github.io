@@ -10,10 +10,11 @@ sidebar:
 
 date: 2026-06-21
 weight: 3
-translated_at: 2026-08-16T05:17:33+00:00
+translated_at: 2026-08-19T05:15:05+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-08-19T05:15:05+00:00
 ---
-Before we begin full calculus proper, we first define the limit of a sequence. Here a *sequence* $(a_n)$ is a function from the natural numbers to the real numbers, i.e., $a : \mathbb{N} \rightarrow \mathbb{R}$, viewed as the list of its values $a_1, a_2, a_3, \ldots$. In [§Limits of Functions](/en/math/calculus/functions_and_limits) we already studied how a function behaves as $x \rightarrow \infty$; the limit of a sequence can be thought of as the discrete version of this, where the variable is restricted to the natural numbers and only tends to $n \rightarrow \infty$.
+Before we begin calculus proper, we first define the limit of a sequence. Here a *sequence* $(a_n)$ is a function from the natural numbers to the real numbers, i.e., $a : \mathbb{N} \rightarrow \mathbb{R}$, viewed as the list of its values $a_1, a_2, a_3, \ldots$. In [§Limits of Functions](/en/math/calculus/functions_and_limits) we already studied how a function behaves as $x \rightarrow \infty$; the limit of a sequence can be thought of as the discrete version of this, where the variable is restricted to the natural numbers and only tends to $n \rightarrow \infty$.
 
 ## Convergence of Sequences
 
@@ -44,7 +45,7 @@ Then
 
 ## Properties of Limits
 
-A sequence $(a_n)$ is called *bounded* if there exists a positive number $M$ such that $\lvert a_n\rvert \leq M$ for all $n$. A convergent sequence must be bounded, because all but finitely many terms gather near the limit point.
+A sequence $(a_n)$ is called *bounded* if there exists a positive number $M$ such that $\lvert a_n\rvert \leq M$ for all $n$. A convergent sequence must be bounded, because all but finitely many of its terms gather near the limit point.
 
 ::: Proposition 3
 Every convergent sequence is bounded.
