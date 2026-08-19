@@ -10,10 +10,11 @@ sidebar:
 
 date: 2023-05-22
 weight: 1
-translated_at: 2026-08-18T02:18:58+00:00
+translated_at: 2026-08-19T13:45:05+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-08-19T13:45:05+00:00
 ---
-Basically, any field that is a branch of mathematics has certain concepts that it naturally possesses. The *objects* we wish to study and the *morphisms* between these objects are such examples. Category theory is the study of abstracting such structures, so specific theorems from each field can serve as examples in category theory. However, this does not mean that we must study all these fields in order to study category theory; our goal is to study category theory as dryly as possible, and to study most examples separately when we study the corresponding fields.
+Basically, any field that is a branch of mathematics has certain concepts that it naturally possesses. The *objects* we wish to study and the *morphisms* between these objects are such examples. Category theory is the study of such structures in the abstract, so specific theorems from each field can serve as examples in category theory. However, this does not mean that we must study all these fields in order to study category theory; our goal is to study category theory as dryly as possible, and to study most examples separately when we study the corresponding fields.
 
 ## Definition and Examples of Categories
 
@@ -21,7 +22,7 @@ Basically, any field that is a branch of mathematics has certain concepts that i
 A *category* $\mathcal{A}$ consists of the following data.
 
 - A collection $\obj(\mathcal{A})$ of *objects*,
-- A collection $\Hom_\mathcal{A}(A_1,A_2)$ of *morphisms* from *domain* $A_1\in\obj(\mathcal{A})$ to *codomain* $A_2\in\obj(\mathcal{A})$,
+- For each pair of objects $A_1,A_2\in\obj(\mathcal{A})$, a collection $\Hom_\mathcal{A}(A_1,A_2)$ of *morphisms* from *domain* $A_1$ to *codomain* $A_2$,
 - The *composition* of two morphisms $f\in\Hom_\mathcal{A}(A_1,A_2)$, $g\in\Hom_\mathcal{A}(A_2,A_3)$
 
   $$\circ:\Hom_\mathcal{A}(A_1,A_2)\times\Hom_\mathcal{A}(A_2,A_3)\rightarrow\Hom_\mathcal{A}(A_1,A_3);\qquad (f,g)\mapsto g\circ f$$
