@@ -10,12 +10,13 @@ sidebar:
 
 date: 2024-06-14
 weight: 7
-translated_at: 2026-08-18T05:47:24+00:00
+translated_at: 2026-08-19T17:15:04+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-08-19T17:15:04+00:00
 ---
 ## Monoid Objects
 
-Now we can define a monoid object.
+We can now define a monoid object.
 
 ::: Definition 1
 In a monoidal category $(\mathcal{A},\otimes, I)$, a *monoid object* is given by the following data:
@@ -98,7 +99,7 @@ Letting $e_G$ be the composite $G\rightarrow I\overset{\eta}{\rightarrow}G$, the
   commutes.
 - (Unit element) The following diagram
   {% diagram Math/Category_Theory/Monoid_Objects-6.svg width="11.81em" alt="identity_element" %}
-  commutes.
+  commutes. 
 - (Inverse element) The following diagram
   {% diagram Math/Category_Theory/Monoid_Objects-7.svg width="11.08em" alt="inverse_element" %}
   commutes.
