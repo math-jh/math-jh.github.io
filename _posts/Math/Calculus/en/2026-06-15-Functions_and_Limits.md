@@ -10,12 +10,13 @@ sidebar:
 
 date: 2026-06-15
 weight: 1
-translated_at: 2026-08-17T17:18:09+00:00
+translated_at: 2026-08-19T04:15:04+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-08-19T04:15:04+00:00
 ---
 ## Definition of Limits
 
-To define differentiation and integration of functions, we need the concept of limits, just as we learned in high school. What makes the limits we now treat more advanced than those from that time is that we now *define* them.
+To define differentiation and integration of functions, we need the concept of limits, just as we learned in high school. What makes the limits we now treat more advanced than those from that time is that we now actually *define* them.
 
 ::: Definition 1
 Any open interval $(c,d)$ containing a real number $a$ ($c<a<d$) is called a *neighborhood* of the point $a$.
