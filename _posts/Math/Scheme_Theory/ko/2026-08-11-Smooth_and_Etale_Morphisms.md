@@ -148,11 +148,9 @@ $$\pi: C^{\oplus r} \rightarrow \mathfrak{a}/\mathfrak{a}^2;\qquad e_i\mapsto f_
 
 $$\overline{d}\circ\pi: C^{\oplus r}\rightarrow \mathfrak{a}/\mathfrak{a}^2\rightarrow \Omega_{B/A}\otimes_BC;\qquad e_i\mapsto \sum_j\frac{\partial f_i}{\partial \x_j}\dd{\x_j}$$
 
-은 전사함수이며, 이를 $\overline{d}\circ\pi$를 $e_i$와 $\dd{\x_j}$ 기저에 대하여 표현한 행렬이 정확히 Jacobian $J$의 transpose이다.
+은 전사함수이며, 이를 $\overline{d}\circ\pi$를 $e_i$와 $\dd{\x_j}$ 기저에 대하여 표현한 행렬이 정확히 Jacobian $J$의 transpose로, 각각의 성분들은 $X$ 위의 함수를 정의한다.
 
-가정에 의해 $J$가 full rank이므로, 어떤 $r\times r$ minor $g$가 존재하여 이것이 $x$에서 $0$이 아니도록 할 수 있다. 
-
-이 행렬 표현으로부터 첫 번째 목표, 곧 $\Omega_{C/A}$가 locally free라는 것이 얻어진다. 가정에 의하여 $J$의 어떤 $r\times r$ minor $g$가 $x$에서 영이 아니다. $D(g)=\Spec C_g$ 위에서는 해당 부분행렬이 가역이므로, 그 $r$개 좌표로의 projection과 $(\overline{d}\circ\pi)_g$의 합성이 $C_g^{\oplus r}$의 invertible endomorphism이 되어 $(\overline{d}\circ\pi)_g$는 split injection이다. 특히 $\pi_g$는 단사이고 이미 전사였으므로 동형이며, 따라서 $(\mathfrak{a}/\mathfrak{a}^2)_g$는 rank $r$의 free module이고 $\overline{d}_g$는 free module 사이의 split injection이다. 그럼 그 cokernel $\Omega_{C/A}\otimes_CC_g$는 $C_g^{\oplus n}$의 direct summand이므로, $\Omega_{C/A}$는 $D(g)$ 위에서 rank $n-r$의 locally free이다.
+이제 가정에 의해 $J$가 full rank이므로, 어떤 index $j_1,\ldots, j_r$이 존재하여 그 열들이 이루는 $r\times r$ minor $g$가 $x$에서 $0$이 아니도록 할 수 있다. 그럼 이 minor가 $0$이 되지 않는 locus $D(g)=\Spec C_g$를 생각하면 coordinate $\dd{\x_{j_1}},\ldots, \dd{\x_{j_r}}$로의 projection과 $(\overline{d}\circ\pi)_g$의 합성이 $C_g^{\oplus r}$의 invertible endomorphism이 되어 $(\overline{d}\circ\pi)_g$는 split injection이다. 특히 $\pi_g$는 단사이고 이미 전사였으므로 동형이며, 따라서 $(\mathfrak{a}/\mathfrak{a}^2)_g$는 rank $r$의 free module이고 $\overline{d}_g$는 free module 사이의 split injection이다. 그럼 그 cokernel $\Omega_{C/A}\otimes_CC_g$는 $C_g^{\oplus n}$의 direct summand이므로, $\Omega_{C/A}$는 $D(g)$ 위에서 rank $n-r$의 locally free이다.
 
 다음 목표는 $\varphi$가 $x$의 어떤 근방에서 flat하다는 것이다. 이하의 논증이 Noetherian 가정을 요구하므로 먼저 일반의 $A$를 그 경우로 줄인다. $f_1,\ldots, f_r$의 계수들이 $A$ 안에서 생성하는 $\mathbb{Z}$-subalgebra를 $A_0$이라 하면 $A_0$은 Noetherian이고 ([\[가환대수학\] §기본 개념들, ⁋정리 12](/ko/math/commutative_algebra/basic_notions#thm12)), $C_0=A_0[\x_1,\ldots, \x_n]/(f_1,\ldots, f_r)$로 두면 $C=C_0\otimes_{A_0}A$이다. $\Spec C \rightarrow \Spec C_0$에 의한 $x$의 image를 $x_0$이라 하면 $J$의 $x$에서의 성분들은 $x_0$에서의 성분들의 image이고 행렬의 rank는 field 확대로 변하지 않으므로, $x_0$에서도 $J$의 rank는 $r$이다. Flatness가 base change로 보존되므로 ([§평탄사상, ⁋명제 3](/ko/math/scheme_theory/flat_morphisms#prop3)), $\Spec C_0 \rightarrow \Spec A_0$이 $x_0$의 근방에서 flat이면 $\varphi$도 $x$의 근방에서 flat이다. 따라서 $A$가 Noetherian이라 가정한다.
 
