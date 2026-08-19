@@ -10,8 +10,9 @@ sidebar:
 
 date: 2024-06-12
 weight: 6
-translated_at: 2026-08-18T05:16:39+00:00
+translated_at: 2026-08-19T16:45:05+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-08-19T16:45:05+00:00
 ---
 Posts in the category theory category are basically readable with only the posts from the [\[Set Theory\]](/en/set_theory/) category, and although the monoidal category covered in this post could have been written in the same way, the first part of this post specifically brings in posts from the [\[Algebraic Structures\]](/en/algebraic_structures) category to aid understanding.
 
