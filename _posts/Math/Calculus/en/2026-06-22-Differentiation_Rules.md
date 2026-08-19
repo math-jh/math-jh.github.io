@@ -10,8 +10,9 @@ sidebar:
 
 date: 2026-06-22
 weight: 7
-translated_at: 2026-08-17T18:17:10+00:00
+translated_at: 2026-08-19T05:45:05+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-08-19T05:45:05+00:00
 ---
 We covered the definition of differentiation and its basic properties in [§Differentiation and Derivatives](/en/math/calculus/derivatives). In this post, we treat derivatives of concrete functions and differentiation rules applicable to general functions.
 
