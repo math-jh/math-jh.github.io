@@ -10,14 +10,15 @@ sidebar:
 
 date: 2026-06-26
 weight: 12
-translated_at: 2026-08-17T21:15:04+00:00
+translated_at: 2026-08-19T08:45:05+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-08-19T08:45:05+00:00
 ---
-The integrals we have examined so far were defined for bounded functions on finite intervals. However, we often wish to discuss area even when the interval extends infinitely, or when the integrand becomes arbitrarily large at a point. In this post, we define these through limits of integrals over finite intervals.
+The integrals we have examined so far were defined for bounded functions on finite intervals. However, we often wish to discuss area even when the interval extends to infinity or when the integrand becomes arbitrarily large at a point. In this post, we define these as limits of integrals over finite intervals.
 
 ## Definition of Improper Integrals
 
-We first make the following definition.
+We begin with the following definition.
 
 ::: Definition 1
 If $f$ is integrable on $[a,t]$ for every $t > a$, we define the improper integral over the infinite interval as
@@ -41,15 +42,15 @@ by the expression
 $$\int_{-\infty}^{\infty} f(x) \dd{x}.$$
 :::
 
-In the definition above, the definitions of the two improper integrals
+In the definition above, the two improper integrals
 
 $$\int_a^\infty f(x)\dd{x},\qquad \int_{-\infty}^b f(x)\dd{x}$$
 
-are relatively clear. The somewhat ambiguous part is the improper integral with infinities on both sides; first, we can see that if this integral is defined, its value does not depend on the choice of the splitting point $c$. This is because if we choose a different $c'$,
+are relatively clear. The more delicate part is the improper integral with infinities on both sides. First, we observe that if this integral is defined, its value does not depend on the choice of the splitting point $c$. Indeed, if we choose a different $c'$,
 
 $$\begin{aligned}\int_{-\infty}^c f(x)\dd{x}+\int_c^\infty f(x)\dd{x}&=\lim_{s\rightarrow-\infty}\int_s^c f(x)\dd{x}+\lim_{t\rightarrow \infty}\int_c^t f(x)\dd{x}\\&=\lim_{s\rightarrow-\infty}\left(\int_s^c f(x)\dd{x}+\int_c^{c'} f(x)\dd{x}\right)+\lim_{t\rightarrow \infty}\left(\int_c^t f(x)\dd{x}-\int_c^{c'} f(x)\dd{x}\right)\\&=\lim_{s\rightarrow-\infty}\int_s^{c'} f(x)\dd{x}+\lim_{t\rightarrow \infty}\int_{c'}^t f(x)\dd{x}\\&=\int_{-\infty}^{c'} f(x)\dd{x}+\int_{c'}^\infty f(x)\dd{x}\end{aligned}$$
 
-so the value is the same. A more noteworthy point is that we send these two limits *independently*. For example, defining the sign function by
+so the value is the same. A more noteworthy point is that we take these two limits *independently*. For example, defining the sign function by
 
 $$\sgn(x)=\begin{cases}1&\text{if $x>0$}\\0&\text{if $x=0$}\\-1&\text{if $x<0$}\end{cases}$$
 
@@ -57,9 +58,9 @@ the integral of this function from $-t$ to $t$ is $0$ for any fixed $t>0$, and t
 
 $$\lim_{t\rightarrow\infty}\int_{-t}^t \sgn(x)\dd{x}=0;$$
 
-however, according to the definition above, the improper integral of $\sgn$ is not defined. For instance, if we had taken the interval from $-t$ to $2t$ and then let $t\rightarrow\infty$, this limit would have diverged, so this restriction is essential.
+however, according to the definition above, the improper integral of $\sgn$ is not defined. For instance, had we taken the interval from $-t$ to $2t$ and then let $t\rightarrow\infty$, this limit would have diverged, so this restriction is essential.
 
-Similarly, we also define the integral of a function that diverges at a single point as a limit.
+Similarly, we define the integral of a function that diverges at a single point as a limit.
 
 ::: Definition 2
 If $f$ is not bounded near $c$ but is integrable on $[a, t]$ for every $a \leq t < c$, we define the *improper integral* by
@@ -76,11 +77,11 @@ $$\int_a^b f(x)\dd{x}=\lim_{t\rightarrow c^-}\int_a^t f(x)\dd{x}+\lim_{s\rightar
 
 :::
 
-Again, when $c$ lies in the interior of the interval, the same subtlety as in [Definition 1](#def1) still exists. For instance,
+Again, when $c$ lies in the interior of the interval, the same subtlety as in [Definition 1](#def1) persists. For instance,
 
 $$\lim_{t\rightarrow 0^-}\int_{-1}^t \frac{\dd{x}}{x}+\lim_{s\rightarrow 0^+}\int_s^1\frac{\dd{x}}{x}$$
 
-is not defined term by term, but if we had grouped them as
+is not defined term by term, but had we grouped them as
 
 $$\lim_{t\rightarrow 0^+}\left(\int_{-1}^{-t} \frac{\dd{x}}{x}+\int_t^1\frac{\dd{x}}{x}\right)$$
 
@@ -88,7 +89,7 @@ the value would have turned out to be $0$.
 
 ## Convergence Tests for Improper Integrals
 
-Many improper integrals cannot be evaluated explicitly because we cannot find an antiderivative in closed form. However, to determine convergence alone, we can compare with a more tractable function. When the integrand is non-negative, the integral is monotone increasing with respect to the domain of integration, so the comparison test, just as for series, applies.
+Many improper integrals cannot be evaluated explicitly because no closed-form antiderivative is available. However, convergence alone can be determined by comparison with a more tractable function. When the integrand is non-negative, the integral is monotone increasing with respect to the domain of integration, so the comparison test, just as for series, applies.
 
 ::: Proposition 3 (Comparison test)
 Suppose $0 \leq f(x) \leq g(x)$ for $x \geq a$. If $\int_a^\infty g(x) \dd{x}$ converges, then $\int_a^\infty f(x) \dd{x}$ also converges; and if $\int_a^\infty f(x) \dd{x}$ diverges, then $\int_a^\infty g(x) \dd{x}$ also diverges.
@@ -99,10 +100,10 @@ Since $f \geq 0$, the function $F(t) = \int_a^t f(x) \dd{x}$ is increasing in $t
 
 $$F(t) \leq \int_a^t g(x) \dd{x} \leq \int_a^\infty g(x) \dd{x}$$
 
-so it is bounded above. An increasing function that is bounded above has a limit as $t \rightarrow \infty$, so $\int_a^\infty f(x) \dd{x}$ converges. The second claim is the contrapositive.
+so it is bounded above. An increasing function that is bounded above has a limit as $t \rightarrow \infty$, hence $\int_a^\infty f(x) \dd{x}$ converges. The second claim is the contrapositive.
 :::
 
-When it is difficult to establish the inequality $0 \leq f \leq g$ directly, we use a limit comparison just as for series. That is, if two positive functions satisfy $f(x)/g(x) \rightarrow c$ ($0 < c < \infty$), then the same argument as in [§Infinite Series, ⁋Proposition 7](/en/math/calculus/series#prop7) shows that the two integrals converge or diverge together; hence it suffices to know which function the integrand behaves like as $x \rightarrow \infty$.
+When the inequality $0 \leq f \leq g$ is difficult to establish directly, we use limit comparison just as for series. That is, if two positive functions satisfy $f(x)/g(x) \rightarrow c$ ($0 < c < \infty$), then the same argument as in [§Infinite Series, ⁋Proposition 7](/en/math/calculus/series#prop7) shows that the two integrals converge or diverge together; hence it suffices to know which function the integrand resembles as $x \rightarrow \infty$.
 
 For integrands that change sign, we take absolute values to reduce to the positive case.
 
@@ -111,21 +112,21 @@ If $f$ is integrable on $[a, t]$ for every $t > a$ and $\int_a^\infty \lvert f(x
 :::
 
 ::: Proof
-Since $0 \leq f + \lvert f\rvert \leq 2\lvert f\rvert$, [Proposition 3](#prop3) implies that $\int_a^\infty (f(x) + \lvert f(x)\rvert) \dd{x}$ converges, and hence $\int_a^\infty f(x) \dd{x} = \int_a^\infty (f(x) + \lvert f(x)\rvert) \dd{x} - \int_a^\infty \lvert f(x)\rvert \dd{x}$ also converges.
+Since $0 \leq f + \lvert f\rvert \leq 2\lvert f\rvert$, [Proposition 3](#prop3) implies that $\int_a^\infty (f(x) + \lvert f(x)\rvert) \dd{x}$ converges, and therefore $\int_a^\infty f(x) \dd{x} = \int_a^\infty (f(x) + \lvert f(x)\rvert) \dd{x} - \int_a^\infty \lvert f(x)\rvert \dd{x}$ also converges.
 :::
 
-The converse does not hold. $\int_0^\infty \frac{\sin x}{x} \dd{x}$ converges, but $\int_0^\infty \lvert \sin x/x\rvert \dd{x}$ diverges, so it is *conditionally convergent*, which corresponds to conditional convergence of series.
+The converse does not hold. The integral $\int_0^\infty \frac{\sin x}{x} \dd{x}$ converges, but $\int_0^\infty \lvert \sin x/x\rvert \dd{x}$ diverges, so it is *conditionally convergent*, corresponding to conditional convergence for series.
 
-The two criteria above were stated for integrals over infinite intervals, but after a change of variables they apply equally well to improper integrals that diverge at an endpoint. For $\int_c^b f(x) \dd{x}$ where $f$ is singular at the left endpoint $c$, set $u = 1/(x - c)$; then $x \rightarrow c^+$ corresponds to $u \rightarrow \infty$, and matching the orientation of the interval of integration gives
+The two criteria above were stated for integrals over infinite intervals, but after a change of variables they apply equally well to improper integrals that diverge at an endpoint. For $\int_c^b f(x) \dd{x}$ with $f$ singular at the left endpoint $c$, set $u = 1/(x - c)$; then $x \rightarrow c^+$ corresponds to $u \rightarrow \infty$, and matching the orientation of the interval of integration yields
 
 $$\int_c^b f(x) \dd{x} = \int_{1/(b-c)}^\infty \frac{f(c + 1/u)}{u^2} \dd{u}$$
 
 which is an integral over an infinite interval. The factor $u^{-2} > 0$ preserves inequalities and absolute values, so [Proposition 3](#prop3) and [Proposition 4](#prop4) remain valid as convergence tests for improper integrals.
 
-For these tests to be useful in practice, one needs standard functions to compare against, and the role is almost always filled by power functions or the exponential function $e^{-x}$. Among them, the integral of a power function provides a (nearly) sharp boundary between convergence and divergence.
+For these tests to be useful in practice, one needs standard functions to compare against, and this role is almost always filled by power functions or the exponential $e^{-x}$. Among these, the integral of a power function provides a (nearly) sharp boundary between convergence and divergence.
 
 ::: Example 5 (p-integrals)
-Improper integrals of powers exhibit exactly opposite behavior at infinite intervals and singular points. The infinite interval $\int_1^{\infty} x^{-p} \dd{x}$ converges for $p > 1$ and diverges for $p \leq 1$, whereas the integral $\int_0^1 x^{-p} \dd{x}$ containing a singular point conversely converges for $p < 1$ and diverges for $p \geq 1$. Both computations arise from the same antiderivative: for $p \neq 1$,
+Improper integrals of powers exhibit exactly opposite behavior on infinite intervals and at singular points. The infinite interval $\int_1^{\infty} x^{-p} \dd{x}$ converges for $p > 1$ and diverges for $p \leq 1$, whereas the integral $\int_0^1 x^{-p} \dd{x}$ containing a singular point conversely converges for $p < 1$ and diverges for $p \geq 1$. Both computations arise from the same antiderivative: for $p \neq 1$,
 
 $$\int_1^t x^{-p} \dd{x} = \frac{t^{1-p} - 1}{1 - p}, \qquad \int_t^1 x^{-p} \dd{x} = \frac{1 - t^{1-p}}{1 - p}$$
 
@@ -133,21 +134,21 @@ For the left improper integral, as $t \rightarrow \infty$, the term $t^{1-p}$ te
 
 $$\int_1^\infty x^{-p} \dd{x} = \frac{1}{p - 1} \quad (p > 1), \qquad \int_0^1 x^{-p} \dd{x} = \frac{1}{1 - p} \quad (p < 1)$$
 
-Intuitively, on an infinite interval a large $p$ causes rapid decay, helping convergence, whereas near a singular point a large $p$ causes faster blow-up, leading to divergence; this can be seen clearly by plotting $1/x$ and $1/x^2$.
+Intuitively, on an infinite interval a large $p$ yields rapid decay, aiding convergence, whereas near a singular point a large $p$ causes faster blow-up, leading to divergence; this is clearly visible in the graphs of $1/x$ and $1/x^2$.
 
 {% diagram Math/Calculus/Improper_Integrals-1.svg width="12.69em" alt="Graphs of 1/x and 1/x²" %}
 :::
 
-However, this boundary $p = 1$ is somewhat subtle. Since substitution works for improper integrals just as well, setting $u = \ln x$ gives
+However, this boundary $p = 1$ is somewhat subtle. Since substitution works for improper integrals as well, setting $u = \ln x$ gives
 
 $$\int_2^\infty \frac{\dd{x}}{x(\ln x)^p} = \int_{\ln 2}^\infty u^{-p} \dd{u}$$
 
-which converges for $p > 1$. Thus $1/x$ itself diverges at $p = 1$, but attaching a logarithm raised to a power greater than one shifts the boundary back toward convergence. In other words, considering only powers, $p = 1$ is the exact boundary, but inserting a logarithmic factor produces a finer split; this is why we said earlier that this boundary is *almost* sharp.
+which converges for $p > 1$. Thus $1/x$ itself diverges at $p = 1$, but attaching a logarithm raised to a power greater than one shifts the boundary back toward convergence. In other words, considering powers alone, $p = 1$ is the exact boundary, but inserting a logarithmic factor produces a finer distinction; this is why we said earlier that this boundary is *almost* sharp.
 
 On the other hand, convergent improper integrals can be used to define new functions.
 
 ::: Example 6 (Gamma function)
-The following function defined as an improper integral
+The following function, defined as an improper integral,
 
 $$\Gamma(s) = \int_0^\infty x^{s-1}e^{-x} \dd{x}$$
 
