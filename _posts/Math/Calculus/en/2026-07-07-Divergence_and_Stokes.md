@@ -10,14 +10,15 @@ sidebar:
 
 date: 2026-07-07
 weight: 20
-translated_at: 2026-08-18T00:46:41+00:00
+translated_at: 2026-08-19T12:15:04+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-08-19T12:15:04+00:00
 ---
-We introduced Green's theorem and saw that it is a two-dimensional analogue of the fundamental theorem of calculus. The culmination of calculus is to extend this to higher dimensions, and again the shared spirit is that the integral over the interior of a region is linked to the integral over its boundary.
+We introduced Green's theorem and observed that it is a two-dimensional analogue of the fundamental theorem of calculus. The culmination of calculus is to extend this to higher dimensions; the unifying principle is again that the integral over the interior of a region is linked to the integral over its boundary.
 
 ## Divergence Theorem
 
-First we prove the divergence theorem. This is a theorem about integrals over three-dimensional space bounded by a two-dimensional boundary.
+We first present the divergence theorem. This concerns integrals over three-dimensional space bounded by a two-dimensional surface.
 
 ::: Theorem 1 (Divergence theorem)
 If $E$ is a solid region in space bounded by a piecewise smooth closed surface $\partial E$, and $\mathbf{F}$ is a $C^1$ vector field on an open set containing $E$, then with $\partial E$ oriented outward,
@@ -32,16 +33,16 @@ Write $\mathbf{F} = (P, Q, R)$. If we show
 
 $$\iint_{\partial E} (0,0,R)\cdot d\mathbf{S} = \iiint_E \partial R/\partial z\dd{V}$$
 
-for the $z$-component, then $P$ and $Q$ are handled symmetrically, and adding the three gives the theorem.
+for the $z$-component, then $P$ and $Q$ are handled symmetrically, and adding the three contributions yields the theorem.
 
-Suppose $E$ is a solid simple in all three coordinate directions; in particular, in the $z$-direction it is $E = \{(x,y,z) \mid (x,y) \in D,\ u_1(x,y) \leq z \leq u_2(x,y)\}$. The right-hand triple integral, integrating $z$ first by [§Multiple Integrals, ⁋Theorem 2](/en/math/calculus/multiple_integrals#thm2), is
+Suppose $E$ is a solid simple in all three coordinate directions; in particular, in the $z$-direction it is $E = \{(x,y,z) \mid (x,y) \in D,\ u_1(x,y) \leq z \leq u_2(x,y)\}$. The right-hand triple integral, integrating $z$ first by [§Multiple Integrals, ⁋Theorem 2](/en/math/calculus/multiple_integrals#thm2), becomes
 
 $$\iiint_E \frac{\partial R}{\partial z}\dd{V} = \iint_D \bigl(R(x,y,u_2) - R(x,y,u_1)\bigr)\dd{A}.$$
 
 On the other hand, $\partial E$ consists of the top face $z = u_2$, the bottom face $z = u_1$, and the side faces. On the side faces the outward normal is horizontal, so $(0,0,R)\cdot \mathbf{n} = 0$ and there is no contribution. The top face has outward normal pointing upward, giving flux $+\iint_D R(x,y,u_2)\dd{A}$, and the bottom face points downward, giving $-\iint_D R(x,y,u_1)\dd{A}$; their sum equals the double integral above. For a general solid, cutting it into such pieces and adding them causes the flux across interior boundary faces to cancel, since they appear twice with opposite orientations, so the theorem holds.
 :::
 
-The divergence theorem says that the amount flowing out through a closed surface equals the total amount produced inside by $\divergence \mathbf{F}$. Thus the intuition that divergence is "outflow per unit volume" is established as a theorem. It is also practical in that flux over a closed surface can be computed by a volume integral instead of integrating over the surface directly.
+The divergence theorem states that the amount flowing out through a closed surface equals the total amount produced inside by $\divergence \mathbf{F}$. Thus the intuition that divergence is "outflow per unit volume" is established as a theorem. It is also practical in that flux over a closed surface can be computed by a volume integral instead of integrating over the surface directly.
 
 ::: Example 2 (Reducing flux to a volume integral)
 In [§Surface Integrals and Flux, ⁋Example 6](/en/math/calculus/surface_integrals#ex6), we directly computed the flux of $\mathbf{F} = (x,y,z)$ through a sphere of radius $R$ by a surface integral and obtained $4\pi R^3$. By the divergence theorem, since $\divergence \mathbf{F} = 3$,
@@ -53,7 +54,7 @@ giving the same value.
 
 ## Stokes' Theorem
 
-Stokes' theorem is almost the same as Green's theorem. In essence it is a theorem about integrals over two-dimensional regions bounded by one-dimensional boundaries, so it is merely a modification of Green's theorem to work even when the region of integration is *curved* inside three-dimensional space.
+Stokes' theorem is essentially the same as Green's theorem. In fact, since it is fundamentally a theorem about integrals over two-dimensional regions bounded by one-dimensional boundaries, it is merely a modification of Green's theorem that remains valid even when the region of integration is *curved* inside three-dimensional space.
 
 ::: Theorem 3 (Stokes)
 If $S$ is an oriented piecewise smooth surface whose boundary $\partial S$ is a piecewise smooth simple closed curve, and $\mathbf{F}$ is $C^1$ on an open set containing $S$, then with $\partial S$ oriented compatibly with $S$ (so that the surface lies to the left),
