@@ -10,8 +10,9 @@ sidebar:
 
 date: 2026-06-23
 weight: 8
-translated_at: 2026-08-17T19:49:26+00:00
+translated_at: 2026-08-19T07:15:05+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-08-19T07:15:05+00:00
 ---
 In [§Differentiation and Derivatives](/en/math/calculus/derivatives) we examined the definition of the derivative. Now we turn to what information the derivative carries about a function, and the first key result is the mean value theorem.
 
@@ -28,7 +29,7 @@ If $f$ has a local extremum at an interior point $c$ and is differentiable at $c
 :::
 
 ::: Proof
-Consider the case where $f$ has a local maximum at $c$ (the local minimum case follows by looking at $-f$). Since $f(x) \leq f(c)$ in a neighborhood of $c$, the numerator of the difference quotient $(f(c+h)-f(c))/h$ is non-positive. Hence for $h > 0$ the difference quotient is non-positive and its limit gives $f'(c) \leq 0$, while for $h < 0$ the difference quotient is non-negative and its limit gives $f'(c) \geq 0$. Since $f$ is differentiable at $c$, the two one-sided limits must agree, so $f'(c) = 0$.
+Consider the case where $f$ has a local maximum at $c$ (the local minimum case follows by looking at $-f$). Since $f(x) \leq f(c)$ in a neighborhood of $c$, the numerator of the difference quotient $(f(c+h)-f(c))/h$ is nonpositive. Hence for $h > 0$ the difference quotient is nonpositive and its limit gives $f'(c) \leq 0$, while for $h < 0$ the difference quotient is nonnegative and its limit gives $f'(c) \geq 0$. Since $f$ is differentiable at $c$, the two one-sided limits must agree, so $f'(c) = 0$.
 :::
 
 A point where the derivative is zero or does not exist is called a *critical point*. Fermat's theorem says that any interior local extremum of a differentiable function must occur at a critical point. The converse is false: for example, $f(x) = x^3$ satisfies $f'(0) = 0$ but has no extremum at $x = 0$.
@@ -89,7 +90,7 @@ Setting $g(x) = x$ in [Theorem 6](#thm6) gives $g'(c) = 1$ and $g(b) - g(a) = b 
 The most frequent application of results of this form is reading the increase or decrease of a function from the sign of its derivative. Replacing the difference $f(x_2) - f(x_1)$ by $f'(c)(x_2 - x_1)$, the sign of the derivative immediately determines the sign of this value.
 
 ::: Proposition 7
-Let $f$ be continuous on an interval $I$ and differentiable in the interior of $I$. If $f'(x) > 0$ at every interior point of $I$, then $f$ is strictly increasing on $I$; if $f'(x) < 0$, then strictly decreasing. More weakly, if $f'(x) \geq 0$ at every interior point, then $f$ is non-decreasing.
+Let $f$ be continuous on an interval $I$ and differentiable in the interior of $I$. If $f'(x) > 0$ at every interior point of $I$, then $f$ is strictly increasing on $I$; if $f'(x) < 0$, then strictly decreasing. More weakly, if $f'(x) \geq 0$ at every interior point, then $f$ is nondecreasing.
 :::
 
 ::: Proof
@@ -97,7 +98,7 @@ Pick any two points $x_1 < x_2$ in $I$; then $[x_1, x_2] \subseteq I$ and $(x_1,
 
 $$f(x_2) - f(x_1) = f'(c)(x_2 - x_1), \qquad c \in (x_1, x_2).$$
 
-Since $x_2 - x_1 > 0$, the sign of the right-hand side matches that of $f'(c)$. Thus if $f' > 0$ everywhere, then $f(x_2) - f(x_1) > 0$, i.e. $f(x_1) < f(x_2)$, so $f$ is strictly increasing; if $f' < 0$, strictly decreasing in the same way; and if $f' \geq 0$, then $f(x_2) - f(x_1) \geq 0$, so $f$ is non-decreasing.
+Since $x_2 - x_1 > 0$, the sign of the right-hand side matches that of $f'(c)$. Thus if $f' > 0$ everywhere, then $f(x_2) - f(x_1) > 0$, i.e. $f(x_1) < f(x_2)$, so $f$ is strictly increasing; if $f' < 0$, strictly decreasing in the same way; and if $f' \geq 0$, then $f(x_2) - f(x_1) \geq 0$, so $f$ is nondecreasing.
 :::
 
 This test is the most practical form of the fact that the derivative controls the function. One must be careful, however, that strict increase does not force $f' > 0$ at every point. For example, $f(x) = x^3$ is strictly increasing on $\mathbb{R}$ but $f'(0) = 0$. Thus the first part of [Proposition 7](#prop7) is only a sufficient condition, not a necessary one.
@@ -208,7 +209,7 @@ Let $f$ be twice differentiable on an interval $I$. If $f''(x) \geq 0$ on $I$, t
 :::
 
 ::: Proof
-If $f'' \geq 0$, then by [Proposition 7](#prop7) the derivative $f'$ is non-decreasing. That convexity is equivalent to $f'$ being increasing can be verified using the mean value theorem. For $x_1 < x < x_2$, applying [Theorem 4](#thm4) to $[x_1, x]$ and $[x, x_2]$ yields $\xi_1 < \xi_2$ with
+If $f'' \geq 0$, then by [Proposition 7](#prop7) the derivative $f'$ is nondecreasing. That convexity is equivalent to $f'$ being increasing can be verified using the mean value theorem. For $x_1 < x < x_2$, applying [Theorem 4](#thm4) to $[x_1, x]$ and $[x, x_2]$ yields $\xi_1 < \xi_2$ with
 
 $$\frac{f(x)-f(x_1)}{x - x_1} = f'(\xi_1) \leq f'(\xi_2) = \frac{f(x_2)-f(x)}{x_2 - x},$$
 
