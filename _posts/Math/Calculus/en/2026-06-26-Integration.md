@@ -10,10 +10,11 @@ sidebar:
 
 date: 2026-06-26
 weight: 10
-translated_at: 2026-08-17T21:48:03+00:00
+translated_at: 2026-08-19T09:15:05+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-08-19T09:15:05+00:00
 ---
-We have so far defined the limit of a function and, using the limit of the average rate of change, defined the derivative. In this post we organize integration (the inverse operation of that process) and examine its various properties.
+We have so far defined the limit of a function and, using the limit of the average rate of change, defined the derivative. In this post we organize integration (the inverse of that process) and examine its various properties.
 
 ## Antiderivatives
 
@@ -21,7 +22,7 @@ We have so far defined the limit of a function and, using the limit of the avera
 For a function $f$ defined on an interval $I$, a differentiable function $F$ satisfying $F'(x) = f(x)$ at every point of $I$ is called an *antiderivative* of $f$.
 :::
 
-For example, $F(x) = x^2$ is an antiderivative of $f(x) = 2x$. However, $x^2 + 1$ and $x^2 - 5$ also have derivative $2x$, so they are antiderivatives as well. That is, adding a constant to one antiderivative still yields an antiderivative. Geometrically, this means that an entire family of curves obtained by shifting the same curve up or down all share the same derivative (the same slope distribution). Antiderivatives are thus not unique, but they can differ only by a constant term.
+For example, $F(x) = x^2$ is an antiderivative of $f(x) = 2x$. However, $x^2 + 1$ and $x^2 - 5$ also have derivative $2x$, so they are antiderivatives as well. That is, adding a constant to an antiderivative still yields an antiderivative. Geometrically, an entire family of curves obtained by shifting the same curve vertically all share the same derivative (the same slope distribution). Antiderivatives are thus not unique, but they can differ only by a constant term.
 
 ::: Proposition 2
 If $F$ is an antiderivative of $f$ on an interval $I$, then every antiderivative of $f$ has the form $F(x) + C$ for some constant $C$.
@@ -39,7 +40,7 @@ and is called the *indefinite integral* of $f$. Here $C$ is the *constant of int
 
 The assumption we are implicitly making, that the interval is connected, is not essential in every respect, but the above proposition holds only when the interval is connected. If the domain is disconnected, the constant may differ on each piece. For instance, $1/x$ is defined separately for $x > 0$ and $x < 0$, and although $F(x) = \ln\lvert x\rvert$ is an antiderivative, adding different constants on the two pieces still yields antiderivatives of $1/x$ on the whole domain, so the proposition does not literally apply there.
 
-Under the assumption that the interval is connected, the integration constant $C$ is determined exactly once an *initial condition* is given. This is the basic method of solving differential equations by indefinite integration. For example, if $F'(x) = 3x^2 + 1$ and $F(1) = 5$, then from the indefinite integral $F(x) = x^3 + x + C$ we substitute the initial condition to obtain $1 + 1 + C = 5$, so $C = 3$ and $F(x) = x^3 + x + 3$ is uniquely determined.
+Under the assumption that the interval is connected, the integration constant $C$ is determined uniquely once an *initial condition* is given. This is the basic method of solving differential equations by indefinite integration. For example, if $F'(x) = 3x^2 + 1$ and $F(1) = 5$, then from the indefinite integral $F(x) = x^3 + x + C$ we substitute the initial condition to obtain $1 + 1 + C = 5$, so $C = 3$ and $F(x) = x^3 + x + 3$ is uniquely determined.
 
 ## Properties and Examples of Indefinite Integrals
 
@@ -112,7 +113,7 @@ $$\int u v' \dd{x} = uv - \int u' v \dd{x}.$$
 By [§Differentiation, ⁋Proposition 3](/en/math/calculus/differentiation_rules#prop3), $(uv)' = u'v + uv'$, so $uv' = (uv)' - u'v$, and integrating both sides gives $\int (uv)' \dd{x} = uv$, from which the claim follows.
 :::
 
-The key is to choose $u$ as the side that simplifies upon differentiation, and $v'$ as the side that can be integrated. For example, in $\int x e^x \dd{x}$ we set $u = x$ to obtain $xe^x - e^x + C$, while for functions such as logarithms or inverse trigonometric functions whose derivatives actually become simpler, we place them in the $u$ position with $v' = 1$ (giving $\int \ln x \dd{x} = x\ln x - x + C$). There are also cases where integration by parts does not simplify the integrand but returns to the original integral; then we treat the original integral as an unknown and solve algebraically.
+The key is to choose $u$ as the factor that simplifies upon differentiation, and $v'$ as the factor that can be integrated. For example, in $\int x e^x \dd{x}$ we set $u = x$ to obtain $xe^x - e^x + C$, while for functions such as logarithms or inverse trigonometric functions whose derivatives actually become simpler, we place them in the $u$ position with $v' = 1$ (giving $\int \ln x \dd{x} = x\ln x - x + C$). There are also cases where integration by parts does not simplify the integrand but returns to the original integral; then we treat the original integral as an unknown and solve algebraically.
 
 ::: Example 6
 $I = \int e^x\cos x \dd{x}$ returns to itself after two applications of integration by parts. Setting $u = e^x$ and $v' = \cos x$,
