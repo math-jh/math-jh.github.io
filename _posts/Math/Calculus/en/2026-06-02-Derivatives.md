@@ -10,8 +10,9 @@ sidebar:
 
 date: 2026-06-02
 weight: 6
-translated_at: 2026-08-17T16:46:38+00:00
+translated_at: 2026-08-19T03:45:05+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-08-19T03:45:05+00:00
 ---
 We previously reformulated the notion of a function being continuous in the language of $\epsilon$-$\delta$ in [§Continuous Functions](/en/math/calculus/continuity). The natural next step is to define the derivative of a function.
 
