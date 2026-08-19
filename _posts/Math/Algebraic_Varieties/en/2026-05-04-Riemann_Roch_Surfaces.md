@@ -10,20 +10,21 @@ sidebar:
 
 date: 2026-05-04
 weight: 17
-translated_at: 2026-08-17T14:46:53+00:00
+translated_at: 2026-08-19T01:45:04+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-08-19T01:45:04+00:00
 ---
-We previously examined the Riemann–Roch theorem for curves. Essentially, the Riemann–Roch theorem computes the Euler characteristic in terms of other quantitative invariants, and although we could generalize it to arbitrary dimension, in this post we restrict ourselves to the case of surfaces.
+We previously examined the Riemann–Roch theorem for curves. Essentially, the Riemann–Roch theorem computes the Euler characteristic in terms of other quantitative invariants, and although one could generalize it to arbitrary dimension, in this post we restrict ourselves to the case of surfaces.
 
 Revisiting the Riemann–Roch formula for a curve $C$ ([§The Riemann–Roch Theorem for Curves, ⁋Proposition 3](/en/math/algebraic_varieties/riemann_roch_theorem#prop3))
 
 $$\ell(D) - \ell(K_C - D) = \deg D + 1 - g$$
 
-the left-hand side is essentially the Euler characteristic of $\mathcal{O}_C(D)$, and [§The Riemann–Roch Theorem for Curves, ⁋Lemma 2](/en/math/algebraic_varieties/riemann_roch_theorem#lem2) guarantees that this consists of only two terms. However, when we generalize to surfaces the dimension of the base space increases by one, so additional terms will appear on the left-hand side, and correspondingly the right-hand side will also acquire extra terms.
+the left-hand side is essentially the Euler characteristic of $\mathcal{O}_C(D)$, and [§The Riemann–Roch Theorem for Curves, ⁋Lemma 2](/en/math/algebraic_varieties/riemann_roch_theorem#lem2) guarantees that it consists of only two terms. However, when we generalize to surfaces the dimension of the base space increases by one, so additional terms appear on the left-hand side, and correspondingly the right-hand side acquires extra terms as well.
 
-Intuitively, the term $\deg D$ appearing on the right-hand side of the above formula may be thought of as a linear term, but in the process of generalizing to surfaces we must also consider additional *quadratic terms* such as $D\cdot D$, $D\cdot K_S$, and so on. These encode how two divisors on a surface intersect: whereas divisors on a curve, i.e. points, generally do not meet inside the curve, divisors on a surface, i.e. curves, generally intersect in finitely many points inside the surface.
+Intuitively, the term $\deg D$ on the right-hand side may be thought of as a linear term, but in generalizing to surfaces we must also consider additional *quadratic terms* such as $D\cdot D$, $D\cdot K_S$, and so on. These encode how two divisors on a surface intersect: whereas divisors on a curve, i.e. points, generally do not meet inside the curve, divisors on a surface, i.e. curves, generally intersect in finitely many points.
 
-In this post we discuss the definition of intersection number and its basic properties, then rigorously derive the Riemann–Roch formula for surfaces, and finally use it to prove the Hodge index theorem.
+In this post we discuss the definition and basic properties of intersection numbers, rigorously derive the Riemann–Roch formula for surfaces, and use it to prove the Hodge index theorem.
 
 ## Intersection Number
 
