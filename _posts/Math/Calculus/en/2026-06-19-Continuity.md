@@ -10,8 +10,9 @@ sidebar:
 
 date: 2026-06-19
 weight: 2
-translated_at: 2026-08-17T17:46:39+00:00
+translated_at: 2026-08-19T04:45:05+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-08-19T04:45:05+00:00
 ---
 We have already rigorously defined limits in [§Limits of Functions](/en/math/calculus/functions_and_limits), so we now define continuity on top of that.
 
