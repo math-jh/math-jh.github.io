@@ -10,8 +10,9 @@ sidebar:
 
 date: 2026-07-07
 weight: 19
-translated_at: 2026-08-18T01:46:56+00:00
+translated_at: 2026-08-19T13:15:04+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-08-19T13:15:04+00:00
 ---
 We now define the integral over a surface by adding one more variable to the line integral.
 
@@ -25,7 +26,7 @@ $\mathbf{r}\colon D \rightarrow \mathbb{R}^3$, $\mathbf{r}(u, v) = (x(u,v), y(u,
 is called a *parametrized surface*.
 :::
 
-If we fix $u$ and vary only $v$, a curve is drawn on the surface and its tangent is $\mathbf{r}_v$; likewise, $\mathbf{r}_u$ is also the tangent of a curve on the surface. The plane spanned by the two tangent vectors is the tangent plane, and $\mathbf{r}_u \times \mathbf{r}_v$, which is perpendicular to it, gives the normal direction. That is, the partial derivative vectors $\mathbf{r}_u = \partial \mathbf{r}/\partial u$ and $\mathbf{r}_v = \partial \mathbf{r}/\partial v$ are tangent to the surface, and their cross product
+Fixing $u$ and varying $v$ traces a curve on the surface whose tangent is $\mathbf{r}_v$; likewise, $\mathbf{r}_u$ is the tangent to another curve on the surface. The plane spanned by these two tangent vectors is the tangent plane, and $\mathbf{r}_u \times \mathbf{r}_v$, being perpendicular to it, gives the normal direction. Thus the partial-derivative vectors $\mathbf{r}_u = \partial \mathbf{r}/\partial u$ and $\mathbf{r}_v = \partial \mathbf{r}/\partial v$ are tangent to the surface, and their cross product
 
 $$\mathbf{N} = \mathbf{r}_u \times \mathbf{r}_v$$
 
@@ -33,7 +34,7 @@ is the normal vector of the surface. We call a parametrized surface *regular* if
 
 ## Surface Area
 
-If we divide a surface into small rectangles in the parameter domain, each piece is approximated by a small parallelogram on the tangent plane, or more specifically by the parallelogram formed by $\mathbf{r}_u\Delta u$ and $\mathbf{r}_v\Delta v$. Since its area is $\lvert \mathbf{r}_u \times \mathbf{r}_v\rvert\Delta u\Delta v$, the surface area is obtained by summing these and taking the limit.
+Dividing the surface into small rectangles in the parameter domain, each piece is approximated by a small parallelogram on the tangent plane, more precisely by the parallelogram spanned by $\mathbf{r}_u\Delta u$ and $\mathbf{r}_v\Delta v$. Since its area is $\lvert \mathbf{r}_u \times \mathbf{r}_v\rvert\Delta u\Delta v$, summing these and passing to the limit yields the surface area.
 
 ::: Definition 2
 The *surface area* of a regular parametrized surface $\mathbf{r}\colon D \rightarrow \mathbb{R}^3$ is
@@ -43,9 +44,9 @@ $$\iint_D \lvert \mathbf{r}_u \times \mathbf{r}_v\rvert \dd{u}\dd{v}$$
 and we write the area element as $\dd{S} = \lvert \mathbf{r}_u \times \mathbf{r}_v\rvert \dd{u}\dd{v}$.
 :::
 
-The parametrizations we deal with often do not satisfy the regularity condition on the whole of $D$. Even if $\mathbf{N}$ becomes $\mathbf{0}$ at finitely many points and curves, or if different parameters map to the same point, the exceptional set has area $0$ and thus does not contribute to the value of the above double integral. Therefore, when we speak of surface area and surface integrals from now on, we allow parametrizations that are regular and injective except for finitely many points and curves, that is, parametrizations that cover the surface exactly once.
+The parametrizations we shall use often fail to satisfy the regularity condition on all of $D$. Even if $\mathbf{N}$ vanishes at finitely many points and curves, or if distinct parameters map to the same point, the exceptional set has area $0$ and therefore does not contribute to the value of the above double integral. Hence, when we speak of surface area and surface integrals hereafter, we allow parametrizations that are regular and injective except for finitely many points and curves, that is, parametrizations that cover the surface exactly once.
 
-The area element $\dd{S}$ plays the same role as the Jacobian determinant in multiple integrals, and with this definition of $\dd{S}$ we can integrate a scalar quantity distributed over the surface.
+The area element $\dd{S}$ plays the same role as the Jacobian determinant in multiple integrals, and with this definition we can integrate a scalar quantity distributed over the surface.
 
 ::: Definition 3
 The *surface integral* of a continuous scalar field $f$ on the image $S = \mathbf{r}(D)$ of a regular parametrized surface $\mathbf{r}\colon D \rightarrow \mathbb{R}^3$ is
@@ -55,26 +56,26 @@ $$\iint_S f\dd{S} = \iint_D f(\mathbf{r}(u,v))\lvert \mathbf{r}_u \times \mathbf
 .
 :::
 
-Just as the line integral was independent of the parametrization of the curve because it was integrated with respect to arc length, the surface integral is also independent of the parametrization of the surface because it is integrated using the area element. Indeed, if two parametrized surfaces $\mathbf{r}(u,v)$ and $\tilde{\mathbf{r}}(s,t)$ give the same image and are related by a $C^1$ change of variables $(u,v) \mapsto (s,t)$, then by the chain rule $\mathbf{r}_u \times \mathbf{r}_v = (\partial(s,t)/\partial(u,v))(\tilde{\mathbf{r}}_s \times \tilde{\mathbf{r}}_t)$, so taking absolute values and applying [§Multiple Integrals, ⁋Theorem 4](/en/math/calculus/multiple_integrals#thm4) shows that the double integrals given by the two parametrizations are equal.
+Just as the line integral is independent of the curve's parametrization because it is taken with respect to arc length, the surface integral is independent of the surface's parametrization because it is taken with respect to the area element. Indeed, if two parametrized surfaces $\mathbf{r}(u,v)$ and $\tilde{\mathbf{r}}(s,t)$ have the same image and are related by a $C^1$ change of variables $(u,v) \mapsto (s,t)$, then by the chain rule $\mathbf{r}_u \times \mathbf{r}_v = (\partial(s,t)/\partial(u,v))(\tilde{\mathbf{r}}_s \times \tilde{\mathbf{r}}_t)$; taking absolute values and applying [§Multiple Integrals, ⁋Theorem 4](/en/math/calculus/multiple_integrals#thm4) shows that the two parametrizations yield the same double integral.
 
 ## Flux
 
-On the other hand, we can also consider integrating a vector function, rather than a scalar function, over a surface. For this, just as in the previous post, we must decide which side of the surface is "outside." In the case of a surface, an *orientation* is a continuous choice of one of the two unit normals $\pm \mathbf{N}/\lvert \mathbf{N}\rvert$ at each point.
+On the other hand, we may also consider integrating a vector field, rather than a scalar function, over a surface. As in the previous post, we must then decide which side of the surface is "outside." For a surface, an *orientation* is a continuous choice of one of the two unit normals $\pm \mathbf{N}/\lvert \mathbf{N}\rvert$ at each point.
 
 ::: Definition 4
-The *flux* of a continuous vector field $\mathbf{F}$ on a surface $S$ with orientation given by the unit normal $\mathbf{n}$ is
+The *flux* of a continuous vector field $\mathbf{F}$ across an oriented surface $S$ with unit normal $\mathbf{n}$ is
 
 $$\iint_S \mathbf{F} \cdot d\mathbf{S} = \iint_S \mathbf{F} \cdot \mathbf{n}\dd{S} = \iint_D \mathbf{F}(\mathbf{r}(u,v)) \cdot (\mathbf{r}_u \times \mathbf{r}_v)\dd{u}\dd{v}$$
 
-. Here we assume that $\mathbf{n} = (\mathbf{r}_u \times \mathbf{r}_v)/\lvert \mathbf{r}_u \times \mathbf{r}_v\rvert$ matches the orientation of the surface.
+. Here we take $\mathbf{n} = (\mathbf{r}_u \times \mathbf{r}_v)/\lvert \mathbf{r}_u \times \mathbf{r}_v\rvert$ to match the chosen orientation of the surface.
 :::
 
-Flux is the amount flowing across the surface per unit time. For example, if $\mathbf{F}$ is the velocity of a fluid, then $\iint_S \mathbf{F}\cdot d\mathbf{S}$ can be thought of as the amount of fluid passing through the surface. It is then intuitively clear that only the normal component $\mathbf{F}\cdot \mathbf{n}$ contributes to the flow, while the component tangent to the surface does not, and it is also easy to check that if the orientation is reversed, $\mathbf{n}$ is flipped and the sign of the flux changes.
+Flux is the amount of flow across the surface per unit time. For instance, if $\mathbf{F}$ is the velocity of a fluid, then $\iint_S \mathbf{F}\cdot d\mathbf{S}$ represents the amount of fluid passing through the surface. It is then intuitively clear that only the normal component $\mathbf{F}\cdot \mathbf{n}$ contributes to the flow, while the tangential component does not; and one easily checks that reversing the orientation flips $\mathbf{n}$ and changes the sign of the flux.
 
 Here are two examples of surface integrals.
 
 ::: Example 5 (Surface area of a sphere)
-Parametrize a sphere of radius $R$ by spherical coordinates
+Parametrize a sphere of radius $R$ using spherical coordinates
 
 $$\mathbf{r}(\phi, \theta) = (R\sin\phi\cos\theta, R\sin\phi\sin\theta, R\cos\phi),\qquad 0 \leq \phi \leq \pi,\quad 0 \leq \theta \leq 2\pi$$
 
@@ -89,14 +90,14 @@ $$\iint_S \dd{S} = \int_0^{2\pi} \int_0^\pi R^2\sin\phi \dd{\phi} \dd{\theta} = 
 which gives the familiar value.
 :::
 
-The next is an example of the integral of a vector function.
+The next example is that of a vector-field integral.
 
 ::: Example 6
-On the sphere of [Example 5](#ex5), give the outward orientation. Our goal in this example is to find the flux of
+On the sphere of [Example 5](#ex5), take the outward orientation. Our goal in this example is to compute the flux of
 
 $$\mathbf{F}(x,y,z) = (x,y,z)$$
 
-. Similarly, in the spherical parametrization,
+. As before, in the spherical parametrization,
 
 $$\mathbf{r}_\phi \times \mathbf{r}_\theta = R(\sin\phi) \mathbf{r}$$
 
