@@ -10,12 +10,13 @@ sidebar:
 
 date: 2026-06-22
 weight: 5
-translated_at: 2026-08-17T18:46:26+00:00
+translated_at: 2026-08-19T06:15:04+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-08-19T06:15:04+00:00
 ---
-There are two main reasons why we defined the limit and continuity of functions before defining the limit of sequences and infinite series. The first is that we must deal with infinite series anyway for the method of exhaustion used in definite integration, and we wanted the flow from differentiation to integration not to be interrupted by the limit of sequences. The second is precisely to define power series first in this post.
+There are two main reasons we defined the limit and continuity of functions before defining the limit of sequences and infinite series. First, the method of exhaustion used in definite integration requires infinite series in any case, and we did not want the flow from differentiation to integration to be interrupted by the limit of sequences. Second, we wished to define power series first in this post.
 
-Power series provide another way of writing functions, and their introduction makes it easier to handle functions that could not be treated in high school. For example, when defining the exponential function $2^x$ in high school, we did not rigorously define its values at irrational numbers; to do so requires the completeness of the real numbers used in [§Continuous Functions, ⁋Theorem 5](/en/math/calculus/continuity#thm5) or [§Limits of Sequences, ⁋Proposition 7](/en/math/calculus/sequences#prop7). Moreover, after defining the exponential function, even when defining the natural constant in [§Limits of Sequences, ⁋Example 8](/en/math/calculus/sequences#ex8), we had to resort to a somewhat ambiguous method like *the exponential function that remains itself upon differentiation*. On the other hand, if we define the exponential function $e^x$ by a power series, none of this complexity arises, and we can neatly express even functions that do not appear as elementary functions, such as the integral of $e^{-x^2}$.
+Power series provide another way of writing functions, and their introduction makes it easier to handle functions that could not be treated in high school. For example, when defining the exponential function $2^x$ in high school, we did not rigorously define its values at irrational numbers; doing so requires the completeness of the real numbers used in [§Continuous Functions, ⁋Theorem 5](/en/math/calculus/continuity#thm5) or [§Limits of Sequences, ⁋Proposition 7](/en/math/calculus/sequences#prop7). Moreover, even after defining the exponential function, when defining the natural constant in [§Limits of Sequences, ⁋Example 8](/en/math/calculus/sequences#ex8) we had to resort to a somewhat ambiguous description: *the exponential function that remains itself upon differentiation*. By contrast, if we define the exponential function $e^x$ by a power series, none of this complexity arises, and we can neatly express even functions that are not elementary, such as the integral of $e^{-x^2}$.
 
 ## Power Series and Radius of Convergence
 
