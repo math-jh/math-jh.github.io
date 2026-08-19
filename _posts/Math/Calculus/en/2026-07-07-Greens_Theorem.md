@@ -10,14 +10,15 @@ sidebar:
 
 date: 2026-07-07
 weight: 18
-translated_at: 2026-08-18T01:16:41+00:00
+translated_at: 2026-08-19T12:45:04+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-08-19T12:45:04+00:00
 ---
-The fundamental theorem of calculus and the fundamental theorem of line integrals share a common spirit: what happens in the interior of a domain is expressed as an integral over the boundary. This can be seen as the prototype of later theorems such as the divergence theorem and Stokes' theorem, and Green's theorem, which we examine in this post, can be regarded as the two-dimensional version of this spirit.
+The fundamental theorem of calculus and the fundamental theorem of line integrals share a common spirit: what happens in the interior of a domain is expressed as an integral over its boundary. This idea is the prototype of later theorems such as the divergence theorem and Stokes' theorem, and Green's theorem, which we examine in this post, can be regarded as the two-dimensional version of this spirit.
 
 ## Green's Theorem
 
-First, for the boundary curve $\partial D$ of a planar region $D$, we define the direction in which the region lies to the left, that is, the direction in which the outer boundary is traversed counterclockwise, as the *positive orientation*. Then the following holds.
+First, for the boundary curve $\partial D$ of a planar region $D$, we define the *positive orientation* as the direction in which the region lies to the left; that is, the outer boundary is traversed counterclockwise. Then the following holds.
 
 ::: Theorem 1 (Green)
 If $D$ is a planar region bounded by a piecewise smooth simple closed curve $C = \partial D$, and $P, Q$ are $C^1$ on an open set containing $D$, then with $C$ taken in the positive orientation,
@@ -36,7 +37,7 @@ in the case where $D$ is simple with respect to $y$, that is,
 
 $$D = \{(x,y) \mid a \leq x \leq b,\ g_1(x) \leq y \leq g_2(x)\}.$$
 
-For the double integral side, applying the iterated integral formula from [§Multiple Integrals, §§Fubini's Theorem](/en/math/calculus/multiple_integrals#fubinis-theorem) and integrating the inner integral first yields
+For the double integral, applying the iterated integral formula from [§Multiple Integrals, §§Fubini's Theorem](/en/math/calculus/multiple_integrals#fubinis-theorem) and integrating the inner integral first yields
 
 $$\iint_D \frac{\partial P}{\partial y}\dd{A} = \int_a^b \bigl(P(x, g_2(x)) - P(x, g_1(x))\bigr)\dd{x}.$$
 
@@ -101,7 +102,7 @@ and applying [Theorem 1](#thm1) to $(P, Q) \mapsto (-Q, P)$ shows that this equa
 $$\iint_D (P_x + Q_y)\dd{A} = \iint_D \divergence \mathbf{F}\dd{A}.$$
 :::
 
-The first identity is exactly Green's theorem, and only the second is new, but its intuitive meaning is clear: integrating the function $\mathbf{F}$ along the boundary in the direction *outward* from the boundary captures precisely the divergence. On the other hand, we have already seen in [§Line Integrals, ⁋Example 6](/en/math/calculus/line_integrals#ex6) that even when curl vanishes, a vector field may fail to be conservative if the region has holes; this can be written rigorously as follows.
+The first identity is exactly Green's theorem, and only the second is new, but its intuitive meaning is clear: integrating the function $\mathbf{F}$ along the boundary in the direction <em>outward</em> from the boundary captures precisely the divergence. On the other hand, we have already seen in [§Line Integrals, ⁋Example 6](/en/math/calculus/line_integrals#ex6) that even when curl vanishes, a vector field may fail to be conservative if the region has holes; this can be written rigorously as follows.
 
 A region being *simply connected* means that any closed curve inside it can be continuously shrunk to a point without leaving the region; intuitively, one may think of this as a region without holes. For instance, a disk is simply connected, but a disk with its center removed is not, because to shrink a circle surrounding the center to a point one must necessarily pass through the missing center.
 
