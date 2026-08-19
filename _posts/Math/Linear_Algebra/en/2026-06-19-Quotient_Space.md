@@ -12,14 +12,15 @@ sidebar:
 date: 2026-06-19
 
 weight: 8
-translated_at: 2026-08-16T05:47:06+00:00
+translated_at: 2026-08-19T18:15:04+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-08-19T18:15:04+00:00
 ---
-In this post, we define the *quotient space* $V/W$ for a $\mathbb{K}$-vector space $V$ and its subspace $W$. Intuitively, this is the space obtained from $V$ by making every element of $W$ equal to $0$; however, since we want the remaining space to still be a vector space, simply declaring all elements of $W$ to be $0$ is not enough to achieve this.
+In this post, we define the *quotient space* $V/W$ for a $\mathbb{K}$-vector space $V$ and its subspace $W$. Intuitively, this is the space obtained from $V$ by making every element of $W$ equal to $0$; however, since we want the remaining space to still be a vector space, simply declaring all elements of $W$ to be $0$ is not enough.
 
 ## Cosets
 
-The biggest problem, as pointed out above, is that merely setting all elements of $W$ to $0$ gives no guarantee that the remaining space will be a vector space. For this to be a vector space, it must first be closed under operations: for any element $v$ of $V$ and any fixed $0\neq w\in W$, we can always write $v=(v-w)+w$, so if $v$ and $v-w$ do not belong to $W$, then even after treating all elements of $W$ as $0$ we get
+The main problem, as noted above, is that merely setting all elements of $W$ to $0$ gives no guarantee that the remaining space will be a vector space. For it to be a vector space, it must first be closed under operations: for any element $v$ of $V$ and any fixed $0\neq w\in W$, we can always write $v=(v-w)+w$, so if neither $v$ nor $v-w$ belongs to $W$, then even after treating all elements of $W$ as $0$ we obtain
 
 $$v-(v-w)=w=0,$$
 
@@ -50,7 +51,7 @@ First, if $v-v'\in W$, then for any representative $v+w\in v+W$ we have $v+w=v'+
 Conversely, if $v+W=v'+W$, then $v=v+0\in v'+W$, so there exists $w\in W$ with $v=v'+w$, and therefore $v-v'=w\in W$.
 :::
 
-In particular, $v+W=W$ is equivalent to $v\in W$, and from this we know that two distinct cosets are always disjoint.
+In particular, $v+W=W$ is equivalent to $v\in W$, and from this we see that two distinct cosets are always disjoint.
 
 ## Definition of the Quotient Space
 
