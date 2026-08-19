@@ -10,10 +10,11 @@ sidebar:
 
 date: 2024-08-29
 weight: 9
-translated_at: 2026-08-18T06:17:32+00:00
+translated_at: 2026-08-19T17:45:04+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-08-19T17:45:04+00:00
 ---
-In this post we define the notions of an abelian category, chain complex, and exact sequence.
+In this post we define the notions of an abelian category, a chain complex, and an exact sequence.
 
 ## Additive category
 
@@ -29,7 +30,7 @@ both hold. An $\Ab$-category that possesses a zero object $0$ and has a product 
 
 A functor $F:\mathcal{A}\rightarrow\mathcal{B}$ between two additive categories $\mathcal{A},\mathcal{B}$ is called an *additive functor* if $F$ induces a group homomorphism from the abelian group $\Hom_\mathcal{A}(A,B)$ to $\Hom_\mathcal{B}(F(A),F(B))$.
 
-In an additive category, for any $A,B\in\obj(\mathcal{A})$, the *zero map* $0_{AB}:A\rightarrow B$ is defined as $A\rightarrow 0\rightarrow B$. This zero map is, of course, the identity element for addition in the abelian group $\Hom_\mathcal{A}(A,B)$.
+In an additive category, for any $A,B\in\obj(\mathcal{A})$, the *zero map* $0_{AB}:A\rightarrow B$ is defined as the composite $A\rightarrow 0\rightarrow B$. This zero map is, of course, the identity element for addition in the abelian group $\Hom_\mathcal{A}(A,B)$.
 
 ::: Proposition 2
 For any additive category $\mathcal{A}$ and any two objects $A,B\in\obj(\mathcal{A})$, the zero map $0_{AB}$ defined above is the identity element for addition in $\Hom_\mathcal{A}(A,B)$.
@@ -87,7 +88,7 @@ Consider the following data defined in an additive category $\mathcal{A}$.
 If these data satisfy the condition $d_n\circ d_{n+1}=0$, we call this a *chain complex* and write it as $A_\bullet$.
 :::
 
-On the other hand, a morphism between chain complexes $A_\bullet$ and $B_\bullet$ is called a *chain map*; it is given by a collection of morphisms $(f_n: A_n \rightarrow B_n)_{n\in \mathbb{Z}}$ satisfying the condition $d_n^B\circ f_n=f_{n-1}\circ d_n^A$. This allows us to define the category of chain complexes $\Ch(\mathcal{A})$.
+A morphism between chain complexes $A_\bullet$ and $B_\bullet$ is called a *chain map*; it is given by a collection of morphisms $(f_n: A_n \rightarrow B_n)_{n\in \mathbb{Z}}$ satisfying the condition $d_n^B\circ f_n=f_{n-1}\circ d_n^A$. This allows us to define the category of chain complexes $\Ch(\mathcal{A})$.
 
 If $\mathcal{A}$ is an abelian category, we can examine this in more detail. Let us fix the names and notation commonly used when dealing with chain complexes in this situation. First, each $d_n$ is called a *differential* or a *boundary map*, depending on context.
 
