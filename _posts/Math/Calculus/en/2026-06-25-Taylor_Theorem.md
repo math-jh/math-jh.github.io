@@ -10,36 +10,37 @@ sidebar:
 
 date: 2026-06-25
 weight: 9
-translated_at: 2026-08-17T20:15:05+00:00
+translated_at: 2026-08-19T07:45:04+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-08-19T07:45:04+00:00
 ---
-In [§Differentiation and Derivatives](/en/math/calculus/derivatives), we saw that differentiating a function once gives its derivative, which yields the tangent line
+In [§Differentiation and Derivatives](/en/math/calculus/derivatives), we saw that differentiating a function once yields its derivative, which gives the tangent line
 
 $$f(x) \approx f(a) + f'(a)(x-a)$$
 
-to the function. Viewed differently, this approximates a given function by a linear polynomial, and applying differentiation repeatedly yields a more refined approximation.
+to the function. Viewed from another angle, this approximates a given function by a linear polynomial, and applying differentiation repeatedly produces a more refined approximation.
 
 ## Taylor Polynomials
 
-If a function $f$ is $n$-times differentiable at a point $a$, we can construct a degree-$n$ polynomial whose value at $a$ and first $n$ derivatives agree with those of $f$.
+If a function $f$ is $n$-times differentiable at a point $a$, we can construct a degree-$n$ polynomial whose value at $a$ and whose first $n$ derivatives agree with those of $f$.
 
 ::: Definition 1
-When $f$ is $n$-times differentiable at $a$, the *Taylor polynomial* of degree $n$ for $f$ at $a$ is
+When $f$ is $n$-times differentiable at $a$, the *Taylor polynomial of degree $n$ for $f$ at $a$* is
 
 $$P_n(x) = \sum_{k=0}^{n} \frac{f^{(k)}(a)}{k!}(x - a)^k = f(a) + f'(a)(x-a) + \frac{f''(a)}{2!}(x-a)^2 + \cdots + \frac{f^{(n)}(a)}{n!}(x-a)^n.$$
 
 In the special case where the center is $a = 0$, it is called the *Maclaurin polynomial*.
 :::
 
-In practice, one can always shift every function to the origin, compute there, and then translate back, so taking $a=0$ as the definition causes no real problem.
+In practice, one can always shift any function to the origin, compute there, and then translate back, so taking $a=0$ as the definition causes no real difficulty.
 
 ## Taylor's Theorem
 
-As claimed above, Taylor expansion is a way of approximating a given function by an $n$-th degree polynomial. Consider the following graph.
+As claimed above, Taylor expansion is a method of approximating a given function by an $n$-th degree polynomial. Consider the following graph.
 
 {% diagram Math/Calculus/Taylor_Theorem-1.svg width="23.68em" alt="The sine function and its Taylor polynomial approximations" %}
 
-This graph shows the first few Taylor expansions of the sine function, and from the figure we can see that the approximation indeed gets closer to the $\sin$ function. However, to prove mathematically that this actually reduces the error, we need the following theorem.
+This graph shows the first few Taylor expansions of the sine function, and from the figure we can see that the approximation indeed approaches the $\sin$ function. However, to prove mathematically that this actually reduces the error, we need the following theorem.
 
 ::: Theorem 2 (Taylor's theorem, Lagrange remainder)
 If $f$ is $(n+1)$-times differentiable on an interval containing $a$ and $x$, then for some $c$ between $a$ and $x$,
@@ -93,7 +94,7 @@ $$e^x = \sum_{k=0}^{\infty}\frac{x^k}{k!}$$
 holds for all real $x$. In particular, for $x = 1$ we get $e = \sum_{k=0}^\infty 1/k!$.
 :::
 
-Similarly, for the trigonometric functions we know, the following holds.
+Similarly, for the trigonometric functions we are familiar with, the following holds.
 
 ::: Example 4 (Trigonometric functions)
 Since the derivatives of $\sin x$ are periodic: $\cos x, -\sin x, -\cos x, \sin x$, the values $f^{(k)}(0)$ repeat $0, 1, 0, -1$. All derivatives are bounded by $\lvert f^{(n+1)}\rvert \leq 1$, so by the same argument as in [Example 3](#ex3) the remainder goes to $0$, and thus for all $x$,
@@ -135,16 +136,16 @@ $$\lvert R_n(x)\rvert = \frac{\lvert f^{(n+1)}(c)\rvert}{(n+1)!}\lvert x-a\rvert
 For fixed $x$, the right-hand side goes to $0$ as $n \rightarrow \infty$ ([§Limits of Sequences, ⁋Example 6](/en/math/calculus/sequences#ex6), $r^n/n! \rightarrow 0$), so $R_n(x) \rightarrow 0$ and the partial sums converge to $f(x)$.
 :::
 
-Meanwhile, [Theorem 2](#thm2) is essentially numerical: using it, we can by hand assess how accurate an approximation is. For instance, approximating $\sin(0.1)$ by $P_3(x) = x - x^3/6$, the fourth-degree remainder is $\lvert R_3(0.1)\rvert \leq (0.1)^4/4! \approx 4.2\times 10^{-6}$, so we can verify accuracy to five decimal places; and the error in truncating $e = \sum_k 1/k!$ after the first $n+1$ terms is $\lvert R_n(1)\rvert \leq 3/(n+1)!$ (since $e^c < 3$).
+Meanwhile, [Theorem 2](#thm2) is essentially numerical: using it, we can assess by hand how accurate an approximation is. For instance, approximating $\sin(0.1)$ by $P_3(x) = x - x^3/6$, the fourth-degree remainder is $\lvert R_3(0.1)\rvert \leq (0.1)^4/4! \approx 4.2\times 10^{-6}$, so we can verify accuracy to five decimal places; and the error in truncating $e = \sum_k 1/k!$ after the first $n+1$ terms is $\lvert R_n(1)\rvert \leq 3/(n+1)!$ (since $e^c < 3$).
 
-As another example, since Taylor expansion remembers not just the highest or lowest degree term, it can be used powerfully in computing limits of $0/0$ form.
+As another example, since Taylor expansion retains not just the highest or lowest degree term, it can be used powerfully in computing limits of $0/0$ form.
 
 ::: Example 7 (Limit)
 Let us find the limit $\lim_{x\rightarrow 0}(e^x - 1 - x)/x^2$. From [Example 3](#ex3), $e^x = 1 + x + x^2/2 + x^3/6 + \cdots$, so
 
 $$\frac{e^x - 1 - x}{x^2} = \frac{x^2/2 + x^3/6 + \cdots}{x^2} = \frac12 + \frac{x}{6} + \cdots \rightarrow \frac12.$$
 
-This is a result that can also be checked by applying [§Mean Value Theorem, ⁋Theorem 18](/en/math/calculus/mean_value_theorem#thm18) twice, and the reason Taylor expansion succeeds is that it retains information from higher-degree terms, so after canceling with the denominator and numerator, information still remains.
+This is a result that can also be checked by applying [§Mean Value Theorem, ⁋Theorem 18](/en/math/calculus/mean_value_theorem#thm18) twice. Taylor expansion succeeds because it retains information from higher-degree terms, so after canceling with the denominator and numerator, information still remains.
 :::
 
 ---
