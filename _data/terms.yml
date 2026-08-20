@@ -14030,6 +14030,13 @@ P:
     url: /ko/math/set_theory/ordered_pair
   - label: '[집합론] §집합의 곱'
     url: /ko/math/set_theory/product_of_sets
+- id: projection_function
+  en: projection function
+  ko: 성분함수
+  primary: ko
+  defs:
+  - label: '[집합론] §집합의 곱'
+    url: /ko/math/set_theory/product_of_sets
 - id: projection_theorem
   en: projection theorem
   ko: 사영정리
