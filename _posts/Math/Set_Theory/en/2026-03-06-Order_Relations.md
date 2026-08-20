@@ -103,7 +103,7 @@ so $S$ is transitive, and therefore $S$ is an equivalence relation.
 Given an order relation $\leq$, let $<$ be the relation defined by <phrase>$x\leq y$ and $x\neq y$</phrase>. Then $<$ cannot be an order relation because it is not antisymmetric, nor can it be a preorder because it is not reflexive. Instead, we define the following.
 
 ::: Definition 9
-A relation $R$ is said to be *asymmetric* if $x\mathrel{R}y$ implies $y\not\mathrel{R}x$. An asymmetric, transitive relation is called a *strict order*.
+A relation $R$ is said to be *asymmetric* if $x\mathrel{R}y$ implies $y\not{\mathrel{R}}x$. An asymmetric, transitive relation is called a *strict order*.
 :::
 
 To denote a strict order we use $<_{\tiny S}$. Then the following holds.
@@ -123,7 +123,7 @@ But this can be rewritten as
 
 $$((x\leq_{\tiny R}y)\wedge(y\leq_{\tiny R}x))\wedge(x\neq y)$$
 
-By the antisymmetry of $R$ this becomes $(x=y)\wedge(x\neq y)$, which is always false; hence if $x\mathrel{S}y$ then $y\not\mathrel{S}x$.
+By the antisymmetry of $R$ this becomes $(x=y)\wedge(x\neq y)$, which is always false; hence if $x\mathrel{S}y$ then $y\not{\mathrel{S}}x$.
 
 Conversely, let $S$ be a strict order and define a new relation $R$ by <phrase>$x<_{\tiny S}y$ or $x=y$</phrase>. First, since $x=x$, the latter condition gives $x\mathrel{R}x$. To show antisymmetry, assume that $x\mathrel{R}y$ and $y\mathrel{R}x$ hold. Then
 

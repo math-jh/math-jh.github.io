@@ -245,6 +245,14 @@ window.KATEX_MACROS = {
     // misc
     "\\half":"\\tfrac{1}{2}",
     "\\shift":"(#1)\\text{-shifted}",
+    // KaTeX 기본 \not 은 그 자체로 독립된 mrel atom 이라, buildHTML 이 mrel 마다
+    // base span 을 끊는 탓에 사선과 뒤따르는 관계기호가 서로 다른 base 로 갈라진다.
+    // base 사이는 브라우저가 자유롭게 줄바꿈하므로 좁은 폭에서 "x /" + "∈ A" 처럼
+    // 사선만 윗줄에 남는다. 인자를 흡수해 통짜 \mathrel 로 만들어 막는다
+    // (MathML 사본의 U+0338 조합 문자도 그대로 유지).
+    // 인자는 토큰 하나다 — \not\mathrel{R} 처럼 두 토큰을 넘기면 parse error 이므로
+    // \not{\mathrel{R}} 로 감싸 적을 것.
+    "\\not":"\\html@mathml{\\mathrel{\\mathrlap{\\@not}#1}}{\\mathrel{\\char\"338 #1}}",
 };
 
 // renderMathInElement 딜리미터의 단일 출처.
