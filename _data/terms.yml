@@ -16157,6 +16157,13 @@ S:
   defs:
   - label: '[리 이론] §Serre 관계식'
     url: /ko/math/lie_theory/serre_relations
+- id: set
+  en: set
+  ko: 집합
+  primary: ko
+  defs:
+  - label: '[대수적 구조] §대수적 구조'
+    url: /ko/math/algebraic_structures/algebraic_structures
 - id: set_difference
   en: set difference
   ko: 차집합
