@@ -10,22 +10,23 @@ sidebar:
 
 date: 2024-10-16
 weight: 6
-translated_at: 2026-08-20T19:56:24+00:00
+translated_at: 2026-08-20T20:15:05+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-08-20T20:15:05+00:00
 ---
 ## Prime avoidance lemma
 
 ::: Definition 1
 For a ring $A$ and an $A$-module $M$, a prime ideal $\mathfrak{p}$ of $A$ is called an *associated prime ideal* of $M$ if $\mathfrak{p}=\ann(x)$ for some $x\in M$. We write $\Ass M$ for the set of associated primes.
 
-In the special case where $M=\mathfrak{a}$ is an ideal of $A$, by convention the associated primes of $\mathfrak{a}$ mean not $\Ass \mathfrak{a}$, but $\Ass A/\mathfrak{a}$.
+In the special case where $M=\mathfrak{a}$ is an ideal of $A$, the associated primes of $\mathfrak{a}$ are by convention not $\Ass \mathfrak{a}$, but $\Ass A/\mathfrak{a}$.
 :::
 
-Henceforth, whenever we write $\ann(x)$ for the annihilator of an element, we always assume $x\neq 0$. Since $\ann(x)=A$ when $x=0$, which cannot be a prime ideal, this convention is merely for notational convenience when dealing with associated primes.
+Henceforth, whenever we write $\ann(x)$ for the annihilator of an element, we always assume $x\neq 0$. Since $\ann(0)=A$, which cannot be a prime ideal, this convention is merely for notational convenience when dealing with associated primes.
 
 By definition, $\mathfrak{p}$ being an associated prime of $M$ is equivalent to $A/\mathfrak{p}$ being a submodule of $M$. This follows immediately from applying the first isomorphism theorem to the map $A \rightarrow M$ sending $1\mapsto x$.
 
-In this post we examine various properties of associated prime ideals. The following lemma plays an important role in this process.
+In this post we examine various properties of associated prime ideals. The following lemma plays an important role.
 
 ::: Lemma 2 (Prime avoidance lemma)
 Let $\mathfrak{a}_1,\ldots, \mathfrak{a}_n, \mathfrak{b}$ be ideals of $A$, and suppose $\mathfrak{b}\subseteq \mathfrak{a}_1\cup\cdots\cup \mathfrak{a}_n$. If $A$ contains an infinite field, or at most two of the $\mathfrak{a}_i$ are not prime ideals, then $\mathfrak{b}$ is contained in one of $\mathfrak{a}_1,\ldots, \mathfrak{a}_n$.
@@ -37,24 +38,24 @@ If $A$ contains an infinite field $\mathbb{K}$, then viewing each ideal as a $\m
 
 $$\mathfrak{b}=\bigcup_{i=1}^n (\mathfrak{b}\cap \mathfrak{a}_i)$$
 
-and it is obvious because no $\mathbb{K}$-vector space can be expressed as a finite union of its proper subspaces.
+and the claim is obvious because no $\mathbb{K}$-vector space can be expressed as a finite union of its proper subspaces.
 
 The remaining case is proved by induction on $n$. The case $n=1$ is trivial.
 
-For larger $n$, if the inclusion in the hypothesis still holds after omitting one of $\mathfrak{a}_1,\ldots, \mathfrak{a}_n$, then this is resolved by the inductive hypothesis, so we may assume this is not the case. That is, we may assume there always exists $x_i\in \mathfrak{b}$ with $x_i\not\in \bigcup_{j\neq i}\mathfrak{a}_j$, and by the condition on $x_i$ we necessarily have $x_i\in \mathfrak{a}_i$.
+For larger $n$, if the inclusion in the hypothesis still holds after omitting any one of $\mathfrak{a}_1,\ldots, \mathfrak{a}_n$, then this is resolved by the inductive hypothesis, so we may assume this is not the case. That is, we may assume there always exists $x_i\in \mathfrak{b}$ with $x_i\not\in \bigcup_{j\neq i}\mathfrak{a}_j$, and by the condition on $x_i$ we necessarily have $x_i\in \mathfrak{a}_i$.
 
-Now for the case $n=2$, consider the element $x_1+x_2$ of $\mathfrak{b}$. If $x_1+x_2\in \mathfrak{a}_1$, then $x_2=(x_1+x_2)-x_1\in \mathfrak{a}_1$, which is a contradiction, and similarly $x_1+x_2$ cannot be an element of $\mathfrak{a}_2$. This contradicts the assumption that $\mathfrak{b}\subseteq \mathfrak{a}_1\cup \mathfrak{a}_2$.
+Now for the case $n=2$, consider the element $x_1+x_2$ of $\mathfrak{b}$. If $x_1+x_2\in \mathfrak{a}_1$, then $x_2=(x_1+x_2)-x_1\in \mathfrak{a}_1$, which is a contradiction; similarly $x_1+x_2$ cannot lie in $\mathfrak{a}_2$. This contradicts the assumption that $\mathfrak{b}\subseteq \mathfrak{a}_1\cup \mathfrak{a}_2$.
 
 For $n\geq 3$ we use a similar idea. From the given hypothesis, at least one of $\mathfrak{a}_1,\ldots, \mathfrak{a}_n$ is a prime ideal, so without loss of generality we may assume $\mathfrak{a}_1$ is prime. Now consider the element $x_1+x_2x_3\cdots x_n$ of $\mathfrak{b}$. First, for each $j\geq 2$ we have $x_j\not\in \mathfrak{a}_1$, and since $\mathfrak{a}_1$ is prime, $x_2x_3\cdots x_n\not\in \mathfrak{a}_1$; since $x_1\in \mathfrak{a}_1$, this element does not belong to $\mathfrak{a}_1$. Also, for each $j\geq 2$, since $x_j\in \mathfrak{a}_j$ we have $x_2x_3\cdots x_n\in \mathfrak{a}_j$ and $x_1\not\in \mathfrak{a}_j$, so this element does not belong to $\mathfrak{a}_j$ either. This contradicts the assumption that $\mathfrak{b}\subseteq \mathfrak{a}_1\cup\cdots\cup \mathfrak{a}_n$.
 
-In the graded ring case, we simply multiply $x_i$ by itself enough times to match the degree of $x_2x_3\cdots$, adjusting the degree as needed.
+In the graded ring case, we simply multiply each $x_i$ by itself enough times to match the degree of $x_2x_3\cdots$, adjusting the degree as needed.
 :::
 
-In practice, the latter hypothesis of the lemma is satisfied more often and is used more frequently than the former.
+In practice, the latter hypothesis is satisfied more often and is used more frequently than the former.
 
 ## Associated prime ideals
 
-Now we examine $\Ass M$ in a bit more detail.
+Now we examine $\Ass M$ in more detail.
 
 ::: Proposition 3
 Fix an $A$-module $M$, and suppose $\mathfrak{a}$ is maximal among ideals of the form $\ann(x)$ for $x\in M$. Then $\mathfrak{a}$ is a prime ideal.
@@ -69,10 +70,10 @@ and we conclude $a\in \mathfrak{a}$.
 
 The $\mathfrak{a}$ obtained from the above proposition is a prime ideal and also the annihilator of some element, so by definition it belongs to $\Ass M$.
 
-On the other hand, by [§Properties of Localization, ⁋Lemma 3](/en/math/commutative_algebra/properties_of_localization#lem3), for any $A$-module $M$, an element $x\in M$ is zero if and only if its image under the localization $\epsilon_\mathfrak{m}: M \rightarrow M_\mathfrak{m}$ is zero for every maximal ideal $\mathfrak{m}$; thus to show $x=0$ it suffices to show $\epsilon_\mathfrak{p}(x)=0$ for all prime ideals $\mathfrak{p}$. The following corollary can be understood in the same spirit.
+On the other hand, by [§Properties of Localization, ⁋Lemma 3](/en/math/commutative_algebra/properties_of_localization#lem3), for any $A$-module $M$, an element $x\in M$ is zero if and only if its image under the localization map $\epsilon_\mathfrak{m}: M \rightarrow M_\mathfrak{m}$ is zero for every maximal ideal $\mathfrak{m}$; thus to show $x=0$ it suffices to show $\epsilon_\mathfrak{p}(x)=0$ for all prime ideals $\mathfrak{p}$. The following corollary can be understood in the same spirit.
 
 ::: Corollary 4
-Let $M$ be a module defined over a Noetherian ring $A$. Then the following hold.
+Let $M$ be a module over a Noetherian ring $A$. Then the following hold.
 
 1. For an element $x$ of $M$, we have $x=0$ if and only if $\epsilon_\mathfrak{p}(x)=0$ for every maximal associated prime $\mathfrak{p}$ of $M$.
 2. For a submodule $L$ of $M$, we have $L=0$ if and only if $L_\mathfrak{p}=0$ for all $\mathfrak{p}\in\Ass M$.
@@ -102,7 +103,7 @@ so $\ann(ax)=\mathfrak{p}$. Here the last equivalence uses $ax\neq 0$ and $Ax\co
 :::
 
 ::: Lemma 6
-For a finitely generated module $M$ defined over a Noetherian ring $A$, there exists a filtration
+For a finitely generated module $M$ over a Noetherian ring $A$, there exists a filtration
 
 $$0=M_0\subseteq M_1\subseteq\cdots\subseteq M_n=M,\qquad \text{$M_k/M_{k-1}\cong A/\mathfrak{p}_k$ for some prime $\mathfrak{p}_k$, for all $k$}$$
 
@@ -113,7 +114,7 @@ First, using [Proposition 3](#prop3) we can find an associated prime $\mathfrak{
 :::
 
 ::: Theorem 7
-For a nonzero finitely generated module $M$ defined over a Noetherian ring $A$, the following hold.
+For a nonzero finitely generated module $M$ over a Noetherian ring $A$, the following hold.
 
 1. $\Ass M$ is a nonempty finite set, and each of its elements contains $\ann M$. Moreover, the minimal prime ideals among those containing $\ann M$ are all contained in $\Ass M$.
 2. The union of the associated primes consists of $0$ together with all zero-divisors of $M$.
@@ -145,7 +146,7 @@ $$\Ass M \subseteq \Ass M_{n-1}\cup \{ \mathfrak{p}_n\}\subseteq \Ass M_{n-2}\cu
 
 in the above manner yields the finiteness in the first result.
 
-The remaining part of the first result is obtained by proving the third result. Before that, for the second result, if $a\in A$ belongs to the annihilator ideal of some nonzero $x\in M$, then considering a maximal annihilator ideal containing this annihilator ideal, which belongs to $\Ass M$, makes this direction obvious. Conversely, if $\mathfrak{p}=\ann(x)\in \Ass M$, then any nonzero element of $\mathfrak{p}$ is a zero-divisor of $M$ annihilating $x$. For the third result, paying attention to notation and using [§Properties of Localization, ⁋Proposition 5](/en/math/commutative_algebra/properties_of_localization#prop5) suffices.
+The remaining part of the first result is obtained by proving the third result. Before that, for the second result, if $a\in A$ belongs to the annihilator of some nonzero $x\in M$, then considering a maximal annihilator ideal containing this annihilator, which belongs to $\Ass M$, makes this direction obvious. Conversely, if $\mathfrak{p}=\ann(x)\in \Ass M$, then any nonzero element of $\mathfrak{p}$ is a zero-divisor of $M$ annihilating $x$. For the third result, paying attention to notation and using [§Properties of Localization, ⁋Proposition 5](/en/math/commutative_algebra/properties_of_localization#prop5) suffices.
 
 Assuming the third result, the remaining part is also obvious. If $\mathfrak{p}$ is minimal among prime ideals containing $\ann M$, then using the third result we can consider the maximal ideal $\mathfrak{p}$ in the localization $A_\mathfrak{p}$; since $\mathfrak{p}$ is the unique prime ideal containing $\ann M$, we must have $\mathfrak{p}\in \Ass M$.
 :::
@@ -158,11 +159,11 @@ For a reduced Noetherian ring $A$, let $K$ be the total ring of fractions of $A$
 ::: Proof
 First, taking $M=A$ we have $\ann A=\{0\}$. Hence the minimal prime ideals $\mathfrak{p}_1,\ldots, \mathfrak{p}_k$ of $A$ all belong to $\Ass M$, and their union consists of the zero-divisors of $A$.
 
-Moreover, if $A$ is a reduced ring, then their union is exactly the set of all zero-divisors of $A$. To verify this, first observe from the assumption that $A$ is reduced that
+Moreover, if $A$ is reduced, then their union is exactly the set of all zero-divisors of $A$. To verify this, first observe from the assumption that $A$ is reduced that
 
 $$(0)=\mathfrak{N}(A)=\bigcap_\text{\scriptsize$\mathfrak{p}$ a prime}\mathfrak{p}\supseteq \bigcap_{i=1}^k \mathfrak{p}_i$$
 
-holds. Then for any zerodivisor $a\neq 0$ and $b\neq 0$ with $ab=0$, there must exist some $\mathfrak{p}_i$ with $b\not\in \mathfrak{p}_i$, and then since $ab=0\in \mathfrak{p}_i$ we must have $a\in \mathfrak{p}_i$.
+holds. Then for any zero-divisor $a\neq 0$ and $b\neq 0$ with $ab=0$, there must exist some $\mathfrak{p}_i$ with $b\not\in \mathfrak{p}_i$, and then since $ab=0\in \mathfrak{p}_i$ we must have $a\in \mathfrak{p}_i$.
 
 Therefore, the total ring of fractions $K$ of $A$ is $K=S^{-1}A$ for $S=A\setminus(\mathfrak{p}_1\cup\cdots\cup \mathfrak{p}_k)$.
 
