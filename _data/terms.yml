@@ -11234,6 +11234,13 @@ M:
   defs:
   - label: '[스택] §Grothendieck 위상과 site'
     url: /ko/math/stacks/grothendieck_topology
+- id: mathematical_induction
+  en: Mathematical induction
+  ko: 수학적 귀납법
+  primary: en
+  defs:
+  - label: '[집합론] §서수와 정렬집합'
+    url: /ko/math/set_theory/ordinals
 - id: matlis_duality
   en: Matlis duality
   ko: Matlis 쌍대성
@@ -13296,6 +13303,13 @@ P:
   en: Peano axiom
   ko: 페아노 공리
   primary: ko
+  defs:
+  - label: '[집합론] §서수와 정렬집합'
+    url: /ko/math/set_theory/ordinals
+- id: peano_axioms
+  en: Peano Axioms
+  ko: 페아노 공리계
+  primary: en
   defs:
   - label: '[집합론] §서수와 정렬집합'
     url: /ko/math/set_theory/ordinals
@@ -17299,6 +17313,13 @@ S:
   ko: 따름
   primary: en
   note: '서수 successor 의미일 때만 영어. ''따름정리''는 한글 유지'
+  defs:
+  - label: '[집합론] §서수와 정렬집합'
+    url: /ko/math/set_theory/ordinals
+- id: successor_function
+  en: Successor function
+  ko: 후속자 함수
+  primary: en
   defs:
   - label: '[집합론] §서수와 정렬집합'
     url: /ko/math/set_theory/ordinals
