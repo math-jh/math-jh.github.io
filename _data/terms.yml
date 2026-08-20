@@ -5685,6 +5685,13 @@ E:
   defs:
   - label: '[정수론] §유클리드 호제법과 Bézout 항등식'
     url: /ko/math/number_theory/euclidean_algorithm
+- id: euclidean_division
+  en: Euclidean division
+  ko: 유클리드 나눗셈
+  primary: en
+  defs:
+  - label: '[집합론] §자연수와 무한집합'
+    url: /ko/math/set_theory/natural_numbers
 - id: euclidean_domain
   en: Euclidean domain
   ko: 유클리드 정역
@@ -8579,6 +8586,13 @@ I:
   defs:
   - label: '[미분다양체] §경계가 있는 다양체'
     url: /ko/math/manifolds/manifolds_with_boundary
+- id: induction
+  en: induction
+  ko: 귀납법
+  primary: ko
+  defs:
+  - label: '[미적분학] §함수의 극한'
+    url: /ko/math/calculus/functions_and_limits
 - id: inductive
   en: inductive
   ko: 귀납적
@@ -19245,6 +19259,13 @@ W:
     id: shape_operator
   - label: Principal curvature
     id: principal_curvature
+- id: well-ordered
+  en: well-ordered
+  ko: 정렬된
+  primary: en
+  defs:
+  - label: '[집합론] §서수와 정렬집합'
+    url: /ko/math/set_theory/ordinals
 - id: well-ordered_set
   en: well-ordered set
   ko: 정렬집합
