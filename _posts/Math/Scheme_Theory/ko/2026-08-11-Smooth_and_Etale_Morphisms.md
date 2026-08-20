@@ -128,7 +128,73 @@ $$J=\Bigl(\frac{\partial f_i}{\partial \x_j}\Bigr)_{\substack{1\leq i\leq r\\ 1\
 의 $\kappa(x)$ 위에서의 rank가 $r$이면, $\varphi:X \rightarrow S$는 $x$의 어떤 열린 근방에서 relative dimension $n-r$의 smooth morphism이다.
 :::
 ::: 증명
-[명제 3](#prop3)에 의하여 우리가 보여야 할 것은 $x$의 어떤 근방 위에서 $\varphi$가 flat하고 $\Omega_{X/S}$가 rank $n-r$의 locally free sheaf이며, 그 근방의 각 점에서 fiber의 local dimension이 $n-r$이라는 것이다. 먼저 $\Omega$를 기술하기 위해 
+[명제 3](#prop3)에 의하여 우리가 보여야 할 것은 $x$의 어떤 근방 위에서 $\varphi$가 flat하고 $\Omega_{X/S}$가 rank $n-r$의 locally free sheaf이며, 그 근방의 각 점에서 fiber의 local dimension이 $n-r$이라는 것이다. 우선 우리는 $\varphi$를 다음의 식
+
+{% diagram Math/Scheme_Theory/Smooth_and_Etale_Morphisms-4.svg width="5.94em" alt="factorization" %}
+
+와 같이 분해한다. 여기서 $\mathbb{A}_S^n \rightarrow S$는 canonical한 structure map이고, 수평 방향의 $X\hookrightarrow \mathbb{A}_S^n$은 $X$를 $(f_1,\ldots, f_r)$이 정의하는 closed subscheme으로 넣어주는 closed embedding이다. 이제
+
+$$B=A[\x_1,\ldots, \x_n],\qquad \mathfrak{a}=(f_1,\ldots, f_r), \qquad C=B/\mathfrak{a}$$
+
+이라 하면 $\mathbb{A}^n_S=\Spec B$이고 $X=\Spec C$이라 할 수 있다. 그럼 [§Kähler differential과 여접층, ⁋명제 2](/ko/math/scheme_theory/sheaf_of_differentials#prop2)에서 다음의 short exact sequence
+
+$$\mathfrak{a}/\mathfrak{a}^2 \overset{\overline{d}}{\longrightarrow} \Omega_{B/A}\otimes_BC \longrightarrow \Omega_{C/A} \longrightarrow 0$$
+
+이 존재하며, 여기서 $\Omega_{B/A}$는 [§Kähler differential과 여접층, ⁋명제 9](/ko/math/scheme_theory/sheaf_of_differentials#prop9)에 의하여 $\dd{\x_1},\ldots, \dd{\x_n}$을 기저로 하는 rank $n$의 free $A$-module이므로, $\Omega_{B/A}\otimes_BC$는 이들을 basis로 하는 rank $n$ free $C$-module이다. 그럼 이 canonical base 하에서, $\overline{d}$는
+
+$$\overline{d}: \mathfrak{a}/ \mathfrak{a}^2\rightarrow \Omega_{B/A}\otimes_BC;\qquad f_i+\mathfrak{a}^2\mapsto \dd{f_i}=\sum_j\frac{\partial f_i}{\partial \x_j}\dd{\x_j}$$
+
+로 쓸 수 있다. 그럼 주장에서 주어진 Jacobian matrix는 다음의 surjective $C$-module homomorphism
+
+$$\pi: C^{\oplus r} \rightarrow \mathfrak{a}/\mathfrak{a}^2;\qquad e_i\mapsto f_i+\mathfrak{a}^2$$
+
+을 $\overline{d}$와 합성하여 얻어진 다음 함수
+
+$$\overline{d}\circ\pi: C^{\oplus r}\rightarrow \mathfrak{a}/\mathfrak{a}^2\rightarrow \Omega_{B/A}\otimes_BC;\qquad e_i\mapsto \sum_j\frac{\partial f_i}{\partial \x_j}\dd{\x_j}$$
+
+을 $e_i$와 $\dd{\x_j}$ basis에 대해 표현한 행렬을 transpose한 것이며, 그 각각의 성분들은 $X$ 위의 함수이다. 
+
+이제 가정에 의해 $J$가 full rank이므로, 어떤 index $j_1,\ldots, j_r$이 존재하여 그 열들이 이루는 $r\times r$ minor $\Delta_{j_1,\ldots,j_r}$가 $x$에서 $0$이 아니도록 할 수 있다. 그럼 이제 $\Omega_{B/A}\otimes_BC$의 basis들 중, 이들 $\dd{\x_{j_k}}$들이 생성하는 부분공간으로의 projection을 $\pr_{j_1,\ldots,j_r}$이라 하면 위의 행렬 표현에 의하여
+
+$$\pr_{j_1,\ldots,j_r}\circ\overline{d}\circ\pi: C^{\oplus r}\rightarrow\mathfrak{a}/\mathfrak{a}^2\rightarrow \Omega_{B/A}\otimes_BC\rightarrow C^{\oplus r}$$
+
+을 $e_i$들에 대해 표현한 행렬이 $\Delta_{j_1,\ldots,j_r}$를 정의하는 $r\times r$ 행렬의 transpose로 주어진다. 따라서 이 minor $\Delta=\Delta_{j_1,\ldots,j_r}$를 역수로 추가해주면 다음의 함수
+
+$$(\pr_{j_1,\ldots,j_r}\circ\overline{d}\circ\pi)_\Delta: C_\Delta^{\oplus r}\rightarrow C_\Delta^{\oplus r}$$
+
+은 automorphism이 된다. ([\[다중선형대수학\] §행렬식, ⁋따름정리 3](/ko/math/multilinear_algebra/determinants#cor3)) 따라서 $\pi_\Delta$가 injective $C_\Delta$-module homomorphism이어야 하는데, $\pi$는 원래부터 surjection이었으므로 $\pi_\Delta$는 $C_\Delta$-module isomorphism이고 이로부터 $(\mathfrak{a}/\mathfrak{a}^2)_\Delta$가 rank $r$ free $C_\Delta$-module인 것을 안다. 한편
+
+$$(\overline{d}\circ\pi)_\Delta\circ((\pr_{j_1,\ldots,j_r}\circ\overline{d}\circ\pi)_\Delta^{-1}\circ \pr_{j_1,\ldots, j_r})=\id_{C_\Delta^{\oplus r}}$$
+
+이므로 $(\overline{d}\circ\pi)_\Delta$는 split injection이고, 위에서 살펴봤듯 $\pi_\Delta$는 isomorphism이므로 $\overline{d}$가 split injection이 된다. 
+
+이제 $\overline{d}_g$의 cokernel은, $\pi_g$가 isomorphism이므로, $(\overline{d}\circ\pi)_g$의 cokernel과 같고 일반적으로 split injection의 cokernel은 그 retraction의 kernel과 isomorphic하며, 위에서 $(\overline{d}\circ\pi)_g$의 retraction이 $(\pr_{j_1,\ldots,j_r})_g$에 automorphism의 역을 합성한 것으로 주어지는 것을 살펴보았으므로 이는 $(\pr_{j_1,\ldots,j_r})_g$의 kernel, 즉 $j\notin\{j_1,\ldots, j_r\}$인 $\dd{\x_j}$들이 생성하는 rank $n-r$의 free submodule이다. 이제 tensor product는 cokernel을 보존하므로 이 cokernel이 곧 $\Omega_{C/A}\otimes_CC_g$이고, 따라서 $\Omega_{C/A}$는 $D(g)=\Spec C_g$ 위에서 rank $n-r$ locally free sheaf가 된다.
+
+이제 $\varphi$가 $x$의 어떤 근방에서 flat하다는 것을 보인다. 이를 위해 우리가 사용할 결과는 [\[가환대수학\] §평탄성과 국소화, ⁋따름정리 4](/ko/math/commutative_algebra/local_criterion_for_flatness#cor4)으로, 이를 위해서 우리는 우선 $A$가 Noetherian인 경우로의 reduction을 한 차례 진행해야 한다.
+
+이는 기본적으로 우리가 필요로 하는 정보가 $A$ 전체가 아니라 $f_1,\ldots, f_r$의 계수들이 $A$ 안에서 생성하는 $\mathbb{Z}$-subalgebra $A_0$에 담겨있으므로 가능하다. 이 세팅에서 [\[가환대수학\] §기본 개념들, ⁋따름정리 13](/ko/math/commutative_algebra/basic_notions#cor13)에 의해 $A_0$은 Noetherian이고, $C_0=A_0[\x_1,\ldots, \x_n]/(f_1,\ldots, f_r)$로 두면 $C=C_0\otimes_{A_0}A$이다. 기하적으로 이 상황에서 $A_0\hookrightarrow A$는 $S=\Spec A$에서 $S_0=\Spec A_0$로의 scheme morphism을 유도하며, 이를 같은 방정식으로 자른 것이 $X_0=\Spec C_0$이며 위 관계식에 의해 $X=X_0\times_{S_0} S$이다. $A_0$의 정의에 의하여, $J$ 또한 $C_0$에서의 행렬로 볼 수 있고, 따라서 그 minor $g$ 또한 마찬가지이다. 문제의 점 $x$의 $\Spec C_0$에서의 image를 $x_0$이라 하면, 이에 대응되는 prime ideal은 $x$에 대응되는 prime ideal의 preimage이므로, $g$는 $x_0$에서도 $0$이 아니며, 따라서 $J$ 또한 $x_0$에서 여전히 full rank $r$을 가진다. 즉, 우리는 문제의 조건을 모두 $X_0$, $S_0$ 위로 가져올 수 있으며, 만일 이 가정 하에서 $\varphi_0: X_0\rightarrow S_0$의 flatness를 보일 수 있다면 flatness가 base change에 의해 보존되므로 $\varphi$의 flatness를 복원할 수 있다.
+
+따라서 $A$가 처음부터 Noetherian이었다고 가정하자. $x$에 대응하는 $B$의 prime ideal을 $\mathfrak{p}$라 하고 $\mathfrak{q}=\mathfrak{p}\cap A$라 하면, $\mathfrak{q}$는 $s=\varphi(x)$에 대응하는 $A$의 prime ideal이다. 우리가 하고 싶은 것은 Noetherian local ring $(A_\mathfrak{q}, \mathfrak{q}A_\mathfrak{q})$와 그 위의 local Noetherian algebra $(B_\mathfrak{p}, \mathfrak{p}B_\mathfrak{p})$, 그리고 그 자신을 module로 본 $B_\mathfrak{p}$와 $\mathfrak{p}B_\mathfrak{p}$의 원소 $f_1,\ldots, f_r$에 위의 따름정리를 적용하는 것이다. $B$가 $A$ 위에서 free이므로 $B_\mathfrak{p}$는 $A_\mathfrak{q}$ 위에서 flat이고, 따라서 우리가 보여야 할 것은 $f_1,\ldots, f_r$의 image가
+
+$$R=B_\mathfrak{p}/\mathfrak{q}B_\mathfrak{p}$$
+
+에서 regular sequence를 이룬다는 사실 뿐이다. $\mathfrak{q}$로 나누는 것은 $s$ 위의 fiber로 제한하는 것이고, 실제로 $B/\mathfrak{q}B=(A/\mathfrak{q})[\x_1,\ldots, \x_n]$에서 $A/\mathfrak{q}$의 영이 아닌 원소들은 모두 $\mathfrak{p}$ 바깥에 있으므로, $R$은 $\kappa(\mathfrak{q})[\x_1,\ldots, \x_n]$을 $\mathfrak{p}$가 유도하는 prime ideal에서 localize한 것이다.
+
+이제 다음을 관찰해 둔다. $\mathbb{F}$가 $A$-algebra인 field이고, $f_1,\ldots, f_r$의 계수를 $A \rightarrow \mathbb{F}$를 따라 내린 것을 $\overline{f}_1,\ldots, \overline{f}_r$이라 하자. 그럼 이들을 모두 포함하면서 $g$는 포함하지 않는 $\mathbb{F}[\x_1,\ldots, \x_n]$의 prime ideal $\mathfrak{P}$에 대하여, localization $R_\mathfrak{P}=\mathbb{F}[\x_1,\ldots, \x_n]_\mathfrak{P}$의 maximal ideal을 $\mathfrak{m}_\mathfrak{P}$, residue field를 $\kappa(\mathfrak{P})$라 적으면, $R_\mathfrak{P}$는 regular local ring이고 ([\[가환대수학\] §정칙성의 호몰로지 판정, ⁋따름정리 6](/ko/math/commutative_algebra/homological_criterion_for_regularity#cor6)) $\overline{f}_1,\ldots, \overline{f}_r$의 class들은 $\mathfrak{m}_\mathfrak{P}/\mathfrak{m}_\mathfrak{P}^2$ 안에서 일차독립이다.
+
+둘째 주장을 보이기 위해 $u\in R_\mathfrak{P}$의 $\kappa(\mathfrak{P})$에서의 image를 $u(\mathfrak{P})$로 적고 $\kappa(\mathfrak{P})^{\oplus n}$의 표준기저를 $\dd{\x_1},\ldots, \dd{\x_n}$이라 부르면, $u\mapsto \sum_j(\partial u/\partial \x_j)(\mathfrak{P})\dd{\x_j}$는 Leibniz 규칙에 의하여 $\mathfrak{m}_\mathfrak{P}^2$을 소멸시키므로 $\kappa(\mathfrak{P})$-linear map $\mathfrak{m}_\mathfrak{P}/\mathfrak{m}_\mathfrak{P}^2 \rightarrow \kappa(\mathfrak{P})^{\oplus n}$을 유도한다. 계수를 $\mathbb{F}$로 내리는 것과 편미분은 서로 교환하므로 이 map은 $\overline{f}_i$의 class를 $J$의 $i$번째 행으로 보낸다. 한편 $g$는 $J$의 $r\times r$ minor이고 $g\notin\mathfrak{P}$이므로 그 $\kappa(\mathfrak{P})$에서의 값이 영이 아니며, $J$가 행을 $r$개 가지므로 $\kappa(\mathfrak{P})$ 위에서 $J$의 rank는 정확히 $r$, 곧 그 행들은 일차독립이다. Linear map이 일차종속인 벡터들을 일차독립인 벡터들로 보낼 수는 없으므로 $\overline{f}_i$의 class들 또한 일차독립이다.
+
+이제 $\mathbb{F}=\kappa(\mathfrak{q})$와 $\mathfrak{p}$가 유도하는 prime ideal에 이 관찰을 적용하자. $\mathfrak{a}\subseteq\mathfrak{p}$이고 $g\notin\mathfrak{p}$이므로 가정이 만족되며, 위에서 본 것과 같이 그 localization이 곧 $R$이다. 그럼 $\overline{f}_1,\ldots, \overline{f}_r$의 class들을 $\mathfrak{m}/\mathfrak{m}^2$의 기저로 확장하고 [\[가환대수학\] §정수적 확장, ⁋보조정리 8](/ko/math/commutative_algebra/integral_extension#lem8)을 적용하면 $R$의 maximal ideal $\mathfrak{m}$을 생성하는 $\dim R$개의 원소를 얻으므로, $\overline{f}_1,\ldots, \overline{f}_r$은 $R$의 regular system of parameters의 앞부분이다. [\[가환대수학\] §정칙국소환, ⁋따름정리 3](/ko/math/commutative_algebra/regular_local_rings#cor3)에 의하여 regular system of parameters 전체가 $R$-sequence이므로, 그 앞부분인 $\overline{f}_1,\ldots, \overline{f}_r$ 또한 $R$-regular sequence이다.
+
+그럼 [\[가환대수학\] §평탄성과 국소화, ⁋따름정리 4](/ko/math/commutative_algebra/local_criterion_for_flatness#cor4)에 의하여 $f_1,\ldots, f_r$은 $B_\mathfrak{p}$의 regular sequence이고 그 quotient $B_\mathfrak{p}/\mathfrak{a}B_\mathfrak{p}=C_\mathfrak{p}$는 $A_\mathfrak{q}$ 위에서 flat이다. 이것이 곧 $\mathcal{O}_{X,x}$가 $\mathcal{O}_{S,s}$ 위에서 flat이라는 것이므로 [§평탄사상, ⁋정의 1](/ko/math/scheme_theory/flat_morphisms#def1)의 의미에서 $\varphi$는 $x$에서 flat이고, [§평탄사상, ⁋정리 20](/ko/math/scheme_theory/flat_morphisms#thm20)에 의하여 $x$의 어떤 열린근방 위에서 flat하다.
+
+마지막으로 남은 것은 fiber의 local dimension이다. 앞의 근방과 $D(g)$의 교집합을 $U$라 하면 $U$ 위에서 $\varphi$는 flat하고 $\Omega_{C/A}$는 rank $n-r$의 locally free이므로, [명제 3](#prop3)을 적용하기 위해 보여야 할 것은 $U$의 각 점에서 fiber의 local dimension이 $n-r$이라는 것뿐이다. $U$의 점 $y$에 대응하는 $B$의 prime ideal을 $\mathfrak{p}'$, $\mathfrak{q}'=\mathfrak{p}'\cap A$, $s'=\varphi(y)$라 하고, $f_i$의 계수를 $\kappa(\mathfrak{q}')$로 내린 것을 다시 $\overline{f}_i$라 적자. 그럼 fiber $X_{s'}$는 $\kappa(\mathfrak{q}')[\x_1,\ldots, \x_n]/(\overline{f}_1,\ldots, \overline{f}_r)$의 spectrum이고, $y$를 지나는 그 irreducible component들은 $\mathfrak{p}'$이 $\kappa(\mathfrak{q}')[\x_1,\ldots, \x_n]$에 유도하는 prime ideal에 포함되는 $(\overline{f}_1,\ldots, \overline{f}_r)$의 minimal prime $\mathfrak{P}$들에 대응한다. 이러한 $\mathfrak{P}$는 $y\in D(g)$이므로 $g$를 포함하지 않고, 따라서 위의 관찰이 $\mathbb{F}=\kappa(\mathfrak{q}')$에 대하여 적용된다.
+
+$R_\mathfrak{P}$가 regular local ring이므로 그 차원은 $\mathfrak{m}_\mathfrak{P}/\mathfrak{m}_\mathfrak{P}^2$의 $\kappa(\mathfrak{P})$ 위에서의 차원과 같고, 따라서 위의 일차독립에서 $\dim R_\mathfrak{P}\geq r$이다. 한편 $\mathfrak{P}$가 $r$개의 원소로 생성되는 ideal의 minimal prime이므로 [\[가환대수학\] §차원, ⁋정리 7](/ko/math/commutative_algebra/Krull_dimension#thm7)이 반대 부등식을 주어 $\dim R_\mathfrak{P}=r$이다. 그럼 차원 공식에 의하여 ([\[가환대수학\] §뇌터 정규화, ⁋정리 4](/ko/math/commutative_algebra/noether_normalization#thm4)) $\mathfrak{P}$에 대응하는 component의 차원은 $n-r$이며, $y$를 지나는 모든 component가 그러하므로 $\dim_yX_{s'}=n-r$이다. 따라서 $U$의 각 점에서 fiber의 local dimension이 rank와 일치하고, [명제 3](#prop3)에 의하여 $\varphi$는 $U$ 위에서 relative dimension $n-r$의 smooth morphism이다.
+
+<!-- ───────── 이하 이전 판본 (구 L135–L173). 검토 후 삭제 ───────── -->
+
+와 같이 분해한다. 여기서 $\mathbb{A}_S^n \rightarrow S$는 canonical한 structure map이고, 수평 방향의 $X\hookrightarrow \mathbb{A}_S^n$은 $X$를 $(f_1,\ldots, f_r)$이 정의하는 closed subscheme으로 넣어주는 closed embedding이다. 이제
 
 $$B=A[\x_1,\ldots, \x_n],\qquad \mathfrak{a}=(f_1,\ldots, f_r), \qquad C=B/\mathfrak{a}$$
 
@@ -167,12 +233,6 @@ $$(\pr_{j_1,\ldots,j_r}\circ\overline{d}\circ\pi)_g: C_g^{\oplus r}\rightarrow C
 이는 기본적으로 우리가 필요로 하는 정보가 $A$ 전체가 아니라 $f_1,\ldots, f_r$의 계수들이 $A$ 안에서 생성하는 $\mathbb{Z}$-subalgebra $A_0$에 담겨있으므로 가능하다. 이 세팅에서 [\[가환대수학\] §기본 개념들, ⁋따름정리 13](/ko/math/commutative_algebra/basic_notions#cor13)에 의해 $A_0$은 Noetherian이고, $C_0=A_0[\x_1,\ldots, \x_n]/(f_1,\ldots, f_r)$로 두면 $C=C_0\otimes_{A_0}A$이다. 기하적으로 이 상황에서 $A_0\hookrightarrow A$는 $S=\Spec A$에서 $S_0=\Spec A_0$로의 scheme morphism을 유도하며, 이를 같은 방정식으로 자른 것이 $X_0=\Spec C_0$이며 위 관계식에 의해 $X=X_0\times_{S_0} S$이다. $A_0$의 정의에 의하여, $J$ 또한 $C_0$에서의 행렬로 볼 수 있고, 따라서 그 minor $g$ 또한 마찬가지이다. 문제의 점 $x$의 $\Spec C_0$에서의 image를 $x_0$이라 하면, 이에 대응되는 prime ideal은 $x$에 대응되는 prime ideal의 preimage이므로, $g$는 $x_0$에서도 $0$이 아니며, 따라서 $J$ 또한 $x_0$에서 여전히 full rank $r$을 가진다. 즉, 우리는 문제의 조건을 모두 $X_0$, $S_0$ 위로 가져올 수 있으며, 만일 이 가정 하에서 $\varphi_0: X_0\rightarrow S_0$의 flatness를 보일 수 있다면 flatness가 base change에 의해 보존되므로 $\varphi$의 flatness를 복원할 수 있다. 
 
 따라서 $A$가 처음부터 Noetherian이었다고 가정하자. $x$의 $S$에서의 image $s=\varphi(x)$에 대하여, 우리가 하고 싶은 것은 *Noetherian* local ring $(\mathcal{O}_{S,s},\mathfrak{m}_s)$와 그 위의 local *Noetherian* algebra $(\mathcal{O}_{\mathbb{A}^n_S,x},\mathfrak{m}_x)$, 그리고 그 자신을 module로 본 $\mathcal{O}_{\mathbb{A}^n_S,x}$와 $\mathfrak{m}_x$의 원소 $f_1,\ldots, f_r$에 위의 [\[가환대수학\] §평탄성과 국소화, ⁋따름정리 4](/ko/math/commutative_algebra/local_criterion_for_flatness#cor4)를 적용하는 것이다. 이 때 $\mathcal{O}_{\mathbb{A}^n_S,x}$는 polynomial ring $B=A[\x_1,\ldots, \x_n]$의 localization이며 $B$가 $A$ 위에서 free이므로 $\mathcal{O}_{S,s}$ 위에서 flat이고, 따라서 우리가 보여야 할 것은 $f_1,\ldots, f_r\in \mathfrak{m}_x$의 image가 local ring $R=\mathcal{O}_{\mathbb{A}^n_S,x}/\mathfrak{m}_s\mathcal{O}_{\mathbb{A}^n_S,x}$에서 regular sequence를 이룬다는 사실 뿐이다. 여기서 $\mathfrak{m}_s$로 나누는 것은 $s$ 위의 fiber로 제한하는 것이므로, $R$은 fiber $\mathbb{A}^n_{\kappa(s)}$의 $x$에서의 local ring이고 $f_i$의 image는 그 fiber 위로 내려온 방정식이다. 편의상 $R$의 maximal ideal을 $\mathfrak{m}$이라 적기로 하자.
-
-우선 [\[가환대수학\] §정칙성의 호몰로지 판정, ⁋따름정리 6](/ko/math/commutative_algebra/homological_criterion_for_regularity#cor6)에 의하여 $\kappa(s)[\x_1,\ldots, \x_n]$이 regular ring이며, $R$은 residue field $\kappa(x)$를 가지는 regular local ring이다. $f_i$의 $R$에서의 image를 $\overline{f}_i$라 하자. 그럼 $\overline{f}_i\in\mathfrak{m}$이고, Leibniz 규칙에 의하여 $h\mapsto \sum_j(\partial h/\partial \x_j)(x)\dd{\x_j}$가 $\mathfrak{m}^2$을 소멸시키므로 $\kappa(x)$-linear map $\mathfrak{m}/\mathfrak{m}^2 \rightarrow \kappa(x)^{\oplus n}$이 유도된다. 이 map은 $\overline{f}_i$의 class를 $J$의 $i$번째 행으로 보내고 가정에 의하여 그 행들이 일차독립이므로, $\overline{f}_1,\ldots, \overline{f}_r$의 class들도 $\mathfrak{m}/\mathfrak{m}^2$ 안에서 일차독립이다. 이 class들을 $\mathfrak{m}/\mathfrak{m}^2$의 기저로 확장하고 [\[가환대수학\] §정수적 확장, ⁋보조정리 8](/ko/math/commutative_algebra/integral_extension#lem8)을 적용하면 $\mathfrak{m}$을 생성하는 $\dim R$개의 원소를 얻으므로, $\overline{f}_1,\ldots, \overline{f}_r$은 $R$의 regular system of parameters의 앞부분이다. [\[가환대수학\] §정칙국소환, ⁋따름정리 3](/ko/math/commutative_algebra/regular_local_rings#cor3)에 의하여 regular system of parameters 전체가 $R$-sequence이므로, 그 앞부분인 $\overline{f}_1,\ldots, \overline{f}_r$ 또한 $R$-regular sequence이다.
-
-그럼 [\[가환대수학\] §평탄성과 국소화, ⁋따름정리 4](/ko/math/commutative_algebra/local_criterion_for_flatness#cor4)에 의하여 $f_1,\ldots, f_r$은 $\mathcal{O}_{\mathbb{A}^n_S,x}$의 regular sequence이고 quotient $\mathcal{O}_{X,x}$는 $\mathcal{O}_{S,s}$ 위에서 flat이다. [§평탄사상, ⁋정의 1](/ko/math/scheme_theory/flat_morphisms#def1)의 의미에서 $\varphi$는 $x$에서 flat이므로 [§평탄사상, ⁋정리 20](/ko/math/scheme_theory/flat_morphisms#thm20)에 의하여 $x$의 어떤 열린근방 위에서 flat하다.
-
-마지막으로 남은 것은 fiber의 local dimension이다. 앞의 근방과 $D(g)$의 교집합을 $U$라 하면 $U$ 위에서 $\varphi$는 flat하고 $\Omega_{C/A}$는 rank $n-r$의 locally free이므로, [명제 3](#prop3)을 적용하기 위해 보여야 할 것은 $U$의 각 점에서 fiber의 local dimension이 $n-r$이라는 것이다. 이는 위의 fiber 논증을 $U$의 다른 점에서 반복하여 얻는다. $U$의 점 $y$와 $s'=\varphi(y)$에 대하여 fiber $X_{s'}$의 $y$를 지나는 component의 generic point를 $\eta$라 하면, $g$가 $\eta$에서도 가역이어서 $J$의 rank가 $r$이므로, 같은 논증에 의하여 $\overline{f}_1,\ldots, \overline{f}_r$의 class들은 regular local ring $\mathcal{O}_{\mathbb{A}^n_{\kappa(s')},\eta}$의 $\mathfrak{m}_\eta/\mathfrak{m}_\eta^2$ 안에서 일차독립이다. 곧 그 component의 codimension인 $\dim\mathcal{O}_{\mathbb{A}^n_{\kappa(s')},\eta}$는 $r$ 이상이고, $\eta$가 $(\overline{f}_1,\ldots, \overline{f}_r)$을 포함하는 minimal prime이므로 [\[가환대수학\] §차원, ⁋정리 7](/ko/math/commutative_algebra/Krull_dimension#thm7)이 반대 부등식을 주어 codimension은 정확히 $r$이며, 차원 공식에 의하여 ([\[가환대수학\] §뇌터 정규화, ⁋정리 4](/ko/math/commutative_algebra/noether_normalization#thm4)) component의 차원은 $n-r$이다. 따라서 $U$의 각 점에서 fiber의 local dimension이 rank와 일치하고, [명제 3](#prop3)에 의하여 $\varphi$는 relative dimension $n-r$의 smooth morphism이다.
 :::
 
 차원만 따라가면 이 증명이 하는 일은 짧게 적힌다. $n$은 fiber 방향 coordinate $\x_1,\ldots, \x_n$의 개수, 곧 $\mathbb{A}^n_S \rightarrow S$의 relative dimension이며 base의 차원은 여기에 기여하지 않는다. $r$은 각 fiber 안에서 방정식들이 깎아내는 차원의 수로, Jacobian의 rank가 $r$이라는 가정이 그 $r$개의 조건이 서로 겹치지 않음을 보장한다. 남는 $n-r$은 $\dd{\x_1},\ldots, \dd{\x_n}$이 생성하는 rank $n$의 free module을 일차독립인 $\dd{f_1},\ldots, \dd{f_r}$로 나눈 $\Omega_{X/S}$의 rank이자 codimension $r$로 잘린 fiber의 차원이고, [명제 3](#prop3)이 요구하는 두 수의 일치가 곧 이것이다.
