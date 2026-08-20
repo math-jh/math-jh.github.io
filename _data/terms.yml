@@ -5924,6 +5924,13 @@ E:
   see:
   - label: Restriction of scalar
     id: restriction_of_scalar
+- id: extensionality
+  en: extensionality
+  ko: 외연성
+  primary: en
+  defs:
+  - label: '[집합론] §ZFC 공리계'
+    url: /ko/math/set_theory/zfc_axioms
 - id: exterior
   en: exterior
   ko: 외부
@@ -16157,6 +16164,13 @@ S:
   defs:
   - label: '[집합론] §ZFC 공리계'
     url: /ko/math/set_theory/zfc_axioms
+- id: set_theory
+  en: set theory
+  ko: 집합론
+  primary: ko
+  defs:
+  - label: '[대수적 구조] §대수적 구조'
+    url: /ko/math/algebraic_structures/algebraic_structures
 - id: shape_operator
   en: shape operator
   ko: 모양연산자
@@ -17208,6 +17222,13 @@ S:
   defs:
   - label: '[해석학] §부분수열과 Bolzano–Weierstrass 정리'
     url: /ko/math/analysis/bolzano_weierstrass
+- id: subset
+  en: subset
+  ko: 부분집합
+  primary: en
+  defs:
+  - label: '[집합론] §ZFC 공리계'
+    url: /ko/math/set_theory/zfc_axioms
 - id: subsheaf
   en: subsheaf
   ko: 부분층
