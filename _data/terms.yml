@@ -744,6 +744,13 @@ A:
     id: relation
   - label: Order relation
     id: order_relation
+- id: antisymmetry
+  en: antisymmetry
+  ko: 반대칭성
+  primary: en
+  defs:
+  - label: '[집합론] §순서관계의 정의'
+    url: /ko/math/set_theory/order_relations
 - id: antitone_galois_connection
   en: antitone Galois connection
   ko: 쌍대 갈루아 연결
@@ -2507,7 +2514,7 @@ C:
     url: /ko/math/complex_analysis/complex_integration
 - id: closed_embedding
   en: closed embedding
-  ko: 닫힌 몰입
+  ko: 닫힌 매장
   primary: en
   defs:
   - label: '[스킴] §닫힌 부분스킴'
@@ -12703,9 +12710,9 @@ O:
   see:
   - label: Open cover
     id: open_cover
-- id: open_immersion
-  en: open immersion
-  ko: 열린 몰입
+- id: open_embedding
+  en: open embedding
+  ko: 열린 매장
   primary: en
   defs:
   - label: '[스킴] §값매김환'
