@@ -4848,6 +4848,13 @@ D:
   defs:
   - label: '[집합론] §유향집합'
     url: /ko/math/set_theory/directed_set
+- id: directed_set
+  en: directed set
+  ko: 유향집합
+  primary: en
+  defs:
+  - label: '[집합론] §유향집합'
+    url: /ko/math/set_theory/directed_set
 - id: directed_system
   en: directed system
   ko: 유향체계
@@ -7635,6 +7642,13 @@ G:
   - label: '[대수적 위상수학] §벡터다발의 특성류'
     url: /ko/math/algebraic_topology/characteristic_classes
 H:
+- id: half-open_interval
+  en: half-open interval
+  ko: 반열린구간
+  primary: ko
+  defs:
+  - label: '[집합론] §유향집합'
+    url: /ko/math/set_theory/directed_set
 - id: half-space
   en: half-space
   ko: 반공간

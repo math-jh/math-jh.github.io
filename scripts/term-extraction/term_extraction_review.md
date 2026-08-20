@@ -5325,3 +5325,7 @@ Decide whether each one is a definition and add it to `_data/terms.yml` (then ru
 
 - _posts/Math/Set_Theory/ko/2022-02-20-Limits.md: 주요 용어 'preordered set' ko 미상 — 보류
 - _posts/Math/Set_Theory/ko/2022-02-20-Limits.md: 주요 용어 'right directed set' ko 미상 — 보류
+
+## term_extract_worker 2026-08-21 07:01
+
+- _posts/Math/Set_Theory/ko/2022-11-27-Directed_Set.md: 주요 용어 'cofinal' ko 미상 — 보류
