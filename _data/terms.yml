@@ -2202,6 +2202,13 @@ C:
   defs:
   - label: '[환론] §멱등원과 곱분해'
     url: /ko/math/ring_theory/idempotents
+- id: chain
+  en: chain
+  ko: 사슬
+  primary: en
+  defs:
+  - label: '[대수적 위상수학] §호몰로지'
+    url: /ko/math/algebraic_topology/homology
 - id: chain_complex
   en: chain complex
   ko: 사슬복합체
@@ -19210,6 +19217,13 @@ W:
     id: shape_operator
   - label: Principal curvature
     id: principal_curvature
+- id: well-ordered_set
+  en: well-ordered set
+  ko: 정렬집합
+  primary: en
+  defs:
+  - label: '[집합론] §서수와 정렬집합'
+    url: /ko/math/set_theory/ordinals
 - id: well-ordering
   en: well-ordering
   ko: 정렬순서
@@ -19335,6 +19349,13 @@ Z:
     id: prime_ideal
   - label: Algebraic variety
     id: algebraic_variety
+- id: zermelo_s_theorem
+  en: 'Zermelo''s theorem'
+  ko: Zermelo 정리
+  primary: en
+  defs:
+  - label: '[집합론] §선택공리'
+    url: /ko/math/set_theory/axiom_of_choice
 - id: zero
   en: zero
   ko: 영점
