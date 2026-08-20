@@ -7724,6 +7724,13 @@ H:
   defs:
   - label: '[집합론] §서수들 사이의 순서관계'
     url: /ko/math/set_theory/order_relations_between_ordinals
+- id: hasse_diagram
+  en: Hasse diagram
+  ko: Hasse 다이어그램
+  primary: en
+  defs:
+  - label: '[집합론] §순서집합의 원소들'
+    url: /ko/math/set_theory/elements_in_ordered_set
 - id: hausdorff
   en: Hausdorff
   ko: 하우스도르프
