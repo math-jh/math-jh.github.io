@@ -18177,6 +18177,13 @@ T:
   see:
   - label: Algebraic extension
     id: algebraic_extension
+- id: transfinite_induction
+  en: transfinite induction
+  ko: 초한귀납법
+  primary: en
+  defs:
+  - label: '[집합론] §정렬집합의 성질들'
+    url: /ko/math/set_theory/well_ordering
 - id: transition_function
   en: transition function
   ko: 전이함수
