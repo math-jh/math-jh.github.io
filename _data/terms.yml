@@ -375,6 +375,13 @@ A:
   defs:
   - label: '[유도대수기하학] §Derived scheme과 derived stack'
     url: /ko/math/derived_algebraic_geometry/derived_schemes
+- id: affine_group_scheme
+  en: affine group scheme
+  ko: 아핀 군 스킴
+  primary: en
+  defs:
+  - label: '[스킴] §군 스킴'
+    url: /ko/math/scheme_theory/group_schemes
 - id: affine-local_property
   en: affine-local property
   ko: 아핀-국소 성질
@@ -17984,6 +17991,13 @@ T:
   defs:
   - label: '[리만기하학] §레비-치비타 접속'
     url: /ko/math/riemannian_geometry/Levi-Civita_connection
+- id: torsor
+  en: torsor
+  ko: 비틀기
+  primary: en
+  defs:
+  - label: '[스킴] §군 스킴'
+    url: /ko/math/scheme_theory/group_schemes
 - id: torus
   en: torus
   ko: 원환면
