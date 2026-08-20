@@ -1984,6 +1984,13 @@ C:
   see:
   - label: Ordinal
     id: ordinal
+- id: cardinal_number
+  en: cardinal number
+  ko: 기수
+  primary: en
+  defs:
+  - label: '[집합론] §기수'
+    url: /ko/math/set_theory/cardinals
 - id: cardinal_product
   en: cardinal product
   ko: 기수 곱
