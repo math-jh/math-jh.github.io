@@ -8718,6 +8718,13 @@ I:
   see:
   - label: Projective dimension
     id: projective_dimension
+- id: injective_function
+  en: injective function
+  ko: 단사함수
+  primary: ko
+  defs:
+  - label: '[군론] §대칭군'
+    url: /ko/math/group_theory/symmetric_groups
 - id: injective_hull
   en: injective hull
   ko: 단사껍질
@@ -17397,6 +17404,13 @@ S:
     id: function
   - label: Injective
     id: injective
+- id: surjective_function
+  en: surjective function
+  ko: 전사함수
+  primary: ko
+  defs:
+  - label: '[집합론] §함수들 사이의 연산'
+    url: /ko/math/set_theory/operation_of_functions
 - id: sylow_p_-subgroup
   en: Sylow $p$-subgroup
   ko: 실로우 $p$-부분군
