@@ -16534,6 +16534,13 @@ S:
   defs:
   - label: '[복소해석학] §복소정칙함수'
     url: /ko/math/complex_analysis/holomorphic_functions
+- id: singleton
+  en: singleton
+  ko: 한원소집합
+  primary: en
+  defs:
+  - label: '[집합론] §함수'
+    url: /ko/math/set_theory/functions
 - id: singular
   en: singular
   ko: 특이
