@@ -5329,3 +5329,7 @@ Decide whether each one is a definition and add it to `_data/terms.yml` (then ru
 ## term_extract_worker 2026-08-21 07:01
 
 - _posts/Math/Set_Theory/ko/2022-11-27-Directed_Set.md: 주요 용어 'cofinal' ko 미상 — 보류
+
+## term_extract_worker 2026-08-21 13:30
+
+- _posts/Math/Stacks/ko/2026-07-01-Grothendieck_Topology.md: 병기 필요 'Grothendieck topology' — 위키 ko 문서 '그로텐디크 위상' — 병기형 도출 필요

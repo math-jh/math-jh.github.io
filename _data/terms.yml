@@ -7605,6 +7605,13 @@ G:
   defs:
   - label: '[스택] §Grothendieck 위상과 site'
     url: /ko/math/stacks/grothendieck_topology
+- id: grothendieck_topology
+  en: Grothendieck topology
+  ko: 그로텐디크 위상
+  primary: en
+  defs:
+  - label: '[스택] §Grothendieck 위상과 site'
+    url: /ko/math/stacks/grothendieck_topology
 - id: grothendieck_topos
   en: Grothendieck topos
   ko: 그로텐디크 토포스
@@ -15326,6 +15333,13 @@ R:
   defs:
   - label: '[범주론] §표현가능한 함자'
     url: /ko/math/category_theory/representable_functors
+- id: representable_presheaf
+  en: representable presheaf
+  ko: 표현가능한 준층
+  primary: en
+  defs:
+  - label: '[스택] §Grothendieck 위상과 site'
+    url: /ko/math/stacks/grothendieck_topology
 - id: representation
   en: representation
   ko: 표현
