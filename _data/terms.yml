@@ -262,6 +262,13 @@ A:
   defs:
   - label: '[대수적 위상수학] §Acyclic models theorem'
     url: /ko/math/algebraic_topology/acyclic_models_theorem
+- id: acyclic_resolution
+  en: acyclic resolution
+  ko: 비순환 분해
+  primary: en
+  defs:
+  - label: '[층론] §층의 유도 범주와 유도 functor'
+    url: /ko/math/sheaf_theory/derived_category_of_sheaves
 - id: acyclic_sheaf
   en: acyclic sheaf
   ko: 비순환층
@@ -4445,6 +4452,13 @@ D:
   defs:
   - label: '[미적분학] §미분과 도함수'
     url: /ko/math/calculus/derivatives
+- id: derived_adjunction
+  en: derived adjunction
+  ko: 유도 수반
+  primary: en
+  defs:
+  - label: '[호몰로지 대수학] §유도카테고리'
+    url: /ko/math/homological_algebra/derived_categories
 - id: derived_algebra
   en: derived algebra
   ko: 유도대수
@@ -7902,6 +7916,13 @@ H:
   - label: 야코비 행렬
     lang: ko
     id: jacobian_matrix
+- id: higher_direct_image
+  en: higher direct image
+  ko: 고직상
+  primary: en
+  defs:
+  - label: '[층론] §층의 유도 범주와 유도 functor'
+    url: /ko/math/sheaf_theory/derived_category_of_sheaves
 - id: higher-order_derivative
   en: higher-order derivative
   ko: 고계도함수
