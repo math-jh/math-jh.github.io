@@ -2593,6 +2593,13 @@ C:
   defs:
   - label: '[스킴] §닫힌 부분스킴'
     url: /ko/math/scheme_theory/closed_subschemes
+- id: closed_subspace
+  en: closed subspace
+  ko: 닫힌 부분공간
+  primary: en
+  defs:
+  - label: '[해석학] §거리공간'
+    url: /ko/math/analysis/metric_spaces
 - id: closed_symmetric_monoidal_category
   en: closed symmetric monoidal category
   ko: 닫힌 대칭 모노이드 범주
@@ -3020,6 +3027,13 @@ C:
   defs:
   - label: '[리 이론] §콤팩트 실형식'
     url: /ko/math/lie_theory/compact_real_form
+- id: compact_space
+  en: compact space
+  ko: 컴팩트 공간
+  primary: en
+  defs:
+  - label: '[위상수학] §옹골공간'
+    url: /ko/math/topology/compact_spaces
 - id: compact_support
   en: compact support
   ko: 컴팩트 지지
@@ -12469,6 +12483,13 @@ N:
 - id: noetherian_scheme
   en: Noetherian scheme
   ko: 뇌터스킴
+  primary: en
+  defs:
+  - label: '[스킴] §스킴의 위상구조'
+    url: /ko/math/scheme_theory/topology_of_schemes
+- id: noetherian_space
+  en: Noetherian space
+  ko: 뇌터 공간
   primary: en
   defs:
   - label: '[스킴] §스킴의 위상구조'
