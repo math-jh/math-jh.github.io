@@ -11709,6 +11709,13 @@ M:
   defs:
   - label: '[스택] §Moduli 문제: fine moduli와 coarse moduli'
     url: /ko/math/stacks/moduli_problems
+- id: moduli_stack
+  en: moduli stack
+  ko: 모듈라이 스택
+  primary: en
+  defs:
+  - label: '[스택] §Moduli 문제: fine moduli와 coarse moduli'
+    url: /ko/math/stacks/moduli_problems
 - id: modulus
   en: modulus
   ko: 절댓값
