@@ -19250,6 +19250,13 @@ V:
   defs:
   - label: '[유도대수기하학] §Derived scheme과 derived stack'
     url: /ko/math/derived_algebraic_geometry/derived_schemes
+- id: volume_form
+  en: volume form
+  ko: 부피형식
+  primary: en
+  defs:
+  - label: '[사교기하학] §Morse 이론과 stationary phase 근사'
+    url: /ko/math/symplectic_geometry/morse_stationary_phase
 W:
 - id: wdvv_equation
   en: WDVV equation
