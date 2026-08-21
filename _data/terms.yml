@@ -13624,6 +13624,13 @@ P:
   defs:
   - label: '[대수적 위상수학] §푸앵카레 쌍대성'
     url: /ko/math/algebraic_topology/Poincare_duality
+- id: poincaré_lemma
+  en: Poincaré lemma
+  ko: Poincaré 보조정리
+  primary: en
+  defs:
+  - label: '[대수적 위상수학] §코호몰로지'
+    url: /ko/math/algebraic_topology/cohomology
 - id: poincaré_pairing
   en: Poincaré pairing
   ko: 푸앙카레 쌍
