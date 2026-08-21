@@ -5518,6 +5518,13 @@ E:
     url: /ko/math/riemannian_geometry/geodesics
   - label: '[사교기하학] §J-holomorphic curves'
     url: /ko/math/symplectic_geometry/j_holomorphic_curves
+- id: energy_conservation
+  en: energy conservation
+  ko: 에너지 보존법칙
+  primary: ko
+  defs:
+  - label: '[사교기하학] §고전역학'
+    url: /ko/math/symplectic_geometry/classical_mechanics
 - id: enough_injective
   en: enough injective
   ko: 충분한 단사 대상
@@ -7717,6 +7724,13 @@ H:
   see:
   - label: Hyperplane
     id: hyperplane
+- id: hamilton_s_equation
+  en: 'Hamilton''s equation'
+  ko: 해밀턴 방정식
+  primary: en
+  defs:
+  - label: '[사교기하학] §고전역학'
+    url: /ko/math/symplectic_geometry/classical_mechanics
 - id: hamiltonian
   en: Hamiltonian
   ko: 해밀토니안
@@ -14044,6 +14058,13 @@ P:
   defs:
   - label: '[복소해석학] §고립특이점과 Laurent 급수'
     url: /ko/math/complex_analysis/isolated_singularities
+- id: principle_of_least_action
+  en: principle of least action
+  ko: 최소작용의 원리
+  primary: en
+  defs:
+  - label: '[사교기하학] §고전역학'
+    url: /ko/math/symplectic_geometry/classical_mechanics
 - id: product
   en: product
   ko: 곱
