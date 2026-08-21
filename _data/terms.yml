@@ -13789,6 +13789,13 @@ P:
   defs:
   - label: '[가환대수학] §기본 개념들'
     url: /ko/math/commutative_algebra/basic_notions
+- id: polytope
+  en: polytope
+  ko: 다면체
+  primary: en
+  defs:
+  - label: '[토릭 기하학] §토릭 다양체의 정의'
+    url: /ko/math/toric_geometry/toric_varieties
 - id: pontryagin_class
   en: Pontryagin class
   ko: 폰트랴긴 특성류
