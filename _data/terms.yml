@@ -14185,6 +14185,13 @@ P:
   defs:
   - label: '[미적분학] §미분법'
     url: /ko/math/calculus/differentiation_rules
+- id: product_space
+  en: product space
+  ko: 곱공간
+  primary: en
+  defs:
+  - label: '[위상수학] §곱공간'
+    url: /ko/math/topology/product_spaces
 - id: product_topology
   en: product topology
   ko: 곱 위상
