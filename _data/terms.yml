@@ -8711,6 +8711,13 @@ I:
     id: function
   - label: Family of sets
     id: family_of_sets
+- id: induce
+  en: induce
+  ko: 유도
+  primary: ko
+  defs:
+  - label: '[위상수학] §위상공간의 다른 정의들'
+    url: /ko/math/topology/equivalent_formulations_of_topology
 - id: induced_orientation
   en: induced orientation
   ko: 유도된 향
@@ -9156,6 +9163,13 @@ I:
   defs:
   - label: '[미분다양체] §미분형식'
     url: /ko/math/manifolds/differential_forms
+- id: interior_operator
+  en: interior operator
+  ko: 내부 연산자
+  primary: en
+  defs:
+  - label: '[위상수학] §위상공간의 다른 정의들'
+    url: /ko/math/topology/equivalent_formulations_of_topology
 - id: interior_point
   en: interior point
   ko: 내부점
