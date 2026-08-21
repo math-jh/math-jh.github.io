@@ -592,6 +592,8 @@ A:
   defs:
   - label: '[복소기하학] §거의 복소구조'
     url: /ko/math/complex_geometry/almost_complex_structures
+  - label: '[사교기하학] §J-holomorphic curves'
+    url: /ko/math/symplectic_geometry/j_holomorphic_curves
 - id: almost_split_sequence
   en: almost split sequence
   ko: 거의 분할 수열
