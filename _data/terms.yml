@@ -541,6 +541,13 @@ A:
   defs:
   - label: '[스택] §Algebraic stack과 quotient stack'
     url: /ko/math/stacks/algebraic_stacks
+- id: algebraic_stack
+  en: algebraic stack
+  ko: 대수 스택
+  primary: en
+  defs:
+  - label: '[스택] §Algebraic stack과 quotient stack'
+    url: /ko/math/stacks/algebraic_stacks
 - id: algebraic_surface
   en: algebraic surface
   ko: 대수곡면
