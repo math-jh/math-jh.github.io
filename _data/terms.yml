@@ -3887,6 +3887,13 @@ C:
   defs:
   - label: '[유도대수기하학] §Simplicial 가환환과 animation'
     url: /ko/math/derived_algebraic_geometry/animated_rings
+- id: cotangent_line_bundle
+  en: cotangent line bundle
+  ko: 여접선 다발
+  primary: en
+  defs:
+  - label: '[사교기하학] §Stable maps의 moduli space'
+    url: /ko/math/symplectic_geometry/stable_maps
 - id: cotangent_sheaf
   en: cotangent sheaf
   ko: 여접층
@@ -4319,6 +4326,13 @@ D:
   see:
   - label: First-order deformation
     id: first-order_deformation
+- id: deformation-obstruction_theory
+  en: deformation-obstruction theory
+  ko: 변형-장애 이론
+  primary: en
+  defs:
+  - label: '[사교기하학] §Stable maps의 moduli space'
+    url: /ko/math/symplectic_geometry/stable_maps
 - id: deformation_retract
   en: deformation retract
   ko: 변형 수축
