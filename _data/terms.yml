@@ -1843,6 +1843,13 @@ C:
     id: calabi-yau_threefold
   - label: Kähler manifold
     id: kähler_manifold
+- id: calabi-yau_hypersurface
+  en: Calabi-Yau hypersurface
+  ko: 칼라비-야우 초곡면
+  primary: en
+  defs:
+  - label: '[거울대칭] §거울대칭 개요'
+    url: /ko/math/mirror_symmetry/overview
 - id: calabi-yau_threefold
   en: Calabi-Yau threefold
   ko: 칼라비-야우 삼중체
@@ -2313,6 +2320,13 @@ C:
   defs:
   - label: '[대수다양체] §대수적 군'
     url: /ko/math/algebraic_varieties/algebraic_groups#def17
+- id: character_lattice
+  en: character lattice
+  ko: 특성 격자
+  primary: en
+  defs:
+  - label: '[토릭 기하학] §토러스 인자와 선다발'
+    url: /ko/math/toric_geometry/toric_divisors
 - id: characteristic
   en: characteristic
   ko: 표수
