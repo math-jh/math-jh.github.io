@@ -18631,6 +18631,13 @@ T:
   defs:
   - label: '[범주론] §수반함자'
     url: /ko/math/category_theory/adjoints
+- id: tychonoff
+  en: Tychonoff
+  ko: 타이코노프
+  primary: en
+  defs:
+  - label: '[위상수학] §하우스도르프 공간'
+    url: /ko/math/topology/Hausdorff_spaces
 - id: tychonoff_space
   en: Tychonoff space
   ko: 티코노프 공간
