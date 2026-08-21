@@ -15054,6 +15054,13 @@ R:
   defs:
   - label: '[대수다양체] §저우 군'
     url: /ko/math/algebraic_varieties/chow_groups
+- id: ray
+  en: ray
+  ko: 반직선
+  primary: en
+  defs:
+  - label: '[토릭 기하학] §아핀 토릭 다양체'
+    url: /ko/math/toric_geometry/affine_toric_varieties#def8
 - id: real_form
   en: real form
   ko: 실형식

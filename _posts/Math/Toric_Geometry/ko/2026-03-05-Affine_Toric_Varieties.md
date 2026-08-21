@@ -114,7 +114,7 @@ $$\mathbb{C}[S_\sigma] = \mathbb{C}[\rchi^{e_1^\ast}, \rchi^{e_2^\ast}] = \mathb
 위의 [예시 6](#ex6)의 $\sigma = \{0\}$과 [예시 7](#ex7)의 standard quadrant $\sigma = \mathrm{cone}(e_1, e_2)$에서 $U_\sigma$가 각각 $(\mathbb{C}^\ast)^n$, $\mathbb{C}^2$로 모두 smooth algebraic variety였다. 이제 우리는 이것이 우연이 아닐 뿐만 아니라 $U_\sigma$의 smoothness가 cone $\sigma$의 조합론적 데이터만으로 완전히 판정된다는 것을 살펴볼 것이다.
 
 ::: 정의 8
-Cone $\sigma$의 1차원 face를 $\sigma$의 *ray*라 부르고, 각 ray $\rho \prec \sigma$에 대하여 semigroup $\rho \cap N$을 생성하는 유일한 원소 $v_\rho \in N$을 $\rho$의 *primitive generator*라 부른다. Strongly convex rational polyhedral cone $\sigma \subseteq N_{\mathbb{R}}$가 *smooth<sub>매끄러운</sub>* (또는 *regular*, *nonsingular*) cone이라는 것은, $\sigma$의 ray들의 primitive generator 전체가 lattice $N$의 어떤 $\mathbb{Z}$-basis의 일부를 이루는 것이다.
+Cone $\sigma$의 1차원 face를 $\sigma$의 *ray<sub>반직선</sub>*라 부르고, 각 ray $\rho \prec \sigma$에 대하여 semigroup $\rho \cap N$을 생성하는 유일한 원소 $v_\rho \in N$을 $\rho$의 *primitive generator*라 부른다. Strongly convex rational polyhedral cone $\sigma \subseteq N_{\mathbb{R}}$가 *smooth<sub>매끄러운</sub>* (또는 *regular*, *nonsingular*) cone이라는 것은, $\sigma$의 ray들의 primitive generator 전체가 lattice $N$의 어떤 $\mathbb{Z}$-basis의 일부를 이루는 것이다.
 :::
 
 정의 자체는 다소 추상적으로 보일 수 있지만, 실용적으로는 다음의 두 조건이 합쳐진 것과 동치이다.
