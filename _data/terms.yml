@@ -7956,6 +7956,8 @@ H:
     url: /ko/math/calculus/partial_derivatives
   - label: '[리만기하학] §접속'
     url: /ko/math/riemannian_geometry/connection
+  - label: '[사교기하학] §Morse 이론과 stationary phase 근사'
+    url: /ko/math/symplectic_geometry/morse_stationary_phase
   see:
   - label: 야코비 행렬
     lang: ko
@@ -11947,6 +11949,13 @@ M:
 - id: morse_index
   en: Morse index
   ko: 모스 지수
+  primary: en
+  defs:
+  - label: '[사교기하학] §Morse 이론과 stationary phase 근사'
+    url: /ko/math/symplectic_geometry/morse_stationary_phase
+- id: morse_lemma
+  en: Morse lemma
+  ko: 모스 보조정리
   primary: en
   defs:
   - label: '[사교기하학] §Morse 이론과 stationary phase 근사'
@@ -17130,6 +17139,13 @@ S:
   defs:
   - label: '[복소해석학] §Cauchy 정리'
     url: /ko/math/complex_analysis/cauchy_theorem
+- id: stationary_phase_formula
+  en: stationary phase formula
+  ko: 정상위상 공식
+  primary: en
+  defs:
+  - label: '[사교기하학] §Morse 이론과 stationary phase 근사'
+    url: /ko/math/symplectic_geometry/morse_stationary_phase
 - id: stereographic_projection
   en: stereographic projection
   ko: 입체사영
