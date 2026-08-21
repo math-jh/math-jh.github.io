@@ -2621,6 +2621,13 @@ C:
   defs:
   - label: '[해석학] §부분수열과 Bolzano–Weierstrass 정리'
     url: /ko/math/analysis/bolzano_weierstrass
+- id: coadjoint_orbit
+  en: coadjoint orbit
+  ko: 수반 궤도
+  primary: en
+  defs:
+  - label: '[사교기하학] §사교 축약'
+    url: /ko/math/symplectic_geometry/symplectic_reduction
 - id: coarse_moduli_functor
   en: coarse moduli functor
   ko: 성긴 모듈라이 함자
@@ -15303,6 +15310,13 @@ R:
   defs:
   - label: '[위상수학] §하우스도르프 공간'
     url: /ko/math/topology/Hausdorff_spaces
+- id: regular_value
+  en: regular value
+  ko: 정규값
+  primary: en
+  defs:
+  - label: '[리 이론] §원환면의 작용'
+    url: /ko/math/lie_theory/torus_action
 - id: relation
   en: relation
   ko: 관계
