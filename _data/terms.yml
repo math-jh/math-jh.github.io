@@ -5339,6 +5339,13 @@ E:
   see:
   - label: Cartier divisor
     id: cartier_divisor
+- id: effective_class
+  en: effective class
+  ko: 효과적 류
+  primary: en
+  defs:
+  - label: '[그로모프-위튼 이론] §인트로: 박사 문제까지의 사다리'
+    url: /ko/math/gromov-witten_theory/intro_reading_note
 - id: effective_divisor
   en: effective divisor
   ko: 유효 인자
@@ -14537,6 +14544,13 @@ Q:
   see:
   - label: Gromov-Witten invariant
     id: gromov-witten_invariant
+- id: quantum_product
+  en: quantum product
+  ko: 양자곱
+  primary: en
+  defs:
+  - label: '[사교기하학] §양자 코호몰로지'
+    url: /ko/math/symplectic_geometry/quantum_cohomology
 - id: quartic_surface
   en: quartic surface
   ko: 4차 곡면
