@@ -2556,6 +2556,13 @@ C:
   defs:
   - label: '[집합론] §유향집합'
     url: /ko/math/set_theory/directed_set
+- id: closed_map
+  en: closed map
+  ko: 닫힌사상
+  primary: en
+  defs:
+  - label: '[위상수학] §열린사상과 닫힌사상'
+    url: /ko/math/topology/open_mappings_and_closed_mappings
 - id: closed_mapping
   en: closed mapping
   ko: 닫힌사상
