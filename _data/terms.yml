@@ -3771,6 +3771,13 @@ C:
     url: /ko/math/complex_analysis/cauchy_theorem
   - label: '[그로모프-위튼 이론] §안정사상 moduli의 대수적 구성'
     url: /ko/math/gromov-witten_theory/moduli_of_stable_maps
+- id: convex_polytope
+  en: convex polytope
+  ko: 볼록 다면체
+  primary: en
+  defs:
+  - label: '[토릭 기하학] §Delzant 구성'
+    url: /ko/math/toric_geometry/delzant_construction
 - id: coordinate
   en: coordinate
   ko: 좌표

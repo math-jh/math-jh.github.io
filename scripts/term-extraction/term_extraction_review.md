@@ -5333,3 +5333,7 @@ Decide whether each one is a definition and add it to `_data/terms.yml` (then ru
 ## term_extract_worker 2026-08-21 13:30
 
 - _posts/Math/Stacks/ko/2026-07-01-Grothendieck_Topology.md: 병기 필요 'Grothendieck topology' — 위키 ko 문서 '그로텐디크 위상' — 병기형 도출 필요
+
+## term_extract_worker 2026-08-21 19:02
+
+- _posts/Math/Symplectic_Geometry/ko/2026-06-20-Moment_Map.md: 주요 용어 'coadjoint action' ko 미상 — 보류
