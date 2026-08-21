@@ -3595,6 +3595,13 @@ C:
     url: /ko/math/scheme_theory/flat_morphisms
   - label: '[층론] §Verdier duality'
     url: /ko/math/sheaf_theory/verdier_duality
+- id: constructible_complex
+  en: constructible complex
+  ko: 구성가능 복합체
+  primary: en
+  defs:
+  - label: '[층론] §Verdier duality'
+    url: /ko/math/sheaf_theory/verdier_duality
 - id: contact_order
   en: contact order
   ko: 접촉 차수
@@ -10892,6 +10899,13 @@ L:
   defs:
   - label: '[가환대수학] §국소화'
     url: /ko/math/commutative_algebra/localization
+- id: local_system
+  en: local system
+  ko: 국소계
+  primary: en
+  defs:
+  - label: '[대수적 위상수학] §호모토피의 계산'
+    url: /ko/math/algebraic_topology/fibrations
 - id: local_trivialization
   en: local trivialization
   ko: 국소적 자명화
