@@ -4613,6 +4613,8 @@ D:
   defs:
   - label: '[스킴] §충실평탄 하강'
     url: /ko/math/scheme_theory/faithfully_flat_descent
+  - label: '[스택] §Fibered category와 stack'
+    url: /ko/math/stacks/fibered_categories_and_stacks
 - id: determinant
   en: determinant
   ko: 행렬식
@@ -6231,6 +6233,13 @@ F:
     id: pullback
   - label: Cartesian product
     id: cartesian_product
+- id: fibered_category
+  en: fibered category
+  ko: 섬유 범주
+  primary: en
+  defs:
+  - label: '[스택] §Fibered category와 stack'
+    url: /ko/math/stacks/fibered_categories_and_stacks
 - id: fibonacci_number
   en: Fibonacci number
   ko: 피보나치 수
