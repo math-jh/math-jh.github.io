@@ -8248,6 +8248,13 @@ H:
   defs:
   - label: '[가환대수학] §차원'
     url: /ko/math/commutative_algebra/Krull_dimension
+- id: homogeneous_coordinate
+  en: homogeneous coordinate
+  ko: 동차좌표
+  primary: en
+  defs:
+  - label: '[대수다양체] §사영다양체'
+    url: /ko/math/algebraic_varieties/projective_varieties
 - id: homogeneous_coordinate_ring
   en: homogeneous coordinate ring
   ko: 동차 좌표환
