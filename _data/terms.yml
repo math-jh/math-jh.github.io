@@ -1346,6 +1346,13 @@ B:
     id: vector_space
   - label: Dual basis
     id: dual_basis
+- id: bernoulli_inequality
+  en: Bernoulli inequality
+  ko: 베르누이 부등식
+  primary: en
+  defs:
+  - label: '[해석학] §수열의 수렴'
+    url: /ko/math/analysis/convergence_of_sequences
 - id: bertrand_postulate
   en: Bertrand postulate
   ko: 베르트랑 가설
