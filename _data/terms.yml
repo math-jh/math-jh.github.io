@@ -18203,6 +18203,13 @@ T:
   defs:
   - label: '[대수다양체] §선다발과 벡터다발'
     url: /ko/math/algebraic_varieties/line_bundles
+- id: tautological_subbundle
+  en: tautological subbundle
+  ko: 항등 부분다발
+  primary: en
+  defs:
+  - label: '[그로모프-위튼 이론] §Family GW 불변량과 fiberwise quantum cohomology: BDOP 독서 노트'
+    url: /ko/math/gromov-witten_theory/bdop_reading_note
 - id: taylor_polynomial
   en: Taylor polynomial
   ko: $n$차 테일러 다항식
