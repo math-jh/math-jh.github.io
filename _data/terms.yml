@@ -3834,6 +3834,13 @@ C:
   defs:
   - label: '[토릭 기하학] §Delzant 구성'
     url: /ko/math/toric_geometry/delzant_construction
+- id: convexity
+  en: convexity
+  ko: 볼록성
+  primary: en
+  defs:
+  - label: '[미적분학] §평균값 정리'
+    url: /ko/math/calculus/mean_value_theorem
 - id: coordinate
   en: coordinate
   ko: 좌표
