@@ -9124,6 +9124,13 @@ I:
   defs:
   - label: '[체론] §순수비분리확대체'
     url: /ko/math/field_theory/purely_inseparable_extensions
+- id: integrability
+  en: integrability
+  ko: 적분가능성
+  primary: ko
+  defs:
+  - label: '[해석학] §Riemann integral'
+    url: /ko/math/analysis/riemann_integral
 - id: integrable
   en: integrable
   ko: 적분가능
@@ -12077,6 +12084,13 @@ M:
 - id: monotone_sequence
   en: monotone sequence
   ko: 단조수열
+  primary: ko
+  defs:
+  - label: '[해석학] §수열의 수렴'
+    url: /ko/math/analysis/convergence_of_sequences
+- id: monotonic
+  en: monotonic
+  ko: 단조
   primary: ko
   defs:
   - label: '[해석학] §수열의 수렴'
