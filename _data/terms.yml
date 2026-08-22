@@ -15751,6 +15751,13 @@ R:
   defs:
   - label: '[리만기하학] §리만 곡률'
     url: /ko/math/riemannian_geometry/curvature
+- id: riemann-roch
+  en: Riemann-Roch
+  ko: 리만-로흐
+  primary: en
+  defs:
+  - label: '[대수다양체] §곡선에서의 리만-로흐 정리'
+    url: /ko/math/algebraic_varieties/riemann_roch_theorem
 - id: riemann_roch_dimension
   en: Riemann–Roch dimension
   ko: 리만-로흐 차원
