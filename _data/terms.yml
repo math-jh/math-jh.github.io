@@ -3224,6 +3224,13 @@ C:
   defs:
   - label: '[가환대수학] §완비화'
     url: /ko/math/commutative_algebra/completion
+- id: complete_metric_space
+  en: complete metric space
+  ko: 완비 거리공간
+  primary: ko
+  defs:
+  - label: '[해석학] §Cauchy 수열과 완비성'
+    url: /ko/math/analysis/cauchy_sequences
 - id: complete_reducibility
   en: complete reducibility
   ko: 완전가약성
@@ -8968,6 +8975,13 @@ I:
   see:
   - label: Final topology
     id: final_topology
+- id: initial_value_problem
+  en: initial value problem
+  ko: 초기값 문제
+  primary: ko
+  defs:
+  - label: '[해석학] §미분방정식의 존재성과 유일성'
+    url: /ko/math/analysis/existence_uniqueness_ode
 - id: injective
   en: injective
   ko: 단사
