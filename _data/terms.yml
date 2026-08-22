@@ -4276,6 +4276,13 @@ D:
   - label: 정적분
     lang: ko
     id: definite_integral
+- id: darboux_theorem
+  en: Darboux theorem
+  ko: 다르부 정리
+  primary: en
+  defs:
+  - label: '[해석학] §평균값 정리와 테일러 정리'
+    url: /ko/math/analysis/mean_value_theorem
 - id: de_moivre_s_formula
   en: 'de Moivre''s formula'
   ko: de Moivre 공식
