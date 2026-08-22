@@ -18373,6 +18373,13 @@ T:
   defs:
   - label: '[대수다양체] §Todd Class'
     url: /ko/math/algebraic_varieties/todd_class
+- id: topological_euler_characteristic
+  en: topological Euler characteristic
+  ko: 위상적 오일러 특성값
+  primary: en
+  defs:
+  - label: '[대수다양체] §천 특성류'
+    url: /ko/math/algebraic_varieties/chern_classes
 - id: topological_group
   en: topological group
   ko: 위상 군
