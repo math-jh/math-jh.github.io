@@ -3777,6 +3777,8 @@ C:
   defs:
   - label: '[해석학] §미분방정식의 존재성과 유일성'
     url: /ko/math/analysis/existence_uniqueness_ode
+  - label: '[해석학] §거리공간'
+    url: /ko/math/analysis/metric_spaces
 - id: contraction_constant
   en: contraction constant
   ko: 축약상수
