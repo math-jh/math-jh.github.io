@@ -19352,6 +19352,13 @@ V:
   - label: 변분
     lang: ko
     id: variation
+- id: variation_of_parameters
+  en: variation of parameters
+  ko: 매개변수변환
+  primary: en
+  defs:
+  - label: '[해석학] §선형 미분방정식계'
+    url: /ko/math/analysis/linear_ode
 - id: variety
   en: variety
   ko: 다양체
