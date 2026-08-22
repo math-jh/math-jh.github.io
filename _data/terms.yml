@@ -5581,6 +5581,13 @@ E:
   see:
   - label: Automorphism group
     id: automorphism_group
+- id: endomorphism_ring
+  en: endomorphism ring
+  ko: 자기사상환
+  primary: en
+  defs:
+  - label: '[환론] §나눗셈환'
+    url: /ko/math/ring_theory/division_rings
 - id: energy
   en: energy
   ko: 에너지
@@ -14773,6 +14780,13 @@ Q:
   defs:
   - label: '[유도대수기하학] §Derived scheme과 derived stack'
     url: /ko/math/derived_algebraic_geometry/derived_schemes
+- id: quaternion
+  en: quaternion
+  ko: 사원수
+  primary: en
+  defs:
+  - label: '[환론] §나눗셈환'
+    url: /ko/math/ring_theory/division_rings
 - id: quaternion_algebra
   en: quaternion algebra
   ko: 사원수 대수
