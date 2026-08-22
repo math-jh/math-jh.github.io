@@ -1633,6 +1633,13 @@ B:
   see:
   - label: Rees algebra
     id: rees_algebra
+- id: bolzano_weierstrass_theorem
+  en: Bolzano–Weierstrass theorem
+  ko: Bolzano–Weierstrass 정리
+  primary: en
+  defs:
+  - label: '[해석학] §부분수열과 Bolzano–Weierstrass 정리'
+    url: /ko/math/analysis/bolzano_weierstrass
 - id: borel_construction
   en: Borel construction
   ko: 보렐 구성
