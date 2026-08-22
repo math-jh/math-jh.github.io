@@ -8142,6 +8142,13 @@ H:
   defs:
   - label: '[가환대수학] §힐베르트-사무엘 함수'
     url: /ko/math/commutative_algebra/hilbert-samuel_function
+- id: hirzebruch-riemann-roch
+  en: Hirzebruch-Riemann-Roch
+  ko: 히르체브루흐-리만-로흐
+  primary: en
+  defs:
+  - label: '[대수다양체] §Hirzebruch-Riemann-Roch'
+    url: /ko/math/algebraic_varieties/hirzebruch_riemann_roch
 - id: hirzebruch_surface
   en: hirzebruch surface
   ko: Hirzebruch 곡면
