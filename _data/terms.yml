@@ -3210,6 +3210,13 @@ C:
   defs:
   - label: '[가환대수학] §완비화'
     url: /ko/math/commutative_algebra/completion
+- id: complete_set_of_orthogonal_idempotents
+  en: complete set of orthogonal idempotents
+  ko: 완전 직교 멱등원 집합
+  primary: en
+  defs:
+  - label: '[환론] §멱등원과 곱분해'
+    url: /ko/math/ring_theory/idempotents
 - id: completely_hausdorff_space
   en: completely Hausdorff space
   ko: 완전 하우스도르프 공간
