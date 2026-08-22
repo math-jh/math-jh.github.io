@@ -19713,6 +19713,13 @@ W:
     id: weyl_group
   - label: Root system
     id: root_system
+- id: whitney_sum
+  en: Whitney sum
+  ko: Whitney 합
+  primary: en
+  defs:
+  - label: '[대수적 위상수학] §벡터다발의 특성류'
+    url: /ko/math/algebraic_topology/characteristic_classes
 - id: whitney_sum_formula
   en: Whitney sum formula
   ko: 휘트니 합 공식
