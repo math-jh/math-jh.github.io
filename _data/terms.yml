@@ -11054,6 +11054,13 @@ L:
     url: /ko/math/algebraic_structures/field_of_fractions
   - label: '[가환대수학] §국소화'
     url: /ko/math/commutative_algebra/localization
+- id: localization_theorem
+  en: localization theorem
+  ko: 국소화 정리
+  primary: en
+  defs:
+  - label: '[토릭 기하학] §Atiyah–Bott localization 정리'
+    url: /ko/math/toric_geometry/atiyah_bott_localization
 - id: locally_bounded
   en: locally bounded
   ko: 국소유계
