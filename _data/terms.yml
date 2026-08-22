@@ -17900,6 +17900,8 @@ S:
   defs:
   - label: '[사교기하학] §운동량 사상'
     url: /ko/math/symplectic_geometry/moment_map
+  - label: '[토릭 기하학] §Delzant 구성'
+    url: /ko/math/toric_geometry/delzant_construction
 - id: symplectic_vector_space
   en: symplectic vector space
   ko: 사교벡터공간

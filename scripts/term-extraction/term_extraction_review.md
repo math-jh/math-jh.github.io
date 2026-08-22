@@ -5345,3 +5345,7 @@ Decide whether each one is a definition and add it to `_data/terms.yml` (then ru
 ## term_extract_worker 2026-08-22 05:31
 
 - _posts/Math/Toric_Geometry/ko/2026-03-05-Affine_Toric_Varieties.md: 병기 필요 'primitive generator' — 위키 ko 문서 '암호학적으로 안전한 유사난수 생성기' — 병기형 도출 필요
+
+## term_extract_worker 2026-08-22 08:31
+
+- _posts/Math/Toric_Geometry/ko/2026-06-20-Toric_Cohomology.md: 주요 용어 'nef' ko 미상 — 보류
