@@ -8502,6 +8502,13 @@ H:
   see:
   - label: Hypersurface
     id: hypersurface
+- id: hyperplane_section
+  en: hyperplane section
+  ko: 초평면 절단
+  primary: en
+  defs:
+  - label: '[대수다양체] §사영공간의 코호몰로지'
+    url: /ko/math/algebraic_varieties/cohomology_of_projective_spaces
 - id: hypersurface
   en: hypersurface
   ko: 초곡면
@@ -12644,6 +12651,13 @@ N:
     url: /ko/math/riemannian_geometry/Riemannian_metric
   - label: '[그로모프-위튼 이론] §Refined Gysin 사상과 moduli의 교차이론'
     url: /ko/math/gromov-witten_theory/refined_gysin
+- id: normal_cone
+  en: normal cone
+  ko: 법원뿔
+  primary: en
+  defs:
+  - label: '[대수다양체] §교차곱'
+    url: /ko/math/algebraic_varieties/intersection_product
 - id: normal_coordinate
   en: normal coordinate
   ko: 정규좌표
@@ -12835,6 +12849,13 @@ O:
   - label: 변형이론
     lang: ko
     id: deformation_theory
+- id: obstruction_theory
+  en: obstruction theory
+  ko: 장애이론
+  primary: en
+  defs:
+  - label: '[그로모프-위튼 이론] §Family Gromov-Witten 불변량과 family quantum cohomology'
+    url: /ko/math/gromov-witten_theory/family_gw_invariants
 - id: odd_map
   en: odd map
   ko: 기함수형 사상
@@ -17239,6 +17260,8 @@ S:
   defs:
   - label: '[그로모프-위튼 이론] §안정사상 moduli의 대수적 구성'
     url: /ko/math/gromov-witten_theory/moduli_of_stable_maps
+  - label: '[그로모프-위튼 이론] §인트로: 박사 문제까지의 사다리'
+    url: /ko/math/gromov-witten_theory/intro_reading_note
 - id: stack
   en: stack
   ko: 스택
