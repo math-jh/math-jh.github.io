@@ -9830,6 +9830,13 @@ J:
   defs:
   - label: '[미분다양체] §미분사상'
     url: /ko/math/manifolds/differentials
+- id: jacobian_determinant
+  en: Jacobian determinant
+  ko: 야코비 행렬식
+  primary: ko
+  defs:
+  - label: '[미적분학] §다중적분'
+    url: /ko/math/calculus/multiple_integrals
 - id: jacobian_matrix
   en: Jacobian matrix
   ko: 야코비 행렬
@@ -10908,6 +10915,13 @@ L:
   defs:
   - label: '[선형대수학] §선형사상'
     url: /ko/math/linear_algebra/linear_map
+- id: linear_mapping
+  en: linear mapping
+  ko: 선형사상
+  primary: ko
+  defs:
+  - label: '[미적분학] §다변수함수와 편미분'
+    url: /ko/math/calculus/partial_derivatives
 - id: linear_operator
   en: linear operator
   ko: 선형연산자
@@ -12241,6 +12255,13 @@ M:
     url: /ko/math/commutative_algebra/hilbert-samuel_function
   - label: '[리 이론] §최고 무게 가군'
     url: /ko/math/lie_theory/highest_weight_modules
+- id: multivariable_differentiation
+  en: multivariable differentiation
+  ko: 다변수 미분
+  primary: en
+  defs:
+  - label: '[해석학] §다변수 미분'
+    url: /ko/math/analysis/multivariable_differentiation
 - id: musical_isomorphism
   en: musical isomorphism
   ko: 음악 동형사상
