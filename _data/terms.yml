@@ -16557,6 +16557,13 @@ S:
   defs:
   - label: '[해석학] §컴팩트성'
     url: /ko/math/analysis/compactness
+- id: series
+  en: series
+  ko: 급수
+  primary: ko
+  defs:
+  - label: '[미적분학] §무한급수'
+    url: /ko/math/calculus/series
 - id: Serre_duality
   en: Serre duality
   ko: 세르 쌍대성
