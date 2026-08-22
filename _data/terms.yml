@@ -755,6 +755,13 @@ A:
   defs:
   - label: '[대수적 위상수학] §Borsuk–Ulam 정리'
     url: /ko/math/algebraic_topology/borsuk_ulam_theorem
+- id: antipodal_morphism
+  en: antipodal morphism
+  ko: 대척사상
+  primary: en
+  defs:
+  - label: '[대수적 위상수학] §Borsuk–Ulam 정리'
+    url: /ko/math/algebraic_topology/borsuk_ulam_theorem
 - id: antisymmetric
   en: antisymmetric
   ko: 반대칭적
@@ -6998,6 +7005,8 @@ F:
   defs:
   - label: '[대수적 위상수학] §푸앵카레 쌍대성'
     url: /ko/math/algebraic_topology/Poincare_duality
+  - label: '[대수적 위상수학] §사상의 차수와 Brouwer·Lefschetz 고정점 정리'
+    url: /ko/math/algebraic_topology/degree_and_fixed_point_theorems
 - id: fundamental_form
   en: fundamental form
   ko: 기본형식
@@ -18184,6 +18193,13 @@ T:
   see:
   - label: Covector
     id: covector
+- id: tangent_vector_field
+  en: tangent vector field
+  ko: 접벡터장
+  primary: en
+  defs:
+  - label: '[대수적 위상수학] §사상의 차수와 Brouwer·Lefschetz 고정점 정리'
+    url: /ko/math/algebraic_topology/degree_and_fixed_point_theorems
 - id: target
   en: target
   ko: 타겟
