@@ -667,6 +667,13 @@ A:
   defs:
   - label: '[대수다양체] §선형계'
     url: /ko/math/algebraic_varieties/linear_systems
+- id: ampleness
+  en: ampleness
+  ko: 진폭성
+  primary: en
+  defs:
+  - label: '[스킴] §인자와 선형계'
+    url: /ko/math/scheme_theory/divisors_and_linear_systems
 - id: analytic
   en: analytic
   ko: 해석적
