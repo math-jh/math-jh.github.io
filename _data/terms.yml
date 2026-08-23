@@ -10048,6 +10048,8 @@ K:
   defs:
   - label: '[대수다양체] §K3 Surfaces'
     url: /ko/math/algebraic_varieties/k3_surfaces
+  - label: '[복소기하학] §Kodaira 매장정리'
+    url: /ko/math/complex_geometry/kodaira_embedding_theorem
   see:
   - label: Kummer surface
     id: kummer_surface
@@ -10223,6 +10225,13 @@ K:
     url: /ko/math/algebraic_varieties/kodaira_vanishing
 - id: kodaira_vanishing
   en: Kodaira vanishing
+  ko: 고다이라 소멸정리
+  primary: en
+  defs:
+  - label: '[대수다양체] §고다이라 소멸정리'
+    url: /ko/math/algebraic_varieties/kodaira_vanishing
+- id: kodaira_vanishing_theorem
+  en: Kodaira vanishing theorem
   ko: 고다이라 소멸정리
   primary: en
   defs:
@@ -14086,6 +14095,13 @@ P:
   defs:
   - label: '[선형대수학] §스펙트럼 정리'
     url: /ko/math/linear_algebra/spectral_theorem
+- id: positive_line_bundle
+  en: positive line bundle
+  ko: 양의 선다발
+  primary: en
+  defs:
+  - label: '[복소기하학] §Kodaira 매장정리'
+    url: /ko/math/complex_geometry/kodaira_embedding_theorem
 - id: positive_nilpotent_subalgebra
   en: positive nilpotent subalgebra
   ko: 양의 멱영 부분대수
