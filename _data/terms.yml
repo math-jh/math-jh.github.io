@@ -3410,6 +3410,13 @@ C:
   defs:
   - label: '[복소해석학] §복소수와 복소평면'
     url: /ko/math/complex_analysis/complex_numbers
+- id: complex_projective_space
+  en: complex projective space
+  ko: 복소사영공간
+  primary: en
+  defs:
+  - label: '[복소기하학] §복소다양체'
+    url: /ko/math/complex_geometry/complex_manifolds
 - id: complex_structure
   en: complex structure
   ko: 복소구조
@@ -18783,6 +18790,8 @@ T:
   defs:
   - label: '[미분다양체] §미분다양체'
     url: /ko/math/manifolds/smooth_manifolds
+  - label: '[복소기하학] §복소다양체'
+    url: /ko/math/complex_geometry/complex_manifolds
 - id: transition_matrix
   en: transition matrix
   ko: 기저변환행렬
