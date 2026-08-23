@@ -9551,6 +9551,13 @@ I:
     url: /ko/math/algebraic_structures/groups
   - label: '[가환대수학] §분수아이디얼'
     url: /ko/math/commutative_algebra/fractional_ideals
+- id: invertible_ideal
+  en: Invertible ideal
+  ko: 가역아이디얼
+  primary: en
+  defs:
+  - label: '[가환대수학] §분수아이디얼'
+    url: /ko/math/commutative_algebra/fractional_ideals
 - id: invertible_matrix
   en: invertible matrix
   ko: 가역행렬
