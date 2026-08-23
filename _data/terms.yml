@@ -890,10 +890,10 @@ A:
   ko: Artinian 환
   primary: en
   defs:
-  - label: '[가환대수학] §조르단-횔더 정리'
-    url: /ko/math/commutative_algebra/Jordan-Holder_theorem
   - label: '[가환대수학] §기본 개념들'
     url: /ko/math/commutative_algebra/basic_notions
+  - label: '[가환대수학] §조르단-횔더 정리'
+    url: /ko/math/commutative_algebra/Jordan-Holder_theorem
 - id: ascending_chain_condition
   en: ascending chain condition
   ko: 오름사슬조건
@@ -3791,10 +3791,10 @@ C:
   ko: 축약사상
   primary: en
   defs:
-  - label: '[해석학] §미분방정식의 존재성과 유일성'
-    url: /ko/math/analysis/existence_uniqueness_ode
   - label: '[해석학] §거리공간'
     url: /ko/math/analysis/metric_spaces
+  - label: '[해석학] §미분방정식의 존재성과 유일성'
+    url: /ko/math/analysis/existence_uniqueness_ode
 - id: contraction_constant
   en: contraction constant
   ko: 축약상수
