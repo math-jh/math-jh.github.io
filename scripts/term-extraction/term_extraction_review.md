@@ -5367,3 +5367,11 @@ Decide whether each one is a definition and add it to `_data/terms.yml` (then ru
 ## term_extract_worker 2026-08-23 15:31
 
 - _posts/Math/Commutative_Algebra/ko/2024-10-30-Flatness.md: 주요 용어 'Noetherian' ko 미상 — 보류
+
+## term_extract_worker 2026-08-23 16:31
+
+- _posts/Math/Commutative_Algebra/ko/2024-12-26-Differentials.md: 주요 용어 'conormal sequence' ko 미상 — 보류
+
+## term_extract_worker 2026-08-23 17:00
+
+- _posts/Math/Commutative_Algebra/ko/2025-01-12-Local_Criterion_for_Flatness.md: 주요 용어 'Noetherian' ko 미상 — 보류
