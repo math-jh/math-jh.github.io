@@ -7588,6 +7588,13 @@ G:
   defs:
   - label: '[대수적 구조] §가환군'
     url: /ko/math/algebraic_structures/abelian_groups
+- id: graded_algebra
+  en: graded algebra
+  ko: 등급대수
+  primary: en
+  defs:
+  - label: '[다중선형대수학] §텐서대수'
+    url: /ko/math/multilinear_algebra/tensor_algebras
 - id: graded_homomorphism
   en: graded homomorphism
   ko: 등급준동형사상
