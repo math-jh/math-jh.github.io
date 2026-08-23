@@ -297,6 +297,13 @@ A:
   defs:
   - label: '[스킴] §군 스킴'
     url: /ko/math/scheme_theory/group_schemes
+- id: adic_topology
+  en: adic topology
+  ko: 진 위상
+  primary: ko
+  defs:
+  - label: '[가환대수학] §완비화'
+    url: /ko/math/commutative_algebra/completion
 - id: adjoint
   en: adjoint
   ko: 수반
