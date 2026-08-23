@@ -9951,6 +9951,13 @@ J:
   see:
   - label: Jordan canonical form
     id: jordan_canonical_form
+- id: jordan-hölder_theorem
+  en: Jordan-Hölder theorem
+  ko: Jordan-Hölder 정리
+  primary: en
+  defs:
+  - label: '[가환대수학] §조르단-횔더 정리'
+    url: /ko/math/commutative_algebra/Jordan-Holder_theorem
 - id: j_th_column_vector
   en: $j$th column vector
   ko: $j$번째 열벡터
