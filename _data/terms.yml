@@ -19692,6 +19692,13 @@ W:
   see:
   - label: Exterior algebra
     id: exterior_algebra
+- id: weierstrass_m-test
+  en: Weierstrass M-test
+  ko: Weierstrass M-판정
+  primary: en
+  defs:
+  - label: '[해석학] §균등수렴'
+    url: /ko/math/analysis/uniform_convergence
 - id: weight
   en: weight
   ko: 무게
