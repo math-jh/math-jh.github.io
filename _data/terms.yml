@@ -5971,6 +5971,8 @@ E:
   defs:
   - label: '[복소해석학] §복소수와 복소평면'
     url: /ko/math/complex_analysis/complex_numbers
+  - label: '[복소해석학] §복소정칙함수'
+    url: /ko/math/complex_analysis/holomorphic_functions
 - id: euler_s_theorem
   en: 'Euler''s theorem'
   ko: 오일러 정리
