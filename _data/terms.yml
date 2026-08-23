@@ -3934,6 +3934,13 @@ C:
   defs:
   - label: '[미적분학] §다변수함수와 편미분'
     url: /ko/math/calculus/partial_derivatives
+- id: coprimary_module
+  en: coprimary module
+  ko: 쌍대으뜸부분가군
+  primary: en
+  defs:
+  - label: '[가환대수학] §으뜸분해'
+    url: /ko/math/commutative_algebra/primary_decomposition
 - id: coprimary_submodule
   en: coprimary submodule
   ko: 쌍대으뜸부분가군

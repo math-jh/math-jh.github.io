@@ -5349,3 +5349,11 @@ Decide whether each one is a definition and add it to `_data/terms.yml` (then ru
 ## term_extract_worker 2026-08-22 08:31
 
 - _posts/Math/Toric_Geometry/ko/2026-06-20-Toric_Cohomology.md: 주요 용어 'nef' ko 미상 — 보류
+
+## term_extract_worker 2026-08-23 10:31
+
+- _posts/Math/Commutative_Algebra/ko/2024-09-05-Localization.md: 주요 용어 'Noetherian' ko 미상 — 보류
+
+## term_extract_worker 2026-08-23 12:01
+
+- _posts/Math/Commutative_Algebra/ko/2024-10-17-Primary_Decomposition.md: 주요 용어 'Noetherian' ko 미상 — 보류
