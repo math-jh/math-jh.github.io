@@ -6986,6 +6986,13 @@ F:
   defs:
   - label: '[대수다양체] §유리사상'
     url: /ko/math/algebraic_varieties/rational_maps
+- id: function_sequence
+  en: function sequence
+  ko: 함수열
+  primary: ko
+  defs:
+  - label: '[해석학] §함수열과 점별수렴'
+    url: /ko/math/analysis/sequences_of_functions
 - id: function_series
   en: function series
   ko: 함수항급수
@@ -15830,6 +15837,13 @@ R:
   defs:
   - label: '[리만기하학] §리만 곡률'
     url: /ko/math/riemannian_geometry/curvature
+- id: riemann_integral
+  en: Riemann integral
+  ko: 리만적분
+  primary: en
+  defs:
+  - label: '[해석학] §Riemann integral'
+    url: /ko/math/analysis/riemann_integral
 - id: riemann-roch
   en: Riemann-Roch
   ko: 리만-로흐
