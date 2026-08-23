@@ -8239,6 +8239,13 @@ H:
   defs:
   - label: '[복소기하학] §Hodge 이론'
     url: /ko/math/complex_geometry/hodge_theory
+- id: hodge_decomposition
+  en: Hodge decomposition
+  ko: 호지 분해
+  primary: en
+  defs:
+  - label: '[복소기하학] §Hodge 이론'
+    url: /ko/math/complex_geometry/hodge_theory
 - id: hodge_diamond
   en: Hodge diamond
   ko: 호지 다이아몬드
@@ -8267,6 +8274,15 @@ H:
   defs:
   - label: '[복소기하학] §돌보 코호몰로지'
     url: /ko/math/complex_geometry/dolbeault_cohomology
+  - label: '[복소기하학] §Hodge 이론'
+    url: /ko/math/complex_geometry/hodge_theory
+- id: hodge_star
+  en: Hodge star
+  ko: 호지 별작용소
+  primary: en
+  defs:
+  - label: '[복소기하학] §Hodge 이론'
+    url: /ko/math/complex_geometry/hodge_theory
 - id: hodge_star_operator
   en: Hodge star operator
   ko: 호지 별작용소
