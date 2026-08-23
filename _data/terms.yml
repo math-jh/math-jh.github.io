@@ -13882,6 +13882,13 @@ P:
   defs:
   - label: '[해석학] §미분방정식의 존재성과 유일성'
     url: /ko/math/analysis/existence_uniqueness_ode
+- id: piecewise_c_1_curve
+  en: piecewise $C^1$ curve
+  ko: 조각마다 C¹인 곡선
+  primary: en
+  defs:
+  - label: '[복소해석학] §복소적분'
+    url: /ko/math/complex_analysis/complex_integration
 - id: piecewise_linear_function
   en: piecewise linear function
   ko: 조각별 선형 함수
