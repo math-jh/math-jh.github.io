@@ -885,6 +885,8 @@ A:
   defs:
   - label: '[가환대수학] §조르단-횔더 정리'
     url: /ko/math/commutative_algebra/Jordan-Holder_theorem
+  - label: '[가환대수학] §기본 개념들'
+    url: /ko/math/commutative_algebra/basic_notions
 - id: ascending_chain_condition
   en: ascending chain condition
   ko: 오름사슬조건
