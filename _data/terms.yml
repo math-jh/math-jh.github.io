@@ -7583,6 +7583,13 @@ G:
   defs:
   - label: '[가환대수학] §Gorenstein 환'
     url: /ko/math/commutative_algebra/gorenstein_rings
+- id: goursat_theorem
+  en: Goursat theorem
+  ko: Goursat 정리
+  primary: ko
+  defs:
+  - label: '[복소해석학] §Cauchy 정리'
+    url: /ko/math/complex_analysis/cauchy_theorem
 - id: grade
   en: grade
   ko: 차수
