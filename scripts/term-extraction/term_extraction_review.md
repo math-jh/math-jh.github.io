@@ -5379,3 +5379,7 @@ Decide whether each one is a definition and add it to `_data/terms.yml` (then ru
 ## term_extract_worker 2026-08-23 18:01
 
 - _posts/Math/Commutative_Algebra/ko/2025-01-16-Properties_of_Completion.md: 주요 용어 'Noetherian' ko 미상 — 보류
+
+## term_extract_worker 2026-08-24 07:03
+
+- _posts/Math/Derived_Algebraic_Geometry/ko/2026-07-01-Shifted_Symplectic_Structures.md: 병기 필요 'de Rham differential' — 위키 ko 문서 '드람 코호몰로지' — 병기형 도출 필요

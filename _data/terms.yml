@@ -3333,6 +3333,13 @@ C:
     url: /ko/math/commutative_algebra/completion
   - label: '[리 이론] §Weyl character formula'
     url: /ko/math/lie_theory/weyl_character_formula
+- id: complex
+  en: complex
+  ko: 복합체
+  primary: en
+  defs:
+  - label: '[대수적 위상수학] §호몰로지'
+    url: /ko/math/algebraic_topology/homology
 - id: complex_algebraic_variety
   en: complex algebraic variety
   ko: 복소대수다양체
@@ -3994,6 +4001,13 @@ C:
   defs:
   - label: '[복소해석학] §복소정칙함수'
     url: /ko/math/complex_analysis/holomorphic_functions
+- id: cotangent
+  en: cotangent
+  ko: 여접
+  primary: en
+  defs:
+  - label: '[대수다양체] §접공간과 매끄러움'
+    url: /ko/math/algebraic_varieties/tangent_spaces_and_smoothness
 - id: cotangent_bundle
   en: cotangent bundle
   ko: 여접다발
@@ -4612,6 +4626,13 @@ D:
   defs:
   - label: '[미적분학] §미분과 도함수'
     url: /ko/math/calculus/derivatives
+- id: derived
+  en: derived
+  ko: 유도
+  primary: en
+  defs:
+  - label: '[대수적 위상수학] §호몰로지'
+    url: /ko/math/algebraic_topology/homology
 - id: derived_adjunction
   en: derived adjunction
   ko: 유도 수반
