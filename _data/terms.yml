@@ -9276,6 +9276,13 @@ I:
   defs:
   - label: '[가환대수학] §정수적 확장과 아이디얼'
     url: /ko/math/commutative_algebra/lying_over_and_going_up
+- id: integrally_closed_domain
+  en: integrally closed domain
+  ko: 정수적으로 닫힌 정역
+  primary: en
+  defs:
+  - label: '[가환대수학] §정수적 확장과 아이디얼'
+    url: /ko/math/commutative_algebra/lying_over_and_going_up
 - id: integrand
   en: integrand
   ko: 피적분함수

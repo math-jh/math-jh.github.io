@@ -5357,3 +5357,9 @@ Decide whether each one is a definition and add it to `_data/terms.yml` (then ru
 ## term_extract_worker 2026-08-23 12:01
 
 - _posts/Math/Commutative_Algebra/ko/2024-10-17-Primary_Decomposition.md: 주요 용어 'Noetherian' ko 미상 — 보류
+
+## term_extract_worker 2026-08-23 13:00
+
+- _posts/Math/Commutative_Algebra/ko/2024-10-20-Lying_Over_and_Going_Up.md: 주요 용어 'lying over' ko 미상 — 보류
+- _posts/Math/Commutative_Algebra/ko/2024-10-20-Lying_Over_and_Going_Up.md: 주요 용어 'going up' ko 미상 — 보류
+- _posts/Math/Commutative_Algebra/ko/2024-10-20-Lying_Over_and_Going_Up.md: 주요 용어 'going down' ko 미상 — 보류
