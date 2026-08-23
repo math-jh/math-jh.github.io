@@ -5375,3 +5375,7 @@ Decide whether each one is a definition and add it to `_data/terms.yml` (then ru
 ## term_extract_worker 2026-08-23 17:00
 
 - _posts/Math/Commutative_Algebra/ko/2025-01-12-Local_Criterion_for_Flatness.md: 주요 용어 'Noetherian' ko 미상 — 보류
+
+## term_extract_worker 2026-08-23 18:01
+
+- _posts/Math/Commutative_Algebra/ko/2025-01-16-Properties_of_Completion.md: 주요 용어 'Noetherian' ko 미상 — 보류
