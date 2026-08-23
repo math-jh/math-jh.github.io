@@ -12290,6 +12290,13 @@ M:
   defs:
   - label: '[정수론] §유클리드 호제법과 Bézout 항등식'
     url: /ko/math/number_theory/euclidean_algorithm
+- id: multiplicative_set
+  en: multiplicative set
+  ko: 승법적 집합
+  primary: en
+  defs:
+  - label: '[가환대수학] §등급환의 국소화'
+    url: /ko/math/commutative_algebra/localization_of_graded_rings
 - id: multiplicatively_closed
   en: multiplicatively closed
   ko: 곱셈에 대하여 닫혀있다
