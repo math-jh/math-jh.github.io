@@ -15030,6 +15030,13 @@ Q:
   defs:
   - label: '[유도대수기하학] §Derived scheme과 derived stack'
     url: /ko/math/derived_algebraic_geometry/derived_schemes
+- id: quasi-smooth_morphism
+  en: quasi-smooth morphism
+  ko: 유사매끄러움 사상
+  primary: en
+  defs:
+  - label: '[유도대수기하학] §Derived scheme과 derived stack'
+    url: /ko/math/derived_algebraic_geometry/derived_schemes
 - id: quaternion
   en: quaternion
   ko: 사원수
