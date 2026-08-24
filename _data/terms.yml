@@ -7613,6 +7613,13 @@ G:
   defs:
   - label: '[대수다양체] §사영공간의 코호몰로지'
     url: /ko/math/algebraic_varieties/cohomology_of_projective_spaces
+- id: globally_generating_sections
+  en: globally generating sections
+  ko: 전역생성단면
+  primary: en
+  defs:
+  - label: '[스킴] §점함자'
+    url: /ko/math/scheme_theory/functor_of_points
 - id: godement_sheaf
   en: Godement sheaf
   ko: 고드망 층
