@@ -16284,6 +16284,13 @@ R:
   defs:
   - label: '[미적분학] §무한급수'
     url: /ko/math/calculus/series
+- id: root_vector
+  en: root vector
+  ko: 근벡터
+  primary: en
+  defs:
+  - label: '[리 이론] §Serre 관계식'
+    url: /ko/math/lie_theory/serre_relations
 - id: rouché_theorem
   en: Rouché theorem
   ko: Rouché 정리
