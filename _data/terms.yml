@@ -2568,6 +2568,13 @@ C:
   defs:
   - label: '[스택] §Fibered category와 stack'
     url: /ko/math/stacks/fibered_categories_and_stacks
+- id: clebsch_gordan
+  en: Clebsch–Gordan
+  ko: 클렙슈–고르단
+  primary: en
+  defs:
+  - label: '[리 이론] §sl₂의 표현론'
+    url: /ko/math/lie_theory/representations_of_sl2
 - id: clopen_set
   en: clopen set
   ko: 열린닫힌집합
@@ -12433,6 +12440,8 @@ M:
     url: /ko/math/commutative_algebra/hilbert-samuel_function
   - label: '[리 이론] §최고 무게 가군'
     url: /ko/math/lie_theory/highest_weight_modules
+  - label: '[리 이론] §sl₂의 표현론'
+    url: /ko/math/lie_theory/representations_of_sl2
 - id: multivariable_differentiation
   en: multivariable differentiation
   ko: 다변수 미분
