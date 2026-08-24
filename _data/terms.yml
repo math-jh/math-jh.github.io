@@ -11466,6 +11466,13 @@ L:
   defs:
   - label: '[그로모프-위튼 이론] §Log structure와 log smooth curve'
     url: /ko/math/gromov-witten_theory/log_structures
+- id: log_tangent_bundle
+  en: log tangent bundle
+  ko: 로그 접다발
+  primary: en
+  defs:
+  - label: '[그로모프-위튼 이론] §Log structure와 log smooth curve'
+    url: /ko/math/gromov-witten_theory/log_structures
 - id: logarithmic_cotangent_sheaf
   en: logarithmic cotangent sheaf
   ko: 로그 코탄젠트 층
