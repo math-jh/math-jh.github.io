@@ -2024,6 +2024,13 @@ C:
   defs:
   - label: '[집합론] §동치관계'
     url: /ko/math/set_theory/equivalence_relations
+- id: canonical_sheaf
+  en: canonical sheaf
+  ko: 정준층
+  primary: en
+  defs:
+  - label: '[스킴] §미분과 여접층'
+    url: /ko/math/scheme_theory/sheaf_of_differentials
 - id: canonical_topology
   en: canonical topology
   ko: 표준 위상
@@ -6006,6 +6013,13 @@ E:
   defs:
   - label: '[정수론] §이차 잉여'
     url: /ko/math/number_theory/quadratic_residues
+- id: euler_exact_sequence
+  en: Euler exact sequence
+  ko: 오일러 정확수열
+  primary: en
+  defs:
+  - label: '[대수다양체] §표준선다발'
+    url: /ko/math/algebraic_varieties/canonical_bundle
 - id: euler_form
   en: Euler form
   ko: 오일러 형식
