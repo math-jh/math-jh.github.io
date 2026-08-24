@@ -4951,6 +4951,13 @@ D:
   defs:
   - label: '[미분다양체] §미분형식'
     url: /ko/math/manifolds/differential_forms
+- id: differential_module
+  en: differential module
+  ko: 미분가군
+  primary: en
+  defs:
+  - label: '[다중선형대수학] §미분가군'
+    url: /ko/math/multilinear_algebra/differential_modules
 - id: differentiation
   en: differentiation
   ko: 미분
@@ -16676,6 +16683,13 @@ S:
 - id: separable_extension
   en: separable extension
   ko: 분해가능확대
+  primary: en
+  defs:
+  - label: '[체론] §분리가능확대체'
+    url: /ko/math/field_theory/separable_extensions
+- id: separable_polynomial
+  en: separable polynomial
+  ko: 분리가능다항식
   primary: en
   defs:
   - label: '[체론] §분리가능확대체'
