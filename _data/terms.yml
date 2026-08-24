@@ -1236,6 +1236,13 @@ B:
   - label: 복소켤레
     lang: ko
     id: complex_conjugate
+- id: bar_resolution
+  en: bar resolution
+  ko: 바 분해
+  primary: en
+  defs:
+  - label: '[호몰로지 대수학] §군 코호몰로지'
+    url: /ko/math/homological_algebra/group_cohomology
 - id: bar_partial_-closed
   en: $\bar\partial$-closed
   ko: $\bar\partial$-닫힌
