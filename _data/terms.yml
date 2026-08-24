@@ -3576,6 +3576,13 @@ C:
   defs:
   - label: '[정수론] §합동식'
     url: /ko/math/number_theory/congruences
+- id: conic
+  en: conic
+  ko: 원뿔곡선
+  primary: en
+  defs:
+  - label: '[대수다양체] §사영다양체'
+    url: /ko/math/algebraic_varieties/projective_varieties
 - id: conjugacy_class
   en: conjugacy class
   ko: 켤레류
