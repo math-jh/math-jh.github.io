@@ -19990,6 +19990,13 @@ W:
   defs:
   - label: '[집합론] §서수와 정렬집합'
     url: /ko/math/set_theory/ordinals
+- id: weyl_chamber
+  en: Weyl chamber
+  ko: 바일 챔버
+  primary: en
+  defs:
+  - label: '[리 이론] §원환면의 작용'
+    url: /ko/math/lie_theory/torus_action
 - id: weyl_denominator
   en: Weyl denominator
   ko: 바일 분모
