@@ -10095,10 +10095,10 @@ K:
   ko: K3 곡면
   primary: en
   defs:
-  - label: '[대수다양체] §K3 Surfaces'
-    url: /ko/math/algebraic_varieties/k3_surfaces
   - label: '[복소기하학] §Kodaira 매장정리'
     url: /ko/math/complex_geometry/kodaira_embedding_theorem
+  - label: '[대수다양체] §K3 Surfaces'
+    url: /ko/math/algebraic_varieties/k3_surfaces
   see:
   - label: Kummer surface
     id: kummer_surface
