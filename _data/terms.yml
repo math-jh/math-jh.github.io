@@ -17473,6 +17473,13 @@ S:
   defs:
   - label: '[호몰로지 대수학] §Diagram chasing'
     url: /ko/math/homological_algebra/diagram_chasing
+- id: socle
+  en: socle
+  ko: 소클
+  primary: en
+  defs:
+  - label: '[가환대수학] §단사가군과 Matlis duality'
+    url: /ko/math/commutative_algebra/matlis_duality
 - id: solvable
   en: solvable
   ko: 가해
