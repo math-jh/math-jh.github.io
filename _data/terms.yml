@@ -11130,6 +11130,13 @@ L:
   defs:
   - label: '[대수다양체] §선형계'
     url: /ko/math/algebraic_varieties/linear_systems
+- id: linear_transformation
+  en: linear transformation
+  ko: 선형사상
+  primary: ko
+  defs:
+  - label: '[미적분학] §다변수함수와 편미분'
+    url: /ko/math/calculus/partial_derivatives
 - id: linearization
   en: linearization
   ko: 선형화
@@ -11615,6 +11622,8 @@ L:
   defs:
   - label: '[선형대수학] §행렬식의 존재성과 유일성'
     url: /ko/math/linear_algebra/existence_and_uniqueness_of_determinant
+  - label: '[선형대수학] §가우스 소거법'
+    url: /ko/math/linear_algebra/Gaussian_elimination
 - id: lu_decomposition
   en: LU decomposition
   ko: LU 분해
@@ -19011,6 +19020,8 @@ T:
   defs:
   - label: '[선형대수학] §행렬식의 존재성과 유일성'
     url: /ko/math/linear_algebra/existence_and_uniqueness_of_determinant
+  - label: '[선형대수학] §가우스 소거법'
+    url: /ko/math/linear_algebra/Gaussian_elimination
 - id: triangular_number
   en: triangular number
   ko: 삼각수
@@ -19540,6 +19551,8 @@ U:
   defs:
   - label: '[선형대수학] §행렬식의 존재성과 유일성'
     url: /ko/math/linear_algebra/existence_and_uniqueness_of_determinant
+  - label: '[선형대수학] §가우스 소거법'
+    url: /ko/math/linear_algebra/Gaussian_elimination
   see:
   - label: Lower triangular matrix
     id: lower_triangular_matrix
