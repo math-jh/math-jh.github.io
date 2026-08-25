@@ -13676,6 +13676,13 @@ P:
     id: connection
   - label: Covariant derivative
     id: covariant_derivative
+- id: parallelepiped
+  en: parallelepiped
+  ko: 평행육면체
+  primary: ko
+  defs:
+  - label: '[선형대수학] §행렬식'
+    url: /ko/math/linear_algebra/determinant
 - id: parallelizable
   en: parallelizable
   ko: 평행적
