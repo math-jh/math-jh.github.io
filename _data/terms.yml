@@ -11655,10 +11655,10 @@ L:
   ko: 하삼각행렬
   primary: ko
   defs:
-  - label: '[선형대수학] §행렬식의 존재성과 유일성'
-    url: /ko/math/linear_algebra/existence_and_uniqueness_of_determinant
   - label: '[선형대수학] §가우스 소거법'
     url: /ko/math/linear_algebra/Gaussian_elimination
+  - label: '[선형대수학] §행렬식의 존재성과 유일성'
+    url: /ko/math/linear_algebra/existence_and_uniqueness_of_determinant
 - id: lu_decomposition
   en: LU decomposition
   ko: LU 분해
@@ -12510,10 +12510,10 @@ M:
     url: /ko/math/linear_algebra/characteristic_polynomial
   - label: '[가환대수학] §힐베르트-사무엘 함수'
     url: /ko/math/commutative_algebra/hilbert-samuel_function
-  - label: '[리 이론] §최고 무게 가군'
-    url: /ko/math/lie_theory/highest_weight_modules
   - label: '[리 이론] §sl₂의 표현론'
     url: /ko/math/lie_theory/representations_of_sl2
+  - label: '[리 이론] §최고 무게 가군'
+    url: /ko/math/lie_theory/highest_weight_modules
 - id: multivariable_differentiation
   en: multivariable differentiation
   ko: 다변수 미분
@@ -19074,10 +19074,10 @@ T:
   ko: 삼각행렬
   primary: ko
   defs:
-  - label: '[선형대수학] §행렬식의 존재성과 유일성'
-    url: /ko/math/linear_algebra/existence_and_uniqueness_of_determinant
   - label: '[선형대수학] §가우스 소거법'
     url: /ko/math/linear_algebra/Gaussian_elimination
+  - label: '[선형대수학] §행렬식의 존재성과 유일성'
+    url: /ko/math/linear_algebra/existence_and_uniqueness_of_determinant
 - id: triangular_number
   en: triangular number
   ko: 삼각수
@@ -19605,10 +19605,10 @@ U:
   ko: 상삼각행렬
   primary: ko
   defs:
-  - label: '[선형대수학] §행렬식의 존재성과 유일성'
-    url: /ko/math/linear_algebra/existence_and_uniqueness_of_determinant
   - label: '[선형대수학] §가우스 소거법'
     url: /ko/math/linear_algebra/Gaussian_elimination
+  - label: '[선형대수학] §행렬식의 존재성과 유일성'
+    url: /ko/math/linear_algebra/existence_and_uniqueness_of_determinant
   see:
   - label: Lower triangular matrix
     id: lower_triangular_matrix
