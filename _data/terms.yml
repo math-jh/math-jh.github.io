@@ -8144,6 +8144,13 @@ H:
   defs:
   - label: '[체론] §순수비분리확대체'
     url: /ko/math/field_theory/purely_inseparable_extensions
+- id: hermitian
+  en: Hermitian
+  ko: 에르미트
+  primary: en
+  defs:
+  - label: '[선형대수학] §복소내적공간'
+    url: /ko/math/linear_algebra/complex_inner_product_spaces
 - id: hermitian_form
   en: Hermitian form
   ko: 에르미트 형식
@@ -17327,6 +17334,13 @@ S:
   defs:
   - label: '[환론] §나눗셈환'
     url: /ko/math/ring_theory/division_rings
+- id: skew-hermitian
+  en: skew-Hermitian
+  ko: 반에르미트
+  primary: en
+  defs:
+  - label: '[선형대수학] §복소 스펙트럼 정리'
+    url: /ko/math/linear_algebra/complex_spectral_theorem
 - id: slice
   en: slice
   ko: 조각
