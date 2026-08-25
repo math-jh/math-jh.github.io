@@ -5387,3 +5387,7 @@ Decide whether each one is a definition and add it to `_data/terms.yml` (then ru
 ## term_extract_worker 2026-08-25 04:01
 
 - _posts/Math/Lie_Theory/ko/2026-06-09-Richardson_Peterson_Variety.md: 주요 용어 'nilpotent element' ko 미상 — 보류
+
+## term_extract_worker 2026-08-25 08:31
+
+- _posts/Math/Lie_Theory/ko/2026-06-21-Weyl_Character_Formula.md: 주요 용어 'Weyl character formula' ko 미상 — 보류

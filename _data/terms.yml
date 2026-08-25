@@ -5246,6 +5246,13 @@ D:
     url: /ko/math/set_theory/property_of_products
   - label: '[대수적 구조] §환의 정의'
     url: /ko/math/algebraic_structures/rings
+- id: distributive_property
+  en: distributive property
+  ko: 분배법칙
+  primary: ko
+  defs:
+  - label: '[선형대수학] §가환군과 체'
+    url: /ko/math/linear_algebra/fields
 - id: diverge
   en: diverge
   ko: 발산
