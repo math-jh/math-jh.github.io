@@ -8780,6 +8780,13 @@ I:
     id: principal_ideal
   - label: Kernel
     id: kernel
+- id: ideal_of_minors
+  en: ideal of minors
+  ko: 소행렬식 아이디얼
+  primary: en
+  defs:
+  - label: '[가환대수학] §Fitting 아이디얼'
+    url: /ko/math/commutative_algebra/fitting_ideals
 - id: ideal_quotient
   en: ideal quotient
   ko: 아이디얼 몫
