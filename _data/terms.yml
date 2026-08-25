@@ -12792,6 +12792,13 @@ N:
   see:
   - label: Solvable
     id: solvable
+- id: nilpotent_operator
+  en: nilpotent operator
+  ko: 멱영작용소
+  primary: en
+  defs:
+  - label: '[선형대수학] §조르당 표준형'
+    url: /ko/math/linear_algebra/Jordan_canonical_form
 - id: nilpotent_part
   en: nilpotent part
   ko: 멱영 부분
