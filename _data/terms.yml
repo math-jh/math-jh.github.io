@@ -6960,6 +6960,13 @@ F:
   defs:
   - label: '[유도대수기하학] §Simplicial 가환환과 animation'
     url: /ko/math/derived_algebraic_geometry/animated_rings
+- id: free_complex
+  en: free complex
+  ko: 자유 복합체
+  primary: en
+  defs:
+  - label: '[대수적 위상수학] §코호몰로지'
+    url: /ko/math/algebraic_topology/cohomology
 - id: free_family
   en: free family
   ko: 자유족
@@ -12063,6 +12070,13 @@ M:
   defs:
   - label: '[다중선형대수학] §행렬식'
     url: /ko/math/multilinear_algebra/determinants
+- id: minor_ideal
+  en: minor ideal
+  ko: 마이너 아이디얼
+  primary: en
+  defs:
+  - label: '[가환대수학] §Fitting 아이디얼'
+    url: /ko/math/commutative_algebra/fitting_ideals
 - id: mirror_symmetry
   en: mirror symmetry
   ko: 거울 대칭
