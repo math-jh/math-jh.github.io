@@ -17881,6 +17881,13 @@ S:
   defs:
   - label: '[체론] §대수적 확장'
     url: /ko/math/field_theory/algebraic_extensions
+- id: subfield
+  en: subfield
+  ko: 부분체
+  primary: en
+  defs:
+  - label: '[체론] §체'
+    url: /ko/math/field_theory/fields
 - id: subgroup
   en: subgroup
   ko: 부분군
