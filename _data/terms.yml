@@ -10632,6 +10632,13 @@ L:
     id: minimal_element
   - label: Greatest element
     id: greatest_element
+- id: least_squares
+  en: least squares
+  ko: 최소제곱
+  primary: ko
+  defs:
+  - label: '[선형대수학] §최소제곱법'
+    url: /ko/math/linear_algebra/least_squares_method
 - id: least_squares___method
   en: least squares method
   ko: 최소제곱법
