@@ -2220,6 +2220,13 @@ C:
   defs:
   - label: '[사교기하학] §J-holomorphic curves'
     url: /ko/math/symplectic_geometry/j_holomorphic_curves
+- id: cauchy-schwarz
+  en: Cauchy-Schwarz
+  ko: 코시-슈바르츠
+  primary: en
+  defs:
+  - label: '[선형대수학] §내적공간'
+    url: /ko/math/linear_algebra/inner_product_spaces
 - id: cauchy_sequence
   en: Cauchy sequence
   ko: 코시 수열
