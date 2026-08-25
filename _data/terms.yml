@@ -657,7 +657,7 @@ A:
   ko: Amitsur 복합체
   primary: ko
   defs:
-  - label: '[스킴] §충실평탄 하강'
+  - label: '[스킴] §충실평탄하강'
     url: /ko/math/scheme_theory/faithfully_flat_descent
 - id: ample
   en: ample
@@ -4806,14 +4806,14 @@ D:
   ko: 하강
   primary: en
   defs:
-  - label: '[스킴] §충실평탄 하강'
+  - label: '[스킴] §충실평탄하강'
     url: /ko/math/scheme_theory/faithfully_flat_descent
 - id: descent_datum
   en: descent datum
   ko: 하강 자료
   primary: en
   defs:
-  - label: '[스킴] §충실평탄 하강'
+  - label: '[스킴] §충실평탄하강'
     url: /ko/math/scheme_theory/faithfully_flat_descent
   - label: '[스택] §Fibered category와 stack'
     url: /ko/math/stacks/fibered_categories_and_stacks
@@ -5025,6 +5025,13 @@ D:
   defs:
   - label: '[가환대수학] §뇌터 정규화'
     url: /ko/math/commutative_algebra/noether_normalization
+- id: dimension_theorem
+  en: dimension theorem
+  ko: 차원 정리
+  primary: en
+  defs:
+  - label: '[가환대수학] §힐베르트-사무엘 함수'
+    url: /ko/math/commutative_algebra/hilbert-samuel_function
 - id: dimension_vector
   en: dimension vector
   ko: 차원벡터
@@ -6369,7 +6376,7 @@ F:
   defs:
   - label: '[스킴] §평탄사상'
     url: /ko/math/scheme_theory/flat_morphisms
-  - label: '[스킴] §충실평탄 하강'
+  - label: '[스킴] §충실평탄하강'
     url: /ko/math/scheme_theory/faithfully_flat_descent
   see:
   - label: Flat
@@ -6379,7 +6386,7 @@ F:
   ko: 충실평탄 사상
   primary: en
   defs:
-  - label: '[스킴] §충실평탄 하강'
+  - label: '[스킴] §충실평탄하강'
     url: /ko/math/scheme_theory/faithfully_flat_descent
 - id: family
   en: family
@@ -6912,7 +6919,7 @@ F:
   ko: fpqc 덮개
   primary: en
   defs:
-  - label: '[스킴] §충실평탄 하강'
+  - label: '[스킴] §충실평탄하강'
     url: /ko/math/scheme_theory/faithfully_flat_descent
 - id: fractional_ideal
   en: fractional ideal
@@ -8780,6 +8787,13 @@ I:
     id: principal_ideal
   - label: Kernel
     id: kernel
+- id: ideal_of_definition
+  en: ideal of definition
+  ko: 정의 이데알
+  primary: en
+  defs:
+  - label: '[가환대수학] §힐베르트-사무엘 함수'
+    url: /ko/math/commutative_algebra/hilbert-samuel_function
 - id: ideal_of_minors
   en: ideal of minors
   ko: 소행렬식 아이디얼
@@ -13152,6 +13166,13 @@ N:
   defs:
   - label: '[선형대수학] §동형사상'
     url: /ko/math/linear_algebra/isomorphic_vector_spaces
+- id: numerical_polynomial
+  en: numerical polynomial
+  ko: 수치 다항식
+  primary: en
+  defs:
+  - label: '[가환대수학] §힐베르트-사무엘 함수'
+    url: /ko/math/commutative_algebra/hilbert-samuel_function
 - id: numerically_equivalent
   en: numerically equivalent
   ko: 수치적으로 동치
