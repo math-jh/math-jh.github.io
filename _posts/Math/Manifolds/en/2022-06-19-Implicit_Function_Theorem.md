@@ -44,15 +44,15 @@ However, if $M$ is embedded, we may choose $(V,\varphi)$ appropriately so that $
 We are now ready to extend the implicit function theorem to differentiable manifolds.
 
 ::: Theorem 3 (Implicit Function Theorem)
-Let $U\subseteq\mathbb{R}^{m-n}\times\mathbb{R}^n$ be an open set, and to distinguish the two factors, denote the coordinates of $\mathbb{R}^{m-n}$ by $r^1,\ldots, r^{m-n}$ and the coordinates of $\mathbb{R}^n$ by $s^1,\ldots, s^n$. Let $f:U\rightarrow\mathbb{R}^n$ be $C^\infty$, and suppose $f(x_0,y_0)=0$ for some point $(x_0, y_0)\in U$. If at the point $(x_0,y_0)$ the $n\times n$ submatrix
+Let $U\subseteq\mathbb{R}^{m-n}\times\mathbb{R}^n$ be an open set, and to distinguish the two factors, denote the coordinates of $\mathbb{R}^{m-n}$ by $s^1,\ldots, s^{m-n}$ and the coordinates of $\mathbb{R}^n$ by $r^1,\ldots, r^n$. Let $f:U\rightarrow\mathbb{R}^n$ be $C^\infty$, and suppose $f(s_0,r_0)=0$ for some point $(s_0,r_0)\in U$. If at the point $(s_0,r_0)$ the $n\times n$ submatrix
 
-$$\begin{pmatrix}\partial f^1/\partial s^1&\partial f^1/\partial s^2&\cdots&\partial f^1/\partial s^n\\\partial f^2/\partial s^1&\partial f^2/\partial s^2&\cdots&\partial f^2/\partial s^n\\\vdots&\vdots&\ddots&\vdots\\\partial f^n/\partial s^1&\partial f^n/\partial s^2&\cdots&\partial f^n/\partial s^n\end{pmatrix}$$
+$$\begin{pmatrix}\partial f^1/\partial r^1&\partial f^1/\partial r^2&\cdots&\partial f^1/\partial r^n\\\partial f^2/\partial r^1&\partial f^2/\partial r^2&\cdots&\partial f^2/\partial r^n\\\vdots&\vdots&\ddots&\vdots\\\partial f^n/\partial r^1&\partial f^n/\partial r^2&\cdots&\partial f^n/\partial r^n\end{pmatrix}$$
 
 of the Jacobian matrix
 
-$$\begin{pmatrix}\partial f^1/\partial r^1&\partial f^1/\partial r^2&\cdots&\partial f^1/\partial r^{m-n}&\partial f^1/\partial s^1&\partial f^1/\partial s^2&\cdots&\partial f^1/\partial s^n\\\partial f^2/\partial r^1&\partial f^2/\partial r^2&\cdots&\partial f^2/\partial r^{m-n}&\partial f^2/\partial s^1&\partial f^2/\partial s^2&\cdots&\partial f^2/\partial s^n\\ \vdots&\vdots&\ddots&\vdots&\vdots&\vdots&\ddots&\vdots\\\partial f^n/\partial r^1&\partial f^n/\partial r^2&\cdots&\partial f^n/\partial r^{m-n}&\partial f^n/\partial s^1&\partial f^n/\partial s^2&\cdots&\partial f^n/\partial s^n\end{pmatrix}$$
+$$\begin{pmatrix}\partial f^1/\partial s^1&\partial f^1/\partial s^2&\cdots&\partial f^1/\partial s^{m-n}&\partial f^1/\partial r^1&\partial f^1/\partial r^2&\cdots&\partial f^1/\partial r^n\\\partial f^2/\partial s^1&\partial f^2/\partial s^2&\cdots&\partial f^2/\partial s^{m-n}&\partial f^2/\partial r^1&\partial f^2/\partial r^2&\cdots&\partial f^2/\partial r^n\\ \vdots&\vdots&\ddots&\vdots&\vdots&\vdots&\ddots&\vdots\\\partial f^n/\partial s^1&\partial f^n/\partial s^2&\cdots&\partial f^n/\partial s^{m-n}&\partial f^n/\partial r^1&\partial f^n/\partial r^2&\cdots&\partial f^n/\partial r^n\end{pmatrix}$$
 
-is nonsingular, then there exist a suitable open neighborhood $V$ of $x_0$, a suitable open neighborhood $W$ of $y_0$, and a $C^\infty$ function $g:V\rightarrow W$ such that $V\times W\subseteq U$ and for each $(p,q)\in V\times W$,
+is nonsingular, then there exist a suitable open neighborhood $V$ of $s_0$, a suitable open neighborhood $W$ of $r_0$, and a $C^\infty$ function $g:V\rightarrow W$ such that $V\times W\subseteq U$ and for each $(p,q)\in V\times W$,
 
 $$f(p,q)=0\iff q=g(p)$$
 

@@ -79,15 +79,15 @@ $$F(U)=\left\{q'\in V\mid \text{$w^i(q')=w^i(F(p))=0$ for $i=k+1,\ldots,n$}\righ
 이제 우리는 음함수 정리를 미분다양체로 확장할 준비가 되었다. 
 
 ::: 정리 3 (음함수 정리)
-$U\subseteq\mathbb{R}^{m-n}\times\mathbb{R}^n$이 열린집합이라 하고, 구별을 위해 $\mathbb{R}^{m-n}$의 좌표들을 $r^1,\ldots, r^{m-n}$, 그리고 $\mathbb{R}^n$의 좌표들을 $s^1,\ldots, s^n$이라 하자. 또, $f:U\rightarrow\mathbb{R}^n$이 $C^\infty$이고, 어떤 점 $(x_0, y_0)\in U$에 대하여 $f(x_0,y_0)=0$이라 하자. 만일 점 $(x_0,y_0)$에서 Jacobian matrix
+$U\subseteq\mathbb{R}^{m-n}\times\mathbb{R}^n$이 open subset이라 하고, 구별을 위해 $\mathbb{R}^{m-n}$의 좌표들을 $s^1,\ldots, s^{m-n}$, 그리고 $\mathbb{R}^n$의 좌표들을 $r^1,\ldots, r^n$이라 하자. 또, $f:U\rightarrow\mathbb{R}^n$이 $C^\infty$이고, 어떤 점 $(s_0,r_0)\in U$에 대하여 $f(s_0,r_0)=0$이라 하자. 만일 점 $(s_0,r_0)$에서 Jacobian matrix
 
-$$\begin{pmatrix}\partial f^1/\partial r^1&\partial f^1/\partial r^2&\cdots&\partial f^1/\partial r^{m-n}&\partial f^1/\partial s^1&\partial f^1/\partial s^2&\cdots&\partial f^1/\partial s^n\\\partial f^2/\partial r^1&\partial f^2/\partial r^2&\cdots&\partial f^2/\partial r^{m-n}&\partial f^2/\partial s^1&\partial f^2/\partial s^2&\cdots&\partial f^2/\partial s^n\\ \vdots&\vdots&\ddots&\vdots&\vdots&\vdots&\ddots&\vdots\\\partial f^n/\partial r^1&\partial f^n/\partial r^2&\cdots&\partial f^n/\partial r^{m-n}&\partial f^n/\partial s^1&\partial f^n/\partial s^2&\cdots&\partial f^n/\partial s^n\end{pmatrix}$$
+$$\begin{pmatrix}\partial f^1/\partial s^1&\partial f^1/\partial s^2&\cdots&\partial f^1/\partial s^{m-n}&\partial f^1/\partial r^1&\partial f^1/\partial r^2&\cdots&\partial f^1/\partial r^n\\\partial f^2/\partial s^1&\partial f^2/\partial s^2&\cdots&\partial f^2/\partial s^{m-n}&\partial f^2/\partial r^1&\partial f^2/\partial r^2&\cdots&\partial f^2/\partial r^n\\ \vdots&\vdots&\ddots&\vdots&\vdots&\vdots&\ddots&\vdots\\\partial f^n/\partial s^1&\partial f^n/\partial s^2&\cdots&\partial f^n/\partial s^{m-n}&\partial f^n/\partial r^1&\partial f^n/\partial r^2&\cdots&\partial f^n/\partial r^n\end{pmatrix}$$
 
 의 $n\times n$ submatrix
 
-$$\begin{pmatrix}\partial f^1/\partial s^1&\partial f^1/\partial s^2&\cdots&\partial f^1/\partial s^n\\\partial f^2/\partial s^1&\partial f^2/\partial s^2&\cdots&\partial f^2/\partial s^n\\\vdots&\vdots&\ddots&\vdots\\\partial f^n/\partial s^1&\partial f^n/\partial s^2&\cdots&\partial f^n/\partial s^n\end{pmatrix}$$
+$$\begin{pmatrix}\partial f^1/\partial r^1&\partial f^1/\partial r^2&\cdots&\partial f^1/\partial r^n\\\partial f^2/\partial r^1&\partial f^2/\partial r^2&\cdots&\partial f^2/\partial r^n\\\vdots&\vdots&\ddots&\vdots\\\partial f^n/\partial r^1&\partial f^n/\partial r^2&\cdots&\partial f^n/\partial r^n\end{pmatrix}$$
 
-가 nonsingular라면, $x_0$의 적당한 열린근방 $V$, $y_0$의 적당한 열린근방 $W$, 그리고 $C^\infty$ 함수 $g:V\rightarrow W$가 존재하여 $V\times W\subseteq U$이고, 각각의 $(p,q)\in V\times W$마다 
+가 nonsingular라면, $s_0$의 적당한 열린근방 $V$, $r_0$의 적당한 열린근방 $W$, 그리고 $C^\infty$ 함수 $g:V\rightarrow W$가 존재하여 $V\times W\subseteq U$이고, 각각의 $(p,q)\in V\times W$마다
 
 $$f(p,q)=0\iff q=g(p)$$
 
