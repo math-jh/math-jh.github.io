@@ -10,7 +10,6 @@ sidebar:
 
 date: 2024-10-17
 weight: 8
-revising: true
 drift_needed: true
 
 ---
@@ -172,7 +171,7 @@ $$\left(\frac{a}{b}\right)^n+a_{n-1}\left(\frac{a}{b}\right)^{n-1}+\cdots+a_1\le
 
 $$\x^n+a_{n-1}b \x^{n-1}+\cdots+a_1b^{n-1}\x+a_0b^n\in A[\x]$$
 
-은 $\x=a$를 넣었을 때 $0$이 되는 monic polynomial인 것을 안다. 즉 $a^n$은 $b$로 나누어떨어지며, 이것이 모순이 되지 않기 위해서는 $b$가 unit이어야 하고, 즉 $A$가 normal domain이어야 한다.
+은 $\x=a$를 넣었을 때 $0$이 되는 monic polynomial인 것을 안다. 즉 $a^n$은 $b$로 나누어떨어지며, 이것이 모순이 되지 않기 위해서는 $b$가 unit이어야 한다. 즉 $A$가 normal domain이어야 하고, 이로부터 증명이 완료된다.
 :::
 
 더 일반적으로 다음이 성립한다.
@@ -181,7 +180,7 @@ $$\x^n+a_{n-1}b \x^{n-1}+\cdots+a_1b^{n-1}\x+a_0b^n\in A[\x]$$
 Ring $A\subseteq B$가 주어졌다 하고 monic polynomial $p\in A[\x]$가 주어졌다 하자. 만일 $B[\x]$ 안에서 $p=q_1q_2$이도록 하는 monic polynomial들 $q_1,q_2\in B[\x]$를 찾을 수 있다면 $q_1,q_2$의 계수들은 $A$에 대해 integral이다.
 :::
 ::: 증명
-방정식의 해를 넣어주는 방법으로 $B$를 포함하는 적당한 ring $C$에 대하여 $C[\x]$ 안에서는 $q_1,q_2$가 모두 $\prod (\x-\alpha_i)$, $\prod(\x-\beta_j)$의 꼴로 분해되도록 할 수 있다. 그럼 $\alpha_i,\beta_j$들은 모두 $A[\x]$의 monic polynomial $p=q_1q_2$의 근이므로 $A$에 대해 integral이고, 따라서 이들로 생성되는 $C$의 subring $C'$는 integral $A$-algebra이다. 한편 $q_1=\prod(\x-\alpha_i)$와 $q_2=\prod(\x-\beta_j)$를 전개하면 그 계수들이 $\alpha_i,\beta_j$의 elementary symmetric polynomial이므로 $C'$에 속한다는 것을 안다.
+방정식의 해를 넣어주는 방법으로 $B$를 포함하는 적당한 ring $C$에 대하여 $C[\x]$ 안에서는 $q_1,q_2$가 모두 $\prod (\x-\alpha_i)$, $\prod(\x-\beta_j)$의 꼴로 분해되도록 할 수 있다. 그럼 $\alpha_i,\beta_j$들은 모두 $A[\x]$의 monic polynomial $p=q_1q_2$의 근이므로 $A$에 대해 integral이고, 따라서 이들로 생성되는 $C$의 subring $C'$는 integral $A$-algebra이다. 한편 $q_1=\prod(\x-\alpha_i)$와 $q_2=\prod(\x-\beta_j)$를 전개하면 그 계수들이 $\alpha_i,\beta_j$들을 연산하여 얻어지므로 $C'$에 속한다는 것을 안다.
 :::
 
 따라서 다음이 성립한다.
@@ -259,7 +258,7 @@ Ring homomorphism $\phi: A \rightarrow E$와 $x\in E$에 대하여, $x$가 $\phi
 
 $$x^d+\phi_\mathfrak{p}(a_{d-1})x^{d-1}+\cdots+\phi_\mathfrak{p}(a_0)=0$$
 
-이도록 하는 $a_i\in A_\mathfrak{p}$들이 존재한다. 이제 $\phi_\mathfrak{p}(a_k)$들의 분모를 통분하면, 우리는 적절한 $f\in A\setminus \mathfrak{p}$에 대하여 각각의 $a_k$들이 모두 $A_f$에 속하는 것으로 볼 수 있다. 그런데 위의 방정식은 $E_\mathfrak{p}$에서 성립하는 식이므로, 그 좌변을 $E_f$의 원소로 보면 이것이 $E_f$에서 $0$이라고 말할 수는 없고 $E_\mathfrak{p}$로 보냈을 때 $0$이 된다는 것만을 안다. $E_\mathfrak{p}$가 $E_f$의 $A\setminus \mathfrak{p}$의 image에 대한 localization이므로, 적당한 $h\in A\setminus \mathfrak{p}$가 존재하여 이 좌변에 $h$를 곱한 것이 $E_f$에서 $0$이 되고, 따라서 $f$를 $fh$로 바꾸면 위의 방정식은 $E_f$에서 성립하는 식이 된다. 그럼 $x$의 $E_f$에서의 image가 $A_f$에 대해 integral이고 $E_f'$가 $A_f$-algebra로서 이 원소로 생성되므로, [보조정리 4](#lem4)에 의하여 $A_f \rightarrow E_f'$가 finite homomorphism인 것을 안다. 
+이도록 하는 $a_i\in A_\mathfrak{p}$들이 존재한다. 이제 $\phi_\mathfrak{p}(a_k)$들의 분모를 통분하면, 우리는 적절한 $f\in A\setminus \mathfrak{p}$에 대하여 각각의 $a_k$들이 모두 $A_f$에 속하는 것으로 볼 수 있다. 그럼 위 방정식의 좌변을 $E_f$의 원소로 볼 수 있고, 이 원소는 $E_\mathfrak{p}$로 보냈을 때 $0$이 된다. 그런데 $E_\mathfrak{p}$는 $E_f$를 $A\setminus \mathfrak{p}$의 image에 대해 localize한 것이므로, 적당한 $h\in A\setminus \mathfrak{p}$가 존재하여 이 좌변에 $h$를 곱한 것이 $E_f$에서 $0$이 되고 따라서 $f$를 $fh$로 바꾸면 위의 방정식은 $E_f$에서 성립하는 식이 된다. 그럼 $x$의 $E_f$에서의 image가 $A_f$에 대해 integral이고 $E_f'$가 $A_f$-algebra로서 이 원소로 생성되므로, [보조정리 4](#lem4)에 의하여 $A_f \rightarrow E_f'$가 finite homomorphism인 것을 안다.
 
 이렇게 각각의 prime ideal $\mathfrak{p}$마다 원소 $f_\mathfrak{p}\in A\setminus \mathfrak{p}$를 하나씩 얻는데, 이들이 생성하는 $A$의 ideal은 어떠한 prime ideal에도 포함되지 않으므로 $A$ 자기 자신이다. 따라서 유한히 많은 prime ideal들 $\mathfrak{p}_1,\ldots, \mathfrak{p}_m$을 골라 $(f_{\mathfrak{p}_1},\ldots, f_{\mathfrak{p}_m})=A$이도록 할 수 있고, 각각의 $A_{f_{\mathfrak{p}_i}} \rightarrow E_{f_{\mathfrak{p}_i}}'$가 finite이므로 integral이다. 그럼 [명제 15](#prop15)에 의하여 $A \rightarrow E'$가 integral이고, 특히 $x$가 $\phi$에 대해 integral이다. 
 :::

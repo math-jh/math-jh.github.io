@@ -11,7 +11,6 @@ sidebar:
 
 date: 2024-10-17
 weight: 7
-revising: true
 
 ---
 
@@ -128,9 +127,13 @@ $$M_{\mathfrak{p}_k} \rightarrow \left(\bigoplus_{k=1}^n M/M_k\right)_{\mathfrak
 
 또한 injective이다. 한편, 각각의 $j\neq k$에 대하여 $M/M_j$는 $\mathfrak{p}_j$-coprimary이고, minimality로부터 $\mathfrak{p}_j$는 $\mathfrak{p}_k$에 포함되지 않아야 하므로 $(M/M_j)_{\mathfrak{p}_k}=0$이 성립하게 되고, 이렇게 얻어지는 함수가 정확히 $M_{\mathfrak{p}_k}\rightarrow (M/M_k)_{\mathfrak{p}_k}$이므로 원하는 결과를 얻는다.
 
-마지막으로 넷째 결과를 보이자. 앞서와 같이 $M'=0$으로 가정해도 좋다. 우선 localization은 exact functor이므로 ([§국소화의 성질들, ⁋명제 2](/ko/math/commutative_algebra/properties_of_localization#prop2)) 유한한 교집합과 교환하고, 따라서 $0=\bigcap_{k=1}^n S^{-1}M_k$를 얻는다. 이제 $\mathfrak{p}_j\cap S\neq\emptyset$인 $j$에 대해서는 $M/M_j$가 $\mathfrak{p}_j$-coprimary이므로 [명제 2](#prop2)의 셋째 조건에 의하여 적당한 $t$에 대해 $\mathfrak{p}_j^t$가 $M/M_j$를 annihilate하고, $s\in \mathfrak{p}_j\cap S$를 택하면 $s^t\in \mathfrak{p}_j^t$ 또한 $M/M_j$를 annihilate하므로 [§국소화, ⁋명제 5](/ko/math/commutative_algebra/localization#prop5)에 의하여 $S^{-1}(M/M_j)=0$, 즉 $S^{-1}M_j=S^{-1}M$이다. 즉 이러한 성분들은 위의 교집합에서 아무런 역할을 하지 않으므로 $0=\bigcap_{i=1}^m S^{-1}M_i$이다. 한편 $i\leq m$인 각각에 대해서는 $\Ass(M/M_i)=\{\mathfrak{p}_i\}$이고 $\mathfrak{p}_i\cap S=\emptyset$이므로, [§동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)의 셋째 결과에 의하여 $\Ass_{S^{-1}A}S^{-1}(M/M_i)=\{\mathfrak{p}_iS^{-1}A\}$이고, 따라서 $S^{-1}M_i$는 $\mathfrak{p}_iS^{-1}A$-primary submodule이다.
+마지막으로 넷째 결과를 보이자. 우선 localization은 exact functor이므로 ([§국소화의 성질들, ⁋명제 2](/ko/math/commutative_algebra/properties_of_localization#prop2)) 유한한 교집합과 교환하고, 따라서 $0=\bigcap_{k=1}^n S^{-1}M_k$를 얻는다. 이제 문제의 표기를 따라 $\mathfrak{p}_1,\ldots, \mathfrak{p}_m$들만이 $S$와 만나지 않는 prime ideal이라 하자. 만일 $\mathfrak{p}_j\cap S\neq\emptyset$이라면 $M/M_j$가 $\mathfrak{p}_j$-coprimary이므로 [명제 2](#prop2)의 셋째 조건에 의하여 적당한 $t$에 대해 $\mathfrak{p}_j^t$가 $M/M_j$를 annihilate하고, $s\in \mathfrak{p}_j\cap S$를 택하면 $s^t\in \mathfrak{p}_j^t$ 또한 $M/M_j$를 annihilate하므로 다시 [§국소화, ⁋명제 5](/ko/math/commutative_algebra/localization#prop5)에 의하여 $S^{-1}(M/M_j)=0$, 즉 $S^{-1}M_j=S^{-1}M$임을 안다. 즉, 이러한 성분들은 위의 교집합에서 아무런 역할을 하지 않으므로
 
-이제 이 분해가 minimal임을 보이면 된다. [§국소화, ⁋명제 8](/ko/math/commutative_algebra/localization#prop8)에 의하여 $S$와 만나지 않는 $A$의 prime ideal들은 $S^{-1}A$의 prime ideal들과 일대일대응하므로 $\mathfrak{p}_1S^{-1}A,\ldots, \mathfrak{p}_mS^{-1}A$는 서로 다른 $m$개의 prime ideal이며, 같은 명제의 1번에 의하여 $S^{-1}A$의 임의의 ideal $\mathfrak{b}$는 $\mathfrak{b}$의 $A$에서의 preimage의 image로 생성되므로 $A$가 Noetherian이라는 것으로부터 $S^{-1}A$ 또한 Noetherian이고, $M$의 generator들의 image가 $S^{-1}M$을 생성하므로 $S^{-1}M$은 finitely generated $S^{-1}A$-module이다. 그럼 [§동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)의 셋째 결과와 이미 보인 둘째 결과로부터 $\Ass_{S^{-1}A}S^{-1}M$이 정확히 이 $m$개의 prime ideal들로 이루어지고, 첫째 결과를 $S^{-1}A$ 위에서 적용하면 $S^{-1}M$의 zero submodule의 임의의 primary decomposition은 이들을 모두 그 prime ideal들 가운데 가져야 하므로 적어도 $m$개의 성분을 갖는다. 즉 위의 분해는 minimal이다.
+$$0=\bigcap_{i=1}^m S^{-1}M_i$$
+
+이다. 이제 여기에 등장하는 $i$들 각각에 대해서는 $\Ass(M/M_i)=\{\mathfrak{p}_i\}$이고 $\mathfrak{p}_i\cap S=\emptyset$이므로, [§동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)의 셋째 결과에 의하여 $\Ass_{S^{-1}A}S^{-1}(M/M_i)=\{\mathfrak{p}_iS^{-1}A\}$이고, 따라서 $S^{-1}M_i$는 $\mathfrak{p}_iS^{-1}A$-primary submodule이다.
+
+이제 이 분해가 minimal임을 보이자. [§국소화, ⁋명제 8](/ko/math/commutative_algebra/localization#prop8)에 의하여 $S$와 만나지 않는 $A$의 prime ideal들은 $S^{-1}A$의 prime ideal들과 일대일대응하므로 $\mathfrak{p}_1S^{-1}A,\ldots, \mathfrak{p}_mS^{-1}A$는 서로 다른 $m$개의 prime ideal이며, 같은 명제의 첫째 결과에 의하여 $S^{-1}A$의 임의의 ideal $\mathfrak{b}$는 $\mathfrak{b}$의 $A$에서의 preimage의 image로 생성된다. 이제 $A$가 Noetherian이라는 것으로부터 $S^{-1}A$ 또한 Noetherian이고, $M$의 generator들의 image가 $S^{-1}M$을 생성하므로 $S^{-1}M$은 finitely generated $S^{-1}A$-module이다. 그럼 [§동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)의 셋째 결과와 이미 보인 둘째 결과로부터 $\Ass_{S^{-1}A}S^{-1}M$이 정확히 이 $m$개의 prime ideal들로 이루어지고, 첫째 결과를 $S^{-1}A$ 위에서 적용하면 $S^{-1}M$의 zero submodule의 임의의 primary decomposition은 이들을 모두 그 prime ideal들 가운데 가져야 하므로 적어도 $m$개의 성분을 갖는다. 즉 위의 분해는 minimal이다.
 :::
 
 ## 으뜸분해와 인수분해
