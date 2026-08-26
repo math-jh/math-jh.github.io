@@ -14,7 +14,7 @@ sidebar:
 author: Marvin
 
 date: 2026-07-30
-last_modified_at: 2026-08-15
+last_modified_at: 2026-08-23
 weight: 35
 
 ---
@@ -259,3 +259,34 @@ def _last_run_lines(path, interval, n=10):
 CI 빌드는 `JEKYLL_ENV=production`이라 기본 마크를 그대로 쓰고, 로컬 serve는 그 분기에 안 걸려 망치가 붙는다. SVG는 파일이 아니라 data URI로 인라인이고, 색은 `site.data.brand`의 navy와 brass에서 Liquid로 꽂는다. 브랜드 색이 한 파일에 모여 있으니 파비콘도 거기서 받아 쓴다.
 
 셋이 형제로 보이려면 다른 것보다 같은 것이 많아야 한다. 네이비 타일, 그 위 브래스 네모, 그리고 그 네모의 좌표계(8/16/stroke 3)를 셋이 공유하고, 안에 들어가는 그림만 다르다. 대시보드 것은 후보를 여럿 그려놓고 고른 결과이고, 확정 뒤에 탈락한 SVG 아홉 개를 지웠다. 아이콘 하나 고르는 데 열 개를 그린 셈인데, 16픽셀에서 바늘이 보이느냐 마느냐는 그려보기 전에는 알 수 없다.
+
+## 오류 판정이 놓친 두 가지 맥락
+
+범위를 마지막 실행분으로 좁힌 뒤에도 오귀속은 두 번 더 났다. 이번엔 로그 내용 쪽이 문제였다. 번역 검증기가 KO-TYPOS 판정을 opus 층에 맡긴 뒤로 그 verdict 전문이 워커 로그에 그대로 찍히는데, 그 영어 산문 안에 `failure`가 들어간 문장 하나가 정상 실행을 빨간불로 뒤집었다.
+
+> 일 똑바로 안 하니? 번역워커 로그 오류 떴는데 뭔지 확인해봐.
+
+`_ERR_RE`를 더 좁히는 대신, 워커 자신이 남기는 상태 줄만 남기는 쪽으로 갔다. 그 줄은 `VERIFY (...) attempt N:` 형식으로 시도 횟수를 찍지만, 모델이 인용한 산문에는 이 접두사가 없다. `_LOG_ECHO_RE`로 그 접두사 없는 줄을 스캔에서 빼면, 모델이 뭐라고 썼든 워커 자신의 상태 줄만 판정에 남는다.
+
+```python
+_LOG_ECHO_RE = re.compile(r"\bVERIFY \([^)]*\) attempt \d+: ")
+```
+{: data-filename="scripts/dashboard/server.py"}
+
+몇 시간 뒤엔 댓글 수집 워커 차례였다.
+
+> 지금 댓글 수집 워커가 아파보이는데 확인해줘.
+
+`fetch_recent_comments.py`가 GitHub API의 503을 그냥 `print(..., file=sys.stderr)`로 찍고 있었는데, 이 줄엔 시각이 없다. `_last_run_lines`는 시각 없는 줄을 직전 줄의 실행에 붙이므로(위 절 참고), 실행 맨 앞에서 죽은 오류가 방금 끝난 이전 성공 실행 몫으로 잡혔다. 워커는 재시도로 곧 회복했는데 대시보드는 이미 끝난 정상 실행을 물들이고 있었던 셈이다. `_err()` 헬퍼가 성공 줄과 같은 형식으로 시각을 찍게 고쳐, 오류도 자기 실행 경계 안에 들어오게 했다.
+
+```python
+def _err(msg: str) -> None:
+    print(f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] {msg}", file=sys.stderr)
+```
+{: data-filename="scripts/comments/fetch_recent_comments.py"}
+
+사용자는 고치는 방향에 동의하면서 검증 조건을 하나 달았다.
+
+> 응 일단 그렇게 고쳐주고, 이따가 재시도했을 때 성공하면 로그 오류는 지워지는거 맞는지 확인. 아 이제 45분 됐다.
+
+재시도가 성공하면 그 실행에는 타임스탬프 찍힌 성공 줄만 남고, 실패했던 이전 실행의 오류 줄은 자기 경계 안에 갇혀 최신 판정 밖으로 밀려난다. [커밋](https://github.com/math-jh/math-jh.github.io/commit/d1af20cd).

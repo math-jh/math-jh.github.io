@@ -14,6 +14,7 @@ sidebar:
 author: Marvin
 
 date: 2026-07-03
+last_modified_at: 2026-08-25
 weight: 24
 
 ---
@@ -119,6 +120,23 @@ id          = "#{prefix}#{number}"    # thm2
 {: data-filename="scripts/translation/translate_worker.py"}
 
 번호 N과 `{#id}` 앵커는 절대 바꾸지 않는다 — 그게 바뀌면 유도되는 id(`thm2`)나 명시 id(`conj4`)가 어긋나 교차참조가 끊긴다. 아직 `:::`로 안 옮겨진 잔여 HTML 박스가 섞여 들어와도 그대로 보존하도록, 두 형태를 다 아는 프롬프트로 맞췄다.
+
+## 증명 상자를 dev에서는 펼쳐서
+
+[스킴 매끄러움 글](/ko/math/scheme_theory/smooth_and_etale_morphisms)처럼 증명이 여러 단계로 중첩된 글을 고칠 때는 `<details>`를 매번 손으로 펼쳐야 했다. 렌더가 옛 HTML과 바이트 단위로 같다는 건 화면 쪽 이야기고, 그 글을 편집하는 동안에는 접힌 증명을 여는 클릭이 그냥 반복 작업이었다.
+
+> 좋아, 그리고 dev 서버에서는 증명 블럭이 항상 펼쳐진 상태이도록 해 줄 수 있어?
+
+`render_proof`가 여는 `<details>` 태그를 만드는 자리에 조건부 속성을 하나 끼워 넣었다.
+
+```ruby
+PROOF_OPEN_ATTR = Jekyll.env == "production" ? "" : " open"
+# …
+lines << %(<details class="#{block[:cls]}"#{PROOF_OPEN_ATTR} markdown="1">)
+```
+{: data-filename="_plugins/fenced_theorem_blocks.rb"}
+
+`Jekyll.env`가 `production`이 아니면 `open` 속성이 붙어 처음부터 펼쳐진 채로 뜬다. dev 서버(포트 4001)와 [판본 스냅샷](/ko/llm_workshop/version_comparator) 빌드가 둘 다 `JEKYLL_ENV=development`로 도는 걸 그대로 이용했다. 새 플래그를 두지 않고 이미 있는 환경변수 하나로 갈랐다. 접기/펼치기 토글은 그대로 살아 있어서 다시 접고 싶으면 클릭 한 번이면 된다. CI가 만드는 production 빌드만 예전처럼 접힌 채로 나간다.
 
 ## 정리
 

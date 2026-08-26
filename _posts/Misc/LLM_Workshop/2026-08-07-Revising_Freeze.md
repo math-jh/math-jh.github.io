@@ -13,6 +13,7 @@ sidebar:
 author: Marvin
 
 date: 2026-08-07
+last_modified_at: 2026-08-22
 weight: 37
 
 ---
@@ -136,3 +137,46 @@ build가 exit 1로 죽고 deploy는 skip됐다. 같은 이유로 두 번 연속 
 ## 결과
 
 지금 저장소에는 `revising: true`와 `published: false`를 함께 단 글이 17편 있다. 다음 배포부터 이 글들은 프로덕션에서 마지막으로 정상이었던 판본으로 뜨고, 작업 중인 원고는 워킹트리와 dev 서버에만 남는다. `revising` 없이 `published: false`만 붙은 글은 예전 그대로 즉시 내려간다. 그 경로를 건드리지 않은 것은, 아직 발행 이력이 없는 초안까지 "마지막 healthy 판본"을 찾겠다고 나서는 게 의미가 없어서다.
+
+## 사후: 키를 하나로 줄이며 생긴 7분의 공백
+
+`revising: true`가 규약이 된 지 열흘 뒤, 대시보드에서 그 글들이 미발행 초안으로 잡히는 게 눈에 띄었다. `published: false`가 두 가지 뜻을 겸하고 있었던 탓이다. 하나는 이 글이 개정 프리즈의 대상이라는 뜻이고, 다른 하나는 대시보드 개요·용어 스윕의 초안 선별·번역 워커의 `is_draft`가 읽는 "발행된 적 없는 초안"이라는 뜻이다. 개정 중인 발행 글이 후자로 잘못 셈해지고 있었다.
+
+> 그리고 지금 revising: true인 글들도 dashboard에서 미발행으로 잡히는데 그건 아니지. (1) revising: true면 자동으로 published: false인 것으로 간주하고 직전 판본 스냅샷 띄워서, 그 글들에서 publish: false키들을 없애던가, (2) dashboard를 손보자. 난 의미상 (1)이 맞다 보는데.
+
+(1)로 정리됐다. `revising: true` 하나만 남기고, 개정 중이던 199편에서 `published: false`를 걷어낸다. 한 줄만 지우는 일회성 스윕이라 게이트를 세게 걸었다. frontmatter에서 그 줄을 뺀 나머지는 바이트 단위로 원문과 같아야 하고, 사라지는 줄 수도 정확히 하나여야 통과한다.
+
+```python
+lines = fm.split("\n")
+kept = [ln for ln in lines if not UNPUB_RE.match(ln.rstrip("\r"))]
+if len(kept) != len(lines) - 1:      # 정확히 한 줄만 사라져야 한다
+    return None
+```
+{: data-filename="scripts/sweeps/revising_drop_published.py"}
+
+`published: false`가 겸하던 자리는 번역 워커도 옮겨야 했다. `is_draft`는 원래 `published: false` 하나만 봤는데, 그 키가 개정 중인 글에서 빠지면 워커가 그 글을 그냥 발행 글로 보고 번역을 건다. 고치는 중인 원고가 EN에 그대로 덮어써지는 결과다. `is_draft`에 `revising: true`도 초안으로 보는 조건을 더해 막았다.
+
+여기까지는 계획대로였다. 빠진 건 `freeze_revising_posts.py` 자신이었다. "마지막으로 healthy했던 판본"을 찾는 `last_healthy`는 여전히 `published: false`의 유무만 봤다. 그 키를 걷어낸 뒤로는 지금 커밋 자체가 그 조건을 통과한다. 개정 중인 원고가 곧 "마지막 healthy 판본"으로 읽히고, 동결은 아무것도 되돌리지 않는 no-op이 됐다. 판정 키를 옮긴 커밋의 빌드는 12:50(UTC)에 성공으로 끝나 그대로 배포됐고, 판정을 마저 고친 다음 커밋의 빌드가 12:57에 배포되기까지 7분 동안, 개정 중이던 199편은 다듬는 중인 원고 그대로 프로덕션에 떠 있었다.
+
+```python
+if not UNPUB_RE.search(fm) and not REVISING_RE.search(fm):
+    return sha, hist_path, blob
+```
+{: data-filename="scripts/ci/freeze_revising_posts.py"}
+
+`revising: true`도 같이 걸러야 진짜 "발행 중이고 개정 중도 아닌" 판본이 나온다. 되살릴 그런 판본이 아예 없는 글의 처리도 갈렸다. 예전엔 `published: false`가 뒤를 받치고 있어 경고로 충분했지만, 이제 이 단계가 유일한 차단막이라 그 경우는 빌드 중단으로 올라간다.
+
+대시보드 쪽 지시도 뒤따랐다.
+
+> 이제 개정 중 편수 보이게 미발행 초안 카드에 추가하고, GUIDELINE이랑 service map 등등 남은 일들 다 해.
+
+`sec_posts`에 `revising` 집계를 추가하고, 미발행 초안 카드 설명줄에 괄호로 덧붙였다.
+
+```js
+{ n: num(s.unpublished), l: '미발행 초안', ...,
+  d: (drafts[0] ? '최근 수정 ' + ago(drafts[0].mtime) : '초안 없음') + ' · drift 표시 ' + driftDrafts + '편'
+    + (s.revising ? ' · 개정 중 ' + s.revising + '편 (발행 상태)' : '') },
+```
+{: data-filename="scripts/dashboard/app.js"}
+
+키 하나를 줄이는 일이 판정 함수 하나와 대시보드 카드 하나를 더 건드렸다. 그 사이의 7분은 아무도 계획하지 않은 세 번째 자리였다.
