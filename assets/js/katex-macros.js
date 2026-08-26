@@ -103,6 +103,7 @@ window.KATEX_MACROS = {
     "\\curl":"\\operatorname{curl}",
     "\\degree":"\\operatorname{deg}",
     "\\Der":"\\operatorname{Der}",
+    "\\Desc":"\\operatorname{Desc}",
     "\\diag":"\\operatorname{diag}",
     "\\Diff":"\\operatorname{Diff}",
     "\\dim":"\\operatorname{dim}",
@@ -252,7 +253,7 @@ window.KATEX_MACROS = {
     // (MathML 사본의 U+0338 조합 문자도 그대로 유지).
     // 인자는 토큰 하나다 — \not\mathrel{R} 처럼 두 토큰을 넘기면 parse error 이므로
     // \not{\mathrel{R}} 로 감싸 적을 것.
-    "\\not":"\\html@mathml{\\mathrel{\\mathrlap{\\@not}#1}}{\\mathrel{\\char\"338 #1}}",
+    "\\not":"\\html@mathml{\\mathrel{\\mathrlap{\\@not}\\mathord{#1}}}{\\mathrel{\\char\"338 \\mathord{#1}}}",
 };
 
 // renderMathInElement 딜리미터의 단일 출처.
