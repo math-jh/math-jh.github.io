@@ -200,6 +200,15 @@ exclude:
   - scripts
   - .obsidian
   - .backups
+  # 사이트 콘텐츠가 아니지만 jekyll serve 의 watcher 가 감시 대상으로 잡는 경로.
+  # Jekyll 은 dotfile 을 빌드하지 않으므로 산출물에는 영향이 없고, 여기 적는 목적은
+  # jekyll-watch 가 이 목록을 listen 의 :ignore 로 넘겨 불필요한 전체 재빌드를
+  # 막는 것이다 (에이전트 훅이 .pyc 를 쓸 때마다 재빌드가 돌았다).
+  - .claude
+  - .agents
+  - .codex
+  - .github
+  - .jekyll-cache
   - notes                               # gitignore된 작업 노트. frontmatter가 있어 Jekyll이
                                         # 파싱하려다 YAML 예외를 낸다 (CI엔 존재하지 않음)
   # CI deploy fix (2026-07-03): keep the GitHub Pages site under the 1 GB limit

@@ -5,7 +5,11 @@
 ._*
 
 # Jekyll 빌드 산출물·캐시
+# 산출물은 저장소 밖에 두고 심볼릭 링크로 걸어둘 수 있는데, `dir/` 패턴은
+# 디렉토리만 잡고 심볼릭 링크는 놓친다 — 슬래시 없는 패턴을 함께 둔다.
+/_site
 _site/
+/.jekyll-cache
 .sass-cache/
 .jekyll-cache/
 *.jekyll-metadata
@@ -57,3 +61,6 @@ node_modules/
 .vscode/
 .claude/
 CLAUDE.md
+.codex/
+.agents/
+AGENTS.md
