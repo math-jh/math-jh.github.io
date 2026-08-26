@@ -12119,6 +12119,13 @@ M:
   defs:
   - label: '[거울대칭] §거울대칭 개요'
     url: /ko/math/mirror_symmetry/overview
+- id: mirror_theorem
+  en: mirror theorem
+  ko: 거울 정리
+  primary: en
+  defs:
+  - label: '[거울대칭] §Givental J-function과 Mirror Theorem'
+    url: /ko/math/mirror_symmetry/givental_j_function
 - id: mixed_tensor
   en: mixed tensor
   ko: 혼합 텐서
