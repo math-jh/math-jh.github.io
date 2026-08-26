@@ -24,16 +24,28 @@
 	{\Spec\mathbb{K}} \arrow[r, "\overline{s}"'] & S
 \end{tikzcd}
 
-%%FIG lifting diagram (Smooth_and_Etale_Morphisms-3.svg)
-\begin{tikzcd}
-T_0 \arrow[r, "\psi_0"] \arrow[d, hook] & X \arrow[d, "\varphi"] \\
-T \arrow[r] \arrow[ru, dashed, "\psi"] & S
-\end{tikzcd}
-
-%%FIG factorization (Smooth_and_Etale_Morphisms-4.svg)
+%%FIG factorization (Smooth_and_Etale_Morphisms-3.svg)
 \begin{tikzcd}
 X \arrow[r, hook] \arrow[rd, "\varphi"'] & {\mathbb{A}^n_S} \arrow[d] \\
 & S
+\end{tikzcd}
+
+%%FIG concrete lifting (Smooth_and_Etale_Morphisms-4.svg)
+\begin{tikzcd}[row sep=large]
+{\Spec\mathbb{K}} \arrow[r] \arrow[d, hook] & {\mathbb{A}^2_\mathbb{K}} \arrow[d] \\
+{\Spec\mathbb{K}[\epsilon]/(\epsilon^2)} \arrow[r] & {\Spec\mathbb{K}[\mathrm{y}]}
+\end{tikzcd}
+
+%%FIG ring level lifting (Smooth_and_Etale_Morphisms-5.svg)
+\begin{tikzcd}[row sep=large]
+{\mathbb{K}} & {\mathbb{K}[\mathrm{x}_1,\mathrm{x}_2]} \arrow[l] \\
+{\mathbb{K}[\epsilon]/(\epsilon^2)} \arrow[u] & {\mathbb{K}[\mathrm{y}]} \arrow[l] \arrow[u]
+\end{tikzcd}
+
+%%FIG lifting diagram (Smooth_and_Etale_Morphisms-6.svg)
+\begin{tikzcd}
+T_0 \arrow[r, "\varrho_0"] \arrow[d, hook] & X \arrow[d, "\varphi"] \\
+T \arrow[r] \arrow[ru, dashed, "\varrho"] & S
 \end{tikzcd}
 
 \end{document}
