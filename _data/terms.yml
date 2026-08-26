@@ -9210,6 +9210,13 @@ I:
   defs:
   - label: '[가환대수학] §단사가군과 Matlis duality'
     url: /ko/math/commutative_algebra/matlis_duality
+- id: injective_immersion
+  en: injective immersion
+  ko: 단사 침몰
+  primary: en
+  defs:
+  - label: '[미분다양체] §부분다양체의 유일성'
+    url: /ko/math/manifolds/uniqueness_of_submanifold
 - id: injective_limit
   en: injective limit
   ko: 귀납적 극한
