@@ -9347,6 +9347,13 @@ I:
   defs:
   - label: '[가환대수학] §정수적 확장'
     url: /ko/math/commutative_algebra/integral_extension
+- id: integral_curve
+  en: Integral curve
+  ko: 적분곡선
+  primary: en
+  defs:
+  - label: '[미분다양체] §벡터장'
+    url: /ko/math/manifolds/vector_fields
 - id: integral_domain
   en: integral domain
   ko: 정역
