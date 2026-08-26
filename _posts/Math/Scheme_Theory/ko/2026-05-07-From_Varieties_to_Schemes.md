@@ -87,7 +87,7 @@ Classical variety $V\subseteq\mathbb{A}_\mathbb{K}^n$의 $\mathbb{K}$-point들�
 특히 projective line $\mathbb{P}_\mathbb{K}^1$의 경우, functor of points를 통해 infinitesimal structure가 어떻게 드러나는지 명확히 볼 수 있다. $\mathbb{P}_\mathbb{K}^1$은 그 자체로 homogeneous coordinate를 갖는 scheme이므로, 임의의 local $\mathbb{K}$-algebra $R$에 대하여 $\mathbb{P}_\mathbb{K}^1(R)$는 $R$ 위의 projective line 위의 점들로 정의된다.
 
 ::: 예시 5
-$T=\Spec \mathbb{K}[\epsilon]/(\epsilon^2)$라 하자. $\mathbb{P}_\mathbb{K}^1$의 $T$-valued points, 즉 morphism $T\rightarrow\mathbb{P}_\mathbb{K}^1$를 생각하면, 이들은 $\mathbb{P}_\mathbb{K}^1$ 위의 한 점 $P$와 그 점에서의 tangent vector를 동시에 결정한다. 구체적으로, 점 $P$는 closed immersion $\Spec \mathbb{K}\hookrightarrow T$를 $T\rightarrow\mathbb{P}_\mathbb{K}^1$와 합성함으로써 얻어지고, 나머지 정보는 $P$에서의 Zariski tangent space의 원소가 된다. 따라서 $\mathbb{P}_\mathbb{K}^1$의 $\mathbb{K}[\epsilon]/(\epsilon^2)$-points는 $\mathbb{P}_\mathbb{K}^1$의 tangent bundle을 구성하는 점들에 일대일 대응한다.
+$T=\Spec \mathbb{K}[\epsilon]/(\epsilon^2)$라 하자. $\mathbb{P}_\mathbb{K}^1$의 $T$-valued points, 즉 morphism $T\rightarrow\mathbb{P}_\mathbb{K}^1$를 생각하면, 이들은 $\mathbb{P}_\mathbb{K}^1$ 위의 한 점 $P$와 그 점에서의 tangent vector를 동시에 결정한다. 구체적으로, 점 $P$는 closed embedding $\Spec \mathbb{K}\hookrightarrow T$를 $T\rightarrow\mathbb{P}_\mathbb{K}^1$와 합성함으로써 얻어지고, 나머지 정보는 $P$에서의 Zariski tangent space의 원소가 된다. 따라서 $\mathbb{P}_\mathbb{K}^1$의 $\mathbb{K}[\epsilon]/(\epsilon^2)$-points는 $\mathbb{P}_\mathbb{K}^1$의 tangent bundle을 구성하는 점들에 일대일 대응한다.
 :::
 
 Functor of points는 이렇게 scheme을 representable functor로 이해하게 함으로써, geometric intuition과 범주론적 formalism 사이의 가교 역할을 한다.

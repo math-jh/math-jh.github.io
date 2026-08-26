@@ -1,6 +1,6 @@
 ---
 title: "Fibered category와 stack"
-description: "Moduli 문제가 집합이 아니라 groupoid를 값으로 가짐을 동기로, base 위의 fibered category와 groupoid에 의한 fibration을 정의하고, site 위에서 descent가 성립하는 stack의 개념을 충실평탄 하강의 일반화로 도입한다."
+description: "Moduli 문제가 집합이 아니라 groupoid를 값으로 가짐을 동기로, base 위의 fibered category와 groupoid에 의한 fibration을 정의하고, site 위에서 descent가 성립하는 stack의 개념을 충실평탄하강의 일반화로 도입한다."
 excerpt: "Groupoids, categories fibered in groupoids, descent, and the definition of a stack"
 
 categories: [Math / Stacks]
@@ -16,9 +16,9 @@ published: false
 
 ---
 
-Algebraic geometry의 많은 분류 문제는 각 밑공간 $T$에 "그 위의 족들의 모임"을 대응시키는 형태로 주어진다. 가령 어떤 고정된 형의 곡선들의 $T$-족, 또는 $T$ 위의 vector bundle들이 그것이다. 이러한 대응을 $T\mapsto F(T)$ 꼴의 functor $F:\Sch^\op \rightarrow \Set$로 적고, $F$를 표현하는 scheme을 찾는 것이 representability의 관점이다. ([\[스킴\] §점함자, ⁋정의 3](/ko/math/scheme_theory/functor_of_points#def3)) 그런데 분류 대상이 비자명한 automorphism을 가지는 순간 이 관점은 곧바로 무너진다. 가령 $T$ 위의 line bundle을 분류하려 할 때, 두 line bundle은 국소적으로 동형이어도 대역적으로 동형이 아닐 수 있고, 더 본질적으로 각 line bundle은 $\mathcal{O}^\ast$만큼의 automorphism을 가진다. 만일 $F(T)$를 isomorphism class의 집합으로 두면 이 automorphism 정보가 사라지고, 그 결과 국소적으로 주어진 자료를 붙이는 하강이 집합 수준에서 더 이상 작동하지 않는다.
+Algebraic geometry의 많은 분류 문제는 각 밑공간 $T$에 "그 위의 족들의 모임"을 대응시키는 형태로 주어진다. 가령 어떤 고정된 형의 곡선들의 $T$-족, 또는 $T$ 위의 vector bundle들이 그것이다. 이러한 대응을 $T\mapsto F(T)$ 꼴의 functor $F:\Sch^\op \rightarrow \Set$로 적고, $F$를 표현하는 scheme을 찾는 것이 representability의 관점이다. ([\[범주론\] §표현가능한 함자, ⁋정의 1](/ko/math/category_theory/representable_functors#def1)) 그런데 분류 대상이 비자명한 automorphism을 가지는 순간 이 관점은 곧바로 무너진다. 가령 $T$ 위의 line bundle을 분류하려 할 때, 두 line bundle은 국소적으로 동형이어도 대역적으로 동형이 아닐 수 있고, 더 본질적으로 각 line bundle은 $\mathcal{O}^\ast$만큼의 automorphism을 가진다. 만일 $F(T)$를 isomorphism class의 집합으로 두면 이 automorphism 정보가 사라지고, 그 결과 국소적으로 주어진 자료를 붙이는 하강이 집합 수준에서 더 이상 작동하지 않는다.
 
-올바른 해법은 $F(T)$를 isomorphism class의 집합이 아니라 대상과 그들 사이의 isomorphism을 함께 기억하는 *groupoid*로 두는 것이다. 그럼 $T\mapsto F(T)$은 집합이 아니라 범주를 값으로 가지는, 즉 밑범주 위에서 변하는 범주가 된다. 이러한 "밑범주 위의 범주"를 정식화하는 두 가지 동치 언어가 pseudofunctor와 fibered category이며, 그 위에서 site의 covering을 따라 자료가 붙는 하강 조건을 부과한 것이 stack이다. Stack은 정확히 [\[스킴\] §충실평탄 하강, ⁋정리 10](/ko/math/scheme_theory/faithfully_flat_descent#thm10)을 groupoid 값 functor로 끌어올린 일반화이다. 이 글에서는 groupoid와 pseudofunctor로 동기를 마련한 뒤 category fibered in groupoid를 정의하고, 그 위에서 prestack과 stack을 도입하여 quasi-coherent sheaf의 stack과 torsor의 분류 stack $\mathbf{B}G$를 예로 다룬다.
+올바른 해법은 $F(T)$를 isomorphism class의 집합이 아니라 대상과 그들 사이의 isomorphism을 함께 기억하는 *groupoid*로 두는 것이다. 그럼 $T\mapsto F(T)$은 집합이 아니라 범주를 값으로 가지는, 즉 밑범주 위에서 변하는 범주가 된다. 이러한 "밑범주 위의 범주"를 정식화하는 두 가지 동치 언어가 pseudofunctor와 fibered category이며, 그 위에서 site의 covering을 따라 자료가 붙는 하강 조건을 부과한 것이 stack이다. Stack은 정확히 [\[스킴\] §충실평탄하강, ⁋정리 11](/ko/math/scheme_theory/faithfully_flat_descent#thm11)을 groupoid 값 functor로 끌어올린 일반화이다. 이 글에서는 groupoid와 pseudofunctor로 동기를 마련한 뒤 category fibered in groupoid를 정의하고, 그 위에서 prestack과 stack을 도입하여 quasi-coherent sheaf의 stack과 torsor의 분류 stack $\mathbf{B}G$를 예로 다룬다.
 
 ## Moduli 문제와 groupoid
 
@@ -40,7 +40,7 @@ Groupoid는 group과 set 양쪽을 동시에 일반화한다. 대상이 하나�
 3. 임의의 functor $F:\mathcal{C}^\op \rightarrow \Set$은 각 $T$에 *이산* groupoid $F(T)$을 주는 특수한 경우로 볼 수 있다. 이 관점에서 집합 값 functor는 automorphism이 자명한 groupoid 값 functor이다.
 :::
 
-[예시 2](#ex2)의 첫째 항이 이 글 전체를 관통하는 본보기이다. Line bundle은 faithfully flat covering을 따라 붙으므로 ([\[스킴\] §충실평탄 하강, ⁋정리 10](/ko/math/scheme_theory/faithfully_flat_descent#thm10)) 하강이 성립하지만, 그 하강은 transition isomorphism이라는 automorphism 차원의 자료를 필요로 한다. Isomorphism class의 집합 $\Pic(T)$만 기억하는 functor는 이 자료를 담을 자리가 없어, 국소적으로 자명한 line bundle이 대역적으로 비자명할 수 있다는 사실을 sheaf 조건으로 포착하지 못한다. 따라서 우리는 $T\mapsto (T \text{ 위의 line bundle들의 groupoid})$를 다루어야 하며, 이는 밑범주 $\Sch$ 위에서 변하는 groupoid이다.
+[예시 2](#ex2)의 첫째 항이 이 글 전체를 관통하는 본보기이다. Line bundle은 faithfully flat covering을 따라 붙으므로 ([\[스킴\] §충실평탄하강, ⁋정리 11](/ko/math/scheme_theory/faithfully_flat_descent#thm11)) 하강이 성립하지만, 그 하강은 transition isomorphism이라는 automorphism 차원의 자료를 필요로 한다. Isomorphism class의 집합 $\Pic(T)$만 기억하는 functor는 이 자료를 담을 자리가 없어, 국소적으로 자명한 line bundle이 대역적으로 비자명할 수 있다는 사실을 sheaf 조건으로 포착하지 못한다. 따라서 우리는 $T\mapsto (T \text{ 위의 line bundle들의 groupoid})$를 다루어야 하며, 이는 밑범주 $\Sch$ 위에서 변하는 groupoid이다.
 
 ## Pseudofunctor와 strictness
 
@@ -125,7 +125,7 @@ CFG에서 pseudofunctor로 가는 방향은 [명제 7](#prop7)이다. Cleavage�
 ::: 예시 10
 밑범주를 $\mathcal{C}=\Sch$ (또는 고정된 base 위의 $\Sch/S$)로 둔다.
 
-1. (Representable CFG) 대상 $X\in \mathcal{C}$에 대하여 slice 범주 $\mathcal{C}/X$을 사영 $(T \rightarrow X)\mapsto T$과 함께 보면 CFG이다. $T$ 위의 fiber는 morphism 집합 $\Hom_\mathcal{C}(T, X)$을 이산 groupoid로 본 것이며, 이는 점함자 $h_X$에 대응하는 CFG이다. ([\[스킴\] §점함자, ⁋정리 1](/ko/math/scheme_theory/functor_of_points#thm1))
+1. (Representable CFG) 대상 $X\in \mathcal{C}$에 대하여 slice 범주 $\mathcal{C}/X$을 사영 $(T \rightarrow X)\mapsto T$과 함께 보면 CFG이다. $T$ 위의 fiber는 morphism 집합 $\Hom_\mathcal{C}(T, X)$을 이산 groupoid로 본 것이며, 이는 점함자 $h_X$에 대응하는 CFG이다. ([\[범주론\] §표현가능한 함자, ⁋정리 4](/ko/math/category_theory/representable_functors#thm4))
 
 2. (quasi-coherent sheaf의 CFG) 대상이 쌍 $(T, \mathcal{F})$ ($T\in \Sch$, $\mathcal{F}$은 $T$ 위의 quasi-coherent sheaf)이고, $(T, \mathcal{F})$에서 $(T', \mathcal{F}')$로의 morphism이 쌍 $(f, \alpha)$ ($f: T \rightarrow T'$, $\alpha: \mathcal{F}\xrightarrow{\sim}f^\ast \mathcal{F}'$은 isomorphism)인 범주를 $\mathcal{QC}$로 적는다. ([\[스킴\] §준연접층, ⁋정의 8](/ko/math/scheme_theory/quasicoherent_sheaves#def8)) 사영 $(T, \mathcal{F})\mapsto T$에 대하여 $T$ 위의 fiber는 $T$ 위의 quasi-coherent sheaf들의 groupoid $\QCoh(T)$ (isomorphism만 morphism으로 취한 것)이고, pullback functor는 $f^\ast$이다. ([\[스킴\] §준연접층, ⁋명제 15](/ko/math/scheme_theory/quasicoherent_sheaves#prop15))
 
@@ -148,7 +148,7 @@ $$\operatorname{\underline{Isom}}_U(x, y):(\mathcal{C}/U)^\op \rightarrow \Set;\
 은 slice site $\mathcal{C}/U$ 위의 presheaf이다. Morphism $g: W \rightarrow V$ (단, $V, W$은 $U$ 위에 있다)에 대한 restriction은 pullback functor $g^\ast$과 합성 동형 $g^\ast f^\ast\cong(f\circ g)^\ast$이 유도하는 morphism이다.
 :::
 
-각 fiber가 groupoid이므로 ([명제 7](#prop7)) $\operatorname{\underline{Isom}}_U(x, y)$의 값은 모두 isomorphism들의 집합이고, $x=y$이면 이는 automorphism의 presheaf $\operatorname{\underline{Aut}}_U(x)$이다. 직관적으로 이 presheaf는 "$x$와 $y$을 잇는 동형이 $U$ 위에서 어떻게 변하는가"를 기록한다. Morphism이 국소에서 대역으로 붙는다는 것은 정확히 이 presheaf가 sheaf라는 것이다. 다음으로 대상이 붙는 조건을 위해 descent datum을 정의한다. 이는 [\[스킴\] §충실평탄 하강, ⁋정의 4](/ko/math/scheme_theory/faithfully_flat_descent#def4)의 descent datum을 임의의 CFG로 옮긴 것이다.
+각 fiber가 groupoid이므로 ([명제 7](#prop7)) $\operatorname{\underline{Isom}}_U(x, y)$의 값은 모두 isomorphism들의 집합이고, $x=y$이면 이는 automorphism의 presheaf $\operatorname{\underline{Aut}}_U(x)$이다. 직관적으로 이 presheaf는 "$x$와 $y$을 잇는 동형이 $U$ 위에서 어떻게 변하는가"를 기록한다. Morphism이 국소에서 대역으로 붙는다는 것은 정확히 이 presheaf가 sheaf라는 것이다. 다음으로 대상이 붙는 조건을 위해 descent datum을 정의한다. 이는 [\[스킴\] §충실평탄하강, ⁋정의 4](/ko/math/scheme_theory/faithfully_flat_descent#def4)의 descent datum을 임의의 CFG로 옮긴 것이다.
 
 ::: 정의 12
 CFG $p:\mathcal{F} \rightarrow \mathcal{C}$과 covering family $\{f_i: U_i \rightarrow U\}_{i\in I}$이 주어졌다 하자. $U_{ij}=U_i\times_U U_j$, $U_{ijk}=U_i\times_U U_j\times_U U_k$로 적고, 사영 $\operatorname{pr}: U_{ij} \rightarrow U_i$ 등을 따른 pullback을 $\vert_{U_{ij}}$로 표기한다. ([\[범주론\] §극한, ⁋예시 8](/ko/math/category_theory/limits#ex8)) 이 covering에 대한 *descent datum<sub>하강 자료</sub>*은 다음으로 이루어진다.
@@ -159,7 +159,7 @@ CFG $p:\mathcal{F} \rightarrow \mathcal{C}$과 covering family $\{f_i: U_i \righ
 으로서 $U_{ijk}$ 위에서 *cocycle 조건* $\varphi_{ik}\vert_{U_{ijk}}=\varphi_{ij}\vert_{U_{ijk}}\circ \varphi_{jk}\vert_{U_{ijk}}$을 만족하는 것이다 (각 $\varphi$을 적절한 사영을 따라 $U_{ijk}$로 pullback한 것으로 이해한다). 이 descent datum이 *effective<sub>실효적</sub>*라는 것은, 대상 $x\in \mathcal{F}(U)$과 isomorphism $\psi_i: x\vert_{U_i}\xrightarrow{\sim}x_i$들이 존재하여 $U_{ij}$ 위에서 $\varphi_{ij}\circ(\psi_j\vert_{U_{ij}})=\psi_i\vert_{U_{ij}}$이 성립하는 것이다.
 :::
 
-Cocycle 조건은 세 겹 겹침 $U_{ijk}$ 위에서 세 동형 $\varphi_{ij}, \varphi_{jk}, \varphi_{ik}$이 모순 없이 합성됨을 요구하며, 이는 sheaf를 open covering에서 붙일 때 transition 함수가 만족하던 cocycle 관계의 직접적 일반화이다. Effectivity는 이 국소 자료 $(x_i, \varphi_{ij})$이 실제로 어떤 대역 대상 $x\in \mathcal{F}(U)$의 restriction으로부터 옴을 뜻한다. Faithfully flat descent에서 module에 대한 descent datum이 항상 effective였던 [\[스킴\] §충실평탄 하강, ⁋정리 6](/ko/math/scheme_theory/faithfully_flat_descent#thm6)과 달리, 일반적인 CFG에서는 effectivity가 별도의 조건이다. 이 두 조건을 합하여 stack을 정의한다.
+Cocycle 조건은 세 겹 겹침 $U_{ijk}$ 위에서 세 동형 $\varphi_{ij}, \varphi_{jk}, \varphi_{ik}$이 모순 없이 합성됨을 요구하며, 이는 sheaf를 open covering에서 붙일 때 transition 함수가 만족하던 cocycle 관계의 직접적 일반화이다. Effectivity는 이 국소 자료 $(x_i, \varphi_{ij})$이 실제로 어떤 대역 대상 $x\in \mathcal{F}(U)$의 restriction으로부터 옴을 뜻한다. Faithfully flat descent에서 module에 대한 descent datum이 항상 effective였던 [\[스킴\] §충실평탄하강, ⁋정리 6](/ko/math/scheme_theory/faithfully_flat_descent#thm6)과 달리, 일반적인 CFG에서는 effectivity가 별도의 조건이다. 이 두 조건을 합하여 stack을 정의한다.
 
 ::: 정의 13
 Site $(\mathcal{C}, \tau)$ 위의 CFG $p:\mathcal{F} \rightarrow \mathcal{C}$에 대하여,
@@ -168,7 +168,7 @@ Site $(\mathcal{C}, \tau)$ 위의 CFG $p:\mathcal{F} \rightarrow \mathcal{C}$에
 2. $\mathcal{F}$이 *stack<sub>스택</sub>*이라는 것은, $\mathcal{F}$이 prestack이고 동시에 임의의 covering family에 대한 모든 descent datum이 effective인 것이다.
 :::
 
-Prestack 조건은 "morphism이 붙는다"는 것이다. Covering $\{U_i \rightarrow U\}$ 위에서 정합적으로 주어진 isomorphism들 $x\vert_{U_i}\cong y\vert_{U_i}$이 두 겹 겹침에서 일치하면 $U$ 전체의 동형 $x\cong y$으로 유일하게 붙는다는 것이며, 이는 $\operatorname{\underline{Isom}}_U(x, y)$의 sheaf 조건에 다름 아니다. ([§Grothendieck 위상과 site, ⁋명제 11](/ko/math/stacks/grothendieck_topology#prop11)) Stack 조건은 여기에 "대상이 붙는다", 곧 effective descent를 더한 것이다. 정의상 stack은 prestack이고, prestack은 다시 CFG이다. Faithfully flat descent 전체가 이 정의 한 줄로 요약된다. Prestack 조건은 morphism의 하강 (faithfully flat morphism을 따른 morphism의 유일성)이고, effectivity는 [\[스킴\] §충실평탄 하강, ⁋정리 10](/ko/math/scheme_theory/faithfully_flat_descent#thm10)의 effective descent, 즉 대상의 하강이다.
+Prestack 조건은 "morphism이 붙는다"는 것이다. Covering $\{U_i \rightarrow U\}$ 위에서 정합적으로 주어진 isomorphism들 $x\vert_{U_i}\cong y\vert_{U_i}$이 두 겹 겹침에서 일치하면 $U$ 전체의 동형 $x\cong y$으로 유일하게 붙는다는 것이며, 이는 $\operatorname{\underline{Isom}}_U(x, y)$의 sheaf 조건에 다름 아니다. ([§Grothendieck 위상과 site, ⁋명제 11](/ko/math/stacks/grothendieck_topology#prop11)) Stack 조건은 여기에 "대상이 붙는다", 곧 effective descent를 더한 것이다. 정의상 stack은 prestack이고, prestack은 다시 CFG이다. Faithfully flat descent 전체가 이 정의 한 줄로 요약된다. Prestack 조건은 morphism의 하강 (faithfully flat morphism을 따른 morphism의 유일성)이고, effectivity는 [\[스킴\] §충실평탄하강, ⁋정리 11](/ko/math/scheme_theory/faithfully_flat_descent#thm11)의 effective descent, 즉 대상의 하강이다.
 
 ::: 참고 14
 문헌마다 명칭이 갈린다. 우리의 prestack과 stack은 [Stacks]와 [Ols]의 용법을 따른 것으로, prestack은 $\operatorname{\underline{Isom}}$이 sheaf인 CFG, stack은 거기에 effective descent를 더한 것이다. 반면 [Vis]는 fibered category를 "prestack of categories", $\operatorname{\underline{Isom}}$이 sheaf인 것을 "prestack" (즉 우리의 prestack), effective descent까지 가지는 것을 "stack"이라 부르되, 우리가 prestack이라 부른 것을 별도로 "separated prestack"이라 칭하기도 한다. 이 글에서는 일관되게 [정의 13](#def13)의 용법을 사용한다.
@@ -192,17 +192,17 @@ Fiber가 이산이므로 [정리 9](#thm9)의 pseudofunctor는 strict functor $F
 이제 구체적인 stack을 구성한다. 가장 기본적인 예는 [예시 10](#ex10)의 quasi-coherent sheaf CFG이며, 그것이 stack이라는 사실은 faithfully flat descent를 그대로 옮긴 것이다.
 
 ::: 정리 16
-밑 site를 $\Sch$ (또는 $\Sch/S$) 위의 fpqc site로 둔다. ([\[스킴\] §충실평탄 하강, ⁋정의 8](/ko/math/scheme_theory/faithfully_flat_descent#def8)) 그럼 [예시 10](#ex10)의 quasi-coherent sheaf CFG $\mathcal{QC}$은 stack이다.
+밑 site를 $\Sch$ (또는 $\Sch/S$) 위의 fpqc site로 둔다. ([\[스킴\] §충실평탄하강, ⁋정의 9](/ko/math/scheme_theory/faithfully_flat_descent#def9)) 그럼 [예시 10](#ex10)의 quasi-coherent sheaf CFG $\mathcal{QC}$은 stack이다.
 :::
 ::: 증명
-Prestack 조건과 effectivity를 차례로 faithfully flat descent로 환원한다. 두 조건 모두 fpqc covering에 대한 것이고, quasi-compact 조건으로 유한 subcovering을 모아 disjoint union을 취하면 ([\[스킴\] §충실평탄 하강, ⁋정의 8](/ko/math/scheme_theory/faithfully_flat_descent#def8)) 단일 affine faithfully flat morphism $\Spec B \rightarrow \Spec A$인 경우로 환원된다.
+Prestack 조건과 effectivity를 차례로 faithfully flat descent로 환원한다. 두 조건 모두 fpqc covering에 대한 것이고, quasi-compact 조건으로 유한 subcovering을 모아 disjoint union을 취하면 ([\[스킴\] §충실평탄하강, ⁋정의 9](/ko/math/scheme_theory/faithfully_flat_descent#def9)) 단일 affine faithfully flat morphism $\Spec B \rightarrow \Spec A$인 경우로 환원된다.
 
-Prestack. $T=\Spec A$ 위의 두 quasi-coherent sheaf $\mathcal{F}, \mathcal{G}$, 곧 두 $A$-module $M, N$에 대하여, presheaf $\operatorname{\underline{Isom}}_T(\mathcal{F}, \mathcal{G})$이 sheaf임을 보여야 한다. 이는 그 부분presheaf의 모집합인 homomorphism presheaf $(\Spec A' \rightarrow \Spec A)\mapsto \Hom_{A'}(M\otimes_A A', N\otimes_A A')$이 sheaf임을 보이면 충분하다. Isomorphism은 양방향 homomorphism이 합성하여 항등이 되는 조건으로 잘라낸 부분sheaf이기 때문이다. 그런데 faithfully flat descent functor $\rMod{A} \rightarrow \operatorname{Desc}(B/A)$이 categorical equivalence이므로 ([\[스킴\] §충실평탄 하강, ⁋정리 6](/ko/math/scheme_theory/faithfully_flat_descent#thm6)), 특히 fully faithful이다. ([\[범주론\] §함자, ⁋정의 10](/ko/math/category_theory/functors#def10)) Fully faithfulness가 정확히 homomorphism이 covering $\{\Spec B \rightarrow \Spec A\}$ 위에서 유일하게 내려옴, 곧 $\Hom$ presheaf의 sheaf 조건을 준다.
+Prestack. $T=\Spec A$ 위의 두 quasi-coherent sheaf $\mathcal{F}, \mathcal{G}$, 곧 두 $A$-module $M, N$에 대하여, presheaf $\operatorname{\underline{Isom}}_T(\mathcal{F}, \mathcal{G})$이 sheaf임을 보여야 한다. 이는 그 부분presheaf의 모집합인 homomorphism presheaf $(\Spec A' \rightarrow \Spec A)\mapsto \Hom_{A'}(M\otimes_A A', N\otimes_A A')$이 sheaf임을 보이면 충분하다. Isomorphism은 양방향 homomorphism이 합성하여 항등이 되는 조건으로 잘라낸 부분sheaf이기 때문이다. 그런데 faithfully flat descent functor $\rMod{A} \rightarrow \operatorname{Desc}(B/A)$이 categorical equivalence이므로 ([\[스킴\] §충실평탄하강, ⁋정리 6](/ko/math/scheme_theory/faithfully_flat_descent#thm6)), 특히 fully faithful이다. ([\[범주론\] §함자, ⁋정의 10](/ko/math/category_theory/functors#def10)) Fully faithfulness가 정확히 homomorphism이 covering $\{\Spec B \rightarrow \Spec A\}$ 위에서 유일하게 내려옴, 곧 $\Hom$ presheaf의 sheaf 조건을 준다.
 
-Effectivity. Covering family $\{T_i \rightarrow T\}$ 위의 descent datum은 각 $T_i$ 위의 quasi-coherent sheaf $\mathcal{F}_i$과 $T_{ij}$ 위의 cocycle 동형 $\varphi_{ij}$의 자료이다. 이는 정확히 quasi-coherent sheaf의 descent datum이며, quasi-coherent sheaf가 fpqc 위상에 대하여 effective descent를 가지므로 ([\[스킴\] §충실평탄 하강, ⁋정리 10](/ko/math/scheme_theory/faithfully_flat_descent#thm10)) $T$ 위의 quasi-coherent sheaf $\mathcal{F}$과 동형 $\mathcal{F}\vert_{T_i}\cong \mathcal{F}_i$으로 유일하게 붙는다. 따라서 모든 descent datum이 effective이고, prestack 조건과 합하여 $\mathcal{QC}$은 stack이다.
+Effectivity. Covering family $\{T_i \rightarrow T\}$ 위의 descent datum은 각 $T_i$ 위의 quasi-coherent sheaf $\mathcal{F}_i$과 $T_{ij}$ 위의 cocycle 동형 $\varphi_{ij}$의 자료이다. 이는 정확히 quasi-coherent sheaf의 descent datum이며, quasi-coherent sheaf가 fpqc 위상에 대하여 effective descent를 가지므로 ([\[스킴\] §충실평탄하강, ⁋정리 11](/ko/math/scheme_theory/faithfully_flat_descent#thm11)) $T$ 위의 quasi-coherent sheaf $\mathcal{F}$과 동형 $\mathcal{F}\vert_{T_i}\cong \mathcal{F}_i$으로 유일하게 붙는다. 따라서 모든 descent datum이 effective이고, prestack 조건과 합하여 $\mathcal{QC}$은 stack이다.
 :::
 
-[정리 16](#thm16)은 stack의 정의가 faithfully flat descent의 재포장임을 명시적으로 보여준다. Prestack 조건은 [\[스킴\] §충실평탄 하강, ⁋정리 6](/ko/math/scheme_theory/faithfully_flat_descent#thm6)의 fully faithfulness로, effectivity는 essential surjectivity, 곧 [\[스킴\] §충실평탄 하강, ⁋정리 10](/ko/math/scheme_theory/faithfully_flat_descent#thm10)의 effective descent로 각각 환원된다. ([\[범주론\] §자연변환, ⁋정리 5](/ko/math/category_theory/natural_transformations#thm5)) 모든 CFG가 stack인 것은 아니므로, prestack을 stack으로 보편적으로 보완하는 조작이 필요하다. 이것이 [§Grothendieck 위상과 site, ⁋정리 14](/ko/math/stacks/grothendieck_topology#thm14)의 sheafification의 stack 판본인 stackification이다.
+[정리 16](#thm16)은 stack의 정의가 faithfully flat descent의 재포장임을 명시적으로 보여준다. Prestack 조건은 [\[스킴\] §충실평탄하강, ⁋정리 6](/ko/math/scheme_theory/faithfully_flat_descent#thm6)의 fully faithfulness로, effectivity는 essential surjectivity, 곧 [\[스킴\] §충실평탄하강, ⁋정리 11](/ko/math/scheme_theory/faithfully_flat_descent#thm11)의 effective descent로 각각 환원된다. ([\[범주론\] §자연변환, ⁋정리 5](/ko/math/category_theory/natural_transformations#thm5)) 모든 CFG가 stack인 것은 아니므로, prestack을 stack으로 보편적으로 보완하는 조작이 필요하다. 이것이 [§Grothendieck 위상과 site, ⁋정리 14](/ko/math/stacks/grothendieck_topology#thm14)의 sheafification의 stack 판본인 stackification이다.
 
 ::: 정리 17 (stackification)
 Site $(\mathcal{C}, \tau)$ 위의 임의의 CFG $\mathcal{F}$에 대하여, stack $\mathcal{F}^a$과 morphism $\iota:\mathcal{F} \rightarrow \mathcal{F}^a$이 존재하여 다음 보편성을 가진다. 임의의 stack $\mathcal{G}$에 대하여 $\iota$와의 합성
@@ -250,10 +250,10 @@ $$P_\mathcal{L}=\operatorname{\underline{Isom}}_{\mathcal{O}}(\mathcal{O}_T, \ma
 
 Prestack. 두 invertible sheaf $\mathcal{L}, \mathcal{M}$에 대하여 $\operatorname{\underline{Isom}}_T(\mathcal{L}, \mathcal{M})$은 $\mathcal{QC}$의 $\operatorname{\underline{Isom}}$의 부분presheaf이고, 후자가 sheaf이므로 ([정리 16](#thm16)의 prestack 부분) 전자가 sheaf임을 보이려면 그것이 닫힌 부분sheaf 조건으로 잘라짐을 확인하면 된다. $\mathcal{O}_T$-module층 morphism $\mathcal{L} \rightarrow \mathcal{M}$이 동형인지는 국소적으로 검사되는 조건이므로 ([\[위상수학\] §층, ⁋명제 4](/ko/math/topology/sheaves#prop4)), $\operatorname{\underline{Isom}}$은 $\operatorname{\underline{Hom}}$의 sheaf 부분대상이고 sheaf이다.
 
-Effective descent. Covering family $\{T_i \rightarrow T\}$ 위에 invertible sheaf $\mathcal{L}_i$들과 cocycle 동형 $\varphi_{ij}$의 descent datum이 주어졌다 하자. 이를 quasi-coherent sheaf의 descent datum으로 보면, $\mathcal{QC}$이 stack이므로 ([정리 16](#thm16)) $T$ 위의 quasi-coherent sheaf $\mathcal{L}$과 $\mathcal{L}\vert_{T_i}\cong \mathcal{L}_i$으로 유일하게 붙는다. 남은 것은 이 $\mathcal{L}$이 invertible임을 보이는 것이다. "Invertible" (rank 1 locally free)은 fpqc faithfully flat base change에 대하여 내려오는 성질이므로 ([\[스킴\] §충실평탄 하강, ⁋명제 7](/ko/math/scheme_theory/faithfully_flat_descent#prop7)의 locally free of finite rank 하강), $\mathcal{L}\vert_{T_i}=\mathcal{L}_i$이 각각 invertible이고 $\{T_i \rightarrow T\}$이 covering이므로 $\mathcal{L}$도 invertible이다. 따라서 descent datum이 $\mathcal{L}(T)$ 안에서 effective이고, prestack 조건과 합하여 $\mathcal{L}\cong \mathbf{B}\mathbb{G}_m$은 stack이다.
+Effective descent. Covering family $\{T_i \rightarrow T\}$ 위에 invertible sheaf $\mathcal{L}_i$들과 cocycle 동형 $\varphi_{ij}$의 descent datum이 주어졌다 하자. 이를 quasi-coherent sheaf의 descent datum으로 보면, $\mathcal{QC}$이 stack이므로 ([정리 16](#thm16)) $T$ 위의 quasi-coherent sheaf $\mathcal{L}$과 $\mathcal{L}\vert_{T_i}\cong \mathcal{L}_i$으로 유일하게 붙는다. 남은 것은 이 $\mathcal{L}$이 invertible임을 보이는 것이다. "Invertible" (rank 1 locally free)은 fpqc faithfully flat base change에 대하여 내려오는 성질이므로 ([\[스킴\] §충실평탄하강, ⁋명제 7](/ko/math/scheme_theory/faithfully_flat_descent#prop7)의 locally free of finite rank 하강), $\mathcal{L}\vert_{T_i}=\mathcal{L}_i$이 각각 invertible이고 $\{T_i \rightarrow T\}$이 covering이므로 $\mathcal{L}$도 invertible이다. 따라서 descent datum이 $\mathcal{L}(T)$ 안에서 effective이고, prestack 조건과 합하여 $\mathcal{L}\cong \mathbf{B}\mathbb{G}_m$은 stack이다.
 :::
 
-[정리 19](#thm19)은 stack 이론의 출발점을 압축한다. Line bundle은 isomorphism class의 집합 $\Pic$으로는 sheaf로 분류되지 않지만, automorphism $\mathbb{G}_m$을 함께 기억하는 groupoid 값 functor로 보면 stack $\mathbf{B}\mathbb{G}_m$으로 완벽히 분류된다. 그 stack 성질은 [정리 16](#thm16)의 quasi-coherent sheaf 하강에서 invertible이라는 국소 성질이 faithfully flat base change로 내려온다는 [\[스킴\] §충실평탄 하강, ⁋명제 7](/ko/math/scheme_theory/faithfully_flat_descent#prop7)을 더하여 따라온다. 더 일반적인 group $G$에 대한 $\mathbf{B}G$이나 [예시 10](#ex10)의 moduli CFG $\mathcal{M}_g$이 stack인지, 나아가 그것이 algebraic stack이라는 더 강한 기하학적 조건을 만족하는지는 같은 하강 원리를 토대로 이후의 글에서 전개한다.
+[정리 19](#thm19)은 stack 이론의 출발점을 압축한다. Line bundle은 isomorphism class의 집합 $\Pic$으로는 sheaf로 분류되지 않지만, automorphism $\mathbb{G}_m$을 함께 기억하는 groupoid 값 functor로 보면 stack $\mathbf{B}\mathbb{G}_m$으로 완벽히 분류된다. 그 stack 성질은 [정리 16](#thm16)의 quasi-coherent sheaf 하강에서 invertible이라는 국소 성질이 faithfully flat base change로 내려온다는 [\[스킴\] §충실평탄하강, ⁋명제 7](/ko/math/scheme_theory/faithfully_flat_descent#prop7)을 더하여 따라온다. 더 일반적인 group $G$에 대한 $\mathbf{B}G$이나 [예시 10](#ex10)의 moduli CFG $\mathcal{M}_g$이 stack인지, 나아가 그것이 algebraic stack이라는 더 강한 기하학적 조건을 만족하는지는 같은 하강 원리를 토대로 이후의 글에서 전개한다.
 
 ---
 

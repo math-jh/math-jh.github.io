@@ -279,7 +279,7 @@ Affine variety $X$ 위의 quasi-coherent sheaf $\mathcal{F} = \widetilde{M}$에 
 
 $$\Delta_X\hookrightarrow X\times X$$
 
-이 $X\times X$의 *closed* immersion이라면, 이 조건이 성립하는 것을 보일 수 있으며 이런 경우 $X$가 *separated* variety라 부른다. 이는 (그 정의에서 알 수 있듯) Hausdorff 조건의 Zariski topology 버전이라 할 수 있으며 그만큼 합당한 조건이며, 현재 우리의 정의와 같이 quasi-projective variety를 variety라 부른다면 이 조건은 자동으로 충족된다. 즉, 현재 우리의 언어에서 이 논증은 임의의 variety 위에 정의된 quasi-coherent sheaf에 대해서는 Čech cohomology와 sheaf cohomology가 일치한다는 말이 되고, 뿐만 아니라 [정리 11](#thm11)의 전제조건을 만족하는 open cover $\mathcal{U}$를 잡는다면 direct limit을 계산할 필요없이 해당 open cover에 대한 Čech cohomology를 계산하면 충분하다는 것을 보여준다.
+이 $X\times X$의 *closed* embedding이라면, 이 조건이 성립하는 것을 보일 수 있으며 이런 경우 $X$가 *separated* variety라 부른다. 이는 (그 정의에서 알 수 있듯) Hausdorff 조건의 Zariski topology 버전이라 할 수 있으며 그만큼 합당한 조건이며, 현재 우리의 정의와 같이 quasi-projective variety를 variety라 부른다면 이 조건은 자동으로 충족된다. 즉, 현재 우리의 언어에서 이 논증은 임의의 variety 위에 정의된 quasi-coherent sheaf에 대해서는 Čech cohomology와 sheaf cohomology가 일치한다는 말이 되고, 뿐만 아니라 [정리 11](#thm11)의 전제조건을 만족하는 open cover $\mathcal{U}$를 잡는다면 direct limit을 계산할 필요없이 해당 open cover에 대한 Čech cohomology를 계산하면 충분하다는 것을 보여준다.
 
 ## Godement Resolution
 

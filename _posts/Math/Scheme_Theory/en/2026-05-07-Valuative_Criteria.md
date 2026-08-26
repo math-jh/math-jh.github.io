@@ -19,9 +19,9 @@ In this post we define separated morphisms and proper morphisms. In previous pos
 ::: Definition 1
 Let a scheme morphism $\varphi: X \rightarrow Y$ be given.
 
-1. If $\varphi$ induces an isomorphism between open subschemes of $X$ and $Y$, we call $\varphi$ an *open immersion*.
+1. If $\varphi$ induces an isomorphism between open subschemes of $X$ and $Y$, we call $\varphi$ an *open embedding*.
 2. We say $\varphi$ is *projective* if for some suitable $n$, $\varphi$ can be factored as a composition of a closed embedding and a projection $X\hookrightarrow \mathbb{P}^n_Y \rightarrow Y$. ([§Projective Schemes](/en/math/scheme_theory/projective_schemes))
-3. We say $\varphi$ is *quasi-projective* if it can be factored as a composition of a suitable open immersion $X \rightarrow X'$ and a projective morphism $X' \rightarrow Y$.
+3. We say $\varphi$ is *quasi-projective* if it can be factored as a composition of a suitable open embedding $X \rightarrow X'$ and a projective morphism $X' \rightarrow Y$.
 :::
 
 The first definition is obvious; the second and third are relative versions—that is, in $\Sch_{/Y}$—of [\[Algebraic Varieties\] §Projective Varieties, ⁋Definition 3](/en/math/algebraic_varieties/projective_varieties#def3) and [\[Algebraic Varieties\] §Quasi-Projective Varieties, ⁋Definition 1](/en/math/algebraic_varieties/quasi_projective_varieties#def1).
@@ -202,14 +202,14 @@ Meanwhile from [Theorem 6](#thm6) we obtain the following.
 ::: Corollary 8
 For Noetherian schemes,
 
-1. Open immersions and closed embeddings are both separated.
+1. Open embeddings and closed embeddings are both separated.
 2. The composition of two separated morphisms is separated.
 3. Separated morphisms are preserved under base change.
 4. Separated morphisms are preserved under fiber products.
 5. If $\varphi:X \rightarrow Y$, $\psi:Y \rightarrow Z$ are scheme morphisms and $\psi\circ \varphi$ is a separated morphism, then $\varphi$ is also a separated morphism.
 :::
 ::: Proof
-Item 1 is checked directly from the definition. If $\varphi$ is a closed embedding, then for every affine open subset $V=\Spec B$ of $Y$ we have $\varphi^{-1}(V)=\Spec A$ with $B \rightarrow A$ surjective ([§Closed Subschemes, ⁋Proposition 3](/en/math/scheme_theory/closed_subschemes#prop3)), and collecting all such $V$, the $\varphi^{-1}(V)\times_V\varphi^{-1}(V)$ cover $X\times_YX$. On each of these $\Delta$ is a closed embedding by the computation of [Lemma 5](#lem5), and since closed embeddings are affine-local on the target, $\Delta$ itself is a closed embedding. If $\varphi$ is an open immersion, view $X$ as an open subscheme of $Y$ and consider affine open subsets $V=\Spec B$ of $Y$ and basic open subsets $\Spec B_b$ of $X$ contained in them. Then the $\Spec B_b\times_V\Spec B_{b'}$ cover $X\times_YX$, and
+Item 1 is checked directly from the definition. If $\varphi$ is a closed embedding, then for every affine open subset $V=\Spec B$ of $Y$ we have $\varphi^{-1}(V)=\Spec A$ with $B \rightarrow A$ surjective ([§Closed Subschemes, ⁋Proposition 3](/en/math/scheme_theory/closed_subschemes#prop3)), and collecting all such $V$, the $\varphi^{-1}(V)\times_V\varphi^{-1}(V)$ cover $X\times_YX$. On each of these $\Delta$ is a closed embedding by the computation of [Lemma 5](#lem5), and since closed embeddings are affine-local on the target, $\Delta$ itself is a closed embedding. If $\varphi$ is an open embedding, view $X$ as an open subscheme of $Y$ and consider affine open subsets $V=\Spec B$ of $Y$ and basic open subsets $\Spec B_b$ of $X$ contained in them. Then the $\Spec B_b\times_V\Spec B_{b'}$ cover $X\times_YX$, and
 
 $$B_b\otimes_BB_{b'}\cong B_{bb'}=\mathcal{O}(\Spec B_b\cap \Spec B_{b'})$$
 
@@ -406,7 +406,7 @@ For any Noetherian scheme $Y$, we have $\mathbb{P}^n_Y=\mathbb{P}^n_\mathbb{Z}\t
 
 Now if $\varphi:X \rightarrow Y$ is projective, then $\varphi$ is a composition of a closed embedding $X\hookrightarrow \mathbb{P}^n_Y$ and the projection $\mathbb{P}^n_Y \rightarrow Y$. ([Definition 1](#def1)) A closed embedding is proper and the composition of two proper morphisms is proper ([Corollary 13](#cor13)), so $\varphi$ is proper.
 
-Finally, let $\varphi:X \rightarrow Y$ be quasi-projective, and decompose it as $\varphi=\psi\circ\lambda$ where $\lambda: X \rightarrow X'$ is an open immersion and $\psi:X' \rightarrow Y$ is a projective morphism. ([Definition 1](#def1)) By what we just showed, $\psi$ is proper, hence separated and finite type. Meanwhile an open immersion is separated, and the composition of two separated morphisms is separated ([Corollary 8](#cor8)), so $\varphi$ is separated. Also an open immersion is locally of finite type, and since $X$ is Noetherian, the preimage by $\lambda$ of any affine open subset of $X'$ is quasi-compact as an open subset of a Noetherian space. That is, $\lambda$ is finite type ([§Properties of Scheme Morphisms, ⁋Definition 14](/en/math/scheme_theory/properties_of_scheme_morphisms#def14)), and since the composition of two finite type morphisms is finite type, $\varphi$ is also finite type.
+Finally, let $\varphi:X \rightarrow Y$ be quasi-projective, and decompose it as $\varphi=\psi\circ\lambda$ where $\lambda: X \rightarrow X'$ is an open embedding and $\psi:X' \rightarrow Y$ is a projective morphism. ([Definition 1](#def1)) By what we just showed, $\psi$ is proper, hence separated and finite type. Meanwhile an open embedding is separated, and the composition of two separated morphisms is separated ([Corollary 8](#cor8)), so $\varphi$ is separated. Also an open embedding is locally of finite type, and since $X$ is Noetherian, the preimage by $\lambda$ of any affine open subset of $X'$ is quasi-compact as an open subset of a Noetherian space. That is, $\lambda$ is finite type ([§Properties of Scheme Morphisms, ⁋Definition 14](/en/math/scheme_theory/properties_of_scheme_morphisms#def14)), and since the composition of two finite type morphisms is finite type, $\varphi$ is also finite type.
 :::
 
 Thus we obtain the classical consequence of the criterion. Since a proper morphism is a closed map by definition, the image of a morphism going out from a projective scheme is always closed.

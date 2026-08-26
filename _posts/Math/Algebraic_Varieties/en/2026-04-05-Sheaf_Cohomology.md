@@ -270,7 +270,7 @@ Now consider an arbitrary variety $X$ and a quasi-coherent sheaf $\mathcal{F}$ d
 
 $$\Delta_X\hookrightarrow X\times X$$
 
-is a *closed* immersion in $X\times X$, then we can show that this condition holds, and in this case we call $X$ a *separated* variety. As can be seen from its definition, this is the Zariski topology analogue of the Hausdorff condition, and is a reasonable condition; moreover, if we define a variety to be quasi-projective as we do now, this condition is automatically satisfied. Thus, in our present language, this argument shows that for any quasi-coherent sheaf on any variety, Čech cohomology and sheaf cohomology agree, and moreover, if we choose an open cover $\mathcal{U}$ satisfying the hypotheses of [Theorem 11](#thm11), it suffices to compute the Čech cohomology for that open cover without taking a direct limit.
+is a *closed* embedding in $X\times X$, then we can show that this condition holds, and in this case we call $X$ a *separated* variety. As can be seen from its definition, this is the Zariski topology analogue of the Hausdorff condition, and is a reasonable condition; moreover, if we define a variety to be quasi-projective as we do now, this condition is automatically satisfied. Thus, in our present language, this argument shows that for any quasi-coherent sheaf on any variety, Čech cohomology and sheaf cohomology agree, and moreover, if we choose an open cover $\mathcal{U}$ satisfying the hypotheses of [Theorem 11](#thm11), it suffices to compute the Čech cohomology for that open cover without taking a direct limit.
 
 ## Godement Resolution
 

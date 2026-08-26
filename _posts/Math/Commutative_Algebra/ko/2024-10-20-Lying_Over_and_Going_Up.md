@@ -74,7 +74,7 @@ Integral extension $A\hookrightarrow B$에 대하여, 만일 $B$의 두 prime id
 결론에 반하여 $\mathfrak{q}_1\subseteq \mathfrak{q}_2$라 가정하고 $A\cap \mathfrak{q}_1=A\cap \mathfrak{q}_2=\mathfrak{p}$라 하자. 그럼 $A$에서는 $\mathfrak{p}$로, $B$에서는 $\mathfrak{q}_1$으로 quotient를 취하여, 주어진 상황을 integral domain $B$와 $\mathfrak{q}_1=0$, 그리고 $\mathfrak{q}_2\cap A=0$이 성립하도록 바꿔줄 수 있다. 그런데 $B$의 원소들에 대해 성립하는 integral equation들은 $\mathfrak{p}$로 quotient를 취하여도 그대로 integral equation이 되며, 특히 $\Frac(B)$가 $\Frac(A)$의 algebraic extension이 된다. 따라서 [보조정리 2](#lem2)에 의하여 원하는 결과를 얻는다.
 :::
 
-[명제 1](#prop1)과 [따름정리 4](#cor4)가 prime ideal chain을 위로 올리는 방향이라면, 반대 방향의 *going-down*은 일반적인 integral extension에서는 성립하지 않는다. 다만 base가 integrally closed domain, 곧 normal domain일 때 성립하며 ([§정수적 확장, ⁋정의 3](/ko/math/commutative_algebra/integral_extension#def3)), 그 증명은 다음 보조정리에 기반한다.
+[명제 1](#prop1)과 [따름정리 4](#cor4)가 prime ideal chain을 위로 올리는 방향이라면, 반대 방향의 *going-down*은 일반적인 integral extension에서는 성립하지 않는다. 다만 base가 integrally closed domain, 즉 normal domain일 때 성립하며 ([§정수적 확장, ⁋정의 3](/ko/math/commutative_algebra/integral_extension#def3)), 그 증명은 다음 보조정리에 기반한다.
 
 ::: 보조정리 5
 Integral extension $A\hookrightarrow B$에서 $A$가 integrally closed domain이고 $B$도 domain이라 하자. 임의의 $b\in B$의 $K=\Frac(A)$ 위 minimal polynomial을 $f_b\in K[\x]$라 하자.

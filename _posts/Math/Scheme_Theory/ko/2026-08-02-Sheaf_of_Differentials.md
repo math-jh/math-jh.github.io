@@ -1,5 +1,5 @@
 ---
-title: "Kähler differential과 여접층"
+title: "미분과 여접층"
 description: "A-대수의 Kähler differential 가군과 보편 도분을 상기하고, 추이 완전열과 conormal 완전열을 도입한다. 이어서 scheme 사상의 여접층을 대각선의 conormal로 정의하고 affine 위에서 연관층의 gluing과 일치함을 보이며, tangent sheaf와 Zariski 접공간, affine space 및 사영공간의 Euler 완전열을 다룬다. 마지막으로 여접층의 top exterior power로 canonical sheaf를 정의하고 사영공간에서 계산한 뒤 Serre 쌍대성을 진술한다."
 excerpt: "Kähler differentials, the cotangent sheaf Ω_{X/S}, the tangent sheaf, the Euler sequence on P^n, and the canonical sheaf"
 
@@ -162,7 +162,7 @@ $$\begin{aligned}
 
 이 성립하므로 $\delta$는 $A$-derivation이다. 따라서 universal property에 의하여 $\Omega_{B/A} \rightarrow \mathfrak{a}/\mathfrak{a}^2$이 유도되고, $\mathfrak{a}$가 $b\otimes 1-1\otimes b$ 꼴의 원소들로 생성되며 $\Omega_{B/A}$가 $\dd{b}$들로 생성되므로 이것이 $\theta$의 역임은 generator 위에서 확인된다.
 
-한편 $R=B\otimes_AB$라 두면 $\Delta$는 surjection $m:R \rightarrow R/\mathfrak{a}\cong B$로부터 오는 closed immersion이므로, affine 위에서 pullback $\Delta^\ast$가 하는 일은 $R$-module에 $-\otimes_RB$를 적용하는 것이다. 그런데 $\mathfrak{a}$가 $\mathfrak{a}/\mathfrak{a}^2$를 소멸시켜 그 $R$-module 구조가 이미 $R/\mathfrak{a}=B$를 통해 주어지므로 $(\mathfrak{a}/\mathfrak{a}^2)\otimes_RB\cong \mathfrak{a}/\mathfrak{a}^2$이고, 따라서 다음의 isomorphism
+한편 $R=B\otimes_AB$라 두면 $\Delta$는 surjection $m:R \rightarrow R/\mathfrak{a}\cong B$로부터 오는 closed embedding이므로, affine 위에서 pullback $\Delta^\ast$가 하는 일은 $R$-module에 $-\otimes_RB$를 적용하는 것이다. 그런데 $\mathfrak{a}$가 $\mathfrak{a}/\mathfrak{a}^2$를 소멸시켜 그 $R$-module 구조가 이미 $R/\mathfrak{a}=B$를 통해 주어지므로 $(\mathfrak{a}/\mathfrak{a}^2)\otimes_RB\cong \mathfrak{a}/\mathfrak{a}^2$이고, 따라서 다음의 isomorphism
 
 $$\Delta^\ast\widetilde{\mathfrak{a}/\mathfrak{a}^2}\cong \widetilde{\mathfrak{a}/\mathfrak{a}^2}\cong \widetilde{\Omega_{B/A}}$$
 
@@ -177,7 +177,7 @@ $$\Delta^\ast\widetilde{\mathfrak{a}/\mathfrak{a}^2}\cong \widetilde{\mathfrak{a
 
 $$\psi^\ast\Omega_{S'/S} \rightarrow \Omega_{X/S} \rightarrow \Omega_{X/S'} \rightarrow 0$$
 
-을 얻으며, closed immersion $\iota:Z\hookrightarrow Y$가 ideal sheaf $\mathcal{J}$로 주어질 때 [명제 2](#prop2)를 옮기면 conormal exact sequence
+을 얻으며, closed embedding $\iota:Z\hookrightarrow Y$가 ideal sheaf $\mathcal{J}$로 주어질 때 [명제 2](#prop2)를 옮기면 conormal exact sequence
 
 $$\mathcal{J}/\mathcal{J}^2 \rightarrow \iota^\ast\Omega_{Y/S} \rightarrow \Omega_{Z/S} \rightarrow 0$$
 

@@ -108,12 +108,12 @@ Affine scheme $Z$, 임의의 scheme $X,Y$와 scheme morphism $X \rightarrow Z$, 
 이제 마지막으로 $Z$를 임의의 scheme으로 확장해야 한다. 우선 다음이 성립한다.
 
 ::: 보조정리 7
-임의의 scheme $X,Y,Z$가 주어졌다 하고, scheme morphism $\varphi_X:X \rightarrow Z$, $\varphi_Y:Y \rightarrow Z$ 그리고 affine scheme $Z'$로의 monomorphism $\iota: Z \rightarrow Z'$가 주어졌다 하자. 가령 $\iota$가 open immersion이거나 closed embedding인 경우가 이에 해당한다. 그럼 $\iota\circ\varphi_X$와 $\iota\circ\varphi_Y$의 fiber product $X\times_{Z'}Y$는 $X\times_ZY$의 universal property를 만족하고, 따라서 $X\times_ZY$가 존재한다.  
+임의의 scheme $X,Y,Z$가 주어졌다 하고, scheme morphism $\varphi_X:X \rightarrow Z$, $\varphi_Y:Y \rightarrow Z$ 그리고 affine scheme $Z'$로의 monomorphism $\iota: Z \rightarrow Z'$가 주어졌다 하자. 가령 $\iota$가 open embedding이거나 closed embedding인 경우가 이에 해당한다. 그럼 $\iota\circ\varphi_X$와 $\iota\circ\varphi_Y$의 fiber product $X\times_{Z'}Y$는 $X\times_ZY$의 universal property를 만족하고, 따라서 $X\times_ZY$가 존재한다.
 :::
 ::: 증명
 $Z'$이 affine이므로 $X\times_{Z'}Y$는 존재한다. 이제 임의의 scheme $T$와 morphism $\alpha:T \rightarrow X$, $\beta:T \rightarrow Y$가 주어졌다 하자. $X\times_ZY$의 universal property에서 요구하는 조건은 $\varphi_X\circ \alpha=\varphi_Y\circ \beta$이고, $X\times_{Z'}Y$의 것은 $\iota\circ\varphi_X\circ \alpha=\iota\circ\varphi_Y\circ \beta$인데, $\iota$가 monomorphism이므로 이 두 조건은 서로 동치이다. 따라서 두 fiber product는 같은 universal property를 만족하고, 유일성에 의하여 $X\times_{Z'}Y$가 $X\times_ZY$의 역할을 한다.
 
-위에서 언급한 두 경우가 실제로 monomorphism이라는 것은 다음과 같이 확인한다. $\iota\circ \gamma=\iota\circ \delta$인 두 morphism $\gamma,\delta: T \rightarrow Z$가 주어졌다 하면, open immersion과 closed embedding은 모두 단사이므로 연속함수로서 $\gamma=\delta$이다. 또 각각의 $t\in T$에서 $\iota^\sharp$이 stalk 사이의 surjection $\mathcal{O}_{Z',\iota(\gamma(t))} \rightarrow \mathcal{O}_{Z,\gamma(t)}$을 유도하는데, open immersion의 경우 이는 isomorphism이고 closed embedding의 경우는 [§닫힌 부분스킴, ⁋정의 2](/ko/math/scheme_theory/closed_subschemes#def2)가 요구하는 조건이다. 그럼 $(\iota\circ \gamma)^\sharp$이 $\iota^\sharp$과 $\gamma^\sharp$의 합성이므로 $\gamma^\sharp$와 $\delta^\sharp$는 그 합성에 의해 결정되어 서로 같고, 따라서 $\gamma=\delta$이다.
+위에서 언급한 두 경우가 실제로 monomorphism이라는 것은 다음과 같이 확인한다. $\iota\circ \gamma=\iota\circ \delta$인 두 morphism $\gamma,\delta: T \rightarrow Z$가 주어졌다 하면, open embedding과 closed embedding은 모두 단사이므로 연속함수로서 $\gamma=\delta$이다. 또 각각의 $t\in T$에서 $\iota^\sharp$이 stalk 사이의 surjection $\mathcal{O}_{Z',\iota(\gamma(t))} \rightarrow \mathcal{O}_{Z,\gamma(t)}$을 유도하는데, open embedding의 경우 이는 isomorphism이고 closed embedding의 경우는 [§닫힌 부분스킴, ⁋정의 2](/ko/math/scheme_theory/closed_subschemes#def2)가 요구하는 조건이다. 그럼 $(\iota\circ \gamma)^\sharp$이 $\iota^\sharp$과 $\gamma^\sharp$의 합성이므로 $\gamma^\sharp$와 $\delta^\sharp$는 그 합성에 의해 결정되어 서로 같고, 따라서 $\gamma=\delta$이다.
 
 한편 $\iota$에 대한 가정이 없으면 이는 성립하지 않는다. 가령 $k$-scheme의 structure morphism $\iota:Z \rightarrow \Spec k$를 택하고 $X=Y=Z=\mathbb{A}^1_k$에 identity morphism을 주면, $X\times_ZY=\mathbb{A}^1_k$이지만 $X\times_{\Spec k}Y=\mathbb{A}^2_k$이다.
 :::

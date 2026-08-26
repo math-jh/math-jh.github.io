@@ -98,7 +98,7 @@ $$\check H^p(\mathcal{U}, \mathcal{F})\cong H^p(X, \mathcal{F})$$
 이 성립한다.
 :::
 ::: 증명
-[\[대수다양체\] §층 코호몰로지, ⁋정리 11](/ko/math/algebraic_varieties/sheaf_cohomology#thm11)에 의하여, $\mathcal{U}$의 임의의 유한 교집합 $U_{i_0}\cap\cdots\cap U_{i_p}$ 위에서 $\mathcal{F}$가 acyclic임을 보이면 충분하다. $X$가 separated이므로 diagonal morphism $\Delta:X \rightarrow X\times_{\Spec \mathbb{Z}}X$이 closed immersion이고, 따라서 임의의 두 affine open subset $U_i, U_j$의 교집합 $U_i\cap U_j$는 다시 affine이다. 실제로 $U_i\cap U_j$는 fiber product $U_i\times_X U_j$이며, 이는 affine scheme $U_i\times_{\Spec \mathbb{Z}}U_j$의 closed subscheme $\Delta^{-1}(U_i\times U_j)$와 isomorphic하므로 affine이다. 같은 논증을 반복하면 유한 교집합 $U_{i_0}\cap\cdots\cap U_{i_p}$ 또한 affine scheme이다. 그럼 $\mathcal{F}$의 이 위로의 restriction은 affine scheme 위의 quasi-coherent sheaf이므로 [정리 3](#thm3)에 의하여 acyclic이고, 따라서 [\[대수다양체\] §층 코호몰로지, ⁋정리 11](/ko/math/algebraic_varieties/sheaf_cohomology#thm11)의 전제가 충족된다.
+[\[대수다양체\] §층 코호몰로지, ⁋정리 11](/ko/math/algebraic_varieties/sheaf_cohomology#thm11)에 의하여, $\mathcal{U}$의 임의의 유한 교집합 $U_{i_0}\cap\cdots\cap U_{i_p}$ 위에서 $\mathcal{F}$가 acyclic임을 보이면 충분하다. $X$가 separated이므로 diagonal morphism $\Delta:X \rightarrow X\times_{\Spec \mathbb{Z}}X$이 closed embedding이고, 따라서 임의의 두 affine open subset $U_i, U_j$의 교집합 $U_i\cap U_j$는 다시 affine이다. 실제로 $U_i\cap U_j$는 fiber product $U_i\times_X U_j$이며, 이는 affine scheme $U_i\times_{\Spec \mathbb{Z}}U_j$의 closed subscheme $\Delta^{-1}(U_i\times U_j)$와 isomorphic하므로 affine이다. 같은 논증을 반복하면 유한 교집합 $U_{i_0}\cap\cdots\cap U_{i_p}$ 또한 affine scheme이다. 그럼 $\mathcal{F}$의 이 위로의 restriction은 affine scheme 위의 quasi-coherent sheaf이므로 [정리 3](#thm3)에 의하여 acyclic이고, 따라서 [\[대수다양체\] §층 코호몰로지, ⁋정리 11](/ko/math/algebraic_varieties/sheaf_cohomology#thm11)의 전제가 충족된다.
 :::
 
 따라서 separated scheme 위에서는 affine covering 하나를 잡아 Čech complex만 계산하면 derived functor cohomology가 그대로 얻어진다. Affine scheme 사이의 morphism은 항상 separated이고 ([§값매김환, ⁋보조정리 5](/ko/math/scheme_theory/valuative_criteria#lem5)), $\mathbb{P}^n$을 비롯한 projective scheme 또한 separated이므로, 우리가 실제로 다루는 대부분의 scheme에서 이 따름정리가 작동한다.
@@ -207,7 +207,7 @@ $$m_{jk}/\x_j^{e_{jk}},\qquad m_{jk}\in\Gamma(\mathbb{P}^n, \mathcal{F}(e_{jk}))
 Field $\mathbb{K}$ 위의 Noetherian projective scheme $X$와 그 위의 coherent sheaf $\mathcal{F}$에 대하여, 각 $H^i(X, \mathcal{F})$은 유한차원 $\mathbb{K}$-벡터공간이며, 충분히 큰 $i$에 대해서는 $0$이다.
 :::
 ::: 증명
-위의 isomorphism $(\ast)$에 의하여 quasi-coherent sheaf $\iota_\ast\mathcal{F}$이 ([§준연접층, ⁋정리 16](/ko/math/scheme_theory/quasicoherent_sheaves#thm16)) $\mathbb{P}^n$ 위의 coherent sheaf임만 확인하면 $X=\mathbb{P}^n_{\mathbb{K}}$이라 가정해도 된다. 이를 위해서는 finite type 조건만 affine-local하게 체크하면 되는데, 이는 $\iota$가 closed immersion이므로 각 chart 위에서 $\iota_\ast\mathcal{F}$은 $A$-algebra $A/I$ 위의 finitely generated module을 $A$-module로 본 것이고, $A \rightarrow A/I$가 전사이므로 $A/I$ 위의 generator를 $A$로 들어올리면 같은 원소들이 $A$ 위에서도 생성하기 때문이다.
+위의 isomorphism $(\ast)$에 의하여 quasi-coherent sheaf $\iota_\ast\mathcal{F}$이 ([§준연접층, ⁋정리 16](/ko/math/scheme_theory/quasicoherent_sheaves#thm16)) $\mathbb{P}^n$ 위의 coherent sheaf임만 확인하면 $X=\mathbb{P}^n_{\mathbb{K}}$이라 가정해도 된다. 이를 위해서는 finite type 조건만 affine-local하게 체크하면 되는데, 이는 $\iota$가 closed embedding이므로 각 chart 위에서 $\iota_\ast\mathcal{F}$은 $A$-algebra $A/I$ 위의 finitely generated module을 $A$-module로 본 것이고, $A \rightarrow A/I$가 전사이므로 $A/I$ 위의 generator를 $A$로 들어올리면 같은 원소들이 $A$ 위에서도 생성하기 때문이다.
 
 따라서 $\mathbb{P}^n$ 위의 coherent sheaf $\mathcal{F}$에 대한 명제만 보이면 충분하다. 우선 충분히 큰 cohomological dimension $i>n$에서 $H^i=0$인데, 이는 $\mathbb{P}^n$이 $n+1$개의 열린집합으로 덮이므로 그 Čech complex 단계에서 이미 이 항들이 $0$이기 때문이다. 
 
@@ -242,7 +242,7 @@ $$\iota_\ast(\mathcal{F}(d))\cong(\iota_\ast\mathcal{F})(d)$$
 
 이며 이는 $\mathcal{O}_X(1)=\iota^\ast\mathcal{O}(1)$이므로 [§준연접층, ⁋명제 17](/ko/math/scheme_theory/quasicoherent_sheaves#prop17)으로부터 바로 따라나온다.
 
-이 환원 아래에서 global generation 또한 함께 옮겨진다. Closed immersion을 따라 $x\in X$에서 $(\iota_\ast\mathcal{G})_{\iota(x)}=\mathcal{G}_x$이고 $\Gamma(\mathbb{P}^n, \iota_\ast\mathcal{G})=\Gamma(X, \mathcal{G})$이므로, $(\iota_\ast\mathcal{F})(d)$가 globally generated이면 $\mathcal{F}(d)$ 또한 그러하기 때문이다. 그럼 [보조정리 7](#lem7)이 $d\geq d_0$마다 $\mathcal{F}(d)$을 globally generated로 만드는 $d_0$을 주므로, 남은 것은 vanishing뿐이다.
+이 환원 아래에서 global generation 또한 함께 옮겨진다. Closed embedding을 따라 $x\in X$에서 $(\iota_\ast\mathcal{G})_{\iota(x)}=\mathcal{G}_x$이고 $\Gamma(\mathbb{P}^n, \iota_\ast\mathcal{G})=\Gamma(X, \mathcal{G})$이므로, $(\iota_\ast\mathcal{F})(d)$가 globally generated이면 $\mathcal{F}(d)$ 또한 그러하기 때문이다. 그럼 [보조정리 7](#lem7)이 $d\geq d_0$마다 $\mathcal{F}(d)$을 globally generated로 만드는 $d_0$을 주므로, 남은 것은 vanishing뿐이다.
 
 이제 남은 것은 vanishing으로, 이는 [정리 8](#thm8)과 마찬가지로 $i$에 대한 내림차순 귀납으로 본다. $i>n$에서는 chart의 개수로부터 $H^i=0$이므로 귀납단계만 보이면 충분하다. 임의의 $i\geq1$에 대하여, globally generated 성질로부터 surjection $\mathcal{O}^{\oplus r}\twoheadrightarrow\mathcal{F}(d_0)$을 잡아서 다음의 short exact sequence
 
@@ -269,7 +269,7 @@ $$H^i(\mathbb{P}^n, \mathcal{O}(d-d_0)^{\oplus r}) \rightarrow H^i(\mathbb{P}^n,
 Field $\mathbb{K}$ 위의 Noetherian projective scheme $X$ 위의 very ample invertible sheaf $\mathcal{L}$은 ample이다. ([§인자와 선형계, ⁋정의 18](/ko/math/scheme_theory/divisors_and_linear_systems#def18))
 :::
 ::: 증명
-$\mathcal{L}$이 very ample이므로 이를 globally generate하는 유한 개의 section이 locally closed embedding $\iota:X \rightarrow \mathbb{P}^N_\mathbb{K}$를 정의하고 $\mathcal{L}\cong\iota^\ast\mathcal{O}(1)$이다. ([§인자와 선형계, §§Ample invertible sheaf](/ko/math/scheme_theory/divisors_and_linear_systems#ample-invertible-sheaf)) $X$가 $\mathbb{K}$ 위에서 projective이므로 $\iota(X)$는 닫힌집합이며 ([§값매김환, ⁋따름정리 16](/ko/math/scheme_theory/valuative_criteria#cor16)), 따라서 $\iota$는 closed immersion이다. 그럼 $\mathcal{L}$은 [정리 9](#thm9)에서 $\mathcal{O}_X(1)$이 맡은 역할을 그대로 할 수 있으므로, 임의의 coherent sheaf $\mathcal{F}$에 대하여 충분히 큰 모든 $d$에서 $\mathcal{F}\otimes\mathcal{L}^{\otimes d}$은 globally generated이다. 이것이 ampleness의 정의이다.
+$\mathcal{L}$이 very ample이므로 이를 globally generate하는 유한 개의 section이 locally closed embedding $\iota:X \rightarrow \mathbb{P}^N_\mathbb{K}$를 정의하고 $\mathcal{L}\cong\iota^\ast\mathcal{O}(1)$이다. ([§인자와 선형계, §§Ample invertible sheaf](/ko/math/scheme_theory/divisors_and_linear_systems#ample-invertible-sheaf)) $X$가 $\mathbb{K}$ 위에서 projective이므로 $\iota(X)$는 닫힌집합이며 ([§값매김환, ⁋따름정리 16](/ko/math/scheme_theory/valuative_criteria#cor16)), 따라서 $\iota$는 closed embedding이다. 그럼 $\mathcal{L}$은 [정리 9](#thm9)에서 $\mathcal{O}_X(1)$이 맡은 역할을 그대로 할 수 있으므로, 임의의 coherent sheaf $\mathcal{F}$에 대하여 충분히 큰 모든 $d$에서 $\mathcal{F}\otimes\mathcal{L}^{\otimes d}$은 globally generated이다. 이것이 ampleness의 정의이다.
 :::
 
 그러나 이 따름정리의 역방향은 성립하지 않는다. Ample invertible sheaf는 section이 부족하여 embedding을 주지 못할 수 있고, 이를 해소하려면 여러 번 tensor하여 section을 늘려야 한다. 다음 정리는 그것이 언제나 가능함을 말해준다.
@@ -282,11 +282,11 @@ $\mathcal{L}^{\otimes m}$이 very ample이라 하자. [따름정리 10](#cor10)�
 
 거꾸로 $\mathcal{L}$이 ample이라 하자. 우리는 $\mathcal{L}$의 적당한 거듭제곱의 global section들이 정의하는 locally closed embedding을 만들어야 한다. 정의에 의해 $\mathcal{L}$의 적당한 거듭제곱이 globally generated이며 이러한 section들은 언제나 morphism $X \rightarrow \mathbb{P}^M$을 주므로 우리가 실제로 보여야 할 것은 이 morphism이 embedding을 준다는 것이다. 
 
-$\mathcal{L}^{\otimes k}$을 globally generate하는 section들 $s_0,\ldots, s_M\in\Gamma(X, \mathcal{L}^{\otimes k})$이 주는 morphism $\varphi:X \rightarrow \mathbb{P}^M$을 생각하자. 이는 $\mathbb{P}^M$의 좌표 $\x_i$를 $s_i$로 pullback하는 morphism으로, 이로부터 standard chart $D_+(\x_i)$의 preimage는 정확히 $s_i$가 소멸하지 않는 열린집합 $X_{s_i}$이 된다. 그럼 morphism이 closed immersion이 되는 것은 target에서 local한 성질이므로, 우리는 다음의 morphism들
+$\mathcal{L}^{\otimes k}$을 globally generate하는 section들 $s_0,\ldots, s_M\in\Gamma(X, \mathcal{L}^{\otimes k})$이 주는 morphism $\varphi:X \rightarrow \mathbb{P}^M$을 생각하자. 이는 $\mathbb{P}^M$의 좌표 $\x_i$를 $s_i$로 pullback하는 morphism으로, 이로부터 standard chart $D_+(\x_i)$의 preimage는 정확히 $s_i$가 소멸하지 않는 열린집합 $X_{s_i}$이 된다. 그럼 morphism이 closed embedding이 되는 것은 target에서 local한 성질이므로, 우리는 다음의 morphism들
 
 $$\varphi\vert_{X_{s_i}}: X_{s_i} \rightarrow D_+(\x_i)$$
 
-이 closed immersion임을 보이면 된다. 우리 주장은 위의 section들을 아주 잘 택하면 $X_{s_i}$가 affine scheme이 되어, 위의 closed immersion이 affine scheme 사이의 morphism이고, 따라서 이 판정이 그에 대응되는 ring homomorphism의 전사성으로 내려온다는 것이다. 이 때, $D_+(\x_i)$의 coordinate ring은 ratio들 $\x_j/\x_i$들이 생성하는 polynomial ring이고, $\varphi\vert_{X_{s_i}}$에 대응하는 ring homomorphism은 이를 $s_j/s_i\in\Gamma(X_{s_i}, \mathcal{O}_X)$로 보내므로, 전사성은 이 비들이 $\Gamma(X_{s_i}, \mathcal{O}_X)$를 $\mathbb{K}$-대수로서 생성한다는 것과 같다. 
+이 closed embedding임을 보이면 된다. 우리 주장은 위의 section들을 아주 잘 택하면 $X_{s_i}$가 affine scheme이 되어, 위의 closed embedding이 affine scheme 사이의 morphism이고, 따라서 이 판정이 그에 대응되는 ring homomorphism의 전사성으로 내려온다는 것이다. 이 때, $D_+(\x_i)$의 coordinate ring은 ratio들 $\x_j/\x_i$들이 생성하는 polynomial ring이고, $\varphi\vert_{X_{s_i}}$에 대응하는 ring homomorphism은 이를 $s_j/s_i\in\Gamma(X_{s_i}, \mathcal{O}_X)$로 보내므로, 전사성은 이 비들이 $\Gamma(X_{s_i}, \mathcal{O}_X)$를 $\mathbb{K}$-대수로서 생성한다는 것과 같다.
 
 따라서 우리의 첫 번째 목표는 $\mathcal{L}^{\otimes k}$을 globally generate하는 section들 가운데, $X_{s_i}$들이 모두 affine이도록 하는 것들을 찾는 것이다. 이를 위해 우리는 각각의 closed point $x\in X$마다 $x$를 품으면서 affine인 $X_s$를 하나씩 만들 것이다. 우선 $x$를 포함하는 $\mathcal{L}$의 trivializing open affine neighborhood $U$를 택하자. 만일 적당한 section $s$가 $X_s\subseteq U$를 만족한다면 $X_s$가 affine인 것은 $X_s$를 $U$ 안에서 함수 $s$가 정의하는 principal open set으로 보면 바로 얻어지므로, 우리가 찾아야 할 $s$는 $x$에서 non-vanishing이면서 $Y=X\setminus U$에서는 identically zero인 section이다.  
 
@@ -296,7 +296,7 @@ $$\varphi\vert_{X_{s_i}}: X_{s_i} \rightarrow D_+(\x_i)$$
 
 $$b_{ij}=t_{ij}/s_i^N, \qquad t_{ij}\in\Gamma(X, \mathcal{L}^{\otimes mN})$$
 
-이 성립하도록 하는 공통의 $N$과 global section $t_{ij}$들이 존재하여, $s_1^N,\ldots, s_q^N$들과 $t_{ij}$들이 $\mathcal{L}^{\otimes mN}$을 globally generate하도록 할 수 있다는 것이다. 만일 이것이 성립한다면, 이들이 $s_i^N$의 chart 위에서 주는 ratio 중 $t_{ij}/s_i^N=b_{ij}$가 있으므로 우리가 원하는 전사성, 즉 affine scheme으로 제한했을 때 $\varphi$가 closed immersion이 된다는 사실이 증명될 것이다. 이 때 확인하는 chart는 $s_i^N$에 대응하는 것들뿐이지만 $X_{s_i}$들이 $X$를 덮으므로, 이는 $\varphi$가 이 chart들의 합집합으로의 closed immersion, 곧 locally closed embedding이라는 뜻이다. 
+이 성립하도록 하는 공통의 $N$과 global section $t_{ij}$들이 존재하여, $s_1^N,\ldots, s_q^N$들과 $t_{ij}$들이 $\mathcal{L}^{\otimes mN}$을 globally generate하도록 할 수 있다는 것이다. 만일 이것이 성립한다면, 이들이 $s_i^N$의 chart 위에서 주는 ratio 중 $t_{ij}/s_i^N=b_{ij}$가 있으므로 우리가 원하는 전사성, 즉 affine scheme으로 제한했을 때 $\varphi$가 closed embedding이 된다는 사실이 증명될 것이다. 이 때 확인하는 chart는 $s_i^N$에 대응하는 것들뿐이지만 $X_{s_i}$들이 $X$를 덮으므로, 이는 $\varphi$가 이 chart들의 합집합으로의 closed embedding, 곧 locally closed embedding이라는 뜻이다.
 
 이를 위해 $\mathcal{L}^{\otimes m}$의 trivializing affine open cover $V_1,\ldots, V_p$를 택하고 각각의 $V_l=\Spec A_l$ 위에서 trivialization을 하나 고정하면, $s_i$는 함수 $g_{il}\in A_l$에 대응하고 $X_{s_i}\cap V_l=D(g_{il})$이다. 그럼 $X_{s_i}$ 위의 함수들 $b_{ij}$의 $D(g_{il})$로의 restriction은 $(A_l)_{g_{il}}$의 원소이므로, $g_{il}$의 적당한 거듭제곱을 곱하면 $A_l$의 원소가 되며, 이때의 지수는 $i$와 $j$, $l$에 대해 유한 개이므로 그 최댓값 $N_0$을 취하면 모든 $l$에 대해 $s_i^{N_0}b_{ij}$가 $V_l$ 위에서 $\mathcal{L}^{\otimes mN_0}$의 section으로 extend되도록 할 수 있다. 이제 남은 것은 이들을 붙여 global section $t_{ij}$로 만들 수 있다는 것을 보이는 것이다. 
 
@@ -312,7 +312,7 @@ Field $\mathbb{K}$ 위의 Noetherian projective scheme $X$ 위의 invertible she
 2. 임의의 coherent sheaf $\mathcal{F}$에 대하여 적당한 $n_0$가 존재하여, 모든 $i>0$과 $n\geq n_0$에 대해 $H^i(X, \mathcal{F}\otimes_{\mathcal{O}_X}\mathcal{L}^{\otimes n})=0$이다.
 :::
 ::: 증명
-첫째 조건이 둘째 조건을 함의하는 방향이 쉬우므로, 이를 먼저 살펴보자. $\mathcal{L}$이 ample이라면 [정리 11](#thm11)에 의하여 적당한 $m>0$에 대해 $\mathcal{L}^{\otimes m}$이 very ample이다. 그럼 [따름정리 10](#cor10)의 증명에서와 같이 $\mathcal{L}^{\otimes m}$이 정의하는 immersion은 closed immersion이므로, $\mathcal{L}^{\otimes m}$을 twisting sheaf로 삼아 [정리 9](#thm9)을 적용할 수 있다. 특히 유한 개의 coherent sheaf 
+첫째 조건이 둘째 조건을 함의하는 방향이 쉬우므로, 이를 먼저 살펴보자. $\mathcal{L}$이 ample이라면 [정리 11](#thm11)에 의하여 적당한 $m>0$에 대해 $\mathcal{L}^{\otimes m}$이 very ample이다. 그럼 [따름정리 10](#cor10)의 증명에서와 같이 $\mathcal{L}^{\otimes m}$이 정의하는 embedding은 closed embedding이므로, $\mathcal{L}^{\otimes m}$을 twisting sheaf로 삼아 [정리 9](#thm9)을 적용할 수 있다. 특히 유한 개의 coherent sheaf
 
 $$\mathcal{F}\otimes\mathcal{L}^{\otimes q},\qquad q=0,1,\ldots, m-1$$
 
@@ -428,7 +428,7 @@ $$\rchi(\mathcal{F}(d))=P_\mathcal{F}(d)$$
 ::: 증명
 마지막 주장은 [정리 9](#thm9)에서 곧바로 얻어진다. 충분히 큰 $d$에서 $H^i(X, \mathcal{F}(d))=0$ ($i>0$)이므로 교대합에 $H^0$만 남기 때문이다. 유일성은 서로 다른 두 다항식이 무한히 많은 정수에서 일치할 수 없다는 것에서 따라온다.
 
-먼저 $X=\mathbb{P}^n_\mathbb{K}$인 경우로 환원한다. Closed immersion $\iota:X\hookrightarrow\mathbb{P}^n_\mathbb{K}$에 대하여, [정리 8](#thm8) 직전의 isomorphism $(\ast)$을 [정리 9](#thm9)의 증명에서 본 등식 $\iota_\ast(\mathcal{F}(d))\cong(\iota_\ast\mathcal{F})(d)$과 결합하면 $H^i(X, \mathcal{F}(d))\cong H^i(\mathbb{P}^n, (\iota_\ast\mathcal{F})(d))$이고 $\supp\iota_\ast\mathcal{F}=\iota(\supp\mathcal{F})$이므로, [정리 8](#thm8)의 증명에서 보았듯 coherent인 $\iota_\ast\mathcal{F}$로 $\mathcal{F}$를 바꾸어도 무방하다. 
+먼저 $X=\mathbb{P}^n_\mathbb{K}$인 경우로 환원한다. Closed embedding $\iota:X\hookrightarrow\mathbb{P}^n_\mathbb{K}$에 대하여, [정리 8](#thm8) 직전의 isomorphism $(\ast)$을 [정리 9](#thm9)의 증명에서 본 등식 $\iota_\ast(\mathcal{F}(d))\cong(\iota_\ast\mathcal{F})(d)$과 결합하면 $H^i(X, \mathcal{F}(d))\cong H^i(\mathbb{P}^n, (\iota_\ast\mathcal{F})(d))$이고 $\supp\iota_\ast\mathcal{F}=\iota(\supp\mathcal{F})$이므로, [정리 8](#thm8)의 증명에서 보았듯 coherent인 $\iota_\ast\mathcal{F}$로 $\mathcal{F}$를 바꾸어도 무방하다.
 
 뿐만 아니라, 우리는 field $\mathbb{K}$가 *infinite* field라 가정해도 된다. 정리의 결론이 cohomology의 차원들과 $\supp\mathcal{F}$의 차원만으로 진술되므로, 이를 보이기 위해서는 infinite field로의 extension $\mathbb{K}\hookrightarrow \mathbb{L}$에 대하여 이 두 불변량들이 보존된다는 것을 보이면 된다. 우선 cohomology의 차원의 경우, standard affine cover에 대한 Čech complex는 계수만 바꿔준 $\check C^\bullet(\mathcal{U}, \mathcal{F})\otimes_\mathbb{K}\mathbb{L}$이고 $-\otimes_\mathbb{K}\mathbb{L}$은 exact이므로, [따름정리 4](#cor4)에 의하여 $\dim_\mathbb{L}H^i(\mathbb{P}^n_\mathbb{L}, \mathcal{F}_\mathbb{L}(d))=\dim_\mathbb{K}H^i(\mathbb{P}^n_\mathbb{K}, \mathcal{F}(d))$이다. Support의 차원의 경우, 우리는 우선 support 자체가 field extension과 호환됨을 본다. 각각의 affine chart $\Spec A$ 위에서 $\mathcal{F}$에 대응하는 finitely generated module $M$의 generator $m_1,\ldots, m_r$를 잡으면, $\ann M$은 $a\mapsto(am_1,\ldots, am_r)$로 주어지는 $A \rightarrow M^{\oplus r}$의 kernel이다. ([\[가환대수학\] §기본 개념들, ⁋정의 1](/ko/math/commutative_algebra/basic_notions#def1)) 그런데 $m_k\otimes1$들이 $M\otimes_\mathbb{K}\mathbb{L}$을 생성하고 $-\otimes_\mathbb{K}\mathbb{L}$이 kernel을 보존하므로 $\ann(M\otimes_\mathbb{K}\mathbb{L})=(\ann M)\otimes_\mathbb{K}\mathbb{L}$이고, 따라서 $\supp\mathcal{F}$가 chart마다 $\Spec(A/\ann M)$이면 $\supp\mathcal{F}_\mathbb{L}$은 chart마다 $\Spec\bigl((A/\ann M)\otimes_\mathbb{K}\mathbb{L}\bigr)$로 주어진다. 이제 finitely generated $\mathbb{K}$-algebra의 차원은 field extension에 의해 변하지 않으므로 ([\[가환대수학\] §뇌터 정규화, ⁋명제 5](/ko/math/commutative_algebra/noether_normalization#prop5)) 이 두 불변량이 보존되고 따라서 처음부터 $\mathbb{K}$가 무한체라 두어도 된다.
 
