@@ -159,6 +159,13 @@ body {
           text-justify: inter-character;
         }
 
+        /* 우측 TOC 도 .page__content 안의 li 이지만 폭이 좁아 inter-character
+           양끝맞춤이 오히려 한글 자간을 과도하게 벌린다. */
+        .toc__menu li {
+          text-align: start;
+          text-justify: auto;
+        }
+
         /* Latin_hyphens.js 가 감싼 영문 낱말. TeX 이 한국어 문서 안의 라틴 낱말도
            하이픈으로 쪼개는 것과 같은 목적 — 한 줄에서 메워야 할 폭 자체를 줄여
            글자 사이가 크게 벌어지는 줄을 없앤다. 글 전체가 lang=ko 라 이 span 없이는

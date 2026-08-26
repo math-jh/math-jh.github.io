@@ -79,6 +79,137 @@ $(function() {
       // Event support
       events: true // if true, emit custom events
     });
+
+    // Move the short gold glow continuously along the neutral TOC rail. The
+    // reader's progress from one h2 to the next is mapped to the distance
+    // between the matching TOC marker centres, including wrapped labels.
+    var tocMenu = document.querySelector("nav.toc .toc__menu");
+    var tocProgressItems = tocMenu
+      ? $(tocMenu).children("li").children("a").get().map(function(link) {
+          var hash = link.hash;
+          var id;
+          var heading;
+
+          if (!hash) return null;
+          try {
+            id = decodeURIComponent(hash.slice(1));
+          } catch (error) {
+            id = hash.slice(1);
+          }
+
+          heading = document.getElementById(id);
+          return heading ? { link: link, heading: heading } : null;
+        }).filter(function(item) {
+          return item !== null;
+        })
+      : [];
+
+    if (tocProgressItems.length > 0) {
+      var tocHeadingTops = [];
+      var tocMarkerCenters = [];
+      var tocProgressFrame = null;
+      var tocMeasureFrame = null;
+      var tocGlowHalfHeight = 1;
+
+      var updateTocProgress = function() {
+        var probe = window.pageYOffset + 20; // match Gumshoe's activation offset
+        var current = 0;
+        var next;
+        var span;
+        var progress = 0;
+        var markerY;
+
+        tocProgressFrame = null;
+
+        while (
+          current + 1 < tocHeadingTops.length &&
+          probe >= tocHeadingTops[current + 1]
+        ) {
+          current += 1;
+        }
+
+        next = Math.min(current + 1, tocHeadingTops.length - 1);
+        span = tocHeadingTops[next] - tocHeadingTops[current];
+
+        if (next !== current && span > 0) {
+          progress = Math.max(
+            0,
+            Math.min(1, (probe - tocHeadingTops[current]) / span)
+          );
+        }
+
+        markerY = tocMarkerCenters[current] +
+          (tocMarkerCenters[next] - tocMarkerCenters[current]) * progress;
+
+        tocMenu.style.setProperty("--toc-progress-y", markerY.toFixed(2) + "px");
+        tocProgressItems.forEach(function(item, index) {
+          var distance = Math.abs(tocMarkerCenters[index] - markerY) /
+            tocGlowHalfHeight;
+          var intensity;
+
+          // Match the alpha stops of the rail's CSS gradient: full gold at
+          // the centre, 65% at 30% of its half-height, then fade to neutral.
+          if (distance >= 1) {
+            intensity = 0;
+          } else if (distance <= 0.3) {
+            intensity = 1 - distance * (0.35 / 0.3);
+          } else {
+            intensity = 0.65 * (1 - (distance - 0.3) / 0.7);
+          }
+
+          item.link.style.setProperty(
+            "--toc-marker-intensity",
+            Math.max(0, Math.min(1, intensity)).toFixed(3)
+          );
+        });
+        tocMenu.classList.add("is-progress-ready");
+      };
+
+      var requestTocProgress = function() {
+        if (tocProgressFrame !== null) return;
+        tocProgressFrame = window.requestAnimationFrame(updateTocProgress);
+      };
+
+      var measureTocProgress = function() {
+        var menuRect = tocMenu.getBoundingClientRect();
+        var glowStyle = window.getComputedStyle(tocMenu, "::after");
+
+        tocMeasureFrame = null;
+        tocGlowHalfHeight = Math.max(1, parseFloat(glowStyle.height) / 2);
+        tocHeadingTops = tocProgressItems.map(function(item) {
+          return item.heading.getBoundingClientRect().top + window.pageYOffset;
+        });
+        tocMarkerCenters = tocProgressItems.map(function(item) {
+          var linkRect = item.link.getBoundingClientRect();
+          return linkRect.top - menuRect.top + linkRect.height / 2;
+        });
+
+        requestTocProgress();
+      };
+
+      var requestTocMeasure = function() {
+        if (tocMeasureFrame !== null) return;
+        tocMeasureFrame = window.requestAnimationFrame(measureTocProgress);
+      };
+
+      window.addEventListener("scroll", requestTocProgress, { passive: true });
+      window.addEventListener("resize", requestTocMeasure, { passive: true });
+      window.addEventListener("load", requestTocMeasure);
+
+      if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(requestTocMeasure);
+      }
+
+      if ("ResizeObserver" in window) {
+        var tocContent = document.querySelector(".page__content");
+        if (tocContent) {
+          var tocResizeObserver = new ResizeObserver(requestTocMeasure);
+          tocResizeObserver.observe(tocContent);
+        }
+      }
+
+      measureTocProgress();
+    }
   }
 
   // add lightbox class to all image links
