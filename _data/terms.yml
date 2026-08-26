@@ -1759,6 +1759,13 @@ B:
   defs:
   - label: '[해석학] §수열의 수렴'
     url: /ko/math/analysis/convergence_of_sequences
+- id: bracket
+  en: bracket
+  ko: 괄호
+  primary: en
+  defs:
+  - label: '[리 이론] §리 군'
+    url: /ko/math/lie_theory/Lie_groups
 - id: braid_relation
   en: braid relation
   ko: 꼬임 관계식
@@ -2987,6 +2994,13 @@ C:
   defs:
   - label: '[환론] §중국인의 나머지정리'
     url: /ko/math/ring_theory/chinese_remainder_theorem
+- id: commutation_factor
+  en: commutation factor
+  ko: 교환 인자
+  primary: en
+  defs:
+  - label: '[다중선형대수학] §미분'
+    url: /ko/math/multilinear_algebra/derivations
 - id: commutative
   en: commutative
   ko: 교환법칙을 만족한다
@@ -10020,6 +10034,13 @@ J:
   - label: 측지선
     lang: ko
     id: geodesic
+- id: jacobi_identity
+  en: Jacobi identity
+  ko: 자코비 항등식
+  primary: en
+  defs:
+  - label: '[리 이론] §리 군'
+    url: /ko/math/lie_theory/Lie_groups
 - id: jacobi_matrix
   en: Jacobi matrix
   ko: 야코비 행렬
