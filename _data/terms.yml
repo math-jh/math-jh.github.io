@@ -11878,6 +11878,13 @@ M:
   defs:
   - label: '[해석학] §선형 미분방정식계'
     url: /ko/math/analysis/linear_ode
+- id: matrix_representation
+  en: matrix representation
+  ko: 행렬표현
+  primary: ko
+  defs:
+  - label: '[다중선형대수학] §행렬과 선형사상'
+    url: /ko/math/multilinear_algebra/matrices_and_linear_maps
 - id: matrix_ring
   en: matrix ring
   ko: 행렬환
