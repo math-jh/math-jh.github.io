@@ -9751,6 +9751,13 @@ I:
     url: /ko/math/algebraic_structures/groups
   - label: '[가환대수학] §분수아이디얼'
     url: /ko/math/commutative_algebra/fractional_ideals
+- id: invertible_element
+  en: invertible element
+  ko: 가역원
+  primary: ko
+  defs:
+  - label: '[대수적 구조] §반군, 모노이드, 군'
+    url: /ko/math/algebraic_structures/groups
 - id: invertible_ideal
   en: Invertible ideal
   ko: 가역아이디얼
@@ -16000,6 +16007,13 @@ R:
   defs:
   - label: '[체론] §대수적 폐포'
     url: /ko/math/field_theory/algebraically_closed_extensions
+- id: relatively_prime
+  en: relatively prime
+  ko: 서로소
+  primary: ko
+  defs:
+  - label: '[군론] §대칭군'
+    url: /ko/math/group_theory/symmetric_groups
 - id: remainder
   en: remainder
   ko: 나머지
