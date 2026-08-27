@@ -4162,6 +4162,8 @@ C:
   defs:
   - label: '[집합론] §집합의 합'
     url: /ko/math/set_theory/sum_of_sets
+  - label: '[스킴] §충실평탄하강'
+    url: /ko/math/scheme_theory/faithfully_flat_descent
   see:
   - label: Covering space
     id: covering_space
@@ -7937,6 +7939,8 @@ G:
   defs:
   - label: '[스택] §Grothendieck 위상과 site'
     url: /ko/math/stacks/grothendieck_topology
+  - label: '[스킴] §충실평탄하강'
+    url: /ko/math/scheme_theory/faithfully_flat_descent
 - id: grothendieck_topos
   en: Grothendieck topos
   ko: 그로텐디크 토포스
