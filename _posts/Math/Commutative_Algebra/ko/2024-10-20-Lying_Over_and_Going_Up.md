@@ -10,7 +10,6 @@ sidebar:
 
 date: 2024-10-20
 weight: 9
-revising: true
 drift_needed: true
 
 toc: false

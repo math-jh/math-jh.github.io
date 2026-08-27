@@ -3105,7 +3105,7 @@ C:
   primary: en
   defs:
   - label: '[스킴] §군 스킴'
-    url: /ko/math/scheme_theory/group_schemes#def10
+    url: /ko/math/scheme_theory/group_schemes#def8
 - id: comodule_structure
   en: comodule structure
   ko: ''
