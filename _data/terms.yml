@@ -19144,6 +19144,8 @@ T:
   defs:
   - label: '[집합론] §동치관계'
     url: /ko/math/set_theory/equivalence_relations
+  - label: '[정수론] §나눗셈과 최대공약수'
+    url: /ko/math/number_theory/divisibility
   see:
   - label: Binary relation
     id: binary_relation
