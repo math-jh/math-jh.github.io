@@ -10,7 +10,6 @@ sidebar:
 
 date: 2026-08-25
 weight: 23
-published: false
 ---
 
 Algebraic geometry에서 가장 흔한 construction 가운데 하나는 국소적인 대상들을 붙여 하나의 대상으로 만드는 것으로, 가장 익숙한 예는 open cover를 따라 sheaf의 section을 붙이는 것이다. 이는 본질적으로 localization으로 주어지는 특별한 종류의 base change만을 사용하는 것인데, 우리가 실제로 다루고 싶은 많은 상황은 이보다 일반적인 것이다. 예를 들어 field extension $\mathbb{L}/\mathbb{K}$에 대응되는 $\Spec \mathbb{L}\rightarrow \Spec \mathbb{K}$는 residue field가 달라지므로 open embedding으로 볼 수 없다. 
@@ -406,13 +405,10 @@ $$\psi_i:X\times_YY_i\rightarrow Y_i$$
 들을 정의한다. 그럼 [명제 7](#prop7)을 scheme-theoretic하게 올리면 다음 명제의 flatness와 finiteness를 얻을 수 있으며, surjectivity와 affineness는 [정리 12](#thm12)와 같은 방식으로 처리할 수 있다. 
 
 ::: 명제 13
-Scheme morphism $\psi: X\rightarrow Y$와 $Y$의 fpqc cover $\{Y_i \rightarrow Y\}$가 주어졌다 하자. 그럼 $\psi$가 다음 성질들 가운데 하나를 가지는 것은, 각 base change $\psi_i: X\times_Y Y_i \rightarrow Y_i$가 그 성질을 가지는 것과 동치이다
+Scheme morphism $\psi: X\rightarrow Y$와 $Y$의 fpqc cover $\{Y_i \rightarrow Y\}$가 주어졌다 하자. 그럼 $\psi$가 다음 성질들 가운데 하나를 가지는 것은, 각 base change $\psi_i: X\times_Y Y_i \rightarrow Y_i$가 그 성질을 가지는 것과 동치이다.
 
-
-flat, faithfully flat, 그리고 affine, locally of finite type, locally of finite presentation, 그리고 surjective.
+> Flat, faithfully flat, affine, locally of finite type, locally of finite presentation, surjective.
 :::
-
-[명제 13](#prop13)의 사용법은 이제 명확하다. 어떤 geometric property를 원래 base 위에서 직접 확인하기 어려우면 base를 faithfully flat하게 확장하여 더 다루기 쉬운 상황으로 옮긴다. 그 base change 위에서 성질을 확인하면 [명제 13](#prop13)에 의해 원래 morphism도 같은 성질을 가진다. 가령 algebraically closed field나 strictly Henselian local ring으로 base change하여 문제를 표준적인 형태로 환원하는 방법은 이 원리의 반복적인 응용이다.
 
 ---
 
