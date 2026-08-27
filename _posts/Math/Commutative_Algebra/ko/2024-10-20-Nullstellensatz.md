@@ -10,8 +10,6 @@ sidebar:
 
 date: 2024-10-20
 weight: 10
-revising: true
-drift_needed: true
 
 ---
 
@@ -42,7 +40,7 @@ Ring $A$에 대하여, 다음이 동치이다.
 2. $A$의 prime ideal $\mathfrak{p}$에 대하여, $(A/\mathfrak{p})[a^{-1}]$이 field이도록 하는 $a\in A/\mathfrak{p}$가 존재한다면, $A/\mathfrak{p}$는 field이다.
 :::
 ::: 증명
-우선 $A$가 Jacobson이라 가정하자. 그럼 그 quotient $A/ \mathfrak{p}$가 Jacobson이 되는 것도 정의에 의해 자명하다. 한편 [\[대수적 구조\] §분수체, ⁋명제 9](/ko/math/algebraic_structures/field_of_fractions#prop9)에 의해 $A/\mathfrak{p}$는 integral domain이고, integral domain에서 $(0)$은 prime ideal이므로 $(0)$을 maximal ideal들의 교집합으로 나타낼 수 있다. 그런데 [§국소화, ⁋명제 8](/ko/math/commutative_algebra/localization#prop8)에 의하여 $(A/\mathfrak{p})[a^{-1}]$의 prime ideal과, $A/\mathfrak{p}$의 prime ideal 중 $a$를 포함하지 않는 것 사이의 일대일대응이 존재하며, 가정에 의해 $(A/\mathfrak{p})[a^{-1}]$의 prime ideal은 $0$뿐이므로, $A/\mathfrak{p}$의 prime ideal 중 $a$를 포함하지 않는 prime ideal 또한 $0$ 뿐이다. 즉, $A/\mathfrak{p}$의 임의의 nonzero prime ideal에는 항상 $a$가 들어가야 한다. 그런데 만일 이러한 prime ideal이 존재한다면, $(0)$은 maximal ideal이 아니므로 $A/\mathfrak{p}$의 maximal ideal은 모두 nonzero이고 따라서 전부 $a$를 포함하는데, 한편
+우선 $A$가 Jacobson이라 가정하자. 그럼 그 quotient $A/ \mathfrak{p}$가 Jacobson이 되는 것도 정의에 의해 자명하다. 한편 [\[대수적 구조\] §분수체, ⁋명제 9](/ko/math/algebraic_structures/field_of_fractions#prop9)에 의해 $A/\mathfrak{p}$는 integral domain이고, integral domain에서 $(0)$은 prime ideal이므로 $(0)$을 maximal ideal들의 교집합으로 나타낼 수 있다. 그런데 [§국소화, ⁋명제 8](/ko/math/commutative_algebra/localization#prop8)에 의하여 $(A/\mathfrak{p})[a^{-1}]$의 prime ideal과, $A/\mathfrak{p}$의 prime ideal 중 $a$를 포함하지 않는 것 사이의 일대일대응이 존재하며, 가정에 의해 $(A/\mathfrak{p})[a^{-1}]$의 prime ideal은 $0$뿐이므로, $A/\mathfrak{p}$의 prime ideal 중 $a$를 포함하지 않는 prime ideal 또한 $0$ 뿐이다. 즉, $A/\mathfrak{p}$의 임의의 nonzero prime ideal에는 항상 $a$가 들어가야 한다. 그런데 만일 이러한 prime ideal이 존재한다면, $(0)$은 maximal ideal이 아니므로 $A/\mathfrak{p}$의 maximal ideal은 모두 nonzero이고 따라서 전부 $a$를 포함한다. 한편
 
 $$(0)=\bigcap_\text{\scriptsize$\mathfrak{m}$ maximal} \mathfrak{m}$$
 
@@ -85,11 +83,7 @@ Jacobson ring $A$와, finitely generated $A$-algebra $E$가 주어졌다 하자.
     $$\left(\frac{1}{x}\right)^m+\frac{q_1}{q_0}\left(\frac{1}{x}\right)^{m-1}+\cdots+\frac{q_m}{q_0}=0$$
 
     으로부터 $E'[x^{-1}]$이 integral $A'[(p_nq_0)^{-1}]$-algebra임을 안다. 이제 [§정수적 확장과 아이디얼, ⁋따름정리 3](/ko/math/commutative_algebra/lying_over_and_going_up#cor3)으로부터 $A'[(p_nq_0)^{-1}]$는 field이고, 가정에 의해 $A'$는 Jacobson이므로 [보조정리 3](#lem3)에 의해 $A'$는 field이다. 따라서 $E'$는 integral $A'$-algebra이고 다시 [§정수적 확장과 아이디얼, ⁋따름정리 3](/ko/math/commutative_algebra/lying_over_and_going_up#cor3)으로부터 $E'$가 field임을 안다. 
-3. 마지막으로 일반적인 경우는 generator의 개수에 대한 induction으로 얻어진다. $E=A[\alpha_1,\ldots, \alpha_n]$이라 하자. $n=0$인 경우, 즉 $E$가 $A$의 quotient인 경우에는 $E$가 Jacobson이고, $E$의 maximal ideal $\mathfrak{n}$에 대하여 $\mathfrak{m}=\mathfrak{n}\cap A$는 canonical surjection $A\rightarrow E$에 의한 $\mathfrak{n}$의 preimage이므로 $A$의 maximal ideal이며, $E/\mathfrak{n}\cong A/\mathfrak{m}$이므로 원하는 결론이 모두 성립한다. 이제 $n\geq 1$이라 하고 $B=A[\alpha_1,\ldots, \alpha_{n-1}]$이라 하면, induction 가정에 의해 $B$는 Jacobson ring이고 $E=B[\alpha_n]$은 하나의 원소로 생성되는 $B$-algebra이므로, 둘째 결과에 의해 $E$ 또한 Jacobson ring이다.
-
-    다음으로 $E$의 maximal ideal $\mathfrak{n}$을 고정하고 $\mathfrak{n}'=\mathfrak{n}\cap B$라 하자. 그럼 $E/\mathfrak{n}$은 field이고, $B/\mathfrak{n}'$은 여기에 포함되는 integral domain이면서 Jacobson ring이며, $E/\mathfrak{n}$은 $\alpha_n$의 image 하나로 생성되는 $B/\mathfrak{n}'$-algebra이다. $E/\mathfrak{n}$이 이미 field이므로 영이 아닌 아무 원소 $x$를 잡아도 $(E/\mathfrak{n})[x^{-1}]=E/\mathfrak{n}$이 field이고, 따라서 둘째 단계의 논증을 $A'=B/\mathfrak{n}'$과 $E'=E/\mathfrak{n}$에 적용할 수 있다. 이로부터 $B/\mathfrak{n}'$이 field, 즉 $\mathfrak{n}'$이 $B$의 maximal ideal이라는 것과, $E/\mathfrak{n}$이 $B/\mathfrak{n}'$의 finite extension이라는 것을 얻는다.
-
-    이제 induction 가정을 $B$와 그 maximal ideal $\mathfrak{n}'$에 적용하면 $\mathfrak{m}=\mathfrak{n}'\cap A=\mathfrak{n}\cap A$가 $A$의 maximal ideal이고 $B/\mathfrak{n}'$이 $A/\mathfrak{m}$의 finite extension임을 안다. 그럼 $E/\mathfrak{n}$은 $B/\mathfrak{n}'$-벡터공간으로서 유한차원이고 $B/\mathfrak{n}'$은 $A/\mathfrak{m}$-벡터공간으로서 유한차원이므로 $E/\mathfrak{n}$은 $A/\mathfrak{m}$-벡터공간으로서도 유한차원이며, 따라서 $E/\mathfrak{n}$은 $A/\mathfrak{m}$의 finite extension이다. 
+3. 일반적인 경우는 둘째 결과를 사용하여 generator의 개수에 대한 induction을 사용하면 된다. 
 :::
 
 특별히 $A=\mathbb{K}$이고 $E=\mathbb{K}[\x_1,\ldots, \x_n]$인 경우를 생각하자. 그럼 임의의 
