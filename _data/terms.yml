@@ -695,6 +695,13 @@ A:
   defs:
   - label: '[복소해석학] §멱급수와 해석성'
     url: /ko/math/complex_analysis/power_series_and_analyticity
+- id: analytic_number_theory
+  en: analytic number theory
+  ko: 해석적 정수론
+  primary: en
+  defs:
+  - label: '[정수론] §소수의 무한성과 분포'
+    url: /ko/math/number_theory/distribution_of_primes
 - id: animated_commutative_ring
   en: animated commutative ring
   ko: 애니메이트 가환환
@@ -1371,6 +1378,13 @@ B:
     url: /ko/math/analysis/convergence_of_sequences
 - id: bertrand_postulate
   en: Bertrand postulate
+  ko: 베르트랑 가설
+  primary: ko
+  defs:
+  - label: '[정수론] §소수의 무한성과 분포'
+    url: /ko/math/number_theory/distribution_of_primes
+- id: bertrand_s_postulate
+  en: 'Bertrand''s postulate'
   ko: 베르트랑 가설
   primary: ko
   defs:
