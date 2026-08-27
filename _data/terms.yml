@@ -7937,10 +7937,10 @@ G:
   ko: 그로텐디크 위상
   primary: en
   defs:
-  - label: '[스택] §Grothendieck 위상과 site'
-    url: /ko/math/stacks/grothendieck_topology
   - label: '[스킴] §충실평탄하강'
     url: /ko/math/scheme_theory/faithfully_flat_descent
+  - label: '[스택] §Grothendieck 위상과 site'
+    url: /ko/math/stacks/grothendieck_topology
 - id: grothendieck_topos
   en: Grothendieck topos
   ko: 그로텐디크 토포스
