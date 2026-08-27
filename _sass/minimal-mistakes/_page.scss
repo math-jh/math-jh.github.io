@@ -182,21 +182,25 @@ body {
   }
 
   /* EN 본문은 문서 전체가 lang=en 이라 스팬 없이 하이픈이 바로 걸린다 (Latin_hyphens.js
-     도 EN 페이지에서는 아무것도 안 한다). 양끝맞춤은 걸지 않는다 — KO 는 남는 폭을 글자
-     사이로 흩을 수 있어 성립하지만, 영어는 어절 사이로만 가서 공백이 튄다. */
+     도 EN 페이지에서는 아무것도 안 한다). 영어는 남는 폭이 어절 사이로만 가므로
+     text-justify 는 기본값으로 둔다 — 낱말 안을 벌리지 않고, 하이픈이 그 어절 간격을
+     대신 줄여준다. 폰에서는 한 줄이 짧아 공백이 튀므로 KO 와 같이 $medium 이상에서만. */
   &:lang(en) {
     p,
     li {
       hyphens: auto;
     }
 
-    /* 시험 삼아 EN 도 양끝맞춤. text-justify 는 건드리지 않는다 — 기본값(어절 사이)
-       이라야 낱말 안이 안 벌어지고, 하이픈이 그 어절 간격을 대신 줄여준다.
-       폰에서는 한 줄이 짧아 공백이 튀므로 KO 와 같이 $medium 이상에서만. */
     @include breakpoint($medium) {
       p,
       li {
         text-align: justify;
+      }
+
+      /* 우측 TOC 도 .page__content 안의 li 라 위 규칙에 걸린다. 폭이 좁아 어절 사이가
+         과하게 벌어지므로 KO 와 같이 되돌린다. */
+      .toc__menu li {
+        text-align: start;
       }
     }
   }

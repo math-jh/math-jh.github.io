@@ -263,16 +263,66 @@ def call_llm(prompt: str) -> str:
     return proc.stdout
 
 
-_JSON_RE = re.compile(r"\[.*\]|\{.*\}", re.DOTALL)
+def _json_values(text: str) -> list:
+    """text 에 담긴 top-level JSON 값을 앞에서부터 전부 뽑는다.
+
+    haiku 는 N 개 항목을 한 배열로 달라는 프롬프트(NUANCE·GLOSS_GATE·PICKDEF)에
+    항목마다 배열을 하나씩 내놓는 일이 잦다. `\\[.*\\]|\\{.*\\}` 를 greedy·DOTALL
+    로 잡으면 첫 `[` 부터 마지막 `]` 까지 통째로 삼켜 json.loads 가 "Extra data"
+    로 죽는다 — 로그의 파싱 실패 44 건 중 39 건이 `line 4 (char 32|35)`, 즉 3 줄
+    짜리 첫 배열 직후 두 번째 배열이 시작하는 지점이었다. 그래서 정규식으로
+    한 덩어리를 집는 대신 raw_decode 로 값을 하나씩 훑는다.
+    """
+    dec = json.JSONDecoder()
+    vals: list = []
+    i, n = 0, len(text)
+    while i < n:
+        if text[i] not in "[{":
+            i += 1
+            continue
+        try:
+            val, end = dec.raw_decode(text, i)
+        except ValueError:
+            i += 1
+            continue
+        vals.append(val)
+        i = end
+    return vals
+
+
+_RETRY_NOTE = ("\n\n(직전 응답이 JSON 으로 파싱되지 않았다. 설명도 코드펜스도 없이 "
+               "요청한 배열 **하나만** 출력하라.)")
 
 
 def llm_json(prompt: str):
-    out = call_llm(prompt)
-    out = re.sub(r"```(?:json)?", "", out)
-    m = _JSON_RE.search(out)
-    if not m:
-        raise RuntimeError(f"LLM 출력에서 JSON 을 못 찾음: {out[:200]!r}")
-    return json.loads(m.group(0))
+    """LLM 을 불러 JSON 을 받는다. 파싱이 깨지면 한 번만 다시 묻는다.
+
+    재시도는 파싱 실패에만 건다 — 쿼터 게이트나 CLI 비정상 종료는 다시 물어도
+    같은 결과이고, 이 워커는 주간 쿼터를 이미 자주 태운다(로그의 blocked 194 틱).
+    """
+    last: Exception | None = None
+    for attempt in (0, 1):
+        if attempt:
+            # 재시도가 실제로 얼마나 구제하는지 로그에 남긴다 — 조용히 다시
+            # 물으면 파싱 실패가 줄었는지 늘었는지 알 방법이 없다.
+            log(f"JSON 파싱 실패 → 재질의: {last}")
+        out = call_llm(prompt if attempt == 0 else prompt + _RETRY_NOTE)
+        out = re.sub(r"```(?:json)?", "", out)
+        vals = _json_values(out)
+        if not vals:
+            last = RuntimeError(f"LLM 출력에서 JSON 을 못 찾음: {out[:200]!r}")
+            continue
+        if len(vals) == 1:
+            return vals[0]
+        # 값이 여럿이면 항목당 배열 하나씩 낸 경우다 — 배열만 골라 이어붙인다.
+        lists = [v for v in vals if isinstance(v, list)]
+        if lists:
+            merged: list = []
+            for v in lists:
+                merged.extend(v)
+            return merged
+        last = RuntimeError(f"top-level JSON 값이 {len(vals)}개인데 배열이 없다")
+    raise last
 
 
 # ---------------------------------------------------------------------------
@@ -738,12 +788,19 @@ def write_gate(old_text: str, new_text: str, expect_added: int) -> bool:
         return False
     pmap = permalink_map()
     ko_by_slug, _ = category_ko_maps()
-    old_err = sum(1 for i in semantic_checks(old_d, pmap, ko_by_slug)
-                  if i.level == "E")
-    new_err = sum(1 for i in semantic_checks(new_d, pmap, ko_by_slug)
-                  if i.level == "E")
-    if new_err > old_err:
-        log(f"게이트: 에러 증가 {old_err}→{new_err}")
+    old_errs = [i for i in semantic_checks(old_d, pmap, ko_by_slug)
+                if i.level == "E"]
+    new_errs = [i for i in semantic_checks(new_d, pmap, ko_by_slug)
+                if i.level == "E"]
+    if len(new_errs) > len(old_errs):
+        # 늘어난 에러가 무엇인지 남긴다. 개수만 찍으면 어느 항목의 어떤 코드가
+        # 걸렸는지 알 길이 없어 재현하려면 LLM 호출을 다시 태워야 한다 —
+        # 게이트 불통과 12 건이 전부 그 상태로 묻혀 있었다.
+        before = {i.key() for i in old_errs}
+        added = [i for i in new_errs if i.key() not in before]
+        detail = " · ".join(f"{i.code}: {i.msg}" for i in added[:5])
+        log(f"게이트: 에러 증가 {len(old_errs)}→{len(new_errs)}"
+            + (f" — {detail}" if detail else ""))
         return False
     return True
 

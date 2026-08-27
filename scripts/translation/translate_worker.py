@@ -64,7 +64,12 @@ FAIL_DUMP_DIR = Path("/var/tmp/translate-fail")
 # 해지됨, 참고용으로만 잔존. claudeglm 바이너리는 제거되어 실행 불가).
 TRANSLATOR_BACKEND    = os.environ.get("TRANSLATOR_BACKEND", "kimi")
 GLM_BIN               = str(Path.home() / ".local/bin/claudeglm")
-KIMI_BIN              = shutil.which("kimi") or str(Path.home() / ".local/bin/kimi")
+# kimi-headless 어댑터를 거친다. PATH 의 `kimi` 를 집으면 안 된다 — 그건
+# kimi-code 본체라 이 워커가 쓰는 구 CLI 규약(stdin 프롬프트, 장식 없는 최종
+# 메시지)을 안 지킨다. 특히 --output-format text 가 본문에 `• ` 를 붙여 번역
+# 결과를 에러 없이 오염시킨다.
+KIMI_BIN              = os.environ.get("KIMI_BIN") or str(
+    Path.home() / ".local/bin/kimi-headless")
 # No-tools agent + empty MCP for the single-shot verify/audit call (see call_kimi).
 VERIFY_AGENT_FILE     = str(SCRIPT_DIR / "verify-agent.yaml")
 VERIFY_MCP_FILE       = str(SCRIPT_DIR / "verify-mcp.json")
@@ -740,6 +745,14 @@ def find_next_target(state: dict) -> Optional[Tuple[Path, Path, str]]:
     # verifies the polished result and surfaces any such damage.
     for ko in ko_files:
         if is_draft(ko):
+            continue
+        # Phase 1·2 와 같은 실패 백오프. polish 는 last_polished_at 이 박혀야
+        # 큐에서 빠지는데, 검증에 걸려 실패하면 그 키는 안 박힌다 — 백오프가
+        # 없으면 고정된 스캔 순서의 맨 앞에 그대로 남아 다음 틱에 또 뽑히고,
+        # 아직 polish 안 된 나머지 글이 전부 굶는다.
+        entry = state["files"].get(str(ko.relative_to(BLOG_ROOT)), {})
+        if entry.get("status") == "failed" and \
+           now - entry.get("last_attempt_ts", 0) < FAIL_RETRY_AFTER_SEC:
             continue
         existing_en = find_en_counterpart(ko)
         if existing_en is None:
