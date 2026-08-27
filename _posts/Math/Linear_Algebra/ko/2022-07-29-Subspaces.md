@@ -12,8 +12,6 @@ sidebar:
 date: 2022-07-29
 
 weight: 3
-revising: true
-
 drift_needed: true
 
 ---
@@ -98,7 +96,7 @@ $$0.1,\quad 0.01,\quad0.001,\quad\cdots$$
 
 $$p(\x)=\alpha_n\x^n+\alpha_{n-1}\x^{n-1}+\cdots+\alpha_1\x+\alpha_0$$
 
-의 꼴이다. 이 때 $\alpha_n\neq0$이라 하면 자연수 $\max\{i\mid\alpha_i\neq0\}=n$은 $p(\x)$의 *degree<sub>차수</sub>*라 부르고, 이 때 $\alpha_n\x^n$을 *최고차항<sub>leading term</sub>*이라 부른다. 영다항식 $0$의 degree는 정의하지 않으며, degree가 $n$ 이하인 다항식들을 말할 때에는 $0$도 함께 포함시키기로 한다. 최고차항의 계수가 1인 다항식은 *monic polynomial*이라 부른다. 한편 또 다른 $\mathbb{K}[\x]$의 원소 
+의 꼴이다. 만일 $\alpha_n\neq0$이라면 이를 $p(\x)$의 *degree<sub>차수</sub>*라 부르고, 이 때 $\alpha_n\x^n$을 *최고차항<sub>leading term</sub>*이라 부른다. 영다항식 $0$의 degree는 정의하지 않거나 형식적으로는 $-\infty$인 것으로 간주하며, 따라서 degree가 $n$ 이하인 다항식들을 말할 때에는 $0$도 함께 포함시키기로 한다. 최고차항의 계수가 1인 다항식은 *monic polynomial*이라 부른다. 한편 또 다른 $\mathbb{K}[\x]$의 원소 
 
 $$q(\x)=\beta_m\x^m+\beta_{m-1}\x^{m-1}+\cdots+\beta_1\x+\beta_0$$
 

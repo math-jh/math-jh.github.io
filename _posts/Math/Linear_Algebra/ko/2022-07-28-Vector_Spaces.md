@@ -12,8 +12,6 @@ sidebar:
 date: 2022-07-28
 
 weight: 2
-revising: true
-
 drift_needed: true
 
 ---
@@ -89,7 +87,7 @@ $$(-1)v+v=(-1)v+1v=((-1)+1)v=0v=0$$
 
 조금 덜 자명한 예시는 field 그 자체다. 임의의 field $\mathbb{K}$에 대하여, $\mathbb{K}$는 $\mathbb{K}$-벡터공간이다. $\mathbb{K}$는 field이므로, 덧셈에 대해 abelian group이 된다는 것은 자명하다. 여기에 스칼라곱 구조만 주면 충분한데, 이는 그냥 $\mathbb{K}$에서의 곱하기 $\mathbb{K}\times \mathbb{K}\rightarrow \mathbb{K}$로 주면 된다. 이렇게 정의하면 스칼라곱이 [정의 1](#def1)의 조건들을 모두 만족한다는 것을 확인할 수 있고, 따라서 $\mathbb{K}$는 그 자체로 $\mathbb{K}$-벡터공간이다. 
 
-더 일반적으로 $\mathbb{K}$가 field이고, $\mathbb{K}$를 subfield로 갖는 다른 어떤 field $\mathbb{K}'$가 존재한다고 하자. 그럼 $\mathbb{K}'$는 $\mathbb{K}$-벡터공간이 된다. $\mathbb{K}'$는 field이므로, 아까 전과 같이 덧셈에 대해 abelian group을 이루며, $\alpha\in\mathbb{K}$의 원소와의 스칼라곱은 $\alpha$를 $\mathbb{K}'$의 원소로 취급한 후 $\mathbb{K}'$에서의 곱셈구조를 이용하면 된다. 예를 들어 $\mathbb{C}$는 $\mathbb{R}$-벡터공간이고, $\mathbb{R}$은 $\mathbb{Q}$-벡터공간이다. 
+더 일반적으로 $\mathbb{K}$가 field이고, 다른 어떤 field $\mathbb{K}'$가 존재하여 이것이 부분집합으로서 $\mathbb{K}$를 포함하며, $\mathbb{K}'$에서의 연산을 $\mathbb{K}$로 옮긴 것이 $\mathbb{K}$의 연산과 일치한다 하자. (이러한 $\mathbb{K}'$를 $\mathbb{K}$의 *extension*이라 부른다.) 그럼 $\mathbb{K}'$는 $\mathbb{K}$-벡터공간이 된다. $\mathbb{K}'$는 field이므로, 아까 전과 같이 덧셈에 대해 abelian group을 이루며, $\alpha\in\mathbb{K}$의 원소와의 스칼라곱은 $\alpha$를 $\mathbb{K}'$의 원소로 취급한 후 $\mathbb{K}'$에서의 곱셈구조를 이용하면 된다. 예를 들어 $\mathbb{C}$는 $\mathbb{R}$-벡터공간이고, $\mathbb{R}$은 $\mathbb{Q}$-벡터공간이다. 
 :::
 
 ::: 예시 5
