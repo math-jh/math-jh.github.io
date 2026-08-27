@@ -10,24 +10,25 @@ sidebar:
 
 date: 2023-01-02
 weight: 3
-translated_at: 2026-08-27T13:48:33+00:00
+translated_at: 2026-08-27T15:15:05+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-08-27T15:15:05+00:00
 ---
 We now show that a *short exact sequence* in $\Ch(\mathcal{A})$ induces a *long exact sequence*.
 
 ## Long exact sequences
 
-We have seen that the image and kernel of a chain map $f_\bullet$ form chain complexes made up of the images and kernels of the individual maps $f_n$, respectively. From this, we can check that saying
+We have seen that the image and kernel of a chain map $f_\bullet$ form chain complexes made up of the images and kernels of the individual maps $f_n$, respectively. From this, one can check that saying
 
 $$0\rightarrow A_\bullet\rightarrow B_\bullet\rightarrow C_\bullet\rightarrow 0$$
 
-is a *short exact sequence* is equivalent to saying that for every $n$,
+is a *short exact sequence* is equivalent to saying that
 
 $$0\rightarrow A_n\rightarrow B_n\rightarrow C_n\rightarrow 0$$
 
-is a short exact sequence.
+is a short exact sequence for every $n$.
 
-The main theorem of this post is the following [Theorem 1](#thm1). The snake lemma plays a key role in its proof, and when the category is $\lMod{A}$, the proof is easily completed using the explicitly obtained connecting map. So just as in [§Diagram chasing](/en/math/homological_algebra/diagram_chasing), we actively use the Freyd–Mitchell embedding theorem and carry out the proof of the following theorem in $\lMod{A}$.
+The main theorem of this post is the following [Theorem 1](#thm1). The snake lemma plays a key role in its proof, and when the category is $\lMod{A}$, the proof is easily completed using the explicitly constructed connecting map. Thus, just as in [§Diagram chasing](/en/math/homological_algebra/diagram_chasing), we make free use of the Freyd–Mitchell embedding theorem and carry out the proof of the following theorem in $\lMod{A}$.
 
 ::: Theorem 1 (The long exact sequence)
 Suppose we are given the short exact sequence
@@ -47,7 +48,7 @@ It suffices to consider the following diagram:
 
 Here, the maps $\partial$ are all defined by formulas such as $\partial^A(a+\im d^A_{n+1})=d_n^Aa\in\ker d^A_{n-1}$. One can easily check that in the diagram above, $\ker\partial^A$ equals $H_n(A)=\ker d_n^A/\im(d^A_{n+1})$, and $\coker\partial^A$ equals $H_{n-1}(A)=\ker d^A_{n-1}/\im d^A_n$.
 
-Therefore, if we only show that both the top and bottom rows are exact, then the snake lemma yields the desired long exact sequence. To show this, consider again the following diagram:
+Therefore, once we show that both the top and bottom rows are exact, the snake lemma yields the desired long exact sequence. To show this, consider again the following diagram:
 
 {% diagram Math/Homological_Algebra/Long_Exact_Sequence-2.svg width="22.98em" alt="long_exact_sequence_exactness" %}
 
@@ -59,10 +60,10 @@ and
 
 $$\coker(d_n^A)\rightarrow\coker(d_n^B)\rightarrow\coker(d_n^C)\rightarrow 0$$
 
-Here the $0$ at each end comes, respectively, from the fact that $A_n\rightarrow B_n$ is injective and hence its restriction $\ker(d_n^A)\rightarrow\ker(d_n^B)$ is also injective, and from the fact that $B_{n-1}\rightarrow C_{n-1}$ is surjective and hence the induced map $\coker(d_n^B)\rightarrow\coker(d_n^C)$ is also surjective.
+Here the $0$ at each end comes, respectively, from the fact that $A_n\rightarrow B_n$ is injective, so that its restriction $\ker(d_n^A)\rightarrow\ker(d_n^B)$ is also injective, and from the fact that $B_{n-1}\rightarrow C_{n-1}$ is surjective, so that the induced map $\coker(d_n^B)\rightarrow\coker(d_n^C)$ is also surjective.
 :::
 
-The long exact sequence constructed above enjoys functoriality in the following sense.
+The long exact sequence constructed above is functorial in the following sense.
 
 ::: Proposition 2
 Given a chain map between two short exact sequences
@@ -82,7 +83,7 @@ $$0 \rightarrow A_\bullet\overset{u}{\rightarrow}B_\bullet\overset{v}{\rightarro
 
 and let the chain maps between them be $f:A_\bullet \rightarrow A_\bullet'$, $g:B_\bullet \rightarrow B_\bullet'$, $h:C_\bullet \rightarrow C_\bullet'$. That is, $u'f=gu$ and $v'g=hv$ hold.
 
-In the diagram we need to build, the squares not involving the connecting morphism $\partial$ commute immediately from the functoriality of homology. For instance,
+In the diagram we need to build, the squares not involving the connecting morphism $\partial$ commute immediately by the functoriality of homology. For instance,
 
 $$H_n(g)\circ H_n(u)=H_n(gu)=H_n(u'f)=H_n(u')\circ H_n(f)$$
 
@@ -90,7 +91,7 @@ and likewise for the square involving $v$. Therefore it suffices to show that th
 
 $$\begin{aligned}H_n(C)&\overset{\partial}{\longrightarrow} H_{n-1}(A)\\ H_n(h)\downarrow\quad&\qquad\quad\downarrow H_{n-1}(f)\\ H_n(C')&\overset{\partial'}{\longrightarrow}H_{n-1}(A')\end{aligned}$$
 
-commutes. Following the construction in the proof of [Theorem 1](#thm1), $\partial$ is computed as follows. For any $[c]\in H_n(C)$, since $v_n$ is surjective there exists $b\in B_n$ with $v_n(b)=c$, and since $v_{n-1}(d_n^Bb)=d_n^Cv_n(b)=d_n^Cc=0$, exactness gives a unique $a\in A_{n-1}$ with $u_{n-1}(a)=d_n^Bb$, and $\partial[c]=[a]$. One can also check that this value is independent of the choice of lift $b$: if $v_n(b)=v_n(\tilde{b})=c$, then there exists $\alpha\in A_n$ with $b-\tilde{b}=u_n(\alpha)$, and then the two corresponding elements $a,\tilde{a}$ satisfy $u_{n-1}(a-\tilde{a})=d^B_n(b-\tilde{b})=u_{n-1}(d^A_n\alpha)$, so by the injectivity of $u_{n-1}$ we have $a-\tilde{a}=d_n^A\alpha$, whence $[a]=[\tilde{a}]$.
+commutes. Following the construction in the proof of [Theorem 1](#thm1), $\partial$ is computed as follows. For any $[c]\in H_n(C)$, since $v_n$ is surjective there exists $b\in B_n$ with $v_n(b)=c$, and since $v_{n-1}(d_n^Bb)=d_n^Cv_n(b)=d_n^Cc=0$, exactness gives a unique $a\in A_{n-1}$ with $u_{n-1}(a)=d_n^Bb$, and $\partial[c]=[a]$. One can also check that this value is independent of the choice of lift $b$: if $v_n(b)=v_n(\tilde{b})=c$, then there exists $\alpha\in A_n$ with $b-\tilde{b}=u_n(\alpha)$, and the two corresponding elements $a,\tilde{a}$ then satisfy $u_{n-1}(a-\tilde{a})=d^B_n(b-\tilde{b})=u_{n-1}(d^A_n\alpha)$, so by the injectivity of $u_{n-1}$ we have $a-\tilde{a}=d_n^A\alpha$, whence $[a]=[\tilde{a}]$.
 
 Now fix $[c]\in H_n(C)$ and the elements $b,a$ appearing in the construction above. Then we may take $g_n(b)$ as a lift of $h_n(c)\in C_n'$. Indeed,
 
@@ -117,13 +118,13 @@ Suppose two chain complexes $C_\bullet$, $D_\bullet$ are given. We say that $C_\
 
 This is equivalent to the existence of a chain map $(f_n)_{n\in\mathbb{Z}}$ in which every $f_n$ is an isomorphism.
 
-On the other hand, since homology is the only tool available to us in homological algebra, we can weaken the notion of isomorphism as follows.
+On the other hand, since homology is the only tool available to us in homological algebra, we may weaken the notion of isomorphism as follows.
 
 ::: Definition 4
 Two chain complexes $C_\bullet$, $D_\bullet$ are said to be *quasi-isomorphic* if there exists a chain map $f:C_\bullet\rightarrow D_\bullet$ such that $H_n(f)$ is an isomorphism for every $n$. In this case, $f$ is called a *quasi-isomorphism*.[^1]
 :::
 
-By definition, two isomorphic chain complexes are also quasi-isomorphic. However, the converse does not hold. The only chain complex isomorphic to the sequence
+By definition, two isomorphic chain complexes are also quasi-isomorphic. The converse, however, does not hold. The only chain complex isomorphic to the sequence
 
 $$\cdots\rightarrow 0\rightarrow 0\rightarrow 0\rightarrow\cdots$$
 
@@ -131,7 +132,7 @@ all of whose components are $0$ is itself, but for any exact sequence $C_\bullet
 
 ## Chain homotopies
 
-Meanwhile, if we weaken the equivalence relation between two chain complexes to quasi-isomorphism as above, then by the same logic it would be somewhat more reasonable to also treat two chain maps as the same whenever they define the same maps on the respective homologies. To this end, we define the following.
+Meanwhile, if we weaken the equivalence relation between two chain complexes to quasi-isomorphism as above, then by the same logic it is somewhat more reasonable to also regard two chain maps as the same whenever they define the same maps on the respective homologies. To this end, we define the following.
 
 ::: Definition 5
 Suppose two chain complexes $C,D$ and chain maps $f,g:C\rightarrow D$ are given. A *chain homotopy* between $f$ and $g$ is a collection of maps $h_n:C_n\rightarrow D_{n+1}$ in the diagram
@@ -190,7 +191,7 @@ $$(h'_n=v_{n+1}h_nu_n)_{n\in\mathbb{Z}}$$
 
 between $vfu$ and $vgu$. In other words, the equivalence relation defined above is also compatible with composition in $\Ch(\mathcal{A})$.
 
-By similar reasoning one can show that $\mathbf{K}(\mathcal{A})$ is an additive category, and that the trivial functor $\Ch(\mathcal{A})\rightarrow\mathbf{K}(\mathcal{A})$ becomes an additive functor.
+By similar reasoning, one can show that $\mathbf{K}(\mathcal{A})$ is an additive category, and that the trivial functor $\Ch(\mathcal{A})\rightarrow\mathbf{K}(\mathcal{A})$ is an additive functor.
 
 However, in general $\mathbf{K}(\mathcal{A})$ is not an abelian category.
 
@@ -199,7 +200,7 @@ However, in general $\mathbf{K}(\mathcal{A})$ is not an abelian category.
 In [Definition 4](#def4), we agreed to call chain complexes connected by a chain map inducing an isomorphism on homology quasi-isomorphic, and to treat them as the same. The mapping cone serves as a tool for determining whether a given chain map $f:C_\bullet \rightarrow D_\bullet$ is a quasi-isomorphism.
 
 ::: Definition 8
-For any chain map $f:C_\bullet\rightarrow D_\bullet$, the *mapping cone* $\Cone(f)$ of $f$ means the chain complex
+For any chain map $f:C_\bullet\rightarrow D_\bullet$, the *mapping cone* $\Cone(f)$ of $f$ is the chain complex
 
 $$\cdots\longrightarrow\underbrace{C_n\oplus D_{n+1}}_{\Cone(f)_{n+1}}\overset{d_{n+1}}{\longrightarrow}\underbrace{C_{n-1}\oplus D_n}_{\Cone(f)_n}\overset{d_n}{\longrightarrow}\underbrace{C_{n-2}\oplus D_{n-1}}_{\Cone(f)_{n-1}}\longrightarrow\cdots$$
 
@@ -213,11 +214,11 @@ Suppose a chain map $f: C_\bullet \rightarrow D_\bullet$ is given, and for its m
 
 $$0 \longrightarrow D \longrightarrow \Cone(f) \overset{\delta}{\longrightarrow} C[-1] \longrightarrow0$$
 
-Here, $D \rightarrow\Cone(f)$ sends $y$ to $(0,y)$, and $\delta$ sends $(x,y)$ to $-x$. Since it is clear from the definitions of these maps that the sequence above is a short exact sequence, [Theorem 1](#thm1) gives the long exact sequence
+Here, $D \rightarrow\Cone(f)$ sends $y$ to $(0,y)$, and $\delta$ sends $(x,y)$ to $-x$. Since it is immediate from the definitions of these maps that the sequence above is a short exact sequence, [Theorem 1](#thm1) gives the long exact sequence
 
 $$\cdots \rightarrow H_{n+1}(\Cone(f)) \rightarrow H_n(C) \rightarrow H_n(D) \rightarrow H_n(\Cone(f)) \rightarrow H_{n-1}(C) \rightarrow \cdots$$
 
-Meanwhile, examining the proof of this theorem closely, one can see that the connecting maps $H_n(C) \rightarrow H_n(D)$ obtained above are exactly $H_n(f)$. Therefore the following holds.
+Meanwhile, a closer look at the proof of this theorem shows that the connecting maps $H_n(C) \rightarrow H_n(D)$ obtained above are exactly $H_n(f)$. Therefore the following holds.
 
 ::: Corollary 9
 A chain map $f: C_\bullet \rightarrow D_\bullet$ is a quasi-isomorphism if and only if $\Cone(f)$ is an exact sequence.
@@ -232,4 +233,4 @@ A chain map $f: C_\bullet \rightarrow D_\bullet$ is a quasi-isomorphism if and o
 
 ---
 
-[^1]: The appropriate Korean translation of the prefix quasi- would appear to be 준-, but since homomorphism has already been translated as 준동형사상, we had no choice but to coin the new name 유사동형사상 for quasi-isomorphism.
+[^1]: The natural Korean rendering of the prefix quasi- would appear to be *jun-* (준-), but since homomorphism had already been rendered as *jun-donghyeong-sasang* (준동형사상), we had no choice but to coin the new term *yusa-donghyeong-sasang* (유사동형사상) for quasi-isomorphism.
