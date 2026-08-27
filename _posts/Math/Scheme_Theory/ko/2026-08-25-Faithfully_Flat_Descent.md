@@ -399,17 +399,18 @@ $$V\times_SU_i\cong\rSpec_{U_i}(\psi_i^\ast\mathcal{A})\cong\rSpec_{U_i}(\mathca
 
 더 일반적으로, quasi-compact, quasi-separated scheme morphism $\varphi:V\rightarrow U$이 *quasi-affine*인 것은 canonical morphism $V\rightarrow\rSpec_U(\varphi_\ast\mathcal{O}_V)$가 quasi-compact open immersion인 것이다. 이 경우에도 [정리 12](#thm12)의 결론이 성립한다. 다른 방향의 일반화는 quasi-projective morphism의 경우로, morphism이 quasi-projective인 것만으로는 부족하고 ample line bundle과 그 위의 compatible한 descent datum이 함께 주어져야 한다. 대략적인 증명은 ample line bundle의 section algebra를 내려보내 relative Proj를 만들면 원래 scheme은 그 안의 open subscheme으로 나타나므로 이들을 이어붙이는 것이다. 
 
-지금까지는 cover 위에서 주어진 scheme들로부터 base 위의 scheme을 구성했다. 이제는 새로운 대상을 구성하지 않고, 이미 주어진 scheme morphism $\psi:X\rightarrow Y$의 성질을 cover 위에서 확인한다. Fpqc cover $\{Y_i\rightarrow Y\}$를 잡으면 $\psi$는 morphism
+한편, faithfully flat base change는 exact functor일 뿐 아니라, 여기서 확인한 exactness를 원래대로 돌릴 수도 있다는 것이 핵심적인 성질이며, [명제 7](#prop7)은 이를 이용해 module의 flatness와 finiteness 조건들을 내려보냈다. 같은 논의를 affine-local하게 적용하면 이미 주어진 scheme morphism $\psi:X\rightarrow Y$의 성질도 cover 위에서 확인할 수 있다. 이를 위해 $Y$의 fpqc cover $\{Y_i\rightarrow Y\}$를 잡으면 $\psi$는 morphism
 
 $$\psi_i:X\times_YY_i\rightarrow Y_i$$
 
-들을 정의한다. 우리가 묻는 것은 모든 $\psi_i$가 어떤 성질을 가질 때 $\psi$ 자신도 그 성질을 가진다고 결론지을 수 있는지이다. 이러한 판정이 가능한 성질을 fpqc-local on the base라 한다.
+들을 정의한다. 그럼 [명제 7](#prop7)을 scheme-theoretic하게 올리면 다음 명제의 flatness와 finiteness를 얻을 수 있으며, surjectivity와 affineness는 [정리 12](#thm12)와 같은 방식으로 처리할 수 있다. 
 
 ::: 명제 13
-$\{Y_i \rightarrow Y\}$를 fpqc cover라 하고 $\psi: X \rightarrow Y$를 scheme morphism이라 하자. 그럼 $\psi$가 다음 성질들 가운데 하나를 가지는 것은, 각 base change $\psi_i: X\times_Y Y_i \rightarrow Y_i$가 그 성질을 가지는 것과 동치이다: flat, faithfully flat, 그리고 affine, locally of finite type, locally of finite presentation, 그리고 surjective.
-:::
+Scheme morphism $\psi: X\rightarrow Y$와 $Y$의 fpqc cover $\{Y_i \rightarrow Y\}$가 주어졌다 하자. 그럼 $\psi$가 다음 성질들 가운데 하나를 가지는 것은, 각 base change $\psi_i: X\times_Y Y_i \rightarrow Y_i$가 그 성질을 가지는 것과 동치이다
 
-각 성질은 base change에 대해 보존된다. 역으로 affine은 [정리 12](#thm12)의 effective descent와 유일성에서 따르고, 나머지 성질들은 affine-locally 환론으로 환원한 뒤 faithfully flat base change가 exactness, surjectivity와 finite generation을 반영한다는 사실에서 따른다.
+
+flat, faithfully flat, 그리고 affine, locally of finite type, locally of finite presentation, 그리고 surjective.
+:::
 
 [명제 13](#prop13)의 사용법은 이제 명확하다. 어떤 geometric property를 원래 base 위에서 직접 확인하기 어려우면 base를 faithfully flat하게 확장하여 더 다루기 쉬운 상황으로 옮긴다. 그 base change 위에서 성질을 확인하면 [명제 13](#prop13)에 의해 원래 morphism도 같은 성질을 가진다. 가령 algebraically closed field나 strictly Henselian local ring으로 base change하여 문제를 표준적인 형태로 환원하는 방법은 이 원리의 반복적인 응용이다.
 
