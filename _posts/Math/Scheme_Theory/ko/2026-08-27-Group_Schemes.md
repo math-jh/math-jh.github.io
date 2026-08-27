@@ -35,20 +35,10 @@ $$\mu_G: G\times_SG \rightarrow G,\qquad \iota_G: G \rightarrow G,\qquad \epsilo
 $S$-scheme $G$가 group scheme이 되는 것은 적당한 functor $\widetilde{h}_G:(\Sch_{/S})^\op\rightarrow\Grp$가 주어져서 forgetful functor $U:\Grp\rightarrow\Set$과의 합성이 $G$의 functor of points $h_G$와 같아지는 것과 동치이다. 뿐만 아니라, 두 group scheme $G,H$ 사이의 $S$-morphism $\varphi:G\rightarrow H$가 group scheme homomorphism인 것과 각각의 $T$에 대하여 $\varphi_T:G(T)\rightarrow H(T)$가 group homomorphism인 것은 동치이다.
 :::
 ::: 증명
-Yoneda 보조정리는 임의의 locally small category에 대하여 성립하므로, [\[범주론\] §표현가능한 함자, ⁋정리 4](/ko/math/category_theory/representable_functors#thm4)를 $\Sch_{/S}$에 적용하면 $S$-scheme 사이의 morphism과 그 functor of points 사이의 natural transformation이 정확히 대응한다. 또 $S$는 $\Sch_{/S}$의 terminal object이므로 $S(T)$는 한 점이고, 따라서 [§점함자, ⁋명제 7](/ko/math/scheme_theory/functor_of_points#prop7)에 의하여 임의의 $S$-scheme $T$에 대하여
-
-$$(G\times_SG)(T)=G(T)\times_{S(T)}G(T)=G(T)\times G(T)$$
-
-이 성립한다.
-
-먼저 $G$ 위에 group scheme 구조가 주어졌다고 하자. 각각의 $T$에 대하여 $\alpha,\beta\in G(T)$의 곱을 $\mu_G\circ(\alpha,\beta)$로, $\alpha$의 역원을 $\iota_G\circ\alpha$로, 항등원을 $\epsilon_G\circ(T\rightarrow S)$로 정의한다. [정의 1](#def1)의 세 등식을 $T$-point에 적용하면 이 연산들은 group의 공리를 만족한다. 또 $T'\rightarrow T$가 유도하는 map은 morphism의 합성으로 주어지므로 곱과 역원과 항등원을 보존한다. 따라서 이 group들과 group homomorphism들은 $U\circ\widetilde{h}_G=h_G$인 functor $\widetilde{h}_G:(\Sch_{/S})^\op\rightarrow\Grp$를 정의한다.
-
-거꾸로 $U\circ\widetilde{h}_G=h_G$인 functor $\widetilde{h}_G$가 주어졌다고 하자. 각각의 $T$에서 주어진 곱셈 $G(T)\times G(T)\rightarrow G(T)$, 역원 $G(T)\rightarrow G(T)$, 그리고 항등원을 고르는 map $S(T)\rightarrow G(T)$은 group 구조가 $T$에 대해 자연스럽다는 가정으로부터 natural transformation을 이룬다. 위의 동일시 아래에서 이들은 각각 $h_{G\times_SG}\rightarrow h_G$, $h_G\rightarrow h_G$, $h_S\rightarrow h_G$이므로, Yoneda 보조정리에 의하여 유일한 morphism $\mu_G,\iota_G,\epsilon_G$를 준다. Group의 공리는 각각의 $T$에서 성립하는 등식이고 Yoneda embedding은 faithful하므로, 이 morphism들은 [정의 1](#def1)의 세 등식을 만족한다. 두 구성이 서로 역임은 Yoneda 보조정리가 주는 일대일대응의 유일성에서 따라온다.
-
-마지막으로 $\varphi:G\rightarrow H$가 [정의 1](#def1)의 세 구조 morphism과 commute하면 각 $\varphi_T$는 group homomorphism이다. 거꾸로 모든 $\varphi_T$가 group homomorphism이면 곱셈·역원·항등원을 보존하는 등식이 각각의 $T$에서 성립하고, Yoneda embedding의 faithfulness에 의하여 $\varphi$는 세 구조 morphism과 commute한다.
+[\[범주론\] §표현가능한 함자, ⁋정리 4](/ko/math/category_theory/representable_functors#thm4)에 의하여 Yoneda embedding $h_{(-)}:\Sch_{/S}\rightarrow\Fun((\Sch_{/S})^\op,\Set)$은 fully faithful하고, [§점함자, ⁋명제 7](/ko/math/scheme_theory/functor_of_points#prop7)에 의하여 finite product를 보존한다. 한편 functor category에서 group object의 구조는 pointwise하게 주어지므로, $h_G$ 위의 group object 구조는 $U\circ\widetilde{h}_G=h_G$인 functor $\widetilde{h}_G:(\Sch_{/S})^\op\rightarrow\Grp$와 같은 데이터이다. 따라서 Yoneda embedding의 fully faithfulness는 $G$ 위의 group object 구조와 이러한 functor $\widetilde{h}_G$를 일대일대응시키며, group object 사이의 morphism에도 같은 논의를 적용하면 마지막 주장도 따라온다.
 :::
 
-[명제 2](#prop2)에 의하여 우리는 group scheme을 다룰 때 필요에 따라 두 언어를 자유롭게 오갈 수 있다. Group-valued functor $\widetilde{h}_G$에 의한 서술의 장점은 group의 공리를 직접 commutative diagram으로 적는 대신 각 $G(T)$가 통상적인 의미에서 group이라는 것만 확인하면 된다는 데 있고, [정의 1](#def1)의 서술의 장점은 $\mu_G,\iota_G,\epsilon_G$를 대수적으로 명시할 수 있어 좌표 계산이 가능하다는 데 있다. 이후 $\epsilon_G\circ\pi:G\rightarrow G$를 간단히 $\epsilon_G$로 적고, $G(T)$의 항등원 또한 $\epsilon_G$로 적는다.
+다음은 자주 등장하는 몇몇 예시들이다. 
 
 ::: 예시 3
 다음은 모두 $\Spec \mathbb{Z}$ 위의 group scheme이다.
@@ -57,12 +47,26 @@ $$(G\times_SG)(T)=G(T)\times_{S(T)}G(T)=G(T)\times G(T)$$
 
 2. *Multiplicative group<sub>곱셈군</sub>* $\mathbb{G}_m=\Spec \mathbb{Z}[\x, \x^{-1}]$. [§점함자, ⁋명제 3](/ko/math/scheme_theory/functor_of_points#prop3)에 의하여 $\mathbb{G}_m(T)\cong \Gamma(T, \mathcal{O}_T)^\times$이며, 여기에 가역원들의 곱셈을 준다.
 
-3. *$n$-th roots of unity* $\mu_n=\Spec \mathbb{Z}[\x]/(\x^n-1)$. [§아핀스킴, ⁋정리 13](/ko/math/scheme_theory/affine_schemes#thm13)의 adjunction에 의하여 $\mu_n(T)\cong \{a\in \Gamma(T, \mathcal{O}_T)\mid a^n=1\}$이며, $a^n=1$이면 $a$가 가역이므로 이는 $\mathbb{G}_m(T)$의 subgroup이다.
+3. *$n$-th roots of unity* $\mu_n=\Spec \mathbb{Z}[\x]/(\x^n-1)$. [§아핀스킴, ⁋정리 13](/ko/math/scheme_theory/affine_schemes#thm13)의 adjunction에 의하여 
+    
+    $$\mu_n(T)\cong \{a\in \Gamma(T, \mathcal{O}_T)\mid a^n=1\}$$
+    
+    이며, $a^n=1$이면 $a$가 가역이므로 이는 $\mathbb{G}_m(T)$의 subgroup이다.
 
-4. *General linear group* $\GL_n=\Spec \mathbb{Z}[\x_{11},\ldots, \x_{nn}, \det{}^{-1}]$. 여기에서 $\det$은 행렬 $(\x_{ij})$의 determinant이며, 이를 가역으로 만든 localization을 취한 것이다. 행렬이 가역인 것과 그 determinant가 가역인 것이 동치이므로 $\GL_n(T)$는 $\Gamma(T, \mathcal{O}_T)$ 성분의 가역행렬들의 group이다.
+4. *General linear group* $\GL_n=\Spec \mathbb{Z}[\x_{11},\ldots, \x_{nn}, \det{}^{-1}]$. 여기에서 $\det$은 행렬 $(\x_{ij})$의 determinant이며, 이를 가역으로 만든 localization을 취한 것이다. 행렬이 가역인 것과 그 determinant가 가역인 것이 동치이므로
 
-5. *Special linear group* $\SL_n=\Spec \mathbb{Z}[\x_{11},\ldots, \x_{nn}]/(\det-1)$. 각각의 $T$에 대하여 $\SL_n(T)$는 determinant가 $1$인 행렬들의 group이다.
+   $$\GL_n(T)=\GL(n;\Gamma(T,\mathcal{O}_T))$$
+
+   이다.
+
+5. *Special linear group* $\SL_n=\Spec \mathbb{Z}[\x_{11},\ldots, \x_{nn}]/(\det-1)$. 각각의 $T$에 대하여
+
+   $$\SL_n(T)=\SL(n;\Gamma(T,\mathcal{O}_T))$$
+
+   이다.
 :::
+
+여기에서 $\GL_n,\SL_n$은 group scheme을, $\GL_n(T),\SL_n(T)$는 그 $T$-point들의 group을 가리키고, $\GL(n;A),\SL(n;A)$는 ring $A$ 성분의 통상적인 행렬군을 가리킨다. 특히 $T=\Spec A$이면 $\GL_n(A)=\GL(n;A)$이고 $\SL_n(A)=\SL(n;A)$이다.
 
 [예시 3](#ex3)의 각 경우에서 group 구조는 test scheme $T$에 대해 점별로 통상적인 대수 구조를 주는 것만으로 정의되었으며, 별도의 commutative diagram을 그릴 필요가 없었다. 또, 위의 구성은 모두 $\Spec \mathbb{Z}$ 위에서 주어졌으므로 임의의 base $S$ 위로 base change하여 상대적인 버전 $\mathbb{G}_{a,S}, \mathbb{G}_{m,S},\mu_{n,S},\GL_{n,S},\SL_{n,S}$를 얻는다. ([§올곱, ⁋예시 9](/ko/math/scheme_theory/fiber_products#ex9)) Fiber product가 functor of points 수준에서 점별 fiber product이므로 ([§점함자, ⁋명제 7](/ko/math/scheme_theory/functor_of_points#prop7)), base change한 대상의 group 구조는 원래의 것을 그대로 물려받는다. 이후 base가 문맥에서 분명한 경우에는 첨자를 생략하고 $\mathbb{G}_a, \mathbb{G}_m$ 등으로 적는다.
 
@@ -94,15 +98,9 @@ $$(\ker \varphi)(T)=G(T)\times_{H(T)}S(T)=\{g\in G(T)\mid \varphi_T(g)=\epsilon_
 $S$ 위의 group scheme homomorphism $\varphi: G \rightarrow H$에 대하여, $H \rightarrow S$가 separated이면 ([§값매김환, ⁋정의 3](/ko/math/scheme_theory/valuative_criteria#def3)) $\ker \varphi$는 $G$의 closed subgroup scheme이다.
 :::
 ::: 증명
-먼저 $H$의 항등원 morphism $\epsilon_H: S \rightarrow H$가 closed embedding임을 본다. $\pi: H \rightarrow S$를 structure morphism이라 하면 $\epsilon_H$는 $\pi$의 절단, 곧 $\pi\circ \epsilon_H=\id_S$이다. 이제 두 morphism $\id_H$와 $\epsilon_H\circ\pi$가 유도하는 $(\id_H, \epsilon_H\circ\pi): H \rightarrow H\times_SH$를 따라 diagonal morphism $\Delta: H \rightarrow H\times_SH$를 base change하자. 임의의 $S$-scheme $T$에 대하여 [§점함자, ⁋명제 7](/ko/math/scheme_theory/functor_of_points#prop7)로 계산하면, 이 fiber product의 $T$-point들은 $(h', h')=(h, \epsilon_{H,T}(\pi_T(h)))$를 만족하는 순서쌍 $(h', h)\in H(T)\times H(T)$들, 곧 $h'=h$이면서 $h=\epsilon_{H,T}(\pi_T(h))$인 $h\in H(T)$들이다. 그런데 대응 $s\mapsto \epsilon_{H,T}\circ s$와 $h\mapsto \pi_T\circ h$가 서로 역이므로 이 집합은 $S(T)$와 자연스럽게 일대일대응하며, [\[범주론\] §표현가능한 함자, ⁋정리 4](/ko/math/category_theory/representable_functors#thm4)에 의하여 fiber product는 $S$이고 $H$로의 사영은 $\epsilon_H$이다. $\pi$가 separated이므로 $\Delta$는 closed embedding이다.
+먼저 closed embedding은 base change에 대해 보존된다. 실제로 이는 affine-locally quotient map $B\rightarrow B/I$가 그 base change $C\rightarrow C/IC$로 옮겨지는 것에 불과하다. ([§닫힌 부분스킴, ⁋명제 3](/ko/math/scheme_theory/closed_subschemes#prop3), [§올곱, ⁋보조정리 2](/ko/math/scheme_theory/fiber_products#lem2))
 
-다음으로 closed embedding이 base change에 대해 보존됨을 확인한다. Closed embedding $\iota: Z \rightarrow X$와 임의의 morphism $\psi: X' \rightarrow X$가 주어졌다 하고 $W=Z\times_XX'$이라 하자. Closed embedding은 affine morphism이고 affine은 base change에 대해 보존되므로 ([§닫힌 부분스킴, ⁋명제 3](/ko/math/scheme_theory/closed_subschemes#prop3), [§올곱, ⁋명제 16](/ko/math/scheme_theory/fiber_products#prop16)) $W \rightarrow X'$ 또한 affine이다. 따라서 남은 것은 [§닫힌 부분스킴, ⁋명제 3](/ko/math/scheme_theory/closed_subschemes#prop3)의 둘째 조건, 곧 $X'$의 <em-ko>임의의</em-ko> affine open subset $V=\Spec C$에 대하여 그 preimage $\Spec D$를 주는 $C \rightarrow D$가 surjective인 것을 확인하는 일이다.
-
-$X$를 affine open subset들로 덮고 그 preimage들을 $V$에서 잘라내면 $V$의 열린 덮개를 얻으며, principal open set들이 $\Spec C$의 base를 이루므로 ([§스펙트럼, ⁋보조정리 11](/ko/math/scheme_theory/spectrums#lem11)) 이를 세분하여 $V=\bigcup_\alpha D(c_\alpha)$이면서 각 $D(c_\alpha)$가 $X$의 어떤 affine open subset $\Spec B_\alpha$ 안으로 사상되도록 할 수 있다. 그럼 $\iota^{-1}(\Spec B_\alpha)\cong \Spec A_\alpha$에 대하여 $B_\alpha \rightarrow A_\alpha$가 surjective이고 ([§닫힌 부분스킴, ⁋명제 3](/ko/math/scheme_theory/closed_subschemes#prop3)), $D(c_\alpha)=\Spec C_{c_\alpha}$ 위에서 $W$는 $\Spec (A_\alpha\otimes_{B_\alpha}C_{c_\alpha})$인 동시에 $\Spec D_{c_\alpha}$이므로 ([§올곱, ⁋보조정리 2](/ko/math/scheme_theory/fiber_products#lem2)), $C_{c_\alpha} \rightarrow D_{c_\alpha}$는 $B_\alpha \rightarrow A_\alpha$의 base change로서 surjective이다.
-
-이제 $C$의 임의의 maximal ideal $\mathfrak{m}$을 택하면 그에 대응하는 점이 어떤 $D(c_\alpha)$에 속하므로 $C_\mathfrak{m}$과 $D_\mathfrak{m}$은 각각 $C_{c_\alpha}$와 $D_{c_\alpha}$를 $C_{c_\alpha}\setminus\mathfrak{m}C_{c_\alpha}$에서 다시 localize한 것이다. 따라서 $D_\mathfrak{m}$의 임의의 원소는 $d\in D_{c_\alpha}$와 $t\in C_{c_\alpha}\setminus\mathfrak{m}C_{c_\alpha}$로 $d/t$ 꼴로 적히는데 위에서 $d$가 $C_{c_\alpha}$의 어떤 원소의 image이므로, $C_\mathfrak{m} \rightarrow D_\mathfrak{m}$ 또한 surjective이다. 따라서 [\[가환대수학\] §국소화의 성질들, ⁋명제 4](/ko/math/commutative_algebra/properties_of_localization#prop4)에 의하여 $C \rightarrow D$는 surjective이고, $V$가 임의의 affine open subset이었으므로 $W \rightarrow X'$는 closed embedding이다.
-
-위의 두 문단을 합치면 $\epsilon_H$는 closed embedding $\Delta$를 $(\id_H, \epsilon_H\circ\pi)$를 따라 base change한 것이므로 closed embedding이고, 다시 $\ker \varphi \rightarrow G$는 $\epsilon_H$를 $\varphi$를 따라 base change한 것이므로 closed embedding이다. 위에서 확인한 대로 $(\ker \varphi)(T)$가 $G(T)$의 subgroup이므로 $\ker \varphi$는 $G$의 closed subgroup scheme이다.
+이제 $\pi:H\rightarrow S$를 structure morphism이라 하면 $\epsilon_H:S\rightarrow H$는 $\pi$의 절단이고, 따라서 diagonal morphism $\Delta_{H/S}:H\rightarrow H\times_S H$의 base change이다. $\pi$가 separated이므로 $\Delta_{H/S}$는 closed embedding이고, 따라서 $\epsilon_H$도 closed embedding이다. 다시 $\ker\varphi\rightarrow G$는 $\epsilon_H$를 $\varphi$를 따라 base change한 것이므로 closed embedding이다. 위에서 이미 $\ker\varphi$가 group scheme임을 확인하였으므로 이는 $G$의 closed subgroup scheme이다.
 :::
 
 Affine scheme 사이의 morphism은 항상 separated이므로 ([§값매김환, ⁋보조정리 5](/ko/math/scheme_theory/valuative_criteria#lem5)), affine base 위의 affine group scheme에 대해서는 [명제 5](#prop5)의 가정이 자동으로 성립한다. 가장 중요한 예는 $n$제곱 morphism $[n]:\mathbb{G}_m \rightarrow \mathbb{G}_m$, 곧 각각의 $T$에서 $a\mapsto a^n$인 homomorphism이다. 공역의 좌표를 $\y$로 적으면 이는 ring 수준에서 $\y\mapsto \x^n$에 대응하고, 항등원 morphism은 $\y\mapsto 1$인 counit에 대응하므로
@@ -135,15 +133,7 @@ $$\Delta: A \rightarrow A\otimes_\mathbb{K}A,\qquad \epsilon: A \rightarrow \mat
 Ring $\mathbb{K}$에 대하여, $\Spec$은 [정의 6](#def6)의 Hopf $\mathbb{K}$-algebra들의 category와 $\Spec \mathbb{K}$ 위의 affine group scheme들의 category 사이의 anti-equivalence를 준다. 이 대응 아래에서 $\Delta, \epsilon, \iota$는 각각 $\mu_G, \epsilon_G, \iota_G$에 대응한다.
 :::
 ::: 증명
-[§아핀스킴, ⁋정리 13](/ko/math/scheme_theory/affine_schemes#thm13)의 adjunction을 affine scheme으로 제한하면 동치 $\AffSch\simeq \cRing^\op$를 얻으며, $\Spec \mathbb{K}$ 위의 affine scheme들과 $\mathbb{K}$-algebra들 사이에서도 마찬가지이다. 이 동치는 $\Spec \mathbb{K}$ 위의 fiber product를 tensor product로 옮기고 ([§올곱, ⁋보조정리 2](/ko/math/scheme_theory/fiber_products#lem2)), terminal object $\Spec \mathbb{K}$를 $\mathbb{K}$로 옮긴다. 곧 $A$를 commutative $\mathbb{K}$-algebra라 할 때
-
-$$\Spec A\times_{\Spec \mathbb{K}}\Spec A=\Spec(A\otimes_\mathbb{K}A),\qquad \Spec A\times_{\Spec \mathbb{K}}\Spec A\times_{\Spec \mathbb{K}}\Spec A=\Spec (A\otimes_\mathbb{K}A\otimes_\mathbb{K}A)$$
-
-이다.
-
-따라서 [정의 1](#def1)의 데이터 $\mu_G:\Spec A\times_{\Spec \mathbb{K}}\Spec A\rightarrow\Spec A$, $\epsilon_G:\Spec \mathbb{K}\rightarrow\Spec A$, $\iota_G:\Spec A\rightarrow\Spec A$를 주는 것은 $\mathbb{K}$-algebra homomorphism $\Delta:A\rightarrow A\otimes_\mathbb{K}A$, $\epsilon:A\rightarrow\mathbb{K}$, $\iota:A\rightarrow A$를 주는 것과 정확히 같다. 남은 것은 세 조건의 대응인데, 동치가 합성과 항등사상을 보존하므로 등식이 등식으로 옮겨간다. 결합법칙 $\mu_G\circ(\mu_G\times\id)=\mu_G\circ(\id\times \mu_G)$은 $(\Delta\otimes\id_A)\circ\Delta=(\id_A\otimes\Delta)\circ\Delta$이 되고, 항등원 조건은 counit 조건이 되며, 역원 조건에서는 $(\iota_G,\id_G)$가 $a\otimes b\mapsto \iota(a)b$, 곧 $\mu\circ(\iota\otimes\id_A)$에 대응하고 $\epsilon_G\circ\pi$가 $\eta\circ\epsilon$에 대응하여 antipode 조건이 된다.
-
-마지막으로 morphism의 대응을 본다. Group scheme homomorphism은 각각의 $T$에서 $G(T) \rightarrow H(T)$가 group homomorphism이 되는 morphism이고, group homomorphism은 항등원과 역원을 자동으로 보존하므로 이는 $\mu_G$, $\epsilon_G$, $\iota_G$ 모두와 commute하는 $\Spec \mathbb{K}$ 위의 morphism과 같다. 위의 동치가 이 세 조건을 뒤집으면 $\Delta$, $\epsilon$, $\iota$ 모두와 commute하는 $\mathbb{K}$-algebra homomorphism, 곧 [정의 6](#def6)의 Hopf algebra homomorphism이 된다.
+[§아핀스킴, ⁋정리 13](/ko/math/scheme_theory/affine_schemes#thm13)에 의하여 commutative $\mathbb{K}$-algebra들과 $\Spec\mathbb{K}$ 위의 affine scheme들은 anti-equivalent이고, 이 대응은 tensor product와 $\mathbb{K}$를 각각 fiber product와 terminal object로 옮긴다. ([§올곱, ⁋보조정리 2](/ko/math/scheme_theory/fiber_products#lem2)) 따라서 [정의 1](#def1)의 데이터 $\mu_G,\epsilon_G,\iota_G$는 arrow를 뒤집으면 정확히 [정의 6](#def6)의 데이터 $\Delta,\epsilon,\iota$가 된다. 이 동치가 합성과 항등사상을 보존하므로 group object의 세 공리는 각각 coassociativity, counit, antipode 조건으로 옮겨지고, 같은 논리를 구조를 보존하는 morphism에 적용하면 주장한 anti-equivalence를 얻는다.
 :::
 
 [정리 7](#thm7)에 의하여 affine group scheme $G=\Spec A$의 $R$-point들의 group 구조는 $A$의 Hopf 구조로 명시된다. 곧 $G(R)=\Hom_{\mathbb{K}\text{-alg}}(A, R)$ 위에서 곱셈은 $g\ast h=\mu_R\circ(g\otimes h)\circ\Delta$, 항등원은 $\eta_R\circ\epsilon$, 역원은 $g\mapsto g\circ\iota$로 주어진다. 이 공식들은 다음 절에서 representation을 comodule로 번역할 때 그대로 쓰인다.
