@@ -352,7 +352,7 @@ $S$ 위의 $G$-torsor $P$에 대하여 다음이 성립한다.
 
 2번을 보이기 위해 먼저 $\{P \rightarrow S\}$가 fpqc covering임을 확인한다. $S$의 affine open subset $V$를 택하면 $V$는 quasi-compact이고 ([§스펙트럼, ⁋보조정리 12](/ko/math/scheme_theory/spectrums#lem12)), $P \rightarrow S$가 quasi-compact이므로 그 preimage 또한 quasi-compact이어서 유한히 많은 affine open subset들로 덮인다. $P \rightarrow S$가 전사이므로 이들의 image가 $V$를 덮으며, 나머지 조건은 1번에서 이미 확인하였으므로 [§충실평탄하강, ⁋정의 9](/ko/math/scheme_theory/faithfully_flat_descent#def9)의 조건이 모두 성립한다.
 
-이제 affine은 base change에 대해 보존되므로 ([§올곱, ⁋명제 16](/ko/math/scheme_theory/fiber_products#prop16)) $G\times_SP \rightarrow P$는 affine이고, 1번에 의하여 이는 $P\times_SP \rightarrow P$, 곧 $P \rightarrow S$를 자기 자신을 따라 base change한 것과 isomorphic하다. 그런데 affine이라는 성질은 fpqc covering에 대해 base에서 국소적이므로 ([§충실평탄하강, ⁋명제 14](/ko/math/scheme_theory/faithfully_flat_descent#prop14)), $P \rightarrow S$ 자신이 affine이다.
+이제 affine은 base change에 대해 보존되므로 ([§올곱, ⁋명제 16](/ko/math/scheme_theory/fiber_products#prop16)) $G\times_SP \rightarrow P$는 affine이고, 1번에 의하여 이는 $P\times_SP \rightarrow P$, 곧 $P \rightarrow S$를 자기 자신을 따라 base change한 것과 isomorphic하다. 그런데 affine이라는 성질은 fpqc covering에 대해 base에서 국소적이므로 ([§충실평탄하강, ⁋명제 13](/ko/math/scheme_theory/faithfully_flat_descent#prop13)), $P \rightarrow S$ 자신이 affine이다.
 :::
 
 [명제 18](#prop18)의 둘째 항에 붙은 quasi-compact 가정은 fppf covering $\{P \rightarrow S\}$를 fpqc covering으로 올려 하강 결과를 쓸 수 있게 하기 위한 것이며, $P$가 Noetherian scheme인 경우에는 [§스킴 사상의 성질들, ⁋명제 4](/ko/math/scheme_theory/properties_of_scheme_morphisms#prop4)에 의하여 자동으로 성립한다.
