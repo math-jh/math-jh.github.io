@@ -397,40 +397,7 @@ $$V\times_SU_i\cong\rSpec_{U_i}(\psi_i^\ast\mathcal{A})\cong\rSpec_{U_i}(\mathca
 이고, 이 isomorphism들은 처음에 주어진 cocycle 데이터를 회복한다. 또한 $\mathcal{A}$와 그 algebra structure가 [정리 11](#thm11)에 의해 unique isomorphism을 제외하고 유일하고 affine morphism이 그 quasi-coherent algebra로부터 복원되므로 $V$도 동일한 의미에서 유일하다.
 :::
 
-Quasi-compact, quasi-separated scheme morphism $\varphi:V\rightarrow U$에 대하여 canonical morphism $V\rightarrow\rSpec_U(\varphi_\ast\mathcal{O}_V)$가 quasi-compact open immersion이면 $\varphi$를 *quasi-affine morphism*이라 부른다. 더 일반적으로, [정리 12](#thm12)와 같은 결론은 quasi-affine morphism까지 확장된다. 실제로 우선 [정리 12](#thm12)를 algebra $\varphi_\ast\mathcal{O}_V$에 적용하여 이를 $S$ 위로 내려보내면, $V$는 그 base change 안에서 descent datum에 안정적인 open subscheme으로 앉는다. 한편 faithfully flat하고 quasi-compact한 morphism은 submersive이므로, 이렇게 안정적인 open subscheme은 언제나 base의 open subscheme의 inverse image이고, 이로부터 $V$를 회수한다.
-
-이제 affine에서 한 걸음 더 나아가 보자. 대상이 quasi-projective이고 ample line bundle이 descent datum과 호환되는 데이터를 함께 가지면 effectivity가 여전히 성립한다. (SGA 1, VIII, 7.8) 이 경우에도 실질적인 내용은 단일한 affine cover에서 드러나므로 그 경우로 서술한다.
-
-::: 정리 13
-$A \rightarrow B$가 faithfully flat ring homomorphism이고 $U=\Spec B$, $S=\Spec A$라 하자. $U$ 위의 Noetherian quasi-projective scheme $\sigma: V \rightarrow U$ 위에 $U/S$에 대한 descent datum이 주어졌다 하자. ([§값매김환, ⁋정의 1](/ko/math/scheme_theory/valuative_criteria#def1)) 또한 $V$ 위에 ample line bundle $\mathcal{L}$이 주어지고, $U\times_SU$ 위에서 $V$의 descent datum을 덮는 $\mathcal{L}$의 두 pullback 사이의 cocycle isomorphism이 주어졌다 하자. ([§인자와 선형계, ⁋정의 18](/ko/math/scheme_theory/divisors_and_linear_systems#def18)) 그럼 이 descent datum은 effective하다. 즉 quasi-projective $S$-scheme $V_0$와 그 위의 ample line bundle $\mathcal{L}_0$가 존재하여, $(V, \mathcal{L})$이 주어진 descent 데이터를 통해 $(V_0, \mathcal{L}_0)$의 base change와 일치한다.
-:::
-::: 증명
-$\mathcal{L}$에 주어진 데이터로부터 graded algebra를 만든다. $U$가 affine이므로 quasi-coherent sheaf $\sigma_\ast\mathcal{L}^{\otimes n}$은 $B$-module
-
-$$R_n=\Gamma(V, \mathcal{L}^{\otimes n})$$
-
-에 대응하고, $\mathcal{L}$의 두 pullback 사이의 isomorphism은 각 $n$마다 $R_n$의 $B\otimes_AB$-module로서의 descent datum을 유도한다. 이들은 cocycle condition을 만족할 뿐 아니라 graded algebra
-
-$$R=\bigoplus_{n\geq 0} R_n$$
-
-의 곱셈과 호환된다. 따라서 각 차수에 [정리 6](#thm6)을 적용하고, [정리 12](#thm12)의 증명에서와 같이 곱셈과 단위원을 내려보내면 graded $A$-algebra $R_0$와 graded isomorphism
-
-$$R_0\otimes_AB\cong R$$
-
-을 얻는다.
-
-이제 ampleness의 역할은 $V$를 이 graded algebra로부터 회수하는 것이다. $\mathcal{L}$이 ample이면 canonical morphism
-
-$$V\longrightarrow\Proj R$$
-
-은 open immersion이다. 이는 ampleness의 일반론에 속하는 사실로서 이 글의 범위를 벗어나므로 증명은 (EGA II, §4.5)에 위임하며, field 위의 projective scheme에 대한 관련 판정은 [§스킴의 층 코호몰로지, ⁋정리 11](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#thm11)에서 다룬 바 있다. 한편 $\Proj$ 구성은 base change와 호환되므로 $(\Proj R_0)\times_SU\cong\Proj R$이고, $\mathcal{L}$의 descent datum이 $V$의 것을 덮는다는 조건 덕분에 이 open immersion은 descent datum들과 호환된다. 즉 $V$는 $(\Proj R_0)\times_SU$ 안에서 descent datum에 안정적인 open subscheme이다. Faithfully flat하고 quasi-compact한 morphism은 submersive이므로 이러한 open subscheme은 $\Proj R_0$의 open subscheme $V_0$의 inverse image이며, 이것이 $V$의 descent를 준다. 마지막으로 $\mathcal{L}$은 [정리 11](#thm11)에 의해 $V_0$ 위의 line bundle $\mathcal{L}_0$로 내려오고, 이 $(V_0, \mathcal{L}_0)$이 주어진 데이터를 회복함은 구성으로부터 따라온다. $V_0$가 다시 quasi-projective이고 $\mathcal{L}_0$가 ample이라는 사실을 포함하는 이 마지막 단계의 세부도 같은 이유로 (EGA II, §4.5–4.6)에 위임한다.
-:::
-
-[정리 12](#thm12)와 [정리 13](#thm13)을 관통하는 판정 기준은 따로 추출할 수 있다. Faithfully flat하고 quasi-compact한 morphism $S' \rightarrow S$에 대한 descent datum은, 대상이 descent datum에 안정적인 quasi-affine open subscheme들로 덮일 수 있을 때, 사실 그때에만 effective하다. ([BLR], §6.2) [정리 12](#thm12)에서는 대상 자신이 이미 affine이고, quasi-affine의 경우에는 위의 canonical open immersion이, [정리 13](#thm13)에서는 $\mathcal{L}$의 거듭제곱들의 section의 nonvanishing locus가 이러한 덮개를 제공한다. 반대로 이러한 덮개가 존재하지 않는 descent datum은 effective가 아니며, 그러한 예는 proper하지만 projective가 아닌 scheme 위에서 실제로 만들어진다. Hironaka가 construction한 non-projective proper variety가 이러한 예의 원천으로, 자세한 논의는 ([FGA], Part 1, §4.4)에 위임한다.
-
-Covering이 유한한 경우에는 이 조건이 더 구체적으로 풀어진다. 이 글의 서두에서 동기로 삼았던 field extension $\mathbb{L}/\mathbb{K}$가 finite Galois extension이면 $\Spec\mathbb{L}\rightarrow\Spec\mathbb{K}$는 surjective finite locally free morphism이고, 이에 대한 descent datum은 $\Gal(\mathbb{L}/\mathbb{K})$의 semilinear action과 같은 데이터이다. 이 때에는 각 점의 orbit이 유한하므로 descent datum의 effectivity는 모든 orbit을 포함하는 affine open의 존재로부터 따라오고, quasi-projective scheme에서는 같은 점 위에 놓인 임의의 유한한 점들을 포함하는 affine open이 언제나 존재하므로 이 조건은 자동으로 성립한다. (Stacks 0CCH) 즉 quasi-projective 대상은 finite Galois extension을 따라 언제나 내려온다.
-
-Effective descent는 representability theory와 만나는 지점이기도 하다. Fpqc sheaf $F:\Sch^\op \rightarrow \Set$이 cover $U\rightarrow S$ 위에서 affine $U$-scheme $V_U$에 의해 representable이라 하자. Overlap $U\times_SU$ 위에서 $V_U$의 두 pullback은 같은 functor를 represent하므로, Yoneda lemma에 의해 둘 사이의 canonical isomorphism이 주어지고 이들은 cocycle condition을 만족한다. [정리 12](#thm12)를 적용하면 $V\times_SU\cong V_U$인 affine $S$-scheme $V$를 구성할 수 있다. 이제 $F$와 $h_V$는 fpqc cover 위에서 일치하는 fpqc sheaf들이므로 $S$ 위에서도 일치한다. ([\[범주론\] §표현가능한 함자, ⁋정의 1](/ko/math/category_theory/representable_functors#def1)) 즉 local representability와 effective descent를 결합하면 global representability를 얻는다.
+더 일반적으로, quasi-compact, quasi-separated scheme morphism $\varphi:V\rightarrow U$이 *quasi-affine*인 것은 canonical morphism $V\rightarrow\rSpec_U(\varphi_\ast\mathcal{O}_V)$가 quasi-compact open immersion인 것이다. 이 경우에도 [정리 12](#thm12)의 결론이 성립한다. 다른 방향의 일반화는 quasi-projective morphism의 경우로, morphism이 quasi-projective인 것만으로는 부족하고 ample line bundle과 그 위의 compatible한 descent datum이 함께 주어져야 한다. 대략적인 증명은 ample line bundle의 section algebra를 내려보내 relative Proj를 만들면 원래 scheme은 그 안의 open subscheme으로 나타나므로 이들을 이어붙이는 것이다. 
 
 지금까지는 cover 위에서 주어진 scheme들로부터 base 위의 scheme을 구성했다. 이제는 새로운 대상을 구성하지 않고, 이미 주어진 scheme morphism $\psi:X\rightarrow Y$의 성질을 cover 위에서 확인한다. Fpqc cover $\{Y_i\rightarrow Y\}$를 잡으면 $\psi$는 morphism
 
@@ -438,52 +405,13 @@ $$\psi_i:X\times_YY_i\rightarrow Y_i$$
 
 들을 정의한다. 우리가 묻는 것은 모든 $\psi_i$가 어떤 성질을 가질 때 $\psi$ 자신도 그 성질을 가진다고 결론지을 수 있는지이다. 이러한 판정이 가능한 성질을 fpqc-local on the base라 한다.
 
-::: 명제 14
+::: 명제 13
 $\{Y_i \rightarrow Y\}$를 fpqc cover라 하고 $\psi: X \rightarrow Y$를 scheme morphism이라 하자. 그럼 $\psi$가 다음 성질들 가운데 하나를 가지는 것은, 각 base change $\psi_i: X\times_Y Y_i \rightarrow Y_i$가 그 성질을 가지는 것과 동치이다: flat, faithfully flat, 그리고 affine, locally of finite type, locally of finite presentation, 그리고 surjective.
 :::
-::: 증명
-각 성질이 base change에 대해 보존됨은 표준적이므로 (flatness의 경우 [§평탄사상, ⁋명제 3](/ko/math/scheme_theory/flat_morphisms#prop3)), fpqc cover 위에서 성립하면 원래 morphism에서도 성립함만 보이면 된다. 문제는 $Y$의 affine open 위로 제한할 수 있고, fpqc cover의 quasi-compact 조건으로 finite affine covering으로 환원할 수 있다. 따라서
 
-$$Y=\Spec A,\qquad Y'=\Spec A'\longrightarrow\Spec A$$
+각 성질은 base change에 대해 보존된다. 역으로 affine은 [정리 12](#thm12)의 effective descent와 유일성에서 따르고, 나머지 성질들은 affine-locally 환론으로 환원한 뒤 faithfully flat base change가 exactness, surjectivity와 finite generation을 반영한다는 사실에서 따른다.
 
-이고 $A\rightarrow A'$가 faithfully flat인 경우만 본다. $X'=X\times_YY'$로 적자.
-
-먼저 flatness를 보자. Affine open $W=\Spec B\subseteq X$를 잡으면 그 pullback은
-
-$$W'=W\times_YY'=\Spec(B\otimes_AA')$$
-
-이다. $X'\rightarrow Y'$가 flat이면 $B\otimes_AA'$는 $A'$-flat이다. 임의의 단사 $A$-module morphism $M'\hookrightarrow M''$에 대하여
-
-$$(M'\otimes_AB)\otimes_AA'\longrightarrow(M''\otimes_AB)\otimes_AA'$$
-
-은 $A'$-module morphism
-
-$$(M'\otimes_AA')\otimes_{A'}(B\otimes_AA')\longrightarrow(M''\otimes_AA')\otimes_{A'}(B\otimes_AA')$$
-
-으로 생각할 수 있으므로 단사이다. [명제 2](#prop2)로 단사성을 $A$ 위로 반영하면 $M'\otimes_AB\rightarrow M''\otimes_AB$도 단사이고, 따라서 $B$는 $A$-flat이다.
-
-Surjectivity는 점을 올려 보내면 바로 따라온다. $y\in Y$를 잡으면 $Y'\rightarrow Y$가 surjective이므로 $y$로 가는 $y'\in Y'$이 있다. $X'\rightarrow Y'$가 surjective이면 $y'$으로 가는 $x'\in X'$이 있고, $x'$의 $X$ 위 image는 $y$ 위의 점이다. 따라서 $X\rightarrow Y$가 surjective이다. Faithful flatness는 flatness와 surjectivity의 결합이므로 앞의 두 경우에서 따라온다.
-
-이제 $X'\rightarrow Y'$가 affine이라 하자. $X'$는 $X$의 base change이므로 $Y'/Y$에 대한 canonical descent datum을 가진다. [정리 12](#thm12)를 적용하면 affine morphism $Z\rightarrow Y$와 descent datum을 보존하는 isomorphism
-
-$$Z\times_YY'\cong X'$$
-
-를 얻는다. 이 isomorphism과 그 inverse는 각각 fpqc cover $X'\rightarrow X$와 $Z\times_YY'\rightarrow Z$ 위에서 compatible하므로, 앞에서 본 morphism의 sheaf 성질에 의해 base change가 이들과 일치하는 유일한 morphism $X\rightarrow Z$와 $Z\rightarrow X$가 존재한다. 두 합성은 fpqc cover 위에서 identity이므로 원래 scheme 위에서도 identity이다. 따라서 $X\cong Z$이고, $Z\rightarrow Y$가 affine이므로 $X\rightarrow Y$도 affine이다.
-
-마지막으로 locally of finite type과 locally of finite presentation을 보자. 다시 affine open $W=\Spec B\subseteq X$를 잡으면 $W'=\Spec(B\otimes_AA')$는 $X'$의 affine open이다. $X'\rightarrow Y'$가 locally of finite type이면 $W'$ 자신이 quasi-compact이므로 $B\otimes_AA'$는 finitely generated $A'$-algebra이다. 유한한 algebra generator들을 $B$의 원소들과 $A'$의 원소들의 tensor의 합으로 표현하고, 이때 등장하는 $B$의 원소들이 생성하는 $A$-subalgebra를 $B_0\subseteq B$라 하자. 그럼 $B_0\otimes_AA'\rightarrow B\otimes_AA'$는 surjective이고, 그 cokernel에 faithfulness를 적용하면 $B_0=B$를 얻는다. 즉 $B$는 finitely generated $A$-algebra이다.
-
-Locally of finite presentation의 경우 앞의 결과로부터 surjection
-
-$$A[\x_1,\ldots,\x_n]\twoheadrightarrow B$$
-
-를 잡고 kernel을 $I$라 하자. $A'$-flatness에 의해 base change한 presentation의 kernel은 $I\otimes_AA'$이다. $B\otimes_AA'$이 finitely presented $A'$-algebra이므로 $I\otimes_AA'$은 $A'[\x_1,\ldots,\x_n]$-module로서 finitely generated이다. 또한
-
-$$A[\x_1,\ldots,\x_n]\longrightarrow A'[\x_1,\ldots,\x_n]$$
-
-은 faithfully flat이므로, [명제 7](#prop7)의 finite generation descent를 $I$에 적용하면 $I$가 finitely generated임을 얻는다. 따라서 $B$는 finitely presented $A$-algebra이다. 이를 $X$의 모든 affine open $W$에 적용하면 원래 morphism이 각각 locally of finite type, locally of finite presentation임을 얻는다.
-:::
-
-[명제 14](#prop14)의 사용법은 이제 명확하다. 어떤 geometric property를 원래 base 위에서 직접 확인하기 어려우면 base를 faithfully flat하게 확장하여 더 다루기 쉬운 상황으로 옮긴다. 그 base change 위에서 성질을 확인하면 [명제 14](#prop14)에 의해 원래 morphism도 같은 성질을 가진다. 가령 algebraically closed field나 strictly Henselian local ring으로 base change하여 문제를 표준적인 형태로 환원하는 방법은 이 원리의 반복적인 응용이다.
+[명제 13](#prop13)의 사용법은 이제 명확하다. 어떤 geometric property를 원래 base 위에서 직접 확인하기 어려우면 base를 faithfully flat하게 확장하여 더 다루기 쉬운 상황으로 옮긴다. 그 base change 위에서 성질을 확인하면 [명제 13](#prop13)에 의해 원래 morphism도 같은 성질을 가진다. 가령 algebraically closed field나 strictly Henselian local ring으로 base change하여 문제를 표준적인 형태로 환원하는 방법은 이 원리의 반복적인 응용이다.
 
 ---
 

@@ -10,7 +10,6 @@ sidebar:
 
 date: 2023-01-02
 weight: 3
-revising: true
 drift_needed: true
 
 ---
@@ -168,7 +167,7 @@ $$f_n(a)-g_n(a)=d_{n+1}^D(h_n(a))\in\im(d_{n+1}^D)$$
 
 ## Homotopy category
 
-[명제 6](#prop6)에 힘입어, 우리는 *homotopy category* $\mathbf{K}(\mathcal{A})$를 다음 과정을 통해 정의할 수 있다. 우선 다음의 보조정리는, reflexivity의 경우 $h=0$을, symmetry의 경우 주어진 chain homotopy $h$에 대하여 $-h$를, transitivity의 경우 주어진 두 chain homotopy $h,h'$에 대하여 $h+h'$을 chain homotopy로 택하면 얻어진다.
+[명제 6](#prop6)에 힘입어, 우리는 *homotopy category* $\mathbf{K}(\mathcal{A})$를 다음 과정을 통해 정의할 수 있다. 우선 다음의 보조정리는 자명하다.
 
 ::: 보조정리 7
 두 chain map 사이의 homotopy relation은 동치관계다.
