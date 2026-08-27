@@ -18751,6 +18751,13 @@ T:
   defs:
   - label: '[해석학] §무한급수'
     url: /ko/math/analysis/series
+- id: tensor
+  en: tensor
+  ko: 텐서
+  primary: en
+  defs:
+  - label: '[대수적 구조] §환의 곱, 쌍대곱, 텐서곱'
+    url: /ko/math/algebraic_structures/operations_of_rings
 - id: multilinear_algebra
   en: tensor algebra
   ko: 텐서대수
