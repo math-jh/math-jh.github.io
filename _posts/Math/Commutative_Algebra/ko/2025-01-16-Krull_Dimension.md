@@ -10,8 +10,6 @@ sidebar:
 
 date: 2025-01-16
 weight: 16
-revising: true
-drift_needed: true
 
 ---
 
@@ -73,7 +71,7 @@ Noetherian ring $A$에 대하여, $\dim A =0$인 것과 $A$가 Artinian인 것�
 $\phi: A \rightarrow B$가 integral이라 하자. 그럼 $\ker\phi$를 포함하는 $A$의 임의의 prime ideal $\mathfrak{p}$에 대하여, $\mathfrak{p}=\phi^{-1} \mathfrak{q}$이도록 하는 $B$의 prime ideal $\mathfrak{q}$이 존재한다. 뿐만 아니라, $B$의 임의의 ideal $\mathfrak{b}$에 대하여 $\dim \mathfrak{b}=\dim \phi^{-1} \mathfrak{b}$이다.
 :::
 ::: 증명
-$\phi$가 integral이므로 이것이 유도하는 injective ring homomorphism $A/\ker\phi\hookrightarrow B$ 또한 integral extension이고, $\ker\phi$를 포함하는 $A$의 prime ideal들은 $A/\ker\phi$의 prime ideal들에 대응한다. 따라서 첫 번째 결과는 단순히 [§정수적 확장과 아이디얼, ⁋명제 1](/ko/math/commutative_algebra/lying_over_and_going_up#prop1)이다. 두 번째 결과의 경우, $\phi^{-1}\mathfrak{b}$가 합성 $A \rightarrow B \rightarrow B/\mathfrak{b}$의 kernel이므로 $A/\phi^{-1}\mathfrak{b}\hookrightarrow B/\mathfrak{b}$ 역시 integral extension이며, $\dim \mathfrak{b}\geq \dim \phi^{-1}\mathfrak{b}$는 [§정수적 확장과 아이디얼, ⁋명제 1](/ko/math/commutative_algebra/lying_over_and_going_up#prop1)의 두 번째 결과에 의해 성립하고, 반대방향 부등식은 [§정수적 확장과 아이디얼, ⁋따름정리 4](/ko/math/commutative_algebra/lying_over_and_going_up#cor4)에 의해 성립한다. 
+첫 번째 결과는 단순히 [§정수적 확장과 아이디얼, ⁋명제 1](/ko/math/commutative_algebra/lying_over_and_going_up#prop1)이다. 두 번째 결과의 경우, $\phi^{-1}\mathfrak{b}$가 합성 $A \rightarrow B \rightarrow B/\mathfrak{b}$의 kernel이므로 $A/\phi^{-1}\mathfrak{b}\hookrightarrow B/\mathfrak{b}$ 역시 integral extension이며, $\dim \mathfrak{b}\geq \dim \phi^{-1}\mathfrak{b}$는 [§정수적 확장과 아이디얼, ⁋명제 1](/ko/math/commutative_algebra/lying_over_and_going_up#prop1)의 두 번째 결과에 의해 성립하고, 반대방향 부등식은 [§정수적 확장과 아이디얼, ⁋따름정리 4](/ko/math/commutative_algebra/lying_over_and_going_up#cor4)에 의해 성립한다. 
 :::
 
 이제 우리는 관심을 돌려 1차원에서 일어나는 일들을 살펴본다. 그 전에 다소 기술적인 다음의 정의를 내린다.
