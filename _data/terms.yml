@@ -11379,6 +11379,13 @@ L:
   defs:
   - label: '[스킴] §완전교차'
     url: /ko/math/scheme_theory/complete_intersections
+- id: local_dimension
+  en: local dimension
+  ko: 국소차원
+  primary: en
+  defs:
+  - label: '[스킴] §매끄러운 사상과 에탈 사상'
+    url: /ko/math/scheme_theory/smooth_and_etale_morphisms
 - id: local_extremum
   en: local extremum
   ko: 극값
@@ -15921,6 +15928,13 @@ R:
   defs:
   - label: '[가환대수학] §정칙성의 호몰로지 판정'
     url: /ko/math/commutative_algebra/homological_criterion_for_regularity#def5
+- id: regular_scheme
+  en: regular scheme
+  ko: 정칙스킴
+  primary: en
+  defs:
+  - label: '[스킴] §매끄러운 사상과 에탈 사상'
+    url: /ko/math/scheme_theory/smooth_and_etale_morphisms
 - id: regular_sequence
   en: regular sequence
   ko: 정칙렬
