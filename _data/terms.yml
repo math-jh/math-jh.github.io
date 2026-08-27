@@ -10505,6 +10505,13 @@ L:
     id: indeterminate_form
   - label: Derivative
     id: derivative
+- id: lagrange_interpolation
+  en: Lagrange interpolation
+  ko: 라그랑주 보간
+  primary: en
+  defs:
+  - label: '[정수론] §중국인의 나머지 정리'
+    url: /ko/math/number_theory/chinese_remainder_theorem
 - id: lagrange_multiplier
   en: Lagrange multiplier
   ko: 라그랑주 승수
@@ -12189,6 +12196,13 @@ M:
   defs:
   - label: '[대수적 위상수학] §Acyclic models theorem'
     url: /ko/math/algebraic_topology/acyclic_models_theorem
+- id: modular_inverse
+  en: modular inverse
+  ko: 곱셈 역원
+  primary: ko
+  defs:
+  - label: '[정수론] §일차 합동식'
+    url: /ko/math/number_theory/linear_congruences
 - id: module
   en: module
   ko: 가군
