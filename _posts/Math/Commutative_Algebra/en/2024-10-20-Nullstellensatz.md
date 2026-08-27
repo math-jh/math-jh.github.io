@@ -10,28 +10,29 @@ sidebar:
 
 date: 2024-10-20
 weight: 10
-translated_at: 2026-08-27T16:47:46+00:00
+translated_at: 2026-08-27T20:45:05+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-08-27T20:45:05+00:00
 ---
-## The Jacobson Radical
+## Jacobson Rings
 
-We have seen that for a ring $A$ and an arbitrary ideal $\mathfrak{a}$, the following identity
+We have seen that for a ring $A$ and an arbitrary ideal $\mathfrak{a}$, the identity
 
 $$\sqrt{\mathfrak{a}}=\bigcap_\text{\scriptsize$\mathfrak{p}$ prime containing $\mathfrak{a}$} \mathfrak{p}$$
 
-holds. ([§Properties of Localization, ⁋Corollary 8](/en/math/commutative_algebra/properties_of_localization#cor8)) In particular, if $\mathfrak{a}$ is a prime ideal, it is natural that $\mathfrak{p}=\sqrt{\mathfrak{p}}$ should hold. More generally, we define the following.
+holds. ([§Properties of Localization, ⁋Corollary 8](/en/math/commutative_algebra/properties_of_localization#cor8)) In particular, if $\mathfrak{a}$ is a prime ideal, then $\mathfrak{p}=\sqrt{\mathfrak{p}}$ should naturally hold. More generally, we define the following.
 
 ::: Definition 1
-An arbitrary ideal $\mathfrak{a}$ of a ring $A$ is said to be a *radical ideal* if $\mathfrak{a}=\sqrt{\mathfrak{a}}$ holds. 
+An ideal $\mathfrak{a}$ of a ring $A$ is called a *radical ideal* if $\mathfrak{a}=\sqrt{\mathfrak{a}}$ holds.
 :::
 
-Thus, in a word, the observation above says that every prime ideal is radical. There is a somewhat trivial aspect to the proof of this observation; had we considered, instead of the intersection of prime ideals containing $\mathfrak{p}$, the intersection of *maximal* ideals containing $\mathfrak{p}$ (in a manner similar to [§Integral Extensions, §§Nakayama's Lemma](/en/math/commutative_algebra/integral_extension#nakayamas-lemma)), this observation would not have been so trivial, and indeed it does not hold. For instance, any local ring that has a prime ideal which is not a maximal ideal, such as $\mathbb{Z}_{(2)}$, would be a counterexample. 
+In other words, the observation above says that every prime ideal is radical. The proof of this observation is more or less trivial; however, had we considered, instead of the intersection of the prime ideals containing $\mathfrak{p}$, the intersection of the *maximal* ideals containing $\mathfrak{p}$ (in a manner similar to [§Integral Extensions, §§Nakayama's Lemma](/en/math/commutative_algebra/integral_extension#nakayamas-lemma)), the observation would be far from trivial, and indeed it does not hold. For instance, any local ring possessing a prime ideal that is not maximal, such as $\mathbb{Z}_{(2)}$, gives a counterexample.
 
 ::: Definition 2
-A ring $A$ is said to be a *Jacobson ring* if every prime ideal is expressed as an intersection of maximal ideals.
+A ring $A$ is called a *Jacobson ring* if every prime ideal is an intersection of maximal ideals.
 :::
 
-Then the following holds.
+The following then holds.
 
 ::: Lemma 3 (Rabinowitch)
 For a ring $A$, the following are equivalent.
@@ -40,13 +41,13 @@ For a ring $A$, the following are equivalent.
 2. For a prime ideal $\mathfrak{p}$ of $A$, if there exists $a\in A/\mathfrak{p}$ such that $(A/\mathfrak{p})[a^{-1}]$ is a field, then $A/\mathfrak{p}$ is a field.
 :::
 ::: Proof
-First, suppose that $A$ is Jacobson. Then it is also clear from the definition that its quotient $A/ \mathfrak{p}$ is Jacobson. Meanwhile, by [\[Algebraic Structures\] §Field of Fractions, ⁋Proposition 9](/en/math/algebraic_structures/field_of_fractions#prop9), $A/\mathfrak{p}$ is an integral domain, and since $(0)$ is a prime ideal in an integral domain, we can express $(0)$ as an intersection of maximal ideals. Now, by [§Localization, ⁋Proposition 8](/en/math/commutative_algebra/localization#prop8), there is a one-to-one correspondence between the prime ideals of $(A/\mathfrak{p})[a^{-1}]$ and the prime ideals of $A/\mathfrak{p}$ not containing $a$; since by assumption the only prime ideal of $(A/\mathfrak{p})[a^{-1}]$ is $0$, the only prime ideal of $A/\mathfrak{p}$ not containing $a$ is also $0$. That is, every nonzero prime ideal of $A/\mathfrak{p}$ must contain $a$. However, if such a prime ideal exists, then since $(0)$ is not a maximal ideal, every maximal ideal of $A/\mathfrak{p}$ is nonzero and therefore all of them contain $a$. Meanwhile,
+First, suppose that $A$ is Jacobson. Then its quotient $A/ \mathfrak{p}$ is also Jacobson, which is immediate from the definition. Meanwhile, by [\[Algebraic Structures\] §Field of Fractions, ⁋Proposition 9](/en/math/algebraic_structures/field_of_fractions#prop9), $A/\mathfrak{p}$ is an integral domain, and since $(0)$ is a prime ideal in an integral domain, we can express $(0)$ as an intersection of maximal ideals. Now, by [§Localization, ⁋Proposition 8](/en/math/commutative_algebra/localization#prop8), there is a one-to-one correspondence between the prime ideals of $(A/\mathfrak{p})[a^{-1}]$ and the prime ideals of $A/\mathfrak{p}$ not containing $a$; since by assumption the only prime ideal of $(A/\mathfrak{p})[a^{-1}]$ is $0$, the only prime ideal of $A/\mathfrak{p}$ not containing $a$ is also $0$. In other words, every nonzero prime ideal of $A/\mathfrak{p}$ must contain $a$. But if such a prime ideal exists, then $(0)$ is not a maximal ideal, so every maximal ideal of $A/\mathfrak{p}$ is nonzero and therefore contains $a$. Meanwhile,
 
 $$(0)=\bigcap_\text{\scriptsize$\mathfrak{m}$ maximal} \mathfrak{m}$$
 
-and hence $a=0$, a contradiction. 
+and hence $a=0$, a contradiction.
 
-Conversely, let us assume the second condition and show the first. That is, we fix a prime ideal $\mathfrak{p}$ of $A$, and letting $\mathfrak{P}$ denote the intersection of all maximal ideals containing $\mathfrak{p}$, we must show that $\mathfrak{p}=\mathfrak{P}$. Suppose, contrary to the conclusion, that there exists some element $a\in \mathfrak{P}\setminus \mathfrak{p}$. Then by [\[Set Theory\] §Axiom of Choice, ⁋Theorem 4](/en/math/set_theory/axiom_of_choice#thm4), there exists a prime ideal $\mathfrak{q}$ that is maximal among the prime ideals containing $\mathfrak{p}$ but not containing $a$. By definition $a\not\in \mathfrak{q}$, so $\mathfrak{q}$ is not a maximal ideal, and therefore $A/\mathfrak{q}$ is not a field. However, in $A[a^{-1}]$, $\mathfrak{q}$ must be a maximal ideal by definition, which contradicts the second condition; hence we must have $\mathfrak{p}=\mathfrak{P}$. 
+Conversely, let us assume the second condition and prove the first. That is, we fix a prime ideal $\mathfrak{p}$ of $A$, and, writing $\mathfrak{P}$ for the intersection of all maximal ideals containing $\mathfrak{p}$, we must show that $\mathfrak{p}=\mathfrak{P}$. Suppose, contrary to the conclusion, that there exists some element $a\in \mathfrak{P}\setminus \mathfrak{p}$. Then by [\[Set Theory\] §Axiom of Choice, ⁋Theorem 4](/en/math/set_theory/axiom_of_choice#thm4), there exists a prime ideal $\mathfrak{q}$ that is maximal among the prime ideals containing $\mathfrak{p}$ but not containing $a$. Since $a\not\in \mathfrak{q}$ by definition, $\mathfrak{q}$ is not a maximal ideal, and therefore $A/\mathfrak{q}$ is not a field. However, in $A[a^{-1}]$ the ideal $\mathfrak{q}$ must be maximal by construction, which contradicts the second condition; hence we must have $\mathfrak{p}=\mathfrak{P}$.
 :::
 
 ## The Nullstellensatz
@@ -59,78 +60,76 @@ Let a Jacobson ring $A$ and a finitely generated $A$-algebra $E$ be given. Then 
 ::: Proof
 We divide the proof into three steps.
 
-1. First, consider the case where $A=\mathbb{K}$ and $E=\mathbb{K}[\x]$. Then $E$ is a principal ideal domain; in particular, every nonzero prime ideal of $E$ is generated by an irreducible monic polynomial. From this we see that no nonzero prime ideal can be contained in another prime ideal, so we know that every nonzero prime ideal of $E$ is maximal; such an ideal cannot contain $1\in \mathbb{K}$, so its intersection with $A=\mathbb{K}$ must be $(0)$. In this case, $E/\mathfrak{n}$ is a $\mathbb{K}$-vector space of dimension equal to the degree of the irreducible polynomial defining $\mathfrak{n}$. Finally, to show that $(0)$ is the intersection of maximal ideals, it suffices to use the argument that $E=\mathbb{K}[\x]$ has infinitely many irreducible polynomials, and since the degree of a polynomial is always finite, the only polynomial having all of them as factors is $0$. Here, the infinitude of irreducible polynomials in $E$ can be shown by following Euclid's proof of the infinitude of primes verbatim.
-2. For the next step, consider an arbitrary Jacobson ring $A$ and an $A$-algebra $E$ generated by a single element; to show that $E$ is Jacobson, let us show that the second condition of [Lemma 3](#lem3) holds. That is, our goal in this step is to prove the following proposition.
-    > Let a Jacobson ring $A$ be given, and let an $A$-algebra $E$ generated by a single element be given. If, for a fixed prime ideal $\mathfrak{q}\subseteq E$, one can find a nonzero $x\in E/\mathfrak{q}$ such that $(E/\mathfrak{q})[x^{-1}]$ is a field, then $E/\mathfrak{q}$ is also a field.
+1. First, consider the case where $A=\mathbb{K}$ and $E=\mathbb{K}[\x]$. Then $E$ is a principal ideal domain; in particular, every nonzero prime ideal of $E$ is generated by an irreducible monic polynomial. It follows that no nonzero prime ideal can be contained in another prime ideal, so every nonzero prime ideal of $E$ is maximal; such an ideal cannot contain $1\in \mathbb{K}$, so its intersection with $A=\mathbb{K}$ must be $(0)$. In this case, $E/\mathfrak{n}$ is a $\mathbb{K}$-vector space whose dimension equals the degree of the irreducible polynomial defining $\mathfrak{n}$. Finally, to show that $(0)$ is an intersection of maximal ideals, we use the fact that $E=\mathbb{K}[\x]$ has infinitely many irreducible polynomials: since the degree of a polynomial is always finite, the only polynomial having all of them as factors is $0$. The infinitude of irreducible polynomials in $E$ is proved by mimicking Euclid's proof of the infinitude of the primes.
+2. For the next step, consider an arbitrary Jacobson ring $A$ and an $A$-algebra $E$ generated by a single element; to show that $E$ is Jacobson, we verify that the second condition of [Lemma 3](#lem3) holds. In other words, our goal in this step is to prove the following proposition.
+    > Let $A$ be a Jacobson ring, and let $E$ be an $A$-algebra generated by a single element. If, for a fixed prime ideal $\mathfrak{q}\subseteq E$, there exists a nonzero $x\in E/\mathfrak{q}$ such that $(E/\mathfrak{q})[x^{-1}]$ is a field, then $E/\mathfrak{q}$ is also a field.
 
-    Now, since $E'=E/\mathfrak{q}$ is also an $A$-algebra generated by a single element, the proposition above is the same as showing the following proposition.
-    > Let a Jacobson ring $A$ be given, and suppose that an $A$-algebra $E'$ generated by a single element is an integral domain. If one can find a nonzero $x\in E'$ such that $E'[x^{-1}]$ is a field, then $E'$ is also a field.
+    Since $E'=E/\mathfrak{q}$ is again an $A$-algebra generated by a single element, the proposition above amounts to showing the following.
+    > Let $A$ be a Jacobson ring, and suppose that an $A$-algebra $E'$ generated by a single element is an integral domain. If there exists a nonzero $x\in E'$ such that $E'[x^{-1}]$ is a field, then $E'$ is also a field.
 
-    In this process of taking the quotient, $A$ is replaced by $A'=A/(A\cap \mathfrak{q})$, which is again a Jacobson ring; consequently, what we must show is the following proposition.
-    > Suppose that an integral domain $A'$ is Jacobson, and that an $A'$-algebra $E'$ generated by a single element is an integral domain containing $A'$. If one can find a nonzero $x\in E'$ such that $E'[x^{-1}]$ is a field, then $E'$ is also a field.
+    In taking this quotient, $A$ is replaced by $A'=A/(A\cap \mathfrak{q})$, which is again a Jacobson ring; consequently, what we must ultimately show is the following proposition.
+    > Suppose that an integral domain $A'$ is Jacobson, and that an $A'$-algebra $E'$ generated by a single element is an integral domain containing $A'$. If there exists a nonzero $x\in E'$ such that $E'[x^{-1}]$ is a field, then $E'$ is also a field.
 
-    To this end, we show that under the above assumptions $A'$ must be a field and $E'$ is a finite extension of $A'$. In the proposition above, since $E'$ is an $A'$-algebra generated by a single element, we can write $E'=A'[\x]/\mathfrak{q}$. First, let us show that $\mathfrak{q}\neq 0$. Suppose, contrary to the conclusion, that $\mathfrak{q}=0$, and that there exists some $x\in E'/(0)=A'[\x]$ such that $E'[x^{-1}]=A'[\x][x^{-1}]$ is a field. Letting $K'=\Frac(A')$, by this assumption $K'[\x][x^{-1}]$ is also a field. However, since $K'[\x]$ is Jacobson by the first result, $K'[\x]$ must be a field, which is a contradiction. Therefore we must have $\mathfrak{q}\neq 0$, and $E'[x^{-1}]=K'[\x]/\mathfrak{q}K'[\x]$ is a finite dimensional extension of $K'$.  
-    Now suppose that $p(\x)\in \mathfrak{q}$ satisfies the following equation
+    To prove this, we show that under these assumptions $A'$ must be a field and that $E'$ is a finite extension of $A'$. Since $E'$ is an $A'$-algebra generated by a single element, we may write $E'=A'[\x]/\mathfrak{q}$. We first show that $\mathfrak{q}\neq 0$. Suppose for contradiction that $\mathfrak{q}=0$ and that there exists some $x\in E'/(0)=A'[\x]$ for which $E'[x^{-1}]=A'[\x][x^{-1}]$ is a field. With $K'=\Frac(A')$, this assumption implies that $K'[\x][x^{-1}]$ is also a field. But $K'[\x]$ is Jacobson by the first step, so $K'[\x]$ itself must be a field, which is a contradiction. Therefore $\mathfrak{q}\neq 0$, and $E'[x^{-1}]=K'[\x]/\mathfrak{q}K'[\x]$ is a finite-dimensional extension of $K'$.
+    Now suppose that $p(\x)\in \mathfrak{q}$ satisfies the equation
 
     $$p(\alpha)=p_n\alpha^n+\cdots+p_0=0$$
 
-    in $E'$. Here $\alpha$ is the generator of $E'$ as an $A'$-algebra. Then from the equation above, $E'[p_n^{-1}]$ is an integral $A'[p_n^{-1}]$-algebra. Meanwhile, the $x$ defined above must also satisfy some polynomial
+    in $E'$. Here $\alpha$ is the generator of $E'$ as an $A'$-algebra. From this equation, $E'[p_n^{-1}]$ is an integral $A'[p_n^{-1}]$-algebra. Meanwhile, the element $x$ above must also satisfy some polynomial equation
 
     $$q(x)=q_mx^m+\cdots+q_0=0$$
 
-    and since $E'$ is an integral domain, we may assume without loss of generality that $q_0\neq 0$. Then, from the monic polynomial
+    and since $E'$ is an integral domain, we may assume without loss of generality that $q_0\neq 0$. The monic polynomial
 
     $$\left(\frac{1}{x}\right)^m+\frac{q_1}{q_0}\left(\frac{1}{x}\right)^{m-1}+\cdots+\frac{q_m}{q_0}=0$$
 
-    we know that $E'[x^{-1}]$ is an integral $A'[(p_nq_0)^{-1}]$-algebra. Now, from [§Integral Extensions and Ideals, ⁋Corollary 3](/en/math/commutative_algebra/lying_over_and_going_up#cor3), $A'[(p_nq_0)^{-1}]$ is a field, and since $A'$ is Jacobson by assumption, $A'$ is a field by [Lemma 3](#lem3). Therefore $E'$ is an integral $A'$-algebra, and again from [§Integral Extensions and Ideals, ⁋Corollary 3](/en/math/commutative_algebra/lying_over_and_going_up#cor3) we know that $E'$ is a field. 
-3. The general case follows by induction on the number of generators, using the second result. 
+    then shows that $E'[x^{-1}]$ is an integral $A'[(p_nq_0)^{-1}]$-algebra. Now, by [§Integral Extensions and Ideals, ⁋Corollary 3](/en/math/commutative_algebra/lying_over_and_going_up#cor3), $A'[(p_nq_0)^{-1}]$ is a field, and since $A'$ is Jacobson by assumption, [Lemma 3](#lem3) implies that $A'$ is a field. Hence $E'$ is an integral $A'$-algebra, and again by [§Integral Extensions and Ideals, ⁋Corollary 3](/en/math/commutative_algebra/lying_over_and_going_up#cor3) we conclude that $E'$ is a field.
+3. The general case follows from the second step by induction on the number of generators.
 :::
 
-In particular, consider the case where $A=\mathbb{K}$ and $E=\mathbb{K}[\x_1,\ldots, \x_n]$. Then for an arbitrary 
+In particular, consider the case where $A=\mathbb{K}$ and $E=\mathbb{K}[\x_1,\ldots, \x_n]$. For an arbitrary
 
 $$a=(a_1,\ldots, a_n)\in \mathbb{K}^n$$
 
-if we define the ideal $\mathfrak{m}_a$ by the following expression
+define the ideal $\mathfrak{m}_a$ by
 
 $$\mathfrak{m}_a=(\x_1-a_1,\ldots, \x_n-a_n)$$
 
-then from the isomorphism given by evaluation
+then the isomorphism given by evaluation
 
 $$\ev_a:\mathbb{K}[\x_1,\ldots, \x_n]/\mathfrak{m}_a\rightarrow \mathbb{K}$$
 
-we know that $\mathfrak{m}_a$ is a maximal ideal. 
+shows that $\mathfrak{m}_a$ is a maximal ideal.
 
-Moreover, if $\mathbb{K}$ is an algebraically closed field, then every maximal ideal of $E$ is of this form. First, for an arbitrary maximal ideal $\mathfrak{n}$ of $E$, $E/\mathfrak{n}$ is an algebraic extension of $\mathbb{K}/(\mathfrak{n}\cap \mathbb{K})=\mathbb{K}$; but if $\mathbb{K}$ is algebraically closed, the only such extension is $\mathbb{K}$ itself, and therefore we must have $E/\mathfrak{n}\cong \mathbb{K}$. Meanwhile, letting $a_i$ denote the element of $\mathbb{K}$ to which each $\x_i$ is sent under the canonical surjection $E \rightarrow E/\mathfrak{n}\cong \mathbb{K}$, we have $\mathfrak{m}_a\subseteq \mathfrak{n}$, and now the maximality of $\mathfrak{m}_a$ yields the desired result. 
+Moreover, if $\mathbb{K}$ is an algebraically closed field, then every maximal ideal of $E$ is of this form. Indeed, for any maximal ideal $\mathfrak{n}$ of $E$, the quotient $E/\mathfrak{n}$ is an algebraic extension of $\mathbb{K}/(\mathfrak{n}\cap \mathbb{K})=\mathbb{K}$; but if $\mathbb{K}$ is algebraically closed, the only such extension is $\mathbb{K}$ itself, so we must have $E/\mathfrak{n}\cong \mathbb{K}$. If we let $a_i$ denote the element of $\mathbb{K}$ to which each $\x_i$ is sent under the canonical surjection $E \rightarrow E/\mathfrak{n}\cong \mathbb{K}$, then $\mathfrak{m}_a\subseteq \mathfrak{n}$, and the maximality of $\mathfrak{m}_a$ now yields the desired result.
 
 Therefore, from [§Basic Notions, ⁋Proposition 11](/en/math/commutative_algebra/basic_notions#prop11), we obtain the following.
 
 ::: Lemma 5
-Let a field $\mathbb{K}$ be given. Then $\mathfrak{m}_a=(\x_1-a_1,\ldots, \x_n-a_n)$ is a maximal ideal of $\mathbb{K}[\x_1,\ldots, \x_n]$. Moreover, if $\mathbb{K}$ is algebraically closed, then there is a one-to-one correspondence between the maximal ideals of $\mathbb{K}[\x_1,\ldots,\x_n]/(f_1,\ldots, f_r)$ and the tuples $(x_1,\ldots, x_n)$ satisfying the following equation
+Let a field $\mathbb{K}$ be given. Then $\mathfrak{m}_a=(\x_1-a_1,\ldots, \x_n-a_n)$ is a maximal ideal of $\mathbb{K}[\x_1,\ldots, \x_n]$. Moreover, if $\mathbb{K}$ is algebraically closed, then there is a one-to-one correspondence between the maximal ideals of $\mathbb{K}[\x_1,\ldots,\x_n]/(f_1,\ldots, f_r)$ and the tuples $(x_1,\ldots, x_n)$ satisfying the equation
 
 $$f_1(x_1,\ldots, x_n)=\cdots=f_r(x_1,\ldots, x_n)=0$$
-
-. 
 :::
 
-A somewhat more traditional version of the Nullstellensatz is also obtained from this. To state it, consider the function that takes an ideal $\mathfrak{a}$ of $\mathbb{K}[\x_1,\ldots, \x_n]$ and produces the subset $Z(\mathfrak{a})$ of $\mathbb{K}^n$ given by
+A somewhat more traditional version of the Nullstellensatz also follows from this. To state it, consider the map sending an ideal $\mathfrak{a}$ of $\mathbb{K}[\x_1,\ldots, \x_n]$ to the subset $Z(\mathfrak{a})$ of $\mathbb{K}^n$ defined by
 
 $$Z(\mathfrak{a})=\{(a_1,\ldots, a_n)\in \mathbb{K}^n\mid \text{$f(a_1,\ldots, a_n)=0$ for all $f\in \mathfrak{a}$}\}$$
 
-and the function $I$ that takes a subset $S$ of $\mathbb{K}^n$ and produces the subset
+and the map $I$ sending a subset $S$ of $\mathbb{K}^n$ to the subset
 
 $$I(S)=\{f\in \mathbb{K}[\x_1,\ldots, \x_n]\mid\text{$f(a_1,\ldots, a_n)=0$ for all $(a_1,\ldots, a_n)\in S$}\}$$
 
-of $\mathbb{K}[\x_1,\ldots, \x_n]$. 
+of $\mathbb{K}[\x_1,\ldots, \x_n]$.
 
 ::: Proposition 6
-Let an algebraically closed field $\mathbb{K}$ and an ideal $\mathfrak{a}\subseteq \mathbb{K}[\x_1,\ldots, \x_n]$ be given. Then 
+Let an algebraically closed field $\mathbb{K}$ and an ideal $\mathfrak{a}\subseteq \mathbb{K}[\x_1,\ldots, \x_n]$ be given. Then
 
 $$I(Z(\mathfrak{a}))=\sqrt{\mathfrak{a}}$$
 
 holds.
 :::
 ::: Proof
-From [Lemma 5](#lem5), we know that the elements of $Z(\mathfrak{a})$ correspond one-to-one with the maximal ideals of $\mathbb{K}[\x_1,\ldots, \x_n]$ containing $\mathfrak{a}$. Therefore $I(Z(\mathfrak{a}))$ is the intersection of the maximal ideals of $\mathbb{K}[\x_1,\ldots, \x_n]$ containing $\mathfrak{a}$; since $\mathbb{K}[\x_1,\ldots, \x_n]$ is Jacobson by [Theorem 4](#thm4), this equals the intersection of the prime ideals of $\mathbb{K}[\x_1,\ldots, \x_n]$ containing $\mathfrak{a}$, which is exactly the right-hand side. 
+By [Lemma 5](#lem5), the elements of $Z(\mathfrak{a})$ are in one-to-one correspondence with the maximal ideals of $\mathbb{K}[\x_1,\ldots, \x_n]$ containing $\mathfrak{a}$. Hence $I(Z(\mathfrak{a}))$ is the intersection of the maximal ideals of $\mathbb{K}[\x_1,\ldots, \x_n]$ containing $\mathfrak{a}$; since $\mathbb{K}[\x_1,\ldots, \x_n]$ is Jacobson by [Theorem 4](#thm4), this equals the intersection of the prime ideals of $\mathbb{K}[\x_1,\ldots, \x_n]$ containing $\mathfrak{a}$, which is exactly the right-hand side.
 :::
 
 ---
