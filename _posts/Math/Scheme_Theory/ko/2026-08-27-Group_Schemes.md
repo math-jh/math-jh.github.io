@@ -110,24 +110,34 @@ $$(\ker \varphi)(T)=G(T)\times_{H(T)}S(T)=\{g\in G(T)\mid \varphi_T(g)=\epsilon_
 $S$ 위의 group scheme homomorphism $\varphi: G \rightarrow H$에 대하여, $H \rightarrow S$가 separated이면 $\ker \varphi$는 $G$의 closed subgroup scheme이다.
 :::
 ::: 증명
-먼저 closed embedding은 base change에 대해 보존된다. ([§닫힌 부분스킴, ⁋명제 3](/ko/math/scheme_theory/closed_subschemes#prop3)) 이제 $\pi:H\rightarrow S$를 structure morphism이라 하면 $\epsilon_H:S\rightarrow H$는 $\pi$의 절단이고, 따라서 diagonal morphism $\Delta_{H/S}:H\rightarrow H\times_S H$의 base change이다. $\pi$가 separated이므로 $\Delta_{H/S}$는 closed embedding이고, 따라서 $\epsilon_H$도 closed embedding이다. 다시 $\ker\varphi\rightarrow G$는 $\epsilon_H$를 $\varphi$를 따라 base change한 것이므로 closed embedding이다. 위에서 이미 $\ker\varphi$가 group scheme임을 확인하였으므로 이는 $G$의 closed subgroup scheme이다.
+먼저 closed embedding은 base change에 대해 보존된다. ([§닫힌 부분스킴, ⁋명제 3](/ko/math/scheme_theory/closed_subschemes#prop3)) 이제 $\pi:H\rightarrow S$를 structure morphism이라 하고, 다음의 diagram을 생각하자.
+
+{% diagram Math/Scheme_Theory/Group_Schemes-1.svg width="11.23em" alt="section_as_base_change" %}
+
+여기서 $\epsilon_H$가 $\pi$의 section이므로 $\pi\circ\epsilon_H=\id_S$이고, 따라서
+
+$$(\epsilon_H\circ\pi,\id_H)\circ\epsilon_H=(\epsilon_H\circ\pi\circ\epsilon_H,\epsilon_H)=(\epsilon_H,\epsilon_H)=\Delta_{H/S}\circ\epsilon_H$$
+
+이므로 이 사각형은 commute한다. 뿐만 아니라, 임의의 scheme $T$와 morphism $a,b:T\rightarrow H$에 대하여
+
+$$(\epsilon_H\circ\pi,\id_H)\circ a=\Delta_{H/S}\circ b \iff(\epsilon_H\circ\pi\circ a,a)=(b,b) \iff a=b=\epsilon_H\circ\pi\circ a$$
+
+이므로 $a=b=\epsilon_H\circ t$이도록 하는 $t$는 $\pi\circ a$로 유일하게 결정된다. 즉, 위 diagram은 은 Cartesian이며, 왼쪽의 $\epsilon_H$는 $\Delta_{H/S}$의 base change이다. 이제 $\pi$가 separated이므로 $\Delta_{H/S}$는 closed embedding이고, 따라서 $\epsilon_H$도 closed embedding이다. 다시 $\ker\varphi\rightarrow G$는 $\epsilon_H$를 $\varphi$를 따라 base change한 것이므로 closed embedding이다. 위에서 이미 $\ker\varphi$가 group scheme임을 확인하였으므로 이는 $G$의 closed subgroup scheme이다.
 :::
 
-Affine scheme 사이의 morphism은 항상 separated이므로 ([§값매김환, ⁋보조정리 5](/ko/math/scheme_theory/valuative_criteria#lem5)), affine base 위의 affine group scheme에 대해서는 [명제 5](#prop5)의 가정이 자동으로 성립한다. 가장 중요한 예는 $n$제곱 morphism $[n]:\mathbb{G}_m \rightarrow \mathbb{G}_m$, 곧 각각의 $T$에서 $a\mapsto a^n$인 homomorphism이다. 공역의 좌표를 $\y$로 적으면 이는 ring 수준에서 $\y\mapsto \x^n$에 대응하고, 항등원 morphism은 $\y\mapsto 1$인 counit에 대응하므로
+Affine scheme 사이의 morphism은 항상 separated이므로 ([§값매김환, ⁋보조정리 5](/ko/math/scheme_theory/valuative_criteria#lem5)), affine base 위의 affine group scheme에 대해서는 [명제 5](#prop5)의 가정이 자동으로 성립한다. 가장 중요한 예시 중 하나는 $n$제곱 morphism $(-)^n:\mathbb{G}_m \rightarrow \mathbb{G}_m$, 곧 각각의 $T$에서 $a\mapsto a^n$인 homomorphism이다. 공역의 좌표를 $\y$로 적으면 이는 ring 수준에서 $\y\mapsto \x^n$에 대응하고, 항등원 morphism은 $\y\mapsto 1$인 counit에 대응하므로
 
-$$\ker[n]=\Spec\left(\mathbb{Z}[\x,\x^{-1}]\otimes_{\mathbb{Z}[\y,\y^{-1}]}\mathbb{Z}\right)=\Spec \mathbb{Z}[\x,\x^{-1}]/(\x^n-1)=\Spec \mathbb{Z}[\x]/(\x^n-1)=\mu_n$$
+$$\ker(-)^n=\Spec\left(\mathbb{Z}[\x,\x^{-1}]\otimes_{\mathbb{Z}[\y,\y^{-1}]}\mathbb{Z}\right)=\Spec \mathbb{Z}[\x,\x^{-1}]/(\x^n-1)=\Spec \mathbb{Z}[\x]/(\x^n-1)=\mu_n$$
 
-이다. ([§올곱, ⁋보조정리 2](/ko/math/scheme_theory/fiber_products#lem2)) 여기에서 $\mathbb{Z}=\mathbb{Z}[\y,\y^{-1}]/(\y-1)$이므로 tensor product는 $\x^n-1$이 생성하는 ideal로 나눈 몫이 되고, 그 몫에서는 $\x$가 이미 가역이므로 localization을 떼어낼 수 있다. 곧 $\mu_n$은 $\mathbb{G}_m$의 closed subgroup scheme이다.
+이다. ([§올곱, ⁋보조정리 2](/ko/math/scheme_theory/fiber_products#lem2)) 여기에서 $\mathbb{Z}=\mathbb{Z}[\y,\y^{-1}]/(\y-1)$이므로 tensor product는 $\x^n-1$이 생성하는 ideal로 나눈 quotient가 되고, 여기에서는 $\x$가 이미 가역이므로 localization을 떼어낼 수 있다. 즉 $\mu_n$은 $\mathbb{G}_m$의 closed subgroup scheme이다.
 
-## Hopf algebra
+## 호프 대수
 
 이제 base와 group scheme 자신이 모두 affine인 경우를 보자. $G=\Spec A$라 하면 $\Spec$은 contravariant이므로 [정의 1](#def1)의 세 morphism $\mu_G,\epsilon_G,\iota_G$는 coordinate ring 위에서 방향이 뒤집힌 $\mathbb{K}$-algebra homomorphism
 
 $$\Delta:A\rightarrow A\otimes_\mathbb{K}A,\qquad \epsilon:A\rightarrow\mathbb{K},\qquad \iota:A\rightarrow A$$
 
-으로 나타난다. Group object의 결합법칙·항등원·역원 조건도 각각 coassociativity·counit·antipode 조건으로 뒤집히는데, 마침 이는 [\[범주론\] §모노이드 대상, ⁋정의 7](/ko/math/category_theory/monoid_objects#def7)의 Hopf monoid를 symmetric monoidal category $(\rMod{\mathbb{K}},\otimes_\mathbb{K},\mathbb{K})$에서 구현한 *Hopf algebra<sub>호프 대수</sub>*이다. ([\[범주론\] §모노이드 대상, ⁋예시 8](/ko/math/category_theory/monoid_objects#ex8)) 여기에서는 affine scheme의 coordinate ring만을 다루므로 $A$가 commutative인 경우로 제한하고, base scheme의 기호와 구별하기 위하여 antipode를 관례적인 $S$ 대신 $\iota$로 적는다.
-
-그럼 다음을 기대하는 것이 자연스럽다.
+으로 나타난다. Group object의 결합법칙·항등원·역원 조건도 각각 coassociativity·counit·antipode 조건으로 뒤집히는데, 우리는 마침 이러한 대상을 정의한 적이 있다. ([\[범주론\] §모노이드 대상, ⁋정의 7](/ko/math/category_theory/monoid_objects#def7)) 그럼 symmetric monoidal category $(\rMod{\mathbb{K}},\otimes_\mathbb{K},\mathbb{K})$의 Hopf monoid object를 *Hopf algebra<sub>호프 대수</sub>*라고 부르며, 우리가 다루는 경우에서는 $A$가 commutative ring이라 가정하면 충분하다. 그럼 다음을 기대하는 것이 자연스럽다.
 
 ::: 정리 6
 Ring $\mathbb{K}$에 대하여, $\Spec$은 commutative Hopf $\mathbb{K}$-algebra들의 category와 $\Spec \mathbb{K}$ 위의 affine group scheme들의 category 사이의 anti-equivalence를 준다. 이 대응 아래에서 $\Delta,\epsilon,\iota$는 각각 $\mu_G,\epsilon_G,\iota_G$에 대응한다.
@@ -136,31 +146,43 @@ Ring $\mathbb{K}$에 대하여, $\Spec$은 commutative Hopf $\mathbb{K}$-algebra
 [§아핀스킴, ⁋정리 13](/ko/math/scheme_theory/affine_schemes#thm13)에 의하여 commutative $\mathbb{K}$-algebra들과 $\Spec\mathbb{K}$ 위의 affine scheme들은 anti-equivalent이고, 이 대응은 tensor product와 $\mathbb{K}$를 각각 fiber product와 terminal object로 옮긴다. ([§올곱, ⁋보조정리 2](/ko/math/scheme_theory/fiber_products#lem2)) 따라서 [정의 1](#def1)의 데이터 $\mu_G,\epsilon_G,\iota_G$는 arrow를 뒤집으면 위의 데이터 $\Delta,\epsilon,\iota$가 된다. 이 동치가 합성과 항등사상을 보존하므로 group object의 세 공리는 각각 Hopf algebra의 세 공리로 옮겨지고, 같은 논리를 구조를 보존하는 morphism에 적용하면 주장한 anti-equivalence를 얻는다.
 :::
 
-[정리 6](#thm6)에 의하여 affine group scheme $G=\Spec A$의 $R$-point들의 group 구조는 $A$의 Hopf 구조로 명시된다. 곧 $G(R)=\Hom_{\mathbb{K}\text{-alg}}(A,R)$ 위에서 곱셈은 $g\ast h=\mu_R\circ(g\otimes h)\circ\Delta$, 항등원은 $\eta_R\circ\epsilon$, 역원은 $g\mapsto g\circ\iota$로 주어진다. 여기에서 $\mu_R:R\otimes_\mathbb{K}R\rightarrow R$은 곱셈이고 $\eta_R:\mathbb{K}\rightarrow R$은 구조사상이다. 이 공식들은 다음 절에서 representation을 comodule로 번역할 때 그대로 쓰인다.
+특히 affine group scheme $G=\Spec A$와 임의의 $\mathbb{K}$-algebra $B$에 대하여, $G$의 $B$-point들의 group $G(B)=\Hom_{\cAlg{\mathbb{K}}}(A,B)$의 구조는 $A$의 Hopf algebra structure로 완벽하게 설명할 수 있다. 즉, 곱셈은 $g\ast h=\mu_B\circ(g\otimes h)\circ\Delta$, 항등원은 $\eta_B\circ\epsilon$, 역원은 $g\mapsto g\circ\iota$로 정의하면 되고, 여기서 $\mu_B:B\otimes_\mathbb{K}B\rightarrow B$는 곱셈이고 $\eta_B:\mathbb{K}\rightarrow B$는 structure morphism이다.
 
-## Comodule과 representation
+## 군 스킴의 표현론
 
-[\[표현론\] §유한군의 표현론, ⁋명제 4](/ko/math/representation_theory/representations_of_finite_groups#prop4)에서 ordinary group $G$의 representation을 group algebra 위의 module, 곧 $G$-module로 해석하였다. Group scheme에서는 이 작용을 functorial하게 요구하여, 각 $R$-point가 $R$로 계수확장한 module 위에 작용하도록 한다.
+한편 group object를 다룰 때 유용한 도구는 표현론으로, 우리는 [\[표현론\] §유한군의 표현론, ⁋명제 4](/ko/math/representation_theory/representations_of_finite_groups#prop4)에서 ordinary group $G$의 representation을 group algebra 위의 module, 곧 $G$-module로 해석하였고, 이 관점은 Lie group의 representation에서도 유용하게 사용되었다. Group scheme에서도 이를 살펴보는 것이 타당한 일일 것이다.
+
+이를 scheme 위에서 intrinsic하게 서술할 수 있다. $S$ 위의 group scheme $G$와 $\mathcal{O}_S$-module $\mathcal{E}$가 주어졌을 때, group-valued functor
+
+$$\underline{\Aut}(\mathcal{E}):(\Sch_{/S})^\op\rightarrow\Grp,\qquad (f:T\rightarrow S)\longmapsto\Aut_{\mathcal{O}_T}(f^\ast\mathcal{E})$$
+
+를 생각하자. $G$의 $\mathcal{E}$ 위의 representation은 group-valued functor의 morphism $\varrho:\widetilde{h}_G\rightarrow\underline{\Aut}(\mathcal{E})$이다. 곧 임의의 test scheme $f:T\rightarrow S$에서 $G(T)$가 $f^\ast\mathcal{E}$에 작용하고, 이 작용이 $T$의 변화에 따른 pullback과 compatible한 것이다. 특히 $\mathcal{E}$가 finite locally free이면 $\underline{\Aut}(\mathcal{E})$는 general linear group scheme $\GL(\mathcal{E})$로 represent되므로, 이 representation은 group scheme homomorphism $G\rightarrow\GL(\mathcal{E})$와 같다. 일반적인 $\mathcal{E}$에 대해서는 이 functor가 represent되지 않을 수 있지만, 위의 정의는 그대로 성립한다.
+
+이제 $S=\Spec\mathbb{K}$이고 $\mathcal{E}=\widetilde{V}$인 경우를 보자. Affine test scheme $f:T=\Spec B\rightarrow S$에 대해서는
+
+$$f^\ast\mathcal{E}\cong\widetilde{V\otimes_\mathbb{K}B},\qquad \Aut_{\mathcal{O}_T}(f^\ast\mathcal{E})\cong\Aut_B(V\otimes_\mathbb{K}B)$$
+
+이므로, 위의 intrinsic한 정의를 affine test scheme에서 풀어 쓰면 다음과 같다.
 
 ::: 정의 7
-Ring $\mathbb{K}$ 위의 affine group scheme $G$와 $\mathbb{K}$-module $V$에 대하여, $G$의 $V$ 위로의 *linear representation*이란 각각의 $\mathbb{K}$-algebra $R$마다 group homomorphism
+Ring $\mathbb{K}$ 위의 affine group scheme $G$와 $\mathbb{K}$-module $V$에 대하여, $G$의 $V$ 위로의 *linear representation*이란 각각의 $\mathbb{K}$-algebra $B$마다 group homomorphism
 
-$$r_R: G(R) \rightarrow \Aut_R(V\otimes_\mathbb{K}R)$$
+$$\varrho_B: G(B) \rightarrow \Aut_B(V\otimes_\mathbb{K}B)$$
 
-이 주어지고 이것이 $R$에 대해 자연스러운 것이다. 곧 임의의 $\mathbb{K}$-algebra homomorphism $\phi: R \rightarrow R'$과 $g\in G(R)$에 대하여
+이 주어지고 이것이 $B$에 대해 자연스러운 것이다. 곧 임의의 $\mathbb{K}$-algebra homomorphism $\phi: B \rightarrow B'$과 $g\in G(B)$에 대하여
 
-$$r_{R'}(G(\phi)(g))\circ(\id_V\otimes\phi)=(\id_V\otimes\phi)\circ r_R(g)$$
+$$\varrho_{B'}(G(\phi)(g))\circ(\id_V\otimes\phi)=(\id_V\otimes\phi)\circ\varrho_B(g)$$
 
-이 성립하는 것이다. 두 representation $(V, r)$과 $(W, r')$ 사이의 *morphism*은 $\mathbb{K}$-linear map $u: V \rightarrow W$로서, 각각의 $R$과 $g\in G(R)$에 대하여 $r'_R(g)\circ(u\otimes\id_R)=(u\otimes\id_R)\circ r_R(g)$인 것이다.
+이 성립하는 것이다. 두 representation $(V, \varrho)$와 $(W, \varrho')$ 사이의 *morphism*은 $\mathbb{K}$-linear map $u: V \rightarrow W$로서, 각각의 $B$와 $g\in G(B)$에 대하여 $\varrho'_B(g)\circ(u\otimes\id_B)=(u\otimes\id_B)\circ\varrho_B(g)$인 것이다.
 :::
 
-이 정의에서 $r_R(g)$는 $R$-선형 automorphism이므로, representation은 $V$의 $\mathbb{K}$-구조를 계수확장한 모든 층위에서 동시에 주어진 작용이다. 그런데 affine group scheme의 coordinate algebra는 contravariant functor $\Spec$을 통해 나타나므로, module의 작용 $A\otimes_\mathbb{K}V\rightarrow V$에 대응하는 map도 방향이 뒤집힌다. 이렇게 얻는 coaction $V\rightarrow V\otimes_\mathbb{K}A$가 comodule 구조이다.
+이 정의에서 $\varrho_B(g)$는 $B$-linear automorphism이므로, representation은 모든 $\mathbb{K}$-algebra $B$에 대하여 $V$의 $\mathbb{K}$-module structure에 extension of scalars를 취해 얻은 $V\otimes_\mathbb{K}B$ 위에 동시에 주어진 작용이다. 그런데 affine group scheme의 coordinate algebra는 contravariant functor $\Spec$을 통해 나타나므로, module의 작용 $A\otimes_\mathbb{K}V\rightarrow V$에 대응하는 map도 방향이 뒤집힌다. 이렇게 얻는 coaction $V\rightarrow V\otimes_\mathbb{K}A$가 comodule 구조이다.
 
 ::: 정의 8
 Hopf $\mathbb{K}$-algebra $A$에 대하여, $A$-*comodule<sub>쌍대모듈</sub>*이란 $\mathbb{K}$-module $V$와 $\mathbb{K}$-linear map $\rho: V \rightarrow V\otimes_\mathbb{K}A$로서 다음 두 조건을 만족하는 것이다.
 
 1. $(\rho\otimes\id_A)\circ\rho=(\id_V\otimes\Delta)\circ\rho$.
-2. 동일시 $V\otimes_\mathbb{K}\mathbb{K}\cong V$ 아래에서 $(\id_V\otimes\epsilon)\circ\rho=\id_V$.
+2. Identification $V\otimes_\mathbb{K}\mathbb{K}\cong V$ 아래에서 $(\id_V\otimes\epsilon)\circ\rho=\id_V$.
 
 두 comodule 사이의 *morphism*은 $\mathbb{K}$-linear map $u: V \rightarrow W$로서 $\rho_W\circ u=(u\otimes\id_A)\circ\rho_V$인 것이다.
 :::
@@ -171,19 +193,19 @@ Hopf $\mathbb{K}$-algebra $A$에 대하여, $A$-*comodule<sub>쌍대모듈</sub>
 Ring $\mathbb{K}$ 위의 affine group scheme $G=\Spec A$와 $\mathbb{K}$-module $V$에 대하여, $G$의 $V$ 위로의 linear representation과 $V$ 위의 $A$-comodule 구조는 서로 일대일대응한다. 이 대응은 morphism까지 보존하여 두 category의 동치를 준다.
 :::
 ::: 증명
-[§아핀스킴, ⁋정리 13](/ko/math/scheme_theory/affine_schemes#thm13)에 의하여 $G(R)=\Hom_{\mathbb{K}\text{-alg}}(A, R)$이고, [정리 6](#thm6) 직후에 적은 대로 그 group 구조는 $g\ast h=\mu_R\circ(g\otimes h)\circ\Delta$, 항등원 $\eta_R\circ\epsilon$, 역원 $g\circ\iota$로 주어진다.
+[§아핀스킴, ⁋정리 13](/ko/math/scheme_theory/affine_schemes#thm13)에 의하여 임의의 $\mathbb{K}$-algebra $B$에 대해 $G(B)=\Hom_{\cAlg{\mathbb{K}}}(A, B)$이고, [정리 6](#thm6) 직후에 적은 대로 그 group 구조는 $g\ast h=\mu_B\circ(g\otimes h)\circ\Delta$, 항등원 $\eta_B\circ\epsilon$, 역원 $g\circ\iota$로 주어진다.
 
-Representation $\{r_R\}$이 주어졌다 하자. Universal element $\id_A\in G(A)$를 택하여 $\sigma=r_A(\id_A)$라 하고
+Representation $\{\varrho_B\}_B$가 주어졌다 하자. Universal element $\id_A\in G(A)$를 택하여 $\sigma=\varrho_A(\id_A)$라 하고
 
 $$\rho: V \rightarrow V\otimes_\mathbb{K}A;\qquad \rho(v)=\sigma(v\otimes 1)$$
 
-로 정의한다. 임의의 $g\in G(R)$은 $\mathbb{K}$-algebra homomorphism $g:A\rightarrow R$이고 $G(g)(\id_A)=g$이므로, 자연스러움에 의하여
+로 정의한다. 임의의 $g\in G(B)$는 $\mathbb{K}$-algebra homomorphism $g:A\rightarrow B$이고 $G(g)(\id_A)=g$이므로, 자연스러움에 의하여
 
-$$r_R(g)(v\otimes 1)=(\id_V\otimes g)(\rho(v))\tag{$\ast$}$$
+$$\varrho_B(g)(v\otimes 1)=(\id_V\otimes g)(\rho(v))\tag{$\ast$}$$
 
 를 얻으므로 representation 전체가 $\rho$ 하나로 복원된다. 이 식을 항등원 $\epsilon\in G(\mathbb{K})$과 두 universal element $a\mapsto a\otimes 1,1\otimes a$의 곱에 적용하면, group action의 항등원 조건과 결합법칙은 각각 $\rho$의 counit 조건과 coassociativity가 된다.
 
-거꾸로 comodule 구조 $\rho$가 주어지면 $(\ast)$의 우변으로 $r_R(g)$를 정의하고 $R$-linear하게 확장한다. Coassociativity와 counit 조건은 각각 $r_R(g)\circ r_R(h)=r_R(g\ast h)$와 $r_R(\eta_R\circ\epsilon)=\id$을 주며, antipode 조건에 의하여 $r_R(g\circ\iota)$가 $r_R(g)$의 inverse가 된다. 자연스러움도 $(\ast)$에서 바로 따라오므로 $\{r_R\}$은 representation이고, 두 구성이 서로 역인 것과 morphism 조건의 대응도 같은 식에서 따라온다.
+거꾸로 comodule 구조 $\rho$가 주어지면 $(\ast)$의 우변으로 $\varrho_B(g)$를 정의하고 $B$-linear map으로 확장한다. Coassociativity와 counit 조건은 각각 $\varrho_B(g)\circ\varrho_B(h)=\varrho_B(g\ast h)$와 $\varrho_B(\eta_B\circ\epsilon)=\id$을 주며, antipode 조건에 의하여 $\varrho_B(g\circ\iota)$가 $\varrho_B(g)$의 inverse가 된다. 자연스러움도 $(\ast)$에서 바로 따라오므로 $\{\varrho_B\}_B$는 representation이고, 두 구성이 서로 역인 것과 morphism 조건의 대응도 같은 식에서 따라온다.
 :::
 
 [정리 9](#thm9)는 affine group scheme의 표현론이 순수하게 대수적인 comodule의 이론으로 번역됨을 말한다. 가장 기본적인 경우를 계산해두자.
@@ -193,7 +215,7 @@ $\mathbb{K}$ 위의 $\mathbb{G}_m=\Spec \mathbb{K}[\x,\x^{-1}]$에 대하여, $\
 
 $$V=\bigoplus_{n\in \mathbb{Z}}V_n$$
 
-과 일대일대응한다. 실제로 $\rho(v)=\sum_n\rho_n(v)\otimes\x^n$으로 적으면 ($\rho_n: V \rightarrow V$는 $\mathbb{K}$-linear이고 각 $v$에 대해 유한히 많은 $n$을 제외하면 $0$이다), $\epsilon(\x^n)=1$이므로 counit 조건은 $\sum_n\rho_n=\id_V$이 되고, $\Delta(\x^n)=\x^n\otimes\x^n$이므로 coassociativity는 $\rho_m\circ\rho_n=0$ ($m\neq n$)과 $\rho_n\circ\rho_n=\rho_n$이 된다. 곧 $\{\rho_n\}$은 합이 항등사상인 직교 idempotent들이고, $V_n=\rho_n(V)$로 두면 $V=\bigoplus_nV_n$이다. 거꾸로 grading이 주어지면 $\rho(v)=\sum_nv_n\otimes\x^n$이 comodule 구조를 준다. $(\ast)$를 통해 대응하는 representation은, $u\in \mathbb{G}_m(R)=R^\times$가 $V_n\otimes_\mathbb{K}R$ 위에 $u^n$배로 작용하는 것이다.
+과 일대일대응한다. 실제로 $\rho(v)=\sum_n\rho_n(v)\otimes\x^n$으로 적으면 ($\rho_n: V \rightarrow V$는 $\mathbb{K}$-linear이고 각 $v$에 대해 유한히 많은 $n$을 제외하면 $0$이다), $\epsilon(\x^n)=1$이므로 counit 조건은 $\sum_n\rho_n=\id_V$이 되고, $\Delta(\x^n)=\x^n\otimes\x^n$이므로 coassociativity는 $\rho_m\circ\rho_n=0$ ($m\neq n$)과 $\rho_n\circ\rho_n=\rho_n$이 된다. 곧 $\{\rho_n\}$은 합이 항등사상인 직교 idempotent들이고, $V_n=\rho_n(V)$로 두면 $V=\bigoplus_nV_n$이다. 거꾸로 grading이 주어지면 $\rho(v)=\sum_nv_n\otimes\x^n$이 comodule 구조를 준다. $(\ast)$를 통해 대응하는 representation은, $u\in \mathbb{G}_m(B)=B^\times$가 $V_n\otimes_\mathbb{K}B$ 위에 $u^n$배로 작용하는 것이다.
 :::
 
 [예시 10](#ex10)의 $V_n$을 weight $n$의 부분이라 부르며, 이 분해는 torus의 작용을 다룰 때 표준적인 도구가 된다. Torus $\mathbb{G}_m^r$의 경우 같은 계산을 반복하면 grading이 $\mathbb{Z}^r$에 의해 매겨지며, 그 각각의 성분이 torus의 한 character에 대응한다.
@@ -218,7 +240,7 @@ $S$ 위의 group scheme $G$와 left action $\sigma: G\times_SP \rightarrow P$를
 1. $P \rightarrow S$는 faithfully flat이고 ([§평탄사상, ⁋정의 1](/ko/math/scheme_theory/flat_morphisms#def1)) locally of finite presentation이다. ([§스킴 사상의 성질들, ⁋정의 18](/ko/math/scheme_theory/properties_of_scheme_morphisms#def18))
 2. 작용과 사영이 유도하는 morphism
 
-   $$(\sigma, \operatorname{pr}_2): G\times_SP \rightarrow P\times_SP$$
+   $$(\sigma, \pr_2): G\times_SP \rightarrow P\times_SP$$
 
    이 isomorphism이다.
 
@@ -265,7 +287,7 @@ $S$ 위의 $G$-torsor $P$에 대하여 다음이 성립한다.
 [명제 14](#prop14)는 torsor를 $G$의 *form*으로 규정한다. 곧 torsor는 대역적으로는 $G$와 다를 수 있으나, 적당한 fppf covering으로 올라가면 언제나 $G$ 자신이 된다. 이 관점에서 torsor는 [§충실평탄하강, ⁋정의 4](/ko/math/scheme_theory/faithfully_flat_descent#def4)의 descent datum으로 기술되며, $G$가 affine인 경우 [§충실평탄하강, ⁋정리 12](/ko/math/scheme_theory/faithfully_flat_descent#thm12)에 의하여 그러한 데이터가 실제로 $S$ 위의 scheme을 산출한다. 자명하지 않은 torsor가 실제로 존재한다는 것은 다음 예시가 보여준다.
 
 ::: 예시 15
-1. $S=\Spec \mathbb{R}$, $P=\Spec \mathbb{C}$이라 하고, $G$를 $\mathbb{Z}/2$의 constant group scheme, 곧 두 개의 $S$의 복사본의 disjoint union $\Spec(\mathbb{R}\times\mathbb{R})$이라 하자. 이는 $G(T)$가 locally constant function $\lvert T\rvert \rightarrow \mathbb{Z}/2$들이 이루는 group이 되도록 하는 group scheme이며, $T$의 connected component들이 열려 있는 경우에는 이것이 component마다 $\mathbb{Z}/2$의 원소를 고르는 것과 같다. 복소켤레가 $\mathbb{R}$-algebra automorphism이므로, 한 복사본 위에서는 $\id_P$로 다른 복사본 위에서는 켤레로 정의하여 작용 $\sigma: G\times_SP \rightarrow P$를 얻는다. $\mathbb{C}$가 $\mathbb{R}$ 위의 rank $2$ free module이므로 $P \rightarrow S$는 faithfully flat이고 locally of finite presentation이다. 또 $G\times_SP=\Spec(\mathbb{C}\times\mathbb{C})$이고 $P\times_SP=\Spec(\mathbb{C}\otimes_\mathbb{R}\mathbb{C})$인데, 위의 $\sigma$가 $\sigma^\sharp(z)=(z,\bar z)$를 주므로 $(\sigma, \operatorname{pr}_2)$의 dual은
+1. $S=\Spec \mathbb{R}$, $P=\Spec \mathbb{C}$이라 하고, $G$를 $\mathbb{Z}/2$의 constant group scheme, 곧 두 개의 $S$의 복사본의 disjoint union $\Spec(\mathbb{R}\times\mathbb{R})$이라 하자. 이는 $G(T)$가 locally constant function $\lvert T\rvert \rightarrow \mathbb{Z}/2$들이 이루는 group이 되도록 하는 group scheme이며, $T$의 connected component들이 열려 있는 경우에는 이것이 component마다 $\mathbb{Z}/2$의 원소를 고르는 것과 같다. 복소켤레가 $\mathbb{R}$-algebra automorphism이므로, 한 복사본 위에서는 $\id_P$로 다른 복사본 위에서는 켤레로 정의하여 작용 $\sigma: G\times_SP \rightarrow P$를 얻는다. $\mathbb{C}$가 $\mathbb{R}$ 위의 rank $2$ free module이므로 $P \rightarrow S$는 faithfully flat이고 locally of finite presentation이다. 또 $G\times_SP=\Spec(\mathbb{C}\times\mathbb{C})$이고 $P\times_SP=\Spec(\mathbb{C}\otimes_\mathbb{R}\mathbb{C})$인데, 위의 $\sigma$가 $\sigma^\sharp(z)=(z,\bar z)$를 주므로 $(\sigma, \pr_2)$의 dual은
 
    $$\mathbb{C}\otimes_\mathbb{R}\mathbb{C} \rightarrow \mathbb{C}\times\mathbb{C};\qquad z\otimes w\mapsto (zw, \bar zw)$$
 
