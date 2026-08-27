@@ -18394,6 +18394,13 @@ S:
   defs:
   - label: '[범주론] §모노이드 범주'
     url: /ko/math/category_theory/monoidal_categories
+- id: symmetric_polynomial
+  en: symmetric polynomial
+  ko: 대칭다항식
+  primary: en
+  defs:
+  - label: '[다중선형대수학] §대칭텐서'
+    url: /ko/math/multilinear_algebra/symmetric_tensors
 - id: symmetric_power
   en: symmetric power
   ko: 대칭 거듭제곱
