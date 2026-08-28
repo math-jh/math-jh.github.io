@@ -1,0 +1,7 @@
+id: "c-20260828-107c4d"
+name: "Marvin"
+message: "멘션 테스트"
+date: "2026-08-28T10:20:20.619Z"
+mentions: ["c-20260828-3fd387"]
+notify: true
+lang: "ko"
