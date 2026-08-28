@@ -18,7 +18,7 @@ weight: 44
 
 ---
 
-관련 파일: [`workers/comments/src/`](https://github.com/math-jh/math-jh.github.io/tree/main/workers/comments/src), [`_includes/comments-providers/custom.html`](https://github.com/math-jh/math-jh.github.io/blob/main/_includes/comments-providers/custom.html), [`assets/js/custom/Comments.js`](https://github.com/math-jh/math-jh.github.io/blob/main/assets/js/custom/Comments.js), [`_plugins/comment_markdown.rb`](https://github.com/math-jh/math-jh.github.io/blob/main/_plugins/comment_markdown.rb), [`.github/workflows/comments-notify.yml`](https://github.com/math-jh/math-jh.github.io/blob/main/.github/workflows/comments-notify.yml), [커밋 d5c5489a](https://github.com/math-jh/math-jh.github.io/commit/d5c5489a)
+관련 파일: [`workers/comments/src/`](https://github.com/math-jh/math-jh.github.io/tree/main/workers/comments/src), [`_includes/comments-providers/custom.html`](https://github.com/math-jh/math-jh.github.io/blob/main/_includes/comments-providers/custom.html), [`assets/js/custom/Comments.js`](https://github.com/math-jh/math-jh.github.io/blob/main/assets/js/custom/Comments.js), [`_plugins/comment_markdown.rb`](https://github.com/math-jh/math-jh.github.io/blob/main/_plugins/comment_markdown.rb), [`.github/workflows/comments-notify.yml`](https://github.com/math-jh/math-jh.github.io/blob/main/.github/workflows/comments-notify.yml), [`_sass/_comments.scss`](https://github.com/math-jh/math-jh.github.io/blob/main/_sass/_comments.scss), [`scripts/comments/add_comment.rb`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/comments/add_comment.rb), [커밋 d5c5489a](https://github.com/math-jh/math-jh.github.io/commit/d5c5489a)
 {: .notice--info}
 
 [Giscus로 댓글 이전](/ko/llm_workshop/giscus_migration)에서 댓글은 GitHub Discussions로 갔다. 광고도 동의 배너도 없어졌고 사이드바 최근 댓글도 `gh auth token` 하나로 읽히게 됐지만, 그 대가로 댓글을 쓰려면 GitHub 계정으로 로그인해야 한다. 이 블로그가 개발 블로그라면 큰 문제가 아니겠지만, 수학 블로그를 방문하는 사람이 GitHub 계정을 모두 가지고 있을 것이라 생각하는 것은 비현실적이다.
@@ -41,7 +41,7 @@ export const COMMENT_FIELDS = new Set([
 ]);
 export const CONTROL_FIELDS = new Set(["turnstile_token", "honeypot", "elapsed_ms"]);
 export const COMMENT_ID_RE = /^c-\d{8}-[a-f0-9]{6}$/;
-export const THREAD_RE = /^(?:ko|en)__[a-z0-9_]{1,116}$/;
+export const THREAD_RE = /^(?:ko|en)__[A-Za-z0-9_-]{1,116}$/;
 ```
 {: data-filename="workers/comments/src/lib.js"}
 
@@ -100,25 +100,29 @@ try {
 
 {% raw %}
 ```liquid
-{%- assign _comment_key = page.url | remove_first: "/" | replace: "/", "__" | downcase -%}
+{%- assign _comment_key = page.url | remove_first: "/" | replace: "/", "__" -%}
 ```
 {: data-filename="_includes/comments-providers/custom.html"}
 {% endraw %}
 
 `/ko/math/field_theory/fields`가 `ko__math__field_theory__fields`가 된다. 이 값은 hidden 필드로 제출되므로 Worker가 그대로 믿으면 안 된다. 저장 경로가 `_data/comments/<key>/`인 이상, 키를 검사하는 정규식 하나가 저장소 임의 위치에 파일을 쓰는 것을 막는 유일한 방어선이다. 앞 절의 `THREAD_RE`가 그것이고, 실측에서 `thread=../../_config`는 400 `invalid_thread`로 떨어졌다.
 
-여기서 계약 충돌이 하나 나왔다. 댓글이 활성인 글 627개의 URL을 전수로 돌려 보니 `Jordan-Holder_theorem`의 ko/en 두 개가 허용 문자 `[a-z0-9_]`에 걸린다. permalink에 하이픈이 있어서다. codex는 정규식을 임의로 넓히는 대신(데이터 계약을 바꾸는 결정이라) 미통과 항목으로 남겨 보고했다. 지금 그 두 글에서 댓글을 제출하면 `invalid_thread`가 나온다. 고치는 방향은 URL을 바꾸거나 키 정규화 규칙을 넣는 것 둘 중 하나인데, 어느 쪽이든 이미 저장된 댓글이 없는 지금이 가장 싸다.
+허용 문자에서 계약 충돌이 하나 나왔다. 댓글이 활성인 글 627개의 URL을 전수로 돌려 보니 `Jordan-Holder_theorem`의 ko/en 두 개가 명세의 `[a-z0-9_]`에 걸린다. permalink에 하이픈이 있어서다. Codex는 정규식을 임의로 넓히지 않고(데이터 계약을 바꾸는 결정이다) 미통과 항목으로 보고했고, 사용자가 하이픈을 허용하는 쪽으로 정했다.
+
+같은 자리에서 두 번째 것이 나왔다. 명세의 키 공식에는 `downcase`가 있었는데, 이 블로그에는 permalink에 대문자가 있는 글이 25편이고 GitHub Pages는 대소문자를 구분한다. 키에서 URL을 되돌리는 쪽(알림 메일의 "댓글 보기" 링크와 PR 본문의 스레드 링크)이 접힌 소문자를 그대로 쓰므로 그 25편의 링크가 404가 된다. 실측하면 `/ko/math/linear_algebra/Jordan_canonical_form`은 200, 소문자판은 404다. 그래서 키에서 `downcase`를 빼 URL과 1:1이 되게 하고 허용 문자를 `[A-Za-z0-9_-]`로 넓혔다. 점과 슬래시가 여전히 없으므로 경로 조작 방어는 그대로다.
+
+이 규칙은 네 곳에 흩어져 있다. 키를 만드는 곳이 폼(Liquid)과 최근 댓글 플러그인, 검사하는 곳이 Worker의 `THREAD_RE`와 알림 payload 빌더(`scripts/comments/build_notify_payload.rb`)다. 만드는 두 곳이 어긋나면 사이드바에서 댓글이 조용히 사라지고, 검사하는 두 곳이 어긋나면 제출은 되는데 그 스레드가 생긴 뒤 알림 워크플로가 죽는다.
 
 ## 10ms 안에 드는 삭제용 암호
 
 익명이라는 것은 지울 권한을 증명할 수단이 계정 말고 따로 필요하다는 뜻이다. 사용자가 고른 것은 작성 시 필수로 받는 삭제용 암호다. 이메일은 선택이고, 이메일 없이 쓴 댓글도 다른 기기에서 암호만으로 지울 수 있다.
 
-라벨을 "비밀번호"로 두면 방문자가 평소 쓰는 것을 친다. 그래서 필드 이름을 "삭제용 암호"(EN `Deletion key`)로 하고 보조 문구를 붙였다.
+라벨을 "비밀번호"로 두면 방문자가 평소 쓰는 것을 친다. 필드 이름은 "암호"(EN `Password`) 한 단어이고, 무엇에 쓰는 암호이며 어디에 보관되는지는 폼이 아니라 댓글 제목 줄 오른쪽 끝의 안내(ⓘ) 안에 있다.
 
 ```yaml
-comment_form_password_label: "삭제용 암호"
-comment_form_password_help : "이 댓글을 지울 때만 씁니다. 평소 쓰는 비밀번호를 입력하지 마세요."
-comment_public_notice      : "댓글은 공개 저장소에 저장됩니다. 삭제하면 사이트에서 사라지지만 저장소 이력에는 남을 수 있습니다."
+comment_form_password_label: "암호"
+comment_public_notice      : "공개 저장소입니다. 댓글을 지워도 Git 히스토리에는 남습니다."
+comment_secret_notice      : "암호와 이메일은 암호화해 Cloudflare KV에만 보관합니다."
 ```
 {: data-filename="_data/ui-text.yml"}
 
@@ -177,21 +181,72 @@ if (hasDependents) {
 
 tombstone은 `deleted: true`와 구조 정보만 남고 이름과 본문이 사라진 파일이며, 렌더 쪽에서 "작성자가 삭제한 댓글입니다"로 나온다. 아직 머지되지 않은 댓글은 main에 파일이 없으므로 대신 PR을 닫고 브랜치를 지운다. 어느 경로든 KV의 `del:`·`sub:`·`fail:`을 함께 파기한다. 승인 흐름을 며칠 기다리게 하는 것이 더 나쁘므로 삭제만은 PR을 거치지 않고 main에 직접 커밋한다.
 
-마지막 계약 대조에서 하나가 걸렸다. Worker는 제출 응답에 서명된 삭제 토큰을 실어 주는데, 브라우저가 그것을 버리고 있었다. 제출 직후 마음이 바뀐 사람이 자기 PR을 닫을 방법이 UI에 없었다는 뜻이다. 성공 안내 문구 뒤에 그 토큰으로 가는 링크를 붙여 닫았다.
+마지막 계약 대조에서 하나가 걸렸다. Worker는 제출 응답에 서명된 삭제 토큰을 실어 주는데, 브라우저가 그것을 버리고 있었다. 제출 직후 마음이 바뀐 사람이 자기 PR을 닫을 방법이 UI에 없었다는 뜻이다. 성공 안내 문구 뒤에 그 토큰을 쥔 버튼을 붙였다.
+
+확인을 어디서 받을지는 처음에 Worker가 서빙하는 확인 페이지 한 장으로 잡혀 있었다. 메일 클라이언트가 링크를 미리 당겨 열어 댓글이 저절로 지워지는 사고를 막으려는 장치인데, 브라우저에서 이미 글을 보고 있는 사람까지 다른 도메인으로 넘겼다가 돌아오게 만든다. 사용자가 그 자리에서 처리하는 쪽으로 정해서, 페이지 안 댓글의 삭제와 승인 전 취소는 `<dialog>`를 띄우고 `fetch`로 끝낸다. 확인 페이지는 브라우저 문맥이 없는 메일 링크 전용으로 남았다.
 
 ```js
-function showSubmitted(deleteToken) {
-  showNotice(root.dataset.success, "success");
-  if (!deleteToken) return;
-  notice.appendChild(document.createTextNode(" "));
-  var link = document.createElement("a");
-  link.href = endpoint + "/v1/delete?t=" + encodeURIComponent(deleteToken);
-  link.textContent = root.dataset.pendingDelete;   // "승인 전 댓글 삭제"
-  link.rel = "nofollow";
-  notice.appendChild(link);
+function confirmAction(message) {
+  if (!confirmBox || typeof confirmBox.showModal !== "function") {
+    return Promise.resolve(window.confirm(message));
+  }
+  confirmMessage.textContent = message;
+  confirmBox.returnValue = "";
+  confirmBox.showModal();
+  return new Promise(function (resolve) {
+    confirmBox.addEventListener("close", function () {
+      resolve(confirmBox.returnValue === "confirm");
+    }, { once: true });
+  });
 }
 ```
 {: data-filename="assets/js/custom/Comments.js"}
+
+`<dialog>`의 form이 `method="dialog"`라 확인·취소 버튼이 각각 `returnValue`를 남기고 닫히고, Esc로 닫으면 빈 문자열이 되어 취소가 된다. `showModal`이 없는 브라우저에서는 `window.confirm`으로 내려간다.
+
+이 경로를 열면서 Worker에서 하나가 더 나왔다. 확인 페이지의 form은 Worker 자신에게 POST하는데, 브라우저가 그 요청에도 `Origin` 헤더를 붙인다. 허용 목록은 `math-jh.com`과 `preview.math-jh.com`뿐이라 확인 페이지가 자기 자신에게 막혀 `origin_denied`가 났다. same-origin을 먼저 통과시켜 풀었다. 삭제는 서명 토큰이나 암호와 `confirm`을 따로 요구하므로 이걸로 CSRF가 열리지는 않는다.
+
+문구 쪽에도 하나가 남아 있었다. 삭제에 실패하면 "댓글을 제출하지 못했습니다"가 떴다. `catch`가 제출용 문구를 그대로 쓰고 있었던 것인데, Worker는 이미 사유를 코드로 갈라 주고 있었으므로 옮기기만 하면 됐다. 암호 불일치, 5회 잠금, 없는 댓글, 삭제 실패가 각각 다른 문장을 받는다.
+
+## 수정 요청이 가는 comment-edit 브랜치
+
+댓글을 고치는 방법은 처음 판에 없었다. 넣을 때의 갈림길은 승인 흐름이다. 삭제는 암호로 인증하고 main에 직접 커밋하는데, 수정을 같은 경로에 두면 무해한 댓글로 승인을 받은 뒤 본문을 스팸으로 갈아치우는 길이 열린다. 사용자가 고른 것은 수정도 PR로 올리는 쪽이었고, 반영이 머지 시점까지 미뤄진다는 사실을 폼 안에 따로 적어 두라는 조건이 붙었다.
+
+`POST /v1/edit`는 삭제와 같은 암호, 같은 잠금 카운터(`fail:<id>`, 5회에 한 시간)를 쓴다. 본문 규칙은 신규 작성과 함수 하나를 공유한다. 한쪽만 고치면 수정 경로가 링크 상한과 스킴 검사를 우회하는 구멍이 되기 때문이다.
+
+브랜치 쪽에 함정이 있다. 같은 댓글을 두 번 고치면 `comment-edit/<id>`가 이미 존재한다.
+
+```js
+const created = await github(env, "/git/refs", { /* POST: 브랜치 생성 */ })
+  .catch((error) => {
+    if (error.status === 422) return null;   // 이미 있다: 그대로 이어 쓴다
+    throw error;
+  });
+const onBranch = await githubOrNull(env, `/contents/${contentPath(path)}?ref=${branch}`);
+await github(env, `/contents/${contentPath(path)}`, {
+  method: "PUT",
+  body: JSON.stringify({ /* ... */ sha: onBranch?.sha || previous._sha, branch })
+});
+```
+{: data-filename="workers/comments/src/github.js"}
+
+덮어쓸 blob의 sha가 브랜치 기준이어야 한다. main의 sha로 PUT하면 두 번째 수정이 409로 떨어진다. PR도 열려 있으면 새로 만들지 않고 재사용한다.
+
+삭제 쪽에도 한 줄이 붙었다. 수정 PR이 열린 채로 댓글이 지워지면 그 PR이 나중에 머지될 때 지운 댓글이 되살아난다. 그래서 삭제가 열려 있는 `comment-edit/<id>`를 같이 닫는다.
+
+## 폼을 거치지 않는 댓글
+
+사용자와 나를 방문자와 구분할 수단이 필요했다. 프론트엔드에 인증을 붙일 이유는 없으니 `_data`의 댓글 파일에 손으로 다는 키 하나로 끝냈다.
+
+```yaml
+role: "bot"     # owner | bot
+```
+
+라벨은 `_data/ui-text.yml`의 `comment_role_<role>`에서 온다. 역할을 하나 늘리는 데 드는 것은 그 키 하나이고, 정의가 없는 값은 배지 없이 조용히 넘어간다. Worker의 수정 경로가 이 필드를 보존하는지는 테스트로 고정해 뒀다. 파일을 다시 쓰면서 이 줄을 흘리면 배지가 에러 없이 사라진다.
+
+키를 손으로 단다는 것은 폼을 거치지 않고 댓글을 다는 경로가 따로 있다는 뜻이다. `scripts/comments/add_comment.rb`가 그 자리이고, `/reply-as-marvin` 스킬이 그 위를 감싼다. 스크립트가 보는 것은 스레드 키 형식, permalink를 쓰는 글이 실재하는지, 답글 대상이 루트인지, 멘션 대상이 살아 있는지, 그리고 tombstone을 쓸 자리인지다. 마지막 것은 참조가 하나도 없으면 거부하고 파일을 지우라고 한다.
+
+이 경로에는 KV `del:<id>`가 없다. 그래서 이렇게 단 댓글은 사이트의 수정·삭제 버튼이 듣지 않는다. 결함이 아니라 저장소 쓰기 권한이 곧 인증인 것이고, 지울 때는 파일을 지운다.
 
 ## 댓글 본문의 달러와 중괄호
 
@@ -232,6 +287,68 @@ end
 {: data-filename="_plugins/comment_markdown.rb"}
 
 이 결함은 단위 테스트가 아니라 합성 댓글을 실제 Jekyll 빌드에 태워 산출 HTML을 본 덕에 나왔다. 격리된 케이스만 통과시키고 실제 파일에서 깨지는 패턴은 이 저장소에 전례가 여러 번 있다.
+
+세 번째 달러 문제는 댓글 본문이 아니라 폼 아래 안내문에 있었다. "마크다운과 `$…$` 수식을 지원합니다"에서 달러가 보이지 않았다. 이 페이지에는 KaTeX auto-render가 `document.body` 전체에 걸려 있으니, 달러 사이를 수식으로 렌더하면서 구분자를 먹은 것이다. 본문의 수식은 계속 렌더돼야 하므로 그 문단 하나만 뺀다.
+
+```js
+renderMathInElement(document.body, {
+  delimiters: window.KATEX_DELIMITERS,
+  macros: window.KATEX_MACROS,
+  ignoredClasses: ["no-math"],
+  strict: false,
+  throwOnError: false
+});
+```
+{: data-filename="_includes/scripts.html"}
+
+스코프가 좁은지는 수학 글 한 편에서 KaTeX 스팬이 1596개 그대로 나오는 것으로 확인했다.
+
+## 상자를 걷어낸 댓글 조판
+
+접수 경로가 다 돌고 나서 사용자가 화면을 열어 보고 한 첫 말은 기능 얘기가 아니었다.
+
+> 말한대로 이게 우리 현재 블로그 컨셉과 얼마나 디자인이 잘 맞는지 모르겠다.
+
+맞지 않았다. 댓글 한 건이 `border-radius: .5rem` 짜리 틴트 상자였고 멘션은 알약이었다. 이 블로그의 나머지는 직각과 헤어라인으로 되어 있다. 아바타를 넣을 계획이 없는데 상자 안쪽 여백만 1rem 넘게 잡아먹고 있기도 했다. 그리고 섹션 제목 "댓글"이 그 아래 어떤 글자보다도 작았다. 테마 기본값이 그렇다.
+
+```scss
+.page__comments-title {
+  font-size: $type-size-6;   // 0.75em
+  text-transform: uppercase;
+}
+```
+{: data-filename="_sass/minimal-mistakes/_page.scss"}
+
+새 규칙은 상자를 하나도 두지 않는 것이다. 글과 댓글 사이는 이중선, 제목 아래는 헤어라인, 본문은 왼쪽 가장자리에 붙는다. 악센트는 brass 하나로 몰아 필수 표시, 역할 배지, 편집 중 표시, 기본 버튼 호버가 전부 거기서 나온다.
+
+구조를 괘선이 전부 지게 되니 스킨의 `$border-color`를 그대로 쓸 수 없었다. 라이트의 `#d7d2c5`는 종이 위에서 멀쩡하지만 다크의 `#20242d`는 `#0b0d12` 배경에 묻힌다. 상자가 있을 때는 선이 안 보여도 상자 모양이 남았는데, 이제는 입력란과 구분선이 통째로 사라진다. 잉크와 종이를 섞어 두 모드에서 같은 세기가 나오게 했다.
+
+```scss
+$comment-rule: mix($text-color, $background-color, 20%);
+```
+{: data-filename="_sass/_comments.scss"}
+
+라이트에서 `#c5c3bd`, 다크에서 `#37383a`가 된다. 라이트 쪽은 기존 헤어라인과 거의 같은 값이고 다크만 올라온다.
+
+답글은 처음에 좌측 세로 괘선으로 층을 표시했다.
+
+> ㄴ자로 이어진 선인 일단 마음에 들지는 않아.
+
+그 세로선이 각 댓글의 아래 구분선과 만나면서 코너가 생긴 것이다. 세로선을 빼고 들여쓰기만 남기니 구분선이 통째로 들여써져 계단이 되고, 그 계단이 층 표시를 대신한다.
+
+폼도 상자 하나였다. 이름·암호·이메일을 첫 줄에 세 칸으로 놓고 댓글을 그 아래로 내렸다. 폼 밑에 늘어져 있던 주의사항 네 줄은 제목 줄 오른쪽 끝의 ⓘ 안으로 접었다. 호버와 포커스로 여는 것은 CSS가 하고, 터치 기기용 클릭 토글만 JS가 붙인다. 밖에 남긴 것은 마크다운·수식 안내와 필수 항목 표시뿐이다. Turnstile 위젯도 같이 접혔다. `appearance: "interaction-only"`로 렌더하면 사람으로 판정된 방문자에게는 아무것도 뜨지 않고, 확인이 필요할 때만 그 자리에 나타난다.
+
+댓글 머리의 시각에서 마지막 하나가 나왔다. 방문자 시간대로 바꾸는 김에 서버 조판의 라벨을 UTC에서 KST로 고쳤는데, 그러고 나서 숫자가 UTC라는 것을 알았다. `_config.yml`에 `timezone: Asia/Seoul`이 있는데도 그렇다. Liquid `date:` 필터는 site timezone을 적용하지 않고, Jekyll의 `date_to_xmlschema`는 적용한다. 같은 값에 둘을 나란히 쓰면 `datetime` 속성은 `+09:00`인데 본문 숫자는 UTC가 된다.
+
+{% raw %}
+```liquid
+{%- assign _local_date = _c.date | date_to_xmlschema -%}
+<time datetime="{{ _local_date }}">{{ _local_date | date: "%Y-%m-%d %H:%M" }} KST</time>
+```
+{: data-filename="_includes/comment.html"}
+{% endraw %}
+
+한 번 지역화한 값을 다시 조판하면 맞는다. 이건 JS가 없을 때의 fallback이고, 평소에는 `Intl.DateTimeFormat`이 `datetime` 속성을 읽어 방문자 시간대로 다시 쓴다. 프론트매터의 `date:`는 Jekyll이 이미 지역화해 파싱하므로 이 함정에 걸리지 않는다. 문자열로 들어온 UTC 타임스탬프만 해당된다.
 
 ## 배포 뒤에 붙는 알림 워크플로
 
@@ -287,7 +404,7 @@ Jekyll::Hooks.register :site, :post_read do |site|
   next unless site.config.dig("comments", "provider") == "custom"
 
   posts = site.posts.docs.each_with_object({}) do |post, index|
-    key = post.url.sub(%r{\A/}, "").gsub("/", "__").downcase
+    key = post.url.sub(%r{\A/}, "").gsub("/", "__")
     index[key] = post
   end
   # site.data["comments"] 순회 → deleted 제외 → 언어별 최신 5건
@@ -314,7 +431,9 @@ def sec_comment_prs():
 
 ## 아직 열려 있는 완료 판정
 
-명세의 완료 판정 20개 중 운영 실측으로 닫힌 것은 넷이다. ko/en 키 분리, `<script>`와 kramdown IAL 제거, Turnstile 없는 제출과 honeypot 거부, 경로 조작 거부. 나머지는 단위 검증과 합성 빌드까지만 통과했다. 실제 익명 댓글 한 건으로 제출부터 승인·배포·알림·답글·삭제까지 한 바퀴 도는 E2E는 아직 남아 있고, 그건 시스템이 프로덕션에 올라간 뒤에야 할 수 있는 일이다. 메일 도달률(SPF·DKIM·DMARC 헤더 확인)과 Cloudflare rate limiting rule도 같은 칸에 있다.
+명세의 완료 판정 20개 중 처음에 운영 실측으로 닫힌 것은 넷이었다. ko/en 키 분리, `<script>`와 kramdown IAL 제거, Turnstile 없는 제출과 honeypot 거부, 경로 조작 거부. 나머지는 단위 검증과 합성 빌드까지만 통과한 상태였다. 그 뒤 Worker를 배포하고 실제 댓글로 제출·승인·머지·표시까지 돌렸고, 수정 경로는 없는 ID로 프로브해 라우트와 검증이 살아 있는 것까지 봤다. 허용하지 않은 origin이 `origin_denied`로 막히는 것도 같은 자리에서 확인했다.
+
+남은 칸은 메일이다. 알림 게이트(`COMMENTS_NOTIFY_ENABLED`)는 열려 있고 `NOTIFY_EPOCH`는 지금 시각으로 밀어 두었으므로, 다음에 이메일을 남기고 들어오는 댓글부터 발송 경로가 실제로 돈다. 메일 도달률(SPF·DKIM·DMARC 헤더 확인)과 Cloudflare rate limiting rule은 아직 그 칸에 있다.
 
 giscus에 남아 있던 댓글 한 건은 옮기지 않았다.
 
