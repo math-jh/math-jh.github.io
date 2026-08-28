@@ -4,6 +4,24 @@ Cloudflare Worker for anonymous, PR-moderated comments. Repository files contain
 only the public comment fields; email addresses and deletion credentials live in
 the bound `COMMENTS_KV` namespace.
 
+## Endpoints
+
+| Route | 쓰는 곳 | 저장소에 닿는 방식 |
+|---|---|---|
+| `POST /v1/comment` | 새 댓글 | `comment/<id>` 브랜치 + PR (승인 대기) |
+| `POST /v1/edit` | 본문 수정 | `comment-edit/<id>` 브랜치 + PR (승인 대기) |
+| `POST /v1/delete` | 삭제·승인 전 취소 | main 직접 커밋(tombstone/삭제) 또는 PR close |
+| `GET/POST /v1/unsub` | 메일 수신거부 | KV only |
+| `POST /v1/notify` | 배포 후 알림(HMAC 서명) | KV only |
+
+수정이 main 을 직접 고치지 않는 이유: 무해한 댓글로 승인을 받은 뒤 내용을 스팸으로
+갈아치우는 경로를 막기 위해서다. 삭제는 반대로 즉시 반영해야 하므로 main 직접 커밋을
+유지하고, 그때 열려 있는 `comment-edit/<id>` PR 도 같이 닫는다 — 안 닫으면 나중에
+머지될 때 지운 댓글이 되살아난다.
+
+수정·삭제는 같은 삭제용 암호와 같은 잠금 카운터(`fail:<id>`, 5회 실패 시 1시간)를
+쓴다. 수정은 GitHub API 를 두드리므로 성공 뒤 60초 동안 `edit:<id>` 로 재요청을 막는다.
+
 ## Provisioning
 
 1. The production `COMMENTS_KV` binding points to the provisioned

@@ -1,58 +1,106 @@
 {%- assign _c = include.comment -%}
 {%- assign _ui = site.data.ui-text[include.lang] -%}
+{%- comment -%}
+  role 은 손으로 다는 키다 (_data/comments/<thread>/comment-*.yml 에 `role: owner`
+  또는 `role: bot`). Marvin 이 스크립트로 YAML 을 커밋해 댓글을 다는 경로가 `bot`
+  이다. 라벨은 ui-text 의 `comment_role_<role>` 에서 오므로 역할을 하나 늘리려면
+  키 하나만 추가하면 되고, 정의가 없는 role 값은 조용히 무시된다.
+  Worker 의 수정 경로는 이 필드를 보존한다 (lib.js :: serializeComment).
+{%- endcomment -%}
+{%- assign _role_key = "comment_role_" | append: _c.role -%}
+{%- assign _role_label = _ui[_role_key] -%}
 <article id="comment-{{ _c.id | escape }}"
          class="js-comment comment{% if include.is_reply %} comment--reply{% endif %}{% if _c.deleted %} comment--deleted{% endif %}"
          data-comment-id="{{ _c.id | escape }}"
          data-root-id="{{ include.root_id | escape }}"
          data-author="{{ _c.name | default: _ui.comment_deleted_author | escape }}"
          itemprop="comment" itemscope itemtype="https://schema.org/Comment">
-  <div class="comment__content-wrapper">
-    {%- if _c.deleted -%}
-      <p class="comment__deleted" itemprop="text">{{ _ui.comment_deleted_message | escape }}</p>
-    {%- else -%}
-      <div class="comment__meta">
-        <h3 class="comment__author" itemprop="author" itemscope itemtype="https://schema.org/Person">
-          <span itemprop="name">{{ _c.name | escape }}</span>
-        </h3>
-        {%- if _c.date -%}
-          <a class="comment__date" href="#comment-{{ _c.id | escape }}" itemprop="url">
-            <time datetime="{{ _c.date | date_to_xmlschema }}" itemprop="datePublished">{{ _c.date | date: "%Y-%m-%d %H:%M UTC" }}</time>
-          </a>
+  {%- if _c.deleted -%}
+    <p class="comment__deleted" itemprop="text">{{ _ui.comment_deleted_message | escape }}</p>
+  {%- else -%}
+    <div class="comment__meta">
+      <h3 class="comment__author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+        <span itemprop="name">{{ _c.name | escape }}</span>
+        {%- if _role_label -%}
+          <span class="comment__role" data-role="{{ _c.role | escape }}">{{ _role_label | escape }}</span>
         {%- endif -%}
-      </div>
-      {%- if _c.mentions and _c.mentions.size > 0 -%}
-        <div class="comment__mentions" aria-label="{{ _ui.comment_mentions_label | escape }}">
-          {%- for _mention_id in _c.mentions -%}
-            {%- assign _mention_name = nil -%}
-            {%- for _candidate in include.thread_comments -%}
-              {%- if _candidate.id == _mention_id and _candidate.deleted != true -%}
-                {%- assign _mention_name = _candidate.name -%}
-                {%- break -%}
-              {%- endif -%}
-            {%- endfor -%}
-            {%- if _mention_name -%}
-              <a class="comment__mention" href="#comment-{{ _mention_id | escape }}">@{{ _mention_name | escape }}</a>
+      </h3>
+      {%- if _c.date -%}
+        {%- comment -%}
+          서버 조판은 site.timezone(Asia/Seoul) 이라 KST 가 fallback 이다. JS 가
+          datetime 을 읽어 방문자 시간대로 다시 쓴다 (Comments.js :: localizeDates).
+        {%- endcomment -%}
+        <a class="comment__date" href="#comment-{{ _c.id | escape }}" itemprop="url">
+          {%- comment -%} 저장된 date 는 UTC 문자열(...Z)이다. `date:` 필터는 site.timezone 을
+          적용하지 않으므로(그대로 쓰면 UTC 시각에 KST 딱지가 붙는다) date_to_xmlschema 로
+          한 번 지역화한 뒤 다시 조판한다. {%- endcomment -%}
+          {%- assign _local_date = _c.date | date_to_xmlschema -%}
+          <time class="js-comment-time" datetime="{{ _local_date }}" itemprop="datePublished">{{ _local_date | date: "%Y-%m-%d %H:%M" }} KST</time>
+          {%- if _c.edited -%}
+            {%- assign _local_edited = _c.edited | date_to_xmlschema -%}
+            <span class="comment__edited" title="{{ _local_edited | date: '%Y-%m-%d %H:%M' }} KST">{{ _ui.comment_edited_mark | escape }}</span>
+          {%- endif -%}
+        </a>
+      {%- endif -%}
+    </div>
+    {%- if _c.mentions and _c.mentions.size > 0 -%}
+      <div class="comment__mentions" aria-label="{{ _ui.comment_mentions_label | escape }}">
+        {%- for _mention_id in _c.mentions -%}
+          {%- assign _mention_name = nil -%}
+          {%- for _candidate in include.thread_comments -%}
+            {%- if _candidate.id == _mention_id and _candidate.deleted != true -%}
+              {%- assign _mention_name = _candidate.name -%}
+              {%- break -%}
             {%- endif -%}
           {%- endfor -%}
-        </div>
-      {%- endif -%}
-      <div class="comment__message" itemprop="text">{{ _c.message | comment_markdown }}</div>
-      <div class="comment__actions">
-        <button type="button" class="comment__action js-comment-reply"
-                data-comment-id="{{ _c.id | escape }}" data-root-id="{{ include.root_id | escape }}"
-                data-author="{{ _c.name | escape }}">{{ _ui.comment_reply_label | escape }}</button>
-        <button type="button" class="comment__action js-comment-mention"
-                data-comment-id="{{ _c.id | escape }}" data-author="{{ _c.name | escape }}">{{ _ui.comment_mention_label | escape }}</button>
-        <button type="button" class="comment__action comment__action--delete js-comment-delete-toggle">{{ _ui.comment_delete_label | escape }}</button>
+          {%- if _mention_name -%}
+            <a class="comment__mention" href="#comment-{{ _mention_id | escape }}">@{{ _mention_name | escape }}</a>
+          {%- endif -%}
+        {%- endfor -%}
       </div>
-      <form class="comment__delete-form js-comment-delete-form" hidden>
-        <label>
+    {%- endif -%}
+    <div class="comment__message js-comment-message" itemprop="text">{{ _c.message | comment_markdown }}</div>
+    <div class="comment__actions">
+      <button type="button" class="comment__action js-comment-reply"
+              data-comment-id="{{ _c.id | escape }}" data-root-id="{{ include.root_id | escape }}"
+              data-author="{{ _c.name | escape }}">{{ _ui.comment_reply_label | escape }}</button>
+      <button type="button" class="comment__action js-comment-mention"
+              data-comment-id="{{ _c.id | escape }}" data-author="{{ _c.name | escape }}">{{ _ui.comment_mention_label | escape }}</button>
+      <button type="button" class="comment__action js-comment-edit-toggle">{{ _ui.comment_edit_label | escape }}</button>
+      <button type="button" class="comment__action js-comment-delete-toggle">{{ _ui.comment_delete_label | escape }}</button>
+    </div>
+    {%- comment -%} 수정은 원문(마크다운 원본)을 다시 채워야 한다 — 렌더된 HTML 이
+    아니라 이 data 속성이 원본의 유일한 출처다. {%- endcomment -%}
+    <form class="comment__form comment__edit-form js-comment-edit-form" hidden
+          data-source="{{ _c.message | escape }}">
+      <p class="comment__form-notice">{{ _ui.comment_edit_notice | escape }}</p>
+      <label class="comment-field comment-field--wide">
+        <span>{{ _ui.comment_form_comment_label | escape }}</span>
+        <textarea name="message" rows="4" maxlength="8000" required></textarea>
+      </label>
+      <div class="comment__form-row">
+        <label class="comment-field">
           <span>{{ _ui.comment_form_password_label | escape }}</span>
           <input type="password" name="password" minlength="4" maxlength="128" autocomplete="current-password" required>
         </label>
-        <button type="submit" class="btn btn--small">{{ _ui.comment_delete_submit | escape }}</button>
-        <p class="js-delete-notice small" role="status" aria-live="polite"></p>
-      </form>
-    {%- endif -%}
-  </div>
+        <div class="comment__form-actions">
+          <button type="button" class="comment__action js-comment-edit-cancel">{{ _ui.comment_edit_cancel | escape }}</button>
+          <button type="submit" class="comment-btn">{{ _ui.comment_edit_submit | escape }}</button>
+        </div>
+      </div>
+      <p class="js-edit-notice comment__form-status" role="status" aria-live="polite"></p>
+    </form>
+    <form class="comment__form comment__delete-form js-comment-delete-form" hidden>
+      <div class="comment__form-row">
+        <label class="comment-field">
+          <span>{{ _ui.comment_form_password_label | escape }}</span>
+          <input type="password" name="password" minlength="4" maxlength="128" autocomplete="current-password" required>
+        </label>
+        <div class="comment__form-actions">
+          <button type="submit" class="comment-btn comment-btn--danger">{{ _ui.comment_delete_submit | escape }}</button>
+        </div>
+      </div>
+      <p class="js-delete-notice comment__form-status" role="status" aria-live="polite"></p>
+    </form>
+  {%- endif -%}
 </article>

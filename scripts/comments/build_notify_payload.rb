@@ -14,7 +14,9 @@ comments = []
 if comments_root.directory?
   comments_root.children.select(&:directory?).sort.each do |thread_dir|
     thread_key = thread_dir.basename.to_s
-    abort "invalid comment thread key: #{thread_key}" unless thread_key.match?(/\A(?:ko|en)__[a-z0-9_]{1,116}\z/) && thread_key.length <= 120
+    # 허용 문자는 Worker 의 THREAD_RE 와 같아야 한다 (대소문자 보존, 하이픈 포함).
+    # 키에서 되돌린 permalink 가 메일 링크가 되므로 대소문자를 접으면 404 가 된다.
+    abort "invalid comment thread key: #{thread_key}" unless thread_key.match?(/\A(?:ko|en)__[A-Za-z0-9_-]{1,116}\z/) && thread_key.length <= 120
 
     thread_dir.glob("comment-*.{yml,yaml}").sort.each do |path|
       value = YAML.safe_load_file(path, permitted_classes: [Date, Time], aliases: false)

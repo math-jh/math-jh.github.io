@@ -4,7 +4,7 @@ import test from "node:test";
 import {
   decryptEmail, derivePassword, encryptEmail, makePasswordRecord, parseCommentYaml,
   hmacHex, serializeComment, serializeTombstone, signToken, stripHtml, validateCommentPayload,
-  verifyPassword, verifyToken
+  verifyPassword, verifyToken, validateEditPayload
 } from "../src/lib.js";
 import { commentPayload, testEnv } from "./helpers.js";
 
@@ -19,6 +19,11 @@ test("validation enforces thread, unknown fields, timing, and link cap", () => {
   const valid = validateCommentPayload(commentPayload());
   assert.equal(valid.lang, "ko");
   assert.throws(() => validateCommentPayload(commentPayload({ thread: "../../_config" })), /invalid_thread/);
+  assert.equal(
+    validateCommentPayload(commentPayload({ thread: "ko__math__commutative_algebra__Jordan-Holder_theorem" })).thread,
+    "ko__math__commutative_algebra__Jordan-Holder_theorem"
+  );
+  assert.throws(() => validateCommentPayload(commentPayload({ thread: "ko__math__a.b" })), /invalid_thread/);
   assert.throws(() => validateCommentPayload(commentPayload({ url: "https://spam.example" })), /unknown_field/);
   assert.throws(() => validateCommentPayload(commentPayload({ elapsed_ms: 2999 })), /too_fast/);
   assert.throws(() => validateCommentPayload(commentPayload({ honeypot: "bot" })), /honeypot/);
@@ -79,4 +84,35 @@ test("HMAC secrets use the same raw string bytes as the notification workflow", 
   const value = '{"comments":[]}';
   const expected = createHmac("sha256", secret).update(value).digest("hex");
   assert.equal(await hmacHex(secret, value), expected);
+});
+
+test("edit payload shares the message rules and rejects extra fields", () => {
+  const base = {
+    id: "c-20260828-a3f1c9",
+    thread: "ko__math__test_post",
+    password: "throwaway-key",
+    message: "<b>after</b> $x^2$"
+  };
+  assert.equal(validateEditPayload(base).message, "after $x^2$");
+  assert.throws(() => validateEditPayload({ ...base, name: "spoof" }), /unknown_field/);
+  assert.throws(() => validateEditPayload({ ...base, id: "not-an-id" }), /invalid_edit_request/);
+  assert.throws(() => validateEditPayload({ ...base, thread: "../../_config" }), /invalid_thread/);
+  assert.throws(() => validateEditPayload({ ...base, password: "abc" }), /invalid_password/);
+  assert.throws(() => validateEditPayload({ ...base, message: "   " }), /invalid_message/);
+  assert.throws(() => validateEditPayload({
+    ...base,
+    message: "https://a.example https://b.example https://c.example https://d.example"
+  }), /too_many_links/);
+  assert.throws(() => validateEditPayload({
+    ...base, message: "[click](javascript:alert(1))"
+  }), /unsafe_content/);
+});
+
+test("serializer carries the hand-added role key and the edit timestamp", () => {
+  const yaml = serializeComment({
+    id: "c-20260828-a3f1c9", name: "Marvin", message: "body", date: "2026-08-28T00:00:00Z",
+    role: "bot", edited: "2026-08-29T01:00:00Z", lang: "ko"
+  });
+  assert.match(yaml, /role: "bot"/);
+  assert.match(yaml, /edited: "2026-08-29T01:00:00Z"/);
 });

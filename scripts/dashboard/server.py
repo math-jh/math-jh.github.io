@@ -613,6 +613,7 @@ CRON_JOBS = [
     dict(id="blog-link-normalizer",  name="링크 정규화 감사", worker="link_norm"),
     dict(id="blog-gsc-monitor",      name="GSC 색인 모니터",  worker="index_monitor"),
     dict(id="blog-indexnow",         name="IndexNow 제출",    worker=None),
+    dict(id="blog-pr-notify",        name="PR 알림",          worker=None),
     dict(id="timer:blog-autopush",   name="autopush",         worker=None),
 ]
 CRON_IDS = {j["id"] for j in CRON_JOBS}

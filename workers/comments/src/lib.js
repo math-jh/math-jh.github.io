@@ -5,8 +5,12 @@ export const COMMENT_FIELDS = new Set([
   "name", "password", "email", "message", "thread", "replying_to", "mentions"
 ]);
 export const CONTROL_FIELDS = new Set(["turnstile_token", "honeypot", "elapsed_ms"]);
+export const EDIT_FIELDS = new Set(["id", "thread", "password", "message"]);
 export const COMMENT_ID_RE = /^c-\d{8}-[a-f0-9]{6}$/;
-export const THREAD_RE = /^(?:ko|en)__[a-z0-9_]{1,116}$/;
+// 키는 page.url 과 1:1 이다. 대소문자를 보존하고 하이픈을 허용한다 — permalink 에
+// 대문자나 `-` 를 쓰는 글이 있고(Jordan-Holder_theorem), 접으면 키에서 URL 을
+// 되돌릴 수 없다. 경로 조작 방어는 점·슬래시가 없다는 것으로 유지된다.
+export const THREAD_RE = /^(?:ko|en)__[A-Za-z0-9_-]{1,116}$/;
 
 export class PublicError extends Error {
   constructor(status, code) {
@@ -52,6 +56,9 @@ export function corsHeaders(request, env) {
 export function assertAllowedOrigin(request, env) {
   const origin = request.headers.get("origin");
   if (!origin) return;
+  // 삭제·수신거부 확인 페이지는 Worker 자신이 서빙하고 자기 자신에게 form POST 한다.
+  // 브라우저가 그 POST 에도 Origin 을 붙이므로 same-origin 을 먼저 통과시킨다.
+  if (origin === new URL(request.url).origin) return;
   const allowed = String(env.ALLOWED_ORIGINS || "")
     .split(",").map((item) => item.trim()).filter(Boolean);
   if (!allowed.includes(origin)) throw new PublicError(403, "origin_denied");
@@ -116,7 +123,7 @@ export function validateCommentPayload(input) {
   if ([...password].length < 4 || [...password].length > 128) {
     throw new PublicError(400, "invalid_password");
   }
-  if (!message || [...message].length > 8000) throw new PublicError(400, "invalid_message");
+  validateMessage(message);
   if (!THREAD_RE.test(thread) || thread.length > 120) throw new PublicError(400, "invalid_thread");
   if (email && (email.length > 254 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))) {
     throw new PublicError(400, "invalid_email");
@@ -131,11 +138,6 @@ export function validateCommentPayload(input) {
   if (cleanMentions.length !== mentions.length || cleanMentions.some((id) => !COMMENT_ID_RE.test(id))) {
     throw new PublicError(400, "invalid_mentions");
   }
-  const links = message.match(/(?:https?:\/\/|www\.)[^\s<>()]+/gi) || [];
-  if (links.length >= 4) throw new PublicError(400, "too_many_links");
-  if (/(?:javascript|vbscript|data)\s*:/i.test(message)) {
-    throw new PublicError(400, "unsafe_content");
-  }
 
   return {
     name, password, email, message, thread,
@@ -143,6 +145,38 @@ export function validateCommentPayload(input) {
     mentions: cleanMentions,
     lang: thread.startsWith("ko__") ? "ko" : "en"
   };
+}
+
+// 본문 규칙은 신규 작성과 수정이 공유한다 — 한쪽만 고치면 수정 경로가 링크·스킴
+// 상한을 우회하는 구멍이 된다.
+export function validateMessage(message) {
+  if (!message || [...message].length > 8000) throw new PublicError(400, "invalid_message");
+  const links = message.match(/(?:https?:\/\/|www\.)[^\s<>()]+/gi) || [];
+  if (links.length >= 4) throw new PublicError(400, "too_many_links");
+  if (/(?:javascript|vbscript|data)\s*:/i.test(message)) {
+    throw new PublicError(400, "unsafe_content");
+  }
+  return message;
+}
+
+export function validateEditPayload(input) {
+  for (const key of Object.keys(input)) {
+    if (!EDIT_FIELDS.has(key)) throw new PublicError(400, "unknown_field");
+  }
+  for (const key of EDIT_FIELDS) {
+    if (!(key in input)) throw new PublicError(400, "missing_field");
+  }
+  const id = String(input.id || "");
+  const thread = String(input.thread || "");
+  const password = typeof input.password === "string" ? input.password : "";
+  const message = stripHtml(input.message);
+  if (!COMMENT_ID_RE.test(id)) throw new PublicError(400, "invalid_edit_request");
+  if (!THREAD_RE.test(thread) || thread.length > 120) throw new PublicError(400, "invalid_thread");
+  if ([...password].length < 4 || [...password].length > 128) {
+    throw new PublicError(400, "invalid_password");
+  }
+  validateMessage(message);
+  return { id, thread, password, message };
 }
 
 export function makeCommentId(now = new Date()) {
@@ -178,6 +212,10 @@ export function serializeComment(comment) {
   if (comment.replying_to) lines.push(`replying_to: ${JSON.stringify(comment.replying_to)}`);
   if (comment.mentions?.length) lines.push(`mentions: ${JSON.stringify(comment.mentions)}`);
   if (comment.notify) lines.push("notify: true");
+  // role 은 손으로 다는 키(owner·bot; _includes/comment.html 이 배지로 읽는다).
+  // 수정 경로가 파일을 다시 쓸 때 여기서 보존되지 않으면 배지가 조용히 사라진다.
+  if (comment.role) lines.push(`role: ${JSON.stringify(comment.role)}`);
+  if (comment.edited) lines.push(`edited: ${JSON.stringify(comment.edited)}`);
   lines.push(`lang: ${JSON.stringify(comment.lang)}`);
   return `${lines.join("\n")}\n`;
 }

@@ -8,7 +8,8 @@ Jekyll::Hooks.register :site, :post_read do |site|
   next unless site.config.dig("comments", "provider") == "custom"
 
   posts = site.posts.docs.each_with_object({}) do |post, index|
-    key = post.url.sub(%r{\A/}, "").gsub("/", "__").downcase
+    # 대소문자 보존 — _includes/comments-providers/custom.html 의 키 생성과 같아야 한다.
+    key = post.url.sub(%r{\A/}, "").gsub("/", "__")
     index[key] = post
   end
   recent = { "ko" => [], "en" => [] }

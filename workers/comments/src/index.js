@@ -2,12 +2,13 @@ import {
   COMMENT_ID_RE, PublicError, THREAD_RE, assertAllowedOrigin, corsHeaders, emailHash,
   encryptEmail, escapeHtml, hmacHex, htmlResponse, jsonResponse, makeCommentId,
   makePasswordRecord, randomHex, readJson, serializeComment, signToken,
-  threadPermalink, validateCommentPayload, verifyHmacHex, verifyPassword, verifyToken,
-  commentPath
+  threadPermalink, validateCommentPayload, validateEditPayload, verifyHmacHex,
+  verifyPassword, verifyToken, commentPath
 } from "./lib.js";
 import {
-  assertReferencesExist, closePendingComment, createCommentPullRequest,
-  deleteApprovedComment
+  assertReferencesExist, closePendingComment, closePendingEdit,
+  createCommentEditPullRequest, createCommentPullRequest, deleteApprovedComment,
+  getThreadComments
 } from "./github.js";
 import { notifyComments, removeSubscriptions } from "./notify.js";
 
@@ -173,17 +174,9 @@ async function handleDeleteGet(env, url) {
   }));
 }
 
-async function authenticateDeletion(env, input) {
-  if (input.token) {
-    const payload = await verifyToken(env.DELETE_HMAC_KEY, input.token, "delete");
-    return { id: payload.id, thread: payload.threadKey || input.thread };
-  }
-  const id = String(input.id || "");
-  const thread = String(input.thread || "");
-  const password = typeof input.password === "string" ? input.password : "";
-  if (!COMMENT_ID_RE.test(id) || !THREAD_RE.test(thread) || !password) {
-    throw new PublicError(400, "invalid_delete_request");
-  }
+// 삭제와 수정이 같은 삭제용 암호·같은 잠금 카운터(fail:<id>)를 쓴다. 실패 5회면
+// 두 경로 모두 한 시간 잠긴다.
+async function assertPassword(env, id, password) {
   const failed = Number.parseInt(await env.COMMENTS_KV.get(`fail:${id}`) || "0", 10);
   if (failed >= 5) throw new PublicError(429, "delete_locked");
   const record = await env.COMMENTS_KV.get(`del:${id}`, "json");
@@ -195,7 +188,58 @@ async function authenticateDeletion(env, input) {
     throw new PublicError(403, "delete_auth_failed");
   }
   await env.COMMENTS_KV.delete(`fail:${id}`);
+}
+
+async function authenticateDeletion(env, input) {
+  if (input.token) {
+    const payload = await verifyToken(env.DELETE_HMAC_KEY, input.token, "delete");
+    return { id: payload.id, thread: payload.threadKey || input.thread };
+  }
+  const id = String(input.id || "");
+  const thread = String(input.thread || "");
+  const password = typeof input.password === "string" ? input.password : "";
+  if (!COMMENT_ID_RE.test(id) || !THREAD_RE.test(thread) || !password) {
+    throw new PublicError(400, "invalid_delete_request");
+  }
+  await assertPassword(env, id, password);
   return { id, thread };
+}
+
+async function handleEdit(request, env) {
+  assertAllowedOrigin(request, env);
+  const { value: input } = await readJson(request);
+  const clean = validateEditPayload(input);
+  await assertPassword(env, clean.id, clean.password);
+
+  // GitHub API 를 두드리는 경로라 성공 뒤 1분은 같은 댓글의 재수정을 막는다.
+  if (await env.COMMENTS_KV.get(`edit:${clean.id}`)) throw new PublicError(429, "edit_too_soon");
+
+  const comments = await getThreadComments(env, clean.thread);
+  const target = comments.find((comment) => comment.id === clean.id);
+  if (!target || target.deleted) throw new PublicError(404, "comment_not_found");
+  if (String(target.message || "") === clean.message) throw new PublicError(400, "edit_unchanged");
+
+  const now = new Date();
+  const comment = {
+    ...target,
+    message: clean.message,
+    edited: now.toISOString(),
+    thread: clean.thread,
+    lang: target.lang === "en" ? "en" : "ko"
+  };
+  let pull;
+  try {
+    pull = await createCommentEditPullRequest(env, {
+      comment,
+      path: target._path,
+      yaml: serializeComment(comment),
+      previous: target
+    });
+  } catch {
+    throw new PublicError(502, "edit_failed");
+  }
+  await env.COMMENTS_KV.put(`edit:${clean.id}`, "1", { expirationTtl: 60 });
+  return { ok: true, id: clean.id, pending: true, pull: pull.number };
 }
 
 async function handleDeletePost(request, env) {
@@ -212,6 +256,7 @@ async function handleDeletePost(request, env) {
   try {
     result = await deleteApprovedComment(env, id, thread);
     if (!result) result = (await closePendingComment(env, id)) ? "pending_closed" : null;
+    await closePendingEdit(env, id).catch(() => {});
   } catch {
     throw new PublicError(502, "delete_failed");
   }
@@ -219,7 +264,8 @@ async function handleDeletePost(request, env) {
   await Promise.all([
     env.COMMENTS_KV.delete(`del:${id}`),
     env.COMMENTS_KV.delete(`sub:${id}`),
-    env.COMMENTS_KV.delete(`fail:${id}`)
+    env.COMMENTS_KV.delete(`fail:${id}`),
+    env.COMMENTS_KV.delete(`edit:${id}`)
   ]);
   return { ok: true, id, result };
 }
@@ -279,6 +325,9 @@ async function route(request, env) {
     const result = await handleComment(request, env, url);
     return jsonResponse(result.body, result.status, corsHeaders(request, env));
   }
+  if (url.pathname === "/v1/edit" && request.method === "POST") {
+    return jsonResponse(await handleEdit(request, env), 200, corsHeaders(request, env));
+  }
   if (url.pathname === "/v1/delete" && request.method === "GET") return handleDeleteGet(env, url);
   if (url.pathname === "/v1/delete" && request.method === "POST") {
     return jsonResponse(await handleDeletePost(request, env), 200, corsHeaders(request, env));
@@ -305,4 +354,4 @@ export default {
   }
 };
 
-export { handleComment, handleDeletePost, handleNotify };
+export { handleComment, handleDeletePost, handleEdit, handleNotify };

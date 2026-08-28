@@ -136,6 +136,18 @@ test("five incorrect deletion keys lock the comment without GitHub calls", async
   assert.equal(calls.filter((call) => call.url.includes("github.com")).length, 0);
 });
 
+test("the Worker's own confirmation page may post back to it", async () => {
+  const env = testEnv();
+  const body = { id: "c-20260828-a3f1c9", thread: "ko__math__test_post", password: "x", confirm: true };
+  const sameOrigin = await worker.fetch(
+    jsonRequest("/v1/delete", body, { origin: "https://comments.example" }), env);
+  assert.equal((await sameOrigin.json()).code, "comment_not_found");
+  const foreign = await worker.fetch(
+    jsonRequest("/v1/delete", body, { origin: "https://evil.example" }), env);
+  assert.equal(foreign.status, 403);
+  assert.equal((await foreign.json()).code, "origin_denied");
+});
+
 test("correct deletion key tombstones a parent comment and destroys deletion/subscription KV", async () => {
   const env = testEnv();
   const id = "c-20260828-a3f1c9";
@@ -271,4 +283,95 @@ test("reply plus mention to the same recipient produces one message and excludes
   assert.equal(response.status, 200);
   assert.equal((await response.json()).sent, 2); // approval to self + one combined reply/mention to parent
   assert.equal(calls.filter((call) => call.url.includes("api.resend.com")).length, 2);
+});
+
+test("edit lands on comment-edit branch as a PR, never on main, and keeps the role key", async () => {
+  const env = testEnv();
+  const id = "c-20260828-a3f1c9";
+  env.COMMENTS_KV.values.set(`del:${id}`, JSON.stringify(await makePasswordRecord("correct-key", env)));
+  const stored = `id: "${id}"\nname: "Tester"\nmessage: "before"\ndate: "2026-08-28T00:00:00Z"\nnotify: true\nrole: "owner"\nlang: "ko"\n`;
+  let committed = null;
+  globalThis.fetch = async (input, init = {}) => {
+    const url = typeof input === "string" ? input : input.url;
+    calls.push({ url, init });
+    if (url.includes("/contents/_data/comments/ko__math__test_post?")) {
+      return Response.json([
+        { type: "file", name: "comment-a.yml", path: "_data/comments/ko__math__test_post/comment-a.yml" }
+      ]);
+    }
+    if (url.includes("comment-a.yml") && url.includes("ref=main")) {
+      return Response.json({ sha: "main-sha", content: Buffer.from(stored).toString("base64") });
+    }
+    if (url.includes("comment-a.yml") && url.includes("ref=comment-edit")) {
+      return new Response("null", { status: 404 });
+    }
+    if (url.endsWith("/git/ref/heads/main")) return Response.json({ object: { sha: "base-sha" } });
+    if (url.endsWith("/git/refs") && init.method === "POST") return Response.json({ ref: "ok" });
+    if (url.includes("comment-a.yml") && init.method === "PUT") {
+      committed = JSON.parse(init.body);
+      return Response.json({ content: { sha: "edit-sha" } });
+    }
+    if (url.includes("/pulls?state=open")) return Response.json([]);
+    if (url.endsWith("/pulls") && init.method === "POST") {
+      return Response.json({ number: 51, html_url: "https://github.com/pull/51" });
+    }
+    throw new Error(`unexpected fetch: ${url}`);
+  };
+
+  const response = await worker.fetch(jsonRequest("/v1/edit", {
+    id, thread: "ko__math__test_post", password: "correct-key", message: "after <b>edit</b>"
+  }), env);
+  assert.equal(response.status, 200);
+  assert.deepEqual(await response.json(), { ok: true, id, pending: true, pull: 51 });
+
+  const yaml = Buffer.from(committed.content, "base64").toString("utf8");
+  assert.equal(committed.branch, `comment-edit/${id}`);
+  assert.equal(committed.sha, "main-sha");
+  assert.match(yaml, /message: "after edit"/);        // HTML stripped like a new comment
+  assert.match(yaml, /role: "owner"/);                 // 손으로 단 배지 키가 살아남는다
+  assert.match(yaml, /edited: "\d{4}-/);
+  assert.match(yaml, /notify: true/);
+  // main 브랜치를 건드리는 쓰기가 하나도 없어야 한다.
+  const mainWrites = calls.filter((call) => call.init.method === "PUT" &&
+    JSON.parse(call.init.body).branch === "main");
+  assert.equal(mainWrites.length, 0);
+});
+
+test("edit rejects a wrong key, an unchanged body, and a deleted comment", async () => {
+  const env = testEnv();
+  const id = "c-20260828-a3f1c9";
+  env.COMMENTS_KV.values.set(`del:${id}`, JSON.stringify(await makePasswordRecord("correct-key", env)));
+  const stored = `id: "${id}"\nname: "Tester"\nmessage: "before"\ndate: "2026-08-28T00:00:00Z"\nlang: "ko"\n`;
+  globalThis.fetch = async (input, init = {}) => {
+    const url = typeof input === "string" ? input : input.url;
+    calls.push({ url, init });
+    if (url.includes("/contents/_data/comments/ko__math__test_post?")) {
+      return Response.json([
+        { type: "file", name: "comment-a.yml", path: "_data/comments/ko__math__test_post/comment-a.yml" }
+      ]);
+    }
+    if (url.includes("comment-a.yml")) {
+      return Response.json({ sha: "main-sha", content: Buffer.from(stored).toString("base64") });
+    }
+    throw new Error(`unexpected fetch: ${url}`);
+  };
+
+  const wrong = await worker.fetch(jsonRequest("/v1/edit", {
+    id, thread: "ko__math__test_post", password: "wrong-key", message: "after"
+  }), env);
+  assert.equal(wrong.status, 403);
+  assert.equal((await wrong.json()).code, "delete_auth_failed");
+  assert.equal(calls.filter((call) => call.url.includes("github.com")).length, 0);
+
+  const unchanged = await worker.fetch(jsonRequest("/v1/edit", {
+    id, thread: "ko__math__test_post", password: "correct-key", message: "before"
+  }), env);
+  assert.equal(unchanged.status, 400);
+  assert.equal((await unchanged.json()).code, "edit_unchanged");
+
+  const missing = await worker.fetch(jsonRequest("/v1/edit", {
+    id: "c-20260828-ffffff", thread: "ko__math__test_post", password: "correct-key", message: "after"
+  }), env);
+  assert.equal(missing.status, 404);
+  assert.equal((await missing.json()).code, "comment_not_found");
 });

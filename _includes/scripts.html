@@ -28,6 +28,9 @@
          renderMathInElement(document.body, {
          delimiters: window.KATEX_DELIMITERS,
          macros: window.KATEX_MACROS,
+         // `no-math`: 딜리미터 자체를 글자로 보여야 하는 안내문(댓글 폼의
+         // "마크다운과 $…$ 수식을 지원합니다")을 auto-render 에서 뺀다.
+         ignoredClasses: ["no-math"],
          strict: false,
          throwOnError: false
          });

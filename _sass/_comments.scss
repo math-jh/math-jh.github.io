@@ -1,43 +1,193 @@
+/* ==========================================================================
+   정적 댓글 — 인쇄물 문법. 상자·라운드·틴트를 쓰지 않는다.
+
+   구조는 괘선이 전부다: 글과 댓글 사이는 이중선(section break), 제목 아래와
+   댓글 사이는 헤어라인. 댓글 본문은 왼쪽 가장자리에 붙고(아바타가 없으니 안쪽
+   여백은 낭비다), 답글만 좌측 헤어라인 + 작은 들여쓰기로 층을 표시한다.
+   악센트는 brass($highlight-color) 하나 — 필수 표시, 역할 배지, 편집 중 표시,
+   기본 버튼 호버가 전부 여기서 나온다.
+
+   라이트/다크 공용 파티션이므로 색은 전부 스킨 변수에서 파생한다. 유일한 예외인
+   위험색($comment-danger)도 $text-color 와 섞어 두 모드 모두에서 대비를 얻는다.
+   ========================================================================== */
+
+$comment-danger: mix(#c0392b, $text-color, 78%);
+// 이 섹션은 구조를 전부 괘선에 싣는다. 스킨의 $border-color 를 그대로 쓰면 다크에서
+// #20242d 가 #0b0d12 배경에 묻혀 입력란·구분선이 통째로 사라진다. 잉크와 종이를
+// 섞어 두 모드 모두에서 같은 세기의 헤어라인이 나오게 한다 (라이트는 $border-color
+// 와 거의 같은 값, 다크는 확실히 보이는 값).
+$comment-rule: mix($text-color, $background-color, 20%);
+
 .page__comments {
   margin-top: 3rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid $border-color;
+  padding-top: 1.75rem;
+  border-top: 3px double $comment-rule;
 }
 
 .comment-list,
-.page__comments-form {
+.page__comments-form,
+.comments__head {
   max-width: 52rem;
 }
 
-.js-comment-form {
+/* --------------------------------------------------------------------------
+   섹션 머리 — 제목 + 개수, 오른쪽 끝에 안내(ⓘ)
+   -------------------------------------------------------------------------- */
+
+.comments__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 0.45rem;
+  border-bottom: 1px solid $comment-rule;
+}
+
+.comments__title {
+  margin: 0;
+  font-family: $header-font-family;
+  font-size: $h-size-2;
+  font-weight: bold;
+  line-height: 1.2;
+  text-transform: none;
+}
+
+.comments__title--form {
+  font-size: $h-size-3;
+}
+
+/* 폼 머리는 밑줄을 달지 않는다 — 바로 아래 입력란 테두리가 이미 선이라 겹친다. */
+.comments__head--form {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.comments__count {
+  margin-left: 0.45em;
+  color: $muted-text-color;
+  font-size: 0.72em;
+  font-variant-numeric: tabular-nums;
+  font-weight: normal;
+}
+
+/* 안내 패널 — 호버·포커스로 열리고(CSS), 터치에서는 클릭 토글(JS)이 data-open 을 건다. */
+.comment-info {
+  position: relative;
+  flex: none;
+  line-height: 1;
+}
+
+.comment-info__toggle {
+  width: 1.5em;
+  height: 1.5em;
   padding: 0;
+  border: 1px solid $comment-rule;
+  border-radius: 0;
   background: transparent;
+  color: $muted-text-color;
+  font-family: $serif;
+  font-size: 0.85em;
+  font-style: italic;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.comment-info__toggle:hover,
+.comment-info__toggle:focus-visible,
+.comment-info[data-open] .comment-info__toggle {
+  border-color: $highlight-color;
+  color: $highlight-color;
+}
+
+.comment-info__panel {
+  position: absolute;
+  top: calc(100% + 0.4rem);
+  right: 0;
+  z-index: 6;
+  width: min(26rem, 78vw);
+  padding: 0.9rem 1rem;
+  border: 1px solid $comment-rule;
+  background: $background-color;
+  color: $muted-text-color;
+  font-size: 0.75em;
+  line-height: 1.65;
+  text-align: left;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.22);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.14s ease-out, visibility 0.14s;
+
+  /* 토글과 패널 사이 0.4rem 틈을 덮는 다리 — 없으면 마우스가 내려가는 중에 닫힌다. */
+  &::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 100%;
+    width: 3rem;
+    height: 0.5rem;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    position: relative;
+    margin: 0 0 0.5em;
+    padding-left: 0.85em;
+
+    &::before {
+      content: "\2013";          // en dash — 개조식 머리표
+      position: absolute;
+      left: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.comment-info:hover .comment-info__panel,
+.comment-info:focus-within .comment-info__panel,
+.comment-info[data-open] .comment-info__panel {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* --------------------------------------------------------------------------
+   댓글 목록 — 괘선만으로 나눈다
+   -------------------------------------------------------------------------- */
+
+.comment-list__empty {
+  margin: 1.2rem 0 0;
+  color: $muted-text-color;
+  font-style: italic;
 }
 
 .comment-thread {
-  margin: 1rem 0 1.5rem;
+  margin: 0;
 }
 
 .comment {
-  padding: 1rem 1.1rem;
-  border: 1px solid $border-color;
-  border-radius: .5rem;
-  background: mix($background-color, $border-color, 94%);
+  padding: 1.15rem 0;
+  border-bottom: 1px solid $comment-rule;
 }
 
+/* 답글은 들여쓰기로만 층을 표시한다. 좌측 세로 괘선을 두면 아래쪽 구분선과 만나
+   ㄴ 자 코너가 생긴다. 대신 구분선이 통째로 들여써져 계단이 되고, 그 자체가 층이다. */
 .comment--reply {
-  margin: .65rem 0 0 2rem;
-  border-left: .25rem solid mix($primary-color, $border-color, 55%);
+  margin-left: 2rem;
 }
 
-.comment--deleted {
+.comment--deleted .comment__deleted {
   color: $muted-text-color;
-  background: transparent;
-  border-style: dashed;
+  font-style: italic;
 }
 
-.comment__meta,
-.comment-form__heading {
+.comment__meta {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
@@ -46,116 +196,316 @@
 
 .comment__author {
   margin: 0;
-  font-size: 1rem;
+  font-family: $header-font-family;
+  font-size: 1em;
+  font-weight: bold;
+  line-height: 1.3;
 }
 
-.comment__date {
-  color: $muted-text-color;
-  font-size: .72rem;
+/* 손으로 다는 role 키(owner·marvin)의 표시. 라벨은 ui-text 가 준다. */
+.comment__role {
+  margin-left: 0.5em;
+  padding: 0.05em 0.35em;
+  border: 1px solid $highlight-color;
+  color: $highlight-color;
+  font-family: $sans-serif;
+  font-size: 0.62em;
+  font-weight: normal;
+  letter-spacing: 0.06em;
+  vertical-align: 0.15em;
   white-space: nowrap;
 }
 
+.comment__date {
+  flex: none;
+  color: $muted-text-color;
+  font-family: $sans-serif;
+  font-size: 0.72em;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+
+  &:hover,
+  &:focus-visible {
+    color: $highlight-color;
+  }
+}
+
+.comment__edited {
+  margin-left: 0.45em;
+  font-style: italic;
+
+  &::before {
+    content: "· ";
+  }
+}
+
 .comment__message {
-  margin-top: .65rem;
+  margin-top: 0.55rem;
   overflow-wrap: anywhere;
 }
 
 .comment__message > :last-child,
-.comment__deleted,
-.comment__delete-form p {
+.comment__deleted {
   margin-bottom: 0;
+}
+
+.comment__mentions {
+  margin-top: 0.4rem;
+}
+
+/* 멘션은 알약이 아니라 brass 밑줄 글자. 폼 안의 칩만 지울 수 있어야 해서 직각 태그다. */
+.comment__mention {
+  color: $highlight-color;
+  font-size: 0.82em;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+
+  & + & {
+    margin-left: 0.5em;
+  }
 }
 
 .comment__actions {
   display: flex;
   flex-wrap: wrap;
-  gap: .8rem;
-  margin-top: .75rem;
+  justify-content: flex-end;
+  gap: 0.75em;
+  margin-top: 0.6rem;
 }
 
 .comment__action,
-.comment-form__cancel,
 .mention-chip__remove {
   padding: 0;
   border: 0;
   color: $muted-text-color;
   background: transparent;
-  font: inherit;
-  font-size: .75rem;
+  font-family: $sans-serif;
+  font-size: 0.72em;
+  line-height: 1.4;
   cursor: pointer;
 }
 
 .comment__action:hover,
 .comment__action:focus-visible,
-.comment-form__cancel:hover,
-.comment-form__cancel:focus-visible,
 .mention-chip__remove:hover,
 .mention-chip__remove:focus-visible {
-  color: $primary-color;
+  color: $highlight-color;
 }
 
-.comment__action--delete {
+/* 목록의 액션은 가운뎃점으로 잇는다 (폼 머리의 답글 취소 버튼은 제외). */
+.comment__actions .comment__action + .comment__action::before {
+  content: "·";
+  margin-right: 0.75em;
+  color: $comment-rule;
+}
+
+/* --------------------------------------------------------------------------
+   댓글 안 인라인 폼 (수정 · 삭제) — 편집 중임을 brass 헤어라인으로 표시
+   -------------------------------------------------------------------------- */
+
+/* 테마 _forms.scss 의 `form { padding: 1em; background: $form-background-color }` 를
+   먼저 지운다. 그대로 두면 수정·삭제 폼이 회색 상자로 뜨고(무상자 문법 위반),
+   그 회색이 다크 팔레트를 따라가지 않아 다크에서 밝은 판이 얹힌다. */
+.comments form {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+/* `.comments form` 리셋보다 명시도가 높아야 brass 괘선이 살아남는다. */
+.comments .comment__form {
+  margin-top: 0.85rem;
+  padding-left: 0.9rem;
+  border-left: 1px solid $highlight-color;
+}
+
+.comment__form-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 0.8rem 1.2rem;
+}
+
+/* 취소·수정 요청은 폼 오른쪽 끝에 붙인다 (본문 폼의 제출 버튼과 같은 자리). */
+.comment__form-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
   margin-left: auto;
 }
 
-.comment__mention,
-.mention-chip {
-  display: inline-flex;
-  align-items: center;
-  gap: .25rem;
-  margin: 0 .3rem .3rem 0;
-  padding: .15rem .45rem;
-  border-radius: 999px;
-  background: mix($primary-color, $background-color, 14%);
-  color: $primary-color;
-  font-size: .78rem;
-  text-decoration: none;
+.comment__form-notice,
+.comment__form-status {
+  margin: 0 0 0.6rem;
+  color: $muted-text-color;
+  font-size: 0.72em;
+  line-height: 1.6;
 }
 
-.comment__delete-form {
-  margin-top: .7rem;
-  padding: .7rem;
-  border-radius: .35rem;
-  background: mix($background-color, $border-color, 90%);
+.comment__form-status {
+  margin: 0.55rem 0 0;
+
+  &:empty {
+    display: none;
+  }
 }
 
-.comment__delete-form label {
-  display: flex;
-  align-items: center;
-  gap: .6rem;
+.comment__form-status[data-state="error"] {
+  color: $comment-danger;
 }
 
-.comment__delete-form input {
-  width: min(18rem, 100%);
+.comment__form-status[data-state="success"] {
+  color: $highlight-color;
 }
+
+.comment-field--wide {
+  margin-bottom: 0.8rem;
+}
+
+/* --------------------------------------------------------------------------
+   댓글 남기기 — 목록과 같은 문법. 이름·암호·이메일이 한 줄, 그 아래 댓글.
+   -------------------------------------------------------------------------- */
 
 .page__comments-form {
-  margin-top: 2rem;
-  padding: 1.1rem;
-  border: 1px solid $border-color;
-  border-radius: .5rem;
+  margin-top: 2.5rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+/* `.comments form` 리셋(0,1,1)보다 명시도가 높아야 margin 이 살아남는다. */
+.comments .comment-form {
+  margin-top: 1.75rem;
+  padding: 0;
+  background: transparent;
 }
 
 .comment-form__identity {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
+  margin-bottom: 1rem;
 }
 
-.comment-form__context,
-.comment-form__public-notice {
+.comment-field__label,
+.comment-field > span {
+  display: block;
+  margin-bottom: 0.3em;
   color: $muted-text-color;
+  font-family: $sans-serif;
+  font-size: 0.75em;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+}
+
+.comment-field__note {
+  color: $muted-text-color;
+  font-size: 0.92em;
+  opacity: 0.75;
+}
+
+.required {
+  color: $highlight-color;
+}
+
+/* 입력란은 1px 직각 헤어라인 상자. 테마 _forms.scss 의 라운드·inset shadow·
+   focus 글로우를 여기서 전부 눌러야 한다 (그쪽이 요소 셀렉터라 명시도가 낮다). */
+.comments input[type="text"],
+.comments input[type="password"],
+.comments input[type="email"],
+.comments textarea {
+  width: 100%;
+  margin-bottom: 0;
+  padding: 0.42em 0.6em;
+  border: 1px solid $comment-rule;
+  border-radius: 0;
+  background: transparent;
+  color: $text-color;
+  font-family: $global-font-family;
+  font-size: 0.9em;
+  line-height: 1.6;
+  box-shadow: none;
+}
+
+.comments input[type="text"]:focus,
+.comments input[type="password"]:focus,
+.comments input[type="email"]:focus,
+.comments textarea:focus {
+  border-color: $highlight-color;
+  outline: 0;
+  box-shadow: none;
+}
+
+.comments textarea {
+  display: block;
+  resize: vertical;
+}
+
+.comment-form__context {
+  margin-bottom: 0.4rem;
+  color: $muted-text-color;
+  font-size: 0.78em;
+}
+
+.comment-form__mentions:not(:empty) {
+  margin-bottom: 0.45rem;
+}
+
+.mention-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin: 0 0.35rem 0.3rem 0;
+  padding: 0.1em 0.4em;
+  border: 1px solid $comment-rule;
+  color: $highlight-color;
+  font-size: 0.78em;
+}
+
+.mention-chip__remove {
+  font-size: 1em;
+}
+
+.comment-form__turnstile:not(:empty) {
+  margin-bottom: 0.9rem;
+}
+
+.comment-form__footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem 1.2rem;
+  margin-top: 0.9rem;
+}
+
+.comment-form__hint {
+  margin: 0;
+  color: $muted-text-color;
+  font-family: $sans-serif;
+  font-size: 0.72em;
+  line-height: 1.6;
+}
+
+.comment-form__hint-sep {
+  margin: 0 0.35em;
+  opacity: 0.5;
 }
 
 .comment-form__notice {
-  padding: .75rem;
-  border-radius: .35rem;
-  background: mix($primary-color, $background-color, 12%);
+  margin: 0.9rem 0 0;
+  padding: 0.55rem 0.8rem;
+  border-left: 2px solid $highlight-color;
+  color: $text-color;
+  font-size: 0.82em;
+  line-height: 1.65;
 }
 
-.comment-form__notice[data-state="error"],
-.js-delete-notice[data-state="error"] {
-  color: #b42318;
+.comment-form__notice[data-state="error"] {
+  border-left-color: $comment-danger;
+  color: $comment-danger;
 }
 
 .comment-form__honeypot {
@@ -166,17 +516,167 @@
   overflow: hidden;
 }
 
+/* --------------------------------------------------------------------------
+   버튼 — 직각 헤어라인. 기본 버튼만 채우고, 호버에서 brass 로 넘어간다.
+   -------------------------------------------------------------------------- */
+
+.comment-btn {
+  display: inline-block;
+  margin: 0;
+  padding: 0.45em 1.1em;
+  border: 1px solid $comment-rule;
+  border-radius: 0;
+  background: transparent;
+  color: $text-color;
+  font-family: $sans-serif;
+  font-size: 0.78em;
+  letter-spacing: 0.03em;
+  line-height: 1.5;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.14s ease-out, border-color 0.14s ease-out,
+    color 0.14s ease-out;
+}
+
+.comment-btn:hover,
+.comment-btn:focus-visible {
+  border-color: $highlight-color;
+  color: $highlight-color;
+}
+
+.comment-btn--primary {
+  border-color: $text-color;
+  background: $text-color;
+  color: $background-color;
+}
+
+.comment-btn--primary:hover,
+.comment-btn--primary:focus-visible {
+  border-color: $highlight-color;
+  background: $highlight-color;
+  color: $background-color;
+}
+
+.comment-btn--danger {
+  border-color: $comment-danger;
+  color: $comment-danger;
+}
+
+.comment-btn--danger:hover,
+.comment-btn--danger:focus-visible {
+  border-color: $comment-danger;
+  background: $comment-danger;
+  color: $background-color;
+}
+
+.comment-btn[disabled] {
+  opacity: 0.55;
+  cursor: default;
+}
+
+.comment-form__pending-delete {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: $highlight-color;
+  font-size: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* --------------------------------------------------------------------------
+   삭제 확인 dialog — 검색·최근 글 오버레이와 같은 규칙(반투명 + blur)
+   -------------------------------------------------------------------------- */
+
+.comment-confirm {
+  max-width: min(26rem, calc(100vw - 2rem));
+  padding: 0;
+  border: 1px solid $comment-rule;
+  border-radius: 0;
+  background: $background-color;
+  color: $text-color;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+
+  &::backdrop {
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+
+  &[open] {
+    animation: pf-pop-in 0.18s ease-out both; // keyframe from _search-overlay
+  }
+}
+
+.comment-confirm__inner {
+  padding: 1.1rem 1.2rem;
+}
+
+.comment-confirm__message {
+  margin: 0 0 1.1rem;
+  font-size: 0.85rem;
+  line-height: 1.55;
+}
+
+.comment-confirm__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.6rem;
+}
+
+.comment-confirm__cancel,
+.comment-confirm__submit {
+  padding: 0.4em 1em;
+  border: 1px solid $comment-rule;
+  border-radius: 0;
+  background: transparent;
+  color: $muted-text-color;
+  font-family: $sans-serif;
+  font-size: 0.78em;
+  cursor: pointer;
+}
+
+.comment-confirm__submit {
+  border-color: $comment-danger;
+  color: $comment-danger;
+}
+
+.comment-confirm__cancel:hover,
+.comment-confirm__cancel:focus-visible {
+  border-color: $muted-text-color;
+  color: $text-color;
+}
+
+.comment-confirm__submit:hover,
+.comment-confirm__submit:focus-visible {
+  background: $comment-danger;
+  color: $background-color;
+}
+
 @media (max-width: 48rem) {
   .comment-form__identity {
     grid-template-columns: 1fr;
-    gap: 0;
+    gap: 0.9rem;
   }
 
   .comment--reply {
-    margin-left: .85rem;
+    margin-left: 1rem;
   }
 
   .comment__meta {
     display: block;
+  }
+
+  .comment__date {
+    display: inline-block;
+    margin-top: 0.15rem;
+  }
+
+  .comment__form-row {
+    align-items: stretch;
+  }
+
+  .comment-form__footer {
+    justify-content: flex-start;
   }
 }

@@ -3,7 +3,12 @@
   {%- assign _comment_lang = site.locale | slice: 0, 2 -%}
 {%- endunless -%}
 {%- assign _comment_ui = site.data.ui-text[_comment_lang] -%}
-{%- assign _comment_key = page.url | remove_first: "/" | replace: "/", "__" | downcase -%}
+{%- comment -%}
+  스레드 키는 page.url 과 1:1 이다. 대소문자를 접으면 permalink 에 대문자가 있는
+  글(25편)에서 키로부터 URL 을 되돌릴 수 없어 알림 메일 링크가 404 가 된다.
+  같은 규칙이 _plugins/recent_comments.rb 와 Worker 의 THREAD_RE 에 있다.
+{%- endcomment -%}
+{%- assign _comment_key = page.url | remove_first: "/" | replace: "/", "__" -%}
 {%- assign _comment_hash = site.data.comments[_comment_key] -%}
 {%- assign _comment_objects = "" | split: "" -%}
 {%- if _comment_hash -%}
@@ -12,9 +17,10 @@
   {%- endfor -%}
   {%- assign _comment_objects = _comment_objects | sort: "date" -%}
 {%- endif -%}
+{%- assign _visible_comments = _comment_objects | where_exp: "c", "c.deleted != true" -%}
 
 <section id="static-comments"
-         class="js-comment-system"
+         class="js-comment-system comments"
          data-endpoint="{{ site.comments.custom.endpoint | escape }}"
          data-thread="{{ _comment_key | escape }}"
          data-lang="{{ _comment_lang }}"
@@ -23,10 +29,41 @@
          data-too-fast="{{ _comment_ui.comment_too_fast_msg | escape }}"
          data-delete-confirm="{{ _comment_ui.comment_delete_confirm | escape }}"
          data-delete-success="{{ _comment_ui.comment_delete_success | escape }}"
+         data-delete-error="{{ _comment_ui.comment_delete_error | escape }}"
+         data-edit-success="{{ _comment_ui.comment_edit_success | escape }}"
+         data-edit-error="{{ _comment_ui.comment_edit_error | escape }}"
+         data-edit-unchanged="{{ _comment_ui.comment_edit_unchanged | escape }}"
+         data-edit-too-soon="{{ _comment_ui.comment_edit_too_soon | escape }}"
+         data-auth-error="{{ _comment_ui.comment_auth_error | escape }}"
+         data-locked-error="{{ _comment_ui.comment_locked_error | escape }}"
+         data-not-found-error="{{ _comment_ui.comment_not_found_error | escape }}"
          data-pending-delete="{{ _comment_ui.comment_pending_delete_link | escape }}"
+         data-pending-delete-confirm="{{ _comment_ui.comment_pending_delete_confirm | escape }}"
+         data-pending-delete-done="{{ _comment_ui.comment_pending_delete_done | escape }}"
+         data-pending-delete-error="{{ _comment_ui.comment_pending_delete_error | escape }}"
          data-config-error="{{ _comment_ui.comment_config_error | escape }}">
+
+  {%- comment -%} 섹션 머리: 제목 + 개수, 오른쪽 끝에 안내(ⓘ). 안내 패널은 호버·
+  포커스로 열리고(CSS), 터치 기기에서는 클릭 토글로 열린다(Comments.js). {%- endcomment -%}
+  <div class="comments__head">
+    <h2 class="comments__title">
+      {{ _comment_ui.comments_title | default: "Comments" }}
+      {%- if _visible_comments.size > 0 %}<span class="comments__count">{{ _visible_comments.size }}</span>{% endif -%}
+    </h2>
+    <div class="comment-info js-comment-info">
+      <button type="button" class="comment-info__toggle js-comment-info-toggle"
+              aria-expanded="false" aria-controls="comment-info-panel"
+              aria-label="{{ _comment_ui.comment_info_label | escape }}">i</button>
+      <div class="comment-info__panel" id="comment-info-panel" role="note">
+        <ul>
+          <li>{{ _comment_ui.comment_public_notice }}</li>
+          <li>{{ _comment_ui.comment_secret_notice }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
   <div class="js-comments comment-list">
-    <h4 class="page__comments-title">{{ _comment_ui.comments_title | default: "Comments" }}</h4>
     {%- assign _root_count = 0 -%}
     {%- for _comment in _comment_objects -%}
       {%- unless _comment.replying_to -%}
@@ -48,16 +85,26 @@
     {%- endif -%}
   </div>
 
+  {%- comment -%} 삭제 확인은 페이지를 떠나지 않고 이 dialog 로 받는다. Worker 의
+  확인 페이지는 메일 링크(브라우저 문맥이 없다)에만 남는다. {%- endcomment -%}
+  <dialog class="comment-confirm js-comment-confirm" aria-labelledby="comment-confirm-message">
+    <form method="dialog" class="comment-confirm__inner">
+      <p class="comment-confirm__message js-confirm-message" id="comment-confirm-message"></p>
+      <div class="comment-confirm__actions">
+        <button type="submit" value="cancel" class="comment-confirm__cancel">{{ _comment_ui.comment_confirm_cancel | escape }}</button>
+        <button type="submit" value="confirm" class="comment-confirm__submit js-confirm-submit">{{ _comment_ui.comment_delete_submit | escape }}</button>
+      </div>
+    </form>
+  </dialog>
+
   <div class="comment-form-anchor js-comment-form-anchor"></div>
   <div id="comment-respond" class="page__comments-form js-comment-respond">
-    <div class="comment-form__heading">
-      <h4 class="page__comments-title">{{ _comment_ui.comments_label | default: "Leave a comment" }}</h4>
-      <button type="button" class="comment-form__cancel js-cancel-reply" hidden>{{ _comment_ui.cancel_reply | default: "Cancel reply" }}</button>
+    <div class="comments__head comments__head--form">
+      <h2 class="comments__title comments__title--form">{{ _comment_ui.comments_label | default: "Leave a comment" }}</h2>
+      <button type="button" class="comment__action js-cancel-reply" hidden>{{ _comment_ui.cancel_reply | default: "Cancel reply" }}</button>
     </div>
-    <p class="small">{{ _comment_ui.comment_form_info }} <span class="required">*</span></p>
-    <p class="small comment-form__public-notice">{{ _comment_ui.comment_public_notice }}</p>
 
-    <form id="new_comment" class="js-comment-form form" novalidate>
+    <form id="new_comment" class="js-comment-form comment-form" novalidate>
       <input type="hidden" name="thread" value="{{ _comment_key | escape }}">
       <input type="hidden" name="replying_to" value="">
       <div class="comment-form__honeypot" aria-hidden="true">
@@ -65,40 +112,47 @@
         <input id="comment-form-company" type="text" name="honeypot" value="" tabindex="-1" autocomplete="off">
       </div>
 
-      <div class="form-group">
-        <label for="comment-form-message">{{ _comment_ui.comment_form_comment_label | default: "Comment" }} <small class="required">*</small></label>
-        <div class="comment-form__context js-comment-context" hidden></div>
-        <div class="comment-form__mentions js-mention-chips" aria-live="polite"></div>
-        <textarea rows="5" id="comment-form-message" name="message" maxlength="8000" required></textarea>
-        <div class="small help-block">{{ _comment_ui.comment_form_md_info }}</div>
-      </div>
       <div class="comment-form__identity">
-        <div class="form-group">
-          <label for="comment-form-name">{{ _comment_ui.comment_form_name_label | default: "Name" }} <small class="required">*</small></label>
+        <div class="comment-field">
+          <label class="comment-field__label" for="comment-form-name">{{ _comment_ui.comment_form_name_label | default: "Name" }} <span class="required">*</span></label>
           <input type="text" id="comment-form-name" name="name" maxlength="60" autocomplete="name" required>
         </div>
-        <div class="form-group">
-          <label for="comment-form-password">{{ _comment_ui.comment_form_password_label }} <small class="required">*</small></label>
+        <div class="comment-field">
+          <label class="comment-field__label" for="comment-form-password">{{ _comment_ui.comment_form_password_label }} <span class="required">*</span></label>
           <input type="password" id="comment-form-password" name="password" minlength="4" maxlength="128" autocomplete="new-password" required>
-          <div class="small help-block">{{ _comment_ui.comment_form_password_help }}</div>
         </div>
-        <div class="form-group">
-          <label for="comment-form-email">{{ _comment_ui.comment_form_email_label | default: "Email" }}</label>
+        <div class="comment-field">
+          <label class="comment-field__label" for="comment-form-email">{{ _comment_ui.comment_form_email_label | default: "Email" }} <span class="comment-field__note">{{ _comment_ui.comment_form_email_note }}</span></label>
           <input type="email" id="comment-form-email" name="email" maxlength="254" autocomplete="email">
-          <div class="small help-block">{{ _comment_ui.comment_form_email_help }}</div>
         </div>
       </div>
 
+      <div class="comment-field comment-field--wide">
+        <label class="comment-field__label" for="comment-form-message">{{ _comment_ui.comment_form_comment_label | default: "Comment" }} <span class="required">*</span></label>
+        <div class="comment-form__context js-comment-context" hidden></div>
+        <div class="comment-form__mentions js-mention-chips" aria-live="polite"></div>
+        <textarea rows="5" id="comment-form-message" name="message" maxlength="8000" required></textarea>
+      </div>
+
       {%- if site.comments.custom.turnstile_sitekey and site.comments.custom.turnstile_sitekey != "" -%}
-        <div class="form-group comment-form__turnstile">
-          <div class="js-comment-turnstile"
-               data-sitekey="{{ site.comments.custom.turnstile_sitekey | escape }}"
-               data-action="comment_submit"></div>
-        </div>
+        {%- comment -%} interaction-only 로 렌더한다 — 확인이 필요한 방문자에게만
+        위젯이 나타나고, 나머지에게는 이 칸이 비어 있다 (Comments.js). {%- endcomment -%}
+        <div class="comment-form__turnstile js-comment-turnstile"
+             data-sitekey="{{ site.comments.custom.turnstile_sitekey | escape }}"
+             data-action="comment_submit"></div>
       {%- endif -%}
+
       <p class="js-comment-notice comment-form__notice" role="status" aria-live="polite" hidden></p>
-      <div class="form-group">
-        <button type="submit" id="comment-form-submit" class="btn btn--primary btn--large"
+
+      <div class="comment-form__footer">
+        {%- comment -%} `no-math` 는 KaTeX auto-render 의 ignoredClasses (scripts.html).
+        없으면 안내문의 `$…$` 를 수식으로 렌더해 달러가 사라진다. {%- endcomment -%}
+        <p class="comment-form__hint no-math">
+          {{ _comment_ui.comment_form_md_info }}
+          <span class="comment-form__hint-sep">·</span>
+          <span class="required">*</span> {{ _comment_ui.comment_form_info }}
+        </p>
+        <button type="submit" id="comment-form-submit" class="comment-btn comment-btn--primary"
                 {% if site.comments.custom.turnstile_sitekey == blank %}data-missing-turnstile="true"{% endif %}>
           {{ _comment_ui.comment_btn_submit | default: "Submit comment" }}
         </button>
