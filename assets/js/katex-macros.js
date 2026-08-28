@@ -75,6 +75,7 @@ window.KATEX_MACROS = {
     "\\area":"\\operatorname{area}",
     "\\Ass":"\\operatorname{Ass}",
     "\\Aut":"\\operatorname{Aut}",
+    "\\rAut":"\\operatorname{\\underline{Aut}}",
     "\\AW":"\\operatorname{AW}",
     "\\B":"\\mathopen{B}",
     "\\Balan":"\\operatorname{Balan}",

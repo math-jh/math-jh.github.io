@@ -21,7 +21,7 @@ if [ -z "$ZIP" ]; then
 fi
 [ -n "${ZIP:-}" ] && [ -f "$ZIP" ] || { echo "❌ no zip found (looked in $SRCDIR)"; exit 1; }
 
-TMP=$(mktemp -d /var/tmp/design-zip.XXXXXX)
+TMP=$(mktemp -d "${TMPDIR:-/tmp}/design-zip.XXXXXX")
 trap 'rm -rf "$TMP"' EXIT
 
 echo "→ $ZIP"

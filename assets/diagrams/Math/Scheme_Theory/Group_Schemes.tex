@@ -15,7 +15,31 @@
 	\arrow["\epsilon_H"', from=1-1, to=2-1]
 	\arrow["\lrcorner"{anchor=center, pos=0.125}, draw=none, from=1-1, to=2-2]
 	\arrow["\Delta_{H/S}", from=1-2, to=2-2]
-	\arrow["{(\epsilon_H\circ\pi,\id_H)}"', from=2-1, to=2-2]
+	\arrow["{(\epsilon_H\circ p,\id_H)}"', from=2-1, to=2-2]
+\end{tikzcd}
+
+%%FIG naturality (Group_Schemes-2.svg)
+\begin{tikzcd}
+	{h_G(G)} & {F(G)} \\
+	{h_G(T)} & {F(T)}
+	\arrow["{\rho_G}", from=1-1, to=1-2]
+	\arrow["{g^\ast}"', from=1-1, to=2-1]
+	\arrow["{g^\ast}", from=1-2, to=2-2]
+	\arrow["{\rho_T}"', from=2-1, to=2-2]
+\end{tikzcd}
+
+%%FIG representation_naturality (Group_Schemes-3.svg)
+\begin{tikzcd}[column sep=large]
+	{G(E)} & {\Aut_E(V\otimes_A E)} & g & {\varrho_E(g)} \\
+	{G(E')} & {\Aut_{E'}(V\otimes_A E')} & {G(\phi)(g)} & {\varrho_{E'}(G(\phi)(g))}
+	\arrow["{\varrho_E}", from=1-1, to=1-2]
+	\arrow["{G(\phi)}"', from=1-1, to=2-1]
+	\arrow["{\phi_\ast}", from=1-2, to=2-2]
+	\arrow["{\varrho_{E'}}", from=2-1, to=2-2]
+	\arrow[maps to, from=1-3, to=1-4]
+	\arrow[maps to, from=1-3, to=2-3]
+	\arrow[maps to, from=1-4, to=2-4]
+	\arrow[maps to, from=2-3, to=2-4]
 \end{tikzcd}
 
 \end{document}

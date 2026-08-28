@@ -62,7 +62,7 @@ while [ $# -gt 0 ]; do
 done
 [ ${#args[@]} -ge 1 ] || { grep '^#' "$0" | sed 's/^# \{0,1\}//'; exit 1; }
 
-WORK="$(mktemp -d /var/tmp/diagbuild.XXXXXX)"
+WORK="$(mktemp -d "${TMPDIR:-/tmp}/diagbuild.XXXXXX")"
 trap 'rm -rf "$WORK"' EXIT
 
 emit () { awk -v pt="$1" -v b="$BASEFONT" -v s="$SCALE" 'BEGIN{printf "width:%.2fem", s*pt/b}'; }
