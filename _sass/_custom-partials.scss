@@ -6,6 +6,7 @@
 // 변수를 먼저 깔아야 _variables.scss 가 안 덮는다).
 @import "minimal-mistakes"; // main partials
 @import "recents-sidebar"; // custom: recent posts / comments in the right sidebar
+@import "comments"; // custom static comments: thread, form, mention, deletion UI
 @import "pagefind-overrides"; // Pagefind UI styling wired to theme vars
 @import "search-overlay"; // backdrop-style search popup
 @import "recent-overlay"; // backdrop-style recent-posts popup

@@ -1,0 +1,41 @@
+name: Notify comment subscribers
+
+on:
+  workflow_run:
+    workflows: ["Build and deploy site"]
+    types: [completed]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: comments-notify
+  cancel-in-progress: false
+
+jobs:
+  notify:
+    if: >-
+      vars.COMMENTS_NOTIFY_ENABLED == 'true' &&
+      github.event.workflow_run.conclusion == 'success' &&
+      github.event.workflow_run.head_branch == 'main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout deployed revision
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.workflow_run.head_sha }}
+
+      - name: Build public comment payload
+        run: ruby scripts/comments/build_notify_payload.rb > "$RUNNER_TEMP/comments-notify.json"
+
+      - name: Notify through comments Worker
+        env:
+          NOTIFY_HMAC_KEY: ${{ secrets.COMMENTS_NOTIFY_HMAC_KEY }}
+        run: |
+          signature="$(ruby -ropenssl -e 'print OpenSSL::HMAC.hexdigest("SHA256", ENV.fetch("NOTIFY_HMAC_KEY"), File.binread(ARGV.fetch(0)))' "$RUNNER_TEMP/comments-notify.json")"
+          curl --fail-with-body --silent --show-error \
+            --request POST \
+            --header "content-type: application/json" \
+            --header "x-comments-signature: $signature" \
+            --data-binary "@$RUNNER_TEMP/comments-notify.json" \
+            https://comments.math-jh.com/v1/notify

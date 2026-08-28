@@ -1,0 +1,24 @@
+name = "math-jh-comments"
+main = "src/index.js"
+compatibility_date = "2026-08-28"
+workers_dev = false
+preview_urls = false
+
+[vars]
+GITHUB_OWNER = "math-jh"
+GITHUB_REPO = "math-jh.github.io"
+GITHUB_BRANCH = "main"
+ALLOWED_ORIGINS = "https://math-jh.com,https://preview.math-jh.com"
+TURNSTILE_ACTION = "comment_submit"
+TURNSTILE_HOSTNAMES = "math-jh.com,preview.math-jh.com"
+PBKDF2_ITERATIONS = "10000"
+
+# Production namespace. Local `wrangler dev` uses its own persisted namespace.
+[[kv_namespaces]]
+binding = "COMMENTS_KV"
+id = "81d83c37e203478caa49976df3c98223"
+
+# Cloudflare provisions DNS and TLS for this Worker Custom Domain.
+[[routes]]
+pattern = "comments.math-jh.com"
+custom_domain = true

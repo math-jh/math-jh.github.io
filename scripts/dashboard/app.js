@@ -26,7 +26,7 @@ var SECTION_LABEL = { drafts: '미발행', weights: 'weight 지도', translation
 var PAGE_DESC = {
   drafts: '미발행 초안 목록·필터·lint', weights: '카테고리별 weight 눈금자',
   translation: '번역 상태 집계·KO-TYPOS·최근 시도', audit: '링크·frontmatter 감사와 번역 짝 맞춤',
-  index: 'GSC 색인 분포와 조치 대상', activity: '커밋·댓글·시스템 상태',
+  index: 'GSC 색인 분포와 조치 대상', activity: '커밋·대기 댓글 PR·시스템 상태',
   cron: '블로그 크론 워커 일시정지·재개'
 };
 
@@ -290,6 +290,11 @@ function alertsOf(d) {
     level: 'info', text: '미push 커밋 ' + sys.unpushed + '건',
     sub: (sys.unpushed_oldest ? '가장 오래된 건 ' + ago(sys.unpushed_oldest) + ' — ' : '')
       + 'cron 산출물만 밀려 있으면 autopush 가 최대 7일 미룬다', to: 'activity'
+  });
+  var commentPrs = d.comment_prs || {};
+  if (commentPrs.count) out.push({
+    level: 'info', text: '승인 대기 댓글 PR ' + commentPrs.count + '건',
+    sub: '검토 후 merge 또는 close', to: 'activity'
   });
   return out;
 }
@@ -836,18 +841,20 @@ function secActivity(d) {
     right.appendChild(el('h3', null, '커밋 안 된 변경 ' + sys.dirty_count + '건'));
     right.appendChild(el('pre', 'log', sys.dirty.join('\n')));
   }
-  right.appendChild(el('h3', null, '댓글'));
-  var cm = d.comments || {};
-  var all = (cm.ko || []).concat(cm.en || []);
-  if (all.length) {
-    right.appendChild(table(['글', '작성자', { label: '시각', num: true }], all.slice(0, 10).map(function (x) {
+  right.appendChild(el('h3', null, '승인 대기 댓글 PR'));
+  var cm = d.comment_prs || {};
+  var pending = cm.items || [];
+  if (cm.error) {
+    right.appendChild(el('p', 'hint', 'GitHub PR 조회 실패: ' + cm.error));
+  } else if (pending.length) {
+    right.appendChild(table(['PR', '제목', { label: '생성', num: true }], pending.slice(0, 10).map(function (x) {
       return row([
-        { html: '<a href="' + esc(x.permalink) + (x.anchor ? '#' + esc(x.anchor) : '') + '" target="_blank">' + esc(x.title) + '</a>' },
-        { text: x.author, cls: 'muted sans' },
-        { text: (x.updated || '').slice(0, 10), cls: 'num muted' }
+        { html: '<a href="' + esc(x.url) + '" target="_blank">#' + esc(x.number) + '</a>' },
+        { text: x.title },
+        { text: x.created_at ? ago(Date.parse(x.created_at) / 1000) : '—', cls: 'num muted nowrap' }
       ]);
     })));
-  } else right.appendChild(el('p', 'hint', '최근 댓글 없음'));
+  } else right.appendChild(el('p', 'hint', '대기 PR 없음'));
   c.appendChild(left); c.appendChild(right); s.appendChild(c);
   return s;
 }

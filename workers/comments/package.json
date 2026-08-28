@@ -1,0 +1,13 @@
+{
+  "name": "math-jh-comments-worker",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "test": "node --test",
+    "benchmark:kdf": "node scripts/benchmark-kdf.js"
+  },
+  "devDependencies": {
+    "wrangler": "^4.33.1"
+  }
+}

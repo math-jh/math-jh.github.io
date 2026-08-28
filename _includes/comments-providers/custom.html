@@ -1,3 +1,108 @@
-<!-- start custom comments snippet -->
+{%- assign _comment_lang = page.url | slice: 1, 2 -%}
+{%- unless _comment_lang == "ko" or _comment_lang == "en" -%}
+  {%- assign _comment_lang = site.locale | slice: 0, 2 -%}
+{%- endunless -%}
+{%- assign _comment_ui = site.data.ui-text[_comment_lang] -%}
+{%- assign _comment_key = page.url | remove_first: "/" | replace: "/", "__" | downcase -%}
+{%- assign _comment_hash = site.data.comments[_comment_key] -%}
+{%- assign _comment_objects = "" | split: "" -%}
+{%- if _comment_hash -%}
+  {%- for _entry in _comment_hash -%}
+    {%- assign _comment_objects = _comment_objects | push: _entry[1] -%}
+  {%- endfor -%}
+  {%- assign _comment_objects = _comment_objects | sort: "date" -%}
+{%- endif -%}
 
-<!-- end custom comments snippet -->
+<section id="static-comments"
+         class="js-comment-system"
+         data-endpoint="{{ site.comments.custom.endpoint | escape }}"
+         data-thread="{{ _comment_key | escape }}"
+         data-lang="{{ _comment_lang }}"
+         data-success="{{ _comment_ui.comment_success_msg | escape }}"
+         data-error="{{ _comment_ui.comment_error_msg | escape }}"
+         data-too-fast="{{ _comment_ui.comment_too_fast_msg | escape }}"
+         data-delete-confirm="{{ _comment_ui.comment_delete_confirm | escape }}"
+         data-delete-success="{{ _comment_ui.comment_delete_success | escape }}"
+         data-pending-delete="{{ _comment_ui.comment_pending_delete_link | escape }}"
+         data-config-error="{{ _comment_ui.comment_config_error | escape }}">
+  <div class="js-comments comment-list">
+    <h4 class="page__comments-title">{{ _comment_ui.comments_title | default: "Comments" }}</h4>
+    {%- assign _root_count = 0 -%}
+    {%- for _comment in _comment_objects -%}
+      {%- unless _comment.replying_to -%}
+        {%- assign _root_count = _root_count | plus: 1 -%}
+        <div class="comment-thread" data-root-id="{{ _comment.id | escape }}">
+          {% include comment.html comment=_comment root_id=_comment.id thread_comments=_comment_objects thread_key=_comment_key lang=_comment_lang %}
+          <div class="comment-thread__replies">
+            {%- for _reply in _comment_objects -%}
+              {%- if _reply.replying_to == _comment.id -%}
+                {% include comment.html comment=_reply root_id=_comment.id thread_comments=_comment_objects thread_key=_comment_key lang=_comment_lang is_reply=true %}
+              {%- endif -%}
+            {%- endfor -%}
+          </div>
+        </div>
+      {%- endunless -%}
+    {%- endfor -%}
+    {%- if _root_count == 0 -%}
+      <p class="comment-list__empty">{{ _comment_ui.comment_empty | escape }}</p>
+    {%- endif -%}
+  </div>
+
+  <div class="comment-form-anchor js-comment-form-anchor"></div>
+  <div id="comment-respond" class="page__comments-form js-comment-respond">
+    <div class="comment-form__heading">
+      <h4 class="page__comments-title">{{ _comment_ui.comments_label | default: "Leave a comment" }}</h4>
+      <button type="button" class="comment-form__cancel js-cancel-reply" hidden>{{ _comment_ui.cancel_reply | default: "Cancel reply" }}</button>
+    </div>
+    <p class="small">{{ _comment_ui.comment_form_info }} <span class="required">*</span></p>
+    <p class="small comment-form__public-notice">{{ _comment_ui.comment_public_notice }}</p>
+
+    <form id="new_comment" class="js-comment-form form" novalidate>
+      <input type="hidden" name="thread" value="{{ _comment_key | escape }}">
+      <input type="hidden" name="replying_to" value="">
+      <div class="comment-form__honeypot" aria-hidden="true">
+        <label for="comment-form-company">Company</label>
+        <input id="comment-form-company" type="text" name="honeypot" value="" tabindex="-1" autocomplete="off">
+      </div>
+
+      <div class="form-group">
+        <label for="comment-form-message">{{ _comment_ui.comment_form_comment_label | default: "Comment" }} <small class="required">*</small></label>
+        <div class="comment-form__context js-comment-context" hidden></div>
+        <div class="comment-form__mentions js-mention-chips" aria-live="polite"></div>
+        <textarea rows="5" id="comment-form-message" name="message" maxlength="8000" required></textarea>
+        <div class="small help-block">{{ _comment_ui.comment_form_md_info }}</div>
+      </div>
+      <div class="comment-form__identity">
+        <div class="form-group">
+          <label for="comment-form-name">{{ _comment_ui.comment_form_name_label | default: "Name" }} <small class="required">*</small></label>
+          <input type="text" id="comment-form-name" name="name" maxlength="60" autocomplete="name" required>
+        </div>
+        <div class="form-group">
+          <label for="comment-form-password">{{ _comment_ui.comment_form_password_label }} <small class="required">*</small></label>
+          <input type="password" id="comment-form-password" name="password" minlength="4" maxlength="128" autocomplete="new-password" required>
+          <div class="small help-block">{{ _comment_ui.comment_form_password_help }}</div>
+        </div>
+        <div class="form-group">
+          <label for="comment-form-email">{{ _comment_ui.comment_form_email_label | default: "Email" }}</label>
+          <input type="email" id="comment-form-email" name="email" maxlength="254" autocomplete="email">
+          <div class="small help-block">{{ _comment_ui.comment_form_email_help }}</div>
+        </div>
+      </div>
+
+      {%- if site.comments.custom.turnstile_sitekey and site.comments.custom.turnstile_sitekey != "" -%}
+        <div class="form-group comment-form__turnstile">
+          <div class="js-comment-turnstile"
+               data-sitekey="{{ site.comments.custom.turnstile_sitekey | escape }}"
+               data-action="comment_submit"></div>
+        </div>
+      {%- endif -%}
+      <p class="js-comment-notice comment-form__notice" role="status" aria-live="polite" hidden></p>
+      <div class="form-group">
+        <button type="submit" id="comment-form-submit" class="btn btn--primary btn--large"
+                {% if site.comments.custom.turnstile_sitekey == blank %}data-missing-turnstile="true"{% endif %}>
+          {{ _comment_ui.comment_btn_submit | default: "Submit comment" }}
+        </button>
+      </div>
+    </form>
+  </div>
+</section>

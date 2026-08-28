@@ -1,153 +1,244 @@
-// Static comments
-// from: https://github.com/eduardoboucas/popcorn/blob/gh-pages/js/main.js 
-(function ($) {
-  var $comments = $('.js-comments');
+// Anonymous static comments: submission, one-level replies, structured mentions,
+// and deletion-key UI. No jQuery and no third-party comment-provider assumptions.
+window.commentsTurnstileLoaded = function () {
+  document.dispatchEvent(new Event("comments:turnstile-ready"));
+};
 
-  $('.js-form').submit(function () {
-    var form = this;
+(function () {
+  "use strict";
 
-//Spinner from Travis Downs and MadeMistakes
-    $(form).addClass('disabled');
-    $('#comment-form-submit').html('<i class="fas fa-spinner fa-spin fa-fw"></i>  Submitting');
-//
-    $.ajax({
-      type: $(this).attr('method'),
-      url:  $(this).attr('action'),
-      data: $(this).serialize(),
-      contentType: 'application/x-www-form-urlencoded',
-      success: function (data) {
-        showModal('Comment submitted', 'Thanks! Your comment is <a href="https://github.com/willymcallister/willymcallister.github.io/pulls">pending</a>. It will appear when approved.');
-        //Spinner
-        $("#comment-form-submit")
-          .html("Submit");
+  document.addEventListener("DOMContentLoaded", function () {
+    var root = document.querySelector(".js-comment-system");
+    if (!root) return;
 
-        //$(form)[0].reset();   // clear contents of form after submit (commented out by WMc)
-        $(form).removeClass('disabled');
-        grecaptcha.reset();
-        //
-      },
-      error: function (err) {
-        console.log(err);
-        //Spinner
-        var ecode = (err.responseJSON || {}).errorCode || "unknown";
-        showModal('Error', 'An error occured.<br>[' + ecode + ']');
-        $('#comment-form-submit').html('Submit')
-        $(form).removeClass('disabled');
-        grecaptcha.reset();
-        //
-      }
+    var endpoint = (root.dataset.endpoint || "").replace(/\/$/, "");
+    var thread = root.dataset.thread || "";
+    var lang = root.dataset.lang === "en" ? "en" : "ko";
+    var form = root.querySelector(".js-comment-form");
+    var respond = root.querySelector(".js-comment-respond");
+    var anchor = root.querySelector(".js-comment-form-anchor");
+    var notice = root.querySelector(".js-comment-notice");
+    var context = root.querySelector(".js-comment-context");
+    var cancelReply = root.querySelector(".js-cancel-reply");
+    var chips = root.querySelector(".js-mention-chips");
+    var submit = root.querySelector("#comment-form-submit");
+    var turnstileContainer = root.querySelector(".js-comment-turnstile");
+    var turnstileWidgetId = null;
+    var turnstileToken = "";
+    var mentions = new Map();
+    var interactionAt = 0;
+
+    if (!form || !respond || !anchor || !submit) return;
+
+    function copy(ko, en) { return lang === "ko" ? ko : en; }
+
+    function markInteraction() {
+      if (!interactionAt) interactionAt = Date.now();
+    }
+    ["focusin", "pointerdown", "input"].forEach(function (eventName) {
+      form.addEventListener(eventName, markInteraction, { once: true });
     });
-    return false;
-  });
 
-  $('.js-close-modal').click(function () {
-    $('body').removeClass('show-modal');
-  });
-
-  function showModal(title, message) {
-    $('.js-modal-title').text(title);
-    $('.js-modal-text').html(message);
-    $('body').addClass('show-modal');
-  }
-})(jQuery);
-
-// Staticman comment replies, from https://github.com/mmistakes/made-mistakes-jekyll
-// modified from Wordpress https://core.svn.wordpress.org/trunk/wp-includes/js/comment-reply.js
-// Released under the GNU General Public License - https://wordpress.org/about/gpl/
-// addComment.moveForm is called from comment.html when the reply link is clicked.
-var addComment = {
-  moveForm: function( commId, parentId, respondId, postId ) {
-    var div, element, style, cssHidden,
-    t           = this,                    //t is the addComment object, with functions moveForm and I, and variable respondId
-    comm        = t.I( commId ),                                //whole comment
-    respond     = t.I( respondId ),                             //whole new comment form
-    cancel      = t.I( 'cancel-comment-reply-link' ),           //whole reply cancel link
-    parent      = t.I( 'comment-replying-to' ),                 //a hidden element in the comment
-    post        = t.I( 'comment-post-slug' ),                   //null
-    commentForm = respond.getElementsByTagName( 'form' )[0];    //the <form> part of the comment_form div
-
-    if ( ! comm || ! respond || ! cancel || ! parent || ! commentForm ) {
-      return;
+    function showNotice(message, state) {
+      notice.textContent = message;
+      notice.dataset.state = state || "info";
+      notice.hidden = false;
     }
 
-    t.respondId = respondId;
-    postId = postId || false;
-
-    if ( ! t.I( 'sm-temp-form-div' ) ) {
-      div = document.createElement( 'div' );
-      div.id = 'sm-temp-form-div';
-      div.style.display = 'none';
-      respond.parentNode.insertBefore( div, respond ); //create and insert a bookmark div right before comment form
+    function clearNotice() {
+      notice.hidden = true;
+      notice.textContent = "";
+      delete notice.dataset.state;
     }
 
-    comm.parentNode.insertBefore( respond, comm.nextSibling );  //move the form from the bottom to above the next sibling
-    if ( post && postId ) {
-      post.value = postId;
+    function renderTurnstile() {
+      if (!turnstileContainer || turnstileWidgetId !== null || !window.turnstile) return;
+      turnstileWidgetId = window.turnstile.render(turnstileContainer, {
+        sitekey: turnstileContainer.dataset.sitekey,
+        action: turnstileContainer.dataset.action,
+        theme: "auto",
+        callback: function (token) { turnstileToken = token; },
+        "expired-callback": function () { turnstileToken = ""; },
+        "error-callback": function () { turnstileToken = ""; }
+      });
     }
-    parent.value = parentId;
-    cancel.style.display = '';                        //make the cancel link visible
 
-    cancel.onclick = function() {
-      var t       = addComment,
-      temp    = t.I( 'sm-temp-form-div' ),            //temp is the original bookmark
-      respond = t.I( t.respondId );                   //respond is the comment form
+    function resetTurnstile() {
+      turnstileToken = "";
+      if (window.turnstile && turnstileWidgetId !== null) {
+        window.turnstile.reset(turnstileWidgetId);
+      }
+    }
 
-      if ( ! temp || ! respond ) {
+    document.addEventListener("comments:turnstile-ready", renderTurnstile, { once: true });
+    renderTurnstile();
+
+    function showSubmitted(deleteToken) {
+      showNotice(root.dataset.success, "success");
+      if (!deleteToken) return;
+      notice.appendChild(document.createTextNode(" "));
+      var link = document.createElement("a");
+      link.href = endpoint + "/v1/delete?t=" + encodeURIComponent(deleteToken);
+      link.textContent = root.dataset.pendingDelete;
+      link.rel = "nofollow";
+      notice.appendChild(link);
+    }
+
+    function setBusy(busy) {
+      submit.disabled = busy;
+      form.setAttribute("aria-busy", busy ? "true" : "false");
+      submit.textContent = busy
+        ? copy("제출 중…", "Submitting…")
+        : copy("댓글 제출", "Submit comment");
+    }
+
+    function renderMentions() {
+      chips.replaceChildren();
+      mentions.forEach(function (name, id) {
+        var chip = document.createElement("span");
+        chip.className = "mention-chip";
+        chip.textContent = "@" + name + " ";
+        var remove = document.createElement("button");
+        remove.type = "button";
+        remove.className = "mention-chip__remove";
+        remove.setAttribute("aria-label", copy(name + " 멘션 제거", "Remove mention of " + name));
+        remove.textContent = "×";
+        remove.addEventListener("click", function () {
+          mentions.delete(id);
+          renderMentions();
+        });
+        chip.appendChild(remove);
+        chips.appendChild(chip);
+      });
+    }
+
+    function resetReply() {
+      form.elements.replying_to.value = "";
+      context.hidden = true;
+      context.textContent = "";
+      cancelReply.hidden = true;
+      anchor.insertAdjacentElement("afterend", respond);
+    }
+
+    root.addEventListener("click", function (event) {
+      var replyButton = event.target.closest(".js-comment-reply");
+      if (replyButton) {
+        var rootId = replyButton.dataset.rootId;
+        var author = replyButton.dataset.author;
+        var targetThread = root.querySelector('.comment-thread[data-root-id="' + CSS.escape(rootId) + '"]');
+        if (!targetThread) return;
+        form.elements.replying_to.value = rootId;
+        context.textContent = copy(author + "님에게 답글", "Replying to " + author);
+        context.hidden = false;
+        cancelReply.hidden = false;
+        targetThread.insertAdjacentElement("afterend", respond);
+        form.elements.message.focus();
         return;
       }
 
-      t.I( 'comment-replying-to' ).value = null;      //forget the name of the comment
-      temp.parentNode.insertBefore( respond, temp );  //move the comment form to its original location
-      temp.parentNode.removeChild( temp );            //remove the bookmark div
-      this.style.display = 'none';                    //make the cancel link invisible
-      this.onclick = null;                            //retire the onclick handler
-      return false;
-    };
-
-    /*
-     * Set initial focus to the first form focusable element.
-     * Try/catch used just to avoid errors in IE 7- which return visibility
-     * 'inherit' when the visibility value is inherited from an ancestor.
-     */
-    try {
-      for ( var i = 0; i < commentForm.elements.length; i++ ) {
-        element = commentForm.elements[i];
-        cssHidden = false;
-
-        // Modern browsers.
-        if ( 'getComputedStyle' in window ) {
-          style = window.getComputedStyle( element );
-        // IE 8.
-        } else if ( document.documentElement.currentStyle ) {
-        style = element.currentStyle;
+      var mentionButton = event.target.closest(".js-comment-mention");
+      if (mentionButton) {
+        if (!mentions.has(mentionButton.dataset.commentId) && mentions.size >= 3) {
+          showNotice(copy("멘션은 3개까지 추가할 수 있습니다.", "You can add up to three mentions."), "error");
+          return;
         }
-
-      /*
-       * For display none, do the same thing jQuery does. For visibility,
-       * check the element computed style since browsers are already doing
-       * the job for us. In fact, the visibility computed style is the actual
-       * computed value and already takes into account the element ancestors.
-       */
-        if ( ( element.offsetWidth <= 0 && element.offsetHeight <= 0 ) || style.visibility === 'hidden' ) {
-          cssHidden = true;
-        }
-
-        // Skip form elements that are hidden or disabled.
-        if ( 'hidden' === element.type || element.disabled || cssHidden ) {
-          continue;
-        }
-
-        element.focus();
-        // Stop after the first focusable element.
-        break;
+        mentions.set(mentionButton.dataset.commentId, mentionButton.dataset.author);
+        renderMentions();
+        form.elements.message.focus();
+        return;
       }
 
-    } catch( er ) {}
+      var deleteToggle = event.target.closest(".js-comment-delete-toggle");
+      if (deleteToggle) {
+        var deleteForm = deleteToggle.closest(".js-comment").querySelector(".js-comment-delete-form");
+        deleteForm.hidden = !deleteForm.hidden;
+        if (!deleteForm.hidden) deleteForm.elements.password.focus();
+      }
+    });
 
-    return false;
-  },
+    cancelReply.addEventListener("click", resetReply);
 
-  I: function( id ) {
-    return document.getElementById( id );
-  }
-};
+    form.addEventListener("submit", async function (event) {
+      event.preventDefault();
+      clearNotice();
+      if (!endpoint || submit.dataset.missingTurnstile === "true") {
+        showNotice(root.dataset.configError, "error");
+        return;
+      }
+      var elapsed = interactionAt ? Date.now() - interactionAt : 0;
+      if (elapsed < 3000) {
+        showNotice(root.dataset.tooFast, "error");
+        return;
+      }
+      if (!form.reportValidity()) return;
+      var payload = {
+        turnstile_token: turnstileToken,
+        honeypot: form.elements.honeypot.value,
+        elapsed_ms: elapsed,
+        name: form.elements.name.value,
+        password: form.elements.password.value,
+        email: form.elements.email.value,
+        message: form.elements.message.value,
+        thread: thread,
+        replying_to: form.elements.replying_to.value,
+        mentions: Array.from(mentions.keys())
+      };
+      setBusy(true);
+      try {
+        var response = await fetch(endpoint + "/v1/comment", {
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify(payload)
+        });
+        var result = await response.json().catch(function () { return {}; });
+        if (!response.ok || !result.ok) throw new Error("submission_failed");
+        form.reset();
+        mentions.clear();
+        renderMentions();
+        resetReply();
+        interactionAt = 0;
+        resetTurnstile();
+        showSubmitted(result.delete_token);
+      } catch (_error) {
+        showNotice(root.dataset.error, "error");
+        resetTurnstile();
+      } finally {
+        setBusy(false);
+      }
+    });
+
+    root.querySelectorAll(".js-comment-delete-form").forEach(function (deleteForm) {
+      deleteForm.addEventListener("submit", async function (event) {
+        event.preventDefault();
+        var article = deleteForm.closest(".js-comment");
+        var deleteNotice = deleteForm.querySelector(".js-delete-notice");
+        if (!window.confirm(root.dataset.deleteConfirm)) return;
+        var button = deleteForm.querySelector('button[type="submit"]');
+        button.disabled = true;
+        deleteNotice.textContent = "";
+        try {
+          var response = await fetch(endpoint + "/v1/delete", {
+            method: "POST",
+            headers: { "content-type": "application/json" },
+            body: JSON.stringify({
+              id: article.dataset.commentId,
+              thread: thread,
+              password: deleteForm.elements.password.value,
+              confirm: true
+            })
+          });
+          var result = await response.json().catch(function () { return {}; });
+          if (!response.ok || !result.ok) throw new Error("delete_failed");
+          deleteForm.elements.password.value = "";
+          deleteNotice.dataset.state = "success";
+          deleteNotice.textContent = root.dataset.deleteSuccess;
+        } catch (_error) {
+          deleteNotice.dataset.state = "error";
+          deleteNotice.textContent = root.dataset.error;
+        } finally {
+          button.disabled = false;
+        }
+      });
+    });
+  });
+})();

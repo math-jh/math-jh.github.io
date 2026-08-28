@@ -36,7 +36,10 @@ masthead_title           : # overrides the website title displayed in the masthe
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 250
 comments:
-  provider               : "giscus" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
+  provider               : "custom"
+  custom:
+    endpoint             : "https://comments.math-jh.com"
+    turnstile_sitekey   : "0x4AAAAAAEeu9iS7h63lBCkn" # public key; secret stays in Worker secrets
   disqus:
     shortname            : "math-jh" # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
@@ -49,13 +52,6 @@ comments:
   utterances:
     theme                : # "github-light" (default), "github-dark"
     issue_term           : # "pathname" (default)
-  giscus:
-    repo_id              : "R_kgDOHqXFrA"
-    category_name        : "Giscus Comments"
-    category_id          : "DIC_kwDOHqXFrM4C9YLq"
-    discussion_term      : "pathname" # keeps ko/en pages as separate threads
-    reactions_enabled    : "1"
-    theme                : "preferred_color_scheme"
 # 기계번역 파이프라인 마커 — EN frontmatter `translation_source:` 의 정본 값.
 # 쓰는 곳: scripts/translation/translate_worker.py (태그 기록),
 # _includes/translation-notice.html (값이 비어 있지 않고 페이지 태그와 일치할
@@ -198,6 +194,7 @@ exclude:
   - README
   - tmp
   - scripts
+  - workers                             # Cloudflare Worker source; never publish in _site
   - .obsidian
   - .backups
   # 사이트 콘텐츠가 아니지만 jekyll serve 의 watcher 가 감시 대상으로 잡는 경로.

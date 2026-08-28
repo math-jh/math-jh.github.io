@@ -77,8 +77,6 @@ WORKERS = [
          log=f"{ROOT}/scripts/term-extraction/term_extract_worker.log"),
     dict(key="terms_lint", name="용어 lint", schedule="매일 04:20", interval=86400,
          log=f"{ROOT}/scripts/term-extraction/term_extraction_lint.log"),
-    dict(key="comments", name="댓글 수집", schedule="*/15", interval=900,
-         log=f"{ROOT}/scripts/comments/fetch_comments.log"),
     dict(key="link_norm", name="링크 정규화 감사", schedule="매일 04:30", interval=86400,
          log=f"{ROOT}/scripts/audit/link_normalizer.log"),
     dict(key="audit", name="주간 링크 감사", schedule="일 05:00", interval=604800,
@@ -452,27 +450,25 @@ def sec_translation():
                 ko_typo_unreviewed=n_unreviewed, state_mtime=mtime(p))
 
 
-def sec_comments():
-    p = f"{ROOT}/_data/recent_comments.yml"
+def sec_comment_prs():
+    """승인 대기 중인 `comment/*` PR을 GitHub에서 직접 센다."""
+    rc, out, err = run([
+        "/usr/bin/gh", "pr", "list", "--repo", "math-jh/math-jh.github.io",
+        "--state", "open", "--limit", "100",
+        "--json", "number,title,url,headRefName,createdAt",
+    ])
+    if rc != 0:
+        return dict(count=None, items=[], error=(err or out).strip()[:240])
     try:
-        text = open(p, encoding="utf-8").read()
-    except OSError:
-        return None
-    # 평탄한 고정 스키마라 yaml 없이 읽는다 (의존성 최소화)
-    out = {"ko": [], "en": []}
-    lang, cur = None, None
-    for line in text.splitlines():
-        m = re.match(r"^(ko|en):", line)
-        if m:
-            lang = m.group(1)
-            continue
-        if re.match(r"^\s*-\s", line):
-            cur = {}
-            out.setdefault(lang or "ko", []).append(cur)
-        m = re.match(r"^\s*-?\s*(permalink|title|author|updated|anchor):\s*(.*)$", line)
-        if m and cur is not None:
-            cur[m.group(1)] = m.group(2).strip().strip('"')
-    return dict(ko=out.get("ko", []), en=out.get("en", []), mtime=mtime(p))
+        values = json.loads(out)
+    except (TypeError, json.JSONDecodeError) as exc:
+        return dict(count=None, items=[], error=f"PR JSON 파싱 실패: {exc}")
+    items = [
+        dict(number=value.get("number"), title=value.get("title", ""),
+             url=value.get("url", ""), created_at=value.get("createdAt", ""))
+        for value in values if str(value.get("headRefName", "")).startswith("comment/")
+    ]
+    return dict(count=len(items), items=items, error=None)
 
 
 # audit-report.md의 "### <제목>" → Issue counts 표의 kind 키 매핑
@@ -611,7 +607,6 @@ CRON_JOBS = [
     dict(id="blog-terms",            name="용어 추출",        worker="terms"),
     dict(id="blog-terms-lint",       name="용어 lint",        worker="terms_lint"),
     dict(id="blog-terms-deprecated", name="폐기 용어 점검",   worker=None),
-    dict(id="blog-comments",         name="댓글 수집",        worker="comments"),
     dict(id="blog-devbot",           name="개발 노트 봇",     worker="blogdev"),
     dict(id="blog-links-audit",      name="주간 링크 감사",   worker="audit"),
     dict(id="blog-pagefind",         name="Pagefind 재색인",  worker="pagefind"),
@@ -665,7 +660,7 @@ def build_summary():
         unpublished=unpublished,
         workers=sec_workers(),
         translation=sec_translation(),
-        comments=sec_comments(),
+        comment_prs=sec_comment_prs(),
         audit=sec_audit(),
         gsc=sec_gsc(),
         git=sec_git(),

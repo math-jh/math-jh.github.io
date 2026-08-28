@@ -1,0 +1,182 @@
+.page__comments {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid $border-color;
+}
+
+.comment-list,
+.page__comments-form {
+  max-width: 52rem;
+}
+
+.js-comment-form {
+  padding: 0;
+  background: transparent;
+}
+
+.comment-thread {
+  margin: 1rem 0 1.5rem;
+}
+
+.comment {
+  padding: 1rem 1.1rem;
+  border: 1px solid $border-color;
+  border-radius: .5rem;
+  background: mix($background-color, $border-color, 94%);
+}
+
+.comment--reply {
+  margin: .65rem 0 0 2rem;
+  border-left: .25rem solid mix($primary-color, $border-color, 55%);
+}
+
+.comment--deleted {
+  color: $muted-text-color;
+  background: transparent;
+  border-style: dashed;
+}
+
+.comment__meta,
+.comment-form__heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.comment__author {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.comment__date {
+  color: $muted-text-color;
+  font-size: .72rem;
+  white-space: nowrap;
+}
+
+.comment__message {
+  margin-top: .65rem;
+  overflow-wrap: anywhere;
+}
+
+.comment__message > :last-child,
+.comment__deleted,
+.comment__delete-form p {
+  margin-bottom: 0;
+}
+
+.comment__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .8rem;
+  margin-top: .75rem;
+}
+
+.comment__action,
+.comment-form__cancel,
+.mention-chip__remove {
+  padding: 0;
+  border: 0;
+  color: $muted-text-color;
+  background: transparent;
+  font: inherit;
+  font-size: .75rem;
+  cursor: pointer;
+}
+
+.comment__action:hover,
+.comment__action:focus-visible,
+.comment-form__cancel:hover,
+.comment-form__cancel:focus-visible,
+.mention-chip__remove:hover,
+.mention-chip__remove:focus-visible {
+  color: $primary-color;
+}
+
+.comment__action--delete {
+  margin-left: auto;
+}
+
+.comment__mention,
+.mention-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: .25rem;
+  margin: 0 .3rem .3rem 0;
+  padding: .15rem .45rem;
+  border-radius: 999px;
+  background: mix($primary-color, $background-color, 14%);
+  color: $primary-color;
+  font-size: .78rem;
+  text-decoration: none;
+}
+
+.comment__delete-form {
+  margin-top: .7rem;
+  padding: .7rem;
+  border-radius: .35rem;
+  background: mix($background-color, $border-color, 90%);
+}
+
+.comment__delete-form label {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+}
+
+.comment__delete-form input {
+  width: min(18rem, 100%);
+}
+
+.page__comments-form {
+  margin-top: 2rem;
+  padding: 1.1rem;
+  border: 1px solid $border-color;
+  border-radius: .5rem;
+}
+
+.comment-form__identity {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.comment-form__context,
+.comment-form__public-notice {
+  color: $muted-text-color;
+}
+
+.comment-form__notice {
+  padding: .75rem;
+  border-radius: .35rem;
+  background: mix($primary-color, $background-color, 12%);
+}
+
+.comment-form__notice[data-state="error"],
+.js-delete-notice[data-state="error"] {
+  color: #b42318;
+}
+
+.comment-form__honeypot {
+  position: absolute !important;
+  left: -10000px !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+@media (max-width: 48rem) {
+  .comment-form__identity {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .comment--reply {
+    margin-left: .85rem;
+  }
+
+  .comment__meta {
+    display: block;
+  }
+}

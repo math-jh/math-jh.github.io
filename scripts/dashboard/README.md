@@ -130,7 +130,7 @@ kotypo 체크·검토 판정과 메모·비교기 판본 선택).
 
 데이터 출처: `_posts` frontmatter 스캔, `scripts/translation/translation_state.json`,
 각 워커 로그, `scripts/audit/audit-report.md`,
-`scripts/index-monitor/state-com.json`, `_data/recent_comments.yml`, `git log`,
+`scripts/index-monitor/state-com.json`, GitHub의 열린 `comment/*` PR, `git log`,
 `systemctl --user is-active jekyll-blog`, `~/Projects/hud-display/state/claude_quota.json`.
 
 ## 손볼 때 알아야 할 것

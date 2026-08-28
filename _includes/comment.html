@@ -1,22 +1,58 @@
-<article id="comment{{ include.index }}" class="js-comment comment" itemprop="comment" itemscope itemtype="https://schema.org/Comment">
-  <div class="comment__avatar-wrapper">
-    <img class="comment__avatar" src="https://www.gravatar.com/avatar/{{ include.email }}?d=mm&s=80" alt="{{ include.name }}">
-  </div>
+{%- assign _c = include.comment -%}
+{%- assign _ui = site.data.ui-text[include.lang] -%}
+<article id="comment-{{ _c.id | escape }}"
+         class="js-comment comment{% if include.is_reply %} comment--reply{% endif %}{% if _c.deleted %} comment--deleted{% endif %}"
+         data-comment-id="{{ _c.id | escape }}"
+         data-root-id="{{ include.root_id | escape }}"
+         data-author="{{ _c.name | default: _ui.comment_deleted_author | escape }}"
+         itemprop="comment" itemscope itemtype="https://schema.org/Comment">
   <div class="comment__content-wrapper">
-    <h3 class="comment__author" itemprop="author" itemscope itemtype="https://schema.org/Person">
-      {% unless include.url == blank %}
-        <span itemprop="name"><a rel="external nofollow" itemprop="url" href="{{ include.url }}">{{ include.name }}</a></span>
-      {% else %}
-        <span itemprop="name">{{ include.name }}</span>
-      {% endunless %}
-    </h3>
-    <p class="comment__date">
-      {% if include.date %}
-        {% if include.index %}<a href="#comment{{ include.index }}" itemprop="url">{% endif %}
-        <time datetime="{{ include.date | date_to_xmlschema }}" itemprop="datePublished">{{ include.date | date: "%B %-d, %Y at %I:%M %p" }}</time>
-        {% if include.index %}</a>{% endif %}
-      {% endif %}
-    </p>
-    <div itemprop="text">{{ include.message | markdownify }}</div>
+    {%- if _c.deleted -%}
+      <p class="comment__deleted" itemprop="text">{{ _ui.comment_deleted_message | escape }}</p>
+    {%- else -%}
+      <div class="comment__meta">
+        <h3 class="comment__author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+          <span itemprop="name">{{ _c.name | escape }}</span>
+        </h3>
+        {%- if _c.date -%}
+          <a class="comment__date" href="#comment-{{ _c.id | escape }}" itemprop="url">
+            <time datetime="{{ _c.date | date_to_xmlschema }}" itemprop="datePublished">{{ _c.date | date: "%Y-%m-%d %H:%M UTC" }}</time>
+          </a>
+        {%- endif -%}
+      </div>
+      {%- if _c.mentions and _c.mentions.size > 0 -%}
+        <div class="comment__mentions" aria-label="{{ _ui.comment_mentions_label | escape }}">
+          {%- for _mention_id in _c.mentions -%}
+            {%- assign _mention_name = nil -%}
+            {%- for _candidate in include.thread_comments -%}
+              {%- if _candidate.id == _mention_id and _candidate.deleted != true -%}
+                {%- assign _mention_name = _candidate.name -%}
+                {%- break -%}
+              {%- endif -%}
+            {%- endfor -%}
+            {%- if _mention_name -%}
+              <a class="comment__mention" href="#comment-{{ _mention_id | escape }}">@{{ _mention_name | escape }}</a>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+      {%- endif -%}
+      <div class="comment__message" itemprop="text">{{ _c.message | comment_markdown }}</div>
+      <div class="comment__actions">
+        <button type="button" class="comment__action js-comment-reply"
+                data-comment-id="{{ _c.id | escape }}" data-root-id="{{ include.root_id | escape }}"
+                data-author="{{ _c.name | escape }}">{{ _ui.comment_reply_label | escape }}</button>
+        <button type="button" class="comment__action js-comment-mention"
+                data-comment-id="{{ _c.id | escape }}" data-author="{{ _c.name | escape }}">{{ _ui.comment_mention_label | escape }}</button>
+        <button type="button" class="comment__action comment__action--delete js-comment-delete-toggle">{{ _ui.comment_delete_label | escape }}</button>
+      </div>
+      <form class="comment__delete-form js-comment-delete-form" hidden>
+        <label>
+          <span>{{ _ui.comment_form_password_label | escape }}</span>
+          <input type="password" name="password" minlength="4" maxlength="128" autocomplete="current-password" required>
+        </label>
+        <button type="submit" class="btn btn--small">{{ _ui.comment_delete_submit | escape }}</button>
+        <p class="js-delete-notice small" role="status" aria-live="polite"></p>
+      </form>
+    {%- endif -%}
   </div>
 </article>
