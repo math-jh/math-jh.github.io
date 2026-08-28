@@ -1,0 +1,7 @@
+id: "c-20260828-13d420"
+name: "Marvin"
+message: "테스트용 답글 (제대로 된 멘션 사용)"
+date: "2026-08-28T10:40:32.733Z"
+mentions: ["c-20260828-547bec"]
+notify: true
+lang: "ko"
