@@ -373,7 +373,13 @@ $S$ 위의 $G$-torsor $P$에 대하여 다음이 성립한다.
 2번을 보자. $S$의 affine open subset $V$를 택하면 $V$는 quasi-compact이고 ([§스펙트럼, ⁋보조정리 12](/ko/math/scheme_theory/spectrums#lem12)), $P \rightarrow S$가 quasi-compact이므로 그 preimage 또한 quasi-compact이다. 따라서 $\{P \rightarrow S\}$는 [§충실평탄하강, ⁋정의 9](/ko/math/scheme_theory/faithfully_flat_descent#def9)의 fpqc covering이 된다. 이제 affine은 base change에 대해 보존되므로 $G\times_SP \rightarrow P$는 affine이고, 1번에 의해 $P\times_SP \rightarrow P$ 역시 affine이다. Affine이라는 성질은 fpqc covering에 대해 base에서 국소적이므로 ([§충실평탄하강, ⁋명제 13](/ko/math/scheme_theory/faithfully_flat_descent#prop13)), $P \rightarrow S$ 자신이 affine이다.
 :::
 
-위의 증명에서 볼 수 있듯, [명제 14](#prop14)의 둘째 항에 붙은 quasi-compact 가정은 fppf covering $\{P \rightarrow S\}$를 fpqc covering으로 올리기 위한 것으로, 일반적으로 quasi-compact fppf covering은 항상 fpqc covering이다. 만일 $P$가 Noetherian scheme인 경우에는 [§스킴 사상의 성질들, ⁋명제 4](/ko/math/scheme_theory/properties_of_scheme_morphisms#prop4)에 의하여 fppf 사상이 자동으로 quasi-compact가 되어 이 가정이 언제나 성립한다.
+위의 증명에서 볼 수 있듯, [명제 14](#prop14)의 둘째 항에 붙은 quasi-compact 가정은 fppf covering $\{P \rightarrow S\}$를 fpqc covering으로 올리기 위한 것으로, 일반적으로 quasi-compact fppf covering은 항상 fpqc covering이다. 만일 $P$가 Noetherian scheme인 경우에는 [§스킴 사상의 성질들, ⁋명제 4](/ko/math/scheme_theory/properties_of_scheme_morphisms#prop4)에 의하여 fppf 사상이 자동으로 quasi-compact가 되어 이 가정이 언제나 성립한다. 
+
+더 일반적으로, scheme $X$ 위의 covering family $\{f_i: U_i \rightarrow X\}$에 대하여, $f_i$가 open immersion인 것을 *Zariski covering*, flat이고 unramified인 것을 *étale covering*, flat이고 locally of finite presentation인 것을 *fppf covering*, flat이고 quasi-compact인 것을 *fpqc covering*이라 부른다. 그럼 그 정의에 의해 주어진 covering의 성질들 사이의 함의관계
+
+$$\text{Zariski}\implies\text{étale}\implies\text{fppf}$$
+
+가 성립한다. 위의 [명제 14](#prop14)는 이 함의관계를 사용하는 방식을 부분적으로 보여준다. 위의 증명에서 살펴보았듯 quasi-compact fppf covering은 fpqc covering이 되며, 이 사실을 이용하여 [§충실평탄하강, ⁋명제 13](/ko/math/scheme_theory/faithfully_flat_descent#prop13)에서 살펴본 fpqc covering의 affineness 관련 주장을 fppf로 옮겨왔다. 
 
 직관적으로 [명제 14](#prop14)는 torsor $P$가 base $S$ 위에서는 $G$와 다를 수 있어도, fppf covering $\{P \rightarrow S\}$ 위로 올라가면 자명한 torsor $G\times_SP$가 된다는 것을 보여준다. 바꿔말하면, torsor는 [§충실평탄하강, ⁋정의 4](/ko/math/scheme_theory/faithfully_flat_descent#def4)의 descent datum을 통해 $G$를 fppf covering을 따라 붙여서 얻는 대상으로 이해할 수 있으며, $G$가 affine인 경우 [§충실평탄하강, ⁋정리 12](/ko/math/scheme_theory/faithfully_flat_descent#thm12)에 의하여 이러한 데이터가 실제로 $S$ 위의 scheme을 준다.
 
@@ -400,10 +406,46 @@ $S$ 위의 $G$-torsor $P$에 대하여 다음이 성립한다.
    
    반면 $\mathbb{R}$-algebra homomorphism $\mathbb{C} \rightarrow \mathbb{R}$은 존재하지 않으므로 $P(S)=\emptyset$이고, [명제 13](#prop13)에 의하여 이 torsor는 trivial하지 않다.
 
-2. Scheme $S$ 위의 invertible sheaf $\mathcal{L}$에 대하여, [\[대수적 위상수학\] §분류공간, ⁋명제 4](/ko/math/algebraic_topology/classifying_spaces#prop4)에서와 마찬가지로 우리는 $\mathcal{L}$을 trivialize하는 open cover $\{U_i\}$와 transition unit $g_{ij}\in \Gamma(U_i\cap U_j, \mathcal{O}_S^\times)$들을 통해 $\mathbb{G}_m$-torsor $P_\mathcal{L}$을 얻는다. Trivialization 사이의 좌표변환인 $g_{ij}$들은 $U_i\cap U_j\cap U_k$ 위에서 $g_{ij}g_{jk}=g_{ik}$를 만족하며, $\mathbb{G}_{m}\times_SU_i$들을 겹침 위에서 $(t, u)\mapsto (g_{ij}(u)t, u)$로 붙이면 [§스킴, ⁋보조정리 9](/ko/math/scheme_theory/schemes#lem9)에 의하여 $S$-scheme $P_\mathcal{L}$이 구성된다. $P_\mathcal{L}$의 section은 어디서도 소멸하지 않는 $\mathcal{L}$의 global section이므로, [명제 13](#prop13)에 의하여 $P_\mathcal{L}$이 trivial한 것과 $\mathcal{L}\cong \mathcal{O}_S$인 것은 동치이다.
+2. Base scheme $S$ 위의 multiplicative group scheme $G=\mathbb{G}_{m, S}=\Spec_S \mathcal{O}_S[\x, \x^{-1}]$와 invertible sheaf $\mathcal{L}$을 생각하자. [\[대수적 위상수학\] §분류공간, ⁋명제 4](/ko/math/algebraic_topology/classifying_spaces#prop4)에서 vector bundle의 각 fiber에서 기저(frame)를 모아 principal bundle을 구성했듯, 대수기하에서도 $\mathcal{L}$로부터 일종의 frame bundle인 $\mathbb{G}_m$-torsor $P_\mathcal{L}$을 구성할 수 있다. 우선 $\mathcal{L}$은 정의상 Zariski-locally free of rank $1$이므로, local trivialization $\varphi_i: \mathcal{L}\vert_{U_i} \xrightarrow{\sim} \mathcal{O}_{U_i}$를 갖는 Zariski open cover $\{U_i\}$가 존재한다. 이 때의 transition function들을
+    
+    $$g_{ij} = \varphi_i\circ \varphi_j^{-1}\in \Gamma(U_i\cap U_j, \mathcal{O}_S^\times)=\mathbb{G}_m(U_i\cap U_j)$$
+    
+    라 하자. 각 $U_i$ 위의 scheme $P_i = \mathbb{G}_{m, U_i} = \Spec \mathcal{O}_S(U_i)[\x, \x^{-1}]$들을 overlap $U_i\cap U_j$ 위에서 transition $g_{ij}$의 곱셈
+    
+    $$(t, u)\sim (g_{ij}(u)t, u)$$
+    
+    로 붙이면, [§스킴, ⁋보조정리 9](/ko/math/scheme_theory/schemes#lem9)에 의하여 $S$-scheme $p:P_\mathcal{L}\rightarrow S$가 잘 정의된다. 이제 이 위의 group scheme action $\varrho: \mathbb{G}_m\times_S P_\mathcal{L} \rightarrow P_\mathcal{L}$은 각 $U_i$ 위에서 $\mathbb{G}_m$의 곱셈
+    
+    $$\mathbb{G}_{m, U_i}\times_{U_i} \mathbb{G}_{m, U_i} \longrightarrow \mathbb{G}_{m, U_i};\qquad (a, t)\mapsto at$$
+    
+    로 정의된다. 우리 주장은 이것이 $G$-torsor라는 것이다. 
+
+    우선 국소적으로 $P_\mathcal{L}\vert_{U_i}\cong \mathbb{G}_{m, U_i} \rightarrow U_i$는 faithfully flat이고 of finite presentation이므로, 이 성질들이 base의 국소적 성질임에 따라 $p:P_\mathcal{L}\rightarrow S$는 faithfully flat이고 locally of finite presentation이다. [정의 12](#def12)의 둘째 조건의 사상 $(\varrho, \pr_2): \mathbb{G}_m\times_S P_\mathcal{L} \rightarrow P_\mathcal{L}\times_S P_\mathcal{L}$의 경우, 이는 각 $U_i$ 위에서 다음의 morphism
+      
+    $$\mathbb{G}_{m, U_i}\times_{U_i}\mathbb{G}_{m, U_i} \longrightarrow \mathbb{G}_{m, U_i}\times_{U_i}\mathbb{G}_{m, U_i};\qquad (a, t)\mapsto (at, t)$$
+      
+    에 해당하며, 대수적으로 coordinate ring 사이의 함수 
+      
+    $$\mathcal{O}(U_i)[\x^{\pm 1}, \y^{\pm 1}]\rightarrow \mathcal{O}(U_i)[\x^{\pm 1}, \y^{\pm 1}];\qquad \x\mapsto \x\y, \y\mapsto \y$$
+      
+    로 주어지는 것이다. 이는 $\x\mapsto \x\y^{-1}$, $\y\mapsto \y$를 그 inverse로 갖는 isomorphism이므로, $(\varrho, \pr_2)$는 isomorphism이다.
+
+    따라서 $P_\mathcal{L}$은 $S$ 위의 $\mathbb{G}_m$-torsor이며, [명제 13](#prop13)에 의하여 $P_\mathcal{L}$이 trivial한 것과 $\mathcal{L}\cong \mathcal{O}_S$인 것이 동치임을 확인할 수 있다. 
+
+    이 gluing이 작동하는 방식을 cohomology 관점에서 들여다보면 $P_\mathcal{L}$을 붙이는 transition data $g_{ij}\in \Gamma(U_i\cap U_j, \mathcal{O}_S^\times)$들은 $U_i\cap U_j\cap U_k$ 위에서 정확히 Čech 1-cocycle condition $g_{ij}g_{jk}=g_{ik}$를 만족한다. 또한 각 $U_i$ 위에서 local trivialization $\varphi_i$의 기저를 $0$이 되지 않는 함수 $c_i\in \Gamma(U_i, \mathcal{O}_S^\times)$만큼 바꾸면 새 transition data는 $c_i g_{ij} c_j^{-1}$이 되므로, trivialization의 선택에 따른 차이는 정확히 Čech 1-coboundary에 해당한다. 따라서 이 gluing으로 얻어지는 $\mathbb{G}_m$-torsor의 isomorphism class는 Čech cohomology $\check{H}^1(\{U_i\}, \mathcal{O}_S^\times)$와 같고, [§층 코호몰로지, ⁋명제 22](/ko/math/algebraic_varieties/sheaf_cohomology#prop22)는 이것이 sheaf cohomology $H^1(S, \mathcal{O}_S^\times)\cong \Pic(S)$의 원소와 정확히 일치한다. 
+
+    특기할만한 사실은 이 gluing이 Zariski open set의 단계에서 이루어졌다는 것이다. 구별을 위해 Zariski open set들에 대한 (일상적인) sheaf cohomology를 $H^1_\Zar(S, \mathcal{O}_S^\times)$로 적으면, 
+
+    1번 예시의 $\mathbb{Z}/2$-torsor는 Zariski open cover로는 결코 자명해질 수 없어 fppf covering을 필요로 했던 반면, 2번의 $P_\mathcal{L}$은 이미 Zariski open cover 위에서 자명해지는(Zariski-locally trivial) 특별한 torsor이다. 그렇다면 임의의 fppf covering 위에서 꼬아 붙인 일반적인 $\mathbb{G}_m$-torsor도 항상 Zariski open cover 위에서 자명해질까? 
+
+    이에 대한 답이 긍정적임을 보장하는 것이 바로 **Hilbert 정리 90(Hilbert's Theorem 90)**이다. [\[체론\] §갈루아 군의 성질들, ⁋정리 7](/ko/math/field_theory/properties_of_galois_extensions#thm7)에서 다룬 체의 Galois extension에 대한 정리 $H^1(\Gal(\mathbb{L}/\mathbb{K}), \mathbb{L}^\times)=0$은, 스킴의 각 점 $s\in S$의 local ring $\mathcal{O}_{S, s}$ 위에서 임의의 fppf $\mathbb{G}_m$-torsor가 언제나 자명해짐($H^1_\fppf(\Spec \mathcal{O}_{S, s}, \mathbb{G}_m)=0$)을 함의한다. 점별 trivialization(stalk에서의 section)은 항상 열린 근방으로 연장되므로, 임의의 fppf $\mathbb{G}_m$-torsor는 사실 항상 어떤 Zariski open cover 위에서 이미 자명해져 invertible sheaf의 frame bundle $P_\mathcal{L}$과 isomorphism이 됨이 증명된다. 따라서 
+    
+    $$H^1_\fppf(S, \mathbb{G}_m)\cong H^1_\Zar(S, \mathcal{O}_S^\times)\cong \Pic(S)$$
+    
+    가 성립한다.
 :::
 
-[예시 15](#ex15)의 둘째 경우에서 보듯, covering 위에서 $G$-torsor를 붙이는 transition data $g_{ij}$들은 정확히 cocycle condition $g_{ij}g_{jk}=g_{ik}$를 만족하며, trivialization의 선택에 따른 차이는 coboundary로 흡수된다. 따라서 주어진 base $S$ 위의 $G$-torsor의 isomorphism class 전체는 1차 cohomology set $H^1(S, G)$ (fppf topology에서는 $H^1_\fppf(S, G)$)에 의해 분류되며, $G=\mathbb{G}_m$인 경우가 바로 $\Pic(S)\cong H^1(S, \mathcal{O}_S^\times)$이다. 한편 torsor들을 집합으로 세는 대신 이들이 이루는 groupoid를 하나의 기하학적 대상으로 취급할 수도 있는데, field $\mathbb{K}$ 위에서 $\mathbb{G}_m$-torsor를 분류하는 $[\Spec \mathbb{K}/\mathbb{G}_m]$과 같은 quotient stack이 바로 그렇게 얻어지는 대상으로서 stack 이론의 출발점이 된다.
+[예시 15](#ex15)에서 보듯, 임의의 group scheme $G$에 대하여 covering 위에서 $G$-torsor를 붙이는 transition data는 $1$차 cohomology set $H^1(S, G)$ (fppf topology에서는 $H^1_\fppf(S, G)$)를 이룬다. $G$가 abelian이 아닌 경우 $H^1(S, G)$는 군 구조를 갖지 않는 pointed set이지만, 여전히 $S$ 위의 $G$-torsor들의 isomorphism class 전체를 분류한다. 한편 torsor들을 단순한 집합으로 세는 대신 이들이 이루는 groupoid를 하나의 기하학적 대상으로 다룰 수도 있는데, field $\mathbb{K}$ 위에서 $\mathbb{G}_m$-torsor를 분류하는 $[\Spec \mathbb{K}/\mathbb{G}_m]$과 같은 quotient stack이 바로 그렇게 얻어지는 대상으로서 stack 이론의 출발점이 된다.
 
 ---
 
