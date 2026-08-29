@@ -64,6 +64,12 @@ $S$-scheme $G$가 group scheme이 되는 것은 적당한 functor $\widetilde{h}
    $$\SL_n(T)=\SL(n;\Gamma(T,\mathcal{O}_T))$$
 
    이다. 위와 마찬가지로, 특별히 $T=\Spec A$인 경우 $\SL_n(T)=\SL(n; A)$이다.
+
+6. *Constant group scheme*. 임의의 finite group $\Gamma$에 대하여, $\Gamma$의 원소들로 index된 $\Spec \mathbb{Z}$들의 disjoint union
+
+   $$\underline{\Gamma}=\coprod_{\gamma\in\Gamma}\Spec\mathbb{Z}=\Spec\Bigl(\prod_{\gamma\in\Gamma}\mathbb{Z}\Bigr)$$
+
+   을 생각하면, 임의의 scheme $T$에 대하여 $\underline{\Gamma}(T)$는 위상공간 $\lvert T\rvert$에서 discrete topology가 주어진 topological group $\Gamma$로 가는 locally constant function들의 군이다. 특히 $T$가 connected인 경우 $\underline{\Gamma}(T)\cong \Gamma$이다.
 :::
 
 위의 예시에서 각 경우의 group scheme의 구조는 [명제 2](#prop2)를 사용하여 얻어진 것으로, 해당 명제의 유용성을 증명한다. 뿐만 아니라, 위의 예시는 $\Spec \mathbb{Z}$ 위에서 정의한 것이지만 본질적으로 이는 모든 base $S$에서 정의한 것이다. [§스킴 사이의 사상, ⁋예시 4](/ko/math/scheme_theory/morphism_of_schemes#ex4) 이후에서 보았듯 $\Spec \mathbb{Z}$는 $\Sch$의 terminal object로서, 임의의 scheme $S$마다 유일한 structure morphism $p: S\rightarrow \Spec \mathbb{Z}$가 존재하며, 이것이 유도하는 base change morphism
@@ -78,7 +84,7 @@ $$p_\ast: \Sch_{/S}\rightarrow \Sch;\qquad (T\rightarrow S)\mapsto (T\rightarrow
 
 $$\Hom_S(T, p^\ast G)\cong \Hom_\mathbb{Z}(p_\ast T, G)$$
 
-에 의해 보장되는 것이다. 이러한 방식으로 얻어지는 relative group schemes over $S$는 아래첨자를 사용하여 $\mathbb{G}_{a,S}, \mathbb{G}_{m,S},\mu_{n,S},\GL_{n,S},\SL_{n,S}$ 등으로 적고, 문맥상 base가 명확한 경우에는 첨자를 생략하고 $\mathbb{G}_a, \mathbb{G}_m$ 등으로 적기로 한다.
+에 의해 보장되는 것이다. 이러한 방식으로 얻어지는 relative group schemes over $S$는 아래첨자를 사용하여 $\mathbb{G}_{a,S}, \mathbb{G}_{m,S},\underline{\Gamma}_S,\mu_{n,S},\GL_{n,S},\SL_{n,S}$ 등으로 적고, 문맥상 base가 명확한 경우에는 첨자를 생략하고 $\mathbb{G}_a, \mathbb{G}_m, \underline{\Gamma}$ 등으로 적기로 한다.
 
 한편 위의 예시에서 주어진 것들은 모두 affine group scheme들이며, 이들이 정의된 방식 또한 명확하다. 뿐만 아니라, $\mu_n$을 제외한 예시들이 affine space 위에서 smooth인 것도 쉽게 보일 수 있다. 우선 $\mathbb{G}_a$는 affine line 그 자체이므로 별도의 논증이 필요없으며, $\GL_n$은 $\det$이 정의하는 $n^2$-dimensional affine space의 open subscheme $D(\det)$이며 그 특수한 경우 $n=1$이 $\mathbb{G}_m$이다. 마지막으로 $\SL_n$의 경우, [\[선형대수학\] §행렬식의 존재성과 유일성, ⁋정리 12](/ko/math/linear_algebra/existence_and_uniqueness_of_determinant#thm12)의 Laplace expansion으로부터 $f=\det-1$의 $\x_{ij}$에 대한 편미분이 $(i,j)$ 방향의 cofactor $C_{ij}$임을 확인할 수 있다. 따라서 [§매끄러운 사상과 에탈 사상, ⁋정리 4](/ko/math/scheme_theory/smooth_and_etale_morphisms#thm4)에 의해 그 Jacobian은 다음의 $1\times n^2$ 행렬
 
@@ -372,7 +378,18 @@ $S$ 위의 $G$-torsor $P$에 대하여 다음이 성립한다.
 직관적으로 [명제 14](#prop14)는 torsor $P$가 base $S$ 위에서는 $G$와 다를 수 있어도, fppf covering $\{P \rightarrow S\}$ 위로 올라가면 자명한 torsor $G\times_SP$가 된다는 것을 보여준다. 바꿔말하면, torsor는 [§충실평탄하강, ⁋정의 4](/ko/math/scheme_theory/faithfully_flat_descent#def4)의 descent datum을 통해 $G$를 fppf covering을 따라 붙여서 얻는 대상으로 이해할 수 있으며, $G$가 affine인 경우 [§충실평탄하강, ⁋정리 12](/ko/math/scheme_theory/faithfully_flat_descent#thm12)에 의하여 이러한 데이터가 실제로 $S$ 위의 scheme을 준다.
 
 ::: 예시 15
-1. $S=\Spec \mathbb{R}$, $P=\Spec \mathbb{C}$이라 하고, $G$를 $\mathbb{Z}/2$의 constant group scheme, 곧 두 개의 $S$의 복사본의 disjoint union $\Spec(\mathbb{R}\times\mathbb{R})$이라 하자. 이는 $G(T)$가 locally constant function $\lvert T\rvert \rightarrow \mathbb{Z}/2$들의 group이 되도록 하는 group scheme이다. Complex conjugation이 $\mathbb{R}$-algebra automorphism이므로, 한 복사본 위에서는 $\id_P$로 다른 복사본 위에서는 conjugation으로 정의하여 action $\varrho: G\times_SP \rightarrow P$를 얻는다. $\mathbb{C}$가 $\mathbb{R}$ 위의 rank $2$ free module이므로 $P \rightarrow S$는 faithfully flat이고 locally of finite presentation이다. 또 $G\times_SP=\Spec(\mathbb{C}\times\mathbb{C})$이고 $P\times_SP=\Spec(\mathbb{C}\otimes_\mathbb{R}\mathbb{C})$인데, $\varrho$에 대응하는 algebra homomorphism $\rho:\mathbb{C}\rightarrow\mathbb{C}\times\mathbb{C}$가 $\rho(z)=(z,\bar z)$를 주므로 $(\varrho, \pr_2)$의 dual은
+1. $S=\Spec \mathbb{R}$, $P=\Spec \mathbb{C}$이라 하고, $G$를 finite group $\mathbb{Z}/2$이 정의하는 constant group scheme 
+    
+    $$G=\underline{(\mathbb{Z}/2)}_S=S\amalg S=\Spec(\mathbb{R}\times\mathbb{R})$$
+    
+    을 생각하자. ([예시 3](#ex3)) Complex conjugation을 $c$라 표기하면, 이 위의 group scheme action $\varrho: G\times_SP\rightarrow P$를 다음의 diagram
+
+    (img)
+
+    으로 정의할 수 있다. 
+    
+    
+    한 복사본 위에서는 $\id_P$로 다른 복사본 위에서는 conjugation으로 정의하여 action $\varrho: G\times_SP \rightarrow P$를 얻는다. $\mathbb{C}$가 $\mathbb{R}$ 위의 rank $2$ free module이므로 $P \rightarrow S$는 faithfully flat이고 locally of finite presentation이다. 또 $G\times_SP=\Spec(\mathbb{C}\times\mathbb{C})$이고 $P\times_SP=\Spec(\mathbb{C}\otimes_\mathbb{R}\mathbb{C})$인데, $\varrho$에 대응하는 algebra homomorphism $\rho:\mathbb{C}\rightarrow\mathbb{C}\times\mathbb{C}$가 $\rho(z)=(z,\bar z)$를 주므로 $(\varrho, \pr_2)$의 dual은
 
    $$\mathbb{C}\otimes_\mathbb{R}\mathbb{C} \rightarrow \mathbb{C}\times\mathbb{C};\qquad z\otimes w\mapsto (zw, \bar zw)$$
 
