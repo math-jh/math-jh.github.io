@@ -239,7 +239,7 @@ Hopf $A$-algebra $B$에 대하여, $B$-*comodule<sub>쌍대모듈</sub>*이란 $
 두 조건은 Hopf algebra의 coassociativity와 counit 조건을 $V$가 받아들이는 형태로 옮긴 것이며, $V=B$이고 $\rho=\Delta$인 경우가 자명한 예이다. 그럼 다음 정리도 기대함직하다. 
 
 ::: 정리 9
-Ring $A$ 위의 affine group scheme $G=\Spec B$와 $A$-module $V$에 대하여, $G$의 $V$ 위로의 linear representation과 $V$ 위의 $B$-comodule 구조는 서로 일대일대응한다. 더 나아가, 이는 이들 카테고리 사이의 equivalence를 준다.
+Ring $A$ 위의 affine group scheme $G=\Spec B$와 $A$-module $V$에 대하여, $G$의 $V$ 위로의 linear representation과 $V$ 위의 $B$-comodule 구조는 서로 일대일대응한다. 더 나아가, 이는 이들 category 사이의 equivalence를 준다.
 :::
 ::: 증명
 [§아핀스킴, ⁋정리 13](/ko/math/scheme_theory/affine_schemes#thm13)에 의하여 임의의 $A$-algebra $E$에 대해 $G(E)=\Hom_{\cAlg{A}}(B, E)$이고, [정리 6](#thm6) 직후에 적은 대로 그 group 구조는 $g\ast h=\mu_E\circ(g\otimes h)\circ\Delta$, 항등원 $\eta_E\circ\epsilon$, 역원 $g\circ\iota$로 주어진다.
@@ -313,11 +313,11 @@ $$\sigma_T: G(T)\times X(T) \rightarrow X(T)$$
 
 그럼 다시 [명제 2](#prop2)의 정신에 의하여, 위의 조건은 정확히 group action이 가져야 할 다음의 두 조건
 
-$$\sigma\circ(\mu_G\times\id_X)=\sigma\circ(\id_G\times\sigma),\qquad \sigma\circ(\epsilon_G\circ\pi_X, \id_X)=\id_X$$
+$$\sigma\circ(\mu_G\times\id_X)=\sigma\circ(\id_G\times\sigma),\qquad \sigma\circ(\epsilon_G\circ p_X, \id_X)=\id_X$$
 
-이 성립하는 것과 동치이다. 여기에서 $\pi_X: X \rightarrow S$는 structure morphism이다. 가장 기본적인 작용은 $G$ 자신 위로의 left translation, 곧 $\sigma=\mu_G$인 경우이다.
+이 성립하는 것과 동치이다. 여기에서 $p_X: X \rightarrow S$는 structure morphism이다. 
 
-스킴 위에 군 작용이 주어지면, 기하학적으로 자연스러운 다음 관심사는 궤도(orbit)들의 공간, 곧 몫(quotient) $\pi: P \rightarrow S$를 구성하고 그 구조를 이해하는 것이다. 만약 이 작용이 각 궤도 위에서 고정점 없이 자유롭고 단순추이적(free and simply transitive)으로 일어난다면, 각 파이버 $P_s$는 $G_s$와 같은 모양을 가지게 된다. 하지만 대역적으로는 궤도마다 $G$의 항등원에 대응하는 기준점(절단)을 일관되게 고를 수 없을 수 있으며, 따라서 $P$는 $G\times_SS$와 대역적으로 동형은 아니지만 국소적으로 $G\times_SS$처럼 보이는 공간이 된다. Torsor는 바로 이러한 '좋은' 몫 사상의 기하학적 파이버 구조를 엄밀하게 추상화한 대상이다.
+스킴 위에 군 작용이 주어지면, 기하학적으로 자연스러운 다음 관심사는 궤도(orbit)들의 공간, 곧 몫(quotient) $\overline{X}=X/G$와 몫사상 $\pi: X \rightarrow \overline{X}$를 구성하고 그 구조를 이해하는 것이다. [\[위상수학\] §분류공간, ⁋정의 1](/ko/math/algebraic_topology/classifying_spaces#def1)의 principal bundle과 마찬가지로, 만약 이 작용이 각 궤도 위에서 자유롭고 단순추이적(free and simply transitive)이라면, 각 궤도점 $\overline{x}\in \overline{X}$ 위의 파이버 $\pi^{-1}(\overline{x})$는 $G$와 같은 모양을 가지게 된다. 하지만 대역적으로는 궤도마다 $G$의 항등원에 대응하는 기준점(절단)을 일관되게 고를 수 없을 수 있으며, 따라서 $X$는 $\overline{X}$ 위에서 $G\times_S \overline{X}$와 대역적으로 동형은 아니지만 국소적으로 $G\times_S \overline{X}$처럼 보이는 비틀린 공간이 된다. Torsor는 바로 이러한 '좋은' 몫 사상의 기하학적 파이버 구조를 스킴의 언어로 정식화한 대상이다.
 
 ::: 정의 12
 $S$ 위의 group scheme $G$와 left action $\sigma: G\times_SP \rightarrow P$를 가진 $S$-scheme $P$에 대하여, $P$가 *$G$-torsor*라는 것은 다음 두 조건이 성립하는 것이다.
@@ -332,11 +332,13 @@ $S$ 위의 group scheme $G$와 left action $\sigma: G\times_SP \rightarrow P$를
 $G$-torsor $P$가 *trivial*하다는 것은, left translation 작용을 가진 $G$ 자신과 $G$-동변인 $S$-scheme isomorphism이 존재하는 것이다.
 :::
 
-둘째 조건을 functor의 언어로 읽으면 명확해진다. [§점함자, ⁋명제 7](/ko/math/scheme_theory/functor_of_points#prop7)에 의하여 각각의 $S$-scheme $T$에 대하여 이 조건은 map
+[\[위상수학\] §분류공간, ⁋정의 1](/ko/math/algebraic_topology/classifying_spaces#def1)의 principal $G$-bundle과 비교하면, 둘째 조건은 점함자 관점에서 map
 
 $$G(T)\times P(T) \rightarrow P(T)\times P(T);\qquad (g, q)\mapsto (g\cdot q, q)$$
 
-이 전단사인 것, 곧 임의의 두 점 $q, q'\in P(T)$에 대하여 $g\cdot q=q'$인 $g\in G(T)$가 유일하게 존재하는 것이다. 다시 말해 $P(T)$가 비어있지 않을 때마다 $G(T)$가 그 위에 단순추이적으로 작용한다. 첫째 조건은 $P$가 $S$ 위에서 충분히 고르게 퍼져 있어 그 자신이 covering의 역할을 할 수 있도록 요구하는 것이다. 이 둘을 합치면 다음을 얻는다.
+이 전단사인 것, 곧 $P(T)\neq\emptyset$일 때마다 $G(T)$가 $P(T)$ 위에 단순추이적으로 작용한다는 조건이다. 한편 위상수학에서는 열린 덮개 위의 국소 자명성을 요구했지만, 대수기하학에서는 자리스키 열린 덮개만으로는 대수적인 뒤틀림(예: Galois extension)을 포섭하기에 너무 좁으므로, 첫째 조건처럼 $P \rightarrow S$ 자신이 *fppf covering*의 역할을 하도록 요구한다.
+
+위상수학의 [\[위상수학\] §분류공간, ⁋명제 2](/ko/math/algebraic_topology/classifying_spaces#prop2)와 마찬가지로, torsor의 자명성은 대역적 절단의 존재와 정확히 동치이다.
 
 ::: 명제 13
 $S$ 위의 $G$-torsor $P$에 대하여, $P$가 trivial한 것과 $P(S)\neq \emptyset$인 것, 곧 $P \rightarrow S$가 절단을 가지는 것은 동치이다.
@@ -344,14 +346,14 @@ $S$ 위의 $G$-torsor $P$에 대하여, $P$가 trivial한 것과 $P(S)\neq \empt
 ::: 증명
 $P$가 trivial하면 $G$의 항등원 $\epsilon_G\in G(S)$에 대응하는 원소가 $P(S)$의 원소를 주므로 절단이 존재한다.
 
-거꾸로 절단 $s\in P(S)$가 주어졌다 하자. 합성
+거꾸로 절단 $s\in P(S)$가 주어졌다 하자. [\[위상수학\] §분류공간, ⁋명제 2](/ko/math/algebraic_topology/classifying_spaces#prop2)에서와 마찬가지로 합성
 
 $$\varphi: G\cong G\times_SS\xrightarrow{\ \id_G\times s\ }G\times_SP\xrightarrow{\ \sigma\ }P$$
 
-를 생각하면, 각각의 $S$-scheme $T$에서 $\varphi_T(g)=g\cdot s_T$이다. 여기에서 $s_T\in P(T)$는 $s$를 $T \rightarrow S$를 따라 끌어당긴 것이다. [정의 12](#def12)의 둘째 조건이 주는 전단사 $G(T)\times P(T) \rightarrow P(T)\times P(T)$에서 둘째 좌표를 $s_T$로 고정하면, $g\mapsto g\cdot s_T$가 $G(T)$에서 $P(T)$로의 전단사임을 얻는다. 이 전단사는 $T$에 대해 자연스러우므로 [\[범주론\] §표현가능한 함자, ⁋정리 4](/ko/math/category_theory/representable_functors#thm4)에 의하여 $\varphi$는 isomorphism이다. 또 $\varphi_T(g'g)=(g'g)\cdot s_T=g'\cdot\varphi_T(g)$이므로 $\varphi$는 $G$-동변이며, 따라서 $P$는 trivial하다.
+를 생각하면, 각각의 $S$-scheme $T$에서 $\varphi_T(g)=g\cdot s_T$이다. [정의 12](#def12)의 둘째 조건에 의하여 $g\mapsto g\cdot s_T$는 $G(T)$에서 $P(T)$로의 전단사이므로, [\[범주론\] §표현가능한 함자, ⁋정리 4](/ko/math/category_theory/representable_functors#thm4)에 의하여 $\varphi$는 isomorphism이다. 또 $\varphi_T(g'g)=(g'g)\cdot s_T=g'\cdot\varphi_T(g)$이므로 $\varphi$는 $G$-동변이며, 따라서 $P$는 trivial하다.
 :::
 
-[명제 13](#prop13)은 torsor가 자명한지의 여부가 오로지 대역적인 절단의 존재에 달려 있음을 말한다. 그런데 torsor는 정의상 자기 자신 위로 끌어올리면 언제나 절단을 가진다. 이것이 다음 명제의 내용이며, 여기에서 covering의 의미는 flat이고 locally of finite presentation이며 surjective morphism들의 모임, 곧 *fppf covering*이다. 이러한 covering에서 base의 각 affine open subset이 유한히 많은 affine open subset의 image로 덮이기까지 하면 [§충실평탄하강, ⁋정의 9](/ko/math/scheme_theory/faithfully_flat_descent#def9)의 fpqc covering이 되므로, 하강에 관한 그 글의 결과들을 그대로 쓸 수 있다.
+[명제 13](#prop13)은 torsor가 자명한지의 여부가 오로지 대역적인 절단의 존재에 달려 있음을 말한다. 그런데 torsor는 정의상 자기 자신 위로 끌어올리면 항상 diagonal $\Delta: P \rightarrow P\times_SP$라는 절단을 가지므로, 자기 자신을 covering 삼아 언제나 자명해진다.
 
 ::: 명제 14
 $S$ 위의 $G$-torsor $P$에 대하여 다음이 성립한다.
@@ -360,11 +362,9 @@ $S$ 위의 $G$-torsor $P$에 대하여 다음이 성립한다.
 2. $G \rightarrow S$가 affine이고 $P \rightarrow S$가 quasi-compact이면 ([§스킴 사상의 성질들, ⁋정의 2](/ko/math/scheme_theory/properties_of_scheme_morphisms#def2)) $P \rightarrow S$ 또한 affine이다.
 :::
 ::: 증명
-1번을 보자. [정의 12](#def12)의 두 조건은 base change에 대해 보존된다. 실제로 flat은 base change에 대해 보존되고 ([§평탄사상, ⁋명제 3](/ko/math/scheme_theory/flat_morphisms#prop3)), surjective와 locally of finite presentation도 그러하며 ([§올곱, ⁋명제 16](/ko/math/scheme_theory/fiber_products#prop16)), 둘째 조건의 isomorphism은 base change하여도 isomorphism이기 때문이다. 따라서 둘째 사영 $P\times_SP \rightarrow P$는 $P$ 위의 $G_P$-torsor이다. 그런데 diagonal morphism $\Delta: P \rightarrow P\times_SP$가 이 사영의 절단이므로, [명제 13](#prop13)에 의하여 이 torsor는 trivial하다. 곧 $P$ 위에서 $P\times_SP\cong G\times_SP$이다. 한편 $P \rightarrow S$는 정의에 의하여 flat, locally of finite presentation, 전사이므로 $\{P \rightarrow S\}$는 fppf covering이다.
+1번을 보자. Flat, locally of finite presentation, surjective 성질과 파이버곱의 isomorphism은 모두 base change에 대해 보존되므로 ([§평탄사상, ⁋명제 3](/ko/math/scheme_theory/flat_morphisms#prop3), [§올곱, ⁋명제 16](/ko/math/scheme_theory/fiber_products#prop16)), 둘째 사영 $P\times_SP \rightarrow P$는 $P$ 위의 $G_P$-torsor이다. 그런데 diagonal morphism $\Delta: P \rightarrow P\times_SP$가 이 사영의 절단이므로, [명제 13](#prop13)에 의하여 이 torsor는 trivial하다. 곧 $P$ 위에서 $P\times_SP\cong G\times_SP$이다. 한편 $P \rightarrow S$는 정의에 의하여 fppf covering이다.
 
-2번을 보이기 위해 먼저 $\{P \rightarrow S\}$가 fpqc covering임을 확인한다. $S$의 affine open subset $V$를 택하면 $V$는 quasi-compact이고 ([§스펙트럼, ⁋보조정리 12](/ko/math/scheme_theory/spectrums#lem12)), $P \rightarrow S$가 quasi-compact이므로 그 preimage 또한 quasi-compact이어서 유한히 많은 affine open subset들로 덮인다. $P \rightarrow S$가 전사이므로 이들의 image가 $V$를 덮으며, 나머지 조건은 1번에서 이미 확인하였으므로 [§충실평탄하강, ⁋정의 9](/ko/math/scheme_theory/faithfully_flat_descent#def9)의 조건이 모두 성립한다.
-
-이제 affine은 base change에 대해 보존되므로 ([§올곱, ⁋명제 16](/ko/math/scheme_theory/fiber_products#prop16)) $G\times_SP \rightarrow P$는 affine이고, 1번에 의하여 이는 $P\times_SP \rightarrow P$, 곧 $P \rightarrow S$를 자기 자신을 따라 base change한 것과 isomorphic하다. 그런데 affine이라는 성질은 fpqc covering에 대해 base에서 국소적이므로 ([§충실평탄하강, ⁋명제 13](/ko/math/scheme_theory/faithfully_flat_descent#prop13)), $P \rightarrow S$ 자신이 affine이다.
+2번을 보자. $S$의 affine open subset $V$를 택하면 $V$는 quasi-compact이고 ([§스펙트럼, ⁋보조정리 12](/ko/math/scheme_theory/spectrums#lem12)), $P \rightarrow S$가 quasi-compact이므로 그 preimage 또한 quasi-compact이다. 따라서 $\{P \rightarrow S\}$는 [§충실평탄하강, ⁋정의 9](/ko/math/scheme_theory/faithfully_flat_descent#def9)의 fpqc covering이 된다. 이제 affine은 base change에 대해 보존되므로 $G\times_SP \rightarrow P$는 affine이고, 1번에 의해 $P\times_SP \rightarrow P$ 역시 affine이다. Affine이라는 성질은 fpqc covering에 대해 base에서 국소적이므로 ([§충실평탄하강, ⁋명제 13](/ko/math/scheme_theory/faithfully_flat_descent#prop13)), $P \rightarrow S$ 자신이 affine이다.
 :::
 
 [명제 14](#prop14)의 둘째 항에 붙은 quasi-compact 가정은 fppf covering $\{P \rightarrow S\}$를 fpqc covering으로 올려 하강 결과를 쓸 수 있게 하기 위한 것이며, $P$가 Noetherian scheme인 경우에는 [§스킴 사상의 성질들, ⁋명제 4](/ko/math/scheme_theory/properties_of_scheme_morphisms#prop4)에 의하여 자동으로 성립한다.
@@ -378,7 +378,7 @@ $S$ 위의 $G$-torsor $P$에 대하여 다음이 성립한다.
 
    이다. 이것이 $\mathbb{R}$-algebra isomorphism이므로 [정의 12](#def12)의 둘째 조건도 성립한다. 그러나 $\mathbb{R}$-algebra homomorphism $\mathbb{C} \rightarrow \mathbb{R}$은 존재하지 않으므로 $P(S)=\emptyset$이고, [명제 13](#prop13)에 의하여 이 torsor는 자명하지 않다.
 
-2. Scheme $S$ 위의 invertible sheaf $\mathcal{L}$에 대하여 ([§준연접층, ⁋정의 12](/ko/math/scheme_theory/quasicoherent_sheaves#def12)), $\mathcal{L}$을 trivialize하는 open cover $\{U_i\}$와 transition unit $g_{ij}\in \Gamma(U_i\cap U_j, \mathcal{O}_S^\times)$를 택하자. 이들은 $\mathcal{L}\vert_{U_i}\cong \mathcal{O}_{U_i}$인 trivialization들 사이의 좌표변환이므로 $U_i\cap U_j\cap U_k$ 위에서 $g_{ij}g_{jk}=g_{ik}$를 만족한다. 그럼 $\mathbb{G}_{m}\times_SU_i$들을 겹침 위에서 $(t, u)\mapsto (g_{ij}(u)t, u)$로 붙이면 이 등식이 [§스킴, ⁋보조정리 9](/ko/math/scheme_theory/schemes#lem9)의 cocycle condition을 그대로 주므로 $S$-scheme $P_\mathcal{L}$을 얻으며, 왼쪽 곱셈이 이 접합과 commute하므로 $P_\mathcal{L}$은 $\mathbb{G}_m$-torsor가 된다. Zariski open cover는 fppf covering이고 [정의 12](#def12)의 두 조건은 모두 국소적으로 확인되기 때문이다. 이 torsor의 절단은 $s_i\in \Gamma(U_i,\mathcal{O}_S^\times)$들로서 $s_i=g_{ij}s_j$를 만족하는 것, 곧 어디에서도 사라지지 않는 $\mathcal{L}$의 global section이므로, [명제 13](#prop13)에 의하여 $P_\mathcal{L}$이 자명한 것과 $\mathcal{L}\cong \mathcal{O}_S$인 것이 동치이다.
+2. Scheme $S$ 위의 invertible sheaf $\mathcal{L}$에 대하여 ([§준연접층, ⁋정의 12](/ko/math/scheme_theory/quasicoherent_sheaves#def12)), [\[위상수학\] §분류공간, ⁋명제 4](/ko/math/algebraic_topology/classifying_spaces#prop4)의 frame bundle과 마찬가지로 우리는 $\mathcal{L}$을 trivialize하는 open cover $\{U_i\}$와 transition unit $g_{ij}\in \Gamma(U_i\cap U_j, \mathcal{O}_S^\times)$들을 통해 $\mathbb{G}_m$-torsor $P_\mathcal{L}$을 얻는다. 이들은 $\mathcal{L}\vert_{U_i}\cong \mathcal{O}_{U_i}$인 trivialization들 사이의 좌표변환이므로 $U_i\cap U_j\cap U_k$ 위에서 $g_{ij}g_{jk}=g_{ik}$를 만족하며, $\mathbb{G}_{m}\times_SU_i$들을 겹침 위에서 $(t, u)\mapsto (g_{ij}(u)t, u)$로 붙이면 이 등식이 [§스킴, ⁋보조정리 9](/ko/math/scheme_theory/schemes#lem9)의 cocycle condition을 주므로 $S$-scheme $P_\mathcal{L}$이 된다. $P_\mathcal{L}$의 절단은 어디에서도 사라지지 않는 $\mathcal{L}$의 global section이므로, [명제 13](#prop13)에 의하여 $P_\mathcal{L}$이 자명한 것과 $\mathcal{L}\cong \mathcal{O}_S$인 것이 동치이다.
 :::
 
 [예시 15](#ex15)의 둘째 경우는 $\mathbb{G}_m$-torsor가 invertible sheaf와 같은 정보를 담고 있음을 시사한다. 그럼 자연스러운 다음 질문은 주어진 $S$와 $G$에 대하여 $G$-torsor 전체를 분류하는 것인데, [명제 13](#prop13)이 말해주듯 자명하지 않은 torsor의 존재는 대역적인 절단의 부재라는 형태의 장애이므로, 이 분류는 cohomology의 문제가 된다. 또 하나의 길은 torsor들을 개별적으로 세는 대신 그들이 이루는 groupoid를 그대로 하나의 기하학적 대상으로 삼는 것이며, field $\mathbb{K}$ 위에서 $\mathbb{G}_m$-torsor를 분류하는 $[\Spec \mathbb{K}/\mathbb{G}_m]$과 같은 quotient stack이 그렇게 얻어지는 대상으로서 stack 이론의 출발점이 된다.
