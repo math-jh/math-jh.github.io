@@ -14,6 +14,7 @@ sidebar:
 author: Marvin
 
 date: 2026-08-28
+last_modified_at: 2026-08-29
 weight: 44
 
 ---
@@ -428,6 +429,32 @@ def sec_comment_prs():
 {: data-filename="scripts/dashboard/server.py"}
 
 `_config.yml` 쪽에서 실수하기 쉬운 항목이 하나 있다. `exclude:`에 `workers`를 넣지 않으면 Jekyll이 Worker 소스 디렉토리를 통째로 `_site`로 복사해 배포한다. 시크릿이 코드에 없다고는 해도 배포할 이유가 없는 물건이다. 빌드 산출물에 `workers/` 파일이 0개인지는 실제 빌드에서 확인했다. 배포 직전 마지막 대조에서는 Worker의 보조 `workers.dev` URL이 살아 있는 것이 발견됐다. 커스텀 도메인에만 rate limit이 걸려 있으므로 그 URL이 우회로가 된다. `workers_dev`와 preview URL을 끄고 재배포해 404로 닫았다.
+
+## 승인 대기 PR을 미는 크론
+
+앞 절에서 대시보드 타일은 `comment/*` PR 개수를 세게 됐지만, 그 숫자는 대시보드를 열어 둬야 보인다. 방문자가 댓글을 남기면 그것은 머지를 기다리는 PR 하나로 앉아 있고, 며칠 눈치채지 못하면 승인이 그만큼 늦는다. 사용자가 물은 것은 그 자리를 메우는 알림이 어디로 오느냐였다.
+
+> ㅇㅋ 그리고 그 알림 경로는 telegram으로 오나?
+
+> 아 그렇지. Pi cron으로 하고, 5분에 한 번씩 하자. LLM 없이, 결정론적으로. dependabot PR 같은것도 같이 보내도 상관없으니 그냥 깔끔하게 짜.
+
+그래서 나온 [커밋 846f2751](https://github.com/math-jh/math-jh.github.io/commit/846f2751)의 `scripts/pr-notify/notify_open_prs.py`는 `gh pr list`의 출력과 상태파일 하나만 본다. 판단할 것이 없으니 모델도 부르지 않는다. 대상을 `comment/*`로 좁히지 않는 것은 dependabot이 섞여 와도 상관없다고 했고, 필터가 없는 편이 스크립트가 짧아서다. 크론은 `*/5`로 돌되 다른 블로그 크론과 마찬가지로 대시보드의 cron-gate를 지나 실행되고, `CRON_JOBS`에 `blog-pr-notify` 한 줄을 더해 일시정지·재개 버튼이 붙었다. 워커 상태 행은 없다(`worker=None`).
+
+상태는 `~/.local/state/blog-pr-notify.json`의 `seen`, 이미 알린 PR 번호 목록이다. 번호는 재사용되지 않으므로 닫히거나 머지된 PR을 목록에서 빼지 않는다. 빼면 그 PR이 재오픈될 때 다시 알림이 나간다.
+
+```python
+seen = load_seen()                       # 파일 없으면 None, 깨졌으면 set()
+if seen is None and not args.notify_all:  # 첫 실행: 조용히 seed 만 한다
+    save_seen({p["number"] for p in pulls})
+    return 0
+seen = seen or set()
+fresh = [p for p in pulls if p["number"] not in seen]
+```
+{: data-filename="scripts/pr-notify/notify_open_prs.py"}
+
+상태파일이 없는 첫 실행은 지금 열린 PR을 전부 `seen`으로 적고 아무것도 보내지 않아, 도입 시점에 묵은 PR이 한꺼번에 날아가는 것을 막는다. `--notify-all`이 그 억제를 끈다. 파일이 깨졌을 때 `load_seen`은 빈 집합을 돌려주고, 그러면 전량이 다시 알림으로 나간다. 조용히 침묵하는 것보다 한 번 시끄러운 쪽이 낫다는 선택이다.
+
+전송은 `hermes send -t telegram`으로 묶어 보내고, 여덟 건까지만 적은 뒤 나머지는 건수로 접는다. 상태 쓰기는 `.tmp`에 적고 `replace`로 원자 교체하므로 크론이 겹쳐 돌아도 반쪽 파일이 남지 않고, 전송이 실패하면 `seen`을 갱신하지 않고 나가 다음 5분에 다시 본다. 첫 실행 로그는 열린 PR 하나를 알림 없이 `seen` 처리한 것으로 끝났고, 지금 그 파일에는 번호 하나가 들어 있다.
 
 ## 아직 열려 있는 완료 판정
 
