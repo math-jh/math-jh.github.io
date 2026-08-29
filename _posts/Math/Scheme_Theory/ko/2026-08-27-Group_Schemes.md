@@ -378,24 +378,29 @@ $S$ 위의 $G$-torsor $P$에 대하여 다음이 성립한다.
 직관적으로 [명제 14](#prop14)는 torsor $P$가 base $S$ 위에서는 $G$와 다를 수 있어도, fppf covering $\{P \rightarrow S\}$ 위로 올라가면 자명한 torsor $G\times_SP$가 된다는 것을 보여준다. 바꿔말하면, torsor는 [§충실평탄하강, ⁋정의 4](/ko/math/scheme_theory/faithfully_flat_descent#def4)의 descent datum을 통해 $G$를 fppf covering을 따라 붙여서 얻는 대상으로 이해할 수 있으며, $G$가 affine인 경우 [§충실평탄하강, ⁋정리 12](/ko/math/scheme_theory/faithfully_flat_descent#thm12)에 의하여 이러한 데이터가 실제로 $S$ 위의 scheme을 준다.
 
 ::: 예시 15
-1. $S=\Spec \mathbb{R}$, $P=\Spec \mathbb{C}$이라 하고, $G$를 finite group $\mathbb{Z}/2$이 정의하는 constant group scheme 
+1. $S=\Spec\mathbb{R}$-scheme $p:P=\Spec \mathbb{C}\rightarrow S$를 생각하고, $\vartheta:G\rightarrow S$를 finite group $\mathbb{Z}/2$이 정의하는 constant group $S$-scheme 
     
     $$G=\underline{(\mathbb{Z}/2)}_S=S\amalg S=\Spec(\mathbb{R}\times\mathbb{R})$$
     
-    을 생각하자. ([예시 3](#ex3)) Complex conjugation을 $c$라 표기하면, 이 위의 group scheme action $\varrho: G\times_SP\rightarrow P$를 다음의 diagram
+    을 생각하자. ([예시 3](#ex3)) 이는 두 점 집합이며 각각의 점들이 $\mathbb{R}$의 정보를 갖고 있는 group scheme이다. 이제 이것이 또 다른 한점집합인 $\Spec \mathbb{C}$ 위에 작용하는 상황을 본다. 이를 위해 complex conjugation을 $c$라 표기하면, 이 위의 group scheme action $\varrho: G\times_SP\rightarrow P$를 다음의 diagram
 
-    (img)
+    {% diagram Math/Scheme_Theory/Group_Schemes-4.svg width="13.92em" alt="action_definition" %}
 
-    으로 정의할 수 있다. 
+    으로 정의할 수 있다. 직관적으로 $\varrho$는 한 성분 $P$는 $\id_P$로 그대로 옮겨지되, 다른 성분 $P$는 $c$가 유도하는 사상으로 옮겨지는 것이다. 
+
+    그럼 이는 $G$-torsor이다. 이를 위해 [정의 12](#def12)의 조건들을 확인해보면 우선  $\mathbb{C}$가 $\mathbb{R}$ 위의 rank $2$ free module이므로 $P \rightarrow S$는 faithfully flat이고 locally of finite presentation이다. 둘째 조건의 경우, $G\times_SP=\Spec(\mathbb{C}\times\mathbb{C})$이고 $P\times_SP=\Spec(\mathbb{C}\otimes_\mathbb{R}\mathbb{C})$인데, $\varrho$에 대응하는 algebra homomorphism을 대수적으로 써 보면 이는
     
+    $$\rho:\mathbb{C}\rightarrow\mathbb{C}\times\mathbb{C};\qquad z\mapsto(z,\bar z)$$
     
-    한 복사본 위에서는 $\id_P$로 다른 복사본 위에서는 conjugation으로 정의하여 action $\varrho: G\times_SP \rightarrow P$를 얻는다. $\mathbb{C}$가 $\mathbb{R}$ 위의 rank $2$ free module이므로 $P \rightarrow S$는 faithfully flat이고 locally of finite presentation이다. 또 $G\times_SP=\Spec(\mathbb{C}\times\mathbb{C})$이고 $P\times_SP=\Spec(\mathbb{C}\otimes_\mathbb{R}\mathbb{C})$인데, $\varrho$에 대응하는 algebra homomorphism $\rho:\mathbb{C}\rightarrow\mathbb{C}\times\mathbb{C}$가 $\rho(z)=(z,\bar z)$를 주므로 $(\varrho, \pr_2)$의 dual은
+    로 주어지는 것이다. 그럼 $(\varrho, \pr_2)$은 대수적으로
 
    $$\mathbb{C}\otimes_\mathbb{R}\mathbb{C} \rightarrow \mathbb{C}\times\mathbb{C};\qquad z\otimes w\mapsto (zw, \bar zw)$$
 
-   이다. 이는 $\mathbb{R}$-algebra isomorphism이므로 [정의 12](#def12)의 둘째 조건이 성립한다. 그러나 $\mathbb{R}$-algebra homomorphism $\mathbb{C} \rightarrow \mathbb{R}$은 존재하지 않으므로 $P(S)=\emptyset$이고, [명제 13](#prop13)에 의하여 이 torsor는 trivial하지 않다.
+   이고, 이것이 $\mathbb{R}$-algebra isomorphism이므로 [정의 12](#def12)의 둘째 조건이 성립한다. 
+   
+   반면 $\mathbb{R}$-algebra homomorphism $\mathbb{C} \rightarrow \mathbb{R}$은 존재하지 않으므로 $P(S)=\emptyset$이고, [명제 13](#prop13)에 의하여 이 torsor는 trivial하지 않다.
 
-2. Scheme $S$ 위의 invertible sheaf $\mathcal{L}$에 대하여 ([§준연접층, ⁋정의 12](/ko/math/scheme_theory/quasicoherent_sheaves#def12)), [\[대수적 위상수학\] §분류공간, ⁋명제 4](/ko/math/algebraic_topology/classifying_spaces#prop4)에서와 마찬가지로 우리는 $\mathcal{L}$을 trivialize하는 open cover $\{U_i\}$와 transition unit $g_{ij}\in \Gamma(U_i\cap U_j, \mathcal{O}_S^\times)$들을 통해 $\mathbb{G}_m$-torsor $P_\mathcal{L}$을 얻는다. Trivialization 사이의 좌표변환인 $g_{ij}$들은 $U_i\cap U_j\cap U_k$ 위에서 $g_{ij}g_{jk}=g_{ik}$를 만족하며, $\mathbb{G}_{m}\times_SU_i$들을 겹침 위에서 $(t, u)\mapsto (g_{ij}(u)t, u)$로 붙이면 [§스킴, ⁋보조정리 9](/ko/math/scheme_theory/schemes#lem9)에 의하여 $S$-scheme $P_\mathcal{L}$이 구성된다. $P_\mathcal{L}$의 section은 어디서도 소멸하지 않는 $\mathcal{L}$의 global section이므로, [명제 13](#prop13)에 의하여 $P_\mathcal{L}$이 trivial한 것과 $\mathcal{L}\cong \mathcal{O}_S$인 것은 동치이다.
+2. Scheme $S$ 위의 invertible sheaf $\mathcal{L}$에 대하여, [\[대수적 위상수학\] §분류공간, ⁋명제 4](/ko/math/algebraic_topology/classifying_spaces#prop4)에서와 마찬가지로 우리는 $\mathcal{L}$을 trivialize하는 open cover $\{U_i\}$와 transition unit $g_{ij}\in \Gamma(U_i\cap U_j, \mathcal{O}_S^\times)$들을 통해 $\mathbb{G}_m$-torsor $P_\mathcal{L}$을 얻는다. Trivialization 사이의 좌표변환인 $g_{ij}$들은 $U_i\cap U_j\cap U_k$ 위에서 $g_{ij}g_{jk}=g_{ik}$를 만족하며, $\mathbb{G}_{m}\times_SU_i$들을 겹침 위에서 $(t, u)\mapsto (g_{ij}(u)t, u)$로 붙이면 [§스킴, ⁋보조정리 9](/ko/math/scheme_theory/schemes#lem9)에 의하여 $S$-scheme $P_\mathcal{L}$이 구성된다. $P_\mathcal{L}$의 section은 어디서도 소멸하지 않는 $\mathcal{L}$의 global section이므로, [명제 13](#prop13)에 의하여 $P_\mathcal{L}$이 trivial한 것과 $\mathcal{L}\cong \mathcal{O}_S$인 것은 동치이다.
 :::
 
 [예시 15](#ex15)의 둘째 경우에서 보듯, covering 위에서 $G$-torsor를 붙이는 transition data $g_{ij}$들은 정확히 cocycle condition $g_{ij}g_{jk}=g_{ik}$를 만족하며, trivialization의 선택에 따른 차이는 coboundary로 흡수된다. 따라서 주어진 base $S$ 위의 $G$-torsor의 isomorphism class 전체는 1차 cohomology set $H^1(S, G)$ (fppf topology에서는 $H^1_\fppf(S, G)$)에 의해 분류되며, $G=\mathbb{G}_m$인 경우가 바로 $\Pic(S)\cong H^1(S, \mathcal{O}_S^\times)$이다. 한편 torsor들을 집합으로 세는 대신 이들이 이루는 groupoid를 하나의 기하학적 대상으로 취급할 수도 있는데, field $\mathbb{K}$ 위에서 $\mathbb{G}_m$-torsor를 분류하는 $[\Spec \mathbb{K}/\mathbb{G}_m]$과 같은 quotient stack이 바로 그렇게 얻어지는 대상으로서 stack 이론의 출발점이 된다.
