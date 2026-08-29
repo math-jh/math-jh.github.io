@@ -10,6 +10,7 @@ sidebar:
 
 date: 2026-08-11
 weight: 21
+drift_needed: true
 
 ---
 
@@ -300,7 +301,7 @@ Affine 위에서는 언제나 이러한 closed embedding을 택할 수 있고 sm
 Locally of finite presentation인 scheme morphism $\varphi:X \rightarrow S$가 *unramified<sub>비분기</sub>*하다는 것은 $\Omega_{X/S}=0$인 것이다.
 :::
 
-정의에 의해 이 조건은 affine chart 위에서 곧바로 계산할 수 있다. ([§미분과 여접층, ⁋정의 4](/ko/math/scheme_theory/sheaf_of_differentials#def4)) 특히 $S=\Spec A$, $X=\Spec B$이면 $\Omega_{X/S}=\widetilde{\Omega_{B/A}}$이므로, $\varphi$가 unramified한 것은 Kähler differential module $\Omega_{B/A}$가 영인 것과 동치이다. 표준적인 예시는 finite degree separable field extension ([\[체론\] §분리가능확대체, ⁋정의 8](/ko/math/field_theory/separable_extensions#def8)) $\mathbb{K} \subseteq \mathbb{L}$으로, 정의에 의해 $\Omega_{\mathbb{L}/\mathbb{K}}=0$이므로 $\Spec \mathbb{L} \rightarrow \Spec \mathbb{K}$는 unramified하다. 같은 맥락에서 표준적인 반례 또한 나오는데, characteristic $p$ field 위에서 정의된 inseparable extension $\mathbb{L}=\mathbb{K}(t^{1/p})$을 생각하면 $\Omega_{\mathbb{L}/\mathbb{K}}\neq 0$을 주어 unramified하지 않다. ([\[체론\] §분리가능확대체, ⁋예시 4](/ko/math/field_theory/separable_extensions#ex4)) 이 예시를 보면 위에서 설명한 unramified morphism의 직관이 더 잘 드러나는데, 이 inseparable extension에서 $\Spec\mathbb{L}$는 위상적으로 한 점이지만, geometric base change 뒤에는 nontrivial thickening이 남아 있으므로 무한소 방향이 사라지지 않아 unramified하지 않게 되는 것이다.
+정의에 의해 이 조건은 affine chart 위에서 곧바로 계산할 수 있다. ([§미분과 여접층, ⁋정의 4](/ko/math/scheme_theory/sheaf_of_differentials#def4)) 특히 $S=\Spec A$, $X=\Spec B$이면 $\Omega_{X/S}=\widetilde{\Omega_{B/A}}$이므로, $\varphi$가 unramified한 것은 Kähler differential module $\Omega_{B/A}$가 영인 것과 동치이다. 표준적인 예시는 finite degree separable field extension ([\[체론\] §분리가능확대체, ⁋정의 8](/ko/math/field_theory/separable_extensions#def8)) $\mathbb{K} \subseteq \mathbb{L}$으로, 정의에 의해 $\Omega_{\mathbb{L}/\mathbb{K}}=0$이므로 $\Spec \mathbb{L} \rightarrow \Spec \mathbb{K}$는 unramified하다. 같은 맥락에서 표준적인 반례 또한 나오는데, characteristic $p$ field 위에서 정의된 inseparable extension $\mathbb{L}=\mathbb{K}(\t^{1/p})$을 생각하면 $\Omega_{\mathbb{L}/\mathbb{K}}\neq 0$을 주어 unramified하지 않다. ([\[체론\] §분리가능확대체, ⁋예시 4](/ko/math/field_theory/separable_extensions#ex4)) 이 예시를 보면 위에서 설명한 unramified morphism의 직관이 더 잘 드러나는데, 이 inseparable extension에서 $\Spec\mathbb{L}$는 위상적으로 한 점이지만, geometric base change 뒤에는 nontrivial thickening이 남아 있으므로 무한소 방향이 사라지지 않아 unramified하지 않게 되는 것이다.
 
 이 조건은 diagonal morphism을 통해 좌표에 의존하지 않고 표현할 수 있는데, cotangent sheaf 자체가 diagonal의 conormal로 정의되므로, 그 소멸은 diagonal이 open subscheme이 되는 것과 직접 연결된다.
 
@@ -346,15 +347,15 @@ Locally of finite presentation인 morphism $\varphi:X \rightarrow S$에 대하�
 ::: 정리 13
 Locally of finite presentation인 morphism $\varphi:X\rightarrow S$에 대하여, $\varphi$가 étale한 것은 임의의 $x\in X$에 대하여 $x$를 포함하는 $X$의 affine open set과 $\varphi(x)$를 포함하는 $S$의 affine open set 위에서 $\varphi$를 다음 꼴의 *standard étale* morphism의 형태로 쓸 수 있는 것과 동치이다.
 
-$$\Spec\bigl((A[t]/(f))_g\bigr)\longrightarrow\Spec A$$
+$$\Spec\bigl((A[\t]/(f))_g\bigr)\longrightarrow\Spec A$$
 
-여기서 $f\in A[t]$는 monic이고 $g\in A[t]/(f)$이며, $f'$의 image는 $(A[t]/(f))_g$에서 가역이다.
+여기서 $f\in A[\t]$는 monic이고 $g\in A[\t]/(f)$이며, $f'$의 image는 $(A[\t]/(f))_g$에서 가역이다.
 :::
 
 하지만 [정리 6](#thm6)의 증명과 달리 이 명제의 증명은 다소 기술적이므로 우리는 생략하기로 한다. 또 다른 중요한 것은, 여기의 도함수 조건이 $f=0$이 중근을 가지지 않는다는 분리가능성의 대수적 표현이라는 것으로, 이로부터 위의 inseparable 예시가 étale morphism이 아니라는 것을 알 수 있다.
 
 ::: 예시 14
-위에서 살펴봤듯, finite separable field extension $\mathbb{K}\subseteq\mathbb{L}$에 대하여 $\Spec\mathbb{L}\rightarrow\Spec\mathbb{K}$는 étale이다. Primitive element theorem에 의하여 $\mathbb{L}=\mathbb{K}[t]/(f)$로 쓸 수 있고, $f$가 separable이므로 $f'$는 $\mathbb{L}$에서 가역이기 때문이다. ([\[체론\] §분리가능확대체, ⁋정의 8](/ko/math/field_theory/separable_extensions#def8)) 반면 $\mathbb{K}=\mathbb{F}_p(t)$와 $\mathbb{L}=\mathbb{F}_p(t^{1/p})$의 inseparable extension은 étale morphism이 아니다. 여기서 추가되는 원소 $u=t^{1/p}$의 minimal polynomial은 $\x^p-t$인데, 이를 미분하면 $0$이 되어 가역이 될 수 없기 때문이다.
+위에서 살펴봤듯, finite separable field extension $\mathbb{K}\subseteq\mathbb{L}$에 대하여 $\Spec\mathbb{L}\rightarrow\Spec\mathbb{K}$는 étale이다. Primitive element theorem에 의하여 $\mathbb{L}=\mathbb{K}[\t]/(f)$로 쓸 수 있고, $f$가 separable이므로 $f'$는 $\mathbb{L}$에서 가역이기 때문이다. ([\[체론\] §분리가능확대체, ⁋정의 8](/ko/math/field_theory/separable_extensions#def8)) 반면 $\mathbb{K}=\mathbb{F}_p(\t)$와 $\mathbb{L}=\mathbb{F}_p(\t^{1/p})$의 inseparable extension은 étale morphism이 아니다. 여기서 추가되는 원소 $u=\t^{1/p}$의 minimal polynomial은 $\x^p-\t$인데, 이를 미분하면 $0$이 되어 가역이 될 수 없기 때문이다.
 
 두 상황 모두 $\Spec \mathbb{L}\rightarrow \Spec \mathbb{K}$는 한 점에서 한 점으로 가는 morphism이지만, 이를 geometric fiber로 옮겨오면 사정이 전혀 다르다. 첫째 경우에는 $f$가 서로 다른 일차식들의 곱으로 완전히 분리되어 geometric fiber가 이들 근들로 분해되는 반면, 둘째 경우는 $\mathbb{K}$의 algebraic closure에서 $f$가 $(\x-u)^p$로 인수분해되어 근들이 중근으로 뭉쳐있기 때문이다. 이를 통해 우리는 앞서 nontrivial thickening 때문에 unramified 조건이 실패한다는 직관을 다시 확인할 수 있다.
 :::
