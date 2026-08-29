@@ -214,7 +214,7 @@
      (2026-08-17: em-dash 3건 신설).
 
      ```
-     python3 .claude/hooks/md_lint.py <편집한 글 경로>
+     python3 .agents/hooks/md_lint.py <편집한 글 경로>
      ```
 
 10. **기록** — 이 단계를 빠뜨리면 다음 틱이 같은 일을 또 한다.

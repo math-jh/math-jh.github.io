@@ -130,9 +130,9 @@ sys.path.insert(0, str(SCRIPT_DIR))
 from label_normalize import fix_text as label_fix, audit_text as label_audit  # noqa: E402
 from math_delimiters import math_profile  # noqa: E402
 
-# 수식 스팬 정규식의 단일 출처는 .claude/hooks/md_lint.py — mech_sweep·josa_check 와
+# 수식 스팬 정규식의 단일 출처는 .agents/hooks/md_lint.py — mech_sweep·josa_check 와
 # 같은 관례로 import 한다.
-sys.path.insert(0, str(BLOG_ROOT / ".claude" / "hooks"))
+sys.path.insert(0, str(BLOG_ROOT / ".agents" / "hooks"))
 import md_lint as _md_lint  # noqa: E402
 
 # 초안(published:false) 판정의 단일 출처는 terms_common.

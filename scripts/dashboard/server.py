@@ -785,7 +785,7 @@ class Handler(BaseHTTPRequestHandler):
             if not full.startswith(f"{ROOT}/_posts/") or not full.endswith(".md") \
                     or not os.path.exists(full):
                 return self._send(400, json.dumps({"error": "bad path"}))
-            rc, out, err = run(["python3", f"{ROOT}/.claude/hooks/md_lint.py", full],
+            rc, out, err = run(["python3", f"{ROOT}/.agents/hooks/md_lint.py", full],
                                cwd=ROOT, timeout=60)
             return self._send(200, json.dumps(
                 {"path": rel, "rc": rc, "out": out, "err": err}, ensure_ascii=False))

@@ -52,7 +52,7 @@ _pn = importlib.util.module_from_spec(_spec)
 sys.modules["postnav_common"] = _pn   # dataclass가 모듈 등록을 요구한다
 _spec.loader.exec_module(_pn)
 
-MDLINT = ROOT / ".claude" / "hooks" / "md_lint.py"
+MDLINT = ROOT / ".agents" / "hooks" / "md_lint.py"
 
 # md_lint 와 동일한 라벨 앵커 문법 (유도형). 명시형 id는 대상 글에서 실측.
 LABEL_ANCHOR_RE = re.compile(r"^(?:prop-def|def|ex|prop|thm|lem|cor|rmk|conj)\d+$")

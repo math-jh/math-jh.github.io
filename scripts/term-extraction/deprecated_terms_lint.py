@@ -2,7 +2,7 @@
 """영어화 확정 용어의 한국어형 잔존/신설 전수 검사.
 
 source of truth 는 `_data/terms.yml` — `primary: en` 항목의 ko 형이 prose 에
-남아 있으면 보고한다 (판정 로직은 .claude/hooks/md_lint.py 를 import, 단일 소스).
+남아 있으면 보고한다 (판정 로직은 .agents/hooks/md_lint.py 를 import, 단일 소스).
 md_lint 훅이 편집 시점의 신설을 막는 실시간 가드라면, 이 스크립트는 배치 가드다.
 스윕 완료 후 기준값은 0이어야 하며, 이후 0이 아니면 새 글이 오염된 것이다.
 
@@ -26,7 +26,7 @@ import sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(os.path.dirname(HERE))
 sys.path.insert(0, HERE)
-sys.path.insert(0, os.path.join(ROOT, ".claude", "hooks"))
+sys.path.insert(0, os.path.join(ROOT, ".agents", "hooks"))
 from md_lint import _DEPR, _depr_count  # noqa: E402
 from terms_common import is_draft  # noqa: E402
 from terms_usage_lint import prose_lines  # noqa: E402

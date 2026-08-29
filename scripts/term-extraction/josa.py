@@ -165,7 +165,7 @@ def _tier1():
     """terms.yml 의 primary:en 매핑 (ko → en). md_lint 가 단일 출처."""
     root = os.path.dirname(os.path.dirname(os.path.dirname(
         os.path.abspath(__file__))))
-    sys.path.insert(0, os.path.join(root, ".claude", "hooks"))
+    sys.path.insert(0, os.path.join(root, ".agents", "hooks"))
     import md_lint
     if md_lint._DEPR is None:
         sys.exit("_data/terms.yml 로드 실패")

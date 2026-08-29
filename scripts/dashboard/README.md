@@ -114,7 +114,7 @@ kotypo 체크·검토 판정과 메모·비교기 판본 선택).
 | --- | --- |
 | `/api/summary` | 전 섹션 데이터 한 덩이 (45초 캐시, `?fresh=1` 로 무효화) |
 | `/api/log?name=<key>` | 워커 로그 tail |
-| `/api/lint?path=<repo상대경로>` | 글 하나에 `.claude/hooks/md_lint.py` CLI 실행 |
+| `/api/lint?path=<repo상대경로>` | 글 하나에 `.agents/hooks/md_lint.py` CLI 실행 |
 | `/api/kotypo` (GET/POST) | KO-TYPOS '수정' 체크 상태 — POST 는 전체 map 교체, `~/.local/state/blog_dashboard_kotypo.json` 에 저장 |
 | `/api/compare/list?old=&new=&audit=` | 비교 대상 글 목록 + 스냅샷 목록 + 진행 집계 (비면 기본 짝) |
 | `/api/compare/refs` | 판본 고르개용 — 브랜치·최근 커밋 40개·구워둔 스냅샷 |

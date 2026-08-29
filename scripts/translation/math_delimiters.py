@@ -21,7 +21,7 @@ import re
 # 인라인으로 오인되지 않는다.
 #
 # 주의(이중 SoT 감사 [3], 2026-07-22): 아래 _DISPLAY/_INLINE 은
-# .claude/hooks/md_lint.py 의 _MATH_SPAN_RE 사본이 **아니다** — 저쪽은 "스팬
+# .agents/hooks/md_lint.py 의 _MATH_SPAN_RE 사본이 **아니다** — 저쪽은 "스팬
 # 하나"를 훑는 스캐너(치환·마스킹용), 이쪽은 KO/EN 쌍의 구분자 **계수**용이라
 # 의미론이 다르다(예: _INLINE 은 개행 허용). 같아 보여도 통합하지 말 것.
 _CODE = re.compile(

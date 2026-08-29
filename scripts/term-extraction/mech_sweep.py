@@ -13,7 +13,7 @@ import re
 import sys
 
 sys.path.insert(0, "/home/junhyeok/math-jh.github.io/scripts/term-extraction")
-sys.path.insert(0, "/home/junhyeok/math-jh.github.io/.claude/hooks")
+sys.path.insert(0, "/home/junhyeok/math-jh.github.io/.agents/hooks")
 import md_lint  # noqa: E402
 
 ROOT = "/home/junhyeok/math-jh.github.io"
