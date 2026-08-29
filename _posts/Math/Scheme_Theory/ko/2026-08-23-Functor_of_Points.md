@@ -10,6 +10,7 @@ sidebar:
 
 date: 2026-08-23
 weight: 22
+drift_needed: true
 ---
 
 이제 우리는 스킴의 언어를 더 확장하기 위한 준비를 시작한다. 이를 위해서는 [§스킴 사이의 사상, ⁋정의 6](/ko/math/scheme_theory/morphism_of_schemes#def6)에서 살펴보았던 functor of points 관점이 필요하다. 이는 [§스킴 사이의 사상, ⁋정의 9](/ko/math/scheme_theory/morphism_of_schemes#def9)에서 이미 정의했던 것으로, scheme $X$를 살펴보기 위해 모든 가능한 test scheme $T$에 대하여 $X$의 $T$-point들의 모임을 보는 것이다. 즉, 다음의 functor
@@ -38,7 +39,7 @@ Functor of points 관점의 범주론적 기초는 당연히 Yoneda 보조정리
 
 위에서 살펴봤듯, scheme morphism $\varphi:X\rightarrow Y$가 주어지면, $T$-point $\psi:T\rightarrow X$를 합성 $\varphi\circ\psi:T\rightarrow Y$로 보낼 수 있다. 이러한 방식으로 $\varphi$는 모든 test scheme에 걸쳐 호환되는 map $X(T)\rightarrow Y(T)$들을 준다. 핵심적인 관찰은 이것이 거꾸로도 작동한다는 것이다. 이러한 호환되는 map들의 모임 $\alpha_T:X(T)\rightarrow Y(T)$가 주어졌다고 하자. $\alpha_X$가 identity morphism $\id_X:X\rightarrow X$에 보내는 원소 $\alpha_X(\id_X)$는 $Y$의 $X$-point, 곧 scheme morphism $f:X\rightarrow Y$이다. Naturality에 의하여 임의의 $\psi:T\rightarrow X$에 대하여 $\alpha_T(\psi)=f\circ\psi$가 성립하므로, 나머지 모든 $T$-point에서의 map은 $f$와의 합성으로 강제된다. 즉 functor of points 사이의 natural transformation은 하나의 scheme morphism과 정확히 같은 데이터이다.
 
-그렇다면 scheme은 본질적으로 functor $F:\Sch\rightarrow \Fun(\Sch^\op, \Set)$이며, 이것이 실제로 scheme으로 나타나기 위해서는 이 functor가 representable functor여야 한다. ([\[범주론\] §표현가능한 함자, ⁋정의 1](/ko/math/category_theory/representable_functors#def1)) 이 방법으로 얻어진 scheme $X$ 위에는 $h_X(X)$의 $\id_X$에 대응하는 universal element가 주어지며, 임의의 scheme morphism $f:T\rightarrow X$는 이를 $T$ 위로 pullback하여 $F(T)$의 원소를 준다. 이는 [\[대수적 위상수학\] §분류공간, ⁋정리 8](/ko/math/algebraic_topology/classifying_spaces#thm8)에서 classifying map $f:B\rightarrow \B G$가 universal bundle을 pullback하여 $B$ 위의 principal $G$-bundle을 주는 것과 같은 방식이지만, 차이는 여기서는 homotopy class 대신 실제 scheme morphism $f:T\rightarrow X$ 자체가 나타난다는 것이다. 
+그렇다면 presheaf $F:\Sch^\op\rightarrow\Set$이 실제로 어떤 scheme의 functor of points로 나타나기 위한 조건은 $F$가 representable functor인 것이다. ([\[범주론\] §표현가능한 함자, ⁋정의 1](/ko/math/category_theory/representable_functors#def1)) Isomorphism $F\cong h_X$가 주어지면 $X$ 위에는 $h_X(X)$의 $\id_X$에 대응하는 universal element가 주어지며, 임의의 scheme morphism $f:T\rightarrow X$는 이를 $T$ 위로 pullback하여 $F(T)$의 원소를 준다. 이는 [\[대수적 위상수학\] §분류공간, ⁋정리 8](/ko/math/algebraic_topology/classifying_spaces#thm8)에서 classifying map $f:B\rightarrow \B G$가 universal bundle을 pullback하여 $B$ 위의 principal $G$-bundle을 주는 것과 같은 방식이지만, 차이는 여기서는 homotopy class 대신 실제 scheme morphism $f:T\rightarrow X$ 자체가 나타난다는 것이다.
 
 ## Functor로 본 affine space와 projective space
 
@@ -164,7 +165,7 @@ $$\mathbb{P}^n(A)=U(A)/A^\times$$
 
 $$\widetilde{\rho}: U(A)\rightarrow \mathbb{P}^n(\mathbb{K});\qquad b+\epsilon c\mapsto [b]$$
 
-을 생각할 수 있다. 직관적으로 이는 tangent vector 방향은 잊어버리고 그 base point만 기억하는 함수이며, $U(A)$ 위의 $A^\times$ action을 위와 같이 전개된 식으로 계산해보면
+을 생각할 수 있다. 직관적으로 이는 tangent vector 방향은 잊어버리고 그 base point만 기억하는 함수이다. 원소 $u=\lambda+\epsilon\mu\in A^\times$를 $\lambda\in\mathbb{K}^\times$, $\mu\in\mathbb{K}$로 쓰면 $U(A)$ 위의 $A^\times$ action은
 
 $$u(b+\epsilon c)=\lambda b+\epsilon(\lambda c+\mu b)$$
 

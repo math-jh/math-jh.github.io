@@ -10,6 +10,7 @@ sidebar:
 
 date: 2026-08-25
 weight: 23
+drift_needed: true
 ---
 
 Algebraic geometry에서 가장 흔한 construction 가운데 하나는 국소적인 대상들을 붙여 하나의 대상으로 만드는 것으로, 가장 익숙한 예는 open cover를 따라 sheaf의 section을 붙이는 것이다. 이는 본질적으로 localization으로 주어지는 특별한 종류의 base change만을 사용하는 것인데, 우리가 실제로 다루고 싶은 많은 상황은 이보다 일반적인 것이다. 예를 들어 field extension $\mathbb{L}/\mathbb{K}$에 대응되는 $\Spec \mathbb{L}\rightarrow \Spec \mathbb{K}$는 residue field가 달라지므로 open embedding으로 볼 수 없다. 
@@ -107,7 +108,7 @@ $$0 \rightarrow A \overset{\phi}{\longrightarrow} B \overset{d}{\longrightarrow}
 는 exact하다. 
 :::
 ::: 증명
-[명제 2](#prop2)에 의하여, 이 sequence가 exact함을 보이는 것은 $-\otimes_A B$를 취한 뒤의 sequence가 exact함을 보이는 것으로 충분하다. $-\otimes_A B$를 적용하여 얻어진 sequence
+우선 $-\otimes_A B$를 적용하여 얻어진 sequence
 
 $$0 \rightarrow B \overset{\phi\otimes B}{\longrightarrow} B\otimes_A B \overset{d\otimes B}{\longrightarrow} B\otimes_A B\otimes_A B$$
 
@@ -129,7 +130,7 @@ $$0=(d\otimes B)(b\otimes b')=1\otimes b\otimes b'-b\otimes 1\otimes b'$$
 
 $$b\otimes b'=t(b\otimes 1\otimes b')=t(1\otimes b\otimes b')=1\otimes bb'=(\phi\otimes B)(s(b\otimes b'))$$
 
-이므로 $\ker(d\otimes B)\subseteq \im(\phi\otimes B)$이다. 반대쪽 포함관계는 $d\circ \phi=0$으로부터 자명하므로 base change된 sequence는 exact하다는 것을 확인할 수 있고, $\phi$가 faithfully flat이므로 이는 원래 sequence가 exact라는 뜻이다. 
+이므로 $\ker(d\otimes B)\subseteq \im(\phi\otimes B)$이다. 반대쪽 포함관계는 $d\circ \phi=0$으로부터 자명하므로 base change된 sequence는 exact하다. 특히 $\phi$가 faithfully flat이면 [명제 2](#prop2)에 의하여 원래 sequence도 exact하다.
 
 Split exactness의 주장을 완결하기 위해 $t$쪽을 다시 살펴보면, 임의의 $b\otimes b'$에 대하여 $t((d\otimes B)(b\otimes b'))=1\otimes bb'-b\otimes b'$이므로
 
@@ -152,7 +153,7 @@ $$B\otimes_AB \cong\prod_{i,j} A_{f_i}\otimes A_{f_j}\cong\prod_{i,j} A_{f_if_j}
 
 $$d^0\bigl((s_i)_i\bigr)=\bigl(s_i\vert_{D(f_if_j)}\bigr)_{i,j},\qquad d^1\bigl((s_i)_i\bigr)=\bigl(s_j\vert_{D(f_if_j)}\bigr)_{i,j}$$
 
-가 된다. 즉, 두 morphism의 차이는 overlap $D(f_if_j)$ 위에서 $s_i$와 $s_j$ 중 어느것을 보는지에 따라 달라지는 것으로, $B$의 원소 $(s_i)_i$가 $d$의 kernel에 속한다는 것은 모든 $i,j$에 대하여 $s_i$와 $s_j$가 그 overlap 위에서 일치한다는 것이다. 즉, $D(f_i)$마다 정의된 $f_i$들의 gluing condition을 주는 것이다. 뿐만 아니라, $\phi$의 injectivity는 정확하게 모든 $D(f_i)$ 위에서 $0$이 되는 $A$의 원소가 $0$이라는 주장이므로 sheaf의 identity condition을 주며, 따라서 [보조정리 3](#lem3)은 open cover $\{D(f_i)\}_i$에 대한 $\mathcal{O}_{\Spec A}$의 sheaf condition에 불과하다. 더 일반적으로 Amitsur complex의 나머지 항들은 이 cover의 Čech complex가 된다.
+가 된다. 즉, 두 morphism의 차이는 overlap $D(f_if_j)$ 위에서 $s_i$와 $s_j$ 중 어느것을 보는지에 따라 달라지는 것으로, $B$의 원소 $(s_i)_i$가 $d$의 kernel에 속한다는 것은 모든 $i,j$에 대하여 $s_i$와 $s_j$가 그 overlap 위에서 일치한다는 것이다. 즉, $D(f_i)$마다 정의된 $s_i$들의 gluing condition을 주는 것이다. 뿐만 아니라, $\phi$의 injectivity는 정확하게 모든 $D(f_i)$ 위에서 $0$이 되는 $A$의 원소가 $0$이라는 주장이므로 sheaf의 identity condition을 주며, 따라서 [보조정리 3](#lem3)은 open cover $\{D(f_i)\}_i$에 대한 $\mathcal{O}_{\Spec A}$의 sheaf condition에 불과하다. 더 일반적으로 Amitsur complex의 나머지 항들은 이 cover의 Čech complex가 된다.
 
 ## 하강의 재료
 
@@ -302,7 +303,7 @@ Flatness의 경우, $M$이 flat임을 보이려면 임의의 injective $A$-modul
 이제 우리는 gluing을 위한 모든 도구를 갖추었다. 남은 것은 단지 여기에 적절한 이름을 붙여주는 것 뿐이다. 즉, open embedding의 개념을 faithfully flat morphism으로 확장하여도 gluing이 잘 작동하는 것을 보았으므로, 아예 이 faithfully flat morphism들을 가지고 <em-ko>열린집합</em-ko>의 개념을 새로 써 버리면 된다. 
 
 ::: 정의 8
-Fiber product를 가지는 category $\mathcal{C}$ 위의 *Grothendieck topology<sub>그로텐디크 위상</sub>*란, 각 대상 $U$에 codomain이 $U$인 morphism들의 family $\{f_i: U_i \rightarrow U\}_{i\in I}$의 모임을 대응시키는 것으로서, 그 원소를 $U$의 *covering<sub>덮개</sub>*이라 부른다. 이들은 다음 세 조건을 만족한다.
+Fiber product를 가지는 category $\mathcal{C}$ 위의 *Grothendieck pretopology<sub>그로텐디크 준위상</sub>*란, 각 대상 $U$에 codomain이 $U$인 morphism들의 family $\{f_i: U_i \rightarrow U\}_{i\in I}$의 모임을 대응시키는 것으로서, 그 원소를 $U$의 *covering<sub>덮개</sub>*이라 부른다. 이들은 다음 세 조건을 만족한다.
 
 1. $f: V \rightarrow U$가 isomorphism이면 $\{f: V \rightarrow U\}$은 covering이다.
 2. $\{f_i: U_i \rightarrow U\}$가 covering이고 $g: V \rightarrow U$가 임의의 morphism이면, base change가 주는 $\{U_i\times_U V \rightarrow V\}_{i\in I}$ 또한 covering이다.

@@ -11,8 +11,6 @@ sidebar:
 date: 2026-08-27
 weight: 24
 
-published: false
-
 ---
 
 이제 우리는 $\Sch_{/S}$의 group object, 즉 *group scheme*을 정의한다. 
@@ -406,7 +404,7 @@ $$\text{Zariski}\implies\text{étale}\implies\text{fppf}$$
    
    반면 $\mathbb{R}$-algebra homomorphism $\mathbb{C} \rightarrow \mathbb{R}$은 존재하지 않으므로 $P(S)=\emptyset$이고, [명제 13](#prop13)에 의하여 이 torsor는 trivial하지 않다.
 
-2. Base scheme $S$ 위의 multiplicative group scheme $G=\mathbb{G}_{m, S}=\Spec_S \mathcal{O}_S[\x, \x^{-1}]$와 invertible sheaf $\mathcal{L}$을 생각하자. [\[대수적 위상수학\] §분류공간, ⁋명제 4](/ko/math/algebraic_topology/classifying_spaces#prop4)에서 vector bundle의 각 fiber에서 기저(frame)를 모아 principal bundle을 구성했듯, 대수기하에서도 $\mathcal{L}$로부터 일종의 frame bundle인 $\mathbb{G}_m$-torsor $P_\mathcal{L}$을 구성할 수 있다. 우선 $\mathcal{L}$은 정의상 Zariski-locally free of rank $1$이므로, local trivialization $\varphi_i: \mathcal{L}\vert_{U_i} \xrightarrow{\sim} \mathcal{O}_{U_i}$를 갖는 Zariski open cover $\{U_i\}$가 존재한다. 이 때의 transition function들을
+2. Base scheme $S$ 위의 multiplicative group scheme $G=\mathbb{G}_{m, S}=\Spec_S \mathcal{O}_S[\x, \x^{-1}]$와 invertible sheaf $\mathcal{L}$을 생각하자. [\[대수적 위상수학\] §분류공간, ⁋명제 4](/ko/math/algebraic_topology/classifying_spaces#prop4)에서 vector bundle의 각 fiber에서 기저(frame)를 모아 principal bundle을 구성했듯, 대수기하에서도 $\mathcal{L}$로부터 일종의 frame bundle인 $\mathbb{G}_m$-torsor $P_\mathcal{L}$을 구성할 수 있다. 우선 $\mathcal{L}$은 정의상 Zariski-locally free of rank $1$이므로, local trivialization $\varphi_i: \mathcal{L}\vert_{U_i} \xrightarrow{\sim} \mathcal{O}_{U_i}$를 갖는 affine Zariski open cover $\{U_i\}$가 존재한다. 이 때의 transition function들을
     
     $$g_{ij} = \varphi_i\circ \varphi_j^{-1}\in \Gamma(U_i\cap U_j, \mathcal{O}_S^\times)=\mathbb{G}_m(U_i\cap U_j)$$
     
@@ -432,20 +430,22 @@ $$\text{Zariski}\implies\text{étale}\implies\text{fppf}$$
 
     따라서 $P_\mathcal{L}$은 $S$ 위의 $\mathbb{G}_m$-torsor이며, [명제 13](#prop13)에 의하여 $P_\mathcal{L}$이 trivial한 것과 $\mathcal{L}\cong \mathcal{O}_S$인 것이 동치임을 확인할 수 있다. 
 
-    이 gluing이 작동하는 방식을 cohomology 관점에서 들여다보면 $P_\mathcal{L}$을 붙이는 transition data $g_{ij}\in \Gamma(U_i\cap U_j, \mathcal{O}_S^\times)$들은 $U_i\cap U_j\cap U_k$ 위에서 정확히 Čech 1-cocycle condition $g_{ij}g_{jk}=g_{ik}$를 만족한다. 또한 각 $U_i$ 위에서 local trivialization $\varphi_i$의 기저를 $0$이 되지 않는 함수 $c_i\in \Gamma(U_i, \mathcal{O}_S^\times)$만큼 바꾸면 새 transition data는 $c_i g_{ij} c_j^{-1}$이 되므로, trivialization의 선택에 따른 차이는 정확히 Čech 1-coboundary에 해당한다. 따라서 이 gluing으로 얻어지는 $\mathbb{G}_m$-torsor의 isomorphism class는 Čech cohomology $\check{H}^1(\{U_i\}, \mathcal{O}_S^\times)$와 같고, [§층 코호몰로지, ⁋명제 22](/ko/math/algebraic_varieties/sheaf_cohomology#prop22)는 이것이 sheaf cohomology $H^1(S, \mathcal{O}_S^\times)\cong \Pic(S)$의 원소와 정확히 일치한다. 
+    이 gluing이 작동하는 방식을 cohomology 관점에서 들여다보면 $P_\mathcal{L}$을 붙이는 transition data $g_{ij}\in \Gamma(U_i\cap U_j, \mathcal{O}_S^\times)$들은 $U_i\cap U_j\cap U_k$ 위에서 정확히 Čech 1-cocycle condition $g_{ij}g_{jk}=g_{ik}$를 만족한다. 또한 각 $U_i$ 위에서 local trivialization $\varphi_i$의 base를 $0$이 되지 않는 함수 $c_i\in \Gamma(U_i, \mathcal{O}_S^\times)$만큼 바꾸면 새 transition data는 $c_i g_{ij} c_j^{-1}$이 되므로, trivialization의 선택에 따른 차이는 정확히 Čech 1-coboundary에 해당한다. 따라서 이 transition data는 Čech cohomology의 class $[g_{ij}]\in \check{H}^1(\{U_i\}, \mathcal{O}_S^\times)$를 정하며, 이 class의 sheaf cohomology로의 image는 $\mathcal{L}$의 isomorphism class $[\mathcal{L}]\in H^1_\Zar(S, \mathcal{O}_S^\times)\cong \Pic(S)$에 대응한다.
 
-    특기할만한 사실은 이 gluing이 Zariski open set의 단계에서 이루어졌다는 것이다. 구별을 위해 Zariski open set들에 대한 (일상적인) sheaf cohomology를 $H^1_\Zar(S, \mathcal{O}_S^\times)$로 적으면, 
+    특기할만한 사실은 이 gluing이 Zariski open set의 단계에서 이루어졌다는 것이다. 구별을 위해 Zariski open set들에 대한 (일상적인) sheaf cohomology를 $H^1_\Zar(S, \mathcal{O}_S^\times)$로 적으면, 임의의 Zariski covering은 fppf covering이며, 자연스러운 inclusion
 
-    1번 예시의 $\mathbb{Z}/2$-torsor는 Zariski open cover로는 결코 자명해질 수 없어 fppf covering을 필요로 했던 반면, 2번의 $P_\mathcal{L}$은 이미 Zariski open cover 위에서 자명해지는(Zariski-locally trivial) 특별한 torsor이다. 그렇다면 임의의 fppf covering 위에서 꼬아 붙인 일반적인 $\mathbb{G}_m$-torsor도 항상 Zariski open cover 위에서 자명해질까? 
+    $$H^1_\Zar(S, \mathcal{O}_S^\times)\hookrightarrow H^1_\fppf(S, \mathbb{G}_m)$$
 
-    이에 대한 답이 긍정적임을 보장하는 것이 바로 **Hilbert 정리 90(Hilbert's Theorem 90)**이다. [\[체론\] §갈루아 군의 성질들, ⁋정리 7](/ko/math/field_theory/properties_of_galois_extensions#thm7)에서 다룬 체의 Galois extension에 대한 정리 $H^1(\Gal(\mathbb{L}/\mathbb{K}), \mathbb{L}^\times)=0$은, 스킴의 각 점 $s\in S$의 local ring $\mathcal{O}_{S, s}$ 위에서 임의의 fppf $\mathbb{G}_m$-torsor가 언제나 자명해짐($H^1_\fppf(\Spec \mathcal{O}_{S, s}, \mathbb{G}_m)=0$)을 함의한다. 점별 trivialization(stalk에서의 section)은 항상 열린 근방으로 연장되므로, 임의의 fppf $\mathbb{G}_m$-torsor는 사실 항상 어떤 Zariski open cover 위에서 이미 자명해져 invertible sheaf의 frame bundle $P_\mathcal{L}$과 isomorphism이 됨이 증명된다. 따라서 
-    
+    이 존재함이 알려져 있다. 특히 만일 $H^1_\fppf(S, \mathbb{G}_m)=0$이라면 $H^1_\Zar(S, \mathcal{O}_S^\times)=0$이 강제된다. 흥미로운 것은 일반적인 group scheme $G$에 대해서는 위와 같은 포함관계 $H^1_\Zar(S, G)\hookrightarrow H^1_\fppf(S, G)$가 strict일 수 있다는 것으로, 이는 fppf covering 위에서는 locally trivial이지만 Zariski open cover 위에서는 trivial하지 않은 더 비틀린 $G$-torsor들이 존재할 수 있음을 뜻하며, 첫째 예시의 $\mathbb{Z}/2$-torsor $P=\Spec \mathbb{C}\rightarrow \Spec \mathbb{R}$가 정확히 이러한 경우이다. 이 상황에서 $H^1_\Zar(\Spec \mathbb{R}, \mathbb{Z}/2)=0$이지만 $H^1_\fppf(\Spec \mathbb{R}, \mathbb{Z}/2)\cong \mathbb{Z}/2$가 되어 진포함관계 $H^1_\Zar \subsetneq H^1_\fppf$를 이룬다.
+
+    반면 특별히 $G=\mathbb{G}_m$인 경우에는 임의의 scheme $X$에 대하여 $H^1_\fppf(X, \mathbb{G}_m)\cong \Pic(X)$인 Grothendieck의 Hilbert theorem 90이 성립한다. 특히 local ring 위의 모든 invertible module은 rank $1$ free module이므로, 스킴의 각 점 $s\in S$에 대하여 $H^1_\fppf(\Spec \mathcal{O}_{S,s}, \mathbb{G}_m)=0$이다. 각 점에서의 trivialization은 어떤 Zariski open neighborhood로 확장되므로, 임의의 fppf $\mathbb{G}_m$-torsor는 어떤 Zariski open cover 위에서 이미 trivialize되고 따라서 invertible sheaf의 frame bundle $P_\mathcal{L}$과 isomorphism이 된다. 즉, $\mathbb{G}_m$에 대해서는 위의 포함관계가 strict하지 않고 isomorphism이 되어
+
     $$H^1_\fppf(S, \mathbb{G}_m)\cong H^1_\Zar(S, \mathcal{O}_S^\times)\cong \Pic(S)$$
     
-    가 성립한다.
+    이 성립한다.
 :::
 
-[예시 15](#ex15)에서 보듯, 임의의 group scheme $G$에 대하여 covering 위에서 $G$-torsor를 붙이는 transition data는 $1$차 cohomology set $H^1(S, G)$ (fppf topology에서는 $H^1_\fppf(S, G)$)를 이룬다. $G$가 abelian이 아닌 경우 $H^1(S, G)$는 군 구조를 갖지 않는 pointed set이지만, 여전히 $S$ 위의 $G$-torsor들의 isomorphism class 전체를 분류한다. 한편 torsor들을 단순한 집합으로 세는 대신 이들이 이루는 groupoid를 하나의 기하학적 대상으로 다룰 수도 있는데, field $\mathbb{K}$ 위에서 $\mathbb{G}_m$-torsor를 분류하는 $[\Spec \mathbb{K}/\mathbb{G}_m]$과 같은 quotient stack이 바로 그렇게 얻어지는 대상으로서 stack 이론의 출발점이 된다.
+[예시 15](#ex15)에서 보듯, affine group scheme $G$에 대하여 covering 위에서 $G$-torsor를 붙이는 transition data의 equivalence class들은 $1$차 cohomology set $H^1(S, G)$ (fppf topology에서는 $H^1_\fppf(S, G)$)를 이룬다. $G$가 abelian이 아닌 경우 $H^1(S, G)$는 군 구조를 갖지 않는 pointed set이지만, 여전히 $S$ 위의 $G$-torsor들의 isomorphism class 전체를 분류한다. 한편 torsor들을 단순한 집합으로 세는 대신 이들이 이루는 groupoid를 하나의 기하학적 대상으로 다룰 수도 있는데, field $\mathbb{K}$ 위에서 $\mathbb{G}_m$-torsor를 분류하는 $[\Spec \mathbb{K}/\mathbb{G}_m]$과 같은 quotient stack이 바로 그렇게 얻어지는 대상으로서 stack 이론의 출발점이 된다.
 
 ---
 
