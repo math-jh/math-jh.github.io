@@ -41,17 +41,21 @@
 \end{tikzcd}
 
 %%FIG cartesian morphism의 보편성 (Fibered_Categories_and_Stacks-4.svg)
-\begin{tikzcd}
-	\zeta \\
-	& \xi & \eta \\
+\begin{tikzcd}[row sep=20pt, column sep=35pt]
+	\zeta &[-15pt] &[20pt] \\
+	&\xi & \eta \\[-10pt]
+	{\color{black!30} P(\zeta)} \\
 	& U & V
-	\arrow["{\exists!\chi}", dashed, from=1-1, to=2-2]
-	\arrow["\psi", curve={height=-12pt}, from=1-1, to=2-3]
-	\arrow["h"', curve={height=12pt}, from=1-1, to=3-2]
+	\arrow["\chi" description, dashed, from=1-1, to=2-2]
+	\arrow["\psi", curve={height=-10pt}, from=1-1, to=2-3]
+	\arrow[from=1-1, to=3-1, black!30]
 	\arrow["\varphi", from=2-2, to=2-3]
-	\arrow[from=2-2, to=3-2]
-	\arrow[from=2-3, to=3-3]
-	\arrow["f"', from=3-2, to=3-3]
+	\arrow[from=2-3, to=4-3]
+	\arrow["h"', from=3-1, to=4-2, black!30]
+	\arrow[curve={height=-12pt}, from=3-1, to=4-3, black!30]
+	\arrow[curve={height=10pt}, from=1-1, to=4-2, crossing over]
+	\arrow[from=2-2, to=4-2, crossing over]
+	\arrow["f"', from=4-2, to=4-3]
 \end{tikzcd}
 
 \end{document}
