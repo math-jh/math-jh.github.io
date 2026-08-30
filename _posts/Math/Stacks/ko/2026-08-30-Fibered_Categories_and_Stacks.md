@@ -117,62 +117,66 @@ Compatibility에서 등장하는 $\ast$는 $2$-morphism들의 horizontal composi
 
 ## 준군값 올범주
 
-Pseudofunctor는 우리에게 이미 친숙한 presheaf $\mathcal{C}^\op\rightarrow \Set$을 일반화하는 개념이라는 점에서 친숙하지만, 이를 본격적인 계산에 활용하려면 챙겨야 할 isomorphism만 벌써 두 종류가 있다. 이번 섹션에서 다룰 category fibered over groupoid는 본질적으로 이와 동등한 데이터를 담은 대상이지만, 위와 같이 isomorphism들의 선택을 하나하나 기억하는 대신 이를 Cartesian diagram 안에 숨겨둔다. 
+Pseudofunctor는 presheaf $\mathcal{C}^\op\rightarrow \Set$을 일반화하는 개념이라는 점에서 친숙하지만, 이를 본격적인 계산에 활용하려면 챙겨야 할 isomorphism만 벌써 두 종류가 있다. 이번 섹션에서 다룰 category fibered over groupoid는 본질적으로 이와 동등한 데이터를 담은 대상이지만, 위와 같이 isomorphism들의 선택을 하나하나 기억하는 대신 이를 Cartesian diagram 안에 숨겨둔다.
 
-기본적인 아이디어는 다음과 같다. 앞서 우리는 각 대상 $U$마다 groupoid $F(U)$을 따로 두었는데, 이 대신 모든 $F(U)$의 대상을 하나의 category $\mathcal{F}$에 모은다. 여기에서 원래의 $F(U)$들을 복원하기 위해서는 각 대상이 어떤 $U$ 위에 놓이는지를 보는 projection functor $p: \mathcal{F}\rightarrow \mathcal{C}$가 필요하다. 이 관점의 핵심 아이디어는 pullback $f^\ast$가 $\mathcal{F}$에서의 *Cartesian morphism*으로 들어간다는 것으로, 이 Cartesian morphism의 universal property가 바로 위에서의 isomorphism의 선택을 숨겨두고 있는 데이터이다. 
+기본적인 아이디어는 다음과 같다. 앞서 우리는 각 대상 $U$마다 groupoid $F(U)$을 따로 두었는데, 이 대신 모든 $F(U)$의 대상을 하나의 category $\mathcal{F}$에 모은다. 여기에서 원래의 $F(U)$들을 복원하기 위해서는 각 대상이 어떤 $U$ 위에 놓이는지를 보는 projection functor $P: \mathcal{F}\rightarrow \mathcal{C}$가 필요하다. 이 관점의 핵심 아이디어는 pullback $f^\ast$가 $\mathcal{F}$에서의 *Cartesian morphism*으로 들어간다는 것으로, 이 Cartesian morphism의 universal property가 바로 위에서의 isomorphism의 선택을 숨겨두고 있는 데이터이다.
 
 ::: 정의 4
-Functor $p:\mathcal{F}\rightarrow \mathcal{C}$를 고정하자. $\mathcal{F}$의 morphism $\varphi: \xi\rightarrow \eta$가 $\mathcal{C}$의 morphism $f: U\rightarrow V$의 *lift*라는 것은 $p(\varphi)=f$인 것이다. 이 때 $f$의 lift $\varphi$가 *cartesian<sub>데카르트</sub> 사상* (혹은 *cartesian lift*)이라는 것은 다음의 universal property를 만족하는 것이다.
+Functor $P:\mathcal{F}\rightarrow \mathcal{C}$를 고정하자. $\mathcal{F}$의 morphism $\varphi: \xi\rightarrow \eta$가 $\mathcal{C}$의 morphism $f: U\rightarrow V$의 *lift*라는 것은 $P(\varphi)=f$인 것이다. 이 때 $f$의 lift $\varphi$가 *cartesian<sub>데카르트</sub> 사상* (혹은 *cartesian lift*)이라는 것은 다음의 universal property를 만족하는 것이다.
 
-> $\mathcal{F}$의 임의의 대상 $\zeta$와 morphism $\psi:\zeta \rightarrow \eta$, 그리고 $h: p(\zeta)\rightarrow U$가 $f\circ h=p(\psi)$를 만족할 때마다, $h$의 lift이자 $\varphi\circ \chi=\psi$를 만족하는 morphism $\chi:\zeta \rightarrow \xi$가 유일하게 존재한다.
+> $\mathcal{F}$의 임의의 대상 $\zeta$와 morphism $\psi:\zeta \rightarrow \eta$, 그리고 $h: P(\zeta)\rightarrow U$가 $f\circ h=P(\psi)$를 만족할 때마다, $h$의 lift이자 $\varphi\circ \chi=\psi$를 만족하는 morphism $\chi:\zeta \rightarrow \xi$가 유일하게 존재한다.
 :::
 
-{% diagram Math/Stacks/Fibered_Categories_and_Stacks-4.svg width="9.46em" alt="cartesian morphism의 보편성" %}
+이는 대략적으로 다음의 diagram을 생각하면 cartesian morphism이라는 이름이 정당함을 알 수 있다.
 
-Cartesian morphism은 $\eta$의 $f$를 따른 "가장 효율적인 pullback"이다. 보편성은 $\eta$를 향한 모든 morphism이 $\varphi$를 유일하게 거쳐 인수분해됨을 말하므로, 그러한 $\xi$이 존재한다면 표준 동형을 제외하고 유일하다. 이 $\xi$을 $f^\ast \eta$로 적고 $\eta$의 $f$를 따른 *pullback*이라 부른다. 이제 모든 morphism이 이런 pullback으로 분해되고 각 fiber가 groupoid가 되도록 요구한다.
+{% diagram Math/Stacks/Fibered_Categories_and_Stacks-4.svg width="14.13em" alt="cartesian morphism의 보편성" %}
+
+그럼 이 Cartesian morphism의 보편성은 이 조건을 만족하는 $\xi$가 존재한다면 unique isomorphism에 대해 유일하게 결정되며, 이러한 방식으로 $\varepsilon$과 $\eta$를 숨겨둔 것이다. 그럼 우리는 이 $\xi$을 $f^\ast \eta$로 적고 $\eta$의 $f$를 따른 *pullback*이라 부른다. 이제 모든 morphism이 이런 pullback으로 분해되고 각 fiber가 groupoid가 되도록 요구하면 *category fibered in groupoids*의 개념을 얻는다.
 
 ::: 정의 5
-Functor $p:\mathcal{F} \rightarrow \mathcal{C}$가 *category fibered in groupoids* (이하 *CFG*)라는 것은 다음 두 조건을 만족하는 것이다.
+Functor $P:\mathcal{F} \rightarrow \mathcal{C}$가 *category fibered in groupoids*라는 것은 다음 두 조건을 만족하는 것이다.
 
-1. (Lift 존재) 임의의 morphism $f: U \rightarrow V$와 $V$ 위의 대상 $\eta$에 대하여, $f$의 lift이자 공역이 $\eta$인 cartesian morphism $\varphi:\xi \rightarrow \eta$이 존재한다.
-2. (모든 morphism이 cartesian) $\mathcal{F}$의 모든 morphism이 cartesian이다.
+1. 임의의 morphism $f: U \rightarrow V$와 $V$ 위의 대상 $\eta$에 대하여, $f$의 lift이자 공역이 $\eta$인 cartesian morphism $\varphi:\xi \rightarrow \eta$이 존재한다.
+2. $\mathcal{F}$의 모든 morphism이 cartesian이다.
+
+이 때, 대상 $U\in \mathcal{C}$에 대하여, $U$ 위에 놓인 대상들과 $\id_U$의 lift인 morphism들로 이루어진 $\mathcal{F}$의 subcategory를 $U$ 위의 *fiber<sub>올</sub>* $\mathcal{F}(U)$라 부른다.
 :::
-
-이 정의는 다음의 보다 검사하기 쉬운 형태와 동치이다. $p:\mathcal{F} \rightarrow \mathcal{C}$이 CFG인 것은 (1) 위의 lift 존재 조건과, (2$'$) 임의의 두 morphism $\varphi:\xi \rightarrow \eta$, $\psi:\zeta \rightarrow \eta$과 $h: p(\zeta)\rightarrow p(\xi)$로서 $p(\varphi)\circ h=p(\psi)$인 것에 대하여, $h$의 lift이자 $\varphi\circ \theta=\psi$를 만족하는 $\theta:\zeta \rightarrow \xi$이 유일하게 존재하는 조건을 함께 만족하는 것이다. 조건 (2$'$)이 정확히 "모든 morphism이 cartesian"의 풀어쓴 형태이다. 한 대상 $U\in \mathcal{C}$에 대하여, $U$ 위에 놓인 대상들과 $\id_U$의 lift인 morphism들로 이루어진 $\mathcal{F}$의 subcategory를 $U$ 위의 *fiber<sub>올</sub>* $\mathcal{F}(U)$ ($\mathcal{F}_U$로도 적는다)라 부른다.
 
 각 morphism $f:U\rightarrow V$와 대상 $\eta\in\mathcal{F}(V)$에 대하여 cartesian lift $f^\ast\eta\rightarrow\eta$을 하나씩 고르는 것을 *cleavage*라 부른다. Cleavage는 보편성에 의해 isomorphism까지 유일한 pullback들 가운데 실제 대표를 일관되게 골라 pullback functor를 정의하기 위한 선택이다.
 
 ::: 명제 6
-$p:\mathcal{F} \rightarrow \mathcal{C}$이 CFG라 하자. 그럼 다음이 성립한다.
+CFG $P:\mathcal{F} \rightarrow \mathcal{C}$에 대하여, 다음이 성립한다.
 
 1. 각 fiber $\mathcal{F}(U)$은 groupoid이다.
-2. Cleavage를 하나 고르면 각 morphism $f:U\rightarrow V$에 대하여 functor $f^\ast:\mathcal{F}(V) \rightarrow \mathcal{F}(U)$이 정의되며, 다른 선택은 이 functor를 표준 natural isomorphism을 제외하고 바꾸지 않는다. 나아가 합성가능한 $U\xrightarrow{f}V\xrightarrow{g}W$에 대하여 표준 natural isomorphism $f^\ast\circ g^\ast\cong(g\circ f)^\ast$이 있다.
+2. Cleavage를 하나 고르면 각 morphism $f:U\rightarrow V$에 대하여 functor $f^\ast:\mathcal{F}(V) \rightarrow \mathcal{F}(U)$이 정의되며, 다른 선택은 이 functor를 canonical natural isomorphism을 제외하고 바꾸지 않는다. 나아가 합성가능한 $U\xrightarrow{f}V\xrightarrow{g}W$에 대하여 canonical natural isomorphism $f^\ast\circ g^\ast\cong(g\circ f)^\ast$이 있다.
 :::
 ::: 증명
-(1) $\alpha:\xi \rightarrow \eta$이 $\id_U$ 위에 놓인 morphism이라 하자. 조건 (2$'$)을 $\varphi=\alpha$, $\psi=\id_\eta$, $h=\id_U$에 적용하면 $\alpha\circ \theta=\id_\eta$이고 $p(\theta)=\id_U$인 $\theta:\eta \rightarrow \xi$이 유일하게 있어, $\alpha$의 오른쪽 역사상을 얻는다. 같은 보편성을 $\theta$에 적용하면 $\theta\circ \theta'=\id_\xi$이고 $p(\theta')=\id_U$인 $\theta':\xi \rightarrow \eta$을 얻는데, $\alpha\circ \theta=\id_\eta$으로부터 $\alpha=(\alpha\circ \theta)\circ \theta'=\theta'$이므로 $\theta\circ \alpha=\theta\circ \theta'=\id_\xi$이다. 따라서 $\alpha$는 $\theta$을 역사상으로 가지는 isomorphism이다. 따라서 $\mathcal{F}(U)$의 모든 morphism이 가역, 즉 $\mathcal{F}(U)$은 groupoid이다.
+1. 우선 $\alpha:\xi \rightarrow \eta$이 $\id_U$의 lift인 morphism이라 하자. $\mathcal{F}$의 모든 morphism이 cartesian이므로 $\alpha$는 cartesian morphism이다. 따라서 cartesian morphism의 보편성을 $\psi=\id_\eta$와 $h=\id_U$에 적용하면 $\alpha\circ \theta=\id_\eta$이고 $P(\theta)=\id_U$인 $\theta:\eta \rightarrow \xi$이 유일하게 존재하여 $\alpha$의 오른쪽 역사상을 얻는다. 같은 방식으로 $\theta$ 또한 cartesian morphism이므로, 보편성을 적용하면 $\theta\circ \theta'=\id_\xi$이고 $P(\theta')=\id_U$인 $\theta':\xi \rightarrow \eta$을 얻는다. 이제 $\alpha\circ \theta=\id_\eta$으로부터
 
-(2) $\eta\in \mathcal{F}(V)$마다 cartesian lift $f^\ast \eta\xrightarrow{\varphi_\eta}\eta$을 고른다. $\mathcal{F}(V)$의 morphism $\beta:\eta \rightarrow \eta'$에 대하여, $\beta\circ \varphi_\eta:f^\ast \eta \rightarrow \eta'$과 cartesian morphism $\varphi_{\eta'}:f^\ast \eta' \rightarrow \eta'$ 및 $h=\id_U$에 (2$'$)을 적용하면 $\varphi_{\eta'}\circ \theta=\beta\circ \varphi_\eta$인 $\theta:f^\ast \eta \rightarrow f^\ast \eta'$이 유일하게 정해진다. 이를 $f^\ast \beta$로 두면 유일성으로부터 $f^\ast(\beta'\circ \beta)=f^\ast \beta'\circ f^\ast \beta$과 $f^\ast \id=\id$이 따르므로 $f^\ast$은 functor이다. 다른 cleavage $\widetilde{f^\ast \eta}\xrightarrow{\widetilde{\varphi}_\eta}\eta$을 골랐다면, 두 cartesian morphism의 보편성으로 $\widetilde{f^\ast \eta}\cong f^\ast \eta$인 표준 동형이 $\eta$에 대하여 자연스럽게 존재한다. 끝으로 $f^\ast g^\ast \eta \rightarrow g^\ast \eta \rightarrow \eta$의 합성은 $g\circ f$ 위에 놓인 cartesian morphism이고 (cartesian morphism의 합성이 cartesian임은 보편성을 두 번 적용하여 곧 확인된다), $(g\circ f)^\ast \eta \rightarrow \eta$ 또한 그러하므로, 보편성에 의해 표준 동형 $f^\ast g^\ast \eta\cong(g\circ f)^\ast \eta$을 얻는다.
+    $$\alpha=(\alpha\circ \theta)\circ \theta'=\theta'$$
+
+    이므로 $\alpha$와 $\theta$는 서로의 역이다. 즉 $\mathcal{F}(U)$의 모든 morphism이 가역이므로 $\mathcal{F}(U)$은 groupoid이다.
+
+2. Cleavage를 고정하자. 그럼 우선 $\eta\in \mathcal{F}(V)$마다 cartesian lift $\varphi_\eta:f^\ast \eta\rightarrow\eta$가 주어져 있다. 이제 $\mathcal{F}(V)$의 morphism $\beta:\eta \rightarrow \eta'$에 대하여, 합성 $\beta\circ \varphi_\eta:f^\ast \eta \rightarrow \eta'$과 $\eta$의 cartesian morphism $\varphi_{\eta'}:f^\ast \eta' \rightarrow \eta'$ 및 $h=\id_U$에 cartesian morphism의 universal property를 적용하면 $\varphi_{\eta'}\circ \theta=\beta\circ \varphi_\eta$이고 $P(\theta)=\id_U$인 $\theta:f^\ast \eta \rightarrow f^\ast \eta'$이 유일하게 정해지고, 따라서 이를 $f^\ast\beta$로 정의할 수 있다. 그럼 유일성에 의해 $f^\ast(\beta'\circ \beta)=f^\ast \beta'\circ f^\ast \beta$과 $f^\ast \id=\id$임을 쉽게 보일 수 있으므로 $f^\ast$은 functor이다.
+
+    만일 위에서 다른 cleavage $\widetilde{\varphi}_\eta:\widetilde{f^\ast \eta}\rightarrow\eta$을 골랐다면, 두 cartesian morphism의 universal property로 $\widetilde{f^\ast \eta}\cong f^\ast \eta$인 isomorphism형이 $\eta$에 대하여 자연스럽게 존재한다.
+
+    마지막으로 $f^\ast g^\ast \eta \rightarrow g^\ast \eta \rightarrow \eta$의 합성은 $g\circ f$ 위에 놓인 cartesian morphism이고 $(g\circ f)^\ast \eta \rightarrow \eta$ 또한 그러하므로, universal property에 의해 isomorphism $f^\ast g^\ast \eta\cong(g\circ f)^\ast \eta$을 얻는다.
 :::
 
-[명제 6](#prop6)은 CFG가 정확히 [정의 3](#def3)의 pseudofunctor 자료를 보편성으로 재생함을 보여준다. Cleavage를 고르면 fiber $U\mapsto \mathcal{F}(U)$과 pullback $f^\ast$, 그리고 합성 동형 $\varepsilon_{f, g}: f^\ast g^\ast\cong(g\circ f)^\ast$이 모두 나오며, 이들이 [정의 3](#def3)의 정합성 조건을 만족함은 cartesian morphism의 유일성으로부터 자동으로 따라온다. 역으로 pseudofunctor가 주어지면 그 대상들을 모아 CFG를 만들 수 있다. 이 양방향 대응을 정밀하게 진술하기 위해 먼저 CFG 사이의 morphism을 정의한다.
+즉, CFG가 주어지면 cleavage를 통해 pseudofunctor를 재현해낼 수 있으며, 이는 cleavage의 선택에 대해 오직 canonical natural isomorphism만큼만 다르다. 우리 주장은 거꾸로 pseudofunctor가 CFG를 주고, 따라서 두 데이터는 정확히 같은 정보를 담고 있다는 것이다. 이 양방향 대응을 정밀하게 진술하기 위해 먼저 CFG 사이의 morphism을 정의한다.
 
 ::: 정의 7
-두 CFG $p:\mathcal{F} \rightarrow \mathcal{C}$과 $q:\mathcal{G} \rightarrow \mathcal{C}$ 사이의 *morphism*은 $q\circ G=p$을 만족하는 functor $G:\mathcal{F} \rightarrow \mathcal{G}$이다 (이러한 functor는 자동으로 cartesian morphism을 cartesian morphism으로 보낸다). 두 morphism $G, G':\mathcal{F} \rightarrow \mathcal{G}$ 사이의 *2-morphism*은 natural transformation $\alpha: G\Rightarrow G'$으로서 각 성분 $\alpha_\xi$이 $\id_{p(\xi)}$ 위에 놓이는 것이다. 이로써 CFG들은 $\mathcal{C}$ 위에서 2-category를 이룬다.
+두 CFG $P:\mathcal{F} \rightarrow \mathcal{C}$과 $Q:\mathcal{G} \rightarrow \mathcal{C}$ 사이의 *morphism*은 $Q\circ G=P$을 만족하는 functor $G:\mathcal{F} \rightarrow \mathcal{G}$이다. 두 morphism $G, G':\mathcal{F} \rightarrow \mathcal{G}$ 사이의 *2-morphism*은 natural transformation $\alpha: G\Rightarrow G'$으로서 각 성분 $\alpha_\xi$이 $\id_{P(\xi)}$ 위에 놓이는 것이다.
 :::
 
-2-morphism의 각 성분이 $\id$ 위에 놓인다는 조건은, 그것이 어떤 fiber $\mathcal{G}(U)$ 안의 morphism임을 뜻한다. [명제 6](#prop6)에 의해 fiber가 groupoid이므로 이 natural transformation은 자동으로 natural isomorphism이다. 따라서 CFG 사이의 2-morphism은 항상 가역이며, 두 morphism $G, G'$ 사이에 2-morphism이 있으면 둘은 본질적으로 같다. 이 2-category 구조 위에서 pseudofunctor와의 동치가 진술된다.
+그럼 우선 CFG들 사이의 morphism은 cartesian morphism을 cartesian morphism으로 보낸다는 것을 쉽게 확인할 수 있다. 또, 위 정의에 의해 CFG들의 category는 2-category를 이룬다. 위의 조건에서 $2$-morphism의 각 성분이 $\id$ 위에 놓인다는 조건은 그것이 어떤 fiber $\mathcal{G}(U)$ 안의 morphism이라는 것으로, 특히 $\mathcal{G}(U)$가 [명제 6](#prop6)에 의해 groupoid이므로 $2$-morphism은 항상 natural isomorphism이 된다. 그럼 다음이 성립한다.
 
 ::: 정리 8 (Grothendieck construction)
 Category $\mathcal{C}$ 위의 CFG들이 이루는 2-category와 pseudofunctor $\mathcal{C}^\op \rightarrow \Grpd$들이 이루는 2-category는 2-equivalent하다. 구체적으로 pseudofunctor $F$로부터 다음 *Grothendieck construction* $\int_\mathcal{C}F$을 얻는다. 그 대상은 쌍 $(U, x)$ ($U\in \mathcal{C}$, $x\in F(U)$)이고, $(U, x)$에서 $(V, y)$로의 morphism은 쌍 $(f, \alpha)$ ($f: U \rightarrow V$, $\alpha: x\xrightarrow{\sim}f^\ast y$ in $F(U)$)이며, 사영 $(U, x)\mapsto U$이 이를 CFG로 만든다.
 :::
 ::: 증명
-전개가 길어 두 방향의 구성과 그것이 서로 역임의 골자만 제시한다. 자세한 논증은 [Vis] 또는 [Stacks]를 참조하라.
-
-CFG에서 pseudofunctor로 가는 방향은 [명제 6](#prop6)이다. Cleavage를 고르면 $U\mapsto \mathcal{F}(U)$, $f\mapsto f^\ast$, $\varepsilon_{f, g}$이 정해지고 정합성이 보편성으로 따라온다.
-
-역방향이 위 진술의 $\int_\mathcal{C}F$이다. $(f, \alpha):(U, x) \rightarrow (V, y)$과 $(g, \beta):(V, y) \rightarrow (W, z)$의 합성은 $(g\circ f, \gamma)$로 정의하되, $\gamma$은 $x\xrightarrow{\alpha}f^\ast y\xrightarrow{f^\ast \beta}f^\ast g^\ast z\xrightarrow{\varepsilon_{f, g}}(g\circ f)^\ast z$의 합성이다. $\varepsilon$의 정합성이 이 합성의 결합법칙을 보장한다. 사영 $\int_\mathcal{C}F \rightarrow \mathcal{C}$, $(U, x)\mapsto U$에 대하여, morphism $(f, \alpha)$이 cartesian인 것은 $\alpha$이 isomorphism인 것과 동치인데 정의상 모든 $\alpha$이 isomorphism이므로 [정의 5](#def5)의 두 조건이 성립한다. Fiber $(\int_\mathcal{C}F)(U)$은 $F(U)$과 동형이다.
-
-두 구성이 서로 2-equivalence의 역임은, CFG $\mathcal{F}$에서 cleavage로 얻은 pseudofunctor의 Grothendieck construction이 $\mathcal{F}$과 표준적으로 동치이고 ($(U, x)\mapsto x$), 그 역도 마찬가지임을 확인하는 것으로 따라온다. 이 동치는 cleavage의 선택에 의존하지 않는다.
+CFG에서 pseudofunctor로 가는 구성은 [명제 6](#prop6)이다. 역으로 $\int_\mathcal{C}F$에서 $(f,\alpha)$와 $(g,\beta)$의 합성은 $\alpha$, $f^\ast\beta$, $\varepsilon_{f,g}:f^\ast g^\ast z\rightarrow(g\circ f)^\ast z$을 차례로 합성하여 정의하며, $\varepsilon$의 정합성이 결합법칙을 보장한다. 사영 $\int_\mathcal{C}F\rightarrow\mathcal{C}$은 $(f,\id_{f^\ast y})$를 cartesian lift로 가지고, 모든 $\alpha$이 isomorphism이므로 모든 morphism이 cartesian이며, fiber는 $F(U)$과 equivalent하다. 두 구성은 equivalence까지 서로 역이고, 자세한 정합성의 확인은 [Vis] 또는 [Stacks]를 참조한다.
 :::
 
 [정리 8](#thm8)에 의하여 우리는 "base category 위에서 변하는 groupoid"를 pseudofunctor로도, CFG로도 자유롭게 기술할 수 있다. 이후로는 두 언어를 맥락에 따라 섞어 쓰며, 특히 정의는 CFG로 깔끔하게 하되 구체적 계산은 pseudofunctor의 pullback $f^\ast$과 $x\vert_V$ 같은 표기로 수행한다. 다음 예시들이 이 글의 주요 대상이다.
@@ -193,10 +197,10 @@ Base category를 $\mathcal{C}=\Sch$ (또는 고정된 base 위의 $\Sch/S$)로 �
 
 지금까지의 정의에는 base category의 위상이 전혀 쓰이지 않았다. CFG는 순수하게 category-theoretic인 자료이다. Stack은 여기에 [§그로텐디크 위상, ⁋정의 6](/ko/math/stacks/grothendieck_topology#def6)의 covering을 따라 morphism과 대상이 국소에서 대역으로 붙는다는 sheaf 조건을 부과한 것이다. 이는 두 단계로 나뉜다. 먼저 morphism이 붙는 조건 (prestack)을, 이어 대상이 붙는 조건 (stack)을 요구한다. Morphism이 붙는다는 것을 정식화하기 위해 두 대상 사이의 isomorphism이 이루는 presheaf를 도입한다.
 
-이하에서 $(\mathcal{C}, \tau)$은 site이고, 위상은 covering family $\{U_i \rightarrow U\}$로 주어지는 pretopology로 기술한다. ([§그로텐디크 위상, ⁋정의 4](/ko/math/stacks/grothendieck_topology#def4)) CFG $p:\mathcal{F} \rightarrow \mathcal{C}$의 cleavage를 하나 고정하여 pullback $f^\ast$과 restriction $x\vert_V=f^\ast x$ (단, $f: V \rightarrow U$)을 사용한다.
+이하에서 $(\mathcal{C}, \tau)$은 site이고, 위상은 covering family $\{U_i \rightarrow U\}$로 주어지는 pretopology로 기술한다. ([§그로텐디크 위상, ⁋정의 4](/ko/math/stacks/grothendieck_topology#def4)) CFG $P:\mathcal{F} \rightarrow \mathcal{C}$의 cleavage를 하나 고정하여 pullback $f^\ast$과 restriction $x\vert_V=f^\ast x$ (단, $f: V \rightarrow U$)을 사용한다.
 
 ::: 정의 10
-CFG $p:\mathcal{F} \rightarrow \mathcal{C}$과 대상 $U\in \mathcal{C}$, 그리고 두 대상 $x, y\in \mathcal{F}(U)$이 주어졌다 하자. $U$ 위의 *Isom presheaf<sub>Isom 준층</sub>*
+CFG $P:\mathcal{F} \rightarrow \mathcal{C}$과 대상 $U\in \mathcal{C}$, 그리고 두 대상 $x, y\in \mathcal{F}(U)$이 주어졌다 하자. $U$ 위의 *Isom presheaf<sub>Isom 준층</sub>*
 
 $$\rIsom_U(x, y):(\mathcal{C}/U)^\op \rightarrow \Set;\qquad (f: V \rightarrow U)\mapsto \Hom_{\mathcal{F}(V)}(f^\ast x, f^\ast y)$$
 
@@ -206,7 +210,7 @@ $$\rIsom_U(x, y):(\mathcal{C}/U)^\op \rightarrow \Set;\qquad (f: V \rightarrow U
 각 fiber가 groupoid이므로 ([명제 6](#prop6)) $\rIsom_U(x, y)$의 값은 모두 isomorphism들의 집합이고, $x=y$이면 이는 automorphism의 presheaf $\rAut_U(x)$이다. 직관적으로 이 presheaf는 "$x$와 $y$을 잇는 동형이 $U$ 위에서 어떻게 변하는가"를 기록한다. Morphism이 국소에서 대역으로 붙는다는 것은 정확히 이 presheaf가 sheaf라는 것이다. 다음으로 대상이 붙는 조건을 위해 descent datum을 정의한다. 이는 [\[스킴\] §충실평탄하강, ⁋정의 4](/ko/math/scheme_theory/faithfully_flat_descent#def4)의 descent datum을 임의의 CFG로 옮긴 것이다.
 
 ::: 정의 11
-CFG $p:\mathcal{F} \rightarrow \mathcal{C}$과 covering family $\{f_i: U_i \rightarrow U\}_{i\in I}$이 주어졌다 하자. $U_{ij}=U_i\times_U U_j$, $U_{ijk}=U_i\times_U U_j\times_U U_k$로 적고, 사영 $\pr: U_{ij} \rightarrow U_i$ 등을 따른 pullback을 $\vert_{U_{ij}}$로 표기한다. ([\[범주론\] §극한, ⁋예시 8](/ko/math/category_theory/limits#ex8)) 이 covering에 대한 *descent datum<sub>하강 자료</sub>*은 다음으로 이루어진다.
+CFG $P:\mathcal{F} \rightarrow \mathcal{C}$과 covering family $\{f_i: U_i \rightarrow U\}_{i\in I}$이 주어졌다 하자. $U_{ij}=U_i\times_U U_j$, $U_{ijk}=U_i\times_U U_j\times_U U_k$로 적고, 사영 $\pr: U_{ij} \rightarrow U_i$ 등을 따른 pullback을 $\vert_{U_{ij}}$로 표기한다. ([\[범주론\] §극한, ⁋예시 8](/ko/math/category_theory/limits#ex8)) 이 covering에 대한 *descent datum<sub>하강 자료</sub>*은 다음으로 이루어진다.
 
 1. 각 $i$마다 대상 $x_i\in \mathcal{F}(U_i)$,
 2. 각 쌍 $(i, j)$마다 $\mathcal{F}(U_{ij})$의 isomorphism $\varphi_{ij}: x_j\vert_{U_{ij}}\xrightarrow{\sim}x_i\vert_{U_{ij}}$,
@@ -217,7 +221,7 @@ CFG $p:\mathcal{F} \rightarrow \mathcal{C}$과 covering family $\{f_i: U_i \righ
 Cocycle 조건은 세 겹 겹침 $U_{ijk}$ 위에서 세 동형 $\varphi_{ij}, \varphi_{jk}, \varphi_{ik}$이 모순 없이 합성됨을 요구하며, 이는 sheaf를 open covering에서 붙일 때 transition 함수가 만족하던 cocycle 관계의 직접적 일반화이다. Effectivity는 이 국소 자료 $(x_i, \varphi_{ij})$이 실제로 어떤 대역 대상 $x\in \mathcal{F}(U)$의 restriction으로부터 옴을 뜻한다. Faithfully flat descent에서 module에 대한 descent datum이 항상 effective였던 [\[스킴\] §충실평탄하강, ⁋정리 6](/ko/math/scheme_theory/faithfully_flat_descent#thm6)과 달리, 일반적인 CFG에서는 effectivity가 별도의 조건이다. 이 두 조건을 합하여 stack을 정의한다.
 
 ::: 정의 12
-Site $(\mathcal{C}, \tau)$ 위의 CFG $p:\mathcal{F} \rightarrow \mathcal{C}$에 대하여,
+Site $(\mathcal{C}, \tau)$ 위의 CFG $P:\mathcal{F} \rightarrow \mathcal{C}$에 대하여,
 
 1. $\mathcal{F}$이 *prestack<sub>준스택</sub>*이라는 것은, 임의의 $U$과 $x, y\in \mathcal{F}(U)$에 대하여 presheaf $\rIsom_U(x, y)$이 $\mathcal{C}/U$ 위의 sheaf인 것이다. ([§그로텐디크 위상, ⁋정의 9](/ko/math/stacks/grothendieck_topology#def9))
 2. $\mathcal{F}$이 *stack<sub>스택</sub>*이라는 것은, $\mathcal{F}$이 prestack이고 동시에 임의의 covering family에 대한 모든 descent datum이 effective인 것이다.
@@ -228,7 +232,7 @@ Prestack 조건은 "morphism이 붙는다"는 것이다. Covering $\{U_i \righta
 Discrete fiber, 곧 집합 값 functor의 경우 stack 조건은 익숙한 sheaf 조건으로 정확히 환원된다. 이것이 stack을 sheaf의 일반화로 보는 관점을 정당화한다.
 
 ::: 명제 13
-CFG $p:\mathcal{F} \rightarrow \mathcal{C}$의 모든 fiber $\mathcal{F}(U)$이 discrete groupoid라 하자. 그럼 $\mathcal{F}$은 어떤 presheaf $F:\mathcal{C}^\op \rightarrow \Set$ ([정리 8](#thm8)을 통해 $F(U)=\obj \mathcal{F}(U)$)에 대응하며, 이 때 $\mathcal{F}$이 prestack인 것은 $F$이 separated presheaf인 것과, $\mathcal{F}$이 stack인 것은 $F$이 sheaf인 것과 동치이다.
+CFG $P:\mathcal{F} \rightarrow \mathcal{C}$의 모든 fiber $\mathcal{F}(U)$이 discrete groupoid라 하자. 그럼 $\mathcal{F}$은 어떤 presheaf $F:\mathcal{C}^\op \rightarrow \Set$ ([정리 8](#thm8)을 통해 $F(U)=\obj \mathcal{F}(U)$)에 대응하며, 이 때 $\mathcal{F}$이 prestack인 것은 $F$이 separated presheaf인 것과, $\mathcal{F}$이 stack인 것은 $F$이 sheaf인 것과 동치이다.
 :::
 ::: 증명
 Fiber가 discrete이므로 [정리 8](#thm8)의 pseudofunctor는 strict functor $F:\mathcal{C}^\op \rightarrow \Set$ ($\Set$을 discrete groupoid의 category로 본 것)이다. 두 대상 $x, y\in \mathcal{F}(U)=F(U)$에 대하여 $\Hom_{\mathcal{F}(V)}(x\vert_V, y\vert_V)$은 $x\vert_V=y\vert_V$이면 한원소 집합, 아니면 공집합이다. 따라서 $\rIsom_U(x, y)$이 sheaf라는 것은, $x, y$이 한 covering의 각 $U_i$ 위에서 일치하면 (그리고 겹침 조건이 공허하게 성립하면) $U$ 위에서 일치한다는 것, 즉 $F$의 amalgamation 유일성 (separatedness)이다. ([§그로텐디크 위상, ⁋정의 9](/ko/math/stacks/grothendieck_topology#def9))
