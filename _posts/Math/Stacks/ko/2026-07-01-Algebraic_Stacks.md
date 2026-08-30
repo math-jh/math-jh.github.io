@@ -15,7 +15,7 @@ published: false
 
 ---
 
-Site $(\Sch, \mathrm{fppf})$ 위의 stack은 faithfully flat descent를 groupoid 값 functor로 끌어올린 대상이다. ([§Fibered category와 stack, ⁋정의 13](/ko/math/stacks/fibered_categories_and_stacks#def13)) 그러나 이 정의에는 기하가 전혀 들어 있지 않다. Stack은 순수하게 범주론적·위상적 조건만으로 정의되었고, 그 결과 어떤 stack은 scheme이나 algebraic space처럼 점·차원·매끄러움을 논할 수 있는 기하학적 대상인 반면, 다른 stack은 그러한 구조를 전혀 갖지 못한다. 이 글의 목표는 "기하학적인" stack을 가려내는 것이다. 즉 우리는 모든 stack 가운데 scheme으로 국소적으로 근사되며 그 위에서 morphism의 차원·flatness·매끄러움 따위를 정의할 수 있는 부류를 분리하고자 한다.
+Site $(\Sch, \mathrm{fppf})$ 위의 stack은 faithfully flat descent를 groupoid 값 functor로 끌어올린 대상이다. ([§Fibered category와 stack, ⁋정의 12](/ko/math/stacks/fibered_categories_and_stacks#def12)) 그러나 이 정의에는 기하가 전혀 들어 있지 않다. Stack은 순수하게 범주론적·위상적 조건만으로 정의되었고, 그 결과 어떤 stack은 scheme이나 algebraic space처럼 점·차원·매끄러움을 논할 수 있는 기하학적 대상인 반면, 다른 stack은 그러한 구조를 전혀 갖지 못한다. 이 글의 목표는 "기하학적인" stack을 가려내는 것이다. 즉 우리는 모든 stack 가운데 scheme으로 국소적으로 근사되며 그 위에서 morphism의 차원·flatness·매끄러움 따위를 정의할 수 있는 부류를 분리하고자 한다.
 
 이를 위한 두 조건은 다음과 같다. 첫째, stack $\mathcal{X}$의 *대각선* $\Delta:\mathcal{X} \rightarrow \mathcal{X}\times_S \mathcal{X}$이 representable해야 한다. 이는 두 대상을 잇는 isomorphism들이 이루는 $\operatorname{\underline{Isom}}$이 scheme(보다 정확히는 algebraic space)이라는 것과 동치이며, 따라서 두 점을 비교하는 일이 통상적인 기하의 범위 안에서 이루어짐을 보장한다. 둘째, scheme으로부터의 smooth 전사 $U \rightarrow \mathcal{X}$, 곧 *atlas*가 존재해야 한다. Atlas는 위상공간이 좌표근방으로 덮이듯 stack을 scheme으로 덮으며, stack 위의 기하학적 성질을 atlas 위에서 검사할 수 있게 한다. 이 두 조건을 만족하는 stack이 *algebraic stack*이며, atlas를 étale하게 잡을 수 있는 경우가 *Deligne–Mumford stack*이다.
 
@@ -39,11 +39,11 @@ $$\alpha: f(x)\xrightarrow{\ \sim\ }g(y)$$
 $\mathcal{X}, \mathcal{Y}, \mathcal{Z}$이 site $(\mathcal{C}, \tau)$ 위의 stack이면 [정의 1](#def1)의 $\mathcal{X}\times_\mathcal{Z}\mathcal{Y}$도 stack이며, 위의 2-보편성을 만족한다.
 :::
 ::: 증명
-먼저 $\mathcal{W}=\mathcal{X}\times_\mathcal{Z}\mathcal{Y}$이 CFG임을 본다. Morphism $\varphi: T' \rightarrow T$과 $(x, y, \alpha)\in \mathcal{W}(T)$에 대하여, $\mathcal{X}, \mathcal{Y}$에서 cartesian lift $\varphi^\ast x, \varphi^\ast y$을 고르고 $\alpha$를 $\varphi$를 따라 pullback하면 ($f, g$이 cartesian morphism을 보존하므로 $f(\varphi^\ast x)\cong \varphi^\ast f(x)$ 등을 사용한다) isomorphism $\varphi^\ast \alpha: f(\varphi^\ast x)\xrightarrow{\sim}g(\varphi^\ast y)$을 얻어 $(\varphi^\ast x, \varphi^\ast y, \varphi^\ast \alpha)\in \mathcal{W}(T')$이 된다. [§Fibered category와 stack, ⁋정의 6](/ko/math/stacks/fibered_categories_and_stacks#def6)의 두 조건이 $\mathcal{X}, \mathcal{Y}$의 그것으로부터 성분별로 따라오므로 $\mathcal{W}$은 CFG이다.
+먼저 $\mathcal{W}=\mathcal{X}\times_\mathcal{Z}\mathcal{Y}$이 CFG임을 본다. Morphism $\varphi: T' \rightarrow T$과 $(x, y, \alpha)\in \mathcal{W}(T)$에 대하여, $\mathcal{X}, \mathcal{Y}$에서 cartesian lift $\varphi^\ast x, \varphi^\ast y$을 고르고 $\alpha$를 $\varphi$를 따라 pullback하면 ($f, g$이 cartesian morphism을 보존하므로 $f(\varphi^\ast x)\cong \varphi^\ast f(x)$ 등을 사용한다) isomorphism $\varphi^\ast \alpha: f(\varphi^\ast x)\xrightarrow{\sim}g(\varphi^\ast y)$을 얻어 $(\varphi^\ast x, \varphi^\ast y, \varphi^\ast \alpha)\in \mathcal{W}(T')$이 된다. [§Fibered category와 stack, ⁋정의 5](/ko/math/stacks/fibered_categories_and_stacks#def5)의 두 조건이 $\mathcal{X}, \mathcal{Y}$의 그것으로부터 성분별로 따라오므로 $\mathcal{W}$은 CFG이다.
 
-Stack 조건을 본다. Covering $\{T_i \rightarrow T\}$ 위의 $\mathcal{W}$의 descent datum은 각 성분에서 $\mathcal{X}, \mathcal{Y}$의 descent datum $(x_i, \varphi_{ij}^\mathcal{X})$, $(y_i, \varphi_{ij}^\mathcal{Y})$과, 두 겹 겹침에서 $\alpha_i$들이 호환되는 자료를 준다. $\mathcal{X}, \mathcal{Y}$이 stack이므로 $(x_i, \varphi_{ij}^\mathcal{X})$과 $(y_i, \varphi_{ij}^\mathcal{Y})$은 각각 $x\in \mathcal{X}(T)$, $y\in \mathcal{Y}(T)$으로 유일하게 붙는다. ([§Fibered category와 stack, ⁋정의 13](/ko/math/stacks/fibered_categories_and_stacks#def13)) 한편 isomorphism들 $\alpha_i: f(x)\vert_{T_i}\xrightarrow{\sim}g(y)\vert_{T_i}$은 $\mathcal{Z}$의 $\operatorname{\underline{Isom}}_T(f(x), g(y))$의 절단을 이루는데, $\mathcal{Z}$이 prestack이므로 이 presheaf가 sheaf이고 ([§Fibered category와 stack, ⁋정의 11](/ko/math/stacks/fibered_categories_and_stacks#def11)) 따라서 $\alpha_i$들이 유일한 $\alpha: f(x)\xrightarrow{\sim}g(y)$으로 붙는다. 그러므로 descent datum이 $(x, y, \alpha)\in \mathcal{W}(T)$으로 effective하게 붙고, $\mathcal{W}$은 stack이다.
+Stack 조건을 본다. Covering $\{T_i \rightarrow T\}$ 위의 $\mathcal{W}$의 descent datum은 각 성분에서 $\mathcal{X}, \mathcal{Y}$의 descent datum $(x_i, \varphi_{ij}^\mathcal{X})$, $(y_i, \varphi_{ij}^\mathcal{Y})$과, 두 겹 겹침에서 $\alpha_i$들이 호환되는 자료를 준다. $\mathcal{X}, \mathcal{Y}$이 stack이므로 $(x_i, \varphi_{ij}^\mathcal{X})$과 $(y_i, \varphi_{ij}^\mathcal{Y})$은 각각 $x\in \mathcal{X}(T)$, $y\in \mathcal{Y}(T)$으로 유일하게 붙는다. ([§Fibered category와 stack, ⁋정의 12](/ko/math/stacks/fibered_categories_and_stacks#def12)) 한편 isomorphism들 $\alpha_i: f(x)\vert_{T_i}\xrightarrow{\sim}g(y)\vert_{T_i}$은 $\mathcal{Z}$의 $\operatorname{\underline{Isom}}_T(f(x), g(y))$의 절단을 이루는데, $\mathcal{Z}$이 prestack이므로 이 presheaf가 sheaf이고 ([§Fibered category와 stack, ⁋정의 10](/ko/math/stacks/fibered_categories_and_stacks#def10)) 따라서 $\alpha_i$들이 유일한 $\alpha: f(x)\xrightarrow{\sim}g(y)$으로 붙는다. 그러므로 descent datum이 $(x, y, \alpha)\in \mathcal{W}(T)$으로 effective하게 붙고, $\mathcal{W}$은 stack이다.
 
-2-보편성은 자료 $(a, b, \beta)$로부터 $h(t)=(a(t), b(t), \beta_t)$으로 $h$를 정의하면 곧바로 확인되며, 다른 선택은 2-isomorphism을 제외하고 일치한다. ([§Fibered category와 stack, ⁋정의 8](/ko/math/stacks/fibered_categories_and_stacks#def8))
+2-보편성은 자료 $(a, b, \beta)$로부터 $h(t)=(a(t), b(t), \beta_t)$으로 $h$를 정의하면 곧바로 확인되며, 다른 선택은 2-isomorphism을 제외하고 일치한다. ([§Fibered category와 stack, ⁋정의 7](/ko/math/stacks/fibered_categories_and_stacks#def7))
 :::
 
 [명제 2](#prop2)에 의하여 stack의 2-범주는 2-fiber product를 가진다. 이후로 $\mathcal{X}\times_\mathcal{Z}\mathcal{Y}$을 단순히 stack의 *fiber product*라 부르고, 가환사각형이라 하면 언제나 2-isomorphism으로 채워진 것으로 이해한다. 특히 base $S$가 scheme(또는 종대상)이면 $\mathcal{X}\times_S \mathcal{Y}$은 곱 stack이며, 그 $T$-점은 $(x, y)\in \mathcal{X}(T)\times \mathcal{Y}(T)$ ($S$ 위에서의 호환은 자동)이다.
@@ -127,9 +127,9 @@ Algebraic stack $\mathcal{X}$에 대하여 다음 조건들이 동치임이 알�
 
 ## Quotient stack의 구성
 
-Algebraic stack의 가장 풍부한 원천은 algebraic group의 작용이다. Group $G$이 scheme $X$에 작용할 때, 순진한 quotient $X/G$은 흔히 scheme으로 존재하지 않거나 작용의 stabilizer 정보를 잃는다. 이를 stack 차원에서 올바르게 다루는 것이 quotient stack $[X/G]$이며, 그 점은 $X$로 가는 equivariant morphism으로 *비틀린* torsor들이다. 이는 분류 stack $\mathbf{B}G$을 $X$-값 자료로 확장한 것이다 ([§Fibered category와 stack, ⁋정의 18](/ko/math/stacks/fibered_categories_and_stacks#def18)).
+Algebraic stack의 가장 풍부한 원천은 algebraic group의 작용이다. Group $G$이 scheme $X$에 작용할 때, 순진한 quotient $X/G$은 흔히 scheme으로 존재하지 않거나 작용의 stabilizer 정보를 잃는다. 이를 stack 차원에서 올바르게 다루는 것이 quotient stack $[X/G]$이며, 그 점은 $X$로 가는 equivariant morphism으로 *비틀린* torsor들이다. 이는 분류 stack $\mathbf{B}G$을 $X$-값 자료로 확장한 것이다 ([§Fibered category와 stack, ⁋정의 16](/ko/math/stacks/fibered_categories_and_stacks#def16)).
 
-이하에서 $G$은 base scheme $S$ 위의 flat·분리 group scheme이고 ([\[스킴\] §군 스킴, ⁋정의 1](/ko/math/scheme_theory/group_schemes#def1)), $X$은 $S$-scheme으로서 $G$의 좌작용 $\sigma: G\times_S X \rightarrow X$을 받는다 하자. Torsor는 [§Fibered category와 stack, ⁋정의 18](/ko/math/stacks/fibered_categories_and_stacks#def18)의 좌작용 convention을 따른다.
+이하에서 $G$은 base scheme $S$ 위의 flat·분리 group scheme이고 ([\[스킴\] §군 스킴, ⁋정의 1](/ko/math/scheme_theory/group_schemes#def1)), $X$은 $S$-scheme으로서 $G$의 좌작용 $\sigma: G\times_S X \rightarrow X$을 받는다 하자. Torsor는 [§Fibered category와 stack, ⁋정의 16](/ko/math/stacks/fibered_categories_and_stacks#def16)의 좌작용 convention을 따른다.
 
 ::: 정의 8
 위의 자료에 대하여 *quotient stack<sub>몫 스택</sub>* $[X/G]$은 다음 CFG이다. $T\in \Sch/S$ 위의 대상은 쌍 $(P, \varphi)$로서
@@ -142,7 +142,7 @@ Algebraic stack의 가장 풍부한 원천은 algebraic group의 작용이다. G
 
 $[X/G]$의 한 점 $(P, \varphi)$은 "$T$ 위에서 $G$만큼 비틀린 채 $X$로 사상하는 자료"이다. Torsor $P$이 자명한 경우, 곧 $P=G\times_S T$(left translation action)인 경우 equivariant morphism $\varphi: G\times_S T \rightarrow X$은 $\varphi(g, t)=g\cdot \varphi(e, t)$으로 단위절단에서의 값 $a:=\varphi(e, -): T \rightarrow X$에 의해 완전히 결정된다. 즉 자명한 torsor 위의 자료는 단순히 $X$의 한 점 $a\in X(T)$과 같다. 이 관찰이 atlas의 출발점이다. 한편 $\mathbf{B}G$은 $X=S$이라 equivariant morphism이 유일하므로 $\mathbf{B}G(T)$은 정확히 $T$ 위의 $G$-torsor들의 groupoid이고, 그 automorphism은 $G(T)$이다. $\mathbf{B}G$이 고전적으로 위상공간의 classifying space $BG$이 맡던 역할, 곧 $G$-bundle을 분류하는 보편 대상의 역할을 대수기하에서 수행한다.
 
-[§Fibered category와 stack, ⁋정리 19](/ko/math/stacks/fibered_categories_and_stacks#thm19)에서 $\mathbf{B}\mathbb{G}_m$이 stack임을 line bundle 하강으로 보았듯, $[X/G]$이 stack임은 torsor와 equivariant morphism이 모두 fppf covering을 따라 하강한다는 사실에서 따른다. Torsor는 fppf-국소적으로 자명하고 그 descent datum이 effective하며, equivariant morphism은 $X$로의 morphism이므로 representable sheaf의 절단으로서 하강한다. 우리는 이 stack 성질을 전제하고 ([명제 2](#prop2)과 같은 성분별 하강 논증이 그대로 적용된다) 곧바로 대수성으로 나아간다. 먼저 atlas를 구성한다.
+[§Fibered category와 stack, ⁋정리 17](/ko/math/stacks/fibered_categories_and_stacks#thm17)에서 $\mathbf{B}\mathbb{G}_m$이 stack임을 line bundle 하강으로 보았듯, $[X/G]$이 stack임은 torsor와 equivariant morphism이 모두 fppf covering을 따라 하강한다는 사실에서 따른다. Torsor는 fppf-국소적으로 자명하고 그 descent datum이 effective하며, equivariant morphism은 $X$로의 morphism이므로 representable sheaf의 절단으로서 하강한다. 우리는 이 stack 성질을 전제하고 ([명제 2](#prop2)과 같은 성분별 하강 논증이 그대로 적용된다) 곧바로 대수성으로 나아간다. 먼저 atlas를 구성한다.
 
 ::: 명제 9
 Morphism $\pi: X \rightarrow [X/G]$을, $T$-점 $a\in X(T)$에 자명한 torsor와 그것이 결정하는 equivariant morphism을 대응시키는 것으로 정의하면, 곧
@@ -152,7 +152,7 @@ $$\pi(a)=\bigl(G\times_S T,\ \varphi_a\bigr),\qquad \varphi_a(g, t)=g\cdot a(t),
 이는 stack의 morphism이며 sheaf의 epimorphism, 곧 전사이다.
 :::
 ::: 증명
-$\pi$이 함자적임은 $a$의 base change가 자명 torsor의 base change와 호환됨에서 따른다. $\pi$이 전사임을 본다. 임의의 $(P, \varphi)\in [X/G](T)$에 대하여, $P$은 $G$-torsor이므로 fppf covering $\{T_i \rightarrow T\}$ 위에서 자명해진다. ([§Fibered category와 stack, ⁋정의 18](/ko/math/stacks/fibered_categories_and_stacks#def18)의 국소 비공 조건) 곧 각 $T_i$ 위에서 절단 $s_i\in P(T_i)$이 존재하여 $g\mapsto g\cdot s_i$이 $G\times_S T_i\xrightarrow{\sim}P\vert_{T_i}$을 준다. 이 trivialization 아래 $(P, \varphi)\vert_{T_i}$은 $a_i:=\varphi(s_i)\in X(T_i)$이 결정하는 $\pi(a_i)$과 동형이다. 따라서 $(P, \varphi)$은 covering $\{T_i \rightarrow T\}$ 위에서 $\pi$의 image에 국소적으로 들어가며, 이는 sheaf의 epimorphism의 정의 그대로이다. 그러므로 $\pi$은 전사이다.
+$\pi$이 함자적임은 $a$의 base change가 자명 torsor의 base change와 호환됨에서 따른다. $\pi$이 전사임을 본다. 임의의 $(P, \varphi)\in [X/G](T)$에 대하여, $P$은 $G$-torsor이므로 fppf covering $\{T_i \rightarrow T\}$ 위에서 자명해진다. ([§Fibered category와 stack, ⁋정의 16](/ko/math/stacks/fibered_categories_and_stacks#def16)의 국소 비공 조건) 곧 각 $T_i$ 위에서 절단 $s_i\in P(T_i)$이 존재하여 $g\mapsto g\cdot s_i$이 $G\times_S T_i\xrightarrow{\sim}P\vert_{T_i}$을 준다. 이 trivialization 아래 $(P, \varphi)\vert_{T_i}$은 $a_i:=\varphi(s_i)\in X(T_i)$이 결정하는 $\pi(a_i)$과 동형이다. 따라서 $(P, \varphi)$은 covering $\{T_i \rightarrow T\}$ 위에서 $\pi$의 image에 국소적으로 들어가며, 이는 sheaf의 epimorphism의 정의 그대로이다. 그러므로 $\pi$은 전사이다.
 :::
 
 [명제 9](#prop9)의 $\pi$이 atlas의 후보이다. 그것이 representable하고 smooth함을 보이려면 그 base change를 계산해야 하는데, 가장 중요한 것이 $\pi$ 자신을 따른 base change, 곧 $X\times_{[X/G]}X$이다. 이 계산이 quotient stack의 groupoid presentation을 드러낸다.
@@ -165,7 +165,7 @@ $$X\times_{[X/G]}X\cong G\times_S X$$
 이 있으며, 두 사영 $\operatorname{pr}_1, \operatorname{pr}_2: X\times_{[X/G]}X \rightarrow X$은 이 동형 아래 각각 작용 $\sigma:(g, x)\mapsto g\cdot x$과 사영 $(g, x)\mapsto x$에 대응한다. 따라서 $[X/G]$은 groupoid presentation $G\times_S X\rightrightarrows X$을 가진다.
 :::
 ::: 증명
-[정의 1](#def1)에 의해 $(X\times_{[X/G]}X)(T)$의 대상은 삼중쌍 $(a, b, \psi)$로서 $a, b\in X(T)$이고 $\psi:\pi(a)\xrightarrow{\sim}\pi(b)$은 $[X/G](T)$의 isomorphism이다. $\pi(a)=(G_T, \varphi_a)$, $\pi(b)=(G_T, \varphi_b)$ ($G_T=G\times_S T$)이므로 $\psi$은 자명 torsor $G_T$의 automorphism으로서 $\varphi_b\circ \psi=\varphi_a$을 만족하는 것이다. Left translation torsor $G_T$의 좌-equivariant automorphism은 정확히 right translation $\psi_g: h\mapsto hg$ ($g\in G(T)$)이며, 이로써 $\psi\leftrightarrow g\in G(T)$의 대응을 얻는다. ([§Fibered category와 stack, ⁋정의 18](/ko/math/stacks/fibered_categories_and_stacks#def18)) 조건 $\varphi_b\circ \psi_g=\varphi_a$은 모든 $(h, t)$에 대하여
+[정의 1](#def1)에 의해 $(X\times_{[X/G]}X)(T)$의 대상은 삼중쌍 $(a, b, \psi)$로서 $a, b\in X(T)$이고 $\psi:\pi(a)\xrightarrow{\sim}\pi(b)$은 $[X/G](T)$의 isomorphism이다. $\pi(a)=(G_T, \varphi_a)$, $\pi(b)=(G_T, \varphi_b)$ ($G_T=G\times_S T$)이므로 $\psi$은 자명 torsor $G_T$의 automorphism으로서 $\varphi_b\circ \psi=\varphi_a$을 만족하는 것이다. Left translation torsor $G_T$의 좌-equivariant automorphism은 정확히 right translation $\psi_g: h\mapsto hg$ ($g\in G(T)$)이며, 이로써 $\psi\leftrightarrow g\in G(T)$의 대응을 얻는다. ([§Fibered category와 stack, ⁋정의 16](/ko/math/stacks/fibered_categories_and_stacks#def16)) 조건 $\varphi_b\circ \psi_g=\varphi_a$은 모든 $(h, t)$에 대하여
 
 $$\varphi_b(hg, t)=hg\cdot b(t)\overset{!}{=}h\cdot a(t)=\varphi_a(h, t)$$
 
@@ -204,12 +204,12 @@ $$\operatorname{\underline{Isom}}_T((G_T, \varphi_a), (G_T, \varphi_{a'}))(T')=\
 
 ## 예시
 
-가장 기본적인 예는 $X=S$인 분류 stack이다. 이는 [§Fibered category와 stack, ⁋정의 18](/ko/math/stacks/fibered_categories_and_stacks#def18)에서 도입한 $\mathbf{B}G$이 사실 algebraic stack임을 [정리 11](#thm11)로 확인하는 것이다.
+가장 기본적인 예는 $X=S$인 분류 stack이다. 이는 [§Fibered category와 stack, ⁋정의 16](/ko/math/stacks/fibered_categories_and_stacks#def16)에서 도입한 $\mathbf{B}G$이 사실 algebraic stack임을 [정리 11](#thm11)로 확인하는 것이다.
 
 ::: 예시 12 ($\mathbf{B}\mathbb{G}_m$과 $\mathbf{B}(\mathbb{Z}/n)$)
 Base를 field $k$로 둔다.
 
-1. $\mathbf{B}\mathbb{G}_m=[\Spec k/\mathbb{G}_m]$은 algebraic stack이다. $\mathbb{G}_m$이 affine·smooth하므로 ([\[스킴\] §군 스킴, §§군 스킴](/ko/math/scheme_theory/group_schemes#군-스킴)) [정리 11](#thm11)이 적용되고, atlas는 $\Spec k \rightarrow \mathbf{B}\mathbb{G}_m$이며 그 base change는 $\mathbb{G}_m \rightrightarrows \Spec k$이다. $\mathbf{B}\mathbb{G}_m(T)$은 $T$ 위의 line bundle들의 groupoid이고 ([§Fibered category와 stack, ⁋정리 19](/ko/math/stacks/fibered_categories_and_stacks#thm19)), 한 점의 stabilizer는 $\mathbb{G}_m$이다. Stabilizer가 $1$차원이라 infinitesimal deformation을 가지므로 $\mathbf{B}\mathbb{G}_m$은 DM이 아닌 Artin stack이며, 그 차원은 $\dim \Spec k-\dim \mathbb{G}_m=0-1=-1$이다. 음의 차원은 stabilizer가 점보다 "더 큰" algebraic stack의 특징이다.
+1. $\mathbf{B}\mathbb{G}_m=[\Spec k/\mathbb{G}_m]$은 algebraic stack이다. $\mathbb{G}_m$이 affine·smooth하므로 ([\[스킴\] §군 스킴, §§군 스킴](/ko/math/scheme_theory/group_schemes#군-스킴)) [정리 11](#thm11)이 적용되고, atlas는 $\Spec k \rightarrow \mathbf{B}\mathbb{G}_m$이며 그 base change는 $\mathbb{G}_m \rightrightarrows \Spec k$이다. $\mathbf{B}\mathbb{G}_m(T)$은 $T$ 위의 line bundle들의 groupoid이고 ([§Fibered category와 stack, ⁋정리 17](/ko/math/stacks/fibered_categories_and_stacks#thm17)), 한 점의 stabilizer는 $\mathbb{G}_m$이다. Stabilizer가 $1$차원이라 infinitesimal deformation을 가지므로 $\mathbf{B}\mathbb{G}_m$은 DM이 아닌 Artin stack이며, 그 차원은 $\dim \Spec k-\dim \mathbb{G}_m=0-1=-1$이다. 음의 차원은 stabilizer가 점보다 "더 큰" algebraic stack의 특징이다.
 
 2. $\mathbb{Z}/n$을 상수 group scheme으로 볼 때 $\mathbf{B}(\mathbb{Z}/n)=[\Spec k/(\mathbb{Z}/n)]$은 DM stack이다. $\mathbb{Z}/n$은 유한 étale하므로 ([\[스킴\] §매끄러운 사상과 에탈 사상, ⁋예시 14](/ko/math/scheme_theory/smooth_and_etale_morphisms#ex14)에서 분리 확대가 étale함과 같은 이유로 상수군은 étale하다) atlas $\Spec k \rightarrow \mathbf{B}(\mathbb{Z}/n)$이 étale 전사이고 ([정리 11](#thm11)의 DM 판정), 그 base change는 $n$개의 점의 disjoint union $\mathbb{Z}/n\times \Spec k\rightrightarrows \Spec k$이다. $\mathbf{B}(\mathbb{Z}/n)(T)$은 $T$ 위의 $\mathbb{Z}/n$-torsor, 곧 degree $n$의 cyclic étale covering의 groupoid이며, 한 점의 stabilizer는 유한군 $\mathbb{Z}/n$이다. $\operatorname{char}k\nmid n$이면 $\mu_n$ 또한 유한 étale하여 $\mathbf{B}(\mathbb{Z}/n)$과 $\mathbf{B}\mu_n$이 모두 DM이지만, $\operatorname{char}k\mid n$이면 $\mu_n$이 비환원이 되어 $\mathbf{B}\mu_n$은 (DM이 아닌) Artin stack이 되는 반면 상수군 $\mathbf{B}(\mathbb{Z}/n)$은 여전히 DM이다. 이 분리가 characteristic $p$에서 étale·infinitesimal stabilizer의 차이를 드러낸다.
 :::
