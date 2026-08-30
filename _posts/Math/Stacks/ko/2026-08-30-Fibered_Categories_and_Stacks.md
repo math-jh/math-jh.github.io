@@ -55,50 +55,90 @@ Category $\mathcal{G}$가 *groupoid<sub>준군</sub>*라는 것은 $\mathcal{G}$
 3. 우리의 이야기 흐럼에서 자명한 예시로, 임의의 functor $F:\mathcal{C}^\op \rightarrow \Set$은 각 $T$에 discrete groupoid $F(T)$을 주는 특수한 경우이다. 즉, $\Set$-valued functor는 $\Grpd$-valued functor의 특수한 예시이다.
 :::
 
-특히 첫째 예시가 우리가 주로 살펴볼 대상이다. 일반적으로 $\Pic(T)$에서는 nontrivial line bundle $\mathcal{L}$이 있을 수 있지만, line bundle의 정의에 의하여 $\mathcal{L}$도 <em-ko>국소적으로는</em-ko> trivial line bundle과 isomorphic했다. [\[스킴\] §충실평탄하강, ⁋정리 11](/ko/math/scheme_theory/faithfully_flat_descent#thm11)에서 우리는 이러한 isomorphism까지도 함께 기록하여 nontrivial line bundle을 얻어냈어야 했으며, 이 단계에서부터 이미 isomorphism을 잊지 않고 기록하는 것이 중요했다. 
+특히 첫째 예시가 우리가 주로 살펴볼 대상이다. 일반적으로 $\Pic(T)$에는 nontrivial line bundle $\mathcal{L}$이 있을 수 있지만, line bundle의 정의에 의하여 $\mathcal{L}$은 <em-ko>국소적으로는</em-ko> trivial하다. [\[스킴\] §충실평탄하강, ⁋정리 11](/ko/math/scheme_theory/faithfully_flat_descent#thm11)에서 보았듯, covering 위의 local trivial line bundle들과 겹침 위에서 이들을 잇는 isomorphism들을 descent datum으로 주면 effective descent에 의하여 하나의 global line bundle이 얻어진다. [\[스킴\] §군 스킴, ⁋예시 15](/ko/math/scheme_theory/group_schemes#ex15)의 $\mathbb{G}_m$-torsor를 붙이는 transition data가 바로 이러한 isomorphism들이다. 따라서 국소적으로는 모두 trivial해 보이는 line bundle들을 구별하려면 이 isomorphism들을 잊지 않고 기록해야 한다.
 
 ## 유사함자
 
-Base category 위에서 변하는 groupoid를 적는 가장 직접적인 방법은 각 대상에 groupoid를, 각 morphism에 pullback functor를 대응시키는 것이다. 그러나 scheme의 pullback이 그렇듯, 두 morphism의 합성에 대한 pullback은 각 pullback의 합성과 *같지* 않고 단지 자연스럽게 *동형*일 뿐이다. 가령 $(g\circ f)^\ast \mathcal{L}$과 $f^\ast g^\ast \mathcal{L}$은 표준적인 동형을 가지지만 동일한 sheaf는 아니다. 이 동형들을 자료의 일부로 명시하고 그들이 정합적임을 요구하는 것이 pseudofunctor이다.
+한편 도입부에서 살펴봤던 principal $G$-bundle들의 moduli functor $F$를 생각하면, 이 functor가 내놓은 집합을 isomorphism class로 내려야 했던 직관적인 이유는 pullback 때문이었다. 이는 functor의 target을 $\Grpd$-valued로 올린다고 해결되는 일이 아니다. 따라서 우리는 $F$의 functoriality를 엄밀한 의미에서 얻기 위해서는 그 functoriality를 주는 pullback
+
+$$f^\ast=F(f): F(V)\rightarrow F(U)$$
+
+을 잘 정의해야 하며, 바꿔 말하면 각각의 $f: U\rightarrow V$와 $V$ 위의 대상이 주어졌을 때, 그 pullback representation을 일관적으로 골라주는 <em-ko>선택</em-ko>을 해 주어야 한다. 그리고, 이러한 선택을 어떻게 하든 두 morphism의 합성
+
+$$U\overset{f}{\longrightarrow}V\overset{g}{\longrightarrow}W$$
+
+에 대한 pullback은 이제 더 이상 두 pullback의 합성과 같지 <em-ko>않고</em-ko>, 오직 이 둘 사이의 isomorphism 
+
+$$\varepsilon_{f, g}: f^\ast g^\ast P \xRightarrow{\sim} (g\circ f)^\ast P$$
+
+이 존재하는 정도로 만족해야 한다. Pseudofunctor의 아이디어는 이들 모두를 자료로 받고, 이들이 모순없는 데이터를 정의하기를 요구하는 것이다. 
 
 ::: 정의 3
 Category $\mathcal{C}$ 위의 *pseudofunctor<sub>유사함자</sub>* $F:\mathcal{C}^\op \rightarrow \Grpd$는 다음 자료로 이루어진다.
 
-1. 각 대상 $U\in \mathcal{C}$에 groupoid $F(U)$,
-2. 각 morphism $f: U \rightarrow V$에 functor $f^\ast: F(V) \rightarrow F(U)$,
-3. 각 합성가능한 쌍 $U\xrightarrow{f}V\xrightarrow{g}W$에 natural isomorphism $\varepsilon_{f, g}: f^\ast\circ g^\ast \xRightarrow{\sim}(g\circ f)^\ast$, 그리고 각 대상 $U$에 natural isomorphism $\eta_U:\id_{F(U)}\xRightarrow{\sim}(\id_U)^\ast$.
+1. 각 대상 $U\in \mathcal{C}$에 대응되는 groupoid $F(U)$,
+2. 각 morphism $f: U \rightarrow V$마다 대응되는 functor $f^\ast: F(V) \rightarrow F(U)$,
+3. 각 합성가능한 쌍 $U\overset{f}{\longrightarrow}V\overset{g}{\longrightarrow}W$마다 정의된 natural isomorphism 
+    
+    $$\varepsilon_{f, g}: f^\ast\circ g^\ast \xRightarrow{\sim} (g\circ f)^\ast,$$
 
-이 자료는 다음 정합성 조건을 만족해야 한다. 세 morphism $U\xrightarrow{f}V\xrightarrow{g}W\xrightarrow{h}Z$에 대하여
+    그리고 각각의 대상 $U$마다 정의된 natural isomorphism
 
-$$\varepsilon_{f, h\circ g}\circ(\id_{f^\ast}\ast \varepsilon_{g, h})=\varepsilon_{g\circ f, h}\circ(\varepsilon_{f, g}\ast \id_{h^\ast})$$
+    $$\eta_U:\id_{F(U)}\xRightarrow{\sim}(\id_U)^\ast.$$
 
-이 성립하고 (결합 정합성), $\varepsilon_{\id, g}$와 $\varepsilon_{f, \id}$이 각각 $\eta$로 표현되는 unit 정합성이 성립한다.
+이들이 만족해야 하는 compatibility condition은 다음과 같다. 
+
+> 세 morphism $U\overset{f}{\longrightarrow}V\overset{g}{\longrightarrow}W\overset{h}{\longrightarrow}Z$에 대하여
+> 
+> $$\varepsilon_{f, h\circ g}\circ(\id_{f^\ast}\ast \varepsilon_{g, h})=\varepsilon_{g\circ f, h}\circ(\varepsilon_{f, g}\ast \id_{h^\ast})$$
+> 
+> 이 성립하고, 임의의 morphism $f: U\rightarrow V$에 대하여
+> 
+> $$\varepsilon_{f, \id_V}\circ(\id_{f^\ast}\ast \eta_V)=\id_{f^\ast},\qquad \varepsilon_{\id_U, f}\circ(\eta_U\ast \id_{f^\ast})=\id_{f^\ast}$$
+> 
+> 이 성립한다.
 :::
 
-여기에서 $\ast$은 natural transformation의 *수평 합성*이다. Functor $F, G:\mathcal{D} \rightarrow \mathcal{E}$과 $F', G':\mathcal{C} \rightarrow \mathcal{D}$, 그리고 natural transformation $\beta: F\Rightarrow G$, $\alpha: F'\Rightarrow G'$에 대하여 수평 합성 $\beta\ast \alpha: F\circ F'\Rightarrow G\circ G'$은 각 성분 $(\beta\ast \alpha)_C=G\alpha_C\circ \beta_{F'C}=\beta_{G'C}\circ F\alpha_C$ ($\beta$의 naturality로 두 합성이 일치한다)으로 정의되며, 한쪽이 항등 natural transformation이면 functor에 의한 whiskering으로 환원된다. 결합 정합성은 네 단계 합성의 두 가지 괄호 묶기에서 얻는 동형이 일치함을 요구하는 것으로, 위상수학의 homotopy 정합성과 같은 종류의 조건이다. 만일 모든 $\varepsilon_{f, g}$와 $\eta_U$이 항등사상이면 $F$는 통상적인 functor $\mathcal{C}^\op \rightarrow \Grpd$이 되며, 이 경우를 *strict* functor라 부른다.
+정의 3의 자료들과 조건들은 다음과 같이 다이어그램으로 시각화할 수 있다. 우선 조건 3의 natural isomorphism $\varepsilon_{f,g}$와 $\eta_U$는 각각 다음의 diagram이 나타내는 두 경로 사이의 2-morphism으로 나타난다.
 
-Strictification에 의해 모든 pseudofunctor를 strict functor와 naturally equivalent한 대상으로 바꿀 수 있지만, 기하학적 pullback은 합성과 equality가 아니라 canonical isomorphism으로 호환되므로 여기에서는 자연스럽게 주어지는 pseudo 구조를 유지한다.
+{% diagram Math/Stacks/Fibered_Categories_and_Stacks-1.svg width="29.13em" alt="합성 동형과 항등 동형" %}
+
+Compatibility에서 등장하는 $\ast$는 $2$-morphism들의 horizontal composition으로, 예를 들어 첫째 등식은 다음의 diagram
+
+{% diagram Math/Stacks/Fibered_Categories_and_Stacks-2.svg width="17.76em" alt="결합 정합성" %}
+
+이 commute함을 뜻하고, 둘째 등식은 다음의 diagram
+
+{% diagram Math/Stacks/Fibered_Categories_and_Stacks-3.svg width="25.28em" alt="단위 정합성" %}
+
+들이 각각 commute함을 뜻하는 것이다. 만일 모든 $\varepsilon_{f, g}$와 $\eta_U$이 항등사상이라면, $F$는 pseudofunctor에 그치지 않고  통상적인 functor $\mathcal{C}^\op \rightarrow \Grpd$이 되며, 이 경우를 *strict* functor라 부른다. 
+
+결국 정의는 다소 복잡하고 길지만 핵심적인 관찰은 위에서 살펴봤듯 각 $f: U\rightarrow V$와 대상마다 구체적인 pullback을 고르는 선택을 추가적인 데이터로 넣는다는 것이며, 이러한 선택은 *cleavage*라 부른다. 
 
 ## 준군값 올범주
 
-Pseudofunctor가 정합성 자료를 명시하는 데 비해, fibered category는 그것을 보편성 안에 숨긴다. 발상은 다음과 같다. 각 $U$ 위의 groupoid $F(U)$을 따로 두는 대신, 모든 $F(U)$의 대상을 한 category $\mathcal{F}$에 모으고, 각 대상이 어느 $U$ 위에 놓이는지를 functor $p:\mathcal{F} \rightarrow \mathcal{C}$로 기록한다. Pullback $f^\ast$은 $\mathcal{F}$ 안의 특별한 morphism, 곧 cartesian morphism으로 나타난다.
+Pseudofunctor는 우리에게 이미 친숙한 presheaf $\mathcal{C}^\op\rightarrow \Set$을 일반화하는 개념이라는 점에서 친숙하지만, 이를 본격적인 계산에 활용하려면 챙겨야 할 isomorphism만 벌써 두 종류가 있다. 이번 섹션에서 다룰 category fibered over groupoid는 본질적으로 이와 동등한 데이터를 담은 대상이지만, 위와 같이 isomorphism들의 선택을 하나하나 기억하는 대신 이를 Cartesian diagram 안에 숨겨둔다. 
+
+기본적인 아이디어는 다음과 같다. 앞서 우리는 각 대상 $U$마다 groupoid $F(U)$을 따로 두었는데, 이 대신 모든 $F(U)$의 대상을 하나의 category $\mathcal{F}$에 모은다. 여기에서 원래의 $F(U)$들을 복원하기 위해서는 각 대상이 어떤 $U$ 위에 놓이는지를 보는 projection functor $p: \mathcal{F}\rightarrow \mathcal{C}$가 필요하다. 이 관점의 핵심 아이디어는 pullback $f^\ast$가 $\mathcal{F}$에서의 *Cartesian morphism*으로 들어간다는 것으로, 이 Cartesian morphism의 universal property가 바로 위에서의 isomorphism의 선택을 숨겨두고 있는 데이터이다. 
 
 ::: 정의 4
-Functor $p:\mathcal{F} \rightarrow \mathcal{C}$가 주어졌다 하자. $\mathcal{F}$의 morphism $\varphi:\xi \rightarrow \eta$이 $f=p(\varphi): U \rightarrow V$ *위에 놓인다*고 하고, $\varphi$가 *cartesian<sub>데카르트</sub> 사상*이라는 것은 다음 보편성을 만족하는 것이다. $\mathcal{F}$의 임의의 대상 $\zeta$와 morphism $\psi:\zeta \rightarrow \eta$, 그리고 $p(\zeta)\xrightarrow{h}U$로서 $f\circ h=p(\psi)$인 임의의 $h$에 대하여, $p(\chi)=h$이고 $\varphi\circ \chi=\psi$인 morphism $\chi:\zeta \rightarrow \xi$이 유일하게 존재한다.
+Functor $p:\mathcal{F}\rightarrow \mathcal{C}$를 고정하자. $\mathcal{F}$의 morphism $\varphi: \xi\rightarrow \eta$가 $\mathcal{C}$의 morphism $f: U\rightarrow V$의 *lift*라는 것은 $p(\varphi)=f$인 것이다. 이 때 $f$의 lift $\varphi$가 *cartesian<sub>데카르트</sub> 사상* (혹은 *cartesian lift*)이라는 것은 다음의 universal property를 만족하는 것이다.
+
+> $\mathcal{F}$의 임의의 대상 $\zeta$와 morphism $\psi:\zeta \rightarrow \eta$, 그리고 $h: p(\zeta)\rightarrow U$가 $f\circ h=p(\psi)$를 만족할 때마다, $h$의 lift이자 $\varphi\circ \chi=\psi$를 만족하는 morphism $\chi:\zeta \rightarrow \xi$가 유일하게 존재한다.
 :::
 
-{% diagram Math/Stacks/Fibered_Categories_and_Stacks-1.svg width="7.32em" alt="cartesian morphism의 보편성" %}
+{% diagram Math/Stacks/Fibered_Categories_and_Stacks-4.svg width="9.46em" alt="cartesian morphism의 보편성" %}
 
 Cartesian morphism은 $\eta$의 $f$를 따른 "가장 효율적인 pullback"이다. 보편성은 $\eta$를 향한 모든 morphism이 $\varphi$를 유일하게 거쳐 인수분해됨을 말하므로, 그러한 $\xi$이 존재한다면 표준 동형을 제외하고 유일하다. 이 $\xi$을 $f^\ast \eta$로 적고 $\eta$의 $f$를 따른 *pullback*이라 부른다. 이제 모든 morphism이 이런 pullback으로 분해되고 각 fiber가 groupoid가 되도록 요구한다.
 
 ::: 정의 5
 Functor $p:\mathcal{F} \rightarrow \mathcal{C}$가 *category fibered in groupoids* (이하 *CFG*)라는 것은 다음 두 조건을 만족하는 것이다.
 
-1. (Lift 존재) 임의의 morphism $f: U \rightarrow V$와 $V$ 위의 대상 $\eta$에 대하여, $f$ 위에 놓이며 공역이 $\eta$인 cartesian morphism $\varphi:\xi \rightarrow \eta$이 존재한다.
+1. (Lift 존재) 임의의 morphism $f: U \rightarrow V$와 $V$ 위의 대상 $\eta$에 대하여, $f$의 lift이자 공역이 $\eta$인 cartesian morphism $\varphi:\xi \rightarrow \eta$이 존재한다.
 2. (모든 morphism이 cartesian) $\mathcal{F}$의 모든 morphism이 cartesian이다.
 :::
 
-이 정의는 다음의 보다 검사하기 쉬운 형태와 동치이다. $p:\mathcal{F} \rightarrow \mathcal{C}$이 CFG인 것은 (1) 위의 lift 존재 조건과, (2$'$) 임의의 두 morphism $\varphi:\xi \rightarrow \eta$, $\psi:\zeta \rightarrow \eta$과 $p(\zeta)\xrightarrow{h}p(\xi)$로서 $p(\varphi)\circ h=p(\psi)$인 것에 대하여 $p(\theta)=h$이고 $\varphi\circ \theta=\psi$인 $\theta:\zeta \rightarrow \xi$이 유일하게 존재하는 조건을 함께 만족하는 것이다. 조건 (2$'$)이 정확히 "모든 morphism이 cartesian"의 풀어쓴 형태이다. 한 대상 $U\in \mathcal{C}$에 대하여, $U$ 위에 놓인 대상들과 $\id_U$ 위에 놓인 morphism들로 이루어진 $\mathcal{F}$의 subcategory를 $U$ 위의 *fiber<sub>올</sub>* $\mathcal{F}(U)$ ($\mathcal{F}_U$로도 적는다)라 부른다.
+이 정의는 다음의 보다 검사하기 쉬운 형태와 동치이다. $p:\mathcal{F} \rightarrow \mathcal{C}$이 CFG인 것은 (1) 위의 lift 존재 조건과, (2$'$) 임의의 두 morphism $\varphi:\xi \rightarrow \eta$, $\psi:\zeta \rightarrow \eta$과 $h: p(\zeta)\rightarrow p(\xi)$로서 $p(\varphi)\circ h=p(\psi)$인 것에 대하여, $h$의 lift이자 $\varphi\circ \theta=\psi$를 만족하는 $\theta:\zeta \rightarrow \xi$이 유일하게 존재하는 조건을 함께 만족하는 것이다. 조건 (2$'$)이 정확히 "모든 morphism이 cartesian"의 풀어쓴 형태이다. 한 대상 $U\in \mathcal{C}$에 대하여, $U$ 위에 놓인 대상들과 $\id_U$의 lift인 morphism들로 이루어진 $\mathcal{F}$의 subcategory를 $U$ 위의 *fiber<sub>올</sub>* $\mathcal{F}(U)$ ($\mathcal{F}_U$로도 적는다)라 부른다.
 
 각 morphism $f:U\rightarrow V$와 대상 $\eta\in\mathcal{F}(V)$에 대하여 cartesian lift $f^\ast\eta\rightarrow\eta$을 하나씩 고르는 것을 *cleavage*라 부른다. Cleavage는 보편성에 의해 isomorphism까지 유일한 pullback들 가운데 실제 대표를 일관되게 골라 pullback functor를 정의하기 위한 선택이다.
 
