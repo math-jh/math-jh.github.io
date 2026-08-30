@@ -273,6 +273,10 @@ $$1\otimes n=\sum_k (1\otimes b_k)\Phi_N(m_k\otimes 1)=\sum_k (1\otimes b_k)(1\o
 이제 마지막으로 $u$가 실제로 descent datum의 isomorphism이라는 것은 $m\otimes b\otimes b'$에 두 합성을 적용하여 확인하면 되고, naturality 또한 약간의 계산을 통해 보일 수 있다.
 :::
 
+[정리 6](#thm6)의 categorical equivalence에는 논리적으로 서로 다른 두 주장이 들어 있다. Full faithfulness는 두 $A$-module $M,M'$이 이미 주어졌을 때, canonical descent datum 사이의 compatible한 $B$-module morphism $M\otimes_A B\rightarrow M'\otimes_A B$이 유일한 $A$-module morphism $M\rightarrow M'$으로부터 온다는 뜻이다. 여기서는 source와 target이 global하게 주어져 있고 그 사이의 morphism만 붙인다. 이것이 morphism에 대한 descent이다.
+
+Essential surjectivity에서는 global $A$-module이 미리 주어져 있지 않다. 임의의 descent datum $(N,\Phi_N)$으로부터 $A$-module $M$을 찾아 $(N,\Phi_N)\cong(M\otimes_A B,\sigma_M)$으로 나타내야 하며, 위 증명에서는 이 $M$을 $N^\Phi$로 구성했다. 이것이 대상에 대한 effective descent이다. Full faithfulness만으로 essential surjectivity가 따라오지는 않으므로, morphism을 붙일 수 있다는 사실만으로 대상을 붙일 수 있는 것은 아니다.
+
 이 정리의 직접적인 결과로, $A$-module $M$의 여러 성질을 $M$ 자신이 아니라 $B$ 위로 올린 $M\otimes_A B$에서 확인해도 된다. 가령 $M\otimes_A B$가 finitely generated $B$-module이면 $M$도 finitely generated이고, $M\otimes_A B$가 finitely presented이면 $M$도 finitely presented이며, $M\otimes_A B$가 flat이면 $M$ 역시 그러하다. 이들은 모두 해당 성질이 exact sequence로 표현되고 [명제 2](#prop2)가 그 exactness를 $A$ 위로 반영하기 때문이다.
 
 ::: 명제 7
