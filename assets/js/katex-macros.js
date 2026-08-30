@@ -163,7 +163,6 @@ window.KATEX_MACROS = {
     "\\nullity":"\\operatorname{nullity}",
     "\\Num":"\\operatorname{Num}",
     "\\obj":"\\operatorname{obj}",
-    "\\Op":"\\operatorname{Op}",
     "\\op":"\\mathrm{op}",
     "\\or":"\\mathrm{or}",
     "\\Or":"\\mathrm{Or}",
