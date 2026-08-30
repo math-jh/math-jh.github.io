@@ -2206,7 +2206,7 @@ C:
   ko: ''
   primary: en
   defs:
-  - label: '[스택] §Fibered category와 stack'
+  - label: '[스택] §스택'
     url: /ko/math/stacks/fibered_categories_and_stacks
 - id: category_of_elements
   en: category of elements
@@ -2603,7 +2603,7 @@ C:
   ko: 분류 스택
   primary: en
   defs:
-  - label: '[스택] §Fibered category와 stack'
+  - label: '[스택] §스택'
     url: /ko/math/stacks/fibered_categories_and_stacks
 - id: clebsch_gordan
   en: Clebsch–Gordan
@@ -4854,7 +4854,7 @@ D:
   defs:
   - label: '[스킴] §충실평탄하강'
     url: /ko/math/scheme_theory/faithfully_flat_descent
-  - label: '[스택] §Fibered category와 stack'
+  - label: '[스택] §스택'
     url: /ko/math/stacks/fibered_categories_and_stacks
 - id: determinant
   en: determinant
@@ -5201,7 +5201,7 @@ D:
   ko: 이산 준군
   primary: en
   defs:
-  - label: '[스택] §Fibered category와 stack'
+  - label: '[스택] §스택'
     url: /ko/math/stacks/fibered_categories_and_stacks
 - id: discrete_metric
   en: discrete metric
@@ -5571,7 +5571,7 @@ E:
     url: /ko/math/algebraic_varieties/divisors
   - label: '[토릭 기하학] §Delzant 구성'
     url: /ko/math/toric_geometry/delzant_construction
-  - label: '[스택] §Fibered category와 stack'
+  - label: '[스택] §스택'
     url: /ko/math/stacks/fibered_categories_and_stacks
 - id: effective_cartier_divisor
   en: effective Cartier divisor
@@ -6490,7 +6490,7 @@ F:
     url: /ko/math/algebraic_topology/fibrations
   - label: '[스킴] §올곱'
     url: /ko/math/scheme_theory/fiber_products
-  - label: '[스택] §Fibered category와 stack'
+  - label: '[스택] §스택'
     url: /ko/math/stacks/fibered_categories_and_stacks
   see:
   - label: Fiber bundle
@@ -6530,7 +6530,7 @@ F:
   ko: 섬유 범주
   primary: en
   defs:
-  - label: '[스택] §Fibered category와 stack'
+  - label: '[스택] §스택'
     url: /ko/math/stacks/fibered_categories_and_stacks
 - id: fibonacci_number
   en: Fibonacci number
@@ -9932,7 +9932,7 @@ I:
   ko: Isom 준층
   primary: en
   defs:
-  - label: '[스택] §Fibered category와 stack'
+  - label: '[스택] §스택'
     url: /ko/math/stacks/fibered_categories_and_stacks
 - id: isomorphic
   en: isomorphic
@@ -14523,7 +14523,7 @@ P:
   ko: 준스택
   primary: en
   defs:
-  - label: '[스택] §Fibered category와 stack'
+  - label: '[스택] §스택'
     url: /ko/math/stacks/fibered_categories_and_stacks
 - id: primary_decomposition
   en: primary decomposition
@@ -15010,7 +15010,7 @@ P:
   ko: 유사함자
   primary: en
   defs:
-  - label: '[스택] §Fibered category와 stack'
+  - label: '[스택] §스택'
     url: /ko/math/stacks/fibered_categories_and_stacks
 - id: pseudoholomorphic
   en: pseudoholomorphic
@@ -17828,7 +17828,7 @@ S:
   ko: 스택
   primary: en
   defs:
-  - label: '[스택] §Fibered category와 stack'
+  - label: '[스택] §스택'
     url: /ko/math/stacks/fibered_categories_and_stacks
 - id: stalk
   en: stalk
