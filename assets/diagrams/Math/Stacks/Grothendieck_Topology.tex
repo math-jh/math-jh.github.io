@@ -1,0 +1,19 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath, amsthm, amsfonts}
+\usepackage{tikz-cd, kotex}
+\usepackage{quiver}
+\usepackage{Operators}
+\usepackage{palette}
+\usepackage{diagram-style}
+\begin{document}
+
+%%FIG sheaf condition의 equalizer (Grothendieck_Topology-1.svg)
+\begin{tikzcd}
+F(U) \arrow[r, "e"] &
+{\displaystyle\prod_i F(U_i)}
+\arrow[r, shift left=.65ex, "p"]
+\arrow[r, shift right=.65ex, "q"'] &
+{\displaystyle\prod_{i,j}F(U_i\times_U U_j)}
+\end{tikzcd}
+
+\end{document}

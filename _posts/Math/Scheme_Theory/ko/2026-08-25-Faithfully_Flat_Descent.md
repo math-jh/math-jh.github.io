@@ -310,7 +310,7 @@ Fiber product를 가지는 category $\mathcal{C}$ 위의 *Grothendieck pretopolo
 3. $\{f_i: U_i \rightarrow U\}$가 covering이고 각 $i$마다 $\{g_{ij}: U_{ij} \rightarrow U_i\}_{j\in J_i}$가 covering이면, 합성이 주는 $\{f_i\circ g_{ij}: U_{ij} \rightarrow U\}_{i, j}$ 또한 covering이다.
 :::
 
-특히 $\Sch$는 fiber product를 가지므로 ([§올곱, ⁋정리 8](/ko/math/scheme_theory/fiber_products#thm8)) 이 정의를 적용할 수 있다. 위상공간의 open cover $\{U_i\}$를 inclusion들의 족 $\{U_i\hookrightarrow U\}$으로 읽으면 위의 세 조건이 성립하며, 이 때 $U_i\times_U V$는 교집합 $U_i\cap V$이다. 즉 세 조건은 자기 자신이 자기 자신을 덮는다는 것, covering을 제한한 것이 다시 covering이라는 것, covering의 covering이 covering이라는 것을 요구할 뿐이다. 우리가 쓸 topology는 faithfully flat이며 quasi-compact한 morphism을 covering으로 삼는 것으로, 그 이름 *fidèlement plat quasi-compact*를 줄여 fpqc topology라 부른다.
+특히 $\Sch$는 fiber product를 가지므로 ([§올곱, ⁋정리 8](/ko/math/scheme_theory/fiber_products#thm8)) 이 정의를 적용할 수 있다. 위상공간의 open cover $\{U_i\}$를 inclusion들의 족 $\{U_i\hookrightarrow U\}$으로 읽으면 위의 세 조건이 성립하며, 이 때 $U_i\times_U V$는 교집합 $U_i\cap V$이다. 즉 세 조건은 자기 자신이 자기 자신을 덮는다는 것, covering을 제한한 것이 다시 covering이라는 것, covering의 covering이 covering이라는 것을 요구할 뿐이다. 우리가 쓸 topology는 faithfully flat인 morphism들이 quasi-compact 조건을 만족하는 covering을 사용하는 것으로, 그 이름 *fidèlement plat quasi-compact*를 줄여 fpqc topology라 부른다.
 
 ::: 정의 9
 Scheme $X$ 위의 morphism들의 모임 $\{\psi_i: U_i \rightarrow X\}_{i\in I}$이 *fpqc cover<sub>fpqc 덮개</sub>*라는 것은, 각 $\psi_i$가 flat이고, $\coprod_i U_i \rightarrow X$가 surjective이며, 각 affine open $V\subseteq X$가 유한히 많은 $U_i$의 affine open들 $W_{ij}$의 image로 덮이는 quasi-compact 조건을 만족하는 것이다. 이러한 covering들이 정의하는 $\Sch$ 위의 Grothendieck topology를 *fpqc topology*이라 부른다.
