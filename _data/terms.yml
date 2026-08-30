@@ -511,6 +511,7 @@ A:
   en: algebraic geometry
   ko: 대수기하학
   primary: en
+  note: "'대수기하학에서'처럼 분야를 서술적으로 가리키는 표현에서는 한글 '대수기하학' 허용; 수학 용어명으로 쓸 때는 영어 'algebraic geometry' 사용"
   defs:
   - label: '[대수다양체] §아핀다양체'
     url: /ko/math/algebraic_varieties/affine_varieties
@@ -650,7 +651,7 @@ A:
   ko: 접합
   primary: en
   defs:
-  - label: '[스택] §Grothendieck 위상과 site'
+  - label: '[스택] §그로텐디크 위상'
     url: /ko/math/stacks/grothendieck_topology
 - id: amitsur_complex
   en: amitsur complex
@@ -2057,7 +2058,7 @@ C:
   ko: 표준 위상
   primary: en
   defs:
-  - label: '[스택] §Grothendieck 위상과 site'
+  - label: '[스택] §그로텐디크 위상'
     url: /ko/math/stacks/grothendieck_topology
 - id: cap_product
   en: cap product
@@ -2196,6 +2197,7 @@ C:
   en: category
   ko: 카테고리
   primary: en
+  note: "블로그의 분류 category를 뜻할 때는 한글 '카테고리' 허용; 수학적 category는 영어 'category' 사용"
   defs:
   - label: '[범주론] §범주'
     url: /ko/math/category_theory/categories
@@ -4172,7 +4174,7 @@ C:
   ko: 덮개족
   primary: en
   defs:
-  - label: '[스택] §Grothendieck 위상과 site'
+  - label: '[스택] §그로텐디크 위상'
     url: /ko/math/stacks/grothendieck_topology
 - id: covering_map
   en: covering map
@@ -4186,7 +4188,7 @@ C:
   ko: 덮개 체
   primary: en
   defs:
-  - label: '[스택] §Grothendieck 위상과 site'
+  - label: '[스택] §그로텐디크 위상'
     url: /ko/math/stacks/grothendieck_topology
 - id: covering_space
   en: covering space
@@ -7930,7 +7932,7 @@ G:
   ko: 그로텐디크 준위상
   primary: en
   defs:
-  - label: '[스택] §Grothendieck 위상과 site'
+  - label: '[스택] §그로텐디크 위상'
     url: /ko/math/stacks/grothendieck_topology
 - id: grothendieck_topology
   en: Grothendieck topology
@@ -7939,14 +7941,14 @@ G:
   defs:
   - label: '[스킴] §충실평탄하강'
     url: /ko/math/scheme_theory/faithfully_flat_descent
-  - label: '[스택] §Grothendieck 위상과 site'
+  - label: '[스택] §그로텐디크 위상'
     url: /ko/math/stacks/grothendieck_topology
 - id: grothendieck_topos
   en: Grothendieck topos
   ko: 그로텐디크 토포스
   primary: en
   defs:
-  - label: '[스택] §Grothendieck 위상과 site'
+  - label: '[스택] §그로텐디크 위상'
     url: /ko/math/stacks/grothendieck_topology
 - id: group
   en: group
@@ -11872,7 +11874,7 @@ M:
   ko: 정합족
   primary: en
   defs:
-  - label: '[스택] §Grothendieck 위상과 site'
+  - label: '[스택] §그로텐디크 위상'
     url: /ko/math/stacks/grothendieck_topology
 - id: mathematical_induction
   en: Mathematical induction
@@ -14223,7 +14225,7 @@ P:
   ko: plus 구성
   primary: en
   defs:
-  - label: '[스택] §Grothendieck 위상과 site'
+  - label: '[스택] §그로텐디크 위상'
     url: /ko/math/stacks/grothendieck_topology
 - id: poincaré_duality
   en: Poincaré duality
@@ -15039,7 +15041,7 @@ P:
   ko: 당김 체
   primary: en
   defs:
-  - label: '[스택] §Grothendieck 위상과 site'
+  - label: '[스택] §그로텐디크 위상'
     url: /ko/math/stacks/grothendieck_topology
 - id: purely_inseparable_extension
   en: purely inseparable extension
@@ -16083,7 +16085,7 @@ R:
   ko: 표현가능한 준층
   primary: en
   defs:
-  - label: '[스택] §Grothendieck 위상과 site'
+  - label: '[스택] §그로텐디크 위상'
     url: /ko/math/stacks/grothendieck_topology
 - id: representation
   en: representation
@@ -17010,7 +17012,7 @@ S:
   ko: 분리 준층
   primary: en
   defs:
-  - label: '[스택] §Grothendieck 위상과 site'
+  - label: '[스택] §그로텐디크 위상'
     url: /ko/math/stacks/grothendieck_topology
 - id: separation_axiom
   en: separation axiom
@@ -17128,7 +17130,7 @@ S:
   defs:
   - label: '[위상수학] §층'
     url: /ko/math/topology/sheaves
-  - label: '[스택] §Grothendieck 위상과 site'
+  - label: '[스택] §그로텐디크 위상'
     url: /ko/math/stacks/grothendieck_topology
   see:
   - label: Presheaf
@@ -17194,7 +17196,7 @@ S:
   ko: 체
   primary: ko
   defs:
-  - label: '[스택] §Grothendieck 위상과 site'
+  - label: '[스택] §그로텐디크 위상'
     url: /ko/math/stacks/grothendieck_topology
 - id: sieve_of_eratosthenes
   en: sieve of Eratosthenes
@@ -17469,7 +17471,7 @@ S:
   ko: 사이트
   primary: en
   defs:
-  - label: '[스택] §Grothendieck 위상과 site'
+  - label: '[스택] §그로텐디크 위상'
     url: /ko/math/stacks/grothendieck_topology
 - id: six-functor_formalism
   en: six-functor formalism
@@ -18074,7 +18076,7 @@ S:
   ko: 준표준
   primary: en
   defs:
-  - label: '[스택] §Grothendieck 위상과 site'
+  - label: '[스택] §그로텐디크 위상'
     url: /ko/math/stacks/grothendieck_topology
 - id: subcategory
   en: subcategory
