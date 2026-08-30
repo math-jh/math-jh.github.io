@@ -61,7 +61,7 @@ Stack의 morphism $f:\mathcal{X} \rightarrow \mathcal{Y}$이 *representable<sub>
 Representability의 target이 되는 algebraic space는 scheme보다 약간 넓은 부류로, scheme을 étale 동치관계로 나눈 quotient이다. Scheme의 fppf quotient가 항상 scheme이 되지는 않지만 étale 동치관계에 의한 quotient는 algebraic space의 범위 안에 머무르며, 이 부류는 scheme과 거의 같은 기하를 누리면서 하강에 대해 닫혀 있다.
 
 ::: 정의 4
-Site $(\Sch, \mathrm{\acute{e}t})$ ([§그로텐디크 위상, ⁋예시 9](/ko/math/stacks/grothendieck_topology#ex9)) 위의 sheaf $F:\Sch^\op \rightarrow \Set$이 *algebraic space<sub>대수적 공간</sub>*라는 것은 다음 두 조건을 만족하는 것이다.
+Site $(\Sch, \mathrm{\acute{e}t})$ ([§그로텐디크 위상, ⁋예시 8](/ko/math/stacks/grothendieck_topology#ex8)) 위의 sheaf $F:\Sch^\op \rightarrow \Set$이 *algebraic space<sub>대수적 공간</sub>*라는 것은 다음 두 조건을 만족하는 것이다.
 
 1. (representable 대각선) diagonal morphism $F \rightarrow F\times F$이 scheme에 의해 representable하다. 즉 임의의 scheme $T$과 $T \rightarrow F\times F$에 대하여 $F\times_{F\times F}T$이 scheme이다.
 2. (étale atlas) scheme $U$과 étale surjective morphism $U \rightarrow F$ (sheaf의 epimorphism이며 representable étale)이 존재한다.

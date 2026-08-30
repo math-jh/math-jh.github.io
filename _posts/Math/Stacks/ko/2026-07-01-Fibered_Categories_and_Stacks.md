@@ -163,11 +163,11 @@ Cocycle 조건은 세 겹 겹침 $U_{ijk}$ 위에서 세 동형 $\varphi_{ij}, \
 ::: 정의 13
 Site $(\mathcal{C}, \tau)$ 위의 CFG $p:\mathcal{F} \rightarrow \mathcal{C}$에 대하여,
 
-1. $\mathcal{F}$이 *prestack<sub>준스택</sub>*이라는 것은, 임의의 $U$과 $x, y\in \mathcal{F}(U)$에 대하여 presheaf $\operatorname{\underline{Isom}}_U(x, y)$이 $\mathcal{C}/U$ 위의 sheaf인 것이다. ([§그로텐디크 위상, ⁋정의 11](/ko/math/stacks/grothendieck_topology#def11))
+1. $\mathcal{F}$이 *prestack<sub>준스택</sub>*이라는 것은, 임의의 $U$과 $x, y\in \mathcal{F}(U)$에 대하여 presheaf $\operatorname{\underline{Isom}}_U(x, y)$이 $\mathcal{C}/U$ 위의 sheaf인 것이다. ([§그로텐디크 위상, ⁋정의 9](/ko/math/stacks/grothendieck_topology#def9))
 2. $\mathcal{F}$이 *stack<sub>스택</sub>*이라는 것은, $\mathcal{F}$이 prestack이고 동시에 임의의 covering family에 대한 모든 descent datum이 effective인 것이다.
 :::
 
-Prestack 조건은 "morphism이 붙는다"는 것이다. Covering $\{U_i \rightarrow U\}$ 위에서 정합적으로 주어진 isomorphism들 $x\vert_{U_i}\cong y\vert_{U_i}$이 두 겹 겹침에서 일치하면 $U$ 전체의 동형 $x\cong y$으로 유일하게 붙는다는 것이며, 이는 $\operatorname{\underline{Isom}}_U(x, y)$의 sheaf 조건에 다름 아니다. ([§그로텐디크 위상, ⁋명제 12](/ko/math/stacks/grothendieck_topology#prop12)) Stack 조건은 여기에 "대상이 붙는다", 곧 effective descent를 더한 것이다. 정의상 stack은 prestack이고, prestack은 다시 CFG이다. Faithfully flat descent 전체가 이 정의 한 줄로 요약된다. Prestack 조건은 morphism의 하강 (faithfully flat morphism을 따른 morphism의 유일성)이고, effectivity는 [\[스킴\] §충실평탄하강, ⁋정리 11](/ko/math/scheme_theory/faithfully_flat_descent#thm11)의 effective descent, 즉 대상의 하강이다.
+Prestack 조건은 "morphism이 붙는다"는 것이다. Covering $\{U_i \rightarrow U\}$ 위에서 정합적으로 주어진 isomorphism들 $x\vert_{U_i}\cong y\vert_{U_i}$이 두 겹 겹침에서 일치하면 $U$ 전체의 동형 $x\cong y$으로 유일하게 붙는다는 것이며, 이는 $\operatorname{\underline{Isom}}_U(x, y)$의 sheaf 조건에 다름 아니다. ([§그로텐디크 위상, ⁋명제 10](/ko/math/stacks/grothendieck_topology#prop10)) Stack 조건은 여기에 "대상이 붙는다", 곧 effective descent를 더한 것이다. 정의상 stack은 prestack이고, prestack은 다시 CFG이다. Faithfully flat descent 전체가 이 정의 한 줄로 요약된다. Prestack 조건은 morphism의 하강 (faithfully flat morphism을 따른 morphism의 유일성)이고, effectivity는 [\[스킴\] §충실평탄하강, ⁋정리 11](/ko/math/scheme_theory/faithfully_flat_descent#thm11)의 effective descent, 즉 대상의 하강이다.
 
 ::: 참고 14
 문헌마다 명칭이 갈린다. 우리의 prestack과 stack은 [Stacks]와 [Ols]의 용법을 따른 것으로, prestack은 $\operatorname{\underline{Isom}}$이 sheaf인 CFG, stack은 거기에 effective descent를 더한 것이다. 반면 [Vis]는 fibered category를 "prestack of categories", $\operatorname{\underline{Isom}}$이 sheaf인 것을 "prestack" (즉 우리의 prestack), effective descent까지 가지는 것을 "stack"이라 부르되, 우리가 prestack이라 부른 것을 별도로 "separated prestack"이라 칭하기도 한다. 이 글에서는 일관되게 [정의 13](#def13)의 용법을 사용한다.
@@ -179,12 +179,12 @@ Prestack 조건은 "morphism이 붙는다"는 것이다. Covering $\{U_i \righta
 CFG $p:\mathcal{F} \rightarrow \mathcal{C}$의 모든 fiber $\mathcal{F}(U)$이 이산 groupoid라 하자. 그럼 $\mathcal{F}$은 어떤 presheaf $F:\mathcal{C}^\op \rightarrow \Set$ ([정리 9](#thm9)을 통해 $F(U)=\obj \mathcal{F}(U)$)에 대응하며, 이 때 $\mathcal{F}$이 prestack인 것은 $F$이 separated presheaf인 것과, $\mathcal{F}$이 stack인 것은 $F$이 sheaf인 것과 동치이다.
 :::
 ::: 증명
-Fiber가 이산이므로 [정리 9](#thm9)의 pseudofunctor는 strict functor $F:\mathcal{C}^\op \rightarrow \Set$ ($\Set$을 이산 groupoid의 범주로 본 것)이다. 두 대상 $x, y\in \mathcal{F}(U)=F(U)$에 대하여 $\Hom_{\mathcal{F}(V)}(x\vert_V, y\vert_V)$은 $x\vert_V=y\vert_V$이면 한원소 집합, 아니면 공집합이다. 따라서 $\operatorname{\underline{Isom}}_U(x, y)$이 sheaf라는 것은, $x, y$이 한 covering의 각 $U_i$ 위에서 일치하면 (그리고 겹침 조건이 공허하게 성립하면) $U$ 위에서 일치한다는 것, 즉 $F$의 amalgamation 유일성 (separatedness)이다. ([§그로텐디크 위상, ⁋정의 11](/ko/math/stacks/grothendieck_topology#def11))
+Fiber가 이산이므로 [정리 9](#thm9)의 pseudofunctor는 strict functor $F:\mathcal{C}^\op \rightarrow \Set$ ($\Set$을 이산 groupoid의 범주로 본 것)이다. 두 대상 $x, y\in \mathcal{F}(U)=F(U)$에 대하여 $\Hom_{\mathcal{F}(V)}(x\vert_V, y\vert_V)$은 $x\vert_V=y\vert_V$이면 한원소 집합, 아니면 공집합이다. 따라서 $\operatorname{\underline{Isom}}_U(x, y)$이 sheaf라는 것은, $x, y$이 한 covering의 각 $U_i$ 위에서 일치하면 (그리고 겹침 조건이 공허하게 성립하면) $U$ 위에서 일치한다는 것, 즉 $F$의 amalgamation 유일성 (separatedness)이다. ([§그로텐디크 위상, ⁋정의 9](/ko/math/stacks/grothendieck_topology#def9))
 
-다음으로 effective descent를 본다. 이산 fiber에서 isomorphism $\varphi_{ij}$은 모두 항등사상일 수밖에 없으므로, descent datum은 단지 $x_i\vert_{U_{ij}}=x_j\vert_{U_{ij}}$을 만족하는 족 $(x_i)$, 곧 $F$의 matching family이다. 그 effectivity는 amalgamation $x\in F(U)$의 존재이다. 따라서 모든 descent datum이 effective인 것은 $F$의 모든 matching family가 amalgamation을 가지는 것이고, prestack 조건과 합하면 정확히 sheaf 조건이다. ([§그로텐디크 위상, ⁋명제 12](/ko/math/stacks/grothendieck_topology#prop12))
+다음으로 effective descent를 본다. 이산 fiber에서 isomorphism $\varphi_{ij}$은 모두 항등사상일 수밖에 없으므로, descent datum은 단지 $x_i\vert_{U_{ij}}=x_j\vert_{U_{ij}}$을 만족하는 족 $(x_i)$, 곧 $F$의 matching family이다. 그 effectivity는 amalgamation $x\in F(U)$의 존재이다. 따라서 모든 descent datum이 effective인 것은 $F$의 모든 matching family가 amalgamation을 가지는 것이고, prestack 조건과 합하면 정확히 sheaf 조건이다. ([§그로텐디크 위상, ⁋명제 10](/ko/math/stacks/grothendieck_topology#prop10))
 :::
 
-[명제 15](#prop15)에 의하여 sheaf of sets는 정확히 automorphism이 자명한 stack이다. Scheme $X$의 점함자 $h_X$은 fpqc sheaf이므로 ([§그로텐디크 위상, ⁋정리 18](/ko/math/stacks/grothendieck_topology#thm18)), [예시 10](#ex10)의 representable CFG $\mathcal{C}/X$은 stack이다. 즉 모든 scheme은 fpqc site 위의 stack으로 자리매김하며, stack 이론은 scheme과 sheaf의 세계를 automorphism을 가지는 대상까지 넓힌 것이다. 이 그림에서 [정의 13](#def13)의 prestack 조건은 representability 검증의 첫 단계 (functor가 sheaf인지)에 정확히 대응한다.
+[명제 15](#prop15)에 의하여 sheaf of sets는 정확히 automorphism이 자명한 stack이다. Scheme $X$의 점함자 $h_X$은 fpqc sheaf이므로 ([§그로텐디크 위상, ⁋정리 15](/ko/math/stacks/grothendieck_topology#thm15)), [예시 10](#ex10)의 representable CFG $\mathcal{C}/X$은 stack이다. 즉 모든 scheme은 fpqc site 위의 stack으로 자리매김하며, stack 이론은 scheme과 sheaf의 세계를 automorphism을 가지는 대상까지 넓힌 것이다. 이 그림에서 [정의 13](#def13)의 prestack 조건은 representability 검증의 첫 단계 (functor가 sheaf인지)에 정확히 대응한다.
 
 ## Stack의 예시
 
@@ -201,7 +201,7 @@ Prestack. $T=\Spec A$ 위의 두 quasi-coherent sheaf $\mathcal{F}, \mathcal{G}$
 Effectivity. Covering family $\{T_i \rightarrow T\}$ 위의 descent datum은 각 $T_i$ 위의 quasi-coherent sheaf $\mathcal{F}_i$과 $T_{ij}$ 위의 cocycle 동형 $\varphi_{ij}$의 자료이다. 이는 정확히 quasi-coherent sheaf의 descent datum이며, quasi-coherent sheaf가 fpqc 위상에 대하여 effective descent를 가지므로 ([\[스킴\] §충실평탄하강, ⁋정리 11](/ko/math/scheme_theory/faithfully_flat_descent#thm11)) $T$ 위의 quasi-coherent sheaf $\mathcal{F}$과 동형 $\mathcal{F}\vert_{T_i}\cong \mathcal{F}_i$으로 유일하게 붙는다. 따라서 모든 descent datum이 effective이고, prestack 조건과 합하여 $\mathcal{QC}$은 stack이다.
 :::
 
-[정리 16](#thm16)은 stack의 정의가 faithfully flat descent의 재포장임을 명시적으로 보여준다. Prestack 조건은 [\[스킴\] §충실평탄하강, ⁋정리 6](/ko/math/scheme_theory/faithfully_flat_descent#thm6)의 fully faithfulness로, effectivity는 essential surjectivity, 곧 [\[스킴\] §충실평탄하강, ⁋정리 11](/ko/math/scheme_theory/faithfully_flat_descent#thm11)의 effective descent로 각각 환원된다. ([\[범주론\] §자연변환, ⁋정리 5](/ko/math/category_theory/natural_transformations#thm5)) 모든 CFG가 stack인 것은 아니므로, prestack을 stack으로 보편적으로 보완하는 조작이 필요하다. 이것이 [§그로텐디크 위상, ⁋정리 15](/ko/math/stacks/grothendieck_topology#thm15)의 sheafification의 stack 판본인 stackification이다.
+[정리 16](#thm16)은 stack의 정의가 faithfully flat descent의 재포장임을 명시적으로 보여준다. Prestack 조건은 [\[스킴\] §충실평탄하강, ⁋정리 6](/ko/math/scheme_theory/faithfully_flat_descent#thm6)의 fully faithfulness로, effectivity는 essential surjectivity, 곧 [\[스킴\] §충실평탄하강, ⁋정리 11](/ko/math/scheme_theory/faithfully_flat_descent#thm11)의 effective descent로 각각 환원된다. ([\[범주론\] §자연변환, ⁋정리 5](/ko/math/category_theory/natural_transformations#thm5)) 모든 CFG가 stack인 것은 아니므로, prestack을 stack으로 보편적으로 보완하는 조작이 필요하다. 이것이 [§그로텐디크 위상, ⁋정리 13](/ko/math/stacks/grothendieck_topology#thm13)의 sheafification의 stack 판본인 stackification이다.
 
 ::: 정리 17 (stackification)
 Site $(\mathcal{C}, \tau)$ 위의 임의의 CFG $\mathcal{F}$에 대하여, stack $\mathcal{F}^a$과 morphism $\iota:\mathcal{F} \rightarrow \mathcal{F}^a$이 존재하여 다음 보편성을 가진다. 임의의 stack $\mathcal{G}$에 대하여 $\iota$와의 합성
@@ -213,12 +213,12 @@ $$\Hom(\mathcal{F}^a, \mathcal{G})\xrightarrow{\ \sim\ }\Hom(\mathcal{F}, \mathc
 ::: 증명
 구성은 sheafification의 plus construction을 두 단계로 적용하는 것과 평행하며, 전개가 길어 골자만 적는다. 자세한 논증은 [Stacks] 또는 [Vis]를 참조하라.
 
-먼저 $\mathcal{F}$을 prestack으로 만든다. 각 $\operatorname{\underline{Isom}}_U(x, y)$을 [§그로텐디크 위상, ⁋정리 15](/ko/math/stacks/grothendieck_topology#thm15)의 sheafification으로 대체하여 morphism이 붙도록 강제하면 prestack $\mathcal{F}^{\mathrm{pre}}$과 $\mathcal{F} \rightarrow \mathcal{F}^{\mathrm{pre}}$을 얻는다. 다음으로 effective descent를 보충한다. $\mathcal{F}^{\mathrm{pre}}$의 대상은 그대로 두되, 각 covering 위의 descent datum을 새로운 대상으로 형식적으로 추가하여 stack $\mathcal{F}^a$을 만든다. 구체적으로 $\mathcal{F}^a(U)$의 대상은 "$U$의 어떤 covering 위에서 정의된 $\mathcal{F}^{\mathrm{pre}}$의 descent datum"이고, 더 미세한 covering으로 옮겨 같아지는 것들을 동일시한다. Prestack 조건이 이 추가된 대상들 사이의 morphism이 잘 정의되고 cocycle을 통해 정합적임을 보장하며, 그 결과 $\mathcal{F}^a$의 모든 descent datum이 effective가 된다.
+먼저 $\mathcal{F}$을 prestack으로 만든다. 각 $\operatorname{\underline{Isom}}_U(x, y)$을 [§그로텐디크 위상, ⁋정리 13](/ko/math/stacks/grothendieck_topology#thm13)의 sheafification으로 대체하여 morphism이 붙도록 강제하면 prestack $\mathcal{F}^{\mathrm{pre}}$과 $\mathcal{F} \rightarrow \mathcal{F}^{\mathrm{pre}}$을 얻는다. 다음으로 effective descent를 보충한다. $\mathcal{F}^{\mathrm{pre}}$의 대상은 그대로 두되, 각 covering 위의 descent datum을 새로운 대상으로 형식적으로 추가하여 stack $\mathcal{F}^a$을 만든다. 구체적으로 $\mathcal{F}^a(U)$의 대상은 "$U$의 어떤 covering 위에서 정의된 $\mathcal{F}^{\mathrm{pre}}$의 descent datum"이고, 더 미세한 covering으로 옮겨 같아지는 것들을 동일시한다. Prestack 조건이 이 추가된 대상들 사이의 morphism이 잘 정의되고 cocycle을 통해 정합적임을 보장하며, 그 결과 $\mathcal{F}^a$의 모든 descent datum이 effective가 된다.
 
 보편성은 다음에서 따른다. $\mathcal{G}$이 stack이면 $\mathcal{G}$의 $\operatorname{\underline{Isom}}$이 이미 sheaf이므로 $\mathcal{F} \rightarrow \mathcal{G}$은 prestack 단계를 유일하게 (동치를 제외하고) 거치고, $\mathcal{G}$의 effectivity가 추가된 descent datum 대상들을 $\mathcal{G}$의 실제 대상으로 유일하게 보내므로 $\mathcal{F}^a \rightarrow \mathcal{G}$으로 유일하게 확장된다. 이것이 Hom 범주의 equivalence를 준다.
 :::
 
-[정리 17](#thm17)은 [§그로텐디크 위상, ⁋정리 15](/ko/math/stacks/grothendieck_topology#thm15)의 sheafification adjunction의 2-범주 판본이다. Sheafification이 presheaf를 sheaf로 보내는 left adjoint였듯, stackification은 CFG를 stack으로 보내는 2-범주적 reflection이다. 이 조작 덕분에 우리는 moduli 문제를 우선 CFG로 자유롭게 적은 뒤, 필요하면 stackify하여 하강이 성립하는 대상으로 바꿀 수 있다. 다음 예시가 그 전형이다.
+[정리 17](#thm17)은 [§그로텐디크 위상, ⁋정리 13](/ko/math/stacks/grothendieck_topology#thm13)의 sheafification adjunction의 2-범주 판본이다. Sheafification이 presheaf를 sheaf로 보내는 left adjoint였듯, stackification은 CFG를 stack으로 보내는 2-범주적 reflection이다. 이 조작 덕분에 우리는 moduli 문제를 우선 CFG로 자유롭게 적은 뒤, 필요하면 stackify하여 하강이 성립하는 대상으로 바꿀 수 있다. 다음 예시가 그 전형이다.
 
 이제 group이 작용하는 대상의 분류 stack을 구성한다. 그 기본 단위가 torsor이다. Site 위의 sheaf of group $G$ (즉 $\Sh(\mathcal{C}; \tau)$의 group object)에 대하여, $G$-torsor는 group bundle의 sheaf적 일반화이다.
 
