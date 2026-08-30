@@ -25,9 +25,7 @@ weight: 45
 
 ## .gitignore라는 공개 파일
 
-옛 `.gitignore` 판본에는 `_posts/Math/Gromov_Witten_Theory/`와 거울대칭 화이트리스트, `scripts/index-monitor/`, `reading-bot`와 `blogdev-bot`의 state 파일, `extract_terms.py`, `translation_state.json`, `audit-report.md`가 적혀 있었다. 파일 자체는 하나도 커밋되지 않았지만, 무시 규칙에 이름이 있다는 건 그런 것이 존재한다는 사실을 히스토리에 남긴다. 미발행 연구 스트림이 있다는 것, 색인 모니터와 여러 봇이 돈다는 것 정도는 `.gitignore` 한 파일의 diff를 훑는 것으로 알 수 있었다.
-
-`.claude/`도 비슷한 경우였다. 예전 purge에서 `CLAUDE.md`는 지웠지만 `.claude/settings.json`은 히스토리에 남아 있었다.
+옛 `.gitignore` 판본에는 사용자가 연구 스트림으로 쓰던 카테고리인 `_posts/Math/Gromov_Witten_Theory/`와 `_posts/Math/Mirror_Symmetry/` 등을 무시하라는 규칙과 `scripts/index-monitor/`, `reading-bot`와 `blogdev-bot`의 state 파일, `extract_terms.py`, `translation_state.json`, `audit-report.md`가 적혀 있었다. 파일 자체는 하나도 커밋되지 않았지만, 무시 규칙에 이름이 있다는 건 그런 것이 존재한다는 사실을 히스토리에 남기며, 이 사실만으로도 미발행 연구 스트림이 있다는 것, 색인 모니터와 여러 봇이 돈다는 것 정도는 `.gitignore` 한 파일의 diff를 훑는 것으로 알 수 있었다. 
 
 방향은 파일들의 주석에 적혀 있다. 공개 저장소에 남는 `.gitignore`에는 공개해도 무해한 일반 규칙만 두고, 로컬 전용 경로는 커밋되지 않는 `.git/info/exclude`로 옮긴다. 그러면 할 일이 둘로 갈린다. 현재 `.gitignore`를 새로 쓰는 것은 평범한 커밋 하나로 끝나지만, 이미 밀어 둔 옛 판본이 계속 흘리는 것은 히스토리를 다시 쓰지 않으면 멈추지 않는다. 뒤엣것을 두 스크립트가 맡는다.
 
