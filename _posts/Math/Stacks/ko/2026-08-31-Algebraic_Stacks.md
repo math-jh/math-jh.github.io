@@ -77,30 +77,22 @@ $$\alpha'\circ f(a)=g(b)\circ\alpha$$
 
 사영 $(x,y,\alpha)\mapsto T$과 $(a,b)\mapsto h$은 functor $\mathcal{X}\times_\mathcal{Z}\mathcal{Y}\rightarrow\mathcal{C}$를 정의한다. $\mathcal{X}$와 $\mathcal{Y}$에서 cartesian lift들을 성분별로 고르면 $\alpha$는 위의 compatibility condition에 의해 함께 pullback되므로, 이 사영은 $\mathcal{X}\times_\mathcal{Z}\mathcal{Y}$을 CFG로 만든다.
 
-이 CFG에는 두 사영 functor $\operatorname{pr}_\mathcal{X}:(x,y,\alpha)\mapsto x$과 $\operatorname{pr}_\mathcal{Y}:(x,y,\alpha)\mapsto y$, 그리고 $\alpha$가 주는 natural isomorphism $f\circ\operatorname{pr}_\mathcal{X}\cong g\circ\operatorname{pr}_\mathcal{Y}$이 있다. 임의의 CFG $\mathcal{T}$에 대하여 morphism $\mathcal{T}\rightarrow\mathcal{X}\times_\mathcal{Z}\mathcal{Y}$을 주는 것은 morphism $a:\mathcal{T}\rightarrow\mathcal{X}$, $b:\mathcal{T}\rightarrow\mathcal{Y}$와 2-isomorphism $\beta:f\circ a\cong g\circ b$을 주는 것과 동치이다. 이것이 2-fiber product의 2-범주적 universal property이다.
+이 CFG에는 두 사영 functor $\pr_\mathcal{X}:(x,y,\alpha)\mapsto x$과 $\pr_\mathcal{Y}:(x,y,\alpha)\mapsto y$, 그리고 $\alpha$가 주는 natural isomorphism $f\circ\pr_\mathcal{X}\cong g\circ\pr_\mathcal{Y}$이 있다. 임의의 CFG $\mathcal{T}$에 대하여 morphism $\mathcal{T}\rightarrow\mathcal{X}\times_\mathcal{Z}\mathcal{Y}$을 주는 것은 morphism $a:\mathcal{T}\rightarrow\mathcal{X}$, $b:\mathcal{T}\rightarrow\mathcal{Y}$와 2-isomorphism $\beta:f\circ a\cong g\circ b$을 주는 것과 동치이다. 이것이 2-fiber product의 2-categorical universal property이다.
+
+위의 정의는 CFG로서의 2-fiber product를 선언한 것에 불과하므로, stack의 2-범주 안에서 이것이 실제로 존재함을 보이려면 별도의 논증이 필요하다. 이는 각 성분의 descent datum을 붙임으로써 얻어진다.
 
 ::: 명제 2
 Site $(\mathcal{C},\tau)$ 위의 stack morphism $f:\mathcal{X}\rightarrow\mathcal{Z}$과 $g:\mathcal{Y}\rightarrow\mathcal{Z}$에 대하여, 2-fiber product $\mathcal{X}\times_\mathcal{Z}\mathcal{Y}$은 stack이다.
 :::
 
-이는 covering $\{T_i \rightarrow T\}$ 위의 descent datum이 $\mathcal{X}, \mathcal{Y}$의 descent datum과 $\mathcal{Z}$의 isomorphism presheaf $\operatorname{\underline{Isom}}$의 절단으로 분해되어, 각 stack 성질로부터 유일하게 붙는다는 사실에서 성분별로 따라온다. ([§스택, ⁋정의 10, 12](/ko/math/stacks/fibered_categories_and_stacks#def10))
+이후로 $\mathcal{X}\times_\mathcal{Z}\mathcal{Y}$을 단순히 stack의 *fiber product*라 부르며, stack들 사이의 commutative diagram은 항상 $2$-isomorphism으로 채워진 것으로 이해한다.
 
-[명제 2](#prop2)에 의하여 stack의 2-범주는 2-fiber product를 가진다. 이후로 $\mathcal{X}\times_\mathcal{Z}\mathcal{Y}$을 단순히 stack의 *fiber product*라 부르고, 가환사각형이라 하면 언제나 2-isomorphism으로 채워진 것으로 이해한다. 특히 base $S$가 scheme(또는 종대상)이면 $\mathcal{X}\times_S \mathcal{Y}$은 곱 stack이며, 그 $T$-점은 $(x, y)\in \mathcal{X}(T)\times \mathcal{Y}(T)$ ($S$ 위에서의 호환은 자동)이다.
+## 대수적 공간
 
-## 표현가능 사상과 대수적 공간
-
-Stack을 기하학적으로 만드는 첫 단계는 그 morphism 가운데 "scheme적인" 것을 가려내는 일이다. Morphism $f:\mathcal{X} \rightarrow \mathcal{Y}$이 representable하다는 것은, $\mathcal{Y}$의 임의의 scheme 값 점을 따라 $f$를 base change하면 통상적인 기하학적 대상이 나온다는 뜻이다.
+Stack에 익숙한 대수기하적 통제를 부여하기 위해서 우리가 택하는 전략은, stack의 morphism을 scheme 값 점을 따라 base change한 뒤 그 결과에 scheme 이론의 성질을 요구하는 것이다. 즉 $f:\mathcal{X}\rightarrow\mathcal{Y}$에 대하여, 임의의 scheme $T$와 morphism $T\rightarrow\mathcal{Y}$를 따른 base change $\mathcal{X}\times_\mathcal{Y}T\rightarrow T$가 성질 $P$를 가지면 $f$가 성질 $P$를 가진다고 정의할 것이다. 이때 base change의 source로 scheme만을 허용하면 범위가 지나치게 좁다. Scheme의 fppf quotient는 다시 scheme이 아닐 수 있고, 국소적으로 scheme인 대상도 하강시킨 뒤에는 scheme의 범위를 벗어날 수 있기 때문이다. 이를 보완하는 algebraic space는 scheme보다 약간 넓은 부류로서, scheme을 étale 동치관계로 나눈 quotient를 포함하고 하강에 대해 닫혀 있다. 따라서 이 전략을 정식화하기 전에 algebraic space를 먼저 정의한다.
 
 ::: 정의 3
-Stack의 morphism $f:\mathcal{X} \rightarrow \mathcal{Y}$이 *representable<sub>표현가능</sub>*하다는 것은, 임의의 scheme $T$과 morphism $T \rightarrow \mathcal{Y}$ (즉 $y\in \mathcal{Y}(T)$)에 대하여 fiber product $\mathcal{X}\times_\mathcal{Y}T$이 algebraic space인 것이다 ([정의 4](#def4)). Scheme(또는 algebraic space)의 morphism에 대한 성질 $P$가 base change에 대하여 안정적이고 target에 대하여 fppf-국소적일 때, representable morphism $f$이 *성질 $P$을 가진다*는 것은 모든 그러한 base change $\mathcal{X}\times_\mathcal{Y}T \rightarrow T$이 algebraic space의 morphism으로서 $P$을 만족하는 것이다.
-:::
-
-이 정의는 $f$의 기하학적 성질(매끄러움, étale, flat, 전사, 분리, 유한 등)을 전부 algebraic space의 morphism에 대한 통상적 성질로 환원한다. 가령 representable morphism $f$이 *smooth surjective*라는 것은 모든 base change $\mathcal{X}\times_\mathcal{Y}T \rightarrow T$이 smooth하고 전사인 것이다. ([\[스킴\] §매끄러운 사상과 에탈 사상, ⁋정의 1](/ko/math/scheme_theory/smooth_and_etale_morphisms#def1)) Target에 대한 fppf-국소성 덕분에, 뒤에서 보듯 이러한 성질은 단 하나의 좋은 base change(atlas를 따른 것)에서 검사해도 충분하다.
-
-Representability의 target이 되는 algebraic space는 scheme보다 약간 넓은 부류로, scheme을 étale 동치관계로 나눈 quotient이다. Scheme의 fppf quotient가 항상 scheme이 되지는 않지만 étale 동치관계에 의한 quotient는 algebraic space의 범위 안에 머무르며, 이 부류는 scheme과 거의 같은 기하를 누리면서 하강에 대해 닫혀 있다.
-
-::: 정의 4
-Site $(\Sch, \mathrm{\acute{e}t})$ ([§그로텐디크 위상, ⁋예시 8](/ko/math/stacks/grothendieck_topology#ex8)) 위의 sheaf $F:\Sch^\op \rightarrow \Set$이 *algebraic space<sub>대수적 공간</sub>*라는 것은 다음 두 조건을 만족하는 것이다.
+Site $(\Sch, \et)$ ([§그로텐디크 위상, ⁋예시 8](/ko/math/stacks/grothendieck_topology#ex8)) 위의 sheaf $F:\Sch^\op \rightarrow \Set$이 *algebraic space<sub>대수적 공간</sub>*라는 것은 다음 두 조건을 만족하는 것이다.
 
 1. (representable 대각선) diagonal morphism $F \rightarrow F\times F$이 scheme에 의해 representable하다. 즉 임의의 scheme $T$과 $T \rightarrow F\times F$에 대하여 $F\times_{F\times F}T$이 scheme이다.
 2. (étale atlas) scheme $U$과 étale surjective morphism $U \rightarrow F$ (sheaf의 epimorphism이며 representable étale)이 존재한다.
@@ -108,23 +100,31 @@ Site $(\Sch, \mathrm{\acute{e}t})$ ([§그로텐디크 위상, ⁋예시 8](/ko/
 
 조건 1은 두 점의 일치 궤적 $U\times_F U\subseteq U\times U$이 scheme임을 보장하며, 이로써 algebraic space는 정확히 scheme $U$을 étale 동치관계 $R=U\times_F U\rightrightarrows U$으로 나눈 quotient $U/R$으로 실현된다. 모든 scheme은 algebraic space이고($U=F$, 대각선이 locally closed embedding), 두 부류는 정규(normal) 또는 quasi-projective 등의 가정 아래 흔히 일치한다. 우리는 algebraic space를 대각선의 representability에서 "scheme보다 한 단계 약한 target"으로 사용할 뿐이며, 그 이론을 본격적으로 전개하지 않는다. 자세한 내용은 [Ols]나 [Stacks]를 참조하라. 이하에서 "representable"은 별도 언급이 없는 한 algebraic space에 의한 representability를 뜻한다.
 
-## 대각선의 표현가능성
+## 표현가능 사상
 
-Algebraic stack의 정의에서 대각선이 차지하는 위치를 이해하려면, 대각선의 base change가 무엇인지 먼저 계산해야 한다. Scheme에서 대각선 $\Delta:X \rightarrow X\times_S X$을 두 morphism $a, b: T \rightarrow X$을 따라 base change하면 둘이 일치하는 궤적 $\operatorname{Eq}(a, b)$이 나온다. Stack에서는 일치 대신 isomorphism을 기억하므로, 그 자리에 $\operatorname{\underline{Isom}}$이 등장한다.
+Algebraic space를 기하적 local model로 정했으므로, 이제 stack의 morphism 가운데 scheme의 morphism처럼 다룰 수 있는 것을 가려낼 수 있다. Morphism $f:\mathcal{X} \rightarrow \mathcal{Y}$이 representable하다는 것은, $\mathcal{Y}$의 임의의 scheme 값 점을 따라 $f$를 base change하면 algebraic space가 나온다는 뜻이다.
+
+::: 정의 4
+Stack의 morphism $f:\mathcal{X} \rightarrow \mathcal{Y}$이 *representable<sub>표현가능</sub>*하다는 것은, 임의의 scheme $T$과 morphism $T \rightarrow \mathcal{Y}$ (즉 $y\in \mathcal{Y}(T)$)에 대하여 fiber product $\mathcal{X}\times_\mathcal{Y}T$이 algebraic space인 것이다 ([정의 3](#def3)). Scheme(또는 algebraic space)의 morphism에 대한 성질 $P$가 base change에 대하여 안정적이고 target에 대하여 fppf-국소적일 때, representable morphism $f$이 *성질 $P$을 가진다*는 것은 모든 그러한 base change $\mathcal{X}\times_\mathcal{Y}T \rightarrow T$이 algebraic space의 morphism으로서 $P$을 만족하는 것이다.
+:::
+
+이 정의는 $f$의 기하학적 성질(매끄러움, étale, flat, 전사, 분리, 유한 등)을 전부 algebraic space의 morphism에 대한 통상적 성질로 환원한다. 가령 representable morphism $f$이 *smooth surjective*라는 것은 모든 base change $\mathcal{X}\times_\mathcal{Y}T \rightarrow T$이 smooth하고 전사인 것이다. ([\[스킴\] §매끄러운 사상과 에탈 사상, ⁋정의 1](/ko/math/scheme_theory/smooth_and_etale_morphisms#def1)) Target에 대한 fppf-국소성 덕분에, 뒤에서 보듯 이러한 성질은 단 하나의 좋은 base change(atlas를 따른 것)에서 검사해도 충분하다.
+
+Algebraic stack의 정의에서 특히 중요한 representable morphism은 대각선이다. 대각선의 base change가 무엇인지 계산하면 그 이유가 드러난다. Scheme에서 대각선 $\Delta:X \rightarrow X\times_S X$을 두 morphism $a, b: T \rightarrow X$을 따라 base change하면 둘이 일치하는 궤적 $\Eq(a, b)$이 나온다. Stack에서는 일치 대신 isomorphism을 기억하므로, 그 자리에 $\rIsom$이 등장한다.
 
 ::: 명제 5
 $\mathcal{X}$이 base scheme $S$ 위의 stack이라 하자. 다음이 성립한다.
 
 1. 임의의 scheme $T$과 $(x, y)\in \mathcal{X}(T)\times \mathcal{X}(T)$, 곧 morphism $(x, y): T \rightarrow \mathcal{X}\times_S \mathcal{X}$에 대하여, 대각선 $\Delta:\mathcal{X} \rightarrow \mathcal{X}\times_S \mathcal{X}$을 따른 base change에 natural isomorphism
 
-$$\mathcal{X}\times_{\mathcal{X}\times_S \mathcal{X}}T\cong \operatorname{\underline{Isom}}_T(x, y)$$
+$$\mathcal{X}\times_{\mathcal{X}\times_S \mathcal{X}}T\cong \rIsom_T(x, y)$$
 
-이 있다. 따라서 $\Delta$이 representable한 것은 모든 $\operatorname{\underline{Isom}}_T(x, y)$이 algebraic space에 의해 representable한 것과 동치이다.
+이 있다. 따라서 $\Delta$이 representable한 것은 모든 $\rIsom_T(x, y)$이 algebraic space에 의해 representable한 것과 동치이다.
 
 2. $\Delta$이 representable하면, scheme $T$로부터의 임의의 morphism $T \rightarrow \mathcal{X}$이 representable하다.
 :::
 ::: 증명
-(1) [정의 1](#def1)을 적용한다. $\mathcal{X}\times_{\mathcal{X}\times_S \mathcal{X}}T$의 $T'$-점은 $\xi\in \mathcal{X}(T')$, $T'$-점 $t: T' \rightarrow T$, 그리고 $\mathcal{X}\times_S \mathcal{X}$에서의 isomorphism $\Delta(\xi)=(\xi, \xi)\xrightarrow{\sim}(x, y)\vert_{T'}=(x\vert_{T'}, y\vert_{T'})$의 자료이다. 마지막 isomorphism은 두 성분의 isomorphism쌍 $\xi\xrightarrow{\sim}x\vert_{T'}$과 $\xi\xrightarrow{\sim}y\vert_{T'}$이며, 둘을 합성하면 $x\vert_{T'}\xrightarrow{\sim}y\vert_{T'}$, 곧 $\operatorname{\underline{Isom}}_T(x, y)(T'\xrightarrow{t}T)$의 원소를 얻는다. 역으로 그러한 isomorphism $\beta$이 주어지면 $\xi=x\vert_{T'}$과 쌍 $(\id, \beta)$을 취해 위 자료를 복원한다. 이 대응이 함자적이고 가역이므로 두 CFG가 동치이다. 따라서 $\Delta$의 모든 base change가 $\operatorname{\underline{Isom}}$이며, $\Delta$의 representability는 모든 $\operatorname{\underline{Isom}}_T(x, y)$의 representability와 같다.
+(1) [정의 1](#def1)을 적용한다. $\mathcal{X}\times_{\mathcal{X}\times_S \mathcal{X}}T$의 $T'$-점은 $\xi\in \mathcal{X}(T')$, $T'$-점 $t: T' \rightarrow T$, 그리고 $\mathcal{X}\times_S \mathcal{X}$에서의 isomorphism $\Delta(\xi)=(\xi, \xi)\xrightarrow{\sim}(x, y)\vert_{T'}=(x\vert_{T'}, y\vert_{T'})$의 자료이다. 마지막 isomorphism은 두 성분의 isomorphism쌍 $\xi\xrightarrow{\sim}x\vert_{T'}$과 $\xi\xrightarrow{\sim}y\vert_{T'}$이며, 둘을 합성하면 $x\vert_{T'}\xrightarrow{\sim}y\vert_{T'}$, 곧 $\rIsom_T(x, y)(T'\xrightarrow{t}T)$의 원소를 얻는다. 역으로 그러한 isomorphism $\beta$이 주어지면 $\xi=x\vert_{T'}$과 쌍 $(\id, \beta)$을 취해 위 자료를 복원한다. 이 대응이 함자적이고 가역이므로 두 CFG가 동치이다. 따라서 $\Delta$의 모든 base change가 $\rIsom$이며, $\Delta$의 representability는 모든 $\rIsom_T(x, y)$의 representability와 같다.
 
 (2) Morphism $T \rightarrow \mathcal{X}$과 임의의 scheme $T'$로부터의 morphism $T' \rightarrow \mathcal{X}$이 주어졌다 하자. $T\times_\mathcal{X}T'$이 algebraic space임을 보이면 된다. 곱 $T\times_S T' \rightarrow \mathcal{X}\times_S \mathcal{X}$을 두 점 $(x, y)$ (단, $x$은 $T \rightarrow \mathcal{X}$의 $T\times_S T'$로의 restriction, $y$은 $T'$ 쪽의 restriction)으로 보면, 표준적인 graph 동형
 
@@ -133,14 +133,14 @@ $$T\times_\mathcal{X}T'\cong(T\times_S T')\times_{\mathcal{X}\times_S \mathcal{X
 이 성립한다. 우변은 $\Delta$을 morphism $T\times_S T' \rightarrow \mathcal{X}\times_S \mathcal{X}$을 따라 base change한 것이고, $T\times_S T'$이 scheme이므로 (1)에 의해 representable, 곧 algebraic space이다. 따라서 $T\times_\mathcal{X}T'$이 algebraic space이고 $T \rightarrow \mathcal{X}$이 representable하다.
 :::
 
-[명제 5](#prop5)이 대각선 조건의 기하학적 의미를 밝힌다. 대각선이 representable하다는 것은 두 대상 $x, y$ 사이의 isomorphism들이 algebraic space를 이룬다는 것, 곧 두 점의 비교가 통상적인 기하의 범위에서 일어난다는 것이다. 특히 한 대상의 automorphism들 $\operatorname{\underline{Aut}}_T(x)=\operatorname{\underline{Isom}}_T(x, x)$이 $T$ 위의 group algebraic space가 되며, 이것이 stack의 점에 붙은 *stabilizer*(또는 *inertia*)이다. 둘째 항은 대각선이 representable하기만 하면 scheme(나아가 algebraic space)으로부터의 모든 morphism이 자동으로 representable함을 말한다. 따라서 다음 절에서 atlas $U \rightarrow \mathcal{X}$의 매끄러움·전사성을 논할 때 그 morphism이 representable함을 따로 요구할 필요가 없다.
+[명제 5](#prop5)이 대각선 조건의 기하학적 의미를 밝힌다. 대각선이 representable하다는 것은 두 대상 $x, y$ 사이의 isomorphism들이 algebraic space를 이룬다는 것, 곧 두 점의 비교가 통상적인 기하의 범위에서 일어난다는 것이다. 특히 한 대상의 automorphism들 $\rAut_T(x)=\rIsom_T(x, x)$이 $T$ 위의 group algebraic space가 되며, 이것이 stack의 점에 붙은 *stabilizer*(또는 *inertia*)이다. 둘째 항은 대각선이 representable하기만 하면 scheme(나아가 algebraic space)으로부터의 모든 morphism이 자동으로 representable함을 말한다. 따라서 다음 절에서 atlas $U \rightarrow \mathcal{X}$의 매끄러움·전사성을 논할 때 그 morphism이 representable함을 따로 요구할 필요가 없다.
 
 ## Algebraic stack과 Deligne–Mumford stack
 
 이제 기하학적 stack을 정의한다. 두 조건은 [명제 5](#prop5)에서 분석한 대각선의 representability와, scheme으로부터의 smooth surjective atlas의 존재이다.
 
 ::: 정의 6
-Site $(\Sch, \mathrm{fppf})$ 위의 stack $\mathcal{X}$ (base scheme $S$ 위)이 *algebraic stack* 또는 *Artin stack<sub>아틴 스택</sub>*이라는 것은 다음 두 조건을 만족하는 것이다.
+Site $(\Sch, \fppf)$ 위의 stack $\mathcal{X}$ (base scheme $S$ 위)이 *algebraic stack* 또는 *Artin stack<sub>아틴 스택</sub>*이라는 것은 다음 두 조건을 만족하는 것이다.
 
 1. (representable 대각선) 대각선 $\Delta:\mathcal{X} \rightarrow \mathcal{X}\times_S \mathcal{X}$이 algebraic space에 의해 representable하다.
 2. (smooth atlas) scheme $U$과 representable smooth surjective morphism $\pi: U \rightarrow \mathcal{X}$이 존재한다. 이 $\pi$을 $\mathcal{X}$의 *atlas<sub>아틀라스</sub>* (또는 *presentation*)라 부른다.
@@ -148,7 +148,7 @@ Site $(\Sch, \mathrm{fppf})$ 위의 stack $\mathcal{X}$ (base scheme $S$ 위)이
 나아가 $\mathcal{X}$이 *Deligne–Mumford stack<sub>들리뉴-멈퍼드 스택</sub>* (이하 *DM stack*)이라는 것은, 조건 2의 atlas $\pi: U \rightarrow \mathcal{X}$을 smooth 대신 *étale* 전사로 잡을 수 있는 것이다. ([\[스킴\] §매끄러운 사상과 에탈 사상, ⁋정의 11](/ko/math/scheme_theory/smooth_and_etale_morphisms#def11))
 :::
 
-조건 1에 의해 atlas morphism $\pi$은 자동으로 representable하므로 ([명제 5](#prop5)) 그 매끄러움·전사성이 [정의 3](#def3)의 의미로 잘 정의된다. Atlas는 scheme이 coordinate chart로 덮이는 것의 stack 판본으로, $\mathcal{X}$ 위의 기하학적 성질을 $U$ 위에서 검사하게 한다. 가령 $\mathcal{X}$의 차원은 $\dim \mathcal{X}=\dim U-d$ ($d$은 $\pi$의 relative dimension)로 정의되며, 이는 atlas의 선택에 의존하지 않는다. Smooth morphism이 flat하고 smooth fiber를 가지므로 smooth atlas는 stack을 "두꺼운" scheme으로 덮는 셈이고, 이때 fiber의 양의 차원에는 각 점에 붙은 stabilizer의 차원이 함께 담긴다.
+조건 1에 의해 atlas morphism $\pi$은 자동으로 representable하므로 ([명제 5](#prop5)) 그 매끄러움·전사성이 [정의 4](#def4)의 의미로 잘 정의된다. Atlas는 scheme이 coordinate chart로 덮이는 것의 stack 판본으로, $\mathcal{X}$ 위의 기하학적 성질을 $U$ 위에서 검사하게 한다. 가령 $\mathcal{X}$의 차원은 $\dim \mathcal{X}=\dim U-d$ ($d$은 $\pi$의 relative dimension)로 정의되며, 이는 atlas의 선택에 의존하지 않는다. Smooth morphism이 flat하고 smooth fiber를 가지므로 smooth atlas는 stack을 "두꺼운" scheme으로 덮는 셈이고, 이때 fiber의 양의 차원에는 각 점에 붙은 stabilizer의 차원이 함께 담긴다.
 
 DM stack과 Artin stack의 차이는 정확히 이 stabilizer가 양의 차원을 가질 수 있는지에 있다. Étale atlas는 relative dimension $0$의 atlas이므로, DM stack에서는 각 점의 automorphism group이 유한하고 infinitesimal deformation을 갖지 않는다.
 
@@ -156,7 +156,7 @@ DM stack과 Artin stack의 차이는 정확히 이 stabilizer가 양의 차원�
 
 1. $\mathcal{X}$이 DM stack이다.
 2. 대각선 $\Delta:\mathcal{X} \rightarrow \mathcal{X}\times_S \mathcal{X}$이 unramified하다. ([\[스킴\] §매끄러운 사상과 에탈 사상, ⁋정의 9](/ko/math/scheme_theory/smooth_and_etale_morphisms#def9))
-3. 모든 geometric point의 stabilizer group scheme $\operatorname{\underline{Aut}}$이 finite group scheme이자 unramified(곧 finite étale)하다.
+3. 모든 geometric point의 stabilizer group scheme $\rAut$이 finite group scheme이자 unramified(곧 finite étale)하다.
 
 특히 base가 characteristic $0$의 field이면, Cartier 정리에 의해 모든 finite type group scheme이 smooth하므로 조건 3은 *stabilizer가 finite group*이라는 친숙한 기하학적 조건으로 귀결된다. 반면 characteristic $p$에서는 stabilizer가 위상적으로 유한이어도 $\mu_p$처럼 infinitesimal deformation을 가지는 비환원 group scheme이 될 수 있어 DM이 아닌 Artin stack이 된다. 즉 DM stack은 본질적으로 "각 점의 stabilizer가 유한하고 이산적인" algebraic stack이다.
 
@@ -201,7 +201,7 @@ $\pi$이 함자적임은 $a$의 base change가 자명 torsor의 base change와 �
 
 $$X\times_{[X/G]}X\cong G\times_S X$$
 
-이 있으며, 두 사영 $\operatorname{pr}_1, \operatorname{pr}_2: X\times_{[X/G]}X \rightarrow X$은 이 동형 아래 각각 작용 $\sigma:(g, x)\mapsto g\cdot x$과 사영 $(g, x)\mapsto x$에 대응한다. 따라서 $[X/G]$은 groupoid presentation $G\times_S X\rightrightarrows X$을 가진다.
+이 있으며, 두 사영 $\pr_1, \pr_2: X\times_{[X/G]}X \rightarrow X$은 이 동형 아래 각각 작용 $\sigma:(g, x)\mapsto g\cdot x$과 사영 $(g, x)\mapsto x$에 대응한다. 따라서 $[X/G]$은 groupoid presentation $G\times_S X\rightrightarrows X$을 가진다.
 :::
 ::: 증명
 [정의 1](#def1)에 의해 $(X\times_{[X/G]}X)(T)$의 대상은 삼중쌍 $(a, b, \psi)$로서 $a, b\in X(T)$이고 $\psi:\pi(a)\xrightarrow{\sim}\pi(b)$은 $[X/G](T)$의 isomorphism이다. $\pi(a)=(G_T, \varphi_a)$, $\pi(b)=(G_T, \varphi_b)$ ($G_T=G\times_S T$)이므로 $\psi$은 자명 torsor $G_T$의 automorphism으로서 $\varphi_b\circ \psi=\varphi_a$을 만족하는 것이다. Left translation torsor $G_T$의 좌-equivariant automorphism은 정확히 right translation $\psi_g: h\mapsto hg$ ($g\in G(T)$)이며, 이로써 $\psi\leftrightarrow g\in G(T)$의 대응을 얻는다. ([§스택, ⁋정의 17](/ko/math/stacks/fibered_categories_and_stacks#def17)) 조건 $\varphi_b\circ \psi_g=\varphi_a$은 모든 $(h, t)$에 대하여
@@ -210,7 +210,7 @@ $$\varphi_b(hg, t)=hg\cdot b(t)\overset{!}{=}h\cdot a(t)=\varphi_a(h, t)$$
 
 을 요구하고, $h=e$을 대입하면 $g\cdot b(t)=a(t)$, 곧 $a=g\cdot b$(작용 $\sigma$의 의미)과 동치이다 (역으로 이 등식이면 모든 $h$에 대해 성립한다). 그러므로 $(a, b, \psi)$은 쌍 $(g, b)\in(G\times_S X)(T)$($a=g\cdot b$으로 결정됨)과 일대일로 대응하며, 이 대응은 $T$에 대해 함자적이고 morphism과 호환된다. 따라서 $X\times_{[X/G]}X\cong G\times_S X$이다.
 
-이 동형 아래 $\operatorname{pr}_2(a, b, \psi)=b$은 $(g, b)\mapsto b$, 곧 사영이고, $\operatorname{pr}_1(a, b, \psi)=a=g\cdot b$은 $(g, b)\mapsto g\cdot b$, 곧 작용 $\sigma$이다. 두 morphism $\sigma, \operatorname{pr}_2: G\times_S X\rightrightarrows X$이 $[X/G]$의 groupoid presentation을 이룬다.
+이 동형 아래 $\pr_2(a, b, \psi)=b$은 $(g, b)\mapsto b$, 곧 사영이고, $\pr_1(a, b, \psi)=a=g\cdot b$은 $(g, b)\mapsto g\cdot b$, 곧 작용 $\sigma$이다. 두 morphism $\sigma, \pr_2: G\times_S X\rightrightarrows X$이 $[X/G]$의 groupoid presentation을 이룬다.
 :::
 
 {% diagram Math/Stacks/Algebraic_Stacks-1.svg width="10.32em" alt="atlas의 base change" %}
@@ -226,7 +226,7 @@ $G$이 base scheme $S$ 위의 flat·분리·smooth group scheme이고 $X$이 $S$
 2. 모든 geometric point의 stabilizer가 유한·étale하면 (가령 $G$이 유한 étale하거나, characteristic $0$에서 작용이 finite stabilizer를 가지면) $[X/G]$은 DM stack이다.
 :::
 ::: 증명
-**대각선의 representability.** [명제 5](#prop5)에 의해 임의의 scheme $T$과 $(P, \varphi), (P', \varphi')\in [X/G](T)$에 대하여 $\operatorname{\underline{Isom}}_T((P, \varphi), (P', \varphi'))$이 representable함을 보이면 된다. $P, P'$이 자명해지는 fppf covering 위에서 이 sheaf는 $g\cdot a'=a$을 만족하는 $g\in G_T$들의 모임, 곧 사상 $(g\mapsto(g\cdot a', a)): G_T \rightarrow X\times_S X$과 $X$의 대각선 $X \rightarrow X\times_S X$의 fiber product이다. Scheme의 대각선이 항상 locally closed embedding이므로 그 base change인 $\operatorname{\underline{Isom}}$은 $G_T$의 locally closed subscheme으로 representable하다. $X$가 분리되어 있으면 $X$의 대각선이 closed embedding이므로 $\operatorname{\underline{Isom}}\rightarrow T$은 분리 사상이 된다.
+**대각선의 representability.** [명제 5](#prop5)에 의해 임의의 scheme $T$과 $(P, \varphi), (P', \varphi')\in [X/G](T)$에 대하여 $\rIsom_T((P, \varphi), (P', \varphi'))$이 representable함을 보이면 된다. $P, P'$이 자명해지는 fppf covering 위에서 이 sheaf는 $g\cdot a'=a$을 만족하는 $g\in G_T$들의 모임, 곧 사상 $(g\mapsto(g\cdot a', a)): G_T \rightarrow X\times_S X$과 $X$의 대각선 $X \rightarrow X\times_S X$의 fiber product이다. Scheme의 대각선이 항상 locally closed embedding이므로 그 base change인 $\rIsom$은 $G_T$의 locally closed subscheme으로 representable하다. $X$가 분리되어 있으면 $X$의 대각선이 closed embedding이므로 $\rIsom\rightarrow T$은 분리 사상이 된다.
 
 **smooth atlas.** [명제 8](#prop8)에 의해 $\pi: X \rightarrow [X/G]$은 전사이고 [명제 5](#prop5)에 의해 representable하다. 임의의 $T \rightarrow [X/G]$에 대한 base change $X\times_{[X/G]}T \rightarrow T$은 $P$가 자명해지는 fppf covering 위에서 [명제 9](#prop9)에 의해 사영 $(G\times_S X)\times_X T_i \rightarrow T_i$과 동형이다. $G$가 $S$ 위에서 smooth하므로 이 사영은 smooth 전사이고, 매끄러움과 전사성의 fppf-국소성에 의해 $\pi$은 smooth atlas이다. 이로써 $[X/G]$은 algebraic stack이다.
 
@@ -235,7 +235,7 @@ $G$이 base scheme $S$ 위의 flat·분리·smooth group scheme이고 $X$이 $S$
 
 [정리 10](#thm10)은 algebraic group의 작용이 자동으로 algebraic stack을 낳음을 보장한다. 대각선의 representability는 isomorphism 조건이 $G$ 안에서 subscheme으로 잘려 나옴에서, atlas의 매끄러움은 $\pi$의 base change가 사영 $G\times_S X \rightarrow X$이라는 점에서 따라온다. 이 두 사실은 모두 [명제 9](#prop9)의 groupoid presentation으로 환원된다.
 
-순진한 quotient와의 관계는 작용의 자유로움에 달려 있다. 만일 $G$이 $X$에 자유롭게(stabilizer가 자명하게) 작용하면 [명제 9](#prop9)의 $\operatorname{\underline{Isom}}$이 많아야 한원소가 되어 $[X/G]$의 대각선이 monomorphism이고, 이때 $[X/G]$은 fiber에 automorphism이 없는 stack, 곧 algebraic space가 되어 $G\times_S X\rightrightarrows X$의 (fppf) quotient인 *coarse quotient* $X/G$과 일치한다. 작용이 자유롭지 않으면 각 점에 stabilizer가 남아 $[X/G]$은 진정한 stack이 되며, 이때에도 점의 isomorphism class를 뭉갠 coarse moduli space $X/G$ (존재할 경우)로 가는 자연스러운 morphism $[X/G] \rightarrow X/G$이 있으나 이는 stabilizer 정보를 잃는다. 다음 절의 $[\mathbb{A}^1/\mathbb{G}_m]$이 이 손실을 선명히 보여준다.
+순진한 quotient와의 관계는 작용의 자유로움에 달려 있다. 만일 $G$이 $X$에 자유롭게(stabilizer가 자명하게) 작용하면 [명제 9](#prop9)의 $\rIsom$이 많아야 한원소가 되어 $[X/G]$의 대각선이 monomorphism이고, 이때 $[X/G]$은 fiber에 automorphism이 없는 stack, 곧 algebraic space가 되어 $G\times_S X\rightrightarrows X$의 (fppf) quotient인 *coarse quotient* $X/G$과 일치한다. 작용이 자유롭지 않으면 각 점에 stabilizer가 남아 $[X/G]$은 진정한 stack이 되며, 이때에도 점의 isomorphism class를 뭉갠 coarse moduli space $X/G$ (존재할 경우)로 가는 자연스러운 morphism $[X/G] \rightarrow X/G$이 있으나 이는 stabilizer 정보를 잃는다. 다음 절의 $[\mathbb{A}^1/\mathbb{G}_m]$이 이 손실을 선명히 보여준다.
 
 ## 예시
 
@@ -246,7 +246,7 @@ Base를 field $\mathbb{K}$로 둔다.
 
 1. $\mathbf{B}\mathbb{G}_m=[\Spec \mathbb{K}/\mathbb{G}_m]$은 algebraic stack이다. $\mathbb{G}_m$이 affine·smooth하므로 ([\[스킴\] §군 스킴, §§군 스킴](/ko/math/scheme_theory/group_schemes#군-스킴)) [정리 10](#thm10)이 적용되고, atlas는 $\Spec \mathbb{K} \rightarrow \mathbf{B}\mathbb{G}_m$이며 그 base change는 $\mathbb{G}_m \rightrightarrows \Spec \mathbb{K}$이다. $\mathbf{B}\mathbb{G}_m(T)$은 $T$ 위의 line bundle들의 groupoid이고 ([§스택, ⁋정리 18](/ko/math/stacks/fibered_categories_and_stacks#thm18)), 한 점의 stabilizer는 $\mathbb{G}_m$이다. Stabilizer가 $1$차원이라 infinitesimal deformation을 가지므로 $\mathbf{B}\mathbb{G}_m$은 DM이 아닌 Artin stack이며, 그 차원은 $\dim \Spec \mathbb{K}-\dim \mathbb{G}_m=0-1=-1$이다. 음의 차원은 stabilizer가 점보다 "더 큰" algebraic stack의 특징이다.
 
-2. $\mathbb{Z}/n$을 상수 group scheme으로 볼 때 $\mathbf{B}(\mathbb{Z}/n)=[\Spec \mathbb{K}/(\mathbb{Z}/n)]$은 DM stack이다. $\mathbb{Z}/n$은 유한 étale하므로 ([\[스킴\] §매끄러운 사상과 에탈 사상, ⁋예시 14](/ko/math/scheme_theory/smooth_and_etale_morphisms#ex14)에서 분리 확대가 étale함과 같은 이유로 상수군은 étale하다) atlas $\Spec \mathbb{K} \rightarrow \mathbf{B}(\mathbb{Z}/n)$이 étale 전사이고 ([정리 10](#thm10)의 DM 판정), 그 base change는 $n$개의 점의 disjoint union $\mathbb{Z}/n\times \Spec \mathbb{K}\rightrightarrows \Spec \mathbb{K}$이다. $\mathbf{B}(\mathbb{Z}/n)(T)$은 $T$ 위의 $\mathbb{Z}/n$-torsor, 곧 degree $n$의 cyclic étale covering의 groupoid이며, 한 점의 stabilizer는 finite group $\mathbb{Z}/n$이다. $\operatorname{char}\mathbb{K}\nmid n$이면 $\mu_n$ 또한 유한 étale하여 $\mathbf{B}(\mathbb{Z}/n)$과 $\mathbf{B}\mu_n$이 모두 DM이지만, $\operatorname{char}\mathbb{K}\mid n$이면 $\mu_n$이 비환원이 되어 $\mathbf{B}\mu_n$은 (DM이 아닌) Artin stack이 되는 반면 상수군 $\mathbf{B}(\mathbb{Z}/n)$은 여전히 DM이다. 이 분리가 characteristic $p$에서 étale·infinitesimal stabilizer의 차이를 드러낸다.
+2. $\mathbb{Z}/n$을 상수 group scheme으로 볼 때 $\mathbf{B}(\mathbb{Z}/n)=[\Spec \mathbb{K}/(\mathbb{Z}/n)]$은 DM stack이다. $\mathbb{Z}/n$은 유한 étale하므로 ([\[스킴\] §매끄러운 사상과 에탈 사상, ⁋예시 14](/ko/math/scheme_theory/smooth_and_etale_morphisms#ex14)에서 분리 확대가 étale함과 같은 이유로 상수군은 étale하다) atlas $\Spec \mathbb{K} \rightarrow \mathbf{B}(\mathbb{Z}/n)$이 étale 전사이고 ([정리 10](#thm10)의 DM 판정), 그 base change는 $n$개의 점의 disjoint union $\mathbb{Z}/n\times \Spec \mathbb{K}\rightrightarrows \Spec \mathbb{K}$이다. $\mathbf{B}(\mathbb{Z}/n)(T)$은 $T$ 위의 $\mathbb{Z}/n$-torsor, 곧 degree $n$의 cyclic étale covering의 groupoid이며, 한 점의 stabilizer는 finite group $\mathbb{Z}/n$이다. $\ch\mathbb{K}\nmid n$이면 $\mu_n$ 또한 유한 étale하여 $\mathbf{B}(\mathbb{Z}/n)$과 $\mathbf{B}\mu_n$이 모두 DM이지만, $\ch\mathbb{K}\mid n$이면 $\mu_n$이 비환원이 되어 $\mathbf{B}\mu_n$은 (DM이 아닌) Artin stack이 되는 반면 상수군 $\mathbf{B}(\mathbb{Z}/n)$은 여전히 DM이다. 이 분리가 characteristic $p$에서 étale·infinitesimal stabilizer의 차이를 드러낸다.
 :::
 
 다음은 stabilizer가 점마다 도약하는 작용의 표준적인 예로, coarse quotient가 잃어버리는 정보를 stack이 어떻게 보존하는지를 보여준다.
