@@ -13,4 +13,19 @@ G\times_S X \arrow[r, "\sigma"] \arrow[d, "\mathrm{pr}_2"'] \arrow[dr, phantom, 
 X \arrow[r, "\pi"'] & {[X/G]}
 \end{tikzcd}
 
+%%FIG 2-commutative triangle (Algebraic_Stacks-2.svg)
+\begin{tikzcd}[row sep=large, column sep=large]
+\mathcal{A} \arrow[rr, "r"] \arrow[dr, "p"'] & {} & \mathcal{C} \\
+& \mathcal{B} \arrow[ur, "q"'] &
+\arrow["\alpha"', Rightarrow, shorten <=5pt, shorten >=5pt, from=2-2, to=1-2]
+\end{tikzcd}
+
+%%FIG stack의 2-commutative cone (Algebraic_Stacks-3.svg)
+\begin{tikzcd}[row sep=huge, column sep=large]
+& \mathcal{X}(T) \arrow[dr, "f"] &[-5pt] \\
+\ast \arrow[ur, "x"] \arrow[dr, "y"'] & {} &[-5pt] \mathcal{Z}(T) \\
+& \mathcal{Y}(T) \arrow[ur, "g"'] &[-5pt]
+\arrow["\alpha", Rightarrow, shorten <=5pt, shorten >=5pt, from=1-2, to=3-2]
+\end{tikzcd}
+
 \end{document}

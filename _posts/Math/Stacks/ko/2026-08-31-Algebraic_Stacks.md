@@ -35,53 +35,52 @@ Stack의 descent 조건은 local data를 global 대상으로 붙일 수 있음�
 
 Stack의 기하를 논하기 위해 가장 먼저 필요한 것은 fiber product이다. Scheme에서도 base change에 대해 잘 행동하는 성질들을 좋은 기하학적 성질로 보았듯, stack 사이의 morphism에 대해서도 base change를 정의해야 한다. 문제는 $\Sch$ 혹은 $\Sch_{/S}$와는 달리, $\Stk$은 $2$-category이므로 이 위에서의 fiber product 또한 $2$-fiber product로 정의해야 한다는 것이다. 
 
-이를 위해 어떠한 데이터가 필요한지 살펴보자. 두 stack morphism $f: \mathcal{X}\rightarrow \mathcal{Z}$와 $g:\mathcal{Y}\rightarrow \mathcal{Z}$에 대하여, [\[스킴\] §점함자, ⁋명제 7](/ko/math/scheme_theory/functor_of_points#prop7)을 생각하면 stack morphism의 fiber product를 정의하기 위해서는 각 $T$마다 fiber product
+이를 위해 어떠한 데이터가 필요한지 살펴보자. 두 stack morphism $f: \mathcal{X}\rightarrow \mathcal{Z}$와 $g:\mathcal{Y}\rightarrow \mathcal{Z}$에 대하여, [\[스킴\] §점함자, ⁋명제 7](/ko/math/scheme_theory/functor_of_points#prop7)을 생각하면 stack morphism의 fiber product를 정의하기 위해서는 각 $T$마다 fiber product를
 
 $$\mathcal{X}(T)\times_{\mathcal{Z}(T)}\mathcal{Y}(T)$$
 
-를 정의하고 이를 descent로 붙이면 된다. Scheme에서의 fiber product를 정의할 때는 $X(T)\times_{Z(T)}Y(T)$를, <em-ko>집합</em-ko> $Z(T)$ 안에서 $f_T(x)=g_T(y)$를 만족하는 원소들로 잡았으나, 이제 $\mathcal{Z}(T)$가 groupoid인 이상 이 조건을 isomorphism으로 내려야 한다. 이는 [§스택, ⁋명제 6](/ko/math/stacks/fibered_categories_and_stacks#prop6) 직후에 살펴본 상황과 정확히 동일한 상황으로, 점 $x\in \mathcal{X}(T)$를 groupoid 사이의 functor $x:\ast\rightarrow \mathcal{X}(T)$로 본다면 $f_T(x)$와 $g_T(y)$는 두 groupoid 사이의 functor
+로 정의해주면 된다. Scheme에서의 fiber product를 정의할 때는 $X(T)\times_{Z(T)}Y(T)$를, <em-ko>집합</em-ko> $Z(T)$ 안에서 $f_T(x)=g_T(y)$를 만족하는 원소들로 잡았으나, 이제 $\mathcal{Z}(T)$가 groupoid인 이상 이 조건을 isomorphism으로 내려야 한다. 이는 [§스택, ⁋명제 6](/ko/math/stacks/fibered_categories_and_stacks#prop6) 직후에 살펴본 상황과 정확히 동일한 상황으로, 점 $x\in \mathcal{X}(T)$를 groupoid 사이의 functor $x:\ast\rightarrow \mathcal{X}(T)$로 본다면 $f_T(x)$와 $g_T(y)$는 두 groupoid 사이의 functor
 
 $$f(x),g(y): \ast\rightarrow \mathcal{Z}(T)$$
 
 가 되며, 이 두 functor 사이의 $2$-morphism이 $\mathcal{Z}(T)$ 안에서의 morphism, 더 정확히는, $\mathcal{Z}(T)$가 groupoid이므로 isomorphism $f(x)\rightarrow g(y)$로 번역된다. 
 
-일반적으로 $2$-category에서 commuting 조건을 생각할 때는 $2$-commutative 조건을 주로 생각한다. $2$-category에서의 diagram
+일반적으로 $2$-category에서 commuting 조건을 생각할 때는 $2$-commutative 조건을 주로 생각한다. 예를 들어 다음 triangle을 생각하자.
 
-(cone 그림)
+![2-commutative triangle](/assets/images/Math/Stacks/Algebraic_Stacks-2.svg){:style="width:12.05em" class="invert" .align-center}
 
-이 $2$-commutative하다는 것은 commuting diagram은 세 개의 $1$-morphism 뿐만 아니라 ?와 ?을 잇는 $2$-morphism $\alpha$에 대한 정보까지 포함하는 triple (식)으로 나오게 된다. 
+이 triangle이 $2$-commutative하다는 것은 세 $1$-morphism $p,q,r$와 함께 합성 $q\circ p$와 $r$을 잇는 invertible $2$-morphism
 
+$$\alpha:q\circ p\Rightarrow r$$
 
-Scheme의 fiber product에 대응하는 개념이 stack의 *2-fiber product*이다. ([\[스킴\] §올곱, ⁋정리 8](/ko/math/scheme_theory/fiber_products#thm8))
+가 지정되었다는 뜻이다. 따라서 이 diagram의 자료는 $(p,q,r,\alpha)$로 주어진다. 이를 지금의 상황에 적용하면 다음 diagram을 얻는다.
 
-Stack의 morphism $f:\mathcal{X}\rightarrow\mathcal{Z}$과 $g:\mathcal{Y}\rightarrow\mathcal{Z}$이 주어졌다고 하자. Scheme에서는 $x\in\mathcal{X}(T)$과 $y\in\mathcal{Y}(T)$에 대하여 $f(x)=g(y)$을 요구하면 충분하다. 그러나 stack에서는 $f(x)$와 $g(y)$도 groupoid $\mathcal{Z}(T)$의 대상이므로, 이 literal equality는 representative나 pseudofunctor의 presentation을 바꾸면 보존되지 않는다. 따라서 두 대상을 비교하는 intrinsic한 자료는 equality가 아니라 isomorphism
+![stack의 2-commutative cone](/assets/images/Math/Stacks/Algebraic_Stacks-3.svg){:style="width:14.89em" class="invert" .align-center}
 
-$$\alpha:f(x)\xrightarrow{\sim}g(y)$$
+그림 중앙의 $\alpha$는 $\mathcal{X}(T)$와 $\mathcal{Y}(T)$ 사이에 놓여 있으며, 두 경로가 주는 합성 $f\circ x,g\circ y:\ast\rightarrow\mathcal{Z}(T)$을 잇는 $2$-morphism을 나타낸다. 이를 위에서 살펴본 $\mathcal{Z}(T)$에서의 morphism의 언어로 옮겨오면, 이 cone의 자료는 triple
 
-이다. 이 $\alpha$는 pullback coherence와는 다른 새로운 자료로, 일반적으로 canonical하지도 않고 주어진 $x$와 $y$에 대해 존재하지 않을 수도 있으며, 존재하더라도 automorphism만큼 여러 개일 수 있다. 그러므로 단지 $f(x)$와 $g(y)$이 isomorphic하다고 요구해서는 충분하지 않고, 구체적인 $\alpha$까지 점의 자료로 기억해야 한다.
+$$(x,y,\alpha),\qquad \alpha:f(x)\xrightarrow{\sim}g(y)$$
 
-앞에서 살펴본 pseudonaturality는 이렇게 고른 $\alpha$를 base change할 때 사용된다. Morphism $u:T'\rightarrow T$을 따라 $(x,y,\alpha)$를 pullback하면 두 image 사이의 isomorphism은
-
-$$f(u^\ast x)\cong u^\ast f(x)\xrightarrow{u^\ast\alpha}u^\ast g(y)\cong g(u^\ast y)$$
-
-으로 운반된다. 즉 stack morphism의 coherence는 $\alpha$를 만들어 주는 것이 아니라, 새로 고른 $\alpha$가 base change와 호환되도록 옮겨 준다. 가령 base scheme $S$ 위의 group $G$에 대하여 trivial torsor가 주는 morphism $S\rightarrow\mathbf{B}G$를 두 번 취하면
-
-$$S\times_{\mathbf{B}G}S\cong G$$
-
-이며, 우변의 $G$은 두 trivial torsor 사이에서 가능한 $\alpha$들을 기록한다. 이것이 stack의 fiber product에서 equality 대신 isomorphism 자체를 자료로 넣어야 하는 이유이다.
+로 주어지는 것을 알 수 있다. 즉, $f(x)$에서 $g(y)$로의 isomorphism을 명시적으로 기억해주어야 한다. 따라서 다음과 같이 정의한다.
 
 ::: 정의 1
-Site $\mathcal{C}$ 위의 CFG들의 morphism $f:\mathcal{X} \rightarrow \mathcal{Z}$과 $g:\mathcal{Y} \rightarrow \mathcal{Z}$이 주어졌다 하자. 이들의 *2-fiber product<sub>2-올곱</sub>* $\mathcal{X}\times_\mathcal{Z}\mathcal{Y}$은 다음 CFG이다. $T\in \mathcal{C}$ 위의 대상은 삼중쌍 $(x, y, \alpha)$로서, $x\in \mathcal{X}(T)$, $y\in \mathcal{Y}(T)$이고
+Site $\mathcal{C}$ 위의 CFG들의 morphism $f:\mathcal{X}\rightarrow\mathcal{Z}$과 $g:\mathcal{Y}\rightarrow\mathcal{Z}$이 주어졌다 하자. 이들의 *2-fiber product<sub>2-올곱</sub>* $\mathcal{X}\times_\mathcal{Z}\mathcal{Y}$은 다음 category이다. 그 대상은 어떤 $T\in\mathcal{C}$에 대한 $x\in\mathcal{X}(T)$, $y\in\mathcal{Y}(T)$와 $\mathcal{Z}(T)$의 isomorphism
 
 $$\alpha: f(x)\xrightarrow{\ \sim\ }g(y)$$
 
-이 $\mathcal{Z}(T)$의 isomorphism인 것이다. $(x, y, \alpha)$에서 $(x', y', \alpha')$로의 morphism은 morphism 쌍 $(u: x \rightarrow x', v: y \rightarrow y')$으로서 $\mathcal{Z}(T)$에서 $\alpha'\circ f(u)=g(v)\circ \alpha$을 만족하는 것이다. 사영 $(x, y, \alpha)\mapsto T$이 이를 CFG로 만든다.
+으로 이루어진 triple $(x,y,\alpha)$이다. $T$ 위의 $(x,y,\alpha)$에서 $T'$ 위의 $(x',y',\alpha')$로의 morphism은 같은 morphism $h:T\rightarrow T'$ 위에 놓이는 morphism들의 쌍 $(a:x\rightarrow x',b:y\rightarrow y')$으로서 $\mathcal{Z}$에서
+
+$$\alpha'\circ f(a)=g(b)\circ\alpha$$
+
+을 만족하는 것이다. 항등 morphism과 합성은 각 성분에서 정의한다.
 :::
 
-세 사영 functor $\operatorname{pr}_\mathcal{X}:(x, y, \alpha)\mapsto x$과 $\operatorname{pr}_\mathcal{Y}:(x, y, \alpha)\mapsto y$, 그리고 $\alpha$ 자신이 주는 natural isomorphism $f\circ \operatorname{pr}_\mathcal{X}\cong g\circ \operatorname{pr}_\mathcal{Y}$이 함께 2-fiber product의 자료를 이룬다. 여기에서 사각형의 가환성이 등호가 아니라 2-isomorphism $\alpha$으로 채워진다는 점이 핵심이다. 이 자료는 다음의 2-범주적 보편성을 가진다. 임의의 CFG $\mathcal{T}$과 morphism $a:\mathcal{T} \rightarrow \mathcal{X}$, $b:\mathcal{T} \rightarrow \mathcal{Y}$, 그리고 2-isomorphism $\beta: f\circ a\cong g\circ b$이 주어지면, morphism $h:\mathcal{T} \rightarrow \mathcal{X}\times_\mathcal{Z}\mathcal{Y}$이 본질적으로 유일하게 존재하여 $\operatorname{pr}_\mathcal{X}\circ h\cong a$, $\operatorname{pr}_\mathcal{Y}\circ h\cong b$이고 이 동형들이 $\beta$와 $\alpha$를 정합적으로 잇는다.
+사영 $(x,y,\alpha)\mapsto T$과 $(a,b)\mapsto h$은 functor $\mathcal{X}\times_\mathcal{Z}\mathcal{Y}\rightarrow\mathcal{C}$를 정의한다. $\mathcal{X}$와 $\mathcal{Y}$에서 cartesian lift들을 성분별로 고르면 $\alpha$는 위의 compatibility condition에 의해 함께 pullback되므로, 이 사영은 $\mathcal{X}\times_\mathcal{Z}\mathcal{Y}$을 CFG로 만든다.
+
+이 CFG에는 두 사영 functor $\operatorname{pr}_\mathcal{X}:(x,y,\alpha)\mapsto x$과 $\operatorname{pr}_\mathcal{Y}:(x,y,\alpha)\mapsto y$, 그리고 $\alpha$가 주는 natural isomorphism $f\circ\operatorname{pr}_\mathcal{X}\cong g\circ\operatorname{pr}_\mathcal{Y}$이 있다. 임의의 CFG $\mathcal{T}$에 대하여 morphism $\mathcal{T}\rightarrow\mathcal{X}\times_\mathcal{Z}\mathcal{Y}$을 주는 것은 morphism $a:\mathcal{T}\rightarrow\mathcal{X}$, $b:\mathcal{T}\rightarrow\mathcal{Y}$와 2-isomorphism $\beta:f\circ a\cong g\circ b$을 주는 것과 동치이다. 이것이 2-fiber product의 2-범주적 universal property이다.
 
 ::: 명제 2
-$\mathcal{X}, \mathcal{Y}, \mathcal{Z}$이 site $(\mathcal{C}, \tau)$ 위의 stack이면 [정의 1](#def1)의 $\mathcal{X}\times_\mathcal{Z}\mathcal{Y}$도 stack이며, 위의 2-보편성을 만족한다.
+Site $(\mathcal{C},\tau)$ 위의 stack morphism $f:\mathcal{X}\rightarrow\mathcal{Z}$과 $g:\mathcal{Y}\rightarrow\mathcal{Z}$에 대하여, 2-fiber product $\mathcal{X}\times_\mathcal{Z}\mathcal{Y}$은 stack이다.
 :::
 
 이는 covering $\{T_i \rightarrow T\}$ 위의 descent datum이 $\mathcal{X}, \mathcal{Y}$의 descent datum과 $\mathcal{Z}$의 isomorphism presheaf $\operatorname{\underline{Isom}}$의 절단으로 분해되어, 각 stack 성질로부터 유일하게 붙는다는 사실에서 성분별로 따라온다. ([§스택, ⁋정의 10, 12](/ko/math/stacks/fibered_categories_and_stacks#def10))
