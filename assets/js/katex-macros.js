@@ -64,6 +64,7 @@ window.KATEX_MACROS = {
     "\\Sch":"\\mathbf{Sch}",
     "\\Set":"\\mathbf{Set}",
     "\\Sh":"\\mathbf{Sh}",
+    "\\Stk":"\\mathbf{Stk}",
     "\\Top":"\\mathbf{Top}",
     "\\Var":"\\mathbf{Var}",
     "\\Vect":"\\mathbf{Vect}",
