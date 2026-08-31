@@ -239,7 +239,9 @@ Site $(\mathcal{C}, \tau)$ 위의 CFG $P:\mathcal{F} \rightarrow \mathcal{C}$에
 2. $\mathcal{F}$이 *stack<sub>스택</sub>*이라는 것은, $\mathcal{F}$이 prestack이고 동시에 임의의 covering family에 대한 모든 descent datum이 effective인 것이다.
 :::
 
-이미 설명한 것과 같이, prestack 조건은 morphism들이 서로 붙는다는 것을 의미하며, stack 조건은 여기에 더해 대상을 붙여 effective descent를 더한 것으로 생각할 수 있다. Discrete fiber, 곧 집합 값 functor의 경우 stack 조건은 익숙한 sheaf 조건으로 정확히 환원된다. 이것이 stack을 sheaf의 일반화로 보는 관점을 정당화한다.
+이미 설명한 것과 같이, prestack 조건은 morphism들이 서로 붙는다는 것을 의미하며, stack 조건은 여기에 더해 대상을 붙이는 effective descent를 요구한다.
+
+따라서 stack은 한 문장으로 요약하면 site 위의 $\Grpd$-valued sheaf, 더 정확히는 2-categorical 의미의 sheaf이다. 특히 기존의 set-valued moduli functor처럼 target이 $\Set$인 경우에는 각 fiber가 discrete groupoid이므로, 이 조건은 ordinary sheaf 조건으로 환원된다. 이를 다음 명제가 정확히 표현한다.
 
 ::: 명제 13
 CFG $P:\mathcal{F} \rightarrow \mathcal{C}$의 모든 fiber $\mathcal{F}(U)$이 discrete groupoid라 하자. 그럼 $\mathcal{F}$은 어떤 presheaf $F:\mathcal{C}^\op \rightarrow \Set$에 대응하며, 이 때 $\mathcal{F}$이 prestack인 것은 $F$이 separated presheaf인 것과, $\mathcal{F}$이 stack인 것은 $F$이 sheaf인 것과 동치이다.

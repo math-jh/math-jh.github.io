@@ -15,17 +15,7 @@ published: false
 
 ---
 
-Site $(\Sch, \mathrm{fppf})$ 위의 stack은 faithfully flat descent를 groupoid 값 functor로 끌어올린 대상이다. ([§스택, ⁋정의 12](/ko/math/stacks/fibered_categories_and_stacks#def12)) 그러나 이 정의에는 기하가 전혀 들어 있지 않다. Stack은 순수하게 범주론적·위상적 조건만으로 정의되었고, 그 결과 어떤 stack은 scheme이나 algebraic space처럼 점·차원·tangent space·매끄러움을 논할 수 있는 기하학적 대상인 반면, 다른 stack은 그러한 구조를 전혀 갖지 못한다. 이 글의 목표는 "기하학적인" stack을 가려내는 것이다. 즉 모든 stack 가운데 통상적인 scheme으로 근사되어 그 위에서 차원·flatness·매끄러움 따위의 미분기하학적 성질을 정의하고 계산할 수 있는 대상을 분리하고자 한다.
-
-이를 위해 필요한 조건은 단 두 가지이다.
-
-첫째, stack $\mathcal{X}$의 *대각선 사상* $\Delta:\mathcal{X} \rightarrow \mathcal{X}\times_S \mathcal{X}$이 representable해야 한다. 통상적인 scheme $X$에서 대각선 $\Delta: X \rightarrow X\times_S X$은 두 사상 $f, g: T \rightarrow X$가 일치하는 점들의 부분scheme($f=g$의 equalizer)을 골라내는 역할을 한다. 반면 대상들 사이의 "등호($=$)"가 "동형($\cong$)"으로 약화되는 stack의 세계에서, 두 대상 $x, y\in \mathcal{X}(T)$에 대하여 대각선의 2-fiber product $T\times_{\mathcal{X}\times \mathcal{X}}\mathcal{X}$를 취하면 $x$와 $y$ 사이의 동형들을 모아둔 $\operatorname{\underline{Isom}}_T(x, y)$가 나온다. 따라서 대각선이 representable하다는 것은 임의의 두 대상 사이의 동형 공간 $\operatorname{\underline{Isom}}(x, y)$, 특히 한 대상의 automorphism group $\operatorname{\underline{Aut}}(x)=\operatorname{\underline{Isom}}(x, x)$이 기하를 벗어난 무한차원 집합이 아니라 scheme(보다 정확히는 algebraic space)이라는 것을 뜻한다. 즉 두 점을 비교하고 대칭성을 재는 일이 통상적인 기하의 범위 안에서 이루어짐을 보장하는 최소한의 안전장치이다.
-
-둘째, 어떤 scheme으로부터의 smooth 전사 사상 $U \twoheadrightarrow \mathcal{X}$, 곧 *atlas<sub>지도책</sub>*가 존재해야 한다. 미분기하에서 군 $\Gamma$가 작용하는 orbifold $M/\Gamma$를 생각할 때 quotient space 자체는 singularity를 가질 수 있어도 몫을 취하기 전의 공간 $M$은 smooth manifold이듯, 대수군 $G$가 scheme $X$에 작용하는 몫 stack $[X/G]$에서도 몫을 취하기 전의 $X$는 우리가 잘 알고 있는 scheme이다. 이때 자연스러운 몫 사상 $X \twoheadrightarrow [X/G]$가 바로 atlas 역할을 한다. Stack은 각 점마다 automorphism group이 살아있어 자리스키 open subset들로 쪼개도 결코 scheme이 되지 않으므로, stack 속으로 들어가는 단사 열린 덮개 대신 stack 위로 덮어씌우는 smooth 전사 scheme $U \twoheadrightarrow \mathcal{X}$를 잡는다. 이 atlas 위에서 stack의 차원이나 매끄러움 같은 기하학적 성질을 계산하고, $U$의 점들이 stack 안에서 어떻게 묶이는지는 $U\times_\mathcal{X} U$ (groupoid presentation $R\rightrightarrows U$)를 통해 온전히 복원한다.
-
-이 두 조건을 만족하는 stack을 *algebraic stack*(또는 *Artin stack*)이라 부르며, automorphism group이 finite group 또는 discrete group이어서 atlas를 étale 전사로 잡을 수 있는 경우를 *Deligne–Mumford stack*이라 부른다.
-
-이 글에서는 먼저 stack 사이의 2-fiber product와 representable morphism을 정의하고, 대각선의 역할을 설명한 뒤, algebraic stack과 Deligne–Mumford stack을 정의한다. 이어 algebraic group $G$의 작용으로부터 quotient stack $[X/G]$과 분류 stack $\mathbf{B}G=[\ast/G]$을 구성하고, 이들이 실제로 algebraic stack임을 atlas $X \rightarrow [X/G]$과 그 groupoid presentation $X\times G\rightrightarrows X$을 통해 증명한다. 마지막으로 $\mathbf{B}\mathbb{G}_m$, $\mathbf{B}(\mathbb{Z}/n)$, $[\mathbb{A}^1/\mathbb{G}_m]$, 그리고 타원곡선의 moduli $\mathcal{M}_{1,1}$을 예로 다룬다.
+우리는 앞선 두 글에서 category 위에 정의된 위상구조를 정의하여 site의 개념을 만들고, site 위에서 정의된 $\Grpd$-valued sheaf를 stack이라 정의했다. 그러나 아직 이를 기하적 대상으로 보고 stack의 점이나 차원, tangent space, 매끄러움 등의 개념을 논할 수는 없으며, 이번 글의 목표는 이것이 가능한 <em-ko>기하적인</em-ko> stack들을 가려내는 것이다.
 
 ## Stack의 올곱
 
@@ -204,27 +194,27 @@ $G$이 base scheme $S$ 위의 flat·분리·smooth group scheme이고 $X$이 $S$
 가장 기본적인 예는 $X=S$인 분류 stack이다. 이는 [§스택, ⁋정의 17](/ko/math/stacks/fibered_categories_and_stacks#def17)에서 도입한 $\mathbf{B}G$이 사실 algebraic stack임을 [정리 10](#thm10)으로 확인하는 것이다.
 
 ::: 예시 11 ($\mathbf{B}\mathbb{G}_m$과 $\mathbf{B}(\mathbb{Z}/n)$)
-Base를 field $\mathbb{k}$로 둔다.
+Base를 field $\mathbb{K}$로 둔다.
 
-1. $\mathbf{B}\mathbb{G}_m=[\Spec \mathbb{k}/\mathbb{G}_m]$은 algebraic stack이다. $\mathbb{G}_m$이 affine·smooth하므로 ([\[스킴\] §군 스킴, §§군 스킴](/ko/math/scheme_theory/group_schemes#군-스킴)) [정리 10](#thm10)이 적용되고, atlas는 $\Spec \mathbb{k} \rightarrow \mathbf{B}\mathbb{G}_m$이며 그 base change는 $\mathbb{G}_m \rightrightarrows \Spec \mathbb{k}$이다. $\mathbf{B}\mathbb{G}_m(T)$은 $T$ 위의 line bundle들의 groupoid이고 ([§스택, ⁋정리 18](/ko/math/stacks/fibered_categories_and_stacks#thm18)), 한 점의 stabilizer는 $\mathbb{G}_m$이다. Stabilizer가 $1$차원이라 infinitesimal deformation을 가지므로 $\mathbf{B}\mathbb{G}_m$은 DM이 아닌 Artin stack이며, 그 차원은 $\dim \Spec \mathbb{k}-\dim \mathbb{G}_m=0-1=-1$이다. 음의 차원은 stabilizer가 점보다 "더 큰" algebraic stack의 특징이다.
+1. $\mathbf{B}\mathbb{G}_m=[\Spec \mathbb{K}/\mathbb{G}_m]$은 algebraic stack이다. $\mathbb{G}_m$이 affine·smooth하므로 ([\[스킴\] §군 스킴, §§군 스킴](/ko/math/scheme_theory/group_schemes#군-스킴)) [정리 10](#thm10)이 적용되고, atlas는 $\Spec \mathbb{K} \rightarrow \mathbf{B}\mathbb{G}_m$이며 그 base change는 $\mathbb{G}_m \rightrightarrows \Spec \mathbb{K}$이다. $\mathbf{B}\mathbb{G}_m(T)$은 $T$ 위의 line bundle들의 groupoid이고 ([§스택, ⁋정리 18](/ko/math/stacks/fibered_categories_and_stacks#thm18)), 한 점의 stabilizer는 $\mathbb{G}_m$이다. Stabilizer가 $1$차원이라 infinitesimal deformation을 가지므로 $\mathbf{B}\mathbb{G}_m$은 DM이 아닌 Artin stack이며, 그 차원은 $\dim \Spec \mathbb{K}-\dim \mathbb{G}_m=0-1=-1$이다. 음의 차원은 stabilizer가 점보다 "더 큰" algebraic stack의 특징이다.
 
-2. $\mathbb{Z}/n$을 상수 group scheme으로 볼 때 $\mathbf{B}(\mathbb{Z}/n)=[\Spec \mathbb{k}/(\mathbb{Z}/n)]$은 DM stack이다. $\mathbb{Z}/n$은 유한 étale하므로 ([\[스킴\] §매끄러운 사상과 에탈 사상, ⁋예시 14](/ko/math/scheme_theory/smooth_and_etale_morphisms#ex14)에서 분리 확대가 étale함과 같은 이유로 상수군은 étale하다) atlas $\Spec \mathbb{k} \rightarrow \mathbf{B}(\mathbb{Z}/n)$이 étale 전사이고 ([정리 10](#thm10)의 DM 판정), 그 base change는 $n$개의 점의 disjoint union $\mathbb{Z}/n\times \Spec \mathbb{k}\rightrightarrows \Spec \mathbb{k}$이다. $\mathbf{B}(\mathbb{Z}/n)(T)$은 $T$ 위의 $\mathbb{Z}/n$-torsor, 곧 degree $n$의 cyclic étale covering의 groupoid이며, 한 점의 stabilizer는 finite group $\mathbb{Z}/n$이다. $\operatorname{char}\mathbb{k}\nmid n$이면 $\mu_n$ 또한 유한 étale하여 $\mathbf{B}(\mathbb{Z}/n)$과 $\mathbf{B}\mu_n$이 모두 DM이지만, $\operatorname{char}\mathbb{k}\mid n$이면 $\mu_n$이 비환원이 되어 $\mathbf{B}\mu_n$은 (DM이 아닌) Artin stack이 되는 반면 상수군 $\mathbf{B}(\mathbb{Z}/n)$은 여전히 DM이다. 이 분리가 characteristic $p$에서 étale·infinitesimal stabilizer의 차이를 드러낸다.
+2. $\mathbb{Z}/n$을 상수 group scheme으로 볼 때 $\mathbf{B}(\mathbb{Z}/n)=[\Spec \mathbb{K}/(\mathbb{Z}/n)]$은 DM stack이다. $\mathbb{Z}/n$은 유한 étale하므로 ([\[스킴\] §매끄러운 사상과 에탈 사상, ⁋예시 14](/ko/math/scheme_theory/smooth_and_etale_morphisms#ex14)에서 분리 확대가 étale함과 같은 이유로 상수군은 étale하다) atlas $\Spec \mathbb{K} \rightarrow \mathbf{B}(\mathbb{Z}/n)$이 étale 전사이고 ([정리 10](#thm10)의 DM 판정), 그 base change는 $n$개의 점의 disjoint union $\mathbb{Z}/n\times \Spec \mathbb{K}\rightrightarrows \Spec \mathbb{K}$이다. $\mathbf{B}(\mathbb{Z}/n)(T)$은 $T$ 위의 $\mathbb{Z}/n$-torsor, 곧 degree $n$의 cyclic étale covering의 groupoid이며, 한 점의 stabilizer는 finite group $\mathbb{Z}/n$이다. $\operatorname{char}\mathbb{K}\nmid n$이면 $\mu_n$ 또한 유한 étale하여 $\mathbf{B}(\mathbb{Z}/n)$과 $\mathbf{B}\mu_n$이 모두 DM이지만, $\operatorname{char}\mathbb{K}\mid n$이면 $\mu_n$이 비환원이 되어 $\mathbf{B}\mu_n$은 (DM이 아닌) Artin stack이 되는 반면 상수군 $\mathbf{B}(\mathbb{Z}/n)$은 여전히 DM이다. 이 분리가 characteristic $p$에서 étale·infinitesimal stabilizer의 차이를 드러낸다.
 :::
 
 다음은 stabilizer가 점마다 도약하는 작용의 표준적인 예로, coarse quotient가 잃어버리는 정보를 stack이 어떻게 보존하는지를 보여준다.
 
 ::: 예시 12 ($[\mathbb{A}^1/\mathbb{G}_m]$)
-Field $\mathbb{k}$ 위에서 $\mathbb{G}_m$이 affine line $\mathbb{A}^1$에 스칼라 배 $t\cdot x=tx$으로 작용한다 하자. 작용의 orbit은 둘뿐이다. 원점 $\{0\}$은 fixed point이라 한 orbit을 이루고, 여집합 $\mathbb{A}^1\setminus\{0\}=\mathbb{G}_m$은 $\mathbb{G}_m$이 단순추이적으로 작용하는 한 orbit이다. 따라서 위상적인 quotient $\mathbb{A}^1/\mathbb{G}_m$은 두 점(열린 orbit과 원점)으로 이루어지며 열린 orbit의 closure가 원점을 포함한다.
+Field $\mathbb{K}$ 위에서 $\mathbb{G}_m$이 affine line $\mathbb{A}^1$에 스칼라 배 $t\cdot x=tx$으로 작용한다 하자. 작용의 orbit은 둘뿐이다. 원점 $\{0\}$은 fixed point이라 한 orbit을 이루고, 여집합 $\mathbb{A}^1\setminus\{0\}=\mathbb{G}_m$은 $\mathbb{G}_m$이 단순추이적으로 작용하는 한 orbit이다. 따라서 위상적인 quotient $\mathbb{A}^1/\mathbb{G}_m$은 두 점(열린 orbit과 원점)으로 이루어지며 열린 orbit의 closure가 원점을 포함한다.
 
-Ring의 불변량으로 계산한 categorical quotient, 곧 affine GIT quotient $\Spec(\Gamma(\mathbb{A}^1, \mathcal{O})^{\mathbb{G}_m})$을 취하면 $\mathbb{k}[\x]^{\mathbb{G}_m}=\mathbb{k}$이므로 ([§Cox 구성과 GIT quotient, ⁋명제 3](/ko/math/toric_geometry/cox_construction#prop3)), 닫히지 않은 궤적을 닫힌 궤적과 구별하지 못하고 한 점 $\Spec \mathbb{k}$으로 뭉개버린다.
+Ring의 불변량으로 계산한 categorical quotient, 곧 affine GIT quotient $\Spec(\Gamma(\mathbb{A}^1, \mathcal{O})^{\mathbb{G}_m})$을 취하면 $\mathbb{K}[\x]^{\mathbb{G}_m}=\mathbb{K}$이므로 ([§Cox 구성과 GIT quotient, ⁋명제 3](/ko/math/toric_geometry/cox_construction#prop3)), 닫히지 않은 궤적을 닫힌 궤적과 구별하지 못하고 한 점 $\Spec \mathbb{K}$으로 뭉개버린다.
 
 반면 quotient stack $[\mathbb{A}^1/\mathbb{G}_m]$은 이 두 orbit의 서로 다른 stabilizer를 모두 온전히 기억한다. [정리 10](#thm10)에 의해 이는 $1$차원 affine scheme $\mathbb{A}^1$을 $1$차원 group $\mathbb{G}_m$으로 나눈 algebraic stack으로, $\dim[\mathbb{A}^1/\mathbb{G}_m]=1-1=0$이다. 그 점은 정확히 두 개이다.
 
-1. 열린 점: 열린 orbit $\mathbb{G}_m\hookrightarrow \mathbb{A}^1$ 위에서 작용이 자유로우므로 $[\mathbb{G}_m/\mathbb{G}_m]\cong \Spec \mathbb{k}$이고, 이는 stabilizer가 자명한 열린 점 $\Spec \mathbb{k}\hookrightarrow [\mathbb{A}^1/\mathbb{G}_m]$을 이룬다.
+1. 열린 점: 열린 orbit $\mathbb{G}_m\hookrightarrow \mathbb{A}^1$ 위에서 작용이 자유로우므로 $[\mathbb{G}_m/\mathbb{G}_m]\cong \Spec \mathbb{K}$이고, 이는 stabilizer가 자명한 열린 점 $\Spec \mathbb{K}\hookrightarrow [\mathbb{A}^1/\mathbb{G}_m]$을 이룬다.
 
-2. closed point: 원점 $\{0\}=\Spec \mathbb{k}$은 $\mathbb{G}_m$이 자명하게 작용하는 fixed point이므로 $[\{0\}/\mathbb{G}_m]=\mathbf{B}\mathbb{G}_m$이고, 이는 stabilizer $\mathbb{G}_m$을 가진 closed point이다. ([예시 11](#ex11))
+2. closed point: 원점 $\{0\}=\Spec \mathbb{K}$은 $\mathbb{G}_m$이 자명하게 작용하는 fixed point이므로 $[\{0\}/\mathbb{G}_m]=\mathbf{B}\mathbb{G}_m$이고, 이는 stabilizer $\mathbb{G}_m$을 가진 closed point이다. ([예시 11](#ex11))
 
-즉 $[\mathbb{A}^1/\mathbb{G}_m]$은 한 개의 열린 점과, 그 closure에 놓인 $\mathbf{B}\mathbb{G}_m$ 한 점으로 이루어진다. 불변량에 기반한 categorical/GIT quotient $\Spec \mathbb{k}$이 두 점을 하나로 뭉갠 데 반해, stack은 원점의 stabilizer $\mathbb{G}_m$을 closed point에 붙은 $\mathbf{B}\mathbb{G}_m$으로 정확히 기록한다. Stabilizer가 양의 차원을 가지므로 이 stack은 DM이 아닌 Artin stack이다.
+즉 $[\mathbb{A}^1/\mathbb{G}_m]$은 한 개의 열린 점과, 그 closure에 놓인 $\mathbf{B}\mathbb{G}_m$ 한 점으로 이루어진다. 불변량에 기반한 categorical/GIT quotient $\Spec \mathbb{K}$이 두 점을 하나로 뭉갠 데 반해, stack은 원점의 stabilizer $\mathbb{G}_m$을 closed point에 붙은 $\mathbf{B}\mathbb{G}_m$으로 정확히 기록한다. Stabilizer가 양의 차원을 가지므로 이 stack은 DM이 아닌 Artin stack이다.
 :::
 
 마지막으로 stack 이론의 본래 동기였던 moduli 문제로 돌아간다. 타원곡선의 moduli는 quotient 꼴로 실현되는 DM stack의 대표적인 예이다.
