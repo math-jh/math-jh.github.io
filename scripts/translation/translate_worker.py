@@ -1566,20 +1566,23 @@ def translate(
     return translated, prompt_chars, len(translated)
 
 
-HERMES_BIN = shutil.which("hermes") or str(Path.home() / ".local/bin/hermes")
+NOTIFY_BIN = shutil.which("notify") or str(Path.home() / ".local/bin/notify")
 
 
-def _notify_telegram(subject: str, body: str) -> None:
-    """Best-effort hermes telegram notify; logs (but doesn't raise) on failure."""
+def _notify(subject: str, body: str, level: str = "active") -> None:
+    """Best-effort 알림. 실패해도 로그만 남기고 번역은 계속한다.
+
+    벤더는 shim(~/.local/bin/notify) 안에만 있다. 여기서 아는 것은 서명뿐이다.
+    """
     try:
         r = subprocess.run(
-            [HERMES_BIN, "send", "-t", "telegram", "-s", subject, "-q", body],
-            check=False, timeout=15, capture_output=True, text=True,
+            [NOTIFY_BIN, "-s", subject, "-b", body, "-g", "blog", "-l", level],
+            check=False, timeout=20, capture_output=True, text=True,
         )
         if r.returncode != 0:
-            log(f"telegram notify failed rc={r.returncode}: {r.stderr.strip()[:300]!r}")
+            log(f"notify failed rc={r.returncode}: {r.stderr.strip()[:300]!r}")
     except Exception as e:
-        log(f"telegram notify exception: {e!r}")
+        log(f"notify exception: {e!r}")
 
 
 def record_failure(state: dict, key: str, error: str) -> None:
@@ -1607,11 +1610,12 @@ def record_failure(state: dict, key: str, error: str) -> None:
         return
     notice["last_notified"] = now
     since = datetime.fromtimestamp(notice["since"]).strftime("%m-%d %H:%M")
-    _notify_telegram(
+    _notify(
         "[translate-worker] 번역 실패",
         f"{key}\n연속 {notice['count']}회 (최초 {since})\n"
         f"{error[:300]}\n"
         f"실패한 글은 {FAIL_RETRY_AFTER_SEC // 3600}시간 뒤 자동 재시도한다.",
+        level="timeSensitive",     # EN 발행이 멈춘 상태다 — 집중 모드를 뚫는다
     )
 
 
@@ -1980,8 +1984,9 @@ def review_ko_typos(ko_path: Path, key: str, claims: List[str]) -> List[dict]:
         return out
     if hashlib.sha256(ko_path.read_bytes()).hexdigest() != before:
         log(f"GATE-KO-TYPO ({key}): KO 파일이 변경됨 — 검토 전용 계약 위반")
-        _notify_telegram("[translate-worker] KO 검토가 원문을 수정함",
-                         f"{key}\n검토 전용이어야 하는 단계가 KO 원문을 바꿨다. 확인 필요.")
+        _notify("[translate-worker] KO 검토가 원문을 수정함",
+                f"{key}\n검토 전용이어야 하는 단계가 KO 원문을 바꿨다. 확인 필요.",
+                level="timeSensitive")
     for ln in lines:
         m = _KO_TYPO_VERDICT_RE.match(ln)
         if not m:
@@ -2526,7 +2531,7 @@ def run_verify(state: dict, ko_path: Path, en_path: Path, key: str) -> int:
         body += verdict_text + "\n"
     if lints:
         body += "LINTS:\n" + "\n".join(lints)
-    _notify_telegram(f"translation verify flagged: {key}", body[:1500])
+    _notify(f"translation verify flagged: {key}", body[:1500])
     return 0
 
 
@@ -2827,7 +2832,7 @@ def main() -> int:
                     )]
                 if verdict_text:
                     body_lines += ["", "--- kimi verify (final) ---", verdict_text]
-                _notify_telegram(
+                _notify(
                     f"[translate-worker] {reason} warnings",
                     "\n".join(body_lines),
                 )

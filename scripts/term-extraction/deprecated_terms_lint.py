@@ -97,11 +97,12 @@ if notify:
         base = set()
     new = sorted(keys - base)
     if new:
-        from terms_lint import send_telegram
+        from terms_lint import send_notify
         ex = ", ".join(k.split("|")[1] for k in new[:5])
-        send_telegram(f"[용어 린트] 영어화 확정 용어의 한국어형 신규 {len(new)}건: "
-                      f"{ex}{' …' if len(new) > 5 else ''} "
-                      f"(deprecated_terms_lint.py 로 확인)")
+        send_notify(f"영어화 확정 용어의 한국어형 신규 {len(new)}건: "
+                    f"{ex}{' …' if len(new) > 5 else ''} "
+                    f"(deprecated_terms_lint.py 로 확인)",
+                    subject="[용어 린트]")
         print(f"신규 {len(new)}건 알림")
     sys.exit(1 if new else 0)
 

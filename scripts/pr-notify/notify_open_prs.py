@@ -25,7 +25,7 @@ from pathlib import Path
 REPO = "math-jh/math-jh.github.io"
 STATE = Path.home() / ".local/state/blog-pr-notify.json"
 GH = "/usr/bin/gh"
-HERMES = Path.home() / ".local/bin/hermes"
+NOTIFY = Path.home() / ".local/bin/notify"
 MAX_LISTED = 8  # 한 통에 이만큼만 적고 나머지는 건수로 접는다
 
 
@@ -79,11 +79,11 @@ def compose(fresh: list[dict]) -> tuple[str, str]:
 
 def send(subject: str, body: str) -> None:
     result = subprocess.run(
-        [str(HERMES), "send", "-t", "telegram", "-s", subject, "-q", body],
+        [str(NOTIFY), "-s", subject, "-b", body, "-g", "blog"],
         capture_output=True, text=True, timeout=30,
     )
     if result.returncode != 0:
-        raise RuntimeError(f"hermes rc={result.returncode}: {result.stderr.strip()[:300]}")
+        raise RuntimeError(f"notify rc={result.returncode}: {result.stderr.strip()[:300]}")
 
 
 def main() -> int:

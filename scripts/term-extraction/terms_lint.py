@@ -28,7 +28,7 @@ categories.yml ko 표시명)과 대조한다. 차이: 저쪽은 in-memory 재작
 url·중복·dangling see 는 판단이 필요하므로 절대 자동 수정하지 않는다 —
 보고만 하고 exit 1. 수정 전 원본은 terms.yml.bak 으로 남긴다.
 
---notify 는 남은 에러가 있을 때 텔레그램(~/.hermes/.env)으로 알린다.
+--notify 는 남은 에러가 있을 때 알림 shim(~/.local/bin/notify)으로 알린다.
 
 --fix 는 terms.yml 을 읽고 다시 쓰므로(read→write) 같은 파일을 쓰는 다른 실행과
 lost update 로 부딪힌다. extract_terms.py 와 같은 PID 파일 lock(/tmp/extract-terms.lock)
@@ -105,27 +105,20 @@ def release_lock() -> None:
         pass
 
 
-def send_telegram(msg: str) -> None:
-    env_path = Path.home() / ".hermes" / ".env"
-    if env_path.exists():
-        for line in env_path.read_text().splitlines():
-            if "=" in line and not line.startswith("#"):
-                k, v = line.strip().split("=", 1)
-                os.environ.setdefault(k, v)
-    token = os.environ.get("TELEGRAM_BOT_TOKEN", "")
-    chat = os.environ.get("TELEGRAM_HOME_CHANNEL",
-                          os.environ.get("TELEGRAM_ALLOWED_USERS", ""))
-    if not token or not chat:
-        log("텔레그램 미설정 — 알림 생략")
-        return
-    import urllib.parse
-    import urllib.request
-    data = urllib.parse.urlencode({"chat_id": chat, "text": msg}).encode()
+def send_notify(msg: str, subject: str = "[terms_lint]") -> None:
+    """알림 한 통. 벤더는 shim(~/.local/bin/notify) 안에만 있다.
+
+    deprecated_terms_lint.py 가 이 함수를 import 해서 쓴다.
+    """
+    import subprocess
+    notify = Path.home() / ".local/bin/notify"
     try:
-        urllib.request.urlopen(
-            f"https://api.telegram.org/bot{token}/sendMessage", data=data, timeout=10)
+        r = subprocess.run([str(notify), "-s", subject, "-b", msg, "-g", "blog"],
+                           capture_output=True, text=True, timeout=20)
+        if r.returncode != 0:
+            log(f"알림 전송 실패 rc={r.returncode}: {r.stderr.strip()[:200]}")
     except Exception as e:  # noqa: BLE001
-        log(f"텔레그램 전송 실패: {e}")
+        log(f"알림 전송 실패: {e}")
 
 
 # ---------------------------------------------------------------------------
@@ -385,7 +378,7 @@ def run(path: Path, fix: bool, notify: bool) -> int:
     except yaml.YAMLError as e:
         log(f"ERROR PARSE: {e}")
         if notify:
-            send_telegram(f"[terms_lint] terms.yml 이 YAML 로 파싱되지 않음: {e}")
+            send_notify(f"[terms_lint] terms.yml 이 YAML 로 파싱되지 않음: {e}")
         return 1
 
     pmap = permalink_map()
@@ -449,7 +442,7 @@ def run(path: Path, fix: bool, notify: bool) -> int:
     if errors and notify:
         head = "\n".join(repr(i) for i in errors[:10])
         more = f"\n… 외 {len(errors) - 10}건" if len(errors) > 10 else ""
-        send_telegram(f"[terms_lint] terms.yml 에러 {len(errors)}건 (자동 수정 불가분):\n{head}{more}")
+        send_notify(f"[terms_lint] terms.yml 에러 {len(errors)}건 (자동 수정 불가분):\n{head}{more}")
     return 1 if errors else 0
 
 
@@ -471,7 +464,7 @@ def main() -> int:
     except Exception as e:  # noqa: BLE001
         log(f"CRASH: {e!r}")
         if args.notify:
-            send_telegram(f"[terms_lint] 크래시: {e!r}")
+            send_notify(f"[terms_lint] 크래시: {e!r}")
         return 2
     finally:
         if locked:

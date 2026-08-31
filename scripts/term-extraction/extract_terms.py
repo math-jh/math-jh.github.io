@@ -62,26 +62,18 @@ def log(msg: str) -> None:
     print(f"[{datetime.now():%Y-%m-%d %H:%M:%S}] {msg}")
 
 
-def send_telegram(msg: str) -> None:
-    env_path = Path.home() / ".hermes" / ".env"
-    if env_path.exists():
-        for line in env_path.read_text().splitlines():
-            if "=" in line and not line.startswith("#"):
-                k, v = line.strip().split("=", 1)
-                os.environ.setdefault(k, v)
-    token = os.environ.get("TELEGRAM_BOT_TOKEN", "")
-    chat = os.environ.get("TELEGRAM_HOME_CHANNEL",
-                          os.environ.get("TELEGRAM_ALLOWED_USERS", ""))
-    if not token or not chat:
-        return
-    import urllib.parse
-    import urllib.request
-    data = urllib.parse.urlencode({"chat_id": chat, "text": msg}).encode()
+def send_notify(msg: str) -> None:
+    """알림 한 통. 벤더는 shim(~/.local/bin/notify) 안에만 있다."""
+    import subprocess
+    notify = Path.home() / ".local/bin/notify"
     try:
-        urllib.request.urlopen(
-            f"https://api.telegram.org/bot{token}/sendMessage", data=data, timeout=10)
+        r = subprocess.run(
+            [str(notify), "-s", "[extract_terms]", "-b", msg, "-g", "blog"],
+            capture_output=True, text=True, timeout=20)
+        if r.returncode != 0:
+            log(f"알림 전송 실패 rc={r.returncode}: {r.stderr.strip()[:200]}")
     except Exception as e:  # noqa: BLE001
-        log(f"텔레그램 전송 실패: {e}")
+        log(f"알림 전송 실패: {e}")
 
 
 # ---------------------------------------------------------------------------
@@ -597,8 +589,8 @@ def main() -> int:
                     state["quarantine"].append(rel)
                     state["failures"].pop(rel, None)
                     log(f"  격리: {rel} ({MAX_FAILURES}회 실패) — 큐에서 제외")
-                    send_telegram(f"[extract_terms] {rel} 이 {MAX_FAILURES}회 실패해 격리됨. "
-                                  f"로그 확인 후 state 의 quarantine 에서 빼 주세요.")
+                    send_notify(f"{rel} 이 {MAX_FAILURES}회 실패해 격리됨. "
+                                f"로그 확인 후 state 의 quarantine 에서 빼 주세요.")
                 rc = 1
             if not args.dry_run:
                 save_state(state)
