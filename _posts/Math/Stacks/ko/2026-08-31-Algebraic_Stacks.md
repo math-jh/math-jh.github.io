@@ -15,11 +15,41 @@ published: false
 
 ---
 
-우리는 앞선 두 글에서 category 위에 정의된 위상구조를 정의하여 site의 개념을 만들고, site 위에서 정의된 $\Grpd$-valued sheaf를 stack이라 정의했다. 그러나 아직 이를 기하적 대상으로 보고 stack의 점이나 차원, tangent space, 매끄러움 등의 개념을 논할 수는 없으며, 이번 글의 목표는 이것이 가능한 <em-ko>기하적인</em-ko> stack들을 가려내는 것이다.
+앞선 글에서 우리는 기존에 생각하던 naive한 moduli problem을 $\Grpd$-valued functor로 만들어서, 각 대상 $T$ 위에 $T$-family들과 그들 사이의 isomorphism으로 이루어진 groupoid $\mathcal{X}(T)$를 대응시켰다. 기존 (점함자)와 마찬가지로 우리는 이를 $\mathcal{X}$의 $T$-point들의 모임으로 생각할 것이지만, 우선 해결해야 할 문제들이 몇 가지 있었는데, 그 중 하나는 morphism $u: T'\rightarrow T$에 대한 pullback이 unique isomorphism까지만 정해지므로, 실제 pullback functor $u^\ast: \mathcal{X}(T)\rightarrow \mathcal{X}(T')$를 써 주기 위해서는 각각의 pullback의 representative를 고르는 선택, 즉 cleavage가 필요했다는 것이다. 때문에 합성가능한 morphism $T''\overset{v}{\rightarrow}T'\overset{u}{\rightarrow}T$에 대하여, pullback을 하는 두 경로가 다를 수 있었고 이를 해결하기 위해 우리는 canonical isomorphism
+
+$$v^\ast u^\ast x\xrightarrow{\sim}(u\circ v)^\ast x$$
+
+그리고 이들이 만족해야 할 coherence condition들을 추가적인 정보로 기억했어야 했으며 그렇게 얻어진 대상이 *pseudofunctor* $\mathcal{X}:\mathcal{C}^\op\rightarrow\Grpd$였다. ([§스택, ⁋정의 3](/ko/math/stacks/fibered_categories_and_stacks#def3)) 개념적으로 이 pseudofunctor들은 모든 $T$-point들 $\mathcal{X}(T)$들과, 위에서 추가한 별도 정보들에 의해 결정되어야 하는 것이므로, $T\in \mathcal{C}$마다 위의 pseudofunctor가 주는 $\mathcal{X}(T)\in \Grpd$의 정보 (그리고 auxiliary data)를 모두 알고 있다면 이것이 담고 싶은 정보를 모두 담은 것이라 할 수 있으며 이러한 관점에서 우리는 CFG $\mathcal{F}\rightarrow \mathcal{C}$를 정의했다. ([§스택, ⁋정의 5](/ko/math/stacks/fibered_categories_and_stacks#def5)) 그럼 pseudofunctor들 사이의 morphism은 pseudonatural transformation이고 CFG들 사이의 morphism은 base 위의 functor인데, 앞서 isomorphic한 family들의 데이터를 isomorphism 자체까지 기억하여 유지했듯 이들 morphism 사이의 natural isomorphism도 $2$-morphism으로 함께 기억해야 한다. 따라서 pseudofunctor들과 CFG들은 각각 $2$-category를 이루며, 실제로 우리는 이 두 $2$-category가 $2$-equivalent하다는 것을 보였다. ([§스택, ⁋정리 8](/ko/math/stacks/fibered_categories_and_stacks#thm8))
+
+그럼 이제 stack은 원래 category $\mathcal{C}$에 위상구조를 부여하여 site로 만들고, 그 위상구조가 정의하는 descent, 정확하게는 $2$-category 의미에서의 descent를 통해 붙는 대상이다. 즉 stack을 정의하기 위해서는 covering을 따라 morphism들을 유일하게 붙이고, compatible한 local object들을 붙이는 과정이 필요하며, 이러한 관점에서 stack은 site 위의 $\Grpd$-valued (2-categorical) sheaf라 정의할 수 있었다. ([§스택, ⁋정의 12](/ko/math/stacks/fibered_categories_and_stacks#def12))
+
+이러한 관점에서, stack의 morphism $f:\mathcal{X}\rightarrow\mathcal{Y}$은 pseudofunctor 사이의 pseudonatural transformation이다. 이는 각 $T$마다 functor $f_T:\mathcal{X}(T)\rightarrow\mathcal{Y}(T)$를 주고, 각 $u:T'\rightarrow T$마다 natural isomorphism
+
+$$f_{T'}(u^\ast x)\xrightarrow{\sim}u^\ast f_T(x)$$
+
+을 주어 pullback과 호환되게 하는 자료이다. 두 stack morphism 사이의 2-morphism은 이 functor들을 잇고 pullback coherence와 호환되는 natural transformation이다. CFG의 언어에서는 각각 base 위의 functor와 natural transformation으로 표현된다. ([§스택, ⁋정의 7](/ko/math/stacks/fibered_categories_and_stacks#def7))
+
+Stack의 descent 조건은 local data를 global 대상으로 붙일 수 있음을 보장하지만, scheme이나 algebraic space와 같은 local model을 주지는 않는다. 따라서 dimension, tangent space, smoothness 등의 개념을 아직 익숙한 대수기하의 언어로 논할 수 없다. 이번 글의 목표는 stack 가운데 이러한 기하를 갖는 algebraic stack을 가려내는 것이다.
 
 ## Stack의 올곱
 
-기하학적 stack을 정의하려면 먼저 stack 사이의 morphism을 base change할 수 있어야 한다. Scheme의 fiber product에 대응하는 개념이 CFG의 *2-fiber product*이다 ([\[스킴\] §올곱, ⁋정리 8](/ko/math/scheme_theory/fiber_products#thm8)). Scheme의 fiber product가 두 morphism이 base 위에서 *같아지는* 점들을 모으는 데 비해, stack에서는 두 대상이 *동형이 되게 하는 isomorphism까지 자료로* 기억해야 한다. 등호가 동형으로 약화되는 이 차이가 stack 이론 전반을 관통한다.
+Stack의 기하를 논하기 위해 가장 먼저 필요한 것은 fiber product이다. Scheme에서도 base change에 대해 잘 행동하는 성질들을 좋은 기하학적 성질로 보았듯, stack 사이의 morphism에 대해서도 base change를 정의해야 한다. Scheme의 fiber product에 대응하는 개념이 stack의 *2-fiber product*이다. ([\[스킴\] §올곱, ⁋정리 8](/ko/math/scheme_theory/fiber_products#thm8))
+
+Stack의 morphism $f:\mathcal{X}\rightarrow\mathcal{Z}$과 $g:\mathcal{Y}\rightarrow\mathcal{Z}$이 주어졌다고 하자. Scheme에서는 $x\in\mathcal{X}(T)$과 $y\in\mathcal{Y}(T)$에 대하여 $f(x)=g(y)$을 요구하면 충분하다. 그러나 stack에서는 $f(x)$와 $g(y)$도 groupoid $\mathcal{Z}(T)$의 대상이므로, 이 literal equality는 representative나 pseudofunctor의 presentation을 바꾸면 보존되지 않는다. 따라서 두 대상을 비교하는 intrinsic한 자료는 equality가 아니라 isomorphism
+
+$$\alpha:f(x)\xrightarrow{\sim}g(y)$$
+
+이다. 이 $\alpha$는 pullback coherence와는 다른 새로운 자료로, 일반적으로 canonical하지도 않고 주어진 $x$와 $y$에 대해 존재하지 않을 수도 있으며, 존재하더라도 automorphism만큼 여러 개일 수 있다. 그러므로 단지 $f(x)$와 $g(y)$이 isomorphic하다고 요구해서는 충분하지 않고, 구체적인 $\alpha$까지 점의 자료로 기억해야 한다.
+
+앞에서 살펴본 pseudonaturality는 이렇게 고른 $\alpha$를 base change할 때 사용된다. Morphism $u:T'\rightarrow T$을 따라 $(x,y,\alpha)$를 pullback하면 두 image 사이의 isomorphism은
+
+$$f(u^\ast x)\cong u^\ast f(x)\xrightarrow{u^\ast\alpha}u^\ast g(y)\cong g(u^\ast y)$$
+
+으로 운반된다. 즉 stack morphism의 coherence는 $\alpha$를 만들어 주는 것이 아니라, 새로 고른 $\alpha$가 base change와 호환되도록 옮겨 준다. 가령 base scheme $S$ 위의 group $G$에 대하여 trivial torsor가 주는 morphism $S\rightarrow\mathbf{B}G$를 두 번 취하면
+
+$$S\times_{\mathbf{B}G}S\cong G$$
+
+이며, 우변의 $G$은 두 trivial torsor 사이에서 가능한 $\alpha$들을 기록한다. 이것이 stack의 fiber product에서 equality 대신 isomorphism 자체를 자료로 넣어야 하는 이유이다.
 
 ::: 정의 1
 Site $\mathcal{C}$ 위의 CFG들의 morphism $f:\mathcal{X} \rightarrow \mathcal{Z}$과 $g:\mathcal{Y} \rightarrow \mathcal{Z}$이 주어졌다 하자. 이들의 *2-fiber product<sub>2-올곱</sub>* $\mathcal{X}\times_\mathcal{Z}\mathcal{Y}$은 다음 CFG이다. $T\in \mathcal{C}$ 위의 대상은 삼중쌍 $(x, y, \alpha)$로서, $x\in \mathcal{X}(T)$, $y\in \mathcal{Y}(T)$이고

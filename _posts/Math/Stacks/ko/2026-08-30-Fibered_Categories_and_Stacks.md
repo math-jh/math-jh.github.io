@@ -239,9 +239,15 @@ Site $(\mathcal{C}, \tau)$ 위의 CFG $P:\mathcal{F} \rightarrow \mathcal{C}$에
 2. $\mathcal{F}$이 *stack<sub>스택</sub>*이라는 것은, $\mathcal{F}$이 prestack이고 동시에 임의의 covering family에 대한 모든 descent datum이 effective인 것이다.
 :::
 
-이미 설명한 것과 같이, prestack 조건은 morphism들이 서로 붙는다는 것을 의미하며, stack 조건은 여기에 더해 대상을 붙이는 effective descent를 요구한다.
+[정리 8](#thm8)에 따라 $\mathcal{F}$에 대응하는 pseudofunctor $F:\mathcal{C}^\op\rightarrow\Grpd$를 생각하면, 정의 12는 하나의 equivalence 조건으로 표현할 수 있다. Covering $\mathcal{U}=\{U_i\rightarrow U\}$를 고정하고, [정의 11](#def11)의 descent datum들을 대상으로 하는 groupoid를 $\Desc_F(\mathcal{U})$로 적자. 두 descent datum $(x_i,\varphi_{ij})$와 $(y_i,\psi_{ij})$ 사이의 morphism은 local morphism들의 족 $\theta_i:x_i\rightarrow y_i$으로서, 각 overlap 위에서 $\psi_{ij}\circ\theta_j=\theta_i\circ\varphi_{ij}$을 만족하는 것이다.
 
-따라서 stack은 한 문장으로 요약하면 site 위의 $\Grpd$-valued sheaf, 더 정확히는 2-categorical 의미의 sheaf이다. 특히 기존의 set-valued moduli functor처럼 target이 $\Set$인 경우에는 각 fiber가 discrete groupoid이므로, 이 조건은 ordinary sheaf 조건으로 환원된다. 이를 다음 명제가 정확히 표현한다.
+Global object $x\in F(U)$를 각 $U_i$에 restrict하고, double overlap 위에서 pseudofunctor의 canonical comparison isomorphism을 사용하면 descent datum이 얻어진다. 따라서 restriction functor
+
+$$F(U)\longrightarrow\Desc_F(\mathcal{U})$$
+
+가 정의된다. 정의 12의 stack 조건은 모든 covering $\mathcal{U}$에 대하여 이 functor가 groupoid의 equivalence라는 것과 같다. 이 functor가 fully faithful인 것은 local morphism들이 global morphism으로 유일하게 붙는다는 prestack 조건이고, essentially surjective인 것은 모든 descent datum이 effective라는 조건이다.
+
+따라서 stack은 한 문장으로 요약하면 site 위의 $\Grpd$-valued sheaf, 더 정확히는 2-categorical 의미의 sheaf이다. 특히 기존의 set-valued moduli functor처럼 target이 $\Set$인 경우에는 각 fiber가 discrete groupoid이므로, 위 equivalence 조건은 ordinary sheaf 조건으로 환원된다. 이를 다음 명제가 정확히 표현한다.
 
 ::: 명제 13
 CFG $P:\mathcal{F} \rightarrow \mathcal{C}$의 모든 fiber $\mathcal{F}(U)$이 discrete groupoid라 하자. 그럼 $\mathcal{F}$은 어떤 presheaf $F:\mathcal{C}^\op \rightarrow \Set$에 대응하며, 이 때 $\mathcal{F}$이 prestack인 것은 $F$이 separated presheaf인 것과, $\mathcal{F}$이 stack인 것은 $F$이 sheaf인 것과 동치이다.
