@@ -163,7 +163,15 @@ CFG $P:\mathcal{F} \rightarrow \mathcal{C}$에 대하여, 다음이 성립한다
     마지막으로 $f^\ast g^\ast \eta \rightarrow g^\ast \eta \rightarrow \eta$의 합성은 $g\circ f$ 위에 놓인 cartesian morphism이고 $(g\circ f)^\ast \eta \rightarrow \eta$ 또한 그러하므로, universal property에 의해 isomorphism $f^\ast g^\ast \eta\cong(g\circ f)^\ast \eta$을 얻는다.
 :::
 
-즉, CFG가 주어지면 cleavage를 통해 pseudofunctor를 재현해낼 수 있으며, 이는 cleavage의 선택에 대해 오직 canonical natural isomorphism만큼만 다르다. 우리 주장은 거꾸로 pseudofunctor가 CFG를 주고, 따라서 두 데이터는 정확히 같은 정보를 담고 있다는 것이다. 이 양방향 대응을 정밀하게 진술하기 위해 먼저 CFG 사이의 morphism을 정의한다.
+즉, CFG가 주어지면 cleavage를 통해 pseudofunctor를 재현해낼 수 있으며, 이는 cleavage의 선택에 대해 오직 canonical natural isomorphism만큼만 다르다. 우리는 거꾸로 pseudofunctor도 CFG를 주며, 이것이 서로의 역관계라는 것을 보일 것이므로 두 표현은 본질적으로 같은 정보를 담는다.
+
+이 대응을 정밀하게 진술하려면 pseudofunctor와 CFG들을 모은 것이 정확히 어떤 대상인지부터 살펴보아야 한다. 이를 위해 target $\Grpd$가 정확히 어떤 대상인지를 살펴보아야 하는데, 이는 category들의 category이므로 $2$-category로 보는 것이 정보를 잃지 않는 방법일 것이다. 이것이 실제로 필요함을 보여주는 가장 투명한 예시는 다음과 같다. Terminal groupoid $\ast$를 생각하고, 임의의 groupoid $\mathcal{G}$를 생각하면 functor $\ast\rightarrow \mathcal{G}$는 $\mathcal{G}$의 대상 하나를 고르는 것이고, 이런 두 functor 사이의 natural transformation은 그 두 대상 사이의 morphism과 같다. 따라서
+
+$$\Fun(\ast,\mathcal{G})\simeq\mathcal{G}$$
+
+이다. 반면 $\Grpd$를 ordinary category로만 보면 $\Hom_{\Grpd}(\ast,\mathcal{G})$는 $\mathcal{G}$의 대상들만 집합으로 남기고, 그 사이의 isomorphism과 automorphism을 잃어버리게 되어, 처음에 $\Set$에서 $\Grpd$로 올린 목적을 무색하게 만든다. 
+
+이러한 이유로 $\Grpd$를 $2$-category, 더 정확하게는 $(2,1)$-category로 본다면, $\Grpd$를 target으로 갖는 pseudofunctor들도 pseudonatural transformation을 $1$-morphism으로, 그 사이의 modification을 $2$-morphism으로 하는 $2$-category로 보는 것이 자연스럽다. 실제로 pseudofunctor의 canonical natural isomorphism $\varepsilon_{f,g}$와 $\eta_U$를 coherence data로 기록할 수 있는 것도 target $\Grpd$에 이러한 $2$-morphism이 있기 때문이다. 이러한 이유에서 우리의 대응 ([정리 8](#thm8)) 또한 $2$-category들 사이의 $2$-equivalence로 주어질 것이며, 이를 위해 먼저 CFG 사이의 $1$-morphism과 $2$-morphism을 정의해야 한다. 
 
 ::: 정의 7
 두 CFG $P:\mathcal{F} \rightarrow \mathcal{C}$과 $Q:\mathcal{G} \rightarrow \mathcal{C}$ 사이의 *morphism*은 $Q\circ G=P$을 만족하는 functor $G:\mathcal{F} \rightarrow \mathcal{G}$이다. 두 morphism $G, G':\mathcal{F} \rightarrow \mathcal{G}$ 사이의 *2-morphism*은 natural transformation $\alpha: G\Rightarrow G'$으로서 각 성분 $\alpha_\xi$이 $\id_{P(\xi)}$ 위에 놓이는 것이다.
