@@ -116,6 +116,10 @@ def kill_verify_session() -> None:
         pass
 MIN_KO_BODY_CHARS     = 300                  # skip stubs below this
 FAIL_RETRY_AFTER_SEC  = 24 * 3600
+# 실패 알림 간격. 실패한 글은 백오프를 타고 다음 글로 넘어가므로 엔진 쿼터 소진
+# 같은 전면 장애에서는 틱마다 실패한다 — 그대로 알리면 하루 48 통이다. 대신
+# 쿨다운을 두고 연속 실패 횟수를 실어 보낸다.
+FAIL_NOTIFY_COOLDOWN_SEC = 6 * 3600
 POLISH_INTERVAL_SEC   = 14 * 24 * 3600       # (unused) polish is now one-time; see Phase 3
 GIT_DRIFT_MARGIN_SEC  = 60                   # (unused) drift is now opt-in via `drift_needed: true`
 TRUNCATION_RATIO      = 0.60                 # min output/reference body length; below → fail
@@ -1578,6 +1582,39 @@ def _notify_telegram(subject: str, body: str) -> None:
         log(f"telegram notify exception: {e!r}")
 
 
+def record_failure(state: dict, key: str, error: str) -> None:
+    """번역 실패를 state 에 남기고, 쿨다운을 지켜 텔레그램으로 알린다.
+
+    엔트리를 통째로 갈아끼우지 않고 **덮어쓴다**. translated_at·en_path·
+    verified_at·verify_* 는 그 글의 번역 이력이고 실패는 그 위에 얹히는 상태다.
+    갈아끼우면 EN 파일은 그대로인데 이력만 사라져서, Phase 4 가 verified_at 이
+    없어진 글을 다시 검증하고(haiku 헛돈) 대시보드·term-extract 가 이미 번역된
+    글을 미번역으로 센다.
+
+    실패 자체는 로그에만 남던 것을 알림까지 잇는다. 24 시간 백오프가 다음 글로
+    넘겨 주기 때문에 큐는 안 막히지만, 엔진 쿼터가 소진되면 아무 EN 도 안 나가는
+    상태가 알림 없이 며칠 이어진다 (2026-08-30 ~ 08-31 실측: 실패 10 회, 알림 0 통).
+    """
+    now = time.time()
+    entry = dict(state["files"].get(key) or {})
+    entry.update({"status": "failed", "last_attempt_ts": now, "error": error[:500]})
+    state["files"][key] = entry
+
+    notice = state.setdefault("failure_notice", {})
+    notice["count"] = int(notice.get("count", 0)) + 1
+    notice.setdefault("since", now)
+    if now - notice.get("last_notified", 0) < FAIL_NOTIFY_COOLDOWN_SEC:
+        return
+    notice["last_notified"] = now
+    since = datetime.fromtimestamp(notice["since"]).strftime("%m-%d %H:%M")
+    _notify_telegram(
+        "[translate-worker] 번역 실패",
+        f"{key}\n연속 {notice['count']}회 (최초 {since})\n"
+        f"{error[:300]}\n"
+        f"실패한 글은 {FAIL_RETRY_AFTER_SEC // 3600}시간 뒤 자동 재시도한다.",
+    )
+
+
 # ---------------------------------------------------------------------------
 # Math-mismatch verification (Kimi second opinion)
 # ---------------------------------------------------------------------------
@@ -2592,6 +2629,7 @@ def main() -> int:
                     "reason": "drift-incremental",
                     "regions_retranslated": n_re, "regions_total": n_tot,
                 }
+                state.pop("failure_notice", None)   # 엔진이 살아났다 — 다음 장애는 첫 통부터
                 stats = state.setdefault("stats", {})
                 stats["total_done"]      = stats.get("total_done", 0) + 1
                 stats["total_in_chars"]  = stats.get("total_in_chars", 0) + in_chars
@@ -2626,20 +2664,12 @@ def main() -> int:
                     warnings=warnings,
                 )
             except subprocess.TimeoutExpired:
-                state["files"][key] = {
-                    "status": "failed",
-                    "last_attempt_ts": time.time(),
-                    "error": f"timeout after {KIMI_TIMEOUT_SEC}s",
-                }
+                record_failure(state, key, f"timeout after {KIMI_TIMEOUT_SEC}s")
                 save_state(state)
                 log(f"FAILED: timeout (attempt {attempt})")
                 return 1
             except Exception as e:
-                state["files"][key] = {
-                    "status": "failed",
-                    "last_attempt_ts": time.time(),
-                    "error": str(e)[:500],
-                }
+                record_failure(state, key, str(e))
                 save_state(state)
                 log(f"FAILED: {e!r} (attempt {attempt})")
                 return 1
@@ -2734,6 +2764,7 @@ def main() -> int:
             "reason": reason,
             "warnings": warnings or None,
         }
+        state.pop("failure_notice", None)   # 엔진이 살아났다 — 다음 장애는 첫 통부터
         if lossy_history:
             state["files"][key]["lossy_retry_count"] = len(lossy_history)
         if verdict_text:
