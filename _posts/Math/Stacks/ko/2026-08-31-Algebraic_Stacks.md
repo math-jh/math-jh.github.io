@@ -75,9 +75,7 @@ $$\alpha'\circ f(a)=g(b)\circ\alpha$$
 을 만족하는 것이다. 항등 morphism과 합성은 각 성분에서 정의한다.
 :::
 
-사영 $(x,y,\alpha)\mapsto T$과 $(a,b)\mapsto h$은 functor $\mathcal{X}\times_\mathcal{Z}\mathcal{Y}\rightarrow\mathcal{C}$를 정의한다. $\mathcal{X}$와 $\mathcal{Y}$에서 cartesian lift들을 성분별로 고르면 $\alpha$는 위의 compatibility condition에 의해 함께 pullback되므로, 이 사영은 $\mathcal{X}\times_\mathcal{Z}\mathcal{Y}$을 CFG로 만든다.
-
-이 CFG에는 두 사영 functor $\pr_\mathcal{X}:(x,y,\alpha)\mapsto x$과 $\pr_\mathcal{Y}:(x,y,\alpha)\mapsto y$, 그리고 $\alpha$가 주는 natural isomorphism $f\circ\pr_\mathcal{X}\cong g\circ\pr_\mathcal{Y}$이 있다. 임의의 CFG $\mathcal{T}$에 대하여 morphism $\mathcal{T}\rightarrow\mathcal{X}\times_\mathcal{Z}\mathcal{Y}$을 주는 것은 morphism $a:\mathcal{T}\rightarrow\mathcal{X}$, $b:\mathcal{T}\rightarrow\mathcal{Y}$와 2-isomorphism $\beta:f\circ a\cong g\circ b$을 주는 것과 동치이다. 이것이 2-fiber product의 2-categorical universal property이다.
+사영 $(x,y,\alpha)\mapsto T$과 $(a,b)\mapsto h$은 functor $\mathcal{X}\times_\mathcal{Z}\mathcal{Y}\rightarrow\mathcal{C}$를 정의한다. $\mathcal{X}$와 $\mathcal{Y}$에서 cartesian lift들을 성분별로 고르면 $\alpha$는 위의 compatibility condition에 의해 함께 pullback되므로, 이 사영은 $\mathcal{X}\times_\mathcal{Z}\mathcal{Y}$을 CFG로 만든다. 이 CFG에는 두 projection functor $\pr_\mathcal{X}:(x,y,\alpha)\mapsto x$과 $\pr_\mathcal{Y}:(x,y,\alpha)\mapsto y$, 그리고 $\alpha$가 주는 natural isomorphism $f\circ\pr_\mathcal{X}\cong g\circ\pr_\mathcal{Y}$이 있다. 일반적으로 임의의 CFG $\mathcal{T}$에 대하여 morphism $\mathcal{T}\rightarrow\mathcal{X}\times_\mathcal{Z}\mathcal{Y}$을 주는 것은 morphism $a:\mathcal{T}\rightarrow\mathcal{X}$, $b:\mathcal{T}\rightarrow\mathcal{Y}$와 2-isomorphism $\beta:f\circ a\cong g\circ b$을 주는 것과 동치이며, 이것이 2-fiber product의 2-categorical universal property이다.
 
 위의 정의는 CFG로서의 2-fiber product를 선언한 것에 불과하므로, stack의 2-범주 안에서 이것이 실제로 존재함을 보이려면 별도의 논증이 필요하다. 이는 각 성분의 descent datum을 붙임으로써 얻어진다.
 
@@ -89,7 +87,13 @@ Site $(\mathcal{C},\tau)$ 위의 stack morphism $f:\mathcal{X}\rightarrow\mathca
 
 ## 대수적 공간
 
-Stack에 익숙한 대수기하적 통제를 부여하기 위해서 우리가 택하는 전략은, stack의 morphism을 scheme 값 점을 따라 base change한 뒤 그 결과에 scheme 이론의 성질을 요구하는 것이다. 즉 $f:\mathcal{X}\rightarrow\mathcal{Y}$에 대하여, 임의의 scheme $T$와 morphism $T\rightarrow\mathcal{Y}$를 따른 base change $\mathcal{X}\times_\mathcal{Y}T\rightarrow T$가 성질 $P$를 가지면 $f$가 성질 $P$를 가진다고 정의할 것이다. 이때 base change의 source로 scheme만을 허용하면 범위가 지나치게 좁다. Scheme의 fppf quotient는 다시 scheme이 아닐 수 있고, 국소적으로 scheme인 대상도 하강시킨 뒤에는 scheme의 범위를 벗어날 수 있기 때문이다. 이를 보완하는 algebraic space는 scheme보다 약간 넓은 부류로서, scheme을 étale 동치관계로 나눈 quotient를 포함하고 하강에 대해 닫혀 있다. 따라서 이 전략을 정식화하기 전에 algebraic space를 먼저 정의한다.
+이제 우리는 예고한 것과 같이 stack 위에 대수기하학적 성질들을 부여한다. 혹은 이미 scheme에서 다뤘듯, 이는 stack morphism에 대수기하학적 성질을 부여하는 것으로 해결할 수 있다. 우리 전략은 fiber product를 이용하는 것이며, 이것이 이번 글의 첫 정의가 stack들의 fiber product였던 이유이다.
+
+Scheme morphism의 대부분의 성질 $P$는 base change에 대하여 닫혀있다. 즉, 임의의 $f:X\rightarrow Y$가 성질 $P$를 갖는다면, 임의의 scheme $T$와 morphism $T\rightarrow Y$에 대한 base change morphism $f_T:X\times_YT\rightarrow T$ 또한 그러하다. 거꾸로 만일 $f_T$가 <em-ko>모든</em-ko> scheme $T$와 morphism $T\rightarrow Y$에 대해 성질 $P$를 만족한다면, $T=Y$이고 $T\rightarrow Y$가 $\id_Y$인 경우로 두어 $f_T=f$가 성질 $P$를 갖는다는 것을 알 수 있다.
+
+우리는 이를 아이디어 삼아 stack morphism $f:\mathcal{X}\rightarrow \mathcal{Y}$의 성질을 scheme morphism의 성질과 base change를 사용하여 정의할 것이다. 즉, 아이디어는 임의의 scheme $T$와 morphism $T\rightarrow \mathcal{Y}$에 대하여, base change $f_T:\mathcal{X}\times_\mathcal{Y}T\rightarrow T$가 scheme morphism이고 *scheme morphism의 성질* $P$를 가지면, $f$가 *stack morphism의 성질* $P$를 가진다고 정의하는 것이다.
+
+문제는 base change의 source로 scheme만을 허용하면 범위가 지나치게 좁다는 것이다. [\[스킴\] §군 스킴, ⁋예시 15](/ko/math/scheme_theory/group_schemes#ex15)에서 보았듯, $\mathbb{G}_m$-torsor는 이미 Zariski-locally trivial하지만 이는 Hilbert theorem 90에 의한 특수한 경우이고, 일반적인 $G$-torsor는 fppf-locally trivial하더라도 Zariski-locally trivial하지 않을 수 있다. Covering의 포함관계는 Zariski $\Rightarrow$ étale $\Rightarrow$ fppf이므로 fppf topology가 가장 강하고, étale topology는 Zariski topology에 가장 가까운 확장이다. 따라서 먼저 étale covering을 따라 국소적으로 scheme인 sheaf를 허용하는 것이 자연스럽다. 이러한 sheaf는 전역적으로 scheme일 필요가 없으며, 구체적으로 scheme $U$을 étale 동치관계 $R\rightrightarrows U$으로 나눈 sheaf quotient $U/R$은 scheme이 아닐 수 있다. 이를 보완하는 algebraic space는 scheme보다 약간 넓은 부류로서, scheme을 étale 동치관계로 나눈 quotient를 포함하고 하강에 대해 닫혀 있다. 따라서 이 전략을 정식화하기 전에 algebraic space를 먼저 정의한다.
 
 ::: 정의 3
 Site $(\Sch, \et)$ ([§그로텐디크 위상, ⁋예시 8](/ko/math/stacks/grothendieck_topology#ex8)) 위의 sheaf $F:\Sch^\op \rightarrow \Set$이 *algebraic space<sub>대수적 공간</sub>*라는 것은 다음 두 조건을 만족하는 것이다.
