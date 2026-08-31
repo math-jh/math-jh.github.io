@@ -11,15 +11,14 @@ sidebar:
 date: 2026-08-30
 weight: 2
 
-published: false
 
 ---
 
 우리가 다룰 stack은 본질적으로 moduli problem에서 온 것으로, 이러한 문제의 대표적인 예시는 [\[대수적 위상수학\] §분류공간, ⁋정리 8](/ko/math/algebraic_topology/classifying_spaces#thm8)에서 살펴본, 위상공간 $X$ 위의 principal $G$-bundle, 혹은 rank $r$의 vector bundle 등을 분류하는 문제이다. 우리가 [\[스킴\] §점함자](/ko/math/scheme_theory/functor_of_points)에서 도입한 functor of points의 관점으로 얻는 가장 좋은 사실은 이 문제의 대수기하학적 형태에서 이러한 종류의 대응
 
-$$T\mapsto F(T): \Sch^\op\rightarrow \Set;\qquad T\mapsto \{\text{principal $G$-bundles over $T$}\}$$
+$$F:\Sch^\op\rightarrow \Set;\qquad T\mapsto \{\text{principal $G$-bundles over $T$}\}$$
 
-을 functor 그 자체로 생각한 후, 이 functor가 실제로 scheme에 의해 represent되는지를 살펴볼 수 있다는 것이다. 그러나 이 식 자체는 잘 정의된 functor가 아닌데, 핵심적인 이유는 이 사상의 functoriality를 보이기 위해서는 사상 $f:Y\rightarrow X$에 대한 bundle의 pullback $f^\ast P$를 이용하여 $X$ 위의 bundle을 $Y$ 위로 옮겨와야 하지만, pullback bundle 자체가 태생부터 unique isomorphism에 대해서만 유일하게 결정되기 때문이다.
+을 functor 그 자체로 생각한 후, 이 functor가 실제로 scheme에 의해 represent되는지를 살펴볼 수 있다는 것이다. 그러나 이 식 자체는 잘 정의된 functor가 아닌데, 핵심적인 이유는 이 대응의 functoriality를 보이기 위해서는 morphism $f:Y\rightarrow X$에 대한 bundle의 pullback $f^\ast P$를 이용하여 $X$ 위의 bundle을 $Y$ 위로 옮겨와야 하지만, pullback bundle 자체가 태생부터 unique isomorphism에 대해서만 유일하게 결정되기 때문이다.
 
 위상수학에서 이를 해결하는 방식은 간단했다. 위와 같은 naive한 대응 대신, $\hTop$에서 모든 것을 해결한다. 즉 다음의 대응
 
@@ -29,7 +28,7 @@ $$X\mapsto \{\text{principal $G$-bundles over $X$}\}/{\cong}$$
 
 $$[X,\B G]\xrightarrow{\sim}\{\text{principal $G$-bundles over $X$}\}/{\cong};\qquad [f]\mapsto[f^\ast\E G]$$
 
-를 준다는 것이었다. 이를 작동하게 하는 것이 $\E G$가 contractible이라는 조건으로, 두 classifying map의 pullback이 isomorphic하면 그 bundle에서 $\E G$로 가는 두 $G$-equivariant map이 homotopic하고, 따라서 두 classifying map도 homotopic하다. 즉 이 분류정리는 bundle isomorphism과 사상 사이의 homotopy를 각각 동치관계로 죽인 뒤 얻은 두 집합이 같다는 명제이다.
+를 준다는 것이었다. 이를 작동하게 하는 것이 $\E G$가 contractible이라는 조건으로, 두 classifying map의 pullback이 isomorphic하면 그 bundle에서 $\E G$로 가는 두 $G$-equivariant map이 homotopic하고, 따라서 두 classifying map도 homotopic하다. 즉 이 분류정리는 bundle isomorphism과 morphism 사이의 homotopy를 각각 동치관계로 죽인 뒤 얻은 두 집합이 같다는 명제이다.
 
 문제는 대수기하학의 언어는 위상수학의 언어보다 rigid하여 이와 같이 homotopy를 담아줄 수 없다는 것에 있다. 이에 대한 해결책은 isomorphism을 죽이지 않고 모두 살려두는 것이며, 이로 인해 moduli functor $F$는 이제 $\Set$-valued가 아닌 $\Grpd$-valued가 된다.
 
@@ -51,11 +50,11 @@ Category $\mathcal{G}$가 *groupoid<sub>준군</sub>*라는 것은 $\mathcal{G}$
 다음은 우리가 자세히 살펴볼 groupoid의 예시들이다.
 
 1. 고정된 scheme $T$에 대하여, $T$ 위의 line bundle들을 대상으로 하고 line bundle 사이의 $\mathcal{O}_T$-module들 사이의 isomorphism을 morphism으로 하는 category는 groupoid이며, 각 대상 $\mathcal{L}$의 automorphism group은 $\Aut(\mathcal{L})=\Gamma(T, \mathcal{O}_T)^\ast=\mathbb{G}_m(T)$이다. 그럼 위와 같은 식으로 이 groupoid의 isomorphism class들의 집합을 얻어내면 그것이 정확히 Picard group $\Pic(T)$가 되며, 이는 automorphism group $\mathbb{G}_m(T)$의 정보를 잊어버리는 것이다.
-2. 또 다른 친숙한 예시는 위상공간 $X$의 *fundamental groupoid* $\Pi_1(X)$이다. ([\[대수적 위상수학\] §호모토피, ⁋정의 11](/ko/math/algebraic_topology/homotopy#def11)) 이는 점을 대상으로, 경로의 homotopy class를 morphism으로 하는 category이며, 이 때 한 점에서의 automorphism group이 정확히 fundamental group $\pi_1(X,x)$가 된다.
-3. 우리의 이야기 흐럼에서 자명한 예시로, 임의의 functor $F:\mathcal{C}^\op \rightarrow \Set$은 각 $T$에 discrete groupoid $F(T)$을 주는 특수한 경우이다. 즉, $\Set$-valued functor는 $\Grpd$-valued functor의 특수한 예시이다.
+2. 또 다른 친숙한 예시는 위상공간 $X$의 *fundamental groupoid* $\Pi_1(X)$이다. ([\[대수적 위상수학\] §호모토피, ⁋정의 11](/ko/math/algebraic_topology/homotopy#def11)) 이는 점을 대상으로, path의 homotopy class를 morphism으로 하는 category이며, 이 때 한 점에서의 automorphism group이 정확히 fundamental group $\pi_1(X,x)$가 된다.
+3. 우리의 이야기 흐름에서 자명한 예시로, 임의의 functor $F:\mathcal{C}^\op \rightarrow \Set$은 각 $T$에 discrete groupoid $F(T)$을 주는 특수한 경우이다. 즉, $\Set$-valued functor는 $\Grpd$-valued functor의 특수한 예시이다.
 :::
 
-특히 첫째 예시가 우리가 주로 살펴볼 대상이다. 일반적으로 $\Pic(T)$에는 nontrivial line bundle $\mathcal{L}$이 있을 수 있지만, line bundle의 정의에 의하여 $\mathcal{L}$은 <em-ko>국소적으로는</em-ko> trivial하다. [\[스킴\] §충실평탄하강, ⁋정리 11](/ko/math/scheme_theory/faithfully_flat_descent#thm11)에서 보았듯, covering 위의 local trivial line bundle들과 겹침 위에서 이들을 잇는 isomorphism들을 descent datum으로 주면 effective descent에 의하여 하나의 global line bundle이 얻어진다. [\[스킴\] §군 스킴, ⁋예시 15](/ko/math/scheme_theory/group_schemes#ex15)의 $\mathbb{G}_m$-torsor를 붙이는 transition data가 바로 이러한 isomorphism들이다. 따라서 국소적으로는 모두 trivial해 보이는 line bundle들을 구별하려면 이 isomorphism들을 잊지 않고 기록해야 한다.
+특히 첫째 예시가 우리가 주로 살펴볼 대상이다. 일반적으로 $\Pic(T)$에는 nontrivial line bundle $\mathcal{L}$이 있을 수 있지만, line bundle의 정의에 의하여 $\mathcal{L}$은 locally trivial하다. [\[스킴\] §충실평탄하강, ⁋정리 11](/ko/math/scheme_theory/faithfully_flat_descent#thm11)에서 보았듯, covering 위의 local trivial line bundle들과 겹침 위에서 이들을 잇는 isomorphism들을 descent datum으로 주면 effective descent에 의하여 하나의 global line bundle이 얻어진다. [\[스킴\] §군 스킴, ⁋예시 15](/ko/math/scheme_theory/group_schemes#ex15)의 $\mathbb{G}_m$-torsor를 붙이는 transition data가 바로 이러한 isomorphism들이다. 따라서 모두 locally trivial해 보이는 line bundle들을 구별하려면 이 isomorphism들을 잊지 않고 기록해야 한다.
 
 ## 유사함자
 
@@ -99,7 +98,7 @@ Category $\mathcal{C}$ 위의 *pseudofunctor<sub>유사함자</sub>* $F:\mathcal
 > 이 성립한다.
 :::
 
-정의 3의 자료들과 조건들은 다음과 같이 다이어그램으로 시각화할 수 있다. 우선 조건 3의 natural isomorphism $\varepsilon_{f,g}$와 $\eta_U$는 각각 다음의 diagram이 나타내는 두 경로 사이의 2-morphism으로 나타난다.
+정의 3의 자료들과 조건들은 다음과 같이 다이어그램으로 시각화할 수 있다. 우선 조건 3의 natural isomorphism $\varepsilon_{f,g}$와 $\eta_U$는 각각 다음의 diagram이 나타내는 두 path 사이의 2-morphism으로 나타난다.
 
 {% diagram Math/Stacks/Fibered_Categories_and_Stacks-1.svg width="29.13em" alt="합성 동형과 항등 동형" %}
 
@@ -109,7 +108,7 @@ Compatibility에서 등장하는 $\ast$는 $2$-morphism들의 horizontal composi
 
 이 commute함을 뜻하고, 둘째 등식은 다음의 diagram
 
-{% diagram Math/Stacks/Fibered_Categories_and_Stacks-3.svg width="25.28em" alt="단위 정합성" %}
+{% diagram Math/Stacks/Fibered_Categories_and_Stacks-3.svg width="25.28em" alt="unit coherence" %}
 
 들이 각각 commute함을 뜻하는 것이다. 만일 모든 $\varepsilon_{f, g}$와 $\eta_U$이 항등사상이라면, $F$는 pseudofunctor에 그치지 않고  통상적인 functor $\mathcal{C}^\op \rightarrow \Grpd$이 되며, 이 경우를 *strict* functor라 부른다. 
 
@@ -122,7 +121,7 @@ Pseudofunctor는 presheaf $\mathcal{C}^\op\rightarrow \Set$을 일반화하는 �
 기본적인 아이디어는 다음과 같다. 앞서 우리는 각 대상 $U$마다 groupoid $F(U)$을 따로 두었는데, 이 대신 모든 $F(U)$의 대상을 하나의 category $\mathcal{F}$에 모은다. 여기에서 원래의 $F(U)$들을 복원하기 위해서는 각 대상이 어떤 $U$ 위에 놓이는지를 보는 projection functor $P: \mathcal{F}\rightarrow \mathcal{C}$가 필요하다. 이 관점의 핵심 아이디어는 pullback $f^\ast$가 $\mathcal{F}$에서의 *Cartesian morphism*으로 들어간다는 것으로, 이 Cartesian morphism의 universal property가 바로 위에서의 isomorphism의 선택을 숨겨두고 있는 데이터이다.
 
 ::: 정의 4
-Functor $P:\mathcal{F}\rightarrow \mathcal{C}$를 고정하자. $\mathcal{F}$의 morphism $\varphi: \xi\rightarrow \eta$가 $\mathcal{C}$의 morphism $f: U\rightarrow V$의 *lift*라는 것은 $P(\varphi)=f$인 것이다. 이 때 $f$의 lift $\varphi$가 *cartesian<sub>데카르트</sub> 사상* (혹은 *cartesian lift*)이라는 것은 다음의 universal property를 만족하는 것이다.
+Functor $P:\mathcal{F}\rightarrow \mathcal{C}$를 고정하자. $\mathcal{F}$의 morphism $\varphi: \xi\rightarrow \eta$가 $\mathcal{C}$의 morphism $f: U\rightarrow V$의 *lift*라는 것은 $P(\varphi)=f$인 것이다. 이 때 $f$의 lift $\varphi$가 *cartesian morphism<sub>데카르트 사상</sub>* (혹은 *cartesian lift*)이라는 것은 다음의 universal property를 만족하는 것이다.
 
 > $\mathcal{F}$의 임의의 대상 $\zeta$와 morphism $\psi:\zeta \rightarrow \eta$, 그리고 $h: P(\zeta)\rightarrow U$가 $f\circ h=P(\psi)$를 만족할 때마다, $h$의 lift이자 $\varphi\circ \chi=\psi$를 만족하는 morphism $\chi:\zeta \rightarrow \xi$가 유일하게 존재한다.
 :::
@@ -134,7 +133,7 @@ Functor $P:\mathcal{F}\rightarrow \mathcal{C}$를 고정하자. $\mathcal{F}$의
 그럼 이 Cartesian morphism의 보편성은 이 조건을 만족하는 $\xi$가 존재한다면 unique isomorphism에 대해 유일하게 결정되며, 이러한 방식으로 $\varepsilon$과 $\eta$를 숨겨둔 것이다. 그럼 우리는 이 $\xi$을 $f^\ast \eta$로 적고 $\eta$의 $f$를 따른 *pullback*이라 부른다. 이제 모든 morphism이 이런 pullback으로 분해되고 각 fiber가 groupoid가 되도록 요구하면 *category fibered in groupoids*의 개념을 얻는다.
 
 ::: 정의 5
-Functor $P:\mathcal{F} \rightarrow \mathcal{C}$가 *category fibered in groupoids*라는 것은 다음 두 조건을 만족하는 것이다.
+Functor $P:\mathcal{F} \rightarrow \mathcal{C}$가 *category fibered in groupoids<sub>준군값 올범주</sub>*라는 것은 다음 두 조건을 만족하는 것이다.
 
 1. 임의의 morphism $f: U \rightarrow V$와 $V$ 위의 대상 $\eta$에 대하여, $f$의 lift이자 공역이 $\eta$인 cartesian morphism $\varphi:\xi \rightarrow \eta$이 존재한다.
 2. $\mathcal{F}$의 모든 morphism이 cartesian이다.
@@ -159,7 +158,7 @@ CFG $P:\mathcal{F} \rightarrow \mathcal{C}$에 대하여, 다음이 성립한다
 
 2. Cleavage를 고정하자. 그럼 우선 $\eta\in \mathcal{F}(V)$마다 cartesian lift $\varphi_\eta:f^\ast \eta\rightarrow\eta$가 주어져 있다. 이제 $\mathcal{F}(V)$의 morphism $\beta:\eta \rightarrow \eta'$에 대하여, 합성 $\beta\circ \varphi_\eta:f^\ast \eta \rightarrow \eta'$과 $\eta$의 cartesian morphism $\varphi_{\eta'}:f^\ast \eta' \rightarrow \eta'$ 및 $h=\id_U$에 cartesian morphism의 universal property를 적용하면 $\varphi_{\eta'}\circ \theta=\beta\circ \varphi_\eta$이고 $P(\theta)=\id_U$인 $\theta:f^\ast \eta \rightarrow f^\ast \eta'$이 유일하게 정해지고, 따라서 이를 $f^\ast\beta$로 정의할 수 있다. 그럼 유일성에 의해 $f^\ast(\beta'\circ \beta)=f^\ast \beta'\circ f^\ast \beta$과 $f^\ast \id=\id$임을 쉽게 보일 수 있으므로 $f^\ast$은 functor이다.
 
-    만일 위에서 다른 cleavage $\widetilde{\varphi}_\eta:\widetilde{f^\ast \eta}\rightarrow\eta$을 골랐다면, 두 cartesian morphism의 universal property로 $\widetilde{f^\ast \eta}\cong f^\ast \eta$인 isomorphism형이 $\eta$에 대하여 자연스럽게 존재한다.
+    만일 위에서 다른 cleavage $\widetilde{\varphi}_\eta:\widetilde{f^\ast \eta}\rightarrow\eta$을 골랐다면, 두 cartesian morphism의 universal property로 $\widetilde{f^\ast \eta}\cong f^\ast \eta$인 isomorphism이 $\eta$에 대하여 자연스럽게 존재한다.
 
     마지막으로 $f^\ast g^\ast \eta \rightarrow g^\ast \eta \rightarrow \eta$의 합성은 $g\circ f$ 위에 놓인 cartesian morphism이고 $(g\circ f)^\ast \eta \rightarrow \eta$ 또한 그러하므로, universal property에 의해 isomorphism $f^\ast g^\ast \eta\cong(g\circ f)^\ast \eta$을 얻는다.
 :::
@@ -231,7 +230,7 @@ CFG $P:\mathcal{F} \rightarrow \mathcal{C}$과 covering family $\{f_i: U_i \righ
 으로서 $U_{ijk}$ 위에서 *cocycle 조건* $\varphi_{ik}\vert_{U_{ijk}}=\varphi_{ij}\vert_{U_{ijk}}\circ \varphi_{jk}\vert_{U_{ijk}}$을 만족하는 것이다. 
 :::
 
-Scheme에서의 descent와 마찬가지로, 만일 어떤 대상 $x\in \mathcal{F}(U)$와 isomorphism $\psi_i: x\vert_{U_i}\rightarrow x_i$들이 존재하여, 각각의 $U_{ij}$ 위에서 $\varphi_{ij}\circ (\psi_j\vert_{U_{ij}})_\psi_i\vert_{U_{ij}}$이 성립하도록 할 수 있다면 이를 *effective* descent라 부른다. 즉 descent datum을 통해 이들을 이어붙였을 때 실제로 존재하는 원소 $x$가 얻어지는 것이다. Faithfully flat descent에서는 module에 대한 descent datum이 항상 effective였지만 ([\[스킴\] §충실평탄하강, ⁋정리 6](/ko/math/scheme_theory/faithfully_flat_descent#thm6)), 일반적인 CFG에서는 effectivity가 별도의 조건이다. 이 두 조건을 합하여 stack을 정의한다.
+Scheme에서의 descent와 마찬가지로, 만일 어떤 대상 $x\in \mathcal{F}(U)$와 isomorphism $\psi_i: x\vert_{U_i}\rightarrow x_i$들이 존재하여, 각각의 $U_{ij}$ 위에서 $\varphi_{ij}\circ(\psi_j\vert_{U_{ij}})=\psi_i\vert_{U_{ij}}$이 성립하도록 할 수 있다면 이를 *effective* descent라 부른다. 즉 descent datum을 통해 이들을 이어붙였을 때 실제로 존재하는 원소 $x$가 얻어지는 것이다. Faithfully flat descent에서는 module에 대한 descent datum이 항상 effective였지만 ([\[스킴\] §충실평탄하강, ⁋정리 6](/ko/math/scheme_theory/faithfully_flat_descent#thm6)), 일반적인 CFG에서는 effectivity가 별도의 조건이다. 이 두 조건을 합하여 stack을 정의한다.
 
 ::: 정의 12
 Site $(\mathcal{C}, \tau)$ 위의 CFG $P:\mathcal{F} \rightarrow \mathcal{C}$에 대하여,
@@ -318,13 +317,9 @@ $\Sch$ (또는 $\Sch_{/S}$) 위의 fpqc site에서, $\mathbb{G}_m$-torsor의 cla
 다음으로 object descent를 확인한다. Covering family $\{T_i \rightarrow T\}$ 위의 line bundle $\mathcal{L}_i$들과 overlap 위의 isomorphism $\varphi_{ij}$들이 descent datum을 이룬다고 하자. [정리 15](#thm15)에 의해 이 datum을 실현하는 quasi-coherent sheaf $\mathcal{F}$와 isomorphism $\mathcal{F}\vert_{T_i}\cong \mathcal{L}_i$들이 존재한다. [\[스킴\] §충실평탄하강, ⁋명제 7](/ko/math/scheme_theory/faithfully_flat_descent#prop7)에 의해 locally free of rank $1$인 성질은 fpqc covering을 따라 내려오므로 $\mathcal{F}$도 invertible하다. 따라서 모든 descent datum이 $\mathcal{L}(T)$ 안에서 effective이고, $\mathcal{L}\cong \bB\mathbb{G}_m$은 stack이다.
 :::
 
-[정리 18](#thm18)은 stack 이론의 출발점을 압축한다. Line bundle은 isomorphism class의 집합 $\Pic$으로는 sheaf로 분류되지 않지만, automorphism $\mathbb{G}_m$을 함께 기억하는 groupoid 값 functor로 보면 stack $\bB\mathbb{G}_m$으로 완벽히 분류된다. 그 stack 성질은 [정리 15](#thm15)의 quasi-coherent sheaf descent에서 invertible이라는 국소 성질이 faithfully flat base change로 내려온다는 [\[스킴\] §충실평탄하강, ⁋명제 7](/ko/math/scheme_theory/faithfully_flat_descent#prop7)을 더하여 따라온다. 더 일반적인 group $G$에 대한 $\bB G$이나 [예시 9](#ex9)의 moduli CFG $\mathcal{M}_g$이 stack인지, 나아가 그것이 algebraic stack이라는 더 강한 기하학적 조건을 만족하는지는 같은 descent 원리를 토대로 이후의 글에서 전개한다.
-
 ---
 
 **참고문헌**
 
-**[Vis]** A. Vistoli, *Notes on Grothendieck topologies, fibered categories and descent theory*. In *Fundamental algebraic geometry: Grothendieck's FGA explained*, Mathematical Surveys and Monographs, American Mathematical Society, 2005.  
-**[Ols]** M. Olsson, *Algebraic spaces and stacks*. American Mathematical Society Colloquium Publications, 2016.  
 **[FGA]** B. Fantechi, L. Göttsche, L. Illusie, S. Kleiman, N. Nitsure, A. Vistoli, *Fundamental algebraic geometry: Grothendieck's FGA explained*. Mathematical Surveys and Monographs, American Mathematical Society, 2005.  
 **[Stacks]** The Stacks Project Authors, *The Stacks Project*. Available [online](https://stacks.math.columbia.edu/).
