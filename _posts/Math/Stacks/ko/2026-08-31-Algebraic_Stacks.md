@@ -16,7 +16,7 @@ drift_needed: true
 
 ---
 
-앞선 글에서 우리는 기존에 생각하던 naive한 moduli problem을 $\Grpd$-valued functor로 만들어서, 각 대상 $T$ 위에 $T$-family들과 그들 사이의 isomorphism으로 이루어진 groupoid $\mathcal{X}(T)$를 대응시켰다. 기존 (점함자)와 마찬가지로 우리는 이를 $\mathcal{X}$의 $T$-point들의 모임으로 생각할 것이지만, 우선 해결해야 할 문제들이 몇 가지 있었는데, 그 중 하나는 morphism $u: T'\rightarrow T$에 대한 pullback이 unique isomorphism까지만 정해지므로, 실제 pullback functor $u^\ast: \mathcal{X}(T)\rightarrow \mathcal{X}(T')$를 써 주기 위해서는 각각의 pullback의 representative를 고르는 선택, 즉 cleavage가 필요했다는 것이다. 때문에 합성가능한 morphism $T''\overset{v}{\rightarrow}T'\overset{u}{\rightarrow}T$에 대하여, pullback을 하는 두 경로가 다를 수 있었고 이를 해결하기 위해 우리는 canonical isomorphism
+앞선 글에서 우리는 기존에 생각하던 naive한 moduli problem을 $\Grpd$-valued functor로 만들어서, 각 대상 $T$ 위에 $T$-family들과 그들 사이의 isomorphism으로 이루어진 groupoid $\mathcal{X}(T)$를 대응시켰다. 기존 ([\[스킴\] §스킴 사이의 사상, ⁋정의 9](/ko/math/scheme_theory/morphism_of_schemes#def9))과 마찬가지로 우리는 이를 $\mathcal{X}$의 $T$-point들의 모임으로 생각할 것이지만, 우선 해결해야 할 문제들이 몇 가지 있었는데, 그 중 하나는 morphism $u: T'\rightarrow T$에 대한 pullback이 unique isomorphism까지만 정해지므로, 실제 pullback functor $u^\ast: \mathcal{X}(T)\rightarrow \mathcal{X}(T')$를 써 주기 위해서는 각각의 pullback의 representative를 고르는 선택, 즉 cleavage가 필요했다는 것이다. 때문에 합성가능한 morphism $T''\overset{v}{\rightarrow}T'\overset{u}{\rightarrow}T$에 대하여, pullback을 하는 두 경로가 다를 수 있었고 이를 해결하기 위해 우리는 canonical isomorphism
 
 $$v^\ast u^\ast x\xrightarrow{\sim}(u\circ v)^\ast x$$
 
@@ -105,9 +105,19 @@ Site $(\Sch, \et)$ ([§그로텐디크 위상, ⁋예시 8](/ko/math/stacks/grot
 
 첫째 조건은 앞서 설명한 아이디어와 거의 유사한 것으로, 이를 위와 같이 이름붙이면 우리의 나중 전략은 stack morphism을 algebraic space로 represent되는 것만을 본다는 식으로 줄여 말할 수 있을 것이다.
 
-둘째 조건의 morphism $U\rightarrow F$를 $F$의 *étale atlas*라 부른다. 직관적으로 이는 scheme $U$가 $F$를 완전하게 덮으며, 이 겹침을 기록하는 동치관계로 $U$를 나누면 $F$가 복원된다는 것이다. 이를 더 구체적으로 쓰기 위해 두 scheme $R, U$와 이들 사이의 두 morphism $f,g:R\rightarrow U$가 주어졌다 하자. 만일 임의의 scheme $T$에 대하여, $(f,g): R(T)\rightarrow U(T)\times U(T)$가 injective이고, 그 image가 $U(T)$ 위에 equivalence relation을 정의하면 우리는 이 데이터 $R\rightrightarrows U$이 scheme들 사이의 equivalence relation이라 부른다. 이제 $R=U\times_F U$로 두고 $f=\pr_1$, $g=\pr_2$이라 두면, 우선 첫째 조건에 의해 $R$은 scheme이며, $R(T)$의 원소는 $F(T)$에서 같은 image를 갖는 두 점 $u_1,u_2\in U(T)$의 쌍으로, 이 데이터 $R\rightrightarrows U$은 scheme들의 동치관계이다. 또, $f,g$는 $U\rightarrow F$의 base change이므로 étale morphism이다. 이로부터 $U$는 $F$를 덮는 scheme chart를 제공하고, $R$은 이 chart의 중복을 어떻게 식별해야 하는지를 기록하는 것이며, 이로부터 $F$는 sheaf quotient $U/R$로 복원된다. Locally 임의의 scheme $T$와 점 $x\in F(T)$에 대하여 $U\rightarrow F$를 $x:T\rightarrow F$를 따라 base change하면 étale surjection $U\times_F T\rightarrow T$을 얻고, 이로부터 $F$의 어떠한 étale covering $\{T_i\rightarrow T\}$이 존재하여, 이 위에서 각 $x\vert_{T_i}$가 $U(T_i)$의 점으로 lift되도록 할 수 있다. 이런 의미에서 $F$는 $U$로 étale-locally 덮이며, 그 overlap을 $R$이 기록하는 것이다.
+둘째 조건의 morphism $U\rightarrow F$를 $F$의 *étale atlas*라 부른다. 직관적으로 이는 scheme $U$가 $F$를 완전하게 덮으며, 이 겹침을 기록하는 동치관계로 $U$를 나누면 $F$가 복원된다는 것이다. 이를 더 구체적으로 쓰기 위해 두 scheme $R, U$와 이들 사이의 두 morphism $f,g:R\rightarrow U$가 주어졌다 하자. 만일 임의의 scheme $T$에 대하여, 
 
-정의에 의해 모든 scheme은 algebraic space이므로 이는 scheme의 generalization이며, 이들은 normal 혹은 quasi-projective 등의 가정 아래에서 흔히 일치한다. 우리는 이에 대한 이론을 자세히 전개하는 대신, 이것이 scheme의 약한 generalization이라는 정도만 기억하고 우리의 원래 목표로 돌아가기로 한다.
+$$(f,g): R(T)\rightarrow U(T)\times U(T)$$
+
+가 injective이고, 그 image가 $U(T)$ 위에 equivalence relation을 정의하면 우리는 이 데이터 $R\rightrightarrows U$이 scheme들 사이의 *equivalence relation*이라 부른다. 
+
+그럼 étale atlas $p: U\rightarrow F$는 다음과 같은 방식으로 동치관계를 준다. 우선 두 개의 $p: U\rightarrow F$를 곱하여 $R=U\times_F U$로 둔다. [정의 3](#def3)의 첫째 조건에 의해 $R$은 scheme으로서 존재한다. 그럼 명시적으로
+
+$$(U\times_FU)(T)=\{(x,y)\in U(T)\times U(T)\mid p(x)=p(y)\}$$
+
+이므로 이는 $p$에 의해 같은 것으로 취급되는 $U(T)$의 원소들을 모아둔 동치관계가 되고, 자명한 inclusion $R(T)\hookrightarrow U(T)\times U(T)$을 통해 실제로 $U(T)\times U(T)$의 부분집합이므로 $R(T)$가 scheme들 사이의 equivalence relation을 준다. 따라서, 직관적으로 $U$는 $F$를 덮는 scheme chart를 제공하고, $R$은 이 chart의 중복을 어떻게 식별해야 하는지를 기록하는 것이며, 이로부터 $F$는 sheaf quotient $U/R$로 복원된다. 국소적으로는 임의의 scheme $T$와 점 $x\in F(T)$에 대하여 $U\rightarrow F$를 $x:T\rightarrow F$를 따라 base change하면 étale surjection $U\times_F T\rightarrow T$을 얻고, 이로부터 $F$의 어떠한 étale covering $\{T_i\rightarrow T\}$이 존재하여, 이 위에서 각 $x\vert_{T_i}$가 $U(T_i)$의 점으로 lift되도록 할 수 있게 된다. 
+
+정의에 의해 모든 scheme은 algebraic space이므로 이는 scheme의 일반화이며, 이들은 normal 혹은 quasi-projective 등의 가정 아래에서 흔히 일치한다. 우리는 이에 대한 이론을 자세히 전개하는 대신, 이것이 scheme의 약한 일반화라는 정도만 기억하고 우리의 원래 목표로 돌아가기로 한다.
 
 ## 표현가능 사상
 
@@ -228,9 +238,15 @@ Atlas는 algebraic space에서와 마찬가지로 stack $\mathcal{X}$을 scheme 
 
 차이는 이 <em-ko>같은 것으로 취급</em-ko>하는 부분에 있다. Algebraic space는 $\Set$-valued functor로서 두 point가 같은 것이 정말로 같은 것이지만, DM stack은 $\Grpd$-valued functor로서 두 point를 잇는 isomorphism까지 기억한다. 이를 더 명시적으로 쓰자면, algebraic space에서는
 
-$$R(T)=(U\times_XU)(T)=\{(f,g)\in U(T)\times U(T)\mid p\circ f=p\circ g\}$$
+$$R(T)=(U\times_XU)(T)=\{(f,g)\in U(T)\times_S U(T)\mid p\circ f=p\circ g\}$$
 
-으로 정의되는 $R$을 atlas $p:U\rightarrow X$가 정의하는 equivalence relation으로 생각하고, 이것으로 $U$를 나눈 것을 $X$로 생각한다. 이때 $(s,t):R\rightarrow U\times_SU$는 monomorphism이므로 두 point $f,g$가 식별된다면 그 방법은 하나뿐이다. DM stack의 atlas $p:U\rightarrow\mathcal{X}$에 대하여 $R=U\times_\mathcal{X}U$는 algebraic space이지만, $(s,t):R\rightarrow U\times_SU$는 일반적으로 monomorphism이 아니다. $R$의 $T$-point는 $f,g:T\rightarrow U$와 isomorphism $\alpha:p\circ f\xrightarrow{\sim}p\circ g$를 기록하므로, 같은 $f,g$ 사이에 여러 $\alpha$가 있을 수 있고 $f=g$일 때 이들이 stabilizer를 이룬다. 즉 algebraic space에서 DM stack으로 넘어가면 식별할 point뿐 아니라 그 식별의 방법까지 기억하게 된다.
+으로 정의되는 $R$을 atlas $p:U\rightarrow X$가 정의하는 equivalence relation으로 생각하고, 이것으로 $U$를 나눈 것을 $X$로 생각한다. 여기서 핵심적인 것은 $R(T)$가 실제로 $U(T)\times_{S(T)}U(T)$의 <em-ko>부분집합</em-ko>이라는 것으로, 따라서 inclusion $R\hookrightarrow U\times_S U$ 위의 fiber는 한 점이거나 공집합이다. 반면 DM stack의 atlas $p:U\rightarrow\mathcal{X}$가 정의하는 집합
+
+$$R(T)=(U\times_\mathcal{X}U)(T)=U(T)\times_{\mathcal{X}(T)}U(T)=\{(f,g,\alpha)\mid \alpha: p\circ f\overset{\sim}{\rightarrow} p\circ g\}$$
+
+는 
+
+에 대하여 $R=U\times_\mathcal{X}U$는 algebraic space이지만, $(s,t):R\rightarrow U\times_SU$는 일반적으로 monomorphism이 아니다. $R$의 $T$-point는 $f,g:T\rightarrow U$와 isomorphism $\alpha:p\circ f\xrightarrow{\sim}p\circ g$를 기록하므로, 같은 $f,g$ 사이에 여러 $\alpha$가 있을 수 있고 $f=g$일 때 이들이 stabilizer를 이룬다. 즉 algebraic space에서 DM stack으로 넘어가면 식별할 point뿐 아니라 그 식별의 방법까지 기억하게 된다.
 
 이렇게 nontrivial automorphism을 각 $T$-point에서 담는 group이 stabilizer $\rAut_T(x)$이므로, 우리는 거꾸로 어떤 $S$-scheme $U$ 위에 group scheme $G$가 action할 때 이 action으로 $U$를 나누어 stack을 얻어낼 생각을 할 수 있다.
 
