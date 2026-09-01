@@ -145,7 +145,7 @@ $\mathcal{M}$이 Noetherian base 위에서 locally of finite type인 algebraic s
 
 ## 타원곡선의 moduli $\mathcal{M}_{1, 1}$
 
-앞서 도입한 두 보정을 한 예에서 동시에 관찰하기에 가장 좋은 대상이 절단을 가진 타원곡선의 moduli $\mathcal{M}_{1, 1}$이다. 이 stack의 거친 구조는 앞 글에서 quotient stack으로 실현한 바 있으며 ([§Algebraic stack과 quotient stack, ⁋예시 13](/ko/math/stacks/algebraic_stacks#ex13)), 여기에서는 그 automorphism 구조와 coarse moduli space를 정밀하게 분석한다.
+앞서 도입한 두 보정을 한 예에서 동시에 관찰하기에 가장 좋은 대상이 절단을 가진 타원곡선의 moduli $\mathcal{M}_{1,1}$이다. 이제 이 stack의 quotient presentation을 구성하고, automorphism 구조와 coarse moduli space를 정밀하게 분석한다.
 
 Characteristic $0$의 field $k$ 위에서 절단을 가진 타원곡선은 Weierstrass 방정식
 
