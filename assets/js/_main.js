@@ -80,9 +80,10 @@ $(function() {
       events: true // if true, emit custom events
     });
 
-    // Move the short gold glow continuously along the neutral TOC rail. The
-    // reader's progress from one h2 to the next is mapped to the distance
-    // between the matching TOC marker centres, including wrapped labels.
+    // Move the short gold glow continuously along the neutral TOC rail. Each
+    // marker represents the centre of its section (heading to next heading),
+    // and the rail endpoints represent the article start/end. Gumshoe's
+    // active item remains based on the section start.
     var tocMenu = document.querySelector("nav.toc .toc__menu");
     var tocProgressItems = tocMenu
       ? $(tocMenu).children("li").children("a").get().map(function(link) {
@@ -105,11 +106,14 @@ $(function() {
       : [];
 
     if (tocProgressItems.length > 0) {
-      var tocHeadingTops = [];
+      var tocSectionCenters = [];
       var tocMarkerCenters = [];
+      var tocProgressAnchors = [];
+      var tocRailAnchors = [];
       var tocProgressFrame = null;
       var tocMeasureFrame = null;
       var tocGlowHalfHeight = 1;
+      var tocContent = document.querySelector(".page__content");
 
       var updateTocProgress = function() {
         var probe = window.pageYOffset + 20; // match Gumshoe's activation offset
@@ -122,24 +126,24 @@ $(function() {
         tocProgressFrame = null;
 
         while (
-          current + 1 < tocHeadingTops.length &&
-          probe >= tocHeadingTops[current + 1]
+          current + 1 < tocProgressAnchors.length &&
+          probe >= tocProgressAnchors[current + 1]
         ) {
           current += 1;
         }
 
-        next = Math.min(current + 1, tocHeadingTops.length - 1);
-        span = tocHeadingTops[next] - tocHeadingTops[current];
+        next = Math.min(current + 1, tocProgressAnchors.length - 1);
+        span = tocProgressAnchors[next] - tocProgressAnchors[current];
 
         if (next !== current && span > 0) {
           progress = Math.max(
             0,
-            Math.min(1, (probe - tocHeadingTops[current]) / span)
+            Math.min(1, (probe - tocProgressAnchors[current]) / span)
           );
         }
 
-        markerY = tocMarkerCenters[current] +
-          (tocMarkerCenters[next] - tocMarkerCenters[current]) * progress;
+        markerY = tocRailAnchors[current] +
+          (tocRailAnchors[next] - tocRailAnchors[current]) * progress;
 
         tocMenu.style.setProperty("--toc-progress-y", markerY.toFixed(2) + "px");
         tocProgressItems.forEach(function(item, index) {
@@ -173,16 +177,35 @@ $(function() {
       var measureTocProgress = function() {
         var menuRect = tocMenu.getBoundingClientRect();
         var glowStyle = window.getComputedStyle(tocMenu, "::after");
+        var headingTops;
+        var contentTop;
+        var contentBottom;
 
         tocMeasureFrame = null;
         tocGlowHalfHeight = Math.max(1, parseFloat(glowStyle.height) / 2);
-        tocHeadingTops = tocProgressItems.map(function(item) {
+        headingTops = tocProgressItems.map(function(item) {
           return item.heading.getBoundingClientRect().top + window.pageYOffset;
+        });
+        contentTop = tocContent
+          ? tocContent.getBoundingClientRect().top + window.pageYOffset
+          : headingTops[0];
+        contentBottom = tocContent
+          ? tocContent.getBoundingClientRect().bottom + window.pageYOffset
+          : document.documentElement.scrollHeight;
+        tocSectionCenters = headingTops.map(function(top, index) {
+          var end = index + 1 < headingTops.length
+            ? headingTops[index + 1]
+            : Math.max(top, contentBottom);
+          return top + (end - top) / 2;
         });
         tocMarkerCenters = tocProgressItems.map(function(item) {
           var linkRect = item.link.getBoundingClientRect();
           return linkRect.top - menuRect.top + linkRect.height / 2;
         });
+        tocProgressAnchors = [contentTop]
+          .concat(tocSectionCenters, [contentBottom]);
+        tocRailAnchors = [0]
+          .concat(tocMarkerCenters, [tocMenu.offsetHeight]);
 
         requestTocProgress();
       };
@@ -201,7 +224,6 @@ $(function() {
       }
 
       if ("ResizeObserver" in window) {
-        var tocContent = document.querySelector(".page__content");
         if (tocContent) {
           var tocResizeObserver = new ResizeObserver(requestTocMeasure);
           tocResizeObserver.observe(tocContent);

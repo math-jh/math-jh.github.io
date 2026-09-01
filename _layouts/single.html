@@ -51,24 +51,28 @@ layout: default
         </header>
       {% endunless %}
 
-      <section class="page__content" itemprop="text">
+      <div class="page__notices">
         {% include revising-notice.html %}
         {% include translation-notice.html %}
         {% include ai-author-notice.html %}
-        {% if page.toc %}
-          <aside class="sidebar__right {% if page.toc_sticky %}sticky{% endif %}">
-            {% if page.toc %}
+      </div>
+
+      {% if page.toc %}
+        <div class="sidebar__right-slot">
+          <aside class="sidebar__right{% if page.url contains '/math/' %} sidebar__right--with-graph{% endif %}{% if page.toc_sticky %} sticky{% endif %}">
             <nav class="toc">
               <header><h4 class="nav__title"><span class="material-icons md-16" style="vertical-align:-.3em">toc</span> {{ page.toc_label | default: site.data.ui-text[lang].toc_label | default: "On this page" }}</h4></header>
               {% include toc.html lang=lang sanitize=true html=content h_min=1 h_max=6 class="toc__menu" skip_no_ids=true %}
             </nav>
-            {% endif %}
             {% if page.url contains '/math/' %}
             <div class="localgraph-side" id="localgraph-side" data-lang="{{ lang }}" data-self="{{ page.url }}"></div>
             <script src="/assets/js/vendor/force-graph/force-graph.min.js"></script>
             {% endif %}
           </aside>
-        {% endif %}
+        </div>
+      {% endif %}
+
+      <section class="page__content" itemprop="text">
         {{ content }}
         {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
       </section>

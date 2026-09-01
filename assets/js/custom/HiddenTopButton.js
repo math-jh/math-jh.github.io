@@ -1,28 +1,31 @@
-$(function(){
-  // When page loads, wait 3 seconds and hide all elements with .top_button class:
-  setTimeout(toggle, 3000);
-});
+(function () {
+  "use strict";
 
-var timer = null;
+  function initBackToTop() {
+    var backToTop = document.querySelector(".sidebar__top");
+    if (!backToTop) return;
 
-// General function for adding/removing the "hide" class.
-// This is used when the page first loads and each time
-// the mouse moves on the page. We're not calling toggle()
-// here because a flicker effect can happen which would leave
-// the elements showing instead of being hidden.
-function toggle(){
-  $('.top_button').toggleClass('hide');
-}
+    var framePending = false;
 
-$(window).on('mousemove', function(){
-  // When anywhere on page is moused over bring back .top_button
-  // elements for 3 seconds. Removing "hide" simply restores
-  // the original CSS & layout
-  $('.top_button').removeClass('hide');
-  
-  // Kill any previous timers
-  clearTimeout(timer);
-  
-  // Wait 3 seconds and hide again
-  timer = setTimeout(toggle, 3000)
-});
+    function updateVisibility() {
+      backToTop.classList.toggle("is-visible", window.scrollY >= window.innerHeight);
+      framePending = false;
+    }
+
+    function requestUpdate() {
+      if (framePending) return;
+      framePending = true;
+      window.requestAnimationFrame(updateVisibility);
+    }
+
+    window.addEventListener("scroll", requestUpdate, { passive: true });
+    window.addEventListener("resize", requestUpdate, { passive: true });
+    updateVisibility();
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initBackToTop, { once: true });
+  } else {
+    initBackToTop();
+  }
+})();

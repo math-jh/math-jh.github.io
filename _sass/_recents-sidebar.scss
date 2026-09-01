@@ -1,14 +1,9 @@
 /* ==========================================================================
-   Recents (recent posts / recent comments) in the right sidebar.
+   Recent posts / comments shared by the left navigation and category pages.
 
-   Desktop layout (>= $large): the sticky sidebar is split into three rows
-   anchored to the viewport — TOC at 0%, Recent posts at 50%, Recent comments
-   at 75%. Each section has a thin separator above its title; the list items
-   themselves carry no row separators.
-
-   Mobile (< $large): TOC stays inline above the article (default MM
-   behaviour). The recents block becomes a collapsible <details> toggle
-   ("최근 글/댓글" / "Recents").
+   On post pages, the right rail contains the document-level TOC and local
+   dependency graph. Its TOC grows with its contents instead of creating a
+   nested scrolling region.
    ========================================================================== */
 
 /* No dividers anywhere — neither between list items nor above section titles.
@@ -18,28 +13,45 @@
 }
 
 @media (min-width: 1024px) {
-  /* Plain flex column. The earlier `display: contents` approach on the
-     <details> wrapper + grid promotion didn't reliably flatten the two
-     recents blocks into separate grid rows in all browsers — they ended up
-     stuck inside one row. Doing it explicitly with margins is robust. */
-
-  .sidebar__right.sticky {
-    height: calc(100vh - 2em);
+  .layout--single .sidebar__right-slot {
+    position: absolute;
+    top: 0;
+    right: -1 * $right-sidebar-width-narrow;
+    width: $right-sidebar-width-narrow;
+    height: 100%;
+    margin: 0;
+    padding-left: 1em;
+    z-index: 10;
+  }
+  .layout--single .sidebar__right-slot > .sidebar__right {
+    position: sticky;
+    top: 2em;
+    float: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .layout--single .sidebar__right--with-graph.sticky {
+    min-height: calc(100vh - 7em);
     display: flex;
     flex-direction: column;
   }
-  /* Suppress the theme's clearfix pseudo so it doesn't become a stray flex
-     item with its own height contribution. */
-  .sidebar__right.sticky::after { display: none; }
-
+  .layout--single .sidebar__right--with-graph.sticky::after {
+    display: none;
+  }
   .sidebar__right.sticky > .toc {
-    flex: 0 0 33vh;          /* TOC anchored at top, 33vh tall */
-    min-height: 0;
-    overflow-y: auto;
+    overflow: visible;
     padding-right: 0.25rem;
   }
+  .layout--single .sidebar__right--with-graph.sticky > .toc {
+    margin-bottom: 2em;
+  }
   .sidebar__right.sticky .toc__menu {
-    max-height: none;        /* override theme's inline cap */
+    overflow: visible;
+    max-height: none;
+  }
+  .layout--single .sidebar__right--with-graph.sticky > .localgraph-side {
+    margin-top: auto;
   }
 
   .recents-wrapper {
@@ -50,10 +62,6 @@
   .recents-wrapper__body {
     display: flex !important;
     flex-direction: column !important;
-    /* Posts margin + gap must sum to a constant to keep the comments
-       block anchored. Currently: 6vh + 11vh = 17vh of vertical budget
-       between TOC bottom and comments header (minus the posts content
-       height). Adjust both in lockstep when retuning. */
     gap: 11vh;
     padding-top: 0;
   }
@@ -169,7 +177,7 @@
 /* Desktop-only spacing between category navigation and recents */
 @media (min-width: 1024px) {
   .nav__recents-section--posts {
-    margin-top: 6em;
+    margin-top: 3.5em;
   }
 }
 
@@ -266,9 +274,9 @@
       position: sticky;
       bottom: 2em;
       margin-top: 0;
-      // 바닥에서 10em 들어올린다. margin-bottom 은 슬랙을 넘으면 grid 행 높이를 키워버려
-      // 리프트 대신 아래 공간만 늘어나므로, 행 높이와 무관한 transform 으로 확실히 올린다.
-      transform: translateY(-10em);
+      // 화살표와 겹치지 않을 만큼만 바닥에서 들어 올린다. margin-bottom 은 슬랙을
+      // 넘으면 grid 행 높이를 키우므로, 행 높이와 무관한 transform 을 사용한다.
+      transform: translateY(-5em);
     }
 
     .nav__list { margin-bottom: 0; }
@@ -281,7 +289,7 @@
       line-height: 1.5;
     }
 
-    // 좌측에서 카테고리 nav 와 recents 를 벌리던 6em 상단 여백은 우측엔 불필요
+    // 좌측에서 카테고리 nav 와 recents 를 벌리는 상단 여백은 우측엔 불필요
     .nav__recents-section--posts { margin-top: 0; }
   }
 }
