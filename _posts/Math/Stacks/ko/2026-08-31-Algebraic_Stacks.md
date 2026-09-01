@@ -106,7 +106,7 @@ Site $(\Sch, \et)$ ([§그로텐디크 위상, ⁋예시 8](/ko/math/stacks/grot
 
 둘째 조건의 morphism $U\rightarrow F$를 $F$의 *étale atlas*라 부른다. 직관적으로 이는 scheme $U$가 $F$를 완전하게 덮으며, 이 겹침을 기록하는 동치관계로 $U$를 나누면 $F$가 복원된다는 것이다. 이를 더 구체적으로 쓰기 위해 두 scheme $R, U$와 이들 사이의 두 morphism $f,g:R\rightarrow U$가 주어졌다 하자. 만일 임의의 scheme $T$에 대하여, $(f,g): R(T)\rightarrow U(T)\times U(T)$가 injective이고, 그 image가 $U(T)$ 위에 equivalence relation을 정의하면 우리는 이 데이터 $R\rightrightarrows U$이 scheme들 사이의 equivalence relation이라 부른다. 이제 $R=U\times_F U$로 두고 $f=\pr_1$, $g=\pr_2$이라 두면, 우선 첫째 조건에 의해 $R$은 scheme이며, $R(T)$의 원소는 $F(T)$에서 같은 image를 갖는 두 점 $u_1,u_2\in U(T)$의 쌍으로, 이 데이터 $R\rightrightarrows U$은 scheme들의 동치관계이다. 또, $f,g$는 $U\rightarrow F$의 base change이므로 étale morphism이다. 이로부터 $U$는 $F$를 덮는 scheme chart를 제공하고, $R$은 이 chart의 중복을 어떻게 식별해야 하는지를 기록하는 것이며, 이로부터 $F$는 sheaf quotient $U/R$로 복원된다. 국소적으로는 임의의 scheme $T$와 점 $x\in F(T)$에 대하여 $U\rightarrow F$를 $x:T\rightarrow F$를 따라 base change하면 étale surjection $U\times_F T\rightarrow T$을 얻고, 이로부터 $F$의 어떠한 étale covering $\{T_i\rightarrow T\}$이 존재하여, 이 위에서 각 $x\vert_{T_i}$가 $U(T_i)$의 점으로 lift되도록 할 수 있다. 이런 의미에서 $F$는 $U$로 étale-locally 덮이며, 그 overlap을 $R$이 기록하는 것이다. 
 
-정의에 의해 모든 scheme은 algebraic space이므로 이는 scheme의 일반회이며, 이들은 normal 혹은 quasi-projective 등의 가정 아래에서 흔히 일치한다. 우리는 이에 대한 이론을 자세히 전개하는 대신, 이것이 scheme의 약한 일반화라는 정도만 기억하고 우리의 원래 목표로 돌아가기로 한다. 
+정의에 의해 모든 scheme은 algebraic space이므로 이는 scheme의 일반화이며, 이들은 normal 혹은 quasi-projective 등의 가정 아래에서 흔히 일치한다. 우리는 이에 대한 이론을 자세히 전개하는 대신, 이것이 scheme의 약한 일반화라는 정도만 기억하고 우리의 원래 목표로 돌아가기로 한다. 
 
 ## 표현가능 사상
 
@@ -151,38 +151,56 @@ $$\mathcal{X}\times_{\mathcal{X}\times_S \mathcal{X}}T\simeq \rIsom_T(x_1,x_2)$$
 ::: 증명
 우선 [정의 1](#def1)을 적용하면 $\mathcal{X}\times_{\mathcal{X}\times_S\mathcal{X}}T$의 $T'$-object는 $S$-morphism들
 
-$$t': T' \rightarrow T, \qquad x: T'\rightarrow \mathcal{X}$$
+$$t: T' \rightarrow T, \qquad x: T'\rightarrow \mathcal{X}$$
 
-그리고 $\mathcal{X}\times_S\mathcal{X}$에서의 isomorphism $\alpha: \Delta\circ x\rightarrow (x_1, x_2)\circ t'$에 의해 정의되는 것이며, 이 때 fiber product의 base scheme이 $\mathcal{X}\times_S\mathcal{X}$이므로 $\alpha$는 더 명시적으로 두 개의 isomorphism 
+그리고 $\mathcal{X}\times_S\mathcal{X}$에서의 isomorphism $\alpha: \Delta\circ x\rightarrow (x_1, x_2)\circ t$에 의해 정의되는 것이며, 이 때 fiber product의 base scheme이 $\mathcal{X}\times_S\mathcal{X}$이므로 $\alpha$는 더 명시적으로 두 개의 isomorphism 
 
-$$a: x\rightarrow x_1\circ t'=x_1\vert_{T'}, \qquad b:x\rightarrow x_2\circ t'=x_2\vert_{T'}$$
+$$a: x\rightarrow x_1\circ t=x_1\vert_{T'}, \qquad b:x\rightarrow x_2\circ t=x_2\vert_{T'}$$
 
-에 대하여 $\alpha=(a,b)$의 꼴로 쓸 수 있다. 이제 이 데이터 $(t',x, a,b)$를 $b\circ a^{-1}: =x_1\vert_{T'}\rightarrow x_2\vert_{T'}$
+에 대하여 $\alpha=(a,b)$의 꼴로 쓸 수 있다. 이제 이 데이터 $(t,x,a,b)$를 $b\circ a^{-1}:x_1\vert_{T'}\xrightarrow{\sim}x_2\vert_{T'}$로 보내면 이것이 functor
 
-이를 $b\circ a^{-1}:x_1\vert_{T'}\xrightarrow{\sim}x_2\vert_{T'}$로 보내면 $\rIsom_T(x_1,x_2)$로의 functor를 얻는다. 두 자료 $(x,a,b)$와 $(x',a',b')$가 같은 isomorphism으로 보내지면 $c=(a')^{-1}\circ a:x\xrightarrow{\sim}x'$이 이들 사이의 유일한 morphism이므로 이 functor는 fully faithful하고, 임의의 $\beta:x_1\vert_{T'}\xrightarrow{\sim}x_2\vert_{T'}$는 $(x,a,b)=(x_1\vert_{T'},\id,\beta)$에서 오므로 essentially surjective이다. 이 구성이 pullback과 호환되므로 위의 natural equivalence를 얻으며, 이로부터 (1)과 (2)가 동치이다.
+$$\mathcal{X}\times_{\mathcal{X}\times_S \mathcal{X}}T\rightarrow \rIsom_T(x_1,x_2)$$
 
-(1)을 가정하고 $S$-scheme들로부터의 두 morphism $x:T\rightarrow\mathcal{X}$과 $y:T'\rightarrow\mathcal{X}$을 잡자. 표준적인 graph 동형
+를 정의한다.
+
+우리 주장은 이 functor가 natural equivalence라는 것이다. 이를 확인하기 위해 우선 $\mathcal{X}\times_{\mathcal{X}\times_S \mathcal{X}}T$의 두 데이터 $(t,x,a,b)$와 $(t',x',a',b')$가 $\rIsom_T(x_1,x_2)$의 같은 object로 보내진다고 가정하자. 이 CFG는 discrete이므로 $t=t'$이고
+
+$$b\circ a^{-1}=b'\circ(a')^{-1}$$
+
+이다. 이제 isomorphism
+
+$$c=(a')^{-1}\circ a:x\xrightarrow{\sim}x'$$
+
+을 생각하면 $a'\circ c=a$이고, 위의 등식으로부터
+
+$$b'\circ c=b'\circ(a')^{-1}\circ a=b\circ a^{-1}\circ a=b$$
+
+을 얻는다. 따라서 $c$는 $\id_t$와 함께 fiber product의 compatibility condition을 만족하므로 $(t,x,a,b)$에서 $(t,x',a',b')$로의 morphism을 정의한다. 거꾸로 그러한 morphism은 $a'\circ c=a$를 만족해야 하므로 반드시 $c=(a')^{-1}\circ a$이며, 따라서 유일하다. 즉, 이 functor는 fully faithful하다. 한편 임의의 $\beta:x_1\vert_{T'}\xrightarrow{\sim}x_2\vert_{T'}$는 $(t,x,a,b)=(t,x_1\vert_{T'},\id,\beta)$에서 오므로 이 functor는 essentially surjective이다. 이 구성이 pullback과 호환되므로 위의 natural equivalence를 얻는다. 
+
+이제 첫째 조건과 둘째 조건이 동치임은 위에서 만든 natural equivalence에 의해 자명하다. 이제 첫째 조건을 가정하고 셋째 조건을 보인다. 이를 위해 첫째 조건을 가정하고 $S$-scheme들로부터의 두 morphism $x:T\rightarrow\mathcal{X}$과 $y:T'\rightarrow\mathcal{X}$을 잡자. 그럼 isomorphism
 
 $$T\times_\mathcal{X}T'\cong(T\times_S T')\times_{\mathcal{X}\times_S\mathcal{X},\Delta}\mathcal{X}$$
 
-에서 우변은 $\Delta$의 base change이므로 algebraic space이다. 따라서 $x:T\rightarrow\mathcal{X}$이 representable하고 (3)이 성립한다.
+에서 우변은 $\Delta$의 base change이므로 algebraic space이다. 따라서 $x:T\rightarrow\mathcal{X}$이 representable하고 셋째 조건이 성립한다.
 
-끝으로 (3)을 가정하고 $x_1,x_2\in\mathcal{X}(T)$를 잡자. $x_1:T\rightarrow\mathcal{X}$이 representable하므로 $T\times_{x_1,\mathcal{X},x_2}T$은 algebraic space이고,
+마지막으로 셋째 조건을 가정하고 들째 조건을 보인다. 우선 임의의 $x_1,x_2\in\mathcal{X}(T)$에 대하여, $x_1:T\rightarrow\mathcal{X}$이 representable하므로 $T\times_{x_1,\mathcal{X},x_2}T$은 algebraic space이다. 이 fiber product에서는 $T$로 가는 두 morphism이 서로 다를 수 있는데, diagonal morphism $\Delta_T:T\rightarrow T\times_S T$을 따라 base change하면 이들을 같게 제한한다. 따라서 natural isomorphism
 
 $$\rIsom_T(x_1,x_2)\cong(T\times_{x_1,\mathcal{X},x_2}T)\times_{T\times_S T,\Delta_T}T$$
 
-에서 우변은 그 base change이므로 algebraic space이다. 따라서 (2)가 성립한다.
+을 얻고, 우변은 algebraic space의 base change이므로 algebraic space이다. 따라서 둘째 조건이 성립한다.
 :::
 
-[명제 5](#prop5)에서 두 object 사이의 isomorphism sheaf $\rIsom_T(x_1, x_2)$가 diagonal morphism의 base change로 나타남을 보았다. 특히 $x_1=x_2=x$인 경우, 한 object $x\in\mathcal{X}(T)$에 대하여 group sheaf $\rAut_T(x)=\rIsom_T(x,x)$를 $x$의 *stabilizer*라 부른다. 이 stabilizer들을 $\mathcal{X}$ 위에서 한꺼번에 모은 것이, 두 morphism을 모두 $\Delta$로 취한 $2$-fiber product
+Isomorphism sheaf $\rIsom_T(x_1, x_2)$에서 특히 $x_1=x_2=x$인 경우, 한 object $x\in\mathcal{X}(T)$에 대하여 group sheaf $\rAut_T(x)=\rIsom_T(x,x)$를 $x$의 *stabilizer*라 부른다. 이들 stabilizer들을 $\mathcal{X}$ 위에서 한꺼번에 모은 것이 다음의 $2$-fiber product
 
 $$\mathcal{I}_\mathcal{X}:=\mathcal{X}\times_{\mathcal{X}\times_S\mathcal{X}}\mathcal{X}$$
 
-으로 정의되는 *inertia stack*이다. 그 $T$-object는 쌍 $(x,\alpha)$, $x\in\mathcal{X}(T)$, $\alpha\in\rAut_T(x)$이며, 사영 $\mathcal{I}_\mathcal{X}\rightarrow\mathcal{X}$의 $x$ 위의 fiber가 바로 $\rAut_T(x)$이다.
+으로 정의되는 *inertia stack*이다. 즉, inertia stack의 $T$-object는 쌍 $(x,\alpha)$, $x\in\mathcal{X}(T)$, $\alpha\in\rAut_T(x)$이며, projection $\mathcal{I}_\mathcal{X}\rightarrow\mathcal{X}$의 $x$ 위의 fiber가 바로 $\rAut_T(x)$이다.
 
 ## Algebraic stack과 Deligne–Mumford stack
 
-이제 기하학적 stack을 정의한다. 두 조건은 [명제 5](#prop5)에서 분석한 대각선의 representability와, scheme으로부터의 smooth surjective atlas의 존재이다.
+Algebraic space의 정의를 다시 보면, set-valued sheaf $F$의 diagonal이 scheme에 의해 representable하고, scheme으로부터의 étale surjective atlas $U\rightarrow F$가 존재할 것을 요구하였다. 첫째 조건은 두 점이 일치하는 locus $R=U\times_FU$를 scheme으로 만들고, 둘째 조건은 $F$가 scheme chart $U$로 étale-locally 덮인다는 것을 보장하였다. 따라서 algebraic space는 scheme들과 그 사이의 étale equivalence relation $R\rightrightarrows U$로 표현되는 기하학적 대상이었다.
+
+Algebraic stack은 이 구조를 한 층 더 일반화한 것이다. Set-valued sheaf를 groupoid-valued stack으로 바꾸고, diagonal의 representability를 scheme에서 algebraic space로 넓히며, étale atlas 대신 smooth atlas를 허용한다. 여전히 scheme $U$가 local chart를 제공하고 $R=U\times_\mathcal{X}U$가 chart의 overlap을 기록하지만, 이제 $R\rightrightarrows U$는 단순히 점들의 equivalence relation을 나타내는 데 그치지 않고 각 점의 automorphism까지 기억하는 groupoid가 된다. 이 두 요구가 [명제 5](#prop5)에서 분석한 diagonal의 representability와 scheme으로부터의 smooth surjective atlas의 존재이다.
 
 ::: 정의 6
 Site $(\Sch_{/S}, \fppf)$ 위의 stack $\mathcal{X}$ (base scheme $S$ 위)이 *algebraic stack* 또는 *Artin stack<sub>아틴 스택</sub>*이라는 것은 다음 두 조건을 만족하는 것이다.
