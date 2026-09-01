@@ -1,5 +1,5 @@
 ---
-title: "Algebraic stack과 quotient stack"
+title: "대수적 스택"
 description: "Diagonal의 representability와 smooth atlas로 algebraic stack(Artin·Deligne–Mumford)을 정의하고, group action의 quotient stack [U/G]와 BG=[pt/G]를 구성하여 그 기하적 의미를 다룬다."
 excerpt: "Algebraic (Artin / Deligne–Mumford) stacks via atlases, and the quotient stack [U/G]"
 
@@ -11,12 +11,9 @@ sidebar:
 date: 2026-08-31
 weight: 3
 
-published: false
-drift_needed: true
-
 ---
 
-앞선 글에서 우리는 기존에 생각하던 naive한 moduli problem을 $\Grpd$-valued functor로 만들어서, 각 대상 $T$ 위에 $T$-family들과 그들 사이의 isomorphism으로 이루어진 groupoid $\mathcal{X}(T)$를 대응시켰다. 기존 ([\[스킴\] §스킴 사이의 사상, ⁋정의 9](/ko/math/scheme_theory/morphism_of_schemes#def9))과 마찬가지로 우리는 이를 $\mathcal{X}$의 $T$-point들의 모임으로 생각할 것이지만, 우선 해결해야 할 문제들이 몇 가지 있었는데, 그 중 하나는 morphism $u: T'\rightarrow T$에 대한 pullback이 unique isomorphism까지만 정해지므로, 실제 pullback functor $u^\ast: \mathcal{X}(T)\rightarrow \mathcal{X}(T')$를 써 주기 위해서는 각각의 pullback의 representative를 고르는 선택, 즉 cleavage가 필요했다는 것이다. 때문에 합성가능한 morphism $T''\overset{v}{\rightarrow}T'\overset{u}{\rightarrow}T$에 대하여, pullback을 하는 두 경로가 다를 수 있었고 이를 해결하기 위해 우리는 canonical isomorphism
+앞선 글에서 우리는 기존에 생각하던 naive한 moduli problem을 $\Grpd$-valued functor로 만들어서, 각 대상 $T$ 위에 $T$-family들과 그들 사이의 isomorphism으로 이루어진 groupoid $\mathcal{X}(T)$를 대응시켰다. [\[스킴\] §스킴 사이의 사상, ⁋정의 9](/ko/math/scheme_theory/morphism_of_schemes#def9)에서와 마찬가지로 우리는 이를 $\mathcal{X}$의 $T$-point들의 모임으로 생각할 것이지만, 우선 해결해야 할 문제들이 몇 가지 있었는데, 그 중 하나는 morphism $u: T'\rightarrow T$에 대한 pullback이 unique isomorphism까지만 정해지므로, 실제 pullback functor $u^\ast: \mathcal{X}(T)\rightarrow \mathcal{X}(T')$를 써 주기 위해서는 각각의 pullback의 representative를 고르는 선택, 즉 cleavage가 필요했다는 것이다. 때문에 합성가능한 morphism $T''\overset{v}{\rightarrow}T'\overset{u}{\rightarrow}T$에 대하여, pullback을 하는 두 path가 다를 수 있었고 이를 해결하기 위해 우리는 canonical isomorphism
 
 $$v^\ast u^\ast x\xrightarrow{\sim}(u\circ v)^\ast x$$
 
@@ -48,7 +45,7 @@ $$f(x),g(y): \ast\rightarrow \mathcal{Z}(T)$$
 
 일반적으로 $2$-category에서 commuting 조건을 생각할 때는 $2$-commutative 조건을 주로 생각한다. 예를 들어 다음 triangle을 생각하자.
 
-![2-commutative triangle](/assets/images/Math/Stacks/Algebraic_Stacks-2.svg){:style="width:12.05em" class="invert" .align-center}
+{% diagram Math/Stacks/Algebraic_Stacks-1.svg width="12.05em" alt="2-commutative triangle" %}
 
 이 triangle이 $2$-commutative하다는 것은 세 $1$-morphism $p,q,r$와 함께 합성 $q\circ p$와 $r$을 잇는 invertible $2$-morphism
 
@@ -56,9 +53,9 @@ $$\alpha:q\circ p\Rightarrow r$$
 
 가 지정되었다는 뜻이다. 따라서 이 diagram의 자료는 $(p,q,r,\alpha)$로 주어진다. 이를 지금의 상황에 적용하면 다음 diagram을 얻는다.
 
-![stack의 2-commutative cone](/assets/images/Math/Stacks/Algebraic_Stacks-3.svg){:style="width:14.89em" class="invert" .align-center}
+{% diagram Math/Stacks/Algebraic_Stacks-2.svg width="14.89em" alt="stack의 2-commutative cone" %}
 
-그림 중앙의 $\alpha$는 $\mathcal{X}(T)$와 $\mathcal{Y}(T)$ 사이에 놓여 있으며, 두 경로가 주는 합성 $f\circ x,g\circ y:\ast\rightarrow\mathcal{Z}(T)$을 잇는 $2$-morphism을 나타낸다. 이를 위에서 살펴본 $\mathcal{Z}(T)$에서의 morphism의 언어로 옮겨오면, 이 cone의 자료는 triple
+Diagram 중앙의 $\alpha$는 $\mathcal{X}(T)$와 $\mathcal{Y}(T)$ 사이에 놓여 있으며, 두 path가 주는 합성 $f\circ x,g\circ y:\ast\rightarrow\mathcal{Z}(T)$을 잇는 $2$-morphism을 나타낸다. 이를 위에서 살펴본 $\mathcal{Z}(T)$에서의 morphism의 언어로 옮겨오면, 이 cone의 자료는 triple
 
 $$(x,y,\alpha),\qquad \alpha:f(x)\xrightarrow{\sim}g(y)$$
 
@@ -115,9 +112,9 @@ $$(f,g): R(T)\rightarrow U(T)\times U(T)$$
 
 $$(U\times_FU)(T)=\{(x,y)\in U(T)\times U(T)\mid p(x)=p(y)\}$$
 
-이므로 이는 $p$에 의해 같은 것으로 취급되는 $U(T)$의 원소들을 모아둔 동치관계가 되고, 자명한 inclusion $R(T)\hookrightarrow U(T)\times U(T)$을 통해 실제로 $U(T)\times U(T)$의 부분집합이므로 $R(T)$가 scheme들 사이의 equivalence relation을 준다. 따라서, 직관적으로 $U$는 $F$를 덮는 scheme chart를 제공하고, $R$은 이 chart의 중복을 어떻게 식별해야 하는지를 기록하는 것이며, 이로부터 $F$는 sheaf quotient $U/R$로 복원된다. 국소적으로는 임의의 scheme $T$와 점 $x\in F(T)$에 대하여 $U\rightarrow F$를 $x:T\rightarrow F$를 따라 base change하면 étale surjection $U\times_F T\rightarrow T$을 얻고, 이로부터 $F$의 어떠한 étale covering $\{T_i\rightarrow T\}$이 존재하여, 이 위에서 각 $x\vert_{T_i}$가 $U(T_i)$의 점으로 lift되도록 할 수 있게 된다. 
+이므로 이는 $p$에 의해 같은 것으로 취급되는 $U(T)$의 원소들을 모아둔 동치관계가 되고, 자명한 inclusion $R(T)\hookrightarrow U(T)\times U(T)$을 통해 실제로 $U(T)\times U(T)$의 subset이므로 $R(T)$가 scheme들 사이의 equivalence relation을 준다. 따라서, 직관적으로 $U$는 $F$를 덮는 scheme chart를 제공하고, $R$은 이 chart의 중복을 어떻게 식별해야 하는지를 기록하는 것이며, 이로부터 $F$는 sheaf quotient $U/R$로 복원된다. 국소적으로는 임의의 scheme $T$와 점 $x\in F(T)$에 대하여 $U\rightarrow F$를 $x:T\rightarrow F$를 따라 base change하면 étale surjection $U\times_F T\rightarrow T$을 얻고, 이로부터 $F$의 어떠한 étale covering $\{T_i\rightarrow T\}$이 존재하여, 이 위에서 각 $x\vert_{T_i}$가 $U(T_i)$의 점으로 lift되도록 할 수 있게 된다. 
 
-정의에 의해 모든 scheme은 algebraic space이므로 이는 scheme의 일반화이며, 이들은 normal 혹은 quasi-projective 등의 가정 아래에서 흔히 일치한다. 우리는 이에 대한 이론을 자세히 전개하는 대신, 이것이 scheme의 약한 일반화라는 정도만 기억하고 우리의 원래 목표로 돌아가기로 한다.
+정의에 의해 모든 scheme은 algebraic space이므로 이는 scheme의 일반화이며, 이들은 quasi-projective 등의 가정 아래에서 흔히 일치한다. 우리는 이에 대한 이론을 자세히 전개하는 대신, 이것이 scheme의 약한 일반화라는 정도만 기억하고 우리의 원래 목표로 돌아가기로 한다.
 
 ## 표현가능 사상
 
@@ -132,7 +129,7 @@ Algebraic space는 scheme의 약한 일반화로서, scheme morphism의 성질 $
 1. 성질 $P$는 임의의 base change에 대하여 닫혀있어야 한다. 
 2. 성질 $P$는 fppf-local on target이다. 
 
-첫째 조건은 자명한 것이며, 둘째 조건은 우리가 관심을 갖는 대상들이 fppf-local하게 쓰인다는 점에서 요구되는 성질로, 앞으로 우리는 일반적인 맥락에서 *stack*이라 하면 fppf site (링크) $(\Sch, \fppf)$ 위에서의 stack인 것으로 생각한다. 임의의 scheme $S$는 항상 stack으로 취급할 수 있으므로, stack $\mathcal{X}$가 $S$-stack이라는 것이 말이 되며, $S$-stack들 사이의 morphism이나 이 위의 두 대상의 곱 $\mathcal{X}\times_X \mathcal{Y}$ 등이 잘 정의되고, 이것이 fppf site $(\Sch_{/S}, \fppf)$ 위에 정의된 stack과 정의에 의해 같은 것임을 알 수 있다. 
+첫째 조건은 자명한 것이며, 둘째 조건은 우리가 관심을 갖는 대상들이 fppf-local하게 쓰인다는 점에서 요구되는 성질로, 앞으로 우리는 일반적인 맥락에서 *stack*이라 하면 fppf site ([§그로텐디크 위상, ⁋예시 8](/ko/math/stacks/grothendieck_topology#ex8)) $(\Sch, \fppf)$ 위에서의 stack인 것으로 생각한다. 임의의 scheme $S$는 항상 stack으로 취급할 수 있으므로, stack $\mathcal{X}$가 $S$-stack이라는 것이 말이 되며, $S$-stack들 사이의 morphism이나 이 위의 두 대상의 곱 $\mathcal{X}\times_S \mathcal{Y}$ 등이 잘 정의되고, 이것이 fppf site $(\Sch_{/S}, \fppf)$ 위에 정의된 stack과 정의에 의해 같은 것임을 알 수 있다. 
 
 $\fppf$ site의 필요성은 이미 scheme 단계에서부터 어느정도 예고되었다. 예를 들어 [\[스킴\] §군 스킴, ⁋예시 15](/ko/math/scheme_theory/group_schemes#ex15)에서 $\mathbb{G}_m$-torsor는 Zariski-locally trivial하였지만, 이미 해당 예시에서 이것이 Hilbert theorem 90에 의한 특수한 현상임을 언급하였으며, 실제로 해당 예시의 첫째 예시인 $\mathbb{Z}/2$-torsor $\Spec\mathbb{C}\rightarrow\Spec\mathbb{R}$는 fppf-locally trivial하면서도 Zariski-locally trivial하지 않았다. 이러한 이유로 stack을 $\fppf$ site 위에서 정의된 것으로 약속한다면, stack의 object를 fppf covering 위에서 local trivialization한 뒤 $f_T$의 성질을 검사하고 그 결과를 $T$로 내리려면, $P$가 fppf-local on target이어야 한다.
 
@@ -238,7 +235,7 @@ Atlas는 algebraic space에서와 마찬가지로 stack $\mathcal{X}$을 scheme 
 
 차이는 이 <em-ko>같은 것으로 취급</em-ko>하는 부분에 있다. Algebraic space는 $\Set$-valued functor로서 두 point가 같은 것이 정말로 같은 것이지만, DM stack은 $\Grpd$-valued functor로서 두 point를 잇는 isomorphism까지 기억한다. 이를 더 명시적으로 쓰자면, 우리는 이미 [정의 3](#def3) 직후에서 algebraic space에서는
 
-$$R(T)=(U\times_XU)(T)=\{(f,g)\in U(T)\times_{S(T)}U(T)\mid p\circ f=p\circ g\}$$
+$$R(T)=(U\times_FU)(T)=\{(f,g)\in U(T)\times_{S(T)}U(T)\mid p\circ f=p\circ g\}$$
 
 으로 정의되는 $R$이 scheme이고, $U(T)\times_{S(T)}U(T)$로 들어가는 *inclusion*이 존재함을 보았다. 반면 DM stack의 atlas $p:U\rightarrow\mathcal{X}$가 정의하는 집합
 
@@ -277,68 +274,106 @@ $\pi$의 functoriality는 $u$의 base change가 trivial torsor의 base change와
 ::: 명제 9
 [명제 8](#prop8)의 morphism $\pi:U\rightarrow[U/G]$에 대하여, 다음 diagram
 
-{% diagram Math/Stacks/Algebraic_Stacks-1.svg width="10.10em" alt="atlas의 base change" %}
+{% diagram Math/Stacks/Algebraic_Stacks-3.svg width="10.10em" alt="atlas의 base change" %}
 
 은 2-fiber product diagram이다. 
 :::
 ::: 증명
-위 다이어그램이 2-fiber product diagram이라는 것은, canonical isomorphism
+즉 canonical isomorphism
 
 $$U\times_{[U/G]}U\cong G\times_SU$$
 
-이 존재하여 두 projection $\pr_1,\pr_2:U\times_{[U/G]}U\rightarrow U$가 각각 group action $\rho:(g,u)\mapsto g\cdot u$와 projection $(g,u)\mapsto u$에 대응함을 보이는 것과 같다.
+이 존재하여 두 projection $\pr_1,\pr_2:U\times_{[U/G]}U\rightarrow U$가 각각 group action $\rho:(g,u)\mapsto g\cdot u$와 projection $(g,u)\mapsto u$에 대응함을 보이면 된다. 
 
-[정의 1](#def1)에 의해 $(U\times_{[U/G]}U)(T)$의 object는 triple $(u_1,u_2,\psi)$로서 $u_1,u_2\in U(T)$이고 $\psi:\pi(u_1)\xrightarrow{\sim}\pi(u_2)$는 $[U/G](T)$의 isomorphism이다. $\pi(u_1)=(G_T,\varphi_{u_1})$, $\pi(u_2)=(G_T,\varphi_{u_2})$이고 $G_T=G\times_ST$이므로, $\psi$는 trivial torsor $G_T$의 automorphism으로서 $\varphi_{u_2}\circ\psi=\varphi_{u_1}$를 만족한다. Left translation torsor $G_T$의 left-equivariant automorphism은 정확히 right translation $\psi_g:h\mapsto hg$ ($g\in G(T)$)이므로 $\psi\leftrightarrow g\in G(T)$의 대응을 얻는다. ([§스택, ⁋정의 17](/ko/math/stacks/fibered_categories_and_stacks#def17)) 조건 $\varphi_{u_2}\circ\psi_g=\varphi_{u_1}$는 모든 $(h,t)$에 대하여
+이는 명시적으로 적어줄 수 있다. 우선 $(U\times_{[U/G]}U)(T)$의 object는 
 
-$$\varphi_{u_2}(hg,t)=(hg)\cdot u_2(t)=h\cdot\bigl(g\cdot u_2(t)\bigr)\overset{!}{=}h\cdot u_1(t)=\varphi_{u_1}(h,t)$$
+$$(u_1,u_2,\psi),\qquad u_1,u_2\in U(T),\quad \psi:\pi(u_1)\xrightarrow{\sim}\pi(u_2)$$
 
-를 요구한다. $h=e$를 대입하면 이 조건은 $u_1(t)=g\cdot u_2(t)$, 곧 $u_1=g\cdot u_2$와 동치이다. 그러므로 $(u_1,u_2,\psi)$는 $(g,u_2)\in(G\times_SU)(T)$와 일대일로 대응하며, 이 대응은 $T$에 대한 functoriality와 morphism을 보존한다. 따라서 $U\times_{[U/G]}U\cong G\times_SU$이다.
+로 주어진다. 한편, [명제 8](#prop8)의 $\pi$의 정의에서
 
-이 isomorphism 아래 $\pr_2(u_1,u_2,\psi)=u_2$는 projection $(g,u)\mapsto u$이고, $\pr_1(u_1,u_2,\psi)=u_1=g\cdot u_2$는 action $\rho:(g,u)\mapsto g\cdot u$이다. 따라서 $\rho,\pr_2:G\times_SU\rightrightarrows U$가 $[U/G]$의 groupoid presentation을 이룬다.
+$$\pi(u_1)=(G\times_ST,\varphi_{u_1}), \qquad \pi(u_2)=(G\times_ST,\varphi_{u_2})$$
+
+이며, 이 대응에서 $\psi$가 원래 데이터에서의 $2$-isomorphism이었으므로 $\varphi_{u_2}\circ\psi=\varphi_{u_1}$이 성립한다. 즉 $\psi$는 $G$-torsor들 사이의 $G$-equivariant automorphism들을 유도한다. 거꾸로 임의의 $g\in G$가 주어졌을 때, 이것이 정의하는 translation이 $G$-equivariant automorphism이므로 위의 과정을 거꾸로 올라갈 수 있다.
+
+이제 주어진 diagram의 $2$-commutativity를 보여야 한다. $(g,u)\in(G\times_SU)(T)$에 대하여 두 path는 각각 $\pi(\rho(g,u))=\pi(g\cdot u)$와 $\pi(\pr_2(g,u))=\pi(u)$를 주고, [정의 7](#def7)에 의해 이 둘 사이의 morphism은 $\varphi_u\circ\psi=\varphi_{g\cdot u}$를 만족하는 trivial torsor $G\times_ST$의 $G$-equivariant automorphism $\psi$이다. 그런데 $g$가 정의하는 right translation $\psi_g:(h,t)\mapsto(hg,t)$에 대하여
+
+$$\varphi_u(\psi_g(h,t))=(hg)\cdot u(t)=h\cdot\bigl(g\cdot u(t)\bigr)=\varphi_{g\cdot u}(h,t)$$
+
+이므로 $\psi_g$가 그러한 morphism을 준다. 이 대응은 $(g,u)$에 대하여 natural하고 base change와 호환되므로 $2$-isomorphism $\alpha:\pi\circ\rho\Rightarrow\pi\circ\pr_2$를 정의하며, 따라서 주어진 diagram은 $2$-commutative하다. 그럼 [정의 1](#def1) 직후에 살펴본 $2$-fiber product의 universal property에 의해 이 자료 $(\rho,\pr_2,\alpha)$는 morphism
+
+$$\Phi:G\times_SU\rightarrow U\times_{[U/G]}U,\qquad \Phi(g,u)=(g\cdot u,u,\psi_g)$$
+
+를 유도하므로, 남은 것은 $\Phi$가 isomorphism임을 보이는 것이다.
+
+우선 $U$는 $\Set$-valued이므로, [정의 1](#def1)에서 $T$ 위의 두 object $(u_1,u_2,\psi)$와 $(u_1',u_2',\psi')$ 사이의 morphism을 이루는 쌍 $(a,b)$는 항등 morphism일 수밖에 없고, 따라서 $u_1=u_1'$과 $u_2=u_2'$이 성립하며 조건 $\psi'\circ\pi(a)=\pi(b)\circ\psi$는 $\psi=\psi'$을 강제한다. 즉 $(U\times_{[U/G]}U)(T)$는 discrete groupoid이므로, $\Phi$가 isomorphism임을 보이는 것은 각 $T$마다 object들의 대응 $\Phi_T$가 bijection임을 보이는 것과 같다.
+
+$\Phi_T$의 injectivity는 $\Phi_T(g,u)$의 둘째 성분이 $u$를 복원하고 셋째 성분의 $(e,t)$에서의 값이 $g$를 복원하므로 따라온다. Surjectivity를 보이기 위해 임의의 object $(u_1,u_2,\psi)$가 주어졌다 하자. $\psi$는 $T$ 위의 morphism이므로 $\psi(e,t)=(\gamma(t),t)$인 $\gamma\in G(T)$가 유일하게 결정되고, $\psi$의 $G$-equivariance에 의해
+
+$$\psi(h,t)=h\cdot\psi(e,t)=(h\gamma(t),t)$$
+
+이므로 $\psi=\psi_\gamma$이다. 즉 trivial torsor의 $G$-equivariant automorphism은 정확히 right translation들이다. ([§스택, ⁋정의 17](/ko/math/stacks/fibered_categories_and_stacks#def17)) 이제 남은 조건 $\varphi_{u_2}\circ\psi_\gamma=\varphi_{u_1}$은 모든 $(h,t)$에 대하여
+
+$$h\cdot\bigl(\gamma(t)\cdot u_2(t)\bigr)=\varphi_{u_2}(h\gamma(t),t)=\varphi_{u_1}(h,t)=h\cdot u_1(t)$$
+
+를 요구하는데, $h=e$를 대입하면 이는 $u_1=\gamma\cdot u_2$와 동치이고, 거꾸로 $u_1=\gamma\cdot u_2$이면 위 등식이 모든 $(h,t)$에 대하여 성립한다. 그러므로 $(u_1,u_2,\psi)=\Phi_T(\gamma,u_2)$이다.
+
+이 모든 대응이 base change와 호환되므로 $\Phi_T$는 $T$에 대하여 functorial하고, 따라서 $\Phi$는 isomorphism이다. 구성에 의해 $\pr_1\circ\Phi=\rho$이고 $\pr_2\circ\Phi=\pr_2$이므로, 이 isomorphism 아래에서 $\pr_1$은 action $\rho:(g,u)\mapsto g\cdot u$에, $\pr_2$는 projection $(g,u)\mapsto u$에 대응한다.
 :::
 
-[명제 9](#prop9)는 $[U/G]$가 action groupoid $G\times_SU\rightrightarrows U$의 stack quotient임을 보여준다. Source는 projection이고 target은 action이며, 이 groupoid는 orbit과 stabilizer를 함께 기록한다. 일반적으로 source와 target이 smooth한 groupoid object $R\rightrightarrows U$로부터 algebraic stack $[U/R]$을 얻고, quotient stack은 $R=G\times_SU$인 특수한 경우이다.
+[명제 9](#prop9)는 $[U/G]$가 *action groupoid* $G\times_SU\rightrightarrows U$의 stack quotient라는 것으로 요약할 수 있다. 더 일반적으로, source와 target이 smooth한 groupoid object $R\rightrightarrows U$로부터 algebraic stack $[U/R]$을 얻을 수 있으며, quotient stack은 $R=G\times_SU$인 특수한 경우이다.
 
-Scheme과 algebraic space에서는 diagonal이 자동으로 monomorphism이지만, algebraic stack의 diagonal은 그 자체로 기하적 성질을 가진다. Algebraic stack이 separated이라는 것은 diagonal이 proper하다는 뜻이다. $[U/G]$의 diagonal을 atlas $U\times_SU$로 base change하면 action morphism
-
-$$G\times_SU\longrightarrow U\times_SU,\qquad (g,u)\longmapsto(g\cdot u,u)$$
-
-이 되므로, diagonal의 separatedness와 properness는 이 morphism에서 판정할 수 있다. 또 diagonal이 unramified인지 여부는 stabilizer가 가진 infinitesimal direction을 측정하며, 이것이 quotient stack이 DM stack인지 결정한다.
+이제 우리는 이렇게 정의한 quotient stack이 적절한 조건을 만족하면 도입부에서의 직관대로 DM stack이 된다는 것을 보인다. 
 
 ::: 정리 10
-$G$가 base scheme $S$ 위의 separated·smooth group scheme이고 $U$가 $G$-action을 갖는 $S$-scheme이라 하자. 그럼 quotient stack $[U/G]$는 algebraic stack이며, [명제 8](#prop8)의 $\pi:U\rightarrow[U/G]$가 smooth atlas이다. 나아가 다음이 성립한다.
+$S$-scheme $U$와 그 위에 작용하는 smooth group $S$-scheme $G$가 주어졌다 하자. 그럼 quotient stack $[U/G]$는 algebraic stack이며, [명제 8](#prop8)의 $\pi:U\rightarrow[U/G]$가 smooth atlas이다. 나아가 diagonal $\Delta:[U/G]\rightarrow[U/G]\times_S[U/G]$를 $\pi\times\pi$를 따라 base change하면 [명제 9](#prop9)의 두 projection이 정의하는 action morphism
 
-1. $U$가 $S$ 위에서 separated이면 $[U/G]$의 diagonal은 separated morphism이다. 나아가 $[U/G]$가 separated인 것은 action morphism $G\times_SU\rightarrow U\times_SU$, $(g,u)\mapsto(g\cdot u,u)$가 proper인 것과 동치이다.
-2. 모든 geometric point의 stabilizer가 finite étale이면 (가령 $G$가 finite étale하거나, characteristic $0$에서 action이 finite stabilizer를 가지면) $[U/G]$는 DM stack이다.
+$$a=(\rho,\pr_2):G\times_SU\rightarrow U\times_SU,\qquad (g,u)\mapsto(g\cdot u,u)$$
+
+이 되며, 이로부터 다음이 성립한다.
+
+1. $G$가 $S$ 위에서 separated이면 $\Delta$는 separated이다. 또 $[U/G]$가 separated인 것, 곧 $\Delta$가 proper인 것은 $a$가 proper인 것과 동치이다.
+2. 모든 geometric point의 stabilizer가 unramified이면 $[U/G]$는 DM stack이다. 특히 $G$가 $S$ 위에서 étale이면 $\pi$ 자체가 étale atlas이다.
 :::
 ::: 증명
-**Diagonal의 representability.** [명제 5](#prop5)에 의해 임의의 scheme $T$와 $(P,\varphi),(P',\varphi')\in[U/G](T)$에 대하여 $\rIsom_T((P,\varphi),(P',\varphi'))$이 representable함을 보이면 된다. $P,P'$가 trivial해지는 fppf covering 위에서 이 sheaf는 $g\cdot a'=a$인 $g\in G_T$들의 subfunctor, 곧 morphism $(g\mapsto(g\cdot a',a)):G_T\rightarrow U\times_SU$와 diagonal $U\rightarrow U\times_SU$의 fiber product로 represent된다. 이 local presentation들은 descent datum에 따라 붙어 algebraic space를 이룬다. $U$가 separated이면 diagonal이 closed embedding이고 $G_T\rightarrow T$도 separated이므로 $\rIsom\rightarrow T$는 separated morphism이다.
+우선 공통된 주장부터 보이자. $[U/G]$가 algebraic stack임을 보이기 위해서는 representability와 smooth atlas를 보여야 한다. ([정의 6](#def6)) 
 
-**Smooth atlas.** $T\rightarrow[U/G]$가 object $(P,\varphi)$에 의해 주어지면 canonical isomorphism $U\times_{[U/G]}T\cong P$가 있다. 따라서 $\pi$의 임의의 base change는 $G$-torsor $P\rightarrow T$이다. 이로부터 $\pi$가 representable함을 알 수 있고, $G$가 smooth이므로 $P\rightarrow T$도 smooth하다. [명제 8](#prop8)에서 $\pi$가 epimorphism임을 보였으므로 $\pi$는 smooth atlas이고 $[U/G]$는 algebraic stack이다.
+먼저 diagonal이 representable함을 보이자. [명제 5](#prop5)에 의해 임의의 $S$-scheme $T$와 $(P,\varphi),(P',\varphi')\in[U/G](T)$에 대하여 $\rIsom_T((P,\varphi),(P',\varphi'))$이 algebraic space임을 보이면 충분하다. 이들을 모두 trivialize하는 fppf covering $\{T_i\rightarrow T\}$을 잡으면, [명제 8](#prop8)의 증명에서와 같이 각 $T_i$ 위에서 두 object는 $\pi(u_i),\pi(u_i')$의 꼴이고, [명제 9](#prop9)의 계산에 의해 임의의 $V\rightarrow T_i$에 대하여
 
-**DM 판정.** 모든 geometric point의 stabilizer가 finite étale이면 앞서 본 판정 조건에 의해 $[U/G]$는 DM stack이다. 특히 $G$가 finite étale group scheme이면 $\pi:U\rightarrow[U/G]$ 자체가 relative dimension $0$인 étale morphism이므로 $U$가 étale atlas가 된다.
+$$\rIsom_{T_i}(\pi(u_i),\pi(u_i'))(V)=\{g\in G(V)\mid g\cdot u_i'\vert_V=u_i\vert_V\}$$
+
+이다. 즉 이 sheaf는 morphism $(g\mapsto(g\cdot u_i',u_i)):G_{T_i}\rightarrow U\times_SU$와 diagonal $\Delta_{U/S}:U\rightarrow U\times_SU$의 fiber product로 represent되며, 이 local presentation들은 descent datum에 따라 붙어 algebraic space를 이룬다.
+
+이제 $\pi$가 smooth atlas임을 보인다. $T\rightarrow[U/G]$가 object $(P,\varphi)$에 의해 주어지면 canonical isomorphism $U\times_{[U/G]}T\cong P$에 의해 $\pi$의 임의의 base change는 $G$-torsor $P\rightarrow T$임을 안다. Torsor는 fppf-locally $G\times_ST$이므로 이는 algebraic space이고, $G$가 smooth이므로 $P\rightarrow T$도 smooth하다. [명제 8](#prop8)에서 $\pi$가 epimorphism임을 보였으므로 $\pi$는 smooth atlas이고, 따라서 $[U/G]$는 algebraic stack이다.
+
+이제 공통 주장에는 diagonal의 base change 계산이 남았다. [명제 5](#prop5)를 $T=U\times_SU$와 두 object $\pi\circ\pr_1$, $\pi\circ\pr_2$에 적용하면 $\Delta$를 $\pi\times\pi$를 따라 base change한 것이 $U\times_{[U/G]}U$이므로, [명제 9](#prop9)에 의해 이는 $G\times_SU$이고 $U\times_SU$로 가는 morphism은 두 projection이 주는 $(\rho,\pr_2)=a$이다. 한편 $\pi$가 smooth epimorphism이므로 $\pi\times\pi$ 또한 그러하고, separated·proper·unramified는 모두 base change에 대하여 닫혀 있으면서 fppf-local on target이므로 ([정의 4](#def4)), $\Delta$가 이들 성질을 갖는 것은 $a$가 그러한 것과 동치이다.
+
+이제 각각의 개별 주장들을 보이자. 
+
+1. $\pr_2\circ a=\pr_2$이고 $\pr_2:G\times_SU\rightarrow U$는 $G\rightarrow S$의 base change이므로, $G$가 separated이면 이 합성이 separated이다. 합성 $X\rightarrow Y\rightarrow Z$가 separated이면 $X\rightarrow Y$ 또한 separated이므로 $a$가 separated이고, 따라서 $\Delta$도 그러하다. 한편 stack이 separated이라는 것은 $\Delta$가 proper라는 뜻이므로, 위의 판정에 의해 이는 $a$가 proper인 것과 동치이다.
+
+2. [정의 6](#def6) 직후에 살펴본 동치조건에 의해 $[U/G]$가 DM stack인 것은 $\Delta$가 unramified인 것과 동치이며, 위의 판정에 의해 이는 $a$가 unramified인 것과 동치이다. 그런데 geometric point $(u_1,u_2)\in(U\times_SU)(\mathbb{K})$ 위의 $a$의 fiber는
+    
+    $$\{g\in G_\mathbb{K}\mid g\cdot u_2=u_1\}$$
+    
+    이므로 두 점이 서로 다른 orbit에 있으면 empty이고, 그렇지 않으면 stabilizer $\rAut_\mathbb{K}(u_2)$의 torsor이다. 한편 $\pr_2\circ a=\pr_2$가 smooth이므로 locally of finite type이고, 합성이 locally of finite type이면 첫 morphism도 그러하므로 $a$ 또한 locally of finite type이다. 이제 unramifiedness는 locally of finite type인 morphism의 cotangent sheaf가 소멸하는 것이고, [\[스킴\] §미분과 여접층, ⁋명제 5](/ko/math/scheme_theory/sheaf_of_differentials#prop5)에 의해 cotangent sheaf는 base change와 commute하므로 $\Omega_a$의 fiber로의 restriction이 그 fiber의 cotangent sheaf이다. 이때 $\Omega_a$가 finite type이므로 [\[가환대수학\] §정수적 확장, ⁋보조정리 8](/ko/math/commutative_algebra/integral_extension#lem8)에 의해 각 점에서의 소멸이 stalk의 소멸을 주고, 따라서 모든 stabilizer가 unramified이면 $a$가 unramified이다. 마지막으로 $G$가 étale이면 위에서 본 base change $P\rightarrow T$가 étale이므로 $\pi$ 자체가 [정의 6](#def6)의 étale atlas이다.
 :::
 
-[정리 10](#thm10)은 smooth group scheme의 action이 algebraic stack을 정의하며 quotient map $U\rightarrow[U/G]$가 실제로 atlas임을 보장한다. 둘째 결론은 finite étale stabilizer만을 가진 quotient stack이 DM stack이라는 초기의 intuition을 정확히 표현한다. 일반적인 DM stack이 전역적으로 하나의 quotient $[U/G]$일 필요는 없다.
+이로써 우리가 이 섹션의 도입부에서 motivation을 위해 도입한 흐름, 즉 quotient stack이 (적절한 유한성의 조건 하에서) DM stack이라는 주장이 완결된다. 거꾸로 임의의 DM stack은 국소적으로 quotient stack의 꼴로 쓰인다는 것이 알려져 있다. 즉, quasi-separated DM stack $\mathcal{X}$의 finite-type point $x$와 그 geometric stabilizer $G_x$에 대하여, $G_x$가 affine scheme $\Spec A$에 action하는 quotient stack으로부터 stabilizer를 보존하는 étale morphism $[\Spec A/G_x]\rightarrow\mathcal{X}$을 얻을 수 있다. 이 사실의 증명은 이 글의 범위를 넘지만, 우리의 기하학적 motivation에는 큰 도움이 되므로 언급만 해 둔다. 
 
-Quasi-separated DM stack $\mathcal{X}$의 finite-type point $x$를 잡고 $G_x$를 그 geometric stabilizer라 하자. 그럼 $G_x$가 affine scheme $\Spec A$에 action하는 quotient stack으로부터 stabilizer-preserving étale morphism $[\Spec A/G_x]\rightarrow\mathcal{X}$을 얻을 수 있다. 즉 DM stack은 전역 quotient가 아니더라도 각 finite-type point의 étale neighborhood에서 finite group action의 quotient로 기술된다. 이 local structure theorem의 증명은 이 글의 범위를 넘으므로 [Alp, Theorem 4.3.1]을 참조하라.
-
-Action이 free하면 [명제 9](#prop9)의 $\rIsom$이 많아야 한 point이므로 $[U/G]$의 diagonal은 monomorphism이다. 이때 $[U/G]$는 automorphism이 없는 stack, 곧 algebraic space이며 fppf quotient $U/G$와 일치한다. Action이 free하지 않으면 $[U/G]$는 stabilizer를 기억하는 진정한 stack이 된다. Coarse moduli space $U/G$가 존재하는 경우에도 natural morphism $[U/G]\rightarrow U/G$는 point의 isomorphism class만 남기므로 stabilizer 정보를 잃는다.
-
-가장 기본적인 예는 $U=S$인 classifying stack이다. 이는 [§스택, ⁋정의 17](/ko/math/stacks/fibered_categories_and_stacks#def17)에서 도입한 $\bB G$가 algebraic stack임을 [정리 10](#thm10)으로 확인하는 것이다.
+그럼 [정의 7](#def7) 직후에 살펴본 $U=S$인 경우, 곧 classifying stack에 [정리 10](#thm10)을 적용하여 atlas와 stabilizer를 직접 읽어보자.
 
 ::: 예시 11 ($\bB\mathbb{G}_m$과 $\bB(\mathbb{Z}/n)$)
-Base scheme을 field $\mathbb{K}$로 둔다.
+Base scheme을 field $\mathbb{K}$로 고정하자.
 
 1. $\bB\mathbb{G}_m=[\Spec\mathbb{K}/\mathbb{G}_m]$은 algebraic stack이다. $\mathbb{G}_m$이 affine·smooth이므로 ([\[스킴\] §군 스킴, §§군 스킴](/ko/math/scheme_theory/group_schemes#군-스킴)) [정리 10](#thm10)이 적용되고, atlas는 $\Spec\mathbb{K}\rightarrow\bB\mathbb{G}_m$이며 그 base change는 $\mathbb{G}_m\rightrightarrows\Spec\mathbb{K}$이다. $\bB\mathbb{G}_m(T)$는 $T$ 위의 line bundle들의 groupoid이고 ([§스택, ⁋정리 18](/ko/math/stacks/fibered_categories_and_stacks#thm18)), point의 stabilizer는 $\mathbb{G}_m$이다. Stabilizer가 $1$-dimensional이므로 $\bB\mathbb{G}_m$은 DM stack이 아닌 Artin stack이며, 그 dimension은 $\dim\Spec\mathbb{K}-\dim\mathbb{G}_m=0-1=-1$이다.
 
 2. $\mathbb{Z}/n$을 constant group scheme으로 보면 $\bB(\mathbb{Z}/n)=[\Spec\mathbb{K}/(\mathbb{Z}/n)]$은 DM stack이다. Constant group scheme $\mathbb{Z}/n$은 disjoint union $\coprod_{i=1}^n\Spec\mathbb{K}$이므로 finite étale이다. 따라서 atlas $\Spec\mathbb{K}\rightarrow\bB(\mathbb{Z}/n)$은 étale epimorphism이고, 그 base change는 $\mathbb{Z}/n\times\Spec\mathbb{K}\rightrightarrows\Spec\mathbb{K}$이다. $\bB(\mathbb{Z}/n)(T)$는 $T$ 위의 $\mathbb{Z}/n$-torsor, 곧 각 fiber에 $\mathbb{Z}/n$이 simply transitively action하는 finite étale covering들의 groupoid이며, trivial torsor의 stabilizer는 $\mathbb{Z}/n$이다.
 :::
 
-다음은 stabilizer가 point마다 달라지는 표준적인 action이다.
+위의 예시에서는 action이 주어지는 scheme이 한 점이라 계산이 직관적이었다. 다음은 stabilizer가 point마다 달라지는 표준적인 action이다.
 
 ::: 예시 12 ($[\mathbb{A}^1/\mathbb{G}_m]$)
-Algebraically closed field $\mathbb{K}$ 위에서 $\mathbb{G}_m$이 affine line $\mathbb{A}^1$에 scalar multiplication $t\cdot x=tx$로 action한다 하자. Origin $\{0\}$은 fixed point이고, complement $\mathbb{A}^1\setminus\{0\}=\mathbb{G}_m$은 $\mathbb{G}_m$이 simply transitively action하는 open orbit이다. Quotient stack $[\mathbb{A}^1/\mathbb{G}_m]$은 이 두 orbit의 서로 다른 stabilizer를 기억한다.
+Algebraically closed field $\mathbb{K}$ 위에서 $\mathbb{G}_m$이 affine line $\mathbb{A}^1$에 scalar multiplication $t\cdot x=tx$로 action한다 하자. Origin $\{0\}$은 fixed point이고, 그 여집합 $\mathbb{A}^1\setminus\{0\}=\mathbb{G}_m$은 $\mathbb{G}_m$이 simply transitive하게 작용하는 open orbit이다. Quotient stack $[\mathbb{A}^1/\mathbb{G}_m]$은 이 두 orbit의 서로 다른 stabilizer를 기억한다.
 
 1. Open orbit $\mathbb{G}_m\hookrightarrow\mathbb{A}^1$ 위의 action은 free이므로 $[\mathbb{G}_m/\mathbb{G}_m]\cong\Spec\mathbb{K}$이고, 이는 trivial stabilizer를 갖는 open point이다.
 
@@ -351,8 +386,5 @@ $[\mathbb{A}^1/\mathbb{G}_m]$은 dimension $1-1=0$이지만, closed point에 pos
 
 **참고문헌**
 
-**[Ols]** M. Olsson, *Algebraic spaces and stacks*. American Mathematical Society Colloquium Publications, 2016.  
-**[LMB]** G. Laumon, L. Moret-Bailly, *Champs algébriques*. Ergebnisse der Mathematik und ihrer Grenzgebiete, Springer, 2000.  
 **[FGA]** B. Fantechi, L. Göttsche, L. Illusie, S. Kleiman, N. Nitsure, A. Vistoli, *Fundamental algebraic geometry: Grothendieck's FGA explained*. Mathematical Surveys and Monographs, American Mathematical Society, 2005.  
 **[Stacks]** The Stacks Project Authors, *The Stacks Project*. Available [online](https://stacks.math.columbia.edu/).
-**[Alp]** J. Alper, *Stacks and Moduli*. Available [online](https://sites.math.washington.edu/~jarod/moduli-versions/moduli-2-17-25.pdf).

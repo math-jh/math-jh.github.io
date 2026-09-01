@@ -10,7 +10,6 @@ sidebar:
 
 date: 2024-12-22
 weight: 14
-revising: true
 drift_needed: true
 
 ---
@@ -52,7 +51,7 @@ $$\widehat{A}=\varprojlim_i A/\mathfrak{a}_i$$
 
 $$A\supseteq\mathfrak{a}\supseteq \mathfrak{a}^2\cdots$$
 
-꼴로 주어졌다면 이를 $A$의 *$\mathfrak{a}$-adic completion<sub>$\mathfrak{a}$진 완비화</sub>*이라 부른다. 이 경우, 만일 $\mathfrak{a}$가 maximal ideal이라면 $\widehat{A}$은 아래에서 확인할 것과 같이 local ring이 되며, 이러한 $\widehat{A}$을 *complete local ring<sub>국소완비환</sub>*이라 부른다. 
+꼴로 주어졌다면 이를 $A$의 *$\mathfrak{a}$-adic completion<sub>$\mathfrak{a}$진 완비화</sub>*이라 부른다. 이 경우, 만일 $\mathfrak{a}$가 maximal ideal이라면 $\widehat{A}$은 유일한 maximal ideal $\widehat{\mathfrak{a}}$를 갖는 local ring이 되므로, $\widehat{A}$을 *complete local ring<sub>국소완비환</sub>*이라 부른다. 
 :::
 
 우선 natural map $\rho:A \rightarrow \widehat{A}$는 canonical morphism들 $\pr_i: A \rightarrow A/\mathfrak{a}_i$들에 universal property를 적용하여 얻어지는 것이다. 그럼 정의에 의하여
@@ -179,7 +178,7 @@ Local ring $(A, \mathfrak{m})$에 대하여, $A[[\x_1,\ldots, \x_n]]$도 local r
 $\mathfrak{m}+(\x_1,\ldots,\x_n)$ 바깥의 원소는 상수항이 $\mathfrak{m}$에 속하지 않아 그 상수항이 $A$의 unit이므로, [명제 5](#prop5)에 의해 이것이 unit임을 보일 수 있다. 
 :::
 
-다시 [정의 1](#def1)의 상황으로 돌아와, $\mathfrak{a}$가 maximal ideal이고 $\widehat{A}$가 이에 대한 $\mathfrak{a}$진 완비화인 경우를 살펴보자. 우선 $\widehat{A}/\widehat{\mathfrak{a}}_1\cong A/\mathfrak{a}$가 field이므로 $\widehat{\mathfrak{a}}_1$은 $\widehat{A}$의 maximal ideal이다. 또 $k>1$일 때 $\rho_1=\rho_{k1}\circ\rho_k$이고 $\widehat{\mathfrak{a}}_1=\ker\rho_1$이므로 $\rho_k(\widehat{\mathfrak{a}}_1)\subseteq \ker\rho_{k1}=\mathfrak{a}/\mathfrak{a}^k$이며, 따라서 $\rho_k(\widehat{\mathfrak{a}}_1^k)\subseteq (\mathfrak{a}/\mathfrak{a}^k)^k=0$, 즉 $\widehat{\mathfrak{a}}_1^k\subseteq \ker \rho_k=\widehat{\mathfrak{a}}_k$이다. 그럼 임의의 $a\in \widehat{\mathfrak{a}}_1$에 대하여 $(-a)^k\in \widehat{\mathfrak{a}}_k$이므로 급수 $\sum_{k=0}^\infty (-a)^k$의 부분합들이 $\widehat{A}$의 Cauchy sequence를 이루고, $\widehat{A}$가 filtration (1)에 대해 complete이므로 [명제 5](#prop5)의 논증이 그대로 적용되어 $1+a$는 unit이 된다. 이제 $x\in \widehat{A}$가 $\widehat{\mathfrak{a}}_1$에 속하지 않는다 하면 $\widehat{A}/\widehat{\mathfrak{a}}_1$이 field이므로 $xy-1\in \widehat{\mathfrak{a}}_1$인 $y$가 존재하고, 앞의 결과로부터 $xy$가 unit이므로 $x$ 또한 unit이다. 즉 $\widehat{\mathfrak{a}}_1$에 속하지 않는 $\widehat{A}$의 원소는 모두 unit이며, 따라서 $\widehat{A}$은 $\widehat{\mathfrak{a}}_1$을 유일한 maximal ideal로 갖는 local ring이다.
+다시 [정의 1](#def1)의 상황으로 돌아와, $\mathfrak{a}$가 maximal ideal이고 $\widehat{A}$가 이에 대한 $\mathfrak{a}$-adic completion인 경우를 살펴보자. 우선 $\widehat{A}/\widehat{\mathfrak{a}}_1\cong A/\mathfrak{a}$가 field이므로 $\widehat{\mathfrak{a}}_1$은 $\widehat{A}$의 maximal ideal이다. 또 $k>1$일 때 $\rho_1=\rho_{k1}\circ\rho_k$이고 $\widehat{\mathfrak{a}}_1=\ker\rho_1$이므로 $\rho_k(\widehat{\mathfrak{a}}_1)\subseteq \ker\rho_{k1}=\mathfrak{a}/\mathfrak{a}^k$이며, 따라서 $\rho_k(\widehat{\mathfrak{a}}_1^k)\subseteq (\mathfrak{a}/\mathfrak{a}^k)^k=0$, 즉 $\widehat{\mathfrak{a}}_1^k\subseteq \ker \rho_k=\widehat{\mathfrak{a}}_k$이다. 그럼 임의의 $a\in \widehat{\mathfrak{a}}_1$에 대하여 $(-a)^k\in \widehat{\mathfrak{a}}_k$이므로 급수 $\sum_{k=0}^\infty (-a)^k$의 부분합들이 $\widehat{A}$의 Cauchy sequence를 이루고, $\widehat{A}$가 filtration (1)에 대해 complete이므로 [명제 5](#prop5)의 논증이 그대로 적용되어 $1+a$는 unit이 된다. 이제 $x\in \widehat{A}$가 $\widehat{\mathfrak{a}}_1$에 속하지 않는다 하면 $\widehat{A}/\widehat{\mathfrak{a}}_1$이 field이므로 $xy-1\in \widehat{\mathfrak{a}}_1$인 $y$가 존재하고, 앞의 결과로부터 $xy$가 unit이므로 $x$ 또한 unit이다. 즉 $\widehat{\mathfrak{a}}_1$에 속하지 않는 $\widehat{A}$의 원소는 모두 unit이며, 따라서 $\widehat{A}$은 $\widehat{\mathfrak{a}}_1$을 유일한 maximal ideal로 갖는 local ring이다.
 
 또, 다음이 성립한다.
 
