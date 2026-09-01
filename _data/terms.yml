@@ -547,14 +547,14 @@ A:
   ko: 대수적 공간
   primary: en
   defs:
-  - label: '[스택] §Algebraic stack과 quotient stack'
+  - label: '[스택] §대수적 스택'
     url: /ko/math/stacks/algebraic_stacks
 - id: algebraic_stack
   en: algebraic stack
   ko: 대수 스택
   primary: en
   defs:
-  - label: '[스택] §Algebraic stack과 quotient stack'
+  - label: '[스택] §대수적 스택'
     url: /ko/math/stacks/algebraic_stacks
 - id: algebraic_surface
   en: algebraic surface
@@ -874,7 +874,7 @@ A:
   ko: 아틴 스택
   primary: en
   defs:
-  - label: '[스택] §Algebraic stack과 quotient stack'
+  - label: '[스택] §대수적 스택'
     url: /ko/math/stacks/algebraic_stacks
 - id: artin-wedderburn_theorem
   en: Artin-Wedderburn theorem
@@ -1055,7 +1055,7 @@ A:
   defs:
   - label: '[미분다양체] §미분다양체'
     url: /ko/math/manifolds/smooth_manifolds
-  - label: '[스택] §Algebraic stack과 quotient stack'
+  - label: '[스택] §대수적 스택'
     url: /ko/math/stacks/algebraic_stacks
 - id: augmentation_map
   en: augmentation map
@@ -4619,7 +4619,7 @@ D:
   ko: 들리뉴-멈퍼드 스택
   primary: en
   defs:
-  - label: '[스택] §Algebraic stack과 quotient stack'
+  - label: '[스택] §대수적 스택'
     url: /ko/math/stacks/algebraic_stacks
   see:
   - label: Artin stack
@@ -6353,7 +6353,7 @@ F:
   ko: 2-올곱
   primary: en
   defs:
-  - label: '[스택] §Algebraic stack과 quotient stack'
+  - label: '[스택] §대수적 스택'
     url: /ko/math/stacks/algebraic_stacks
   see:
   - label: Pullback
@@ -15424,7 +15424,7 @@ Q:
   ko: 몫 스택
   primary: en
   defs:
-  - label: '[스택] §Algebraic stack과 quotient stack'
+  - label: '[스택] §대수적 스택'
     url: /ko/math/stacks/algebraic_stacks
 - id: quotient_topology
   en: quotient topology
@@ -16071,7 +16071,7 @@ R:
   defs:
   - label: '[스킴] §점함자'
     url: /ko/math/scheme_theory/functor_of_points
-  - label: '[스택] §Algebraic stack과 quotient stack'
+  - label: '[스택] §대수적 스택'
     url: /ko/math/stacks/algebraic_stacks
 - id: representable_functor
   en: representable functor

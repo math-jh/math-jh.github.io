@@ -10,7 +10,6 @@ sidebar:
 
 date: 2025-01-16
 weight: 15
-revising: true
 
 drift_needed: true
 
