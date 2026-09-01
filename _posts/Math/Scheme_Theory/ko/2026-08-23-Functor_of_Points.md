@@ -206,7 +206,7 @@ $$\mathcal{O}_T^{\oplus n+1}\twoheadrightarrow \mathcal{L};\qquad e_i\mapsto s_i
 
 으로 다시 쓸 수 있다. 이제 이러한 surjection들 사이의 isomorphism을 다음의 diagram
 
-![isomorphic_surjections](/assets/images/Math/Scheme_Theory/Functor_of_Points-1.svg){:style="width:11.42em" class="invert" .align-center}
+{% diagram Math/Scheme_Theory/Functor_of_Points-1.svg width="11.42em" alt="isomorphic_surjections" %}
 
 으로 정의하고, $T\in\Sch$를 받아 이러한 isomorphism class를 대응시키는 functor $F_{n+1}$을 생각하자. 이 때 functoriality는 morphism의 단계에서는, $\tau:T'\rightarrow T$를 통해 surjection을 pullback하여 
 

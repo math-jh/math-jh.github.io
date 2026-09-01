@@ -206,7 +206,7 @@ $$\mathcal{O}_T^{\oplus n+1}\twoheadrightarrow \mathcal{L};\qquad e_i\mapsto s_i
 
 We define an isomorphism between such surjections by the diagram
 
-![isomorphic_surjections](/assets/images/Math/Scheme_Theory/Functor_of_Points-1.svg){:style="width:11.42em" class="invert" .align-center}
+{% diagram Math/Scheme_Theory/Functor_of_Points-1.svg width="11.42em" alt="isomorphic_surjections" %}
 
 and consider the functor $F_{n+1}$ that assigns to $T\in\Sch$ the set of these isomorphism classes. Here functoriality at the level of morphisms is given by pulling back the surjection via $\tau:T'\rightarrow T$ to define
 
