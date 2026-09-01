@@ -255,43 +255,47 @@ $$R(T)=(U\times_\mathcal{X}U)(T)=U(T)\times_{\mathcal{X}(T)}U(T)=\{(f,g,\alpha)\
 또, $(P,\varphi)$에서 $(P',\varphi')$로의 morphism은 $\varphi'\circ\psi=\varphi$인 $G$-torsor morphism $\psi:P\rightarrow P'$이다.
 :::
 
-그럼 위의 조건을 만족하는 $\psi$는 자동으로 isomorphism이므로 각 fiber는 groupoid이다. 또 base change로 torsor와 equivariant morphism을 pullback하면 cartesian morphism이 주어지므로, [정의 7](#def7)의 fiber groupoid들은 $\Sch_{/S}$ 위의 CFG를 이룬다. $[U/G]$의 object $(P,\varphi)$는 $T$ 위에서 $G$-torsor로 twisted된 $U$-valued point로 생각할 수 있다. Torsor가 trivial하여 $P=G\times_ST$이면 $\varphi(g,t)=g\cdot\varphi(e,t)$이므로, $\varphi$는 identity section $e:T\rightarrow G\times_ST$에서의 값 $a=\varphi\circ e:T\rightarrow U$로 유일하게 결정된다. 따라서 trivial torsor 위의 object는 $U(T)$의 point와 같다.
+그럼 위의 조건을 만족하는 $\psi$는 자동으로 isomorphism으로, 이는 $G$-torsor의 $G$-equivariant morphism은 본질적으로 평행이동 뿐이기 때문이다. 특히 각 fiber는 groupoid이다. 또 base change로 torsor와 equivariant morphism을 pullback하면 cartesian morphism이 주어지므로, 이 fiber groupoid들은 $\Sch_{/S}$ 위의 CFG를 이룬다. 특별한 경우로 $G$가 base space $U=S$에 trivial action으로 작용하는 경우 $[S/G]$는 이미 [§스택, ⁋정의 17](/ko/math/stacks/fibered_categories_and_stacks#def17)에서 살펴본 classifying stack $\bB G$이 된다. 
 
-$G$가 $S$에 trivially action하는 $U=S$의 경우를 $[S/G]=\bB G$로 적고 *classifying stack*이라 부른다. 이때 $\bB G(T)$는 정확히 $T$ 위의 $G$-torsor들의 groupoid이며, trivial torsor의 automorphism group은 $G(T)$이다. 또 $\bB G$ 위에는 universal $G$-torsor가 존재하여, $\bB G$가 $G$-torsor를 classify하는 universal object임을 드러낸다.
+직관적으로, $[U/G]$의 $T$-point $(P,\varphi)$는 $T$ 위에서 $G$-torsor $P$로 뒤틀린, 각 fiber가 $U$인 공간 $P\times^G U\rightarrow T$의 section을 주는 것과 같다. ([\[대수적 위상수학\] §분류공간, ⁋정의 3](/ko/math/algebraic_topology/classifying_spaces#def3)) Torsor가 trivial하여 $P=G\times_ST$이면 $\varphi(g,t)=g\cdot\varphi(e,t)$이므로, $\varphi$는 identity section $e:T\rightarrow G\times_ST$에서의 값 $a=\varphi\circ e:T\rightarrow U$로 유일하게 결정되므로, trivial torsor 위에서 이를 보는 것은 $U(T)$의 point와 같은 정보를 복원한다.
 
-[§스택, ⁋정리 18](/ko/math/stacks/fibered_categories_and_stacks#thm18)에서 $\bB\mathbb{G}_m$에 적용한 descent argument와 마찬가지로, torsor와 equivariant morphism은 fppf covering에 대한 effective descent를 만족한다. [명제 2](#prop2)의 성분별 descent argument가 그대로 적용되므로 $[U/G]$는 stack이다. 이제 이 stack이 algebraic stack임을 보이기 위해 atlas를 구성한다.
+한편 [§스택, ⁋정리 18](/ko/math/stacks/fibered_categories_and_stacks#thm18)에서 $\bB\mathbb{G}_m$에 적용한 descent argument와 마찬가지로, torsor와 equivariant morphism은 fppf covering에 대한 effective descent를 만족하며, [명제 2](#prop2)의 성분별 descent argument가 그대로 적용되므로 $[U/G]$는 stack이다. 이제 이 stack이 algebraic stack임을 보이기 위해 atlas를 구성한다.
 
 ::: 명제 8
-Morphism $\pi:U\rightarrow[U/G]$를 $T$-point $a\in U(T)$에 trivial torsor와 그것이 결정하는 equivariant morphism을 대응시키는 것으로 정의하면, 곧
+주어진 $S$-scheme $U$와 그 위에 작용하는 group $S$-scheme $G$가 주어졌다 하자. 임의의 $S$-scheme $T$와 $U$의 $T$-point $u\in U(T)$마다, trivial torsor와 이것이 정의하는 equivariant morphism을 대응시키는 다음의 함수
 
-$$\pi(a)=\bigl(G\times_S T,\varphi_a\bigr),\qquad \varphi_a(g,t)=g\cdot a(t),$$
+$$\pi(u)=\bigl(G\times_S T,\varphi_u\bigr),\qquad \varphi_u(g,t)=g\cdot u(t),$$
 
-이는 stack morphism이며 epimorphism이다.
+는 stack morphism이며, epimorphism이다.
 :::
 ::: 증명
-$\pi$의 functoriality는 $a$의 base change가 trivial torsor의 base change와 호환됨에서 따른다. 임의의 $(P,\varphi)\in[U/G](T)$에 대하여, $P$는 $G$-torsor이므로 [§스택, ⁋정의 17](/ko/math/stacks/fibered_categories_and_stacks#def17)에 의해 fppf covering $\{T_i\rightarrow T\}$ 위에서 trivial해진다. 곧 각 $T_i$ 위에 section $s_i\in P(T_i)$가 존재하여 $g\mapsto g\cdot s_i$가 $G\times_ST_i\xrightarrow{\sim}P\vert_{T_i}$를 준다. 이 trivialization 아래 $(P,\varphi)\vert_{T_i}$는 $a_i=\varphi(s_i)\in U(T_i)$가 결정하는 $\pi(a_i)$와 isomorphic하다. 따라서 $(P,\varphi)$는 fppf-locally $\pi$의 image에 들어가므로 $\pi$는 epimorphism이다.
+$\pi$의 functoriality는 $u$의 base change가 trivial torsor의 base change와 호환되므로 얻어진다. 이제 이것이 epimorphism이라는 것을 보이기 위해서는 임의의 $(P,\varphi)\in [U/G](T)$가 국소적으로 이러한 방식으로 얻어진다는 것을 보여야 하는데, 임의의 $G$-torsor는 fppf-locally trivial이므로 ([§스택, ⁋정의 17](/ko/math/stacks/fibered_categories_and_stacks#def17)) trivializing fppf covering $\{T_i\rightarrow T\}$와 각 $T_i$ 위의 section $s_i\in P(T_i)$를 잡을 수 있다. 그럼 이 위로 $(P,\varphi)$를 제한한 $(P,\varphi)\vert_{T_i}$는 $u_i=\varphi(s_i)\in U(T_i)$가 결정하는 $\pi(u_i)$와 isomorphic하고, 따라서 $\pi$가 epimorphism이다.
 :::
 
 [명제 8](#prop8)의 $\pi$는 $U$의 point에 trivial torsor를 붙여 $G$-action의 quotient로 보내는 morphism이다. 따라서 위에서 생각한 quotient map 자체이며, epimorphism이므로 atlas의 자연스러운 후보이다. 남은 일은 $\pi$가 representable하고 smooth함을 보이는 것이다. 먼저 $\pi$ 자신을 따른 base change를 계산하면 quotient에서 식별 방법을 기록하는 action groupoid가 다시 드러난다.
 
 ::: 명제 9
-[명제 8](#prop8)의 morphism $\pi:U\rightarrow[U/G]$에 대하여 canonical isomorphism
+[명제 8](#prop8)의 morphism $\pi:U\rightarrow[U/G]$에 대하여, 다음 diagram
+
+{% diagram Math/Stacks/Algebraic_Stacks-1.svg width="10.10em" alt="atlas의 base change" %}
+
+은 2-fiber product diagram이다. 
+:::
+::: 증명
+위 다이어그램이 2-fiber product diagram이라는 것은, canonical isomorphism
 
 $$U\times_{[U/G]}U\cong G\times_SU$$
 
-이 있으며, 두 projection $\pr_1,\pr_2:U\times_{[U/G]}U\rightarrow U$는 이 isomorphism 아래 각각 action $\sigma:(g,u)\mapsto g\cdot u$와 projection $(g,u)\mapsto u$에 대응한다. 따라서 $[U/G]$는 groupoid presentation $G\times_SU\rightrightarrows U$를 가진다.
+이 존재하여 두 projection $\pr_1,\pr_2:U\times_{[U/G]}U\rightarrow U$가 각각 group action $\rho:(g,u)\mapsto g\cdot u$와 projection $(g,u)\mapsto u$에 대응함을 보이는 것과 같다.
+
+[정의 1](#def1)에 의해 $(U\times_{[U/G]}U)(T)$의 object는 triple $(u_1,u_2,\psi)$로서 $u_1,u_2\in U(T)$이고 $\psi:\pi(u_1)\xrightarrow{\sim}\pi(u_2)$는 $[U/G](T)$의 isomorphism이다. $\pi(u_1)=(G_T,\varphi_{u_1})$, $\pi(u_2)=(G_T,\varphi_{u_2})$이고 $G_T=G\times_ST$이므로, $\psi$는 trivial torsor $G_T$의 automorphism으로서 $\varphi_{u_2}\circ\psi=\varphi_{u_1}$를 만족한다. Left translation torsor $G_T$의 left-equivariant automorphism은 정확히 right translation $\psi_g:h\mapsto hg$ ($g\in G(T)$)이므로 $\psi\leftrightarrow g\in G(T)$의 대응을 얻는다. ([§스택, ⁋정의 17](/ko/math/stacks/fibered_categories_and_stacks#def17)) 조건 $\varphi_{u_2}\circ\psi_g=\varphi_{u_1}$는 모든 $(h,t)$에 대하여
+
+$$\varphi_{u_2}(hg,t)=(hg)\cdot u_2(t)=h\cdot\bigl(g\cdot u_2(t)\bigr)\overset{!}{=}h\cdot u_1(t)=\varphi_{u_1}(h,t)$$
+
+를 요구한다. $h=e$를 대입하면 이 조건은 $u_1(t)=g\cdot u_2(t)$, 곧 $u_1=g\cdot u_2$와 동치이다. 그러므로 $(u_1,u_2,\psi)$는 $(g,u_2)\in(G\times_SU)(T)$와 일대일로 대응하며, 이 대응은 $T$에 대한 functoriality와 morphism을 보존한다. 따라서 $U\times_{[U/G]}U\cong G\times_SU$이다.
+
+이 isomorphism 아래 $\pr_2(u_1,u_2,\psi)=u_2$는 projection $(g,u)\mapsto u$이고, $\pr_1(u_1,u_2,\psi)=u_1=g\cdot u_2$는 action $\rho:(g,u)\mapsto g\cdot u$이다. 따라서 $\rho,\pr_2:G\times_SU\rightrightarrows U$가 $[U/G]$의 groupoid presentation을 이룬다.
 :::
-::: 증명
-[정의 1](#def1)에 의해 $(U\times_{[U/G]}U)(T)$의 object는 triple $(a,b,\psi)$로서 $a,b\in U(T)$이고 $\psi:\pi(a)\xrightarrow{\sim}\pi(b)$는 $[U/G](T)$의 isomorphism이다. $\pi(a)=(G_T,\varphi_a)$, $\pi(b)=(G_T,\varphi_b)$이고 $G_T=G\times_ST$이므로, $\psi$는 trivial torsor $G_T$의 automorphism으로서 $\varphi_b\circ\psi=\varphi_a$를 만족한다. Left translation torsor $G_T$의 left-equivariant automorphism은 정확히 right translation $\psi_g:h\mapsto hg$ ($g\in G(T)$)이므로 $\psi\leftrightarrow g\in G(T)$의 대응을 얻는다. ([§스택, ⁋정의 17](/ko/math/stacks/fibered_categories_and_stacks#def17)) 조건 $\varphi_b\circ\psi_g=\varphi_a$는 모든 $(h,t)$에 대하여
-
-$$\varphi_b(hg,t)=hg\cdot b(t)\overset{!}{=}h\cdot a(t)=\varphi_a(h,t)$$
-
-를 요구한다. $h=e$를 대입하면 이 조건은 $g\cdot b(t)=a(t)$, 곧 $a=g\cdot b$와 동치이다. 그러므로 $(a,b,\psi)$는 $(g,b)\in(G\times_SU)(T)$와 일대일로 대응하며, 이 대응은 $T$에 대한 functoriality와 morphism을 보존한다. 따라서 $U\times_{[U/G]}U\cong G\times_SU$이다.
-
-이 isomorphism 아래 $\pr_2(a,b,\psi)=b$는 projection $(g,b)\mapsto b$이고, $\pr_1(a,b,\psi)=a=g\cdot b$는 action $\sigma:(g,b)\mapsto g\cdot b$이다. 따라서 $\sigma,\pr_2:G\times_SU\rightrightarrows U$가 $[U/G]$의 groupoid presentation을 이룬다.
-:::
-
-{% diagram Math/Stacks/Algebraic_Stacks-1.svg width="10.10em" alt="atlas의 base change" %}
 
 [명제 9](#prop9)는 $[U/G]$가 action groupoid $G\times_SU\rightrightarrows U$의 stack quotient임을 보여준다. Source는 projection이고 target은 action이며, 이 groupoid는 orbit과 stabilizer를 함께 기록한다. 일반적으로 source와 target이 smooth한 groupoid object $R\rightrightarrows U$로부터 algebraic stack $[U/R]$을 얻고, quotient stack은 $R=G\times_SU$인 특수한 경우이다.
 
