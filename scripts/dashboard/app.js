@@ -900,10 +900,9 @@ function secCron(d) {
       { text: j.paused ? (j.until ? pauseText + ' · 만료 ' + j.until.slice(5, 16).replace('T', ' ') : pauseText) : '실행 중',
         cls: 'muted' },
       { html: '<span class="cron-actions">' +
-              (j.quotaPaused ? '<button data-action="force-resume" class="ghost-btn ghost-btn--resume"' +
+              (j.quotaPaused ? '<button data-action="force-resume" class="ghost-btn ghost-btn--force-resume"' +
                (j.missing ? ' disabled' : '') + '>강제재개</button>' : '') +
-              '<button data-action="' + (j.userPaused ? 'resume' : 'pause') + '" class="ghost-btn ' +
-              (j.userPaused ? 'ghost-btn--resume' : '') + '"' +
+              '<button data-action="' + (j.userPaused ? 'resume' : 'pause') + '" class="ghost-btn"' +
               (j.missing ? ' disabled' : '') + '>' + (j.userPaused ? '재개' : '정지') + '</button>' +
               '</span>', cls: 'num' }
     ], j.paused ? 'is-paused' : null);
