@@ -83,7 +83,7 @@ $$\alpha'\circ f(a)=g(b)\circ\alpha$$
 Site $(\mathcal{C},\tau)$ 위의 stack morphism $f:\mathcal{X}\rightarrow\mathcal{Z}$과 $g:\mathcal{Y}\rightarrow\mathcal{Z}$에 대하여, 2-fiber product $\mathcal{X}\times_\mathcal{Z}\mathcal{Y}$은 stack이다.
 :::
 
-이후로 $\mathcal{X}\times_\mathcal{Z}\mathcal{Y}$을 단순히 stack의 *fiber product*라 부르며, stack들 사이의 commutative diagram은 항상 $2$-isomorphism으로 채워진 것으로 이해한다.
+이후로 $\mathcal{X}\times_\mathcal{Z}\mathcal{Y}$을 단순히 stack의 *fiber product*라 부르며, stack들 사이의 commutative diagram은 항상 $2$-isomorphism으로 채워진 것으로 이해한다. 
 
 ## 대수적 공간
 
@@ -110,18 +110,20 @@ Site $(\Sch, \et)$ ([§그로텐디크 위상, ⁋예시 8](/ko/math/stacks/grot
 
 ## 표현가능 사상
 
-이제 stack morphism $f:\mathcal{X}\rightarrow\mathcal{Y}$에 scheme morphism의 성질울 부여하려면, 먼저 $\mathcal{Y}$의 임의의 scheme-valued point $y: T\rightarrow \mathcal{Y}$에서 $f$를 base change한 다음의 morphism
+이제 stack morphism $f:\mathcal{X}\rightarrow\mathcal{Y}$에 scheme morphism의 성질을 부여하려면, 먼저 $\mathcal{Y}$의 임의의 scheme-valued point $y: T\rightarrow \mathcal{Y}$에서 $f$를 base change한 다음의 morphism
 
 $$f_T: \mathcal{X}\times_\mathcal{Y}T\rightarrow T$$
 
-가 위에서 설명한 것과 같이 algebraic space들 사이의 morphism으로 나타나야 한다. 이제 모든 $y$에 대하여 위의 식의 source $\mathcal{X}\times_\mathcal{Y}T$가 algebraic space일 것을 요구하는 것이 stack morphism $f$의 *representability<em-ko>표현가능성</em-ko>*이다. 
+가 위에서 설명한 것과 같이 algebraic space들 사이의 morphism으로 나타나야 한다. 이제 모든 $y$에 대하여 위의 식의 source $\mathcal{X}\times_\mathcal{Y}T$가 algebraic space일 것을 요구하는 것이 stack morphism $f$의 *representability<sub>표현가능성</sub>*이다. 
 
 Algebraic space는 scheme의 약한 일반화로서, scheme morphism의 성질 $P$를 algebraic space의 성질 $P$로 옮겨오는 것이 대부분 가능하다. 이제 이 성질 $P$를 stack으로 올리기 위해서는 다음의 두 가지 성질이 필요하다. 
 
 1. 성질 $P$는 임의의 base change에 대하여 닫혀있어야 한다. 
 2. 성질 $P$는 fppf-local on target이다. 
 
-첫째 조건은 자명한 것이며, 둘째 조건은 우리가 관심을 갖는 대상들이 fppf-local하게 쓰인다는 점에서 요구되는 성질이다. 예를 들어 [\[스킴\] §군 스킴, ⁋예시 15](/ko/math/scheme_theory/group_schemes#ex15)에서 $\mathbb{G}_m$-torsor는 Zariski-locally trivial하였지만, 이미 해당 예시에서 이것이 Hilbert theorem 90에 의한 특수한 현상임을 언급하였으며, 실제로 해당 예시의 첫째 예시인 $\mathbb{Z}/2$-torsor $P=\Spec\mathbb{C}\rightarrow\Spec\mathbb{R}$는 fppf-locally trivial하면서도 Zariski-locally trivial하지 않았다. 이러한 이유로 torsor와 같은 stack의 object를 fppf covering 위에서 local trivialization한 뒤 $f_T$의 성질을 검사하고 그 결과를 $T$로 내리려면, $P$가 fppf-local on target이어야 한다.
+첫째 조건은 자명한 것이며, 둘째 조건은 우리가 관심을 갖는 대상들이 fppf-local하게 쓰인다는 점에서 요구되는 성질로, 앞으로 우리는 일반적인 맥락에서 *stack*이라 하면 fppf site (링크) $(\Sch, \fppf)$ 위에서의 stack인 것으로 생각한다. 임의의 scheme $S$는 항상 stack으로 취급할 수 있으므로, stack $\mathcal{X}$가 $S$-stack이라는 것이 말이 되며, $S$-stack들 사이의 morphism이나 이 위의 두 대상의 곱 $\mathcal{X}\times_X \mathcal{Y}$ 등이 잘 정의되고, 이것이 fppf site $(\Sch_{/S}, \fppf)$ 위에 정의된 stack과 정의에 의해 같은 것임을 알 수 있다. 
+
+$\fppf$ site의 필요성은 이미 scheme 단계에서부터 어느정도 예고되었다. 예를 들어 [\[스킴\] §군 스킴, ⁋예시 15](/ko/math/scheme_theory/group_schemes#ex15)에서 $\mathbb{G}_m$-torsor는 Zariski-locally trivial하였지만, 이미 해당 예시에서 이것이 Hilbert theorem 90에 의한 특수한 현상임을 언급하였으며, 실제로 해당 예시의 첫째 예시인 $\mathbb{Z}/2$-torsor $\Spec\mathbb{C}\rightarrow\Spec\mathbb{R}$는 fppf-locally trivial하면서도 Zariski-locally trivial하지 않았다. 이러한 이유로 stack을 $\fppf$ site 위에서 정의된 것으로 약속한다면, stack의 object를 fppf covering 위에서 local trivialization한 뒤 $f_T$의 성질을 검사하고 그 결과를 $T$로 내리려면, $P$가 fppf-local on target이어야 한다.
 
 ::: 정의 4
 위의 조건을 만족하는 algebraic space의 morphism에 대한 성질 $P$가 주어졌다고 하자. Representable stack morphism $f:\mathcal{X}\rightarrow\mathcal{Y}$가 *성질 $P$를 가진다*는 것은, 임의의 scheme $T$와 morphism $y:T\rightarrow\mathcal{Y}$에 대하여 base change $f_T:\mathcal{X}\times_\mathcal{Y}T\rightarrow T$가 algebraic space의 morphism으로서 $P$를 갖는 것이다.
@@ -131,12 +133,12 @@ $P$가 될 수 있는 성질의 목록은 다음과 같다.
 
 > open embedding, closed embedding, quasi-compact, quasi-separated, affine, finite, integral, locally of finite type, finite type, quasi-finite, locally of finite presentation, finite presentation, flat, smooth, unramified, étale, surjective, separated, proper, ...
 
-가령 representable morphism $f$이 *smooth surjective*라는 것은 모든 base change $\mathcal{X}\times_\mathcal{Y}T \rightarrow T$이 smooth하고 전사인 것이다. ([\[스킴\] §매끄러운 사상과 에탈 사상, ⁋정의 1](/ko/math/scheme_theory/smooth_and_etale_morphisms#def1))
+중요한 예외는 projective와 quasi-projective이다. 이들은 base change에 대하여 닫혀있고 algebraic space의 morphism에 대해서도 정의되지만, Zariski-local on target조차 아니므로 위의 fppf descent를 통한 방법으로는 stack morphism의 성질로 올릴 수 없고, relative ample line bundle의 존재나 projective bundle로의 immersion 등을 통해 별도로 정의하여야 한다.
 
 Algebraic space의 정의에서 diagonal morphism의 representability가 두 점이 일치하는 locus를 scheme으로 다룰 수 있게 하였듯, stack에서도 diagonal morphism은 두 object 사이의 isomorphism을 기하적으로 다루는 역할을 한다. Scheme의 diagonal morphism $\Delta:X\rightarrow X\times_S X$을 두 morphism $a,b:T\rightarrow X$을 따라 base change하면 둘이 일치하는 locus $\Eq(a,b)$이 나온다. Stack에서는 일치 대신 isomorphism을 기억하므로, 그 자리에 $\rIsom$이 등장한다.
 
 ::: 명제 5
-$\mathcal{X}$이 base scheme $S$ 위의 stack이라 하자. 다음이 성립한다.
+$S$-stack $\mathcal{X}$에 대하여, 다음이 성립한다.
 
 1. 임의의 $S$-scheme $T$와 $(x, y)\in \mathcal{X}(T)\times \mathcal{X}(T)$, 곧 $S$-morphism $(x, y): T \rightarrow \mathcal{X}\times_S \mathcal{X}$에 대하여, diagonal morphism $\Delta:\mathcal{X} \rightarrow \mathcal{X}\times_S \mathcal{X}$를 따른 base change에 natural isomorphism
 
