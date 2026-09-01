@@ -138,27 +138,43 @@ $P$가 될 수 있는 성질의 목록은 다음과 같다.
 Algebraic space의 정의에서 diagonal morphism의 representability가 두 점이 일치하는 locus를 scheme으로 다룰 수 있게 하였듯, stack에서도 diagonal morphism은 두 object 사이의 isomorphism을 기하적으로 다루는 역할을 한다. Scheme의 diagonal morphism $\Delta:X\rightarrow X\times_S X$을 두 morphism $a,b:T\rightarrow X$을 따라 base change하면 둘이 일치하는 locus $\Eq(a,b)$이 나온다. Stack에서는 일치 대신 isomorphism을 기억하므로, 그 자리에 $\rIsom$이 등장한다.
 
 ::: 명제 5
-$S$-stack $\mathcal{X}$에 대하여, 다음이 성립한다.
+$S$-stack $\mathcal{X}$, $S$-scheme $T$와 두 object $x_1,x_2\in\mathcal{X}(T)$에 대하여, discrete CFG $\rIsom_T(x_1,x_2)$와 diagonal morphism $\Delta: \mathcal{X}\rightarrow\mathcal{X}\times_S\mathcal{X}$가 정의하는 fiber product 사이의 natural equivalence
 
-1. 임의의 $S$-scheme $T$와 $(x, y)\in \mathcal{X}(T)\times \mathcal{X}(T)$, 곧 $S$-morphism $(x, y): T \rightarrow \mathcal{X}\times_S \mathcal{X}$에 대하여, diagonal morphism $\Delta:\mathcal{X} \rightarrow \mathcal{X}\times_S \mathcal{X}$를 따른 base change에 natural isomorphism
+$$\mathcal{X}\times_{\mathcal{X}\times_S \mathcal{X}}T\simeq \rIsom_T(x_1,x_2)$$
 
-    $$\mathcal{X}\times_{\mathcal{X}\times_S \mathcal{X}}T\cong \rIsom_T(x, y)$$
+가 있다. 특히 다음 세 조건은 동치이다.
 
-    이 있다. 따라서 $\Delta$가 representable한 것은 모든 $\rIsom_T(x, y)$가 algebraic space에 의해 representable한 것과 동치이다.
-
-2. $\Delta$가 representable하면, $S$-scheme $T$로부터의 임의의 morphism $T \rightarrow \mathcal{X}$가 representable하다.
+1. $\Delta:\mathcal{X}\rightarrow\mathcal{X}\times_S\mathcal{X}$이 representable하다.
+2. 임의의 $S$-scheme $T$와 $x_1,x_2\in\mathcal{X}(T)$에 대하여 $\rIsom_T(x_1,x_2)$가 algebraic space이다.
+3. 임의의 $S$-scheme $T$와 $x\in\mathcal{X}(T)$에 대하여 morphism $x:T\rightarrow\mathcal{X}$이 representable하다.
 :::
 ::: 증명
-1. [정의 1](#def1)을 적용한다. $\mathcal{X}\times_{\mathcal{X}\times_S \mathcal{X}}T$의 $T'$-점은 $\xi\in \mathcal{X}(T')$, $T'$-점 $t:T'\rightarrow T$, 그리고 $\mathcal{X}\times_S \mathcal{X}$에서의 isomorphism $\Delta(\xi)=(\xi,\xi)\xrightarrow{\sim}(x,y)\vert_{T'}=(x\vert_{T'},y\vert_{T'})$의 자료이다. 마지막 isomorphism은 두 성분의 isomorphism쌍 $\xi\xrightarrow{\sim}x\vert_{T'}$과 $\xi\xrightarrow{\sim}y\vert_{T'}$이며, 둘을 합성하면 $x\vert_{T'}\xrightarrow{\sim}y\vert_{T'}$, 곧 $\rIsom_T(x,y)(T'\xrightarrow{t}T)$의 원소를 얻는다. 역으로 그러한 isomorphism $\beta$이 주어지면 $\xi=x\vert_{T'}$과 쌍 $(\id,\beta)$을 취해 위 자료를 복원한다. 이 대응이 함자적이고 가역이므로 두 CFG가 동치이다. 따라서 $\Delta$의 모든 base change가 $\rIsom$이며, $\Delta$의 representability는 모든 $\rIsom_T(x,y)$의 representability와 같다.
+우선 [정의 1](#def1)을 적용하면 $\mathcal{X}\times_{\mathcal{X}\times_S\mathcal{X}}T$의 $T'$-object는 $S$-morphism들
 
-2. Morphism $T\rightarrow\mathcal{X}$과 임의의 scheme $T'$로부터의 morphism $T'\rightarrow\mathcal{X}$이 주어졌다 하자. $T\times_\mathcal{X}T'$이 algebraic space임을 보이면 된다. 곱 $T\times_S T'\rightarrow\mathcal{X}\times_S\mathcal{X}$을 두 점 $(x,y)$ (단, $x$은 $T\rightarrow\mathcal{X}$의 $T\times_S T'$로의 restriction, $y$은 $T'$ 쪽의 restriction)으로 보면, 표준적인 graph 동형
+$$t': T' \rightarrow T, \qquad x: T'\rightarrow \mathcal{X}$$
 
-    $$T\times_\mathcal{X}T'\cong(T\times_S T')\times_{\mathcal{X}\times_S\mathcal{X},\Delta}\mathcal{X}$$
+그리고 $\mathcal{X}\times_S\mathcal{X}$에서의 isomorphism $\alpha: \Delta\circ x\rightarrow (x_1, x_2)\circ t'$에 의해 정의되는 것이며, 이 때 fiber product의 base scheme이 $\mathcal{X}\times_S\mathcal{X}$이므로 $\alpha$는 더 명시적으로 두 개의 isomorphism 
 
-    이 성립한다. 우변은 $\Delta$을 morphism $T\times_S T'\rightarrow\mathcal{X}\times_S\mathcal{X}$을 따라 base change한 것이고, $T\times_S T'$이 scheme이므로 1에 의해 representable, 곧 algebraic space이다. 따라서 $T\times_\mathcal{X}T'$이 algebraic space이고 $T\rightarrow\mathcal{X}$이 representable하다.
+$$a: x\rightarrow x_1\circ t'=x_1\vert_{T'}, \qquad b:x\rightarrow x_2\circ t'=x_2\vert_{T'}$$
+
+에 대하여 $\alpha=(a,b)$의 꼴로 쓸 수 있다. 이제 이 데이터 $(t',x, a,b)$를 $b\circ a^{-1}: =x_1\vert_{T'}\rightarrow x_2\vert_{T'}$
+
+이를 $b\circ a^{-1}:x_1\vert_{T'}\xrightarrow{\sim}x_2\vert_{T'}$로 보내면 $\rIsom_T(x_1,x_2)$로의 functor를 얻는다. 두 자료 $(x,a,b)$와 $(x',a',b')$가 같은 isomorphism으로 보내지면 $c=(a')^{-1}\circ a:x\xrightarrow{\sim}x'$이 이들 사이의 유일한 morphism이므로 이 functor는 fully faithful하고, 임의의 $\beta:x_1\vert_{T'}\xrightarrow{\sim}x_2\vert_{T'}$는 $(x,a,b)=(x_1\vert_{T'},\id,\beta)$에서 오므로 essentially surjective이다. 이 구성이 pullback과 호환되므로 위의 natural equivalence를 얻으며, 이로부터 (1)과 (2)가 동치이다.
+
+(1)을 가정하고 $S$-scheme들로부터의 두 morphism $x:T\rightarrow\mathcal{X}$과 $y:T'\rightarrow\mathcal{X}$을 잡자. 표준적인 graph 동형
+
+$$T\times_\mathcal{X}T'\cong(T\times_S T')\times_{\mathcal{X}\times_S\mathcal{X},\Delta}\mathcal{X}$$
+
+에서 우변은 $\Delta$의 base change이므로 algebraic space이다. 따라서 $x:T\rightarrow\mathcal{X}$이 representable하고 (3)이 성립한다.
+
+끝으로 (3)을 가정하고 $x_1,x_2\in\mathcal{X}(T)$를 잡자. $x_1:T\rightarrow\mathcal{X}$이 representable하므로 $T\times_{x_1,\mathcal{X},x_2}T$은 algebraic space이고,
+
+$$\rIsom_T(x_1,x_2)\cong(T\times_{x_1,\mathcal{X},x_2}T)\times_{T\times_S T,\Delta_T}T$$
+
+에서 우변은 그 base change이므로 algebraic space이다. 따라서 (2)가 성립한다.
 :::
 
-[명제 5](#prop5)에서 두 object 사이의 isomorphism sheaf $\rIsom_T(x, y)$가 diagonal morphism의 base change로 나타남을 보았다. 특히 $x=y$인 경우, 한 object $x\in\mathcal{X}(T)$에 대하여 group sheaf $\rAut_T(x)=\rIsom_T(x,x)$를 $x$의 *stabilizer*라 부른다. 이 stabilizer들을 $\mathcal{X}$ 위에서 한꺼번에 모은 것이, 두 morphism을 모두 $\Delta$로 취한 $2$-fiber product
+[명제 5](#prop5)에서 두 object 사이의 isomorphism sheaf $\rIsom_T(x_1, x_2)$가 diagonal morphism의 base change로 나타남을 보았다. 특히 $x_1=x_2=x$인 경우, 한 object $x\in\mathcal{X}(T)$에 대하여 group sheaf $\rAut_T(x)=\rIsom_T(x,x)$를 $x$의 *stabilizer*라 부른다. 이 stabilizer들을 $\mathcal{X}$ 위에서 한꺼번에 모은 것이, 두 morphism을 모두 $\Delta$로 취한 $2$-fiber product
 
 $$\mathcal{I}_\mathcal{X}:=\mathcal{X}\times_{\mathcal{X}\times_S\mathcal{X}}\mathcal{X}$$
 
