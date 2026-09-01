@@ -2063,7 +2063,7 @@ def verify_math_mismatch(
          across languages. Most mismatches are pure `$$display$$`→`$inline$`
          downgrades and resolve here with NO model call.
       2. Semantic — only the `:::` box regions holding a genuinely-absent KO
-         block go to Kimi (no-tools agent), which judges meaning preservation
+         block go to Claude Haiku (no tools), which judges meaning preservation
          WITHOUT being told anything about `$$`/counts. The `:::` box is the
          alignment unit because its derived id is identical across KO/EN and
          survives the downgrade 1:1 (matched `$$` blocks go sparse in
@@ -2831,7 +2831,7 @@ def main() -> int:
                         f"recovered after {len(lossy_history)} lossy attempt(s)"
                     )]
                 if verdict_text:
-                    body_lines += ["", "--- kimi verify (final) ---", verdict_text]
+                    body_lines += ["", "--- claude verify (final) ---", verdict_text]
                 _notify(
                     f"[translate-worker] {reason} warnings",
                     "\n".join(body_lines),
