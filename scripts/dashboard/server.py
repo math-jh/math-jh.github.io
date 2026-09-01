@@ -601,6 +601,7 @@ def sec_system():
 # crontab 은 director/sync_slots/safety_net 이 락 없이 rewrite 하므로 웹에서
 # 건드리면 lost update 가 난다 (2026-07-18 번역워커 라인 소실 사고).
 CRON_GATE = os.path.expanduser("~/.local/bin/cron-gate")
+QUOTA_GOVERNOR = os.path.expanduser("~/.local/bin/quota-reset-watch.py")
 # 키가 곧 허용목록이다. 연구 파이프라인(research-*)은 Pi 대시보드(:8088) 소관.
 CRON_JOBS = [
     dict(id="blog-translation",      name="번역 워커",        worker="translation"),
@@ -643,6 +644,10 @@ def sec_cron():
                         next=(r or {}).get("next", ""),
                         paused=bool(r and r.get("paused")),
                         until=(r or {}).get("until"), by=(r or {}).get("by"),
+                        holds=(r or {}).get("holds", []),
+                        userPaused=any(h.get("by") == "blog-dash"
+                                       for h in (r or {}).get("holds", [])),
+                        quotaPaused=bool((r or {}).get("quotaPaused")),
                         # crontab/timers.conf 에서 게이트가 사라지면 버튼이 무의미해진다
                         missing=r is None, timer=j["id"].startswith("timer:")))
     data = dict(items=out, paused=sum(1 for x in out if x["paused"]))
@@ -902,6 +907,7 @@ class Handler(BaseHTTPRequestHandler):
     def do_POST(self):
         path = urllib.parse.urlparse(self.path).path.rstrip("/")
         if path not in ("/api/kotypo", "/api/cron/pause", "/api/cron/resume",
+                        "/api/cron/force-resume",
                         "/api/review", "/api/compare/snapshot",
                         "/api/compare/snapshot-delete", "/api/compare/prefs"):
             return self._send(404, "not found", "text/plain; charset=utf-8")
@@ -1026,14 +1032,24 @@ class Handler(BaseHTTPRequestHandler):
         except Exception:
             return self._send(400, json.dumps({"ok": False, "error": "bad body"},
                                               ensure_ascii=False))
-        if path.endswith("pause"):
+        if path.endswith("force-resume"):
+            try:
+                p = subprocess.run([QUOTA_GOVERNOR, "--force-resume", jid],
+                                   capture_output=True, text=True, timeout=20)
+                res = json.loads(p.stdout or "{}")
+            except Exception as e:  # noqa: BLE001
+                res = {"ok": False, "error": f"quota governor 호출 실패: {str(e)[:160]}"}
+        elif path.endswith("pause"):
             args = ["--pause", jid, "--by", "blog-dash", "--json"]
             until = body.get("until")
             if isinstance(until, str) and re.match(r"^\d{4}-\d{2}-\d{2}T[\d:+\-]{4,14}$", until):
                 args += ["--until", until]
         else:
-            args = ["--resume", jid, "--json"]
-        res = gate_cli(*args)
+            # 이 버튼의 소유권(blog-dash)만 해제한다. quota-governor hold는
+            # reset 시각까지 독립적으로 남아야 한다.
+            args = ["--resume", jid, "--by", "blog-dash", "--json"]
+        if not path.endswith("force-resume"):
+            res = gate_cli(*args)
         _cron_cache["ts"] = 0.0          # 다음 폴에서 바로 새 상태가 보이게
         _cache["ts"] = 0.0
         return self._send(200 if res.get("ok") else 500,

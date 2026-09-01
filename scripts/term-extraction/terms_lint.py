@@ -105,7 +105,8 @@ def release_lock() -> None:
         pass
 
 
-def send_notify(msg: str, subject: str = "[terms_lint]") -> None:
+def send_notify(msg: str, subject: str = "[terms_lint]",
+                ttl: int | None = 86400) -> None:
     """알림 한 통. 벤더는 shim(~/.local/bin/notify) 안에만 있다.
 
     deprecated_terms_lint.py 가 이 함수를 import 해서 쓴다.
@@ -113,7 +114,10 @@ def send_notify(msg: str, subject: str = "[terms_lint]") -> None:
     import subprocess
     notify = Path.home() / ".local/bin/notify"
     try:
-        r = subprocess.run([str(notify), "-s", subject, "-b", msg, "-g", "blog"],
+        cmd = [str(notify), "-s", subject, "-b", msg, "-g", "blog"]
+        if ttl is not None:
+            cmd.extend(["--archive", "--ttl", str(ttl)])
+        r = subprocess.run(cmd,
                            capture_output=True, text=True, timeout=20)
         if r.returncode != 0:
             log(f"알림 전송 실패 rc={r.returncode}: {r.stderr.strip()[:200]}")
@@ -449,7 +453,7 @@ def run(path: Path, fix: bool, notify: bool) -> int:
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--fix", action="store_true", help="결정적 드리프트 자동 수정")
-    ap.add_argument("--notify", action="store_true", help="에러 잔존 시 텔레그램")
+    ap.add_argument("--notify", action="store_true", help="에러 잔존 시 Bark 알림")
     ap.add_argument("--path", default=str(TERMS_PATH), help="검사 대상 (테스트용)")
     args = ap.parse_args()
     # 읽기 전용 실행과 테스트 대상(--path)은 lock 이 필요 없다 (쓰기는 tmp+replace 라

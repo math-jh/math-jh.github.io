@@ -7,7 +7,7 @@ terms.yml 은 오염되면 바로잡기 어려우므로 **LLM 은 terms.yml 을 
 쓰지 않는다**. LLM 은 JSON 제안만 내고, 결정론적 applier 가 전 항목을
 검증(스키마·중복·url 실재·primary 실측)한 뒤 쓰기 게이트(파싱·항목수·
 semantic_checks 비악화)를 통과해야만 원자적으로 쓴다. 실패는 글 단위
-격리(3회 → 7일 quarantine + 텔레그램).
+격리(3회 → 7일 quarantine + notify 알림).
 
 틱마다 (cron :00/:30) 글 하나:
   선정 (스크립트만, LLM 무관 — 매칭 없어도 로그 한 줄은 남긴다):
@@ -66,7 +66,7 @@ from extract_terms import (  # noqa: E402
     classify_definitions, add_def_to_chunk, parse_frontmatter,
     strip_frontmatter,
 )
-from terms_lint import send_telegram, _defs_block  # noqa: E402
+from terms_lint import send_notify, _defs_block  # noqa: E402
 from usage_dominance import count_term, dominance  # noqa: E402
 import gloss_stage  # noqa: E402
 import yaml  # noqa: E402
@@ -957,8 +957,9 @@ def main() -> int:
         if ps["fails"] >= QUARANTINE_FAILS:
             ps["quarantined_until"] = time.time() + QUARANTINE_SEC
             ps["fails"] = 0
-            send_telegram(f"[용어 추출] {rel} {QUARANTINE_FAILS}회 실패 → "
-                          f"7일 격리: {str(e)[:200]}")
+            send_notify(f"{rel} {QUARANTINE_FAILS}회 실패 → "
+                        f"7일 격리: {str(e)[:200]}",
+                        subject="[용어 추출]", ttl=None)
         if not args.dry_run:
             save_state(state)
         return 1

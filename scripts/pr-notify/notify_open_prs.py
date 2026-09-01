@@ -77,9 +77,9 @@ def compose(fresh: list[dict]) -> tuple[str, str]:
     return subject, "\n".join(lines)
 
 
-def send(subject: str, body: str) -> None:
+def send(subject: str, body: str, url: str) -> None:
     result = subprocess.run(
-        [str(NOTIFY), "-s", subject, "-b", body, "-g", "blog"],
+        [str(NOTIFY), "-s", subject, "-b", body, "-g", "blog", "--url", url],
         capture_output=True, text=True, timeout=30,
     )
     if result.returncode != 0:
@@ -116,7 +116,10 @@ def main() -> int:
         return 0
 
     try:
-        send(subject, body)
+        # 한 건이면 그 PR로 곧장, 여러 건이면 저장소의 열린 PR 목록으로 간다.
+        url = fresh[0]["url"] if len(fresh) == 1 \
+            else f"https://github.com/{REPO}/pulls"
+        send(subject, body, url)
     except Exception as error:  # noqa: BLE001
         # 보내지 못했으면 seen 을 갱신하지 않는다. 다음 틱에 다시 시도한다.
         log(f"전송 실패, seen 유지: {error}")

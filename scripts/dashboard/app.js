@@ -863,11 +863,11 @@ function secActivity(d) {
 /* 정지·재개는 서버의 cron-gate 로만 나간다 — crontab 은 런타임에 건드리지 않는다.
    정지 상태의 정본은 ~/.local/state/cron-pause/<id>.json 이고, 대시보드가 죽어도
    `cron-gate --resume <id>` 로 손으로 풀 수 있다. */
-function cronAction(job, btn) {
+function cronAction(job, btn, action) {
   var was = btn.textContent;
   btn.disabled = true;
   btn.textContent = '…';
-  fetch(API + 'cron/' + (job.paused ? 'resume' : 'pause'), {
+  fetch(API + 'cron/' + action, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', 'X-Dash-Action': '1' },
     body: JSON.stringify({ id: job.id })
@@ -891,17 +891,25 @@ function secCron(d) {
   var c = d.cron || { items: [], paused: 0 };
   var s = secNode('크론 제어', c.items.length + '개 · 정지 ' + c.paused);
   var rows = c.items.map(function (j) {
+    var pauseText = j.userPaused && j.quotaPaused ? '수동+쿼터 정지' :
+      (j.quotaPaused ? '쿼터 정지' : '정지됨');
     var tr = row([
       { html: '<span class="dot dot--' + (j.paused ? 'paused' : 'ok') + '"></span>' +
               esc(j.name) + (j.timer ? '<span class="tag">timer</span>' : '') },
       { text: j.schedule || (j.missing ? '게이트 없음' : ''), cls: 'mono muted' },
-      { text: j.paused ? (j.until ? '정지 · 만료 ' + j.until.slice(5, 16).replace('T', ' ') : '정지됨') : '실행 중',
+      { text: j.paused ? (j.until ? pauseText + ' · 만료 ' + j.until.slice(5, 16).replace('T', ' ') : pauseText) : '실행 중',
         cls: 'muted' },
-      { html: '<button class="ghost-btn' + (j.paused ? ' ghost-btn--resume' : '') + '"' +
-              (j.missing ? ' disabled' : '') + '>' + (j.paused ? '재개' : '정지') + '</button>', cls: 'num' }
+      { html: '<span class="cron-actions">' +
+              (j.quotaPaused ? '<button data-action="force-resume" class="ghost-btn ghost-btn--resume"' +
+               (j.missing ? ' disabled' : '') + '>강제재개</button>' : '') +
+              '<button data-action="' + (j.userPaused ? 'resume' : 'pause') + '" class="ghost-btn ' +
+              (j.userPaused ? 'ghost-btn--resume' : '') + '"' +
+              (j.missing ? ' disabled' : '') + '>' + (j.userPaused ? '재개' : '정지') + '</button>' +
+              '</span>', cls: 'num' }
     ], j.paused ? 'is-paused' : null);
-    var btn = tr.querySelector('button');
-    if (btn && !j.missing) btn.onclick = function () { cronAction(j, btn); };
+    Array.prototype.forEach.call(tr.querySelectorAll('button[data-action]'), function (btn) {
+      if (!j.missing) btn.onclick = function () { cronAction(j, btn, btn.getAttribute('data-action')); };
+    });
     return tr;
   });
   s.appendChild(table(['잡', '스케줄', '상태', { label: '', num: true }], rows));
@@ -911,6 +919,7 @@ function secCron(d) {
   s.appendChild(err);
   s.appendChild(el('p', 'hint',
     '정지는 crontab 을 고치지 않는다 — 각 크론 라인 앞의 cron-gate 가 상태파일을 보고 스킵한다. ' +
+    '쿼터 정지 중에는 초록 강제재개와 회색 정지를 함께 쓸 수 있고, 강제재개 권한은 해당 quota reset에서 끝난다. ' +
     'autopush 만 systemd 타이머라 systemctl --user stop 으로 멈추며, 재부팅하면 자동 복귀한다. ' +
     '연구 파이프라인(director·verifier·reporter)은 Pi 대시보드(:8088)에 있다.'));
   return s;

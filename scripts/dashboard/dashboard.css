@@ -118,6 +118,7 @@ tr.typo-done td:last-child{opacity:1}
 .copy-url:hover{color:var(--brass)}
 .copy-url.copied{background:color-mix(in srgb,var(--brass) 28%,transparent);transition:background .2s}
 .ghost-btn--resume{color:var(--ok);border-color:var(--ok)}
+.cron-actions{display:inline-flex;gap:.4rem;justify-content:flex-end}
 tr.is-paused td{color:var(--muted)}
 select{font-family:var(--sans);font-size:.78rem;color:var(--ink);background:var(--paper);border:0;border-bottom:1px solid var(--ink);border-radius:0;padding:.15rem .2rem}
 .toolbar{display:flex;gap:1.6rem;align-items:center;flex-wrap:wrap;font-family:var(--sans);font-size:.76rem;color:var(--muted);margin:0 0 1.2rem}
