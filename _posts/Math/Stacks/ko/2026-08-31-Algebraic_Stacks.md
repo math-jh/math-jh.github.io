@@ -236,30 +236,26 @@ Atlas는 algebraic space에서와 마찬가지로 stack $\mathcal{X}$을 scheme 
 
 우리는 앞선 섹션의 [정의 6](#def6)에서 DM stack을 정의하고, 이것이 algebraic space와 갖는 공통점을 강조했으나, 이것을 실제로 stack으로 만드는 중요한 차이, 즉 $\Grpd$-valued functor라는 사실은 아직 충분히 짚고 넘어가지 않았다. 이 차이가 가장 명확하게 드러나는 것은 étale atlas이다. 정의에 의해 algebraic space 혹은 DM stack의 atlas는 scheme $U$에서 해당 대상으로 가는 surjective morphism이다. 그럼 이 morphism이 식별하는 $U$의 point들을 같은 것으로 취급하여 $U$의 quotient를 생각하면 해당 algebraic space 혹은 DM stack을 복원해야 할 것이다.
 
-차이는 이 <em-ko>같은 것으로 취급</em-ko>하는 부분에 있다. Algebraic space는 $\Set$-valued functor로서 두 point가 같은 것이 정말로 같은 것이지만, DM stack은 $\Grpd$-valued functor로서 두 point를 잇는 isomorphism까지 기억한다. 이를 더 명시적으로 쓰자면, algebraic space에서는
+차이는 이 <em-ko>같은 것으로 취급</em-ko>하는 부분에 있다. Algebraic space는 $\Set$-valued functor로서 두 point가 같은 것이 정말로 같은 것이지만, DM stack은 $\Grpd$-valued functor로서 두 point를 잇는 isomorphism까지 기억한다. 이를 더 명시적으로 쓰자면, 우리는 이미 [정의 3](#def3) 직후에서 algebraic space에서는
 
-$$R(T)=(U\times_XU)(T)=\{(f,g)\in U(T)\times_S U(T)\mid p\circ f=p\circ g\}$$
+$$R(T)=(U\times_XU)(T)=\{(f,g)\in U(T)\times_{S(T)}U(T)\mid p\circ f=p\circ g\}$$
 
-으로 정의되는 $R$을 atlas $p:U\rightarrow X$가 정의하는 equivalence relation으로 생각하고, 이것으로 $U$를 나눈 것을 $X$로 생각한다. 여기서 핵심적인 것은 $R(T)$가 실제로 $U(T)\times_{S(T)}U(T)$의 <em-ko>부분집합</em-ko>이라는 것으로, 따라서 inclusion $R\hookrightarrow U\times_S U$ 위의 fiber는 한 점이거나 공집합이다. 반면 DM stack의 atlas $p:U\rightarrow\mathcal{X}$가 정의하는 집합
+으로 정의되는 $R$이 scheme이고, $U(T)\times_{S(T)}U(T)$로 들어가는 *inclusion*이 존재함을 보았다. 반면 DM stack의 atlas $p:U\rightarrow\mathcal{X}$가 정의하는 집합
 
 $$R(T)=(U\times_\mathcal{X}U)(T)=U(T)\times_{\mathcal{X}(T)}U(T)=\{(f,g,\alpha)\mid \alpha: p\circ f\overset{\sim}{\rightarrow} p\circ g\}$$
 
-는 
-
-에 대하여 $R=U\times_\mathcal{X}U$는 algebraic space이지만, $(s,t):R\rightarrow U\times_SU$는 일반적으로 monomorphism이 아니다. $R$의 $T$-point는 $f,g:T\rightarrow U$와 isomorphism $\alpha:p\circ f\xrightarrow{\sim}p\circ g$를 기록하므로, 같은 $f,g$ 사이에 여러 $\alpha$가 있을 수 있고 $f=g$일 때 이들이 stabilizer를 이룬다. 즉 algebraic space에서 DM stack으로 넘어가면 식별할 point뿐 아니라 그 식별의 방법까지 기억하게 된다.
-
-이렇게 nontrivial automorphism을 각 $T$-point에서 담는 group이 stabilizer $\rAut_T(x)$이므로, 우리는 거꾸로 어떤 $S$-scheme $U$ 위에 group scheme $G$가 action할 때 이 action으로 $U$를 나누어 stack을 얻어낼 생각을 할 수 있다.
+은 위와 같은 방식으로 $U(T)\times_{S(T)}U(T)$로 가는 map을 갖지만, 이 map은 injective일 필요가 없다. 실제로 triple $(f,g,\alpha)$는 pair $(f,g)$로 보내지고, $(f,g)$ 위의 fiber는 isomorphism들의 집합 $\rIsom_{\mathcal{X}(T)}(p\circ f,p\circ g)$이다. 특히 $f=g$이면 이 fiber는 stabilizer $\rAut_T(p\circ f)$이므로, 직관적으로 DM stack은 각 점에 stabilizer가 별도의 정보로 붙은 공간으로 생각할 수 있다.
 
 ::: 정의 7
-*Quotient stack<sub>몫 스택</sub>* $[U/G]$의 $T\in\Sch_{/S}$ 위의 fiber는 다음 groupoid이다. 그 object는 쌍 $(P,\varphi)$로서
+*Quotient stack<sub>몫 스택</sub>* $[U/G]$의 $T\in\Sch_{/S}$ 위의 fiber는 다음 groupoid이다. 그 object는 쌍 $(P,\varphi)$로서 다음 두 조건을 만족하는 것이다.
 
-1. $P\rightarrow T$는 [§스택, ⁋정의 17](/ko/math/stacks/fibered_categories_and_stacks#def17)의 $G$-torsor이고,
-2. $\varphi:P\rightarrow U$는 $G$-equivariant morphism, 곧 $\varphi(g\cdot p)=g\cdot\varphi(p)$를 만족하는 morphism
+1. $P\rightarrow T$는 $G$-torsor이고 ([§스택, ⁋정의 17](/ko/math/stacks/fibered_categories_and_stacks#def17))
+2. $\varphi:P\rightarrow U$는 $G$-equivariant morphism이다. 즉, $\varphi(g\cdot p)=g\cdot\varphi(p)$이 성립한다.
 
-이다. $(P,\varphi)$에서 $(P',\varphi')$로의 morphism은 $\varphi'\circ\psi=\varphi$인 $G$-torsor morphism $\psi:P\rightarrow P'$이다. 이러한 $\psi$는 자동으로 isomorphism이다.
+또, $(P,\varphi)$에서 $(P',\varphi')$로의 morphism은 $\varphi'\circ\psi=\varphi$인 $G$-torsor morphism $\psi:P\rightarrow P'$이다.
 :::
 
-Base change로 torsor와 equivariant morphism을 pullback하면 cartesian morphism이 주어지므로, [정의 7](#def7)의 fiber groupoid들은 $\Sch_{/S}$ 위의 CFG를 이룬다. $[U/G]$의 object $(P,\varphi)$는 $T$ 위에서 $G$-torsor로 twisted된 $U$-valued point로 생각할 수 있다. Torsor가 trivial하여 $P=G\times_ST$이면 $\varphi(g,t)=g\cdot\varphi(e,t)$이므로, $\varphi$는 identity section $e:T\rightarrow G\times_ST$에서의 값 $a=\varphi\circ e:T\rightarrow U$로 유일하게 결정된다. 따라서 trivial torsor 위의 object는 $U(T)$의 point와 같다.
+그럼 위의 조건을 만족하는 $\psi$는 자동으로 isomorphism이므로 각 fiber는 groupoid이다. 또 base change로 torsor와 equivariant morphism을 pullback하면 cartesian morphism이 주어지므로, [정의 7](#def7)의 fiber groupoid들은 $\Sch_{/S}$ 위의 CFG를 이룬다. $[U/G]$의 object $(P,\varphi)$는 $T$ 위에서 $G$-torsor로 twisted된 $U$-valued point로 생각할 수 있다. Torsor가 trivial하여 $P=G\times_ST$이면 $\varphi(g,t)=g\cdot\varphi(e,t)$이므로, $\varphi$는 identity section $e:T\rightarrow G\times_ST$에서의 값 $a=\varphi\circ e:T\rightarrow U$로 유일하게 결정된다. 따라서 trivial torsor 위의 object는 $U(T)$의 point와 같다.
 
 $G$가 $S$에 trivially action하는 $U=S$의 경우를 $[S/G]=\bB G$로 적고 *classifying stack*이라 부른다. 이때 $\bB G(T)$는 정확히 $T$ 위의 $G$-torsor들의 groupoid이며, trivial torsor의 automorphism group은 $G(T)$이다. 또 $\bB G$ 위에는 universal $G$-torsor가 존재하여, $\bB G$가 $G$-torsor를 classify하는 universal object임을 드러낸다.
 
