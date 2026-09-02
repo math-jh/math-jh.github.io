@@ -1,7 +1,7 @@
 ---
 title: "Faithfully Flat Descent"
-description: "This post covers Grothendieck's descent theory, which sends algebraic and geometric data down along a faithfully flat morphism. Starting from the exactness of the Amitsur complex, we derive the descent theorem for modules, show that the category of descent data is equivalent to the category of modules over the base ring, and then extend this to descent for quasi-coherent sheaves and morphisms over the fpqc topology."
-excerpt: "Faithfully flat descent, descent data, the cocycle condition, and the fpqc topology"
+description: "This post covers Grothendieck's descent theory for sending algebraic and geometric data down along a faithfully flat morphism. Starting from the exactness of the Amitsur complex, it derives the descent theorem for modules, shows that the category of descent data is equivalent to the category of modules over the base ring, and extends this to the descent of quasi-coherent sheaves and morphisms in the fpqc topology."
+excerpt: "Descent data, the cocycle condition, fpqc topology, and effective descent"
 
 categories: [Math / Scheme Theory]
 permalink: /en/math/scheme_theory/faithfully_flat_descent
@@ -10,23 +10,22 @@ sidebar:
 
 date: 2026-08-25
 weight: 23
-translated_at: 2026-08-28T01:15:05+00:00
+translated_at: 2026-09-02T02:47:32+00:00
 translation_source: kimi-cli
-last_polished_at: 2026-08-28T01:15:05+00:00
 ---
-One of the most common constructions in algebraic geometry is gluing local objects together into a single object, the most familiar example being the gluing of sections of a sheaf along an open cover. This essentially uses only a special kind of base change, the one given by localization, but many situations we actually want to handle are more general than this. For example, $\Spec \mathbb{L}\rightarrow \Spec \mathbb{K}$, corresponding to a field extension $\mathbb{L}/\mathbb{K}$, cannot be viewed as an open embedding since the residue fields differ.
+One of the most common constructions in algebraic geometry is that of gluing local objects together to form a single object; the most familiar example is gluing sections of a sheaf along an open cover. This essentially uses only a special kind of base change, given by localization, but many situations we actually want to deal with are more general than this. For example, $\Spec \mathbb{L}\rightarrow \Spec \mathbb{K}$ corresponding to a field extension $\mathbb{L}/\mathbb{K}$ cannot be viewed as an open embedding, since the residue fields differ.
 
-The idea for resolving this is to treat not only open embeddings but also faithfully flat and quasi-compact morphisms as valid coverings. We first examine the algebraic reasons why these can be treated as valid coverings, and then transport this to geometry.
+The idea to resolve this is to treat not only open embeddings but also faithfully flat and quasi-compact morphisms as valid coverings. We first look at the algebraic reason why these can be treated as valid coverings, and then transfer this to geometry.
 
 ## Faithfully Flat Morphisms
 
 As the name suggests, faithful flatness is a condition that adds a kind of surjectivity to flatness.
 
 ::: Definition 1
-A ring homomorphism $\phi: A \rightarrow B$ is *faithfully flat* if $B$ is a flat $A$-module and, at the same time, for every $A$-module $M$, $M\otimes_A B=0$ implies $M=0$.
+A ring homomorphism $\phi: A \rightarrow B$ is *faithfully flat* if $B$ is a flat $A$-module and, at the same time, for any $A$-module $M$, $M\otimes_A B=0$ implies $M=0$.
 :::
 
-In other words, the additional faithfulness imposed on top of flatness is that $-\otimes_A B$ does not send a nonzero module to $0$. This admits the following equivalent formulations.
+That is, the additional faithfulness attached to flatness is that $-\otimes_A B$ does not send any nonzero module to $0$. This has the following equivalent conditions.
 
 ::: Proposition 2
 For a flat ring homomorphism $\phi: A \rightarrow B$, the following are equivalent.
@@ -36,7 +35,7 @@ For a flat ring homomorphism $\phi: A \rightarrow B$, the following are equivale
 3. The scheme morphism $\varphi: \Spec B \rightarrow \Spec A$ corresponding to $\phi$ is surjective.
 :::
 ::: Proof
-We first show that the first and second conditions are equivalent. To this end, assume the first condition. Since $B$ is flat by assumption, an exact sequence remains exact after applying $-\otimes_A B$, so one direction of the second condition is trivial. The key is the converse; to show it, suppose
+We first show that the first and second conditions are equivalent. To this end, assume the first condition. Then since $B$ is flat by assumption, an exact sequence remains exact after $-\otimes_A B$, so one direction of the second condition is trivial. The point is the converse direction; to show it, suppose
 
 $$M'\otimes_AB \overset{f\otimes_AB}{\longrightarrow} M\otimes_AB \overset{g\otimes_AB}{\longrightarrow} M''\otimes_AB$$
 
@@ -46,15 +45,15 @@ $$0=(g\otimes B)\circ(f\otimes B)=(g\circ f)\otimes B,$$
 
 so the image of
 
-$$\im(g\circ f)\otimes_A B \rightarrow M''\otimes_A B$$ 
+$$\im(g\circ f)\otimes_A B \rightarrow M''\otimes_A B,$$
 
-coming from the inclusion is also $0$. Viewing this map as arising from $\im(g\circ f)\hookrightarrow M''$, flatness of $B$ makes it injective, and hence by faithfulness $\im(g\circ f)=0$, so that $\im f\subseteq \ker g$ holds. Now, to check exactness it suffices to show that $H=\ker g/\im f$ is $0$, which is immediate since $B$ is flat. Then by the same argument as before, faithfulness gives $H=0$, and therefore the original sequence is exact.
+coming from the inclusion, is also $0$. Now viewing this as coming from $\im(g\circ f)\hookrightarrow M''$, since $B$ is flat the above morphism is also injective, and hence by faithfulness $\im(g\circ f)=0$ and $\im f\subseteq \ker g$ holds. Now, to check exactness it suffices to show that $H=\ker g/\im f$ is $0$, which is immediate since $B$ is flat. Then by the same logic as before, $H=0$ by faithfulness, and hence the original sequence is exact.
 
-Conversely, assume the second condition and let us prove the first. If $M\otimes_A B=0$, then the sequence $0 \rightarrow M \rightarrow 0$ becomes exact after applying $-\otimes_A B$, so by assumption $0 \rightarrow M \rightarrow 0$ is exact. That is, $M=0$ and $\phi$ is faithfully flat.
+Conversely, assume the second condition and let us show the first. If $M\otimes_A B=0$, then the sequence $0 \rightarrow M \rightarrow 0$ is exact after $-\otimes_A B$, so by assumption $0 \rightarrow M \rightarrow 0$ is exact. That is, $M=0$ and $\phi$ is faithfully flat.
 
-We now show that the first and third conditions are equivalent. First assume the first condition and choose an arbitrary $\mathfrak{p}\in \Spec A$. Then $\mathfrak{p}$ belongs to the image of $\varphi$ if and only if its fiber $\Spec(B\otimes_A \kappa(\mathfrak{p}))$ is nonempty, that is, if and only if $B\otimes_A \kappa(\mathfrak{p})\neq 0$. But by faithful flatness, since $\kappa(\mathfrak{p})\neq 0$, its base change $B\otimes_A \kappa(\mathfrak{p})$ is also nonzero, so this holds.
+We now show the equivalence of the first and third conditions. First, assume the first condition and pick an arbitrary $\mathfrak{p}\in \Spec A$. Then $\mathfrak{p}$ belongs to the image of $\varphi$ if and only if its fiber $\Spec(B\otimes_A \kappa(\mathfrak{p}))$ is nonempty, i.e. if and only if $B\otimes_A \kappa(\mathfrak{p})\neq 0$. But by faithful flatness, if $\kappa(\mathfrak{p})\neq 0$ then its base change $B\otimes_A \kappa(\mathfrak{p})$ is also nonzero, so this holds.
 
-Finally, assume the third condition and let us prove the first. For this, it suffices to show that $M\otimes_A B\neq 0$ for every $A$-module $M$ with $M\neq 0$. Choosing $0\neq x\in M$, we have $Ax\cong A/{\ann(x)}$, which is a submodule of $M$. Now choose a maximal ideal $\mathfrak{m}$ with $\ann(x)\subseteq \mathfrak{m}$. By assumption this belongs to the image of $\varphi$, so $\kappa(\mathfrak{m})\otimes_A B\neq 0$. Meanwhile, applying $-\otimes_A B$ to the surjection $A/{\ann(x)}\twoheadrightarrow A/\mathfrak{m}=\kappa(\mathfrak{m})$ yields a surjection
+Finally, assume the third condition and let us show the first. For this, it suffices to show that $M\otimes_A B\neq 0$ for any $A$-module $M$ with $M\neq 0$. Picking $0\neq x\in M$, we have $Ax\cong A/{\ann(x)}$, which is a submodule of $M$. Now pick a maximal ideal $\mathfrak{m}$ with $\ann(x)\subseteq \mathfrak{m}$. Then by assumption this lies in the image of $\varphi$, so $\kappa(\mathfrak{m})\otimes_A B\neq 0$. Meanwhile, applying $-\otimes_A B$ to the surjection $A/{\ann(x)}\twoheadrightarrow A/\mathfrak{m}=\kappa(\mathfrak{m})$ yields a surjection
 
 $$(A/{\ann(x)})\otimes_A B\twoheadrightarrow \kappa(\mathfrak{m})\otimes_A B,$$
 
@@ -65,35 +64,35 @@ $$(A/{\ann(x)})\otimes_A B\hookrightarrow M\otimes_A B.$$
 Therefore $M\otimes_A B\neq 0$, and $B$ is a faithful $A$-module.
 :::
 
-What is particularly noteworthy in this proposition is the second condition, which says that exactness may be checked after base change. The third condition shows that this algebraically defined property corresponds exactly to the surjectivity of the morphism $\Spec B \rightarrow \Spec A$; thus a faithfully flat ring homomorphism can be thought of as an affine faithfully flat morphism in the sense of [§Flat Morphisms, ⁋Definition 1](/en/math/scheme_theory/flat_morphisms#def1).
+What is particularly noteworthy in this proposition is the second condition, which shows that exactness may be checked after base change. The third condition shows that this algebraically defined property corresponds exactly to the surjectivity of the morphism $\Spec B \rightarrow \Spec A$; hence a faithfully flat ring homomorphism can be thought of as an affine faithfully flat morphism in the sense of [§Flat Morphisms, ⁋Definition 1](/en/math/scheme_theory/flat_morphisms#def1).
 
-A special example is $A \rightarrow \prod_i A_{f_i}$, obtained when elements $f_1,\ldots, f_n$ of $A$ generate all of $A$: each $A_{f_i}$ is flat, so their product is flat, and $\Spec \prod A_{f_i}=\coprod D(f_i)$ covers $\Spec A$, so it is surjective. This is exactly a Zariski cover of an affine scheme, showing that the notion above subsumes the everyday gluing of sheaves. Moreover, in the case of a field extension $\mathbb{L}/\mathbb{K}$, which could not be explained by open embeddings, $\mathbb{L}$ is (of course) free as a $\mathbb{K}$-vector space, and the geometric morphism between them is a surjective morphism sending a point to a point, so it is faithfully flat.
+A special example is $A \rightarrow \prod_i A_{f_i}$, obtained when elements $f_1,\ldots, f_n$ of $A$ generate all of $A$: since each $A_{f_i}$ is flat, so is their product, and since $\Spec \prod A_{f_i}=\coprod D(f_i)$ covers $\Spec A$, it is surjective. This is exactly a Zariski cover of an affine scheme, and shows that the above notion can cover the everyday gluing of sheaves. Moreover, in the case of a field extension $\mathbb{L}/\mathbb{K}$, which could not be explained by open embeddings above, $\mathbb{L}$ is (of course) free as a $\mathbb{K}$-vector space, and the geometric morphism between them is a surjective morphism sending one point to one point, so it is faithfully flat.
 
-## The Amitsur Complex
+## Amitsur Complex
 
-Given a ring homomorphism $\phi: A \rightarrow B$, we have two morphisms
+Given a ring homomorphism $\phi: A \rightarrow B$, we are given two morphisms
 
 $$d^0, d^1: B \rightrightarrows B\otimes_A B,\qquad d^0(b)=b\otimes 1,\quad d^1(b)=1\otimes b.$$
 
-These are the two homomorphisms reflecting the ways of inserting $B$ into $B\otimes_AB$, and taking their difference $d=d^1-d^0$ gives a morphism $d: B\rightarrow B\otimes_AB$. Moreover, an element coming from $A$ lies in the kernel of $d$ by the properties of the tensor product, so we can consider the sequence
+These are the two homomorphisms reflecting in which way $B$ is to be inserted into $B\otimes_AB$, and taking their difference $d=d^1-d^0$ we can consider the morphism $d: B\rightarrow B\otimes_AB$. Moreover, since an element coming from $A$ lies in the kernel of $d$ by the property of the tensor product, we can consider the sequence
 
 $$0\rightarrow A \overset{\phi}{\longrightarrow}B\overset{d}{\longrightarrow}B\otimes_AB.$$
 
-More generally, write $C^n=B^{\otimes (n+1)}$ for the $(n+1)$-th tensor power of $B$, and consider the following morphisms from $C^n$ to $C^{n+1}$:
+More generally, let $C^n=B^{\otimes (n+1)}$ be the $(n+1)$-th tensor power of $B$, and consider the following morphism from $C^n$ to $C^{n+1}$:
 
 $$\delta_i: C^n \rightarrow C^{n+1};\qquad \delta_i(b_0\otimes \cdots \otimes b_n)=b_0\otimes \cdots \otimes b_{i-1}\otimes 1\otimes b_i\otimes \cdots \otimes b_n.$$
 
-That is, $\delta_i$ is the morphism inserting $1$ in the $i$-th slot, and the alternating sum
+That is, this is the morphism inserting $1$ in the $i$-th position, and their alternating sum
 
 $$\partial^n=\sum_{i=0}^{n+1}(-1)^i\delta_i: C^n \rightarrow C^{n+1}$$
 
-is a morphism from $C^n$ to $C^{n+1}$. A small computation confirms that these form a complex, and the complex
+becomes a morphism from $C^n$ to $C^{n+1}$. A short computation confirms that this forms a complex, and the
 
 $$0 \rightarrow A \overset{\phi}{\longrightarrow} B \overset{\partial^0}{\longrightarrow} B\otimes_A B \overset{\partial^1}{\longrightarrow} B\otimes_A B\otimes_A B \rightarrow \cdots$$
 
-obtained by prepending $\phi$ as above is called the *Amitsur complex* of $\phi$.
+obtained by attaching $\phi$ as above is called the *Amitsur complex* of $\phi$.
 
-The key observation is that if $\phi$ is faithfully flat, then this complex is exact, so that $C^\bullet$ is a resolution of $A$. However, what we will actually use in this post is not the whole resolution but only its first two morphisms, so we claim only the following.
+The key observation is that if $\phi$ is faithfully flat, then this complex becomes exact, so that $C^\bullet$ is a resolution of $A$. However, what we actually use in this post is not the whole resolution but only the first two morphisms, so we claim only the following.
 
 ::: Lemma 3
 For a ring homomorphism $\phi: A \rightarrow B$, the sequence of $B$-modules
@@ -107,7 +106,7 @@ $$0 \rightarrow A \overset{\phi}{\longrightarrow} B \overset{d}{\longrightarrow}
 is exact.
 :::
 ::: Proof
-By [Proposition 2](#prop2), to show that this sequence is exact it suffices to show that the sequence obtained after applying $-\otimes_A B$ is exact. Consider the sequence
+First, consider the sequence
 
 $$0 \rightarrow B \overset{\phi\otimes B}{\longrightarrow} B\otimes_A B \overset{d\otimes B}{\longrightarrow} B\otimes_A B\otimes_A B$$
 
@@ -117,11 +116,11 @@ To check this, consider the two maps
 
 $$s: B\otimes_AB \rightarrow B;\quad b\otimes b'\mapsto bb',\qquad t: B\otimes_AB\otimes_AB\rightarrow B\otimes_AB;\quad b\otimes b'\otimes b''\mapsto b\otimes b'b''.$$
 
-Giving each of $B\otimes_AB$ and $B\otimes_AB\otimes_AB$ the $B$-module structure acting on the rightmost factor $B$, these two maps become $B$-linear, and it is immediate that
+If we give each of $B\otimes_AB$ and $B\otimes_AB\otimes_AB$ the $B$-module structure acting on the rightmost $B$, then these two maps become $B$-linear maps, and it is immediate that the identity
 
 $$s\circ(\phi\otimes B)=\id_B$$
 
-holds. In particular, $\phi\otimes B$ is injective. Moreover, if $b\otimes b'\in\ker(d\otimes B)$, then by definition
+holds. That is, $\phi\otimes B$ is injective. Moreover, if $b\otimes b'\in\ker(d\otimes B)$, then by definition
 
 $$0=(d\otimes B)(b\otimes b')=1\otimes b\otimes b'-b\otimes 1\otimes b',$$
 
@@ -129,46 +128,46 @@ so $1\otimes b\otimes b'=b\otimes 1\otimes b'$, and applying $t$ to this gives
 
 $$b\otimes b'=t(b\otimes 1\otimes b')=t(1\otimes b\otimes b')=1\otimes bb'=(\phi\otimes B)(s(b\otimes b')),$$
 
-so $\ker(d\otimes B)\subseteq \im(\phi\otimes B)$. The opposite inclusion is trivial from $d\circ \phi=0$, so the base-changed sequence is exact, and since $\phi$ is faithfully flat, this means the original sequence is exact.
+so $\ker(d\otimes B)\subseteq \im(\phi\otimes B)$. The reverse inclusion is immediate from $d\circ \phi=0$, so the base-changed sequence is exact. In particular, if $\phi$ is faithfully flat, then the original sequence is also exact by [Proposition 2](#prop2).
 
-To complete the claim of split exactness, turn back to $t$: for an arbitrary $b\otimes b'$ we have $t((d\otimes B)(b\otimes b'))=1\otimes bb'-b\otimes b'$, so
+To complete the claim of split exactness, looking back at the $t$ side, for any $b\otimes b'$ we have $t((d\otimes B)(b\otimes b'))=1\otimes bb'-b\otimes b'$, so
 
 $$(\phi\otimes B)\circ s-t\circ (d\otimes B)=\id_{B\otimes_AB},$$
 
 and together with $s\circ (\phi\otimes B)=\id_B$, this confirms that $(s,-t)$ is a contracting homotopy of this sequence.
 :::
 
-Returning to the Zariski open cover of an affine scheme from earlier makes it clear why this is the engine of gluing. Suppose $A=(f_1,\ldots, f_n)$, and let $B=\prod_i A_{f_i}$. Then
+The reason this becomes the engine of gluing becomes manifest when we look at the Zariski open cover of an affine scheme seen earlier. Let $A=(f_1,\ldots, f_n)$ and let $B=\prod_i A_{f_i}$. Then
 
 $$B\otimes_AB=\left(\prod_i A_{f_i}\right)\otimes_A \left(\prod_j A_{f_j}\right),$$
 
-and since the products here are finite, we can combine them and write
+and since the products here are finite, we can combine them and regard
 
 $$B\otimes_AB \cong\prod_{i,j} A_{f_i}\otimes A_{f_j}\cong\prod_{i,j} A_{f_if_j}.$$
 
-([\[Commutative Algebra\] §Properties of Localization, ⁋Lemma 1](/en/math/commutative_algebra/properties_of_localization#lem1)) Under this identification, $d^0$ places an element of $B$ into the front $i$-component, and $d^1$ places it into the back $j$-component.
+([[\[Commutative Algebra\] §Properties of Localization, ⁋Lemma 1]](/en/math/commutative_algebra/properties_of_localization#lem1)) Then under this identification, $d^0$ puts an element of $B$ into the front $i$ component, and $d^1$ puts an element of $B$ into the back $j$ component.
 
-Geometrically, since $D(f_i)\cap D(f_j)=D(f_if_j)$, we can think of $B\otimes_AB$ as the ring of functions defined on the overlaps $D(f_i)\cap D(f_j)$, and then $d^0$ and $d^1$ become the restrictions
+Geometrically, since $D(f_i)\cap D(f_j)=D(f_if_j)$, we can think of $B\otimes_AB$ as the ring of functions defined on the $D(f_i)\cap D(f_j)$, and then $d^0$ and $d^1$ become the respective restrictions
 
-$$d^0\bigl((s_i)_i\bigr)=\bigl(s_i\vert_{D(f_if_j)}\bigr)_{i,j},\qquad d^1\bigl((s_i)_i\bigr)=\bigl(s_j\vert_{D(f_if_j)}\bigr)_{i,j},$$
+$$d^0\bigl((s_i)_i\bigr)=\bigl(s_i\vert_{D(f_if_j)}\bigr)_{i,j},\qquad d^1\bigl((s_i)_i\bigr)=\bigl(s_j\vert_{D(f_if_j)}\bigr)_{i,j}.$$
 
-respectively. In other words, the difference of the two morphisms records which of $s_i$ and $s_j$ one looks at on the overlap $D(f_if_j)$, and saying that an element $(s_i)_i$ of $B$ lies in the kernel of $d$ means that $s_i$ and $s_j$ agree on that overlap for all $i,j$. This is precisely the gluing condition for the sections defined on the various $D(f_i)$. Moreover, the injectivity of $\phi$ is exactly the statement that an element of $A$ vanishing on every $D(f_i)$ is $0$, which gives the identity axiom of a sheaf; therefore [Lemma 3](#lem3) is nothing but the sheaf condition of $\mathcal{O}_{\Spec A}$ for the open cover $\{D(f_i)\}_i$. More generally, the remaining terms of the Amitsur complex form the Čech complex of this cover.
+That is, the difference between the two morphisms depends on whether one looks at $s_i$ or $s_j$ on the overlap $D(f_if_j)$, and saying that an element $(s_i)_i$ of $B$ lies in the kernel of $d$ means that $s_i$ and $s_j$ agree on that overlap for all $i,j$. In other words, it gives the gluing condition for the $s_i$ defined on each $D(f_i)$. Moreover, the injectivity of $\phi$ is exactly the claim that an element of $A$ vanishing on all $D(f_i)$ is $0$, so it gives the identity condition of a sheaf; hence [Lemma 3](#lem3) is nothing but the sheaf condition of $\mathcal{O}_{\Spec A}$ for the open cover $\{D(f_i)\}_i$. More generally, the remaining terms of the Amitsur complex become the Čech complex of this cover.
 
 ## Descent Data
 
-[Lemma 3](#lem3) tells us exactly how $A$ is recovered from the data of $B$; the slogan is that collecting the elements of $B$ on which the two ways of base-changing agree recovers exactly $A$.
+[Lemma 3](#lem3) tells us exactly how $A$ is recovered from the data of $B$; the slogan is that if we collect the elements of $B$ on which the two ways of base change agree, that is exactly $A$.
 
-Descent is this principle lifted to modules. Suppose a $B$-module $N$ is given, and consider the process of producing a $B\otimes_AB$-module by applying $-\otimes_AB$ or $B\otimes_A-$ to it. As in the case of rings, the two $B\otimes_AB$-modules $N\otimes_AB$ and $B\otimes_AN$ are two structures that differ according to whether $N$ goes into the first factor or the second factor, and our goal is to compare them and take their equalizer. The problem is that, unlike the situation for rings, $N\otimes_AB$ and $B\otimes_AN$ are *genuinely* different[^1] objects. Therefore, comparing them and computing the equalizer requires an additional input, namely an identification between $N\otimes_AB$ and $B\otimes_AN$, and this is exactly what a descent datum is.
+Descent is what results from lifting this principle to modules. Suppose a $B$-module $N$ is given, and consider the process of obtaining a $B\otimes_AB$-module structure by applying $-\otimes_AB$ or $B\otimes_A-$ to it. As in the case of rings, these two $B\otimes_AB$-modules $N\otimes_AB$ and $B\otimes_AN$ are two structures that differ depending on whether $N$ goes into the first factor or the second factor, and our goal is to compare these two and consider their equalizer. The problem is that, unlike the situation for rings, $N\otimes_AB$ and $B\otimes_AN$ are *genuinely* different[^1] objects. Therefore, to compare them and compute the equalizer, an additional input is needed, namely an identification between $N\otimes_AB$ and $B\otimes_AN$, and this is exactly a descent datum.
 
-To deal with this, let us fix notation. We define the morphisms
+To treat this, let us fix notation. We define the morphisms
 
-$$p_1: B\rightarrow B\otimes_AB;\quad b\mapsto b\otimes 1, \qquad p_2: B\rightarrow B\otimes_AB;\quad b\mapsto 1\otimes b,$$
+$$p_1: B\rightarrow B\otimes_AB;\quad b\mapsto b\otimes 1, \qquad p_2: B\rightarrow B\otimes_AB;\quad b\mapsto 1\otimes b$$
 
-and similarly define
+and, similarly, we define
 
 $$p_{12}, p_{13}, p_{23}: B\otimes_A B \rightarrow B\otimes_A B\otimes_A B$$
 
-as the morphisms mapping into the two of the three factors picked out by the index. Then for a $B$-module $N$, we have $p_1^\ast N=N\otimes_A B$ and $p_2^\ast N=B\otimes_A N$.
+as the morphisms sending into the two factors specified by the index among the three factors. Then for a $B$-module $N$, we know that $p_1^\ast N=N\otimes_A B$ and $p_2^\ast N=B\otimes_A N$.
 
 ::: Definition 4
 A *descent datum* for a ring homomorphism $\phi: A \rightarrow B$ is a pair $(N, \Phi_N)$ of a $B$-module $N$ and a $B\otimes_A B$-module isomorphism
@@ -182,134 +181,142 @@ $$p_{13}^\ast \Phi_N=p_{23}^\ast \Phi_N\circ p_{12}^\ast \Phi_N$$
 over $B\otimes_A B\otimes_A B$. A *morphism* between two descent data $(N, \Phi_N)$ and $(N', \Phi_{N'})$ is a $B$-module homomorphism $g: N \rightarrow N'$ satisfying $\Phi_{N'}\circ(g\otimes B)=(B\otimes g)\circ \Phi_N$. We write $\Desc(B/A)$ for the category they form.
 :::
 
-Here the cocycle condition says that the gluing is consistent over triple intersections, and it can be expressed by the diagram
+Here the cocycle condition says that the gluing is well-defined without contradiction over triple intersections, and it can be represented by the following diagram
 
 {% diagram Math/Scheme_Theory/Faithfully_Flat_Descent-1.svg width="15.94em" alt="cocycle condition" %}
 
-where each morphism (for example $p_{12}^\ast \Phi_N: p_1^\ast N\rightarrow p_2^\ast N$) is given by the formula
+where each morphism is given, for example for $p_{12}^\ast \Phi_N: p_1^\ast N\rightarrow p_2^\ast N$, by the formula
 
 $$N\otimes_A B\otimes_A B \rightarrow B\otimes_A N\otimes_A B;\qquad n\otimes b\otimes b'\mapsto \Phi_N(n\otimes b)\otimes b'.$$
 
-In the case of rings, our study of the Amitsur complex began with the observation that the kernel of $d=d^1-d^0$ already contains $A$. The analogue of this in the module setting is the case where a $B$-module $N$ comes from the base change $M\otimes_A B$ of some $A$-module $M$; in this case the identification demanded above as an additional input is given automatically. Here the two base changes are
+To look at the Amitsur complex for rings, we first observed that the kernel of $d=d^1-d^0$ already contains $A$. What corresponds to this in the module situation is the case where the $B$-module $N$ comes from the base change $M\otimes_A B$ of some $A$-module $M$; in this case the identification required as an additional input above is given automatically. In this case the two base changes are
 
 $$p_1^\ast N=M\otimes_A B\otimes_A B,\qquad p_2^\ast N=B\otimes_A M\otimes_A B,$$
 
-which, as in the general case examined above, are different $B\otimes_AB$-modules. However, in both cases the $B\otimes_AB$-module structure is given by letting the first factor of $B\otimes_AB$ act on the left $B$-factor and the second factor act on the right $B$-factor, and using the commutativity of $A$ to move the $M$-factor of $p_2^\ast N$ to the front yields a $B\otimes_AB$-module isomorphism through which we can compare $p_1^\ast N$ and $p_2^\ast N$.
+which, as in the general case examined above, are different $B\otimes_AB$-modules. However, in both of these cases the $B\otimes_AB$-module structure is given in such a way that the first factor of $B\otimes_AB$ acts on the left $B$-factor and the second factor acts on the right $B$-factor, and using the commutativity of $A$ to move the $M$-factor of $p_2^\ast N$ to the front, this is a $B\otimes_AB$-module isomorphism, through which we can compare $p_1^\ast N$ and $p_2^\ast N$.
 
 ::: Example 5
-Given an $A$-module $M$, setting $N=M\otimes_A B$, the $B\otimes_A B$-module isomorphism
+Given an $A$-module $M$, set $N=M\otimes_A B$; then the $B\otimes_A B$-module isomorphism
 
 $$\sigma_M: M\otimes_A B\otimes_A B \overset{\sim}{\longrightarrow} B\otimes_A M\otimes_A B;\qquad m\otimes x\otimes y\mapsto x\otimes m\otimes y$$
 
 between the two base changes $p_1^\ast N=M\otimes_A B\otimes_A B$ and $p_2^\ast N=B\otimes_A M\otimes_A B$ seen above defines a descent datum $(M\otimes_A B, \sigma_M)$. We call this the *canonical descent datum* attached to $M$.
 
-More generally, an $A$-module homomorphism $M \rightarrow M'$ base-changes to a morphism between the canonical descent data, so the assignment $M\mapsto (M\otimes_A B, \sigma_M)$ defines a functor
+More generally, an $A$-module homomorphism $M \rightarrow M'$ base-changes to a morphism between canonical descent data, so the assignment $M\mapsto (M\otimes_A B, \sigma_M)$ defines a functor
 
-$$\rMod{A} \rightarrow \Desc(B/A).$$
+$$\rMod{A} \rightarrow \Desc(B/A)$$
+
+.
 :::
 
 ## Faithfully Flat Descent
 
 We are now ready to state the central claim of this post. It is essentially nothing more than a restatement of the principle we verified in [Lemma 3](#lem3).
 ::: Theorem 6 (Grothendieck)
-If a ring homomorphism $\phi: A \rightarrow B$ is faithfully flat, then the functor
+If the ring homomorphism $\phi: A \rightarrow B$ is faithfully flat, then the functor
 
 $$\rMod{A} \rightarrow \Desc(B/A);\qquad M\mapsto (M\otimes_A B, \sigma_M)$$
 
-from [Example 5](#ex5) is an equivalence of categories. Its inverse functor is given, for a descent datum $(N, \Phi_N)$, by
+from [Example 5](#ex5) is a categorical equivalence. Its inverse functor sends a descent datum $(N, \Phi_N)$ to
 
-$$N^\Phi=\{n\in N\mid \Phi_N(n\otimes 1)=1\otimes n\}.$$
+$$N^\Phi=\{n\in N\mid \Phi_N(n\otimes 1)=1\otimes n\}$$
+
+.
 :::
 ::: Proof
 First, suppose an $A$-module $M$ is given, and consider the canonical descent datum $(M\otimes_A B, \sigma_M)$ it defines. Applying the inverse functor above to it, we obtain
 
-$$(M\otimes_AB)^\sigma=\{x\in M\otimes_A B\mid \sigma_M(x\otimes 1)=1\otimes x\}.$$
+$$(M\otimes_AB)^\sigma=\{x\in M\otimes_A B\mid \sigma_M(x\otimes 1)=1\otimes x\}$$
 
-Since $\sigma_M$ merely moves the $M$-factor, we may move the $M$-factor of each side back to the front and read the condition inside $M\otimes_A B\otimes_A B$, where it becomes $x\otimes 1=1\otimes x$. Hence what we must show is the exactness of the sequence
+, and since $\sigma_M$ merely moves the $M$-factor, moving the $M$-factor of both sides to the front and reading the condition inside $M\otimes_A B\otimes_A B$, the condition becomes $x\otimes 1=1\otimes x$. Hence what we must show is the exactness of the sequence
 
-$$0 \rightarrow M \rightarrow M\otimes_A B \rightarrow M\otimes_A B\otimes_A B,$$
+$$0 \rightarrow M \rightarrow M\otimes_A B \rightarrow M\otimes_A B\otimes_A B$$
 
-and this is obtained by repeating the proof of [Lemma 3](#lem3) verbatim with coefficients in $M$.
+, and this is obtained by repeating the proof of [Lemma 3](#lem3) verbatim with coefficient $M$ attached.
 
-The substantive part is the converse direction. Namely, given a descent datum $(N, \Phi_N)$, setting $M=N^\Phi$, we must show that the $B$-module morphism
+The part with essential content is the other direction. Namely, given a descent datum $(N, \Phi_N)$, set $M=N^\Phi$; we must show that the $B$-module morphism
 
 $$u: M\otimes_A B \rightarrow N;\qquad m\otimes b\mapsto bm$$
 
 is an isomorphism from the descent datum $(M\otimes_AB, \sigma_M)$ to $(N, \Phi_N)$.
 
-We now construct the inverse $v: N\rightarrow M\otimes_AB$ of $u$. The idea is that in order to take an element of $N$ and land it in $M\otimes_AB$, one has no choice but to send $n$ to an element of the same sort as $n\otimes 1$; keeping this in mind, a short computation shows that we are forced to use the descent datum and define $n\mapsto \Phi_N^{-1}(1\otimes n)$. For convenience, write $\Psi=\Phi_N^{-1}$; our claim is that the assignment $n\mapsto \Psi(1\otimes n)$ takes values in $M\otimes_AB$.
+We now construct an inverse $v: N\rightarrow M\otimes_AB$ of $u$. The idea is that, in order to send an element of $N$ into $M\otimes_AB$, one has no choice but to send $n$ to an element of the same kind as $n\otimes 1$; keeping this in mind and doing a bit of computation, we see that we must define it using the descent datum as $n\mapsto \Phi_N^{-1}(1\otimes n)$. For convenience write $\Psi=\Phi_N^{-1}$; our claim is that this assignment $n\mapsto \Psi(1\otimes n)$ has image landing in $M\otimes_AB$.
 
-To verify this, write $\Psi(1\otimes n)=\sum_j n_j\otimes c_j$. By the cocycle condition, $p_{13}^\ast \Psi=p_{12}^\ast \Psi\circ p_{23}^\ast \Psi$, and evaluating both sides at the element $1\otimes 1\otimes n\in B\otimes_A B\otimes_A N$ gives
+To check this, write $\Psi(1\otimes n)=\sum_j n_j\otimes c_j$. Then by the cocycle condition $p_{13}^\ast \Psi=p_{12}^\ast \Psi\circ p_{23}^\ast \Psi$, and evaluating both sides at the element $1\otimes 1\otimes n\in B\otimes_A B\otimes_A N$ gives
 
-$$p_{13}^\ast \Psi(1\otimes 1\otimes n)=\sum_j n_j\otimes 1\otimes c_j,\qquad (p_{12}^\ast \Psi\circ p_{23}^\ast \Psi)(1\otimes 1\otimes n)=\sum_j \Psi(1\otimes n_j)\otimes c_j.$$
+$$p_{13}^\ast \Psi(1\otimes 1\otimes n)=\sum_j n_j\otimes 1\otimes c_j,\qquad (p_{12}^\ast \Psi\circ p_{23}^\ast \Psi)(1\otimes 1\otimes n)=\sum_j \Psi(1\otimes n_j)\otimes c_j$$
 
-Identifying these two and applying $p_{12}^\ast \Phi_N$ to both sides, we obtain the identity
+. Now identifying these two and applying $p_{12}^\ast \Phi_N$ to both sides, we obtain the equality
 
-$$\sum_j \Phi_N(n_j\otimes 1)\otimes c_j=\sum_j (1\otimes n_j)\otimes c_j.$$
+$$\sum_j \Phi_N(n_j\otimes 1)\otimes c_j=\sum_j (1\otimes n_j)\otimes c_j$$
 
-Therefore, if we define $d_N: N \rightarrow B\otimes_A N$ by $d_N(n)=\Phi_N(n\otimes 1)-1\otimes n$, then $(d_N\otimes B)\bigl(\sum_j n_j\otimes c_j\bigr)=0$ holds. Our claim is then that $\ker(d_N\otimes B)=M\otimes_AB$, and hence that the above assignment lands in $M\otimes_AB$. Now by the definition of $M$, the sequence $0 \rightarrow M \rightarrow N \overset{d_N}{\longrightarrow} B\otimes_A N$ is exact, and since $B$ is flat, applying $-\otimes_AB$ to it yields
+. Therefore, defining $d_N: N \rightarrow B\otimes_A N$ by $d_N(n)=\Phi_N(n\otimes 1)-1\otimes n$, we have $(d_N\otimes B)\bigl(\sum_j n_j\otimes c_j\bigr)=0$. Our claim is then that $\ker(d_N\otimes B)=M\otimes_AB$, so that the above assignment lands in $M\otimes_AB$. Now by the definition of $M$, the sequence $0 \rightarrow M \rightarrow N \overset{d_N}{\longrightarrow} B\otimes_A N$ is exact, and since $B$ is flat, applying $-\otimes_AB$ yields
 
-$$0 \rightarrow M\otimes_A B \rightarrow N\otimes_A B \overset{d_N\otimes B}{\longrightarrow} B\otimes_A N\otimes_A B,$$
+$$0 \rightarrow M\otimes_A B \rightarrow N\otimes_A B \overset{d_N\otimes B}{\longrightarrow} B\otimes_A N\otimes_A B$$
 
-which is again exact. That is, inside $N\otimes_A B$ we have $M\otimes_A B=\ker(d_N\otimes B)$.
+which is also exact. That is, inside $N\otimes_A B$ we have $M\otimes_A B=\ker(d_N\otimes B)$.
 
-Let us now show that the assignment $v: n\mapsto \Psi(1\otimes n)$ thus constructed is indeed the inverse of $u$. First, the identity
+Now let us show that the assignment $v: n\mapsto \Psi(1\otimes n)$ so constructed is indeed inverse to $u$. First,
 
 $$v(u(m\otimes b))=\Psi(1\otimes bm)=(1\otimes b)\Psi(1\otimes m)=(1\otimes b)(m\otimes 1)=m\otimes b$$
 
-is immediate. Conversely, for $u(v(n))=n$: since $v(n)$ is an element of $M\otimes_A B$, we may choose $m_k\in M$ and write $v(n)=\sum_k m_k\otimes b_k$; applying $\Phi_N$ to this gives $\Phi_N(v(n))=\Phi_N(\Psi(1\otimes n))=1\otimes n$, and hence
+is immediate. Conversely, for $u(v(n))=n$: since $v(n)$ is an element of $M\otimes_A B$, we can choose $m_k\in M$ and write $v(n)=\sum_k m_k\otimes b_k$; applying $\Phi_N$ gives $\Phi_N(v(n))=\Phi_N(\Psi(1\otimes n))=1\otimes n$, and therefore
 
-$$1\otimes n=\sum_k (1\otimes b_k)\Phi_N(m_k\otimes 1)=\sum_k (1\otimes b_k)(1\otimes m_k)=1\otimes \sum_k b_km_k.$$
+$$1\otimes n=\sum_k (1\otimes b_k)\Phi_N(m_k\otimes 1)=\sum_k (1\otimes b_k)(1\otimes m_k)=1\otimes \sum_k b_km_k$$
 
-But the injectivity of $n\mapsto n\otimes 1$ is given by [Lemma 3](#lem3) (with coefficients in $M$), and the same holds for $n\mapsto 1\otimes n: N \rightarrow B\otimes_A N$, which differs only in the order of the factors, so $u(v(n))=\sum_k b_km_k=n$.
+. But the injectivity of $n\mapsto n\otimes 1$ is given by [Lemma 3](#lem3) (its $M$-coefficient version), and the map $n\mapsto 1\otimes n: N \rightarrow B\otimes_A N$, obtained from it by swapping the order, is likewise injective; hence $u(v(n))=\sum_k b_km_k=n$.
 
-Finally, that $u$ is indeed an isomorphism of descent data can be checked by applying the two composites to $m\otimes b\otimes b'$, and naturality can likewise be shown by a short computation.
+Finally, that $u$ is actually an isomorphism of descent data is checked by applying the two compositions to $m\otimes b\otimes b'$, and naturality can likewise be shown by a small computation.
 :::
 
-As a direct consequence of this theorem, one may check various properties of an $A$-module $M$ not on $M$ itself but on $M\otimes_A B$, its lift to $B$. For instance, if $M\otimes_A B$ is a finitely generated $B$-module then $M$ is finitely generated; if $M\otimes_A B$ is finitely presented then $M$ is finitely presented; and if $M\otimes_A B$ is flat then so is $M$. This is because each of these properties can be expressed in terms of exact sequences, and [Proposition 2](#prop2) reflects that exactness back down to $A$.
+Logically, the categorical equivalence of [Theorem 6](#thm6) contains two distinct claims. Full faithfulness says that when two $A$-modules $M,M'$ are already given, a compatible $B$-module morphism $M\otimes_A B\rightarrow M'\otimes_A B$ between canonical descent data comes from a unique $A$-module morphism $M\rightarrow M'$. Here the source and target are given globally, and one only glues the morphism between them. This is descent for morphisms.
+
+In essential surjectivity, no global $A$-module is given in advance. From an arbitrary descent datum $(N,\Phi_N)$ one must find an $A$-module $M$ and express $(N,\Phi_N)\cong(M\otimes_A B,\sigma_M)$; in the proof above we constructed this $M$ as $N^\Phi$. This is effective descent for objects. Essential surjectivity does not follow from full faithfulness alone, so the mere ability to glue morphisms does not imply that objects can be glued.
+
+As a direct consequence of this theorem, many properties of an $A$-module $M$ may be checked not on $M$ itself but on $M\otimes_A B$, lifted up to $B$. For instance, if $M\otimes_A B$ is a finitely generated $B$-module then $M$ is finitely generated; if $M\otimes_A B$ is finitely presented then so is $M$; and if $M\otimes_A B$ is flat then so is $M$. This is because each of these properties is expressible by an exact sequence, and [Proposition 2](#prop2) reflects that exactness down to $A$.
 
 ::: Proposition 7
-Let $\phi: A \rightarrow B$ be a faithfully flat ring homomorphism and let $M$ be an $A$-module. Then $M$ is finitely generated (resp. finitely presented, flat, locally free of finite rank) if and only if $M\otimes_A B$ is finitely generated (resp. finitely presented, flat, locally free of finite rank) as a $B$-module.
+Let the ring homomorphism $\phi: A \rightarrow B$ be faithfully flat and let $M$ be an $A$-module. Then $M$ is finitely generated (resp. finitely presented, flat, locally free of finite rank) if and only if $M\otimes_A B$ is finitely generated (resp. finitely presented, flat, locally free of finite rank) as a $B$-module.
 :::
 ::: Proof
-The direction that if $M$ has the property then so does $M\otimes_A B$ is trivial, since each property is preserved under base change; the heart of this proposition lies in the converse directions.
+The direction that $M\otimes_A B$ has the property whenever $M$ does is trivial, since each property is preserved under base change; the heart of this proposition is that the converse directions hold.
 
-First, suppose $M\otimes_AB$ is generated by $y_1,\ldots, y_n$. Each $y_i$ can be written as a sum of finitely many elements $m_{ij}\otimes b_{ij}$, so collecting all the $m_{ij}$ we obtain a finitely generated submodule $M_0\subseteq M$. Then $M_0\otimes_AB\rightarrow M\otimes_AB$ is surjective, so $(M/M_0)\otimes_A B=0$, and by faithfulness $M/M_0=0$. That is, $M=M_0$ is finitely generated.
+First, suppose $M\otimes_AB$ is generated by $y_1,\ldots, y_n$. Then each $y_i$ can be written as a sum of finitely many $m_{ij}\otimes b_{ij}$, so gathering all the $m_{ij}$ we can define a finitely generated submodule $M_0\subseteq M$ of $M$. Then $M_0\otimes_AB\rightarrow M\otimes_AB$ is surjective, hence $(M/M_0)\otimes_A B=0$, so by faithfulness $M/M_0=0$. That is, $M=M_0$ is finitely generated.
 
-Now consider the case of finite presentation. Under this hypothesis we already know from the above that $M$ is finitely generated, so it suffices to show that the kernel $K$ of $A^n \twoheadrightarrow M$ is finitely generated. For this, base-changing the exact sequence
+Now consider the case of finite presentation. Under this hypothesis, we already know from above that $M$ is finitely generated, so it suffices to show that the kernel $K$ of $A^n \twoheadrightarrow M$ is finitely generated. For this, base-changing the exact sequence
 
 $$0 \rightarrow K \rightarrow A^n \rightarrow M \rightarrow 0$$
 
-to $B$ yields
+to $B$ gives
 
-$$0 \rightarrow K\otimes_A B \rightarrow B^n \rightarrow M\otimes_A B \rightarrow 0,$$
+$$0 \rightarrow K\otimes_A B \rightarrow B^n \rightarrow M\otimes_A B \rightarrow 0$$
 
-which is exact, and since $M\otimes_A B$ is finitely presented, $K\otimes_A B$ is finitely generated (the discussion following [\[Commutative Algebra\] §Flatness, ⁋Corollary 6](/en/math/commutative_algebra/flatness#cor6)). Therefore, applying the finitely generated result above to $K$, we see that $K$ is finitely generated and $M$ is finitely presented.
+which is exact, and since $M\otimes_A B$ is finitely presented, $K\otimes_A B$ is finitely generated (the discussion following [\[Commutative Algebra\] §Flatness, ⁋Corollary 6](/en/math/commutative_algebra/flatness#cor6)). Therefore, applying the finitely generated result above to $K$, we conclude that $K$ is finitely generated and $M$ is finitely presented.
 
-For flatness, to show that $M$ is flat it suffices to show that for every injective $A$-module morphism $M' \hookrightarrow M''$, the map $M'\otimes_A M \rightarrow M''\otimes_A M$ is injective. Again applying $-\otimes_AB$, we obtain the morphism $M'\otimes_A M\otimes_A B \rightarrow M''\otimes_A M\otimes_A B$, which can be regarded as obtained by tensoring the injective homomorphism $M'\otimes_A B \rightarrow M''\otimes_A B$ with the flat $B$-module $M\otimes_A B$, so it is again injective.
+For flatness, to show that $M$ is flat it suffices to show that for every injective $A$-module morphism $M' \hookrightarrow M''$, the map $M'\otimes_A M \rightarrow M''\otimes_A M$ is injective. Again applying $-\otimes_AB$, we obtain a morphism $M'\otimes_A M\otimes_A B \rightarrow M''\otimes_A M\otimes_A B$, which can be regarded as obtained by tensoring the injective homomorphism $M'\otimes_A B \rightarrow M''\otimes_A B$ with the flat $B$-module $M\otimes_A B$, so it is again injective.
 
-Finally, being locally free of finite rank is equivalent to being finitely presented and flat ([\[Commutative Algebra\] §Flatness, ⁋Corollary 6](/en/math/commutative_algebra/flatness#cor6)), so there is nothing more to prove.
+Finally, locally free of finite rank is equivalent to being finitely presented and flat ([\[Commutative Algebra\] §Flatness, ⁋Corollary 6](/en/math/commutative_algebra/flatness#cor6)), so there is nothing more to prove.
 :::
 
 ## Descent of Quasi-coherent Sheaves
 
-We now have all the tools needed for gluing. What remains is merely to attach the appropriate names. Namely, since we have seen that gluing works well even when the notion of open embedding is extended to faithfully flat morphisms, we may as well rewrite the notion of an *open set* from scratch using these faithfully flat morphisms.
+We now have all the tools for gluing. What remains is merely to attach appropriate names to them. Namely, having seen that gluing works well even when the notion of open embedding is extended to faithfully flat morphisms, we may as well rewrite the notion of *open set* outright using these faithfully flat morphisms.
 
 ::: Definition 8
-A *Grothendieck topology* on a category $\mathcal{C}$ having fiber products is an assignment, to each object $U$, of a collection of families $\{f_i: U_i \rightarrow U\}_{i\in I}$ of morphisms with codomain $U$, whose elements are called *coverings* of $U$. These satisfy the following three conditions.
+A *Grothendieck pretopology* on a category $\mathcal{C}$ having fiber products is an assignment, to each object $U$, of a collection of families $\{f_i: U_i \rightarrow U\}_{i\in I}$ of morphisms with codomain $U$, whose elements are called *coverings* of $U$. These satisfy the following three conditions.
 
 1. If $f: V \rightarrow U$ is an isomorphism, then $\{f: V \rightarrow U\}$ is a covering.
 2. If $\{f_i: U_i \rightarrow U\}$ is a covering and $g: V \rightarrow U$ is an arbitrary morphism, then the family $\{U_i\times_U V \rightarrow V\}_{i\in I}$ given by base change is also a covering.
-3. If $\{f_i: U_i \rightarrow U\}$ is a covering and, for each $i$, $\{g_{ij}: U_{ij} \rightarrow U_i\}_{j\in J_i}$ is a covering, then the family $\{f_i\circ g_{ij}: U_{ij} \rightarrow U\}_{i, j}$ given by composition is also a covering.
+3. If $\{f_i: U_i \rightarrow U\}$ is a covering and for each $i$ the family $\{g_{ij}: U_{ij} \rightarrow U_i\}_{j\in J_i}$ is a covering, then the family $\{f_i\circ g_{ij}: U_{ij} \rightarrow U\}_{i, j}$ given by composition is also a covering.
 :::
 
-In particular, since $\Sch$ has fiber products ([§Fiber Products, ⁋Theorem 8](/en/math/scheme_theory/fiber_products#thm8)), we can apply this definition. Reading an open cover $\{U_i\}$ of a topological space as the family of inclusions $\{U_i\hookrightarrow U\}$, the three conditions above hold, with $U_i\times_U V$ being the intersection $U_i\cap V$. In other words, the three conditions merely require that an object covers itself, that a restriction of a covering is again a covering, and that a covering of a covering is a covering. The topology we will use takes as coverings the morphisms that are faithfully flat and quasi-compact; shortening the name *fidèlement plat quasi-compact*, it is called the fpqc topology.
+In particular, since $\Sch$ has fiber products ([§Fiber Products, ⁋Theorem 8](/en/math/scheme_theory/fiber_products#thm8)), we can apply this definition. Reading an open cover $\{U_i\}$ of a topological space as the family of inclusions $\{U_i\hookrightarrow U\}$, the three conditions above hold, with $U_i\times_U V$ being the intersection $U_i\cap V$. In other words, the three conditions merely require that an object covers itself, that a restriction of a covering is again a covering, and that a covering of a covering is a covering. The topology we will use employs coverings of faithfully flat morphisms satisfying a quasi-compactness condition; abbreviating its name *fidèlement plat quasi-compact*, we call it the fpqc topology.
 
 ::: Definition 9
-A family of morphisms $\{\psi_i: U_i \rightarrow X\}_{i\in I}$ over a scheme $X$ is an *fpqc cover* if each $\psi_i$ is flat, $\coprod_i U_i \rightarrow X$ is surjective, and the quasi-compactness condition holds: every affine open $V\subseteq X$ is covered by the images of finitely many affine opens $W_{ij}$ of the $U_i$. The Grothendieck topology on $\Sch$ defined by these coverings is called the *fpqc topology*.
+A family $\{\psi_i: U_i \rightarrow X\}_{i\in I}$ of morphisms over a scheme $X$ is an *fpqc cover* if each $\psi_i$ is flat, $\coprod_i U_i \rightarrow X$ is surjective, and the quasi-compactness condition holds: every affine open $V\subseteq X$ is covered by the images of finitely many affine opens $W_{ij}$ of the $U_i$. The Grothendieck topology on $\Sch$ defined by these coverings is called the *fpqc topology*.
 :::
 
-In the fpqc topology, the simplest covering of a single affine scheme $\Spec A$ is $\{\Spec B \rightarrow \Spec A\}$, consisting of a single faithfully flat ring homomorphism $A \rightarrow B$.
+In the fpqc topology, the simplest covering of a single affine scheme $\Spec A$ is $\{\Spec B \rightarrow \Spec A\}$ consisting of one faithfully flat ring homomorphism $A \rightarrow B$.
 
 The reason we bothered to lift [Lemma 3](#lem3) to modules is, of course, to deal with quasi-coherent sheaves ([§Quasi-coherent Sheaves, ⁋Definition 8](/en/math/scheme_theory/quasicoherent_sheaves#def8)).
 
@@ -325,81 +332,81 @@ $$\Gamma(T, \psi^\ast\mathcal{F}) \rightarrow \prod_i \Gamma(T_i, \psi_i^\ast\ma
 is exact.
 :::
 ::: Proof
-The problem is local, and thanks to the quasi-compact condition it reduces to finite coverings, so it suffices to treat the case where $T=\Spec A$ is affine and the covering is a single faithfully flat morphism $\{\Spec B \rightarrow \Spec A\}$. In this case, choosing an $A$-module $M$ with $\mathcal{F}=\widetilde M$, the pullback is given by base change ([§Quasi-coherent Sheaves, ⁋Proposition 15](/en/math/scheme_theory/quasicoherent_sheaves#prop15)), so the above sequence becomes
+The problem is local, and thanks to the quasi-compactness condition it reduces to a finite covering, so it suffices to treat the case where $T=\Spec A$ is affine and the covering is a single faithfully flat morphism $\{\Spec B \rightarrow \Spec A\}$. In this case, choose an $A$-module $M$ with $\mathcal{F}=\widetilde M$; since pullback is given by base change ([§Quasi-coherent Sheaves, ⁋Proposition 15](/en/math/scheme_theory/quasicoherent_sheaves#prop15)), the above sequence becomes
 
-$$M \rightarrow M\otimes_A B \rightrightarrows M\otimes_A B\otimes_A B.$$
+$$M \rightarrow M\otimes_A B \rightrightarrows M\otimes_A B\otimes_A B$$
 
-The claim is then the exactness of the sequence
+. The claim is then the exactness of the sequence
 
 $$0 \rightarrow M \rightarrow M\otimes_A B \rightarrow M\otimes_A B\otimes_A B$$
 
-obtained by generalizing [Lemma 3](#lem3) with coefficients in $M$, which was already shown in the proof of [Theorem 6](#thm6). Since the statement that the equalizer of the two morphisms $d^0, d^1$ is $M$ is precisely the sheaf condition above, we obtain the conclusion.
+obtained by generalizing [Lemma 3](#lem3) with $M$ as coefficient, which was already shown in the proof of [Theorem 6](#thm6). Now the fact that the equalizer of the two morphisms $d^0, d^1$ is $M$ is precisely the sheaf condition above, so we obtain the conclusion.
 :::
 
-[Theorem 10](#thm10) allows us to compute global sections of a quasi-coherent sheaf over a faithfully flat covering. From this we obtain descent for quasi-coherent sheaves themselves.
+[Theorem 10](#thm10) allows us to compute global sections of a quasi-coherent sheaf over a faithfully flat covering. From this we obtain descent of quasi-coherent sheaves themselves.
 
 ::: Theorem 11
-Let the family $\{\psi_i: U_i \rightarrow X\}$ be an fpqc cover. Then giving a quasi-coherent sheaf on $X$ is equivalent to giving the data of quasi-coherent sheaves $\mathcal{F}_i$ on each $U_i$, together with isomorphisms $\Phi_{ij}: \pr_2^\ast \mathcal{F}_j\cong \pr_1^\ast \mathcal{F}_i$ over $U_i\times_X U_j$ satisfying the cocycle condition.
+Let $\{\psi_i: U_i \rightarrow X\}$ be an fpqc cover. Then giving a quasi-coherent sheaf on $X$ is equivalent to giving the data of quasi-coherent sheaves $\mathcal{F}_i$ on each $U_i$, together with isomorphisms $\Phi_{ij}: \pr_2^\ast \mathcal{F}_j\cong \pr_1^\ast \mathcal{F}_i$ on $U_i\times_X U_j$ satisfying the cocycle condition.
 :::
 ::: Proof
-Since the problem is local, it suffices to consider the case where $X=\Spec A$ and the covering is a single faithfully flat morphism $\Spec B \rightarrow \Spec A$. In this situation $U_i\times_X U_j$ is $\Spec(B\otimes_A B)$, and the given data are exactly a $B$-module $N=\Gamma(\Spec B, \mathcal{F}_1)$ together with a $B\otimes_A B$-module isomorphism $\Phi_N$ satisfying the cocycle condition, that is, a descent datum in the sense of [Definition 4](#def4). These data correspond precisely to an object of $\Desc(B/A)$, so by [Theorem 6](#thm6) they come from a unique $A$-module $M$, i.e. from a unique quasi-coherent sheaf $\widetilde M$, and this correspondence also preserves morphisms.
+Since the problem is local, it suffices to consider the case where $X=\Spec A$ and the covering is a single faithfully flat morphism $\Spec B \rightarrow \Spec A$. In this situation, $U_i\times_X U_j$ is $\Spec(B\otimes_A B)$, and the given data is exactly a cocycle pair consisting of a $B$-module $N=\Gamma(\Spec B, \mathcal{F}_1)$ and a $B\otimes_A B$-module isomorphism $\Phi_N$, i.e. a descent datum in the sense of [Definition 4](#def4). Since this data corresponds exactly to an object of $\Desc(B/A)$, by [Theorem 6](#thm6) it comes from a unique $A$-module $M$, i.e. a unique quasi-coherent sheaf $\widetilde M$, and this correspondence preserves morphisms as well.
 
-For a general fpqc cover, use the quasi-compact condition to pick a finite subcover, form its disjoint union into a single affine faithfully flat morphism, apply the affine case above, and then glue the results over the affine opens of $X$. The consistency of the gluing is guaranteed by the sheaf property of [Theorem 10](#thm10).
+For a general fpqc cover, use the quasi-compactness condition to extract a finite subcover, form its disjoint union into a single affine faithfully flat morphism, apply the affine case above, and then glue the results over the affine opens of $X$. The consistency of the gluing is guaranteed by the sheaf property of [Theorem 10](#thm10).
 :::
 
-Once again, the essential fact in [Theorem 11](#thm11) is that when a descent datum $(\mathcal{F}_i, \Phi)$ of the above form is given, one can actually glue these pieces together into a single sheaf $\mathcal{F}$.
+Once again, the essential point of [Theorem 11](#thm11) is that when a descent datum $(\mathcal{F}_i, \Phi)$ of the above form is given, one can actually glue them together to obtain a single sheaf $\mathcal{F}$.
 
 ## Descent of Morphisms
 
-We now turn to the problem of gluing objects one step more geometric than quasi-coherent sheaves. Our first goal is to glue schemes: suppose an fpqc cover $\{\psi_i:U_i\rightarrow S\}$ is given, that for each $i$ a $U_i$-scheme $V_i\rightarrow U_i$ is given, and that over each overlap $U_i\times_SU_j$ an identification of these via isomorphisms satisfying the cocycle condition has already been given. Our goal is to find an $S$-scheme $V\rightarrow S$ gluing these $U_i$-schemes together, where the condition that it extends the $V_i$ is expressed by the isomorphisms
+We now turn to the problem of gluing objects one step more geometric than quasi-coherent sheaves. Our first goal is to glue schemes. Suppose an fpqc cover $\{\psi_i:U_i\rightarrow S\}$ is given, that for each $i$ a $U_i$-scheme structure $V_i\rightarrow U_i$ is given, and that on each overlap $U_i\times_SU_j$ an identification of these through isomorphisms satisfying the cocycle condition is already given. Our goal is to find an $S$-scheme $V\rightarrow S$ gluing these $U_i$-schemes together; the condition that it extends the $V_i$ is given by the isomorphisms
 
-$$V\times_SU_i\cong V_i.$$
+$$V\times_SU_i\cong V_i$$
 
-In general such a construction is not always possible, and the most basic condition making it possible is that the $V_i\rightarrow U_i$ be affine.
+In general such a construction is not always possible, and the most basic condition that makes it possible is that the $V_i\rightarrow U_i$ are affine.
 
 ::: Theorem 12
-Suppose we are given an fpqc cover $\{\psi_i:U_i \rightarrow S\}$, affine morphisms $V_i \rightarrow U_i$ defined over each of them, and cocycle isomorphism data identifying them over the intersections $U_i\times_S U_j$. Then there exist an affine morphism $V\rightarrow S$ over $S$ and isomorphisms $V\times_SU_i\cong V_i$ compatible with the given cocycle isomorphisms, and such a $V$ is unique up to unique isomorphism.
+Suppose we are given an fpqc cover $\{\psi_i:U_i \rightarrow S\}$, affine morphisms $V_i \rightarrow U_i$ defined over each of them, and cocycle isomorphism data identifying these over the intersections $U_i\times_S U_j$. Then there exist an affine morphism $V\rightarrow S$ over $S$ and isomorphisms $V\times_SU_i\cong V_i$ compatible with the given cocycle isomorphisms, and such a $V$ is unique up to unique isomorphism.
 :::
 ::: Proof
-Our strategy is to use the gluing of quasi-coherent sheaves that we already have; to this end, we regard the affine morphisms $\varphi_i: V_i\rightarrow U_i$ as quasi-coherent $\mathcal{O}_{U_i}$-algebras
+Our strategy is to use the gluing of quasi-coherent sheaves that we already have. To this end, we regard the affine morphisms $\varphi_i: V_i\rightarrow U_i$ as quasi-coherent $\mathcal{O}_{U_i}$-algebras
 
 $$\mathcal{A}_i=(\varphi_i)_\ast\mathcal{O}_{V_i}$$
 
-([§Quasi-coherent Sheaves, ⁋Theorem 20](/en/math/scheme_theory/quasicoherent_sheaves#thm20)). That is, we think of $V_i$ as the relative spectrum $\rSpec_{U_i}(\mathcal{A}_i)$; it then suffices to glue these quasi-coherent algebras into a single quasi-coherent algebra and turn it back into an affine morphism.
+([§Quasi-coherent Sheaves, ⁋Theorem 20](/en/math/scheme_theory/quasicoherent_sheaves#thm20)). That is, we think of $V_i$ as the relative spec $\rSpec_{U_i}(\mathcal{A}_i)$; it suffices to glue these quasi-coherent algebras into a single quasi-coherent algebra and then turn it back into an affine morphism.
 
-Now the cocycle isomorphisms between the $V_i$ translate in this language into cocycle isomorphisms between pullbacks of the $\mathcal{A}_i$, so applying [Theorem 11](#thm11) yields a quasi-coherent sheaf $\mathcal{A}$ on $S$ together with isomorphisms
+Now the cocycle isomorphisms among the $V_i$ translate in this language into cocycle isomorphisms among the pullbacks of the $\mathcal{A}_i$, so applying [Theorem 11](#thm11) yields a quasi-coherent sheaf $\mathcal{A}$ on $S$ together with isomorphisms
 
-$$\psi_i^\ast\mathcal{A}\cong\mathcal{A}_i.$$
+$$\psi_i^\ast\mathcal{A}\cong\mathcal{A}_i$$
 
-We must now endow it with an algebra structure. As we checked in the proof of [§Quasi-coherent Sheaves, ⁋Proposition 22](/en/math/scheme_theory/quasicoherent_sheaves#prop22), pullback is compatible with tensor products and $\psi_i^\ast\mathcal{O}_S\cong\mathcal{O}_{U_i}$, so the multiplication and unit of each $\mathcal{A}_i$
+We must now endow it with an algebra structure. As we checked in the proof of [§Quasi-coherent Sheaves, ⁋Proposition 22](/en/math/scheme_theory/quasicoherent_sheaves#prop22), pullback is compatible with tensor products and $\psi_i^\ast\mathcal{O}_S\cong\mathcal{O}_{U_i}$, so the multiplication and unit of each $\mathcal{A}_i$,
 
 $$\mu_i:\mathcal{A}_i\otimes\mathcal{A}_i\rightarrow\mathcal{A}_i,\qquad \eta_i:\mathcal{O}_{U_i}\rightarrow\mathcal{A}_i$$
 
-can be regarded as morphisms between the pullbacks of $\mathcal{A}\otimes\mathcal{A}$ and $\mathcal{A}$, and between those of $\mathcal{O}_S$ and $\mathcal{A}$, respectively. Since these are compatible with the given algebra isomorphisms, the correspondence for morphisms in [Theorem 11](#thm11) gives unique morphisms
+can be viewed as morphisms between the pullbacks of $\mathcal{A}\otimes\mathcal{A}$ and $\mathcal{A}$, and between the pullbacks of $\mathcal{O}_S$ and $\mathcal{A}$, respectively. Since these are compatible with the given algebra isomorphisms, the correspondence on morphisms in [Theorem 11](#thm11) yields unique morphisms
 
 $$\mu:\mathcal{A}\otimes\mathcal{A}\rightarrow\mathcal{A},\qquad \eta:\mathcal{O}_S\rightarrow\mathcal{A}$$
 
-whose pullbacks agree with $\mu_i$ and $\eta_i$, respectively. Associativity and the unit law hold after pulling back to the $U_i$, and sheaf morphisms that agree over an fpqc cover also agree over $S$; hence $\mathcal{A}$ is a quasi-coherent $\mathcal{O}_S$-algebra. Therefore, setting
+whose pullbacks agree with $\mu_i$ and $\eta_i$, respectively. Associativity and the unit law hold after pulling back over the $U_i$, and sheaf morphisms that agree over an fpqc cover also agree over $S$, so $\mathcal{A}$ is a quasi-coherent $\mathcal{O}_S$-algebra. Therefore, setting
 
-$$V=\rSpec_S(\mathcal{A}),$$
+$$V=\rSpec_S(\mathcal{A})$$
 
-this is an affine scheme over $S$. Since the relative spectrum is compatible with base change by [§Quasi-coherent Sheaves, ⁋Proposition 22](/en/math/scheme_theory/quasicoherent_sheaves#prop22), we have
+gives an affine scheme over $S$. By [§Quasi-coherent Sheaves, ⁋Proposition 22](/en/math/scheme_theory/quasicoherent_sheaves#prop22), the relative spectrum is compatible with base change, so
 
-$$V\times_SU_i\cong\rSpec_{U_i}(\psi_i^\ast\mathcal{A})\cong\rSpec_{U_i}(\mathcal{A}_i)\cong V_i,$$
+$$V\times_SU_i\cong\rSpec_{U_i}(\psi_i^\ast\mathcal{A})\cong\rSpec_{U_i}(\mathcal{A}_i)\cong V_i$$
 
-and these isomorphisms recover the cocycle data given at the start. Moreover, $\mathcal{A}$ and its algebra structure are unique up to unique isomorphism by [Theorem 11](#thm11), and an affine morphism is recovered from its quasi-coherent algebra, so $V$ is unique in the same sense.
+and these isomorphisms recover the cocycle data given at the start. Moreover, since $\mathcal{A}$ and its algebra structure are unique up to unique isomorphism by [Theorem 11](#thm11), and an affine morphism is recovered from its quasi-coherent algebra, $V$ is also unique in the same sense.
 :::
 
-More generally, a quasi-compact, quasi-separated scheme morphism $\varphi:V\rightarrow U$ is called *quasi-affine* if the canonical morphism $V\rightarrow\rSpec_U(\varphi_\ast\mathcal{O}_V)$ is a quasi-compact open immersion. The conclusion of [Theorem 12](#thm12) holds in this case as well. A generalization in another direction is the case of quasi-projective morphisms; being quasi-projective alone is not enough, and one also needs an ample line bundle together with a compatible descent datum on it. Roughly, the proof descends the section algebra of the ample line bundle to form a relative Proj; the original scheme then appears as an open subscheme inside it, so one glues these together.
+More generally, a quasi-compact, quasi-separated morphism of schemes $\varphi:V\rightarrow U$ is *quasi-affine* if the canonical morphism $V\rightarrow\rSpec_U(\varphi_\ast\mathcal{O}_V)$ is a quasi-compact open immersion. The conclusion of [Theorem 12](#thm12) holds in this case as well. A generalization in another direction is the case of quasi-projective morphisms; being quasi-projective alone is not enough, and one must be given an ample line bundle together with a compatible descent datum on it. Roughly, the proof descends the section algebra of the ample line bundle to form a relative Proj; the original schemes then appear as open subschemes of it, and one glues these together.
 
-Meanwhile, the essential property of faithfully flat base change is not only that it is an exact functor, but also that the exactness checked there can be transferred back to the original; [Proposition 7](#prop7) used this to descend flatness and finiteness conditions of modules. Applying the same argument affine-locally, one can also verify properties of an already given scheme morphism $\psi:X\rightarrow Y$ over a cover. For this, take an fpqc cover $\{Y_i\rightarrow Y\}$ of $Y$; then $\psi$ defines morphisms
+Meanwhile, faithfully flat base change is not only an exact functor; the essential property is that the exactness verified there can be brought back down to the original, and [Proposition 7](#prop7) used this to descend flatness and finiteness conditions of modules. Applying the same argument affine-locally, one can also check properties of an already given scheme morphism $\psi:X\rightarrow Y$ over a cover. For this, taking an fpqc cover $\{Y_i\rightarrow Y\}$ of $Y$, the morphism $\psi$ defines morphisms
 
-$$\psi_i:X\times_YY_i\rightarrow Y_i.$$
+$$\psi_i:X\times_YY_i\rightarrow Y_i$$
 
-Promoting [Proposition 7](#prop7) scheme-theoretically then yields the flatness and finiteness parts of the following proposition, while surjectivity and affineness can be handled in the same way as [Theorem 12](#thm12).
+Lifting [Proposition 7](#prop7) scheme-theoretically then yields the flatness and finiteness properties in the following proposition, while surjectivity and affineness can be handled in the same manner as [Theorem 12](#thm12).
 
 ::: Proposition 13
-Let $\psi: X\rightarrow Y$ be a scheme morphism and $\{Y_i \rightarrow Y\}$ an fpqc cover of $Y$. Then $\psi$ has one of the following properties if and only if each base change $\psi_i: X\times_Y Y_i \rightarrow Y_i$ has that property.
+Let a scheme morphism $\psi: X\rightarrow Y$ and an fpqc cover $\{Y_i \rightarrow Y\}$ of $Y$ be given. Then $\psi$ has one of the following properties if and only if each base change $\psi_i: X\times_Y Y_i \rightarrow Y_i$ has that property.
 
 > Flat, faithfully flat, affine, locally of finite type, locally of finite presentation, surjective.
 :::
@@ -413,4 +420,4 @@ Let $\psi: X\rightarrow Y$ be a scheme morphism and $\{Y_i \rightarrow Y\}$ an f
 
 ---
 
-[^1]: In the case of rings, both of these objects were $B\otimes_AB$.
+[^1]: For rings, both of these objects were $B\otimes_AB$.
