@@ -10,30 +10,31 @@ sidebar:
 
 date: 2026-08-27
 weight: 24
-translated_at: 2026-09-01T14:45:04+00:00
+translated_at: 2026-09-02T06:15:04+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-09-02T06:15:04+00:00
 ---
-We now define a *group scheme*, i.e. a group object of $\Sch_{/S}$.
+We now define a *group scheme*, that is, a group object of $\Sch_{/S}$.
 
 ## Group Schemes
 
-Classically, an algebraic group was defined as a variety with a group structure in which multiplication and inversion are morphisms. ([\[Algebraic Varieties\] §Algebraic Groups, ⁋Definition 1](/en/math/algebraic_varieties/algebraic_groups#def1)) To transport this into the world of schemes, we use the categorical product and the terminal object of $\Sch_{/S}$. That is, we regard $\Sch_{/S}$ as a cartesian monoidal category and consider group objects inside it.
+Classically, an algebraic group was defined as a variety equipped with a group structure whose multiplication and inversion are morphisms. ([\[Algebraic Varieties\] §Algebraic Groups, ⁋Definition 1](/en/math/algebraic_varieties/algebraic_groups#def1)) To transport this into the world of schemes, we use the categorical product and the terminal object of $\Sch_{/S}$: we regard $\Sch_{/S}$ as a cartesian monoidal category and consider group objects inside it.
 
 ::: Definition 1
-A *group scheme* over a scheme $S$ is a group object of $\Sch_{/S}$. That is, a group scheme $G$ is an $S$-scheme $G$ with a structure morphism $\vartheta: G \rightarrow S$, together with three $S$-morphisms defined on it
+A *group scheme* over a scheme $S$ is a group object of $\Sch_{/S}$. That is, a group scheme $G$ is an $S$-scheme $G$ with a structure morphism $\vartheta: G \rightarrow S$, together with three $S$-morphisms
 
 $$\mu_G: G\times_SG \rightarrow G,\qquad \iota_G: G \rightarrow G,\qquad \epsilon_G: S \rightarrow G$$
 
 satisfying all the conditions of [\[Category Theory\] §Monoid Objects, ⁋Definition 3](/en/math/category_theory/monoid_objects#def3). A *homomorphism* between two group schemes $G, H$ is an $S$-morphism preserving this structure.
 :::
 
-[Definition 1](#def1) specifies a group scheme as a structure internal to $\Sch_{/S}$. On the other hand, using [§Functors of Points](/en/math/scheme_theory/functor_of_points), one can actually bring this back to a group, since for any test scheme $T$, the set $G(T)$ of $T$-points defined on it becomes a group.
+[Definition 1](#def1) specifies a group scheme as a structure internal to $\Sch_{/S}$. On the other hand, using [§Functor of Points](/en/math/scheme_theory/functor_of_points), we can turn it into an actual group, since for any test scheme $T$ the set $G(T)$ of $T$-points is a group.
 
 ::: Proposition 2
-An $S$-scheme $G$ is a group scheme if and only if there is a functor $\widetilde{h}_G:(\Sch_{/S})^\op\rightarrow\Grp$ whose composition with the forgetful functor $U:\Grp\rightarrow\Set$ equals the functor of points $h_G$ of $G$. Moreover, for two group schemes $G,H$, an $S$-morphism $\varphi:G\rightarrow H$ is a group scheme homomorphism if and only if $\varphi_T:G(T)\rightarrow H(T)$ is a group homomorphism for each $T$.
+An $S$-scheme $G$ is a group scheme if and only if there is a functor $\widetilde{h}_G:(\Sch_{/S})^\op\rightarrow\Grp$ whose composition with the forgetful functor $U:\Grp\rightarrow\Set$ equals the functor of points $h_G$ of $G$. Moreover, for two group schemes $G,H$, an $S$-morphism $\varphi:G\rightarrow H$ is a group scheme homomorphism if and only if $\varphi_T:G(T)\rightarrow H(T)$ is a group homomorphism for every $T$.
 :::
 ::: Proof
-By [\[Category Theory\] §Representable Functors, ⁋Theorem 4](/en/math/category_theory/representable_functors#thm4), the Yoneda embedding $h_{(-)}:\Sch_{/S}\rightarrow\Fun((\Sch_{/S})^\op,\Set)$ is fully faithful, and by [§Functors of Points, ⁋Proposition 7](/en/math/scheme_theory/functor_of_points#prop7) it preserves finite products. Meanwhile, the structure of a group object in a functor category is given pointwise, so a group object structure on $h_G$ is the same data as a functor $\widetilde{h}_G:(\Sch_{/S})^\op\rightarrow\Grp$ with $U\circ\widetilde{h}_G=h_G$. Therefore the fully faithfulness of the Yoneda embedding gives a one-to-one correspondence between group object structures on $G$ and such functors $\widetilde{h}_G$, and applying the same argument to morphisms between group objects yields the final claim.
+By [\[Category Theory\] §Representable Functors, ⁋Theorem 4](/en/math/category_theory/representable_functors#thm4), the Yoneda embedding $h_{(-)}:\Sch_{/S}\rightarrow\Fun((\Sch_{/S})^\op,\Set)$ is fully faithful, and by [§Functor of Points, ⁋Proposition 7](/en/math/scheme_theory/functor_of_points#prop7) it preserves finite products. Meanwhile, a group object structure in a functor category is given pointwise, so a group object structure on $h_G$ is the same data as a functor $\widetilde{h}_G:(\Sch_{/S})^\op\rightarrow\Grp$ with $U\circ\widetilde{h}_G=h_G$. The fully faithfulness of the Yoneda embedding therefore puts group object structures on $G$ in one-to-one correspondence with such functors $\widetilde{h}_G$, and applying the same argument to morphisms between group objects yields the final claim.
 :::
 
 The following are some frequently occurring examples.
@@ -41,9 +42,9 @@ The following are some frequently occurring examples.
 ::: Example 3
 All of the following are group schemes over $\Spec \mathbb{Z}$.
 
-1. The *additive group* $\mathbb{G}_a=\Spec \mathbb{Z}[\x]=\mathbb{A}^1$. By [§Functors of Points, ⁋Proposition 1](/en/math/scheme_theory/functor_of_points#prop1), we have $\mathbb{G}_a(T)\cong \Gamma(T, \mathcal{O}_T)$, and equipping this with the addition of the ring $\Gamma(T, \mathcal{O}_T)$ makes it a group. The map induced by any morphism is a ring homomorphism, hence preserves addition, and therefore functoriality holds.
+1. The *additive group* $\mathbb{G}_a=\Spec \mathbb{Z}[\x]=\mathbb{A}^1$. By [§Functor of Points, ⁋Proposition 1](/en/math/scheme_theory/functor_of_points#prop1), we have $\mathbb{G}_a(T)\cong \Gamma(T, \mathcal{O}_T)$, and equipping this with the addition of the ring $\Gamma(T, \mathcal{O}_T)$ makes it a group. The map induced by any morphism is a ring homomorphism, hence preserves addition, so functoriality holds.
 
-2. The *multiplicative group* $\mathbb{G}_m=\Spec \mathbb{Z}[\x, \x^{-1}]$. By [§Functors of Points, ⁋Proposition 3](/en/math/scheme_theory/functor_of_points#prop3), we have $\mathbb{G}_m(T)\cong \Gamma(T, \mathcal{O}_T)^\times$, equipped with the multiplication of units.
+2. The *multiplicative group* $\mathbb{G}_m=\Spec \mathbb{Z}[\x, \x^{-1}]$. By [§Functor of Points, ⁋Proposition 3](/en/math/scheme_theory/functor_of_points#prop3), we have $\mathbb{G}_m(T)\cong \Gamma(T, \mathcal{O}_T)^\times$, which we equip with the multiplication of units.
 
 3. The *$n$-th roots of unity* $\mu_n=\Spec \mathbb{Z}[\x]/(\x^n-1)$. By the adjunction of [§Affine Scheme, ⁋Theorem 13](/en/math/scheme_theory/affine_schemes#thm13),
 
@@ -51,7 +52,7 @@ All of the following are group schemes over $\Spec \mathbb{Z}$.
 
     and since $a^n=1$ implies that $a$ is a unit, this is a subgroup of $\mathbb{G}_m(T)$.
 
-4. The *general linear group* $\GL_n=\Spec \mathbb{Z}[\x_{11},\ldots, \x_{nn}, \det{}^{-1}]$. Here $\det$ is the determinant of the matrix $(\x_{ij})$, and we have taken the localization making it invertible. Since a matrix is invertible if and only if its determinant is invertible,
+4. The *general linear group* $\GL_n=\Spec \mathbb{Z}[\x_{11},\ldots, \x_{nn}, \det{}^{-1}]$. Here $\det$ is the determinant of the matrix $(\x_{ij})$, and we have taken the localization making it invertible. Since a matrix is invertible if and only if its determinant is,
 
    $$\GL_n(T)=\GL(n;\Gamma(T,\mathcal{O}_T))$$
 
@@ -70,7 +71,7 @@ All of the following are group schemes over $\Spec \mathbb{Z}$.
    Then for any scheme $T$, $\underline{\Gamma}(T)$ is the group of locally constant functions from the topological space $\lvert T\rvert$ to the topological group $\Gamma$ equipped with the discrete topology. In particular, when $T$ is connected, $\underline{\Gamma}(T)\cong \Gamma$.
 :::
 
-In the examples above, the group scheme structure in each case was obtained using [Proposition 2](#prop2), which demonstrates the usefulness of that proposition. Moreover, although the examples above were defined over $\Spec \mathbb{Z}$, essentially they are defined over every base $S$. As we saw after [§Morphisms of Schemes, ⁋Example 4](/en/math/scheme_theory/morphism_of_schemes#ex4), $\Spec \mathbb{Z}$ is the terminal object of $\Sch$, so for every scheme $S$ there is a unique structure morphism $p: S\rightarrow \Spec \mathbb{Z}$, and we can consider the base change morphism it induces
+In each of the examples above, the group scheme structure was obtained via [Proposition 2](#prop2), which demonstrates the usefulness of that proposition. Moreover, although these examples were defined over $\Spec \mathbb{Z}$, they are essentially defined over every base $S$. As we saw after [§Morphisms of Schemes, ⁋Example 4](/en/math/scheme_theory/morphism_of_schemes#ex4), $\Spec \mathbb{Z}$ is the terminal object of $\Sch$, so every scheme $S$ carries a unique structure morphism $p: S\rightarrow \Spec \mathbb{Z}$, and we can consider the base change morphism it induces
 
 $$p^\ast: \Sch\rightarrow \Sch_{/S};\qquad X\mapsto X\times_\mathbb{Z}S$$
 
@@ -82,19 +83,19 @@ to define $\widetilde{h}_{G_S}=\widetilde{h}_G\circ p_\ast^\op$, and the fact th
 
 $$\Hom_S(T, p^\ast G)\cong \Hom_\mathbb{Z}(p_\ast T, G)$$
 
-The relative group schemes over $S$ obtained in this way are written with subscripts as $\mathbb{G}_{a,S}, \mathbb{G}_{m,S},\underline{\Gamma}_S,\mu_{n,S},\GL_{n,S},\SL_{n,S}$ and so on, and when the base is clear from context we will drop the subscript and write $\mathbb{G}_a, \mathbb{G}_m, \underline{\Gamma}$ and so on.
+We write the relative group schemes over $S$ obtained in this way with subscripts, as $\mathbb{G}_{a,S}, \mathbb{G}_{m,S},\underline{\Gamma}_S,\mu_{n,S},\GL_{n,S},\SL_{n,S}$ and so on, and when the base is clear from context we drop the subscript and write $\mathbb{G}_a, \mathbb{G}_m, \underline{\Gamma}$ and so on.
 
-Meanwhile, all the ones given in the examples above are affine group schemes, and the way they are defined is also explicit. Moreover, it is easy to see that the examples other than $\mu_n$ are smooth over affine space. First, $\mathbb{G}_a$ is the affine line itself, so no further argument is needed, and $\GL_n$ is the open subscheme $D(\det)$ of $n^2$-dimensional affine space defined by $\det$, of which the special case $n=1$ is $\mathbb{G}_m$. Finally, for $\SL_n$, from the Laplace expansion of [\[Linear Algebra\] §Existence and Uniqueness of the Determinant, ⁋Theorem 12](/en/math/linear_algebra/existence_and_uniqueness_of_determinant#thm12), one can verify that the partial derivative of $f=\det-1$ with respect to $\x_{ij}$ is the cofactor $C_{ij}$ in the $(i,j)$ direction. Therefore, by [§Smooth and Étale Morphisms, ⁋Theorem 4](/en/math/scheme_theory/smooth_and_etale_morphisms#thm4), its Jacobian is given by the following $1\times n^2$ matrix
+All of the schemes in the examples above are affine group schemes, and the way they were defined is explicit. It is also easy to see that the examples other than $\mu_n$ are smooth over affine space. First, $\mathbb{G}_a$ is the affine line itself, so no further argument is needed, and $\GL_n$ is the open subscheme $D(\det)$ of $n^2$-dimensional affine space cut out by $\det$, of which the special case $n=1$ is $\mathbb{G}_m$. Finally, for $\SL_n$, the Laplace expansion of [\[Linear Algebra\] §Existence and Uniqueness of the Determinant, ⁋Theorem 12](/en/math/linear_algebra/existence_and_uniqueness_of_determinant#thm12) shows that the partial derivative of $f=\det-1$ with respect to $\x_{ij}$ is the cofactor $C_{ij}$ in the $(i,j)$ direction. Therefore, by [§Smooth and Étale Morphisms, ⁋Theorem 4](/en/math/scheme_theory/smooth_and_etale_morphisms#thm4), its Jacobian is given by the $1\times n^2$ matrix
 
 $$J_f=(\partial f/\partial\x_{ij})_{i,j}=(C_{ij})_{ij}$$
 
-Now, for any matrix belonging to $\SL_n$, fixing the $i$-th row of this matrix and considering the Laplace expansion, the identity $\sum_j\x_{ij}C_{ij}=1$ holds, and therefore the ideal generated by the components $C_{i1},\ldots, C_{in}$ among those of the Jacobian above is the whole ring, so it has full rank at every point; hence $\SL_n$ is a smooth morphism of relative dimension $n^2-1$ over its base.
+Now, for any matrix belonging to $\SL_n$, fixing the $i$-th row of the matrix and considering the Laplace expansion gives the identity $\sum_j\x_{ij}C_{ij}=1$, so the ideal generated by the entries $C_{i1},\ldots, C_{in}$ among the components of the Jacobian above is the whole ring. The Jacobian therefore has full rank at every point, and hence $\SL_n$ is smooth of relative dimension $n^2-1$ over its base.
 
-On the other hand, $\mu_n$ is finite étale if $n$ is invertible in the base. By contrast, over a field $\mathbb{K}$ of characteristic $p$, both $\mu_p$ and $\alpha_p=\ker(\Frob:\mathbb{G}_a\rightarrow\mathbb{G}_a)$ have a single point as their underlying topological space but are nonreduced *infinitesimal* group schemes. This is the same phenomenon as in [§Smooth and Étale Morphisms, ⁋Example 14](/en/math/scheme_theory/smooth_and_etale_morphisms#ex14), where a nontrivial thickening remained in the geometric fiber of an inseparable extension so that it was not étale, and it is another example exhibiting a property peculiar to characteristic $p$.
+On the other hand, $\mu_n$ is finite étale if $n$ is invertible in the base. By contrast, over a field $\mathbb{K}$ of characteristic $p$, both $\mu_p$ and $\alpha_p=\ker(\Frob:\mathbb{G}_a\rightarrow\mathbb{G}_a)$ have a single point as their underlying topological space but are nonreduced *infinitesimal* group schemes. This is the same phenomenon as in [§Smooth and Étale Morphisms, ⁋Example 14](/en/math/scheme_theory/smooth_and_etale_morphisms#ex14), where a nontrivial thickening remained in the geometric fiber of an inseparable extension, preventing it from being étale, and it is another example of a property peculiar to characteristic $p$.
 
 ## Subgroup Schemes
 
-In general, a *subgroup scheme* of a group scheme $G$ over $S$ is the data of a group scheme $H$ and a monomorphism $\iota:H\rightarrow G$ that is a group scheme homomorphism; in particular, when $\iota$ is a closed embedding it is called a *closed subgroup scheme*. Just as [\[Lie Theory\] §Lie Groups, ⁋Theorem 5](/en/math/lie_theory/Lie_groups#thm5) gives a closed subgroup of a Lie group a canonical Lie group structure, the algebraic subgroups mainly dealt with for group schemes also appear as closed subgroup schemes. For instance, the first thing one examines after defining a group scheme homomorphism is its kernel. Since the kernel of a group is the preimage of the identity element, in the language of schemes this becomes the fiber product along the identity morphism.
+In general, a *subgroup scheme* of a group scheme $G$ over $S$ is the data of a group scheme $H$ together with a monomorphism $\iota:H\rightarrow G$ that is a group scheme homomorphism; when $\iota$ is a closed embedding, it is called a *closed subgroup scheme*. Just as [\[Lie Theory\] §Lie Groups, ⁋Theorem 5](/en/math/lie_theory/Lie_groups#thm5) endows a closed subgroup of a Lie group with a canonical Lie group structure, the algebraic subgroups one mainly encounters for group schemes also appear as closed subgroup schemes. For instance, the first thing one examines after defining a group scheme homomorphism is its kernel. Since the kernel of a group is the preimage of the identity element, in the language of schemes this becomes the fiber product along the identity morphism.
 
 ::: Definition 4
 For a group scheme homomorphism $\varphi:G\rightarrow H$ over $S$, its *kernel* is defined as the fiber product
@@ -104,11 +105,11 @@ $$\ker \varphi=G\times_{\varphi, H, \epsilon_H}S$$
 Here $\epsilon_H:S\rightarrow H$ is the identity morphism of [Definition 1](#def1).
 :::
 
-Computing with [§Functors of Points, ⁋Proposition 7](/en/math/scheme_theory/functor_of_points#prop7), for each $S$-scheme $T$ we have
+Computing with [§Functor of Points, ⁋Proposition 7](/en/math/scheme_theory/functor_of_points#prop7), for each $S$-scheme $T$ we have
 
 $$(\ker \varphi)(T)=G(T)\times_{H(T)}S(T)=\{g\in G(T)\mid \varphi_T(g)=\epsilon_{H,T}\}$$
 
-so this definition transports the usual definition of the kernel verbatim. Since the right-hand side is a subgroup of $G(T)$ and the correspondence is natural in $T$, $\ker \varphi$ is a group scheme by [Proposition 2](#prop2). What remains is whether $\ker \varphi \rightarrow G$ is a closed embedding, which depends on whether $\epsilon_H$ is a closed embedding, and that condition is precisely separatedness. ([§Valuation Rings, ⁋Definition 3](/en/math/scheme_theory/valuative_criteria#def3))
+so this definition transports the usual definition of the kernel unchanged. Since the right-hand side is a subgroup of $G(T)$ and the correspondence is natural in $T$, [Proposition 2](#prop2) implies that $\ker \varphi$ is a group scheme. What remains is whether $\ker \varphi \rightarrow G$ is a closed embedding; this depends on whether $\epsilon_H$ is a closed embedding, and that condition is precisely separatedness. ([§Valuation Rings, ⁋Definition 3](/en/math/scheme_theory/valuative_criteria#def3))
 
 ::: Proposition 5
 For a group scheme homomorphism $\varphi: G \rightarrow H$ over $S$, if $H \rightarrow S$ is separated then $\ker \varphi$ is a closed subgroup scheme of $G$.
@@ -118,7 +119,7 @@ First, closed embeddings are preserved under base change. ([§Closed Subschemes,
 
 {% diagram Math/Scheme_Theory/Group_Schemes-1.svg width="11.23em" alt="section_as_base_change" %}
 
-Here, since $\epsilon_H$ is a section of $\vartheta_H$, we have $\vartheta_H\circ\epsilon_H=\id_S$, and therefore
+Since $\epsilon_H$ is a section of $\vartheta_H$, we have $\vartheta_H\circ\epsilon_H=\id_S$, and therefore
 
 $$(\epsilon_H\circ \vartheta_H,\id_H)\circ\epsilon_H=(\epsilon_H\circ \vartheta_H\circ\epsilon_H,\epsilon_H)=(\epsilon_H,\epsilon_H)=\Delta_{H/S}\circ\epsilon_H$$
 
@@ -126,22 +127,22 @@ so this square commutes. Moreover, for any scheme $T$ and morphisms $a,b:T\right
 
 $$(\epsilon_H\circ \vartheta_H,\id_H)\circ a=\Delta_{H/S}\circ b \iff(\epsilon_H\circ \vartheta_H\circ a,a)=(b,b) \iff a=b=\epsilon_H\circ \vartheta_H\circ a$$
 
-so a $t$ making $a=b=\epsilon_H\circ t$ hold is uniquely determined as $\vartheta_H\circ a$. That is, the diagram above is Cartesian, and the $\epsilon_H$ on the left is the base change of $\Delta_{H/S}$. Now since $\vartheta_H$ is separated, $\Delta_{H/S}$ is a closed embedding, and therefore $\epsilon_H$ is also a closed embedding. Again, $\ker\varphi\rightarrow G$ is the base change of $\epsilon_H$ along $\varphi$, so it is a closed embedding. Since we have already verified above that $\ker\varphi$ is a group scheme, it is a closed subgroup scheme of $G$.
+so a $t$ with $a=b=\epsilon_H\circ t$ is uniquely determined as $\vartheta_H\circ a$. That is, the diagram above is Cartesian, and the $\epsilon_H$ on the left is the base change of $\Delta_{H/S}$. Since $\vartheta_H$ is separated, $\Delta_{H/S}$ is a closed embedding, and therefore $\epsilon_H$ is also a closed embedding. In turn, $\ker\varphi\rightarrow G$ is the base change of $\epsilon_H$ along $\varphi$, so it is a closed embedding. Since we already verified above that $\ker\varphi$ is a group scheme, it is a closed subgroup scheme of $G$.
 :::
 
 Since a morphism between affine schemes is always separated ([§Valuation Rings, ⁋Lemma 5](/en/math/scheme_theory/valuative_criteria#lem5)), the hypothesis of [Proposition 5](#prop5) holds automatically for affine group schemes over an affine base. One of the most important examples is the $n$-th power morphism $(-)^n:\mathbb{G}_m \rightarrow \mathbb{G}_m$, the homomorphism given by $a\mapsto a^n$ on each $T$. Writing the coordinate of the codomain as $\y$, this corresponds at the ring level to $\y\mapsto \x^n$, and since the identity morphism corresponds to the counit with $\y\mapsto 1$,
 
 $$\ker(-)^n=\Spec\left(\mathbb{Z}[\x,\x^{-1}]\otimes_{\mathbb{Z}[\y,\y^{-1}]}\mathbb{Z}\right)=\Spec \mathbb{Z}[\x,\x^{-1}]/(\x^n-1)=\Spec \mathbb{Z}[\x]/(\x^n-1)=\mu_n$$
 
-holds. ([§Fiber Products, ⁋Lemma 2](/en/math/scheme_theory/fiber_products#lem2)) Here, since $\mathbb{Z}=\mathbb{Z}[\y,\y^{-1}]/(\y-1)$, the tensor product becomes the quotient by the ideal generated by $\x^n-1$, and since $\x$ is already invertible here, the localization can be stripped off. That is, $\mu_n$ is a closed subgroup scheme of $\mathbb{G}_m$.
+holds. ([§Fiber Products, ⁋Lemma 2](/en/math/scheme_theory/fiber_products#lem2)) Here, since $\mathbb{Z}=\mathbb{Z}[\y,\y^{-1}]/(\y-1)$, the tensor product becomes the quotient by the ideal generated by $\x^n-1$, and since $\x$ is already invertible here, the localization can be stripped off. Thus $\mu_n$ is a closed subgroup scheme of $\mathbb{G}_m$.
 
 ## Hopf Algebras
 
-Now let us consider the case where both the base and the group scheme itself are affine. If $G=\Spec B$ and $S=\Spec A$, then since $\Spec$ is contravariant, the three morphisms $\mu_G,\epsilon_G,\iota_G$ of [Definition 1](#def1) appear as $A$-algebra homomorphisms with their directions reversed on coordinate rings
+Now let us consider the case where both the base and the group scheme itself are affine. If $G=\Spec B$ and $S=\Spec A$, then since $\Spec$ is contravariant, the three morphisms $\mu_G,\epsilon_G,\iota_G$ of [Definition 1](#def1) appear on coordinate rings as $A$-algebra homomorphisms with their directions reversed:
 
 $$\Delta:B\rightarrow B\otimes_AB,\qquad \epsilon:B\rightarrow A,\qquad \iota:B\rightarrow B$$
 
-The associativity, identity, and inverse conditions of a group object are likewise flipped into the coassociativity, counit, and antipode conditions, respectively, and we happen to have defined such an object before. ([\[Category Theory\] §Monoid Objects, ⁋Definition 7](/en/math/category_theory/monoid_objects#def7)) There we called a Hopf monoid object of the symmetric monoidal category $(\rMod{A},\otimes_A,A)$ a *Hopf algebra*, and in the cases we deal with it suffices to assume that $B$ is a commutative ring. Then it is natural to expect the following.
+The associativity, identity, and inverse conditions of a group object are likewise flipped into the coassociativity, counit, and antipode conditions, respectively, and as it happens, we have already defined such an object. ([\[Category Theory\] §Monoid Objects, ⁋Definition 7](/en/math/category_theory/monoid_objects#def7)) There we called a Hopf monoid object of the symmetric monoidal category $(\rMod{A},\otimes_A,A)$ a *Hopf algebra*, and in the cases we deal with, it suffices to assume that $B$ is a commutative ring. It is then natural to expect the following.
 
 ::: Theorem 6
 For a ring $A$, $\Spec$ gives an anti-equivalence between the category of commutative Hopf $A$-algebras and the category of affine group schemes over $\Spec A$. Under this correspondence, $\Delta,\epsilon,\iota$ correspond to $\mu_G,\epsilon_G,\iota_G$, respectively.
@@ -150,31 +151,31 @@ For a ring $A$, $\Spec$ gives an anti-equivalence between the category of commut
 By [§Affine Scheme, ⁋Theorem 13](/en/math/scheme_theory/affine_schemes#thm13), commutative $A$-algebras and affine schemes over $\Spec A$ are anti-equivalent, and this correspondence carries tensor products and $A$ to fiber products and the terminal object, respectively. ([§Fiber Products, ⁋Lemma 2](/en/math/scheme_theory/fiber_products#lem2)) Hence the data $\mu_G,\epsilon_G,\iota_G$ of [Definition 1](#def1) become the data $\Delta,\epsilon,\iota$ above upon reversing the arrows. Since this equivalence preserves composition and identity morphisms, the three axioms of a group object are carried to the three axioms of a Hopf algebra, and applying the same argument to structure-preserving morphisms yields the claimed anti-equivalence.
 :::
 
-In particular, for an affine group scheme $G=\Spec B$ and an arbitrary $A$-algebra $E$, the structure of the group $G(E)=\Hom_{\cAlg{A}}(B,E)$ of $E$-points of $G$ can be described completely in terms of the Hopf algebra structure of $B$: it suffices to define the multiplication by $g\ast h=\mu_E\circ(g\otimes h)\circ\Delta$, the identity by $\eta_E\circ\epsilon$, and the inverse by $g\mapsto g\circ\iota$, where $\mu_E:E\otimes_AE\rightarrow E$ is the multiplication and $\eta_E:A\rightarrow E$ is the structure morphism.
+In particular, for an affine group scheme $G=\Spec B$ and an arbitrary $A$-algebra $E$, the structure of the group $G(E)=\Hom_{\cAlg{A}}(B,E)$ of $E$-points of $G$ can be described completely in terms of the Hopf algebra structure of $B$: the multiplication is defined by $g\ast h=\mu_E\circ(g\otimes h)\circ\Delta$, the identity by $\eta_E\circ\epsilon$, and the inverse by $g\mapsto g\circ\iota$, where $\mu_E:E\otimes_AE\rightarrow E$ is the multiplication and $\eta_E:A\rightarrow E$ is the structure morphism.
 
 ## Representation Theory of Group Schemes
 
-Meanwhile, a useful tool when dealing with group objects is representation theory. In [\[Representation Theory\] §Representation Theory of Finite Groups, ⁋Proposition 4](/en/math/representation_theory/representations_of_finite_groups#prop4), we interpreted a representation of an ordinary group $G$ as a module over the group algebra, i.e., a $G$-module, and this point of view proved useful for representations of Lie groups as well. It would be reasonable to examine this for group schemes too.
+A useful tool when working with group objects is representation theory. In [\[Representation Theory\] §Representation Theory of Finite Groups, ⁋Proposition 4](/en/math/representation_theory/representations_of_finite_groups#prop4), we interpreted a representation of an ordinary group $G$ as a module over the group algebra, that is, a $G$-module, and this point of view proved useful for representations of Lie groups as well. It is only reasonable to examine it for group schemes too.
 
-To do so, as in [Example 3](#ex3), we consider an action on some $\mathcal{O}_T$-module $\mathcal{E}_T$ for each $S$-scheme $p:T\rightarrow S$, and require that it be compatible with pullback along an $S$-morphism $\varphi: T'\rightarrow T$. To bundle these together, it suffices to fix a single $\mathcal{O}_S$-module $\mathcal{E}$ and set $\mathcal{E}_T=p^\ast \mathcal{E}$ for every $p:T\rightarrow S$.
+To do so, as in [Example 3](#ex3), we consider an action on some $\mathcal{O}_T$-module $\mathcal{E}_T$ for each $S$-scheme $p:T\rightarrow S$, requiring compatibility with pullback along any $S$-morphism $\varphi: T'\rightarrow T$. To bundle these together, it suffices to fix a single $\mathcal{O}_S$-module $\mathcal{E}$ and set $\mathcal{E}_T=p^\ast \mathcal{E}$ for every $p:T\rightarrow S$.
 
-Now, to say that the $\mathcal{E}_T$ so defined is a $G(T)$-module is to say that a group homomorphism
+To say that the $\mathcal{E}_T$ so defined is a $G(T)$-module is then to say that a group homomorphism
 
 $$\varrho_T:G(T)\rightarrow \Aut_{\mathcal{O}_T}(\mathcal{E}_T)$$
 
-is given. For this to be compatible with pullback in the manner above, these homomorphisms must be natural in $T$. To state this condition properly, given a group scheme $G$ over $S$ and an $\mathcal{O}_S$-module $\mathcal{E}$ defined over $S$, consider the following group-valued functor
+is given. For this to be compatible with pullback in the manner above, these homomorphisms must be natural in $T$. To state this condition properly, given a group scheme $G$ over $S$ and an $\mathcal{O}_S$-module $\mathcal{E}$ defined over $S$, consider the group-valued functor
 
 $$\rAut(\mathcal{E}): (\Sch_{/S})^\op\rightarrow\Grp,\qquad T\mapsto\Aut_{\mathcal{O}_T}(\mathcal{E}_T)$$
 
-then it suffices to give a morphism (i.e., a natural transformation) $\widetilde{\rho}: \widetilde{h}_G\Rightarrow\rAut(\mathcal{E})$ between them; as explained above, the $T$-component of $\widetilde{\rho}$ is exactly the group homomorphism $\varrho_T$ required earlier.
+then it suffices to give a morphism (that is, a natural transformation) $\widetilde{\rho}: \widetilde{h}_G\Rightarrow\rAut(\mathcal{E})$ between them; as explained above, the $T$-component of $\widetilde{\rho}$ is exactly the group homomorphism $\varrho_T$ required earlier.
 
-Now, in order to apply the results of [\[Category Theory\] §Representable Functors](/en/math/category_theory/representable_functors), we compose each of these two functors with the forgetful functor $U: \Grp\rightarrow\Set$, and thereby regard $\widetilde{\rho}:\widetilde{h}_G\Rightarrow \rAut(\mathcal{E})$ as a natural transformation $\rho: h_G \Rightarrow F$ between the two $\Set$-valued functors $h_G = \Hom_S(-, G)$ and $F = U \circ \rAut(\mathcal{E})$. That is, for each $S$-scheme $T$, $\rho_T$ is the group homomorphism $\widetilde{\rho}_T:G(T)\rightarrow \Aut_{\mathcal{O}_T}(\mathcal{E}_T)$ viewed as a function between the underlying sets. Then by [\[Category Theory\] §Representable Functors, ⁋Theorem 4](/en/math/category_theory/representable_functors#thm4), $\rho$ is completely determined by a single value at the universal element $\id_G\in h_G(G)$:
+Now, in order to apply the results of [\[Category Theory\] §Representable Functors](/en/math/category_theory/representable_functors), we compose each of these two functors with the forgetful functor $U: \Grp\rightarrow\Set$, and thereby regard $\widetilde{\rho}:\widetilde{h}_G\Rightarrow \rAut(\mathcal{E})$ as a natural transformation $\rho: h_G \Rightarrow F$ between the two $\Set$-valued functors $h_G = \Hom_S(-, G)$ and $F = U \circ \rAut(\mathcal{E})$. In other words, for each $S$-scheme $T$, $\rho_T$ is the group homomorphism $\widetilde{\rho}_T:G(T)\rightarrow \Aut_{\mathcal{O}_T}(\mathcal{E}_T)$ viewed as a function between the underlying sets. By [\[Category Theory\] §Representable Functors, ⁋Theorem 4](/en/math/category_theory/representable_functors#thm4), $\rho$ is then completely determined by its single value at the universal element $\id_G\in h_G(G)$:
 
 $$\lambda:=\rho_G(\id_G)\in F(G)=\Aut_{\mathcal{O}_G}(\mathcal{E}_G).$$
 
 Here, for $\vartheta:G\rightarrow S$, we have $\mathcal{E}_G=\vartheta^\ast\mathcal{E}$. Indeed, for any $S$-scheme $T$ and any $T$-point $g\in G(T)=\Hom_S(T, G)$, considering the diagram
 
-{% diagram Math/Scheme_Theory/Group_Schemes-2.svg width="9.23em alt="naturality" %}
+{% diagram Math/Scheme_Theory/Group_Schemes-2.svg width="9.23em" alt="naturality" %}
 
 we obtain
 
@@ -184,20 +185,20 @@ so the action $\varrho_T(g)$ of an arbitrary $g\in G(T)$ is recovered as the pul
 
 The catch is that [\[Category Theory\] §Representable Functors, ⁋Theorem 4](/en/math/category_theory/representable_functors#thm4) is a result about $\Set$-valued functors, so for an *arbitrary* $\lambda\in\Aut_{\mathcal{O}_G}(\mathcal{E}_G)$, the function $\varrho_T: G(T)\rightarrow \Aut_{\mathcal{O}_T}(\mathcal{E}_T)$ defined by the method above is merely a function between sets and is not automatically a group homomorphism. Fortunately, the condition for $\varrho_T$ to be a group homomorphism can be written out explicitly, and it translates into the following two conditions on $\lambda$.
 
-1. First, since $gh=\mu_G\circ(g, h)$ for any $g, h\in G(T)$, the condition $\varrho_T(gh)=\varrho_T(g)\circ\varrho_T(h)$ is equivalent to the condition
+1. First, since $gh=\mu_G\circ(g, h)$ for any $g, h\in G(T)$, the condition $\varrho_T(gh)=\varrho_T(g)\circ\varrho_T(h)$ is equivalent to
 
     $$(g, h)^\ast(\mu_G^\ast\lambda)=(g, h)^\ast(\pr_1^\ast\lambda\circ\pr_2^\ast\lambda).$$
 
-    Since this must hold for all $T$ and $(g, h)$, substituting the universal pair $(g, h)=\id_{G\times_S G}$, the identity
+    Since this must hold for all $T$ and $(g, h)$, substituting the universal pair $(g, h)=\id_{G\times_S G}$ shows that the identity
 
     $$\mu_G^\ast\lambda=\pr_1^\ast\lambda\circ\pr_2^\ast\lambda$$
 
     must hold over $G\times_SG$.
-2. Next, since the identity of $G(T)$ is $e_T=\epsilon_G\circ \vartheta_T$, the condition $\varrho_T(e_T)=\id_{\mathcal{E}_T}$ is equivalent to the condition
+2. Next, since the identity of $G(T)$ is $e_T=\epsilon_G\circ \vartheta_T$, the condition $\varrho_T(e_T)=\id_{\mathcal{E}_T}$ is equivalent to
 
     $$\vartheta_T^\ast(\epsilon_G^\ast\lambda)=\id_{\mathcal{E}_T}.$$
 
-    Substituting $T=S, \vartheta_T=\id_S$, the identity
+    Substituting $T=S, \vartheta_T=\id_S$ shows that the identity
 
     $$\epsilon_G^\ast\lambda=\id_\mathcal{E}$$
 
@@ -207,7 +208,7 @@ An $\mathcal{O}_G$-module automorphism
 
 $$\lambda:\vartheta^\ast\mathcal{E}\xrightarrow{\sim}\vartheta^\ast\mathcal{E}$$
 
-satisfying these two conditions is called a *$G$-linearization* of $\mathcal{E}$. Since these two conditions are obtained at the universal pair $\id_{G\times_S G}$ and at $\id_S$, respectively, for an arbitrary $S$-scheme $T$ and $g, h\in G(T)$ the original conditions for a group homomorphism are recovered by taking the pullbacks $(g, h)^\ast$ and $\vartheta_T^\ast$. In other words, giving a $G$-linearization and giving a representation of $G$ are exactly the same data. In particular, when $\mathcal{E}$ is finite locally free, $\rAut(\mathcal{E})$ is represented by the general linear group scheme $\GL(\mathcal{E})$, so this datum coincides with a group scheme homomorphism $G\rightarrow\GL(\mathcal{E})$; this is why it is called a *linearization*.
+satisfying these two conditions is called a *$G$-linearization* of $\mathcal{E}$. Since these two conditions were obtained at the universal pair $\id_{G\times_S G}$ and at $\id_S$, respectively, for an arbitrary $S$-scheme $T$ and $g, h\in G(T)$ the original conditions for a group homomorphism are recovered by taking the pullbacks $(g, h)^\ast$ and $\vartheta_T^\ast$. In other words, giving a $G$-linearization and giving a representation of $G$ are exactly the same data. In particular, when $\mathcal{E}$ is finite locally free, $\rAut(\mathcal{E})$ is represented by the general linear group scheme $\GL(\mathcal{E})$, so this datum coincides with a group scheme homomorphism $G\rightarrow\GL(\mathcal{E})$; this is why it is called a *linearization*.
 
 We now focus on the situation where $S=\Spec A$. Then in particular, a quasi-coherent $\mathcal{O}_S$-module $\mathcal{E}$ arises from some $A$-module $V$, so we may write $\mathcal{E}=\widetilde{V}$. Unpacking the definitions above in this situation, for an affine test scheme $\vartheta_T:T=\Spec E\rightarrow S$ we have
 
@@ -229,7 +230,7 @@ Here, the naturality of $\varrho$ means that for every $A$-algebra homomorphism 
 
 commutes.
 
-Now writing $G=\Spec B$, we can express the $G$-module structure in the above definition in algebraic language, i.e., in the language of $B$. Of course, in this process, by the contravariance of $\Spec$, we must consider a *comodule* structure.
+Now writing $G=\Spec B$, we can express the $G$-module structure in the above definition in algebraic language, that is, in the language of $B$. Of course, by the contravariance of $\Spec$, in this process we must consider a *comodule* structure.
 
 ::: Definition 8
 For a Hopf $A$-algebra $B$, a $B$-*comodule* is an $A$-module $V$ together with an $A$-linear map $\rho: V \rightarrow V\otimes_AB$ satisfying the following two conditions.
@@ -240,7 +241,7 @@ For a Hopf $A$-algebra $B$, a $B$-*comodule* is an $A$-module $V$ together with 
 A *morphism* between two comodules is an $A$-linear map $u: V \rightarrow W$ such that $\rho_W\circ u=(u\otimes\id_B)\circ\rho_V$.
 :::
 
-The two conditions transfer the coassociativity and counit conditions of the Hopf algebra into the form received by $V$, and the case $V=B$ with $\rho=\Delta$ is the trivial example. The following theorem is then to be expected.
+The two conditions recast the coassociativity and counit conditions of the Hopf algebra in the form imposed on $V$, and the case $V=B$ with $\rho=\Delta$ is the trivial example. The following theorem is then to be expected.
 
 ::: Theorem 9
 For an affine group scheme $G=\Spec B$ over a ring $A$ and an $A$-module $V$, linear representations of $G$ on $V$ and $B$-comodule structures on $V$ are in one-to-one correspondence. Moreover, this gives an equivalence between the two categories.
@@ -276,7 +277,7 @@ $$\rho(v)=\sum_{n\in\mathbb{Z}}\rho_n(v)\otimes\x^n.$$
 
 Here each $\rho_n: V \rightarrow V$ is an $A$-linear map, and for each $v\in V$ only finitely many $\rho_n(v)$ are nonzero.
 
-Now let us find a necessary and sufficient condition for $\rho$ to satisfy the comodule conditions of [Definition 8](#def8). First, for the counit condition, we must have $(\id_V\otimes\epsilon)\circ\rho=\id_V$ under the identification $V\otimes_AA\cong V$, so
+Now let us find a necessary and sufficient condition for $\rho$ to satisfy the comodule conditions of [Definition 8](#def8). For the counit condition, we must have $(\id_V\otimes\epsilon)\circ\rho=\id_V$ under the identification $V\otimes_AA\cong V$, so
 
 $$v=(\id_V\otimes\epsilon)(\rho(v))=(\id_V\otimes\epsilon)\left(\sum_{n\in\mathbb{Z}}\rho_n(v)\otimes\x^n\right)=\sum_{n\in\mathbb{Z}}\rho_n(v)\epsilon(\x^n)=\sum_{n\in\mathbb{Z}}\rho_n(v)$$
 
@@ -284,13 +285,13 @@ must hold. Since this holds for all $v\in V$, we obtain $\sum_{n\in\mathbb{Z}}\r
 
 $$\begin{aligned}(\rho\otimes\id_B)(\rho(v))&=(\rho\otimes\id_B)\left(\sum_{n\in\mathbb{Z}}\rho_n(v)\otimes\x^n\right)=\sum_{m, n\in\mathbb{Z}}\rho_m(\rho_n(v))\otimes\x^m\otimes\x^n,\\ (\id_V\otimes\Delta)(\rho(v))&=(\id_V\otimes\Delta)\left(\sum_{k\in\mathbb{Z}}\rho_k(v)\otimes\x^k\right)=\sum_{k\in\mathbb{Z}}\rho_k(v)\otimes\x^k\otimes\x^k.\end{aligned}$$
 
-Since the basis $\{\x^m\otimes\x^n\}_{m, n\in\mathbb{Z}}$ of $B\otimes_AB$ is linearly independent, comparing coefficients on both sides gives the condition $\rho_n\circ\rho_n=\rho_n$ where $m=n$, and $\rho_m\circ\rho_n=0$ for the remaining $m\neq n$. That is, $\{\rho_n\}_{n\in\mathbb{Z}}$ is a family of pairwise orthogonal idempotents summing to $\id_V$, and using them, defining $V_n:=\rho_n(V)=\{v\in V\mid \rho(v)=v\otimes\x^n\}$ for each $n\in\mathbb{Z}$, $V$ has a direct sum decomposition
+Since the basis $\{\x^m\otimes\x^n\}_{m, n\in\mathbb{Z}}$ of $B\otimes_AB$ is linearly independent, comparing coefficients on both sides gives the condition $\rho_n\circ\rho_n=\rho_n$ where $m=n$, and $\rho_m\circ\rho_n=0$ for the remaining $m\neq n$. That is, $\{\rho_n\}_{n\in\mathbb{Z}}$ is a family of pairwise orthogonal idempotents summing to $\id_V$, and using them, if we define $V_n:=\rho_n(V)=\{v\in V\mid \rho(v)=v\otimes\x^n\}$ for each $n\in\mathbb{Z}$, then $V$ has a direct sum decomposition
 
 $$V=\bigoplus_{n\in\mathbb{Z}}V_n.$$
 
 Conversely, given such a $\mathbb{Z}$-grading, defining $\rho(v)=\sum_n v_n\otimes\x^n$ for each $v=\sum_n v_n$ ($v_n\in V_n$) and running the computation above in reverse shows that $\rho$ gives a $B$-comodule structure.
 
-Now that $B$-comodule structures have been completely classified through this, what remains is to translate it into the geometric language $\varrho$. We have already seen that for any $A$-algebra $E$,
+Now that $B$-comodule structures have been completely classified, what remains is to translate this into the geometric language $\varrho$. We have already seen that for any $A$-algebra $E$,
 
 $$\mathbb{G}_m(E)=\Hom_{\cAlg{A}}(A[\x,\x^{-1}], E)\cong E^\times,$$
 
@@ -301,7 +302,7 @@ $$\varrho_E(u)(v\otimes 1)=(\id_V\otimes g_u)(\rho(v))=(\id_V\otimes g_u)(v\otim
 That is, by $E$-linearity, $u\in\mathbb{G}_m(E)=E^\times$ acts on the elements of $V_n\otimes_AE$ exactly as multiplication by $u^n$.
 :::
 
-We call $V_n$ in [Example 10](#ex10) the part of weight $n$; this decomposition becomes a standard tool when dealing with torus actions. In the case of the torus $\mathbb{G}_m^r$, repeating the same computation shows that the grading is indexed by $\mathbb{Z}^r$, with each component corresponding to one character of the torus.
+We call $V_n$ in [Example 10](#ex10) the part of weight $n$; this decomposition becomes a standard tool when dealing with torus actions. For the torus $\mathbb{G}_m^r$, repeating the same computation shows that the grading is indexed by $\mathbb{Z}^r$, with each component corresponding to one character of the torus.
 
 ## Torsors
 
@@ -321,7 +322,7 @@ $$\varrho\circ(\mu_G\times\id_X)=\varrho\circ(\id_G\times\varrho),\qquad \varrho
 
 Here $p: X \rightarrow S$ is the structure morphism.
 
-Once a group action on a scheme is given, the next geometrically natural question is to construct the space of orbits, namely the quotient $\overline{X}=X/G$ and the quotient morphism $\varpi: X \rightarrow \overline{X}$, and to understand its structure. However, this is not always the behavior one expects even for topological spaces, and we would like the action to be at least free and simply transitive on each orbit. In this case, the fiber $\varpi^{-1}(\overline{x})$ over each orbit point $\overline{x}\in \overline{X}$ has the same shape as $G$, so we can interpret $X\rightarrow \overline{X}$ as a collection of fibers shaped like $G$. Now the problem, much as in [\[Algebraic Topology\] §Classifying Spaces, ⁋Definition 1](/en/math/algebraic_topology/classifying_spaces#def1), is that there is no way to choose, for each orbit, a basepoint corresponding to the identity of $G$; because of this, each fiber is not $G$ itself, but a fiber that only remembers the way $G$ acts.
+Once a group action on a scheme is given, the next geometrically natural question is to construct the space of orbits, namely the quotient $\overline{X}=X/G$ and the quotient morphism $\varpi: X \rightarrow \overline{X}$, and to understand its structure. However, this is not always the behavior one expects even for topological spaces, and we would like the action to be at least free and simply transitive on each orbit. In this case, the fiber $\varpi^{-1}(\overline{x})$ over each orbit point $\overline{x}\in \overline{X}$ has the same shape as $G$, so we can interpret $X\rightarrow \overline{X}$ as a collection of fibers shaped like $G$. Now the problem, much as in [\[Algebraic Topology\] §Classifying Spaces, ⁋Definition 1](/en/math/algebraic_topology/classifying_spaces#def1), is that there is no way to choose, for each orbit, a basepoint corresponding to the identity of $G$; because of this, each fiber is not $G$ itself but a fiber that only remembers the way $G$ acts.
 
 ::: Definition 12
 Let $G$ be a group scheme over $S$ and let $P$ be an $S$-scheme equipped with a left action $\varrho: G\times_SP \rightarrow P$. We say that $P$ is a *$G$-torsor* if the following two conditions hold.
@@ -336,16 +337,16 @@ Let $G$ be a group scheme over $S$ and let $P$ be an $S$-scheme equipped with a 
 A $G$-torsor $P$ is *trivial* if there exists a $G$-equivariant isomorphism of $S$-schemes with $G$ itself, equipped with the left translation action.
 :::
 
-The second condition reflects the fact that, for each test scheme,
+The second condition reflects the requirement that, for each test scheme,
 
 $$G(T)\times P(T) \rightarrow P(T)\times P(T);\qquad (g, q)\mapsto (g\cdot q, q)$$
 
-is a bijection, i.e. the simply transitive condition. Roughly speaking, the first condition is needed to properly formulate local triviality: as we saw in [§Faithfully Flat Descent](/en/math/scheme_theory/faithfully_flat_descent), in algebraic geometry a Zariski open cover alone does not carry enough information, so we require $P \rightarrow S$ itself to play the role of an *fppf covering*. Here fppf abbreviates *fidèlement plat de présentation finie*.
+is a bijection, that is, the simply transitive condition. Roughly speaking, the first condition is needed to properly formulate local triviality: as we saw in [§Faithfully Flat Descent](/en/math/scheme_theory/faithfully_flat_descent), in algebraic geometry a Zariski open cover alone does not carry enough information, so we require $P \rightarrow S$ itself to play the role of an *fppf covering*. Here fppf abbreviates *fidèlement plat de présentation finie*.
 
 Meanwhile, just as in [\[Algebraic Topology\] §Classifying Spaces, ⁋Proposition 2](/en/math/algebraic_topology/classifying_spaces#prop2), the (global) triviality of a torsor is exactly equivalent to the existence of a global section.
 
 ::: Proposition 13
-For a $G$-torsor $P$ over $S$, $P$ is trivial if and only if $P(S)\neq \emptyset$, i.e. $P \rightarrow S$ admits a section.
+For a $G$-torsor $P$ over $S$, $P$ is trivial if and only if $P(S)\neq \emptyset$, that is, if and only if $P \rightarrow S$ admits a section.
 :::
 ::: Proof
 If $P$ is trivial, then the element of $P(S)$ corresponding to the identity $\epsilon_G\in G(S)$ of $G$ provides a section.
@@ -357,7 +358,7 @@ $$\varphi: G\cong G\times_SS\xrightarrow{\ \id_G\times s\ }G\times_SP\xrightarro
 Then for every $S$-scheme $T$ we have $\varphi_T(g)=g\cdot s_T$. By the second condition of [Definition 12](#def12), $g\mapsto g\cdot s_T$ is a bijection from $G(T)$ to $P(T)$, so by [\[Category Theory\] §Representable Functors, ⁋Theorem 4](/en/math/category_theory/representable_functors#thm4), $\varphi$ is an isomorphism. Moreover, $\varphi_T(g'g)=(g'g)\cdot s_T=g'\cdot\varphi_T(g)$, so $\varphi$ is $G$-equivariant, and therefore $P$ is trivial.
 :::
 
-[Proposition 13](#prop13) says that whether a torsor is trivial over the original base $S$ depends solely on the existence of a global section $S \rightarrow P$. Thus a torsor without a global section is never trivial over $S$. On the other hand, if we base change a torsor $P$ over itself via the morphism $P \rightarrow S$, the diagonal morphism $\Delta: P \rightarrow P\times_SP$ always serves as a section, so over $P$ we always have $P\times_SP \cong G\times_SP$, i.e. it becomes trivial. This is the same phenomenon as in topology, where pulling a principal bundle back over its total space always makes it trivial.
+[Proposition 13](#prop13) says that whether a torsor is trivial over the original base $S$ depends solely on the existence of a global section $S \rightarrow P$. Thus a torsor without a global section is never trivial over $S$. On the other hand, if we base change a torsor $P$ over itself via the morphism $P \rightarrow S$, the diagonal morphism $\Delta: P \rightarrow P\times_SP$ always serves as a section, so over $P$ we always have $P\times_SP \cong G\times_SP$, and it becomes trivial. This is the same phenomenon as in topology, where pulling a principal bundle back over its total space always makes it trivial.
 
 ::: Proposition 14
 For a $G$-torsor $P$ over $S$, the following hold.
@@ -373,7 +374,7 @@ Let us prove 2. Choose an affine open subset $V$ of $S$; then $V$ is quasi-compa
 
 As can be seen from the proof above, the quasi-compact assumption in the second item of [Proposition 14](#prop14) serves to promote the fppf covering $\{P \rightarrow S\}$ to an fpqc covering; in general, a quasi-compact fppf covering is always an fpqc covering. If $P$ is a Noetherian scheme, then by [§Properties of Scheme Morphisms, ⁋Proposition 4](/en/math/scheme_theory/properties_of_scheme_morphisms#prop4) an fppf morphism is automatically quasi-compact, so this assumption always holds.
 
-More generally, for a covering family $\{f_i: U_i \rightarrow X\}$ of a scheme $X$, we call it a *Zariski covering* if the $f_i$ are open immersions, an *étale covering* if they are flat and unramified, an *fppf covering* if they are flat and locally of finite presentation, and an *fpqc covering* if they are flat and quasi-compact. Then by definition we have the implications
+More generally, for a covering family $\{f_i: U_i \rightarrow X\}$ of a scheme $X$, we call it a *Zariski covering* if the $f_i$ are open immersions, an *étale covering* if they are flat and unramified, an *fppf covering* if they are flat and locally of finite presentation, and an *fpqc covering* if they are flat and quasi-compact. By definition, we then have the implications
 
 $$\text{Zariski}\implies\text{étale}\implies\text{fppf}$$
 
@@ -386,11 +387,11 @@ Intuitively, [Proposition 14](#prop14) shows that even if a torsor $P$ may diffe
 
     $$G=\underline{(\mathbb{Z}/2)}_S=S\amalg S=\Spec(\mathbb{R}\times\mathbb{R})$$
 
-    defined by the finite group $\mathbb{Z}/2$. ([Example 3](#ex3)) This is a two-point set, with each point carrying the information of $\mathbb{R}$. We now consider the situation where it acts on $\Spec \mathbb{C}$, another one-point set. Writing $c$ for complex conjugation, we can define the group scheme action $\varrho: G\times_SP\rightarrow P$ on it by the diagram
+    defined by the finite group $\mathbb{Z}/2$. ([Example 3](#ex3)) This is a two-point set, with each point carrying the information of $\mathbb{R}$. We now consider the situation in which it acts on $\Spec \mathbb{C}$, another one-point set. Writing $c$ for complex conjugation, we can define the group scheme action $\varrho: G\times_SP\rightarrow P$ on it by the diagram
 
     {% diagram Math/Scheme_Theory/Group_Schemes-4.svg width="13.92em" alt="action_definition" %}
 
-    Intuitively, $\varrho$ moves one component $P$ by $\id_P$, while the other component $P$ is moved by the map induced by $c$.
+    Intuitively, $\varrho$ carries one component $P$ over by $\id_P$, while the other component $P$ is carried over by the map induced by $c$.
 
     Then this is a $G$-torsor. Checking the conditions of [Definition 12](#def12), first, since $\mathbb{C}$ is a free module of rank $2$ over $\mathbb{R}$, the map $P \rightarrow S$ is faithfully flat and locally of finite presentation. For the second condition, we have $G\times_SP=\Spec(\mathbb{C}\times\mathbb{C})$ and $P\times_SP=\Spec(\mathbb{C}\otimes_\mathbb{R}\mathbb{C})$, and writing out algebraically the algebra homomorphism corresponding to $\varrho$, it is given by
 
