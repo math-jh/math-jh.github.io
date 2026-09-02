@@ -10,14 +10,15 @@ sidebar:
 
 date: 2026-08-31
 weight: 3
-translated_at: 2026-09-01T20:45:05+00:00
+translated_at: 2026-09-02T08:15:05+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-09-02T08:15:05+00:00
 ---
-In the previous post, we turned the naive moduli problem we had been considering into a $\Grpd$-valued functor, assigning to each object $T$ the groupoid $\mathcal{X}(T)$ consisting of $T$-families over $T$ and isomorphisms between them. As in [\[Schemes\] §Morphisms of Schemes, ⁋Definition 9](/en/math/scheme_theory/morphism_of_schemes#def9), we want to think of these as the collection of $T$-points of $\mathcal{X}$, but there were several problems to resolve first. One of them was that the pullback along a morphism $u: T'\rightarrow T$ is determined only up to unique isomorphism, so in order to actually write down a pullback functor $u^\ast: \mathcal{X}(T)\rightarrow \mathcal{X}(T')$, we needed a choice of a representative for each pullback, namely a cleavage. Because of this, for composable morphisms $T''\overset{v}{\rightarrow}T'\overset{u}{\rightarrow}T$, the two paths of pulling back could differ, and to resolve this we had to remember, as additional data, the canonical isomorphism
+In the previous post, we turned the naive moduli problem we had been considering into a $\Grpd$-valued functor, assigning to each object $T$ the groupoid $\mathcal{X}(T)$ of $T$-families over $T$ and isomorphisms between them. As in [\[Schemes\] §Morphisms of Schemes, ⁋Definition 9](/en/math/scheme_theory/morphism_of_schemes#def9), we will think of these as the collection of $T$-points of $\mathcal{X}$, but there were several problems to resolve first. One of them was that the pullback along a morphism $u: T'\rightarrow T$ is determined only up to unique isomorphism, so in order to actually write down a pullback functor $u^\ast: \mathcal{X}(T)\rightarrow \mathcal{X}(T')$, we needed a choice of a representative for each pullback, namely a cleavage. Because of this, for composable morphisms $T''\overset{v}{\rightarrow}T'\overset{u}{\rightarrow}T$, the two paths of pulling back could differ, and to resolve this we had to remember, as additional data, the canonical isomorphism
 
 $$v^\ast u^\ast x\xrightarrow{\sim}(u\circ v)^\ast x$$
 
-together with the coherence conditions these must satisfy, and the object so obtained was the *pseudofunctor* $\mathcal{X}:\mathcal{C}^\op\rightarrow\Grpd$. ([§Stacks, ⁋Definition 3](/en/math/stacks/fibered_categories_and_stacks#def3)) Conceptually, since these pseudofunctors must be determined by all the $T$-points $\mathcal{X}(T)$ together with the extra data added above, knowing for every $T\in \mathcal{C}$ the information of $\mathcal{X}(T)\in \Grpd$ given by the pseudofunctor (and the auxiliary data) means we have captured everything it is meant to carry, and from this viewpoint we defined a CFG $\mathcal{F}\rightarrow \mathcal{C}$. ([§Stacks, ⁋Definition 5](/en/math/stacks/fibered_categories_and_stacks#def5)) What justifies moving between these two viewpoints is [§Stacks, ⁋Theorem 8](/en/math/stacks/fibered_categories_and_stacks#thm8), where we saw that pseudofunctors and CFGs each form a $2$-category, and indeed that these two $2$-categories are $2$-equivalent.
+together with the coherence conditions these must satisfy, and the object so obtained was the *pseudofunctor* $\mathcal{X}:\mathcal{C}^\op\rightarrow\Grpd$. ([§Stacks, ⁋Definition 3](/en/math/stacks/fibered_categories_and_stacks#def3)) Conceptually, since these pseudofunctors must be determined by all the $T$-points $\mathcal{X}(T)$ together with the extra data added above, knowing for every $T\in \mathcal{C}$ the groupoid $\mathcal{X}(T)\in \Grpd$ given by the pseudofunctor (and the auxiliary data) means we have captured all the information it is meant to carry, and from this viewpoint we defined a CFG $\mathcal{F}\rightarrow \mathcal{C}$. ([§Stacks, ⁋Definition 5](/en/math/stacks/fibered_categories_and_stacks#def5)) What justifies moving between these two viewpoints is [§Stacks, ⁋Theorem 8](/en/math/stacks/fibered_categories_and_stacks#thm8), where we saw that pseudofunctors and CFGs each form a $2$-category, and indeed that these two $2$-categories are $2$-equivalent.
 
 A stack, then, is an object obtained by equipping the original category $\mathcal{C}$ with a topology to make it a site, and gluing via the descent that this topology defines, more precisely descent in the $2$-categorical sense. That is, to define a stack one needs to uniquely glue morphisms along coverings and to glue compatible local objects, and from this viewpoint a stack could be defined as a $\Grpd$-valued (2-categorical) sheaf on a site. ([§Stacks, ⁋Definition 12](/en/math/stacks/fibered_categories_and_stacks#def12))
 
@@ -27,13 +28,13 @@ $$f_{T'}(u^\ast x)\xrightarrow{\sim}u^\ast f_T(x)$$
 
 making it compatible with pullback. A 2-morphism between two stack morphisms is a natural transformation connecting these functors and compatible with the pullback coherences. In the language of CFGs, these are expressed as a functor over the base and a natural transformation, respectively. ([§Stacks, ⁋Definition 7](/en/math/stacks/fibered_categories_and_stacks#def7))
 
-The descent condition for a stack guarantees that local data can be glued into a global object, but it does not provide a local model such as a scheme or an algebraic space. Hence we cannot yet discuss notions like dimension, tangent spaces, or smoothness in the familiar language of algebraic geometry. The goal of this post is to single out, among stacks, those algebraic stacks that carry such a geometry.
+The descent condition for a stack guarantees that local data can be glued into a global object, but it does not provide a local model such as a scheme or an algebraic space. Hence we cannot yet discuss notions like dimension, tangent spaces, or smoothness in the familiar language of algebraic geometry. The goal of this post is to single out, among stacks, the algebraic stacks (those that carry such a geometry).
 
 ## Fiber Products of Stacks
 
-The first thing we need in order to discuss the geometry of stacks is the fiber product. Just as we regarded properties of schemes that behave well under base change as good geometric properties, we must define base change for morphisms between stacks as well. The problem is that, unlike $\Sch$ or $\Sch_{/S}$, the category $\Stk$ is a $2$-category, so the fiber product over it must also be defined as a $2$-fiber product.
+The first thing we need in order to discuss the geometry of stacks is the fiber product. Just as we regarded properties of schemes that behave well under base change as good geometric properties, we must define base change for morphisms between stacks as well. The problem is that, unlike $\Sch$ or $\Sch_{/S}$, the category $\Stk$ is a $2$-category, so the fiber product in it must also be defined as a $2$-fiber product.
 
-Let us examine what data is needed for this. Given two stack morphisms $f: \mathcal{X}\rightarrow \mathcal{Z}$ and $g:\mathcal{Y}\rightarrow \mathcal{Z}$, recalling [\[Schemes\] §Functors of Points, ⁋Proposition 7](/en/math/scheme_theory/functor_of_points#prop7), to define the fiber product of stack morphisms it suffices to define, for each $T$, the fiber product
+Let us examine what data is needed for this. Given two stack morphisms $f: \mathcal{X}\rightarrow \mathcal{Z}$ and $g:\mathcal{Y}\rightarrow \mathcal{Z}$, recalling [\[Schemes\] §Functor of Points, ⁋Proposition 7](/en/math/scheme_theory/functor_of_points#prop7), to define the fiber product of stack morphisms it suffices to define, for each $T$, the fiber product
 
 $$\mathcal{X}(T)\times_{\mathcal{Z}(T)}\mathcal{Y}(T).$$
 
@@ -41,9 +42,9 @@ When defining the fiber product of schemes, we took $X(T)\times_{Z(T)}Y(T)$ to c
 
 $$f(x),g(y): \ast\rightarrow \mathcal{Z}(T)$$
 
-between groupoids, and a $2$-morphism between these two functors translates into a morphism inside $\mathcal{Z}(T)$. More precisely, since $\mathcal{Z}(T)$ is a groupoid, it is an isomorphism $f(x)\rightarrow g(y)$.
+between groupoids, and a $2$-morphism between these two functors translates into a morphism inside $\mathcal{Z}(T)$, more precisely, since $\mathcal{Z}(T)$ is a groupoid, into an isomorphism $f(x)\rightarrow g(y)$.
 
-In general, when one considers a commuting condition in a $2$-category, one mostly considers a $2$-commutative condition. For example, consider the following triangle.
+In general, when one considers a commuting condition in a $2$-category, one usually works with a $2$-commutative condition. For example, consider the following triangle.
 
 {% diagram Math/Stacks/Algebraic_Stacks-1.svg width="12.05em" alt="2-commutative triangle" %}
 
@@ -73,7 +74,7 @@ $$\alpha'\circ f(a)=g(b)\circ\alpha.$$
 Identity morphisms and composition are defined componentwise.
 :::
 
-The projections $(x,y,\alpha)\mapsto T$ and $(a,b)\mapsto h$ define a functor $\mathcal{X}\times_\mathcal{Z}\mathcal{Y}\rightarrow\mathcal{C}$. Choosing cartesian lifts componentwise in $\mathcal{X}$ and $\mathcal{Y}$, the isomorphism $\alpha$ is pulled back along with them by the compatibility condition above, so this projection makes $\mathcal{X}\times_\mathcal{Z}\mathcal{Y}$ a CFG. This CFG comes with the two projection functors $\pr_\mathcal{X}:(x,y,\alpha)\mapsto x$ and $\pr_\mathcal{Y}:(x,y,\alpha)\mapsto y$, and the natural isomorphism $f\circ\pr_\mathcal{X}\cong g\circ\pr_\mathcal{Y}$ given by $\alpha$. In general, for an arbitrary CFG $\mathcal{T}$, giving a morphism $\mathcal{T}\rightarrow\mathcal{X}\times_\mathcal{Z}\mathcal{Y}$ is equivalent to giving morphisms $a:\mathcal{T}\rightarrow\mathcal{X}$, $b:\mathcal{T}\rightarrow\mathcal{Y}$ and a 2-isomorphism $\beta:f\circ a\cong g\circ b$, and this is the 2-categorical universal property of the 2-fiber product.
+The projections $(x,y,\alpha)\mapsto T$ and $(a,b)\mapsto h$ define a functor $\mathcal{X}\times_\mathcal{Z}\mathcal{Y}\rightarrow\mathcal{C}$. Choosing cartesian lifts in $\mathcal{X}$ and $\mathcal{Y}$ componentwise, the compatibility condition above forces $\alpha$ to be pulled back along with them, so this projection makes $\mathcal{X}\times_\mathcal{Z}\mathcal{Y}$ a CFG. This CFG comes with the two projection functors $\pr_\mathcal{X}:(x,y,\alpha)\mapsto x$ and $\pr_\mathcal{Y}:(x,y,\alpha)\mapsto y$, and the natural isomorphism $f\circ\pr_\mathcal{X}\cong g\circ\pr_\mathcal{Y}$ given by $\alpha$. In general, for an arbitrary CFG $\mathcal{T}$, giving a morphism $\mathcal{T}\rightarrow\mathcal{X}\times_\mathcal{Z}\mathcal{Y}$ is equivalent to giving morphisms $a:\mathcal{T}\rightarrow\mathcal{X}$, $b:\mathcal{T}\rightarrow\mathcal{Y}$ and a 2-isomorphism $\beta:f\circ a\cong g\circ b$, and this is the 2-categorical universal property of the 2-fiber product.
 
 Since the above definition merely declares the 2-fiber product as a CFG, a separate argument is needed to show that it actually exists within the 2-category of stacks. This is obtained by gluing the descent data of each component.
 
@@ -81,26 +82,26 @@ Since the above definition merely declares the 2-fiber product as a CFG, a separ
 For stack morphisms $f:\mathcal{X}\rightarrow\mathcal{Z}$ and $g:\mathcal{Y}\rightarrow\mathcal{Z}$ over a site $(\mathcal{C},\tau)$, the 2-fiber product $\mathcal{X}\times_\mathcal{Z}\mathcal{Y}$ is a stack.
 :::
 
-From now on we simply call $\mathcal{X}\times_\mathcal{Z}\mathcal{Y}$ the *fiber product* of stacks, and we understand a commutative diagram of stacks as always being filled with a $2$-isomorphism.
+From now on we simply call $\mathcal{X}\times_\mathcal{Z}\mathcal{Y}$ the *fiber product* of stacks, and we understand every commutative diagram of stacks as being filled with a $2$-isomorphism.
 
 ## Algebraic Spaces
 
 We now endow stacks with algebro-geometric properties, as announced. Or rather, as we have already done for schemes, this can be accomplished by assigning algebro-geometric properties to stack morphisms. Our strategy is to use fiber products, and this is why the first definition of this post was the fiber product of stacks.
 
-Most properties $P$ of scheme morphisms are closed under base change. That is, if an arbitrary $f:X\rightarrow Y$ has property $P$, then for any scheme $T$ and morphism $T\rightarrow Y$, the base change morphism $f_T:X\times_YT\rightarrow T$ also has it. Conversely, if $f_T$ satisfies property $P$ for *every* scheme $T$ and morphism $T\rightarrow Y$, then taking $T=Y$ and $T\rightarrow Y$ to be $\id_Y$, we see that $f_T=f$ has property $P$.
+Most properties $P$ of scheme morphisms are closed under base change. That is, if any $f:X\rightarrow Y$ has property $P$, then for any scheme $T$ and morphism $T\rightarrow Y$, the base change morphism $f_T:X\times_YT\rightarrow T$ also has it. Conversely, if $f_T$ satisfies property $P$ for *every* scheme $T$ and morphism $T\rightarrow Y$, then taking $T=Y$ and $T\rightarrow Y$ to be $\id_Y$, we see that $f_T=f$ has property $P$.
 
-Taking this as our idea, we will define properties of a stack morphism $f:\mathcal{X}\rightarrow \mathcal{Y}$ using properties of scheme morphisms and base change. That is, the idea is to declare that $f$ has the *property $P$ of stack morphisms* if, for every scheme $T$ and morphism $T\rightarrow \mathcal{Y}$, the base change $f_T:\mathcal{X}\times_\mathcal{Y}T\rightarrow T$ is a morphism of schemes having the *property $P$ of scheme morphisms*.
+With this as our idea, we will define properties of a stack morphism $f:\mathcal{X}\rightarrow \mathcal{Y}$ using properties of scheme morphisms and base change. That is, the idea is to declare that $f$ has the *property $P$ of stack morphisms* if, for every scheme $T$ and morphism $T\rightarrow \mathcal{Y}$, the base change $f_T:\mathcal{X}\times_\mathcal{Y}T\rightarrow T$ is a morphism of schemes having the *property $P$ of scheme morphisms*.
 
 The problem is that allowing the source $\mathcal{X}\times_\mathcal{Y}T$ of the base change to be only a scheme makes the scope far too narrow. On the other hand, if we allow arbitrary stacks, then $f_T$ can no longer be controlled in the language of scheme morphisms, so the strategy itself becomes impossible. We therefore require that $\mathcal{X}\times_\mathcal{Y}T$ remain an object only slightly broader than a scheme, to which scheme-theoretic geometry can still be applied, and that object is precisely an *algebraic space*.
 
 ::: Definition 3
 A sheaf $F:\Sch^\op \rightarrow \Set$ on the site $(\Sch, \et)$ ([§Grothendieck Topologies, ⁋Example 8](/en/math/stacks/grothendieck_topology#ex8)) is an *algebraic space* if it satisfies the following two conditions.
 
-1. (Representability) The diagonal morphism $F \rightarrow F\times F$ is representable by schemes. That is, for any scheme $T$ and $T \rightarrow F\times F$, the fiber product $F\times_{F\times F}T$ is a scheme.
+1. (Representability) The diagonal morphism $F \rightarrow F\times F$ is representable by schemes. That is, for any scheme $T$ and morphism $T \rightarrow F\times F$, the fiber product $F\times_{F\times F}T$ is a scheme.
 2. (Étale atlas) There exist a scheme $U$ and a representable étale morphism $U \rightarrow F$, and this morphism is an epimorphism of sheaves.
 :::
 
-The first condition is almost identical to the idea explained above; naming it this way, our later strategy can be summarized as considering only those stack morphisms that are represented by algebraic spaces.
+The first condition is almost identical to the idea explained above; with this terminology, our strategy below can be phrased succinctly: we consider only those stack morphisms that are represented by algebraic spaces.
 
 We call the morphism $U\rightarrow F$ in the second condition an *étale atlas* of $F$. Intuitively, this means that the scheme $U$ completely covers $F$, and that $F$ is recovered by quotienting $U$ by the equivalence relation recording these overlaps. To write this more concretely, suppose we are given two schemes $R, U$ and two morphisms $f,g:R\rightarrow U$ between them. If for every scheme $T$,
 
@@ -108,11 +109,11 @@ $$(f,g): R(T)\rightarrow U(T)\times U(T)$$
 
 is injective and its image defines an equivalence relation on $U(T)$, then we call this data $R\rightrightarrows U$ an *equivalence relation* between schemes.
 
-An étale atlas $p: U\rightarrow F$ then gives rise to an equivalence relation in the following way. First, multiply two copies of $p: U\rightarrow F$ and set $R=U\times_F U$. By the first condition of [Definition 3](#def3), $R$ exists as a scheme. Then, explicitly,
+An étale atlas $p: U\rightarrow F$ then gives rise to an equivalence relation in the following way. First, take the product of two copies of $p: U\rightarrow F$ and set $R=U\times_F U$. By the first condition of [Definition 3](#def3), $R$ exists as a scheme. Then, explicitly,
 
 $$(U\times_FU)(T)=\{(x,y)\in U(T)\times U(T)\mid p(x)=p(y)\},$$
 
-so this is the equivalence relation collecting those elements of $U(T)$ regarded as the same under $p$, and through the tautological inclusion $R(T)\hookrightarrow U(T)\times U(T)$ it is actually a subset of $U(T)\times U(T)$, so $R(T)$ gives an equivalence relation between schemes. Thus, intuitively, $U$ provides a scheme chart covering $F$, and $R$ records how the overlaps of this chart must be identified, and from this $F$ is recovered as the sheaf quotient $U/R$. Locally, for any scheme $T$ and point $x\in F(T)$, base-changing $U\rightarrow F$ along $x:T\rightarrow F$ yields an étale surjection $U\times_F T\rightarrow T$, from which there exists an étale covering $\{T_i\rightarrow T\}$ of $F$ over which each restriction $x\vert_{T_i}$ can be lifted to a point of $U(T_i)$.
+so this is the equivalence relation collecting those elements of $U(T)$ regarded as the same under $p$, and through the tautological inclusion $R(T)\hookrightarrow U(T)\times U(T)$ it is actually a subset of $U(T)\times U(T)$, so $R(T)$ gives an equivalence relation between schemes. Thus, intuitively, $U$ provides a scheme chart covering $F$, and $R$ records how the overlaps of this chart must be identified, and from this $F$ is recovered as the sheaf quotient $U/R$. Locally, for any scheme $T$ and point $x\in F(T)$, base-changing $U\rightarrow F$ along $x:T\rightarrow F$ yields an étale surjection $U\times_F T\rightarrow T$, and from this there exists an étale covering $\{T_i\rightarrow T\}$ over which each restriction $x\vert_{T_i}$ can be lifted to a point of $U(T_i)$.
 
 By definition every scheme is an algebraic space, so this is a generalization of schemes, and the two often coincide under assumptions such as quasi-projectivity. Rather than developing this theory in detail, we will merely remember that it is a mild generalization of schemes and return to our original goal.
 
@@ -122,16 +123,16 @@ Now, to endow a stack morphism $f:\mathcal{X}\rightarrow\mathcal{Y}$ with a prop
 
 $$f_T: \mathcal{X}\times_\mathcal{Y}T\rightarrow T,$$
 
-obtained by first base-changing $f$ at an arbitrary scheme-valued point $y: T\rightarrow \mathcal{Y}$ of $\mathcal{Y}$, must appear as a morphism between algebraic spaces as explained above. Requiring that the source $\mathcal{X}\times_\mathcal{Y}T$ of the above expression be an algebraic space for every $y$ is precisely the *representability* of the stack morphism $f$.
+obtained by base-changing $f$ at an arbitrary scheme-valued point $y: T\rightarrow \mathcal{Y}$ of $\mathcal{Y}$, must appear as a morphism between algebraic spaces as explained above. Requiring that the source $\mathcal{X}\times_\mathcal{Y}T$ of the above expression be an algebraic space for every $y$ is precisely the *representability* of the stack morphism $f$.
 
-An algebraic space is a mild generalization of a scheme, and it is mostly possible to transfer a property $P$ of scheme morphisms to a property $P$ of algebraic spaces. Now, to lift this property $P$ to stacks, the following two properties are needed.
+An algebraic space is a mild generalization of a scheme, and for the most part one can transfer a property $P$ of scheme morphisms to a property $P$ of algebraic spaces. Now, to lift this property $P$ to stacks, the following two properties are needed.
 
 1. The property $P$ must be closed under arbitrary base change.
 2. The property $P$ is fppf-local on the target.
 
-The first condition is self-evident, and the second is required in that the objects we are interested in are written fppf-locally; from now on, in the general context, by a *stack* we mean a stack over the fppf site ([§Grothendieck Topologies, ⁋Example 8](/en/math/stacks/grothendieck_topology#ex8)) $(\Sch, \fppf)$. Since any scheme $S$ can always be regarded as a stack, it makes sense to say that a stack $\mathcal{X}$ is an $S$-stack, and morphisms between $S$-stacks or the product $\mathcal{X}\times_S \mathcal{Y}$ of two objects over it are well-defined, and one can see that this is, by definition, the same thing as a stack defined over the fppf site $(\Sch_{/S}, \fppf)$.
+The first condition is automatic, and the second is required because the objects we are interested in are described fppf-locally; from now on, in the general context, by a *stack* we mean a stack over the fppf site ([§Grothendieck Topologies, ⁋Example 8](/en/math/stacks/grothendieck_topology#ex8)) $(\Sch, \fppf)$. Since any scheme $S$ can always be regarded as a stack, it makes sense to say that a stack $\mathcal{X}$ is an $S$-stack, and morphisms between $S$-stacks or the product $\mathcal{X}\times_S \mathcal{Y}$ of two objects over it are well-defined, and one can see that this is, by definition, the same thing as a stack defined over the fppf site $(\Sch_{/S}, \fppf)$.
 
-The necessity of the $\fppf$ site was already foreshadowed to some extent at the level of schemes. For example, in [\[Schemes\] §Group Schemes, ⁋Example 15](/en/math/scheme_theory/group_schemes#ex15), a $\mathbb{G}_m$-torsor was Zariski-locally trivial, but we already remarked in that example that this was a special phenomenon due to Hilbert theorem 90, and indeed the first example of that example, the $\mathbb{Z}/2$-torsor $\Spec\mathbb{C}\rightarrow\Spec\mathbb{R}$, was fppf-locally trivial yet not Zariski-locally trivial. For this reason, if we agree that stacks are defined over the $\fppf$ site, then in order to locally trivialize an object of a stack over an fppf covering, check the property of $f_T$, and descend the result to $T$, the property $P$ must be fppf-local on the target.
+The necessity of the $\fppf$ site was already foreshadowed to some extent at the level of schemes. For example, in [\[Schemes\] §Group Schemes, ⁋Example 15](/en/math/scheme_theory/group_schemes#ex15), a $\mathbb{G}_m$-torsor was Zariski-locally trivial, but we already remarked in that example that this was a special phenomenon due to Hilbert theorem 90, and indeed the first example given there, the $\mathbb{Z}/2$-torsor $\Spec\mathbb{C}\rightarrow\Spec\mathbb{R}$, was fppf-locally trivial yet not Zariski-locally trivial. For this reason, if we agree that stacks are defined over the $\fppf$ site, then in order to locally trivialize an object of a stack over an fppf covering, check the property of $f_T$, and descend the result to $T$, the property $P$ must be fppf-local on the target.
 
 ::: Definition 4
 Suppose we are given a property $P$ of morphisms of algebraic spaces satisfying the above condition. We say that a representable stack morphism $f:\mathcal{X}\rightarrow\mathcal{Y}$ *has property $P$* if, for every scheme $T$ and every morphism $y:T\rightarrow\mathcal{Y}$, the base change $f_T:\mathcal{X}\times_\mathcal{Y}T\rightarrow T$ has $P$ as a morphism of algebraic spaces.
@@ -163,23 +164,23 @@ $$t: T' \rightarrow T, \qquad x: T'\rightarrow \mathcal{X}$$
 
 together with an isomorphism $\alpha: \Delta\circ x\rightarrow (x_1, x_2)\circ t$ in $\mathcal{X}\times_S\mathcal{X}$; since the base scheme of the fiber product is $\mathcal{X}\times_S\mathcal{X}$, $\alpha$ can be written more explicitly in the form $\alpha=(a,b)$ for two isomorphisms
 
-$$a: x\rightarrow x_1\circ t=x_1\vert_{T'}, \qquad b:x\rightarrow x_2\circ t=x_2\vert_{T'}$$
+$$a: x\rightarrow x_1\circ t=x_1\vert_{T'}, \qquad b:x\rightarrow x_2\circ t=x_2\vert_{T'}.$$
 
 Now sending this datum $(t,x,a,b)$ to $b\circ a^{-1}:x_1\vert_{T'}\xrightarrow{\sim}x_2\vert_{T'}$ defines a functor
 
-$$\mathcal{X}\times_{\mathcal{X}\times_S \mathcal{X}}T\rightarrow \rIsom_T(x_1,x_2)$$
+$$\mathcal{X}\times_{\mathcal{X}\times_S \mathcal{X}}T\rightarrow \rIsom_T(x_1,x_2).$$
 
 Our claim is that this functor is a natural equivalence. To verify this, first suppose that two data $(t,x,a,b)$ and $(t',x',a',b')$ of $\mathcal{X}\times_{\mathcal{X}\times_S \mathcal{X}}T$ are sent to the same object of $\rIsom_T(x_1,x_2)$. Since this CFG is discrete, $t=t'$ and
 
-$$b\circ a^{-1}=b'\circ(a')^{-1}$$
+$$b\circ a^{-1}=b'\circ(a')^{-1}.$$
 
 Now consider the isomorphism
 
-$$c=(a')^{-1}\circ a:x\xrightarrow{\sim}x'$$
+$$c=(a')^{-1}\circ a:x\xrightarrow{\sim}x'.$$
 
 Then $a'\circ c=a$, and from the equation above we obtain
 
-$$b'\circ c=b'\circ(a')^{-1}\circ a=b\circ a^{-1}\circ a=b$$
+$$b'\circ c=b'\circ(a')^{-1}\circ a=b\circ a^{-1}\circ a=b.$$
 
 Therefore $c$, together with $\id_t$, satisfies the compatibility condition of the fiber product, so it defines a morphism from $(t,x,a,b)$ to $(t,x',a',b')$. Conversely, such a morphism must satisfy $a'\circ c=a$, so necessarily $c=(a')^{-1}\circ a$, and hence it is unique. Thus this functor is fully faithful. On the other hand, any $\beta:x_1\vert_{T'}\xrightarrow{\sim}x_2\vert_{T'}$ comes from $(t,x,a,b)=(t,x_1\vert_{T'},\id,\beta)$, so this functor is essentially surjective. Since this construction is compatible with pullback, we obtain the natural equivalence above.
 
@@ -198,7 +199,7 @@ and the right-hand side is a base change of an algebraic space, hence an algebra
 
 In the isomorphism sheaf $\rIsom_T(x_1, x_2)$, in the special case $x_1=x_2=x$, the group sheaf $\rAut_T(x)=\rIsom_T(x,x)$ associated to a single object $x\in\mathcal{X}(T)$ is called the *stabilizer* of $x$. Collecting all these stabilizers over $\mathcal{X}$ at once gives the *inertia stack*, defined by the following $2$-fiber product
 
-$$\mathcal{I}_\mathcal{X}:=\mathcal{X}\times_{\mathcal{X}\times_S\mathcal{X}}\mathcal{X}$$
+$$\mathcal{I}_\mathcal{X}:=\mathcal{X}\times_{\mathcal{X}\times_S\mathcal{X}}\mathcal{X}.$$
 
 In other words, a $T$-object of the inertia stack is a pair $(x,\alpha)$ with $x\in\mathcal{X}(T)$ and $\alpha\in\rAut_T(x)$, and the fiber of the projection $\mathcal{I}_\mathcal{X}\rightarrow\mathcal{X}$ over $x$ is exactly $\rAut_T(x)$.
 
@@ -239,7 +240,7 @@ is a scheme, and that there is an *inclusion* into $U(T)\times_{S(T)}U(T)$. On t
 
 $$R(T)=(U\times_\mathcal{X}U)(T)=U(T)\times_{\mathcal{X}(T)}U(T)=\{(f,g,\alpha)\mid \alpha: p\circ f\overset{\sim}{\rightarrow} p\circ g\}$$
 
-also has a map to $U(T)\times_{S(T)}U(T)$ in the same way, but this map need not be injective. Indeed, the triple $(f,g,\alpha)$ is sent to the pair $(f,g)$, and the fiber over $(f,g)$ is the set of isomorphisms $\rIsom_{\mathcal{X}(T)}(p\circ f,p\circ g)$. In particular, when $f=g$, this fiber is the stabilizer $\rAut_T(p\circ f)$, so intuitively a DM stack can be thought of as a space with a stabilizer attached to each point as separate information.
+admits a map to $U(T)\times_{S(T)}U(T)$ in the same way, but this map need not be injective. Indeed, the triple $(f,g,\alpha)$ is sent to the pair $(f,g)$, and the fiber over $(f,g)$ is the set of isomorphisms $\rIsom_{\mathcal{X}(T)}(p\circ f,p\circ g)$. In particular, when $f=g$, this fiber is the stabilizer $\rAut_T(p\circ f)$, so intuitively a DM stack can be thought of as a space with a stabilizer attached to each point as separate information.
 
 ::: Definition 7
 The fiber of the *quotient stack* $[U/G]$ over $T\in\Sch_{/S}$ is the following groupoid. Its objects are pairs $(P,\varphi)$ satisfying the following two conditions.
@@ -252,16 +253,16 @@ A morphism from $(P,\varphi)$ to $(P',\varphi')$ is a $G$-torsor morphism $\psi:
 
 Then any $\psi$ satisfying the above condition is automatically an isomorphism, since a $G$-equivariant morphism of $G$-torsors is essentially nothing but a translation. In particular, each fiber is a groupoid. Moreover, pulling back torsors and equivariant morphisms along base change provides cartesian morphisms, so these fiber groupoids form a CFG over $\Sch_{/S}$. As a special case, when $G$ acts on the base space $U=S$ with the trivial action, $[S/G]$ becomes the classifying stack $\bB G$ we already saw in [§Stacks, ⁋Definition 17](/en/math/stacks/fibered_categories_and_stacks#def17).
 
-Intuitively, a $T$-point $(P,\varphi)$ of $[U/G]$ amounts to giving a section of a space $P\times^G U\rightarrow T$ over $T$, twisted by a $G$-torsor $P$, each of whose fibers is $U$. ([\[Algebraic Topology\] §Classifying Spaces, ⁋Definition 3](/en/math/algebraic_topology/classifying_spaces#def3)) If the torsor is trivial so that $P=G\times_ST$, then $\varphi(g,t)=g\cdot\varphi(e,t)$, so $\varphi$ is uniquely determined by its value $a=\varphi\circ e:T\rightarrow U$ at the identity section $e:T\rightarrow G\times_ST$; thus viewing this over the trivial torsor recovers the same information as a point of $U(T)$.
+Intuitively, a $T$-point $(P,\varphi)$ of $[U/G]$ amounts to giving a section of the space $P\times^G U\rightarrow T$ over $T$, whose fibers are $U$, twisted by a $G$-torsor $P$. ([\[Algebraic Topology\] §Classifying Spaces, ⁋Definition 3](/en/math/algebraic_topology/classifying_spaces#def3)) If the torsor is trivial so that $P=G\times_ST$, then $\varphi(g,t)=g\cdot\varphi(e,t)$, so $\varphi$ is uniquely determined by its value $a=\varphi\circ e:T\rightarrow U$ at the identity section $e:T\rightarrow G\times_ST$; thus restricting to the trivial torsor recovers exactly the same information as a point of $U(T)$.
 
 On the other hand, just as in the descent argument applied to $\bB\mathbb{G}_m$ in [§Stacks, ⁋Theorem 18](/en/math/stacks/fibered_categories_and_stacks#thm18), torsors and equivariant morphisms satisfy effective descent for fppf coverings, and the componentwise descent argument of [Proposition 2](#prop2) applies verbatim, so $[U/G]$ is a stack. Now, to show that this stack is an algebraic stack, we construct an atlas.
 
 ::: Proposition 8
-Let an $S$-scheme $U$ and a group $S$-scheme $G$ acting on it be given. For every $S$-scheme $T$ and every $T$-point $u\in U(T)$ of $U$, the following function
+Let an $S$-scheme $U$ and a group $S$-scheme $G$ acting on it be given. For every $S$-scheme $T$ and every $T$-point $u\in U(T)$ of $U$, the assignment
 
 $$\pi(u)=\bigl(G\times_S T,\varphi_u\bigr),\qquad \varphi_u(g,t)=g\cdot u(t),$$
 
-associating to it the trivial torsor and the equivariant morphism it defines, is a stack morphism and an epimorphism.
+sending $u$ to the trivial torsor together with the equivariant morphism it defines, is a stack morphism and an epimorphism.
 :::
 ::: Proof
 The functoriality of $\pi$ follows since base change of $u$ is compatible with base change of the trivial torsor. Now, to show that this is an epimorphism, we must show that every $(P,\varphi)\in [U/G](T)$ arises locally in this way; since every $G$-torsor is fppf-locally trivial ([§Stacks, ⁋Definition 17](/en/math/stacks/fibered_categories_and_stacks#def17)), we can take a trivializing fppf covering $\{T_i\rightarrow T\}$ and sections $s_i\in P(T_i)$ over each $T_i$. Then the restriction $(P,\varphi)\vert_{T_i}$ of $(P,\varphi)$ to $T_i$ is isomorphic to the $\pi(u_i)$ determined by $u_i=\varphi(s_i)\in U(T_i)$, and therefore $\pi$ is an epimorphism.
@@ -291,13 +292,13 @@ On the other hand, from the definition of $\pi$ in [Proposition 8](#prop8),
 
 $$\pi(u_1)=(G\times_ST,\varphi_{u_1}), \qquad \pi(u_2)=(G\times_ST,\varphi_{u_2}),$$
 
-and since $\psi$ in this correspondence was a $2$-isomorphism in the original data, we have $\varphi_{u_2}\circ\psi=\varphi_{u_1}$. In other words, $\psi$ induces $G$-equivariant automorphisms between the $G$-torsors. Conversely, given any $g\in G$, the translation it defines is a $G$-equivariant automorphism, so we may reverse the above process.
+and since $\psi$ in this correspondence was a $2$-isomorphism in the original data, we have $\varphi_{u_2}\circ\psi=\varphi_{u_1}$. In other words, $\psi$ induces $G$-equivariant automorphisms between the $G$-torsors. Conversely, given any $g\in G$, the translation it defines is a $G$-equivariant automorphism, so the above process can be reversed.
 
 We must now show the $2$-commutativity of the given diagram. For $(g,u)\in(G\times_SU)(T)$, the two paths give $\pi(\rho(g,u))=\pi(g\cdot u)$ and $\pi(\pr_2(g,u))=\pi(u)$, and by [Definition 7](#def7), a morphism between them is a $G$-equivariant automorphism $\psi$ of the trivial torsor $G\times_ST$ satisfying $\varphi_u\circ\psi=\varphi_{g\cdot u}$. For the right translation $\psi_g:(h,t)\mapsto(hg,t)$ defined by $g$, we have
 
 $$\varphi_u(\psi_g(h,t))=(hg)\cdot u(t)=h\cdot\bigl(g\cdot u(t)\bigr)=\varphi_{g\cdot u}(h,t),$$
 
-so $\psi_g$ provides such a morphism. This correspondence is natural in $(g,u)$ and compatible with base change, hence it defines a $2$-isomorphism $\alpha:\pi\circ\rho\Rightarrow\pi\circ\pr_2$, and therefore the given diagram is $2$-commutative. The universal property of the $2$-fiber product, as discussed right after [Definition 1](#def1), shows that the data $(\rho,\pr_2,\alpha)$ induces a morphism
+so $\psi_g$ provides such a morphism. This correspondence is natural in $(g,u)$ and compatible with base change, hence it defines a $2$-isomorphism $\alpha:\pi\circ\rho\Rightarrow\pi\circ\pr_2$, and therefore the given diagram is $2$-commutative. Then by the universal property of the $2$-fiber product discussed right after [Definition 1](#def1), this data $(\rho,\pr_2,\alpha)$ induces a morphism
 
 $$\Phi:G\times_SU\rightarrow U\times_{[U/G]}U,\qquad \Phi(g,u)=(g\cdot u,u,\psi_g),$$
 
@@ -309,7 +310,7 @@ Injectivity of $\Phi_T$ follows because the second component of $\Phi_T(g,u)$ re
 
 $$\psi(h,t)=h\cdot\psi(e,t)=(h\gamma(t),t),$$
 
-so $\psi=\psi_\gamma$. In other words, the $G$-equivariant automorphisms of the trivial torsor are exactly the right translations. ([§Stacks, ⁋Definition 17](/en/math/stacks/fibered_categories_and_stacks#def17) The remaining condition $\varphi_{u_2}\circ\psi_\gamma=\varphi_{u_1}$ requires
+so $\psi=\psi_\gamma$. In other words, the $G$-equivariant automorphisms of the trivial torsor are exactly the right translations. ([§Stacks, ⁋Definition 17](/en/math/stacks/fibered_categories_and_stacks#def17)) The remaining condition $\varphi_{u_2}\circ\psi_\gamma=\varphi_{u_1}$ requires
 
 $$h\cdot\bigl(\gamma(t)\cdot u_2(t)\bigr)=\varphi_{u_2}(h\gamma(t),t)=\varphi_{u_1}(h,t)=h\cdot u_1(t)$$
 
@@ -320,7 +321,7 @@ All of these correspondences are compatible with base change, so $\Phi_T$ is fun
 
 [Proposition 9](#prop9) can be summarized by saying that $[U/G]$ is the stack quotient of the *action groupoid* $G\times_SU\rightrightarrows U$. More generally, from a groupoid object $R\rightrightarrows U$ with smooth source and target, one obtains an algebraic stack $[U/R]$; the quotient stack is the special case where $R=G\times_SU$.
 
-We will now show that, under suitable conditions, the quotient stack thus defined is a DM stack, as suggested by the intuition from the introduction.
+We will now show that, under suitable conditions, the quotient stack thus defined is a DM stack, as suggested by the intuition from the beginning of this section.
 
 ::: Theorem 10
 Let $U$ be an $S$-scheme with an action by a smooth group $S$-scheme $G$. Then the quotient stack $[U/G]$ is an algebraic stack, and the morphism $\pi:U\rightarrow[U/G]$ from [Proposition 8](#prop8) is a smooth atlas. Moreover, base changing the diagonal $\Delta:[U/G]\rightarrow[U/G]\times_S[U/G]$ along $\pi\times\pi$ yields the action morphism
@@ -333,13 +334,13 @@ It follows that:
 2. If the stabilizers of all geometric points are unramified, then $[U/G]$ is a DM stack. In particular, if $G$ is étale over $S$, then $\pi$ itself is an étale atlas.
 :::
 ::: Proof
-First, we prove the common claims. To show $[U/G]$ is an algebraic stack, we must verify representability of the diagonal and existence of a smooth atlas ([Definition 6](#def6)).
+First, we prove the claims common to both statements. To show $[U/G]$ is an algebraic stack, we must verify representability of the diagonal and existence of a smooth atlas ([Definition 6](#def6)).
 
 First we show the diagonal is representable. By [Proposition 5](#prop5), it suffices to show that for any $S$-scheme $T$ and $(P,\varphi),(P',\varphi')\in[U/G](T)$, $\rIsom_T((P,\varphi),(P',\varphi'))$ is an algebraic space. Taking an fppf covering $\{T_i\rightarrow T\}$ trivializing both objects, as in the proof of [Proposition 8](#prop8), the two objects over each $T_i$ have the form $\pi(u_i),\pi(u_i')$, and by the computation in [Proposition 9](#prop9), for any $V\rightarrow T_i$,
 
 $$\rIsom_{T_i}(\pi(u_i),\pi(u_i'))(V)=\{g\in G(V)\mid g\cdot u_i'\vert_V=u_i\vert_V\}$$
 
-is representable by the fiber product of the morphism $(g\mapsto(g\cdot u_i',u_i):G_{T_i}\rightarrow U\times_SU$ and the diagonal $\Delta_{U/S}:U\rightarrow U\times_SU$. These local presentations glue along the descent datum to form an algebraic space.
+is representable by the fiber product of the morphism $(g\mapsto(g\cdot u_i',u_i)):G_{T_i}\rightarrow U\times_SU$ and the diagonal $\Delta_{U/S}:U\rightarrow U\times_SU$. These local presentations glue via the descent data to form an algebraic space.
 
 Now we show $\pi$ is a smooth atlas. If $T\rightarrow[U/G]$ is given by an object $(P,\varphi)$, then via the canonical isomorphism $U\times_{[U/G]}T\cong P$, every base change of $\pi$ is a $G$-torsor $P\rightarrow T$. Since a torsor is fppf-locally $G\times_ST$, it is an algebraic space, and since $G$ is smooth, $P\rightarrow T$ is smooth as well. As $\pi$ is an epimorphism by [Proposition 8](#prop8), $\pi$ is a smooth atlas, and hence $[U/G]$ is an algebraic stack.
 
@@ -353,29 +354,29 @@ Now for the individual claims.
 
     $$\{g\in G_\mathbb{K}\mid g\cdot u_2=u_1\},$$
 
-so it is empty if the two points lie in different orbits, and otherwise a torsor under the stabilizer $\rAut_\mathbb{K}(u_2)$. Since $\pr_2\circ a=\pr_2$ is smooth, it is locally of finite type, and if a composite is locally of finite type, so is the first morphism, hence $a$ is locally of finite type. Unramifiedness means the cotangent sheaf vanishes; since formation of the cotangent sheaf commutes with base change ([[\[Schemes\] §Kähler Differentials and Cotangent Sheaves, ⁋Proposition 5](/en/math/scheme_theory/sheaf_of_differentials#prop5), the restriction of $\Omega_a$ to a fiber is the cotangent sheaf of that fiber. Since $\Omega_a$ is of finite type, [\[Commutative Algebra\] §Integral Extensions, ⁋Lemma 8](/en/math/commutative_algebra/integral_extension#lem8) shows fiberwise vanishing implies stalkwise vanishing; therefore, if all stabilizers are unramified, then $a$ is unramified. Finally, if $G$ is étale, then the base change $P\rightarrow T$ seen above is étale, so $\pi$ itself is an étale atlas as required by [Definition 6](#def6).
+    so it is empty if the two points lie in different orbits, and otherwise a torsor under the stabilizer $\rAut_\mathbb{K}(u_2)$. Since $\pr_2\circ a=\pr_2$ is smooth, it is locally of finite type, and if a composite is locally of finite type, so is the first morphism, hence $a$ is locally of finite type. Now, unramifiedness of a locally finite type morphism amounts to the vanishing of its cotangent sheaf, and by [\[Schemes\] §Kähler Differentials and Cotangent Sheaves, ⁋Proposition 5](/en/math/scheme_theory/sheaf_of_differentials#prop5) the cotangent sheaf commutes with base change, so the restriction of $\Omega_a$ to a fiber is the cotangent sheaf of that fiber. Since $\Omega_a$ is of finite type, [\[Commutative Algebra\] §Integral Extensions, ⁋Lemma 8](/en/math/commutative_algebra/integral_extension#lem8) shows that vanishing at each point implies vanishing of the stalks; therefore, if all stabilizers are unramified, then $a$ is unramified. Finally, if $G$ is étale, then the base change $P\rightarrow T$ seen above is étale, so $\pi$ itself is an étale atlas as required by [Definition 6](#def6).
 :::
 
-This completes the program introduced at the start of this section: under suitable finiteness conditions, a quotient stack is a DM stack. Conversely, it is known that every DM stack is locally a quotient stack. More precisely, for a finite-type point $x$ of a quasi-separated DM stack $\mathcal{X}$ with geometric stabilizer $G_x$, one can find an affine scheme $\Spec A$ on which $G_x$ acts and a stabilizer-preserving étale morphism $[\Spec A/G_x]\rightarrow\mathcal{X}$. The proof of this fact lies beyond the scope of this post, but as it greatly supports our geometric motivation, we mention it without proof.
+This completes the program introduced at the beginning of this section: under suitable finiteness conditions, a quotient stack is a DM stack. Conversely, it is known that every DM stack is locally a quotient stack. More precisely, for a finite-type point $x$ of a quasi-separated DM stack $\mathcal{X}$ with geometric stabilizer $G_x$, one can find an affine scheme $\Spec A$ on which $G_x$ acts and a stabilizer-preserving étale morphism $[\Spec A/G_x]\rightarrow\mathcal{X}$. The proof of this fact lies beyond the scope of this post, but since it greatly supports our geometric motivation, we record it here without proof.
 
 Now let us apply [Theorem 10](#thm10) to the case $U=S$ from [Definition 7](#def7), i.e. the classifying stack, to read off the atlas and stabilizers directly.
 
 ::: Example 11 ($\bB\mathbb{G}_m$ and $\bB(\mathbb{Z}/n)$)
-Fix the base scheme to be a field $\mathbb{K}$.
+Fix a field $\mathbb{K}$ as the base scheme.
 
-1. $\bB\mathbb{G}_m=[\Spec\mathbb{K}/\mathbb{G}_m]$ is an algebraic stack. Since $\mathbb{G}_m$ is affine and smooth ([\[Schemes\] §Group Schemes, §§Group Schemes](/en/math/scheme_theory/group_schemes#group-schemes), [Theorem 10](#thm10) applies; the atlas is $\Spec\mathbb{K}\rightarrow\bB\mathbb{G}_m$, and its base change is $\mathbb{G}_m\rightrightarrows\Spec\mathbb{K}$. The groupoid $\bB\mathbb{G}_m(T)$ is the groupoid of line bundles on $T$ ([§Stacks, ⁋Theorem 18](/en/math/stacks/fibered_categories_and_stacks#thm18), and the stabilizer of a point is $\mathbb{G}_m$. Since the stabilizer is $1$-dimensional, $\bB\mathbb{G}_m$ is not a DM stack but an Artin stack, of dimension $\dim\Spec\mathbb{K}-\dim\mathbb{G}_m=0-1=-1$.
+1. $\bB\mathbb{G}_m=[\Spec\mathbb{K}/\mathbb{G}_m]$ is an algebraic stack. Since $\mathbb{G}_m$ is affine and smooth ([\[Schemes\] §Group Schemes, §§Group Schemes](/en/math/scheme_theory/group_schemes#group-schemes)), [Theorem 10](#thm10) applies; the atlas is $\Spec\mathbb{K}\rightarrow\bB\mathbb{G}_m$, and its base change is $\mathbb{G}_m\rightrightarrows\Spec\mathbb{K}$. The groupoid $\bB\mathbb{G}_m(T)$ is the groupoid of line bundles on $T$ ([§Stacks, ⁋Theorem 18](/en/math/stacks/fibered_categories_and_stacks#thm18)), and the stabilizer of a point is $\mathbb{G}_m$. Since the stabilizer is $1$-dimensional, $\bB\mathbb{G}_m$ is not a DM stack but an Artin stack, of dimension $\dim\Spec\mathbb{K}-\dim\mathbb{G}_m=0-1=-1$.
 
 2. Viewing $\mathbb{Z}/n$ as a constant group scheme, $\bB(\mathbb{Z}/n)=[\Spec\mathbb{K}/(\mathbb{Z}/n)]$ is a DM stack. The constant group scheme $\mathbb{Z}/n$ is the disjoint union $\coprod_{i=1}^n\Spec\mathbb{K}$, hence finite étale. Thus the atlas $\Spec\mathbb{K}\rightarrow\bB(\mathbb{Z}/n)$ is an étale epimorphism, with base change $\mathbb{Z}/n\times\Spec\mathbb{K}\rightrightarrows\Spec\mathbb{K}$. The groupoid $\bB(\mathbb{Z}/n)(T)$ is the groupoid of $\mathbb{Z}/n$-torsors over $T$, i.e. finite étale coverings on whose fibers $\mathbb{Z}/n$ acts simply transitively, and the stabilizer of the trivial torsor is $\mathbb{Z}/n$.
 :::
 
-In the above examples the scheme acted upon is a single point, which makes the computation transparent. The next is a standard action whose stabilizer varies from point to point.
+In the above examples the scheme being acted on is a single point, which makes the computation transparent. The next is a standard action whose stabilizer varies from point to point.
 
 ::: Example 12 ($[\mathbb{A}^1/\mathbb{G}_m]$)
 Over an algebraically closed field $\mathbb{K}$, let $\mathbb{G}_m$ act on the affine line $\mathbb{A}^1$ by scalar multiplication $t\cdot x=tx$. The origin $\{0\}$ is a fixed point, and its complement $\mathbb{A}^1\setminus\{0\}=\mathbb{G}_m$ is an open orbit on which $\mathbb{G}_m$ acts simply transitively. The quotient stack $[\mathbb{A}^1/\mathbb{G}_m]$ remembers the distinct stabilizers of these two orbits.
 
 1. The action over the open orbit $\mathbb{G}_m\hookrightarrow\mathbb{A}^1$ is free, so $[\mathbb{G}_m/\mathbb{G}_m]\cong\Spec\mathbb{K}$, an open point with trivial stabilizer.
 
-2. The origin $\{0\}=\Spec\mathbb{K}$ is a fixed point with trivial action, so $[\{0\}/\mathbb{G}_m]=\bB\mathbb{G}_m$, a closed point with stabilizer $\mathbb{G}_m$ ([Example 11](#ex11)).
+2. The origin $\{0\}=\Spec\mathbb{K}$ is a fixed point on which $\mathbb{G}_m$ acts trivially, so $[\{0\}/\mathbb{G}_m]=\bB\mathbb{G}_m$, a closed point with stabilizer $\mathbb{G}_m$. ([Example 11](#ex11))
 
 $[\mathbb{A}^1/\mathbb{G}_m]$ has dimension $1-1=0$, but the closed point carries the positive-dimensional stabilizer $\mathbb{G}_m$. Thus it is an Artin stack, not a DM stack, preserving automorphism information that no scheme or algebraic space could retain.
 :::
