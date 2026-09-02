@@ -10,39 +10,40 @@ sidebar:
 
 date: 2026-08-30
 weight: 1
-translated_at: 2026-09-01T19:45:04+00:00
+translated_at: 2026-09-02T07:45:04+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-09-02T07:45:04+00:00
 ---
-In algebraic geometry, to define schemes we first defined what an affine scheme is, and then defined a general scheme by gluing these together. In the language of [\[Schemes\] §Faithfully Flat Descent, ⁋Definition 4](/en/math/scheme_theory/faithfully_flat_descent#def4), this amounts to thinking of descent along a *Zariski open cover* defined using open embeddings, and as we saw in that post, descent is a formal unpacking of what is needed in this process of *gluing*. What stands out most in this language is that a descent datum requires an isomorphism $\Phi$ as part of its input; once the scheme is constructed, the images of two overlaps that were isomorphic to each other become literally the same intersection, which is why this gluing datum was not so visible.
+In algebraic geometry, we define schemes by first defining affine schemes and then gluing them together. In the language of [\[Schemes\] §Faithfully Flat Descent, ⁋Definition 4](/en/math/scheme_theory/faithfully_flat_descent#def4), this amounts to descent along a *Zariski open cover* defined using open embeddings; as we saw in that post, descent is a formal unpacking of what is needed in this *gluing* process. What stands out most in this language is that a descent datum requires an isomorphism $\Phi$ as part of its input: once the scheme is constructed, the images of two overlaps that were isomorphic to each other become literally the same intersection, which is why this gluing datum was hardly visible.
 
-To glue local data precisely in this way, one must first separately write down which families of morphisms are admitted as coverings, and when compatible data over them descends to unique global data. The former was already generalized in the Grothendieck pretopology we examined in [\[Schemes\] §Faithfully Flat Descent, ⁋Definition 8](/en/math/scheme_theory/faithfully_flat_descent#def8), and the latter is expressed through the sheaf condition. In this post, the first of this series, we focus on this process and prepare the language needed to define stacks later.
+To glue local data together precisely in this way, we must first spell out separately which families of morphisms are admitted as coverings, and when compatible data over them descends to unique global data. The former was already generalized by the Grothendieck pretopology we examined in [\[Schemes\] §Faithfully Flat Descent, ⁋Definition 8](/en/math/scheme_theory/faithfully_flat_descent#def8), and the latter is expressed through the sheaf condition. In this post, the first of the series, we focus on this process and set up the language needed to define stacks later.
 
 ## Sieves and covering sieves
 
-As in [\[Schemes\] §Faithfully Flat Descent, ⁋Definition 8](/en/math/scheme_theory/faithfully_flat_descent#def8), we will declare a collection of morphisms with target $U$ to be a covering of $U$. To define things this way, one must necessarily explain what it means for one covering to be finer than another. That is, given that $V\rightarrow U$ is an element forming a covering over $U$, we must explain what it means for some $W\rightarrow U$ to factor through it.
+As in [\[Schemes\] §Faithfully Flat Descent, ⁋Definition 8](/en/math/scheme_theory/faithfully_flat_descent#def8), we will declare a collection of morphisms with target $U$ to be a covering of $U$. To make such a definition, we inevitably have to explain what it means for one covering to be finer than another: given that $V\rightarrow U$ is an element of a covering of $U$, we must explain what it means for some $W\rightarrow U$ to factor through it.
 
 ::: Definition 1
 Given a category $\mathcal{C}$ and an object $U\in \mathcal{C}$, a *sieve* on $U$ is a collection $\mathcal{S}$ of morphisms satisfying the following conditions.
 
 1. Every element of $\mathcal{S}$ has target $U$.
-2. For any element $f: V\rightarrow U$ of $\mathcal{S}$, whenever a morphism $g:W\rightarrow V$ is given, the composite $f\circ g: W\rightarrow U$ is also an element of $\mathcal{S}$.
+2. For any element $f: V\rightarrow U$ of $\mathcal{S}$ and any morphism $g:W\rightarrow V$, the composite $f\circ g: W\rightarrow U$ is also an element of $\mathcal{S}$.
 :::
 
-In other words, a sieve is a subfunctor of the representable presheaf $h_U=\Hom_\mathcal{C}(-, U): \mathcal{C}^\op\rightarrow \Set$. Indeed, if $\mathcal{S}$ is a sieve on $U$, then associating to each object $V$ the subset
+In other words, a sieve is a subfunctor of the representable presheaf $h_U=\Hom_\mathcal{C}(-, U): \mathcal{C}^\op\rightarrow \Set$. Indeed, if $\mathcal{S}$ is a sieve on $U$, then assigning to each object $V$ the subset
 
 $$\mathcal{S}(V)=\{f: V \rightarrow U\mid f\in \mathcal{S}\}\subseteq \Hom_\mathcal{C}(V, U)$$
 
-forms a subfunctor $\mathcal{S}$ of $h_U$, and when a morphism $g:W\rightarrow V$ is given, $\mathcal{S}(g)$ is given by
+defines a subfunctor $\mathcal{S}$ of $h_U$, and when a morphism $g:W\rightarrow V$ is given, $\mathcal{S}(g)$ is given by
 
 $$\mathcal{S}(g):\mathcal{S}(V)\rightarrow \mathcal{S}(W);\qquad f\mapsto f\circ g.$$
 
-Conversely, a functor satisfying these properties (that is, a subfunctor of $h_U$) satisfies the sieve condition, so a sieve is exactly a subfunctor of $h_U$. From this point of view, the *maximal* sieve is defined to be the largest among these, namely the sieve given by $h_U$ itself, which is simply the collection of all morphisms into $U$.
+Conversely, any functor with this property (that is, any subfunctor of $h_U$) satisfies the sieve condition, so a sieve is exactly a subfunctor of $h_U$. From this point of view, the *maximal* sieve is the largest of these, namely the sieve given by $h_U$ itself, which is simply the collection of all morphisms into $U$.
 
-Meanwhile, given a family $\{f_i: U_i \rightarrow U\}_{i\in I}$ of morphisms with target $U$, there exists a smallest sieve containing it, namely the collection obtained by composing the $f_i$ with all possible morphisms:
+Meanwhile, given a family $\{f_i: U_i \rightarrow U\}_{i\in I}$ of morphisms with target $U$, there is a smallest sieve containing it, namely the collection of all composites of the $f_i$ with arbitrary morphisms:
 
 $$\langle f_i\rangle=\{f: V \rightarrow U\mid f=f_i\circ g\text{ for some }i\in I\text{ and }g: V \rightarrow U_i\}.$$
 
-We call this the sieve generated by $\{f_i\}$. We now define the pullback operation that pulls a sieve back to another object.
+We call it the sieve generated by $\{f_i\}$. We now define the pullback operation that pulls a sieve back to another object.
 
 ::: Definition 2
 Given a morphism $g: V \rightarrow U$ and a sieve $\mathcal{S}$ on $U$, the *pullback sieve* $g^\ast \mathcal{S}$ on $V$ is defined by
@@ -50,80 +51,80 @@ Given a morphism $g: V \rightarrow U$ and a sieve $\mathcal{S}$ on $U$, the *pul
 $$g^\ast \mathcal{S}=\{h: W \rightarrow V\mid g\circ h\in \mathcal{S}\}.$$
 :::
 
-From the subfunctor viewpoint discussed above, the pullback sieve $g^\ast \mathcal{S}$ corresponds to the preimage of the subfunctor $\mathcal{S}\subseteq h_U$ along the natural transformation $h_g: h_V \rightarrow h_U$, and it follows immediately from the definition that $g^\ast \mathcal{S}$ is again a sieve on $V$.
+From the subfunctor viewpoint discussed above, the pullback sieve $g^\ast \mathcal{S}$ is the preimage of the subfunctor $\mathcal{S}\subseteq h_U$ along the natural transformation $h_g: h_V \rightarrow h_U$, and that $g^\ast \mathcal{S}$ is again a sieve on $V$ follows immediately from the definition.
 
-Using these, we can now define the following.
+With these in hand, we can make the following definition.
 
 ::: Definition 3
-A *Grothendieck topology* $\tau$ on a category $\mathcal{C}$ is an assignment to each object $U\in \mathcal{C}$ of a collection $\tau(U)$ of sieves on $U$, whose elements are called *covering sieves*, satisfying the following three conditions.
+A *Grothendieck topology* $\tau$ on a category $\mathcal{C}$ is an assignment to each object $U\in \mathcal{C}$ of a collection $\tau(U)$ of sieves on $U$, whose elements are called *covering sieves*, subject to the following three conditions.
 
 1. (Maximality) For every $U$, the maximal sieve $t_U$ belongs to $\tau(U)$.
 2. (Stability) If $\mathcal{S}\in \tau(U)$ and $g: V \rightarrow U$ is any morphism, then $g^\ast \mathcal{S}\in \tau(V)$.
 3. (Transitivity) If $\mathcal{S}\in \tau(U)$ and $\mathcal{R}$ is a sieve on $U$ such that $f^\ast \mathcal{R}\in \tau(V)$ for every $(f: V \rightarrow U)\in \mathcal{S}$, then $\mathcal{R}\in \tau(U)$.
 :::
 
-The three conditions are a precise abstraction of the properties that open covers of a topological space satisfy. Maximality says that $U$ trivially covers itself; stability corresponds to the fact that when $\{U_i\}$ covers $U$ in a topological space, $\{U_i\cap V\}$ covers $V$. Transitivity, as its name suggests, says that a covering of a covering is again a covering.
+These three conditions are a precise abstraction of the properties that open covers of a topological space satisfy. Maximality says that $U$ covers itself trivially; stability corresponds to the fact that when $\{U_i\}$ covers $U$ in a topological space, $\{U_i\cap V\}$ covers $V$. Transitivity, as its name suggests, says that a covering of a covering is again a covering.
 
 ## Covering families and pretopologies
 
-The notions of sieve and Grothendieck topology discussed above are very general and apply to any category, but in the examples from algebraic geometry the pullback sieve in the second condition is realized by a better object, namely the fiber product. In a category where fiber products exist in this way, one can define the following without the language of sieves.
+The notions of sieve and Grothendieck topology discussed above are completely general and apply to any category, but in the examples from algebraic geometry the pullback sieve in the second condition is realized by a better-behaved object, namely the fiber product. In a category with fiber products, we can make the following definition without the language of sieves.
 
 ::: Definition 4
-A *Grothendieck pretopology* on a category $\mathcal{C}$ with fiber products is an assignment to each object $U$ of a collection of *covering families* $\{f_i: U_i \rightarrow U\}_{i\in I}$ of morphisms with target $U$, satisfying the following three conditions.
+A *Grothendieck pretopology* on a category $\mathcal{C}$ with fiber products is an assignment to each object $U$ of a collection of *covering families* $\{f_i: U_i \rightarrow U\}_{i\in I}$ of morphisms with target $U$, subject to the following three conditions.
 
-1. (Isomorphism) If $f: V \rightarrow U$ is an isomorphism, then the singleton $\{f: V \rightarrow U\}$ is a covering family.
+1. (Isomorphism) If $f: V \rightarrow U$ is an isomorphism, then the one-element family $\{f: V \rightarrow U\}$ is a covering family.
 2. (Base change) If $\{f_i: U_i \rightarrow U\}$ is a covering family and $g: V \rightarrow U$ is any morphism, then the family $\{\pr_2: U_i\times_U V \rightarrow V\}$ obtained by base change is also a covering family.
 3. (Transitivity) If $\{f_i: U_i \rightarrow U\}$ is a covering family and, for each $i$, $\{g_{ij}: U_{ij} \rightarrow U_i\}_{j\in J_i}$ is a covering family, then the family $\{f_i\circ g_{ij}: U_{ij} \rightarrow U\}_{i, j}$ obtained by composition is also a covering family.
 :::
 
-In a category where fiber products exist, such manageable covering families carry enough information to fully recover a Grothendieck topology without having to deal with entire huge sieves. Indeed, given a pretopology, one can always obtain a unique Grothendieck topology by declaring as covering sieves those sieves that contain a sieve generated by a covering family; the following proposition guarantees this.
+In a category with fiber products, such manageable covering families carry enough information to recover a Grothendieck topology completely, without having to handle entire unwieldy sieves. Indeed, given a pretopology, one always obtains a unique Grothendieck topology by declaring as covering sieves those sieves that contain a sieve generated by a covering family; the following proposition guarantees this.
 
 ::: Proposition 5
-Suppose a Grothendieck pretopology $\Cov$ on $\mathcal{C}$ is given. For each $U$, define a sieve $\mathcal{S}$ on $U$ to belong to $\tau(U)$ if "there exists a covering family $\{f_i: U_i \rightarrow U\}\in \Cov(U)$ such that $\langle f_i\rangle\subseteq \mathcal{S}$". Then $\tau$ is a Grothendieck topology on $\mathcal{C}$.
+Suppose a Grothendieck pretopology $\Cov$ on $\mathcal{C}$ is given. For each $U$, declare that a sieve $\mathcal{S}$ on $U$ belongs to $\tau(U)$ if there exists a covering family $\{f_i: U_i \rightarrow U\}\in \Cov(U)$ such that $\langle f_i\rangle\subseteq \mathcal{S}$. Then $\tau$ is a Grothendieck topology on $\mathcal{C}$.
 :::
 ::: Proof
 We verify the three conditions of [Definition 3](#def3) in turn.
 
-1. For maximality, since $\id_U: U \rightarrow U$ is an isomorphism, $\{\id_U\}$ is a covering family by the first condition of [Definition 4](#def4), and the sieve it generates is the maximal sieve $t_U$ itself. Hence $t_U\in \tau(U)$.
-2. For stability, if $\mathcal{S}\in \tau(U)$, there exists a covering family $\{f_i: U_i \rightarrow U\}$ with $\langle f_i\rangle\subseteq \mathcal{S}$. For any $g: V \rightarrow U$, the base change condition makes $\{\pr_2: U_i\times_U V \rightarrow V\}$ a covering family, and it suffices to show that the sieve it generates is contained in $g^\ast \mathcal{S}$. For any $h: W \rightarrow V$ factoring through $\pr_2: U_i\times_U V \rightarrow V$, the composite $g\circ h$ factors through $f_i$ via $g\circ \pr_2=f_i\circ \pr_1$, so $g\circ h\in \langle f_i\rangle\subseteq \mathcal{S}$, that is, $h\in g^\ast \mathcal{S}$. Hence $g^\ast \mathcal{S}\in \tau(V)$.
-3. Finally, to show transitivity, suppose $\mathcal{S}\in \tau(U)$ and a sieve $\mathcal{R}$ on $U$ satisfies $f^\ast \mathcal{R}\in \tau(V)$ for every $(f: V \rightarrow U)\in \mathcal{S}$. Choose a covering family $\{f_i: U_i \rightarrow U\}$ with $\langle f_i\rangle\subseteq \mathcal{S}$. Since each $f_i\in \mathcal{S}$, we have $f_i^\ast \mathcal{R}\in \tau(U_i)$, so there is a covering family $\{g_{ij}: U_{ij} \rightarrow U_i\}$ with $\langle g_{ij}\rangle\subseteq f_i^\ast \mathcal{R}$. Saying $g_{ij}\in f_i^\ast \mathcal{R}$ means $f_i\circ g_{ij}\in \mathcal{R}$, so every element of the covering family $\{f_i\circ g_{ij}: U_{ij} \rightarrow U\}$ obtained from the transitivity condition belongs to $\mathcal{R}$. Since the sieve it generates is contained in $\mathcal{R}$, we have $\mathcal{R}\in \tau(U)$.
+1. For maximality: since $\id_U: U \rightarrow U$ is an isomorphism, $\{\id_U\}$ is a covering family by the first condition of [Definition 4](#def4), and the sieve it generates is the maximal sieve $t_U$ itself. Hence $t_U\in \tau(U)$.
+2. For stability, if $\mathcal{S}\in \tau(U)$ there is a covering family $\{f_i: U_i \rightarrow U\}$ with $\langle f_i\rangle\subseteq \mathcal{S}$. Given any $g: V \rightarrow U$, the base change condition makes $\{\pr_2: U_i\times_U V \rightarrow V\}$ a covering family, and it suffices to show that the sieve it generates is contained in $g^\ast \mathcal{S}$. If $h: W \rightarrow V$ factors through $\pr_2: U_i\times_U V \rightarrow V$, then $g\circ h$ factors through $f_i$ via $g\circ \pr_2=f_i\circ \pr_1$, so $g\circ h\in \langle f_i\rangle\subseteq \mathcal{S}$, that is, $h\in g^\ast \mathcal{S}$. Hence $g^\ast \mathcal{S}\in \tau(V)$.
+3. Finally, for transitivity, suppose $\mathcal{S}\in \tau(U)$ and that a sieve $\mathcal{R}$ on $U$ satisfies $f^\ast \mathcal{R}\in \tau(V)$ for every $(f: V \rightarrow U)\in \mathcal{S}$. Choose a covering family $\{f_i: U_i \rightarrow U\}$ with $\langle f_i\rangle\subseteq \mathcal{S}$; since each $f_i\in \mathcal{S}$, we have $f_i^\ast \mathcal{R}\in \tau(U_i)$, so there is a covering family $\{g_{ij}: U_{ij} \rightarrow U_i\}$ with $\langle g_{ij}\rangle\subseteq f_i^\ast \mathcal{R}$. That $g_{ij}\in f_i^\ast \mathcal{R}$ means $f_i\circ g_{ij}\in \mathcal{R}$, so every element of the covering family $\{f_i\circ g_{ij}: U_{ij} \rightarrow U\}$ provided by the transitivity condition belongs to $\mathcal{R}$. The sieve it generates is then contained in $\mathcal{R}$, so $\mathcal{R}\in \tau(U)$.
 :::
 
-In other words, given a covering family, one can form a covering sieve *containing* it, and through this one can move freely between the two notions. One thing to keep in mind is that, of course, two different Grothendieck pretopologies can generate the same Grothendieck topology; for instance, coverings of an affine scheme by all principal opens and all finite affine open covers give the same Zariski topology.
+In other words, given a covering family we can form a covering sieve *containing* it, and in this way we can move freely between the two notions. One thing to keep in mind is that, unsurprisingly, two different Grothendieck pretopologies can generate the same Grothendieck topology; for instance, the coverings of an affine scheme by all principal opens and by all finite affine open covers give the same Zariski topology.
 
 ::: Definition 6
 A pair $(\mathcal{C}, \tau)$ of a category $\mathcal{C}$ and a Grothendieck topology $\tau$ on it is called a *site*.
 :::
 
-If a category $\mathcal{C}$ has fiber products and is equipped with a Grothendieck pretopology, this information defines a Grothendieck topology on $\mathcal{C}$ in a unique way, so in such cases we also call this data a site. As always, to state this rigorously one must impose appropriate set-theoretic size conditions, such as requiring $\mathcal{C}$ to be a small category so that the products and limits comprising the values of sheaves exist; in this post we do not address such issues and assume that the necessary products and limits exist.
+If a category $\mathcal{C}$ has fiber products and is equipped with a Grothendieck pretopology, this data determines a Grothendieck topology on $\mathcal{C}$ in a unique way, so in this case too we call such data a site. As always, making this fully rigorous requires appropriate set-theoretic size hypotheses (such as requiring $\mathcal{C}$ to be a small category so that the products and limits appearing in the values of sheaves exist), but in this post we do not concern ourselves with such issues and simply assume that the necessary products and limits exist.
 
 ## Examples of sites
 
-The notion of a site did not appear out of nowhere; it is a concept encompassing objects we already know. The most fundamental example is the site formed by the open sets of a topological space.
+The notion of a site did not appear out of thin air; it encompasses objects we already know. The most basic example is the site formed by the open sets of a topological space.
 
 ::: Example 7 (Topological spaces)
-Consider a topological space $X$ and the category $\Open(X)$ of open sets of $X$; one can easily check that in this category the intersection satisfies the universal property of the fiber product. Thus, if we define a covering family over each open set $U$ to be an ordinary open cover of $U$, that is, a family of inclusions $\{U_i\hookrightarrow U\}$ of open sets satisfying $\bigcup U_i=U$, this forms a pretopology. Examining how the three conditions of [Definition 4](#def4) translate in this example makes the meaning of each condition easier to understand: the first condition says that $U$ itself covers $U$; the base change condition means that if $\{U_i\}$ is a covering of $U$ and $V$ is an open subset of $U$, then $\{U_i\cap V\}$ is a covering of $V$. Finally, transitivity means, as explained earlier, that a covering of a covering is again a covering.
+Given a topological space $X$ and the category $\Open(X)$ of open sets of $X$, one easily checks that in this category the intersection satisfies the universal property of the fiber product. Thus, declaring the covering families of each open set $U$ to be the ordinary open covers of $U$ (that is, families of inclusions $\{U_i\hookrightarrow U\}$ of open sets satisfying $\bigcup U_i=U$) defines a pretopology. The meaning of each condition becomes clearer if we look at how the three conditions of [Definition 4](#def4) translate in this example: the first says that $U$ covers itself; the base change condition says that if $\{U_i\}$ covers $U$ and $V$ is an open subset of $U$, then $\{U_i\cap V\}$ covers $V$; and finally, transitivity, as explained above, says that a covering of a covering is again a covering.
 :::
 
-Still, the examples of interest to us are the following topologies on schemes. For convenience of discussion, let us call a family $\{f_i: U_i \rightarrow U\}$ of morphisms with a common codomain *jointly surjective* if it satisfies $\bigcup f_i(U_i)=U$.
+Still, the examples of interest to us are the following topologies on schemes. For convenience, let us call a family $\{f_i: U_i \rightarrow U\}$ of morphisms with common codomain *jointly surjective* if it satisfies $\bigcup f_i(U_i)=U$.
 
 ::: Example 8 (Algebraic geometry)
-We have already dealt with various coverings defined on schemes while treating descent. In this example we examine the sites they define. Fix a scheme $X$.
+While treating descent, we already encountered various coverings defined on schemes. In this example we examine the sites they define. Fix a scheme $X$.
 
-1. First, the *small Zariski site* $X_\Zar$ defined over a scheme $X$ is the site whose objects are the open subschemes of $X$, whose morphisms are open embeddings, and whose covering families are ordinary open covers. Since the topology of $X$ itself is given by the Zariski topology anyway, this is essentially a special case of [Example 7](#ex7). To recast this in more formal language for the following examples, $X_\Zar$ is the category whose objects are open embeddings with target $X$, and for any object $U\rightarrow X$, the covering families of $U$ are families $\{U_i\rightarrow U\}$ of $X$-morphisms that are jointly surjective open embeddings. Meanwhile, we can also define the *big Zariski site* $(\Sch_{/X})_{\Zar}$. This is obtained from $X_\Zar$ by replacing only the objects with *arbitrary* $U\rightarrow X$; the covering families of a fixed $U$ are still families $\{U_i\rightarrow U\}$ of $X$-morphisms that are jointly surjective open embeddings.
-2. Similarly, we define the *small étale site* $X_\et$. That is, $X_\et$ is the category whose objects are étale morphisms with target $X$, and the covering families of each $U$ are families $\{U_i\rightarrow U\}$ of $X$-morphisms that are jointly surjective and étale. The *big étale site* is defined similarly: it is obtained from the definition of the small étale site by replacing only the objects. Instead of étale morphisms with target $X$, one takes arbitrary morphisms with target $X$ (that is, arbitrary $X$-schemes).
-3. One can similarly define the fppf site and the fpqc site, but one thing to be careful about is that small sites do not work as expected in these cases. This is essentially because even if $U, V$ are both flat over $X$, $U\rightarrow W$ need not be flat, so fiber products like $U\times_WV$ may fail to be flat over $X$, and the language does not come out cleanly. Fortunately, the objects of interest to us are the big sites, where such worries need not arise anyway, so no problem occurs. Thus, for fixed $X$, the (big) *fppf site* $(\Sch_{/X})_\fppf$ of $X$ is the site whose objects are $X$-schemes and whose covering families of each $U$ are families $\{U_i\rightarrow U\}$ of $X$-morphisms that are jointly surjective and fppf.
-4. For the (big) *fpqc site* $(\Sch_{/X})_\fpqc$ of $X$, it is likewise the case that one only considers the big fpqc site, but care is needed when writing the condition on covering families. This is because, unlike fppf morphisms, for fpqc coverings, as we saw in [\[Schemes\] §Faithfully Flat Descent, ⁋Definition 9](/en/math/scheme_theory/faithfully_flat_descent#def9), the quasi-compactness condition is imposed not on each morphism but on the family itself. That is, $(\Sch_{/X})_\fpqc$ is the site whose objects are morphisms $U\rightarrow X$ and whose covering families of $U$ are given by the fpqc coverings of [\[Schemes\] §Faithfully Flat Descent, ⁋Definition 9](/en/math/scheme_theory/faithfully_flat_descent#def9).
+1. First, the *small Zariski site* $X_\Zar$ of a scheme $X$ is the site whose objects are the open subschemes of $X$, whose morphisms are open embeddings, and whose covering families are the usual open covers. Since the topology of $X$ itself is the Zariski topology anyway, this is essentially a special case of [Example 7](#ex7). To recast this in more formal language for the examples to come, $X_\Zar$ is the category whose objects are open embeddings with target $X$, and for each object $U\rightarrow X$, the covering families of $U$ are the families $\{U_i\rightarrow U\}$ of $X$-morphisms that are jointly surjective open embeddings. We can also define the *big Zariski site* $(\Sch_{/X})_{\Zar}$: it is obtained from $X_\Zar$ by enlarging only the objects, to *arbitrary* $U\rightarrow X$, while the covering families of a fixed $U$ are still the families $\{U_i\rightarrow U\}$ of $X$-morphisms that are jointly surjective open embeddings.
+2. Similarly, we define the *small étale site* $X_\et$: its objects are the étale morphisms with target $X$, and the covering families of each $U$ are the families $\{U_i\rightarrow U\}$ of $X$-morphisms that are jointly surjective and étale. The *big étale site* is defined analogously: it is obtained from the definition of the small étale site by replacing only the objects. Instead of étale morphisms with target $X$, one takes arbitrary morphisms with target $X$ (that is, arbitrary $X$-schemes).
+3. One can similarly define the fppf site and the fpqc site, but one caveat is that the small versions do not work as one might expect. This is essentially because even when $U, V$ are both flat over $X$, a morphism $U\rightarrow W$ need not be flat, so fiber products such as $U\times_WV$ may fail to be flat over $X$ and the language does not come out cleanly. Fortunately, the objects of interest to us are the big sites, where this concern does not arise in the first place, so no problem occurs. Thus, for fixed $X$, the (big) *fppf site* $(\Sch_{/X})_\fppf$ of $X$ is the site whose objects are $X$-schemes and whose covering families of each $U$ are the families $\{U_i\rightarrow U\}$ of $X$-morphisms that are jointly surjective and fppf.
+4. For the (big) *fpqc site* $(\Sch_{/X})_\fpqc$ of $X$, we likewise consider only the big version, but some care is needed in stating the condition on covering families. The reason is that, unlike for fppf morphisms, for fpqc coverings, as we saw in [\[Schemes\] §Faithfully Flat Descent, ⁋Definition 9](/en/math/scheme_theory/faithfully_flat_descent#def9), the quasi-compactness condition is imposed not on the individual morphisms but on the family itself. That is, $(\Sch_{/X})_\fpqc$ is the site whose objects are the morphisms $U\rightarrow X$ and whose covering families of $U$ are given by the fpqc coverings of [\[Schemes\] §Faithfully Flat Descent, ⁋Definition 9](/en/math/scheme_theory/faithfully_flat_descent#def9).
 :::
 
 We now treat the notions of presheaf and sheaf defined over such sites.
 
 ## Presheaves and sheaves on a site
 
-A site is essentially a category with additional topological information. And we already know that a presheaf can be defined over any category. Therefore, the only thing we need to newly define is the part that captures the sheaf condition using the Grothendieck topology.
+A site is essentially a category equipped with additional topological information. We already know that a presheaf can be defined on any category, so the only new definition we need is the one that captures the sheaf condition using the Grothendieck topology.
 
 ::: Definition 9
-A *presheaf* on a site $(\mathcal{C}, \tau)$ is a contravariant functor $F:\mathcal{C}^\op \rightarrow \Set$, and a morphism of presheaves is a natural transformation. We write $\PSh(\mathcal{C})$ for the functor category they form. Given a covering sieve $\mathcal{S}\in \tau(U)$ on $U$, a *matching family* of $F$ over $\mathcal{S}$ is a family $(x_f)_{f\in \mathcal{S}}$ assigning to each $(f: V \rightarrow U)\in \mathcal{S}$ an element $x_f\in F(V)$, such that for every $g: W \rightarrow V$,
+A *presheaf* on a site $(\mathcal{C}, \tau)$ is a contravariant functor $F:\mathcal{C}^\op \rightarrow \Set$, and a morphism of presheaves is a natural transformation. We write $\PSh(\mathcal{C})$ for the functor category they form. Given a covering sieve $\mathcal{S}\in \tau(U)$ on $U$, a *matching family* of $F$ over $\mathcal{S}$ is a family $(x_f)_{f\in \mathcal{S}}$ consisting of an element $x_f\in F(V)$ for each $(f: V \rightarrow U)\in \mathcal{S}$, such that for every $g: W \rightarrow V$,
 
 $$F(g)(x_f)=x_{f\circ g}.$$
 
@@ -135,7 +136,7 @@ An element $x\in F(U)$ is an *amalgamation* of this matching family if $F(f)(x)=
 We write $\Sh(\mathcal{C}; \tau)$ for the full subcategory of $\PSh(\mathcal{C})$ formed by the sheaves.
 :::
 
-In other words, a matching family is local data given over a covering sieve, and an amalgamation is the global data obtained by gluing it. From this viewpoint it is intuitively clear that the two conditions above correspond exactly to the two sheaf conditions. As we saw earlier, in a category with fiber products this information is essentially given over covering families, and in that case the sheaf condition can be spelled out as follows.
+In other words, a matching family is local data given over a covering sieve, and an amalgamation is the global data obtained by gluing it. From this point of view it is intuitively clear that the two conditions above correspond exactly to the two sheaf axioms. As we saw earlier, in a category with fiber products this information is essentially given over covering families, in which case the sheaf condition can be spelled out as follows.
 
 ::: Proposition 10
 Suppose the Grothendieck topology $\tau$ comes from a pretopology $\Cov$. ([Proposition 5](#prop5)) A presheaf $F:\mathcal{C}^\op \rightarrow \Set$ is a sheaf if and only if, for every covering family $\{f_i: U_i \rightarrow U\}\in \Cov(U)$, the following diagram
@@ -147,31 +148,31 @@ is an equalizer. Here $e(x)=(F(f_i)(x))_i$, and the two morphisms $p, q$ are the
 ::: Proof
 It suffices to show that matching families over the generating covering sieve $S=\langle f_i\rangle$ are in one-to-one correspondence with the data of the equalizer above.
 
-Given a matching family $(x_f)_{f\in S}$ over $S$, we obtain in particular a family $(s_i)\in \prod_i F(U_i)$ of elements $s_i=x_{f_i}\in F(U_i)$ for each $f_i\in S$. The composites $f_i\circ \pr_1=f_j\circ \pr_2$ of the two projections $\pr_1: U_i\times_U U_j \rightarrow U_i$ and $\pr_2: U_i\times_U U_j \rightarrow U_j$ with $f_i$ and $f_j$ respectively are the same morphism and belong to $S$, so applying the matching condition to $g=\pr_1$ and $g=\pr_2$ respectively gives
+Given a matching family $(x_f)_{f\in S}$ over $S$, we obtain in particular the family $(s_i)\in \prod_i F(U_i)$ with $s_i=x_{f_i}\in F(U_i)$ for each $f_i\in S$. Composing the two projections $\pr_1: U_i\times_U U_j \rightarrow U_i$ and $\pr_2: U_i\times_U U_j \rightarrow U_j$ with $f_i$ and $f_j$ respectively yields one and the same morphism $f_i\circ \pr_1=f_j\circ \pr_2$, which belongs to $S$, so applying the matching condition with $g=\pr_1$ and $g=\pr_2$ gives
 
 $$F(\pr_1)(s_i)=x_{f_i\circ \pr_1}=x_{f_j\circ \pr_2}=F(\pr_2)(s_j),$$
 
-hence $p((s_i))=q((s_i))$, that is, $(s_i)$ belongs to the equalizer of $p, q$.
+hence $p((s_i))=q((s_i))$, that is, $(s_i)$ lies in the equalizer of $p, q$.
 
-Conversely, suppose $(s_i)\in \prod_i F(U_i)$ with $p((s_i))=q((s_i))$ is given, and let us define a matching family over $S$. If $f\in S$, then $f=f_i\circ g$ for some $i$ and $g: V \rightarrow U_i$, so we can set $x_f=F(g)(s_i)$. First, to show this is well-defined, when there are two expressions $f=f_i\circ g=f_j\circ g'$, this assignment must give the same value. This holds because, bundling the two morphisms into $(g, g'): V \rightarrow U_i\times_U U_j$ and pulling back the $(i, j)$-component of $p((s_i))=q((s_i))$ along $F(g, g')$, we get $F(g)(s_i)=F(g')(s_j)$. That this assignment satisfies the matching family condition, and that these two constructions are inverse to each other, can be seen directly from the definitions.
+Conversely, suppose $(s_i)\in \prod_i F(U_i)$ with $p((s_i))=q((s_i))$ is given; we define a matching family over $S$. If $f\in S$, then $f=f_i\circ g$ for some $i$ and $g: V \rightarrow U_i$, so we may set $x_f=F(g)(s_i)$. To see this is well-defined, we must check that two expressions $f=f_i\circ g=f_j\circ g'$ give the same value. This holds because, bundling the two morphisms into $(g, g'): V \rightarrow U_i\times_U U_j$ and pulling back the $(i, j)$-component of $p((s_i))=q((s_i))$ along $F(g, g')$, we get $F(g)(s_i)=F(g')(s_j)$. That this assignment satisfies the matching family condition, and that the two constructions are mutually inverse, can be checked directly from the definitions.
 
-Therefore, the existence and uniqueness of an amalgamation $x\in F(U)$ is exactly the statement that $e$ is a bijection onto the equalizer. The sheaf condition is the existence and uniqueness of amalgamations, so it is equivalent to $e$ being a bijection onto the equalizer, that is, to the diagram above being an equalizer; the separated condition is uniqueness alone, so it is equivalent to $e$ being injective.
+Therefore, the existence and uniqueness of an amalgamation $x\in F(U)$ amounts exactly to $e$ being a bijection onto the equalizer. The sheaf condition is the existence and uniqueness of amalgamations, so it is equivalent to $e$ being a bijection onto the equalizer, that is, to the diagram above being an equalizer; the separated condition is uniqueness alone, so it is equivalent to $e$ being injective.
 
-Finally, a covering sieve $\mathcal{S}'$ in $\tau(U)$ only needs to contain a generating covering sieve $\langle f_i\rangle$, not to equal it, so we must check that the element $x$ obtained by restricting a matching family over $\mathcal{S}'$ to $\langle f_i\rangle$ is an amalgamation for all of $\mathcal{S}'$. For any $(f: V \rightarrow U)\in \mathcal{S}'$, take the base-changed covering family $\{\pr_2: U_i\times_U V \rightarrow V\}$; since $f\circ \pr_2=f_i\circ \pr_1\in \langle f_i\rangle$, we have $F(\pr_2)(F(f)(x))=x_{f\circ \pr_2}=F(\pr_2)(x_f)$, and the injectivity of $e$ for this covering family yields $F(f)(x)=x_f$.
+Finally, a covering sieve $\mathcal{S}'$ in $\tau(U)$ need only contain a generating covering sieve $\langle f_i\rangle$, not equal it, so we must check that the element $x$ obtained by restricting a matching family over $\mathcal{S}'$ to $\langle f_i\rangle$ is an amalgamation for all of $\mathcal{S}'$. For any $(f: V \rightarrow U)\in \mathcal{S}'$, take the base-changed covering family $\{\pr_2: U_i\times_U V \rightarrow V\}$; since $f\circ \pr_2=f_i\circ \pr_1\in \langle f_i\rangle$, we have $F(\pr_2)(F(f)(x))=x_{f\circ \pr_2}=F(\pr_2)(x_f)$, and the injectivity of $e$ for this covering family yields $F(f)(x)=x_f$.
 :::
 
-In other words, a sheaf on a site defined in this way is formally identical to [\[Topology\] §Sheaves, ⁋Definition 1](/en/math/topology/sheaves#def1), except that overlaps are generalized to fiber products $U_i\times_U U_j$. For topological spaces, all morphisms in a covering are monomorphisms so $U_i\times_U U_i=U_i$, but in étale or fpqc coverings $U_i\times_U U_i$ can be larger than $U_i$, which enables descent over non-injective coverings.
+Thus a sheaf on a site, defined in this way, is formally identical to [\[Topology\] §Sheaves, ⁋Definition 1](/en/math/topology/sheaves#def1), except that overlaps are generalized to fiber products $U_i\times_U U_j$. For topological spaces, every morphism in a covering is a monomorphism, so $U_i\times_U U_i=U_i$; but for étale or fpqc coverings, $U_i\times_U U_i$ can be larger than $U_i$, which is what makes descent over non-injective coverings possible.
 
 ## Sheafification and the plus construction
 
-Over topological spaces, we characterized sheafification as the left adjoint of the forgetful functor and constructed its existence directly as the sheaf of compatible germs. ([\[Topology\] §Sheaves, ⁋Definition 5](/en/math/topology/sheaves#def5)) A general site has no points or stalks as a topological space does, so the construction using germs cannot be used in general; instead one uses the plus construction, which takes a colimit over all coverings.
+Over topological spaces, we characterized sheafification as the left adjoint of the forgetful functor and constructed it directly as the sheaf of compatible germs. ([\[Topology\] §Sheaves, ⁋Definition 5](/en/math/topology/sheaves#def5)) A general site has no points or stalks the way a topological space does, so the construction using germs is unavailable in general; instead one uses the plus construction, which takes a colimit over all coverings.
 
 ::: Definition 11
 Suppose a presheaf $F:\mathcal{C}^\op \rightarrow \Set$ and an object $U$ are given. Equip the collection $\operatorname{Cov}_\tau(U)$ of covering sieves on $U$ with the ordering
 
 $$\mathcal{S}\preceq\mathcal{S}'\quad\Longleftrightarrow\quad\mathcal{S}'\subseteq\mathcal{S}.$$
 
-Then, since the intersection of two covering sieves gives a common refinement, $\operatorname{Cov}_\tau(U)$ is a filtered preorder. An inclusion $\mathcal{S}'\subseteq\mathcal{S}$ gives a restriction of matching families
+Then, since the intersection of two covering sieves gives a common refinement, $\operatorname{Cov}_\tau(U)$ is a filtered preorder. An inclusion $\mathcal{S}'\subseteq\mathcal{S}$ induces a restriction of matching families
 
 $$\operatorname{Match}(\mathcal{S},F)\longrightarrow\operatorname{Match}(\mathcal{S}',F),$$
 
@@ -179,14 +180,14 @@ and the colimit of this filtered diagram
 
 $$F^+(U)=\varinjlim_{\mathcal{S}\in\operatorname{Cov}_\tau(U)}\operatorname{Match}(\mathcal{S},F)$$
 
-is called the *plus construction* of $F$. Pulling back covering sieves and matching families along a morphism $V\rightarrow U$ gives a restriction $F^+(U)\rightarrow F^+(V)$, so $U\mapsto F^+(U)$ forms a presheaf. Also, since a matching family over the maximal sieve is the same as an element of $F(U)$, there is a natural morphism $F\rightarrow F^+$.
+is called the *plus construction* of $F$. Pulling covering sieves and matching families back along a morphism $V\rightarrow U$ yields a restriction $F^+(U)\rightarrow F^+(V)$, so $U\mapsto F^+(U)$ forms a presheaf. Moreover, since a matching family over the maximal sieve is nothing but an element of $F(U)$, there is a natural morphism $F\rightarrow F^+$.
 :::
 
-Intuitively, an element of $F^+(U)$ is local data given compatibly over some covering, with data identified whenever they become equal after passing to a finer covering. The meaning of the colimit is that two matching families are regarded as the same element if they agree over a common refinement, and this corrects the failure of uniqueness of amalgamations. In the language of pretopologies, $F^+(U)$ is the filtered colimit over coverings $\{U_i \rightarrow U\}$ of the 0th Čech cohomology
+Intuitively, an element of $F^+(U)$ is local data given compatibly over some covering, with two such data identified whenever they become equal after passing to a common refinement (this is precisely the meaning of the colimit), and in this way the failure of uniqueness of amalgamations is corrected. In the language of pretopologies, $F^+(U)$ is the filtered colimit, over coverings $\{U_i \rightarrow U\}$, of the 0th Čech cohomology
 
 $$\check{H}^0(\{U_i \rightarrow U\}, F)=\operatorname{eq}\Big(\prod_i F(U_i)\rightrightarrows \prod_{i, j}F(U_i\times_U U_j)\Big).$$
 
-The following theorem is the key property of this construction.
+The following theorem records the key properties of this construction.
 
 ::: Theorem 12
 For any presheaf $F$, the following hold.
@@ -200,19 +201,19 @@ $$\Hom_{\Sh}(F^{++}, G)\cong \Hom_{\PSh}(F, G).$$
 Moreover, $a$ preserves finite limits.
 :::
 
-The proof of this theorem is somewhat technical, so we accept it as a standard property of the plus construction. The essential point is that, thanks to [Theorem 12](#thm12), the sheafification adjunction treated in [\[Topology\] §Sheaves, ⁋Definition 5](/en/math/topology/sheaves#def5) can be extended to arbitrary sites. The fact that the left adjoint $a$ preserves finite limits is especially important, as it implies that the sheaf category has the same kind of good structure as the category of sheaves on a topological space.
+The proof of this theorem is somewhat technical, so we take it as a standard property of the plus construction. The essential point is that, thanks to [Theorem 12](#thm12), the sheafification adjunction treated in [\[Topology\] §Sheaves, ⁋Definition 5](/en/math/topology/sheaves#def5) extends to arbitrary sites. The fact that the left adjoint $a$ preserves finite limits is especially important: it implies that the category of sheaves enjoys the same kind of good structure as the category of sheaves on a topological space.
 
-The category of sheaves $\Sh(\mathcal{C}; \tau)$ on a site $(\mathcal{C}, \tau)$ is called a *Grothendieck topos*. However, topos theory is a vast subject in its own right, so we will treat only as much of it as is needed in the context of stacks later.
+The category of sheaves $\Sh(\mathcal{C}; \tau)$ on a site $(\mathcal{C}, \tau)$ is called a *Grothendieck topos*. Topos theory, however, is a vast subject in its own right, so we will develop only as much of it as is needed in the context of stacks later.
 
 ## Subcanonical topologies and representable presheaves
 
-In the post [\[Schemes\] §Functors of Points](/en/math/scheme_theory/functor_of_points), we decided to regard a (representable) functor $\Sch^\op\rightarrow \Set$ itself as a scheme. When we extend this to sheaves defined on a site, we first check whether the representable functor of each scheme is a sheaf on that site.
+In the post [\[Schemes\] §Functor of Points](/en/math/scheme_theory/functor_of_points), we decided to regard a (representable) functor $\Sch^\op\rightarrow \Set$ itself as a scheme. As we extend this viewpoint to sheaves defined on a site, we first check whether the representable functor of each scheme is a sheaf on that site.
 
 ::: Definition 13
-A site $(\mathcal{C}, \tau)$ is *subcanonical* if, for every object $X\in \mathcal{C}$, the representable presheaf $h_X=\Hom_\mathcal{C}(-, X)$ is a $\tau$-sheaf. Among subcanonical topologies there exists a finest one, called the *canonical topology*. That is, a topology is subcanonical if and only if it is coarser than or equal to the canonical topology.
+A site $(\mathcal{C}, \tau)$ is *subcanonical* if, for every object $X\in \mathcal{C}$, the representable presheaf $h_X=\Hom_\mathcal{C}(-, X)$ is a $\tau$-sheaf. Among the subcanonical topologies there exists a finest one, called the *canonical topology*. In other words, a topology is subcanonical if and only if it is coarser than or equal to the canonical topology.
 :::
 
-The subcanonical condition is stated concretely through [Proposition 10](#prop10). That $h_X$ is a sheaf means that for each covering family $\{U_i \rightarrow U\}$, a morphism from $U$ to $X$ glues uniquely from morphisms given compatibly over the covering; that is,
+The subcanonical condition is stated concretely through [Proposition 10](#prop10): that $h_X$ is a sheaf means that, for each covering family $\{U_i \rightarrow U\}$, a morphism from $U$ to $X$ glues uniquely from morphisms given compatibly over the covering; that is,
 
 $$\Hom(U, X) \rightarrow \prod_i \Hom(U_i, X)\rightrightarrows \prod_{i, j}\Hom(U_i\times_U U_j, X)$$
 
@@ -222,17 +223,17 @@ is an equalizer. This is nothing other than the descent condition for morphisms.
 The fpqc topology on $\Sch$ (or $\Sch_{/S}$) is subcanonical. That is, for any scheme $X$, the functor of points $h_X=\Hom_{\Sch}(-, X)$ is an fpqc sheaf. Consequently, every representable presheaf is also a sheaf in the Zariski, étale, and fppf topologies.
 :::
 
-The functor of points $h_X:\Sch^\op \rightarrow \Set$ of a scheme $X$ is a representable presheaf, and that $h_X$ is a sheaf on the big Zariski site can be verified directly by gluing morphisms over an open covering. The core of [Theorem 14](#thm14) is that the same $h_X$ satisfies the sheaf condition even for the more general fpqc coverings, so that morphisms given compatibly descend uniquely. The outline of the proof is as follows. An fpqc covering can be refined, over affine opens, to a single faithfully flat affine covering $\Spec B\rightarrow\Spec A$. If the target $X=\Spec R$ is also affine, the Amitsur equalizer $A\rightarrow B\rightrightarrows B\otimes_A B$ of [\[Schemes\] §Faithfully Flat Descent, ⁋Lemma 3](/en/math/scheme_theory/faithfully_flat_descent#lem3) descends a morphism $\Spec B\rightarrow X$ to a unique morphism $\Spec A\rightarrow X$. For general $X$, one uses the fact that the faithfully flat affine morphism above is universally submersive to descend the underlying continuous map, and then glues the local morphisms obtained by applying the same argument over the affine opens of $X$.
+The functor of points $h_X:\Sch^\op \rightarrow \Set$ of a scheme $X$ is a representable presheaf, and one can check directly, by gluing morphisms over an open covering, that $h_X$ is a sheaf on the big Zariski site. The point of [Theorem 14](#thm14) is that the same $h_X$ satisfies the sheaf condition even for the more general fpqc coverings, so that morphisms given compatibly descend uniquely. The proof proceeds as follows. An fpqc covering can be refined, over affine opens, to a single faithfully flat affine covering $\Spec B\rightarrow\Spec A$. If the target $X=\Spec R$ is also affine, the Amitsur equalizer $A\rightarrow B\rightrightarrows B\otimes_A B$ of [\[Schemes\] §Faithfully Flat Descent, ⁋Lemma 3](/en/math/scheme_theory/faithfully_flat_descent#lem3) descends a morphism $\Spec B\rightarrow X$ to a unique morphism $\Spec A\rightarrow X$. For a general $X$, one uses the fact that the above faithfully flat affine morphism is universally submersive to descend the underlying continuous map, and then glues the local morphisms obtained by applying the same argument over the affine opens of $X$.
 
-Since we have reduced the problem to the affine case above, let us concretely verify the computation for $\mathbb{G}_a=\Spec \mathbb{Z}[\x]=\mathbb{A}^1$. In [\[Schemes\] §Functors of Points, ⁋Proposition 1](/en/math/scheme_theory/functor_of_points#prop1) we already saw that the corresponding functor of points associates to each scheme $T$ the additive group of global sections
+Having reduced the problem to the affine case, let us verify the computation concretely for $\mathbb{G}_a=\Spec \mathbb{Z}[\x]=\mathbb{A}^1$. In [\[Schemes\] §Functor of Points, ⁋Proposition 1](/en/math/scheme_theory/functor_of_points#prop1) we already saw that the corresponding functor of points assigns to each scheme $T$ the additive group of global sections
 
 $$\mathbb{G}_a(T)=\Hom_{\Sch}(T, \mathbb{A}^1)=\Gamma(T, \mathcal{O}_T).$$
 
-Therefore, the sheaf condition for a single fpqc covering $\{\Spec B \rightarrow \Spec A\}$ is that
+The sheaf condition for a single fpqc covering $\{\Spec B \rightarrow \Spec A\}$ therefore says that
 
 $$A \rightarrow B \rightrightarrows B\otimes_A B$$
 
-is an equalizer. The two morphisms are $b\mapsto b\otimes 1$ and $b\mapsto 1\otimes b$, and by the Amitsur equalizer above, $A=\{b\in B\mid b\otimes 1=1\otimes b\}$. In other words, an element of $\mathbb{G}_a(\Spec A)=A$ is uniquely recovered from elements given compatibly over the covering.
+is an equalizer. The two morphisms are $b\mapsto b\otimes 1$ and $b\mapsto 1\otimes b$, and by the Amitsur equalizer above, $A=\{b\in B\mid b\otimes 1=1\otimes b\}$. In other words, an element of $\mathbb{G}_a(\Spec A)=A$ is recovered uniquely from elements given compatibly over the covering.
 
 ---
 
