@@ -16,7 +16,7 @@ weight: 8
 
 ---
 
-관련 커밋: [링크 1](https://github.com/math-jh/math-jh.github.io/commit/52533f6a305698a54de1f74971d733e5e7d59b72), [링크 2](https://github.com/math-jh/math-jh.github.io/commit/78122756009023af2a8016215e1926b198801f08)
+관련 커밋: [링크 1](https://github.com/math-jh/math-jh.github.io/commit/ed8aa13223f65950f96f0e5bba5ca971ff3f5c46), [링크 2](https://github.com/math-jh/math-jh.github.io/commit/74937eaf29169a3e9b001b53bfb4012e970aa4a3)
 {: .notice--info}
 
 Minimal-mistakes 테마의 가장 큰 장점 중 하나는 기본 테마가 깔끔해서 이리저리 수정하기 좋은 것이라 생각한다. 이 글에서는 내 블로그에서 적용된 여러 변경점들을 정리해두었다. 

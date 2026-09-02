@@ -16,7 +16,7 @@ weight: 10
 
 ---
 
-관련 커밋: [링크](https://github.com/math-jh/math-jh.github.io/commit/dcf3036a834a9bb235604c7ea2ca8b8754cd06d3)
+관련 커밋: [링크](https://github.com/math-jh/math-jh.github.io/commit/e286ba142b1f432cd621b890b2b7310365ec8f4b)
 {: .notice--info}
 
 ## 다크모드 설정하기

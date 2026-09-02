@@ -16,7 +16,7 @@ weight: 9
 
 ---
 
-관련 커밋: [링크](https://github.com/math-jh/math-jh.github.io/commit/73b6bfc9acf569e8befbf2768d0fa11a0b370389)
+관련 커밋: [링크](https://github.com/math-jh/math-jh.github.io/commit/f20e96f5d2be6ec8336748c017d51a09ce3c5a19)
 {: .notice--info}
 
 ## 목표

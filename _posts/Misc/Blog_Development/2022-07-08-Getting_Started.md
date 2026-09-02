@@ -16,7 +16,7 @@ weight: 2
 
 ---
 
-관련 커밋: [링크](https://github.com/math-jh/math-jh.github.io/commit/cc692e26c9c2b9319f7924dc8749fe5072a482c3)
+관련 커밋: [링크](https://github.com/math-jh/math-jh.github.io/commit/02cc809dcd592a1d7c5b3735e92d6fed3b29722f)
 {: .notice--info}
 
 Github pages를 사용하기 위해서는 당연히 Github에 회원가입을 해야 한다. [Github 홈페이지](https://github.com)에 들어가서 미리 회원가입을 해 두자.

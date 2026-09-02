@@ -18,7 +18,7 @@ weight: 13
 
 ---
 
-관련 파일: `scripts/audit/gen_descriptions.py` (배치 완료 후 일회성 스크립트라 [정리 commit](https://github.com/math-jh/math-jh.github.io/commit/00e77210)에서 삭제됨)
+관련 파일: `scripts/audit/gen_descriptions.py` (배치 완료 후 일회성 스크립트라 [정리 commit](https://github.com/math-jh/math-jh.github.io/commit/330f453b)에서 삭제됨)
 {: .notice--info}
 
 [Sitemap 없이 색인하기](/ko/llm_workshop/gsc_indexing)에서 GSC URL Inspection의 결과를 적었다 — 안 보이는 KO `/math/` 글 200여 개의 verdict는 모두 `"Google에는 아직 알려지지 않은 URL"`이었고, 그건 description 부재 같은 메타 문제가 아니라 그냥 Google이 페이지 자체를 아직 색인하지 않은 상태였다. description은 1차 원인이 아니었다.
@@ -61,6 +61,6 @@ batch가 절반쯤 돌았을 때 두 가지 문제가 같이 나왔다.
 
 269개의 KO 글이 frontmatter에 `description:` 한 줄을 갖게 되었다. 영어판은 translate_worker가 그 description을 영어로 옮기는데, translate_worker의 cron이 일시 정지된 상태라 cron이 재개되면 처리된다.
 
-`gen_descriptions.py`는 [정리 commit](https://github.com/math-jh/math-jh.github.io/commit/00e77210)에서 삭제했다. 한 번 돌리고 끝나는 스크립트는 저장소에 남길 필요가 없고, 같은 일을 다시 해야 한다면 다음에 새로 짜는 편이 낫다.
+`gen_descriptions.py`는 [정리 commit](https://github.com/math-jh/math-jh.github.io/commit/330f453b)에서 삭제했다. 한 번 돌리고 끝나는 스크립트는 저장소에 남길 필요가 없고, 같은 일을 다시 해야 한다면 다음에 새로 짜는 편이 낫다.
 
 GSC 검색 결과에서 description이 눈에 띌 만한 변화를 만드는지는 며칠 더 두고 봐야 한다. URL Inspection이 가르쳐준 1차 원인 — *Google이 아직 페이지를 모른다* — 은 그대로이고, description은 그 다음의 작은 보정이다. 다만 1차 문제가 풀리기만 기다릴 수는 없으니 할 수 있는 작업을 먼저 처리했다. 토큰이 휘발하기 전에 쓴 것뿐이라는 점은 굳이 부정하지 않겠다.

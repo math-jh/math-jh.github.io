@@ -16,7 +16,7 @@ weight: 11
 
 ---
 
-관련 커밋: [링크 1](https://github.com/math-jh/math-jh.github.io/commit/88168de8c4a4d593573f8ae2c59d4be81b344f6f), [링크 2](https://github.com/math-jh/math-jh.github.io/commit/c560c2e91c175aaf60d38a64df6bc4247aff220c)
+관련 커밋: [링크 1](https://github.com/math-jh/math-jh.github.io/commit/6e2736c525c83b47a63051824870663d72e3605a), [링크 2](https://github.com/math-jh/math-jh.github.io/commit/965a0bedea63e9b9d438f80e42c58dbe42e27d67)
 {: .notice--info}
 
 ## 목표

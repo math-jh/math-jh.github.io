@@ -16,7 +16,7 @@ weight: 15
 
 ---
 
-관련 커밋: [링크 1](https://github.com/math-jh/math-jh.github.io/commit/7505f72a3ccd275e75f186a3b690b89f66fbc880), [링크 2](https://github.com/math-jh/math-jh.github.io/commit/55e27f8edfb221fe7eb5b4f56487850a91af3f1f)
+관련 커밋: [링크](https://github.com/math-jh/math-jh.github.io/commit/63dddecbffccd8b1160e982b4e87b6ac3a0a1ab7)
 {: .notice--info}
 
 이 카테고리에는 엄청 오랜만에 글을 쓴다. 블로그에 추가할 기능이 없는 것은 아니지만 내가 글을 쓰면서 놀기에는 충분할 정도로 기능을 갖추었다 생각해서 그 동안에는 수학 관련 글만 쓰고 있었다. 이렇게 미루고 미루다 더는 미룰 수 없게 되어 새로운 기능을 추가하게 되었다.
@@ -113,7 +113,7 @@ sidebar:
 
 ## 해결방법 \#1
 
-실은 이번 섹션의 내용은 굳이 설명할 필요가 없지만, 깜빡하고 [링크 1](https://github.com/math-jh/math-jh.github.io/commit/7505f72a3ccd275e75f186a3b690b89f66fbc880) 커밋에 있는 `_pages/category-archive.md` 파일 뒤쪽에 실험용으로 사용했던 부분을 남겨뒀었다. 내친김에 이 부분에 대한 설명도 적었다. 
+실은 이번 섹션의 내용은 굳이 설명할 필요가 없지만, 깜빡하고 [링크](https://github.com/math-jh/math-jh.github.io/commit/63dddecbffccd8b1160e982b4e87b6ac3a0a1ab7) 커밋에 있는 `_pages/category-archive.md` 파일 뒤쪽에 실험용으로 사용했던 부분을 남겨뒀었다. 내친김에 이 부분에 대한 설명도 적었다. 
 
 가장 간단한 방법은 `for` 문을 배제하고 위의 반복문 안에 있는 내용을 손으로 적는 것이다. 가령 `Math / Set Theory` 카테고리에 해당하는 부분은 
 {% raw %}

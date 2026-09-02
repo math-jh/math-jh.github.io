@@ -16,7 +16,7 @@ weight: 3
 
 ---
 
-관련 커밋: [링크](https://github.com/math-jh/math-jh.github.io/commit/ae1ab5d1f563af8cc8e9104f836b97724f9ad9a9)
+관련 커밋: [링크](https://github.com/math-jh/math-jh.github.io/commit/e4d7dfed4e05bba95ec1fb8e554cd9db7bb0bd79)
 {: .notice--info}
 
 이제부터 모든 글은 내가 사용하는 테마인 Minimal-mistakes를 기준으로 작성한다. 

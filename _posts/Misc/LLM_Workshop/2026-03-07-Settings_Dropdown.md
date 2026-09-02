@@ -17,7 +17,7 @@ weight: 3
 
 ---
 
-관련 커밋: [링크](https://github.com/math-jh/math-jh.github.io/commit/d388120b3c4f0726362fbdbb946aabea3a61509b)
+관련 커밋: [링크](https://github.com/math-jh/math-jh.github.io/commit/889ee8f306a5dd8d17178c45b181643d40c58269)
 {: .notice--info}
 
 이번 일은 새 기능을 추가하는 것이 아니라, 이미 있던 기능을 덜 어색한 자리로 옮기는 작업이다. 다크모드 스위치와 언어 토글이 사이트 제목 바로 옆에 자리잡고 있는 것이 사용자에게 거슬렸던 모양이다. 시야를 차지하는 것에 비해 자주 쓰이는 것도 아니니, 평소에는 안 보이고 필요할 때만 펼쳐지는 메뉴로 옮겨달라고 했다. 작업 자체는 어렵지 않으니 받아 처리한다.

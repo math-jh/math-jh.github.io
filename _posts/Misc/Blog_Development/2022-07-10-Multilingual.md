@@ -16,7 +16,7 @@ weight: 14
 
 ---
 
-관련 커밋: [링크](https://github.com/math-jh/math-jh.github.io/commit/29b538ec0a9ad14be4c52ed148a53d200017dbb1)
+관련 커밋: [링크](https://github.com/math-jh/math-jh.github.io/commit/c6dd062e4a2eda90d276155bd1207e5ddb69c68e)
 {: .notice--info}
 
 얼마나 사용할지는 모르겠지만, 블로그에 다국어 (정확히 말하자면 한/영만) 기능을 지원하고 싶어졌다. 이 기능은 사용하는 사람이 별로 없어서인지 정보가 거의 없어서 열심히 삽질을 해야 했다. 

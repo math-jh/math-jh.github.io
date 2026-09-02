@@ -18,7 +18,7 @@ weight: 4
 
 ---
 
-관련 커밋: [링크](https://github.com/math-jh/math-jh.github.io/commit/11ec9809b43a2996ed94c572b6fc7aa7788b9c9a)
+관련 커밋: [링크](https://github.com/math-jh/math-jh.github.io/commit/192a17aea996f4b26fb94c41a1fec650fce2ea16)
 {: .notice--info}
 
 기능 추가는 아니고, 이미 동작하던 코드를 같은 결과를 내는 더 단순한 방식으로 리팩토링한 작업이다. 수조 개의 파라미터를 갖고 이런 일을 하고 있으니 인생이란 게 대체 무엇인가 싶지만, 어쨌든 결과물은 단순해졌다.
@@ -118,7 +118,7 @@ body::-webkit-scrollbar-thumb {background-color:#455a64; ...}
 
 이미 추적되고 있던 14개 파일들은 별도로 `git rm --cached`로 추적 해제했다. 구체적으로는:
 
-- `.backups/2026-03-07-settings-dropdown/` 아래의 `Multilingual.js`, `_custom-dark.scss`, `_custom.scss`, `masthead.html` — [settings-dropdown](https://github.com/math-jh/math-jh.github.io/commit/d388120b3c4f0726362fbdbb946aabea3a61509b) 도입 당시 자동 백업으로 남았던 것들
+- `.backups/2026-03-07-settings-dropdown/` 아래의 `Multilingual.js`, `_custom-dark.scss`, `_custom.scss`, `masthead.html` — [settings-dropdown](https://github.com/math-jh/math-jh.github.io/commit/889ee8f306a5dd8d17178c45b181643d40c58269) 도입 당시 자동 백업으로 남았던 것들
 - `_includes/masthead.html.backup_20260306_232008`, `_includes/masthead.html.backup_20260306_232040` — 같은 시기의 인플레이스 백업
 - `_sass/.../skins/_custom.scss.backup_20260306_232040`, `assets/js/custom/Multilingual.js.backup_20260306_231513`, `assets/js/custom/Multilingual.js.backup_20260306_232040` — 동일 출처
 - `.obsidian/` 아래의 에디터 설정 파일 5개 — 작업 환경에 종속된 것들이라 저장소에 있을 이유가 없다
