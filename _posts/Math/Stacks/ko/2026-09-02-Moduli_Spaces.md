@@ -37,7 +37,15 @@ $$\underline{M}:\Sch^\op \rightarrow \Set,\qquad \underline{M}(T)=\obj \mathcal{
 
 Moduli functor의 본질적인 내용은 $T$-family가 어떤 기하학적 대상을 담는지에 있다. 예를 들어 genus $g$ 곡선을 분류할 때에는 $T$-family를 모든 geometric fiber가 genus $g$ curve가 되는 smooth projective morphism $X \rightarrow T$으로 잡는 것이 맞을 것이고, 고정된 variety $X$ 위의 vector bundle을 분류할 때에는 $X\times T$ 위의 rank $r$ vector bundle로 잡는 것이 맞을 것이다. 어느 경우든 공통적으로 pullback은 morphism $f: T' \rightarrow T$에 대한 fiber product로 주어지며, pseudofunctor의 compatibility condition은 이 fiber product의 universal property, 즉 canonical isomorphism의 데이터로부터 나온다. 이 때문에 $\mathcal{M}$은 functor가 아니라 pseudofunctor가 되며, 위에서 살펴봤듯 $\mathcal{M}(T)$가 $T$-family를 담으므로 이를 다룰 때는 보편적으로 CFG의 언어를 사용한다. ([§스택, ⁋정리 8](/ko/math/stacks/fibered_categories_and_stacks#thm8))
 
-위의 두 구조를 하나로 합치는 것은 *universal family*의 개념이다. 각각의 fiber groupoid $\mathcal{M}(T)$는 개념적으로 $\mathcal{M}$의 $T$-point에 대응되는 것으로, 이 위에 정의되는 대상들은 $\id_\mathcal{M}:\mathcal{M}\rightarrow \mathcal{M}$을 $f:T\rightarrow \mathcal{M}$으로 pullback해와서 얻어지는 것이다. 즉, moduli functor $\mathcal{M}$에 대하여, 이것이 정의하는 <em-ko>모든</em-ko> family들은 하나의 단일한 universal family $\id_\mathcal{M}:\mathcal{M}\rightarrow \mathcal{M}$에 이미 그 정보가 들어있는 것이며, 이는 [\[대수적 위상수학\] §분류공간, ⁋정리 8](/ko/math/algebraic_topology/classifying_spaces#thm8)의 직접적인 일반화이다. 
+위의 두 구조를 하나로 합치는 것은 *universal family*의 개념이다. Contravariant functor $F:\Sch^\op \rightarrow \Set$과 scheme $M$에 대하여, $\Hom_\Sch(-, M)$에서 $F$로 가는 natural transformation 전체와 집합 $F(M)$ 사이의 일대일대응은 명시적으로
+
+$$\alpha\mapsto \alpha_M(\id_M)$$
+
+을 통해 주어지던 것을 기억하자. ([\[범주론\] §표현가능한 함자, ⁋정리 4](/ko/math/category_theory/representable_functors#thm4)) 즉 natural transformation $\alpha$가 어떠한 것인지는 항등사상에서의 값 $\alpha_M(\id_M)$ 하나로 완전히 결정되며, $\alpha$가 natural isomorphism이면 이렇게 얻어지는 원소를 *universal element*라 불렀다다. ([\[범주론\] §표현가능한 함자, ⁋정의 5](/ko/math/category_theory/representable_functors#def5))
+
+이 진술을 groupoid-valued 상황으로 옮기면, 집합 사이의 일대일대응 대신 groupoid 사이의 동치를 얻는다. 각 scheme $T$를 slice category가 주는 CFG로 보면 ([§스택, ⁋예시 9](/ko/math/stacks/fibered_categories_and_stacks#ex9)) $T$에서 $\mathcal{M}$으로 가는 morphism들과 그 사이의 2-morphism들이 이루는 groupoid는 fiber groupoid $\mathcal{M}(T)$과 동치이며, 이 동치는 $f:T\rightarrow\mathcal{M}$을 $f(\id_T)$에 보낸다. 따라서 $f$의 전체 자료는 $T$-family $X=f(\id_T)$에 의해 isomorphism까지 결정되고, 두 morphism 사이의 2-morphism도 $\id_T$에서의 성분, 곧 두 $T$-family 사이의 isomorphism에 의해 결정된다. 거꾸로 $X\in\mathcal{M}(T)$는 각 $u:T'\rightarrow T$에 $u^\ast X$를 대응시키는 morphism $f_X:T\rightarrow\mathcal{M}$을 정한다.
+
+이제 $\id_\mathcal{M}:\mathcal{M}\rightarrow\mathcal{M}$을 $\mathcal{M}$ 위의 universal family로 읽을 수 있다. $T$-family $X$에 대응하는 $f_X:T\rightarrow\mathcal{M}$을 따라 이를 pullback하는 것은 $\id_\mathcal{M}\circ f_X=f_X$를 취하는 것이고, 위의 동치 아래에서 이는 다시 $X$가 된다. 즉 moduli functor $\mathcal{M}$이 정의하는 <em-ko>모든</em-ko> family는 단 하나의 universal family $\id_\mathcal{M}$을 끌어당겨 얻어지며, 이는 [\[대수적 위상수학\] §분류공간, ⁋정리 8](/ko/math/algebraic_topology/classifying_spaces#thm8)의 직접적인 일반화이다.
 
 ## Fine moduli space와 universal family
 
@@ -55,11 +63,11 @@ $$\mathcal{U}\in \underline{M}(M)$$
 을 *universal family<sub>보편족</sub>*라 부른다.
 :::
 
-이 정의는 representable functor의 universal element를 그대로 옮긴 것이다. ([\[범주론\] §표현가능한 함자, ⁋정의 5](/ko/math/category_theory/representable_functors#def5)) Universal family $\mathcal{U}$이 갖는 보편성은 다음과 같이 풀린다. 임의의 scheme $T$와 $T$-family $X\in \underline{M}(T)$에 대하여, natural isomorphism의 한 성분 $\underline{M}(T)\cong \Hom_\Sch(T, M)$이 $X$에 유일한 morphism $f_X: T \rightarrow M$을 대응시키며, Yoneda의 naturality에 의하여 이 $f_X$은 정확히
+이 정의는 앞 절의 항등사상 대응을 set-valued moduli functor $\underline{M}$에 적용한 것으로, $\mathcal{U}$은 $\underline{M}$의 universal element이다. 앞 절에서 tautological하게 주어졌던 universal family가 여기에서는 scheme $M$ 위에 실제로 놓인 family로 실현된다. 그 보편성은 다음과 같이 풀린다. 임의의 scheme $T$와 $T$-family $X\in \underline{M}(T)$에 대하여, natural isomorphism의 한 성분 $\underline{M}(T)\cong \Hom_\Sch(T, M)$이 $X$에 유일한 morphism $f_X: T \rightarrow M$을 대응시키며, Yoneda의 naturality에 의하여 이 $f_X$은 정확히
 
 $$X\cong f_X^\ast \mathcal{U}$$
 
-을 만족하는 유일한 morphism이다. 곧 $M$ 위의 모든 family는 universal family를 끌어당겨 단 한 가지 방식으로 얻어지며, $f_X$을 $X$의 *classifying morphism*이라 부른다. Representability는 또한 $\Sch^\op$ 위의 functor로서 $\underline{M}$의 category of elements가 initial object $(M, \mathcal{U})$을 가진다는 것과 동치이고 ([\[범주론\] §표현가능한 함자, ⁋명제 8](/ko/math/category_theory/representable_functors#prop8)), 따라서 fine moduli space는 존재할 경우 유일한 isomorphism을 통해 유일하게 결정된다.
+을 만족하는 유일한 morphism이다. 곧 임의의 scheme 위의 모든 family가 universal family를 끌어당겨 단 한 가지 방식으로 얻어지며, $f_X$을 $X$의 *classifying morphism*이라 부른다. Representability는 또한 $\Sch^\op$ 위의 functor로서 $\underline{M}$의 category of elements가 initial object $(M, \mathcal{U})$을 가진다는 것과 동치이고 ([\[범주론\] §표현가능한 함자, ⁋명제 8](/ko/math/category_theory/representable_functors#prop8)), 따라서 fine moduli space는 존재할 경우 유일한 isomorphism을 통해 유일하게 결정된다.
 
 Fine moduli가 실제로 존재하는 비자명한 예는 분류 대상에 충분한 강성 자료, 곧 rigidify하는 추가 구조를 얹은 경우에서 나온다. Projective space와 Grassmannian이 대표적이다.
 
@@ -120,7 +128,7 @@ Section을 가진 타원곡선 $(E, 0)$은 항상 비자명한 automorphism $[-1
 Moduli functor $\mathcal{M}:\Sch^\op \rightarrow \Grpd$이, 대응하는 fibered category로서 site $(\Sch, \mathrm{fppf})$ 위의 stack이고 ([§스택, ⁋정의 12](/ko/math/stacks/fibered_categories_and_stacks#def12)) 나아가 algebraic stack일 때 ([§대수적 스택, ⁋정의 6](/ko/math/stacks/algebraic_stacks#def6)), 이를 *moduli stack<sub>모듈라이 스택</sub>*이라 부른다. 이 stack이 Deligne–Mumford stack인 것은 diagonal $\Delta:\mathcal{M} \rightarrow \mathcal{M}\times\mathcal{M}$이 unramified한 것, 곧 모든 geometric point의 stabilizer가 unramified한 것과 동치이며, 이 조건이 성립하지 않으면 Deligne–Mumford가 아닌 Artin stack이다.
 :::
 
-Moduli stack 위에는 언제나 universal family가 존재한다. Set-valued functor에서는 universal family가 항등사상의 image로 정의되었듯이 ([정의 2](#def2)), stack에서는 항등 morphism $\id_\mathcal{M}:\mathcal{M} \rightarrow \mathcal{M}$ 자체가 $\mathcal{M}$ 위의 universal family를 주며, automorphism을 fiber groupoid가 그대로 기억하므로 명제 5의 모순이 일어나지 않는다. 비자명한 isotrivial family $X \rightarrow T$은 stack의 점들의 morphism으로 정확히 구별되고, classifying morphism $T \rightarrow \mathcal{M}$이 더 이상 상수가 아니라 그 twist를 식별하는 비자명한 자료가 된다. 이것이 stack이 "moduli 문제의 올바른 대상"인 까닭이다.
+Moduli stack 위에는 언제나 universal family가 존재한다. 앞서 tautological하게 주어졌던 항등 morphism $\id_\mathcal{M}:\mathcal{M} \rightarrow \mathcal{M}$이 이제 algebraic stack 위에 놓인 universal family가 되며, automorphism을 fiber groupoid가 그대로 기억하므로 명제 5의 모순이 일어나지 않는다. 비자명한 isotrivial family $X \rightarrow T$은 stack의 점들의 morphism으로 정확히 구별되고, classifying morphism $T \rightarrow \mathcal{M}$이 더 이상 상수가 아니라 그 twist를 식별하는 비자명한 자료가 된다. 이것이 stack이 "moduli 문제의 올바른 대상"인 까닭이다.
 
 두 번째 보정은 stack을 포기하고 algebraic space의 세계에 머무르되, isomorphism class만을 담는 가장 좋은 근사를 찾는 것이다. Algebraic space는 그 자체로 $(\Sch, \et)$ 위의 sheaf이므로 ([§대수적 스택, ⁋정의 3](/ko/math/stacks/algebraic_stacks#def3)) $\underline{M}$과 같은 세계에 놓이며, scheme은 그 특수한 경우이다.
 
