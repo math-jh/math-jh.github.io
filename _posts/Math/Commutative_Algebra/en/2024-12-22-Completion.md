@@ -10,22 +10,23 @@ sidebar:
 
 date: 2024-12-22
 weight: 14
-translated_at: 2026-09-01T21:18:08+00:00
+translated_at: 2026-09-02T03:15:05+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-09-02T03:15:05+00:00
 ---
 ## Definition of Completion
 
-Given an arbitrary abelian group $G$ and a decreasing sequence of its subgroups
+Given an arbitrary abelian group $G$ and a decreasing sequence of subgroups
 
 $$\mathcal{J}:\qquad G=H_0\supseteq H_1\supseteq\cdots$$
 
 the maps $G/ H_{i+1} \rightarrow G/H_{i}$ are well-defined, and more generally, composing these appropriately defines $\rho_{ji}:G/H_j \rightarrow G/H_i$ whenever $j>i$. From these data we obtain the inverse limit
 
-$$\widehat{G}_\mathcal{J}=\varprojlim_i G/H_i=\left\{(g_1,g_2,\ldots)\in \prod G/H_i\,\middle\vert\,\text{$\rho_{ji}(g_j)=g_i$ for all $j>i$}\right\}$$
+$$\widehat{G}_\mathcal{J}=\varprojlim_i G/H_i=\left\{(g_1,g_2,\ldots)\in \prod G/H_i\middle\vert\text{$\rho_{ji}(g_j)=g_i$ for all $j>i$}\right\}$$
 
-together with canonical morphisms $\rho_i:\widehat{G}_{\mathcal{J}} \rightarrow G/ H_i$, which satisfy $\rho_{ji}\circ\rho_j=\rho_i$ for all $j>i$. For convenience of notation, when $\mathcal{J}$ is clear from context we simply write $\widehat{G}$.
+together with canonical morphisms $\rho_i:\widehat{G}_{\mathcal{J}} \rightarrow G/ H_i$, which satisfy $\rho_{ji}\circ\rho_j=\rho_i$ for all $j>i$. For notational convenience, when $\mathcal{J}$ is clear from context we simply write $\widehat{G}$.
 
-These can be regarded as a categorical limit, as we saw in [\[Category Theory\] §Limits, ⁋Example 5](/en/math/category_theory/limits#ex5), and therefore they also satisfy the following universal property.
+These data can be regarded as a categorical limit, as we saw in [\[Category Theory\] §Limits, ⁋Example 5](/en/math/category_theory/limits#ex5), and therefore they also satisfy the following universal property.
 
 > Whenever maps $K \rightarrow G/H_i$ satisfying $\rho_{ji}\circ\pi_j=\pi_i$ are given, there exists a unique $\pi:K \rightarrow \widehat{G}$ making the following diagram
 > 
@@ -71,7 +72,7 @@ is an $\mathfrak{a}$-filtration, and moreover from the above isomorphism
 
 $$\widehat{A}=\varprojlim_i A/\mathfrak{a}_i\cong\varprojlim_i \widehat{A}/\widehat{\mathfrak{a}}_i$$
 
-so $\widehat{A}$ is complete with respect to the given filtration. The above isomorphism also yields the following isomorphism
+so $\widehat{A}$ is complete with respect to the given filtration. The above isomorphism also yields the isomorphism
 
 $$\gr_\mathcal{J}A\cong\gr_{\widehat{\mathcal{J}}}\widehat{A}$$
 
@@ -79,7 +80,7 @@ as well.
 
 ## The $\mathfrak{a}$-adic Topology
 
-Meanwhile, the process of constructing $\widehat{A}$ from $A$ can also be viewed by endowing it with a special kind of topology. First, let a topological abelian group $G$ be given. Fixing an element $g$ of $G$, the translation map $T_g$ defined using it is continuous, so the neighborhood filter at each point of $G$ is entirely determined by the neighborhood filter at $0\in G$. Of course, this process can be carried out in reverse as well.
+Meanwhile, the process of constructing $\widehat{A}$ from $A$ can also be understood as endowing $A$ with a special kind of topology. First, let a topological abelian group $G$ be given. Fixing an element $g$ of $G$, the translation map $T_g$ defined using it is continuous, so the neighborhood filter at each point of $G$ is entirely determined by the neighborhood filter at $0\in G$. Of course, this process can be carried out in reverse as well.
 
 As in the previous section, suppose we are given a decreasing sequence of subgroups of $G$
 
@@ -107,7 +108,7 @@ $$m,n>N \implies x_m-x_n\in U$$
 is true.
 :::
 
-Then, just as one defines the completion in a general topological group as the collection of equivalence classes of Cauchy filters, given two Cauchy sequences $(x_m)$, $(y_n)$ we can decide when to regard them as the same, and through that define the (topological) completion. However, what we are interested in is the first countable topological group $A$ defined by the filtration (2) above, and since a first countable space is sequential, in the following definition we assume for convenience that $G$ is a first countable space and use Cauchy sequences instead of Cauchy filters.
+Then, just as one defines the completion in a general topological group as the collection of equivalence classes of Cauchy filters, given two Cauchy sequences $(x_m)$, $(y_n)$ we can decide when to regard them as the same and thereby define the (topological) completion. However, what we are interested in is the first countable topological group $A$ defined by the filtration (2) above, and since a first countable space is sequential, in the following definition we assume for convenience that $G$ is a first countable space and use Cauchy sequences instead of Cauchy filters.
 
 ::: Definition 3
 Two Cauchy sequences $(x_m)$, $(y_n)$ of a topological group $(G, +, 0)$ are said to be *equivalent* if, whenever an arbitrary neighborhood $U$ of $0$ is given, there exists a natural number $N$ such that the following statement
@@ -139,7 +140,7 @@ defines an element of $\widehat{A}$. Conversely, given an arbitrary element $(a_
 If $A=\mathbb{K}[\x]$ and $\mathfrak{a}=(\x)$, then $\widehat{A}$ is the ring $\mathbb{K}[[\x]]$ of *formal power series*.
 :::
 
-The ring $\mathbb{K}[[\x]]$ is a local ring with the unique nonzero prime ideal $\mathfrak{m}=(\x)$. That is, any element not belonging to $(\x)$ is a unit, and this essentially comes from the following identity
+The ring $\mathbb{K}[[\x]]$ is a local ring with the unique nonzero prime ideal $\mathfrak{m}=(\x)$. That is, any element not belonging to $(\x)$ is a unit, and this essentially follows from the identity
 
 $$\frac{1}{1+\x}=1-\x+\x^2-\cdots$$ 
 
@@ -174,10 +175,10 @@ Replace $\x$ with $a$ in the argument above.
 For a local ring $(A, \mathfrak{m})$, $A[[\x_1,\ldots, \x_n]]$ is also a local ring, and its unique maximal ideal is $\mathfrak{m}+(\x_1,\ldots, \x_n)$.
 :::
 ::: Proof
-An element outside $\mathfrak{m}+(\x_1,\ldots,\x_n)$ has constant term not belonging to $\mathfrak{m}$, so its constant term is a unit of $A$; hence by [Proposition 5](#prop5) one can show that it is a unit.
+An element outside $\mathfrak{m}+(\x_1,\ldots,\x_n)$ has constant term not belonging to $\mathfrak{m}$, so its constant term is a unit of $A$; hence by [Proposition 5](#prop5) the element itself is a unit.
 :::
 
-Returning again to the situation of [Definition 1](#def1), let us consider the case where $\mathfrak{a}$ is a maximal ideal and $\widehat{A}$ is its $\mathfrak{a}$-adic completion. First, since $\widehat{A}/\widehat{\mathfrak{a}}_1\cong A/\mathfrak{a}$ is a field, $\widehat{\mathfrak{a}}_1$ is a maximal ideal of $\widehat{A}$. Also, for $k>1$, since $\rho_1=\rho_{k1}\circ\rho_k$ and $\widehat{\mathfrak{a}}_1=\ker\rho_1$, we have $\rho_k(\widehat{\mathfrak{a}}_1)\subseteq \ker\rho_{k1}=\mathfrak{a}/\mathfrak{a}^k$, and therefore $\rho_k(\widehat{\mathfrak{a}}_1^k)\subseteq (\mathfrak{a}/\mathfrak{a}^k)^k=0$, that is, $\widehat{\mathfrak{a}}_1^k\subseteq \ker \rho_k=\widehat{\mathfrak{a}}_k$. Then for an arbitrary $a\in \widehat{\mathfrak{a}}_1$, since $(-a)^k\in \widehat{\mathfrak{a}}_k$, the partial sums of the series $\sum_{k=0}^\infty (-a)^k$ form a Cauchy sequence in $\widehat{A}$, and since $\widehat{A}$ is complete with respect to the filtration (1), the argument of [Proposition 5](#prop5) applies verbatim, so $1+a$ is a unit. Now, if $x\in \widehat{A}$ does not belong to $\widehat{\mathfrak{a}}_1$, then since $\widehat{A}/\widehat{\mathfrak{a}}_1$ is a field there exists $y$ with $xy-1\in \widehat{\mathfrak{a}}_1$, and since $xy$ is a unit by the previous result, $x$ is also a unit. That is, every element of $\widehat{A}$ not belonging to $\widehat{\mathfrak{a}}_1$ is a unit, and therefore $\widehat{A}$ is a local ring with $\widehat{\mathfrak{a}}_1$ as its unique maximal ideal.
+Returning once more to the situation of [Definition 1](#def1), let us consider the case where $\mathfrak{a}$ is a maximal ideal and $\widehat{A}$ is its $\mathfrak{a}$-adic completion. First, since $\widehat{A}/\widehat{\mathfrak{a}}_1\cong A/\mathfrak{a}$ is a field, $\widehat{\mathfrak{a}}_1$ is a maximal ideal of $\widehat{A}$. Also, for $k>1$, since $\rho_1=\rho_{k1}\circ\rho_k$ and $\widehat{\mathfrak{a}}_1=\ker\rho_1$, we have $\rho_k(\widehat{\mathfrak{a}}_1)\subseteq \ker\rho_{k1}=\mathfrak{a}/\mathfrak{a}^k$, and therefore $\rho_k(\widehat{\mathfrak{a}}_1^k)\subseteq (\mathfrak{a}/\mathfrak{a}^k)^k=0$, that is, $\widehat{\mathfrak{a}}_1^k\subseteq \ker \rho_k=\widehat{\mathfrak{a}}_k$. Then for an arbitrary $a\in \widehat{\mathfrak{a}}_1$, since $(-a)^k\in \widehat{\mathfrak{a}}_k$, the partial sums of the series $\sum_{k=0}^\infty (-a)^k$ form a Cauchy sequence in $\widehat{A}$, and since $\widehat{A}$ is complete with respect to the filtration (1), the argument of [Proposition 5](#prop5) applies verbatim, so $1+a$ is a unit. Now, if $x\in \widehat{A}$ does not belong to $\widehat{\mathfrak{a}}_1$, then since $\widehat{A}/\widehat{\mathfrak{a}}_1$ is a field there exists $y$ with $xy-1\in \widehat{\mathfrak{a}}_1$, and since $xy$ is a unit by the previous result, $x$ is also a unit. That is, every element of $\widehat{A}$ not belonging to $\widehat{\mathfrak{a}}_1$ is a unit, and therefore $\widehat{A}$ is a local ring with $\widehat{\mathfrak{a}}_1$ as its unique maximal ideal.
 
 Also, the following holds.
 
