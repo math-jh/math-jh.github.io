@@ -10,9 +10,7 @@ sidebar:
 
 date: 2025-01-24
 weight: 20
-revising: true
 
-drift_needed: true
 
 ---
 
@@ -110,15 +108,11 @@ $$S=\nu^{-1}\left(\{g\in G\mid g\geq 0\}\right)\cup\{0\}$$
 특히 만일 $G=\mathbb{Z}$이고 $\nu$가 surjective일 경우에는 이를 *discrete valuation<sub>이산값매김</sub>*이라 부르고, $\nu$의 valuation ring을 *discrete valuation ring<sub>이산값매김환</sub>*이라 부른다. 
 :::
 
-그럼 위에서 정의한 $\nu:\Frac(A)^\times \rightarrow \mathbb{Z}$는 $\nu(m)=1$이므로 surjective이며, 이것이 valuation의 부등식을 만족한다는 것은 다음의 식
+그럼 위에서 정의한 $\nu:\Frac(A)^\times \rightarrow \mathbb{Z}$가 discrete valuation이 된다는 것은 다음의 식
 
 $$am^k+bm^l=(am^{k-\min(k,l)}+bm^{l-\min(k,l)})m^{\min(k,l)}$$
 
-에 의해 자명하다. 또, [명제 5](#prop5)에 의하여 $\nu$의 값이 $0$ 이상인 $\Frac(A)^\times$의 원소들은 정확히 $A$의 $0$이 아닌 원소들이므로, $A$ 자신이 $\nu$의 valuation ring이다.
-
-거꾸로 integral domain $B$ 위의 discrete valuation $\nu:\Frac(B)^\times \rightarrow \mathbb{Z}$와 그 valuation ring $S$가 주어졌다 하자. $\nu(x)<0$인 $x$에 대해서는 $x^{-1}\in S$이므로 $\Frac(S)=\Frac(B)$이다. 이제 $\nu$가 surjective이므로 $\nu(m)=1$인 $m\in S$를 택할 수 있고, $S$의 $0$이 아닌 원소 $x$에 대하여 $k=\nu(x)\geq 0$이라 하면 $xm^{-k}$와 그 inverse가 모두 $\nu$의 값 $0$을 가지므로 $xm^{-k}$는 $S$의 unit이다. 즉 $S$의 $0$이 아닌 원소는 모두 $am^k$ ($a$ a unit of $S$, $k\geq 0$)의 꼴이고, 이로부터 $S$의 ideal은 $0$과 $(m^k)$들뿐임을 안다. 따라서 $S$는 Noetherian local ring이고 그 maximal ideal은 $(m)$이며, prime ideal은 $0$과 $(m)$뿐이므로 $\dim S=1$이다. 즉 discrete valuation ring은 정확히 $1$차원의 regular local ring이고, $m$은 $S$의 regular parameter이다.
-
-또한 $S$는 normal domain이다. 만일 $\Frac(S)$의 원소 $x$가 $S$ 위에서 integral이면서 $k=\nu(x)<0$이라면, $c_i\in S$에 대한 monic 방정식 $x^n+c_{n-1}x^{n-1}+\cdots+c_0=0$에서 $\nu(x^n)=nk$인 반면 $0$이 아닌 나머지 항들은 $\nu(c_ix^i)\geq ik\geq (n-1)k>nk$를 만족하므로, [정의 6](#def6)의 부등식을 $x^n=-(c_{n-1}x^{n-1}+\cdots+c_0)$에 적용하면 $nk>nk$가 되어 모순이다.
+에 의해 자명하다.
 
 그럼 [명제 4](#prop4)에 의하여, 두 complete discrete valuation ring이 각각 field를 포함하고, isomorphic한 residue field를 갖는다면 이들은 서로 isomorphic하다는 것을 안다. 그러나 일반적으로 complete하지 않은 discrete valuation ring들 사이에는 이러한 종류의 classification이 존재하지 않는다.
 
@@ -149,7 +143,7 @@ Noetherian integral domain $A$가 normal domain인 것은 다음 조건과 동�
 ($\ast$) 임의의 prime ideal $\mathfrak{p}$ associated to a principal ideal에 대하여, $\mathfrak{p}A_\mathfrak{p}$는 $A_\mathfrak{p}$의 principal ideal이다. 
 :::
 ::: 증명
-우선 ($\ast$)를 가정하고 $A$가 normal domain임을 보인다. 그런데 공통의 quotient field를 갖는 normal domain들이 주어졌다 하면, 이들의 교집합 또한 normal domain이 되는 것이 자명하다. 이 때 principal ideal에 associated인 각각의 prime ideal $\mathfrak{p}$에 대하여 $A_\mathfrak{p}$가 normal domain인 것은 다음과 같이 ($\ast$)로부터 따라온다. 가정에 의해 $\mathfrak{p}A_\mathfrak{p}$는 principal이므로 [§차원, ⁋정리 7](/ko/math/commutative_algebra/Krull_dimension#thm7)에 의하여 $\dim A_\mathfrak{p}\leq 1$이고, 따라서 $A_\mathfrak{p}$는 field이거나 maximal ideal이 principal인 $1$차원의 regular local ring, 곧 discrete valuation ring이다. 앞 절에서 살펴본 것처럼 discrete valuation ring은 normal domain이며, field 또한 그러하다. 따라서 다음 식
+우선 ($\ast$)를 가정하고 $A$가 normal domain임을 보인다. 그런데 공통의 quotient field를 갖는 normal domain들이 주어졌다 하면, 이들의 교집합 또한 normal domain이 되는 것이 자명하다. 이 때 principal ideal에 associated인 각각의 prime ideal $\mathfrak{p}$에 대하여 $A_\mathfrak{p}$가 normal domain인 것은 다음과 같이 ($\ast$)로부터 따라온다. 가정에 의해 $\mathfrak{p}A_\mathfrak{p}$는 principal이므로 [§차원, ⁋정리 7](/ko/math/commutative_algebra/Krull_dimension#thm7)에 의하여 $\dim A_\mathfrak{p}\leq 1$이고, 따라서 $A_\mathfrak{p}$는 field이거나 maximal ideal이 principal인 $1$차원의 regular local ring, 곧 discrete valuation ring이다. Discrete valuation ring과 field는 normal domain이므로, 다음 식
 
 $$A=\bigcap_\text{\scriptsize$\mathfrak{p}$ associated to a principal ideal}A_\mathfrak{p}$$
 
