@@ -12270,8 +12270,8 @@ M:
   ko: moduli 문제
   primary: ko
   defs:
-  - label: '[스택] §모듈라이 공간'
-    url: /ko/math/stacks/moduli_spaces
+  - label: '[스택] §스택'
+    url: /ko/math/stacks/fibered_categories_and_stacks
 - id: moduli_space
   en: moduli space
   ko: 모듈라이 공간
