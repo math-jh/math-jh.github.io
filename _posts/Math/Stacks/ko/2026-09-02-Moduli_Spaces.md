@@ -37,13 +37,11 @@ $$\underline{M}:\Sch^\op \rightarrow \Set,\qquad \underline{M}(T)=\obj \mathcal{
 
 Moduli functor의 본질적인 내용은 $T$-family가 어떤 기하학적 대상을 담는지에 있다. 예를 들어 genus $g$ 곡선을 분류할 때에는 $T$-family를 모든 geometric fiber가 genus $g$ curve가 되는 smooth projective morphism $X \rightarrow T$으로 잡는 것이 맞을 것이고, 고정된 variety $X$ 위의 vector bundle을 분류할 때에는 $X\times T$ 위의 rank $r$ vector bundle로 잡는 것이 맞을 것이다. 어느 경우든 공통적으로 pullback은 morphism $f: T' \rightarrow T$에 대한 fiber product로 주어지며, pseudofunctor의 compatibility condition은 이 fiber product의 universal property, 즉 canonical isomorphism의 데이터로부터 나온다. 이 때문에 $\mathcal{M}$은 functor가 아니라 pseudofunctor가 되며, 위에서 살펴봤듯 $\mathcal{M}(T)$가 $T$-family를 담으므로 이를 다룰 때는 보편적으로 CFG의 언어를 사용한다. ([§스택, ⁋정리 8](/ko/math/stacks/fibered_categories_and_stacks#thm8))
 
-위의 두 구조를 하나로 합치는 것은 *universal family*의 개념이다. 각각의 fiber groupoid $\mathcal{M}(T)$를 
-
-$\mathcal{M}$을 실현하는 대상 $M$은 그 자신도 test object이므로 fiber groupoid $\mathcal{M}(M)$을 가진다. *Universal family*란 이 groupoid의 대상 $\mathcal{U}\in \mathcal{M}(M)$으로서, 임의의 $T$-family $X\in \mathcal{M}(T)$을 적당한 morphism $f: T \rightarrow M$을 따라 $X\cong f^\ast \mathcal{U}$으로 내놓는 것이다. 곧 흩어져 있던 모든 family가 $M$ 위에 놓인 이 하나를 끌어당겨 나온다.
+위의 두 구조를 하나로 합치는 것은 *universal family*의 개념이다. 각각의 fiber groupoid $\mathcal{M}(T)$는 개념적으로 $\mathcal{M}$의 $T$-point에 대응되는 것으로, 이 위에 정의되는 대상들은 $\id_\mathcal{M}:\mathcal{M}\rightarrow \mathcal{M}$을 $f:T\rightarrow \mathcal{M}$으로 pullback해와서 얻어지는 것이다. 즉, moduli functor $\mathcal{M}$에 대하여, 이것이 정의하는 <em-ko>모든</em-ko> family들은 하나의 단일한 universal family $\id_\mathcal{M}:\mathcal{M}\rightarrow \mathcal{M}$에 이미 그 정보가 들어있는 것이며, 이는 [\[대수적 위상수학\] §분류공간, ⁋정리 8](/ko/math/algebraic_topology/classifying_spaces#thm8)의 직접적인 일반화이다. 
 
 ## Fine moduli space와 universal family
 
-앞에서 살펴보았듯 groupoid-valued functor $\mathcal{M}$은 각 family의 automorphism을 기억하지만, set-valued functor $\underline{M}$은 그렇지 않다. 따라서 분류 대상이 비자명한 automorphism을 가질 때 이 둘은 본질적으로 다르지만, 만일 isomorphism class들이 어떤 scheme $M$의 점들과 일대일대응할 뿐 아니라, $M$ 위에 단 하나의 *universal family*인 pullback으로 유일하게 얻어지는 경우 fine moduli만 봐도 잃어버리는 정보가 없다. 
+우리는 moduli functor를 $\Grpd$로 향하는 것으로 일반화하였지만, 그렇다고 해서 이 functor가 어떤 scheme으로 실현될 가능성이 없는 것은 아니다. 다만 scheme $M$이 $\Sch$ 위에서 갖는 자료는 functor of points $\Hom_\Sch(-, M)$이고 이는 set-valued이므로, 그 실현을 물으려면 먼저 $\mathcal{M}$을 coarse moduli functor $\underline{M}$으로 내려야 한다. 내리는 과정에서 각 family의 automorphism은 버려지고, 남은 $\underline{M}$이 어떤 scheme의 functor of points와 일치하는지가 물음이 된다. 그러한 scheme이 존재하면 앞 절의 universal family가 그 위에 놓인 family로 실현된다. 
 
 ::: 정의 2
 Moduli functor $\mathcal{M}$의 set-valued moduli functor $\underline{M}:\Sch^\op \rightarrow \Set$가 scheme $M$에 의하여 *representable*할 때, 곧 natural isomorphism
