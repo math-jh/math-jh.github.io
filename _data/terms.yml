@@ -2749,15 +2749,15 @@ C:
   ko: 성긴 모듈라이 함자
   primary: en
   defs:
-  - label: '[스택] §Moduli 문제: fine moduli와 coarse moduli'
-    url: /ko/math/stacks/moduli_problems
+  - label: '[스택] §모듈라이 공간'
+    url: /ko/math/stacks/moduli_spaces
 - id: coarse_moduli_space
   en: coarse moduli space
   ko: 성긴 모듈라이 공간
   primary: en
   defs:
-  - label: '[스택] §Moduli 문제: fine moduli와 coarse moduli'
-    url: /ko/math/stacks/moduli_problems
+  - label: '[스택] §모듈라이 공간'
+    url: /ko/math/stacks/moduli_spaces
 - id: coarser
   en: coarser
   ko: 더 엉성한
@@ -6639,8 +6639,8 @@ F:
   ko: 섬세한 모듈라이 공간
   primary: en
   defs:
-  - label: '[스택] §Moduli 문제: fine moduli와 coarse moduli'
-    url: /ko/math/stacks/moduli_problems
+  - label: '[스택] §모듈라이 공간'
+    url: /ko/math/stacks/moduli_spaces
 - id: fine_sheaf
   en: fine sheaf
   ko: 미세층
@@ -9969,10 +9969,10 @@ I:
 - id: isotrivial
   en: isotrivial
   ko: 등질
-  primary: ko
+  primary: en
   defs:
-  - label: '[스택] §Moduli 문제: fine moduli와 coarse moduli'
-    url: /ko/math/stacks/moduli_problems
+  - label: '[스택] §모듈라이 공간'
+    url: /ko/math/stacks/moduli_spaces
 - id: isotropic
   en: isotropic
   ko: 등방적
@@ -12263,29 +12263,29 @@ M:
   ko: 모듈라이 함자
   primary: en
   defs:
-  - label: '[스택] §Moduli 문제: fine moduli와 coarse moduli'
-    url: /ko/math/stacks/moduli_problems
+  - label: '[스택] §모듈라이 공간'
+    url: /ko/math/stacks/moduli_spaces
 - id: moduli_problem
   en: moduli problem
   ko: moduli 문제
   primary: ko
   defs:
-  - label: '[스택] §Moduli 문제: fine moduli와 coarse moduli'
-    url: /ko/math/stacks/moduli_problems
+  - label: '[스택] §모듈라이 공간'
+    url: /ko/math/stacks/moduli_spaces
 - id: moduli_space
   en: moduli space
   ko: 모듈라이 공간
   primary: en
   defs:
-  - label: '[스택] §Moduli 문제: fine moduli와 coarse moduli'
-    url: /ko/math/stacks/moduli_problems
+  - label: '[스택] §모듈라이 공간'
+    url: /ko/math/stacks/moduli_spaces
 - id: moduli_stack
   en: moduli stack
   ko: 모듈라이 스택
   primary: en
   defs:
-  - label: '[스택] §Moduli 문제: fine moduli와 coarse moduli'
-    url: /ko/math/stacks/moduli_problems
+  - label: '[스택] §모듈라이 공간'
+    url: /ko/math/stacks/moduli_spaces
 - id: modulus
   en: modulus
   ko: 절댓값
@@ -19673,8 +19673,8 @@ U:
   ko: 보편족
   primary: en
   defs:
-  - label: '[스택] §Moduli 문제: fine moduli와 coarse moduli'
-    url: /ko/math/stacks/moduli_problems
+  - label: '[스택] §모듈라이 공간'
+    url: /ko/math/stacks/moduli_spaces
 - id: universal_property
   en: universal property
   ko: 보편성질
