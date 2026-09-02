@@ -1,6 +1,6 @@
 ---
 title: "모듈라이 공간"
-description: "Moduli 문제를 functor·stack으로 정식화하고, universal family를 갖는 fine moduli space의 표현가능성과 automorphism으로 인한 장애, 그리고 coarse moduli space와 moduli stack의 역할을 다룬다."
+description: "Moduli 문제를 functor·stack으로 정식화하고, universal family를 갖는 fine moduli space의 representability와 automorphism obstruction, 그리고 coarse moduli space와 moduli stack의 역할을 다룬다."
 excerpt: "Moduli functors, fine vs coarse moduli spaces, and why the moduli stack is the right object"
 
 categories: [Math / Stacks]
@@ -10,8 +10,6 @@ sidebar:
 
 date: 2026-09-02
 weight: 4
-
-published: false
 
 ---
 
@@ -37,7 +35,7 @@ $$\underline{M}:\Sch^\op \rightarrow \Set,\qquad \underline{M}(T)=\obj \mathcal{
 
 Moduli functor의 본질적인 내용은 $T$-family가 어떤 기하학적 대상을 담는지에 있다. 예를 들어 genus $g$ 곡선을 분류할 때에는 $T$-family를 모든 geometric fiber가 genus $g$ curve가 되는 smooth projective morphism $X \rightarrow T$으로 잡는 것이 맞을 것이고, 고정된 variety $X$ 위의 vector bundle을 분류할 때에는 $X\times T$ 위의 rank $r$ vector bundle로 잡는 것이 맞을 것이다. 어느 경우든 공통적으로 pullback은 morphism $f: T' \rightarrow T$에 대한 fiber product로 주어지며, pseudofunctor의 compatibility condition은 이 fiber product의 universal property, 즉 canonical isomorphism의 데이터로부터 나온다. 이 때문에 $\mathcal{M}$은 functor가 아니라 pseudofunctor가 되며, 위에서 살펴봤듯 $\mathcal{M}(T)$가 $T$-family를 담으므로 이를 다룰 때는 보편적으로 CFG의 언어를 사용한다. ([§스택, ⁋정리 8](/ko/math/stacks/fibered_categories_and_stacks#thm8))
 
-위의 두 구조를 하나로 합치는 것은 *universal family*의 개념이다. Contravariant functor $F:\Sch^\op \rightarrow \Set$과 scheme $M$에 대하여, $\Hom_\Sch(-, M)$에서 $F$로 가는 natural transformation 전체와 집합 $F(M)$ 사이의 일대일대응은 명시적으로
+위의 두 구조를 하나로 합치는 것은 *universal family*의 개념이다. Contravariant functor $F:\Sch^\op \rightarrow \Set$과 scheme $M$에 대하여, $\Hom_\Sch(-, M)$에서 $F$로 가는 natural transformation 전체와 집합 $F(M)$ 사이의 bijection은 명시적으로
 
 $$\alpha\mapsto \alpha_M(\id_M)$$
 
@@ -47,7 +45,7 @@ Yoneda lemma 자체는 $\Set$-valued functor에 대한 것이지만 이를 $\Grp
 
 따라서 이를 $\id_\mathcal{M}:\mathcal{M}\rightarrow\mathcal{M}$을 $\mathcal{M}$ 위의 universal family로 읽을 수 있다. $T$-family $X$에 대응하는 $f_X:T\rightarrow\mathcal{M}$을 따라 이를 pullback하는 것은 $\id_\mathcal{M}\circ f_X=f_X$를 취하는 것이고, 위의 동치 아래에서 이는 다시 $X$가 된다. 즉 moduli functor $\mathcal{M}$이 정의하는 <em-ko>모든</em-ko> family는 단 하나의 universal family $\id_\mathcal{M}$을 끌어당겨 얻어지며, 이는 [\[대수적 위상수학\] §분류공간, ⁋정리 8](/ko/math/algebraic_topology/classifying_spaces#thm8)의 직접적인 일반화이다.
 
-## Fine moduli space와 universal family
+## 섬세한 모듈라이 공간
 
 Scheme $M$이 $\Sch$ 위에서 갖는 자료는 functor of points $\Hom_\Sch(-, M)$뿐이고 이는 set-valued이므로, moduli functor를 scheme으로 실현하겠다면 우리가 관심을 가져야 할 대상은 $\mathcal{M}$ 자체가 아니라 coarse moduli functor $\underline{M}$이다. 원래 $\mathcal{M}$을 $\Grpd$로 향하는 것으로 적은 것은 각 family의 automorphism을 기억하기 위함이었으니, 분류하려는 문제가 isomorphism class만을 묻는 것이라면 이 약화에서 잃는 것은 없다. 남는 물음은 이렇게 내린 $\underline{M}$이 어떤 scheme의 functor of points와 일치하는지, 그리고 이것이 우리가 기대하는 성질을 가지는지 등의 여부일 것이다.
 
@@ -56,7 +54,7 @@ Moduli functor $\mathcal{M}$의 coarse moduli functor $\underline{M}:\Sch^\op \r
 
 $$\underline{M}\cong \Hom_{\Sch}(-, M)$$
 
-이 존재할 때, $M$을 $\mathcal{M}$의 *fine moduli space<sub>섬세한 모듈라이 공간</sub>*라 부른다. 이 때, 이 natural isomorphism 아래에서 항등사상 $\id_M\in \Hom_\Sch(M, M)$에 대응하는 원소
+이 존재할 때, $M$을 $\mathcal{M}$의 *fine moduli space<sub>섬세한 모듈라이 공간</sub>*라 부른다. 이 때, 이 natural isomorphism 아래에서 identity morphism $\id_M\in \Hom_\Sch(M, M)$에 대응하는 원소
 
 $$\mathcal{U}\in \underline{M}(M)$$
 
@@ -75,7 +73,7 @@ $$X\cong f_X^\ast \mathcal{U}$$
 
 $$(s\circ f_X)(\id_T)=f_X^\ast s(\id_M)=f_X^\ast\mathcal{U}\cong X=g(\id_T)$$
 
-이므로 다시 2-Yoneda lemma에 의하여 $g\simeq s\circ f_X$임을 확인할 수 있다. 즉, scheme에서 $\mathcal{M}$으로 가는 모든 morphism은 $s$를 통해 $M$을 거쳐 up to $2$-isomorphism으로 factor through하며, 거꾸로 이러한 조건 $g\simeq s\circ h$을 만족하는 $h:T\rightarrow M$는 반드시 $X\cong h^\ast\mathcal{U}$을 만족하므로 $h=f_X$이다. 즉 $\overline{M}$의 universal prpoerty처럼 보인 것은 사실 $\mathcal{M}$의 universal property에, factorization에 대한 주장 $g\simeq s\circ f_X$를 더한 것이다. 이 factorization은 up to $2$-isomorphism으로 유일하지만, 그 $2$-isomorphism 자체는 $X$가 nontrivial한 automorphism을 갖는 경우에는 유일하지 않을 수 있다.
+이므로 다시 2-Yoneda lemma에 의하여 $g\simeq s\circ f_X$임을 확인할 수 있다. 즉, scheme에서 $\mathcal{M}$으로 가는 모든 morphism은 $s$를 통해 $M$을 거쳐 up to $2$-isomorphism으로 factor through하며, 거꾸로 이러한 조건 $g\simeq s\circ h$을 만족하는 $h:T\rightarrow M$는 반드시 $X\cong h^\ast\mathcal{U}$을 만족하므로 $h=f_X$이다. 즉 $M$의 universal property처럼 보인 것은 사실 $\mathcal{M}$의 universal property에, factorization에 대한 주장 $g\simeq s\circ f_X$를 더한 것이다. 이 factorization은 up to $2$-isomorphism으로 유일하지만, 그 $2$-isomorphism 자체는 $X$가 nontrivial한 automorphism을 갖는 경우에는 유일하지 않을 수 있다.
 
 ::: 예시 3 (Grassmannian)
 [\[스킴\] §점함자, ⁋예시 6](/ko/math/scheme_theory/functor_of_points#ex6)에서 우리는 정수 $0<k<n$에 대하여 contravariant functor $F_{k,n}:\Sch^\op\rightarrow\Set$를
@@ -105,114 +103,140 @@ $$\mathbb{K}^n\twoheadrightarrow Q_x:=x^\ast\mathcal{Q}^{\mathrm{univ}}$$
 을 얻는다. 여기에서 $Q_x$는 $\mathcal{Q}^{\mathrm{univ}}$의 $x$에서의 geometric fiber이고, quotient map $\mathbb{K}^n\twoheadrightarrow Q_x$가 $x$에 대응하는 moduli object이다. 이 quotient는 kernel $S_x\subseteq\mathbb{K}^n$에 의하여 유일하게 결정되고 $\dim S_x=n-k$이므로, $\Gr(k,n)$의 $\mathbb{K}$-point들은 $\mathbb{K}^n$의 $(n-k)$차원 부분공간들을 parametrize한다.
 :::
 
-Fine moduli space는 모든 moduli problem에 대하여 존재하는 것은 아니다. 그런데 예시 3에서 Grassmannian $\Gr(k,n)$은 quotient bundle의 moduli functor를 표현하므로 실제로 fine moduli space가 되었다. 여기에서 Grassmannian의 분류 자료 가운데 무엇이 automorphism에서 비롯되는 obstruction을 피하게 하는지 살펴볼 필요가 있다.
+한편, 일반적인 moduli problem은 fine moduli space를 가지지 않을 수 있으며, scheme 위의 vector bundle들을 분류하는 moduli problem이 정확히 그러한 예시이다. 반면 [예시 3](#ex3)의 functor $F_{k,n}$은 rank $k$ vector bundle $\mathcal{Q}$와 함께 quotient map $q:\mathcal{O}_T^{\oplus n}\twoheadrightarrow\mathcal{Q}$를 분류하며, Grassmannian $\Gr(k,n)$에 의하여 representable하다. 즉 vector bundle에 quotient map을 추가 자료로 포함하자 fine moduli space가 생긴 것이다. 이 차이는 quotient map이 automorphism에 가하는 제약에서 비롯된다.
 
-그 역할을 하는 것은 quotient bundle $\mathcal{Q}$와 함께 주어진 quotient map $q:\mathcal{O}_T^{\oplus n}\twoheadrightarrow\mathcal{Q}$이다. $\mathcal{Q}$ 자체는 비자명한 automorphism을 가질 수 있지만, 전체 자료의 automorphism $\theta:\mathcal{Q}\rightarrow\mathcal{Q}$는 $q$도 보존해야 하므로 $\theta\circ q=q$를 만족한다. $q$가 surjective이므로 이 등식은 $\theta=\id_\mathcal{Q}$를 강제한다. 이처럼 분류 대상에 추가된 자료는 automorphism이 보존해야 할 조건을 늘려 automorphism group을 작게 만들고, 충분한 조건을 주면 항등사상만 남길 수 있다. 이러한 효과를 rigidity라 하며, 예시 3의 quotient map $q$와 같은 추가 자료를 rigidifying data라 부른다.
+Automorphism이 왜 문제가 되는지는 family를 생각하면 직관적으로 드러난다. 한 moduli object의 automorphism을 이용하면 locally constant이지만 base 전체에서는 constant이 아닌 family를 만들 수 있다. Fine moduli space가 존재한다면 두 family의 classifying morphism은 locally 같으므로 전체에서도 같아야 하지만, 하나의 universal family를 같은 morphism을 따라 pullback하여 서로 isomorphic하지 않은 두 family를 얻을 수는 없다.
 
-반대로 이러한 rigidity가 없어 분류 대상이 비자명한 automorphism을 본질적으로 가지면 fine moduli의 존재는 방해받을 수 있다. 비자명한 automorphism은 isomorphism class가 같으면서도 서로 다른 *비자명한 isotrivial family*를 만들어낼 여지를 열고, 그러한 family가 실제로 하나라도 있으면 representability가 정면으로 막힌다.
+Vector bundle들을 분류하는 moduli problem이 fine moduli space를 가지지 않는 핵심 원인은 vector bundle $\mathcal{Q}$가 비자명한 automorphism을 가질 수 있다는 데 있다. 반면 quotient map $q$를 추가 자료로 포함하면, 전체 자료의 automorphism $\theta:\mathcal{Q}\rightarrow\mathcal{Q}$는 $q$를 보존해야 하므로 $\theta\circ q=q$를 만족한다. $q$가 surjective이므로 이 등식은 $\theta=\id_\mathcal{Q}$를 강제한다. 이처럼 분류 대상에 추가된 자료는 automorphism이 보존해야 할 조건을 늘려 automorphism group을 작게 만들고, 충분한 조건을 주면 identity morphism만 남길 수 있다. 이러한 효과를 rigidity라 하며, [예시 3](#ex3)의 quotient map $q$와 같은 추가 자료를 rigidifying data라 부른다.
 
-이 obstruction이 representability를 막는 이유는 다음과 같다. Fine moduli space가 존재한다면 set-valued moduli functor $\underline{M}$은 representable functor $\Hom_\Sch(-, M)$과 isomorphic이고, representable functor는 fpqc topology(따라서 그보다 거친 étale·Zariski topology)에 대한 sheaf이다. 이는 faithfully flat descent의 표준적 귀결로, affine한 $M=\Spec R$의 경우 global section presheaf $T\mapsto \Gamma(T, \mathcal{O}_T)$이 fpqc sheaf라는 [\[스킴\] §충실평탄하강, ⁋정리 10](/ko/math/scheme_theory/faithfully_flat_descent#thm10)으로부터 $\Hom_\Sch(-, \Spec R)=\Hom_{\Ring}(R, \Gamma(-, \mathcal{O}))$을 통해 따라오고, 일반적인 $M$은 affine open으로 덮어 접합하여 얻는다. 즉 한 scheme으로 가는 morphism들은 covering 위에서 정합적으로 주어지면 유일하게 이어 붙는다. 그러므로 $\underline{M}$이 sheaf가 아니면 fine moduli는 존재할 수 없다. 비자명한 automorphism은 정확히 이 sheaf 조건의 분리성, 곧 "covering 위에서 같은 family는 원래 같다"는 부분을 깨뜨린다.
+그럼 다음 명제는 위에서 살펴본 fine moduli space의 failure를 더 엄밀하게 적은 것이다.
 
 ::: 명제 4
-Moduli functor $\mathcal{M}$에 대하여, 어떤 scheme $T$와 그 위의 surjective étale covering $S \rightarrow T$, 그리고 family $X\in \mathcal{M}(T)$이 존재하여 다음을 만족한다고 하자. 어떤 고정된 대상 $E$에 대하여 $S$로 끌어당기면 $X\times_T S\cong E\times S$이지만 ($X$이 *isotrivial<sub>등질</sub>*하지만), $X$이 $T$ 위에서 constant family $E\times T$과 isomorphic이 아니다. 그럼 $\mathcal{M}$은 fine moduli space를 가지지 않는다.
+Moduli functor $\mathcal{M}$에 대하여 scheme $T$, surjective étale covering $S\rightarrow T$, $T$-family $X\in\mathcal{M}(T)$, 고정된 moduli object $E$가 존재하여 $X\times_TS\cong E\times S$이지만 $X\not\cong E\times T$이면, $\mathcal{M}$은 fine moduli space를 가지지 않는다.
 :::
 ::: 증명
-Fine moduli space $M$이 존재한다고 가정하고 모순을 이끈다. [정의 2](#def2)에 의하여 set-valued moduli functor는 representable functor $\underline{M}\cong \Hom_\Sch(-, M)$이고, 위에서 확인한 대로 이는 fpqc 위상에 대한 sheaf, 따라서 그보다 거친 étale 위상에 대해서도 sheaf이다. Sheaf의 조건 가운데 분리성은, 임의의 covering $S \rightarrow T$에 대하여 restriction map
+결론에 반하여 fine moduli space $M$이 존재한다고 가정하자. [정의 2](#def2)에 의하여 set-valued moduli functor는 representable functor $\underline{M}\cong \Hom_\Sch(-, M)$이다. Representable functor는 fpqc topology에 대한 sheaf이므로 étale topology에 대해서도 sheaf이다. Sheaf 조건 가운데 separatedness는 임의의 covering $S \rightarrow T$에 대하여 restriction map
 
 $$\underline{M}(T) \rightarrow \underline{M}(S)$$
 
-이 단사인 것이다.
+이 injective인 것이다.
 
-이제 가정의 두 family $X$과 $E\times T$을 $\underline{M}(T)$의 원소로 본다. $S$로 끌어당기면 $X\times_T S\cong E\times S\cong (E\times T)\times_T S$이므로, 두 isomorphism class는 $\underline{M}(S)$에서 같은 원소로 보내진다. 그러나 가정에 의하여 $X$과 $E\times T$은 $T$ 위에서 isomorphic이 아니므로 $\underline{M}(T)$에서 서로 다른 원소이다. 이는 restriction map $\underline{M}(T) \rightarrow \underline{M}(S)$의 단사성에 모순이다. 따라서 $\underline{M}$은 분리된 presheaf조차 될 수 없고, representable할 수 없으므로 fine moduli space는 존재하지 않는다.
+이제 가정의 두 family $X$과 $E\times T$을 $\underline{M}(T)$의 원소로 본다. $S$로 끌어당기면 $X\times_T S\cong E\times S\cong (E\times T)\times_T S$이므로, 두 isomorphism class는 $\underline{M}(S)$에서 같은 원소로 보내진다. 그러나 가정에 의하여 $X$과 $E\times T$은 $T$ 위에서 isomorphic이 아니므로 $\underline{M}(T)$에서 서로 다른 원소이다. 이는 restriction map $\underline{M}(T) \rightarrow \underline{M}(S)$의 injectivity에 모순이다. 따라서 $\underline{M}$은 separated presheaf조차 될 수 없고, representable할 수 없으므로 fine moduli space는 존재하지 않는다.
 :::
 
-명제 4의 가정에 등장하는 비자명한 isotrivial family는, 분류 대상 $E$이 비자명한 automorphism group $\Aut(E)$을 가질 때 그 group의 비자명한 torsor로부터 만들어진다. Order $d$의 automorphism $\sigma\in \Aut(E)$과 degree $d$의 cyclic étale covering $S \rightarrow T$이 (곧 비자명한 $\mathbb{Z}/d$-torsor, [§스택, ⁋정의 17](/ko/math/stacks/fibered_categories_and_stacks#def17)) 주어지면, $\mathbb{Z}/d$을 $E$에는 $\sigma$로 $S$에는 deck transformation으로 대각작용시켜 얻는 quotient
+[명제 4](#prop4)의 isotrivial family는 constant family $E\times S$의 descent datum을 $\Aut(E)$의 원소들로 비틀어 만들 수 있다. 이 descent datum이 nontrivial한 $\Aut(E)$-torsor를 정하면, 내려온 family는 covering 위에서는 constant이지만 base 위에서는 constant이 아니게 된다. 다만 automorphism의 존재만으로 이러한 일이 항상 일어나는 것은 아니므로, 실제 obstruction은 각 moduli problem에서 따로 확인해야 한다.
 
-$$X=(E\times S)/(\mathbb{Z}/d) \rightarrow S/(\mathbb{Z}/d)=T$$
+## 타원곡선
 
-이 그러한 family이다. $S$로 끌어당기면 $X\times_T S\cong E\times S$이 되어 isotrivial이며, 이 torsor를 $\mathbb{Z}/d \rightarrow \Aut(E)$, $1\mapsto \sigma$을 따라 밀어낸 $\Aut(E)$-torsor가 비자명하면 $X$은 constant family와 isomorphic이 아니다. 이는 sheaf 조건의 분리성이 깨지는 모습 그 자체이다. 두 family $X$과 $E\times T$이 covering $S \rightarrow T$ 위에서 isomorphic이 되지만 $T$ 위에서는 isomorphic이 아니므로, $\underline{M}(T) \rightarrow \underline{M}(S)$이 단사가 아니어서 $\underline{M}$은 separated presheaf조차 되지 못한다. ([§스택, ⁋명제 13](/ko/math/stacks/fibered_categories_and_stacks#prop13))
+Field $\mathbb{K}$ 위의 elliptic curve는 $\mathbb{K}$-rational point $0$이 지정된 smooth projective genus $1$ curve $(E,0)$이다. Characteristic $0$의 field 위에서는 모든 elliptic curve를 short Weierstrass equation
 
-이 구성에서 결정적인 것은 밀어낸 $\Aut(E)$-torsor의 비자명성이며, 이는 automorphism이 비자명하다는 것만으로는 따라오지 않는다. Field $\mathbb{K}$ 위의 비자명한 $\mu_2$-torsor를 포함 $\mu_2\subseteq \mathbb{G}_m$을 따라 밀어내면, [\[체론\] §갈루아 군의 성질들, ⁋정리 7](/ko/math/field_theory/properties_of_galois_extensions#thm7)에 의하여 $\mathbb{K}$ 위의 $\mathbb{G}_m$-torsor가 모두 자명하므로 그 image는 trivial torsor가 된다. 곧 fine moduli를 막는 것은 automorphism의 존재 자체가 아니라 그것이 실제로 비자명한 form을 낳는다는 사실이고, 그 비자명성은 분류 문제마다 확인해야 한다. 타원곡선에서는 그러한 form이 실제로 존재한다.
+$$E_{a,b}:\y^2=\x^3+a\x+b,\qquad \Delta=-16(4a^3+27b^2)\neq 0$$
 
-::: 예시 5 (타원곡선에 fine moduli가 없음)
-Section을 가진 타원곡선 $(E, 0)$은 항상 비자명한 automorphism $[-1]:(\x, \y)\mapsto(\x, -\y)$을 가지며, 이는 section $0$을 고정하는 order $2$의 automorphism이다. 곧 모든 타원곡선에 대하여 $\{\pm 1\}\cong \mathbb{Z}/2\subseteq \Aut(E, 0)$이다. 따라서 $\sigma=[-1]$, $d=2$으로 위의 구성을 적용한다. Characteristic $0$의 field $k$ 위에서 타원곡선 $E:\y^2=\x^3+a\x+b$ ($ab\neq 0$)을 고정하고, $T=\Spec k(t)$과 그 이차확대 $S=\Spec k(t)[\sqrt{t}]$으로 두자. $t$은 $k(t)$의 제곱이 아니므로 $S \rightarrow T$은 비자명한 $\mathbb{Z}/2$-torsor이다. 이때 위의 quotient $X=(E\times S)/(\mathbb{Z}/2)$은 $E$의 *이차 twist* $\y^2=\x^3+t^2a\x+t^3b$이며, $X\times_T S\cong E\times S$이지만 $T$ 위에서는 constant family와 isomorphic이 아니다. 실제로 $T$ 위의 isomorphism은 좌표변환 $(\x, \y)\mapsto(c^2\x, c^3\y)$의 꼴이어서 $c^4=t^2$과 $c^6=t^3$, 곧 $c^2=t$을 요구하는데, 그러한 $c\in k(t)^\times$은 없다. [명제 4](#prop4)에 의하여 section을 가진 타원곡선의 moduli functor는 fine moduli space를 가지지 않는다. 이 twist는 $j$-불변량을 바꾸지 않으므로, 기하적 isomorphism class를 점으로 갖는 $\mathbb{A}^1_j$ 위에도 보편 타원곡선은 놓일 수 없다.
+으로 나타낼 수 있다는 것이 알려져 있으며, 이 표현 상에서 두 short Weierstrass curve $E_{a,b}$와 $E_{a',b'}$ 사이에 (pointed) isomorphism이 존재할 필요충분조건은 어떤 $\lambda\in\mathbb{K}^\times$에 대하여
+
+$$(a',b')=(\lambda^4a,\lambda^6b)$$
+
+가 성립하는 것이다. 이 때, isomorphism은 coordinate change $(\x,\y)\mapsto(\lambda^2\x,\lambda^3\y)$로 주어지며, 이 coordinate change 아래에서 변하지 않는
+
+$$j(E_{a,b})=1728\frac{4a^3}{4a^3+27b^2}$$
+
+를 $j$-invariant라 한다. Algebraically closed field 위에서는 두 elliptic curve가 isomorphic일 필요충분조건이 $j$-invariant가 같은 것이다.
+
+Pointed automorphism은 이 coordinate change로부터 직접 계산할 수 있다. $E_{a,b}$의 automorphism에 대응하는 $\lambda$는 $\lambda^4a=a$와 $\lambda^6b=b$을 만족한다. 따라서 $a,b\neq0$이면 $\lambda^2=1$이고, $a=0$이면 $\lambda^6=1$, $b=0$이면 $\lambda^4=1$이다. Algebraically closed field of characteristic $0$ 위에서는 각각 $j(E)\neq0,1728$, $j(E)=0$, $j(E)=1728$인 경우이므로
+
+$$\Aut(E,0)\cong\begin{cases}\mu_6 & j(E)=0,\\ \mu_4 & j(E)=1728,\\ \mu_2 & j(E)\neq 0,1728\end{cases}$$
+
+이다. 특히 모든 elliptic curve에는 $\mu_2=\{\pm1\}$이 남는다. 그 nontrivial automorphism을 $\iota_E$라 쓰면
+
+$$\iota_E:(\x,\y)\longmapsto(\x,-\y)$$
+
+이다.
+
+::: 예시 5 (Elliptic curves)
+Algebraically closed field $\mathbb{K}$ of characteristic $0$ 위에서
+
+$$ab(4a^3+27b^2)\neq0$$
+
+인 elliptic curve $E=E_{a,b}$을 고정하자. 그럼 특히 $\Delta\neq 0$이고, $a,b\neq 0$이므로 $j(E)\neq0,1728$이어서 $\Aut(E,0)=\mu_2=\{1,\iota_E\}$가 된다.
+
+Moduli problem에서 우리는 이러한 조건을 만족하는 elliptic curve의 family를 생각한다. 여기서 scheme $T$ 위의 elliptic curve family는 모든 geometric fiber가 smooth projective genus $1$ curve인 smooth proper morphism $\pi:\mathcal{E}\rightarrow T$와 section $0:T\rightarrow\mathcal{E}$의 쌍이다.
+
+이 예시의 목적은 [명제 4](#prop4)를 손에 잡히는 예시로 계산하는 것이다. 이에 따르면 elliptic curve들의 moduli가 fine moduli space가 되지 않는다는 것을 보이기 위해서는 nontrivial한 automorphism $\iota_E$를 이용하여 locally trivial하지만 constant이지 않은 family를 구성하면 된다. 이를 위해 $T=\Spec\mathbb{K}(t)$로 두고 그 extension $\mathbb{K}(t)\subseteq\mathbb{K}(t)[\sqrt{t}]$을 생각하자. 이 위에서 $c=\sqrt{t}$에 대한 coordinate change는 $E_{a,b}$와 $E_{c^4a,c^6b}=E_{t^2a,t^3b}$ 사이의 isomorphism을 주므로, $T$ 위의 curve를
+
+$$X:\y^2=\x^3+t^2a\x+t^3b$$
+
+로 정하면 된다. 실제로 $X$의 discriminant는 $\Delta_X=t^6\Delta_E$이므로 nonzero가 되어 elliptic curve가 되며, étale double covering $S=\Spec(\mathbb{K}(t)[\sqrt{t}])\rightarrow T$ 위에서는 coordinate change $(\x,\y)\mapsto(t\x,t\sqrt{t}\y)$에 의하여 $X\times_TS\cong E\times_{\mathbb{K}}S$이다. 이 isomorphism에서 $\sqrt{t}$의 두 선택은 $\iota_E$만큼 차이 나므로, $X$는 $\iota_E$로부터 얻은 *quadratic twist*이다.
+
+반면 $T$ 위에서 이러한 isomorphism이 존재하려면 어떤 $c\in\mathbb{K}(t)^\times$가 $c^4=t^2$과 $c^6=t^3$을 만족해야 한다. 그러면 $c^2=t$이어야 하지만, $t$은 $\mathbb{K}(t)$에서 square가 아니다. 즉 $X$은 $S$ 위에서는 constant이지만 $T$ 위에서는 constant가 아니다.
+
+따라서 [명제 4](#prop4)에 의하여 elliptic curve의 moduli functor는 fine moduli space를 가지지 않는다. 또한 coefficient에 생긴 $t$의 power가 $j$-invariant의 numerator와 denominator에서 모두 $t^6$으로 소거되므로 $j(X)=j(E)$이다. 이로부터 geometric isomorphism class를 $j$의 값으로 나타내는 affine line $\mathbb{A}^1_j$ 위에도 universal family는 존재할 수 없다는 것을 안다.
 :::
 
-예시 5는 강성이 깨진 분류 문제의 전형이다. Grassmannian에서는 quotient map이 automorphism을 없앴지만, 타원곡선에서는 section을 고정하더라도 $[-1]$이 살아남아 functor가 sheaf가 되지 못한다. 그렇다면 우리는 automorphism을 그대로 기억하는 더 정교한 기하적 대상으로 옮겨 가거나, automorphism을 포기하고 isomorphism class만 담는 가장 좋은 근사를 찾아야 한다. 이 두 길이 다음 절의 주제이다.
+Grassmannian에서는 quotient map이 automorphism을 없앴지만, elliptic curve에서는 section을 고정한 뒤에도 $\iota_E$가 남아 nontrivial twist를 만든다. 이 차이는 automorphism을 기억하는 기하적 대상으로 옮겨 가는 방법과, automorphism을 버리고 isomorphism class만 담는 근사를 찾는 방법으로 이어진다.
 
-## 두 가지 보정: moduli stack과 coarse moduli space
+## 모듈라이 스택과 성긴 모듈라이 공간
 
-첫 번째 보정은 set-valued functor $\underline{M}$ 대신 groupoid-valued functor $\mathcal{M}$ 자체를 기하적 대상으로 삼는 것이다. 명제 4의 장애가 isomorphism class로 뭉개면서 automorphism 정보를 버린 데서 비롯되었으므로, 그 정보를 끝까지 들고 가면 장애가 사라진다. [정의 1](#def1)의 $\mathcal{M}$을 fibered category로 보고 그것이 stack임을 확인한 뒤, 적절한 대수성 조건을 부과한 것이 바로 *moduli stack*이다.
+이러한 문제를 해결하는 방법 중 가장 간단한 것은 우리가 이미 가지고 있는 것이다.
 
 ::: 정의 6
-Moduli functor $\mathcal{M}:\Sch^\op \rightarrow \Grpd$이, 대응하는 fibered category로서 site $(\Sch, \fppf)$ 위의 stack이고 ([§스택, ⁋정의 12](/ko/math/stacks/fibered_categories_and_stacks#def12)) 나아가 algebraic stack일 때 ([§대수적 스택, ⁋정의 6](/ko/math/stacks/algebraic_stacks#def6)), 이를 *moduli stack<sub>모듈라이 스택</sub>*이라 부른다. 이 stack이 Deligne–Mumford stack인 것은 diagonal $\Delta:\mathcal{M} \rightarrow \mathcal{M}\times\mathcal{M}$이 unramified한 것, 곧 모든 geometric point의 stabilizer가 unramified한 것과 동치이며, 이 조건이 성립하지 않으면 Deligne–Mumford가 아닌 Artin stack이다.
+Moduli functor $\mathcal{M}$이 algebraic stack일 때, 이를 *moduli stack<sub>모듈라이 스택</sub>*이라 부른다. ([§대수적 스택, ⁋정의 6](/ko/math/stacks/algebraic_stacks#def6))
 :::
 
-Moduli stack 위에는 언제나 universal family가 존재한다. 앞서 tautological하게 주어졌던 항등 morphism $\id_\mathcal{M}:\mathcal{M} \rightarrow \mathcal{M}$이 이제 algebraic stack 위에 놓인 universal family가 되며, automorphism을 fiber groupoid가 그대로 기억하므로 명제 4의 모순이 일어나지 않는다. 비자명한 isotrivial family $X \rightarrow T$은 stack의 점들의 morphism으로 정확히 구별되고, classifying morphism $T \rightarrow \mathcal{M}$이 더 이상 상수가 아니라 그 twist를 식별하는 비자명한 자료가 된다. 이것이 stack이 "moduli 문제의 올바른 대상"인 까닭이다.
+즉, 원래의 moduli problem $\mathcal{M}$을 더 이상 약화시키지 않고 있는 그대로 사용하되, 이것이 기하적으로 행동하기 위한 최소한의 조건, 즉 algebraic stack일 조건만 요구하는 것이다. 추가적으로 moduli stack $\mathcal{M}$이 Deligne–Mumford stack인 것은 diagonal $\Delta:\mathcal{M}\rightarrow\mathcal{M}\times\mathcal{M}$이 unramified인 것과 동치이고, 다시 모든 geometric point의 stabilizer가 unramified인 것과 동치이다. ([§대수적 스택, ⁋정의 6](/ko/math/stacks/algebraic_stacks#def6))
 
-두 번째 보정은 stack을 포기하고 algebraic space의 세계에 머무르되, isomorphism class만을 담는 가장 좋은 근사를 찾는 것이다. Algebraic space는 그 자체로 $(\Sch, \et)$ 위의 sheaf이므로 ([§대수적 스택, ⁋정의 3](/ko/math/stacks/algebraic_stacks#def3)) $\underline{M}$과 같은 세계에 놓이며, scheme은 그 특수한 경우이다.
+다른 한 가지 방법은 여전히 coarse moduli를 생각하되, universal family는 포기하고 isomorphism class를 담는 base space만 보는 것이다.
 
 ::: 정의 7
 Moduli functor $\mathcal{M}$의 coarse moduli functor $\underline{M}:\Sch^\op \rightarrow \Set$에 대하여, algebraic space $M$과 natural transformation $\Phi:\underline{M} \rightarrow M$의 쌍이 *coarse moduli space<sub>성긴 모듈라이 공간</sub>*라는 것은 다음 두 조건을 만족하는 것이다.
 
-1. (보편성) 임의의 algebraic space $N$과 natural transformation $\Psi:\underline{M} \rightarrow N$에 대하여, $\Psi=\pi\circ \Phi$을 만족하는 morphism $\pi: M \rightarrow N$이 유일하게 존재한다. 곧 $\Phi$은 algebraic space로 가는 natural transformation들 가운데 initial object이다.
+1. (Universality) 임의의 algebraic space $N$과 natural transformation $\Psi:\underline{M} \rightarrow N$에 대하여, $\Psi=\pi\circ \Phi$을 만족하는 morphism $\pi:M\rightarrow N$이 유일하게 존재한다.
 
-2. (기하적 점에서의 전단사) 임의의 algebraically closed field $\mathbb{K}$에 대하여, $\Phi$의 성분 $\Phi(\Spec \mathbb{K}):\underline{M}(\Spec \mathbb{K}) \rightarrow M(\mathbb{K})$이 전단사이다.
+2. (Bijection on geometric points) 임의의 algebraically closed field $\mathbb{K}$에 대하여, $\Phi$의 성분 $\Phi(\Spec\mathbb{K}):\underline{M}(\Spec\mathbb{K})\rightarrow M(\mathbb{K})$이 bijective이다.
 :::
 
-조건 1은 $M$이 isomorphism class들을 담는 algebraic space 가운데 가장 보편적인 것, 곧 $\underline{M}$에서 algebraic space로 가는 모든 morphism이 $M$을 거쳐 가도록 하는 초기 대상임을 말한다. 조건 2는 $M$의 algebraically closed field 위의 점들이 정확히 분류 대상의 기하적 isomorphism class와 일대일대응함을 보장하여, $M$이 적어도 집합 수준에서는 올바른 매개변수 공간임을 확정한다. Fine moduli space는 자동으로 coarse moduli space이지만 ($\Phi$이 isomorphism이면 두 조건이 자명히 성립한다), 그 역은 성립하지 않는다. Coarse moduli space는 일반적으로 universal family를 가지지 않으며, 두 조건이 보장하는 것은 점들의 대응과 보편성뿐이다. 보편성에 의하여 coarse moduli space는 존재하면 유일한 isomorphism을 통해 유일하게 결정된다.
+Universality는 $\underline{M}$에서 algebraic space로 가는 모든 natural transformation이 $M$을 유일하게 factor through한다는 것으로, 이미 [정의 2](#def2) 직후에 우리는 이 조건에 대해 충분히 논의하였다. 새로 나온 두 번째 조건은 $M$의 geometric points가 분류하고자 하는 대상의 geometric isomorphism classes와 정확히 대응함을 보장하는 것으로, 가령 fine moduli가 주어진 [예시 3](#ex3)에서 우리는 family의 한 geometric point 위에 있는 대상을 빼오기 위해 비슷한 아이디어를 사용한 적이 있었다. 다만 차이는 그 때와는 다르게 universal family의 부재로 인하여 이 점이 실제로 담고 있는 기하적 대상이 무엇인지를 보는 것이 더 이상은 functorial하게는 불가능하다는 것이다.
 
-Coarse moduli space의 존재는 자명하지 않다. 그 일반적 존재를 보장하는 것이 Keel–Mori 정리로, moduli stack의 언어로 가장 깔끔하게 서술된다.
+이와 같이 요구조건을 약화시키면, coarse moduli space의 존재를 보장하는 대표적인 결과가 Keel–Mori 정리이다.
 
 ::: 정리 8 (Keel–Mori)
-$\mathcal{M}$이 Noetherian base 위에서 locally of finite type인 algebraic stack이고, 그 inertia stack $I_\mathcal{M}=\mathcal{M}\times_{\mathcal{M}\times\mathcal{M}}\mathcal{M} \rightarrow \mathcal{M}$이 유한이라 하자. 그럼 $\mathcal{M}$의 coarse moduli space $\pi:\mathcal{M} \rightarrow M$이 존재한다. 여기에서 $M$은 algebraic space이고, $\pi$은 proper이며 기하적 점들의 isomorphism class 집합과 $M$의 기하적 점들 사이의 전단사를 유도한다. 특히 분리된 finite type Deligne–Mumford stack은 coarse moduli space를 가진다.
+Noetherian base $S$ 위에서 locally of finite type인 algebraic stack $\mathcal{M}$의 inertia morphism
+
+$$I_\mathcal{M}=\mathcal{M}\times_{\mathcal{M}\times_S\mathcal{M}}\mathcal{M}\longrightarrow\mathcal{M}$$
+
+이 finite이면, coarse moduli space $\pi:\mathcal{M}\rightarrow M$이 존재한다. 여기에서 $M$은 $S$ 위에서 locally of finite type인 algebraic space이고, $\pi$은 geometric isomorphism classes와 $M$의 geometric points 사이의 bijection을 유도한다. 특히 separated finite type Deligne–Mumford stack은 coarse moduli space를 가진다.
 :::
 
-여기에서 inertia stack $I_\mathcal{M} \rightarrow \mathcal{M}$은 각 geometric point 위에 그 stabilizer group scheme을 fiber로 얹는 stack이고, 그것이 유한하다는 것은 이 morphism이 finite morphism이라는 뜻이다. 증명은 이 글의 범위를 넘으므로 결론만 가져다 쓰고, 대신 그 가정이 어디에서 필요한지를 본다.
+Inertia stack $I_\mathcal{M}$의 geometric fiber는 해당 point의 stabilizer group scheme이다. 따라서 positive-dimensional stabilizer를 갖는 [§대수적 스택, ⁋예시 11](/ko/math/stacks/algebraic_stacks#ex11)의 $\bB\mathbb{G}_m$이나 [§대수적 스택, ⁋예시 12](/ko/math/stacks/algebraic_stacks#ex12)의 $[\mathbb{A}^1/\mathbb{G}_m]$에는 [정리 8](#thm8)을 적용할 수 없다. 정리는 이러한 경우 coarse moduli space의 존재 여부에 관하여 결론을 주지 않는다.
 
-Stabilizer가 양의 차원을 가지는 stack은 이 정리의 적용 범위 밖이다. [§대수적 스택, ⁋예시 11](/ko/math/stacks/algebraic_stacks#ex11)의 $\bB\mathbb{G}_m$과 [§대수적 스택, ⁋예시 12](/ko/math/stacks/algebraic_stacks#ex12)의 $[\mathbb{A}^1/\mathbb{G}_m]$이 그러하다. 가령 $[\mathbb{A}^1/\mathbb{G}_m]$에서는 invariant ring이 $\mathbb{K}[\x]^{\mathbb{G}_m}=\mathbb{K}$이어서 algebraic space로 가는 임의의 natural transformation이 열린 orbit과 원점을 한 점으로 보내므로, [정의 7](#def7)의 둘째 조건이 깨져 그 뜻의 coarse moduli space가 아예 존재하지 않는다. 반면 분리된 finite type Deligne–Mumford stack에서는 diagonal이 proper이면서 unramified이므로 finite이고, inertia는 그 diagonal을 자기 자신을 따라 base change한 것이므로 함께 유한해진다. 다음 절의 타원곡선 moduli가 바로 이 상황에 해당한다.
+::: 예시 9 (Coarse moduli space of elliptic curves)
+Algebraically closed field $\mathbb{K}$ of characteristic $0$ 위에서 $\Delta\neq0$인 Weierstrass coefficient의 parameter scheme을
 
-## 타원곡선의 moduli $\mathcal{M}_{1, 1}$
+$$U=\Spec\mathbb{K}[a,b,\Delta^{-1}]$$
 
-앞서 도입한 두 보정을 한 예에서 동시에 관찰하기에 가장 좋은 대상이 section을 가진 타원곡선의 moduli $\mathcal{M}_{1,1}$이다. 이제 이 stack의 quotient presentation을 구성하고, automorphism 구조와 coarse moduli space를 정밀하게 분석한다.
+로 두자. Elliptic curve의 coordinate change는 $\mathbb{G}_m$-action $\lambda\cdot(a,b)=(\lambda^4a,\lambda^6b)$으로 보면 elliptic curve의 moduli stack은 quotient stack
 
-Characteristic $0$의 algebraically closed field $k$ 위에서 section을 가진 타원곡선은 Weierstrass 방정식
+$$\mathcal{M}_{1,1}\cong[U/\mathbb{G}_m]$$
 
-$$\y^2=\x^3+a\x+b,\qquad \Delta=-16(4a^3+27b^2)\neq 0$$
+으로 표현된다. ([§대수적 스택, ⁋정의 7](/ko/math/stacks/algebraic_stacks#def7)) 이 때, 각 point의 stabilizer는 이미 앞에서 계산한 $\Aut(E,0)$이다. 이들은 characteristic $0$에서 finite étale이므로 $\mathcal{M}_{1,1}$은 Deligne–Mumford stack이고, inertia가 finite이므로 [정리 8](#thm8)을 적용할 수 있다. ([§대수적 스택, ⁋정리 10](/ko/math/stacks/algebraic_stacks#thm10))
 
-으로 주어지고, 두 방정식이 같은 타원곡선을 정의하는 것은 좌표변환 $(\x, \y)\mapsto(\lambda^2 \x, \lambda^3 \y)$ ($\lambda\in \mathbb{G}_m$)으로 옮겨지는 것과 같다. 이 변환은 계수에 $\lambda\cdot(a, b)=(\lambda^4 a, \lambda^6 b)$으로 작용하므로, $\mathcal{M}_{1, 1}$은 quotient stack
+이 action에서 $a$와 $b$의 weight는 각각 $4$와 $6$이고 $\Delta$의 weight는 $12$이다. 따라서 invariant ring은
 
-$$\mathcal{M}_{1, 1}\cong \bigl[\{(a, b)\mid\Delta\neq 0\}\big/\mathbb{G}_m\bigr]$$
+$$\mathbb{K}[a,b,\Delta^{-1}]^{\mathbb{G}_m}=\mathbb{K}[j]$$
 
-으로 실현된다. ([§대수적 스택, ⁋정의 7](/ko/math/stacks/algebraic_stacks#def7)) 한 점 $(a, b)$의 stabilizer는 $\lambda^4 a=a$, $\lambda^6 b=b$을 만족하는 $\lambda$들의 group이며, 이는 정확히 그 점이 나타내는 타원곡선 $(E, 0)$의 automorphism group $\Aut(E, 0)$과 일치한다.
+이다. 이 계산으로 [정리 8](#thm8)이 보장하는 coarse moduli morphism은 $j$-invariant가 주는 natural transformation
 
-이 stabilizer를 경우별로 계산하면 다음과 같다. $j$-불변량은
+$$\Phi:\underline{M}_{1,1}\longrightarrow\mathbb{A}^1_j,\qquad(E,0)\longmapsto j(E)$$
 
-$$j=1728\frac{4a^3}{4a^3+27b^2}$$
+로 주어진다. Algebraically closed field 위에서는 $j$-invariant가 elliptic curve의 isomorphism class를 완전히 결정하므로, $\Phi$는 geometric points에서 bijective이다. 따라서 $(\mathbb{A}^1_j,\Phi)$은 $\mathcal{M}_{1,1}$의 coarse moduli space이다.
 
-으로 주어지고, $\mathbb{A}^1_j$의 좌표를 이룬다. 일반적인 점에서는 $a, b$이 모두 $0$이 아니어서 $\lambda^4=\lambda^6=1$, 곧 $\lambda^2=1$이 되어 stabilizer는 $\mu_2=\{\pm 1\}$이며, 이는 모든 타원곡선에 공통인 $[-1]$ automorphism에 대응한다. 특수한 두 점에서 이 stabilizer가 도약한다. $j=1728$ ($b=0$, 곧 $\y^2=\x^3+a\x$)에서는 $\lambda^4=1$만 요구되어 stabilizer가 $\mu_4$으로 커지고, $j=0$ ($a=0$, 곧 $\y^2=\x^3+b$)에서는 $\lambda^6=1$만 요구되어 $\mu_6$으로 커진다. $k$이 algebraically closed이므로 $\mu_n\cong \mathbb{Z}/n$이고, 곧
-
-$$\Aut(E, 0)\cong \begin{cases}\mathbb{Z}/6 & j=0,\\ \mathbb{Z}/4 & j=1728,\\ \mathbb{Z}/2 & \text{otherwise}\end{cases}$$
-
-이다. 공통의 $\mu_2$은 모든 $\Aut(E, 0)$의 center에 놓이므로 어느 점도 stabilizer를 잃지 않고, $j=0$과 $j=1728$에서는 그 공통 $\mu_2$을 넘어 automorphism이 각각 지수 $3$과 $2$만큼 더 커진다 ($\mu_6/\mu_2\cong \mathbb{Z}/3$, $\mu_4/\mu_2\cong \mathbb{Z}/2$). Stabilizer가 모두 유한하므로 $\mathcal{M}_{1, 1}$은 Deligne–Mumford stack이다. ([§대수적 스택, ⁋정리 10](/ko/math/stacks/algebraic_stacks#thm10))
-
-::: 예시 9 ($j$-직선과 universal family의 부재)
-$j$-불변량은 natural transformation $\Phi:\underline{M}_{1, 1} \rightarrow \mathbb{A}^1_j$을 주며, 이 쌍 $(\mathbb{A}^1_j, \Phi)$이 $\mathcal{M}_{1, 1}$의 coarse moduli space이다. 실제로 $\mathcal{M}_{1, 1}$은 분리된 finite type Deligne–Mumford stack이므로 [정리 8](#thm8)에 의하여 coarse moduli space를 가지며, algebraically closed field 위에서 타원곡선의 isomorphism class가 $j$-불변량으로 완전히 결정되므로 [정의 7](#def7)의 둘째 조건이 성립하여 그 coarse 공간은 $\mathbb{A}^1_j$이다. 그러나 $\mathbb{A}^1_j$ 위에는 보편 타원곡선이 존재하지 않는다. 만일 존재한다면 $\mathbb{A}^1_j$이 fine moduli space가 되어 [명제 4](#prop4)에 위배되기 때문이다. 곧 모든 타원곡선이 갖는 $[-1]$ automorphism이 [예시 5](#ex5)의 비자명한 이차 twist를 낳고, 이 twist는 $j$가 상수인 비자명한 isotrivial family여서 $\mathbb{A}^1_j$로의 classifying morphism이 그것을 식별하지 못한다. 반면 stack $\mathcal{M}_{1, 1}$ 위에서는 항등 morphism이 보편 타원곡선을 주며, 이 twist는 $T \rightarrow \mathcal{M}_{1, 1}$의 비자명한 자료로 정확히 구별된다.
+그러나 $\mathbb{A}^1_j$ 위에는 universal family가 존재하지 않는다. [예시 5](#ex5)의 nontrivial quadratic twist는 $j$-invariant가 constant이므로 $\mathbb{A}^1_j$로 가는 동일한 constant morphism을 정하지만, 두 family는 base 위에서 isomorphic하지 않다. 반면 $\mathcal{M}_{1,1}$로 가는 classifying morphism은 이 twist를 구별한다. 또한 $j=0$과 $j=1728$ 위에서 $\mathcal{M}_{1,1}$은 각각 $\mu_6$과 $\mu_4$ stabilizer를 기억하지만 $\mathbb{A}^1_j$은 이를 평범한 point로만 나타낸다. 이 예시는 moduli stack과 coarse moduli space가 같은 geometric isomorphism classes를 담으면서도 서로 다른 정보를 보존한다는 것을 보여준다.
 :::
 
-예시 9는 fine, coarse, stack의 세 층위를 한눈에 보여준다. $\mathbb{A}^1_j$은 기하적 isomorphism class를 점으로 올바르게 담지만 universal family를 잃은 coarse moduli space이고, $\mathcal{M}_{1, 1}$은 automorphism을 기억하여 universal family를 회복한 moduli stack이며, 둘을 잇는 morphism $\mathcal{M}_{1, 1} \rightarrow \mathbb{A}^1_j$이 정확히 stabilizer 정보를 잊는 coarse morphism이다. $j=0$과 $j=1728$에서 stack은 더 큰 automorphism group을 가진 "더 무거운" 점을 두는 반면 coarse 공간은 평범한 점만을 두며, 이 차이가 두 대상이 다른 본질적인 이유이다.
-
-## Moduli of curves와 vector bundle moduli
-
-타원곡선 다음으로 자연스러운 일반화는 genus $g$ 곡선의 moduli이다. $g\geq 2$인 smooth projective curve의 moduli stack $\mathcal{M}_g$과, 거기에 서로 다른 $n$개의 marked point를 더한 $\mathcal{M}_{g, n}$은 모두 분리된 finite type Deligne–Mumford stack이며, 따라서 [정리 8](#thm8)에 의하여 coarse moduli space $M_g$, $M_{g, n}$을 가진다. 이들이 Deligne–Mumford인 까닭은, $2g-2+n>0$인 $n$-pointed genus $g$ curve의 automorphism group scheme이 항상 유한하고 unramified하다는 사실에 있다. $\mathcal{M}_g$의 차원은 $3g-3$이며, Deligne와 Mumford는 stable curve를 더해 $\mathcal{M}_g$을 proper한 stack $\overline{\mathcal{M}}_g$으로 compactify할 수 있음을 보였다. 이 정밀한 구성과 그 기하는 별도의 깊은 이론을 이루므로 여기에서는 언급에 그친다.
-
-또 다른 방향은 고정된 projective variety $X$ 위의 vector bundle 또는 coherent sheaf의 moduli이다. 이 경우 두 가지 어려움이 동시에 등장한다. 하나는 boundedness이다. Vector bundle 전체를 분류하려 하면 그 isomorphism class들이 bounded가 되지 않아 finite type 대상으로 매개변수화되지 않는다. 가령 $\mathbb{P}^1$ 위의 line bundle $\mathcal{O}(d)$는 rank $1$이라 모두 stable이지만 $d$이 $\mathbb{Z}$ 전체를 훑으면 어떤 finite type family에도 담기지 않으므로, stability만으로는 boundedness가 나오지 않는다. Polarization을 고정하고 Hilbert 다항식 (곡선 위에서는 rank와 degree)을 함께 고정한 뒤 *stability*라 부르는 조건을 얹어 대상을 semistable sheaf로 제한해야 비로소 bounded family가 얻어진다. 다른 하나는 automorphism으로, stability는 이것을 없애 주지 않는다. Stable bundle조차 scalar automorphism $\mathbb{G}_m$을 그대로 가지므로 이 moduli는 fine이 되지 못하고, coarse moduli space 또는 moduli stack의 수준에서 서술된다. 구성 자체는 적절한 Quot scheme 위에서 group action의 geometric invariant theory quotient를 취하는 방식으로 이루어지며, stability의 선택에 따라 결과로 얻는 moduli 공간이 달라진다. Stability와 GIT의 전개는 이 글의 범위를 넘으므로 다른 글로 미룬다.
+Elliptic curve는 하나의 marked point를 가진 genus $1$ smooth projective curve이므로, $\mathcal{M}_{1,1}$은 pointed curve의 moduli stack $\mathcal{M}_{g,n}$에서 $(g,n)=(1,1)$인 경우이다. Genus와 marked point의 수를 바꾸면 일반적인 curve의 moduli로 이어지며, automorphism을 stack에 어떻게 보존할지, coarse moduli space를 언제 얻을 수 있는지, stable curve를 더하여 어떻게 compactify할지가 다음 단계의 문제가 된다.
 
 ---
 
 **참고문헌**
 
-**[GIT]** D. Mumford, J. Fogarty, F. Kirwan, *Geometric invariant theory*, 3rd ed., Springer, 1994.  
 **[FGA]** B. Fantechi, L. Göttsche, L. Illusie, S. L. Kleiman, N. Nitsure, A. Vistoli, *Fundamental algebraic geometry: Grothendieck's FGA explained*, American Mathematical Society, 2005.  
-**[HM]** J. Harris, I. Morrison, *Moduli of curves*, Springer, 1998.  
 **[Stacks]** The Stacks Project Authors, *The Stacks Project*, https://stacks.math.columbia.edu.
