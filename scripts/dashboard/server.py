@@ -395,10 +395,17 @@ def sec_workers():
         err = any(_ERR_RE.search(ln) and not _LOG_ECHO_RE.search(ln)
                   for ln in (_last_run_lines(w["log"], w["interval"]) if w.get("log") else []))
         p = paused_of.get(w["key"]) or {}
+        paused = bool(p.get("paused"))
+        # 수동/쿼터 hold가 있으면 로그가 낡거나 마지막 실행에 오류가 남아 있어도
+        # 현재 상태는 장애가 아니라 의도된 정지다. 소비자가 paused 필드를 놓쳐도
+        # stale/error로 오인하지 않도록 status 자체도 정규화한다.
+        if paused:
+            status = "paused"
+            err = False
         out.append(dict(key=w["key"], name=w["name"], schedule=w["schedule"],
                         status=status, age=age, last_ts=ts, err=err, tail=lines,
                         runs=runs, has_log=bool(w.get("log")),
-                        paused=bool(p.get("paused")), cron_id=p.get("id")))
+                        paused=paused, cron_id=p.get("id")))
     return out
 
 
