@@ -10,7 +10,6 @@ sidebar:
 
 date: 2026-08-25
 weight: 23
-drift_needed: true
 ---
 
 Algebraic geometry에서 가장 흔한 construction 가운데 하나는 국소적인 대상들을 붙여 하나의 대상으로 만드는 것으로, 가장 익숙한 예는 open cover를 따라 sheaf의 section을 붙이는 것이다. 이는 본질적으로 localization으로 주어지는 특별한 종류의 base change만을 사용하는 것인데, 우리가 실제로 다루고 싶은 많은 상황은 이보다 일반적인 것이다. 예를 들어 field extension $\mathbb{L}/\mathbb{K}$에 대응되는 $\Spec \mathbb{L}\rightarrow \Spec \mathbb{K}$는 residue field가 달라지므로 open embedding으로 볼 수 없다. 
