@@ -10,26 +10,27 @@ sidebar:
 
 date: 2026-08-30
 weight: 2
-translated_at: 2026-09-01T19:15:05+00:00
+translated_at: 2026-09-02T06:45:05+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-09-02T06:45:05+00:00
 ---
-The stacks we will deal with essentially come from moduli problems, and a representative example of such problems is the problem of classifying principal $G$-bundles over a topological space $X$, or vector bundles of rank $r$, which we saw in [\[Algebraic Topology\] §Classifying Spaces, ⁋Theorem 8](/en/math/algebraic_topology/classifying_spaces#thm8). The nicest fact we obtain from the functor of points perspective introduced in [\[Schemes\] §Functors of Points](/en/math/scheme_theory/functor_of_points) is that in the algebro-geometric form of this problem, we can regard a correspondence of this kind
+The stacks we will deal with essentially come from moduli problems, and a representative example of such problems is the problem of classifying principal $G$-bundles over a topological space $X$, or vector bundles of rank $r$, which we saw in [\[Algebraic Topology\] §Classifying Spaces, ⁋Theorem 8](/en/math/algebraic_topology/classifying_spaces#thm8). The nicest fact we gain from the functor of points perspective introduced in [\[Schemes\] §Functor of Points](/en/math/scheme_theory/functor_of_points) is that, in the algebro-geometric form of this problem, we can regard a correspondence of the kind
 
 $$F:\Sch^\op\rightarrow \Set;\qquad T\mapsto \{\text{principal $G$-bundles over $T$}\}$$
 
-as a functor in its own right and then ask whether this functor is actually represented by a scheme. However, this formula itself is not a well-defined functor, the essential reason being that to establish the functoriality of this correspondence, one must transport a bundle over $X$ to one over $Y$ using the pullback $f^\ast P$ of a bundle along a morphism $f:Y\rightarrow X$, yet the pullback bundle itself is by nature only determined up to unique isomorphism.
+as a functor in its own right and then ask whether this functor is actually represented by a scheme. However, this formula itself is not a well-defined functor, the essential reason being that to establish the functoriality of this correspondence one must transport a bundle over $X$ to one over $Y$ using the pullback $f^\ast P$ of a bundle along a morphism $f:Y\rightarrow X$, yet the pullback bundle itself is by nature only determined up to unique isomorphism.
 
-The way topology resolves this was simple. Instead of the naive correspondence above, everything is settled in $\hTop$. That is, one considers the correspondence
+The way topology resolves this is simple. Instead of the naive correspondence above, everything is settled in $\hTop$. That is, one considers the correspondence
 
 $$X\mapsto \{\text{principal $G$-bundles over $X$}\}/{\cong}$$
 
-The important result of that theory is then that there exists a universal bundle $\E G\rightarrow\B G$ over the classifying space $\B G$ of $G$, and that the correspondence pulling it back gives a bijection
+The important result of that theory is then that there exists a universal bundle $\E G\rightarrow\B G$ over the classifying space $\B G$ of $G$, and that pulling it back gives a bijection
 
 $$[X,\B G]\xrightarrow{\sim}\{\text{principal $G$-bundles over $X$}\}/{\cong};\qquad [f]\mapsto[f^\ast\E G]$$
 
-What makes this work is the condition that $\E G$ is contractible: if the pullbacks along two classifying maps are isomorphic, then the two $G$-equivariant maps from that bundle to $\E G$ are homotopic, and hence the two classifying maps are homotopic as well. In other words, this classification theorem is the statement that the two sets obtained after killing bundle isomorphisms and homotopies between morphisms as equivalence relations are equal.
+What makes this work is the condition that $\E G$ is contractible: if the pullbacks along two classifying maps are isomorphic, then the two $G$-equivariant maps from that bundle to $\E G$ are homotopic, and hence the two classifying maps are homotopic as well. In other words, this classification theorem states that the two sets obtained after quotienting out bundle isomorphisms on one side and homotopies between morphisms on the other are equal.
 
-The problem is that the language of algebraic geometry is more rigid than that of topology, and cannot accommodate homotopy in this way. The solution is to not kill the isomorphisms but to keep all of them alive; as a result, the moduli functor $F$ is now not $\Set$-valued but $\Grpd$-valued.
+The problem is that the language of algebraic geometry is more rigid than that of topology and cannot accommodate homotopy in this way. The solution is not to kill the isomorphisms but to keep all of them alive; as a result, the moduli functor $F$ is now not $\Set$-valued but $\Grpd$-valued.
 
 ## Groupoids
 
@@ -41,14 +42,14 @@ A category $\mathcal{G}$ is a *groupoid* if every morphism of $\mathcal{G}$ is a
 
 In [\[Category Theory\] §Category, ⁋Definition 10](/en/math/category_theory/categories#def10), we defined a group as a category with a single object in which every morphism is an isomorphism. Thus, for an object $x\in \mathcal{G}$ of a groupoid $\mathcal{G}$, $\Aut_\mathcal{G}(x)=\Hom_\mathcal{G}(x, x)$ forms a group under composition, which we call the *automorphism group* of $x$. We write $\Grpd$ for the category whose objects are groupoids and whose morphisms are functors between them.
 
-In this way a groupoid can be viewed as a generalization of a group, but that is not the whole story. The point of view useful to us is that it can also be seen as a generalization of a set, since any set can be regarded as a category whose only morphisms are identities. A groupoid $\mathcal{G}$ then has several objects just like a set, but it also carries an isomorphism structure between them.
+In this way a groupoid can be viewed as a generalization of a group, but that is not the whole story. The point of view useful to us is that it can also be regarded as a generalization of a set, since any set can be seen as a category whose only morphisms are identities. A groupoid $\mathcal{G}$ then has several objects just like a set, but it also carries an isomorphism structure between them.
 
-In the example from the introduction, the collection of all principal $G$-bundles over a fixed space $X$ corresponds to a groupoid structure. Choosing one representative from each isomorphism class then amounts to choosing a skeleton $\sk\mathcal{G}$ of the groupoid $\mathcal{G}$. That is, $\sk \mathcal{G}$ coincides with the collection of isomorphism classes of $\mathcal{G}$. Meanwhile, since a skeleton is a full subcategory, it faithfully retains the automorphism group $\Aut_\mathcal{G}(x)$ of each representative $x$; once we forget even the information of these automorphisms, what we obtain is a discrete groupoid, that is, a set.
+In the example from the introduction, the principal $G$-bundles over a fixed space $X$, taken all together, form a groupoid. Choosing one representative from each isomorphism class then amounts to choosing a skeleton $\sk\mathcal{G}$ of the groupoid $\mathcal{G}$. That is, $\sk \mathcal{G}$ coincides with the collection of isomorphism classes of $\mathcal{G}$. Meanwhile, since a skeleton is a full subcategory, it faithfully retains the automorphism group $\Aut_\mathcal{G}(x)$ of each representative $x$; once we forget even the information of these automorphisms, what we obtain is a discrete groupoid, that is, a set.
 
 ::: Example 2
 The following are examples of groupoids that we will examine in detail.
 
-1. For a fixed scheme $T$, the category whose objects are line bundles over $T$ and whose morphisms are isomorphisms of $\mathcal{O}_T$-modules between line bundles is a groupoid, and the automorphism group of each object $\mathcal{L}$ is $\Aut(\mathcal{L})=\Gamma(T, \mathcal{O}_T)^\ast=\mathbb{G}_m(T)$. If we then extract the set of isomorphism classes of this groupoid in the manner above, it is exactly the Picard group $\Pic(T)$, and this amounts to forgetting the information of the automorphism group $\mathbb{G}_m(T)$.
+1. For a fixed scheme $T$, the category whose objects are the line bundles over $T$ and whose morphisms are the isomorphisms of $\mathcal{O}_T$-modules between them is a groupoid, and the automorphism group of each object $\mathcal{L}$ is $\Aut(\mathcal{L})=\Gamma(T, \mathcal{O}_T)^\ast=\mathbb{G}_m(T)$. If we then extract the set of isomorphism classes of this groupoid in the manner above, it is exactly the Picard group $\Pic(T)$, and this amounts to forgetting the information of the automorphism group $\mathbb{G}_m(T)$.
 2. Another familiar example is the *fundamental groupoid* $\Pi_1(X)$ of a topological space $X$. ([\[Algebraic Topology\] §Homotopy, ⁋Definition 11](/en/math/algebraic_topology/homotopy#def11)) This is the category whose objects are points and whose morphisms are homotopy classes of paths, and the automorphism group at a point is exactly the fundamental group $\pi_1(X,x)$.
 3. As a trivial example in the flow of our story, any functor $F:\mathcal{C}^\op \rightarrow \Set$ is the special case assigning to each $T$ the discrete groupoid $F(T)$. That is, $\Set$-valued functors are a special case of $\Grpd$-valued functors.
 :::
@@ -57,19 +58,19 @@ In particular, the first example is the object we will mainly study. In general,
 
 ## Pseudofunctors
 
-Meanwhile, if we think of the moduli functor $F$ of principal $G$-bundles considered in the introduction, the intuitive reason its output sets had to be quotiented by isomorphism classes was the pullback. This is not something resolved merely by upgrading the target of the functor to $\Grpd$-valued. Therefore, to obtain the functoriality of $F$ in the strict sense, we must well-define the pullback
+Meanwhile, consider the moduli functor $F$ of principal $G$-bundles from the introduction. The intuitive reason its output had to be quotiented into isomorphism classes was the pullback, and this is not a problem resolved merely by upgrading the target of the functor to $\Grpd$. Therefore, to obtain the functoriality of $F$ in the strict sense, we must properly define the pullback
 
 $$f^\ast=F(f): F(V)\rightarrow F(U)$$
 
-that gives this functoriality; in other words, whenever a morphism $f: U\rightarrow V$ and an object over $V$ are given, we must make a *choice* that consistently picks out a pullback representation. And, however such choices are made, the pullback along a composite of two morphisms
+that provides this functoriality; in other words, whenever a morphism $f: U\rightarrow V$ and an object over $V$ are given, we must make a *choice* that consistently picks out a pullback representative. And however such choices are made, the pullback along a composite of two morphisms
 
 $$U\overset{f}{\longrightarrow}V\overset{g}{\longrightarrow}W$$
 
-is now *no longer* equal to the composite of the two pullbacks, and must only satisfy the condition that there exists an isomorphism
+is now *no longer* equal to the composite of the two pullbacks; all one can require is the existence of an isomorphism
 
 $$\varepsilon_{f, g}: f^\ast g^\ast P \xRightarrow{\sim} (g\circ f)^\ast P$$
 
-between the two. The idea of a pseudofunctor is to take all of these as data and to require that they define consistent data.
+between the two. The idea of a pseudofunctor is to take all of these as data and to require that they form coherent data.
 
 ::: Definition 3
 A *pseudofunctor* $F:\mathcal{C}^\op \rightarrow \Grpd$ over a category $\mathcal{C}$ consists of the following data.
@@ -115,7 +116,7 @@ In the end, the definition is somewhat complicated and long, but the essential o
 
 ## Categories Fibered in Groupoids
 
-A pseudofunctor is a familiar notion in that it generalizes a presheaf $\mathcal{C}^\op\rightarrow \Set$, but to put it to use in serious computation, there are already two kinds of isomorphisms to keep track of. The category fibered in groupoids that we treat in this section is an object carrying essentially equivalent data, but instead of remembering the choices of isomorphisms one by one as above, it hides them inside Cartesian diagrams.
+A pseudofunctor is a familiar notion in that it generalizes a presheaf $\mathcal{C}^\op\rightarrow \Set$, but to put it to use in serious computation there are already two kinds of isomorphisms to keep track of. The category fibered in groupoids that we treat in this section is an object carrying essentially equivalent data, but instead of remembering the choices of isomorphisms one by one as above, it hides them inside Cartesian diagrams.
 
 The basic idea is as follows. Earlier we kept a separate groupoid $F(U)$ for each object $U$; instead, we now collect the objects of all the $F(U)$ into a single category $\mathcal{F}$. To recover the original $F(U)$'s from this, we need a projection functor $P: \mathcal{F}\rightarrow \mathcal{C}$ that records over which $U$ each object lies. The key idea of this point of view is that the pullback $f^\ast$ enters as a *Cartesian morphism* in $\mathcal{F}$, and the universal property of this Cartesian morphism is exactly the data hiding the choices of isomorphisms above.
 
@@ -155,22 +156,22 @@ For a CFG $P:\mathcal{F} \rightarrow \mathcal{C}$, the following hold.
 
     so $\alpha$ and $\theta$ are inverse to each other. That is, every morphism of $\mathcal{F}(U)$ is invertible, so $\mathcal{F}(U)$ is a groupoid.
 
-2. Fix a cleavage. Then first, for each $\eta\in \mathcal{F}(V)$ a cartesian lift $\varphi_\eta:f^\ast \eta\rightarrow\eta$ is given. Now, for a morphism $\beta:\eta \rightarrow \eta'$ of $\mathcal{F}(V)$, apply the universal property of cartesian morphisms to the composite $\beta\circ \varphi_\eta:f^\ast \eta \rightarrow \eta'$ together with the cartesian morphism $\varphi_{\eta'}:f^\ast \eta' \rightarrow \eta'$ over $\eta$ and $h=\id_U$: then a unique $\theta:f^\ast \eta \rightarrow f^\ast \eta'$ with $\varphi_{\eta'}\circ \theta=\beta\circ \varphi_\eta$ and $P(\theta)=\id_U$ is determined, and we can therefore define it to be $f^\ast\beta$. Uniqueness then easily shows $f^\ast(\beta'\circ \beta)=f^\ast \beta'\circ f^\ast \beta$ and $f^\ast \id=\id$, so $f^\ast$ is a functor.
+2. Fix a cleavage. Then first, for each $\eta\in \mathcal{F}(V)$ a cartesian lift $\varphi_\eta:f^\ast \eta\rightarrow\eta$ is given. Now, for a morphism $\beta:\eta \rightarrow \eta'$ of $\mathcal{F}(V)$, apply the universal property of cartesian morphisms to the composite $\beta\circ \varphi_\eta:f^\ast \eta \rightarrow \eta'$ together with the cartesian morphism $\varphi_{\eta'}:f^\ast \eta' \rightarrow \eta'$ over $\eta'$ and $h=\id_U$: then a unique $\theta:f^\ast \eta \rightarrow f^\ast \eta'$ with $\varphi_{\eta'}\circ \theta=\beta\circ \varphi_\eta$ and $P(\theta)=\id_U$ is determined, and we can therefore define it to be $f^\ast\beta$. Uniqueness then easily shows $f^\ast(\beta'\circ \beta)=f^\ast \beta'\circ f^\ast \beta$ and $f^\ast \id=\id$, so $f^\ast$ is a functor.
 
     If instead one had chosen a different cleavage $\widetilde{\varphi}_\eta:\widetilde{f^\ast \eta}\rightarrow\eta$ above, the universal property of the two cartesian morphisms gives an isomorphism $\widetilde{f^\ast \eta}\cong f^\ast \eta$, natural in $\eta$.
 
     Finally, the composite $f^\ast g^\ast \eta \rightarrow g^\ast \eta \rightarrow \eta$ is a cartesian morphism lying over $g\circ f$, and $(g\circ f)^\ast \eta \rightarrow \eta$ is also one, so the universal property yields an isomorphism $f^\ast g^\ast \eta\cong(g\circ f)^\ast \eta$.
 :::
 
-Thus, given a CFG, one can recover a pseudofunctor through a cleavage, and this differs only up to canonical natural isomorphism depending on the choice of cleavage. We will show that, conversely, a pseudofunctor also gives a CFG and that these are inverse to each other, so the two formulations carry essentially the same information.
+Thus, given a CFG, one can recover a pseudofunctor through a cleavage, and the result differs only up to canonical natural isomorphism according to the choice of cleavage. We will show that, conversely, a pseudofunctor also gives a CFG and that these constructions are inverse to each other, so the two formulations carry essentially the same information.
 
-To state this correspondence precisely, we must first examine exactly what kind of object the collection of pseudofunctors and CFGs forms. For this we need to look at what the target $\Grpd$ really is: since it is a category of categories, viewing it as a $2$-category is presumably the way to lose no information. The most transparent example showing that this is actually necessary is the following. Consider the terminal groupoid $\ast$, and for an arbitrary groupoid $\mathcal{G}$, a functor $\ast\rightarrow \mathcal{G}$ is a choice of one object of $\mathcal{G}$, and a natural transformation between two such functors is the same as a morphism between those two objects. Therefore
+To state this correspondence precisely, we must first examine exactly what kind of object the collection of pseudofunctors and CFGs forms. For this we need to look at what the target $\Grpd$ really is: since it is a category of categories, viewing it as a $2$-category is presumably the way to lose no information. The most transparent example showing that this is actually necessary is the following. Consider the terminal groupoid $\ast$ and an arbitrary groupoid $\mathcal{G}$: a functor $\ast\rightarrow \mathcal{G}$ is a choice of one object of $\mathcal{G}$, and a natural transformation between two such functors is the same as a morphism between those two objects. Therefore
 
-$$\Fun(\ast,\mathcal{G})\simeq\mathcal{G}$$
+$$\Fun(\ast,\mathcal{G})\simeq\mathcal{G}.$$
 
-. On the other hand, if we view $\Grpd$ only as an ordinary category, $\Hom_{\Grpd}(\ast,\mathcal{G})$ retains only the objects of $\mathcal{G}$ as a set, losing the isomorphisms and automorphisms between them, which defeats the original purpose of passing from $\Set$ to $\Grpd$.
+On the other hand, if we view $\Grpd$ only as an ordinary category, $\Hom_{\Grpd}(\ast,\mathcal{G})$ retains only the objects of $\mathcal{G}$ as a set, losing the isomorphisms and automorphisms between them, which defeats the original purpose of passing from $\Set$ to $\Grpd$.
 
-For this reason, if we regard $\Grpd$ as a $2$-category (more precisely, as a $(2,1)$-category), it is natural to view the pseudofunctors with target $\Grpd$ as forming a $2$-category whose $1$-morphisms are pseudonatural transformations and whose $2$-morphisms are modifications between them. Indeed, the reason the canonical natural isomorphisms $\varepsilon_{f,g}$ and $\eta_U$ of a pseudofunctor can be recorded as coherence data is that the target $\Grpd$ has such $2$-morphisms. For this reason our correspondence ([Theorem 8](#thm8)) will also be given as a $2$-equivalence between $2$-categories, and to this end we must first define the $1$-morphisms and $2$-morphisms between CFGs.
+For this reason, once we regard $\Grpd$ as a $2$-category (more precisely, as a $(2,1)$-category), it is natural to view the pseudofunctors with target $\Grpd$ as forming a $2$-category whose $1$-morphisms are pseudonatural transformations and whose $2$-morphisms are modifications between them. Indeed, the reason the canonical natural isomorphisms $\varepsilon_{f,g}$ and $\eta_U$ of a pseudofunctor can be recorded as coherence data is that the target $\Grpd$ has such $2$-morphisms. For this reason our correspondence ([Theorem 8](#thm8)) will also be given as a $2$-equivalence between $2$-categories, and to this end we must first define the $1$-morphisms and $2$-morphisms between CFGs.
 
 ::: Definition 7
 A *morphism* between two CFGs $P:\mathcal{F} \rightarrow \mathcal{C}$ and $Q:\mathcal{G} \rightarrow \mathcal{C}$ is a functor $G:\mathcal{F} \rightarrow \mathcal{G}$ satisfying $Q\circ G=P$. A *2-morphism* between two morphisms $G, G':\mathcal{F} \rightarrow \mathcal{G}$ is a natural transformation $\alpha: G\Rightarrow G'$ each of whose components $\alpha_\xi$ lies over $\id_{P(\xi)}$.
@@ -187,7 +188,7 @@ We omit the proof, but the *Grothendieck construction* $\int_\mathcal{C}F$ corre
 In any case, by [Theorem 8](#thm8) we can freely describe a "groupoid varying over a base category" either as a pseudofunctor or as a CFG. From now on we mix the two languages according to context; in particular, we give definitions cleanly in terms of CFGs, but carry out concrete computations with notation such as the pullback $f^\ast$ and $x\vert_V$ of a pseudofunctor. The following examples are the main objects of this post.
 
 ::: Example 9
-1. For a fixed object $X\in \mathcal{C}$, the structure on the slice category $\mathcal{C}_{/X}$ given by the projection $P:(T \rightarrow X)\mapsto T$ is a CFG. In this case, the fiber $\mathcal{C}_{/X}(T)$ over $T$ is, by its definition, the set of morphisms $\Hom_\mathcal{C}(T, X)$ viewed as a discrete groupoid, and this is the CFG corresponding to the functor of points $h_X$.
+1. For a fixed object $X\in \mathcal{C}$, the slice category $\mathcal{C}_{/X}$ endowed with the projection $P:(T \rightarrow X)\mapsto T$ is a CFG. In this case, the fiber $\mathcal{C}_{/X}(T)$ over $T$ is, by its definition, the set of morphisms $\Hom_\mathcal{C}(T, X)$ viewed as a discrete groupoid, and this is the CFG corresponding to the functor of points $h_X$.
 
 2. Consider the category $\mathcal{QCoh}$ whose objects are pairs $(T, \mathcal{F})$ consisting of a scheme $T$ and a quasi-coherent sheaf $\mathcal{F}$ on it. A morphism from $(T, \mathcal{F})$ to $(T', \mathcal{F}')$ is given by a pair $(f, \alpha)$ of $f: T \rightarrow T'$ and an isomorphism $\alpha: \mathcal{F}\xrightarrow{\sim}f^\ast \mathcal{F}'$ of quasi-coherent sheaves. Endowing this with the projection $(T, \mathcal{F})\mapsto T$ makes it a CFG, and the fiber $\mathcal{QCoh}(T)$ over $T$ is the groupoid $\QCoh(T)$ of quasi-coherent sheaves on $T$. Here $\QCoh(T)$ takes only isomorphisms as morphisms.
 
@@ -196,31 +197,29 @@ In any case, by [Theorem 8](#thm8) we can freely describe a "groupoid varying ov
 
 ## Descent
 
-If we write a moduli problem as a set-valued presheaf $F$ as in the introduction, then *solving* it means finding a geometric object $X$ having a functor of points $h_X$ that is naturally isomorphic to $F$. So far we have changed the target to $\Grpd$ to obtain a language that remembers both families and the isomorphisms between them, but this alone does not guarantee representability or local-to-global properties.
+If we write a moduli problem as a set-valued presheaf $F$ as in the introduction, then *solving* it means finding a geometric object $X$ whose functor of points $h_X$ is naturally isomorphic to $F$. So far we have changed the target to $\Grpd$ to obtain a language that remembers both families and the isomorphisms between them, but this alone does not guarantee representability or local-to-global properties.
 
-In this section we show that such representability questions are closely related to the moduli functor being a sheaf. To talk about the sheaf condition, we must first put a topology on the base category. Since no topology was used in the definitions so far, there is no guarantee that compatible objects and isomorphisms over a covering glue into a global object. A stack is a $\Grpd$-valued sheaf obtained by imposing a descent condition on a CFG for the coverings of [§Grothendieck Topology, ⁋Definition 6](/en/math/stacks/grothendieck_topology#def6).
+In this section we show that such representability questions are closely related to the moduli functor being a sheaf. To talk about the sheaf condition, we must first put a topology on the base category. Since no topology was used in the definitions so far, there is no guarantee that compatible objects and isomorphisms over a covering glue into a global object. A stack is a $\Grpd$-valued sheaf obtained by imposing a descent condition on a CFG for the coverings of [§Grothendieck Topologies, ⁋Definition 6](/en/math/stacks/grothendieck_topology#def6).
 
-In this section $(\mathcal{C}, \tau)$ is a site, and we describe the topology by a pretopology given through covering families $\{U_i \rightarrow U\}$. ([§Grothendieck Topology, ⁋Definition 4](/en/math/stacks/grothendieck_topology#def4)) Also, when working with a CFG, we fix one cleavage of $P:\mathcal{F} \rightarrow \mathcal{C}$ and use the pullback $f^\ast$ of $f: V\rightarrow U$ and the restriction $x\vert_V=f^\ast x$.
+In this section $(\mathcal{C}, \tau)$ is a site, and we describe the topology by a pretopology given through covering families $\{U_i \rightarrow U\}$. ([§Grothendieck Topologies, ⁋Definition 4](/en/math/stacks/grothendieck_topology#def4)) Also, when working with a CFG, we fix one cleavage of $P:\mathcal{F} \rightarrow \mathcal{C}$ and use the pullback $f^\ast$ of $f: V\rightarrow U$ and the restriction $x\vert_V=f^\ast x$.
 
 ::: Definition 10
 Suppose a CFG $P:\mathcal{F} \rightarrow \mathcal{C}$, an object $U\in \mathcal{C}$, and two objects $x, y\in \mathcal{F}(U)$ are given. The *Isom presheaf* over $U$ is the presheaf on the slice site $\mathcal{C}_{/U}$ defined by the assignment
 
-$$\rIsom_U(x, y):(\mathcal{C}_{/U})^\op \rightarrow \Set;\qquad (f: V \rightarrow U)\mapsto \Hom_{\mathcal{F}(V)}(f^\ast x, f^\ast y)$$
-
-.
+$$\rIsom_U(x, y):(\mathcal{C}_{/U})^\op \rightarrow \Set;\qquad (f: V \rightarrow U)\mapsto \Hom_{\mathcal{F}(V)}(f^\ast x, f^\ast y).$$
 :::
 
 In this presheaf, the restriction map for a morphism $g: W \rightarrow V$ of $\mathcal{C}_{/U}$ is induced by the pullback $g^\ast$ and the isomorphism $g^\ast f^\ast\cong(f\circ g)^\ast$. Concretely, restricting an isomorphism $\beta: f^\ast x\xrightarrow{\sim}f^\ast y$ over $V$ to $W$ yields
 
-$$g^\ast\beta: g^\ast f^\ast x\rightarrow g^\ast f^\ast y$$
+$$g^\ast\beta: g^\ast f^\ast x\rightarrow g^\ast f^\ast y.$$
 
-. This is an isomorphism since $g^\ast$ is a functor, and identifying the two ends via $g^\ast f^\ast\cong(f\circ g)^\ast$ makes it an element of $\rIsom_U(x,y)(W)$.
+This is an isomorphism since $g^\ast$ is a functor, and identifying the two ends via $g^\ast f^\ast\cong(f\circ g)^\ast$ makes it an element of $\rIsom_U(x,y)(W)$.
 
 In the strategy explained earlier, a CFG corresponds to a $\Grpd$-valued presheaf, so to make it into a $\Grpd$-valued sheaf we must be able to glue the local fiber groupoids over a covering into a single global fiber groupoid. Since a groupoid consists of objects and the isomorphisms between them, this involves both the problem of gluing morphisms and the problem of gluing objects.
 
-Let us first consider the problem of gluing morphisms. For two fixed objects $x,y\in\mathcal{F}(U)$, $\rIsom_U(x,y)$ is the presheaf collecting the local isomorphisms that exist between their restrictions. Here the source and target of the local isomorphisms are already given as restrictions of the global objects $x,y$. For this presheaf to be a sheaf means that local isomorphisms given over a covering glue into a unique global isomorphism whenever they agree on the overlaps. This is descent for morphisms, and in the categorical equivalence of [\[Schemes\] §Faithfully Flat Descent, ⁋Theorem 6](/en/math/scheme_theory/faithfully_flat_descent#thm6) it corresponds to full faithfulness.
+Let us first consider the problem of gluing morphisms. For two fixed objects $x,y\in\mathcal{F}(U)$, $\rIsom_U(x,y)$ is the presheaf collecting the local isomorphisms that exist between their restrictions. Here the source and target of the local isomorphisms are already given as restrictions of the global objects $x,y$. For this presheaf to be a sheaf means that local isomorphisms given over a covering glue into a unique global isomorphism whenever they agree on the overlaps. This is descent for morphisms, and in the categorical equivalence of [\[Schemes\] §Faithfully Flat Descent, ⁋Theorem 6](/en/math/scheme_theory/faithfully_flat_descent#thm6), this corresponds to full faithfulness.
 
-In the problem of gluing objects, no global object is given in advance. Therefore, in addition to the objects $x_i$ over each $U_i$, one must also give isomorphisms $\varphi_{ij}$ over the overlaps $U_{ij}$ identifying them. These are the data specifying how to glue the $x_i$'s, and what one obtains when they satisfy the cocycle condition is a descent datum. Asking whether this descent datum comes from the restrictions of an actual global object is effective descent for objects, and in the above categorical equivalence it corresponds to essential surjectivity. Since essential surjectivity does not follow from full faithfulness alone, being able to glue morphisms does not by itself allow one to glue objects. This is the transport of the descent datum of [\[Schemes\] §Faithfully Flat Descent, ⁋Definition 4](/en/math/scheme_theory/faithfully_flat_descent#def4) to an arbitrary CFG.
+In the problem of gluing objects, no global object is given in advance. Therefore, in addition to the objects $x_i$ over each $U_i$, one must also give isomorphisms $\varphi_{ij}$ over the overlaps $U_{ij}$ identifying them. These are the data specifying how to glue the $x_i$'s, and what one obtains when they satisfy the cocycle condition is a descent datum. Asking whether this descent datum comes from the restrictions of an actual global object is effective descent for objects, and in the above categorical equivalence it corresponds to essential surjectivity. Since essential surjectivity does not follow from full faithfulness alone, being able to glue morphisms does not by itself allow one to glue objects. This transports the descent datum of [\[Schemes\] §Faithfully Flat Descent, ⁋Definition 4](/en/math/scheme_theory/faithfully_flat_descent#def4) to an arbitrary CFG.
 
 To this end, let us fix the notation to be used in the next definition. For a given covering family $\{f_i: U_i \rightarrow U\}_{i\in I}$, we write
 
@@ -237,16 +236,16 @@ Suppose a CFG $P:\mathcal{F} \rightarrow \mathcal{C}$ and a covering family $\{f
 satisfying the *cocycle condition* $\varphi_{ik}\vert_{U_{ijk}}=\varphi_{ij}\vert_{U_{ijk}}\circ \varphi_{jk}\vert_{U_{ijk}}$ over $U_{ijk}$.
 :::
 
-As with descent for schemes, if there exist an object $x\in \mathcal{F}(U)$ and isomorphisms $\psi_i: x\vert_{U_i}\rightarrow x_i$ such that $\varphi_{ij}\circ(\psi_j\vert_{U_{ij}})=\psi_i\vert_{U_{ij}}$ holds over each $U_{ij}$, we call this an *effective* descent. That is, when the pieces are glued together through the descent datum, an actually existing element $x$ is obtained. In faithfully flat descent, descent data for modules were always effective ([\[Schemes\] §Faithfully Flat Descent, ⁋Theorem 6](/en/math/scheme_theory/faithfully_flat_descent#thm6)), but for a general CFG, effectivity is a separate condition. Combining these two conditions defines a stack.
+As with descent for schemes, if there exist an object $x\in \mathcal{F}(U)$ and isomorphisms $\psi_i: x\vert_{U_i}\rightarrow x_i$ such that $\varphi_{ij}\circ(\psi_j\vert_{U_{ij}})=\psi_i\vert_{U_{ij}}$ holds over each $U_{ij}$, we say the descent datum is *effective*. That is, when the pieces are glued together through the descent datum, an actually existing object $x$ is obtained. In faithfully flat descent, descent data for modules were always effective ([\[Schemes\] §Faithfully Flat Descent, ⁋Theorem 6](/en/math/scheme_theory/faithfully_flat_descent#thm6)), but for a general CFG, effectivity is a separate condition. Combining these two conditions defines a stack.
 
 ::: Definition 12
 For a CFG $P:\mathcal{F} \rightarrow \mathcal{C}$ over a site $(\mathcal{C}, \tau)$,
 
-1. $\mathcal{F}$ is a *prestack* means that for any $U$ and $x, y\in \mathcal{F}(U)$, the presheaf $\rIsom_U(x, y)$ is a sheaf on $\mathcal{C}_{/U}$. ([§Grothendieck Topologies, ⁋Definition 9](/en/math/stacks/grothendieck_topology#def9)
-2. $\mathcal{F}$ is a *stack* means that $\mathcal{F}$ is a prestack and moreover every descent datum for any covering family is effective.
+1. We call $\mathcal{F}$ a *prestack* if, for any $U$ and $x, y\in \mathcal{F}(U)$, the presheaf $\rIsom_U(x, y)$ is a sheaf on $\mathcal{C}_{/U}$. ([§Grothendieck Topologies, ⁋Definition 9](/en/math/stacks/grothendieck_topology#def9))
+2. We call $\mathcal{F}$ a *stack* if it is a prestack and moreover every descent datum for any covering family is effective.
 :::
 
-By [Theorem 8](#thm8), passing to the pseudofunctor $F:\mathcal{C}^\op\rightarrow\Grpd$ corresponding to $\mathcal{F}$, Definition 12 can be expressed as a single equivalence condition. Fix a covering $\mathcal{U}=\{U_i\rightarrow U\}$, and write $\Desc_F(\mathcal{U})$ for the groupoid whose objects are the descent data of [Definition 11](#def11). A morphism between two descent data $(x_i,\varphi_{ij})$ and $(y_i,\psi_{ij})$ is a family $\theta_i:x_i\rightarrow y_i$ of local morphisms satisfying $\psi_{ij}\circ\theta_j=\theta_i\circ\varphi_{ij}$ on each overlap.
+By [Theorem 8](#thm8), passing to the pseudofunctor $F:\mathcal{C}^\op\rightarrow\Grpd$ corresponding to $\mathcal{F}$, Definition 12 can be stated as a single equivalence condition. Fix a covering $\mathcal{U}=\{U_i\rightarrow U\}$, and write $\Desc_F(\mathcal{U})$ for the groupoid whose objects are the descent data of [Definition 11](#def11). A morphism between two descent data $(x_i,\varphi_{ij})$ and $(y_i,\psi_{ij})$ is a family $\theta_i:x_i\rightarrow y_i$ of local morphisms satisfying $\psi_{ij}\circ\theta_j=\theta_i\circ\varphi_{ij}$ on each overlap.
 
 Restricting a global object $x\in F(U)$ to each $U_i$ and using the canonical comparison isomorphisms of the pseudofunctor on double overlaps produces a descent datum. Hence the restriction functor
 
@@ -260,9 +259,9 @@ Thus a stack, in one sentence, is a $\Grpd$-valued sheaf over a site (more preci
 Suppose that every fiber $\mathcal{F}(U)$ of a CFG $P:\mathcal{F} \rightarrow \mathcal{C}$ is a discrete groupoid. Then $\mathcal{F}$ corresponds to some presheaf $F:\mathcal{C}^\op \rightarrow \Set$, and in this case $\mathcal{F}$ being a prestack is equivalent to $F$ being a separated presheaf, and $\mathcal{F}$ being a stack is equivalent to $F$ being a sheaf.
 :::
 ::: Proof
-Since the fibers are discrete, the pseudofunctor of [Theorem 8](#thm8) is a strict functor $F:\mathcal{C}^\op \rightarrow \Set$ (viewing $\Set$ as the category of discrete groupoids). For two objects $x, y\in \mathcal{F}(U)=F(U)$, the set $\Hom_{\mathcal{F}(V)}(x\vert_V, y\vert_V)$ is a one-element set if $x\vert_V=y\vert_V$ and empty otherwise. Hence $\rIsom_U(x, y)$ being a sheaf means that if $x, y$ agree on each $U_i$ of a covering (with the gluing condition holding vacuously), then they agree on $U$; in other words, amalgamations in $F$ are unique. ([§Grothendieck Topologies, ⁋Definition 9](/en/math/stacks/grothendieck_topology#def9)
+Since the fibers are discrete, the pseudofunctor of [Theorem 8](#thm8) is a strict functor $F:\mathcal{C}^\op \rightarrow \Set$ (viewing $\Set$ as the category of discrete groupoids). For two objects $x, y\in \mathcal{F}(U)=F(U)$, the set $\Hom_{\mathcal{F}(V)}(x\vert_V, y\vert_V)$ is a one-element set if $x\vert_V=y\vert_V$ and empty otherwise. Hence $\rIsom_U(x, y)$ being a sheaf means that if $x, y$ agree on each $U_i$ of a covering (with the gluing condition holding vacuously), then they agree on $U$; in other words, amalgamations in $F$ are unique. ([§Grothendieck Topologies, ⁋Definition 9](/en/math/stacks/grothendieck_topology#def9))
 
-Next, consider effective descent. In discrete fibers, every isomorphism $\varphi_{ij}$ is necessarily the identity, so a descent datum is merely a family $(x_i)$ satisfying $x_i\vert_{U_{ij}}=x_j\vert_{U_{ij}}$, that is, a matching family of $F$. Its effectivity is precisely the existence of an amalgamation $x\in F(U)$. Hence every descent datum being effective means every matching family of $F$ has an amalgamation, and combined with the prestack condition this is exactly the sheaf condition. ([§Grothendieck Topologies, ⁋Proposition 10](/en/math/stacks/grothendieck_topology#prop10)
+Next, consider effective descent. In discrete fibers, every isomorphism $\varphi_{ij}$ is necessarily the identity, so a descent datum is merely a family $(x_i)$ satisfying $x_i\vert_{U_{ij}}=x_j\vert_{U_{ij}}$, that is, a matching family of $F$. Its effectivity is precisely the existence of an amalgamation $x\in F(U)$. Hence every descent datum being effective means every matching family of $F$ has an amalgamation, and combined with the prestack condition this is exactly the sheaf condition. ([§Grothendieck Topologies, ⁋Proposition 10](/en/math/stacks/grothendieck_topology#prop10))
 :::
 
 From this we obtain the following corollary, which is important for our purposes.
@@ -281,7 +280,7 @@ By [§Grothendieck Topologies, ⁋Theorem 14](/en/math/stacks/grothendieck_topol
 We now construct concrete stacks. The most fundamental example is the quasi-coherent sheaf CFG of [Example 9](#ex9); the fact that it is a stack is a direct translation of faithfully flat descent.
 
 ::: Theorem 15
-Take the base site to be the fpqc site on $\Sch$ (or $\Sch_{/S}$). ([[\[Schemes\] §Faithfully Flat Descent, ⁋Definition 9](/en/math/scheme_theory/faithfully_flat_descent#def9) Then the quasi-coherent sheaf CFG $\mathcal{QCoh}$ of [Example 9](#ex9) is a stack.
+Take the base site to be the fpqc site on $\Sch$ (or $\Sch_{/S}$). ([[\[Schemes\] §Faithfully Flat Descent, ⁋Definition 9](/en/math/scheme_theory/faithfully_flat_descent#def9)) Then the quasi-coherent sheaf CFG $\mathcal{QCoh}$ of [Example 9](#ex9) is a stack.
 :::
 ::: Proof
 We reduce the prestack condition and effectivity in turn to faithfully flat descent. Both conditions concern fpqc coverings, and by quasi-compactness one can collect a finite subcover, take the disjoint union, and thereby reduce to the case of a single affine faithfully flat morphism $\Spec B \rightarrow \Spec A$.
@@ -290,12 +289,12 @@ First we verify the prestack condition. For two quasi-coherent sheaves $\mathcal
 
 $$(\Spec A' \rightarrow \Spec A)\mapsto \Hom_{A'}(M\otimes_A A', N\otimes_A A')$$
 
-is a sheaf. This is because an isomorphism is cut out as a subsheaf by the condition that a pair of homomorphisms in each direction compose to the identity. Now, the faithfully flat descent functor $\rMod{A} \rightarrow \Desc(B/A)$ is a categorical equivalence ([[\[Schemes\] §Faithfully Flat Descent, ⁋Theorem 6](/en/math/scheme_theory/faithfully_flat_descent#thm6), hence in particular it is fully faithful. ([[\[Category Theory\] §Functor, ⁋Definition 10](/en/math/category_theory/functors#def10) Full faithfulness says precisely that homomorphisms descend uniquely along the covering $\{\Spec B \rightarrow \Spec A\}$, i.e. the sheaf condition for the $\Hom$ presheaf.
+is a sheaf. This is because an isomorphism is cut out as a subsheaf by the condition that homomorphisms in both directions compose to the identity. Now, the faithfully flat descent functor $\rMod{A} \rightarrow \Desc(B/A)$ is a categorical equivalence ([[\[Schemes\] §Faithfully Flat Descent, ⁋Theorem 6](/en/math/scheme_theory/faithfully_flat_descent#thm6)), hence in particular it is fully faithful. ([\[Category Theory\] §Functor, ⁋Definition 10](/en/math/category_theory/functors#def10)) Full faithfulness says precisely that homomorphisms descend uniquely along the covering $\{\Spec B \rightarrow \Spec A\}$, i.e. the sheaf condition for the $\Hom$ presheaf.
 
-For effectivity, a descent datum over a covering family $\{T_i \rightarrow T\}$ consists of quasi-coherent sheaves $\mathcal{F}_i$ on each $T_i$ together with cocycle isomorphisms $\varphi_{ij}$ over $T_{ij}$. This is exactly a descent datum for quasi-coherent sheaves, and since quasi-coherent sheaves satisfy effective descent for the fpqc topology ([[\[Schemes\] §Faithfully Flat Descent, ⁋Theorem 11](/en/math/scheme_theory/faithfully_flat_descent#thm11), they glue uniquely to a quasi-coherent sheaf $\mathcal{F}$ on $T$ together with isomorphisms $\mathcal{F}\vert_{T_i}\cong \mathcal{F}_i$. Therefore every descent datum is effective, and together with the prestack condition this shows that $\mathcal{QCoh}$ is a stack.
+For effectivity, a descent datum over a covering family $\{T_i \rightarrow T\}$ consists of quasi-coherent sheaves $\mathcal{F}_i$ on each $T_i$ together with cocycle isomorphisms $\varphi_{ij}$ over $T_{ij}$. This is exactly a descent datum for quasi-coherent sheaves, and since quasi-coherent sheaves satisfy effective descent for the fpqc topology ([\[Schemes\] §Faithfully Flat Descent, ⁋Theorem 11](/en/math/scheme_theory/faithfully_flat_descent#thm11)), they glue uniquely to a quasi-coherent sheaf $\mathcal{F}$ on $T$ together with isomorphisms $\mathcal{F}\vert_{T_i}\cong \mathcal{F}_i$. Therefore every descent datum is effective, and together with the prestack condition this shows that $\mathcal{QCoh}$ is a stack.
 :::
 
-[Theorem 15](#thm15) makes explicit once again the principle we saw above: the prestack condition reduces to the full faithfulness of [[\[Schemes\] §Faithfully Flat Descent, ⁋Theorem 6](/en/math/scheme_theory/faithfully_flat_descent#thm6), while effectivity reduces to the effective descent of [[\[Schemes\] §Faithfully Flat Descent, ⁋Theorem 11](/en/math/scheme_theory/faithfully_flat_descent#thm11), respectively.
+[Theorem 15](#thm15) makes explicit once again the principle we saw above: the prestack condition reduces to the full faithfulness of [\[Schemes\] §Faithfully Flat Descent, ⁋Theorem 6](/en/math/scheme_theory/faithfully_flat_descent#thm6), while effectivity reduces to the effective descent of [\[Schemes\] §Faithfully Flat Descent, ⁋Theorem 11](/en/math/scheme_theory/faithfully_flat_descent#thm11), respectively.
 
 On the other hand, not every CFG is a stack, so we need a universal operation that completes a prestack into a stack. This is *stackification*, the stack version of the sheafification of [§Grothendieck Topologies, ⁋Theorem 12](/en/math/stacks/grothendieck_topology#thm12).
 
@@ -316,7 +315,7 @@ Let $G$ be a sheaf of groups on a site $(\mathcal{C}, \tau)$ and $T\in \mathcal{
 
 $$P\vert_{T_i}\cong G\vert_{T_i}$$
 
-where the right-hand side carries the left-translation action of $G\vert_{T_i}$. A morphism of $G$-torsors is a $G$-equivariant sheaf morphism, and the $G$-torsors over $T$ form a groupoid $\bB G(T)$. We write $\bB G$ for the CFG defined by the correspondence $T\mapsto \bB G(T)$, called the *classifying stack* $\bB G$.
+where the right-hand side carries the left-translation action of $G\vert_{T_i}$. A morphism of $G$-torsors is a $G$-equivariant sheaf morphism, and the $G$-torsors over $T$ form a groupoid $\bB G(T)$. The CFG defined by the correspondence $T\mapsto \bB G(T)$ is called the *classifying stack* $\bB G$.
 :::
 
 Comparing the local trivializations $P\vert_{T_i}\cong G\vert_{T_i}$ yields $G$-valued transition data $g_{ij}\in G(T_{ij})$ over $T_{ij}$, which form a cocycle. The trivial torsor $G\vert_T$ is an object of $\bB G(T)$ with automorphism group $\Aut_{\bB G(T)}(G\vert_T)\cong G(T)$. Thus $\bB G$ remembers $G$ as automorphisms even of the trivial torsor, and the isomorphism classes of $\bB G(T)$ are classified by $H^1(T, G)$. The most important case is $G=\mathbb{G}_m$; this is the classification of line bundles anticipated in [Example 2](#ex2).
@@ -325,11 +324,11 @@ Comparing the local trivializations $P\vert_{T_i}\cong G\vert_{T_i}$ yields $G$-
 Over the fpqc site on $\Sch$ (or $\Sch_{/S}$), the classifying stack $\bB\mathbb{G}_m$ of $\mathbb{G}_m$-torsors is equivalent to the CFG whose fiber over $T$ is the groupoid $\mathcal{L}(T)$ of line bundles over $T$, and this CFG is a stack.
 :::
 ::: Proof
-First, the equivalence between $\mathbb{G}_m$-torsors and line bundles was seen in [[\[Schemes\] §Group Schemes, ⁋Example 15](/en/math/scheme_theory/group_schemes#ex15). Under the frame torsor construction, isomorphisms of line bundles correspond to $\mathbb{G}_m$-equivariant isomorphisms of frame torsors, and this correspondence is compatible with base change. Hence $\bB\mathbb{G}_m(T)\cong \mathcal{L}(T)$ for each $T$, and the two CFGs are equivalent.
+First, the equivalence between $\mathbb{G}_m$-torsors and line bundles was seen in [\[Schemes\] §Group Schemes, ⁋Example 15](/en/math/scheme_theory/group_schemes#ex15). Under the frame torsor construction, isomorphisms of line bundles correspond to $\mathbb{G}_m$-equivariant isomorphisms of frame torsors, and this correspondence is compatible with base change. Hence $\bB\mathbb{G}_m(T)\cong \mathcal{L}(T)$ for each $T$, and the two CFGs are equivalent.
 
 We now show that the line bundle CFG $\mathcal{L}$ is a stack. It is the full sub-CFG of $\mathcal{QCoh}$ consisting only of invertible sheaves, so the Isom presheaf between two line bundles $\mathcal{E}, \mathcal{F}\in\mathcal{L}(T)$ coincides with the presheaf $\rIsom_T(\mathcal{E}, \mathcal{F})$ computed in $\mathcal{QCoh}$. By [Theorem 15](#thm15), this presheaf is a sheaf; hence $\mathcal{L}$ is a prestack.
 
-Next we check object descent. Suppose we have line bundles $\mathcal{L}_i$ over a covering family $\{T_i \rightarrow T\}$ and isomorphisms $\varphi_{ij}$ over the overlaps forming a descent datum. By [Theorem 15](#thm15), there exists a quasi-coherent sheaf $\mathcal{F}$ realizing this datum, with isomorphisms $\mathcal{F}\vert_{T_i}\cong \mathcal{L}_i$. Since being locally free of rank $1$ descends along fpqc coverings by [[\[Schemes\] §Faithfully Flat Descent, ⁋Proposition 7](/en/math/scheme_theory/faithfully_flat_descent#prop7), $\mathcal{F}$ is also invertible. Hence every descent datum is effective inside $\mathcal{L}(T)$, and $\mathcal{L}\cong \bB\mathbb{G}_m$ is a stack.
+Next we check object descent. Suppose we have line bundles $\mathcal{L}_i$ over a covering family $\{T_i \rightarrow T\}$ and isomorphisms $\varphi_{ij}$ over the overlaps forming a descent datum. By [Theorem 15](#thm15), there exists a quasi-coherent sheaf $\mathcal{F}$ realizing this datum, with isomorphisms $\mathcal{F}\vert_{T_i}\cong \mathcal{L}_i$. Since being locally free of rank $1$ descends along fpqc coverings by [\[Schemes\] §Faithfully Flat Descent, ⁋Proposition 7](/en/math/scheme_theory/faithfully_flat_descent#prop7), $\mathcal{F}$ is also invertible. Hence every descent datum is effective inside $\mathcal{L}(T)$, and $\mathcal{L}\cong \bB\mathbb{G}_m$ is a stack.
 :::
 
 ---
