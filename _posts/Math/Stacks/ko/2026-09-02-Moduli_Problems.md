@@ -81,12 +81,12 @@ $$\mathcal{O}_T^n\twoheadrightarrow \mathcal{Q},\qquad \mathcal{Q}\text{ is loca
 
 ## Automorphism으로 인한 장애
 
-앞 절의 예들이 작동한 까닭이 강성에 있었다면, 강성이 깨진 문제, 곧 분류 대상이 비자명한 automorphism을 본질적으로 가지는 문제에서는 fine moduli가 어떻게 되는지를 물어야 한다. 결론은 부정적이다. 비자명한 automorphism은 isomorphism class가 같으면서도 서로 다른 *비자명한 등질 족*을 만들어내며, 이것이 representability를 정면으로 막는다.
+앞 절의 예들이 작동한 까닭이 강성에 있었다면, 강성이 깨진 문제, 곧 분류 대상이 비자명한 automorphism을 본질적으로 가지는 문제에서는 fine moduli가 어떻게 되는지를 물어야 한다. 결론은 부정적이다. 비자명한 automorphism은 isomorphism class가 같으면서도 서로 다른 *비자명한 등질 족*을 만들어낼 여지를 열고, 그러한 족이 실제로 하나라도 있으면 representability가 정면으로 막힌다.
 
 핵심은 다음 관찰이다. Fine moduli space가 존재한다면 set-값 moduli functor $\underline{M}$은 representable functor $\Hom_\Sch(-, M)$과 isomorphic이고, representable functor는 fpqc topology(따라서 그보다 거친 étale·Zariski topology)에 대한 sheaf이다. 이는 faithfully flat descent의 표준적 귀결로, affine한 $M=\Spec R$의 경우 global section presheaf $T\mapsto \Gamma(T, \mathcal{O}_T)$이 fpqc sheaf라는 [\[스킴\] §충실평탄하강, ⁋정리 10](/ko/math/scheme_theory/faithfully_flat_descent#thm10)으로부터 $\Hom_\Sch(-, \Spec R)=\Hom_{\mathrm{Ring}}(R, \Gamma(-, \mathcal{O}))$을 통해 따라오고, 일반적인 $M$은 affine open으로 덮어 접합하여 얻는다. 즉 한 scheme으로 가는 morphism들은 covering 위에서 정합적으로 주어지면 유일하게 이어 붙는다. 그러므로 $\underline{M}$이 sheaf가 아니면 fine moduli는 존재할 수 없다. 비자명한 automorphism은 정확히 이 sheaf 조건의 분리성, 곧 "covering 위에서 같은 족은 원래 같다"는 부분을 깨뜨린다.
 
 ::: 명제 5
-한 moduli 문제에 대하여, 어떤 scheme $T$와 그 위의 surjective étale covering $S \rightarrow T$, 그리고 족 $X\in \mathcal{M}(T)$이 존재하여 다음을 만족한다고 하자. 어떤 고정된 대상 $E$에 대하여 $S$로 끌어당기면 $X\times_T S\cong E\times S$이지만 ($X$이 *isotrivial<sub>등질</sub>*하지만), $X$이 $T$ 위에서 상수 족 $E\times T$과 isomorphic이 아니다. 그럼 이 문제는 fine moduli space를 가지지 않는다.
+한 moduli 문제에 대하여, 어떤 scheme $T$와 그 위의 surjective étale covering $S \rightarrow T$, 그리고 족 $X\in \mathcal{M}(T)$이 존재하여 다음을 만족한다고 하자. 어떤 고정된 대상 $E$에 대하여 $S$로 끌어당기면 $X\times_T S\cong E\times S$이지만 ($X$이 *등질<sub>isotrivial</sub>*하지만), $X$이 $T$ 위에서 상수 족 $E\times T$과 isomorphic이 아니다. 그럼 이 문제는 fine moduli space를 가지지 않는다.
 :::
 ::: 증명
 Fine moduli space $M$이 존재한다고 가정하고 모순을 이끈다. [정의 2](#def2)에 의하여 set-값 moduli functor는 representable functor $\underline{M}\cong \Hom_\Sch(-, M)$이고, 위에서 확인한 대로 이는 fpqc 위상에 대한 sheaf, 따라서 그보다 거친 étale 위상에 대해서도 sheaf이다. Sheaf의 조건 가운데 분리성은, 임의의 covering $S \rightarrow T$에 대하여 restriction map
@@ -104,20 +104,20 @@ $$X=(E\times S)/(\mathbb{Z}/d) \rightarrow S/(\mathbb{Z}/d)=T$$
 
 이 그러한 족이다. $S$로 끌어당기면 $X\times_T S\cong E\times S$이 되어 등질이며, 이 torsor를 $\mathbb{Z}/d \rightarrow \Aut(E)$, $1\mapsto \sigma$을 따라 밀어낸 $\Aut(E)$-torsor가 비자명하면 $X$은 상수 족과 isomorphic이 아니다. 이는 sheaf 조건의 분리성이 깨지는 모습 그 자체이다. 두 족 $X$과 $E\times T$이 covering $S \rightarrow T$ 위에서 isomorphic이 되지만 $T$ 위에서는 isomorphic이 아니므로, $\underline{M}(T) \rightarrow \underline{M}(S)$이 단사가 아니어서 $\underline{M}$은 separated presheaf조차 되지 못한다. ([§스택, ⁋명제 13](/ko/math/stacks/fibered_categories_and_stacks#prop13))
 
-이 구성에서 결정적인 것은 밀어낸 $\Aut(E)$-torsor의 비자명성이며, 이는 automorphism이 비자명하다는 것만으로는 따라오지 않는다. Field $\mathbb{K}$ 위의 비자명한 $\mu_2$-torsor를 포함 $\mu_2\subseteq \mathbb{G}_m$을 따라 밀어내면, [\[체론\] §갈루아 군의 성질들, ⁋정리 7](/ko/math/field_theory/properties_of_galois_extensions#thm7)에 의하여 $\mathbb{K}$ 위의 $\mathbb{G}_m$-torsor가 모두 자명하므로 그 image는 trivial torsor가 된다. 곧 fine moduli를 막는 것은 automorphism의 존재 자체가 아니라 그것이 실제로 비자명한 form을 낳는다는 사실이고, 그 비자명성은 분류 문제마다 확인해야 한다. 타원곡선에서는 그것이 언제나 가능하다.
+이 구성에서 결정적인 것은 밀어낸 $\Aut(E)$-torsor의 비자명성이며, 이는 automorphism이 비자명하다는 것만으로는 따라오지 않는다. Field $\mathbb{K}$ 위의 비자명한 $\mu_2$-torsor를 포함 $\mu_2\subseteq \mathbb{G}_m$을 따라 밀어내면, [\[체론\] §갈루아 군의 성질들, ⁋정리 7](/ko/math/field_theory/properties_of_galois_extensions#thm7)에 의하여 $\mathbb{K}$ 위의 $\mathbb{G}_m$-torsor가 모두 자명하므로 그 image는 trivial torsor가 된다. 곧 fine moduli를 막는 것은 automorphism의 존재 자체가 아니라 그것이 실제로 비자명한 form을 낳는다는 사실이고, 그 비자명성은 분류 문제마다 확인해야 한다. 타원곡선에서는 그러한 form이 실제로 존재한다.
 
 ::: 예시 6 (타원곡선에 fine moduli가 없음)
 Section을 가진 타원곡선 $(E, 0)$은 항상 비자명한 automorphism $[-1]:(\x, \y)\mapsto(\x, -\y)$을 가지며, 이는 section $0$을 고정하는 order $2$의 automorphism이다. 곧 모든 타원곡선에 대하여 $\{\pm 1\}\cong \mathbb{Z}/2\subseteq \Aut(E, 0)$이다. 따라서 $\sigma=[-1]$, $d=2$으로 위의 구성을 적용한다. Characteristic $0$의 field $k$ 위에서 타원곡선 $E:\y^2=\x^3+a\x+b$ ($ab\neq 0$)을 고정하고, $T=\Spec k(t)$과 그 이차확대 $S=\Spec k(t)[\sqrt{t}]$으로 두자. $t$은 $k(t)$의 제곱이 아니므로 $S \rightarrow T$은 비자명한 $\mathbb{Z}/2$-torsor이다. 이때 위의 quotient $X=(E\times S)/(\mathbb{Z}/2)$은 $E$의 *이차 twist* $\y^2=\x^3+t^2a\x+t^3b$이며, $X\times_T S\cong E\times S$이지만 $T$ 위에서는 상수 족과 isomorphic이 아니다. 실제로 $T$ 위의 isomorphism은 좌표변환 $(\x, \y)\mapsto(c^2\x, c^3\y)$의 꼴이어서 $c^4=t^2$과 $c^6=t^3$, 곧 $c^2=t$을 요구하는데, 그러한 $c\in k(t)^\times$은 없다. [명제 5](#prop5)에 의하여 section을 가진 타원곡선의 moduli 문제는 fine moduli space를 가지지 않는다. 이 twist는 $j$-불변량을 바꾸지 않으므로, 기하적 isomorphism class를 점으로 갖는 $\mathbb{A}^1_j$ 위에도 보편 타원곡선은 놓일 수 없다.
 :::
 
-예시 6은 강성이 깨진 분류 문제의 전형이다. Projective space나 Grassmannian에서는 추가 자료가 automorphism을 죽여 set-값 functor가 곧바로 sheaf였던 반면, 타원곡선에서는 section을 고정하더라도 $[-1]$이 살아남아 functor가 sheaf가 되지 못한다. 그렇다면 우리는 둘 중 하나를 선택해야 한다. Automorphism을 자료로 그대로 안고 가는 더 정교한 기하적 대상으로 옮겨 가거나, automorphism을 포기하고 isomorphism class만 담는 가장 좋은 scheme 근사를 찾는 것이다. 이 두 길이 다음 절의 주제이다.
+예시 6은 강성이 깨진 분류 문제의 전형이다. Projective space나 Grassmannian에서는 추가 자료가 automorphism을 죽여 set-값 functor가 곧바로 sheaf였던 반면, 타원곡선에서는 section을 고정하더라도 $[-1]$이 살아남아 functor가 sheaf가 되지 못한다. 그렇다면 우리는 둘 중 하나를 선택해야 한다. Automorphism을 자료로 그대로 안고 가는 더 정교한 기하적 대상으로 옮겨 가거나, automorphism을 포기하고 isomorphism class만 담는 가장 좋은 근사를 찾는 것이다. 이 두 길이 다음 절의 주제이다.
 
 ## 두 가지 보정: moduli stack과 coarse moduli space
 
 첫 번째 보정은 set-값 functor $\underline{M}$ 대신 groupoid-값 functor $\mathcal{M}$ 자체를 기하적 대상으로 삼는 것이다. 명제 5의 장애가 isomorphism class로 뭉개면서 automorphism 정보를 버린 데서 비롯되었으므로, 그 정보를 끝까지 들고 가면 장애가 사라진다. [정의 1](#def1)의 $\mathcal{M}$을 fibered category로 보고 그것이 stack임을 확인한 뒤, 적절한 대수성 조건을 부과한 것이 바로 *moduli stack*이다.
 
 ::: 정의 7
-한 moduli 문제의 moduli functor $\mathcal{M}:\Sch^\op \rightarrow \Grpd$이, 대응하는 fibered category로서 site $(\Sch, \mathrm{fppf})$ 위의 stack이고 ([§스택, ⁋정의 12](/ko/math/stacks/fibered_categories_and_stacks#def12)) 나아가 algebraic stack일 때 ([§대수적 스택, ⁋정의 6](/ko/math/stacks/algebraic_stacks#def6)), 이를 그 문제의 *moduli stack<sub>모듈라이 스택</sub>*이라 부른다. 이 stack이 Deligne–Mumford stack인 것은 diagonal $\Delta:\mathcal{M} \rightarrow \mathcal{M}\times\mathcal{M}$이 unramified한 것, 곧 모든 geometric point의 stabilizer가 unramified한 것과 동치이며, 그러한 조건 없이는 Deligne–Mumford가 아닌 Artin stack에 머문다.
+한 moduli 문제의 moduli functor $\mathcal{M}:\Sch^\op \rightarrow \Grpd$이, 대응하는 fibered category로서 site $(\Sch, \mathrm{fppf})$ 위의 stack이고 ([§스택, ⁋정의 12](/ko/math/stacks/fibered_categories_and_stacks#def12)) 나아가 algebraic stack일 때 ([§대수적 스택, ⁋정의 6](/ko/math/stacks/algebraic_stacks#def6)), 이를 그 문제의 *moduli stack<sub>모듈라이 스택</sub>*이라 부른다. 이 stack이 Deligne–Mumford stack인 것은 diagonal $\Delta:\mathcal{M} \rightarrow \mathcal{M}\times\mathcal{M}$이 unramified한 것, 곧 모든 geometric point의 stabilizer가 unramified한 것과 동치이며, 이 조건이 성립하지 않으면 Deligne–Mumford가 아닌 Artin stack이다.
 :::
 
 Moduli stack 위에는 언제나 universal family가 존재한다. Set-값 functor에서는 universal family가 항등사상의 image로 정의되었듯이 ([정의 2](#def2)), stack에서는 항등 morphism $\id_\mathcal{M}:\mathcal{M} \rightarrow \mathcal{M}$ 자체가 $\mathcal{M}$ 위의 universal family를 주며, automorphism을 fiber groupoid가 그대로 기억하므로 명제 5의 모순이 일어나지 않는다. 비자명한 등질 족 $X \rightarrow T$은 stack의 점들의 morphism으로 정확히 구별되고, classifying morphism $T \rightarrow \mathcal{M}$이 더 이상 상수가 아니라 그 twist를 식별하는 비자명한 자료가 된다. 이것이 stack이 "moduli 문제의 올바른 대상"인 까닭이다.
@@ -142,7 +142,7 @@ $\mathcal{M}$이 Noetherian base 위에서 locally of finite type인 algebraic s
 
 여기에서 inertia stack $I_\mathcal{M} \rightarrow \mathcal{M}$은 각 geometric point 위에 그 stabilizer group scheme을 fiber로 얹는 stack이고, 그것이 유한하다는 것은 이 morphism이 finite morphism이라는 뜻이다. 증명은 이 글의 범위를 넘으므로 결론만 가져다 쓰고, 대신 그 가정이 어디에서 필요한지를 본다.
 
-Stabilizer가 양의 차원을 가지는 stack은 이 정리의 적용 범위 밖이다. [§대수적 스택, ⁋예시 11](/ko/math/stacks/algebraic_stacks#ex11)의 $\bB\mathbb{G}_m$과 [§대수적 스택, ⁋예시 12](/ko/math/stacks/algebraic_stacks#ex12)의 $[\mathbb{A}^1/\mathbb{G}_m]$이 그러하다. 가령 $[\mathbb{A}^1/\mathbb{G}_m]$에서는 invariant ring이 $k[\x]^{\mathbb{G}_m}=k$이어서 algebraic space로 가는 임의의 natural transformation이 열린 orbit과 원점을 한 점으로 보내므로, [정의 8](#def8)의 둘째 조건이 깨져 그 뜻의 coarse moduli space가 아예 존재하지 않는다. 반면 분리된 finite type Deligne–Mumford stack에서는 diagonal이 proper이면서 unramified이므로 finite이고, inertia는 그 diagonal을 자기 자신을 따라 base change한 것이므로 함께 유한해진다. 다음 절의 타원곡선 moduli가 바로 이 상황에 해당한다.
+Stabilizer가 양의 차원을 가지는 stack은 이 정리의 적용 범위 밖이다. [§대수적 스택, ⁋예시 11](/ko/math/stacks/algebraic_stacks#ex11)의 $\bB\mathbb{G}_m$과 [§대수적 스택, ⁋예시 12](/ko/math/stacks/algebraic_stacks#ex12)의 $[\mathbb{A}^1/\mathbb{G}_m]$이 그러하다. 가령 $[\mathbb{A}^1/\mathbb{G}_m]$에서는 invariant ring이 $\mathbb{K}[\x]^{\mathbb{G}_m}=\mathbb{K}$이어서 algebraic space로 가는 임의의 natural transformation이 열린 orbit과 원점을 한 점으로 보내므로, [정의 8](#def8)의 둘째 조건이 깨져 그 뜻의 coarse moduli space가 아예 존재하지 않는다. 반면 분리된 finite type Deligne–Mumford stack에서는 diagonal이 proper이면서 unramified이므로 finite이고, inertia는 그 diagonal을 자기 자신을 따라 base change한 것이므로 함께 유한해진다. 다음 절의 타원곡선 moduli가 바로 이 상황에 해당한다.
 
 ## 타원곡선의 moduli $\mathcal{M}_{1, 1}$
 
@@ -156,7 +156,7 @@ $$\y^2=\x^3+a\x+b,\qquad \Delta=-16(4a^3+27b^2)\neq 0$$
 
 $$\mathcal{M}_{1, 1}\cong \bigl[\{(a, b)\mid\Delta\neq 0\}\big/\mathbb{G}_m\bigr]$$
 
-으로 실현된다. 한 점 $(a, b)$의 stabilizer는 $\lambda^4 a=a$, $\lambda^6 b=b$을 만족하는 $\lambda$들의 group이며, 이는 정확히 그 점이 나타내는 타원곡선 $(E, 0)$의 automorphism group $\Aut(E, 0)$과 일치한다.
+으로 실현된다. ([§대수적 스택, ⁋정의 7](/ko/math/stacks/algebraic_stacks#def7)) 한 점 $(a, b)$의 stabilizer는 $\lambda^4 a=a$, $\lambda^6 b=b$을 만족하는 $\lambda$들의 group이며, 이는 정확히 그 점이 나타내는 타원곡선 $(E, 0)$의 automorphism group $\Aut(E, 0)$과 일치한다.
 
 이 stabilizer를 경우별로 계산하면 다음과 같다. $j$-불변량은
 
