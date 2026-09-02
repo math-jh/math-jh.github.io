@@ -19670,8 +19670,8 @@ U:
     id: lie_algebra
 - id: universal_family
   en: universal family
-  ko: 보편 족
-  primary: ko
+  ko: 보편족
+  primary: en
   defs:
   - label: '[스택] §Moduli 문제: fine moduli와 coarse moduli'
     url: /ko/math/stacks/moduli_problems
