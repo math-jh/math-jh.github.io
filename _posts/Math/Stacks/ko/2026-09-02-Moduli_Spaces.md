@@ -19,38 +19,38 @@ published: false
 
 $$F:\Sch^\op\rightarrow \Grpd$$
 
-로서, 각 대상 $T$마다 $T$ 위에 정의된 기하학적 대상들의 family를 대응시키는 것이며 우리는 앞선 글들에서 이 functor가 sheaf가 될 조건 등을 살펴보았다. 이제 이번 글에서는 이러한 준비를 바탕으로 moduli problem을 functor의 언어로 정식화하고 그 예시들을 살펴본다. 
+로서, 각 대상 $T$마다 $T$ 위에 정의된 기하학적 대상들의 family를 대응시키는 것이며 우리는 앞선 글들에서 이 functor가 sheaf가 될 조건 등을 살펴보았다. 이제 이번 글에서는 이러한 준비를 바탕으로 이 functor를 기하학적 대상으로 실현하는 문제를 다루고, 그 예시들을 살펴본다. 
 
-## 모듈라이 문제
+## 모듈라이 함자
 
-우선 다음을 정의한다. 
+이러한 문제를 $\Grpd$-valued pseudofunctor로 적는 일은 [§스택, ⁋예시 9](/ko/math/stacks/fibered_categories_and_stacks#ex9)에서 이미 마쳤으므로, 여기에서는 그 functor에 이름을 붙이고 표기를 고정하는 것으로 시작한다. 
 
 ::: 정의 1
-한 *moduli 문제<sub>moduli problem</sub>*는 다음 자료로 이루어진다. 각 scheme $T$에 대하여 *$T$-family*라 부르는 대상들의 모임이 주어지고, 그 사이의 isomorphism이 지정되어 groupoid $\mathcal{M}(T)$를 이루며, 각 morphism $f: T' \rightarrow T$에 대하여 $T$-family를 $T'$으로 끌어당기는 pullback functor $f^\ast:\mathcal{M}(T) \rightarrow \mathcal{M}(T')$이 주어진다. 이 자료가 정합성 조건을 만족하여 pseudofunctor
+Pseudofunctor $\mathcal{M}:\Sch^\op \rightarrow \Grpd$을 *moduli functor<sub>모듈라이 함자</sub>*라 부른다. ([§스택, ⁋정의 3](/ko/math/stacks/fibered_categories_and_stacks#def3)) 
 
-$$\mathcal{M}:\Sch^\op \rightarrow \Grpd$$
-
-를 이룰 때, 이를 그 moduli 문제의 *moduli functor<sub>모듈라이 함자</sub>*라 부른다. ([§스택, ⁋정의 3](/ko/math/stacks/fibered_categories_and_stacks#def3)) 각 fiber groupoid $\mathcal{M}(T)$의 isomorphism class만을 취하여 얻는 set-값 functor
+각 scheme $T$에 대하여, fiber groupoid $\mathcal{M}(T)$의 대상을 *$T$-family*라 부른다. 그 isomorphism class만을 취하여 얻는 set-valued functor
 
 $$\underline{M}:\Sch^\op \rightarrow \Set,\qquad \underline{M}(T)=\obj \mathcal{M}(T)/\cong$$
 
-를 그 moduli 문제의 *coarse moduli functor<sub>성긴 모듈라이 함자</sub>* 또는 *set-값 moduli functor*라 부른다.
+를 $\mathcal{M}$의 *coarse moduli functor<sub>성긴 모듈라이 함자</sub>* 또는 *set-valued moduli functor*라 부른다.
 :::
 
-여기에서 $T$-family가 정확히 무엇인지는 분류 문제마다 다르다. Genus $g$ 곡선의 분류에서는 $T$-family란 smooth projective morphism $X \rightarrow T$로서 모든 기하적 fiber가 genus $g$의 곡선인 것이고, 고정된 variety $X$ 위의 vector bundle의 분류에서는 $X\times T$ 위의 rank $r$ vector bundle이며, section을 가진 타원곡선의 분류에서는 section을 가진 genus $1$의 smooth projective curve의 family이다. 어느 경우든 pullback은 morphism $f: T' \rightarrow T$에 대한 fiber product를 통한 base change로 주어지고, 정합성 자료는 base change가 합성과 canonical isomorphism으로 호환된다는 것에서 나온다. 이 정합성이 등호가 아니라 canonical isomorphism으로만 성립하기 때문에 $\mathcal{M}$은 진짜 pseudofunctor이며, 동치인 fibered category의 언어로 다루는 편이 자연스럽다. ([§스택, §§유사함자](/ko/math/stacks/fibered_categories_and_stacks#유사함자))
+Moduli functor의 본질적인 내용은 $T$-family가 어떤 기하학적 대상을 담는지에 있다. 예를 들어 genus $g$ 곡선을 분류할 때에는 $T$-family를 모든 geometric fiber가 genus $g$ curve가 되는 smooth projective morphism $X \rightarrow T$으로 잡는 것이 맞을 것이고, 고정된 variety $X$ 위의 vector bundle을 분류할 때에는 $X\times T$ 위의 rank $r$ vector bundle로 잡는 것이 맞을 것이다. 어느 경우든 공통적으로 pullback은 morphism $f: T' \rightarrow T$에 대한 fiber product로 주어지며, pseudofunctor의 compatibility condition은 이 fiber product의 universal property, 즉 canonical isomorphism의 데이터로부터 나온다. 이 때문에 $\mathcal{M}$은 functor가 아니라 pseudofunctor가 되며, 위에서 살펴봤듯 $\mathcal{M}(T)$가 $T$-family를 담으므로 이를 다룰 때는 보편적으로 CFG의 언어를 사용한다. ([§스택, ⁋정리 8](/ko/math/stacks/fibered_categories_and_stacks#thm8))
 
-두 functor $\mathcal{M}$과 $\underline{M}$의 차이가 이 글 전체의 주제이다. Groupoid-값 functor $\mathcal{M}$은 각 family의 automorphism을 자료로 기억하는 반면, set-값 functor $\underline{M}$은 isomorphism class만 남겨 automorphism 정보를 버린다. 분류 대상이 비자명한 automorphism을 가질 때 이 둘은 본질적으로 다르며, 바로 그 차이가 fine moduli space의 존재를 좌우한다. 우선은 automorphism이 문제되지 않는 상황, 곧 $\underline{M}$이 충분한 정보를 담는 경우부터 다룬다.
+위의 두 구조를 하나로 합치는 것은 *universal family*의 개념이다. 각각의 fiber groupoid $\mathcal{M}(T)$를 
+
+$\mathcal{M}$을 실현하는 대상 $M$은 그 자신도 test object이므로 fiber groupoid $\mathcal{M}(M)$을 가진다. *Universal family*란 이 groupoid의 대상 $\mathcal{U}\in \mathcal{M}(M)$으로서, 임의의 $T$-family $X\in \mathcal{M}(T)$을 적당한 morphism $f: T \rightarrow M$을 따라 $X\cong f^\ast \mathcal{U}$으로 내놓는 것이다. 곧 흩어져 있던 모든 family가 $M$ 위에 놓인 이 하나를 끌어당겨 나온다.
 
 ## Fine moduli space와 universal family
 
-이상적인 답은 moduli 문제를 표현하는 scheme이다. 곧 isomorphism class들이 한 scheme $M$의 점들과 일대일대응할 뿐 아니라, $M$ 위에 단 하나의 "universal family"가 놓여 있어 임의의 family가 그것의 pullback으로 유일하게 얻어지는 상황이다. 이를 functor의 언어로 옮기면 representability가 된다.
+앞에서 살펴보았듯 groupoid-valued functor $\mathcal{M}$은 각 family의 automorphism을 기억하지만, set-valued functor $\underline{M}$은 그렇지 않다. 따라서 분류 대상이 비자명한 automorphism을 가질 때 이 둘은 본질적으로 다르지만, 만일 isomorphism class들이 어떤 scheme $M$의 점들과 일대일대응할 뿐 아니라, $M$ 위에 단 하나의 *universal family*인 pullback으로 유일하게 얻어지는 경우 fine moduli만 봐도 잃어버리는 정보가 없다. 
 
 ::: 정의 2
-Moduli 문제의 set-값 moduli functor $\underline{M}:\Sch^\op \rightarrow \Set$가 scheme $M$에 의하여 *representable*할 때, 곧 natural isomorphism
+Moduli functor $\mathcal{M}$의 set-valued moduli functor $\underline{M}:\Sch^\op \rightarrow \Set$가 scheme $M$에 의하여 *representable*할 때, 곧 natural isomorphism
 
 $$\underline{M}\cong \Hom_{\Sch}(-, M)$$
 
-이 존재할 때, $M$을 그 문제의 *fine moduli space<sub>섬세한 모듈라이 공간</sub>*라 부른다. 이 natural isomorphism 아래에서 항등사상 $\id_M\in \Hom_\Sch(M, M)$에 대응하는 원소
+이 존재할 때, $M$을 $\mathcal{M}$의 *fine moduli space<sub>섬세한 모듈라이 공간</sub>*라 부른다. 이 natural isomorphism 아래에서 항등사상 $\id_M\in \Hom_\Sch(M, M)$에 대응하는 원소
 
 $$\mathcal{U}\in \underline{M}(M)$$
 
@@ -66,13 +66,13 @@ $$X\cong f_X^\ast \mathcal{U}$$
 Fine moduli가 실제로 존재하는 비자명한 예는 분류 대상에 충분한 강성 자료, 곧 rigidify하는 추가 구조를 얹은 경우에서 나온다. Projective space와 Grassmannian이 대표적이다.
 
 ::: 예시 3 (Projective space)
-Projective space $\mathbb{P}^n$은 다음 moduli 문제의 fine moduli space이다. $T$-family를, $T$ 위의 line bundle $\mathcal{L}$과 이를 globally generate하는 $n+1$개의 section $s_0,\ldots, s_n\in \Gamma(T, \mathcal{L})$의 자료 $(\mathcal{L}, s_0,\ldots, s_n)$의 isomorphism class로 정의한다. 여기에서 두 자료가 isomorphic이라는 것은 section들을 옮기는 line bundle의 isomorphism이 존재하는 것이다. 이 functor는 $\mathbb{P}^n$에 의하여 표현되며, universal family는 twisting sheaf $\mathcal{O}_{\mathbb{P}^n}(1)$과 그 coordinate section $\x_0,\ldots, \x_n$이다. ([\[스킴\] §점함자, ⁋정리 5](/ko/math/scheme_theory/functor_of_points#thm5))
+Projective space $\mathbb{P}^n$은 다음 moduli functor의 fine moduli space이다. $T$-family를, $T$ 위의 line bundle $\mathcal{L}$과 이를 globally generate하는 $n+1$개의 section $s_0,\ldots, s_n\in \Gamma(T, \mathcal{L})$의 자료 $(\mathcal{L}, s_0,\ldots, s_n)$의 isomorphism class로 정의한다. 여기에서 두 자료가 isomorphic이라는 것은 section들을 옮기는 line bundle의 isomorphism이 존재하는 것이다. 이 functor는 $\mathbb{P}^n$에 의하여 표현되며, universal family는 twisting sheaf $\mathcal{O}_{\mathbb{P}^n}(1)$과 그 coordinate section $\x_0,\ldots, \x_n$이다. ([\[스킴\] §점함자, ⁋정리 5](/ko/math/scheme_theory/functor_of_points#thm5))
 :::
 
-이 예에서 결정적인 것은, 분류되는 자료 $(\mathcal{L}, s_0,\ldots, s_n)$이 비자명한 automorphism을 가지지 않는다는 점이다. Line bundle $\mathcal{L}$ 자체는 scalar multiplication에 의한 $\mathbb{G}_m$만큼의 automorphism을 가지지만, globally generate하는 section들을 고정하면 그 section을 보존하는 line bundle automorphism은 항등사상뿐이다. Section이라는 강성 자료가 automorphism을 죽인 덕분에 set-값 functor가 곧바로 representable해진 것이며, 이것이 fine moduli가 존재하는 전형적인 구조이다.
+이 예에서 결정적인 것은, 분류되는 자료 $(\mathcal{L}, s_0,\ldots, s_n)$이 비자명한 automorphism을 가지지 않는다는 점이다. Line bundle $\mathcal{L}$ 자체는 scalar multiplication에 의한 $\mathbb{G}_m$만큼의 automorphism을 가지지만, globally generate하는 section들을 고정하면 그 section을 보존하는 line bundle automorphism은 항등사상뿐이다. Section이라는 강성 자료가 automorphism을 죽인 덕분에 set-valued functor가 곧바로 representable해진 것이며, 이것이 fine moduli가 존재하는 전형적인 구조이다.
 
 ::: 예시 4 (Grassmannian)
-Grassmannian $\Gr(k, n)$은 다음 moduli 문제의 fine moduli space이다. $T$-family를, trivial bundle의 rank $k$ locally free quotient bundle
+Grassmannian $\Gr(k, n)$은 다음 moduli functor의 fine moduli space이다. $T$-family를, trivial bundle의 rank $k$ locally free quotient bundle
 
 $$\mathcal{O}_T^n\twoheadrightarrow \mathcal{Q},\qquad \mathcal{Q}\text{ is locally free of rank } k$$
 
@@ -85,13 +85,13 @@ $$\mathcal{O}_T^n\twoheadrightarrow \mathcal{Q},\qquad \mathcal{Q}\text{ is loca
 
 앞 절의 예들이 작동한 까닭이 강성에 있었다면, 강성이 깨진 문제, 곧 분류 대상이 비자명한 automorphism을 본질적으로 가지는 문제에서는 fine moduli가 어떻게 되는지를 물어야 한다. 결론은 부정적이다. 비자명한 automorphism은 isomorphism class가 같으면서도 서로 다른 *비자명한 isotrivial family*를 만들어낼 여지를 열고, 그러한 family가 실제로 하나라도 있으면 representability가 정면으로 막힌다.
 
-핵심은 다음 관찰이다. Fine moduli space가 존재한다면 set-값 moduli functor $\underline{M}$은 representable functor $\Hom_\Sch(-, M)$과 isomorphic이고, representable functor는 fpqc topology(따라서 그보다 거친 étale·Zariski topology)에 대한 sheaf이다. 이는 faithfully flat descent의 표준적 귀결로, affine한 $M=\Spec R$의 경우 global section presheaf $T\mapsto \Gamma(T, \mathcal{O}_T)$이 fpqc sheaf라는 [\[스킴\] §충실평탄하강, ⁋정리 10](/ko/math/scheme_theory/faithfully_flat_descent#thm10)으로부터 $\Hom_\Sch(-, \Spec R)=\Hom_{\mathrm{Ring}}(R, \Gamma(-, \mathcal{O}))$을 통해 따라오고, 일반적인 $M$은 affine open으로 덮어 접합하여 얻는다. 즉 한 scheme으로 가는 morphism들은 covering 위에서 정합적으로 주어지면 유일하게 이어 붙는다. 그러므로 $\underline{M}$이 sheaf가 아니면 fine moduli는 존재할 수 없다. 비자명한 automorphism은 정확히 이 sheaf 조건의 분리성, 곧 "covering 위에서 같은 family는 원래 같다"는 부분을 깨뜨린다.
+핵심은 다음 관찰이다. Fine moduli space가 존재한다면 set-valued moduli functor $\underline{M}$은 representable functor $\Hom_\Sch(-, M)$과 isomorphic이고, representable functor는 fpqc topology(따라서 그보다 거친 étale·Zariski topology)에 대한 sheaf이다. 이는 faithfully flat descent의 표준적 귀결로, affine한 $M=\Spec R$의 경우 global section presheaf $T\mapsto \Gamma(T, \mathcal{O}_T)$이 fpqc sheaf라는 [\[스킴\] §충실평탄하강, ⁋정리 10](/ko/math/scheme_theory/faithfully_flat_descent#thm10)으로부터 $\Hom_\Sch(-, \Spec R)=\Hom_{\mathrm{Ring}}(R, \Gamma(-, \mathcal{O}))$을 통해 따라오고, 일반적인 $M$은 affine open으로 덮어 접합하여 얻는다. 즉 한 scheme으로 가는 morphism들은 covering 위에서 정합적으로 주어지면 유일하게 이어 붙는다. 그러므로 $\underline{M}$이 sheaf가 아니면 fine moduli는 존재할 수 없다. 비자명한 automorphism은 정확히 이 sheaf 조건의 분리성, 곧 "covering 위에서 같은 family는 원래 같다"는 부분을 깨뜨린다.
 
 ::: 명제 5
-한 moduli 문제에 대하여, 어떤 scheme $T$와 그 위의 surjective étale covering $S \rightarrow T$, 그리고 family $X\in \mathcal{M}(T)$이 존재하여 다음을 만족한다고 하자. 어떤 고정된 대상 $E$에 대하여 $S$로 끌어당기면 $X\times_T S\cong E\times S$이지만 ($X$이 *isotrivial<sub>등질</sub>*하지만), $X$이 $T$ 위에서 constant family $E\times T$과 isomorphic이 아니다. 그럼 이 문제는 fine moduli space를 가지지 않는다.
+Moduli functor $\mathcal{M}$에 대하여, 어떤 scheme $T$와 그 위의 surjective étale covering $S \rightarrow T$, 그리고 family $X\in \mathcal{M}(T)$이 존재하여 다음을 만족한다고 하자. 어떤 고정된 대상 $E$에 대하여 $S$로 끌어당기면 $X\times_T S\cong E\times S$이지만 ($X$이 *isotrivial<sub>등질</sub>*하지만), $X$이 $T$ 위에서 constant family $E\times T$과 isomorphic이 아니다. 그럼 $\mathcal{M}$은 fine moduli space를 가지지 않는다.
 :::
 ::: 증명
-Fine moduli space $M$이 존재한다고 가정하고 모순을 이끈다. [정의 2](#def2)에 의하여 set-값 moduli functor는 representable functor $\underline{M}\cong \Hom_\Sch(-, M)$이고, 위에서 확인한 대로 이는 fpqc 위상에 대한 sheaf, 따라서 그보다 거친 étale 위상에 대해서도 sheaf이다. Sheaf의 조건 가운데 분리성은, 임의의 covering $S \rightarrow T$에 대하여 restriction map
+Fine moduli space $M$이 존재한다고 가정하고 모순을 이끈다. [정의 2](#def2)에 의하여 set-valued moduli functor는 representable functor $\underline{M}\cong \Hom_\Sch(-, M)$이고, 위에서 확인한 대로 이는 fpqc 위상에 대한 sheaf, 따라서 그보다 거친 étale 위상에 대해서도 sheaf이다. Sheaf의 조건 가운데 분리성은, 임의의 covering $S \rightarrow T$에 대하여 restriction map
 
 $$\underline{M}(T) \rightarrow \underline{M}(S)$$
 
@@ -109,25 +109,25 @@ $$X=(E\times S)/(\mathbb{Z}/d) \rightarrow S/(\mathbb{Z}/d)=T$$
 이 구성에서 결정적인 것은 밀어낸 $\Aut(E)$-torsor의 비자명성이며, 이는 automorphism이 비자명하다는 것만으로는 따라오지 않는다. Field $\mathbb{K}$ 위의 비자명한 $\mu_2$-torsor를 포함 $\mu_2\subseteq \mathbb{G}_m$을 따라 밀어내면, [\[체론\] §갈루아 군의 성질들, ⁋정리 7](/ko/math/field_theory/properties_of_galois_extensions#thm7)에 의하여 $\mathbb{K}$ 위의 $\mathbb{G}_m$-torsor가 모두 자명하므로 그 image는 trivial torsor가 된다. 곧 fine moduli를 막는 것은 automorphism의 존재 자체가 아니라 그것이 실제로 비자명한 form을 낳는다는 사실이고, 그 비자명성은 분류 문제마다 확인해야 한다. 타원곡선에서는 그러한 form이 실제로 존재한다.
 
 ::: 예시 6 (타원곡선에 fine moduli가 없음)
-Section을 가진 타원곡선 $(E, 0)$은 항상 비자명한 automorphism $[-1]:(\x, \y)\mapsto(\x, -\y)$을 가지며, 이는 section $0$을 고정하는 order $2$의 automorphism이다. 곧 모든 타원곡선에 대하여 $\{\pm 1\}\cong \mathbb{Z}/2\subseteq \Aut(E, 0)$이다. 따라서 $\sigma=[-1]$, $d=2$으로 위의 구성을 적용한다. Characteristic $0$의 field $k$ 위에서 타원곡선 $E:\y^2=\x^3+a\x+b$ ($ab\neq 0$)을 고정하고, $T=\Spec k(t)$과 그 이차확대 $S=\Spec k(t)[\sqrt{t}]$으로 두자. $t$은 $k(t)$의 제곱이 아니므로 $S \rightarrow T$은 비자명한 $\mathbb{Z}/2$-torsor이다. 이때 위의 quotient $X=(E\times S)/(\mathbb{Z}/2)$은 $E$의 *이차 twist* $\y^2=\x^3+t^2a\x+t^3b$이며, $X\times_T S\cong E\times S$이지만 $T$ 위에서는 constant family와 isomorphic이 아니다. 실제로 $T$ 위의 isomorphism은 좌표변환 $(\x, \y)\mapsto(c^2\x, c^3\y)$의 꼴이어서 $c^4=t^2$과 $c^6=t^3$, 곧 $c^2=t$을 요구하는데, 그러한 $c\in k(t)^\times$은 없다. [명제 5](#prop5)에 의하여 section을 가진 타원곡선의 moduli 문제는 fine moduli space를 가지지 않는다. 이 twist는 $j$-불변량을 바꾸지 않으므로, 기하적 isomorphism class를 점으로 갖는 $\mathbb{A}^1_j$ 위에도 보편 타원곡선은 놓일 수 없다.
+Section을 가진 타원곡선 $(E, 0)$은 항상 비자명한 automorphism $[-1]:(\x, \y)\mapsto(\x, -\y)$을 가지며, 이는 section $0$을 고정하는 order $2$의 automorphism이다. 곧 모든 타원곡선에 대하여 $\{\pm 1\}\cong \mathbb{Z}/2\subseteq \Aut(E, 0)$이다. 따라서 $\sigma=[-1]$, $d=2$으로 위의 구성을 적용한다. Characteristic $0$의 field $k$ 위에서 타원곡선 $E:\y^2=\x^3+a\x+b$ ($ab\neq 0$)을 고정하고, $T=\Spec k(t)$과 그 이차확대 $S=\Spec k(t)[\sqrt{t}]$으로 두자. $t$은 $k(t)$의 제곱이 아니므로 $S \rightarrow T$은 비자명한 $\mathbb{Z}/2$-torsor이다. 이때 위의 quotient $X=(E\times S)/(\mathbb{Z}/2)$은 $E$의 *이차 twist* $\y^2=\x^3+t^2a\x+t^3b$이며, $X\times_T S\cong E\times S$이지만 $T$ 위에서는 constant family와 isomorphic이 아니다. 실제로 $T$ 위의 isomorphism은 좌표변환 $(\x, \y)\mapsto(c^2\x, c^3\y)$의 꼴이어서 $c^4=t^2$과 $c^6=t^3$, 곧 $c^2=t$을 요구하는데, 그러한 $c\in k(t)^\times$은 없다. [명제 5](#prop5)에 의하여 section을 가진 타원곡선의 moduli functor는 fine moduli space를 가지지 않는다. 이 twist는 $j$-불변량을 바꾸지 않으므로, 기하적 isomorphism class를 점으로 갖는 $\mathbb{A}^1_j$ 위에도 보편 타원곡선은 놓일 수 없다.
 :::
 
-예시 6은 강성이 깨진 분류 문제의 전형이다. Projective space나 Grassmannian에서는 추가 자료가 automorphism을 죽여 set-값 functor가 곧바로 sheaf였던 반면, 타원곡선에서는 section을 고정하더라도 $[-1]$이 살아남아 functor가 sheaf가 되지 못한다. 그렇다면 우리는 둘 중 하나를 선택해야 한다. Automorphism을 자료로 그대로 안고 가는 더 정교한 기하적 대상으로 옮겨 가거나, automorphism을 포기하고 isomorphism class만 담는 가장 좋은 근사를 찾는 것이다. 이 두 길이 다음 절의 주제이다.
+예시 6은 강성이 깨진 분류 문제의 전형이다. Projective space나 Grassmannian에서는 추가 자료가 automorphism을 죽여 set-valued functor가 곧바로 sheaf였던 반면, 타원곡선에서는 section을 고정하더라도 $[-1]$이 살아남아 functor가 sheaf가 되지 못한다. 그렇다면 우리는 둘 중 하나를 선택해야 한다. Automorphism을 자료로 그대로 안고 가는 더 정교한 기하적 대상으로 옮겨 가거나, automorphism을 포기하고 isomorphism class만 담는 가장 좋은 근사를 찾는 것이다. 이 두 길이 다음 절의 주제이다.
 
 ## 두 가지 보정: moduli stack과 coarse moduli space
 
-첫 번째 보정은 set-값 functor $\underline{M}$ 대신 groupoid-값 functor $\mathcal{M}$ 자체를 기하적 대상으로 삼는 것이다. 명제 5의 장애가 isomorphism class로 뭉개면서 automorphism 정보를 버린 데서 비롯되었으므로, 그 정보를 끝까지 들고 가면 장애가 사라진다. [정의 1](#def1)의 $\mathcal{M}$을 fibered category로 보고 그것이 stack임을 확인한 뒤, 적절한 대수성 조건을 부과한 것이 바로 *moduli stack*이다.
+첫 번째 보정은 set-valued functor $\underline{M}$ 대신 groupoid-valued functor $\mathcal{M}$ 자체를 기하적 대상으로 삼는 것이다. 명제 5의 장애가 isomorphism class로 뭉개면서 automorphism 정보를 버린 데서 비롯되었으므로, 그 정보를 끝까지 들고 가면 장애가 사라진다. [정의 1](#def1)의 $\mathcal{M}$을 fibered category로 보고 그것이 stack임을 확인한 뒤, 적절한 대수성 조건을 부과한 것이 바로 *moduli stack*이다.
 
 ::: 정의 7
-한 moduli 문제의 moduli functor $\mathcal{M}:\Sch^\op \rightarrow \Grpd$이, 대응하는 fibered category로서 site $(\Sch, \mathrm{fppf})$ 위의 stack이고 ([§스택, ⁋정의 12](/ko/math/stacks/fibered_categories_and_stacks#def12)) 나아가 algebraic stack일 때 ([§대수적 스택, ⁋정의 6](/ko/math/stacks/algebraic_stacks#def6)), 이를 그 문제의 *moduli stack<sub>모듈라이 스택</sub>*이라 부른다. 이 stack이 Deligne–Mumford stack인 것은 diagonal $\Delta:\mathcal{M} \rightarrow \mathcal{M}\times\mathcal{M}$이 unramified한 것, 곧 모든 geometric point의 stabilizer가 unramified한 것과 동치이며, 이 조건이 성립하지 않으면 Deligne–Mumford가 아닌 Artin stack이다.
+Moduli functor $\mathcal{M}:\Sch^\op \rightarrow \Grpd$이, 대응하는 fibered category로서 site $(\Sch, \mathrm{fppf})$ 위의 stack이고 ([§스택, ⁋정의 12](/ko/math/stacks/fibered_categories_and_stacks#def12)) 나아가 algebraic stack일 때 ([§대수적 스택, ⁋정의 6](/ko/math/stacks/algebraic_stacks#def6)), 이를 *moduli stack<sub>모듈라이 스택</sub>*이라 부른다. 이 stack이 Deligne–Mumford stack인 것은 diagonal $\Delta:\mathcal{M} \rightarrow \mathcal{M}\times\mathcal{M}$이 unramified한 것, 곧 모든 geometric point의 stabilizer가 unramified한 것과 동치이며, 이 조건이 성립하지 않으면 Deligne–Mumford가 아닌 Artin stack이다.
 :::
 
-Moduli stack 위에는 언제나 universal family가 존재한다. Set-값 functor에서는 universal family가 항등사상의 image로 정의되었듯이 ([정의 2](#def2)), stack에서는 항등 morphism $\id_\mathcal{M}:\mathcal{M} \rightarrow \mathcal{M}$ 자체가 $\mathcal{M}$ 위의 universal family를 주며, automorphism을 fiber groupoid가 그대로 기억하므로 명제 5의 모순이 일어나지 않는다. 비자명한 isotrivial family $X \rightarrow T$은 stack의 점들의 morphism으로 정확히 구별되고, classifying morphism $T \rightarrow \mathcal{M}$이 더 이상 상수가 아니라 그 twist를 식별하는 비자명한 자료가 된다. 이것이 stack이 "moduli 문제의 올바른 대상"인 까닭이다.
+Moduli stack 위에는 언제나 universal family가 존재한다. Set-valued functor에서는 universal family가 항등사상의 image로 정의되었듯이 ([정의 2](#def2)), stack에서는 항등 morphism $\id_\mathcal{M}:\mathcal{M} \rightarrow \mathcal{M}$ 자체가 $\mathcal{M}$ 위의 universal family를 주며, automorphism을 fiber groupoid가 그대로 기억하므로 명제 5의 모순이 일어나지 않는다. 비자명한 isotrivial family $X \rightarrow T$은 stack의 점들의 morphism으로 정확히 구별되고, classifying morphism $T \rightarrow \mathcal{M}$이 더 이상 상수가 아니라 그 twist를 식별하는 비자명한 자료가 된다. 이것이 stack이 "moduli 문제의 올바른 대상"인 까닭이다.
 
 두 번째 보정은 stack을 포기하고 algebraic space의 세계에 머무르되, isomorphism class만을 담는 가장 좋은 근사를 찾는 것이다. Algebraic space는 그 자체로 $(\Sch, \et)$ 위의 sheaf이므로 ([§대수적 스택, ⁋정의 3](/ko/math/stacks/algebraic_stacks#def3)) $\underline{M}$과 같은 세계에 놓이며, scheme은 그 특수한 경우이다.
 
 ::: 정의 8
-한 moduli 문제의 set-값 moduli functor $\underline{M}:\Sch^\op \rightarrow \Set$에 대하여, algebraic space $M$과 natural transformation $\Phi:\underline{M} \rightarrow M$의 쌍이 *coarse moduli space<sub>성긴 모듈라이 공간</sub>*라는 것은 다음 두 조건을 만족하는 것이다.
+Moduli functor $\mathcal{M}$의 set-valued moduli functor $\underline{M}:\Sch^\op \rightarrow \Set$에 대하여, algebraic space $M$과 natural transformation $\Phi:\underline{M} \rightarrow M$의 쌍이 *coarse moduli space<sub>성긴 모듈라이 공간</sub>*라는 것은 다음 두 조건을 만족하는 것이다.
 
 1. (보편성) 임의의 algebraic space $N$과 natural transformation $\Psi:\underline{M} \rightarrow N$에 대하여, $\Psi=\pi\circ \Phi$을 만족하는 morphism $\pi: M \rightarrow N$이 유일하게 존재한다. 곧 $\Phi$은 algebraic space로 가는 natural transformation들 가운데 initial object이다.
 
