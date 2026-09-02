@@ -41,33 +41,37 @@ Moduli functor의 본질적인 내용은 $T$-family가 어떤 기하학적 대�
 
 $$\alpha\mapsto \alpha_M(\id_M)$$
 
-을 통해 주어지던 것을 기억하자. ([\[범주론\] §표현가능한 함자, ⁋정리 4](/ko/math/category_theory/representable_functors#thm4)) 즉 natural transformation $\alpha$가 어떠한 것인지는 항등사상에서의 값 $\alpha_M(\id_M)$ 하나로 완전히 결정되며, $\alpha$가 natural isomorphism이면 이렇게 얻어지는 원소를 *universal element*라 불렀다다. ([\[범주론\] §표현가능한 함자, ⁋정의 5](/ko/math/category_theory/representable_functors#def5))
+을 통해 주어지던 것을 기억하자. ([\[범주론\] §표현가능한 함자, ⁋정리 4](/ko/math/category_theory/representable_functors#thm4)) 즉 natural transformation $\alpha$가 어떠한 것인지는 항등사상에서의 값 $\alpha_M(\id_M)$ 하나로 완전히 결정되며, $\alpha$가 natural isomorphism이면 이렇게 얻어지는 원소를 *universal element*라 불렀다. ([\[범주론\] §표현가능한 함자, ⁋정의 5](/ko/math/category_theory/representable_functors#def5))
 
-이 진술을 groupoid-valued 상황으로 옮기면, 집합 사이의 일대일대응 대신 groupoid 사이의 동치를 얻는다. 각 scheme $T$를 slice category가 주는 CFG로 보면 ([§스택, ⁋예시 9](/ko/math/stacks/fibered_categories_and_stacks#ex9)) $T$에서 $\mathcal{M}$으로 가는 morphism들과 그 사이의 2-morphism들이 이루는 groupoid는 fiber groupoid $\mathcal{M}(T)$과 동치이며, 이 동치는 $f:T\rightarrow\mathcal{M}$을 $f(\id_T)$에 보낸다. 따라서 $f$의 전체 자료는 $T$-family $X=f(\id_T)$에 의해 isomorphism까지 결정되고, 두 morphism 사이의 2-morphism도 $\id_T$에서의 성분, 곧 두 $T$-family 사이의 isomorphism에 의해 결정된다. 거꾸로 $X\in\mathcal{M}(T)$는 각 $u:T'\rightarrow T$에 $u^\ast X$를 대응시키는 morphism $f_X:T\rightarrow\mathcal{M}$을 정한다.
+Yoneda lemma 자체는 $\Set$-valued functor에 대한 것이지만 이를 $\Grpd$-valued 상황으로 올릴 수 있다. [§스택, ⁋예시 9](/ko/math/stacks/fibered_categories_and_stacks#ex9)에서와 같이 각 scheme $T$를 slice category가 주는 CFG로 보면, $T$에서 $\mathcal{M}$으로 가는 morphism들과 그 사이의 2-morphism들이 이루는 groupoid는 fiber groupoid $\mathcal{M}(T)$과 equivalent하며, 위에서와 마찬가지로 이 equivalence는  $f:T\rightarrow\mathcal{M}$을 $f(\id_T)$로 보낸다. 따라서 $f$의 전체 자료는 $T$-family $X=f(\id_T)$에 의해 isomorphism까지 결정되고, 두 morphism 사이의 2-morphism도 $\id_T$에서의 성분, 곧 두 $T$-family 사이의 isomorphism에 의해 결정된다. 거꾸로 $X\in\mathcal{M}(T)$는 각 $u:T'\rightarrow T$에 $u^\ast X$를 대응시키는 morphism $f_X:T\rightarrow\mathcal{M}$을 정한다.
 
-이제 $\id_\mathcal{M}:\mathcal{M}\rightarrow\mathcal{M}$을 $\mathcal{M}$ 위의 universal family로 읽을 수 있다. $T$-family $X$에 대응하는 $f_X:T\rightarrow\mathcal{M}$을 따라 이를 pullback하는 것은 $\id_\mathcal{M}\circ f_X=f_X$를 취하는 것이고, 위의 동치 아래에서 이는 다시 $X$가 된다. 즉 moduli functor $\mathcal{M}$이 정의하는 <em-ko>모든</em-ko> family는 단 하나의 universal family $\id_\mathcal{M}$을 끌어당겨 얻어지며, 이는 [\[대수적 위상수학\] §분류공간, ⁋정리 8](/ko/math/algebraic_topology/classifying_spaces#thm8)의 직접적인 일반화이다.
+따라서 이를 $\id_\mathcal{M}:\mathcal{M}\rightarrow\mathcal{M}$을 $\mathcal{M}$ 위의 universal family로 읽을 수 있다. $T$-family $X$에 대응하는 $f_X:T\rightarrow\mathcal{M}$을 따라 이를 pullback하는 것은 $\id_\mathcal{M}\circ f_X=f_X$를 취하는 것이고, 위의 동치 아래에서 이는 다시 $X$가 된다. 즉 moduli functor $\mathcal{M}$이 정의하는 <em-ko>모든</em-ko> family는 단 하나의 universal family $\id_\mathcal{M}$을 끌어당겨 얻어지며, 이는 [\[대수적 위상수학\] §분류공간, ⁋정리 8](/ko/math/algebraic_topology/classifying_spaces#thm8)의 직접적인 일반화이다.
 
 ## Fine moduli space와 universal family
 
-우리는 moduli functor를 $\Grpd$로 향하는 것으로 일반화하였지만, 그렇다고 해서 이 functor가 어떤 scheme으로 실현될 가능성이 없는 것은 아니다. 다만 scheme $M$이 $\Sch$ 위에서 갖는 자료는 functor of points $\Hom_\Sch(-, M)$이고 이는 set-valued이므로, 그 실현을 물으려면 먼저 $\mathcal{M}$을 coarse moduli functor $\underline{M}$으로 내려야 한다. 내리는 과정에서 각 family의 automorphism은 버려지고, 남은 $\underline{M}$이 어떤 scheme의 functor of points와 일치하는지가 물음이 된다. 그러한 scheme이 존재하면 앞 절의 universal family가 그 위에 놓인 family로 실현된다. 
+Scheme $M$이 $\Sch$ 위에서 갖는 자료는 functor of points $\Hom_\Sch(-, M)$뿐이고 이는 set-valued이므로, moduli functor를 scheme으로 실현하겠다면 우리가 관심을 가져야 할 대상은 $\mathcal{M}$ 자체가 아니라 coarse moduli functor $\underline{M}$이다. 원래 $\mathcal{M}$을 $\Grpd$로 향하는 것으로 적은 것은 각 family의 automorphism을 기억하기 위함이었으니, 분류하려는 문제가 isomorphism class만을 묻는 것이라면 이 약화에서 잃는 것은 없다. 남는 물음은 이렇게 내린 $\underline{M}$이 어떤 scheme의 functor of points와 일치하는지, 그리고 이것이 우리가 기대하는 성질을 가지는지 등의 여부일 것이다.
 
 ::: 정의 2
 Moduli functor $\mathcal{M}$의 set-valued moduli functor $\underline{M}:\Sch^\op \rightarrow \Set$가 scheme $M$에 의하여 *representable*할 때, 곧 natural isomorphism
 
 $$\underline{M}\cong \Hom_{\Sch}(-, M)$$
 
-이 존재할 때, $M$을 $\mathcal{M}$의 *fine moduli space<sub>섬세한 모듈라이 공간</sub>*라 부른다. 이 natural isomorphism 아래에서 항등사상 $\id_M\in \Hom_\Sch(M, M)$에 대응하는 원소
+이 존재할 때, $M$을 $\mathcal{M}$의 *fine moduli space<sub>섬세한 모듈라이 공간</sub>*라 부른다. 이 때, 이 natural isomorphism 아래에서 항등사상 $\id_M\in \Hom_\Sch(M, M)$에 대응하는 원소
 
 $$\mathcal{U}\in \underline{M}(M)$$
 
 을 *universal family<sub>보편족</sub>*라 부른다.
 :::
 
-이 정의는 앞 절의 항등사상 대응을 set-valued moduli functor $\underline{M}$에 적용한 것으로, $\mathcal{U}$은 $\underline{M}$의 universal element이다. 앞 절에서 tautological하게 주어졌던 universal family가 여기에서는 scheme $M$ 위에 실제로 놓인 family로 실현된다. 그 보편성은 다음과 같이 풀린다. 임의의 scheme $T$와 $T$-family $X\in \underline{M}(T)$에 대하여, natural isomorphism의 한 성분 $\underline{M}(T)\cong \Hom_\Sch(T, M)$이 $X$에 유일한 morphism $f_X: T \rightarrow M$을 대응시키며, Yoneda의 naturality에 의하여 이 $f_X$은 정확히
+위의 universal family는 $\Set$-valued functor $\underline{M}$에 Yoneda lemma를 적용하여 얻어지는 것으로, 임의의 scheme $T$와 $T$-family $X\in \underline{M}(T)$에 대하여, natural isomorphism의 한 성분 $\underline{M}(T)\cong \Hom_\Sch(T, M)$이 $X$에 대응시키는 $f_X: T \rightarrow M$은 Yoneda의 naturality에 의하여
 
 $$X\cong f_X^\ast \mathcal{U}$$
 
-을 만족하는 유일한 morphism이다. 곧 임의의 scheme 위의 모든 family가 universal family를 끌어당겨 단 한 가지 방식으로 얻어지며, $f_X$을 $X$의 *classifying morphism*이라 부른다. Representability는 또한 $\Sch^\op$ 위의 functor로서 $\underline{M}$의 category of elements가 initial object $(M, \mathcal{U})$을 가진다는 것과 동치이고 ([\[범주론\] §표현가능한 함자, ⁋명제 8](/ko/math/category_theory/representable_functors#prop8)), 따라서 fine moduli space는 존재할 경우 유일한 isomorphism을 통해 유일하게 결정된다.
+을 만족하는 유일한 morphism이 되며, 이를 $X$의 *classifying morphism*이라 부른다.
+
+$\mathcal{U}$을 대표하는 $M$-family를 하나 고르는 것은 앞 절의 대응에 의하여 morphism $s:M\rightarrow \mathcal{M}$을 하나 고르는 것과 같다. 앞 절의 universal family $\id_\mathcal{M}$을 이 $s$를 따라 끌어당기면 $\id_\mathcal{M}\circ s=s$, 곧 $\mathcal{U}$이 되므로, $\mathcal{U}$은 $\mathcal{M}$ 위의 tautological universal family를 $M$으로 끌어온 것이다.
+
+따라서 scheme에서 $\mathcal{M}$으로 가는 morphism은 모두 $M$을 거쳐 factor한다. Scheme $T$에서 $\mathcal{M}$으로 가는 morphism은 $T$-family $X$와 같고 $X\cong f_X^\ast \mathcal{U}$이므로 그것은 $s\circ f_X$과 2-isomorphic하며, $f_X$이 유일하므로 이러한 factorization도 하나뿐이다.
 
 Fine moduli가 실제로 존재하는 비자명한 예는 분류 대상에 충분한 강성 자료, 곧 rigidify하는 추가 구조를 얹은 경우에서 나온다. Projective space와 Grassmannian이 대표적이다.
 
