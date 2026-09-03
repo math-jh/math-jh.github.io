@@ -16,15 +16,25 @@ published: false
 
 ---
 
-대수기하의 한 대상이 주어졌을 때, 그것을 무한소만큼 흔들었을 때 무엇이 일어나는지를 묻는 것은 자연스럽다. Singular variety가 인접한 smooth variety의 극한인지, moduli space의 한 점에서 tangent space와 그 위의 곡률이 무엇인지, 주어진 family를 한 단계 더 두꺼운 base 위로 연장할 수 있는지 같은 질문들이 모두 이 범주에 속한다. 이러한 질문은 모두 *infinitesimal deformation<sub>infinitesimal deformation</sub>*의 분류와, 그 변형을 더 두꺼운 base 위로 연장하는 데 따르는 *장애<sub>obstruction</sub>*의 계산으로 환원된다.
+[§매끄러운 사상과 에탈 사상, ⁋정리 15](/ko/math/scheme_theory/smooth_and_etale_morphisms#thm15)는 smoothness를 square-zero 확대를 따른 lifting의 존재로 특징지었다. 그 증명에서 lifting을 가로막은 것은 하나의 linear map이었다. Algebra를 $B=P/I$로, 곧 polynomial ring $P$의 quotient로 적으면 $P$ 위로는 lift를 언제나 잡을 수 있으나 그 lift가 $I$를 죽이리라는 보장이 없고, 죽이지 못하는 정도를 square-zero 확대의 ideal $\mathfrak{b}$ 안에 기록한 $B$-linear map $\delta:I/I^2\rightarrow\mathfrak{b}$가 남기 때문이다. 그 lift를 derivation만큼 보정하여 $\delta$를 상쇄할 수 있을 때 원하는 lifting이 얻어지므로, 판정은 $\delta$가 conormal morphism의 dual
 
-우리는 이 글에서 commutative ring $A$ 위의 algebra $B$, 즉 affine scheme $\Spec B \rightarrow \Spec A$를 변형의 대상으로 삼는다. 변형의 무한소 방향은 Kähler differential $\Omega_{B/A}$가 어느 정도까지 통제하지만, $\Omega$만으로는 두 가지 지점에서 부족하다. 첫째, [\[다중선형대수학\] §미분가군, ⁋명제 14](/ko/math/multilinear_algebra/differential_modules#prop14)의 conormal exact sequence는 오른쪽 끝에서만 exact이어서, 변형을 막는 relation들의 정보가 그 왼쪽 kernel에 숨어 보이지 않는다. 둘째, $\Omega$는 일차 정보만 담으므로 변형의 연장 가능성, 곧 장애를 측정하지 못한다. 이 두 부족분을 메우는 것이 여접 복합체이며, 그 가장 거친 근사인 naive 여접 복합체의 $H_0, H_1$이 변형이론에서 정확히 무엇을 재는지가 이 글의 중심 주제이다.
+$$\overline{d}^\ast:\Der_A(P,\mathfrak{b})=\Hom_B(\Omega_{P/A}\otimes_PB,\mathfrak{b})\longrightarrow\Hom_B(I/I^2,\mathfrak{b})$$
 
-이하에서 별도의 언급이 없는 한 모든 ring은 commutative이고 unital이며, $k$는 field, $B$는 finitely generated $k$-algebra이다.
+의 image에 드는가로 요약되었고, smoothness가 한 일은 [§매끄러운 사상과 에탈 사상, ⁋명제 8](/ko/math/scheme_theory/smooth_and_etale_morphisms#prop8)의 splitting을 통해 이 상쇄를 언제나 가능하게 만든 것이다. 앞 글에서 $B$, $\mathfrak{a}$, $C$로 적은 것이 이 글에서는 $P$, $I$, $B$이다.
+
+Smoothness를 가정하지 않으면 $\delta$는 이 image를 벗어날 수 있고, 벗어난 $\delta$는 더 이상 없앨 대상이 아니라 그 자체로 하나의 자료가 된다. 무엇을 어느 방향으로 흔들었는지가 그 안에 적혀 있기 때문이며, 이렇게 얻어지는 자료가 *infinitesimal deformation<sub>무한소 변형</sub>*이다. 이를 담는 것은 cokernel
+
+$$T^1=\coker\overline{d}^\ast$$
+
+이고, 이 글의 첫 목표는 $T^1$이 presentation의 선택에 무관한 불변량이며 $B$의 infinitesimal deformation을 정확히 분류한다는 것을 보이는 것이다. 이어서 그렇게 얻은 변형을 한 단계 더 두꺼운 base 위로 연장하는 문제를 물으면 같은 구조가 한 칸 위로 옮겨가, 연장을 막는 *obstruction<sub>장애</sub>*이 둘째 cohomology $T^2$에 놓인다.
+
+[§미분과 여접층, ⁋명제 2](/ko/math/scheme_theory/sheaf_of_differentials#prop2)의 conormal exact sequence는 오른쪽 끝에서만 exact이며, 그 왼쪽 끝에서 exactness가 실패하는 정도가 smoothness의 실패를 잰다는 것이 [§매끄러운 사상과 에탈 사상](/ko/math/scheme_theory/smooth_and_etale_morphisms)의 관찰이었다. 위의 $T^1$은 그 왼쪽 연장을 dual한 쪽에서 본 것이다. 연장의 가장 거친 형태가 두 항짜리 naive 여접 복합체이며, 우리는 그 $H_1$이 non-smoothness를, dual의 cohomology $T^0, T^1, T^2$가 각각 무한소 automorphism과 변형과 장애를 잰다는 것을 본다. 마지막 절에서는 이 두 항짜리 절단이 $T^2$ 이상에서 부딪히는 한계, 곧 완전한 여접 복합체가 필요한 이유를 정리한다.
+
+변형의 대상은 ring $A$ 위의 algebra $B$, 곧 affine scheme $\Spec B \rightarrow \Spec A$이며, 별도의 언급이 없는 한 $k$는 field이고 $B$는 finitely generated $k$-algebra이다.
 
 ## Square-zero 확대와 이중수
 
-변형의 무대가 되는 것은 base의 무한소 두꺼워짐, 곧 nilpotent ideal에 의한 확대이다. 가장 단순하고 근본적인 경우가 그 ideal의 제곱이 사라지는 경우이다.
+[§매끄러운 사상과 에탈 사상, §§Infinitesimal lifting criterion](/ko/math/scheme_theory/smooth_and_etale_morphisms#infinitesimal-lifting-criterion)에서 square-zero 확대는 morphism을 시험하는 도구였다. 변형이론에서는 같은 대상이 변형의 base 자체가 된다. 곧 대상을 얹을 base를 무한소만큼 두껍게 만드는 것이 변형이며, 그 두꺼워짐 가운데 가장 단순하고 근본적인 것이 ideal의 제곱이 사라지는 확대이다. 앞 글에서 scheme 단계로 적은 것을 ring 단계로 옮겨 적는다.
 
 ::: 정의 1
 Ring $A$에 대하여, $A$-module $M$에 의한 *square-zero extension<sub>제곱영 확대</sub>*이란 surjective ring homomorphism $\pi: A' \rightarrow A$로서, 그 kernel $M=\ker\pi$가 $M^2=0$을 만족하고, $M$ 위에 $A'$의 곱으로 유도되는 $A'$-module 구조가 $A=A'/M$를 통한 $A$-module 구조와 일치하는 것을 뜻한다. 이를 short exact sequence
@@ -34,7 +44,7 @@ $$0\longrightarrow M\longrightarrow A'\overset{\pi}{\longrightarrow}A\longrighta
 으로 적는다.
 :::
 
-조건 $M^2=0$은 $M$ 위의 $A'$-action이 $M$의 원소를 곱하는 부분을 모두 죽인다는 뜻이므로, $M$의 $A'$-module 구조가 $A$-module 구조로 내려온다는 마지막 조건은 자동으로 따라온다. 기하적으로 $\Spec A\hookrightarrow\Spec A'$는 defining ideal의 제곱이 $0$인 closed embedding, 곧 첫 번째 무한소 이웃 수준의 두꺼워짐이다. 이러한 확대는 [§매끄러운 사상과 에탈 사상, ⁋정리 15](/ko/math/scheme_theory/smooth_and_etale_morphisms#thm15)에서 infinitesimal lifting 판정의 무대로 이미 등장하였다.
+조건 $M^2=0$은 $M$ 위의 $A'$-action이 $M$의 원소를 곱하는 부분을 모두 죽인다는 뜻이므로, $M$의 $A'$-module 구조가 $A$-module 구조로 내려온다는 마지막 조건은 자동으로 따라온다. 기하적으로 $\Spec A\hookrightarrow\Spec A'$는 defining ideal의 제곱이 $0$인 closed embedding, 곧 첫 번째 무한소 이웃 수준의 두꺼워짐이다.
 
 ::: 예시 2
 가장 기본적인 square-zero extension은 $M=A$에 대한 *trivial extension*
@@ -85,7 +95,7 @@ $$\sum_jA_jF_j=\sum_ja_jf_j+\epsilon\Bigl(\sum_ja_jg_j-\sum_jc_jf_j\Bigr)=0$$
 이므로 syzygy $(a_j)$가 $(F_j)$의 syzygy로 들어올려진다.
 :::
 
-이 명제는 flat한 first-order deformation을 매우 구체적으로 기술한다. 곧 flatness는 정확히 "원래 방정식들 사이의 모든 관계가 흔들린 방정식들 사이의 관계로 살아남는다"는 조건이며, 이것이 [§매끄러운 사상과 에탈 사상, ⁋정리 15](/ko/math/scheme_theory/smooth_and_etale_morphisms#thm15)에서 본 infinitesimal lifting의 대수적 핵심이다. 한 가지 관찰을 덧붙이면, $\sum_ja_jf_j=0$인 syzygy에 대하여 조건 $\sum_ja_jg_j\in I$는 $B$ 위에서 $\sum_j\overline{a_j}\overline{g_j}=0$으로 적힌다. 따라서 대응 $\overline{f_j}\mapsto\overline{g_j}$는 $B$-module homomorphism
+이 명제는 flat한 first-order deformation을 매우 구체적으로 기술한다. 곧 flatness는 정확히 "원래 방정식들 사이의 모든 관계가 흔들린 방정식들 사이의 관계로 살아남는다"는 조건이다. 한 가지 관찰을 덧붙이면, $\sum_ja_jf_j=0$인 syzygy에 대하여 조건 $\sum_ja_jg_j\in I$는 $B$ 위에서 $\sum_j\overline{a_j}\overline{g_j}=0$으로 적힌다. 따라서 대응 $\overline{f_j}\mapsto\overline{g_j}$는 $B$-module homomorphism
 
 $$\varphi:I/I^2\longrightarrow B$$
 
@@ -95,7 +105,7 @@ $$\varphi:I/I^2\longrightarrow B$$
 
 $$\Der_k(P,B)=\Hom_B(\Omega_{P/k}\otimes_PB,B)\overset{\overline{d}^\ast}{\longrightarrow}\Hom_B(I/I^2,B)$$
 
-의 image에 속하는 경우이다. 여기서 $\overline{d}^\ast$는 conormal morphism $\overline{d}:I/I^2\rightarrow\Omega_{P/k}\otimes_PB$의 dual이다.
+의 image에 속하는 경우이다. 여기서 $\overline{d}^\ast$는 conormal morphism $\overline{d}:I/I^2\rightarrow\Omega_{P/k}\otimes_PB$의 dual이며, [§매끄러운 사상과 에탈 사상, ⁋정리 15](/ko/math/scheme_theory/smooth_and_etale_morphisms#thm15)의 증명에서 lift의 실패 $\delta$를 상쇄하는 데 쓰인 것과 같은 morphism이다. 그곳에서는 smoothness가 이 image를 전부로 만들어 모든 $\delta$를 없앴고, 여기서는 없앨 수 없는 부분이 변형으로 남는다.
 
 ## Naive 여접 복합체와 $T^i$
 
@@ -107,7 +117,7 @@ $$\operatorname{NL}_{B/k}=\Bigl[I/I^2\overset{\overline{d}}{\longrightarrow}\Ome
 
 $$H_0(\operatorname{NL}_{B/k})\cong\Omega_{B/k},\qquad H_1(\operatorname{NL}_{B/k})=\ker\overline{d}$$
 
-이며 presentation의 선택에 무관함을 보았다 ([\[가환대수학\] §미분, ⁋명제 11](/ko/math/commutative_algebra/differentials#prop11), [\[가환대수학\] §미분, ⁋정리 14](/ko/math/commutative_algebra/differentials#thm14)). 앞 절의 분석은 first-order deformation의 모듈라이가 이 복합체를 $B$로 dual한 것의 cohomology로 읽힌다는 것을 시사한다. 이를 정의로 굳힌다.
+이며 presentation의 선택에 무관함을 보았다 ([\[가환대수학\] §미분, ⁋명제 11](/ko/math/commutative_algebra/differentials#prop11), [\[가환대수학\] §미분, ⁋정리 14](/ko/math/commutative_algebra/differentials#thm14)). $\operatorname{NL}_{B/k}$의 언어로 옮기면 [§매끄러운 사상과 에탈 사상, ⁋명제 8](/ko/math/scheme_theory/smooth_and_etale_morphisms#prop8)의 splitting은 $\operatorname{NL}_{B/k}$가 projective module $\Omega_{B/k}$ 하나에 quasi-isomorphic하다는 말이 된다. 앞 절의 분석은 first-order deformation의 모듈라이가 이 복합체를 $B$로 dual한 것의 cohomology로 읽힌다는 것을 시사한다. 이를 정의로 굳힌다.
 
 ::: 정의 5
 $B$-module $M$에 대하여, $\operatorname{NL}_{B/k}$를 $M$으로 dual한 cochain complex
@@ -195,9 +205,9 @@ $B$가 smooth하면 ([§매끄러운 사상과 에탈 사상, ⁋명제 8](/ko/m
 $$0\longrightarrow I/I^2\overset{\overline{d}}{\longrightarrow}\Omega_{P/k}\otimes_PB\longrightarrow\Omega_{B/k}\longrightarrow0$$
 
 이 왼쪽에서도 split되는 short exact sequence가 되어 $\overline{d}$가 injective이고 그 cokernel $\Omega_{B/k}$이 projective이다. 따라서 $H_1(\operatorname{NL}_{B/k})=\ker\overline{d}=0$이고 $\operatorname{NL}_{B/k}$은 projective module $\Omega_{B/k}$ 하나에 quasi-isomorphic하다. 그럼 $\Hom_B(\operatorname{NL}_{B/k},M)$이 $\Hom_B(\Omega_{B/k},M)$ 한 항에 집중되어 $T^1=0$이다. $T^2=0$은 [참고 6](#rmk6)의 $T^i(B/k,M)=\Ext^i_B(L_{B/k},M)$과, smooth한 $B$에 대하여 $L_{B/k}$가 이 projective module $\Omega_{B/k}$ 하나에 quasi-isomorphic하다는 사실로부터 따른다. 무한소 automorphism에 관한 주장은 [정리 7](#thm7)의 일반 형태이다.
-
-이 결론은 [§매끄러운 사상과 에탈 사상, ⁋정리 15](/ko/math/scheme_theory/smooth_and_etale_morphisms#thm15)와 정확히 일치한다. Smooth는 모든 square-zero 확대에 대한 lifting의 존재($T^2=0$, unobstructed)와 그 lifting의 일대일적 통제($T^1=0$, 동형 유일)에 해당하기 때문이다.
 :::
+
+이 명제는 [§매끄러운 사상과 에탈 사상, ⁋정리 15](/ko/math/scheme_theory/smooth_and_etale_morphisms#thm15)의 smooth한 쪽을 $T^i$의 언어로 옮긴 것이다. 그곳에서 lifting이 존재한다는 것은 $\delta$를 derivation으로 상쇄할 수 있다는 것, 곧 $\delta$가 정하는 class가 $T^1(B/A,\mathfrak{b})$에서 사라진다는 것이었고, 두 lifting의 차이를 통제한 것은 $T^0(B/A,\mathfrak{b})=\Der_A(B,\mathfrak{b})$였다. 여기에 $T^2=0$이 더해져, 그렇게 얻은 변형이 다시 더 두꺼운 base 위로 연장된다는 것까지 얻는다.
 
 조금 더 약한 가정인 *local complete intersection*에서도 장애는 사라진다. $B=P/I$에서 $I$가 국소적으로 regular sequence로 생성되면 완전한 여접 복합체 $L_{B/k}$가 $[0,1]$ 두 degree에 projective module로 집중되어, 그 dual의 둘째 cohomology가 자동으로 $0$이 되기 때문이다. 곧 $T^2(B/k,M)=0$이고 lci singular point는 항상 *unobstructed<sub>장애 없음</sub>*이다. 다만 lci라고 해서 $H_1(\operatorname{NL}_{B/k})$이 소멸하는 것은 아니며, 반대로 아래 [예시 11](#ex11)처럼 singular한 lci가 $H_1(\operatorname{NL}_{B/k})=0$을 만족하기도 한다. 곧 $H_1(\operatorname{NL})$의 소멸만으로는 lci 여부가 판정되지 않으며, smoothness는 $H_1(\operatorname{NL}_{B/k})=0$과 $\Omega_{B/k}$가 locally free라는 것이 함께 성립하는 것으로 특징지어진다.
 
@@ -210,7 +220,7 @@ $B=k[\x,\y]/(\x\y)$를 생각하자. 이는 평면 위 두 직선이 한 점에�
 
 $$\operatorname{NL}_{B/k}=\Bigl[B\overline{f}\overset{\overline{d}}{\longrightarrow}B \dd{\x}\oplus B \dd{\y}\Bigr],\qquad\overline{d}(\overline{f})=\y \dd{\x}+\x \dd{\y}$$
 
-이다 ($f=\x\y$, $\partial f/\partial\x=\y$, $\partial f/\partial\y=\x$). 이를 dual하면 $\overline{d}^\ast:B^2\rightarrow B$, $(b_1,b_2)\mapsto b_1\y+b_2\x$이므로
+이다 ($f=\x\y$, $\partial f/\partial\x=\y$, $\partial f/\partial\y=\x$). 이 $\overline{d}$가 단사이면서도 그 image가 원점에서 direct summand를 이루지 못한다는 것, 곧 $H_1(\operatorname{NL}_{B/k})=0$이면서도 $B$가 원점에서 smooth하지 않다는 것은 [§매끄러운 사상과 에탈 사상, ⁋명제 8](/ko/math/scheme_theory/smooth_and_etale_morphisms#prop8) 뒤의 논의에서 이미 확인하였다. 그곳에서 확인한 실패를 여기서는 dual 쪽에서 재어 그 크기를 얻는다. 이를 dual하면 $\overline{d}^\ast:B^2\rightarrow B$, $(b_1,b_2)\mapsto b_1\y+b_2\x$이므로
 
 $$T^1(B/k,B)=\coker\overline{d}^\ast=B/(\x,\y)=k[\x,\y]/(\x\y,\x,\y)\cong k$$
 
@@ -254,7 +264,7 @@ Codimension $3$ 이상에서 이러한 장애가 일반적으로 나타나는 �
 지금까지 naive 여접 복합체 $\operatorname{NL}_{B/k}$로 $T^0, T^1$을 완전히 통제하였고, $T^2$는 syzygy의 셋째 항 $L_2$를 손으로 덧붙여 다루었다. 그러나 이 임시방편은 곧 한계에 부딪힌다.
 
 ::: 참고 14
-첫째, [참고 6](#rmk6)에서 보았듯 $\operatorname{NL}_{B/k}$ 자체는 $T^2$ 이상의 cohomology를 담지 못한다. 반복적 변형, 곧 $k[t]/(t^n)$ 위로의 연장을 무한히 쌓아 올리는 과정에서는 더 높은 $T^i$가 모두 관여하므로, 모든 degree에서 homology를 갖는 단일한 대상이 필요하다. 둘째, 변형이론은 morphism의 합성에 대한 *transitivity*를 요구하는데, Kähler differential과 naive 여접 복합체는 [\[다중선형대수학\] §미분가군, ⁋명제 13](/ko/math/multilinear_algebra/differential_modules#prop13)의 transitivity exact sequence처럼 오른쪽에서만 exact한 exact sequence밖에 주지 못한다. 완전한 이론은 ring morphism의 사슬 $A\rightarrow B\rightarrow C$에 대하여 exact sequence가 아니라 distinguished triangle
+첫째, [참고 6](#rmk6)에서 보았듯 $\operatorname{NL}_{B/k}$ 자체는 $T^2$ 이상의 cohomology를 담지 못한다. 반복적 변형, 곧 $k[t]/(t^n)$ 위로의 연장을 무한히 쌓아 올리는 과정에서는 더 높은 $T^i$가 모두 관여하므로, 모든 degree에서 homology를 갖는 단일한 대상이 필요하다. 둘째, 변형이론은 morphism의 합성에 대한 *transitivity*를 요구하는데, Kähler differential과 naive 여접 복합체는 [§미분과 여접층, ⁋명제 1](/ko/math/scheme_theory/sheaf_of_differentials#prop1)과 같이 오른쪽 끝에서만 exact한 sequence밖에 주지 못한다. 완전한 이론은 ring morphism의 사슬 $A\rightarrow B\rightarrow C$에 대하여 exact sequence가 아니라 distinguished triangle
 
 $$L_{B/A}\otimes_B^{\mathbb{L}}C\longrightarrow L_{C/A}\longrightarrow L_{C/B}\longrightarrow$$
 
