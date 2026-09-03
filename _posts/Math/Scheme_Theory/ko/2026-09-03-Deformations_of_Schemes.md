@@ -15,7 +15,7 @@ published: false
 
 ---
 
-Affine scheme의 변형은 이미 손에 있다. Finitely generated $k$-algebra $B$의 first-order deformation이 $T^1(B/k, B)$과 일대일 대응하고 ([§변형이론과 여접 복합체, ⁋정리 7](/ko/math/scheme_theory/deformation_theory#thm7)), 그것을 더 두꺼운 base 위로 연장하는 데 걸리는 obstruction은 [§변형이론과 여접 복합체, ⁋정리 9](/ko/math/scheme_theory/deformation_theory#thm9)에 의하여 $T^2(B/k, B)$에 놓인다. 남은 일은 이 국소적인 분류를 scheme 전체로 붙이는 것이다.
+Affine scheme의 변형은 이미 손에 있다. Finitely generated $k$-algebra $B$의 first-order deformation이 $T^1(B/k, B)$과 일대일 대응하고 ([§변형이론과 여접 복합체, ⁋정리 5](/ko/math/scheme_theory/deformation_theory#thm5)), 그것을 더 두꺼운 base 위로 연장하는 데 걸리는 obstruction은 [§변형이론과 여접 복합체, ⁋정리 7](/ko/math/scheme_theory/deformation_theory#thm7)에 의하여 $T^2(B/k, B)$에 놓인다. 남은 일은 이 국소적인 분류를 scheme 전체로 붙이는 것이다.
 
 붙이는 데에는 두 겹의 자유도가 있다. 하나는 각 affine 조각이 스스로 변형되는 자유도이고, 다른 하나는 조각들을 다시 이어 붙이는 방식의 자유도이다. Smooth한 경우에는 첫째 자유도가 통째로 사라져 둘째 것만 남으며, 그 결과가 tangent sheaf의 첫째 cohomology이다. Singularity가 있으면 두 자유도가 함께 살아 있고, 이들을 한 대상 안에서 다루는 올바른 틀이 cotangent sheaf의 $\Ext$이다.
 
@@ -31,7 +31,7 @@ $$\mathcal{X}\times_{\Spec k[\epsilon]}\Spec k\cong X$$
 의 짝을 뜻한다. 두 first-order deformation $\mathcal{X}, \mathcal{X}'$이 *isomorphic*이라는 것은 $\Spec k[\epsilon]$ 위에서의 isomorphism $\mathcal{X}\cong\mathcal{X}'$으로서 $X$ 위에 항등사상을 유도하는 것이 존재한다는 것이다. 곱 $X\times_{\Spec k}\Spec k[\epsilon]$에 isomorphic한 변형을 *trivial*하다 부른다.
 :::
 
-$\epsilon$이 nilpotent이므로 $\mathcal{X}$와 $X$는 같은 위상공간을 갖고, 두꺼워지는 것은 오직 structure sheaf뿐이다. 따라서 $X$의 열린집합 $U$마다 $\mathcal{X}\vert_U$가 $U$의 first-order deformation을 주며, 이것이 위에서 말한 국소적인 자료이다. Affine $U=\Spec B$에서 이 자료는 정확히 $B$의 first-order deformation이므로 ([§변형이론과 여접 복합체, ⁋정의 3](/ko/math/scheme_theory/deformation_theory#def3)) $T^1(B/k, B)$가 분류한다.
+$\epsilon$이 nilpotent이므로 $\mathcal{X}$와 $X$는 같은 위상공간을 갖고, 두꺼워지는 것은 오직 structure sheaf뿐이다. 따라서 $X$의 열린집합 $U$마다 $\mathcal{X}\vert_U$가 $U$의 first-order deformation을 주며, 이것이 위에서 말한 국소적인 자료이다. Affine $U=\Spec B$에서 이 자료는 정확히 $B$의 first-order deformation이므로 ([§변형이론과 여접 복합체, ⁋정의 1](/ko/math/scheme_theory/deformation_theory#def1)) $T^1(B/k, B)$가 분류한다.
 
 Smooth한 경우 이 국소 자료가 아무것도 주지 않는다는 것을 먼저 확인한다.
 
@@ -112,7 +112,7 @@ $U$를 줄여 $B=P/I$ ($P=k[\x_1,\ldots,\x_n]$)이고 $I$가 길이 $k$의 $P$-r
 
 $$\operatorname{NL}_{B/k}=\bigl[I/I^2\overset{\bar d}{\longrightarrow}\Omega_{P/k}\otimes_PB\bigr]$$
 
-이고 $T^i(B/k, B)$는 $\Hom_B(\operatorname{NL}_{B/k}, B)$의 cohomology이다. ([§변형이론과 여접 복합체, ⁋정의 5](/ko/math/scheme_theory/deformation_theory#def5))
+이고 $T^i(B/k, B)$는 $\Hom_B(\operatorname{NL}_{B/k}, B)$의 cohomology이다. ([§변형이론과 여접 복합체, ⁋정의 3](/ko/math/scheme_theory/deformation_theory#def3))
 
 [명제 4](#prop4)에 의하여 $\bar d$가 단사이므로 이 complex의 homology는 $H_1=0$과 $H_0=\Omega_{B/k}$뿐이고, 곧 augmentation $\operatorname{NL}_{B/k}\rightarrow\Omega_{B/k}$가 quasi-isomorphism이다. 두 항 가운데 $\Omega_{P/k}\otimes_PB$는 $\dd{\x_1},\ldots,\dd{\x_n}$을 기저로 하는 free $B$-module이고 ([\[가환대수학\] §미분, ⁋명제 5](/ko/math/commutative_algebra/differentials#prop5)), $I/I^2$은 rank $k$의 free $B$-module이므로 ([§완전교차, ⁋명제 5](/ko/math/scheme_theory/complete_intersections#prop5)), $\operatorname{NL}_{B/k}$는 $\Omega_{B/k}$의 길이 $1$짜리 free resolution이다. 그러므로 $\Hom_B(\operatorname{NL}_{B/k}, B)$의 cohomology는 정의에 의하여 $\Ext^i_B(\Omega_{B/k}, B)$이다. ([\[호몰로지 대수학\] §Ext와 Tor, ⁋명제 3](/ko/math/homological_algebra/ext_and_tor#prop3))
 

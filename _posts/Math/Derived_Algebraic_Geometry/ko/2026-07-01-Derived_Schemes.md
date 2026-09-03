@@ -167,7 +167,7 @@ $$\operatorname{vdim}(f)=\rank E_0-\rank E_1$$
 으로 정의하고, $X$이 $\Spec k$ 위에서 quasi-smooth할 때 $\operatorname{vdim}(X)=\operatorname{vdim}(X/k)$을 $X$의 *virtual dimension*이라 부른다.
 :::
 
-Tor-amplitude $[-1,0]$은 cohomological 규약의 표현이며, 우리가 쓰는 connective(homological) 규약에서는 $L_f$이 degree $0,1$의 두 항에 집중됨을 뜻한다. Degree $0$의 $E_0$은 smooth 접방향, 곧 Kähler differential에 해당하고, degree $1$의 $E_1$은 conormal orientation, 곧 방정식이 만드는 장애에 해당한다. 이 degree $1$ 방향이 변형이론에서 변형의 연장을 막는 장애가 사는 자리이며, quasi-smooth morphism은 그 장애가 여접 복합체 한 단계 안에 완전히 담기는 morphism이다. ([\[스킴\] §변형이론과 여접 복합체, ⁋정리 9](/ko/math/scheme_theory/deformation_theory#thm9)) 그러므로 $\operatorname{vdim}(f)$은 "접방향의 수에서 방정식의 수를 뺀 것"으로, 고전적 codimension 계산의 유도 판본이다. 이 정의가 실제로 무엇을 재는지는 고전적 lci 및 regular embedding과의 관계에서 분명해진다.
+Tor-amplitude $[-1,0]$은 cohomological 규약의 표현이며, 우리가 쓰는 connective(homological) 규약에서는 $L_f$이 degree $0,1$의 두 항에 집중됨을 뜻한다. Degree $0$의 $E_0$은 smooth 접방향, 곧 Kähler differential에 해당하고, degree $1$의 $E_1$은 conormal orientation, 곧 방정식이 만드는 장애에 해당한다. 이 degree $1$ 방향이 변형이론에서 변형의 연장을 막는 장애가 사는 자리이며, quasi-smooth morphism은 그 장애가 여접 복합체 한 단계 안에 완전히 담기는 morphism이다. ([\[스킴\] §변형이론과 여접 복합체, ⁋정리 7](/ko/math/scheme_theory/deformation_theory#thm7)) 그러므로 $\operatorname{vdim}(f)$은 "접방향의 수에서 방정식의 수를 뺀 것"으로, 고전적 codimension 계산의 유도 판본이다. 이 정의가 실제로 무엇을 재는지는 고전적 lci 및 regular embedding과의 관계에서 분명해진다.
 
 ::: 명제 13
 $f:X\rightarrow Y$을 derived scheme의 morphism이라 하자.

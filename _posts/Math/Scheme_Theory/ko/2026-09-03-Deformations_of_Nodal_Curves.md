@@ -68,7 +68,7 @@ $$\mathcal{E}xt^1(\Omega_{C/k}, \mathcal{O}_C)=k[\x, \y]/(\x\y, \y, \x)=k$$
 이 stalk이 무엇인지는 방정식에서 곧바로 읽힌다.
 
 ::: 예시 4
-Node의 국소 모형 $C_0=Z(\x\y)\subseteq\mathbb{A}^2_k$를 보자. [§스킴의 변형, ⁋명제 5](/ko/math/scheme_theory/deformations_of_schemes#prop5)에 의하여 $C_0$의 first-order deformation은 $T^1=k[\x, \y]/(\x, \y)=k$가 분류하고, 그 대응은 [§변형이론과 여접 복합체, ⁋명제 4](/ko/math/scheme_theory/deformation_theory#prop4) 직후의 논의에 따라 방정식 $\x\y$를 $\x\y+\epsilon g$로 흔드는 것이다. 여기서 $g$는 $T^1$에서의 class만이 문제이므로 $g$를 상수 $1$로 택하면 되고, 그럼 변형은
+Node의 국소 모형 $C_0=Z(\x\y)\subseteq\mathbb{A}^2_k$를 보자. [§스킴의 변형, ⁋명제 5](/ko/math/scheme_theory/deformations_of_schemes#prop5)에 의하여 $C_0$의 first-order deformation은 $T^1=k[\x, \y]/(\x, \y)=k$가 분류하고, 그 대응은 [§변형이론과 여접 복합체, ⁋명제 2](/ko/math/scheme_theory/deformation_theory#prop2) 직후의 논의에 따라 방정식 $\x\y$를 $\x\y+\epsilon g$로 흔드는 것이다. 여기서 $g$는 $T^1$에서의 class만이 문제이므로 $g$를 상수 $1$로 택하면 되고, 그럼 변형은
 
 $$\mathcal{C}=\Spec k[\epsilon][\x, \y]/(\x\y-\epsilon)$$
 
