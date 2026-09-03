@@ -4539,8 +4539,8 @@ D:
   ko: 변형
   primary: ko
   defs:
-  - label: '[유도대수기하학] §변형이론과 여접 복합체'
-    url: /ko/math/derived_algebraic_geometry/deformation_theory
+  - label: '[스킴] §변형이론과 여접 복합체'
+    url: /ko/math/scheme_theory/deformation_theory
   see:
   - label: First-order deformation
     id: first-order_deformation
@@ -4576,8 +4576,8 @@ D:
   ko: 변형이론
   primary: ko
   defs:
-  - label: '[유도대수기하학] §변형이론과 여접 복합체'
-    url: /ko/math/derived_algebraic_geometry/deformation_theory
+  - label: '[스킴] §변형이론과 여접 복합체'
+    url: /ko/math/scheme_theory/deformation_theory
 - id: degeneracy_map
   en: degeneracy map
   ko: 퇴화 사상
@@ -5496,8 +5496,8 @@ D:
   ko: 이중수
   primary: en
   defs:
-  - label: '[유도대수기하학] §변형이론과 여접 복합체'
-    url: /ko/math/derived_algebraic_geometry/deformation_theory
+  - label: '[스킴] §변형이론과 여접 복합체'
+    url: /ko/math/scheme_theory/deformation_theory
 - id: dual_pairing
   en: dual pairing
   ko: 쌍대 페어링
@@ -6806,8 +6806,8 @@ F:
   ko: 일차 변형
   primary: en
   defs:
-  - label: '[유도대수기하학] §변형이론과 여접 복합체'
-    url: /ko/math/derived_algebraic_geometry/deformation_theory
+  - label: '[스킴] §변형이론과 여접 복합체'
+    url: /ko/math/scheme_theory/deformation_theory
 - id: fitting_ideal
   en: Fitting ideal
   ko: 핏팅 아이디얼
@@ -9132,8 +9132,8 @@ I:
   ko: 무한소 변형
   primary: en
   defs:
-  - label: '[유도대수기하학] §변형이론과 여접 복합체'
-    url: /ko/math/derived_algebraic_geometry/deformation_theory
+  - label: '[스킴] §변형이론과 여접 복합체'
+    url: /ko/math/scheme_theory/deformation_theory
 - id: inflection_point
   en: inflection point
   ko: 변곡점
@@ -11020,8 +11020,8 @@ L:
   ko: 리히텐바움-슐레진저 함자
   primary: en
   defs:
-  - label: '[유도대수기하학] §변형이론과 여접 복합체'
-    url: /ko/math/derived_algebraic_geometry/deformation_theory
+  - label: '[스킴] §변형이론과 여접 복합체'
+    url: /ko/math/scheme_theory/deformation_theory
 - id: lie_algebra
   en: Lie algebra
   ko: 리 대수
@@ -13313,8 +13313,8 @@ O:
   ko: 장애
   primary: en
   defs:
-  - label: '[유도대수기하학] §변형이론과 여접 복합체'
-    url: /ko/math/derived_algebraic_geometry/deformation_theory
+  - label: '[스킴] §변형이론과 여접 복합체'
+    url: /ko/math/scheme_theory/deformation_theory
   see:
   - label: 변형이론
     lang: ko
@@ -17783,8 +17783,8 @@ S:
   ko: 제곱영 확대
   primary: en
   defs:
-  - label: '[유도대수기하학] §변형이론과 여접 복합체'
-    url: /ko/math/derived_algebraic_geometry/deformation_theory
+  - label: '[스킴] §변형이론과 여접 복합체'
+    url: /ko/math/scheme_theory/deformation_theory
 - id: squeeze_theorem
   en: squeeze theorem
   ko: 조임정리
@@ -19699,8 +19699,8 @@ U:
   ko: 장애 없음
   primary: en
   defs:
-  - label: '[유도대수기하학] §변형이론과 여접 복합체'
-    url: /ko/math/derived_algebraic_geometry/deformation_theory
+  - label: '[스킴] §변형이론과 여접 복합체'
+    url: /ko/math/scheme_theory/deformation_theory
   see:
   - label: Obstruction
     id: obstruction

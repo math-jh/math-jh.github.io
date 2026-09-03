@@ -9,7 +9,7 @@ sidebar:
     nav: "scheme_theory-ko"
 
 date: 2026-08-23
-weight: 22
+weight: 26
 ---
 
 이제 우리는 스킴의 언어를 더 확장하기 위한 준비를 시작한다. 이를 위해서는 [§스킴 사이의 사상, ⁋정의 6](/ko/math/scheme_theory/morphism_of_schemes#def6)에서 살펴보았던 functor of points 관점이 필요하다. 이는 [§스킴 사이의 사상, ⁋정의 9](/ko/math/scheme_theory/morphism_of_schemes#def9)에서 이미 정의했던 것으로, scheme $X$를 살펴보기 위해 모든 가능한 test scheme $T$에 대하여 $X$의 $T$-point들의 모임을 보는 것이다. 즉, 다음의 functor
