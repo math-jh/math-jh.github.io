@@ -12,9 +12,7 @@ sidebar:
 date: 2021-10-16
 
 weight: 11
-revising: true
 
-drift_needed: true
 
 ---
 
@@ -249,4 +247,4 @@ $$A=[L]_{\mathcal{B}}^\mathcal{B}=[\id_V]^\mathcal{C}_\mathcal{B}[L]^\mathcal{C}
 
 ---
 
-[^1]: 미적분학의 기본정리, 대수학의 기본정리 등등과는 달리 *선형대수학의 기본정리*는 저자에 따라 전혀 다른 정리들을 의미하기도 한다. 예를 들어 Gockenbach의 경우 이전 글에서의 rank-nullity 정리를, Gilbert Strang의 경우 나중에 다룰 orthogonal complement에 대한 정리들을 선형대수학의 기본정리라고 부른다. 우리는 **[Lee]**를 따라 이 정리를 선형대수학의 기본정리라 부르기로 한다.
+[^1]: 미적분학의 기본정리, 대수학의 기본정리 등등과는 달리 *선형대수학의 기본정리*는 저자에 따라 전혀 다른 정리들을 의미하기도 한다. 예를 들어 **[Goc]**에서는 이전 글에서의 rank-nullity 정리를, Gilbert Strang의 경우 다음 글에서 다룰 직교여공간에 대한 정리들을 선형대수학의 기본정리라고 부른다. 우리는 **[Lee]**를 따라 이 정리를 선형대수학의 기본정리라 부르기로 한다.

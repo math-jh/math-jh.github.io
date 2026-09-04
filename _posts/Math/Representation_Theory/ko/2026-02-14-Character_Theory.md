@@ -10,13 +10,11 @@ sidebar:
 
 date: 2026-02-14
 weight: 2
-revising: true
 
-drift_needed: true
 
 ---
 
-이번 글에서 우리는 character function을 정의하고 이들의 성질에 대해 살펴본다. 이들은 representation을 분류하는 우리의 목표에 큰 도움을 줄 것이다. 앞선 글에서와 마찬가지로, 이 글에서 $G$는 언제나 finite group이다. 
+이번 글에서 우리는 character function을 정의하고 이들의 성질에 대해 살펴본다. 이들은 representation을 분류하는 우리의 목표에 큰 도움을 줄 것이다. 
 
 ## 군 표현의 지표
 
@@ -162,30 +160,30 @@ $$g\cdot \left(\sum_{y\in G} \phi(y)y\right)=\left(\sum_{x\in G}\delta_g(x)x\rig
 
 $$\rchi_{\mathbb{C}[G]}(g)=\begin{cases}\lvert G\rvert&\text{if $g=e$}\\0&\text{otherwise}\end{cases}\tag{2}$$
 
-이다. 이제 $G$의 irreducible representation 전체를 $V_1,\ldots,V_r$이라 적고 각각에 대하여 위의 inner product를 계산하면,
+이다. 이제 만일 $V_i$가 $\mathbb{C}[G]$의 irreducible subrepresentation이라면,
 
 $$\langle\rchi_{\mathbb{C}[G]}, \rchi_{V_i}\rangle=\frac{1}{\lvert G\rvert}\sum_{g\in G}\rchi_{\mathbb{C}[G]}(g)\overline{\rchi_{V_i}(g)}=\frac{1}{\lvert G\rvert} \rchi_{\mathbb{C}[G]}(e)\overline{\rchi_{V_i}(e)}=\dim V_i$$
 
-이 성립한다. 즉 각각의 $V_i$는 $\mathbb{C}[G]$ 안에 정확히 $\dim V_i$번 나타나며, 이 값이 언제나 $0$보다 크므로 $G$의 모든 irreducible representation이 $\mathbb{C}[G]$ 안에 실제로 나타난다. 따라서 우리는 다음의 decomposition
+이 성립한다. 즉, 우리는 다음의 decomposition
 
 $$\mathbb{C}[G]\cong \bigoplus_{i=1}^r V_i^{\oplus\dim V_i}$$
 
-을 얻는다. 뿐만 아니라 이 decomposition은 앞서 언급한 Artin-Wedderburn decomposition의 자료를 결정해준다. 그 분해는 적당한 $n_1,\ldots,n_s$에 대한 algebra isomorphism $\mathbb{C}[G]\cong\bigoplus_{j=1}^s\Mat_{n_j}(\mathbb{C})$인데, [\[환론\] §Artin-Wedderburn 정리, ⁋명제 5](/ko/math/ring_theory/artin_wedderburn#prop5)에 의하여 각각의 인자 $\Mat_{n_j}(\mathbb{C})$는 left module로서 열벡터들의 공간 $\mathbb{C}^{n_j}$의 복사본 $n_j$개의 direct sum이고, [\[환론\] §Artin-Wedderburn 정리, ⁋따름정리 12](/ko/math/ring_theory/artin_wedderburn#cor12)에 의하여 이렇게 얻어지는 $\mathbb{C}^{n_1},\ldots,\mathbb{C}^{n_s}$는 서로 isomorphic하지 않은 simple $\mathbb{C}[G]$-module 전체이다. 곧 이 isomorphism을 representation의 것으로 읽으면 $\mathbb{C}[G]$ 안에서 각각의 $n_j$차원 irreducible representation이 정확히 $n_j$번 나타나는 것이므로, 위의 decomposition과 비교하면 $s=r$이고 적당한 순서에서 $n_i=\dim V_i$임을 안다. 따라서 우리는
+을 얻는다. 뿐만 아니라 $\mathbb{C}[G]$는 자기 자신 위에 곱셈으로 작용하고, 이 작용 하에서 [§유한군의 표현론, ⁋보조정리 8](/ko/math/representation_theory/representations_of_finite_groups#lem8)에 의하여 $V_i$는 $V_i$로만 간다는 것을 생각하면 각각의 $V_i^{\oplus\dim V_i}$이 정확하게 matrix algebra $\Mat_{d_i}(\mathbb{C})$라는 것을 알고,  Artin-Wedderburn theorem의 유일성으로부터 이것이 곧
 
-$$\mathbb{C}[G]\cong \bigoplus_{i=1}^r\Mat_{\dim V_i}(\mathbb{C})$$
+$$\mathbb{C}[G]\cong \bigoplus_{i=1}^r\Mat_{d_i}(\mathbb{C})$$
 
-를 얻는다. 
+과 같다는 것을 확인할 수 있다. 
 
 ## Projection formula
 
 앞서 우리는 $\mathbb{C}_\class(G)$ 안에서 irreducible representation들의 character가 orthonormal set을 이룬다는 것을 보았다. 이제 우리는 이들이 $\mathbb{C}_\class(G)$의 orthonormal basis가 된다는 것을 보인다. 
 
 ::: 보조정리 5
-임의의 함수 $\phi:G\rightarrow \mathbb{C}$가 주어졌다 하자. 각각의 representation $\rho:G\rightarrow\Aut(V)$에 대하여
+임의의 함수 $\phi:G\rightarrow \mathbb{C}$와 임의의 representation $\rho:G\rightarrow\Aut(V)$이 주어졌다 하자. 
 
 $$\rho_\phi=\sum_{g\in G} \phi(g)\rho(g): V\rightarrow V$$
 
-으로 정의하면, $\phi$가 class function인 것과 모든 representation $\rho$에 대하여 $\rho_\phi$가 $G$-map인 것이 동치이다. 
+으로 정의하면, $\rho_\phi$가 $G$-map인 것과 $\phi$가 class function인 것이 동치이다. 
 :::
 ::: 증명
 $\rho_\phi$가 $G$-map이기 위해서는 임의의 $h\in G$와 임의의 $v\in V$에 대하여 다음 식
@@ -200,19 +198,11 @@ $$\rho_\phi(h\cdot v)=\sum_{g\in G}\phi(g)\rho(g)(h\cdot v)$$
 
 $$\rho_\phi(hv)=\sum_{g\in G}\phi(hgh^{-1})\rho(hgh^{-1})(h\cdot v)=\sum_{g\in G}\phi(hgh^{-1})\rho(h)\rho(g)(v)=\rho(h)\left(\sum_{g\in G}\phi(hgh^{-1})\rho(g)v\right)$$
 
-로 쓸 수 있다. 한편
+로 쓸 수 있다. 이제 이것이
 
 $$h\cdot\rho_\phi(v)=\rho(h)\rho_\phi(v)=\rho(h)\left(\sum_{g\in G}\phi(g)\rho(g)(v)\right)$$
 
-이고 $\rho(h)$는 가역이므로, $\rho_\phi$가 $G$-map이라는 것은 임의의 $h\in G$에 대하여 등식
-
-$$\sum_{g\in G}\bigl(\phi(hgh^{-1})-\phi(g)\bigr)\rho(g)=0$$
-
-이 성립한다는 것과 같다. 그럼 $\phi$가 class function인 경우 좌변의 계수들이 전부 $0$이므로 $\rho_\phi$는 임의의 representation 위에서 $G$-map이다. 거꾸로 모든 representation에 대하여 $\rho_\phi$가 $G$-map이라 하면, 특히 regular representation에서 위의 등식이 성립하므로 이를 $\delta_e$에 적용하여
-
-$$\sum_{g\in G}\bigl(\phi(hgh^{-1})-\phi(g)\bigr)\delta_g=0$$
-
-을 얻는다. 그런데 $\delta_g$들은 $\mathbb{C}[G]$의 basis이므로 이는 모든 $g,h\in G$에 대하여 $\phi(hgh^{-1})=\phi(g)$라는 것, 곧 $\phi$가 class function이라는 것과 같다. 
+와 같기 위해서는 정확히 $\phi(g)=\phi(hgh^{-1})$, 곧 $\phi$가 class function이어야 한다. 
 :::
 
 이제 우리는 이를 사용하여 모든 class function이 irreducible character들의 일차결합으로 나타난다는 것을 보인다. 즉 만일 class function $\phi$에 대하여, $\langle \rchi_V,\phi\rangle=0$이 모든 irreducible character $\rchi_V$에 대해 성립한다면 $\phi=0$이라는 것을 보여야 한다. 
@@ -226,16 +216,6 @@ $$(\dim V)\lambda=\tr(\rho_{\overline{\phi}})=\tr\left(\sum_{g\in G}\overline{\p
 $$\left(\sum\overline{\phi(g)}g\right)\cdot \delta_e=\sum_{g\in G}\overline{\phi(g)}g$$
 
 이고 따라서 $\overline{\phi(g)}=0$이 모든 $g$에 대해 성립해야 한다. 
-
-위의 보조정리에서 $\phi$를 적당히 고르면 각각의 irreducible representation이 차지하는 부분을 뽑아내는 projection을 얻는다. Irreducible representation $V_i$에 대하여 $\overline{\rchi_{V_i}}$는 class function이므로, 임의의 representation $\rho:G\rightarrow\Aut(V)$에 대하여 [보조정리 5](#lem5)는
-
-$$\pi_i=\frac{\dim V_i}{\lvert G\rvert}\sum_{g\in G}\overline{\rchi_{V_i}(g)}\rho(g):V\rightarrow V$$
-
-가 $G$-map임을 알려준다. 만일 $V$가 irreducible이라면 [§유한군의 표현론, ⁋보조정리 8](/ko/math/representation_theory/representations_of_finite_groups#lem8)에 의하여 $\pi_i=\lambda\id_V$의 꼴이고, 여기에 trace를 취한 식
-
-$$(\dim V)\lambda=\frac{\dim V_i}{\lvert G\rvert}\sum_{g\in G}\overline{\rchi_{V_i}(g)}\rchi_V(g)=(\dim V_i)\langle \rchi_V,\rchi_{V_i}\rangle$$
-
-으로부터 $V\cong V_i$일 때 $\lambda=1$, 그렇지 않을 때 $\lambda=0$임을 안다. 이제 임의의 representation을 irreducible decomposition으로 분해하여 각각의 인자에 이를 적용하면, $\pi_i$가 $V$에서 $V_i$와 isomorphic한 인자들이 이루는 부분 위로의 projection이라는 것을 안다. 
 
 ## 예시: $S_3$
 
@@ -253,7 +233,7 @@ $$\rho_\sgn: S_3 \rightarrow \Aut(\mathbb{C})\qquad \sigma\mapsto \sgn(\sigma)\i
 
 이 $S_3$의 두 irreducible representation이 되는 것은 자명하다. 한편 $S_3$은 $\mathbb{C}^3$ 위에 permutation을 통해
 
-$$\sigma\cdot(x_1,x_2,x_3)=(x_{\sigma^{-1}(1)},x_{\sigma^{-1}(2)},x_{\sigma^{-1}(3)})$$
+$$\sigma\cdot(x_1,x_2,x_3)=(x_{\sigma(1)},x_{\sigma(2)},x_{\sigma(3)})$$
 
 으로 작용한다. 그런데 이 action은 $(1,1,1)$이 span하는 직선을 따라서는 trivial action이며, 이 직선에 직교하는 subspace
 
@@ -300,7 +280,7 @@ $$V_\perm=V_0\oplus V_\std$$
 
 을 이용하는 것이다. 우리는 이미 $V_0$의 character가 $(1,1,1)$임을 알고 있다. 이제 $V_\perm$의 action을 생각해보면,
 
-$$\rho_\perm((\;))=\begin{pmatrix}1&0&0\\0&1&0\\0&0&1\end{pmatrix},\quad \rho_\perm((1\;2))=\begin{pmatrix}0&1&0\\1&0&0\\0&0&1\end{pmatrix},\quad \rho_\perm((1\;2\;3))=\begin{pmatrix}0&0&1\\1&0&0\\0&1&0\end{pmatrix}$$
+$$\rho_\perm((\;))=\begin{pmatrix}1&0&0\\0&1&0\\0&0&1\end{pmatrix},\quad \rho_\perm((1\;2))=\begin{pmatrix}0&1&0\\1&0&0\\0&0&1\end{pmatrix},\quad \rho_\perm((1\;2\;3))=\begin{pmatrix}0&1&0\\0&0&1\\1&0&0\end{pmatrix}$$
 
 이므로 $\rchi_\perm$은 $(3,1,0)$임을 알고 이제 [명제 2](#prop2)로부터 $\rchi_\perm=\rchi_0+\rchi_\std$이므로 $\rchi_\std$이 $(2,0,-1)$임을 알 수 있다. 이렇게 구한 세 개의 character들 
 

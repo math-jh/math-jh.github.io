@@ -10,9 +10,7 @@ sidebar:
 
 date: 2024-12-15
 weight: 16
-revising: true
 
-drift_needed: true
 
 ---
 
@@ -20,7 +18,7 @@ drift_needed: true
 
 ## Tychonoff theorem
 
-Compact space의 임의의 product는 다시 compact space가 된다. 만일 이 product가 유한이라면 이 결과는 보다 직관적인 방식으로 보일 수 있지만, 이 product가 무한하다면 이를 위해서는 다음 보조정리가 필요하다. 이는 [§옹골성과 필터의 수렴, ⁋정의 4](/ko/math/topology/filter_convergence#def4)의 sequential compactness를 filter의 언어로 옮긴 것이다. 
+Compact space의 임의의 product는 다시 compact space가 된다. 만일 이 product가 유한이라면 이 결과는 보다 직관적인 방식으로 보일 수 있지만, 이 product가 무한하다면 이를 위해서는 다음 보조정리가 필요하다. 이는 [§옹골성과 필터의 수렴, ⁋명제 5](/ko/math/topology/filter_convergence#prop5)를 filter의 언어로 일반화한 것이다. 
 
 ::: 보조정리 1
 위상공간 $X$가 compact인 것은 임의의 ultrafilter가 수렴하는 것과 동치이다.
@@ -49,9 +47,7 @@ Compact space들 $(X_i)_{i\in I}$의 product $X=\prod_{i\in I} X_i$는 compact�
 ::: 증명
 만일 $X$가 compact라면, 각각의 $X_i$들이 모두 compact라는 것은 $\pr_i$의 연속성과 [§옹골공간, ⁋명제 8](/ko/math/topology/compact_spaces#prop8)에 의해 자명하다.
 
-반대 방향을 보이기 위해서는 [보조정리 1](#lem1)에 의하여 $X$ 위에 정의된 임의의 ultrafilter $\mathcal{F}$가 limit point를 가짐을 보이면 충분하다. 먼저 각각의 $i\in I$에 대하여 $\mathcal{F}$의 원소들의 image로 이루어진 모임 $\pr_i(\mathcal{F})=\{\pr_i(F)\mid F\in \mathcal{F}\}$이 $X_i$ 위의 filter base를 이룬다. $F,F'\in \mathcal{F}$이면 $F\cap F'\in \mathcal{F}$이고 $\pr_i(F\cap F')\subseteq \pr_i(F)\cap \pr_i(F')$이므로 두 원소의 교집합이 다시 이 모임의 원소를 포함하며, $\emptyset\not\in \mathcal{F}$이므로 각각의 $\pr_i(F)$는 공집합이 아니기 때문이다. 따라서 $\pr_i(\mathcal{F})$가 생성하는 filter $\mathcal{F}_i$는 proper filter이다. 나아가 $\mathcal{F}_i$는 ultrafilter인데, 임의의 $A\subseteq X_i$에 대하여 $\mathcal{F}$가 prime이므로 ([\[집합론\] §필터와 아이디얼, 갈루아 대응, ⁋명제 5](/ko/math/set_theory/filter_and_ideal#prop5)) $\pr_i^{-1}(A)$와 $X\setminus \pr_i^{-1}(A)=\pr_i^{-1}(X_i\setminus A)$ 가운데 하나가 $\mathcal{F}$에 속하고, 전자가 속하면 $\pr_i(\pr_i^{-1}(A))\subseteq A$이므로 $A\in \mathcal{F}_i$이며 후자가 속하면 같은 이유로 $X_i\setminus A\in \mathcal{F}_i$이기 때문이다. 만일 $\mathcal{F}_i$를 진부분집합으로 포함하는 proper filter $\mathcal{G}$가 있어 $A\in \mathcal{G}\setminus \mathcal{F}_i$라 하면, $A\not\in \mathcal{F}_i$이므로 $X_i\setminus A\in \mathcal{F}_i\subseteq \mathcal{G}$이고 그럼 $\emptyset\in \mathcal{G}$이 되어 모순이다.
-
-이제 $X_i$가 compact라는 가정과 [보조정리 1](#lem1)로부터 $\mathcal{F}_i$의 limit point $x_i$를 얻고, $x=(x_i)_{i\in I}$이라 두자. Product topology는 $\pr_i^{-1}(U_i)$ 꼴의 집합들을 subbase로 가지므로 ([§곱공간, ⁋정의 1](/ko/math/topology/product_spaces#def1)) $x$의 임의의 근방은 $x_i\in U_i$인 $X_i$의 열린집합 $U_i$들로부터 얻어지는 이러한 집합 유한 개의 교집합을 포함한다. Filter는 유한교집합에 대하여 닫혀 있고 자신의 원소를 포함하는 집합을 다시 원소로 가지므로, $x_i$를 품는 각각의 열린집합 $U_i$에 대하여 $\pr_i^{-1}(U_i)\in \mathcal{F}$임을 보이면 $\mathcal{N}(x)\subseteq \mathcal{F}$를 얻는다. 그런데 $U_i\in \mathcal{N}(x_i)\subseteq \mathcal{F}_i$이므로 적당한 $F\in \mathcal{F}$가 존재하여 $\pr_i(F)\subseteq U_i$이고, 따라서 $F\subseteq \pr_i^{-1}(U_i)$이어서 $\pr_i^{-1}(U_i)\in \mathcal{F}$이다. 그럼 $x$는 $\mathcal{F}$의 limit point이므로 다시 [보조정리 1](#lem1)에 의하여 $X$는 compact이다. 
+반대 방향은 $X$ 위에 정의된 임의의 ultrafilter $\mathcal{F}$에 대하여, $\pr_i(\mathcal{F})$가 $X_i$의 ultrafilter base를 정의한다는 것을 확인한 후, $X_i$가 compact라는 가정과 [보조정리 1](#lem1)로부터 이 ultrafilter의 limit point $x_i$를 얻고, $x=(x_i)_{i\in I}$가 $\mathcal{F}$의 limit point임을 보일 수 있으므로 다시 [보조정리 1](#lem1)에 의해 증명이 완료된다. 
 :::
 
 
@@ -394,7 +390,7 @@ $$\cl(Q_\alpha)\subseteq P_\alpha\subseteq\cl(P_\alpha)\subseteq V_\alpha\subset
 
 를 만족한다.
 
-**(3) Bump function.** 각 $\alpha$에 대하여 $\cl(Q_\alpha)$와 $X\setminus P_\alpha$는 서로소인 두 닫힌집합이다. $X$가 normal이므로 Urysohn 보조정리에 의하여 연속함수 $\psi_\alpha:X\rightarrow[0,1]$이 존재하여 $\cl(Q_\alpha)$에서 $1$의 값을, $X\setminus P_\alpha$에서 $0$의 값을 갖는다. ([§Urysohn 보조정리와 Tietze 확장정리, ⁋정리 2](/ko/math/topology/urysohn_and_tietze#thm2)) 그럼 $\{x\mid\psi_\alpha(x)\neq 0\}\subseteq P_\alpha$이므로
+**(3) Bump 함수.** 각 $\alpha$에 대하여 $\cl(Q_\alpha)$와 $X\setminus P_\alpha$는 서로소인 두 닫힌집합이다. $X$가 normal이므로 Urysohn 보조정리에 의하여 연속함수 $\psi_\alpha:X\rightarrow[0,1]$이 존재하여 $\cl(Q_\alpha)$에서 $1$의 값을, $X\setminus P_\alpha$에서 $0$의 값을 갖는다. ([§Urysohn 보조정리와 Tietze 확장정리, ⁋정리 2](/ko/math/topology/urysohn_and_tietze#thm2)) 그럼 $\{x\mid\psi_\alpha(x)\neq 0\}\subseteq P_\alpha$이므로
 
 $$\supp\psi_\alpha=\cl(\{x\mid\psi_\alpha(x)\neq 0\})\subseteq\cl(P_\alpha)\subseteq V_\alpha\subseteq U_\alpha$$
 

@@ -10,8 +10,6 @@ sidebar:
 
 date: 2022-06-19
 weight: 10
-revising: true
-drift_needed: true
 
 ---
 
@@ -76,7 +74,7 @@ $$\{\tilde{\varphi}^{-1}(W)\mid \text{$W$ open in $\mathbb{R}^{2m}$, $(U,\varphi
 
 $$v\vert_p\mapsto (p, \dd{x}^1(v),\ldots, \dd{x}^m(v))$$
 
-으로 정의하면 된다.[^1] 고정된 $\pi^{-1}(p)$ 위에서 $\phi$가 벡터공간 사이의 isomorphism이 되는 것은 자명하고, 또 임의의 $(x,v)\in U\times\mathbb{R}^m$에 대하여 $(\pi\circ\phi^{-1})(x,v)=x$임도 자명하다. $\phi$가 diffeomorphism이 된다는 것은 
+으로 정의하면 된다. 고정된 $\pi^{-1}(p)$ 위에서 $\phi$가 벡터공간 사이의 isomorphism이 되는 것은 자명하고, 또 임의의 $(x,v)\in U\times\mathbb{R}^m$에 대하여 $(\pi\circ\phi^{-1})(x,v)=x$임도 자명하다. $\phi$가 diffeomorphism이 된다는 것은 
 
 $$\tilde{\varphi}=(\varphi\times\id_{\mathbb{R}^m})\circ\phi$$
 
@@ -125,21 +123,19 @@ $\Hom(-,-)$은 smooth functor이다. 임의의 두 isomorphism $f:V\rightarrow V
 
 $$(g+tw_i^j)\circ u\circ f^{-1}=g\circ u\circ f^{-1}+tw_i^j\circ u\circ f^{-1}$$
 
-가 모든 $u$에 대해 성립하므로 이 대응의 $w_i^j$-방향미분은 $u\mapsto w_i^j\circ u\circ f^{-1}$가 되어 연속이다. 뿐만 아니라 이 논증은 $g$ 자리에 어떠한 linear map을 집어넣어도 성립하므로, 이로부터 $g\mapsto\Hom(f,g)$의 임의의 고차 방향미분이 항상 연속이라는 것을 안다. 즉, $g\mapsto\Hom(f,g)$는 $C^\infty$이다.
-
-이 대응이 $f$에도 smooth하게 의존한다는 것은 같은 방식으로 얻어지지 않는다. 대응 $f\mapsto g\circ u\circ f^{-1}$은 선형이 아니며, 그 $w$-방향미분이 $-g\circ u\circ f^{-1}\circ w\circ f^{-1}$로 다시 $f$에 의존하기 때문이다. 대신 우리는 $\Hom(V,V')$ 안에서 isomorphism들이 이루는 부분집합이 열린집합이라는 것과, 그 위에서 $f\mapsto f^{-1}$이 $C^\infty$라는 것을 쓴다. $V$와 $V'$의 basis를 고정하여 $f$를 행렬로 보면 $\det f$가 $f$의 성분들의 다항식이므로 $\det f\neq 0$은 열린 조건이고, Cramer 공식에 의하여 $f^{-1}$의 각 성분은 $f$의 성분들의 다항식을 $\det f$로 나눈 것이 되어 그 부분집합 위에서 $C^\infty$이다. 한편 합성 $(a,b)\mapsto b\circ a$는 bilinear이므로 $C^\infty$이고, 따라서 $\Hom(f,g)=g\circ(-)\circ f^{-1}$은 $(f,g)$에 smooth하게 의존한다.
+가 모든 $u$에 대해 성립하므로 이 대응의 $w_i^j$-방향미분은 $u\mapsto w_i^j\circ u\circ f^{-1}$가 되어 연속이다. 뿐만 아니라 이 논증은 $g$ 자리에 어떠한 linear map을 집어넣어도 성립하므로, 이로부터 $g\mapsto\Hom(f,g)$의 임의의 고차 방향미분이 항상 연속이라는 것을 안다. 즉, $g\mapsto\Hom(f,g)$는 $C^\infty$이다. 이 대응이 $f$에도 smooth하게 의존한다는 것은 $g$보다는 번거롭지만, $f$가 isomorphism이라는 것으로부터 $t$를 충분히 작게 택하여 $f+tw_i^j$가 invertible하도록 할 수 있고, 이후 위의 논증을 반복하면 된다.
 
 다음은 모두 smooth functor의 예시들이다.
 
 - Dual functor $(-)^\ast$ ([\[선형대수학\] §쌍대공간](/ko/math/linear_algebra/dual_space)),
-- $k$-th tensor functor $\T^k(-)$ ([\[다중선형대수학\] §텐서대수](/ko/math/multilinear_algebra/tensor_algebras)),
-- $k$-th symmetric functor $\S^k(-)$ ([\[다중선형대수학\] §텐서대수](/ko/math/multilinear_algebra/tensor_algebras)),
+- $k$-th tensor functor $\mathcal{T}^k(-)$ ([\[다중선형대수학\] §텐서대수](/ko/math/multilinear_algebra/tensor_algebras)),
+- $k$-th symmetric functor $\mathcal{S}^k(-)$ ([\[다중선형대수학\] §텐서대수](/ko/math/multilinear_algebra/tensor_algebras)),
 - $k$-th exterior functor $\bigwedge\nolimits^k(-)$ ([\[다중선형대수학\] §텐서대수](/ko/math/multilinear_algebra/tensor_algebras)),
 - Tensor product $-\otimes -$,
 - Direct sum $-\oplus-$.
 :::
 
-다음 정리의 증명은 **[MS]**의 정리 3.6에서 찾을 수 있다. 거기에서의 진술은 topological vector bundle과 continuous functor에 대한 것이지만, 두 local trivialization이 겹치는 곳에서 얻어지는 isomorphism들에 $F$를 씌운 것이 [정의 4](#def4)의 매끄러움에 의해 다시 $C^\infty$이므로, 같은 구성이 manifold 위의 vector bundle과 smooth functor에 대해서도 그대로 작동한다.
+다음 정리의 증명은 **[MS]**의 정리 3.6에서 찾을 수 있다.
 
 ::: 정리 6
 임의의 smooth functor $F:(\mathbf{FVect}_\text{iso})^n\rightarrow \mathbf{FVect}_\text{iso}$, 그리고 공통된 base space $B$를 갖는 $n$개의 vector bundle들 $E_i\rightarrow B$들이 주어졌다 하자. 그럼 각각의 $b\in B$에서의 fiber가
@@ -169,4 +165,4 @@ $T^\ast M$은 점 $p$마다 벡터공간 $T_p^\ast M$이 붙어있는 공간이�
 
 ---
 
-[^1]: 이 $\phi$는 [정의 1](#def1)의 local trivialization $h$와 반대 방향이며, 정확히는 $\phi^{-1}$이 $h$에 해당한다. 
+[^1]: 이 때의 $\phi$를 *local trivialization*이라 부른다. 

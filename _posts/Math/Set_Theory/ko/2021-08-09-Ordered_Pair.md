@@ -13,9 +13,7 @@ sidebar:
 date: 2021-08-09
 
 weight: 2
-revising: true
 
-drift_needed: true
 
 ---
 
@@ -41,7 +39,7 @@ $A\subseteq B$이고 $B\subseteq C$이면 $A\subseteq C$이다.
 우선 전제는 임의의 $x$에 대하여 두 명제 $x\in A\implies x\in B$와 $x\in B\implies x\in C$가 참이라는 것을 뜻한다. 따라서 삼단논법에 의해 $x\in A\implies x\in C$도 참이고, $x$는 임의로 택할 수 있으므로 $A\subseteq C$가 성립한다. 
 :::
 
-또, $A\subseteq B$이고 $B\subseteq A$이면 axiom of extensionality에 의해 $A=B$이다. 따라서 위 두 명제와 함께, 임의의 집합 $S$에 대하여 $\subseteq$가 $\mathcal{P}(S)$ 위의 order relation이 된다는 것을 안다. ([§순서관계의 정의, ⁋정의 2](/ko/math/set_theory/order_relations#def2))
+위 두 명제로부터 $\subseteq$가 집합들 사이의 order relation이 된다는 것을 안다. ([§순서관계의 정의, ⁋정의 2](/ko/math/set_theory/order_relations#def2))
 
 ## 순서쌍
 
@@ -122,14 +120,12 @@ $$x=\pr_1 z,\qquad y=\pr_2 z$$
 ::: 정의 8
 두 집합 $A$, $B$에 대하여, 다음의 집합
 
-$$\left\{z\in\mathcal{P}(\mathcal{P}(A\cup B))\mid \exists x\exists y\big((z=(x,y))\wedge (x\in A)\wedge(y\in B)\big)\right\}$$
+$$\{z\mid(z=(x,y))\wedge (x\in A)\wedge(y\in B)\}$$
 
 을 $A$와 $B$의 *cartesian product<sub>데카르트 곱</sub>*라 부르고, 간단히 $A\times B$로 표시한다. 
 
 또, [정의 7](#def7)과 유사하게 집합 $A$와 $B$를 $A\times B$의 첫 번째와 두 번째 성분이라 부른다.
 :::
-
-여기서 $z$를 걸러내는 바탕이 되는 집합 $\mathcal{P}(\mathcal{P}(A\cup B))$는 성분이 각각 $A$와 $B$에 속하는 순서쌍을 모두 담는다. $x\in A$이고 $y\in B$이면 $\{x\}$와 $\{x,y\}$가 모두 $A\cup B$의 부분집합이어서 $\mathcal{P}(A\cup B)$의 원소이고, 따라서 $(x,y)=\big\{\{x\},\{x,y\}\big\}$는 $\mathcal{P}(A\cup B)$의 부분집합, 즉 $\mathcal{P}(\mathcal{P}(A\cup B))$의 원소이기 때문이다.
 
 두 곱집합 $A\times B$와 $A'\times B'$가 동일해질 조건을 알기 위해서는 하나의 곱집합이 다른 곱집합에 언제 <em-ko>포함되는지</em-ko>만 확실하게 결정해주면 된다. 
 

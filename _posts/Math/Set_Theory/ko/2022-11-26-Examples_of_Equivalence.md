@@ -11,8 +11,6 @@ sidebar:
 
 date: 2021-08-22
 weight: 13
-revising: true
-drift_needed: true
 
 ---
 
@@ -61,9 +59,9 @@ $R$이 집합 $A$ 위에서의 동치관계이고, $P$가 $R$과 compatible한 �
 
 > $P$가 $R$과 compatible할 때, equivalence class의 단 하나의 원소만 $P$를 만족한다면, 그 원소와 같은 class에 들어있는 모든 원소에 대해서도 $P$가 성립한다.
 
-그리고 이건 정확히 compatible한 단항관계의 정의다. 실제로 $t\in A/R$에 대하여 $a\in t$가 존재하여 $P(a)$라 하자. 그럼 모든 $x\in t$에 대하여 $a\sim_{\tiny R}x$이므로 $P(x)$이다.
+그리고 이건 정확히 compatible한 단항관계의 정의다. 
 
-반대 방향은 $t$가 공집합이 아니라는 것에서 따라온다. $t\in A/R$은 어떤 $x\in A$에 대하여 $t=R(x)$이므로, $R$이 reflexive하여 $x\in t$이다. 따라서 $t$의 모든 원소가 $P$를 만족한다면 $P$를 만족하는 $t$의 원소가 존재한다.
+반대 방향은 자명하다. 만일 $t\in A/R$에 대하여 $a\in t$가 존재하여 $P(a)$라 하자. 그럼 모든 $x\in t$에 대하여 $a\sim_{\tiny R}x$이므로 $P(x)$이다.
 :::
 
 ## 동치관계의 포화

@@ -10,9 +10,7 @@ sidebar:
 
 date: 2025-05-17
 weight: 7
-revising: true
 
-drift_needed: true
 
 ---
 
@@ -72,17 +70,17 @@ $$\mathbb{L}'=\mathbb{K}[(\mathbb{L}')^p]\subseteq \mathbb{K}[\mathbb{L}^p]$$
 Perfect field $\mathbb{K}$의 임의의 algebraic extension은 perfect이다. 
 :::
 
-이는 다음과 같이 확인할 수 있다. Perfect field의 임의의 algebraic extension은 separable이므로 ([§분리가능확대체, ⁋명제 9](/ko/math/field_theory/separable_extensions#prop9)), algebraic extension $\mathbb{L}/\mathbb{K}$에 $S=\mathbb{L}$로 두어 [명제 2](#prop2)를 적용하면 $\mathbb{L}=\mathbb{K}(\mathbb{L}^p)$를 얻는다. 그런데 $\mathbb{K}$가 perfect이므로 $\mathbb{K}=\mathbb{K}^p\subseteq \mathbb{L}^p$이고, $\mathbb{L}^p$는 $\mathbb{K}$를 포함하는 field이므로 $\mathbb{K}(\mathbb{L}^p)=\mathbb{L}^p$가 되어 $\mathbb{L}=\mathbb{L}^p$, 즉 $\mathbb{L}$이 perfect임을 얻는다. 
+이에 대한 증명은 [명제 2](#prop2)로부터 거의 자명하다. 
 
 뿐만 아니라 다음이 성립한다. 
 
 ::: 따름정리 4
-Field $\mathbb{K}$의 algebraic closure $\overline{\mathbb{K}}$와 이 안에서의 perfect closure $\mathbb{K}^{1/p^\infty}$에 대하여, $\overline{\mathbb{K}}/\mathbb{K}$의 subextension $\mathbb{L}/\mathbb{K}$가 separable인 것과 $\mathbb{L}$이 $\mathbb{K}^{1/p^\infty}$와 linearly disjoint한 것이 동치이다. 
+Field $\mathbb{K}$의 algebraic closure $\overline{\mathbb{K}}$와 이 안에서의 perfect closure $\mathbb{K}^{p^{-\infty}}$에 대하여, $\overline{\mathbb{K}}/\mathbb{K}$의 subextension $\mathbb{L}/\mathbb{K}$가 separable인 것과 $\mathbb{L}$이 $\mathbb{K}^{p^{-\infty}}$와 linearly disjoint한 것이 동치이다. 
 :::
 ::: 증명
-언제나와 마찬가지로 $\mathbb{L}/\mathbb{K}$가 finite degree인 상황을 생각하면 충분하다. $\mathbb{L}/\mathbb{K}$의 basis $(x_i)$가 주어졌다 하면, $\mathbb{L}$이 $\mathbb{K}^{1/p^\infty}$와 linearly disjoint인 것은 $(x_i)$가 모든 $\mathbb{K}^{1/p^n}$ 위에서 free인 것과 동치이므로, 이는 임의의 family $(a_i)$와 임의의 $n$에 대하여
+언제나와 마찬가지로 $\mathbb{L}/\mathbb{K}$가 finite degree인 상황을 생각하면 충분하다. $\mathbb{L}/\mathbb{K}$의 basis $(x_i)$가 주어졌다 하면, $\mathbb{L}$이 $\mathbb{K}^{p^{-\infty}}$와 linearly disjoint인 것은 $(x_i)$가 모든 $\mathbb{K}^{p^{-n}}$ 위에서 free인 것과 동치이므로, 이는 임의의 family $(a_i)$와 임의의 $n$에 대하여
 
-$$\sum x_i a_i^{1/p^n}=0\implies a_i=0$$
+$$\sum x_i a_i^{p^{-n}}=0\implies a_i=0$$
 
 이 항상 성립해야 한다는 것과 같은 말이다. 이제 양 변에 $p^n$-th power를 취하면, 이로부터 $x_i^{p^n}$들이 free여야 한다는 것을 알고, 따라서 이들이 $\mathbb{L}$의 basis를 정의해야 한다는 것을 알 수 있으며 그 역 또한 성립한다. 차원을 생각하면 이는 $\mathbb{L}=\mathbb{K}(\mathbb{L}^p)$인 것과 동치이므로, [명제 2](#prop2)로부터 원하는 결과를 얻는다. 
 :::
@@ -187,13 +185,7 @@ $$[\mathbb{L}:\mathbb{K}]=[\mathbb{L}:\mathbb{L}_s][\mathbb{L}_s:\mathbb{K}]=[\m
     이 성립하며, 등식은 $\mathbb{L},\mathbb{M}$이 linearly disjoint일 때 성립한다. 
 :::
 
-첫째 결과의 경우 [§대수적 확장, ⁋명제 2](/ko/math/field_theory/algebraic_extensions#prop2)와 [§에탈대수, ⁋명제 12](/ko/math/field_theory/etale_algebras#prop12)로부터 얻어진다. 둘째 결과의 경우, 앞에서 확인한 것과 같이 $\mathbb{K}'(\mathbb{L}_s)$는 $\mathbb{K}'$의 $\mathbb{K}'(\mathbb{L})$에서의 relative separable closure이므로 [명제 9](#prop9)로부터 다음의 두 식
-
-$$[\mathbb{K}'(\mathbb{L}):\mathbb{K}']_s=[\mathbb{K}'(\mathbb{L}_s):\mathbb{K}'],\qquad [\mathbb{K}'(\mathbb{L}):\mathbb{K}']_i=[\mathbb{K}'(\mathbb{L}):\mathbb{K}'(\mathbb{L}_s)]$$
-
-을 얻는다. 이제 [§대수적 확장, ⁋명제 10](/ko/math/field_theory/algebraic_extensions#prop10)을 $\mathbb{K}$ 위의 두 extension $\mathbb{K}'$와 $\mathbb{L}_s$에 적용하면 $[\mathbb{K}'(\mathbb{L}_s):\mathbb{K}']\leq [\mathbb{L}_s:\mathbb{K}]=[\mathbb{L}:\mathbb{K}]_s$를 얻고, 같은 명제를 $\mathbb{L}_s$ 위의 두 extension $\mathbb{K}'(\mathbb{L}_s)$와 $\mathbb{L}$에 적용하면 $\mathbb{K}'(\mathbb{L}_s)(\mathbb{L})=\mathbb{K}'(\mathbb{L})$이므로 $[\mathbb{K}'(\mathbb{L}):\mathbb{K}'(\mathbb{L}_s)]\leq [\mathbb{L}:\mathbb{L}_s]=[\mathbb{L}:\mathbb{K}]_i$를 얻는다. 만일 $\mathbb{K}'$와 $\mathbb{L}$이 linearly disjoint라면 다시 [§대수적 확장, ⁋명제 10](/ko/math/field_theory/algebraic_extensions#prop10)으로부터 $[\mathbb{K}'(\mathbb{L}):\mathbb{K}']=[\mathbb{L}:\mathbb{K}]$인데, 이는 위의 두 부등식의 좌변의 곱과 우변의 곱이 같다는 뜻이므로 두 부등식이 모두 등식이어야 한다. 
-
-셋째 결과는 $\mathbb{K}(\mathbb{L}\cup \mathbb{M})=\mathbb{M}(\mathbb{L})$에 첫째 결과를 적용하여 얻은 $[\mathbb{K}(\mathbb{L}\cup \mathbb{M}):\mathbb{K}]_s=[\mathbb{M}(\mathbb{L}):\mathbb{M}]_s[\mathbb{M}:\mathbb{K}]_s$에 $\mathbb{K}'=\mathbb{M}$인 경우의 둘째 결과를 적용하면 되고, inseparable degree에 대해서도 마찬가지이다. 등호조건 또한 둘째 결과의 등호조건에서 나온다. 
+이에 대한 증명들은 거의 동어반복으로, 가령 첫째 결과의 경우 [§대수적 확장, ⁋명제 2](/ko/math/field_theory/algebraic_extensions#prop2)와 [§에탈대수, ⁋명제 12](/ko/math/field_theory/etale_algebras#prop12)로부터 얻어진다. 나머지 결과 또한 비슷한 결과가 extension degree와 separable degree에 대해 각각 성립하므로 inseparable degree에 대해서도 당연하게 성립하게 된다. 
 
 ---
 

@@ -10,8 +10,6 @@ sidebar:
 
 date: 2026-05-21
 weight: 4
-revising: true
-drift_needed: true
 
 ---
 이전 글에서 우리는 quantum cohomology $QH^\ast(X)$ 혹은 Jacobi ring $\Jac(W_q)$가 Frobenius algebra 구조를 갖는다는 것을 살펴보고, 이들 isomorphism의 $q$-parameter 방향의 naturality를 담기 위해 이들을 Frobenius manifold 구조로 집어넣었다. Frobenius manifold $M$ 위에 정의된 데이터는 다음의 데이터들
@@ -81,9 +79,9 @@ $$[\nabla^z_{\partial_\alpha}, \nabla^z_{\partial_\beta}] = [\partial_\alpha + z
 뿐만 아니라 다음 명제는 이러한 connection들의 flatness가 *정확하게* 이 두 조건과 동치임을 보여준다. 이들은 Frobenius manifold의 공리들이었으며 ([§프로베니우스 다양체, ⁋정의 5](/ko/math/mirror_symmetry/frobenius_manifold#def5)), 따라서 $\nabla^z$의 $M$-방향 flatness는 단순히 moduli를 맞추기 위한 결과가 아니라 Frobenius structure 그 자체라 할 수 있다. 
 
 ::: 명제 2
-Flat metric $\eta$와, 각 점에서 associativity는 가정하지 않은 commutative product $\circ$가 주어진 manifold $M$을 생각하자. $\eta$의 flat coordinate $\{ t^\alpha \}$에 대해 [정의 1](#def1)의 식 $\nabla^z_{\partial_\alpha} = \partial_\alpha + z^{-1}\mathcal{C}_\alpha$로 정의되는 connection $\nabla^z$가 모든 $z$에 대해 $M$-방향 (즉 $\partial_\alpha$ 방향들 사이)으로 flat인 것은 다음 두 조건이 모두 성립하는 것과 동치이다.
+Frobenius manifold $M$ 위의 connection $\nabla^z$를 ([정의 1](#def1)) 생각하자. Product $\circ$가 commutative라는 가정 아래, $\nabla^z$가 모든 $z$에 대해 $M$-방향 (즉 $\partial_\alpha$ 방향들 사이)으로 flat인 것은 다음 두 조건이 모두 성립하는 것과 동치이다.
 
-1. *Potentiality*: $\partial_\alpha\, c_{\beta\gamma}^\delta = \partial_\beta\, c_{\alpha\gamma}^\delta$.
+1. *Potentiality*: $\partial_\alpha\, c_{\beta\gamma}^\delta = \partial_\beta\, c_{\alpha\gamma}^\delta$. 즉 $c_{\alpha\beta}^\delta$가 어떤 potential $F$의 세 번째 도함수이다.
 2. *Associativity (WDVV)*: $[\mathcal{C}_\alpha, \mathcal{C}_\beta] = 0$, 성분으로는 $\sum_\delta c_{\alpha\beta}^\delta\, c_{\delta\gamma}^\epsilon = \sum_\delta c_{\beta\gamma}^\delta\, c_{\alpha\delta}^\epsilon$. 즉 $\circ$가 associative이다.
 :::
 
@@ -94,8 +92,6 @@ $$[\nabla^z_{\partial_\alpha}, \nabla^z_{\partial_\beta}] = \frac{1}{z}\,(\parti
 
 은 $z^{-1}$과 $z^{-2}$에 대한 Laurent polynomial이므로, 이것이 모든 $z$에서 vanish하는 것은 두 계수가 따로 vanish하는 것과 동치이다. $z^{-1}$ 계수의 vanishing은 곧 첫째 조건 $\partial_\alpha\mathcal{C}_\beta = \partial_\beta\mathcal{C}_\alpha$이며, $z^{-2}$ 계수의 vanishing $[\mathcal{C}_\alpha, \mathcal{C}_\beta] = 0$을 성분으로 적으면 $\sum_\delta (c_{\alpha\delta}^\epsilon c_{\beta\gamma}^\delta - c_{\beta\delta}^\epsilon c_{\alpha\gamma}^\delta) = 0$인데, $\circ$가 commutative라는 가정 아래 이것은 정확히 associativity, 즉 WDVV equation과 동치이다. ([§프로베니우스 다양체, ⁋명제 7](/ko/math/mirror_symmetry/frobenius_manifold#prop7))
 :::
-
-첫째 조건에 potentiality라는 이름이 붙는 것은 여기에 $\eta$-compatibility $\eta(X\circ Y, Z) = \eta(X, Y\circ Z)$가 더해질 때이다. 이 경우 index를 내린 structure constant $c_{\alpha\beta\gamma} = \sum_\delta \eta_{\gamma\delta} c_{\alpha\beta}^\delta$가 commutativity와 $\eta$의 대칭성으로부터 세 index에 대해 모두 대칭이 되고, 따라서 첫째 조건은 $\partial_\delta c_{\alpha\beta\gamma}$가 네 index에 대해 대칭이라는 조건과 같아진다. 그럼 Poincaré lemma를 세 번 적용하는 [§프로베니우스 다양체, ⁋명제 6](/ko/math/mirror_symmetry/frobenius_manifold#prop6)의 논증이 그대로 작동하여 $c_{\alpha\beta\gamma} = \partial_\alpha\partial_\beta\partial_\gamma F$를 만족하는 potential $F$를 얻는다. Index가 하나 올라간 $c_{\alpha\beta}^\delta$ 자체는 $F$의 삼계도함수가 아니라 거기에 $\eta^{\varepsilon\delta}$를 곱해 index를 올린 것이고, $\eta$-compatibility 없이 첫째 조건만으로는 $F$가 얻어지지 않는다.
 
 한편 $z$-방향의 flatness $[\nabla^z_{\partial_z}, \nabla^z_{\partial_\alpha}] = 0$은 Euler vector field $E$와 grading operator $\mu$가 product와 호환된다는 조건, 즉 Frobenius manifold의 homogeneity (또는 conformal) condition을 요구한다. 이 조건은 [§프로베니우스 다양체, ⁋정의 5](/ko/math/mirror_symmetry/frobenius_manifold#def5)의 네 번째 조건으로 이미 우리의 정의 안에 들어 있으므로, 우리의 정의에서는  $z$-방향까지 포함한 $\nabla^z$의 온전한 flatness가 얻어진다.
 
@@ -142,9 +138,9 @@ $$H_A=H^\ast(X)\otimes_\mathbb{C}\mathbb{C}[q^\pm, z^\pm]=H^\ast(X, \mathbb{C}[z
 이와 비슷하게, 우리는 다음 글에서 $X$의 mirror dual $\check{X}$이 정의하는 Jacobi ring들 $\Jac(W_q)$들도 적당한 manifold $M_B$ 위에 정의된 fiber가 되도록 할 수 있다는 것을 보인다. 뿐만 아니라, 이를 $\mathcal{D}$-module로 만드는 *Gauss-Manin connection* $\nabla^{GM}$이 존재하여, 이 $D$-module의 section이 B-model state space $H_B$를 구성한다는 것을 증명할 것이다. 그럼 우리의 mirror symmetry statement는 다음의 주장으로 격상된다. 
 
 ::: misc 주장 4 (Mirror theorem, $D$-module form) {#conj4}
-Mirror pair $(X, \check{X})$에 대해, base 사이의 local isomorphism인 *mirror map* $\psi: M_B\rightarrow M_A$와, 앞서 도입한 A-model state space $H_A$와 B-model state space $H_B$ 사이의 *mirror isomorphism*
+Mirror pair $(X, \check{X})$에 대해, 앞서 도입한 A-model state space $H_A$와 B-model state space $H_B$ 사이의 *mirror isomorphism*
 
-$$\Phi: \psi^\ast H_A \xrightarrow{\sim} H_B$$
+$$\Phi: H_A \xrightarrow{\sim} H_B$$
 
 가 존재하여, $\Phi$가 Dubrovin connection과 Gauss-Manin connection을 호환시킨다.
 

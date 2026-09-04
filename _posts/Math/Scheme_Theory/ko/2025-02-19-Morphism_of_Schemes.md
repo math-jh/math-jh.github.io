@@ -10,8 +10,6 @@ sidebar:
 
 date: 2025-02-19
 weight: 8
-revising: true
-drift_needed: true
 ---
 
 정의에 의해 $\Sch$는 $\LRS$의 full subcategory이다. ([§스킴, ⁋정의 1](/ko/math/scheme_theory/schemes#def1)) 즉 두 scheme $X,Y$가 주어졌을 때, $X$에서 $Y$로의 scheme morphism은 연속함수 $\varphi: X \rightarrow Y$와 structure sheaf 사이의 morphism $\varphi^\sharp: \mathcal{O}_Y \rightarrow \varphi_\ast \mathcal{O}_X$으로 주어지며, 이 때 $\varphi^\sharp$는 각각의 stalk으로 제한하였을 때 local homomorphism이 되어야 한다. ([§아핀스킴, ⁋정의 2](/ko/math/scheme_theory/affine_schemes#def2)) 
@@ -172,11 +170,11 @@ $$\ker\phi=(\x_1-x_1,\ldots, \x_n-x_n)$$
 
 인데 이는 우변에 의한 quotient가 이미 $\mathbb{K}$이기 때문이다. 즉, 역함수 관계에 있는 다음의 두 일대일대응
 
-$$\begin{aligned}\{\text{$\mathbb{K}$-morphism $\Spec \phi:\Spec\mathbb{K}\rightarrow \mathbb{A}^n_\mathbb{K}$}\}&\rightarrow \{\text{points $(x_1,\ldots, x_n)\in \mathbb{K}^n$}\}\\\Spec\phi&\mapsto (\phi(\x_1),\ldots,\phi(\x_n))\end{aligned}$$
+$$\begin{aligned}\{\text{$\mathbb{K}$-point $\Spec \phi:\Spec\mathbb{K}\rightarrow \mathbb{A}^n_\mathbb{K}$}\}&\rightarrow \{\text{points $(x_1,\ldots, x_n)\in \mathbb{K}^n$}\}\\\Spec\phi&\mapsto (\phi(\x_1),\ldots,\phi(\x_n))\end{aligned}$$
 
 그리고
 
-$$\begin{aligned}\{\text{points $(x_1,\ldots, x_n)\in \mathbb{K}^n$}\}&\rightarrow \{\text{$\mathbb{K}$-morphism $\Spec \phi:\Spec\mathbb{K}\rightarrow \mathbb{A}^n_\mathbb{K}$}\}\\a=(a_1,\ldots, a_n)&\mapsto \Spec \ev_a\end{aligned}$$
+$$\begin{aligned}\{\text{points $(x_1,\ldots, x_n)\in \mathbb{K}^n$}\}&\rightarrow \{\text{$\mathbb{K}$-point $\Spec \phi:\Spec\mathbb{K}\rightarrow \mathbb{A}^n_\mathbb{K}$}\}\\a=(a_1,\ldots, a_n)&\mapsto \Spec \ev_a\end{aligned}$$
 
 이 존재한다. 
 :::
@@ -213,7 +211,7 @@ $$\pi^{-1}(x_0)=\{(x_0,y,z)\in \mathbb{R}^3\mid y^2+z^2=1-x_0^2\}$$
 이다. 이를 기하학적으로 표현하면, 각각의 $x_0\in \mathbb{R}_x$마다 원 $y^2+z^2=1-x_0^2$가 대응된 상황으로 볼 수 있으며, 따라서 $\pi$를 <em-ko>$x$축으로 parametrize된 원들의 family</em-ko>로 생각할 수 있다. 물론 $\lvert x_0\rvert>1$이면 이 fiber는 공집합이고 $x_0=\pm 1$이면 한 점이므로, 원이 되는 것은 $\lvert x_0\rvert<1$인 경우뿐이다. 이렇게 family의 구성원이 퇴화하는 방식은 뒤에 flatness를 다룰 때 다시 문제가 된다. 
 :::
 
-이 예시를 scheme으로 바로 나타낼 수 없는 이유 중 덜 본질적인 것은 $S$가 $\mathbb{R}^3$의 닫힌집합이고, 우리는 닫힌집합 위에 scheme structure를 주는 방법을 모른다는 것이다. 이는 [§닫힌 부분스킴](/ko/math/scheme_theory/closed_subschemes)에서 해결하게 된다. 더 미묘하고 본질적인 부분은 함수 $\pi$의 점 $x_0$에서의 fiber $\pi^{-1}(x_0)$을 나타낼 방법이 없는 것이다. 물론 scheme morphism은 기본적으로 연속함수이므로 이를 연속함수의 fiber로 볼 수 있겠지만, 그렇게 하였을 경우 $\pi^{-1}(x_0)$에 올바른 scheme structure를 주는 일반적인 방법이 ([§닫힌 부분스킴](/ko/math/scheme_theory/closed_subschemes)의 내용을 가정하더라도) 없다. 이를 설명하기 위해서 우리는 조금 더 기다려야 한다. 
+이 예시를 scheme으로 바로 나타낼 수 없는 이유 중 덜 본질적인 것은 $S$가 $\mathbb{R}^3$의 닫힌집합이고, 우리는 닫힌집합 위에 scheme structure를 주는 방법을 모른다는 것이다. 이는 [§닫힌 부분스킴](/ko/math/scheme_theory/closed_subschemes)에서 해결하게 된다. 더 미묘하고 본질적인 부분은 함수 $\pi$의 점 $x_0$에서의 fiber $\pi^{-1}(x_0)$을 나타낼 방법이 없는 것이다. 물론 scheme morphism은 기본적으로 연속함수이므로 이를 연속함수의 fiber로 볼 수 있겠지만, 그렇게 하였을 경우 $\pi^{-1}(x_0)$에 scheme structure를 주는 방법이 ([§닫힌 부분스킴](/ko/math/scheme_theory/closed_subschemes)의 내용을 가정하더라도) 존재하지 않는다. 이를 설명하기 위해서 우리는 조금 더 기다려야 한다. 
 
 ---
 **참고문헌**

@@ -10,8 +10,6 @@ sidebar:
 
 date: 2026-01-21
 weight: 17
-revising: true
-drift_needed: true
 
 
 ---
@@ -332,7 +330,7 @@ $$[A]_{\mathcal{B}} = \begin{pmatrix}1&1&0\\0&1&1\\0&0&1\end{pmatrix} = J_3(1)$$
 이 되어, 크기 3의 Jordan block 하나로 구성된 Jordan canonical form을 얻는다.
 :::
 
-Jordan canonical form의 유일성은 각각의 고유값 $\lambda$와 각각의 정수 $k\geq 1$에 대하여 $\lambda$에 해당하는 Jordan block 중 크기가 $k$ 이상인 것의 개수가 $\dim\ker N_\lambda^k-\dim\ker N_\lambda^{k-1}$과 같다는 사실로부터 따라온다. 여기서 $N_\lambda=(A-\lambda I)\vert_{G_\lambda(A)}$이며, 이 차원들은 basis의 선택과 무관하므로 Jordan canonical form은 Jordan block들의 순서를 제외하고는 유일하게 결정된다.
+Jordan canonical form의 유일성은 Jordan block들의 크기가 $\dim\ker N^k-\dim\ker N^{k-1}$에 의해 결정된다는 사실로부터 따라온다. 이는 basis의 선택과 무관하므로, Jordan canonical form은 Jordan block들의 순서를 제외하고는 유일하게 결정된다.
 
 ## 유리표준형
 
@@ -346,7 +344,7 @@ $$C(p)=\begin{pmatrix}0&0&\cdots&0&-c_0\\1&0&\cdots&0&-c_1\\0&1&\cdots&0&-c_2\\\
 로 정의한다.
 :::
 
-Operator $T:V\rightarrow V$가 *cyclic*이라는 것은 적당한 $v\in V$가 존재하여 $\{v,Tv,\ldots,T^{d-1}v\}$ ($d=\dim V$)가 $V$의 기저가 되는 것이며, 이러한 $v$를 cyclic vector라 부른다. 한편 아래에서 쓰는 $T$의 minimal polynomial은 $p(T)=0$을 만족하는 monic polynomial 중 degree가 가장 작은 것을 말한다. 
+Operator $T:V\rightarrow V$가 *cyclic*이라는 것은 적당한 $v\in V$가 존재하여 $\{v,Tv,\ldots,T^{d-1}v\}$ ($d=\dim V$)가 $V$의 기저가 되는 것이며, 이러한 $v$를 cyclic vector라 부른다. 
 
 ::: 명제 15
 Cyclic vector $v$를 갖는 차원 $d$의 operator $T:V\rightarrow V$의 minimal polynomial $p$는 degree가 $d$이고, cyclic basis $\{v,Tv,\ldots,T^{d-1}v\}$에 대한 $T$의 행렬표현은 $C(p)$이다. 특히 [정의 11](#def11)의 Jordan block $J_k(\lambda)$는 $(\x-\lambda)^k$의 companion matrix와 닮음이다.
@@ -374,7 +372,7 @@ $$\begin{pmatrix}C(p_1)&&\\&\ddots&\\&&C(p_r)\end{pmatrix},\qquad p_i=(\x-\lambd
 [정리 12](#thm12)에 의하여 $A$는 Jordan block들 $J_{k_i}(\lambda_i)$의 direct sum과 닮음이고, [명제 15](#prop15)에 의하여 각 $J_{k_i}(\lambda_i)$는 $C((\x-\lambda_i)^{k_i})$와 닮음이므로, 이들을 모으면 원하는 block diagonal 형태를 얻는다.
 :::
 
-당연한 이야기지만, 유리표준형의 진정한 쓸모는 $\mathbb{K}$가 algebraically closed가 <em-ko>아닐</em-ko> 때에도 적용할 수 있다는 것에 있다. 흐름상 위의 증명에서는 Jordan form을 사용하여 elementary divisor $(\x-\lambda_i)^{k_i}$들의 companion form을 얻었지만, 고유값이 $\mathbb{K}$ 안에 존재하지 않는 경우에도 임의의 operator는 minimal polynomial의 기약인수분해와 cyclic 분해를 통해 *invariant factor* $p_1\mid p_2\mid\cdots\mid p_r$ ($p_r$이 minimal polynomial)들의 companion matrix들로 표준화된다. 문헌에서 rational canonical form이라 하면 보통 이 invariant factor 형태를 가리키고, [정리 16](#thm16)이 준 형태는 elementary divisor form에 해당한다. 이 일반적 형태는 $\mathbb{K}[\x]$-module의 structure theorem으로부터 따라오며, 고유값을 전혀 언급하지 않고 $\mathbb{K}$ 위에서만 정의되는 표준형을 준다.
+당연한 이야기지만, 유리표준형의 진정한 쓸모는 $\mathbb{K}$가 algebraically closed가 <em-ko>아닐</em-ko> 때에도 적용할 수 있다는 것에 있다. 흐름상 위의 증명에서는 Jordan form을 사용하여 elementary divisor $(\x-\lambda_i)^{k_i}$들의 companion form을 얻었지만, 고유값이 $\mathbb{K}$ 안에 존재하지 않는 경우에도 임의의 operator는 minimal polynomial의 기약인수분해와 cyclic 분해를 통해 *invariant factor* $p_1\mid p_2\mid\cdots\mid p_r$ ($p_r$이 minimal polynomial)들의 companion matrix들로 표준화된다. 이 일반적 형태는 $\mathbb{K}[\x]$-module의 structure theorem으로부터 따라오며, 고유값을 전혀 언급하지 않고 $\mathbb{K}$ 위에서만 정의되는 표준형을 준다.
 
 ---
 
@@ -384,3 +382,5 @@ $$\begin{pmatrix}C(p_1)&&\\&\ddots&\\&&C(p_r)\end{pmatrix},\qquad p_i=(\x-\lambd
 **[Lee]** 이인석, *선형대수와 군*, 서울대학교 출판문화원, 2005.
 
 ---
+
+[^1]: $U_1$의 complement $W_1$을 $N$-invariant가 되도록 할 수 있다는 것이 이 증명에서 가장 비자명한 부분이며 이는 귀납법을 통해 직접 보여야 한다. 

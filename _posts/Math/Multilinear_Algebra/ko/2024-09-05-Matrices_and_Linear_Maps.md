@@ -10,14 +10,12 @@ sidebar:
 
 date: 2024-09-05
 weight: 7
-revising: true
-drift_needed: true
 
 ---
 
 ## 좌표표현
 
-이제 우리는 행렬과 linear map 사이의 관계를 살펴본다. 이는 [\[선형대수학\] §선형대수학의 기본정리, ⁋정리 4](/ko/math/linear_algebra/ftla#thm4)의 일반화라 생각할 수 있다.
+이제 우리는 행렬과 linear map 사이의 관계를 살펴본다. 이는 [\[선형대수학\] §선형대수학의 기본정리, ⁋정리 5](/ko/math/linear_algebra/ftla#thm5)의 일반화라 생각할 수 있다.
 
 Free $A$-module $M$이 주어졌다 하고, $M$의 basis $\mathcal{B}=(e_i)_{i\in I}$를 고정하자. 그럼 임의의 $x\in M$은 
 
@@ -73,7 +71,7 @@ $$u(e_i)=\sum_{j\in J} x_{ji} f_j$$
 우리는 앞서 두 행렬의 곱을 정의하는 방법을 살펴보았다. [\[선형대수학\] §선형대수학의 기본정리, ⁋정리 5](/ko/math/linear_algebra/ftla#thm5)와 마찬가지로, 이들 행렬의 곱은 선형사상의 합성에 대응된다. 우선 다음 명제를 보이자.
 
 ::: 명제 3
-만일 $A$가 commutative ring이고 $I$가 유한집합이라면 임의의 linear map $u:M \rightarrow N$과 $x\in M$에 대하여 다음 식
+만일 $I,J$가 유한집합이라면 임의의 linear map $u:M \rightarrow N$과 $x\in M$에 대하여 다음 식
 
 $$[u(x)]_\mathcal{C}=[u]_\mathcal{C}^\mathcal{B}[x]_\mathcal{B}$$
 
@@ -88,15 +86,13 @@ $$\left([u]_\mathcal{C}^\mathcal{B}[x]_\mathcal{B}\right)_{j0}=\sum_{i\in I}\lef
 
 $$\langle u(x),f_j^\ast\rangle=\left\langle u\left(\sum_{i\in I} x_i e_i\right), f_j^\ast\right\rangle=\left\langle \sum_{i\in I} x_i u(e_i), f_j^\ast\right\rangle=\sum_{i\in I}x_i\langle u(e_i),f_j^\ast\rangle=\sum_{i\in I}\left\langle u(e_i),f_j^\ast\right\rangle \left\langle x,e_i^\ast\right\rangle$$
 
-가 되어 원하는 결과를 얻는다. 마지막 등호에서는 식 (1)과 함께 $A$가 commutative라는 사실을 사용하였다.
+가 되어 원하는 결과를 얻는다.
 :::
-
-$A$의 commutativity는 이 명제에서 뺄 수 없다. 만일 $A$가 commutative가 아니라면 위 증명의 마지막 등호에서 $x_i$와 $\langle u(e_i),f_j^\ast\rangle$의 순서를 바꿀 수 없기 때문인데, 가령 $A$ 자신을 left $A$-module로 보아 $M=N=A$, $\mathcal{B}=\mathcal{C}=(1)$로 두고, $a\in A$를 고정하여 $u(m)=ma$로 정의하면 $u$는 left $A$-linear이고 임의의 $x=b\in A$에 대하여 $[u(x)]_\mathcal{C}=(ba)$인 반면 $[u]_\mathcal{C}^\mathcal{B}[x]_\mathcal{B}=(ab)$이다.
 
 이를 [명제 2](#prop2)와 합치면 다음 결과를 얻는다.
 
 ::: 따름정리 4
-$A$가 commutative ring이라 하고, 세 $A$-module $M,N,L$과 이들의 finite basis $\mathcal{B}=(e_i)_{i\in I},\mathcal{C}=(f_j)_{j\in J},\mathcal{D}=(g_k)_{k\in K}$를 고정하자. 그럼 임의의 linear map $u:M \rightarrow N$, $v:N \rightarrow L$에 대하여, 다음 식
+세 $A$-module $M,N,L$이 주어졌다 하고, 유한한 basis $\mathcal{B}=(e_i)_{i\in I},\mathcal{C}=(f_j)_{j\in J},\mathcal{D}=(g_k)_{k\in K}$를 고정하자. 그럼 임의의 linear map $u:M \rightarrow N$, $v:N \rightarrow L$에 대하여, 다음 식
 
 $$[v \circ u]_\mathcal{D}^\mathcal{B}=[v]_\mathcal{D}^\mathcal{C}[u]_\mathcal{C}^\mathcal{B}$$
 
@@ -131,11 +127,11 @@ $$\left(\left[u^t\right]_{\mathcal{B}^\ast}^{\mathcal{C}^\ast}\right)_{ij}=\lang
 
 ## 행렬표현과 trace
 
-앞서 우리는 [§Hom과 텐서곱, ⁋정의 6](/ko/math/multilinear_algebra/hom_and_tensor#def6)에서 linear map의 trace를 정의하였다. 그곳에서와 마찬가지로 이 절에서는 $A$가 commutative ring이라 가정하며, 그럼 $\lMod{A}=\rMod{A}$이므로 $\rMod{A}$를 표기법으로 쓰기로 한다. 이번에는 임의의 $n\times n$ 행렬 $X$에 대하여, $X$의 trace를 다음 식
+앞서 우리는 [§Hom과 텐서곱, ⁋정의 6](/ko/math/multilinear_algebra/hom_and_tensor#def6)에서 linear map의 trace를 정의하였다. 이번에는 임의의 $n\times n$ 행렬 $X$에 대하여, $X$의 trace를 다음 식
 
 $$\tr(X)=\sum_{i=1}^n x_{ii}$$
 
-으로 정의하자. 그럼 임의의 $u\in\End_\rMod{A}(M)$에 대하여, basis $\mathcal{B}=(e_i)_{1\leq i\leq n}$를 고정하자. 이 basis가 유한하므로 $M$은 finitely generated free $A$-module이고 따라서 projective이므로 $\tr(u)$가 정의되며, $[u]_\mathcal{B}^\mathcal{B}$를 생각하면
+으로 정의하자. 그럼 임의의 $u\in\End_\rMod{A}(M)$에 대하여, basis $\mathcal{B}=(e_i)_{1\leq i\leq n}$를 고정하고 $[u]_\mathcal{B}^\mathcal{B}$를 생각하면
 
 $$\tr([u]_\mathcal{B}^\mathcal{B})=\sum_{i=1}^n ([u]_\mathcal{B}^\mathcal{B})_{ii}=\sum_{i=1}^n\langle u(e_i), e_i^\ast\rangle$$
 
@@ -171,13 +167,13 @@ $$u(x_i)=\sum_{j\in J} u_{ji}(x_i),\qquad u_{ji}(x_i)\in N_j$$
 
 $$[u]^I_J=(u_{ji})_{(j,i)\in J\times I}$$
 
-이 잘 정의된다. 이 행렬의 $(j,i)$ 성분은 $\Hom_{\lMod{A}}(M_i,N_j)$의 원소이므로 성분들이 모두 같은 ring에 속하지는 않으며, 따라서 $[u]^I_J$는 하나의 ring 위에 정의된 행렬이 아니라 direct product
+이 잘 정의된다. 이 행렬은 다음의 ring
 
-$$\prod_{(j,i)\in J\times I}\Hom_{\lMod{A}}(M_i,N_j)$$
+$$H=\bigoplus_{(j,i)\in J\times I}\Hom_{\lMod{A}}(M_i,N_j)$$
 
-의 원소로 생각해야 한다. 여기서 direct sum을 쓸 수 없는 이유는 $M_i$가 finitely generated $A$-module이 아니라면 고정된 $i$에 대하여도 $u_{ji}\neq 0$인 $j$가 무한히 많을 수 있기 때문이다. 다만 $M=N$이고 $I=J$가 유한집합인 경우라면 서로 다른 성분들의 합성이 정의되므로 위의 곱이 행렬의 곱을 곱셈으로 갖는 ring이 된다.
+위에 정의된 $J\times I$ 행렬로 생각할 수 있다.
 
-이러한 일반화를 하여도 위에서 살펴본 모든 명제들이 그대로 성립함을 확인할 수 있다. 특히 행렬의 곱이 주목할 만한데, $A$가 commutative ring이며 $I,J$가 모두 유한하고, 여기에 더해 각각의 $M_i$와 $N_j$들이 finite basis $\mathcal{B}_i$, $\mathcal{C}_j$들을 갖는다 하자. 그럼 이들의 basis를 모두 모아둔 것들이 각각 $M$과 $N$의 basis $\mathcal{B},\mathcal{C}$를 이룬다. 그럼 이 basis에 대해 linear map $u:M \rightarrow N$을 행렬로 나타낸 것은, 위의 $[u]_J^I$에서 각각의 성분 $u_{ji}$들을 basis $\mathcal{B}_i$, $\mathcal{C}_j$에 대해 행렬로 나타낸 것을 대입한 행렬과 같음을 확인할 수 있으며, 이것이 행렬의 곱에 대해 유의미하게 행동한다. 즉, 또 다른 direct sum $L=\bigoplus_{k\in K} L_k$와, basis $\mathcal{D}=\bigcup \mathcal{D}_k$에 대하여 $v:N \rightarrow L$을 마찬가지 방식으로 써 보면, $v\circ u$의 basis $\mathcal{B}, \mathcal{D}$에 대한 행렬표현은 다음의 행렬
+이러한 일반화를 하여도 위에서 살펴본 모든 명제들이 그대로 성립함을 확인할 수 있다. 특히 행렬의 곱이 주목할 만한데, $I,J$가 모두 유한하고, 여기에 더해 각각의 $M_i$와 $N_j$들이 유한한 basis $\mathcal{B}_i$, $\mathcal{C}_j$들을 갖는다 하자. 그럼 이들의 basis를 모두 모아둔 것들이 각각 $M$과 $N$의 basis $\mathcal{B},\mathcal{C}$를 이룬다. 그럼 이 basis에 대해 linear map $u:M \rightarrow N$을 행렬로 나타낸 것은, 위의 $[u]_J^I$에서 각각의 성분 $u_{ji}$들을 basis $\mathcal{B}_i$, $\mathcal{C}_j$에 대해 행렬로 나타낸 것을 대입한 행렬과 같음을 확인할 수 있으며, 이것이 행렬의 곱에 대해 유의미하게 행동한다. 즉, 또 다른 direct sum $L=\bigoplus_{k\in K} L_k$와, basis $\mathcal{D}=\bigcup \mathcal{D}_k$에 대하여 $v:N \rightarrow L$을 마찬가지 방식으로 써 보면, $v\circ u$의 basis $\mathcal{B}, \mathcal{D}$에 대한 행렬표현은 다음의 행렬
 
 $$\sum_{j\in J}[v_{kj}]_{\mathcal{D}_k}^{\mathcal{C}_j}[u_{ji}]_{\mathcal{C}_j}^{\mathcal{B}_i}$$
 

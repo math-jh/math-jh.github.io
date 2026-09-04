@@ -10,8 +10,6 @@ sidebar:
 
 date: 2021-08-15
 weight: 9
-revising: true
-drift_needed: true
 
 ---
 
@@ -50,8 +48,6 @@ $$y=(f_i)(x)=(f_i\vert_{A_i\cap A_j})(x)=(f_j\vert_{A_i\cap A_j})(x)=(f_j)(x)=y'
 
 이므로 둘째 주장 또한 성립한다.
 :::
-
-위 명제의 둘째 주장에서 $A_i\cap A_j=\emptyset$인 경우, restriction $f_i\vert_{A_i\cap A_j}$는 정의역이 공집합인 함수가 된다. [§함수, ⁋정의 1](/ko/math/set_theory/functions#def1)은 정의역이 공집합이 아닌 경우만을 다루었으나, triple $(\emptyset,\emptyset,B)$ 또한 $\pr_1\emptyset=\emptyset$이라는 첫째 조건을 만족하고 둘째 조건은 공허하게 성립한다. 따라서 이 글에서는 정의역이 공집합인 함수도 허용하기로 하며, 아래에서 어떤 $A_i$가 공집합인 경우에 등장하는 함수들도 같은 규약을 따른다.
 
 위의 명제의 2번을 만족하는 함수 $f$는 첫째 주장에 의하여 유일하다는 것이 자명하다. 또, 특별히 $A_i\cap A_j=\emptyset$가 $i\neq j$인 모든 $i,j$에 대하여 성립한다면 둘째 주장의 전제조건이 항상 만족된다. 이를 다음과 같이 정의한다.
 

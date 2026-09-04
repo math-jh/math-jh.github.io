@@ -12,9 +12,7 @@ sidebar:
 date: 2026-06-27
 
 weight: 26
-revising: true
 
-drift_needed: true
 
 ---
 
@@ -93,7 +91,7 @@ $$A^+=V\Sigma^+U^t$$
 으로 정의한다. 
 :::
 
-이것이 말이 되기 위해서는 이 정의가 특이값 분해의 선택에 의존하지 않음을 확인해야 한다. 이는 다음 명제와 네 조건이 $A^+$을 유일하게 결정한다는 사실로부터 따라온다. 
+이것이 말이 되기 위해서는 이 정의가 특이값 분해의 선택에 의존하지 않음을 확인해야 한다. 이는 다음 명제로부터 따라온다. 
 
 ::: 명제 6
 [정의 5](#def5)의 행렬 $A^+$은 다음의 네 조건
@@ -118,22 +116,13 @@ $$A^+AA^+=V(\Sigma^+\Sigma)V^tV\Sigma^+U^t=V(\Sigma^+\Sigma\Sigma^+)U^t=V\Sigma^
 이므로 첫째와 둘째 조건도 성립한다.
 :::
 
-한편 위의 네 조건은 행렬 $A^+$을 유일하게 결정한다. 두 행렬 $B,C\in\Mat_{n\times m}(\mathbb{R})$이 모두 $A$에 대하여 네 조건을 만족한다 하면, $ACA=A$이고 $AB$과 $AC$이 symmetric이므로
-
-$$\begin{aligned}
-AB&=(ACA)B=(AC)(AB)=(AC)^t(AB)^t\\
-&=\bigl((AB)(AC)\bigr)^t=\bigl((ABA)C\bigr)^t=(AC)^t=AC
-\end{aligned}$$
-
-이고, 같은 계산을 $BA=B(ACA)=(BA)(CA)$에 적용하면 $BA=CA$를 얻는다. 따라서 $B=BAB=B(AB)=B(AC)=(BA)C=(CA)C=CAC=C$이다.
-
-그럼 [정의 5](#def5)의 $A^+$은 [명제 6](#prop6)에 의하여 특이값 분해의 선택과 무관하게 잘 정의될 뿐 아니라, [§최소제곱법, ⁋정의 7](/ko/math/linear_algebra/least_squares_method#def7)의 full rank인 경우의 정의와도 일치한다. 예를 들어 $A$가 full column rank라면 $A^tA$이 가역이고, 행렬 $(A^tA)^{-1}A^t$이 
+그럼 [§최소제곱법, ⁋정의 7](/ko/math/linear_algebra/least_squares_method#def7)에서 위의 네 조건이 $A^+$를 유일하게 특정지어준다는 것을 살펴보았으므로, [정의 5](#def5)의 $A^+$은 특이값 분해의 선택과 무관하게 잘 정의될 뿐 아니라 full rank의 경우 두 정의가 일치하는 것 또한 안다. 예를 들어 $A$가 full column rank라면 $A^tA$이 가역이고, 행렬 $(A^tA)^{-1}A^t$이 
 
 $$\bigl((A^tA)^{-1}A^t\bigr)A=I_n,\qquad A\bigl((A^tA)^{-1}A^t\bigr)=A(A^tA)^{-1}A^t$$
 
 으로부터 위 네 조건을 모두 만족함을 직접 확인할 수 있다. 이때 $A^tA$이 symmetric이므로 $\bigl((A^tA)^{-1}\bigr)^t=(A^tA)^{-1}$이고, 따라서 $A(A^tA)^{-1}A^t$ 또한 symmetric이다. 
 
-특이값 분해 $A=U\Sigma V^t$은 기하학적으로 임의의 linear map $A$가 orthonormal basis에 대한 회전 혹은 반사, 각 축으로의 $\sigma_i$배 확대, 그리고 또 다른 회전 혹은 반사의 합성으로 분해됨을 의미한다. 다만 $m\neq n$인 경우 가운데의 $\Sigma$은 각 축을 늘이기만 하는 것이 아니라, $m<n$일 때에는 남는 축을 버리고 $m>n$일 때에는 모자라는 축을 $0$으로 채우는 일도 함께 한다. $V$의 열 $v_i$를 *오른쪽 특이벡터*, $U$의 열 $u_i$를 *왼쪽 특이벡터*라 부르며, 이들은 각각 $A^tA$과 $AA^t$의 고유벡터이다.
+특이값 분해 $A=U\Sigma V^t$은 기하학적으로 임의의 linear map $A$가 orthonormal basis에 대한 회전 혹은 반사, 각 축으로의 $\sigma_i$배 확대, 그리고 또 다른 회전 혹은 반사의 합성으로 분해됨을 의미한다. $V$의 열 $v_i$를 *오른쪽 특이벡터*, $U$의 열 $u_i$를 *왼쪽 특이벡터*라 부르며, 이들은 각각 $A^tA$과 $AA^t$의 고유벡터이다.
 
 ---
 

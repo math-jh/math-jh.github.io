@@ -1,6 +1,6 @@
 ---
 title: "Hom과 텐서곱"
-description: "분할 완전열 위에서의 Hom과 텐서곱의 성질을 살펴보고, 가환환 위의 가군들 사이의 Hom과 텐서곱 연산의 기본 성질을 다룬다."
+description: "분할 완전열 위에서의 Hom과 텐서곱의 거동을 살펴보고, 가환환 위의 가군들 사이의 Hom과 텐서곱 연산의 기본 성질을 다룬다."
 excerpt: "Hom functor와 tensor product의 adjunction과 exactness"
 
 categories: [Math / Multilinear Algebra]
@@ -10,9 +10,7 @@ sidebar:
 
 date: 2024-08-30
 weight: 5
-revising: true
 
-drift_needed: true
 
 ---
 
@@ -96,20 +94,12 @@ $$M^\ast \otimes_AN\cong \Hom_{\rMod{A}}(M,N)$$
 이 존재한다.
 :::
 
-또, $N=\Hom_{\rMod{A}}(M', L')$로 두면 $\nu$로부터 다음의 $A$-linear map
-
-$$\nu_1:\Hom_\rMod{A}(M,L)\otimes_A\Hom_\rMod{A}(M',L') \rightarrow \Hom_\rMod{A}(M, L\otimes_A\Hom_\rMod{A}(M',L'))$$
-
-을 얻는다. 한편 $\nu$의 정의를 세 module $M,L,N$ 대신 $M',L',L$에 적용하면 $A$-linear map $\Hom_\rMod{A}(M',L')\otimes_AL \rightarrow \Hom_\rMod{A}(M',L'\otimes_AL)$이 얻어지고, tensor product의 commutativity를 통해 이를 다음의 $A$-linear map
-
-$$\nu_2:L\otimes_A\Hom_\rMod{A}(M',L') \rightarrow \Hom_\rMod{A}(M', L\otimes_AL')$$
-
-로 볼 수 있다. 이제 $\nu_1$ 뒤에 $\Hom_\rMod{A}(M,\nu_2)$를 합성한 뒤 [\[대수적 구조\] §가군의 직접곱과 직합, 텐서곱, ⁋정리 9](/ko/math/algebraic_structures/operations_of_modules#thm9)의 adjunction $\Hom_\rMod{A}(M,\Hom_\rMod{A}(M',X))\cong\Hom_\rMod{A}(M\otimes_AM',X)$를 $X=L\otimes_AL'$인 경우에 적용하면 다음의 따름정리를 얻는다.
+또, $N=\Hom_{\rMod{A}}(M', L')$로 두면 다음의 따름정리를 얻는다.
 
 ::: 따름정리 5
 다음의 $A$-linear map
 
-$$\Hom_\rMod{A}(M,L)\otimes_A\Hom_\rMod{A}(M',L') \rightarrow \Hom_\rMod{A}(M\otimes_A M', L\otimes_A L')$$
+$$\Hom_\rMod{A}(M,L)\otimes_A\Hom_\rMod{A}(M',L') \rightarrow \Hom_\rMod{A}(M\otimes M', L\otimes L')$$
 
 이 존재하며, 이는 만일 다음의 쌍
 
@@ -117,8 +107,6 @@ $$(M,M'),\quad (M,L),\quad (M',L')$$
 
 중 하나가 finitely generated projective $A$-module이라면 isomorphism이다.
 :::
-
-위의 합성에서 adjunction은 항상 isomorphism이므로, $\nu_1$과 $\nu_2$가 모두 bijective이면 따름정리의 map은 isomorphism이 된다. [명제 3](#prop3)에 의하여 $\nu_1$은 $M$이 finitely generated projective이거나 $\Hom_\rMod{A}(M',L')$이 finitely generated projective일 때 bijective이고, $\nu_2$는 $M'$이 finitely generated projective이거나 $L$이 finitely generated projective일 때 bijective이다. 따라서 $(M,M')$과 $(M,L)$의 경우는 곧바로 따라오며, $(M',L')$의 경우에는 [따름정리 4](#cor4)에 의하여 $\Hom_\rMod{A}(M',L')\cong M'^\ast\otimes_AL'$ 또한 finitely generated projective가 되어 $\nu_1$이 bijective이고, $M'$이 finitely generated projective인 것으로부터 $\nu_2$가 bijective이다.
 
 ## Trace
 

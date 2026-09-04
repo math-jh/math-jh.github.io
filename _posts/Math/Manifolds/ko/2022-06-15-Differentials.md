@@ -1,6 +1,6 @@
 ---
 title: "미분사상"
-description: "두 미분다양체 사이의 함수를 정의하고, 이러한 함수가 연속임을 증명하며, 포함 사상과 상수함수 등의 예시를 다룬다. Tangent space에서의 작용까지 살펴본다."
+description: "두 미분다양체 사이의 함수를 정의하고, 이러한 함수가 연속임을 증명하며, 포함 사상과 상수함수 등의 예시를 다룬다. 접다리 공간에서의 작용까지 살펴본다."
 excerpt: "두 접공간 사이의 미분사상"
 
 categories: [Math / Manifolds]
@@ -10,8 +10,6 @@ sidebar:
 
 date: 2022-06-15
 weight: 5
-revising: true
-drift_needed: true
 
 ---
 
@@ -153,9 +151,9 @@ $$\frac{\partial}{\partial x^1}\bigg\vert_p,\cdots,\frac{\partial}{\partial x^m}
 
 $$\frac{\partial}{\partial x^i}\bigg\vert_pf=\frac{\partial}{\partial r^i}\bigg\vert_{\varphi(p)} (f\circ\varphi^{-1})$$
 
-이다. 그런데 [정의 7](#def7)을 염두에 두고 이 식을 다시 살펴보면, 이는 $\varphi^{-1}:\varphi(U)\rightarrow U$의 differential과 동일한 모양임을 알 수 있다.[^1] 즉 tangent space의 basis는 다른 것이 아니라, 단지 $\mathbb{R}^m$의 tangent space $T_{\varphi(p)}\mathbb{R}^m$의 $m$개의 basis들을 differential $\dd{(\varphi^{-1})_{\varphi(p)}}$를 통해 옮겨온 것일 뿐이다.
+이다. 그런데 [정의 7](#def7)을 염두에 두고 이 식을 다시 살펴보면, 이는 $\varphi^{-1}:\varphi(U)\rightarrow U$의 differential과 동일한 모양임을 알 수 있다.[^1] 즉 tangent space의 basis는 다른 것이 아니라, 단지 $\mathbb{R}^m$의 tangent space $T_{\varphi(p)}\mathbb{R}^m$의 $m$개의 basis들을 differential $\dd{\varphi}^{-1}_{\varphi(p)}$를 통해 옮겨온 것일 뿐이다.
 
-이를 좀 더 선형대수학적인 관점에서 보자면, $\mathcal{B}$를 $\mathbb{R}^m$의 standard basis, $\mathcal{C}$를 $\partial/\partial x^i$들로 이루어진 $T_pM$의 basis라 하면 $(T_{\varphi(p)}\mathbb{R}^m, \mathcal{B})$에서 $(T_pM, \mathcal{C})$로의 linear map $\dd{(\varphi^{-1})_{\varphi(p)}}$의 행렬표현이 정확히 항등행렬이 된다고 할 수 있다.
+이를 좀 더 선형대수학적인 관점에서 보자면, $\mathcal{B}$를 $\mathbb{R}^m$의 standard basis, $\mathcal{C}$를 $\partial/\partial x^i$들로 이루어진 $T_pM$의 basis라 하면 $(T_{\varphi(p)}\mathbb{R}^m, \mathcal{B})$에서 $(T_pM, \mathcal{C})$로의 linear map $\dd{\varphi}^{-1}_{\varphi(p)}$의 행렬표현이 정확히 항등행렬이 된다고 할 수 있다.
 
 더 일반적으로, $M,N$이 각각 $m,n$차원의 manifold이고 $F:M\rightarrow N$이 임의의 $C^\infty$ 함수라 하자. 그럼 고정된 $p\in M$에 대하여, $p$를 포함하는 coordinate system $(U,\varphi)$, 그리고 $F(U)$를 포함하는 coordinate system $(V,\psi)$가 존재하여 $\psi\circ F\circ\varphi^{-1}$이 $C^\infty$이다. 이제 $\varphi=(x^i)_{i=1}^{m}$, $\psi=(y^j)_{j=1}^n$이라 하자. 그럼 마찬가지로 tangent space $T_pM$, $T_{F(p)}N$의 basis는 각각
 

@@ -10,8 +10,6 @@ sidebar:
 
 date: 2023-01-23
 weight: 1
-revising: true
-drift_needed: true
 
 ---
 
@@ -278,7 +276,7 @@ Lie group $G$와 $\Omega_\text{l.inv}^\ast(G)$에 대하여 다음이 성립한�
 2. 임의의 유한차원 real Lie algebra $\mathfrak{g}$에 대하여, $\mathfrak{g}$를 Lie algebra로 갖는 simply connected Lie group $G$가 존재한다. 
 :::
 
-즉, 바꾸어 말하자면 $\LieGrp$에서 $\LieAlg$로의 functor $\Lie:\LieGrp \rightarrow \LieAlg$는, simply connected Lie group들로 이루어진 $\LieGrp$의 full subcategory로 제한했을 때 두 category의 equivalence를 준다. 여기에서 $\LieGrp$는 유한차원 Lie group들의 category를, $\LieAlg$는 유한차원 real Lie algebra들의 category를 뜻한다. 
+즉, 바꾸어 말하자면 $\LieGrp$에서 $\LieAlg$로의 functor $\Lie:\LieGrp \rightarrow \LieAlg$는, simply connected Lie group들로 이루어진 $\LieGrp$의 full subcategory로 제한했을 때 두 category의 equivalence를 준다. 
 
 Category-theoretic한 결과 외에도 이 정리는, 가령, 임의의 Lie group $G$와 그 Lie algebra $\mathfrak{g}$에 대하여 matrix exponential과 비슷한 exponential map을 정의할 수 있도록 해 준다. 이는 $(\mathbb{R},+)$이 1차원 simply connected Lie group이므로 그 Lie algebra 또한 1차원이고, 따라서 여기에서 다른 Lie algebra로의 Lie algebra homomorphism은 basis $d/\dd{t}$가 어디로 가는지에 의해 유일하게 결정되며 이 때 $d/\dd{t}$가 $X\in \mathfrak{g}$로 옮겨진다면 이 Lie algebra homomorphism에 [정리 15](#thm15)을 적용하여 얻어지는 Lie group homomorphism $\gamma: \mathbb{R}\rightarrow G$이 원하는 곡선을 정의하기 때문이다. 
 
@@ -300,10 +298,10 @@ $$\exp(X)\exp(Y)=\exp\left(X+Y+\frac{1}{2}[X,Y]+\frac{1}{12}[X,[X,Y]]+\frac{1}{1
 
 엄밀히 말하자면 위의 "정리"는 $\cdots$에 해당하는 항의 계수에 대한 정보가 없기는 하지만 이 계수들이 구체적으로 필요할 일은 드물다. 중요한 것은 Lie algebra의 원소 $X,Y$가 지정하는 방향의 두 (Lie group의) 원소를 각각 곱하였을 때 이들의 곱이 $X,Y$의 일차결합과 그 Lie bracket들의 합에 해당하는 방향이며, 만일 $X,Y$가 충분히 작은 벡터들이라면 이 급수 또한 수렴한다는 것이다. 한편 Lie group $G$에서, identity $e$와 가까운 임의의 원소는 $g=\exp(X)$의 꼴로 쓸 수 있으므로 이 정리는 (identity 근처에서) $G$의 group operation에 대한 정보를 정확하게 모두 담고 있다. 더 구체적으로, 우리는 Lie algebra $\mathfrak{g}$를 manifold로 보고, $\exp: \mathfrak{g}\rightarrow G$를 manifold 사이에서의 smooth map이라 생각할 수 있고 이 때 $0\in \mathfrak{g}$에서의 differential이 정확히 $\id_\mathfrak{g}$가 된다. 따라서 $\mathfrak{g}$에서 $0$의 적당한 neighborhood $U$가 존재하여 $\exp$가 $U$와 $\exp(U)$ 사이의 diffeomorphism을 정의하도록 할 수 있겠으나 (특히 local diffeomorphism의 inverse $\log$가 존재하겠지만), 이 $U$ 바깥에서 exponential map이 어떻게 행동할지는 단언할 수 없다. 
 
-위의 [정리 15](#thm15)를 알게 되었을 때, 자연스러운 질문 중 하나는 Lie group $G$와 그 Lie algebra $\mathfrak{g}$, 그리고 $\mathfrak{g}$의 Lie subalgebra $\mathfrak{h}$가 주어졌을 때, $\mathfrak{h}$를 identity에서의 tangent space로 갖는 $G$의 Lie subgroup $H$가 존재하는지의 여부일 것이다. 각 $g\in G$마다 $\mathcal{D}_g=(\dd{L_g})_e(\mathfrak{h})$로 정의된 distribution $\mathcal{D}$를 생각하면, 정의에 의해 Lie subalgebra는 Lie bracket에 의해 닫혀있으므로 $\mathcal{D}$는 involutive이고 따라서 [\[미분다양체\] §Distribution, ⁋정리 3](/ko/math/manifolds/distribution#thm3)에 의해 integrable이다. 이제 $e$를 지나는 connected integral manifold들 중 가장 큰 것을 $H$라 하면, $\mathcal{D}$가 left invariant이므로 diffeomorphism $L_{h^{-1}}$이 $\mathcal{D}$의 integral manifold를 다시 $\mathcal{D}$의 integral manifold로 보내고, 임의의 $h\in H$에 대하여 $H$는 $h$를 지나는 가장 큰 connected integral manifold이기도 하므로 $h^{-1}H=H$임을 보일 수 있다. 즉 $H$는 $G$의 subgroup이며, 이러한 방식으로 다음 정리를 얻는다. 
+위의 [정리 15](#thm15)를 알게 되었을 때, 자연스러운 질문 중 하나는 Lie group $G$와 그 Lie algebra $\mathfrak{g}$, 그리고 $\mathfrak{g}$의 Lie subalgebra $\mathfrak{h}$가 주어졌을 때, $\mathfrak{h}$를 identity에서의 tangent space로 갖는 $G$의 Lie subgroup $H$가 존재하는지의 여부일 것이다. 그런데 정의에 의해 Lie subalgebra는 Lie bracket에 의해 닫혀있으므로 [\[미분다양체\] §Distribution, ⁋정리 3](/ko/math/manifolds/distribution#thm3)에 의해 이는 $G$의 submanifold를 정의한다. 이들은 위의 [정리 17](#thm17)에 의해 group operation도 가질 것이지만, 문제는 이 정리는 앞서 지적했듯 오직 국소적인 영역에서만 효과가 있다는 것이다. 그러나, 만일 $G$가 simply connected였다면 이를 $G$ 전체로 확장하는 데에 위상적인 문제가 없어지므로 다음 정리가 성립한다. 
 
 ::: 정리 18
-Lie group $G$와 그 Lie algebra $\mathfrak{g}$, 그리고 $\mathfrak{g}$의 Lie subalgebra $\mathfrak{h}$가 주어졌을 때, $\mathfrak{h}$를 Lie algebra로 갖는 $G$의 connected Lie subgroup $H$가 유일하게 존재한다. 
+Simply connected Lie group $G$와 그 Lie algebra $\mathfrak{g}$, 그리고 $\mathfrak{g}$의 Lie subalgebra $\mathfrak{h}$가 주어졌을 때, $\mathfrak{h}$를 Lie algebra로 갖는 $G$의 Lie subgroup $H$가 존재한다. 
 :::
 
 ## 가환 리 군의 분류
@@ -333,7 +331,7 @@ $$\ad(X)Y =[X,Y]$$
 이 성립한다. 뿐만 아니라 다음이 성립한다.
 
 ::: 정리 20
-Lie group $G$에 대하여 다음이 성립한다.
+Connected compact Lie group $G$에 대하여 다음이 성립한다.
 
 1. $\dd{\exp}_0=\id_\mathfrak{g}$
 2. $\Ad\circ\exp=\exp_{\GL(\mathfrak{g})}\circ \ad$
@@ -342,7 +340,7 @@ Lie group $G$에 대하여 다음이 성립한다.
 
 만일 $G$가 abelian group이었다면 $\rho_g$는 그냥 identity map이고 따라서 $\Ad_g(X)=X$가 임의의 $g\in G$와 임의의 $X\in \mathfrak{g}$에 대해 성립하고, 따라서 그 미분인 $\mathfrak{g}$의 adjoint representation은 $0$이다. 즉, 임의의 abelian Lie group에 대하여, 그 Lie algebra의 Lie bracket은 항상 $0$이고 우리는 이를 *abelian* Lie algebra라 부른다. 이는 [정의 8](#def8)에 의해 anticommutative인 Lie bracket이 commutative이기도 하기 위한 유일한 방법이므로 그 이름이 어색하지 않다. 
 
-그럼, $G$가 abelian일 경우 $\exp(X+Y)=\exp(X)\exp(Y)$이 성립한다. 곡선 $t\mapsto \exp(tX)\exp(tY)$는 $G$의 commutativity에 의하여 group homomorphism $\mathbb{R}\rightarrow G$가 되고 $t=0$에서의 속도는 $X+Y$이므로, [정리 15](#thm15)의 유일성으로부터 이 곡선은 $t\mapsto\exp(t(X+Y))$와 같고, 여기에 $t=1$을 대입하면 위의 식을 얻는다. 즉 $\exp$는 group homomorphism이다. 뿐만 아니라 $\exp$는 $0$의 근방에서 local diffeomorphism이므로 그 image는 $e$의 근방을 포함하는 subgroup이고, 이러한 subgroup은 open이며 그 complement가 coset들의 합집합이라 closed이기도 하다. 즉 $G$가 connected일 경우 $\exp$는 *surjective* group homomorphism이 된다. 따라서, first isomorphism theorem에 의하여
+그럼, $G$가 abelian일 경우 특히 [정리 17](#thm17)에 의하여 $\exp(X+Y)=\exp(X)\exp(Y)$이 성립한다. 즉 $\exp$는 group homomorphism이다. 뿐만 아니라 이 경우 [정리 17](#thm17)의 우변 $\exp$ 안의 식은 반드시 수렴하며 이는 ($G$가 connected일 경우) $\exp$가 *surjective* group homomorphism이라는 결과로 나타난다. 따라서, first isomorphism theorem에 의하여
 
 $$G\cong \mathfrak{g}/\ker(\exp)$$
 

@@ -10,8 +10,6 @@ sidebar:
 
 date: 2022-11-13
 weight: 5
-revising: true
-drift_needed: true
 
 ---
 
@@ -27,7 +25,7 @@ drift_needed: true
 
 $$U\subseteq f^{-1}(f(U))\subseteq f^{-1}(V)$$
 
-이 성립한다. 거꾸로 임의의 집합 $V\subseteq Y$에 대하여 $f(f^{-1}(V))\subseteq V$가 성립하므로, $U:=f^{-1}(V)$ 자신이 $f(U)\subseteq V$를 만족한다. 따라서 두 위상공간 사이의 함수 $f:X\rightarrow Y$가 $x\in X$에서 연속이라는 것은 $f(x)\in Y$의 임의의 근방 $V$에 대하여 $f^{-1}(V)$가 $x$의 근방이 되는 것과 동치이며, 더 일반적으로는 고정된 $f(x)$의 local base $\mathcal{B}(f(x))$와 임의의 $V\in\mathcal{B}(f(x))$에 대하여 $f^{-1}(V)\in\mathcal{N}(x)$임을 보이면 충분하다. 
+이 성립한다. 따라서 두 위상공간 사이의 함수 $f:X\rightarrow Y$가 $x\in X$에서 연속이라는 것을 증명하기 위해서는 $f(x)\in Y$의 임의의 근방 $V$에 대하여 $f^{-1}(V)$가 $x$의 근방이 된다는 것을 보이면 충분하며, 더 일반적으로는 고정된 $f(x)$의 local base $\mathcal{B}(f(x))$와 임의의 $V\in\mathcal{B}(f(x))$에 대하여 $f^{-1}(V)\in\mathcal{N}(x)$임을 보이면 충분하다. 
 
 ::: 명제 2
 두 위상공간 $X,Y$ 사이의 함수 $f:X\rightarrow Y$가 점 $x$에서 연속이라 하자. 만일 어떠한 $A\subseteq X$에 대하여 $x\in\cl(A)$라면, $f(x)\in\cl(f(A))$이다.
@@ -40,7 +38,7 @@ $f(x)\in Y$의 임의의 근방 $V$를 택하자. 그럼 $f^{-1}(V)$는 $x$의 �
 위상공간들 $X,Y,Z$가 주어졌다고 하자. 만일 $f:X\rightarrow Y$가 점 $x\in X$에서 연속이고, $g:Y\rightarrow Z$가 $f(x)$에서 연속이라면 그 합성 $g\circ f$ 또한 점 $x$에서 연속이다.
 :::
 ::: 증명
-$(g\circ f)(x)$의 임의의 근방 $W$를 택하자. 그럼 $g$가 $f(x)$에서 연속이므로, $g^{-1}(W)$은 $f(x)$의 근방이다. 다시 $f$는 $x$에서 연속이므로, $f^{-1}(g^{-1}(W))$는 $x$의 근방이다. 한편 [\[집합론\] §이항관계들 사이의 연산, ⁋명제 4](/ko/math/set_theory/operation_of_binary_relations#prop4)로부터 $(g\circ f)^{-1}=f^{-1}\circ g^{-1}$이므로, [\[집합론\] §이항관계들 사이의 연산, ⁋명제 6](/ko/math/set_theory/operation_of_binary_relations#prop6)에 의하여 $(g\circ f)^{-1}(W)=f^{-1}(g^{-1}(W))$가 성립한다. 따라서 $(g\circ f)^{-1}(W)$는 $x$의 근방이고, $W$는 임의였으므로 $g\circ f$는 $x$에서 연속이다.
+$(g\circ f)(x)$의 임의의 근방 $W$를 택하자. 그럼 $g$가 $f(x)$에서 연속이므로, $g^{-1}(W)$은 $f(x)$의 근방이다. 다시 $f$는 $x$에서 연속이므로, $f^{-1}(g^{-1}(W))$는 $x$의 근방이다. ([\[집합론\] §이항관계들 사이의 연산, ⁋명제 6](/ko/math/set_theory/operation_of_binary_relations#prop6))
 :::
 
 만일 $f$가 $X$의 모든 점에서 연속이라면, $f$를 *연속함수<sub>continuous function</sub>*라 부른다. 다음 정리는 연속함수를 정의하는 여러 방법을 보여준다.

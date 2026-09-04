@@ -10,8 +10,6 @@ sidebar:
 
 date: 2025-02-21
 weight: 9
-revising: true
-drift_needed: true
 ---
 
 앞선 글에서 우리는 scheme morphism을 이해하는 몇 가지 관점을 살펴보았다. 이번 글에서 우리는 본격적으로 scheme morphism이 갖는 성질들을 정의한다. 우선 이들이 공유하는 다음 성질을 정의한다.
@@ -85,7 +83,7 @@ Scheme morphism $\varphi: X \rightarrow Y$에 대하여 다음이 성립한다.
 1. $Y$의 임의의 affine open subset $V$가 주어졌다 하자. 그럼 [§스킴의 위상구조, ⁋보조정리 11](/ko/math/scheme_theory/topology_of_schemes#lem11)에 의하여 $V$와 $V_j$ 각각에서 principal open set이 되는 열린집합들로 $V\cap V_j$를 덮을 수 있고, 이를 모든 $j$에 대해 고려한 후 $V$의 quasi-compactness를 사용하면 이러한 것들 중 유한히 많은 것만 택할 수 있다. 이를 $V=\bigcup W_l$이라 하자.   
     한편 각각의 $l$에 대하여 $W_l$을 principal open subset으로 갖는 $V_{j(l)}$을 택하면, $\varphi^{-1}(V_{j(l)})$는 quasi-compact이므로, 이를 유한히 많은 affine open subset들 $U_{j(l)k}$들로 덮을 수 있고, 이제 $\varphi^{-1}(W_l)\cap U_{j(l)k}$는 [§스펙트럼, ⁋명제 8](/ko/math/scheme_theory/spectrums#prop8)에 의해 $U_{j(l)k}$의 principal open set이므로 $\varphi^{-1}(W_l)$ 각각을 affine open set들의 유한한 합집합으로 표현할 수 있고, 따라서 $\varphi^{-1}(V)$도 affine open set들의 유한한 합집합으로 표현할 수 있다. 이제 quasi-compact space의 유한한 합집합은 quasi-compact이므로 원하는 결과를 얻는다.
 2. 우선 scheme $Z$가 quasi-separated인 것은 $Z$의 임의의 두 affine open subset의 교집합이 quasi-compact인 것과 동치이다. Affine scheme은 quasi-compact이므로 한쪽 방향은 자명하고, 거꾸로 $Z$의 임의의 quasi-compact open subset은 유한히 많은 affine open subset의 합집합이므로 두 quasi-compact open subset의 교집합은 유한히 많은 affine끼리의 교집합의 합집합이 되어 quasi-compact이기 때문이다.     
-    이제 첫째 결과의 증명에서와 같이 $V$의 finite covering $V=\bigcup_{l=1}^n W_l$을 택하여 각각의 $W_l$이 $V$에서도, 적당한 $V_{j(l)}$에서도 principal open subset이 되도록 하자. $\varphi^{-1}(V)$의 두 affine open subset $U_1,U_2$가 주어졌다 하면
+    이제 첫째 결과의 증명에서와 같이 $V$의 유한한 covering $V=\bigcup_{l=1}^n W_l$을 택하여 각각의 $W_l$이 $V$에서도, 적당한 $V_{j(l)}$에서도 principal open subset이 되도록 하자. $\varphi^{-1}(V)$의 두 affine open subset $U_1,U_2$가 주어졌다 하면
     
     $$U_1\cap U_2=\bigcup_{l=1}^n\left(U_1\cap \varphi^{-1}(W_l)\right)\cap\left(U_2\cap \varphi^{-1}(W_l)\right)$$
     
@@ -128,7 +126,7 @@ $$(\Spec\phi)^{-1}(D(f))=D(\phi(f))$$
 
 이제 둘째 조건을 확인해야 한다. 즉 $B=(f_1,\ldots, f_r)$이고 각각의 $U_i=\varphi^{-1}(D(f_i))$가 affine이라 가정한 후, $U=\varphi^{-1}(\Spec B)$가 affine임을 보여야 한다. 편의상 $R=\Gamma(U, \mathcal{O}_X)$라 하고 $f_i$의 $\varphi^\sharp(\Spec B): B \rightarrow R$에 의한 image를 $g_i\in R$이라 하자. 또, $g\in \Gamma(U, \mathcal{O}_X)$에 대하여 $g$의 stalk이 $\mathcal{O}_{X,x}$의 maximal ideal에 속하지 <em-ko>않는</em-ko> 점 $x$들의 집합을 $U_g$로 적자. 그럼 $U$의 임의의 affine open subset $\Spec A$에 대하여 $U_g\cap \Spec A=D(g\vert_{\Spec A})$인 것이 정의에 의해 자명하고, 특히 $U_g$는 열린집합이다. 
 
-다음의 세 가지를 관찰한다. 첫째로, $B=(f_1,\ldots, f_r)$이므로 $\Spec B=\bigcup_{i=1}^rD(f_i)$이고 따라서 $\{U_i\}_{i=1}^r$은 $U$의 finite affine open covering이다. 뿐만 아니라 $1=\sum_{i=1}^rb_if_i$인 $b_i\in B$를 택하여 $\varphi^\sharp(\Spec B)$를 취하면 $g_1,\ldots, g_r$이 $R$의 unit ideal을 생성함을 안다. 둘째로, $\varphi$가 locally ringed space들 사이의 morphism이므로 각각의 $x\in U$에서 $\varphi^\sharp_x:\mathcal{O}_{Y,\varphi(x)} \rightarrow \mathcal{O}_{X,x}$는 local homomorphism이고, 따라서 $\varphi(x)\in D(f_i)$인 것과 $x\in U_{g_i}$인 것이 동치이므로 $U_i=U_{g_i}$이다. 셋째로, $U_i\cong \Spec A_i$라 하고 $\Spec A_i \rightarrow \Spec B_{f_i}$에 대응되는 ring homomorphism을 $\phi_i$라 하면 $D(f_j)\cap D(f_i)$는 $\Spec B_{f_i}$의 principal open set이므로 위와 같이 [§스펙트럼, ⁋명제 8](/ko/math/scheme_theory/spectrums#prop8)을 적용하여 $U_i\cap U_j$가 $\Spec A_i$의 principal open set, 특히 affine임을 안다.
+다음의 세 가지를 관찰한다. 첫째로, $B=(f_1,\ldots, f_r)$이므로 $\Spec B=\bigcup_{i=1}^rD(f_i)$이고 따라서 $\{U_i\}_{i=1}^r$은 $U$의 유한한 affine open covering이다. 뿐만 아니라 $1=\sum_{i=1}^rb_if_i$인 $b_i\in B$를 택하여 $\varphi^\sharp(\Spec B)$를 취하면 $g_1,\ldots, g_r$이 $R$의 unit ideal을 생성함을 안다. 둘째로, $\varphi$가 locally ringed space들 사이의 morphism이므로 각각의 $x\in U$에서 $\varphi^\sharp_x:\mathcal{O}_{Y,\varphi(x)} \rightarrow \mathcal{O}_{X,x}$는 local homomorphism이고, 따라서 $\varphi(x)\in D(f_i)$인 것과 $x\in U_{g_i}$인 것이 동치이므로 $U_i=U_{g_i}$이다. 셋째로, $U_i\cong \Spec A_i$라 하고 $\Spec A_i \rightarrow \Spec B_{f_i}$에 대응되는 ring homomorphism을 $\phi_i$라 하면 $D(f_j)\cap D(f_i)$는 $\Spec B_{f_i}$의 principal open set이므로 위와 같이 [§스펙트럼, ⁋명제 8](/ko/math/scheme_theory/spectrums#prop8)을 적용하여 $U_i\cap U_j$가 $\Spec A_i$의 principal open set, 특히 affine임을 안다.
 
 이제 각각의 $i$에 대하여 canonical map $R_{g_i} \rightarrow \Gamma(U_{g_i}, \mathcal{O}_X)$이 isomorphism임을 보인다. $U$의 open covering $\{U_j\}_{j=1}^r$에 대한 [\[위상수학\] §층, ⁋정의 1](/ko/math/topology/sheaves#def1)의 두 조건은 다음의 exact sequence
 
@@ -214,7 +212,7 @@ $$x=\sum_{t=1}^mc_t(h_t^Mx)\in R'$$
 Scheme morphism $\varphi:X \rightarrow Y$가 *morphism of finite type<sub>유한형사상</sub>*이라는 것은 $\varphi$가 quasi-compact morphism locally of finite type인 것이다. 
 :::
 
-$Y$의 affine open covering $\{V_j\}$ 위에서 조건을 확인했다 하면, $Y$의 임의의 affine open subset $V$는 [§스킴의 위상구조, ⁋보조정리 11](/ko/math/scheme_theory/topology_of_schemes#lem11)에 의해 $V$와 적당한 $V_j$ 각각에서 principal open subset이 되는 열린집합들로 덮이고, 여기에 [보조정리 13](#lem13)을 적용하면 morphism locally of finite type이 affine-local on target임을 안다. 또, quasi-compact morphism은 [명제 7](#prop7)로부터 affine-local on target이므로 finite type morphism 또한 affine-local on target이다. 
+정의로부터 morphism locally of finite type은 affine-local on target임이 명확하다. 또, quasi-compact morphism은 [명제 7](#prop7)로부터 affine-local on target이므로 finite type morphism 또한 affine-local on target이다. 
 
 그럼 [\[가환대수학\] §정수적 확장, ⁋보조정리 4](/ko/math/commutative_algebra/integral_extension#lem4)에 의해 다음이 성립한다.
 

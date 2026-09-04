@@ -10,9 +10,7 @@ sidebar:
 
 date: 2025-05-15
 weight: 6
-revising: true
 
-drift_needed: true
 
 ---
 
@@ -116,9 +114,9 @@ $\mathbb{L}_1\times\cdots\times \mathbb{L}_n$은 reduced이므로 한쪽 방향�
 Perfect field $\mathbb{K}$에 대하여, 임의의 finite degree, reduced $\mathbb{K}$-algebra는 étale이다. 
 :::
 ::: 증명
-주장의 조건을 만족하는 $\mathbb{K}$-algebra $A$를 생각하자. 우선 [명제 5](#prop5)로부터 $A\cong \mathbb{L}_1\times\cdots \times\mathbb{L}_n$이도록 하는 extension들이 존재한다. 한편 tensor product는 finite product와 교환하므로 $A\otimes_\mathbb{K}\overline{\mathbb{K}}$는 $\mathbb{L}_i\otimes_\mathbb{K}\overline{\mathbb{K}}$들의 곱이고, 따라서 각각의 $\mathbb{L}_i$가 $\overline{\mathbb{K}}$에 의해 diagonalize된다면 $A$ 또한 그러하다. 즉 [§에탈대수, ⁋명제 8](/ko/math/field_theory/etale_algebras#prop8)의 셋째 조건에 의하여 étale algebra들의 곱은 étale이므로, 주어진 주장은 임의의 finite degree field extension over perfect field $\mathbb{K}$가 étale임을 보이면 충분하다. 이러한 extension을 $\mathbb{L}/\mathbb{K}$라 하면, [정리 3](#thm3)을 적용하여 임의의 $\alpha\in \mathbb{L}$에 대하여 $\dd{\alpha}=0$임을 보이면 충분하다. 이제 $\alpha$의 minimal polynomial을 $f$라 하면 [예시 4](#ex4)의 계산에 의하여 우리는 식 $f'(\alpha)\dd{\alpha}=0$이 성립해야 함을 알고, 비슷한 논리에 의하여 우리는 $f'(\alpha)\neq 0$임을 보여야 한다. 
+주장의 조건을 만족하는 $\mathbb{K}$-algebra $A$를 생각하자. 우선 [명제 5](#prop5)로부터 $A\cong \mathbb{L}_1\times\cdots \times\mathbb{L}_n$이도록 하는 extension들이 존재한다. 한편 étale algebra들의 곱은 étale이므로 주어진 주장은 임의의 finite degree field extension over perfect field $\mathbb{K}$가 étale임을 보이면 충분하다. 따라서 [정리 3](#thm3)을 적용하여, 임의의 $\alpha\in A$에 대하여 $\dd{\alpha}=0$임을 보이면 충분하다. [예시 4](#ex4)의 계산에 의하여 우리는 식 $f'(\alpha)\dd{\alpha}=0$이 성립해야 함을 알고, 비슷한 논리에 의하여 우리는 $f'(\alpha)\neq 0$임을 보여야 한다. 
 
-결론에 반하여 $f'(\alpha)=0$이라 하자. 그런데 $f$는 $\alpha$의 minimal polynomial이고 $\deg f'<\deg f$이므로, $f'(\alpha)=0$이면 $f$가 $f'$를 나누어 $f'=0$이어야 한다. 어차피 $f$가 상수인 경우에는 증명할 것이 없으므로 $f$가 일차식 이상이라 가정할 수 있고, 그럼 [§체, ⁋명제 19](/ko/math/field_theory/fields#prop19)의 결과에 의하여 $\ch(\mathbb{K})=p\neq 0$이며 $f\in \mathbb{K}[\x^p]=\mathbb{K}[\x]^p$여야 한다. 그런데 $f$는 minimal polynomial이므로 irreducible이고, irreducible polynomial은 정의에 의하여 $\mathbb{K}[\x]^p$에 속할 수 없으므로 이는 모순이다. 따라서 $f'(\alpha)\neq 0$이다. 
+결론에 반하여 $f'(\alpha)=0$이라 하자. 어차피 $f$가 상수인 경우에는 증명할 것이 없으므로 $f$가 일차식 이상이라 가정할 수 있고, 그럼 [§체, ⁋명제 19](/ko/math/field_theory/fields#prop19)의 결과에 의하여 $\ch(\mathbb{K})=p\neq 0$이며 $f\in \mathbb{K}[\x^p]=\mathbb{K}[\x]^p$여야 한다. 그런데 $f$는 minimal polynomial이므로 irreducible이고, irreducible polynomial은 정의에 의하여 $\mathbb{K}[\x]^p$에 속할 수 없으므로 이는 모순이다. 따라서 $f'(\alpha)\neq 0$이다. 
 :::
 
 이제 위의 보조정리를 이용하면 다음과 같이 étale algebra의 또 다른 characterization을 만들어줄 수 있다. 
@@ -134,12 +132,12 @@ Perfect field $\mathbb{K}$에 대하여, 임의의 finite degree, reduced $\math
 둘째 조건이 성립하면 셋째 조건이 성립하는 것은 perfect closure의 존재성으로부터 자명하며, 첫째 조건이 둘째 조건을 함의하는 것은 [§에탈대수, ⁋명제 8](/ko/math/field_theory/etale_algebras#prop8)의 결과이다. 따라서 셋째 조건이 첫째 조건을 함의하는 것만 보이면 충분하다. 이제 셋째 결과는 다시 [보조정리 6](#lem6)과 [§에탈대수, ⁋명제 8](/ko/math/field_theory/etale_algebras#prop8)로부터 나온다. 
 :::
 
-## 분리가능확대체
+## 분해가능확대체
 
 드디어 다음의 정의를 내릴 때가 왔다. 
 
 ::: 정의 8
-Algebraic extension $\mathbb{L}/\mathbb{K}$가 *separable extension<sub>분리가능확대</sub>*이라는 것은 $\mathbb{L}/\mathbb{K}$의 임의의 finite degree subextension이 étale $\mathbb{K}$-algebra인 것이다. 
+Algebraic extension $\mathbb{L}/\mathbb{K}$가 *separable extension<sub>분해가능확대</sub>*이라는 것은 $\mathbb{L}/\mathbb{K}$의 임의의 finite degree subextension이 étale $\mathbb{K}$-algebra인 것이다. 
 :::
 
 우리는 이 개념을 algebraic하지 않은 field extension에 대해서도 정의할 수 있지만, 당분간은 separable algebraic extension에 대해서만 살펴본다. 
@@ -175,8 +173,6 @@ Irreducible polynomial $f\in \mathbb{K}[\x]$에 대하여 다음이 모두 동�
 7. $\mathbb{K}$가 characteristic $0$이거나, $\ch(\mathbb{K})=p$이고 $f\not\in\mathbb{K}[\x^p]$이다. 
 :::
 
-실제로 $f$가 irreducible이므로 $f$와 $f'$의 최대공약수는 $1$ 또는 $f$이고, $\deg f'<\deg f$이므로 이것이 $f$인 것은 $f'=0$인 것과 동치이다. 즉 첫째 조건과 둘째 조건이 동치이며, 이들이 마지막 조건과 동치인 것은 $f$가 nonconstant라는 것과 [§체, ⁋명제 19](/ko/math/field_theory/fields#prop19)의 결과로부터 나온다. 한편 [예시 4](#ex4)의 계산에 의하여 $\Omega_{(\mathbb{K}[\x]/(f))/\mathbb{K}}$는 $(\mathbb{K}[\x]/(f,f'))\dd{\x}$와 isomorphic하므로, [정리 3](#thm3)에 의하여 여섯째 조건은 $(f,f')=\mathbb{K}[\x]$인 것, 즉 둘째 조건과 동치이다. 또 두 다항식의 최대공약수는 extension을 취하여도 변하지 않으므로 둘째 조건은 $f$와 $f'$가 $\overline{\mathbb{K}}$에서 공통근을 갖지 않는 것, 즉 다섯째 조건과 동치이며, 이 경우 $\overline{\mathbb{K}}$ 안에서 $f$의 splitting field를 택하면 셋째 조건과 넷째 조건이 따라나온다. 거꾸로 어떤 extension $\mathbb{L}/\mathbb{K}$ 안에서 $f$가 중근이 아닌 해 $\alpha$를 갖는다면 $f'(\alpha)\neq 0$이므로 $f'\neq 0$이고, 따라서 첫째 조건이 성립한다. 
-
 이 조건을 만족하는 $f$를 *separable polynomial*이라 부른다. 그럼 [명제 9](#prop9)를 다시 한 번 적어보면, $\mathbb{K}$가 perfect인 것과 $\mathbb{K}[\x]$의 모든 irreducible polynomial이 separable인 것이 동치임을 안다. 이를 $f$를 통해 추가되는 원소에 초점을 맞추면 다음과 같이 정의할 수 있다. 
 
 ::: 정의 11
@@ -202,12 +198,12 @@ Algebraic extension $\mathbb{L}/\mathbb{K}$에 대하여 다음이 성립한다.
 
 $$\mathbb{M}\subseteq \mathbb{K}(x_1,\ldots, x_m)=\mathbb{K}[x_1,\ldots, x_m]$$
 
-이도록 할 수 있다. 이 때 각각의 $\mathbb{K}[x_i]$들이 separable extension인 것은 $A$의 가정으로부터 자명하므로 이들은 étale이고, 그럼 [§에탈대수, ⁋따름정리 14](/ko/math/field_theory/etale_algebras#cor14)의 첫째 결과에 의하여 이들의 tensor product $\mathbb{K}[x_1]\otimes_\mathbb{K}\cdots\otimes_\mathbb{K} \mathbb{K}[x_m]$ 또한 étale이다. 한편 $\mathbb{K}[x_1,\ldots, x_m]$은 multiplication map $\mathbb{K}[x_1]\otimes_\mathbb{K}\cdots\otimes_\mathbb{K} \mathbb{K}[x_m]\rightarrow \mathbb{K}[x_1,\ldots, x_m]$의 image, 즉 이 tensor product의 quotient이고 $\mathbb{M}$이 이것의 subalgebra이므로 [§에탈대수, ⁋명제 9](/ko/math/field_theory/etale_algebras#prop9)에 의하여 $\mathbb{M}$이 étale이다.
+이도록 할 수 있다. 이 때 각각의 $\mathbb{K}[x_i]$들이 separable extension인 것은 $A$의 가정으로부터 자명하므로 이들은 étale이고, 그럼 $\mathbb{K}[x_1,\ldots, x_m]$은 이들의 tensor product $\mathbb{K}[x_1]\otimes\cdots\otimes \mathbb{K}[x_m]$을 이들의 associativity와 commutativity를 나타내는 relation으로 잘라서 얻어지고 $\mathbb{M}$이 이것의 subalgebra이므로 [§에탈대수, ⁋따름정리 14](/ko/math/field_theory/etale_algebras#cor14)에 의하여 $\mathbb{M}$이 étale이다.
 :::
 
-뿐만 아니라, 적어도 $\mathbb{K}$가 infinite field인 경우에는 finite degree separable extension이 단 하나의 원소로 생성될 수 있다. 즉, 만일 $\mathbb{K}$가 infinite field이고 $\mathbb{L}/\mathbb{K}$가 finite degree separable extension이라면, 적절한 $x\in \mathbb{L}$을 택하여 $\mathbb{L}=\mathbb{K}[x]$이도록 할 수 있다. 이러한 원소를 *primitive element*라 부른다. 
+뿐만 아니라, finite degree separable extension은 단 하나의 원소로 생성될 수 있다. 즉, 만일 $\mathbb{L}/\mathbb{K}$가 finite degree separable extension이라면, 적절한 $x\in \mathbb{L}$을 택하여 $\mathbb{L}=\mathbb{K}[x]$이도록 할 수 있다. 이러한 원소를 *primitive element*라 부른다. 
 
-[정리 14](#thm14)는 infinite field $\mathbb{K}$의 finite degree separable extension에 대해서는 항상 primitive element를 찾을 수 있다는 것을 보여준다. 이를 위해서는 다음 보조정리가 필요하다.
+[정리 14](#thm14)는 finite degree separable extension에 대해서는 항상 primitive element를 찾을 수 있다는 것을 보여준다. 이를 위해서는 다음 보조정리가 필요하다.
 
 ::: 보조정리 13
 Infinite field $\mathbb{K}$에 대하여, commutative $\mathbb{K}$-algebra $A$를 고정하자. 만일 $A$가 오직 유한히 많은 subalgebra만을 가지고, $V$가 $A$를 생성하는 부분 벡터공간이라 하면 적당한 $x\in V$가 존재하여 $A=\mathbb{K}[x]$이도록 할 수 있다. 
@@ -254,7 +250,7 @@ Algebraic extension $\mathbb{M}/\mathbb{L}/\mathbb{K}$에 대하여, $\mathbb{M}
 ::: 증명
 만일 $\mathbb{M}/\mathbb{K}$가 separable이라면 그 subextension $\mathbb{L}/\mathbb{K}$가 separable인 것은 정의로부터 자명하고, 이 때 $\mathbb{M}$의 임의의 원소는 $\mathbb{K}$에 대해 separable이므로 ([명제 12](#prop12)), 이를 extension $\mathbb{M}/\mathbb{L}$로 보았을 때 $\mathbb{L}$에 대해서도 separable이다. ([명제 10](#prop10)) 즉, $\mathbb{M}$의 임의의 원소가 separable이므로 다시 [명제 12](#prop12)에 의해 $\mathbb{M}/\mathbb{L}$이 separable임을 안다. 
 
-따라서 이 명제의 핵심은 반대방향이다. 우선, 만일 $\mathbb{M}/\mathbb{K}$가 finite degree였다면 separable algebra와 étale algebra가 같은 말이므로, 주장은 [§에탈대수, ⁋명제 12](/ko/math/field_theory/etale_algebras#prop12)의 셋째 결과로부터 자명하다. 증명의 아이디어는 위와 비슷하게, $\mathbb{M}/\mathbb{K}$는 infinite degree를 갖더라도 특정 원소 하나만 보면 이를 finite degree로 치환할 수 있다는 것이다.
+따라서 이 명제의 핵심은 반대방향이다. 우선, 만일 $\mathbb{M}/\mathbb{K}$가 finite degree였다면 separable algebra와 étale algebra가 같은 말이므로, 주장은 [§에탈대수, ⁋명제 12](/ko/math/field_theory/etale_algebras#prop12)의 셋째 결과로부터 자명하다. 증명의 아이디어는 위와 비슷하게, $\mathbb{M}/\mathbb{K}$는 무한한 degree를 갖더라도 특정 원소 하나만 보면 이를 finite degree로 치환할 수 있다는 것이다.
 
 임의의 $x\in \mathbb{M}$이 주어졌다 하고, minimal polynomial $f\in\mathbb{L}[\x]$이 주어졌다 하면, $f$는 separable polynomial이다. 이제 $\mathbb{L}/\mathbb{K}$의 subextension $\mathbb{L}'$을, $f$에 등장하는 계수들을 $\mathbb{K}$에 넣어주어 생기는 subextension으로 정의하자. 그럼 $\mathbb{L}'$는 algebraic element들 유한개로 생성되므로 $\mathbb{L}'/\mathbb{K}$가 finite degree extension이다. 이제 $f$는 $\mathbb{L}$과 $\mathbb{L}'$ 모두에서 $x$의 minimal polynomial이고 $\mathbb{L}$에서 separable이므로 $\mathbb{L}'$에서도 separable이다. 즉 $x$는 extension $\mathbb{M}/\mathbb{L}'$의 separable element이며, $\mathbb{M}'=\mathbb{L}'(x)$라 하면 $\mathbb{M}'/\mathbb{L}'$는 finite degree separable extension, 즉 finite degree étale algebra다. 한편 $\mathbb{L}/\mathbb{K}$가 separable이므로 그 subextension $\mathbb{L}'$도 separable이고, 따라서 $\mathbb{L}'/\mathbb{K}$도 finite degree étale algebra다. 따라서 이들의 tower $\mathbb{M}'/\mathbb{K}$도 finite degree étale algebra이고, 따라서 finite degree separable extension이다. 즉 $x$가 $\mathbb{K}$에 대한 separable element이며, $x$의 선택은 임의로 주어진 것이므로 원하는 결과를 얻는다. 
 :::

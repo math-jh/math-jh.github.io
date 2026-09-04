@@ -10,7 +10,6 @@ sidebar:
 
 date: 2024-11-03
 weight: 5
-revising: true
 translated_at: 2026-05-31T14:00:05+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-05-31T14:00:05+00:00
@@ -41,11 +40,11 @@ For $n<0$, we regard all $T_n$ as zero. These satisfy the following conditions.
     is exact.
 2. (Naturality) Given a homomorphism between short exact sequences
 
-    {% diagram Math/Homological_Algebra/Derived_Functors-1.svg width="18.88em" alt="morphism_of_short_exact_sequence" %}
+    {% diagram frozen/c3130510/Math/Homological_Algebra/Derived_Functors-1.svg width="19.34em" alt="morphism_of_short_exact_sequence" %}
 
     the following diagram
 
-    {% diagram Math/Homological_Algebra/Derived_Functors-2.svg width="34.53em" alt="naturality_of_delta_functor" %}
+    {% diagram frozen/c3130510/Math/Homological_Algebra/Derived_Functors-2.svg width="35.61em" alt="naturality_of_delta_functor" %}
 
     commutes.
 :::
@@ -68,7 +67,7 @@ In other words, it is a collection of natural transformations $\alpha_n:S_n\Righ
 
 $$0\longrightarrow A\longrightarrow B\longrightarrow C\longrightarrow 0$$
 
-{% diagram Math/Homological_Algebra/Derived_Functors-3.svg width="41.09em" alt="morphism_of_delta_functor" %}
+{% diagram frozen/c3130510/Math/Homological_Algebra/Derived_Functors-3.svg width="41.13em" alt="morphism_of_delta_functor" %}
 
 ::: Definition 3
 A $\delta$-functor $T$ is called a *universal $\delta$-functor* if, whenever a $\delta$-functor $S$ and a natural transformation $\alpha_0:S_0\rightarrow T_0$ are given, there exists a unique morphism $(\alpha_n:S_n\Rightarrow T_n)$ of $\delta$-functors extending it.

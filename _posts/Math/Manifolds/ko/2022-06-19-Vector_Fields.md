@@ -10,8 +10,6 @@ sidebar:
 
 date: 2022-06-19
 weight: 11
-revising: true
-drift_needed: true
 
 ---
 
@@ -94,11 +92,7 @@ $$fX:M\rightarrow TM;\qquad p\mapsto f(p)\frac{d}{\dd{x}}\bigg\vert_p$$
 
 {% diagram Math/Manifolds/Vector_Fields-1.png width="200px" alt="Hairy_ball" %}
 
-이로부터 $\mathfrak{X}(S^2)$이 basis를 갖지 않는다는 것을 보일 수 있는데, 우선 임의의 $p\in M$과 $v\in T_pM$에 대하여 $Y(p)=v$인 $Y\in\mathfrak{X}(M)$이 존재한다는 것을 관찰하자. $p$를 포함하는 coordinate system $(U,\varphi)$를 잡고 $v=\sum_{i=1}^m v^i\partial/\partial x^i\vert_p$로 적으면 $U$ 위의 벡터장 $\sum_{i=1}^m v^i\partial/\partial x^i$을 얻으므로, 앞서 살펴본 것과 같이 이와 $p$의 근방에서 일치하는 $M$ 전체에서 정의된 벡터장을 잡으면 된다. 따라서 벡터장들의 모임 $S$가 $\mathfrak{X}(M)$을 $C^\infty(M)$-module로서 생성한다면, 임의의 $Y\in\mathfrak{X}(M)$을 $S$의 원소들의 $C^\infty(M)$-일차결합으로 적고 $p$에서의 값을 계산하는 것으로부터 벡터들 $X(p)$, $X\in S$가 각각의 $p$마다 $T_pM$을 생성한다는 것을 알 수 있다.
-
-$2$-manifold $M=S^2$ 위에 정의된 두 vector field $X_1,X_2$가 $\mathfrak{X}(M)$을 $C^\infty(M)$-module로서 생성한다고 가정하자. 그럼 hairy ball theorem으로부터 $X_1(p)=0$인 점 $p\in S^2$가 존재한다. 그럼 위의 관찰에 의하여 $T_pM$은 $\{0,X_2(p)\}$로 생성되어야 하는데, 이는 $T_pM$이 2차원이라는 것에 모순이다. 따라서 $\mathfrak{X}(M)$을 두 벡터장 $\{X_1,X_2\}$으로 생성할 수는 없다. 
-
-이제 벡터장들의 모임 $\{X_\alpha\}_{\alpha\in I}$가 $\mathfrak{X}(S^2)$의 basis, 즉 $\mathfrak{X}(S^2)$을 생성하면서 $C^\infty(S^2)$ 위에서 linearly independent라 가정하고 한 점 $p$를 고정하자. 위의 관찰에 의하여 벡터들 $X_\alpha(p)$이 $T_pS^2$을 생성하므로, 적당한 $\alpha,\beta\in I$에 대하여 $X_\alpha(p), X_\beta(p)$가 $T_pS^2$의 basis가 된다. 만일 $I$가 세 번째 원소 $\gamma$를 갖는다면, $p$를 포함하는 coordinate system에서 $X_\alpha,X_\beta$의 성분들이 이루는 행렬의 determinant가 $p$에서 $0$이 아니므로 $p$의 적당한 열린근방 $U$ 위에서도 $0$이 아니고, 따라서 $X_\alpha,X_\beta$는 $U$의 각 점에서 tangent space의 basis를 이룬다. 그럼 Cramer 공식으로부터 $U$ 위에서 $X_\gamma=\lambda_1X_\alpha+\lambda_2X_\beta$인 $C^\infty$ 함수 $\lambda_1,\lambda_2:U\rightarrow\mathbb{R}$을 얻는다. 이제 $\supp\chi\subseteq U$이고 $p$의 근방에서 $1$인 $C^\infty$ 함수 $\chi:S^2\rightarrow\mathbb{R}$을 잡으면 ([§미분다양체, §§Smooth partition of unity](/ko/math/manifolds/smooth_manifolds#smooth-partition-of-unity)), 함수 $\chi\lambda_1,\chi\lambda_2$를 $U$ 바깥에서 $0$으로 확장한 것이 $C^\infty$이고 $\chi X_\gamma-(\chi\lambda_1)X_\alpha-(\chi\lambda_2)X_\beta=0$이 $S^2$ 전체에서 성립한다. 그런데 $\chi$는 영함수가 아니므로 이는 $\{X_\alpha\}_{\alpha\in I}$가 linearly independent라는 것에 모순이고, 따라서 $\lvert I\rvert\leq 2$이다. 그럼 두 개 이하의 벡터장이 $\mathfrak{X}(S^2)$을 생성하게 되어 위의 논증에 모순이다. 
+$2$-manifold $M=S^2$ 위에 정의된 두 vector field $X_1,X_2$가 $\mathfrak{X}(M)$을 $C^\infty(M)$-module로서 생성한다고 가정하자. 그럼 hairy ball theorem으로부터 $X_1(p)=0$인 점 $p\in S^2$가 존재한다. 그럼 $T_pM$은 $\{0,X_2(p)\}$로 생성되어야 하는데, 이는 $T_pM$이 2차원이라는 것에 모순이다. 따라서 $\mathfrak{X}(M)$을 두 벡터장 $\{X_1,X_2\}$으로 생성할 수는 없다. 
 
 반면 충분히 작은 열린집합 $U$에 대하여, $U$ 위에서 정의된 벡터장들의 모임 $\mathfrak{X}(U)$은 $m$개의 벡터장으로 생성되는 $C^\infty(U)$-module로 생각할 수 있다. Tangent bundle $\pi: TM\rightarrow M$에 대하여 열린집합 $U$를 충분히 작게 잡으면 local trivialization $h:U\times\mathbb{R}^m\rightarrow\pi^{-1}(U)$을 찾을 수 있으므로, 벡터장 $X_1,\ldots, X_m$을
 
@@ -128,7 +122,7 @@ $$(p,a_1X_1(p)+\cdots+a_mX_m(p))\mapsto (p,a_1e_1+\cdots+a_me_m)$$
 Manifold $M$의 $C^\infty$ curve $\sigma$가 $X\in\mathfrak{X}(M)$의 *integral flow*라는 것은 $\sigma'(t)=X(\sigma(t))$가 모든 $t$에 대해 성립하는 것이다.
 :::
 
-문헌에 따라서는 이러한 $\sigma$를 integral curve라 부르고, flow라는 이름은 시간과 점을 함께 받는 함수 쪽에 붙이기도 한다. 다음 정리는 상미분방정식으로부터 쉽게 얻어지는데, 증명 자체는 우리의 관심사에서 벗어나므로 생략하기로 한다. 또, 정리의 4번 항목부터는 약간의 추가적인 정의가 필요하다. 
+다음 정리는 상미분방정식으로부터 쉽게 얻어지는데, 증명 자체는 우리의 관심사에서 벗어나므로 생략하기로 한다. 또, 정리의 4번 항목부터는 약간의 추가적인 정의가 필요하다. 
 
 ::: 정리 6
 Manifold $M$과 $X\in\mathfrak{X}(M)$을 생각하자. 임의의 $p\in M$이 주어질 때마다, ($\pm\infty$를 포함하는) 적당한 상수 $a(p), b(p)$과 $C^\infty$ curve $\phi_p: \bigl(a(p),b(p)\bigr)\rightarrow M$이 존재하여 다음 조건들을 만족한다. 

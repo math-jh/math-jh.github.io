@@ -10,7 +10,6 @@ sidebar:
 
 date: 2026-03-11
 weight: 8
-revising: true
 translated_at: 2026-06-02T01:00:02+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-06-02T01:00:02+00:00
@@ -143,7 +142,7 @@ The coordinate ring of a torus $T = (\mathbb{C}^\ast)^n$ is isomorphic to the po
 :::
 
 ::: Proof
-Since the torus $T = (\mathbb{C}^\ast)^n$ is the direct product of $n$ copies of $\mathbb{C}^\ast$, its coordinate ring is the tensor product of the coordinate rings of each factor. We know that the coordinate ring of $\mathbb{C}^\ast = \mathbb{C} \setminus \{0\}$ is $\mathbb{C}[x, x^{-1}]$. ([\[Scheme Theory\] §Schemes, ⁋Example 10](/en/math/scheme_theory/schemes#ex10))
+Since the torus $T = (\mathbb{C}^\ast)^n$ is the direct product of $n$ copies of $\mathbb{C}^\ast$, its coordinate ring is the tensor product of the coordinate rings of each factor. We know that the coordinate ring of $\mathbb{C}^\ast = \mathbb{C} \setminus \{0\}$ is $\mathbb{C}[x, x^{-1}]$. ([§Schemes, ⁋Example 10](/en/math/scheme_theory/schemes#ex10))
 
 Hence the coordinate ring of $T$ is
 

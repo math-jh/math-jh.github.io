@@ -10,7 +10,6 @@ sidebar:
 
 date: 2025-03-08
 weight: 12
-revising: true
 translated_at: 2026-07-27T01:15:03+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-07-27T01:15:03+00:00
@@ -73,15 +72,15 @@ Given affine schemes $X, Y, Z$, and an open subscheme $Y'\hookrightarrow Y$ of $
 ::: Proof
 First, from [Lemma 2](#lem2) we know that the following fiber diagram exists:
 
-{% diagram Math/Scheme_Theory/Fiber_Products-4.svg width="9.39em" alt="open_fiber_product-1" %}
+{% diagram frozen/629e76cc/Math/Scheme_Theory/Fiber_Products-4.svg width="9.32em" alt="open_fiber_product-1" %}
 
 Now, considering the data
 
-{% diagram Math/Scheme_Theory/Fiber_Products-5.svg width="8.62em" alt="open_fiber_product-2" %}
+{% diagram frozen/629e76cc/Math/Scheme_Theory/Fiber_Products-5.svg width="8.55em" alt="open_fiber_product-2" %}
 
 we can verify from [Lemma 3](#lem3) that the open subscheme $\rho_Y^{-1}(Y')$ of $X\times_ZY$ is the fiber product. In general, if the two small squares in the following diagram
 
-{% diagram Math/Scheme_Theory/Fiber_Products-6.svg width="8.62em" alt="magic_square" %}
+{% diagram frozen/629e76cc/Math/Scheme_Theory/Fiber_Products-6.svg width="8.55em" alt="magic_square" %}
 
 are fiber diagrams, then the outer large square is also a fiber diagram, so we obtain the desired result.
 :::
@@ -106,7 +105,7 @@ For an affine scheme $Z$, arbitrary schemes $X,Y$ and scheme morphisms $X \right
 Finally, we must extend $Z$ to an arbitrary scheme. First, the following holds.
 
 ::: Lemma 7
-Given arbitrary schemes $X,Y,Z$, scheme morphisms $\varphi_X:X \rightarrow Z$, $\varphi_Y:Y \rightarrow Z$ and a monomorphism $\iota: Z \rightarrow Z'$ to an affine scheme $Z'$. For instance, this is the case when $\iota$ is an open embedding or a closed embedding. In the latter case, given two morphisms $\alpha,\beta: T \rightarrow Z$ with $\iota\circ \alpha=\iota\circ \beta$, since $\iota$ is injective we have $\alpha=\beta$ as continuous maps, and at each $t\in T$, $\iota^\sharp$ induces a surjection $\mathcal{O}_{Z',\iota(\alpha(t))} \rightarrow \mathcal{O}_{Z,\alpha(t)}$ on stalks ([§Closed Subschemes, ⁋Definition 2](/en/math/scheme_theory/closed_subschemes#def2)), so $\alpha^\sharp$ and $\beta^\sharp$ are determined by their compositions and hence equal. Then the fiber product $X\times_{Z'}Y$ of $\iota\circ\varphi_X$ and $\iota\circ\varphi_Y$ satisfies the universal property of $X\times_ZY$, and therefore $X\times_ZY$ exists.
+Given arbitrary schemes $X,Y,Z$, scheme morphisms $\varphi_X:X \rightarrow Z$, $\varphi_Y:Y \rightarrow Z$ and a monomorphism $\iota: Z \rightarrow Z'$ to an affine scheme $Z'$. For instance, this is the case when $\iota$ is an open immersion or a closed embedding. In the latter case, given two morphisms $\alpha,\beta: T \rightarrow Z$ with $\iota\circ \alpha=\iota\circ \beta$, since $\iota$ is injective we have $\alpha=\beta$ as continuous maps, and at each $t\in T$, $\iota^\sharp$ induces a surjection $\mathcal{O}_{Z',\iota(\alpha(t))} \rightarrow \mathcal{O}_{Z,\alpha(t)}$ on stalks ([§Closed Subschemes, ⁋Definition 2](/en/math/scheme_theory/closed_subschemes#def2)), so $\alpha^\sharp$ and $\beta^\sharp$ are determined by their compositions and hence equal. Then the fiber product $X\times_{Z'}Y$ of $\iota\circ\varphi_X$ and $\iota\circ\varphi_Y$ satisfies the universal property of $X\times_ZY$, and therefore $X\times_ZY$ exists.
 :::
 ::: Proof
 Since $Z'$ is affine, $X\times_{Z'}Y$ exists. Now let $T$ be an arbitrary scheme and let morphisms $\alpha:T \rightarrow X$, $\beta:T \rightarrow Y$ be given. The condition required in the universal property of $X\times_ZY$ is $\varphi_X\circ \alpha=\varphi_Y\circ \beta$, while that of $X\times_{Z'}Y$ is $\iota\circ\varphi_X\circ \alpha=\iota\circ\varphi_Y\circ \beta$; since $\iota$ is a monomorphism these two conditions are equivalent. Hence the two fiber products satisfy the same universal property, and by uniqueness $X\times_{Z'}Y$ plays the role of $X\times_ZY$.

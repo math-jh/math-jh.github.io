@@ -10,8 +10,6 @@ sidebar:
 
 date: 2022-06-14
 weight: 3
-revising: true
-drift_needed: true
 
 ---
 
@@ -23,7 +21,7 @@ drift_needed: true
 
 Manifold의 가장 단순한 예시는 $\mathbb{R}^m$이고, 이보다 조금 더 복잡한 예시는 $\mathbb{R}^m$에 들어있는 곡면이다. 이 곡면의 한 점 $p$에서의 tangent vector는 말 그대로 곡면과 점 $p$에서 접하는 벡터들을 의미한다. 이 곡면이 $\mathbb{R}^3$에 들어있는 2차원 곡면이라 하면, 이러한 벡터들을 모아두면 정확히 점 $p$에서의 접평면이 될 것이다. 하지만 이를 manifold에서의 tangent vector의 정의로 일반화하는 것은 쉽지 않다. 이 정의에서는 곡면을 포함하는 외부공간 $\mathbb{R}^m$의 존재성이 필수적인데, 우리가 manifold를 정의할 때에는 순수하게 intrinsic한 방식으로 정의했기 때문이다. 
 
-대신 위와 같은 상황에서 우리는 tangent vector들이 주어질 때마다 방향미분이 생긴다는 것을 관찰할 수 있다. 즉, 어떠한 tangent vector $v$가 주어진다면, 이 벡터는 외부공간 $\mathbb{R}^m$에서의 점 $p$ 근방에서 정의된 임의의 함수 $f$마다 $v$-방향의 방향미분
+대신 위와 같은 상황에서 우리는 tangent vector들이 주어질 때마다 방향미분이 생긴다는 것을 관찰할 수 있다. 즉, 어떠한 tangent vector $v$가 주어진다면, 이 벡터는 점 $p$ 근방에서 정의된 임의의 함수 $f$마다 $v$-방향의 방향미분
 
 $$\lim_{t\rightarrow 0}\frac{f(p+tv)-f(p)}{t}$$
 
@@ -67,8 +65,6 @@ $$\mathfrak{m}_p=\{\mathbf{f}\in \mathcal{C}^\infty_p\mid \mathbf{f}(p)=0\}$$
 $$0\longrightarrow \mathfrak{m}_p\longrightarrow \mathcal{C}^\infty_p\overset{\ev_p}{\longrightarrow}\mathbb{R}\longrightarrow 0$$
 
 이 exact인 것으로부터 얻어진다. $\mathcal{C}^\infty_p/\mathfrak{m}_p$이 field $\mathbb{R}$이 되기 때문이다.
-
-남은 것은 $\mathfrak{m}_p$가 유일한 maximal ideal이라는 것이다. 이를 위해서는 $\mathfrak{m}_p$에 속하지 않는 원소가 모두 unit임을 보이면 된다. $\mathbf{f}(p)\neq0$인 $\mathbf{f}\in\mathcal{C}^\infty_p$를 택하고, 이를 $(f,U)$의 germ이라 하자. 그럼 $f$가 연속이므로 $p$의 열린근방 $V\subseteq U$가 존재하여 $V$의 모든 점에서 $f$의 값이 $0$이 아니고, 따라서 $1/f\in C^\infty(V)$이다. 이제 $(1/f,V)$의 germ이 $\mathbf{f}$의 역원이 되므로 $\mathbf{f}$는 unit이다. 그럼 $\mathfrak{m}_p$에 포함되지 않는 ideal은 unit을 원소로 가지므로 $\mathcal{C}^\infty_p$ 전체와 같아지고, 결국 임의의 proper ideal은 $\mathfrak{m}_p$에 포함된다. 따라서 $\mathcal{C}^\infty_p$은 $\mathfrak{m}_p$를 유일한 maximal ideal로 갖는 local ring이다.
 :::
 
 ## 접벡터

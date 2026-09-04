@@ -12,9 +12,7 @@ sidebar:
 date: 2026-06-23
 
 weight: 22
-revising: true
 
-drift_needed: true
 
 
 ---
@@ -88,7 +86,7 @@ $$\bar\lambda\langle w,v\rangle=\frac{\overline{\langle w,v\rangle}\langle w,v\r
 
 $$\lVert v+w\rVert^2\leq\lVert v\rVert^2+2\lVert v\rVert\lVert w\rVert+\lVert w\rVert^2=(\lVert v\rVert+\lVert w\rVert)^2$$
 
-이 되어 $\lVert v+w\rVert\leq\lVert v\rVert+\lVert w\rVert$을 얻는다. $\lVert\alpha v\rVert=\lvert\alpha\rvert\lVert v\rVert$은 $\langle\alpha v,\alpha v\rangle=\bar\alpha\alpha\langle v,v\rangle=\lvert\alpha\rvert^2\lVert v\rVert^2$로부터 자명하므로, $\lVert-\rVert$은 실제로 norm이다. [§내적공간, ⁋정의 2](/ko/math/linear_algebra/inner_product_spaces#def2)의 세 조건은 $\mathbb{R}$-벡터공간을 두고 적혀 있지만, 스칼라 $\alpha$의 범위를 $\mathbb{C}$로 넓히고 $\lvert\alpha\rvert$를 복소수의 절댓값으로 읽으면 그대로 $\mathbb{C}$-벡터공간 위의 norm의 정의가 된다.
+이 되어 $\lVert v+w\rVert\leq\lVert v\rVert+\lVert w\rVert$을 얻는다. $\lVert\alpha v\rVert=\lvert\alpha\rvert\lVert v\rVert$은 $\langle\alpha v,\alpha v\rangle=\bar\alpha\alpha\langle v,v\rangle=\lvert\alpha\rvert^2\lVert v\rVert^2$로부터 자명하므로, $\lVert-\rVert$은 실제로 norm이다. ([§내적공간, ⁋정의 2](/ko/math/linear_algebra/inner_product_spaces#def2))
 
 ## Orthonormal basis
 
@@ -147,11 +145,11 @@ $$[L^\ast]_{ij}=\langle e_i,L^\ast e_j\rangle=\langle Le_i,e_j\rangle=\overline{
 한편 내적을 보존하는 operator는 실수의 경우 orthogonal matrix로 표현되었다. 복소의 경우 이에 대응하는 것이 unitary matrix이다.
 
 ::: 정의 6
-행렬 $U\in\Mat_n(\mathbb{C})$가 *unitary matrix<sub>유니터리 행렬</sub>*라는 것은
+행렬 $U\in\Mat_n(\mathbb{C})$가 *unitary matrix<sub>unitary matrix</sub>*라는 것은
 
 $$U^\ast U=UU^\ast=I$$
 
-가 성립하는 것이다. 복소내적공간 위의 operator $L$이 $L^\ast L=I$를 만족할 때 *unitary operator<sub>단일작용소</sub>*라 부른다.
+가 성립하는 것이다. 복소내적공간 위의 operator $L$이 $L^\ast L=I$를 만족할 때 *unitary operator<sub>unitary operator</sub>*라 부른다.
 :::
 
 [§동형사상, ⁋정리 7](/ko/math/linear_algebra/isomorphic_vector_spaces#thm7)로부터 $U^\ast U=I$이면 자동으로 $UU^\ast=I$임을 알 수 있으므로, 한쪽 조건만으로 충분하다. Unitary operator는 정확히 내적을 보존하는 operator이다. 실제로 $L$이 내적을 보존하면 임의의 $v,w$에 대하여 $\langle v,w\rangle=\langle Lv,Lw\rangle=\langle v,L^\ast Lw\rangle$이 모든 $v$에 대해 성립하므로 $L^\ast L=I$이고, 거꾸로 $L^\ast L=I$이면

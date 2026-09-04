@@ -10,8 +10,6 @@ sidebar:
 
 date: 2024-12-11
 weight: 15
-revising: true
-drift_needed: true
 
 ---
 
@@ -87,7 +85,7 @@ $$\scl(A)=\{x\in X\mid \text{there exists a sequence in $A$ that converges to $x
 
 $$A=\{(x_j)\in \mathbb{R}^J\mid x_j=1\text{ for all but finitely many $j$}\}$$
 
-으로 정의하자. 그럼 $\mathbb{R}^J$의 원점은 $A$의 closure에 속한다. 이는 원점을 포함하는 $\mathbb{R}^J$의 base는 finite index를 제외하고는 모두 $\mathbb{R}$이며, 이 finite index들의 성분은 $0$으로 정의하고, 나머지 index의 성분은 $1$인 점이 이 base와 $A$의 교집합에 들어있기 때문이다. 그러나 $A$의 임의의 점열은 원점으로 수렴하지 않는다. 이는 $A$의 임의의 점열이 주어졌을 때, $J$가 uncountable임을 이용하면 이 점열의 모든 항의 $j$번째 성분이 $1$이도록 하는 $j\in J$가 존재한다는 것을 보일 수 있고, 그럼 $j$번째 성분이 $(-1,1)$이고 나머지 성분은 $\mathbb{R}$인 원점의 열린근방이 이 점열의 원소를 하나도 포함하지 않기 때문이다.
+으로 정의하자. 그럼 $\mathbb{R}^J$의 원점은 $A$의 closure에 속한다. 이는 원점을 포함하는 $\mathbb{R}^J$의 base는 유한한 index를 제외하고는 모두 $\mathbb{R}$이며, 이 유한한 index들의 성분은 $0$으로 정의하고, 나머지 index의 성분은 $1$인 점이 이 base와 $A$의 교집합에 들어있기 때문이다. 그러나 $A$의 임의의 점열은 원점으로 수렴하지 않는다. 이는 $A$의 임의의 점열이 주어졌을 때, $J$가 uncountable임을 이용하면 이 점열의 모든 항의 $j$번째 성분이 $1$이도록 하는 $j\in J$가 존재한다는 것을 보일 수 있고, 그럼 $j$번째 성분이 $(-1,1)$이고 나머지 성분은 $\mathbb{R}$인 원점의 열린근방이 이 점열의 원소를 하나도 포함하지 않기 때문이다.
 :::
 
 즉, [보조정리 7](#lem7)의 역 또한 일반적으로는 성립하지 않는다. 혹은, 위의 언어를 사용하여 위상공간 $X$와 부분집합 $A$에 대해 일반적으로 $\scl(A)\neq \cl(A)$일 수 있다고 말할 수 있다. 만일 $\scl(A)=\cl(A)$가 모든 부분집합 $A$에 대해 성립한다면, $X$를 *Fréchet–Urysohn space*라 부른다.
@@ -101,9 +99,9 @@ $$A=\{(x_j)\in \mathbb{R}^J\mid x_j=1\text{ for all but finitely many $j$}\}$$
 $f(x)$의 임의의 열린근방 $V$를 택하자. 그럼 $f$는 연속함수이므로 $f^{-1}(V)$는 $x$의 열린근방이다. 따라서 적당한 $N\in \mathbb{N}$가 존재하여 $n\geq N$이면 $x_n\in f^{-1}(V)$이다. 그럼 $f(x_n)\in V$이므로 $(f(x_n))$은 $f(x)$로 수렴한다.
 :::
 
-한편, 만일 공간 $X$에서 [보조정리 7](#lem7)의 역이 성립한다면, 해당 결과와 [§연속함수, ⁋정리 4](/ko/math/topology/continuous_functions#thm4)의 두 번째 조건을 사용해 [명제 9](#prop9)의 역 또한 보일 수 있다. 즉, 만일 임의의 $x\in X$로 수렴하는 임의의 점열 $(x_n)$에 대하여 $f(x_n)$이 $f(x)$로 수렴한다면, $f$는 연속이다.
+한편, 만일 공간 $X$에서 [보조정리 7](#lem7)의 역이 성립한다면, 해당 결과와 [§연속함수, ⁋정리 4](/ko/math/topology/continuous_functions#thm4)의 두 번째 조건을 사용해 [명제 9](#prop9)의 역 또한 보일 수 있다. 즉, 만일 임의의 $x\in X$로 수렴하는 임의의 점열 $(x_n)$에 대하여 $f(x_n)$이 $f(x)$로 수렴한다면, $f$는 점 $x$에서 연속이다.
 
-$X$가 [보조정리 7](#lem7)의 역이 성립한다는 공간이라 하자. 그럼 임의의 부분집합 $A\subseteq X$와 임의의 $x\in \cl(A)$에 대하여 $x$로 수렴하는 $A$의 점열 $(x_n)$를 잡을 수 있다. 그럼 $Y$의 점열 $f(x_n)$가 $f(x)$로 수렴하므로 [보조정리 7](#lem7)에 의하여 $f(x)\in \cl(f(A))$이고 [§연속함수, ⁋정리 4](/ko/math/topology/continuous_functions#thm4)로부터 원하는 결과를 얻는다.
+$X$가 [보조정리 7](#lem7)의 역이 성립한다는 공간이라 하자. 그럼 임의의 $x\in \cl(A)$에 대하여 $x$로 수렴하는 $A$의 점열 $(x_n)$를 잡을 수 있다. 그럼 $Y$의 점열 $f(x_n)$가 $f(x)$로 수렴하므로 [보조정리 7](#lem7)에 의하여 $f(x)\in \cl(f(A))$이고 [§연속함수, ⁋정리 4](/ko/math/topology/continuous_functions#thm4)로부터 원하는 결과를 얻는다.
 
 ## 가산공리
 
@@ -127,7 +125,7 @@ $X$가 first countable $T_1$이고 limit point compact라면 $X$는 sequentially
 이제 $B_1$은 $x$를 포함하는 열린집합이고 $x$는 $A$의 limit point이므로, 적당한 $n_1$이 존재하여 $x_{n_1}\in B_1$이도록 할 수 있다. 이제 $X$가 $T_1$이므로 $x$를 포함하지만 $x_1,\ldots,x_{n_1}$을 포함하지 않는 열린집합 $U_2$가 존재한다. 그럼 $U_2\cap B_2$는 다시 $x$를 포함하는 열린집합이고 $x$는 $A$의 limit point이므로, 적당한 $n_2$가 존재하여 $x_{n_2}\in U_2\cap B_2$이도록 할 수 있다. 이 과정을 반복하여 $x$로 수렴하는 $(x_n)$의 부분점열을 잡을 수 있다.
 :::
 
-뿐만 아니라 first countable space는 Fréchet–Urysohn space이다. 실제로 $X$가 first countable이라 하고 부분집합 $A\subseteq X$와 $x\in \cl(A)$가 주어졌다 하면, [명제 11](#prop11)의 증명에서와 같이 $x$의 countable local base를 $B_1\supseteq B_2\supseteq \cdots$이도록 잡을 수 있다. 각 $B_n$은 $x$의 열린근방이므로 $B_n\cap A\neq \emptyset$이고, 따라서 각 $n$에 대하여 $x_n\in B_n\cap A$를 택할 수 있다. 그럼 $x$의 임의의 열린근방 $U$에 대하여 적당한 $N$이 존재하여 $B_N\subseteq U$이므로 $n\geq N$이면 $x_n\in U$이고, 즉 $A$의 점열 $(x_n)$이 $x$로 수렴하므로 $x\in \scl(A)$이다. 따라서 $\cl(A)\subseteq \scl(A)$이고, [보조정리 7](#lem7)과 합하여 $\scl(A)=\cl(A)$를 얻는다. 
+뿐만 아니라 first countable space는 Fréchet–Urysohn space라는 것을 쉽게 보일 수 있다. 
 
 ::: 명제 12
 임의의 second countable space $X$는 *Lindelöf<sub>린델뢰프</sub>*이다. 즉, $X$의 임의의 open cover는 countable subcover를 갖는다.
@@ -148,7 +146,7 @@ $$B_1\supseteq B_2\supseteq\cdots$$
 위상공간 $X$와 그 위에 정의된 filter $\mathcal{F}$를 생각하자. ([§위상공간의 다른 정의들, ⁋정의 3](/ko/math/topology/equivalent_formulations_of_topology#def3)) 그럼 $\mathcal{F}$가 $x\in X$로 *수렴<sub>converge</sub>*한다는 것은 $\mathcal{N}(x)\subseteq \mathcal{F}$가 성립하는 것이다. ([§열린집합, §§Neighborhood filter](/ko/math/topology/open_sets#neighborhood-filter)) 이 때, $x$를 $\mathcal{F}$의 *limit point<sub>극한점</sub>*라 부른다. 
 :::
 
-[정의 13](#def13)의 limit point는 filter에 대한 개념으로, 앞서 쓰인 집합의 limit point와는 이름만 같을 뿐 서로 다른 것이다. ([§집합의 내부, 폐포, 경계, ⁋정의 8](/ko/math/topology/other_concepts#def8)) 한편 [정의 13](#def13)는 점열의 수렴을 일반화한 것이다. 이를 확인하기 위해서는 우선 다음을 정의해야 한다.
+[정의 13](#def13)는 점열의 수렴을 일반화한 것이다. 이를 확인하기 위해서는 우선 다음을 정의해야 한다.
 
 ::: 정의 14
 집합 $X$ 위에 정의된 filter $\mathcal{F}$, 그리고 위상공간 $Y$가 주어졌다 하자. 함수 $f:X \rightarrow Y$에 대하여, $y\in Y$가 $\mathcal{F}$에 대한 $f$의 *limit point*라는 것은 $y$가 filter ${\uparrow}f(\mathcal{F})$의 limit point인 것이다. ([§위상공간의 다른 정의들, ⁋명제 7](/ko/math/topology/equivalent_formulations_of_topology#prop7))

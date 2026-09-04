@@ -10,8 +10,6 @@ sidebar:
 
 date: 2024-11-19
 weight: 8
-revising: true
-drift_needed: true
 
 ---
 
@@ -45,7 +43,7 @@ Category $\Open(X)$를 ordered set $(\mathcal{T}, \subseteq)$를 category로 본
 위상공간 $X$에 대하여, contravariant functor $\mathcal{F}:\Open(X) \rightarrow \Set$을 $X$ 위에 정의된 집합들의 *presheaf<sub>준층</sub>*라 부른다.
 :::
 
-참고로, presheaf의 표기는 문헌마다 글씨체가 다르지만, 우리는 캘리그래피체를 써서 $\mathcal{F}$와 같이 적기로 한다. 위상구조를 나타내는 $\mathcal{T}$와 같은 글씨체이지만 서로 다른 문자를 쓰므로 혼동의 여지는 없다. 
+참고로, presheaf는 보편적으로 $\mathcal{F}$ 혹은 $\mathcal{F}$와 같이 표기하지만, 이 둘 가운데는 캘리그래피체인 $\mathcal{F}$가 조금 더 자연스럽다. 그러나 우리는 이미 이 글씨체를 위상구조를 나타내는데 사용하고 있으므로, 위상수학 카테고리 내에서는 흘림체를 사용하기로 한다. 
 
 이제 $\mathcal{F}$는 contravariant이므로, 열린집합 사이의 inclusion $U\hookrightarrow V$가 주어질 때마다 morphism $\rho_{VU}: \mathcal{F}(V)\rightarrow \mathcal{F}(U)$가 주어지며, $\mathcal{F}$는 합성을 보존하므로 $U\hookrightarrow V\hookrightarrow W$가 주어졌다면 $\rho_{WU}=\rho_{VU}\circ\rho_{WV}$가 성립해야 한다. 
 
@@ -75,9 +73,9 @@ Category $\Open(X)$를 ordered set $(\mathcal{T}, \subseteq)$를 category로 본
 다음으로 presheaf의 몇 가지 예시들을 살펴본다. 
 
 ::: 예시 5 (Skyscraper sheaf)
-고정된 위상공간 $X$와 한 점 $x\in X$가 주어졌다 하고, 대상 $A\in \mathcal{A}$를 고정하자. 그럼 다음의 식
+고정된 위상공간 $X$와 한 점 $i_x:\{x\}\hookrightarrow X$가 주어졌다 하고, 대상 $A\in \mathcal{A}$를 고정하자. 그럼 다음의 식
 
-$$\mathcal{F}(U)=\begin{cases}A&\text{if $x\in U$,}\\T&\text{if $x\not\in U$,}\end{cases}\qquad \text{$T$ a terminal object in $\mathcal{A}$}$$
+$$(i_x)_\ast A(U)=\begin{cases}A&\text{if $x\in U$,}\\T&\text{if $x\not\in U$,}\end{cases}\qquad \text{$T$ a terminal object in $\mathcal{A}$}$$
 
 으로 주고, restriction map은 $\id_A$ 혹은, terminal object $T$를 이용해 주면 이는 presheaf를 정의한다. 이를 *skyscraper sheaf*라 부른다.
 :::

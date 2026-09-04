@@ -10,8 +10,6 @@ sidebar:
 
 date: 2021-08-22
 weight: 12
-revising: true
-drift_needed: true
 
 ---
 
@@ -20,7 +18,7 @@ drift_needed: true
 ## 동치관계의 정의
 
 ::: 정의 1
-[§이항관계들 사이의 연산, ⁋정의 1](/ko/math/set_theory/operation_of_binary_relations#def1)에서 이항관계 $(R,A,A)$가 *symmetric*인 것을 $R^{-1}=R$로 정의했다. $R^{-1}$의 정의로부터, 이는 $x\mathrel{R}y$가 성립하면 $y\mathrel{R}x$도 성립하는 것과 같다. 만일 
+이항관계 $(R,A,A)$가 *symmetric<sub>대칭적</sub>*이라는 것은 $x\mathrel{R}y$가 성립하면 $y\mathrel{R}x$도 성립하는 것이다. 만일 
 
 $$(x\mathrel{R}y)\wedge(y\mathrel{R}z)\implies  x\mathrel{R}z$$
 

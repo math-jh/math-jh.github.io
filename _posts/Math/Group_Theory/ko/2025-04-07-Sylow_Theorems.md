@@ -10,8 +10,6 @@ sidebar:
 
 date: 2025-04-07
 weight: 4
-revising: true
-drift_needed: true
 
 ---
 
@@ -40,7 +38,7 @@ $$\lvert E^G\rvert\equiv\lvert E\rvert\pmod{p}$$
 즉, 집합 $E\setminus E^G$의 크기가 $p$의 배수임을 보여야 한다. 그런데 $E\setminus E^G$는 그 크기가 $1$보다 큰 (disjoint한) $G$-orbit들의 합집합이고, 이들 각각의 orbit은 [\[대수적 구조\] §군의 작용, ⁋정리 14](/ko/math/algebraic_structures/group_actions#thm14)에 의하여 그 크기가 $p$의 거듭제곱이므로 이것이 성립한다. 
 :::
 
-특별히 $E=G$ 위에 $G$가 inner automorphism으로 act하는 경우를 생각하면 $E^G$는 정확하게 $G$의 center이므로, [보조정리 2](#lem2)에 의하여 $\lvert Z(G)\rvert\equiv\lvert G\rvert\pmod{p}$가 성립한다. 따라서 $\lvert G\rvert>1$인 $p$-group $G$의 center $Z(G)$는 trivial group이 아님을 알 수 있다. 
+특별히 $E=G$ 위에 $G$가 inner automorphism으로 act하는 경우를 생각하면 $E^G$는 정확하게 $G$의 center이므로, [보조정리 2](#lem2)에 의하여 $p$-group $G$의 center $Z(G)$는 trivial group이 아님을 알 수 있다. 
 
 ::: 정리 3
 크기 $p^r$의 $p$-group $G$에 대하여, $G$의 subgroup들의 series 
@@ -57,13 +55,7 @@ $G$의 크기에 대한 귀납법으로 증명한다. 우선 $G=\{e\}$인 경우
 
 따라서 [§군의 열, ⁋명제 7](/ko/math/group_theory/series_of_groups#prop7)의 첫째 조건과 둘째 조건의 동치에 의하여 임의의 $p$-group은 항상 nilpotent임을 안다.
 
-한편 $p$-group $G$와 그 subgroup $H\subsetneq G$를 고정하면, $G$가 nilpotent이므로 [§군의 열, ⁋명제 8](/ko/math/group_theory/series_of_groups#prop8)로부터 subgroup들의 sequence
-
-$$G=H_1\supseteq H_2\supseteq\cdots\supseteq H_{t+1}=H$$
-
-가 존재하여 각 $H_{k+1}$이 $H_k$의 normal subgroup이도록 할 수 있다. $H_1=G\neq H$이므로 $H_k\neq H$인 가장 큰 $k$를 택할 수 있고, 이때 $H_{k+1}=H$가 $H_k$의 normal subgroup이므로 $H_k\subseteq N_G(H)$이며 결국 $H\subsetneq H_k\subseteq N_G(H)$이다. 
-
-또 $G$가 finite group이므로 $H$를 포함하는 proper subgroup들 중 크기가 가장 큰 것 $M$을 택할 수 있다. 방금의 결과를 $M$에 적용하면 $M\subsetneq N_G(M)$인데 $N_G(M)$ 또한 $H$를 포함하므로, $M$의 선택에 의하여 $N_G(M)=G$, 즉 $M$은 $G$의 normal subgroup이어야 한다. 한편 $M$을 포함하는 $G$의 subgroup은 $H$를 포함하므로 $M$과 $G$뿐이고, 따라서 $G/M$의 subgroup은 trivial group과 $G/M$ 자기 자신뿐이다. 이제 $G/M$의 항등원이 아닌 원소 $y$의 order를 $p^s$ ($s\geq 1$)라 하면 $y^{p^{s-1}}$이 생성하는 subgroup은 order $p$의 subgroup이므로 이것이 $G/M$과 같아야 하며, 이로부터 $\lvert G/M\rvert=p$임을 안다. 따라서 다음을 얻는다. 
+한편 [§군의 열, ⁋명제 8](/ko/math/group_theory/series_of_groups#prop8)에 의해 다음을 얻는다. 
 
 ::: 명제 4
 $p$-group $G$와, subgroup $H\subsetneq G$를 고정하자. 

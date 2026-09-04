@@ -10,7 +10,6 @@ sidebar:
 
 date: 2021-08-15
 weight: 10
-revising: true
 translated_at: 2026-06-02T11:30:02+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-06-02T11:30:02+00:00
@@ -131,7 +130,7 @@ Let $(A_i)_{i\in I}$ be a family of sets and let $u:K\rightarrow I$ be a bijecti
 ::: Proof
 Consider the diagram
 
-{% diagram Math/Set_Theory/Product_of_Sets-3.svg width="12.79em" alt="induced_bijection" %}
+{% diagram frozen/81b7e8af/Math/Set_Theory/Product_of_Sets-3.svg width="13.03em" alt="induced_bijection" %}
 
 Here $v$ is the bijection sending $(x_i)_{i\in I}$ to $(x_{u(k)})_{k\in K}$. By [Proposition 2](#prop2) above, $F\mapsto F\circ U$ is a bijection.
 :::

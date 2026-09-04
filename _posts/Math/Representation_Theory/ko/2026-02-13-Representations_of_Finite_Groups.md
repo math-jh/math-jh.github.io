@@ -10,8 +10,6 @@ sidebar:
 
 date: 2026-02-13
 weight: 1
-revising: true
-drift_needed: true
 
 ---
 
@@ -102,12 +100,10 @@ $$\widetilde{\rho}\left(\sum_{x\in G} \phi_x x, v\right)= \sum_{x\in G} \phi_x\r
 ::: 명제 4
 위의 대응들은 categorical equivalence
 
-$$\Rep_\mathbb{C}(G)\cong \lmod{\mathbb{C}[G]}$$
+$$\Rep_\mathbb{C}(G)\cong \lMod{\mathbb{C}[G]}$$
 
 을 준다.
 :::
-
-여기에서 $\lmod{\mathbb{C}[G]}$는 finitely generated $\mathbb{C}[G]$-module들이 이루는 $\lMod{\mathbb{C}[G]}$의 full subcategory이다. $\mathbb{C}[G]$가 유한차원 $\mathbb{C}$-algebra이므로 finitely generated $\mathbb{C}[G]$-module은 정확히 밑에 놓인 벡터공간이 유한차원인 것들이고, 따라서 [정의 1](#def1)에서 representation space를 유한차원으로 제한한 것이 우변에서는 이 제한으로 나타난다.
 
 즉 우리가  $G$-module이라 부르던 것은, 엄밀히 말하자면 $\mathbb{C}[G]$-module 구조에서 $G\hookrightarrow \mathbb{C}[G]$가 주어졌을 때의 action만 본 것이라 생각할 수도 있다. 
 
@@ -117,9 +113,9 @@ $$A\otimes (M\otimes N)\rightarrow (A\otimes A)\otimes (M\otimes N)\rightarrow (
 
 을 사용해야 하고, 이 때 사용하는 coproduct $A\rightarrow A\otimes A$이 $\mathbb{C}[G]$의 경우에는 
 
-$$\Delta:\mathbb{C}[G]\rightarrow \mathbb{C}[G]\otimes \mathbb{C}[G];\qquad g\mapsto g\otimes g$$
+$$\mathbb{C}[G]\rightarrow \mathbb{C}[G]\otimes \mathbb{C}[G]$$
 
-이기 때문이다. 그럼 마찬가지로 [정의 3](#def3)에서 정의한 $\Hom$이 이 $\otimes$와 adjunction 관계에 있고, 이러한 이유로 다소 인위적으로 보이는 [정의 3](#def3)의 $G$-action들이 등장하는 것이다. 다만 $\Hom$과 dual representation의 $G$-action에 나타나는 $g^{-1}$은 coproduct가 아니라 antipode $S(g)=g^{-1}$에서 온다. Coproduct만 주어진 algebra의 module들은 tensor product를 가질 뿐이고, internal $\Hom$까지 얻기 위해서는 이 antipode가 필요하다. 
+이기 때문이다. 그럼 마찬가지로 [정의 3](#def3)에서 정의한 $\Hom$이 이 $\otimes$와 adjunction 관계에 있고, 이러한 이유로 다소 인위적으로 보이는 [정의 3](#def3)의 $G$-action들이 등장하는 것이다. 
 
 특별히 $G$의 subrepresentation과 $\mathbb{C}[G]$-submodule이 같은 것이라는 것을 생각하면, $V$가 irreducible representation인 것은 $V$가 *simple* $\mathbb{C}[G]$-module인 것과 같다. 
 
@@ -172,20 +168,14 @@ $$\langle\kern-1.5pt\langle h\cdot u, h\cdot v\rangle\kern-1.5pt\rangle = \frac{
 임의의 유한차원 $G$-representation $V$와 $G$-invariant subspace $W$에 대하여, 적당한 $G$-invariant subspace $W'$가 존재하여 $V = W \oplus W'$이도록 할 수 있다. 따라서, 귀납적으로, 임의의 유한차원 $G$-representation은 irreducible representation들의 direct sum으로 분해된다.
 :::
 ::: 증명
-[명제 6](#prop6)이 주는 $G$-invariant inner product $\langle-,-\rangle$을 하나 고정하고, 이에 대한 $W$의 orthogonal complement를 $W'$라 하자. 임의의 $w\in W$와 $v\in W'$, $g\in G$에 대하여 $W$가 $G$-invariant이므로 $g^{-1}\cdot w\in W$이고, inner product의 $G$-invariance로부터
-
-$$\langle w,g\cdot v\rangle=\langle g^{-1}\cdot w,v\rangle=0$$
-
-을 얻는다. 즉 $g\cdot v\in W'$이므로 $W'$ 또한 $G$-invariant subspace이며, orthogonal complement의 성질로부터 $V = W \oplus W'$가 성립한다.
-
-둘째 주장은 $\dim V$에 대한 귀납으로 얻어진다. $V$가 zero representation이거나 irreducible이면 더 분해할 것이 없고, 그렇지 않으면 nonzero proper $G$-invariant subspace $W$가 존재하므로 앞의 논증으로 $V=W\oplus W'$를 얻는다. $W$와 $W'$의 차원이 모두 $\dim V$보다 작으므로 귀납가정에 의해 각각이 irreducible representation들의 direct sum으로 분해되고, 이들을 합치면 된다.
+$W'$를 $W$의 orthogonal complement로 잡으면, $W'$ 또한 $G$-invariant subspace이며 $V = W \oplus W'$가 성립한다.
 :::
 
 앞서 우리는 categorical equivalence
 
-$$\Rep_\mathbb{C}(G)\cong \lmod{\mathbb{C}[G]}$$
+$$\Rep_\mathbb{C}(G)\cong \lMod{\mathbb{C}[G]}$$
 
-을 살펴보았다. 그럼 [따름정리 7](#cor7)이 주장하는 것은 임의의 유한차원 $G$-representation $V$는 항상 *semisimple* $\mathbb{C}[G]$-module이라는 것이다 ([\[환론\] §Semisimple module, ⁋정의 2](/ko/math/ring_theory/semisimple_modules#def2)). 따라서 $\mathbb{C}[G]$는 그 자체를 regular representation으로 보면 [따름정리 7](#cor7)에 의해 semisimple module이므로 Artinian semisimple ring이 되며, [\[환론\] §Artin-Wedderburn 정리, ⁋정리 11](/ko/math/ring_theory/artin_wedderburn#thm11)에 의하여 적당한 division ring $D_1,\ldots,D_r$과 자연수 $n_1,\ldots,n_r$에 대하여 $\mathbb{C}[G]\cong\prod_{i=1}^r\Mat_{n_i}(D_i)$의 꼴로 분해된다. 이때 각 $\Mat_{n_i}(D_i)$는 유한차원 $\mathbb{C}$-algebra $\mathbb{C}[G]$의 direct factor이고 $\mathbb{C}$는 $\mathbb{C}[G]$의 center에 들어 있으므로, $D_i$는 $\mathbb{C}$ 위의 유한차원 division algebra이다. 그럼 임의의 $d\in D_i$가 생성하는 subalgebra $\mathbb{C}[d]$는 $\mathbb{C}$ 위의 유한차원 integral domain이므로 $\mathbb{C}$의 유한차수 field extension이고, $\mathbb{C}$가 algebraically closed이므로 $\mathbb{C}[d]=\mathbb{C}$, 곧 $D_i=\mathbb{C}$이다. 따라서 simple algebra들의 곱으로의 decomposition
+을 살펴보았다. 그럼 [따름정리 7](#cor7)이 주장하는 것은 임의의 유한차원 $G$-representation $V$는 항상 *semisimple* $\mathbb{C}[G]$-module이라는 것이다 ([\[환론\] §Semisimple module, ⁋정의 2](/ko/math/ring_theory/semisimple_modules#def2)). 따라서 $\mathbb{C}[G]$는 그 자체를 regular representation으로 보면 [따름정리 7](#cor7)에 의해 semisimple module이므로 Artinian semisimple ring이 되며, [\[환론\] §Artin-Wedderburn 정리, ⁋정리 11](/ko/math/ring_theory/artin_wedderburn#thm11)에 의하여 simple algebra들의 곱으로의 decomposition
 
 $$\mathbb{C}[G]\cong \bigoplus_{i=1}^r \Mat_{n_i}(\mathbb{C})\tag{1}$$
 

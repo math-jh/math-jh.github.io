@@ -13,9 +13,7 @@ sidebar:
 date: 2021-08-14
 
 weight: 3
-revising: true
 
-drift_needed: true
 
 ---
 
@@ -34,10 +32,10 @@ drift_needed: true
 
 $$E=\{(A,A)\mid\text{$A$ any set}\}$$
 
-이 존재한다. 즉, 모든 집합은 $E$의 어떤 원소의 첫 번째 성분이 된다.
+이 존재한다. 즉, $E$는 전체집합 두 개의 곱이어야 한다.
 :::
 
-이러한 $E$에 다음 명제를 적용하면 $E$의 원소들의 첫 번째 성분을 모두 모은 집합이 존재해야 하는데, 이는 곧 모든 집합들의 집합이므로 [§ZFC 공리계, ⁋예시 4](/ko/math/set_theory/zfc_axioms#ex4)에 모순이다. 따라서 모든 집합들 사이에 정의된 $=$는 이항관계가 될 수 없다. 
+전체집합 두 개의 곱이 존재한다면, 다음 명제에 의해 전체집합 또한 존재해야 하고 이는 [§ZFC 공리계, ⁋예시 4](/ko/math/set_theory/zfc_axioms#ex4)에 모순이므로 모든 집합들 사이에 정의된 $=$는 이항관계가 될 수 없다. 
 
 ::: 명제 3
 $R$이 이항관계라 하자. 그럼 유일한 두 개의 집합 $A$, $B$가 존재하여,  
@@ -68,7 +66,7 @@ $$A=\left\{x\mid\left(x\in\bigcup\left(\bigcup R\right)\right)\wedge P(x)\right\
 간혹 이항관계의 첫 번째 성분과 두 번째 성분이 어느 집합에 속하는지를 명확하게 해야 할 때가 있다. 이를 위해 주어진 두 집합 $A,B$와 $\pr_1R\subseteq A$, $\pr_2R\subseteq B$를 만족하는 이항관계 $R$을 triple $(R,A,B)$와 같이 생각하기도 한다. 이 경우, $A$를 $R$의 *source*, $B$를 $R$의 *target*이라 부르며, 이런 상황에서는 같은 집합 $R$에 대해서도 $(R,A,B)$와 $(R,A',B')$를 다른 것으로 생각한다. 
 
 ::: remark 참고 {#rmk}
-위의 조건 $\pr_1R\subseteq A$, $\pr_2R\subseteq B$를 만족하는 이항관계 $R$이 주어졌다 하자. $z\in R$이면 [명제 3](#prop3)에 의하여 $\pr_1z\in\pr_1R$이고 $\pr_2z\in\pr_2R$이므로, [§순서쌍, ⁋정의 8](/ko/math/set_theory/ordered_pair#def8)의 cartesian product 정의로부터 $R\subseteq\pr_1R\times\pr_2R$를 얻는다. 또 $R\neq\emptyset$이라면 $\pr_1R$과 $\pr_2R$도 공집합이 아니므로 [§순서쌍, ⁋명제 9](/ko/math/set_theory/ordered_pair#prop9)에 의하여 $\pr_1R\times\pr_2R\subseteq A\times B$이고, $R=\emptyset$인 경우에는 $\pr_1R\times\pr_2R=\emptyset$이라 이 포함관계가 자명하게 성립한다. 따라서
+위의 조건 $\pr_1R\subseteq A$, $\pr_2R\subseteq B$를 만족하는 이항관계 $R$이 주어졌다 하자. [§순서쌍, ⁋명제 9](/ko/math/set_theory/ordered_pair#prop9)에 의하여,
 
 $$R\subseteq \pr_1 R\times\pr_2R\subseteq A\times B$$
 
@@ -93,8 +91,6 @@ $$\{y\mid(x,y)\in R\}$$
 
 이와 같은 문제는 집합론을 공부하며 항상 주의해야 한다. 다만 우리는 집합론을 공부하는 게 목적이 아니라, 다른 곳에서 유용하게 사용할 명제들을 증명하는 것이 목적이므로 앞으로 이 정도의 사소한 서술상의 문제는 별 생각없이 넘어가기로 한다.
 
-한편 target이 주어지지 않았을 때의 형태 $\bigcup_{x\in A}\{y\mid(x,y)\in R\}$는 $A$가 $R$의 source의 부분집합이 아니어도 그대로 의미를 가지므로, 앞으로 임의의 집합 $A$에 대해 $R(A)$를 이 식으로 이해하기로 한다.
-
 ::: 명제 5
 $R$이 이항관계라 하고, 임의의 집합 $A$와 그 부분집합 $X$를 생각하자. 그럼 $R(X)\subseteq R(A)$가 성립한다.
 :::
@@ -103,11 +99,11 @@ $R$이 이항관계라 하고, 임의의 집합 $A$와 그 부분집합 $X$를 �
 $y\in R(X)$라 하자. 그럼 어떤 $x\in X$가 존재하여 $(x,y)\in R$이다. 이제 $X\subseteq A$로부터 $x\in A$이므로, $y\in R(A)$이다.
 :::
 
-$R(A)$의 정의를 다시 쓰면 임의의 집합 $A$에 대하여
+위의 명제에 의하여 임의의 $A$에 대해 
 
-$$R(A)=\pr_2\{z\in R\mid\text{$\pr_1z\in A$}\}$$
+$$R(A)=\pr_2\{z\in R\mid\text{$\pr_1z\in A$}\}\subseteq\pr_2R$$
 
-이고, 우변에서 $\pr_2$를 취하는 집합은 $R$에 포함되며 $S\subseteq R$이면 $\pr_2S\subseteq\pr_2R$이므로 $R(A)\subseteq\pr_2R$가 성립한다. 특히 $A=\emptyset$이라면 $R(A)=\emptyset$이며, 더 일반적으로 만일 $A\cap\pr_1R=\emptyset$이라면 $R(A)=\emptyset$이다. 
+이고, 따라서 $R(A)\subseteq\pr_2R$가 성립한다. 특히 $A=\emptyset$이라면 $R(A)=\emptyset$이며, 더 일반적으로 만일 $A\cap\pr_1R=\emptyset$이라면 $R(A)=\emptyset$이다. 
 
 만일 어떤 $x$에 대해 $A=\{x\}$라면 $R(A)$를 마치 $x$에서의 $R$의 함숫값처럼 생각할 수 있다. 
 

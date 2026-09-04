@@ -10,8 +10,6 @@ sidebar:
 
 date: 2025-05-06
 weight: 4
-revising: true
-drift_needed: true
 
 ---
 
@@ -172,7 +170,7 @@ $$N: u\mapsto \deg(u)\qquad \text{단, $N(0)=0$}$$
 임의의 다항식 $u\in A[\x]$와 $a\in A$에 대하여, $u(\x)$를 $\x-a$로 나눈 나머지는 $u(a)$이다. 따라서, $u$가 해 $a$를 갖는 것과 $\x-a$가 $A[\x]$ 안에서 $u$의 약수인 것이 동치이다. 
 :::
 
-이에 대한 증명은 [명제 5](#prop5)를 monic polynomial $v(\x)=\x-a$에 적용하면 되며, 이는 사실 중학교 때부터 익숙한 결과이다. 또 다른 결과로, 만일 $0$이 아닌 다항식 $u$가 해 $a$를 갖는다면 $u$는 반드시 다음의 꼴
+이에 대한 증명은 [명제 5](#prop5)를 monic polynomial $v(\x)=\x-a$에 적용하면 되며, 이는 사실 중학교 때부터 익숙한 결과이다. 또 다른 결과로, 만일 $u$가 해 $a$를 갖는다면 $u$는 반드시 다음의 꼴
 
 $$u(\x)=(\x-a)^p v(\x),\qquad v(a)\neq 0$$
 
@@ -181,8 +179,8 @@ $$u(\x)=(\x-a)^p v(\x),\qquad v(a)\neq 0$$
 ::: 명제 8
 임의의 두 다항식 $u,v\in A[\x]$이 공통근 $a$를 갖는다 하고, $u$와 $v$ 각각에서 $a$의 multiplicity가 $p,q$라 하자. 그럼 다음이 성립한다.
 
-1. 만일 $u+v\neq 0$이라면, 다항식 $u+v$에서 $a$의 multiplicity는 최소 $\inf(p,q)$이며, 등호는 $p\neq q$일 때 성립한다.
-2. 만일 $uv\neq 0$이라면, 다항식 $uv$에서 $a$의 multiplicity는 최소 $p+q$이며, 등호는 $A$가 integral domain일 때 성립한다.
+1. 다항식 $u+v$에서 $a$의 multiplicity는 최소 $\inf(p,q)$이며, 등호는 $p\neq q$일 때 성립한다.
+2. 다항식 $uv$에서 $a$의 multiplicity는 최소 $p+q$이며, 등호는 $A$가 integral domain일 때 성립한다.
 :::
 ::: 증명
 $u(\x) = (\x-a)^p u_1(\x)$, $v(\x) = (\x-a)^q v_1(\x)$이고 $u_1(a) \neq 0$, $v_1(a) \neq 0$라고 하자. 일반성을 잃지 않고 $p \leq q$라고 가정하면, 다음의 식
@@ -286,11 +284,11 @@ $$H_{v_m}=\{(x_i)\in \prod_{i\in J} H_i\mid v_m(x_i)\neq 0\}$$
 
 $$w(\x)=\sum_{k=0}^mv_k(x_1,\ldots, x_{n-1})\x_n^k$$
 
-는 $0$이 아닌 다항식이다. 한편 [명제 9](#prop9) 이후의 논증에 의하여 $w$의 해는 유한개뿐이므로, 집합
+는 $0$이 아닌 다항식이다. 한편, 집합
 
-$$H_w=\{a\in H_n\mid w(a)\neq 0\}$$
+$$\{a\in H_n\mid w(a)\neq 0\}$$
 
-은 무한집합 $H_n$에서 유한개의 원소를 제외한 것이고, 따라서 [\[집합론\] §자연수와 무한집합, ⁋따름정리 16](/ko/math/set_theory/natural_numbers#cor16)에 의하여 $\lvert H_w\rvert=\lvert H_n\rvert$이다. 그럼 각각의 $(x_i)_{i\in J}\in H_{v_m}$마다 $\{(x_i)_{i\in J}\}\times H_w$는 $H_u$에 포함되고 이들은 서로 다른 $(x_i)_{i\in J}$에 대해 서로소이므로
+은, $H_n$이 무한집합이라는 사실과 [명제 9](#prop9) 이후의 논증, 그리고 [\[집합론\] §자연수와 무한집합, ⁋명제 13](/ko/math/set_theory/natural_numbers#prop13)로부터
 
 $$\lvert H\rvert\geq \lvert H_u\rvert\geq \lvert H_{v_m}\rvert\lvert H_n\rvert=\lvert H\rvert$$
 

@@ -10,9 +10,7 @@ sidebar:
 
 date: 2021-08-07
 weight: 1
-revising: true
 
-drift_needed: true
 
 ---
 
@@ -39,7 +37,7 @@ drift_needed: true
 
 ## ZFC 공리계
 
-집합이라는 대상이 아예 존재하지 않는다면, 우리가 <em-ko>모든 집합에 대하여</em-ko>로 시작하는 명제를 어떻게 적더라도 그 명제는 참이다. 논리식 $P\implies Q$는 $P$가 거짓이라면 $Q$의 참거짓에 상관 없이 항상 참이 되기 때문이다. 따라서, 우리의 첫 번째 공리는 이 세상에 어떤 집합이 적어도 하나는 존재한다는 것이다.
+집합이라는 대상이 아예 존재하지 않는다면, 우리가 집합에 대해 어떠한 명제를 적더라도 그 명제는 참이다. 논리식 $P\implies Q$는 $P$가 거짓이라면 $Q$의 참거짓에 상관 없이 항상 참이 되기 때문이다. 따라서, 우리의 첫 번째 공리는 이 세상에 어떤 집합이 적어도 하나는 존재한다는 것이다.
 
 ::: misc The Axiom of Existence.<sub>존재 공리</sub> {#axiom-existence}
 어떠한 원소도 갖지 않는 집합이 존재한다.
@@ -136,8 +134,6 @@ $$x\in \{\emptyset\}\iff x=\emptyset\iff (x=\emptyset)\vee(x=\emptyset)\iff x\in
 :::
 
 예를 들어, 만일 $\mathcal{S}=\{A,B\}$였다면 $U$는 <phrase>$x\in A$이거나 $x\in B$인 원소들의 집합</phrase>, 즉 $A\cup B$가 된다는 것을 확인할 수 있다. 이를 표기상 $\bigcup\mathcal{S}$와 같이 쓰기도 한다.
-
-다음 공리를 적기 위해 표기를 하나 약속하자. 집합 $X$의 모든 원소가 집합 $S$의 원소일 때 $X$를 $S$의 *부분집합<sub>subset</sub>*이라 부르고 $X\subseteq S$로 적는다.
 
 ::: misc The Axiom of Power set.<sub>멱집합 공리</sub> {#axiom-powerset}
 임의의 집합 $S$에 대하여, <phrase>$X\in \mathcal{P}$인 것</phrase>과 <phrase>$X\subseteq S$인 것</phrase>이 동치이도록 하는 집합 $\mathcal{P}$가 존재한다.

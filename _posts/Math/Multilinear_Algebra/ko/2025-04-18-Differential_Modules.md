@@ -1,6 +1,6 @@
 ---
 title: "미분가군"
-description: "graded algebra 위의 유도사와 그 함자적 성질을 다루며, 미분가군의 정의와 관련 완전열의 구조를 살펴본다."
+description: "graded 대수 위의 유도사와 그 함자적 성질을 다루며, 미분가군의 정의와 관련 완전열의 구조를 살펴본다."
 excerpt: "Graded algebra 위 derivation을 갖는 differential module"
 
 categories: [Math / Multilinear Algebra]
@@ -10,8 +10,6 @@ sidebar:
 
 date: 2025-04-18
 weight: 15
-revising: true
-drift_needed: true
 
 ---
 
@@ -31,7 +29,7 @@ drift_needed: true
 이에 대한 증명은 $\rho^\ast$의 정의에 의해 자명하다. 한편, 이와 같은 상황에서 우리는 $F$에도 $(E,E)$-bimodule structure를 줄 수 있다. 그렇다면 $d':F \rightarrow N$이 언제 (left/right) $E$-linear이기도 한지를 살펴보는 것이 당연할 것이다. 
 
 ::: 명제 2
-[명제 1](#prop1)의 상황을 가정하고, degree $\delta$의 $\varepsilon$-derivation $d': F \rightarrow N$이 주어졌다 하자. 이 때 $d'$가 left $E$-linear라는 것은 homogeneous element $a\in E$와 $y\in F$에 대하여 $d'(\rho(a)y)=\varepsilon(\delta,\deg a)\rho(a)d'(y)$가 성립한다는 뜻으로, 즉 degree $\delta$의 함수에 따라오는 부호를 감안한 것으로 이해한다. 그럼 $d'$가 left (resp. right) $E$-linear한 것은 $d'$가 $F$의 subalgebra $\rho(E)$에서 항등적으로 $0$인 것과 동치이다. 
+[명제 1](#prop1)의 상황을 가정하고, $\varepsilon$-derivation $d': F \rightarrow N$이 주어졌다 하자. 그럼 $d'$가 left (resp. right) $E$-linear한 것은 $d'$가 $F$의 subalgebra $\rho(E)$에서 항등적으로 $0$인 것과 동치이다. 
 :::
 
 이제 $\Der_A(F, N)$을 $F$에서 $N$으로 가는 $A$-derivation들의 모임으로 정의하자. 그럼 [명제 2](#prop2)의 조건을 만족하여 $E$-linear가 되는 derivation들의 모임은 $\rho(E)$에서 identically zero인 derivation들의 모임과 같으므로 이들 모임은 $\Der_A(F, N)$의 $A$-submodule이 된다. 이를 $\Der_E(F,N)$으로 적자. 
@@ -44,7 +42,7 @@ $$\Der_E(F, \sigma^\ast H),\qquad \Der_F(G,H),\qquad\Der_E(G, H)$$
 
 $$0 \rightarrow \Der_F(G, H) \rightarrow \Der_E(G,H) \rightarrow \Der_E(F, \sigma^\ast H)$$
 
-이 exact이다. 실제로 $\sigma\rho(E)\subseteq\sigma(F)$이므로 $\sigma(F)$ 위에서 항등적으로 $0$인 derivation은 $\sigma\rho(E)$ 위에서도 항등적으로 $0$이고, 따라서 첫 번째 함수는 포함관계로 주어지는 injection이다. 한편 두 번째 함수 $D\mapsto D\circ\sigma$에 대해서는 $D\circ\sigma=0$인 것과 $D$가 $\sigma(F)$ 위에서 항등적으로 $0$인 것이 동치이므로, 이로부터 가운데에서의 exactness를 얻는다. 
+이 exact라는 것이 자명하다. 
 
 
 
@@ -56,9 +54,9 @@ $$(M[\delta])_\mu=M_{\delta+\mu}$$
 
 $$(x,y)(x',y')=(xx', yx'+\varepsilon(\delta, \deg x)xy')$$
 
-을 사용하여 $E\oplus M[\delta]$ 위에 graded $A$-algebra 구조를 줄 수 있다. 이 때, projection map $\pi: E\oplus M[\delta] \rightarrow E$를 우리는 *augmentation map*이라 부르고, 이것이 graded $A$-algebra homomorphism이 된다는 것을 안다. 
+을 사용하여 $E\oplus M[\delta]$ 위에 graded $A$-algebra 구조를 줄 수 있다. 이 때, projection map $\epsilon: E\oplus M[\delta] \rightarrow E$를 우리는 *augmentation map*이라 부르고, 이것이 graded $A$-algebra homomorphism이 된다는 것을 안다. 
 
-이제 degree $0$의 graded $A$-linear map $g:E \rightarrow E\oplus M[\delta]$이 만일 $\pi\circ g=\id_E$를 만족한다면, 정의에 의해 우리는 적당한 degree $\delta$ graded $A$-linear map $f:E \rightarrow M$에 대하여 $x\mapsto (x,f(x))$의 꼴이여야 한다는 것을 알고, 거꾸로 임의의 degree $\delta$ $A$-linear map $f$는 위의 조건을 만족하는 $g$를 정의한다. 
+이제 degree $0$의 graded $A$-linear map $g:E \rightarrow E\oplus M[\delta]$이 만일 $\epsilon\circ g=\id_E$를 만족한다면, 정의에 의해 우리는 적당한 degree $\delta$ graded $A$-linear map $f:E \rightarrow M$에 대하여 $x\mapsto (x,f(x))$의 꼴이여야 한다는 것을 알고, 거꾸로 임의의 degree $\delta$ $A$-linear map $f$는 위의 조건을 만족하는 $g$를 정의한다. 
 
 그럼 다음 명제 또한 단순한 계산의 결과이다. 
 
@@ -77,11 +75,11 @@ Graded $A$-linear map $f: E \rightarrow M$ of degree $\delta$가 $\varepsilon$-d
 앞선 글에서 중요한 예시로 등장했던 exterior algebra는 다음과 같은 더 일반적인 세팅에서 얻어진다. 
 
 ::: 명제 5
-Commutative ring $A$, $A$-module $M$에 대하여, $B=\T(M)$, $\S(M)$, $\bigwedge(M)$ 중 하나라 하고, $(B,B)$-bimodule $E$가 주어졌다 하되 임의의 $a\in A$와 $t\in E$에 대하여 $at=ta$가 성립한다고 가정하자. 또, derivation $d_0: A \rightarrow E$와 abelian group homomorphism $d_1: M \rightarrow E$가 다음의 조건
+Commutative ring $A$, $A$-module $M$에 대하여, $B=\T(M)$, $\S(M)$, $\bigwedge(M)$ 중 하나라 하고, $(B,B)$-bimodule $E$가 주어졌다 하자. 또, derivation $d_0: A \rightarrow E$와 abelian group homomorphism $d_1: M \rightarrow E$가 다음의 조건
 
 $$d_1(ax)=ad_1(x)+d_0(a)x$$
 
-을 만족하고, 임의의 $a\in A$와 $b\in B$에 대하여 $bd_0(a)=d_0(a)b$가 성립한다고 가정하자. 만일 $B=\S(M)$이라면 다음 조건
+을 만족한다고 가정하자. 만일 $B=\S(M)$이라면 다음 조건
 
 $$xd_1(y)+d_1(x)y=yd_1(x)+d_1(y)x$$
 
@@ -94,15 +92,11 @@ $$xd_1(x)+d_1(x)x=0$$
 ::: 증명
 우선 abelian group $B \oplus E$ 위에 다음의 식
 
-$$(b, t)(b', t') = (bb', bt' + tb')$$
+$$(b, t)(b', t') = (bb', bt' + b't)$$
 
 으로 곱셈을 정의하여 이를 associative $\mathbb{Z}$-algebra로 생각하자. 그럼 canonical injection $t\mapsto (0,t)$에 의하여 $E$를 $\mathbb{Z}$-algebra $B\oplus E$의 two-sided ideal과 동일시할 수 있으며 이 때 $E^2=0$이다. 
 
-한편, $h_0: A \rightarrow B \oplus E$를 $h_0(a) = (a, d_0(a))$로 정의하면, 이는 [명제 3](#prop3)에 의해 (unital) ring homomorphism이다. 뿐만 아니라 임의의 $a \in A$와 $(b,t)\in B\oplus E$에 대하여, $a$가 $B$의 center에 속하므로 다음의 식
-
-$$h_0(a)(b,t)-(b,t)h_0(a)=(0, at-ta+d_0(a)b-bd_0(a))$$
-
-이 성립하고, 가정한 두 조건에 의하여 우변은 $0$이다. 따라서 $h_0(A)$는 $B\oplus E$의 center에 포함되고, 이를 통해 $B \oplus E$는 $A$-algebra가 된다. 이제 $B\oplus E$ 위에 이러한 $A$-module 구조를 준 후 $h_1(x) = (x, d_1(x))$로 정의된 함수 $h_1: M \rightarrow B\oplus E$를 생각하자. 그럼 주어진 조건에 의하여 다음의 식
+한편, $h_0: A \rightarrow B \oplus E$를 $h_0(a) = (a, d_0(a))$로 정의하면, 이는 [명제 3](#prop3)에 의해 (unital) ring homomorphism이며 이를 통해 $B \oplus E$는 $A$-algebra가 된다. 이제 $B\oplus E$ 위에 이러한 $A$-module 구조를 준 후 $h_1(x) = (x, d_1(x))$로 정의된 함수 $h_1: M \rightarrow B\oplus E$를 생각하자. 그럼 주어진 조건에 의하여 다음의 식
 
 $$h_1(ax) = h_0(a) h_1(x)$$
 
@@ -131,7 +125,7 @@ $$(xy)\otimes 1-1\otimes(xy)=(x\otimes 1-1\otimes x)y+x(y\otimes 1-1\otimes y)$$
 
 $$\sum_i x_i\otimes y_i=\sum_i \left(x_i(1\otimes y_i)-(x_iy_i)\otimes 1\right)=\sum_i x_i(1\otimes y_i-y_i\otimes 1)$$
 
-이 얻어지므로, $\mathfrak{I}$의 임의의 원소는 $\delta_E(y_i)$들의 left $E$-linear combination으로 적히고 이로부터 둘째 주장을 얻는다. 
+이 얻어지므로 둘째 주장도 자명하다. 
 :::
 
 이제 이로부터 다음의 universal property를 얻는다. 
@@ -152,11 +146,7 @@ $$f(x \otimes 1 - 1 \otimes x) = \dd{x}$$
 
 $$f\left( \sum_i x_i \otimes y_i \right) = \sum_i x_i  f(1 \otimes y_i - y_i \otimes 1) = - \sum_i x_i  \dd{y_i}$$
 
-이 반드시 성립해야 하는 것을 안다. 따라서 존재성을 보이기 위해서는 이것이 $(E,E)$-bimodule homomorphism인 것을 보여야 한다. 이를 위해서는 우선 mapping $(x, y) \mapsto -x \cdot \dd{y}$는 $E\times E$에서 $M$으로 가는 $A$-bilinear mapping이므로, 이로부터 $A$-linear map $g: E \otimes_AE \rightarrow M$이 $g(x \otimes y) = -x \cdot \dd{y}$로 정의되는 것을 안다. 이제 이 $g$의 restriction이 $f$이고 이것이 $E$-bimodule 구조를 보존하는 것만 보이면 충분하다. 우선 $g(z(x\otimes y))=-zx\dd{y}=zg(x\otimes y)$이므로 $g$는 left $E$-linear이다. 반면 임의의 $z\in E$에 대하여 다음의 식
-
-$$g((x\otimes y)z)=-x\dd{(yz)}=-x(\dd{y})z-xy\dd{z}=g(x\otimes y)z-xy\dd{z}$$
-
-이 성립하므로 $g$는 $E\otimes_AE$ 전체에서는 right $E$-linear가 아니다. 그러나 $\mathfrak{I}$의 원소 $\sum_ix_i\otimes y_i$에 대해서는 $\sum_ix_iy_i=0$이므로 마지막 항들의 합이 사라지고, 따라서 $g$를 $\mathfrak{I}$로 제한한 것은 right $E$-linear이다. 이것이 $f$와 같다는 것은 위에서 얻은 $f$의 식으로부터 얻어진다. 
+이 반드시 성립해야 하는 것을 안다. 따라서 존재성을 보이기 위해서는 이것이 $(E,E)$-bimodule homomorphism인 것을 보여야 한다. 이를 위해서는 우선 mapping $(x, y) \mapsto -x \cdot \dd{y}$는 $E\times E$에서 $M$으로 가는 $A$-bilinear mapping이므로, 이로부터 $A$-linear map $g: E \otimes E \rightarrow M$을 $g(x \otimes y) = -x \cdot \dd{y}$이 정의되는 것을 안다. 이제 이 $g$의 restriction이 $f$이고 이것이 $E$-bimodule 구조를 보존하는 것만 보이면 충분하고, 이는 단순한 계산이다. 
 :::
 
 위의 명제에 의하여 우리는 canonical $A$-module isomorphism 
@@ -177,7 +167,7 @@ $$x(u\otimes v)y=(xu)\otimes(vy)=(x\otimes y)(u\otimes v)$$
 
 으로부터 이 bimodule stucture가 실은 $E\otimes_AE$의 ring structure와 같은 것임을 안다. 따라서 $\mathfrak{I}$는 $E\otimes_AE$의 ideal이다. 
 
-뿐만 아니라, ring에서의 multiplication map $m$은 surjective이므로 우리는 다음의 canonical isomorphism
+이제 더 좋은 상황을 가정하자. 즉 $E$가 이번에는 *commutative* $A$-algebra라 가정하자. 그럼 임의의 $E$-module $M$은 $(E,E)$-bimodule로 볼 수 있다. 한편, 위에서 등장한 $E\otimes_AE$의 $(E,E)$-bimodule 구조는, 이번 경우에는, $E\otimes_AE$의 곱셈으로 주어지고, 따라서 $E\otimes_AE$의 sub-$(E,E)$-bimodule이었던 $\mathfrak{I}$는 이제는 $E\otimes_AE$의 ideal이 된다. 뿐만 아니라, ring에서의 multiplication map $m$은 surjective이므로 우리는 다음의 canonical isomorphism
 
 $$(E\otimes_AE)/\mathfrak{I}\cong E$$
 
@@ -262,11 +252,11 @@ $$\Omega_{\S(M)/A}\cong M\otimes_A\S(M)$$
 ::: 명제 11
 다음의 commutative diagram
 
-{% diagram Math/Multilinear_Algebra/Differential_Modules-1.svg width="6.35em" alt="differential_modules-1" %}
+{% diagram Math/Multilinear_Algebra/Differential_Modules-1.svg width="6.35em" alt="change_of_base_ring-1" %}
 
 이 주어졌다 하고, 수직방향의 함수들을 통해 $E,E'$를 각각 $A,A'$-algebra로 생각하자. 그럼 다음의 diagram
 
-{% diagram Math/Multilinear_Algebra/Differential_Modules-2.svg width="11.54em" alt="differential_modules-2" %}
+{% diagram Math/Multilinear_Algebra/Differential_Modules-2.svg width="11.54em" alt="change_of_base_ring-2" %}
 
 을 commute하게 하는 유일한 $A$-linear mapping
 
@@ -292,7 +282,7 @@ $$\Hom_E(\Omega_A(E), M)\cong\Der_A(E, M)$$
 
 을 생각하면, 우리는 다음의 commutative diagram
 
-{% diagram Math/Multilinear_Algebra/Differential_Modules-3.svg width="29.41em" alt="differential_modules-3" %}
+{% diagram Math/Multilinear_Algebra/Differential_Modules-3.svg width="29.41em" alt="change_of_base_ring-3" %}
 
 을 얻는다. 여기서 오른쪽의 수직방향 함수는 위의 isomorphism과 [\[대수적 구조\] §스칼라의 변환, ⁋명제 6](/ko/math/algebraic_structures/change_of_base_ring#prop6)의 isomorphism을 합친
 
@@ -316,22 +306,21 @@ $$\Omega_0(u) : \Omega_{E/A}\otimes_EE'\rightarrow\Omega_{E'/A'}$$
 
 $$\Hom_{E'}(\Omega_{E'/A'} , N) \rightarrow \Hom_{E'}(\Omega_{E/A}\otimes_EE',N)$$
 
-이 isomorphism이라는 것을 안다. 그런데 이 함수는 $\Omega_0(u)$와의 합성으로 주어지므로, $N=\Omega_{E/A}\otimes_EE'$로 두면 이것이 surjective인 것으로부터 $g\circ\Omega_0(u)=\id$을 만족하는 $E'$-linear map $g:\Omega_{E'/A'}\rightarrow\Omega_{E/A}\otimes_EE'$를 얻는다. 다시 $N=\Omega_{E'/A'}$로 두면 $\Omega_0(u)\circ g$와 $\id_{\Omega_{E'/A'}}$가 모두 $\Omega_0(u)$로 옮겨지므로 이것이 injective인 것으로부터 $\Omega_0(u)\circ g=\id$을 얻고, 따라서 $\Omega_0(u)$는 isomorphism이다. 그러므로 주장을 보이기 위해서는 $C(u)$가 bijective라는 것만 보이면 충분하다. 
+이 isomorphism이라는 것을 안다. 즉, 다음의 sequence
+
+$$0\rightarrow\Hom_{E'}(\Omega_{E'/A'} , N) \rightarrow \Hom_{E'}(\Omega_{E/A}\otimes_EE',N)\rightarrow 0$$
+
+가 임의의 $N$에 대하여 exact이다. 이제 $\Hom$이 left exact functor이므로 ([§사영가군, 단사가군, 평탄가군, ⁋명제 2](/ko/math/multilinear_algebra/various_modules#prop2)) 위의 sequence가 모든 $N$에 대해 exact라는 것은 다음의 sequence
+
+$$0 \rightarrow\Omega_{E/A}\otimes_EE'\rightarrow\Omega_{E'/A'}\rightarrow 0$$
+
+이 exact라는 것과 동치이다. 따라서 주장을 보이기 위해서는 $C(u)$가 bijective라는 것만 보이면 충분하다. 
 
 우선
 
 $$\Hom(u, \id_N):\Hom_{A'}(E\otimes_AA', N) \rightarrow \Hom_A(E, N)$$
 
-는 isomorphism이고, $C(u)$는 이를 $\Der_{A'}(E', N)$으로 제한한 것에 불과하므로 $C(u)$가 injective임은 자명하다.
-
-이제 $C(u)$가 surjective인 것을 보이기 위하여 $A$-derivation $D:E \rightarrow N$이 주어졌다 하자. 그럼 $(x, a')\mapsto a'D(x)$가 $A$-bilinear이므로 이로부터 $A'$-linear map $D':E'=E\otimes_AA' \rightarrow N$이 $D'(x\otimes a')=a'D(x)$로 정의되고, 임의의 $x,y\in E$와 $a',b'\in A'$에 대하여 다음의 식
-
-$$\begin{aligned}
-D'((x\otimes a')(y\otimes b'))&=a'b'D(xy)=a'b'(D(x)y+xD(y))\\
-&=D'(x\otimes a')(y\otimes b')+(x\otimes a')D'(y\otimes b')
-\end{aligned}$$
-
-이 성립하므로 $D'$는 derivation이다. 뿐만 아니라 $D'(1\otimes a')=a'D(1)=0$이므로 $D'$는 $A'$-derivation이며, $u(x)=x\otimes1$이므로 $D'\circ u=D$, 즉 $C(u)(D')=D$이다. 
+는 isomorphism이고, $C(u)$는 이를 $\Der_{A'}(E', N)$으로 제한한 것에 불과하므로 $C(u)$가 injective임은 자명하다. $C(u)$가 surjective라는 것 또한 어렵지 않게 증명할 수 있다. 
 :::
 
 특별히 $A=A'$이고 $\rho:A \rightarrow A'$가 $\id_A$이며, 따라서 $u:E\rightarrow E'$가 $A$-algebra homomorphism인 경우를 생각하자. 그럼 위의 과정을 통해 $u$는 $E'$-linear homomorphism  
@@ -344,7 +333,7 @@ $$E'\overset{d_{E'/A}}{\longrightarrow}\Omega_{E'/A}\overset{\Omega_u}{\longrigh
 
 이 존재한다. 그럼 다시 universal property에 의하여 다음의 commutative diagram
 
-{% diagram Math/Multilinear_Algebra/Differential_Modules-4.svg width="25.13em" alt="differential_modules-4" %}
+{% diagram Math/Multilinear_Algebra/Differential_Modules-4.svg width="25.13em" alt="change_of_base_ring-4" %}
 
 이 존재한다. 
 
@@ -358,9 +347,7 @@ $$\Omega_A(E)\otimes_EE'\overset{\Omega_0(u)}{\longrightarrow}\Omega_{E'/A}\over
 가 exact이다. 
 :::
 ::: 증명
-우선 $E'$-module들의 sequence $P_1\overset{\alpha}{\longrightarrow}P_2\overset{\beta}{\longrightarrow}P_3\longrightarrow0$에 대하여, 임의의 $E'$-module $N$마다 sequence $0 \rightarrow \Hom_{E'}(P_3,N) \rightarrow \Hom_{E'}(P_2,N) \rightarrow \Hom_{E'}(P_1,N)$이 exact이면 원래의 sequence가 exact이다. 실제로 $N=P_3/\im\beta$와 canonical projection $q$를 생각하면 $q\circ\beta=0$이고 첫 번째 함수가 injective이므로 $q=0$, 즉 $\beta$는 surjective이다. 또 $N=P_3$에 대하여 $\id_{P_3}$을 생각하면 가운데에서의 exactness가 $\beta\circ\alpha=0$을 주고, $N=P_2/\im\alpha$와 canonical projection $q'$을 생각하면 $q'\circ\alpha=0$이므로 다시 가운데에서의 exactness에 의하여 $q'=\gamma\circ\beta$인 $\gamma$가 존재하여 $\ker\beta\subseteq\ker q'=\im\alpha$를 얻는다.
-
-따라서 다음의 sequence
+다시 $\Hom$이 left exact functor라는 사실로부터 ([§사영가군, 단사가군, 평탄가군, ⁋명제 2](/ko/math/multilinear_algebra/various_modules#prop2)) 다음의 sequence
 
 $$0 \rightarrow \Hom_{E'}(\Omega_{E'/E},N) \rightarrow \Hom_{E'}(\Omega_{E'/A}, N) \rightarrow \Hom_{E'}(\Omega_{E/A}\otimes_EE',N)$$
 
@@ -371,37 +358,33 @@ $$0 \rightarrow \Der_E(E', N) \rightarrow \Der_A(E', N) \rightarrow \Der_A(E, N)
 으로 바꿀 수 있으며, 이것이 exact라는 것은 [명제 2](#prop2) 직후에 보였다. 
 :::
 
-이번에는 특히 $u:E \rightarrow E'$가 surjective이고, 따라서 $\mathfrak{a}=\ker u$에 대하여 isomorphism $E'\cong E/\mathfrak{a}$인 경우를 생각하자. 그럼 canonical derivation $d=d_{E/A}$의 $\mathfrak{a}$로의 restriction
+이번에는 특히 $u:E \rightarrow E'$가 surjective이고, 따라서 $\mathfrak{I}=\ker u$에 대하여 isomorphism $E'\cong E/\mathfrak{I}$인 경우를 생각하자. 그럼 canonical derivation $d=d_{E/A}$의 $\mathfrak{I}$로의 restriction
 
-$$\mathfrak{a}\overset{d\vert_{\mathfrak{a}}}{\longrightarrow}\Omega_{E/A}\overset{i_E}{\longrightarrow}\Omega_{E/A}\otimes_EE'$$
+$$\mathfrak{I}\overset{d\vert_{\mathfrak{I}}}{\longrightarrow}\Omega_{E/A}\overset{i_E}{\longrightarrow}\Omega_{E/A}\otimes_EE'$$
 
-을 $d'$라 하면, 임의의 $x,y\in \mathfrak{a}$에 대하여
+을 $d'$라 하면, 임의의 $x,y\in \mathfrak{I}$에 대하여
 
 $$d'(xy)=\dd{(xy)}\otimes1=\dd{y}\otimes u(x)+\dd{x}\otimes u(y)=0$$
 
 이므로 다음의 $E$-linear map
 
-$$\overline{d}:\mathfrak{a}/\mathfrak{a}^2\rightarrow\Omega_{E/A}\otimes_EE'$$
+$$\overline{d}:\mathfrak{I}/\mathfrak{I}^2\rightarrow\Omega_{E/A}\otimes_EE'$$
 
-이 잘 정의된다. 뿐만 아니라 $\mathfrak{a}$가 $\mathfrak{a}/\mathfrak{a}^2$를 annihilate하므로, $\overline{d}$는 $E'=E/\mathfrak{a}$-linear map이다. 
+이 잘 정의된다. 뿐만 아니라 $\mathfrak{I}$가 $\mathfrak{I}/\mathfrak{I}^2$를 annihilate하므로, $\overline{d}$는 $E'=E/\mathfrak{I}$-linear map이다. 
 
 ::: 명제 14
 위의 상황에서, 다음의 $E'$-linear map들의 sequence
 
-$$\mathfrak{a}/\mathfrak{a}^2\overset{\overline{d}}{\longrightarrow}\Omega_{E/A}\otimes_EE'\overset{\Omega_0(u)}{\longrightarrow}\Omega_{E'/A}\longrightarrow0$$
+$$\mathfrak{I}/\mathfrak{I}^2\overset{\overline{d}}{\longrightarrow}\Omega_{E/A}\otimes_EE'\overset{\Omega_0(u)}{\longrightarrow}\Omega_{E'/A}\longrightarrow0$$
 
 이 exact이다. 
 :::
 ::: 증명
-앞선 논증의 표기에서, 우리는 $\Omega_{E/A}\otimes_EE'$를 $\Omega_{E/A}/\mathfrak{a}\Omega_{E/A}$와 identify할 수 있다. 그럼 이 identification 하에서, $\overline{d}$의 image는 $\dd{(\mathfrak{a})}\subseteq\Omega_{E/A}$의 quotient module $\Omega_{E/A}/\mathfrak{a}\Omega_{E/A}$에서의 image가 된다. 따라서, $\Omega_{E/A}$의 $E$-submodule $\mathfrak{b}$를 $\mathfrak{a}\Omega_{E/A}$와 $\dd{(\mathfrak{a})}$에 의해 생성되는 것으로 잡으면 다음의 isomorphism
+앞선 논증의 표기에서, 우리는 $\Omega_{E/A}\otimes_EE'$를 $\Omega_{E/A}/\mathfrak{I}\Omega_{E/A}$와 identify할 수 있다. 그럼 이 identification 하에서, $\overline{d}$의 image는 $\dd{(\mathfrak{I})}\subseteq\Omega_{E/A}$의 quotient module $\Omega_{E/A}/\mathfrak{I}\Omega_{E/A}$에서의 image가 된다. 따라서, $\Omega_{E/A}$의 $A$-submodule $I$를 $\mathfrak{I}\Omega_{E/A}$와 $\dd{(\mathfrak{I})}$에 의해 생성되는 것으로 잡으면 다음의 isomorphism
 
-$$\frac{\Omega_{E/A}\otimes_EE'}{\im(\overline{d})}\cong\frac{\Omega_{E/A}}{\mathfrak{b}}$$
+$$\frac{\Omega_{E/A}\otimes_EE'}{\im(\overline{d})}\cong\frac{\Omega_{E/A}}{I}$$
 
-을 얻는다. 
-
-이제 $\Omega_{E/A}/\mathfrak{b}$가 $\Omega_{E'/A}$와 canonical하게 isomorphic하다는 것을 보이면 된다. 우선 $\mathfrak{a}\Omega_{E/A}\subseteq\mathfrak{b}$이므로 $\Omega_{E/A}/\mathfrak{b}$는 $E'=E/\mathfrak{a}$-module이고, $\dd{(\mathfrak{a})}\subseteq\mathfrak{b}$이므로 $d$와 canonical projection의 합성은 $A$-derivation $D:E' \rightarrow \Omega_{E/A}/\mathfrak{b}$를 유도한다. 한편 임의의 $E'$-module $N$과 $A$-derivation $D_1:E' \rightarrow N$이 주어지면 $D_1\circ u$는 $E$에서 $N$으로 가는 $A$-derivation이므로, [명제 8](#prop8)에 의하여 $h\circ d=D_1\circ u$를 만족하는 유일한 $E$-linear map $h:\Omega_{E/A} \rightarrow N$이 존재한다. 그런데 $\mathfrak{a}N=0$과 $D_1(u(\mathfrak{a}))=0$으로부터 $h$는 $\mathfrak{b}$를 $0$으로 보내므로, $h$는 $\overline{h}\circ D=D_1$을 만족하는 $E'$-linear map $\overline{h}:\Omega_{E/A}/\mathfrak{b} \rightarrow N$을 유도하고 $\Omega_{E/A}/\mathfrak{b}$가 $D$의 image에 의해 생성되므로 이러한 $\overline{h}$는 유일하다. 즉 $\Omega_{E/A}/\mathfrak{b}$는 $\Omega_{E'/A}$의 universal property를 만족하고, 따라서 $\Omega_{E/A}/\mathfrak{b}\cong\Omega_{E'/A}$이다. 
-
-마지막으로 canonical projection $\Omega_{E/A}/\mathfrak{a}\Omega_{E/A} \rightarrow \Omega_{E/A}/\mathfrak{b}$에 위의 isomorphism을 합성하여 얻어지는 함수를 생각하면, 이는 $\dd{x}\otimes1$을 $D(u(x))=d_{E'/A}(u(x))$로 보내고 $\Omega_0(u)$ 또한 그러하다. 두 함수는 $\Omega_{E/A}\otimes_EE'$를 생성하는 원소들 위에서 일치하므로 서로 같고, 따라서 $\Omega_0(u)$는 surjective이며 그 kernel은 $\mathfrak{b}/\mathfrak{a}\Omega_{E/A}=\im(\overline{d})$이다. 
+을 얻으며, 이를 통해 원하는 결과를 얻는다. 
 :::
 
 ---

@@ -12,9 +12,7 @@ sidebar:
 date: 2022-10-02
 
 weight: 21
-revising: true
 
-drift_needed: true
 
 
 ---
@@ -56,10 +54,10 @@ $\mathbb{R}$-내적공간 $V$의 임의의 벡터 $u,v$에 대하여 다음의 �
 
 $$\lvert \langle u,v\rangle\rvert\leq\sqrt{\langle u,u\rangle}\sqrt{\langle v,v\rangle}$$
 
-이 성립한다. 등호가 성립하는 것은 $u,v$가 linearly dependent인 것과 동치이다. 
+이 성립한다. 등호는 $u=\lambda v$를 만족하는 적당한 상수 $\lambda$가 존재할 때 성립한다. 
 :::
 ::: 증명
-만일 $v=0$이라면 양 변이 모두 0이므로 등호와 함께 부등식이 성립하고, 이 때 $u,v$는 linearly dependent이다. $v\neq 0$이라 가정하자. 그럼 $\langle v,v\rangle\neq 0$이다. 이제
+만일 $v=0$이라면 양 변이 모두 0이므로 부등식이 성립한다. $v\neq 0$이라 가정하자. 그럼 $\langle v,v\rangle\neq 0$이다. 이제
 
 $$\lambda=\frac{\langle u,v\rangle}{\langle v,v\rangle}$$
 
@@ -71,7 +69,7 @@ $$0\leq \langle u-\lambda v, u-\lambda v\rangle$$
 
 $$0\leq \langle u,u\rangle-2\lambda\langle u,v\rangle+\lambda^2\langle v,v\rangle=\langle u,u\rangle-\frac{2\langle u,v\rangle^2}{\langle v,v\rangle}+\frac{\langle u,v\rangle^2}{\langle v,v\rangle}=\langle u,u\rangle-\frac{\langle u,v\rangle^2}{\langle v,v\rangle}$$
 
-을 얻는다. 이로부터 원하는 식을 얻고, 등호는 정확히 $u-\lambda v=0$일 때 성립한다. 거꾸로 $u=\mu v$를 만족하는 상수 $\mu$가 있다면 $\lambda=\mu$이므로, $v\neq 0$인 경우 등호가 성립하는 것과 $u,v$가 linearly dependent인 것은 동치이다.
+을 얻는다. 등호는 정확히 $u-\lambda v=0$일 때 성립한다. 이로부터 원하는 식을 얻는다.
 :::
 
 
@@ -94,8 +92,6 @@ $$\lVert u+v\rVert=\sqrt{\langle u+v,u+v\rangle}=\sqrt{\langle u,u\rangle+2\lang
 $$\langle u,u\rangle+2\langle u,v\rangle+\langle v,v\rangle\leq \lVert u\rVert^2+2\lVert u\rVert\lVert v\rVert+\lVert v\rVert^2=(\lVert u\rVert+\lVert v\rVert)^2$$
 
 이므로, 이로부터 삼각부등식이 증명된다.
-
-한편 위 계산에서 등호가 성립하는 것은 $\langle u,v\rangle=\lVert u\rVert\lVert v\rVert$일 때뿐이고, 이 경우 $\lvert\langle u,v\rangle\rvert=\lVert u\rVert\lVert v\rVert$이므로 [명제 3](#prop3)의 등호조건으로부터 $u,v$는 linearly dependent이다. 즉 $\lVert u+v\rVert=\lVert u\rVert+\lVert v\rVert$가 성립한다면 $u,v$는 linearly dependent이다.
 :::
 
 그러나 일반적으로 위 명제의 역은 성립하지 않는다. 즉, $V$에 정의된 내적은 norm을 정의하지만, 거꾸로 norm이 주어졌다 해서 내적이 정의될 수 있는 것은 아니다. 
@@ -111,7 +107,7 @@ $$\lVert u+v\rVert^2+\lVert u-v\rVert^2=2\lVert u\rVert^2+2\lVert v\rVert^2$$
 이에 대한 증명은 단순한 계산을 통해 쉽게 가능하다. 또, 이를 통해 내적을 통해 정의되지 않는 norm의 예시를 찾을 수 있다.
 
 ::: 예시 6
-$n\geq 2$인 $\mathbb{R}^n$ 위에 다음의 식
+$\mathbb{R}^n$ 위에 다음의 식
 
 $$\lVert v\rVert_1=\sum_{i=1}^n \lvert v_i\rvert$$
 
@@ -224,15 +220,11 @@ $$\sum_{i=1}^k \langle v, x_i\rangle x_i=\sum_{i=1}^k\langle v, x'_i\rangle x_i'
 이 성립한다. 
 :::
 ::: 증명
-$\mathcal{B}$와 $\mathcal{B}'$가 모두 $U$의 orthonormal basis이므로, $x_i$와 $x'_j$를 서로의 basis로 전개하면 다음의 두 식
+식
 
-$$x_i=\sum_{j=1}^k\langle x_i,x'_j\rangle x'_j,\qquad x'_j=\sum_{i=1}^k\langle x'_j,x_i\rangle x_i$$
+$$[v]_\mathcal{B}=[\id]^{\mathcal{B}'}_{\mathcal{B}}[v]_{\mathcal{B}'}$$
 
-을 얻는다. 첫째 식에 $\langle v,-\rangle$을 취하면 $\langle v,x_i\rangle=\sum_{j=1}^k\langle x_i,x'_j\rangle\langle v,x'_j\rangle$이므로, 내적이 symmetric이라는 것과 둘째 식으로부터
-
-$$\sum_{i=1}^k\langle v,x_i\rangle x_i=\sum_{j=1}^k\langle v,x'_j\rangle\left(\sum_{i=1}^k\langle x'_j,x_i\rangle x_i\right)=\sum_{j=1}^k\langle v,x'_j\rangle x'_j$$
-
-을 얻는다.
+의 다른 표현일 뿐이다.
 :::
 
 다음의 *projection theorem*은 이렇게 정의한 벡터 $\proj_Uv$가 $v$와 가장 가까운 $U$의 원소임을 알려준다.
@@ -253,7 +245,7 @@ $$\lVert v-u\rVert=\lVert v-u'\rVert\leq\left\lVert v-\frac{u+u'}{2}\right\rVert
 
 $$\lVert v-u\rVert+\lVert v-u'\rVert=\lVert (v-u)+(v-u')\rVert$$
 
-이다. 만일 $v-u'=0$이라면 $\lVert v-u\rVert=\lVert v-u'\rVert=0$이므로 $u=u'=v$이고 원하는 결론이 이미 성립하므로, $v-u'\neq 0$이라 가정하여도 좋다. 이제 [명제 4](#prop4)의 증명에서 확인한 삼각부등식의 등호조건으로부터 $v-u$와 $v-u'$가 linearly dependent이고, $v-u'\neq 0$이므로 다음의 식
+이다. 이제 삼각부등식의 등호조건으로부터 다음의 식
 
 $$v-u=\lambda (v-u')$$
 

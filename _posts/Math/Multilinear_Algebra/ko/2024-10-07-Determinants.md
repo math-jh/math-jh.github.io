@@ -10,8 +10,6 @@ sidebar:
 
 date: 2024-10-07
 weight: 11
-revising: true
-drift_needed: true
 
 ---
 
@@ -23,10 +21,10 @@ $$e_J=e_{j_1}\wedge e_{j_2}\wedge\cdots\wedge e_{j_k},\qquad j_1<\cdots < j_k, \
 
 의 꼴로 나타나는 원소 $e_J$들이 $\bigwedge(M)$의 basis가 되는 것을 확인했다. ([§텐서대수, ⁋명제 13](/ko/math/multilinear_algebra/tensor_algebras#prop13)) 특히, $\lvert J\rvert=n$을 만족하는 $J$들을 모아둔다면 이들은 $\bigwedge^n(M)$의 basis가 된다. 
 
-이제 $M$이 finite basis $e_1,\ldots, e_n$을 갖는다 하자. 그럼 $\bigwedge^n(M)$의 basis는 단 하나의 원소 $e_1\wedge\cdots\wedge e_n$ 뿐이다. 한편 임의의 $u\in\End_\rMod{A}(M)$에 대하여, $\bigwedge$의 functoriality로부터 $\bigwedge^n(u):\bigwedge^n(M)\rightarrow\bigwedge^n(M)$이 유도되며, 위의 논의로부터 이 linear map은 반드시 $x\mapsto \alpha x$의 꼴로 쓰여야 한다.
+이제 $M$이 유한한 basis $e_1,\ldots, e_n$을 갖는다 하자. 그럼 $\bigwedge^n(M)$의 basis는 단 하나의 원소 $e_1\wedge\cdots\wedge e_n$ 뿐이다. 한편 임의의 $u\in\End_\rMod{A}(M)$에 대하여, $\bigwedge$의 functoriality로부터 $\bigwedge^n(u):\bigwedge^n(M)\rightarrow\bigwedge^n(M)$이 유도되며, 위의 논의로부터 이 linear map은 반드시 $x\mapsto \alpha x$의 꼴로 쓰여야 한다.
 
 ::: 정의 1
-Free $A$-module $M$이 finite basis $e_1,\ldots, e_n$을 갖는다 하자. 그럼 임의의 $u\in\End_\rMod{A}(M)$에 대하여, 위의 논의에서 얻어지는 $\alpha\in A$를 $u$의 *행렬식<sub>determinant</sub>*이라 부르고 $\det u$로 적는다.
+Free $A$-module $M$이 유한한 basis $e_1,\ldots, e_n$을 갖는다 하자. 그럼 임의의 $u\in\End_\rMod{A}(M)$에 대하여, 위의 논의에서 얻어지는 $\alpha\in A$를 $u$의 *행렬식<sub>determinant</sub>*이라 부르고 $\det u$로 적는다.
 :::
 
 그럼 정의로부터 다음 명제가 자명하다.
@@ -46,31 +44,11 @@ Free $A$-module $M$이 finite basis $e_1,\ldots, e_n$을 갖는다 하자. 그�
 2. $\det u$가 $A$에서 가역이다.
 :::
 ::: 증명
-2번 조건을 가정하고 1번 조건을 보이면 충분하다. $x_i=u(e_i)$로 정의하면 $\bigwedge^n(u)$가 $\det(u)$를 곱하는 linear map인 것으로부터
+2번 조건을 가정하고 1번 조건을 보이면 충분하다. 이를 위해서는 $x_i=u(e_i)$로 정의하여
 
 $$x_1\wedge \cdots\wedge x_n=\det(u) e_1\wedge\cdots\wedge e_n$$
 
-를 얻으며, 같은 이유로 임의의 $z_1,\ldots, z_n\in M$에 대하여 $u(z_1)\wedge\cdots\wedge u(z_n)=\det(u)z_1\wedge\cdots\wedge z_n$이 성립한다. 이로부터 $u$의 역사상을 만들기 위해, 먼저 $\bigwedge^{n-1}(M)$과 $M$ 사이의 wedge를 살펴보자. $J_k=\{1,\ldots, n\}\setminus\{k\}$로 두면 $\bigwedge^{n-1}(M)$은 $(e_{J_k})_{1\leq k\leq n}$을 basis로 가지며, $e_{J_k}\wedge e_l$은 $l\neq k$인 경우 $0$이고 $l=k$인 경우 $(-1)^{n-k}e_1\wedge\cdots\wedge e_n$이다. 따라서 $\bigwedge^n(M)$의 basis $e_1\wedge\cdots\wedge e_n$을 이용하여 $\Hom_\rMod{A}(\bigwedge^{n-1}(M),\bigwedge^n(M))$을 $\bigwedge^{n-1}(M)$의 dual과 동일시하면, 다음의 $A$-linear map
-
-$$\theta: M \rightarrow \Hom_\rMod{A}\left({\bigwedge}^{n-1}(M),{\bigwedge}^n(M)\right);\qquad z\mapsto (\eta\mapsto \eta\wedge z)$$
-
-는 $e_k$를 $(-1)^{n-k}e_{J_k}^\ast$로 보낸다. 즉 $\theta$는 basis를 basis로 보내므로 isomorphism이다. ([§쌍대공간, ⁋정의 6](/ko/math/multilinear_algebra/dual_spaces#def6))
-
-이제 임의의 $y\in M$에 대하여 $\eta\mapsto \bigwedge^{n-1}(u)(\eta)\wedge y$는 $\bigwedge^{n-1}(M)$에서 $\bigwedge^n(M)$으로의 $A$-linear map이므로, $\theta$가 isomorphism인 것으로부터 임의의 $\eta\in\bigwedge^{n-1}(M)$에 대하여
-
-$$\eta\wedge v(y)={\bigwedge}^{n-1}(u)(\eta)\wedge y$$
-
-를 만족하는 $v(y)\in M$이 유일하게 존재한다. 우변이 $y$에 대해 linear이므로 이 대응은 $v\in\End_\rMod{A}(M)$을 정의한다. 여기에 $\eta=z_1\wedge\cdots\wedge z_{n-1}$과 $y=u(z_n)$을 대입하면 우변은 $u(z_1)\wedge\cdots\wedge u(z_n)=\det(u)z_1\wedge\cdots\wedge z_n$이므로
-
-$$\eta\wedge\left(v(u(z_n))-\det(u)z_n\right)=0$$
-
-을 얻는데, 이러한 꼴의 $\eta$들이 $\bigwedge^{n-1}(M)$을 생성하므로 이 식은 모든 $\eta\in\bigwedge^{n-1}(M)$에 대하여 성립한다. 다시 $\theta$가 injective인 것으로부터
-
-$$v\circ u=\det(u)\id_M$$
-
-을 얻는다.
-
-이제 $\det u$가 가역이라는 가정을 쓰자. $s=(\det u)^{-1}v$로 두면 $s\circ u=\id_M$이고, [명제 2](#prop2)에 의하여 $(\det s)(\det u)=\det(\id_M)=1$이므로 $\det s$ 또한 가역이다. 그럼 위의 구성을 $u$ 대신 $s$에 적용하면 $s$ 또한 왼쪽 역원을 가지므로 $s$는 injective이다. 한편 $s\circ u\circ s=s$이므로 $s\circ(u\circ s-\id_M)=0$이고, $s$가 injective인 것으로부터 $u\circ s=\id_M$을 얻는다. 따라서 $u$는 $s$를 역사상으로 갖는 bijection이다.
+를 얻은 후, 양 변에 $\det(u)^{-1}$을 곱한 후 그 식으로부터 얻어지는 기저변환을 생각하면 된다.
 :::
 
 Free $A$-module $M$과 그 basis $e_1,\ldots, e_n$을 고정하면, 임의의 $M$의 원소들 $x_1,\ldots, x_n$에 대하여
@@ -102,7 +80,7 @@ $$x_1\wedge x_2\wedge\cdots\wedge x_p=\sum_{\lvert J\rvert=p}\det X_{J,\{1,\ldot
 :::
 
 ::: 명제 5
-두 free $A$-module $M,N$과 이들의 finite basis $(e_i)_{1\leq i\leq m}$, $(f_j)_{1\leq j\leq n}$가 각각 주어졌다 하고, $A$-linear map $u:M\rightarrow N$의 이 basis들에 대한 행렬표현을 $X$라 하자. 이제 $\min(m,n)$ 이하의 자연수 $p$에 대하여, $\bigwedge^p(u):\bigwedge^p(M) \rightarrow\bigwedge^p(N)$을 basis $(e_I)_{\lvert I\rvert=p}$, $(f_J)_{\lvert J\rvert=p}$에 대하여 행렬로 표현한 것은 $(\det(X_{J,I}))$로 주어진다.
+두 free $A$-module $M,N$과 이들의 유한한 basis $(e_i)_{1\leq i\leq m}$, $(f_j)_{1\leq j\leq n}$가 각각 주어졌다 하고, $A$-linear map $u:M\rightarrow N$의 이 basis들에 대한 행렬표현을 $X$라 하자. 이제 $\min(m,n)$ 이하의 자연수 $p$에 대하여, $\bigwedge^p(u):\bigwedge^p(M) \rightarrow\bigwedge^p(N)$을 basis $(e_I)_{\lvert I\rvert=p}$, $(f_J)_{\lvert J\rvert=p}$에 대하여 행렬로 표현한 것은 $(\det(X_{J,I}))$로 주어진다.
 :::
 ::: 증명
 주어진 상황에서 $I$의 원소들을 $i_1<\cdots< i_p$로 크기 순으로 나열하자. 그럼 $\bigwedge^p(u)$의 정의에 의하여
@@ -113,7 +91,7 @@ $${\bigwedge}^p(u)(e_I)=u(e_{i_1})\wedge\cdots\wedge u(e_{i_p})$$
 :::
 
 ::: 따름정리 6
-Free $A$-module $M$이 finite basis $(e_i)_{1\leq i\leq n}$을 갖는다 하자. 그럼 임의의 $u\in\End_\rMod{A}(M)$과 $\alpha,\beta\in A$에 대하여 다음 식
+Free $A$-module $M$이 유한한 basis $(e_i)_{1\leq i\leq n}$을 갖는다 하자. 그럼 임의의 $u\in\End_\rMod{A}(M)$과 $\alpha,\beta\in A$에 대하여 다음 식
 
 $$\det(\alpha\cdot\id_M+\beta u)=\sum_{k\geq 0}\tr\left({\bigwedge}^k(u)\right)\alpha^{n-k}\beta^k$$
 
@@ -252,7 +230,7 @@ $\chi_u(u)=0$.
 
 $$\chi_u(\x)\otimes_Ax=\chi_u(\x)(1\otimes_Ax)=\det(\x-\iota_!u)(1\otimes_Ax)$$
 
-이다. 그런데 [따름정리 3](#cor3)의 증명에서 $v\circ u=\det(u)\id_M$을 만족하는 $v$를 만든 과정은 finite basis를 갖는 free module과 그 endomorphism이 주어질 때마다 그대로 되풀이되므로, 이를 행렬의 언어로 옮기면 임의의 정사각행렬 $X$에 대하여 $YX=(\det X)I$를 만족하는 $Y$가 존재한다는 것이 된다. 이제 같은 결과를 $X^t$에 적용한 후 얻어진 식의 양변을 다시 transpose하면, 앞서 확인한 $\det(u^\ast)=\det(u)$, 곧 $\det(X^t)=\det(X)$로부터 $XY'=(\det X)I$를 만족하는 $Y'$ 또한 존재한다는 것을 안다. 한편 $\iota_!M$은 $\mathcal{B}'$를 basis로 갖는 free $A[\x]$-module이므로, 이를 $\psi$의 행렬표현에 적용하면 적당한 $v\in\End_\rMod{A[\x]}(\iota_!M)$이 존재하여 
+이다. 그런데 라플라스 전개를 생각하면 임의의 행렬 $X$와 $X$의 cofactor $Y$에 대해 $XY^t=(\det X)I$가 성립하므로, 적당한 $v\in\End_\rMod{A[\x]}(\iota_!M)$이 존재하여 
 
 $$\det(\x-\iota_!u)(1\otimes_Ax)=(\x-\iota_!u)(v(1\otimes_A x))$$
 

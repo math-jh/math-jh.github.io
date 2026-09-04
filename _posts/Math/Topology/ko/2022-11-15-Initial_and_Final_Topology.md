@@ -10,8 +10,6 @@ sidebar:
 
 date: 2022-11-15
 weight: 6
-revising: true
-drift_needed: true
 
 ---
 
@@ -58,11 +56,15 @@ Initial topology를 $\mathcal{T}_\ini$으로 적고, $\mathcal{S}$를 subbase로
 ::: 증명
 만일 $g$가 연속이라면 $f_i\circ g$는 연속함수들의 합성이므로 자명하게 연속이다. 따라서 반대방향만 보이자.
 
-각각의 함수 $f_i\circ g$가 연속이라 하자. [명제 2](#prop2)에 의해 $X$의 위상은 $\mathcal{S}$가 생성하는 위상이므로, $X$의 임의의 열린집합은 $\mathcal{S}$의 원소들의 유한 교집합들의 합집합으로 적힌다. 한편 preimage를 취하는 것은 임의의 합집합·교집합과 교환하므로, $\mathcal{S}$에 속하는 집합들의 preimage가 $Z$에서 열린집합이라는 것만 확인하면 충분하다. 그런데 임의의 $i\in I$와 $Y_i$의 열린집합 $U_i$에 대하여
+각각의 함수 $f_i\circ g$가 연속이라 하자. $X$의 임의의 열린 진부분집합 $U$에 대하여, [명제 2](#prop2)에 의해 
 
-$$g^{-1}\left(f_i^{-1}(U_i)\right)=(f_i\circ g)^{-1}(U_i)$$
+$$U=\bigcap_{j=1}^n f_j^{-1}(U_j)$$
 
-이고 가정에 의해 이는 $Z$의 열린집합이다. 즉, $g$는 연속이다.
+가 성립하도록 하는 $U_j$들이 존재한다. 따라서
+
+$$g^{-1}(U)=g^{-1}\left(\bigcap f_j^{-1}(U_j)\right)=\bigcap_{j=1}^n(f_j\circ g)^{-1}(U_j)$$
+
+이고 가정에 의해 $(f_j\circ g)^{-1}(U_j)$는 열린집합이므로 $g^{-1}(U)$ 또한 열린집합이어야 한다. 즉, $g$는 연속이다.
 :::
 
 
@@ -75,14 +77,14 @@ $$g^{-1}\left(f_i^{-1}(U_i)\right)=(f_i\circ g)^{-1}(U_i)$$
 $X$에 trivial topology가 주어졌다 하면, $X$로의 임의의 함수는 항상 연속이다. 하지만 일반적으로 위상의 합집합이 위상이 되지는 않기 때문에, initial topology와는 다르게 존재성 증명이 다음 명제에 강하게 의존하게 된다.
 
 ::: 명제 5
-[정의 4](#def4)의 final topology가 존재하며, 이는 다음의 집합
+[정의 4](#def4)의 위상은 다음의 집합
 
 $$\mathcal{T}_\fin=\{U\subseteq X\mid f^{-1}_i(U)\text{ is open in $Y_i$ for all $i$}\}$$
 
-과 같다.
+으로 정의된다.
 :::
 ::: 증명
-주어진 집합 $\mathcal{T}_\fin$가 실제로 위상이 된다는 것은 쉽게 확인할 수 있다. 따라서 $\mathcal{T}_\fin$가 [정의 4](#def4)의 조건을 모두 만족한다는 것만 보이면 충분하다. 
+주어진 위상 $\mathcal{T}_\fin$가 실제로 위상이 된다는 것은 쉽게 확인할 수 있다. 따라서 $\mathcal{T}_\fin$가 [정의 4](#def4)의 조건을 모두 만족한다는 것만 보이면 충분하다. 
 
 우선, 임의의 $U\in\mathcal{T}_\fin$와, 임의의 $i$에 대하여 $f_i^{-1}(U)$가 $Y_i$에서 open인 것은 $\mathcal{T}_\fin$의 정의로부터 명확하다. 한편, $X$ 위에 주어진 조건을 만족하는 또 다른 topology $\mathcal{T}$가 주어졌다 하자. 그럼 임의의 $U\in\mathcal{T}$에 대하여, $f^{-1}_i(U)$가 $Y_i$에서 open이어야 한다. 따라서, $\mathcal{T}_\fin$의 정의에 의해 $U\in\mathcal{T}_\fin$이고 따라서 $\mathcal{T}_\fin$가 $\mathcal{T}$보다 강하다.
 :::

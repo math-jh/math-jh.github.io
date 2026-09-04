@@ -10,8 +10,6 @@ sidebar:
 
 date: 2025-03-08
 weight: 11
-revising: true
-drift_needed: true
 
 ---
 
@@ -139,7 +137,7 @@ Cone의 언어로 보면 $\mathfrak{a}$가 $\mathbb{A}^2$에서 자르는 것은
 [\[대수다양체\] §사영다양체, ⁋정의 3](/ko/math/algebraic_varieties/projective_varieties#def3)에서 우리는 homogeneous polynomial들이 $\mathbb{P}^n$에서 자르는 닫힌집합을 projective algebraic set이라 부르고, 그 가운데 irreducible한 것을 projective variety라 불렀다. 이번 글의 결과는 이 정의를 scheme의 언어로 올릴 수 있게 해 준다. 
 
 ::: 정의 7
-Field $\mathbb{K}$ 위의 scheme $X$가 *projective scheme<sub>사영스킴</sub>*이라는 것은 적당한 $n\geq 0$과 $\mathbb{K}$-scheme으로서의 closed embedding $X \rightarrow \mathbb{P}^n_\mathbb{K}$이 존재한다는 것이다. ([§닫힌 부분스킴, ⁋정의 2](/ko/math/scheme_theory/closed_subschemes#def2))
+Field $\mathbb{K}$ 위의 scheme $X$가 *projective scheme<sub>사영스킴</sub>*이라는 것은 적당한 $n\geq 0$과 closed embedding $X \rightarrow \mathbb{P}^n_\mathbb{K}$이 존재한다는 것이다. ([§닫힌 부분스킴, ⁋정의 2](/ko/math/scheme_theory/closed_subschemes#def2))
 :::
 
 [정리 3](#thm3)과 [명제 5](#prop5)에 의하여, 동형을 무시하면 $\mathbb{K}$ 위의 projective scheme은 정확히 saturated homogeneous ideal $\mathfrak{a}\subseteq \mathbb{K}[\x_0,\ldots,\x_n]$에 대한 $\Proj\bigl(\mathbb{K}[\x_0,\ldots,\x_n]/\mathfrak{a}\bigr)$들이다. 뒤집어 말하면 projective scheme은 degree $1$의 원소들로 생성되는 finitely generated graded $\mathbb{K}$-algebra의 $\Proj$이다. 실제로 그러한 algebra $B_\bullet$의 degree $1$ 부분의 generator $n+1$개를 택하면 surjection $\mathbb{K}[\x_0,\ldots,\x_n] \rightarrow B_\bullet$을 얻고, [명제 1](#prop1)이 이를 closed embedding $\Proj B_\bullet \rightarrow \mathbb{P}^n_\mathbb{K}$으로 옮겨준다. 한편 [정의 7](#def7)은 고전적인 정의에서 irreducibility를 떼어낸 것으로, $\mathbb{K}$가 algebraically closed일 때 projective variety에 해당하는 것은 integral한 projective scheme이다. ([§스킴의 대수구조, ⁋정의 1](/ko/math/scheme_theory/algebra_of_schemes#def1))

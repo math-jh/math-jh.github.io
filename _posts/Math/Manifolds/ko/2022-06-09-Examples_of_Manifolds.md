@@ -10,9 +10,7 @@ sidebar:
 
 date: 2022-06-09
 weight: 2
-revising: true
 toc: false
-drift_needed: true
 
 ---
 
@@ -107,7 +105,7 @@ $$(x^1, x^2, \ldots, x^{i-1}, \pm \sqrt{1-\lvert x\rvert^2}, x^i, \ldots, x^n)\m
 이다. 여기서 $\hat{x}^j$는 $j$번째 성분이 없다는 것을 의미한다. 이 때, 우변의 식의 각 성분이 $x^i$들에 대한 $C^\infty$함수들이므로 $(\varphi_j^{\pm})\circ(\varphi_i^\pm)^{-1}$은 $C^\infty$이고, 비슷하게 $(\varphi_i^{\pm})\circ(\varphi_j^\pm)^{-1}$ 또한 $C^\infty$임을 확인할 수 있다. 따라서 위의 집합 $\mathcal{A}$는 $S^n$ 위에 미분구조를 정의한다.
 :::
 
-$S^n$ 위에 정의된 미분구조는 manifold의 전형적인 예시이다. 다음 예시는 위의 예시와는 다른 방법으로 $S^n$에 (동일한) 미분구조를 부여한다. 뒤에서 differential을 정의하고 나면, 이 예시를 더욱 일반화하여 manifold 구조를 주는 방법을 얻는다. 
+$S^n$ 위에 정의된 미분구조는 manifold의 전형적인 예시이다. 다음 예시는 위의 예시와는 다른 방법으로 $S^n$에 (동일한) 미분구조를 부여하는데, differential을 정의하고, 이 예시를 더욱 일반화하여 manifold 구조를 줄 수 있다. 
 
 ::: 예시 7
 $\mathbb{R}^n$의 열린집합 $U$와, $U$ 위에서 정의된 $C^\infty$ 함수 $F:U\rightarrow\mathbb{R}$, 그리고 $c\in\mathbb{R}$가 주어졌다 하자. 그럼 *level set* $M=F^{-1}(c)$가 잘 정의된다. 만일 여기에 더하여, 다음의 *Jacobian matrix* 
@@ -148,19 +146,7 @@ $$\varphi_i[x^1,\ldots, x^{n+1}]=\left(\frac{x^1}{x^i},\ldots,\frac{x^{i-1}}{x^i
 
 $$\psi_i:(u^1, \ldots, u^n)\mapsto [u^1, \ldots, u^{i-1}, 1, u^i,\ldots, u^n]$$
 
-이 $\varphi_i$의 역함수임을 쉽게 확인할 수 있으므로, 이들 $U_i$들은 모두 $\mathbb{R}^n$과 homeomorphic하다. 즉, $\RP^n$은 $n$차원 locally Euclidean이다.
-
-한편 quotient는 일반적으로 Hausdorff 조건도 second countability도 보존하지 않으므로, 이 둘은 따로 확인해야 한다. 우선 $\pi$는 open mapping이다. ([\[위상수학\] §열린사상과 닫힌사상, ⁋정의 1](/ko/math/topology/open_mappings_and_closed_mappings#def1)) 실제로 $W$가 $\mathbb{R}^{n+1}\setminus\{0\}$의 열린집합이라면
-
-$$\pi^{-1}(\pi(W))=\bigcup_{\lambda\neq 0}\lambda W$$
-
-이고, 각 $\lambda\neq 0$마다 $x\mapsto\lambda x$가 homeomorphism이므로 우변은 열린집합들의 합집합, 곧 열린집합이다. 따라서 $\pi(W)$는 $\RP^n$의 열린집합이다. 이제 $\mathbb{R}^{n+1}\setminus\{0\}$의 countable base $\mathcal{B}$를 하나 고정하자. $\RP^n$의 열린집합 $V$와 그 원소 $[x]$가 주어졌다면 $x\in B\subseteq\pi^{-1}(V)$인 $B\in\mathcal{B}$가 존재하고, 따라서 $[x]\in\pi(B)\subseteq V$이다. 따라서 $\{\pi(B)\mid B\in\mathcal{B}\}$는 $\RP^n$의 countable base이고, $\RP^n$은 second countable이다.
-
-Hausdorff 조건은 집합
-
-$$R=\{(x,y)\in(\mathbb{R}^{n+1}\setminus\{0\})\times(\mathbb{R}^{n+1}\setminus\{0\})\mid x\sim y\}$$
-
-이 닫힌집합이라는 사실로부터 얻어진다. $x,y\neq 0$에 대하여 $x=\lambda y$인 $\lambda\neq 0$이 존재하는 것은 모든 $i,j$에 대하여 $x^iy^j-x^jy^i=0$인 것과 동치이므로, $R$은 연속함수들의 zero set으로서 닫힌집합이다. 이제 $[x]\neq[y]$라 하면 $(x,y)\notin R$이므로 $x$의 열린근방 $A$와 $y$의 열린근방 $A'$가 존재하여 $(A\times A')\cap R=\emptyset$이도록 할 수 있다. 그럼 $\pi(A)$와 $\pi(A')$는 각각 $[x]$와 $[y]$를 포함하는 열린집합이고, 만일 이 둘이 만난다면 $u\sim v$인 $u\in A$와 $v\in A'$가 존재해 $(u,v)\in R$이 되므로, 이 둘은 서로소이다. 따라서 $\RP^n$은 Hausdorff이고, topological manifold가 된다.
+이 $\varphi_i$의 역함수임을 쉽게 확인할 수 있으므로, 이들 $U_i$들은 모두 $\mathbb{R}^n$과 homeomorphic하다. 즉, $\RP^n$은 $n$차원 locally Euclidean이다. Quotient topology의 성질로부터 $\RP^n$이 Hausdorff이고 second countable임을 알 수 있으므로, $\RP^n$은 topological manifold가 된다.
 
 한편, 이들 $(U_i,\varphi_i),(U_j,\varphi_j)$들 간의 transition map을 생각해보면, 우선 $\varphi_j^{-1}$에 의하여
 

@@ -10,8 +10,6 @@ sidebar:
 
 date: 2021-08-15
 weight: 8
-revising: true
-drift_needed: true
 
 ---
 
@@ -53,7 +51,7 @@ $$\forall i(i\in I\implies x\in A_i)$$
 
 $$(x\in A)\wedge (\forall i(i\in I\implies x\in A_i))$$
 
-이 되므로 $\bigcap_{i\in I} A_i=A$이다. 앞으로 모든 명제에서, 집합들의 family의 교집합을 택할 일이 있을 경우는 $I$가 공집합이 아니거나 주어진 family가 어떠한 집합의 부분집합들의 family임을 가정한다. $I$의 부분집합 $J$에 대하여 $\bigcap_{j\in J}A_j$를 택할 때에도 같은 가정을 적용하여, $J$가 공집합이 아니거나 주어진 family가 어떠한 집합의 부분집합들의 family임을 가정한다. 
+이 되므로 $\bigcap_{i\in I} A_i=A$이다. 앞으로 모든 명제에서, 집합들의 family의 교집합을 택할 일이 있을 경우는 $I$가 공집합이 아니거나 주어진 family가 어떠한 집합의 부분집합들의 family임을 가정한다. 
 
 ::: 명제 4
 집합들의 family $(A_i)_{i\in I}$와 전사함수 $f:K\rightarrow I$를 생각하자. 그럼 다음의 두 식
@@ -140,8 +138,6 @@ $$R\left(\bigcup_{i\in I} A_i\right)=\bigcup_{i\in I}R(A_i),\quad R\left(\bigcap
 
 ::: 증명
 한쪽 포함관계는 더 일반적인 경우에서 증명하였으므로, 반대쪽 포함관계만 증명하면 충분하다. 
-
-만일 $I=\emptyset$이라면 [정의 3](#def3)에 의하여 양변이 모두 $A$이므로 등식이 성립한다. 따라서 $I\neq\emptyset$이라 가정하자.
 
 임의의 $x\in\bigcap_{i\in I} f^{-1}(B_i)$가 주어졌다 하자. 그럼 모든 $i$에 대하여 $x\in f^{-1}(B_i)$이다. 즉, 모든 $i$에 대해 $(x,y_i)\in F$이도록 하는 $y_i\in B_i$가 존재한다. 그런데 $f$가 함수이므로 그러한 $y_i$는 유일하다. 이 공통된 값을 $y$라 하면 모든 $i\in I$에 대해 $y\in B_i$이므로 $y\in\bigcap_{i\in I} B_i$이고, 따라서 $f(x)=y$에서 $x\in f^{-1}\left(\bigcap_{i\in I} B_i\right)$이다.
 :::

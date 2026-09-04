@@ -10,8 +10,6 @@ sidebar:
 
 date: 2022-12-12
 weight: 14
-revising: true
-drift_needed: true
 
 ---
 
@@ -138,9 +136,7 @@ $$[d_1, d_2]_\varepsilon = d_1 \circ d_2 - \varepsilon_{\delta_1, \delta_2} d_2 
 은 degree $\delta_1 + \delta_2$를 갖는 또 다른 $\varepsilon$-derivation이 된다. 특히, 만일 $d$가 degree $\delta$를 갖는 $\varepsilon$-derivation이고, $\varepsilon_{\delta, \delta} = -1$이라면, $d^2 = d \circ d$는 derivation이다.
 :::
 
-이는 앞에서 계산한 $(d_2\circ d_1)(xx')$의 전개식과, 거기에서 첨자 $1$과 $2$를 맞바꾼 $(d_1\circ d_2)(xx')$의 전개식을 함께 보면 확인할 수 있다. $\xi=\deg(x)$라 적으면, 두 전개식의 첫째 항끼리는 $(d_1d_2x)x'-\varepsilon_{\delta_1,\delta_2}(d_2d_1x)x'=([d_1,d_2]_\varepsilon x)x'$을 주고, 넷째 항끼리는 $\varepsilon(\delta_1,\xi)\varepsilon(\delta_2,\xi)=\varepsilon(\delta_1+\delta_2,\xi)$이므로 $\varepsilon(\delta_1+\delta_2,\xi)x([d_1',d_2']_\varepsilon x')$을 준다. 따라서 가운데 두 항이 사라진다는 것만 보이면 되는데, $(d_2x)(d_1'x')$의 계수는 $\varepsilon(\delta_1,\delta_2+\xi)-\varepsilon_{\delta_1,\delta_2}\varepsilon(\delta_1,\xi)$이고 이는 [정의 1](#def1)의 둘째 조건에 의해 $0$이며, $(d_1x)(d_2'x')$의 계수는 $\varepsilon(\delta_2,\xi)\bigl(1-\varepsilon(\delta_1,\delta_2)\varepsilon(\delta_2,\delta_1)\bigr)$이고 이는 $\varepsilon$이 대칭이며 그 값이 $\pm 1$이므로 $0$이다. 그럼 $[d_1,d_2]_\varepsilon$은 degree $\delta_1+\delta_2$의 $\varepsilon$-derivation이 된다. 
-
-한편 둘째 주장은 첫 주장에 $d_1=d_2=d$를 대입해서는 얻어지지 않는다. $\varepsilon_{\delta,\delta}=-1$이면 $[d,d]_\varepsilon=d^2+d^2=2d^2$인데, $\varepsilon$-derivation들의 모임은 덧셈에 대해 abelian group을 이룰 뿐이므로 $2d^2$가 이 모임에 속한다고 해서 $d^2$가 속하는 것은 아니기 때문이다. 대신 위의 전개식에 직접 $d_1=d_2=d$를 넣으면 가운데 두 항은 $\bigl(\varepsilon(\delta,\delta)+1\bigr)\varepsilon(\delta,\xi)(\dd{x})(d'x')$이 되어 $\varepsilon_{\delta,\delta}=-1$에서 사라지고, 마지막 항의 계수는 $\varepsilon(2.\delta,\xi)=1$이므로 $(d\circ d)(xx')=(d^2x)x'+x(d'^2x')$, 곧 $d^2$는 derivation이다. 
+이에 대한 증명은 앞에서 계산한 $(d_2\circ d_1)(xx')$의 전개식을 사용하면 자명하다. 
 
 그럼 특히 $\Delta=\mathbb{Z}$인 경우로 한정지으면, 위의 명제는 다음의 따름정리를 갖는다. 
 
@@ -164,8 +160,8 @@ $$D^2=\partial_i^2+2\partial_i\partial_j+\partial_j^2$$
 와 같이 적을 수도 있다. 다음 명제는 이를 더욱 일반화한 것이다. 
 
 ::: 명제 5
-$D_1, \dots, D_n$을 $(E, E', E'')$ 위의 서로 commute하는 degree $0$의 $\varepsilon$-derivation들이라 하자. 임의의 $\beta\in\Delta$에 대하여 $\varepsilon(0, \beta)=1$이므로 이들에 대해서는 commutation factor가 나타나지 않으며, 이들이 서로 commute하므로 미지수 $T_1, \dots, T_n$에 대한 다항식 
-$F \in A[T_1, \dots, T_n]$에 $T_i=D_i$를 대입한 $F(D)=F(D_1, \dots, D_n)$이 잘 정의된다. 이제 이러한 $F$가 주어졌다고 하자. 즉 $F(T)$, $F(T')$는 각각
+위 가정과 표기 아래에서, 미지수 $T_1, \dots, T_n$에 대한 다항식 
+$F \in A[T_1, \dots, T_n]$가 주어졌다고 하자. 즉 $F(T)$, $F(T')$는 각각
 
 $$F(T) = F(T_1, \dots, T_n), \qquad F(T') = F(T_1', \dots, T_n')$$
 
@@ -188,7 +184,7 @@ $$F(D)(x x') = \sum_i (Q_i(D) x)(R_i(D) x')$$
 
 ## $A$-대수의 미분
 
-이제 우리는 [정의 2](#def2) 이후 다뤘던 두 가지 특별한 경우 중 두 번째 경우를 살펴본다. 즉 $\Delta$-graded $A$-algebra $E$와 graded $A$-module $F$, 그리고 두 개의 곱셈 $E\otimes_AF \rightarrow F$와 $F\otimes_AE \rightarrow F$가 주어졌다 하자. 앞으로 이 두 곱셈은 $F$를 unital graded $(E,E)$-bimodule로 만든다고 가정한다. 즉 임의의 $x,y\in E$와 $m\in F$에 대하여 $(xy)m=x(ym)$, $(xm)y=x(my)$, $(mx)y=m(xy)$가 성립하며, $E$가 $1$을 갖는다면 $1m=m1=m$이다. 
+이제 우리는 [정의 2](#def2) 이후 다뤘던 두 가지 특별한 경우 중 두 번째 경우를 살펴본다. 즉 $\Delta$-graded $A$-algebra $E$와 graded $A$-module $F$, 그리고 두 개의 곱셈 $E\otimes_AF \rightarrow F$와 $F\otimes_AE \rightarrow F$가 주어졌다 하자. 
 
 ::: 명제 6
 Degree $\delta$의 $\varepsilon$-derivation $d:E \rightarrow F$에 대하여, $\ker(d)$는 $E$의 graded subalgebra이며, 만약 $E$가 $1$을 갖는다면 $1 \in \ker(d)$이다.
@@ -212,9 +208,10 @@ $$\dd{(1)} = \dd{(1 \cdot 1)} = (d1) \cdot 1 + \varepsilon_{\delta, 0} \cdot 1 \
 ::: 명제 7
 $E$가 $1$을 갖는 $\Delta$-graded $A$-algebra라 하고, degree $\delta$의 $\varepsilon$-derivation $d:E \rightarrow F$를 생각하자. 만일 $x$가 $E$의 invertible homogeneous element라면, 그 역원 $x^{-1}$에 대하여 다음의 식
 
-$$\dd{(x^{-1})} = -\varepsilon_{\delta, \deg(x)} x^{-1}(\dd{(x)})x^{-1}$$
+$$\dd{(x^{-1})} = -\varepsilon_{\delta, \deg(x)} x^{-1}(\dd{(x)})x^{-1}
+= -\varepsilon_{\delta, \deg(x)} (\dd{(x)}) x^{-2}$$
 
-이 성립한다. 만일 추가로 $x^{-1}(\dd{(x)}) = (\dd{(x)})x^{-1}$이 성립한다면, 우변은 $-\varepsilon_{\delta, \deg(x)} (\dd{(x)}) x^{-2}$와 같다. 
+이 성립한다. 
 :::
 ::: 증명
 [명제 6](#prop6)에 의해 $\dd{(1)} = 0$이므로,
@@ -230,7 +227,7 @@ $$0 = x^{-1}(\dd{(x)})x^{-1} + \varepsilon_{\delta, \deg(x)} \dd{(x^{-1})}$$
 $$\dd{(x^{-1})} = -\varepsilon_{\delta, \deg(x)} x^{-1}(\dd{(x)})x^{-1}.
 $$
 
-을 얻는다. 여기에서 $x^{-1}$과 $\dd{(x)}$가 commute한다면 $x^{-1}(\dd{(x)})x^{-1}=(\dd{(x)})x^{-1}x^{-1}=(\dd{(x)})x^{-2}$이므로 둘째 식을 얻는다. 일반적으로는 $x^{-1}$을 $\dd{(x)}$ 너머로 옮길 수 없으므로 둘째 식이 성립한다고 할 수 없다. 
+을 얻는다. 또한 $x^{-1}$의 degree는 $-\deg(x)$인 것을 이용하여 $\dd{(x^{-1}x)}$를 계산하면 둘째 등식을 얻는다. 
 :::
 
 ::: 명제 8
@@ -238,7 +235,7 @@ $$
 :::
 
 ::: 증명
-임의의 derivation $d:E \rightarrow F$가 주어졌다 하고, $d$를 $K$ 위로 확장한 $\bar{d}$가 존재한다면, $K$가 commutative이므로 [명제 7](#prop7)을 적용하여 다음의 식
+임의의 derivation $d:E \rightarrow F$가 주어졌다 하고, $d$를 $K$ 위로 확장한 $\bar{d}$가 존재한다면, [명제 7](#prop7)을 적용하여 다음의 식
 
 $$\bar{d}(u/v) = v^{-1} \dd{(u)} - v^{-2} u\dd{(v)}$$
 
@@ -262,26 +259,12 @@ $$v v'^2 \dd{(u)} + u v v' \dd{(v')} = v^2 v' \dd{(u')} + u' v v' \dd{(v)}$$
 
 $$v^{-1} \dd{(u)} - v^{-2} u \dd{(v)} = v'^{-1} \dd{(u')} - v'^{-2} u' \dd{(v')}$$
 
-이다. 따라서 정의는 $K$의 원소 $u/v$의 표현에 무관하게 잘 정의되어 있다.
-
-이제 $\bar{d}$가 실제로 $K$에서 $F$로의 $A$-derivation이 되는지 보자. $A$의 원소 $a$에 대한 $\bar{d}(a(u/v))=a\bar{d}(u/v)$는 $a(u/v)=(au)/v$와 $d$의 $A$-linearity에서 곧바로 따라오므로, 가법성과 Leibniz rule만 확인하면 된다. $u/v+u'/v'=(uv'+u'v)/(vv')$이므로 정의에 의해
-
-$$\bar{d}\left(\frac{uv'+u'v}{vv'}\right)=(vv')^{-1}(v'\dd{(u)}+u\dd{(v')}+v\dd{(u')}+u'\dd{(v)})-(vv')^{-2}(uv'+u'v)(v'\dd{(v)}+v\dd{(v')})$$
-
-이고, 우변을 전개하면 $u\dd{(v')}$가 붙은 두 항과 $u'\dd{(v)}$가 붙은 두 항이 각각 상쇄되어
-
-$$v^{-1}\dd{(u)}-v^{-2}u\dd{(v)}+v'^{-1}\dd{(u')}-v'^{-2}u'\dd{(v')}=\bar{d}(u/v)+\bar{d}(u'/v')$$
-
-만 남는다. 비슷하게 $(u/v)(u'/v')=uu'/(vv')$이므로
-
-$$\bar{d}\left(\frac{uu'}{vv'}\right)=(vv')^{-1}(u\dd{(u')}+u'\dd{(u)})-(vv')^{-2}uu'(v'\dd{(v)}+v\dd{(v')})$$
-
-인데, 이는 $(u/v)\bar{d}(u'/v')+(u'/v')\bar{d}(u/v)$를 전개한 것과 항별로 일치한다. 또한 임의의 $u\in E$에 대하여 $\bar{d}(u/1)=\dd{(u)}$이므로 $\bar{d}$는 $d$를 확장한다. 
+이다. 따라서 정의는 $K$의 원소 $u/v$의 표현에 무관하게 잘 정의되어 있다. 이제 $\bar{d}$가 실제로 $K$에서 $F$로의 $A$-derivation의 조건을 만족한다는 것은 단순한 계산이다. 
 :::
 
 다음 명제에서, 표기의 편의를 위해 임의의 degree $\delta$ $\varepsilon$-derivation $d:E \rightarrow F$에 대하여 
 
-$$Z_\varepsilon=\{a\in E\mid \text{$xa_d=\varepsilon(d,\deg(x))a_dx$ for all homogeneous component $a_d$ of $a$ and for all homogeneous $x\in E$.}\}$$
+$$Z_\varepsilon=\{a\in E\mid \text{$xa_d=\varepsilon(d,\deg(x))a_dx$ for all homogeneous component $a_d$ of $a$ and for all homogeneous $x\in F$.}\}$$
 
 으로 정의하자. 
 

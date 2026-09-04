@@ -10,8 +10,6 @@ sidebar:
 
 date: 2025-02-18
 weight: 10
-revising: true
-drift_needed: true
 ---
 
 [§스킴, ⁋보조정리 2](/ko/math/scheme_theory/schemes#lem2)에서 우리는 affine scheme $\Spec A$에 대하여, 임의의 원소 $f$가 open affine subscheme $D(f)\cong \Spec A_f$를 정의하는 것을 살펴보았으며, 특히 이 두 structure sheaf를 비교하기 위해 우리는 $\epsilon: A \rightarrow A_f$로부터 얻어지는
@@ -76,7 +74,7 @@ $$B=\im\phi\cong A/\ker\phi$$
 이므로 이 성질이 $\pi$를 정확하게 characterize한다. 한편 [\[가환대수학\] §국소화의 성질들, ⁋명제 4](/ko/math/commutative_algebra/properties_of_localization#prop4)를 생각하면, $\pi$의 surjectivity는 임의의 prime ideal $\mathfrak{p}$에서의 localization $\pi_\mathfrak{p}: A_\mathfrak{p} \rightarrow (A/\mathfrak{a})_{\mathfrak{p}}$이 surjective인지를 살펴보아 확인할 수 있으며 이는 기하적으로는 affine scheme $\Spec A$에서의 임의의 점 $\mathfrak{p}$에서의 stalk을 살펴보는 것과 같고, 따라서 [\[위상수학\] §층, ⁋명제 15](/ko/math/topology/sheaves#prop15)에 의해 $(\Spec\pi)^\sharp$이 surjective인 것과 같다. 
 
 ::: 정의 2
-Scheme morphism $\iota: Z \rightarrow X$가 *closed embedding<sub>닫힌 매장</sub>*이라는 것은 $\iota$가 연속함수로서 $Z$와 $X$의 닫힌집합 사이의 homeomorphism이고, sheaf morphism $\iota^\sharp: \mathcal{O}_X \rightarrow \iota_\ast \mathcal{O}_Z$가 surjective인 것이다.
+Scheme morphism $\iota: Z \rightarrow X$가 *closed embedding<sub>닫힌 몰입</sub>*이라는 것은 $\iota$가 연속함수로서 $Z$와 $X$의 닫힌집합 사이의 homeomorphism이고, sheaf morphism $\iota^\sharp: \mathcal{O}_X \rightarrow \iota_\ast \mathcal{O}_Z$가 surjective인 것이다.
 
 $X$로의 두 closed embedding $\iota: Z \rightarrow X$와 $\iota': Z' \rightarrow X$에 대하여 isomorphism $\theta: Z' \rightarrow Z$가 존재하여 $\iota'=\iota\circ \theta$이도록 할 수 있다면 이 둘을 서로 equivalent하다 하고, 이 equivalence class를 $X$의 *closed subscheme<sub>닫힌 부분스킴</sub>*이라 부른다.
 :::
@@ -137,7 +135,7 @@ $$\varphi(X)\cap V=Z(\mathfrak{b})$$
 
 ## 닫힌 매장의 성질들
 
-[명제 3](#prop3)에 의하여 임의의 closed embedding은 항상 affine-local on target이고, closed embedding은 합성에 대해서도 닫혀있다는 것을 안다. 이 때 [명제 3](#prop3)의 둘째 조건은 $Y$의 임의의 affine open subset에 대하여 요구되는 것이지만, 둘째 조건으로부터 첫째 조건을 이끌어낸 논증은 $Y$의 affine open covering $\{V_i\}$ 하나만을 사용하였다. 따라서 scheme morphism $\varphi: X \rightarrow Y$에 대하여 $Y$의 어떤 affine open covering $\{V_i=\Spec B_i\}$가 존재하여 각각의 preimage $\varphi^{-1}(V_i)\cong \Spec A_i$가 affine이고 이에 대응되는 $B_i \rightarrow A_i$가 surjective이면, $\varphi$는 closed embedding이고 다시 [명제 3](#prop3)에 의하여 $Y$의 임의의 affine open subset에 대해서도 둘째 조건이 성립한다. 뿐만 아니라 다음이 성립한다.
+[명제 3](#prop3)에 의하여 임의의 closed embedding은 항상 affine-local on target이고, closed embedding은 합성에 대해서도 닫혀있다는 것을 안다. 뿐만 아니라 다음이 성립한다.
 
 ::: 명제 4
 임의의 closed embedding은 항상 finite morphism이다.

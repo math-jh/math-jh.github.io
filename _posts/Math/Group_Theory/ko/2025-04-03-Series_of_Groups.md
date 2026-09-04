@@ -10,8 +10,6 @@ sidebar:
 
 date: 2025-04-03
 weight: 3
-revising: true
-drift_needed: true
 
 ---
 
@@ -135,7 +133,7 @@ $$[C_m(G), C_1(G)]\subseteq C_{m+1}(G),\qquad [C_1(G), C_n(G)]\subseteq C_{n+1}(
 이제 다음을 정의한다. 
 
 ::: 정의 6
-Group $G$가 *nilpotent group<sub>멱영군</sub>*이라는 것은 적당한 음이 아닌 정수 $n$이 존재하여 $C_{n+1}(G)=\{e\}$인 것이다. 이 조건을 만족하는 $n$ 중 가장 작은 것을 $G$의 *nilpotency class*라 부른다. 
+Group $G$가 *nilpotent group<sub>멱영군</sub>*이라는 것은 적당한 자연수 $n$이 존재하여 $C_{n+1}(G)=\{e\}$인 것이다. 이 조건을 만족하는 자연수 중 가장 작은 $n$을 $G$의 *nilpotency class*라 부른다. 
 :::
 
 그럼 다음이 성립한다. 
@@ -146,7 +144,7 @@ Group $G$와 자연수 $n$에 대하여, 다음이 모두 동치이다.
 1. $G$가 nilpotent group of nilpotency class $\leq n$이다. 
 2. 적당한 $G$의 subgroup들의 decreasing sequence
     
-    $$G=G_1\supseteq G_2\supseteq\cdots\supseteq G_{n+1}=\{e\}$$
+    $$G=G_1\supset G_2\supset\cdots\supset G_{n+1}=\{e\}$$
 
     가 존재하여 $[G, G_k]\subseteq G_{k+1}$이 모든 $k$에 대해 성립한다.
 3. $G$의 center $Z(G)$에 포함되어 있는 subgroup $A$가 존재하여, $G/A$가 nilpotent group of nilpotency class $\leq n-1$이다. 
@@ -192,7 +190,7 @@ Group homomorphism $f:G \rightarrow G'$에 대하여, $f(D_n(G))\subseteq D_n(G'
 이에 대한 증명은 [명제 4](#prop4)와 마찬가지로 귀납법을 사용하면 된다. Lower central series의 stability condition으로 nilpotent group을 정의한 것과 같이, solvable group은 derived series의 stability condition으로 정의된다. 
 
 ::: 정의 11
-Group $G$가 *solvable<sub>가해</sub>*이라는 것은 적당한 음이 아닌 정수 $n$이 존재하여 $D_n(G)=\{e\}$인 것이다. 이 조건을 만족하는 $n$ 중 가장 작은 것을 $G$의 *solvability class*라 부른다.
+Group $G$가 *solvable<sub>가해</sub>*이라는 것은 적당한 자연수 $n$이 존재하여 $D_n(G)=\{e\}$인 것이다. 이 조건을 만족하는 자연수 중 가장 작은 $n$을 $G$의 *solvability class*라 부른다.
 :::
 
 정의에 의하여 $D_0(G)=C_1(G)=G$이고 $D_1(G)=[G,G]=C_2(G)$가 성립한다. 그럼 이 사실과 [명제 5](#prop5)로부터, 귀납적으로 다음의 포함관계
@@ -207,13 +205,11 @@ Group $G$와 자연수 $n$에 대하여, 다음이 모두 동치이다.
 1. $G$가 solvable group of solvability class $\leq n$이다. 
 2. 적당한 $G$의 subgroup들의 decreasing sequence
     
-    $$G=G_1\supseteq G_2\supseteq\cdots\supseteq G_{n+1}=\{e\}$$
+    $$G=G_1\supset G_2\supset\cdots\supset G_{n+1}=\{e\}$$
 
     가 존재하여 $G_k/G_{k+1}$들이 모두 commutative이다. 
 3. $G$의 normal commutative subgroup $A$가 존재하여, $G/A$가 solvable group of solvability class $\leq n-1$이다. 
 :::
-
-이에 대한 증명은 [명제 7](#prop7)의 증명과 같은 방식으로 얻어진다. 첫째 조건을 가정하면 $G_k=D_{k-1}(G)$가 둘째 조건을 만족하며, 거꾸로 둘째 조건이 성립한다면 $G_k/G_{k+1}$이 commutative인 것으로부터 $D_{k-1}(G)\subseteq G_k$가 귀납적으로 성립하여 $D_n(G)\subseteq G_{n+1}=\{e\}$를 얻는다. 나머지 동치의 경우, [명제 10](#prop10)을 inner automorphism에 적용하면 $D_k(G)$들이 모두 $G$의 normal subgroup인 것을 알 수 있으므로, 첫째 조건을 가정하면 $A=D_{n-1}(G)$가 $[A,A]=D_n(G)=\{e\}$로부터 commutative이고 $D_{n-1}(G/A)$가 [명제 10](#prop10)에 의하여 $A$의 image, 곧 $\{e\}$이므로 셋째 조건이 성립한다. 거꾸로 셋째 조건을 가정하면 canonical morphism $G \rightarrow G/A$에 [명제 10](#prop10)을 적용하여 $D_{n-1}(G)\subseteq A$를 얻고, $A$가 commutative이므로 $D_n(G)=[D_{n-1}(G),D_{n-1}(G)]\subseteq [A,A]=\{e\}$이다. 
 
 따라서, 직관적으로 solvable group of solvability class $\leq n$은 trivial group $\{e\}$를 $n$개의 abelian group들로 extend하여 얻어지는 것으로 생각할 수 있다. 
 
@@ -224,16 +220,16 @@ Group $G$와 자연수 $n$에 대하여, 다음이 모두 동치이다.
 ::: 정의 13
 Group $G$의 subgroup들의 sequence
 
-$$G=G_0\supseteq G_1\supseteq \cdots\supseteq G_n=\{e\}$$
+$$G=G_0\supset G_1\supset \cdots\supset G_n=\{e\}$$
 
-가 *subnormal series<sub>부분정규열</sub>*이라는 것은 각 $k$에 $G_{k+1}$이 $G_k$의 normal subgroup인 것이며, 이 때 $G_k/G_{k+1}$을 이 series의 *quotient*라 부른다. Subnormal series $G_\bullet$의 항들 사이에 subgroup들을 더 끼워 넣어 얻어지는 subnormal series를 $G_\bullet$의 *refinement*라 부르고, 이 때 $G_\bullet$에 없던 subgroup이 새로 추가되었다면 이 refinement가 $G_\bullet$보다 finer하다고 말한다. 모든 $k$에 대하여 $G_k\neq G_{k+1}$이면서 $G_\bullet$보다 finer한 subnormal series가 존재하지 않는다면, 이를 $G$의 *composition series*라 부른다. 
+가 *subnormal series<sub>부분정규열</sub>*이라는 것은 각 $k$에 $G_{k+1}$이 $G_k$의 normal subgroup인 것이며, 이 때 $G_k/G_{k+1}$을 이 series의 *quotient*라 부른다. Subnormal series $G_\bullet$보다 finer한 subnormal series가 존재하지 않는다면, 이를 $G$의 *composition series*라 부른다. 
 :::
 
 그럼 임의의 group $G$와 normal subgroup $N$에 대하여, $G/N$의 normal subgroup과, $G$의 normal subgroup 중 $N$을 포함하는 것들 사이의 일대일대응이 존재하므로, $G_\bullet$이 composition series인 것은 각각의 $k$에 대하여 $G_k/G_{k+1}$이 simple인 것과 같은 말이다. ([§대칭군, ⁋정의 12](/ko/math/group_theory/symmetric_groups#def12))
 
 만일 두 subnormal series
 
-$$G=G_0\supseteq G_1\supseteq \cdots\supseteq G_n=\{e\},\qquad G=H_0\supseteq H_1\supseteq\cdots\supseteq H_m=\{e\}$$
+$$G=G_0\supset G_1\supset \cdots\supset G_n=\{e\},\qquad G=H_0\supset H_1\supset\cdots\supset H_m=\{e\}$$
 
 에 대하여, $m=n$이고, $G_k/G_{k+1}\cong H_{\sigma(k)}/H_{\sigma(k)+1}$이 모든 $k=0,\ldots, n-1$에 대해 성립하도록 하는 $\sigma\in S_n$이 존재한다면 $G_\bullet$과 $H_\bullet$이 *equivalent<sub>동등</sub>*한 subnormal series라 부른다. 이 절의 가장 큰 정리는 [정리 16](#thm16)으로, group $G$의 두 composition series가 존재한다면 이들은 equivalent하다는 것이다. 이를 증명하기 위해 다음 보조정리부터 시작하자.
 
@@ -260,8 +256,6 @@ $$H'(H'\cap K)(K'\cap H)=H'(H\cap K')$$
 $$\frac{H'(H\cap K)}{H'(H\cap K')}\cong \frac{H\cap K}{(H'\cap K)(K'\cap H)}$$
 
 이 존재하는 것을 안다. 
-
-이제 우변의 $(H'\cap K)(K'\cap H)$는 두 factor가 모두 $H\cap K$의 normal subgroup이라 곱의 순서와 무관하므로, $H$와 $K$, $H'$와 $K'$를 맞바꾸어도 그대로인 subgroup이다. 따라서 같은 논증을 $K$ 쪽에 그대로 반복하면 $K'(K\cap H')$가 $K'(K\cap H)$의 normal subgroup이고 isomorphism $K'(K\cap H)/K'(K\cap H')\cong (H\cap K)/\bigl((H'\cap K)(K'\cap H)\bigr)$가 존재하는 것을 얻는다. 두 isomorphism의 우변이 같으므로 주장의 isomorphism이 따라 나온다. 
 :::
 
 그럼 다음이 성립한다.
@@ -269,7 +263,7 @@ $$\frac{H'(H\cap K)}{H'(H\cap K')}\cong \frac{H\cap K}{(H'\cap K)(K'\cap H)}$$
 ::: 명제 15 (Schreier)
 임의의 두 subnormal series 
 
-$$G=G_0\supseteq G_1\supseteq \cdots\supseteq G_n=\{e\},\qquad G=H_0\supseteq H_1\supseteq\cdots\supseteq H_m=\{e\}$$
+$$G=G_0\supset G_1\supset \cdots\supset G_n=\{e\},\qquad G=H_0\supset H_1\supset\cdots\supset H_m=\{e\}$$
 
 에 대하여, 이들 각각의 refinement $G_\bullet', H_\bullet'$가 존재하여 이들 둘이 equivalent하도록 할 수 있다. 
 :::
@@ -277,7 +271,7 @@ $$G=G_0\supseteq G_1\supseteq \cdots\supseteq G_n=\{e\},\qquad G=H_0\supseteq H_
 $G_i$와 $G_{i+1}$ 사이에 $G_{i+1}(G_i\cap H_j)$를 $j$를 움직여 가며 넣고 $H_j$와 $H_{j+1}$ 사이에 $H_{j+1}(H_j\cap G_i)$를 $i$를 움직여가며 각각 끼워넣은 다음 이렇게 만들어진 refinement들이 서로 equivalent하다는 것을 [보조정리 14](#lem14)를 통해 보일 수 있다. 
 :::
 
-Composition series $G_\bullet$의 refinement는 [정의 13](#def13)에 의하여 $G_\bullet$에 없던 subgroup을 추가할 수 없고, $G_k\supseteq H\supseteq G_{k+1}$인 $G_\bullet$의 항 $H$는 $G_k$ 또는 $G_{k+1}$일 수밖에 없으므로, 이러한 refinement는 이미 있던 항을 반복해 끼워 넣은 것뿐이며 새로 생기는 quotient는 모두 trivial group이다. 따라서 두 composition series에 [명제 15](#prop15)를 적용하여 equivalent한 refinement들을 잡으면, 이들 사이의 quotient의 대응은 isomorphism을 주므로 trivial quotient를 trivial quotient로 보내고, 양쪽에서 trivial quotient를 모두 지워도 대응이 유지된다. Composition series의 quotient들은 모두 trivial이 아니므로 남는 것은 원래의 두 composition series의 quotient들 사이의 대응이며, 이로부터 다음이 성립한다.
+따라서 다음이 성립한다.
 
 ::: 정리 16 (Jordan-Hölder)
 임의의 두 composition series는 equivalent하다. 
@@ -317,7 +311,7 @@ $n\geq 5$이면 symmetric group $S_n$은 solvable group이 아니다.
 이제 $n\geq 5$이면 $\{6,\ldots,n\}$의 원소들을 고정하는 permutation들이 $S_5$의 복제를 이루므로 $A_5\subseteq S_5\subseteq S_n$이다. 만일 $S_n$이 solvable이라면 그 subgroup인 $A_5$도 solvable이어야 하는데, 이는 [명제 18](#prop18)에 모순이다. 따라서 $S_n$은 solvable group이 아니다.
 :::
 
-이 따름정리는 순수하게 군론적인 사실이지만, 그 가장 유명한 귀결은 체론에 있다. $n \geq 5$차 일반 다항식의 Galois group이 $S_n$이고 그 $S_n$이 solvable이 아니라는 사실이, 일반 5차 이상 방정식이 거듭제곱근으로 풀리지 않는다는 정리의 군론적 핵심을 이룬다.
+이 따름정리는 순수하게 군론적인 사실이지만, 그 가장 유명한 귀결은 체론에 있다. $n \geq 5$차 일반 다항식의 Galois group이 $S_n$이고 그 $S_n$이 solvable이 아니라는 사실이, 일반 5차 이상 방정식이 거듭제곱근으로 풀리지 않는다는 정리의 군론적 핵심을 이룬다 ([\[체론\] §거듭제곱근 가해성](/ko/math/field_theory/solvability_by_radicals)).
 
 ---
 

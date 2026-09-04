@@ -10,9 +10,7 @@ sidebar:
 
 date: 2025-11-12
 weight: 3
-revising: true
 
-drift_needed: true
 
 ---
 
@@ -28,7 +26,7 @@ $$\ad(X)Y=[X,Y]$$
 
 을 통해 계산해줄 수 있다. 
 
-표현론의 결과들을 사용하는 데에 중요한 것은 compact Lie group의 임의의 finite-dimensional representation은 항상 unitary라는 것이었다. 이 결과를 증명할 때 사용하는 논리는 $V$ 위에 $G$-invariant inner product를 택할 수 있다는 것인데, 엄밀히 말하자면 우리는 orthogonal complement에 관심이 있으므로 non-degenerate symmetric form만 있어도 충분하다. 그런데 Lie algebra 위에는 자연스러운 bilinear form이 하나 존재한다. 
+표현론의 결과들을 사용하는 데에 중요한 것은 임의의 finite-dimensional representation은 항상 unitary라는 것이었다. 이 결과를 증명할 때 사용하는 논리는 $V$ 위에 $G$-invariant inner product를 택할 수 있다는 것인데, 엄밀히 말하자면 우리는 orthogonal complement에 관심이 있으므로 non-degenerate symmetric form만 있어도 충분하다. 그런데 Lie algebra 위에는 자연스러운 bilinear form이 하나 존재한다. 
 
 ::: 정의 1
 Lie algebra $\mathfrak{g}$ 위에 다음의 식
@@ -55,7 +53,7 @@ Lie algebra $\mathfrak{g}$이 *simple<sub>단순</sub>*이라는 것은 $\mathfr
 그럼 다음이 성립한다. 
 
 ::: 명제 3
-유한차원 complex Lie algebra $\mathfrak{g}$에 대하여, 다음이 모두 동치이다. 
+유한차원 Lie algebra $\mathfrak{g}$에 대하여, 다음이 모두 동치이다. 
 
 1. $\mathfrak{g}$가 semisimple이다.
 2. Killing form이 non-degenerate이다.
@@ -92,7 +90,7 @@ $$\mathfrak{g}_\alpha=\left\{X\in \mathfrak{g}\mid [H,X]=\alpha(H)X\text{ for al
 이다. ([§리 군, ⁋정의 19](/ko/math/lie_theory/Lie_groups#def19))
 :::
 
-정의에 의하여 $\mathfrak{h}$는 자기 자신 위에는 $0$으로 작용하므로, $\mathfrak{h}$는 $\mathfrak{g}$를 simultaneous eigenspace로 분해했을 때 eigenvalue $0$에 해당하는 부분 $\mathfrak{g}_0$에 포함된다. 실제로는 등호 $\mathfrak{h}=\mathfrak{g}_0$이 성립하는데, 이는 Cartan subalgebra가 $\mathfrak{g}$ 안에서 자기 자신의 centralizer와 일치한다는 성질로 [정의 4](#def4)에서 곧바로 따라오지 않고 별도의 증명을 필요로 한다. 이 등호를 받아들이면 우리는 다음의 decomposition
+정의에 의하여 $\mathfrak{h}$는 자기 자신 위에는 $0$으로 작용한다. 즉 $\mathfrak{h}$는 $\mathfrak{g}$를 simultaneous eigenspace로 분해했을 때 eigenvalue $0$에 해당하는 부분이며 이로부터 우리는 다음의 decomposition
 
 $$\mathfrak{g}=\mathfrak{h}\oplus\bigoplus_{\alpha\in \Phi}\mathfrak{g}_\alpha$$
 
@@ -135,7 +133,7 @@ $$[H,E]=2E,\quad [H,F]=-2F,\quad [E,F]=H$$
 
 을 통해 얻어진다. 
 
-우리는 임의의 finite-dimensional $\sl(2;\mathbb{C})$-representation의 weight들이 어떤 값을 가질 수 있는지를 살펴본다. Compact Lie group에 대해서는 임의의 finite-dimensional representation이 irreducible representation들의 direct sum으로 분해되는 것이 평균화 논법으로 곧바로 얻어지지만, $\SL(n;\mathbb{C})$와 같은 non-compact group에 대해서는 Haar measure의 존재성이 보장되지 않고 따라서 적분을 통해 내적을 평균내는 등의 아이디어를 사용할 수 없다는 것을 기억하자. 대신 우리는 highest weight vector를 직접 찾는 방식으로 접근한다. 
+우리는 임의의 $\sl(2;\mathbb{C})$-representation이 irreducible representation들의 direct sum으로 나타난다는 것을 보인다. 이는 compact Lie group에 대해서는 자명한 결과이지만 $\SL(n;\mathbb{C})$와 같은 non-compact group에 대해서는 Haar measure의 존재성이 보장되지 않고 따라서 적분을 통해 내적을 평균내는 등의 아이디어를 사용할 수 없다는 것을 기억하자. 
 
 임의의 finite-dimensional $\sl_2$-representation $V$가 주어졌다 하고, 각각의 $\lambda\in \mathbb{C}$에 대하여 weight space
 
@@ -145,7 +143,11 @@ $$V_\lambda=\{v\in V\mid H\cdot v=\lambda v\}$$
 
 $$E\cdot V_\lambda\subseteq V_{\lambda+2},\qquad F\cdot V_\lambda\subseteq V_{\lambda-2}$$
 
-이 성립한다. 우리는 이러한 이유로 $E,F$를 각각 *raising operator*, *lowering operator*라 부르기도 한다. 한편 $V$가 유한차원 complex vector space이므로 $H$는 고유벡터를 갖고, 따라서 $V_\lambda\neq 0$인 $\lambda\in \mathbb{C}$가 존재한다. 서로 다른 고유값에 대응하는 고유공간들은 일차독립이므로 $V_{\lambda+2k}\neq 0$인 음이 아닌 정수 $k$는 유한개뿐이고, 그중 가장 큰 것을 택하면 $V_\mu\neq 0$이지만 $V_{\mu+2}=0$이 성립하는 $\mu$를 얻는다. 이러한 $\mu$를 *highest weight*이라 부르고, $V_\mu$의 원소를 *highest weight vector*라 부른다. 그럼 highest weight vector $v$에 대하여 우리는 다음의 두 식
+이 성립한다. 우리는 이러한 이유로 $E,F$를 각각 *raising operator*, *lowering operator*라 부르기도 한다. 한편 $V$는 유한차원이므로 weight decomposition
+
+$$V=\bigoplus_{\lambda} V_\lambda$$
+
+를 생각하면, $V_\mu\neq 0$이지만 $V_{\mu+2}=0$이 성립하는 $\mu$가 존재한다. 이러한 $\mu$를 *highest weight*이라 부르고, $V_\mu$의 원소를 *highest weight vector*라 부른다. 그럼 highest weight vector $v$에 대하여 우리는 다음의 두 식
 
 $$H\cdot v=\mu v,\qquad E\cdot v=0$$
 
@@ -186,7 +188,7 @@ $$H\cdot v_j=(m-2j)v_j,\quad F\cdot v_j=(j+1)v_{j+1},\quad E\cdot v_j=(m-j+1)v_{
 을 주어 정의한다. $v_{-1}=v_{m+1}=0$이다. 
 :::
 
-어렵지 않게 $V(m)$은 irreducible인 것을 보일 수 있다. 한편 임의의 finite-dimensional $\sl_2$-representation $V$의 weight은 언제나 정수이다. $V_\lambda\neq 0$이라 하면 위에서와 같이 $V_{\lambda+2k}\neq 0$이면서 $V_{\lambda+2k+2}=0$인 음이 아닌 정수 $k$를 택할 수 있고, 이 때 $\lambda+2k$는 highest weight이므로 음이 아닌 정수이며 따라서 $\lambda$ 또한 정수이기 때문이다. 
+어렵지 않게 $V(m)$은 irreducible인 것을 보일 수 있다. 이제 임의의 $\sl_2$-representation $V$에 대하여, 우리는 $V$의 highest weight을 찾은 후 highest weight vector에 대하여 [명제 7](#prop7)을 적용하고, 남아있는 highest weight vector가 있다면 다시 이를 반복하는 식으로 $V$를 irreducible $\sl_2$-representation으로 분해할 수 있다. 
 
 ## 근계
 
@@ -239,7 +241,7 @@ $$0=K([H,X_\alpha],X_\beta)+K(X_\alpha, [H,X_\beta])=K(\alpha(H)X_\alpha, X_\bet
 
 $$\mathfrak{h}\rightarrow \mathfrak{h}^\ast;\qquad H\mapsto K(H, -)$$
 
-이 존재한다. 그럼 $\Phi\subseteq \mathfrak{h}^\ast$는 $\mathfrak{h}^\ast$의 spanning set이다. 만일 $\Phi$가 $\mathfrak{h}^\ast$를 span하지 않는다면, $\Phi$의 span의 annihilator $\{H\in \mathfrak{h}\mid \alpha(H)=0 \text{ for all } \alpha\in \Phi\}$의 차원은 $\dim \mathfrak{h}-\dim \span_\mathbb{C}\Phi>0$이므로 모든 $\alpha\in \Phi$에 대하여 $\alpha(H)=0$을 만족하는 nonzero $H\in \mathfrak{h}$를 택할 수 있다. 이제 임의의 root space $\mathfrak{g}_\alpha$에 대하여, $H$는
+이 존재한다. 그럼 $\Phi\subseteq \mathfrak{h}^\ast$는 $\mathfrak{h}^\ast$의 spanning set이다. $\Phi$의 원소들의 일차결합으로 나타나지 않는 $\mathfrak{h}^\ast$의 원소가 있다 하면, 이에 해당하는 $\mathfrak{h}$의 원소는 모든 $\alpha\in \Phi$에 대하여 $\alpha(H)=0$을 만족하여야 한다. 이제 임의의 root space $\mathfrak{g}_\alpha$에 대하여, $H$는
 
 $$[H,X]=\alpha(H)X=0\qquad\text{for all $X\in \mathfrak{g}_\alpha$}$$
 
@@ -276,11 +278,7 @@ $$K([E,F],H)=K(F,[H,E])=K(F, K(H_\alpha,H)E)=K(H_\alpha,H)K(F,E)=K(K(F,E)H_\alph
 
 $$[E,F]=K(E,F)H_\alpha,\quad [H_\alpha,E]=\alpha(H_\alpha)E=K(\alpha,\alpha)E,\quad [H_\alpha,F]=-\alpha(H_\alpha)F=-K(\alpha,\alpha)F$$
 
-를 만족한다는 것을 안다. 이는 위에서 살펴본 $\sl_2$-representation의 commutation relation과 유사한 꼴이며, 이를 정확히 $\sl_2$의 relation으로 맞추기 위해서는 $K(\alpha,\alpha)=\alpha(H_\alpha)$가 $0$이 아니어야 한다.
-
-만일 $\alpha(H_\alpha)=0$이라면 위의 relation은 $[H_\alpha,E]=[H_\alpha,F]=0$과 $[E,F]=K(E,F)H_\alpha$가 되므로, $E,F,H_\alpha$가 생성하는 subalgebra $S$는 $[S,S]=\mathbb{C}H_\alpha$가 $S$의 center에 놓이는 nilpotent Lie algebra이고 특히 solvable이다. 그럼 Lie의 정리에 의하여 $\ad(S)$의 원소들을 동시에 upper triangular로 만드는 $\mathfrak{g}$의 basis가 존재하고, $K(E,F)\neq 0$으로부터 $\ad(H_\alpha)=K(E,F)^{-1}[\ad(E),\ad(F)]$이므로 $\ad(H_\alpha)$는 strictly upper triangular, 곧 nilpotent이다. 한편 $H_\alpha\in \mathfrak{h}$이므로 $\ad(H_\alpha)$는 diagonalizable이며, nilpotent이면서 diagonalizable인 operator는 $0$뿐이므로 $H_\alpha$는 $\mathfrak{g}$의 모든 원소와 commute한다. 그런데 앞서 확인하였듯 $Z(\mathfrak{g})=0$이므로 $H_\alpha=0$이고, 이는 $\alpha=K(H_\alpha,-)$가 nonzero라는 것에 모순이다.
-
-그러므로 $K(\alpha,\alpha)\neq 0$이고, 우리는
+를 만족한다는 것을 안다. 이는 위에서 살펴본 $\sl_2$-representation의 commutation relation과 유사한 꼴이며, 실제로 어렵지 않게 $(\alpha,\alpha)\neq 0$임을 보일 수 있다. 따라서
 
 $$h_\alpha=\frac{2}{K(\alpha,\alpha)}H_\alpha$$
 
@@ -298,7 +296,7 @@ $$[e_\alpha,f_\alpha]=h_\alpha,\quad [h_\alpha,e_\alpha]=2e_\alpha,\quad [h_\alp
 
 $$[h_\alpha, x]=\beta(h_\alpha)x\qquad\text{for all $x\in \mathfrak{g}_\beta$}$$
 
-이므로 $\mathfrak{g}_\beta$는 이 action에 대한 weight $\beta(h_\alpha)$의 weight space이다. 그런데 앞서 살펴봤듯 $\sl_2$-representation의 weight은 항상 정수이므로, 이 값 $\beta(h_\alpha)=\frac{2K(\alpha,\beta)}{K(\alpha,\alpha)}$은 반드시 정수여야 함을 안다. 또 각각의 $\mathfrak{g}_\beta$들이 $1$차원이라는 것도 성립한다. 다만 weight space가 $1$차원인 것은 irreducible $\sl_2$-representation에 한하여 성립하는 성질이고 $\sl_{2,\alpha}$-representation으로서의 $\mathfrak{g}$는 일반적으로 irreducible이 아니므로, 이는 위의 관찰만으로는 따라오지 않는다. 이를 얻기 위해서는 각각의 root $\beta$마다 $\mathfrak{h}\oplus\bigoplus_{c\in \mathbb{C}}\mathfrak{g}_{c\beta}$를 $\sl_{2,\beta}$-representation으로 보아 $\ker\beta$가 weight $0$에 해당하는 부분을 모두 소진한다는 것을 확인하는 root string 논증이 별도로 필요하다. 
+이므로 $\mathfrak{g}_\beta$는 이 action에 대한 weight $\beta(h_\alpha)$의 weight space이다. 그런데 앞서 살펴봤듯 $\sl_2$-representation의 weight은 항상 정수이므로, 이 값 $\beta(h_\alpha)=\frac{2K(\alpha,\beta)}{K(\alpha,\alpha)}$은 반드시 정수여야 함을 안다. 또 $\sl_2$ representation의 임의의 weight subspace는 $1$차원이므로 각각의 $\mathfrak{g}_\beta$들도 $1$차원이다. 
 
 한편, 앞서 우리는 $\mathfrak{h}$이 $H_\alpha$들에 의해 생성되는 것을 보았으므로, 그 상수배인 $h_\alpha$들도 $\mathfrak{h}$를 생성한다. 앞서 말했듯 우리는 여기에 root system 구조를 주기 위해 $h_\alpha$들로 생성되는 *real* vector space
 
@@ -430,11 +428,11 @@ Weyl group은 유한군이다. 실제로 $W$는 $\Phi$가 속한 Euclidean space
 
 ## Lie group과의 연결
 
-지금까지 우리는 semisimple Lie algebra $\mathfrak{g}$의 root system $\Phi$를 정의하고, 그 대칭성을 포착하는 Weyl group을 reflection들 $s_\alpha$로 생성되는 유한군으로 정의하였다. 한편 [§원환면의 작용, §§극대 원환면](/ko/math/lie_theory/torus_action#극대-원환면)에서 우리는 compact Lie group $G$의 Weyl group을 $W=N(T)/T$로 정의하였다. 이 절에서는 두 정의가 어떻게 맞물리는지를 살펴본다.
+지금까지 우리는 semisimple Lie algebra $\mathfrak{g}$의 root system $\Phi$를 정의하고, 그 대칭성을 포착하는 Weyl group을 reflection들 $s_\alpha$로 생성되는 유한군으로 정의하였다. 한편 [§원환면의 작용, §§극대 원환면](/ko/math/lie_theory/torus_action#극대-원환면)에서 우리는 compact Lie group $G$의 Weyl group을 $W=N(T)/T$로 정의하였다. 이 절에서는 두 정의가 자연스럽게 일치함을 보인다.
 
-우선 $\mathfrak{g}$가 compact connected Lie group $G$의 Lie algebra라고 하자. $\mathfrak{g}$가 semisimple인 것은 $G$의 universal cover가 $\mathbb{R}^n$을 factor로 갖지 않는 것과 동치이다. 이 경우 $G$의 maximal torus $T$의 Lie algebra $\mathfrak{t}$는 $\mathfrak{g}$의 maximal abelian subalgebra이지만, compact $\mathfrak{g}$ 위에서 $\ad(H)$는 invariant inner product에 대해 skew-symmetric이라 고유값이 모두 순허수이고 따라서 실수 위에서는 대각화되지 않는다. 앞 절들의 결과를 적용하기 위해서는 복소화 $\mathfrak{g}_\mathbb{C}=\mathfrak{g}\otimes_\mathbb{R}\mathbb{C}$를 취하여야 하며, 이 때 [정의 4](#def4)의 의미에서 Cartan subalgebra가 되는 것은 $\mathfrak{t}_\mathbb{C}$이고 root들은 $\mathfrak{t}_\mathbb{C}^\ast$의 원소로서 $\mathfrak{t}$ 위에서 순허수 값을 가지므로 $i\mathfrak{t}^\ast$에 놓인다. 아래에서 $\mathfrak{t}^\ast$ 위의 action을 이야기할 때, root들 위의 action은 이를 복소화 $\mathfrak{t}_\mathbb{C}^\ast$로 확장하여 이해한다.
+우선 $\mathfrak{g}$가 compact connected Lie group $G$의 Lie algebra라고 하자. $\mathfrak{g}$가 semisimple인 것은 $G$의 universal cover가 $\mathbb{R}^n$을 factor로 갖지 않는 것과 동치이다. 이 경우 $G$의 maximal torus $T$의 Lie algebra $\mathfrak{t}$가 $\mathfrak{g}$의 Cartan subalgebra가 된다.
 
-이제 $N(T)$가 $\mathfrak{t}^\ast$ 위에 작용하는 방식을 살펴보자. 임의의 $n\in N(T)$에 대하여, adjoint representation $\Ad(n)$은 $\mathfrak{g}$ 위의 automorphism이고 $nTn^{-1}=T$이므로 $\mathfrak{t}$를 보존한다. 따라서 $\Ad(n)\vert_\mathfrak{t}$는 $\mathfrak{t}$의 automorphism이고, 이를 dual로 옮겨 $(n\cdot\xi)(H)=\xi(\Ad(n)^{-1}H)$로 두면 $\mathfrak{t}^\ast$ 위의 linear action을 얻는다.
+이제 $N(T)$가 $\mathfrak{t}^\ast$ 위에 작용하는 방식을 살펴보자. 임의의 $n\in N(T)$에 대하여, adjoint representation $\Ad(n)$은 $\mathfrak{g}$ 위의 automorphism이고 $nTn^{-1}=T$이므로 $\mathfrak{t}$를 보존한다. 따라서 $\Ad(n)\vert_\mathfrak{t}$는 $\mathfrak{t}$의 automorphism이고, 이를 dual로 옮기면 $\mathfrak{t}^\ast$ 위의 linear action을 얻는다.
 
 ::: 명제 19
 $N(T)$의 $\mathfrak{t}^\ast$ 위의 action은 root system $\Phi$를 보존한다.
@@ -446,32 +444,28 @@ $$[H,\Ad(n)X]=\Ad(n)[\Ad(n)^{-1}H,X]$$
 
 인데, $\Ad(n)^{-1}H\in\mathfrak{t}$이고 $X\in\mathfrak{g}_\alpha$이므로
 
-$$[\Ad(n)^{-1}H,X]=\alpha(\Ad(n)^{-1}H)X=(n\cdot\alpha)(H)\cdot X$$
+$$[\Ad(n)^{-1}H,X]=\alpha(\Ad(n)^{-1}H)X=(n^{-1}\cdot\alpha)(H)\cdot X$$
 
 이다. 따라서
 
-$$[H,\Ad(n)X]=(n\cdot\alpha)(H)\cdot\Ad(n)X$$
+$$[H,\Ad(n)X]=(n^{-1}\cdot\alpha)(H)\cdot\Ad(n)X$$
 
-이고, 이는 $\Ad(n)X\in\mathfrak{g}_{n\cdot\alpha}$임을 의미한다. 즉 $\Ad(n)$은 $\mathfrak{g}_\alpha$를 $\mathfrak{g}_{n\cdot\alpha}$로 보내고, 이로부터 $n\cdot\alpha\in\Phi$임을 안다.
+이고, 이는 $\Ad(n)X\in\mathfrak{g}_{n^{-1}\cdot\alpha}$임을 의미한다. 즉 $\Ad(n)$은 $\mathfrak{g}_\alpha$를 $\mathfrak{g}_{n^{-1}\cdot\alpha}$로 보내고, 이로부터 $n\cdot\alpha\in\Phi$임을 안다.
 :::
 
-한편 $T$가 abelian이고 connected이므로 임의의 $t\in T$에 대하여 $\Ad(t)\vert_\mathfrak{t}=\mathrm{id}$이고, 따라서 $T$의 원소들은 $\mathfrak{t}^\ast$ 위에 identity로 작용한다. 즉 $W=N(T)/T$가 $\mathfrak{t}^\ast$ 위에, 특히 root system $\Phi$ 위에 잘 정의된 action을 갖는다. 이제 핵심적인 결과는 다음과 같다.
+따라서 우리는 $W=N(T)/T$가 $\mathfrak{t}^\ast$ 위에, 특히 root system $\Phi$ 위에 잘 정의된 action을 갖는다는 것을 안다. 이제 핵심적인 결과는 다음과 같다.
 
 ::: 명제 20
-각각의 root $\alpha\in\Phi$에 대하여, $\Ad(n_\alpha)\vert_\mathfrak{t}=s_\alpha$를 만족하는 $n_\alpha\in N(T)$가 존재한다. 따라서 root system의 Weyl group $W(\Phi)$는 Lie group에서 정의한 Weyl group $W=N(T)/T$의 subgroup으로 들어간다.
+각각의 root $\alpha\in\Phi$에 대하여, $\Ad(n_\alpha)\vert_\mathfrak{t}=s_\alpha$를 만족하는 $n_\alpha\in N(T)$가 존재한다. 따라서 Lie group에서 정의한 Weyl group $W=N(T)/T$와 root system의 Weyl group은 isomorphic하다.
 :::
 ::: 증명
-임의의 root $\alpha\in\Phi$에 대하여, 앞서 살펴본 것과 같이 $\sl_{2,\alpha}=\langle e_\alpha, f_\alpha, h_\alpha\rangle$는 $\sl(2;\mathbb{C})$와 isomorphic한 $\mathfrak{g}_\mathbb{C}$의 subalgebra이며, $\mathfrak{g}$ 자체의 subalgebra는 아니다. 그러나 $e_\alpha,f_\alpha$를 compact real form에 맞게, 곧 $\mathfrak{g}$가 정하는 conjugation이 $e_\alpha$를 $-f_\alpha$로 보내도록 택하면 세 원소
-
-$$e_\alpha-f_\alpha,\quad i(e_\alpha+f_\alpha),\quad ih_\alpha$$
-
-는 모두 $\mathfrak{g}$에 놓이고 $\su(2)$와 isomorphic한 subalgebra를 이룬다. 이에 대응하는 $G$의 Lie subgroup $G_\alpha$는 $\SU(2)$ 혹은 $\SO(3)$와 locally isomorphic하다.
+임의의 root $\alpha\in\Phi$에 대하여, 앞서 살펴본 것과 같이 $\sl_{2,\alpha}=\langle e_\alpha, f_\alpha, h_\alpha\rangle$는 $\sl(2;\mathbb{C})$와 isomorphic한 $\mathfrak{g}$의 subalgebra이다. 이에 대응하는 $G$의 Lie subgroup $G_\alpha$는 $\SU(2)$ 혹은 $\SO(3)$와 locally isomorphic하다.
 
 $G_\alpha$는 $T$와 교집합을 취했을 때 1차원 torus $T_\alpha=T\cap G_\alpha$를 이룬다. 이제 $N(T)$의 원소 중 $\Ad$-action이 $\mathfrak{t}$ 위에서 reflection $s_\alpha$를 유도하는 것을 찾아야 한다. 이를 위해 다음 원소
 
-$$n_\alpha=\exp\left(\frac{\pi}{2}(e_\alpha-f_\alpha)\right)$$
+$$n_\alpha=\exp(e_\alpha)\exp(-f_\alpha)\exp(e_\alpha)$$
 
-를 생각하자. 지수의 원소가 $\mathfrak{g}$에 놓이므로 $n_\alpha\in G$이며, $\SU(2)$에서의 계산에 의하면 이는 
+를 생각하자. $\SU(2)$에서의 계산에 의하면 이는 
 
 $$\begin{pmatrix}0&1\\-1&0\end{pmatrix}$$
 
@@ -480,7 +474,7 @@ $$\begin{pmatrix}0&1\\-1&0\end{pmatrix}$$
 마지막으로 $n_\alpha\in N(T)$임을 확인하자. $\Ad(n_\alpha)$가 $\mathfrak{t}$를 보존하므로 $n_\alpha Tn_\alpha^{-1}$과 $T$는 같은 Lie algebra를 갖고, 둘 다 connected이므로 $n_\alpha Tn_\alpha^{-1}=T$이다.
 :::
 
-이로부터 우리는 root system의 Weyl group이 $N(T)/T$ 안에 들어간다는 것을 안다. 실제로는 두 group이 일치하지만, 그러기 위해서는 $N(T)/T$가 reflection $s_\alpha$들로 생성된다는 역방향의 사실이 필요하고 이는 위의 논증만으로는 얻어지지 않는다. Lie group 관점에서 $W=N(T)/T$는 maximal torus의 conjugation action을 포착하고, Lie algebra 관점에서의 $W$는 root system의 대칭성을 포착한다. 두 정의의 일치는 compact Lie group의 구조가 그 Lie algebra의 root system에 의해 완전히 결정된다는 사실의 구체적인 표현이다.
+이로부터 우리는 두 관점에서의 Weyl group이 본질적으로 같은 대상임을 안다. Lie group 관점에서 $W=N(T)/T$는 maximal torus의 conjugation action을 포착하고, Lie algebra 관점에서의 $W$는 root system의 대칭성을 포착한다. 두 정의의 일치는 compact Lie group의 구조가 그 Lie algebra의 root system에 의해 완전히 결정된다는 사실의 구체적인 표현이다.
 
 이 두 관점을 통합하여 root system으로부터 자연스럽게 등장하는 기하적 대상인 Borel subgroup과 flag variety는 [§Borel subgroup](/ko/math/lie_theory/borel_subgroup)에서 다룬다.
 

@@ -10,9 +10,7 @@ sidebar:
 
 date: 2025-04-26
 weight: 2
-revising: true
 
-drift_needed: true
 
 ---
 
@@ -48,7 +46,7 @@ drift_needed: true
 Field extension $\mathbb{L}_2/\mathbb{L}_1/\mathbb{K}$에 대하여, $[\mathbb{L}_2:\mathbb{K}]=[\mathbb{L}_2:\mathbb{L}_1][\mathbb{L}_1:\mathbb{K}]$이 성립한다. 
 :::
 
-그럼 다음 명제는 간단한 선형대수학이다.
+더 일반적으로 field $\mathbb{K}$와 임의의 $\mathbb{K}$-algebra $E$에 대하여, $[E:\mathbb{K}]$를 $\dim_\mathbb{K}E$로 정의할 수 있다. 그럼 다음 명제는 간단한 선형대수학이다.
 
 ::: 명제 3
  Finite degree $\mathbb{K}$-algebra $E$에 대하여, 만일 $x\in E$가 $E$의 non-zerodivisor라면, $x$는 $E$의 invertible element이다. 
@@ -81,13 +79,13 @@ $$\mathbb{K}(M \cup N) = \mathbb{K}(M)(N) = \mathbb{K}(N)(M)$$
 
 이에 대한 증명은 정의의 최소성에 의해 거의 자명하다. 
 
-한편 [정의 4](#def4)의 field $\mathbb{K}(A)$를 얻기 위해서는 $\mathbb{K}$의 extension $\mathbb{L}$을 하나 고정한 다음, $A$를 포함하는 $\mathbb{L}$의 모든 subextension들을 교집합하면 될 것이다. 한편 교집합 대신 합집합을 취하는 경우에도, 주어진 모임이 포함관계에 대해 directed라면 다음과 같이 다시 field를 얻는다.
+한편 [정의 4](#def4)의 field $\mathbb{K}(A)$를 얻기 위해서는 $\mathbb{K}$의 extension $\mathbb{L}$을 하나 고정한 다음, $A$를 포함하는 $\mathbb{L}$의 모든 subextension들을 교집합하면 될 것이다. 한편, 우리는 $\mathbb{K}$의 extension들의 category에서의 morphism은 오직 extension 뿐임을 보였으므로, 다음이 성립한다.
 
 ::: 명제 6
- $\mathcal{F}$가 field $E$의 subfield들로 이루어진 집합이고, 포함관계 $\subseteq$에 대하여 directed라 하자. 그럼 $\mathcal{F}$에 속한 field들의 합집합 $L$은 $E$의 subfield이다.
+ $\mathcal{F}$를 field $E$의 subfield들의 집합이라고 하고, 여기에 포함관계 $\subseteq$를 사용하면 directed set이 된다. 특히, $\mathcal{F}$에 속한 field들의 합집합 $L$은 field이다.
 :::
 
-만일 $\mathbb{L}=\mathbb{K}(A)$이도록 하는 유한집합 $A$가 존재한다면, extension $\mathbb{L}/\mathbb{K}$를 *finitely generated extension*이라 부른다. 그럼 특히 finite degree field extension은 finitely generated extension이다. $\mathbb{L}$의 $\mathbb{K}$-벡터공간으로서의 basis가 $\mathbb{L}$의 field로서의 generator가 될 것이기 때문이다. 
+만일 $\mathbb{L}=\mathbb{K}(A)$이도록 하는 유한집합 $A$가 존재한다면, extension $\mathbb{L}/\mathbb{K}$를 *finite extension*이라 부른다. 그럼 특히 finite degree field extension은 finite extension이다. $\mathbb{L}$의 $\mathbb{K}$-벡터공간으로서의 basis가 $\mathbb{L}$의 field로서의 generator가 될 것이기 때문이다. 
 
 이제 두 개의 $\mathbb{K}$-extension $\mathbb{L}_1/\mathbb{K}$, $\mathbb{L}_2/\mathbb{K}$가 주어졌다 하자. 그럼 우리는 $\mathbb{L}_1$과 $\mathbb{L}_2$를 동시에 포함하는 가장 작은 extension을 생각할 수 있다. 
 
@@ -96,7 +94,7 @@ $$\mathbb{K}(M \cup N) = \mathbb{K}(M)(N) = \mathbb{K}(N)(M)$$
 
 {% diagram Math/Field_Theory/Algebraic_Extensions-2.svg width="10.57em" alt="composite_field" %}
 
-을 commute하도록 하는 $\mathbb{K}$-algebra homomorphism $u_1:\mathbb{L}_1 \rightarrow \mathbb{M}$과 $u_2:\mathbb{L}_2 \rightarrow \mathbb{M}$이 존재하여 $\mathbb{M}=\mathbb{K}(u_1(\mathbb{L}_1)\cup u_2(\mathbb{L}_2))$가 성립하는 것이다. 
+을 commute하도록 하는 $\mathbb{K}$-algebra homomorphism $\mathbb{L}_1 \rightarrow \mathbb{M}$과 $\mathbb{L}_2 \rightarrow \mathbb{M}$이 존재하는 것이다. 
 :::
 
 이는 구체적으로 다음과 같이 쓸 수 있다. 
@@ -112,9 +110,9 @@ $$\mathbb{K}(M \cup N) = \mathbb{K}(M)(N) = \mathbb{K}(N)(M)$$
 2. 거꾸로, $\mathbb{L}_1\otimes_\mathbb{K} \mathbb{L}_2$의 임의의 prime ideal $\mathfrak{p}$에 대하여, 적당한 composite field $\mathbb{M}$과 extension $u_i: \mathbb{L}_i \rightarrow \mathbb{M}$가 존재하여, $\mathfrak{p}$가 $u_1\ast u_2$의 kernel이도록 할 수 있다. 
 :::
 ::: 증명
-1. $u_1\ast u_2$의 image $\im(u_1\ast u_2)$는 field $\mathbb{M}$의 subring이고, 따라서 integral domain이다. 이제 주어진 주장은 [\[대수적 구조\] §분수체, ⁋명제 9](/ko/math/algebraic_structures/field_of_fractions#prop9)와 [\[대수적 구조\] §몫환, 환 동형사상, ⁋정리 3](/ko/math/algebraic_structures/quotient_rings#thm3)으로부터 자명하다. 
+1. $u_1\ast u_2$의 image $\im(u_1\ast u_2)$는 field $\mathbb{M}$의 subring이고, 따라서 integral domain이다. 이제 주어진 주장은 [\[대수적 구조\] §분수체, ⁋명제 8](/ko/math/algebraic_structures/field_of_fractions#prop8)과 [\[대수적 구조\] §몫환, 환 동형사상, ⁋정리 3](/ko/math/algebraic_structures/quotient_rings#thm3)으로부터 자명하다. 
 
-2. 거꾸로 $\mathfrak{p}$가 $\mathbb{L}_1\otimes_\mathbb{K}\mathbb{L}_2$의 prime ideal이라 하고, integral domain $(\mathbb{L}_1\otimes_\mathbb{K}\mathbb{L}_2)/\mathfrak{p}$의 field of fraction을 $\mathbb{M}=\Frac((\mathbb{L}_1\otimes_\mathbb{K}\mathbb{L}_2)/\mathfrak{p})$라 하자. 그럼 각각의 $x_1\in \mathbb{L}_1$과 $x_2\in \mathbb{L}_2$에 대하여, $u_1(x_1)$을 $x_1\otimes 1$의 $\mathbb{M}$에서의 image, $u_2(x_2)$를 $1\otimes x_2$의 $\mathbb{M}$에서의 image로 정의하면 이들이 원하는 조건을 만족함을 알 수 있다. 실제로 $u_1(\mathbb{L}_1)\cup u_2(\mathbb{L}_2)$로 생성되는 $\mathbb{M}$의 subring은 $(\mathbb{L}_1\otimes_\mathbb{K}\mathbb{L}_2)/\mathfrak{p}$의 image 전체이고, $\mathbb{M}$은 그 field of fraction이므로 $\mathbb{M}=\mathbb{K}(u_1(\mathbb{L}_1)\cup u_2(\mathbb{L}_2))$이다. 
+2. 거꾸로 $\mathfrak{p}$가 $\mathbb{L}_1\otimes_\mathbb{K}\mathbb{L}_2$의 prime ideal이라 하고, integral domain $(\mathbb{L}_1\otimes_\mathbb{K}\mathbb{L}_2)/\mathfrak{p}$의 field of fraction을 $\mathbb{M}=\Frac((\mathbb{L}_1\otimes_\mathbb{K}\mathbb{L}_2)/\mathfrak{p})$라 하자. 그럼 각각의 $x_1\in \mathbb{L}_1$과 $x_2\in \mathbb{L}_2$에 대하여, $u_1(x_1)$을 $x_1\otimes 1$의 $\mathbb{M}$에서의 image, $u_2(x_2)$를 $1\otimes x_2$의 $\mathbb{M}$에서의 image로 정의하면 이들이 원하는 조건을 만족함을 알 수 있다. 
 :::
 
 뿐만 아니라, 두 번째 결과에 의해 얻어지는 composite field가 isomorphism에 대하여 유일하게 결정된다는 것 또한 자명하다. 한편, 임의의 두 $\mathbb{K}$-extension $\mathbb{L}_1, \mathbb{L}_2$에 대하여, $\mathbb{L}_1\otimes_\mathbb{K} \mathbb{L}_2$는 항상 prime ideal을 가지므로 ([\[대수적 구조\] §환의 정의, ⁋정리 10](/ko/math/algebraic_structures/rings#thm10)) 임의의 두 $\mathbb{K}$-extension은 composite field를 갖는다는 것을 확인할 수 있다. 
@@ -140,12 +138,12 @@ $\Omega$의 임의의 두 $\mathbb{K}$-subalgebra $E,F$에 대하여, multiplica
     
     $$[\mathbb{L}_1(\mathbb{L}_2) : \mathbb{L}_1] \leq [\mathbb{L}_2 : \mathbb{K}]$$
     
-    이며, 등호가 성립하는 것과 $\mathbb{L}_1$와 $\mathbb{L}_2$가 linearly disjoint인 것이 서로 동치이다. 이 경우, $\mathbb{L}_1(\mathbb{L}_2)$는 $\mathbb{L}_1 \otimes_\mathbb{K} \mathbb{L}_2$와 $\mathbb{L}_1$-isomorphic하다.
+    이며, 등호는 $\mathbb{L}_1$와 $\mathbb{L}_2$가 linearly disjoint할 때 성립한다. 이 경우, $\mathbb{L}_1(\mathbb{L}_2)$는 $\mathbb{L}_1 \otimes_\mathbb{K} \mathbb{L}_2$와 $\mathbb{L}_1$-isomorphic하다.
 2. 위의 조건에 더하여 더 나아가 $\mathbb{L}_1$의 degree도 유한하다 가정하자. 그럼 $\mathbb{L}_1(\mathbb{L}_2) = \mathbb{K}(\mathbb{L}_1 \cup \mathbb{L}_2)$의 degree 또한 유한하고
 
     $$[\mathbb{K}(\mathbb{L}_1 \cup \mathbb{L}_2) : \mathbb{K}] \leq [\mathbb{L}_1 : \mathbb{K}][\mathbb{L}_2 : \mathbb{K}]$$
 
-    이며, 등호가 성립하는 것과 $\mathbb{L}_1$와 $\mathbb{L}_2$가 linearly disjoint인 것이 서로 동치이다.
+    이며, 등호는 $\mathbb{L}_1$와 $\mathbb{L}_2$가 linearly disjoint할 때 성립한다.
 :::
 
 ::: 증명
@@ -154,16 +152,15 @@ $\Omega$의 임의의 두 $\mathbb{K}$-subalgebra $E,F$에 대하여, multiplica
     $$[\mathbb{L}_1(\mathbb{L}_2) : \mathbb{L}_1] \leq [\mathbb{L}_2 : \mathbb{K}]$$
 
     가 성립한다.  
-    또한 $[\mathbb{L}_1(\mathbb{L}_2) : \mathbb{L}_1] = [\mathbb{L}_2 : \mathbb{K}]$이면 $y_j$들이 $\mathbb{L}_1$ 위에서 linearly independent여야 한다. 즉, $\mathbb{L}_1$와 $\mathbb{L}_2$가 linearly disjoint이다.  
-    거꾸로 $\mathbb{L}_1$와 $\mathbb{L}_2$가 linearly disjoint라 가정하고 $(x_i)_{i\in I}$를 $\mathbb{L}_1$의 $\mathbb{K}$-basis라 하자. 만일 $c_j\in \mathbb{L}_1$들에 대하여 $\sum_j c_jy_j=0$이라면, 각각의 $c_j$를 $c_j=\sum_i a_{ij}x_i$ (단 $a_{ij}\in\mathbb{K}$이고 유한 개를 제외하면 $0$)로 적을 때 $\sum_{i,j}a_{ij}x_iy_j=0$을 얻는다. 그런데 가정에 의해 $(x_iy_j)$는 $\mathbb{K}$ 위에서 linearly independent이므로 모든 $a_{ij}$가 $0$, 즉 모든 $c_j$가 $0$이다. 따라서 $y_j$들은 $\mathbb{L}_1(\mathbb{L}_2)$의 $\mathbb{L}_1$-basis이고 등호가 성립한다. 
-2. 이는 [명제 2](#prop2)가 주는 다음의 식
+    또한 $[\mathbb{L}_1(\mathbb{L}_2) : \mathbb{L}_1] = [\mathbb{L}_2 : \mathbb{K}]$이면 $y_j$들이 $\mathbb{L}_1$ 위에서 linearly independent여야 한다. 즉, $\mathbb{L}_1$와 $\mathbb{L}_2$가 linearly disjoint이다. 
+2. 이는 다음의 식
     
     $$[\mathbb{L}_1(\mathbb{L}_2) : \mathbb{K}] = [\mathbb{L}_1(\mathbb{L}_2) : \mathbb{L}_1][\mathbb{L}_1 : \mathbb{K}]$$
 
-    과 1번으로부터 따라온다. 특히 여기에서 등호가 성립하는 것은 1번의 부등식에서 등호가 성립하는 것과 같으므로, 다시 $\mathbb{L}_1$와 $\mathbb{L}_2$가 linearly disjoint인 것과 동치이다. 
+    에 의하여 자명하다. 
 :::
 
-두 $\mathbb{K}$-extension $\mathbb{L}_1,\mathbb{L}_2$에 대하여 ring $\mathbb{K}[\mathbb{L}_1\cup \mathbb{L}_2]$는 일반적으로 field가 아니다. 그러나 다음의 식
+일반적으로 두 $\mathbb{K}$-extension $\mathbb{L}_1,\mathbb{L}_2$에 대하여 ring $\mathbb{K}[\mathbb{L}_1\cup \mathbb{L}_2]$는 field가 아님을 앞에서 언급하였다. 그러나 다음의 식
 
 $$\Frac(\mathbb{K}[\mathbb{L}_1\cup\mathbb{L}_2])=\mathbb{K}(\mathbb{L}_1\cup\mathbb{L}_2)$$
 
@@ -186,7 +183,7 @@ $$\Frac(G)\cong \mathbb{K}(\mathbb{L}_1\cup\mathbb{L}_2)$$
 Field $\mathbb{K}$의 두 extension $\mathbb{L}_1$, $\mathbb{L}_2$를 생각하자. 만약 $\mathbb{L}_1$와 $\mathbb{L}_2$가 linearly disjoint하다면, $\mathbb{L}_1$의 모든 subextension과 $\mathbb{L}_2$의 모든 subextension도 $\mathbb{K}$ 위에서 linearly disjoint하다. 거꾸로  $\mathbb{L}_i$들의 모든 finitely generated subextension $\mathbb{L}_i'$들에 대해 $\mathbb{L}_1'$와 $\mathbb{L}_2'$가  linearly disjoint하다면, $\mathbb{L}_1$와 $\mathbb{L}_2$도 linearly disjoint하다.
 :::
 
-즉, 임의의 두 extension이 linearly disjoint인지의 여부는 두 extension의 임의의 finitely generated subextension들만 봐도 확인할 수 있다. 
+즉, 임의의 두 extension이 linearly disjoint인지의 여부는 두 extension의 임의의 finite subextension들만 봐도 확인할 수 있다. 
 
 ::: 명제 13
  세 $\mathbb{K}$-extension $\mathbb{L},\mathbb{M}_1,\mathbb{M}_2$이 주어졌다 하고, $\mathbb{M}_1 \subseteq \mathbb{M}_2$라고 하자. 그럼 $\mathbb{L}$과 $\mathbb{M}_2$가 linearly disjoint인 것과, $\mathbb{L}$와 $\mathbb{M}_1$가 linearly disjoint인 동시에 $\mathbb{L}(\mathbb{M}_1)$와 $\mathbb{M}_2$가 $\mathbb{M}_1$ 위에서 linearly disjoint인 것이 서로 동치이다. 

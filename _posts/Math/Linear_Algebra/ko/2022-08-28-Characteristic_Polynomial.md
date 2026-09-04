@@ -12,8 +12,6 @@ sidebar:
 date: 2022-08-28
 
 weight: 15
-revising: true
-drift_needed: true
 
 ---
 
@@ -24,8 +22,6 @@ drift_needed: true
 ::: 정의 1
 임의의 $n$차 정사각행렬 $A$에 대하여, $A$의 *특성다항식<sub>characteristic polynomial</sub>*을 $\x$에 대한 다항식 $\det(\x I-A)$으로 정의한다.
 :::
-
-한편 [§행렬식](/ko/math/linear_algebra/determinant)에서 정의한 행렬식은 성분이 field $\mathbb{K}$에 속하는 행렬에 대한 것인 반면, $\x I-A$의 성분은 $\mathbb{K}[\x]$에 속한다. 이는 $\x I-A$를 field of rational functions $\mathbb{K}(\x)$ 위의 행렬로 보는 것으로 해결된다. ([\[환론\] §다항식환, ⁋정의 17](/ko/math/ring_theory/polynomial_rings#def17)) 그럼 $\mathbb{K}(\x)$ 또한 field이므로 앞서 증명한 행렬식의 성질들을 그대로 사용할 수 있으며, 아래의 식 (1)로부터 $\det(\x I-A)$가 다시 $\mathbb{K}[\x]$의 원소, 즉 $\x$에 대한 다항식이라는 것을 알 수 있다. 또 식 (1)의 우변은 행렬의 성분들의 합과 곱으로만 이루어져 있으므로, 이 다항식에 $\mathbb{K}$의 원소를 대입한 값은 그 원소를 먼저 성분에 대입하여 얻은 행렬의 행렬식과 같다.
 
 다음의 식
 
@@ -111,7 +107,7 @@ $$J=\begin{pmatrix}0&-1\\1&0\end{pmatrix}$$
 복소수 집합 $\mathbb{C}$는 algebraically closed field이다.
 :::
 
-위의 [예시 7](#ex7)의 행렬 $J$의 특성다항식은 $\mathbb{R}$에서는 해를 갖지 않지만, $\mathbb{C}$에서는 두 개의 해를 갖는다. 앞으로도 이와 같이 다항식의 해가 어떠한 field 위에서 정의되었는지를 구분하는 것이 중요하다. 
+위의 [예시 7](#ex7)의 행렬 $J$의 특성방정식은 $\mathbb{R}$에서는 해를 갖지 않지만, $\mathbb{C}$에서는 두 개의 해를 갖는다. 앞으로도 이와 같이 다항식의 해가 어떠한 field 위에서 정의되었는지를 구분하는 것이 중요하다. 
 
 ## 고유벡터와 기하적 중복도
 

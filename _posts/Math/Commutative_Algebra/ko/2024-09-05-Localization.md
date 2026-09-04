@@ -1,6 +1,6 @@
 ---
 title: "국소화"
-description: "환의 국소화 과정과 유일한 극대 아이디얼을 갖는 국소환의 성질을 다루며, 가군의 국소화와 곱셈에 대하여 닫힌 부분집합의 개념까지 확장한다."
+description: "환의 국소화 과정과 유일한 극대 아이디어를 갖는 국소환의 성질을 다루며, 가군의 국소화와 곱셈에 대하여 닫힌 부분집합의 개념까지 확장한다."
 excerpt: "환과 가군의 localization과 local ring 구성"
 
 categories: [Math / Commutative Algebra]
@@ -10,14 +10,12 @@ sidebar:
 
 date: 2024-09-05
 weight: 2
-revising: true
-drift_needed: true
 
 ---
 
 ## 국소환
 
-이번 글에서 우리는 localization을 정의한다. 간단히 이야기해서 prime ideal에서의 localization은 ring $A$를 local ring으로 만드는 과정이라 생각할 수 있다.
+이번 글에서 우리는 localization을 정의한다. 간단히 이야기해서 localization은 ring $A$를 local ring으로 만드는 과정이라 생각할 수 있다.
 
 ::: 정의 1
 Ring $A$가 *local ring<sub>국소환</sub>*이라는 것은 $A$가 유일한 maximal ideal을 갖는 것이다.
@@ -116,11 +114,7 @@ Ring $A,B$와 $A$의 multiplicative subset $S$를 고정하자. 만일 ring homo
 
 $$\overline{f}\left(\frac{a}{s}\right)=\overline{f}\left(\frac{a}{1}\frac{1}{s}\right)=\overline{f}(\epsilon(a)\epsilon(s)^{-1})=\overline{f}(\epsilon(a))\overline{f}(\epsilon(s)^{-1})=f(a)f(s)^{-1}$$
 
-이어야 하므로 $\overline{f}$가 존재한다면 위의 식에 의해 유일하게 결정된다. 이제 위의 식 $\overline{f}(a/s)=f(a)f(s)^{-1}$으로 $\overline{f}: S^{-1}A \rightarrow B$를 정의하자. 우선 이것이 잘 정의되어 있음을 확인해야 한다. $a/s=a'/s'$이라 하면 적당한 $t\in S$가 존재하여 $t(s'a-sa')=0$이 성립하고, 여기에 $f$를 취하면
-
-$$f(t)(f(s')f(a)-f(s)f(a'))=0$$
-
-을 얻는다. 그런데 가정에 의해 $f(t)$는 $B$의 unit이므로 이를 소거하여 $f(s')f(a)=f(s)f(a')$을 얻고, 다시 $f(s)$와 $f(s')$이 unit인 것으로부터 $f(a)f(s)^{-1}=f(a')f(s')^{-1}$이 성립한다. 이렇게 정의한 $\overline{f}$가 ring homomorphism임을 보이는 것은 단순한 계산에 불과하다.
+이어야 하므로 $\overline{f}$가 존재한다면 위의 식에 의해 유일하게 결정된다. 이제 위의 식 $\overline{f}(a/s)=f(a)f(s)^{-1}$으로 정의한 $\overline{f}: S^{-1}A \rightarrow B$가 ring homomorphism임을 보이면 되고, 이는 단순한 계산에 불과하다.
 :::
 
 이로부터 localization의 functoriality 또한 보일 수 있다. 
@@ -158,7 +152,7 @@ Ring homomorphism $f:A \rightarrow B$와 $A$의 ideal $\mathfrak{a}$, $B$의 ide
 
   이다.
 
-이제 2번 결과로부터 임의의 prime ideal $\mathfrak{b}\subseteq S^{-1}A$가 주어졌을 때 $\mathfrak{b}^c$는 $S$와 만나지 않는 $A$의 prime ideal임을 안다. ([\[대수적 구조\] §분수체, ⁋명제 10](/ko/math/algebraic_structures/field_of_fractions#prop10)) 반대로 $\mathfrak{a}\subseteq A$가 $S$와 만나지 않는 $A$의 prime ideal이라 하자. 그럼 $\mathfrak{a}^e$는 $S^{-1}A$의 prime ideal이다. 임의의 $b/t,b'/t'$에 대하여 $(b/t)(b'/t')\in \mathfrak{a}^e$라 하자. 그럼 적당한 $a\in \mathfrak{a}$와 $s\in S$가 존재하여 $(bb')/(tt')=a/s$라 할 수 있고, 따라서 적당한 $u\in S$가 존재하여 $utt'a=usbb'\in \mathfrak{a}$이다. 이제 $\mathfrak{a}\cap S=\emptyset$인 것으로부터 $us\not\in \mathfrak{a}$인 것을 알고, $\mathfrak{a}$는 prime ideal이므로 $bb'\in \mathfrak{a}$가 성립한다. 따라서 $b\in \mathfrak{a}$이거나 $b'\in \mathfrak{a}$이고 $\mathfrak{a}^e$는 prime ideal이다. 이들 대응이 서로간의 inverse가 된다는 것은 1번과 2번 결과에서 자연스레 따라나오는 것이다. 
+이제 2번 결과로부터 임의의 prime ideal $\mathfrak{b}\subseteq S^{-1}A$가 주어졌을 때 $\mathfrak{b}^c$는 $S$와 만나지 않는 $A$의 prime ideal임을 안다. ([\[대수적 구조\] §분수체, ⁋명제 9](/ko/math/algebraic_structures/field_of_fractions#prop9)) 반대로 $\mathfrak{a}\subseteq A$가 $S$와 만나지 않는 $A$의 prime ideal이라 하자. 그럼 $\mathfrak{a}^e$는 $S^{-1}A$의 prime ideal이다. 임의의 $b/t,b'/t'$에 대하여 $(b/t)(b'/t')\in \mathfrak{a}^e$라 하자. 그럼 적당한 $a\in \mathfrak{a}$와 $s\in S$가 존재하여 $(bb')/(tt')=a/s$라 할 수 있고, 따라서 적당한 $u\in S$가 존재하여 $utt'a=usbb'\in \mathfrak{a}$이다. 이제 $\mathfrak{a}\cap S=\emptyset$인 것으로부터 $us\not\in \mathfrak{a}$인 것을 알고, $\mathfrak{a}$는 prime ideal이므로 $bb'\in \mathfrak{a}$가 성립한다. 따라서 $b\in \mathfrak{a}$이거나 $b'\in \mathfrak{a}$이고 $\mathfrak{a}^e$는 prime ideal이다. 이들 대응이 서로간의 inverse가 된다는 것은 1번과 2번 결과에서 자연스레 따라나오는 것이다. 
 :::
 
 위의 명제로부터 다음이 자명하다.

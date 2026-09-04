@@ -8,8 +8,6 @@ sidebar:
     nav: "scheme_theory-ko"
 date: 2026-05-07
 weight: 1
-revising: true
-drift_needed: true
 ---
 
 ## 대수다양체
@@ -18,7 +16,7 @@ drift_needed: true
 
 Scheme은 이러한 variety들이 놓치는 것들을 극복하기 위해 체계화된 공간이다. 이번 글은 scheme theory를 전개하기 전에, 이것이 어떤 차원에서 variety를 확장하고, 어떠한 새로운 기하학적 직관을 제공하는지를 살펴보아 큰 흐름을 미리 잡아두는 것에 있다. 
 
-이를 위해 간단히 algebraic variety에서의 세팅을 기억하자. 출발점이 되는 대상은 [\[대수다양체\] §아핀다양체, ⁋정의 2](/ko/math/algebraic_varieties/affine_varieties#def2)의 *affine variety*와 [\[대수다양체\] §사영다양체, ⁋정의 3](/ko/math/algebraic_varieties/projective_varieties#def3)의 *projective variety*로, 이들은 각각 algebraically closed field $\mathbb{K}$ 위의 affine space $\mathbb{A}_\mathbb{K}^n$과 projective space $\mathbb{P}_\mathbb{K}^n$의 irreducible algebraic subset으로 정의되었다. 더욱 중요한 것은 이들이 그 위에 정의된 regular function들의 sheaf $\mathcal{O}_V$를 갖는 공간 $(V,\mathcal{O}_V)$로 이해될 수 있다는 것이었다. 각 점 $p$에서 regular function들의 germ이 이루는 $\mathcal{O}_{V,p}$가 local ring이므로, 이 구조는 아래에서 scheme의 바탕이 되는 locally ringed space의 형태를 이미 갖추고 있다. 
+이를 위해 간단히 algebraic variety에서의 세팅을 기억하자. 출발점이 되는 대상은 [\[대수다양체\] §아핀다양체, ⁋정의 2](/ko/math/algebraic_varieties/affine_varieties#def2)의 *affine variety*와 [\[대수다양체\] §사영다양체, ⁋정의 3](/ko/math/algebraic_varieties/projective_varieties#def3)의 *projective variety*로, 이들은 각각 algebraically closed field $\mathbb{K}$ 위의 affine space $\mathbb{A}_\mathbb{K}^n$과 projective space $\mathbb{P}_\mathbb{K}^n$의 irreducible algebraic subset으로 정의되었다. 더욱 중요한 것은 이들이 그 위에 정의된 regular function들의 sheaf $\mathcal{O}_V$를 갖는 locally ringed space $(V,\mathcal{O}_V)$로 이해될 수 있다는 것이었다. 
 
 이 세계에서는 모든 점이 closed point였다. 즉, $\mathbb{A}_\mathbb{K}^2$ 위의 점은 단순히 좌표 $(a,b)\in \mathbb{K}^2$에 해당하는 maximal ideal $(\x-a, \y-b)\subseteq \mathbb{K}[\x,\y]$로 완전히 결정되었다. 이는 기하적 직관으로는 타당하다고도 할 수 있지만, 이론을 펼치기에는 썩 좋은 환경은 아닌데 예를 들어 $\mathbb{A}_\mathbb{K}^2$ 위에서 직선 $Z(\y)$와 포물선 $Z(\y-\x^2)$을 생각하면, 이들이 만나는 점이 $(0,0)$으로 주어진다는 것 자체는 classical algebraic variety에서 잘 보이는 것이지만, 이 만나는 degree가 $1$차가 아니라는 것이 전혀 보이지 않는다. 
 
@@ -43,7 +41,7 @@ $$\frac{\mathbb{K}[\x,\y]}{(\x^2,\y)} \cong \frac{\mathbb{K}[\epsilon]}{(\epsilo
 
 핵심적으로 다른 것은 scheme의 세상에서는 이 공간 위에 정의된 함수가 더 세밀하다는 것이다. 이 세밀함을 제대로 보려면, 이 공간을 단순한 점 하나가 아니라 <em-ko>tangent 방향 하나를 덧붙인 것</em-ko>으로 이해해야 한다. 즉 $\Spec \mathbb{K}[\epsilon]/(\epsilon^2)$는 한 점에 $\epsilon$이라는 infinitesimal 방향을 붙인 *fat point*로, 보통의 점 $\Spec \mathbb{K}$가 점에서의 값만을 기억하는 데 비해 그 점에서의 tangent 방향의 정보까지 함께 갖는 공간이다.
 
-이 관점에서 regular function, 즉 $\mathbb{K}[\epsilon]/(\epsilon^2)$의 원소 $a+b\epsilon$은 두 정보를 동시에 담는다. $a$는 그 점에서의 (보통 의미의) 함숫값이고, $b$는 바로 그 tangent 방향을 따라 함수가 어떻게 변하는지를 나타내는 좌표, 다시 말해 그 점에서의 일차 미분 정보이다. 그래서 두 함수가 그 점에서 같은 값 $a$를 갖더라도 $b$가 다르면 서로 다른 함수이다. 예컨대 $a+b\epsilon$과 $a+b'\epsilon$( $b\ne b'$ )은 같은 점에서 같은 값을 갖지만 tangent 방향으로의 변화가 다르므로 이 공간 위에서는 구별되는 regular function이다. 두 함수가 비로소 같아지는 것은 값 $a$뿐 아니라 tangent 좌표 $b$까지 일치할 때, 곧 점에서의 값과 일차 미분값을 둘 다 공유할 때뿐이다. 이렇게 점에 tangent 방향의 두께를 붙여 보는 것이 *fat point*의 본질이며, 이 두께가 남아 있다는 사실이 교차 multiplicity를 비롯한 infinitesimal 정보를 담아내는 열쇠가 된다.
+이 관점에서 regular function, 즉 $\mathbb{K}[\epsilon]/(\epsilon^2)$의 원소 $a+b\epsilon$은 두 정보를 동시에 담는다. $a$는 그 점에서의 (보통 의미의) 함숫값이고, $b$는 바로 그 tangent 방향을 따라 함수가 어떻게 변하는지를 나타내는 좌표, 다시 말해 그 점에서의 일차 미분 정보이다. 그래서 두 함수가 그 점에서 같은 값 $a$를 갖더라도 $b$가 다르면 서로 다른 함수이다. 예컨대 $a+b\epsilon$과 $a+b'\epsilon$( $b\ne b'$ )은 같은 점에서 같은 값을 갖지만 tangent 방향으로의 거동이 다르므로 이 공간 위에서는 구별되는 regular function이다. 두 함수가 비로소 같아지는 것은 값 $a$뿐 아니라 tangent 좌표 $b$까지 일치할 때, 곧 점에서의 값과 일차 미분값을 둘 다 공유할 때뿐이다. 이렇게 점에 tangent 방향의 두께를 붙여 보는 것이 *fat point*의 본질이며, 이 두께가 남아 있다는 사실이 교차 multiplicity를 비롯한 infinitesimal 정보를 담아내는 열쇠가 된다.
 :::
 
 Classical variety의 또 다른 근본적 제약은 base change 혹은 fiber product가 자연스럽지 않다는 것이다. 이는 사소해 보이는 곳에서부터 이미 드러나는데, 가령 두 projective space의 곱 $\mathbb{P}^n\times \mathbb{P}^m$이 projective variety가 된다는 것조차 우리는 Segre embedding 등을 사용해서 손수 (더 큰) projective space 안에 넣어서 보여줬어야 했다. 이렇듯 가장 단순한 공간 두 개의 곱을 다루기 위해 추가적인 machinery가 필요하다는 점은 우리가 그 동안 그렇게 좋은 세상에서 작업을 하지 않았음을 보여주는 증거이다. 
@@ -54,12 +52,12 @@ Scheme theory는 이 모든 문제를 해결하기 위해 탄생했다. Scheme�
 
 구체적으로, 위에서 우리는 classical variety가 점을 maximal ideal로만 보고 radical ideal을 취해 nilpotent를 모두 버렸다는 한계를 살펴보고, 이들을 살려 fat point로 보면 손실되는 정보가 없어진다는 것을 보았다. Scheme은 이 수정을 전체에 걸쳐 체계화한 것으로, 여기에서 우리는 점을 maximal ideal이 아니라 <em-ko>모든 prime ideal</em-ko>로 삼고, 각 점 위에 local ring을 올려 함수를 그 section으로 정의한다. 
 
-그 결과로 나타나는 것 중 가장 비직관적인 것 중 하나는 generic point의 존재이다. 예를 들어 $\Spec \mathbb{K}[\x,\y]$에서는 closed point $(\x-a,\y-b)$ 외에도 $(\x)$, $(\y)$, 그리고 $(0)$와 같은 non-closed point들이 존재한다. 일반적으로 점 $\mathfrak{p}\in\Spec A$의 closure는 $\overline{\{\mathfrak{p}\}}=Z(\mathfrak{p})$로 주어지며, 거꾸로 $\Spec A$의 irreducible closed subset $Y$마다 $\overline{\{\mathfrak{p}\}}=Y$인 점 $\mathfrak{p}$가 유일하게 존재한다. 이 $\mathfrak{p}$를 $Y$의 *generic point*라 부르며, $A$가 integral domain이면 $(0)$이 $\Spec A$ 전체의 generic point가 된다. 
+그 결과로 나타나는 것 중 가장 비직관적인 것 중 하나는 generic point의 존재이다. 예를 들어 $\Spec \mathbb{K}[\x,\y]$에서는 closed point $(\x-a,\y-b)$ 외에도 $(\x)$, $(\y)$, 그리고 $(0)$와 같은 non-closed point들이 존재한다. 이 가운데 어떤 점 $\mathfrak{p}\in\Spec A$의 closure $\overline{\{\mathfrak{p}\}}=Z(\mathfrak{p})$이 irreducible closed subset이 될 때, $\mathfrak{p}$를 그 irreducible closed subset의 *generic point*라 부르며, $A$가 integral domain이면 $(0)$이 $\Spec A$ 전체의 generic point가 된다. 
 
 ::: 예시 3
 $\Spec \mathbb{Z}[\x]$를 생각하자. 이 scheme은 $\mathbb{Z}$ 위에서 정의되는 직선 $\mathbb{A}_{\mathbb{Z}}^1$에 해당한다. 이 예시에서 우리는 이 공간의 몇몇 점들을 살펴본다. 
 
-먼저 $(0)$는 전체 공간의 generic point이다. $(\x)$는 zero section $Z(\x)$의 generic point로, 모든 fiber 위에서 $\x=0$인 직선의 보편적인 성질을 담고 있다. $(p)$는 소수 $p$에 해당하는 vertical fiber의 generic point이며, $(p,\x)$는 그 fiber 위의 원점이라는 closed point이다. 이처럼 non-closed point들은 geometric object의 보편적이고 relative한 성질을 포착하는 데 필수적이다.
+먼저 $(0)$는 전체 공간의 generic point이다. $(\x)$는 $x$-축 위의 generic point로, 모든 fiber 위에서 $x=0$인 직선의 보편적인 성질을 담고 있다. $(p)$는 소수 $p$에 해당하는 vertical fiber의 generic point이며, $(p,\x)$는 그 fiber 위의 원점이라는 closed point이다. 이처럼 non-closed point들은 geometric object의 보편적이고 relative한 성질을 포착하는 데 필수적이다.
 :::
 
 즉, 직관적으로 generic point는 classical에서 prime ideal이 정의하던 irreducible subvariety를 **하나의 점으로 대표**시킨 것으로, 그 점의 닫힘이 바로 원래의 subvariety를 복원한다.
@@ -78,16 +76,16 @@ $$h_X:(\Sch_{/S})^{\op}\rightarrow\Set,\qquad h_X(T)=\Hom_S(T,X)$$
 
 로 파악하면, 이 정리는 $h_X$가 scheme $X$를 손실 없이 완전히 결정한다는 것을 보여주며, 이러한 관점에서 scheme을 $S$-scheme들의 category $\Sch_{/S}$ 위에서 정의된 contravariant functor로 이해할 수도 있다. 
 
-Classical variety $V$ 위의 $\mathbb{K}$-point는 단순히 $\mathbb{K}$-값을 갖는 좌표 $(a_1,\dotsc,a_n)$의 집합으로 이해되었다. 이는 scheme의 언어로는 morphism $\Spec \mathbb{K}\rightarrow V$에 해당한다. Functor of points는 이 관점을 확장하여, $V$의 $T$-valued point를 임의의 scheme $T$로부터의 morphism으로 정의한다.
+Classical variety $V$ 위의 $\mathbb{K}$-rational point는 단순히 $\mathbb{K}$-값을 갖는 좌표 $(a_1,\dotsc,a_n)$의 집합으로 이해되었다. 이는 scheme의 언어로는 morphism $\Spec \mathbb{K}\rightarrow V$에 해당한다. Functor of points는 이 관점을 확장하여, $V$의 $T$-valued point를 임의의 scheme $T$로부터의 morphism으로 정의한다.
 
 ::: 예시 4
-Classical variety $V\subseteq\mathbb{A}_\mathbb{K}^n$의 $\mathbb{K}$-point들의 집합은 $V(\mathbb{K})=\Hom_\mathbb{K}(\Spec \mathbb{K},V)$이다. 이는 functor of points $h_V$를 $T=\Spec \mathbb{K}$에 대하여 평가한 값 $h_V(\Spec \mathbb{K})$에 해당한다. 그러나 $T=\Spec \mathbb{K}[\epsilon]/(\epsilon^2)$를 대입하면, $h_V(T)$는 $V$의 $\mathbb{K}$-point에서의 tangent vector들을 parameterize하게 된다.
+Classical variety $V\subseteq\mathbb{A}_\mathbb{K}^n$의 $\mathbb{K}$-rational points의 집합은 $V(\mathbb{K})=\Hom_\mathbb{K}(\Spec \mathbb{K},V)$이다. 이는 functor of points $h_V$를 $T=\Spec \mathbb{K}$에 대하여 평가한 값 $h_V(\Spec \mathbb{K})$에 해당한다. 그러나 $T=\Spec \mathbb{K}[\epsilon]/(\epsilon^2)$를 대입하면, $h_V(T)$는 $V$의 $\mathbb{K}$-point에서의 tangent vector들을 parameterize하게 된다.
 :::
 
 특히 projective line $\mathbb{P}_\mathbb{K}^1$의 경우, functor of points를 통해 infinitesimal structure가 어떻게 드러나는지 명확히 볼 수 있다. $\mathbb{P}_\mathbb{K}^1$은 그 자체로 homogeneous coordinate를 갖는 scheme이므로, 임의의 local $\mathbb{K}$-algebra $R$에 대하여 $\mathbb{P}_\mathbb{K}^1(R)$는 $R$ 위의 projective line 위의 점들로 정의된다.
 
 ::: 예시 5
-$T=\Spec \mathbb{K}[\epsilon]/(\epsilon^2)$라 하자. $\mathbb{P}_\mathbb{K}^1$의 $T$-valued points, 즉 morphism $T\rightarrow\mathbb{P}_\mathbb{K}^1$를 생각하면, 이들은 $\mathbb{P}_\mathbb{K}^1$ 위의 한 점 $P$와 그 점에서의 tangent vector를 동시에 결정한다. 구체적으로, 점 $P$는 closed embedding $\Spec \mathbb{K}\hookrightarrow T$를 $T\rightarrow\mathbb{P}_\mathbb{K}^1$와 합성함으로써 얻어지고, 나머지 정보는 $P$에서의 Zariski tangent space의 원소가 된다. 따라서 $\mathbb{P}_\mathbb{K}^1$의 $\mathbb{K}[\epsilon]/(\epsilon^2)$-points는 $\mathbb{P}_\mathbb{K}^1$의 tangent bundle을 구성하는 점들에 일대일 대응한다.
+$T=\Spec \mathbb{K}[\epsilon]/(\epsilon^2)$라 하자. $\mathbb{P}_\mathbb{K}^1$의 $T$-valued points, 즉 morphism $T\rightarrow\mathbb{P}_\mathbb{K}^1$를 생각하면, 이들은 $\mathbb{P}_\mathbb{K}^1$ 위의 한 점 $P$와 그 점에서의 tangent vector를 동시에 결정한다. 구체적으로, 점 $P$는 closed immersion $\Spec \mathbb{K}\hookrightarrow T$를 $T\rightarrow\mathbb{P}_\mathbb{K}^1$와 합성함으로써 얻어지고, 나머지 정보는 $P$에서의 Zariski tangent space의 원소가 된다. 따라서 $\mathbb{P}_\mathbb{K}^1$의 $\mathbb{K}[\epsilon]/(\epsilon^2)$-points는 $\mathbb{P}_\mathbb{K}^1$의 tangent bundle을 구성하는 점들에 일대일 대응한다.
 :::
 
 Functor of points는 이렇게 scheme을 representable functor로 이해하게 함으로써, geometric intuition과 범주론적 formalism 사이의 가교 역할을 한다.

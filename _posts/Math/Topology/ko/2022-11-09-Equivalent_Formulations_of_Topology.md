@@ -10,8 +10,6 @@ sidebar:
 
 date: 2022-11-09
 weight: 4
-revising: true
-drift_needed: true
 
 ---
 
@@ -52,12 +50,10 @@ $$\cl(A)\subseteq\cl(A)\cup\cl(B)=\cl(A\cup B)=\cl(B)$$
 
   가 성립하므로 $\cl(\bigcap A_i)\subseteq\bigcap A_i$ 또한 성립한다.
 
-뿐만 아니라 임의의 $A\subseteq X$에 대하여, $\cl(\cl(A))=\cl(A)$이므로 $\cl(A)\in\mathcal{C}$이고 $A\subseteq\cl(A)$이므로 $\cl(A)$는 $A$를 포함하는 $\mathcal{C}$의 원소이다. 또 $A\subseteq C$를 만족하는 $C\in\mathcal{C}$가 주어지면 위에서 확인한 단조성으로부터 $\cl(A)\subseteq\cl(C)=C$가 성립하므로, $\cl(A)$는 $A$를 포함하는 $\mathcal{C}$의 원소들 중 가장 작은 것이다.
-
 이로부터 다음의 정리가 얻어진다.
 
 ::: 정리 2
-[정의 1](#def1)의 조건을 모두 만족하는 함수 $\cl:\mathcal{P}(X)\rightarrow\mathcal{P}(X)$가 주어졌다 하자. $\mathcal{C}$를 <phrase>$\cl(C)=C$를 만족하는 모든 $C$들의 모임</phrase>으로 정의하면, $\mathcal{C}$는 [§집합의 내부, 폐포, 경계, ⁋명제 2](/ko/math/topology/other_concepts#prop2)의 조건을 모두 만족하며 따라서 유일한 위상구조를 정의한다. 또한 이 위상구조에서 임의의 $A\subseteq X$의 closure는 $\cl(A)$와 같다.
+[정의 1](#def1)의 조건을 모두 만족하는 함수 $\cl:\mathcal{P}(X)\rightarrow\mathcal{P}(X)$가 주어졌다 하자. $\mathcal{C}$를 <phrase>$\cl(C)=C$를 만족하는 모든 $C$들의 모임</phrase>으로 정의하면, $\mathcal{C}$는 [§집합의 내부, 폐포, 경계, ⁋명제 2](/ko/math/topology/other_concepts#prop2)의 조건을 모두 만족하며 따라서 유일한 위상구조를 정의한다.
 :::
 
 물론 집합의 interior를 이용하여도 어렵지 않게 위상구조를 하나 정의할 수 있다. 이 경우, interior operator $\interior$가 만족해야 할 공리들은 다음과 같다.
@@ -73,8 +69,6 @@ $$\cl(A)\subseteq\cl(A)\cup\cl(B)=\cl(A\cup B)=\cl(B)$$
 이 조건들을 만족하는 함수를 *interior operator*라 부른다.
 :::
 
-이 조건들은 $\interior(A)=X\setminus\cl(X\setminus A)$의 대응 아래에서 [정의 1](#def1)의 조건들과 여집합을 통해 서로 옮겨지므로, closure의 경우와 같은 논증으로 $\interior(U)=U$를 만족하는 $U$들의 모임이 위상구조를 정의하고 이 위상구조에서의 interior operator가 원래의 $\interior$와 일치한다는 것을 알 수 있다.
-
 ## Neighborhood filter
 
 우리는 [§열린집합, ⁋명제 6](/ko/math/topology/open_sets#prop6)에서 각 점 $x$마다 *neighborhood filter* $\mathcal{N}(x)$를 주면, 이 정보 또한 유일한 방식으로 $X$에 위상구조를 준다는 것을 확인했다. 해당 명제에서 $\mathcal{N}(x)$가 만족해야 할 첫 번째와 두 번째 조건은 filter의 조건이고 세 번째 조건은 $\mathcal{N}(x)$의 각 원소가 $x$를 포함한다는 것이며, 다음 정의 또한 이미 정의하였던 것이지만 나중의 reference를 위해 남겨둔다.
@@ -84,7 +78,7 @@ $$\cl(A)\subseteq\cl(A)\cup\cl(B)=\cl(A\cup B)=\cl(B)$$
 
 1. $\mathcal{F}$의 원소를 포함하는 $X$의 부분집합은 $\mathcal{F}$에 속한다.
 2. $\mathcal{F}$의 원소들의 유한한 교집합은 $\mathcal{F}$에 속한다.
-3. $\mathcal{F}\neq\emptyset$이고 $\emptyset\not\in\mathcal{F}$이다.
+3. $\emptyset\not\in\mathcal{F}$이다.
 :::
 
 ::: 예시 4
@@ -96,7 +90,7 @@ Ordered set $(\mathcal{P}(X),\subseteq)$를 생각하면, 위 정의는 [\[집�
 그럼 $\mathcal{N}(x)$가 만족해야 할 네 가지 조건 중 앞의 세 가지는 모든 $x$에 대하여 $\mathcal{N}(x)$가 각 원소마다 $x$를 포함하는 filter라는 것으로 축약할 수 있다. 네 번째 조건은 별도로 이름을 갖는다.
 
 ::: misc Neighborhood axiom. {#neighborhood-axiom}
-각각의 $z\in X$마다 각 원소가 $z$를 포함하는 $X$의 filter $\mathcal{N}(z)$가 주어졌고, 이들이 다음의 조건을 만족한다 하자. 임의의 $z\in X$와 $S\in\mathcal{N}(z)$에 대하여 적당한 $S'\in\mathcal{N}(z)$가 존재하여, <phrase>임의의 $x\in S'$마다 $S\in\mathcal{N}(x)$</phrase>가 성립한다. 이 조건을 *neighborhood axiom*이라 부른다.
+임의의 $z\in X$와, 각각의 원소가 $z$를 포함하는 $X$의 filter $\mathcal{N}(z)$가 주어졌다 하자. 그럼 임의의 $S\in\mathcal{N}(z)$마다 적당한 $S'\in\mathcal{N}(z)$가 존재하여, <phrase>임의의 $x\in S'$마다 $S\in\mathcal{N}(x)$</phrase>가 성립하도록 할 수 있다.
 :::
 
 뿐만 아니라, $\mathcal{N}(x)$를 local base와 같은 역할을 한다고 생각하면, 이를 통해 위상공간이 base $\mathcal{B}$를 통해서도 정의됨을 보일 수 있었다. ([§위상공간의 기저, ⁋따름정리 6](/ko/math/topology/topological_bases#cor6))
@@ -138,7 +132,7 @@ $$\mathcal{F}\vert_A=\{F\cap A\mid F\in \mathcal{F}\}$$
 은 일반적으로 $A$의 filter가 되지 않는다. 이는 생각해보면 오직 $\mathcal{F}\vert_A$가 공집합을 포함할 수도 있기 때문이다. 즉, $\mathcal{F}$의 모든 원소가 $A$와 서로소가 아니라면 $\mathcal{F}\vert_A$는 $A$ 위에 filter를 정의한다. 
 
 ::: 정의 8
-만일 위의 상황에서 $\mathcal{F}\vert_A$가 $A$의 filter를 정의한다면, $\mathcal{F}$가 $A$ 위에 filter를 *유도<sub>induce</sub>*한다고 하고, 이러한 $\mathcal{F}$를 $A$의 filter라 부르기도 한다. 
+만일 위의 상황에서 $\mathcal{F}\vert_A$가 $A$의 filter를 정의한다면, filter $\mathcal{F}$를 $A$의 filter라 부른다. 
 :::
 
 ---

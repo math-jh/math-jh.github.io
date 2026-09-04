@@ -12,9 +12,7 @@ sidebar:
 date: 2022-10-09
 
 weight: 23
-revising: true
 
-drift_needed: true
 
 
 ---
@@ -27,7 +25,7 @@ drift_needed: true
 
 대표적인 예시는 다양한 데이터가 주어졌을 때, 이를 표현하는 적당한 함수를 찾는 것이다. 물론 라그랑주 보간법을 이용하면 적절한 basis를 잡아 주어진 $n+1$개의 데이터를 근사하는 $n$차 함수를 찾을 수 있지만, 가령 이 데이터를 표현하는 일차함수를 찾으려 한다면 주어진 $n+1$개의 점이 모두 일직선 상에 존재하지 않는 한 정확한 해를 찾을 수는 없을 것이다.
 
-우리는 임의의 주어진 벡터 $y$를 $\im A$로 사영한 후, 이 벡터 $\hat y=\proj_{\im(A)}y$에 대해 방정식 $Ax=\hat y$를 풀 것이다. $x$가 $\mathbb{R}^n$을 움직일 때 $Ax$ 꼴의 벡터 전체가 $\im A$이므로, [§내적공간, ⁋정리 9](/ko/math/linear_algebra/inner_product_spaces#thm9)에 의하여 이는 $\lVert Ax-y\rVert$을 최소로 하는 $x$를 찾는 문제와 같다. 그런데 앞선 글에서 우리는 $y-\hat y\in (\im A)^\perp$임을 알고 있으므로
+우리는 임의의 주어진 벡터 $y$를 $\im A$로 사영한 후, 이 벡터 $\hat y=\proj_{\im(A)}y$에 대해 방정식 $Ax=\hat y$를 풀 것이다. 그런데 앞선 글에서 우리는 $y-\hat y\in (\im A)^\perp$임을 알고 있으므로
 
 $$\langle y-\hat y, v\rangle=0\qquad\text{for all $v\in \im A$}$$
 
@@ -43,7 +41,7 @@ $$\langle A^t(y-\hat y), u\rangle=0\qquad\text{for all $u\in\mathbb{R}^n$}$$
 
 $$A^tAx=A^ty$$
 
-을 얻는다. 역으로 $A^tAx=A^ty$를 만족하는 $x$가 주어졌다 하면 $A^t(y-Ax)=0$이므로 임의의 $u\in\mathbb{R}^n$에 대하여 $\langle y-Ax, Au\rangle=\langle A^t(y-Ax), u\rangle=0$이고, 따라서 $y-Ax$는 $\im A$에 수직이다. 그럼 $\hat y-Ax=(y-Ax)-(y-\hat y)$ 또한 $\im A$에 수직인데 $\hat y-Ax$는 $\im A$에 속하므로 영벡터이고, 따라서 $\hat y=Ax$이다. 즉 위 과정의 각 단계가 모두 동치이며, 이를 요약하면 다음과 같다.
+을 얻는다. 이 과정을 요약하면 다음과 같다.
 
 ::: 명제 1
 임의의 행렬 $A\in\Mat_{m\times n}(\mathbb{R})$과 $y\in\mathbb{R}^m$에 대하여, 벡터 $x\in\mathbb{R}^n$이 실수 $\lVert Ax-y\rVert$의 값을 최소로 하는 것은 다음 방정식
@@ -103,7 +101,7 @@ $$\begin{pmatrix}34&10\\ 10&4\end{pmatrix}\begin{pmatrix}a\\ c\end{pmatrix}=\beg
 {% diagram Math/Linear_Algebra/Least_Squares_Method-2.svg width="19.74em" alt="quadratic least squares fit" %}
 :::
 
-[명제 1](#prop1)의 유도과정을 돌이켜보면, least-squares solution $x$가 만드는 $Ax$는 $y$를 $\im A$로 정사영한 벡터 $\proj_{\im A}y$와 정확히 같았으며, 이것이 애초에 방정식 $A^tAx=A^ty$을 이끌어낸 출발점이었다. 즉 근사값 $\hat y=Ax$는 $y$에서 $\im A$로 내린 수선의 발이고, 오차 $y-\hat y$는 $\im A$에 수직이다. 특히 $A$가 full column rank, 즉 $\rank A=n$인 경우를 생각하자. 이때 $A^tA$는 가역이다. $A^tA$는 $n\times n$ 정사각행렬이므로 $A^tAz=0$이 $z=0$만을 해로 가짐을 보이면 충분한데, $A^tAz=0$이라 하면 $\lVert Az\rVert^2=\langle Az, Az\rangle=\langle z, A^tAz\rangle=0$이므로 $Az=0$이고, $\rank A=n$이므로 $A$가 단사여서 $z=0$이다. 따라서 $x=(A^tA)^{-1}A^ty$이므로 근사값은 
+[명제 1](#prop1)의 유도과정을 돌이켜보면, least-squares solution $x$가 만드는 $Ax$는 $y$를 $\im A$로 정사영한 벡터 $\proj_{\im A}y$와 정확히 같았으며, 이것이 애초에 방정식 $A^tAx=A^ty$을 이끌어낸 출발점이었다. 즉 근사값 $\hat y=Ax$는 $y$에서 $\im A$로 내린 수선의 발이고, 오차 $y-\hat y$는 $\im A$에 수직이다. 특히 $A$가 full column rank여서 $A^tA$이 가역이라면 $x=(A^tA)^{-1}A^ty$이므로 근사값은 
 
 $$\hat y=A(A^tA)^{-1}A^ty$$
 
@@ -129,9 +127,9 @@ $$0\cdot\left(-\frac{1}{6}\right)+1\cdot\frac{1}{3}+2\cdot\left(-\frac{1}{6}\rig
 
 이번에는 반대로 행렬 $A\in\Mat_{m\times n}(\mathbb{R})$에서 $m< n$인 경우를 생각한다. 
 
-우선 임의의 $A\in\Mat_{m\times n}(\mathbb{R})$과 $y\in\im(A)$가 주어졌다 하고, $A$가 단사가 아니라 하자. 그럼 $Au=0$을 만족하는 영이 아닌 벡터 $u$들이 존재하며, 따라서 $Ax=y$를 만족하는 벡터 $x$가 하나 주어진다면, $x+u$들 또한 해가 된다는 것을 알 수 있다. 이제 이들 중 가장 작은 norm을 갖는 해를 찾아 이를 *최소노름해<sub>minimum-norm solution</sub>*라 부르자. 즉, $Ax=y$의 해 전체는 한 특수해 $x_0$에 대하여 $x_0+\ker A$의 꼴을 이루며, 우리는 이 affine subspace 위에서 norm을 최소로 만드는 점을 찾는다.
+우선 임의의 $A\in\Mat_{m\times n}(\mathbb{R})$과 $y\in\im(A)$가 주어졌다 하고, $A$가 단사가 아니라 하자. 그럼 $Au=0$을 만족하는 영이 아닌 벡터 $u$들이 존재하며, 따라서 $Ax=y$를 만족하는 벡터 $x$가 하나 주어진다면, $x+u$들 또한 해가 된다는 것을 알 수 있다. 이제 이들 중 가장 작은 norm을 갖는 해를 찾아 이를 *최소노름해<sub>minimum-norm solution</sub>*라 부르자. 즉, $Ax=y$의 해 전체는 한 특수해 $x_0$에 대하여 $x_0+\ker A$의 꼴을 이루며, 우리는 이 affine 부분공간 위에서 norm을 최소로 만드는 점을 찾는다.
 
-이는 [§내적공간, ⁋정리 9](/ko/math/linear_algebra/inner_product_spaces#thm9)의 projection theorem이 다루는 상황과 정확히 같다. 원점에서 affine subspace $x_0+\ker A$까지의 거리를 최소로 만드는 점은 유일하며, 원점에서 이 점으로 그은 벡터는 $\ker A$에 수직이다. 따라서 최소노름해는 $(\ker A)^\perp$에 놓인 유일한 해이다. 한편 [§쌍선형형식, ⁋명제 10](/ko/math/linear_algebra/bilinear_form#prop10)에 의하여 $(\ker A)^\perp=\im A^t$이 성립한다. 이를 정리하면 다음과 같다.
+이는 [§내적공간, ⁋정리 9](/ko/math/linear_algebra/inner_product_spaces#thm9)의 projection theorem이 다루는 상황과 정확히 같다. 원점에서 affine 부분공간 $x_0+\ker A$까지의 거리를 최소로 만드는 점은 유일하며, 원점에서 이 점으로 그은 벡터는 $\ker A$에 수직이다. 따라서 최소노름해는 $(\ker A)^\perp$에 놓인 유일한 해이다. 한편 [§쌍선형형식, ⁋명제 10](/ko/math/linear_algebra/bilinear_form#prop10)에 의하여 $(\ker A)^\perp=\im A^t$이 성립한다. 이를 정리하면 다음과 같다.
 
 ::: 명제 5
 임의의 행렬 $A\in\Mat_{m\times n}(\mathbb{R})$과 $y\in\im A$에 대하여, 방정식 $Ax=y$의 해들 중 norm을 최소로 하는 해는 유일하게 존재하며, 이는 $\im A^t$에 속하는 유일한 해이다.

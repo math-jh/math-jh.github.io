@@ -10,8 +10,6 @@ sidebar:
 
 date: 2021-08-23
 weight: 20
-revising: true
-drift_needed: true
 
 ---
 
@@ -48,9 +46,7 @@ $\emptyset$은 vacuous하게 ordinal이고, 모든 자연수들도 ordinal이 �
 만일 $\alpha$가 ordinal number라면, $\alpha$의 successor $S(\alpha)=\alpha\cup\{\alpha\}$ 또한 ordinal이다.
 :::
 ::: 증명
-우선, $S(\alpha)=\alpha\cup\{\alpha\}$의 모든 원소는 $S(\alpha)$의 부분집합이다. 집합 $\alpha$에 들어있던 원소 $\beta$에 대해서는, $\alpha$가 ordinal이므로 $\beta\subseteq\alpha$이고, 여기에 $\alpha\subseteq S(\alpha)$를 이으면 $\beta\subseteq S(\alpha)$를 얻는다. 우리가 새로 추가한 <em-ko>원소</em-ko> $\alpha$는 정의에 의해 $S(\alpha)$의 부분집합이기도 하다.   
-
-이제 $\in$이 $S(\alpha)$의 원소들을 strictly well-order함을 보이자. $\alpha$의 원소들이 $\in$으로 strictly well-ordered되어 있는 것은 가정이고, $\alpha$의 각각의 원소 $\beta$는 $\beta\in\alpha$를 만족하므로 새로 추가한 원소 $\alpha$는 $\in$이 주는 순서에서 다른 모든 원소보다 크다. 따라서 $\alpha$에 greatest element $\alpha$를 추가하면 ([§순서집합의 원소들, ⁋명제 4](/ko/math/set_theory/elements_in_ordered_set#prop4)) $S(\alpha)$를 얻고, 이렇게 얻어진 집합은 다시 well-ordered이다.
+우선, $S(\alpha)=\alpha\cup\{\alpha\}$의 모든 원소는 $S(\alpha)$의 부분집합이다. 집합 $\alpha$에 들어있던 원소들은 $\alpha$를 포함하는 집합인 $S(\alpha)$에도 들어있을 것이고, 우리가 새로 추가한 <em-ko>원소</em-ko> $\alpha$는 정의에 의해 $S(\alpha)$의 부분집합이기도 하다.   
 :::
 
 다음 명제는 이렇게 successor funcion $S$를 도입하는 것보다 더더욱 일반적인 방법으로 <em-ko>더 큰</em-ko> ordinal을 만드는 방법을 보여준다. 
@@ -62,12 +58,12 @@ $(A_i)_{i\in I}$가 well-ordered set들의 family이고, 어떠한 $i,j\in I$에
 원하는 order relation의 존재성과 유일성을 직접 보이는 대신, 이 조건보다 더 약화된 조건 하에서 더 일반적인 결과를 보이자.
 
 ::: 보조정리 5
-Ordered set들의 family $(A_i)_{i\in I}$가 포함관계에 대하여 right directed이고, $A_i\subseteq A_j$일 때마다 <phrase>$A_j$의 order relation을 $A_i$로 제한한 관계</phrase>가 $A_i$에 주어진 order relation과 동일하다고 하자. 그럼 각각의 order relation 모두를 확장하는, 곧 각각의 $A_i$로 제한한 관계가 $A_i$에 주어진 order relation과 동일한 $A=\bigcup_{i\in I} A_i$ 위의 order relation이 유일하게 존재한다.
+Ordered set들의 family $(A_i)_{i\in I}$가 포함관계에 대하여 right directed이고, $A_i\subseteq A_j$일 때마다 <phrase>$A_j$의 order relation을 $A_i$로 제한한 관계</phrase>가 $A_i$에 주어진 order relation과 동일하다고 하자. 그럼 각각의 order relation 모두를 확장하는 $A=\bigcup_{i\in I} A_i$ 위의 order relation이 유일하게 존재한다.
 :::
 ::: 증명
-각각의 $A_i$에 대하여, $R_i$가 order relation이라 하자. 만약 각각의 order relation을 확장하는 $A$ 위의 ordering $R$이 존재한다면, $R_i\subseteq R$이다. 반대로 만일 $(x,y)\in R$라면 $x$와 $y$를 포함하는 $A_i,A_j$가 존재하므로, 어떤 $A_k$가 존재하여 $x$와 $y$를 동시에 포함한다. 한편 $R$을 $A_k$로 제한한 관계가 $R_k$이므로 $(x,y)\in R_k$이고, 따라서 $(x,y)\in\bigcup_{i\in I}R_i$이다. 따라서 만일 그러한 관계가 존재한다면 이는 유일하며 반드시 $\bigcup_{i\in I}R_i$가 되어야 한다.
+각각의 $A_i$에 대하여, $R_i$가 order relation이라 하자. 만약 각각의 order relation을 확장하는 $A$ 위의 ordering $R$이 존재한다면, $R_i\subseteq R$이다. 반대로 만일 $(x,y)\in R$라면 $x$와 $y$를 포함하는 $A_i,A_j$가 존재하므로, 어떤 $A_k$가 존재하여 $x$와 $y$를 동시에 포함한다. 한편 $(x,y)\in R_k$이므로 $(x,y)\in\bigcup_{i\in I}R_i$이다. 따라서 만일 그러한 관계가 존재한다면 이는 유일하며 반드시 $\bigcup_{i\in I}R_i$가 되어야 한다.
 
-따라서 $R=\bigcup_{i\in I}R_i$가 실제로 이 조건들을 만족함을 보이면 된다. 우선 $R$이 각각의 $R_i$를 확장함을 보이자. 정의에 의해 $R_i\subseteq R\cap(A_i\times A_i)$인 것은 분명하다. 반대로 $x,y\in A_i$이고 $(x,y)\in R_j$라 하자. 그럼 right directed라는 가정에 의해 $A_i$와 $A_j$를 모두 포함하는 $A_k$가 존재하고, $A_j\subseteq A_k$에 family의 조건을 적용하면 $R_j\subseteq R_k$이므로 $(x,y)\in R_k$이다. 이제 $A_i\subseteq A_k$에 같은 조건을 적용하면 $(x,y)\in R_k\cap(A_i\times A_i)=R_i$를 얻고, 따라서 $R\cap(A_i\times A_i)=R_i$이다. 이제 $R$가 order relation임을 보이자. 임의의 $x\in A$에 대하여, 만일 $x\in A_i$라면 $(x,x)\in R_i\subseteq R$가 되므로 $(x,x)\in R$이다.  비슷하게 만일 $(x,y)\in R$이고 $(y,x)\in R$라면, 어떤 $A_k$가 존재하여 $x$와 $y$를 동시에 포함하며, 이 집합에서의 order relation들의 조건에 의해 $(x,y),(y,x)\in R_k$이므로, $R_k$의 antisymmetry에 의해 $x=y$이다. Transitivity을 보이기 위해서는, $(x,y)\in R$과 $(y,z)\in R$을 가정한 후, $x$, $y$, $z$를 모두 포함하는 집합 $A_l$를 찾아서, $(x,z)\in R_l$로 결론을 내리면 된다.
+따라서 $R=\bigcup_{i\in I}R_i$가 실제로 이 조건들을 만족함을 보이면 된다. 우선 정의에 의해 $R$이 모든 $R_i$를 확장하는 것은 자명하므로, $R$가 order relation임을 보이자. 임의의 $x\in A$에 대하여, 만일 $x\in A_i$라면 $(x,x)\in R_i\subseteq R$가 되므로 $(x,x)\in R$이다.  비슷하게 만일 $(x,y)\in R$이고 $(y,x)\in R$라면, 어떤 $A_k$가 존재하여 $x$와 $y$를 동시에 포함하며, 이 집합에서의 order relation들의 조건에 의해 $(x,y),(y,x)\in R_k$이므로, $R_k$의 antisymmetry에 의해 $x=y$이다. Transitivity을 보이기 위해서는, $(x,y)\in R$과 $(y,z)\in R$을 가정한 후, $x$, $y$, $z$를 모두 포함하는 집합 $A_l$를 찾아서, $(x,z)\in R_l$로 결론을 내리면 된다.
 :::
 
 이제 이렇게 정의된 order relation이 주어진 성질들을 모두 만족함을 보이면 된다.
@@ -90,7 +86,7 @@ $$0,1,2,\cdots; \omega$$
 임의의 ordinal $\alpha$에 대하여, $\alpha$의 maximal element $\beta$가 존재하면 $\alpha$를 *successor ordinal<sub>따름서수</sub>*이라 정의하고, 그렇지 않다면 $\alpha$를 *limit ordinal<sub>극한서수</sub>*이라 부른다.
 :::
 
-만약 $\alpha$가 successor ordinal이고, $\beta$가 $\alpha$의 maximal element라면 $\alpha=S(\beta)=\beta+1$이라 할 수 있기 때문에 그러한 이름을 붙여주었다. 한편 $\emptyset=0$은 maximal element를 갖지 않으므로 이 정의에서는 limit ordinal이 된다. $0$을 어느 쪽에도 넣지 않는 문헌도 있으나, 우리는 위의 정의를 그대로 두어 $0$을 limit ordinal로 취급하기로 한다. 앞에서 $\omega$를 두고 말한 <em-ko>이전에 무한히 많은 원소가 온다</em-ko>는 설명은 $0$이 아닌 limit ordinal을 염두에 둔 것이다.  
+만약 $\alpha$가 successor ordinal이고, $\beta$가 $\alpha$의 maximal element라면 $\alpha=S(\beta)=\beta+1$이라 할 수 있기 때문에 그러한 이름을 붙여주었다.  
 
 하지만 limit ordinal의 존재에도 불구하고, ordinal에 대해서도 귀납법 비슷한 것을 사용하는 것이 가능하다. 
 

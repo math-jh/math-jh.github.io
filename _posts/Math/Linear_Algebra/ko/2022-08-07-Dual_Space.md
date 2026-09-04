@@ -12,9 +12,7 @@ sidebar:
 date: 2022-08-05
 
 weight: 19
-revising: true
 
-drift_needed: true
 
 ---
 
@@ -26,7 +24,7 @@ $$\mathcal{B}^\ast=\{\xi^1,\ldots, \xi^n\}$$
 
 이 $V^\ast$의 basis가 된다는 것을 안다. 이를 $\mathcal{B}$의 *dual basis<sub>쌍대기저</sub>*라 부른다. 
 
-$V$가 무한차원이라 하더라도 basis $\mathcal{B}$에 대하여, 위의 식과 같이 정의된 집합 $\mathcal{B}^\ast$가 일차독립이라는 것은 어떠한 수정도 없이 [§선형사상들의 공간, ⁋명제 5](/ko/math/linear_algebra/space_of_linear_maps#prop5)의 증명과 동일한 증명을 이용할 수 있다. 따라서 항상 $\dim V\leq\dim V^\ast$가 성립한다. 다만 $V$가 무한차원인 경우 $\mathcal{B}^\ast$는 더 이상 $V^\ast$의 basis가 되지 못한다. 이를 살펴보기 위해서는 $\mathcal{B}$의 모든 원소를 $1$로 보내도록 정한 후 linear하게 extend하여 얻어진 $f\in V^\ast$를 생각하면 된다. $\mathcal{B}^\ast$의 원소들의 일차결합은 유한 개의 항만을 가지므로 $\mathcal{B}$의 유한 개의 원소를 제외한 나머지 원소에서 $0$의 값을 갖고, 따라서 $f$는 그러한 일차결합으로 나타날 수 없다. 사실 이 경우 항상 $\dim V<\dim V^\ast$가 성립하는 것으로 알려져 있으나, 이는 위의 논증에서 따라오지 않는다.
+$V$가 무한차원이라 하더라도 basis $\mathcal{B}$에 대하여, 위의 식과 같이 정의된 집합 $\mathcal{B}^\ast$가 일차독립이라는 것은 어떠한 수정도 없이 [§선형사상들의 공간, ⁋명제 5](/ko/math/linear_algebra/space_of_linear_maps#prop5)의 증명과 동일한 증명을 이용할 수 있다. 따라서 항상 $\dim V\leq\dim V^\ast$가 성립하며, 사실 $V$가 무한차원인 경우 반드시 $\dim V<\dim V^\ast$이다. 이를 살펴보기 위해서는 임의의 $\mathcal{B}$의 모든 원소들을 $1$로 보내는 함수를 extend하여 얻어진 함수가 $\mathcal{B}^\ast$의 원소들의 일차결합으로 나타날 수 없음만 확인하면 된다.
 
 ## 이중쌍대공간
 
@@ -116,11 +114,11 @@ $$\dim V\leq\dim W^\ast=\dim W,\qquad \dim W\leq\dim V^\ast=\dim V$$
 으로부터 자명하다.
 :::
 
-이러한 의미에서, 두 유한차원 벡터공간 사이의 non-degenerate pairing을 *perfect pairing*이라 부르기도 한다. 특별히 $W=V^\ast$인 [예시 3](#ex3)의 canonical pairing에 [명제 4](#prop4)를 적용하면 단사인 linear map $V\rightarrow V^{\ast\ast}$를 얻는다. 이 함수는 각각의 $v\in V$를, 임의의 $f\in V^\ast$에 대하여 
+이러한 의미에서, 두 유한차원 벡터공간 사이의 non-degenerate pairing을 *perfect pairing*이라 부르기도 한다. 특별히 $W=V^\ast$인 [예시 3](#ex3)의 canonical pairing에 이 따름정리를 적용하면 우리는 $V$에서 $V^{\ast\ast}$로의 isomorphism을 얻는다. 명시적으로 이 함수는 임의의 $f\in V^\ast$에 대하여 
 
 $$\ev_v:f\mapsto f(v)$$
 
-으로 정의되는 *evaluation map<sub>값매김사상</sub>* $\ev_v\in V^{\ast\ast}$로 보낸다. $V$가 유한차원이므로 $\dim V=\dim V^{\ast\ast}$이고, 따라서 위의 논의는 $v\mapsto \ev_v$로 정의된 이 단사인 linear map $V\rightarrow V^{\ast\ast}$가 isomorphism임을 보여준다.
+으로 정의되는 *evaluation map<sub>값매김사상</sub>*으로 생각하면 된다. 위의 논의는 $v\mapsto \ev_v$로 정의된 $V\rightarrow V^{\ast\ast}$가 isomorphism임을 보여준다.
 
 ## 쌍대사상
 
@@ -207,7 +205,7 @@ Canonical pairing $(-,-)$이 주어진 $\mathbb{K}$-벡터공간 $V$가 주어�
 
 $$S^\perp=\bigcap_{v\in S}v^\perp$$
 
-과 [§벡터공간의 기저, ⁋보조정리 3](/ko/math/linear_algebra/basis#lem3)을 이용하면 공집합이 아닌 $S$에 대하여 $S^\perp$가 $V^\ast$의 부분공간임을 안다. $S$가 공집합인 경우에는 조건이 공허하게 성립하여 $\emptyset^\perp=V^\ast$가 되므로 이 또한 $V^\ast$의 부분공간이다. 이와 비슷하게 임의의 $T\subseteq V^\ast$에 대하여 $T^\perp$는 $V$의 부분공간이 된다. 
+과 [§벡터공간의 기저, ⁋보조정리 3](/ko/math/linear_algebra/basis#lem3)을 이용하면 $S^\perp$가 $V^\ast$의 부분공간임을 안다. 이와 비슷하게 임의의 $T\subseteq V^\ast$에 대하여 $T^\perp$는 $V$의 부분공간이 된다. 
 
 ::: 명제 8
 두 $\mathbb{K}$-벡터공간 $V,W$, 그리고 linear map $L:V\rightarrow W$와 그 dual $L^\ast:W^\ast\rightarrow V^\ast$가 주어졌다 하자. 임의의 부분공간 $U\subseteq V$와 그 orthogonal complement $U^\perp$에 대하여,

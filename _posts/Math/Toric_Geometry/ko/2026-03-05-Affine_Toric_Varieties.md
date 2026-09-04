@@ -1,6 +1,6 @@
 ---
 title: "아핀 토릭 다양체"
-description: "격자와 강하게 볼록한 유리 다각형뿔의 구조를 통해 아핀 토릭 다양체를 정의하고, 조합론적 관점에서 대수다양체를 이해하는 기초를 다룬다."
+description: "격자와 강하게 볼록한 유리 다각뿔뿔의 구조를 통해 아핀 토릭 다양체를 정의하고, 조합론적 관점에서 대수다양체를 이해하는 기초를 다룬다."
 excerpt: "Strongly convex rational polyhedral cone으로부터 아핀 토릭 다양체의 구성"
 
 categories: [Math / Toric Geometry]
@@ -11,8 +11,6 @@ sidebar:
 
 date: 2026-03-05
 weight: 1
-revising: true
-drift_needed: true
 ---
 
 Toric geometry는 말 그대로 toric variety라 불리는 특별한 algebraic variety를 연구하는 분야이다. 일반적인 algebraic variety에 비해 toric variety가 가지는 장점은 이것이 본질적으로 조합론적인 정보로 만들어지므로 더 손에 잡히는 계산을 수행하기 용이하다는 것이다. 우리는 이 글에서 먼저 가장 간단한 toric variety, 즉 affine toric variety를 살펴본다. 
@@ -72,7 +70,7 @@ $$S_\sigma = \sigma^\vee \cap M = \{ u \in M \mid \langle u, v \rangle \ge 0 \te
 
 $$\mathbb{C}[S_\sigma] = \mathbb{C}[{\rchi}^u \mid u \in S_\sigma]$$
 
-을 정의한다. ([\[대수적 구조\] §대수, §§대수의 예시들](/ko/math/algebraic_structures/algebras#대수의-예시들)) 여기서 $\rchi^u$는 $M$의 원소 $u$에 대응되는 monomial이다.
+을 정의한다. ([\[대수적 구조\] §대수, ⁋정의 5](/ko/math/algebraic_structures/algebras#def5)) 여기서 $\rchi^u$는 $M$의 원소 $u$에 대응되는 monomial이다.
 :::
 
 이를 풀어쓰면 다음과 같다. 그 정의에 의하여 $S_\sigma$는 덧셈에 대한 semigroup이며, semigroup algebra $\mathbb{C}[S_\sigma]$는 가장 깔끔하게는 집합 $S_\sigma$ 위의 자유 $\mathbb{C}$-벡터공간에 곱셈
@@ -114,7 +112,7 @@ $$\mathbb{C}[S_\sigma] = \mathbb{C}[\rchi^{e_1^\ast}, \rchi^{e_2^\ast}] = \mathb
 위의 [예시 6](#ex6)의 $\sigma = \{0\}$과 [예시 7](#ex7)의 standard quadrant $\sigma = \mathrm{cone}(e_1, e_2)$에서 $U_\sigma$가 각각 $(\mathbb{C}^\ast)^n$, $\mathbb{C}^2$로 모두 smooth algebraic variety였다. 이제 우리는 이것이 우연이 아닐 뿐만 아니라 $U_\sigma$의 smoothness가 cone $\sigma$의 조합론적 데이터만으로 완전히 판정된다는 것을 살펴볼 것이다.
 
 ::: 정의 8
-Cone $\sigma$의 1차원 face를 $\sigma$의 *ray<sub>반직선</sub>*라 부르고, 각 ray $\rho \prec \sigma$에 대하여 semigroup $\rho \cap N$을 생성하는 유일한 원소 $v_\rho \in N$을 $\rho$의 *primitive generator*라 부른다. Strongly convex rational polyhedral cone $\sigma \subseteq N_{\mathbb{R}}$가 *smooth<sub>매끄러운</sub>* (또는 *regular*, *nonsingular*) cone이라는 것은, $\sigma$의 ray들의 primitive generator 전체가 lattice $N$의 어떤 $\mathbb{Z}$-basis의 일부를 이루는 것이다.
+Strongly convex rational polyhedral cone $\sigma \subseteq N_{\mathbb{R}}$가 *smooth<sub>매끄러운</sub>* (또는 *regular*, *nonsingular*) cone이라는 것은, $\sigma$의 primitive ray generator들 $v_1, \ldots, v_k$ ($k = \dim \sigma$)이 lattice $N$의 어떤 $\mathbb{Z}$-basis의 일부를 이루는 것이다.
 :::
 
 정의 자체는 다소 추상적으로 보일 수 있지만, 실용적으로는 다음의 두 조건이 합쳐진 것과 동치이다.
@@ -147,23 +145,7 @@ $$\mathbb{C}[S_\sigma] = \mathbb{C}[\rchi^{v_1^\ast}, \ldots, \rchi^{v_k^\ast}, 
 
 이므로 $U_\sigma \cong \mathbb{C}^k \times (\mathbb{C}^\ast)^{n-k}$가 smooth이다.
 
-($\Rightarrow$) 먼저 $\sigma$가 full-dimensional인 경우, 즉 $k = n$인 경우를 보인다. 이 때 $\sigma^\vee \cap (-\sigma^\vee) = \mathrm{span}(\sigma)^\perp = \{0\}$이므로 $S_\sigma$의 원소 중 덧셈에 대한 역원을 $S_\sigma$ 안에 갖는 것은 $0$뿐이고, 따라서
-
-$$\mathfrak{m} = \bigoplus_{u \in S_\sigma \setminus \{0\}} \mathbb{C}\cdot\rchi^u$$
-
-는 $\mathbb{C}[S_\sigma]$의 maximal ideal이 된다. 그럼 $\mathfrak{m}^2$은 $u = u' + u''$ ($u', u'' \in S_\sigma \setminus \{0\}$)로 쪼개지는 $u$들의 $\rchi^u$가 span하는 부분공간이므로, $\mathfrak{m}/\mathfrak{m}^2$은 그렇게 쪼개지지 않는 $u \in S_\sigma$, 즉 $S_\sigma$의 minimal generator들이 주는 $\rchi^u$를 basis로 갖는다.
-
-$U_\sigma$가 smooth이면 $\mathfrak{m}$에 대응하는 점에서 cotangent space의 차원이 $\dim U_\sigma = n$과 같아야 하므로, $S_\sigma$는 $n$개의 원소 $u_1, \ldots, u_n$으로 생성된다. 이들은 $\sigma^\vee$를 cone으로서도 생성하고 $\sigma^\vee$가 $n$차원이므로 $u_1, \ldots, u_n$은 linearly independent이다. 한편 $\sigma^\vee$의 interior에 있는 lattice point $u_0$를 잡으면 임의의 $m \in M$에 대해 충분히 큰 $\ell$이 $\ell u_0, \ell u_0 + m \in S_\sigma$를 만족하므로 $S_\sigma$는 group으로서 $M$ 전체를 생성하고, 따라서 $M = \mathbb{Z}u_1 + \cdots + \mathbb{Z}u_n$, 즉 $u_1, \ldots, u_n$은 $M$의 $\mathbb{Z}$-basis이다. 그럼 그 dual basis $v_1, \ldots, v_n$은 $N$의 $\mathbb{Z}$-basis이고
-
-$$\sigma = (\sigma^\vee)^\vee = \mathbb{R}_{\ge 0}v_1 + \cdots + \mathbb{R}_{\ge 0}v_n$$
-
-이므로 $\sigma$는 smooth cone이다.
-
-일반적인 $k = \dim \sigma < n$의 경우는 $N' = \mathrm{span}(\sigma) \cap N$으로 두면 $N/N'$이 torsion-free이므로 $N = N' \oplus N''$을 만족하는 sublattice $N''$을 잡을 수 있다. 이에 대응하는 분해 $M = M' \oplus M''$에 대해 $\sigma \subseteq N'_{\mathbb{R}}$이므로 $\sigma^\vee = (\sigma^\vee \cap M'_{\mathbb{R}}) \oplus M''_{\mathbb{R}}$이고, 따라서 $S_\sigma = (\sigma^\vee \cap M') \oplus M''$으로부터
-
-$$\mathbb{C}[S_\sigma] \cong \mathbb{C}[\sigma^\vee \cap M'] \otimes_{\mathbb{C}} \mathbb{C}[M''], \qquad U_\sigma \cong U'_\sigma \times (\mathbb{C}^\ast)^{n-k}$$
-
-를 얻는다. 여기서 $U'_\sigma$는 $\sigma$를 lattice $N'$ 안의 full-dimensional cone으로 보아 얻어지는 affine toric variety이다. $U_\sigma$가 smooth이면 $U'_\sigma$도 smooth이므로 위의 경우를 $N'$에 적용하면 $\sigma$의 ray들의 primitive generator가 $N'$의 $\mathbb{Z}$-basis를 이루고, 여기에 $N''$의 $\mathbb{Z}$-basis를 붙이면 $N$의 $\mathbb{Z}$-basis가 되므로 $\sigma$는 smooth cone이다.
+($\Rightarrow$) 역방향은 $U_\sigma$의 unique torus-fixed point (orbit-cone correspondence에서 $\sigma$ 자신에 대응)에서 cotangent space 차원이 ray 수 $\lvert \sigma(1) \rvert$와 같음을 보이는 데서 출발한다. $U_\sigma$가 smooth이면 이 차원이 $n = \dim U_\sigma$여야 하므로 ray 수가 $n$, 즉 $\sigma$가 simplicial이고 또한 $N$의 $\mathbb{Z}$-basis를 이뤄야 한다.
 :::
 
 가령 $N = \mathbb{Z}^2$에서 $\sigma = \mathrm{cone}(e_2,\ 2e_1 - e_2)$를 잡으면, 두 ray의 primitive generator로 만든 행렬
@@ -174,7 +156,7 @@ $$\begin{vmatrix} 0 & 2 \\ 1 & -1 \end{vmatrix} = -2$$
 
 $$\mathbb{C}[S_\sigma] \cong \mathbb{C}[x, y, z]/(xz - y^2)$$
 
-이 되어, $U_\sigma$는 원점에 $A_1$ singular point를 갖는 affine toric variety가 된다. $N = \mathbb{Z}^2$의 2차원 cone에 대해서는 일반적으로 행렬식이 $\pm d$이면 $U_\sigma$는 원점에 $\mathbb{Z}/d$ quotient singularity를 갖는다.
+이 되어, $U_\sigma$는 원점에 $A_1$ singular point를 갖는 affine toric variety가 된다. 일반적으로 행렬식이 $\pm d$이면 $U_\sigma$는 원점에 $\mathbb{Z}/d$ quotient singularity를 갖는다.
 
 ## 토러스 작용
 
@@ -285,11 +267,7 @@ $\sigma = \{0\}$인 경우 $\sigma^\vee = M_{\mathbb{R}}$이므로 $S_\sigma = M
 
 $$T_N = \Spec(\mathbb{C}[M]) \longrightarrow \Spec(\mathbb{C}[S_\sigma]) = U_\sigma$$
 
-을 유도한다. 더욱이 $\sigma$가 strongly convex이므로 $\sigma^\vee$는 $M_{\mathbb{R}}$에서 full-dimensional cone이고, 그 interior에 lattice point $u_0 \in M$이 존재한다. 임의의 $m \in M$에 대해 충분히 큰 $\ell$을 잡으면 $\ell u_0$과 $\ell u_0 + m$이 모두 $S_\sigma$에 속하므로 $m = (\ell u_0 + m) - \ell u_0$이고, 따라서 $M = S_\sigma + \mathbb{Z}_{\ge 0}(-u_0)$이 성립한다. 이로부터
-
-$$\mathbb{C}[M] = \mathbb{C}[S_\sigma][\rchi^{-u_0}] = \mathbb{C}[S_\sigma]_{\rchi^{u_0}}$$
-
-를 얻으므로 $T_N = \Spec(\mathbb{C}[M])$은 $U_\sigma$의 principal open subset $(U_\sigma)_{\rchi^{u_0}}$이며, 위의 morphism이 dominant이므로 이는 $U_\sigma$에서 조밀하다. 따라서 $T_N \hookrightarrow U_\sigma$는 열린 조밀한 부분집합이 된다.
+을 유도한다. 더욱이 $\sigma$가 strongly convex이므로 $\sigma^\vee$는 $M_{\mathbb{R}}$에서 full-dimensional cone이고, 그 interior에 lattice point $u_0 \in M$이 존재한다. 임의의 $m \in M$에 대해 충분히 큰 $\ell$을 잡으면 $\ell u_0$과 $\ell u_0 + m$이 모두 $S_\sigma$에 속하므로 $m = (\ell u_0 + m) - \ell u_0$로 $S_\sigma$가 group으로서 $M$ 전체를 생성하고, $\mathbb{C}[S_\sigma]$의 fraction field는 $\mathbb{C}(M)$과 일치한다. 따라서 $T_N \hookrightarrow U_\sigma$는 열린 조밀한 부분집합이 된다.
 :::
 
 이어서 face 구조가 affine toric variety 위에서 어떻게 발현되는지 살펴본다. 이를 위해 다음 보조정리가 핵심적이다.

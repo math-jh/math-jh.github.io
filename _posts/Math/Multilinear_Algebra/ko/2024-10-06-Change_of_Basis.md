@@ -10,8 +10,6 @@ sidebar:
 
 date: 2024-10-06
 weight: 8
-revising: true
-drift_needed: true
 
 ---
 
@@ -21,7 +19,7 @@ drift_needed: true
 $I\times I$ 행렬을 *정사각행렬<sub>square matrix</sub>*이라 부른다. 이들의 모임을 $\Mat_I(A)$로 적는다.
 :::
 
-특별히 $I$가 유한집합이고 $A$가 commutative일 경우, $n=\lvert I\rvert$로 두어 $\Mat_I(A)$를 $\Mat_n(A)$로 적기로 하면, $\Mat_{n}(A)$는 특별한 성질을 갖는데, 이 대상은 $A$-module일 뿐만 아니라 그 위에 정의된 곱셈 또한 가지고 있다. 즉 $\Mat_{n}(A)$는 $A$-algebra이다. 
+특별히 $I$가 유한집합이고 $A$가 commutative일 경우, $\Mat_{n}(A)$는 특별한 성질을 갖는데, 이 대상은 $A$-module일 뿐만 아니라 그 위에 정의된 곱셈 또한 가지고 있다. 즉 $\Mat_{n}(A)$는 $A$-algebra이다. 
 
 ::: 명제 2
 이러한 상황에서 $\Mat_n(A)$는 unital associative algebra이다.
@@ -41,7 +39,7 @@ $$E_{ij}E_{hk}=\delta_{jh}E_{ik}$$
 으로 적어줄 수 있다.
 
 ::: 정의 3
-$\Mat_n(A)$의 원소들 가운데 곱셈에 대한 역원이 존재하는 것들의 모임을 *general linear group<sub>일반선형군</sub>*이라 부르고 $\GL_n(A)$로 적는다. 
+$\Mat_n(A)$의 원소들 가운데 곱셈에 대한 역원이 존재하는 것들을 모아 $\GL_n(A)$로 적는다. 
 :::
 
 Free $A$-module $M$의 basis $\mathcal{B}=(e_i)_{i\in I}$를 고정하고, $\lvert I\rvert=n$이라 하자. 그럼 임의의 $u\in \End_{\lMod{A}}(M)$에 대하여, $[u]_{\mathcal{B}}^\mathcal{B}\in\Mat_n(A)$이며, 만일 $u$가 isomorphism이라면 [§행렬과 선형사상, ⁋따름정리 4](/ko/math/multilinear_algebra/matrices_and_linear_maps#cor4)에 의하여 $[u]_{\mathcal{B}}^\mathcal{B}\in\GL_n(A)$이다. 그럼 [§쌍대공간, ⁋명제 5](/ko/math/multilinear_algebra/dual_spaces#prop5)와 [§행렬과 선형사상, ⁋명제 5](/ko/math/multilinear_algebra/matrices_and_linear_maps#prop5)에 의하여 다음 식
@@ -53,7 +51,7 @@ $$\bigl([u^{-1}]_{\mathcal{B}}^\mathcal{B}\bigr)^t=\bigl(\bigl[u^t\bigr]_{\mathc
 ## 기저변환
 
 ::: 명제 4
-$A$가 commutative ring이라 하고, 임의의 $A$-module $M$과 $M$의 finite basis $\mathcal{B}=(e_i)_{i\in I}$가 주어졌다 하자. 그럼 다음 식
+임의의 $A$-module $M$과 $M$의 유한한 basis $\mathcal{B}=(e_i)_{i\in I}$가 주어졌다 하자. 그럼 다음 식
 
 $$e_i'=\sum_{j=1}^n a_{ji}e_j,\qquad 1\leq i\leq n$$
 
@@ -80,7 +78,7 @@ $$([\id_M]^{\mathcal{B}'}_\mathcal{B})=(\langle \id_M(e_i'), e_j^\ast\rangle)_{(
 더 일반적으로 다음이 성립한다.
 
 ::: 명제 5
-$A$가 commutative ring이라 하고, 두 $A$-module $M,N$과, 이들의 finite basis $\mathcal{B}=(e_i)_{i\in I}$, $\mathcal{C}=(f_j)_{j\in J}$가 각각 주어졌다 하고, $u:M \rightarrow N$을 $A$-linear map이라 하자. $M$, $N$의 또 다른 basis $\mathcal{B}'=(e_i')_{i\in I}$, $\mathcal{C}'=(f_j')_{j\in J}$에 대하여, 다음의 식
+두 $A$-module $M,N$과, 이들의 유한한 basis $\mathcal{B}=(e_i)_{i\in I}$, $\mathcal{C}=(f_j)_{j\in J}$가 각각 주어졌다 하고, $u:M \rightarrow N$을 $A$-linear map이라 하자. $M$, $N$의 또 다른 basis $\mathcal{B}'=(e_i')_{i\in I}$, $\mathcal{C}'=(f_j')_{j\in J}$에 대하여, 다음의 식
 
 $$[u]_{\mathcal{C}'}^{\mathcal{B}'}=[\id_N]^\mathcal{C}_{\mathcal{C}'}[u]^\mathcal{B}_\mathcal{C}[\id_M]^{\mathcal{B}'}_{\mathcal{B}}$$
 

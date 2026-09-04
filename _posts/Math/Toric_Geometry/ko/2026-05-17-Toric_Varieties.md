@@ -11,8 +11,6 @@ sidebar:
 
 date: 2026-05-17
 weight: 2
-revising: true
-drift_needed: true
 
 ---
 
@@ -60,15 +58,7 @@ Toric variety $X_\Sigma$는 normal, separated algebraic variety이다.
 :::
 
 ::: 증명
-$X_\Sigma$의 normality는 각 affine chart $U_\tau$가 [§아핀 토릭 다양체, ⁋명제 15](/ko/math/toric_geometry/affine_toric_varieties#prop15)에 의해 normal이고, 이 성질이 gluing에 의해 보존되기 때문에 얻어진다. Separatedness를 보이기 위해서는 diagonal morphism $\Delta: X_\Sigma \rightarrow X_\Sigma \times X_\Sigma$의 image가 closed set임을 확인하면 된다. 두 cone $\tau_1, \tau_2 \in \Sigma$에 대하여 $\Delta^{-1}(U_{\tau_1} \times U_{\tau_2}) = U_{\tau_1} \cap U_{\tau_2} = U_{\tau_1 \cap \tau_2}$이므로, 확인할 것은 각 affine chart 위에서 $U_{\tau_1 \cap \tau_2} \rightarrow U_{\tau_1} \times U_{\tau_2}$가 closed embedding인 것, 즉 ring map
-
-$$\mathbb{C}[S_{\tau_1}] \otimes_\mathbb{C} \mathbb{C}[S_{\tau_2}] \longrightarrow \mathbb{C}[S_{\tau_1 \cap \tau_2}]$$
-
-이 surjective인 것이며, 이는 semigroup의 언어로는 $S_{\tau_1 \cap \tau_2} = S_{\tau_1} + S_{\tau_2}$와 같다.
-
-여기서 두 cone의 교집합이 각각의 face임을 보장하는 fan의 두 번째 조건이 쓰인다. $\tau = \tau_1 \cap \tau_2$라 하고 rational polyhedral cone $\sigma = \tau_1 + (-\tau_2)$를 생각하면 $\sigma^\vee = \tau_1^\vee \cap (-\tau_2)^\vee$이므로, $\sigma^\vee$의 relative interior에서 lattice point $u$를 하나 잡으면 $u \in S_{\tau_1}$이고 $-u \in S_{\tau_2}$이다. 이러한 $u$가 $\tau = \tau_1 \cap u^{\perp}$를 만족한다는 것을 보이자. 우선 $x \in \tau$이면 $u$와 $-u$가 각각 $\tau_1$과 $\tau_2$ 위에서 nonnegative이므로 $\langle u, x \rangle = 0$이다. 거꾸로 $x \in \tau_1$이 $\langle u, x \rangle = 0$을 만족한다 하면, 임의의 $u^\prime \in \sigma^\vee$에 대해 충분히 작은 $\varepsilon > 0$을 잡아 $u - \varepsilon u^\prime \in \sigma^\vee$가 되도록 할 수 있고 $x \in \tau_1 \subseteq \sigma$이므로 $\langle u - \varepsilon u^\prime, x \rangle \ge 0$, 즉 $\langle u^\prime, x \rangle \le 0$을 얻는다. 반대 방향의 부등호는 $x \in \sigma$로부터 오므로 모든 $u^\prime \in \sigma^\vee$에 대해 $\langle u^\prime, x \rangle = 0$이고, 따라서 $-x \in (\sigma^\vee)^\vee = \sigma$이다. 이를 $-x = a - b$ ($a \in \tau_1$, $b \in \tau_2$)로 적으면 $b = a + x$가 $\tau_1$과 $\tau_2$ 모두에 속하므로 $b \in \tau$이며, $\tau$가 $\tau_1$의 face이고 $a$와 $x$가 $\tau_1$의 원소이므로 이들의 합이 $\tau$에 속한다는 것으로부터 $x \in \tau$를 얻는다.
-
-그럼 [§아핀 토릭 다양체, ⁋보조정리 12](/ko/math/toric_geometry/affine_toric_varieties#lem12)에 의해 $\tau^\vee = \tau_1^\vee + \mathbb{R}_{\ge 0}(-u)$이고, [§아핀 토릭 다양체, ⁋명제 13](/ko/math/toric_geometry/affine_toric_varieties#prop13)의 증명에서와 같은 계산으로 $S_\tau = S_{\tau_1} + \mathbb{Z}_{\ge 0}(-u)$를 얻는다. $-u \in S_{\tau_2}$이므로 이는 $S_{\tau_1} + S_{\tau_2}$에 포함되고, 역방향의 포함관계는 $\tau$가 $\tau_1$과 $\tau_2$ 모두에 포함된다는 것으로부터 자명하므로 위의 ring map은 surjective이다. 
+$X_\Sigma$의 normality는 각 affine chart $U_\tau$가 [§아핀 토릭 다양체, ⁋명제 15](/ko/math/toric_geometry/affine_toric_varieties#prop15)에 의해 normal이고, 이 성질이 gluing에 의해 보존되기 때문에 얻어진다. Separatedness를 보이기 위해서는 diagonal morphism $\Delta: X_\Sigma \rightarrow X_\Sigma \times X_\Sigma$의 image가 closed set임을 확인하면 된다. 각 affine chart 위에서 이는 두 cone의 교집합이 face임을 보장하는 fan의 두 번째 조건에 의해 성립한다. 
 :::
 
 Toric variety $X_\Sigma$가 affine toric variety로부터 물려받는 중요한 성질 중 하나는 algebraic torus $T_N$을 열린 조밀한 부분집합으로 포함한다는 것이다. ([§아핀 토릭 다양체, ⁋명제 11](/ko/math/toric_geometry/affine_toric_varieties#prop11)) 실제로, 0차원 cone $\{0\} \in \Sigma$에 대응하는 affine chart $U_{\{0\}}$는 $T_N$과 동형이며, 다른 모든 $U_\tau$는 이를 열린 부분집합으로 포함한다. 따라서 $T_N \subseteq X_\Sigma$는 open dense embedding을 정의한다.
@@ -108,12 +98,12 @@ $$\Sigma_P = \{\tau_F \mid F \text{ is a face of } P\}$$
 :::
 
 ::: 증명
-$\Sigma_P$의 임의의 원소 $\tau_F$는 유한개의 lattice vector $u_{F^\prime}$들이 생성하는 cone이므로 rational polyhedral이며, strong convexity는 $P$가 full-dimensional이라는 가정으로부터 얻어진다. 실제로 $F$의 relative interior에서 점 $m_0$를 하나 잡으면, $F$를 포함하는 각 facet $F^\prime$에 대해 $\langle \cdot, u_{F^\prime}\rangle$은 $P$ 위에서 정확히 $F^\prime$에서 최솟값을 가지므로 모든 $m \in P$에 대해 $\langle m - m_0, u_{F^\prime}\rangle \ge 0$이고, 따라서 $\tau_F$는 tangent cone $C = \mathbb{R}_{\ge 0}(P - m_0)$의 dual cone $C^\vee$에 포함된다. $P$가 full-dimensional이므로 $C$는 $M_\mathbb{R}$ 전체를 span하고, 그러면 $v \in C^\vee$와 $-v \in C^\vee$가 동시에 성립할 경우 $\langle m, v\rangle$이 모든 $m \in C$에 대해 $0$이 되어 $v = 0$이므로 $C^\vee$는 strongly convex이다. Strongly convex cone의 부분 cone 또한 strongly convex이므로 $\tau_F$가 strongly convex임을 얻는다. 먼저 face 조건을 확인하자. $\tau_F$의 face는 $F$의 상위 face $F^\prime \supseteq F$에 대응하며, 이는 $\tau_{F^\prime} \in \Sigma_P$가 되므로 첫 번째 조건이 만족된다. 두 cone $\tau_{F_1}, \tau_{F_2} \in \Sigma_P$의 교집합을 생각하자. $\tau_{F_1} \cap \tau_{F_2}$는 $F_1$과 $F_2$를 모두 포함하는 가장 작은 face $F$에 대응하는 cone $\tau_F$와 같다. 이는 $\tau_{F_1}$과 $\tau_{F_2}$ 모두의 face가 되므로, 두 번째 조건도 만족된다.
+$\Sigma_P$의 임의의 원소 $\tau_F$는 primitive inner normal vector들의 $\mathbb{R}_{\ge 0}$-linear combination으로 생성되므로 strongly convex rational polyhedral cone이다. 먼저 face 조건을 확인하자. $\tau_F$의 face는 $F$의 상위 face $F^\prime \supseteq F$에 대응하며, 이는 $\tau_{F^\prime} \in \Sigma_P$가 되므로 첫 번째 조건이 만족된다. 두 cone $\tau_{F_1}, \tau_{F_2} \in \Sigma_P$의 교집합을 생각하자. $\tau_{F_1} \cap \tau_{F_2}$는 $F_1$과 $F_2$를 모두 포함하는 가장 작은 face $F$에 대응하는 cone $\tau_F$와 같다. 이는 $\tau_{F_1}$과 $\tau_{F_2}$ 모두의 face가 되므로, 두 번째 조건도 만족된다.
 :::
 
 따라서 normal fan은 toric variety $X_{\Sigma_P}$를 정의한다. 우리가 다음으로 살펴볼 것은 이렇게 얻어진 toric variety가 단순한 toric variety가 아닌 *projective* variety가 된다는 점이며, 더 나아가 projective인 toric variety는 사실상 모두 이 방식으로 얻어진다는 것이다. 이러한 양방향 대응을 정확히 기술하기 위해서는 toric variety 위의 line bundle과 polytope 사이의 관계를 먼저 정리해두는 것이 좋다.
 
-이미 [명제 5](#prop5) 직후에 살펴본 것처럼, $X_\Sigma$의 stratum 구조는 fan $\Sigma$의 cone들과 대응된다. 특히 0차원 cone $\{0\}$은 open dense torus $T_N \subseteq X_\Sigma$에, 1차원 cone $\rho \in \Sigma(1)$들 (여기서 $\Sigma(1)$은 $\Sigma$의 1차원 cone들의 집합)은 각각 orbit $O(\rho)$의 Zariski closure $D_\rho = \overline{O(\rho)} \subseteq X_\Sigma$에 대응된다. 이는 $O(\rho)$가 $(\mathbb{C}^\ast)^{n-1}$과 isomorphic하므로 codimension 1의 $T_N$-invariant prime divisor가 된다. 따라서 free abelian group $\bigoplus_\rho \mathbb{Z} D_\rho$가 $X_\Sigma$ 위의 $T_N$-invariant Weil divisor 전체를 기술한다.
+이미 [명제 5](#prop5) 직후에 살펴본 것처럼, $X_\Sigma$의 stratum 구조는 fan $\Sigma$의 cone들과 대응된다. 특히 0차원 cone $\{0\}$은 open dense torus $T_N \subseteq X_\Sigma$에, 1차원 cone $\rho \in \Sigma(1)$들 (여기서 $\Sigma(1)$은 $\Sigma$의 1차원 cone들의 집합)은 각각 codimension 1의 $T_N$-invariant prime divisor $D_\rho \subseteq X_\Sigma$에 대응된다. 따라서 free abelian group $\bigoplus_\rho \mathbb{Z} D_\rho$가 $X_\Sigma$ 위의 $T_N$-invariant Weil divisor 전체를 기술한다.
 
 우리가 관심있는 것은 toric variety의 line bundle이므로, 우리는 *Cartier* divisor들에 집중해야 한다. Cartier divisor를 piecewise linear function의 언어로 기술하고 line bundle과 잇는 자세한 논의는 다음 글인 [§토러스 인자와 선다발](/ko/math/toric_geometry/toric_divisors)에서 다룰 것이지만, 이번 글에서의 논의를 위해 우리는 우선 [§토러스 인자와 선다발, ⁋명제 6](/ko/math/toric_geometry/toric_divisors#prop6)의 결과를 먼저 번역해오기로 한다. 
 

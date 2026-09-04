@@ -10,8 +10,6 @@ sidebar:
 
 date: 2022-12-16
 weight: 1
-revising: true
-drift_needed: true
 
 ---
 
@@ -23,7 +21,7 @@ $$\bigwedge\nolimits(T^\ast M)\cong\bigoplus_{k=0}^n\bigwedge\nolimits^k(T^\ast 
 
 을 정의하고, 이 bundle의 smooth section을 differential form으로 정의했다. 비슷한 일을 symmetric algebra를 사용해서도 할 수 있으며, exterior algebra와는 다르게 $k=2$인 경우가 관심의 대상이 된다. 이는 $k=2$인 경우 생기는 $\mathcal{S}^2(T^\ast M)$의 원소들이 $TM$ 위에 symmetric bilinear form을 정의하기 때문이다. 
 
-점 $p\in M$을 고정하자. 그럼 smooth section $g\in\Gamma(\mathcal{S}^2(T^\ast M))$의 값 $g_p$는 $\mathcal{S}^2(T^\ast_pM)$의 원소이다. 이제 두 원소 $\alpha^1\alpha^2\in\mathcal{S}^2(T^\ast_pM)$과 $u_1u_2\in\mathcal{S}^2(T_pM)$의 pairing을 $(\alpha^1\alpha^2,u_1u_2)=\alpha^1(u_1)\alpha^2(u_2)+\alpha^1(u_2)\alpha^2(u_1)$으로 주면, 이 식은 alternating인 determinant와 달리 symmetric power 위에서 잘 정의되고 non-degenerate이므로, [\[미분다양체\] §미분형식, ⁋정의 1](/ko/math/manifolds/differential_forms#def1) 이후에 확인한 것과 마찬가지 논증을 거쳐 $\mathcal{S}^2(T^\ast_pM)\cong(\mathcal{S}^2(T_pM))^\ast$임을 알 수 있고, [\[다중선형대수학\] §텐서대수, ⁋명제 7](/ko/math/multilinear_algebra/tensor_algebras#prop7)에 의해 $g_p$를 $T_pM\times T_pM$에서 $\mathbb{R}$로의 symmetric multilinear map으로 생각할 수 있다. 따라서 $g_p$에 적절한 positive-definiteness 조건만 준다면 이를 $T_pM$ 위에 정의된 내적으로 생각할 수 있다. ([\[선형대수학\] §내적공간, ⁋정의 1](/ko/math/linear_algebra/inner_product_spaces#def1))
+점 $p\in M$을 고정하자. 그럼 smooth section $g\in\Gamma(\mathcal{S}^2(T^\ast M))$의 값 $g_p$는 $\mathcal{S}^2(T^\ast_pM)$의 원소이다. 이제 [\[미분다양체\] §미분형식, ⁋정의 1](/ko/math/manifolds/differential_forms#def1) 이후에 확인한 것과 마찬가지 논증을 거쳐 $\mathcal{S}^2(T^\ast_pM)\cong(\mathcal{S}^2(T_pM))^\ast$임을 알 수 있고, [\[다중선형대수학\] §텐서대수, ⁋명제 7](/ko/math/multilinear_algebra/tensor_algebras#prop7)에 의해 $g_p$를 $T_pM\times T_pM$에서 $\mathbb{R}$로의 symmetric multilinear map으로 생각할 수 있다. 따라서 $g_p$에 적절한 positive-definiteness 조건만 준다면 이를 $T_pM$ 위에 정의된 내적으로 생각할 수 있다. ([\[선형대수학\] §내적공간, ⁋정의 1](/ko/math/linear_algebra/inner_product_spaces#def1))
 
 ::: 정의 1
 Manifold $M$ 위에 주어진 *Riemannian metric<sub>리만 계량</sub>*은 다음과 같은 센스에서 positive-definite인 smooth section $g\in\Gamma(\mathcal{S}^2(T^\ast M))$을 의미한다.
@@ -76,7 +74,7 @@ $$\tilde{g}(X)=\sum_{i,j=1}^n g_{ij}X^i\dd{x}^j$$
 한편 Riemannian metric은 드디어 manifold 위에서 거리를 재고, 각도를 재는 등의 기하를 할 수 있게 해 준다. 임의의 벡터공간 $V$ 위에 내적이 정의되면 $\lVert v\rVert:=\sqrt{\langle v,v\rangle}$을 통해 $V$에 거리를 줄 수 있었다는 것을 기억하자.
 
 ::: 정의 2
-Riemannian manifold $(M,g)$와, 이 위에 정의된 piecewise $C^\infty$ curve $\gamma:[a,b]\rightarrow M$이 있다 하자. 그럼 $\gamma$의 *길이<sub>length</sub>* $\length(\gamma)$는 다음의 식
+Riemannian manifold $(M,g)$와, 이 위에 정의된 piecewise $C^\infty$ 곡선 $\gamma:[a,b]\rightarrow M$이 있다 하자. 그럼 $\gamma$의 *길이<sub>length</sub>* $\length(\gamma)$는 다음의 식
 
 $$\length(\gamma)=\int_a^b\lVert\dot{\gamma}(t)\rVert_g\dd{t}$$
 

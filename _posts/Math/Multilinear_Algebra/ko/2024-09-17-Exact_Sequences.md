@@ -1,7 +1,7 @@
 ---
 title: "완전열"
-description: "Module의 submodule들의 교집합과 합의 성질을 바탕으로 exact sequence와 splitting exact sequence의 개념을 정의하고 그 성질을 살펴본다."
-excerpt: "Module의 exact sequence와 splitting exact sequence"
+description: "모 위의 부분모듈 교집합의 성질을 바탕으로 exact sequence와 splitting exact sequence의 개념을 정의하고 그 성질을 살펴본다."
+excerpt: "Module의 exact sequence와 short/long exact sequence"
 
 categories: [Math / Multilinear Algebra]
 permalink: /ko/math/multilinear_algebra/exact_sequences
@@ -10,8 +10,6 @@ sidebar:
 
 date: 2024-09-17
 weight: 1
-revising: true
-drift_needed: true
 
 ---
 
@@ -25,7 +23,7 @@ drift_needed: true
 
 ## 가군의 합
 
-이번 글의 목표는 몇 가지 exact sequence들을 소개하고, splitting exact sequence의 개념을 정의하는 것이다. 여기서 $A$-module들과 그 사이의 morphism들로 이루어진 sequence가 *exact sequence<sub>완전열</sub>*라는 것은 각각의 중간 항에서 들어오는 morphism의 image가 나가는 morphism의 kernel과 일치한다는 것을 뜻하며, 특별히 $0\rightarrow M \rightarrow L \rightarrow N \rightarrow 0$의 꼴의 exact sequence를 *short exact sequence<sub>짧은 완전열</sub>*라 부른다. 우선 다음의 간단한 보조정리부터 시작한다.
+이번 글의 목표는 몇 가지 exact sequence들을 소개하고, splitting exact sequence의 개념을 정의하는 것이다. 우선 다음의 간단한 보조정리부터 시작한다.
 
 ::: 보조정리 1
 공집합이 아닌 index set $I$에 대하여 $A$-module $M$의 submodule들의 family $(N_i)_{i\in I}$가 주어졌다 하자. 그럼 교집합 $\bigcap_{i\in I} N_i$는 $M$의 submodule이다.
@@ -37,7 +35,7 @@ drift_needed: true
 ::: 정의 2
 $A$-module $M$의 부분집합 $X$가 주어졌다 하자. 그럼 $X$를 포함하는 $M$의 submodule 중 가장 작은 것을 $\langle X\rangle$로 적고, 이를 $X$에 의해 생성되는 submodule이라 부른다. 이 경우 $X$를 $\langle X\rangle$의 *generating set<sub>생성집합</sub>*이라 부른다. 
 
-만일 $M$의 어떤 submodule $N$에 대하여, $N=\langle X\rangle$이도록 하는 유한집합 $X$를 찾을 수 있다면 $N$은 그 자체로 $A$-module로서 [\[대수적 구조\] §가군, ⁋정의 2](/ko/math/algebraic_structures/modules#def2)의 의미에서 finitely generated이다. 
+만일 $M$의 어떤 submodule $N$에 대하여, $N=\langle X\rangle$이도록 하는 유한집합 $X$를 찾을 수 있다면 $N$이 *finitely generated<sub>유한생성</sub>*라 부른다. 
 :::
 
 그럼 다음이 성립한다.
@@ -181,12 +179,8 @@ $$0\longrightarrow M \overset{u}{\longrightarrow}L \overset{v}{\longrightarrow}N
 ::: 증명
 우선 3번 조건을 가정하자. 그럼 $r=\pr_M\circ\alpha$로 두면 1번 조건을 얻으며, 비슷하게 canonical inclusion $i_N: N \rightarrow M\oplus N$과 $\alpha^{-1}$를 합성하여 $s=\alpha^{-1}\circ i_N$으로 두면 2번 조건을 얻는다.
 
-나머지 방향은 1번과 2번 조건을 각각 가정하고 3번 조건을 보인다. 만일 1번 조건이 성립한다면 $\alpha:L \rightarrow M\oplus N$을 $z\mapsto (r(z), v(z))$로 정의하고, 2번 조건이 성립한다면 $\beta: M\oplus N \rightarrow L$을 $(x,y)\mapsto u(x)+s(y)$로 정의한다.
-
-우선 $\alpha$의 경우, $\alpha(u(x))=(r(u(x)),v(u(x)))=(x,0)$이고 $\pr_N(\alpha(z))=v(z)$이므로 $\alpha$가 3번 조건의 diagram을 commute시킨다. 이제 [보조정리 9](#lem9)를 두 번 적용한다. 두 행 $M \rightarrow L \rightarrow N \rightarrow 0$과 $M \rightarrow M\oplus N \rightarrow N \rightarrow 0$ 사이의 vertical morphism들은 차례로 $\id_M,\alpha,\id_N,0$이므로 첫 번째 조건으로부터 $\alpha$가 전사이고, 두 행 $0 \rightarrow M \rightarrow L \rightarrow N$과 $0 \rightarrow M \rightarrow M\oplus N \rightarrow N$ 사이의 vertical morphism들은 차례로 $0,\id_M,\alpha,\id_N$이므로 두 번째 조건으로부터 $\alpha$가 단사이다. $\beta$의 경우에도 $\beta(x,0)=u(x)$이고 $v(\beta(x,y))=y$이므로 $\beta$가 위의 두 diagram에서 행의 순서를 서로 바꾼 diagram들을 commute시키며, 동일한 논증으로 $\beta$가 isomorphism임을 얻는다. 따라서 $\alpha$와 $\beta^{-1}$가 3번 조건에서 요구하는 isomorphism을 정의한다. 
+나머지 방향은 1번과 2번 조건을 각각 가정하고 3번 조건을 보인다. 만일 1번 조건이 성립한다면 $\alpha:L \rightarrow M\oplus N$을 $z\mapsto (r(z), v(z))$로 정의하고, 2번 조건이 성립한다면 $\beta: M\oplus N \rightarrow L$을 $(x,y)\mapsto u(x)+s(y)$로 정의한다. 그럼 [보조정리 9](#lem9)에 의하여 $\alpha,\beta^{-1}$가 3번 조건에서 요구하는 isomorphism을 정의한다는 것을 알 수 있다. 
 :::
-
-이와 같은 세 조건을 만족하는 exact sequence를 *splitting exact sequence<sub>분해완전열</sub>*라 부르고, 이 경우 주어진 exact sequence가 *split<sub>분해</sub>*한다고 말한다. 
 
 ---
 

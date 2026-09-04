@@ -1,6 +1,6 @@
 ---
 title: "곱공간"
-description: "위상공간들의 곱에 대한 product topology의 정의와 성질을 다룬다. 곱공간 위의 연속 함수의 성질을 universal property로 기술하고, 함수의 그래프와 homeomorphism에 적용하여 따름정리들을 유도한다."
+description: "위상공간들의 곱에 대한 곱_topology의 정의와 성질을 다룬다. 곱공간 위의 연속 함수의 성질을 universal property로 기술하고, 함수의 그래프와 homeomorphism에 적용하여 따름정리들을 유도한다."
 excerpt: "곱공간의 성질들"
 
 categories: [Math / Topology]
@@ -10,8 +10,6 @@ sidebar:
 
 date: 2022-11-21
 weight: 11
-revising: true
-drift_needed: true
 
 ---
 
@@ -92,7 +90,7 @@ $$x_1\mapsto f(x_1, a_2),\qquad x_2\mapsto f(a_1,x_2)$$
 으로 정의된 $X_1$에서 $Y$, $X_2$에서 $Y$로의 함수들은 각각 점 $x_1=a_1$, $x_2=a_2$에서 연속이다. 
 :::
 
-그러나 이 명제의 역은 성립하지 않는다. 가령 $(x_1,x_2)\neq (0,0)$에서 $f(x_1,x_2)=x_1x_2/(x_1^2+x_2^2)$이고 $f(0,0)=0$으로 정의된 함수 $f:\mathbb{R}^2\rightarrow\mathbb{R}$을 생각하면, 두 함수 $x_1\mapsto f(x_1,0)$과 $x_2\mapsto f(0,x_2)$는 항등적으로 $0$이므로 원점에서 연속이다. 그러나 $t\neq 0$인 모든 $t$에 대하여 $f(t,t)=1/2$이므로 $f$는 $(0,0)$에서 연속이 아니다. 
+그러나 이 명제의 역은 성립하지 않는다. 
 
 ## 내부와 폐포
 
@@ -119,7 +117,7 @@ $$\cl\left(\prod_{i\in I}A_i\right)\subseteq \prod_{i\in I}\cl A_i$$
 거꾸로 $x=(x_i)\in\prod_{i\in I}\cl A_i$가 주어졌다 하고, $x$의 임의의 근방 $V$를 생각하자. 그럼 product topology의 base를 생각하면, $x\in\prod U_i\subseteq V$이고 유한 개의 $i$를 제외하면 $U_i=X_i$이도록 하는 열린집합들 $U_i$가 존재한다. 각각의 $i$에 대하여 $x_i\in \cl A_i$이고 $U_i$가 $x_i$의 근방이므로, [§집합의 내부, 폐포, 경계, ⁋명제 6](/ko/math/topology/other_concepts#prop6)에 의하여 $U_i\cap A_i\neq\emptyset$이고, 원소 $a_i\in U_i\cap A_i$를 택할 수 있다. 그럼 $a=(a_i)$는 $V\cap \prod A_i$의 원소이므로 $x$의 임의의 근방이 $\prod A_i$와 만나고, 다시 [§집합의 내부, 폐포, 경계, ⁋명제 6](/ko/math/topology/other_concepts#prop6)에 의하여 $x\in \cl\left(\prod A_i\right)$이다.
 :::
 
-그러나 위의 명제는 interior에 대해서는 항상 성립하는 것은 아니며, $I$가 유한집합일 때만 성립한다. 실제로 $I$가 무한집합이고 각각의 $X_i=\mathbb{R}$, $A_i=[0,1]$이라 하면 $\prod_{i\in I}\interior A_i=\prod_{i\in I}(0,1)$은 공집합이 아니다. 반면 $\prod_{i\in I}A_i$에 포함되는 공집합이 아닌 열린집합이 존재한다면 그 안에는 base에 속하는 공집합이 아닌 $\prod_{i\in I}U_i$가 들어 있어야 하는데, 유한 개의 $i$를 제외하면 $U_i=X_i=\mathbb{R}\not\subseteq[0,1]$이므로 이는 불가능하다. 따라서 $\interior\left(\prod_{i\in I}A_i\right)=\emptyset$이고, 무한곱에서는 포함관계 $\prod_{i\in I}\interior A_i\subseteq\interior\left(\prod_{i\in I}A_i\right)$조차 성립하지 않는다.
+그러나 위의 명제는 interior에 대해서는 항상 성립하는 것은 아니며, $I$가 유한집합일 때만 성립한다.
 
 ::: 명제 8
 Index set $I$가 유한집합인 product space $\prod_{i\in I} X_i$와, $X_i$의 임의의 부분집합 $A_i$들이 주어졌다 하자. 그럼 다음 식

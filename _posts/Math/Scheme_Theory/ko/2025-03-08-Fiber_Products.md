@@ -10,8 +10,6 @@ sidebar:
 
 date: 2025-03-08
 weight: 12
-revising: true
-drift_needed: true
 
 ---
 
@@ -75,15 +73,15 @@ Affine scheme들 $X, Y, Z$가 주어졌다 하고, $Y$의 open subscheme $Y'\hoo
 ::: 증명
 우선 [보조정리 2](#lem2)로부터 다음의 fiber diagram 
 
-{% diagram Math/Scheme_Theory/Fiber_Products-4.svg width="9.39em" alt="open_fiber_product-1" %}
+{% diagram frozen/635a8f80/Math/Scheme_Theory/Fiber_Products-4.svg width="9.32em" alt="open_fiber_product-1" %}
 
 이 존재하는 것을 안다. 이제 다음의 데이터
 
-{% diagram Math/Scheme_Theory/Fiber_Products-5.svg width="8.62em" alt="open_fiber_product-2" %}
+{% diagram frozen/635a8f80/Math/Scheme_Theory/Fiber_Products-5.svg width="8.55em" alt="open_fiber_product-2" %}
 
 를 생각하면, 우리는 [보조정리 3](#lem3)으로부터 $X\times_ZY$의 open subscheme $\rho_Y^{-1}(Y')$가 fiber product가 되는 것을 확인할 수 있다. 이제 일반적으로 다음의 diagram
 
-{% diagram Math/Scheme_Theory/Fiber_Products-6.svg width="8.62em" alt="magic_square" %}
+{% diagram frozen/635a8f80/Math/Scheme_Theory/Fiber_Products-6.svg width="8.55em" alt="magic_square" %}
 
 에서 작은 두 사각형이 fiber diagram이라면 외곽의 큰 사각형도 fiber diagram이므로 원하는 결과를 얻는다. 
 :::
@@ -108,12 +106,10 @@ Affine scheme $Z$, 임의의 scheme $X,Y$와 scheme morphism $X \rightarrow Z$, 
 이제 마지막으로 $Z$를 임의의 scheme으로 확장해야 한다. 우선 다음이 성립한다.
 
 ::: 보조정리 7
-임의의 scheme $X,Y,Z$가 주어졌다 하고, scheme morphism $\varphi_X:X \rightarrow Z$, $\varphi_Y:Y \rightarrow Z$ 그리고 affine scheme $Z'$로의 monomorphism $\iota: Z \rightarrow Z'$가 주어졌다 하자. 가령 $\iota$가 open embedding이거나 closed embedding인 경우가 이에 해당한다. 그럼 $\iota\circ\varphi_X$와 $\iota\circ\varphi_Y$의 fiber product $X\times_{Z'}Y$는 $X\times_ZY$의 universal property를 만족하고, 따라서 $X\times_ZY$가 존재한다.
+임의의 scheme $X,Y,Z$가 주어졌다 하고, scheme morphism $\varphi_X:X \rightarrow Z$, $\varphi_Y:Y \rightarrow Z$ 그리고 affine scheme $Z'$로의 monomorphism $\iota: Z \rightarrow Z'$가 주어졌다 하자. 가령 $\iota$가 open immersion이거나 closed embedding인 경우가 이에 해당한다. 후자의 경우, $\iota\circ \alpha=\iota\circ \beta$인 두 morphism $\alpha,\beta: T \rightarrow Z$가 주어졌다 하면 $\iota$가 단사이므로 연속함수로서 $\alpha=\beta$이고, 각각의 $t\in T$에서 $\iota^\sharp$이 stalk 사이의 surjection $\mathcal{O}_{Z',\iota(\alpha(t))} \rightarrow \mathcal{O}_{Z,\alpha(t)}$을 유도하므로 ([§닫힌 부분스킴, ⁋정의 2](/ko/math/scheme_theory/closed_subschemes#def2)) $\alpha^\sharp$와 $\beta^\sharp$는 그 합성에 의해 결정되어 서로 같다. 그럼 $\iota\circ\varphi_X$와 $\iota\circ\varphi_Y$의 fiber product $X\times_{Z'}Y$는 $X\times_ZY$의 universal property를 만족하고, 따라서 $X\times_ZY$가 존재한다.  
 :::
 ::: 증명
 $Z'$이 affine이므로 $X\times_{Z'}Y$는 존재한다. 이제 임의의 scheme $T$와 morphism $\alpha:T \rightarrow X$, $\beta:T \rightarrow Y$가 주어졌다 하자. $X\times_ZY$의 universal property에서 요구하는 조건은 $\varphi_X\circ \alpha=\varphi_Y\circ \beta$이고, $X\times_{Z'}Y$의 것은 $\iota\circ\varphi_X\circ \alpha=\iota\circ\varphi_Y\circ \beta$인데, $\iota$가 monomorphism이므로 이 두 조건은 서로 동치이다. 따라서 두 fiber product는 같은 universal property를 만족하고, 유일성에 의하여 $X\times_{Z'}Y$가 $X\times_ZY$의 역할을 한다.
-
-위에서 언급한 두 경우가 실제로 monomorphism이라는 것은 다음과 같이 확인한다. $\iota\circ \gamma=\iota\circ \delta$인 두 morphism $\gamma,\delta: T \rightarrow Z$가 주어졌다 하면, open embedding과 closed embedding은 모두 단사이므로 연속함수로서 $\gamma=\delta$이다. 또 각각의 $t\in T$에서 $\iota^\sharp$이 stalk 사이의 surjection $\mathcal{O}_{Z',\iota(\gamma(t))} \rightarrow \mathcal{O}_{Z,\gamma(t)}$을 유도하는데, open embedding의 경우 이는 isomorphism이고 closed embedding의 경우는 [§닫힌 부분스킴, ⁋정의 2](/ko/math/scheme_theory/closed_subschemes#def2)가 요구하는 조건이다. 그럼 $(\iota\circ \gamma)^\sharp$이 $\iota^\sharp$과 $\gamma^\sharp$의 합성이므로 $\gamma^\sharp$와 $\delta^\sharp$는 그 합성에 의해 결정되어 서로 같고, 따라서 $\gamma=\delta$이다.
 
 한편 $\iota$에 대한 가정이 없으면 이는 성립하지 않는다. 가령 $k$-scheme의 structure morphism $\iota:Z \rightarrow \Spec k$를 택하고 $X=Y=Z=\mathbb{A}^1_k$에 identity morphism을 주면, $X\times_ZY=\mathbb{A}^1_k$이지만 $X\times_{\Spec k}Y=\mathbb{A}^2_k$이다.
 :::
@@ -326,7 +322,7 @@ $$B\otimes_A\kappa(\mathfrak{p})\cong (B/\mathfrak{p}B)_\mathfrak{p}$$
 
 마지막으로 $\varphi$가 quasi-finite라 하자. $\varphi$는 finite type이므로 위에서 본 대로 $\rho_Y$ 또한 finite type이고, 따라서 $\rho_Y$의 fiber들이 모두 유한집합임만 보이면 된다. $\varphi$가 quasi-compact이므로 base change에 대한 quasi-compactness의 보존을 $\Spec \kappa(z) \rightarrow Z$에 적용하면 $\varphi^{-1}(z)$가 quasi-compact임을 알고, 따라서 이를 유한히 많은 affine open subset $\Spec R_1,\ldots, \Spec R_n$으로 덮을 수 있다. 마찬가지로 $\varphi$가 locally of finite type이므로 각각의 $R_l$은 finite type $\kappa(z)$-algebra이며, 가정에 의하여 각각의 $\Spec R_l$은 유한집합이다.
 
-이제 유한히 많은 prime ideal만을 갖는 finite type $\mathbb{K}$-algebra $R$은 항상 유한차원 $\mathbb{K}$-벡터 space임을 보이자. 우선 $R$의 임의의 prime ideal $\mathfrak{p}$가 maximal임을 보인다. 만일 $\mathfrak{p}$를 진부분집합으로 포함하는 prime ideal이 존재한다면 $d=\dim R/\mathfrak{p}\geq 1$이고, [\[가환대수학\] §뇌터 정규화, ⁋정리 1](/ko/math/commutative_algebra/noether_normalization#thm1)에 의하여 $R/\mathfrak{p}$는 polynomial ring $\mathbb{K}[\x_1,\ldots, \x_d]$를 subring으로 가지며 그 위에서 finitely generated module, 특히 integral extension이다. 그런데 $d\geq 1$이므로 $\mathbb{K}[\x_1,\ldots, \x_d]$는 $\mathbb{K}[\x_1]$의 서로 다른 irreducible polynomial들이 생성하는 무한히 많은 prime ideal을 갖고, [\[가환대수학\] §정수적 확장과 아이디얼, ⁋명제 1](/ko/math/commutative_algebra/lying_over_and_going_up#prop1)에 의하여 이들 각각 위에 $R/\mathfrak{p}$의 prime ideal이 놓이므로, $R$이 유한히 많은 prime ideal만을 갖는다는 가정에 모순이다. 따라서 $R$의 모든 prime ideal은 maximal이고, [\[가환대수학\] §기본 개념들, ⁋정리 12](/ko/math/commutative_algebra/basic_notions#thm12)에 의하여 $R$이 Noetherian이므로 [\[가환대수학\] §조르단-횔더 정리, ⁋정리 4](/ko/math/commutative_algebra/Jordan-Holder_theorem#thm4)에 의하여 $R$은 $R$-module로서 finite length를 갖는다. 이 때 composition factor들은 모두 $R/\mathfrak{m}$의 꼴인데, field는 Jacobson ring이므로 [\[가환대수학\] §영점정리, ⁋정리 4](/ko/math/commutative_algebra/nullstellensatz#thm4)에 의하여 $R/\mathfrak{m}$은 $\mathbb{K}$의 finite extension이다. 따라서 $R$은 유한차원 $\mathbb{K}$-벡터 space이다.
+이제 유한히 많은 prime ideal만을 갖는 finite type $\mathbb{K}$-algebra $R$은 항상 유한차원 $\mathbb{K}$-벡터 space임을 보이자. 우선 $R$의 임의의 prime ideal $\mathfrak{p}$가 maximal임을 보인다. 만일 $\mathfrak{p}$를 진부분집합으로 포함하는 prime ideal이 존재한다면 $d=\dim R/\mathfrak{p}\geq 1$이고, [\[가환대수학\] §뇌터 정규화, ⁋정리 1](/ko/math/commutative_algebra/noether_normalization#thm1)에 의하여 $R/\mathfrak{p}$는 polynomial ring $\mathbb{K}[\x_1,\ldots, \x_d]$를 subring으로 가지며 그 위에서 finitely generated module, 특히 integral extension이다. 그런데 $d\geq 1$이므로 $\mathbb{K}[\x_1,\ldots, \x_d]$는 $\mathbb{K}[\x_1]$의 서로 다른 irreducible polynomial들이 생성하는 무한히 많은 prime ideal을 갖고, [\[가환대수학\] §정수적 확장과 아이디얼, ⁋명제 1](/ko/math/commutative_algebra/lying_over_and_going_up#prop1)에 의하여 이들 각각 위에 $R/\mathfrak{p}$의 prime ideal이 놓이므로, $R$이 유한히 많은 prime ideal만을 갖는다는 가정에 모순이다. 따라서 $R$의 모든 prime ideal은 maximal이고, [\[가환대수학\] §기본 개념들, ⁋정리 12](/ko/math/commutative_algebra/basic_notions#thm12)에 의하여 $R$이 Noetherian이므로 [\[가환대수학\] §조르단-횔더 정리, ⁋정리 4](/ko/math/commutative_algebra/Jordan-Holder_theorem#thm4)에 의하여 $R$은 $R$-module로서 유한한 length를 갖는다. 이 때 composition factor들은 모두 $R/\mathfrak{m}$의 꼴인데, field는 Jacobson ring이므로 [\[가환대수학\] §영점정리, ⁋정리 4](/ko/math/commutative_algebra/nullstellensatz#thm4)에 의하여 $R/\mathfrak{m}$은 $\mathbb{K}$의 finite extension이다. 따라서 $R$은 유한차원 $\mathbb{K}$-벡터 space이다.
 
 그럼 각각의 $R_l$은 유한차원 $\kappa(z)$-벡터 space이므로 $R_l\otimes_{\kappa(z)}\kappa(y)$ 또한 유한차원 $\kappa(y)$-벡터 space이고, 따라서 Artinian ring이 되어 위에서와 같은 이유로 유한히 많은 prime ideal만을 갖는다. ([\[가환대수학\] §조르단-횔더 정리, ⁋따름정리 6](/ko/math/commutative_algebra/Jordan-Holder_theorem#cor6)) 이제 $\rho_Y^{-1}(y)$는 유한히 많은 $\Spec (R_l\otimes_{\kappa(z)}\kappa(y))$들로 덮이므로 유한집합이고, 이로써 $\rho_Y$가 quasi-finite임을 안다. 
 :::

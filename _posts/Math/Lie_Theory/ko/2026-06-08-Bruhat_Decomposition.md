@@ -10,8 +10,6 @@ sidebar:
 
 date: 2026-06-08
 weight: 7
-revising: true
-drift_needed: true
 
 ---
 
@@ -37,13 +35,13 @@ $$W=\left\langle s_1,\ldots,s_r\;\middle\vert\;(s_is_j)^{m_{ij}}=e\right\rangle$
 
 가장 작은 비자명한 경우는 generator가 둘인 경우다. $S=\{s_1,s_2\}$이고 $m_{12}=m$이면 $(W,S)$는 정확히 order $2m$의 dihedral group이며 ([\[대수적 구조\] §반군, 모노이드, 군, ⁋예시 16](/ko/math/algebraic_structures/groups#ex16)), 두 generator는 정$m$각형의 인접한 두 대칭축에 대한 reflection으로, 그 곱 $s_1s_2$는 order $m$의 회전으로 실현된다. 일반적인 Coxeter group은 이러한 dihedral 조각들을 generator를 공유하며 이어붙인 것으로 이해할 수 있다. 실제로 임의의 두 generator $s_i,s_j$가 만드는 subgroup $\langle s_i,s_j\rangle$는 언제나 order $2m_{ij}$의 dihedral group이고, [정의 1](#def1)의 presentation이 말하는 핵심은 이러한 pairwise relation 외에 셋 이상의 generator가 얽히는 새로운 relation이 없다는 것이다.
 
-이 정수들 $m_{ij}$를 모은 대칭행렬이 Coxeter system의 모든 정보를 담으며, finite reflection group은 정확히 유한 Coxeter group으로 특징지어진다.
+이 정수들 $m_{ij}$를 모은 대칭행렬이 Coxeter system의 모든 정보를 담으며, 유한 reflection group은 정확히 유한 Coxeter group으로 특징지어진다.
 
 ::: 명제 2
 Weyl group $W$는 simple reflection들의 집합 $S=\{s_1,\ldots,s_r\}$에 의해 생성되며, $(W,S)$는 Coxeter system을 이룬다. 더욱이 각 $m_{ij}$ ($i\neq j$)는 $2,3,4,6$ 중 하나이다.
 :::
 ::: 증명
-$W$가 모든 root에 대한 reflection $s_\alpha$ ($\alpha\in\Phi$)로 생성된다는 것은 [§근계, ⁋정의 17](/ko/math/lie_theory/root_systems#def17)의 정의이므로, 각 $s_\alpha$가 simple reflection들의 곱으로 쓰이는 것만 보이면 된다. $s_{-\alpha}=s_\alpha$이므로 $\alpha\in\Phi^+$인 경우만 보면 충분하고, $\alpha=\sum_ic_i\alpha_i$ ($c_i\geq0$)의 계수 합에 대한 induction으로 $\alpha=w(\alpha_j)$인 $w\in\langle S\rangle$와 simple root $\alpha_j$가 존재함을 보인다. 계수의 합이 $1$이면 $\alpha$ 자신이 simple root이다. 그렇지 않으면 $0<(\alpha,\alpha)=\sum_ic_i(\alpha,\alpha_i)$이므로 $c_i>0$이면서 $(\alpha,\alpha_i)>0$인 $i$가 존재하고, 이 때 Cartan integer $\langle\alpha,\alpha_i\rangle$ 역시 양수이므로 $s_i(\alpha)=\alpha-\langle\alpha,\alpha_i\rangle\alpha_i$의 계수 합은 $\alpha$의 것보다 작다. 한편 계수의 합이 $1$보다 크므로 $\alpha$는 $\alpha_i$의 배수가 아니고, 따라서 $j\neq i$인 어떤 계수 $c_j$가 양수인데 이 계수는 $s_i$가 바꾸지 않으므로 $s_i(\alpha)$도 positive root이다. 그럼 induction 가설에서 $s_i(\alpha)=w(\alpha_j)$를 얻어 $\alpha=s_iw(\alpha_j)$이다. 이제 $W$의 원소는 inner product를 보존하므로 reflection 공식에서 $s_{w(\beta)}=ws_\beta w^{-1}$이 성립하고, 따라서 $s_\alpha=(s_iw)s_j(s_iw)^{-1}\in\langle S\rangle$이다. 이로부터 $W=\langle S\rangle$이다. 두 simple reflection $s_i,s_j$의 곱 $s_is_j$는 $\alpha_i$와 $\alpha_j$가 생성하는 2차원 평면 위에서의 rotation이며, 그 rotation 각도는 두 simple root가 이루는 각의 두 배이다. [§근계](/ko/math/lie_theory/root_systems)에서 확인한 것과 같이 서로 다른 두 simple root가 이룰 수 있는 각은 $90^\circ,120^\circ,135^\circ,150^\circ$ 중 하나이므로, $s_is_j$의 order $m_{ij}$는 각각 $2,3,4,6$이 된다. 이들 braid relation만으로 $W$가 완전히 결정된다는 것이 가장 비자명한 부분으로, 이것이 바로 Coxeter의 정리에 해당하는 부분이다.
+$W$가 reflection들로 생성된다는 것은 [§근계, ⁋정의 17](/ko/math/lie_theory/root_systems#def17)의 정의이다. 두 simple reflection $s_i,s_j$의 곱 $s_is_j$는 $\alpha_i$와 $\alpha_j$가 생성하는 2차원 평면 위에서의 rotation이며, 그 rotation 각도는 두 simple root가 이루는 각의 두 배이다. [§근계](/ko/math/lie_theory/root_systems)에서 확인한 것과 같이 서로 다른 두 simple root가 이룰 수 있는 각은 $90^\circ,120^\circ,135^\circ,150^\circ$ 중 하나이므로, $s_is_j$의 order $m_{ij}$는 각각 $2,3,4,6$이 된다. 이들 braid relation만으로 $W$가 완전히 결정된다는 것이 가장 비자명한 부분으로, 이것이 바로 Coxeter의 정리에 해당하는 부분이다.
 :::
 
 우리 경우에 이 정수 $m_{ij}$들은 [§Borel subgroup, ⁋정의 1](/ko/math/lie_theory/borel_subgroup#def1)의 Dynkin diagram에서 곧바로 읽힌다. 두 vertex가 연결되지 않았으면 $m_{ij}=2$, single edge면 $3$, double edge면 $4$, triple edge면 $6$이다. 예컨대 [§Borel subgroup, ⁋정의 8](/ko/math/lie_theory/borel_subgroup#def8)의 그림에서 type $A_{n-1}$의 Weyl group $W=S_n$에서 인접한 두 simple reflection은 $m=3$을 가지므로 익숙한 braid relation $s_is_{i+1}s_i=s_{i+1}s_is_{i+1}$을 만족한다.
@@ -84,7 +82,7 @@ $$\ell(w)=\lvert\{(i,j)\mid i<j,\ w(i)>w(j)\}\rvert=\operatorname{inv}(w)$$
 
 ## Bruhat decomposition
 
-이제 우리는 위에서 살펴본 결과들을 이용하여 Bruhat decomposition을 생각한다. 다음 정리는 [§Borel subgroup, ⁋명제 16](/ko/math/lie_theory/borel_subgroup#prop16)에서 complex semisimple Lie group에 대하여 살펴본 결과이며, 이번 글에서 다룰 $\GL_n(\mathbb{C})$를 포함하도록 connected reductive algebraic group에 대한 형태로 적어둔다. 
+이제 우리는 위에서 살펴본 결과들을 이용하여 Bruhat decomposition을 생각한다. 다음 정리는 [§Borel subgroup, ⁋명제 16](/ko/math/lie_theory/borel_subgroup#prop16)에서 이미 살펴본 결과로, 편의를 위해 재서술해둔다. 
 
 ::: 정리 5 (Bruhat decomposition)
 Connected reductive algebraic group $G$, Borel subgroup $B$, maximal torus $T\subseteq B$, 그리고 Weyl group $W=N_G(T)/T$에 대하여, 다음의 disjoint union이 성립한다.
@@ -208,11 +206,7 @@ $$P_I=BW_IB=\bigsqcup_{w\in W_I}BwB$$
 $P_I=BW_IB$는 $G$의 connected closed subgroup이며, Levi decomposition $P_I=L_I\ltimes U_I$를 갖는다. 여기서 Levi factor $L_I$는 $T$와 $I$에 속한 root들의 root space로 생성되는 reductive group이고, unipotent radical $U_I$는 $I$에 속하지 않은 positive root들의 root space로 생성된다.
 :::
 ::: 증명
-$P_I$가 subgroup이라는 것은 $W_I$가 $W$의 subgroup이라는 사실과 Bruhat cell들의 곱에 대한 규칙에서 나온다. 우선 $(BwB)^{-1}=Bw^{-1}B$이고 $W_I$는 inverse에 닫혀 있으므로 $P_I$ 또한 inverse에 닫혀 있다. 또 simple reflection $s$에 대하여 $\ell(ws)=\ell(w)+1$이면 $BwB\cdot BsB=BwsB$이고 그렇지 않으면 $BwB\cdot BsB\subseteq BwsB\cup BwB$이므로, $v\in W_I$를 $I$의 simple reflection들의 reduced expression $v=s_{i_1}\cdots s_{i_m}$으로 쓰고 $w\in W_I$에 대한 $BwB$에 $Bs_{i_1}B,\ldots,Bs_{i_m}B$를 차례로 곱해 나가면, 등장하는 cell의 색인은 언제나 $W_I$ 안에 머문다. 여기서 $BvB\subseteq Bs_{i_1}B\cdots Bs_{i_m}B$이므로 $BwB\cdot BvB\subseteq P_I$이고, 따라서 $P_I$는 곱에 대해서도 닫혀 있다. Closed라는 것은 cell의 closure에서 나온다. $W_I$는 유한 Coxeter group이므로 longest element $w_{0,I}$를 갖고, $I$의 generator들로 쓴 reduced expression의 subword는 다시 $W_I$에 속하므로 $v\leq w_{0,I}$인 $v\in W$는 정확히 $W_I$의 원소들이다. 그럼 [§Borel subgroup, ⁋명제 16](/ko/math/lie_theory/borel_subgroup#prop16)의 closure 공식이
-
-$$\overline{Bw_{0,I}B}=\bigsqcup_{v\leq w_{0,I}}BvB=\bigsqcup_{v\in W_I}BvB=P_I$$
-
-를 주므로 $P_I$는 closed이다. 나아가 [명제 6](#prop6)에 의해 $Bw_{0,I}B\cong\mathbb{A}^{\ell(w_{0,I})}\times B$는 irreducible이고, 그 closure인 $P_I$ 역시 irreducible이므로 특히 connected이다. Root space 차원에서 보면 $\mathfrak{p}_I$는 $\mathfrak{b}$에 $I$가 생성하는 negative root들의 root space를 더한 것으로, 이를 reductive part $\mathfrak{l}_I$ (양·음 root가 짝지어진 부분)와 nilpotent part $\mathfrak{u}_I$ (나머지 positive root)로 가르면 위의 Levi decomposition을 얻는다.
+$B=U\rtimes T$이고 $W_I\subseteq W$이므로 $P_I$는 $B$와 $W_I$의 representative들로 생성되는 subgroup이다. $W_I$의 각 원소 $w$에 대해 $BwB$는 locally closed이고, 정리 5의 disjointness로부터 이들의 union $P_I$는 well-defined subgroup이자 closed subset이다. Root space 차원에서 보면 $\mathfrak{p}_I$는 $\mathfrak{b}$에 $I$가 생성하는 negative root들의 root space를 더한 것으로, 이를 reductive part $\mathfrak{l}_I$ (양·음 root가 짝지어진 부분)와 nilpotent part $\mathfrak{u}_I$ (나머지 positive root)로 가르면 위의 Levi decomposition을 얻는다. 따라서 $P_I$는 connected closed subgroup이다.
 :::
 
 [명제 10](#prop10)의 Levi decomposition은 Borel subgroup의 분해 $B=U\rtimes T$를 한 단계 키운 것으로 보면 자연스럽다. 즉, $B$가 torus $T$와 위쪽 unipotent $U$의 두 정보로 구성되었듯, $P_I$는 더 큰 reductive part $L_I$와 그 위의 unipotent $U_I$의 semidirect product이다. $I$에 속한 root들은 positive root와 negative root가 짝을 이뤄 살아남아 ($T$를 maximal torus로 갖는) reductive group $L_I$를 이루고, $I$ 밖의 positive root들은 짝이 없어 nilpotent radical $U_I$를 이룬다. 특히 $L_I$의 Weyl group은 정확히 $W_I$로, 바로 아래에서 $W$를 quotient하게 될 그 subgroup이다.
@@ -225,7 +219,7 @@ Parabolic subgroup $W_I\subseteq W$에 대하여, *minimal length coset represen
 $$W^I=\{w\in W\mid\ell(ws_i)>\ell(w)\text{ for all }\alpha_i\in I\}$$
 :::
 
-조건 $\ell(ws_i)>\ell(w)$는 $w$를 오른쪽에서 $W_I$의 generator로 곱해도 더 이상 길이를 줄일 수 없다는 뜻이며, 따라서 $W^I$는 각 left coset $wW_I$ 안에서 길이가 최소인 원소들을 모은 것이다. 이하에서 parabolic subgroup $P=P_I$가 먼저 주어져 있을 때에는 $W_I$와 $W^I$를 각각 $W_P$와 $W^P$로도 적는다. 앞서 Weyl group element의 length가 Bruhat cell의 차원을 주듯, 이들은 곧 partial flag variety를 분해했을 때 각 cell의 차원이 될 것이다. 이를 위해서는 다음의 다리가 필요하다. 
+조건 $\ell(ws_i)>\ell(w)$는 $w$를 오른쪽에서 $W_I$의 generator로 곱해도 더 이상 길이를 줄일 수 없다는 뜻이며, 따라서 $W^I$는 각 left coset $wW_I$ 안에서 길이가 최소인 원소들을 모은 것이다. 앞서 Weyl group element의 length가 Bruhat cell의 차원을 주듯, 이들은 곧 partial flag variety를 분해했을 때 각 cell의 차원이 될 것이다. 이를 위해서는 다음의 다리가 필요하다. 
 
 ::: 명제 12
 각 $w\in W$는 $w=w^I w_I$ ($w^I\in W^I$, $w_I\in W_I$)로 유일하게 분해되며, 이 때 $\ell(w)=\ell(w^I)+\ell(w_I)$이다. 특히 각 coset $wW_I$는 정확히 하나의 minimal length 원소를 가지므로, projection $W^I\rightarrow W/W_I$는 bijection이다.
@@ -259,7 +253,7 @@ $$P_k=\left\{\begin{pmatrix}A&C\\0&D\end{pmatrix}\in \GL_n(\mathbb{C})\;\middle\
 
 $$\Gr(k,n)\cong \GL_n(\mathbb{C})/P_k$$
 
-이다. 한편 $V$ 위에서 소멸하는 $(\mathbb{C}^n)^\ast$의 원소들을 모으는 대응 $V\mapsto\operatorname{Ann}(V)$는 $\Gr(k,n)$과 dual space의 Grassmannian $\Gr(n-k,(\mathbb{C}^n)^\ast)$ 사이의 canonical isomorphism을 준다. 반면 $\Gr(n-k,n)$ 자체는 $\alpha_{n-k}$만을 제외해 얻는 maximal parabolic subgroup $P_{n-k}$에 대하여 $\Gr(n-k,n)\cong \GL_n(\mathbb{C})/P_{n-k}$이며, $P_k$와 $P_{n-k}$는 $k\neq n-k$일 때 $\GL_n(\mathbb{C})$ 안에서 conjugate가 아니다.
+이다. 한편 $V\mapsto\mathbb{C}^n/V$ 또는 적절한 내적 하의 $V\mapsto V^\perp$에 의해 $\Gr(k,n)$과 $\Gr(n-k,n)$ 사이에 canonical isomorphism이 있으므로, 같은 $P_k$에 대해 $\Gr(n-k,n)\cong \GL_n(\mathbb{C})/P_k$로도 볼 수 있다.
 
 ::: 명제 14
 $\GL_n(\mathbb{C})/P_k\cong \Gr(k,n)$인 경우, Weyl group $W=S_n$의 parabolic subgroup $W_{P_k}$는 $S_k\times S_{n-k}$과 isomorphic하며, minimal length coset representatives $W^{P_k}$는 다음과 같다.
@@ -269,7 +263,7 @@ $$W^{P_k}=\{w\in S_n\mid w(1)<\cdots<w(k),\ w(k+1)<\cdots<w(n)\}$$
 이들은 *$(k,n-k)$-shuffle*이라 불리며 모두 $\binom{n}{k}$개이다.
 :::
 
-이는 $P_k$가 $\{1,\ldots,n\}$을 $\{1,\ldots,k\}$와 $\{k+1,\ldots,n\}$의 두 토막으로 <em-ko>끊는다</em-ko>는 데서 온다. [명제 10](#prop10) 뒤에서 본 것처럼 $W_{P_k}$는 Levi factor $\GL_k(\mathbb{C})\times \GL_{n-k}(\mathbb{C})$의 Weyl group이고, 이는 두 토막을 각각 자기들끼리 재배열하는 permutation들의 group $S_k\times S_{n-k}$이다. 이러한 재배열은 $E_k=\span\{e_1,\ldots,e_k\}$를 그대로 두어 $\Gr(k,n)$의 점을 바꾸지 않으므로, cell을 색인하는 것은 $S_n$ 전체가 아니라 coset space $S_n/(S_k\times S_{n-k})$이고, 각 coset에서 minimal length representative를 고른 것이 $(k,n-k)$-shuffle이다. 
+이는 결국 Grassmannian이 1-step partial flag variety이므로, 전체 공간 $\GL_n(\mathbb{C})$와 그 위에 작용하는 $S_n$ 전체 가운데 하나가 <em-ko>끊겨있는</em-ko> $S_k\times S_{n-k}$는 같은 것으로 생각할 수 있다는 것이다. 
 
 Grassmannian은 구체적인 예시 중 가장 단순하고도 강력한 예시이므로 이 경우의 표기법을 정리해두자. 우선, 임의의 $w\in S_n$의 원소들을
 

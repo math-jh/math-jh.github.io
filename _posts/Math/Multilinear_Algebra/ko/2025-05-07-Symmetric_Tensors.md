@@ -10,8 +10,6 @@ sidebar:
 
 date: 2025-05-07
 weight: 13
-revising: true
-drift_needed: true
 
 ---
 
@@ -20,7 +18,7 @@ drift_needed: true
 
 $$M^H=\left\{x\in M\mid \text{$hx=x$ for all $h\in H$}\right\}$$
 
-으로 정의하자. 여기서 $hx$는 당연히, $h\mapsto \delta_h$를 통해 $h$를 $AH$의 원소로 본 후, $AH$-module 구조를 이용하여 정의된 것이다. 그럼 $M^H$는 $M$의 $A$-submodule이며, $H$가 $M^H$ 위에 자명하게 작용하므로 $AH$-submodule이기도 하다. 또, 만일 $H$의 subgroup $G$가  주어졌다면 $M^H\leq M^G$임이 자명하다. 이 때 $M^G$는 $A$-submodule이기는 하나, $G$가 $H$의 normal subgroup이 아니라면 일반적으로 $H$의 action에 대해서는 닫혀 있지 않다. 
+으로 정의하자. 여기서 $hx$는 당연히, $h\mapsto \delta_h$를 통해 $h$를 $AH$의 원소로 본 후, $AH$-module 구조를 이용하여 정의된 것이다. 그럼 $M^H$는 $M$의 $A$-submodule이지만, group $H$가 commutative가 아니라면 일반적으로 $AH$-submodule이 되지는 않는다. 또, 만일 $H$의 subgroup $G$가  주어졌다면 $M^H\leq M^G$임이 자명하다. 
 
 이제 $x\in M^G$와 $h\in H$가 주어졌다 하고, $H/G$의 원소 $\bar{h}=hG$가 주어졌다 하자. 그럼 
 
@@ -56,7 +54,7 @@ $$\tr_{H/G}(x)=\sum_{\bar{h}\in H/G} \bar{h}x$$
 다음이 성립한다.
 
 1. 임의의 $x\in M^G$와 $h\in H$에 대하여, $hx\in M^{hGh^{-1}}$이고 식 $\tr_{H/hGh^{-1}}(hx)=\tr_{H/G}(x)$이 성립한다. 
-2. 관련된 index가 모두 finite subgroup들 $F\leq G\leq H$에 대하여, $\tr_{H/G}\circ\tr_{G/F}=\tr_{H/F}$가 성립한다. 
+2. 관련된 index가 모두 유한한 subgroup들 $F\leq G\leq H$에 대하여, $\tr_{H/G}\circ\tr_{G/F}=\tr_{H/F}$가 성립한다. 
 3. 임의의 $x\in M^H$에 대하여, $\tr_{H/G}(x)=[H:G].x$가 성립한다. 
 :::
 
@@ -80,19 +78,19 @@ $$\Sym(M)=\bigoplus_{d=0}^\infty \Sym^d(M)$$
 으로 적는다. 
 :::
 
-$\Sym(M)$은 앞서 정의했던 symmetric algebra $\S(M)$과는 구별해야 하지만, 좋은 경우에는 이들 둘이 서로 isomorphic하다는 것을 보일 수 있다. 한편 [§텐서대수, ⁋명제 7](/ko/math/multilinear_algebra/tensor_algebras#prop7) 다음에서는 $\S^n(M)$을 symmetric power라 불렀으므로 같은 이름이 두 대상에 쓰이는 셈인데, 이 글에서 symmetric power는 언제나 $\Sym^n(M)$을 가리킨다. 
+$\Sym(M)$은 앞서 정의했던 symmetric algebra $\S(M)$과는 구별해야 하지만, 좋은 경우에는 이들 둘이 서로 isomorphic하다는 것을 보일 수 있다. 
 
-우선 두 symmetric tensor의 곱을 정의하자. 일반적으로 $x\in\Sym^p(M)$과 $y\in\Sym^q(M)$을 가져왔을 때, 이들의 텐서로서의 곱 $x\otimes y\in\T^{p+q}M$이 다시 symmetric tensor가 될 것이라는 보장은 없다. 가령 $a,b\in M$에 대하여
+우선 두 symmetric tensor의 곱을 정의하자. 일반적으로 임의의 두 symmetric tensor
 
-$$x=\underbrace{a\otimes\cdots\otimes a}_\text{\scriptsize $p$ times},\qquad y=\underbrace{b\otimes\cdots\otimes b}_\text{\scriptsize $q$ times}$$
+$$x=x_1\otimes x_2\otimes \cdots \otimes x_p,\qquad y=y_1\otimes y_2\otimes \cdots \otimes y_q$$
 
-는 각각 symmetric tensor이지만, 이들의 곱
+를 가져왔을 때, 이들의 텐서로서의 곱
 
-$$x\otimes y=\underbrace{a\otimes\cdots\otimes a}_\text{\scriptsize $p$ times}\otimes\underbrace{b\otimes\cdots\otimes b}_\text{\scriptsize $q$ times}$$
+$$x\otimes y=x_1\otimes x_2\otimes \cdots \otimes x_p\otimes y_1\otimes y_2\otimes \cdots \otimes y_q$$
 
-에서 $a$가 놓인 위치 하나와 $b$가 놓인 위치 하나를 서로 바꾸는 원소를 생각하면, 이것이 symmetric tensor의 조건을 만족하지 않을 수도 있기 때문이다. 
+이 symmetric tensor가 될 것이라는 보장은 없다. 간단히 위의 꼴에서 $x_i$와 $y_j$의 위치를 서로 바꾸는 원소를 생각하면 이것이 symmetric tensor의 조건을 만족하지 않을 수도 있기 때문이다. 
 
-대신 $x\otimes y$는 $S_{p+q}$의 subgroup $S_p\times S_q$의 action에 대해서는 invariant하다. 따라서 
+대신 위의 형태의 곱은 $S_{p+q}$의 subgroup $S_p\times S_q$의 action에 대해서는 invariant하다. 따라서 
 
 $$xy=\tr_{S_{p+q}/S_p\times S_q}(x\otimes y)$$
 
@@ -127,27 +125,27 @@ $$x_2\cdots x_n=\tr_{S_{p_2+\dots+p_n}/(S_{p_2}\times\cdots\times S_{p_n})}(x_2 
 
 이 성립한다고 가정하자. 이제 $S_{p_1+\cdots+p_n}$의 subgroup들의 tower
 
-$$S_{p_1+\cdots+p_n}\geq S_{p_1}\times S_{p_2+\cdots+p_n}\geq S_{p_1}\times S_{p_2}\times\cdots\times S_{p_n}$$
+$$S_{p_1+\cdots+p_n}\geq S_{p_1}\times S_{p_2+\cdots+p_n}\geq \left\{\id_{p_1}\right\}\times S_{p_2+\cdots+p_n}$$
 
 을 생각하면, [명제 2](#prop2)의 결과에 의하여
 
-$$\tr_{S_{p_1+\cdots +p_n}/(S_{p_1}\times\cdots\times S_{p_n})}(x_1\otimes\cdots\otimes x_n)=\tr_{S_{p_1+\cdots+p_n}/(S_{p_1}\times S_{p_2+\cdots+p_n})}\circ\tr_{(S_{p_1}\times S_{p_2+\cdots+p_n})/(S_{p_1}\times\cdots\times S_{p_n})}(x_1\otimes\cdots\otimes x_n)$$
+$$\tr_{S_{p_1+\cdots +p_n}/S_{p_2+\cdots +p_n}}(x_1\otimes\cdots\otimes x_n)=\tr_{S_{p_1+\cdots+p_n}/(S_{p_1}\times S_{p_2+\cdots+p_n})}\circ\tr_{(S_{p_1}\times S_{p_2+\cdots+p_n})/S_{p_2+\cdots+p_n}}(x_1\otimes\cdots\otimes x_n)$$
 
-이 성립한다. 이제 우변을 계산하면, 안쪽 trace에 나타나는 coset들이 $\{1\}\times\left(S_{p_2+\cdots+p_n}/(S_{p_2}\times\cdots\times S_{p_n})\right)$의 꼴이어서 첫 성분을 건드리지 않으므로
+이 성립한다. 이제 우변을 계산하면, 위의 포함관계에 의해
 
-$$\tr_{(S_{p_1}\times S_{p_2+\cdots+p_n})/(S_{p_1}\times\cdots\times S_{p_n})}(x_1\otimes\cdots\otimes x_n)=x_1\otimes\tr_{S_{p_2+\cdots+p_n}/(S_{p_2}\times\cdots\times S_{p_n})}(x_2\otimes\cdots\otimes x_n)=x_1\otimes (x_2\cdots x_n)$$
+$$\tr_{(S_{p_1}\times S_{p_2+\cdots+p_n})/S_{p_2+\cdots+p_n}}(x_1\otimes\cdots\otimes x_n)=x_1\otimes\tr_{S_{p_2+\cdots+p_n}/(S_{p_2}\times\cdots\times S_{p_n})}(x_2\otimes\cdots\otimes x_n)=x_1\otimes (x_2\cdots x_n)$$
 
 이고 따라서
 
-$$\tr_{S_{p_1+\cdots +p_n}/(S_{p_1}\times\cdots\times S_{p_n})}(x_1\otimes\cdots\otimes x_n)=\tr_{S_{p_1+\cdots+p_n}/(S_{p_1}\times S_{p_2+\cdots+p_n})}(x_1\otimes (x_2\cdots x_n))=x_1(x_2\cdots x_n)$$
+$$\tr_{S_{p_1+\cdots +p_n}/S_{p_2+\cdots +p_n}}(x_1\otimes\cdots\otimes x_n)=\tr_{S_{p_1+\cdots+p_n}/(S_{p_1}\times S_{p_2+\cdots+p_n})}(x_1\otimes (x_2\cdots x_n))=x_1(x_2\cdots x_n)$$
 
 이 성립한다. 만일 처음 시작을 다음 subgroup들의 tower
 
-$$S_{p_1+\cdots+p_n}\geq S_{p_1+\cdots+p_{n-1}}\times S_{p_n}\geq S_{p_1}\times\cdots\times S_{p_{n-1}}\times S_{p_n}$$
+$$S_{p_1+\cdots+p_n}\geq S_{p_1+\cdots+p_{n-1}}\times S_{p_n}\geq S_{p_1+\cdots+p_{n-1}}\times 1$$
 
 로 시작했다면 
 
-$$\tr_{S_{p_1+\cdots +p_n}/(S_{p_1}\times\cdots\times S_{p_n})}(x_1\otimes\cdots\otimes x_n)=(x_1\cdots x_{n-1})x_n$$
+$$\tr_{S_{p_1+\cdots +p_n}/S_{p_2+\cdots +p_n}}(x_1\otimes\cdots\otimes x_n)=(x_1\cdots x_{n-1})x_n$$
 
 을 얻을 것이며 특히 $n=3$인 경우에는 이로부터 $\Sym(M)$의 associativity가 보여진다. Commutativity의 경우, $\sigma$를 $p_1+p_2$개의 원소 중, 앞의 $p_1$개의 원소와 뒤의 $p_2$개의 원소를 다음의 꼴
 
@@ -219,7 +217,7 @@ $M$이 free $A$-module이고, $(e_i)_{i \in I}$가 $M$의 basis라고 하자.
 2. 임의의 $k$에 대하여, $\Sym^k(M)$은 $\T^kM$의 $A$-direct factor이다. 
 :::
 ::: 증명
-1. $M$의 basis $(e_i)_{i\in I}$로부터 얻어지는 $\T^kM$의 basis $e_{i_1}\otimes\cdots\otimes e_{i_k}$들을 $S_k$가 permute하므로, [보조정리 6](#lem6)의 첫째 주장에 의하여 각 orbit의 원소들의 합이 $\Sym^k(M)$의 $A$-basis를 이룬다. 한편 [따름정리 5](#cor5)의 셋째 식은 $\nu$의 합이 $k$일 때 $e_\nu$가 정확히 이러한 orbit의 합임을 주므로, 이로부터 첫째 주장이 따라나온다.
+1. [따름정리 5](#cor5)의 둘째 식을 사용하면 된다.
 2. 각각의 $k$에 대하여, $H=S_k$, $N=\T^kM$으로 두고 [보조정리 6](#lem6)을 적용하면 된다. 
 :::
 
@@ -385,7 +383,7 @@ $$\rho(f)(\x)=\prod_{i=1}^n (\x-\xi_i)$$
 이 성립한다면, 유일한 ring homomorphism $u: E_f \rightarrow B$가 존재하여 $\rho(a)=u(a.1)$이고 $u(\x_i)=\xi_i$이도록 할 수 있다. 
 :::
 
-지금까지 generator로 다룬 $s_k$는 표준적으로 *elementary symmetric polynomial<sub>기본대칭다항식</sub>* $e_k$라 부른다. 이하에서는 이 표기를 따르고, 기호 $s$는 [정의 16](#def16)에서 정의할 Schur polynomial에만 쓰기로 한다. 이와 짝을 이루는 다른 대칭다항식들을 함께 정의해 두면 대칭함수 ring의 구조가 한결 선명해지고, 이들은 Grassmannian의 Schubert calculus 등에서 핵심적으로 쓰인다.
+지금까지 generator로 다룬 $s_k$는 표준적으로 *elementary symmetric polynomial<sub>기본대칭다항식</sub>* $e_k$라 부른다. 이와 짝을 이루는 다른 대칭다항식들을 함께 정의해 두면 대칭함수 ring의 구조가 한결 선명해지고, 이들은 Grassmannian의 Schubert calculus 등에서 핵심적으로 쓰인다.
 
 ::: 정의 15
 자연수 $k$에 대하여, $k$차 *complete homogeneous symmetric polynomial<sub>완전동차대칭다항식</sub>* $h_k$를

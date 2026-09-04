@@ -13,9 +13,7 @@ sidebar:
 date: 2022-11-23
 
 weight: 6
-revising: true
 
-drift_needed: true
 
 ---
 
@@ -80,7 +78,7 @@ $$f\vert_X=f\circ i$$
 ::: 증명
 만일 $f$가 전단사라면 이는 전사함수이기도 하므로 그 정의역은 $B$가 된다. 또, $f$는 단사함수이기도 하므로 $f^{-1}$이 함수가 된다.
 
-이제 역으로 $f^{-1}$이 함수라 하자. 그럼 정의에 의해 $\pr_1 f^{-1}=B$이다. 그런데 [§이항관계들 사이의 연산, ⁋명제 2](/ko/math/set_theory/operation_of_binary_relations#prop2)에 의해 $\pr_1f^{-1}=\pr_2F=f(A)$이므로, $B=f(A)$이고 따라서 $f$는 전사함수다. 
+이제 역으로 $f^{-1}$이 함수라 하자. 그럼 정의에 의해 $\pr_1 f^{-1}=B$이다. 그런데 [§이항관계들 사이의 연산, ⁋명제 8](/ko/math/set_theory/operation_of_binary_relations#prop8)의 첫 번째 식에 $R_2=\id_A$, $R_1=f^{-1}$을 넣으면 $\pr_1f^{-1}=f(A)$이므로, $B=f(A)$이고 따라서 $f$는 전사함수다. 
 
 또, $(x,f(x))\in F$와 $(y, f(y))\in F$가 잘 정의된다고 가정하자. 그럼 $(f(x), x)\in F^{-1}$, $(f(y),y)\in F^{-1}$이다. 여기에 더해 만일 $f(x)=f(y)$라면 $f^{-1}$가 함수라는 것으로부터 $x=y$이다. 따라서 $f$는 단사함수이다.
 :::
@@ -92,8 +90,8 @@ $$f\vert_X=f\circ i$$
 ::: 참고 6
 두 식 $f^{-1}\circ f=\id_A$이고 $f\circ f^{-1}=\id_B$은 $f$가 전단사함수가 아니라, 전사함수 혹은 단사함수 각각만 되더라도 일부는 참이 된다.  
 
-- $f$가 단사함수라면 $f$의 target을 $f(A)\subseteq B$로 줄인 $\tilde{f}=(F,A,f(A))$는 $A$와 $f(A)$ 사이의 전단사함수이므로, 그 역함수 $\tilde{f}^{-1}:f(A)\rightarrow A$가 존재하고 $\tilde{f}^{-1}\circ f=\id_A$이다. 여기에 $A\neq\emptyset$이라는 조건이 더해지면 원소 $a_0\in A$를 하나 고정한 후 $B\setminus f(A)$의 원소들을 모두 $a_0$으로 보내도록 $\tilde{f}^{-1}$을 $B$ 전체로 확장할 수 있고, 이렇게 얻어지는 $r:B\rightarrow A$ 또한 $r\circ f=\id_A$를 만족한다.   
-- $f$가 전사함수라면, 임의의 $y\in B$에 대해 항상 어떠한 $x$가 존재하여 $f(x)=y$이다. 이제 $s$를 각각의 $y$에 이렇게 결정된 $x$를 대응시키는 함수라 하면 $f\circ s=\id_B$가 된다. 다만 각각의 $y$마다 $f^{-1}(\{y\})$에서 원소를 하나씩 고르는 이 구성은 뒤에서 다룰 선택공리에 의존한다.
+- $f$가 단사함수라면 $f$는 $A$와 $f(A)\subseteq B$ 사이의 전단사함수이므로 $\tilde{f}^{-1}:f(A)\rightarrow A$가 존재할 것이다. 이제 $\tilde{f}^{-1}\circ f=\id_A$이다.   
+- $f$가 전사함수라면, 임의의 $y\in B$에 대해 항상 어떠한 $x$가 존재하여 $f(x)=y$이다. 이제 $\tilde{f}^{-1}$를 이렇게 결정된 $y$를 $x$에 대응시키는 함수라 하면 $f\circ \tilde{f}^{-1}=\id_B$가 된다.
 :::
 
 ## 함수의 곱

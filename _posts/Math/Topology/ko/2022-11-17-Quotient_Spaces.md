@@ -11,8 +11,6 @@ sidebar:
 
 date: 2022-11-17
 weight: 10
-revising: true
-drift_needed: true
 
 ---
 
@@ -104,7 +102,7 @@ $$(p\circ s)\circ\bar{f}=\id_{X/R}$$
 
 $$A\overset{q}{\longrightarrow}A/(R\vert_A)\overset{\overline{(p\vert_A)}}{\longrightarrow} p(A)\overset{j}{\longrightarrow}X/R$$
 
-이 정의되며 위와 동일한 논증에 의해 $\overline{(p\vert_A)}$는 continuous bijection이 된다. 다음 명제 또한 거의 자명하다.
+이 정의되며 위와 동일한 논증에 의해 $\overline{(p\vert_A)}$는 연속인 bijection이 된다. 다음 명제 또한 거의 자명하다.
 
 ::: 명제 7
 위의 decomposition에서 다음이 모두 동치이다.

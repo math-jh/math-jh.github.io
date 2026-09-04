@@ -1,7 +1,7 @@
 ---
 title: "가역원과 영인자"
-description: "환의 unit, zero divisor와 regular element를 정의하고, unit이 결코 zero divisor가 아님을 보인다. Finite commutative ring에서는 모든 regular element가 unit임을 곱셈사상의 단사성으로 증명하여, finite integral domain이 field임을 따름정리로 얻는다."
-excerpt: "Unit, regular element, 그리고 finite commutative ring에서 regular element가 unit이 되는 현상"
+description: "환의 unit, zero divisor와 regular element를 정의하고, unit이 결코 zero divisor가 아님을 보인다. 유한가환환에서는 모든 regular element가 unit임을 곱셈사상의 단사성으로 증명하여, 유한 integral domain이 field임을 따름정리로 얻는다."
+excerpt: "Unit, regular element, 그리고 유한가환환에서 regular element가 unit이 되는 현상"
 
 categories: [Math / Ring Theory]
 permalink: /ko/math/ring_theory/units_and_zero_divisors
@@ -10,10 +10,8 @@ sidebar:
 
 date: 2026-06-20
 
-drift_needed: true
 
 weight: 1
-revising: true
 
 ---
 
@@ -78,7 +76,7 @@ $$b=1\cdot b=(u^{-1}u)b=u^{-1}(ub)=u^{-1}\cdot 0=0$$
 
 위의 [명제 4](#prop4)는 임의의 unit이 regular임을 보여주지만, 일반적으로 그 역은 성립하지 않는다. 가령 $\mathbb{Z}$에서 $2$는 regular element인 것을 쉽게 확인할 수 있지만 $2$는 $\mathbb{Z}$의 unit이 아니다. ([예시 2](#ex2))
 
-그러나 만일 ring이 *finite* ring이라면 그 역이 성립하는데, 이는 유한집합에서 자기자신으로 가는 단사함수가 자동으로 전사이기 때문이다. 실제로 유한집합 $E$와 단사함수 $f:E\rightarrow E$에 대하여 $f$가 전사가 아니라 하고 $y\in E\setminus f(E)$를 하나 고르면, $f$가 $E$와 $f(E)\subseteq E\setminus\{y\}$ 사이의 전단사를 주므로 $\card E\leq\card(E\setminus\{y\})$이고, 반대 방향의 부등호는 포함관계 $E\setminus\{y\}\subseteq E$에서 오므로 [\[집합론\] §기수, ⁋보조정리 4](/ko/math/set_theory/cardinals#lem4)에 의하여 $\card E=\card(E\setminus\{y\})$이다. 그런데 $E$는 $E\setminus\{y\}$에 원소 $y$ 하나를 더한 것이므로 $\card E=\card(E\setminus\{y\})+\mathbf{1}=\card E+\mathbf{1}$이 되어 $E$의 유한성에 모순이다. ([\[집합론\] §자연수와 무한집합, ⁋정의 1](/ko/math/set_theory/natural_numbers#def1)) 
+그러나 만일 ring이 *finite* ring이라면 그 역이 성립하는데, 이는 기본적으로 유한집합의 정의 ([\[집합론\] §자연수와 무한집합, ⁋정의 1](/ko/math/set_theory/natural_numbers#def1))에 의하여, 유한집합에서 자기자신으로 가는 함수는 전사이거나 단사이기만 해도 자동으로 전단사가 보장되기 때문이다. 
 
 ::: 정리 5
 Finite ring $A$와 임의의 원소 $a$에 대하여, $a$가 regular element인 것과 unit인 것이 동치이다.
@@ -113,7 +111,7 @@ $$(a+n\mathbb{Z})(x+n\mathbb{Z})=1+n\mathbb{Z}$$
 
 $$(\mathbb{Z}/n\mathbb{Z})^\times=\{a+n\mathbb{Z}\mid\gcd(a,n)=1\}$$
 
-이고, 이 group의 크기는 $n$과 서로소인 $1$ 이상 $n$ 이하 정수의 개수 $\varphi(n)$이다 ([\[정수론\] §오일러 정리와 phi function, ⁋정의 1](/ko/math/number_theory/euler_theorem#def1)).
+이고, 이 group의 크기는 $n$과 서로소인 $1$ 이상 $n$ 이하 정수의 개수 $\varphi(n)$이다 ([\[정수론\] §오일러 정리와 phi 함수, ⁋정의 1](/ko/math/number_theory/euler_theorem#def1)).
 
 반면 $\gcd(a,n)=d>1$이고 $a+n\mathbb{Z}\neq 0+n\mathbb{Z}$이면 $a+n\mathbb{Z}$는 zero divisor이다. 이는 $n/d+n\mathbb{Z}\neq 0+n\mathbb{Z}$이고,
 

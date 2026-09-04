@@ -1,6 +1,6 @@
 ---
 title: "서수들 사이의 순서관계"
-description: "ordinal의 성질을 이용해 임의의 well-ordered set을 어떤 ordinal의 initial segment로 볼 수 있음을 보이고, 이를 위해 Replacement axiom schema를 도입한다."
+description: "ordinal의 성질을 이용해 임의의 well-ordered set을 어떤 ordinal의 initial segment로 볼 수 있음을 보이고, 이를 위해 Replacement 공리_schema를 도입한다."
 excerpt: "서수들의 순서관계와 기수의 엄밀한 정의"
 
 categories: [Math / Set Theory]
@@ -10,8 +10,6 @@ sidebar:
 
 date: 2022-11-29
 weight: 22
-revising: true
-drift_needed: true
 
 ---
 
@@ -52,7 +50,7 @@ $P(x,y)$가
 하도록 할 수 있다.
 :::
 
-위의 조건을 만족하는 $P$가 주어지면, 이를 $x$를 넣었을 때 $y$가 나오는 함수 $F$로 생각할 수도 있다. 다만 함수는 기본적으로 target이 정의된 상태에서 정의되었는데, 이 조건 $P$로 만들어지는 대응은 target에 대한 정보가 아무것도 없기 때문에 위와 같은 공리가 필요한 것이다. 또, comprehension의 경우와 마찬가지로 모든 성질 $P$에 대한 주장을 1차 형식논리의 단일한 공리로 적을 수는 없으므로, 이는 $P$마다 하나씩 주어지는 공리들의 모임, 곧 axiom schema가 된다. 어쨌든 replacement schema가 주어진다면 target $B$를 잘 정의해줄 수 있고, 이 때 $B$에 comprehension schema를 이용해 
+위의 조건을 만족하는 $P$가 주어지면, 이를 $x$를 넣었을 때 $y$가 나오는 함수 $F$로 생각할 수도 있다. 다만 함수는 기본적으로 target이 정의된 상태에서 정의되었는데, 이 조건 $P$로 만들어지는 대응은 target에 대한 정보가 아무것도 없기 때문에 단일 공리 대신 axiom schema가 필요한 것이다. 어쨌든 replacement schema가 주어진다면 target $B$를 잘 정의해줄 수 있고, 이 때 $B$에 comprehension schema를 이용해 
 
 > $(x,y)\in F$ for some $x$
 
@@ -66,27 +64,21 @@ $A$가 well-ordered set이라 하고, 집합 $X$를
 
 > $S_x$가 어떠한 ordinal과 order isomorphic하다
 
-를 만족하는 $x\in A$들의 집합이라 하자.
-
-우선 ordinal $\alpha$의 원소 $\delta$가 다시 ordinal이라는 것을 관찰하자. Ordinal의 정의에 의해 $\delta\subseteq\alpha$이므로 ([§정렬집합의 성질들, ⁋정의 2](/ko/math/set_theory/well_ordering#def2)) $\delta$의 원소들은 $\alpha$의 원소들의 부분집합으로서 $\in$에 의해 strictly well-ordered이고, 또 $\xi\in\delta$와 $\eta\in\xi$가 주어지면 $\xi$와 $\eta$ 모두 $\alpha$의 원소이므로 $\in$이 주는 순서의 transitivity에서 $\eta\in\delta$, 곧 $\xi\subseteq\delta$를 얻는다. 같은 이유로 $\gamma\in\alpha$이면 $\gamma\subseteq\alpha$이므로, $\alpha$에서 $\gamma$보다 작은 원소들의 집합 $S_\gamma$는 $\gamma$ 자기 자신이다.
-
-이제 서로 다른 두 ordinal이 order isomorphic할 수 없음을 보이자. $f$가 두 ordinal $\alpha$와 $\beta$ 사이의 order isomorphism이라 하고, $f$를 제한한 함수가 항등함수가 되는 $\alpha$의 segment들의 모임을 $\mathcal{S}$라 하자. 그럼 $\mathcal{S}$가 임의의 합집합에 대하여 닫혀있는 것은 자명하다. 한편 $S_\gamma\in\mathcal{S}$라 하면, $f$가 order isomorphism이므로 $\beta$에서 $f(\gamma)$보다 작은 원소들의 집합은 정확히 $S_\gamma$의 $f$에 의한 image이고, 가정에 의해 이는 $S_\gamma$ 자신이다. 앞의 관찰을 $\beta$에 적용하면 이 집합은 $f(\gamma)$ 자신이고, $\alpha$에 적용하면 $S_\gamma=\gamma$이므로, $f(\gamma)=\gamma$, 곧 $S_\gamma\cup\{\gamma\}\in\mathcal{S}$이다. 따라서 [§정렬집합의 성질들, ⁋보조정리 7](/ko/math/set_theory/well_ordering#lem7)에 의해 $\alpha$ 자신이 $\mathcal{S}$에 속하고, $f$는 항등함수이므로 $\beta=f(\alpha)=\alpha$이다.
-
-이상에서 $X$에 속해있는 $x\in A$마다 $S_x$와 order isomorphic한 ordinal $\alpha_x$가 유일하게 정해진다. 우리의 목표는 이러한 ordinal들을 모은 집합 $B$가 $A$와 order isomorphic한 ordinal이 된다는 것을 보이는 것인데, 그를 위해서는 이 집합이 존재한다는 것부터 우선 보여야 한다.  
+를 만족하는 $x\in A$들의 집합이라 하자. 임의의 ordinal은 자신을 제외한 ordinal과는 order isomorphic하지 않으므로, $X$에 속해있는 $x\in A$마다 유일한 ordinal $\alpha_x$를 지정해 줄 수 있다. 우리의 목표는 이러한 ordinal들을 모은 집합 $B$가 $A$와 order isomorphic한 ordinal이 된다는 것을 보이는 것인데, 그를 위해서는 이 집합이 존재한다는 것부터 우선 보여야 한다.  
 
 이를 위해, 성질 $P(x,y)$를 다음과 같이 정의하자.
 
 > (i) $x\in X$이고 $y$가 $S_x$와 order isomorphic한 ordinal이거나, 
 > (ii) $x\not\in X$이고 $y=\emptyset$이다.
 
-이 성질은, 앞서 말한 것과 같이 유일한 ordinal $y$를 지정하거나, 혹은 (마찬가지로 유일한) 공집합 $\emptyset$을 지정하므로, axiom schema of replacement를 사용할 수 있다. 이를 적용하면, $P$에 의해 정의되는 함수 $F$에 대하여 집합 $F(A)$가 존재한다는 것을 알 수 있다. 이 집합을 $B$라 하자. 만일 $X\neq A$라면 $F$는 $X$ 밖의 원소들을 $\emptyset$으로 보내지만, 이 경우 $A$의 least element $a$에 대하여 $S_a=\emptyset$이므로 $a\in X$이고 $\alpha_a=\emptyset$이다. 따라서 $B$의 원소는 언제나 $x\in X$에 대한 $\alpha_x$들뿐이다. 
+이 성질은, 앞서 말한 것과 같이 유일한 ordinal $y$를 지정하거나, 혹은 (마찬가지로 유일한) 공집합 $\emptyset$을 지정하므로, axiom schema of replacement를 사용할 수 있다. 이를 적용하면, $P$에 의해 정의되는 함수 $F$에 대하여 집합 $F(A)$가 존재한다는 것을 알 수 있다. 이 집합을 $B$라 하자. 
 
-1. 임의의 $x,y\in X$에 대하여, $y<x$인 것과 $\alpha_y\in\alpha_x$인 것은 서로 동치이다. $\varphi$를 $S_x$와 $\alpha_x$ 사이의 order isomorphism이라 하면, $y<x$일 때 $\varphi$를 $S_y$로 제한한 함수는 $S_y$와 $\alpha_x$에서 $\varphi(y)$보다 작은 원소들의 집합, 곧 $\varphi(y)$ 사이의 order isomorphism이고, $\varphi(y)$는 ordinal $\alpha_x$의 원소로서 다시 ordinal이므로 앞서 본 유일성에 의해 $\alpha_y=\varphi(y)\in\alpha_x$이기 때문이다. 반대로 $\alpha_x$의 원소들은 $\in$에 의해 strictly ordered되어 있으므로 $\alpha_x\in\alpha_x$일 수 없고, 따라서 $y=x$인 경우에는 $\alpha_y\in\alpha_x$가 성립하지 않는다. $x<y$인 경우에는 앞의 결과에 의해 $\alpha_x\in\alpha_y$인데, 만일 $\alpha_y\in\alpha_x$이기도 하다면 $\alpha_y\subseteq\alpha_x$에서 $\alpha_x\in\alpha_x$를 얻으므로 역시 성립하지 않는다. 그러므로 $f(x)=\alpha_x$로 정의된 함수 $f:X\rightarrow B$는 $X$의 순서를 $\in$으로 옮기는 전단사함수이고, $X$가 well-ordered이므로 $B$에는 $\in$에 의해 well-ordering이 주어진다. 
-2. 임의의 $\alpha_x\in B$에 대하여, 만일 $\gamma\in\alpha_x$라면 위의 $\varphi$에 의한 inverse image $\varphi^{-1}(\gamma)\in S_x$를 생각할 수 있다. 이를 $c$라 하면, $\varphi$를 $S_c$로 제한한 함수가 $S_c$와 $\gamma$ 사이의 order isomorphism을 정의하므로 $B$의 정의에 의해 $\gamma\in B$이다. 
+1. $B$는 ordinal들의 집합이므로, $\in$에 의해 well-ordering이 주어져있다. 
+2. 임의의 $\alpha_x\in B$에 대하여, 만일 $\gamma\in\alpha_x$라면 $\alpha_x$와 $S_x$ 사이의 order isomorphism $\varphi$에 의한 inverse image $\varphi^{-1}(\gamma)\in S_x$를 생각할 수 있다. 이를 $c$라 하면, $\varphi$를 $S_c$로 제한한 함수가 $S_c$와 $\gamma$ 사이의 order isomorphism을 정의하므로 $B$의 정의에 의해 $\gamma\in B$이다. 
 
 이상에서 $B$는 ordinal number임을 알 수 있다. 또, 2번 증명을 똑같이 적용한다면 임의의 $x\in X$에 대하여, 만일 $y<x$라면 $y\in X$임도 보일 수 있다. 즉, $X$는 $A$의 segment이고, 따라서 $X=S_x$이거나 $X=A$이다. ([§서수와 정렬집합, ⁋명제 5](/ko/math/set_theory/ordinals#prop5)) 
 
-이제 $X=A$임을 보이기 위해, 결론을 부정하여 모순을 찾자. 앞서 1번에서 본 것과 같이 $f(x)=\alpha_x$로 정의된 $f:X\rightarrow B$는 $X$와 $B$ 사이의 order isomorphism이다. 그런데 만일 $X=S_x$였다면, $B$는 ordinal이므로, $S_x$가 ordinal $B$와 isomorphic하다는 이야기가 되므로, 정의에 의해 $x\in X$여야 한다. 이는 모순이므로, $X=A$이고 $A$는 ordinal $B$와 order isomorphic하다. 서로 다른 두 ordinal은 order isomorphic하지 않으므로, 이러한 ordinal은 유일하다. 
+이제 $X=A$임을 보이기 위해, 결론을 부정하여 모순을 찾자. 우선 우리는 $f:X\rightarrow B$를 $f(x)=\alpha_x$로 정의할 수 있으며, 이 경우 $f$는 $B$와 $X$ 사이의 order isomorphism이 된다는 것을 확인할 수 있다. 그런데 만일 $X=S_x$였다면, $B$는 ordinal이므로, $S_x$가 ordinal $B$와 isomorphic하다는 이야기가 되므로, 정의에 의해 $x\in X$여야 한다. 이는 모순이므로, $X=A$이다. 
 :::
 
 ## Cardinal number의 정의
@@ -99,7 +91,7 @@ $A$가 well-ordered set이라 하고, 집합 $X$를
 임의의 집합 $A$에 대하여, $A$의 어떠한 부분집합과도 전단사함수가 존재하지 않는 가장 작은 ordinal number를 $A$의 *Hartogs number<sub>하르톡스 수</sub>*라고 부르고, $h(A)$로 표기한다. 
 :::
 
-Infinite successor ordinal들은 이들의 <em-ko>이전</em-ko> ordinal과의 전단사함수가 존재하므로, 이들은 어떤 집합의 Hartogs number가 될 수 없다. 그렇다고 limit ordinal을 살펴보려 해도, $\omega$나 $\omega\cdot 2$나 크기 자체는 같아야 한다. 때문에 다음의 개념을 새롭게 정의한다.
+무한한 successor ordinal들은 이들의 <em-ko>이전</em-ko> ordinal과의 전단사함수가 존재하므로, 이들은 어떤 집합의 Hartogs number가 될 수 없다. 그렇다고 limit ordinal을 살펴보려 해도, $\omega$나 $\omega\cdot 2$나 크기 자체는 같아야 한다. 때문에 다음의 개념을 새롭게 정의한다.
 
 ::: 정의 4
 Ordinal $\alpha$가 *initial ordinal*이라는 것은, $\beta<\alpha$를 만족하는 모든 $\beta$에 대해, $\beta$와 $\alpha$ 사이의 전단사함수가 존재하지 않는 것이다.

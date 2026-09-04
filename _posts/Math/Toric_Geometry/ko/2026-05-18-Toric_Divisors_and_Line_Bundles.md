@@ -11,8 +11,6 @@ sidebar:
 
 date: 2026-05-18
 weight: 3
-revising: true
-drift_needed: true
 ---
 
 이전 글에서 우리는 toric variety에 대해 살펴보았고, 이미 그 과정에서 toric variety를 정의하는 fan의 조합론적인 데이터가 toric variety의 많은 성질을 결정함을 살펴보았다. 이번 글에서는 특히 toric variety 위에 정의된 (torus-invariant) divisor들을 살펴본다. 
@@ -161,11 +159,11 @@ $$\divisor(\rchi^m) + D = \sum_{\rho \in \Sigma(1)} (\langle m, v_\rho \rangle +
 
 [명제 7](#prop7)에 등장하는 조건 *$\langle m, v_\rho\rangle \ge -a_\rho$ for all $\rho \in \Sigma(1)$*을 생각하면, 우리는 이 조건을 만족하는 $m$들을 모아 $M_\mathbb{R}$ 안의 polyhedron
 
-$$P_D = \{m \in M_\mathbb{R} \mid \langle m, v_\rho \rangle \ge -a_\rho \text{ for all } \rho \in \Sigma(1)\}$$
+$$\Delta_D = \{m \in M_\mathbb{R} \mid \langle m, v_\rho \rangle \ge -a_\rho \text{ for all } \rho \in \Sigma(1)\}$$
 
-을 정의할 수 있다. 이 때, $P_D$의 lattice point들의 모임이 summand의 $m$들과 정확히 일치한다는 것을 안다. 
+을 정의할 수 있다. 이 때, $\Delta_D$의 lattice point들의 모임이 summand의 $m$들과 정확히 일치한다는 것을 안다. 
 
-한편 우리는 이렇게 polyhedron 내부의 lattice point들이 기하적인 의미를 갖는 상황을 처음 마주치는 것이 아닌데, [§토릭 다양체의 정의, ⁋명제 9](/ko/math/toric_geometry/toric_varieties#prop9)에서 우리는 lattice polytope $P$의 lattice points $P \cap M = \{m_0, \ldots, m_s\}$로부터 monomial map $\phi_P: T_N \rightarrow \mathbb{P}^s$를 구성하였고, 이 map의 image의 Zariski closure가 $X_P$와 isomorphic함을 보였다. 그럼 이 lattice points들은 위 [명제 7](#prop7)의 관점에서 보면 정확히 $P = P_D$에 대응되는 $H^0(X_\Sigma, \mathcal{O}_{X_\Sigma}(D))$의 character basis와 일치한다. 즉, lattice point가 결정하던 projective embedding은 사실 line bundle $\mathcal{O}_{X_\Sigma}(D)$의 global sections이 결정하는 standard linear system embedding이었던 것이다.
+한편 우리는 이렇게 polyhedron 내부의 lattice point들이 기하적인 의미를 갖는 상황을 처음 마주치는 것이 아닌데, [§토릭 다양체의 정의, ⁋명제 9](/ko/math/toric_geometry/toric_varieties#prop9)에서 우리는 lattice polytope $P$의 lattice points $P \cap M = \{m_0, \ldots, m_s\}$로부터 monomial map $\phi_P: T_N \rightarrow \mathbb{P}^s$를 구성하였고, 이 map의 image의 Zariski closure가 $X_P$와 isomorphic함을 보였다. 그럼 이 lattice points들은 위 [명제 7](#prop7)의 관점에서 보면 정확히 $P = \Delta_D$에 대응되는 $H^0(X_\Sigma, \mathcal{O}_{X_\Sigma}(D))$의 character basis와 일치한다. 즉, lattice point가 결정하던 projective embedding은 사실 line bundle $\mathcal{O}_{X_\Sigma}(D)$의 global sections이 결정하는 standard linear system embedding이었던 것이다.
 
 이 관점은 toric variety에서 ample이라는 기하학적 조건이 fan의 조합론으로 어떻게 번역되는지를 묻는 것을 자연스럽게 만든다. 결과부터 적자면, 이는 piecewise linear function의 볼록성으로 완전히 기술된다.
 
@@ -188,13 +186,13 @@ Toric variety $X_\Sigma$가 complete일 때, torus-invariant Cartier divisor $D$
 :::
 
 ::: 증명
-($\Rightarrow$) $D$가 ample하다고 가정하자. 정의에 의해 어떤 $k > 0$에 대해 $kD$는 very ample이므로 projective embedding $\phi_{kD}: X_\Sigma \hookrightarrow \mathbb{P}^N$을 유도하며, 이 embedding은 [명제 7](#prop7)의 global section들이 주는 map, 즉 polytope $P_{kD} \cap M$의 lattice points로 정의되는 monomial map과 일치한다. 이 monomial map은 character들로 주어지므로 $T_N$-equivariant이고, $X_\Sigma$가 complete이므로 그 image가 closed set이 되어 $\phi_{kD}(X_\Sigma) = \overline{\phi_{kD}(T_N)}$이다. [§토릭 다양체의 정의, ⁋명제 9](/ko/math/toric_geometry/toric_varieties#prop9)에 의해 이 Zariski closure는 $P_{kD}$의 normal fan으로부터 얻어지는 projective toric variety와 동형이므로, $X_\Sigma$는 그 toric variety와 동형이다. 이 동형은 $X_\Sigma$의 open dense torus $T_N$을 $\overline{\phi_{kD}(T_N)}$의 open dense torus $\phi_{kD}(T_N)$로 보내며, $\phi_{kD}\rvert_{T_N}$이 character lattice를 $M$과 동일시하는 torus 사이의 동형이므로, 양쪽은 같은 lattice $N$의 torus $T_N$을 open dense subset으로 공유하는 $T_N$-equivariant 동형으로 이어진다. Fan은 cone과 torus orbit의 대응을 통해 이러한 동형으로부터 복원되므로 $P_{kD}$의 normal fan이 $\Sigma$와 일치함을 얻는다. 이는 $\psi_{kD} = k\psi_D$가 strictly convex함을 의미하며, 따라서 $\psi_D$ 역시 strictly convex이다.
+($\Rightarrow$) $D$가 ample하다고 가정하자. 정의에 의해 어떤 $k > 0$에 대해 $kD$는 very ample이므로 projective embedding $\phi_{kD}: X_\Sigma \hookrightarrow \mathbb{P}^N$을 유도하며, 이 embedding은 polytope $\Delta_{kD} \cap M$의 lattice points로 정의되는 monomial map과 일치한다 ([§토릭 다양체의 정의, ⁋명제 9](/ko/math/toric_geometry/toric_varieties#prop9)). $X_\Sigma$가 complete이므로 image $\overline{\phi_{kD}(T_N)}$는 $\Delta_{kD}$의 normal fan으로부터 얻어지는 projective toric variety와 동형이며 ([CLS] Theorem 6.2.1 참고), $X_\Sigma$와의 동형으로부터 $\Delta_{kD}$의 normal fan이 $\Sigma$와 일치함을 얻는다. 이는 $\psi_{kD} = k\psi_D$가 strictly convex함을 의미하며, 따라서 $\psi_D$ 역시 strictly convex이다.
 
-($\Leftarrow$) 반대로 $\psi_D$가 strictly convex라고 가정하자. 이는 $\Sigma$가 어떤 lattice polytope의 normal fan임을 의미한다. 먼저 $X_\Sigma$가 complete이므로 $\lvert \Sigma \rvert = N_\mathbb{R}$이고 임의의 $v \in N_\mathbb{R}$가 ray들의 nonnegative 결합으로 적히므로,
+($\Leftarrow$) 반대로 $\psi_D$가 strictly convex라고 가정하자. 이는 $\Sigma$가 어떤 lattice polytope의 normal fan임을 의미한다. 구체적으로, strict convexity에 의해
 
-$$P_D = \{m \in M_\mathbb{R} \mid \langle m, v_\rho \rangle \ge -a_\rho \text{ for all } \rho \in \Sigma(1)\}$$
+$$\Delta_D = \{m \in M_\mathbb{R} \mid \langle m, v_\rho \rangle \ge -a_\rho \text{ for all } \rho \in \Sigma(1)\}$$
 
-의 recession cone $\{m \in M_\mathbb{R} \mid \langle m, v_\rho \rangle \ge 0 \text{ for all } \rho \in \Sigma(1)\}$은 $\{0\}$이 되어 $P_D$는 bounded, 즉 polytope이다. Strict convexity가 주는 것은 그 꼭짓점의 위치이다. 각 maximal cone $\sigma$에 대해 $\langle m_\sigma, v_\rho \rangle \ge \psi_D(v_\rho) = -a_\rho$이고 등호는 정확히 $\rho \in \sigma(1)$에서 성립하므로 $m_\sigma \in P_D$이며, complete fan의 maximal cone은 $n$차원이라 $\{v_\rho\}_{\rho \in \sigma(1)}$이 $N_\mathbb{R}$를 span하고 따라서 등호가 성립하는 부등식들이 $m_\sigma$ 하나만을 남긴다. 즉 $P_D$의 꼭짓점은 정확히 $M$의 원소인 $m_\sigma$들이고 $m_\sigma$에서의 normal cone이 $\sigma$이므로, $P_D$는 lattice polytope이며 그 normal fan은 $\Sigma$이다. 따라서 [§토릭 다양체의 정의, ⁋명제 8](/ko/math/toric_geometry/toric_varieties#prop8)에 의해 $X_\Sigma$는 projective variety이다. 나아가 충분히 큰 $k > 0$에 대해 $P_{kD} = kP_D$는 very ample lattice polytope이 되고, [§토릭 다양체의 정의, ⁋명제 9](/ko/math/toric_geometry/toric_varieties#prop9)에 의해 그 lattice point들이 주는 monomial map은 $X_\Sigma$를 $\mathbb{P}^s$ 안의 closed subvariety로 실현한다. 이 map은 [명제 7](#prop7)의 global section들 $\rchi^m$ ($m \in P_{kD} \cap M$)이 주는 map이므로 $\mathcal{O}_{\mathbb{P}^s}(1)$의 pullback이 $\mathcal{O}_{X_\Sigma}(kD)$이고, 그러므로 $kD$는 very ample이다. 즉 $D$는 ample이다.
+은 bounded region이며 따라서 lattice polytope이다. 이 polytope의 normal fan이 $\Sigma$와 일치하므로, [§토릭 다양체의 정의, ⁋명제 8](/ko/math/toric_geometry/toric_varieties#prop8)에 의해 $X_\Sigma$는 projective variety이다. 더 나아가 $D$에 대응하는 line bundle $\mathcal{O}_{X_\Sigma}(D)$가 very ample line bundle을 정의하므로 $D$는 ample이다.
 :::
 
 ## Toric variety의 Picard group

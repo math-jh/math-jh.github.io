@@ -10,8 +10,6 @@ sidebar:
 
 date: 2025-05-05
 weight: 3
-revising: true
-drift_needed: true
 
 ---
 
@@ -90,13 +88,7 @@ Algebraic extension을 할 때는 어차피 다항식의 해만이 중요하므�
 
 $$A=\bigotimes_{i\in I} A_i$$
 
-이라 하자. 각각의 $A_i$는 $\mathbb{K}$-vector space로서 $0$이 아니므로 이들의 tensor product인 $A$ 또한 $0$이 아니고, 따라서 Krull theorem에 의하여 $A$의 maximal ideal $\mathfrak{m}$이 존재한다. ([\[대수적 구조\] §환의 정의, ⁋정리 10](/ko/math/algebraic_structures/rings#thm10)) 이제 $\mathbb{L}=A/\mathfrak{m}$이라 하면 $\mathbb{L}$은 field이고, 합성 $\mathbb{K}\rightarrow A\rightarrow \mathbb{L}$은 [§체, ⁋명제 2](/ko/math/field_theory/fields#prop2)에 의하여 injective이므로 $\mathbb{L}$은 $\mathbb{K}$의 extension이다. 
-
-이것이 [정의 6](#def6)의 두 조건을 만족함을 보이자. $\xi_{i,k}$의 $\mathbb{L}$에서의 image를 $\eta_{i,k}$라 하면, $A_i[\x]$에서의 등식 $f_i(\x)=\prod_{k=1}^{d_i}(\x-\xi_{i,k})$이 $\mathbb{L}[\x]$에서 $f_i(\x)=\prod_{k=1}^{d_i}(\x-\eta_{i,k})$을 주므로 모든 $f_i$가 $\mathbb{L}[\x]$에서 일차식의 곱으로 인수분해되어 첫째 조건이 성립한다. 또, $A$는 $\mathbb{K}$-algebra로서 $\xi_{i,k}$들에 의해 생성되므로 $\mathbb{L}$은 $\mathbb{K}$-algebra로서 $\eta_{i,k}$들에 의해 생성되는데, 각각의 $\eta_{i,k}$는 $f_i$의 해이므로 $R_i$에 속한다. 따라서
-
-$$\mathbb{L}=\mathbb{K}[\eta_{i,k} : i\in I, 1\leq k\leq d_i]\subseteq \mathbb{K}\left(\bigcup_{i\in I} R_i\right)\subseteq \mathbb{L}$$
-
-이 성립하여 둘째 조건 또한 얻어진다. 
+이라 하면, Krull theorem에 의하여 $A$의 maximal ideal $\mathfrak{m}$이 존재하므로 ([\[대수적 구조\] §환의 정의, ⁋정리 10](/ko/math/algebraic_structures/rings#thm10)) $\mathbb{L}=A/\mathfrak{m}$이라 할 수 있으며, 이것이 원하는 splitting extension을 준다. 
 :::
 
 뿐만 아니라, splitting extension은 다음과 같은 센스에서 유일하다. 

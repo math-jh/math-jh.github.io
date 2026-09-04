@@ -10,9 +10,7 @@ sidebar:
 
 date: 2026-06-20
 weight: 6
-revising: true
 
-drift_needed: true
 
 ---
 
@@ -28,7 +26,7 @@ drift_needed: true
 Ring $A$의 원소 $e\in A$가 $e^2=e$를 만족하면 이를 *idempotent<sub>멱등원</sub>*라 한다. 두 idempotent $e,f$가 $ef=fe=0$을 만족하면 이들이 *orthogonal<sub>직교</sub>*하다고 한다. 또, idempotent $e$가 $A$의 center $Z(A)$에 속하면 이를 *central idempotent<sub>중심 멱등원</sub>*라 한다.
 :::
 
-임의의 nonzero ring은 항상 두 idempotent $0$과 $1$을 가지며, 이 둘은 항상 central이다. 이들을 *trivial<sub>자명한</sub>* idempotent이라 부른다. Idempotent $e$가 주어지면 $1-e$ 또한 idempotent인데, 이는
+임의의 ring은 항상 두 idempotent $0$과 $1$을 가지며, 이 둘은 항상 central이다. 이들을 *trivial<sub>자명한</sub>* idempotent이라 부른다. Idempotent $e$가 주어지면 $1-e$ 또한 idempotent인데, 이는
 
 $$(1-e)^2=1-2e+e^2=1-2e+e=1-e$$
 
@@ -129,7 +127,7 @@ $$y=y_1+\cdots+y_n,\qquad y_i\in\mathfrak{a}_i$$
 마지막으로 이 두 구성이 서로의 역함수임을 확인하자. 첫째 데이터에서 출발하여 $\mathfrak{a}_i=Ae_i$로 두면 $1=e_1+\cdots+e_n$이 이 분해에 따른 $1$의 유일한 표현이므로, 둘째 구성이 돌려주는 idempotent는 다시 $e_i$이다. 거꾸로 둘째 데이터에서 출발하면 $e_i\in\mathfrak{a}_i$에서 $Ae_i\subseteq\mathfrak{a}_i$이고, 위에서 얻은 등식 $x=xe_i$가 임의의 $x\in\mathfrak{a}_i$에 대해 역포함을 주므로 $\mathfrak{a}_i=Ae_i$이다. 따라서 이 대응은 일대일이다.
 :::
 
-[정리 5](#thm5)에 의해, nonzero ring $A$가 nontrivial한 central idempotent를 갖지 않는 것은 $A$가 두 nonzero ring의 곱으로 쪼개지지 않는 것과 동치이다. 이러한 ring을 *connected* 혹은 *indecomposable*하다고 부른다. 가령 division ring $A$는 언제나 indecomposable하다. 만일 $A$가 두 nonzero ring의 곱으로 쪼개진다면 각 인자의 항등원에 해당하는 $(1,0)$과 $(0,1)$이 모두 nonzero이면서 그 곱이 $0$이 되어 $A$가 zero divisor를 갖게 되기 때문이다.
+[정리 5](#thm5)에 의해, ring이 nontrivial한 central idempotent를 갖지 않는 것은 그것이 두 nonzero ring의 곱으로 쪼개지지 않는 것과 동치이다. 이러한 ring을 *connected* 혹은 *indecomposable*하다고 부른다. 가령 division ring $A$는 언제나 indecomposable하다. 만일 $A$가 두 nonzero ring의 곱으로 쪼개진다면 각 인자의 항등원에 해당하는 $(1,0)$과 $(0,1)$이 모두 nonzero이면서 그 곱이 $0$이 되어 $A$가 zero divisor를 갖게 되기 때문이다.
 
 다음 예시는 특히 centrality 조건이 빠졌을 때 일어나는 일을 보여준다. 이 경우, [정리 5](#thm5)는 그 자체로 적용할 수 없지만, 여전히 module로서의 decomposition은 [명제 4](#prop4)에 의해 보장된다.
 
@@ -138,7 +136,7 @@ Ring $A$에 대하여 $n\times n$ matrix ring $\Mat_n(A)$를 생각하자. $E_{i
 
 $$E_{ii}^2=E_{ii},\qquad E_{ii}E_{jj}=0\ (i\neq j),\qquad E_{11}+\cdots+E_{nn}=I$$
 
-를 만족하므로 orthogonal idempotent의 complete set이다. 따라서 [명제 4](#prop4)에 의해 left module decomposition
+를 만족하므로 orthogonal idempotent의 complete set이다. 따라서 [명제 4](#prop4)에 의해 left module 분해
 
 $$\Mat_n(A)=\Mat_n(A)E_{11}\oplus\cdots\oplus \Mat_n(A)E_{nn}$$
 

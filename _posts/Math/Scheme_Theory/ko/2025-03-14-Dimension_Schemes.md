@@ -11,9 +11,6 @@ sidebar:
 date: 2025-03-14
 weight: 13
 
-revising: true
-drift_needed: true
-
 
 
 ---
@@ -244,25 +241,9 @@ $$r_1d_1+\cdots+r_{m-1}d_{m-1}+d_m=d_m+d_1r+\cdots+d_{m-1}r^{m-1}$$
 임의의 field $\mathbb{K}$와, finitely generated $\mathbb{K}$-algebra $A$가 주어졌다 하자. 만일 $A$가 integral domain이라면, $\dim\Spec A=\trdeg_\mathbb{K} \Frac(A)$이 성립한다. 
 :::
 
-[명제 10](#prop10)을 점의 언어로 옮기면 $\mathbb{K}$ 위에서 locally of finite type인 scheme의 closed point가 어떤 점인지, 그리고 그러한 점이 얼마나 많은지를 알 수 있다.
-
-::: 명제 11
-Field $\mathbb{K}$ 위에서 locally of finite type인 scheme $X$에 대하여 다음이 성립한다.
-
-1. 점 $x\in X$가 closed point인 것과 $\kappa(x)$가 $\mathbb{K}$의 유한확대인 것은 동치이다.
-2. $X$의 공집합이 아닌 임의의 locally closed subset은 $X$의 closed point를 포함하며, 따라서 closed point들은 그 안에서 조밀하다.
-:::
-::: 증명
-우선 $X$의 임의의 affine open subset $\Spec S$에 대하여 $S$가 finitely generated $\mathbb{K}$-algebra라는 것을 관찰한다. ([§스킴 사상의 성질들, ⁋보조정리 13](/ko/math/scheme_theory/properties_of_scheme_morphisms#lem13))
-
-첫째 주장의 한 방향을 위해 $\kappa(x)$가 $\mathbb{K}$의 유한확대라 하고, $x$를 담는 affine open subset $\Spec S$와 $x$에 대응하는 prime ideal $\mathfrak{q}$를 택하자. 그럼 $S/\mathfrak{q}$는 fraction field가 $\kappa(x)$인 finitely generated $\mathbb{K}$-algebra domain이므로 [명제 10](#prop10)에 의하여 $\dim S/\mathfrak{q}=\trdeg_\mathbb{K}\kappa(x)=0$이고, 차원이 $0$인 domain은 field이므로 $\mathfrak{q}$는 maximal ideal, 곧 $x$는 $\Spec S$의 closed point이다. 이제 $y\in\cl(\{x\})$를 택하면 $y$를 담는 affine open subset은 모두 $x$ 또한 담으므로 그러한 subset 하나에 위의 논증을 적용하여 $y=x$를 얻고, 따라서 $x$는 $X$의 closed point이다. 거꾸로 $x$가 $X$의 closed point이면 $x$를 담는 affine open subset $\Spec S$ 안에서도 $\{x\}$가 닫힌집합이라 대응하는 prime ideal이 maximal ideal이고, field는 유일한 prime ideal $(0)$이 maximal ideal이라 Jacobson ring이므로 [\[가환대수학\] §영점정리, ⁋정리 4](/ko/math/commutative_algebra/nullstellensatz#thm4)에 의하여 $\kappa(x)$는 $\mathbb{K}$의 유한확대이다.
-
-둘째 주장을 위해 공집합이 아닌 locally closed subset을 $U\cap C$로 쓰자. 이 집합의 한 점을 담으면서 $U$에 포함되는 affine open subset $\Spec S$를 택하면 $C$는 그 안에서 여전히 닫힌집합이므로 $(U\cap C)\cap \Spec S$는 어떤 ideal $I$에 대한 $V(I)$이고, 이것이 공집합이 아니므로 $I$를 포함하는 maximal ideal $\mathfrak{m}$이 존재한다. 그럼 $\mathfrak{m}$이 주는 점은 $U\cap C$에 속하며 그 residue field가 $\mathbb{K}$의 유한확대이므로 ([\[가환대수학\] §영점정리, ⁋정리 4](/ko/math/commutative_algebra/nullstellensatz#thm4)) 첫째 주장에 의하여 $X$의 closed point이다. 마지막으로 $U\cap C$의 공집합이 아닌 상대열린 부분집합은 다시 $X$의 locally closed subset이므로 같은 논증이 그 안의 closed point를 주고, 따라서 closed point들은 $U\cap C$에서 조밀하다.
-:::
-
 위의 주장들에서 가장 중요하게 쓰인 결과는 당연히 [\[가환대수학\] §정수적 확장과 아이디얼](/ko/math/commutative_algebra/lying_over_and_going_up)의 결과들이다. 한편 차원 공식 [\[가환대수학\] §뇌터 정규화, ⁋정리 4](/ko/math/commutative_algebra/noether_normalization#thm4)를 사용하면 다음을 얻는다.
 
-::: 명제 12
+::: 명제 11
 임의의 field $\mathbb{K}$와, finitely generated $\mathbb{K}$-algebra $A$가 주어졌다 하자. 만일 $A$가 integral domain이고, $f\in A$가 nonzero non-unit이라면 $\dim A/(f)=\dim A-1$이 성립한다.
 :::
 ::: 증명
@@ -273,7 +254,7 @@ $(f)$를 포함하는 $A$의 minimal prime $\mathfrak{p}$를 택하자. [\[가�
 
 앞서 우리는 finite type인 affine integral $\mathbb{K}$-scheme $X=\Spec A$에 대하여, $A$의 nonzero non-unit $f$를 통해 정의된 closed subscheme $Z(f)$는 $X$보다 하나 적은 차원을 갖는다는 것을 살펴보았다. 이는 분명 유용한 결과이지만, 다음과 같이 더 일반적인 경우에도 그 결과를 살펴볼 수 있다.
 
-::: 명제 13
+::: 명제 12
 Locally Noetherian scheme $X$와 $X$ 위의 함수 $f$에 대하여, $Z(f)$의 irreducible component는 codimension $0$이거나 codimension $1$이다.
 :::
 ::: 증명
@@ -286,7 +267,7 @@ $$\codim_XW=\dim\mathcal{O}_{X,w}=\dim\mathcal{O}_{U,w}=\codim_U(W\cap U)$$
 를 얻는다. 이제 $\Spec A$에서 점 $\mathfrak{p}$의 codimension이 ring $A$에서의 $\codim\mathfrak{p}$와 같으므로 ([\[가환대수학\] §차원, ⁋정의 2](/ko/math/commutative_algebra/Krull_dimension#def2)) 결국 $\codim_XW=\codim\mathfrak{p}\leq 1$이다.
 :::
 
-$\codim_XW=0$인 것은 $W$가 $X$ 자신의 irreducible component라는 것, 곧 $f$가 그 component 위에서 항등적으로 소멸한다는 것과 같다. 따라서 $f$가 $X$의 어떤 irreducible component 위에서도 항등적으로 소멸하지 않는다면 $Z(f)$의 모든 component는 codimension이 정확히 $1$이 되며, 이것이 [명제 12](#prop12)에서 $A$가 integral domain이고 $f$가 nonzero라는 가정이 하던 역할이다.
+$\codim_XW=0$인 것은 $W$가 $X$ 자신의 irreducible component라는 것, 곧 $f$가 그 component 위에서 항등적으로 소멸한다는 것과 같다. 따라서 $f$가 $X$의 어떤 irreducible component 위에서도 항등적으로 소멸하지 않는다면 $Z(f)$의 모든 component는 codimension이 정확히 $1$이 되며, 이것이 [명제 11](#prop11)에서 $A$가 integral domain이고 $f$가 nonzero라는 가정이 하던 역할이다.
 
 ---
 

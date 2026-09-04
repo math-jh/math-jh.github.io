@@ -1,6 +1,6 @@
 ---
 title: "유향집합"
-description: "유향집합의 정의와 성질을 다룬다. Preordered set에서 오른쪽·왼쪽으로 유향한 집합을 정의하고, right directed인 ordered set의 maximal element가 greatest element임을 보이며, right directed set들의 족의 곱 또한 right directed임을 증명한다."
+description: "유향집합의 정의와 성질을 다룬다. 부분순서집합에서 오른쪽·왼쪽으로 유향한 집합을 정의하고, 유향집합의 최대 원소가 최대 원소인 것을 보이며, 유향집합들의 족 또한 유향집합임을 증명한다."
 excerpt: "유향집합과 lattice"
 
 categories: [Math / Set Theory]
@@ -10,8 +10,6 @@ sidebar:
 
 date: 2022-11-27
 weight: 17
-revising: true
-drift_needed: true
 
 ---
 
@@ -82,12 +80,10 @@ $A$가 totally ordered set이고 $X$가 그 부분집합이라 하자. 그럼 $b
 :::
 
 ::: 증명
-$b$가 $X$의 supremum이라 하자. 그럼 $b$는 $X$의 upper bound이다. 이제 $c < b$인 $c\in A$에 대하여 $c < x$인 $x\in X$가 존재하지 않는다면, $A$가 totally ordered set이므로 임의의 $x\in X$에 대하여 $x\leq c$가 성립하고, 따라서 $c$도 $X$의 upper bound가 된다. 그럼 $b$가 upper bound들 중 가장 작은 것이므로 $b\leq c$를 얻어 $c < b$에 모순이다. 그러므로 $c < x$인 $x\in X$가 존재하며, $b$가 upper bound이므로 이러한 $x$는 $c < x\leq b$를 만족한다.
-
-역으로 $b$가 $X$의 upper bound이고, $c < b$인 임의의 $c\in A$에 대하여 $c < x\leq b$인 $x\in X$가 존재한다 하자. $b'$을 $X$의 임의의 upper bound라 하면 $A$가 totally ordered set이므로 $b\leq b'$ 혹은 $b' < b$가 성립하는데, 만일 $b' < b$라면 $c=b'$에 대한 가정으로부터 $b' < x$인 $x\in X$가 존재하여 $b'$이 upper bound라는 것에 모순이다. 따라서 $b\leq b'$이고, $b$는 $X$의 upper bound들 중 가장 작은 것, 곧 $X$의 supremum이다.
+자명.
 :::
 
-$A$가 ordered set이고, $a\leq b$라 하자. 그럼 $a\leq x\leq b$를 만족하는 모든 $x$를 모아둔 $X\subseteq A$를 *닫힌구간<sub>closed interval</sub>*이라 부르고 $[a,b]$로 적는다. 구간 $(a,b)$는 *열린구간<sub>open interval</sub>*이라 부르고, 이는 $a < x < b$를 만족하는 모든 $x$를 모아둔 집합이다. 또, $a\leq x < b$를 만족하는 모든 $x$를 모아둔 집합과 $a < x\leq b$를 만족하는 모든 $x$를 모아둔 집합은 *반열린구간<sub>half-open interval</sub>*이라 부르고 각각 $[a,b)$와 $(a,b]$로 적는다.  
+$A$가 ordered set이고, $a\leq b$라 하자. 그럼 $a\leq x\leq b$를 만족하는 모든 $x$를 모아둔 $X\subseteq A$를 *닫힌구간<sub>closed interval</sub>*이라 부르고 $[a,b]$로 적는다. 구간 $(a,b)$는 *열린구간<sub>open interval</sub>*이라 부르고, 이는 $a < x < b$를 만족하는 모든 $x$를 모아둔 집합이다.  
 추가로, $x\leq a$를 만족하는 모든 $x$를 모아둔 부분집합을 *unbounded*인 닫힌구간이라 부르고 $(-\infty, a]$로 적는다. $[a,\infty)$, $(-\infty, a)$, $(a, \infty)$도 유사하게 정의한다. 
 
 

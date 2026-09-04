@@ -10,9 +10,7 @@ sidebar:
 
 date: 2024-11-06
 weight: 6
-revising: true
 
-drift_needed: true
 
 ---
 
@@ -39,7 +37,7 @@ $$0 \rightarrow M_1 \rightarrow M_2 \rightarrow M_3 \rightarrow 0$$
 $$\begin{aligned}0 &\rightarrow \Hom_\lMod{A}(M_3, N) \rightarrow \Hom_\lMod{A}(M_2, N) \rightarrow \Hom_\lMod{A}(M_1, N)\\
 &\rightarrow\Ext_A^1(M_3,N) \rightarrow\Ext_A^1(M_2,N) \rightarrow\cdots\end{aligned}$$
 
-를 생각하자. 여기에 나타나는 $\Ext$는 첫 번째 변수의 derived functor로 얻은 것이지만 아래 [명제 3](#prop3)에 의해 [정의 1](#def1)의 것과 일치하므로, $\Ext_A^1(M_3,N)=0$이 성립하고 따라서 $\Hom_\lMod{A}(-,N)$이 exact라는 것을 알 수 있다.
+에서, $\Ext_A^1(M_3,N)=0$이 성립하므로 $\Hom_\lMod{A}(-,N)$이 exact라는 것을 알 수 있다.
 
 한편, [정의 1](#def1) 대신 우리는 고정된 $N$에 대하여 $\Hom_\lMod{A}(-,N):\lMod{A} \rightarrow \Ab$를 생각한 후 이 left exact functor의 right derived functor로서 $\Ext$를 정의할 수도 있었을 것이다. 이 두 정의가 같다는 것은 아래 [명제 3](#prop3)에서 확인할 수 있다.
 
@@ -55,7 +53,7 @@ $$\Tor_i^A(M,N)=L_i(-\otimes_A N)(M)$$
 으로 정의하고, 이들을 *$\Tor$ group*들이라 부른다.
 :::
 
-$\Tor$를 계산하기 위해서는 $M$의 projective resolution을 사용해야 한다. 따라서, 앞선 문단에서의 계산과 마찬가지로 $M$이 projective $A$-module이었다면 $0 \rightarrow M \rightarrow M \rightarrow 0$이 $M$의 projective resolution이 되고, 이로부터 $\Tor_1^A(M,N)=0$이 모든 $N$에 대해 성립했을 것이다. 아래 [명제 4](#prop4)에 의해 $\Tor$는 두 번째 변수의 projective resolution으로도 계산되므로, 이로부터 $M\otimes_A-$가 exact임을 안다. 즉, 임의의 projective $A$-module은 flat $A$-module임을 다시 한 번 확인할 수 있다.
+$\Tor$를 계산하기 위해서는 $M$의 projective resolution을 사용해야 한다. 따라서, 앞선 문단에서의 계산과 마찬가지로 $M$이 projective $A$-module이었다면 $0 \rightarrow M \rightarrow M \rightarrow 0$이 $M$의 projective resolution이 되고, 이로부터 $\Tor_1^A(M,N)=0$이 모든 $N$에 대해 성립했을 것이다. 즉, 임의의 projective $A$-module은 flat $A$-module임을 다시 한 번 확인할 수 있다.
 
 ## Balancing
 
@@ -84,7 +82,7 @@ $$\cdots \rightarrow M\otimes_AN_1\rightarrow M\otimes_AN_0\rightarrow0$$
 
 $$H^n(\Hom_\lMod{A}(M, I^\bullet)) \cong H^n(\Hom_\lMod{A}(P_\bullet, N))$$
 
-이 성립한다.
+이 성립한다. 여기서 $P_\bullet \rightarrow M$은 $M$의 projective resolution이고, $N \rightarrow I^\bullet$은 $N$의 injective resolution이다.
 :::
 
 ::: 증명
@@ -92,7 +90,7 @@ $$H^n(\Hom_\lMod{A}(M, I^\bullet)) \cong H^n(\Hom_\lMod{A}(P_\bullet, N))$$
 
 $$K^{p,q}=\Hom_\lMod{A}(P_q, I^p)$$
 
-를 생각하자. Horizontal differential $d_h:K^{p,q} \rightarrow K^{p+1,q}$은 $I^p\rightarrow I^{p+1}$에 $\Hom_\lMod{A}(P_q,-)$를 취하여 얻고, 비슷하게 vertical differential $d_v: K^{p,q}\rightarrow K^{p,q+1}$은 $P_{q+1}\rightarrow P_q$에 $\Hom_\lMod{A}(-,I^p)$를 취하여 얻는다. 이렇게 얻은 두 differential은 서로 가환하므로, [§호몰로지, ⁋정의 4](/ko/math/homological_algebra/homology#def4)의 sign convention에 맞추기 위해서는 $d_v$ 대신 $(-1)^pd_v$를 택하여 $d_vd_h+d_hd_v=0$이 되도록 해야 한다. 이러한 부호 조정은 각 행과 열의 cohomology를 바꾸지 않으므로 아래의 계산에는 영향을 주지 않는다. 이제 이 double complex의 total complex $\Tot(K)^\bullet$을 생각하자. ([§호몰로지, ⁋정의 5](/ko/math/homological_algebra/homology#def5)) 그럼 주어진 isomorphism은 $\Tot(K)^\bullet$의 $n$번째 cohomology를 다른 방법으로 계산한 것이다.
+를 생각하자. Horizontal differential $d_h:K^{p,q} \rightarrow K^{p+1,q}$은 $I^p\rightarrow I^{p+1}$에 $\Hom_\lMod{A}(P_q,-)$를 취하여 얻고, 비슷하게 vertical differential $d_v: K^{p,q}\rightarrow K^{p,q+1}$은 $P_{q+1}\rightarrow P_q$에 $\Hom_\lMod{A}(-,I^p)$를 취하여 얻는다. 이제 이 double complex의 total complex $\Tot(K)^\bullet$을 생각하자. ([§호몰로지, ⁋정의 5](/ko/math/homological_algebra/homology#def5)) 그럼 주어진 isomorphism은 $\Tot(K)^\bullet$의 $n$번째 cohomology를 다른 방법으로 계산한 것이다.
 
 이를 확인하기 위해, 우선 cochain complex의 row $K^{\bullet, q}$와 column $K^{p,\bullet}$의 cohomology는 다음의 식
 
@@ -200,11 +198,11 @@ $$H_1(P_\bullet\otimes_\mathbb{Z}\mathbb{Z}/m\mathbb{Z})=\ker(\cdot n)= \{a \in 
 비슷한 방식으로 $\Ext$에 대한 것도 살펴볼 수 있다.
 
 ::: 명제 6
-임의의 abelian group $M$과 $0$이 아닌 $n \in \mathbb{Z}$에 대해, 다음이 성립한다.
+임의의 abelian group $A$와 $0$이 아닌 $n \in \mathbb{Z}$에 대해, 다음이 성립한다.
 
-$$\Ext^i_\mathbb{Z}(\mathbb{Z}/n\mathbb{Z}, M) \cong \begin{cases} M[n] & i = 0, \\ M/nM & i = 1, \\ 0 & i \geq 2. \end{cases}$$
+$$\Ext^i_\mathbb{Z}(\mathbb{Z}/n\mathbb{Z}, A) \cong \begin{cases} A[n] & i = 0, \\ A/nA & i = 1, \\ 0 & i \geq 2. \end{cases}$$
 
-여기서 $M[n] = \{a \in M \mid na = 0\}$는 $n$-torsion subgroup이다.
+여기서 $A[n] = \{a \in A \mid na = 0\}$는 $n$-torsion subgroup이다.
 :::
 
 ::: 증명
@@ -212,15 +210,15 @@ $$\Ext^i_\mathbb{Z}(\mathbb{Z}/n\mathbb{Z}, M) \cong \begin{cases} M[n] & i = 0,
 
 $$0 \rightarrow \mathbb{Z}\rightarrow \mathbb{Z}\rightarrow \mathbb{Z}/n\mathbb{Z}\rightarrow 0$$
 
-을 생각하고 $\Hom_\mathbb{Z}(-,M)$을 취하자. 그럼 $\Hom_\mathbb{Z}(\mathbb{Z},M)$은 $1$의 image에 의해 결정되므로, $\Hom_\mathbb{Z}(\mathbb{Z}, M)\cong M$이고 이로부터 다음의 complex
+을 생각하고 $\Hom_\mathbb{Z}(-,A)$를 취하자. 그럼 $\Hom_\mathbb{Z}(\mathbb{Z},A)$는 $1$의 image에 의해 결정되므로, $\Hom_\mathbb{Z}(\mathbb{Z}, A)\cong A$이고 이로부터 다음의 complex
 
-$$0 \rightarrow M \xrightarrow{\cdot n} M \rightarrow 0$$
+$$0 \rightarrow A \xrightarrow{\cdot n} A \rightarrow 0$$
 
 를 얻는다. 이 때, 첫 번째 함수는 $a \mapsto na$이며, 따라서 첫 번째 cohomology는
 
-$$\Ext^1_\mathbb{Z}(\mathbb{Z}/n\mathbb{Z}, M) \cong \coker(\cdot n ) = M/nM$$
+$$\Ext^1_\mathbb{Z}(\mathbb{Z}/n\mathbb{Z}, A) \cong \coker(\cdot n ) = A/nA$$
 
-이다. $\Hom_\mathbb{Z}(\mathbb{Z}/n\mathbb{Z}, M)=M[n]$인 것은 단순 계산이다.
+이다. $\Hom_\mathbb{Z}(\mathbb{Z}/n\mathbb{Z}, A)=A[n]$인 것은 단순 계산이다.
 :::
 
 더 일반적으로, $\Ext^1(M,N)$는 $0 \rightarrow N \rightarrow E \rightarrow M \rightarrow 0$ 형태의 short exact sequence, 즉 $N$에 의한 $M$의 extension의 equivalence class와 연결되며, 이는 Yoneda Ext를 통해 확인할 수 있다. ([Wikipedia](https://en.wikipedia.org/wiki/Ext_functor)) [명제 5](#prop5)보다는 덜 직관적이지만, [명제 6](#prop6) 또한 이러한 의미에서 $\Ext$라는 명칭의 기원을 보여준다 할 수 있다. 
@@ -246,21 +244,19 @@ $$0 \rightarrow K_n \rightarrow \cdots \rightarrow K_1 \xrightarrow{d_1} A \xrig
 
 이 exact하다. 
 
-이를 보이기 위해 $n$에 대한 귀납법을 사용한다. $n = 0$인 경우는 자명하다. 이제 $\x_1, \ldots, \x_{n-1}$ 또한 $A$에서의 regular sequence이므로, 귀납적 가정에 의해 $A$ 위의 Koszul complex $K'_\bullet = K(\x_1, \ldots, \x_{n-1})$는 $A/(\x_1, \ldots, \x_{n-1})$의 free resolution이다. 즉 $i \geq 1$에 대하여 $\ker d'_i = \im d'_{i+1}$이 성립하고, $\im d'_1 = (\x_1, \ldots, \x_{n-1})$이다.
+이를 보이기 위해 $n$에 대한 귀납법을 사용한다. $n = 0$인 경우는 자명하므로, $n-1$개의 원소에 대해 $K(\x_1, \ldots, \x_{n-1})$가 exact함을 가정하자.
 
-이제 $K(\x_1, \ldots, \x_n)_i = \bigwedge\nolimits^i F$를 $e_n$을 포함하지 않는 부분과 포함하는 부분으로 나누면
+$\x_n$이 regular sequence의 마지막 원소이므로, $\x_n$은 $A/(\x_1, \ldots, \x_{n-1})$ 위에서 non-zerodivisor이다. 따라서 $\bar{\x}_i$를 $\x_i$의 $A/(\x_n)$에서의 image라 하면, $\bar{\x}_1, \ldots, \bar{\x}_{n-1}$은 $A/(\x_n)$ 위에서 regular sequence가 되고, 귀납적 가정에 의해 $K'_\bullet = K(\bar{\x}_1, \ldots, \bar{\x}_{n-1})$는 $A/(\x_1, \ldots, \x_n)$의 free resolution이다.
 
-$$K(\x_1, \ldots, \x_n)_i \cong K'_i \oplus K'_{i-1} \wedge e_n$$
+이제 $K(\x_1, \ldots, \x_n)_i$를 관찰하면, 정의에 의해
 
-이며, $\varphi(e_n) = \x_n$과 [정의 7](#def7)의 Leibniz rule로부터 $d_i$는 행렬
+$$K(\x_1, \ldots, \x_n)_i \cong K'_i \oplus K'_{i-1} \cdot e_n$$
 
-$$d_i = \begin{pmatrix} d'_i & (-1)^{i+1} \x_n \\ 0 & d'_{i-1} \end{pmatrix}$$
+이며, $d_i$는 행렬
 
-의 형태를 갖는 것을 안다. $(\alpha, \beta) \in \ker d_i$라 하면 $d'_{i-1}(\beta) = 0$과 $d'_i(\alpha) = (-1)^i \x_n \beta$를 얻는다. $i \geq 2$인 경우 귀납적 가정에 의해 $\beta = d'_i(\gamma)$인 $\gamma \in K'_i$가 존재한다. $i = 1$인 경우에는 $d'_0 = 0$이므로 이 논증을 쓸 수 없는데, 대신 $d'_1(\alpha) = -\x_n\beta$로부터 $\x_n\beta \in \im d'_1 = (\x_1, \ldots, \x_{n-1})$을 얻고, $\x_n$이 $A/(\x_1, \ldots, \x_{n-1})$ 위에서 non-zerodivisor이므로 $\beta \in (\x_1, \ldots, \x_{n-1}) = \im d'_1$, 즉 $\beta = d'_1(\gamma)$인 $\gamma \in K'_1$이 존재한다. 어느 경우든
+$$d_i = \begin{pmatrix} d'_i & (-1)^i \x_n \\ 0 & d'_{i-1} \end{pmatrix}$$
 
-$$d'_i(\alpha - (-1)^i \x_n \gamma) = (-1)^i \x_n \beta - (-1)^i \x_n d'_i(\gamma) = 0$$
-
-이므로 귀납적 가정에 의해 $\alpha - (-1)^i \x_n \gamma = d'_{i+1}(\delta)$인 $\delta \in K'_{i+1}$이 존재하고, 이 때 $d_{i+1}(\delta, \gamma) = (\alpha, \beta)$이다. 따라서 $\ker d_i \subseteq \im d_{i+1}$이고, 반대방향 포함관계는 자명하다. 마지막으로 $\im d_1 = \im d'_1 + \x_n A = (\x_1, \ldots, \x_n)$이므로 $\epsilon$을 붙인 위의 complex는 $K_0 = A$에서도 exact하다.
+의 형태를 갖는다. $(\alpha, \beta) \in \ker d_i$라 하면 $d'_{i-1}(\beta) = 0$이므로, 귀납적 가정에 의해 $\beta = d'_i(\gamma)$인 $\gamma$가 존재한다. 또한 $d'_i(\alpha) = (-1)^{i+1} \x_n \beta$이므로 $d'_i(\alpha - (-1)^{i+1} \x_n \gamma) = 0$이고, 다시 귀납적 가정에 의해 $\alpha - (-1)^{i+1} \x_n \gamma \in \im d'_{i+1}$이다. 따라서 $\ker d_i \subseteq \im d_{i+1}$이고, 반대방향 포함관계는 자명하다.
 
 이는 특히 field $\mathbb{K}$ 위의 polynomial algebra $A=\mathbb{K}[\x_1,\ldots, \x_n]$과 regular sequence $(\x_1,\ldots, \x_n)$의 경우에 잘 적용된다. 이 때 $F=\bigoplus_1^nAe_i$이고 $\varphi$는 $e_i\mapsto \x_i$로 주어진다. 위의 논의에 의해 Koszul complex는 $\mathbb{K}$의 free resolution이 되며, 각각의 $K_i$는 free $A$-module이므로 $-\otimes_A\mathbb{K}$를 적용하면 다음의 complex
 

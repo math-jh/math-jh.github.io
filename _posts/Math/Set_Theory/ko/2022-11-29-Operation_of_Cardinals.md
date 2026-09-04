@@ -10,9 +10,7 @@ sidebar:
 
 date: 2021-09-04
 weight: 24
-revising: true
 
-drift_needed: true
 
 ---
 
@@ -63,10 +61,6 @@ $$\prod_{k\in K}\left(\sum_{j\in J_k}\mathfrak{a}_{k,j}\right)=\sum_{f\in I}\lef
 
 가 성립한다.
 :::
-
-인용한 명제가 주는 것은 집합들 사이의 등식, 즉 우변이 합집합인 등식이므로, 이것이 cardinal 사이의 등식으로 넘어가려면 양변의 합집합이 모두 쌍마다 서로소인 family의 합집합이어야 한다. 좌변은 [명제 2](#prop2)의 증명에서와 같이 각 $k\in K$마다 $(A_{k,j})_{j\in J_k}$를 쌍마다 서로소로 잡으면 되고, 이렇게 잡으면 우변은 저절로 따라온다. 서로 다른 $f, g\in I$에 대하여 $f(k_0)\neq g(k_0)$인 $k_0\in K$를 하나 잡으면, $\prod_{k\in K}A_{k, f(k)}$의 원소와 $\prod_{k\in K}A_{k, g(k)}$의 원소는 $k_0$번째 성분이 각각 서로소인 두 집합 $A_{k_0, f(k_0)}$와 $A_{k_0, g(k_0)}$에 속하므로, 이 두 곱이 서로소이기 때문이다.
-
-한편 인용한 명제는 $K\neq\emptyset$과 모든 $k\in K$에 대한 $J_k\neq\emptyset$을 가정하지만, 위의 cardinal 등식은 이 가정 없이도 성립한다. 어떤 $J_{k_0}$가 공집합이면 좌변의 $k_0$번째 인수가 $\mathbf{0}$이라 좌변이 $\mathbf{0}$이고 $I$ 또한 공집합이라 우변도 $\mathbf{0}$이며, $K$가 공집합이면 좌변이 공집합을 index set으로 갖는 곱이라 $\mathbf{1}$이고 $I$ 역시 원소 하나짜리 집합이라 우변도 $\mathbf{1}$이다.
 
 특별히, 위의 명제들을 유한한 경우에만 생각한다면 
 

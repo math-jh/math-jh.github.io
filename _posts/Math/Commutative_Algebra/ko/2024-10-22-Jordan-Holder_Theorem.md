@@ -1,6 +1,6 @@
 ---
 title: "조르단-횔더 정리"
-description: "Finite composition series를 갖는 모듈은 Artinian이면서 Noetherian임을 보이는 조르단-횔더 정리를 모듈 이론의 관점에서 다룬다."
+description: "유한 composition series를 갖는 모듈은 Artinian이면서 Noetherian임을 보이는 조르단-횔더 정리를 모듈 이론의 관점에서 다룬다."
 excerpt: "Composition series의 유일성과 length의 well-definedness"
 
 categories: [Math / Commutative Algebra]
@@ -10,8 +10,6 @@ sidebar:
 
 date: 2024-10-22
 weight: 5
-revising: true
-drift_needed: true
 
 ---
 
@@ -41,13 +39,13 @@ $$M=M_0\supsetneq M_1\supsetneq \cdots\supsetneq M_n=0$$
 그럼 다음 정리는 module 버전의 Jordan-Hölder 정리라 할 수 있다. 
 
 ::: 정리 3
-$A$-module $M$이 finite composition series를 갖는 것은 $M$이 Artinian인 동시에 Noetherian인 것과 동치이다. 이 조건이 만족되어 길이 $n$짜리 composition series
+$A$-module $M$이 유한한 composition series를 갖는 것은 $M$이 Artinian인 동시에 Noetherian인 것과 동치이다. 이 조건이 만족되어 길이 $n$짜리 composition series
 
 $$M=M_0\supsetneq M_1\supsetneq \cdots\supsetneq M_n=0$$
 
 가 주어졌다 하자. 그럼 다음이 성립한다. 
 
-1. 길이가 $n$ 이하인 $M$의 임의의 submodule들의 chain들은 모두 composition series로의 refinement를 가지며, $M$의 submodule들의 임의의 chain은 그 길이가 $n$ 이하이다. 특히 $M$의 모든 composition series의 길이는 $n$이고, 따라서 $\length(M)=n$이다. 
+1. 길이가 $n$ 이하인 $M$의 임의의 submodule들의 chain들은 모두 composition series로의 refinement를 갖는다. 
 2. $M_k/M_{k+1}\cong A/\mathfrak{m}$이도록 하는 $k$가 존재하는 maximal ideal들의 모임에 대하여, isomorphism $M\cong\bigoplus_{\mathfrak{m}}M_\mathfrak{m}$이 존재한다. 
 3. 만일 어떤 maximal ideal $\mathfrak{p}$와 $k$에 대하여 $\mathfrak{p}^k$가 $M$을 annihilate한다면 $M=M_\mathfrak{p}$이다. 
 :::
@@ -58,7 +56,7 @@ $$M=M_0\supsetneq M_1\supsetneq \cdots$$
 
 은 Artinian 조건으로부터 그 길이가 유한하며, $M_{k+1}$이 $M_k$의 maximal proper submodule인 것으로부터 이 chain이 composition series임을 안다. 
 
-첫 번째 결과는 Jordan-Hölder 정리와 동일하게 증명하므로 별도로 증명하지 않는다. 이제 이를 받아들이고 나면, $M$의 submodule들의 strictly increasing sequence나 strictly decreasing sequence는 양 끝에 $M$과 $0$을 덧붙여 chain으로 만들 수 있고 그 길이가 $n$ 이하이므로, 이러한 sequence는 모두 유한한 단계에서 멈춘다. 즉 $M$은 Artinian인 동시에 Noetherian이고, 앞선 동치관계의 반대 방향까지 보일 수 있다.
+첫 번째 결과는 Jordan-Hölder 정리와 동일하게 증명하므로 별도로 증명하지 않는다. 이제 이를 받아들이고 나면, 임의의 chain이 주어질 때마다 이 chain을 composition series로 refine할 수 있고, 따라서 앞선 동치관계의 반대 방향까지 보일 수 있다.
 
 이제 두 번째 결과를 보인다. 주어진 chain의 유한성으로부터 조건을 만족하는 maximal ideal들 또한 유한하다는 것을 알고, 따라서 $\bigoplus_\mathfrak{m} M_\mathfrak{m}$은 $\prod_\mathfrak{m} M_\mathfrak{m}$으로 볼 수 있으며 이 때 주어진 함수는 $M \rightarrow M_\mathfrak{m}$들에 direct product의 universal property를 적용하여 얻어진다. 이 함수가 isomorphism이 된다는 것을 보이려면 [§국소화의 성질들, ⁋명제 4](/ko/math/commutative_algebra/properties_of_localization#prop4)를 적용하여 maximal ideal에서의 localization을 보면 충분하다. 
 
@@ -87,10 +85,8 @@ $$(M_k)_\mathfrak{m}/(M_{k+1})_\mathfrak{m}\cong (M_k/M_{k+1})_\mathfrak{m}=\beg
 Ring $A$에 대해 다음이 모두 동치이다.
 
 1. $A$가 Noetherian이고 임의의 prime ideal이 maximal이다.
-2. $A$는 $A$-module로서 finite length를 갖는다.
+2. $A$는 $A$-module로서 유한한 length를 갖는다.
 3. $A$는 Artinian이다.
-
-또한 이 조건들이 성립하고 $A$가 local ring이라면, $A$의 maximal ideal은 nilpotent이다.
 :::
 ::: 증명
 우선 첫째 조건을 가정하고 둘째 조건을 보이자. 결론에 반하여 $A$가 첫째 조건을 만족하지만, finite length가 아니라 하자. 이제 $\mathfrak{a}$를 $A/\mathfrak{a}$가 finite length가 아니도록 하는 $A$의 ideal들 중 maximal인 것이라 하자. 그럼 만일 $ab\in \mathfrak{a}$이고 $a\not\in \mathfrak{a}$라면, 다음의 short exact sequence
@@ -107,7 +103,7 @@ $$(\mathfrak{b}\mathfrak{a})\mathfrak{a}=\mathfrak{b}\mathfrak{a}^2=\mathfrak{b}
 
 이므로, $\mathfrak{b}$의 minimality로부터 $\mathfrak{b}\mathfrak{a}=\mathfrak{b}$여야 함을 안다.
 
-이제 $\mathfrak{b}$의 정의로부터, 적당한 $y\in \mathfrak{b}$에 대해 $y \mathfrak{a}\neq 0$이여야 함을 알고, $\mathfrak{b}$의 minimality로부터 $\mathfrak{b}=(y)$여야 함을 안다. 이제 위의 등식 $\mathfrak{b}\mathfrak{a}=\mathfrak{b}$로부터 적당한 $x\in \mathfrak{a}$에 대하여 $xy=y$가 성립해야 함을 안다. 즉, $(1-x)y=0$이어야 한다. 그런데 $x\in \mathfrak{a}$이고, $\mathfrak{a}$는 임의의 maximal ideal에 포함되므로 $1-x$는 어떠한 maximal ideal에도 포함되지 않는다. 즉 $1-x$는 unit이며, 이로부터 $y=0$이고 이는 $\mathfrak{b}$의 정의에 모순이다. 즉, $\mathfrak{a}=0$이고 따라서 zero ideal을 maximal ideal들의 곱 $0=\mathfrak{m}_1\cdots\mathfrak{m}_k$으로 적을 수 있다. 특별히 $A$가 local ring이라면 이 곱에 등장하는 maximal ideal은 모두 $A$의 유일한 maximal ideal $\mathfrak{m}$이므로 $\mathfrak{m}^k=0$이고, 따라서 $\mathfrak{m}$은 nilpotent이다. 
+이제 $\mathfrak{b}$의 정의로부터, 적당한 $y\in \mathfrak{b}$에 대해 $y \mathfrak{a}\neq 0$이여야 함을 알고, $\mathfrak{b}$의 minimality로부터 $\mathfrak{b}=(y)$여야 함을 안다. 이제 위의 등식 $\mathfrak{b}\mathfrak{a}=\mathfrak{b}$로부터 적당한 $x\in \mathfrak{a}$에 대하여 $xy=y$가 성립해야 함을 안다. 즉, $(1-x)y=0$이어야 한다. 그런데 $x\in \mathfrak{a}$이고, $\mathfrak{a}$는 임의의 maximal ideal에 포함되므로 $1-x$는 어떠한 maximal ideal에도 포함되지 않는다. 즉 $1-x$는 unit이며, 이로부터 $y=0$이고 이는 $\mathfrak{b}$의 정의에 모순이다. 즉, $\mathfrak{a}=0$이고 따라서 zero ideal을 maximal ideal들의 곱 $0=\mathfrak{m}_1\cdots\mathfrak{m}_k$으로 적을 수 있다. 
 
 이제 각각의 $l=1,\ldots, k-1$에 대하여, $\mathfrak{m}_1\cdots\mathfrak{m}_l/\mathfrak{m}_1\cdots\mathfrak{m}_{l+1}$을 $A/\mathfrak{m}_{l+1}$-vector space로 보면 이 vector space의 submodule은 $\mathfrak{a}/\mathfrak{m}_1\cdots\mathfrak{m}_{l+1}$ 꼴의 submodule, 즉 $A$의 ideal 중 $\mathfrak{m}_1\cdots\mathfrak{m}_{l+1}$를 포함하는 ideal로 생각할 수 있으며, $A$는 Artinian이므로 이로부터 $\mathfrak{m}_1\cdots\mathfrak{m}_l/\mathfrak{m}_1\cdots\mathfrak{m}_{l+1}$가 유한차원임을 안다. 이제 이들을 모두 모아두면 $A$의 composition series를 얻고, 따라서 [정리 3](#thm3)에 의해 $A$는 Noetherian이다. 
 
@@ -118,13 +114,13 @@ $$\mathfrak{m}_1\cdots\mathfrak{m}_k=0\subseteq \mathfrak{p}$$
 인 것으로부터 어떠한 $l$에 대해서는 $\mathfrak{m}_l\subseteq \mathfrak{p}$가 성립해야 함을 알고 따라서 $\mathfrak{m}_l=\mathfrak{p}$이다. 이로부터 첫째 조건이 모두 성립한다.
 :::
 
-이로부터 임의의 Artinian ring은 local Artinian ring들의 finite product임을 보일 수 있다. Noetherian ring에 대해서는 다음이 성립한다.
+이로부터 임의의 Artinian ring은 local Artinian ring들의 유한한 product임을 보일 수 있다. Noetherian ring에 대해서는 다음이 성립한다.
 
 ::: 정리 5
-Noetherian ring $A$에 대하여, $A$가 domain들의 finite product인 것은 $A$의 임의의 maximal ideal에 대하여 $A_\mathfrak{m}$이 domain인 것과 동치이다.
+Noetherian ring $A$에 대하여, $A$가 domain들의 유한한 product인 것은 $A$의 임의의 maximal ideal에 대하여 $A_\mathfrak{m}$이 domain인 것과 동치이다.
 :::
 ::: 증명
-우선 $A$가 domain의 finite product $A=\prod A_i$라 하자. 그럼 $A_i$의 unit $e_i$들은 $\sum_i e_i=1$과 $i\neq j$에 대한 $e_ie_j=0$을 만족하므로 $A$의 임의의 prime ideal $\mathfrak{p}$에 대하여 $e_i\not\in \mathfrak{p}$인 $i$가 유일하게 존재하며, 이 원소 $e_i$는 $i\neq j$를 만족하는 $A_j$를 annihilate하므로 $A_\mathfrak{p}=(A_i)_\mathfrak{p}$이 성립한다. ([§국소화, ⁋명제 5](/ko/math/commutative_algebra/localization#prop5))
+우선 $A$가 domain의 유한한 product $A=\prod A_i$라 하자. 그럼 $A_i$의 unit $e_i$들은 $\sum_i e_i=1$과 $i\neq j$에 대한 $e_ie_j=0$을 만족하므로 $A$의 임의의 prime ideal $\mathfrak{p}$에 대하여 $e_i\not\in \mathfrak{p}$인 $i$가 유일하게 존재하며, 이 원소 $e_i$는 $i\neq j$를 만족하는 $A_j$를 annihilate하므로 $A_\mathfrak{p}=(A_i)_\mathfrak{p}$이 성립한다. ([§국소화, ⁋명제 5](/ko/math/commutative_algebra/localization#prop5))
 
 거꾸로 $A$의 임의의 maximal ideal $\mathfrak{m}$에서의 localization이 domain이라 가정하고, $\{\mathfrak{q}_i\}$를 $A$의 prime ideal들 중 minimal한 것이라 하자. 그럼 다음 글에서 증명할 [§동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)에 의하여 $\{\mathfrak{q}_i\}$는 유한집합이며, 이를 받아들이고 나면 $A$에서 유한히 많은 domain들의 direct product로의 자연스러운 map
 
@@ -164,7 +160,7 @@ Noetherian ring $A$와 finitely generated $A$-module $M$, 그리고 $\ann(M)$을
 거꾸로 $M_\mathfrak{p}$이 유한한 길이를 갖는 $A_\mathfrak{p}$-module이라 하면, [따름정리 6](#cor6)에 의해 $M_\mathfrak{p}$의 annihilator $\ann(M)A_\mathfrak{p}$를 포함하는 prime ideal들은 모두 maximal이고, 이들은 다시 [§국소화, ⁋명제 8](/ko/math/commutative_algebra/localization#prop8)을 통해 $\ann(M)$을 포함하며 $\mathfrak{p}$에 포함된 prime ideal과 일대일대응이 있으므로 위의 논증을 뒤집으면 된다.
 :::
 
-특별히 $A$의 임의의 ideal $\mathfrak{a}$에 대하여, $A$-module $A/\mathfrak{a}$를 생각하면 $\ann(A/\mathfrak{a})=\mathfrak{a}$가 되며, [따름정리 6](#cor6)과 [따름정리 7](#cor7)로부터 $\mathfrak{p}$가 $\mathfrak{a}$를 포함하는 prime ideal들 중 minimal인 것과 $A_\mathfrak{p}/\mathfrak{a}A_\mathfrak{p}$가 Artinian인 것이 동치임을 안다. 한편 충분히 큰 $n$에 대하여 $(\mathfrak{p}A_\mathfrak{p})^n\subseteq \mathfrak{a}A_\mathfrak{p}$이면 maximal ideal들의 곱 $(\mathfrak{p}A_\mathfrak{p})^n$이 $A_\mathfrak{p}$-module $A_\mathfrak{p}/\mathfrak{a}A_\mathfrak{p}$를 annihilate하므로 [따름정리 6](#cor6)의 둘째 조건과 넷째 조건의 동치에 의해 $A_\mathfrak{p}/\mathfrak{a}A_\mathfrak{p}$는 Artinian이고, 거꾸로 $A_\mathfrak{p}/\mathfrak{a}A_\mathfrak{p}$가 Artinian이면 이는 maximal ideal이 $\mathfrak{p}A_\mathfrak{p}/\mathfrak{a}A_\mathfrak{p}$인 local ring이므로 [정리 4](#thm4)에 의해 이 maximal ideal이 nilpotent이고, 따라서 충분히 큰 $n$에 대하여 $(\mathfrak{p}A_\mathfrak{p})^n\subseteq \mathfrak{a}A_\mathfrak{p}$가 성립한다. 이로부터 다음을 얻는다.
+특별히 $A$의 임의의 ideal $\mathfrak{a}$에 대하여, $A$-module $A/\mathfrak{a}$를 생각하면 $\ann(A/\mathfrak{a})=\mathfrak{a}$가 되며, 이로부터 다음을 얻는다.
 
 ::: 따름정리 8
 Noetherian ring $A$와 임의의 ideal $\mathfrak{a}$, 그리고 $\mathfrak{a}$를 포함하는 prime ideal $\mathfrak{p}$에 대하여, 다음이 모두 동치이다.

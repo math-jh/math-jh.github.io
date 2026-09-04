@@ -13,7 +13,6 @@ weight: 104
 translated_at: 2026-08-18T07:15:05+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-08-18T07:15:05+00:00
-revising: true
 ---
 ## Fraction Rings
 
@@ -145,26 +144,11 @@ From the assumption that $A$ is an integral domain, we know that $S=A\setminus\{
 The field $S^{-1}A$ obtained from [Proposition 6](#prop6) above is called the *field of fractions* of $A$, and is denoted $\Frac(A)$.
 :::
 
-The field of fractions enjoys the following universal property.
-
-::: Proposition 8
-Let $A$ be an integral domain, $\mathbb{K}$ a field, and $f:A\hookrightarrow\mathbb{K}$ an embedding. Then there exists a unique ring homomorphism $\bar{f}:\Frac(A)\rightarrow\mathbb{K}$ satisfying $\bar{f}\circ\epsilon=f$.
-:::
-::: Proof
-We first show uniqueness. If such a $\bar{f}$ exists, then since every element of $\Frac(A)$ is of the form $\epsilon(\alpha)\epsilon(\beta)^{-1}$, we must have
-
-$$\bar{f}(\alpha/\beta)=\bar{f}(\epsilon(\alpha)\epsilon(\beta)^{-1})=f(\alpha)f(\beta)^{-1},$$
-
-and hence $\bar{f}$ is unique if it exists.
-
-To show existence, define $\bar{f}(\alpha/\beta)=f(\alpha)f(\beta)^{-1}$. Since $f$ is injective, $\beta\neq 0$ implies $f(\beta)\neq 0$, and since $\mathbb{K}$ is a field, $f(\beta)$ is invertible. Now suppose $\alpha/\beta=\alpha'/\beta'$. Since $A$ is an integral domain, the definition of the equivalence relation in [Theorem 1](#thm1) gives $\alpha\beta'=\alpha'\beta$, and therefore from $f(\alpha)f(\beta')=f(\alpha')f(\beta)$ we obtain $f(\alpha)f(\beta)^{-1}=f(\alpha')f(\beta')^{-1}$. That is, $\bar{f}$ is well defined. That it preserves addition and multiplication follows immediately from the definitions of addition and multiplication in $\Frac(A)$, and since $\bar{f}(\epsilon(\alpha))=f(\alpha)f(1)^{-1}=f(\alpha)$, we have $\bar{f}\circ\epsilon=f$.
-:::
-
 ## Prime Ideals
 
 From the fourth isomorphism theorem for ring homomorphisms, we know that for any commutative ring $A\neq 0$ and maximal ideal $\mathfrak{m}$, the only ideals of $A/\mathfrak{m}$ are $0$ and $A/\mathfrak{m}$ itself. Thus by [Proposition 4](#prop4), $A/\mathfrak{m}$ is a division ring, that is, a field. Integral domains can also be characterized in a similar manner.
 
-::: Proposition 9
+::: Proposition 8
 For a commutative ring $A$ and an ideal $\mathfrak{p}\neq A$, the following are all equivalent.
 
 1. $A/\mathfrak{p}$ is an integral domain.
@@ -183,28 +167,28 @@ An ideal $\mathfrak{p}$ satisfying the above equivalent conditions is called a *
 
 On the other hand, the following holds.
 
-::: Proposition 10
+::: Proposition 9
 For a ring homomorphism $\phi:A \rightarrow B$ between commutative rings and a prime ideal $\mathfrak{p}$ of $B$, the preimage $\phi^{-1}(\mathfrak{p})$ is a prime ideal of $A$.
 :::
 ::: Proof
-First, $\phi^{-1}(\mathfrak{p})$ is a subgroup under addition, and for any $\alpha\in A$ and $x\in\phi^{-1}(\mathfrak{p})$ we have $\phi(\alpha x)=\phi(\alpha)\phi(x)\in\mathfrak{p}$, so it is an ideal of $A$. Also since $\mathfrak{p}\neq B$ we have $1\not\in\mathfrak{p}$, and from $\phi(1)=1$ we obtain $1\not\in\phi^{-1}(\mathfrak{p})$, that is, $\phi^{-1}(\mathfrak{p})\neq A$. Now suppose for contradiction that there exist $\alpha,\beta\in A$ with $\alpha\beta\in\phi^{-1}(\mathfrak{p})$ but $\alpha,\beta\not\in\phi^{-1}(\mathfrak{p})$; then $\phi(\alpha)\phi(\beta)=\phi(\alpha\beta)\in \mathfrak{p}$ but $\phi(\alpha),\phi(\beta)\not\in \mathfrak{p}$, contradicting the equivalence of [Proposition 9](#prop9). 
+First, $\phi^{-1}(\mathfrak{p})$ is a subgroup under addition, and for any $\alpha\in A$ and $x\in\phi^{-1}(\mathfrak{p})$ we have $\phi(\alpha x)=\phi(\alpha)\phi(x)\in\mathfrak{p}$, so it is an ideal of $A$. Also since $\mathfrak{p}\neq B$ we have $1\not\in\mathfrak{p}$, and from $\phi(1)=1$ we obtain $1\not\in\phi^{-1}(\mathfrak{p})$, that is, $\phi^{-1}(\mathfrak{p})\neq A$. Now suppose for contradiction that there exist $\alpha,\beta\in A$ with $\alpha\beta\in\phi^{-1}(\mathfrak{p})$ but $\alpha,\beta\not\in\phi^{-1}(\mathfrak{p})$; then $\phi(\alpha)\phi(\beta)=\phi(\alpha\beta)\in \mathfrak{p}$ but $\phi(\alpha),\phi(\beta)\not\in \mathfrak{p}$, contradicting the equivalence of [Proposition 8](#prop8). 
 :::
 
-On the other hand, by the second equivalence of [Proposition 9](#prop9), if we regard a commutative ring $A$ as a multiplicative monoid, then for its prime ideal $\mathfrak{p}$ the set $A\setminus\mathfrak{p}$ can be viewed as a submonoid of $A$. Thus the ring of fractions $(A\setminus \mathfrak{p})^{-1}A$ is well defined, and the only elements appearing in the denominators of this ring are those of $A\setminus \mathfrak{p}$. This is defined as follows.
+On the other hand, by the second equivalence of [Proposition 8](#prop8), if we regard a commutative ring $A$ as a multiplicative monoid, then for its prime ideal $\mathfrak{p}$ the set $A\setminus\mathfrak{p}$ can be viewed as a submonoid of $A$. Thus the ring of fractions $(A\setminus \mathfrak{p})^{-1}A$ is well defined, and the only elements appearing in the denominators of this ring are those of $A\setminus \mathfrak{p}$. This is defined as follows.
 
-::: Definition 11
+::: Definition 10
 For a commutative ring $A$ and a prime ideal $\mathfrak{p}$, we define the *localization* of $A$ at $\mathfrak{p}$ as $(A\setminus \mathfrak{p})^{-1}A$, and denote it simply by $A_\mathfrak{p}$.
 :::
 
 ## Nilpotents
 
-::: Definition 12
+::: Definition 11
 An element $\alpha$ of a ring $A$ is *nilpotent* if there exists $n>0$ such that $\alpha^n=0$. If $A$ has no nonzero nilpotent elements, we call $A$ *reduced*.
 :::
 
 By definition, a nonzero nilpotent element is a zerodivisor. Thus every integral domain is a (commutative) reduced ring. Moreover, if we restrict to commutative rings, we obtain the following.
 
-::: Proposition 13
+::: Proposition 12
 For a commutative ring $A$, the set $\mathfrak{N}$ of nilpotent elements is an ideal.
 :::
 ::: Proof
@@ -217,8 +201,8 @@ $$(x+y)^{m+n}=x^{m+n}+\binom{m+n}{1}x^{m+n-1}y+\cdots+\binom{m+n}{n}x^my^n+\bino
 and we can see that all terms on the right-hand side are $0$. From the above, $x+y\in \mathfrak{N}$.
 :::
 
-::: Definition 14
-The ideal $\mathfrak{N}$ of [Proposition 13](#prop13) is called the *nilradical* of $A$.
+::: Definition 13
+The ideal $\mathfrak{N}$ of [Proposition 12](#prop12) is called the *nilradical* of $A$.
 :::
 
 By definition, $A$ being reduced is equivalent to the nilradical of $A$ being $0$. On the other hand, if $x\in \mathfrak{N}$, then from the equation $x^n=0$ and the definition of prime ideal we see that $x\in \mathfrak{p}$ holds for every prime ideal $\mathfrak{p}$. That is, the inclusion
@@ -227,7 +211,7 @@ $$\mathfrak{N}\subseteq\bigcap_\text{\scriptsize$\mathfrak{p}$: prime} \mathfrak
 
 holds.
 
-::: Proposition 15
+::: Proposition 14
 For a commutative ring $A$ and its nilradical $\mathfrak{N}$,
 
 $$\mathfrak{N}=\bigcap_\text{\scriptsize$\mathfrak{p}$: prime} \mathfrak{p}$$
@@ -235,7 +219,7 @@ $$\mathfrak{N}=\bigcap_\text{\scriptsize$\mathfrak{p}$: prime} \mathfrak{p}$$
 holds. 
 :::
 ::: Proof
-If $x\not\in \mathfrak{N}$, it suffices to show that $x\not\in \mathfrak{p}$ for some suitable $\mathfrak{p}$. First consider the ring of fractions $A_x=S^{-1}A$ formed from the multiplicative subset $S=\{1,x,x^2,\ldots\}$. Then the multiplicative identity $x/x$ of $A_x$ must be different from $0/1$, because $x/x=0/1$ is equivalent to $x^{k+1}=0$ for some $k\geq 0$, which contradicts the assumption that $x\not\in\mathfrak{N}$. In particular $A_x\neq 0$. Now from [§Definition of a Ring, ⁋Theorem 10](/en/math/algebraic_structures/rings#thm10), a maximal ideal $\mathfrak{m}$ of $A_x$ must exist, and since every maximal ideal is a prime ideal, $\mathfrak{m}$ is a prime ideal of $A_x$. Applying [Proposition 10](#prop10) to $\epsilon:A \rightarrow A_x$, we see that $\epsilon^{-1}(\mathfrak{m})$ is a prime ideal of $A$, and if $x\in\epsilon^{-1}(\mathfrak{m})$ then $x/1\in \mathfrak{m}$ and $x/1$ is invertible in $A_x$, so we would have $\mathfrak{m}=A_x$, a contradiction. 
+If $x\not\in \mathfrak{N}$, it suffices to show that $x\not\in \mathfrak{p}$ for some suitable $\mathfrak{p}$. First consider the ring of fractions $A_x=S^{-1}A$ formed from the multiplicative subset $S=\{1,x,x^2,\ldots\}$. Then the multiplicative identity $x/x$ of $A_x$ must be different from $0/1$, because $x/x=0/1$ is equivalent to $x^{k+1}=0$ for some $k\geq 0$, which contradicts the assumption that $x\not\in\mathfrak{N}$. In particular $A_x\neq 0$. Now from [§Definition of a Ring, ⁋Theorem 10](/en/math/algebraic_structures/rings#thm10), a maximal ideal $\mathfrak{m}$ of $A_x$ must exist, and since every maximal ideal is a prime ideal, $\mathfrak{m}$ is a prime ideal of $A_x$. Applying [Proposition 9](#prop9) to $\epsilon:A \rightarrow A_x$, we see that $\epsilon^{-1}(\mathfrak{m})$ is a prime ideal of $A$, and if $x\in\epsilon^{-1}(\mathfrak{m})$ then $x/1\in \mathfrak{m}$ and $x/1$ is invertible in $A_x$, so we would have $\mathfrak{m}=A_x$, a contradiction. 
 :::
 
 

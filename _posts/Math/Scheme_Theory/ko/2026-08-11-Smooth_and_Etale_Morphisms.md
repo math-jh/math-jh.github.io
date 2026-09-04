@@ -10,8 +10,6 @@ sidebar:
 
 date: 2026-08-11
 weight: 21
-drift_needed: true
-revising: true
 
 ---
 
@@ -292,7 +290,7 @@ $$\dim_{\kappa(x)}\mathfrak{a}\otimes_B\kappa(x)=\dim_{\kappa(x)}\ker\bar{d}\oti
 
 Affine 위에서는 언제나 이러한 closed embedding을 택할 수 있고 smoothness는 국소적인 성질이므로, 위의 판정은 임의의 $\varphi$에 대하여 국소적으로 적용된다. 한편 $\bar{d}$의 단사성만으로는 smooth가 되지 않는다. 가령 $C=\mathbb{K}[\x,\y]/(\x\y)$에서 $\mathfrak{a}=(\x\y)$는 nonzerodivisor로 생성되어 $\mathfrak{a}/\mathfrak{a}^2$가 rank $1$의 free module이고 $\bar{d}(\overline{\x\y})=\y \dd{\x}+\x \dd{\y}$를 죽이는 원소는 $(\x)\cap(\y)=0$에 속하므로 $\bar{d}$는 단사이다. 그러나 원점에서 $\bar{d}$를 residue field로 내린 것은 영이 되어 그 image가 direct summand를 이루지 못하며, 실제로 $X$는 원점에서 singular하다.
 
-이렇듯 smoothness의 실패는 $\bar{d}$가 단사이지 않은 경우와, 단사이더라도 그 image가 direct summand가 되지 않는 경우로 나뉜다. 전자는 $H_1(\operatorname{NL}_{C/A})=\ker\bar{d}$가 기록하고, 후자는 $\Omega_{C/A}$의 projectivity가 실패하는 것으로 나타난다. 두 조건을 함께 담도록 $\Omega$를 왼쪽으로 연장한 것이 naive cotangent complex이며, 이를 모든 degree로 확장한 것이 cotangent complex이다.
+이렇듯 conormal sequence의 왼쪽 끝에서 exactness가 실패하는 정도가 smoothness의 실패를 재는 양이며, 이를 담도록 $\Omega$를 왼쪽으로 연장한 것이 cotangent complex이다.
 
 ## 비분기 사상
 

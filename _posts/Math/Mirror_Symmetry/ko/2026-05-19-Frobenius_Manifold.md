@@ -10,8 +10,6 @@ sidebar:
 
 date: 2026-05-19
 weight: 3
-revising: true
-drift_needed: true
 
 ---
 
@@ -224,7 +222,7 @@ $$\partial_{t^\alpha} \circ \partial_{t^\beta} = \sum_{\gamma, \delta} \frac{\pa
 ::: 명제 7 (Witten-Dijkgraaf-Verlinde-Verlinde)
 [명제 6](#prop6)의 potential $F$는 모든 $\alpha, \beta, \gamma, \delta$에 대해 다음의 방정식
 
-$$\sum_{\nu, \rho} \frac{\partial^3 F}{\partial t^\alpha \partial t^\beta \partial t^\nu} \eta^{\nu\rho} \frac{\partial^3 F}{\partial t^\rho \partial t^\gamma \partial t^\delta} = \sum_{\nu, \rho} \frac{\partial^3 F}{\partial t^\alpha \partial t^\gamma \partial t^\nu} \eta^{\nu\rho} \frac{\partial^3 F}{\partial t^\rho \partial t^\beta \partial t^\delta}$$
+$$\sum_{e, f} \frac{\partial^3 F}{\partial t^\alpha \partial t^\beta \partial t^e} \eta^{ef} \frac{\partial^3 F}{\partial t^f \partial t^\gamma \partial t^\delta} = \sum_{e, f} \frac{\partial^3 F}{\partial t^\alpha \partial t^\gamma \partial t^e} \eta^{ef} \frac{\partial^3 F}{\partial t^f \partial t^\beta \partial t^\delta}$$
 
 을 만족한다.
 :::
@@ -236,11 +234,11 @@ $$\partial_{t^\alpha} \circ \partial_{t^\beta} = \sum_\gamma C_{\alpha\beta}{}^\
 
 이고, associativity는
 
-$$\sum_\nu C_{\alpha\beta}{}^\nu C_{\nu\gamma}{}^\delta = \sum_\nu C_{\alpha\gamma}{}^\nu C_{\nu\beta}{}^\delta$$
+$$\sum_e C_{\alpha\beta}{}^e C_{e\gamma}{}^\delta = \sum_e C_{\alpha\gamma}{}^e C_{e\beta}{}^\delta$$
 
 로 표현된다. 여기에 [명제 6](#prop6)의 결과 $c_{\alpha\beta\gamma} = \partial_{t^\alpha} \partial_{t^\beta} \partial_{t^\gamma} F$를 대입하면
 
-$$\sum_{\nu, \rho} \frac{\partial^3 F}{\partial t^\alpha \partial t^\beta \partial t^\nu} \eta^{\nu\rho} \frac{\partial^3 F}{\partial t^\rho \partial t^\gamma \partial t^\delta} = \sum_{\nu, \rho} \frac{\partial^3 F}{\partial t^\alpha \partial t^\gamma \partial t^\nu} \eta^{\nu\rho} \frac{\partial^3 F}{\partial t^\rho \partial t^\beta \partial t^\delta}$$
+$$\sum_{e, f} \frac{\partial^3 F}{\partial t^\alpha \partial t^\beta \partial t^e} \eta^{ef} \frac{\partial^3 F}{\partial t^f \partial t^\gamma \partial t^\delta} = \sum_{e, f} \frac{\partial^3 F}{\partial t^\alpha \partial t^\gamma \partial t^e} \eta^{ef} \frac{\partial^3 F}{\partial t^f \partial t^\beta \partial t^\delta}$$
 
 를 얻는다. 역으로 이 PDE 시스템을 만족하는 $F$로부터 정의된 곱셈은 자동으로 associative하므로 WDVV equation은 Frobenius manifold의 associativity와 정확히 동치인 조건이 된다.
 :::
@@ -274,9 +272,9 @@ Potentiality는 거의 자명하게 얻을 수 있으며, $i,j,k$ 방향으로 �
 
 $$F=\frac{1}{6}\sum_i (t^i)^3$$
 
-으로 두면 되는 것을 확인할 수 있다. $\circ$가 associative이므로, WDVV equation은 자명하게 성립할 것이나, 굳이 계산해본다면 $\eta^{\nu\rho} = \delta_{\nu\rho}$을 사용하면 structure constant가 $C_{\alpha\beta}{}^\nu = \delta_{\alpha\beta}\delta_{\beta\nu}$가 되어
+으로 두면 되는 것을 확인할 수 있다. $\circ$가 associative이므로, WDVV equation은 자명하게 성립할 것이나, 굳이 계산해본다면 $\eta^{ef} = \delta_{ef}$을 사용하면 structure constant가 $C_{\alpha\beta}{}^e = \delta_{\alpha\beta}\delta_{\beta e}$가 되어
 
-$$\sum_\nu C_{\alpha\beta}{}^\nu C_{\nu\gamma}{}^\delta = \delta_{\alpha\beta}\delta_{\alpha\gamma}\delta_{\gamma\delta} = \delta_{\alpha\beta\gamma\delta} = \delta_{\alpha\gamma}\delta_{\alpha\beta}\delta_{\beta\delta} = \sum_\nu C_{\alpha\gamma}{}^\nu C_{\nu\beta}{}^\delta$$
+$$\sum_e C_{\alpha\beta}{}^e C_{e\gamma}{}^\delta = \delta_{\alpha\beta}\delta_{\alpha\gamma}\delta_{\gamma\delta} = \delta_{\alpha\beta\gamma\delta} = \delta_{\alpha\gamma}\delta_{\alpha\beta}\delta_{\beta\delta} = \sum_e C_{\alpha\gamma}{}^e C_{e\beta}{}^\delta$$
 
 로 자명하게 성립하는 것을 다시 확인할 수 있다. 
 :::
@@ -287,14 +285,14 @@ $$\sum_\nu C_{\alpha\beta}{}^\nu C_{\nu\gamma}{}^\delta = \delta_{\alpha\beta}\d
 
 $$M = H^\ast(X, \mathbb{C})$$
 
-로 잡고, cohomology basis $\{\sigma^\alpha\}$의 dual로 formal coordinate $t = \sum_\alpha t^\alpha \sigma^\alpha$를 도입하자. $M$이 그 자체로 벡터공간이므로 각 점에서의 tangent space $T_tM$은 $H^\ast(X, \mathbb{C})$와 canonically isomorphic하다. 따라서 여기에 Frobenius manifold 구조를 주는 것은 $T_tM\cong H^\ast(X, \mathbb{C})$ 위에 Frobenius product $\circ_t$를 주는 것과 같고, (당연히) 이를 big quantum cohomology의 곱셈 $\circ_t$, 즉 GW potential $F(t)$의 삼계도함수가 정의하는 곱셈으로 택할 것이다. ([\[사교기하학\] §양자 코호몰로지, ⁋정의 12](/ko/math/symplectic_geometry/quantum_cohomology#def12)) 다만 이 $F$는 본래 Novikov ring $\Lambda$ 계수의 형식적 멱급수이므로, 아래에서는 Novikov variable을 $1$로 놓고 그렇게 얻어진 급수가 원점의 어떤 근방에서 수렴한다고 가정한다. 수렴이 알려져 있지 않은 일반적인 경우라면, 아래 명제는 계수환을 $\Lambda$로 둔 채 원점에서의 formal Frobenius manifold 구조를 주장하는 것, 즉 모든 등식이 형식적 멱급수의 수준에서 성립한다는 것으로 읽으면 된다. 다음 명제는 이 데이터가 실제로 Frobenius manifold를 이룬다는 것을 보여준다.
+로 잡고, cohomology basis $\{\sigma^\alpha\}$의 dual로 formal coordinate $t = \sum_\alpha t^\alpha \sigma^\alpha$를 도입하자. $M$이 그 자체로 벡터공간이므로 각 점에서의 tangent space $T_tM$은 $H^\ast(X, \mathbb{C})$와 canonically isomorphic하다. 따라서 여기에 Frobenius manifold 구조를 주는 것은 $T_tM\cong H^\ast(X, \mathbb{C})$ 위에 Frobenius product $\circ_t$를 주는 것과 같고, (당연히) 이를 big quantum cohomology의 곱셈 $\circ_t$, 즉 GW potential $F(t)$의 삼계도함수가 정의하는 곱셈으로 택할 것이다. ([\[사교기하학\] §양자 코호몰로지, ⁋정의 12](/ko/math/symplectic_geometry/quantum_cohomology#def12)) 다음 명제는 이 데이터가 실제로 Frobenius manifold를 이룬다는 것을 보여준다.
 
 ::: 명제 9
 $H^{\mathrm{odd}}(X, \mathbb{C}) = 0$인 compact Kähler manifold $X$에 대하여, $M = H^\ast(X, \mathbb{C})$ 위에 big quantum product $\circ_t$ ([\[사교기하학\] §양자 코호몰로지, ⁋정의 12](/ko/math/symplectic_geometry/quantum_cohomology#def12)), Poincaré pairing $\eta$, 항등원 $e = 1 \in H^0(X)$, 그리고 Euler vector field
 
 $$E = \sum_\alpha \Bigl(1 - \frac{1}{2}\deg \sigma^\alpha\Bigr) t^\alpha \partial_{t^\alpha} + \sum_\alpha r^\alpha \partial_{t^\alpha}, \qquad c_1(X) = \sum_\alpha r^\alpha \sigma^\alpha$$
 
-를 두면 $(M, \eta, \circ_t, e, E)$는 원점의 근방에서 Frobenius manifold이며, 이때 [정의 5](#def5)의 상수 $d$는 $\dim_\mathbb{C} X$이다.
+를 두면 $(M, \eta, \circ_t, e, E)$는 Frobenius manifold이다 ([정의 5](#def5)).
 :::
 
 ::: 증명
@@ -303,13 +301,9 @@ $$E = \sum_\alpha \Bigl(1 - \frac{1}{2}\deg \sigma^\alpha\Bigr) t^\alpha \partia
 1. 우선 Poincaré pairing $\eta_{\alpha\beta} = \int_X \sigma_\alpha \smile \sigma_\beta$는 linear coordinate $t^\alpha$에서 상수이므로 그 Levi-Civita connection이 flat이고 $t^\alpha$가 flat coordinate을 이룬다. 
 2. 두 번째 조건의 경우, 곱셈 $\circ_t$는 [\[사교기하학\] §양자 코호몰로지, ⁋정리 6](/ko/math/symplectic_geometry/quantum_cohomology#thm6)에 의해 commutative associative이며 $t$에 대해 smooth이다.
 3. 이 곱셈의 항등원은 $1 \in H^0(X)$이며, 이는 flat coordinate에서 constant section이므로 $\nabla e = 0$이다. 
-4. Euler vector field에 대한 조건은 [\[사교기하학\] §양자 코호몰로지, ⁋정의 2](/ko/math/symplectic_geometry/quantum_cohomology#def2)의 grading, 곧 GW invariant의 dimension 조건이 $F$의 quasi-homogeneity로 옮겨진다는 사실에서 나온다. $w_\alpha := 1 - \deg\sigma^\alpha/2$로 두면 $E = \sum_\alpha w_\alpha t^\alpha \partial_{t^\alpha} + \sum_\alpha r^\alpha \partial_{t^\alpha}$이고, [\[사교기하학\] §Gromov-Witten 불변량, ⁋정의 1](/ko/math/symplectic_geometry/gromov_witten#def1)의 dimension 조건에 의해 genus $0$, $n$-point, degree $\beta$ invariant는 $\sum_i \deg \sigma^{\alpha_i} = 2\dim_\mathbb{C} X + 2c_1(X)\cdot\beta + 2(n-3)$인 경우에만 살아남으므로, $F$의 그러한 항에 붙은 monomial의 weight 합은 $\sum_i w_{\alpha_i} = 3 - \dim_\mathbb{C} X - c_1(X)\cdot\beta$이다. 여기에 $E$의 상수항이 $c_1(X)$를 marked point 하나로 더 삽입하는 것이고 [\[사교기하학\] §Gromov-Witten 불변량, ⁋명제 4](/ko/math/symplectic_geometry/gromov_witten#prop4)의 divisor equation에 의해 그 삽입이 invariant를 $c_1(X)\cdot\beta$배 하므로, 두 기여를 합하면 $d = \dim_\mathbb{C} X$와 $t$에 대한 이차 이하의 다항식 $Q$에 대해
-
-    $$E(F) = (3-d)F + Q$$
-
-    를 얻는다. 이제 $[\partial_{t^\alpha}, E] = w_\alpha \partial_{t^\alpha}$이므로 양변을 $t^\alpha, t^\beta, t^\gamma$로 미분하면 $Q$가 죽고 $F$의 삼계도함수 $c_{\alpha\beta\gamma}$에 대해 $E(c_{\alpha\beta\gamma}) = (3 - d - w_\alpha - w_\beta - w_\gamma)c_{\alpha\beta\gamma}$가 된다. 한편 $\eta_{\alpha\beta}$는 $\deg\sigma^\alpha + \deg\sigma^\beta = 2d$일 때에만 $0$이 아니어서 그러한 index에서 $w_\alpha + w_\beta = 2-d$이고, $\mathcal{L}_E(\dd{t}^\alpha) = w_\alpha \dd{t}^\alpha$이므로 $\mathcal{L}_E(\eta) = (2-d)\eta$를 얻는다. 곱셈을 $\circ = \sum C_{\alpha\beta}{}^\gamma \dd{t}^\alpha \otimes \dd{t}^\beta \otimes \partial_{t^\gamma}$로 쓰면 $\eta^{\delta\gamma} \neq 0$인 index가 $w_\delta = 2 - d - w_\gamma$를 만족하므로 $E(C_{\alpha\beta}{}^\gamma) = (1 - w_\alpha - w_\beta + w_\gamma) C_{\alpha\beta}{}^\gamma$이고, 여기에 $\mathcal{L}_E(\dd{t}^\alpha)$와 $\mathcal{L}_E(\partial_{t^\gamma}) = -w_\gamma \partial_{t^\gamma}$가 주는 $w_\alpha + w_\beta - w_\gamma$를 더하면 총 weight가 $1$이 되어 $\mathcal{L}_E(\circ) = \circ$이다. 끝으로 $E$는 flat coordinate에서 $t$의 일차식이므로 $\nabla^2 E = 0$인 affine vector field이다.
-5. 한편 [\[사교기하학\] §양자 코호몰로지, ⁋정의 12](/ko/math/symplectic_geometry/quantum_cohomology#def12)에 의해 structure constant는 $c_{\alpha\beta\gamma}(t) = \eta(\partial_{t^\alpha} \circ_t \partial_{t^\beta}, \partial_{t^\gamma}) = \partial_{t^\alpha}\partial_{t^\beta}\partial_{t^\gamma} F$이므로, 이것이 세 index에 대해 대칭이라는 사실로부터 $\eta(X \circ Y, Z) = \eta(X, Y \circ Z)$를 얻는다.
-6. 비슷하게 $\nabla c$가 네 index에 대해 대칭이라는 것을 확인할 수 있으며, 이 potentiality 아래에서 associativity는 [명제 7](#prop7)의 WDVV equation과 동치이며, A-model 측에서는 GW invariant의 splitting axiom으로 보장된다. 
+4. 한편 [\[사교기하학\] §양자 코호몰로지, ⁋정의 12](/ko/math/symplectic_geometry/quantum_cohomology#def12)에 의해 structure constant는 $c_{\alpha\beta\gamma}(t) = \eta(\partial_{t^\alpha} \circ_t \partial_{t^\beta}, \partial_{t^\gamma}) = \partial_{t^\alpha}\partial_{t^\beta}\partial_{t^\gamma} F$이므로, 이것이 세 index에 대해 대칭이라는 사실로부터 $\eta(X \circ Y, Z) = \eta(X, Y \circ Z)$를 얻는다.
+5. 비슷하게 $\nabla c$가 네 index에 대해 대칭이라는 것을 확인할 수 있으며, 이 potentiality 아래에서 associativity는 [명제 7](#prop7)의 WDVV equation과 동치이며, A-model 측에서는 GW invariant의 splitting axiom으로 보장된다. 
+6. 마지막으로 [\[사교기하학\] §양자 코호몰로지, ⁋정의 2](/ko/math/symplectic_geometry/quantum_cohomology#def2)의 grading이 위 본문에서 본 대로 $\mathcal{L}_E(\circ) = \circ$, $\mathcal{L}_E(\eta) = (2-d)\eta$로 번역되고, 주어진 $E$가 $\nabla^2 E = 0$인 affine vector field로서 이를 만족한다.
 :::
 
 한편 우리의 mirror symmetry statement
@@ -325,7 +319,7 @@ $$\Jac(W_q)\cong QH^\ast(X)$$
 
 $$F(t^0, t^1) = \frac{1}{2}(t^0)^2 t^1 + e^{t^1}$$
 
-로 주어진다. ([\[사교기하학\] §양자 코호몰로지, ⁋정의 12](/ko/math/symplectic_geometry/quantum_cohomology#def12)) 여기서 첫째 항은 classical cup product의 기여이고, 둘째 항은 [§거울대칭 개요, ⁋예시 5](/ko/math/mirror_symmetry/overview#ex5)에서의 degree-$1$ rational curve의 기여 $\langle H, H, H\rangle_{0,3,1} = 1$이 [\[사교기하학\] §Gromov-Witten 불변량, ⁋명제 4](/ko/math/symplectic_geometry/gromov_witten#prop4)의 divisor equation을 따라 $H^2$ 방향 좌표 $t^1$에 대해 지수함수로 누적된 것으로 생각할 수 있다. Metric은 이미 [예시 4](#ex4)에서 계산하였으며, 위의 식을 따라 $F$의 삼계도함수들을 계산하면
+로 주어진다. ([\[사교기하학\] §양자 코호몰로지, ⁋정의 12](/ko/math/symplectic_geometry/quantum_cohomology#def12)) 여기서 첫째 항은 classical cup product의 기여이고, 둘째 항은 [§거울대칭 개요, ⁋예시 5](/ko/math/mirror_symmetry/overview#ex5)에서의 degree-$1$ rational curve의 기여 $\langle H, H, H\rangle_{0,3,1} = 1$이 $H^2$ 방향 좌표 $t^1$에 대해 (Euler vector field를 타고) 지수함수로 누적된 것으로 생각할 수 있다. Metric은 이미 [예시 4](#ex4)에서 계산하였으며, 위의 식을 따라 $F$의 삼계도함수들을 계산하면
 
 $$\partial_{t^0}^3 F = 0,\qquad \partial_{t^0}^2\partial_{t^1} F = 1,\qquad \partial_{t^0}\partial_{t^1}^2 F = 0,\qquad \partial_{t^1}^3 F = e^{t^1}$$
 

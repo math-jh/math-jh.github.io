@@ -1,7 +1,7 @@
 ---
 title: "여접공간"
 description: "매끄러운 다양체의 여접공간을 정의하고, 접공간의 이중 공간으로서의 유한차원성을 보인다. 테일러 근사를 활용하여 여접공간의 차원이 다양체의 차원과 같음을 증명한다."
-excerpt: "여접공간과 접공간의 차원"
+excerpt: "접벡터와 접공간"
 
 categories: [Math / Manifolds]
 permalink: /ko/math/manifolds/cotangent_space
@@ -10,8 +10,6 @@ sidebar:
 
 date: 2022-12-09
 weight: 4
-revising: true
-drift_needed: true
 
 ---
 
@@ -29,11 +27,11 @@ $$\mathcal{C}^\infty_p\supset\mathfrak{m}_p\supset\mathfrak{m}_p^2\supset\cdots$
 Manifold $M$과 임의의 한 점 $p\in M$에 대하여, $T_pM\cong(\mathfrak{m}_p/\mathfrak{m}_p^2)^\ast$가 성립한다. 
 :::
 ::: 증명
-우선 임의의 $v\in T_pM$가 주어졌다 하자. 이를 부분집합 $\mathfrak{m}_p$으로 restrict하면 $v\vert_{\mathfrak{m}_p}\in\Hom_\mathbb{R}(\mathfrak{m}_p,\mathbb{R})$이 성립한다. 이제 $v\vert_{\mathfrak{m}_p}$이 linear map $\mathfrak{m}_p/\mathfrak{m}_p^2\rightarrow\mathbb{R}$을 잘 정의한다는 것을 보이려면 $\mathfrak{m}_p^2\subseteq\ker (v\vert_{\mathfrak{m}_p})$임을 보여야 한다. Ideal의 곱의 정의로부터 $\mathfrak{m}_p^2$의 임의의 원소는 $\mathbf{g}_k,\mathbf{h}_k\in\mathfrak{m}_p$들에 대한 유한합 $\sum_k\mathbf{g}_k\mathbf{h}_k$의 꼴로 적힌다. 그런데 $\mathbf{g}_k(p)=\mathbf{h}_k(p)=0$이므로
+우선 임의의 $v\in T_pM$가 주어졌다 하자. 이를 부분집합 $\mathfrak{m}_p$으로 restrict하면 $v\vert_{\mathfrak{m}_p}\in\Hom_\mathbb{R}(\mathfrak{m}_p,\mathbb{R})$이 성립한다. 이제 $v\vert_{\mathfrak{m}_p}$이 linear map $\mathfrak{m}_p/\mathfrak{m}_p^2\rightarrow\mathbb{R}$을 잘 정의한다는 것을 보이려면 $\mathfrak{m}_p^2\subseteq\ker (v\vert_{\mathfrak{m}_p})$임을 보여야 한다. 적당한 index set $I$에 대하여, $\mathfrak{m}_p$가 $\mathbf{f}_i$들에 의해 생성되는 ideal이라 하자. 그럼 $\mathfrak{m}_p^2$은 $\mathbf{f}_i\mathbf{f}_j$들에 의하여 생성되는 ideal이다. 그런데
 
-$$v(\mathbf{g}_k\mathbf{h}_k)=\mathbf{g}_k(p)v(\mathbf{h}_k)+\mathbf{h}_k(p)v(\mathbf{g}_k)=0$$
+$$v(\mathbf{f}_i\mathbf{f}_j)=\mathbf{f}_i(p)v(\mathbf{f}_j)+\mathbf{f}_j(p)v(\mathbf{f}_i)=0$$
 
-이고, $v$가 $\mathbb{R}$-linear이므로 이들의 유한합 또한 $0$으로 보내진다. 따라서 $\mathfrak{m}_p^2\subseteq\ker(v\vert_{\mathfrak{m}_p})$이며, 임의의 $v\in T_pM$마다 적당한 $(\mathfrak{m}_p/\mathfrak{m}_p^2)^\ast$의 원소를 대응시킬 수 있다. 이 대응이 $\mathbb{R}$-linear map이라는 것은 자명하다.
+이므로, $v$는 $\mathfrak{m}_p^2$의 임의의 generator를 항상 0으로 보내고, $\mathfrak{m}_p^2\subseteq\ker(v\vert_{\mathfrak{m}_p})$이며, 따라서 임의의 $v\in T_pM$마다 적당한 $(\mathfrak{m}_p/\mathfrak{m}_p^2)^\ast$의 원소를 대응시킬 수 있다. 이 대응이 $\mathbb{R}$-linear map이라는 것은 자명하다.
 
 반대로 임의의 $L\in(\mathfrak{m}_p/\mathfrak{m}_p^2)^\ast$이 주어졌다 하고, 이를 이용해 tangent vector $v_L$을 하나 만들자. Tangent vector는 $C_p^\infty$에서 $\mathbb{R}$로의 linear map으로서, $v_L$을 만든다는 것은 임의의 $\mathbf{f}\in \mathcal{C}^\infty_p$에 대하여 $v_L(\mathbf{f})$의 값을 정해주는 것과 같다. $\mathbf{f(p)}$를 함숫값 $f(p)$를 갖는 상수함수라 하면, $\mathbf{f}-\mathbf{f(p)}$는 $\mathfrak{m}_p$의 원소이고, 따라서 
 
@@ -49,7 +47,7 @@ $$\begin{aligned}
         \end{aligned}
 $$
 
-을 계산할 수 있다. $L\mapsto v_L$ 또한 linear map이 된다는 것을 쉽게 보일 수 있으며, 뿐만 아니라 이 대응이 앞서 정의한 $T_pM$에서 $(\mathfrak{m}_p/\mathfrak{m}_p^2)^\ast$로의 linear map의 역함수가 된다는 것을 확인할 수 있다. 후자의 확인에서는 $v\vert_{\mathfrak{m}_p}$가 유도하는 $L$로부터 $v$를 되찾을 때 $v(\mathbf{f})=v(\mathbf{f}-\mathbf{f(p)})+v(\mathbf{f(p)})$의 마지막 항이 사라져야 하는데, 이는 [§접공간, ⁋보조정리 5](/ko/math/manifolds/tangent_space#lem5)로부터 얻어진다.
+을 계산할 수 있다. $L\mapsto v_L$ 또한 linear map이 된다는 것을 쉽게 보일 수 있으며, 뿐만 아니라 이 대응이 앞서 정의한 $T_pM$에서 $(\mathfrak{m}_p/\mathfrak{m}_p^2)^\ast$로의 linear map의 역함수가 된다는 것을 확인할 수 있다.
 :::
 
 따라서 $\mathfrak{m}_p/\mathfrak{m}_p^2$이 유한차원이라면 $T_pM$도 유한차원이며, 이 때
@@ -122,7 +120,7 @@ $$\left(\frac{\partial}{\partial x^i}\bigg\vert_p\right)f=\frac{\partial(f\circ 
 
 $$v=\sum_{i=1}^m v(x^i)\frac{\partial}{\partial x^i}\bigg\vert_p$$
 
-으로 주어진다. 이 식이 맞는지를 체크해 보기 위해서는 임의의 $\mathbf{f}$에다 위 식의 양 변에 있는 tangent vector들을 각각 적용해본 후 그 결과를 비교하면 된다. 혹은 더 간단하게, [정리 2](#thm2)의 증명이 준 것은 $\mathbf{f}-\mathbf{f(p)}$가 $\mathfrak{m}_p^2$을 법으로 $\mathbf{x}^i$들의 linear combination이라는 것이고, 위 식의 양 변에 있는 tangent vector는 [§접공간, ⁋보조정리 5](/ko/math/manifolds/tangent_space#lem5)에 의하여 상수함수를 $0$으로 보내며 [보조정리 1](#lem1)의 증명에 의하여 $\mathfrak{m}_p^2$의 원소 또한 $0$으로 보내므로, $\mathbf{x}^j$에 대해서만 적용해 봐도 충분할 것이다. 우변을 $\mathbf{x}^j$에 적용해보면,
+으로 주어진다. 이 식이 맞는지를 체크해 보기 위해서는 임의의 $\mathbf{f}$에다 위 식의 양 변에 있는 tangent vector들을 각각 적용해본 후 그 결과를 비교하면 된다. 혹은 더 간단하게, $\mathbf{f}$는 $\mathbf{x}^i+\mathfrak{m}_p^2$들의 linear combination으로 나타나니, $\mathbf{x}^j$에 대해서만 적용해 봐도 충분할 것이다. 우변을 $\mathbf{x}^j$에 적용해보면,
 
 $$\sum_{i=1}^m v(x^i)\frac{\partial}{\partial x^i}\bigg\vert_p x^j=\sum_{i=1}^m v(x^i)\delta_{ij}=v(x^j)$$
 

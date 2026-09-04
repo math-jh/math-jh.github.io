@@ -1,6 +1,6 @@
 ---
 title: "Galois Extensions"
-description: "This post covers the definition and properties of Galois extensions. It defines the conjugacy relation among algebraic extensions, and examines the relationship between conjugate extensions and conjugate elements. It establishes the equivalent conditions for a quasi-Galois extension, and characterizes Galois extensions through minimal polynomials."
+description: "This post covers the definition and properties of Galois extensions. It defines an equivalence relation among algebraic extensions of a field, and examines the relationship between conjugate extensions and conjugate elements. Through propositions and proofs, it establishes equivalent conditions using automorphisms and minimal polynomials."
 excerpt: "Definition of Galois extensions satisfying normality and separability"
 
 categories: [Math / Field Theory]
@@ -10,7 +10,6 @@ sidebar:
 
 date: 2025-05-29
 weight: 8
-revising: true
 translated_at: 2026-06-11T06:00:01+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-06-11T06:00:01+00:00
@@ -18,17 +17,17 @@ last_polished_at: 2026-06-11T06:00:01+00:00
 We are now ready to define what a Galois extension is, but before that we examine the following proposition.
 
 ::: Proposition 1
-Consider an algebraic extension $\mathbb{L}/\mathbb{K}$ and an injective $\mathbb{K}$-homomorphism $u:\mathbb{L}\rightarrow \overline{\mathbb{K}}$.
+Consider an algebraic extension $\mathbb{L}$ and an inclusion $u:\mathbb{L}\rightarrow \overline{\mathbb{K}}$.
 
 1. If $u(\mathbb{L})\subseteq \mathbb{L}$, then $u$ is a $\mathbb{K}$-automorphism of $\mathbb{L}$.
 2. There exists a $\mathbb{K}$-automorphism of $\overline{\mathbb{K}}$ extending $u$.
 :::
 ::: Proof
-1. For any $x\in \mathbb{L}$, let $f$ be the minimal polynomial of $x$. Let $\Phi$ be the set of roots of $f$ in $\mathbb{L}$; then $\Phi$ is finite. Moreover, if $\alpha\in\Phi$ then
+1. For any $x\in E$, let $f$ be the minimal polynomial of $x$. Let $\Phi$ be the set of roots of $f$ in $\mathbb{L}$; then $\Phi$ is finite. Moreover, if $\alpha\in\Phi$ then
 
     $$0=u(0)=u(f(\alpha))=f(u(\alpha))$$
     
-    so $u(\Phi)\subseteq\Phi$ holds. But $u$ is not the zero map, hence it is injective ([§Fields, ⁋Proposition 2](/en/math/field_theory/fields#prop2)), and therefore $u$ is a bijection from $\Phi$ to $\Phi$. Thus $x\in\Phi=u(\Phi)\subseteq u(\mathbb{L})$, and from this we obtain $u(\mathbb{L})=\mathbb{L}$.
+    so $u(\Phi)\subseteq\Phi$ holds. But $u$ is not the zero map, hence it is injective ([§Fields, ⁋Proposition 2](/en/math/field_theory/fields#prop2)), and therefore $u$ is a bijection from $\Phi$ to $\Phi$. Thus $x\in\Phi=u(\Phi)\subseteq u(E)$, and from this we obtain $u(E)=E$.
 
 2. Since $\overline{\mathbb{K}}$ is an algebraic closure of both $u(\mathbb{L})$ and $\mathbb{L}$, the desired result follows from the universal property of [§Algebraic Closures, ⁋Theorem 5](/en/math/field_theory/algebraically_closed_extensions#thm5).
 :::
@@ -36,10 +35,10 @@ Consider an algebraic extension $\mathbb{L}/\mathbb{K}$ and an injective $\mathb
 Our goal is to examine all algebraic extensions of a fixed field $\mathbb{K}$, or more precisely, to consider equivalence classes of algebraic extensions.
 
 ::: Definition 2
-For two algebraic extensions $\mathbb{L}$, $\mathbb{M}$ of a field $\mathbb{K}$ inside its algebraic closure $\overline{\mathbb{K}}$, we say they are *conjugate* if there exists a $\mathbb{K}$-automorphism $u:\overline{\mathbb{K}}\rightarrow \overline{\mathbb{K}}$ such that $u(\mathbb{L})=\mathbb{M}$. In particular, two elements $x,y\in\overline{\mathbb{K}}$ are *conjugate* if there exists a $\mathbb{K}$-automorphism $u: \overline{\mathbb{K}}\rightarrow \overline{\mathbb{K}}$ with $u(x)=y$.
+For two algebraic extensions $\mathbb{L}$, $\mathbb{M}$ of a field $\mathbb{K}$, we say they are *conjugate* if there exists a $\mathbb{K}$-automorphism $u:\overline{\mathbb{K}}\rightarrow \overline{\mathbb{K}}$ such that $u(\mathbb{L})=\mathbb{M}$. In particular, two elements $x,y\in\overline{\mathbb{K}}$ are *conjugate* if there exists a $\mathbb{K}$-automorphism $u: \overline{\mathbb{K}}\rightarrow \overline{\mathbb{K}}$ with $u(x)=y$.
 :::
 
-By [Proposition 1](#prop1), if $\mathbb{M}$ and $\mathbb{L}$ are $\mathbb{K}$-isomorphic extensions, then they are conjugate extensions, and by definition conjugate extensions are isomorphic. Moreover, the following holds.
+By [Proposition 1](#prop1), if $\mathbb{M}$ and $\mathbb{L}$ are isomorphic extensions of $\mathbb{K}$, then they are conjugate extensions, and by definition conjugate extensions are isomorphic. Moreover, the following holds.
 
 ::: Proposition 3
 Fix two elements $x,y$ of $\overline{\mathbb{K}}$. The following are equivalent.
@@ -49,7 +48,7 @@ Fix two elements $x,y$ of $\overline{\mathbb{K}}$. The following are equivalent.
 3. $x$ and $y$ have the same minimal polynomial.
 :::
 ::: Proof
-First assume the first condition, and take a $\mathbb{K}$-automorphism $u$ of $\overline{\mathbb{K}}$ with $u(x)=y$. Let $f$ be the minimal polynomial of $x$; then
+First assume the first condition. Let $f$ be the minimal polynomial of $x$; then
 
 $$f(y)=f(u(x))=u(f(x))=u(0)=0$$
 
@@ -59,10 +58,10 @@ On the other hand, if $x$ and $y$ have the same minimal polynomial $f$, then by 
 
 $$\mathbb{K}(x)\cong \mathbb{K}[\x]/(f)\cong \mathbb{K}(y)$$
 
-and the two isomorphisms out of $\mathbb{K}[\x]/(f)$ send the class of $\x$ to $x$ and to $y$ respectively, so composing them yields a $\mathbb{K}$-isomorphism $\mathbb{K}(x)\rightarrow \mathbb{K}(y)$ sending $x$ to $y$. That is, the third condition implies the second. Finally, assuming the second condition, [Proposition 1](#prop1) yields a $\mathbb{K}$-isomorphism $u:\overline{\mathbb{K}}\rightarrow\overline{\mathbb{K}}$ extending $v$, and therefore $x$ and $y$ are conjugate.
+so it is obvious that the third condition implies the second. Finally, assuming the second condition, [Proposition 1](#prop1) yields a $\mathbb{K}$-isomorphism $u:\overline{\mathbb{K}}\rightarrow\overline{\mathbb{K}}$ extending $v$, and therefore $x$ and $y$ are conjugate.
 :::
 
-From this, if an algebraic element $x\in \overline{\mathbb{K}}$ of degree $n$ is given, we know that elements conjugate to $x$ must be roots of the minimal polynomial of $x$, and hence there are at most $n$ such elements. Moreover, having *fewer* than $n$ elements conjugate to $x$ is exactly equivalent to the minimal polynomial of $x$ not being separable. That is, denoting the group of $\mathbb{K}$-automorphisms of $\overline{\mathbb{K}}$ by $\Aut_\mathbb{K}(\overline{\mathbb{K}})$, and letting $\Aut_\mathbb{K}\overline{\mathbb{K}}$ act on $\overline{\mathbb{K}}$ in the obvious way, the set of elements fixed by this action $\overline{\mathbb{K}}^{\Aut_{\mathbb{K}}(\overline{\mathbb{K}})}$ is exactly $\mathbb{K}^{p^{-\infty}}$. Here $p$ is the characteristic exponent of $\mathbb{K}$, so that when $\ch(\mathbb{K})=0$ the above set is $\mathbb{K}$ itself.
+From this, if an algebraic element $x\in \overline{\mathbb{K}}$ of degree $n$ is given, we know that elements conjugate to $x$ must be roots of the minimal polynomial of $x$, and hence there are at most $n$ such elements. Moreover, having *fewer* than $n$ elements conjugate to $x$ is exactly equivalent to the minimal polynomial of $x$ not being separable. That is, denoting the group of $\mathbb{K}$-automorphisms of $\overline{\mathbb{K}}$ by $\Aut_\mathbb{K}(\overline{\mathbb{K}})$, and letting $\Aut_\mathbb{K}\overline{\mathbb{K}}$ act on $\overline{\mathbb{K}}$ in the obvious way, the set of elements fixed by this action $\overline{\mathbb{K}}^{\Aut_{\mathbb{K}}(\overline{\mathbb{K}})}$ is exactly $\mathbb{K}^{p^{-\infty}}$.
 
 ## Galois Extensions
 
@@ -70,7 +69,7 @@ From this, if an algebraic element $x\in \overline{\mathbb{K}}$ of degree $n$ is
 A field extension $\mathbb{L}/\mathbb{K}$ is called a *quasi-Galois extension* or *normal extension* if $\mathbb{L}/\mathbb{K}$ is algebraic and any irreducible polynomial $f\in \mathbb{K}[\x]$ having a root in $\mathbb{L}$ splits into a product of linear factors in $\mathbb{L}[\x]$.
 :::
 
-For a family $(f_i)$ of non-constant polynomials in $\mathbb{K}[\x]$, an extension of $\mathbb{K}$ in which every $f_i$ splits into a product of linear factors and which is generated by their roots is called the *splitting field* of the family. Thus a quasi-Galois extension is essentially nothing but another name for a splitting field.
+Thus a quasi-Galois extension is essentially nothing but another name for a splitting field.
 
 ::: Proposition 5
 For an algebraic extension $\mathbb{L}/\mathbb{K}$, the following are all equivalent.
@@ -82,7 +81,7 @@ For an algebraic extension $\mathbb{L}/\mathbb{K}$, the following are all equiva
 5. $\mathbb{L}$ is the splitting field of some family of non-constant polynomials $(f_i\in \mathbb{K}[\x])$.
 :::
 ::: Proof
-The equivalence of the third and fourth conditions follows from [Proposition 1](#prop1). On the other hand, a quasi-Galois extension can be viewed as the splitting field of the minimal polynomials of its elements, so the last condition is implied by the first. Conversely, if the last condition holds, then by the same logic as in [Proposition 1](#prop1) any $\mathbb{K}$-automorphism of $\overline{\mathbb{K}}$ sends roots of $f_i$ to roots of $f_i$, and hence sends $\mathbb{L}$ to $\mathbb{L}$. Thus the third condition holds. Also, if the third condition holds then the conjugates of $x\in \mathbb{L}$ are the images of $x$ under $\mathbb{K}$-automorphisms of $\overline{\mathbb{K}}$, hence all belong to $\mathbb{L}$, so the second condition holds. Therefore
+The equivalence of the third and fourth conditions follows from [Proposition 1](#prop1). On the other hand, a quasi-Galois extension can be viewed as the splitting field of the minimal polynomials of its elements, so the last condition is implied by the first. Conversely, if the last condition holds, then by the same logic as in [Proposition 1](#prop1) any $\mathbb{K}$-automorphism of $\overline{\mathbb{K}}$ sends roots of $f_i$ to roots of $f_i$, and hence sends $\mathbb{L}$ to $\mathbb{L}$. Thus the third condition holds. Also, the third condition trivially implies the second by definition. Therefore
 
 $$(1)\implies (5)\implies (3)\iff (4)\implies (2)$$
 
@@ -101,13 +100,13 @@ The following hold.
 1. An algebraic extension $\mathbb{L}/\mathbb{K}$ is quasi-Galois if and only if every conjugate of $\mathbb{L}$ is itself.
 2. For an algebraic extension $\mathbb{K}\subseteq \mathbb{L}\subseteq \mathbb{M}$, if $\mathbb{M}/\mathbb{K}$ is quasi-Galois then so is $\mathbb{M}/\mathbb{L}$.
 3. Let a quasi-Galois extension $\mathbb{M}/\mathbb{K}$ and its subextension $\mathbb{L}/\mathbb{K}$ be given. Then for any $\mathbb{K}$-homomorphism $u: \mathbb{L}\rightarrow \overline{\mathbb{K}}$ we have $u(\mathbb{L})\subseteq \mathbb{M}$, and there exists a $\mathbb{K}$-automorphism $v$ of $\mathbb{M}$ extending this.
-4. For a field extension $\mathbb{K}'/\mathbb{K}$ and a quasi-Galois extension $\mathbb{L}/\mathbb{K}$ lying inside a common extension, their compositum $\mathbb{K}'(\mathbb{L})$ is quasi-Galois over $\mathbb{K}'$.
+4. For any field extension $\mathbb{K}'/\mathbb{K}$ and quasi-Galois extension $\mathbb{L}/\mathbb{K}$, the composite $\mathbb{K}'(\mathbb{L})$ is quasi-Galois over $\mathbb{K}'$.
 :::
 ::: Proof
 1. By [Proposition 5](#prop5), $\mathbb{L}/\mathbb{K}$ being quasi-Galois is equivalent to every $\mathbb{K}$-automorphism of $\overline{\mathbb{K}}$ sending $\mathbb{L}$ to $\mathbb{L}$.
 2. Suppose $\mathbb{M}/\mathbb{K}$ is quasi-Galois. Then since $\overline{\mathbb{K}}$ is also an algebraic closure of $\mathbb{L}$, it suffices by [Proposition 5](#prop5) to show that for any $\mathbb{L}$-automorphism $u: \overline{\mathbb{K}}\rightarrow\overline{\mathbb{K}}$ we have $u(\mathbb{M})=\mathbb{M}$. But $\mathbb{M}$ is a quasi-Galois extension of $\mathbb{K}$, and $u$ is an $\mathbb{L}$-automorphism, so it is automatically a $\mathbb{K}$-automorphism as well. From this we know that $u$ satisfies the desired condition.
 3. From [Proposition 1](#prop1) we know that there exists a $\mathbb{K}$-automorphism $v:\overline{\mathbb{K}}\rightarrow\overline{\mathbb{K}}$ extending $u$. Then, since $\mathbb{M}$ is quasi-Galois by assumption, its restriction to $\mathbb{M}$ must satisfy $v(\mathbb{M})=\mathbb{M}$, and hence the desired claim holds.
-4. By [Proposition 5](#prop5), $\mathbb{L}$ is the splitting field of some $f_i\in \mathbb{K}[\x]$. Then $\mathbb{K}'(\mathbb{L})$ is the splitting field of the same polynomials regarded as elements of $\mathbb{K}'[\x]$, so by [Proposition 5](#prop5) again it is quasi-Galois over $\mathbb{K}'$.
+4. If $\mathbb{L}$ is the splitting field of $f_i\in \mathbb{K}[\x]$, then $\mathbb{L}'$ is the splitting field of $f_i\in \mathbb{K}'[\x]$.
 :::
 
 As can be seen from the proof of the above corollary, the most important property characterizing a quasi-Galois extension $\mathbb{L}/\mathbb{K}$ is that any $\mathbb{K}$-automorphism sends $\mathbb{L}$ to $\mathbb{L}$. The following proposition is also obvious from this fact.
@@ -141,7 +140,7 @@ Let an algebraic extension $\mathbb{L}/\mathbb{K}$ and the group $\Gamma$ of $\m
 3. For any $x\in \mathbb{L}$, the minimal polynomial $f\in \mathbb{K}[\x]$ of $x$ splits into a product of distinct linear factors in $\mathbb{L}[\x]$.
 :::
 ::: Proof
-The equivalence of the second and third conditions follows from [Definition 4](#def4) and [§Separable Extensions, ⁋Proposition 12](/en/math/field_theory/separable_extensions#prop12). If $\mathbb{L}/\mathbb{K}$ is quasi-Galois then the minimal polynomial $f$ of $x\in \mathbb{L}$ splits into a product of linear factors in $\mathbb{L}[\x]$, and if $\mathbb{L}/\mathbb{K}$ is separable then by the first result of the same proposition $f$ is separable, so these linear factors are distinct. Conversely, if the third condition holds then an irreducible polynomial having a root in $\mathbb{L}$ is a constant multiple of the minimal polynomial of that root and hence splits in $\mathbb{L}[\x]$, and every element of $\mathbb{L}$ is a separable element, so by the second result of the same proposition $\mathbb{L}/\mathbb{K}$ is separable. It therefore suffices to show that these are equivalent to the first condition.
+The equivalence of the second and third conditions is obvious, so it suffices to show that these are equivalent to the first condition.
 
 First assume the first condition. For any $x\in \mathbb{L}$ and its minimal polynomial $f\in \mathbb{K}[\x]$, we must show that $f$ splits into distinct linear factors in $\mathbb{L}[\x]$. To this end, let $S$ be the set of all roots of $f$ in $\mathbb{L}$, and define a new polynomial
 
@@ -151,13 +150,13 @@ then $g$ is an element of $\mathbb{L}[\x]$ and for any $\sigma\in\Gamma$,
 
 $$(\sigma\cdot g)(\x)=\prod_{a\in S}(\x-\sigma(a))=\prod_{a\in S}(\x-a)$$
 
-so the coefficients of $g$ are unchanged by $\sigma$, and therefore by the assumption of the first condition we have $g\in\mathbb{K}[\x]$. Now since $g(x)=0$, by [§Algebraic Extensions, ⁋Theorem 15](/en/math/field_theory/algebraic_extensions#thm15) we know that $f$ divides $g$. On the other hand $S$ consists of some of the roots of $f$, so the degree of $g$ does not exceed that of $f$, and therefore the monic polynomials $f$ and $g$ are equal. That is, the third condition holds.
+so the coefficients of $g$ are unchanged by $\sigma$, and therefore by the assumption of the first condition we have $g\in\mathbb{K}[\x]$. Now since $g(x)=0$, by [§Algebraic Extensions, ⁋Theorem 15](/en/math/field_theory/algebraic_extensions#thm15) we know that $g$ divides $f$, and considering their degrees we must have $g=f$. That is, the third condition holds.
 
 Conversely, assume the third condition and show the first. If $x\in\mathbb{L}$ does not belong to $\mathbb{K}$, we must show that there exists $\sigma\in\Gamma$ sending $x$ to another element. Let $f$ be the minimal polynomial of $x$; then from $x\not\in\mathbb{K}$ we know that $f$ has degree at least 2, and by assumption
 
-$$f(\x)=\prod_{a\in R}(\x-a), \qquad \text{$R$ the set of conjugates of $x$ in $\overline{\mathbb{K}}$}$$
+$$f(\x)=\prod_{a\in S}(\x-a), \qquad \text{$S$ the set of conjugates of $x$ in $\overline{\mathbb{K}}$}$$
 
-can be so decomposed, and on the other hand since $\mathbb{L}/\mathbb{K}$ is quasi-Galois there exists a $\mathbb{K}$-automorphism $u$ of $\overline{\mathbb{K}}$ sending $x$ to some other $a\in R$, which by [Proposition 5](#prop5) is a $\mathbb{K}$-automorphism of $\mathbb{L}$. From this we obtain the desired result.
+can be so decomposed, and on the other hand since $\mathbb{L}/\mathbb{K}$ is quasi-Galois there exists a $\mathbb{K}$-automorphism $u$ of $\overline{\mathbb{K}}$ sending $x$ to some other $a\in S$, which by [Proposition 5](#prop5) is a $\mathbb{K}$-automorphism of $\mathbb{L}$. From this we obtain the desired result.
 :::
 
 We may now define the following.
@@ -169,7 +168,7 @@ An algebraic extension $\mathbb{L}/\mathbb{K}$ is said to be *Galois* if $\mathb
 Then from the result of [Proposition 7](#prop7) and the results on separable extensions we obtain the following two propositions.
 
 ::: Proposition 10
-Let a nonempty family $(\mathbb{L}_i)$ of Galois extensions inside an algebraic closure $\overline{\mathbb{K}}$ of $\mathbb{K}$ be given. Then both $\bigcap \mathbb{L}_i$ and $\mathbb{K}(\bigcup \mathbb{L}_i)$ are Galois.
+Let Galois extensions $\mathbb{L}_i$ inside an algebraic closure $\overline{\mathbb{K}}$ of $\mathbb{K}$ be given. Then both $\bigcap \mathbb{L}_i$ and $\mathbb{K}(\bigcup \mathbb{L}_i)$ are Galois.
 :::
 ::: Proof
 By the second condition of [Theorem 8](#thm8), a Galois extension is the same as a separable quasi-Galois extension. That both extensions are quasi-Galois was shown in [Proposition 7](#prop7), so we only need to check separability.
@@ -194,13 +193,11 @@ As we have already seen, when dealing with a Galois extension $\mathbb{L}/\mathb
 For a Galois extension $\mathbb{L}/\mathbb{K}$, the group of $\mathbb{K}$-automorphisms of $\mathbb{L}$ is called the *Galois group* and is denoted $\Gal(\mathbb{L}/\mathbb{K})$.
 :::
 
-In particular, let us fix a field $\mathbb{K}$ and consider its algebraic closure $\overline{\mathbb{K}}$. For a separable polynomial $f$ in $\mathbb{K}[\x]$ and the set $A$ of roots of $f$, the extension $\mathbb{L}=\mathbb{K}(A)$ is the splitting field of $f$ and hence quasi-Galois by [Proposition 5](#prop5), while the minimal polynomial of each element of $A$ divides $f$ and so has distinct roots ([§Algebraic Extensions, ⁋Theorem 15](/en/math/field_theory/algebraic_extensions#thm15)), so that $\mathbb{L}$ is separable by the second result of [§Separable Extensions, ⁋Proposition 12](/en/math/field_theory/separable_extensions#prop12). That is, $\mathbb{L}$ is a Galois extension of $\mathbb{K}$. But since $\mathbb{L}$ is generated by $A$, any $\sigma\in \Gal(\mathbb{L}/\mathbb{K})$ is completely determined by its values on $A$, and from this an injective group homomorphism
+In particular, let us fix a field $\mathbb{K}$ and consider its algebraic closure $\overline{\mathbb{K}}$. For a separable polynomial $f$ in $\mathbb{K}[\x]$ and the set $A$ of roots of $f$, we have already seen that $\mathbb{L}=\mathbb{K}(A)$ is a Galois extension of $\mathbb{K}$. But since $\mathbb{L}$ is generated by $A$, any $\sigma\in \Gal(\mathbb{L}/\mathbb{K})$ is completely determined by its values on $A$, and from this an injective group homomorphism
 
 $$\Gal(\mathbb{L}/\mathbb{K})\rightarrow S_A$$
 
-is induced. In general this homomorphism need not be surjective. First, two elements $x,y$ of $A$ may fail to be conjugate, which by [Proposition 3](#prop3) is equivalent to their having different minimal polynomials. On the other hand, $x$ and $y$ are roots of $f$, so by [§Algebraic Extensions, ⁋Theorem 15](/en/math/field_theory/algebraic_extensions#thm15) their minimal polynomials each divide $f$, so $x$ and $y$ failing to be conjugate amounts to their being roots of different irreducible factors of $f$. That is, writing $A_1,\ldots,A_r$ for the sets of roots of the irreducible factors of $f$, these are exactly the orbits of $\Gal(\mathbb{L}/\mathbb{K})$ on $A$, and the image of the above homomorphism is contained in the subgroup $S_{A_1}\times\cdots\times S_{A_r}$.
-
-This inclusion too is in general not an equality, so even when $f$ is irreducible the image need not be all of $S_A$. For instance $f=\x^3-3\x+1\in \mathbb{Q}[\x]$ has no rational root and is therefore irreducible, so its three roots are conjugate to one another. But for a root $\alpha$ of $f$, using $\alpha^3=3\alpha-1$ one computes that $\alpha^2-2$ is again a root of $f$, and since the three roots sum to $0$ the remaining one also lies in $\mathbb{Q}(\alpha)$. That is, $\mathbb{L}=\mathbb{Q}(\alpha)$ is already the splitting field of $f$, and any $\sigma\in\Gal(\mathbb{L}/\mathbb{Q})$ is determined by $\sigma(\alpha)$, so $\Gal(\mathbb{L}/\mathbb{Q})$ has at most three elements and its image cannot be all of $S_A$, which has six.
+is induced. In general this homomorphism need not be surjective. That is, among the roots of an arbitrary separable polynomial $f$ there may be ones that are not conjugate to each other, and by [Proposition 3](#prop3) this is equivalent to these two roots $x,y$ having different minimal polynomials. On the other hand, if $x,y$ are roots of $f$, then by [§Algebraic Extensions, ⁋Theorem 15](/en/math/field_theory/algebraic_extensions#thm15) their minimal polynomials each divide $f$, and therefore $x$ and $y$ are roots of different irreducible factors of $f$. From this we can further determine what the image of the above injective homomorphism looks like.
 
 On the other hand, for a Galois extension $\mathbb{L}/\mathbb{K}$ and another Galois extension $\mathbb{M}/\mathbb{K}$ that is a subextension of $\mathbb{L}$, we obtain the following result from [Proposition 1](#prop1).
 

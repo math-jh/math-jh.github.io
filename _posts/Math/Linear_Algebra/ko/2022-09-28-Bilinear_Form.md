@@ -12,9 +12,7 @@ sidebar:
 date: 2022-09-28
 
 weight: 20
-revising: true
 
-drift_needed: true
 
 ---
 
@@ -31,7 +29,7 @@ $$\langle -,-\rangle:V\times V^\ast\rightarrow \mathbb{K};\quad (v,f)\mapsto f(v
 이제 우리는 $V=W$인 경우에 집중한다.
 
 ::: 정의 1
-[§쌍대공간](/ko/math/linear_algebra/dual_space)에서 언급한 대로, 임의의 pairing $\langle -,-\rangle:V\times W\rightarrow \mathbb{K}$에 대하여 만일 $W=V$라면 이 pairing을 $V$ 위에서 정의된 *bilinear form<sub>쌍선형형식</sub>*이라 부른다. $\langle -,-\rangle$이 *non-degenerate bilinear form<sub>비퇴화 쌍선형형식</sub>*이라는 것은 $\langle-,-\rangle$이 pairing으로서 non-degenerate인 것이다.
+임의의 pairing $\langle -,-\rangle:V\times W\rightarrow \mathbb{K}$에 대하여, 만일 $W=V$라면 이 pairing을 $V$ 위에서 정의된 *bilinear form<sub>쌍선형형식</sub>*이라 부른다. $\langle -,-\rangle$이 *non-degenerate bilinear form<sub>비퇴화 쌍선형형식</sub>*이라는 것은 $\langle-,-\rangle$이 pairing으로서 non-degenerate인 것이다.
 :::
 
 $V$ 위에 bilinear form이 주어졌다 하자. 그럼 위와 같은 논증을 통해, 우리는 $V$에서 $V^\ast$로의 linear map들
@@ -92,7 +90,7 @@ Symmetric form이 reflexive한 것은 자명하지만, 그 역은 성립하지 �
 
 $$\langle v,w\rangle=-\langle w,v\rangle$$
 
-이므로 reflexive이다. 다만 $1+1=0$인 $\mathbb{K}$ 위에서는 $-1=1$이라 alternating 조건이 symmetric 조건과 일치하므로, 위의 예가 반례가 되는 것은 $1+1\neq 0$인 경우에 한한다. 놀랍게도 reflexive form은 정확히 이 둘, 곧 symmetric이거나 alternating인 form뿐이다.
+이므로 reflexive이다. 놀랍게도 reflexive form은 정확히 이 둘, 곧 symmetric이거나 alternating인 form뿐이다.
 
 ::: 명제 6
 유한차원 $\mathbb{K}$-벡터공간 $V$ 위의 bilinear form $\langle-,-\rangle$이 reflexive인 것은 그것이 symmetric이거나 alternating인 것과 동치이다.
@@ -168,7 +166,7 @@ $$\dim(W+W^\perp)=\dim W+\dim W^\perp-\dim(W\cap W^\perp)=\dim V-\dim(W\cap W^\p
 위의 조건을 만족하는 non-degenerate 부분공간에 대해서는 이렇게 정의된 orthogonal complement가 quotient space와 canonical하게 isomorphic하다. 
 
 ::: 명제 9
-Non-degenerate reflexive bilinear form이 주어진 유한차원 $\mathbb{K}$-벡터공간 $V$의 non-degenerate subspace $W\leq V$에 대하여, [§몫공간, ⁋정의 3](/ko/math/linear_algebra/quotient_space#def3)의 natural projection $p:V\rightarrow V/W$을 $W^\perp$로 제한한
+Non-degenerate reflexive bilinear form이 주어진 유한차원 $\mathbb{K}$-벡터공간 $V$의 non-degenerate 부분공간 $W\leq V$에 대하여, [§몫공간, ⁋정의 3](/ko/math/linear_algebra/quotient_space#def3)의 natural projection $p:V\rightarrow V/W$을 $W^\perp$로 제한한
 
 $$p\vert_{W^\perp}:W^\perp\rightarrow V/W$$
 
@@ -239,7 +237,7 @@ $$\ker L, \quad(\ker L)^\perp, \quad\im L,\quad(\im L)^\perp$$
 
 $$V=\ker L\oplus(\ker L)^\perp,\qquad W=\im L\oplus(\im L)^\perp$$
 
-로 직교분해되며, 특히 $\mathbb{K}=\mathbb{R}$이고 두 bilinear form이 모두 $v\neq 0$일 때마다 $\langle v,v\rangle>0$을 만족하는 positive-definite form이면 모든 부분공간이 non-degenerate이라 이 분해가 언제나 성립한다.
+로 직교분해되며, 특히 $\langle-,-\rangle$이 positive-definite이면 모든 부분공간이 non-degenerate이라 이 분해가 언제나 성립한다.
 
 ## 직교기저
 

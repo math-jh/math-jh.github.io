@@ -10,9 +10,7 @@ sidebar:
 
 date: 2024-11-01
 weight: 4
-revising: true
 
-drift_needed: true
 
 ---
 
@@ -74,7 +72,7 @@ Abelian category $\mathcal{A}$가 enough projective를 갖는다면, $\mathcal{A
 
 이러한 방식으로, $\epsilon_n:P_n \rightarrow M_{n-1}$이 주어질 때마다 $M_n=\ker \epsilon_n$으로 잡아 다음과 같은 commutative diagram
 
-{% diagram Math/Homological_Algebra/Resolutions-6.svg width="39.85em" alt="splicing-2" %}
+{% diagram frozen/635a8f80/Math/Homological_Algebra/Resolutions-6.svg width="39.85em" alt="splicing-2" %}
 
 을 얻는다. 그럼 가운데에서 얻어지는 
 
@@ -102,13 +100,11 @@ Category $\lMod{A}$는 enough projective를 갖는다.
 Category $\lMod{A}$는 enough injective를 갖는다.
 :::
 ::: 증명
-어렵지 않게 exact한 left adjoint를 갖는 functor는 injective object를 보존함을 보일 수 있다. 그럼 ring homomorphism $\mathbb{Z}\rightarrow A$로부터 얻어지는 coextension of scalar $\Ab \rightarrow \lMod{A}$는 exact functor인 restriction of scalar의 right adjoint이므로 $\Ab$의 injective object는 $\lMod{A}$로 갔을 때 injective object가 된다. ([\[대수적 구조\] §스칼라의 변환, ⁋명제 7](/ko/math/algebraic_structures/change_of_base_ring#prop7)) 한편 임의의 $M\in\lMod{A}$에 대하여 이 adjunction의 unit $M \rightarrow \Hom_\mathbb{Z}(A, M)$, $m\mapsto (a\mapsto am)$은 $1\cdot m=m$이므로 injective이고, coextension of scalar는 right adjoint이므로 left exact이어서 monomorphism을 보존한다. 따라서 $M$을 abelian group으로 보았을 때 $\Ab$의 injective object $I$로의 monomorphism $M \rightarrow I$를 찾을 수 있다면, 이로부터 얻어지는 $\Hom_\mathbb{Z}(A, M) \rightarrow \Hom_\mathbb{Z}(A, I)$와 앞의 unit을 합성하여 $M$을 $\lMod{A}$의 injective object에 넣을 수 있다. 즉 원하는 증명은 $\Ab$가 enough injective를 갖는다는 사실을 증명하면 충분하다. 이는 임의의 $G\in\Ab$에 대하여,
+어렵지 않게 exact한 left adjoint를 갖는 functor는 injective object를 보존함을 보일 수 있다. 그럼 ring homomorphism $\mathbb{Z}\rightarrow A$로부터 얻어지는 coextension of scalar $\Ab \rightarrow \lMod{A}$는 exact functor인 restriction of scalar의 right adjoint이므로 $\Ab$의 injective object는 $\lMod{A}$로 갔을 때 injective object가 된다. ([\[대수적 구조\] §스칼라의 변환, ⁋명제 7](/ko/math/algebraic_structures/change_of_base_ring#prop7)) 따라서 원하는 증명은 $\Ab$가 enough injective를 갖는다는 사실을 증명하면 충분하다. 이는 임의의 $G\in\Ab$에 대하여,
 
 $$I(G)=\prod_{f\in\Hom_\Ab(G, \mathbb{Q}/\mathbb{Z})} \mathbb{Q}/\mathbb{Z}$$
 
 그리고 $e_G:G \rightarrow I(G)$를 $g\mapsto (f(g))_{f\in\Hom(G, \mathbb{Q}/\mathbb{Z})}$으로 정의하면 된다. 
-
-여기서 결정적으로 쓰이는 것은 $\mathbb{Q}/\mathbb{Z}$가 $\Ab$의 injective object라는 사실이며, 이는 $\mathbb{Q}/\mathbb{Z}$가 divisible group인 것으로부터 따라나온다. 실제로 abelian group들의 inclusion $H\subseteq H'$과 homomorphism $h:H \rightarrow \mathbb{Q}/\mathbb{Z}$가 주어졌다 하고, $h$의 extension들의 모임을 정의역의 포함관계로 순서지어 Zorn's lemma를 적용하면 maximal element $h_0:H_0 \rightarrow \mathbb{Q}/\mathbb{Z}$를 얻는다. 만일 $x\in H'\setminus H_0$이 존재한다면, $nx\in H_0$이도록 하는 $n\in\mathbb{Z}$들은 $\mathbb{Z}$의 ideal을 이루므로 적당한 $n\geq 0$에 대하여 $n\mathbb{Z}$와 같고, $n>0$이면 divisibility로부터 $ny=h_0(nx)$인 $y\in\mathbb{Q}/\mathbb{Z}$를, $n=0$이면 아무 $y$나 잡을 수 있다. 그럼 $a+kx\mapsto h_0(a)+ky$는 $H_0+\mathbb{Z}x$ 위에서 잘 정의된 homomorphism이고 $h_0$보다 진짜로 큰 extension이므로 $h_0$의 maximality에 모순이고, 따라서 $H_0=H'$이다. 이제 $\Hom_\Ab(-, I(G))\cong\prod_f\Hom_\Ab(-, \mathbb{Q}/\mathbb{Z})$이므로 $I(G)$ 또한 injective이고, $0\neq g\in G$에 대하여 $g$의 order가 $n$이면 $g\mapsto 1/n$으로, $g$가 infinite order를 가지면 $g\mapsto 1/2$로 정의된 homomorphism $\mathbb{Z}g \rightarrow \mathbb{Q}/\mathbb{Z}$를 $\mathbb{Q}/\mathbb{Z}$의 injectivity로 $G$ 전체에 확장하면 $f(g)\neq 0$인 $f$를 얻으므로, $e_G$는 injective이다.
 :::
 
 ## 분해의 유일성
@@ -154,7 +150,7 @@ $$d_n^Q\circ\psi=d_n^Q\circ g_n-(d_n^Q\circ s_{n-1})\circ d_n^P=g_{n-1}\circ d_n
 
 $$0 \longrightarrow A'\overset{i}{\longrightarrow}A\overset{p}{\longrightarrow}A'' \longrightarrow 0$$
 
-가 주어졌다 하고, $A'$, $A''$의 projective resolution들 $P_\bullet'$, $P_\bullet''$이 주어졌다 하자. 그럼 각 $n$에 대하여 $P_n=P_n'\oplus P_n''$을 만족하는 $A$의 projective resolution $P_\bullet$이 존재하며, 이 때 이들 complex들 사이의 exact sequence
+가 주어졌다 하고, $A'$, $A''$의 projective resolution들 $P_\bullet'$, $P_\bullet''$이 주어졌다 하자. 그럼 $P_n=P_n'\oplus P_n''$으로 정의되는 chain complex $P_\bullet$은 $A$의 projective resolution이 되며, 이들 complex들 사이의 exact sequence
 
 $$0 \rightarrow P' \rightarrow P \rightarrow P'' \rightarrow 0$$
 
@@ -171,15 +167,9 @@ $$0 \rightarrow P' \rightarrow P \rightarrow P'' \rightarrow 0$$
 
 을 얻고, 특히 다음의 diagram
 
-{% diagram Math/Homological_Algebra/Resolutions-11.svg width="21.61em" alt="horseshoe-finish" %}
+{% diagram frozen/635a8f80/Math/Homological_Algebra/Resolutions-11.svg width="21.61em" alt="horseshoe-finish" %}
 
-을 얻게 된다. 그럼 처음의 short exact sequence를 $0 \rightarrow \ker\epsilon' \rightarrow \ker\epsilon \rightarrow \ker\epsilon'' \rightarrow 0$으로, $P_\bullet'$과 $P_\bullet''$을 각각 한 칸씩 민 것으로 바꾸어 같은 논증을 반복할 수 있고, 이로부터 $\epsilon_n:P_n=P_n'\oplus P_n'' \rightarrow \ker d_{n-1}$을 귀납적으로 얻는다. 여기서 $d_0=\epsilon$이고 $d_0'=\epsilon'$, $d_0''=\epsilon''$이며, 각 $\epsilon_n$이 surjective인 것은 $\epsilon$의 경우와 마찬가지로 [§Diagram chasing, ⁋정리 6](/ko/math/homological_algebra/diagram_chasing#thm6)의 cokernel 열로부터 나온다. 이제 $d_n$을 $\epsilon_n$과 inclusion $\ker d_{n-1} \rightarrow P_{n-1}$의 합성으로 정의하자. $\epsilon_n$은 $P_n'$ 위에서 $d_n'$과 같고, $P_n''$ 위에서는 $P_n''$의 projectivity로 잡은, $\ker d_{n-1} \rightarrow \ker d_{n-1}''$을 통해 $d_n''$으로 내려가는 lift이므로, $d_n$은 적당한 $\tau_n:P_n'' \rightarrow P_{n-1}'$에 대하여 다음의 행렬
-
-$$d_n=\begin{pmatrix} d_n' & \tau_n \\ 0 & d_n''\end{pmatrix}$$
-
-로 주어진다.
-
-구성에 의하여 $\im d_n=\im \epsilon_n=\ker d_{n-1}$이므로, [명제 3](#prop3)의 증명에서와 같이 $P_\bullet$은 $A$의 projective resolution이다. 또 $d_n$이 upper triangular이므로 direct sum으로의 inclusion $P_n' \rightarrow P_n$과 projection $P_n \rightarrow P_n''$은 각각 chain map $P_\bullet' \rightarrow P_\bullet$과 $P_\bullet \rightarrow P_\bullet''$을 이루고, 각 차수에서 $0 \rightarrow P_n' \rightarrow P_n \rightarrow P_n'' \rightarrow 0$이 split exact이므로 진술의 exact sequence를 얻는다.
+을 얻게 된다. 이 과정을 반복하여 $P_\bullet$을 얻는다.
 :::
 
 ---

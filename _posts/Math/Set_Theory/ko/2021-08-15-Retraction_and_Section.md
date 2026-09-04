@@ -13,9 +13,7 @@ toc_sticky: false
 
 date: 2021-08-15
 weight: 7
-revising: true
 
-drift_needed: true
 
 ---
 
@@ -36,8 +34,6 @@ $$x=\id_{A}(x)=(r\circ f)(x)=r(f(x))=r(f(y))=(r\circ f)(y)=\id_{A}(y)=y$$
 $$y=\id_{B}(y)=(f\circ s)(y)=f(s(y))$$ 
 
 이므로 $y\in f(A)$이고, 따라서 $f$는 전사함수이다.
-
-한편 두 번째 부분에서 전사함수 $f$로부터 $s$를 얻는 것은 각각의 $y\in B$마다 $f^{-1}(\{y\})$에서 원소를 하나씩 고르는 일이므로, 이 구성은 뒤에서 다룰 [§선택공리, ⁋The Axiom of Choice.](/ko/math/set_theory/axiom_of_choice#axiom-choice)에 의존한다. 앞으로 전사함수의 section을 가져다 쓰는 논증도 모두 마찬가지다.
 :::
 
 따라서 함수 $f:A\rightarrow B$가 단사함수라는 것은 다음의 diagram 

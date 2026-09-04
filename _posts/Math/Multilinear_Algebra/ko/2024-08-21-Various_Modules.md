@@ -10,9 +10,7 @@ sidebar:
 
 date: 2024-08-21
 weight: 2
-revising: true
 
-drift_needed: true
 
 ---
 
@@ -72,7 +70,7 @@ $$\Hom_{\lMod{A}}(N, u):\Hom_{\lMod{A}}(N, M) \rightarrow\Hom_{\lMod{A}}(N, M')$
 
 $$\ker(\Hom_{\lMod{A}}(N, u))\cong\Hom_{\lMod{A}}(N, \ker u)\tag{3}$$
 
-이 성립한다. 그럼 $u$가 injective이면 $\ker u=0$이므로 식 (3)에 의하여 임의의 $N$에 대하여 $\Hom(N,u)$가 injective이다. 거꾸로 임의의 $N$에 대하여 $\Hom(N,u)$가 injective라면, $N=\ker u$를 대입하여 $\Hom(\ker u,\ker u)=0$을 얻고, 특히 $\id_{\ker u}=0$이므로 $\ker u=0$이다. 같은 논법을 식 (2)에 적용하면, $u$가 surjective인 경우 임의의 $N$에 대하여 $\Hom(u,N)$이 injective이고, 거꾸로 임의의 $N$에 대하여 $\Hom(u,N)$이 injective라면 $N=\coker u$를 대입하여 $\id_{\coker u}=0$, 곧 $\coker u=0$을 얻는다. 따라서 다음이 성립한다. 
+이 성립한다. 따라서 다음이 성립한다. 
 
 ::: 명제 1
 $A$-linear map $u:M \rightarrow M'$이 주어졌다 하자.
@@ -149,7 +147,7 @@ $$\coker(M\otimes_Av)\cong M\otimes_A(\coker v)$$
 
 $$\coker(u\otimes_AN)\cong (\coker u)\otimes_A N$$
 
-이 존재한다. 그럼 $u$가 surjective이면 $\coker u=0$이므로 임의의 $N$에 대하여 $\coker(u\otimes_AN)=0$, 곧 $u\otimes_AN$이 surjective이다. 거꾸로 임의의 $N$에 대하여 $u\otimes_AN$이 surjective라면 $N=A$를 대입하여 $\coker u\cong(\coker u)\otimes_AA\cong\coker(u\otimes_AA)=0$을 얻는다. $v$에 대해서도 $M=A$를 대입하여 같은 논법을 쓸 수 있다. 따라서 다음이 성립한다.
+이 존재한다. 
 
 ::: 명제 5
 다음이 성립한다.

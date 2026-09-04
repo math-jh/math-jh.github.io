@@ -11,9 +11,7 @@ sidebar:
 date: 2026-06-20
 
 weight: 5
-revising: true
 
-drift_needed: true
 
 ---
 
@@ -109,11 +107,11 @@ $$\lvert\Phi_n(q)\rvert=\prod_{\substack{1\leq m\leq n\\ \gcd(m,n)=1}}\lvert q-\
 ::: 증명
 $D$를 finite division ring, $Z=Z(D)$를 그 center라 하자. 앞서 보았듯 $Z$는 finite field이고, 그 원소의 개수를 $q\geq 2$라 하면 $D$는 $Z$ 위의 유한차원 vector space로서 그 원소의 개수는 $\lvert D\rvert=q^n$의 꼴이다. 우리 주장은 $n=1$이어서 $D=Z$가 commutative하다는 것이다.
 
-이를 위해 multiplicative group $D^\times=D\setminus\{0\}$ 위에 [\[대수적 구조\] §군의 작용, ⁋명제 9](/ko/math/algebraic_structures/group_actions#prop9)의 conjugation action을 주고, 그 class equation을 만들자. [\[대수적 구조\] §군의 작용, ⁋정의 13](/ko/math/algebraic_structures/group_actions#def13) 직후의 동치관계가 $D^\times$를 orbit들로 분할하므로, 각 orbit에서 representative를 하나씩 택하면 $\lvert D^\times\rvert$는 이 orbit들의 크기의 합이다. 이때 orbit $D^\times\cdot x$가 한 점으로 이루어지는 것은 모든 $g\in D^\times$에 대하여 $gxg^{-1}=x$인 것, 즉 $x$가 group $D^\times$의 center에 속하는 것과 동치이므로, 크기가 $1$인 orbit들의 합집합은 정확히 $Z(D^\times)$이다. 한편 conjugation action에서 $x$의 stabilizer는 [\[대수적 구조\] §군의 작용, ⁋정의 12](/ko/math/algebraic_structures/group_actions#def12) 직후에 정의한 $x$의 centralizer $C_{D^\times}(x)$이므로, 나머지 orbit들의 크기는 [\[대수적 구조\] §군의 작용, ⁋정리 14](/ko/math/algebraic_structures/group_actions#thm14)에 의하여 $[D^\times:C_{D^\times}(x)]$이다. 이를 모으면 class equation
+이를 위해 multiplicative group $D^\times=D\setminus\{0\}$의 class equation을 만들자. ([\[대수적 구조\] §군의 작용, ⁋정리 14](/ko/math/algebraic_structures/group_actions#thm14)) [\[대수적 구조\] §군의 작용, ⁋명제 9](/ko/math/algebraic_structures/group_actions#prop9)의 conjugation action에 대한 $D^\times$의 class equation은
 
 $$\lvert D^\times\rvert=\lvert Z(D^\times)\rvert+\sum_{x}\bigl[D^\times:C_{D^\times}(x)\bigr]$$
 
-을 얻으며, 여기서 합은 크기가 $1$이 아닌 orbit들의 representative $x$에 대한 것이다. 또, $Z(D^\times)=Z^\times=Z\setminus\{0\}$이므로 $\lvert Z(D^\times)\rvert=q-1$이다.
+이며, 여기서 $C_{D^\times}(x)$는 [\[대수적 구조\] §군의 작용, ⁋정의 12](/ko/math/algebraic_structures/group_actions#def12) 직후에 정의한 $x$의 centralizer이고 합은 $Z(D^\times)$에 속하지 않는 모든 representative에 대한 것이다. 또, $Z(D^\times)=Z^\times=Z\setminus\{0\}$이므로 $\lvert Z(D^\times)\rvert=q-1$이다.
 
 이제 각 $x\in D^\times$에 대하여 $C_D(x)=\{y\in D\mid xy=yx\}$는 $D$의 부분 division ring이고 $Z$를 포함한다. 이러한 경우 우리는 $C_D(x)$가 $Z$-vector space라는 것을 보았으며, $\lvert Z\rvert=q$이므로 $\lvert C_D(x)\rvert=q^{d(x)}$ 꼴이다. 또한 $D$가 $C_D(x)$ 위의 vector space이므로 $d(x)\mid n$이다. $C_{D^\times}(x)=C_D(x)\setminus\{0\}$이므로
 
@@ -141,7 +139,7 @@ $A$가 finite ring이고 $0$ 이외의 zero divisor가 없다고 하자. 임의�
 
 ## 사원수
 
-[정리 5](#thm5)에 의해 non-commutative division ring은 필연적으로 무한하므로, 그 예시는 infinite ring에서 찾아야 한다. 가장 고전적인 것은 Hamilton이 정의한 *quaternion*들의 공간으로, 이는 실수체 $\mathbb{R}$ 위의 $4$차원 vector space에 곱셈을 부여한 것이다.
+[정리 5](#thm5)에 의해 non-commutative division ring은 필연적으로 무한하므로, 그 예시는 무한한 ring에서 찾아야 한다. 가장 고전적인 것은 Hamilton이 정의한 *quaternion*들의 공간으로, 이는 실수체 $\mathbb{R}$ 위의 $4$차원 vector space에 곱셈을 부여한 것이다.
 
 ::: 정의 7
 *Quaternion algebra<sub>사원수 대수</sub>* $\mathbb{H}$는 기저 $1,i,j,k$를 갖는 $\mathbb{R}$ 위의 $4$차원 vector space로서, 그 원소는
@@ -242,7 +240,7 @@ $$\rho_q(ux)=uxq=u\rho_q(x)\qquad(u\in\mathbb{C})$$
 
 $$\mathbb{H}\rightarrow\Mat_2(\mathbb{C});\quad q\mapsto M_q$$
 
-는 injective ring homomorphism이다. 이때 $M_q$의 두 행은 각각 $\rho_q(1)$과 $\rho_q(j)$의 좌표이며, [정의 7](#def7)의 관계식에서 $ji=-ij$이므로 임의의 $u\in\mathbb{C}$에 대하여 $ju=\bar uj$가 성립함을 이용하면 $\rho_q(1)=q=z+wj$와
+는 단사 ring homomorphism이다. 이때 $M_q$의 두 행은 각각 $\rho_q(1)$과 $\rho_q(j)$의 좌표이며, [정의 7](#def7)의 관계식에서 $ji=-ij$이므로 임의의 $u\in\mathbb{C}$에 대하여 $ju=\bar uj$가 성립함을 이용하면 $\rho_q(1)=q=z+wj$와
 
 $$\rho_q(j)=jq=jz+jwj=\bar zj+\bar wj^2=-\bar w+\bar zj$$
 

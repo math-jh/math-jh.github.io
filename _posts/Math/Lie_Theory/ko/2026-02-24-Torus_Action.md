@@ -10,8 +10,6 @@ sidebar:
 
 date: 2026-02-24
 weight: 2
-revising: true
-drift_needed: true
 
 ---
 
@@ -47,7 +45,7 @@ $$\rho:G\rightarrow \Aut(V)$$
 Compact, connected Lie group $G$에 대하여, $G$의 subgroup $T$가 *maximal torus<sub>극대 원환면</sub>*라는 것은 $T$가 torus이고, 포함관계에 대하여 maximal인 것이다. 
 :::
 
-Lie algebra $\mathfrak{g}$의 임의의 원소 $X$를 택한 후, 이 방향으로의 exponential map이 그리는 one-parameter subgroup의 closure가 torus가 된다. 따라서 $G$가 torus를 포함하는 것을 알며, 이제 torus들의 dimension은 $\dim G$ 이하이므로 그 중 dimension이 가장 큰 것을 택할 수 있다. 이렇게 택한 torus $T$에 대하여 $T\subseteq T'$인 torus $T'$이 주어졌다면, $T\neq T'$일 경우 $\dim T<\dim T'$이 되어 $T$의 선택에 모순이므로 $T=T'$이고, 따라서 $T$는 포함관계에 대해서도 maximal이다. 
+Lie algebra $\mathfrak{g}$의 임의의 원소 $X$를 택한 후, 이 방향으로의 exponential map이 그리는 one-parameter subgroup의 closure가 torus가 된다. 따라서 maximal torus의 존재성은 [\[집합론\] §선택공리, ⁋정리 4](/ko/math/set_theory/axiom_of_choice#thm4)에 의해 자명하다. 
 
 주의할 것은, 위에서 생각하는 one-parameter group $\exp(tX)$가 1차원 torus를 만들 것이라는 착각을 하기 쉬운데 이것이 항상 그렇지는 않다는 것이다. 가령 2차원 torus
 
@@ -61,7 +59,7 @@ $$T=\overline{\langle t\rangle}$$
 
 ## Weight decomposition
 
-우리의 주장은 $\rho(T)$가 simultaneously diagonalizable이라는 것이다. $T$가 abelian이므로 $\rho(T)$는 서로 commute하는 operator들의 family이고, 또 $\rho(T)$가 $\End(V)$ 안에서 span하는 부분공간은 유한차원이므로 이 부분공간을 span하는 유한 개의 원소 $\rho(t_1),\ldots,\rho(t_m)$을 택할 수 있다. 이들이 simultaneously diagonalizable이면 그 공통의 eigenbasis에서 $\rho(T)$의 모든 원소가 대각행렬로 나타나고, 서로 commute하는 유한 개의 원소에 대해서는 [\[선형대수학\] §고유공간분해, ⁋명제 10](/ko/math/linear_algebra/eigenspace_decomposition#prop10)을 반복해서 적용할 수 있으므로, 결국 $\rho(T)$의 각각의 원소들이 diagonalizable인 것을 보이면 충분하다. 이를 위해 임의의 finite-dimensional representation $\rho:G\rightarrow \Aut(V)$을 생각하고 이를 maximal torus $T$로 제한한 representation $\rho\vert_T$을 생각하자. 가장 먼저 확인할 수 있는 것은 $T$가 compact Lie group이라는 사실이다. 따라서 [\[표현론\] §유한군의 표현론, ⁋명제 6](/ko/math/representation_theory/representations_of_finite_groups#prop6)과 [\[표현론\] §유한군의 표현론, ⁋보조정리 8](/ko/math/representation_theory/representations_of_finite_groups#lem8)이 모두 성립한다. 전자는 $G$의 원소들에 대한 평균 $\frac{1}{\lvert G\rvert}\sum_{g}$을 사용하여 증명되었으므로 위에서 언급한 것과 같이 이 평균을 Haar measure에 대한 적분으로 바꾸어야 하고, 후자의 증명은 $V$가 유한차원 $\mathbb{C}$-벡터공간이라는 것만 사용하므로 그대로 성립한다. 
+우리의 주장은 $\rho(T)$가 simultaneously diagonalizable이라는 것이다. 이를 위해서는 $\rho(T)$의 각각의 원소들이 diagonalizable인 것을 보이면 충분하다. 이를 위해 임의의 finite-dimensional representation $\rho:G\rightarrow \Aut(V)$을 생각하고 이를 maximal torus $T$로 제한한 representation $\rho\vert_T$을 생각하자. 가장 먼저 확인할 수 있는 것은 $T$가 compact Lie group이라는 사실이다. 따라서 [\[표현론\] §유한군의 표현론, ⁋명제 6](/ko/math/representation_theory/representations_of_finite_groups#prop6)과 [\[표현론\] §유한군의 표현론, ⁋보조정리 8](/ko/math/representation_theory/representations_of_finite_groups#lem8)이 모두 성립한다. 
 
 보다 자세하게 이들을 하나하나 써 보면, 우선 $\rho\vert_T$가 unitary representation이라는 사실로부터 우리는 다음의 irreducible decomposition
 
@@ -78,12 +76,6 @@ $$\rho(t)(v)=\lambda_i(t)v\qquad \lambda_i(t)\in \mathbb{C}^\times$$
 $$V=\bigoplus_\lambda V_\lambda;\qquad V_\lambda=\{v\in V\mid t\cdot v=\lambda(t)v\text{ for all $t\in T$}\}$$
 
 을 통해 irreducible decomposition이 주어진 것으로 생각하자. 그럼 각각의 $t\in T$에 대하여, $\rho(t)$는 바로 이 decomposition에 의하여 대각화되고, 각각의 eigenspace $V_\lambda$에 해당하는 고유값은 $\lambda(t)$이다. 이와 다른 $t$의 선택은 위의 decomposition은 그대로 두고, 각각의 eigenspace $V_\lambda$에 해당하는 고유값만 바뀌는 것이다. 
-
-한편 $\rho\vert_T$가 unitary representation이므로 각각의 $\lambda_i$는 $S^1$에 값을 가지며, 이를 강조하여 $\rchi_{\lambda_i}:T\rightarrow S^1$으로 다시 적기로 하자. 그럼 $\rchi_{\lambda_i}\circ\exp$가 $(\mathfrak{t},+)$에서 $S^1$으로의 smooth homomorphism이므로 다음의 식
-
-$$\rchi_{\lambda_i}(\exp(X))=e^{2\pi i \lambda_i(X)}\qquad\text{for all $X\in \mathfrak{t}$}$$
-
-을 만족하는 linear functional $\lambda_i:\mathfrak{t}\rightarrow \mathbb{R}$이 존재하고, 이는 $0$에서의 미분으로 결정되므로 유일하다. 거꾸로 $\exp:\mathfrak{t}\rightarrow T$가 surjective이므로 $\rchi_{\lambda_i}$ 또한 $\lambda_i$에 의해 결정된다. 앞으로 $\lambda_i$는 $\mathfrak{t}$ 위의 이 linear functional을, $\rchi_{\lambda_i}$는 그에 대응하는 $T$ 위의 character를 가리킨다.
 
 직관적으로 $t\mapsto e^{2\pi i t\lambda_i(X)}$를 각속도 $\lambda_i(X)$를 갖는 각운동이라 생각할 수 있고, 이러한 관점을 도입하면 우리는 각각의 $X\in \mathfrak{t}$가 주어졌을 때, 이 방향으로의 각속도 $\lambda_i(X)$가 얼마인지를 통해 이 torus action을 설명할 수 있다는 것을 안다. 이 때 각각의 $\lambda_i$들을 우리는 *weight*라 부른다. 그럼 우리는 각각의 weight $\lambda_i$마다 적당한 $V_i$가 존재하여, 이 위에서는 torus action이 $t\cdot v=\rchi_{\lambda_i}(t)v$로 작동하는 것을 안다. 이러한 $V_i$를 *weight space*라 부른다. 
 
@@ -175,7 +167,7 @@ $$N\rightarrow\Aut(T);\qquad n\mapsto (t\mapsto ntn^{-1})$$
 
 으로 작용한다. 그런데 $\Aut(T)$는 torus $T=\mathbb{R}^k/\mathbb{Z}^k$의 lattice가 어디로 옮겨지는지에 의해 결정되고, 이는 $\GL(k;\mathbb{Z})$에 $\Ad(n)$을 통해 담겨있다. 즉 이 action은 $N$에서 $\GL(k;\mathbb{Z})$로의 연속함수로 생각할 수 있다. 그런데 $\GL(k;\mathbb{Z})$는 discrete이므로 $N$의 identity component $N_0$을 생각하면 $N_0$은 모두 항등행렬로 옮겨져야 한다. 즉, $N_0$은 $T$ 위에 자명하게 작용한다. 
 
-이제 임의의 1-parameter subgroup $\alpha:\mathbb{R}\rightarrow N_0$을 생각하면, $N_0$의 원소들이 $T$와 commute하므로 $\alpha(\mathbb{R})\cdot T$는 connected abelian subgroup이고, 따라서 그 closure $\overline{\alpha(\mathbb{R})\cdot T}$는 compact connected abelian subgroup, 즉 $T$를 포함하는 torus이다. 그럼 $T$의 maximality로부터 $\overline{\alpha(\mathbb{R})\cdot T}=T$이고, 특히 $\alpha(\mathbb{R})\subseteq T$이다. 그런데 [§리 군, ⁋정리 20](/ko/math/lie_theory/Lie_groups#thm20)의 $\dd{\exp}_0=\id$과 [\[미분다양체\] §부분다양체와 역함수 정리, ⁋따름정리 5](/ko/math/manifolds/submanifolds#cor5)에 의하여 $\exp$는 $N_0$의 Lie algebra에서 $0$의 적당한 열린근방을 항등원의 열린근방 위로 diffeomorphic하게 보내므로, 1-parameter subgroup들의 image는 항등원의 어떠한 열린근방을 덮으며 따라서 connected group $N_0$을 생성한다. 즉 $N_0=T$이다.
+이제 임의의 1-parameter subgroup $\alpha:\mathbb{R}\rightarrow N_0$에 대하여, $\alpha(\mathbb{R})\cdot T=T$가 성립해야 하고, 이로부터 $\alpha(\mathbb{R})\subseteq T$여야 함을 안다. 그런데 [\[미분다양체\] §벡터장, ⁋정리 6](/ko/math/manifolds/vector_fields#thm6)에 의하여 이들은 $N_0$에서 항등원의 어떠한 열린근방을 덮으며, 따라서 $N_0$을 생성한다. 즉 $N_0=T$이다.
 
 따라서 $N/T$는 정확하게 $N$의 connected component의 개수이며, $N$은 compact Lie group $G$의 closed subspace로서 마찬가지로 compact이므로 이것이 무한할 수 없다.
 :::
@@ -202,7 +194,7 @@ $$q^{-1}(t)=\{(gT, (gT)\cdot t)\mid gT\in W\}$$
 
 이다. 여기서 $W$가 $N/T$로 정의된 Weyl group이며, 우리는 $q^{-1}(t)$가 $W$와 일대일 대응됨을 안다.
 
-따라서 남은 것은 이들이 모두 같은 sign을 가져서 mapping degree가 정확히 $\lvert W\rvert$로 나온다는 것을 보이는 것이다. 이를 위해 $G/T\times T$와 $G$의 tangent space를 모두 $\mathfrak{g}$와 동일시한다. 구체적으로, $G$가 compact이므로 $\mathfrak{g}$ 위에는 $\Ad$-invariant inner product가 존재하며, 이러한 inner product를 하나 고정하기로 하자. 그럼 Lie algebra $\mathfrak{g}$를 $\mathfrak{t}$와 그 orthogonal complement $\mathfrak{f}=\mathfrak{t}^\perp$의 direct sum
+따라서 남은 것은 이들이 모두 같은 sign을 가져서 mapping degree가 정확히 $\lvert W\rvert$로 나온다는 것을 보이는 것이다. 이를 위해 $G/T\times T$와 $G$의 tangent space를 모두 $\mathfrak{g}$와 동일시한다. 구체적으로, Lie algebra $\mathfrak{g}$를 $\mathfrak{t}$와 그 orthogonal complement $\mathfrak{f}=\mathfrak{t}^\perp$의 direct sum
 
 $$\mathfrak{g}=\mathfrak{t}\oplus\mathfrak{f}$$
 
@@ -216,15 +208,15 @@ $$\dd{q_{(eT,t)}}(X,0)=\frac{d}{\dd{\epsilon}}\bigg\vert_{\epsilon=0}q(eT, t\exp
 
 $$\dd{q_{(eT,t)}}(0,Y)=\frac{d}{\dd{\epsilon}}\bigg\vert_{\epsilon=0}q(\exp(\epsilon Y)T, t)=\frac{d}{\dd{\epsilon}}\bigg\vert_{\epsilon=0}\exp(\epsilon Y)t\exp(-\epsilon Y)$$
 
-이다. 이제 이 곡선을 left translation을 통해 $\mathfrak{g}$와 동일시하기 위해 앞에 $t^{-1}$을 곱하면
+이다. 이제 $t=\exp(H)$ ($H\in\mathfrak{t}$)로 쓰면,
 
-$$t^{-1}\exp(\epsilon Y)t\exp(-\epsilon Y)=\exp(\epsilon\Ad_t^{-1}(Y))\exp(-\epsilon Y)$$
+$$\exp(\epsilon Y)t\exp(-\epsilon Y)=\exp(\epsilon Y)\exp(H)\exp(-\epsilon Y)=\exp(\Ad_{\exp(\epsilon Y)}(H))=\exp(e^{\epsilon\ad_Y}H)$$
 
-이고, 곱의 미분법을 적용하면
+이고, 따라서
 
-$$\frac{d}{\dd{\epsilon}}\bigg\vert_{\epsilon=0}t^{-1}\exp(\epsilon Y)t\exp(-\epsilon Y)=\Ad_t^{-1}(Y)-Y$$
+$$\frac{d}{\dd{\epsilon}}\bigg\vert_{\epsilon=0}\exp(\epsilon Y)t\exp(-\epsilon Y)=\frac{d}{\dd{\epsilon}}\bigg\vert_{\epsilon=0}\exp(H+\epsilon[Y,H])=\exp(H)\cdot [Y,H]$$
 
-이다. 여기서 $\Ad_t$는 $\mathfrak{t}$를 보존하고 inner product가 $\Ad$-invariant이므로 $\mathfrak{f}=\mathfrak{t}^\perp$ 또한 보존하며, 따라서 이 값은 다시 $\mathfrak{f}$에 속한다. 정리하면, 적절한 identification 하에서
+이다. 여기서 $\mathfrak{t}$가 abelian이므로 $[Y,H]\in\mathfrak{f}$이고, $\exp(H)=t$이므로 이는 $t\cdot(\Ad_t^{-1}(Y)-Y)$로 쓸 수 있다. 정리하면, 적절한 identification 하에서
 
 $$\dd{q_{(eT,t)}}=\begin{pmatrix} I & 0 \\ 0 & \Ad_t^{-1}\vert_\mathfrak{f}-I \end{pmatrix}$$
 
@@ -234,7 +226,7 @@ $$\dd{q_{(eT,t)}}=\begin{pmatrix} I & 0 \\ 0 & \Ad_t^{-1}\vert_\mathfrak{f}-I \e
 
 $$[H,Y]=\frac{d}{\dd{\epsilon}}\bigg\vert_{\epsilon=0}\Ad_{\exp(\epsilon H)}(Y)=0$$
 
-이므로 $Y$는 $\mathfrak{t}$의 모든 원소와 commute한다. 그런데 $\mathfrak{t}$는 $\mathfrak{g}$의 maximal abelian subalgebra인데, 만일 $\mathfrak{t}$를 포함하는 더 큰 abelian subalgebra $\mathfrak{a}$가 있었다면 $\overline{\exp(\mathfrak{a})}$가 $T$를 포함하는 더 큰 compact connected abelian subgroup, 즉 torus가 되어 $T$의 maximality에 모순이기 때문이다. 따라서 $Y\in\mathfrak{t}$이고, 따라서 $Y\in\mathfrak{f}\cap\mathfrak{t}=\{0\}$이다. 즉 $\Ad_t^{-1}\vert_\mathfrak{f}-I$는 가역이다.
+이므로 $Y$는 $\mathfrak{t}$의 모든 원소와 commute한다. 그런데 $\mathfrak{t}$는 maximal abelian subalgebra이므로 $Y\in\mathfrak{t}$이고, 따라서 $Y\in\mathfrak{f}\cap\mathfrak{t}=\{0\}$이다. 즉 $\Ad_t^{-1}\vert_\mathfrak{f}-I$는 가역이다.
 
 마지막으로, $q^{-1}(t)$의 모든 점에서 $\dd{q}$의 determinant가 같은 부호를 갖는지 확인하자. 임의의 $w\in W$를 택하고 이를 $x\in N$이 represent한다 하자. 그럼 $q(xT,x^{-1}tx)=t$이므로 $(xT, x^{-1}tx)\in q^{-1}(t)$이다. 이 점에서의 differential을 계산하기 위해, $q$의 정의로부터
 
@@ -244,11 +236,7 @@ $$q(gT, s)=gsg^{-1}$$
 
 $$\dd{q_{(xT, x^{-1}tx)}}=\Ad_x\circ \dd{q_{(eT, t)}}\circ (\text{left translation})$$
 
-이다. 여기서 $x\in N$이므로 $\Ad_x$는 $\mathfrak{t}$를 보존하고, inner product가 $\Ad$-invariant이므로 $\mathfrak{f}=\mathfrak{t}^\perp$도 보존한다. 한편 $\Ad_x$가 이 inner product에 대하여 orthogonal이므로 $\det(\Ad_x)=\pm1$인데, $G$가 connected이고 $g\mapsto\det(\Ad_g)$가 연속이며 $\det(\Ad_e)=1$이므로 $\det(\Ad_x)=1$이다. 즉
-
-$$\det(\Ad_x\vert_\mathfrak{t})\cdot\det(\Ad_x\vert_\mathfrak{f})=\det(\Ad_x)=1$$
-
-이 성립하여 두 block의 부호가 서로 상쇄되고, 따라서 $\dd{q_{(xT, x^{-1}tx)}}$의 determinant는 $\dd{q_{(eT,t)}}$의 determinant와 같다.
+이다. 특히 $\Ad_x\vert_\mathfrak{f}$와 $\Ad_x\vert_\mathfrak{t}$는 모두 determinant가 $1$인 linear map이며 (전자는 orthogonal map이므로, 후자는 $x\in N$이므로 $\Ad_x$가 $\mathfrak{t}$를 보존하므로), 따라서 $\dd{q_{(xT, x^{-1}tx)}}$의 determinant는 $\dd{q_{(eT,t)}}$의 determinant와 같다.
 
 한편 $\det(\Ad_t^{-1}\vert_\mathfrak{f}-I)$는 $w\cdot t$에 대해서도 동일하다. 실제로
 
@@ -272,15 +260,15 @@ Compact connected Lie group $G$에 대해 다음이 성립한다.
 
 $$G=\bigcup_{g\in G}gTg^{-1}$$
 
-을 얻는다. 이는 [정리 8](#thm8)의 두 결과를 하나의 식으로 적은 것이다.
+을 얻는다. 이를 *Cartan decomposition*이라 부른다.
 
 ## Weyl group parametrization
 
-위의 decomposition은 $G$의 각 원소가 어떠한 maximal torus에 속한다는 것을 말해주지만, 이 decomposition을 더 명시적으로 기술할 수 있다. 핵심은 [보조정리 7](#lem7)에서 정의한 map
+Cartan decomposition은 $G$의 각 원소가 어떠한 maximal torus에 속한다는 것을 말해주지만, 이 decomposition을 더 명시적으로 기술할 수 있다. 핵심은 [보조정리 7](#lem7)에서 정의한 map
 
 $$q:G/T\times T\rightarrow G;\qquad (gT,t)\mapsto gtg^{-1}$$
 
-의 fiber들을 Weyl group이 기술해준다는 사실이다.
+이 $\lvert W\rvert$-to-1 covering이라는 사실이다. 이로부터 $G$의 각 원소는 $\lvert W\rvert$개의 preimage를 가지며, 이들 간의 관계를 Weyl group이 정확히 기술해준다.
 
 구체적으로, $G/T\times T$ 위에 다음의 $W$-action을 정의하자.
 
@@ -294,11 +282,7 @@ $$q(w\cdot(gT,t))=q(gw^{-1}T, wtw^{-1})=gw^{-1}(wtw^{-1})wg^{-1}=gtg^{-1}=q(gT,t
 
 $$(G/T\times T)/W\rightarrow G$$
 
-을 유도한다. 이 함수는 [정리 8](#thm8)에 의하여 surjective이지만, 단사는 아니다. 가령 $G=\SU(2)$와 $t=-I$의 경우 임의의 $g\in G$에 대하여 $g(-I)g^{-1}=-I$이므로
-
-$$q^{-1}(-I)=G/T\times\{-I\}$$
-
-이고, $G/T$가 무한집합이므로 이는 하나의 $W$-orbit이 아니다. 단사성이 성립하는 것은 fiber가 정확히 하나의 $W$-orbit인 점들 위에서이며, [보조정리 7](#lem7)의 증명이 계산한 것이 바로 $T$의 generator $t$가 그러한 점이라는 사실이다. 즉 $q$의 mapping degree가 $\lvert W\rvert$라는 것은 모든 fiber가 $\lvert W\rvert$개의 점으로 이루어진다는 뜻이 아니며, 이는 generator들과 그 conjugate 위에서 성립한다.
+을 유도한다. [보조정리 7](#lem7)은 이 함수가 bijection임을 증명한다.
 
 한편, $G$의 conjugacy class들의 공간을 $\Conj(G)$라 하자. 그럼 각 conjugacy class 
 
@@ -310,7 +294,7 @@ $$[g]=\{hgh^{-1}\mid h\in G\}$$
 Maximal torus $T$의 두 원소가 $G$에서 conjugate인 것과 이들이 Weyl group action의 같은 orbit에 속하는 것이 동치이다.
 :::
 ::: 증명
-$T$의 두 원소 $x,y$가 서로 conjugate이라 하자. 즉 적당한 $g\in G$에 대하여 $gxg^{-1}=y$이다. 이제 $T$는 abelian이고 $y\in T$이므로 $T\subseteq Z_G(y)$이며, 마찬가지로 $y=gxg^{-1}\in gTg^{-1}$이므로 $gTg^{-1}\subseteq Z_G(y)$이다. 두 subgroup은 connected이고 항등원을 포함하므로 identity component $Z_G(y)^0$에 포함되고, $Z_G(y)^0$은 compact connected Lie group이며 그 안에서도 $T$와 $gTg^{-1}$은 maximal torus이다. 따라서 [정리 8](#thm8)에 의하여 $T=h(gTg^{-1})h^{-1}$이도록 하는 $h\in Z_G(y)^0$이 존재하며, 이로부터 $(hg)x(hg)^{-1}=y$이고 $hg\in N_G(T)$이다. 즉 $y=(hgT)\cdot x$이므로 $x$와 $y$는 같은 $W$-orbit에 속한다.
+$T$의 두 원소 $x,y$가 서로 conjugate이라 하자. 즉 적당한 $g\in G$에 대하여 $gxg^{-1}=y$이다. 이제 $T$와 $gTg^{-1}$을 비교하면 이들은 $y$의 centralizer $Z_G(y)$의 maximal torus이다. 따라서 $T=h(gTg^{-1})h^{-1}$이도록 하는 $h\in Z_G(y)$가 존재하며, 이로부터 $(hg)x(hg)^{-1}=y$이고 $hg\in N_G(T)$이다. 즉 $y=(hgT)\cdot x$이므로 $x$와 $y$는 같은 $W$-orbit에 속한다.
 
 역으로, $x,y$가 같은 $W$-orbit에 속한다면 자명히 $G$에서 conjugate이다.
 :::
@@ -335,18 +319,18 @@ $$c_{h}:G\rightarrow G;\qquad g\mapsto hgh^{-1}$$
 
 $$c_{h}(gtg^{-1})=h(gtg^{-1})h^{-1}=(hg)t(hg)^{-1}=q(hgT, t)$$
 
-이 성립한다. 즉, $c_h$는 $q$를 통해 $(gT, t)$를 $(hgT, t)$로 보내는 함수로 올라가므로, $G/T\times T$ 위에 다음의 $G$-action이 정의된 것으로 생각할 수 있다.
+이 성립한다. 즉, $(G/T\times T)/W\cong G$를 통해 $c_h$를 $G/T\times T$로 옮겨왔을 때 $c_h$는  $(gT, t)$를 $(hgT, t)$로 보내므로, $G/T\times T$ 위에 다음의 $G$-action이 정의된 것으로 생각할 수 있다.
 
 $$h\cdot(gT,t)=(hgT,t)$$
 
 이제 이 action이 $W$-action과 commute하는 것은 자명하며, 따라서 $G$는 quotient $(G/T\times T)/W$ 위에도 잘 정의된 action을 유도한다. 이 observation으로부터 다음을 얻는다.
 
 ::: 명제 11
-$q$가 유도하는 surjection $(G/T\times T)/W\rightarrow G$는 $G$-equivariant이다. 여기서 $(G/T\times T)/W$ 위의 $G$-action은 다음의 식
+Identification $(G/T\times T)/W\cong G$ 하에서, conjugation action은 다음과 같이 표현된다.
 
 $$h\cdot[(gT,t)]=[(hgT,t)]$$
 
-으로, $G$ 위의 $G$-action은 conjugation으로 주어진다. 즉 conjugation action은 $G/T$ 성분의 left multiplication으로 나타나며, $T$ 성분은 보존된다.
+즉, $G/T$ 성분에는 left multiplication으로 작용하고, $T$ 성분은 보존한다.
 :::
 
 한편, 우리는 [명제 10](#prop10)에 의하여 $T/W$와 $\Conj(G)$ 사이에 일대일대응이 존재함을 안다. $c_h$는, 정의에 의해, $G$의 conjugacy class를 변화시키지 않으며 이것이 위의 명제에서 $T$ 방향의 변화가 없는 것으로 반영된 것을 확인할 수 있다. 그 대신 conjugation action은 정확하게 $G/T$ 위에 작용하는 것으로 생각할 수 있다.
@@ -421,7 +405,7 @@ $$\begin{pmatrix}0&1\\-1&0\end{pmatrix}\begin{pmatrix}e^{i\theta}&0\\0&e^{-i\the
 Maximal torus $T$의 원소 $t$가 *regular*라는 것은 $wtw^{-1}=t$를 만족하는 $w\in W$가 오직 $w=e$뿐인 것이다. 반대로, $wtw^{-1}=t$인 $w\neq e$가 존재하면 $t$를 *singular<sub>특이</sub>*라 한다.
 :::
 
-즉, regular element는 Weyl group action의 stabilizer가 trivial한 원소이고, singular element는 nontrivial한 stabilizer를 갖는 원소이다. [보조정리 7](#lem7)에서 preimage를 계산할 때 택했던 $T$의 generator $t$가 바로 이러한 원소인데, $wtw^{-1}=t$라면 $w$는 $\overline{\langle t\rangle}=T$ 전체 위에 자명하게 작용하고, 아래 [명제 14](#prop14)의 증명에서 보일 $Z_G(T)=T$로부터 $w=e$이기 때문이다. 이로부터 mapping degree를 계산할 때 우리가 사용한 generator들이 regular element였음을 알며, 이러한 원소를 regular element라 부르는 것이 자연스럽다. 한편 문헌에 따라서는 $t$가 정확히 하나의 maximal torus에 포함되는 것을 regular의 정의로 삼기도 하는데, 이 글에서 regular는 언제나 [정의 12](#def12)의 의미이다.
+즉, regular element는 Weyl group action의 stabilizer가 trivial한 원소이고, singular element는 nontrivial한 stabilizer를 갖는 원소이다. 일반적으로 $q$의 mapping degree를 계산하기 위해서는 $q$의 regular value에서의 값을 계산해야 하는데, orbit-stabilizer theorem을 생각하면 preimage가 이와 같이 $\lvert W\rvert$개의 image를 가지기 위해서는 반드시 stabilizer가 trivial해야한다는 것을 안다. 이로부터 이러한 원소를 regular element라 부르는 것이 자연스럽다.
 
 ::: 예시 13
 $\SU(2)$의 경우, $T=\{\text{diag}(e^{i\theta}, e^{-i\theta})\}$이고 $W=\mathbb{Z}_2$가 $\theta\mapsto -\theta$로 작용한다. 따라서:
@@ -442,9 +426,7 @@ Compact connected Lie group $G$의 maximal torus $T$에 대하여:
 3. Singular 원소들의 집합은 유한 개의 subgroup들의 합집합이다.
 :::
 ::: 증명
-먼저 $Z_G(T)=T$임을 보인다. $n\in Z_G(T)$가 주어졌다 하고, $T$와 $n$이 생성하는 subgroup의 closure를 $A$라 하자. $n$이 $T$의 모든 원소와 commute하므로 $A$는 compact abelian subgroup이며, 그 identity component $A_0$은 $T$를 포함하는 compact connected abelian subgroup, 즉 torus이므로 $T$의 maximality로부터 $A_0=T$이다. 그럼 $A/T$는 $nT$가 생성하는 finite cyclic group이고, 그 order를 $m$이라 하면 $n^m\in T$이다. 이제 $T$의 generator $t$를 하나 택하면 torus 위에서 $m$제곱하는 함수가 surjective이므로 $u^m=n^{-m}t$인 $u\in T$가 존재하고, $n$과 $u$가 commute하므로 $(nu)^m=n^mu^m=t$이다. 따라서 $nu$가 생성하는 subgroup의 closure는 $\overline{\langle t\rangle}=T$와 $nu$를 모두 포함하므로 $A$와 같다. 한편 [정리 8](#thm8)에 의하여 $nu$를 포함하는 maximal torus $T'$이 존재하고, $T'$이 closed subgroup이므로 $A\subseteq T'$이며 특히 $T\subseteq T'$이므로 $T$의 maximality로부터 $T=T'$이다. 즉 $n\in T$이다.
-
-(1)과 (2): 각 $w\in W$, $w\neq e$에 대하여, fixed point set $\{t\in T\mid wtw^{-1}=t\}$는 $T$의 closed subgroup이다. 만일 이것이 $T$ 전체였다면 $w$를 represent하는 $N$의 원소가 $Z_G(T)=T$에 속하여 $w=e$이므로, 이는 $T$의 proper closed subgroup이다. Singular 원소들의 집합은 이들의 유한 합집합이므로 closed이고, 그 여집합(regular 원소들)은 dense open이다.
+(1)과 (2): 각 $w\in W$, $w\neq e$에 대하여, fixed point set $\{t\in T\mid wtw^{-1}=t\}$는 $T$의 proper closed subgroup이다. Singular 원소들의 집합은 이들의 유한 합집합이므로 closed이고, 그 여집합(regular 원소들)은 dense open이다.
 
 (3): 각 $w\neq e$에 대한 fixed point set이 $T$의 closed subgroup이고, $W$가 유한이므로 유한 개의 subgroup들의 합집합이다.
 :::

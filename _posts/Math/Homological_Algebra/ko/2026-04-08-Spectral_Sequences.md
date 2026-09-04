@@ -10,8 +10,6 @@ sidebar:
 
 date: 2026-04-08
 weight: 7
-revising: true
-drift_needed: true
 
 ---
 
@@ -75,10 +73,10 @@ $$F^p H^n = \im\bigl(H^n(F^p A^\bullet) \rightarrow H^n(A^\bullet)\bigr)$$
 이제 우리는 spectral sequence의 convergence에 대해 설명한다. 직관적으로 spectral sequence의 각 page $E_r^{p,q}$는 $r$이 증가함에 따라 점진적으로 정제되는 대상이므로, 우리는 이 근사가 최종적으로 어떠한 것에 수렴하는지를 살펴보아야 한다. 따라서 우선 다음을 정의한다.
 
 ::: 정의 4
-Spectral sequence $\{E_r^{p,q}, d_r\}$가 *regular*하다는 것은, 각 $(p,q)$에 대해 충분히 큰 $r$에서 [정의 1](#def1)의 식이 $E_{r+1}^{p,q}=E_r^{p,q}$를 주는 것, 곧 $(p,q)$에서 나가는 $d_r^{p,q}$와 $(p,q)$로 들어오는 $d_r^{p-r,q+r-1}$이 모두 $0$이 되는 것이다. 이때 안정화된 값을 $E_\infty^{p,q}$로 정의한다.
+Spectral sequence $\{E_r^{p,q}, d_r\}$가 *regular*하다는 것은, 각 $(p,q)$에 대해 충분히 큰 $r$에서 $E_r^{p,q} = E_{r+1}^{p,q}$이 성립하는 것이다. 이때 안정화된 값을 $E_\infty^{p,q}$로 정의한다.
 :::
 
-Regularity는 spectral sequence의 page가 각 bidegree에서 더 이상 변하지 않는다는 의미이다. 문헌에 따라서는 $(p,q)$에서 나가는 $d_r$이 충분히 큰 $r$에서 $0$이 되는 것만을 요구하는 더 약한 조건을 regular라 부르기도 하며, 우리의 조건은 $E_\infty^{p,q}$를 위와 같이 정의하기 위해 이보다 강하게 잡은 것이다. 어쨌든 이 조건은 다음의 정의를 가능하게 해 준다.
+Regularity는 spectral sequence의 page가 각 bidegree에서 더 이상 변하지 않는다는 의미이므로, 다음의 정의를 가능하게 해 준다.
 
 ::: 정의 5
 Spectral sequence $\{E_r^{p,q}, d_r\}$가 filtered graded object $(H^n, F)$에 *수렴*한다는 것은, 각 $(p,q)$에 대해
@@ -162,7 +160,7 @@ Filtered complex $(A^\bullet, F)$이 *bounded*라는 것은 각각의 $n$마다 
 
 $$\cdots\supset F^{p-1}A^n\supset F^p A^n \supset F^{p+1}A^n\supset\cdots$$
 
-을 시작했을 때, 이 filtration이 bounded되는 것을 의미한다. 그럼 각각의 $(p,q)$마다 $F^sA^{p+q}=A^{p+q}$이고 $F^tA^{p+q}=0$이도록 하는 $s<t$가 존재하므로, 고정된 $(p,q)$에 대하여, differential $d_r$이 이 구간을 나가버릴 정도로 $r$을 크게 잡으면 bounded filtered complex는 regular라는 것을 확인할 수 있다.
+을 시작했을 때, 이 filtration이 bounded되는 것을 의미한다. 그럼 각각의 $(p,q)$마다 $F^nA^{p+q}=A^{p+q}$이고 $F^mA^{p+q}=0$이도록 하는 $(m, n)$이 존재하므로, 고정된 $(p,q)$에 대하여, differential $d_r$이 이 구간을 나가버릴 정도로 $r$을 크게 잡으면 bounded filtered complex는 regular라는 것을 확인할 수 있다.
 
 뿐만 아니라, 우리는 위에서 설명한 $E_r^{p,q}$의 원소들에 대한 설명으로부터
 

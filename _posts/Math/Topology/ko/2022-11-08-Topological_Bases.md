@@ -10,8 +10,6 @@ sidebar:
 
 date: 2022-11-08
 weight: 2
-revising: true
-drift_needed: true
 
 ---
 
@@ -26,7 +24,7 @@ drift_needed: true
 특별히 $X\in\mathcal{T}$이므로 $\mathcal{B}$는 $X$의 covering이기도 하다. ([\[집합론\] §집합의 합, ⁋정의 1](/ko/math/set_theory/sum_of_sets#def1)) 정의에 의해 $\mathcal{B}$의 원소들은 모두 열린집합들이니, 이를 $\mathcal{B}$가 $X$의 *open covering<sub>열린덮개</sub>*이라고 표현하면 적절할 것이다.
 
 ::: 명제 2
-위상공간 $(X,\mathcal{T})$와 $\mathcal{T}$의 부분집합 $\mathcal{B}$에 대하여, $\mathcal{B}$가 $\mathcal{T}$의 base인 것은 세 가지 조건
+위상공간 $(X,\mathcal{T})$에 대하여, $\mathcal{B}$가 $\mathcal{T}$의 base인 것은 세 가지 조건
 
 1. 각각의 $x\in X$에 대하여, 적어도 하나의 $B\in \mathcal{B}$가 존재하여 $x\in B$이고,
 2. $x$를 포함하는 $\mathcal{B}$의 임의의 두 원소 $B_1$, $B_2$에 대하여, 또 다른 $B_3\in\mathcal{B}$가 존재하여 $x\in B_3$이고 $B_3\subseteq B_1\cap B_2$를 만족하고,
@@ -51,10 +49,10 @@ drift_needed: true
 한편 [정의 1](#def1)을 더 다듬어서 다음과 같이 *subbase*를 정의할 수 있다.
 
 ::: 정의 3
-위상공간 $(X,\mathcal{T})$의 *subbase<sub>부분기저</sub>* $\mathcal{S}$는 임의의 $U\in\mathcal{T}$와 $x\in U$에 대하여, 유한개의 $S_1,\ldots,S_n\in\mathcal{S}$가 존재하여 $x\in S_1\cap\cdots\cap S_n\subseteq U$이도록 하는 $X$의 open covering을 의미한다.
+위상공간 $(X,\mathcal{T})$의 *subbase<sub>부분기저</sub>* $\mathcal{S}$는 임의의 $U\in\mathcal{T}$에 대하여, $S\subseteq U$인 $S\in\mathcal{S}$가 존재하는 $X$의 open covering을 의미한다.
 :::
 
-$\mathcal{S}$의 원소들의 유한한 교집합들을 모아 새로운 모임 $\mathcal{B}$를 만들 수 있다. 열린집합들의 유한한 교집합은 다시 열린집합이므로 $\mathcal{B}$는 $\mathcal{T}$의 부분집합이고, 이 모임이 base인지는 [명제 2](#prop2)의 세 조건으로 확인한다. 우선 $\mathcal{S}$가 $X$의 covering이고 $\mathcal{S}\subseteq\mathcal{B}$이므로 1번 조건이 성립한다. 또 $\mathcal{B}$의 원소들은 $\mathcal{S}$의 유한한 교집합으로 얻어지고, 따라서 $B_1\cap B_2$를 해봐야 $\mathcal{S}$의 원소들의 유한한 교집합이므로 $B_3=B_1\cap B_2$로 두면 2번 조건도 성립한다. 마지막으로 3번 조건은 [정의 3](#def3)이 요구하는 것 그 자체이다. 결국 $\mathcal{B}$는 $\mathcal{T}$의 base가 된다. 
+$\mathcal{S}$의 원소들의 유한한 교집합들을 모아 새로운 모임 $\mathcal{B}$를 만들 수 있다. 이 모임이 base인지를 체크하는 데 필요한 것은 오직 2번 조건 뿐인데, 어차피 $\mathcal{B}$의 원소들은 $\mathcal{S}$의 유한한 교집합으로 얻어지고, 따라서 $B_1\cap B_2$를 해봐야 $\mathcal{S}$의 원소들의 유한한 교집합이므로 $\mathcal{B}$가 base가 된다. 
 
 ## 위상공간의 국소기저
 
@@ -99,9 +97,7 @@ $$\mathcal{N}(x)=\mathop{\uparrow}\mathcal{B}(x):=\bigcup_{B\in\mathcal{B}(x)}\m
 - $\mathcal{N}(x)$의 임의의 원소 $V$에 대하여, $W\subseteq V$를 만족하는 $W\in\mathcal{B}(x)$가 존재하므로 $x\in V$이다.
 - $\mathcal{N}(x)$의 임의의 원소 $V$에 대하여, $W\subseteq V$를 만족하는 $W\in\mathcal{B}(x)$를 택하자. 그럼 $W\in\mathcal{B}$이며, 따라서 임의의 $y\in W$에 대해 $W\in\mathcal{B}(y)$이다. $W\subseteq V$이므로, 이로부터 $V\in\mathcal{N}(y)$가 모든 $y\in W$에 대해 성립함을 안다.
 
-이제 [§열린집합, ⁋명제 6](/ko/math/topology/open_sets#prop6)을 적용하여, 각 $\mathcal{N}(x)$가 $x$의 모든 근방들의 모임이도록 하는 위상 $\mathcal{T}$를 얻을 수 있다. 이 위상에서 $\mathcal{B}$의 원소들은 모두 열린집합인데, $B\in\mathcal{B}$와 임의의 $y\in B$에 대하여 $B\in\mathcal{B}(y)$이므로 $B\in\mathcal{N}(y)$이고, 따라서 [§열린집합, ⁋명제 5](/ko/math/topology/open_sets#prop5)에 의하여 $B$가 열린집합이기 때문이다. 한편 $\mathcal{N}(x)=\mathop{\uparrow}\mathcal{B}(x)$라는 정의로부터 임의의 $V\in\mathcal{N}(x)$마다 $B\subseteq V$를 만족하는 $B\in\mathcal{B}(x)$가 존재하므로, $\mathcal{B}(x)$는 $(\mathcal{N}(x),\subseteq)$의 coinitial subset, 즉 $x$에서의 local base이다. 그럼 [명제 5](#prop5)에 의해 $\mathcal{B}$는 $\mathcal{T}$의 base가 된다.
-
-남은 것은 유일성이다. $\mathcal{B}$를 base로 갖는 $X$ 위의 위상 $\mathcal{T}'$가 주어졌다 하면, [정의 1](#def1)에 의하여 $\mathcal{T}'$의 원소들은 모두 $\mathcal{B}$의 원소들의 합집합으로 적히고, 거꾸로 $\mathcal{B}\subseteq\mathcal{T}'$이므로 $\mathcal{B}$의 원소들의 임의의 합집합은 다시 $\mathcal{T}'$에 속한다. 즉 $\mathcal{T}'$는 $\mathcal{B}$의 원소들의 합집합 전체로 결정되며, 이는 $\mathcal{T}$에 대해서도 마찬가지이므로 $\mathcal{T}'=\mathcal{T}$이다.
+이제 [§열린집합, ⁋명제 6](/ko/math/topology/open_sets#prop6)을 적용하여 위상 $\mathcal{T}$를 얻을 수 있고, 이 위상공간에서 $\mathcal{B}(x)$는 $x$에서의 local base가 되므로 [명제 5](#prop5)에 의해 $\mathcal{B}$는 $\mathcal{T}$의 base가 된다.
 :::
 
 이 과정을 통해 $\mathcal{B}$로부터 얻어지는 위상을 $\mathcal{B}$에 의해 생성된 위상이라 부르며, 비슷하게 subbase $\mathcal{S}$로부터 base를 만들고, 이 base를 통해 생성된 위상을 $\mathcal{S}$로부터 얻어지는 위상이라 부른다.

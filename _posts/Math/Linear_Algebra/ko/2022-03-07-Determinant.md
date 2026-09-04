@@ -12,9 +12,7 @@ sidebar:
 date: 2022-03-07
 
 weight: 13
-revising: true
 
-drift_needed: true
 
 ---
 
@@ -52,17 +50,17 @@ $$f(v_1,\ldots, v_i, \ldots, v_j,\ldots, v_n)=-f(v_1,\ldots, v_j,\ldots, v_i,\ld
 이 성립한다면 $f$를 *alternating multilinear map<sub>교대다중선형사상</sub>*이라 부른다.
 :::
 
-위와 같이 multilinear map $f:V\times\cdots\times V\rightarrow W$이 주어졌다 하자. 그럼 $f$가 *antisymmetric*이라는 것은 임의의 $v_1,\ldots, v_n$와 임의의 $i\neq j$에 대하여, 만일 $v_i=v_j$이면 $f(v_1,\ldots, v_n)=0$인 것이다. 문헌에 따라서는 이 두 조건의 이름을 서로 바꾸어, 두 성분이 같을 때 값이 $0$이 되는 조건을 alternating이라 부르기도 한다.
+위와 같이 multilinear map $f:V\times\cdots\times V\rightarrow W$이 주어졌다 하자. 그럼 $f$가 *antisymmetric*이라는 것은 임의의 $v_1,\ldots, v_n$와 임의의 $i\neq j$에 대하여, 만일 $v_i=v_j$이면 $f(v_1,\ldots, v_n)=0$인 것이다.
 
 ::: 명제 3
-$\ch \mathbb{K}\neq 2$인 field $\mathbb{K}$에 대하여, multilinear map $f:V\times\cdots\times V\rightarrow W$가 alternating인 것은 $f$가 antisymmetric인 것과 동치이다.
+Multilinear map $f:V\times\cdots\times V\rightarrow W$가 alternating인 것은 $f$가 antisymmetric인 것과 동치이다.
 :::
 ::: 증명
 우선 $f$가 alternating이라 가정하자. 그럼 임의의 $v_i=v_j$를 만족하는 임의의 $v_1,\ldots, v_n\in V$에 대하여
 
 $$\begin{aligned}f(v_1,\ldots,v_i,\ldots, v_j,\ldots, v_n)&=f(v_1,\ldots, v_j,\ldots,v_i,\ldots, v_n)\\&=-f(v_1,\ldots, v_i,\ldots, v_j,\ldots, v_n)\end{aligned}$$
 
-이 성립한다. (첫째 등식은 $v_i=v_j$라는 사실을, 둘째 등식은 $f$가 alternating이라는 사실을 사용하였다.) 따라서 $x=f(v_1,\ldots, v_n)$으로 두면 $2x=0$이고, $\ch \mathbb{K}\neq 2$이므로 $2=1+1\neq 0$이어서 양변을 $2$로 나누면 $x=0$을 얻는다. 즉 $f$는 antisymmetric이기도 하다.
+이 성립하므로 $f$는 antisymmetric이기도 하다. (첫째 등식은 $v_i=v_j$라는 사실을, 둘째 등식은 $f$가 alternating이라는 사실을 사용하였다.)
 
 거꾸로 $f$가 antisymmetric이라 하자. 임의의 $v_1,\ldots, v_n$과 임의의 $i\neq j$에 대하여, $f$가 antisymmetric이라는 사실은 다음의 식
 
@@ -75,19 +73,13 @@ $$\begin{aligned}0&=f(v_1,\ldots, v_i,\ldots, v_i,\ldots, v_n)+f(v_1,\ldots, v_i
 이 되고, 다시 $f$는 antisymmetric이므로 $v_i, v_j$가 각각 두 번 나오는 첫째 항, 마지막 항이 $0$이 된다. 이로부터 원하는 결론을 얻는다.
 :::
 
-특히, $\ch \mathbb{K}\neq 2$이고 $f$가 변수 $n$개의 alternating multilinear map이며 $v_1,\ldots, v_n$ 중 하나가 다른 $n-1$개의 벡터들의 일차결합이라 가정하자. 그럼 multilinearity를 적용한 후, 위의 명제를 적용하면 $f(v_1,\ldots, v_n)=0$임을 알 수 있다. 
+특히, $f$가 변수 $n$개의 alternating multilinear map이고 $v_1,\ldots, v_n$ 중 하나가 다른 $n-1$개의 벡터들의 일차결합이라 가정하자. 그럼 multilinearity를 적용한 후, 위의 명제를 적용하면 $f(v_1,\ldots, v_n)=0$임을 알 수 있다. 
 
 이제 우리는 행렬식을 정의할 수 있게 되었다.
 
 ::: 정의 4
-$\ch \mathbb{K}\neq 2$인 field $\mathbb{K}$에 대하여, $D(e_1,\ldots, e_n)=1$을 만족하는 alternating multilinear map $D:(\mathbb{K}^n)^n\rightarrow \mathbb{K}$를 *행렬식<sub>determinant</sub>*이라 부른다. 
+$D(e_1,\ldots, e_n)=1$을 만족하는 alternating multilinear map $D:(\mathbb{K}^n)^n\rightarrow \mathbb{K}$를 *행렬식<sub>determinant</sub>*이라 부른다. 
 :::
-
-위의 정의에서 $\ch\mathbb{K}=2$인 경우를 제외한 것은 그 경우 주어진 조건이 $D$를 유일하게 결정하지 못하기 때문이다. 가령 두 원소 $0,1$만을 갖는 field $\mathbb{F}_2$ 위에서 $n=2$인 경우, $v=(a_1,a_2)$와 $w=(b_1,b_2)$에 대하여 정의된 두 함수
-
-$$D(v,w)=a_1b_2+a_2b_1,\quad D'(v,w)=a_1b_1+a_1b_2+a_2b_1$$
-
-은 모두 bilinear이고 두 변수를 맞바꾸어도 값이 변하지 않는데, $\mathbb{F}_2$에서는 $-1=1$이므로 이는 곧 둘 다 alternating이라는 것이다. 두 함수 모두 $D(e_1,e_2)=D'(e_1,e_2)=1$을 만족하지만 $D(e_1,e_1)=0$과 $D'(e_1,e_1)=1$이 다르므로, [정의 4](#def4)의 조건은 두 함수를 구별하지 못한다.
 
 우리는 아직 행렬식이 존재한다는 것도, 유일하다는 것도 보이지 않았기에 $\det$ 대신 $D$라는 표기를 사용했다. 다음 글에서 행렬식의 계산을 소개하며 이를 증명하고, 이후부터 표준적인 표기법 $\det$를 사용한다.
 

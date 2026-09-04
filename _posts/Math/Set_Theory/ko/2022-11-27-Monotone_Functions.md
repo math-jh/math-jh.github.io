@@ -10,9 +10,7 @@ sidebar:
 
 date: 2021-08-22
 weight: 15
-revising: true
 
-drift_needed: true
 
 ---
 
@@ -60,7 +58,7 @@ $$x_i\leq y_i\leq z_i\implies x_i\leq z_i$$
 
 앞선 두 절의 내용은 preorder relation을 모두 order relation으로 바꾸어도 성립한다. 즉 원래 주어진 preorder relation이 antisymmetry를 가져서 order relation이 되었다면, [명제 1](#prop1)과 [명제 2](#prop2)에서 얻어지는 preorder relation 또한 antisymmetry를 만족하고 따라서 order relation이 된다.
 
-이 경우 strict order를 살펴볼 때에는 약간의 주의가 필요하다. 가령 집합 $B$에 order relation $R$이 주어졌다 하자. [예시 3](#ex3)을 통해 만들어진 order relation $\leq$로부터 만들어지는 strict order $<$는 다음의 관계
+이 경우 strict order를 살펴볼 때에는 약간의 주의가 필요하다. 가령 집합 $B$에 order relation $R$이 주어졌다 하고, $R$에 의해 정의되는 strict order를 $S$라 하자. [예시 3](#ex3)을 통해 만들어진 order relation $\leq$로부터 만들어지는 strict order $<$는 다음의 관계
 
 $$f< g\iff\forall x\bigl((x\in A)\implies (f(x)<_{\tiny R}g(x))\bigr)$$
 

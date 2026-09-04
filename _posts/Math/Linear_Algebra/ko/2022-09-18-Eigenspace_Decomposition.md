@@ -12,9 +12,7 @@ sidebar:
 date: 2022-09-18
 
 weight: 16
-revising: true
 
-drift_needed: true
 
 ---
 
@@ -26,21 +24,21 @@ $$Av=\lambda v$$
 
 을 만족한다. 따라서, $E_\lambda$로 제한했을 때 $A$는 아주 다루기 쉬운 대상인 $v\mapsto \lambda v$가 된다. 
 
-더 일반적으로, $A$를 $\mathbb{K}^n$에서 $\mathbb{K}^n$으로의 linear map으로 생각하고, 정의역 $\mathbb{K}^n$을 고유공간 $E_\lambda$들로 덮을 수 있다 가정하자. 여기서 $\Spec(A)$는 $A$의 spectrum을 나타낸다. ([§특성다항식, ⁋정의 3](/ko/math/linear_algebra/characteristic_polynomial#def3)) 즉
+더 일반적으로, $A$를 $\mathbb{K}^n$에서 $\mathbb{K}^n$으로의 linear map으로 생각하고, 정의역 $\mathbb{K}^n$을 고유공간 $E_\lambda$들로 덮을 수 있다 가정하자. 즉
 
-$$\mathbb{K}^n=\span\left(\bigcup_{\lambda\in\Spec(A)}E_\lambda\right)$$
+$$\mathbb{K}^n=\span\left(\bigcup_{\lambda\in\sigma(A)}E_\lambda\right)$$
 
 이라 하자. 그럼 임의의 $v\in\mathbb{K}^n$에 대하여, $v_\lambda\in E_\lambda$들이 각각 존재하여
 
-$$v=\sum_{\lambda\in\Spec(A)}v_\lambda$$
+$$v=\sum_{\lambda\in\sigma(A)}v_\lambda$$
 
 이라 쓸 수 있으며, 따라서 
 
-$$Av=A\left(\sum_{\lambda\in\Spec(A)}v_\lambda\right)=\sum_{\lambda\in\Spec(A)}Av_\lambda$$
+$$Av=A\left(\sum_{\lambda\in\sigma(A)}v_\lambda\right)=\sum_{\lambda\in\sigma(A)}Av_\lambda$$
 
 이고, 위의 논증에 의하여 $Av_\lambda=\lambda v_\lambda$이므로 다음의 식
 
-$$Av=\sum_{\lambda\in\Spec(A)}\lambda v_\lambda$$
+$$Av=\sum_{\lambda\in\sigma(A)}\lambda v_\lambda$$
 
 을 얻는다. 물론 위의 계산이 말이 되기 위해서는 $v$를 $v_\lambda$들의 합으로 나타내는 방법이 유일해야 한다. 이를 다음과 같이 정의한다.
 
@@ -95,7 +93,7 @@ $$v=\sum_{i\in I} w_i$$
 
 을 만족하는 $w_i$들이 유일하게 존재한다. 또, $W_i$들 각각에서 $w_i$들을 $\mathcal{B}_i$의 원소들의 일차결합으로 유일하게 표현할 수 있다. 이로부터 $\bigcup\mathcal{B}_i$가 $V$의 basis가 된다는 것을 알 수 있다.
 
-거꾸로 $W_i$들의 basis $\mathcal{B}_i$가 $i\neq j$일 때마다 $\mathcal{B}_i\cap\mathcal{B}_j=\emptyset$을 만족하고, $\mathcal{B}=\bigcup_{i\in I}\mathcal{B}_i$가 $V$의 basis라 하자. 임의의 $v\in V$는 $\mathcal{B}$의 원소들의 일차결합으로 쓰이므로, 각 항을 그 항이 속한 $\mathcal{B}_i$에 따라 모으면 유한개를 제외하고 모두 영인 $w_i\in W_i$들에 대하여 $v=\sum_{i\in I}w_i$를 얻는다. 따라서 남은 것은 이러한 표현의 유일성이다. 만일 $w_i, w_i'\in W_i$들이 $\sum_{i\in I}w_i=\sum_{i\in I}w_i'$을 만족한다면, 각 $w_i-w_i'$을 $\mathcal{B}_i$의 원소들의 일차결합으로 전개한 후 모두 더하여 $\mathcal{B}$의 원소들의 일차결합이 $0$이 되는 식을 얻는다. 이 때 $\mathcal{B}_i$들이 서로소이므로 서로 다른 $i$에서 온 항들이 겹치는 일이 없고, 따라서 $\mathcal{B}$의 일차독립성으로부터 이 일차결합의 계수는 모두 $0$이다. 즉 각 $i$에 대하여 $w_i=w_i'$이다.
+이 논증을 거꾸로 뒤집으면 반대방향 또한 보일 수 있다.
 :::
 
 따라서 $\dim V=\sum_{i\in I}\dim W_i$임을 알 수 있다. 
@@ -154,7 +152,7 @@ $$\beta_1''x_1+\beta_2''x_2+\cdots+\beta_m''x_m=0$$
 이 된다. 가정에 의해 $\lambda_i-\lambda_m\neq 0$이므로, $1\leq i\leq m-1$에 대해서는 $\beta_i''=0$인 것과 $\beta_i=0$인 것이 동치이다. 따라서 $\beta_i''\neq 0$을 만족하는 $1\leq i\leq m-1$은 $k-1$개이고, $\beta_m''=0$이므로 $\supp(\beta_i'')_{1\leq i\leq m}$의 크기는 $k-1$이다. 이는 $(\beta_i)_{1\leq i\leq m}$의 최소성에 모순이므로, 집합 $\{x_1,x_2,\ldots, x_m\}$은 일차독립이다.
 :::
 
-이로부터, 임의의 행렬 $A$와 그 고윳값들 $\lambda\in\Spec(A)$, 이에 대응되는 고유공간들을 $E_\lambda$, 그리고 이들의 basis를 $\mathcal{B}_\lambda$라 한다면 $\mathcal{B}=\bigcup_{\lambda\in\Spec(A)}\mathcal{B}_\lambda$가 $\mathbb{K}^n$의 일차독립인 부분집합이 된다는 것을 안다. 실제로 $\mathcal{B}$의 원소들의 일차결합이 $0$이라 하면, 같은 $\lambda$에서 온 항들을 모아 $w_\lambda\in E_\lambda$를 만들어 이를 $\sum_{\lambda}w_\lambda=0$의 꼴로 적을 수 있다. 만일 영이 아닌 $w_\lambda$가 존재한다면 이들은 서로 다른 고윳값에 대응되는 고유벡터들이므로 [명제 4](#prop4)로부터 일차독립이어야 하는데, 이는 $\sum_\lambda w_\lambda=0$에 모순이다. 따라서 모든 $\lambda$에 대하여 $w_\lambda=0$이고, 각 $\mathcal{B}_\lambda$가 $E_\lambda$의 basis이므로 처음 일차결합의 계수는 모두 $0$이다. 그러나 일반적으로 $\mathcal{B}$가 $\mathbb{K}^n$의 basis가 될 이유는 없다. 가령 [§특성다항식, ⁋예시 7](/ko/math/linear_algebra/characteristic_polynomial#ex7)을 보면, $\mathbb{K}=\mathbb{R}$에서 $\Spec(J)=\emptyset$이므로 $\mathcal{B}=\emptyset$이다. 뿐만 아니라 $A$의 특성다항식이 정확히 $n$개의 해를 갖는다고 가정해도 비슷한 문제가 생길 수 있는데, 가령 다음의 행렬
+이로부터, 임의의 행렬 $A$와 그 고윳값들 $\lambda\in\sigma(A)$, 이에 대응되는 고유공간들을 $E_\lambda$, 그리고 이들의 basis를 $\mathcal{B}_\lambda$라 한다면 $\mathcal{B}=\bigcup_{\lambda\in\sigma(A)}\mathcal{B}_\lambda$가 $\mathbb{K}^n$의 일차독립인 부분집합이 된다는 것을 안다. 그러나 일반적으로 $\mathcal{B}$가 $\mathbb{K}^n$의 basis가 될 이유는 없다. 가령 [§특성다항식, ⁋예시 7](/ko/math/linear_algebra/characteristic_polynomial#ex7)을 보면, $\mathbb{K}=\mathbb{R}$에서 $\sigma(J)=\emptyset$이므로 $\mathcal{B}=\emptyset$이다. 뿐만 아니라 $A$의 특성다항식이 정확히 $n$개의 해를 갖는다고 가정해도 비슷한 문제가 생길 수 있는데, 가령 다음의 행렬
 
 $$A=\begin{pmatrix}1&1&1\\0&1&1\\0&0&1\end{pmatrix}$$
 
@@ -182,7 +180,7 @@ $$\begin{aligned}A'&=X^{-1}(AX)=\begin{pmatrix}y_1\\ y_2\\ \vdots\\ y_n\end{pmat
 &=\begin{pmatrix}\lambda&0&\cdots& 0&\cdots&y_1\cdot Ax_n\\ 0&\lambda&\cdots &0&\cdots &y_2\cdot Ax_n\\ \vdots&\vdots&\ddots&\vdots&\ddots&\vdots\\ 0&0&\cdots&\lambda&\cdots&y_k\cdot Ax_n\\ \vdots&\vdots&\ddots&\vdots&\ddots&\vdots\\ 0&0&\cdots &0&\cdots&y_n\cdot Ax_n \end{pmatrix}\\
 &=\begin{pmatrix}\lambda I_k&B\\ 0&C\end{pmatrix}\end{aligned}$$
 
-이 된다. 따라서 $A$의 특성다항식을 $p_A(\mathbf{x})$라 적으면, $A$와 $A'$은 같은 linear map을 각각 standard basis와 $\{x_1,\ldots, x_n\}$에서 나타낸 행렬이므로 [§특성다항식, ⁋따름정리 4](/ko/math/linear_algebra/characteristic_polynomial#cor4)으로부터 $p_A(\mathbf{x})=p_{A'}(\mathbf{x})$이고 따라서
+이 된다. 따라서 $A$의 특성다항식을 $p_A(\mathbf{x})$라 적으면, [§특성다항식, ⁋따름정리 4](/ko/math/linear_algebra/characteristic_polynomial#cor4)으로부터 $p_A(\mathbf{x})=p_{A'}(\mathbf{x})$이고 따라서
 
 $$p_A(\mathbf{x})=p_{A'}(\mathbf{x})=\det(\mathbf{x}I-A')=(\mathbf{x}-\lambda)^k\det(\mathbf{x}I_{n-k}-C)$$
 
@@ -256,7 +254,7 @@ $$AB=XD_AX^{-1}XD_BX^{-1}=XD_AD_BX^{-1}=XD_BD_AX^{-1}=BA$$
 두 diagonalizable matrix $A,B$가 조건 $AB=BA$를 만족한다면, $A, B$는 simultaneously diagonalizable이다. 
 :::
 ::: 증명
-본질적으로, 이는 $A$의 eigenvector이면서 동시에 $B$의 eigenvector인 벡터들로 이루어진 $V$의 basis를 찾으면 충분하다. $A$를 사용한 eigenspace decomposition
+본질적으로, 이는 두 행렬 $A,B$가 같은 eigenspace decomposition을 준다는 것을 보이면 충분하다. $A$를 사용한 eigenspace decomposition
 
 $$V=\bigoplus_{\lambda}E_\lambda(A)$$
 
@@ -264,15 +262,7 @@ $$V=\bigoplus_{\lambda}E_\lambda(A)$$
 
 $$A(Bv)=ABv=BAv=B(\lambda v)=\lambda(Bv)$$
 
-인 것으로부터 $Bv\in E_\lambda(A)$임을 안다. 즉 $E_\lambda(A)$는 $B$-invariant subspace이고, 따라서 $B$의 다항식으로 주어지는 임의의 행렬에 대해서도 닫혀 있다.
-
-이제 $B$의 서로 다른 eigenvalue들을 $\mu_1,\ldots, \mu_r$이라 하고, $B$가 diagonalizable이라는 가정으로부터 얻어지는 분해 $V=\bigoplus_{j}E_{\mu_j}(B)$를 생각하자. 각 $j$에 대하여 행렬
-
-$$P_j=\prod_{k\neq j}\frac{1}{\mu_j-\mu_k}(B-\mu_k I)$$
-
-를 정의하면, $v\in E_{\mu_l}(B)$에 대하여 각 인수가 $(\mu_l-\mu_k)/(\mu_j-\mu_k)$배로 작용하므로 $P_jv$는 $l=j$일 때 $v$이고 $l\neq j$일 때 $0$이다. 따라서 $w\in E_\lambda(A)$를 $w=\sum_j w_j$, $w_j\in E_{\mu_j}(B)$로 적으면 $w_j=P_jw$이고, $P_j$가 $B$의 다항식이므로 $w_j\in E_\lambda(A)$이다. 즉 $E_\lambda(A)$의 임의의 원소는 $E_\lambda(A)$ 안에 들어 있는 $B$의 eigenvector들의 합이므로, $E_\lambda(A)$는 $B$의 eigenvector들로 span되고 그 중에서 $E_\lambda(A)$의 basis를 고를 수 있다.
-
-이렇게 고른 basis의 원소들은 영이 아닌 $E_\lambda(A)$의 원소이므로 eigenvalue $\lambda$에 해당하는 $A$의 eigenvector이기도 하다. 한편 $V=\bigoplus_\lambda E_\lambda(A)$이므로 [명제 3](#prop3)으로부터 이들을 모든 $\lambda$에 대하여 모은 것은 $V$의 basis가 되고, 이 basis의 벡터들을 열로 갖는 행렬을 $X$라 하면 $X^{-1}AX$와 $X^{-1}BX$는 모두 대각행렬이 된다. 
+인 것으로부터 $Bv\in E_\lambda(A)$임을 안다. 이제 $B$를 벡터공간 $E_\lambda(A)$ 위에서의 linear operator로 보면, 원래의 linear operator $B$가 diagonalizable이었으므로 $B$는 $E_\lambda(A)$ 위에서도 diagonalizable이고 따라서 $B$의 eigenvector들로 이루어진 $E_\lambda(A)$의 basis가 존재한다. 이제 $E_\lambda(A)$의 임의의 원소는 $A$의 (eigenvalue $\lambda$에 해당하는) eigenvector들이므로, 이들은 $A$의 eigenvector이기도 하다. 
 :::
 
 ## 선형연산자의 고유공간분해
@@ -309,16 +299,16 @@ $$0=Lv=L(Lw)=L^2w\implies w\in\ker(L^2)\subseteq \ker L$$
 다시 원래의 이야기로 돌아오면, 우리는 특별히 $L$이 어떠한 linear operator와 그 eigenvalue에 대하여 $A-\lambda I$의 꼴인 경우가 특별히 궁금하다. 다음 명제는 [보조정리 11](#lem11)을 사용하여 diagonalizability를 간결하게 특징짓는다.
 
 ::: 명제 12
-$\mathbb{K}$가 algebraically closed일 때, 유한차원 $\mathbb{K}$-벡터공간 $V$ 위의 linear operator $A:V\rightarrow V$가 diagonalizable인 것은 모든 고윳값 $\lambda\in\Spec(A)$에 대하여 
+Linear operator $A:V\rightarrow V$가 diagonalizable인 것은 모든 고윳값 $\lambda\in\sigma(A)$에 대하여 
 
 $$\ker(A-\lambda I)^2=\ker(A-\lambda I)$$
 
 인 것과 동치이다.
 :::
 ::: 증명
-우선 $A$가 diagonalizable이라 하자. 그럼 $V=\bigoplus_{\mu\in\Spec(A)} E_\mu(A)$이다. 임의의 $v\in\ker(A-\lambda I)^2$를 취하면, $v=\sum_{\mu\in\Spec(A)}v_\mu$로 유일하게 쓸 수 있고, 
+우선 $A$가 diagonalizable이라 하자. 그럼 $V=\bigoplus_{\mu\in\sigma(A)} E_\mu(A)$이다. 임의의 $v\in\ker(A-\lambda I)^2$를 취하면, $v=\sum_{\mu\in\sigma(A)}v_\mu$로 유일하게 쓸 수 있고, 
 
-$$(A-\lambda I)^2v=\sum_{\mu\in\Spec(A)}(A-\lambda I)^2v_\mu=\sum_{\mu\in\Spec(A)}(\mu-\lambda)^2v_\mu=0$$
+$$(A-\lambda I)^2v=\sum_{\mu\in\sigma(A)}(A-\lambda I)^2v_\mu=\sum_{\mu\in\sigma(A)}(\mu-\lambda)^2v_\mu=0$$
 
 이다. 고유공간 분해의 유일성으로부터 $(\mu-\lambda)^2v_\mu=0$이 모든 $\mu$에 대해 성립해야 하고, $\mu\neq\lambda$일 때는 $v_\mu=0$이므로
 
@@ -342,7 +332,7 @@ $$Av=A(A-\lambda I)w=(A-\lambda I)Aw\in W_\lambda(A)$$
 
 $$A\vert_{W_\lambda(A)}: W_\lambda(A) \rightarrow W_\lambda(A)$$
 
-가 잘 정의된다. 그럼 제한사상의 정의로부터, 만일 $w\in W_\lambda(A)$가 고유값 $\mu$를 갖는 $A\vert_{W_\lambda(A)}$의 고유벡터라면 $w$를 $V$의 원소로 본 것 또한 $A$의 (eigenvalue $\mu$에 해당하는) 고유벡터이다. 거꾸로 $A$의 고유값 $\mu\neq \lambda$과 그에 해당하는 고유벡터 $v$가 주어진다면, $(A-\lambda I)v=(\mu-\lambda)v$이므로 $v=(A-\lambda I)(v/(\mu-\lambda))\in\im(A-\lambda I)=W_\lambda(A)$이고, 따라서 이는 $A\vert_{W_\lambda(A)}$의 고유값--고유벡터 쌍으로 볼 수 있다. 또, $A\vert_{W_\lambda(A)}$의 임의의 고유값 $\mu$에 대하여, 
+가 잘 정의된다. 그럼 [명제 4](#prop4)로부터, 만일 $w\in W_\lambda(A)$가 고유값 $\mu$를 갖는 $A\vert_{W_\lambda(A)}$의 고유벡터라면 $w$를 $V$의 원소로 본 것 또한 $A$의 (eigenvalue $\mu$에 해당하는) 고유벡터이며 거꾸로 $A$의 고유값 $\mu\neq \lambda$과 그에 해당하는 고유벡터가 주어진다면 이는 $A\vert_{W_\lambda(A)}$의 고유값--고유벡터 쌍으로 볼 수 있다는 것도 안다. 또, $A\vert_{W_\lambda(A)}$의 임의의 고유값 $\mu$에 대하여, 
 
 $$\ker (A\vert_{W_\lambda(A)}-\mu I)=\ker (A\vert_{W_\lambda(A)}-\mu I)^2$$
 

@@ -10,8 +10,6 @@ sidebar:
 
 date: 2025-02-05
 weight: 7
-revising: true
-drift_needed: true
 ---
 
 Scheme은 기하적인 동시에 대수적인 대상이므로, 이를 잘 알기 위해서는 앞선 글에서 살펴본 scheme의 위상구조 뿐만 아니라 대수적인 구조도 동시에 고려할 필요가 있으며, 우리는 이전 글에서 이러한 철학이 어떻게 반영되는지를 간략하게 살펴보았다. 이번 글에서는 이 철학을 더욱 발전시킨다. 
@@ -19,10 +17,10 @@ Scheme은 기하적인 동시에 대수적인 대상이므로, 이를 잘 알기
 ## 축소스킴과 정역스킴
 
 ::: 정의 1
-Scheme $X$가 *reduced scheme<sub>축소스킴</sub>*인 것은 임의의 열린집합 $U$에 대하여 $\mathcal{O}_X(U)$가 reduced인 것이다. ([\[대수적 구조\] §분수체, ⁋정의 12](/ko/math/algebraic_structures/field_of_fractions#def12)) 비슷하게, $X$가 *integral<sub>정역스킴</sub>*인 것은 $X\neq\emptyset$이고 공집합이 아닌 임의의 열린집합 $U$에 대하여 $\mathcal{O}_X(U)$가 integral domain인 것이다. ([\[대수적 구조\] §분수체, ⁋정의 5](/ko/math/algebraic_structures/field_of_fractions#def5))
+Scheme $X$가 *reduced scheme<sub>축소스킴</sub>*인 것은 임의의 열린집합 $U$에 대하여 $\mathcal{O}_X(U)$가 reduced인 것이다. ([\[대수적 구조\] §분수체, ⁋정의 11](/ko/math/algebraic_structures/field_of_fractions#def11)) 비슷하게, $X$가 *integral<sub>정역스킴</sub>*인 것은 공집합이 아닌 임의의 열린집합 $U$에 대하여 $\mathcal{O}_X(U)$가 integral domain인 것이다. ([\[대수적 구조\] §분수체, ⁋정의 5](/ko/math/algebraic_structures/field_of_fractions#def5))
 :::
 
-여기서 $\mathcal{O}_X(\emptyset)=0$은 integral domain이 아니므로 열린집합에서 공집합을 제외하였고, $X$ 자체가 공집합인 경우를 배제한 것은 irreducible space가 공집합이 아닌 것으로 정의되기 때문이다. ([\[위상수학\] §차원, ⁋정의 6](/ko/math/topology/dimension#def6)) 그럼 다음이 성립한다.
+그럼 다음이 성립한다.
 
 ::: 보조정리 2
 Scheme $X$가 reduced scheme인 것은 임의의 $x\in X$에 대하여 $\mathcal{O}_{X, x}$가 reduced ring인 것과 동치이다.
@@ -56,15 +54,15 @@ $$\mathcal{O}_X(U)\hookrightarrow\prod_{x\in U} \mathcal{O}_{X,x}$$
 Affine scheme $\Spec A$가 irreducible인 것은 nilradical $\mathfrak{N}(A)$가 prime ideal인 것과 동치이다.
 :::
 ::: 증명
-$\Spec A$가 irreducible인 것은 $\Spec A\neq\emptyset$이고 이 공간의 임의의 두 basis $D(f),D(g)\neq\emptyset$에 대하여 $D(fg)\neq\emptyset$인 것과 동치이다. 그런데 다음 동치관계
+$\Spec A$가 irreducible인 것은 이 공간의 임의의 두 basis $D(f),D(g)\neq\emptyset$에 대하여 $D(fg)\neq\emptyset$인 것과 동치이다. 그런데 다음 동치관계
 
 $$D(f)\neq\emptyset\iff f\not\in \mathfrak{p}\text{ for some $\mathfrak{p}$}\iff f\not\in \mathfrak{N}(A)$$
 
-로부터, ([\[대수적 구조\] §분수체, ⁋명제 15](/ko/math/algebraic_structures/field_of_fractions#prop15)) 명제 $D(f),D(g)\neq\emptyset\implies D(fg)\neq\emptyset$은 다음 명제
+로부터, ([\[대수적 구조\] §분수체, ⁋명제 14](/ko/math/algebraic_structures/field_of_fractions#prop14)) 명제 $D(f),D(g)\neq\emptyset\implies D(fg)\neq\emptyset$은 다음 명제
 
 $$f,g\not\in \mathfrak{N}(A)\implies fg\not\in \mathfrak{N}(A)$$
 
-와 동치임을 안다. 한편 $\Spec A\neq\emptyset$인 것은 $A\neq 0$, 즉 $\mathfrak{N}(A)\neq A$인 것과 동치이므로, 두 조건을 합치면 이는 정확히 $\mathfrak{N}(A)$가 prime ideal이라는 조건이다. 
+와 동치임을 안다. 
 :::
 
 이제 다음을 얻는다. 
@@ -73,26 +71,26 @@ $$f,g\not\in \mathfrak{N}(A)\implies fg\not\in \mathfrak{N}(A)$$
 $X$가 integral인 것과, $X$가 reduced, irreducible인 것이 동치이다.
 :::
 ::: 증명
-우선 $X$가 integral이라 하자. 임의의 integral domain은 항상 reduced이므로 $X$는 reduced scheme이다. 만일 $X$가 irreducible scheme이 아니라 하면, $X\neq\emptyset$이므로 서로소이고 공집합이 아닌 두 열린집합 $U_1,U_2\neq\emptyset$가 존재한다. 그럼 열린집합 $U_1\cup U_2$에 대하여
+우선 $X$가 integral이라 하자. 임의의 integral domain은 항상 reduced이므로 $X$는 reduced scheme이다. 만일 $X$가 irreducible scheme이 아니라 하면, 서로소이고 공집합이 아닌 두 열린집합 $U_1,U_2\neq\emptyset$가 존재한다. 그럼 열린집합 $U_1\cup U_2$에 대하여
 
 $$\mathcal{O}_X(U_1\cup U_2)=\mathcal{O}_X(U_1)\times \mathcal{O}_X(U_2)$$
 
 이고, 우변은 integral domain이 아니므로 이는 $X$가 integral이라는 가정에 모순이다.
 
-거꾸로 irreducible reduced scheme $X$가 주어졌다 하고, $X$가 integral scheme임을 보이자. 즉, $X$의 공집합이 아닌 임의의 열린집합 $U$가 주어졌을 때, $\mathcal{O}_X(U)$가 integral domain임을 보여야 한다. 우선 다음 주장을 보이자.
+거꾸로 irreducible reduced scheme $X$가 주어졌다 하고, $X$가 integral scheme임을 보이자. 즉, $X$의 임의의 열린집합 $U$가 주어졌을 때, $\mathcal{O}_X(U)$가 integral domain임을 보여야 한다. 우선 다음 주장을 보이자.
 
-> **주장.** 공집합이 아닌 임의의 affine open subset $\Spec A\cong V\subseteq X$에 대하여, $\mathcal{O}_X(V)\cong A$는 항상 integral domain이다.  
+> **주장.** 임의의 affine open subset $\Spec A\cong V\subseteq X$에 대하여, $\mathcal{O}_X(V)\cong A$는 항상 integral domain이다.  
 > **증명.** $X$가 reduced라는 가정으로부터 $A$가 reduced ring이어야 하는 것을 안다. 한편, $X$는 $X$의 irreducible closed subset이므로 $V$도 irreducible이고 ([\[위상수학\] §차원, ⁋명제 15](/ko/math/topology/dimension#prop15)) 따라서 [보조정리 3](#lem3)으로부터 $\mathfrak{N}(A)=0$는 prime ideal이 되어 $A$가 integral domain이다. 
 
-이제 일반적으로 $X$의 공집합이 아닌 임의의 열린집합 $U$에 대하여 $\mathcal{O}_X(U)$가 integral domain임을 보인다. 이를 위해 두 원소 $f,g\in \mathcal{O}_X(U)$가 $fg=0$을 만족한다고 하자. 그럼 $U$의 두 열린집합
+이제 일반적으로 $X$의 임의의 열린집합 $U$에 대하여 $\mathcal{O}_X(U)$가 integral domain임을 보인다. 이를 위해 두 원소 $f,g\in \mathcal{O}_X(U)$가 $fg=0$을 만족한다고 하자. 그럼 $U$의 두 열린집합
 
 $$D_U(f)=\{x\in U\mid f_x\not\in \mathfrak{m}_x\},\qquad D_U(g)=\{x\in U\mid g_x\not\in \mathfrak{m}_x\}$$
 
-와 이들의 여집합 $Z_U(f), Z_U(g)$에 대하여 $U=Z_U(f)\cup Z_U(g)$가 성립한다. 이제 $X$가 irreducible이므로, [\[위상수학\] §차원, ⁋명제 15](/ko/math/topology/dimension#prop15)으로부터 그 열린집합 $U$ 또한 마찬가지라는 것을 알고 따라서 $Z_U(f)=U$이거나 $Z_U(g)=U$여야 한다. 일반성을 잃지 않고 $Z_U(f)=U$라 하자. 그럼 $U$의 공집합이 아닌 임의의 open affine subset $V$에 대하여, $V$에서
+와 이들의 여집합 $Z_U(f), Z_U(g)$에 대하여 $U=Z_U(f)\cup Z_U(g)$가 성립한다. 이제 $X$가 irreducible이므로, [\[위상수학\] §차원, ⁋명제 15](/ko/math/topology/dimension#prop15)으로부터 그 열린집합 $U$ 또한 마찬가지라는 것을 알고 따라서 $Z_U(f)=U$이거나 $Z_U(g)=U$여야 한다. 일반성을 잃지 않고 $Z_U(f)=U$라 하자. 그럼 $U$의 임의의 open affine subset $V$에 대하여, $V$에서
 
 $$D_V(f)=\{x\in V\mid f_x\not\in \mathfrak{m}_x\}$$
 
-로 정의하면 $D_V(f)=D_U(f)\cap V$이고, 이것이 공집합이기 위해서는 $f\vert_V$가 $\mathcal{O}_X(V)$의 nilpotent element이다. 그런데 $\mathcal{O}_X(V)$는 위의 주장에 의하여 integral domain이므로, 이로부터 $f\vert_V=0$이어야 함을 알고, 이것이 $U$의 공집합이 아닌 임의의 open affine subset $V$에 대해 성립하므로 $f=0$이어야 한다. 
+로 정의하면 $D_V(f)=D_U(f)\cap V$이고, 이것이 공집합이기 위해서는 $f\vert_V$가 $\mathcal{O}_X(V)$의 nilpotent element이다. 그런데 $\mathcal{O}_X(V)$는 위의 주장에 의하여 integral domain이므로, 이로부터 $f\vert_V=0$이어야 함을 알고, 이것이 $U$의 임의의 open affine subset $V$에 대해 성립하므로 $f=0$이어야 한다. 
 :::
 
 한편 [§스킴의 위상구조, ⁋예시 6](/ko/math/scheme_theory/topology_of_schemes#ex6)을 보면, 임의의 scheme $X$의 irreducibility를 stalk만 보아서는 판단할 수 없다는 것을 안다. 가령 $Z(\x(\x-1))$는 두 개의 component로 쪼개지므로 각 component의 점은 다른 component의 점에 대한 정보를 알지 못한다. 따라서 integrality 또한 stalk만 보아서는 판단하지 못한다. 
@@ -256,12 +254,12 @@ $$A \rightarrow \prod_\text{\scriptsize $\mathfrak{p}$ associated prime} A_\math
 
 는 injective인 것을 안다. 따라서 locally Noetherian scheme $X$의 임의의 열린집합 $U$에 대하여 다음의 함수
 
-$$\Gamma(U, \mathcal{O}_X) \rightarrow \prod_\text{\scriptsize $x$ associated in $U$} \mathcal{O}_{X,x}\tag{$\ast\ast$}$$
+$$\Gamma(U, \mathcal{O}_X) \rightarrow \prod_\text{\scriptsize $x$ associated in $U$} \mathcal{O}_{X,x}\tag{$\ast$}$$
 
 가 injective이다. $U$가 affine이 아닌 경우에도 이는 성립하는데, $U$를 Noetherian ring들의 spectrum인 affine open subset $V_k$들로 덮으면 [정의 8](#def8) 직후의 재서술로부터 $V_k$의 associated point들은 정확히 $V_k$에 속하는 $U$의 associated point들이므로, 위의 affine에서의 injectivity를 각각의 $V_k$에 적용하여 $f\vert_{V_k}=0$을 얻기 때문이다. 
 
 ::: 정의 12
-Locally Noetherian scheme $X$와, $X$의 associated point들을 모두 포함하는 열린집합 $U$에 대하여, $\Gamma(U, \mathcal{O}_X)$의 원소의 ($\ast\ast$)에 의한 image를 $X$ 위에 정의된 *rational function<sub>유리함수</sub>*라 부른다. 
+Locally Noetherian scheme $X$와, $X$의 associated point들을 모두 포함하는 열린집합 $U$에 대하여, $\Gamma(U, \mathcal{O}_X)$의 원소의 ($\ast$)에 의한 image를 $X$ 위에 정의된 *rational function<sub>유리함수</sub>*라 부른다. 
 :::
 
 따라서, 정의에 의해 $X$ 위에 정의된 rational function은 (1) $X$의 모든 associated point들을 포함하는 *정의역* $U$와, (2) 그 위의 함수 $f\in \Gamma(U, \mathcal{O}_X)$의 데이터로 이루어지며, 이러한 pair $(U, f)$와 $(U',f')$는 만일 $U\cap U'$에서 $f$와 $f'$가 같은 함수를 정의하면 같은 함수가 된다. 이러한 pair와 동치관계의 구조는 [\[대수다양체\] §유리사상, ⁋정의 1](/ko/math/algebraic_varieties/rational_maps#def1)에서의 variety 위의 rational function 정의와 정확히 같은 꼴이다. 유일한 차이는 이제 정의역 $U$가 associated point들을 모두 포함해야 한다는 조건이며, associated point들은 classical algebraic geometry에서는 보이지 않던 점들이므로 이는 그리 놀랄 일은 아니다. 
@@ -270,9 +268,9 @@ Locally Noetherian scheme $X$와, $X$의 associated point들을 모두 포함하
 
 $$\mathfrak{p}=\ann(f),\qquad \supp(f)=Z(\mathfrak{p})$$
 
-이도록 하는 nonzero function $f\in \Gamma(X, \mathcal{O}_X)$가 존재하고, 이는 [정의 12](#def12)의 조건을 만족하므로 pair $(X, f)$가 ($\ast\ast$)를 따라 어떠한 nonzero rational function을 정의한다. 
+이도록 하는 nonzero function $f\in \Gamma(X, \mathcal{O}_X)$가 존재하고, 이는 [정의 12](#def12)의 조건을 만족하므로 pair $(X, f)$가 ($\ast$)를 따라 어떠한 nonzero rational function을 정의한다. 
 
-이제 이 associated point $\mathfrak{p}$를 놓치는 열린집합 $U$를 생각하자. 그럼 $Z(\mathfrak{p})$는 $\mathfrak{p}$를 generic point로 갖는 irreducible closed subset이므로 ([§스펙트럼, ⁋명제 16](/ko/math/scheme_theory/spectrums#prop16)), $Z(\mathfrak{p})$의 공집합이 아닌 열린부분집합은 항상 $\mathfrak{p}$를 포함하고, 따라서 우리는 반드시 $U\cap Z(\mathfrak{p})=\emptyset$이어야 함을 안다. 즉, 이러한 열린집합 $U$에 포함된 모든 점들, 특히 $U$에 포함된 associated point들 위에서 $f$의 germ은 $0$이 되어야 한다. 문제는 이러한 열린집합 $U$를 유리함수의 정의역으로 허용할 경우, 위의 ($\ast\ast$)의 injectivity에 의해 $f$는 $0$과 구별할 수 없게 되어버린다. 
+이제 이 associated point $\mathfrak{p}$를 놓치는 열린집합 $U$를 생각하자. 그럼 $Z(\mathfrak{p})$는 $\mathfrak{p}$를 generic point로 갖는 irreducible closed subset이므로 ([§스펙트럼, ⁋명제 16](/ko/math/scheme_theory/spectrums#prop16)), $Z(\mathfrak{p})$의 공집합이 아닌 열린부분집합은 항상 $\mathfrak{p}$를 포함하고, 따라서 우리는 반드시 $U\cap Z(\mathfrak{p})=\emptyset$이어야 함을 안다. 즉, 이러한 열린집합 $U$에 포함된 모든 점들, 특히 $U$에 포함된 associated point들 위에서 $f$의 germ은 $0$이 되어야 한다. 문제는 이러한 열린집합 $U$를 유리함수의 정의역으로 허용할 경우, 위의 ($\ast$)의 injectivity에 의해 $f$는 $0$과 구별할 수 없게 되어버린다. 
 
 가장 단순한 예시로 generic point의 경우를 보면, $\mathfrak{p}$가 어떤 irreducible component $C$의 generic point일 때는 $Z(\mathfrak{p})=C$이므로, 만일 $f$가 $\mathfrak{p}$에서 정의되지 않는다면, 즉 직관적으로 이 점에서 pole을 갖는다면, 위 논증은 $U$가 $C$를 통째로 놓치게 되어 $f\vert_U=0$이 됨을 뜻한다. 마찬가지로 $\mathfrak{p}$가 embedded point일 때는 이 $Z(\mathfrak{p})$가 component 전체가 아니라 작은 닫힌집합으로 바뀔 뿐, 이러한 손실이 여전히 생기게 된다. 
 
@@ -289,7 +287,7 @@ $$(\x_2)\cup(\x_1,\x_2)=(\x_1,\x_2)$$
 
 과 같으므로, non-zerodivisor는 정확히 원점에서 사라지지 않는 원소, 즉 $q(0)\ne0$를 만족하는 $q$에 대하여 $s=q(\x_1)+c'\x_2$의 꼴이다. 이러한 $s$는 두 associated prime $(\x_2),(\x_1,\x_2)$ 어디에도 속하지 않으므로 $D(s)$는 $X$의 두 associated point를 모두 포함하여 [정의 12](#def12)의 조건을 만족하는 유효한 정의역이 되며, [§아핀스킴, ⁋보조정리 6](/ko/math/scheme_theory/affine_schemes#lem6)에 의하여 그 위의 함수들은 $A_s$로 주어진다. 
 
-우리 주장은 이 정의역 $D(s)$에서 정의된 유리함수들만 보아도 이들이 $X$ 전체의 유리함수들이 된다는 것이다. 이를 위해 임의의 정의역 $U$가 주어졌다 하고, $X\setminus U=Z(I)$라 하자. 그럼 $U$가 associated point를 포함해야 하므로, 이를 위해서는 $I$의 원소 중 원점에서 $0$이 되지 않는 함수, 즉 ideal $(\x_1,\x_2)$에 포함되지 않는 원소가 존재해야 한다. 이러한 원소가 정확히 위에서 살펴본 non-zerodivisor $s$이며, $s\in I$로부터 $D(s)\subseteq U$를 얻는다. 즉 임의의 정의역은 언제나 이러한 $D(s)$를 그 안에 포함하며, 이를 통해 $U$ 위에 정의된 함수를 $D(s)$로 제한할 수 있으며, $D(s)$는 모든 associated point를 이미 포함하고 있으므로 ($\ast\ast$)의 injectivity에 의해 이 restriction은 $U$ 위에서 서로 다른 함수를 $D(s)$에서도 다른 것으로 유지한다. 뿐만 아니라 같은 이유에서 $U$에 대한 ($\ast\ast$)는 이 restriction과 $D(s)$에 대한 ($\ast\ast$)의 합성으로 분해되므로, $U$ 위의 함수를 $D(s)$로 제한하여도 그 image, 즉 그것이 정의하는 rational function은 변하지 않는다. 
+우리 주장은 이 정의역 $D(s)$에서 정의된 유리함수들만 보아도 이들이 $X$ 전체의 유리함수들이 된다는 것이다. 이를 위해 임의의 정의역 $U$가 주어졌다 하고, $X\setminus U=Z(I)$라 하자. 그럼 $U$가 associated point를 포함해야 하므로, 이를 위해서는 $I$의 원소 중 원점에서 $0$이 되지 않는 함수, 즉 ideal $(\x_1,\x_2)$에 포함되지 않는 원소가 존재해야 한다. 이러한 원소가 정확히 위에서 살펴본 non-zerodivisor $s$이며, $s\in I$로부터 $D(s)\subseteq U$를 얻는다. 즉 임의의 정의역은 언제나 이러한 $D(s)$를 그 안에 포함하며, 이를 통해 $U$ 위에 정의된 함수를 $D(s)$로 제한할 수 있으며, $D(s)$는 모든 associated point를 이미 포함하고 있으므로 ($\ast$)의 injectivity에 의해 이 restriction은 $U$ 위에서 서로 다른 함수를 $D(s)$에서도 다른 것으로 유지한다. 뿐만 아니라 같은 이유에서 $U$에 대한 ($\ast$)는 이 restriction과 $D(s)$에 대한 ($\ast$)의 합성으로 분해되므로, $U$ 위의 함수를 $D(s)$로 제한하여도 그 image, 즉 그것이 정의하는 rational function은 변하지 않는다. 
 
 이상에서 $X$의 rational function 전체가 이루는 total quotient ring $K(X)$는, [예시 11](#ex11)에서 본 원소의 표기를 그대로 쓰면
 

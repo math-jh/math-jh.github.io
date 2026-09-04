@@ -8,7 +8,6 @@ sidebar:
     nav: "scheme_theory-en"
 date: 2026-05-07
 weight: 1
-revising: true
 translated_at: 2026-07-27T02:15:02+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-07-27T02:15:02+00:00
@@ -79,16 +78,16 @@ $$h_X:(\Sch_{/S})^{\op}\rightarrow\Set,\qquad h_X(T)=\Hom_S(T,X)$$
 
 then this theorem shows that $h_X$ completely determines the scheme $X$ without loss, and from this perspective a scheme can also be understood as a contravariant functor defined on the category $\Sch_{/S}$ of $S$-schemes.
 
-A $\mathbb{K}$-point on a classical variety $V$ was understood simply as a set of coordinates $(a_1,\dotsc,a_n)$ with values in $\mathbb{K}$. In the language of schemes this corresponds to a morphism $\Spec \mathbb{K}\rightarrow V$. The functor of points extends this viewpoint by defining a $T$-valued point of $V$ as a morphism from an arbitrary scheme $T$.
+A $\mathbb{K}$-rational point on a classical variety $V$ was understood simply as a set of coordinates $(a_1,\dotsc,a_n)$ with values in $\mathbb{K}$. In the language of schemes this corresponds to a morphism $\Spec \mathbb{K}\rightarrow V$. The functor of points extends this viewpoint by defining a $T$-valued point of $V$ as a morphism from an arbitrary scheme $T$.
 
 ::: Example 4
-The set of $\mathbb{K}$-points of a classical variety $V\subseteq\mathbb{A}_\mathbb{K}^n$ is $V(\mathbb{K})=\Hom_\mathbb{K}(\Spec \mathbb{K},V)$. This corresponds to evaluating the functor of points $h_V$ at the base scheme $T=\Spec \mathbb{K}$, i.e., $h_V(\Spec \mathbb{K})$. However, substituting $T=\Spec \mathbb{K}[\epsilon]/(\epsilon^2)$ makes $h_V(T)$ parameterize the tangent vectors to $V$ at its $\mathbb{K}$-points.
+The set of $\mathbb{K}$-rational points of a classical variety $V\subseteq\mathbb{A}_\mathbb{K}^n$ is $V(\mathbb{K})=\Hom_\mathbb{K}(\Spec \mathbb{K},V)$. This corresponds to evaluating the functor of points $h_V$ at the base scheme $T=\Spec \mathbb{K}$, i.e., $h_V(\Spec \mathbb{K})$. However, substituting $T=\Spec \mathbb{K}[\epsilon]/(\epsilon^2)$ makes $h_V(T)$ parameterize the tangent vectors to $V$ at its $\mathbb{K}$-points.
 :::
 
 In particular, for the projective line $\mathbb{P}_\mathbb{K}^1$, we can see clearly how infinitesimal structure is revealed through the functor of points. Since $\mathbb{P}_\mathbb{K}^1$ is itself a scheme with homogeneous coordinates, for any $\mathbb{K}$-algebra $R$ the set $\mathbb{P}_\mathbb{K}^1(R)$ is defined as the points on the projective line over $R$.
 
 ::: Example 5
-Let $T=\Spec \mathbb{K}[\epsilon]/(\epsilon^2)$. Considering the $T$-valued points of $\mathbb{P}_\mathbb{K}^1$, that is, morphisms $T\rightarrow\mathbb{P}_\mathbb{K}^1$, these simultaneously determine a point $P$ on $\mathbb{P}_\mathbb{K}^1$ and a tangent vector at that point. Specifically, the point $P$ is obtained by composing the closed embedding $\Spec \mathbb{K}\hookrightarrow T$ with $T\rightarrow\mathbb{P}_\mathbb{K}^1$, and the remaining information becomes an element of the Zariski tangent space at $P$. Thus the $\mathbb{K}[\epsilon]/(\epsilon^2)$-points of $\mathbb{P}_\mathbb{K}^1$ are in bijection with the points constituting the tangent bundle of $\mathbb{P}_\mathbb{K}^1$.
+Let $T=\Spec \mathbb{K}[\epsilon]/(\epsilon^2)$. Considering the $T$-valued points of $\mathbb{P}_\mathbb{K}^1$, that is, morphisms $T\rightarrow\mathbb{P}_\mathbb{K}^1$, these simultaneously determine a point $P$ on $\mathbb{P}_\mathbb{K}^1$ and a tangent vector at that point. Specifically, the point $P$ is obtained by composing the closed immersion $\Spec \mathbb{K}\hookrightarrow T$ with $T\rightarrow\mathbb{P}_\mathbb{K}^1$, and the remaining information becomes an element of the Zariski tangent space at $P$. Thus the $\mathbb{K}[\epsilon]/(\epsilon^2)$-points of $\mathbb{P}_\mathbb{K}^1$ are in bijection with the points constituting the tangent bundle of $\mathbb{P}_\mathbb{K}^1$.
 :::
 
 The functor of points serves as a bridge between geometric intuition and categorical formalism by allowing us to understand a scheme as a representable functor.

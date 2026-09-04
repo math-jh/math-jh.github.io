@@ -12,9 +12,7 @@ sidebar:
 date: 2021-10-13
 
 weight: 6
-revising: true
 
-drift_needed: true
 
 ---
 
@@ -53,16 +51,12 @@ $$L(u-v)=L\bigl(u+(-v)\bigr)=L(u)+L(-v)=L(u)+\bigl(-L(v)\bigr)=L(u)-L(v)$$
 ::: 명제 3
 두 $\mathbb{K}$-벡터공간 $V,W$와 linear map $L:V\rightarrow W$, 스칼라들 $\alpha_1,\ldots,\alpha_n$과 $V$의 벡터들 $v_1,\ldots, v_n$에 대하여
 
-$$L\left(\sum_{i=1}^n\alpha_i v_i\right)=\sum_{i=1}^n\alpha_iL(v_i)$$
+$$L\left(\sum_{i=1}^n\alpha_i v_i\right)=\sum_{i=1}^nL(\alpha_iv_i)$$
 
 이 성립한다.
 :::
 ::: 증명
-$n=1$인 경우 주장은 $L(\alpha_1v_1)=\alpha_1L(v_1)$, 즉 [정의 1](#def1)의 첫째 조건 그 자체이다. 이제 $n-1$개의 벡터에 대하여 주장이 성립한다고 가정하면, $L$이 덧셈을 보존하는 것과 다시 [정의 1](#def1)의 첫째 조건으로부터
-
-$$L\left(\sum_{i=1}^n\alpha_iv_i\right)=L\left(\sum_{i=1}^{n-1}\alpha_iv_i\right)+L(\alpha_nv_n)=\sum_{i=1}^{n-1}\alpha_iL(v_i)+\alpha_nL(v_n)=\sum_{i=1}^n\alpha_iL(v_i)$$
-
-가 성립하여 $n$에 대한 귀납법이 완성된다.
+$n=1$인 경우는 자명하고, $n-1$개의 벡터에 대하여 주장이 성립한다고 가정하면 $L$이 덧셈을 보존하므로 $L(\sum_{i=1}^n\alpha_iv_i)=L(\sum_{i=1}^{n-1}\alpha_iv_i)+L(\alpha_nv_n)=\sum_{i=1}^nL(\alpha_iv_i)$가 성립하여 $n$에 대한 귀납법이 완성된다.
 :::
 
 함수의 합성은 함수가 되듯이, linear map의 합성 또한 linear map이 된다. 뿐만 아니라, 나중에 확인하겠지만 linear map이 역함수를 갖는다면 역함수는 자동으로 linear map이 된다. 
@@ -80,7 +74,7 @@ $$(L_2\circ L_1)(\alpha u)=L_2(L_1(\alpha u))=L_2(\alpha L_1(u))=\alpha(L_2(L_1(
 
 ## 선형사상의 kernel과 image
 
-단사함수와 전사함수는 [\[집합론\] §함수들 사이의 연산](/ko/math/set_theory/operation_of_functions)에서 이미 정의하였지만, 앞으로 linear map을 다루며 계속 쓰이므로 지금 상황에 맞추어 다시 적어둔다.
+이제 다음을 정의하자.
 
 ::: 정의 5
 두 $\mathbb{K}$-벡터공간 $V,W$와 linear map $L:V\rightarrow W$에 대하여,

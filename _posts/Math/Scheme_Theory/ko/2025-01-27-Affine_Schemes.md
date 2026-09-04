@@ -10,8 +10,6 @@ sidebar:
 
 date: 2025-01-27
 weight: 3
-revising: true
-drift_needed: true
 
 ---
 
@@ -31,11 +29,7 @@ drift_needed: true
 ::: 정의 2
 두 ringed space $(X, \mathcal{O}_X)$, $(Y, \mathcal{O}_Y)$에 대하여, 이들 사이의 morphism은 연속함수 $\varphi:X \rightarrow Y$와 $\Sh(Y;\cRing)$에서의 morphism $\varphi^\sharp:\mathcal{O}_Y \rightarrow \varphi_\ast \mathcal{O}_X$의 pair를 의미한다. 
 
-두 locally ringed space $(X, \mathcal{O}_X)$, $(Y, \mathcal{O}_Y)$ 사이의 morphism은 ringed space로서의 morphism $(\varphi,\varphi^\sharp)$이, 추가적으로 각각의 $x\in X$에 대하여 local homomorphism $\varphi_x^\sharp:\mathcal{O}_{Y,\varphi(x)} \rightarrow \mathcal{O}_{X,x}$를 유도하는 것이다. 여기에서 $\varphi_x^\sharp$는 [\[위상수학\] §준층, ⁋명제 11](/ko/math/topology/presheaves#prop11)이 주는 stalk 사이의 사상 $\mathcal{O}_{Y,\varphi(x)} \rightarrow (\varphi_\ast\mathcal{O}_X)_{\varphi(x)}$과, $\varphi(x)$의 열린근방 $W$마다 $\varphi^{-1}(W)$가 $x$의 열린근방인 것으로부터 colimit의 universal property가 주는 canonical morphism
-
-$$(\varphi_\ast\mathcal{O}_X)_{\varphi(x)}=\varinjlim_{W\ni\varphi(x)}\mathcal{O}_X(\varphi^{-1}(W)) \longrightarrow \varinjlim_{U\ni x}\mathcal{O}_X(U)=\mathcal{O}_{X,x}$$
-
-의 합성을 의미한다. 
+두 locally ringed space $(X, \mathcal{O}_X)$, $(Y, \mathcal{O}_Y)$ 사이의 morphism은 ringed space로서의 morphism $(\varphi,\varphi^\sharp)$이, 추가적으로 각각의 $x\in X$에 대하여 local homomorphism $\varphi_x^\sharp:\mathcal{O}_{Y,\varphi(x)} \rightarrow \mathcal{O}_{X,x}$를 유도하는 것이다. 
 :::
 
 ## $\Spec A$ 위에 정의된 대수적인 함수들
@@ -64,7 +58,7 @@ $$S(f)=\{h\in A\mid D(f)\subseteq D(h)\}$$
 
 $$D(h_1h_2)=\Spec A\setminus Z(h_1h_2)=\Spec A\setminus (Z(h_1)\cup Z(h_2))=(\Spec A\setminus Z(h_1))\cap (\Spec A\setminus Z(h_2))=D(h_1)\cap D(h_2)$$
 
-으로부터 $D(f)\subseteq D(h_1)\cap D(h_2)=D(h_1h_2)$임을 안다. 이 식은 단지 [\[대수적 구조\] §분수체, ⁋명제 9](/ko/math/algebraic_structures/field_of_fractions#prop9)를 기하학적으로 설명한 것에 불과하다. 
+으로부터 $D(f)\subseteq D(h_1)\cap D(h_2)=D(h_1h_2)$임을 안다. 이 식은 단지 [\[대수적 구조\] §분수체, ⁋명제 8](/ko/math/algebraic_structures/field_of_fractions#prop8)을 기하학적으로 설명한 것에 불과하다. 
 :::
 
 이제 $\Spec A$의 부분집합 $D(f)$ 위에 정의된 대수적인 함수들의 모임을 $S(f)^{-1}A$로 정의해야 함이 직관적이며, 실제로 그렇게 정의할 것이다. 그 전에 우리는 다음 보조정리를 보인다. 
@@ -91,7 +85,7 @@ $$S(f)^{-1}A\cong S_f^{-1}A$$
 
 이 존재한다. 뿐만 아니라, 만일 $S(g)\subseteq S(f)$라면 다음의 diagram
 
-{% diagram Math/Scheme_Theory/Affine_Schemes-1.svg width="10.55em" alt="localizations" %}
+{% diagram frozen/a212f2a0/Math/Scheme_Theory/Affine_Schemes-1.svg width="10.55em" alt="localizations" %}
 
 이 commute한다.
 :::
@@ -230,7 +224,7 @@ $$\mathcal{O}_{\Spec A, \mathfrak{p}}=\varinjlim_{D(f)\ni\mathfrak{p}} \mathcal{
 
 이 성립한다. 한편 $\mathfrak{p}\in D(f)\iff f\not\in \mathfrak{p}$이므로, 우리는 다음의 diagram
 
-{% diagram Math/Scheme_Theory/Affine_Schemes-8.svg width="37.01em" alt="stalk_and_localization-2" %}
+{% diagram frozen/a212f2a0/Math/Scheme_Theory/Affine_Schemes-8.svg width="37.01em" alt="stalk_and_localization-2" %}
 
 을 얻고, 따라서 주어진 isomorphism을 보이는 것은 단순히 다음의 대수적인 isomorphism
 
@@ -281,11 +275,7 @@ $$A_f \longrightarrow B_{\phi(f)} \longrightarrow B_{\phi(g)},\qquad A_f \longri
 
 $$(\Spec\phi)^\sharp_\mathfrak{q}:\mathcal{O}_{\Spec A, (\Spec \phi)(\mathfrak{q})} \rightarrow\mathcal{O}_{\Spec B, \mathfrak{q}}$$
 
-이 local homomorphism이면 된다. 그런데 $(\Spec \phi)(\mathfrak{q})=\phi^{-1}(\mathfrak{q})$이므로, [보조정리 8](#lem8)의 isomorphism을 통해 양쪽 stalk을 각각 $A_{\phi^{-1}(\mathfrak{q})}$와 $B_\mathfrak{q}$로 동일시하면 $(\Spec\phi)^\sharp_\mathfrak{q}$는 $A_{\phi^{-1}(\mathfrak{q})}$에서 $B_\mathfrak{q}$로의 ring homomorphism이 된다. 이 동일시 하에서 $(\Spec\phi)^\sharp_\mathfrak{q}$가 무엇인지 확인하자. 임의의 $a/s\in A_{\phi^{-1}(\mathfrak{q})}$에 대하여 $s\not\in \phi^{-1}(\mathfrak{q})$, 즉 $\phi^{-1}(\mathfrak{q})\in D(s)$이므로 위에서 정의한 $A_s \rightarrow B_{\phi(s)}$를 생각할 수 있고, [보조정리 8](#lem8)의 diagram에 의하여 $\mathcal{O}_{\Spec A}(D(s)) \rightarrow \mathcal{O}_{\Spec A, \phi^{-1}(\mathfrak{q})}$와 $\mathcal{O}_{\Spec B}(D(\phi(s))) \rightarrow \mathcal{O}_{\Spec B, \mathfrak{q}}$는 각각 localization의 canonical morphism $A_s \rightarrow A_{\phi^{-1}(\mathfrak{q})}$와 $B_{\phi(s)} \rightarrow B_\mathfrak{q}$가 된다. 따라서 stalk에서의 사상은
-
-$$(\Spec\phi)^\sharp_\mathfrak{q}(a/s)=\phi(a)/\phi(s)$$
-
-를 만족한다. 즉 $(\Spec\phi)^\sharp_\mathfrak{q}$는 $\phi$가 localization 사이에 유도하는 canonical morphism이다. 특히 $a\in \phi^{-1}(\mathfrak{q})$라면 $\phi(a)\in \mathfrak{q}$이므로, 이는 $A_{\phi^{-1}(\mathfrak{q})}$의 유일한 maximal ideal $\phi^{-1}(\mathfrak{q})A_{\phi^{-1}(\mathfrak{q})}$를 $B_\mathfrak{q}$의 유일한 maximal ideal $\mathfrak{q}B_\mathfrak{q}$ 안으로 보낸다. 
+이 local homomorphism이면 된다. 그런데 $(\Spec \phi)(\mathfrak{q})=\phi^{-1}(\mathfrak{q})$이고, 따라서 [보조정리 8](#lem8)에 의하여 $(\Spec\phi)^\sharp_\mathfrak{q}$는 $A_{\phi^{-1}(\mathfrak{q})}$에서 $B_{\mathfrak{q}}$로의 ring homomorphism이며 이는 $A_{\phi^{-1}(\mathfrak{q})}$의 유일한 maximal ideal $\phi^{-1}(\mathfrak{q})A_{\phi^{-1}(\mathfrak{q})}$를 $B_\mathfrak{q}$의 유일한 maximal ideal $\mathfrak{q}B_\mathfrak{q}$로 보낸다. 
 
 마지막으로 functoriality를 확인하자. 점 사이의 사상에 대해서는 이미 [§스펙트럼, ⁋명제 2](/ko/math/scheme_theory/spectrums#prop2)에서 확인하였으므로 structure sheaf 쪽만 보면 된다. $\phi=\id_A$인 경우 위의 구성은 각각의 $D(f)$마다 $\epsilon_f$를 extend하는 유일한 사상 $A_f \rightarrow A_f$를 주고 이는 항등사상이므로, $\Spec(\id_A)=\id$이다. 또 두 ring homomorphism $\phi: A \rightarrow B$와 $\psi: B \rightarrow C$에 대하여, $\Spec(\psi\circ\phi)^\sharp(D(f))$는 합성 $A \rightarrow C \rightarrow C_{\psi(\phi(f))}$를 확장하는 유일한 사상이고 합성 $A_f \rightarrow B_{\phi(f)} \rightarrow C_{\psi(\phi(f))}$ 또한 같은 사상을 확장하므로, 유일성에 의하여 이 둘은 같다. 두 sheaf morphism이 base 위에서 일치하므로 $\Spec(\psi\circ\phi)=(\Spec\phi)\circ(\Spec\psi)$이다. 
 :::
@@ -296,7 +286,7 @@ $$(\Spec\phi)^\sharp_\mathfrak{q}(a/s)=\phi(a)/\phi(s)$$
 [명제 9](#prop9)의 functor $\Spec:\cRing^\op \rightarrow \LRS$의 essential image를 *affine scheme<sub>아핀스킴</sub>*으로 정의한다. 
 :::
 
-Affine scheme들의 category를 $\AffSch$로 적고, 그 morphism은 locally ringed space로서의 morphism으로 둔다. 즉 $\AffSch$는 $\LRS$의 full subcategory이다. 그럼 functor $\Spec:\cRing^\op \rightarrow \AffSch$는 그 정의에 의해 essentially surjective이다. ([\[범주론\] §자연변환, ⁋정리 5](/ko/math/category_theory/natural_transformations#thm5)) 또, 만일 $(\varphi, \varphi^\sharp): (\Spec B, \mathcal{O}_{\Spec B}) \rightarrow (\Spec A, \mathcal{O}_{\Spec A})$이 어떠한 ring homomorphism $\phi$로부터 유도된 것이라면, [명제 9](#prop9)의 증명에서 $1=f\in A$로 잡으면
+Affine scheme들의 category를 $\AffSch$로 적는다. 그럼 functor $\Spec:\cRing^\op \rightarrow \AffSch$는 그 정의에 의해 essentially surjective이다. ([\[범주론\] §자연변환, ⁋정리 5](/ko/math/category_theory/natural_transformations#thm5)) 또, 만일 $(\varphi, \varphi^\sharp): (\Spec B, \mathcal{O}_{\Spec B}) \rightarrow (\Spec A, \mathcal{O}_{\Spec A})$이 어떠한 ring homomorphism $\phi$로부터 유도된 것이라면, [명제 9](#prop9)의 증명에서 $1=f\in A$로 잡으면
 
 $$\varphi^\sharp(D(1))= \bigl(A \overset{\phi}{\longrightarrow} B \overset{\id_B}{\longrightarrow} B_{\phi(1)}=B\bigr)=\phi$$
 
@@ -324,7 +314,7 @@ $$(\Spec \phi)(\mathfrak{q})=\phi^{-1}(\mathfrak{q})=\varphi(\mathfrak{q})$$
 
 임을 보이자. 우선 [보조정리 8](#lem8)에서 $f=1$로 두면 우리는 다음의 diagram
 
-{% diagram Math/Scheme_Theory/Affine_Schemes-9.svg width="39.41em" alt="faithful" %}
+{% diagram frozen/a212f2a0/Math/Scheme_Theory/Affine_Schemes-9.svg width="39.41em" alt="faithful" %}
 
 을 얻는다. 이 diagram에서 수직방향 함수들은 모두 isomorphism들이고, 다음의 면
 
@@ -339,7 +329,7 @@ $$\varphi^\sharp(D(f))\circ\epsilon_f=\epsilon_{\phi(f)}\circ\phi$$
 가 성립한다. 그런데 [명제 9](#prop9)의 구성에서 $(\Spec\phi)^\sharp(D(f))$는 정확히 이 식을 만족하는 유일한 사상이었으므로, [\[가환대수학\] §국소화, ⁋명제 6](/ko/math/commutative_algebra/localization#prop6)의 유일성에 의하여 $\varphi^\sharp(D(f))=(\Spec\phi)^\sharp(D(f))$이다. 두 sheaf morphism이 base $\{D(f)\}_{f\in A}$ 위에서 일치하므로, $\varphi_\ast\mathcal{O}_{\Spec B}$의 identity axiom에 의하여 $\varphi^\sharp=(\Spec\phi)^\sharp$이다. 
 :::
 
-$\AffSch$가 $\LRS$의 full subcategory이므로, [명제 11](#prop11)에 의해 $\Spec$은 $\cRing^\op$에서 $\AffSch$로 가는 functor로서도 fully faithful이다. 여기에 위의 essential surjectivity를 더하면, $\Spec$을 $\cRing$에서 $\AffSch$로의 contravariant functor로 보았을 때 $\Spec$은 두 category $\cRing^\op$와 $\AffSch$ 사이의 categorical equivalence이다. 
+따라서 $\Spec$을 $\cRing$에서 $\AffSch$로의 contravariant functor로 보면 $\Spec$은 두 category $\cRing^\op$와 $\AffSch$ 사이의 categorical equivalence이다. 뿐만 아니라, [명제 11](#prop11)에 의해 $\AffSch$는 $\LRS$의 full subcategory이다. 
 
 한편 임의의 spectrum $(\Spec A, \mathcal{O}_{\Spec A})$에 대하여, 우리는 정의에 의해 
 
@@ -363,7 +353,7 @@ $$\Gamma(\varphi,\varphi^\sharp)=\varphi^\sharp(Y):\Gamma(Y, \mathcal{O}_Y) \rig
 
 한편 [명제 11](#prop11)의 증명에서 주목할 만한 사실은 $(X, \mathcal{O}_X)$가 affine scheme이라는 가정은 필요가 없다는 사실이다. 즉, $(X, \mathcal{O}_X)\cong(\Spec B, \mathcal{O}_{\Spec B})$라는 가정을 버리고 [명제 11](#prop11)의 diagram 대신 다음의 diagram
 
-{% diagram Math/Scheme_Theory/Affine_Schemes-11.svg width="34.92em" alt="adjoint" %}
+{% diagram frozen/a212f2a0/Math/Scheme_Theory/Affine_Schemes-11.svg width="34.92em" alt="adjoint" %}
 
 을 사용하여도 비슷한 논증을 해 나갈 수 있으며, 이 때 결론의 $B$는 $\Gamma(X, \mathcal{O}_X)$로 바뀌게 된다. 어차피 $\mathcal{O}_X$는 $X$에 의해 결정되는 데이터이므로, 이를 간략히 $\Gamma(X)$로만 표기하면 이로부터 다음의 정리를 얻는다.
 
@@ -383,7 +373,7 @@ $$\Phi(\varphi,\varphi^\sharp)=\varphi^\sharp(\Spec A): A=\mathcal{O}_{\Spec A}(
 
 를 얻는다. 
 
-거꾸로 ring homomorphism $\phi:A \rightarrow \Gamma(X)$가 주어졌다 하자. 각각의 $x\in X$마다 $\phi$와 germ을 취하는 함수 $\Gamma(X) \rightarrow \mathcal{O}_{X,x}$를 합성하여 얻어지는 ring homomorphism을 $\phi_x:A \rightarrow \mathcal{O}_{X,x}$라 적자. 즉 $\phi_x(a)=\phi(a)_x$이다. 이제 $(X,\mathcal{O}_X)$가 locally ringed space이므로 $\mathcal{O}_{X,x}$는 유일한 maximal ideal $\mathfrak{m}_x$를 갖는 local ring이고, 따라서 [\[대수적 구조\] §분수체, ⁋명제 10](/ko/math/algebraic_structures/field_of_fractions#prop10)에 의하여
+거꾸로 ring homomorphism $\phi:A \rightarrow \Gamma(X)$가 주어졌다 하자. 각각의 $x\in X$마다 $\phi$와 germ을 취하는 함수 $\Gamma(X) \rightarrow \mathcal{O}_{X,x}$를 합성하여 얻어지는 ring homomorphism을 $\phi_x:A \rightarrow \mathcal{O}_{X,x}$라 적자. 즉 $\phi_x(a)=\phi(a)_x$이다. 이제 $(X,\mathcal{O}_X)$가 locally ringed space이므로 $\mathcal{O}_{X,x}$는 유일한 maximal ideal $\mathfrak{m}_x$를 갖는 local ring이고, 따라서 [\[대수적 구조\] §분수체, ⁋명제 9](/ko/math/algebraic_structures/field_of_fractions#prop9)에 의하여
 
 $$\varphi(x)=\phi_x^{-1}(\mathfrak{m}_x)$$
 

@@ -10,8 +10,6 @@ sidebar:
 
 date: 2022-12-16
 weight: 13
-revising: true
-drift_needed: true
 
 ---
 
@@ -21,7 +19,7 @@ Manifold $M$ 위에서 정의된 함수 $f$를 생각하자. 정의에 의하여
 
 $$\lim_{t \rightarrow0}\frac{f(p+tv)-f(p)}{t}$$
 
-을 사용하지 못하는 가장 큰 이유는 $p+tv$가 정의되지 않기 때문이다. 그러나 만일 $M$ 위에 적당한 $C^\infty$ 곡선 $\gamma$가 주어졌다고 하고, $\gamma(0)=p$, $\gamma'(0)=v$라 한다면, 속도벡터의 정의를 풀어쓴 $\gamma'(0)f=(f\circ\gamma)'(0)$으로부터 다음 식
+을 사용하지 못하는 가장 큰 이유는 $p+tv$가 정의되지 않기 때문이다. 그러나 만일 $M$ 위에 적당한 $C^\infty$ 곡선 $\gamma$가 주어졌다고 하고, $\gamma(0)=p$, $\gamma'(0)=v$라 한다면 다음 식
 
 $$\lim_{h\rightarrow 0}\frac{f(\gamma(h))-f(p)}{h}\tag{1}$$
 
@@ -91,7 +89,7 @@ $$(\mathcal{L}_X\omega)_p=\frac{d}{\dd{t}}\bigg\vert_{t=0}(\phi^t)^\ast\omega_{\
 
 ## Lie Bracket
 
-$\mathfrak{X}(M)$의 두 원소를 합성한 $XY$는 일반적으로 다시 $\mathfrak{X}(M)$의 원소가 되지 않는다. $(XY)(fg)$를 직접 계산해보면,
+$\mathfrak{X}(M)$은 일반적인 설정에서 $C^\infty(M)$-algebra가 되지는 않는다. $(XY)(fg)$를 직접 계산해보면,
 
 $$(XY)(fg)=X(f(Yg)+g(Yf))=(Xf)(Yg)+f(XY)g+(Xg)(Yf)+g(XY)f\tag{2}$$
 

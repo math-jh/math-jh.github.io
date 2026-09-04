@@ -12,9 +12,7 @@ sidebar:
 date: 2022-08-12
 
 weight: 14
-revising: true
 
-drift_needed: true
 
 ---
 
@@ -89,13 +87,7 @@ $$D(e_1,\ldots, e_n)=D'(e_1,\ldots, e_n)=1$$
 
 $$D(v_1,\ldots, v_n)=\sum_{\tau\in S_n}\sgn(\tau)v^1_{\tau(1)}v^2_{\tau(2)}\cdots v^n_{\tau(n)}$$
 
-으로 정의한 후 $D$가 실제로 $D(e_1,\ldots, e_n)=1$을 만족하는 alternating multilinear map이 된다는 것을 보이면 된다. 우변의 각 항 $\sgn(\tau)v^1_{\tau(1)}v^2_{\tau(2)}\cdots v^n_{\tau(n)}$은 각각의 $i$에 대하여 $v_i$의 성분 $v^i_{\tau(i)}$를 정확히 하나만 인자로 갖고, 벡터에 그 $\tau(i)$번째 성분을 대응시키는 함수는 linear이다. 따라서 각 항은 $v_i$에 대해 linear이며, 이들의 유한합인 $D$ 또한 그러하므로 $D$는 multilinear map이다. 한편 $e_i$의 $j$번째 성분은 $i=j$인 경우에만 $1$이고 나머지 경우에는 $0$이므로, $D(e_1,\ldots, e_n)$을 계산할 때 $0$이 아닌 항은 $\tau=\id$인 경우뿐이고 그 값은 $\sgn(\id)=1$이다.
-
-이제 $D$가 alternating인 것을 확인하자. $i\neq j$를 고정하고, $\upsilon\in S_n$을 $i$와 $j$의 위치를 바꾸는 transposition이라 하자. 그럼 $v_i$와 $v_j$의 위치를 맞바꾸어 얻어지는 벡터들은 $w_k=v_{\upsilon(k)}$로 적을 수 있고, 따라서 $w^k_{\tau(k)}=v^{\upsilon(k)}_{\tau(k)}$이다. 각 항에서 곱해지는 인자들을 $l=\upsilon(k)$의 순서로 다시 늘어놓으면
-
-$$D(w_1,\ldots, w_n)=\sum_{\tau\in S_n}\sgn(\tau)v^1_{(\tau\circ\upsilon)(1)}v^2_{(\tau\circ\upsilon)(2)}\cdots v^n_{(\tau\circ\upsilon)(n)}$$
-
-을 얻는다. 여기에서 $\sigma=\tau\circ\upsilon$로 두면 $\tau\mapsto\sigma$는 $S_n$에서 자기 자신으로의 전단사함수이고, $\upsilon$은 transposition 하나의 합성이므로 $\sgn(\upsilon)=-1$, 즉 $\sgn(\tau)=\sgn(\sigma)\sgn(\upsilon)=-\sgn(\sigma)$이다. 따라서 위 식의 우변은 $-D(v_1,\ldots, v_n)$과 같다.
+으로 정의한 후 $D$가 실제로 alternating multilinear map이 된다는 것을 보이면 된다. 이는 단순히 위의 계산을 반대방향으로 반복하는 것이므로 생략한다.
 :::
 
 따라서 행렬식이 잘 정의되며, 이를 $\det$으로 적는다. 위 명제의 증명과정에서 우리는 행렬식 $\det A$를 식으로 얻어냈다. 즉, 행렬 $A$의 $i$번째 열벡터를 $A_i$로 표기하면 $A_i$의 $j$번째 성분은 $A_{ji}$와 같고, 따라서 

@@ -10,9 +10,7 @@ sidebar:
 
 date: 2021-08-15
 weight: 5
-revising: true
 
-drift_needed: true
 
 ---
 
@@ -35,7 +33,7 @@ $${<}(1)=\{2,3,\ldots\}$$
 ## 함수의 정의
 
 ::: 정의 1
-집합 $A$에 대하여, 이항관계 $f=(F,A,B)$가 *함수<sub>function</sub>*라는 것은 $A=\pr_1F$이고 각각의 $x\in A$에 대하여 $F(\{x\})$가 많아야 한 개의 원소를 갖는 것[^1]이다.
+공집합이 아닌 집합 $A$에 대하여, 이항관계 $f=(F,A,B)$가 *함수<sub>function</sub>*라는 것은 $A=\pr_1F$이고 각각의 $x\in A$에 대하여 $F(\{x\})$가 한원소집합[^1]인 것이다.
 :::
 
 조건 $A=\pr_1F$는 $A$의 모든 원소 $x$가 <em-ko>적어도</em-ko> 하나 이상의 $y\in B$에 대응됨을 의미하고, 둘째 조건은 모든 $x\in A$는 <em-ko>많아야</em-ko> 하나의 $y\in B$에 대응됨을 의미한다. 따라서 $f=(F,A,B)$가 함수라는 것은
@@ -104,11 +102,11 @@ $${\id_A}=g\circ h\circ f,\quad {\id_B}=f\circ g\circ h,\quad {\id_C}=h\circ f\c
 두 함수 $f=(F,A,B),f'=(F',A',B')$가 집합 $S$에서 *compatible*하다는 것은 $S$가 $f$와 $f'$의 정의역에 각각 포함되어 있고, 모든 $x\in S$에 대하여 $f(x)=f'(x)$인 것이다.
 :::
 
-두 함수 $f$와 $f'$가 주어졌고, $S=\pr_1 F\cap\pr_1 F'$라 하자. $S$에서 두 함수가 compatible하다면 새로운 함수 $g=(G,\pr_1F\cup\pr_1F',B\cup B')$를 다음의 식
+두 함수 $f$와 $f'$가 주어졌고, $S=\pr_1 F\cap\pr_1 F'$가 공집합이 아니라 하자. $S$에서 두 함수가 compatible하다면 $\pr_1F\cup\pr_1F'$를 정의역으로 갖는 새로운 함수 $g$를 다음의 식
 
 $$g(x)=\begin{cases}f(x)&x\in \pr_1F\setminus\pr_1F'\\ f(x)=f'(x)&x\in \pr_1F\cap\pr_1F'\\ f'(x)&x\in\pr_1F'\setminus\pr_1F\end{cases}$$
 
-으로 정의할 수 있다. 이 때 $G$는 $F$와 $F'$를 모두 포함하고, $g$의 target $B\cup B'$ 또한 $B$와 $B'$를 모두 포함한다. 이러한 상황을 다음과 같이 정의한다.
+으로 정의할 수 있다. 이러한 상황을 다음과 같이 정의한다.
 
 ::: 정의 4
 두 함수 $f=(F,A,B)$, $f'=(F',A',B')$가 주어졌다 하자. 만일 $F\subseteq F'$이고 $B\subseteq B'$라면 $f'$를 $f$의 *extension<sub>확장</sub>*이라 부르고, $f'$가 $f$를 확장한다고 말한다.
@@ -133,4 +131,4 @@ $$g(x)=\begin{cases}f(x)&x\in \pr_1F\setminus\pr_1F'\\ f(x)=f'(x)&x\in \pr_1F\ca
 
 ---
 
-[^1]: 엄밀히 이야기하자면 집합의 크기를 아직 정의하지 않았지만, 이 조건은 $y,y'\in F(\{x\})\implies y=y'$ 등으로 표현할 수 있다. 
+[^1]: 엄밀히 이야기하자면 집합의 크기를 아직 정의하지 않았지만, 이 조건은 $x,y\in R(a)\implies x=y$ 등으로 표현할 수 있다. 

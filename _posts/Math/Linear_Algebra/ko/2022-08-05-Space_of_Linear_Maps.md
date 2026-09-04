@@ -12,9 +12,7 @@ sidebar:
 date: 2022-08-05
 
 weight: 10
-revising: true
 
-drift_needed: true
 
 ---
 
@@ -31,11 +29,11 @@ drift_needed: true
 
 $$v=\sum_{x\in \mathcal{B}}v_xx$$
 
-라 하면, $G$와 $G'$이 모두 linear map이므로
+라 하면
 
-$$\begin{aligned}G(v)&=\sum_{x\in\mathcal{B}}v_xG(x)=\sum_{x\in\mathcal{B}}v_xG(\iota(x))=\sum_{x\in\mathcal{B}}v_xg(x)\\G'(v)&=\sum_{x\in\mathcal{B}}v_xG'(x)=\sum_{x\in\mathcal{B}}v_xG'(\iota(x))=\sum_{x\in\mathcal{B}}v_xg(x)\end{aligned}$$
+$$\begin{aligned}(G-G')\left(\sum_{x\in \mathcal{B}}v_xx\right)&=\sum_{x\in\mathcal{B}}v_x(G-G')(x)=\sum_{x\in\mathcal{B}}v_x(G-G')(\iota(x))\\&=\sum_{x\in\mathcal{B}}v_x(G\circ \iota-G'\circ\iota)(x)=\sum_{x\in\mathcal{B}}v_x(g-g)(x)=0\end{aligned}$$
 
-가 되어 $G(v)=G'(v)$이기 때문이다. 
+이 되기 때문이다. 
 
 이제 $G$를 실제로 만들어야 한다. 당연히 임의의 $v=\sum_{x\in\mathcal{B}}v_xx$에 대하여,
 
@@ -95,9 +93,9 @@ $$v=\sum_{i=1}^n v_ix_i\quad\mapsto\quad \sum_{j=1}^m\left(\sum_{i=1}^n\alpha_{j
 
     으로 정의하고, 여기에 [정리 1](#thm1)을 적용하여 얻어진 linear map을 $R$이라 하자. 그럼 $V$의 basis $\{x_1,\ldots,x_n\}$의 임의의 원소 $x_i$에 대하여 $(R\circ L)(x_i)=x_i$이고, 따라서 정리 1의 유일성 부분에 의하여 $R\circ L=\id_V$가 성립한다.
 
-2. $L$이 전사함수라 하고, $V$의 basis $x_1,\ldots,x_n$을 택하자. 그럼 $L(x_1),\ldots, L(x_n)$은 $W$를 span하므로 [§벡터공간의 차원, ⁋명제 6](/ko/math/linear_algebra/dimension#prop6)에 의하여 이 벡터들 중 일부를 택하여 $W$의 basis $\mathcal{B}$를 찾을 수 있다. 일반성을 잃지 않고 $\mathcal{B}=\{L(x_1),\ldots, L(x_m)\}$ ($m\leq n$)이라 하자. 이 때 $L(x_1),\ldots, L(x_m)$은 일차독립이므로 서로 다른 벡터들이고, 따라서 함수 $s:\mathcal{B}\rightarrow V$를 다음의 식
+2. $L$이 전사함수라 하고, $V$의 basis $x_1,\ldots,x_n$을 택하자. 그럼 $L(x_1),\ldots, L(x_n)$은 $W$를 span하므로 [§벡터공간의 차원, ⁋명제 6](/ko/math/linear_algebra/dimension#prop6)에 의하여 이 벡터들 중 일부를 택하여 $W$의 basis $\mathcal{B}$를 찾을 수 있다. 일반성을 잃지 않고 $\mathcal{B}=\{L(x_1),\ldots, L(x_m)\}$ ($m\leq n$)이라 하자. 함수 $s:\mathcal{B}\rightarrow V$를 다음의 식
     
-    $$s(L(x_k))=x_k\qquad (k=1,\ldots, m)$$
+    $$s(v)=x_k\qquad v=L(x_k)$$
 
     으로 정의하고, 여기에 [정리 1](#thm1)을 적용하여 얻어진 linear map을 $S$라 하자. 이제 $W$의 basis $\mathcal{B}$의 임의의 원소 $L(x_k)$에 대하여 $(L\circ S)(L(x_k))=L(x_k)$이므로 다시 정리 1의 유일성 부분에 의하여 $L\circ S=\id_W$가 성립한다.
 :::

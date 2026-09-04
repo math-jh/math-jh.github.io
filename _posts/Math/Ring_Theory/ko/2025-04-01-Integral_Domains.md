@@ -10,12 +10,10 @@ sidebar:
 
 date: 2025-04-01
 weight: 2
-revising: true
-drift_needed: true
 
 ---
 
-[환론](/ko/ring_theory)에서 우리는 ring에 대한 성질들을 조금 더 자세하게 살펴본다. 처음으로 다룰 것은 integral domain이다. ([\[대수적 구조\] §분수체, ⁋정의 5](/ko/math/algebraic_structures/field_of_fractions#def5)) 
+이 카테고리의 글들에서 우리는 ring에 대한 성질들을 조금 더 자세하게 살펴본다. 처음으로 다룰 것은 integral domain이다. ([\[대수적 구조\] §분수체, ⁋정의 5](/ko/math/algebraic_structures/field_of_fractions#def5)) 
 
 ## 유클리드 정역
 
@@ -123,7 +121,7 @@ $$r_{k-2}=q_{k}r_{k-1}+r_{k}$$
 Ring $A$가 *principal ideal domain<sub>주아이디얼정역</sub>*이라는 것은 모든 ideal이 principal인 integral domain을 말한다.
 :::
 
-그럼 [명제 3](#prop3)으로부터 우리는 임의의 Euclidean domain은 항상 PID임을 안다. 그러나 그 역은 성립하지 않아, 가령 $\mathbb{Z}[(1+\sqrt{-19})/2]$는 PID이지만 Euclidean domain이 아니다. Euclidean domain에서는 division algorithm이 두 원소 $a,b$가 주어졌을 때 이들의 최대공약수를 얻는 방법을 구체적으로 주는 반면 PID에서는 그러한 알고리즘을 기대할 수 없지만, 최대공약수의 존재 자체는 [명제 5](#prop5)로부터 여전히 따라온다. 
+그럼 [명제 3](#prop3)으로부터 우리는 임의의 Euclidean domain은 항상 PID임을 안다. 그러나 그 역은 성립하지 않는다. Division algorithm은 두 원소 $a,b$가 주어졌을 때 이들의 최대공약수를 얻는 방법을 구체적으로 주지만, [명제 5](#prop5)에 의하여 다음이 성립한다. 
 
 ::: 따름정리 9
 $A$를 Principal Ideal Domain이라 하고, $a, b \in A$가 $0$이 아닌 원소들이라 하자. $a, b$로 생성된 principal ideal $(a, b)$의 generator를 $d$라 하면 다음이 성립한다:
@@ -140,7 +138,7 @@ $A$를 Principal Ideal Domain이라 하고, $a, b \in A$가 $0$이 아닌 원소
 [명제 5](#prop5), [명제 6](#prop6)의 결과이며, 둘째 결과는 $(a,b)=(d)$라는 가정으로부터 자명하다. 
 :::
 
-우리는 prime ideal의 정의를 [\[대수적 구조\] §분수체](/ko/math/algebraic_structures/field_of_fractions)에서, maximal ideal의 정의를 [\[대수적 구조\] §환의 정의, ⁋정의 9](/ko/math/algebraic_structures/rings#def9)에서 보았다. Principal ideal domain의 유용한 성질 중 하나는 임의의 prime ideal이 항상 maximal이라는 것이다. 
+Principal ideal domain의 유용한 성질 중 하나는 임의의 prime ideal이 항상 maximal이라는 것이다. 
 
 ::: 명제 10
 Principal Ideal Domain $A$의 모든 $0$이 아닌 prime ideal은 maximal ideal이다.
@@ -210,12 +208,12 @@ $$3 \mid (2 + \sqrt{-5})(2 - \sqrt{-5}) = 4 + 5 = 9$$
 PID $A$에서 nonzero element가 irreducible인 것과 prime인 것이 동치이다. 
 :::
 ::: 증명
-[명제 12](#prop12)에 의하여 prime element는 항상 irreducible이므로, irreducible element가 항상 prime임을 보이면 충분하다. $A$의 irreducible element $p \in A$를 고정하자. 보일 것은 $p$가 prime이라는 것, 즉 $(p)$가 prime ideal이라는 것이다. $A$가 P.I.D.이므로 임의의 ideal은 $(m)$의 꼴로 쓰인다. 이제 $(p) \subseteq (m)$이라고 하면 $p = rm$ for some $r \in A$이다. 그런데 $p$는 irreducible이므로 $r$이나 $m$ 중 하나는 unit이어야 한다.
+$A$의 irreducible element $p \in A$를 고정하자. 보일 것은 $p$가 prime이라는 것, 즉 $(p)$가 prime ideal이라는 것이다. $A$가 P.I.D.이므로 임의의 ideal은 $(m)$의 꼴로 쓰인다. 이제 $(p) \subseteq (m)$이라고 하면 $p = rm$ for some $r \in A$이다. 그런데 $p$는 irreducible이므로 $r$이나 $m$ 중 하나는 unit이어야 한다.
 
 - 만약 $r$이 unit이면 $p$와 $m$은 associate이고, $(p) = (m)$이다.
 - 만약 $m$이 unit이면 $(m) = A$이다.
 
-따라서 $(p)$를 포함하는 ideal은 $(p)$ 자신이거나 $A$뿐이므로, $(p)$는 maximal ideal이다. 한편 identity를 갖는 임의의 commutative ring에서 maximal ideal은 항상 prime ideal이며 ([\[대수적 구조\] §분수체](/ko/math/algebraic_structures/field_of_fractions)), 따라서 $(p)$는 prime ideal이고 $p$는 prime element이다.
+따라서 $(p)$를 포함하는 ideal은 $(p)$ 자신이거나 $A$뿐이므로, $(p)$는 maximal이고, P.I.D.에서는 maximal ideal은 항상 prime이므로 $(p)$는 prime ideal이다. 따라서 $p$는 prime element이다.
 :::
 
 따라서 [예시 13](#ex13)의 $A=\mathbb{Z}[\sqrt{-5}]$는 PID가 아니다.
@@ -272,13 +270,11 @@ UFD $A$에서 nonzero element가 irreducible인 것과 prime인 것이 동치이
 ::: 증명
 Irreducible element가 항상 prime임을 보이면 충분하다.
 
-Irreducible element $p \in A$를 택하고, $p \mid ab$ for some $a, b \in A$라 하자. 그럼 $p \mid a$ 또는 $p \mid b$임을 보여야 한다. 우선 $a = 0$이면 $p \mid a$이므로 보일 것이 없고, $a$가 unit이면 $ab = pc$를 만족하는 $c \in A$에 대하여 $b = p(a^{-1}c)$이므로 $p \mid b$이다. $b$가 $0$이거나 unit인 경우도 마찬가지이므로, $a$와 $b$가 모두 nonzero non-unit인 경우만 보면 충분하다.
-
-이 경우 $A$가 UFD라는 가정으로부터 $a$와 $b$를 각각 irreducible들의 곱
+Irreducible element $p \in A$를 택하고, $p \mid ab$ for some $a, b \in A$라 하자. 그럼 $p \mid a$ 또는 $p \mid b$임을 보여야 한다. 우선 $A$는 UFD이므로 $a$, $b$, $ab$를 irreducible들의 곱으로 쓸 수 있다. 이를 이용해
 
 $$a = p_1 \cdots p_k,\quad b = q_1 \cdots q_l$$
 
-으로 쓸 수 있고, 따라서 $ab = p_1 \cdots p_k q_1 \cdots q_l$이다. 한편 $p \mid ab$라 함은 어떤 $c \in A$가 존재하여 $ab = pc$인 것이며, $A$가 integral domain이고 $ab \neq 0$이므로 $c \neq 0$이다. 여기서 $c$는 unit일 수 없는데, 만일 $c$가 unit이라면 $p = c^{-1}ab = (c^{-1}a)b$가 두 non-unit의 곱이 되어 $p$가 irreducible이라는 가정에 모순이기 때문이다. 따라서 $c$ 또한 irreducible들의 곱 $c = c_1 \cdots c_s$로 쓸 수 있고, $ab$의 두 인수분해 $pc_1 \cdots c_s$와 $p_1 \cdots p_k q_1 \cdots q_l$을 나란히 놓으면 [정의 16](#def16)의 유일성으로부터 $p$는 $p_i$ 혹은 $q_j$ 중 어떤 하나와 associate이다. 만일 $p$가 $p_i$와 associate이라면 $p_i = up$인 unit $u \in A$가 존재하고, $a$의 인수분해에서 $p_i$를 $up$으로 바꾸어 쓰면 $p \mid a$를 얻는다. $p$가 $q_j$와 associate인 경우에도 같은 방법으로 $p \mid b$이다. 
+이라 하면 $ab = p_1 \cdots p_k q_1 \cdots q_l$이다. 여기에서 $p \mid ab$라 함은 어떤 $c \in A$가 존재하여 $ab = pc$인 것이다. 이제 $p$도 irreducible이고 $ab$도 irreducible들의 곱으로 표현되므로, UFD의 정의에 따라 $p$는 $ab$의 성분 $p_i$ 혹은 $q_j$ 중 어떤 하나와 associate 관계에 있고, 이에 따라 $p$는 $a$를 나누거나 $b$를 나눈다. 
 :::
 
 UFD는 그 정의에 의해 임의의 원소를 인수분해할 수 있는 integral domain이다. 두 정수를 소인수분해 하였을 때의 좋은점은, 이로부터 이들의 최대공약수가 바로 나온다는 것이다. 

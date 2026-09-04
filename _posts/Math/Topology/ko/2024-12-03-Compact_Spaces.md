@@ -10,8 +10,6 @@ sidebar:
 
 date: 2024-12-03
 weight: 14
-revising: true
-drift_needed: true
 
 ---
 
@@ -61,7 +59,7 @@ $$Y\subseteq V_{y_1}\cup\cdots\cup V_{y_n}$$
 
 $$U_{xy_1}\cap \cdots\cap U_{xy_n}$$
 
-은 $\bigcup_{i=1}^n V_{y_i}$와 서로소인 $\{x\}$의 열린근방이다. $Y=\emptyset$인 경우에는 $n=0$이 되며, 이때 위의 교집합은 $X$로, 위의 합집합은 $\emptyset$으로 읽기로 한다.
+은 $\bigcup_{i=1}^n V_{y_i}$와 서로소인 $\{x\}$의 열린근방이다.
 :::
 
 특히 다음이 성립한다.
@@ -129,19 +127,15 @@ $$A_1\cap\cdots\cap A_n$$
 이 공집합이 아닌 것이다.
 :::
 
-그럼 특히 $\emptyset\not\in \mathcal{A}$가 성립한다. 또, 이 조건을 만족하는 family $\mathcal{A}\neq\emptyset$이 주어진다면, $\mathcal{A}$의 유한한 교집합들을 모두 추가하여 $X$의 filter base $\mathcal{B}$를 만들 수 있다. ([§위상공간의 다른 정의들, ⁋정의 5](/ko/math/topology/equivalent_formulations_of_topology#def5)) 이러한 이유로 $\mathcal{A}$를 $\uparrow \mathcal{B}$의 *subbase*라 부르기도 한다.
+그럼 특히 $\emptyset\not\in \mathcal{A}$가 성립한다. 또, 이 조건을 만족하는 family $\mathcal{A}$가 주어진다면, $\mathcal{A}$의 유한한 교집합들을 모두 추가하여 $X$의 filter base $\mathcal{B}$를 만들 수 있다. ([§위상공간의 다른 정의들, ⁋정의 5](/ko/math/topology/equivalent_formulations_of_topology#def5)) 이러한 이유로 $\mathcal{A}$를 $\uparrow \mathcal{B}$의 *subbase*라 부르기도 한다.
 
 그럼 다음 명제는 compactness를 다른 방식으로 서술한 것이다.
 
 ::: 명제 11
-위상공간 $X$가 compact인 것은 finite intersection property를 만족하는 임의의 닫힌집합들의 family $\mathcal{A}\neq\emptyset$에 대하여, $\bigcap \mathcal{A}\neq\emptyset$인 것과 동치이다. 
+위상공간 $X$가 compact인 것은 finite intersection property를 만족하는 임의의 닫힌집합들의 family $\mathcal{A}$에 대하여, $\bigcap \mathcal{A}\neq\emptyset$인 것과 동치이다. 
 :::
 ::: 증명
-$X$의 닫힌집합들의 family $\mathcal{A}$가 주어질 때마다 $(X\setminus A)_{A\in\mathcal{A}}$는 $X$의 열린집합들의 family이고, 거꾸로 $X$의 열린집합들의 family $(U_i)_{i\in I}$에는 닫힌집합들의 family $(X\setminus U_i)_{i\in I}$가 대응한다. De Morgan의 법칙에 의하여, $\bigcap\mathcal{A}=\emptyset$인 것은 $(X\setminus A)_{A\in\mathcal{A}}$가 $X$의 open covering인 것과 동치이고, 마찬가지로 유한히 많은 $A_1,\ldots, A_n\in\mathcal{A}$에 대하여 $A_1\cap\cdots\cap A_n=\emptyset$인 것은 $X\setminus A_1,\ldots, X\setminus A_n$이 $X$를 덮는 것과 동치이다.
-
-우선 $X$가 compact이라 가정하고, finite intersection property를 만족하는 닫힌집합들의 family $\mathcal{A}\neq\emptyset$이 주어졌다 하자. 만일 $\bigcap\mathcal{A}=\emptyset$이라면 $(X\setminus A)_{A\in\mathcal{A}}$는 $X$의 open covering이므로 finite subcover $X\setminus A_1,\ldots, X\setminus A_n$이 존재하고, 위의 대응에 의하여 $A_1\cap\cdots\cap A_n=\emptyset$이 되어 finite intersection property에 모순이다.
-
-거꾸로 주어진 조건이 성립한다 하고, $X$의 open covering $(U_i)_{i\in I}$이 finite subcover를 갖지 않는다 가정하자. 그럼 특히 $I\neq\emptyset$이며, 임의의 유한한 부분집합 $J\subseteq I$에 대하여 $\bigcup_{j\in J} U_j\neq X$, 즉 $\bigcap_{j\in J}(X\setminus U_j)\neq\emptyset$이므로 $(X\setminus U_i)_{i\in I}$는 finite intersection property를 만족하는 닫힌집합들의 family이다. 따라서 가정에 의하여 $\bigcap_{i\in I}(X\setminus U_i)\neq\emptyset$이고, 이는 $\bigcup_{i\in I} U_i\neq X$를 뜻하므로 $(U_i)_{i\in I}$가 $X$의 covering이라는 데 모순이다.
+여집합을 취하면 충분하다. 
 :::
 
 ---

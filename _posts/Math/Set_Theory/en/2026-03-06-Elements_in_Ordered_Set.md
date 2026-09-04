@@ -10,7 +10,6 @@ sidebar:
 
 date: 2021-08-22
 weight: 16
-revising: true
 translated_at: 2026-06-02T13:30:02+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-06-02T13:30:02+00:00
@@ -75,7 +74,7 @@ A set possessing a lower bound (resp. upper bound) is called *bounded below* (re
 
 Consider the ordered set $A=\{a,b,c,d,e\}$ shown below.
 
-{% diagram Math/Set_Theory/Elements_in_Ordered_Set-3.svg width="6.77em" alt="upper_and_lower_bounds" %}
+{% diagram frozen/81b7e8af/Math/Set_Theory/Elements_in_Ordered_Set-3.svg width="20.75em" alt="upper_and_lower_bounds" %}
 
 Then $a$ is an upper bound of the set $X=\left\{c,d,e\right\}$, but $b$ is not. If we consider the set $X'=\left\{d,e\right\}$, both $a$ and $b$ are upper bounds of this set. From the above example we see that a lower bound of a set $X$ need not belong to $X$; however, if it does, then that element is a least element of $X$.
 

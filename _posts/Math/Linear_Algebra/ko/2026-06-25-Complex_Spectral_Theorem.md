@@ -1,7 +1,7 @@
 ---
 title: "복소 스펙트럼 정리"
 description: "복소내적공간 위에서 self-adjoint operator를 일반화한 normal operator를 정의하고, normal operator가 정확히 orthonormal basis로 대각화되는 작용소임을 증명한다. Self-adjoint operator의 실고윳값과 unitary operator의 단위원 고윳값을 특수한 경우로 얻는다."
-excerpt: "normal operator의 unitary diagonalization"
+excerpt: "normal operator의 unitary 대각화"
 
 categories: [Math / Linear Algebra]
 permalink: /ko/math/linear_algebra/complex_spectral_theorem
@@ -12,13 +12,11 @@ sidebar:
 date: 2026-06-25
 
 weight: 25
-revising: true
 
-drift_needed: true
 
 ---
 
-[§스펙트럼 정리](/ko/math/linear_algebra/spectral_theorem)에서 우리는 $\mathbb{R}$-내적공간 위의 self-adjoint operator가 orthonormal basis로 대각화됨을 보았으며, 그 과정에서 필수적으로 $\mathbb{C}$로 올라가야 했었다. 이제 우리는 복소수 행렬들에 대해 spectral theorem이 어떠한 정리를 주는지를 살펴본다. 
+[§스펙트럼 정리](/ko/math/linear_algebra/spectral_theorem)에서 우리는 $\mathbb{R}$-내적공간 위의 self-adjoint operator가 정확히 orthonormal basis로 대각화됨을 보았으며, 그 과정에서 필수적으로 $\mathbb{C}$로 올라가야 했었다. 이제 우리는 복소수 행렬들에 대해 spectral theorem이 어떠한 정리를 주는지를 살펴본다. 
 
 ## Self-adjoint operator와 normal operator
 
@@ -28,9 +26,9 @@ drift_needed: true
 복소내적공간 $V$ 위의 linear operator $L:V\rightarrow V$가 *self-adjoint<sub>self-adjoint</sub>*, 또는 *Hermitian*이라는 것은 $L=L^\ast$인 것, 즉 모든 $v,w\in V$에 대하여 $\langle Lv,w\rangle=\langle v,Lw\rangle$인 것이다.
 :::
 
-즉, 이는 내적이 주는 conjugate-linear한 전단사를 통해 $V^\ast$를 $V$로 옮겨왔을 때, dual operator $L^\ast: V^\ast\rightarrow V^\ast$가 $V$로 번역된 것이 곧 자기자신이라는 것이다. 실수행렬의 경우, 이는 symmetric matrix로 나왔으나 복소수의 경우 이것이 conjugate-transpose matrix로 나온다는 점만 다르다. 다소 헷갈릴 수 있는 지점은 $L^\ast$가 이제 conjugate-transpose이자 dual map을 나타내는 표기가 된다는 것이지만, 위에서 살펴봤듯 이 전단사를 통해 $V$와 $V^\ast$를 같은 것으로 보면 이들 둘이 실제로 같아지므로 큰 해는 없다. 
+즉, 이는 내적이 주는 isomorphism을 통해 $V^\ast$를 $V$로 옮겨왔을 때, dual operator $L^\ast: V^\ast\rightarrow V^\ast$가 $V$로 번역된 것이 곧 자기자신이라는 것이다. 실수행렬의 경우, 이는 symmetric matrix로 나왔으나 복소수의 경우 이것이 conjugate-transpose matrix로 나온다는 점만 다르다. 다소 헷갈릴 수 있는 지점은 $L^\ast$가 이제 conjugate-transpose이자 dual map을 나타내는 표기가 된다는 것이지만, 위에서 살펴봤듯 complex inner product space가 주는 isomorphism을 통해 $V$와 $V^\ast$를 같은 것으로 보면 이들 둘이 실제로 같아지므로 큰 해는 없다. 
 
-[§스펙트럼 정리, ⁋따름정리 6](/ko/math/linear_algebra/spectral_theorem#cor6)의 꼴 $A=QDQ^t$로 대각화되는 실수행렬은 $D$가 대각행렬이므로 $A^t=QD^tQ^t=QDQ^t=A$를 만족하여 반드시 symmetric이고, 따라서 실수에서 orthonormal basis로 대각화되는 것은 정확히 symmetric matrix였다. 실수에서와 다른 점 중 하나는 이제 self-adjoint operator들만이 orthonormal basis로 대각화되는 것이 <em-ko>아니라는</em-ko> 것으로, 이를 위해서는 다음 정의와 같이 일반화를 해야 한다. 
+실수에서와 다른 점 중 하나는 이제 self-adjoint operator들만이 orthonormal basis로 대각화되는 것이 <em-ko>아니라는</em-ko> 것으로, 이를 위해서는 다음 정의와 같이 일반화를 해야 한다. 
 
 ::: 정의 2
 복소내적공간 $V$ 위의 linear operator $L:V\rightarrow V$가 *normal operator<sub>normal operator</sub>*라는 것은
@@ -42,7 +40,7 @@ $$LL^\ast=L^\ast L$$
 
 그럼 특히 self-adjoint operator는 $LL^\ast=L^2=L^\ast L$이므로 normal operator이고, unitary operator 또한 그러하다. ([§복소내적공간, ⁋정의 6](/ko/math/linear_algebra/complex_inner_product_spaces#def6)) 뿐만 아니라, $L^\ast=-L$을 만족하는 *skew-Hermitian* operator도 $LL^\ast=-L^2=L^\ast L$이므로 normal operator이며, 이렇듯 normal operator는 여러 특수한 경우들을 포함하는 넓은 부류이며, 이 글의 목표는 이들이 정확히 orthonormal basis로 대각화되는 operator임을 보이는 것이다.
 
-## Schur decomposition
+## Schur 분해
 
 복소내적공간 위에서는 임의의 linear operator라도 orthonormal basis에 대해 upper triangular matrix와 닮아있음을 보일 수 있다. 이것이 Schur decomposition이며, normal operator의 경우 이 upper triangular matrix가 자동으로 대각이 되어 복소 spectrum 정리를 되돌려준다.
 

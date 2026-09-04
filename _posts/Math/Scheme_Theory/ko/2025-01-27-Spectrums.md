@@ -10,9 +10,7 @@ sidebar:
 
 date: 2025-01-27
 weight: 2
-revising: true
 
-drift_needed: true
 
 ---
 
@@ -28,7 +26,7 @@ drift_needed: true
 Ring $A$에 대하여, $\Spec A$는 $A$의 모든 prime ideal들의 모임이고, 이를 $A$의 *spectrum<sub>스펙트럼</sub>*이라 부른다. 
 :::
 
-이제 ring homomorphism $\phi: A \rightarrow B$가 주어졌다 하자. 그럼 [\[대수적 구조\] §분수체, ⁋명제 10](/ko/math/algebraic_structures/field_of_fractions#prop10)에 의하여, 다음의 함수 
+이제 ring homomorphism $\phi: A \rightarrow B$가 주어졌다 하자. 그럼 [\[대수적 구조\] §분수체, ⁋명제 9](/ko/math/algebraic_structures/field_of_fractions#prop9)에 의하여, 다음의 함수 
 
 $$\Spec\phi: \Spec B \rightarrow \Spec A;\qquad \mathfrak{q}\mapsto \phi^{-1}(\mathfrak{q})$$
 
@@ -38,7 +36,7 @@ $$\Spec\phi: \Spec B \rightarrow \Spec A;\qquad \mathfrak{q}\mapsto \phi^{-1}(\m
 위에서 정의한 $\Spec: \cRing^\op \rightarrow \Set$은 functor이다. 
 :::
 
-즉, $\Spec(\phi\circ\psi)=(\Spec\psi)\circ(\Spec\phi)$이고 $\Spec(\id_A)=\id_{\Spec A}$이다. 실제로 두 ring homomorphism $\psi: A \rightarrow B$와 $\phi: B \rightarrow C$, 그리고 임의의 $\mathfrak{r}\in \Spec C$에 대하여 $(\phi\circ\psi)^{-1}(\mathfrak{r})=\psi^{-1}(\phi^{-1}(\mathfrak{r}))$이 성립하므로 첫째 등식이 얻어지고, 임의의 $\mathfrak{p}\in\Spec A$에 대하여 $\id_A^{-1}(\mathfrak{p})=\mathfrak{p}$이므로 둘째 등식이 얻어진다. 
+즉, $\Spec(\phi\circ\psi)=(\Spec\psi)\circ(\Spec\phi)$이고 $\Spec(\id_A)=\id_{\Spec A}$이며, 그 증명 또한 어렵지 않다. 
 
 ## 위상공간으로서의 $\Spec A$
 
@@ -89,8 +87,8 @@ $\Spec A$ 위에 위상구조를 정의할 때 가장 중요한 것은 다음의
 :::
 ::: 증명
 1. $\mathfrak{a}$ 혹은 $\mathfrak{b}$를 포함하는 prime ideal $\mathfrak{p}$는 그보다 작은 ideal $\mathfrak{ab}$ 또한 포함하는 것이 자명하므로, 반대방향 포함관계만 보이면 충분하다. $\mathfrak{p}\supseteq \mathfrak{ab}$라 가정하자. 만일 $\mathfrak{p}\not\supseteq \mathfrak{b}$라 하면, $b\not\in \mathfrak{p}$인 $\mathfrak{b}$의 원소 $b$를 찾을 수 있다. 한편, 임의의 $a\in \mathfrak{a}$에 대하여, $ab\in \mathfrak{ab}\subseteq \mathfrak{p}$이고, 앞선 가정에 의해 $b\not\in \mathfrak{p}$이므로 반드시 $a\in \mathfrak{p}$이고 따라서 $\mathfrak{a}\subseteq \mathfrak{p}$가 성립한다.
-2. $\sum \mathfrak{a}_i$는 ideal들 $\mathfrak{a}_i$ 각각을 모두 포함하는 ideal 중 가장 작은 것으로 정의되므로, $A$의 임의의 ideal $\mathfrak{c}$에 대하여 $\mathfrak{c}\supseteq \sum\mathfrak{a}_i$인 것과 모든 $i$에 대하여 $\mathfrak{c}\supseteq \mathfrak{a}_i$인 것이 동치이다. 특히 prime ideal $\mathfrak{p}$에 대하여 이는 $\mathfrak{p}\in Z(\sum\mathfrak{a}_i)$와 $\mathfrak{p}\in\bigcap Z(\mathfrak{a}_i)$가 동치라는 것이다.
-3. [\[가환대수학\] §국소화의 성질들, ⁋따름정리 8](/ko/math/commutative_algebra/properties_of_localization#cor8)에 의하여 $A$의 임의의 ideal $\mathfrak{a}$는 $\sqrt{\mathfrak{a}}=\bigcap_{\mathfrak{p}\in Z(\mathfrak{a})}\mathfrak{p}$를 만족한다. 따라서 만일 $Z(\mathfrak{a})\subseteq Z(\mathfrak{b})$라면 더 큰 모임에 대한 교집합이 더 작으므로 $\sqrt{\mathfrak{b}}\subseteq \sqrt{\mathfrak{a}}$이다. 거꾸로 $\sqrt{\mathfrak{a}}\supseteq \sqrt{\mathfrak{b}}$라 하고 임의의 $\mathfrak{p}\in Z(\mathfrak{a})$를 가져오면, $\mathfrak{p}$가 위 교집합에 참여하는 prime ideal 중 하나이므로 $\mathfrak{p}\supseteq \sqrt{\mathfrak{a}}\supseteq \sqrt{\mathfrak{b}}\supseteq \mathfrak{b}$이고, 따라서 $\mathfrak{p}\in Z(\mathfrak{b})$이다.
+2. 이는 $\sum \mathfrak{a}_i$가 ideal들 $\mathfrak{a}_i$ 각각을 모두 포함하는 ideal 중 가장 작은 것으로 정의되므로 자명하다.
+3. [\[가환대수학\] §국소화의 성질들, ⁋따름정리 8](/ko/math/commutative_algebra/properties_of_localization#cor8).
 :::
 
 그럼 [\[위상수학\] §집합의 내부, 폐포, 경계, ⁋명제 2](/ko/math/topology/other_concepts#prop2)에 의하여, $Z(\mathfrak{a})$들을 닫힌집합으로 갖는 유일한 위상 $\mathcal{T}$가 존재하여 $\Spec A$를 위상공간으로 만들어준다. 
@@ -104,7 +102,7 @@ Zariski topology는 일반적으로 우리가 좋다고 생각했던 위상이 �
 앞서 우리는 [명제 2](#prop2)에서 $\Spec$을 functor $\Spec: \cRing^\op \rightarrow \Set$으로 취급할 수 있음을 살펴보았다. 뿐만 아니라, $\Spec$은 $\cRing^\op$에서 $\Top$으로의 functor이기도 하다.
 
 ::: 명제 8
-Ring $A$의 spectrum $\Spec A$ 위에 [정의 7](#def7)의 위상구조를 주면, [명제 2](#prop2)의 $\Spec$은 functor $\Spec: \cRing^\op \rightarrow \Top$으로 확장된다. 
+Ring $A$의 spectrum $\Spec A$ 위에 [정의 7](#def7)의 위상구조를 주면, [명제 2](#prop2)의 functor $\Spec: \cRing^\op \rightarrow \Top$은 functor이다. 
 :::
 ::: 증명
 [명제 2](#prop2)에서 추가로 보여야 할 것은 임의의 ring homomorphism $\phi: A \rightarrow B$가 주어졌을 때, $\Spec \phi: \Spec B \rightarrow \Spec A$가 <em-ko>연속</em-ko>함수라는 것이다. 따라서 $\Spec A$의 임의의 닫힌집합을 가져왔을 때, 이 닫힌집합의 $\Spec\phi$에 의한 preimage도 $\Spec B$에서의 닫힌집합임을 보이면 충분하다. ([\[위상수학\] §연속함수, ⁋정리 4](/ko/math/topology/continuous_functions#thm4)의 셋째 조건)
@@ -168,7 +166,7 @@ $$\Spec A\setminus Z(S)=\Spec A\setminus Z\left(\sum_{f\in S} (f)\right)=\Spec A
 이 성립한다. 
 :::
 
-그럼 이 보조정리와 유사한 계산을 통해 $D(fg)=D(f)\cap D(g)$임을 확인할 수 있다. 다만, 이 계산은 [보조정리 6](#lem6)의 첫째 결과를 사용하므로, 일반적으로 infinite index에 대해 확장할 수는 없다. 
+그럼 이 보조정리와 유사한 계산을 통해 $D(fg)=D(f)\cap D(g)$임을 확인할 수 있다. 다만, 이 계산은 [보조정리 6](#lem6)의 첫째 결과를 사용하므로, 일반적으로 무한한 index에 대해 확장할 수는 없다. 
 
 이와 별개로, 우리는 $\Spec A$가 항상 [\[위상수학\] §옹골공간, ⁋정의 1](/ko/math/topology/compact_spaces#def1)의 조건을 만족한다는 것을 보일 수 있다. 그러나 일반적으로 우리가 compact space에 기대하는 많은 성질들은 Hausdorff 조건 또한 요구하는 경우가 많고 ([\[위상수학\] §옹골공간, §§옹골 하우스도르프 공간](/ko/math/topology/compact_spaces#옹골-하우스도르프-공간)) Zariski topology는 일반적으로 Hausdorff space가 되지 않으므로, 우리는 이를 *quasi-compact<sub>준옹골</sub>*라 부르기로 한다. 
 
@@ -247,7 +245,7 @@ Closure operator $IZ: \mathcal{P}(A) \rightarrow \mathcal{P}(A)$, $ZI: \mathcal{
     으로부터 자명하다.
 :::
 
-[명제 14](#prop14)의 첫째 결과가 주는 $IZ(S)=\sqrt{(S)}$는 언제나 radical ideal이고, 거꾸로 임의의 radical ideal $\mathfrak{a}$에 대해서는 $IZ(\mathfrak{a})=\sqrt{\mathfrak{a}}=\mathfrak{a}$이므로, $IZ$의 image는 정확히 $A$의 radical ideal들의 모임이다. 마찬가지로 $ZI(T)=\cl(T)$는 언제나 닫힌집합이고 $\Spec A$의 임의의 닫힌집합 $Y$는 $ZI(Y)=\cl(Y)=Y$를 만족하므로, $ZI$의 image는 정확히 $\Spec A$의 닫힌집합들의 모임이다. 즉, 다음을 얻는다.
+즉, 다음을 얻는다.
 
 ::: 정리 15
 Ring $A$의 radical ideal들과, $\Spec A$의 닫힌집합들 사이의 Galois correspondence가 존재한다. 

@@ -1,6 +1,6 @@
 ---
 title: "부분다양체의 유일성"
-description: "부분다양체를 injective immersion으로 정의할 때, 함수의 치역이 부분다양체 조건을 만족한다고 해서 공역을 제한한 함수가 항상 immersion이 되는 것은 아니다. 위상적 조건에 따라 부분다양체 구조의 유일성이 달라진다."
+description: "부분다양체를 단사 immersion으로 정의할 때, 함수의 치역이 부분다양체 조건을 만족한다고 해서 공역을 제한한 함수가 항상 immersion이 되는 것은 아니다. 위상적 조건에 따라 부분다양체 구조의 유일성이 달라진다."
 excerpt: "Immersed submanifold의 위상구조와 매끄러운 함수의 인수분해"
 
 categories: [Math / Manifolds]
@@ -10,12 +10,10 @@ sidebar:
 
 date: 2023-01-12
 weight: 8
-revising: true
-drift_needed: true
 
 ---
 
-정의에 의하여, manifold $M$의 submanifold는 injective immersion을 의미한다. 이를 $\Phi:P\rightarrow M$으로 적자. 그럼 $\Phi$의 공역을 제한하여 얻어지는 함수 $\bar{\Phi}:P\rightarrow \Phi(P)$는 전단사함수이므로, $P$의 위상구조를 그대로 $\Phi(P)$ 위에 옮겨올 수 있고, 이러한 과정을 통해 $M$의 submanifold는 부분집합의 inclusion $\Phi(P)\hookrightarrow M$으로도 생각할 수 있다. 이번 글에서 우리는 이를 조금 더 자세히 살펴본다.
+정의에 의하여, manifold $M$의 submanifold는 단사인 immersion을 의미한다. 이를 $\Phi:P\rightarrow M$으로 적자. 그럼 $\Phi$의 공역을 제한하여 얻어지는 함수 $\bar{\Phi}:P\rightarrow \Phi(P)$는 전단사함수이므로, $P$의 위상구조를 그대로 $\Phi(P)$ 위에 옮겨올 수 있고, 이러한 과정을 통해 $M$의 submanifold는 부분집합의 inclusion $\Phi(P)\hookrightarrow M$으로도 생각할 수 있다. 이번 글에서 우리는 이를 조금 더 자세히 살펴본다.
 
 ## 부분다양체와 $C^\infty$ 함수
 
@@ -130,9 +128,7 @@ $$\dim(A,\mathcal{T}',\mathcal{A}')<\dim(A,\mathcal{T},\mathcal{A})$$
 
 $(U,\varphi)$가 $(A,\mathcal{T},\mathcal{A})$의 coordinate system이라 하자. 일반성을 잃지 않고 $\varphi$의 image가 $\mathbb{R}^d$라 가정할 수 있으며, 이 때 $\id$는 전사함수이므로 합성 $\varphi\circ\id$의 image 또한 $\mathbb{R}^d$이다.
 
-한편, $(A,\mathcal{T}',\mathcal{A}')$는 manifold이므로 이를 $\mathbb{R}^{d'}$와 homeomorphic한 *countable*한 coordinate system들 $(V,\sigma)$들로 덮을 수 있다. 각각의 $(V,\sigma)$에 대하여 $\Omega=\sigma(V\cap\id^{-1}(U))$라 두면 $\Omega$는 $\mathbb{R}^{d'}$의 열린집합이고, $g=\varphi\circ\id\circ\sigma^{-1}$은 $\Omega$에서 $\mathbb{R}^d$로 가는 $C^\infty$ 함수이다. 이제 $\mathbb{R}^d=\mathbb{R}^{d'}\times\mathbb{R}^{d-d'}$로 적고 projection $\pi:\mathbb{R}^d\rightarrow\mathbb{R}^{d'}$를 생각하면, 합성 $g\circ\pi$는 $\mathbb{R}^d$의 열린집합 $\pi^{-1}(\Omega)$에서 $\mathbb{R}^d$로 가는 $C^1$ 함수이다. 이 때 $d'<d$이므로 $\Omega\times\{0\}$은 $\mathbb{R}^d$에서 measure zero이고, $\mathbb{R}^d$의 열린집합에서 $\mathbb{R}^d$로 가는 $C^1$ 함수는 measure zero set을 measure zero set으로 보내므로 $(g\circ\pi)(\Omega\times\{0\})$ 또한 $\mathbb{R}^d$에서 measure zero이다. 그런데 $\pi(x,0)=x$이므로 이 집합은 $g(\Omega)$와 같다.
-
-따라서 $g(\Omega)$들은 모두 $\mathbb{R}^d$에서 measure zero인데, 이들의 합집합은 $\varphi(U)=\mathbb{R}^d$이므로 $\mathbb{R}^d$가 measure zero set들의 countable한 합집합이 되어 모순이다. 
+한편, $(A,\mathcal{T}',\mathcal{A}')$는 manifold이므로 이를 $\mathbb{R}^{d'}$와 homeomorphic한 *countable*한 coordinate system들 $(V,\sigma)$들로 덮을 수 있다. 그런데 $\varphi\circ\id\circ\sigma^{-1}$은 $C^\infty$이고, 이들은 $C^1$ 함수로서 모두 measure zero set $\mathbb{R}^{d'}$들을 measure zero set들로 보내므로 이들의 image가 $\mathbb{R}^d$가 되는 것은 모순이다. 
 :::
 
 ---

@@ -13,9 +13,7 @@ sidebar:
 date: 2022-11-22
 
 weight: 4
-revising: true
 
-drift_needed: true
 
 ---
 
@@ -50,11 +48,11 @@ $$(x,y)\in R\iff (y,x)\in R^{-1}\iff (x,y)\in (R^{-1})^{-1}$$
 아직 보이지 않은 $\pr_2R^{-1}=\pr_1R$의 경우, 방금 주장의 $R$ 자리에 대신 $R^{-1}$을 넣으면 된다.   
 :::
 
-주어진 집합 $A,B$에 대하여, $A\times B$는 $A$를 source로, $B$를 target으로 갖는 가장 큰 이항관계였다. 따라서 $A$와 $B$가 모두 공집합이 아니라면 두 개의 식
+주어진 집합 $A,B$에 대하여, $A\times B$는 $A$를 source로, $B$를 target으로 갖는 가장 큰 이항관계였다. 따라서 두 개의 식
 
 $$\pr_1(A\times B)^{-1}=\pr_2(A\times B)=B,\qquad \pr_2(A\times B)^{-1}=\pr_1(A\times B)=A$$
 
-에서, $(A\times B)^{-1}\subseteq B\times A$이다. 반대로, 만일 $(y,x)\in B\times A$라면 $x\in A$, $y\in B$이므로 $(x,y)\in A\times B$이고, 따라서 $(y,x)\in (A\times B)^{-1}$이므로 $(A\times B)^{-1}=B\times A$가 성립한다. $A$와 $B$ 중 하나가 공집합인 경우에는 [§순서쌍, ⁋명제 10](/ko/math/set_theory/ordered_pair#prop10)에 의해 $A\times B$와 $B\times A$가 모두 공집합이고, 공집합의 역 또한 공집합이므로 등식 $(A\times B)^{-1}=B\times A$는 이 경우에도 성립한다.
+에서, $(A\times B)^{-1}\subseteq B\times A$이다. 반대로, 만일 $(y,x)\in B\times A$라면 $x\in A$, $y\in B$이므로 $(x,y)\in A\times B$이고, 따라서 $(y,x)\in (A\times B)^{-1}$이므로 $(A\times B)^{-1}=B\times A$가 성립한다.
 
 ## 이항관계의 합성
 

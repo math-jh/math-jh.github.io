@@ -10,8 +10,6 @@ sidebar:
 
 date: 2025-02-21
 weight: 14
-revising: true
-drift_needed: true
 ---
 
 우리는 scheme morphism $\varphi: X \rightarrow S$를 $S$로 parametrize된 family로 읽기로 하였으며 ([§스킴 사이의 사상, ⁋예시 10](/ko/math/scheme_theory/morphism_of_schemes#ex10)), 이 family의 $s\in S$에서의 member를 fiber $X_s=X\times_S\Spec \kappa(s)$로 정의하였다. ([§올곱, ⁋정의 12](/ko/math/scheme_theory/fiber_products#def12)) 그러나 이 family가 얼마나 좋게 행동할지는 현재로서 우리가 확인할 수 없는 정보이다. 
@@ -144,7 +142,7 @@ $$(0)=\mathfrak{N}(B)=\bigcap_{i=1}^k \mathfrak{p}_i$$
 
 이므로, $ab=0$이고 $b\neq 0$인 zerodivisor $a$에 대하여 $b\not\in \mathfrak{p}_i$인 $i$를 택하면 $ab=0\in \mathfrak{p}_i$로부터 $a\in \mathfrak{p}_i$를 얻기 때문이다.
 
-한편 $\mathfrak{p}_i$들은 정확히 $X$의 irreducible component $Z_i=Z(\mathfrak{p}_i)$들의 generic point에 대응한다. 이제 $0\neq f\in \mathbb{K}[t]$가 $B$에서 zerodivisor인 것은 어떤 $i$에 대하여 $f\in \mathfrak{p}_i$인 것, 즉 $f$가 $Z_i$ 위에서 항등적으로 소멸하는 것과 같다. 그런데 $f$가 $Z_i$ 위에서 소멸한다는 것은 $Z_i$의 image가 진부분 닫힌집합 $Z(f)\subsetneq \mathbb{A}^1_\mathbb{K}$에 포함된다는 것, 즉 $Z_i$가 $\mathbb{A}^1_\mathbb{K}$를 dominate하지 않는다는 것과 같다. 역으로 $Z_i$가 dominate하지 않으면 그 image의 closure가 진부분 닫힌집합이므로 그 위에서 소멸하는 $0$이 아닌 $f\in \mathbb{K}[t]$가 존재하고, 이 $f$는 $\mathfrak{p}_i$에 속하여 zerodivisor가 된다. 이상에서 결론을 얻는다.
+한편 $\mathfrak{p}_i$들은 정확히 $X$의 irreducible component $Z_i=V(\mathfrak{p}_i)$들의 generic point에 대응한다. 이제 $0\neq f\in \mathbb{K}[t]$가 $B$에서 zerodivisor인 것은 어떤 $i$에 대하여 $f\in \mathfrak{p}_i$인 것, 즉 $f$가 $Z_i$ 위에서 항등적으로 소멸하는 것과 같다. 그런데 $f$가 $Z_i$ 위에서 소멸한다는 것은 $Z_i$의 image가 진부분 닫힌집합 $Z(f)\subsetneq \mathbb{A}^1_\mathbb{K}$에 포함된다는 것, 즉 $Z_i$가 $\mathbb{A}^1_\mathbb{K}$를 dominate하지 않는다는 것과 같다. 역으로 $Z_i$가 dominate하지 않으면 그 image의 closure가 진부분 닫힌집합이므로 그 위에서 소멸하는 $0$이 아닌 $f\in \mathbb{K}[t]$가 존재하고, 이 $f$는 $\mathfrak{p}_i$에 속하여 zerodivisor가 된다. 이상에서 결론을 얻는다.
 :::
 
 도입에서 본 $X=\Spec \mathbb{K}[t,\x]/(t\x)$는 reduced이고 그 성분 $\{t=0\}$이 base를 dominate하지 않으므로, [따름정리 6](#cor6)이 곧바로 non-flatness를 준다. 
@@ -178,7 +176,7 @@ $\x,\y,\z$의 degree로 grading을 준 graded ring $A_\bullet=\mathbb{K}[t][\x,\
 
 $$X=\Proj A_\bullet/(\x\z-t\y^2)$$
 
-은 $\mathbb{P}^2\times_\mathbb{K}\mathbb{A}^1_\mathbb{K}$의 closed subscheme으로서 $V_+(\x\z-t\y^2)$이다. 이 명제는 $A_\bullet$이 field 위의 polynomial ring인 경우로 서술되어 있으나, 그 증명이 사용하는 것은 canonical projection이 surjective graded ring homomorphism이라는 것과 각 chart의 identification $D_+(f)\cong \Spec A_{(f)}$뿐이고 ([§사영공간과 Proj 구성, ⁋정리 10](/ko/math/scheme_theory/projective_schemes#thm10)), 이들은 임의의 graded ring에 대하여 성립하므로 지금의 $A_\bullet$에 대해서도 그대로 적용된다. 즉 $X$는 $\mathbb{P}^2$ 안에서 방정식 $\x\z=t\y^2$이 자르는 곡선들의 family이며, 위의 structure morphism이 이를 $\mathbb{A}^1_\mathbb{K}$ 위의 family로 만든다.
+은 $\mathbb{P}^2\times_\mathbb{K}\mathbb{A}^1_\mathbb{K}$의 closed subscheme으로서 $V_+(\x\z-t\y^2)$이다. 즉 $X$는 $\mathbb{P}^2$ 안에서 방정식 $\x\z=t\y^2$이 자르는 곡선들의 family이며, 위의 structure morphism이 이를 $\mathbb{A}^1_\mathbb{K}$ 위의 family로 만든다.
 
 이 morphism이 flat인 것은 세 개의 affine chart에서 확인된다. $D_+(\y)$ 위에서 $u=\x/\y$, $v=\z/\y$로 두면 관계식을 $\y^2$으로 나누어 $uv=t$를 얻으므로 coordinate ring은 $\mathbb{K}[t][u,v]/(uv-t)$이며, 이는 $t=uv$를 통해 integral domain $\mathbb{K}[u,v]$와 isomorphic이다. $uv$ 또한 상수가 아니므로 [예시 7](#ex7)에서와 같은 이유로 [명제 5](#prop5)에 의하여 flat이다. $D_+(\x)$ 위에서 $w=\y/\x$, $s=\z/\x$로 두면 관계식을 $\x^2$으로 나누어 $s=tw^2$을 얻으므로 coordinate ring은 $\mathbb{K}[t][w]$이고, 이는 free $\mathbb{K}[t]$-module이므로 flat이다. $D_+(\z)$의 경우도 symmetric이다. 이 셋이 $X$를 덮으므로 $X \rightarrow \mathbb{A}^1_\mathbb{K}$는 flat이다.
 
@@ -264,15 +262,15 @@ $Y$가 Noetherian이므로 유한개의 affine open $V_j$로 덮이고, $\varphi
 
 먼저 $A$의 nilradical $\mathfrak{N}=\mathfrak{N}(A)$에 대하여 $\mathfrak{N}B$는 $B$의 nilpotent ideal이므로 $\Spec B/\mathfrak{N}B$와 $\Spec B$는 같은 위상공간이고, $\Spec A/\mathfrak{N}$과 $\Spec A$도 그러하다. ([§차원, §§스킴의 차원](/ko/math/scheme_theory/dimension#스킴의-차원)) 따라서, 필요하다면 $A$를 $A/\mathfrak{N}$으로, $B$를 $B/\mathfrak{N}B$로 바꾸어 $A$가 reduced라 가정해도 좋다.
 
-이제 $A$의 minimal prime을 $\mathfrak{p}_1,\ldots, \mathfrak{p}_k$라 하자. 그럼 임의의 prime ideal은 항상 적당한 minimal prime을 포함하므로 $Y=\bigcup_j Z(\mathfrak{p}_j)$이다. 만일 $k\geq 2$라면 각 $Z(\mathfrak{p}_j)$는 $Y$의 진부분 닫힌집합이고
+이제 $A$의 minimal prime을 $\mathfrak{p}_1,\ldots, \mathfrak{p}_k$라 하자. 그럼 임의의 prime ideal은 항상 적당한 minimal prime을 포함하므로 $Y=\bigcup_j V(\mathfrak{p}_j)$이다. 만일 $k\geq 2$라면 각 $V(\mathfrak{p}_j)$는 $Y$의 진부분 닫힌집합이고
 
-$$\varphi(X)=\bigcup_{j=1}^k \varphi\big(X\times_Y Z(\mathfrak{p}_j)\big)$$
+$$\varphi(X)=\bigcup_{j=1}^k \varphi\big(X\times_Y V(\mathfrak{p}_j)\big)$$
 
-인데, 각 base change $X\times_YZ(\mathfrak{p}_j)=\Spec (B\otimes_AA/\mathfrak{p}_j) \rightarrow Z(\mathfrak{p}_j)$는 여전히 affine이고 finite type이므로 Noetherian induction의 귀납가정 $P(Z(\mathfrak{p}_j))$에 의하여 각 항이 constructible이고 따라서 $\varphi(X)$도 constructible이다. 그러므로 $k=1$, 즉 $A$가 integral domain인 경우만 고려해도 충분하다.
+인데, 각 base change $X\times_YV(\mathfrak{p}_j)=\Spec (B\otimes_AA/\mathfrak{p}_j) \rightarrow V(\mathfrak{p}_j)$는 여전히 affine이고 finite type이므로 Noetherian induction의 귀납가정 $P(V(\mathfrak{p}_j))$에 의하여 각 항이 constructible이고 따라서 $\varphi(X)$도 constructible이다. 그러므로 $k=1$, 즉 $A$가 integral domain인 경우만 고려해도 충분하다.
 
-$B=0$인 경우는 자명하므로 $B\neq 0$이라 하자. 그럼 [\[가환대수학\] §뇌터 정규화, ⁋정리 6](/ko/math/commutative_algebra/noether_normalization#thm6)에 의해 $0\neq a\in A$가 존재하여 $B_a$가 free $A_a$-module이다. $a$가 unit인 경우는 마찬가지로 자명하므로,  $a$가 non-unit이라 하자. 이 경우 $A$가 integral domain이므로 $Z(a)$는 $Y$의 진부분 닫힌집합이다. 
+$B=0$인 경우는 자명하므로 $B\neq 0$이라 하자. 그럼 [\[가환대수학\] §뇌터 정규화, ⁋정리 6](/ko/math/commutative_algebra/noether_normalization#thm6)에 의해 $0\neq a\in A$가 존재하여 $B_a$가 free $A_a$-module이다. $a$가 unit인 경우는 마찬가지로 자명하므로,  $a$가 non-unit이라 하자. 이 경우 $A$가 integral domain이므로 $V(a)$는 $Y$의 진부분 닫힌집합이다. 
 
-우선 만일 $B_a=0$인 경우, 이는 $\phi(a)$가 $B$에서 nilpotent라는 뜻이므로 $\phi(a)$는 $B$의 모든 prime ideal에 속한다. 따라서 $\varphi(X)\subseteq Z(a)$이고, $\varphi(X)$는 base change $X\times_YZ(a) \rightarrow Z(a)$의 image와 같으므로 귀납가정 $P(Z(a))$에 의하여 constructible이다.
+우선 만일 $B_a=0$인 경우, 이는 $\phi(a)$가 $B$에서 nilpotent라는 뜻이므로 $\phi(a)$는 $B$의 모든 prime ideal에 속한다. 따라서 $\varphi(X)\subseteq V(a)$이고, $\varphi(X)$는 base change $X\times_YV(a) \rightarrow V(a)$의 image와 같으므로 귀납가정 $P(V(a))$에 의하여 constructible이다.
 
 마지막으로 $B_a\neq 0$이어서 $B_a$가 $0$이 아닌 free $A_a$-module인 경우를 보자. 임의의 $\mathfrak{p}\in D(a)$에 대하여, $B_a$의 rank를 $r$이라 하면
 
@@ -280,9 +278,9 @@ $$B_a\otimes_{A_a}\kappa(\mathfrak{p})\cong \kappa(\mathfrak{p})^{\oplus r}\neq 
 
 이므로 $\mathfrak{p}$ 위의 fiber는 공집합이 아니고, 따라서 $D(a)\subseteq \varphi(X)$이다. 그럼
 
-$$\varphi(X)=D(a)\cup \big(\varphi(X)\cap Z(a)\big)$$
+$$\varphi(X)=D(a)\cup \big(\varphi(X)\cap V(a)\big)$$
 
-이고, $\varphi(X)\cap Z(a)$는 base change $X\times_YZ(a) \rightarrow Z(a)$의 image이므로 귀납가정 $P(Z(a))$에 의하여 constructible이다. $D(a)$는 열린집합이므로 constructible이고, 따라서 $\varphi(X)$는 constructible이다.
+이고, $\varphi(X)\cap V(a)$는 base change $X\times_YV(a) \rightarrow V(a)$의 image이므로 귀납가정 $P(V(a))$에 의하여 constructible이다. $D(a)$는 열린집합이므로 constructible이고, 따라서 $\varphi(X)$는 constructible이다.
 :::
 
 마지막으로 우리는 constructible set이 언제 열린집합이 되는지도 함께 정리해둔다.

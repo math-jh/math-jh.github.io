@@ -10,8 +10,6 @@ sidebar:
 
 date: 2022-06-16
 weight: 6
-revising: true
-drift_needed: true
 
 ---
 
@@ -47,7 +45,7 @@ $$v=\dd{\varphi}^{-1}_{\varphi(p)}\left(\frac{\partial}{\partial r^1}\bigg\vert_
 
 $$\gamma: t\mapsto \varphi^{-1}(t, 0,\cdots, 0)$$
 
-의 $t=0$에서의 속도벡터가 되기 때문이다. 참고로 위의 조건을 만족하는 coordinate system을 찾는 것은 아주 쉬운데, 임의의 coordinate system $(U,\psi)$를 하나 고른 후 이를 $\psi-\psi(p)$로 바꾸어 $\psi(p)=0$이 되도록 옮기고, 이후 $w=\dd{\psi_p}(v)$를 첫 원소로 하는 $\mathbb{R}^n$의 새로운 basis를 만든 후, 옮겨진 $\psi$와 이 basis에 대한 coordinate representation, 즉 $w$를 $e_1$으로 보내는 change of basis를 합성하면 된다.
+의 $t=0$에서의 속도벡터가 되기 때문이다. 참고로 위의 조건을 만족하는 coordinate system을 찾는 것은 아주 쉬운데, 임의의 coordinate system $(U,\psi)$를 하나 고른 후, $\dd{\psi_p}(v)$가 옮겨진 벡터를 포함하는 $\mathbb{R}^n$의 새로운 basis를 만든 후, 원래의 $\psi$와 이렇게 얻어진 change of basis를 합성하면 된다.
 :::
 
 특별히 $M=\mathbb{R}^m$인 경우, $T_{\gamma(t)}M$의 basis는
@@ -85,7 +83,7 @@ $$(F\circ\gamma)'(t)=\dd{F_{\gamma(t)}}(\gamma'(t))$$
 이를 약간 수정하면, 주어진 $C^\infty$ 함수 $F:M\rightarrow N$에 대하여, 임의의 $v\in T_pM$에서의 differential의 값 $\dd{F_p}(v)$를 알기 위해서는 점 $p$에서 $v$방향 속도벡터를 가지는 곡선을 아무거나 하나 고른 후[^2], 이 곡선 $\gamma$에 대해 $F\circ\gamma$의 시간 $t$에서의 속도벡터를 구하면 된다는 것을 알 수 있다. 즉,
 
 ::: 명제 3
-두 manifold $M,N$과 $C^\infty$ 함수 $F:M\rightarrow N$, 그리고 한 점 $p\in M$을 생각하자. 임의의 $v\in T_pM$에 대하여, $0\in(a,b)$이고 $\gamma(0)=p$, $\gamma'(0)=v$를 만족하는 $C^\infty$ 곡선 $\gamma:(a,b)\rightarrow M$는 다음의 식
+두 manifold $M,N$과 $C^\infty$ 함수 $F:M\rightarrow N$을 생각하자. 임의의 $v\in T_pM$에 대하여, $\gamma(0)=p$, $\gamma'(0)=v$를 만족하는 $C^\infty$ 곡선 $\gamma:(a,b)\rightarrow M$는 다음의 식
 
 $$\dd{F_p}(v)=(F\circ\gamma)'(0)$$
 
@@ -107,7 +105,7 @@ $$D_v\vert_x: f\mapsto \lim_{t\rightarrow 0}\frac{f(x+tv)-f(x)}{t}$$
 로 정의된 방향미분을 대응시키는 것이 이 isomorphism이기 때문이다. 
 
 ::: 명제 4
-Manifold 구조가 주어진 $m$차원 $\mathbb{R}$-벡터공간 $V$를 생각하자. $V$의 임의의 점 $x\in V$에 대하여, basis의 선택에 의존하지 않는 isomorphism $V\cong T_xV$가 존재한다. 뿐만 아니라 $W$ 또한 manifold 구조가 주어진 유한차원 $\mathbb{R}$-벡터공간이고, $L:V\rightarrow W$가 linear map이라면 다음의 diagram이 commute한다.
+Manifold 구조가 주어진 $m$차원 $\mathbb{R}$-벡터공간 $V$를 생각하자. $V$의 임의의 점 $x\in V$에 대하여, basis의 선택에 의존하지 않는 isomorphism $V\cong T_xV$가 존재한다. 뿐만 아니라 $V,W$가 두 $\mathbb{R}$-벡터공간이고, $L:V\rightarrow W$가 linear map이라면 다음의 diagram이 commute한다.
 
 {% diagram Math/Manifolds/Examples_of_Differentials-1.svg width="9.31em" alt="tangent_space_of_vector_space" %}
 :::
@@ -178,7 +176,7 @@ $$T_pM\overset{\dd{f_p}}{\longrightarrow}T_{f(p)}\mathbb{R}\overset{\sim}{\longr
 Manifold $M$과 한 점 $p\in M$에 대하여, $\mathbb{R}$-벡터공간 $T_pM$의 dual space $(T_pM)^\ast$를 *cotangent space<sub>여접공간</sub>*라 부르고 간단하게 $T_p^\ast M$으로 적는다. $T_p^\ast M$의 원소들을 *tangent covector<sub>여접벡터</sub>* 혹은 간단하게 *covector*라 부른다.
 :::
 
-따라서 앞선 논의는 임의의 $C^\infty$ 함수 $f:M\rightarrow\mathbb{R}$이 tangent covector를 하나 지정한다고 요약할 수 있다. [§여접공간](/ko/math/manifolds/cotangent_space)에서 $\mathfrak{m}_p/\mathfrak{m}_p^2$에 붙였던 이름도 같은 것인데, 이 글의 마지막에서 보듯 두 벡터공간이 자연스럽게 identify되므로 $(T_pM)^\ast$와 $\mathfrak{m}_p/\mathfrak{m}_p^2$을 같은 대상으로 보아도 된다.
+따라서 앞선 논의는 임의의 $C^\infty$ 함수 $f:M\rightarrow\mathbb{R}$이 tangent covector를 하나 지정한다고 요약할 수 있다.
 
 한편, $T_p^\ast M$은 벡터공간 $T_pM$의 dual space이고, $T_pM$은 유한차원 $\mathbb{R}$-벡터공간이므로 $T_pM$의 basis들이 $T_p^\ast M$의 *dual basis*를 정의한다. 
 
@@ -220,4 +218,4 @@ $$T_p^\ast M\cong (\mathfrak{m}_p/\mathfrak{m}_p^2)^{\ast\ast}\cong\mathfrak{m}_
 ---
 
 [^1]: 더 정확하게는 점 $p$에서 같은 속도벡터를 갖는 곡선들은 동일하게 취급하여 equivalence relation을 주어야 한다.
-[^2]: $v\neq 0$이면 [명제 2](#prop2)에 의해 이러한 곡선이 적어도 하나 존재하고, $v=0$인 경우에는 상수곡선 $\gamma(t)=p$가 $\gamma'(0)f=(f\circ\gamma)'(0)=0$을 주므로 역시 존재한다.
+[^2]: [명제 2](#prop2)에 의해 이러한 곡선은 적어도 하나 존재한다.

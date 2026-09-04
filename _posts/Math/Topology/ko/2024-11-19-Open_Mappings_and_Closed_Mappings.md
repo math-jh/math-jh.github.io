@@ -10,8 +10,6 @@ sidebar:
 
 date: 2024-11-19
 weight: 12
-revising: true
-drift_needed: true
 
 ---
 
@@ -39,12 +37,12 @@ drift_needed: true
     
     $$(g\circ f)(f^{-1}(V))=g(f(f^{-1}(V)))=g(V)$$
 
-    가 성립하므로 $g(V)$는 $Z$의 열린집합이다. 여기서 $f(f^{-1}(V))=V$인 것은 $f$가 전사함수임을 이용하였다. ([\[집합론\] §Retraction과 section](/ko/math/set_theory/retraction_and_section)) 한편 마찬가지 방식으로 $Y$의 임의의 닫힌집합 $B$가 주어졌다 하면 [§연속함수, ⁋정리 4](/ko/math/topology/continuous_functions#thm4)에 의하여 위와 동일한 논증을 적용할 수 있다.
-3. 둘째 증명과 마찬가지로 open인 경우만 생각하면 충분하다. $X$의 임의의 열린집합 $U$에 대하여, $g\circ f$가 open이므로 $g(f(U))$는 open이고, 따라서 $g$가 연속이라는 것과 $g$가 단사함수라는 것을 사용하면 다음 식
+    가 성립하므로 $g(V)$는 $Z$의 열린집합이다. 여기서 $f(f^{-1}(V))=V$인 것은 $f$가 전사함수임을 이용하였다. ([\[집합론\] §Retraction과 section, ⁋정의 2](/ko/math/set_theory/retraction_and_section#def2)) 한편 마찬가지 방식으로 $Y$의 임의의 닫힌집합 $B$가 주어졌다 하면 [§연속함수, ⁋정리 4](/ko/math/topology/continuous_functions#thm4)에 의하여 위와 동일한 논증을 적용할 수 있다.
+3. 둘째 증명과 마찬가지로 open인 경우만 생각하면 충분하다. $X$의 임의의 열린집합 $U$에 대하여, $g\circ f$가 open이므로 $g(f(U))$는 open이고, 따라서 $g$가 연속이라는 것과 위의 [\[집합론\] §Retraction과 section, ⁋정의 2](/ko/math/set_theory/retraction_and_section#def2)을 사용하면 다음 식
     
     $$g^{-1}(g(f(U)))=f(U)$$
 
-    로부터 $f(U)$가 열린집합임을 안다. ([\[집합론\] §Retraction과 section](/ko/math/set_theory/retraction_and_section))
+    로부터 $f(U)$가 열린집합임을 안다.
 :::
 
 다음 명제는 위상공간 사이의 함수가 언제 open 또는 closed인지를 판별하는데 도움이 된다.
@@ -66,11 +64,7 @@ $$f\vert_{f^{-1}(A)}(U\cap f^{-1}(A))=f(U)\cap A$$
 
 $$U_i=U\cap f^{-1}(A_i)$$
 
-으로 정의하자. 그럼 $U_i$는 $f^{-1}(A_i)$의 열린집합 (resp. 닫힌집합)이고 첫 번째 결과에서와 같은 계산으로 $f\vert_{f^{-1}(A_i)}(U_i)=f(U)\cap A_i$를 얻으므로, 가정에 의하여 $f(U)\cap A_i$는 모든 $i$에 대하여 부분공간 $A_i$의 열린집합 (resp. 닫힌집합)이다. 이는 $f(U)\cap A_i$가 $Y$의 열린집합 (resp. 닫힌집합)이라는 뜻이 아니므로, $B=f(U)$와 $B_i=B\cap A_i$로 적고 $(A_i)$에 주어진 두 조건을 각각 사용하여야 한다.
-
-가정 (1)에서는 $A_i$가 $Y$의 닫힌집합이므로 $A_i$의 닫힌집합이 곧 $Y$의 닫힌집합이 되고, $B_i\subseteq A_i$이므로 $(B_i)$와 $(A_i\setminus B_i)$ 또한 locally finite이다. 따라서 각각의 $f\vert_{f^{-1}(A_i)}$가 closed라면 $B_i$는 $Y$의 닫힌집합이므로 [§집합의 내부, 폐포, 경계, ⁋명제 4](/ko/math/topology/other_concepts#prop4)에 의하여 $B=\bigcup_{i\in I}B_i$가 닫힌집합이다. 각각의 $f\vert_{f^{-1}(A_i)}$가 open이라면 $A_i\setminus B_i$가 $A_i$의, 따라서 $Y$의 닫힌집합이고, 같은 명제에 의하여 $\bigcup_{i\in I}(A_i\setminus B_i)$는 닫힌집합이다. 그런데 $(A_i)$가 $Y$의 covering이므로 이 합집합은 $Y\setminus B$와 같고, 결국 $B$는 열린집합이 된다.
-
-가정 (2)에서는 $\interior A_i\subseteq A_i$인 것을 이용한다. 각각의 $f\vert_{f^{-1}(A_i)}$가 open이라 하면 $Y$의 열린집합 $O_i$가 존재하여 $B_i=O_i\cap A_i$이고, 따라서 $B\cap\interior A_i=B_i\cap\interior A_i=O_i\cap\interior A_i$는 $Y$의 열린집합이다. $(\interior A_i)$가 $Y$의 covering이므로 $B=\bigcup_{i\in I}(B\cap\interior A_i)$가 되어 $B$는 열린집합이다. 각각의 $f\vert_{f^{-1}(A_i)}$가 closed인 경우에는 $Y$의 열린집합 $O_i$를 $A_i\setminus B_i=O_i\cap A_i$이도록 잡으면 $\interior A_i\setminus B=\interior A_i\cap(A_i\setminus B_i)=O_i\cap\interior A_i$가 $Y$의 열린집합이고, $Y\setminus B=\bigcup_{i\in I}(\interior A_i\setminus B)$이므로 $B$는 닫힌집합이 된다. 
+으로 정의하자. 그럼 $f\vert_{f^{-1}(A_i)}(U_i)=f(U)\cap A_i$이 성립하고, 따라서 가정에 의하여 $f(U)\cap A_i$가 모든 $i$에 대해 열린집합 (resp. 닫힌집합)이다. 따라서 만일 $U$가 열린집합이라면 $f(U)$는 열린집합들의 합집합이므로 열린집합이고, $U$가 닫힌집합이면 [§집합의 내부, 폐포, 경계, ⁋명제 4](/ko/math/topology/other_concepts#prop4)에 의하여 닫힌집합이 된다. 
 :::
 
 ## 동치관계들
@@ -78,8 +72,6 @@ $$U_i=U\cap f^{-1}(A_i)$$
 ::: 정의 4
 위상공간 $X$ 위에 정의된 동치관계 $R$이 *open (resp. closed)*이라는 것은 canonical map $X \rightarrow X/R$이 open (resp. closed)인 것이다. 
 :::
-
-아래에서 $R$은 연속함수 $f$에 의해 정의된 동치관계를 뜻하고 ([\[집합론\] §동치관계의 예시들, ⁋정의 2](/ko/math/set_theory/examples_of_equivalence#def2)), $p$는 canonical projection, $i$는 canonical injection, $h$는 canonical decomposition에서 얻어지는 전단사함수를 뜻한다. ([\[집합론\] §동치관계의 예시들, §§Canonical decomposition](/ko/math/set_theory/examples_of_equivalence#canonical-decomposition)) 이때 $f(X)$에 부분위상을 부여하면 [§몫공간, ⁋명제 4](/ko/math/topology/quotient_spaces#prop4)와 [§Initial topology와 final topology, ⁋명제 3](/ko/math/topology/initial_and_final_topology#prop3)에 의하여 $h$는 연속이다.
 
 그럼 다음이 성립하는 것을 쉽게 보일 수 있다.
 

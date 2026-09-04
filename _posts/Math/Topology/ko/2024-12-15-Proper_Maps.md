@@ -10,8 +10,6 @@ sidebar:
 
 date: 2024-12-15
 weight: 18
-revising: true
-drift_needed: true
 
 ---
 
@@ -102,11 +100,11 @@ $$\mathcal{F}'=\{F\cup\{\ast_X\}\mid F\in \mathcal{F}\}$$
 위상공간 $X$에 대하여, $f: X \rightarrow \{\ast\}$이 universally closed라 하자. 그럼 $X$는 compact이다.
 :::
 ::: 증명
-$X$ 위의 임의의 ultrafilter $\mathcal{F}$에 대하여, 위의 논증으로부터 얻어지는 $X'$를 생각하자. 또, $X\times X'$의 부분집합 $\Delta$를
+임의의 $X$ 위의 임의의 filter $\mathcal{F}$에 대하여, 위의 논증으로부터 얻어지는 $X'$를 생각하자. 또, $X\times X'$의 부분집합 $\Delta$를
 
 $$\Delta=\{(x,x)\mid x\in X\}$$
 
-으로 정의하자. 그럼 $\Delta$의 closure $\cl\Delta$를 생각할 수 있으며, 이 때 $f$가 universally closed라는 가정으로부터 $\cl\Delta$의 $f\times\id_{X'}:X\times X'\rightarrow \{\ast\}\times X'\cong X'$에 의한 image가 닫힌집합임을 안다. 이제 이 image는 $X$를 포함하므로, $\ast_X$가 closure에 포함된다는 가정으로부터 적당한 $x\in X$가 존재하여 $(x,\ast_X)\in \cl\Delta$임을 안다. 그럼 $x$의 임의의 근방 $U$와 임의의 $F\in \mathcal{F}$에 대하여 $U\cap F\neq\emptyset$이므로 $x$는 $\mathcal{F}$의 cluster point이다. 이제 $\mathcal{F}$가 ultrafilter라는 것으로부터 $x$가 $\mathcal{F}$의 limit point임을 얻는데, 만일 $x$의 근방 $V$가 $\mathcal{F}$에 속하지 않는다면 $X\setminus V\in \mathcal{F}$이고 $V$는 이 집합과 만나지 않아 위의 cluster point 조건에 어긋나기 때문이다. 따라서 [§Compactness와 paracompactness, ⁋보조정리 1](/ko/math/topology/compactness#lem1)로부터 $X$가 compact임을 안다. 
+으로 정의하자. 그럼 $\Delta$의 closure $\cl\Delta$를 생각할 수 있으며, 이 때 $f$가 universally closed라는 가정으로부터 $\cl\Delta$의 $f\times\id_{X'}:X\times X'\rightarrow \{\ast\}\times X'\cong X'$에 의한 image가 닫힌집합임을 안다. 이제 이 image는 $X$를 포함하므로, $\ast_X$가 closure에 포함된다는 가정으로부터 적당한 $x\in X$가 존재하여 $(x,\ast_X)\in \cl\Delta$임을 안다. 그럼 $x$가 $\mathcal{F}$의 cluster point이고, 따라서 $\mathcal{F}$를 포함하는 ultrafilter를 생각하면 $x$는 그 filter의 limit point임을 안다. 
 :::
 
 위의 보조정리는 그 역 또한 성립한다. 더 일반적으로 다음이 성립한다.
@@ -118,11 +116,7 @@ $$\Delta=\{(x,x)\mid x\in X\}$$
 2. $f$가 closed이고, 각각의 $y\in Y$에 대하여 $f^{-1}(y)$가 compact이다.
 :::
 ::: 증명
-첫 번째 조건이 성립한다면 임의의 $y\in Y$에 대하여, $f\vert_{f^{-1}(y)}$가 universally closed임을 알고, 앞선 보조정리로부터 $f^{-1}(y)$가 compact라는 것을 안다.
-
-반대방향을 보이기 위해 $f$가 closed이고 각각의 fiber가 compact라 가정하자. 임의의 위상공간 $Z$가 주어졌다 하고, $X\times Z$의 닫힌집합 $A$와 $(f\times\id_Z)(A)$에 속하지 않는 점 $(y,z)\in Y\times Z$를 하나 잡자. 그럼 임의의 $x\in f^{-1}(y)$에 대하여 $(x,z)\not\in A$이므로, product topology의 정의로부터 $x$의 열린근방 $U_x$와 $z$의 열린근방 $W_x$가 존재하여 $(U_x\times W_x)\cap A=\emptyset$이도록 할 수 있다. 이제 $f^{-1}(y)$가 compact라는 가정으로부터 유한개의 $x_1,\ldots,x_n\in f^{-1}(y)$을 골라 $U=U_{x_1}\cup\cdots\cup U_{x_n}$이 $f^{-1}(y)$를 덮도록 할 수 있으며, 이때 $W=W_{x_1}\cap\cdots\cap W_{x_n}$은 $z$의 열린근방이고, $U$의 임의의 점은 어떤 $U_{x_i}$에 속하며 $W\subseteq W_{x_i}$이므로 $(U\times W)\cap A=\emptyset$이다. 만일 $f^{-1}(y)$가 공집합이라면 $U=\emptyset$과 $W=Z$로 두면 된다.
-
-한편 $f$가 closed이므로 $V=Y\setminus f(X\setminus U)$는 열린집합이고, $f^{-1}(y)\subseteq U$이므로 $y\in V$이며, $U$에 속하지 않는 점의 image가 $V$에 속하지 않으므로 $f^{-1}(V)\subseteq U$이다. 그럼 $(V\times W)\cap (f\times\id_Z)(A)=\emptyset$인데, 만일 $(x',z')\in A$가 $(f(x'),z')\in V\times W$를 만족한다면 $x'\in f^{-1}(V)\subseteq U$이고 $z'\in W$여서 $(x',z')\in (U\times W)\cap A$가 되기 때문이다. 따라서 $(f\times\id_Z)(A)$의 여집합이 열린집합이고, $Z$가 임의였으므로 $f$는 universally closed이다.
+첫 번째 조건이 성립한다면 임의의 $y\in Y$에 대하여, $f\vert_{f^{-1}(y)}$가 universally closed임을 알고, 앞선 보조정리로부터 $f^{-1}(y)$가 compact라는 것을 안다. 반대방향은 universally closed map들의 곱이 universally closed라는 것을 사용하면 증명할 수 있다.
 :::
 
 따라서, compact space의 정의를 $f:X \rightarrow \{\ast\}$가 universally closed라는 것으로 했어도 되었을 것이다. 특히 다음이 성립한다. 
@@ -131,7 +125,7 @@ $$\Delta=\{(x,x)\mid x\in X\}$$
 연속함수 $f:X \rightarrow Y$가 universally closed라면, 임의의 compact subset $C\subseteq Y$에 대하여 $f^{-1}(C)$ 또한 compact이다.
 :::
 ::: 증명
-$f$가 universally closed이므로 $f\vert_{f^{-1}(C)}$는 universally closed이다. 한편 $C \rightarrow\{\ast\}$는 $C$가 compact라는 가정과 [정리 6](#thm6)으로부터 universally closed이고, 따라서 합성 $f^{-1}(C) \rightarrow C \rightarrow \{\ast\}$는 universally closed이므로 $f^{-1}(C)$도 compact이다. 
+$f$가 universally closed이므로 $f\vert_{f^{-1}(C)}$는 universally closed이다. 한편 $C \rightarrow\{\ast\}$는 $C$가 compact라는 가정으로부터 universally closed이고, 따라서 합성 $f^{-1}(C) \rightarrow C \rightarrow \{\ast\}$는 universally closed이므로 $f^{-1}(C)$도 compact이다. 
 :::
 
 ## 고유함수
@@ -144,13 +138,13 @@ Hausdorff space들 사이의 연속함수 $f:X \rightarrow Y$가 주어졌다 �
 ::: 증명
 앞서 언급한 것과 같이, $f$가 universally closed라면 $f$가 proper라는 것은 [따름정리 7](#cor7)의 결과이다. 
 
-따라서 이 명제의 핵심은 역방향이다. $Y$가 locally compact이므로, 적당한 compact set들 안에 포함되는 열린집합들로 이루어진 $Y$의 open covering $(U_i)$가 존재한다. 그럼 $Y$가 Hausdorff이므로 이 compact set들은 닫힌집합이고, 따라서 각각의 $\cl U_i$ 또한 compact이며 $f$가 proper라는 가정으로부터 $f^{-1}(\cl U_i)$들은 $X$에서 compact이다. 이제 $K=f^{-1}(\cl U_i)$라 적으면 [정리 6](#thm6)으로부터 $K \rightarrow \{\ast\}$가 universally closed이고, 이를 $K \rightarrow \cl U_i \rightarrow \{\ast\}$로 분해할 때 중간에 놓인 $\cl U_i$가 Hausdorff space $Y$의 부분공간이므로 [명제 4](#prop4)의 넷째 결과로부터 각각의 $f\vert_{f^{-1}(\cl U_i)}$가 universally closed임을 안다. 이제 [명제 3](#prop3)으로부터 원하는 결과를 얻는다. 
+따라서 이 명제의 핵심은 역방향이다. $Y$가 locally compact이므로, 적당한 compact set들 안에 포함되는 열린집합들로 이루어진 $Y$의 open covering $(U_i)$가 존재한다. 그럼 $f^{-1}(\cl U_i)$들은 $X$에서 compact이고 각각의 $f\vert_{f^{-1}(\cl U_i)}$가 universally closed이다. 이제 [명제 3](#prop3)으로부터 원하는 결과를 얻는다. 
 :::
 
-특히 이는 [§Compactness와 paracompactness, ⁋정의 8](/ko/math/topology/compactness#def8)의 one-point compactification에 적용하여 다음 결과를 준다.
+특히 이는 앞서 살펴본 one-point compactification에 적용하여 다음 결과를 준다.
 
 ::: 따름정리 9
-두 locally compact Hausdorff space $X_1,X_2$가 주어졌다 하고, 이들의 one-point compactification $\overline{X}_i=X_i\cup \{\ast_i\}$가 주어졌다 하자. 그럼 연속함수 $f:X_1 \rightarrow X_2$가 universally closed인 것은 다음 식
+두 locally compact Hausdorff space $X_1,X_2$가 주어졌다 하고, 이들의 one-point compactification $\overline{X}_i=X_i\cup \{\ast_i\}$가 주어졌다 하자. 그럼 $f:X_1 \rightarrow X_2$가 universally closed인 것은 다음 식
 
 $$\overline{f}(x)=\begin{cases}\ast_2&\text{if $x=\ast_1$}\\f(x)&\text{otherwise}\end{cases}$$
 

@@ -10,8 +10,6 @@ sidebar:
 
 date: 2022-06-06
 weight: 1
-revising: true
-drift_needed: true
 
 ---
 
@@ -99,11 +97,11 @@ $$\mathcal{A}_1=\{(\mathbb{R},\id_\mathbb{R})\},\qquad \mathcal{A}_2=\{(\mathbb{
 를 주자. 이들은 하나의 chart로 이루어진 atlas들이므로 당연히 $C^\infty$이다. 앞선 [명제 3](#prop3)에 의하여 이들 각각을 포함하는 미분구조가 존재한다. 그러나 이들은 서로 같지 않다. 두 chart $(\mathbb{R},\id_\mathbb{R})$과 $(\mathbb{R}, x\mapsto x^3)$이 서로 $C^\infty$-compatible이 아니기 때문이다. ($x\mapsto x^3$은 $C^\infty$ 함수지만, 그 역함수 $x\mapsto x^{1/3}$은 그렇지 않다)
 :::
 
-다만, [예시 4](#ex4)의 두 atlas는 서로 <em-ko>같은</em-ko> 미분구조를 주지는 않더라도, [§미분사상, ⁋정의 6](/ko/math/manifolds/differentials#def6)에서 정의할 의미로 서로 *diffeomorphic*한 미분구조를 준다. 
+다만, [예시 4](#ex4)의 두 atlas는 서로 <em-ko>같은</em-ko> 미분구조를 주지는 않더라도, 서로 *diffeomorphic*한 미분구조를 준다. 
 
 ## Smooth partition of unity
 
-임의의 topological manifold에서는 continuous partition of unity가 존재한다는 것을 보일 수 있었는데 ([\[위상수학\] §Compactness와 paracompactness, ⁋정리 27](/ko/math/topology/compactness#thm27)), differentiable manifold를 다룰 때는 continuous partition of unity는 별 도움이 되지 않는다. 가령 임의의 $C^\infty$ 함수를 연속이기만 한 partition of unity와 곱한다면 이 함수의 미분가능한 정도가 바로 약화될 것이다.
+임의의 topological manifold에서는 continuous partition of unity가 존재한다는 것을 보일 수 있었는데 ([\[위상수학\] §Compactness와 paracompactness, ⁋정리 27](/ko/math/topology/compactness#thm27)), differentiable manifold를 다룰 때는 연속인 partition of unity는 별 도움이 되지 않는다. 가령 임의의 $C^\infty$ 함수를 연속이기만 한 partition of unity와 곱한다면 이 함수의 미분가능한 정도가 바로 약화될 것이다.
 
 따라서 우리는 smooth partition of unity를 만들어야 하는데, 이는 다음의 보조정리만 보이면 충분하다.
 

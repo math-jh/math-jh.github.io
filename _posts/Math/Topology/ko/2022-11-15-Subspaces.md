@@ -10,9 +10,7 @@ sidebar:
 
 date: 2022-11-15
 weight: 7
-revising: true
 
-drift_needed: true
 
 ---
 
@@ -85,7 +83,7 @@ $$\cl_BA=B\cap\cl_XA$$
 와 같다.
 :::
 ::: 증명
-우선 [§집합의 내부, 폐포, 경계, ⁋명제 6](/ko/math/topology/other_concepts#prop6)의 근방 조건은 열린근방만 검사하여도 충분한데, 임의의 근방은 언제나 열린근방을 포함하기 때문이다. 한편 $\cl_BA$와 $B\cap\cl_XA$는 둘 다 $B$에 포함되므로 $x\in B$인 경우만 살펴보면 된다. 부분위상 $\mathcal{T}_B$가 $\{U\cap B\mid U\in\mathcal{T}\}$로 주어지므로 $x$의 $B$에서의 열린근방은 $x$를 포함하는 $X$의 열린집합 $U$에 대하여 $U\cap B$의 꼴이고, $A\subseteq B$이므로 $(U\cap B)\cap A=U\cap A$이다. 따라서 $x\in\cl_BA$인 것은 $x$를 포함하는 $X$의 임의의 열린집합 $U$가 $A$와 만나는 것과 동치이며, 이는 다시 $x\in\cl_XA$인 것과 동치이다.
+임의의 $x\in B$에 대하여, $x$의 $B$에서의 근방은 항상 $x$의 $X$에서의 적당한 근방 $V$에 대하여 $V\cap B$의 형태로 쓰여진다. 이제 $V\cap A=(V\cap B)\cap A$와 [§집합의 내부, 폐포, 경계, ⁋명제 6](/ko/math/topology/other_concepts#prop6)을 사용하면 원하는 결과를 얻는다.
 :::
 
 따라서 $A\subseteq B\subseteq X$에 대하여, $A$가 $B$의 dense subset인 것은

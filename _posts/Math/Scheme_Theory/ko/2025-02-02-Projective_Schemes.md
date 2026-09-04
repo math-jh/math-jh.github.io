@@ -1,6 +1,6 @@
 ---
 title: "사영공간과 Proj 구성"
-description: "아핀 직선들을 적당한 방식으로 붙여서 사영공간을 만들고, 이를 일반화하여 임의의 등급환에 Proj를 취하는 구성을 다룬다. 위상수학적 관점에서 사영공간을 이해하고, 원점을 지나는 직선들을 한 평면에 자르는 central projection과 cocycle 조건을 통해 아핀 직선들을 접합하는 방법을 살펴본다."
+description: "아핀 직선들을 적당한 방식으로 붙여서 사영공간을 만들고, 이를 일반화하여 임의의 등급환에 Proj를 취하는 구성을 다룬다. 위상수학적 관점에서 사영공간을 이해하고, 스테레오 사영법과 콕사이클 조건을 통해 아핀 직선들을 접합하는 방법을 살펴본다."
 excerpt: "Graded ring으로부터의 Proj 구성과 사영공간"
 
 categories: [Math / Scheme Theory]
@@ -10,8 +10,6 @@ sidebar:
 
 date: 2025-02-02
 weight: 5
-revising: true
-drift_needed: true
 ---
 
 [§스킴, ⁋예시 10](/ko/math/scheme_theory/schemes#ex10)에서 우리는 두 개의 affine line $\mathbb{A}^1=\Spec \mathbb{K}[\x]$을 적당한 방식으로 붙여 projective space $\mathbb{P}^1$을 만들었다. 이번에는 이를 일반화하여, graded ring $A_\bullet$으로부터 scheme $\Proj A_\bullet$을 얻어내는 $\Proj$ 구성을 다룬다. 
@@ -40,9 +38,9 @@ $$P_i=\{\x_i=1\}=\{(x_0,\ldots, x_n)\mid x_i=1\}$$
 
 $$\mathbb{P}^n=\mathbb{R}^n\coprod \mathbb{P}^{n-1}$$
 
-을 얻는다. 이 과정은 $n=1$인 경우 다음 그림에 표현되어 있다. 
+을 얻는다. 이 과정은 $n=2$인 경우 다음 그림에 표현되어 있다. 
 
-{% diagram Math/Scheme_Theory/Projective_Schemes-1.svg width="31.18em" alt="central_projection" %}
+{% diagram frozen/635a8f80/Math/Scheme_Theory/Projective_Schemes-1.svg width="31.18em" alt="stereographic_projection" %}
 
 이를 식으로 적으면, $\mathbb{P}^n$의 한 점 $[x_0:\cdots:x_n]$에 대하여, 만일 $x_i\neq 0$이라면 $[x_0:\cdots:x_n]$의 equivalence class 안에서 $i$번째 좌표가 $1$이 되는 점을 (유일하게) 찾을 수 있으며, 이 점을 $P_i$의 점으로 보아 다음 부분집합
 
@@ -100,7 +98,7 @@ $$f(\lambda x_0,\ldots, \lambda x_n)=\lambda^{\deg f} f(x_0,\ldots, x_n),\qquad 
 
 즉, $\mathbb{P}^n$을 spectrum과 비슷한 방식으로 설명하기 위해서는 $\mathbb{A}^{n+1}$을 단순한 ring $\mathbb{K}[\x_0,\ldots, \x_n]$의 spectrum으로 볼 것이 아니라, 여기에 degree에 대한 정보를 추가하여 이를 *graded* ring으로 보고, 임의의 원소들의 zero locus가 아닌 *homogeneous*한 원소들의 zero locus를 보아야 한다. 그럼 [\[대수적 구조\] §등급환, ⁋명제 6](/ko/math/algebraic_structures/graded_rings#prop6)를 생각하면 우리의 관심사 또한 *homogeneous* ideal들이 되어야 할 것이다. 
 
-이번 글의 남은 부분에서 우리는 graded ring에 $\Proj$를 취하여 scheme을 얻어내는 과정을 따라간다. 임의의 graded ring의 $\Proj$가 곧 projective scheme인 것은 아니다. 가령 $A_\bullet=\mathbb{K}[\x_1,\x_2,\ldots]$이라 두면 $\Proj A_\bullet$은 quasi-compact조차 아니므로, projective scheme이라는 이름은 [§사영공간의 닫힌 부분스킴, ⁋정의 7](/ko/math/scheme_theory/closed_subschemes_of_projective_spaces#def7)에서 $\mathbb{P}^n$으로의 closed embedding을 통해 따로 정의한다. 이를 위해 몇몇 표기를 고정한다. 
+이번 글의 남은 부분에서 우리는 graded ring에 $\Proj$를 취하여 scheme을 얻어내는 과정을 따라간다. 임의의 graded ring의 $\Proj$가 곧 projective scheme인 것은 아니다. 가령 $A_\bullet=\mathbb{K}[\x_1,\x_2,\ldots]$이라 두면 $\Proj A_\bullet$은 quasi-compact조차 아니므로, projective scheme이라는 이름은 finitely generated 조건과 함께 [§사영공간의 닫힌 부분스킴, ⁋정의 7](/ko/math/scheme_theory/closed_subschemes_of_projective_spaces#def7)에서 따로 정의한다. 이를 위해 몇몇 표기를 고정한다. 
 
 ::: remark 참고 {#rmk}
 Graded ring은 별 말이 없다면 항상 $\mathbb{N}_{\geq0}$-graded인 것으로 가정한다. 즉 우리의 관심이 되는 ring은 항상 다음의 꼴
@@ -163,7 +161,7 @@ Graded ring $A_\bullet$에 대하여 다음이 성립한다.
     를 생각하면, $\mathfrak{p}$가 homogeneous이므로 $ab_i$들은 모두 $\mathfrak{p}$의 원소이다. 한편 앞선 가정에 의해 $b\not\in \mathfrak{p}$이므로, $b_i\not\in \mathfrak{p}$를 만족하는 $i$가 존재하고, 그럼 $ab_i$는 $\mathfrak{p}$에 속하는 homogeneous element이며 $b_i\not\in \mathfrak{p}$이므로 $\mathfrak{p}$가 prime ideal인 것으로부터 $a\in \mathfrak{p}$이다. 따라서 [\[대수적 구조\] §등급환, ⁋명제 6](/ko/math/algebraic_structures/graded_rings#prop6)에 의해 $\mathfrak{a}\subseteq \mathfrak{p}$가 성립한다. 
 2. 이는 $\sum \mathfrak{a}_i$가 ideal들 $\mathfrak{a}_i$ 각각을 모두 포함하는 ideal 중 가장 작은 것으로 정의되므로 자명하다.
 3. [\[가환대수학\] §국소화의 성질들, ⁋따름정리 8](/ko/math/commutative_algebra/properties_of_localization#cor8).
-4. 정의에 의해 $Z_+(\mathfrak{a})\subseteq Z_+(\mathfrak{a}\cap A_+)$는 자명하므로 반대방향만 보이면 충분하다. 즉, $\mathfrak{p}$가 $\mathfrak{a}$의 positive degree를 갖는 homogeneous element들을 모두 가지며, $A_+$를 통째로 포함하지는 않는 prime ideal이라 하고 $\mathfrak{a}\subseteq \mathfrak{p}$임을 보이자. 이를 위해서는 임의의 $a\in \mathfrak{a}\cap A_0$을 택했을 때, 위의 가정으로부터 $a$ 또한 $\mathfrak{p}$에 속함을 보이면 충분하다.  
+4. 정의에 의해 $Z_+(\mathfrak{a})\subseteq Z_+(\mathfrak{a}\cap A_+)$는 자명하므로 반대방향만 보이면 충분하다. 즉, $\mathfrak{p}$가 $\mathfrak{a}$의 양의 degree를 갖는 homogeneous element들을 모두 가지며, $A_+$를 통째로 포함하지는 않는 prime ideal이라 하고 $\mathfrak{a}\subseteq \mathfrak{p}$임을 보이자. 이를 위해서는 임의의 $a\in \mathfrak{a}\cap A_0$을 택했을 때, 위의 가정으로부터 $a$ 또한 $\mathfrak{p}$에 속함을 보이면 충분하다.  
     이제 $A_+\not\subseteq\mathfrak{p}$이므로, $\mathfrak{p}$에 속하지 않는 homogeneous element $f$가 존재한다. 이제 $af\in \mathfrak{a}\cap A_+\subseteq \mathfrak{p}$이고, $f\not\in \mathfrak{p}$이므로 $a\in \mathfrak{p}$이다. 
 :::
 

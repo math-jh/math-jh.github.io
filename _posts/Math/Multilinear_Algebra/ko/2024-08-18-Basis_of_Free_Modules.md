@@ -10,8 +10,6 @@ sidebar:
 
 date: 2024-08-18
 weight: 3
-revising: true
-drift_needed: true
 
 ---
 
@@ -35,7 +33,7 @@ $$F(X)=\bigoplus_{x\in X} A$$
 Free family가 아닌 family를 *related family*라 부른다.
 :::
 
-Free family는 벡터공간에서의 일차독립의 개념을 일반화한 것이다. 즉, $A$가 field이고, $M$이 $A$ 위에 정의된 벡터공간이었다면 $M$의 원소들의 family $(x_i)_{i\in I}$가 free family라는 것은 $x_i$들이 서로 다르고 일차독립인 것과 동치이다. ([\[선형대수학\] §벡터공간의 기저, ⁋정의 5](/ko/math/linear_algebra/basis#def5)) 이러한 관점에서 related family의 원소들은 서로 *linearly dependent<sub>일차종속</sub>*라 부른다. 
+Free family는 벡터공간에서의 일차독립의 개념을 일반화한 것이다. 즉, $A$가 field이고, $M$이 $A$ 위에 정의된 벡터공간이었다면 $M$의 원소들의 family $(x_i)_{i\in I}$가 free family라는 것은 $x_i$들이 일차독립인 것과 동치이다. ([\[선형대수학\] §벡터공간의 기저, ⁋정의 5](/ko/math/linear_algebra/basis#def5)) 이러한 관점에서 related family의 원소들은 서로 *linearly dependent<sub>일차종속</sub>*라 부른다. 
 
 한편, 임의의 $A$-module $M$은 항상 spanning set을 갖는다. 이는 적어도 $M$의 원소들을 전부 모아두면 이것이 $M$을 생성하기 때문이다.  이로부터 다음을 얻는다.
 
@@ -46,7 +44,7 @@ Free family는 벡터공간에서의 일차독립의 개념을 일반화한 것�
 임의의 $A$-module $M$에 대하여, $M$의 spanning set을 $X$라 하자. 그럼 $F(X)$와 $M$ 사이의 surjective $A$-linear map $\varepsilon:F(X) \rightarrow M$이 존재한다. 이 때, $\varepsilon$의 kernel은 $F(X)$의 submodule이므로, $M\cong F(X)/\ker\varepsilon$이다. 
 :::
 
-$M$이 finitely generated $A$-module인 것은 이러한 family를 유한하게 택할 수 있는 것과 동치이며, 이 경우 위의 증명에서의 free $A$-module도 finite basis를 갖도록 택할 수 있다. 더 특수한 경우로 다음을 정의한다.
+$M$이 finitely generated $A$-module인 것은 이러한 family를 유한하게 택할 수 있는 것과 동치이며, 이 경우 위의 증명에서의 free $A$-module도 유한한 basis를 갖도록 택할 수 있다. 더 특수한 경우로 다음을 정의한다.
 
 ::: 정의 3
 $A$-module $M$이 *monogenous<sub>단일생성</sub>*라는 것은 $M$이 $A$-module로서 하나의 원소 $x$에 의해 생성되는 것이다.
@@ -84,7 +82,7 @@ $$\card I\leq \card(X\times\mathbb{N})=\card X\cdot\aleph_0\leq \card X$$
 - $(x_i)_{i\in I}$가 $M$의 generating family인 것은 $M=\sum_{i\in I}Ax_i$인 것과 동치이다.
 - $(x_i)_{i\in I}$가 $M$의 basis인 것은 $M$이 direct sum $\bigoplus_{i\in I}Ax_i$와 같고, 각각의 $x_i$가 모두 free element인 것과 동치이다.
 
-이를 통해 [명제 4](#prop4)를 각각의 $N_i$가 free element에 의해 생성되는 monogenous module인 경우로 한정하면, $A\neq 0$일 때 infinite basis를 갖는 free $A$-module $M$의 모든 basis는 같은 cardinality를 갖는다는 것을 안다. 그러나 finite basis를 갖는 경우 이것이 항상 성립하는 것은 아니다. 이를 서술하기 위해, $m$개의 $A$의 direct sum $\bigoplus_{k=1}^m A$를 $A^m$으로 적기로 한다.
+이를 통해 [명제 4](#prop4)를 각각의 $N_i$가 free element에 의해 생성되는 monogenous module인 경우로 한정하면, $A\neq 0$일 때 무한한 basis를 갖는 free $A$-module $M$의 모든 basis는 같은 cardinality를 갖는다는 것을 안다. 그러나 유한한 basis를 갖는 경우 이것이 항상 성립하는 것은 아니다.
 
 ::: 정의 5
 임의의 ring $A$에 대하여, $A^m\cong A^n$인 것과 $m=n$인 것이 항상 동치일 경우, $A$가 *invariant basis number property<sub>불변 기저수 성질</sub>*를 만족한다고 한다. 
@@ -106,7 +104,7 @@ $$M\cong \bigoplus_{i\in I} Ax_i$$
 
 $$\phi_! M\cong\phi_!\left(\bigoplus_{i\in I} Ax_i\right)\cong \bigoplus_{i\in I}\phi_! Ax_i$$
 
-이 성립한다. ([\[대수적 구조\] §스칼라의 변환, ⁋명제 6](/ko/math/algebraic_structures/change_of_base_ring#prop6)) 인용한 명제는 편의를 위해 commutative ring에 대해 진술되어 있으나, $\phi_!$가 $\phi^\ast$의 left adjoint라는 것은 임의의 ring homomorphism에 대하여 성립한다. 또, $x_i$가 free element라는 사실로부터 $Ax_i\cong A$이고, $\phi_! A\cong \mathbb{K}$이므로 $\phi_! M\cong \bigoplus_{i\in I}\mathbb{K}$이다. 이제 [\[선형대수학\] §벡터공간의 차원, ⁋보조정리 2](/ko/math/linear_algebra/dimension#lem2)를 적용하면 원하는 결과를 얻는다.
+이 성립한다. ([\[대수적 구조\] §스칼라의 변환, ⁋명제 6](/ko/math/algebraic_structures/change_of_base_ring#prop6)) 또, $x_i$가 free element라는 사실로부터 $Ax_i\cong A$이고, $\phi_! A\cong \mathbb{K}$이므로 $\phi_! M\cong \bigoplus_{i\in I}\mathbb{K}$이다. 이제 [\[선형대수학\] §벡터공간의 차원, ⁋보조정리 2](/ko/math/linear_algebra/dimension#lem2)를 적용하면 원하는 결과를 얻는다.
 :::
 
 [\[선형대수학\] §벡터공간의 차원, ⁋보조정리 2](/ko/math/linear_algebra/dimension#lem2)의 증명은 $\mathbb{K}$가 commutative라는 성질이 아니라 $0$이 아닌 scalar가 invertible이라는 사실만을 사용하므로, 위의 명제는 더 일반적으로 $\mathbb{K}$를 division ring $D$로 바꾸어도 성립한다. 한편 $0$이 아닌 임의의 commutative ring $A$는 [\[대수적 구조\] §환의 정의, ⁋정리 10](/ko/math/algebraic_structures/rings#thm10)에 의하여 maximal ideal $\mathfrak{m}$을 가지므로 field로의 homomorphism $A \rightarrow A/\mathfrak{m}$이 존재하고, 따라서 IBN property를 갖는다.
@@ -114,8 +112,6 @@ $$\phi_! M\cong\phi_!\left(\bigoplus_{i\in I} Ax_i\right)\cong \bigoplus_{i\in I
 ::: 정의 7
 Ring $A$가 IBN을 만족한다 하자. 그럼 임의의 free $A$-module $M$에 대하여, $M$의 basis의 크기를 $M$의 *rank<sub>랭크</sub>*이라 한다. 
 :::
-
-이 정의가 basis의 선택에 무관하다는 것은 앞선 논의로부터 따른다. $A=0$은 IBN property를 갖지 않으므로 $A\neq 0$이고, 따라서 $M$이 infinite basis를 하나라도 갖는다면 [명제 4](#prop4)에 의하여 $M$의 모든 basis가 무한하며 서로 같은 cardinality를 갖는다. 그렇지 않은 경우 $M$의 모든 basis는 유한하므로 [정의 5](#def5)에 의하여 그 크기가 서로 같다.
 
 편의상 $M$의 basis $(x_i)_{i\in I}$가 주어졌을 때, 이를 통해 얻어지는 free module $F(I)$를 $A^{\oplus I}$와 같이 나타내고, 특별히 $I$가 유한집합이면 $A^m$과 같이 나타내기도 한다. 이 표기법들은 $A$가 IBN property를 갖는다는 보장이 없을 때 사용할 경우 표기법 상의 문제가 있지만, 약간의 표기법의 남용을 통해 이를 눈감기로 한다. 
 

@@ -10,9 +10,7 @@ sidebar:
 
 date: 2023-04-28
 weight: 2
-revising: true
 
-drift_needed: true
 
 ---
 
@@ -45,49 +43,47 @@ drift_needed: true
 
 $$\{u\in V\mid \omega(u,v)=0\text{ for all $v\in V$}\}$$
 
-이 $V$의 부분공간이 된다는 것을 쉽게 확인할 수 있다. 이 부분공간을 $U$라 적고 그 basis를 택하면 $u_1,\ldots, u_k$를 얻는다. 이제 $U$의 complement $W$를 하나 택하여 $V=U\oplus W$라 하자. 만일 $w\in W$가 모든 $w'\in W$에 대하여 $\omega(w,w')=0$을 만족한다면, 임의의 $u\in U$에 대하여 $\omega(w,u)=-\omega(u,w)=0$이기도 하므로 $\omega(w,v)=0$이 모든 $v\in V$에 대하여 성립하고, 따라서 $w\in U\cap W=\{0\}$이다. 즉 $\omega$는 $W$ 위에서 non-degenerate이며, 이로부터 $W$의 basis $e_1,\ldots, e_n,f_1,\ldots, f_n$을 다음과 같이 찾을 수 있다. 
+이 $V$의 부분공간이 된다는 것을 쉽게 확인할 수 있다. 따라서 이 부분공간의 basis를 택하면 $u_1,\ldots, u_k$를 얻는다. 이제 $V=U\oplus W$라 하자. 그럼 $W$의 basis $e_1,\ldots, e_n,f_1,\ldots, f_n$을 다음과 같이 찾을 수 있다. 
 
-$W=\{0\}$인 경우에는 $n=0$으로 두면 되므로 $W\neq\{0\}$이라 가정하고, $0$이 아닌 벡터 $e_1\in W$를 하나 택하자. 그럼 $\omega$는 $W$ 위에서 non-degenerate이므로, $\omega(e_1,f_1)\neq 0$을 만족하는 $f_1\in W$이 존재하며, 필요한만큼 상수배를 하여 $\omega(e_1,f_1)=1$이라 가정할 수 있다. $\omega$가 skew-symmetric이므로 $\omega(e_1,e_1)=\omega(f_1,f_1)=0$임은 자명하다.
+임의의 벡터 $e_1\in W$를 하나 택하자. 그럼 $\omega$는 $W$ 위에서 non-degenerate이므로, $\omega(e_1,f_1)\neq 0$을 만족하는 $f_1\in W$이 존재하며, 필요한만큼 상수배를 하여 $\omega(e_1,f_1)=1$이라 가정할 수 있다. $\omega$가 skew-symmetric이므로 $\omega(e_1,e_1)=\omega(f_1,f_1)=0$임은 자명하다.
 
 이와 같은 과정을 반복하여, 다음 두 조건
 
 - 모든 $i,j$에 대하여, $\omega(e_i,e_j)=\omega(f_i,f_j)=0$이 성립한다.
 - 모든 $i,j$에 대하여, $\omega(e_i,f_j)=\delta_{ij}$이 성립한다.
 
-을 만족하는 벡터 $e_1,\ldots, e_m, f_1,\ldots, f_m\in W$가 주어졌다 하고, $W_m=\span\{e_1,\ldots, e_m,f_1,\ldots, f_m\}\leq W$이라 적자. 만일 $W_m=W$라면 이 과정을 멈추고, 그렇지 않다면 $W_m$에 속하지 않는 임의의 벡터 $e_{m+1}\in W$를 하나 택하자. 만일 임의의 $i=1,\ldots, m$에 대하여
+을 만족하는 벡터 $e_1,\ldots, e_k, f_1,\ldots, f_k\in W$가 주어졌다 하고, $\span\{e_1,\ldots, e_k,f_1,\ldots, f_k\}\leq W$에 속하지 않는 임의의 벡터 $e_{k+1}$를 하나 택하자. 만일 임의의 $i=1,\ldots, k$에 대하여
 
-$$\omega(e_{m+1}, e_i)=\lambda_i,\qquad\omega(e_{m+1},f_i)=\eta_i$$
+$$\omega(e_{k+1}, e_i)=\lambda_i,\qquad\omega(e_{k+1},f_i)=\eta_i$$
 
-라면, $e_{m+1}$ 대신 다음 벡터
+라면, $e_{k+1}$ 대신 다음 벡터
 
-$$e_{m+1}-\sum_{i=1}^m(\eta_i e_i-\lambda_i f_i)$$
+$$e_{k+1}-\sum_{i=1}^k(\eta_i e_i-\lambda_i f_i)$$
 
-을 생각하여 $e_{m+1}$가 다음 조건들
+을 생각하여 $e_{k+1}$가 다음 조건들
 
-$$\omega(e_{m+1},e_i)=\omega(e_{m+1},f_i)=0\qquad\text{for all $i=1,\ldots, m$}$$
+$$\omega(e_{k+1},e_i)=\omega(e_{k+1},f_i)=0\qquad\text{for all $i=1,\ldots, k$}$$
 
-을 만족하는 벡터였다고 가정할 수 있다. 이렇게 보정한 $e_{m+1}$은 여전히 $W_m$에 속하지 않으므로 특히 $0$이 아니고, 따라서 $W$에서 $\omega$가 non-degenerate인 것으로부터 $\omega(e_{m+1},f_{m+1})\neq 0$을 만족하는 벡터 $f_{m+1}\in W$가 존재한다. 마찬가지로 $f_{m+1}$가 
+을 만족하는 벡터였다고 가정할 수 있다. 한편 $W$에서 $\omega$는 non-degenerate이므로 $\omega(e_{k+1},f_{k+1})\neq 0$을 만족하는 벡터 $f_{k+1}\in W$가 존재한다. 마찬가지로 $f_{k+1}$가 
 
-$$\omega(f_{m+1}, e_i)=\lambda_i',\qquad\omega(f_{m+1},f_i)=\eta_i'$$
+$$\omega(f_{k+1}, e_i)=\lambda_i',\qquad\omega(f_{k+1},f_i)=\eta_i'$$
 
-을 만족한다면, $f_{m+1}$ 대신 다음 벡터
+을 만족한다면, $f_{k+1}$ 대신 다음 벡터
 
-$$f_{m+1}-\sum_{i=1}^m(\eta_i' e_i-\lambda_i' f_i)$$
+$$f_{k+1}-\sum_{i=1}^k(\eta_i' e_i-\lambda_i' f_i)$$
 
-을 생각하여 $f_{m+1}$가 다음 조건들
+을 생각하여 $f_{k+1}$가 다음 조건들
 
-$$\omega(f_{m+1},e_i)=\omega(f_{m+1},f_i)=0\qquad\text{for all $i=1,\ldots, m$}$$
+$$\omega(f_{k+1},e_i)=\omega(f_{k+1},f_i)=0\qquad\text{for all $i=1,\ldots, k$}$$
 
-을 만족한다고 할 수 있다. 이 보정에서 빼낸 벡터는 $W_m$에 속하고 $e_{m+1}$은 $W_m$의 모든 벡터와 $\omega$에 의해 $0$으로 짝지어지므로 $\omega(e_{m+1},f_{m+1})$의 값은 보정으로 변하지 않으며, 이후 적절한 상수배를 통해 $\omega(e_{m+1},f_{m+1})=1$이라 가정할 수 있다. 
-
-이 과정에서 얻어지는 벡터들은 항상 일차독립인데, 만일 $\sum_{i=1}^m a_ie_i+\sum_{i=1}^m b_if_i=0$이라면 이 벡터와 $f_j$의 $\omega$에 의한 pairing이 $a_j$이고 $e_j$와의 pairing이 $-b_j$이기 때문이다. 따라서 $\dim W_m=2m$이고, $W$가 유한차원이므로 이 과정은 유한 번 만에 멈춘다. 멈추는 시점의 $m$을 $n$이라 하면 $W_n=W$이므로 $e_1,\ldots, e_n,f_1,\ldots, f_n$은 $W$의 basis이고, $V=U\oplus W$이므로 이들을 $u_1,\ldots, u_k$와 합한 것은 $V$의 basis이다. 진술의 첫 번째 조건은 $U$의 정의에서 곧바로 따라온다. 
+을 만족한다고 할 수 있고, 이후 적절한 상수배를 통해 $\omega(e_{k+1},f_{k+1})=1$이라 가정할 수 있다. 
 :::
 
 위의 보조정리에서 부분공간 $U=\span\{u_1,\ldots, u_k\}$은 $\omega$가 항등적으로 영인 공간이며, 따라서 이 부분공간의 complement $W$에서 $\omega$는 symplectic form이 된다. 거꾸로 임의의 벡터공간에 symplectic form이 주어졌다면, $\omega$가 non-degenerate인 것으로부터 $U=0$이어야 하므로 임의의 symplectic vector space는 반드시 짝수차원이어야 한다. 이 때, 위의 보조정리에서 얻어지는 basis
 
 $$e_1,\ldots, e_n, f_1,\ldots, f_n$$
 
-을 *symplectic basis*라 부른다. Symplectic form을 보존하는 linear isomorphism을 *(linear) symplectomorphism*이라 부른다면, symplectic basis의 선택에 의하여 임의의 symplectic vector space는 [§고전역학](/ko/math/symplectic_geometry/classical_mechanics)에서 살펴본 공간 $(\mathbb{R}^{2n},\omega_0)$과 symplectomorphic하다는 것을 확인할 수 있다.
+을 *symplectic basis*라 부른다. Symplectic form을 보존하는 linear map을 *(linear) symplectomorphism*이라 부른다면, symplectic basis의 선택에 의하여 임의의 symplectic vector space는 [§고전역학](/ko/math/symplectic_geometry/classical_mechanics)에서 살펴본 공간 $(\mathbb{R}^{2n},\omega_0)$과 symplectomorphic하다는 것을 확인할 수 있다.
 
 ::: 정의 3
 $(V,\omega)$가 symplectic vector space라 하고, $W\leq V$가 임의의 부분공간이라 하자. 그럼 $W$의 *symplectic complement<sub>사교 여공간</sub>*는
@@ -101,8 +97,6 @@ $$W^\omega=\{v\in V\mid\omega(v,w)=0\text{ for all $w\in W$}\}$$
 3. 만일 $W\cap W^\omega=\{0\}$이 성립한다면, $W$를 *symplectic subspace<sub>사교 부분공간</sub>*라 부른다.
 4. 만일 $W=W^\omega$이 성립한다면, $W$를 *Lagrangian subspace<sub>라그랑지안 부분공간</sub>*라 부른다.
 :::
-
-Symplectic form은 non-degenerate alternating form이므로 특히 reflexive이고 ([\[선형대수학\] §쌍선형형식, ⁋명제 6](/ko/math/linear_algebra/bilinear_form#prop6)), 위에서 정의한 개념들은 non-degenerate reflexive bilinear form을 갖춘 유한차원 벡터공간에 대한 [\[선형대수학\] §쌍선형형식, ⁋정의 7](/ko/math/linear_algebra/bilinear_form#def7)을 $\omega$의 경우로 옮긴 것이다. 이 글의 symplectic subspace는 그 글에서 non-degenerate 부분공간이라 부른 것에 해당한다.
 
 ::: 보조정리 4
 Symplectic vector space $(V,\omega)$와 그 부분공간 $W$에 대하여, 다음이 성립한다.
@@ -130,7 +124,7 @@ Symplectic vector space $(V,\omega)$와 그 부분공간 $W$에 대하여, 다�
     으로부터 자명하고, 등식 $(W^\omega)^\omega=W$는 $W\subseteq(W^\omega)^\omega$가 성립하고, 첫 등식에 의해 $\dim (W^\omega)^\omega=\dim W$여야 하므로 얻어진다.
 
 2. $(W^\omega)^\omega=W$이므로 $W\cap W^\omega=(W^\omega)^\omega\cap W^\omega$가 성립한다.
-3. 우선 두 부분공간 $A\subseteq B$가 주어지면 $B^\omega$의 원소는 $A$의 모든 원소와도 $\omega$에 의해 $0$으로 짝지어지므로 $B^\omega\subseteq A^\omega$이 성립한다. 따라서 만일 $W\subseteq W^\omega$라면 $(W^\omega)^\omega\subseteq W^\omega$이므로 $W^\omega$는 coisotropic이고, 거꾸로 $W^\omega$가 coisotropic이라면 1번의 $(W^\omega)^\omega=W$에 의하여 $W=(W^\omega)^\omega\subseteq W^\omega$이므로 $W$는 isotropic이다. 두 번째 동치는 이렇게 얻은 첫 번째 동치를 $W$ 대신 $W^\omega$에 적용하고 다시 $(W^\omega)^\omega=W$를 쓰면 얻어진다.
+3. 만일 $W\subseteq W^\omega$라면 $(W^\omega)^\omega\subseteq W^\omega$이므로 $W^\omega$는 coisotropic이다.
 4. $W$가 Lagrangian이라면 $W=W^\omega$이므로 $\dim W+\dim W^\omega=\dim V$로부터 $\dim W=\frac{1}{2}\dim V$이고 $W$는 isotropic subspace이다. 거꾸로 만일 $\dim W=\frac{1}{2}\dim V$라면 $\dim W^\omega$ 또한 $\frac{1}{2}\dim V$이므로, 이러한 차원 조건을 만족하는 isotropic subspace는 Lagrangian이다.
 :::
 

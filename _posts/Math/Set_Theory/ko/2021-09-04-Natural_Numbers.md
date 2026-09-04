@@ -1,6 +1,6 @@
 ---
 title: "자연수와 무한집합"
-description: "기수의 개념을 통해 finite cardinal을 자연수로 정의하고, 자연수 집합의 well-ordered 성질과 귀납법의 토대를 살펴본 뒤 자연수 사이의 대소관계를 분석한다."
+description: "기수의 개념을 통해 유한한 cardinal을 자연수로 정의하고, 자연수 집합의 well-ordered 성질과 귀납법의 토대를 살펴본 뒤 자연수 사이의 대소관계를 분석한다."
 excerpt: "자연수의 정의와 무한집합의 성질들"
 
 categories: [Math / Set Theory]
@@ -10,9 +10,7 @@ sidebar:
 
 date: 2021-09-04
 weight: 25
-revising: true
 
-drift_needed: true
 
 ---
 
@@ -21,7 +19,7 @@ drift_needed: true
 이제 우리는 [§서수와 정렬집합](/ko/math/set_theory/ordinals)의 방법 대신, 우리가 이미 정의한 cardinal을 사용해서 자연수를 만들고 cardinal number들 위에서 정의했던 연산과 대소관계를 이용해 자연수의 구조를 탐구한다.
 
 ::: 정의 1
-Cardinal $\mathfrak{a}$가 *유한하다<sub>finite</sub>*는 것은 $\mathfrak{a}\neq\mathfrak{a}+\mathbf{1}$인 것이다. Finite cardinal을 *자연수<sub>natural number</sub>*라고 부른다. 집합 $E$에 대하여, cardinal $\card E$가 유한하다면 이 집합을 유한하다고 부르며, 이 때 $\card E$를 집합 $E$의 *원소의 갯수*라고 부른다.
+Cardinal $\mathfrak{a}$가 *유한하다<sub>finite</sub>*는 것은 $\mathfrak{a}\neq\mathfrak{a}+\mathbf{1}$인 것이다. 유한한 cardinal을 *자연수<sub>natural number</sub>*라고 부른다. 집합 $E$에 대하여, cardinal $\card E$가 유한하다면 이 집합을 유한하다고 부르며, 이 때 $\card E$를 집합 $E$의 *원소의 갯수*라고 부른다.
 :::
 
 자연수는 cardinal들의 집합의 부분집합이므로 well-ordered이다. ([§기수, ⁋정리 5](/ko/math/set_theory/cardinals#thm5)) 따라서 자연수에서 귀납법을 사용할 수 있다. ([§정렬집합의 성질들, ⁋보조정리 7](/ko/math/set_theory/well_ordering#lem7))
@@ -59,9 +57,9 @@ $$(\mathfrak{a}+1)+\mathfrak{b}=(\mathfrak{a}+\mathfrak{b})+1=n+1\neq n$$
 
 이므로 $(\mathfrak{a}+1)+\mathfrak{b}\neq\mathfrak{a}+\mathfrak{b}$이다. 따라서 $\mathfrak{a}+1\neq\mathfrak{a}$이므로 $\mathfrak{a}$는 자연수다.
 
-만일 $n\neq 0$이라면 $n\geq 1$이므로, 앞선 보조정리에 의해 $n=m+1$인 cardinal $m$이 존재하며, 앞선 논리에 의해 $m$도 자연수이다. 이러한 $m$은 유일한데, $m+1=n=m'+1$이라면 [§기수들 사이의 연산, ⁋명제 6](/ko/math/set_theory/operation_of_cardinals#prop6)에 의해 $m=m'$이기 때문이다. 따라서  $a<n$이 $a\leq m$과 동치임만 보이면 된다.
+만일 $n\neq 0$이라면 $n\geq 1$이므로, 앞선 보조정리에 의해 $n=m+1$인 cardinal $m$이 존재하며, 앞선 논리에 의해 $m$도 자연수이다. 따라서  $a<n$이 $a\leq m$과 동치임만 보이면 된다.
 
-우선 $a<n$이라면, 앞선 보조정리에 의해 $n=a+b$인 cardinal $b$가 존재하며, $n\geq b$이므로 앞서 보인 것에 의해 $b$는 자연수이다. $b\neq 0$이므로, 방금 보인 것에 의해 어떠한 자연수 $c$에 대해 $b=c+1$이다. 그럼
+우선 $a<n$이라면, 유일한 자연수 $b$가 존재하여 $n=a+b$이다. $b\neq 0$이므로, 어떠한 $c$에 대해 $b=c+1$이다. 그럼
 
 $$m+1=n=a+b=a+(c+1)=(a+c)+1$$
 
@@ -76,7 +74,7 @@ $$a\leq m+1=n$$
 $a$와 $b$가 자연수라 하자. $a<b$는 어떤 자연수 $c>0$가 존재하여 $b=a+c$인 것과 동치이다.
 :::
 ::: 증명
-[보조정리 3](#lem3)의 직접적인 결과다. 우선 $a<b$라면 $a\leq b$이므로 $b=a+c$인 cardinal $c$가 존재하고, $b\geq c$이므로 [명제 4](#prop4)에 의해 $c$는 자연수이며, $c=0$이라면 $a=b$이기에 $c\neq 0$이다. 역으로 자연수 $c>0$에 대해 $b=a+c$라면 $c\geq 1$에서 $b\geq a+1$인데, 만일 $b=a$라면 $a\geq a+1\geq a$에서 $a=a+1$이 되어 $a$가 자연수라는 데 모순이므로 $a<b$이다.
+[보조정리 3](#lem3)의 직접적인 결과다. $a\leq b$이므로 그러한 $c\geq 0$가 존재하는데, $c=0$이라면 $a=b$이기에 $c\neq 0$이기 때문이다.
 :::
 
 지금까지 한 것들을 정리하면 다음을 얻는다. 
@@ -85,7 +83,7 @@ $a$와 $b$가 자연수라 하자. $a<b$는 어떤 자연수 $c>0$가 존재하�
 $a$와 $b$가 자연수라 하자. 그럼 함수 $x\mapsto a+x$는 구간 $[0,b]$에서 $[a,a+b]$로의 strictly increasing order isomorphism이다.
 :::
 
-따라서 임의의 구간 $[a,b]$를 원소의 갯수 $b-a+1$개짜리 집합과 동일하게 취급할 수 있다. 유한한 정의역을 가지는 함수를 *유한수열*이라 부른다. 구간 $[1,n]$의 원소의 갯수가 $n$이라는 것은 $n$에 대한 귀납법으로 얻어지는데, $[1,0]$은 공집합이고 $[1,n+1]=[1,n]\cup\{n+1\}$에서 $\card[1,n+1]=\card[1,n]+1$이기 때문이다. 따라서 원소의 갯수가 $n$인 모든 유한집합은 $[1,n]$과 동일시될 수 있고, 우리는 항상 유한수열이 $1$부터 $n$까지의 자연수 위에서 정의된 것으로 취급할 수 있다. 
+따라서 임의의 구간 $[a,b]$를 원소의 갯수 $b-a+1$개짜리 집합과 동일하게 취급할 수 있다. 유한한 정의역을 가지는 함수를 *유한수열*이라 부르는데, 모든 유한집합은 위의 정리에 의해 $[1,n]$과 동일시될 수 있으므로 우리는 항상 유한수열이 $1$부터 $n$까지의 자연수 위에서 정의된 것으로 취급할 수 있다. 
 
 ::: 명제 7
 $(a_i)_{i\in I}$가 자연수를 값으로 갖는 유한수열이라 하자. 그럼 $\sum a_i$와 $\prod a_i$는 모두 자연수이다.
@@ -130,7 +128,7 @@ $$\begin{aligned}
 
 $$r=a-bq<0\quad\text{or}\quad r=a-bq\geq b$$
 
-이 되기 때문이다. 또한 $q$가 정해지면 $r$도 유일하다. 만일 $a=bq+r=bq+r'$이고 $r<r'$이라면 [명제 5](#prop5)에 의해 $r'=r+d$인 자연수 $d>0$가 존재하고, 따라서 $a=(bq+r)+d=a+d\geq a+1\geq a$에서 $a=a+1$이 되어 $a$가 자연수라는 데 모순이기 때문이다. 존재성을 보이기 위해, $a<a+1\leq b(a+1)$라 하자. 그럼 $a<bp$를 만족하는 $p$의 집합은 공집합이 아니다. 이제 well-orderedness에 의해, least element $m$이 존재하므로 $m=q+1$라 하면 $q$가 주어진 조건을 만족한다.
+이 되기 때문이다. 존재성을 보이기 위해, $a<a+1\leq b(a+1)$라 하자. 그럼 $a<bp$를 만족하는 $p$의 집합은 공집합이 아니다. 이제 well-orderedness에 의해, least element $m$이 존재하므로 $m=q+1$라 하면 $q$가 주어진 조건을 만족한다.
 :::
 
 위의 증명처럼, 우리가 정의한 자연수의 연산을 잘 사용하여 나머지나 배수, 약수 등의 개념을 정의할 수 있다. 다음 따름정리 또한 마찬가지 방식으로 쉽게 증명할 수 있으나, 아직 우리는 정수를 정의하지는 않았으므로 증명은 따로 하지 않는다.
@@ -157,7 +155,7 @@ $$r=a-bq<0\quad\text{or}\quad r=a-bq\geq b$$
 임의의 무한집합 $A$는 $\mathbb{N}$과 equipotent한 부분집합을 포함한다.
 :::
 ::: 증명
-$A$의 well-ordering이 존재한다. 자신을 제외한 $\mathbb{N}$의 임의의 segment는 항상 유한하고 $A$는 무한하므로, $A$는 $\mathbb{N}$ 자신을 제외한 $\mathbb{N}$의 segment와 isomorphic할 수 없다. 따라서 $A$가 $\mathbb{N}$과 isomorphic하거나, $\mathbb{N}$이 $A$의 segment와 isomorphic하다. ([§서수들 사이의 순서관계, ⁋명제 1](/ko/math/set_theory/order_relations_between_ordinals#prop1)) 어느 경우이건 $A$는 $\mathbb{N}$과 equipotent한 부분집합을 갖는다.
+$A$의 well-ordering이 존재한다. 자신을 제외한 $\mathbb{N}$의 임의의 segment는 항상 유한하므로, $A$는 $\mathbb{N}$의 segment와 isomorphic할 수 없다. 따라서 $\mathbb{N}$이 $A$의 segment와 isomorphic하다. ([§서수들 사이의 순서관계, ⁋명제 1](/ko/math/set_theory/order_relations_between_ordinals#prop1))
 :::
 ::: 보조정리 15
 집합 $\mathbb{N}\times\mathbb{N}$은 $\mathbb{N}$과 equipotent하다.
@@ -174,7 +172,7 @@ $$(1,1),\quad (1,2),(2,1),\quad (1,3),(2,2),(3,1),\quad \cdots$$
 ::: 증명 (명제 13)
 $A$가 cardinal $\mathfrak{a}$를 갖는 집합이라 하자. 그럼 첫 번째 보조정리로부터 어떤 $B\subseteq A$는 $\mathbb{N}$과 equipotent하고, 따라서 두 번째 보조정리에 의해 $B\times B$와 $B$ 사이의 전단사함수가 존재한다. 이를 $f$라 하자. 
 
-$B$를 포함하는 $A$의 부분집합 $X$와, 그 위에서 정의된 $f$의 extension이 되는 전단사함수 $\psi:X\rightarrow X\times X$에 대해 $\mathfrak{M}$이 이러한 쌍 $(X,\psi)$들의 모임이라 하고, $\mathfrak{M}$에는 extension에 의한 순서를 주자. 그럼 $(B,f)\in\mathfrak{M}$이므로 $\mathfrak{M}$은 공집합이 아니다. 또한 $\mathfrak{M}$의 공집합이 아닌 임의의 chain $((X_i,\psi_i))_{i\in I}$에 대하여 정의역들의 합집합 $X=\bigcup_i X_i$와 그래프들의 합집합 $\psi=\bigcup_i\psi_i$를 생각하면, chain이 directed이므로 $\bigcup_i(X_i\times X_i)=X\times X$이고 각각의 $\psi_i$가 전단사이므로 $\psi$는 다시 $X$에서 $X\times X$로의 전단사함수이다. 즉 $(X,\psi)$는 $\mathfrak{M}$의 원소이면서 이 chain의 upper bound이므로 $\mathfrak{M}$은 inductive한 집합이고, 따라서 Zorn's lemma에 의해 $\mathfrak{M}$의 maximal element $(F, \tilde{f})$가 존재한다.
+$B$를 포함하는 $A$의 부분집합 $X$와, 그 위에서 정의된 $f$의 extension $\psi:X\rightarrow X\times X$에 대해 $\mathfrak{M}$이 이러한 쌍 $(X,\psi)$들의 모임이라 하자. 그럼 $\mathfrak{M}$의 임의의 chain에 대하여 가장 큰 정의역을 갖는 쌍이 maximal element가 되므로, $\mathfrak{M}$은 inductive한 집합이고, 따라서 Zorn's lemma에 의해 $\mathfrak{M}$의 maximal element $(F, \tilde{f})$가 존재한다.
 
 이제 $\card F=\mathfrak{a}$임을 보이면 충분하다. 만일 $\card F=\mathfrak{b}<\mathfrak{a}$라면, bijection $\tilde{f}$에 의해 $\mathfrak{b}=\mathfrak{b}^2$이므로 
 

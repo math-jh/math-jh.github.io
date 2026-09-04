@@ -10,8 +10,6 @@ sidebar:
 
 date: 2024-12-15
 weight: 19
-revising: true
-drift_needed: true
 
 ---
 
@@ -138,8 +136,6 @@ $p:X \rightarrow X/{\sim}$을 canonical projection이라 하자. Quotient space�
 ::: 정의 9
 위상공간 $X$가 점 $x\in X$에서 *locally connected<sub>국소연결</sub>*이라는 것은 $x$의 임의의 근방 $U$가 주어질 때마다, $U$에 속하는 $x$의 connected neighborhood가 존재하는 것이다. 모든 점에서 locally connected인 공간을 간단히 locally connected space라 부른다. 
 :::
-
-여기서 요구되는 connected neighborhood는 열린집합일 필요가 없으므로, 위 정의의 점별 조건은 $U$에 포함되는 connected open neighborhood가 존재한다는 조건보다 약하다. 점별로는 이 두 조건이 동치가 아니며, 앞의 조건을 두고 $X$가 $x$에서 *connected im kleinen*이라 말하기도 한다. 다만 모든 점에서 요구하여 얻는 locally connected space는 표준적인 것과 일치하는데, 아래 [명제 10](#prop10)을 거치면 각 열린집합의 component가 열린집합이라는 조건을 얻고 그 뒤쪽 방향 증명이 임의의 근방 $U$ 안에서 잡아내는 connected neighborhood는 실제로 열린집합이기 때문이다.
 
 그럼 다음이 성립한다.
 

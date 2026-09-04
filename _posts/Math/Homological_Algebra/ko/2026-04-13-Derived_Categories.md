@@ -10,8 +10,6 @@ sidebar:
 
 date: 2026-04-13
 weight: 8
-revising: true
-drift_needed: true
 
 ---
 
@@ -31,13 +29,13 @@ $$\Hom_{\mathbf{K}(\mathcal{A})}(A^\bullet, B^\bullet) = \Hom_{\Ch(\mathcal{A})}
 이다. 
 :::
 
-이 구성과 $\mathbf{K}(\mathcal{A})$가 additive category라는 사실은 [§긴 완전열, §§Homotopy category](/ko/math/homological_algebra/long_exact_sequence#homotopy-category)에서 이미 확인한 것이며, 여기서는 이후의 서술에 맞추어 다시 적어 둔 것이다. 한편 quasi-isomorphism은 일반적으로 $\mathbf{K}(\mathcal{A})$에서 isomorphism이 되지 않는다. 가령 $\mathcal{A}=\Ab$에서 $P^\bullet$을 degree $-1$과 $0$에 $\mathbb{Z}$가 있고 differential이 $\times 2$인 complex라 하고 $q : P^\bullet\rightarrow(\mathbb{Z}/2\mathbb{Z})[0]$을 자연스러운 quasi-isomorphism이라 하면, $(\mathbb{Z}/2\mathbb{Z})[0]\rightarrow P^\bullet$인 chain map은 degree $0$에서 $\Hom(\mathbb{Z}/2\mathbb{Z},\mathbb{Z})=0$이므로 $0$뿐이다. 따라서 $q$가 $\mathbf{K}(\mathcal{A})$에서 isomorphism이라면 그 역이 $0$이어야 하고 $\id_{(\mathbb{Z}/2\mathbb{Z})[0]}$이 null homotopic이어야 하는데, 한 degree에 집중된 complex 위에는 $0$ 아닌 chain homotopy가 없으므로 그럴 수 없다. 따라서 quasi-isomorphic한 chain complex (up to chain homotopy)을 같은 것으로 보기 위해서 우리는 반드시 quasi-isomorphism의 inverse를 강제로 만들어주어야 한다. 
+그럼 우리는 $\mathbf{K}(\mathcal{A})$이 additive category인 것을 확인할 수 있다. 한편, 우리는 quasi-isomorphism이 일반적으로 $\mathbf{K}(\mathcal{A})$에서 isomorphism이 아닌 것은 이미 [§긴 완전열, ⁋정의 4](/ko/math/homological_algebra/long_exact_sequence#def4)에서 확인하였다. 따라서 quasi-isomorphic한 chain complex (up to chain homotopy)을 같은 것으로 보기 위해서 우리는 반드시 quasi-isomorphism의 inverse를 강제로 만들어주어야 한다. 
 
 ::: 정의 2
-Abelian category $\mathcal{A}$의 *derived category* $D(\mathcal{A})$는 homotopy category $\mathbf{K}(\mathcal{A})$의 quasi-isomorphism의 모임 $S$에 대한 localization $S^{-1}\mathbf{K}(\mathcal{A})$이다.
+Abelian category $\mathcal{A}$의 *derived category* $D(\mathcal{A})$는 homotopy category $\mathbf{K}(\mathcal{A})$에서 quasi-isomorphism의 모임 $S$에 대한 Verdier quotient $\mathbf{K}(\mathcal{A})/S$이다.
 :::
 
-Acyclic complex들이 이루는 $\mathbf{K}(\mathcal{A})$의 full subcategory에 대한 Verdier quotient를 취해도 같은 category를 얻지만, 우리는 위와 같이 morphism을 뒤집는 형태만을 사용한다. 우리는 이 정의를 아주 엄밀하게 다루지는 않지만, 이는 기본적으로 [\[대수적 구조\] §분수체, ⁋정의 2](/ko/math/algebraic_structures/field_of_fractions#def2)의 구성과 다르지 않다. 다른 점은 대상들이 non-commutative하다는 것으로, 이것만 주의하면 우리는 $\mathbf{K}(\mathcal{A})$의 "localization" $D(\mathcal{A})$를 얻어낼 수 있다.
+우리는 이 정의를 아주 엄밀하게 다루지는 않지만, 이는 기본적으로 [\[대수적 구조\] §분수체, ⁋정의 2](/ko/math/algebraic_structures/field_of_fractions#def2)의 구성과 다르지 않다. 다른 점은 대상들이 non-commutative하다는 것으로, 이것만 주의하면 우리는 $\mathbf{K}(\mathcal{A})$의 "localization" $D(\mathcal{A})$를 얻어낼 수 있다.
 
 조금 더 구체적으로, $D(\mathcal{A})$의 morphism을 설명할 때 우리는 종종 roof diagram을 사용하여 설명한다. $X$에서 $Y$로의 $D(\mathcal{A})$에서의 morphism은 다음의 diagram
 
@@ -104,7 +102,7 @@ $$\Hom(P, s):\Hom_{\mathbf{K}(\mathcal{A})}(P, A)\rightarrow\Hom_{\mathbf{K}(\ma
 이 isomorphism인 것이다.
 :::
 
-즉 $P$는 $\mathbf{K}(\mathcal{A})$에서 Hom functor $\Hom(P, -)$를 quasi-isomorphism에 대해 invariant하게 만드는 complex이다. $D(\mathcal{A})$는 $\mathbf{K}(\mathcal{A})$에 quasi-isomorphism의 역을 붙여 얻은 것이므로, 이러한 $P$에 대해서는 $\Hom_{\mathbf{K}(\mathcal{A})}(P, -)$가 이 localization을 따라 그대로 내려간다. 물론 다음 또한 정의해야 한다.
+즉 $P$는 $\mathbf{K}(\mathcal{A})$에서 Hom functor $\Hom(P, -)$를 quasi-isomorphism에 대해 invariant하게 만드는 complex로, 이러한 대상들만이 derived category로 잘 떨어질 것은 자명하다. 물론 다음 또한 정의해야 한다.
 
 ::: 정의 6
 Complex $I \in \mathbf{K}(\mathcal{A})$가 *$K$-injective*라는 것은, 임의의 quasi-isomorphism $s : A \rightarrow B$에 대해 유도된 map
@@ -123,7 +121,7 @@ $$\Hom(s, I):\Hom_{\mathbf{K}(\mathcal{A})}(B, I) \rightarrow \Hom_{\mathbf{K}(\
 2. 각 항이 projective이고 충분히 큰 $n$에 대하여 $A^n=0$인 chain complex $A^\bullet$은 $K$-projective이다.
 :::
 
-특히 $\mathcal{A}$가 enough injective를 가지면 $D^+(\mathcal{A})$의 complex는 각 항이 injective이고 충분히 작은 $n$에 대하여 $0$인 complex로 대체할 수 있으므로 [명제 7](#prop7)에 의해 $K$-injective resolution을 가지며, $\mathcal{A}$가 enough projective를 가지면 같은 이유로 $D^-(\mathcal{A})$의 complex가 $K$-projective resolution을 갖는다. 그러나 boundedness를 벗어나면 사정이 다르다. Unbounded complex의 $K$-injective resolution의 존재는 임의의 abelian category에서 성립한다고 알려져 있지 않으며, module category와 같은 추가 가정 아래에서 확보되는 것이다. 이제 우리는 다음을 정의할 준비가 되었다.
+더 일반적으로, enough injective를 갖는 임의의 abelian category의 homotopy category는 enough $K$-injective resolution을 가지며 projective case에 대해서도 마찬가지이다. 이제 우리는 다음을 정의할 준비가 되었다.
 
 ::: 정의 8
 Additive functor $F : \mathcal{A} \rightarrow \mathcal{B}$가 주어졌다고 하자.
@@ -138,19 +136,13 @@ Additive functor $F : \mathcal{A} \rightarrow \mathcal{B}$가 주어졌다고 �
 
 $$H^i(R F(A[0])) = (R^i F)(A)$$
 
-이 성립하므로 우리는 $RF$가 원래의 right derived functor들을 잘 복원하는 것을 안다. 실제로 $A$의 injective resolution $A \rightarrow I^\bullet$은 각 항이 injective이고 음의 degree에서 $0$이므로 [명제 7](#prop7)에 의해 $K$-injective resolution이고, 따라서 $R F(A[0]) = F(I^\bullet)$인데 [§유도함자, ⁋정의 9](/ko/math/homological_algebra/derived_functors#def9)가 $(R^i F)(A)$를 바로 $H^i(F(I^\bullet))$으로 정의한다. 더 직관적으로 말하자면, 이 right derived functor의 모든 정보는 사실상 $R^iF$들 각각이 아닌, $RF$라는 단일한 derived functor에 들어있는 것이며 이를 "classical"한 세계로 가져오기 위한 도구가 cohomology일 뿐이다. 비슷하게 $A$의 projective resolution $P_\bullet \rightarrow A$는 $K$-projective resolution이므로 $L F(A[0]) = F(P_\bullet)$이고, [§유도함자, ⁋정의 4](/ko/math/homological_algebra/derived_functors#def4)에 의해 $H_i(L F(A[0])) = (L_i F)(A)$를 얻는다.
+이 성립하므로 우리는 $RF$가 원래의 right derived functor들을 잘 복원하는 것을 안다. 더 직관적으로 말하자면, 이 right derived functor의 모든 정보는 사실상 $R^iF$들 각각이 아닌, $RF$라는 단일한 derived functor에 들어있는 것이며 이를 "classical"한 세계로 가져오기 위한 도구가 cohomology일 뿐이다. 비슷하게 $H_i(L F(A[0])) = (L_i F)(A)$인 것도 자명하다.
 
 ::: 명제 9
-Quasi-isomorphism $s : A^\bullet \rightarrow B^\bullet$이 주어지면 $D(\mathcal{B})$에서 $R F(A^\bullet) \cong R F(B^\bullet)$이다. 즉 $R F$는 quasi-isomorphic한 complex를 $D(\mathcal{B})$에서 isomorphic한 대상으로 보내며, 이는 $L F$에 대해서도 마찬가지이다.
+$R F$와 $L F$는 derived category에서의 functor이다. 즉 quasi-isomorphism을 quasi-isomorphism으로 보낸다.
 :::
 ::: 증명
-$A^\bullet \rightarrow I^\bullet$, $B^\bullet \rightarrow J^\bullet$을 각각 $K$-injective resolution이라 하자. $K$-injective resolution의 lifting property에 의해 ([정의 6](#def6)), quasi-isomorphism $s$는 $I^\bullet$과 $J^\bullet$ 사이의 map $\tilde{s} : I^\bullet \rightarrow J^\bullet$으로 유일하게 (homotopy까지) 확장된다. 이때 $A^\bullet \rightarrow I^\bullet$, $B^\bullet \rightarrow J^\bullet$, $s$가 모두 quasi-isomorphism이고 이들이 이루는 사각형이 homotopy를 제외하고 commute하므로 $\tilde{s}$ 또한 quasi-isomorphism이다.
-
-이제 $I^\bullet$과 $J^\bullet$이 모두 $K$-injective이므로 [정의 6](#def6)을 $\tilde{s}$에 적용하면 두 map
-
-$$\tilde{s}^\ast : \Hom_{\mathbf{K}(\mathcal{A})}(J^\bullet, I^\bullet) \rightarrow \Hom_{\mathbf{K}(\mathcal{A})}(I^\bullet, I^\bullet), \qquad \tilde{s}^\ast : \Hom_{\mathbf{K}(\mathcal{A})}(J^\bullet, J^\bullet) \rightarrow \Hom_{\mathbf{K}(\mathcal{A})}(I^\bullet, J^\bullet)$$
-
-이 모두 isomorphism이다. 앞의 것으로부터 $t\tilde{s} \sim \id_{I^\bullet}$인 $t : J^\bullet \rightarrow I^\bullet$을 얻고, 그럼 $\tilde{s}t\tilde{s} \sim \tilde{s}$이므로 뒤의 것에서 $\tilde{s}t$와 $\id_{J^\bullet}$이 모두 $\tilde{s}$로 보내져 $\tilde{s}t \sim \id_{J^\bullet}$이다. 즉 $\tilde{s}$는 chain homotopy equivalence이다. Additive functor $F$는 chain homotopy를 보존하므로 $F(\tilde{s})$ 역시 chain homotopy equivalence이고, homotopic한 chain map은 (co)homology 위에서 같은 map을 유도하므로 ([§긴 완전열, ⁋명제 6](/ko/math/homological_algebra/long_exact_sequence#prop6)) $F(\tilde{s})$는 quasi-isomorphism이다. 따라서 $D(\mathcal{B})$에서 $R F(A^\bullet) = F(I^\bullet) \cong F(J^\bullet) = R F(B^\bullet)$이다. Left derived functor에 대해서도 비슷하다.
+Quasi-isomorphism $s : A^\bullet \rightarrow B^\bullet$이 주어졌다고 하고, $A^\bullet \rightarrow I^\bullet$, $B^\bullet \rightarrow J^\bullet$을 각각 $K$-injective resolution이라 하자. $K$-injective resolution의 lifting property에 의해 ([정의 6](#def6)), quasi-isomorphism $s$는 $I^\bullet$과 $J^\bullet$ 사이의 map $\tilde{s} : I^\bullet \rightarrow J^\bullet$으로 유일하게 (homotopy까지) 확장된다. 따라서 $F(\tilde{s}) : F(I^\bullet) \rightarrow F(J^\bullet)$을 얻는다. $K$-injective resolution 위에서 $F$를 적용한 것이므로 $F(\tilde{s})$는 quasi-isomorphism이며, 따라서 $D(\mathcal{B})$에서 $R F(A^\bullet) \cong R F(B^\bullet)$이다. Left derived functor에 대해서도 비슷하다.
 :::
 
 구체적인 예로서, $\mathcal{A}$ 위에서의 Hom functor $\Hom(-, B)$는 contravariant left exact functor이므로 이를 derived하여 complex 수준의 derived Hom $R\Hom$을 정의하면, $R\Hom(A, B)$의 cohomology는 $\Ext^i(A, B)$와 일치한다.
@@ -179,16 +171,16 @@ Derived category $D(\mathcal{A})$는 단순한 category가 아니라 *triangulat
 ::: 정의 11
 *Triangulated category<sub>삼각 분할 범주</sub>*는 다음 구조를 갖춘 additive category $(\mathcal{T}, [1], \mathcal{S})$이다.
 
-1. Additive auto-equivalence인 *shift functor* $[1] : \mathcal{T} \rightarrow \mathcal{T}$. 그 quasi-inverse를 $[-1]$로 적고, $[0] = \id$이고 $[n+1] = [1] \circ [n]$이다.
+1. *Shift functor* $[1] : \mathcal{T} \rightarrow \mathcal{T}$. 여기서 $[0] = \id$이고 $[n+1] = [1] \circ [n]$이다.
 2. *Distinguished triangle*들의 모임 $\mathcal{S}$. 각 distinguished triangle은
 
 $$A \overset{f}{\rightarrow} B \overset{g}{\rightarrow} C \overset{h}{\rightarrow} A[1]$$
 
 의 형태를 갖는다. 이 모임은 다음 공리를 만족한다.
-- (TR1) 모든 morphism $f : A \rightarrow B$에 대해 distinguished triangle $A \rightarrow B \rightarrow C \rightarrow A[1]$가 존재한다. 또한 $A \overset{\id}{\rightarrow} A \rightarrow 0 \rightarrow A[1]$은 distinguished triangle이며, distinguished triangle과 isomorphic한 triangle은 다시 distinguished triangle이다.
-- (TR2) $A \overset{f}{\rightarrow} B \overset{g}{\rightarrow} C \overset{h}{\rightarrow} A[1]$이 distinguished triangle인 것과 $B \overset{g}{\rightarrow} C \overset{h}{\rightarrow} A[1] \overset{-f[1]}{\longrightarrow} B[1]$이 distinguished triangle인 것은 서로 동치이다.
+- (TR1) 모든 morphism $f : A \rightarrow B$에 대해 distinguished triangle $A \rightarrow B \rightarrow C \rightarrow A[1]$가 존재한다. 또한 $A \overset{\id}{\rightarrow} A \rightarrow 0 \rightarrow A[1]$은 distinguished triangle이다.
+- (TR2) $A \rightarrow B \rightarrow C \rightarrow A[1]$이 distinguished triangle이면 $B \rightarrow C \rightarrow A[1] \rightarrow B[1]$도 distinguished triangle이다.
 - (TR3) 두 distinguished triangle이 주어졌을 때, map들 $(u, v)$가 diagram을 commute하게 하면, 이를 triangle 사이의 morphism으로 완성하는 map $w$가 존재한다.
-- (TR4) Octahedral axiom: 합성 $A \overset{u}{\longrightarrow} B \overset{v}{\longrightarrow} C$가 주어졌다고 하고, (TR1)이 주는 $u$, $v$, $vu$의 distinguished triangle의 세 번째 꼭짓점을 각각 $C_u$, $C_v$, $C_{vu}$라 하자. 그럼 이들을 잇는 distinguished triangle $C_u \rightarrow C_{vu} \rightarrow C_v \rightarrow C_u[1]$이 존재하여, 이 네 삼각형이 이루는 octahedron의 diagram이 commute한다.
+- (TR4) Octahedral axiom: 합성 $B \overset{g}{\longrightarrow} C \overset{h}{\longrightarrow} D$이 주어졌을 때, 이와 연관된 octahedron을 이루는 세 개의 distinguished triangle이 존재한다.
 :::
 
 Distinguished triangle의 직관은 short exact sequence의 "derived version"이라는 것이다. Abelian category에서 short exact sequence $0 \rightarrow A' \overset{f}{\longrightarrow} A \overset{g}{\longrightarrow} A'' \rightarrow 0$이 있으면, $f$를 complex 사이의 map $A'[0] \rightarrow A[0]$로 볼 수 있고, 이때 mapping cone $C(f)$는 $A''[0]$과 quasi-isomorphic하다. ([§긴 완전열, ⁋정의 8](/ko/math/homological_algebra/long_exact_sequence#def8)) 즉 short exact sequence는 derived category에서 distinguished triangle
@@ -204,7 +196,7 @@ $$A \overset{f}{\rightarrow} B \overset{g}{\rightarrow} C(f) \overset{h}{\righta
 들로 구성된다. 여기서 $g : B^i \rightarrow C(f)^i = B^i \oplus A^{i+1}$는 $b \mapsto (b, 0)$이고, $h : C(f)^i \rightarrow A[1]^i = A^{i+1}$는 $(b, a) \mapsto a$이다.
 
 ::: 명제 12
-$\mathcal{A}$가 enough injective를 갖고 $F : \mathcal{A} \rightarrow \mathcal{B}$가 left exact라고 하자. 그럼 $R F : D^+(\mathcal{A}) \rightarrow D^+(\mathcal{B})$는 triangulated functor이다. 즉 distinguished triangle
+$R F : D^+(\mathcal{A}) \rightarrow D^+(\mathcal{B})$는 triangulated functor이다. 즉 distinguished triangle
 
 $$A \rightarrow B \rightarrow C \rightarrow A[1]$$
 
@@ -215,13 +207,7 @@ $$R F(A) \rightarrow R F(B) \rightarrow R F(C) \rightarrow R F(A)[1]$$
 도 distinguished triangle이다.
 :::
 ::: 증명
-$D^+(\mathcal{A})$의 distinguished triangle은 chain map $f : A \rightarrow B$와 그 mapping cone에서 온 것이므로 $C = C(f)$라 두어도 좋다. $A$, $B$의 $K$-injective resolution을 각각 $I_A^\bullet$, $I_B^\bullet$이라 하면, $K$-injective resolution의 lifting property에 의해 $f$는 $\tilde{f} : I_A^\bullet \rightarrow I_B^\bullet$으로 확장되고 $A \rightarrow I_A^\bullet$, $B \rightarrow I_B^\bullet$과 $f$, $\tilde{f}$가 이루는 사각형은 homotopy를 제외하고 commute한다. 이 homotopy를 사용하면 두 mapping cone 사이의 map $C(f) \rightarrow C(\tilde{f})$를 얻고, mapping cone이 주는 cohomology long exact sequence와 five lemma에 의해 이것은 quasi-isomorphism이다.
-
-Bounded below $K$-injective complex들은 $\mathbf{K}(\mathcal{A})$의 triangulated subcategory를 이루므로 $C(\tilde{f})$는 다시 $K$-injective이고, 따라서 $C(\tilde{f})$가 $C$의 $K$-injective resolution이 되어 $R F(C) = F(C(\tilde{f}))$이다. 한편 additive functor는 유한 direct sum을 보존하므로 mapping cone과 commute하여 $F(C(\tilde{f})) = C(F(\tilde{f}))$이다. 그럼 $F$를 적용해 얻은 삼각형
-
-$$F(I_A^\bullet) \rightarrow F(I_B^\bullet) \rightarrow C(F(\tilde{f})) \rightarrow F(I_A^\bullet)[1]$$
-
-은 chain map $F(\tilde{f})$의 mapping cone에서 온 것이므로 $D(\mathcal{B})$의 distinguished triangle이며, 이것이 곧 $R F(A) \rightarrow R F(B) \rightarrow R F(C) \rightarrow R F(A)[1]$이다.
+$A \rightarrow B$를 map으로 보고, 이들의 $K$-injective resolution들을 각각 $I_A^\bullet$, $I_B^\bullet$이라 하자. $K$-injective resolution의 lifting property에 의해, map $A \rightarrow B$는 $I_A^\bullet \rightarrow I_B^\bullet$로 확장된다. $C = C(f)$의 $K$-injective resolution $I_C^\bullet$을 취하면, $I_A^\bullet \rightarrow I_B^\bullet \rightarrow I_C^\bullet \rightarrow I_A^\bullet[1]$은 $K$-injective complex들 사이의 distinguished triangle이며, $F$를 적용한 뒤 $D(\mathcal{B})$에서 보면 원하는 distinguished triangle을 얻는다. Bounded below $K$-injective complex들은 $\mathbf{K}(\mathcal{A})$의 triangulated subcategory를 이루므로, mapping cone도 $K$-injective가 되고 이 diagram이 commute함을 알 수 있다.
 :::
 
 ## Derived Adjunction
@@ -251,15 +237,17 @@ $$\Hom_{\Ch(\mathcal{B})}(F(P_\bullet), I^\bullet) \cong \Hom_{\Ch(\mathcal{A})}
 
 $$\Hom(A \otimes B, C) \cong \Hom(A, \Hom(B, C))$$
 
-에서, complex $X, Y, Z$에 대해 동일한 형태의 isomorphism을 derived category에서도 얻고 싶을 수 있다. 그러나 raw functor $-\otimes B$와 $\Hom(B,-)$는 quasi-isomorphism을 보존하지 않으므로, 이 adjunction은 naive하게 derived category로 내려오지 않는다. 앞서 derived functor를 정의할 때 projective resolution 또는 injective resolution을 취해야만 $\mathbf{K}(\mathcal{A}) \rightarrow D(\mathcal{A})$로 잘 descend한다는 점을 확인하였는데, 이는 바로 $-\otimes B$가 right exact이고 $\Hom(B,-)$가 left exact이기 때문이다.
+에서, complex $X, Y, Z$에 대해 동일한 형태의 isomorphism을 derived category에서도 얻고 싶을 수 있다. 그러나 raw functor $-\otimes B$와 $\Hom(B,-)$는 quasi-isomorphism을 보존하지 않으므로, 이 adjunction은 naive하게 derived category로 내려오지 않는다. 앞서 derived functor를 정의할 때 projective resolution 또는 injective resolution을 취해야만 $\mathbf{K}(\mathcal{A}) \rightarrow D(\mathcal{A})$로 잘 descend한다는 점을 확인하였는데, 이는 바로 $-\otimes B$가 right exact이고 $\Hom(B,-)$가 left exact이기 때문이다. Quasi-isomorphism에 대한 localization을 거치면 classical adjoint는 자동으로 살아남지 않으므로, 이 exactness의 부족을 보완하는 derived version이 필요하다.
 
 이를 구체적으로 확인하기 위해 $R = \mathbb{Z}$, $M = \mathbb{Z}/n\mathbb{Z}$를 생각하자. $M$은 flat이 아니므로 tensoring이 exact하지 않다. $0 \rightarrow \mathbb{Z} \xrightarrow{\times n} \mathbb{Z} \rightarrow \mathbb{Z}/n\mathbb{Z} \rightarrow 0$에 $-\otimes M$을 적용하면 exactness가 깨지며, 구체적으로 $\Tor_1^\mathbb{Z}(\mathbb{Z}/n\mathbb{Z}, \mathbb{Z}/n\mathbb{Z}) \cong \mathbb{Z}/n\mathbb{Z}$이 존재하므로 $-\otimes M$은 quasi-isomorphism을 보존하지 않는다. ([§Ext와 Tor](/ko/math/homological_algebra/ext_and_tor))
 
-이 exactness failure를 해결하기 위해 resolution을 사용하여 $\otimes^L$와 $R\Hom$을 구성하면, [명제 13](#prop13)에 의해 adjunction이 복원된다. 구체적으로 $A \otimes^L B$는 $A$의 $K$-projective resolution에 $-\otimes B$를 적용한 것이고, $R\Hom(B, C)$는 [명제 13](#prop13)에서 $G = \Hom(B, -)$로 둔 경우, 즉 $C$의 $K$-injective resolution에 $\Hom(B, -)$를 적용한 것이다. 이를 통해
+이 exactness failure를 해결하기 위해 projective resolution을 사용하여 $\otimes^L$와 $R\Hom$을 구성하면, [명제 13](#prop13)에 의해 adjunction이 복원된다. 구체적으로 $A \otimes^L B$는 $A$의 projective resolution에 $-\otimes B$를 적용한 것이며, $R\Hom(B, C)$는 $B$의 projective resolution에 $\Hom(-, C)$를 적용한 것이다. 이를 통해
 
 $$\Hom_{D(\mathcal{A})}(A \otimes^L B, C) \cong \Hom_{D(\mathcal{A})}(A, R\Hom(B, C))$$
 
-를 얻는다. Resolution을 취하는 과정에서 $-\otimes B$가 잃어버렸던 $\Tor$ 정보와 $\Hom(B,-)$가 잃어버렸던 $\Ext$ 정보는 higher cohomology로 남아 complex 안에 그대로 보존된다.
+를 얻는다. Projective resolution을 취하는 과정에서 $-\otimes B$가 잃어버렸던 $\Tor$ 정보와 $\Hom(B,-)$가 잃어버렸던 $\Ext$ 정보가 complex의 상위 차원으로 보존되며, chain map의 계산을 통해 양변이 일치함을 확인할 수 있다.
+
+요약하면, abelian category에서의 classical adjunction은 underived level에서 존재하지만 quasi-isomorphism에 대한 localization을 거치면 자동으로 살아남지 않는다. $-\otimes B$의 right exactness와 $\Hom(B,-)$의 left exactness로 인해 quasi-isomorphism이 보존되지 않으며, 이로 인해 naive adjunction이 깨진다. 이 exactness의 failure는 $\otimes^L$와 $R\Hom$을 resolution을 통해 구성함으로써 해결되며, [명제 13](#prop13)이 보장하는 derived adjunction이 classical adjunction을 정확하게 대체한다.
 
 ---
 

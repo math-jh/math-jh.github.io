@@ -10,14 +10,12 @@ sidebar:
 
 date: 2022-09-10
 weight: 1
-revising: true
-drift_needed: true
 
 ---
 
-Homology 대수학은 말 그대로 chain complex들이 주어졌을 때 이들의 homology를 이용하여 그 성질을 살펴보는 학문이다. ([\[범주론\] §아벨 카테고리, ⁋정의 4](/ko/math/category_theory/abelian_categories#def4)) Chain complex는 임의의 abelian category에서 정의되지만, 그 category가 small이라면 Freyd-Mitchell embedding theorem에 의해 이들은 모두 적당한 $\lMod{A}$의 full subcategory로 embed될 수 있다. ([\[범주론\] §아벨 카테고리, ⁋정리 8 (Freyd-Mitchell embedding theorem)](/ko/math/category_theory/abelian_categories#thm8)) 
+Homology 대수학은 말 그대로 chain complex들이 주어졌을 때 이들의 homology를 이용하여 그 성질을 살펴보는 학문이다. ([\[범주론\] §아벨 카테고리, ⁋정의 4](/ko/math/category_theory/abelian_categories#def4)) Chain complex는 임의의 abelian category에서 정의되지만, Freyd-Mitchell embedding theorem에 의해 이들은 모두 적당한 $\lMod{A}$의 full subcategory로 embed될 수 있다. ([\[범주론\] §아벨 카테고리, ⁋정리 8 (Freyd-Mitchell embedding theorem)](/ko/math/category_theory/abelian_categories#thm8)) 
 
-이번 글에서는 homology 대수를 할 때 필수적인 보조정리인 5항 보조정리와 snake lemma를 증명한다. 이들의 증명은 kernel과 cokernel의 universal property를 사용하여 하는 것이 가능하지만, 이는 증명을 불필요하게 길게 만들 수 있으므로 우리는 모든 증명을 $\lMod{A}$에서 진행한다. 이는 특히 각 대상들에서 원소를 뽑아올 수 있음을 의미한다. 이와 같은 증명을 diagram chasing이라 부르며, 임의의 abelian category 대신 $\lMod{A}$에서 증명을 진행하는 것은 위에서 언급한 Freyd-Mitchell embedding theorem에 의해 정당화될 수 있다. 정리가 small abelian category에 대한 것이므로 여기에는 한 단계가 더 필요하다. 주어진 diagram에 등장하는 유한 개의 대상에서 출발하여, 그 사이의 morphism들의 kernel과 cokernel, 그리고 finite direct sum을 각각 하나씩 택해 가며 이 과정을 반복하면 집합을 이루는 대상들의 모임을 얻고, 이들이 이루는 full subcategory는 small abelian category가 되며 inclusion functor는 exact이다. 아래에서 다루는 명제들은 모두 유한 개의 대상과 morphism으로 이루어진 diagram에 대한 것이므로, 이러한 subcategory로 옮긴 뒤 정리를 적용하면 된다.
+이번 글에서는 homology 대수를 할 때 필수적인 보조정리인 5항 보조정리와 snake lemma를 증명한다. 이들의 증명은 kernel과 cokernel의 universal property를 사용하여 하는 것이 가능하지만, 이는 증명을 불필요하게 길게 만들 수 있으므로 우리는 모든 증명을 $\lMod{A}$에서 진행한다. 이는 특히 각 대상들에서 원소를 뽑아올 수 있음을 의미한다. 이와 같은 증명을 diagram chasing이라 부르며, 임의의 abelian category 대신 $\lMod{A}$에서 증명을 진행하는 것은 위에서 언급한 Freyd-Mitchell embedding theorem에 의해 정당화될 수 있다.
 
 ## 5항 보조정리
 
@@ -64,7 +62,7 @@ Homology 대수학은 말 그대로 chain complex들이 주어졌을 때 이들�
     이므로 $b\in\ker(\beta)$이고, $\beta$는 단사이므로 $b=0$가 된다. 따라서 $c=g(b)=0$이고, $\gamma$는 단사이다.
 :::
 
-위의 명제를 네 열씩 끊어 적용하면 다음의 두 따름정리를 얻는다.
+위의 명제는 다음의 자명한 두 따름정리를 갖는다.
 
 ::: 따름정리 2 (The five lemma)
 각 행이 exact인 commutative diagram
@@ -74,8 +72,6 @@ Homology 대수학은 말 그대로 chain complex들이 주어졌을 때 이들�
 이 주어졌다 하자. 만일 $\alpha,\beta,\delta,\epsilon$이 모두 전단사라면, $\gamma$ 또한 전단사이다.
 :::
 
-오른쪽 네 열 $B,C,D,E$를 보면 $\beta$가 전사이고 $\epsilon$이 단사이므로, $\delta$가 전사인 것과 [명제 1](#prop1)의 (1)에 의하여 $\gamma$는 전사이다. 마찬가지로 왼쪽 네 열 $A,B,C,D$를 보면 $\alpha$가 전사이고 $\delta$가 단사이므로, $\beta$가 단사인 것과 [명제 1](#prop1)의 (2)에 의하여 $\gamma$는 단사이다.
-
 ::: 따름정리 3 (The short five lemma)
 각 행이 exact인 commutative diagram
 
@@ -83,8 +79,6 @@ Homology 대수학은 말 그대로 chain complex들이 주어졌을 때 이들�
 
 이 주어졌다 하자. 만일 $\alpha,\gamma$가 모두 단사라면 $\beta$도 단사이고, $\alpha,\gamma$가 모두 전사라면 $\beta$도 전사이다.
 :::
-
-이번에는 양 끝의 $0$을 포함하여 네 열씩 끊는다. 네 열 $0,A,B,C$에서 $0\rightarrow 0$은 전사이고 $\gamma$는 단사이므로, $\alpha$가 단사라면 [명제 1](#prop1)의 (2)에 의하여 $\beta$도 단사이다. 네 열 $A,B,C,0$에서는 $\alpha$가 전사이고 $0\rightarrow 0$은 단사이므로, $\gamma$가 전사라면 [명제 1](#prop1)의 (1)에 의하여 $\beta$도 전사이다.
 
 ## 뱀 보조정리
 
@@ -159,7 +153,7 @@ $$(f'\circ\alpha)(a)=(\beta\circ f)(a)=\beta(f(a))=\beta(b)=0$$
 
 에서, $f'$는 단사이므로 $a\in\ker(\alpha)$이고 $f(a)=f^\sharp(a)=b$로부터 $b\in\im(f^\sharp)$이 된다.
 
-이제 $g$가 전사라고 가정하자. $\coker(\beta)$의 원소가 $\ker((g')^\ast)$에 속한다 하고, 그 representative $b'\in B'$를 택하자. 즉 $((g')^\ast)(b'+\im(\beta))=g'(b')+\im(\gamma)=0$이다. 그런데 $g'(b')\in\im(\gamma)$이므로, 적당한 $c\in C$가 존재하여 $\gamma(c)=g'(b')$이고, $g$는 전사이므로 적당한 $b\in B$가 존재하여 $g(b)=c$이다. 이 때 
+이제 $g$가 전사라고 가정하자. $b'\in\coker(\beta)$가 $\ker((g')^\ast)$의 원소라 하자. 즉 $((g')^\ast)(b')=g'(b')+\im(\gamma)=0$이다. 그런데 $g'(b')\in\im(\gamma)$이므로, 적당한 $c\in C$가 존재하여 $\gamma(c)=g'(b')$이고, $g$는 전사이므로 적당한 $b\in B$가 존재하여 $g(b)=c$이다. 이 때 
 
 $$g'(b')=\gamma(c)=(\gamma\circ g)(b)=(g'\circ\beta)(b)$$
 
@@ -181,7 +175,7 @@ $$((f')^\ast)(a'+\im(\alpha))=b'+\im(\beta)$$
 
 {% diagram Math/Homological_Algebra/Diagram_Chasing-8.svg width="18.88em" alt="snake_diagram" %}
 
-이 주어졌다 하자. 특히 $g$는 전사이고 $f'$는 단사이다. 그럼 [보조정리 5](#lem5)에서부터 얻어진 두 개의 exact sequence 
+이 주어졌다 하자. 이 때, 위와 아래의 행은 각각 exact이다. 그럼 [보조정리 5](#lem5)에서부터 얻어진 두 개의 exact sequence 
 
 $$\ker(\alpha)\rightarrow\ker(\beta)\rightarrow\ker(\gamma),\qquad \coker(\alpha)\rightarrow\coker(\beta)\rightarrow\coker(\gamma)$$
 
@@ -200,11 +194,15 @@ $$0=\gamma(c)=\gamma(g(b))=(\gamma\circ g)(b)=(g'\circ\beta)(b)=g'(\beta(b))$$
 
 을 만족한다. 즉 $\beta(b)\in\ker(g')=\im(f')$이다. 따라서 $f'(a')=\beta(b)$이도록 하는 $a'$가 유일하게 존재한다. 이러한 $a'$에 대하여 $\delta(c)=a'+\im(\alpha)\in \coker(\alpha)$라 하자. 
 
-함수 $\delta$가 잘 정의되기 위해서는 위의 함수값이 $b$의 선택에 의존하지 않아야 한다. $g(b_1)=c$를 만족하는 또다른 $b_1\in B$를 택하고, 위와 같은 방식으로 $f'(a_1')=\beta(b_1)$을 만족하는 $a_1'\in A'$를 택하자. 그럼 $g(b_1)=g(b)=c$이므로 $b_1-b\in\ker(g)=\im(f)$이 성립한다. 이제 $f(a)=b_1-b$이도록 하는 $a\in A$를 찾으면, 
+함수 $\delta$가 잘 정의되기 위해서는 위의 함수값이 $b$의 선택에 의존하지 않아야 한다. $g(b_1)=c$를 만족하는 또다른 $b_1\in B$를 택하고, 위와 같은 방식으로 $f'(a_1')=\beta(b_1)$을 만족하는 $a_1'\in A'$를 택하자. 그럼 
+
+$$0=(g'\circ f')(a_1'-a')=(g'\circ \beta)(b_1-b)=(\gamma\circ g)(b_1-b)$$
+
+이므로 $b_1-b\in\ker(g)=\im(f)$이 성립한다. 이제 $f(a)=b_1-b$이도록 하는 $a\in A$를 찾으면, 
 
 $$f'(\alpha(a))=\beta(f(a))=\beta(b_1)-\beta(b)=f'(a_1'-a')$$
 
-이고, $f'$가 단사이므로 $\alpha(a)=a_1'-a'$가 성립한다. 즉, $a_1'\equiv a' \mod \im(\alpha)$이고, $\delta$가 잘 정의된다. 뿐만 아니라 $c_1,c_2\in\ker(\gamma)$와 $r\in A$가 주어졌을 때, $g(b_1)=c_1$과 $g(b_2)=c_2$를 만족하는 $b_1,b_2\in B$와 $f'(a_1')=\beta(b_1)$, $f'(a_2')=\beta(b_2)$를 만족하는 $a_1',a_2'\in A'$를 택하면 $g(b_1+rb_2)=c_1+rc_2$이고 $f'(a_1'+ra_2')=\beta(b_1+rb_2)$이므로, $\delta$의 값이 이러한 선택에 의존하지 않는다는 것으로부터 $\delta(c_1+rc_2)=\delta(c_1)+r\delta(c_2)$를 얻는다. 즉 $\delta$는 $A$-module들 사이의 homomorphism이다.
+이고, $f'$가 단사이므로 $\alpha(a)=a_1'-a'$가 성립한다. 즉, $a_1'\equiv a' \mod \im(\alpha)$이고, $\delta$가 잘 정의된다. 어렵지 않게 $\delta$가 $A$-module들 사이의 homomorphism임을 보일 수 있다.
 
 이렇게 만든 $\delta$가 다음의 열
 
@@ -226,7 +224,7 @@ $$g^\sharp(b-f(a))=g(b-f(a))=g(b)-g(f(a))=g(b)=c$$
 
 이므로 $c\in\im g^\sharp$가 성립한다. 
 
-비슷하게 $\coker(\alpha)$의 원소가 $\ker((f')^\ast)$에 속한다 하고, 그 representative $a'\in A'$를 택하자. 그럼 $f'(a')\in\im(\beta)$이므로 적당한 $b\in B$가 존재하여 $\beta(b)=f'(a')$가 성립하고, 이 $b$에 대하여
+비슷하게 $a'\in\ker((f')^\ast)$라 하자. 그럼 $f'(a')\in\im(\beta)$이므로 적당한 $b\in B$가 존재하여 $\beta(b)=f'(a')$가 성립하고, 이 $b$에 대하여
 
 $$\gamma(g(b))=(g'\circ\beta)(b)=(g'\circ f')(a')=0$$
 

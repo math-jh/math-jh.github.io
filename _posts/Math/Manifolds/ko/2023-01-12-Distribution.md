@@ -10,8 +10,6 @@ sidebar:
 
 date: 2023-01-12
 weight: 14
-revising: true
-drift_needed: true
 
 ---
 
@@ -42,25 +40,21 @@ $$T_xS=\mathcal{D}(x)\qquad\text{for all $x$}$$
 을 만족하도록 결정된다. 따라서 다음과 같이 정의한다.
 
 ::: 정의 2
-$M$ 위에 정의된 $k$차원 distribution $\mathcal{D}$에 대하여, 각각의 $x\in S$마다 다음의 식
+$M$ 위에 정의된 $k$차원 distribution $\mathcal{D}$에 대하여, 다음의 식
 
-$$\dd{\Phi_x}(T_xS)=\mathcal{D}(\Phi(x))$$
+$$T_xS=\mathcal{D}(x)\qquad\text{for all $x$}$$
 
-을 만족하는 $M$의 submanifold $\Phi:S\rightarrow M$을 $\mathcal{D}$의 *integral manifold*라 부른다.
+을 만족하는 manifold $S$를 $\mathcal{D}$의 *integral manifold*라 부른다.
 :::
-
-[§부분다양체와 역함수 정리, ⁋정의 1](/ko/math/manifolds/submanifolds#def1)에 의하여 submanifold는 injective immersion $\Phi:S\rightarrow M$이므로, 위의 조건은 각각의 $x\in S$마다 $\dd{\Phi_x}:T_xS\rightarrow\mathcal{D}(\Phi(x))$가 isomorphism이라는 것과 같다. $\Phi$가 포함사상인 경우가 위에서 살펴본 $T_xS=\mathcal{D}(x)$에 해당한다.
 
 만약 각각의 $p\in M$마다, $p$를 포함하는 integral manifold가 존재한다면 이를 *integrable* distribution이라 부른다. 
 
 ## 프로베니우스 정리
 
-$M$ 위에 정의된 $C^\infty$ distribution $\mathcal{D}$에 대하여, 임의의 $X,Y\in\mathcal{D}$가 $[X,Y]\in\mathcal{D}$를 만족할 때 $\mathcal{D}$를 *involutive*라 부른다. 여기에서 $X\in\mathcal{D}$는 $X$가 각각의 $p\in M$마다 $X_p\in\mathcal{D}(p)$를 만족하는 $C^\infty$ 벡터장이라는 뜻이다.
-
 다음의 정리가 잘 알려져 있다. 
 
 ::: 정리 3 (Frobenius)
-Manifold $M$ 위에 정의된 $k$차원 $C^\infty$ distribution $\mathcal{D}$를 생각하자. 그럼 $\mathcal{D}$가 integrable인 것과 involutive인 것이 동치이다. 
+Manifold $M$ 위에 정의된 $k$차원 $C^\infty$ distribution $\mathcal{D}$를 생각하자. 그럼 $\mathcal{D}$가 integrable인 것과, 임의의 $X,Y\in\mathcal{D}$에 대하여 $[X,Y]\in\mathcal{D}$가 성립하는 것이 동치이다. 
 
 뿐만 아니라, 임의의 $k$차원 involutive distribution에 대하여 다음이 성립한다. 
 
@@ -72,6 +66,8 @@ Manifold $M$ 위에 정의된 $k$차원 $C^\infty$ distribution $\mathcal{D}$를
    로 정의된 slice들이 $\mathcal{D}$의 integral manifold이도록 할 수 있다.
 3. 마지막으로, 만일 $\Phi:N\rightarrow M$이 connected integral manifold이고, $\Phi(N)\subseteq U$라면 $\Phi(N)$은 2번의 slice들 중 단 하나의 slice에만 포함된다.
 :::
+
+후자의 조건을 만족하는 distribution을 *involutive*라 부른다. 따라서 Frobenius 정리는 distribution $\mathcal{D}$가 integrable한 것과 involutive인 것이 동치라고 줄여 쓸 수 있다.
 
 이 정리의 한쪽 방향은 꽤 쉽게 증명할 수 있다.
 
@@ -85,11 +81,11 @@ $\mathcal{D}$는 integrable distribution이므로, 점 $p$를 포함하는 $\mat
 
 $$\dd{\Phi_x}:T_xS\rightarrow\mathcal{D}(\Phi(x))$$
 
-이 isomorphism이므로, 우리는 $S$ 위의 벡터장 $\tilde{X},\tilde{Y}$를 각각의 $x\in S$마다
+이 isomorphism이므로, 우리는 
 
-$$\tilde{X}_x=(\dd{\Phi_x})^{-1}(X_{\Phi(x)}),\qquad \tilde{Y}_x=(\dd{\Phi_x})^{-1}(Y_{\Phi(x)})$$
+$$\dd{\Phi_s}(\tilde{X}_s)=X_p,\qquad \dd{\Phi_s}(\tilde{Y}_s)=Y_p$$
 
-으로 정의할 수 있다. 우변이 잘 정의되는 것은 $X,Y\in\mathcal{D}$라는 가정이 $X_{\Phi(x)},Y_{\Phi(x)}\in\mathcal{D}(\Phi(x))$를 주기 때문이다. 이렇게 얻어진 $\tilde{X},\tilde{Y}$는 $C^\infty$인데, [§부분다양체와 역함수 정리, ⁋따름정리 10](/ko/math/manifolds/submanifolds#cor10)에 의하여 $\Phi(x)$ 근방의 coordinate system $(y^j)$에 대한 함수들 $y^j\circ\Phi$의 적당한 부분집합이 $x$ 근방에서 $S$의 coordinate system을 이루고, 이 coordinate system에 대한 $\tilde{X}$의 성분들이 $\tilde{X}(y^j\circ\Phi)=(X(y^j))\circ\Phi$로 주어지기 때문이다. 정의에 의하여 각각의 $x\in S$마다 $\dd{\Phi_x}(\tilde{X}_x)=X_{\Phi(x)}$가 성립하므로 $\tilde{X},\tilde{Y}$는 각각 $X,Y$와 $\Phi$-related인 벡터장들이고, 따라서 [§리 미분, ⁋명제 9](/ko/math/manifolds/Lie_derivative#prop9)에 의하여 $[\tilde{X},\tilde{Y}]$는 $[X,Y]$와 $\Phi$-related이다. 따라서
+을 만족하는 두 벡터장 $\tilde{X},\tilde{Y}$를 찾을 수 있다. 그럼 이들은 각각 $X,Y$와 $\Phi$-related인 벡터장들이므로, [§리 미분, ⁋명제 9](/ko/math/manifolds/Lie_derivative#prop9)에 의하여 $[\tilde{X},\tilde{Y}]$는 $[X,Y]$와 $\Phi$-related이다. 따라서
 
 $$[X,Y]_p=\dd{\Phi_s}([\tilde{X},\tilde{Y}]_s)\in\mathcal{D}(p)$$
 
@@ -126,19 +122,11 @@ $$\sigma: (-\epsilon,\epsilon)\times W\rightarrow M;\qquad (t,a^2,\ldots, a^m)\m
 
 $$\dd{\sigma}\left(\frac{\partial}{\partial r^1}\bigg\vert_0\right)=\frac{\partial}{\partial y^1}\bigg\vert_p=X_p\neq 0,\qquad \dd{\sigma}\left(\frac{\partial}{\partial r^i}\bigg\vert_0\right)=\frac{\partial}{\partial y^i}\bigg\vert_p$$
 
-이므로 $\sigma$는 원점에서 nonsingular이고, 따라서 [§부분다양체와 역함수 정리, ⁋따름정리 5](/ko/math/manifolds/submanifolds#cor5)에 의하여 $\sigma$는 원점의 적당한 열린근방을 $p$의 열린근방 $U$ 위로 보내는 diffeomorphism이다. 즉 $\varphi=\sigma^{-1}$로 두면 $(U,\varphi)$, $\varphi=(x^1,\ldots, x^m)$은 $p$를 포함하는 coordinate system이다.
-
-이제 $a=(a^2,\ldots, a^m)\in W$를 고정하면, 곡선 $t\mapsto\sigma(t,a)$는 점 $\tau^{-1}(0,a)$를 지나는 $X$의 integral curve이므로 $\sigma$의 정의역의 모든 점에서 다음의 식
-
-$$\dd{\sigma}\left(\frac{\partial}{\partial r^1}\bigg\vert_{(t,a)}\right)=X_{\sigma(t,a)}$$
-
-이 성립한다. 그런데 $\varphi=\sigma^{-1}$이므로 좌변은 $\partial/\partial x^1$을 점 $\sigma(t,a)$에서 계산한 것이고, 따라서 $U$ 위에서 $X\vert_U=\partial/\partial x^1\vert_U$를 얻는다.
+이므로 $\sigma$는 원점에서 nonsingular이고, 따라서 $\sigma^{-1}$이 coordinate map을 정의한다.
 :::
 
 ::: 증명 (정리 3)
-우선 $k=1$인 경우를 보자. 한 점 $p\in M$에 대하여 $\mathcal{D}$는 $p$의 근방에서 하나의 벡터장 $X_1$에 의해 span되고, $\mathcal{D}$가 1차원이므로 이 근방에서 $X_1$은 영이 되지 않는다. 따라서 [보조정리 5](#lem5)에 의하여 $p$를 포함하는 coordinate system $(U,\varphi),\varphi=(x^1,\ldots, x^m)$이 존재하여 $X_1\vert_U=\partial/\partial x^1\vert_U$이도록 할 수 있다. 그럼 $i>1$에 대한 식들 $x^i=\text{constant}$로 정의된 slice의 각 점 $q$에서의 tangent space는 $\partial/\partial x^1\vert_q$에 의해 span되고 이는 $\mathcal{D}(q)$와 일치하므로, 이 slice들은 $\mathcal{D}$의 integral manifold이다. 즉 $k=1$일 때 첫째와 둘째 주장이 성립하며, 셋째 주장의 증명은 아래에서 $k$에 무관하게 이루어진다.
-
-이제 $k\geq 2$라 하고, 정리가 모든 $k-1$차원 distribution에 대해 성립한다고 가정하자. $\mathcal{D}$가 $k$차원 distribution이라 하면, 한 점 $p\in M$에 대하여 $\mathcal{D}$가 $p$ 근방에서는 $k$개의 벡터장 $X_1,\ldots, X_k$에 의해 span된다고 가정할 수 있다. 이제 [보조정리 5](#lem5)를 적용하여
+정리가 모든 $k-1$차원 distribution에 대해 성립한다고 가정하고, $\mathcal{D}$가 $k$차원 distribution이라 하자. 한 점 $p\in M$에 대하여, $\mathcal{D}$가 $p$ 근방에서는 $k$개의 벡터장 $X_1,\ldots, X_k$에 의해 span된다고 가정할 수 있다. 이제 [보조정리 5](#lem5)를 적용하여
 
 $$X_1\vert_V=\frac{\partial}{\partial y^1}$$
 

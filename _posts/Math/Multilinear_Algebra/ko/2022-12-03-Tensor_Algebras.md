@@ -1,6 +1,6 @@
 ---
 title: "텐서대수"
-description: "행렬식 정의에 필요한 텐서대수의 개념과 보편 성질을 정리하고, 직접 합과 스칼라 확장에서의 연산의 성질을 살펴본다."
+description: "행렬식 정의에 필요한 텐서대수의 개념과 보편 성질을 정리하고, 직접 합과 스칼라 확장에서의 연산 거동을 살펴본다."
 excerpt: "텐서대수, 대칭대수, 외대수"
 
 categories: [Math / Multilinear Algebra]
@@ -10,12 +10,10 @@ sidebar:
 
 date: 2022-12-03
 weight: 10
-revising: true
-drift_needed: true
 
 ---
 
-이제 우리는 행렬식을 정의할 것인데, 이를 위해 우선 tensor algebra와 symmetric algebra, exterior algebra를 정의한다. 이 과정에서 $A$는 항상 commutative ring인 것으로 생각한다. 그럼 $A\neq 0$인 경우 $A$는 maximal ideal $\mathfrak{m}$을 가지므로 field로의 homomorphism $A \rightarrow A/\mathfrak{m}$이 존재하고, 따라서 [§기저, ⁋명제 6](/ko/math/multilinear_algebra/basis_of_free_modules#prop6)에 의하여 $A$는 IBN property를 갖는다.
+이제 우리는 행렬식을 정의할 것인데, 이를 위해 우선 tensor algebra와 symmetric algebra, exterior algebra를 정의한다. 이 과정에서 $A$는 항상 commutative ring인 것으로 생각한다. 그럼 특히 $A$는 IBN property를 갖는다. ([§기저, ⁋명제 6](/ko/math/multilinear_algebra/basis_of_free_modules#prop6))
 
 ## 텐서대수의 정의
 
@@ -23,7 +21,7 @@ drift_needed: true
 
 $$F(M)=\bigoplus_{n\geq 0} M^{\otimes n}$$
 
-으로 정의했었다. ([\[대수적 구조\] §대수, ⁋명제 4](/ko/math/algebraic_structures/algebras#prop4)) 이는 단순한 algebra일 뿐 아니라, 자연스럽게 $\mathbb{N}$-graded associative unital algebra의 구조를 갖는다. 이를 다음과 같이 이름붙인다.
+으로 정의했었다. ([\[대수적 구조\] §대수, ⁋명제 4](/ko/math/algebraic_structures/algebras#prop4)) 이는 단순한 algebra일 뿐 아니라, 자연스럽게 $\mathbb{N}_{\geq 0}$-graded associative unital algebra의 구조를 갖는다. 이를 다음과 같이 이름붙인다.
 
 ::: 정의 1
 위에서 정의한 $F(M)$을 $M$의 *tensor algebra<sub>텐서대수</sub>*라 부르고, $\T(M)$으로 표기한다. 
@@ -47,7 +45,7 @@ $$\Hom_{\Alg{A}}(\T(M), \T(M))\cong \Hom_{\rMod{A}}(M, U\T(M))$$
 
 ## 텐서대수의 성질들
 
-이제 우리는 $\rMod{A}$에서의 연산들이 functor $\T:\rMod{A} \rightarrow \Alg{A}$를 통해 옮겨졌을 때, 이들이 어떻게 행동하는지를 살펴본다. 특히 direct sum과 extension of scalar에 관심이 있다. 이 절의 논의는 [명제 2](#prop2)와 같이, $\T$를 $\rMod{A}$에서 associative unital $\mathbb{N}$-graded $A$-algebra들의 category들로 가는 functor로 이해하여도 동일한 논증이 성립하지만, 표기상의 복잡함을 해소하기 위해 target category를 $\Alg{A}$로 적기로 한다. 
+이제 우리는 $\rMod{A}$에서의 연산들이 functor $T:\rMod{A} \rightarrow \Alg{A}$를 통해 옮겨졌을 때, 이들이 어떻게 행동하는지를 살펴본다. 특히 direct sum과 extension of scalar에 관심이 있다. 이 절의 논의는 [명제 2](#prop2)와 같이, $T$를 $\rMod{A}$에서 associative unital $\mathbb{N}$-graded $A$-algebra들의 category들로 가는 functor로 이해하여도 동일한 논증이 성립하지만, 표기상의 복잡함을 해소하기 위해 target category를 $\Alg{A}$로 적기로 한다. 
 
 우선 direct sum의 경우를 살펴본다. $M=\bigoplus_{i\in I} M_i$가 $A$-module들 $M_i$들의 direct sum이라 하자. 그럼 $\otimes$가 $\Hom$의 left adjoint라는 사실과 약간의 귀납법을 통해 다음의 isomorphism
 
@@ -57,9 +55,9 @@ $$\bigoplus_{(i_1,\ldots, i_n)\in I^n}M_{i_1}\otimes\cdots\otimes M_{i_n}\cong \
 
 $$\T(M)\cong\bigoplus_{n\geq 0} \T^n(M)\cong\bigoplus_{n\geq 0}\bigoplus_{(i_1,\ldots, i_n)\in I^n}M_{i_1}\otimes\cdots\otimes M_{i_n}$$
 
-으로 주어진다. 이는 식으로는 복잡해보이지만, 기본적으로는 $\T$가 left adjoint이므로 
+으로 주어진다. 이는 식으로는 복잡해보이지만, 기본적으로는 $T$가 left adjoint이므로 
 
-$$\T\left(\bigoplus_{i\in I} M_i\right)\cong \coprod_{i\in I} \T(M_i)$$
+$$T\left(\bigoplus_{i\in I} M_i\right)\cong \coprod_{i\in I} \T(M_i)$$
 
 로부터, 우변의 graded algebra들의 coproduct를 풀어쓴 것에 불과하다.[^1]
 
@@ -113,7 +111,7 @@ $$\iota_{\phi_!M}: \phi_!M \rightarrow \T_B(\phi_!M)$$
 
 {% diagram Math/Multilinear_Algebra/Tensor_Algebras-2.svg width="10.30em" alt="Extension_of_scalar_proof" %}
 
-을 commute하도록 하는 $A$-algebra homomorphism $\T_A(M)\rightarrow \phi^\ast \T_{B}(\phi_!M)$이 유일하게 존재한다. 이제 다음의 adjoint
+을 commute하도록 하는 $A$-algebra homomorphism $T_A(M)\rightarrow \phi^\ast T_{B}(\phi_!M)$이 유일하게 존재한다. 이제 다음의 adjoint
 
 $$\Hom_{\Alg{A}}(\T_A(M), \phi^\ast \T_B(\phi_!M))\cong \Hom_\Alg{B}(\phi_! \T_A(M), \T_B(\phi_!M))$$
 
@@ -174,7 +172,7 @@ $$\mathfrak{I}=\langle x\otimes y-y\otimes x\mid x,y\in M\rangle$$
 을 생각하자. 그럼 quotient algebra $\T(M)/\mathfrak{I}$를 $M$의 *symmetric algebra<sub>대칭대수</sub>*라 부르고 $\S(M)$으로 적는다. 
 :::
 
-정의로부터 $\mathfrak{I}$는 homogeneous ideal이므로 $\T(M)/\mathfrak{I}$가 $\mathbb{N}$-graded algebra가 되는 것은 자명하다. 또, 각각의 generator들 $x\otimes y-y\otimes x$는 모두 degree $2$의 원소이므로, $\mathfrak{I}$로 quotient를 취하는 것은 $\T^0(M)$과 $\T^1(M)$에는 아무런 영향을 미치지 않는다. 즉, $\S^0(M)\cong A$이고 $\S^1(M)\cong M$이다. 
+정의로부터 $\mathfrak{I}$는 homogeneous ideal이므로 $\T(M)/\mathfrak{I}$가 $\mathbb{Z}_{\geq 0}$-graded algebra가 되는 것은 자명하다. 또, 각각의 generator들 $x\otimes y-y\otimes x$는 모두 degree $2$의 원소이므로, $\mathfrak{I}$로 quotient를 취하는 것은 $\T^0(M)$과 $\T^1(M)$에는 아무런 영향을 미치지 않는다. 즉, $\S^0(M)\cong A$이고 $\S^1(M)\cong M$이다. 
 
 정의로부터 $\S(M)$이 commutative unital associative algebra인 것은 자명하다. 이는 $\S(M)$이 $\S^1(M)$의 원소들로 생성되는데, 임의의 $x,y\in \S^1(M)\cong M$에 대해서는
 
@@ -203,26 +201,20 @@ $$f(x_{\sigma(1)},x_{\sigma(2)},\ldots, x_{\sigma(n)})=f(x_1,x_2,\ldots, x_n),\q
 
 $$(x_1,x_2,\ldots, x_n) \mapsto g(x_1x_2\cdots x_n)$$
 
-으로 정의되는 함수는 $n$-linear이고, 이 대응을 통해 $\Hom_{\rMod{A}}(\S^n(M), N)$에서, symmetric $n$-linear map $M^n \rightarrow N$들의 $A$-module로의 bijective $A$-module homomorphism이 정의된다. 
+으로 정의되는 함수는 $n$-linear이고, 이 대응을 통해 $\Hom_{\lMod{A}}(\S^n(M), N)$에서, symmetric $n$-linear map $M^n \rightarrow N$들의 $A$-module로의 bijective $A$-module homomorphism이 정의된다. 
 :::
-
-이는 tensor product의 universal property로부터 얻어진다. $M^n$에서 $N$으로의 $n$-linear map들은 $\Hom_{\rMod{A}}(\T^n(M), N)$의 원소들과 canonical하게 대응되며, 이 대응 아래에서 $g:\T^n(M) \rightarrow N$이 quotient $\S^n(M)$을 거쳐 factor되는 것은 $g$가 $\mathfrak{I}\cap\T^n(M)$ 위에서 소멸하는 것과 동치이다. 그런데 $\mathfrak{I}$가 homogeneous ideal이므로 $\mathfrak{I}\cap\T^n(M)$은
-
-$$x_1\otimes\cdots\otimes x_i\otimes(x\otimes y-y\otimes x)\otimes x_{i+1}\otimes\cdots\otimes x_{n-2}$$
-
-꼴의 원소들로 생성되고, 이웃한 두 인자를 맞바꾸는 transposition들이 $S_n$을 생성하므로 이 소멸 조건은 대응되는 $n$-linear map이 symmetric인 것과 동치이다.
 
 이 때, $A$-module $\S^n(M)$을 $M$의 *$n$번째 symmetric power<sub>$n$번째 대칭곱</sub>*이라 부른다. 그럼 임의의 $A$-linear map $u:M \rightarrow N$에 대하여, $\S^n(u): \S^n(M) \rightarrow \S^n(N)$이 유도되며 이들의 direct sum을 취하면 $\S(u)$를 복원할 수 있다.
 
 ## 대칭대수의 성질들
 
-앞서 functor $\T$와 $\rMod{A}$의 연산들이 어떻게 행동하는지를 살펴보았다. 이제 이러한 결과들이 $\S$에 대해서도 성립하는 것을 증명한다.
+앞서 functor $T$와 $\rMod{A}$의 연산들이 어떻게 행동하는지를 살펴보았다. 이제 이러한 결과들이 $S$에 대해서도 성립하는 것을 증명한다.
 
 우선 $M=\bigoplus_{i\in I} M_i$가 $A$-module들 $M_i$들의 direct sum이라 하자. 그럼 우리는 다음의 isomorphism
 
 $$\S(M)\cong \bigotimes_{i\in I} \S(M_i)$$
 
-를 얻는다. 이는 $\S$가 forgetful functor $U:\cAlg{A}\rightarrow \rMod{A}$의 left adjoint이므로 colimit을 보존하고, $\cAlg{A}$에서의 coproduct는 ($\cRing$에서의 coproduct가 tensor product이듯) $\otimes_A$로 주어지기 때문이다. 특히 [명제 3](#prop3)과 같이 free $A$-module의 basis $(e_i)$를 고정해두고 나면 다음의 명제를 얻는다.
+를 얻는다. 이는 $S$가 forgetful functor $U:\cAlg{A}\rightarrow \rMod{A}$의 left adjoint이므로 colimit을 보존하고, $\cAlg{A}$에서의 coproduct는 ($\cRing$에서의 coproduct가 tensor product이듯) $\otimes_A$로 주어지기 때문이다. 특히 [명제 3](#prop3)과 같이 free $A$-module의 basis $(e_i)$를 고정해두고 나면 다음의 명제를 얻는다.
 
 ::: 명제 8
 Free $A$-module $M$과 그 basis $(e_i)_{i\in I}$에 대하여, $\alpha:I \rightarrow \mathbb{N}$을 finitely supported function이라 하자. 
@@ -260,25 +252,23 @@ $$u(x)^2=0\qquad\text{for all $x\in M$}$$
 주어졌다 하자. 그럼 유일한 $A$-algebra homomorphism $g: \bigwedge(M) \rightarrow E$가 존재하여 $u=g \circ\iota$이도록 할 수 있다. 
 :::
 
-[명제 7](#prop7)과 비슷한 성질이 exterior algebra에서도 성립한다. 임의의 $A$-module $M,N$과 정수 $n\geq 1$에 대하여, $M^n$에서 $N$로의 $n$-linear map $f$가 *alternating $n$-linear map*이라는 것은 임의의 $0\leq i\leq n-2$와 임의의 $x_1,\ldots, x_{n-2}$, $x$에 대하여 다음 조건
-
-$$f(x_1,\ldots, x_i, x,x,x_{i+1},\ldots, x_{n-2})=0$$
-
-이 성립하는 것이다. 이 조건과 multilinearity를 함께 쓰면 이웃한 두 인자에 $x+y$를 넣어 전개하는 것으로부터 이웃한 두 인자를 맞바꿀 때 부호가 $-1$이 되는 것을 얻고, 이러한 transposition들이 $S_n$을 생성하므로 다음의 식
+[명제 7](#prop7)과 비슷한 성질이 exterior algebra에서도 성립한다. 이하 $A$의 표수는 $2$가 아니라고 가정한다. 임의의 $A$-module $M,N$과 정수 $n\geq 1$에 대하여, $M^n$에서 $N$로의 $n$-linear map $f$가 *alternating $n$-linear map*이라는 것은 다음 조건
 
 $$f(x_{\sigma(1)},x_{\sigma(2)},\ldots, x_{\sigma(n)})=\epsilon(\sigma)f(x_1,x_2,\ldots, x_n),\qquad \sigma\in S_n$$
 
-이 모든 $(x_i)\in M^n$과 $\sigma\in S_n$에 대해 성립한다. 거꾸로 부호 조건에 $x_i=x_{i+1}$인 transposition을 적용하면 $2f(x_1,\ldots, x,x,\ldots, x_{n-2})=0$을 얻으므로, $2$가 $A$에서 가역이라면 부호 조건으로부터 위의 소멸 조건이 따라온다. 그러나 $A=M=\mathbb{Z}$, $N=\mathbb{Z}/2$, $n=2$와 $f(x,y)=xy\bmod 2$의 경우처럼 일반적으로는 그렇지 않으며, $\bigwedge^n(M)$ 밖으로 나가는 $A$-linear map들과 대응되는 것은 부호 조건이 아니라 소멸 조건이다. 
+이 모든 $(x_i)\in M^n$과 $\sigma\in S_n$에 대해 성립하는 것이다. 이는 임의의 $x_1,\ldots, x_{n-2}$와 $x$에 대하여
+
+$$f(x_1,\ldots, x_i, x,x,x_{i+1},\ldots, x_{n-2})=0$$
+
+이 성립하는 것과 동치이다. 
 
 ::: 명제 12
 두 $A$-module $M,N$에 대하여, 임의의 $A$-linear map $g:\bigwedge^n(M) \rightarrow N$에 대하여 다음의 식
 
 $$(x_1,x_2,\ldots, x_n) \mapsto g(x_1\wedge x_2\wedge\cdots\wedge x_n)$$
 
-으로 정의되는 함수는 $n$-linear이고, 이 대응을 통해 $\Hom_{\rMod{A}}(\bigwedge^n(M), N)$에서, alternating $n$-linear map $M^n \rightarrow N$들의 $A$-module로의 bijective $A$-module homomorphism이 정의된다. 
+으로 정의되는 함수는 $n$-linear이고, 이 대응을 통해 $\Hom_{\lMod{A}}(\bigwedge^n(M), N)$에서, alternating $n$-linear map $M^n \rightarrow N$들의 $A$-module로의 bijective $A$-module homomorphism이 정의된다. 
 :::
-
-증명은 [명제 7](#prop7)의 것과 동일하다. $\mathfrak{J}$ 또한 homogeneous ideal이고 $\mathfrak{J}\cap\T^n(M)$이 $x_1\otimes\cdots\otimes x_i\otimes x\otimes x\otimes x_{i+1}\otimes\cdots\otimes x_{n-2}$ 꼴의 원소들로 생성되므로, $g:\T^n(M) \rightarrow N$이 $\bigwedge^n(M)$을 거쳐 factor되는 것은 대응되는 $n$-linear map이 alternating인 것과 동치이기 때문이다.
 
 ## 외대수의 성질들
 
@@ -292,7 +282,7 @@ $$e_J=e_{j_1}\wedge e_{j_2}\wedge\cdots\wedge e_{j_k},\qquad j_1<\cdots < j_k, \
 라 하면, 이러한 $e_J$들을 모아둔 것이 $\bigwedge (M)$의 basis가 된다. 
 :::
 
-예를 들어, $e_1\wedge e_2\wedge e_3$과 $e_1\wedge e_3\wedge e_2$는 나중 두 원소의 위치를 서로 바꾸어 주기만 하면 부호의 차이만 제외하고는 같은 원소가 되므로 위와 같이 $I$에 아무렇게나 order를 준 후 이에 맞추어 배열하는 식으로 무의미한 중복을 피할 수 있다. 다음 명제 또한 [명제 4](#prop4)와 동일한 논증으로 증명된다. 
+예를 들어, $e_1\wedge e_2\wedge e_3$과 $e_1\wedge e_3\wedge e_2$는 나중 두 원소의 위치를 서로 바꾸어 주기만 하면 부호의 차이만 제외하고는 같은 원소가 되므로 위와 같이 $I$에 아무렇게나 order를 준 후 이에 맞추어 배열하는 식으로 무의미한 중복을 피할 수 있다. 다음 명제는 더더욱 설명할 것이 없다. 
 
 ::: 명제 14
 $\bigwedge_{B}(B\otimes_AM)\rightarrow B\otimes_A\bigwedge_A(M)$은 isomorphism이다. 

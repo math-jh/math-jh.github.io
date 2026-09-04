@@ -12,9 +12,7 @@ sidebar:
 date: 2026-06-28
 
 weight: 18
-revising: true
 
-drift_needed: true
 ---
 
 Jordan canonical form을 통해 우리는 임의의 linear operator를 generalized eigenspace 위에서 Jordan block들로 분해하였다. 이러한 구조는 다항식과 linear operator 사이의 관계를 살펴보는 데에도 유용하게 쓰인다. 이번 글에서는 행렬에 다항식을 대입하는 연산을 정의하고, 이를 통해 케일리-해밀턴 정리와 minimal polynomial을 다룬다. 
@@ -182,7 +180,11 @@ $$B=\begin{pmatrix}0&1\\1&0\end{pmatrix}$$
 
 지금까지의 논의에서, 핵심적인 도구이자 motivation 역할을 한 것은 Jordan form이었다. 한편 각각의 Jordan block을 생각하면, 이 block은 두 개의 조각, 즉 eigenvalue를 담고 있는 diagonal part와, 그 위에 super-diagonal 성분으로 나타나는 nilpotent 부분으로 나뉘었다. 우리는 지금까지의 논의를 적용하여, 이 분해를 공간 전체로 확장하는 작업으로 이 글을 마무리한다. 
 
-우선 분해의 유일성에 필요한 세 가지 사실을 관찰해 두자. Diagonalizable이면서 동시에 nilpotent인 작용소는 $0$뿐이다. 그러한 작용소는 nilpotent이라 모든 eigenvalue가 $0$이고, diagonalizable이라 적당한 basis에서 모든 대각성분이 $0$인 대각행렬과 같기 때문이다. 다음으로 commute하는 두 diagonalizable 작용소의 차는 다시 diagonalizable이다. [§고유공간분해, ⁋명제 10](/ko/math/linear_algebra/eigenspace_decomposition#prop10)에 의해 commute하는 두 diagonalizable operator는 simultaneously diagonalizable이므로, 공통의 고유기저에서 두 operator가 모두 대각이고 그 차 또한 같은 basis에서 대각이기 때문이다. 마지막으로 commute하는 두 nilpotent operator $N,M$의 차는 다시 nilpotent이다. $N^a=M^b=0$이면 $N,M$이 commute하므로 이항정리로부터 $(N-M)^{a+b}=0$이기 때문이다.
+우선 분해의 유일성에 필요한 세 가지 사실을 관찰해 두자. 
+
+1. Diagonalizable이면서 동시에 nilpotent인 작용소는 $0$뿐이다. 그러한 작용소는 nilpotent이라 모든 eigenvalue가 $0$이고, diagonalizable이라 적당한 basis에서 모든 대각성분이 $0$인 대각행렬과 같기 때문이다. 
+2. Commute하는 두 diagonalizable 작용소의 차는 다시 diagonalizable이다. [§고유공간분해, ⁋명제 10](/ko/math/linear_algebra/eigenspace_decomposition#prop10)에 의해 commute하는 두 diagonalizable operator는 simultaneously diagonalizable이므로, 공통의 고유기저에서 두 operator가 모두 대각이고 그 차 또한 같은 basis에서 대각이기 때문이다. 
+3. Commute하는 두 nilpotent operator $N,M$의 차는 다시 nilpotent이다. $N^a=M^b=0$이면 $N,M$이 commute하므로 이항정리로부터 $(N-M)^{a+b}=0$이기 때문이다.
 
 ::: 정리 11 (조르당-슈발레 분해)
 $\mathbb{K}$가 algebraically closed라 하자. 유한차원 벡터공간 $V$ 위에 정의된 임의의 linear operator $A:V\rightarrow V$에 대하여, 다음을 만족하는 diagonalizable 작용소 $A_s$와 nilpotent 작용소 $A_n$이 유일하게 존재한다:
@@ -231,11 +233,11 @@ $A_s$와 $A_n$은 $A$와 commute하는 모든 operator $B$와 commute한다. 특
 
 $$A=\begin{pmatrix}2&1&0\\0&2&0\\0&0&3\end{pmatrix}$$
 
-를 생각하자. Eigenvalue $2$의 generalized eigenspace는 $e_1,e_2$가 생성하는 $2$차원 공간이고 그 위에서 $A-2I$의 nilpotency index는 $2$이며, eigenvalue $3$의 generalized eigenspace는 $e_3$이 생성한다. $p(\x)=\x^2-4\x+6$으로 두면 $p(2)=2$, $p'(2)=0$, $p(3)=3$이라 $p$는 [정리 11](#thm11)의 합동식 가운데 eigenvalue에 대한 것들, 즉 $p\equiv 2\pmod{(\x-2)^2}$와 $p\equiv 3\pmod{\x-3}$을 만족하고,
+를 생각하자. Eigenvalue $2$의 generalized eigenspace는 $e_1,e_2$가 생성하는 $2$차원 공간이고 그 위에서 $A-2I$의 nilpotency index는 $2$이며, eigenvalue $3$의 generalized eigenspace는 $e_3$이 생성한다. $p(\x)=\x^2-4\x+6$으로 두면 $p(2)=2$, $p'(2)=0$, $p(3)=3$이라 $p$는 [정리 11](#thm11)의 합동식 $p\equiv 2\pmod{(\x-2)^2}$, $p\equiv 3\pmod{\x-3}$을 만족하고,
 
 $$A_s=p(A)=A^2-4A+6I=\begin{pmatrix}2&0&0\\0&2&0\\0&0&3\end{pmatrix},\qquad A_n=A-A_s=\begin{pmatrix}0&1&0\\0&0&0\\0&0&0\end{pmatrix}$$
 
-이다. $A_s$는 diagonalizable, $A_n$은 nilpotent이며 두 작용소는 commute하고 $A=A_s+A_n$이다. 여기서 $p(0)=6\neq 0$이라 이 $p$는 [정리 11](#thm11)의 나머지 합동식 $p\equiv 0\pmod{\x}$까지 만족하지는 않는데, 각 generalized eigenspace 위에서 $p(A)$가 무엇인지는 eigenvalue에 대한 합동식들만으로 이미 결정되므로 얻어지는 $A_s$는 같다. 상수항이 없는 다항식을 원한다면 세 합동식을 모두 만족하는 $p(\x)=(\x^3-5\x^2+8\x)/2$를 쓰면 되고, 이 경우에도 $p(A)=A_s$이다.
+이다. $A_s$는 diagonalizable, $A_n$은 nilpotent이며 두 작용소는 commute하고 $A=A_s+A_n$이다.
 :::
 
 ---

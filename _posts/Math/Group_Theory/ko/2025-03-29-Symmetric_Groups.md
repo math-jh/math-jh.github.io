@@ -10,8 +10,6 @@ sidebar:
 
 date: 2025-03-29
 weight: 1
-revising: true
-drift_needed: true
 
 ---
 
@@ -77,7 +75,7 @@ $$[n]/{\sim}=\{C_1, \ldots, C_r\}$$
 
 $$\sigma_k(x)=\begin{cases}\sigma(x)&\text{if $x\in C_k$}\\x&\text{otherwise}\end{cases}$$
 
-으로 정의하자. 만일 $C_k$가 한 원소로만 이루어져 있다면 $\sigma_k$는 identity이므로, 이러한 $C_k$들은 제외하고 원소가 둘 이상인 $C_k$들만 생각하기로 한다. 그럼 각각의 $C_k$에 대하여 $x\in C_k$를 하나 고르면, 앞에서 $1$에 대해 살펴본 것과 같은 논증에 의하여 $\sigma^l(x)=x$를 만족하는 가장 작은 자연수 $l$이 존재하고 $C_k=\{x, \sigma(x),\ldots, \sigma^{l-1}(x)\}$이므로, $\sigma_k$는 길이 $l$의 cycle $(x\quad \sigma(x)\quad\cdots\quad \sigma^{l-1}(x))$이다. 또 서로 다른 $C_k$들은 disjoint하므로 이들은 disjoint cycle이며, 각각의 $x\in[n]$이 자신이 속한 $C_k$에 대응하는 $\sigma_k$에 의해서만 움직이므로 그 곱은 $\sigma$가 된다. 
+으로 정의하면 이들은 disjoint cycle이며 그 곱이 $\sigma$가 된다. 
 :::
 
 이러한 방식으로 임의의 permutation을 disjoint cycle들의 곱으로 나타낸다면 그 장점 중 하나는 permutation $\sigma$의 order가 쉽게 보인다는 것이다. 즉, $\sigma=\sigma_1\cdots\sigma_r$이라 한다면 $\sigma$의 order는 $\sigma_1,\ldots, \sigma_r$들의 order의 최소공배수와 같으며, cycle들 $\sigma_1,\ldots, \sigma_r$의 order는, 당연히 이들 각각의 길이와 같다. 
@@ -88,7 +86,7 @@ $$\sigma_k(x)=\begin{cases}\sigma(x)&\text{if $x\in C_k$}\\x&\text{otherwise}\en
 $S_n$의 임의의 permutation은 transposition들의 곱으로 나타낼 수 있다. 
 :::
 ::: 증명
-[명제 4](#prop4)에 의하여 임의의 cycle이 transposition들의 곱으로 나타난다는 것만 증명하면 충분하다. 이때 위 명제에서 제외된 identity permutation은 transposition을 하나도 곱하지 않은 empty product로 나타나는 것으로 약속한다. 
+[명제 4](#prop4)에 의하여 임의의 cycle이 transposition들의 곱으로 나타난다는 것만 증명하면 충분하다. 
 
 $$(k_1\;k_2\;\cdots\;k_r)=(k_{r-1}\;k_r)(k_{r-2}\;k_r)\cdots(k_2\;k_r)(k_1\;k_r).$$
 :::
@@ -187,15 +185,11 @@ $$(x_{\sigma(i)}-x_{\sigma(j)})=\begin{cases}(x_{\sigma(i)}-x_{\sigma(j)})&\text
 
 $$\text{$\sigma$ odd}\iff\text{$\sgn(\sigma)=-1$}\iff\text{$\sigma$ is a product of odd number of transpositions}$$ 
 
-이 되므로 원하는 결과를 얻을 것이다. 두 permutation $\sigma$, $\tau$가 주어졌다 하자. $\sgn(\sigma\tau)$의 값을 계산해야 한다. 이를 위해 위의 precomposition을 $\Delta$뿐 아니라 임의의 polynomial $P$에 대하여 $\sigma(P)(x_1,\ldots, x_n)=P(x_{\sigma(1)},\ldots, x_{\sigma(n)})$으로 정의하자. 그럼 $Q=\tau(P)$에 대하여 $Q(y_1,\ldots, y_n)=P(y_{\tau(1)},\ldots, y_{\tau(n)})$이므로, 여기에 $y_i=x_{\sigma(i)}$를 대입하면 다음의 식
+이 되므로 원하는 결과를 얻을 것이다. 두 permutation $\sigma$, $\tau$가 주어졌다 하자. $\sgn(\sigma\tau)$의 값을 계산해야 한다. $\tau$가 $k$개의 inversion을 갖는다 가정하자. 즉, $\sgn(\tau)=(-1)^k$이고, 이 $k$개의 $-1$들은 모두 식 (1)에서 나오는 factor들이다. 이제 $\sgn(\sigma\tau)$의 값을 계산하기 위해서는 우선
 
-$$\sigma(\tau(P))(x_1,\ldots, x_n)=Q(x_{\sigma(1)},\ldots, x_{\sigma(n)})=P(x_{\sigma(\tau(1))},\ldots, x_{\sigma(\tau(n))})=(\sigma\tau)(P)(x_1,\ldots, x_n)$$
+$$\prod_{1\leq i< j\leq n}(x_{\tau(i)}-x_{\tau(j)})=(-1)^k\Delta$$
 
-이 성립하여, 이 precomposition은 합성과 호환되는 left action이 된다. 또 변수의 대입이므로 이 action은 상수배와 교환한다. 이제 $\tau$가 $k$개의 inversion을, $\sigma$가 $l$개의 inversion을 갖는다 하면 $\tau(\Delta)=(-1)^k\Delta$와 $\sigma(\Delta)=(-1)^l\Delta$이므로 다음의 식
-
-$$(\sigma\tau)(\Delta)=\sigma(\tau(\Delta))=\sigma((-1)^k\Delta)=(-1)^k\sigma(\Delta)=(-1)^{k+l}\Delta$$
-
-을 얻고, 따라서 $\sgn(\sigma\tau)=(-1)^{k+l}=\sgn(\sigma)\sgn(\tau)$이므로 $\sgn$은 multiplicative하다.
+의 양 변에 $(-1)^k$를 곱하여, 좌변의 각 term들을 원래대로 되돌려놓고 (즉, 이 상황에서 좌변은 곱셈 순서만 바뀐 $\Delta$이다), 이 원래대로 되돌아간 polynomial에 $\sigma$를 적용시켜주면 된다. 따라서, 만일 $\sigma$의 inversion의 갯수가 $l$개였다면, $\Delta$ 앞에 붙는 factor는 $(-1)^{k+l}$이었을 것이고, 이것이 곧 $\sgn$의 multiplicativity를 보장한다.
 :::
 
 이 증명을 곰곰히 살펴보면, 우리가 만든 $\sgn$은 사실 단순한 map이 아니라, $S_n$에서 $\{\pm 1\}$로의 group homomorphism이라 할 수 있다. 그렇다면 $\ker(\sgn)$은 $S_n$의 normal subgroup이다.
@@ -207,7 +201,7 @@ $$(\sigma\tau)(\Delta)=\sigma(\tau(\Delta))=\sigma((-1)^k\Delta)=(-1)^k\sigma(\D
 한편 다음을 정의한다. 
 
 ::: 정의 12
-Group $G$가 *simple*이라는 것은 $G\neq\{e\}$이면서, $G$가 $\{e\}$와 자기 자신을 제외한 normal subgroup을 갖지 않는 것이다.
+Group $G$가 *simple*이라는 것은 $G$가 $\{e\}$와 자기 자신을 제외한 normal subgroup을 갖지 않는 것이다.
 :::
 
 특기할만한 사실 중 하나는 $A_5$가 simple이라는 것이다. 
@@ -224,11 +218,7 @@ $A_5$는 simple이다. 이는 Sylow theorem을 사용하여 조금 더 고상하
 
 이들 네 종류의 permutation이 서로 다르다는 것은 각 원소들의 order를 보면 되고, 각 종류에 속하는 원소들이 서로 다른 것은 함수값을 직접 보면 된다. 
 
-한편, 일반적으로 group $G$의 subgroup $N$이 normal subgroup이기 위해서는, 정확하게 정의에 의해 $N$이 inner automorphism에 의한 conjugacy class들의 합집합으로 나타나야 한다. 그런데 [보조정리 7](#lem7)의 증명은 transposition뿐 아니라 임의의 cycle에 대하여도 그대로 통하므로, $\sigma\in S_n$과 cycle $(a_1\quad a_2\quad\cdots\quad a_k)$에 대하여 다음의 식
-
-$$\sigma(a_1\quad a_2\quad\cdots\quad a_k)\sigma^{-1}=(\sigma(a_1)\quad \sigma(a_2)\quad\cdots\quad \sigma(a_k))$$
-
-이 성립하고, 이로부터 위의 네 종류는 각각 $S_5$의 conjugacy class 하나씩을 이룬다는 것을 안다. 그러나 지금 필요한 것은 $A_5$에서의 conjugacy이므로, 이 conjugacy class들이 $A_5$ 안에서 더 작은 class들로 나뉘는지를 보아야 한다. 만일 어떠한 odd permutation $\pi$가 $x$와 commute한다면, 임의의 odd permutation $\sigma$에 대하여 $\sigma\pi$는 even이고 $(\sigma\pi)x(\sigma\pi)^{-1}=\sigma x\sigma^{-1}$이므로 $x$의 $S_5$-conjugate는 모두 $A_5$의 원소에 의한 conjugate로 얻어진다. 3-cycle은 자신이 고정하는 두 수를 바꾸는 transposition과 commute하고 두 disjoint 2-cycle의 곱은 자신을 이루는 transposition과 commute하므로, 20개의 3-cycle과 15개의 두 disjoint 2-cycle의 곱은 각각 $A_5$의 conjugacy class 하나씩을 이룬다. 반면 5-cycle $c$와 commute하는 permutation은 위의 식에 의하여 $c$의 cycle 표기를 자기 자신으로 옮기는 것들뿐이고, 이는 곧 $c$의 거듭제곱 다섯 개이므로 모두 even이다. 즉 $A_5$가 conjugation으로 자기 자신 위에 act할 때 $c$의 stabilizer는 원소 5개를 가지며, 따라서 [\[대수적 구조\] §군의 작용, ⁋정리 14](/ko/math/algebraic_structures/group_actions#thm14)에 의하여 $c$를 포함하는 $A_5$의 conjugacy class는 $60/5=12$개의 원소를 갖고, 24개의 $5$-cycle은 각각 원소 12개를 갖는 두 개의 conjugacy class들로 나뉜다. 이제 $A_5$의 normal subgroup의 크기가 $A_5$의 크기 $60$을 나눠야 하는데, 항등원을 포함하며 $A_5$ 전체는 아닌 non-trivial한 conjugacy class들의 합집합으로는 $60$의 약수를 만들 수 없으므로 $A_5$는 non-trivial한 normal subgroup을 갖지 않는다. 
+한편, 일반적으로 group $G$의 subgroup $N$이 normal subgroup이기 위해서는, 정확하게 정의에 의해 $N$이 inner automorphism에 의한 conjugacy class들의 합집합으로 나타나야 한다. 그런데 [보조정리 7](#lem7)을 사용하면, 위에서 3-cycle, 두 disjoint 2-cycle의 곱은 각각 conjugacy class들이 되며, $5$-cycle은 각각 원소 12개를 갖는 두 개의 conjugacy class들로 나뉜다는 것을 알 수 있다. 이제 $A_5$의 normal subgroup의 크기가 $A_5$의 크기 $60$을 나눠야 하는데, 항등원을 포함하며 $A_5$ 전체는 아닌 non-trivial한 conjugacy class들의 합집합으로는 $60$의 약수를 만들 수 없으므로 $A_5$는 non-trivial한 normal subgroup을 갖지 않는다. 
 :::
 
 ---

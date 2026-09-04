@@ -10,9 +10,6 @@ sidebar:
 
 date: 2025-05-15
 weight: 4
-revising: true
-
-drift_needed: true
 
 ---
 
@@ -81,7 +78,7 @@ $$g=\bigl((\x-\alpha)^{p^c}\bigr)^u=(\x^{p^c}-\alpha^{p^c})^u$$
 Field extension $\mathbb{L}/\mathbb{K}$가 *$p$-radical*이라는 것은 $\mathbb{L}$의 임의의 원소가 $p$-radical인 것이다. 만일 $\mathbb{L}$의 <em-ko>모든</em-ko> 원소 $x$에 대하여 $x^{p^e}\in \mathbb{K}$가 성립하도록 하는 정수 $e$가 존재한다면, 이러한 성질을 만족하는 $e$들 중 가장 작은 것을 $\mathbb{L}$의 *height<sub>높이</sub>*라 부른다. 
 :::
 
-즉 $\mathbb{L}/\mathbb{K}$의 height는 (만일 정의된다면) $\mathbb{L}$의 원소들의 height들의 maximum이라 생각할 수 있다. 또, [명제 2](#prop2)에 의하여 임의의 $p$-radical extension은 자연스럽게 algebraic extension이다. 한편 $p$-radical extension을 *purely inseparable extension*이라 부르기도 한다. 
+즉 $\mathbb{L}/\mathbb{K}$의 height는 (만일 정의된다면) $\mathbb{L}$의 원소들의 height들의 maximum이라 생각할 수 있다. 또, [명제 2](#prop2)에 의하여 임의의 $p$-radical extension은 자연스럽게 algebraic extension이다. 
 
 만일 Frobenius endomorphism $\Frob_p:A\rightarrow A$가 bijection이라면 우리는 $A$를 *perfect ring*이라 불렀다. ([§체, ⁋정의 13](/ko/math/field_theory/fields#def13)) 따라서  만일 $\mathbb{K}$가 perfect field였다면, $\mathbb{K}^p=\mathbb{K}$일 것이므로, perfect field의 임의의 $p$-radical extension은 자기 자신이어야 한다. 뿐만 아니라, 정의로부터 $p$-radical extension들의 합성이 $p$-radical임이 자명하다. 다음 명제는 (relative) $p$-radical closure의 존재성에 대한 것이다. 
 
@@ -98,10 +95,10 @@ $\mathbb{L}_n\subseteq \mathbb{L}_{n+1}$인 것은 정의로부터 자명하다.
 
 $$(x\pm y)^{p^N}=x^{p^N}\pm y^{p^N}\in \mathbb{K},\qquad (xy)^{p^N}=x^{p^N}y^{p^N}\in\mathbb{K}$$
 
-이며, $x\neq 0$이라면 $(x^{-1})^{p^N}=(x^{p^N})^{-1}\in \mathbb{K}$이다. 즉 $\mathbb{L}_\infty$는 $\mathbb{K}=\mathbb{L}_0$를 포함하는 $\mathbb{L}$의 subfield이고, 그 임의의 원소가 $p$-radical이므로 $\mathbb{L}_\infty/\mathbb{K}$는 $p$-radical extension이다. 마지막으로 $\mathbb{M}/\mathbb{K}$이 $\mathbb{L}$의 임의의 $p$-radical subextension이라면, $\mathbb{M}$의 임의의 원소 $x$는 finite height $n$을 가지므로 $x\in \mathbb{L}_n\subseteq\mathbb{L}_\infty$이다. 즉 $\mathbb{L}_\infty$가 가장 크다.
+이며, $x\neq 0$이라면 $(x^{-1})^{p^N}=(x^{p^N})^{-1}\in \mathbb{K}$이다. 즉 $\mathbb{L}_\infty$는 $\mathbb{K}=\mathbb{L}_0$를 포함하는 $\mathbb{L}$의 subfield이고, 그 임의의 원소가 $p$-radical이므로 $\mathbb{L}_\infty/\mathbb{K}$는 $p$-radical extension이다. 마지막으로 $\mathbb{M}/\mathbb{K}$이 $\mathbb{L}$의 임의의 $p$-radical subextension이라면, $\mathbb{M}$의 임의의 원소 $x$는 유한한 height $n$을 가지므로 $x\in \mathbb{L}_n\subseteq\mathbb{L}_\infty$이다. 즉 $\mathbb{L}_\infty$가 가장 크다.
 :::
 
-[§대수적 폐포](/ko/math/field_theory/algebraically_closed_extensions)에서 우리는 임의의 field $\mathbb{K}$는 algebraic closure $\overline{\mathbb{K}}$를 갖는다는 것을 보았다. 따라서 [명제 5](#prop5)에서 $\mathbb{L}=\overline{\mathbb{K}}$로 둘 수 있다. 그럼 $\overline{\mathbb{K}}$는 perfect field이며, 뿐만 아니라 각각의 $n$에 대하여 $\overline{\mathbb{K}}_n$은 정확히 $\mathbb{K}^{1/p^n}$과 같음을 안다. 이 상황에서의 (relative) $p$-radical closure를 $\mathbb{K}^{1/p^\infty}$라 적자. 이는 [§체, ⁋정의 14](/ko/math/field_theory/fields#def14)에서 정의하고 [§체, ⁋정리 15](/ko/math/field_theory/fields#thm15)에서 그 존재성을 보인 $\mathbb{K}$의 perfect closure와 같은 것인데, 이 사실은 아래 [따름정리 7](#cor7)의 증명에서 확인한다. 만일 $\mathbb{K}$가 imperfect라면, 즉 $\mathbb{K}\neq \mathbb{K}^p$라면 위의 ascending sequence는 strictly increasing이며, 따라서 $\mathbb{K}^{1/p^\infty}/\mathbb{K}$는 infinite degree의 extension이 된다. 
+[§대수적 폐포](/ko/math/field_theory/algebraically_closed_extensions)에서 우리는 임의의 field $\mathbb{K}$는 algebraic closure $\overline{\mathbb{K}}$를 갖는다는 것을 보았다. 따라서 [명제 5](#prop5)에서 $\mathbb{L}=\overline{\mathbb{K}}$로 둘 수 있다. 그럼 $\overline{\mathbb{K}}$는 perfect field이며, 뿐만 아니라 각각의 $n$에 대하여 $\overline{\mathbb{K}}_n$은 정확히 $\mathbb{K}^{1/p^n}$과 같음을 안다. 이 상황에서의 (relative) $p$-radical closure를 $\mathbb{K}^{1/p^\infty}$라 적자. 이는 [§체, ⁋정의 14](/ko/math/field_theory/fields#def14)에서 정의하고 [§체, ⁋정리 15](/ko/math/field_theory/fields#thm15)에서 그 존재성을 보인 $\mathbb{K}$의 perfect closure와 같은 것이다. 만일 $\mathbb{K}$가 imperfect라면, 즉 $\mathbb{K}\neq \mathbb{K}^p$라면 위의 ascending sequence는 strictly increasing이며, 따라서 $\mathbb{K}^{1/p^\infty}/\mathbb{K}$는 infinite degree의 extension이 된다. 
 
 한편 다음이 성립한다. 
 
@@ -130,15 +127,13 @@ $$w(x)^{p^m}=w(x^{p^m})=u(x^{p^m})$$
 이므로 $\mathbb{F}$에서 $p^m$제곱근의 유일성에 의하여 $w(x)=v(x)$이다.
 :::
 
-$p\neq 1$인 경우, 위의 증명에서 $\mathbb{F}$가 field라는 것은 쓰이지 않았고 $\mathbb{F}$의 characteristic이 $p$라는 것과 그 Frobenius endomorphism이 bijective라는 것만이 쓰였다. 따라서 같은 논증으로부터, $\mathbb{K}$에서 characteristic $p$의 perfect ring $B$로의 homomorphism $u$가 주어질 때마다 이를 확장하는 유일한 homomorphism $v:\mathbb{L} \rightarrow B$가 존재한다는 것 또한 얻는다.
-
 따라서 다음이 성립한다. 
 
 ::: 따름정리 7
 Field extension $\mathbb{L}/\mathbb{K}$가 $\mathbb{K}$의 perfect closure일 필요충분조건은 $\mathbb{L}$이 $\mathbb{K}$의 $p$-radical extension이고 $\mathbb{L}$이 perfect field인 것이다. 
 :::
 ::: 증명
-우선 $\mathbb{K}^{1/p^\infty}$가 $\mathbb{K}$의 perfect closure임을 보이자. 구성에 의하여 $\mathbb{K}^{1/p^\infty}$의 임의의 원소는 finite height를 가지므로 $\mathbb{K}^{1/p^\infty}/\mathbb{K}$는 $p$-radical extension이다. 또 $x\in \mathbb{K}^{1/p^\infty}$라 하면 $\overline{\mathbb{K}}$가 algebraically closed이므로 $y^p=x$이도록 하는 $y\in \overline{\mathbb{K}}$가 존재하는데, $x^{p^n}\in \mathbb{K}$라 하면 $y^{p^{n+1}}=x^{p^n}\in \mathbb{K}$이므로 $y\in \mathbb{K}^{1/p^\infty}$이다. 즉 $\mathbb{K}^{1/p^\infty}$에서 Frobenius는 surjective이고, field에서 Frobenius는 항상 injective이므로 $\mathbb{K}^{1/p^\infty}$는 perfect이다. 그럼 [명제 6](#prop6) 뒤의 관찰에 의하여 characteristic $p$의 perfect ring $B$와 homomorphism $\mathbb{K} \rightarrow B$가 주어질 때마다 이를 확장하는 유일한 homomorphism $\mathbb{K}^{1/p^\infty} \rightarrow B$가 존재하므로, $\mathbb{K}^{1/p^\infty}$는 inclusion $\mathbb{K}\hookrightarrow \mathbb{K}^{1/p^\infty}$와 함께 [§체, ⁋정의 14](/ko/math/field_theory/fields#def14)의 universal property를 만족하며, 따라서 $\mathbb{K}$의 perfect closure이다. 한편 perfect closure는 이 universal property로 정의되어 $\mathbb{K}$-isomorphism에 대해 유일하게 결정되므로, $\mathbb{K}$의 임의의 perfect closure $\mathbb{L}$은 $\mathbb{K}^{1/p^\infty}$와 $\mathbb{K}$-isomorphic이고, 따라서 $\mathbb{L}/\mathbb{K}$는 $p$-radical extension이며 $\mathbb{L}$은 perfect field이다.
+Perfect closure는 universal property로 정의되어 $\mathbb{K}$-isomorphism에 대해 유일하게 결정되므로, 필요조건은 $\mathbb{K}^{1/p^\infty}$에 대하여 확인하면 충분하다. 구성에 의하여 $\mathbb{K}^{1/p^\infty}$의 임의의 원소는 유한한 height를 가지므로 $\mathbb{K}^{1/p^\infty}/\mathbb{K}$는 $p$-radical extension이다. 또 $x\in \mathbb{K}^{1/p^\infty}$라 하면 $\overline{\mathbb{K}}$가 algebraically closed이므로 $y^p=x$이도록 하는 $y\in \overline{\mathbb{K}}$가 존재하는데, $x^{p^n}\in \mathbb{K}$라 하면 $y^{p^{n+1}}=x^{p^n}\in \mathbb{K}$이므로 $y\in \mathbb{K}^{1/p^\infty}$이다. 즉 $\mathbb{K}^{1/p^\infty}$에서 Frobenius는 surjective이고, field에서 Frobenius는 항상 injective이므로 $\mathbb{K}^{1/p^\infty}$는 perfect이다.
 
 거꾸로 $\mathbb{L}/\mathbb{K}$가 $p$-radical이고 $\mathbb{L}$이 perfect라 하자. Inclusion $u:\mathbb{K}\hookrightarrow \mathbb{K}^{1/p^\infty}$에 [명제 6](#prop6)을 적용하면 $\mathbb{K}$-homomorphism $v:\mathbb{L} \rightarrow \mathbb{K}^{1/p^\infty}$를 얻는다. 우선 $v(\mathbb{L})$은 perfect field인데, $v(x)\in v(\mathbb{L})$가 주어질 때마다 $\mathbb{L}$이 perfect라는 것으로부터 $x=z^p$이도록 하는 $z\in \mathbb{L}$가 존재하고 $v(x)=v(z)^p$이기 때문이다. 한편 $\mathbb{K}^{1/p^\infty}$의 임의의 원소 $t$는 적당한 $n$에 대하여 $t^{p^n}\in \mathbb{K}\subseteq v(\mathbb{L})$를 만족하고, $v(\mathbb{L})$이 perfect이므로 $\xi^{p^n}=t^{p^n}$이도록 하는 $\xi\in v(\mathbb{L})$가 존재한다. 그런데 field에서 Frobenius가 injective이므로 $t=\xi\in v(\mathbb{L})$이다. 즉 $v$는 surjective이고, field들 사이의 nonzero homomorphism은 injective이므로 ([§체, ⁋명제 2](/ko/math/field_theory/fields#prop2)) $v$는 $\mathbb{K}$-isomorphism이다. 따라서 $\mathbb{L}$은 $\mathbb{K}$의 perfect closure이다.
 :::

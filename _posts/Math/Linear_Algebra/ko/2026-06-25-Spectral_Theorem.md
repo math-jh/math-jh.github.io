@@ -12,9 +12,7 @@ sidebar:
 date: 2026-06-25
 
 weight: 24
-revising: true
 
-drift_needed: true
 
 ---
 
@@ -86,7 +84,7 @@ $$\langle Lw,u\rangle=\langle w,Lu\rangle$$
 이제 spectrum 정리를 증명할 준비가 되었다. 
 
 ::: 정리 5 (스펙트럼 정리)
-$\mathbb{R}$-내적공간 $V$ 위의 self-adjoint operator $L:V\rightarrow V$에 대하여, $L$의 고유벡터들로 이루어진 $V$의 orthonormal basis가 존재한다. 특히 이 고윳값들은 모두 실수이다. 역으로 $V$ 위의 linear operator $L$의 고유벡터들로 이루어진 $V$의 orthonormal basis가 존재하면 $L$은 self-adjoint이다. 
+$\mathbb{R}$-내적공간 $V$ 위의 self-adjoint operator $L:V\rightarrow V$에 대하여, $L$의 고유벡터들로 이루어진 $V$의 orthonormal basis가 존재한다. 특히 이 고윳값들은 모두 실수이다. 
 :::
 ::: 증명
 $\dim V$에 대한 귀납법으로 증명한다. $\dim V=0$인 경우는 보일 것이 없다. $\dim V\geq 1$이라 하면, [따름정리 3](#cor3)에 의하여 $L$은 고유벡터를 가지며, 이를 크기로 나누어 $\lVert v_1\rVert=1$인 고유벡터 $v_1$을 얻을 수 있다. 그 고윳값 $\lambda_1$은 [보조정리 2](#lem2)에 의해 실수이다. 
@@ -94,8 +92,6 @@ $\dim V$에 대한 귀납법으로 증명한다. $\dim V=0$인 경우는 보일 
 $U=\span v_1$이라 하면 $L(U)\subseteq U$이므로 [보조정리 4](#lem4)에 의하여 $L(U^\perp)\subseteq U^\perp$이다. 한편 $U$로 제한한 내적이 non-degenerate이므로 [§쌍선형형식, ⁋명제 8](/ko/math/linear_algebra/bilinear_form#prop8)에 의하여 $V=U\oplus U^\perp$이고 $\dim U^\perp=\dim V-1$이다. 또 $U^\perp$로 제한한 $L\vert_{U^\perp}:U^\perp\rightarrow U^\perp$은 임의의 $w,w'\in U^\perp$에 대하여 $\langle Lw,w'\rangle=\langle w,Lw'\rangle$을 그대로 만족하므로 $U^\perp$ 위에서 다시 self-adjoint이다. 따라서 귀납적 가정에 의하여 $L\vert_{U^\perp}$의 고유벡터들로 이루어진 $U^\perp$의 orthonormal basis $\{v_2,\ldots, v_n\}$이 존재한다. 
 
 이 벡터들은 모두 $L$의 고유벡터이기도 하며, $v_1\in U$이고 $v_2,\ldots, v_n\in U^\perp$이므로 $v_1$은 나머지와 직교한다. 따라서 $\{v_1,v_2,\ldots, v_n\}$은 $L$의 고유벡터들로 이루어진 $V$의 orthonormal basis이다. 
-
-역으로 $L$의 고유벡터들로 이루어진 orthonormal basis $\{v_1,\ldots, v_n\}$이 존재한다고 하고 $Lv_i=\lambda_iv_i$라 하면, $\langle v_i,v_j\rangle=\delta_{ij}$이므로 임의의 $v=\sum_i a_iv_i$와 $w=\sum_j b_jv_j$에 대하여 $\langle Lv,w\rangle=\sum_i\lambda_ia_ib_i=\langle v,Lw\rangle$이고, 따라서 $L$은 self-adjoint이다. 
 :::
 
 행렬의 언어로 옮기면 spectrum 정리는 실수 대칭행렬의 직교대각화를 의미한다. 
@@ -133,7 +129,7 @@ $$\lambda\langle v,w\rangle=\langle Lv,w\rangle=\langle v,Lw\rangle=\mu\langle v
 Self-adjoint operator 가운데 고윳값이 모두 양수인 것들은 따로 이름을 붙일 만하다. 
 
 ::: 정의 8
-$\mathbb{R}$-내적공간 $V$ 위의 self-adjoint operator $L:V\rightarrow V$이 *positive semidefinite<sub>반양정부호</sub>*라는 것은 모든 $v\in V$에 대하여 $\langle Lv,v\rangle\geq 0$인 것이고, *positive definite<sub>양정치</sub>*라는 것은 모든 $0\neq v\in V$에 대하여 $\langle Lv,v\rangle> 0$인 것이다.
+$\mathbb{R}$-내적공간 $V$ 위의 self-adjoint operator $L:V\rightarrow V$이 *positive semidefinite<sub>positive semidefinite</sub>*라는 것은 모든 $v\in V$에 대하여 $\langle Lv,v\rangle\geq 0$인 것이고, *positive definite<sub>positive definite</sub>*라는 것은 모든 $0\neq v\in V$에 대하여 $\langle Lv,v\rangle> 0$인 것이다.
 :::
 
 ::: 명제 9
@@ -147,9 +143,9 @@ $$\langle Lv,v\rangle=\left\langle\sum_i a_i\lambda_iv_i,\sum_j a_jv_j\right\ran
 이다. 마지막 등호는 $\langle v_i,v_j\rangle=\delta_{ij}$인 것으로부터 따라온다. 만일 모든 $\lambda_i\geq 0$이라면 이 값은 항상 $0$ 이상이고, 거꾸로 어떤 $\lambda_i<0$이라면 $v=v_i$에 대하여 $\langle Lv_i,v_i\rangle=\lambda_i<0$이다. 따라서 positive semidefiniteness와 모든 고윳값이 $0$ 이상인 것이 동치이다. $0\neq v$에 대하여 $\sum_i\lambda_ia_i^2>0$인 것과 모든 $\lambda_i>0$인 것이 동치임도 같은 방식으로 확인되므로 positive definiteness에 대한 주장도 성립한다. 
 :::
 
-Positive definite operator의 행렬은 또한 삼각행렬을 통해 간결하게 분해된다. 사실 이 분해는 [§가우스 소거법, ⁋정의 8](/ko/math/linear_algebra/Gaussian_elimination#def8)에서 정의한 일반적인 정사각행렬의 LU 분해가 symmetric positive definite matrix에 대해 더욱 단순해진 형태로, 오직 $L$만 계산하면 $U$ 부분은 자동으로 나온다는 점에서 계산량을 절반으로 줄인다. 다만 LU 분해는 하삼각행렬의 대각성분이 모두 $1$일 것을 요구하므로, $L$의 대각성분들로 이루어진 대각행렬 $D$에 대하여 $\tilde L=LD^{-1}$로 두고 $A=\tilde L(D^2\tilde L^t)$로 적어야 두 분해가 정확히 맞물린다.
+Positive definite operator의 행렬은 또한 삼각행렬을 통해 간결하게 분해된다. 사실 이 분해는 [§가우스 소거법, ⁋정의 8](/ko/math/linear_algebra/Gaussian_elimination#def8)에서 정의한 일반적인 정사각행렬의 LU 분해가 symmetric positive definite matrix에 대해 더욱 단순해진 형태로, 오직 $L$만 계산하면 $U$ 부분은 자동으로 나온다는 점에서 계산량을 절반으로 줄인다.
 
-::: 명제 10 (Cholesky decomposition)
+::: 명제 10 (Cholesky 분해)
 Positive definite인 실수 대칭행렬 $A$에 대하여, 대각성분이 모두 양수인 하삼각행렬 $L$이 유일하게 존재하여 $A=LL^t$이다.
 :::
 ::: 증명
@@ -157,7 +153,7 @@ $A$의 크기 $n$에 대한 귀납법으로 존재성을 보인다. $n=1$이면 
 
 $$A=\begin{pmatrix}\alpha&b^t\\ b&A'\end{pmatrix}$$
 
-으로 쪼개자. 여기서 $\alpha=A_{11}>0$은 positive definiteness로부터 양수이다. *Schur complement* $A''=A'-\alpha^{-1}bb^t$ 또한 positive definite인데, 임의의 $0\neq y\in\mathbb{R}^{n-1}$에 대하여 $x=-\alpha^{-1}(b^ty)$로 두면
+으로 쪼개자. 여기서 $\alpha=A_{11}>0$은 positive definiteness로부터 양수이다. *Schur 여원* $A''=A'-\alpha^{-1}bb^t$ 또한 positive definite인데, 임의의 $0\neq y\in\mathbb{R}^{n-1}$에 대하여 $x=-\alpha^{-1}(b^ty)$로 두면
 
 $$\begin{pmatrix}x&y^t\end{pmatrix}A\begin{pmatrix}x\\ y\end{pmatrix}=\alpha x^2+2x(b^ty)+y^tA'y=y^tA''y$$
 

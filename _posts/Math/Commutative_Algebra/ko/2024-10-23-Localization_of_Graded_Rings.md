@@ -10,19 +10,21 @@ sidebar:
 
 date: 2024-10-23
 weight: 4
-revising: true
-drift_needed: true
 
 ---
 
-우리는 임의의 graded ring, 더 일반적으로는 임의의 graded module을 localize하는 방법을 살펴본다. 이번 글에서는 별다른 말이 없다면 모든 graded ring은 $\mathbb{N}$-graded인 것으로 생각하고, $A=\bigoplus A_i$, $M=\bigoplus M_i$를 고정하기로 한다.
+우리는 임의의 graded ring, 더 일반적으로는 임의의 graded module을 localize하는 방법을 살펴본다. 이번 글에서는 별다른 말이 없다면 모든 graded ring은 $\mathbb{N}_{\geq 0}$-graded인 것으로 생각하고, $A=\bigoplus A_i$, $M=\bigoplus M_i$를 고정하기로 한다. 그럼 임의의 $n$에 대하여,
+
+$$M(n)_k=M_{n+k}\qquad\text{for all $k$}$$
+
+으로 정의된 $M(n)$은 자연스럽게 graded $A$-module 구조를 갖는다.
 
 ## 몫아이디얼
 
 우선 임의의 ring $A$와 $A$의 두 ideal $\mathfrak{a}, \mathfrak{b}$에 대하여, ideal quotient의 정의를 기억하자. ([§기본 개념들, §§기본 정의들](/ko/math/commutative_algebra/basic_notions#기본-정의들))
 
 ::: 정의 1
-Ring $A$와 $A$의 두 ideal $\mathfrak{a}, \mathfrak{b}$에 대하여, *ideal quotient<sub>아이디얼 몫</sub>*를 다음의 식
+Ring $A$와 $A$의 두 ideal $\mathfrak{a}, \mathfrak{b}$에 대하여, *ideal quotient<sub>몫아이디얼</sub>*를 다음의 식
 
 $$(\mathfrak{a}:\mathfrak{b})=\{a\in A\mid a \mathfrak{b}\subseteq \mathfrak{a}\}$$
 
@@ -66,14 +68,10 @@ Graded ring $A$와 $A$의 homogeneous ideal들 $\mathfrak{a},\mathfrak{b}$에 �
 
 특히 임의의 ring의 prime ideal에서의 localization이 중요한 예시였던 것과 같이, $A$가 graded ring일 경우에도 *homogeneous* prime ideal $\mathfrak{p}$에서의 localization은 중요한 예시가 된다. 따라서 위 보조정리의 세 번째 결과는 특히 기억할만하다. 
 
-어쨌든 우선 우리는 일반적인 경우부터 시작한다. 다음 명제는 원소들의 degree가 어떻게 행동하는지만 살펴보면 증명할 수 있다.
+어쨌든 우선 우리는 일반적인 경우부터 시작한다. 다음 명제는 원소들의 degree가 어떻게 행동하는지만 살펴보면 증명할 수 있으며 그 증명도 자명하다.
 
 ::: 명제 3
-$A$의 multiplicative subset $S$의 모든 원소가 homogeneous라 하자. 그럼 각각의 $n\in \mathbb{Z}$에 대하여
-
-$$(S^{-1}M)_n=\{x/s\mid s\in S, x\in M_{n+\deg s}\}$$
-
-으로 두면 $(S^{-1}M)_n$은 $S^{-1}M$의 subgroup이고 $S^{-1}M=\bigoplus_{n\in \mathbb{Z}} (S^{-1}M)_n$이 성립하여, $S^{-1}M$는 $\mathbb{Z}$-graded $A$-module의 구조를 갖는다. 특히 homogeneous element $x\in M_n$과 $s\in S$에 대하여 $x/s$는 degree $n-\deg s$의 원소이다. 만일 $M=A$인 경우, 이 grading은 $S^{-1}A$ 위에 정의된 곱셈에 대하여도 잘 작동하여 $S^{-1}A$를 $\mathbb{Z}$-graded ring으로 만든다.
+$A$의 multiplicative subset $S$의 모든 원소가 homogeneous라 하자. 그럼 임의의 homogeneous element $x\in M_n$과 $s\in S$에 대하여, $x/s\in S^{-1}M$를 degree $n-\deg s$에 있는 것으로 정의하면 $S^{-1}M$는 $\mathbb{Z}$-graded $A$-module의 구조를 갖는다. 만일 $M=A$인 경우, 이 grading은 $S^{-1}A$ 위에 정의된 곱셈에 대하여도 잘 작동하여 $S^{-1}A$를 $\mathbb{Z}$-graded ring으로 만든다.
 :::
 
 우리는 inclusion $(S^{-1}A)_0 \rightarrow S^{-1}A$를 통해 $S^{-1}A$을 $(S^{-1}A)_0$-module로 생각할 수 있다. 그럼 $S^{-1}A$의 degree $0$ 부분 $(S^{-1}A)_0$은 곱셈에 대하여 닫혀있으므로 $S^{-1}A$는 $(S^{-1}A)_0$-algebra이다. 일반적으로 $S^{-1}M$은 곱셈이 정의되지는 않지만, 마찬가지로 $S^{-1}M$의 degree $0$ 부분 $(S^{-1}M)_0$을 생각하면 이는 $(S^{-1}A)_0$-module 구조를 갖는다.
@@ -174,7 +172,7 @@ $$S^{-1}A\cong A_{(\mathfrak{p})}[T,T^{-1}]$$
 을 얻는다. 
 
 ::: 명제 8
-위와 같은 상황에서 $f\in A_1\cap S$를 하나 고정하고, homomorphism $p:A \rightarrow A/(f-1)$에 의한 $\mathfrak{p}$의 image를 $\mathfrak{q}$라 하자. 그럼 $\mathfrak{q}$는 prime ideal이며, 다음 식
+위와 같은 상황에서, homomorphism $p:A \rightarrow A/(f-1)$에 의한 $\mathfrak{p}$의 image를 $\mathfrak{q}$라 하자. 그럼 $\mathfrak{q}$는 prime ideal이며, 다음 식
 
 $$A_{(\mathfrak{p})}\cong\left(A/(f-1)\right)_\mathfrak{q}$$
 
@@ -185,23 +183,15 @@ Ring homomorphism $q:A \rightarrow A/\mathfrak{p}$를 생각하고, $q$에 의�
 
 $$\frac{A/(f-1)}{\mathfrak{q}}\cong \frac{A/\mathfrak{p}}{(\bar{f}-1)}$$
 
-이며, [명제 6](#prop6)에 의하여 우변은 다시 $(A/\mathfrak{p})[f^{-1}]_0$과 isomorphic하다. 그런데 $\mathfrak{p}$가 prime ideal이므로, $A/\mathfrak{p}$는 integral domain이고 따라서 localization $(A/\mathfrak{p})[f^{-1}]$ 또한 integral domain이고, 따라서 $(A/\mathfrak{p})[f^{-1}]_0$도 integral domain이다. 이로부터 $\mathfrak{q}$가 $A/(f-1)$의 prime ideal인 것을 안다. 편의상 $\mathfrak{a}=(f-1)$라 적고, 다음의 두 합성
+이며, [명제 6](#prop6)에 의하여 우변은 다시 $(A/\mathfrak{p})[f^{-1}]_0$과 isomorphic하다. 그런데 $\mathfrak{p}$가 prime ideal이므로, $A/\mathfrak{p}$는 integral domain이고 따라서 localization $(A/\mathfrak{p})[f^{-1}]$ 또한 integral domain이고, 따라서 $(A/\mathfrak{p})[f^{-1}]_0$도 integral domain이다. 이로부터 $\mathfrak{q}$가 $A/(f-1)$의 prime ideal인 것을 안다. 편의상 $\mathfrak{a}=(f-1)$라 적으면, 원하는 isomorphism은 다음의 homomorphism
 
-$$\phi:A \overset{a\mapsto a/1}{\longrightarrow} S^{-1}A \overset{f\mapsto T}{\longrightarrow} A_{(\mathfrak{p})}[T, T^{-1}] \overset{T\mapsto 1}{\longrightarrow} A_{(\mathfrak{p})}$$
+$$A \overset{a\mapsto a/1}{\longrightarrow} S^{-1}A \overset{f\mapsto T}{\longrightarrow} A_{(\mathfrak{p})}[T, T^{-1}] \overset{T\mapsto 1}{\longrightarrow} A_{(\mathfrak{p})}$$
 
 과
 
-$$\psi:A\overset{a\mapsto a+\mathfrak{a}}{\longrightarrow}A/\mathfrak{a}\overset{a+\mathfrak{a}\mapsto\frac{a+\mathfrak{a}}{1}}{\longrightarrow}(A/\mathfrak{a})_\mathfrak{q}$$
+$$A\overset{a\mapsto a+\mathfrak{a}}{\longrightarrow}A/\mathfrak{a}\overset{a+\mathfrak{a}\mapsto\frac{a+\mathfrak{a}}{1}}{\longrightarrow}(A/\mathfrak{a})_\mathfrak{q}$$
 
-를 생각하자. 첫 합성에서 $S^{-1}A$의 degree $d$ 부분은 $T^d$의 계수로 옮겨지므로, $a=\sum_d a_d$에 대하여 $\phi(a)=\sum_d a_d/f^d$이고 특히 $\phi(f-1)=f/f-1=0$, 즉 $\mathfrak{a}\subseteq \ker \phi$이다. 따라서 $\phi$는 ring homomorphism $\overline{\phi}:A/\mathfrak{a} \rightarrow A_{(\mathfrak{p})}$를 유도한다. 또 $\mathfrak{q}=(\mathfrak{p}+\mathfrak{a})/\mathfrak{a}$이므로 $a+\mathfrak{a}\not\in \mathfrak{q}$인 것은 $a\not\in \mathfrak{p}+\mathfrak{a}$인 것과 같다.
-
-이제 $b\in A$가 $b\not\in \mathfrak{p}+\mathfrak{a}$를 만족한다 하자. $b$의 homogeneous component들이 모두 degree $N$ 이하가 되도록 $N$을 잡고 $c=\sum_d b_df^{N-d}\in A_N$이라 하면 $\phi(b)=c/f^N$이다. 한편 임의의 $k\geq 0$에 대하여 $f^k-1\in \mathfrak{a}$이므로 $c-b=\sum_d b_d(f^{N-d}-1)\in \mathfrak{a}$이고, 따라서 $c\in \mathfrak{p}$라면 $b\in \mathfrak{p}+\mathfrak{a}$가 되어 가정에 어긋난다. 즉 $c\in S$이고 $f^N/c\in A_{(\mathfrak{p})}$가 $\phi(b)$의 역원이 되므로, $\overline{\phi}$는 $\mathfrak{q}$에 속하지 않는 원소를 모두 unit으로 보낸다. 그럼 [§국소화, ⁋명제 6](/ko/math/commutative_algebra/localization#prop6)에 의하여 ring homomorphism
-
-$$\Phi:(A/\mathfrak{a})_\mathfrak{q} \rightarrow A_{(\mathfrak{p})};\qquad \frac{b_1+\mathfrak{a}}{b_2+\mathfrak{a}}\mapsto \phi(b_1)\phi(b_2)^{-1}$$
-
-를 얻는다.
-
-반대로 임의의 $s\in S$에 대하여 $s\not\in \mathfrak{p}+\mathfrak{a}$이다. 만일 $s\in \mathfrak{p}+\mathfrak{a}$라면 적당한 $y\in \mathfrak{p}$와 $g\in A$에 대하여 $s=y+g(f-1)$이므로 $\phi(s)=\phi(y)$인데, $\mathfrak{p}$가 homogeneous ideal이라 $y$의 homogeneous component들이 모두 $\mathfrak{p}$에 속하므로 충분히 큰 $N$에 대하여 $y'=\sum_d y_df^{N-d}$이라 두면 $y'\in \mathfrak{p}\cap A_N$이고 $s/f^{\deg s}=\phi(s)=\phi(y)=y'/f^N$이다. 그럼 적당한 $t\in S$가 존재하여 $t(f^Ns-f^{\deg s}y')=0$, 즉 $tf^Ns\in \mathfrak{p}$이고 $t,f\not\in \mathfrak{p}$이므로 $s\in \mathfrak{p}$가 되어 모순이기 때문이다. 따라서 $\psi(s)$는 unit이고, 다시 [§국소화, ⁋명제 6](/ko/math/commutative_algebra/localization#prop6)에 의하여 $\psi$는 $S^{-1}A \rightarrow (A/\mathfrak{a})_\mathfrak{q}$를 유도하며, 이를 degree $0$ 부분으로 제한하면 $x/s\mapsto (x+\mathfrak{a})/(s+\mathfrak{a})$으로 주어지는 $\Psi:A_{(\mathfrak{p})} \rightarrow (A/\mathfrak{a})_\mathfrak{q}$를 얻는다. 이제 $f+\mathfrak{a}=1+\mathfrak{a}$이므로 임의의 $a\in A$에 대하여 $\Psi(\phi(a))=\sum_d (a_d+\mathfrak{a})=a+\mathfrak{a}$이고 이로부터 $\Psi\circ \Phi$가 항등사상인 것을 알며, $\deg x=\deg s$인 $x/s\in A_{(\mathfrak{p})}$에 대하여 $\Phi(\Psi(x/s))=\phi(x)\phi(s)^{-1}=(x/f^{\deg x})(f^{\deg s}/s)=x/s$이므로 $\Phi\circ \Psi$ 또한 항등사상이다.
+을 비교하여 나온다.
 :::
 
 ---

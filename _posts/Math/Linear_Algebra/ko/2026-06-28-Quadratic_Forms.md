@@ -12,9 +12,7 @@ sidebar:
 date: 2026-06-28
 
 weight: 27
-revising: true
 
-drift_needed: true
 
 ---
 
@@ -131,7 +129,7 @@ Sylvester's law는 곧바로 real symmetric matrix의 합동에 의한 완전한
 
 ## Positive definiteness
 
-모든 $0\neq v\in V$에 대하여 $\langle v,v\rangle>0$인 경우가 특별히 중요하며, 이때 $\langle-,-\rangle$ 자체를 positive definite이라 한다. 이는 Gram matrix를 $\mathbb{R}^n$의 표준 내적에 대한 self-adjoint operator로 볼 때 [§스펙트럼 정리, ⁋정의 8](/ko/math/linear_algebra/spectral_theorem#def8)의 의미에서 positive definite인 것과 같다. 
+Signature가 $(n,0,0)$인 경우, 즉 모든 $0\neq v\in V$에 대하여 $\langle v,v\rangle>0$인 경우가 특별히 중요하다. 이는 Gram matrix가 [§스펙트럼 정리, ⁋정의 8](/ko/math/linear_algebra/spectral_theorem#def8)의 의미에서 positive definite인 것과 같으며, 이때 $\langle-,-\rangle$ 자체를 positive definite이라 한다. 
 
 ::: 명제 6
 $n$차원 $\mathbb{R}$-벡터공간 $V$ 위에 정의된 symmetric bilinear form $\langle-,-\rangle$에 대하여, 다음은 모두 동치이다.

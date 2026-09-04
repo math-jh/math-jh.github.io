@@ -10,8 +10,6 @@ sidebar:
 
 date: 2024-05-24
 weight: 15
-revising: true
-drift_needed: true
 
 ---
 
@@ -20,9 +18,9 @@ drift_needed: true
 ::: 정의 1
 Scheme morphism $\varphi: X \rightarrow Y$가 주어졌다 하자.
 
-1. $\varphi$가 $X$와 $Y$의 open subscheme 사이의 isomorphism을 유도하면 $\varphi$를 *open embedding<sub>열린 매장</sub>*이라 부른다.
+1. $\varphi$가 $X$와 $Y$의 open subscheme 사이의 isomorphism을 유도하면 $\varphi$를 *open immersion<sub>열린 몰입</sub>*이라 부른다.
 2. $\varphi$가 *projective<sub>사영사상</sub>*라는 것은 적당한 $n$에 대하여, $\varphi$를 closed embedding과 projection의 합성 $X\hookrightarrow \mathbb{P}^n_Y \rightarrow Y$의 꼴로 분해할 수 있는 것이다. ([§사영공간과 Proj 구성](/ko/math/scheme_theory/projective_schemes))
-3. $\varphi$가 *quasi-projective<sub>준사영사상</sub>*라는 것은 이를 적당한 open embedding $X \rightarrow X'$와 projective morphism $X' \rightarrow Y$의 합성으로 분해할 수 있는 것이다.
+3. $\varphi$가 *quasi-projective<sub>준사영사상</sub>*라는 것은 이를 적당한 open immersion $X \rightarrow X'$와 projective morphism $X' \rightarrow Y$의 합성으로 분해할 수 있는 것이다. 
 :::
 
 첫째 정의는 자명한 것이며, 둘째와 셋째 정의 또한 [\[대수다양체\] §사영다양체, ⁋정의 3](/ko/math/algebraic_varieties/projective_varieties#def3)과 [\[대수다양체\] §준사영다양체, ⁋정의 1](/ko/math/algebraic_varieties/quasi_projective_varieties#def1)을 relative 버전, 즉 $\Sch_{/Y}$에서 다룬 것이다. 
@@ -30,7 +28,7 @@ Scheme morphism $\varphi: X \rightarrow Y$가 주어졌다 하자.
 본격적인 이야기를 시작하기 전에 다음 예시를 살펴보는 것이 좋다. 
 
 ::: 예시 2
-Ring $A$가 field $K$의 subring으로서 discrete valuation ring이라 하자. 즉 임의의 $x\in K^\times$에 대해 $x\in A$이거나 $x^{-1}\in A$이며, $A$는 Noetherian이고 그 maximal ideal $\mathfrak{m}$은 principal이다. ([\[가환대수학\] §인자, ⁋정의 5](/ko/math/commutative_algebra/divisors#def5)) 이 정의는 $A=K$인 경우도 허용하므로, 아래에서는 $A$가 field가 아닌 경우만 생각한다. 임의의 $x\in K^\times$가 $x$ 또는 $x^{-1}$을 통해 $A$의 원소들의 비로 표현되므로 $K=\Frac(A)$이다. 또 $A$는 $\mathfrak{m}$을 유일한 maximal ideal로 갖는 local ring이고 ([\[가환대수학\] §인자, ⁋명제 6](/ko/math/commutative_algebra/divisors#prop6)), uniformizer $\pi$를 하나 잡으면 임의의 $f\in K^\times$가 정수 $n$과 unit $u$에 대해 $f=\pi^nu$로 유일하게 표현되므로 ([\[가환대수학\] §인자, ⁋명제 8](/ko/math/commutative_algebra/divisors#prop8)) $A$의 nonzero ideal은 모두 $(\pi^n)$ 꼴이다. 특히 $A$는 principal ideal domain이며 그 prime ideal은 $(0)$과 $\mathfrak{m}=(\pi)$ 둘 뿐이다.
+Ring $A$가 field $K$의 subring으로서 discrete valuation ring이라 하자. 즉 임의의 $x\in K^\times$에 대해 $x\in A$이거나 $x^{-1}\in A$이며, $A$는 Noetherian이고 그 maximal ideal $\mathfrak{m}$은 principal이다. ([\[가환대수학\] §인자, ⁋정의 5](/ko/math/commutative_algebra/divisors#def5)) 임의의 $x\in K^\times$가 $x$ 또는 $x^{-1}$을 통해 $A$의 원소들의 비로 표현되므로 $K=\Frac(A)$이다. 또 $A$는 $\mathfrak{m}$을 유일한 maximal ideal로 갖는 local ring이고 ([\[가환대수학\] §인자, ⁋명제 6](/ko/math/commutative_algebra/divisors#prop6)), uniformizer $\pi$를 하나 잡으면 임의의 $f\in K^\times$가 정수 $n$과 unit $u$에 대해 $f=\pi^nu$로 유일하게 표현되므로 ([\[가환대수학\] §인자, ⁋명제 8](/ko/math/commutative_algebra/divisors#prop8)) $A$의 nonzero ideal은 모두 $(\pi^n)$ 꼴이다. 특히 $A$는 principal ideal domain이며 그 prime ideal은 $(0)$과 $\mathfrak{m}=(\pi)$ 둘 뿐이다.
 
 이로부터 $\Spec A$는 두 개의 점 $(0)$, $\mathfrak{m}$으로 이루어져 있으며,
 
@@ -205,28 +203,24 @@ $$\gamma_1:\Spec A \longrightarrow X_1\subseteq X,\qquad \gamma_2:\Spec A \longr
 ::: 따름정리 8
 Noetherian scheme들에 대하여, 
 
-1. Open embedding과 closed embedding은 모두 separated이다.
+1. Open immersion과 closed embedding은 모두 separated이다. 
 2. 두 separated morphism의 합성은 separated이다.
 3. Separated morphism은 base change에 의해 보존된다.
 4. Separated morphism은 fiber product에 의해 보존된다.
 5. 만일 $\varphi:X \rightarrow Y$, $\psi:Y \rightarrow Z$가 scheme morphism들이고 $\psi\circ \varphi$가 separated morphism이라면 $\varphi$ 또한 separated morphism이다.
 :::
 ::: 증명
-1번은 정의에서 직접 확인한다. $\varphi$가 closed embedding이라면 $Y$의 affine open subset $V=\Spec B$마다 $\varphi^{-1}(V)=\Spec A$이고 $B \rightarrow A$가 surjective이며 ([§닫힌 부분스킴, ⁋명제 3](/ko/math/scheme_theory/closed_subschemes#prop3)), 이러한 $V$를 모두 모으면 $\varphi^{-1}(V)\times_V\varphi^{-1}(V)$들이 $X\times_YX$를 덮는다. 각각의 위에서 $\Delta$는 [보조정리 5](#lem5)의 계산에 의하여 closed embedding이고, closed embedding은 target에 대해 affine-local하므로 $\Delta$ 자체가 closed embedding이다. $\varphi$가 open embedding이라면 $X$를 $Y$의 open subscheme으로 보고 $Y$의 affine open subset $V=\Spec B$들과 그 안에 들어가는 $X$의 basic open subset $\Spec B_b$들을 생각하자. 그럼 $\Spec B_b\times_V\Spec B_{b'}$들이 $X\times_YX$를 덮으며,
+1번은 정의에서 직접 확인한다. $\varphi$가 closed embedding이라면 $Y$의 affine open subset $V=\Spec B$마다 $\varphi^{-1}(V)=\Spec A$이고 $B \rightarrow A$가 surjective이며 ([§닫힌 부분스킴, ⁋명제 3](/ko/math/scheme_theory/closed_subschemes#prop3)), 이러한 $V$를 모두 모으면 $\varphi^{-1}(V)\times_V\varphi^{-1}(V)$들이 $X\times_YX$를 덮는다. 각각의 위에서 $\Delta$는 [보조정리 5](#lem5)의 계산에 의하여 closed embedding이고, closed embedding은 target에 대해 affine-local하므로 $\Delta$ 자체가 closed embedding이다. $\varphi$가 open immersion이라면 $X$를 $Y$의 open subscheme으로 보고 $Y$의 affine open subset $V=\Spec B$들과 그 안에 들어가는 $X$의 basic open subset $\Spec B_b$들을 생각하자. 그럼 $\Spec B_b\times_V\Spec B_{b'}$들이 $X\times_YX$를 덮으며, 
 
 $$B_b\otimes_BB_{b'}\cong B_{bb'}=\mathcal{O}(\Spec B_b\cap \Spec B_{b'})$$
 
 이므로 $\Delta$는 각각의 위에서 isomorphism이고 특히 closed embedding이다.
 
-2번과 5번은 [정리 6](#thm6)의 판정법으로 얻어진다. 곧 lifting의 유일성이 물려받아진다는 것만 확인하면 된다. 3번은 판정법을 거치지 않고 [정의 3](#def3)에서 직접 얻어진다.
+나머지는 [정리 6](#thm6)의 판정법으로 얻어진다. 곧 lifting의 유일성이 물려받아진다는 것만 확인하면 된다.
 
 2번의 경우 $\psi\circ \varphi$에 대한 바깥쪽 square $\alpha:\Spec K \rightarrow X$, $\beta:\Spec A \rightarrow Z$와 두 lifting $\gamma_1,\gamma_2:\Spec A \rightarrow X$가 주어졌다 하자. 그럼 $\varphi\circ \gamma_1$과 $\varphi\circ \gamma_2$는 $\alpha' = \varphi\circ \alpha$와 $\beta$가 주는 $\psi$에 대한 square의 두 lifting이므로 $\varphi\circ \gamma_1=\varphi\circ \gamma_2$이고, 그럼 $\gamma_1,\gamma_2$는 $\alpha$와 $\varphi\circ \gamma_1$이 주는 $\varphi$에 대한 square의 두 lifting이므로 $\gamma_1=\gamma_2$이다.
 
-3번의 경우 $Y' \rightarrow Y$와 $X'=X\times_YY'$, $\varphi':X' \rightarrow Y'$에 대하여 fiber product의 universal property로부터
-
-$$X'\times_{Y'}X'=(X\times_YX)\times_YY'$$
-
-이고, 이 동일시 아래에서 $\Delta_{X'/Y'}$는 $\Delta_{X/Y}$를 $Y' \rightarrow Y$를 따라 base change한 것이다. Closed embedding은 base change에 대해 안정적이므로 ([정리 6](#thm6)의 증명) $\Delta_{X'/Y'}$ 또한 closed embedding이고, 따라서 $\varphi'$는 separated이다. 이 논증에는 판정법이 쓰이지 않으므로 $X'$가 Noetherian인지를 따지지 않아도 된다.
+3번의 경우 $Y' \rightarrow Y$와 $X'=X\times_YY'$, $\varphi':X' \rightarrow Y'$에 대하여 $\varphi'$에 대한 square와 그 두 lifting $\gamma_1',\gamma_2':\Spec A \rightarrow X'$가 주어졌다 하자. 이들을 $X' \rightarrow X$와 합성한 것은 $\varphi$에 대한 square의 두 lifting이므로 서로 같고, $Y'$로 가는 두 합성 또한 square가 주는 같은 morphism이므로, fiber product의 universal property의 유일성에서 $\gamma_1'=\gamma_2'$이다.
 
 5번의 경우 $\varphi$에 대한 square와 두 lifting $\gamma_1,\gamma_2$가 주어지면, $\Spec A \rightarrow Y$를 $\psi$와 합성하여 $\psi\circ \varphi$에 대한 square를 얻고 $\gamma_1,\gamma_2$는 그 두 lifting이므로 $\gamma_1=\gamma_2$이다.
 
@@ -403,7 +397,7 @@ $$b_j:=a_j/a_k\in A$$
 
 $$\mathbb{Z}[\x_0/\x_k,\ldots,\x_n/\x_k] \longrightarrow A;\qquad \x_j/\x_k\mapsto b_j$$
 
-가 정의되고, 이는 morphism $\Spec A \rightarrow U_k\subseteq\mathbb{P}^n_\mathbb{Z}$를 준다. 이것이 lifting임을 보이려면 $A\hookrightarrow K$와의 합성이 처음 주어진 morphism과 같음을 확인하면 된다. $a_k\neq 0$이므로 처음의 ring homomorphism은 $\x_k/\x_i$를 $K$의 unit $a_k$로 보내고, 따라서 처음 morphism의 image는 $D(\x_k/\x_i)=U_i\cap U_k$에 들어간다. 그럼 $U_k$ 위에서 이 morphism은 transition relation
+가 정의되고, 이는 morphism $\Spec A \rightarrow U_k\subseteq\mathbb{P}^n_\mathbb{Z}$를 준다. 이것이 lifting임을 보이려면 $A\hookrightarrow K$와의 합성이 처음 주어진 morphism과 같음을 확인하면 된다. $a_k\neq 0$이므로 처음의 ring homomorphism은 $\x_k/\x_i$를 $K$의 unit $a_k$로 보내고, 따라서 처음 morphism의 image는 $D(\x_k/\x_i)=U_i\cap U_k$에 들어간다. 그럼 $U_k$ 위에서 이 morphism은 transition 관계
 
 $$\x_j/\x_k=(\x_j/\x_i)\cdot(\x_k/\x_i)^{-1}$$
 
@@ -413,7 +407,7 @@ $$\x_j/\x_k=(\x_j/\x_i)\cdot(\x_k/\x_i)^{-1}$$
 
 이제 $\varphi:X \rightarrow Y$가 projective라 하면 $\varphi$는 closed embedding $X\hookrightarrow \mathbb{P}^n_Y$와 projection $\mathbb{P}^n_Y \rightarrow Y$의 합성이다. ([정의 1](#def1)) Closed embedding은 proper이고 두 proper morphism의 합성은 proper이므로 ([따름정리 13](#cor13)), $\varphi$는 proper이다.
 
-마지막으로 $\varphi:X \rightarrow Y$가 quasi-projective라 하고, 이를 open embedding $\lambda: X \rightarrow X'$와 projective morphism $\psi:X' \rightarrow Y$의 합성 $\varphi=\psi\circ\lambda$로 분해하자. ([정의 1](#def1)) 방금 보인 것에 의해 $\psi$는 proper이고, 따라서 separated이며 finite type이다. 한편 open embedding은 separated이고 두 separated morphism의 합성은 separated이므로 ([따름정리 8](#cor8)), $\varphi$는 separated이다. 또 open embedding은 locally of finite type이며, $X$가 Noetherian이므로 $X'$의 임의의 affine open subset의 $\lambda$에 의한 preimage는 Noetherian space의 열린집합으로서 quasi-compact이다. 곧 $\lambda$는 finite type이고 ([§스킴 사상의 성질들, ⁋정의 14](/ko/math/scheme_theory/properties_of_scheme_morphisms#def14)), 두 finite type morphism의 합성은 finite type이므로 $\varphi$ 또한 finite type이다.
+마지막으로 $\varphi:X \rightarrow Y$가 quasi-projective라 하고, 이를 open immersion $\lambda: X \rightarrow X'$와 projective morphism $\psi:X' \rightarrow Y$의 합성 $\varphi=\psi\circ\lambda$로 분해하자. ([정의 1](#def1)) 방금 보인 것에 의해 $\psi$는 proper이고, 따라서 separated이며 finite type이다. 한편 open immersion은 separated이고 두 separated morphism의 합성은 separated이므로 ([따름정리 8](#cor8)), $\varphi$는 separated이다. 또 open immersion은 locally of finite type이며, $X$가 Noetherian이므로 $X'$의 임의의 affine open subset의 $\lambda$에 의한 preimage는 Noetherian space의 열린집합으로서 quasi-compact이다. 곧 $\lambda$는 finite type이고 ([§스킴 사상의 성질들, ⁋정의 14](/ko/math/scheme_theory/properties_of_scheme_morphisms#def14)), 두 finite type morphism의 합성은 finite type이므로 $\varphi$ 또한 finite type이다.
 :::
 
 이로써 우리는 판정법의 고전적인 귀결을 얻는다. Proper morphism은 정의상 closed map이므로, projective scheme에서 나가는 morphism의 image는 언제나 닫혀 있다.

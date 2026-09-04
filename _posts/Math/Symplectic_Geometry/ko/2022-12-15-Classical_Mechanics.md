@@ -10,8 +10,6 @@ sidebar:
 
 date: 2022-12-15
 weight: 1
-revising: true
-drift_needed: true
 
 ---
 
@@ -27,9 +25,9 @@ drift_needed: true
 
 {% diagram Math/Symplectic_Geometry/Classical_Mechanics-1.svg width="13.13em" alt="phase_space" %}
 
-이러한 상황에서, 운동량 $p=mv$를 사용하면 운동에너지 $K=\frac{p^2}{2m}$ 혹은 위치에너지 $P=mgh$ 등은 상수인 $m$, $g$를 제외하면 위치좌표와 운동량좌표를 통해 기술할 수 있는 물리량이 된다. 즉, 이들 에너지들은 phase space에서 $\mathbb{R}$로의 함수이다. 그럼 에너지 보존법칙은 물체의 운동을 phase space에 기술하였을 때, 그 궤적은 에너지 함수의 등위면에 완전하게 포함되어야 한다는 것을 의미한다. 
+이러한 상황에서, 운동에너지 $K=\frac{1}{2}mv^2$ 혹은 위치에너지 $P=mgh$ 등은 상수인 $m$, $g$를 제외하면 위치좌표와 속도좌표를 통해 기술할 수 있는 물리량이 된다. 즉, 이들 에너지들은 phase space에서 $\mathbb{R}$로의 함수이다. 그럼 에너지 보존법칙은 물체의 운동을 phase space에 기술하였을 때, 그 궤적은 에너지 함수의 등위면에 완전하게 포함되어야 한다는 것을 의미한다. 
 
-가령 어떠한 힘도 작용하지 않는 1차원 상에서의 물체의 운동을 생각하자. 즉, 이 물체가 가지는 에너지는 오직 운동에너지 뿐이므로, 우리는 에너지 함수 $E:\mathbb{R}^2\rightarrow\mathbb{R}$을 $E(x,p)=p^2$이라 생각할 수 있다. 그럼 $E$의 등위면은 위치축과 평행하게 그려지는 선분들이다.
+가령 어떠한 힘도 작용하지 않는 1차원 상에서의 물체의 운동을 생각하자. 즉, 이 물체가 가지는 에너지는 오직 운동에너지 뿐이므로, 우리는 에너지 함수 $E:\mathbb{R}^2\rightarrow\mathbb{R}$을 $E(x,v)=v^2$이라 생각할 수 있다. 그럼 $E$의 등위면은 위치축과 평행하게 그려지는 선분들이다.
 
 {% diagram Math/Symplectic_Geometry/Classical_Mechanics-2.svg width="13.13em" alt="kinetic_energy" %}
 
@@ -41,7 +39,7 @@ drift_needed: true
 
 마찬가지로 에너지 보존법칙에 의하면 물체의 운동은 항상 이 에너지의 등위면 위에 있어야 한다.
 
-마지막으로 용수철에 달린 물체의 운동을 생각하자. Hooke's law에 따르면 용수철이 물체에 부여하는 위치에너지는 $\frac{1}{2}kx^2$으로 주어진다. 물체의 운동에너지는 $\frac{p^2}{2m}$이므로, 에너지 함수 $E$를 $E(x,p)=\frac{1}{2}kx^2+\frac{p^2}{2m}$으로 정의하면 된다. 이를 phase space 상에 그리면 다음과 같이 타원 형태가 나오게 된다.
+마지막으로 용수철에 달린 물체의 운동을 생각하자. Hooke's law에 따르면 용수철이 물체에 부여하는 위치에너지는 $\frac{1}{2}kx^2$으로 주어진다. 물체의 운동에너지는 $\frac{1}{2}mv^2$이므로, 에너지 함수 $E$를 $E(x,v)=\frac{1}{2}kx^2+\frac{1}{2}mv^2$으로 정의하면 된다. 이를 phase space 상에 그리면 다음과 같이 타원 형태가 나오게 된다.
 
 {% diagram Math/Symplectic_Geometry/Classical_Mechanics-4.svg width="19.81em" alt="harmonic_oscillator" %}
 
@@ -60,7 +58,7 @@ drift_needed: true
 식에서 새로 도입한 $H$는 *Hamiltonian<sub>해밀토니안</sub>*을 의미하며, 앞으로 할 이야기에서는 그냥 에너지라 생각해도 무방하다. 이 원리는 $H$가 시간에 의존할 경우에도 국소적으로는 성립하며, 이 때는 $H$를 $H_t$로 바꾸어 쓰면 된다. 수학적으로 이러한 문제를 어떻게 다루는지는 아주 잘 알려져있다.
 
 ::: 명제 1
-Phase space 상의 경로 $z(t)=(x(t),y(t))$ ($t_0\leq t\leq t_1$)가 위치조건 $x(t_0)=x_0$, $x(t_1)=x_1$을 만족하는 경로들 가운데 $\mathcal{A}_H$의 critical point인 것은 $z$가 다음의 *Hamilton's equation*
+Phase space 상의 경로 $z(t)=(x(t),y(t))$ ($t_0\leq t\leq t_1$)가 위치조건 $x(t_0)=x_0$, $x(t_1)=x_1$을 만족하는 경로들 가운데 $\mathcal{A}_H$의 극값인 것은 $z$가 다음의 *Hamilton's equation*
 
 $$\dot{x}=\frac{\partial H_t}{\partial y},\quad \dot{y}=-\frac{\partial H_t}{\partial x}$$
 
@@ -79,7 +77,7 @@ $$\int_{t_0}^{t_1}\langle y,\partial_s\dot{x}_s\vert_0\rangle\dd{t}=\bigl[\langl
 
 $$\frac{\partial}{\partial s}\bigg\vert_{s=0}\mathcal{A}_H(z_s)=\int_{t_0}^{t_1}\langle\partial_sy_s\vert_0,\dot{x}-\partial_yH_t\rangle\dd{t}-\int_{t_0}^{t_1}\langle\partial_sx_s\vert_0,\dot{y}+\partial_xH_t\rangle\dd{t}$$
 
-이고, $\partial_sx_s\vert_0$과 $\partial_sy_s\vert_0$은 임의로 변할 수 있으므로 $z$가 $\mathcal{A}_H$의 critical point가 되는 것은 두 식
+이고, $\partial_sx_s\vert_0$과 $\partial_sy_s\vert_0$은 임의로 변할 수 있으므로 $z$가 $\mathcal{A}_H$의 극값이 되는 것은 두 식
 
 $$\dot{x}-\partial_yH_t=0,\qquad\dot{y}+\partial_xH_t=0$$
 
@@ -108,13 +106,13 @@ $$\dot{z}=-J_0\nabla H(z)$$
 
 $$X_H=-J_0\nabla H(z)$$
 
-의 integral flow를 찾는 문제와 정확하게 같아진다. $H$가 시간에 의존하지 않는 경우, 우리는 maximal integral flow가 항상 존재한다는 것을 알고 있다. ([\[미분다양체\] §벡터장, ⁋정리 6](/ko/math/manifolds/vector_fields#thm6))
+의 integral flow를 찾는 문제와 정확하게 같아지며, 우리는 이것이 항상 가능하다는 것을 알고 있다. ([\[미분다양체\] §벡터장, ⁋정리 6](/ko/math/manifolds/vector_fields#thm6))
 
 ## Symplectic form
 
 위의 과정을 요약하자면, Hamiltonian $H$는 다음의 식
 
-$$\dd{H}=\bigl\langle J_0\left(-J_0\nabla H(z)\right), -\bigr\rangle$$
+$$\dd{H}=\langle-J_0\nabla H(z), -\rangle$$
 
 을 통해 물체의 운동을 기술한다. 이제 $\mathbb{R}^{2n}$ 위에 $2$-form
 

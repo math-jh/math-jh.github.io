@@ -10,8 +10,6 @@ sidebar:
 
 date: 2024-10-06
 weight: 9
-revising: true
-drift_needed: true
 
 ---
 
@@ -127,7 +125,7 @@ $$\sum_{(j,j')\in J\times J'}(X\otimes X')_{(k,k'),(j,j')}(Y\otimes Y')_{(j,j'),
 이고, 이는 $(XY)_{ki}(X'Y')_{k'i'}$, 즉 우변의 해당 성분과 같다. 마지막 등식에서 $A$의 commutativity를 사용하였다.
 :::
 
-물론 $I,I',K,K'$까지 모두 유한집합인 경우라면, 이 명제는 [명제 2](#prop2)와 [명제 5](#prop5), 그리고 합성의 행렬표현이 행렬곱이라는 [§행렬과 선형사상, ⁋따름정리 4](/ko/math/multilinear_algebra/matrices_and_linear_maps#cor4)를 조합하여 얻을 수도 있다. 이로부터 다음의 성질들이 따라나온다.
+물론 이 명제는 [명제 2](#prop2)와 [명제 5](#prop5), 그리고 합성의 행렬표현이 행렬곱이라는 [§행렬과 선형사상, ⁋따름정리 4](/ko/math/multilinear_algebra/matrices_and_linear_maps#cor4)를 조합하여 얻을 수도 있다. 이로부터 다음의 성질들이 따라나온다.
 
 ::: 명제 7
 행렬 $X\in\Mat_{J\times I}(A)$, $X'\in\Mat_{J'\times I'}(A)$에 대하여 다음이 성립한다.

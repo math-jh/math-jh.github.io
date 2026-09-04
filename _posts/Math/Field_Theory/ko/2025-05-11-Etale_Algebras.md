@@ -10,12 +10,10 @@ sidebar:
 
 date: 2025-05-11
 weight: 5
-revising: true
-drift_needed: true
 
 ---
 
-Finite degree $\mathbb{K}$-algebra $A$와 field extension $\mathbb{L}/\mathbb{K}$가 주어졌다 가정하자. 그럼 $\mathbb{K}$-벡터공간들 사이의 $\mathbb{K}$-linear map들의 모임 $\Hom_\mathbb{K}(A, \mathbb{L})$은 $\mathbb{K}$-벡터공간이며, 다음의 isomorphism
+$\mathbb{K}$-algebra $A$와 field extension $\mathbb{L}/\mathbb{K}$가 주어졌다 가정하자. 그럼 $\mathbb{K}$-벡터공간들 사이의 $\mathbb{K}$-linear map들의 모임 $\Hom_\mathbb{K}(A, \mathbb{L})$은 $\mathbb{K}$-벡터공간이며, 다음의 isomorphism
 
 $$\Hom_\mathbb{K}(A,\mathbb{L})\cong\Hom_\mathbb{K}(A, \mathbb{K}\otimes_\mathbb{K}\mathbb{L})\cong\Hom_\mathbb{K}(A, \mathbb{K})\otimes_\mathbb{K}\mathbb{L}=A^\ast\otimes_\mathbb{K}\mathbb{L}$$
 
@@ -29,7 +27,7 @@ $$(A_{(\mathbb{L})})^\ast=\Hom_\mathbb{L}(\mathbb{L}\otimes_\mathbb{K}A, \mathbb
 
 $$(A_{(\mathbb{L})})^\ast=\Hom_\mathbb{L}(A_{(\mathbb{L})}, \mathbb{L})\cong\Hom_\mathbb{K}(A,\mathbb{L})\cong A^\ast\otimes_\mathbb{K}\mathbb{L}$$
 
-을 얻는다. $A$는 $\mathbb{K}$-벡터공간으로서 유한차원이므로 $A^\ast$는 같은 차원의 $\mathbb{K}$-벡터공간이고, 따라서 $A_{(\mathbb{L})}$과 $A_{(\mathbb{L})}^\ast$ 또한 같은 차원의 $\mathbb{L}$-벡터공간이다. 특히 다음의 식
+을 얻는다. 특히, 만일 $A$가 $\mathbb{K}$-벡터공간으로서 유한차원이라면 $A^\ast$는 같은 차원의 $\mathbb{K}$-벡터공간이고, 따라서 $A_{(\mathbb{L})}$과 $A_{(\mathbb{L})}^\ast$ 또한 같은 차원의 $\mathbb{L}$-벡터공간이다. 특히 다음의 식
 
 $$[A_{(\mathbb{L})}:\mathbb{L}]=\dim_\mathbb{L}A_{(\mathbb{L})}=\dim_\mathbb{L} (A_{(\mathbb{L})})^\ast=\dim_\mathbb{K}A=[A:\mathbb{K}]$$
 
@@ -79,13 +77,11 @@ $$\lvert\Hom_{\Alg{\mathbb{K}}}(A, \mathbb{L})\rvert\leq \dim_\mathbb{L}\Hom_\ma
 ::: 증명
 Monoid algebra $A=\mathbb{L}\Gamma$를 생각하고, canonical basis $(e_\gamma)_{\gamma\in\Gamma}$를 생각하자. 
 
-그럼 [\[대수적 구조\] §대수, ⁋명제 6](/ko/math/algebraic_structures/algebras#prop6)을 monoid로 일반화하면 $\mathbb{L}$-algebra homomorphism $A \rightarrow \mathbb{L}$들과 $\Gamma$에서 multiplicative monoid $(\mathbb{L},\cdot)$로의 monoid homomorphism들이 서로 대응하며, 후자 중 image가 $\mathbb{L}^\times$에 들어가는 것들이 정확히 $X$이므로 $X$는 $\Hom_{\Alg{\mathbb{L}}}(A,\mathbb{L})$의 부분집합에 대응한다. 
-
-이제 $\mathbb{K}=\mathbb{L}$로 두고 [정리 1](#thm1)을 적용하면 $\Hom_{\Alg{\mathbb{L}}}(A,\mathbb{L})$이 $\mathbb{L}$-벡터공간 $\Hom_\mathbb{L}(A,\mathbb{L})$의 free subset임을 알고, canonical basis가 주는 isomorphism $w\mapsto (w(e_\gamma))_{\gamma\in\Gamma}$는 $\Hom_\mathbb{L}(A,\mathbb{L})$을 $\mathbb{L}^\Gamma$와 동일시하면서 $X$의 원소를 자기 자신으로 보낸다. 그럼 free subset의 부분집합 또한 free이므로 주장이 따라나온다. 
+그럼 [\[대수적 구조\] §대수, ⁋명제 6](/ko/math/algebraic_structures/algebras#prop6)의 일반화를 통해 $X$와 $\Hom_\mathbb{L}(A,\mathbb{L})$ 사이의 bijection이 존재하므로 주장은 [정리 1](#thm1)로부터 바로 따라나온다. 
 :::
 
 ::: 따름정리 3 (Dedekind)
-두 extension $\mathbb{L}/\mathbb{K}$, $\mathbb{M}/\mathbb{K}$에 대하여, $\mathbb{M}$에서 $\mathbb{L}$로의 $\mathbb{K}$-algebra homomorphism들의 집합은 $\mathbb{L}$-벡터공간 $\Hom_\mathbb{K}(\mathbb{M},\mathbb{L})$의 free subset이다. 특히 만일 $\mathbb{M}/\mathbb{K}$가 finite degree extension이라면 이 집합의 원소의 개수는 많아야 $[\mathbb{M}:\mathbb{K}]$개다.
+두 extension $\mathbb{L}/\mathbb{K}$, $\mathbb{M}/\mathbb{K}$에 대하여, $\mathbb{M}$에서 $\mathbb{L}$로의 morphism들의 집합은 $\mathbb{L}$-벡터공간으로서 free이다. 특히 만일 $\mathbb{M}/\mathbb{K}$가 finite degree extension이라면 이 집합의 원소의 개수는 많아야 $[\mathbb{M}:\mathbb{K}]$개다.
 :::
 ::: 증명
 $A=\mathbb{M}$으로 두고 [정리 1](#thm1)을 사용하면 된다. 둘째 주장은 $\Hom_\mathbb{K}(\mathbb{M},\mathbb{L})$이 $\mathbb{L}$-벡터공간으로서 $[\mathbb{M}:\mathbb{K}]$차원이기 때문에 당연하다. 
@@ -94,7 +90,7 @@ $A=\mathbb{M}$으로 두고 [정리 1](#thm1)을 사용하면 된다. 둘째 주
 더 나아가, 만일 $\mathbb{K}$가 무한집합이라면 이들은 *algebraically independent*이기도 하다. 
 
 ::: 정리 4
-Infinite field $\mathbb{K}$와 extension $\mathbb{L}/\mathbb{K}$가 주어졌다 하고, $\mathbb{K}$-algebra $A$를 고정하자. 만일 서로 다른 $\mathbb{K}$-algebra homomorphism들 $u_1,\ldots, u_n:A \rightarrow \mathbb{L}$에 대하여, 다항식 $f\in \mathbb{L}[\x_1,\ldots, \x_n]$이 항등적으로 $f(u_1,\ldots, u_n)=0$을 만족한다면 $f=0$이어야 한다.
+무한한 field $\mathbb{K}$와 extension $\mathbb{L}/\mathbb{K}$가 주어졌다 하고, $\mathbb{K}$-algebra $A$를 고정하자. 만일 서로 다른 $\mathbb{K}$-algebra homomorphism들 $u_1,\ldots, u_n:A \rightarrow \mathbb{L}$에 대하여, 다항식 $f\in \mathbb{L}[\x_1,\ldots, \x_n]$이 항등적으로 $f(u_1,\ldots, u_n)=0$을 만족한다면 $f=0$이어야 한다.
 :::
 ::: 증명
 $(u_1(x), \dots, u_n(x))$의 꼴을 가지는 $\mathbb{L}^n$의 부분집합을 $B$라 하자. 그럼 [정리 1](#thm1)로부터 우리는 
@@ -265,7 +261,7 @@ $$h(\mathbb{L})=h(\mathbb{L}')\leq h(\Omega)$$
 이 언어를 사용하면 [따름정리 7](#cor7)은 다음과 같이 번역된다. 
 
 ::: 명제 13
-Finite degree commutative $\mathbb{K}$-algebra $A$에 대하여, $[A:\mathbb{K}]_s\leq [A:\mathbb{K}]$가 성립하며, 등식이 성립하는 것은 $A$가 étale algebra인 것과 동치이다. 
+Finite degree commutative $\mathbb{K}$-algebra $A$에 대하여, $[A:\mathbb{K}]_s\leq [A:\mathbb{K}]$가 성립하며, 등식은 $A$가 étale algebra일 경우 성립한다. 
 :::
 
 특히 이를 [명제 12](#prop12)와 조합하면 다음의 따름정리를 얻는다. 
@@ -273,9 +269,9 @@ Finite degree commutative $\mathbb{K}$-algebra $A$에 대하여, $[A:\mathbb{K}]
 ::: 따름정리 14
 다음이 성립한다. 
 
-1. $0$이 아닌 임의의 두 finite degree commutative $\mathbb{K}$-algebra $A,B$에 대하여, $A\otimes_\mathbb{K}B$가 étale인 것과 이들 각각이 étale인 것이 동치이다. 
+1. 임의의 두 finite degree commutative $\mathbb{K}$-algebra $A,B$에 대하여, $A\otimes_\mathbb{K}B$가 étale인 것과 이들 각각이 étale인 것이 동치이다. 
 2. 임의의 extension $\mathbb{K}'/\mathbb{K}$에 대하여, finite degree $\mathbb{K}$-algebra $A$가 étale인 것과 $A_{(\mathbb{K}')}$가 étale인 것이 동치이다. 
-3. 임의의 extension $\mathbb{K}'/\mathbb{K}$, $0$이 아닌 finite degree $\mathbb{K}'$-algebra $A'$에 대하여, $A'$가 $\mathbb{K}$에 대해 étale인 것은 $A'$가 $\mathbb{K}'$에 대해 étale이고 $\mathbb{K}'$가 $\mathbb{K}$에 대해 étale인 것과 동치이다. 
+3. 임의의 extension $\mathbb{K}'/\mathbb{K}$, finite degree $\mathbb{K}'$-algebra $A'$에 대하여, $A'$가 $\mathbb{K}$에 대해 étale인 것은 $A'$가 $\mathbb{K}'$에 대해 étale이고 $\mathbb{K}'$가 $\mathbb{K}$에 대해 étale인 것과 동치이다. 
 :::
 
 ---

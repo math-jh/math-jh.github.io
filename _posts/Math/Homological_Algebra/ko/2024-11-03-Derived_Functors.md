@@ -10,9 +10,7 @@ sidebar:
 
 date: 2024-11-03
 weight: 5
-revising: true
 
-drift_needed: true
 
 ---
 
@@ -42,11 +40,11 @@ $$0\longrightarrow A\longrightarrow B\longrightarrow C\longrightarrow 0$$
     가 exact이다.
 2. (Naturality) Short exact sequence들 사이의 homomorphism
     
-    {% diagram Math/Homological_Algebra/Derived_Functors-1.svg width="18.88em" alt="morphism_of_short_exact_sequence" %}
+    {% diagram frozen/635a8f80/Math/Homological_Algebra/Derived_Functors-1.svg width="19.34em" alt="morphism_of_short_exact_sequence" %}
 
     이 주어졌을 때, 다음의 diagram
 
-    {% diagram Math/Homological_Algebra/Derived_Functors-2.svg width="34.53em" alt="naturality_of_delta_functor" %}
+    {% diagram frozen/635a8f80/Math/Homological_Algebra/Derived_Functors-2.svg width="35.61em" alt="naturality_of_delta_functor" %}
 
     이 commute한다.
 :::
@@ -71,13 +69,11 @@ $$0\longrightarrow A\longrightarrow B\longrightarrow C\longrightarrow 0$$
 
 마다 commute하도록 하는 $\alpha_n:S_n\Rightarrow T_n$들의 모임이다. 
 
-{% diagram Math/Homological_Algebra/Derived_Functors-3.svg width="41.09em" alt="morphism_of_delta_functor" %}
+{% diagram frozen/635a8f80/Math/Homological_Algebra/Derived_Functors-3.svg width="41.13em" alt="morphism_of_delta_functor" %}
 
 ::: 정의 3
 임의의 $\delta$-functor $T$가 *universal $\delta$-functor<sub>보편 $\delta$-함자</sub>*라는 것은 임의의 $\delta$-functor $S$와 natural transformation $\alpha_0:S_0\rightarrow T_0$이 주어질 때마다, 이를 확장하는 유일한 $\delta$-functor들 사이의 morphism $(\alpha_n:S_n\Rightarrow T_n)$이 존재하는 것이다.
 :::
-
-Cohomological $\delta$-functor의 경우 위의 정의를 $\mathcal{A}^\op,\mathcal{B}^\op$에서 읽어야 하므로 natural transformation의 방향이 뒤집힌다. 즉 cohomological $\delta$-functor $T$가 universal이라는 것은 임의의 $S$와 $\alpha^0:T^0\rightarrow S^0$마다 이를 확장하는 유일한 morphism $T\rightarrow S$가 존재한다는 뜻이다.
 
 ## 유도함자
 
@@ -145,15 +141,11 @@ $$0 \rightarrow P_n \rightarrow Q_n \rightarrow R_n \rightarrow 0$$
 
 $$0 \rightarrow F(P_\bullet) \rightarrow F(Q_\bullet) \rightarrow F(R_\bullet) \rightarrow 0$$
 
-또한 short exact sequence이다. 각 $n$에서 위의 sequence가 split exact이라는 것은 $Q_n$이 $P_n$과 $R_n$의 biproduct이고 주어진 두 morphism이 각각 그 inclusion과 projection이라는 것과 같은데, additive functor $F$는 biproduct와 그 구조 morphism들을 보존하므로 $F(Q_n)$ 또한 $F(P_n)$과 $F(R_n)$의 biproduct가 되기 때문이다. 여기에서 homology sequence를 생각하면 원하는 connecting map들과, left derived functor들의 long exact sequence
+또한 short exact sequence이며 ([\[다중선형대수학\] §Hom과 텐서곱, ⁋명제 1](/ko/math/multilinear_algebra/hom_and_tensor#prop1)), 여기에서 homology sequence를 생각하면 원하는 connecting map들과, left derived functor들의 long exact sequence
 
 $$\cdots\overset{\delta}{\longrightarrow}L_iF(A)\longrightarrow L_iF(B)\longrightarrow L_iF(C)\overset{\delta}{\longrightarrow}L_{i-1}F(A)\longrightarrow L_{i-1}F(B)\longrightarrow L_{i-1}F(C)\overset{\delta}{\longrightarrow}\cdots$$
 
-를 얻는다.
-
-이제 [정의 1](#def1)의 두 번째 조건을 확인하자. 위의 short exact sequence에서 또 다른 short exact sequence $0 \rightarrow A' \rightarrow B' \rightarrow C' \rightarrow 0$으로의 morphism이 주어졌다 하고, 후자에 대해서도 같은 방법으로 $P_\bullet'$, $R_\bullet'$과 $Q_\bullet'$을 잡자. [§분해, ⁋정리 6](/ko/math/homological_algebra/resolutions#thm6)을 $A \rightarrow A'$과 $C \rightarrow C'$에 각각 적용하면 chain map $P_\bullet \rightarrow P_\bullet'$과 $R_\bullet \rightarrow R_\bullet'$을 얻는다. 한편 [§분해, ⁋보조정리 7](/ko/math/homological_algebra/resolutions#lem7)의 construction에서 $Q_n=P_n\oplus R_n$, $Q_n'=P_n'\oplus R_n'$이고 두 differential이 모두 upper triangular이므로, 각 $R_n$이 projective인 것을 이용하여 [§분해, ⁋정리 6](/ko/math/homological_algebra/resolutions#thm6)의 증명과 같은 귀납법으로 $B \rightarrow B'$ 위의 chain map $Q_\bullet \rightarrow Q_\bullet'$을 만들 수 있다. 이 때 이 chain map을 위의 두 chain map과 함께 택하면 complex들의 두 short exact sequence 사이의 morphism을 이루도록 할 수 있고, 여기에 $F$를 취한 뒤 [§긴 완전열, ⁋명제 2](/ko/math/homological_algebra/long_exact_sequence#prop2)를 적용하면 원하는 commutativity를 얻는다.
-
-또 이렇게 만들어진 $\delta$는 $P_\bullet$, $R_\bullet$과 이들로부터 얻은 $Q_\bullet$의 선택에 의존하지 않는다. 하나의 short exact sequence에 대한 두 개의 선택을 두고 위의 논증을 identity morphism에 적용하면 complex들의 두 short exact sequence 사이의 morphism을 얻는데, 이것이 $L_iF$들 위에서 유도하는 morphism은 [보조정리 5](#lem5)의 증명에서 얻어지는 identification과 같다. 따라서 [§긴 완전열, ⁋명제 2](/ko/math/homological_algebra/long_exact_sequence#prop2)의 commutativity는 두 선택에서 온 $\delta$가 이 identification 아래에서 일치한다는 것을 말해준다.
+를 얻는다. 이렇게 얻어진 정보가 [정의 1](#def1)의 두 번째 조건을 만족한다는 것은 [§분해, ⁋정리 6](/ko/math/homological_algebra/resolutions#thm6)을 사용하면 된다.
 :::
 
 뿐만 아니라, 이들은 [정의 3](#def3)의 센스에서 *universal* homological $\delta$-functor를 정의한다. 이에 대한 증명은 생략하였다. 

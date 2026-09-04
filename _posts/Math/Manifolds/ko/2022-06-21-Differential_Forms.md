@@ -10,14 +10,12 @@ sidebar:
 
 date: 2022-06-21
 weight: 12
-revising: true
-drift_needed: true
 
 ---
 
 ## 벡터다발들
 
-임의의 유한차원 벡터공간 $V$와 음이 아닌 정수 $r,s$에 대하여 $\mathcal{T}^{r,s}(V)=V^{\otimes r}\otimes(V^\ast)^{\otimes s}$로 두기로 한다. 그럼 $\mathcal{T}^{r,s}(-)$은 tensor functor와 dual functor를 tensor product로 엮어 얻어지고, $\bigwedge(-)$은 $\bigwedge\nolimits^k(-)$들을 유한하게 direct sum하여 얻어지므로 이 둘 또한 smooth functor이다. 따라서 [§접다발과 여접다발, ⁋예시 5](/ko/math/manifolds/tangent_and_cotangent_bundles#ex5)와 [§접다발과 여접다발, ⁋정리 6](/ko/math/manifolds/tangent_and_cotangent_bundles#thm6)을 이용하면 다음을 정의할 수 있다.
+[§접다발과 여접다발, ⁋예시 5](/ko/math/manifolds/tangent_and_cotangent_bundles#ex5)와 [§접다발과 여접다발, ⁋정리 6](/ko/math/manifolds/tangent_and_cotangent_bundles#thm6)을 이용하면 다음을 정의할 수 있다.
 
 ::: 정의 1
 Manifold $M$에 대하여, 
@@ -39,7 +37,7 @@ $$\omega=\alpha^1\otimes\cdots\otimes \alpha^r\otimes u_{r+1}\otimes\cdots\otime
 
 $$(\omega,u)=\alpha^1(u_1)\alpha^2(u_2)\cdots \alpha^{r+s}(u_{r+s})$$
 
-으로 정의하자. 그럼 $(-,-)$은 non-degenerate pairing이므로 $\omega\mapsto(\omega,-)$은 단사인 linear map $\mathcal{T}^{r,s}(T_p^\ast M)\rightarrow\mathcal{T}^{r,s}(T_pM)^\ast$이 된다. ([\[선형대수학\] §쌍대공간, ⁋명제 4](/ko/math/linear_algebra/dual_space#prop4)) 두 공간의 차원은 모두 $(\dim T_pM)^{r+s}$으로 유한하고 서로 같으므로, 이 단사인 linear map은 isomorphism이 되어 $\mathcal{T}^{r,s}(T_p^\ast M)\cong\mathcal{T}^{r,s}(T_pM)^\ast$이 성립한다.
+으로 정의하자. 그럼 $(-,-)$은 non-degenerate pairing이므로 $\mathcal{T}^{r,s}(T_p^\ast M)\cong\mathcal{T}^{r,s}(T_pM)^\ast$이 성립한다. ([\[선형대수학\] §쌍대공간, ⁋따름정리 5](/ko/math/linear_algebra/dual_space#cor5))
 
 이와 유사하게, 두 원소
 
@@ -73,7 +71,7 @@ $$(\omega\wedge\eta)_p=\omega_p\wedge\eta_p\qquad\text{for all $p\in M$}$$
 
 $$\Omega^\ast(M)=\bigoplus_{k=0}^n\Omega^k(M)$$
 
-으로 생각할 수 있다. 뿐만 아니라, $\Omega^\ast(M)$에서의 $\mathbb{R}$에 의한 스칼라곱은 사실 각 점 $p$마다 수행할 수 있기 때문에, $\Omega^\ast(M)$의 계수를 $C^\infty(M)$으로 생각할 수도 있다. 대수적으로 이는 degree $0$ 성분 $\Omega^0(M)$이 $C^\infty(M)$ 자신이어서 $\Omega^\ast(M)$의 subring을 이루는 데에서 오며, 앞으로 $\Omega^\ast(M)$은 항상 이러한 식으로 $\mathbb{N}$-graded $C^\infty(M)$-algebra 구조가 주어진 것으로 생각한다.
+으로 생각할 수 있다. 뿐만 아니라, $\Omega^\ast(M)$에서의 $\mathbb{R}$에 의한 스칼라곱은 사실 각 점 $p$마다 수행할 수 있기 때문에, $\Omega^\ast(M)$의 계수를 $C^\infty(M)$으로 생각할 수도 있다. 대수적으로 이는 ring homomorphism $\mathbb{R}\rightarrow C^\infty(M)$을 통해 coefficient ring을 바꾸어 주는 것으로 생각할 수도 있으며, 앞으로 $\Omega^\ast(M)$은 항상 이러한 식으로 $\mathbb{N}$-graded $C^\infty(M)$-algebra 구조가 주어진 것으로 생각한다.
 
 이제 $C^\infty$ 함수 $F:M\rightarrow N$이 주어졌다 하자. 그럼 linear map $\dd{F_p}:T_pM\rightarrow T_{F(p)}N$가 잘 정의된다. 따라서 $\dd{F_p}$의 dual map에 exterior algebra의 functoriality를 적용하면
 

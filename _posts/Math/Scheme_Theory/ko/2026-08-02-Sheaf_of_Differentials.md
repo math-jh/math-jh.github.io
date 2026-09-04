@@ -1,6 +1,6 @@
 ---
-title: "미분과 여접층"
-description: "A-대수의 Kähler differential 가군과 보편 도분을 상기하고, 추이 완전열과 conormal 완전열을 도입한다. 이어서 scheme 사상의 여접층을 대각선의 conormal로 정의하고 affine 위에서 연관층의 gluing과 일치함을 보이며, tangent sheaf와 Zariski 접공간, affine space 및 사영공간의 Euler 완전열을 다룬다. 마지막으로 여접층의 top exterior power로 canonical sheaf를 정의하고 사영공간에서 계산한 뒤 Serre 쌍대성을 진술한다."
+title: "Kähler 미분과 여접층"
+description: "A-대수의 Kähler 미분 가군과 보편 도분을 상기하고, 추이 완전열과 conormal 완전열을 도입한다. 이어서 scheme 사상의 여접층을 대각선의 conormal로 정의하고 affine 위에서 연관층의 gluing과 일치함을 보이며, tangent sheaf와 Zariski 접공간, affine space 및 사영공간의 Euler 완전열을 다룬다. 마지막으로 여접층의 top exterior power로 canonical sheaf를 정의하고 사영공간에서 계산한 뒤 Serre 쌍대성을 진술한다."
 excerpt: "Kähler differentials, the cotangent sheaf Ω_{X/S}, the tangent sheaf, the Euler sequence on P^n, and the canonical sheaf"
 
 categories: [Math / Scheme Theory]
@@ -10,8 +10,6 @@ sidebar:
 
 date: 2026-06-21
 weight: 19
-revising: true
-drift_needed: true
 
 ---
 
@@ -162,7 +160,7 @@ $$\begin{aligned}
 
 이 성립하므로 $\delta$는 $A$-derivation이다. 따라서 universal property에 의하여 $\Omega_{B/A} \rightarrow \mathfrak{a}/\mathfrak{a}^2$이 유도되고, $\mathfrak{a}$가 $b\otimes 1-1\otimes b$ 꼴의 원소들로 생성되며 $\Omega_{B/A}$가 $\dd{b}$들로 생성되므로 이것이 $\theta$의 역임은 generator 위에서 확인된다.
 
-한편 $R=B\otimes_AB$라 두면 $\Delta$는 surjection $m:R \rightarrow R/\mathfrak{a}\cong B$로부터 오는 closed embedding이므로, affine 위에서 pullback $\Delta^\ast$가 하는 일은 $R$-module에 $-\otimes_RB$를 적용하는 것이다. 그런데 $\mathfrak{a}$가 $\mathfrak{a}/\mathfrak{a}^2$를 소멸시켜 그 $R$-module 구조가 이미 $R/\mathfrak{a}=B$를 통해 주어지므로 $(\mathfrak{a}/\mathfrak{a}^2)\otimes_RB\cong \mathfrak{a}/\mathfrak{a}^2$이고, 따라서 다음의 isomorphism
+한편 $R=B\otimes_AB$라 두면 $\Delta$는 surjection $m:R \rightarrow R/\mathfrak{a}\cong B$로부터 오는 closed immersion이므로, affine 위에서 pullback $\Delta^\ast$가 하는 일은 $R$-module에 $-\otimes_RB$를 적용하는 것이다. 그런데 $\mathfrak{a}$가 $\mathfrak{a}/\mathfrak{a}^2$를 소멸시켜 그 $R$-module 구조가 이미 $R/\mathfrak{a}=B$를 통해 주어지므로 $(\mathfrak{a}/\mathfrak{a}^2)\otimes_RB\cong \mathfrak{a}/\mathfrak{a}^2$이고, 따라서 다음의 isomorphism
 
 $$\Delta^\ast\widetilde{\mathfrak{a}/\mathfrak{a}^2}\cong \widetilde{\mathfrak{a}/\mathfrak{a}^2}\cong \widetilde{\Omega_{B/A}}$$
 
@@ -177,7 +175,7 @@ $$\Delta^\ast\widetilde{\mathfrak{a}/\mathfrak{a}^2}\cong \widetilde{\mathfrak{a
 
 $$\psi^\ast\Omega_{S'/S} \rightarrow \Omega_{X/S} \rightarrow \Omega_{X/S'} \rightarrow 0$$
 
-을 얻으며, closed embedding $\iota:Z\hookrightarrow Y$가 ideal sheaf $\mathcal{J}$로 주어질 때 [명제 2](#prop2)를 옮기면 conormal exact sequence
+을 얻으며, closed immersion $\iota:Z\hookrightarrow Y$가 ideal sheaf $\mathcal{J}$로 주어질 때 [명제 2](#prop2)를 옮기면 conormal exact sequence
 
 $$\mathcal{J}/\mathcal{J}^2 \rightarrow \iota^\ast\Omega_{Y/S} \rightarrow \Omega_{Z/S} \rightarrow 0$$
 
@@ -233,7 +231,7 @@ $$T_xX=\bigl(\Omega_{X/\mathbb{K}}\otimes_{\mathcal{O}_X}\kappa(x)\bigr)^\vee=\H
 로 정의한다.
 :::
 
-이 정의는 variety 위에서 local ring의 maximal ideal로 주었던 묘사와 일치한다. ([\[대수다양체\] §접공간과 매끄러움, ⁋정의 1](/ko/math/algebraic_varieties/tangent_spaces_and_smoothness#def1)) $x$가 residue field $\kappa(x)=\mathbb{K}$를 가지는 점, 곧 $\mathbb{K}$-point이고 $(\mathcal{O}_{X,x}, \mathfrak{m}_x)$가 그 local ring이라 하자. Conormal exact sequence를 stalk에서 분석하면 canonical map $\mathfrak{m}_x/\mathfrak{m}_x^2 \rightarrow \Omega_{X/\mathbb{K}}\otimes\kappa(x)$가 전사임을 얻는데, 이 sequence는 왼쪽에서 exact일 이유가 없으므로 단사성은 다른 곳에서 와야 한다. 그것을 주는 것이 $\mathbb{K}$-point라는 가정으로, 이 경우 $\mathcal{O}_{X,x} \rightarrow \kappa(x)=\mathbb{K}$가 $\mathbb{K}$-algebra homomorphism으로서 갈라지므로 $f\mapsto (f-\bar f)+\mathfrak{m}_x^2$가 $\mathbb{K}$-derivation이 되어 위 map의 역을 유도하고, 따라서 $\Omega_{X/\mathbb{K}}\otimes \kappa(x)\cong \mathfrak{m}_x/\mathfrak{m}_x^2$이 성립한다. 그럼 Zariski tangent space는 $(\mathfrak{m}_x/\mathfrak{m}_x^2)^\vee$, 즉 cotangent space $\mathfrak{m}_x/\mathfrak{m}_x^2$의 쌍대이다. 이 경우 한 점에서의 차원 $\dim_{\kappa(x)}T_xX$가 그 점의 국소적 차원 $\dim \mathcal{O}_{X,x}$과 같은지 여부가 그 점이 nonsingular한지를 가르는 기준이 되며, $\mathcal{O}_{X,x}$가 Noetherian이면 일반적으로 $\dim_{\kappa(x)}T_xX\geq \dim \mathcal{O}_{X,x}$이다.
+이 정의는 variety 위에서 local ring의 maximal ideal로 주었던 묘사와 일치한다. ([\[대수다양체\] §접공간과 매끄러움, ⁋정의 1](/ko/math/algebraic_varieties/tangent_spaces_and_smoothness#def1)) $x$가 residue field $\kappa(x)=\mathbb{K}$를 가지는 점, 곧 $\mathbb{K}$-rational point이고 $(\mathcal{O}_{X,x}, \mathfrak{m}_x)$가 그 local ring이라 하자. Conormal exact sequence를 stalk에서 분석하면 canonical map $\mathfrak{m}_x/\mathfrak{m}_x^2 \rightarrow \Omega_{X/\mathbb{K}}\otimes\kappa(x)$가 전사임을 얻는데, 이 sequence는 왼쪽에서 exact일 이유가 없으므로 단사성은 다른 곳에서 와야 한다. 그것을 주는 것이 $\mathbb{K}$-rational이라는 가정으로, 이 경우 $\mathcal{O}_{X,x} \rightarrow \kappa(x)=\mathbb{K}$가 $\mathbb{K}$-algebra homomorphism으로서 갈라지므로 $f\mapsto (f-\bar f)+\mathfrak{m}_x^2$가 $\mathbb{K}$-derivation이 되어 위 map의 역을 유도하고, 따라서 $\Omega_{X/\mathbb{K}}\otimes \kappa(x)\cong \mathfrak{m}_x/\mathfrak{m}_x^2$이 성립한다. 그럼 Zariski tangent space는 $(\mathfrak{m}_x/\mathfrak{m}_x^2)^\vee$, 즉 cotangent space $\mathfrak{m}_x/\mathfrak{m}_x^2$의 쌍대이다. 한 점에서의 차원 $\dim_{\kappa(x)}T_xX$가 그 점의 국소적 차원 $\dim \mathcal{O}_{X,x}$과 같은지 여부가 그 점이 nonsingular한지를 가르는 기준이 되며, $\mathcal{O}_{X,x}$가 Noetherian이면 일반적으로 $\dim_{\kappa(x)}T_xX\geq \dim \mathcal{O}_{X,x}$이다.
 
 ## 아핀공간과 사영공간의 미분층
 
@@ -305,7 +303,7 @@ $$\frac{\x_l}{\x_i}=\frac{\x_l}{\x_k}\cdot\frac{\x_k}{\x_i},\qquad d\Bigl(\frac{
 
 $$0 \rightarrow \Omega_{\mathbb{P}^n_\mathbb{Z}/\mathbb{Z}} \rightarrow \mathcal{O}_{\mathbb{P}^n_\mathbb{Z}}(-1)^{\oplus(n+1)} \rightarrow \mathcal{O}_{\mathbb{P}^n_\mathbb{Z}} \rightarrow 0$$
 
-를 생각하면, 우리는 이미 위의 증명에서 $\Omega_{\mathbb{P}^n_\mathbb{Z}/\mathbb{Z}}$가 각 $U_i$ 위에서 rank $n$ free sheaf인 것을 확인하였고, 나머지 두 개의 sheaf 또한 정의에 의하여 locally free이다. 또 이 sequence는 각각의 $U_i$ 위에서 split하는데, 위의 증명에서 $\x_i^{-1}e_i$가 $(\ast)$에 의하여 $1$로 옮겨감을 보았으므로 $1\mapsto \x_i^{-1}e_i$가 $\mathcal{O}_{U_i} \rightarrow \mathcal{O}(-1)^{\oplus(n+1)}\vert_{U_i}$인 $\mathcal{O}_{U_i}$-module homomorphism으로서 $(\ast)$의 splitting을 주기 때문이다. 그런데 split exact sequence는 additive functor가 보존하고 exactness는 local property이므로, $\pi^\ast$를 취하면 임의의 scheme $S$에 대하여 Euler exact sequence
+를 생각하면, 우리는 이미 위의 증명에서 $\Omega_{\mathbb{P}^n_\mathbb{Z}/\mathbb{Z}}$가 각 $U_i$ 위에서 rank $n$ free sheaf인 것을 확인하였고, 나머지 두 개의 sheaf 또한 정의에 의하여 locally free이고, 특히 마지막 $\mathcal{O}_{\mathbb{P}^n_\mathbb{Z}}$의 경우 free이므로 projective이며 ([\[다중선형대수학\] §사영가군, 단사가군, 평탄가군, ⁋명제 4](/ko/math/multilinear_algebra/various_modules#prop4)), 따라서 각 $U_i$ 위에서 이 sequence는 split한다. ([\[다중선형대수학\] §완전열, ⁋명제 10](/ko/math/multilinear_algebra/exact_sequences#prop10)) 그런데 split exact sequence는 additive functor가 보존하고 exactness는 local property이므로, $\pi^\ast$를 취하면 임의의 scheme $S$에 대하여 Euler exact sequence
 
 $$0 \rightarrow \Omega_{\mathbb{P}^n_S/S} \rightarrow \mathcal{O}_{\mathbb{P}^n_S}(-1)^{\oplus(n+1)} \rightarrow \mathcal{O}_{\mathbb{P}^n_S} \rightarrow 0$$
 
@@ -380,7 +378,7 @@ $$H^i(X, \mathcal{E})\cong H^{n-i}\bigl(X, \omega_X\otimes_{\mathcal{O}_X}\mathc
 
 이 정리의 증명은 $\mathbb{P}^n$ 위에서 trace map과 cup product로 만든 pairing이 perfect pairing임을 보인 뒤 이를 finite surjective morphism을 따라 일반의 $X$로 옮기는 논증을 사용하는데, 구체적인 증명은 이 글의 범위를 넘어서므로 [\[대수다양체\] §세르 쌍대성, §§사영공간에서의 세르 쌍대성](/ko/math/algebraic_varieties/serre_duality#사영공간에서의-세르-쌍대성)에 위임하기로 한다. 
 
-한편 위의 논의에서 우리는 $\Omega_{X/\mathbb{K}}$가 locally free이기를 요구하였는데, 만일 이것이 성립하지 않는다면 rank가 일정하지 않아 top exterior power를 고를 근거부터가 없어지게 된다. 이와 같은 종류의 일반화 또한 [\[대수다양체\] §세르 쌍대성, §§세르 쌍대성의 일반화](/ko/math/algebraic_varieties/serre_duality#세르-쌍대성의-일반화)에서 이미 다룬 것으로, 이 경우 정리의 isomorphism을 $\Ext$로 끌어올리고 별도의 dualizing sheaf를 도입했어야 했다. 또, 우리가 보편적으로 관심을 갖는 대상은 $\mathbb{K}=\mathbb{C}$인 경우들이므로 상대적으로 덜 중요하기는 하지만, $\mathbb{K}$가 perfect field가 아니라면 $\Omega_{X/\mathbb{K}}$의 rank와 $X$의 차원이 달라지는 문제가 생길 수 있다는 사실 자체는 기억해둘 가치가 있다. 일반적으로 $\Omega_{X/S}$의 locally free 가정은 만일 $\varphi:X\rightarrow S$가 *smooth*라면 자동으로 성립하게 되는데, 이를 살펴보는 것이 [§매끄러운 사상과 에탈 사상](/ko/math/scheme_theory/smooth_and_etale_morphisms)의 목표이다. 
+한편 위의 논의에서 우리는 $\Omega_{X/\mathbb{K}}$가 locally free이기를 요구하였는데, 만일 이것이 성립하지 않는다면 rank가 일정하지 않아 top exterior power를 고를 근거부터가 없어지게 된다. 이와 같은 종류의 일반화 또한 [\[대수다양체\] §세르 쌍대성, §§세르 쌍대성의 일반화](/ko/math/algebraic_varieties/serre_duality#세르-쌍대성의-일반화)에서 이미 다룬 것으로, 이 경우 정리의 isomorphism을 $\Ext$로 끌어올리고 별도의 dualizing sheaf를 도입했어야 했다. 또, 우리가 보편적으로 관심을 갖는 대상은 $\mathbb{K}=\mathbb{C}$인 경우들이므로 상대적으로 덜 중요하기는 하지만, $\mathbb{K}$가 perfect field가 아니라면 $\Omega_{X/\mathbb{K}}$의 rank와 $X$의 차원이 달라지는 문제가 생길 수 있다는 사실 자체는 기억해둘 가치가 있다. 일반적으로 $\Omega_{X/S}$의 locally free 가정은 만일 $\varphi:X\rightarrow S$가 *smooth*라면 자동으로 성립하게 되는데, 이를 살펴보는 것이 [§매끄러운 사상과 étale 사상](/ko/math/scheme_theory/smooth_and_etale_morphisms)의 목표이다. 
 
 ---
 

@@ -10,8 +10,6 @@ sidebar:
 
 date: 2026-02-28
 weight: 6
-revising: true
-drift_needed: true
 
 ---
 
@@ -25,13 +23,11 @@ Root system $\Phi$의 구조는 simple root들 사이의 관계로 완전히 결
 Root system $\Phi$와 simple root들의 모임 $\Delta=\{\alpha_1,\ldots,\alpha_l\}$에 대하여, $\Phi$의 *Dynkin diagram<sub>딘킨 도표</sub>*은 다음과 같이 정의되는 그래프이다.
 
 1. 각 simple root $\alpha_i$에 대해 하나의 vertex를 둔다.
-2. 두 vertex $\alpha_i$, $\alpha_j$ ($i\neq j$) 사이에 $\langle\alpha_i,\alpha_j\rangle\langle\alpha_j,\alpha_i\rangle$개의 edge를 둔다.
+2. 두 vertex $\alpha_i$, $\alpha_j$ ($i\neq j$) 사이에 $\lvert\langle\alpha_i,\alpha_j\rangle\rvert$개의 edge를 둔다.
 3. 만일 $\lvert\alpha_i\rvert\neq\lvert\alpha_j\rvert$라면, 더 짧은 root를 향하는 arrow를 edge에 추가한다.
 :::
 
-Cartan matrix $A=(a_{ij})$에서 $a_{ij}=\langle\alpha_i,\alpha_j\rangle$이므로, Dynkin diagram은 Cartan matrix의 정보를 그래프로 표현한 것이라 생각할 수 있다. 두 vertex 사이의 edge 개수 $a_{ij}a_{ji}$는 두 첨자의 순서에 무관하며, $\alpha_i$와 $\alpha_j$가 이루는 각을 $\theta$라 하면 $a_{ij}a_{ji}=4\cos^2\theta$이다. ([§근계, ⁋정의 16](/ko/math/lie_theory/root_systems#def16) 이후의 계산) 서로 다른 두 simple root는 서로의 상수배가 아니므로 $\cos^2\theta<1$이고, 따라서 두 vertex 사이의 edge 개수는 $0,1,2,3$ 중 하나이다.
-
-한편 서로 다른 두 simple root에 대하여 $a_{ij}\leq 0$이 성립한다. 만일 $(\alpha_i,\alpha_j)>0$이라면 $a_{ij}$와 $a_{ji}$가 모두 $1$ 이상의 정수이고 그 곱이 $3$ 이하이므로 둘 중 적어도 하나는 $1$이며, 첨자를 바꾸어 $a_{ij}=1$이라 해도 좋다. 그럼 [§근계, ⁋정의 9](/ko/math/lie_theory/root_systems#def9)의 셋째 조건에 의하여 $s_{\alpha_j}(\alpha_i)=\alpha_i-a_{ij}\alpha_j=\alpha_i-\alpha_j$가 다시 root이다. 그런데 $\alpha_i-\alpha_j$와 $\alpha_j-\alpha_i$ 중 정확히 하나가 positive root이므로 $\alpha_i=\alpha_j+(\alpha_i-\alpha_j)$와 $\alpha_j=\alpha_i+(\alpha_j-\alpha_i)$ 중 하나는 두 positive root의 합이 되고, 이는 $\alpha_i$와 $\alpha_j$가 simple root라는 것에 모순이다. 따라서 $a_{ij}\in\{0,-1,-2,-3\}$이고, 두 vertex 사이에 edge가 있는 것은 $a_{ij}\leq -1$인 것, 곧 $(\alpha_i,\alpha_j)\neq 0$인 것과 동치이다.
+Cartan matrix $A=(a_{ij})$에서 $a_{ij}=\langle\alpha_i,\alpha_j\rangle$이므로, Dynkin diagram은 Cartan matrix의 정보를 그래프로 표현한 것이라 생각할 수 있다. [§근계](/ko/math/lie_theory/root_systems)에서 살펴본 것과 같이 $a_{ij}\leq 0$이고 $a_{ij}=0$인 것은 $a_{ji}=0$인 것과 동치이므로, edge의 개수는 대칭적으로 결정된다. 또한 $a_{ij}\in\{0,-1,-2,-3\}$이므로 두 vertex 사이의 edge는 최대 3개이다.
 
 ::: 예시 2
 [§근계, ⁋예시 13](/ko/math/lie_theory/root_systems#ex13)의 $\Phi(A_n)$을 생각하자. Simple root는 $\alpha_i=e_i-e_{i+1}$ ($1\leq i\leq n$)로 선택할 수 있다. 이들 사이의 내적을 계산하면
@@ -44,7 +40,7 @@ $$(\alpha_i,\alpha_j)=\begin{cases}2 & i=j\\ -1 & \lvert i-j\rvert=1\\ 0 & \text
 Dynkin diagram의 핵심 성질은 다음과 같다.
 
 ::: 명제 3
-Root system $\Phi$의 Dynkin diagram의 각 connected component는 $\Phi$의 irreducible root subsystem에 대응한다.
+Dynkin diagram은 연결되어 있거나, connected component들의 disjoint union으로 나타난다. 각 connected component는 irreducible root system에 대응한다.
 :::
 ::: 증명
 Dynkin diagram의 connected component들은 simple root들의 partition $\Delta=\Delta_1\sqcup\cdots\sqcup\Delta_k$를 정의한다. 각 $\Delta_i$로 생성되는 root subsystem $\Phi_i$를 생각하면, [정의 1](#def1)에 의하여 서로 다른 $\Delta_i$에 속한 root들은 orthogonal이다. 따라서 $\Phi=\Phi_1\sqcup\cdots\sqcup\Phi_k$이고, 각 $\Phi_i$는 irreducible이다.
@@ -70,22 +66,16 @@ $$(\alpha,\alpha)\leq 2(k-1)-2(k-1)=0$$
 :::
 
 ::: 명제 5
-Dynkin diagram에서 한 vertex에 붙는 edge의 총 개수는 $4$를 넘지 않는다. 즉, 임의의 simple root $\alpha$에 대하여
+Dynkin diagram에서 한 vertex에서 나가는 edge의 총 개수는 $4$를 넘지 않는다. 즉, 임의의 simple root $\alpha$에 대하여
 
-$$\sum_{\beta\in\Delta,\beta\neq\alpha}\langle\alpha,\beta\rangle\langle\beta,\alpha\rangle\leq 4$$
+$$\sum_{\beta\in\Delta,\beta\neq\alpha}\lvert\langle\alpha,\beta\rangle\rvert\leq 4$$
 
 이다.
 :::
 ::: 증명
-$\alpha$와 이웃한 simple root들을 $\beta_1,\ldots,\beta_m$이라 하자. 만일 서로 다른 두 이웃 $\beta_i,\beta_j$가 다시 서로 이웃이라면 $\alpha,\beta_i,\beta_j$가 cycle을 이루어 [명제 4](#prop4)에 모순이므로, $\beta_i$들 사이에는 edge가 없다. 따라서 [정의 1](#def1)에 의하여 $i\neq j$이면 $(\beta_i,\beta_j)=0$이고, 단위벡터 $\epsilon_i=\beta_i/\lvert\beta_i\rvert$들은 orthonormal system을 이룬다. 이제 Bessel 부등식
+Simple root $\alpha$에 수직인 hyperplane을 $H_\alpha$라 하자. $\alpha$와 이웃한 simple root들 $\beta_1,\ldots,\beta_m$을 생각하면, 각 $\beta_i$는 $H_\alpha$와 다른 각도를 이룬다. 
 
-$$\sum_{i=1}^m(\alpha,\epsilon_i)^2\leq(\alpha,\alpha)$$
-
-을 생각하자. 각 $i$에 대하여
-
-$$\langle\alpha,\beta_i\rangle\langle\beta_i,\alpha\rangle=4\frac{(\alpha,\beta_i)^2}{(\alpha,\alpha)(\beta_i,\beta_i)}=\frac{4(\alpha,\epsilon_i)^2}{(\alpha,\alpha)}$$
-
-이므로, 위 부등식의 양변에 $4/(\alpha,\alpha)$를 곱하면 $\sum_i\langle\alpha,\beta_i\rangle\langle\beta_i,\alpha\rangle\leq 4$를 얻는다. $\alpha$와 이웃하지 않은 simple root $\beta$는 $\langle\alpha,\beta\rangle=0$이라 좌변의 합에 기여하지 않으므로 이것이 원하는 부등식이다.
+$\beta_i$를 $H_\alpha$에 정사영한 벡터들의 linear independence로부터 $m\leq 3$임을 보일 수 있다. 또한 각 $\beta_i$에 대해 $\lvert\langle\alpha,\beta_i\rangle\rvert\leq 3$이므로 총합은 $4$를 넘지 않는다.
 :::
 
 ## ADE 분류
@@ -161,14 +151,14 @@ Borel subalgebra $\mathfrak{b}$에 대하여 다음이 성립한다.
 
 1. $\mathfrak{b}$는 solvable이다.
 2. $\mathfrak{b}$는 $\mathfrak{g}$의 maximal solvable subalgebra이다.
-3. $\mathfrak{g}$의 임의의 automorphism $\varphi$에 대하여 $\varphi(\mathfrak{b})$는 Cartan subalgebra $\varphi(\mathfrak{h})$와 그 위의 어떤 positive system에 대한 Borel subalgebra이다. 특히 $\mathfrak{g}$를 Lie algebra로 갖는 Lie group $G$와 $g\in G$에 대하여 $\Ad(g)\mathfrak{b}$는 Borel subalgebra이다.
+3. $\mathfrak{b}$의 모든 conjugate은 어떤 Borel subalgebra이다. 즉, 임의의 $g\in G$에 대하여 $\Ad(g)\mathfrak{b}$는 어떤 positive system $\Phi'^+$에 대한 Borel subalgebra이다.
 :::
 ::: 증명
 (1) $\mathfrak{b}$의 derived series를 생각하자. $\mathfrak{b}^{(1)}=[\mathfrak{b},\mathfrak{b}]=\mathfrak{n}$이고, $\mathfrak{n}$은 nilpotent이므로 $\mathfrak{b}$는 solvable이다. 구체적으로 $\mathfrak{n}$은 strictly upper triangular matrix들의 algebra와 유사한 구조를 갖는다.
 
 (2) $\mathfrak{b}$를 포함하는 solvable subalgebra $\mathfrak{s}$가 있다 하자. Root decomposition에 의하여 $\mathfrak{s}=\mathfrak{h}\oplus\bigoplus_{\alpha\in S}\mathfrak{g}_\alpha$의 꼴이어야 한다. 만일 $S$가 어떤 positive root를 포함하지 않는다면 $\mathfrak{s}\subseteq\mathfrak{b}$이고, 만일 $S$가 negative root $-\alpha$를 포함한다면 $\mathfrak{g}_\alpha,\mathfrak{g}_{-\alpha},[\mathfrak{g}_\alpha,\mathfrak{g}_{-\alpha}]$가 $\mathfrak{s}$ 안에서 $\mathfrak{sl}_2$의 사본을 이루고, $\mathfrak{sl}_2$는 simple이므로 $\mathfrak{s}$는 더 이상 solvable이 아니다. 따라서 $\mathfrak{s}=\mathfrak{b}$이다.
 
-(3) $\varphi$가 automorphism이므로 $\varphi(\mathfrak{h})$는 다시 Cartan subalgebra이고, $h\in\mathfrak{h}$와 $x\in\mathfrak{g}_\alpha$에 대하여 $[\varphi(h),\varphi(x)]=\varphi([h,x])=\alpha(h)\varphi(x)$이므로 $\varphi(\mathfrak{g}_\alpha)$는 $\varphi(\mathfrak{h})$에 대한 root $\alpha\circ\varphi^{-1}$의 root space이다. 즉 $\varphi$는 $\mathfrak{h}$에 대한 root system $\Phi$를 $\varphi(\mathfrak{h})$에 대한 root system 위로 일대일대응시키고, 이 대응은 [§근계, ⁋정의 15](/ko/math/lie_theory/root_systems#def15)의 두 조건을 보존하므로 $\Phi^+$의 상 역시 positive system이다. 따라서 $\varphi(\mathfrak{b})=\varphi(\mathfrak{h})\oplus\bigoplus_{\alpha\in\Phi^+}\varphi(\mathfrak{g}_\alpha)$는 Cartan subalgebra $\varphi(\mathfrak{h})$와 이 positive system에 대한 Borel subalgebra이다. 마지막 주장은 $\Ad(g)$가 $\mathfrak{g}$의 automorphism인 것으로부터 따라온다.
+(3) $\Ad(g)\mathfrak{b}$는 다시 maximal solvable subalgebra이므로, 위의 (2)에 의하여 어떤 positive system에 대한 Borel subalgebra이다.
 :::
 
 ## Borel subgroup과 flag variety
@@ -181,7 +171,7 @@ Complex semisimple Lie group $G_\mathbb{C}$의 *Borel subgroup<sub>보렐 부분
 $$\mathfrak{b}=\Lie(B)$$
 :::
 
-Connected Lie subgroup과 subalgebra 사이의 대응이 포함관계를 보존하고 connected Lie group이 solvable인 것은 그 Lie algebra가 solvable인 것과 동치이므로, [명제 10](#prop10)의 둘째 조건으로부터 $B$는 $G_\mathbb{C}$의 maximal connected solvable subgroup이다. 이제 quotient 공간을 정의하자.
+Borel subgroup $B$는 $G_\mathbb{C}$의 maximal connected solvable subgroup이다. 이제 quotient 공간을 정의하자.
 
 ::: 정의 12
 Complex semisimple Lie group $G_\mathbb{C}$와 그 Borel subgroup $B$에 대하여, *flag variety<sub>깃발 다양체</sub>*는 다음의 homogeneous space이다.
@@ -189,12 +179,10 @@ Complex semisimple Lie group $G_\mathbb{C}$와 그 Borel subgroup $B$에 대하�
 $$\mathcal{F}=G_\mathbb{C}/B$$
 :::
 
-$\mathcal{F}$는 [정의 9](#def9)에서 고정한 Cartan subalgebra와 positive system이 결정하는 $B$에 의존한다. 다만 $g\in G_\mathbb{C}$에 대한 $\Ad(g)$가 한 선택을 다른 선택으로 옮긴다면, [명제 10](#prop10)에 의하여 두 선택에 대응하는 Borel subgroup은 $B'=gBg^{-1}$을 만족하고 $xB\mapsto gxg^{-1}B'$가 $G_\mathbb{C}/B$와 $G_\mathbb{C}/B'$ 사이의 isomorphism을 준다.
-
 Flag variety라는 이름은 $\GL(n;\mathbb{C})$의 경우 $\mathcal{F}$가 $\mathbb{C}^n$의 complete flag들의 공간과 일치하기 때문에 붙여졌다. 일반적으로 flag variety는 projective variety이며, 이는 $G_\mathbb{C}$의 representation theory와 깊은 관계를 갖는다.
 
 ::: 예시 13
-$G_\mathbb{C}=\GL(n;\mathbb{C})$인 경우를 생각하자. $\GL(n;\mathbb{C})$는 semisimple이 아니라 reductive이지만, 아래에서 얻는 공간은 semisimple인 $\SL(n;\mathbb{C})$의 flag variety와 같다. $\SL(n;\mathbb{C})$가 이미 complete flag들 위에 transitive하게 작용하기 때문이다. Borel subgroup $B$는 upper triangular matrix들의 모임이고, flag variety $\GL(n;\mathbb{C})/B$는 $\mathbb{C}^n$의 complete flag
+$G_\mathbb{C}=\GL(n;\mathbb{C})$인 경우를 생각하자. Borel subgroup $B$는 upper triangular matrix들의 모임이고, flag variety $\GL(n;\mathbb{C})/B$는 $\mathbb{C}^n$의 complete flag
 
 $$0=V_0\subseteq V_1\subseteq V_2\subseteq\cdots\subseteq V_n=\mathbb{C}^n,\qquad \dim V_i=i$$
 

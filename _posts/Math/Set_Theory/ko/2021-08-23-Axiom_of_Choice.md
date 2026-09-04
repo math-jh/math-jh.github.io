@@ -1,6 +1,6 @@
 ---
 title: "선택공리"
-description: "선택공리의 정의와 동치 명제를 소개하고, 정렬 정리와 타르스키-부르바키 보조정리를 증명하며 초른의 보조정리와의 동치성을 보인다."
+description: "선택공리의 정의와 동치 명제를 소개하고, 정렬 정리와 타르스키-부르바키 보조정리를 증명하며 서수 사이의 순서관계를 정의한다."
 excerpt: "선택공리와 그 동치들"
 
 categories: [Math / Set Theory]
@@ -10,13 +10,11 @@ sidebar:
 
 date: 2021-08-23
 weight: 21
-revising: true
 
-drift_needed: true
 
 ---
 
-이번 글에서는 드디어 선택공리를 소개한다. 이후 선택공리와 동치인 Zermelo's theorem과 Zorn's lemma를 증명한다.
+이번 글에서는 드디어 선택공리를 소개한다. 이후 이전 글에서 다뤘던 ordinal number들 사이의 order relation을 정의한다.
 
 
 ## 선택공리와 그 동치들
@@ -93,11 +91,13 @@ Inductive set은 저자에 따라 전혀 다른 개념을 뜻하기도 하므로
 
 우선 Zermelo's theorem을 가정한다면 모든 집합은 well-ordered될 수 있으므로, 어떠한 $S\in\mathcal{P}(A)\setminus \{\emptyset\}$에 대해서도 least element가 존재한다. 이제 $p(S)$를 $S$의 least element로 정의하면 $p$가 원하는 choice function이다.
 
-이제 Zorn's lemma를 가정하고, 집합 $A$의 choice function을 만들자. 우선 $\mathcal{P}(A)\setminus\{\emptyset\}$의 부분모임을 정의역으로 갖고 그 정의역의 모든 $X$에 대하여 $f(X)\in X$를 만족하는 함수 $f$를 *partial choice function*이라 부르기로 하고, 이들을 모두 모아 $\mathcal{F}$라 하자. 정의역이 비어 있는 함수도 이 조건을 만족하므로 $\mathcal{F}$는 공집합이 아니다. 이제 $\mathcal{F}$의 각 원소들은 그 그래프로서 집합이므로, $\subseteq$에 의해 순서가 주어진다. 
+이제 Zorn's lemma를 가정하고, 집합 $A$의 choice function을 만들자. 우선 $A$의 어떤 부분집합 $X$에 대하여 $\mathcal{P}(X)\setminus\{\emptyset\}$ 위에 정의된 choice function들을 모아 이를 $\mathcal{F}$라 하자. 최소한 $X=\{a\}$ 위에서는 choice function이 존재하므로 $\mathcal{F}$는 공집합이 아니다. 이제 $\mathcal{F}$의 각 원소들은 집합이므로, $\subseteq$에 의해 순서가 주어진다. 
 
-이제 $\mathcal{F}$의 totally ordered subset $\mathcal{C}$가 주어졌다 하자. $\mathcal{C}$의 두 원소는 하나가 다른 하나의 확장이므로 둘 다 정의된 $X$에서 같은 값을 가지고, 따라서 $g=\bigcup_{f\in\mathcal{C}}f$는 $\mathcal{C}$에 속하는 함수들의 정의역을 모두 합친 것을 정의역으로 갖는 함수가 된다. 이 정의역의 각 $X$에 대하여 $g(X)$는 어떤 $f\in\mathcal{C}$의 값이므로 $g(X)\in X$이고, 곧 $g\in\mathcal{F}$이다. 그럼 $g$는 $\mathcal{C}$의 upper bound이다.
+이제 $\mathcal{F}$의 totally ordered subset $\mathcal{C}$가 주어졌다 하자. 그럼 $\bigcup_{X\in\mathcal{C}} F_X$는 정의역 $\mathcal{P}(\bigcup_{X\in\mathcal{C}} X)\setminus\{\emptyset\}$을 갖는 함수이므로, $\mathcal{C}$의 upper bound가 된다. 따라서 Zorn's lemma에 의해 어떤 maximal element가 존재한다. 이를 $F$라 하고 $\mathcal{P}(B)\setminus\{\emptyset\}$을 정의역이라 하자. 만일 $x\in A\setminus B$라면, $B$에 $x$를 추가하고 $\tilde{F}$를
 
-따라서 Zorn's lemma에 의해 $\mathcal{F}$는 maximal element를 갖는다. 이를 $F$라 하고 그 정의역을 $\mathcal{D}$라 하자. 만일 $\mathcal{D}$가 $\mathcal{P}(A)\setminus\{\emptyset\}$ 전체가 아니라면 $\mathcal{D}$에 속하지 않는 $S\in\mathcal{P}(A)\setminus\{\emptyset\}$가 존재하고, $S$는 공집합이 아니므로 원소 $s\in S$를 하나 얻는다. 이는 집합 하나에서 원소를 뽑는 것이므로 선택공리를 쓰지 않는다. 이제 $F$를 $\mathcal{D}\cup\{S\}$ 위로 확장해 $S$를 $s$로 보내면 다시 $\mathcal{F}$의 원소를 얻고, 이는 $F$의 maximality에 모순이다. 따라서 $\mathcal{D}=\mathcal{P}(A)\setminus\{\emptyset\}$, 즉 $F$는 $A$의 choice function이다.
+$$\tilde{F}(X)=\begin{cases}F(X)&\text{if }x\not\in X\\ x&\text{if }x\in X\end{cases}$$
+
+로 정의함으로써 $F$를 확장하는 choice function $\tilde{F}$를 얻는다. 이는 $F$의 maximality에 모순이므로 $A\setminus B=\emptyset$, 즉 $F$는 $A$의 choice function이다.
 
 ---
 **참고문헌** 

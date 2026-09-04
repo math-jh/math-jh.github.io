@@ -1,7 +1,7 @@
 ---
 title: "완전교차"
 description: "Global section들의 가족이 정의하는 vanishing scheme을 다루고, regular sequence로 잘리는 local complete intersection의 codimension이 자르는 방정식의 개수와 일치함을 보인다. Koszul 복합체가 주는 국소적인 자유 분해로부터 conormal sheaf가 rank k의 locally free sheaf임을 얻고, 사영공간 안에서 대역적으로 잘리는 경우에 Hilbert polynomial을 계산하여 그 degree가 자르는 방정식들의 degree의 곱임을 확인한다."
-excerpt: "Local complete intersection의 codimension, Koszul resolution, Hilbert polynomial과 degree"
+excerpt: "Local complete intersection의 codimension, Koszul 분해, Hilbert polynomial과 degree"
 
 categories: [Math / Scheme Theory]
 permalink: /ko/math/scheme_theory/complete_intersections
@@ -10,8 +10,6 @@ sidebar:
 
 date: 2025-03-08
 weight: 20
-revising: true
-drift_needed: true
 
 
 ---
@@ -118,7 +116,7 @@ $$0 \rightarrow \mathcal{O}_U^{\oplus\binom{k}{k}} \rightarrow \mathcal{O}_U^{\o
 우리는 앞서 $s_1,\ldots, s_k$가 $A$-regular sequence라면 $K(s_1,\ldots, s_k)$가 $A/(s_1,\ldots, s_k)$의 free resolution이 된다는 것을 살펴보았다. 이제 associated sheaf functor는 exact이므로 ([§준연접층, ⁋명제 6](/ko/math/scheme_theory/quasicoherent_sheaves#prop6)), 이를 associated sheaf로 옮겨도 그 exactness가 보존되며, 이것이 명제의 첫 부분을 준다. 마지막 항에 대해서는 $Z\cap U=Z(s_1,\ldots, s_k)$가 $\Spec A/(s_1,\ldots, s_k)$이고 closed embedding을 따라 그 structure sheaf를 밀어낸 것이 associated sheaf이므로 $(\iota_\ast\mathcal{O}_Z)\vert_U\cong \widetilde{A/(s_1,\ldots, s_k)}$이다.
 :::
 
-$Z$의 ideal sheaf $\mathcal{I}=\mathcal{I}_{Z/X}$에 대하여 $\mathcal{I}$는 $\mathcal{I}/\mathcal{I}^2$ 위에 자명하게 작용하므로, 그 $\mathcal{O}_X$-module 구조는 $\mathcal{O}_X/\mathcal{I}\cong\iota_\ast\mathcal{O}_Z$를 거쳐 주어지고 따라서 $\mathcal{I}/\mathcal{I}^2$은 $Z$ 위의 quasi-coherent sheaf로 생각할 수 있다. 이는 기하적으로 $Z$의 conormal sheaf이며 ([§미분과 여접층, ⁋명제 6](/ko/math/scheme_theory/sheaf_of_differentials#prop6) 이후의 conormal exact sequence), 우리는 local complete intersection에 대해서는 이 sheaf가 rank $k$의 locally free sheaf가 되어 conormal *bundle*이 된다는 것을 보인다.
+$Z$의 ideal sheaf $\mathcal{I}=\mathcal{I}_{Z/X}$에 대하여 $\mathcal{I}$는 $\mathcal{I}/\mathcal{I}^2$ 위에 자명하게 작용하므로, 그 $\mathcal{O}_X$-module 구조는 $\mathcal{O}_X/\mathcal{I}\cong\iota_\ast\mathcal{O}_Z$를 거쳐 주어지고 따라서 $\mathcal{I}/\mathcal{I}^2$은 $Z$ 위의 quasi-coherent sheaf로 생각할 수 있다. 이는 기하적으로 $Z$의 conormal sheaf로, 우리는 local complete intersection에 대해서는 이 sheaf가 rank $k$의 locally free sheaf가 되어 conormal *bundle*이 된다는 것을 보인다.
 
 우선 이 sheaf의 각 점에서의 fiber를 보자. 임의의 점 $z\in Z$를 포함하는 affine open subset $\Spec A$를 잡고, 여기서 $\mathcal{I}$에 대응하는 ideal을 $\mathfrak{a}$, $z$에 대응하는 prime을 $\mathfrak{p}$라 하면, $\mathcal{I}$의 stalk은 $\mathfrak{a}_\mathfrak{p}$이고 $\mathcal{O}_{Z,z}=A_\mathfrak{p}/\mathfrak{a}_\mathfrak{p}$의 maximal ideal은 $\mathfrak{p}A_\mathfrak{p}/\mathfrak{a}_\mathfrak{p}$이므로, $z$에서의 fiber는
 
@@ -193,7 +191,7 @@ $$P_{\mathcal{O}_X}(t)=\sum_{J\subseteq\{1,\ldots, k\}}(-1)^{\lvert J\rvert}\bin
 이다. 더욱이 $\dim X=n-k$이며 $\deg X=d_1\cdots d_k$이다.
 :::
 ::: 증명
-[명제 6](#prop6)의 exact sequence에 invertible sheaf $\mathcal{O}(t)$를 tensor하여도 exactness가 유지된다. 또 closed embedding에 대하여 $(\iota_\ast\mathcal{O}_X)\otimes\mathcal{O}(t)\cong \iota_\ast(\mathcal{O}_X(t))$인 것은 [§스킴의 층 코호몰로지, ⁋정리 9](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#thm9)의 증명에서 본 등식이고, cohomology가 $\iota_\ast$ 아래에서 보존되는 것은 [§스킴의 층 코호몰로지, ⁋정리 8](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#thm8) 직전의 관찰이다. 따라서 $\rchi(X,\mathcal{O}_X(t))=\rchi(\mathbb{P}^n,\iota_\ast\mathcal{O}_X(t))$이고, [§스킴의 층 코호몰로지, ⁋명제 14](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#prop14)의 2번을 이 finite exact sequence에 적용한 뒤 [§스킴의 층 코호몰로지, ⁋따름정리 15](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#cor15)로 각 항을 계산하면
+[명제 6](#prop6)의 exact sequence에 invertible sheaf $\mathcal{O}(t)$를 tensor하여도 exactness가 유지되고, closed embedding에 대하여 $(\iota_\ast\mathcal{O}_X)\otimes\mathcal{O}(t)\cong \iota_\ast(\mathcal{O}_X(t))$이며 cohomology가 $\iota_\ast$ 아래에서 보존된다. ([§스킴의 층 코호몰로지, ⁋정리 8](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#thm8) 직전의 관찰) 따라서 $\rchi(X,\mathcal{O}_X(t))=\rchi(\mathbb{P}^n,\iota_\ast\mathcal{O}_X(t))$이고, [§스킴의 층 코호몰로지, ⁋명제 14](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#prop14)의 2번을 이 finite exact sequence에 적용한 뒤 [§스킴의 층 코호몰로지, ⁋따름정리 15](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#cor15)로 각 항을 계산하면
 
 $$\rchi(X,\mathcal{O}_X(t))=\sum_{j=0}^k(-1)^j\sum_{\lvert J\rvert=j}\rchi\bigl(\mathbb{P}^n,\mathcal{O}(t-d_J)\bigr)=\sum_J(-1)^{\lvert J\rvert}\binom{n+t-d_J}{n}$$
 

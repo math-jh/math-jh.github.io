@@ -10,8 +10,6 @@ sidebar:
 
 date: 2021-08-22
 weight: 16
-revising: true
-drift_needed: true
 
 ---
 
@@ -75,7 +73,7 @@ Lower bound (resp. upper bound)를 갖는 집합을 *bounded below<sub>아래로
 
 다음의 ordered set $A=\{a,b,c,d,e\}$를 생각하자.
 
-{% diagram Math/Set_Theory/Elements_in_Ordered_Set-3.svg width="6.77em" alt="upper_and_lower_bounds" %}
+{% diagram frozen/635a8f80/Math/Set_Theory/Elements_in_Ordered_Set-3.svg width="20.75em" alt="upper_and_lower_bounds" %}
 
 그럼 $a$는 집합 $X=\left\{c,d,e\right\}$의 upper bound지만 $b$는 그렇지 않다. 집합 $X'=\left\{d,e\right\}$를 생각한다면, $a$와 $b$ 모두가 이 집합의 upper bound이다. 위의 예시로부터 집합 $X$의 lower bound가 $X$에 포함될 필요는 없지만, 만일 이것이 성립한다면 그 원소는 $X$의 least element가 된다.
 
@@ -124,7 +122,7 @@ Ordered set $A$에 대해, 모든 $i\in I$에 대해 $x_i\leq y_i$를 만족하�
 ::: 증명
 $b_k=\sup_{i\in J_k} x_i$라 적자. 우선 $(x_i)_{i\in I}$가 supremum을 갖는다고 하고, 이를 $a$라 하자. 그럼 $a\geq b_k$가 모든 $k$에 대해 성립한다. 또, 만약 $c\geq b_k$가 모든 $k$에 대해 성립한다면, 임의의 $x_i$에 대해서 $i\in J_{k'}$인 $k'$는 $b_{k'}\geq x_i$를 만족하고, 따라서 어떠한 $i$에 대해서도 $c\geq x_i$이다. 이제 $a$의 최소성에 의해 $c\geq a$이어야 하고, 따라서 $a$가 supremum이며 $\sup_{i\in I}x_i=\sup_{k\in K}(\sup_{j\in J_k} x_j)$이다.  
 
-반대로 $(b_k)_{k\in K}$가 supremum $a'$를 갖는다 하자. 임의의 $i\in I$에 대하여 $(J_k)_{k\in K}$가 $I$의 covering이므로 $i\in J_k$인 $k$가 존재하고, 이 $k$에 대해 $x_i\leq b_k\leq a'$이므로 $a'$는 $(x_i)_{i\in I}$의 upper bound이다. 또, 만약 $c\geq x_i$가 모든 $i$에 대해 성립한다면 $c$는 각각의 $k$에 대해 $(x_i)_{i\in J_k}$의 upper bound이고, 따라서 $b_k$의 최소성에 의해 $c\geq b_k$이다. 이제 $a'$의 최소성에 의해 $c\geq a'$이어야 하므로 $a'$가 $(x_i)_{i\in I}$의 supremum이다.
+반대로 $(b_k)_{k\in K}$가 supremum $a'$를 갖는다 해도 위와 같은 방법으로 증명을 완료할 수 있다.
 :::
 
 ::: 명제 11

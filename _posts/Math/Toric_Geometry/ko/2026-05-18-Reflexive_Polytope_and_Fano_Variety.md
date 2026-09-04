@@ -11,9 +11,7 @@ sidebar:
 
 date: 2026-05-18
 weight: 4
-revising: true
 
-drift_needed: true
 ---
 
 [§토릭 다양체의 정의](/ko/math/toric_geometry/toric_varieties)에서 우리는 lattice polytope $P \subseteq M_{\mathbb{R}}$의 normal fan $\Sigma_P$을 통해 projective toric variety $X_P$를 구성하는 방법을 살펴 보았다. 이 구성에서 $P$의 기하학적 성질이 $X_P$의 대수기하학적 성질로 변환되는 여러 경로가 존재하며, 그 중에서도 특별한 위치를 차지하는 것이 *reflexive polytope*이다. 
@@ -44,11 +42,7 @@ $\Delta \subseteq M_{\mathbb{R}}$가 reflexive polytope이면 $\Delta^\circ \sub
 ::: 증명
 $\Delta$가 reflexive이므로 $\Delta^\circ$는 정의에 의해 lattice polytope이다. $\Delta$의 모든 원소 $u$에 대해 $\langle u, v \rangle \ge -1$이 모든 $v \in \Delta^\circ$에서 성립하므로, $\Delta \subseteq (\Delta^\circ)^\circ$는 정의로부터 직접 확인할 수 있다. 
 
-이제 반대방향을 보이기 위해 $w \in (\Delta^\circ)^\circ$라 하면, $w$는 모든 $v \in \Delta^\circ$에 대해 $\langle w, v \rangle \ge -1$을 만족한다. 이제 $\Delta$의 각 facet $\Theta$를 생각하면, $\Theta$는 $\Delta$의 boundary 위의 $(d-1)$차원 면이며, $\Theta$에 대응하는 primitive inner normal vector $v_\Theta \in N$에 대해 방정식 $\langle u, v_\Theta \rangle = -a_\Theta$로 주어진다. 여기서 $\Theta$의 꼭짓점이 lattice point이므로 $a_\Theta \in \mathbb{Z}$이고, 원점이 $\Delta$의 interior에 있으므로 $a_\Theta > 0$이다.
-
-$\Delta$가 자신의 facet들이 정의하는 반평면들의 교집합이므로 모든 $u \in \Delta$에 대해 $\langle u, v_\Theta/a_\Theta \rangle \ge -1$이고, 따라서 $v_\Theta/a_\Theta \in \Delta^\circ$이다. 게다가 $\Theta$가 $(d-1)$차원이므로 affinely independent한 $u_1, \ldots, u_d \in \Theta$를 잡을 수 있고, 이들이 놓인 affine hyperplane $\langle -, v_\Theta \rangle = -a_\Theta$가 원점을 지나지 않으므로 $u_1, \ldots, u_d$는 linearly independent이다. 그럼 $\langle u_i, v \rangle = -1$ ($1 \le i \le d$)을 모두 만족하는 $v \in N_{\mathbb{R}}$는 $v_\Theta/a_\Theta$ 하나뿐이고, 이 $d$개의 부등식은 $\Delta^\circ$ 위에서 유효하므로 $v_\Theta/a_\Theta$는 $\Delta^\circ$의 꼭짓점이다. 이제 [정의 1](#def1)의 둘째 조건이 $v_\Theta/a_\Theta \in N$을 주는데 $v_\Theta$가 primitive이므로 $a_\Theta = 1$을 얻는다. 이것이 이 증명에서 reflexivity가 쓰이는 지점이며, 결국 $\Theta$는 방정식 $\langle u, v_\Theta \rangle = -1$으로 주어지고 $v_\Theta$ 자신이 $\Delta^\circ$의 꼭짓점이 된다.
-
-그럼 $w \in (\Delta^\circ)^\circ$이므로 $\langle w, v_\Theta \rangle \ge -1$이 성립한다. 이는 $w$가 $\Delta$의 모든 facet을 정의하는 반평면들의 교집합에 포함됨을 의미하며, 따라서 $w \in \Delta$이다. 이로부터 $(\Delta^\circ)^\circ = \Delta$를 얻는다. 마지막으로 $\Delta^\circ$가 reflexive임을 보이려면 두 조건을 확인하면 되는데, $(\Delta^\circ)^\circ = \Delta$가 lattice polytope이라는 것이 둘째 조건이고 첫째 조건은 $\Delta$가 bounded라는 사실에서 나온다. 실제로 $M_{\mathbb{R}}$와 $N_{\mathbb{R}}$에 서로 dual인 기저를 잡아 pairing을 표준 내적으로 보면 모든 $u \in \Delta$에 대해 $\lVert u \rVert \le R$인 $R > 0$이 존재하고, Cauchy-Schwarz 부등식에 의해 $\lVert v \rVert \le 1/R$인 $v \in N_{\mathbb{R}}$는 모두 $\langle u, v \rangle \ge -1$을 만족하므로 원점의 근방이 $\Delta^\circ$에 포함되어 $0 \in \interior(\Delta^\circ)$이다.
+이제 반대방향을 보이기 위해 $w \in (\Delta^\circ)^\circ$라 하면, $w$는 모든 $v \in \Delta^\circ$에 대해 $\langle w, v \rangle \ge -1$을 만족한다. 이제 $\Delta$의 각 facet $\Theta$를 생각하면, $\Theta$는 $\Delta$의 boundary 위의 $(d-1)$차원 면이며, reflexive polytope의 정의에 의해 $\Theta$는 방정식 $\langle u, v_\Theta \rangle = -1$으로 주어진다. 여기서 $v_\Theta \in N$은 $\Theta$에 대응하는 primitive inner normal vector이다. 그런데 $v_\Theta \in \Delta^\circ$의 꼭짓점이 되므로, $\langle w, v_\Theta \rangle \ge -1$이 성립한다. 이는 $w$가 $\Delta$의 모든 facet을 정의하는 반평면들의 교집합에 포함됨을 의미하며, 따라서 $w \in \Delta$이다. 이로부터 $(\Delta^\circ)^\circ = \Delta$를 얻는다. 마지막으로 $(\Delta^\circ)^\circ = \Delta$가 lattice polytope이므로 $\Delta^\circ$도 reflexive이다.
 :::
 
 이 명제는 reflexive polytope의 대칭성을 보여준다. $\Delta$와 $\Delta^\circ$는 서로 다른 vector space $M_{\mathbb{R}}$와 $N_{\mathbb{R}}$에 놓이지만, 동일한 조합론적 대상의 두 가지 측면을 제공한다.
@@ -68,7 +62,7 @@ $$-K_{X_\Sigma} = \sum_{\rho \in \Sigma(1)} D_\rho.$$
 :::
 
 ::: 증명
-[\[대수다양체\] §표준선다발, ⁋정의 6](/ko/math/algebraic_varieties/canonical_bundle#def6)에서 canonical divisor $K_X$는 canonical bundle $\omega_X = \det \Omega^1_X$에 대응하는 divisor class로 정의되었다. 다만 그 정의는 $X$가 smooth일 때의 것이고, $X_\Sigma$가 singular하면 $\det \Omega^1_{X_\Sigma}$가 line bundle이 아니어서 그대로 옮겨올 수 없다. Toric variety는 normal이고 normal variety의 singular locus는 codimension $2$ 이상이므로 Weil divisor class는 smooth locus 위의 자료만으로 결정되며, 이에 따라 우리는 $K_{X_\Sigma}$를 smooth locus 위의 canonical divisor를 $X_\Sigma$ 안에서 Zariski closure로 확장해 얻는 Weil divisor class로 이해한다. $X_\Sigma$가 smooth이면 이는 원래의 정의와 일치하고, 아래에서 rational $n$-form의 divisor를 취하는 계산은 정확히 이 확장된 정의를 따르는 것이다. 우리는 $K_{X_\Sigma} = -\sum_\rho D_\rho$임을 보여 그 역원이 위의 형태가 되는 것을 증명한다.
+[\[대수다양체\] §표준선다발, ⁋정의 6](/ko/math/algebraic_varieties/canonical_bundle#def6)에서 canonical divisor $K_X$는 canonical bundle $\omega_X = \det \Omega^1_X$에 대응하는 divisor class로 정의되었다. 우리는 $K_{X_\Sigma} = -\sum_\rho D_\rho$임을 보여 그 역원이 위의 형태가 되는 것을 증명한다.
 
 Open dense torus $T_N = \Spec \mathbb{C}[M] \subseteq X_\Sigma$ 위에서, $M$의 기저 $m_1, \ldots, m_n$을 잡으면 character $\rchi^{m_i}$들이 torus의 좌표가 되고, top form
 
@@ -76,7 +70,7 @@ $$\omega = \frac{d\rchi^{m_1}}{\rchi^{m_1}} \wedge \cdots \wedge \frac{d\rchi^{m
 
 이 $\Omega^n_{T_N}$을 trivialize한다. 이는 $M$의 기저 선택과 무관한 $T_N$-invariant top form이며, $X_\Sigma$ 위의 rational $n$-form으로 자연스럽게 확장된다.
 
-이제 각 boundary divisor $D_\rho$ 위에서 $\omega$의 vanishing degree를 계산하자. Ray $\rho \in \Sigma(1)$의 primitive generator $v_\rho \in N$을 첫 번째 기저로 하는 $N$의 적절한 기저를 잡고 그 dual로 $M$의 기저 $m_1, \ldots, m_n$을 택하면, $\rho$에 대응하는 affine chart $U_\rho$에서 $D_\rho$의 local equation은 $\rchi^{m_1} = 0$이다 (이 chart가 $D_\rho$의 generic point를 포함하므로 vanishing order를 재는 데에는 이것으로 충분하다). 그럼 위 표현에서 $d\rchi^{m_1}/\rchi^{m_1}$ 항이 $D_\rho$를 따라 정확히 1차 pole을 만들고, 다른 인자들은 $D_\rho$ 근방에서 regular하므로 $\omega$는 $D_\rho$를 따라 정확히 1차 pole을 갖는다. 따라서
+이제 각 boundary divisor $D_\rho$ 위에서 $\omega$의 vanishing degree를 계산하자. Ray $\rho \in \Sigma(1)$의 primitive generator $v_\rho \in N$을 첫 번째 기저로 하는 $N$의 적절한 기저를 잡고 그 dual로 $M$의 기저 $m_1, \ldots, m_n$을 택하면, $\rho$를 face로 갖는 affine chart $U_\sigma$에서 $D_\rho$의 local equation은 $\rchi^{m_1} = 0$이다. 그럼 위 표현에서 $d\rchi^{m_1}/\rchi^{m_1}$ 항이 $D_\rho$를 따라 정확히 1차 pole을 만들고, 다른 인자들은 $D_\rho$ 근방에서 regular하므로 $\omega$는 $D_\rho$를 따라 정확히 1차 pole을 갖는다. 따라서
 
 $$\divisor(\omega) = -\sum_{\rho \in \Sigma(1)} D_\rho$$
 
@@ -179,7 +173,7 @@ $$K_V = (K_X + V)\vert_V = (K_X - K_X)\vert_V = 0$$
 
 그러나 일반적으로 reflexive polytope $\Delta$로부터 만들어진 $X_\Delta$는 singular하며, 이로 인해 두 가지 미묘한 문제가 생긴다.
 
-1. Codimension $1$인 $V$가 $X_\Delta$의 singular locus와 만나는 경우, $V$ 자신도 그 점에서 singular해질 수 있다. 우리 예시인 $\mathbb{P}^2/(\mathbb{Z}/3)$에서는 singular locus가 isolated된 세 점이므로 generic cubic curve $V$는 이를 피해 smooth하게 잡아줄 수 있지만, 차원이 커질수록 singular locus가 양의 차원이 되어 $V$가 반드시 이를 가로지르는 현상이 나타난다. 따라서 [명제 7](#prop7)의 결론을 *singular* $V$에 그대로 적용할 수 없다.
+1. Codimension $1$인 $V$가 $X_\Delta$의 singular locus와 만나는 경우, $V$ 자신이 그 점에서 singular하게 된다. 우리 예시인 $\mathbb{P}^2/(\mathbb{Z}/3)$에서는 singular locus가 isolated된 세 점이므로 generic cubic curve $V$는 이를 피해 smooth하게 잡아줄 수 있지만, 차원이 커질수록 singular locus가 양의 차원이 되어 $V$가 반드시 이를 가로지르는 현상이 나타난다. 따라서 [명제 7](#prop7)의 결론을 *singular* $V$에 그대로 적용할 수 없다.
 2. 따라서, singular한 $V$로부터 진정한 smooth Calabi-Yau를 얻으려면 적절한 resolution $\pi: \widetilde{V} \rightarrow V$가 필요한데, 일반적인 resolution은 canonical class를 보존하지 않는다. 구체적으로, normal Gorenstein variety $V$의 임의의 resolution은 다음의 *discrepancy formula*
     
     $$K_{\tilde V} = \pi^\ast K_V + \sum_i a_i E_i$$

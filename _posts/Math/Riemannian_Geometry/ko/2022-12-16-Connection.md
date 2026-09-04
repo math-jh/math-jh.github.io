@@ -10,9 +10,7 @@ sidebar:
 
 date: 2022-12-16
 weight: 2
-revising: true
 
-drift_needed: true
 
 ---
 
@@ -116,19 +114,13 @@ $$(\nabla_X^\ast\alpha)_p(Y)=X\bigl(\alpha(Y)\bigr)-\alpha_p\bigl((\nabla_XY)_p\
 으로 정하면, $\nabla^\ast$는 $T^\ast M$ 위의 connection이 된다.
 :::
 ::: 증명
-우변의 식은 각 점에서의 값 $Y_p$가 아니라 벡터장 $Y$ 전체를 통해 주어지므로, 우선 이 식이 실제로 $1$-form을 정의한다는 것을 확인해야 한다. 대응 $Y\mapsto X(\alpha(Y))-\alpha(\nabla_XY)$가 $C^\infty(M)$-linear이면 그 값은 각 점 $p$에서 $Y_p$에만 의존하고, 따라서 이 대응은 $1$-form을 정한다. 가법성은 $\alpha$와 $\nabla_X$가 모두 가법적이라는 것에서 곧바로 따라오고, $f\in C^\infty(M)$에 대해서는 [정의 1](#def1)의 라이프니츠 법칙으로부터
+우선 우변의 식으로 정의된 $\nabla^\ast\alpha$가 $1$-form이라는 것을 보일 수 있으므로 $\nabla^\ast$의 공역에는 문제가 없다.
 
-$$\begin{aligned}X(\alpha(fY))-\alpha(\nabla_X(fY))&=X(f\cdot\alpha(Y))-\alpha\bigl(f\nabla_XY+(Xf)Y\bigr)\\
-&=(Xf)\alpha(Y)+fX(\alpha(Y))-f\alpha(\nabla_XY)-(Xf)\alpha(Y)\\
-&=f\bigl(X(\alpha(Y))-\alpha(\nabla_XY)\bigr)\end{aligned}$$
-
-을 얻는다. 두 번 나타나는 $(Xf)\alpha(Y)$가 서로 상쇄되는 것이 요점이며, 이로써 $\nabla^\ast$의 공역에는 문제가 없다.
-
-$\nabla^\ast$가 [정의 1](#def1)의 조건들을 만족한다는 것도 같은 계산으로 확인된다. 첫째 성분에 대한 $C^\infty$-linearity는 $(fX)(\alpha(Y))=fX(\alpha(Y))$와 $\nabla_{fX}Y=f\nabla_XY$, 그리고 $\alpha$가 $C^\infty(M)$-linear라는 것에서 따라오고, 둘째 성분에 대한 $\mathbb{R}$-linearity는 우변의 두 항이 모두 $\alpha$에 대하여 $\mathbb{R}$-linear라는 것에서 따라온다. 남은 라이프니츠 법칙 또한
+$\nabla^\ast$가 실제로 connection의 조건을 만족한다는 사실은 라이프니츠 법칙 이외에는 자명하다. 사실 라이프니츠 법칙 또한
 
 $$\begin{aligned}(\nabla_X^\ast(f\alpha))_pY&=X(f\cdot\alpha(Y))-(f\alpha)_p\bigl((\nabla_XY)_p\bigr)\\&=(Xf)(\alpha(Y))+f(p)\bigl(X(\alpha(Y))-\alpha_p\bigl((\nabla_XY)_p\bigr)\bigr)\\&=\bigl((Xf)\alpha+f\nabla_X^\ast\alpha\bigr)Y\end{aligned}$$
 
-으로부터 얻어진다.
+으로부터 자명하다.
 :::
 
 약간의 abuse of notation을 통해, 위에서 정의한 $\nabla^\ast$도 마찬가지로 $\nabla$로 적는다.

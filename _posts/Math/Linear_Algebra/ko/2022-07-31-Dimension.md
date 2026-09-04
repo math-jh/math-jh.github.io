@@ -12,9 +12,7 @@ sidebar:
 date: 2022-07-31
 
 weight: 5
-revising: true
 
-drift_needed: true
 
 ---
 
@@ -30,7 +28,7 @@ $\mathbb{K}$-벡터공간 $V$에 대하여, $V$의 두 basis $\mathcal{B}_1$, $\
 
 1. 우선, 만일 $V$의 *어떤* basis가 무한하다면, 다른 basis들도 반드시 무한하며 이들의 크기는 동일하다.
 2. 그러므로 $V$의 어떤 basis가 유한하다면, 다른 basis들도 모두 유한해야 한다.
-3. 마지막으로, 만일 $V$의 두 finite basis가 주어진다면, 이들 두 basis의 원소의 갯수는 동일하다.
+3. 마지막으로, 만일 $V$의 두 유한한 basis가 주어진다면, 이들 두 basis의 원소의 갯수는 동일하다.
 
 물론 이 정리도 지금 증명하자면 못할 것은 없지만, [§벡터공간의 기저, ⁋정리 10](/ko/math/linear_algebra/basis#thm10)과 마찬가지로 이를 증명하기 위해는 약간의 집합론적인 지식이 필요하므로 별도의 글로 분리한다. 다만 마지막 단계는 별다른 배경지식 없이도 증명할 수 있다.
 
@@ -38,7 +36,7 @@ $\mathbb{K}$-벡터공간 $V$에 대하여, $V$의 두 basis $\mathcal{B}_1$, $\
 $\mathbb{K}$-벡터공간 $V$에 대하여, 만일 $\mathcal{B}_1$과 $\mathcal{B}_2$이 모두 $V$의 basis이고 유한하다면, $\lvert \mathcal{B}_1\rvert=\lvert \mathcal{B}_2\rvert$가 성립한다.
 :::
 ::: 증명
-$\mathcal{B}_1=\{x_1,x_2,\ldots, x_m\}$, 그리고 $\mathcal{B}_2=\{y_1,y_2,\ldots, y_n\}$이라 하고, $m=n$임을 보여야 한다. 결론에 반하여 $m\neq n$이라 하자. 두 basis $\mathcal{B}_1$과 $\mathcal{B}_2$는 보조정리의 진술에서 완전히 대칭이므로, 필요하다면 이 둘의 역할을 바꾸어 일반성을 잃지 않고 $m>n$이라 가정할 수 있다.
+$\mathcal{B}_1=\{x_1,x_2,\ldots, x_m\}$, 그리고 $\mathcal{B}_2=\{y_1,y_2,\ldots, y_n\}$이라 하고, $m=n$임을 보여야 한다. 결론에 반하여 $m>n$이라 하자.
 
 우선 $x_1\in V$이므로, $x_1$은 $y_1$, $y_2$, $\ldots$, $y_n$들의 일차결합으로 나타낼 수 있다. 따라서 [§벡터공간의 기저, ⁋명제 6](/ko/math/linear_algebra/basis#prop6)에 의하여, 집합 $\{x_1,y_1,y_2,\ldots, y_n\}$은 일차종속이다. 즉, 모두 0은 아닌 스칼라들 $\beta_1$, $\alpha_1$, $\alpha_2$, $\ldots$, $\alpha_n$이 존재하여
 
@@ -54,11 +52,11 @@ $$y_i=-\frac{\beta_1}{\alpha_i}x_1-\frac{\alpha_1}{\alpha_i}y_1-\cdots-\frac{\al
 
 을 얻는다. 따라서 만일 우리가 집합 $\{x_1, y_1, y_2, \ldots, y_n\}$에서 $y_i$를 빼더라도 이 집합은 여전히 $V$를 span한다.  
 
-한편, 이 집합은 일차독립이다. 결론에 반하여, 모두 0은 아닌 스칼라들 $\beta_1'$, $\alpha_1'$, $\ldots$, $\alpha_n'$이 존재하여 
+한편, 이 집합은 일차독립이다. 어떠한 스칼라들 $\beta_1'$, $\alpha_1'$, $\ldots$, $\alpha_n'$에 대하여 
 
 $$\beta_1'x_1+\alpha_1'y_1+\alpha_2'y_2+\cdots+\alpha_{i-1}'y_{i-1}+\alpha_{i+1}'y_{i+1}+\cdots+\alpha_n'y_n=0$$
 
-이도록 할 수 있다고 하자. 만일 $\beta_1'=0$이라면 이 식은 $y_1$, $\ldots$, $y_{i-1}$, $y_{i+1}$, $\ldots$, $y_n$들 사이의 관계식이 되는데, 이들은 일차독립이므로 나머지 계수들도 모두 0이 되어 가정에 모순이다. 따라서 $\beta_1'\neq 0$이고, 그럼 
+이라고 한다면, 위에서와 같은 이유로 $\beta_1'\neq 0$이 되고, 따라서 
 
 $$x_1=-\frac{\alpha_1'}{\beta_1'}y_1-\frac{\alpha_2'}{\beta_1'}y_2-\cdots-\frac{\alpha_{i-1}'}{\beta_1'}y_{i-1}-\frac{\alpha_{i+1}'}{\beta_1'}y_{i+1}-\cdots-\frac{\alpha_n'}{\beta_1'}y_n$$
 
@@ -92,7 +90,7 @@ $$\beta_2x_2+\beta_1x_1+\alpha_1y_1+\alpha_2y_2+\ldots+\alpha_{n-1}y_{n-1}=0$$
 
 사실 위 명제의 증명은 원래의 명제보다 약간 더 강력한 다음의 명제
 
-> 어떤 $\mathbb{K}$-벡터공간 $V$가 finite basis $\mathcal{B}$를 갖는다 하자. 그럼 $\mathcal{B}$보다 원소의 개수가 많은 $V$의 부분집합은 반드시 일차종속이다.
+> 어떤 $\mathbb{K}$-벡터공간 $V$가 유한한 basis $\mathcal{B}$를 갖는다 하자. 그럼 $\mathcal{B}$보다 원소의 개수가 많은 $V$의 부분집합은 반드시 일차종속이다.
 
 를 증명한 것이다. 어쨌든 [정리 1](#thm1)에 의해 $V$의 basis는 모두 같은 크기를 가지므로 다음 정의가 말이 된다.
 
@@ -126,7 +124,7 @@ $$\sum_{x\in S_1} \alpha_xx=\sum_{x\in S}\alpha_xx+\alpha_vv=0$$
 
 이제 만일 $\langle S_1\rangle=V$라면 다시 증명 끝이고, 그렇지 않다면 똑같은 방식으로 $S_2=S_1\cup\{v'\}$을 정의하여 반복할 수 있다. 물론 $S_2$가 일차독립이라는 것을 보여야 하지만, $v'$를 $V\setminus\langle S_1\rangle$에서 뽑아왔기 때문에 이는 위에서 보인 것과 정확하게 같은 논리로 가능하다. 
 
-이 과정은 앞선 [보조정리 2](#lem2)의 증명이 보인 더 강한 명제, 즉 일차독립인 부분집합의 원소의 개수는 $\dim V$ 이하라는 사실에 의해 많아야 $\dim V$번째 과정 안에 끝나며, 이 과정이 끝날 때 우리는 원하는 basis $S_n$을 얻게 된다.
+이 과정은 앞선 [보조정리 2](#lem2)에 의해 많아야 $\dim V$번째 과정 안에 끝나며, 이 과정이 끝날 때 우리는 원하는 basis $S_n$을 얻게 된다.
 :::
 
 $V$의 basis는 일차독립인 동시에 $V$를 span하는 집합이다. 위의 명제는 일차독립인 집합에 적절하게 벡터를 추가하여 $V$를 span하도록 할 수 있다는 것을 말한다. 반대로 $V$를 span하는 집합이 있다면, 이들 중 겹치는 일부를 적절하게 빼서 일차독립 조건도 만족하도록 할 수 있다. 이 명제의 증명의 기본 아이디어는 [명제 5](#prop5)과 동일하지만, $S$는 무한집합일 수 있으므로 $S$에서 원소를 하나하나 빼가는 것으로는 증명이 성립하지 않는다.
@@ -137,9 +135,9 @@ $\mathbb{K}$-벡터공간 $V$와, $V$를 span하는 부분집합 $S$에 대하�
 ::: 증명
 $S_0=\emptyset$이라 하자. 그럼 $\langle S_0\rangle=\{0\}$이다. 이제 $S\setminus\langle S_0\rangle$의 원소 $x_1$을 택해 $S_1=\{x_1\}=S_0\cup\{x_1\}$이라 하고, 비슷하게 $S\setminus\langle S_1\rangle$의 원소 $x_2$를 택해 $S_2=\{x_1,x_2\}=S_1\cup \{x_2\}$를 만드는 과정을 반복한다.
 
-이렇게 얻어진 집합 $S_i$들은 정의에 의해 일차독립인 부분집합이 되며, $\langle S_i\rangle$가 $S$와 같지 않은 한 $S_{i+1}$의 원소의 개수는 $S_i$보다 항상 하나 더 많다. 따라서 $\lvert S_i\rvert=i$이고, $S_i$는 일차독립이므로 [보조정리 2](#lem2)의 증명이 보인 더 강한 명제에 의해 $i\leq\dim V$이다. 그럼 이 과정은 무한히 계속될 수 없으므로, $S\setminus\langle S_m\rangle=\emptyset$인 자연수 $m$이 존재한다. 
+이렇게 얻어진 집합 $S_i$들은 정의에 의해 일차독립인 부분집합이 되며, $\langle S_i\rangle$가 $S$와 같지 않은 한 $S_{i+1}$의 원소의 개수는 $S_i$보다 항상 하나 더 많다. 따라서 모든 $i < n = \dim V$에 대하여 $S\setminus\langle S_i\rangle$가 공집합이 아니라는 것을 보이면 충분하다. 
 
-이러한 $m$에 대하여 $S\subseteq\langle S_m\rangle$이다. 이제 [§벡터공간의 기저, ⁋보조정리 4](/ko/math/linear_algebra/basis#lem4)로부터 $\span$을 취하는 것은 집합 사이의 포함관계를 유지한다는 것을 알 수 있으므로
+자연수 $m$을 $S\setminus\langle S_m\rangle=\emptyset$이도록 택하자. 즉 $S\subseteq\langle S_m\rangle$이다. 이제 [§벡터공간의 기저, ⁋보조정리 4](/ko/math/linear_algebra/basis#lem4)로부터 $\span$을 취하는 것은 집합 사이의 포함관계를 유지한다는 것을 알 수 있으므로
 
 $$\langle S\rangle\subseteq\span\bigl(\langle S_m\rangle\bigr)$$
 
@@ -147,7 +145,7 @@ $$\langle S\rangle\subseteq\span\bigl(\langle S_m\rangle\bigr)$$
 
 $$V=\langle S\rangle\subseteq\span\bigl(\langle S_m\rangle\bigr)=\langle S_m\rangle$$
 
-으로부터 $\langle S_m\rangle=V$임을 안다. $S_m$은 일차독립이면서 $V$를 span하므로, $S$의 부분집합 $S_m$이 구하는 basis이다. 
+으로부터 $\langle S_m\rangle=V$임을 안다. 
 :::
 
 마지막으로 두 개의 조금 일반적인 예시를 살펴보자.

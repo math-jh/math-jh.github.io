@@ -10,8 +10,6 @@ sidebar:
 
 date: 2024-10-16
 weight: 3
-revising: true
-drift_needed: true
 
 ---
 
@@ -121,11 +119,11 @@ $$0 \rightarrow M \rightarrow L \rightarrow N \rightarrow 0$$
 
 $$0 \rightarrow \Hom_\rMod{A}(K,M) \rightarrow \Hom_\rMod{A}(K,L)\rightarrow \Hom_\rMod{A}(K,N) \rightarrow 0$$
 
-이 splitting exact sequence인 것과 동치이다. ([\[다중선형대수학\] §Hom과 텐서곱, ⁋명제 2](/ko/math/multilinear_algebra/hom_and_tensor#prop2)) 실은 $K=N$일 때 위의 sequence가 exact이기만 하면, 즉
+이 splitting exact sequence인 것과 동치이며, [\[다중선형대수학\] §Hom과 텐서곱, ⁋명제 1](/ko/math/multilinear_algebra/hom_and_tensor#prop1)의 증명을 보면 실은 $K=N$일 때 위의 sequence가 exact이기만 하면, 즉
 
 $$\Hom_\rMod{A}(N,L) \rightarrow \Hom_\rMod{A}(N,N) \rightarrow 0$$
 
-이 surjective이기만 하면 충분하다. $v:L \rightarrow N$을 주어진 surjection이라 하면, $\id_N$의 preimage $s\in\Hom_\rMod{A}(N,L)$은 $v\circ s=\id_N$을 만족하는 $v$의 section이므로 [\[다중선형대수학\] §완전열, ⁋명제 10](/ko/math/multilinear_algebra/exact_sequences#prop10)에 의하여 원래의 exact sequence $0 \rightarrow M \rightarrow L \rightarrow N \rightarrow 0$은 splitting exact sequence이다. 따라서 다음을 얻는다. 
+이 surjective이기만 하면 원래의 exact sequence $0 \rightarrow M \rightarrow L \rightarrow N \rightarrow 0$이 splitting exact sequence임을 안다. 따라서 다음을 얻는다. 
 
 ::: 따름정리 6
 임의의 short exact sequence
@@ -138,12 +136,6 @@ $$0 \rightarrow M_\mathfrak{m} \rightarrow L_\mathfrak{m} \rightarrow N_\mathfra
 
 이 splitting exact sequence라면 원래의 exact sequence가 split한다.
 :::
-
-이는 다음과 같이 확인된다. $v:L \rightarrow N$을 주어진 surjection이라 하고, $A$-linear map $\varphi:\Hom_\rMod{A}(N,L) \rightarrow \Hom_\rMod{A}(N,N)$을 $f\mapsto v\circ f$로 정의하자. 임의의 maximal ideal $\mathfrak{m}$에 대하여 $A_\mathfrak{m}$은 flat $A$-module이고 ([명제 2](#prop2)) $N$이 finitely presented이므로, [명제 5](#prop5)는 두 isomorphism
-
-$$\Hom_\rMod{A}(N,L)_\mathfrak{m}\cong\Hom_{A_\mathfrak{m}}(N_\mathfrak{m}, L_\mathfrak{m}),\qquad \Hom_\rMod{A}(N,N)_\mathfrak{m}\cong\Hom_{A_\mathfrak{m}}(N_\mathfrak{m}, N_\mathfrak{m})$$
-
-을 준다. 이때 $\alpha$의 정의로부터 이 동일시가 $\varphi_\mathfrak{m}$을 $g\mapsto v_\mathfrak{m}\circ g$로 옮긴다는 것을 알고, 가정에 의하여 $v_\mathfrak{m}$은 section $s_\mathfrak{m}$을 가지므로 임의의 $g$는 $v_\mathfrak{m}\circ (s_\mathfrak{m}\circ g)$로 적힌다. 즉 $\varphi_\mathfrak{m}$은 모든 $\mathfrak{m}$에 대하여 surjective이고, 따라서 [명제 4](#prop4)에 의하여 $\varphi$ 또한 surjective이므로 $\id_N$의 preimage가 원하는 section을 준다.
 
 ## 아이디얼의 근기
 
@@ -174,7 +166,7 @@ $$\sqrt{\mathfrak{a}}=\bigcap_\text{\scriptsize$\mathfrak{p}$ prime containing $
 이 성립한다.
 :::
 ::: 증명
-한쪽 방향은 자명하며, 반대로 만일 $a\not\in \sqrt{\mathfrak{a}}$라면 $S=\{a^k\mid k\geq 0\}$로 두고 canonical map $\epsilon:A \rightarrow S^{-1}A$를 생각하자. 우선 $\sqrt{\mathfrak{a}}$의 정의에 의하여 임의의 $k\in \mathbb{N}$에 대하여 $a^k\not\in \mathfrak{a}$이므로 $\mathfrak{a}\cap S=\emptyset$이 성립한다. 그럼 [§국소화, ⁋명제 8](/ko/math/commutative_algebra/localization#prop8)의 2번에 의하여 $\epsilon(\mathfrak{a})S^{-1}A\neq S^{-1}A$이므로 이를 포함하는 $S^{-1}A$의 maximal ideal $\mathfrak{m}$을 잡을 수 있고, 다시 같은 명제에 의하여 $\epsilon^{-1}(\mathfrak{m})$은 $S$와 만나지 않는 $A$의 prime ideal이다. 이제 $\epsilon(\mathfrak{a})\subseteq \mathfrak{m}$으로부터 $\mathfrak{a}\subseteq \epsilon^{-1}(\mathfrak{m})$을 알고, $a\in S$이므로 $a\not\in \epsilon^{-1}(\mathfrak{m})$이다.
+한쪽 방향은 자명하며, 반대로 만일 $a\not\in \sqrt{\mathfrak{a}}$라면 $S=\{a^k\mid k\geq 0\}$로 두고 [§국소화, ⁋명제 8](/ko/math/commutative_algebra/localization#prop8)를 적용하면 된다.
 :::
 
 ---

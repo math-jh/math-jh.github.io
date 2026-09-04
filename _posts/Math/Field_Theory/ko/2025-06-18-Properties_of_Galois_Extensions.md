@@ -1,7 +1,7 @@
 ---
 title: "갈루아 군의 성질들"
 description: "갈루아 군에 위상구조를 부여하는 방법을 다루며, 부분군 격자와 부분확장 격자 사이의 대응을 설명한다."
-excerpt: "Krull 위상을 갖는 infinite Galois group의 구조"
+excerpt: "Krull 위상을 갖는 무한 Galois group의 구조"
 
 categories: [Math / Field Theory]
 permalink: /ko/math/field_theory/properties_of_galois_extensions
@@ -10,9 +10,7 @@ sidebar:
 
 date: 2025-06-18
 weight: 9
-revising: true
 
-drift_needed: true
 
 ---
 
@@ -39,7 +37,7 @@ $$U_\mathbb{M}(\sigma)=\left\{\tau\in \Gal(\mathbb{L}/\mathbb{K})\mid \sigma\ver
 으로 정의하면 이 집합은 $\sigma$의 local base의 원소가 되며, 이들을 모아둔 $(U_\mathbb{M}(\sigma))_{\mathbb{M}\in\Ext_{\fin}(\mathbb{L}/\mathbb{K})}$가 정확히 $\sigma$에서의 local base이다. 이렇게 얻어지는 $\Gal(\mathbb{L}/\mathbb{K})$의 위상구조를 *Krull topology*라 부른다.
   
 ::: 예시 1
-특별히 $\mathbb{L}/\mathbb{K}$이 finite degree Galois extension인 경우를 생각하자. 그럼 [§에탈대수, ⁋따름정리 3](/ko/math/field_theory/etale_algebras#cor3)에 의하여 $\Gal(\mathbb{L}/\mathbb{K})$의 원소는 많아야 $[\mathbb{L}:\mathbb{K}]$개이므로 우리는 $\Gal(\mathbb{L}/\mathbb{K})$이 유한집합인 것을 안다. 한편 $\mathbb{L}/\mathbb{K}$이 finite degree이므로 $\mathbb{L}/\mathbb{K}$ 자기 자신이 이미 $\Ext_{\fin}(\mathbb{L}/\mathbb{K})$의 원소이고 따라서 임의의 $\sigma\in \Gal(\mathbb{L}/\mathbb{K})$에 대하여
+특별히 $\mathbb{L}/\mathbb{K}$이 finite degree Galois extension인 경우를 생각하자. 그럼 [§갈루아 확장, ⁋정의 12](/ko/math/field_theory/galois_extension#def12) 이후의 논의로부터 우리는 $\Gal(\mathbb{L}/\mathbb{K})$이 유한집합인 것을 안다. 한편 $\mathbb{L}/\mathbb{K}$이 finite degree이므로 $\mathbb{L}/\mathbb{K}$ 자기 자신이 이미 $\Ext_{\fin}(\mathbb{L}/\mathbb{K})$의 원소이고 따라서 임의의 $\sigma\in \Gal(\mathbb{L}/\mathbb{K})$에 대하여
 
 $$U_\mathbb{L}(\sigma)=\left\{\tau\in\Gal(\mathbb{L}/\mathbb{K})\mid \sigma\vert_\mathbb{L}=\tau\vert_\mathbb{L}\right\}=\left\{\sigma\right\}$$
 
@@ -81,7 +79,7 @@ $$U_\mathbb{M}(\id_\mathbb{L})=\left\{\tau\in \Gal(\mathbb{L}/\mathbb{K})\mid \t
 
 $$U_\mathbb{M}(\id_\mathbb{L})=\Gal(\mathbb{L}/\mathbb{M})$$
 
-이다. 여기에서 [§갈루아 확장, ⁋정리 8](/ko/math/field_theory/galois_extension#thm8)의 셋째 조건은 $\mathbb{K}$ 대신 $\mathbb{M}$ 위에서 보아도 성립하므로 $\mathbb{L}/\mathbb{M}$ 또한 Galois extension이며, 우측의 group에서 $\Gal(\mathbb{L}/\mathbb{K})$로의 inclusion은 단순히 $\mathbb{M}$-automorphism을 $\mathbb{K}$-automorphism으로 보아 얻어지는 것이다. 뿐만 아니라 $\Gal(\mathbb{L}/\mathbb{M})$이 갖는 위상구조는 $U_\mathbb{M}(\id_\mathbb{L})$이 $\Gal(\mathbb{L}/\mathbb{K})$로부터 물려받는 subspace topology와 같다. 실제로 $\mathbb{L}/\mathbb{M}$의 finite degree subextension $\mathbb{N}/\mathbb{M}$을 $\mathbb{N}=\mathbb{M}(y_1,\ldots, y_m)$으로 쓰면 $\mathbb{N}'=\mathbb{K}(y_1,\ldots, y_m)$은 $\mathbb{K}$ 위에서 finite degree이고, $\mathbb{M}$을 fix하는 automorphism이 $\mathbb{N}$ 위에서 항등인 것과 $\mathbb{N}'$ 위에서 항등인 것은 모두 $y_1,\ldots, y_m$을 고정하는 것과 같으므로, $\Gal(\mathbb{L}/\mathbb{M})$의 Krull topology가 주는 $\id_\mathbb{L}$의 local base의 원소는 subspace topology가 주는 local base의 원소이기도 하다. 거꾸로 $\mathbb{L}/\mathbb{K}$의 finite degree subextension $\mathbb{N}'/\mathbb{K}$이 주어지면 compositum $\mathbb{M}\mathbb{N}'$이 $\mathbb{M}$ 위에서 finite degree이고 같은 이유로 두 조건이 일치하므로, 두 위상구조는 $\id_\mathbb{L}$에서 같은 local base를 갖고 따라서 서로 같다. 그럼 [§갈루아 확장, ⁋정리 8](/ko/math/field_theory/galois_extension#thm8)의 첫째 조건에 의하여 $\mathbb{L}^{\Gal(\mathbb{L}/\mathbb{M})}=\mathbb{M}$이므로
+이다. 여기에서 [§갈루아 확장, ⁋정리 8](/ko/math/field_theory/galois_extension#thm8)의 셋째 조건은 $\mathbb{K}$ 대신 $\mathbb{M}$ 위에서 보아도 성립하므로 $\mathbb{L}/\mathbb{M}$ 또한 Galois extension이며, 우측의 group에서 $\Gal(\mathbb{L}/\mathbb{K})$로의 inclusion은 단순히 $\mathbb{M}$-automorphism을 $\mathbb{K}$-automorphism으로 보아 얻어지는 것이다. 뿐만 아니라 $\Gal(\mathbb{L}/\mathbb{M})$이 갖는 위상구조는 $U_\mathbb{M}(\id_\mathbb{L})$이 $\Gal(\mathbb{L}/\mathbb{K})$로부터 물려받는 subspace topology와 같다. 그럼 같은 정리의 첫째 조건에 의하여 $\mathbb{L}^{\Gal(\mathbb{L}/\mathbb{M})}=\mathbb{M}$이므로
 
 $$U_\mathbb{M}(\id_\mathbb{L})\subseteq U_\mathbb{N}(\id_\mathbb{L})\iff \mathbb{M}\supseteq \mathbb{N}$$
 
@@ -127,11 +125,11 @@ $$f(x+y)=u(x+y)\neq u(x)+u(y)=f(x)+f(y)$$
 이므로 $f$들 또한 field homomorphism이 되지 않는다. 즉, 위의 open neighborhood는 $\Gal(\mathbb{L}/\mathbb{K})$와 만나지 않고 이는 $u$가 $\Gal(\mathbb{L}/\mathbb{K})$의 closure에 속한다는 가정에 모순이다. 비슷한 논리로 다른 경우의 수 또한 모두 배제할 수 있으며 이로부터 $\Gal(\mathbb{L}/\mathbb{K})$이 $\mathbb{L}^\mathbb{L}$에서 closed임을 증명할 수 있다.
 :::
 
-한편 $\mathbb{L}/\mathbb{K}$이 Galois extension이라 하고, 이 extension의 Galois subextension $\mathbb{L}_i/\mathbb{K}$들이 $\mathbb{L}=\bigcup_{i\in I}\mathbb{L}_i$를 만족하며, 임의의 $i,j\in I$에 대하여 $\mathbb{L}_i\cup\mathbb{L}_j\subseteq \mathbb{L}_k$이도록 하는 $k\in I$이 존재한다 하자. 그럼 우리는 이 위에 preorder
+한편 $\mathbb{L}/\mathbb{K}$이 Galois extension이라 하고, 이 extension의 Galois subextension $\mathbb{L}_i/\mathbb{K}$들이 $\mathbb{L}=\bigcup_{i\in I}\mathbb{L}_i$를 만족하며, 임의의 $i,j\in I$에 대하여 $\mathbb{L}_i\cup\mathbb{L}_j\subseteq \mathbb{L}_k$이도록 하는 $k\in I$이 존재한다 하자. 그럼 우리는 이 위에 partial order
 
 $$i\leq j \iff \mathbb{L}_i\subseteq \mathbb{L}_j$$
 
-를 주고, 이러한 preorder 하에서 다음의 restriction map들
+를 주고, 이러한 partial order 하에서 다음의 restriction map들
 
 $$\rho_{ij}:\Gal(\mathbb{L}_j/\mathbb{K}) \rightarrow \Gal(\mathbb{L}_i/\mathbb{K})\qquad \text{whenever $i\leq j$}$$
 
@@ -139,7 +137,7 @@ $$\rho_{ij}:\Gal(\mathbb{L}_j/\mathbb{K}) \rightarrow \Gal(\mathbb{L}_i/\mathbb{
 
 $$\varprojlim_{i\in I}\Gal(\mathbb{L}_i/\mathbb{K})=\left\{(\sigma_i)\in\prod_{i\in I}\Gal(\mathbb{L}_i/\mathbb{K})\mid\text{$\rho_{ij}(\sigma_j)=\sigma_i$ whenever $i\leq j$}\right\}$$
 
-과 canonical morphism들 $\rho_i:\varprojlim \Gal(\mathbb{L}_i/\mathbb{K})\rightarrow\Gal(\mathbb{L}_i/\mathbb{K})$들이 존재한다. ([\[범주론\] §극한, ⁋예시 5](/ko/math/category_theory/limits#ex5), [⁋예시 7](/ko/math/category_theory/limits#ex7) 이후의 논의) 
+과 canonical morphism들 $\rho_i:\varprojlim \Gal(\mathbb{L}_i/\mathbb{K})\rightarrow\Gal(\mathbb{L}_i/\mathbb{K})$들이 존재한다. ([\[범주론\] §극한, ⁋예시 5](/ko/math/category_theory/limits#ex5)) 
 
 한편 restriction map들
 
@@ -156,7 +154,7 @@ $$\lambda_i:\Gal(\mathbb{L}/\mathbb{K})\rightarrow\Gal(\mathbb{L}_i/\mathbb{K})$
 우선 $\lambda(\sigma)$가 항등원이라면 임의의 $i$에 대하여 $\sigma\vert_{\mathbb{L}_i}=\id_{\mathbb{L}_i}$이고, $\mathbb{L}=\bigcup_i\mathbb{L}_i$이므로 $\sigma=\id_\mathbb{L}$이다. 즉 $\lambda$는 단사이다. 이제 $(\sigma_i)\in\varprojlim\Gal(\mathbb{L}_i/\mathbb{K})$이 주어졌다 하고, $x\in \mathbb{L}_i$에 대하여 $\sigma(x)=\sigma_i(x)$로 정의하자. 만일 $x$가 $\mathbb{L}_i$와 $\mathbb{L}_j$에 모두 속한다면 $\mathbb{L}_i\cup\mathbb{L}_j\subseteq \mathbb{L}_k$인 $k$를 잡을 때 $\sigma_i(x)=\rho_{ik}(\sigma_k)(x)=\sigma_k(x)$이고 같은 이유로 $\sigma_j(x)=\sigma_k(x)$이므로 $\sigma$가 잘 정의되며, $\mathbb{L}$의 임의의 두 원소 또한 하나의 $\mathbb{L}_k$에 함께 속하므로 $\sigma$는 $\mathbb{K}$를 fix하는 field homomorphism이다. 한편 $\rho_{ij}$들이 homomorphism이므로 $(\sigma_i^{-1})$ 또한 $\varprojlim\Gal(\mathbb{L}_i/\mathbb{K})$의 원소이고, 같은 방식으로 얻어지는 함수가 $\sigma$의 역함수가 된다. 즉 $\sigma\in\Gal(\mathbb{L}/\mathbb{K})$이며 $\lambda(\sigma)=(\sigma_i)$이므로 $\lambda$는 전사이다.
 :::
 
-특히 finite degree Galois subextension들의 family $\Ext_{\fin,\gal}(\mathbb{L}/\mathbb{K})$는 이 명제의 조건을 만족한다. 이 family의 두 원소의 compositum은 [§갈루아 확장, ⁋명제 10](/ko/math/field_theory/galois_extension#prop10)에 의해 다시 finite degree Galois subextension이고, $\mathbb{L}$의 임의의 원소 $x$는 $\mathbb{K}(x)$를 포함하는 $\Ext_{\fin,\gal}(\mathbb{L}/\mathbb{K})$의 원소에 속하기 때문이다. 즉 임의의 Galois extension의 Galois group은 finite group들의 inverse limit, 곧 *profinite group*이다. 
+특히 finite degree Galois subextension들의 family $\Ext_{\fin,\gal}(\mathbb{L}/\mathbb{K})$는 이 명제의 조건을 만족한다. 이 family의 두 원소의 compositum은 [§갈루아 확장, ⁋명제 10](/ko/math/field_theory/galois_extension#prop10)에 의해 다시 finite degree Galois subextension이고, $\mathbb{L}$의 임의의 원소 $x$는 $\mathbb{K}(x)$를 포함하는 $\Ext_{\fin,\gal}(\mathbb{L}/\mathbb{K})$의 원소에 속하기 때문이다. 즉 임의의 Galois extension의 Galois group은 유한한 group들의 inverse limit, 곧 *profinite group*이다. 
 
 ## 갈루아 코호몰로지
 

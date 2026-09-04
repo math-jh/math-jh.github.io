@@ -10,8 +10,6 @@ sidebar:
 
 date: 2021-08-15
 weight: 10
-revising: true
-drift_needed: true
 
 ---
 
@@ -80,7 +78,7 @@ $$\pr_i(f(y))=f_i(y)=\pr_i(f'(y))$$
 
 > $(f(y))(i)=f_i(y)$를 만족하는 함수 (혹은 $i$번째 좌표가 $f_i(y)$인 순서쌍)
 
-으로 정의하자. 임의의 $y\in B$가 주어졌을 때, 각각의 $i\in I$마다 $f_i(y)$는 하나로 결정되므로 $i\mapsto f_i(y)$는 $I$에서 $\bigcup_{i\in I}A_i$로의 함수이며, $f_i:B\rightarrow A_i$이므로 $f_i(y)\in A_i$가 성립한다. 따라서 [정의 1](#def1)에 의하여 $f(y)$는 $P$의 원소이고, 이로부터 대응 $y\mapsto f(y)$는 $B$에서 $P$로의 함수가 된다. 이렇게 얻어진 $f$는 임의의 $y\in B$와 $i\in I$에 대하여 $\pr_i(f(y))=(f(y))(i)=f_i(y)$를 만족하므로 $f_i=\pr_i\circ f$이다. 
+으로 정의한 후 이 대응 $y\mapsto f(y)$가 실제로 함수임을 보이면 된다. 
 :::
 
 이제 [정리 3](#thm3)의 조건을 만족하는 $(P, \pr_i)$가 적어도 하나는 존재하므로 ([정의 1](#def1)), 이를 곱집합의 정의로 삼아도 된다. 즉,  $(A_i)_{i\in I}$들의 곱은 다음의 universal property를 만족하는 집합 $\prod_{i\in I} A_i$와 함수들 $\pr_i:\prod_{i\in I}A_i\rightarrow A_i$이라 할 수 있다.
@@ -126,17 +124,15 @@ $$\begin{aligned}
 우리는 합집합을 정의한 직후에 [§합집합과 교집합, ⁋명제 4](/ko/math/set_theory/union_and_intersection#prop4)에서, index set을 전사함수를 통해 바꾸어도 아무런 일도 일어나지 않음을 보았는데, 집합들의 곱에서는 전단사함수를 통해 바꾸어도 아무런 일도 일어나지 않는다. 
 
 ::: 명제 5
-$(A_i)_{i\in I}$가 집합들의 family이고 $u:K\rightarrow I$가 전단사라 하자. 임의의 $f\in\prod_{i\in I}A_i$, 다시 말해 $f(i)\in A_i$를 만족하는 임의의 $f:I\rightarrow\bigcup_{i\in I}A_i$에 대해, 이를 $f\circ u$로 보내는 함수 $f\mapsto f\circ u$는 $\prod_{i\in I}A_i$에서 $\prod_{k\in K}A_{u(k)}$로의 전단사함수이다.
+$(A_i)_{i\in I}$가 집합들의 family이고 $u:K\rightarrow I$가 전단사라 하자. 임의의 $f:I\rightarrow \prod_{i\in I}A_i$에 대해, 이를 $f\circ u: K\rightarrow \prod_{i\in I} A_i$로 보내는 함수 $f\mapsto f\circ u$는 전단사함수이다.
 :::
 
 ::: 증명
 다음의 diagram을 생각하자.
 
-{% diagram Math/Set_Theory/Product_of_Sets-3.svg width="12.79em" alt="induced_bijection" %}
+{% diagram frozen/635a8f80/Math/Set_Theory/Product_of_Sets-3.svg width="13.03em" alt="induced_bijection" %}
 
-[§합집합과 교집합, ⁋명제 4](/ko/math/set_theory/union_and_intersection#prop4)에 의하여 $\bigcup_{k\in K}A_{u(k)}=\bigcup_{i\in I}A_i$이므로, $\prod_{i\in I}A_i$의 원소와 $\prod_{k\in K}A_{u(k)}$의 원소는 모두 이 집합을 공역으로 갖는 함수이다. 곧 위의 diagram은 $v=\id$인 경우이고, $u$가 전단사이므로 [명제 2](#prop2)에 의하여 $F\mapsto F\circ u$는 $\Fun(I,\bigcup_{i\in I}A_i)$에서 $\Fun(K,\bigcup_{i\in I}A_i)$로의 전단사함수이다.
-
-남은 것은 이 전단사가 곱에 해당하는 부분집합끼리 대응함을 보이는 것이다. $u$가 전사이므로 임의의 $i\in I$는 어떤 $k\in K$에 대해 $i=u(k)$의 꼴로 적히고, 따라서 $F:I\rightarrow\bigcup_{i\in I}A_i$에 대하여 모든 $i\in I$에서 $F(i)\in A_i$인 것과 모든 $k\in K$에서 $(F\circ u)(k)=F(u(k))\in A_{u(k)}$인 것은 서로 동치이다. 즉 $F\in\prod_{i\in I}A_i$인 것과 $F\circ u\in\prod_{k\in K}A_{u(k)}$인 것이 동치이므로, 앞의 전단사함수를 $\prod_{i\in I}A_i$로 제한하면 $\prod_{k\in K}A_{u(k)}$로의 전단사함수를 얻는다.
+여기서 $v$는 $(x_i)_{i\in I}$를 $(x_{u(k)})_{k\in K}$로 대응시키는 전단사함수이다. 그럼 위의 [명제 2](#prop2)에 의하여 $F\mapsto F\circ U$는 전단사다.
 :::
 
 
