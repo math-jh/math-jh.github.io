@@ -45,30 +45,21 @@ $$\widetilde{\rho}(fg)=\widetilde{\rho}(f)\widetilde{\rho}(g)\in\mathfrak{b}^2=0
 
 $$\delta: \mathfrak{a}/\mathfrak{a}^2\rightarrow \mathfrak{b};\qquad \bar{f}\mapsto \widetilde{\rho}(f)$$
 
-이 잘 정의된다. 만일 
+이 잘 정의된다. 뿐만 아니라, 이렇게 얻어진 $\delta$는 $C$-linear map이 된다. 여기서 $\mathfrak{a}/\mathfrak{a}^2$는 $\mathfrak{a}$를 $B$-module로 봤을 때, $B$의 부분집합 $\mathfrak{a}$가 이 위에 $0$으로 작용하므로 $C=B/\mathfrak{a}$-module structure가 주어진 것이고, $\mathfrak{b}$의 경우 $\mathfrak{b}^2=0$인 것으로부터 $\mathfrak{b}$의 $R$-module structure가 $R_0=R/\mathfrak{b}$-module structure를 주고, 이를 $\rho_0$를 따라 $C$-module로 본 것이다. 즉, 고정된 $\widetilde{\rho}$에 대하여 $\widetilde{\rho}(\mathfrak{a})=0$인 것은 정확히 이런 방식으로 정의한 $C$-linear map $\delta\in\Hom_C(\mathfrak{a}/\mathfrak{a}^2, \mathfrak{b})$가 $0$이 되는 것과 같다. 
 
-이 계산은 두 단계로 갈라진다. 먼저 고정된 $\widetilde{\rho}$ 하나에 대하여 그것이 $\mathfrak{a}$를 죽이지 못하는 정도를 하나의 대수적 대상으로 기록하고, 다음으로 $\widetilde{\rho}$의 선택을 바꿀 때 그 대상이 정확히 얼마만큼 변하는지를 확인한다. 변화의 폭을 알고 나면 그만큼으로 quotient하여 선택에 의존하지 않는 양을 얻을 수 있으며, 바로 그 양이 소멸하는 것이 lifting의 존재와 동치가 된다.
+이를 바탕으로 우리는 $\widetilde{\rho}$의 선택을 바꿀 때의 변화량을 정량화할 수 있다. $\widetilde{\rho}$와 $\widetilde{\rho}'$이 $\overline{\rho}_0$의 두 lift라 하자. 그럼 등식 $q\circ\widetilde{\rho}=q\circ\widetilde{\rho}'$으로부터 그 차 $D=\widetilde{\rho}'-\widetilde{\rho}$는 $B$에서 $\ker \mathfrak{q}=\mathfrak{b}$로의 $A$-linear map이다. 그런데
 
-첫 단계의 재료는 이미 손에 있다. 임의의 $f\in\mathfrak{a}$에 대하여
+$$D(fg)=\widetilde{\rho}'(f)\widetilde{\rho}'(g)-\widetilde{\rho}(f)\widetilde{\rho}(g)=\left(\widetilde{\rho}(f)+D(f)\right)\left(\widetilde{\rho}(g)+D(g)\right)-\widetilde{\rho}(f)\widetilde{\rho}(g)=\widetilde{\rho}(f)D(g)+D(f)\widetilde{\rho}(g)+D(f)D(g)$$
 
-$$q(\widetilde{\rho}(f))=\overline{\rho}_0(f)=\rho_0(\pi(f))=\rho_0(0)=0$$
+이고, $D(f),D(g)\in\mathfrak{b}$이며 $\mathfrak{b}^2=0$이므로 마지막 항 $D(f)D(g)$은 사라진다. 한편, $\mathfrak{b}$ 위의 $R$-module 구조는 $q: R\rightarrow R_0$을 통해 이루어진 것으로
 
-이므로 $\widetilde{\rho}(f)\in\ker q=\mathfrak{b}$, 곧 $\widetilde{\rho}(\mathfrak{a})\subseteq\mathfrak{b}$가 성립한다. 즉 오차는 반드시 $\mathfrak{b}$에 속한다. 나아가 $\mathfrak{b}^2=0$이므로 임의의 $f,g\in\mathfrak{a}$에 대하여 $\widetilde{\rho}(fg)=\widetilde{\rho}(f)\widetilde{\rho}(g)\in\mathfrak{b}^2=0$이 되어 $\mathfrak{a}^2$은 $0$으로 사상된다. 한편 $\mathfrak{b}$는 $R_0$-module이므로 $\rho_0$를 따라 $C$-module로 볼 수 있고, $c\in C$의 lift $b\in B$를 아무렇게나 잡아 $\widetilde{\rho}(bf)=\widetilde{\rho}(b)\widetilde{\rho}(f)$를 보면 $\widetilde{\rho}(b)$가 $\mathfrak{b}$ 위에 작용하는 방식은 $q(\widetilde{\rho}(b))=\overline{\rho}_0(b)=\rho_0(c)$에만 의존한다. 따라서 $\widetilde{\rho}\vert_{\mathfrak{a}}$는 $\mathfrak{a}/\mathfrak{a}^2$을 통해 factor하여 $C$-module homomorphism
+$$\widetilde{\rho}(f)D(g)=q(\widetilde{\rho}(f))\cdot D(g)=\overline{\rho}_0(f)\cdot D(g)$$
 
-$$\delta:\mathfrak{a}/\mathfrak{a}^2\longrightarrow\mathfrak{b};\qquad \overline{f}\longmapsto\widetilde{\rho}(f)$$
+이 성립하고, 따라서 위의 식에서 남은 두 항은 $\mathfrak{b}$를 $\overline{\rho}_0$를 따라 $B$-module로 볼 때의 action $f\cdot D(g)$와 $D(f)\cdot g$로 쓸 수 있다. 즉, $D$는 Leibniz rule
 
-를 정의한다. 물론 $\delta=0$인 것과 $\widetilde{\rho}(\mathfrak{a})=0$인 것은 같은 말이므로, $\delta$가 지금의 $\widetilde{\rho}$에 대하여 말해주는 내용 자체는 새롭지 않다. 여기서 얻은 것은 그 오차가 놓이는 자격이다. 처음에 $\widetilde{\rho}(\mathfrak{a})$는 $R$의 원소들의 무정형한 모임이었으나, 위의 두 계산을 거치며 $\mathfrak{b}$에 값을 갖고 $\mathfrak{a}/\mathfrak{a}^2$에서 정의되는 $C$-linear map, 곧 $\Hom_C(\mathfrak{a}/\mathfrak{a}^2,\mathfrak{b})$라는 하나의 $C$-module의 원소가 되었다. 선택을 바꿀 때의 변화를 재고 그만큼 quotient하는 둘째 단계는 오차가 이렇게 $C$-linear map으로 정리된 뒤에야 가능하다.
+$$D(fg)=f\cdot D(g)+g\cdot D(f)$$
 
-이제 $\overline{\rho}_0$의 두 lift $\widetilde{\rho}$와 $\widetilde{\rho}'$을 비교하자. $q\circ\widetilde{\rho}=q\circ\widetilde{\rho}'$이므로 그 차 $D=\widetilde{\rho}'-\widetilde{\rho}$는 $B$에서 $\mathfrak{b}$로 가는 $A$-linear map이며, $\mathfrak{b}^2=0$과 $\widetilde{\rho}(f)$의 $\mathfrak{b}$ 위 작용이 $\overline{\rho}_0(f)$에만 의존한다는 사실로부터
-
-$$\begin{aligned}
-D(fg)&=\widetilde{\rho}'(f)\widetilde{\rho}'(g)-\widetilde{\rho}(f)\widetilde{\rho}(g)\\
-&=\left(\widetilde{\rho}(f)+D(f)\right)\left(\widetilde{\rho}(g)+D(g)\right)-\widetilde{\rho}(f)\widetilde{\rho}(g)\\
-&=\widetilde{\rho}(f)D(g)+D(f)\widetilde{\rho}(g)+D(f)D(g)\\
-&=f\cdot D(g)+g\cdot D(f)
-\end{aligned}$$
-
-를 얻는다. 즉 $D$는 $\overline{\rho}_0$를 따라 $B$-module로 본 $\mathfrak{b}$에 값을 갖는 $A$-derivation이다. 거꾸로 임의의 $D\in\Der_A(B,\mathfrak{b})$에 대하여 $\widetilde{\rho}+D$ 역시 $A$-algebra homomorphism이고 $q\circ(\widetilde{\rho}+D)=\overline{\rho}_0$을 만족하므로, $\overline{\rho}_0$의 lift 전체는 $\Der_A(B,\mathfrak{b})=\Hom_C(\Omega_{B/A}\otimes_BC,\mathfrak{b})$ 위의 torsor를 이룬다. 각 변수의 lift를 고를 때 있었던 자유도는 정확히 이만큼이고 그 이상도 이하도 아니다.
+을 만족하고 따라서 $A$-derivation이다. 거꾸로 임의의 $D\in \Der_A(B, \mathfrak{b})$에 대하여, $\widetilde{\rho}+D$ 역시 $A$-algebra homomorphism이고 $q\circ(\widetilde{\rho}+D)=\overline{\rho}_0$을 만족하므로, $\overline{\rho}_0$의 lift를 고르는 자유도가 정확히 $\Der_A(B,\mathfrak{b})=\Hom_C(\Omega_{B/A}\otimes_BC,\mathfrak{b})$에 담기게 된다.
 
 이 자유도가 $\delta$에 미치는 영향은 곧바로 읽힌다. $D$에 대응하는 $C$-module homomorphism을 $h:\Omega_{B/A}\otimes_BC\rightarrow\mathfrak{b}$라 하면 임의의 $f\in\mathfrak{a}$에 대하여 $\widetilde{\rho}'$이 정하는 $\delta'$은
 
