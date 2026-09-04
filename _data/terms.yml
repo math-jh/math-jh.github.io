@@ -2051,7 +2051,7 @@ C:
   ko: 정준층
   primary: en
   defs:
-  - label: '[스킴] §미분과 여접층'
+  - label: '[스킴] §Kähler 미분과 여접층'
     url: /ko/math/scheme_theory/sheaf_of_differentials
 - id: canonical_topology
   en: canonical topology
@@ -4108,7 +4108,7 @@ C:
   ko: 여접층
   primary: en
   defs:
-  - label: '[스킴] §미분과 여접층'
+  - label: '[스킴] §Kähler 미분과 여접층'
     url: /ko/math/scheme_theory/sheaf_of_differentials
 - id: cotangent_space
   en: cotangent space
@@ -10294,7 +10294,7 @@ K:
   ko: Kähler 미분
   primary: en
   defs:
-  - label: '[스킴] §미분과 여접층'
+  - label: '[스킴] §Kähler 미분과 여접층'
     url: /ko/math/scheme_theory/sheaf_of_differentials
   see:
   - label: Kähler differential module
@@ -17156,7 +17156,7 @@ S:
   ko: 상대 미분층
   primary: en
   defs:
-  - label: '[스킴] §미분과 여접층'
+  - label: '[스킴] §Kähler 미분과 여접층'
     url: /ko/math/scheme_theory/sheaf_of_differentials
 - id: sheafification
   en: sheafification
@@ -18729,7 +18729,7 @@ T:
   ko: 접층
   primary: en
   defs:
-  - label: '[스킴] §미분과 여접층'
+  - label: '[스킴] §Kähler 미분과 여접층'
     url: /ko/math/scheme_theory/sheaf_of_differentials
 - id: tangent_space
   en: tangent space
@@ -19646,7 +19646,7 @@ U:
   ko: 보편 미분
   primary: en
   defs:
-  - label: '[스킴] §미분과 여접층'
+  - label: '[스킴] §Kähler 미분과 여접층'
     url: /ko/math/scheme_theory/sheaf_of_differentials
 - id: universal_element
   en: universal element
@@ -20373,7 +20373,7 @@ Z:
   defs:
   - label: '[대수다양체] §접공간과 매끄러움'
     url: /ko/math/algebraic_varieties/tangent_spaces_and_smoothness
-  - label: '[스킴] §미분과 여접층'
+  - label: '[스킴] §Kähler 미분과 여접층'
     url: /ko/math/scheme_theory/sheaf_of_differentials
   see:
   - label: Tangent space
