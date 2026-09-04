@@ -43,9 +43,9 @@ $$\mathfrak{a}/\mathfrak{a}^2 \overset{\bar{d}}{\longrightarrow} \Omega_{B/A}\ot
 
 $$0\rightarrow\mathfrak{b}\rightarrow R\rightarrow R_0\rightarrow0$$
 
-를 따른 lifting $\rho:C\rightarrow R$의 존재가 smoothness를 주며, 이를 위해 우리는 cotangent complex를 도입하기로 약속하였다. 
+를 따른 lifting $\rho:C\rightarrow R$의 존재가 smoothness를 준다. 
 
-여기서 관점을 전환하면, infinitesimal lifting criterion은 단순히 주어진 대상의 smoothness를 검사하는 도구에 그치지 않는다. 거꾸로 square-zero extension을 대상을 얹을 base로 삼아 그 위로 대상을 들어올리는 문제를 생각하면, lifting의 존재와 유일성을 따지는 질문은 대상을 무한소만큼 흔들어 연속적인 family를 구성하는 문제, 곧 *deformation theory*의 중심 과제로 변모한다. 대상이 smooth하지 않을 때 발생하는 lifting의 비유일성은 first-order deformation의 다양한 가능성을, lifting의 불가능성은 변형을 가로막는 obstruction을 정확히 가리키기 때문이다. 결국 smoothness의 결함을 측정하기 위해 고안되었던 cotangent complex와 그 dual이, deformation theory에서 변형을 분류하고 obstruction을 계산하는 가장 근본적인 대수적 기계로 작동하게 된다.
+이제 square-zero extension을 대상을 얹을 base로 삼아 그 위로 대상을 들어올리는 문제를 생각하면, lifting의 존재와 유일성을 따지는 질문은 대상을 무한소만큼 흔들어 연속적인 family를 구성하는 문제, 곧 *deformation theory*의 중심 과제로 변모한다. 대상이 smooth하지 않을 때 발생하는 lifting의 비유일성은 first-order deformation의 다양한 가능성을, lifting의 불가능성은 변형을 가로막는 obstruction을 정확히 가리키기 때문이다.
 
 ## 평탄변형과 일차변형
 
