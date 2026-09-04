@@ -15,41 +15,39 @@ weight: 22
 published: false
 ---
 
-일반적으로 $A$-module $M$에 대하여 tensor product functor $-\otimes_A M$은 right exact functor이므로, 임의의 short exact sequence
+[§매끄러운 사상과 에탈 사상, ⁋정리 15](/ko/math/scheme_theory/smooth_and_etale_morphisms#thm15)에 따르면, locally of finite presentation인 morphism of schemes $\varphi:X\rightarrow S$가 smooth한 것은 임의의 affine $S$-scheme $T=\Spec R$와, square-zero subscheme $T_0=\Spec R_0$마다, 임의의 $S$-morphism $\varrho_0:T_0\rightarrow X$를 $T$로 연장하는 lifting $\varrho:T\rightarrow X$가 항상 존재하는 것과 동치이다. 여기서 $T_0$이 $T$의 *square-zero subscheme*이라는 것은, $T_0\hookrightarrow T$가 square-zero ideal sheaf $\mathcal{I}\subseteq\mathcal{O}_T$로 정의된다는 의미이며, 이를 affine space에서의 세팅 
 
-$$0 \rightarrow N' \rightarrow N \rightarrow N'' \rightarrow 0$$
+$$S=\Spec A,\qquad X=\Spec C,\qquad\text{$C$ an $A$-algebra locally of finite presentation}$$
 
-에 tensor product functor $-\otimes_AM$를 취하면 다음의 exact sequence
+에서 보면, closed immersion $T_0\hookrightarrow T$는 square-zero ideal $\mathfrak{b}\subseteq R$에 의한 square-zero extension
 
-$$N'\otimes_A M \rightarrow N\otimes_A M \rightarrow N''\otimes_A M \rightarrow 0$$
+$$0\longrightarrow\mathfrak{b}\longrightarrow R\overset{q}{\longrightarrow} R_0\longrightarrow0\tag{$\ast$}$$
 
-까지밖에 얻을 수 없었다. 즉, 왼쪽 끝에 $0$을 덧붙여 단사성을 보장하는 것은 일반적으로 불가능하며, 이와 같이 단사성이 깨지는 결함을 보정하기 위하여 $-\otimes_A M$의 left derived functor를 취해 $\Tor$ functor들을 정의하였다. ([\[호몰로지 대수학\] §Ext와 Tor, ⁋정의 2](/ko/math/homological_algebra/ext_and_tor#def2)) 그럼 이 정의 하에서 위 sequence는 다음의 long exact sequence
+에 대응하며, $S$-morphism $\varrho_0$는 $A$-algebra homomorphism $\rho_0:C\rightarrow R_0$에 대응한다. 즉, 이와 같은 상황에서 $\phi: A\rightarrow C$의 smoothness는 임의의 square-zero extension ($\ast$)와, 임의의 $\rho_0: C\rightarrow R_0$가 주어질 때마다, 그 lifting $\rho: C\rightarrow R$이 항상 존재하는 것과 동치였다. 
+ 
+이제 $C$가 locally of finite presentation인 $A$-algebra이므로, 적당한 polynomial algebra $B=A[\x_1,\ldots,\x_n]$와 $B$의 finitely generated ideal $\mathfrak{a}$가 존재하여 $C=B/\mathfrak{a}$라 할 수 있다. 자연스러운 projection $\pi:B\twoheadrightarrow C$와 $\rho_0$의 합성
 
-$$\cdots \rightarrow \Tor_1^A(N'', M) \rightarrow N'\otimes_A M \rightarrow N\otimes_A M \rightarrow N''\otimes_A M \rightarrow 0$$
+$$B\longrightarrow C\overset{\rho_0}{\longrightarrow}R_0$$
 
-로 연장되며, 따라서 주어진 sequence에 tensor product를 취한 결과가 왼쪽 끝에서도 exact이기 위한 필요충분조건은 그 앞을 가로막는 첫 번째 derived functor $\Tor_1^A(N'', M)$이 소멸하는 것이다. 가령 [\[가환대수학\] §평탄성, ⁋명제 1](/ko/math/commutative_algebra/flatness#prop1)에서 우리는 ideal $\mathfrak{a}\subseteq A$에 대한 short exact sequence 
+의 lifting $\widetilde{\rho}:B\rightarrow R$를 임의로 택하자. 이 map이 $C$를 통해 factor하지 못하는 정도, 곧 lifting의 실패는 $\widetilde{\rho}$가 $\mathfrak{a}$ 위에서 갖는 값으로 주어지며, 이는 $C$-module homomorphism
 
-$$0\rightarrow\mathfrak{a}\rightarrow A\rightarrow A/\mathfrak{a}\rightarrow0$$
+$$\delta:\mathfrak{a}/\mathfrak{a}^2\longrightarrow\mathfrak{b};\qquad \overline{f}\longmapsto\widetilde{\rho}(f)$$
 
-에 tensor product를 취했을 때, multiplication map $\mathfrak{a}\otimes_A M \rightarrow M$이 injective가 되는 것은 $\Tor_1^A(A/\mathfrak{a}, M)=0$과 동치라는 것을 확인하였다.
+를 정의한다. 여기서 $\mathfrak{b}$는 $\rho_0$를 따라 $C$-module로 본다. 한편 $\widetilde{\rho}$를 $\mathfrak{b}$-valued $A$-derivation만큼 바꾸는 것은 어떤 $C$-module homomorphism $h:\Omega_{B/A}\otimes_BC\rightarrow\mathfrak{b}$를 택하는 것과 같고, 이때 $\delta$는 $h\circ\overline{d}$만큼 변한다. 여기서 $\overline{d}:\mathfrak{a}/\mathfrak{a}^2\rightarrow\Omega_{B/A}\otimes_BC$는 [§Kähler 미분과 여접층, ⁋명제 2](/ko/math/scheme_theory/sheaf_of_differentials#prop2)의 conormal morphism이다. 따라서 $\delta$가 정하는 class
 
-이와 마찬가지로, Kähler differential이 주는 conormal exact sequence 또한 일반적인 algebra에 대해서는 right exact만 보장된다. 즉, $A$-algebra $B$와 ideal $\mathfrak{a}\subseteq B$에 대하여 $C=B/\mathfrak{a}$라 할 때, [§미분과 여접층, ⁋명제 2](/ko/math/scheme_theory/sheaf_of_differentials#prop2)의 conormal exact sequence
+$$[\delta]\in\coker\left(\Hom_C(\Omega_{B/A}\otimes_BC,\mathfrak{b})\overset{\overline{d}^{\ast}}{\longrightarrow}\Hom_C(\mathfrak{a}/\mathfrak{a}^2,\mathfrak{b})\right)$$
 
-$$\mathfrak{a}/\mathfrak{a}^2 \overset{\bar{d}}{\longrightarrow} \Omega_{B/A}\otimes_B C \longrightarrow \Omega_{C/A} \longrightarrow 0$$
+는 처음 택한 $\widetilde{\rho}$에 의존하지 않으며, 이 class가 소멸하는 것은 $\delta$를 derivation으로 상쇄하여 원하는 lifting $\rho:C\rightarrow R$을 얻을 수 있는 것과 동치이다. 또한 하나의 lifting이 존재할 때 서로 다른 lifting들의 차이는 $\Der_A(C,\mathfrak{b})=\Hom_C(\Omega_{C/A},\mathfrak{b})$가 통제한다.
 
-에서 왼쪽 끝의 $\bar{d}$가 injective가 될 이유는 없으며, 우리는 위에서 $\otimes_AM$의 결함을 right derived functor $\Tor_1$로 확인했듯 이 exact sequence를 derive하여 그 결함을 측정할 수 있다. 이로부터 정의되는 것이 naive cotangent complex이며, 이를 통해 우리는 smoothness의 판정을 homological algebra의 언어로 옮겨줄 수 있다. 
+위 cokernel은 two-term complex
 
-이 현상의 기하학적 그림은  [§매끄러운 사상과 에탈 사상, ⁋정리 15](/ko/math/scheme_theory/smooth_and_etale_morphisms#thm15)에 담겨있다. 이에 따르면, locally of finite presentation인 $A$-algebra $C$가 smooth한 것은 임의의 square-zero extension
+$$\operatorname{NL}_{C/A}=\left[\mathfrak{a}/\mathfrak{a}^2\overset{\overline{d}}{\longrightarrow}\Omega_{B/A}\otimes_BC\right]$$
 
-$$0\rightarrow\mathfrak{b}\rightarrow R\overset{q}{\rightarrow} R_0\rightarrow0$$
+를 $\mathfrak{b}$로 dual하여 얻는 첫째 cohomology이다. 곧 앞 글의 lifting criterion 안에는 이미 naive cotangent complex가 들어있다. Smooth한 경우에는 conormal sequence가 split exact이므로 $\overline{d}^{\ast}$가 모든 $\mathfrak{b}$에 대하여 surjective이고 이 obstruction이 항상 사라진다. 반대로 singular한 경우에는 lifting의 실패를 단순한 부정으로 버리지 않고 그 class가 어느 공간에 놓이는지, 서로 다른 lifting들이 어떻게 매개되는지를 연구할 수 있다.
 
-과 임의의 $A$-algebra homomorphism $\rho_0:C\rightarrow R_0$에 대하여, $q\circ\rho=\rho_0$를 만족하는 lifting $\rho:C\rightarrow R$이 항상 존재하는 것과 동치이다. 기하학적으로 이는 closed subscheme $T_0=\Spec R_0$에서 $X=\Spec C$로 가는 사상이 주어졌을 때, nilpotent 방향으로 한 겹 두껍게 만든 스킴 $T=\Spec R$로도 그 사상을 언제나 연장할 수 있음을 뜻한다. 대상이 smooth하다는 것은 singularity와 같은 기하학적 장애가 없어, 무한소의 두께를 따라 사상을 들어올리는 데 아무런 방해가 없다는 직관을 담고 있다.
+여기까지는 대상을 나타내는 $C$를 고정하고 그로부터 나가는 map $\rho$를 들어올렸다. Deformation theory에서는 같은 square-zero 확대 안에서 미지수를 바꾸어, $A$ 위의 대상 $C$ 자체를 더 두꺼운 base $A'$ 위의 flat $A'$-algebra $C'$으로 들어올린다. 특히 $A=\mathbb{K}$이고 $A'=\mathbb{K}[\epsilon]/(\epsilon^2)$일 때 이러한 lifting이 first-order deformation이며, 그 isomorphism class들은 $T^1(C/\mathbb{K},C)$이 분류한다. 이미 얻은 변형을 한 단계 더 두꺼운 base 위로 연장할 때에는 그 존재를 가로막는 obstruction이 $T^2$에 놓이고, $T^0$는 변형의 infinitesimal automorphism을 기록한다.
 
-그런데 여기서 관점을 전환하면, infinitesimal lifting criterion은 단순히 주어진 대상의 smoothness를 판정하는 도구에 머무르지 않는다. 사상을 쏘아 올리는 시험대로 쓰였던 square-zero extension을 거꾸로 **대상을 얹을 base**로 삼아 그 위로 대상을 들어올리는 문제를 생각할 수 있기 때문이다. 가령 한 점 $\Spec \mathbb{K}$ 위에 정의된 대상 $X$가 있을 때, 접선 방향을 품고 있는 두꺼워진 점 $\Spec \mathbb{K}[\epsilon]/(\epsilon^2)$ 위로 $X$를 flat하게 연장하는 문제는 대상을 무한소만큼 흔들어 연속적인 family를 구성하는 문제, 곧 *deformation theory*의 출발점이 된다.
-
-이 관점에서 lifting의 존재와 유일성은 완전히 새로운 기하학적 생명력을 얻는다. Lifting의 비유일성은 대상을 흔들 수 있는 독립적인 무한소 방향들이 다양하게 존재함을 뜻하며, 이는 곧 moduli space의 tangent space를 이루는 first-order deformation들의 공간을 형성한다. 반대로 주어진 변형을 더 높은 차수의 square-zero extension으로 계속 연장해 나가지 못하는 lifting의 불가능성은 변형을 가로막는 obstruction을 가리킨다.
-
-결국 대수적으로 Kähler differential의 단사성 결함을 보정하기 위해 요구되는 cotangent complex와, 기하학적으로 smoothness의 lifting 기준을 뒤집어 대상을 흔드는 deformation theory는 서로 다른 두 출발점을 갖지만, 변형과 obstruction을 분류하는 대수적 기계가 바로 cotangent complex라는 사실을 통해 종국에는 완벽하게 하나의 줄기로 통합된다. 이제 우선 대수적 언어로 평탄변형의 기초를 정의하고, first-order deformation의 성질을 살펴본다.
+이는 right exact functor의 결함을 derived functor가 차례로 기록하는 것과 같은 원리이다. Tensor product의 왼쪽에서 사라진 정보를 $\Tor$가 복원하듯 ([\[호몰로지 대수학\] §Ext와 Tor, ⁋정의 2](/ko/math/homological_algebra/ext_and_tor#def2)), Kähler differential만으로 보이지 않는 방정식과 그 relation의 정보를 complex의 higher degree들이 기록한다. Naive cotangent complex는 그 첫 두 층을 담고, 이를 더 연장한 cotangent complex가 deformation과 obstruction을 하나의 cohomology 이론으로 통합한다. 이제 우선 평탄변형의 기초를 정의하고 first-order deformation의 성질을 살펴본다.
 
 ## 평탄변형과 일차변형
 
@@ -308,4 +306,3 @@ $$L_{B/A}\otimes_B^{\mathbb{L}}C\rightarrow L_{C/A}\rightarrow L_{C/B}\rightarro
 **[Har]** R. Hartshorne, _Deformation theory_, Graduate Texts in Mathematics 257, Springer, 2010.  
 **[Ser]** E. Sernesi, _Deformations of algebraic schemes_, Grundlehren der mathematischen Wissenschaften 334, Springer, 2006.  
 **[Stacks]** The Stacks project authors, _The Stacks project_, [stacks.math.columbia.edu](https://stacks.math.columbia.edu).
-
