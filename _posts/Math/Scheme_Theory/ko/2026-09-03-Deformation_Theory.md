@@ -39,13 +39,17 @@ $$\mathfrak{a}/\mathfrak{a}^2 \overset{\bar{d}}{\longrightarrow} \Omega_{B/A}\ot
 
 에서 왼쪽 끝의 $\bar{d}$가 injective가 될 이유는 없으며, 우리는 위에서 $\otimes_AM$의 결함을 right derived functor $\Tor_1$로 확인했듯 이 exact sequence를 derive하여 그 결함을 측정할 수 있다. 이로부터 정의되는 것이 naive cotangent complex이며, 이를 통해 우리는 smoothness의 판정을 homological algebra의 언어로 옮겨줄 수 있다. 
 
-한편 기하적으로 이 소멸의 기하학적 의미는 [§매끄러운 사상과 에탈 사상, ⁋정리 15](/ko/math/scheme_theory/smooth_and_etale_morphisms#thm15)에 담겨있다. 이에 따르면 square-zero extension 
+이 현상의 기하학적 그림은  [§매끄러운 사상과 에탈 사상, ⁋정리 15](/ko/math/scheme_theory/smooth_and_etale_morphisms#thm15)에 담겨있다. 이에 따르면, locally of finite presentation인 $A$-algebra $C$가 smooth한 것은 임의의 square-zero extension
 
-$$0\rightarrow\mathfrak{b}\rightarrow R\rightarrow R_0\rightarrow0$$
+$$0\rightarrow\mathfrak{b}\rightarrow R\overset{q}{\rightarrow} R_0\rightarrow0$$
 
-를 따른 lifting $\rho:C\rightarrow R$의 존재가 smoothness를 준다. 
+과 임의의 $A$-algebra homomorphism $\rho_0:C\rightarrow R_0$에 대하여, $q\circ\rho=\rho_0$를 만족하는 lifting $\rho:C\rightarrow R$이 항상 존재하는 것과 동치이다. 기하학적으로 이는 closed subscheme $T_0=\Spec R_0$에서 $X=\Spec C$로 가는 사상이 주어졌을 때, nilpotent 방향으로 한 겹 두껍게 만든 스킴 $T=\Spec R$로도 그 사상을 언제나 연장할 수 있음을 뜻한다. 대상이 smooth하다는 것은 singularity와 같은 기하학적 장애가 없어, 무한소의 두께를 따라 사상을 들어올리는 데 아무런 방해가 없다는 직관을 담고 있다.
 
-이제 square-zero extension을 대상을 얹을 base로 삼아 그 위로 대상을 들어올리는 문제를 생각하면, lifting의 존재와 유일성을 따지는 질문은 대상을 무한소만큼 흔들어 연속적인 family를 구성하는 문제, 곧 *deformation theory*의 중심 과제로 변모한다. 대상이 smooth하지 않을 때 발생하는 lifting의 비유일성은 first-order deformation의 다양한 가능성을, lifting의 불가능성은 변형을 가로막는 obstruction을 정확히 가리키기 때문이다.
+그런데 여기서 관점을 전환하면, infinitesimal lifting criterion은 단순히 주어진 대상의 smoothness를 판정하는 도구에 머무르지 않는다. 사상을 쏘아 올리는 시험대로 쓰였던 square-zero extension을 거꾸로 **대상을 얹을 base**로 삼아 그 위로 대상을 들어올리는 문제를 생각할 수 있기 때문이다. 가령 한 점 $\Spec \mathbb{K}$ 위에 정의된 대상 $X$가 있을 때, 접선 방향을 품고 있는 두꺼워진 점 $\Spec \mathbb{K}[\epsilon]/(\epsilon^2)$ 위로 $X$를 flat하게 연장하는 문제는 대상을 무한소만큼 흔들어 연속적인 family를 구성하는 문제, 곧 *deformation theory*의 출발점이 된다.
+
+이 관점에서 lifting의 존재와 유일성은 완전히 새로운 기하학적 생명력을 얻는다. Lifting의 비유일성은 대상을 흔들 수 있는 독립적인 무한소 방향들이 다양하게 존재함을 뜻하며, 이는 곧 moduli space의 tangent space를 이루는 first-order deformation들의 공간을 형성한다. 반대로 주어진 변형을 더 높은 차수의 square-zero extension으로 계속 연장해 나가지 못하는 lifting의 불가능성은 변형을 가로막는 obstruction을 가리킨다.
+
+결국 대수적으로 Kähler differential의 단사성 결함을 보정하기 위해 요구되는 cotangent complex와, 기하학적으로 smoothness의 lifting 기준을 뒤집어 대상을 흔드는 deformation theory는 서로 다른 두 출발점을 갖지만, 변형과 obstruction을 분류하는 대수적 기계가 바로 cotangent complex라는 사실을 통해 종국에는 완벽하게 하나의 줄기로 통합된다. 이제 우선 대수적 언어로 평탄변형의 기초를 정의하고, first-order deformation의 성질을 살펴본다.
 
 ## 평탄변형과 일차변형
 
