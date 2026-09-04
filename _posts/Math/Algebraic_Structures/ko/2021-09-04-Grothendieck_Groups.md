@@ -1,6 +1,6 @@
 ---
 title: "Grothendieck 군"
-description: "가환 준군에서 아벨 군을 구성하는 그로텐디에크 군의 정의와 보편 사상 문제를 통한 존재성과 유일성 증명을 다룬다."
+description: "가환 반군에서 가환군을 구성하는 그로텐디크 군의 정의와, 보편 사상 문제를 통한 존재성과 유일성 증명을 다룬다."
 excerpt: "Grothendieck group과 정수의 정의"
 
 categories: [Math / Algebraic Structures]
@@ -83,7 +83,7 @@ $$(a_1+a_2)-(b_1+b_2)=(a_1-b_1)+(a_2-b_2)$$
 
 를 나타내는 것처럼 생각할 수 있다. 
 
-물론, 일반적으로 $a$와 $b$가 다르더라도 $a-b$의 값은 충분히 차이가 날 수 있기 때문에, 우리는 $S\times S$ 위에 동치관계 $R$을 다음과 같이 정의한다.
+물론, $a$와 $b$를 다르게 잡더라도 그 차 $a-b$는 같은 값일 수 있으므로 우리는 $S\times S$ 위에 동치관계 $R$을 다음과 같이 정의한다.
 
 $$(a_1, b_1)\equiv (a_2, b_2)\pmod{R}\iff a_1+b_2+c=a_2+b_1+c\text{ for some $c\in S$}$$
 

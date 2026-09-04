@@ -85,7 +85,7 @@ $$(a_1+a_2)-(b_1+b_2)=(a_1-b_1)+(a_2-b_2)$$
 
 . 
 
-Of course, in general, even if $a$ and $b$ are different, the value of $a-b$ can sufficiently differ, so we define an equivalence relation $R$ on $S\times S$ as follows:
+Of course, even if we choose $a$ and $b$ differently, the difference $a-b$ can be the same value, so we define an equivalence relation $R$ on $S\times S$ as follows:
 
 $$(a_1, b_1)\equiv (a_2, b_2)\pmod{R}\iff a_1+b_2+c=a_2+b_1+c\text{ for some $c\in S$}$$
 
