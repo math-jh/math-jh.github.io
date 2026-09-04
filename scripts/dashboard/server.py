@@ -71,7 +71,7 @@ except Exception as _e:  # noqa: BLE001
 # ── 워커 정의 ────────────────────────────────────────────────────────────────
 # interval: cron 주기(초). age > 2.5*interval 이면 stale(빨간불) 판정.
 WORKERS = [
-    dict(key="translation", name="번역 워커", schedule="4시간마다 :15", interval=14400,
+    dict(key="translation", name="번역 워커", schedule="00시부터 4시간 · 후속은 02시부터 4시간", interval=7200,
          log=f"{ROOT}/scripts/translation/translation.log"),
     dict(key="terms", name="용어 추출", schedule=":00 / :30", interval=1800,
          log=f"{ROOT}/scripts/term-extraction/term_extract_worker.log"),
@@ -427,8 +427,12 @@ def sec_translation():
         recent.append(dict(path=path, status=st, ts=ts,
                            retries=v.get("retries") or v.get("retry") or 0,
                            verdict=v.get("verdict") or v.get("verify_verdict") or ""))
-        typos = v.get("verify_ko_typos") or _ko_typos(
-            v.get("verdict") or v.get("verify_verdict") or "")
+        # An explicit empty value means a later review cleared the finding.  Use
+        # the legacy verdict parser only for old entries that never had this key;
+        # `or` here resurrects dismissed findings from stale verdict prose.
+        typos = (v.get("verify_ko_typos") or []) \
+            if "verify_ko_typos" in v else _ko_typos(
+                v.get("verdict") or v.get("verify_verdict") or "")
         if not typos:
             continue
         # Codex 판정(translate_worker :: review_ko_findings)이 있으면 항목에 붙인다.
@@ -450,6 +454,8 @@ def sec_translation():
             else:
                 n_unreviewed += 1
         live = [i for i in items if i["verdict"] != "FALSE"]
+        if not live:
+            continue
         ko_typos.append(dict(path=path, items=[i["text"] for i in items],
                              detail=items, live=len(live),
                              verified_at=v.get("ko_reviewed_at")
@@ -617,6 +623,7 @@ QUOTA_GOVERNOR = os.path.expanduser("~/.local/bin/quota-reset-watch.py")
 # 키가 곧 허용목록이다. 연구 파이프라인(research-*)은 Pi 대시보드(:8088) 소관.
 CRON_JOBS = [
     dict(id="blog-translation",      name="번역 워커",        worker="translation"),
+    dict(id="blog-translation-followup", name="한글 수정 후속", worker="translation"),
     dict(id="blog-terms",            name="용어 추출",        worker="terms"),
     dict(id="blog-terms-lint",       name="용어 lint",        worker="terms_lint"),
     dict(id="blog-terms-deprecated", name="폐기 용어 점검",   worker=None),

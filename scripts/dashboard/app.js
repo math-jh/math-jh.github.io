@@ -673,9 +673,8 @@ function secTranslation(d) {
     '자 → 출력 ' + kchars(st.total_out_chars) + '자' +
     (st.total_in_chars ? ' (압축률 ' + pct(st.total_out_chars, st.total_in_chars) + '%)' : '')));
   /* KO 원문 검토 — Gemini 후보를 Codex가 오류/설명 누락으로 검증한 목록.
-     다음 재검증 때까지 verdict 에 남으므로, KO 를 고쳤어도 표시가 유지될 수 있다.
-     '수정' 체크는 (path@verified_at) 키로 서버(/api/kotypo → ~/.local/state)에
-     저장한다 — 기기가 바뀌어도 유지되고, 재검증으로 verified_at 이 바뀌면 풀린다. */
+     '수정 완료' 체크는 해결 표시가 아니라 후속 워커 요청이다. 02시부터 4시간마다
+     Antigravity가 EN을 맞추고 Codex가 KO/EN diff를 통과시켜야 목록에서 사라진다. */
   var typos = t.ko_typos || [];
   var doneMap = state.kotypoDone;
   function saveDone() {
@@ -688,7 +687,7 @@ function secTranslation(d) {
   var liveKeys = {};
   left.appendChild(el('h3', null, '한글 원문 지적 — ' + typos.length + '편'));
   if (typos.length) {
-    left.appendChild(table(['파일', { label: '건수', num: true }, { label: '검증', num: true }, { label: '수정', num: true }],
+    left.appendChild(table(['파일', { label: '건수', num: true }, { label: '검증', num: true }, { label: '수정 완료', num: true }],
       typos.map(function (k) {
         var key = k.path + '@' + (k.verified_at || '');
         liveKeys[key] = true;
@@ -700,7 +699,7 @@ function secTranslation(d) {
               + (nFalse ? ' <span class="muted">(+오탐 ' + nFalse + ')</span>' : ''), cls: 'num' },
           { text: agoIso(k.verified_at), cls: 'num muted' },
           { html: '<input type="checkbox" class="typo-chk"' + (doneMap[key] ? ' checked' : '') + '>', cls: 'num' }
-        ], 'clickable' + (doneMap[key] ? ' typo-done' : ''));
+        ], 'clickable' + (doneMap[key] ? ' typo-pending' : ''));
         tr.onclick = function () {
           openModal('KO 원문 검토 — ' + k.path,
             det.map(function (x) {
@@ -709,13 +708,13 @@ function secTranslation(d) {
                 + (x.fix ? '\n    수정안: ' + x.fix : '');
             }).join('\n') +
             '\n\n(검증 ' + (k.verified_at || '—') + ' · 판정은 Codex 검토 결과다. ' +
-            'KO 를 고친 뒤에도 다음 재검증까지 표시가 남는다)');
+            '수정 완료를 체크하면 후속 워커가 KO/EN diff를 검증한다)');
         };
         var chk = tr.querySelector('.typo-chk');
         chk.onclick = function (e) { e.stopPropagation(); };
         chk.onchange = function () {
           if (chk.checked) doneMap[key] = 1; else delete doneMap[key];
-          tr.classList.toggle('typo-done', chk.checked);
+          tr.classList.toggle('typo-pending', chk.checked);
           saveDone();
         };
         return tr;
@@ -726,7 +725,7 @@ function secTranslation(d) {
       stale.forEach(function (k) { delete doneMap[k]; });
       saveDone();
     }
-    left.appendChild(el('p', 'hint', '행을 누르면 지적 내용 전체가 열린다. EN 은 이미 교정된 상태다. 수정 체크는 서버에 저장돼 기기 간 공유되며, 재검증으로 검증 시각이 바뀌면 풀린다.'));
+    left.appendChild(el('p', 'hint', '행을 누르면 지적 내용 전체가 열린다. 한글을 고친 뒤 수정 완료를 체크하면 02:15부터 4시간마다 후속 검증한다. Antigravity가 EN을 반영하고 Codex가 두 diff를 통과시킨 경우에만 목록에서 사라진다.'));
   } else {
     left.appendChild(el('p', 'hint', '검증된 한글 오류·설명 누락 없음.'));
   }

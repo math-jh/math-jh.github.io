@@ -197,6 +197,7 @@ _MIGRATE_HIST_FIELDS = (
     "warnings", "lossy_retry_count", "reason", "ko_git_commit_ts",
     "verify_ko_typos", "verify_ko_typos_review", "needs_review",
     "polished_at", "polish_source", "ko_reviewed_at",
+    "ko_review_base_content", "ko_review_base_sha256",
 )
 _migrated_keys = 0          # main() 이 이 값을 보고 즉시 저장한다
 
@@ -1160,6 +1161,14 @@ def _parse_json_object(out: str) -> dict:
     t = out.strip()
     t = re.sub(r"\A```[A-Za-z0-9_+-]*[ \t]*\n", "", t)
     t = re.sub(r"\n```[ \t]*\Z", "", t).strip()
+    # A model may put a single LaTeX backslash in otherwise valid JSON.  For
+    # example, raw `\times` silently decodes as a tab plus "imes".  Protect
+    # single backslashes only inside math spans before json.loads; ordinary JSON
+    # escapes outside math keep their usual meaning.
+    def protect_math(m: re.Match) -> str:
+        return re.sub(r'(?<!\\)\\(?![\\"])', r'\\\\', m.group(0))
+
+    t = re.sub(r"\$\$.*?\$\$|\$[^$\n]*\$", protect_math, t, flags=re.DOTALL)
     try:
         return json.loads(t)
     except json.JSONDecodeError:
@@ -2188,7 +2197,9 @@ def _finding_claim(finding: dict) -> str:
     quote = str(finding.get("quote") or "").strip()
     issue = str(finding.get("issue") or finding.get("claim") or "").strip()
     suggestion = str(finding.get("suggested_fix") or "").strip()
-    locus = f'"{quote}" — ' if quote else ""
+    line = finding.get("line")
+    line_prefix = f"한글 md line {line}: " if isinstance(line, int) and line > 0 else ""
+    locus = f'{line_prefix}"{quote}" — ' if quote else line_prefix
     tail = f" (제안: {suggestion})" if suggestion else ""
     return f"[{kind}] {locus}{issue}{tail}".strip()
 
@@ -2724,9 +2735,10 @@ def audit_ko_source(ko_path: Path, key: str) -> List[dict]:
     so the read-only boundary remains mechanically observable. Candidates are
     only triage here; Codex independently decides validity and proposes a fix.
     """
-    before = hashlib.sha256(ko_path.read_bytes()).hexdigest()
+    ko_text = ko_path.read_text(encoding="utf-8")
+    before = hashlib.sha256(ko_text.encode("utf-8")).hexdigest()
     prompt = KO_SOURCE_AUDIT_INSTRUCTIONS.replace(
-        "@@KO_POST@@", ko_path.read_text(encoding="utf-8"))
+        "@@KO_POST@@", ko_text)
     out = call_translator(prompt, thinking=False)
     after = hashlib.sha256(ko_path.read_bytes()).hexdigest()
     if before != after:
@@ -2749,12 +2761,19 @@ def audit_ko_source(ko_path: Path, key: str) -> List[dict]:
         suggested_fix = str(raw.get("suggested_fix") or "").strip()
         if kind not in {"ERROR", "EXPLANATION"} or not quote or not issue:
             continue
+        pos = ko_text.find(quote)
+        # A finding without an exact source locus cannot provide a trustworthy
+        # line number or later diff target.  Treat a paraphrased/hallucinated
+        # quote as invalid triage rather than showing an unlocatable warning.
+        if pos < 0:
+            continue
         findings.append({
             "kind": kind,
             "quote": quote[:1000],
             "issue": issue[:1000],
             "suggested_fix": suggested_fix[:1500],
             "source": "antigravity",
+            "line": ko_text.count("\n", 0, pos) + 1,
         })
     log(f"KO-AUDIT ({key}): {len(findings)} candidate(s)")
     return findings[:KO_REVIEW_MAX_FINDINGS]
@@ -3143,6 +3162,13 @@ def main() -> int:
             state["files"][key]["verify_ko_typos_review"] = ko_review[:20]
             state["files"][key]["ko_reviewed_at"] = datetime.now(
                 timezone.utc).isoformat(timespec="seconds")
+            # A later follow-up must compare exactly what the user changed after
+            # this audit.  Git cannot reconstruct an audited uncommitted KO, so
+            # retain the precise baseline only while this finding is outstanding.
+            ko_review_base = ko_path.read_text(encoding="utf-8")
+            state["files"][key]["ko_review_base_content"] = ko_review_base
+            state["files"][key]["ko_review_base_sha256"] = hashlib.sha256(
+                ko_review_base.encode("utf-8")).hexdigest()
 
         # 게이트가 못 고치고 남긴 것도 같은 알림에 싣는다 (한글 경고와 중복되지
         # 않게 warnings 에 없는 것만).
