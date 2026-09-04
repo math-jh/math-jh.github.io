@@ -27,17 +27,58 @@ $$0\longrightarrow\mathfrak{b}\longrightarrow R\overset{q}{\longrightarrow} R_0\
  
 이제 $C$가 locally of finite presentation인 $A$-algebra이므로, 적당한 polynomial algebra $B=A[\x_1,\ldots,\x_n]$와 $B$의 finitely generated ideal $\mathfrak{a}$가 존재하여 $C=B/\mathfrak{a}$라 할 수 있다. 자연스러운 projection $\pi:B\twoheadrightarrow C$와 $\rho_0$의 합성
 
-$$B\longrightarrow C\overset{\rho_0}{\longrightarrow}R_0$$
+$$\overline{\rho}_0:B\longrightarrow C\overset{\rho_0}{\longrightarrow}R_0$$
 
-의 lifting $\widetilde{\rho}:B\rightarrow R$를 임의로 택하자. 이 map이 $C$를 통해 factor하지 못하는 정도, 곧 lifting의 실패는 $\widetilde{\rho}$가 $\mathfrak{a}$ 위에서 갖는 값으로 주어지며, 이는 $C$-module homomorphism
+을 생각하자. 그럼 $q$가 surjective이므로 각각의 변수 $\x_i$마다 $q(r_i)=\overline{\rho}_0(\x_i)$을 만족하는 $r_i\in R$들을 택할 수 있으며, [\[대수적 구조\] §대수, ⁋명제 8](/ko/math/algebraic_structures/algebras#prop8)에 의하여 대응 $\x_i\mapsto r_i$는 $A$-algebra homomorphism $\widetilde{\rho}: B\rightarrow R$을 유일하게 정의한다. 이는 $q\circ \widetilde{\rho}=\overline{\rho}_0$을 만족하며, 이 때 각 $r_i$의 선택에는 $\ker q=\mathfrak{b}$만큼의 자유도가 존재한다. 
+
+우리가 본래 찾고자 하는 것은 $C$로부터의 lifting $\rho:C\rightarrow R$이다. 만약 택한 $\widetilde{\rho}$가 $\widetilde{\rho}(\mathfrak{a})=0$을 만족한다면, $\widetilde{\rho}$는 곧바로 $C=B/\mathfrak{a}$를 거쳐 원하는 lifting $\rho$를 유도할 것이지만, 그것만이 전부는 아니다. 위에서 살펴본 것과 같이 $\widetilde{\rho}$의 정의는 각 변수의 lift만큼의 차이가 있으므로, 다른 $\widetilde{\rho}$의 선택이 $\widetilde{\rho}(\mathfrak{a})=0$을 줄 수도 있기 때문이다. 따라서 이 lifting의 실패를 확인하기 위해서는 $\widetilde{\rho}$의 선택에 의존하지 않는 양을 계산해야 한다.
+
+이를 위해 우선 고정된 $\widetilde{\rho}$에 대하여 $\widetilde{\rho}(\mathfrak{a})=0$이라는 것이 무엇을 의미하는지를 다시 써 보자. 우선 임의의 $f\in \mathfrak{a}$에 대하여
+
+$$q(\widetilde{\rho}(f))=\overline{\rho}_0(f)=\rho_0(\pi(f))=\rho_0(0)=0$$
+
+이므로, 포함관계 $\widetilde{\rho}(\mathfrak{a})\subset \ker q=\mathfrak{b}$는 자명하다. 뿐만 아니라, 임의의 $f,g\in \mathfrak{a}$에 대하여
+
+$$\widetilde{\rho}(fg)=\widetilde{\rho}(f)\widetilde{\rho}(g)\in\mathfrak{b}^2=0$$
+
+이므로 다음의 식
+
+$$\delta: \mathfrak{a}/\mathfrak{a}^2\rightarrow \mathfrak{b};\qquad \bar{f}\mapsto \widetilde{\rho}(f)$$
+
+이 잘 정의된다. 만일 
+
+이 계산은 두 단계로 갈라진다. 먼저 고정된 $\widetilde{\rho}$ 하나에 대하여 그것이 $\mathfrak{a}$를 죽이지 못하는 정도를 하나의 대수적 대상으로 기록하고, 다음으로 $\widetilde{\rho}$의 선택을 바꿀 때 그 대상이 정확히 얼마만큼 변하는지를 확인한다. 변화의 폭을 알고 나면 그만큼으로 quotient하여 선택에 의존하지 않는 양을 얻을 수 있으며, 바로 그 양이 소멸하는 것이 lifting의 존재와 동치가 된다.
+
+첫 단계의 재료는 이미 손에 있다. 임의의 $f\in\mathfrak{a}$에 대하여
+
+$$q(\widetilde{\rho}(f))=\overline{\rho}_0(f)=\rho_0(\pi(f))=\rho_0(0)=0$$
+
+이므로 $\widetilde{\rho}(f)\in\ker q=\mathfrak{b}$, 곧 $\widetilde{\rho}(\mathfrak{a})\subseteq\mathfrak{b}$가 성립한다. 즉 오차는 반드시 $\mathfrak{b}$에 속한다. 나아가 $\mathfrak{b}^2=0$이므로 임의의 $f,g\in\mathfrak{a}$에 대하여 $\widetilde{\rho}(fg)=\widetilde{\rho}(f)\widetilde{\rho}(g)\in\mathfrak{b}^2=0$이 되어 $\mathfrak{a}^2$은 $0$으로 사상된다. 한편 $\mathfrak{b}$는 $R_0$-module이므로 $\rho_0$를 따라 $C$-module로 볼 수 있고, $c\in C$의 lift $b\in B$를 아무렇게나 잡아 $\widetilde{\rho}(bf)=\widetilde{\rho}(b)\widetilde{\rho}(f)$를 보면 $\widetilde{\rho}(b)$가 $\mathfrak{b}$ 위에 작용하는 방식은 $q(\widetilde{\rho}(b))=\overline{\rho}_0(b)=\rho_0(c)$에만 의존한다. 따라서 $\widetilde{\rho}\vert_{\mathfrak{a}}$는 $\mathfrak{a}/\mathfrak{a}^2$을 통해 factor하여 $C$-module homomorphism
 
 $$\delta:\mathfrak{a}/\mathfrak{a}^2\longrightarrow\mathfrak{b};\qquad \overline{f}\longmapsto\widetilde{\rho}(f)$$
 
-를 정의한다. 여기서 $\mathfrak{b}$는 $\rho_0$를 따라 $C$-module로 본다. 한편 $\widetilde{\rho}$를 $\mathfrak{b}$-valued $A$-derivation만큼 바꾸는 것은 어떤 $C$-module homomorphism $h:\Omega_{B/A}\otimes_BC\rightarrow\mathfrak{b}$를 택하는 것과 같고, 이때 $\delta$는 $h\circ\overline{d}$만큼 변한다. 여기서 $\overline{d}:\mathfrak{a}/\mathfrak{a}^2\rightarrow\Omega_{B/A}\otimes_BC$는 [§Kähler 미분과 여접층, ⁋명제 2](/ko/math/scheme_theory/sheaf_of_differentials#prop2)의 conormal morphism이다. 따라서 $\delta$가 정하는 class
+를 정의한다. 물론 $\delta=0$인 것과 $\widetilde{\rho}(\mathfrak{a})=0$인 것은 같은 말이므로, $\delta$가 지금의 $\widetilde{\rho}$에 대하여 말해주는 내용 자체는 새롭지 않다. 여기서 얻은 것은 그 오차가 놓이는 자격이다. 처음에 $\widetilde{\rho}(\mathfrak{a})$는 $R$의 원소들의 무정형한 모임이었으나, 위의 두 계산을 거치며 $\mathfrak{b}$에 값을 갖고 $\mathfrak{a}/\mathfrak{a}^2$에서 정의되는 $C$-linear map, 곧 $\Hom_C(\mathfrak{a}/\mathfrak{a}^2,\mathfrak{b})$라는 하나의 $C$-module의 원소가 되었다. 선택을 바꿀 때의 변화를 재고 그만큼 quotient하는 둘째 단계는 오차가 이렇게 $C$-linear map으로 정리된 뒤에야 가능하다.
+
+이제 $\overline{\rho}_0$의 두 lift $\widetilde{\rho}$와 $\widetilde{\rho}'$을 비교하자. $q\circ\widetilde{\rho}=q\circ\widetilde{\rho}'$이므로 그 차 $D=\widetilde{\rho}'-\widetilde{\rho}$는 $B$에서 $\mathfrak{b}$로 가는 $A$-linear map이며, $\mathfrak{b}^2=0$과 $\widetilde{\rho}(f)$의 $\mathfrak{b}$ 위 작용이 $\overline{\rho}_0(f)$에만 의존한다는 사실로부터
+
+$$\begin{aligned}
+D(fg)&=\widetilde{\rho}'(f)\widetilde{\rho}'(g)-\widetilde{\rho}(f)\widetilde{\rho}(g)\\
+&=\left(\widetilde{\rho}(f)+D(f)\right)\left(\widetilde{\rho}(g)+D(g)\right)-\widetilde{\rho}(f)\widetilde{\rho}(g)\\
+&=\widetilde{\rho}(f)D(g)+D(f)\widetilde{\rho}(g)+D(f)D(g)\\
+&=f\cdot D(g)+g\cdot D(f)
+\end{aligned}$$
+
+를 얻는다. 즉 $D$는 $\overline{\rho}_0$를 따라 $B$-module로 본 $\mathfrak{b}$에 값을 갖는 $A$-derivation이다. 거꾸로 임의의 $D\in\Der_A(B,\mathfrak{b})$에 대하여 $\widetilde{\rho}+D$ 역시 $A$-algebra homomorphism이고 $q\circ(\widetilde{\rho}+D)=\overline{\rho}_0$을 만족하므로, $\overline{\rho}_0$의 lift 전체는 $\Der_A(B,\mathfrak{b})=\Hom_C(\Omega_{B/A}\otimes_BC,\mathfrak{b})$ 위의 torsor를 이룬다. 각 변수의 lift를 고를 때 있었던 자유도는 정확히 이만큼이고 그 이상도 이하도 아니다.
+
+이 자유도가 $\delta$에 미치는 영향은 곧바로 읽힌다. $D$에 대응하는 $C$-module homomorphism을 $h:\Omega_{B/A}\otimes_BC\rightarrow\mathfrak{b}$라 하면 임의의 $f\in\mathfrak{a}$에 대하여 $\widetilde{\rho}'$이 정하는 $\delta'$은
+
+$$\delta'(\overline{f})-\delta(\overline{f})=D(f)=h(\dd{f}\otimes1)=h(\overline{d}(\overline{f}))$$
+
+를 만족하며, 여기서 $\overline{d}:\mathfrak{a}/\mathfrak{a}^2\rightarrow\Omega_{B/A}\otimes_BC$는 [§Kähler 미분과 여접층, ⁋명제 2](/ko/math/scheme_theory/sheaf_of_differentials#prop2)의 conormal morphism이다. 곧 $\delta'=\delta+\overline{d}^{\ast}(h)$이므로, $\widetilde{\rho}$의 선택을 바꾸며 $\delta$가 움직이는 범위는 $\overline{d}^{\ast}$의 image와 정확히 일치한다. 그러므로 어떤 선택으로든 $\mathfrak{a}$를 죽일 수 있다는 것, 곧 lifting $\rho:C\rightarrow R$이 존재한다는 것은 적당한 $h$에 대하여 $\delta+\overline{d}^{\ast}(h)=0$이 되는 것과 동치이고, 이는 $\delta$가 $\overline{d}^{\ast}$의 image에 속한다는 조건에 다름 아니다. 따라서 $\delta$가 정하는 class
 
 $$[\delta]\in\coker\left(\Hom_C(\Omega_{B/A}\otimes_BC,\mathfrak{b})\overset{\overline{d}^{\ast}}{\longrightarrow}\Hom_C(\mathfrak{a}/\mathfrak{a}^2,\mathfrak{b})\right)$$
 
-는 처음 택한 $\widetilde{\rho}$에 의존하지 않으며, 이 class가 소멸하는 것은 $\delta$를 derivation으로 상쇄하여 원하는 lifting $\rho:C\rightarrow R$을 얻을 수 있는 것과 동치이다. 또한 하나의 lifting이 존재할 때 서로 다른 lifting들의 차이는 $\Der_A(C,\mathfrak{b})=\Hom_C(\Omega_{C/A},\mathfrak{b})$가 통제한다.
+는 처음 택한 $\widetilde{\rho}$에 의존하지 않으며, 이 class가 소멸하는 것이 lifting의 존재와 동치이다. 개별 $\delta$가 재는 것은 눈앞의 $\widetilde{\rho}$ 하나가 $C$를 통해 factor하지 못하는 정도이지만, lifting 자체의 실패를 재는 것은 이 $[\delta]$이다. 또한 하나의 lifting이 존재할 때 서로 다른 lifting들의 차이는 같은 계산을 $B$ 대신 $C$에 적용하여 $\Der_A(C,\mathfrak{b})=\Hom_C(\Omega_{C/A},\mathfrak{b})$가 통제한다.
 
 위 cokernel은 two-term complex
 
