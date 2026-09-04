@@ -52,11 +52,12 @@ comments:
   utterances:
     theme                : # "github-light" (default), "github-dark"
     issue_term           : # "pathname" (default)
-# 기계번역 파이프라인 마커 — EN frontmatter `translation_source:` 의 정본 값.
-# 쓰는 곳: scripts/translation/translate_worker.py (태그 기록),
-# _includes/translation-notice.html (값이 비어 있지 않고 페이지 태그와 일치할
-# 때만 노티스). 현재 번역 워커의 태그다 — 워커가 본격적으로 바뀌면 함께 바꾼다.
-translation_source_tag   : "kimi-cli"
+# 기계번역 provenance — 새 EN의 번역 엔진, 계속 관리·표시할 과거 엔진,
+# 현재 원문대조 폴리싱 패스를 각각 기록한다. 쓰는 곳: translate_worker.py,
+# translation-notice.html.
+translation_source_tag         : "antigravity-gemini-3.8-flash-high"
+translation_source_legacy_tags : ["kimi-cli"]
+translation_polish_source_tag  : "antigravity-gemini-3.8-flash-high"
 atom_feed:
   path                   : # blank (default) uses feed.xml
   hide                   : # true, false (default)

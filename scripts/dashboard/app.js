@@ -368,13 +368,13 @@ function overview(d) {
   vp.appendChild(left); vp.appendChild(right); frag.appendChild(vp);
 
   var driftDrafts = drafts.filter(function (x) { return x.drift; }).length;
-  /* KO 오타 지적은 재번역 대기와 같은 칸에 붙인다. 둘 다 번역 큐에서 나오는 같은
+  /* KO 원문 지적은 재번역 대기와 같은 칸에 붙인다. 둘 다 번역 큐에서 나오는 같은
      일이고, 지적이 없는 날이 대부분이라 따로 두면 칸 하나가 사라졌다 나타난다.
-     세는 것은 opus 가 오탐(FALSE)으로 판정하지 않은 것뿐이다. */
+     세는 것은 Codex가 오탐(FALSE)으로 판정하지 않은 것뿐이다. */
   var kt = d.translation || {};
   var ktLive = (kt.ko_typo_actionable || 0) + (kt.ko_typo_unreviewed || 0);
   var ktNote = ktLive
-    ? ' · KO 오타 지적 ' + ktLive + '건'
+    ? ' · KO 원문 지적 ' + ktLive + '건'
       + (kt.ko_typo_unreviewed ? ' (미검토 ' + kt.ko_typo_unreviewed + ')' : '')
     : '';
   var mets = [
@@ -672,7 +672,7 @@ function secTranslation(d) {
   left.appendChild(el('p', 'hint', '누적 ' + num(st.total_done) + '편 · 입력 ' + kchars(st.total_in_chars) +
     '자 → 출력 ' + kchars(st.total_out_chars) + '자' +
     (st.total_in_chars ? ' (압축률 ' + pct(st.total_out_chars, st.total_in_chars) + '%)' : '')));
-  /* KO-TYPOS — EN 검증기가 번역 중 KO 원문 오타를 교정하며 남긴 지적.
+  /* KO 원문 검토 — Gemini 후보를 Codex가 오류/설명 누락으로 검증한 목록.
      다음 재검증 때까지 verdict 에 남으므로, KO 를 고쳤어도 표시가 유지될 수 있다.
      '수정' 체크는 (path@verified_at) 키로 서버(/api/kotypo → ~/.local/state)에
      저장한다 — 기기가 바뀌어도 유지되고, 재검증으로 verified_at 이 바뀌면 풀린다. */
@@ -686,7 +686,7 @@ function secTranslation(d) {
     }).catch(function () { });
   }
   var liveKeys = {};
-  left.appendChild(el('h3', null, '한글 오타 지적 (KO-TYPOS) — ' + typos.length + '편'));
+  left.appendChild(el('h3', null, '한글 원문 지적 — ' + typos.length + '편'));
   if (typos.length) {
     left.appendChild(table(['파일', { label: '건수', num: true }, { label: '검증', num: true }, { label: '수정', num: true }],
       typos.map(function (k) {
@@ -702,12 +702,13 @@ function secTranslation(d) {
           { html: '<input type="checkbox" class="typo-chk"' + (doneMap[key] ? ' checked' : '') + '>', cls: 'num' }
         ], 'clickable' + (doneMap[key] ? ' typo-done' : ''));
         tr.onclick = function () {
-          openModal('KO-TYPOS — ' + k.path,
+          openModal('KO 원문 검토 — ' + k.path,
             det.map(function (x) {
-              return '[' + (x.verdict || '미검토') + '] ' + x.text
-                + (x.why ? '\n    → ' + x.why : '');
+              return '[' + (x.verdict || '미검토') + ' / ' + (x.kind || 'ERROR') + '] ' + x.text
+                + (x.why ? '\n    → ' + x.why : '')
+                + (x.fix ? '\n    수정안: ' + x.fix : '');
             }).join('\n') +
-            '\n\n(검증 ' + (k.verified_at || '—') + ' · 판정은 opus 검토 결과다. ' +
+            '\n\n(검증 ' + (k.verified_at || '—') + ' · 판정은 Codex 검토 결과다. ' +
             'KO 를 고친 뒤에도 다음 재검증까지 표시가 남는다)');
         };
         var chk = tr.querySelector('.typo-chk');
@@ -727,7 +728,7 @@ function secTranslation(d) {
     }
     left.appendChild(el('p', 'hint', '행을 누르면 지적 내용 전체가 열린다. EN 은 이미 교정된 상태다. 수정 체크는 서버에 저장돼 기기 간 공유되며, 재검증으로 검증 시각이 바뀌면 풀린다.'));
   } else {
-    left.appendChild(el('p', 'hint', '검증기가 지적한 한글 오타 없음.'));
+    left.appendChild(el('p', 'hint', '검증된 한글 오류·설명 누락 없음.'));
   }
   right.appendChild(el('h3', null, '최근 시도'));
   right.appendChild(table(['파일', '상태', { label: '시각', num: true }], (t.recent || []).map(function (r) {

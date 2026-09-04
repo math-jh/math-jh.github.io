@@ -286,17 +286,25 @@ def main():
                          ensure_ascii=False, indent=2))
         return 0
 
+    deferred_review = [c for c in review if c["deferred"]]
     print(f"baseline={baseline[:8] if baseline else 'none'}  "
-          f"검토범위={len(review)}건 (deferred {len(review) - len(wake)}건 포함)  "
+          f"선정후보={len(wake)}건  deferred보관={len(deferred_review)}건  "
           f"해소됨 covered={len(covered)} dismissed={len(dismissed)}")
-    print("\n=== 검토 범위 [dev] 커밋 (오래된 것부터 — 이 순서로 다룬다) ===")
-    for c in review:
-        flag = "  [deferred]" if c["deferred"] else ""
-        print(f"\n{c['sha'][:8]}  {c['date']}  {c['subject']}{flag}")
+    print("\n=== 선정 후보 [dev] 커밋 (non-deferred, 오래된 것부터) ===")
+    for c in wake:
+        print(f"\n{c['sha'][:8]}  {c['date']}  {c['subject']}")
         for f in c["files"][:25]:
             print(f"    {f}")
         if len(c["files"]) > 25:
             print(f"    … +{len(c['files']) - 25} files")
+    if deferred_review:
+        print("\n=== deferred 보관분 (단독 선정 금지, 같은 주제 후보에만 병합) ===")
+        for c in deferred_review:
+            print(f"\n{c['sha'][:8]}  {c['date']}  {c['subject']}  [deferred]")
+            for f in c["files"][:25]:
+                print(f"    {f}")
+            if len(c["files"]) > 25:
+                print(f"    … +{len(c['files']) - 25} files")
     print(f"\n=== 기존 LLM Workshop 글 {len(workshop_inventory())}편 (보완 후보) ===")
     for it in workshop_inventory():
         print(f"  {it['path'].split('/')[-1]}  {it['title']}")

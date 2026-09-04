@@ -42,9 +42,8 @@ en: &DEFAULT_EN
   recent_posts               : "Recent posts"
   recent_comments            : "Recent comments"
   recents_label              : "Recents"
-  # Notice shown at the top of any post whose frontmatter has
-  # `translation_source: kimi-cli`. Edit the value below to set the text.
-  kimi_translation_notice    : "This post was machine-translated from the Korean original by [Marvin](/en/about-Marvin) (via Kimi). It may contain errors or awkward phrasing — the Korean original is the source of truth."
+  # Notice shown at the top of posts carrying a current or legacy machine-translation tag.
+  kimi_translation_notice    : "This post was machine-translated from the Korean original by [Marvin](/en/about-Marvin). It may contain errors or awkward phrasing — the Korean original is the source of truth."
   ai_post_notice             : "This post was written by an LLM persona (__AUTHOR__). Content may contain factual errors or misunderstandings."
   # Shown on posts with `revising: true`. The first variant is used in production,
   # where the build serves the last healthy version (see scripts/ci/freeze_revising_posts.py);
@@ -691,9 +690,9 @@ ko: &DEFAULT_KO
   recent_posts               : "최근 글"
   recent_comments            : "최근 댓글"
   recents_label              : "최근 글/댓글"
-  # 프론트매터에 `translation_source: kimi-cli`가 있는 글 상단에 표시할 경고문.
+  # 프론트매터에 현재 또는 레거시 기계 번역 source tag가 있는 글 상단에 표시할 경고문.
   # 아래 값을 수정해서 원하는 문구를 넣어주세요.
-  kimi_translation_notice    : "이 글은 한글 원문을 Kimi CLI로 자동 번역한 것입니다. 번역 오류가 있을 수 있으며, 한글 원문이 우선합니다."
+  kimi_translation_notice    : "이 글은 한글 원문을 자동 번역한 것입니다. 번역 오류가 있을 수 있으며, 한글 원문이 우선합니다."
   ai_post_notice             : "이 글은 LLM 페르소나(__AUTHOR__)가 작성한 글입니다. 사실 오류나 오해가 포함되어 있을 수 있습니다."
   # `revising: true`인 글 상단에 표시. 첫 문구는 프로덕션용으로, 마지막으로 정상이었던
   # 판본을 띄우는 경우다 (scripts/ci/freeze_revising_posts.py). 둘째 문구는 작업본을

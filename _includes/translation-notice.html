@@ -1,11 +1,16 @@
 {% comment %}
   Renders a notice block at the top of any post whose frontmatter
-  `translation_source` matches site.translation_source_tag (_config.yml 정본).
-  태그가 비어 있으면 어떤 페이지에도 노티스를 내지 않는다. The text comes from
-  `_data/ui-text.yml` -> `<lang>.kimi_translation_notice` (per-language).
-  No per-file edits are needed; the frontmatter key is enough.
+  `translation_source` matches the current or legacy tags in _config.yml.
+  The text comes from `_data/ui-text.yml` ->
+  `<lang>.kimi_translation_notice` (the key name is retained for compatibility).
 {% endcomment %}
+{% assign _machine_translation = false %}
 {% if site.translation_source_tag != blank and page.translation_source == site.translation_source_tag %}
+  {% assign _machine_translation = true %}
+{% elsif site.translation_source_legacy_tags contains page.translation_source %}
+  {% assign _machine_translation = true %}
+{% endif %}
+{% if _machine_translation %}
   {% assign _lang = site.locale %}
   {% assign _lang_prefix = page.url | truncate: 3, "" %}
   {% if _lang_prefix contains "en" or _lang_prefix contains "ko" %}

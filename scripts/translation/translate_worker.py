@@ -1,12 +1,11 @@
 #!/usr/bin/env python3
 """
-translate_worker.py — single-shot ko→en translation worker (Kimi CLI).
+translate_worker.py — single-shot ko→en translation worker.
 
-Designed for half-hourly cron (:15/:45). Picks ONE Korean blog post that needs
-translation (missing en/ counterpart, or drift_needed), sends it to Kimi through
-the native `kimi` CLI, writes the en/ counterpart. 2026-07-21: GLM 해지로 Kimi
-기본 복귀 (7-20의 Kimi→GLM 스왑을 하루 만에 되돌림). The dead `glm` path is
-kept behind TRANSLATOR_BACKEND="glm" for reference only — claudeglm is retired.
+Designed for a four-hour cron (00:15/04:15/.../20:15). Each tick handles ONE post: a missing
+translation, explicit drift, contrastive KO↔EN polish, or read-only verification.
+The default backend is Antigravity with Gemini 3.8 Flash High. Kimi remains an
+explicit translation rollback; it does not consume the Antigravity polish queue.
 
 Usage:
     python3 translate_worker.py            # run one translation, exit
@@ -19,7 +18,7 @@ Files:
     lock:   /tmp/translate-worker.lock
 
 Cron suggestion:
-    */30 * * * * cd /home/junhyeok/math-jh.github.io/scripts/translation \\
+    15 */4 * * * cd /home/junhyeok/math-jh.github.io/scripts/translation \\
                  && /usr/bin/python3 translate_worker.py >>translation.log 2>&1
 """
 
@@ -35,6 +34,7 @@ import re
 import shutil
 import subprocess
 import sys
+import tempfile
 import time
 
 import yaml
@@ -57,12 +57,15 @@ LOCK_PATH   = Path("/tmp/translate-worker.lock")
 FAIL_DUMP_DIR = Path("/var/tmp/translate-fail")
 
 # ---------------------------------------------------------------------------
-# Kimi CLI
+# Translation backend
 # ---------------------------------------------------------------------------
 
-# 번역 엔진 백엔드: "kimi"(기본, native kimi CLI) 또는 "glm"(사장된 경로 — GLM
-# 해지됨, 참고용으로만 잔존. claudeglm 바이너리는 제거되어 실행 불가).
-TRANSLATOR_BACKEND    = os.environ.get("TRANSLATOR_BACKEND", "kimi")
+# 번역 엔진 백엔드: "antigravity"(기본), "kimi"(롤백), "glm"(사장된 참고 경로).
+TRANSLATOR_BACKEND    = os.environ.get("TRANSLATOR_BACKEND", "antigravity")
+AGY_BIN               = os.environ.get("AGY_BIN") or str(
+    Path.home() / ".gemini/bin/agy")
+AGY_MODEL             = os.environ.get("AGY_MODEL", "gemini-3.8-flash-high")
+AGY_AGENT             = os.environ.get("AGY_AGENT", "blog-translator")
 GLM_BIN               = str(Path.home() / ".local/bin/claudeglm")
 # kimi-headless 어댑터를 거친다. PATH 의 `kimi` 를 집으면 안 된다 — 그건
 # kimi-code 본체라 이 워커가 쓰는 구 CLI 규약(stdin 프롬프트, 장식 없는 최종
@@ -70,18 +73,18 @@ GLM_BIN               = str(Path.home() / ".local/bin/claudeglm")
 # 결과를 에러 없이 오염시킨다.
 KIMI_BIN              = os.environ.get("KIMI_BIN") or str(
     Path.home() / ".local/bin/kimi-headless")
-# No-tools agent + empty MCP for the single-shot verify/audit call (see call_kimi).
+# Kimi rollback path의 no-tools agent/MCP 설정. 현재 Claude verify에는 쓰지 않는다.
 VERIFY_AGENT_FILE     = str(SCRIPT_DIR / "verify-agent.yaml")
 VERIFY_MCP_FILE       = str(SCRIPT_DIR / "verify-mcp.json")
-KIMI_TIMEOUT_SEC      = 3600                 # 60min — 70KB+ 글은 25분으로 부족하다. cron 은
+TRANSLATOR_TIMEOUT_SEC = 3600                # 60min — 70KB+ 글은 25분으로 부족하다. cron 은
                                              # 30분 주기지만 acquire_lock 이 겹침을 막으므로
                                              # 한 번의 호출이 여러 tick 을 넘겨도 안전하다.
 MAX_TRANSLATE_ATTEMPTS = 3                   # re-translate on LOSSY verify verdict, up to N tries
 
-# 큰 글은 조각내어 번역한다. 엔진의 출력 예산은 32K 토큰이고 그 안에 EN 본문이
-# 통째로 들어가야 하는데, KO 본문이 이 한계에 가까워지면 모델이 형식을 잃고
-# "KO 인용 → EN" 대역 워크시트를 뱉다가 예산을 소진하며 잘린다 (2026-08-02
-# Sheaf_Cohomology_of_Schemes, KO 본문 53,978c → 출력 100,470c 중간 절단).
+# 큰 글은 조각내어 번역한다. 현재 모델의 출력 한도와 별개로, KO 본문이 길어지면
+# 모델이 형식을 잃고 "KO 인용 → EN" 대역 워크시트를 뱉다가 잘릴 수 있다
+# (2026-08-02 Sheaf_Cohomology_of_Schemes, KO 본문 53,978c → 출력 100,470c
+# 중간 절단). 이 보수적인 경계는 Kimi 롤백 경로에도 공통으로 적용한다.
 # 조각 경계는 `:::` 박스 경계(_split_regions)라 정리 박스를 가르지 않는다.
 FULL_CHUNK_THRESHOLD  = 24_000               # 이 KO 본문 길이(자)를 넘으면 분할
 MAX_CHUNK_CHARS       = 12_000               # 조각 하나에 담을 KO 본문 목표치
@@ -94,9 +97,18 @@ CLAUDE_VERIFY_DIR          = Path("/tmp/translation-verify")
 CLAUDE_VERIFY_SEND_TIMEOUT = 120             # cold launch (spawn + wait_ready) headroom
 CLAUDE_VERIFY_DONE_TIMEOUT = 240             # max wait for the session to write `.done`
 
+# KO 원문 검토 후보의 2차 판정기. Antigravity가 후보만 만들고 Codex가 실제 오류인지,
+# 설명 보강이 정말 필요한지와 최소 수정안을 판단한다. 별도 codex-ask 래퍼는
+# redteam 정확도 로그의 producer라 쓰지 않는다.
+CODEX_BIN               = os.environ.get("CODEX_BIN") or str(
+    Path.home() / ".npm-global/bin/codex")
+CODEX_REVIEW_MODEL      = os.environ.get("CODEX_REVIEW_MODEL", "gpt-5.6-sol")
+CODEX_REVIEW_EFFORT     = os.environ.get("CODEX_REVIEW_EFFORT", "high")
+CODEX_REVIEW_TIMEOUT_SEC = 900
+
 # 잔여 지적 수리 게이트 (opus). 결정론 게이트(section_anchor_gate)가 못 고치고
 # 남긴 md_lint·앵커 지적만 넘겨 고치게 한다. 지적이 없으면 호출하지 않는다 —
-# 워커가 :15/:45 로 도는 이상 무조건 호출은 대부분의 틱에서 헛돈이다.
+# 워커가 4시간마다 도는 이상 무조건 호출은 대부분의 틱에서 헛돈이다.
 FIXUP_MODEL       = "opus"
 FIXUP_TIMEOUT_SEC = 600                      # 도구 사용 세션이라 verify 보다 넉넉히
 FIXUP_MAX_FINDINGS = 12                      # 이보다 많으면 번역 자체가 틀어진 것 — 사람 몫
@@ -120,7 +132,8 @@ FAIL_RETRY_AFTER_SEC  = 24 * 3600
 # 같은 전면 장애에서는 틱마다 실패한다 — 그대로 알리면 하루 48 통이다. 대신
 # 쿨다운을 두고 연속 실패 횟수를 실어 보낸다.
 FAIL_NOTIFY_COOLDOWN_SEC = 6 * 3600
-POLISH_INTERVAL_SEC   = 14 * 24 * 3600       # (unused) polish is now one-time; see Phase 3
+# A post is polished once per translation_polish_source_tag. Changing that tag
+# deliberately queues every machine-translated EN for a new contrastive pass.
 GIT_DRIFT_MARGIN_SEC  = 60                   # (unused) drift is now opt-in via `drift_needed: true`
 TRUNCATION_RATIO      = 0.60                 # min output/reference body length; below → fail
 # EN 본문(수식·<sub> 제외)에 허용되는 최대 한글 문자수. 정상 코퍼스 최대는 19자
@@ -183,6 +196,7 @@ _MIGRATE_HIST_FIELDS = (
     "translated_at", "en_path", "in_chars", "out_chars", "verify_verdict",
     "warnings", "lossy_retry_count", "reason", "ko_git_commit_ts",
     "verify_ko_typos", "verify_ko_typos_review", "needs_review",
+    "polished_at", "polish_source", "ko_reviewed_at",
 )
 _migrated_keys = 0          # main() 이 이 값을 보고 즉시 저장한다
 
@@ -421,7 +435,7 @@ _COMMIT_PREFIX = "cron(translate): "
 _COMMIT_SUBJECT = {
     "pending": "EN 신규 번역",       # Phase 1: EN 이 아예 없던 글
     "drift":   "EN 재번역(drift)",   # Phase 2: KO 가 바뀌어 `drift_needed` 가 걸린 글
-    "polish":  "EN 다듬기(polish)",  # Phase 3: 글당 1회, EN 산문만 손보는 패스
+    "polish":  "EN 원문대조 폴리싱",  # Phase 3: polish-source tag마다 1회
 }
 
 
@@ -479,23 +493,64 @@ def commit_translation(ko_path: Path, en_path: Path, reason: str) -> None:
         os.close(fd)
 
 
-# EN frontmatter 의 translation_source 태그. 단일 출처 = _config.yml 의
-# translation_source_tag — 같은 값을 _includes/translation-notice.html 이
-# site.translation_source_tag 로 비교한다. 현재 번역 워커의 태그이며, 워커가
-# 본격적으로 바뀌면 _config.yml 값과 함께 바뀐다.
-def _load_translation_source_tag() -> str:
+# EN frontmatter 의 translation_source 태그. 새 산출물은 translation_source_tag를
+# 쓰고, 과거 엔진의 산출물은 translation_source_legacy_tags로 계속 관리한다.
+# translation_polish_source_tag는 원 번역 provenance와 별개로, 현재 대조
+# 폴리싱을 거쳤는지를 나타낸다.
+def _load_translation_source_tags() -> Tuple[str, frozenset[str], str]:
+    current = ""
+    polish = ""
+    legacy: list[str] = []
     for line in (BLOG_ROOT / "_config.yml").read_text(encoding="utf-8").splitlines():
         s = line.strip()
-        if s.startswith("translation_source_tag"):
-            return s.split(":", 1)[1].split("#")[0].strip().strip('"').strip("'")
-    sys.exit("_config.yml 에 translation_source_tag 가 없음 — 노티스 include 와 "
-             "짝이 되는 정본 키다. 지우지 말 것.")
+        key, sep, raw = s.partition(":")
+        key = key.strip()
+        if not sep:
+            continue
+        value = raw.split("#", 1)[0].strip()
+        if key == "translation_source_tag":
+            current = value.strip('"').strip("'")
+        elif key == "translation_source_legacy_tags":
+            parsed = yaml.safe_load(value) if value else []
+            if isinstance(parsed, list):
+                legacy = [str(v) for v in parsed]
+        elif key == "translation_polish_source_tag":
+            polish = value.strip('"').strip("'")
+    if not current:
+        sys.exit("_config.yml 에 translation_source_tag 가 없음 — 노티스 include 와 "
+                 "짝이 되는 정본 키다. 지우지 말 것.")
+    if not polish:
+        sys.exit("_config.yml 에 translation_polish_source_tag 가 없음 — 대조 "
+                 "폴리싱 큐의 정본 키다. 지우지 말 것.")
+    return current, frozenset([current, *legacy]), polish
 
 
-TRANSLATION_SOURCE_TAG = _load_translation_source_tag()
+(_CONFIG_TRANSLATION_SOURCE_TAG,
+ _CONFIG_TRANSLATION_SOURCE_TAGS,
+ TRANSLATION_POLISH_SOURCE_TAG) = _load_translation_source_tags()
+
+# 롤백 backend로 실제 번역한 글을 Antigravity 산출물로 잘못 표기하지 않는다.
+# 운영 기본값은 _config.yml의 current tag이고, 명시적 환경변수로 새 backend의
+# provenance를 추가할 수 있다.
+_BACKEND_SOURCE_TAGS = {
+    "antigravity": _CONFIG_TRANSLATION_SOURCE_TAG,
+    "kimi": "kimi-cli",
+    "glm": "glm-cli",
+}
+TRANSLATION_SOURCE_TAG = os.environ.get(
+    "TRANSLATION_SOURCE_TAG",
+    _BACKEND_SOURCE_TAGS.get(TRANSLATOR_BACKEND, TRANSLATOR_BACKEND),
+)
+TRANSLATION_SOURCE_TAGS = frozenset([
+    *_CONFIG_TRANSLATION_SOURCE_TAGS,
+    TRANSLATION_SOURCE_TAG,
+])
 
 
-_META_KEYS = ("translated_at", "translation_source", "last_polished_at")
+_META_KEYS = (
+    "translated_at", "translation_source", "last_polished_at",
+    "translation_polish_source",
+)
 
 # KO-side pipeline switches. They steer the worker and mean nothing on the EN
 # side, so they must not ride along when EN frontmatter is composed from KO's —
@@ -554,8 +609,8 @@ KO input (JSON):
 Required output keys: {keys}"""
 
 
-def _translate_fm_fields_via_kimi(ko_fields: dict) -> dict:
-    """Small focused kimi call to translate title/excerpt/description.
+def _translate_fm_fields(ko_fields: dict) -> dict:
+    """Translate title/excerpt/description with the configured backend.
 
     `ko_fields` only includes keys whose values exist in KO frontmatter.
     Returns a dict with the same keys mapped to English strings.
@@ -568,12 +623,50 @@ def _translate_fm_fields_via_kimi(ko_fields: dict) -> dict:
         ko_json=json.dumps(ko_fields, ensure_ascii=False, indent=2),
         keys=list(ko_fields.keys()),
     )
-    out = call_kimi(prompt, thinking=False)
+    out = call_translator(prompt, thinking=False)
     try:
         data = _parse_json_object(out)
     except (json.JSONDecodeError, ValueError) as e:
         raise RuntimeError(f"frontmatter-fields translation: invalid JSON output ({e}): {out[:200]!r}")
     return {k: str(data.get(k, "")).strip() for k in ko_fields.keys()}
+
+
+_POLISH_FM_FIELDS_PROMPT = """Contrast the current English Jekyll frontmatter values with the Korean source values, then return a faithful polished English version. Output ONLY one valid JSON object with exactly the Korean input keys; no preamble, code fences, or commentary.
+
+The Korean values are the sole authority for meaning. Repair any mistranslation, omission, or unsupported detail in the current English. Do not add mathematical facts, qualifications, examples, or interpretations that are absent from the Korean. If the Korean appears mathematically wrong, inconsistent, or awkward, preserve what it says in faithful English; a separate read-only checker handles Korean-source errors.
+
+Style:
+- title: a concise English noun phrase using canonical mathematical terminology.
+- excerpt: a short phrase (at most 12 words) describing only the Korean topic.
+- description: 1–2 natural English sentences containing only claims supported by the Korean.
+- No Korean characters, math notation, escape characters, or surrounding quotes inside values.
+
+Korean source values (JSON):
+{ko_json}
+
+Current English values (JSON):
+{en_json}
+
+Required output keys: {keys}"""
+
+
+def _polish_fm_fields(ko_fields: dict, en_fields: dict) -> dict:
+    """Contrastively polish frontmatter, with KO as the sole semantic source."""
+    if not ko_fields:
+        return {}
+    prompt = _POLISH_FM_FIELDS_PROMPT.format(
+        ko_json=json.dumps(ko_fields, ensure_ascii=False, indent=2),
+        en_json=json.dumps(en_fields, ensure_ascii=False, indent=2),
+        keys=list(ko_fields.keys()),
+    )
+    out = call_translator(prompt, thinking=False)
+    try:
+        data = _parse_json_object(out)
+    except (json.JSONDecodeError, ValueError) as e:
+        raise RuntimeError(
+            f"frontmatter-fields polish: invalid JSON output ({e}): {out[:200]!r}"
+        )
+    return {k: str(data.get(k, "")).strip() for k in ko_fields}
 
 
 def _compose_en_frontmatter(
@@ -582,15 +675,17 @@ def _compose_en_frontmatter(
     *,
     translated_at_iso: str,
     polished_at_iso: Optional[str] = None,
+    translation_source_tag: Optional[str] = None,
+    polish_source_tag: Optional[str] = None,
 ) -> str:
     """Build EN frontmatter deterministically from KO frontmatter.
 
     - LLM-translated fields (title/excerpt/description): replaced with en_fields
     - permalink: `/ko/` → `/en/` (whole-token swap)
     - sidebar.nav: trailing `-ko` → `-en`
-    - existing translation_source / translated_at / last_polished_at: stripped
+    - existing translation metadata: stripped, then deterministically re-added
     - KO-only pipeline switches (drift_needed): dropped
-    - new translated_at / translation_source / (optionally last_polished_at): appended
+    - a polish preserves original translation provenance and records its own source
     """
     fm = ko_fm
     # Strip any existing translation meta to keep frontmatter idempotent, and any
@@ -616,17 +711,22 @@ def _compose_en_frontmatter(
             continue
         out_lines.append(line)
 
+    source_tag = translation_source_tag or TRANSLATION_SOURCE_TAG
     composed = "\n".join(out_lines).rstrip() + (
         f"\ntranslated_at: {translated_at_iso}\n"
-        f"translation_source: {TRANSLATION_SOURCE_TAG}\n"
+        f"translation_source: {source_tag}\n"
     )
     if polished_at_iso:
-        composed += f"last_polished_at: {polished_at_iso}\n"
+        composed += (
+            f"last_polished_at: {polished_at_iso}\n"
+            f"translation_polish_source: "
+            f"{polish_source_tag or TRANSLATION_POLISH_SOURCE_TAG}\n"
+        )
     return composed
 
 
 def en_translation_meta(en_path: Path) -> dict:
-    """Read translated_at / translation_source / last_polished_at from en frontmatter."""
+    """Read machine-translation provenance from EN frontmatter."""
     meta = {}
     for line in _read_frontmatter(en_path).splitlines():
         s = line.strip()
@@ -638,8 +738,8 @@ def en_translation_meta(en_path: Path) -> dict:
 
 
 def is_our_translation(en_path: Path) -> bool:
-    """True iff en file frontmatter has translation_source matching our tag."""
-    return en_translation_meta(en_path).get("translation_source") == TRANSLATION_SOURCE_TAG
+    """True iff EN frontmatter has a current or legacy worker source tag."""
+    return en_translation_meta(en_path).get("translation_source") in TRANSLATION_SOURCE_TAGS
 
 
 def inject_translation_metadata(
@@ -647,12 +747,14 @@ def inject_translation_metadata(
     translated_at_iso: str,
     *,
     polished_at_iso: Optional[str] = None,
+    translation_source_tag: Optional[str] = None,
+    polish_source_tag: Optional[str] = None,
 ) -> str:
-    """Insert translated_at / translation_source / last_polished_at into frontmatter.
+    """Insert translation and optional contrastive-polish provenance.
 
-    Idempotent: strips any pre-existing markers before re-injecting. `last_polished_at`
-    is only written when `polished_at_iso` is provided (i.e. on polish runs); pending
-    and drift re-translations drop the field so the next polish becomes due again.
+    Idempotent: strips pre-existing markers before re-injecting. Polish runs add
+    last_polished_at and translation_polish_source; pending/drift runs drop both
+    so the next contrastive pass becomes due.
     """
     m = _FRONTMATTER_RE.match(translated_md)
     if not m:
@@ -660,12 +762,17 @@ def inject_translation_metadata(
     fm = m.group(1)
     for k in _META_KEYS:
         fm = re.sub(rf"^{k}\s*:.*\n?", "", fm, flags=re.MULTILINE)
+    source_tag = translation_source_tag or TRANSLATION_SOURCE_TAG
     fm = fm.rstrip() + (
         f"\ntranslated_at: {translated_at_iso}\n"
-        f"translation_source: {TRANSLATION_SOURCE_TAG}\n"
+        f"translation_source: {source_tag}\n"
     )
     if polished_at_iso:
-        fm += f"last_polished_at: {polished_at_iso}\n"
+        fm += (
+            f"last_polished_at: {polished_at_iso}\n"
+            f"translation_polish_source: "
+            f"{polish_source_tag or TRANSLATION_POLISH_SOURCE_TAG}\n"
+        )
     return f"---\n{fm}---\n{translated_md[m.end():]}"
 
 
@@ -742,15 +849,21 @@ def find_next_target(state: dict) -> Optional[Tuple[Path, Path, str]]:
         if ko_wants_drift(ko):
             return ko, existing_en, "drift"
 
-    # --- Phase 3: polish (one-time; never-polished posts) ----------------
-    # Polish improves the EN prose. It runs at most once per post: once
-    # last_polished_at is set the post is not re-polished (so a single pass is
-    # not compounded). A single pass can still introduce errors — Phase 4 then
-    # verifies the polished result and surfaces any such damage.
+    # The migration polish is specifically an Antigravity fidelity pass.
+    # A Kimi/GLM rollback may translate pending or explicit-drift posts, but it
+    # must not consume this queue or stamp Antigravity polish provenance.
+    if TRANSLATOR_BACKEND != "antigravity":
+        return None
+
+    # --- Phase 3: contrastive polish (once per polish-source tag) --------
+    # KO is the sole semantic authority. A post retires from this phase only
+    # when its translation_polish_source matches the configured current tag.
+    # Thus changing engines/tags deliberately requeues old Kimi-polished posts
+    # without erasing their original translation_source provenance.
     for ko in ko_files:
         if is_draft(ko):
             continue
-        # Phase 1·2 와 같은 실패 백오프. polish 는 last_polished_at 이 박혀야
+        # Phase 1·2 와 같은 실패 백오프. polish source tag가 박혀야
         # 큐에서 빠지는데, 검증에 걸려 실패하면 그 키는 안 박힌다 — 백오프가
         # 없으면 고정된 스캔 순서의 맨 앞에 그대로 남아 다음 틱에 또 뽑히고,
         # 아직 polish 안 된 나머지 글이 전부 굶는다.
@@ -763,14 +876,15 @@ def find_next_target(state: dict) -> Optional[Tuple[Path, Path, str]]:
             continue
         if not is_our_translation(existing_en):
             continue
-        if _iso_to_ts(en_translation_meta(existing_en).get("last_polished_at", "")) > 0:
-            continue                       # already polished → don't re-polish
+        meta = en_translation_meta(existing_en)
+        if meta.get("translation_polish_source") == TRANSLATION_POLISH_SOURCE_TAG:
+            continue                       # already polished by the current pass
         return ko, existing_en, "polish"
 
-    # --- Phase 4: verify (read-only, one-time; polished posts only) ------
-    # Runs ONLY on posts that have been polished (last_polished_at set) but not
-    # yet verified. Lints + semantically checks the polished EN against the KO
-    # and surfaces problems the polish pass may have introduced (log + telegram).
+    # --- Phase 4: verify (read-only, one-time; current-polished only) -----
+    # Runs only after the current contrastive polish tag is present. It lints
+    # and semantically checks the polished EN against KO. KO-source errors stay
+    # on the separate KO-TYPOS notification path; the worker never edits KO.
     # The EN file is never modified. One-time: a recorded `verified_at` retires
     # the post.
     for ko in ko_files:
@@ -781,8 +895,9 @@ def find_next_target(state: dict) -> Optional[Tuple[Path, Path, str]]:
             continue
         if not is_our_translation(existing_en):
             continue
-        if _iso_to_ts(en_translation_meta(existing_en).get("last_polished_at", "")) <= 0:
-            continue                       # not polished yet → verify comes later
+        meta = en_translation_meta(existing_en)
+        if meta.get("translation_polish_source") != TRANSLATION_POLISH_SOURCE_TAG:
+            continue                       # current contrastive pass comes first
         if state["files"].get(str(ko.relative_to(BLOG_ROOT)), {}).get("verified_at"):
             continue                       # already verified → done
         return ko, existing_en, "verify"
@@ -951,54 +1066,51 @@ def reattach_refs_block(body: str, ko_refs: Optional[str]) -> str:
     return body[: m.start()] + en_refs + body[m.end() :]
 
 
-POLISH_INSTRUCTIONS = """You are polishing the BODY of an existing English translation of a Korean math blog post. Frontmatter has been stripped and is handled separately by a script. Output ONLY the polished body. No frontmatter, no `---` lines, no explanation, no code fences, no preamble.
+POLISH_INSTRUCTIONS = """You perform a contrastive fidelity polish of an existing English translation of a Korean mathematics post. Frontmatter is handled separately. Output ONLY the complete repaired English body: no frontmatter, explanation, audit report, code fence, or preamble.
 
-# Task
+# Sole authority
 
-Given the Korean source body (for meaning reference) and the current English translation body, produce an *improved* English body. Refine prose quality. Preserve everything else exactly.
+The Korean body is the sole authority for meaning. The current English is an editable draft, never a source of facts. Compare the two throughout the entire post before responding.
 
-# What to improve
+- Every English statement, hypothesis, conclusion, definition, example, qualification, explanation, and logical connection must be supported by the Korean.
+- Delete or rewrite anything the English invented, strengthened, weakened, reversed, or inferred beyond the Korean.
+- Restore anything present in the Korean but omitted or mistranslated in the English.
+- Do not use your own mathematical knowledge to correct, improve, complete, or reinterpret the Korean. If the Korean appears false, inconsistent, or typographically wrong, translate what it actually says. A separate read-only checker reports possible Korean-source errors.
+- Do not add pedagogical commentary, examples, caveats, transitions, summaries, or claims merely because they seem helpful or mathematically true.
 
-- Awkward translations or literal Korean grammar → idiomatic English
-- Word choice → more precise mathematical or natural English
-- Sentence flow → smoother connectives, less choppy
-- Terminology consistency within the post and against standard mathematical English
-- Fix translation drift: if the EN diverges from the KO meaning, restore fidelity
+After semantic fidelity is restored, make the English idiomatic and precise. Improve awkward grammar, word choice, flow, and terminology without changing meaning or paragraph structure.
 
-# What to preserve VERBATIM — mathematical fidelity is non-negotiable
+# Structural invariants
 
-1. **Math spans** — byte-for-byte: LaTeX commands, variable names, spacing, ordering, AND delimiter. The blog uses standard delimiters: inline `$...$`, display (centered, standalone) `$$...$$`. The COUNT and ORDER of both kinds MUST match the KO source exactly. NEVER swap one for the other — no downgrading a `$$...$$` display block into inline `$...$`, no promoting inline into display. Easiest rule: never touch anything between math delimiters, and never change a delimiter's length. A single `$` inside `\\text{...}`/`\\tag{...}` is LaTeX re-entering math mode from text mode — leave it.
-2. **Fenced theorem-box `:::` openers** — every `:::` fence line (the labeled opener and the bare `:::` closer) stays in place, with the same count and order. The opener's derived anchor MUST be unchanged: the kind→prefix mapping (Definition→def, Proposition→prop, Theorem→thm, Lemma→lem, Corollary→cor, Example→ex, Remark→rmk) plus the integer N, and every `::: misc … {#id}` keeps its `{#id}`. Never change N.
-3. Cross-reference **paths** (`/en/math/...`) and **anchors** (`#def1`, `#prop2`) — unchanged. Visible labels may be lightly refined only if materially clearer.
-   - **Verification rule**: do NOT change an anchor target or invent a new `[display](url)` pairing unless you have actually seen the target with that exact form. If unsure, leave the existing form untouched.
-4. Fenced `:::` blocks (opener label already in English from the initial translation — keep it English), any legacy theorem-box HTML that remains (`<div class="...">`, `<ins id="...">**...**</ins>`, `<details class="proof"><summary>...</summary>`), and inline HTML (`<sub>...</sub>`, `<cap>`, `<em>`) — keep exactly, with ids and numbers unchanged.
-5. Section headers (`## ...`) — keep as-is unless genuinely wrong.
-6. Footnote markers `[^N]` and identifiers — unchanged.
-7. References: the bibliography is handled OUTSIDE this polish. If the body contains the literal line `@@REFERENCES@@`, copy that line verbatim, exactly once, in the same position. NEVER write a References section or bibliography entries yourself.
+1. **Math spans** — copy from the Korean byte-for-byte: LaTeX commands, variables, spacing, order, and delimiter. Inline `$...$` and display `$$...$$` counts and order must match the Korean exactly. Never silently correct a suspicious Korean formula.
+2. **Fenced theorem boxes** — preserve every `:::` opener and closer in the same order. Keep kind, number, derived anchor, and every explicit `{#id}` unchanged. Translate Korean labels to the established English kind only where required.
+3. **Cross-references** — preserve paths and anchors. Keep `/en/` paths already produced by the translation pipeline; never invent or retarget an anchor. Visible labels may be translated faithfully.
+4. **HTML and Markdown structure** — preserve legacy theorem HTML, element ids, inline HTML, heading levels, list structure, footnote identifiers, and fenced blocks.
+5. **References sentinel** — if `@@REFERENCES@@` appears, copy it verbatim exactly once in the same position. Never generate bibliography entries.
 
-# Self-check before responding
+# Required self-audit
 
-- Same math delimiters as the KO body — as many `$$...$$` display spans and as many `$...$` inline spans; none downgraded, none promoted.
-- Every `:::` opener present with its derived anchor (kind→prefix + N) unchanged and every `::: misc … {#id}` intact; `:::` line count and order match the KO source.
-- No Korean labels remain (정의, 명제, 정리, 보조정리, 따름정리, 예시, 참고, 증명, 참고문헌).
-- No Korean prose remains — every sentence of the output is English.
-- If the input contained the line `@@REFERENCES@@`, the output contains it verbatim, exactly once.
-- Output is body only — no frontmatter or `---` lines.
+Before output, compare the proposed English against the Korean again and repair every unsupported addition, omission, reversal, changed quantifier, changed condition, and changed conclusion you can find. This audit is only a KO↔EN fidelity check; it is not a mathematical correctness review of the Korean.
 
-# Style anchors
+Confirm that:
+- math spans and delimiters match the Korean in count and order;
+- theorem fences, ids, footnotes, links, and anchors are intact;
+- all Korean prose and labels have been translated into English;
+- every English claim is traceable to the Korean;
+- the output contains only the complete English body.
 
-- First-person plural ("we ...") throughout.
-- Precise, technical, declarative; match the user's canonical voice in other posts.
-- No "translator notes", no meta-commentary, no apologies.
-- Do not restructure paragraphs unless the original is broken.
+# Style
 
-# Input format
+- Use precise, technical, declarative mathematical English and first-person plural where the Korean calls for it.
+- Preserve the author's level of detail and certainty.
+- Do not write translator notes, apologies, or meta-commentary.
 
-You will receive:
-- Korean source body between `--- KO BODY ---` / `--- END KO BODY ---`
-- Current English translation body between `--- EN BODY ---` / `--- END EN BODY ---`
+# Input
 
-Output ONLY the polished English body."""
+Korean source: `--- KO BODY ---` through `--- END KO BODY ---`.
+Current English draft: `--- EN BODY ---` through `--- END EN BODY ---`.
+
+Output ONLY the complete repaired English body."""
 
 
 def build_polish_prompt(ko_body: str, en_body: str) -> str:
@@ -1009,8 +1121,27 @@ def build_polish_prompt(ko_body: str, en_body: str) -> str:
     )
 
 
+KO_SOURCE_AUDIT_INSTRUCTIONS = """Read the complete Korean mathematics post below during this polishing run. This is a read-only triage task: never rewrite the post and never discuss the English translation.
+
+Return only high-confidence candidates in either category:
+- ERROR: a likely factual or mathematical error, wrong index/operator/direction, missing prime or hypothesis, malformed LaTeX symbol, evident typo, or contradiction between a formula and its surrounding prose.
+- EXPLANATION: a specific place where a necessary definition, hypothesis, logical step, or clarification is missing enough to make the argument genuinely unclear or unsupported.
+
+Do not report style preferences, optional enrichment, mere brevity, alternative conventions, or speculative concerns. Quote the exact Korean locus. Suggest the smallest concrete Korean fix, but do not apply it.
+
+Output JSON only, with this exact shape:
+{"findings":[{"kind":"ERROR or EXPLANATION","quote":"exact Korean quote","issue":"short reason","suggested_fix":"minimal Korean correction or addition"}]}
+
+If there is no candidate, output {"findings":[]}.
+
+Korean post:
+--- KO POST ---
+@@KO_POST@@
+--- END KO POST ---"""
+
+
 # ---------------------------------------------------------------------------
-# Kimi invocation
+# Translator invocation
 # ---------------------------------------------------------------------------
 
 _FENCE_RE     = re.compile(r"^\s*```(?:markdown|md)?\s*\n|\n```\s*$", re.MULTILINE)
@@ -1224,10 +1355,11 @@ def validate_translation(
     if not _FRONTMATTER_RE.match(translated):
         return "frontmatter missing or malformed (no enclosing --- block)"
 
-    # Truncation: output body must be >= 60% of KO body. For polish, ALSO require
-    # >= 85% of en_current — polish should never significantly shrink the post,
-    # so a big drop signals the model truncated mid-output (Modules.md 2026-05-25
-    # incident: file ended mid-sentence at thm10 yet passed the 60% gate).
+    # Truncation: output body must be >= 60% of both KO and the pre-polish EN.
+    # The old 85%-of-EN floor rejected valid repairs whenever the EN had invented
+    # substantial prose. Structural/math gates below still catch mid-document
+    # truncation, while this conservative floor permits unsupported additions to
+    # be removed.
     out_body = _body_after_frontmatter(translated).strip()
     ko_body  = _body_after_frontmatter(ko_content).strip()
     if ko_body and len(out_body) < TRUNCATION_RATIO * len(ko_body):
@@ -1237,9 +1369,10 @@ def validate_translation(
         )
     if reason == "polish" and en_current:
         en_body = _body_after_frontmatter(en_current).strip()
-        if en_body and len(out_body) < 0.85 * len(en_body):
+        if en_body and len(out_body) < TRUNCATION_RATIO * len(en_body):
             return (
-                f"polish output body {len(out_body)}c < 85% of en_current "
+                f"polish output body {len(out_body)}c < "
+                f"{TRUNCATION_RATIO:.0%} of en_current "
                 f"{len(en_body)}c — polish truncation suspected"
             )
 
@@ -1352,8 +1485,8 @@ def validate_translation(
         more = f" (+{len(label_issues)-1} more)" if len(label_issues) > 1 else ""
         return f"residual KO label — {label_issues[0]}{more}"
 
-    # Frontmatter keys: ko ⊆ en (en may add translated_at / translation_source /
-    # last_polished_at). _KO_ONLY_KEYS are deliberately stripped by
+    # Frontmatter keys: ko ⊆ en (EN may add translation provenance fields).
+    # _KO_ONLY_KEYS are deliberately stripped by
     # _compose_en_frontmatter, so they must be exempt here — otherwise every
     # translation of a drift-flagged post fails validation and the worker
     # re-translates it forever (this is exactly what happened on 2026-07-12).
@@ -1366,61 +1499,71 @@ def validate_translation(
     return None
 
 
-def call_kimi(prompt: str, *, thinking: bool = False,
-              agent_file: Optional[str] = None,
-              mcp_config_file: Optional[str] = None) -> str:
-    """Invoke `kimi --quiet` with prompt on stdin, return final assistant message.
+def call_translator(prompt: str, *, thinking: bool = False,
+                    agent_file: Optional[str] = None,
+                    mcp_config_file: Optional[str] = None) -> str:
+    """Run the configured headless translator and return only its response.
 
-    Thinking is OFF by default — it shares the 32K output-token budget with the
-    actual response, and on large posts (e.g. Modules.md 2026-05-25) the model
-    can burn the entire budget on internal reasoning and then truncate the
-    visible output. Callers that need analytical depth (e.g. verify) opt in.
-
-    agent_file / mcp_config_file override the agent spec and MCP config. The
-    default kimi agent is agentic with a full toolset (Shell, Grep, ReadFile,
-    SearchWeb, …); on a single-shot analysis prompt (everything inlined, no
-    files to read) the model still reaches for Shell/Grep to "count the blocks"
-    and loops dozens of tool-call steps, re-reading the whole context as
-    cache_read each step. The verify audit did exactly this — median 18, up to
-    177 steps/turn, ~96% of ALL Kimi cron tokens (2026-05). Pointing the verify
-    call at a no-tools agent (verify-agent.yaml, allowed_tools: []) + an empty
-    MCP config forces a direct one-step answer (validated: complete, correctly
-    formatted verdict, exit 0, ~50K tokens/post vs millions before). A step cap
-    is NOT a safe substitute — the model spends step 1 on the tool call, so any
-    low cap truncates before the verdict and exits non-zero on big posts.
+    Antigravity is pinned to a global custom agent with ``tools: []``. Its JSON
+    envelope gives us an explicit terminal status while keeping diagnostics off
+    the Markdown response. Kimi's old stdin protocol remains available for a
+    deliberate rollback; its optional no-tools files are retained for that path.
     """
     if TRANSLATOR_BACKEND == "glm":
         # claudeglm -p: 헤드리스 단발. 도구는 안 준다 (allowedTools 미지정 =
         # 전부 거부) — 위의 Kimi agentic-loop 폭주와 같은 사고를 원천 차단.
         # thinking/agent_file/mcp_config_file 은 kimi 전용이라 무시된다.
         args = [GLM_BIN, "-p", "--output-format", "text"]
-    else:
+        stdin_text = prompt
+    elif TRANSLATOR_BACKEND == "kimi":
         args = [KIMI_BIN, "--quiet", "--print", "--final-message-only",
                 "--thinking" if thinking else "--no-thinking"]
         if agent_file is not None:
             args += ["--agent-file", agent_file]
         if mcp_config_file is not None:
             args += ["--mcp-config-file", mcp_config_file]
-    proc = subprocess.run(
-        args,
-        input=prompt,
-        capture_output=True,
-        text=True,
-        timeout=KIMI_TIMEOUT_SEC,
-        cwd="/tmp",                          # isolate from blog tree (we do all IO)
-    )
+        stdin_text = prompt
+    elif TRANSLATOR_BACKEND == "antigravity":
+        args = [AGY_BIN, "--print", prompt,
+                "--model", AGY_MODEL,
+                "--agent", AGY_AGENT,
+                "--output-format", "json",
+                "--disable-slash-commands",
+                "--print-timeout", "60m"]
+        stdin_text = None
+    else:
+        raise RuntimeError(f"unknown TRANSLATOR_BACKEND={TRANSLATOR_BACKEND!r}")
+
+    run_kwargs = dict(capture_output=True, text=True,
+                      timeout=TRANSLATOR_TIMEOUT_SEC, cwd="/tmp")
+    if stdin_text is None:
+        run_kwargs["stdin"] = subprocess.DEVNULL
+    else:
+        run_kwargs["input"] = stdin_text
+    proc = subprocess.run(args, **run_kwargs)
     if proc.returncode != 0:
         raise RuntimeError(
             f"{Path(args[0]).name} CLI exited {proc.returncode}: "
             f"stderr={proc.stderr.strip()[:500]!r}"
         )
     out = proc.stdout
+    if TRANSLATOR_BACKEND == "antigravity":
+        try:
+            envelope = json.loads(out)
+        except json.JSONDecodeError as e:
+            raise RuntimeError(f"agy returned invalid JSON: {e}: {out[:300]!r}") from e
+        if envelope.get("status") != "SUCCESS":
+            raise RuntimeError(
+                f"agy status={envelope.get('status')!r}: "
+                f"{str(envelope.get('error', ''))[:500]}"
+            )
+        out = str(envelope.get("response", ""))
     if not out.strip():
         raise RuntimeError(f"{Path(args[0]).name} returned empty output; "
                            f"stderr={proc.stderr.strip()[:500]!r}")
-    # Defensive: strip code fences if Kimi wrapped output
+    # Defensive: strip code fences if the translator wrapped output
     out = _FENCE_RE.sub("", out).strip() + "\n"
-    # Defensive: Kimi occasionally outputs `---title: ...` with no newline
+    # Defensive: a model may output `---title: ...` with no newline
     # after the opening triple-dash. _FRONTMATTER_RE (and the rest of the
     # pipeline) then silently no-ops, leaving the EN file with corrupt
     # frontmatter. Normalize here.
@@ -1460,7 +1603,7 @@ def translate_body_chunked(ko_body: str) -> Tuple[str, int]:
         prompt = build_chunk_prompt(chunk, i, len(batches))
         prompt_chars += len(prompt)
         log(f"  chunk {i}/{len(batches)}: ko {len(chunk)}c")
-        outs.append(call_kimi(prompt).strip())
+        outs.append(call_translator(prompt).strip())
     return "\n\n".join(o for o in outs if o) + "\n", prompt_chars
 
 
@@ -1477,10 +1620,10 @@ def translate(
     Pipeline:
       1. Split KO into frontmatter + body.
       2. Determine EN title/excerpt/description:
-         - translate: kimi small task on KO frontmatter values.
-         - polish: prefer existing EN values; only translate fields missing
-           from EN (e.g. description, added later via the KO description batch).
-      3. Body translation/polish: kimi main call. Output is body only — no
+         - translate: a small translator call on KO frontmatter values.
+         - polish: contrast every current EN value with KO and repair unsupported
+           or missing content, using KO as the sole semantic authority.
+      3. Body translation/polish: main translator call. Output is body only — no
          frontmatter handling on the LLM side.
       4. Body post-processing: label_fix, strip residual <sub>, mechanical
          /ko/ → /en/ (the validator no longer hard-fails on /ko/ residue;
@@ -1500,19 +1643,21 @@ def translate(
 
     # ---- Step 1: title / excerpt / description ----
     en_fields: dict = {}
-    fields_to_translate: dict = {}
+    ko_fields: dict = {}
+    current_en_fields: dict = {}
     for key in _LLM_FRONTMATTER_FIELDS:
         ko_val = _extract_fm_scalar(ko_fm_text, key)
         if not ko_val:  # missing or empty in KO → skip the field entirely
             continue
+        ko_fields[key] = ko_val
         if reason == "polish" and en_current_fm_text:
             existing = _extract_fm_scalar(en_current_fm_text, key)
             if existing:
-                en_fields[key] = existing
-                continue
-        fields_to_translate[key] = ko_val
-    if fields_to_translate:
-        en_fields.update(_translate_fm_fields_via_kimi(fields_to_translate))
+                current_en_fields[key] = existing
+    if reason == "polish":
+        en_fields.update(_polish_fm_fields(ko_fields, current_en_fields))
+    elif ko_fields:
+        en_fields.update(_translate_fm_fields(ko_fields))
 
     # ---- Step 2: body translation / polish ----
     # 참고문헌 격리: 엔진에는 sentinel만 보내고 KO 블록을 verbatim 재부착한다.
@@ -1520,13 +1665,13 @@ def translate(
     if reason == "polish" and en_current_body.strip():
         en_current_body, _ = extract_refs_block(en_current_body)
         prompt = build_polish_prompt(ko_body, en_current_body)
-        en_body = call_kimi(prompt)
+        en_body = call_translator(prompt)
         prompt_chars = len(prompt)
     elif len(ko_body) > FULL_CHUNK_THRESHOLD:
         en_body, prompt_chars = translate_body_chunked(ko_body)
     else:
         prompt = build_prompt(ko_body)
-        en_body = call_kimi(prompt)
+        en_body = call_translator(prompt)
         prompt_chars = len(prompt)
     engine_out = en_body                         # 검증 실패 시 덤프용 원본
 
@@ -1548,10 +1693,21 @@ def translate(
 
     # ---- Step 4: compose final EN file ----
     polished_at_iso = translated_at_iso if reason == "polish" else None
+    source_translated_at = translated_at_iso
+    source_tag = TRANSLATION_SOURCE_TAG
+    if reason == "polish" and en_path is not None:
+        old_meta = en_translation_meta(en_path)
+        source_translated_at = old_meta.get("translated_at") or translated_at_iso
+        old_source = old_meta.get("translation_source")
+        if old_source in TRANSLATION_SOURCE_TAGS:
+            source_tag = old_source
     en_fm = _compose_en_frontmatter(
         ko_fm_text, en_fields,
-        translated_at_iso=translated_at_iso,
+        translated_at_iso=source_translated_at,
         polished_at_iso=polished_at_iso,
+        translation_source_tag=source_tag,
+        polish_source_tag=(TRANSLATION_POLISH_SOURCE_TAG
+                           if reason == "polish" else None),
     )
     translated = f"---\n{en_fm}---\n{en_body.lstrip(chr(10))}"
 
@@ -1620,7 +1776,7 @@ def record_failure(state: dict, key: str, error: str) -> None:
 
 
 # ---------------------------------------------------------------------------
-# Math-mismatch verification (Kimi second opinion)
+# Math-mismatch verification (Claude second opinion)
 # ---------------------------------------------------------------------------
 
 _SUB_STRIP_RE = re.compile(r"<sub>.*?</sub>", re.DOTALL)
@@ -1628,13 +1784,13 @@ _SUB_STRIP_RE = re.compile(r"<sub>.*?</sub>", re.DOTALL)
 # A KO/EN `$$`-count mismatch is almost always a `$$display$$`→`$inline$`
 # downgrade (the LaTeX survives, only the delimiter changed) or a harmless
 # merge/split — not lost content. We localize the real divergences mechanically
-# and only ask Kimi about the few regions where math genuinely went missing.
+# and only ask Claude about the few regions where math genuinely went missing.
 #
 # Key fact: the LaTeX inside `$$...$$` is identical in KO and EN (math isn't
 # translated). So a KO block "survives" iff its whitespace-normalized LaTeX
 # appears anywhere in EN's math — display OR inline. Blocks that pass that check
 # are benign by construction (no model needed); only blocks whose content is
-# absent from EN entirely are suspect, and Kimi sees just those `:::` box regions
+# absent from EN entirely are suspect, and Claude sees just those `:::` box regions
 # — and is never told about `$$`/counts, so it can't loop on counting.
 
 _DISPLAY_RE = re.compile(r"\$\$(.*?)\$\$", re.DOTALL)
@@ -2001,6 +2157,116 @@ def review_ko_typos(ko_path: Path, key: str, claims: List[str]) -> List[dict]:
     return out
 
 
+_KO_REVIEW_PROMPT = """You are the second-stage reviewer for Korean mathematics posts.
+Antigravity only triaged the candidates below. Independently compare each one
+with the complete Korean source. Do not edit any file.
+
+For ERROR, verify that the Korean is actually wrong, not merely using another
+valid convention. For EXPLANATION, verify that a definition, hypothesis,
+logical step, or clarification is genuinely needed; optional enrichment and
+style improvements are FALSE. Use UNSURE when the supplied post is insufficient.
+
+Return Korean reasoning and the smallest concrete Korean correction/addition.
+Do not silently expand the author's scope. Output JSON only:
+{"reviews":[{"index":1,"verdict":"VALID or FALSE or UNSURE","why":"short reason","recommended_fix":"minimal Korean fix; empty unless VALID"}]}
+
+Korean source (@@KO_PATH@@):
+--- BEGIN KOREAN ---
+@@KO_BODY@@
+--- END KOREAN ---
+
+Candidates JSON:
+@@FINDINGS@@
+"""
+
+KO_REVIEW_BODY_MAX = 80_000
+KO_REVIEW_MAX_FINDINGS = 12
+
+
+def _finding_claim(finding: dict) -> str:
+    kind = str(finding.get("kind") or "ERROR").upper()
+    quote = str(finding.get("quote") or "").strip()
+    issue = str(finding.get("issue") or finding.get("claim") or "").strip()
+    suggestion = str(finding.get("suggested_fix") or "").strip()
+    locus = f'"{quote}" — ' if quote else ""
+    tail = f" (제안: {suggestion})" if suggestion else ""
+    return f"[{kind}] {locus}{issue}{tail}".strip()
+
+
+def call_codex_ko_review(ko_path: Path, findings: List[dict]) -> dict:
+    """Codex exec를 read-only·ephemeral로 돌려 KO 후보만 2차 판정한다."""
+    body = _body_after_frontmatter(ko_path.read_text(encoding="utf-8")).strip()
+    prompt = (_KO_REVIEW_PROMPT
+              .replace("@@KO_PATH@@", str(ko_path.relative_to(BLOG_ROOT)))
+              .replace("@@KO_BODY@@", body[:KO_REVIEW_BODY_MAX])
+              .replace("@@FINDINGS@@", json.dumps(
+                  findings, ensure_ascii=False, separators=(",", ":"))))
+    with tempfile.TemporaryDirectory(prefix="codex-ko-review-") as tmp:
+        out_path = Path(tmp) / "last-message.json"
+        proc = subprocess.run(
+            [CODEX_BIN, "exec", "--ignore-user-config",
+             "--model", CODEX_REVIEW_MODEL,
+             "-c", f'model_reasoning_effort="{CODEX_REVIEW_EFFORT}"',
+             "--sandbox", "read-only", "--skip-git-repo-check", "--ephemeral",
+             "--color", "never", "--output-last-message", str(out_path), "-"],
+            input=prompt,
+            capture_output=True, text=True, timeout=CODEX_REVIEW_TIMEOUT_SEC,
+            cwd=tmp,
+        )
+        if proc.returncode != 0:
+            raise RuntimeError(f"codex exec ko-review exited {proc.returncode}: "
+                               f"{_flat(proc.stderr)[:240]!r}")
+        if not out_path.exists():
+            raise RuntimeError("codex exec produced no last-message file")
+        payload = _parse_json_object(out_path.read_text(encoding="utf-8"))
+        if not isinstance(payload, dict) or not isinstance(payload.get("reviews"), list):
+            raise RuntimeError("codex exec returned an invalid KO-review JSON shape")
+        return payload
+
+
+def review_ko_findings(ko_path: Path, key: str,
+                       findings: List[dict]) -> List[dict]:
+    """Antigravity/Claude KO 후보에 Codex 판정과 수정안을 붙인다.
+
+    KO는 전후 SHA-256으로 불변을 검증한다. Codex 호출이 실패하거나
+    파싱되지 않은 후보는 미검토로 남겨 사용자 알림에서 숨기지 않는다.
+    """
+    out = [{**f, "claim": _finding_claim(f)} for f in findings]
+    if len(findings) > KO_REVIEW_MAX_FINDINGS:
+        log(f"GATE-KO-REVIEW ({key}): 후보 {len(findings)}건 — 상한 "
+            f"{KO_REVIEW_MAX_FINDINGS} 초과라 Codex 검토 생략")
+        return out
+    before = hashlib.sha256(ko_path.read_bytes()).hexdigest()
+    try:
+        payload = call_codex_ko_review(ko_path, findings)
+    except Exception as e:
+        log(f"GATE-KO-REVIEW ({key}): Codex 호출 실패 — {_flat(e)[:180]}")
+        return out
+    if hashlib.sha256(ko_path.read_bytes()).hexdigest() != before:
+        log(f"GATE-KO-REVIEW ({key}): KO 파일이 변경됨 — read-only 계약 위반")
+        _notify("[translate-worker] Codex KO 검토가 원문을 수정함",
+                f"{key}\nCodex 검토 전용 단계 전후의 KO 해시가 다릅니다.",
+                level="timeSensitive")
+        return out
+    for review in payload["reviews"]:
+        if not isinstance(review, dict):
+            continue
+        try:
+            i = int(review.get("index")) - 1
+        except (TypeError, ValueError):
+            continue
+        verdict = str(review.get("verdict") or "").upper()
+        if 0 <= i < len(out) and verdict in {"VALID", "FALSE", "UNSURE"}:
+            out[i]["verdict"] = verdict
+            out[i]["why"] = str(review.get("why") or "").strip()[:500]
+            out[i]["recommended_fix"] = str(
+                review.get("recommended_fix") or "").strip()[:1000]
+    tally = collections.Counter(o.get("verdict", "?") for o in out)
+    log(f"GATE-KO-REVIEW ({key}): 후보 {len(findings)}건 Codex 판정 — "
+        + " ".join(f"{k}={v}" for k, v in sorted(tally.items())))
+    return out
+
+
 def _hangul_findings(en_path: Path) -> List[str]:
     """EN 파일 하나에서 한글 잔존·한글 앵커 지적을 다시 뽑는다.
 
@@ -2182,7 +2448,8 @@ def translate_drift_incremental(
 
     Baseline = the KO as it was at the EN's `translated_at` commit (via git). Only
     the `:::`-box-keyed regions whose KO content changed since then are re-sent to
-    Kimi; unchanged regions keep their existing EN text verbatim, so manual EN
+    the configured translator; unchanged regions keep their existing EN text
+    verbatim, so manual EN
     fixes survive and unchanged math is never re-translated.
 
     Returns (assembled_en, in_chars, out_chars, n_retranslated, n_total) on a
@@ -2237,7 +2504,7 @@ def translate_drift_incremental(
             out_chunks.append(en_regions[rid].rstrip())
         else:
             prompt = build_prompt(ko_chunk)
-            en_chunk = call_kimi(prompt)
+            en_chunk = call_translator(prompt)
             en_chunk, _ = label_fix(en_chunk)
             en_chunk = re.sub(r"<sub>[^<]*?</sub>", "", en_chunk)
             en_chunk = re.sub(r"<em[-_]ko>(.*?)</em[-_]ko>", r"*\1*",
@@ -2267,7 +2534,7 @@ def translate_drift_incremental(
         else:
             to_translate[fkey] = ko_val
     if to_translate:
-        en_fields.update(_translate_fm_fields_via_kimi(to_translate))
+        en_fields.update(_translate_fm_fields(to_translate))
 
     en_fm = _compose_en_frontmatter(
         ko_fm_text, en_fields, translated_at_iso=translated_at_iso)
@@ -2305,6 +2572,17 @@ def cmd_status(state: dict) -> int:
     print(f"  cumulative chars: input={stats.get('total_in_chars', 0):,}, "
           f"output={stats.get('total_out_chars', 0):,}")
     print(f"  total translated:  {stats.get('total_done', 0)}")
+    polish_due = 0
+    for ko in sorted(POSTS_ROOT.glob("*/ko/*.md")):
+        if is_draft(ko):
+            continue
+        en = find_en_counterpart(ko)
+        if en is None or not is_our_translation(en):
+            continue
+        if en_translation_meta(en).get("translation_polish_source") != \
+                TRANSLATION_POLISH_SOURCE_TAG:
+            polish_due += 1
+    print(f"  contrastive polish due: {polish_due}")
     review = sorted(k for k, e in files.items() if e.get("needs_review"))
     if review:
         print(f"  needs review (Hangul residue/anchor): {len(review)}")
@@ -2323,7 +2601,13 @@ def cmd_dry_run(state: dict) -> int:
     print(f"  ko: {ko_path.relative_to(BLOG_ROOT)}")
     print(f"  en: {en_path.relative_to(BLOG_ROOT)}")
     print(f"  ko body length: {_ko_body_length(ko_path)} chars")
-    print(f"  kimi binary: {KIMI_BIN}")
+    print(f"  translator backend: {TRANSLATOR_BACKEND}")
+    if TRANSLATOR_BACKEND == "antigravity":
+        print(f"  agy binary: {AGY_BIN}")
+        print(f"  agy model: {AGY_MODEL}")
+        print(f"  agy agent: {AGY_AGENT}")
+    elif TRANSLATOR_BACKEND == "kimi":
+        print(f"  kimi binary: {KIMI_BIN}")
     return 0
 
 
@@ -2433,10 +2717,53 @@ def lint_structure(ko_text: str, en_text: str) -> list:
 from ko_typos import extract_ko_typos  # noqa: E402
 
 
+def audit_ko_source(ko_path: Path, key: str) -> List[dict]:
+    """Return high-confidence KO-source candidates found during a polish run.
+
+    The Antigravity agent has no tools, and a before/after hash is still checked
+    so the read-only boundary remains mechanically observable. Candidates are
+    only triage here; Codex independently decides validity and proposes a fix.
+    """
+    before = hashlib.sha256(ko_path.read_bytes()).hexdigest()
+    prompt = KO_SOURCE_AUDIT_INSTRUCTIONS.replace(
+        "@@KO_POST@@", ko_path.read_text(encoding="utf-8"))
+    out = call_translator(prompt, thinking=False)
+    after = hashlib.sha256(ko_path.read_bytes()).hexdigest()
+    if before != after:
+        _notify(
+            "[translate-worker] KO 감사가 원문을 수정함",
+            f"{key}\nAntigravity KO-source audit 전후 해시가 다릅니다.",
+            level="timeSensitive",
+        )
+        raise RuntimeError("KO source changed during read-only Antigravity audit")
+    payload = _parse_json_object(out)
+    if not isinstance(payload, dict) or not isinstance(payload.get("findings"), list):
+        raise RuntimeError("Antigravity returned an invalid KO-audit JSON shape")
+    findings = []
+    for raw in payload.get("findings") or []:
+        if not isinstance(raw, dict):
+            continue
+        kind = str(raw.get("kind") or "").upper()
+        quote = str(raw.get("quote") or "").strip()
+        issue = str(raw.get("issue") or "").strip()
+        suggested_fix = str(raw.get("suggested_fix") or "").strip()
+        if kind not in {"ERROR", "EXPLANATION"} or not quote or not issue:
+            continue
+        findings.append({
+            "kind": kind,
+            "quote": quote[:1000],
+            "issue": issue[:1000],
+            "suggested_fix": suggested_fix[:1500],
+            "source": "antigravity",
+        })
+    log(f"KO-AUDIT ({key}): {len(findings)} candidate(s)")
+    return findings[:KO_REVIEW_MAX_FINDINGS]
+
+
 def run_verify(state: dict, ko_path: Path, en_path: Path, key: str) -> int:
     """Read-only verification of an existing EN translation against KO.
 
-    Deterministic LaTeX-corruption lints + the math-block semantic check (Kimi
+    Deterministic LaTeX-corruption lints + the math-block semantic check (Claude
     only when block counts genuinely diverge). Records the outcome in state and
     notifies on problems. NEVER modifies the EN file. Marks `verified_at` so the
     post is checked at most once.
@@ -2574,8 +2901,16 @@ def main() -> int:
     if args.lint_structure:
         return cmd_lint_structure()
 
-    if not Path(KIMI_BIN).exists():
-        log(f"kimi CLI not found at {KIMI_BIN}")
+    translator_bin = {
+        "antigravity": AGY_BIN,
+        "kimi": KIMI_BIN,
+        "glm": GLM_BIN,
+    }.get(TRANSLATOR_BACKEND)
+    if translator_bin is None:
+        log(f"unknown translator backend: {TRANSLATOR_BACKEND}")
+        return 2
+    if not Path(translator_bin).exists():
+        log(f"{TRANSLATOR_BACKEND} CLI not found at {translator_bin}")
         return 2
 
     state = load_state()
@@ -2608,7 +2943,7 @@ def main() -> int:
             return run_verify(state, ko_path, en_path, key)
 
         # Drift: try region-incremental re-translation first — only the <ins>
-        # regions whose KO changed (vs the git baseline) go to Kimi; unchanged
+        # regions whose KO changed (vs the git baseline) go to the translator; unchanged
         # EN is kept verbatim so manual fixes survive. Falls back to a full
         # re-translation when there is no baseline or the result is not clean.
         if reason == "drift":
@@ -2669,7 +3004,7 @@ def main() -> int:
                     warnings=warnings,
                 )
             except subprocess.TimeoutExpired:
-                record_failure(state, key, f"timeout after {KIMI_TIMEOUT_SEC}s")
+                record_failure(state, key, f"timeout after {TRANSLATOR_TIMEOUT_SEC}s")
                 save_state(state)
                 log(f"FAILED: timeout (attempt {attempt})")
                 return 1
@@ -2749,26 +3084,46 @@ def main() -> int:
             + _hangul_findings(en_path)
         hangul_warns = [w for w in warnings if "Hangul" in w]
 
-        # 검증기가 KO 원문의 오류를 지적했으면 opus 에게 타당성만 판정받는다.
-        # 검증기는 약한 모델이라 오탐이 섞이고, 이 지적은 SAFE verdict 에 붙어
-        # 오므로 사람이 걸러 줄 다른 관문이 없다. 판정만 하고 원문은 고치지
-        # 않는다 — 사용자가 쓴 본문이다.
-        ko_typo_review: List[dict] = []
-        ko_typo_claims = extract_ko_typos(verdict_text)
-        if ko_typo_claims:
-            ko_typo_review = review_ko_typos(ko_path, key, ko_typo_claims)
+        # 폴리싱 때마다 Antigravity가 KO 자체의 오류/설명 누락 후보를 별도로
+        # 읽기 전용 생성한다. 기존 Claude 의미 검증이 낸 KO-TYPOS도 ERROR
+        # 후보로 합친 뒤 Codex가 진위와 최소 수정안을 독립 판정한다.
+        ko_review: List[dict] = []
+        ko_findings = [{
+            "kind": "ERROR", "quote": "", "issue": claim,
+            "suggested_fix": "", "source": "claude-verify",
+        } for claim in extract_ko_typos(verdict_text)]
+        if reason == "polish":
+            try:
+                ko_findings.extend(audit_ko_source(ko_path, key))
+            except Exception as e:
+                audit_warning = f"KO source audit failed: {_flat(e)[:180]}"
+                warnings.append(audit_warning)
+                log(f"KO-AUDIT ({key}): {audit_warning}")
+        ko_findings = list({
+            _finding_claim(f): f for f in ko_findings
+        }.values())
+        if ko_findings:
+            ko_review = review_ko_findings(ko_path, key, ko_findings)
 
+        final_meta = en_translation_meta(en_path)
         state["files"][key] = {
             "status": "done",
             "last_attempt_ts": time.time(),
             "en_path": str(en_path.relative_to(BLOG_ROOT)),
             "ko_git_commit_ts": git_last_commit_ts(ko_path),
-            "translated_at": translated_at,
+            "translated_at": final_meta.get("translated_at", translated_at),
             "in_chars": in_chars,
             "out_chars": out_chars,
             "reason": reason,
             "warnings": warnings or None,
         }
+        if reason == "polish":
+            state["files"][key]["polished_at"] = final_meta.get(
+                "last_polished_at", translated_at
+            )
+            state["files"][key]["polish_source"] = final_meta.get(
+                "translation_polish_source", TRANSLATION_POLISH_SOURCE_TAG
+            )
         state.pop("failure_notice", None)   # 엔진이 살아났다 — 다음 장애는 첫 통부터
         if lossy_history:
             state["files"][key]["lossy_retry_count"] = len(lossy_history)
@@ -2778,18 +3133,23 @@ def main() -> int:
             # 게이트를 거치고도 남은 한글만 여기 온다 — 임계 미만 한글 잔존·한글
             # 앵커는 정오 판단에 사람이 필요하다. 확인 후 손으로 지운다.
             state["files"][key]["needs_review"] = hangul_warns
-        if ko_typo_review:
+        if ko_review:
             # FALSE 판정도 지운 채로 저장하지 않는다 — 대시보드의 '수정' 체크
             # 흐름과 사용자의 최종 판단이 전체 목록을 본다. 주석을 다는 것이지
             # 거르는 것이 아니다.
-            state["files"][key]["verify_ko_typos"] = ko_typo_claims[:20]
-            state["files"][key]["verify_ko_typos_review"] = ko_typo_review[:20]
+            state["files"][key]["verify_ko_typos"] = [
+                o["claim"] for o in ko_review[:20]
+            ]
+            state["files"][key]["verify_ko_typos_review"] = ko_review[:20]
+            state["files"][key]["ko_reviewed_at"] = datetime.now(
+                timezone.utc).isoformat(timespec="seconds")
 
         # 게이트가 못 고치고 남긴 것도 같은 알림에 싣는다 (한글 경고와 중복되지
         # 않게 warnings 에 없는 것만).
         gate_only = [x for x in gate_residual if x not in warnings]
-        # 판정이 붙은 KO 오타 지적. FALSE 만 남으면 알릴 것이 없다.
-        ko_actionable = [o for o in ko_typo_review
+        # Codex가 FALSE로 기각하지 못한 KO 지적은 모두 알린다. VALID는 확정
+        # 오류/설명 누락이고, UNSURE·미검토는 사람이 확인할 대상으로 숨기지 않는다.
+        ko_actionable = [o for o in ko_review
                          if o.get("verdict", "UNSURE") != "FALSE"]
 
         if warnings or gate_only or ko_actionable:
@@ -2812,14 +3172,16 @@ def main() -> int:
                 body_lines = [key, f"→ {en_path.relative_to(BLOG_ROOT)}", ""]
                 body_lines += [f"• {w}" for w in warnings]
                 body_lines += [f"• (게이트 잔여) {x}" for x in gate_only]
-                if ko_typo_review:
-                    n_false = len(ko_typo_review) - len(ko_actionable)
-                    body_lines += ["", f"KO 오타 지적 {len(ko_typo_review)}건 "
-                                       f"(opus 오탐 판정 {n_false}건 제외):"]
+                if ko_review:
+                    n_false = len(ko_review) - len(ko_actionable)
+                    body_lines += ["", f"KO 원문 검토 {len(ko_review)}건 "
+                                       f"(Codex FALSE {n_false}건 제외):"]
                     for o in ko_actionable:
                         body_lines.append(
                             f"• [{o.get('verdict', 'UNSURE')}] {o['claim']}"
-                            + (f"\n    → {o['why']}" if o.get("why") else ""))
+                            + (f"\n    → {o['why']}" if o.get("why") else "")
+                            + (f"\n    수정안: {o['recommended_fix']}"
+                               if o.get("recommended_fix") else ""))
                 if lossy_history:
                     final_lossy = bool(re.search(
                         r"^VERDICT:\s*lossy\b", verdict_text,

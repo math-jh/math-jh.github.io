@@ -71,7 +71,7 @@ except Exception as _e:  # noqa: BLE001
 # ── 워커 정의 ────────────────────────────────────────────────────────────────
 # interval: cron 주기(초). age > 2.5*interval 이면 stale(빨간불) 판정.
 WORKERS = [
-    dict(key="translation", name="번역 워커", schedule=":15 / :45", interval=1800,
+    dict(key="translation", name="번역 워커", schedule="4시간마다 :15", interval=14400,
          log=f"{ROOT}/scripts/translation/translation.log"),
     dict(key="terms", name="용어 추출", schedule=":00 / :30", interval=1800,
          log=f"{ROOT}/scripts/term-extraction/term_extract_worker.log"),
@@ -427,10 +427,11 @@ def sec_translation():
         recent.append(dict(path=path, status=st, ts=ts,
                            retries=v.get("retries") or v.get("retry") or 0,
                            verdict=v.get("verdict") or v.get("verify_verdict") or ""))
-        typos = _ko_typos(v.get("verdict") or v.get("verify_verdict") or "")
+        typos = v.get("verify_ko_typos") or _ko_typos(
+            v.get("verdict") or v.get("verify_verdict") or "")
         if not typos:
             continue
-        # opus 판정(translate_worker :: review_ko_typos)이 있으면 항목에 붙인다.
+        # Codex 판정(translate_worker :: review_ko_findings)이 있으면 항목에 붙인다.
         # 판정은 주장 문자열로 맞춘다 — 저장 순서에 기대면 목록이 어긋났을 때
         # 엉뚱한 항목에 VALID 가 붙는다.
         by_claim = {r.get("claim"): r for r in (v.get("verify_ko_typos_review") or [])}
@@ -438,7 +439,10 @@ def sec_translation():
         for t in typos:
             r = by_claim.get(t) or {}
             verdict = (r.get("verdict") or "").upper()
-            items.append(dict(text=t, verdict=verdict or None, why=r.get("why") or ""))
+            items.append(dict(text=t, verdict=verdict or None,
+                              kind=r.get("kind") or "ERROR",
+                              why=r.get("why") or "",
+                              fix=r.get("recommended_fix") or ""))
             if verdict == "FALSE":
                 n_false += 1
             elif verdict:
@@ -448,7 +452,8 @@ def sec_translation():
         live = [i for i in items if i["verdict"] != "FALSE"]
         ko_typos.append(dict(path=path, items=[i["text"] for i in items],
                              detail=items, live=len(live),
-                             verified_at=v.get("verified_at") or ""))
+                             verified_at=v.get("ko_reviewed_at")
+                                         or v.get("verified_at") or ""))
     recent.sort(key=lambda r: r["ts"], reverse=True)
     ko_typos.sort(key=lambda r: r["verified_at"], reverse=True)
     return dict(stats=d.get("stats", {}), by_status=by_status,
