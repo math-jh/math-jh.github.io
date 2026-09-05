@@ -18,7 +18,7 @@ published: false
 
 고전적 대수기하는 commutative ring을 국소적 재료로 삼아 affine scheme을 만들고, 이들을 이어붙여 scheme을 세운다. ([\[스킴\] §스킴, ⁋정의 1](/ko/math/scheme_theory/schemes#def1)) 이 이어붙이기가 낳는 가장 중요한 구성 가운데 하나가 올곱, 곧 두 부분다양체의 교차이다. 그러나 고전적 교차는 두 variety가 횡단적(transverse)일 때에만 올바른 답을 준다. 횡단적이지 않으면, 가령 서로 접하거나 예상보다 큰 차원에서 겹치면, scheme으로서의 교차 $\Spec(B\otimes_AC)$는 excess intersection을 놓치고 중복도나 초과 차원을 뭉갠다. 이 결함의 뿌리는 tensor product $\otimes$이 non-exact하다는 데 있으며, 우리는 이미 이를 유도 tensor product $\otimes^{\mathbb{L}}$으로 교정하는 법을 보았다. ([§Simplicial 가환환과 animation, ⁋명제 8](/ko/math/derived_algebraic_geometry/animated_rings#prop8))
 
-이 글의 목표는 그 국소적 교정을 대역적 기하로 승격하는 것이다. 곧 우리는 animated commutative ring을 국소 재료로 삼아 *derived scheme*을 이어붙이고, 그 위에서 올곱이 자동으로 유도 올곱 $X\times_Z^hY$이 되도록 한다. 이렇게 하면 고전적으로 비횡단적이거나 초과 차원인 교차조차 올바른 virtual 차원과 virtual 중복도를 나른다. 이어서 우리는 animated ring 위의 functor로서 derived stack을 정의하고, 여접 복합체 $L_X$와 접복합체 $T_X$를 대역화하며, quasi-smooth morphism과 그것이 주는 virtual 구조를 확립한다. 이하에서 $k$는 field이고, 별다른 언급이 없으면 모든 것은 $k$ 위에서 생각한다. Animated commutative ring들의 $\infty$-범주를 $\operatorname{Ani}=\operatorname{Ani}(\mathrm{CRing}_k)$로 ([§Simplicial 가환환과 animation, ⁋정의 4](/ko/math/derived_algebraic_geometry/animated_rings#def4)), $\infty$-groupoid들, 곧 space들의 $\infty$-범주를 $\mathcal{S}$로 적는다.
+이 글의 목표는 그 국소적 교정을 대역적 기하로 승격하는 것이다. 곧 우리는 animated commutative ring을 국소 재료로 삼아 *derived scheme*을 이어붙이고, 그 위에서 올곱이 자동으로 유도 올곱 $X\times_Z^hY$이 되도록 한다. 이렇게 하면 고전적으로 비횡단적이거나 초과 차원인 교차조차 올바른 virtual 차원과 virtual 중복도를 나른다. 이어서 우리는 animated ring 위의 functor로서 derived stack을 정의하고, 여접 복합체 $\LL_X$와 접복합체 $T_X$를 대역화하며, quasi-smooth morphism과 그것이 주는 virtual 구조를 확립한다. 이하에서 $k$는 field이고, 별다른 언급이 없으면 모든 것은 $k$ 위에서 생각한다. Animated commutative ring들의 $\infty$-범주를 $\operatorname{Ani}=\operatorname{Ani}(\mathrm{CRing}_k)$로 ([§Simplicial 가환환과 animation, ⁋정의 4](/ko/math/derived_algebraic_geometry/animated_rings#def4)), $\infty$-groupoid들, 곧 space들의 $\infty$-범주를 $\mathcal{S}$로 적는다.
 
 ## Affine derived scheme과 derived Spec
 
@@ -114,7 +114,7 @@ Derived stack 가운데 기하를 논할 수 있는 부류는 고전적 경우�
 Derived stack $\mathcal{X}$이 *geometric* (또는 *derived Artin stack<sub>유도 아틴 스택</sub>*)이라는 것은, 그 대각선이 representable하고, derived scheme $U$으로부터의 smooth surjective morphism $u:U\rightarrow \mathcal{X}$, 곧 *atlas*가 존재하는 것을 뜻한다. Atlas를 étale 전사로 잡을 수 있으면 $\mathcal{X}$을 *derived Deligne–Mumford stack*이라 부른다.
 :::
 
-이는 고전적 algebraic stack의 정의를 derived scheme을 국소 모형으로 삼아 옮긴 것이다. ([\[Stacks\] §대수적 스택, ⁋정의 6](/ko/math/stacks/algebraic_stacks#def6)) 여기서 morphism $u:U\rightarrow \mathcal{X}$의 smooth·étale 성질은 뒤에서 여접 복합체로 특징짓는데, 곧 상대 여접 복합체 $L_u$이 degree $0$에 집중된 locally free sheaf인 경우가 smooth이다. Atlas가 있으면 $\mathcal{X}$의 truncation $t_0(\mathcal{X})$은 atlas의 truncation $t_0(U)$을 atlas로 갖는 고전적 algebraic stack이 되어, geometric derived stack이 고전적 algebraic stack 위에 얹힌 유도 두께임이 다시 확인된다. 가장 기본적인 예는 고전적 stack 자체가 discrete derived stack으로 들어앉는 경우이다.
+이는 고전적 algebraic stack의 정의를 derived scheme을 국소 모형으로 삼아 옮긴 것이다. ([\[Stacks\] §대수적 스택, ⁋정의 6](/ko/math/stacks/algebraic_stacks#def6)) 여기서 morphism $u:U\rightarrow \mathcal{X}$의 smooth·étale 성질은 뒤에서 여접 복합체로 특징짓는데, 곧 상대 여접 복합체 $\LL_u$이 degree $0$에 집중된 locally free sheaf인 경우가 smooth이다. Atlas가 있으면 $\mathcal{X}$의 truncation $t_0(\mathcal{X})$은 atlas의 truncation $t_0(U)$을 atlas로 갖는 고전적 algebraic stack이 되어, geometric derived stack이 고전적 algebraic stack 위에 얹힌 유도 두께임이 다시 확인된다. 가장 기본적인 예는 고전적 stack 자체가 discrete derived stack으로 들어앉는 경우이다.
 
 ::: 예시 9 (분류 stack $\mathbf{B}G$)
 $G$을 $k$ 위의 smooth affine group scheme이라 하자. Derived stack $\mathbf{B}G$을, animated ring $R$에 $\Spec \pi_0(R)$ 위의 $G$-torsor들의 groupoid를 대응시키는 functor로 정의한다. $G$이 smooth하므로 그 atlas $\Spec k\rightarrow \mathbf{B}G$은 smooth 전사이고, 그 base change는 $G\rightrightarrows \Spec k$이라 $\mathbf{B}G$은 geometric derived stack이다. 이 경우 구조가 discrete ring 위에서 정해지므로 $\mathbf{B}G$은 사실 고전적 algebraic stack $\mathbf{B}G$과 같고 ([\[Stacks\] §대수적 스택, ⁋정의 7](/ko/math/stacks/algebraic_stacks#def7)에서 $X=\Spec k$인 quotient stack), $t_0(\mathbf{B}G)=\mathbf{B}G$은 자기 자신이다. 곧 순전히 stack 방향의 대칭(automorphism $G$)만으로는 유도 두께가 생기지 않는다. 유도 정보는 대신 $G$이 작용하는 대상 쪽에서, 예컨대 $G$-action을 받는 derived scheme의 유도 올곱을 quotient한 $[Z/G]$에서 나타난다. 이러한 유도 올곱을 다음 두 절에서 다룬다.
@@ -122,31 +122,31 @@ $G$을 $k$ 위의 smooth affine group scheme이라 하자. Derived stack $\mathb
 
 ## 여접 복합체와 접복합체
 
-Derived scheme과 derived stack 위에서 미분 기하를 하려면, 각 affine 조각에서 이미 세운 여접 복합체 $L_{R/k}$을 대역적 대상으로 이어붙여야 한다. ([§Simplicial 가환환과 animation, ⁋정의 10](/ko/math/derived_algebraic_geometry/animated_rings#def10)) 여접 복합체는 localization과 étale morphism에 대하여 잘 행동하므로 이 접착은 곧바로 가능하다.
+Derived scheme과 derived stack 위에서 미분 기하를 하려면, 각 affine 조각에서 이미 세운 여접 복합체 $\LL_{R/k}$을 대역적 대상으로 이어붙여야 한다. ([§Simplicial 가환환과 animation, ⁋정의 10](/ko/math/derived_algebraic_geometry/animated_rings#def10)) 여접 복합체는 localization과 étale morphism에 대하여 잘 행동하므로 이 접착은 곧바로 가능하다.
 
 ::: 정의 10
-Derived scheme의 morphism $f:X\rightarrow Y$에 대하여, 각 affine slice $\Spec R\subseteq X$이 $\Spec S\subseteq Y$ 위로 갈 때의 여접 복합체 $L_{R/S}$을 이어붙여 얻는 $\mathcal{O}_X$-module의 sheaf를 $f$의 *상대 여접 복합체<sub>relative cotangent complex</sub>* $L_f=L_{X/Y}\in \QCoh(X)$이라 한다. $Y=\Spec k$일 때 이를 $X$의 *절대 여접 복합체* $L_X=L_{X/k}$이라 적는다. $L_X$의 $\mathcal{O}_X$-쌍대
+Derived scheme의 morphism $f:X\rightarrow Y$에 대하여, 각 affine slice $\Spec R\subseteq X$이 $\Spec S\subseteq Y$ 위로 갈 때의 여접 복합체 $\LL_{R/S}$을 이어붙여 얻는 $\mathcal{O}_X$-module의 sheaf를 $f$의 *상대 여접 복합체<sub>relative cotangent complex</sub>* $\LL_f=\LL_{X/Y}\in \QCoh(X)$이라 한다. $Y=\Spec k$일 때 이를 $X$의 *절대 여접 복합체* $\LL_X=\LL_{X/k}$이라 적는다. $\LL_X$의 $\mathcal{O}_X$-쌍대
 
-$$T_X=L_X^\vee=\mathcal{R}\mathcal{H}om_{\mathcal{O}_X}(L_X,\mathcal{O}_X)$$
+$$T_X=\LL_X^\vee=\mathcal{R}\mathcal{H}om_{\mathcal{O}_X}(\LL_X,\mathcal{O}_X)$$
 
-을 $X$의 *접복합체<sub>tangent complex</sub>*라 부른다. Geometric derived stack $\mathcal{X}$에 대해서는 atlas $u:U\rightarrow \mathcal{X}$을 따라 pullback한 $u^\ast L_{\mathcal{X}}$이 삼각형 $u^\ast L_{\mathcal{X}}\rightarrow L_U\rightarrow L_{U/\mathcal{X}}$을 채우도록 하는 유일한 대상으로 $L_{\mathcal{X}}$을 정의한다.
+을 $X$의 *접복합체<sub>tangent complex</sub>*라 부른다. Geometric derived stack $\mathcal{X}$에 대해서는 atlas $u:U\rightarrow \mathcal{X}$을 따라 pullback한 $u^\ast \LL_{\mathcal{X}}$이 삼각형 $u^\ast \LL_{\mathcal{X}}\rightarrow \LL_U\rightarrow \LL_{U/\mathcal{X}}$을 채우도록 하는 유일한 대상으로 $\LL_{\mathcal{X}}$을 정의한다.
 :::
 
-접착이 잘 정의됨은 여접 복합체가 étale morphism에 대하여 소멸하고 localization과 교환한다는 사실, 곧 étale $R\rightarrow R'$에 대하여 $L_{R'/R}\simeq0$이고 $L_{R/k}\otimes_R R'\simeq L_{R'/k}$이라는 데서 나온다. ([§Simplicial 가환환과 animation, ⁋명제 14](/ko/math/derived_algebraic_geometry/animated_rings#prop14)의 매끄러움 판정과 추이 삼각형이 이를 준다.) Affine 경우 $X=\Spec R$이면 $L_X$은 단순히 $L_{R/k}$의 sheafification이고, $X$이 smooth한 고전적 scheme이면 $L_X\simeq \Omega_X$이 degree $0$에 집중된 locally free sheaf이다. Stack의 경우 atlas 삼각형에서 $L_{U/\mathcal{X}}$이 atlas morphism의 상대 여접 복합체이므로, $\mathcal{X}$이 smooth할 때 $L_{\mathcal{X}}$은 degree $0$의 접방향과 함께 stack 방향에서 오는 음의 degree 항, 곧 $\mathbf{B}G$ 유형의 automorphism이 주는 $\mathfrak{g}^\vee[-1]$ 꼴의 항을 가질 수 있다.
+접착이 잘 정의됨은 여접 복합체가 étale morphism에 대하여 소멸하고 localization과 교환한다는 사실, 곧 étale $R\rightarrow R'$에 대하여 $\LL_{R'/R}\simeq0$이고 $\LL_{R/k}\otimes_R R'\simeq \LL_{R'/k}$이라는 데서 나온다. ([§Simplicial 가환환과 animation, ⁋명제 14](/ko/math/derived_algebraic_geometry/animated_rings#prop14)의 매끄러움 판정과 추이 삼각형이 이를 준다.) Affine 경우 $X=\Spec R$이면 $\LL_X$은 단순히 $\LL_{R/k}$의 sheafification이고, $X$이 smooth한 고전적 scheme이면 $\LL_X\simeq \Omega_X$이 degree $0$에 집중된 locally free sheaf이다. Stack의 경우 atlas 삼각형에서 $\LL_{U/\mathcal{X}}$이 atlas morphism의 상대 여접 복합체이므로, $\mathcal{X}$이 smooth할 때 $\LL_{\mathcal{X}}$은 degree $0$의 접방향과 함께 stack 방향에서 오는 음의 degree 항, 곧 $\mathbf{B}G$ 유형의 automorphism이 주는 $\mathfrak{g}^\vee[-1]$ 꼴의 항을 가질 수 있다.
 
 ::: 명제 11
 여접 복합체는 다음을 만족한다.
 
 1. (추이 삼각형) morphism의 합성 $X\xrightarrow{f}Y\xrightarrow{g}Z$에 대하여 $\QCoh(X)$ 안의 삼각형
 
-$$f^\ast L_{Y/Z}\longrightarrow L_{X/Z}\longrightarrow L_{X/Y}\longrightarrow f^\ast L_{Y/Z}[1]$$
+$$f^\ast \LL_{Y/Z}\longrightarrow \LL_{X/Z}\longrightarrow \LL_{X/Y}\longrightarrow f^\ast \LL_{Y/Z}[1]$$
 
 이 존재한다.
 
-2. (base change) derived scheme의 유도 올곱 $X'=X\times_Y^hY'$과 그 projection $g:X'\rightarrow X$에 대하여 $L_{X'/Y'}\simeq g^\ast L_{X/Y}$이다.
+2. (base change) derived scheme의 유도 올곱 $X'=X\times_Y^hY'$과 그 projection $g:X'\rightarrow X$에 대하여 $\LL_{X'/Y'}\simeq g^\ast \LL_{X/Y}$이다.
 :::
 ::: 증명
-두 성질은 모두 affine 국소적이며, 그 국소 형태가 각각 [§Simplicial 가환환과 animation, ⁋정리 12](/ko/math/derived_algebraic_geometry/animated_rings#thm12)과, 유도 tensor product에 대한 base change invariance이다. Affine 국소적으로 $X=\Spec B$, $Y=\Spec A$, $Y'=\Spec A'$이면 $X'=\Spec(B\otimes_A^{\mathbb{L}}A')$이고, 여접 복합체가 유도 tensor product와 교환하여 $L_{(B\otimes_A^{\mathbb{L}}A')/A'}\simeq L_{B/A}\otimes_B^{\mathbb{L}}(B\otimes_A^{\mathbb{L}}A')$이 됨은 free simplicial 분해를 base change하여 직접 확인된다. 이 국소 동형들이 [정의 10](#def10)의 접착과 호환되므로 대역적으로 성립한다. 자세한 논증은 ([Ill], [Lur, SAG])에 있다.
+두 성질은 모두 affine 국소적이며, 그 국소 형태가 각각 [§Simplicial 가환환과 animation, ⁋정리 12](/ko/math/derived_algebraic_geometry/animated_rings#thm12)과, 유도 tensor product에 대한 base change invariance이다. Affine 국소적으로 $X=\Spec B$, $Y=\Spec A$, $Y'=\Spec A'$이면 $X'=\Spec(B\otimes_A^{\mathbb{L}}A')$이고, 여접 복합체가 유도 tensor product와 교환하여 $\LL_{(B\otimes_A^{\mathbb{L}}A')/A'}\simeq \LL_{B/A}\otimes_B^{\mathbb{L}}(B\otimes_A^{\mathbb{L}}A')$이 됨은 free simplicial 분해를 base change하여 직접 확인된다. 이 국소 동형들이 [정의 10](#def10)의 접착과 호환되므로 대역적으로 성립한다. 자세한 논증은 ([Ill], [Lur, SAG])에 있다.
 :::
 
 추이 삼각형과 base change는 여접 복합체를 계산 가능한 대상으로 만들며, 특히 base change invariance는 유도 올곱 위의 여접 복합체가 원래 morphism의 여접 복합체를 그대로 물려받음을 말한다. 이 두 성질이 다음 절에서 quasi-smooth morphism이 유도 올곱에 대하여 닫혀 있음을 보장한다.
@@ -156,18 +156,18 @@ $$f^\ast L_{Y/Z}\longrightarrow L_{X/Z}\longrightarrow L_{X/Y}\longrightarrow f^
 Smooth morphism은 여접 복합체가 degree $0$의 locally free sheaf인 경우였다. ([§Simplicial 가환환과 animation, ⁋명제 14](/ko/math/derived_algebraic_geometry/animated_rings#prop14)) 이를 degree $1$까지 허용하여 한 단계 넓힌 것이 quasi-smooth morphism이며, derived algebraic geometry에서 virtual 구조를 나르는 morphism의 부류가 정확히 이것이다.
 
 ::: 정의 12
-Derived scheme(또는 geometric derived stack)의 morphism $f:X\rightarrow Y$이 *quasi-smooth<sub>유사매끄러움</sub>*하다는 것은, $f$이 유한표현이고 상대 여접 복합체 $L_f$이 perfect이며 그 Tor-amplitude가 $[-1,0]$에 놓이는 것, 곧 $L_f$이 국소적으로
+Derived scheme(또는 geometric derived stack)의 morphism $f:X\rightarrow Y$이 *quasi-smooth<sub>유사매끄러움</sub>*하다는 것은, $f$이 유한표현이고 상대 여접 복합체 $\LL_f$이 perfect이며 그 Tor-amplitude가 $[-1,0]$에 놓이는 것, 곧 $\LL_f$이 국소적으로
 
-$$L_f\simeq\bigl[E_1\longrightarrow E_0\bigr],\qquad E_0\text{ (degree }0),\quad E_1\text{ (degree }1)$$
+$$\LL_f\simeq\bigl[E_1\longrightarrow E_0\bigr],\qquad E_0\text{ (degree }0),\quad E_1\text{ (degree }1)$$
 
-의 꼴로 두 항의 locally free sheaf로 표현되는 것을 뜻한다. 이때 $f$의 *virtual 상대차원<sub>virtual relative dimension</sub>*을 $L_f$의 K-이론적 계수
+의 꼴로 두 항의 locally free sheaf로 표현되는 것을 뜻한다. 이때 $f$의 *virtual 상대차원<sub>virtual relative dimension</sub>*을 $\LL_f$의 K-이론적 계수
 
 $$\operatorname{vdim}(f)=\rank E_0-\rank E_1$$
 
 으로 정의하고, $X$이 $\Spec k$ 위에서 quasi-smooth할 때 $\operatorname{vdim}(X)=\operatorname{vdim}(X/k)$을 $X$의 *virtual dimension*이라 부른다.
 :::
 
-Tor-amplitude $[-1,0]$은 cohomological 규약의 표현이며, 우리가 쓰는 connective(homological) 규약에서는 $L_f$이 degree $0,1$의 두 항에 집중됨을 뜻한다. Degree $0$의 $E_0$은 smooth 접방향, 곧 Kähler differential에 해당하고, degree $1$의 $E_1$은 conormal orientation, 곧 방정식이 만드는 장애에 해당한다. 이 degree $1$ 방향이 변형이론에서 변형의 연장을 막는 장애가 사는 자리이며, quasi-smooth morphism은 그 장애가 여접 복합체 한 단계 안에 완전히 담기는 morphism이다. ([\[스킴\] §변형이론과 여접 복합체, ⁋정리 7](/ko/math/scheme_theory/deformation_theory#thm7)) 그러므로 $\operatorname{vdim}(f)$은 "접방향의 수에서 방정식의 수를 뺀 것"으로, 고전적 codimension 계산의 유도 판본이다. 이 정의가 실제로 무엇을 재는지는 고전적 lci 및 regular embedding과의 관계에서 분명해진다.
+Tor-amplitude $[-1,0]$은 cohomological 규약의 표현이며, 우리가 쓰는 connective(homological) 규약에서는 $\LL_f$이 degree $0,1$의 두 항에 집중됨을 뜻한다. Degree $0$의 $E_0$은 smooth 접방향, 곧 Kähler differential에 해당하고, degree $1$의 $E_1$은 conormal orientation, 곧 방정식이 만드는 장애에 해당한다. 이 degree $1$ 방향이 변형이론에서 변형의 연장을 막는 장애가 사는 자리이며, quasi-smooth morphism은 그 장애가 여접 복합체 한 단계 안에 완전히 담기는 morphism이다. ([\[스킴\] §변형이론과 여접 복합체, ⁋정리 7](/ko/math/scheme_theory/deformation_theory#thm7)) 그러므로 $\operatorname{vdim}(f)$은 "접방향의 수에서 방정식의 수를 뺀 것"으로, 고전적 codimension 계산의 유도 판본이다. 이 정의가 실제로 무엇을 재는지는 고전적 lci 및 regular embedding과의 관계에서 분명해진다.
 
 ::: 명제 13
 $f:X\rightarrow Y$을 derived scheme의 morphism이라 하자.
@@ -183,11 +183,11 @@ $$X\simeq Z(s)=P\times_{E}^hP$$
 3. Quasi-smooth morphism은 임의의 base change에 대하여 닫혀 있고, virtual 상대차원을 보존한다. 곧 $f$이 quasi-smooth이고 $Y'\rightarrow Y$이 임의의 morphism이면 $f':X\times_Y^hY'\rightarrow Y'$도 quasi-smooth이며 $\operatorname{vdim}(f')=\operatorname{vdim}(f)$이다.
 :::
 ::: 증명
-**(1)** 절단 $s:P\rightarrow E$의 유도 영점자리 $Z(s)=P\times_E^hP$은 국소적으로 $E$을 rank $r$의 자명 다발로 놓아 $s=(s_1,\ldots,s_r)$으로 쓰면 $\mathcal{O}_{Z(s)}=\operatorname{Kos}(\mathcal{O}_P;s_1,\ldots,s_r)$, 곧 $s_i$들에 대한 Koszul 복합체이다. Embedding $Z(s)\hookrightarrow P$의 여접 복합체는 [명제 11](#prop11)의 base change로 계산되어 $L_{Z(s)/P}\simeq(E^\vee\vert_{Z(s)})[1]$, 곧 degree $1$에 집중된 locally free sheaf이다. $P$이 $Y$ 위에서 smooth하므로 $L_{P/Y}$은 degree $0$의 locally free sheaf이고, [명제 11](#prop11)의 추이 삼각형이 $L_{X/Y}$을 degree $0,1$의 두 항으로 준다. 따라서 $Z(s)$은 quasi-smooth이다. 역으로 $f$이 quasi-smooth이면 $L_f\simeq[E_1\rightarrow E_0]$의 $E_0$을 실현하는 smooth 인수 $P$을 국소적으로 잡고, $E_1$을 실현하는 절단 $s$을 그 위에서 택하여 위 인수분해를 얻는다. 세부는 ([Kha], [Lur, SAG])에 있다.
+**(1)** 절단 $s:P\rightarrow E$의 유도 영점자리 $Z(s)=P\times_E^hP$은 국소적으로 $E$을 rank $r$의 자명 다발로 놓아 $s=(s_1,\ldots,s_r)$으로 쓰면 $\mathcal{O}_{Z(s)}=\operatorname{Kos}(\mathcal{O}_P;s_1,\ldots,s_r)$, 곧 $s_i$들에 대한 Koszul 복합체이다. Embedding $Z(s)\hookrightarrow P$의 여접 복합체는 [명제 11](#prop11)의 base change로 계산되어 $\LL_{Z(s)/P}\simeq(E^\vee\vert_{Z(s)})[1]$, 곧 degree $1$에 집중된 locally free sheaf이다. $P$이 $Y$ 위에서 smooth하므로 $\LL_{P/Y}$은 degree $0$의 locally free sheaf이고, [명제 11](#prop11)의 추이 삼각형이 $\LL_{X/Y}$을 degree $0,1$의 두 항으로 준다. 따라서 $Z(s)$은 quasi-smooth이다. 역으로 $f$이 quasi-smooth이면 $\LL_f\simeq[E_1\rightarrow E_0]$의 $E_0$을 실현하는 smooth 인수 $P$을 국소적으로 잡고, $E_1$을 실현하는 절단 $s$을 그 위에서 택하여 위 인수분해를 얻는다. 세부는 ([Kha], [Lur, SAG])에 있다.
 
 **(2)** $X=Z(s)$이면 $t_0(X)=\{s=0\}$은 $P$의 고전적 영점자리이고, 이는 국소적으로 $r$개의 방정식으로 잘린 것이며, 그 방정식들이 regular sequence를 이룰 때 고전적 lci가 된다. $X$이 discrete함은 $s_1,\ldots,s_r$이 regular sequence를 이루어 Koszul 복합체가 $\pi_0$에 집중되는 것, 곧 $\pi_1(\mathcal{O}_X)=0$인 것과 동치이다. Regular sequence가 아니면 Koszul homology가 $\pi_{\geq1}\mathcal{O}_X\neq0$을 낳아 $X$은 discrete하지 않다.
 
-**(3)** Base change 안정성은 유도 올곱이 여접 복합체를 pullback으로 보존하고 ([명제 11](#prop11)의 base change), pullback이 perfect 복합체의 Tor-amplitude를 넓히지 않으며 locally free sheaf의 rank를 보존하는 데서 따른다. 따라서 $L_{f'}\simeq g^\ast L_f$이 다시 Tor-amplitude $[-1,0]$이고 $\operatorname{vdim}$이 rank로 정해지므로 보존된다.
+**(3)** Base change 안정성은 유도 올곱이 여접 복합체를 pullback으로 보존하고 ([명제 11](#prop11)의 base change), pullback이 perfect 복합체의 Tor-amplitude를 넓히지 않으며 locally free sheaf의 rank를 보존하는 데서 따른다. 따라서 $\LL_{f'}\simeq g^\ast \LL_f$이 다시 Tor-amplitude $[-1,0]$이고 $\operatorname{vdim}$이 rank로 정해지므로 보존된다.
 :::
 
 [명제 13](#prop13)은 quasi-smooth morphism이 고전적 lci를 유도 세계로 정확히 확장한 것임을 밝힌다. 고전적 lci morphism은 regular sequence로 잘린 것이었고, quasi-smooth morphism은 그 regularity 조건을 떼어 낸 것, 곧 아무 절단의 유도 영점자리이다. Regular sequence이면 유도 영점자리가 discrete하여 고전적 영점자리와 일치하고, regular sequence가 아니면 Koszul homology가 $\pi_{\geq1}$로 살아남아 초과분을 기록한다. 이 초과분이야말로 유도 기하가 붙드는 정보이며, 그 자연스러운 무대가 유도 올곱이다.
@@ -236,7 +236,7 @@ $$i_p(X,Y)=\sum_{n\geq0}(-1)^n\operatorname{length}\pi_n(\mathcal{O}_{W,p})=\sum
 
 **(2)** Quasi-smooth의 base change 안정성과 virtual 상대차원 보존은 [명제 13](#prop13)의 셋째 항이다. $X,Y$이 smooth $Z$-scheme(closed embedding)이면 $f$의 상대 여접 복합체는 conormal orientation $N_{X/Z}^\vee[1]$과 접방향의 조합이 되어 $\operatorname{vdim}(f)=d_X-d_Z$이고, base change로 $\operatorname{vdim}(W/Y)=d_X-d_Z$, 따라서 $\operatorname{vdim}(W)=d_Y+(d_X-d_Z)$이다.
 
-**(3)** $W$이 quasi-smooth이므로 그 여접 복합체의 절단이 $t_0(W)$ 위에 perfect obstruction 이론 $L_W\vert_{t_0(W)}\rightarrow L_{t_0(W)}$을 주고, 이 자료로부터 intrinsic normal cone을 obstruction 다발의 전체 공간 안으로 끊어 virtual fundamental class $[W]^{\mathrm{vir}}$을 얻는다. $Z$이 smooth이고 교차가 proper이면 이 class의 pushforward가 교차곱의 정의와 일치함은 deformation to the normal cone과 대조하여 나온다. ([\[대수다양체\] §교차곱, ⁋정의 1](/ko/math/algebraic_varieties/intersection_product#def1)) isolated point $p$에서는 $[W]^{\mathrm{vir}}$의 길이가 $\mathcal{O}_{W,p}$의 Euler characteristic $\sum(-1)^n\operatorname{length}\pi_n$이고, $\pi_n=\Tor_n^A(B,C)$이므로 Serre의 Tor 공식과 일치한다. 완전한 논증은 ([TV], [Kha])에 있다.
+**(3)** $W$이 quasi-smooth이므로 그 여접 복합체의 절단이 $t_0(W)$ 위에 perfect obstruction 이론 $\LL_W\vert_{t_0(W)}\rightarrow \LL_{t_0(W)}$을 주고, 이 자료로부터 intrinsic normal cone을 obstruction 다발의 전체 공간 안으로 끊어 virtual fundamental class $[W]^{\mathrm{vir}}$을 얻는다. $Z$이 smooth이고 교차가 proper이면 이 class의 pushforward가 교차곱의 정의와 일치함은 deformation to the normal cone과 대조하여 나온다. ([\[대수다양체\] §교차곱, ⁋정의 1](/ko/math/algebraic_varieties/intersection_product#def1)) isolated point $p$에서는 $[W]^{\mathrm{vir}}$의 길이가 $\mathcal{O}_{W,p}$의 Euler characteristic $\sum(-1)^n\operatorname{length}\pi_n$이고, $\pi_n=\Tor_n^A(B,C)$이므로 Serre의 Tor 공식과 일치한다. 완전한 논증은 ([TV], [Kha])에 있다.
 :::
 
 [명제 15](#prop15)가 이 글의 핵심이다. 고전적 올곱은 $\pi_0$만 보아 교차의 초과분을 뭉갰지만, 유도 올곱은 그 초과분을 $\Tor$로 정확히 붙들어 virtual 차원과 virtual class로 번역한다. Serre가 intersection multiplicity를 $\Tor$의 교대합으로 정의해야 했던 이유가 여기서 기하적으로 설명된다. 그 교대합이 바로 유도 올곱 $\mathcal{O}_W$의 Euler characteristic인 것이다. 이 virtual class 형식은 Gromov–Witten 이론에서 stable map들의 moduli space가 기대차원보다 클 때, 그 위의 virtual fundamental class로 불변량을 정의하는 데 쓰이는 것과 같은 구조이며, 유도 기하는 그러한 moduli를 quasi-smooth derived stack으로 실현하여 이 class를 자연스럽게 공급한다.
@@ -246,7 +246,7 @@ $$i_p(X,Y)=\sum_{n\geq0}(-1)^n\operatorname{length}\pi_n(\mathcal{O}_{W,p})=\sum
 
 $$\mathcal{L}X=X\times_{X\times X}^hX$$
 
-을 $X$의 *유도 loop space*라 부른다. $X$이 smooth하면 $\Delta$이 regular embedding이고, [명제 11](#prop11)의 base change로 $L_{\mathcal{L}X/X}\simeq T_X^\vee[1]=\Omega_X[1]$이 되어 $\mathcal{L}X$이 quasi-smooth이며, 그 structure sheaf의 homotopy는 Hochschild–Kostant–Rosenberg 동형에 의하여
+을 $X$의 *유도 loop space*라 부른다. $X$이 smooth하면 $\Delta$이 regular embedding이고, [명제 11](#prop11)의 base change로 $\LL_{\mathcal{L}X/X}\simeq T_X^\vee[1]=\Omega_X[1]$이 되어 $\mathcal{L}X$이 quasi-smooth이며, 그 structure sheaf의 homotopy는 Hochschild–Kostant–Rosenberg 동형에 의하여
 
 $$\pi_n\mathcal{O}_{\mathcal{L}X}\cong\Omega_X^n$$
 

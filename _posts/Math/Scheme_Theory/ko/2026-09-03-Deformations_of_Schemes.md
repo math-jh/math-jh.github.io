@@ -110,11 +110,11 @@ $$T^i(B/k, B)\cong\Ext^i_B(\Omega_{B/k}, B)$$
 ::: 증명
 $U$를 줄여 $B=P/I$ ($P=k[\x_1,\ldots,\x_n]$)이고 $I$가 길이 $k$의 $P$-regular sequence로 생성된다고 두어도 좋다. Naive 여접 복합체는
 
-$$\operatorname{NL}_{B/k}=\bigl[I/I^2\overset{\bar d}{\longrightarrow}\Omega_{P/k}\otimes_PB\bigr]$$
+$$\NL_{B/k}=\bigl[I/I^2\overset{\bar d}{\longrightarrow}\Omega_{P/k}\otimes_PB\bigr]$$
 
-이고 $T^i(B/k, B)$는 $\Hom_B(\operatorname{NL}_{B/k}, B)$의 cohomology이다. ([§변형이론과 여접 복합체, ⁋정의 3](/ko/math/scheme_theory/deformation_theory#def3))
+이고 $T^i(B/k, B)$는 $\Hom_B(\NL_{B/k}, B)$의 cohomology이다. ([§변형이론과 여접 복합체, ⁋정의 3](/ko/math/scheme_theory/deformation_theory#def3))
 
-[명제 4](#prop4)에 의하여 $\bar d$가 단사이므로 이 complex의 homology는 $H_1=0$과 $H_0=\Omega_{B/k}$뿐이고, 곧 augmentation $\operatorname{NL}_{B/k}\rightarrow\Omega_{B/k}$가 quasi-isomorphism이다. 두 항 가운데 $\Omega_{P/k}\otimes_PB$는 $\dd{\x_1},\ldots,\dd{\x_n}$을 기저로 하는 free $B$-module이고 ([\[가환대수학\] §미분, ⁋명제 5](/ko/math/commutative_algebra/differentials#prop5)), $I/I^2$은 rank $k$의 free $B$-module이므로 ([§완전교차, ⁋명제 5](/ko/math/scheme_theory/complete_intersections#prop5)), $\operatorname{NL}_{B/k}$는 $\Omega_{B/k}$의 길이 $1$짜리 free resolution이다. 그러므로 $\Hom_B(\operatorname{NL}_{B/k}, B)$의 cohomology는 정의에 의하여 $\Ext^i_B(\Omega_{B/k}, B)$이다. ([\[호몰로지 대수학\] §Ext와 Tor, ⁋명제 3](/ko/math/homological_algebra/ext_and_tor#prop3))
+[명제 4](#prop4)에 의하여 $\bar d$가 단사이므로 이 complex의 homology는 $H_1=0$과 $H_0=\Omega_{B/k}$뿐이고, 곧 augmentation $\NL_{B/k}\rightarrow\Omega_{B/k}$가 quasi-isomorphism이다. 두 항 가운데 $\Omega_{P/k}\otimes_PB$는 $\dd{\x_1},\ldots,\dd{\x_n}$을 기저로 하는 free $B$-module이고 ([\[가환대수학\] §미분, ⁋명제 5](/ko/math/commutative_algebra/differentials#prop5)), $I/I^2$은 rank $k$의 free $B$-module이므로 ([§완전교차, ⁋명제 5](/ko/math/scheme_theory/complete_intersections#prop5)), $\NL_{B/k}$는 $\Omega_{B/k}$의 길이 $1$짜리 free resolution이다. 그러므로 $\Hom_B(\NL_{B/k}, B)$의 cohomology는 정의에 의하여 $\Ext^i_B(\Omega_{B/k}, B)$이다. ([\[호몰로지 대수학\] §Ext와 Tor, ⁋명제 3](/ko/math/homological_algebra/ext_and_tor#prop3))
 
 마지막 주장은 $\Ext$가 affine 위에서 associated sheaf와 교환하고 $\mathcal{E}xt$가 국소적인 대상이라는 것에서 따라온다. ([§준연접층, ⁋정리 7](/ko/math/scheme_theory/quasicoherent_sheaves#thm7))
 :::
@@ -158,7 +158,7 @@ $\mathcal{E}xt^1$이 실제로 무엇인지는 hypersurface에서 완전히 계�
 ::: 예시 8
 $V=\mathbb{A}^n_k$ 안의 reduced hypersurface $X=Z(f)$를 보자. Ideal sheaf는 $\mathcal{I}=(f)$이고 $\mathcal{I}/\mathcal{I}^2$은 $f$가 생성하는 rank $1$의 free $\mathcal{O}_X$-module이므로, [명제 5](#prop5)의 resolution은
 
-$$\operatorname{NL}=\bigl[\mathcal{O}_X\overset{\bar d}{\longrightarrow}\mathcal{O}_X^{\oplus n}\bigr],\qquad \bar d(1)=\Bigl(\frac{\partial f}{\partial \x_1},\ldots,\frac{\partial f}{\partial \x_n}\Bigr)$$
+$$\NL=\bigl[\mathcal{O}_X\overset{\bar d}{\longrightarrow}\mathcal{O}_X^{\oplus n}\bigr],\qquad \bar d(1)=\Bigl(\frac{\partial f}{\partial \x_1},\ldots,\frac{\partial f}{\partial \x_n}\Bigr)$$
 
 이다. 이를 $\mathcal{O}_X$로 dual하면 $(a_1,\ldots, a_n)\mapsto \sum_ia_i\partial f/\partial \x_i$로 주어지는 사상 $\mathcal{O}_X^{\oplus n}\rightarrow\mathcal{O}_X$가 되고, 따라서
 

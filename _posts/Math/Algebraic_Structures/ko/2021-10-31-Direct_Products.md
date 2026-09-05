@@ -28,11 +28,11 @@ $$xy=(x_i)_{i\in I}(y_i)_{i\in I}=(x_iy_i)_{i\in I}$$
 
 으로 정의하자. 그럼 $\prod_{i\in I}G_i$는 이 연산에 대해 group의 구조를 가지며, 항등원은 $(e_i)_{i\in I}$이고 $x=(x_i)_{i\in I}$의 역원은 $(x_i^{-1})_{i\in I}$인 것을 알 수 있다. 또, 임의의 $j\in I$에 대하여
 
-$$\pr_j(xy)=\pr_j(x_iy_i)_{i\in I}=x_jy_j=\pr_j(x)\pr_j(y)$$
+$$\pr_j(xy)=\pr_j((x_iy_i)_{i\in I})=x_jy_j=\pr_j(x)\pr_j(y)$$
 
 이므로 $\pr_j$가 group homomorphism이다. 
 
-이제 이렇게 정의한 $(G=\prod_{i\in I}G_i,(\pr_i)_{i\in I})$가 universal property를 만족하는 것을 증명하자. 이를 위해서는 곱집합의 universal property로 얻어지는 함수 $f:H\rightarrow G$가 group homomorphism이라는 것만 보이면 충분하다. 이제 임의의 $x,y\in H$와 임의의 $i\in I$에 대하여, 
+이제 이렇게 정의한 $(G=\prod_{i\in I}G_i,(\pr_i)_{i\in I})$가 universal property를 만족하는 것을 증명하자. 이를 위해서는 group homomorphism들의 family $(f_i:H\rightarrow G_i)_{i\in I}$가 곱집합의 universal property를 통해 유도하는 (유일한) 함수 $f:H\rightarrow G$가 group homomorphism이라는 것만 보이면 충분하다. 이제 임의의 $x,y\in H$와 임의의 $i\in I$에 대하여, 
 
 $$f(xy)=(f_i(xy))_{i\in I}=(f_i(x)f_i(y))_{i\in I}=(f_i(x))_{i\in I}(f_i(y))_{i\in I}=f(x)f(y)$$
 
@@ -70,8 +70,7 @@ $$\pr_i^H(y)=\pr_i^H(f(x))=f_i(\pr_i^G(x))\in\im f_i$$
 :::
 
 ::: 따름정리 4
-Group들의 family $(G_i)_{i\in I}$가 주어졌다 하자. 각각의 $i\in I$에 대하여 $H_i$들이 $G_i$의 normal subgroup이라면, $\prod H_i$도 $\prod G_i$의 normal subgroup이고 그 quotient group은 $\prod (G_i/H_i)$와 같
-다.
+Group들의 family $(G_i)_{i\in I}$가 주어졌다 하자. 각각의 $i\in I$에 대하여 $H_i$들이 $G_i$의 normal subgroup이라면, $\prod H_i$도 $\prod G_i$의 normal subgroup이고 그 quotient group은 $\prod (G_i/H_i)$와 같다.
 :::
 ::: 증명
 Canonical homomorphism들 $p_i:G_i\rightarrow G_i/H_i$들에 [따름정리 3](#cor3)을 적용하면 된다.

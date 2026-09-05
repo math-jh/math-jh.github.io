@@ -16,9 +16,9 @@ published: false
 
 ---
 
-[\[스킴\] §변형이론과 여접 복합체, ⁋참고 12](/ko/math/scheme_theory/deformation_theory#rmk12)에서 우리는 naive 여접 복합체 $\operatorname{NL}_{B/A}$가 변형이론의 요구를 온전히 감당하지 못함을 보았다. 그것은 두 항짜리 절단이라 $T^2$ 이상의 장애를 담지 못하고, ring morphism의 사슬 $A\rightarrow B\rightarrow C$에 대하여 오른쪽에서만 exact한 transition exact sequence밖에 주지 못하며, base change가 $\otimes$의 non-exactness 때문에 어긋난다. 이 세 결함은 모두 같은 뿌리를 가진다. $\Omega$와 $\operatorname{NL}$은 tensor product와 quotient라는 non-exact한 연산을 그 유도된 형태로 다루지 못하고, 오직 $0$차 근사만을 붙든다는 것이다.
+[\[스킴\] §변형이론과 여접 복합체, ⁋참고 12](/ko/math/scheme_theory/deformation_theory#rmk12)에서 우리는 naive 여접 복합체 $\NL_{B/A}$가 변형이론의 요구를 온전히 감당하지 못함을 보았다. 그것은 두 항짜리 절단이라 $T^2$ 이상의 장애를 담지 못하고, ring morphism의 사슬 $A\rightarrow B\rightarrow C$에 대하여 오른쪽에서만 exact한 transition exact sequence밖에 주지 못하며, base change가 $\otimes$의 non-exactness 때문에 어긋난다. 이 세 결함은 모두 같은 뿌리를 가진다. $\Omega$와 $\NL$은 tensor product와 quotient라는 non-exact한 연산을 그 유도된 형태로 다루지 못하고, 오직 $0$차 근사만을 붙든다는 것이다.
 
-우리는 이 글에서 그 뿌리를 직접 교정한다. 곧 commutative ring 자체를 homotopy 이론적으로 정련하여, Tor가 처음부터 내장된 대상인 *animated (simplicial) commutative ring*을 도입한다. 그 무대 위에서 tensor product는 자동으로 유도 tensor product $\otimes^{\mathbb{L}}$이 되고, polynomial algebra에 의한 한 번의 presentation은 simplicial 자유 분해로 승격되며, 그 미분을 취해 얻는 완전한 여접 복합체 $L_{B/A}$가 모든 degree에서 homology를 갖고 추이 삼각형을 만족하게 된다. 이하에서 별다른 언급이 없으면 모든 ring은 commutative이고 unital이며, $k$는 field이다.
+우리는 이 글에서 그 뿌리를 직접 교정한다. 곧 commutative ring 자체를 homotopy 이론적으로 정련하여, Tor가 처음부터 내장된 대상인 *animated (simplicial) commutative ring*을 도입한다. 그 무대 위에서 tensor product는 자동으로 유도 tensor product $\otimes^{\mathbb{L}}$이 되고, polynomial algebra에 의한 한 번의 presentation은 simplicial 자유 분해로 승격되며, 그 미분을 취해 얻는 완전한 여접 복합체 $\LL_{B/A}$가 모든 degree에서 homology를 갖고 추이 삼각형을 만족하게 된다. 이하에서 별다른 언급이 없으면 모든 ring은 commutative이고 unital이며, $k$는 field이다.
 
 ## Simplicial 대상과 Dold–Kan 대응
 
@@ -146,28 +146,28 @@ $$\pi_\ast\bigl(k\otimes_{k[\x]}^{\mathbb{L}}k\bigr)\cong\Lambda_k[\varepsilon],
 이제 목표였던 여접 복합체를 구성한다. Naive 여접 복합체는 $B$를 polynomial algebra의 quotient로 한 번 표현한 뒤 conormal sequence의 두 항을 취한 것이었다 ([\[가환대수학\] §미분, ⁋정의 10](/ko/math/commutative_algebra/differentials#def10)). 완전한 여접 복합체는 그 "한 번의 표현"을 simplicial 자유 분해로 승격하여, Kähler differential을 각 항에서 취한 뒤 normalize한다.
 
 ::: 정의 10
-$A$-algebra $B$에 대하여, 각 항 $P_n$이 polynomial $A$-algebra이고 약한 동치 $P_\bullet\overset{\sim}{\rightarrow}B$를 이루는 free simplicial 분해를 택하자 (곧 $\pi_0(P_\bullet)=B$, $\pi_{>0}(P_\bullet)=0$). 이때 $B$의 $A$ 위에서의 *cotangent complex<sub>여접 복합체</sub>* $L_{B/A}$는 각 항의 Kähler differential을 $B$로 base change한 simplicial $B$-module
+$A$-algebra $B$에 대하여, 각 항 $P_n$이 polynomial $A$-algebra이고 약한 동치 $P_\bullet\overset{\sim}{\rightarrow}B$를 이루는 free simplicial 분해를 택하자 (곧 $\pi_0(P_\bullet)=B$, $\pi_{>0}(P_\bullet)=0$). 이때 $B$의 $A$ 위에서의 *cotangent complex<sub>여접 복합체</sub>* $\LL_{B/A}$는 각 항의 Kähler differential을 $B$로 base change한 simplicial $B$-module
 
-$$L_{B/A}=\Omega_{P_\bullet/A}\otimes_{P_\bullet}B$$
+$$\LL_{B/A}=\Omega_{P_\bullet/A}\otimes_{P_\bullet}B$$
 
 를 Dold–Kan 대응을 통해 connective 복합체로 본 것, 곧 derived category $D(B)$의 대상이다.
 :::
 
-각 $P_n$이 polynomial algebra이므로 $\Omega_{P_n/A}$는 free $P_n$-module이고, 따라서 $\Omega_{P_n/A}\otimes_{P_n}B$는 free $B$-module이다. 곧 $L_{B/A}$는 각 degree에서 free인 connective 복합체로 실현되며, naive 여접 복합체가 하나의 presentation만 쓴 것과 달리 모든 higher degree에 항을 가진다. 이 구성이 의미를 가지려면 분해의 선택에 무관해야 하고, 낮은 degree에서 옛 불변량을 복원해야 한다.
+각 $P_n$이 polynomial algebra이므로 $\Omega_{P_n/A}$는 free $P_n$-module이고, 따라서 $\Omega_{P_n/A}\otimes_{P_n}B$는 free $B$-module이다. 곧 $\LL_{B/A}$는 각 degree에서 free인 connective 복합체로 실현되며, naive 여접 복합체가 하나의 presentation만 쓴 것과 달리 모든 higher degree에 항을 가진다. 이 구성이 의미를 가지려면 분해의 선택에 무관해야 하고, 낮은 degree에서 옛 불변량을 복원해야 한다.
 
 ::: 정리 11
-[정의 10](#def10)의 $L_{B/A}\in D(B)$는 free simplicial resolution $P_\bullet\rightarrow B$의 선택에 quasi-isomorphism을 무시하면 무관하다. 나아가
+[정의 10](#def10)의 $\LL_{B/A}\in D(B)$는 free simplicial resolution $P_\bullet\rightarrow B$의 선택에 quasi-isomorphism을 무시하면 무관하다. 나아가
 
-$$H_0(L_{B/A})\cong\Omega_{B/A}$$
+$$H_0(\LL_{B/A})\cong\Omega_{B/A}$$
 
 이고, degree $1$ 이하의 절단은 naive 여접 복합체와 일치한다.
 
-$$\tau_{\leq1}L_{B/A}\simeq\operatorname{NL}_{B/A}$$
+$$\tau_{\leq1}\LL_{B/A}\simeq\NL_{B/A}$$
 :::
 ::: 증명
-무관성은 두 free simplicial resolution 사이에 언제나 세 번째 공통 정련이 존재하고, [\[가환대수학\] §미분, ⁋정리 14](/ko/math/commutative_algebra/differentials#thm14)이 각 단계에서 준 homotopy 무관성을 simplicial degree 전체에 걸쳐 정합적으로 이어 붙임으로써 나온다. 곧 $L_{B/A}$는 abelianization functor의 왼쪽 유도 functor (nonabelian derived functor)로서 잘 정의되며, cofibrant 분해의 선택에 무관하다.
+무관성은 두 free simplicial resolution 사이에 언제나 세 번째 공통 정련이 존재하고, [\[가환대수학\] §미분, ⁋정리 14](/ko/math/commutative_algebra/differentials#thm14)이 각 단계에서 준 homotopy 무관성을 simplicial degree 전체에 걸쳐 정합적으로 이어 붙임으로써 나온다. 곧 $\LL_{B/A}$는 abelianization functor의 왼쪽 유도 functor (nonabelian derived functor)로서 잘 정의되며, cofibrant 분해의 선택에 무관하다.
 
-$H_0$의 계산은 다음과 같다. $\Omega_{P_\bullet/A}\otimes_{P_\bullet}B$의 normalization 복합체에서 $H_0$은 $\Omega_{P_0/A}\otimes_{P_0}B$를 두 face의 image로 quotient한 것인데, $P_0\rightarrow B$가 전사이고 $P_1$이 relation들을 준다는 점에서 이는 정확히 conormal sequence의 cokernel, 곧 [\[가환대수학\] §미분, ⁋명제 11](/ko/math/commutative_algebra/differentials#prop11)에서와 같은 $\Omega_{B/A}$이다. 마지막으로 $P_\bullet$의 처음 두 항 $P_1\rightrightarrows P_0\rightarrow B$만 남겨 절단하면 그로부터 얻는 두 항 복합체가 $\operatorname{NL}_{B/A}$의 정의와 일치하므로 $\tau_{\leq1}L_{B/A}\simeq\operatorname{NL}_{B/A}$이다. 완전한 논증은 ([Qui], [Ill], [Stacks, Cotangent Complex])에 있다.
+$H_0$의 계산은 다음과 같다. $\Omega_{P_\bullet/A}\otimes_{P_\bullet}B$의 normalization 복합체에서 $H_0$은 $\Omega_{P_0/A}\otimes_{P_0}B$를 두 face의 image로 quotient한 것인데, $P_0\rightarrow B$가 전사이고 $P_1$이 relation들을 준다는 점에서 이는 정확히 conormal sequence의 cokernel, 곧 [\[가환대수학\] §미분, ⁋명제 11](/ko/math/commutative_algebra/differentials#prop11)에서와 같은 $\Omega_{B/A}$이다. 마지막으로 $P_\bullet$의 처음 두 항 $P_1\rightrightarrows P_0\rightarrow B$만 남겨 절단하면 그로부터 얻는 두 항 복합체가 $\NL_{B/A}$의 정의와 일치하므로 $\tau_{\leq1}\LL_{B/A}\simeq\NL_{B/A}$이다. 완전한 논증은 ([Qui], [Ill], [Stacks, Cotangent Complex])에 있다.
 :::
 
 곧 완전한 여접 복합체는 naive 여접 복합체의 정보를 낮은 degree에서 그대로 담으면서, 그 위에 higher homology를 얹은 대상이다. 이 higher homology가 있어야만 비로소 변형이론이 요구했던 추이 삼각형이 성립한다.
@@ -175,38 +175,38 @@ $H_0$의 계산은 다음과 같다. $\Omega_{P_\bullet/A}\otimes_{P_\bullet}B$�
 ::: 정리 12 (추이 삼각형)
 Ring morphism의 사슬 $A\rightarrow B\rightarrow C$에 대하여, $D(C)$ 안의 distinguished triangle
 
-$$L_{B/A}\otimes_B^{\mathbb{L}}C\longrightarrow L_{C/A}\longrightarrow L_{C/B}\longrightarrow L_{B/A}\otimes_B^{\mathbb{L}}C[1]$$
+$$\LL_{B/A}\otimes_B^{\mathbb{L}}C\longrightarrow \LL_{C/A}\longrightarrow \LL_{C/B}\longrightarrow \LL_{B/A}\otimes_B^{\mathbb{L}}C[1]$$
 
-이 존재한다. 특히 전사 $B\rightarrow C=B/I$에 대하여 $H_0(L_{C/B})=0$이고
+이 존재한다. 특히 전사 $B\rightarrow C=B/I$에 대하여 $H_0(\LL_{C/B})=0$이고
 
-$$H_1(L_{C/B})\cong I/I^2$$
+$$H_1(\LL_{C/B})\cong I/I^2$$
 
 이며, $I$가 국소적으로 regular sequence로 생성되는 경우 (곧 $B\rightarrow C$가 quasi-smooth, lci인 경우) 여접 복합체는 conormal module의 shift
 
-$$L_{C/B}\simeq (I/I^2)[1]$$
+$$\LL_{C/B}\simeq (I/I^2)[1]$$
 
 로 집중된다.
 :::
 ::: 증명
 삼각형은 free simplicial 분해의 base change로부터 나온다. $P_\bullet\rightarrow B$를 $A$ 위의 free resolution, $Q_\bullet\rightarrow C$를 $B$ 위의 free 분해로 잡고 이들을 합성하여 $C$의 $A$ 위 free 분해를 구성하면, 각 simplicial degree에서 [\[다중선형대수학\] §미분가군, ⁋명제 13](/ko/math/multilinear_algebra/differential_modules#prop13)의 transition exact sequence가 split short exact sequence가 되고 (polynomial algebra 사이의 morphism이므로), 이를 normalize하면 short exact sequence들의 열이 사슬 복합체들의 short exact sequence를 이루어 그 long exact sequence가 위 삼각형이 된다. 오른쪽에서만 exact했던 옛 transition exact sequence가 이렇게 완전한 삼각형으로 승격되는 것이 완전한 여접 복합체를 도입한 핵심 동기였다 ([\[스킴\] §변형이론과 여접 복합체, ⁋참고 12](/ko/math/scheme_theory/deformation_theory#rmk12)).
 
-전사 $B\rightarrow C=B/I$의 경우 $\Omega_{C/B}=0$이므로 $H_0(L_{C/B})=0$이고, $H_1(L_{C/B})=I/I^2$은 conormal module이 여접 복합체의 첫 nonzero homology로 나타남을 말한다. $I=(f_1,\ldots,f_r)$이 regular sequence이면 Koszul 분해가 $C$의 free 분해를 주고, 그 미분을 취한 여접 복합체가 정확히 $(I/I^2)[1]$ 한 항으로 축약된다. 세부는 ([Qui], [Ill])에 있다.
+전사 $B\rightarrow C=B/I$의 경우 $\Omega_{C/B}=0$이므로 $H_0(\LL_{C/B})=0$이고, $H_1(\LL_{C/B})=I/I^2$은 conormal module이 여접 복합체의 첫 nonzero homology로 나타남을 말한다. $I=(f_1,\ldots,f_r)$이 regular sequence이면 Koszul 분해가 $C$의 free 분해를 주고, 그 미분을 취한 여접 복합체가 정확히 $(I/I^2)[1]$ 한 항으로 축약된다. 세부는 ([Qui], [Ill])에 있다.
 :::
 
 추이 삼각형은 여접 복합체를 실제로 계산 가능한 대상으로 만든다. 임의의 $B$를 polynomial algebra 위의 quotient로 놓으면, smooth한 부분의 여접 복합체는 이미 알고 있고, quotient에서 오는 conormal 부분을 삼각형이 이어 붙여 주기 때문이다. 이를 곧바로 하나의 fat point에 적용해 본다.
 
 ::: 예시 13 (이중점의 여접 복합체)
-$B=k[\x]/(\x^2)$, 곧 affine 직선 위 원점의 이중점을 생각하고, $k$의 characteristic이 $2$가 아니라 하자. 사슬 $k\rightarrow k[\x]\rightarrow B$에 [정리 12](#thm12)을 적용한다. $k[\x]$는 $k$ 위에서 smooth하므로 $L_{k[\x]/k}=\Omega_{k[\x]/k}=k[\x]\dd{\x}$는 degree $0$에 집중된 free module이다. 한편 $\x^2$은 $k[\x]$의 nonzerodivisor이므로 $k[\x]\rightarrow B$는 lci이고, [정리 12](#thm12)에 의하여
+$B=k[\x]/(\x^2)$, 곧 affine 직선 위 원점의 이중점을 생각하고, $k$의 characteristic이 $2$가 아니라 하자. 사슬 $k\rightarrow k[\x]\rightarrow B$에 [정리 12](#thm12)을 적용한다. $k[\x]$는 $k$ 위에서 smooth하므로 $\LL_{k[\x]/k}=\Omega_{k[\x]/k}=k[\x]\dd{\x}$는 degree $0$에 집중된 free module이다. 한편 $\x^2$은 $k[\x]$의 nonzerodivisor이므로 $k[\x]\rightarrow B$는 lci이고, [정리 12](#thm12)에 의하여
 
-$$L_{B/k[\x]}\simeq(I/I^2)[1]\simeq B[1],\qquad I=(\x^2)$$
+$$\LL_{B/k[\x]}\simeq(I/I^2)[1]\simeq B[1],\qquad I=(\x^2)$$
 
 이다. 따라서 여접 복합체는 두 항짜리 free 복합체로 실현되며, 그 미분은 conormal morphism $\overline{d}:B[1]\rightarrow(k[\x]\dd{\x})\otimes B=B\dd{\x}$, 곧 $\overline{\x^2}\mapsto \dd{(\x^2)}=2\x \dd{\x}$이다. 곧
 
-$$L_{B/k}\simeq\Bigl[B\overset{\times2\x}{\longrightarrow}B\dd{\x}\Bigr]$$
+$$\LL_{B/k}\simeq\Bigl[B\overset{\times2\x}{\longrightarrow}B\dd{\x}\Bigr]$$
 
 이고 (degree $1$에서 $0$으로), 그 homology는 $k$의 characteristic이 $2$가 아닐 때
 
-$$H_0(L_{B/k})=\coker(\times2\x)=B/(\x)=k\cong\Omega_{B/k},\qquad H_1(L_{B/k})=\ker(\times2\x)=\ann_B(\x)=(\x)\cong k$$
+$$H_0(\LL_{B/k})=\coker(\times2\x)=B/(\x)=k\cong\Omega_{B/k},\qquad H_1(\LL_{B/k})=\ker(\times2\x)=\ann_B(\x)=(\x)\cong k$$
 
 이다. 곧 여접 복합체가 degree $0$을 넘어 $H_1\neq0$을 가진다. 이는 $B$가 $k$ 위에서 smooth가 아님을 정확히 검출하는 것으로, 이중점이라는 비축소 (nilpotent) 특이성이 $\Omega$만으로는 보이지 않던 higher homology로 드러난 것이다. Hypersurface이므로 여접 복합체 자체는 두 항짜리 perfect 복합체에 그쳐 $H_{\geq2}=0$이지만, $H_1$의 소멸 실패만으로도 non-smoothness는 이미 포착된다.
 :::
@@ -217,12 +217,12 @@ $$H_0(L_{B/k})=\coker(\times2\x)=B/(\x)=k\cong\Omega_{B/k},\qquad H_1(L_{B/k})=\
 유한표현 $A$-algebra $B$에 대하여, 다음이 동치이다.
 
 1. $B$가 $A$ 위에서 smooth하다.
-2. $L_{B/A}$가 degree $0$에 집중되어 있고, $H_0(L_{B/A})=\Omega_{B/A}$가 finitely generated projective $B$-module이다.
+2. $\LL_{B/A}$가 degree $0$에 집중되어 있고, $H_0(\LL_{B/A})=\Omega_{B/A}$가 finitely generated projective $B$-module이다.
 :::
 ::: 증명
-$(1)\Rightarrow(2)$. $B$가 smooth하면 [\[스킴\] §변형이론과 여접 복합체, ⁋명제 8](/ko/math/scheme_theory/deformation_theory#prop8)에 의하여 $H_1(\operatorname{NL}_{B/A})=0$이고 $\Omega_{B/A}$가 finitely generated projective이다. 국소적으로 $B$는 $A$ 위의 polynomial algebra $P$ 위에서 étale하다. Étale morphism $P\rightarrow B$는 $L_{B/P}\simeq0$을 주므로, 사슬 $A\rightarrow P\rightarrow B$에 [정리 12](#thm12)을 적용하면 $L_{B/A}\simeq L_{P/A}\otimes_P^{\mathbb{L}}B$를 얻는다. $P$는 $A$ 위에서 polynomial algebra이므로 $L_{P/A}\simeq\Omega_{P/A}$가 degree $0$에 집중된 free module이고, $P\rightarrow B$가 étale하여 $\Omega_{P/A}\otimes_PB\cong\Omega_{B/A}$이므로 $L_{B/A}\simeq\Omega_{B/A}$도 degree $0$에 집중된다.
+$(1)\Rightarrow(2)$. $B$가 smooth하면 [\[스킴\] §변형이론과 여접 복합체, ⁋명제 8](/ko/math/scheme_theory/deformation_theory#prop8)에 의하여 $H_1(\NL_{B/A})=0$이고 $\Omega_{B/A}$가 finitely generated projective이다. 국소적으로 $B$는 $A$ 위의 polynomial algebra $P$ 위에서 étale하다. Étale morphism $P\rightarrow B$는 $\LL_{B/P}\simeq0$을 주므로, 사슬 $A\rightarrow P\rightarrow B$에 [정리 12](#thm12)을 적용하면 $\LL_{B/A}\simeq \LL_{P/A}\otimes_P^{\mathbb{L}}B$를 얻는다. $P$는 $A$ 위에서 polynomial algebra이므로 $\LL_{P/A}\simeq\Omega_{P/A}$가 degree $0$에 집중된 free module이고, $P\rightarrow B$가 étale하여 $\Omega_{P/A}\otimes_PB\cong\Omega_{B/A}$이므로 $\LL_{B/A}\simeq\Omega_{B/A}$도 degree $0$에 집중된다.
 
-$(2)\Rightarrow(1)$. $L_{B/A}$가 degree $0$에 집중되면 [정리 11](#thm11)에 의하여 $\tau_{\leq1}L_{B/A}=\operatorname{NL}_{B/A}$도 degree $0$에 집중되어 $H_1(\operatorname{NL}_{B/A})=0$이고, $H_0=\Omega_{B/A}$가 finitely generated projective이다. 그럼 [\[스킴\] §변형이론과 여접 복합체, ⁋명제 8](/ko/math/scheme_theory/deformation_theory#prop8)의 증명에서 본 대로, conormal exact sequence가 왼쪽에서도 split하는 short exact sequence가 되어 infinitesimal lifting 판정이 성립하고, 이는 $B$가 $A$ 위에서 smooth한 것과 동치이다. 완전한 논증은 ([Qui], [Stacks, Cotangent Complex])에 있다.
+$(2)\Rightarrow(1)$. $\LL_{B/A}$가 degree $0$에 집중되면 [정리 11](#thm11)에 의하여 $\tau_{\leq1}\LL_{B/A}=\NL_{B/A}$도 degree $0$에 집중되어 $H_1(\NL_{B/A})=0$이고, $H_0=\Omega_{B/A}$가 finitely generated projective이다. 그럼 [\[스킴\] §변형이론과 여접 복합체, ⁋명제 8](/ko/math/scheme_theory/deformation_theory#prop8)의 증명에서 본 대로, conormal exact sequence가 왼쪽에서도 split하는 short exact sequence가 되어 infinitesimal lifting 판정이 성립하고, 이는 $B$가 $A$ 위에서 smooth한 것과 동치이다. 완전한 논증은 ([Qui], [Stacks, Cotangent Complex])에 있다.
 :::
 
 이로써 여접 복합체는 변형이론이 요구한 세 가지, 곧 모든 degree에서의 homology, 추이 삼각형, 그리고 유도 tensor product와의 정합성을 모두 만족하는 대상으로 완성되었다. Smoothness는 이 복합체가 가장 단순해지는 경우 (degree $0$의 projective module)로, 특이성은 그 higher homology로 정확히 측정된다. Animated ring과 그 위의 여접 복합체는 이렇게 고전 가환대수를 homotopy 이론적으로 정련한 무대이며, 이 무대 위에서 quotient와 교차를 유도적으로 다루는 것이 derived algebraic geometry의 출발점이다.
