@@ -65,21 +65,15 @@ $$D(fg)=f\cdot D(g)+g\cdot D(f)$$
 
 $$\delta'(\bar{f})-\delta(\bar{f})=D(f)=h(\dd{f}\otimes1)=h(\bar{d}(\bar{f}))$$
 
-로 주어진다. 여기서 $\bar{d}: \mathfrak{a}/\mathfrak{a}^2\rightarrow\Omega_{B/A}\otimes_BC$는 [§Kähler 미분과 여접층, ⁋명제 2](/ko/math/scheme_theory/sheaf_of_differentials#prop2)의 conormal morphism이며, 따라서 $D$는 $\bar{d}^\ast$의 image에 속한다 
-
-이 자유도가 $\delta$에 미치는 영향은 곧바로 읽힌다. $D$에 대응하는 $C$-module homomorphism을 $h:\Omega_{B/A}\otimes_BC\rightarrow\mathfrak{b}$라 하면 임의의 $f\in\mathfrak{a}$에 대하여 $\widetilde{\rho}'$이 정하는 $\delta'$은
-
-$$\delta'(\bar{f})-\delta(\bar{f})=D(f)=h(\dd{f}\otimes1)=h(\bar{d}(\bar{f}))$$
-
-를 만족하며, 여기서 $\bar{d}:\mathfrak{a}/\mathfrak{a}^2\rightarrow\Omega_{B/A}\otimes_BC$는 [§Kähler 미분과 여접층, ⁋명제 2](/ko/math/scheme_theory/sheaf_of_differentials#prop2)의 conormal morphism이다. 곧 $\delta'=\delta+\bar{d}^{\ast}(h)$이므로, $\widetilde{\rho}$의 선택을 바꾸며 $\delta$가 움직이는 범위는 $\bar{d}^{\ast}$의 image와 정확히 일치한다. 그러므로 어떤 선택으로든 $\mathfrak{a}$를 죽일 수 있다는 것, 곧 lifting $\rho:C\rightarrow R$이 존재한다는 것은 적당한 $h$에 대하여 $\delta+\bar{d}^{\ast}(h)=0$이 되는 것과 동치이고, 이는 $\delta$가 $\bar{d}^{\ast}$의 image에 속한다는 조건에 다름 아니다. 따라서 $\delta$가 정하는 class
+로 주어진다. 여기서 $\bar{d}: \mathfrak{a}/\mathfrak{a}^2\rightarrow\Omega_{B/A}\otimes_BC$는 [§Kähler 미분과 여접층, ⁋명제 2](/ko/math/scheme_theory/sheaf_of_differentials#prop2)의 conormal morphism이고 $D$는 $\bar{d}^\ast$의 image에 속한다는 것을 알 수 있다. 더 중요하게, 어떤 선택이 존재하여 $\mathfrak{a}$를 죽일 수 있는 것은 이제 적당한 $h:\Omega_{B/A}\otimes_BC\rightarrow \mathfrak{b}$가 존재하여 $\delta+\bar{d}^\ast(h)=0$인 것, 즉 $\delta$가 $\bar{d}^\ast$의 image에 속한다는 것과 동일하다. 즉, 이를 확인하기 위해서는 $\delta$를 다음의 class
 
 $$[\delta]\in\coker\left(\Hom_C(\Omega_{B/A}\otimes_BC,\mathfrak{b})\overset{\bar{d}^{\ast}}{\longrightarrow}\Hom_C(\mathfrak{a}/\mathfrak{a}^2,\mathfrak{b})\right)$$
 
-는 처음 택한 $\widetilde{\rho}$에 의존하지 않으며, 이 class가 소멸하는 것이 lifting의 존재와 동치이다. 개별 $\delta$가 재는 것은 눈앞의 $\widetilde{\rho}$ 하나가 $C$를 통해 factor하지 못하는 정도이지만, lifting 자체의 실패를 재는 것은 이 $[\delta]$이다. 또한 하나의 lifting이 존재할 때 서로 다른 lifting들의 차이는 같은 계산을 $B$ 대신 $C$에 적용하여 $\Der_A(C,\mathfrak{b})=\Hom_C(\Omega_{C/A},\mathfrak{b})$가 통제한다.
+에서 살펴보면 되고, 이는 서로 다른 lift의 차이 $\delta'-\delta=\bar{d}^\ast(h)$가 $\im\bar{d}^\ast$에 속하므로 $\widetilde{\rho}$의 선택에 의존하지 않는다. 
 
-위 cokernel은 two-term complex
+한편 이는 다음의 two-term complex
 
-$$\operatorname{NL}_{C/A}=\left[\mathfrak{a}/\mathfrak{a}^2\overset{\bar{d}}{\longrightarrow}\Omega_{B/A}\otimes_BC\right]$$
+$$\NL_{C/A}=\left[\mathfrak{a}/\mathfrak{a}^2\overset{\bar{d}}{\longrightarrow}\Omega_{B/A}\otimes_BC\right]$$
 
 를 $\mathfrak{b}$로 dual하여 얻는 첫째 cohomology이다. 곧 앞 글의 lifting criterion 안에는 이미 naive cotangent complex가 들어있다. Smooth한 경우에는 conormal sequence가 split exact이므로 $\bar{d}^{\ast}$가 모든 $\mathfrak{b}$에 대하여 surjective이고 이 obstruction이 항상 사라진다. 반대로 singular한 경우에는 lifting의 실패를 단순한 부정으로 버리지 않고 그 class가 어느 공간에 놓이는지, 서로 다른 lifting들이 어떻게 매개되는지를 연구할 수 있다.
 
@@ -146,18 +140,18 @@ $$\Der_\mathbb{K}(B,C)=\Hom_C(\Omega_{B/\mathbb{K}}\otimes_BC,C)\overset{\bar{d}
 
 위의 두 module $\mathfrak{a}/\mathfrak{a}^2$와 $\Omega_{B/\mathbb{K}}\otimes_BC$, 그리고 그 사이의 $\bar{d}$는 정확히 naive 여접 복합체를 이룬다. [\[가환대수학\] §미분, ⁋정의 10](/ko/math/commutative_algebra/differentials#def10)에서 presentation $p:B\rightarrow C$에 대하여
 
-$$\operatorname{NL}_{C/\mathbb{K}}=\Bigl[\mathfrak{a}/\mathfrak{a}^2\overset{\bar{d}}{\rightarrow}\Omega_{B/\mathbb{K}}\otimes_BC\Bigr]$$
+$$\NL_{C/\mathbb{K}}=\Bigl[\mathfrak{a}/\mathfrak{a}^2\overset{\bar{d}}{\rightarrow}\Omega_{B/\mathbb{K}}\otimes_BC\Bigr]$$
 
 를 정의하였고 ($\mathfrak{a}/\mathfrak{a}^2$는 degree $1$, $\Omega_{B/\mathbb{K}}\otimes_BC$는 degree $0$), 그 homology가
 
-$$H_0(\operatorname{NL}_{C/\mathbb{K}})\cong\Omega_{C/\mathbb{K}},\qquad H_1(\operatorname{NL}_{C/\mathbb{K}})=\ker\bar{d}$$
+$$H_0(\NL_{C/\mathbb{K}})\cong\Omega_{C/\mathbb{K}},\qquad H_1(\NL_{C/\mathbb{K}})=\ker\bar{d}$$
 
-이며 presentation의 선택에 무관함을 보았다 ([\[가환대수학\] §미분, ⁋명제 11](/ko/math/commutative_algebra/differentials#prop11), [\[가환대수학\] §미분, ⁋정리 14](/ko/math/commutative_algebra/differentials#thm14)). $\operatorname{NL}_{C/\mathbb{K}}$의 언어로 옮기면 [§매끄러운 사상과 에탈 사상, ⁋명제 8](/ko/math/scheme_theory/smooth_and_etale_morphisms#prop8)의 splitting은 $\operatorname{NL}_{C/\mathbb{K}}$가 projective module $\Omega_{C/\mathbb{K}}$ 하나에 quasi-isomorphic하다는 말이 된다. 앞 절의 분석은 first-order deformation의 모듈라이가 이를 $C$로 dual한 것의 cohomology로 읽힌다는 것을 시사한다. 이를 정의로 굳힌다.
+이며 presentation의 선택에 무관함을 보았다 ([\[가환대수학\] §미분, ⁋명제 11](/ko/math/commutative_algebra/differentials#prop11), [\[가환대수학\] §미분, ⁋정리 14](/ko/math/commutative_algebra/differentials#thm14)). $\NL_{C/\mathbb{K}}$의 언어로 옮기면 [§매끄러운 사상과 에탈 사상, ⁋명제 8](/ko/math/scheme_theory/smooth_and_etale_morphisms#prop8)의 splitting은 $\NL_{C/\mathbb{K}}$가 projective module $\Omega_{C/\mathbb{K}}$ 하나에 quasi-isomorphic하다는 말이 된다. 앞 절의 분석은 first-order deformation의 모듈라이가 이를 $C$로 dual한 것의 cohomology로 읽힌다는 것을 시사한다. 이를 정의로 굳힌다.
 
 ::: 정의 3
-$C$-module $M$에 대하여, $\operatorname{NL}_{C/\mathbb{K}}$를 $M$으로 dual한 cochain complex
+$C$-module $M$에 대하여, $\NL_{C/\mathbb{K}}$를 $M$으로 dual한 cochain complex
 
-$$\Hom_C(\operatorname{NL}_{C/\mathbb{K}},M):\quad \Hom_C(\Omega_{B/\mathbb{K}}\otimes_BC,M)\overset{\bar{d}^\ast}{\rightarrow}\Hom_C(\mathfrak{a}/\mathfrak{a}^2,M)$$
+$$\Hom_C(\NL_{C/\mathbb{K}},M):\quad \Hom_C(\Omega_{B/\mathbb{K}}\otimes_BC,M)\overset{\bar{d}^\ast}{\rightarrow}\Hom_C(\mathfrak{a}/\mathfrak{a}^2,M)$$
 
 (왼쪽이 cohomological degree $0$, 오른쪽이 degree $1$)의 cohomology를
 
@@ -185,7 +179,7 @@ $$\bigl(F\otimes_BC\bigr)/\im d_2\cong \mathfrak{a}/\mathfrak{a}^2$$
 에 의하여 degree $1$ cocycle은 $\Hom_C(\mathfrak{a}/\mathfrak{a}^2,M)$의 원소와 같다. 따라서 위 정의의 $T^1$은 앞서 얻은 $\coker\bar{d}^\ast$, 곧 "평탄 변형 modulo trivial"과 정확히 일치한다. $T^2$에서 새로 등장한 $\operatorname{Rel}/\operatorname{TrivRel}$은 방정식들 사이의 syzygy 가운데 tautological한 Koszul 관계를 넘어서는 부분을 기록한다. 이 점은 장애를 다룰 때 분명해진다.
 
 ::: 참고 4
-$T^0, T^1$은 two-term complex $\operatorname{NL}_{C/\mathbb{K}}$만으로 올바르게 계산되지만, $T^2$는 Lichtenbaum–Schlessinger complex의 degree $2$ 항을 추가로 요구한다. 더 정확히는, 뒤에서 언급할 완전한 여접 복합체 $L_{C/\mathbb{K}}$에 대하여 $T^i(C/\mathbb{K},M)=\Ext^i_C(L_{C/\mathbb{K}},M)$이며, $\operatorname{NL}_{C/\mathbb{K}}$와 $\operatorname{LS}_{C/\mathbb{K}}$는 각각 $L_{C/\mathbb{K}}$의 degree $0,1$ 절단과 degree $0,1,2$ 절단을 나타낸다. $T^2$가 naive complex의 범위를 벗어난다는 이 사실이, 장애를 제대로 다루려면 적어도 한 항을 더 보아야 한다는 첫 신호이다.
+$T^0, T^1$은 two-term complex $\NL_{C/\mathbb{K}}$만으로 올바르게 계산되지만, $T^2$는 Lichtenbaum–Schlessinger complex의 degree $2$ 항을 추가로 요구한다. 더 정확히는, 뒤에서 언급할 완전한 여접 복합체 $\LL_{C/\mathbb{K}}$에 대하여 $T^i(C/\mathbb{K},M)=\Ext^i_C(\LL_{C/\mathbb{K}},M)$이며, $\NL_{C/\mathbb{K}}$와 $\operatorname{LS}_{C/\mathbb{K}}$는 각각 $\LL_{C/\mathbb{K}}$의 degree $0,1$ 절단과 degree $0,1,2$ 절단을 나타낸다. $T^2$가 naive complex의 범위를 벗어난다는 이 사실이, 장애를 제대로 다루려면 적어도 한 항을 더 보아야 한다는 첫 신호이다.
 :::
 
 ## 일차 변형의 분류
@@ -209,7 +203,7 @@ $$\Hom_C(\mathfrak{a}/\mathfrak{a}^2,C)\big/\im\bar{d}^\ast=\coker\bar{d}^\ast=T
 $A$-algebra $C$와 $C$-module $M$에 대하여, $C$를 $M$으로 확대하는 square-zero $A$-algebra 확대 $0\rightarrow M\rightarrow C'\rightarrow C\rightarrow0$의 isomorphism class 집합 $\operatorname{Exal}_A(C,M)$은 $T^1(C/A,M)$과 자연스럽게 일대일 대응한다.
 :::
 ::: 증명
-[정리 5](#thm5)의 논증은 base가 일반적인 $A$이고 흔드는 module이 일반적인 $M$일 때로 그대로 옮겨진다. Presentation $C=B/\mathfrak{a}$에서 확대 $C'$은 각 $f\in \mathfrak{a}$를 $M$의 한 원소와 동일시하여 $B\oplus M$을 quotient한 것으로 기술되고, 그 비틂은 $\Hom_C(\mathfrak{a}/\mathfrak{a}^2,M)$의 원소가, 동형의 자유도는 $\Der_A(B,M)$이 흡수하여, isomorphism class가 $\coker=T^1(C/A,M)$로 떨어진다. 완전한 증명과 $T^1(C/A,M)\cong\Ext^1_C(L_{C/A},M)$이라는 여접 복합체 형태의 진술은 ([Ill], [Ser])에 있다.
+[정리 5](#thm5)의 논증은 base가 일반적인 $A$이고 흔드는 module이 일반적인 $M$일 때로 그대로 옮겨진다. Presentation $C=B/\mathfrak{a}$에서 확대 $C'$은 각 $f\in \mathfrak{a}$를 $M$의 한 원소와 동일시하여 $B\oplus M$을 quotient한 것으로 기술되고, 그 비틂은 $\Hom_C(\mathfrak{a}/\mathfrak{a}^2,M)$의 원소가, 동형의 자유도는 $\Der_A(B,M)$이 흡수하여, isomorphism class가 $\coker=T^1(C/A,M)$로 떨어진다. 완전한 증명과 $T^1(C/A,M)\cong\Ext^1_C(\LL_{C/A},M)$이라는 여접 복합체 형태의 진술은 ([Ill], [Ser])에 있다.
 :::
 
 Flat한 $\mathbb{K}[\epsilon]$-algebra $C'$은 exact sequence $0\rightarrow C\overset{\times\epsilon}{\rightarrow}C'\rightarrow C\rightarrow0$을 주므로 first-order deformation은 $\operatorname{Exal}_\mathbb{K}(C,C)$의 원소로 볼 수 있고, 거꾸로 이러한 확대는 $\mathbb{K}[\epsilon]$-algebra 구조와 flatness를 복원한다. 따라서 [명제 6](#prop6)을 $A=\mathbb{K}$, $M=C$에 적용하면 [정리 5](#thm5)를 다시 얻는다. 곧 $\operatorname{Exal}$은 변형의 일차 데이터를 담는 보편적인 그릇이며, $T^1$이 그것을 측정한다.
@@ -256,7 +250,7 @@ $g_j$의 representative와 presentation을 바꾸어도 Lichtenbaum–Schlessing
 장애와 first-order deformation이 가장 단순해지는 경우가 smooth한 경우이다.
 
 ::: 명제 8
-$C$가 $\mathbb{K}$ 위에서 smooth하면 $H_1(\operatorname{NL}_{C/\mathbb{K}})=0$이고 $\Omega_{C/\mathbb{K}}$가 finitely generated projective $C$-module이며, 따라서
+$C$가 $\mathbb{K}$ 위에서 smooth하면 $H_1(\NL_{C/\mathbb{K}})=0$이고 $\Omega_{C/\mathbb{K}}$가 finitely generated projective $C$-module이며, 따라서
 
 $$T^1(C/\mathbb{K},M)=T^2(C/\mathbb{K},M)=0\qquad(\text{모든 }C\text{-module }M)$$
 
@@ -267,12 +261,12 @@ $C$가 smooth하면 [§매끄러운 사상과 에탈 사상, ⁋명제 8](/ko/ma
 
 $$0\rightarrow \mathfrak{a}/\mathfrak{a}^2\overset{\bar{d}}{\rightarrow}\Omega_{B/\mathbb{K}}\otimes_BC\rightarrow\Omega_{C/\mathbb{K}}\rightarrow0$$
 
-이 왼쪽에서도 split되는 short exact sequence가 되어 $\bar{d}$가 injective이고 그 cokernel $\Omega_{C/\mathbb{K}}$이 projective이다. 따라서 $H_1(\operatorname{NL}_{C/\mathbb{K}})=\ker\bar{d}=0$이고 $\operatorname{NL}_{C/\mathbb{K}}$은 projective module $\Omega_{C/\mathbb{K}}$ 하나에 quasi-isomorphic하다. 그럼 $\Hom_C(\operatorname{NL}_{C/\mathbb{K}},M)$이 $\Hom_C(\Omega_{C/\mathbb{K}},M)$ 한 항에 집중되어 $T^1=0$이다. $T^2=0$은 [참고 4](#rmk4)의 $T^i(C/\mathbb{K},M)=\Ext^i_C(L_{C/\mathbb{K}},M)$과, smooth한 $C$에 대하여 $L_{C/\mathbb{K}}$가 이 projective module $\Omega_{C/\mathbb{K}}$ 하나에 quasi-isomorphic하다는 사실로부터 따른다. 무한소 automorphism에 관한 주장은 [정리 5](#thm5)의 일반 형태이다.
+이 왼쪽에서도 split되는 short exact sequence가 되어 $\bar{d}$가 injective이고 그 cokernel $\Omega_{C/\mathbb{K}}$이 projective이다. 따라서 $H_1(\NL_{C/\mathbb{K}})=\ker\bar{d}=0$이고 $\NL_{C/\mathbb{K}}$은 projective module $\Omega_{C/\mathbb{K}}$ 하나에 quasi-isomorphic하다. 그럼 $\Hom_C(\NL_{C/\mathbb{K}},M)$이 $\Hom_C(\Omega_{C/\mathbb{K}},M)$ 한 항에 집중되어 $T^1=0$이다. $T^2=0$은 [참고 4](#rmk4)의 $T^i(C/\mathbb{K},M)=\Ext^i_C(\LL_{C/\mathbb{K}},M)$과, smooth한 $C$에 대하여 $\LL_{C/\mathbb{K}}$가 이 projective module $\Omega_{C/\mathbb{K}}$ 하나에 quasi-isomorphic하다는 사실로부터 따른다. 무한소 automorphism에 관한 주장은 [정리 5](#thm5)의 일반 형태이다.
 :::
 
 이 명제는 [§매끄러운 사상과 에탈 사상, ⁋정리 15](/ko/math/scheme_theory/smooth_and_etale_morphisms#thm15)의 smooth한 쪽을 $T^i$의 언어로 옮긴 것이다. 그곳에서 lifting이 존재한다는 것은 $\delta$를 derivation으로 상쇄할 수 있다는 것, 곧 $\delta$가 정하는 class가 $T^1(C/A,\mathfrak{b})$에서 사라진다는 것이었고, 두 lifting의 차이를 통제한 것은 $T^0(C/A,\mathfrak{b})=\Der_A(C,\mathfrak{b})$였다. 여기에 $T^2=0$이 더해져, 그렇게 얻은 변형이 다시 더 두꺼운 base 위로 연장된다는 것까지 얻는다.
 
-조금 더 약한 가정인 *local complete intersection*에서도 장애는 사라진다. $C=B/\mathfrak{a}$에서 $\mathfrak{a}$가 국소적으로 regular sequence로 생성되면 완전한 여접 복합체 $L_{C/\mathbb{K}}$가 $[0,1]$ 두 degree에 projective module로 집중되어, 그 dual의 둘째 cohomology가 자동으로 $0$이 되기 때문이다. 곧 $T^2(C/\mathbb{K},M)=0$이고 lci singular point는 항상 *unobstructed<sub>장애 없음</sub>*이다. 다만 lci라고 해서 $H_1(\operatorname{NL}_{C/\mathbb{K}})$이 소멸하는 것은 아니며, 반대로 아래 [예시 9](#ex9)처럼 singular한 lci가 $H_1(\operatorname{NL}_{C/\mathbb{K}})=0$을 만족하기도 한다. 곧 $H_1(\operatorname{NL})$의 소멸만으로는 lci 여부가 판정되지 않으며, smoothness는 $H_1(\operatorname{NL}_{C/\mathbb{K}})=0$과 $\Omega_{C/\mathbb{K}}$가 locally free라는 것이 함께 성립하는 것으로 특징지어진다.
+조금 더 약한 가정인 *local complete intersection*에서도 장애는 사라진다. $C=B/\mathfrak{a}$에서 $\mathfrak{a}$가 국소적으로 regular sequence로 생성되면 완전한 여접 복합체 $\LL_{C/\mathbb{K}}$가 $[0,1]$ 두 degree에 projective module로 집중되어, 그 dual의 둘째 cohomology가 자동으로 $0$이 되기 때문이다. 곧 $T^2(C/\mathbb{K},M)=0$이고 lci singular point는 항상 *unobstructed<sub>장애 없음</sub>*이다. 다만 lci라고 해서 $H_1(\NL_{C/\mathbb{K}})$이 소멸하는 것은 아니며, 반대로 아래 [예시 9](#ex9)처럼 singular한 lci가 $H_1(\NL_{C/\mathbb{K}})=0$을 만족하기도 한다. 곧 $H_1(\NL)$의 소멸만으로는 lci 여부가 판정되지 않으며, smoothness는 $H_1(\NL_{C/\mathbb{K}})=0$과 $\Omega_{C/\mathbb{K}}$가 locally free라는 것이 함께 성립하는 것으로 특징지어진다.
 
 ## 예시: 매끄러운 변형부터 장애까지
 
@@ -281,9 +275,9 @@ $$0\rightarrow \mathfrak{a}/\mathfrak{a}^2\overset{\bar{d}}{\rightarrow}\Omega_{
 ::: 예시 9 (node)
 $C=\mathbb{K}[\x,\y]/(\x\y)$를 생각하자. 이는 평면 위 두 직선이 한 점에서 만나는 _node_, 곧 $A_1$ singular point의 coordinate ring이다. Hypersurface이므로 $\mathfrak{a}=(\x\y)$이 nonzerodivisor로 생성되어 lci이고, [\[가환대수학\] §미분, ⁋예시 15](/ko/math/commutative_algebra/differentials#ex15)의 계산에서
 
-$$\operatorname{NL}_{C/\mathbb{K}}=\Bigl[C\bar{f}\overset{\bar{d}}{\rightarrow}C \dd{\x}\oplus C \dd{\y}\Bigr],\qquad\bar{d}(\bar{f})=\y \dd{\x}+\x \dd{\y}$$
+$$\NL_{C/\mathbb{K}}=\Bigl[C\bar{f}\overset{\bar{d}}{\rightarrow}C \dd{\x}\oplus C \dd{\y}\Bigr],\qquad\bar{d}(\bar{f})=\y \dd{\x}+\x \dd{\y}$$
 
-이다 ($f=\x\y$, $\partial f/\partial\x=\y$, $\partial f/\partial\y=\x$). 이 $\bar{d}$가 단사이면서도 그 image가 원점에서 direct summand를 이루지 못한다는 것, 곧 $H_1(\operatorname{NL}_{C/\mathbb{K}})=0$이면서도 $C$가 원점에서 smooth하지 않다는 것은 [§매끄러운 사상과 에탈 사상, ⁋명제 8](/ko/math/scheme_theory/smooth_and_etale_morphisms#prop8) 뒤의 논의에서 이미 확인하였다. 그곳에서 확인한 실패를 여기서는 dual 쪽에서 재어 그 크기를 얻는다. 이를 dual하면 $\bar{d}^\ast:C^2\rightarrow C$, $(c_1,c_2)\mapsto c_1\y+c_2\x$이므로
+이다 ($f=\x\y$, $\partial f/\partial\x=\y$, $\partial f/\partial\y=\x$). 이 $\bar{d}$가 단사이면서도 그 image가 원점에서 direct summand를 이루지 못한다는 것, 곧 $H_1(\NL_{C/\mathbb{K}})=0$이면서도 $C$가 원점에서 smooth하지 않다는 것은 [§매끄러운 사상과 에탈 사상, ⁋명제 8](/ko/math/scheme_theory/smooth_and_etale_morphisms#prop8) 뒤의 논의에서 이미 확인하였다. 그곳에서 확인한 실패를 여기서는 dual 쪽에서 재어 그 크기를 얻는다. 이를 dual하면 $\bar{d}^\ast:C^2\rightarrow C$, $(c_1,c_2)\mapsto c_1\y+c_2\x$이므로
 
 $$T^1(C/\mathbb{K},C)=\coker\bar{d}^\ast=C/(\x,\y)=\mathbb{K}[\x,\y]/(\x\y,\x,\y)\cong \mathbb{K}$$
 
@@ -295,7 +289,7 @@ $$\x\y=t$$
 :::
 
 ::: 예시 10 (세 좌표축)
-$C=\mathbb{K}[\x,\y,\z]/\mathfrak{a}$, $\mathfrak{a}=(\x\y,\y\z,\z\x)$를 생각하자. 이는 $\mathbb{A}^3$의 세 좌표축의 합집합으로, 차원 $1$, codimension $2$이지만 ideal이 세 원소로 최소생성되므로 complete intersection이 아니며, 따라서 lci가 아니다. 이 singular point에서 $H_1(\operatorname{NL}_{C/\mathbb{K}})$이 $0$이 아님을 직접 확인한다.
+$C=\mathbb{K}[\x,\y,\z]/\mathfrak{a}$, $\mathfrak{a}=(\x\y,\y\z,\z\x)$를 생각하자. 이는 $\mathbb{A}^3$의 세 좌표축의 합집합으로, 차원 $1$, codimension $2$이지만 ideal이 세 원소로 최소생성되므로 complete intersection이 아니며, 따라서 lci가 아니다. 이 singular point에서 $H_1(\NL_{C/\mathbb{K}})$이 $0$이 아님을 직접 확인한다.
 
 $f_1=\x\y$, $f_2=\y\z$, $f_3=\z\x$라 하면, $\bar{d}:\mathfrak{a}/\mathfrak{a}^2\rightarrow C^3$는
 
@@ -305,9 +299,9 @@ $$\bar{d}(\overline{f_1})=(\y,\x,0),\quad\bar{d}(\overline{f_2})=(0,\z,\y),\quad
 
 $$\bar{d}(\x\cdot\overline{f_2})=\x\cdot(0,\z,\y)=(0,\x\z,\x\y)=(0,0,0)$$
 
-이어서 $\x\cdot\overline{f_2}\in\ker\bar{d}=H_1(\operatorname{NL}_{C/\mathbb{K}})$이다. 한편 $\x f_2=\x\y\z$는 degree $3$이고 $\mathfrak{a}^2$의 원소는 모두 degree $4$ 이상이므로 $\x\y\z\notin \mathfrak{a}^2$, 곧 $\x\cdot\overline{f_2}=\overline{\x\y\z}\neq0$이다. 따라서
+이어서 $\x\cdot\overline{f_2}\in\ker\bar{d}=H_1(\NL_{C/\mathbb{K}})$이다. 한편 $\x f_2=\x\y\z$는 degree $3$이고 $\mathfrak{a}^2$의 원소는 모두 degree $4$ 이상이므로 $\x\y\z\notin \mathfrak{a}^2$, 곧 $\x\cdot\overline{f_2}=\overline{\x\y\z}\neq0$이다. 따라서
 
-$$H_1(\operatorname{NL}_{C/\mathbb{K}})\neq0,\qquad \overline{\x\y\z}\in H_1(\operatorname{NL}_{C/\mathbb{K}})$$
+$$H_1(\NL_{C/\mathbb{K}})\neq0,\qquad \overline{\x\y\z}\in H_1(\NL_{C/\mathbb{K}})$$
 
 이다. 이 nonzero class는 conormal morphism $\bar{d}$의 왼쪽 끝 비단사성, 곧 conormal exact sequence를 왼쪽으로 연장했을 때 비로소 보이는 정보이며, $\Omega_{C/\mathbb{K}}$만으로는 결코 검출되지 않는다. ($\overline{\x\y\z}$는 세 generator 어느 쪽으로 보아도 같은 원소로서, $\z\cdot\overline{f_1}=\x\cdot\overline{f_2}=\y\cdot\overline{f_3}$이 모두 kernel에 속한다.) 이것이 naive 여접 복합체의 $H_1$이 smoothness의 실패 가운데 conormal morphism의 비단사성을 포착하는 가장 깨끗한 사례이다.
 :::
@@ -319,21 +313,21 @@ $$C=\mathbb{K}[\z_0,\z_1,\z_2,\z_3,\z_4]/\mathfrak{a},\qquad X=\Spec C,\qquad M=
 
 이다. 여기서 $\mathfrak{a}=I_2(M)$은 $M$의 $2\times2$ minor들로 생성되는 ideal이다. 이렇게 얻는 cone은 codimension $3$이고 그 vertex가 isolated singular point이다. Pinkham이 계산한 이 singular point의 semiuniversal deformation의 base는 한 점에서 만나는 두 component, 곧 차원 $3$인 성분과 차원 $1$인 성분으로 이루어져, base가 그 교점에서 singular하다. 이는 $T^1$의 어떤 접방향(한 component의 접방향에서 벗어난 방향)이 [정리 7](#thm7)의 의미에서 *obstructed*임을, 곧 그 first-order deformation을 이차로 연장할 때 $\operatorname{ob}(\xi)\neq0\in T^2(C/\mathbb{K},C)$임을 뜻한다.
 
-Codimension $3$ 이상에서는 이러한 장애가 나타날 수 있는 반면, $\mathbb{P}^3$ 위 rational normal cubic의 cone과 같은 codimension $2$ Cohen–Macaulay singular point는 항상 unobstructed하여 base가 매끄럽다. 따라서 [예시 10](#ex10)처럼 lci가 아니어도 장애가 없을 수 있으며, "non-lci"와 "obstructed"는 서로 다른 현상이다. 장애의 유무는 $T^2$와 그 위에서 정의되는 이차 morphism $\operatorname{ob}$이 결정하는 것이지, $\Omega$나 $H_1(\operatorname{NL})$만으로 읽히지 않는다. 이 예시의 명시적 계산은 ([Ser], [Har])를 참조하라.
+Codimension $3$ 이상에서는 이러한 장애가 나타날 수 있는 반면, $\mathbb{P}^3$ 위 rational normal cubic의 cone과 같은 codimension $2$ Cohen–Macaulay singular point는 항상 unobstructed하여 base가 매끄럽다. 따라서 [예시 10](#ex10)처럼 lci가 아니어도 장애가 없을 수 있으며, "non-lci"와 "obstructed"는 서로 다른 현상이다. 장애의 유무는 $T^2$와 그 위에서 정의되는 이차 morphism $\operatorname{ob}$이 결정하는 것이지, $\Omega$나 $H_1(\NL)$만으로 읽히지 않는다. 이 예시의 명시적 계산은 ([Ser], [Har])를 참조하라.
 :::
 
 ## 완전한 여접 복합체의 필요성
 
-지금까지 naive 여접 복합체 $\operatorname{NL}_{C/\mathbb{K}}$로 $T^0, T^1$을 완전히 통제하였고, $T^2$는 syzygy의 셋째 항을 붙인 Lichtenbaum–Schlessinger complex로 다루었다. 그러나 이 유한한 절단만으로는 여접 복합체의 전체 구조를 볼 수 없다.
+지금까지 naive 여접 복합체 $\NL_{C/\mathbb{K}}$로 $T^0, T^1$을 완전히 통제하였고, $T^2$는 syzygy의 셋째 항을 붙인 Lichtenbaum–Schlessinger complex로 다루었다. 그러나 이 유한한 절단만으로는 여접 복합체의 전체 구조를 볼 수 없다.
 
 ::: 참고 12
-첫째, [참고 4](#rmk4)에서 보았듯 $\operatorname{NL}_{C/\mathbb{K}}$ 자체는 $T^2$를 계산하지 못한다. $\mathbb{K}[t]/(t^{n+1})\rightarrow \mathbb{K}[t]/(t^n)$는 매 단계 square-zero extension이므로 고전적인 변형의 연장에서는 매번 $T^2$가 장애를, $T^1$이 연장들의 차이를, $T^0$가 automorphism을 통제한다. Lichtenbaum–Schlessinger complex는 이 세 항을 계산하기에 충분하다. 모든 degree의 André–Quillen cohomology를 하나의 대상으로 정의하는 데에는 full cotangent complex가 쓰인다. 둘째, 변형이론은 morphism의 합성에 대한 *transitivity*를 요구하는데, Kähler differential과 naive 여접 복합체는 [§미분과 여접층, ⁋명제 1](/ko/math/scheme_theory/sheaf_of_differentials#prop1)과 같이 오른쪽 끝에서만 exact한 sequence밖에 주지 못한다. 완전한 이론은 ring morphism의 사슬 $A\rightarrow B\rightarrow C$에 대하여 exact sequence가 아니라 distinguished triangle
+첫째, [참고 4](#rmk4)에서 보았듯 $\NL_{C/\mathbb{K}}$ 자체는 $T^2$를 계산하지 못한다. $\mathbb{K}[t]/(t^{n+1})\rightarrow \mathbb{K}[t]/(t^n)$는 매 단계 square-zero extension이므로 고전적인 변형의 연장에서는 매번 $T^2$가 장애를, $T^1$이 연장들의 차이를, $T^0$가 automorphism을 통제한다. Lichtenbaum–Schlessinger complex는 이 세 항을 계산하기에 충분하다. 모든 degree의 André–Quillen cohomology를 하나의 대상으로 정의하는 데에는 full cotangent complex가 쓰인다. 둘째, 변형이론은 morphism의 합성에 대한 *transitivity*를 요구하는데, Kähler differential과 naive 여접 복합체는 [§미분과 여접층, ⁋명제 1](/ko/math/scheme_theory/sheaf_of_differentials#prop1)과 같이 오른쪽 끝에서만 exact한 sequence밖에 주지 못한다. 완전한 이론은 ring morphism의 사슬 $A\rightarrow B\rightarrow C$에 대하여 exact sequence가 아니라 distinguished triangle
 
-$$L_{B/A}\otimes_B^{\mathbb{L}}C\rightarrow L_{C/A}\rightarrow L_{C/B}\rightarrow$$
+$$\LL_{B/A}\otimes_B^{\mathbb{L}}C\rightarrow \LL_{C/A}\rightarrow \LL_{C/B}\rightarrow$$
 
-을 요구하며, 이 삼각형이 long exact sequence로 풀려 모든 $T^i$를 일관되게 연결한다. 셋째, base change의 올바른 식에는 derived tensor $\otimes^{\mathbb{L}}$가 등장하므로, $L_{C/A}$는 모든 degree의 정보를 담는 complex로 주어져야 한다.
+을 요구하며, 이 삼각형이 long exact sequence로 풀려 모든 $T^i$를 일관되게 연결한다. 셋째, base change의 올바른 식에는 derived tensor $\otimes^{\mathbb{L}}$가 등장하므로, $\LL_{C/A}$는 모든 degree의 정보를 담는 complex로 주어져야 한다.
 
-이 세 요구를 동시에 만족하는 대상이 Quillen과 André가 simplicial resolution으로 구성한 _cotangent complex_ $L_{C/A}$이며, $\operatorname{NL}_{C/A}$는 그 degree $0,1$ 절단이다. 그 위에서 $T^i(C/A,M)=\Ext^i_C(L_{C/A},M)$이 모든 $i$에 대하여 정의되고, 변형($i=1$)과 장애($i=2$)는 이 통일된 구조의 두 단면일 뿐이다. 이 simplicial 구성과 그 변형이론적 귀결이 derived algebraic geometry로 이어지는 출발점이다.
+이 세 요구를 동시에 만족하는 대상이 Quillen과 André가 simplicial resolution으로 구성한 _cotangent complex_ $\LL_{C/A}$이며, $\NL_{C/A}$는 그 degree $0,1$ 절단이다. 그 위에서 $T^i(C/A,M)=\Ext^i_C(\LL_{C/A},M)$이 모든 $i$에 대하여 정의되고, 변형($i=1$)과 장애($i=2$)는 이 통일된 구조의 두 단면일 뿐이다. 이 simplicial 구성과 그 변형이론적 귀결이 derived algebraic geometry로 이어지는 출발점이다.
 :::
 
 ---
