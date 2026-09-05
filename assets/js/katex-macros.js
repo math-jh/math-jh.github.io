@@ -20,6 +20,9 @@ window.KATEX_MACROS = {
     "\\x":"\\mathrm{x}",
     "\\y":"\\mathrm{y}",
     "\\z":"\\mathrm{z}",
+    // cotangent complexes
+    "\\LL":"\\mathbb{L}",
+    "\\NL":"\\LL^{\\mathrm{naive}}",
     // categories
     "\\Ab":"\\mathbf{Ab}",
     "\\AffSch":"\\mathbf{AffSch}",
