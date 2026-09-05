@@ -255,6 +255,11 @@ window.KATEX_MACROS = {
     // misc
     "\\half":"\\tfrac{1}{2}",
     "\\shift":"(#1)\\text{-shifted}",
+    // complex 의 각 항이 놓인 degree 표시: \at{degree}{항}. 색은 다이어그램
+    // accent1(브래스 #a56f14, _sass/_diagram-colors.scss 와 palette.sty 가 정본)과
+    // 같은 값이고, \rule 은 항과 숫자 사이를 띄우는 strut 이다. 본문의 # 은 매크로
+    // 인자 기호와 겹치므로 TeX 관례대로 ## 로 적는다.
+    "\\at":"\\underset{\\rule{0pt}{0.8em}\\textcolor{##a56f14}{#1}}{#2}",
     // KaTeX 기본 \not 은 그 자체로 독립된 mrel atom 이라, buildHTML 이 mrel 마다
     // base span 을 끊는 탓에 사선과 뒤따르는 관계기호가 서로 다른 base 로 갈라진다.
     // base 사이는 브라우저가 자유롭게 줄바꿈하므로 좁은 폭에서 "x /" + "∈ A" 처럼
