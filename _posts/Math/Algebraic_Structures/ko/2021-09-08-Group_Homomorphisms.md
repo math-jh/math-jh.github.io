@@ -62,7 +62,7 @@ $$f(xy^{-1})=f(x)f(y)^{-1}=g(x)g(y)^{-1}=g(xy^{-1})$$
 
 > 만일 group homomorphism $j:G' \rightarrow G$가 $f\circ j=g\circ j$를 만족한다면, 유일한 homomorphism $j': G' \rightarrow \Eq(f,g)$가 존재하여 $i\circ j'=j$이다.
 
-이는 정의에 의해 $j$의 image가 $\Eq(f,g)$에 포함되기 때문이다. 따라서 $\Grp$의 임의의 morphism은 equalizer를 갖는다. ([\[범주론\] §극한, ⁋예시 7](/ko/math/category_theory/limits#ex7)) 사실 $\Grp$의 임의의 morphism은 coequalizer 또한 갖지만, 이를 정의하기 위해서는 normal subgroup과 quotient group을 먼저 정의해야 한다. 
+이는 정의에 의해 $j$의 image가 $\Eq(f,g)$에 포함되기 때문이다. 따라서 $\Grp$의 임의의 평행한 morphism의 쌍은 equalizer를 갖는다. ([\[범주론\] §극한, ⁋예시 7](/ko/math/category_theory/limits#ex7)) 사실 $\Grp$의 임의의 평행한 morphism의 쌍은 coequalizer 또한 갖지만, 이를 정의하기 위해서는 normal subgroup과 quotient group을 먼저 정의해야 한다. 
 
 ## 준동형사상의 kernel과 image
 
