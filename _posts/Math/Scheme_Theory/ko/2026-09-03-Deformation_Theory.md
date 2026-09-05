@@ -71,11 +71,17 @@ $$[\delta]\in\coker\left(\Hom_C(\Omega_{B/A}\otimes_BC,\mathfrak{b})\overset{\ba
 
 에서 살펴보면 되고, 이는 서로 다른 lift의 차이 $\delta'-\delta=\bar{d}^\ast(h)$가 $\im\bar{d}^\ast$에 속하므로 $\widetilde{\rho}$의 선택에 의존하지 않는다. 
 
-한편 이는 다음의 two-term complex
+위에서 $[\delta]$가 놓이는 cokernel을 cohomology로 해석하기 위해, 다음의 *naive cotangent complex* (링크)
 
 $$\NL_{C/A}=\left[\mathfrak{a}/\mathfrak{a}^2\overset{\bar{d}}{\longrightarrow}\Omega_{B/A}\otimes_BC\right]$$
 
-를 $\mathfrak{b}$로 dual하여 얻는 첫째 cohomology이다. 곧 앞 글의 lifting criterion 안에는 이미 naive cotangent complex가 들어있다. Smooth한 경우에는 conormal sequence가 split exact이므로 $\bar{d}^{\ast}$가 모든 $\mathfrak{b}$에 대하여 surjective이고 이 obstruction이 항상 사라진다. 반대로 singular한 경우에는 lifting의 실패를 단순한 부정으로 버리지 않고 그 class가 어느 공간에 놓이는지, 서로 다른 lifting들이 어떻게 매개되는지를 연구할 수 있다.
+를 생각하자. 여기서 왼쪽 항은 homological degree $1$, 오른쪽 항은 degree $0$에 놓인다. 이를 $C$-module $\mathfrak{b}$로 dual하면, $\bar{d}^\ast$를 differential로 하는 cochain complex
+
+$$\Hom_C(\NL_{C/A},\mathfrak{b}):\quad\Hom_C(\Omega_{B/A}\otimes_BC,\mathfrak{b})\overset{\bar{d}^\ast}{\longrightarrow}\Hom_C(\mathfrak{a}/\mathfrak{a}^2,\mathfrak{b})$$
+
+를 얻는다. 이때 왼쪽 항은 cohomological degree $0$, 오른쪽 항은 degree $1$에 놓이며, degree $2$의 항이 없으므로 첫째 cohomology는 정확히 $\coker\bar{d}^\ast$이다. 따라서 앞서 구성한 $\delta$는 degree $1$의 cocycle이고, 그 class $[\delta]\in H^1(\Hom_C(\NL_{C/A},\mathfrak{b}))$가 주어진 lifting의 obstruction을 기록한다. 이 class가 $0$이라는 것은 $\delta$를 derivation에 의한 보정으로 없앨 수 있다는 뜻이며, 바로 이때 $\rho_0:C\rightarrow R_0$의 lifting $\rho:C\rightarrow R$이 존재한다.
+
+이제 smoothness가 이 obstruction을 어떻게 없애는지 보자. $C$가 $A$ 위에서 smooth하면 conormal sequence는 split short exact sequence이므로, $\bar{d}$는 $C$-linear retraction을 갖는다. 따라서 임의의 $C$-module $\mathfrak{b}$에 대하여 $\bar{d}^\ast$는 surjective이고, $H^1(\Hom_C(\NL_{C/A},\mathfrak{b}))=0$이다. 곧 어떤 square-zero extension과 $\rho_0$를 택하더라도 그 obstruction class가 $0$이 되어 lifting이 존재한다. [§매끄러운 사상과 에탈 사상, ⁋정리 15](/ko/math/scheme_theory/smooth_and_etale_morphisms#thm15)의 증명에서 conormal sequence의 splitting을 사용한 것이 바로 이 과정이다. 거꾸로 모든 square-zero extension과 $\rho_0$에 대하여 obstruction class가 소멸하면 모든 lifting이 존재하며, 처음에 가정한 locally of finite presentation 조건과 같은 정리에 의하여 원래의 사상은 smooth하다.
 
 여기까지는 대상을 나타내는 $C$를 고정하고 그로부터 나가는 map $\rho$를 들어올렸다. Deformation theory에서는 같은 square-zero 확대 안에서 미지수를 바꾸어, $A$ 위의 대상 $C$ 자체를 더 두꺼운 base $A'$ 위의 flat $A'$-algebra $C'$으로 들어올린다. 특히 $A=\mathbb{K}$이고 $A'=\mathbb{K}[\epsilon]/(\epsilon^2)$일 때 이러한 lifting이 first-order deformation이며, 그 isomorphism class들은 $T^1(C/\mathbb{K},C)$이 분류한다. 이미 얻은 변형을 한 단계 더 두꺼운 base 위로 연장할 때에는 그 존재를 가로막는 obstruction이 $T^2$에 놓이고, $T^0$는 변형의 infinitesimal automorphism을 기록한다.
 
