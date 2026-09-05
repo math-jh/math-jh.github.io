@@ -35,7 +35,7 @@ $$\pr_j(xy)=\pr_j(x_iy_i)_{i\in I}=x_jy_j=\pr_j(x)\pr_j(y)$$
 
 so $\pr_j$ is a group homomorphism. 
 
-Now let us prove that $(G=\prod_{i\in I}G_i,(\pr_i)_{i\in I})$ defined in this way satisfies the universal property. For this, it suffices to show that the function $f:H\rightarrow G$ obtained from the universal property of the product set is a group homomorphism. Now, for any $x,y\in H$ and any $i\in I$,
+Now let us prove that $(G=\prod_{i\in I}G_i,(\pr_i)_{i\in I})$ defined in this way satisfies the universal property. For this, it suffices to show that the (unique) function $f:H\rightarrow G$ induced by a family $(f_i:H\rightarrow G_i)_{i\in I}$ of group homomorphisms via the universal property of the product set is a group homomorphism. Now, for any $x,y\in H$ and any $i\in I$,
 
 $$f(xy)=(f_i(xy))_{i\in I}=(f_i(x)f_i(y))_{i\in I}=(f_i(x))_{i\in I}(f_i(y))_{i\in I}=f(x)f(y)$$
 
