@@ -400,7 +400,7 @@ $$V\times_SU_i\cong\rSpec_{U_i}(\psi_i^\ast\mathcal{A})\cong\rSpec_{U_i}(\mathca
 이고, 이 isomorphism들은 처음에 주어진 cocycle 데이터를 회복한다. 또한 $\mathcal{A}$와 그 algebra structure가 [정리 11](#thm11)에 의해 unique isomorphism을 제외하고 유일하고 affine morphism이 그 quasi-coherent algebra로부터 복원되므로 $V$도 동일한 의미에서 유일하다.
 :::
 
-더 일반적으로, quasi-compact, quasi-separated scheme morphism $\varphi:V\rightarrow U$이 *quasi-affine*인 것은 canonical morphism $V\rightarrow\rSpec_U(\varphi_\ast\mathcal{O}_V)$가 quasi-compact open immersion인 것이다. 이 경우에도 [정리 12](#thm12)의 결론이 성립한다. 다른 방향의 일반화는 quasi-projective morphism의 경우로, morphism이 quasi-projective인 것만으로는 부족하고 ample line bundle과 그 위의 compatible한 descent datum이 함께 주어져야 한다. 대략적인 증명은 ample line bundle의 section algebra를 내려보내 relative Proj를 만들면 원래 scheme은 그 안의 open subscheme으로 나타나므로 이들을 이어붙이는 것이다. 
+더 일반적으로, quasi-compact, quasi-separated scheme morphism $\varphi:V\rightarrow U$이 *quasi-affine*인 것은 canonical morphism $V\rightarrow\rSpec_U(\varphi_\ast\mathcal{O}_V)$가 quasi-compact open embedding인 것이다. 이 경우에도 [정리 12](#thm12)의 결론이 성립한다. 다른 방향의 일반화는 quasi-projective morphism의 경우로, morphism이 quasi-projective인 것만으로는 부족하고 ample line bundle과 그 위의 compatible한 descent datum이 함께 주어져야 한다. 대략적인 증명은 ample line bundle의 section algebra를 내려보내 relative Proj를 만들면 원래 scheme은 그 안의 open subscheme으로 나타나므로 이들을 이어붙이는 것이다. 
 
 한편, faithfully flat base change는 exact functor일 뿐 아니라, 여기서 확인한 exactness를 원래대로 돌릴 수도 있다는 것이 핵심적인 성질이며, [명제 7](#prop7)은 이를 이용해 module의 flatness와 finiteness 조건들을 내려보냈다. 같은 논의를 affine-local하게 적용하면 이미 주어진 scheme morphism $\psi:X\rightarrow Y$의 성질도 cover 위에서 확인할 수 있다. 이를 위해 $Y$의 fpqc cover $\{Y_i\rightarrow Y\}$를 잡으면 $\psi$는 morphism
 

@@ -373,7 +373,7 @@ $S$ 위의 $G$-torsor $P$에 대하여 다음이 성립한다.
 
 위의 증명에서 볼 수 있듯, [명제 14](#prop14)의 둘째 항에 붙은 quasi-compact 가정은 fppf covering $\{P \rightarrow S\}$를 fpqc covering으로 올리기 위한 것으로, 일반적으로 quasi-compact fppf covering은 항상 fpqc covering이다. 만일 $P$가 Noetherian scheme인 경우에는 [§스킴 사상의 성질들, ⁋명제 4](/ko/math/scheme_theory/properties_of_scheme_morphisms#prop4)에 의하여 fppf 사상이 자동으로 quasi-compact가 되어 이 가정이 언제나 성립한다. 
 
-더 일반적으로, scheme $X$ 위의 covering family $\{f_i: U_i \rightarrow X\}$에 대하여, $f_i$가 open immersion인 것을 *Zariski covering*, flat이고 unramified인 것을 *étale covering*, flat이고 locally of finite presentation인 것을 *fppf covering*, flat이고 quasi-compact인 것을 *fpqc covering*이라 부른다. 그럼 그 정의에 의해 주어진 covering의 성질들 사이의 함의관계
+더 일반적으로, scheme $X$ 위의 covering family $\{f_i: U_i \rightarrow X\}$에 대하여, $f_i$가 open embedding인 것을 *Zariski covering*, flat이고 unramified인 것을 *étale covering*, flat이고 locally of finite presentation인 것을 *fppf covering*, flat이고 quasi-compact인 것을 *fpqc covering*이라 부른다. 그럼 그 정의에 의해 주어진 covering의 성질들 사이의 함의관계
 
 $$\text{Zariski}\implies\text{étale}\implies\text{fppf}$$
 

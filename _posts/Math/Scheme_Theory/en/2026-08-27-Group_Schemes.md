@@ -374,7 +374,7 @@ Let us prove 2. Choose an affine open subset $V$ of $S$; then $V$ is quasi-compa
 
 As can be seen from the proof above, the quasi-compact assumption in the second item of [Proposition 14](#prop14) serves to promote the fppf covering $\{P \rightarrow S\}$ to an fpqc covering; in general, a quasi-compact fppf covering is always an fpqc covering. If $P$ is a Noetherian scheme, then by [§Properties of Scheme Morphisms, ⁋Proposition 4](/en/math/scheme_theory/properties_of_scheme_morphisms#prop4) an fppf morphism is automatically quasi-compact, so this assumption always holds.
 
-More generally, for a covering family $\{f_i: U_i \rightarrow X\}$ of a scheme $X$, we call it a *Zariski covering* if the $f_i$ are open immersions, an *étale covering* if they are flat and unramified, an *fppf covering* if they are flat and locally of finite presentation, and an *fpqc covering* if they are flat and quasi-compact. By definition, we then have the implications
+More generally, for a covering family $\{f_i: U_i \rightarrow X\}$ of a scheme $X$, we call it a *Zariski covering* if the $f_i$ are open embeddings, an *étale covering* if they are flat and unramified, an *fppf covering* if they are flat and locally of finite presentation, and an *fpqc covering* if they are flat and quasi-compact. By definition, we then have the implications
 
 $$\text{Zariski}\implies\text{étale}\implies\text{fppf}$$
 
