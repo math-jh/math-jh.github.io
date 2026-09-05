@@ -82,50 +82,58 @@ $$\NL_{C/A}=\left[\mathfrak{a}/\mathfrak{a}^2\overset{\bar{d}}{\longrightarrow}\
 지금까지 등장한 대상들에 이름을 붙이면 다음과 같다.
 
 ::: 정의 1
-$A$-algebra $C$와 그 presentation $C=B/\mathfrak{a}$에 대하여, 위의 complex
+$A$-algebra $C$와, $A$ 위의 polynomial algebra $B$에 의한 presentation $C=B/\mathfrak{a}$에 대하여, 위의 complex
 
-$$\NL_{C/A}=\left[\mathfrak{a}/\mathfrak{a}^2\overset{\bar{d}}{\longrightarrow}\Omega_{B/A}\otimes_BC\right]$$
+$$\NL_{C/A}=\Bigl[\at{1}{\mathfrak{a}/\mathfrak{a}^2}\overset{\bar{d}}{\longrightarrow}\at{0}{\Omega_{B/A}\otimes_BC}\Bigr]$$
 
-를 $C$의 *naive cotangent complex*라 부른다. 여기서 $\mathfrak{a}/\mathfrak{a}^2$는 homological degree $1$, $\Omega_{B/A}\otimes_BC$는 degree $0$에 놓이며, 그 homology를 각각
+를 $C$의 *naive cotangent complex*라 부르고, 그 homology를 각각
 
-$$H_1(\NL_{C/A}),\qquad H_0(\NL_{C/A})$$
+$$H_1(\NL_{C/A})=\ker\bar{d},\qquad H_0(\NL_{C/A})=\coker\bar{d}$$
 
-라 적는다. 또 $C$-module $M$에 대하여, 이를 $M$으로 dual한 cochain complex
+라 적는다. 또 $C$-module $M$에 대하여, 이를 $M$으로 dualize한 cochain complex
 
-$$\Hom_C(\NL_{C/A},M):\quad \Hom_C(\Omega_{B/A}\otimes_BC,M)\overset{\bar{d}^\ast}{\rightarrow}\Hom_C(\mathfrak{a}/\mathfrak{a}^2,M)$$
+$$\Hom_C(\NL_{C/A},M):\quad \at{0}{\Hom_C(\Omega_{B/A}\otimes_BC,M)}\overset{\bar{d}^\ast}{\rightarrow}\at{1}{\Hom_C(\mathfrak{a}/\mathfrak{a}^2,M)}$$
 
-(왼쪽이 cohomological degree $0$, 오른쪽이 degree $1$)의 cohomology를
+의 cohomology를
 
 $$T^0(C/A,M)=\ker\bar{d}^\ast,\qquad T^1(C/A,M)=\coker\bar{d}^\ast$$
 
 라 적는다.
 :::
 
-이 두 homology는 이미 아는 대상으로 계산된다. $H_1(\NL_{C/A})=\ker\bar{d}$는 정의를 펼친 것이고, [§미분과 여접층, ⁋명제 2](/ko/math/scheme_theory/sheaf_of_differentials#prop2)의 conormal exact sequence를 degree $0$에서 읽으면
+이 대상들은 우리가 이미 알고 있는 것들이다. 우선 [§미분과 여접층, ⁋명제 2](/ko/math/scheme_theory/sheaf_of_differentials#prop2)의 conormal exact sequence를 degree $0$에서 읽으면
 
 $$H_0(\NL_{C/A})\cong\Omega_{C/A}$$
 
-를 얻는다. 두 homology 모두 presentation의 선택에 무관하다. 이 언어로 옮기면 [§매끄러운 사상과 에탈 사상, ⁋명제 8](/ko/math/scheme_theory/smooth_and_etale_morphisms#prop8)의 splitting은 $\NL_{C/A}$가 projective module $\Omega_{C/A}$ 하나에 quasi-isomorphic하다는 말이 된다.
+를 얻는다. $T^0$의 경우, degree $0$ cocycle은 $\mathfrak{a}$를 소멸시켜 $C=B/\mathfrak{a}$ 위로 내려오는 derivation $B\rightarrow M$이므로 곧바로 $T^0(C/A,M)\cong\Der_A(C,M)\cong\Hom_C(\Omega_{C/A},M)$이다. 마지막으로 $T^1$은 정의에 의하여 $[\delta]$가 놓인 cokernel이므로, 앞에서 얻은 obstruction space에서 $\mathfrak{b}$만 $M$으로 바꾼 것이다.  
 
-$T^0$는 곧바로 $\Der_A(C,M)$이다. 실제로 degree $0$ cocycle은 $\mathfrak{a}$를 죽여 $C=B/\mathfrak{a}$ 위로 내려오는 derivation $B\rightarrow M$이며, 이는 $\Der_A(C,M)=\Hom_C(\Omega_{C/A},M)$과 일치한다. $T^1$은 정의에 의하여 $[\delta]$가 놓인 cokernel이므로, 앞에서 얻은 obstruction space는 $T^1(C/A,\mathfrak{b})$로 적힌다.
-
-이는 right exact functor의 결함을 derived functor가 차례로 기록하는 것과 같은 원리이다. Tensor product의 왼쪽에서 사라진 정보를 $\Tor$가 복원하듯 ([\[호몰로지 대수학\] §Ext와 Tor, ⁋정의 2](/ko/math/homological_algebra/ext_and_tor#def2)), Kähler differential만으로 보이지 않는 방정식과 그 relation의 정보를 complex의 higher degree들이 기록한다. Naive cotangent complex는 그 첫 두 층을 담고, 이를 더 연장한 cotangent complex가 deformation과 obstruction을 하나의 cohomology 이론으로 통합한다.
+한편, 두 homology $H_0, H_1$ 모두 presentation $C=B/\mathfrak{a}$의 선택에 의존하지 않는데, $\NL_{C/A}$의 언어로 옮겨 보면 [§매끄러운 사상과 에탈 사상, ⁋명제 8](/ko/math/scheme_theory/smooth_and_etale_morphisms#prop8)의 conormal sequence의 splitting은 $C$가 smooth할 때 $H_1(\NL_{C/A})=0$이고 $\NL_{C/A}$가 degree $0$의 projective module $\Omega_{C/A}$ 하나에 quasi-isomorphic하다는 말이 된다.
 
 ## 평탄변형과 일차변형
 
-앞 절에서 $[\delta]$가 놓인 공간 $T^1(C/A,\mathfrak{b})$는 확대 ($\ast$)도, lifting하려던 $\rho_0$도 기억하지 않고 오직 $A$와 $C$, 그리고 $C$-module $\mathfrak{b}$에만 의존한다. 즉 $[\delta]$는 $R$ 위의 문제가 아니라 $C$ 자체에 붙은 대상의 불변량이어야 하며, 실제로 주어진 자료로부터 $C$의 square-zero extension을 하나 만들어낼 수 있다. 이를 위해 $q:R\rightarrow R_0$와 $\rho_0:C\rightarrow R_0$의 pullback을
+한편, 위의 계산에서 $[\delta]$가 사는 공간, 즉 *obstruction space* $T^1(C/A,\mathfrak{b})$에는 꽤나 흥미로운 점이 있는데, 이 공간의 정의는 명시적인 square-zero extension ($\ast$)나, 원래의 lifting problem에서 주어진 $\rho_0$에 대한 정보 없이 오직 $A$, $C$, 그리고 $C$-module $\mathfrak{b}$에만 의존한다는 것이다. 
+
+일반적으로 이들 데이터 $A$, $C$, 그리고 $C$-module $M$만이 주어졌을 때 생각할 수 있는 가장 자연스러운 대상은 $C$의 $M$에 의한 extension
+
+$$0\longrightarrow M\longrightarrow E\overset{p}{\longrightarrow} C\longrightarrow0$$
+
+이다. 이들은 다음 commutative diagram
+
+{% diagram Math/Scheme_Theory/Deformation_Theory-1.svg width="18.74em" alt="morphism of extensions" %}
+
+을 morphism으로 갖는 category $\Ext_{\Alg{A}}(C, M)$을 이루며, 이 때 이들 morphism들은 [\[호몰로지 대수학\] §Diagram chasing, ⁋따름정리 3](/ko/math/homological_algebra/diagram_chasing#cor3)에 의해 모두 isomorphism이다. 한편, $A$-algebra homomorphism $E\rightarrow C$의 kernel이 $M$이므로, $M$은 $E$의 ideal이고, 우리의 상황에서 $M$은 square-zero ideal들이 되어 위의 category는 사실 square-zero extension들의 category가 된다. 
+
+실제로 임의의 square-zero extension $E$에 대하여, presentation $B\twoheadrightarrow C$의 lift $B\rightarrow E$를 택하면 앞선 절에서의 논증과 정확히 같은 원리로 class $[\delta_E]\in T^1(C/A,M)$이 대응된다. 뿐만 아니라, 이는 $C$의 $M$에 의한 square-zero extension들의 equivalence class들과 $T^1(C/A,M)$의 원소들 사이의 일대일 대응을 주며, 이 대응 하에서 split extension $0$에 대응한다. 즉, $T^1(C/A,M)$은 $C$의 $M$에 의한 square-zero extension들을 분류하는 공간이다.
+
+이 관점에서 앞 절의 lifting problem을 다시 바라보면, 주어진 자료 $q:R\rightarrow R_0$와 $\rho_0:C\rightarrow R_0$의 pullback
 
 $$E=R\times_{R_0}C=\{(r,c)\in R\times C\mid q(r)=\rho_0(c)\}$$
 
-로 잡자. 두 번째 projection $p:E\rightarrow C$는 surjective이고 그 kernel은 $b\mapsto(b,0)$을 통해 $\mathfrak{b}$와 동일시되므로, $A$-algebra의 square-zero extension
+는 두 번째 projection $p:E\rightarrow C$를 통해 $C$의 $\mathfrak{b}$에 의한 특정한 square-zero extension
 
 $$0\longrightarrow\mathfrak{b}\longrightarrow E\overset{p}{\longrightarrow}C\longrightarrow0$$
 
-을 얻는다. 여기서 kernel의 $C$-module structure는 앞에서 $\rho_0$를 따라 정의한 것과 같다.
-
-이제 $\rho_0$의 lifting $\rho:C\rightarrow R$가 존재하면 $s(c)=(\rho(c),c)$는 $p$의 $A$-algebra section이다. 거꾸로 그러한 section $s$를 첫 번째 projection $E\rightarrow R$와 합성하면 $\rho_0$의 lifting을 얻는다. 따라서 앞에서 다룬 lifting의 존재는 정확히 이 확대가 split되는 것과 동치이고, $[\delta]$는 그 splitting을 가로막는 obstruction으로 해석된다. 실제로 polynomial algebra $B$에서 $E$로 가는 lift를 $b\mapsto(\widetilde{\rho}(b),\pi(b))$로 잡으면, 이를 $\mathfrak{a}$에 제한하여 얻는 map이 바로 앞의 $\delta$이다.
-
-이제 우리는 주어진 확대가 split되는지를 판정하는 데서 나아가, $C$와 kernel인 $C$-module $\mathfrak{b}$를 고정했을 때 가능한 square-zero 확대들을 분류하는 문제를 생각할 수 있다. 이때도 각 확대에서 polynomial presentation의 lift를 택하고 그 선택의 차이를 derivation으로 비교하므로, 앞서 얻은 것과 같은 cokernel이 등장한다. 양 끝의 $C$와 $\mathfrak{b}$에서 항등을 유도하는 동형으로 확대들을 구분하면, 그 isomorphism class들의 집합은 $T^1(C/A,\mathfrak{b})$와 일대일 대응하며 split 확대는 $0$에 대응한다.
+을 정의한다. 이때 $\rho_0$의 lifting $\rho:C\rightarrow R$가 존재하는 것은 $s(c)=(\rho(c),c)$가 $p$의 $A$-algebra section을 주는 것, 곧 이 확대가 split되는 것과 동치이다. 따라서 앞서 얻은 class $[\delta]\in T^1(C/A,\mathfrak{b})$는 바로 이 pullback 확대 $E$가 $T^1(C/A,\mathfrak{b})$ 안에서 결정하는 원소이며, lifting의 실패는 이 확대의 splitting이 실패하는 것과 정확히 일치한다.
 
 특히 $A=\mathbb{K}$이고 kernel을 $C$-module $C$ 자체로 잡은 확대 $0\rightarrow C\overset{i}{\rightarrow}C'\rightarrow C\rightarrow0$을 생각하자. $\epsilon=i(1)$로 두면 $\epsilon^2=0$이므로 $C'$에 $\mathbb{K}[\epsilon]/(\epsilon^2)$-algebra structure가 생긴다. 이때 $\epsilon C'=i(C)$이고 $\epsilon$에 의한 곱은 $C'/\epsilon C'\cong C$에서 $i(C)$로의 동형을 유도하므로, $C'$은 이 dual numbers 위에서 flat하다. 따라서 이런 확대를 분류하는 것은 $C$를 dual numbers 위의 flat family로 들어올리는 first-order deformation을 분류하는 것이며, 그 isomorphism class를 재는 것이 $T^1(C/\mathbb{K},C)$이다.
 
@@ -197,7 +205,7 @@ $$\Hom_C(\mathfrak{a}/\mathfrak{a}^2,C)\big/\im\bar{d}^\ast=\coker\bar{d}^\ast=T
 이며, trivial deformation이 $0$에 대응한다. 다만 두 변형 $\varphi,\varphi'$이 같은 $T^1$ 원소를 주는 것이 isomorphic임을 확인해야 하는데, 두 변형의 차이를 주는 $\varphi-\varphi'$이 derivation에서 올 때 그 derivation이 $B[\epsilon]$의 좌표변환을 주어 동형을 구성하므로 성립한다. Automorphism군에 관해서는, 변형 $C'$의 $A$ 위 항등을 유도하는 automorphism $u:C'\rightarrow C'$은 $u(c')-c'\in\epsilon C'\cong C$를 만족하고, $D(c')=u(c')-c'$이 $\epsilon^2=0$에 의하여 derivation $C\rightarrow C$가 되므로, 대응 $u\mapsto D$가 군 동형 $\Aut(C')\cong\Der_\mathbb{K}(C,C)$을 준다.
 :::
 
-이 정리는 변형이론의 가장 기본적인 사전이다. $T^1$은 "tangent space"로서 first-order deformation의 방향을 분류하고, $T^0=\Der$는 그 변형을 보는 시점의 무한소 대칭, 곧 automorphism을 분류한다. 이 절 앞에서 kernel $\mathfrak{b}$를 고정한 square-zero 확대들의 분류로 서술한 것이 $A=\mathbb{K}$, $\mathfrak{b}=C$인 경우에 이 정리로 나타난 것이며, 일반적인 base $A$와 $C$-module $M$에 대해서도 같은 논증이 그대로 옮겨져 $\operatorname{Exal}_A(C,M)$이 $T^1(C/A,M)$과 대응한다.
+이 정리는 변형이론의 가장 기본적인 사전이다. $T^1$은 "tangent space"로서 first-order deformation의 방향을 분류하고, $T^0=\Der$는 그 변형을 보는 시점의 무한소 대칭, 곧 automorphism을 분류한다. 이 절 앞에서 kernel $\mathfrak{b}$를 고정한 square-zero 확대들의 분류로 서술한 것이 $A=\mathbb{K}$, $\mathfrak{b}=C$인 경우에 이 정리로 나타난 것이며, 일반적인 base $A$와 $C$-module $M$에 대해서도 같은 논증이 그대로 옮겨져 $\Ext_{\Alg{A}}(C, M)$이 $T^1(C/A,M)$과 대응한다.
 
 ## 변형의 장애
 
@@ -206,9 +214,9 @@ First-order deformation은 $\epsilon^2=0$ 수준의 변형이다. 그것을 한 
 ::: 정의 5
 Relation들을 표시하는 free module을 그대로 남겨 두고 syzygy를 한 항 더 붙이자. $F=B^m$의 basis를 $e_1,\ldots,e_m$이라 하고 $F\rightarrow \mathfrak{a}$, $e_j\mapsto f_j$의 kernel을 $\operatorname{Rel}$이라 하자. 또 $\operatorname{TrivRel}\subseteq\operatorname{Rel}$을 $f_ie_j-f_je_i$ 꼴의 trivial relation들이 생성하는 submodule이라 두면, $\mathfrak{a}$는 $\operatorname{Rel}/\operatorname{TrivRel}$에 자명하게 작용하므로 이는 $C$-module이다. 이때 *Lichtenbaum–Schlessinger complex*는
 
-$$\operatorname{LS}_{C/\mathbb{K}}=\Bigl[\operatorname{Rel}/\operatorname{TrivRel}\overset{d_2}{\rightarrow}F\otimes_BC\overset{d_1}{\rightarrow}\Omega_{B/\mathbb{K}}\otimes_BC\Bigr]$$
+$$\operatorname{LS}_{C/\mathbb{K}}=\Bigl[\at{2}{\operatorname{Rel}/\operatorname{TrivRel}}\overset{d_2}{\rightarrow}\at{1}{F\otimes_BC}\overset{d_1}{\rightarrow}\at{0}{\Omega_{B/\mathbb{K}}\otimes_BC}\Bigr]$$
 
-로 주어진다. 여기서 세 항의 homological degree는 차례로 $2,1,0$이고,
+로 주어지고,
 
 $$d_2\bigl(\overline{(a_1,\ldots,a_m)}\bigr)=\sum_j\overline{a_j}e_j,\qquad d_1(e_j)=\dd{f_j}\otimes1$$
 
