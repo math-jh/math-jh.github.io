@@ -65,7 +65,7 @@ $$D(fg)=f\cdot D(g)+g\cdot D(f)$$
 
 $$\delta'(\bar{f})-\delta(\bar{f})=D(f)=h(\dd{f}\otimes1)=h(\bar{d}(\bar{f}))$$
 
-로 주어진다. 여기서 $\bar{d}: \mathfrak{a}/\mathfrak{a}^2\rightarrow\Omega_{B/A}\otimes_BC$는 [§Kähler 미분과 여접층, ⁋명제 2](/ko/math/scheme_theory/sheaf_of_differentials#prop2)의 conormal morphism이며, 따라서 
+로 주어진다. 여기서 $\bar{d}: \mathfrak{a}/\mathfrak{a}^2\rightarrow\Omega_{B/A}\otimes_BC$는 [§Kähler 미분과 여접층, ⁋명제 2](/ko/math/scheme_theory/sheaf_of_differentials#prop2)의 conormal morphism이며, 따라서 $D$는 $\bar{d}^\ast$의 image에 속한다 
 
 이 자유도가 $\delta$에 미치는 영향은 곧바로 읽힌다. $D$에 대응하는 $C$-module homomorphism을 $h:\Omega_{B/A}\otimes_BC\rightarrow\mathfrak{b}$라 하면 임의의 $f\in\mathfrak{a}$에 대하여 $\widetilde{\rho}'$이 정하는 $\delta'$은
 
