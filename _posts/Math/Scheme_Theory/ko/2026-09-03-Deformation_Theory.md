@@ -47,7 +47,7 @@ $$\delta: \mathfrak{a}/\mathfrak{a}^2\rightarrow \mathfrak{b};\qquad \bar{f}\map
 
 이 잘 정의된다. 뿐만 아니라, 이렇게 얻어진 $\delta$는 $C$-linear map이 된다. 여기서 $\mathfrak{a}/\mathfrak{a}^2$는 $\mathfrak{a}$를 $B$-module로 봤을 때, $B$의 부분집합 $\mathfrak{a}$가 이 위에 $0$으로 작용하므로 $C=B/\mathfrak{a}$-module structure가 주어진 것이고, $\mathfrak{b}$의 경우 $\mathfrak{b}^2=0$인 것으로부터 $\mathfrak{b}$의 $R$-module structure가 $R_0=R/\mathfrak{b}$-module structure를 주고, 이를 $\rho_0$를 따라 $C$-module로 본 것이다. 즉, 고정된 $\widetilde{\rho}$에 대하여 $\widetilde{\rho}(\mathfrak{a})=0$인 것은 정확히 이런 방식으로 정의한 $C$-linear map $\delta\in\Hom_C(\mathfrak{a}/\mathfrak{a}^2, \mathfrak{b})$가 $0$이 되는 것과 같다. 
 
-이를 바탕으로 우리는 $\widetilde{\rho}$의 선택을 바꿀 때의 변화량을 정량화할 수 있다. $\widetilde{\rho}$와 $\widetilde{\rho}'$이 $\overline{\rho}_0$의 두 lift라 하자. 그럼 등식 $q\circ\widetilde{\rho}=q\circ\widetilde{\rho}'$으로부터 그 차 $D=\widetilde{\rho}'-\widetilde{\rho}$는 $B$에서 $\ker \mathfrak{q}=\mathfrak{b}$로의 $A$-linear map이다. 그런데
+이를 바탕으로 우리는 $\widetilde{\rho}$의 선택을 바꿀 때의 변화량을 정량화할 수 있다. $\widetilde{\rho}$와 $\widetilde{\rho}'$이 $\overline{\rho}_0$의 두 lift라 하자. 그럼 등식 $q\circ\widetilde{\rho}=q\circ\widetilde{\rho}'$으로부터 그 차 $D=\widetilde{\rho}'-\widetilde{\rho}$는 $B$에서 $\ker q=\mathfrak{b}$로의 $A$-linear map이다. 그런데
 
 $$D(fg)=\widetilde{\rho}'(f)\widetilde{\rho}'(g)-\widetilde{\rho}(f)\widetilde{\rho}(g)=\left(\widetilde{\rho}(f)+D(f)\right)\left(\widetilde{\rho}(g)+D(g)\right)-\widetilde{\rho}(f)\widetilde{\rho}(g)=\widetilde{\rho}(f)D(g)+D(f)\widetilde{\rho}(g)+D(f)D(g)$$
 
@@ -71,19 +71,29 @@ $$[\delta]\in\coker\left(\Hom_C(\Omega_{B/A}\otimes_BC,\mathfrak{b})\overset{\ba
 
 에서 살펴보면 되고, 이는 서로 다른 lift의 차이 $\delta'-\delta=\bar{d}^\ast(h)$가 $\im\bar{d}^\ast$에 속하므로 $\widetilde{\rho}$의 선택에 의존하지 않는다. 
 
-위에서 $[\delta]$가 놓이는 cokernel을 cohomology로 해석하기 위해, 다음의 *naive cotangent complex* (링크)
+더 일반적으로, 이는 다음의 *naive cotangent complex*
 
 $$\NL_{C/A}=\left[\mathfrak{a}/\mathfrak{a}^2\overset{\bar{d}}{\longrightarrow}\Omega_{B/A}\otimes_BC\right]$$
 
-를 생각하자. 여기서 왼쪽 항은 homological degree $1$, 오른쪽 항은 degree $0$에 놓인다. 이를 $C$-module $\mathfrak{b}$로 dual하면, $\bar{d}^\ast$를 differential로 하는 cochain complex
+를 $\mathfrak{b}$로 dualize하여 얻는 complex $\Hom_C(\NL_{C/A}, \mathfrak{b})$의 첫째 cohomology이며, 따라서 이 $\mathfrak{b}$를 kernel로 가지는 square-zero extension ($\ast$)에 대한 lifting problem을 재는 obstruction space가 $H^1(\Hom_C(\NL_{C/A}, \mathfrak{b}))$이고, 만일 이것이 임의의 $\mathfrak{b}$에 대해 $0$이 된다면 $A\rightarrow C$가 smooth이게 된다. 이 형식화를 바탕으로 [§매끄러운 사상과 에탈 사상, ⁋정리 15](/ko/math/scheme_theory/smooth_and_etale_morphisms#thm15)의 증명을 다시 보면, 해당 증명에서 한 것은 conormal sequence가 split exact임을 보여 naive cotangent complex 단계에서 이를 해결해버린 것이다. 
 
-$$\Hom_C(\NL_{C/A},\mathfrak{b}):\quad\Hom_C(\Omega_{B/A}\otimes_BC,\mathfrak{b})\overset{\bar{d}^\ast}{\longrightarrow}\Hom_C(\mathfrak{a}/\mathfrak{a}^2,\mathfrak{b})$$
+그런데 이렇게 얻은 class가 놓인 공간 $H^1(\Hom_C(\NL_{C/A},\mathfrak{b}))$는 확대 ($\ast$)도, lifting하려던 $\rho_0$도 기억하지 않고 오직 $A$와 $C$, 그리고 $C$-module $\mathfrak{b}$에만 의존한다. 즉 $[\delta]$는 $R$ 위의 문제가 아니라 $C$ 자체에 붙은 대상의 불변량이어야 하며, 실제로 주어진 자료로부터 $C$의 square-zero extension을 하나 만들어낼 수 있다. 이를 위해 $q:R\rightarrow R_0$와 $\rho_0:C\rightarrow R_0$의 pullback을
 
-를 얻는다. 이때 왼쪽 항은 cohomological degree $0$, 오른쪽 항은 degree $1$에 놓이며, degree $2$의 항이 없으므로 첫째 cohomology는 정확히 $\coker\bar{d}^\ast$이다. 따라서 앞서 구성한 $\delta$는 degree $1$의 cocycle이고, 그 class $[\delta]\in H^1(\Hom_C(\NL_{C/A},\mathfrak{b}))$가 주어진 lifting의 obstruction을 기록한다. 이 class가 $0$이라는 것은 $\delta$를 derivation에 의한 보정으로 없앨 수 있다는 뜻이며, 바로 이때 $\rho_0:C\rightarrow R_0$의 lifting $\rho:C\rightarrow R$이 존재한다.
+$$E=R\times_{R_0}C=\{(r,c)\in R\times C\mid q(r)=\rho_0(c)\}$$
 
-이제 smoothness가 이 obstruction을 어떻게 없애는지 보자. $C$가 $A$ 위에서 smooth하면 conormal sequence는 split short exact sequence이므로, $\bar{d}$는 $C$-linear retraction을 갖는다. 따라서 임의의 $C$-module $\mathfrak{b}$에 대하여 $\bar{d}^\ast$는 surjective이고, $H^1(\Hom_C(\NL_{C/A},\mathfrak{b}))=0$이다. 곧 어떤 square-zero extension과 $\rho_0$를 택하더라도 그 obstruction class가 $0$이 되어 lifting이 존재한다. [§매끄러운 사상과 에탈 사상, ⁋정리 15](/ko/math/scheme_theory/smooth_and_etale_morphisms#thm15)의 증명에서 conormal sequence의 splitting을 사용한 것이 바로 이 과정이다. 거꾸로 모든 square-zero extension과 $\rho_0$에 대하여 obstruction class가 소멸하면 모든 lifting이 존재하며, 처음에 가정한 locally of finite presentation 조건과 같은 정리에 의하여 원래의 사상은 smooth하다.
+로 잡자. 두 번째 projection $p:E\rightarrow C$는 surjective이고 그 kernel은 $b\mapsto(b,0)$을 통해 $\mathfrak{b}$와 동일시되므로, $A$-algebra의 square-zero extension
 
-여기까지는 대상을 나타내는 $C$를 고정하고 그로부터 나가는 map $\rho$를 들어올렸다. Deformation theory에서는 같은 square-zero 확대 안에서 미지수를 바꾸어, $A$ 위의 대상 $C$ 자체를 더 두꺼운 base $A'$ 위의 flat $A'$-algebra $C'$으로 들어올린다. 특히 $A=\mathbb{K}$이고 $A'=\mathbb{K}[\epsilon]/(\epsilon^2)$일 때 이러한 lifting이 first-order deformation이며, 그 isomorphism class들은 $T^1(C/\mathbb{K},C)$이 분류한다. 이미 얻은 변형을 한 단계 더 두꺼운 base 위로 연장할 때에는 그 존재를 가로막는 obstruction이 $T^2$에 놓이고, $T^0$는 변형의 infinitesimal automorphism을 기록한다.
+$$0\longrightarrow\mathfrak{b}\longrightarrow E\overset{p}{\longrightarrow}C\longrightarrow0$$
+
+을 얻는다. 여기서 kernel의 $C$-module structure는 앞에서 $\rho_0$를 따라 정의한 것과 같다.
+
+이제 $\rho_0$의 lifting $\rho:C\rightarrow R$가 존재하면 $s(c)=(\rho(c),c)$는 $p$의 $A$-algebra section이다. 거꾸로 그러한 section $s$를 첫 번째 projection $E\rightarrow R$와 합성하면 $\rho_0$의 lifting을 얻는다. 따라서 앞에서 다룬 lifting의 존재는 정확히 이 확대가 split되는 것과 동치이고, $[\delta]$는 그 splitting을 가로막는 obstruction으로 해석된다. 실제로 polynomial algebra $B$에서 $E$로 가는 lift를 $b\mapsto(\widetilde{\rho}(b),\pi(b))$로 잡으면, 이를 $\mathfrak{a}$에 제한하여 얻는 map이 바로 앞의 $\delta$이다.
+
+이제 우리는 주어진 확대가 split되는지를 판정하는 데서 나아가, $C$와 kernel인 $C$-module $\mathfrak{b}$를 고정했을 때 가능한 square-zero 확대들을 분류하는 문제를 생각할 수 있다. 이때도 각 확대에서 polynomial presentation의 lift를 택하고 그 선택의 차이를 derivation으로 비교하므로, 앞서 얻은 것과 같은 cokernel이 등장한다. 양 끝의 $C$와 $\mathfrak{b}$에서 항등을 유도하는 동형으로 확대들을 구분하면, 그 isomorphism class들의 집합은 $H^1(\Hom_C(\NL_{C/A},\mathfrak{b}))$와 일대일 대응하며 split 확대는 $0$에 대응한다.
+
+특히 $A=\mathbb{K}$이고 kernel을 $C$-module $C$ 자체로 잡은 확대 $0\rightarrow C\overset{i}{\rightarrow}C'\rightarrow C\rightarrow0$을 생각하자. $\epsilon=i(1)$로 두면 $\epsilon^2=0$이므로 $C'$에 $\mathbb{K}[\epsilon]/(\epsilon^2)$-algebra structure가 생긴다. 이때 $\epsilon C'=i(C)$이고 $\epsilon$에 의한 곱은 $C'/\epsilon C'\cong C$에서 $i(C)$로의 동형을 유도하므로, $C'$은 이 dual numbers 위에서 flat하다. 따라서 이런 확대를 분류하는 것은 $C$를 dual numbers 위의 flat family로 들어올리는 first-order deformation을 분류하는 것이며, 그 isomorphism class를 재는 위의 cohomology를 뒤에서 $T^1(C/\mathbb{K},C)$로 적게 된다.
+
+더 일반적으로 deformation theory에서는 base의 square-zero extension $A'\rightarrow A$를 따라, $A$ 위의 flat algebra $C$를 $C'\otimes_{A'}A\cong C$를 만족하는 flat $A'$-algebra $C'$으로 들어올리는 문제를 다룬다. 이미 얻은 변형을 한 단계 더 두꺼운 base 위로 연장할 때에는 그 존재를 가로막는 obstruction이 $T^2$에 놓이고, $T^0$는 변형의 infinitesimal automorphism을 기록한다.
 
 이는 right exact functor의 결함을 derived functor가 차례로 기록하는 것과 같은 원리이다. Tensor product의 왼쪽에서 사라진 정보를 $\Tor$가 복원하듯 ([\[호몰로지 대수학\] §Ext와 Tor, ⁋정의 2](/ko/math/homological_algebra/ext_and_tor#def2)), Kähler differential만으로 보이지 않는 방정식과 그 relation의 정보를 complex의 higher degree들이 기록한다. Naive cotangent complex는 그 첫 두 층을 담고, 이를 더 연장한 cotangent complex가 deformation과 obstruction을 하나의 cohomology 이론으로 통합한다. 이제 우선 평탄변형의 기초를 정의하고 first-order deformation의 성질을 살펴본다.
 
