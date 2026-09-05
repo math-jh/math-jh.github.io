@@ -64,7 +64,7 @@ For $\Eq(f,g)$ defined in this way, the inclusion $i:\Eq(f,g)\rightarrow G$ has 
 
 > If a group homomorphism $j:G' \rightarrow G$ satisfies $f\circ j=g\circ j$, then there exists a unique homomorphism $j': G' \rightarrow \Eq(f,g)$ such that $i\circ j'=j$.
 
-This is because by definition the image of $j$ is contained in $\Eq(f,g)$. Thus any morphism in $\Grp$ has an equalizer. ([[Category Theory] §Limits, ⁋Example 7](/en/math/category_theory/limits#ex7)) In fact, any morphism in $\Grp$ also has a coequalizer, but to define this we must first define normal subgroups and quotient groups. 
+This is because by definition the image of $j$ is contained in $\Eq(f,g)$. Thus any pair of parallel morphisms in $\Grp$ has an equalizer. ([[Category Theory] §Limits, ⁋Example 7](/en/math/category_theory/limits#ex7)) In fact, any pair of parallel morphisms in $\Grp$ also has a coequalizer, but to define this we must first define normal subgroups and quotient groups. 
 
 ## Kernel and Image of a Homomorphism
 
