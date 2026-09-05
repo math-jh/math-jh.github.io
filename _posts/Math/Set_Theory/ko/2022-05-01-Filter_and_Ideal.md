@@ -59,7 +59,7 @@ $$X\vee(Y\wedge Z)=(X\vee Y)\wedge(X\vee Z),\qquad X\wedge(Y\vee Z)=(X\wedge Y)\
 :::
 
 ::: 정의 4
-Lattice $A$가 주어졌다 하고, $I$와 $F$가 각각 $A$의 proper ideal과 proper filter라 하자. $I$가 *prime ideal*이라는 것은 임의의 $x,y\in A$에 대하여 $x\wedge y\in I$이면 반드시 $x\in I$ 혹은 $y\in I$가 성립하는 것이다. 비슷하게 $F$가 *prime filter<sub>소필터</sub>*라는 것은 임의의 $x,y\in A$에 대하여 $x\vee y\in F$이면 반드시 $x\in F$ 혹은 $y\in F$가 성립하는 것이다. ([\[대수적 구조\] §분수체, ⁋명제 8](/ko/math/algebraic_structures/field_of_fractions#prop8))
+Lattice $A$가 주어졌다 하고, $I$와 $F$가 각각 $A$의 proper ideal과 proper filter라 하자. $I$가 *prime ideal*이라는 것은 임의의 $x,y\in A$에 대하여 $x\wedge y\in I$이면 반드시 $x\in I$ 혹은 $y\in I$가 성립하는 것이다. 비슷하게 $F$가 *prime filter<sub>소필터</sub>*라는 것은 임의의 $x,y\in A$에 대하여 $x\vee y\in F$이면 반드시 $x\in F$ 혹은 $y\in F$가 성립하는 것이다. ([\[대수적 구조\] §분수체, ⁋명제 9](/ko/math/algebraic_structures/field_of_fractions#prop9))
 :::
 
 혹은, $I$가 prime ideal이라는 것은 $A\setminus I$가 filter라는 것으로 정의하여도 동등한 정의를 얻는다. 

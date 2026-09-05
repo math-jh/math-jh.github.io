@@ -18,9 +18,9 @@ weight: 15
 ::: 정의 1
 Scheme morphism $\varphi: X \rightarrow Y$가 주어졌다 하자.
 
-1. $\varphi$가 $X$와 $Y$의 open subscheme 사이의 isomorphism을 유도하면 $\varphi$를 *open immersion<sub>열린 몰입</sub>*이라 부른다.
+1. $\varphi$가 $X$와 $Y$의 open subscheme 사이의 isomorphism을 유도하면 $\varphi$를 *open embedding<sub>열린 매장</sub>*이라 부른다.
 2. $\varphi$가 *projective<sub>사영사상</sub>*라는 것은 적당한 $n$에 대하여, $\varphi$를 closed embedding과 projection의 합성 $X\hookrightarrow \mathbb{P}^n_Y \rightarrow Y$의 꼴로 분해할 수 있는 것이다. ([§사영공간과 Proj 구성](/ko/math/scheme_theory/projective_schemes))
-3. $\varphi$가 *quasi-projective<sub>준사영사상</sub>*라는 것은 이를 적당한 open immersion $X \rightarrow X'$와 projective morphism $X' \rightarrow Y$의 합성으로 분해할 수 있는 것이다. 
+3. $\varphi$가 *quasi-projective<sub>준사영사상</sub>*라는 것은 이를 적당한 open embedding $X \rightarrow X'$와 projective morphism $X' \rightarrow Y$의 합성으로 분해할 수 있는 것이다.
 :::
 
 첫째 정의는 자명한 것이며, 둘째와 셋째 정의 또한 [\[대수다양체\] §사영다양체, ⁋정의 3](/ko/math/algebraic_varieties/projective_varieties#def3)과 [\[대수다양체\] §준사영다양체, ⁋정의 1](/ko/math/algebraic_varieties/quasi_projective_varieties#def1)을 relative 버전, 즉 $\Sch_{/Y}$에서 다룬 것이다. 
@@ -203,14 +203,14 @@ $$\gamma_1:\Spec A \longrightarrow X_1\subseteq X,\qquad \gamma_2:\Spec A \longr
 ::: 따름정리 8
 Noetherian scheme들에 대하여, 
 
-1. Open immersion과 closed embedding은 모두 separated이다. 
+1. Open embedding과 closed embedding은 모두 separated이다.
 2. 두 separated morphism의 합성은 separated이다.
 3. Separated morphism은 base change에 의해 보존된다.
 4. Separated morphism은 fiber product에 의해 보존된다.
 5. 만일 $\varphi:X \rightarrow Y$, $\psi:Y \rightarrow Z$가 scheme morphism들이고 $\psi\circ \varphi$가 separated morphism이라면 $\varphi$ 또한 separated morphism이다.
 :::
 ::: 증명
-1번은 정의에서 직접 확인한다. $\varphi$가 closed embedding이라면 $Y$의 affine open subset $V=\Spec B$마다 $\varphi^{-1}(V)=\Spec A$이고 $B \rightarrow A$가 surjective이며 ([§닫힌 부분스킴, ⁋명제 3](/ko/math/scheme_theory/closed_subschemes#prop3)), 이러한 $V$를 모두 모으면 $\varphi^{-1}(V)\times_V\varphi^{-1}(V)$들이 $X\times_YX$를 덮는다. 각각의 위에서 $\Delta$는 [보조정리 5](#lem5)의 계산에 의하여 closed embedding이고, closed embedding은 target에 대해 affine-local하므로 $\Delta$ 자체가 closed embedding이다. $\varphi$가 open immersion이라면 $X$를 $Y$의 open subscheme으로 보고 $Y$의 affine open subset $V=\Spec B$들과 그 안에 들어가는 $X$의 basic open subset $\Spec B_b$들을 생각하자. 그럼 $\Spec B_b\times_V\Spec B_{b'}$들이 $X\times_YX$를 덮으며, 
+1번은 정의에서 직접 확인한다. $\varphi$가 closed embedding이라면 $Y$의 affine open subset $V=\Spec B$마다 $\varphi^{-1}(V)=\Spec A$이고 $B \rightarrow A$가 surjective이며 ([§닫힌 부분스킴, ⁋명제 3](/ko/math/scheme_theory/closed_subschemes#prop3)), 이러한 $V$를 모두 모으면 $\varphi^{-1}(V)\times_V\varphi^{-1}(V)$들이 $X\times_YX$를 덮는다. 각각의 위에서 $\Delta$는 [보조정리 5](#lem5)의 계산에 의하여 closed embedding이고, closed embedding은 target에 대해 affine-local하므로 $\Delta$ 자체가 closed embedding이다. $\varphi$가 open embedding이라면 $X$를 $Y$의 open subscheme으로 보고 $Y$의 affine open subset $V=\Spec B$들과 그 안에 들어가는 $X$의 basic open subset $\Spec B_b$들을 생각하자. 그럼 $\Spec B_b\times_V\Spec B_{b'}$들이 $X\times_YX$를 덮으며,
 
 $$B_b\otimes_BB_{b'}\cong B_{bb'}=\mathcal{O}(\Spec B_b\cap \Spec B_{b'})$$
 
@@ -407,7 +407,7 @@ $$\x_j/\x_k=(\x_j/\x_i)\cdot(\x_k/\x_i)^{-1}$$
 
 이제 $\varphi:X \rightarrow Y$가 projective라 하면 $\varphi$는 closed embedding $X\hookrightarrow \mathbb{P}^n_Y$와 projection $\mathbb{P}^n_Y \rightarrow Y$의 합성이다. ([정의 1](#def1)) Closed embedding은 proper이고 두 proper morphism의 합성은 proper이므로 ([따름정리 13](#cor13)), $\varphi$는 proper이다.
 
-마지막으로 $\varphi:X \rightarrow Y$가 quasi-projective라 하고, 이를 open immersion $\lambda: X \rightarrow X'$와 projective morphism $\psi:X' \rightarrow Y$의 합성 $\varphi=\psi\circ\lambda$로 분해하자. ([정의 1](#def1)) 방금 보인 것에 의해 $\psi$는 proper이고, 따라서 separated이며 finite type이다. 한편 open immersion은 separated이고 두 separated morphism의 합성은 separated이므로 ([따름정리 8](#cor8)), $\varphi$는 separated이다. 또 open immersion은 locally of finite type이며, $X$가 Noetherian이므로 $X'$의 임의의 affine open subset의 $\lambda$에 의한 preimage는 Noetherian space의 열린집합으로서 quasi-compact이다. 곧 $\lambda$는 finite type이고 ([§스킴 사상의 성질들, ⁋정의 14](/ko/math/scheme_theory/properties_of_scheme_morphisms#def14)), 두 finite type morphism의 합성은 finite type이므로 $\varphi$ 또한 finite type이다.
+마지막으로 $\varphi:X \rightarrow Y$가 quasi-projective라 하고, 이를 open embedding $\lambda: X \rightarrow X'$와 projective morphism $\psi:X' \rightarrow Y$의 합성 $\varphi=\psi\circ\lambda$로 분해하자. ([정의 1](#def1)) 방금 보인 것에 의해 $\psi$는 proper이고, 따라서 separated이며 finite type이다. 한편 open embedding은 separated이고 두 separated morphism의 합성은 separated이므로 ([따름정리 8](#cor8)), $\varphi$는 separated이다. 또 open embedding은 locally of finite type이며, $X$가 Noetherian이므로 $X'$의 임의의 affine open subset의 $\lambda$에 의한 preimage는 Noetherian space의 열린집합으로서 quasi-compact이다. 곧 $\lambda$는 finite type이고 ([§스킴 사상의 성질들, ⁋정의 14](/ko/math/scheme_theory/properties_of_scheme_morphisms#def14)), 두 finite type morphism의 합성은 finite type이므로 $\varphi$ 또한 finite type이다.
 :::
 
 이로써 우리는 판정법의 고전적인 귀결을 얻는다. Proper morphism은 정의상 closed map이므로, projective scheme에서 나가는 morphism의 image는 언제나 닫혀 있다.

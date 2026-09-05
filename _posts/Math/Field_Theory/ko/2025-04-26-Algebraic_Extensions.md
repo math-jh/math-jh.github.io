@@ -110,7 +110,7 @@ $$\mathbb{K}(M \cup N) = \mathbb{K}(M)(N) = \mathbb{K}(N)(M)$$
 2. 거꾸로, $\mathbb{L}_1\otimes_\mathbb{K} \mathbb{L}_2$의 임의의 prime ideal $\mathfrak{p}$에 대하여, 적당한 composite field $\mathbb{M}$과 extension $u_i: \mathbb{L}_i \rightarrow \mathbb{M}$가 존재하여, $\mathfrak{p}$가 $u_1\ast u_2$의 kernel이도록 할 수 있다. 
 :::
 ::: 증명
-1. $u_1\ast u_2$의 image $\im(u_1\ast u_2)$는 field $\mathbb{M}$의 subring이고, 따라서 integral domain이다. 이제 주어진 주장은 [\[대수적 구조\] §분수체, ⁋명제 8](/ko/math/algebraic_structures/field_of_fractions#prop8)과 [\[대수적 구조\] §몫환, 환 동형사상, ⁋정리 3](/ko/math/algebraic_structures/quotient_rings#thm3)으로부터 자명하다. 
+1. $u_1\ast u_2$의 image $\im(u_1\ast u_2)$는 field $\mathbb{M}$의 subring이고, 따라서 integral domain이다. 이제 주어진 주장은 [\[대수적 구조\] §분수체, ⁋명제 9](/ko/math/algebraic_structures/field_of_fractions#prop9)와 [\[대수적 구조\] §몫환, 환 동형사상, ⁋정리 3](/ko/math/algebraic_structures/quotient_rings#thm3)으로부터 자명하다. 
 
 2. 거꾸로 $\mathfrak{p}$가 $\mathbb{L}_1\otimes_\mathbb{K}\mathbb{L}_2$의 prime ideal이라 하고, integral domain $(\mathbb{L}_1\otimes_\mathbb{K}\mathbb{L}_2)/\mathfrak{p}$의 field of fraction을 $\mathbb{M}=\Frac((\mathbb{L}_1\otimes_\mathbb{K}\mathbb{L}_2)/\mathfrak{p})$라 하자. 그럼 각각의 $x_1\in \mathbb{L}_1$과 $x_2\in \mathbb{L}_2$에 대하여, $u_1(x_1)$을 $x_1\otimes 1$의 $\mathbb{M}$에서의 image, $u_2(x_2)$를 $1\otimes x_2$의 $\mathbb{M}$에서의 image로 정의하면 이들이 원하는 조건을 만족함을 알 수 있다. 
 :::

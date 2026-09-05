@@ -26,7 +26,7 @@ weight: 2
 Ring $A$에 대하여, $\Spec A$는 $A$의 모든 prime ideal들의 모임이고, 이를 $A$의 *spectrum<sub>스펙트럼</sub>*이라 부른다. 
 :::
 
-이제 ring homomorphism $\phi: A \rightarrow B$가 주어졌다 하자. 그럼 [\[대수적 구조\] §분수체, ⁋명제 9](/ko/math/algebraic_structures/field_of_fractions#prop9)에 의하여, 다음의 함수 
+이제 ring homomorphism $\phi: A \rightarrow B$가 주어졌다 하자. 그럼 [\[대수적 구조\] §분수체, ⁋명제 10](/ko/math/algebraic_structures/field_of_fractions#prop10)에 의하여, 다음의 함수 
 
 $$\Spec\phi: \Spec B \rightarrow \Spec A;\qquad \mathfrak{q}\mapsto \phi^{-1}(\mathfrak{q})$$
 

@@ -103,7 +103,7 @@ $$\begin{aligned}  (x\mathrel{S}y)\wedge(y\mathrel{S}z)&\iff((x\leq_{\tiny R}y)\
 주어진 order relation $\leq$에 대하여, $<$을 <phrase>$x\leq y$이고 $x\neq y$</phrase>로 정의된 관계라 하자. 이 때 $<$는 reflexive하지 않으므로 order relation도, preorder도 될 수 없다. 대신 다음을 정의하자.
 
 ::: 정의 9
-관계 $R$이 *asymmetric<sub>비대칭적</sub>*이라는 것은 $x\mathrel{R}y$이면 $y\not \mathrel{R}x$인 것이다. Asymmetric, transitive relation을 *strict order<sub>순순서</sub>*라 부른다.
+관계 $R$이 *asymmetric<sub>비대칭적</sub>*이라는 것은 $x\mathrel{R}y$이면 $y\not{\mathrel{R}}x$인 것이다. Asymmetric, transitive relation을 *strict order<sub>순순서</sub>*라 부른다.
 :::
 
 Strict order를 표현하기 위해서 우리는 $<_{\tiny S}$를 사용한다. 그럼 다음이 성립한다.
@@ -123,7 +123,7 @@ $$((x\leq_{\tiny R}y)\wedge(x\neq y))\wedge((y\leq_{\tiny R}x)\wedge(y\neq x))$$
 
 $$((x\leq_{\tiny R}y)\wedge(y\leq_{\tiny R}x))\wedge(x\neq y)$$
 
-이는 $R$의 antisymmetry에 의하여 $(x=y)\wedge(x\neq y)$이고, 이는 항상 거짓이므로 $x\mathrel{S} y$이면 $y\not\mathrel{S}x$이다. Transitivity를 보이기 위해 $x\mathrel{S}y$이고 $y\mathrel{S}z$라 하면, $\leq_{\tiny R}$의 transitivity에 의하여 $x\leq_{\tiny R}z$이고, 또 $x=z$라면 $x\leq_{\tiny R}y$와 $y\leq_{\tiny R}x$가 동시에 성립하여 $R$의 antisymmetry에 의해 $x=y$가 되어 $x\neq y$에 모순이므로 $x\neq z$이며, 따라서 $x\mathrel{S}z$이다.
+이는 $R$의 antisymmetry에 의하여 $(x=y)\wedge(x\neq y)$이고, 이는 항상 거짓이므로 $x\mathrel{S} y$이면 $y\not{\mathrel{S}}x$이다. Transitivity를 보이기 위해 $x\mathrel{S}y$이고 $y\mathrel{S}z$라 하면, $\leq_{\tiny R}$의 transitivity에 의하여 $x\leq_{\tiny R}z$이고, 또 $x=z$라면 $x\leq_{\tiny R}y$와 $y\leq_{\tiny R}x$가 동시에 성립하여 $R$의 antisymmetry에 의해 $x=y$가 되어 $x\neq y$에 모순이므로 $x\neq z$이며, 따라서 $x\mathrel{S}z$이다.
 
 반대로 $S$가 strict order라 하고, 새로운 relation $R$을 <phrase>$x<_{\tiny S}y$이거나 $x=y$</phrase>로 정의하자. 우선 $x=x$이므로, 뒤쪽 조건에 걸려 $x\mathrel{R}x$이다. Antisymmetry를 보이기 위해, $x\mathrel{R}y$와 $y\mathrel{R}x$가 성립한다고 가정하자. 그럼 
 

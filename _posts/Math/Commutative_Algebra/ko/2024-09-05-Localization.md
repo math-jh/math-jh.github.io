@@ -152,7 +152,7 @@ Ring homomorphism $f:A \rightarrow B$와 $A$의 ideal $\mathfrak{a}$, $B$의 ide
 
   이다.
 
-이제 2번 결과로부터 임의의 prime ideal $\mathfrak{b}\subseteq S^{-1}A$가 주어졌을 때 $\mathfrak{b}^c$는 $S$와 만나지 않는 $A$의 prime ideal임을 안다. ([\[대수적 구조\] §분수체, ⁋명제 9](/ko/math/algebraic_structures/field_of_fractions#prop9)) 반대로 $\mathfrak{a}\subseteq A$가 $S$와 만나지 않는 $A$의 prime ideal이라 하자. 그럼 $\mathfrak{a}^e$는 $S^{-1}A$의 prime ideal이다. 임의의 $b/t,b'/t'$에 대하여 $(b/t)(b'/t')\in \mathfrak{a}^e$라 하자. 그럼 적당한 $a\in \mathfrak{a}$와 $s\in S$가 존재하여 $(bb')/(tt')=a/s$라 할 수 있고, 따라서 적당한 $u\in S$가 존재하여 $utt'a=usbb'\in \mathfrak{a}$이다. 이제 $\mathfrak{a}\cap S=\emptyset$인 것으로부터 $us\not\in \mathfrak{a}$인 것을 알고, $\mathfrak{a}$는 prime ideal이므로 $bb'\in \mathfrak{a}$가 성립한다. 따라서 $b\in \mathfrak{a}$이거나 $b'\in \mathfrak{a}$이고 $\mathfrak{a}^e$는 prime ideal이다. 이들 대응이 서로간의 inverse가 된다는 것은 1번과 2번 결과에서 자연스레 따라나오는 것이다. 
+이제 2번 결과로부터 임의의 prime ideal $\mathfrak{b}\subseteq S^{-1}A$가 주어졌을 때 $\mathfrak{b}^c$는 $S$와 만나지 않는 $A$의 prime ideal임을 안다. ([\[대수적 구조\] §분수체, ⁋명제 10](/ko/math/algebraic_structures/field_of_fractions#prop10)) 반대로 $\mathfrak{a}\subseteq A$가 $S$와 만나지 않는 $A$의 prime ideal이라 하자. 그럼 $\mathfrak{a}^e$는 $S^{-1}A$의 prime ideal이다. 임의의 $b/t,b'/t'$에 대하여 $(b/t)(b'/t')\in \mathfrak{a}^e$라 하자. 그럼 적당한 $a\in \mathfrak{a}$와 $s\in S$가 존재하여 $(bb')/(tt')=a/s$라 할 수 있고, 따라서 적당한 $u\in S$가 존재하여 $utt'a=usbb'\in \mathfrak{a}$이다. 이제 $\mathfrak{a}\cap S=\emptyset$인 것으로부터 $us\not\in \mathfrak{a}$인 것을 알고, $\mathfrak{a}$는 prime ideal이므로 $bb'\in \mathfrak{a}$가 성립한다. 따라서 $b\in \mathfrak{a}$이거나 $b'\in \mathfrak{a}$이고 $\mathfrak{a}^e$는 prime ideal이다. 이들 대응이 서로간의 inverse가 된다는 것은 1번과 2번 결과에서 자연스레 따라나오는 것이다. 
 :::
 
 위의 명제로부터 다음이 자명하다.

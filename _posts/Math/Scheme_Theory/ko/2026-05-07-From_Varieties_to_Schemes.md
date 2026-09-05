@@ -41,7 +41,7 @@ $$\frac{\mathbb{K}[\x,\y]}{(\x^2,\y)} \cong \frac{\mathbb{K}[\epsilon]}{(\epsilo
 
 핵심적으로 다른 것은 scheme의 세상에서는 이 공간 위에 정의된 함수가 더 세밀하다는 것이다. 이 세밀함을 제대로 보려면, 이 공간을 단순한 점 하나가 아니라 <em-ko>tangent 방향 하나를 덧붙인 것</em-ko>으로 이해해야 한다. 즉 $\Spec \mathbb{K}[\epsilon]/(\epsilon^2)$는 한 점에 $\epsilon$이라는 infinitesimal 방향을 붙인 *fat point*로, 보통의 점 $\Spec \mathbb{K}$가 점에서의 값만을 기억하는 데 비해 그 점에서의 tangent 방향의 정보까지 함께 갖는 공간이다.
 
-이 관점에서 regular function, 즉 $\mathbb{K}[\epsilon]/(\epsilon^2)$의 원소 $a+b\epsilon$은 두 정보를 동시에 담는다. $a$는 그 점에서의 (보통 의미의) 함숫값이고, $b$는 바로 그 tangent 방향을 따라 함수가 어떻게 변하는지를 나타내는 좌표, 다시 말해 그 점에서의 일차 미분 정보이다. 그래서 두 함수가 그 점에서 같은 값 $a$를 갖더라도 $b$가 다르면 서로 다른 함수이다. 예컨대 $a+b\epsilon$과 $a+b'\epsilon$( $b\ne b'$ )은 같은 점에서 같은 값을 갖지만 tangent 방향으로의 거동이 다르므로 이 공간 위에서는 구별되는 regular function이다. 두 함수가 비로소 같아지는 것은 값 $a$뿐 아니라 tangent 좌표 $b$까지 일치할 때, 곧 점에서의 값과 일차 미분값을 둘 다 공유할 때뿐이다. 이렇게 점에 tangent 방향의 두께를 붙여 보는 것이 *fat point*의 본질이며, 이 두께가 남아 있다는 사실이 교차 multiplicity를 비롯한 infinitesimal 정보를 담아내는 열쇠가 된다.
+이 관점에서 regular function, 즉 $\mathbb{K}[\epsilon]/(\epsilon^2)$의 원소 $a+b\epsilon$은 두 정보를 동시에 담는다. $a$는 그 점에서의 (보통 의미의) 함숫값이고, $b$는 바로 그 tangent 방향을 따라 함수가 어떻게 변하는지를 나타내는 좌표, 다시 말해 그 점에서의 일차 미분 정보이다. 그래서 두 함수가 그 점에서 같은 값 $a$를 갖더라도 $b$가 다르면 서로 다른 함수이다. 예컨대 $a+b\epsilon$과 $a+b'\epsilon$( $b\ne b'$ )은 같은 점에서 같은 값을 갖지만 tangent 방향으로의 변화가 다르므로 이 공간 위에서는 구별되는 regular function이다. 두 함수가 비로소 같아지는 것은 값 $a$뿐 아니라 tangent 좌표 $b$까지 일치할 때, 곧 점에서의 값과 일차 미분값을 둘 다 공유할 때뿐이다. 이렇게 점에 tangent 방향의 두께를 붙여 보는 것이 *fat point*의 본질이며, 이 두께가 남아 있다는 사실이 교차 multiplicity를 비롯한 infinitesimal 정보를 담아내는 열쇠가 된다.
 :::
 
 Classical variety의 또 다른 근본적 제약은 base change 혹은 fiber product가 자연스럽지 않다는 것이다. 이는 사소해 보이는 곳에서부터 이미 드러나는데, 가령 두 projective space의 곱 $\mathbb{P}^n\times \mathbb{P}^m$이 projective variety가 된다는 것조차 우리는 Segre embedding 등을 사용해서 손수 (더 큰) projective space 안에 넣어서 보여줬어야 했다. 이렇듯 가장 단순한 공간 두 개의 곱을 다루기 위해 추가적인 machinery가 필요하다는 점은 우리가 그 동안 그렇게 좋은 세상에서 작업을 하지 않았음을 보여주는 증거이다. 
@@ -85,7 +85,7 @@ Classical variety $V\subseteq\mathbb{A}_\mathbb{K}^n$의 $\mathbb{K}$-rational p
 특히 projective line $\mathbb{P}_\mathbb{K}^1$의 경우, functor of points를 통해 infinitesimal structure가 어떻게 드러나는지 명확히 볼 수 있다. $\mathbb{P}_\mathbb{K}^1$은 그 자체로 homogeneous coordinate를 갖는 scheme이므로, 임의의 local $\mathbb{K}$-algebra $R$에 대하여 $\mathbb{P}_\mathbb{K}^1(R)$는 $R$ 위의 projective line 위의 점들로 정의된다.
 
 ::: 예시 5
-$T=\Spec \mathbb{K}[\epsilon]/(\epsilon^2)$라 하자. $\mathbb{P}_\mathbb{K}^1$의 $T$-valued points, 즉 morphism $T\rightarrow\mathbb{P}_\mathbb{K}^1$를 생각하면, 이들은 $\mathbb{P}_\mathbb{K}^1$ 위의 한 점 $P$와 그 점에서의 tangent vector를 동시에 결정한다. 구체적으로, 점 $P$는 closed immersion $\Spec \mathbb{K}\hookrightarrow T$를 $T\rightarrow\mathbb{P}_\mathbb{K}^1$와 합성함으로써 얻어지고, 나머지 정보는 $P$에서의 Zariski tangent space의 원소가 된다. 따라서 $\mathbb{P}_\mathbb{K}^1$의 $\mathbb{K}[\epsilon]/(\epsilon^2)$-points는 $\mathbb{P}_\mathbb{K}^1$의 tangent bundle을 구성하는 점들에 일대일 대응한다.
+$T=\Spec \mathbb{K}[\epsilon]/(\epsilon^2)$라 하자. $\mathbb{P}_\mathbb{K}^1$의 $T$-valued points, 즉 morphism $T\rightarrow\mathbb{P}_\mathbb{K}^1$를 생각하면, 이들은 $\mathbb{P}_\mathbb{K}^1$ 위의 한 점 $P$와 그 점에서의 tangent vector를 동시에 결정한다. 구체적으로, 점 $P$는 closed embedding $\Spec \mathbb{K}\hookrightarrow T$를 $T\rightarrow\mathbb{P}_\mathbb{K}^1$와 합성함으로써 얻어지고, 나머지 정보는 $P$에서의 Zariski tangent space의 원소가 된다. 따라서 $\mathbb{P}_\mathbb{K}^1$의 $\mathbb{K}[\epsilon]/(\epsilon^2)$-points는 $\mathbb{P}_\mathbb{K}^1$의 tangent bundle을 구성하는 점들에 일대일 대응한다.
 :::
 
 Functor of points는 이렇게 scheme을 representable functor로 이해하게 함으로써, geometric intuition과 범주론적 formalism 사이의 가교 역할을 한다.
