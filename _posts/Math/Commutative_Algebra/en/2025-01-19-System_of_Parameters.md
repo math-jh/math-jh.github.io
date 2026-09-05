@@ -10,66 +10,69 @@ sidebar:
 
 date: 2025-01-19
 weight: 17
-translated_at: 2026-05-31T01:00:04+00:00
-translation_source: kimi-cli
-last_polished_at: 2026-05-31T01:00:04+00:00
+translated_at: 2026-09-05T03:15:04+00:00
+translation_source: antigravity-gemini-3.8-flash-high
 ---
 ## System of parameters
 
-Combining [§Dimension, ⁋Theorem 7](/en/math/commutative_algebra/Krull_dimension#thm7) and [§Dimension, ⁋Corollary 8](/en/math/commutative_algebra/Krull_dimension#cor8) from the previous post, we obtain the following.
+Combining [§Dimension, ⁋Theorem 7](/en/math/commutative_algebra/Krull_dimension#thm7) and [§Dimension, ⁋Corollary 8](/en/math/commutative_algebra/Krull_dimension#cor8) from the previous post, we have the following.
 
 ::: Corollary 1
-Let $(A, \mathfrak{m})$ be a Noetherian local ring. Then $\dim A$ is the smallest $d$ for which there exist $d$ elements $a_1,\ldots, a_d\in \mathfrak{m}$ such that $\mathfrak{m}^n\subseteq (a_1,\ldots, a_d)$ for all sufficiently large $n$.
+Let $(A, \mathfrak{m})$ be a Noetherian local ring. Then $\dim A$ is, among those integers for which the following condition
+
+> for sufficiently large $n$, the inclusion $\mathfrak{m}^n\subseteq (a_1,\ldots, a_d)$ always holds for some $d$ elements $a_1,\ldots, a_d\in \mathfrak{m}$,
+
+holds, the smallest such $d$.
 :::
 ::: Proof
-First, assume that $\mathfrak{m}^n\subseteq (a_1,\ldots, a_d)$. Then by [§The Jordan-Hölder Theorem, ⁋Corollary 8](/en/math/commutative_algebra/Jordan-Holder_theorem#cor8), $\mathfrak{m}$ is a minimal prime ideal containing $(a_1,\ldots, a_d)$. Therefore, by [§Dimension, ⁋Theorem 7](/en/math/commutative_algebra/Krull_dimension#thm7), we have $\codim \mathfrak{m}\leq d$.
+First, assume that $\mathfrak{m}^n\subseteq (a_1,\ldots, a_d)$. Then by [§Jordan-Hölder Theorem, ⁋Corollary 8](/en/math/commutative_algebra/Jordan-Holder_theorem#cor8), $\mathfrak{m}$ is minimal among the prime ideals containing $(a_1,\ldots, a_d)$. Therefore, by [§Dimension, ⁋Theorem 7](/en/math/commutative_algebra/Krull_dimension#thm7), we have $\codim \mathfrak{m}\leq d$. 
 
-Conversely, suppose $(A,\mathfrak{m})$ satisfies $\dim A=d$. Then by definition, the supremum of lengths $d$ arises from chains of prime ideals starting at $\mathfrak{m}$, so it is exactly $\codim \mathfrak{m}$. Thus, using [§Dimension, ⁋Corollary 8](/en/math/commutative_algebra/Krull_dimension#cor8), we can arrange that $\mathfrak{m}$ is a minimal prime containing the ideal $(a_1,\ldots, a_d)$. Then $\mathfrak{m}$ becomes the unique prime ideal in $A/(a_1,\ldots, a_d)$, so it must be exactly the nilradical of $A/(a_1,\ldots, a_d)$ ([§Properties of Localization, ⁋Corollary 8](/en/math/commutative_algebra/properties_of_localization#cor8)), and therefore we obtain the desired result.
+Conversely, suppose that $(A,\mathfrak{m})$ satisfies $\dim A=d$. Then by definition, the supremum of lengths, $d$, comes from a chain of prime ideals starting at $\mathfrak{m}$, so it is precisely equal to $\codim \mathfrak{m}$. Therefore, using [§Dimension, ⁋Corollary 8](/en/math/commutative_algebra/Krull_dimension#cor8), we can ensure that $\mathfrak{m}$ is a minimal prime containing the ideal $(a_1,\ldots, a_d)$. Then $\mathfrak{m}$ is the unique prime ideal in $A/(a_1,\ldots, a_d)$, so this must be precisely the nilradical of $A/(a_1,\ldots, a_d)$ ([§Properties of Localization, ⁋Corollary 8](/en/math/commutative_algebra/properties_of_localization#cor8)), which yields the desired result. 
 :::
 
 ::: Proposition 2
-For a Noetherian local ring $(A, \mathfrak{m})$, we have
+For a Noetherian local ring $(A, \mathfrak{m})$,
 
 $$\dim_K(\mathfrak{m}/\mathfrak{m}^2) \ge \dim A$$
 
 where $K = A/\mathfrak{m}$.
 :::
 ::: Proof
-Let $\dim A = d$. Then there exists a system of parameters $x_1, \ldots, x_d \in \mathfrak{m}$. By Nakayama's lemma, their images are linearly independent in $\mathfrak{m}/\mathfrak{m}^2$. Therefore $\dim_K(\mathfrak{m}/\mathfrak{m}^2) \ge d$.
+Let $n=\dim_K(\mathfrak{m}/\mathfrak{m}^2)$, choose a basis of $\mathfrak{m}/\mathfrak{m}^2$, and lift its elements to $y_1,\ldots, y_n\in \mathfrak{m}$. Since $A$ is Noetherian, $\mathfrak{m}$ is finitely generated, and hence by the second result of [§Integral Extensions, ⁋Lemma 8](/en/math/commutative_algebra/integral_extension#lem8), $y_1,\ldots, y_n$ generate $\mathfrak{m}$. Then for any $k\geq 1$, we have $\mathfrak{m}^k\subseteq \mathfrak{m}=(y_1,\ldots, y_n)$, so by [Corollary 1](#cor1), $\dim A\leq n$.
 :::
 
-We now make the following definition.
+We now define the following. 
 
 ::: definition Proposition–Definition 3 {#prop-def3}
-Let $(A,\mathfrak{m})$ be a local Noetherian ring of Krull dimension $d$. Then for a family of elements $a_1,\ldots, a_d$ of $A$ and $\mathfrak{a}=(a_1,\ldots, a_d)$, the following are all equivalent.
+Let $(A,\mathfrak{m})$ be a local Noetherian ring of Krull dimension $d$. Then for a family of elements of $A$, $a_1,\ldots, a_d$, and $\mathfrak{a}=(a_1,\ldots, a_d)$, the following are all equivalent.
 
 1. $\mathfrak{m}$ is minimal among prime ideals containing $\mathfrak{a}$.
-2. $\mathfrak{m}=\sqrt{\mathfrak{a}}$.
-3. Some power of $\mathfrak{m}$ is contained in $\mathfrak{a}$.
-4. $\mathfrak{a}$ is an $\mathfrak{m}$-primary ideal.
+2. $\mathfrak{m}=\sqrt{\mathfrak{a}}$ holds.
+3. Some power of $\mathfrak{m}$ is contained in $\mathfrak{a}$. 
+4. $\mathfrak{a}$ is an $\mathfrak{m}$-primary ideal. 
 
-If these conditions hold, we call $a_1,\ldots, a_d$ a *system of parameters* of $A$, and $\mathfrak{a}$ a *parameter ideal*.
+If these conditions hold, we call $a_1,\ldots, a_d$ a *system of parameters* of $A$, and call $\mathfrak{a}$ a *parameter ideal*.
 
-More generally, for a finitely generated $A$-module $M$ of rank $d$, we call elements $a_1,\ldots, a_d$ a *system of parameters* if the $A$-module $M/\mathfrak{a}M$ has finite length, and we call $\mathfrak{a}$ a *parameter ideal* of $M$.
+More generally, given Krull dimension $d$ for a finitely generated $A$-module $M$, if the $A$-module $M/\mathfrak{a}M$ has finite length, we call $a_1,\ldots, a_d$ a *system of parameters* of $M$, and call $\mathfrak{a}$ a *parameter ideal* of $M$. 
 :::
 
-The equivalence of these conditions was already established in the previous post and in Corollary 1 above. Meanwhile, for a local ring $(A, \mathfrak{m})$ we have
+Showing that these conditions are all equivalent is what we have already done in the previous posts and the corollary above. Meanwhile, for a local ring $(A, \mathfrak{m})$, since
 
 $$d=\dim A=\codim \mathfrak{m}$$
 
-so by [§Dimension, ⁋Theorem 7](/en/math/commutative_algebra/Krull_dimension#thm7), any parameter ideal $\mathfrak{a}$ of $A$ must be generated by at least $d$ elements.
+a parameter ideal of $A$, $\mathfrak{a}$, can only be generated by at least $d$ elements by [§Dimension, ⁋Theorem 7](/en/math/commutative_algebra/Krull_dimension#thm7). 
 
-In the case of a parameter ideal $\mathfrak{a}$ of an $A$-module $M$, we know from the equivalence between the first and second conditions of [§The Jordan-Hölder Theorem, ⁋Corollary 6](/en/math/commutative_algebra/Jordan-Holder_theorem#cor6) that $M/\mathfrak{a}M$ has finite length if and only if some sufficiently large power of $\mathfrak{m}$ annihilates $M/\mathfrak{a}M$. That is, we must have $\mathfrak{m}^k M \subseteq \mathfrak{a}M$, and from this we see that the two definitions agree when we regard $A$ itself as an $A$-module. In a similar manner, we can translate the results we examined earlier on ideals and dimension for rings into results about parameter ideals for modules; to do so, we first need the following simple lemmas.
+In the case of an $A$-module $M$ and a parameter ideal $\mathfrak{a}$, we know by the equivalence between the first and second conditions of [§Jordan–Hölder Theorem, ⁋Corollary 6](/en/math/commutative_algebra/Jordan-Holder_theorem#cor6) that $M/\mathfrak{a}M$ having finite length is equivalent to sufficiently high powers of $\mathfrak{m}$ always annihilating $M/\mathfrak{a}M$. That is, $\mathfrak{m}^k M \subseteq \mathfrak{a}M$ must hold, from which we see that the two definitions coincide when viewing $A$ itself as an $A$-module. In a similar way, we can transfer our previous results on the relationship between ideals and dimension of a ring to results on parameter ideals of a module; for this, we first need the following simple lemmas.
 
 ::: Lemma 4
-For a Noetherian ring $A$, a finitely generated $A$-module $M$, and an ideal $\mathfrak{a}$ of $A$, the following equality holds:
+For a Noetherian ring $A$, a finitely generated $A$-module $M$, and an $A$-ideal $\mathfrak{a}$, the identity
 
 $$\sqrt{\ann(M/\mathfrak{a}M)}=\sqrt{\mathfrak{a}+\ann(M)}$$
+
+holds.
 :::
 ::: Proof
-By [§Properties of Localization, ⁋Corollary 8](/en/math/commutative_algebra/properties_of_localization#cor8), it suffices to show that the set of prime ideals containing $\ann(M/\mathfrak{a}M)$ is exactly the same as the set of prime ideals containing $\mathfrak{a}+\ann(M)$.
-
-Now, a prime ideal $\mathfrak{p}$ contains $\ann(M/\mathfrak{a}M)$ if and only if $(M/\mathfrak{a}M)_\mathfrak{p}\neq 0$ by [§Localization, ⁋Proposition 5](/en/math/commutative_algebra/localization#prop5). Then $(M/\mathfrak{a}M)_\mathfrak{p}=M_\mathfrak{p}/\mathfrak{a}M_\mathfrak{p}\neq 0$ is equivalent, by [§Integral Extensions, ⁋Lemma 8](/en/math/commutative_algebra/integral_extension#lem8), to $M_\mathfrak{p}\neq 0$ and $\mathfrak{a}A_\mathfrak{p}\subseteq \mathfrak{p}A_\mathfrak{p}$. This is again equivalent, by [§Properties of Localization, ⁋Corollary 8](/en/math/commutative_algebra/properties_of_localization#cor8), to $\mathfrak{p}\supseteq \ann(M)$ and $\mathfrak{p}\supseteq \mathfrak{a}$, that is, to $\mathfrak{p}\supseteq \mathfrak{a}+\ann(M)$, so we obtain the desired result.
+By [§Properties of Localization, ⁋Corollary 8](/en/math/commutative_algebra/properties_of_localization#cor8), it suffices to show that the set of prime ideals containing $\ann(M/\mathfrak{a}M)$ and the set of prime ideals containing $\mathfrak{a}+\ann(M)$ are precisely the same. Now, for a prime ideal $\mathfrak{p}$, containing $\ann(M/\mathfrak{a}M)$ is equivalent to $(M/\mathfrak{a}M)_\mathfrak{p}\neq 0$ by [§Localization, ⁋Proposition 5](/en/math/commutative_algebra/localization#prop5). Then $(M/\mathfrak{a}M)_\mathfrak{p}=M_\mathfrak{p}/\mathfrak{a}M_\mathfrak{p}\neq 0$ is equivalent, by [§Integral Extensions, ⁋Lemma 8](/en/math/commutative_algebra/integral_extension#lem8), to $M_\mathfrak{p}\neq 0$ and $\mathfrak{a}A_\mathfrak{p}\subseteq \mathfrak{p}A_\mathfrak{p}$. This in turn is equivalent, by [§Localization, ⁋Proposition 5](/en/math/commutative_algebra/localization#prop5), to $\mathfrak{p}\supseteq \ann(M)$ and $\mathfrak{p}\supseteq \mathfrak{a}$, that is, $\mathfrak{p}\supseteq \mathfrak{a}+\ann(M)$, which yields the desired result.
 :::
 
 Also, the following holds.
@@ -82,48 +85,44 @@ $$0 \rightarrow M' \overset{u}{\longrightarrow} M \overset{v}{\longrightarrow} M
 we have $\ann(M)\subseteq \ann(M')\cap \ann(M'')$.
 :::
 ::: Proof
-Let $a\in\ann(M)$. Then for any $x'\in M'$, we have $u(ax')=au(x')=0$, and since $u$ is injective, we get $ax'=0$, so $a\in\ann(M')$.
+Let $a\in\ann(M)$. For any $x'\in M'$, we have $u(ax')=au(x')=0$, and since $u$ is injective, it follows that $ax'=0$, so $a\in\ann(M')$.
 
-Similarly, for any $x''\in M''$, since $v$ is surjective there exists $x\in M$ with $v(x)=x''$, and then $ax''=av(x)=v(ax)=0$, so $a\in\ann(M'')$.
+Similarly, for any $x''\in M''$, since $v$ is surjective, there exists $x\in M$ such that $v(x)=x''$. Then $ax''=av(x)=v(ax)=0$, so $a\in\ann(M'')$.
 :::
 
-We can then prove the following proposition.
+Now we can prove the following proposition.
 
 ::: Proposition 6
-For a Noetherian local ring $(A,\mathfrak{m})$, an ideal $\mathfrak{a}$ of $A$, and a finitely generated $A$-module $M$, the following hold.
+For a Noetherian local ring $(A,\mathfrak{m})$, its ideal $\mathfrak{a}$, and a finitely generated $A$-module $M$, the following hold.
 
-1. The following are equivalent.
-  - $\mathfrak{a}$ is a parameter ideal of $M$.
-  - $(\mathfrak{a}+\ann(M))\supseteq \mathfrak{m}^n$ for all sufficiently large $n$.
-  - $\mathfrak{a}$ is a parameter ideal of $A/\ann(M)$.
-2. For a short exact sequence of $A$-modules
+1. The following are all equivalent:
+  - $M/\mathfrak{a}M$ has finite length. 
+  - For sufficiently large $n$, $(\mathfrak{a}+\ann(M))\supseteq \mathfrak{m}^n$ always holds.
+  - The $A$-module $A/(\mathfrak{a}+\ann(M))$ has finite length.
+2. For a short exact sequence of $A$-modules 
     
     $$0 \rightarrow M' \rightarrow M \rightarrow M'' \rightarrow 0$$
 
-    $\mathfrak{a}$ is a parameter ideal of $M$ if and only if it is a parameter ideal of both $M'$ and $M''$.
-3. $\dim M$ is the smallest natural number $d$ for which there exists a parameter ideal of $M$ generated by $d$ elements.
+    $M/\mathfrak{a}M$ has finite length if and only if both $M'/\mathfrak{a}M'$ and $M''/\mathfrak{a}M''$ have finite length.
+3. $\dim M$ is the smallest natural number $d$ such that $M/\mathfrak{b}M$ has finite length for some ideal $\mathfrak{b}$ generated by $d$ elements. 
 :::
 ::: Proof
-1. First, assume that $\mathfrak{a}$ is a parameter ideal of $M$. Then by the argument examined right after [Proposition–Definition 3](#prop-def3), we know that a sufficiently large power of $\mathfrak{m}$ always annihilates $M/\mathfrak{a}M$, and combining this with [Lemma 4](#lem4) we obtain
+1. First, suppose that $M/\mathfrak{a}M$ has finite length. Then, by the argument examined immediately after [Proposition–Definition 3](#prop-def3), we know that a sufficiently large power of $\mathfrak{m}$ always annihilates $M/\mathfrak{a}M$, and combining this with [Lemma 4](#lem4), we have
     
     $$\mathfrak{m}\subseteq \sqrt{\ann(M/\mathfrak{a}M)}=\sqrt{\mathfrak{a}+\ann(M)}$$
 
-    so we see that $\mathfrak{m}^n\in(\mathfrak{a}+\ann(M))$ must hold for sufficiently large $n$.
-    
-    Now assume the second condition. Then in the ring $A'=A/\ann(M)$, $\mathfrak{m}+\ann(M)$ is the unique maximal ideal, and from the assumption we know that $(\mathfrak{m}+\ann(M))^n$ belongs to $\mathfrak{a}+\ann(M)$ for sufficiently large $n$, so $\mathfrak{a}+\ann(M)$ is a parameter ideal of $A/\ann(M)$ (as a ring), and regarding $A/\ann(M)$ as an $A$-module, we obtain the desired result.
-    
-    The last equivalence is obvious from the inclusion
+    so we know that for sufficiently large $n$, $\mathfrak{m}^n\subseteq(\mathfrak{a}+\ann(M))$ must hold.  
+    Now suppose the second condition holds. Then, for sufficiently large $n$, the product of maximal ideals $\mathfrak{m}^n$ annihilates the $A$-module $A/(\mathfrak{a}+\ann(M))$, so by the equivalence of the first and second conditions of [§Jordan-Hölder Theorem, ⁋Corollary 6](/en/math/commutative_algebra/Jordan-Holder_theorem#cor6), $A/(\mathfrak{a}+\ann(M))$ has finite length.  
+    As for the last equivalence, it is clear from the following inclusion:
 
     $$\mathfrak{m}\subseteq \sqrt{\mathfrak{a}+\ann(M)}=\sqrt{\ann(M/\mathfrak{a}M)}$$
 
-2. Suppose $\mathfrak{a}$ is a parameter ideal of $M$. Then by [Lemma 5](#lem5), $\ann(M)\subseteq \ann(M')\cap \ann(M'')$, so it is obvious that $\mathfrak{a}$ is a parameter ideal of both $M'$ and $M''$.
-
-    Conversely, from the exact sequence obtained by applying $A/\mathfrak{a}\otimes-$
+2. Suppose $M/\mathfrak{a}M$ has finite length. Then by the first result, for sufficiently large $n$, we have $\mathfrak{m}^n\subseteq \mathfrak{a}+\ann(M)$, and since $\ann(M)\subseteq \ann(M')\cap \ann(M'')$ by [Lemma 5](#lem5), the same inclusion holds for $M'$ and $M''$. Thus, again by the first result, $M'/\mathfrak{a}M'$ and $M''/\mathfrak{a}M''$ have finite length. Conversely, from the following exact sequence obtained by applying $A/\mathfrak{a}\otimes-$,
     
     $$M'/\mathfrak{a}M' \rightarrow M/ \mathfrak{a}M \rightarrow M''/\mathfrak{a}M'' \rightarrow 0$$
 
-    we know that if $M'/\mathfrak{a}M'$ and $M''/\mathfrak{a}M''$ have finite length, then so must $M/\mathfrak{a}M$.
-3. By definition $\dim M=\dim A/\ann(M)$, so this is obvious from the first result and [§Dimension, ⁋Corollary 8](/en/math/commutative_algebra/Krull_dimension#cor8).
+    we see that if $M'/\mathfrak{a}M'$ and $M''/\mathfrak{a}M''$ have finite length, then $M/\mathfrak{a}M$ must also have finite length.
+3. By definition, $\dim M=\dim A/\ann(M)$, so this is clear from the first result and [§Dimension, ⁋Corollary 8](/en/math/commutative_algebra/Krull_dimension#cor8). 
 :::
 
 ::: Corollary 7
@@ -131,78 +130,78 @@ Let $(A, \mathfrak{m})$ be a Noetherian local ring and $M$ a finitely generated 
 
 $$\dim M/ aM \geq \dim M-1$$
 
-holds.
+holds. 
 :::
 ::: Proof
-By definition, $\dim M/aM=d$ means that the ring $A/\ann(M/aM)$ has dimension $d$. Then by [Corollary 1](#cor1), $A/\ann(M/aM)$ has a parameter ideal $\mathfrak{a}=(a_1,\ldots, a_d)$ generated by $d$ elements, and by the first result of [Proposition 6](#prop6), this is also a parameter ideal of $M/aM$. Then since
+By definition, $\dim M/aM=d$ means that the dimension of the ring $A/\ann(M/aM)$ is $d$. Then by [Corollary 1](#cor1), $A/\ann(M/aM)$ has a parameter ideal $\mathfrak{a}=(a_1,\ldots, a_d)$ generated by $d$ elements, and by the first result of [Proposition 6](#prop6), this is also a parameter ideal of $M/aM$. Since 
 
 $$\frac{M/aM}{\mathfrak{a}(M/aM)}\cong \frac{M}{((a)+\mathfrak{a})M}=\frac{M}{(a,a_1,\ldots, a_d)M}$$
 
-has finite length, $(a,a_1,\ldots, a_d)$ becomes a parameter ideal of $M$. Therefore, by the third condition of [Proposition 6](#prop6), we have $\dim M\leq 1+d$.
+has finite length, $(a,a_1,\ldots, a_d)$ is an ideal generated by $d+1$ elements such that $M/(a,a_1,\ldots, a_d)M$ has finite length. Therefore, by the third result of [Proposition 6](#prop6), $\dim M\leq 1+d$. 
 :::
 
 ## Flat Morphisms and Dimension
 
-By the definition of dimension, to compare the dimensions of $A$ and $B$ via a ring homomorphism $\phi: A \rightarrow B$, [§Integral Extensions and Ideals, ⁋Proposition 1](/en/math/commutative_algebra/lying_over_and_going_up#prop1) is essential. The following lemma is also used for a similar purpose, but produces prime ideals in the opposite direction.
+By the definition of dimension, [§Integral Extensions and Ideals, ⁋Proposition 1](/en/math/commutative_algebra/lying_over_and_going_up#prop1) is essential to compare the dimensions of $A$ and $B$ via a ring homomorphism $\phi: A \rightarrow B$. The following lemma serves a similar purpose, but the direction in which prime ideals are produced is reversed.
 
 ::: Lemma 8 (Going down for flat extensions)
-Let $\phi: A \rightarrow B$ be a ring homomorphism between Noetherian rings, and suppose that $B$ has a flat $A$-module structure via this map. Then for prime ideals $\mathfrak{p}_2\subseteq\mathfrak{p}_1\subseteq A$ and a prime ideal $\mathfrak{q}_1$ of $B$ satisfying $\phi^{-1}\mathfrak{q}_1=\mathfrak{p}_1$, there exists a prime ideal $\mathfrak{q}_2$ of $B$ such that $\phi^{-1}\mathfrak{q}_2=\mathfrak{p}_2$.
+Suppose we are given a ring homomorphism $\phi: A \rightarrow B$ between Noetherian rings, through which $B$ has a flat $A$-module structure. Then, for prime ideals $\mathfrak{p}_2\subseteq\mathfrak{p}_1\subseteq A$, whenever $\phi^{-1}\mathfrak{q}_1=\mathfrak{p}_1$ holds for a prime ideal of $B$, $\mathfrak{q}_1$, there exists in $B$ a prime ideal $\mathfrak{q}_2\subseteq \mathfrak{q}_1$ such that $\phi^{-1}\mathfrak{q}_2=\mathfrak{p}_2$. 
 :::
 ::: Proof
-First, applying $A/\mathfrak{p}_2\otimes_A-$ to $\phi: A \rightarrow B$, we obtain the ring homomorphism
+First, tensoring $\phi: A \rightarrow B$ with $A/\mathfrak{p}_2\otimes_A-$, we obtain the following ring homomorphism
 
 $$\phi\otimes_A\id_{A/\mathfrak{p}_2}: A/\mathfrak{p}_2\cong A\otimes_A A/\mathfrak{p}_2 \rightarrow B\otimes_A A/\mathfrak{p}_2\cong B/\mathfrak{p}_2B$$
 
-and from the assumption that $\phi$ is flat, we know that this is also flat. Thus we may assume that $\mathfrak{p}_2=0$ and that $A$ is an integral domain. Then by [§Flatness, ⁋Corollary 3](/en/math/commutative_algebra/flatness#cor3), $\phi$ must send non-zerodivisors of $A$ to non-zerodivisors of $B$.
+and from the assumption that $\phi$ is flat, we know that this is also flat. Hence it suffices to assume that $\mathfrak{p}_2=0$ and that $A$ is an integral domain. Then by [§Flatness, ⁋Corollary 3](/en/math/commutative_algebra/flatness#cor3), $\phi$ must map non-zerodivisors of $A$ to non-zerodivisors of $B$. 
 
-Meanwhile, by [[Set Theory] §Axiom of Choice, ⁋Theorem 4](/en/math/set_theory/axiom_of_choice#thm4), we know that there exists a minimal prime ideal $\mathfrak{q}_2$ contained in $\mathfrak{q}_1$. However, if we regard $B$ as a module over itself, then $\ann B=0$, so by the first result of [§Associated Primes, ⁋Theorem 7](/en/math/commutative_algebra/associated_primes#thm7), we have $\mathfrak{q}_2\in \Ass B$, and again by the second result of the same theorem, $\mathfrak{q}_2$ must consist only of zero-divisors. Therefore, by the property of $\phi$ examined above, we know that $\phi^{-1}(\mathfrak{q}_2)=0$ must hold.
+Meanwhile, by [\[Set Theory\] §Axiom of Choice, ⁋Theorem 4](/en/math/set_theory/axiom_of_choice#thm4), we know that within $\mathfrak{q}_1$ there exists a minimal prime ideal $\mathfrak{q}_2$. However, viewing $B$ as a module over itself, we have $\ann B=0$, so by the first result of [§Associated Primes, ⁋Theorem 7](/en/math/commutative_algebra/associated_primes#thm7), we have $\mathfrak{q}_2\in \Ass B$, and by the second result of that theorem, $\mathfrak{q}_2$ must consist entirely of zero-divisors. Therefore, by the property of $\phi$ observed above, we see that $\phi^{-1}(\mathfrak{q}_2)=0$. 
 :::
 
-Keeping $B/\mathfrak{p}_2B$ as in the above proof, we see that when choosing $\mathfrak{q}_2$, it suffices to take a minimal prime ideal among those contained in $\mathfrak{q}_1$ and containing $\mathfrak{p}_2 B$.
+If we keep $B/\mathfrak{p}_2B$ as it is in the above proof, we see that when choosing $\mathfrak{q}_2$, it suffices to choose one that is minimal among the prime ideals contained in $\mathfrak{q}_1$ and containing $\mathfrak{p}_2 B$. 
 
 Then the following holds.
 
 ::: Theorem 9
-If there exists a local homomorphism $\phi:(A,\mathfrak{m}) \rightarrow (B, \mathfrak{n})$ between Noetherian local rings, then
+If there is a local homomorphism $\phi:(A,\mathfrak{m}) \rightarrow (B, \mathfrak{n})$ between Noetherian local rings, then
 
 $$\dim B\leq \dim A +\dim B/\mathfrak{m}B$$
 
-holds, and if $\phi$ makes $B$ into a flat $A$-module, then equality holds.
+holds, and if $\phi$ makes $B$ a flat $A$-module, then equality holds.
 :::
 ::: Proof
-For convenience, write $\dim A=d$ and $e=\dim B/\mathfrak{m}B$. First, by [Corollary 1](#cor1), there exist $a_1,\ldots, a_d$ such that $\mathfrak{m}^s\subseteq (a_1,\ldots, a_d)$ for all sufficiently large $s$, and similarly there exist $b_1,\ldots, b_e\in B$ such that $\mathfrak{n}^t\subseteq \phi(\mathfrak{m})B+(b_1,\ldots, b_e)$ for all sufficiently large $t$. Then
+For convenience, let $\dim A=d$ and $e=\dim B/\mathfrak{m}B$. First, by [Corollary 1](#cor1), there exist $a_1,\ldots, a_d$ such that for sufficiently large $s$, we always have $\mathfrak{m}^s\subseteq (a_1,\ldots, a_d)$, and similarly there exist $b_1,\ldots, b_e\in B$ such that for sufficiently large $t$, we always have $\mathfrak{n}^t\subseteq \phi(\mathfrak{m})B+(b_1,\ldots, b_e)$. Then
 
 $$\mathfrak{n}^{st}=(\mathfrak{n}^t)^s\subseteq (\phi(\mathfrak{m})B+(b_1,\ldots, b_e))^s\subseteq \phi(\mathfrak{m}^s)B+(b_1,\ldots, b_e)\subseteq (\phi(a_1),\ldots, \phi(a_d), b_1,\ldots, b_e)$$
 
-so by [§Dimension, ⁋Theorem 7](/en/math/commutative_algebra/Krull_dimension#thm7), we have $\dim B\leq d+e$.
+so by [§Dimension, ⁋Theorem 7](/en/math/commutative_algebra/Krull_dimension#thm7), $\dim B\leq d+e$ holds. 
 
-Now assume that $\phi:A \rightarrow B$ makes $B$ a flat $A$-module, and let us show the reverse inequality. To do so, consider a chain of prime ideals giving the dimension of $B/\phi(\mathfrak{m})B$; then there exists a prime ideal $\mathfrak{q}$ of $B$ such that $\dim \mathfrak{q}=\dim B/\phi(\mathfrak{m})B$, and in particular $\mathfrak{q}$ is minimal among prime ideals containing $\phi(\mathfrak{m})B$. Then from the inequality
+Now assume that $\phi:A \rightarrow B$ makes $B$ a flat $A$-module, and let us show the reverse inequality. To this end, considering a chain of prime ideals giving the dimension of $B/\phi(\mathfrak{m})B$, there exists in $B$ a suitable prime ideal $\mathfrak{q}$ such that $\dim \mathfrak{q}=\dim B/\phi(\mathfrak{m})B$; in particular, $\mathfrak{q}$ is minimal among prime ideals containing $\phi(\mathfrak{m})B$. Then from the following inequality
 
 $$\dim B\geq\dim \mathfrak{q}+\codim \mathfrak{q}=\dim B/\phi(\mathfrak{m})B+\codim \mathfrak{q}$$
 
-we see that we need to show $\codim \mathfrak{q}\geq\dim A$. But by definition $\phi^{-1}(\mathfrak{q})=\mathfrak{m}$, so by [Lemma 8](#lem8), whenever a chain of prime ideals of $A$ starting at $\mathfrak{m}$
+we see that what we need to show is $\codim \mathfrak{q}\geq\dim A$. But by definition $\phi^{-1}(\mathfrak{q})=\mathfrak{m}$, so by [Lemma 8](#lem8) whenever a chain starting at $\mathfrak{m}$ of prime ideals of $A$
 
 $$\mathfrak{m}\supseteq \mathfrak{p}_1\supseteq \mathfrak{p}_2\supseteq\cdots$$
 
-is given, there exists a chain of prime ideals of $B$ starting from $\mathfrak{q}$
+is given, there exists a chain starting at $\mathfrak{q}$ of prime ideals of $B$
 
 $$\mathfrak{q}\supseteq \mathfrak{q}_1\supseteq \mathfrak{q}_2\supseteq\cdots$$
 
-and from this we obtain the desired inequality.
+and from this we obtain the desired inequality. 
 :::
 
-The following corollaries are obtained without difficulty from the above theorem.
+The following corollaries are easily obtained from the theorem above.
 
 ::: Corollary 10
-For a Noetherian local ring $(A, \mathfrak{m})$ and the $\mathfrak{m}$-adic completion $\widehat{A}$ of $A$, we have $\dim A=\dim \widehat{A}$.
+For a Noetherian local ring $(A, \mathfrak{m})$ and the completion at $\mathfrak{m}$ of $A$, $\widehat{A}$, we have $\dim A=\dim \widehat{A}$.
 :::
 
 ::: Corollary 11
 The following hold.
 
-1. For a field $\mathbb{K}$, we have $\dim \mathbb{K}[\x_1,\ldots, \x_r]=r$.
-2. For any ring $A$, we have $\dim A[\x]=1+\dim A$.
-3. For any prime ideal $\mathfrak{p}$ of $A$, there exists a prime ideal $\mathfrak{q}$ of $A[\x]$ satisfying $\mathfrak{q}\cap A=\mathfrak{p}$, and for a maximal such $\mathfrak{q}$ among those satisfying this property, the formula $\dim A[\x]_\mathfrak{q}=1+\dim A_\mathfrak{p}$ holds.
+1. For a field $\mathbb{K}$, $\dim \mathbb{K}[\x_1,\ldots, \x_r]=r$. 
+2. For any Noetherian ring $A$, $\dim A[\x]=1+\dim A$ holds.
+3. For any Noetherian ring $A$ and any prime ideal $\mathfrak{p}$, there exists, satisfying $\mathfrak{q}\cap A=\mathfrak{p}$, in $A[\x]$ a prime ideal $\mathfrak{q}$, and for $\mathfrak{q}$ maximal among those satisfying this property, the equation $\dim A[\x]_\mathfrak{q}=1+\dim A_\mathfrak{p}$ holds. 
 :::
 
 
