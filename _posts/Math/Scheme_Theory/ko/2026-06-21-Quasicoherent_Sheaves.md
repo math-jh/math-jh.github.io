@@ -10,6 +10,7 @@ sidebar:
 
 date: 2026-06-21
 weight: 16
+drift_needed: true
 
 ---
 
@@ -144,7 +145,7 @@ $$\psi(\Spec A):\widetilde M(\Spec A)=M \rightarrow N=\widetilde N(\Spec A)$$
 
 우선 $\phi\in \Hom_A(M, N)$에서 출발하면 $\widetilde\phi$의 global section은 정의에 의해 다시 $\phi$이므로 한 방향은 자명하다. 거꾸로 $\psi:\widetilde M \rightarrow \widetilde N$이 주어졌다 하고 $\phi=\psi(\Spec A)$라 하자. 우리는 $\widetilde \phi=\psi$임을 보여야 하며, 두 morphism이 일치하는 것은 base $\{D(f)\}$ 위에서 일치하는 것으로 충분하다. 임의의 $f\in A$에 대하여, $\psi$가 sheaf morphism이므로 다음 diagram
 
-{% diagram frozen/635a8f80/Math/Scheme_Theory/Quasicoherent_Sheaves-1.svg width="6.60em" alt="localization square" %}
+{% diagram Math/Scheme_Theory/Quasicoherent_Sheaves-1.svg width="6.60em" alt="localization square" %}
 
 이 commute하며, 여기에서 세로 morphism은 localization map이다. 한편 $\psi(D(f))$는 $A_f$-module homomorphism이므로 윗줄의 $\phi$와 commute한다는 조건과 $A_f$-선형성에 의해 임의의 $m/f^n\in M_f$에 대하여
 
@@ -177,11 +178,11 @@ $$\theta_f:M_f \rightarrow \mathcal{F}(D(f))$$
 
 가 결정된다. 이들은 base $\{D(f)\}$ 위에서 morphism $\theta:\widetilde M \rightarrow \mathcal{F}$를 정의하므로, $\theta$가 stalk마다 isomorphic함을 보이면 된다.
 
-이를 위해 $\mathcal{F}$의 quasi-coherence를 사용한다. 각 점 $\mathfrak{p}$에 대하여 $\mathfrak{p}\in D(g)$이고 $\mathcal{F}\vert_{D(g)}\cong \widetilde N$인 적당한 $g$와 $A_g$-module $N$이 존재한다. ([정의 8](#def8)에서 affine open neighborhood를 principal open set으로 줄일 수 있는 것은, [§스킴, ⁋보조정리 3](/ko/math/scheme_theory/schemes#lem3)의 증명에서와 같이 그 neighborhood 안에서 $\Spec A$의 principal open set이면서 동시에 그 neighborhood 자신의 principal open set이기도 한 근방을 잡을 수 있고, 그 위에서 [명제 5](#prop5)의 둘째 결과에 의하여 다시 associated sheaf가 되기 때문이다.) 그럼 $N=\mathcal{F}(D(g))$이고, [명제 5](#prop5)에 의하여 $D(g)$ 위로 제한된 $\theta$는 $\widetilde{M_g} \rightarrow \widetilde N$의 꼴이다. 두 associated sheaf 사이의 morphism은 [정리 7](#thm7)에 의해 그 global section morphism으로 결정되므로, 이 restriction이 isomorphic한 것은 자연스러운 localization morphism $M_g=\mathcal{F}(\Spec A)_g \rightarrow \mathcal{F}(D(g))=N$이 isomorphic한 것과 같다. 이제 이 morphism이 isomorphic함을 확인한다. $\Spec A$가 quasi-compact이므로 그 위에서 $\mathcal{F}$가 associated sheaf가 되는 유한 개의 principal open $D(h_1),\ldots,D(h_m)$으로 $\Spec A$를 덮을 수 있고, sheaf 조건은 exact sequence
+이를 위해 $\mathcal{F}$의 quasi-coherence를 사용한다. 각 점 $\mathfrak{p}$에 대하여 $\mathfrak{p}\in D(g)$이고 $\mathcal{F}\vert_{D(g)}\cong \widetilde N$인 적당한 $g$와 $A_g$-module $N$이 존재한다. 이 때 [정의 8](#def8)에서 affine open neighborhood를 principal open set으로 줄일 수 있는 것은, [§스킴, ⁋보조정리 3](/ko/math/scheme_theory/schemes#lem3)의 증명에서와 같이 그 neighborhood 안에서 $\Spec A$의 principal open set이면서 동시에 그 neighborhood 자신의 principal open set이기도 한 근방을 잡을 수 있고, 그 위에서 [명제 5](#prop5)의 둘째 결과에 의하여 다시 associated sheaf가 되기 때문이다. 그럼 $N=\mathcal{F}(D(g))$이고, [명제 5](#prop5)에 의하여 $D(g)$ 위로 제한된 $\theta$는 $\widetilde{M_g} \rightarrow \widetilde N$의 꼴이다. 두 associated sheaf 사이의 morphism은 [정리 7](#thm7)에 의해 그 global section morphism으로 결정되므로, 이 restriction이 isomorphic한 것은 자연스러운 localization morphism $M_g=\mathcal{F}(\Spec A)_g \rightarrow \mathcal{F}(D(g))=N$이 isomorphic한 것과 같다. 이제 이 morphism이 isomorphic함을 확인한다. $\Spec A$가 quasi-compact이므로 그 위에서 $\mathcal{F}$가 associated sheaf가 되는 유한 개의 principal open $D(h_1),\ldots,D(h_m)$으로 $\Spec A$를 덮을 수 있고, sheaf 조건은 exact sequence
 
 $$0 \rightarrow \mathcal{F}(\Spec A) \rightarrow \prod_i \mathcal{F}(D(h_i)) \rightarrow \prod_{i,j}\mathcal{F}(D(h_ih_j))$$
 
-을 준다. 각 $D(h_i)$·$D(h_ih_j)$ 위에서 $\mathcal{F}$가 associated sheaf이라 그 section은 $A$-module이고 곱이 유한하므로, 완전한 localization $(-)\otimes_A A_g$은 이 열의 완전성을 보존할 뿐 아니라 곱을 통과한다. 그 결과 위 열을 $g$에서 localize한 것은 covering $\{D(h_ig)\}$에 대한 $D(g)$ 위의 sheaf 조건과 정확히 일치하는 exact sequence가 되어 $M_g\cong \mathcal{F}(D(g))=N$을 얻는다. 여기서 $\Spec A$의 quasi-compactness가 유한 covering을 보장하는 데 본질적으로 쓰였다. 따라서 $\theta$는 각 $D(g)$ 위에서 isomorphic하고, 이로부터 모든 stalk에서 isomorphic하므로 $\theta:\widetilde M \rightarrow \mathcal{F}$는 sheaf의 isomorphism이다.
+을 준다. 각 $D(h_i)$·$D(h_ih_j)$ 위에서 $\mathcal{F}$가 associated sheaf이라 그 section은 $A$-module이고 곱이 유한하므로, 완전한 localization $(-)\otimes_A A_g$은 이 열의 완전성을 보존할 뿐 아니라 곱을 통과한다. 그 결과 위 열을 $g$에서 localize한 것은 covering $\{D(h_ig)\}$에 대한 $D(g)$ 위의 sheaf 조건과 정확히 일치하는 exact sequence가 되어 $M_g\cong \mathcal{F}(D(g))=N$을 얻는다. 여기서 $\Spec A$의 quasi-compactness가 finite covering을 보장하는 데 본질적으로 쓰였다. 따라서 $\theta$는 각 $D(g)$ 위에서 isomorphic하고, 이로부터 모든 stalk에서 isomorphic하므로 $\theta:\widetilde M \rightarrow \mathcal{F}$는 sheaf의 isomorphism이다.
 :::
 
 [정리 9](#thm9)는 affine scheme 위에서 quasi-coherent sheaf를 다루는 것이 곧 module을 다루는 것과 같음을 말해준다. 즉 $\Spec A$ 위의 모든 quasi-coherent sheaf는 그 global section module $M=\Gamma(\Spec A, \mathcal{F})$으로 완전히 복원되며, 이 대응은 [명제 6](#prop6)의 exactness와 위에서 언급한 tensor product와의 호환성을 통해 module의 대수와 sheaf의 대수를 일치시킨다.
@@ -209,7 +210,7 @@ $\mathcal{F}$의 quasi-coherence에 의하여 $U$의 각 점 $x$마다 ($X$에�
 Quasi-coherent sheaf 가운데 특히 affine 위에서 finitely generated module 또는 finitely presented module에 대응하는 것들을 따로 구별한다. 이는 Noetherian 가정 아래에서 가장 잘 작동한다.
 
 ::: 정의 11
-Scheme $X$ 위의 quasi-coherent sheaf $\mathcal{F}$가 *finite type<sub>유한형</sub>*이라는 것은, 각 점이 affine open neighborhood $U\cong \Spec A$를 가져 $\mathcal{F}\vert_U\cong \widetilde M$이고 $M$이 finitely generated $A$-module인 것이다. 만일 추가로 모든 affine open 위에서 $M$이 finitely presented module이 되도록 할 수 있다면, $\mathcal{F}$를 *coherent sheaf<sub>연접층</sub>*라 부른다.
+Scheme $X$ 위의 quasi-coherent sheaf $\mathcal{F}$가 *finite type<sub>유한형</sub>*이라는 것은, 각 점이 affine open neighborhood $U\cong \Spec A$를 가져 $\mathcal{F}\vert_U\cong \widetilde M$이고 $M$이 finitely generated $A$-module인 것이다. 만일 추가로 각 점이 이러한 affine open neighborhood를 가지며 이들 각각에서 $M$을 finitely presented $A$-module로 잡을 수 있다면, $\mathcal{F}$를 *coherent sheaf<sub>연접층</sub>*라 부른다.
 :::
 
 Locally Noetherian scheme 위에서는 finitely generated와 finitely presented가 일치하므로, 이 경우 coherent sheaf는 곧 finite type quasi-coherent sheaf이다. $X$ 위의 coherent sheaves는 $\QCoh(X)$의 full subcategory $\Coh(X)$를 이룬다. 가장 단순한 예시는 $\mathcal{O}_X$ 자기 자신으로, 이는 affine 위에서 $\widetilde A$이고 $A$는 자기 자신 위의 free module이므로 coherent sheaf이다.
@@ -305,7 +306,7 @@ Pushforward의 경우 quasi-coherence가 보존되려면 morphism이 quasi-compa
 Quasi-compact이고 quasi-separated인 scheme morphism $\varphi:X \rightarrow Y$와 $X$ 위의 quasi-coherent sheaf $\mathcal{F}$에 대하여, pushforward $\varphi_\ast \mathcal{F}$는 $Y$ 위의 quasi-coherent sheaf이다.
 :::
 ::: 증명
-quasi-coherence가 affine-local property이므로 ([정리 10](#thm10)) $Y=\Spec A$인 경우만 보이면 충분하다. 이 때 $\varphi$가 quasi-compact이므로 $X$는 유한히 많은 affine open subset $U_i=\Spec B_i$ ($i=1,\ldots, n$)으로 덮인다. 또 $\varphi$가 quasi-separated이므로 각 $U_i\cap U_j$ 또한 유한히 많은 affine open $U_{ijk}=\Spec C_{ijk}$로 덮인다.
+Quasi-coherence가 affine-local property이므로 ([정리 10](#thm10)) $Y=\Spec A$인 경우만 보이면 충분하다. 이 때 $\varphi$가 quasi-compact이므로 $X$는 유한히 많은 affine open subset $U_i=\Spec B_i$ ($i=1,\ldots, n$)으로 덮인다. 또 $\varphi$가 quasi-separated이므로 각 $U_i\cap U_j$ 또한 유한히 많은 affine open $U_{ijk}=\Spec C_{ijk}$로 덮인다.
 
 이제 $M=\Gamma(X, \mathcal{F})=\varphi_\ast \mathcal{F}(\Spec A)$라 하고 $\varphi_\ast \mathcal{F}\cong \widetilde M$임을 보이자. 그러려면 각 $D(g)\subseteq \Spec A$에 대하여 $\varphi_\ast \mathcal{F}(D(g))\cong M_g$임을 확인하면 된다. 정의에 의하여 $\varphi_\ast \mathcal{F}(D(g))=\mathcal{F}(\varphi^{-1}(D(g)))$이며, sheaf 조건 ([§아핀스킴, ⁋보조정리 6](/ko/math/scheme_theory/affine_schemes#lem6) 이후 일반 sheaf의 sheaf axiom)으로부터 다음 equalizer
 
@@ -369,6 +370,70 @@ $$0 \rightarrow \ker\phi \rightarrow A \rightarrow \im\phi \rightarrow 0,\qquad 
 :::
 
 이로써 $X$의 closed subscheme들은 $\mathcal{O}_X$의 quasi-coherent ideal sheaf, 곧 $\mathcal{O}_X$의 quasi-coherent 부분 $\mathcal{O}_X$-module과 정확히 대응한다. 한 방향은 [명제 18](#prop18)이 주며, 거꾸로 그러한 $\mathcal{I}$가 주어지면 각각의 affine open subset $\Spec A$에 대하여 $\mathcal{I}(\Spec A)$는 $A$의 ideal이고 [정리 10](#thm10)과 [보조정리 3](#lem3)에 의하여 $\mathcal{I}(D(f))\cong \mathcal{I}(\Spec A)_f$가 성립하므로, [§닫힌 부분스킴, ⁋명제 6](/ko/math/scheme_theory/closed_subschemes#prop6)에 의하여 $\mathcal{I}$는 $X$의 유일한 closed subscheme을 유도한다. 이 대응은 affine 위에서 ideal $\mathfrak{a}\subseteq A$와 quotient $A/\mathfrak{a}$ 사이의 대응에 다름 아니다. 또한 [명제 18](#prop18)은 [§닫힌 부분스킴, ⁋명제 3](/ko/math/scheme_theory/closed_subschemes#prop3)의 증명에서 증명 없이 사용한 사실이기도 하다. 
+
+## Affine morphism과 relative spectrum
+
+Closed embedding은 특정한 sheaf, 즉 $\mathcal{O}_X$의 ideal sheaf를 통해 완전하게 설명할 수 있었으며, 우리는 위에서 이 ideal sheaf가 quasi-coherent sheaf인 것을 살펴보았다. 이렇게 sheaf를 통해 완전하게 정해지는 morphism은 closed embedding 뿐이 아니며, 우리는 affine morphism 또한 이러한 방식의 표현을 갖는다는 것을 살펴볼 것이다. ([§스킴 사상의 성질들, ⁋정의 8](/ko/math/scheme_theory/properties_of_scheme_morphisms#def8)) 핵심적인 사실은 affine morphism $X\rightarrow S$를 정의하기 위해서는 $X$의 open affine subscheme들 (그리고 이들로부터 $S$로의 map들)을 붙여주면 된다는 것이다. 그런데 affine subscheme들은 정확하게 그 coordinate ring으로부터 완전하게 얻어지는 것이므로 우리는 이 ring들을 붙이는 문제를 대신 풀면 된다. 이 때 affine morphism $\varphi: X \rightarrow S$에 대하여 각각의 ring $\mathcal{O}_X(\varphi^{-1}(V))$는 structure morphism이 주는 $\mathcal{O}_S(V)$로부터의 ring homomorphism을 함께 가지므로 $\mathcal{O}_S(V)$-algebra이고, 따라서 이 데이터 전체는 $S$ 위의 sheaf $\varphi_\ast\mathcal{O}_X$ 하나와 그 algebra 구조로 정리된다.
+
+::: 정의 19
+Scheme $S$ 위의 $\mathcal{O}_S$-module $\mathcal{A}$가 *quasi-coherent $\mathcal{O}_S$-algebra*라는 것은, $\mathcal{A}$가 quasi-coherent sheaf이며 ([정의 8](#def8)) 각각의 열린집합 $V$마다 $\mathcal{A}(V)$가 가환 $\mathcal{O}_S(V)$-algebra의 구조를 가지고 restriction map이 algebra homomorphism인 것이다.
+:::
+
+위에서 설명한 것과 같이 affine morphism이 주어지면 항상 이러한 방식으로 quasi-coherent $\mathcal{O}_S$-algebra를 정의할 수 있다. 우리 주장은 이보다 강력한 것으로, 임의의 quasi-coherent $\mathcal{O}_S$-algebra는 언제나 이러한 방식으로 얻어진다는 것이다.
+
+::: 정리 20
+다음이 성립한다.
+
+1. Affine morphism $\varphi: X \rightarrow S$에 대하여 $\varphi_\ast \mathcal{O}_X$는 quasi-coherent $\mathcal{O}_S$-algebra이며 $S$의 임의의 affine open subset $V$에 대하여 $\varphi^{-1}(V)\cong \Spec (\varphi_\ast \mathcal{O}_X)(V)$이다.
+2. 임의의 quasi-coherent $\mathcal{O}_S$-algebra $\mathcal{A}$에 대하여, affine morphism $\varphi: X \rightarrow S$와 $\mathcal{O}_S$-algebra들의 isomorphism $\alpha:\mathcal{A}\xrightarrow{\sim} \varphi_\ast \mathcal{O}_X$가 존재한다. 이러한 triple $(X, \varphi, \alpha)$은 $\alpha$와 호환되는 unique isomorphism에 대하여 유일하다.
+3. 두 affine morphism $\varphi: X \rightarrow S$와 $\varphi': Z \rightarrow S$에 대하여, $S$ 위의 morphism $X \rightarrow Z$를 주는 것은 $\mathcal{O}_S$-algebra들의 morphism $(\varphi')_\ast \mathcal{O}_Z \rightarrow \varphi_\ast \mathcal{O}_X$를 주는 것과 같다.
+:::
+::: 증명
+첫째 주장부터 보인다. 우선 quasi-coherence를 보이기 위해 우리는 앞서와 마찬가지로 [정리 16](#thm16)을 사용한다. 우선 $S$의 affine open subset $V$에 대하여 $\varphi^{-1}(V)\cong \Spec A$는 affine scheme이므로 quasi-compact이다. ([§스펙트럼, ⁋보조정리 12](/ko/math/scheme_theory/spectrums#lem12)) 또, $\{D(f)\}$가 $\Spec A$의 base이므로 quasi-compact open set이 언제나 유한히 많은 $D(f)$의 합집합이고, $D(f)\cap D(g)=D(fg)$이므로 그러한 두 열린집합의 교집합이 다시 유한히 많은 $D(fg)$ 꼴의 합집합이 되므로 이들은 quasi-separated이다. 즉 $\varphi$는 quasi-compact, quasi-separated morphism이 되어 [정리 16](#thm16)을 적용할 수 있고 따라서 $\varphi_\ast \mathcal{O}_X$는 $S$ 위의 quasi-coherent sheaf이다. 이 위의 algebra 구조는 structure sheaf의 morphism $\varphi^\sharp:\mathcal{O}_S \rightarrow \varphi_\ast\mathcal{O}_X$으로 주어진다. 마지막으로 $V$가 affine open subset이면 $\varphi^{-1}(V)$ 자체가 affine scheme이므로, [§아핀스킴, ⁋보조정리 6](/ko/math/scheme_theory/affine_schemes#lem6)에 의하여 $\varphi^{-1}(V)\cong \Spec \mathcal{O}_X(\varphi^{-1}(V))=\Spec (\varphi_\ast \mathcal{O}_X)(V)$를 얻는다.
+
+역시 핵심적인 것은 둘째 주장이다. 우선 존재성을 보이기 위해 $S$의 affine open covering $\{V_i=\Spec B_i\}$를 택하자. 이제 $A_i=\mathcal{A}(V_i)$라 하면 $\mathcal{A}$가 quasi-coherent이므로 [정리 10](#thm10)에 의하여 $\mathcal{A}\vert_{V_i}\cong \widetilde{A_i}$이다. 이제 $\mathcal{A}$의 $\mathcal{O}_S$-algebra 구조가 주는 ring homomorphism을 $\phi_i:B_i \rightarrow A_i$라 하면, $X_i=\Spec A_i$로 두어 $\phi_i$가 정의하는 scheme morphism $\varphi_i:X_i \rightarrow V_i$을 정의할 수 있다. 주장은 $X_{ij}=\varphi_i^{-1}(V_i\cap V_j)$들을 붙일 수 있다는 것이다. 이를 확인하기 위해 임의의 $x\in V_i\cap V_j$에 대하여, $V_i$와 $V_j$ 모두에서 principal open subset인 $x\in W\subseteq V_i\cap V_j$를 택하자. ([§스킴의 위상구조, ⁋보조정리 11](/ko/math/scheme_theory/topology_of_schemes#lem11)) $W$가 $V_i$ 안에서 $D(f)$ 꼴로 적힌다 하면, $\mathcal{A}\vert_{V_i}\cong \widetilde{A_i}$로부터 $\mathcal{A}(W)\cong (A_i)_{\phi_i(f)}$이고, $W$의 정의에 의해 $\varphi_i^{-1}(W)=D(\phi_i(f))$이므로
+
+$$\varphi_i^{-1}(W)\cong \Spec (A_i)_{\phi_i(f)}\cong \Spec \mathcal{A}(W)\tag{$\ast$}$$
+
+이 성립한다. 같은 계산이 $V_j$ 쪽에서도 성립하므로 canonical isomorphism $\varphi_i^{-1}(W)\cong \varphi_j^{-1}(W)$를 얻는다. 이 isomorphism은 $\mathcal{A}(W)$만으로 결정되므로, 이들은 자연스럽게 overlap 위에서 붙으며 cocycle condition을 만족한다. 즉 이들은 하나의 scheme $X$과 이 위의 morphism $\varphi: X\rightarrow S$로 붙는다. 이 때 각각의 $\varphi^{-1}(V_i)=X_i$가 affine이므로 [§스킴 사상의 성질들, ⁋명제 9](/ko/math/scheme_theory/properties_of_scheme_morphisms#prop9)에 의하여 $\varphi$는 affine morphism이고, identification $(\varphi_\ast\mathcal{O}_X)(V_i)=\Gamma(X_i,\mathcal{O}_{X_i})=A_i=\mathcal{A}(V_i)$이 restriction map과 호환되므로 이들은 $\mathcal{O}_S$-algebra들의 isomorphism $\alpha:\mathcal{A}\xrightarrow{\sim}\varphi_\ast\mathcal{O}_X$을 준다. 유일성 또한 본질적으로 $(\ast)$로부터 나오는 것으로, 두 triple $(X,\varphi,\alpha)$와 $(X',\varphi',\alpha')$이 조건을 만족한다면 이 계산에 의해 $S$의 임의의 affine open subset $V$에 대하여
+
+$$\varphi^{-1}(V)\cong \Spec \mathcal{A}(V)\cong (\varphi')^{-1}(V)$$
+
+이 성립해야 하기 때문에 얻어진다.
+
+마지막 주장의 경우, $S$ 위의 morphism $\vartheta:X\rightarrow Z$가 주어지면 $S$의 affine open subset $V$마다 $\vartheta$는 morphism $\varphi^{-1}(V)\rightarrow (\varphi')^{-1}(V)$를 유도하고, 첫째 주장에 의하여 이 둘이 affine scheme이므로 이는 $\mathcal{O}_S(V)$-algebra homomorphism $((\varphi')_\ast\mathcal{O}_Z)(V)\rightarrow (\varphi_\ast\mathcal{O}_X)(V)$에 대응된다. 이들이 restriction map과 호환되므로 $\mathcal{O}_S$-algebra들의 morphism $(\varphi')_\ast\mathcal{O}_Z\rightarrow \varphi_\ast\mathcal{O}_X$를 얻는다. 거꾸로 이러한 morphism이 주어지면 같은 대응이 각 affine open subset 위에서 $\varphi^{-1}(V)\rightarrow (\varphi')^{-1}(V)$를 주고 이들은 overlap 위에서 일치하므로 [§스킴 사이의 사상, ⁋명제 1](/ko/math/scheme_theory/morphism_of_schemes#prop1)에 의하여 $S$ 위의 morphism $X\rightarrow Z$로 붙고, 이 두 구성이 서로의 역인 것은 affine 위에서 확인할 수 있다.
+:::
+
+즉 affine morphism은 $S$ 위의 quasi-coherent algebra와 정확히 같은 데이터이며, [정리 20](#thm20)의 셋째 주장은 이 대응이 morphism까지 보존한다는 것을 보여준다. 즉 $S$ 위의 affine scheme들의 category $\AffSch_{/S}$와 quasi-coherent $\mathcal{O}_S$-algebra들의 category 사이의 contravariant equivalenc가 존재한다. 이제 이 대응의 한쪽 방향에 이름을 붙인다.
+
+::: 정의 21
+Quasi-coherent $\mathcal{O}_S$-algebra $\mathcal{A}$에 대하여, [정리 20](#thm20)의 둘째 주장이 주는 affine morphism $\varphi:X\rightarrow S$의 정의역 $X$를 $\mathcal{A}$의 *relative spectrum*이라 부르고 $\rSpec_S(\mathcal{A})$로 적는다.
+:::
+
+직관적으로 이는 $\Spec$을 base 위로 올린 relative 버전으로, 특히 closed embedding $\iota:Z\rightarrow S$는 affine morphism이므로 ([§닫힌 부분스킴, ⁋명제 3](/ko/math/scheme_theory/closed_subschemes#prop3)) 같은 construction을 반본할 수 있다. 당연히 이렇게 얻어지는 algebra는 $\mathcal{O}_S/\mathcal{I}_{Z/S}$로, 즉 위에서 살펴본 ideal sheaf의 대응은 relative spectrum을 이 특수한 경우에 적용한 것이다.
+
+뿐만 아니라 relative spectrum은 base change에 대해서도 잘 행동한다.
+
+::: 명제 22
+Scheme morphism $\varphi:S'\rightarrow S$와 quasi-coherent $\mathcal{O}_S$-algebra $\mathcal{A}$에 대하여, pullback $\varphi^\ast\mathcal{A}$는 quasi-coherent $\mathcal{O}_{S'}$-algebra이고
+
+$$\rSpec_{S'}(\varphi^\ast\mathcal{A})\cong \rSpec_S(\mathcal{A})\times_SS'$$
+
+이 성립한다.
+:::
+::: 증명
+$\varphi^\ast\mathcal{A}$가 quasi-coherent sheaf인 것은 [명제 15](#prop15)이며, pullback이 tensor product와 compatible하므로 $\mathcal{A}$의 곱셈과 항등원을 pullback해와서 이 위에 $\mathcal{O}_{S'}$-algebra 구조를 줄 수 있다.
+
+이제 $X=\rSpec_S(\mathcal{A})$라 하고 projection $p:X\times_SS'\rightarrow S'$를 생각하자. $\varphi(V')\subseteq V$인 affine open subset $V'=\Spec B'\subseteq S'$와 $V=\Spec B\subseteq S$의 쌍은 $S'$을 덮으며, $\varphi\vert_{V'}:V'\rightarrow V$에 대응하는 ring homomorphism을 $\phi:B\rightarrow B'$라 하자. 이러한 $V'$에 대하여 [§올곱, ⁋보조정리 3](/ko/math/scheme_theory/fiber_products#lem3)과 fiber product의 결합법칙으로부터
+
+$$p^{-1}(V')\cong X\times_SV'\cong (X\times_SV)\times_VV'$$
+
+이고, [§올곱, ⁋보조정리 3](/ko/math/scheme_theory/fiber_products#lem3)에 의하여 $X\times_SV$는 $V$의 preimage, 곧 [정리 20](#thm20)의 첫째 주장에 의하여 $\Spec \mathcal{A}(V)$이다. 따라서 [§올곱, ⁋보조정리 2](/ko/math/scheme_theory/fiber_products#lem2)에 의하여
+
+$$p^{-1}(V')\cong \Spec \mathcal{A}(V)\times_{\Spec B}\Spec B'\cong \Spec (\mathcal{A}(V)\otimes_BB')$$
+
+를 얻는다. 한편 [명제 15](#prop15)의 증명에 의하여 $(\varphi^\ast\mathcal{A})\vert_{V'}\cong \widetilde{\mathcal{A}(V)\otimes_BB'}$이므로, [정리 20](#thm20)의 첫째 주장에 의하여 $\rSpec_{S'}(\varphi^\ast\mathcal{A})$ 또한 $V'$ 위에서 $\Spec (\mathcal{A}(V)\otimes_BB')$이다. 이 isomorphism들은 모두 $\phi:B\rightarrow B'$과 $\mathcal{A}(V)$의 $B$-algebra 구조로부터 canonical하게 정해지므로 overlap 위에서 일치하여 $S'$ 위의 isomorphism으로 붙는다.
+:::
 
 ---
 

@@ -184,7 +184,7 @@ Noetherian ring $A$와 $A$-module $M$에 대하여, 다음이 모두 동치이�
 
 ## 소아이디얼
 
-마지막으로 우리는 [\[대수적 구조\] §분수체, ⁋명제 8](/ko/math/algebraic_structures/field_of_fractions#prop8)에서 정의한 *prime ideal*의 개념이 필요하다. 
+마지막으로 우리는 [\[대수적 구조\] §분수체, ⁋명제 9](/ko/math/algebraic_structures/field_of_fractions#prop9)에서 정의한 *prime ideal*의 개념이 필요하다. 
 
 ::: 정의 10
 Ring $A$의 ideal $\mathfrak{p}\subsetneq A$가 *prime ideal*이라는 것은, 만일 $ab\in \mathfrak{p}$라면 반드시 $a\in \mathfrak{p}$이거나 $b\in \mathfrak{p}$가 성립하는 것이다.
@@ -200,7 +200,7 @@ Ring $A$의 임의의 ideal $\mathfrak{a}$에 대하여, $A/\mathfrak{a}$의 pri
 
 $$A/\mathfrak{p}\cong \frac{A/\mathfrak{a}}{\mathfrak{p}/\mathfrak{a}}$$
 
-이 성립하며, 그 후 [\[대수적 구조\] §분수체, ⁋명제 8](/ko/math/algebraic_structures/field_of_fractions#prop8)의 동치조건을 사용하면 된다. 
+이 성립하며, 그 후 [\[대수적 구조\] §분수체, ⁋명제 9](/ko/math/algebraic_structures/field_of_fractions#prop9)의 동치조건을 사용하면 된다. 
 :::
 
 ## Hilbert 기저 정리
@@ -215,7 +215,7 @@ Noetherian ring $A$에 대하여, polynomial ring $A[\x]$ 또한 Noetherian이�
 
 우선 $\mathfrak{a}_n$이 $A$의 ideal임을 확인한다. 두 degree $n$의 다항식 $f,g\in I$의 leading coefficient를 각각 $a,b$라 하면, $f+g\in I$는 degree $n$이면서 leading coefficient가 $a+b$이거나, 또는 $a+b=0$이라면 degree가 $n$보다 작으므로, 어느 경우건 $a+b\in \mathfrak{a}_n$이다. 또 임의의 $\lambda\in A$에 대하여 $\lambda f\in I$의 leading coefficient는 $\lambda a$이거나 $0$이므로 $\lambda a\in \mathfrak{a}_n$이다. 한편 $f\in I$가 degree $n$이면 $\x f\in I$는 degree $n+1$이고 leading coefficient가 같으므로, $\mathfrak{a}_n\subseteq \mathfrak{a}_{n+1}$이 성립한다.
 
-이렇게 얻은 ascending chain $\mathfrak{a}_0\subseteq \mathfrak{a}_1\subseteq \cdots$은 $A$가 Noetherian이므로 적당한 $N$에서 안정화되어, 모든 $n\geq N$에 대하여 $\mathfrak{a}_n=\mathfrak{a}_N$이다. 또한 각 $n\leq N$에 대하여 $\mathfrak{a}_n$ 역시 finitely generated이므로, 그 generator를 $0$이 아닌 것들로 택하여 $a_{n,1},\ldots,a_{n,k_n}$이라 하고($\mathfrak{a}_n=0$이면 $k_n=0$이다), 각 $a_{n,j}$를 leading coefficient로 갖는 degree $n$의 다항식 $f_{n,j}\in I$을 하나씩 택하자.
+이렇게 얻은 ascending chain $\mathfrak{a}_0\subseteq \mathfrak{a}_1\subseteq \cdots$은 $A$가 Noetherian이므로 적당한 $N$에서 안정화되어, 모든 $n\geq N$에 대하여 $\mathfrak{a}_n=\mathfrak{a}_N$이다. 또한 각 $n\leq N$에 대하여 $\mathfrak{a}_n$ 역시 finitely generated이므로, 그 generator를 $a_{n,1},\ldots,a_{n,k_n}$이라 하고, 각 $a_{n,j}$를 leading coefficient로 갖는 degree $n$의 다항식 $f_{n,j}\in I$을 하나씩 택하자.
 
 이제 유한집합 $\{f_{n,j}\mid 0\leq n\leq N,\ 1\leq j\leq k_n\}$이 $I$를 생성함을, $I$의 원소의 degree에 대한 induction으로 보인다. $I$의 다항식 $f$의 degree를 $d$, leading coefficient를 $c$라 하자. 만일 $d\leq N$이라면 $c\in \mathfrak{a}_d$이므로 적당한 $\lambda_j\in A$에 대하여 $c=\sum_j \lambda_j a_{d,j}$이고,
 

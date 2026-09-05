@@ -17,7 +17,7 @@ Scheme은 기하적인 동시에 대수적인 대상이므로, 이를 잘 알기
 ## 축소스킴과 정역스킴
 
 ::: 정의 1
-Scheme $X$가 *reduced scheme<sub>축소스킴</sub>*인 것은 임의의 열린집합 $U$에 대하여 $\mathcal{O}_X(U)$가 reduced인 것이다. ([\[대수적 구조\] §분수체, ⁋정의 11](/ko/math/algebraic_structures/field_of_fractions#def11)) 비슷하게, $X$가 *integral<sub>정역스킴</sub>*인 것은 공집합이 아닌 임의의 열린집합 $U$에 대하여 $\mathcal{O}_X(U)$가 integral domain인 것이다. ([\[대수적 구조\] §분수체, ⁋정의 5](/ko/math/algebraic_structures/field_of_fractions#def5))
+Scheme $X$가 *reduced scheme<sub>축소스킴</sub>*인 것은 임의의 열린집합 $U$에 대하여 $\mathcal{O}_X(U)$가 reduced인 것이다. ([\[대수적 구조\] §분수체, ⁋정의 12](/ko/math/algebraic_structures/field_of_fractions#def12)) 비슷하게, $X$가 *integral<sub>정역스킴</sub>*인 것은 $X\neq\emptyset$이고 공집합이 아닌 임의의 열린집합 $U$에 대하여 $\mathcal{O}_X(U)$가 integral domain인 것이다. ([\[대수적 구조\] §분수체, ⁋정의 5](/ko/math/algebraic_structures/field_of_fractions#def5))
 :::
 
 그럼 다음이 성립한다.
@@ -58,7 +58,7 @@ $\Spec A$가 irreducible인 것은 이 공간의 임의의 두 basis $D(f),D(g)\
 
 $$D(f)\neq\emptyset\iff f\not\in \mathfrak{p}\text{ for some $\mathfrak{p}$}\iff f\not\in \mathfrak{N}(A)$$
 
-로부터, ([\[대수적 구조\] §분수체, ⁋명제 14](/ko/math/algebraic_structures/field_of_fractions#prop14)) 명제 $D(f),D(g)\neq\emptyset\implies D(fg)\neq\emptyset$은 다음 명제
+로부터, ([\[대수적 구조\] §분수체, ⁋명제 15](/ko/math/algebraic_structures/field_of_fractions#prop15)) 명제 $D(f),D(g)\neq\emptyset\implies D(fg)\neq\emptyset$은 다음 명제
 
 $$f,g\not\in \mathfrak{N}(A)\implies fg\not\in \mathfrak{N}(A)$$
 

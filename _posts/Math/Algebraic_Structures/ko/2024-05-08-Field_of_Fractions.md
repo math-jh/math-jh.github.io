@@ -11,7 +11,6 @@ sidebar:
 date: 2024-05-08
 weight: 104
 
-
 ---
 
 ## 분수환
@@ -151,11 +150,26 @@ $A$가 integral domain이라는 가정으로부터, $S=A\setminus\{0\}$임을 �
 위의 [명제 6](#prop6)으로부터 얻어지는 field $S^{-1}A$를 $A$의 *field of fractions<sub>분수체</sub>*이라 부르고, $\Frac(A)$로 나타낸다.
 :::
 
+Field of fractions는 다음과 같은 universal property를 갖는다.
+
+::: 명제 8
+Integral domain $A$와 field $\mathbb{K}$, 그리고 embedding $f:A\hookrightarrow\mathbb{K}$가 주어졌다 하자. 그럼 $\bar{f}\circ\epsilon=f$를 만족하는 ring homomorphism $\bar{f}:\Frac(A)\rightarrow\mathbb{K}$가 유일하게 존재한다.
+:::
+::: 증명
+우선 유일성을 보이자. 그러한 $\bar{f}$가 존재한다면, $\Frac(A)$의 임의의 원소는 $\epsilon(\alpha)\epsilon(\beta)^{-1}$ 꼴로 쓰이므로
+
+$$\bar{f}(\alpha/\beta)=\bar{f}(\epsilon(\alpha)\epsilon(\beta)^{-1})=f(\alpha)f(\beta)^{-1}$$
+
+이어야 하고, 따라서 $\bar{f}$는 존재한다면 유일하다.
+
+존재성을 보이기 위해 $\bar{f}(\alpha/\beta)=f(\alpha)f(\beta)^{-1}$로 정의하자. $f$가 injective하므로 $\beta\neq 0$이면 $f(\beta)\neq 0$이고, $\mathbb{K}$가 field이므로 $f(\beta)$는 invertible하다. 이제 $\alpha/\beta=\alpha'/\beta'$이라 하면, $A$가 integral domain이므로 [정리 1](#thm1)의 동치관계 정의에서 $\alpha\beta'=\alpha'\beta$이고, 따라서 $f(\alpha)f(\beta')=f(\alpha')f(\beta)$로부터 $f(\alpha)f(\beta)^{-1}=f(\alpha')f(\beta')^{-1}$을 얻는다. 즉 $\bar{f}$는 잘 정의된다. 이것이 덧셈과 곱셈을 보존하는 것은 $\Frac(A)$의 덧셈과 곱셈의 정의로부터 바로 따라오고, $\bar{f}(\epsilon(\alpha))=f(\alpha)f(1)^{-1}=f(\alpha)$이므로 $\bar{f}\circ\epsilon=f$가 성립한다.
+:::
+
 ## 소아이디얼
 
 Ring homomorphism의 fourth isomorphism theorem으로부터, 임의의 commutative ring $A\neq 0$과 maximal ideal $\mathfrak{m}$에 대하여 $A/\mathfrak{m}$의 유일한 ideal은 $0$과 $A/\mathfrak{m}$ 자기 자신 뿐임을 안다. 따라서 [명제 4](#prop4)에 의하여 $A/\mathfrak{m}$은 division ring, 즉 field이다. Integral domain 또한 비슷한 식으로 특징지을 수 있다.
 
-::: 명제 8
+::: 명제 9
 Commutative ring $A$와 ideal $\mathfrak{p}\neq A$에 대하여 다음이 모두 동치이다.
 
 1. $A/\mathfrak{p}$가 integral domain이다.
@@ -174,28 +188,28 @@ $$(\alpha+\mathfrak{p})(\beta+\mathfrak{p})=0+\mathfrak{p}$$
 
 한편 다음이 성립한다.
 
-::: 명제 9
+::: 명제 10
 Commutative ring $A,B$ 사이의 ring homomorphism $\phi:A \rightarrow B$와 $B$의 prime ideal $\mathfrak{p}$에 대하여, $\phi^{-1}(\mathfrak{p})$는 $A$의 prime ideal이다.
 :::
 ::: 증명
-우선 $\phi^{-1}(\mathfrak{p})$는 덧셈에 대한 subgroup이고, 임의의 $\alpha\in A$와 $x\in\phi^{-1}(\mathfrak{p})$에 대하여 $\phi(\alpha x)=\phi(\alpha)\phi(x)\in\mathfrak{p}$이므로 $A$의 ideal이다. 또 $\mathfrak{p}\neq B$이므로 $1\not\in\mathfrak{p}$이고, $\phi(1)=1$로부터 $1\not\in\phi^{-1}(\mathfrak{p})$, 즉 $\phi^{-1}(\mathfrak{p})\neq A$를 얻는다. 이제 결론에 반하여 $\alpha\beta\in\phi^{-1}(\mathfrak{p})$이지만 $\alpha,\beta\not\in\phi^{-1}(\mathfrak{p})$인 $\alpha,\beta\in A$가 존재한다 하면, $\phi(\alpha)\phi(\beta)=\phi(\alpha\beta)\in \mathfrak{p}$이지만 $\phi(\alpha),\phi(\beta)\not\in \mathfrak{p}$가 되어 [명제 8](#prop8)의 동치에 모순이다. 
+우선 $\phi^{-1}(\mathfrak{p})$는 덧셈에 대한 subgroup이고, 임의의 $\alpha\in A$와 $x\in\phi^{-1}(\mathfrak{p})$에 대하여 $\phi(\alpha x)=\phi(\alpha)\phi(x)\in\mathfrak{p}$이므로 $A$의 ideal이다. 또 $\mathfrak{p}\neq B$이므로 $1\not\in\mathfrak{p}$이고, $\phi(1)=1$로부터 $1\not\in\phi^{-1}(\mathfrak{p})$, 즉 $\phi^{-1}(\mathfrak{p})\neq A$를 얻는다. 이제 결론에 반하여 $\alpha\beta\in\phi^{-1}(\mathfrak{p})$이지만 $\alpha,\beta\not\in\phi^{-1}(\mathfrak{p})$인 $\alpha,\beta\in A$가 존재한다 하면, $\phi(\alpha)\phi(\beta)=\phi(\alpha\beta)\in \mathfrak{p}$이지만 $\phi(\alpha),\phi(\beta)\not\in \mathfrak{p}$가 되어 [명제 9](#prop9)의 동치에 모순이다. 
 :::
 
-한편, [명제 8](#prop8)의 2번 동치에 의하여, commutative ring $A$를 multiplicative monoid로 본다면, 그 prime ideal $\mathfrak{p}$에 대해 $A\setminus\mathfrak{p}$는 $A$의 submonoid로 볼 수 있다. 따라서 ring of fractions $(A\setminus \mathfrak{p})^{-1}A$가 잘 정의되며, 이 ring의 분모에 들어가는 것은 오직 $A\setminus \mathfrak{p}$의 원소들 뿐이다. 이를 다음과 같이 정의한다.
+한편, [명제 9](#prop9)의 2번 동치에 의하여, commutative ring $A$를 multiplicative monoid로 본다면, 그 prime ideal $\mathfrak{p}$에 대해 $A\setminus\mathfrak{p}$는 $A$의 submonoid로 볼 수 있다. 따라서 ring of fractions $(A\setminus \mathfrak{p})^{-1}A$가 잘 정의되며, 이 ring의 분모에 들어가는 것은 오직 $A\setminus \mathfrak{p}$의 원소들 뿐이다. 이를 다음과 같이 정의한다.
 
-::: 정의 10
+::: 정의 11
 Commutative ring $A$와 prime ideal $\mathfrak{p}$에 대하여, $A$의 $\mathfrak{p}$에서의 *localization<sub>국소화</sub>*을 $(A\setminus \mathfrak{p})^{-1}A$로 정의하고, 이를 간단히 $A_\mathfrak{p}$로 적는다.
 :::
 
 ## 멱영원
 
-::: 정의 11
+::: 정의 12
 Ring $A$의 원소 $\alpha$가 *nilpotent<sub>멱영</sub>*이라는 것은 적당한 $n>0$이 존재하여 $\alpha^n=0$이 성립하는 것이다. 만일 $A$가 영이 아닌 nilpotent element를 갖지 않으면 $A$를 *reduced<sub>기약</sub>*라 부른다.
 :::
 
 정의에 의하여, 영이 아닌 nilpotent element는 zerodivisor이다. 따라서 모든 integral domain은 (commutative) reduced ring이다. 뿐만 아니라, commutative ring으로 한정하면 다음을 얻는다.
 
-::: 명제 12
+::: 명제 13
 Commutative ring $A$에 대하여, nilpotent element들의 모임 $\mathfrak{N}$은 ideal이 된다.
 :::
 ::: 증명
@@ -208,8 +222,8 @@ $$(x+y)^{m+n}=x^{m+n}+\binom{m+n}{1}x^{m+n-1}y+\cdots+\binom{m+n}{n}x^my^n+\bino
 이고, 우변의 모든 항들이 $0$임을 알 수 있다. 이상에서 $x+y\in \mathfrak{N}$이다.
 :::
 
-::: 정의 13
-[명제 12](#prop12)의 ideal $\mathfrak{N}$을 $A$의 *nilradical*이라 부른다.
+::: 정의 14
+[명제 13](#prop13)의 ideal $\mathfrak{N}$을 $A$의 *nilradical*이라 부른다.
 :::
 
 정의에 의하여 $A$가 reduced인 것은 $A$의 nilradical이 $0$인 것과 동치이다. 한편, 만일 $x\in \mathfrak{N}$이라면, 식 $x^n=0$과 prime ideal의 정의로부터 $x\in \mathfrak{p}$이 모든 prime ideal $\mathfrak{p}$에 대해 성립하는 것을 안다. 즉 다음 포함관계
@@ -218,7 +232,7 @@ $$\mathfrak{N}\subseteq\bigcap_\text{\scriptsize$\mathfrak{p}$: prime} \mathfrak
 
 이 성립한다.
 
-::: 명제 14
+::: 명제 15
 Commutative ring $A$와 nilradical $\mathfrak{N}$에 대하여, 
 
 $$\mathfrak{N}=\bigcap_\text{\scriptsize$\mathfrak{p}$: prime} \mathfrak{p}$$
@@ -226,7 +240,7 @@ $$\mathfrak{N}=\bigcap_\text{\scriptsize$\mathfrak{p}$: prime} \mathfrak{p}$$
 이 성립한다. 
 :::
 ::: 증명
-만일 $x\not\in \mathfrak{N}$이라면, 적당한 $\mathfrak{p}$에 대해 $x\not\in \mathfrak{p}$임을 보이면 충분하다. 우선 multiplicative subset $S=\{1,x,x^2,\ldots\}$으로 만들어진 ring of fractions $A_x=S^{-1}A$를 생각하자. 그럼 $A_x$의 곱셈에 대한 항등원 $x/x$이 반드시 $0/1$과 다른데, $x/x=0/1$은 어떤 $k\geq 0$에 대해 $x^{k+1}=0$인 것과 같고 이는 $x\not\in\mathfrak{N}$이라는 가정에 어긋나기 때문이다. 특히 $A_x\neq 0$이다. 이제 [§환의 정의, ⁋정리 10](/ko/math/algebraic_structures/rings#thm10)로부터 $A_x$의 maximal ideal $\mathfrak{m}$이 반드시 존재하고, 모든 maximal ideal은 prime ideal이므로 $\mathfrak{m}$은 $A_x$의 prime ideal이다. 이제 [명제 9](#prop9)를 $\epsilon:A \rightarrow A_x$에 적용하면 $\epsilon^{-1}(\mathfrak{m})$은 $A$의 prime ideal이며, 만일 $x\in\epsilon^{-1}(\mathfrak{m})$이라면 $x/1\in \mathfrak{m}$이고 $x/1$은 $A_x$에서 invertible이므로 $\mathfrak{m}=A_x$가 되어 모순이다. 
+만일 $x\not\in \mathfrak{N}$이라면, 적당한 $\mathfrak{p}$에 대해 $x\not\in \mathfrak{p}$임을 보이면 충분하다. 우선 multiplicative subset $S=\{1,x,x^2,\ldots\}$으로 만들어진 ring of fractions $A_x=S^{-1}A$를 생각하자. 그럼 $A_x$의 곱셈에 대한 항등원 $x/x$이 반드시 $0/1$과 다른데, $x/x=0/1$은 어떤 $k\geq 0$에 대해 $x^{k+1}=0$인 것과 같고 이는 $x\not\in\mathfrak{N}$이라는 가정에 어긋나기 때문이다. 특히 $A_x\neq 0$이다. 이제 [§환의 정의, ⁋정리 10](/ko/math/algebraic_structures/rings#thm10)로부터 $A_x$의 maximal ideal $\mathfrak{m}$이 반드시 존재하고, 모든 maximal ideal은 prime ideal이므로 $\mathfrak{m}$은 $A_x$의 prime ideal이다. 이제 [명제 10](#prop10)을 $\epsilon:A \rightarrow A_x$에 적용하면 $\epsilon^{-1}(\mathfrak{m})$은 $A$의 prime ideal이며, 만일 $x\in\epsilon^{-1}(\mathfrak{m})$이라면 $x/1\in \mathfrak{m}$이고 $x/1$은 $A_x$에서 invertible이므로 $\mathfrak{m}=A_x$가 되어 모순이다. 
 :::
 
 
