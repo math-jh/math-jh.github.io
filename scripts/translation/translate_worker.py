@@ -81,13 +81,16 @@ TRANSLATOR_TIMEOUT_SEC = 3600                # 60min — 70KB+ 글은 25분으�
                                              # 한 번의 호출이 여러 tick 을 넘겨도 안전하다.
 MAX_TRANSLATE_ATTEMPTS = 3                   # re-translate on LOSSY verify verdict, up to N tries
 
-# 큰 글은 조각내어 번역한다. 현재 모델의 출력 한도와 별개로, KO 본문이 길어지면
-# 모델이 형식을 잃고 "KO 인용 → EN" 대역 워크시트를 뱉다가 잘릴 수 있다
-# (2026-08-02 Sheaf_Cohomology_of_Schemes, KO 본문 53,978c → 출력 100,470c
-# 중간 절단). 이 보수적인 경계는 Kimi 롤백 경로에도 공통으로 적용한다.
-# 조각 경계는 `:::` 박스 경계(_split_regions)라 정리 박스를 가르지 않는다.
-FULL_CHUNK_THRESHOLD  = 24_000               # 이 KO 본문 길이(자)를 넘으면 분할
-MAX_CHUNK_CHARS       = 12_000               # 조각 하나에 담을 KO 본문 목표치
+# 큰 글은 조각내어 번역·폴리싱한다. 이유는 두 가지다. KO 본문이 길어지면 모델이
+# 형식을 잃고 "KO 인용 → EN" 대역 워크시트를 뱉다가 잘리고 (2026-08-02
+# Sheaf_Cohomology_of_Schemes, KO 본문 53,978c → 출력 100,470c 중간 절단),
+# 그와 별개로 출력 토큰 한도 자체에 걸린다 (2026-09-06 CA/Differentials,
+# KO 22,793c 를 통짜로 보내 agy 가 output token limit 으로 잘림). EN 출력은
+# KO 의 1.5배쯤이므로 경계는 출력 기준으로 잡는다. 이 값은 Kimi 롤백 경로에도
+# 공통이다. 조각 경계는 `:::` 박스 경계(_split_regions)라 정리 박스를 가르지
+# 않고, 폴리싱은 KO/EN 을 같은 경계로 잘라 box id 로 짝지어 보낸다.
+FULL_CHUNK_THRESHOLD  = 10_000               # 이 KO 본문 길이(자)를 넘으면 분할
+MAX_CHUNK_CHARS       = 6_000                # 조각 하나에 담을 KO 본문 목표치
 
 # Claude verify. 2026-07-20부터 `claude -p --model haiku` 직접 호출 (구독
 # 과금 확인됨). 옛 tmux 상주 세션 경로(verify_session.sh, .done 폴링)는
@@ -1616,6 +1619,81 @@ def translate_body_chunked(ko_body: str) -> Tuple[str, int]:
     return "\n\n".join(o for o in outs if o) + "\n", prompt_chars
 
 
+def _group_region_pairs(ko_regions, en_regions, max_chars: int):
+    """KO/EN region 을 box id 로 짝지어 max_chars 이하의 (ko, en) 쌍으로 묶는다.
+
+    id 열이 어긋나면 None 을 돌려 통짜 폴리싱으로 넘긴다 — 짝이 안 맞는 조각을
+    보내면 엔진이 대응 없는 쪽을 지어내거나 지운다. lint_structure 를 통과한
+    글은 박스 수가 같으므로 정상 경로에서는 어긋나지 않는다.
+    """
+    ko_ids = [rid for rid, _ in ko_regions]
+    if ko_ids != [rid for rid, _ in en_regions]:
+        return None
+    en_map = dict(en_regions)
+    batches: list = []
+    cur_ko: list = []
+    cur_en: list = []
+    cur_len = 0
+    for rid, ko_text in ko_regions:
+        en_text = en_map[rid]
+        # 폴리싱의 출력은 EN 이므로 둘 중 긴 쪽으로 묶는다. KO 만 보면 영어가
+        # 더 긴 조각에서 출력 한도에 걸린다.
+        span = max(len(ko_text), len(en_text))
+        if cur_ko and cur_len + span > max_chars:
+            batches.append(("".join(cur_ko), "".join(cur_en)))
+            cur_ko, cur_en, cur_len = [], [], 0
+        cur_ko.append(ko_text)
+        cur_en.append(en_text)
+        cur_len += span
+    if cur_ko:
+        batches.append(("".join(cur_ko), "".join(cur_en)))
+    return [(k, e) for k, e in batches if k.strip()]
+
+
+_POLISH_CHUNK_NOTE = """# Fragment mode
+
+The KO and EN texts below are fragment {idx} of {total} of one post, cut at the
+same theorem-box boundaries so the two sides correspond to each other.
+
+- The fragment may begin or end mid-section. That is expected. Do not add an
+  introduction, a recap, a transition, or a closing sentence, and do not
+  mention the split.
+- Keep every label number exactly as it appears; numbering continues across
+  fragments and you cannot see the others.
+- Repair only this fragment. Do not pull in material that belongs to another
+  fragment, and do not drop a paragraph because its context is not visible."""
+
+
+def build_polish_chunk_prompt(ko_chunk: str, en_chunk: str,
+                              idx: int, total: int) -> str:
+    return (POLISH_INSTRUCTIONS + "\n\n"
+            + _POLISH_CHUNK_NOTE.format(idx=idx, total=total)
+            + "\n\n--- KO BODY ---\n" + ko_chunk + "\n--- END KO BODY ---\n"
+            + "\n--- EN BODY ---\n"   + en_chunk + "\n--- END EN BODY ---\n")
+
+
+def polish_body_chunked(ko_body: str, en_body: str) -> Optional[Tuple[str, int]]:
+    """대조 폴리싱을 조각 단위로 돌린다. 반환은 (EN 본문, 프롬프트 총 길이).
+
+    KO/EN 의 box anchor 열이 어긋나면 None 을 돌려 호출부가 통짜로 되돌아가게
+    한다.
+    """
+    pairs = _group_region_pairs(_split_regions(ko_body), _split_regions(en_body),
+                                MAX_CHUNK_CHARS)
+    if pairs is None:
+        log("chunked polish: KO/EN box anchor 열 불일치 — 통짜 폴리싱으로")
+        return None
+    outs: list = []
+    prompt_chars = 0
+    log(f"chunked polish: ko body {len(ko_body)}c → {len(pairs)} chunk(s)")
+    for i, (ko_chunk, en_chunk) in enumerate(pairs, start=1):
+        prompt = build_polish_chunk_prompt(ko_chunk, en_chunk, i, len(pairs))
+        prompt_chars += len(prompt)
+        log(f"  chunk {i}/{len(pairs)}: ko {len(ko_chunk)}c en {len(en_chunk)}c")
+        outs.append(call_translator(prompt).strip())
+    return "\n\n".join(o for o in outs if o) + "\n", prompt_chars
+
+
 def translate(
     ko_path: Path,
     translated_at_iso: str,
@@ -1673,9 +1751,14 @@ def translate(
     ko_body, ko_refs = extract_refs_block(ko_body)
     if reason == "polish" and en_current_body.strip():
         en_current_body, _ = extract_refs_block(en_current_body)
-        prompt = build_polish_prompt(ko_body, en_current_body)
-        en_body = call_translator(prompt)
-        prompt_chars = len(prompt)
+        chunked = (polish_body_chunked(ko_body, en_current_body)
+                   if len(ko_body) > FULL_CHUNK_THRESHOLD else None)
+        if chunked is not None:
+            en_body, prompt_chars = chunked
+        else:
+            prompt = build_polish_prompt(ko_body, en_current_body)
+            en_body = call_translator(prompt)
+            prompt_chars = len(prompt)
     elif len(ko_body) > FULL_CHUNK_THRESHOLD:
         en_body, prompt_chars = translate_body_chunked(ko_body)
     else:
