@@ -5,7 +5,6 @@ excerpt: "미분다양체에서의 음함수 정리와 그 결과들"
 
 categories: [Math / Manifolds]
 permalink: /ko/math/manifolds/implicit_function_theorem
-drift_needed: true
 sidebar: 
     nav: "manifolds-ko"
 
