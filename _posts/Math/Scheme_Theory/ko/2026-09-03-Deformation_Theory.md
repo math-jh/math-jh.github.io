@@ -236,9 +236,9 @@ $$0\longrightarrow\mathfrak{b}\longrightarrow E\overset{p}{\longrightarrow}C\lon
 
 을 정의한다. 이때 $\rho_0$의 lifting $\rho:C\rightarrow R$가 존재하는 것은 $s(c)=(\rho(c),c)$가 $p$의 $A$-algebra section을 주는 것, 곧 이 extension이 split되는 것과 동치이며, 이 때문에 $[\delta]$가 $0$으로 가는 것이 $\rho_0$의 lifting의 존재와 동치임을 안다.
 
-앞서 보았듯 scheme $X_0$의 deformation을 찾는 과정은 base $S=\Spec A$를 square-zero extension을 통해 infinitesimal thickening해 나가며 그 위의 fiber를 함께 정의하는 작업이다. First-order deformation은 이 베이스의 확장이 가장 단순한 dual numbers $A[\epsilon]$으로 주어진 경우에 해당한다. 베이스가 $\epsilon$ 방향으로 한 단계 두꺼워졌으므로, 이제 그 위에 놓인 fiber $X_0=\Spec C$가 어떤 방향으로 두꺼워져 flat family $X=\Spec C'$을 이루는지를 보아야 한다.
+앞서 보았듯 scheme $X_0$의 deformation을 찾는 과정은 base $S=\Spec A$를 square-zero extension을 통해 infinitesimal thickening해 나가며 그 위의 fiber를 함께 정의하는 작업이며, 방금 살펴본 first-order deformation은 이 베이스의 확장이 가장 단순한 dual numbers $A[\epsilon]$으로 주어진 경우에 해당한다. 우리는 이제 그 위에 놓인 fiber $X_0=\Spec C$가 어떤 방향으로 두꺼워져 flat family $X=\Spec C'$을 이루는지를 보아야 한다.
 
-이를 구체적인 방정식의 언어로 보기 위해 $C$를 polynomial ring $B=A[\x_1,\ldots,\x_n]$의 quotient $C=B/\mathfrak{a}$ ($\mathfrak{a}=(f_1,\ldots,f_m)$)로 나타내자. 그러면 total space의 polynomial ring $B[\epsilon]=A[\epsilon][\x_1,\ldots,\x_n]$에서는 베이스 방향 $\epsilon$과 fiber의 좌표 $\x_i$가 자연스럽게 분리된다. 따라서 fiber를 정의하던 각 방정식 $f_j\in B$를 베이스 방향 $\epsilon$으로 흔들면 새로운 방정식 후보들은 $F_j=f_j+\epsilon g_j$ ($g_j\in B$) 꼴로 쓰이며, 이들로 생성되는 $C'=B[\epsilon]/(F_1,\ldots,F_m)$을 얻는다. 이때 임의로 고른 섭동 $g_j$가 실제로 flat한 family를 이루는 조건은 다음과 같다.
+이를 구체적인 방정식의 언어로 살펴보자. 우리 상황에서 $X$는 locally of finite presentation $S$-scheme이므로, 이 affine case에서 $C$는 finite polynomial ring $B=A[\x_1,\ldots,\x_n]$과 finitely generated ideal $\mathfrak{a}=(f_1,\ldots,f_m)$에 의한 quotient $C=B/\mathfrak{a}$로 나타낼 수 있다. 그럼 $B[\epsilon]=A[\epsilon][\x_1,\ldots,\x_n]$에서는 fiber 방향 좌표 $\x_i$와 $\epsilon$ 방향이 자연스레 분리되며, 이 때 fiber를 정의하던 각 방정식 $f_j\in B$을 central fiber 주변에서 확장할 수 있는 후보들은 $F_j=f_j+\epsilon g_j$의 꼴이고, 이들 후보에 의해 deform된 family는 $C'=B[\epsilon]/(F_1,\ldots,F_m)$으로 나타나게 될 것이다. 이 때, 유일한 조건은 이렇게 얻어지는 family가 실제로 flat family가 되어야 한다는 것이다. 
 
 ::: 명제 4
 위와 같은 상황에서, $C'$이 $A[\epsilon]$ 위에서 flat한 것은 $(f_1,\ldots,f_m)$의 임의의 관계식 $(a_1,\ldots,a_m)$, 곧 $\sum_ja_jf_j=0$인 $(a_j)\in B^m$에 대하여
@@ -248,43 +248,65 @@ $$\sum_{j}a_jg_j\in \mathfrak{a}$$
 이 성립하는 것과 동치이다. 이 조건이 성립할 때, 원래의 관계식 $(a_j)$는 $(F_1,\ldots,F_m)$의 관계식으로 들어올려진다.
 :::
 ::: 증명
-앞서 살펴본 것과 같이 $C'$이 flat한 것은 $C'$이 $C$의 $C$에 의한 square-zero extension인 것과 동치이다. $B[\epsilon]\cong B\oplus\epsilon B$에서 $F_j=f_j+\epsilon g_j$는 $(f_j,\overline{g_j})\in B\oplus C$에 대응하므로, $B[\epsilon]/(F_j)$가 $C$의 square-zero extension을 정의하는 것은 대응 $\bar{f}_j\mapsto\overline{g_j}$가 $\mathfrak{a}/\mathfrak{a}^2$ 위의 $C$-linear map $\varphi:\mathfrak{a}/\mathfrak{a}^2\rightarrow C$를 잘 정의하는 것과 같다. 이는 임의의 관계식 $\sum_ja_jf_j=0$에 대하여 그 image $\sum_ja_j\overline{g_j}$가 $C$에서 $0$인 것, 곧 $\sum_ja_jg_j\in\mathfrak{a}$인 것과 동치이다. 이때 $\sum_ja_jg_j=\sum_jc_jf_j$ ($c_j\in B$)라 하면 $A_j=a_j-\epsilon c_j$에 대하여
+앞서 살펴본 것과 같이 $C'$이 flat한 것은 $C'$이 $C$의 $C$에 의한 square-zero extension인 것과 동치이다. $B[\epsilon]\cong B\oplus\epsilon B$에서 $F_j=f_j+\epsilon g_j$는 $(f_j,\bar{g}_j)\in B\oplus C$에 대응하므로, $B[\epsilon]/(F_j)$가 $C$의 square-zero extension을 정의하는 것은 대응 $\bar{f}_j\mapsto\bar{g}_j$가 $\mathfrak{a}/\mathfrak{a}^2$ 위의 $C$-linear map $\varphi:\mathfrak{a}/\mathfrak{a}^2\rightarrow C$를 잘 정의하는 것과 같다. 이는 임의의 관계식 $\sum_ja_jf_j=0$에 대하여 그 image $\sum_ja_j\bar{g}_j$가 $C$에서 $0$인 것, 곧 $\sum_ja_jg_j\in\mathfrak{a}$인 것과 동치이다. 이때 $\sum_ja_jg_j=\sum_jc_jf_j$ ($c_j\in B$)라 하면 $A_j=a_j-\epsilon c_j$에 대하여
 
 $$\sum_jA_jF_j=\sum_ja_jf_j+\epsilon\Bigl(\sum_ja_jg_j-\sum_jc_jf_j\Bigr)=0$$
 
 이므로 원래의 관계식 $(a_j)$가 들어올려진다.
 :::
 
-이 명제는 flat한 first-order deformation을 매우 구체적으로 기술한다. 곧 flatness는 정확히 "원래 방정식들 사이의 모든 관계가 흔들린 방정식들 사이의 관계로 살아남는다"는 조건이다. 임의의 관계식 $\sum_ja_jf_j=0$에 대하여 조건 $\sum_ja_jg_j\in \mathfrak{a}$가 성립하면 대응 $\bar{f}_j\mapsto\overline{g_j}$가 $C$-module homomorphism
+이 명제의 증명은 first-order deformation 상황에서 flat family가 얻어지는 과정을 보여주는데, 이는 즉 central fiber를 정의하던 관계식들, 즉
+
+$$\sum a_jf_j=0$$
+
+이 주어졌다면, $F_j=f_j+\epsilon g_j$를 통해 이를 흔들어 주었을 때, 그 결과
+
+$$\sum a_j(f_j+\epsilon g_j)=\epsilon\sum a_j g_j$$
+
+에서 $\sum a_jg_j$가 $\mathfrak{a}$로 흡수되어, 이를 다시 $f_j$들에 대한 식 $\sum a_jg_j=\sum c_jf_j$로 바꾸어줄 수 있고, 이를 다시 원래의 식에 대입해주면, $A_j=a_j-\epsilon c_j$에 대하여 다음 식
+
+$$\sum_j A_j F_j=0$$
+
+이 성립하므로, 이것이 바로 thickening에서의 방정식이 되는 것이다. 
+
+만일 이 조건이 성립한다면 다음의 대응 $\bar{f}_j\mapsto\bar{g}_j$가 $C$-module homomorphism
 
 $$\varphi:\mathfrak{a}/\mathfrak{a}^2\rightarrow C$$
 
-를 well-defined하게 정의한다. 거꾸로 임의의 $\varphi\in\Hom_C(\mathfrak{a}/\mathfrak{a}^2,C)$은 $g_j\in B$를 $\varphi(\bar{f}_j)=\overline{g_j}$이도록 택하여 flat한 first-order deformation을 준다. 즉 flat한 first-order deformation의 집합은 $\Hom_C(\mathfrak{a}/\mathfrak{a}^2,C)$와 자연스럽게 대응하며, 이는 도입부에서 확대의 자료로부터 얻었던 $\delta\in\Hom_C(\mathfrak{a}/\mathfrak{a}^2,\mathfrak{b})$를 $\mathfrak{b}=C$인 경우에 방정식의 언어로 다시 본 것이다.
+를 잘 정의하고, 거꾸로 임의의 $\varphi\in\Hom_C(\mathfrak{a}/\mathfrak{a}^2,C)$은 $g_j\in B$를 $\varphi(\bar{f}_j)=\bar{g}_j$이도록 택하여 first-order deformation을 준다. 즉 first-order deformation들의 집합은 $\Hom_C(\mathfrak{a}/\mathfrak{a}^2,C)$와 자연스럽게 대응하며, 이는 도입부에서 확대의 자료로부터 얻었던 $\delta\in\Hom_C(\mathfrak{a}/\mathfrak{a}^2,\mathfrak{b})$를 $\mathfrak{b}=C$인 경우에 방정식의 언어로 다시 본 것이다.
 
-남은 일은 이 중 어떤 것들이 isomorphic인지, 곧 trivial deformation을 걸러내는 것이다. Deformation $C'=C[\epsilon]$ (즉 모든 $g_j=0$)에 isomorphic인 deformation을 *trivial*하다 부른다. 좌표변환 $\x_i\mapsto\x_i+\epsilon\theta(\x_i)$ (각 $\theta(\x_i)\in C$를 임의로 정하고 derivation으로 확장하여 얻는 $\theta\in\Der_A(B,C)$)에 의한 $B[\epsilon]$의 automorphism은 $f_j$를 $f_j+\epsilon\sum_i\theta(\x_i)(\partial f_j/\partial\x_i)=f_j+\epsilon\theta(f_j)$로 옮기므로, trivial deformation들은 정확히 $\varphi$가 derivation에서 오는 경우, 곧 합성
+이제 남은 일은 이 중 어떤 것들이 trivial deformation을 주는지 걸러내는 것이다. First-order deformation의 경우, $C'=C[\epsilon]$와 isomorphic한 deformation을 *trivial*하다 부른다. 이러한 것들 중 가장 단순한 형태는 모든 $g_j=0$이어서 $F_j=f_j$인 경우로, 이는 central fiber를 정의하던 방정식을 아무런 변형 없이 $\epsilon$ 방향으로 그대로 복사하여 늘려놓은 것에 불과하다.
+
+그러나 $g_j\neq0$이어서 방정식이 변형된 것처럼 보이더라도, 실제로는 trivial deformation인 경우가 있다. 위의 construction에서, ambient ring $B[\epsilon]$에서 정의된 deformation $\x_i\mapsto\x_i+\epsilon\theta(\x_i)$을 생각하자. Polynomial ring $B$의 각 변수 $\x_i$에 대하여 $\theta(\x_i)\in C$를 정하는 것은 derivation $\theta\in\Der_A(B,C)$를 유일하게 결정하며, 거꾸로 임의의 derivation $\theta$가 이러한 좌표변환을 정의한다. 그럼 이 좌표변환을 원래의 식 $f_j$에 적용하면
+
+$$f_j+\epsilon\sum_i\theta(\x_i)\frac{\partial f_j}{\partial\x_i}=f_j+\epsilon\theta(f_j)$$
+
+로 옮겨진다. 이 식은 겉보기에는 $F_j=f_j+\epsilon\theta(f_j)$처럼 $g_j=\theta(f_j)$ 방향으로 변형된 것처럼 보이지만, 이는 ambient space의 좌표를 비틀어 본 것에 불과하므로 본질적으로는 원래의 trivial family $C'=C[\epsilon]$과 isomorphic하다. 이를 일반화하면, trivial deformation들은 정확히 $\varphi$가 derivation에서 오는 경우, 곧 합성
 
 $$\Der_A(B,C)=\Hom_C(\Omega_{B/A}\otimes_BC,C)\overset{\bar{d}^\ast}{\rightarrow}\Hom_C(\mathfrak{a}/\mathfrak{a}^2,C)$$
 
-의 image에 속하는 경우이다. 곧 도입부에서 lift $\widetilde{\rho}$를 고르는 자유도가 $\Der_A(B,\mathfrak{b})$에 담겼던 것이, 여기서는 deformation을 trivial하게 만드는 좌표변환의 자유도로 나타난다.
+의 image에 속하는 경우 얻어지며, 이는 [정의 1](#def1) 직전의 계산에서 lift $\widetilde{\rho}$를 고르는 자유도가 $\Der_A(B,\mathfrak{b})$에 담겼던 것과 같은 현상이다. 
 
 이제 이 절에서 얻은 것을 하나의 분류 정리로 묶는다.
 
 ::: 정리 5
-Finitely presented $A$-algebra $C$에 대하여, isomorphism class로 본 $C$의 first-order deformation들의 집합은 $T^1(C/A,C)$과 자연스럽게 일대일 대응한다. 이 대응 아래에서 trivial deformation은 $0\in T^1$에 대응하며, 임의의 deformation $C'$의 infinitesimal automorphism군은 $T^0(C/A,C)=\Der_A(C,C)$과 동형이다.
+Finitely presented $A$-algebra $C=B/\mathfrak{a}$에 대하여 다음의 exact sequence
+
+$$0\longrightarrow T^0(C/A,C)\longrightarrow\Der_A(B,C)\overset{\bar{d}^\ast}{\longrightarrow}\Hom_C(\mathfrak{a}/\mathfrak{a}^2,C)\longrightarrow T^1(C/A,C)\longrightarrow0$$
+
+가 성립하며, 각 항은 deformation theory에서 다음과 같은 의미를 가진다.
+1. $\Hom_C(\mathfrak{a}/\mathfrak{a}^2,C)$는 $C$의 first-order deformation들을 분류한다.
+2. 두 deformation이 isomorphic인 것은 그 차이가 trivial deformation들의 공간 $\im\bar{d}^\ast$에 속하는 것과 동치이므로, isomorphism class로 본 first-order deformation들의 집합은 quotient
+$$\Hom_C(\mathfrak{a}/\mathfrak{a}^2,C)\big/\im\bar{d}^\ast=T^1(C/A,C)$$
+과 자연스럽게 일대일 대응한다. 이 대응 아래에서 trivial deformation은 $0\in T^1$에 대응한다.
+3. 임의의 deformation $C'$의 infinitesimal automorphism군은 좌표변환의 stabilizer인 $\ker\bar{d}^\ast$, 곧 $T^0(C/A,C)=\Der_A(C,C)$과 동형이다.
 :::
-::: 증명
-[명제 4](#prop4) 직후의 논의에서 flat한 first-order deformation들은 $\Hom_C(\mathfrak{a}/\mathfrak{a}^2,C)$과 대응하고, trivial한 것들은 정확히 $\bar{d}^\ast(\Der_A(B,C))$의 image에 대응함을 보았다. 따라서 isomorphism class의 집합은
-
-$$\Hom_C(\mathfrak{a}/\mathfrak{a}^2,C)\big/\im\bar{d}^\ast=\coker\bar{d}^\ast=T^1(C/A,C)$$
-
-이며, trivial deformation이 $0$에 대응한다. 다만 두 deformation $\varphi,\varphi'$이 같은 $T^1$ 원소를 주는 것이 isomorphic임을 확인해야 하는데, 두 deformation의 차이를 주는 $\varphi-\varphi'$이 derivation에서 올 때 그 derivation이 $B[\epsilon]$의 좌표변환을 주어 동형을 구성하므로 성립한다. Automorphism군에 관해서는, deformation $C'$의 $A$ 위 항등을 유도하는 automorphism $u:C'\rightarrow C'$은 $u(c')-c'\in\epsilon C'\cong C$를 만족하고, $D(c')=u(c')-c'$이 $\epsilon^2=0$에 의하여 derivation $C\rightarrow C$가 되므로, 대응 $u\mapsto D$가 군 동형 $\Aut(C')\cong\Der_A(C,C)$을 준다.
-:::
-
-따라서 $T^1(C/A,C)$를 계산하면 실제 family 전체를 미리 구성하지 않고도 $X$가 변할 수 있는 일차 방향들을 isomorphism을 무시하고 분류할 수 있다. 또한 $T^0(C/A,C)$는 각 deformation의 infinitesimal automorphism을 기록한다. 이 deformation들을 표현하는 moduli scheme이 존재하는 경우에는, 그 scheme의 $X$에 대응하는 점에서의 tangent vector가 바로 이러한 dual numbers 위의 family에 해당한다. 일차 계산에서 얻은 방향을 실제 family로 실현하려면, 먼저 $A[t]/(t^3)$, $A[t]/(t^4)$ 위로 차례로 연장할 수 있어야 한다. 각 단계는 다시 base의 square-zero extension을 따른 lifting problem이 되고, 그 연장을 가로막는 obstruction을 뒤에서 다룬다. 이로써 family를 찾는 문제를 일차 방향의 분류와 그 방향의 연장 가능성으로 나누어 접근할 수 있다.
 
 ## 변형의 장애
 
-First-order deformation은 $\epsilon^2=0$ 수준의 deformation이다. 그것을 한 단계 더 두꺼운 base 위로 연장하려는 순간, 곧 $\mathbb{K}[t]/(t^2)$ 위의 deformation을 $\mathbb{K}[t]/(t^3)$ 위로 들어올리려는 순간 obstruction이 나타난다. 이 obstruction이 $T^2$에 산다는 것이 deformation theory의 둘째 기둥이며, 이를 계산하려면 $\NL_{C/\mathbb{K}}$에 항을 하나 더 붙여야 한다.
+First-order deformation은 $\epsilon^2=0$ 수준의 1차 근사일 뿐이다. Moduli 관점에서 이는 점 $[X]$에서의 Zariski tangent space $T^1$의 원소를 하나 고른 것에 해당한다. 그러나 variety나 moduli scheme이 singularity를 가질 때에는, tangent vector가 주어졌다고 해서 그 방향으로 뻗어나가는 실제 family가 항상 존재한다는 보장이 없다. 즉 $T^1$의 어떤 1차 방향은 더 높은 차수로 연장되지 못하는 가짜 접방향일 수 있다.
+
+따라서 1차 계산에서 찾은 방향 $F_j=f_j+\epsilon g_j$가 실제 기하학적 family로 실현되는지를 보려면, 이를 한 단계 더 두꺼운 base $\mathbb{K}[t]/(t^3)$, 그리고 $\mathbb{K}[t]/(t^4), \ldots$ 위로 차례로 연장하여 궁극적으로 formal power series ring $\mathbb{K}[[t]]$ 위의 family로 들어올릴 수 있는지를 확인해야 한다. 이 연장 가능성의 첫 시험대가 바로 $\mathbb{K}[t]/(t^2)$ 위의 deformation을 $\mathbb{K}[t]/(t^3)$ 위로 들어올리는 단계이며, 바로 여기서 최초의 obstruction이 나타난다. 이 obstruction이 $T^2$에 산다는 것이 deformation theory의 둘째 기둥이며, 이를 계산하려면 $\NL_{C/\mathbb{K}}$에 관계식들을 기록하는 항을 하나 더 붙여야 한다.
 
 ::: 정의 6
 방정식들을 표시하는 free module을 남겨 두고, 관계식들을 기록하는 항을 하나 더 붙이자. $F=B^m$의 basis를 $e_1,\ldots,e_m$이라 하고 $F\rightarrow \mathfrak{a}$, $e_j\mapsto f_j$의 kernel을 $\operatorname{Rel}$이라 하자. 또 $\operatorname{TrivRel}\subseteq\operatorname{Rel}$을 $f_ie_j-f_je_i$ 꼴의 trivial relation들이 생성하는 submodule이라 두면, $\mathfrak{a}$는 $\operatorname{Rel}/\operatorname{TrivRel}$에 자명하게 작용하므로 이는 $C$-module이다. 이때 *Lichtenbaum–Schlessinger complex*는
@@ -324,7 +346,7 @@ $$\sum_jR_jF_j^{(2)}=t^2\left(\sum_ja_jh_j-\sum_jc_jg_j\right)$$
 
 $$\sum_jc_jg_j\equiv\sum_ja_jh_j\pmod{\mathfrak{a}}$$
 
-이다. 오른쪽은 $h=(\overline{h_1},\ldots,\overline{h_m})\in\Hom_C(F\otimes_BC,C)$가 $d_2$를 따라 만드는 coboundary의 $a$에서의 값이므로, 모든 relation에 대하여 이 합동식을 만족시키는 $h_j$가 존재하는 것은 $[\eta]=0$인 것과 동치이고 바로 이때 이차 연장이 존재한다. $g_j$의 representative와 presentation을 바꾸어도 Lichtenbaum–Schlessinger complex 사이의 canonical homotopy equivalence 아래에서 같은 class를 얻으므로 $\operatorname{ob}(\xi)$는 $\xi$에만 의존한다.
+이다. 오른쪽은 $h=(\bar{h}_1,\ldots,\bar{h}_m)\in\Hom_C(F\otimes_BC,C)$가 $d_2$를 따라 만드는 coboundary의 $a$에서의 값이므로, 모든 relation에 대하여 이 합동식을 만족시키는 $h_j$가 존재하는 것은 $[\eta]=0$인 것과 동치이고 바로 이때 이차 연장이 존재한다. $g_j$의 representative와 presentation을 바꾸어도 Lichtenbaum–Schlessinger complex 사이의 canonical homotopy equivalence 아래에서 같은 class를 얻으므로 $\operatorname{ob}(\xi)$는 $\xi$에만 의존한다.
 
 ::: 정리 7
 $\xi\in T^1(C/\mathbb{K},C)$를 first-order deformation이라 하자. 그럼 $\xi$가 $\mathbb{K}[t]/(t^3)$ 위의 flat deformation으로 연장되는 것을 막는 obstruction class
