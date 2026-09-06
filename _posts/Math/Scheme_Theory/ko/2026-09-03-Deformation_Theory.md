@@ -121,32 +121,42 @@ $$0\longrightarrow M\longrightarrow E\overset{p}{\longrightarrow} C\longrightarr
 
 {% diagram Math/Scheme_Theory/Deformation_Theory-1.svg width="18.74em" alt="morphism of extensions" %}
 
-을 morphism으로 갖는 category $\Ext_{\Alg{A}}(C, M)$을 이루며, 이 때 이들 morphism들은 [\[호몰로지 대수학\] §Diagram chasing, ⁋따름정리 3](/ko/math/homological_algebra/diagram_chasing#cor3)에 의해 모두 isomorphism이다. 한편, $A$-algebra homomorphism $E\rightarrow C$의 kernel이 $M$이므로, $M$은 $E$의 ideal이고, 우리의 상황에서 $M$은 square-zero ideal들이 되어 위의 category는 사실 square-zero extension들의 category가 된다. 
+을 morphism으로 갖는 category $\Ext_{\Alg{A}}(C, M)$을 이루며, 이 때 이들 morphism들은 [\[호몰로지 대수학\] §Diagram chasing, ⁋따름정리 3](/ko/math/homological_algebra/diagram_chasing#cor3)에 의해 모두 isomorphism이다. 즉 이 category는 groupoid이며 (링크) 일반적으로 임의의 extension들 사이에 morphism이 아예 존재하지 않을 수 있으므로 이 category의 대상 자체는 여럿일 수 있다. 한편, $A$-algebra homomorphism $E\rightarrow C$의 kernel이 $M$이므로 $M$은 $E$의 ideal이고, 우리의 상황에서 $M$은 square-zero ideal들이 되어 위의 category는 사실 square-zero extension들의 category가 된다. 
 
-실제로 임의의 square-zero extension $E$에 대하여, presentation $B\twoheadrightarrow C$의 lift $B\rightarrow E$를 택하면 앞선 절에서의 논증과 정확히 같은 원리로 class $[\delta_E]\in T^1(C/A,M)$이 대응된다. 뿐만 아니라, 이는 $C$의 $M$에 의한 square-zero extension들의 equivalence class들과 $T^1(C/A,M)$의 원소들 사이의 일대일 대응을 주며, 이 대응 하에서 split extension $0$에 대응한다. 즉, $T^1(C/A,M)$은 $C$의 $M$에 의한 square-zero extension들을 분류하는 공간이다.
+실제로 위의 category의 임의의 데이터
 
-이 관점에서 앞 절의 lifting problem을 다시 바라보면, 주어진 자료 $q:R\rightarrow R_0$와 $\rho_0:C\rightarrow R_0$의 pullback
+$$0\longrightarrow M\longrightarrow E\overset{p}{\longrightarrow} C\longrightarrow0$$
+
+가 주어졌다 하고 $C$를 polynomial ring $B$에 의한 presentation $B/\mathfrak{a}$로 나타내어 lift $B\rightarrow E$를 택한다면 앞선 절에서의 논증과 정확히 같은 원리로 class $[\delta_E]\in T^1(C/A,M)$이 대응되며 이는 우리가 택한 lift $B\rightarrow E$에 의존하지 않으므로 잘 정의된다. 
+
+뿐만 아니라 이 대응은 반대방향으로도 작동한다. 구체적으로, class $[\delta]\in T^1(C/A,M)$의 representative인 $C$-linear map $\delta:\mathfrak{a}/\mathfrak{a}^2\rightarrow M$이 주어졌을 때, trivial extension $B\oplus M$ 안에 ideal
+
+$$\mathfrak{a}_\delta=\{(f,-\delta(\bar{f}))\in B\oplus M\mid f\in\mathfrak{a}\}$$
+
+를 정의하면, quotient algebra $E_\delta=(B\oplus M)/\mathfrak{a}_\delta$는 자연스러운 morphism $m\mapsto\overline{(0,m)}$과 $\overline{(b,m)}\mapsto b+\mathfrak{a}$를 통해 $C$의 $M$에 의한 square-zero extension을 정의한다. 이 구성은 representative $\delta$의 선택에 무관하게 isomorphism class를 결정하며, 앞선 대응의 역을 준다는 것을 확인할 수 있다. 즉, 위의 대응은 이는 $C$의 $M$에 의한 square-zero extension들의 isomorphism class들의 모임 $\pi_0(\Ext_{\Alg{A}}(C,M))$과 $T^1(C/A,M)$ 사이의 일대일 대응이며, 이 대응 하에서 split extension은 $0$에 대응한다. 즉, $T^1(C/A,M)$은 $C$의 $M$에 의한 square-zero extension들을 분류하는 공간이다.
+
+이 관점에서 앞 절의 lifting problem을 다시 바라보면, 우리는 우선 주어진 자료 $q:R\rightarrow R_0$와 $\rho_0:C\rightarrow R_0$의 pullback을 통해 다음의 extension
 
 $$E=R\times_{R_0}C=\{(r,c)\in R\times C\mid q(r)=\rho_0(c)\}$$
 
-는 두 번째 projection $p:E\rightarrow C$를 통해 $C$의 $\mathfrak{b}$에 의한 특정한 square-zero extension
+을 정의할 수 있고, 이는 projection $p:E\rightarrow C$를 통해 $C$의 $\mathfrak{b}$에 의한 square-zero extension
 
 $$0\longrightarrow\mathfrak{b}\longrightarrow E\overset{p}{\longrightarrow}C\longrightarrow0$$
 
-을 정의한다. 이때 $\rho_0$의 lifting $\rho:C\rightarrow R$가 존재하는 것은 $s(c)=(\rho(c),c)$가 $p$의 $A$-algebra section을 주는 것, 곧 이 확대가 split되는 것과 동치이다. 따라서 앞서 얻은 class $[\delta]\in T^1(C/A,\mathfrak{b})$는 바로 이 pullback 확대 $E$가 $T^1(C/A,\mathfrak{b})$ 안에서 결정하는 원소이며, lifting의 실패는 이 확대의 splitting이 실패하는 것과 정확히 일치한다.
+을 정의한다. 이때 $\rho_0$의 lifting $\rho:C\rightarrow R$가 존재하는 것은 $s(c)=(\rho(c),c)$가 $p$의 $A$-algebra section을 주는 것, 곧 이 extension이 split되는 것과 동치이며, 이 때문에 $[\delta]$가 $0$으로 가는 것이 $\rho_0$의 lifting의 존재와 동치임을 안다.
 
-특히 $A=\mathbb{K}$이고 kernel을 $C$-module $C$ 자체로 잡은 확대 $0\rightarrow C\overset{i}{\rightarrow}C'\rightarrow C\rightarrow0$을 생각하자. $\epsilon=i(1)$로 두면 $\epsilon^2=0$이므로 $C'$에 $\mathbb{K}[\epsilon]/(\epsilon^2)$-algebra structure가 생긴다. 이때 $\epsilon C'=i(C)$이고 $\epsilon$에 의한 곱은 $C'/\epsilon C'\cong C$에서 $i(C)$로의 동형을 유도하므로, $C'$은 이 dual numbers 위에서 flat하다. 따라서 이런 확대를 분류하는 것은 $C$를 dual numbers 위의 flat family로 들어올리는 first-order deformation을 분류하는 것이며, 그 isomorphism class를 재는 것이 $T^1(C/\mathbb{K},C)$이다.
+특히 $A=\mathbb{K}$이고 kernel을 $C$-module $C$ 자체로 잡은 extension $0\rightarrow C\overset{i}{\rightarrow}C'\rightarrow C\rightarrow0$을 생각하자. $\epsilon=i(1)$로 두면 $\epsilon^2=0$이므로 $C'$에 $\mathbb{K}[\epsilon]/(\epsilon^2)$-algebra structure가 생긴다. 이때 $\epsilon C'=i(C)$이고 $\epsilon$에 의한 곱은 $C'/\epsilon C'\cong C$에서 $i(C)$로의 isomorphism을 유도하므로, $C'$은 이 dual numbers 위에서 flat하다. 따라서 이런 extension을 분류하는 것은 $C$를 dual numbers 위의 flat family로 들어올리는 first-order deformation을 분류하는 것이며, 그 isomorphism class를 재는 것이 $T^1(C/\mathbb{K},C)$이다.
 
 더 일반적으로 deformation theory에서는 base의 square-zero extension $A'\rightarrow A$를 따라, $A$ 위의 flat algebra $C$를 $C'\otimes_{A'}A\cong C$를 만족하는 flat $A'$-algebra $C'$으로 들어올리는 문제를 다룬다. 이미 얻은 변형을 한 단계 더 두꺼운 base 위로 연장할 때에는 그 존재를 가로막는 obstruction이 $T^2$에 놓이고, $T^0$는 변형의 infinitesimal automorphism을 기록한다.
 
-대수기하학에서 주어진 기하학적 대상 $X$를 "연속적으로 변형한다"는 것은, base scheme $S$와 기준점 $s_0\in S$에 대하여 $s_0$에서의 central fiber가 $X$와 동형인 family $\pi:\mathcal{X}\rightarrow S$를 구성하는 문제를 뜻한다. 만약 이러한 변형들을 매개하는 moduli space가 존재한다면, $X$ 근방에서 moduli space의 국소적인 기하, 특히 $X$에 대응하는 점에서의 tangent space를 관찰하기 위해서는 $S$ 전체를 다룰 필요 없이 기준점 $s_0$의 1차 infinitesimal neighborhood만 살펴보면 충분하다.
+대수기하학에서 주어진 기하학적 대상 $X$를 "연속적으로 변형한다"는 것은, base scheme $S$와 기준점 $s_0\in S$에 대하여 $s_0$에서의 central fiber가 $X$와 isomorphic한 family $\pi:\mathcal{X}\rightarrow S$를 구성하는 문제를 뜻한다. 만약 이러한 변형들을 매개하는 moduli space가 존재한다면, $X$ 근방에서 moduli space의 local한 기하, 특히 $X$에 대응하는 점에서의 tangent space를 관찰하기 위해서는 $S$ 전체를 다룰 필요 없이 기준점 $s_0$의 1차 infinitesimal neighborhood만 살펴보면 충분하다.
 
-스킴 이론에서 한 점의 접벡터 방향은 위상공간으로서는 단 하나의 점이지만 nilpotent 방향을 품고 있는 스킴 $\Spec \mathbb{K}[\epsilon]/(\epsilon^2)$ (dual numbers)로 실현된다. 따라서 $X$의 first-order deformation이란 이 두꺼워진 점 $\Spec \mathbb{K}[\epsilon]$ 위로 $X$를 얹는 family를 뜻한다. 더 나아가 고차 infinitesimal deformation은 [§매끄러운 사상과 에탈 사상, §§Infinitesimal lifting criterion](/ko/math/scheme_theory/smooth_and_etale_morphisms#infinitesimal-lifting-criterion)에서 다룬 square-zero extension $0\rightarrow M\rightarrow A'\rightarrow A\rightarrow0$ ($M^2=0$)를 따라 base $\Spec A\hookrightarrow \Spec A'$을 점진적으로 두껍게 만드는 문제로 이해할 수 있다.
+Scheme theory에서 한 점의 tangent vector 방향은 topological space로서는 단 하나의 점이지만 nilpotent 방향을 품고 있는 scheme $\Spec \mathbb{K}[\epsilon]/(\epsilon^2)$ (dual numbers)로 실현된다. 따라서 $X$의 first-order deformation이란 이 두꺼워진 점 $\Spec \mathbb{K}[\epsilon]$ 위로 $X$를 얹는 family를 뜻한다. 더 나아가 고차 infinitesimal deformation은 [§매끄러운 사상과 에탈 사상, §§Infinitesimal lifting criterion](/ko/math/scheme_theory/smooth_and_etale_morphisms#infinitesimal-lifting-criterion)에서 다룬 square-zero extension $0\rightarrow M\rightarrow A'\rightarrow A\rightarrow0$ ($M^2=0$)를 따라 base $\Spec A\hookrightarrow \Spec A'$을 점진적으로 두껍게 만드는 문제로 이해할 수 있다.
 
-이러한 family를 다룰 때 가장 핵심적인 기하학적 조건은 *flatness*이다. 임의의 사상 $\pi:\mathcal{X}\rightarrow S$를 허용하면 fiber의 차원이 불연속적으로 뛰거나 원치 않는 성분이 불쑥 나타날 수 있어, "fiber들이 연속적으로 변한다"는 기하학적 직관이 무너진다. Flatness는 fiber들이 base를 따라 일정한 대수적 크기를 유지하며 연속적으로 변하도록 보장하는 조건이다. 특히 first-order deformation $\mathcal{X}\rightarrow \Spec \mathbb{K}[\epsilon]$의 경우, 위상공간으로서는 $\mathcal{X}$와 원래 대상 $X$가 완전히 동일하며 오직 structure sheaf만이 $\epsilon$ 방향으로 두꺼워질 뿐이다. 이때 flatness는 $X$를 정의하는 방정식들과 그들 사이의 syzygy가 무한소 방향 $\epsilon$을 따라 붕괴하지 않고 균일하게 보존된다는 것을 보증한다. 이제 대수적 언어로 변형을 정의한다.
+이러한 family를 다룰 때 가장 핵심적인 기하학적 조건은 *flatness*이다. 임의의 morphism $\pi:\mathcal{X}\rightarrow S$를 허용하면 fiber의 차원이 불연속적으로 뛰거나 원치 않는 성분이 불쑥 나타날 수 있어, "fiber들이 연속적으로 변한다"는 기하학적 직관이 무너진다. Flatness는 fiber들이 base를 따라 일정한 algebraic한 크기를 유지하며 연속적으로 변하도록 보장하는 조건이다. 특히 first-order deformation $\mathcal{X}\rightarrow \Spec \mathbb{K}[\epsilon]$의 경우, topological space로서는 $\mathcal{X}$와 원래 대상 $X$가 완전히 동일하며 오직 structure sheaf만이 $\epsilon$ 방향으로 두꺼워질 뿐이다. 이때 flatness는 $X$를 정의하는 방정식들과 그들 사이의 syzygy가 infinitesimal 방향 $\epsilon$을 따라 붕괴하지 않고 균일하게 보존된다는 것을 보증한다. 이제 algebraic한 언어로 변형을 정의한다.
 
 ::: 정의 2
-$A$-algebra $C$와 square-zero extension $0\rightarrow M\rightarrow A'\rightarrow A\rightarrow0$이 주어졌다 하자. $C$의 $A'$ 위로의 *변형<sub>deformation</sub>*이란, $A'$ 위에서 flat한 $A'$-algebra $C'$과 $A'$-algebra isomorphism $C'\otimes_{A'}A\cong C$의 짝을 뜻한다. 두 변형 $C', C''$이 *isomorphic*이라는 것은 $A$ 위로 환원했을 때 $C$ 위의 항등사상을 유도하는 $A'$-algebra isomorphism $C'\cong C''$이 존재하는 것이다.
+$A$-algebra $C$와 square-zero extension $0\rightarrow M\rightarrow A'\rightarrow A\rightarrow0$이 주어졌다 하자. $C$의 $A'$ 위로의 *변형<sub>deformation</sub>*이란, $A'$ 위에서 flat한 $A'$-algebra $C'$과 $A'$-algebra isomorphism $C'\otimes_{A'}A\cong C$의 짝을 뜻한다. 두 변형 $C', C''$이 *isomorphic*이라는 것은 $A$ 위로 환원했을 때 $C$ 위의 identity morphism을 유도하는 $A'$-algebra isomorphism $C'\cong C''$이 존재하는 것이다.
 
 특히 $A=\mathbb{K}$이고 $A'=\mathbb{K}[\epsilon]$인 경우의 변형을 $C$의 *first-order deformation<sub>일차 변형</sub>*이라 부른다.
 :::
