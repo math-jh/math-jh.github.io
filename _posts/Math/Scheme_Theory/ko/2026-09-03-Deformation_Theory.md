@@ -107,11 +107,11 @@ $$H_0(\NL_{C/A})\cong\Omega_{C/A}$$
 
 를 얻는다. $T^0$의 경우, degree $0$ cocycle은 $\mathfrak{a}$를 소멸시켜 $C=B/\mathfrak{a}$ 위로 내려오는 derivation $B\rightarrow M$이므로 곧바로 $T^0(C/A,M)\cong\Der_A(C,M)\cong\Hom_C(\Omega_{C/A},M)$이다. 마지막으로 $T^1$은 정의에 의하여 $[\delta]$가 놓인 cokernel이므로, 앞에서 얻은 obstruction space에서 $\mathfrak{b}$만 $M$으로 바꾼 것이다.  
 
-한편, 두 homology $H_0,H_1$은 presentation $C=B/\mathfrak{a}$의 선택에 의존하지 않는다.
+한편, 두 homology $H_0,H_1$은 presentation $C=B/\mathfrak{a}$의 선택에 의존하지 않는다. 따라서 $H_0=\Omega_{C/A}$와 $H_1=\ker\bar{d}$는 $A$ 위의 algebra $C$ 자체에 붙는 자료이다. 이를 바탕으로, 이전 글에서 conormal sequence의 splitting으로 표현했던 smoothness가 이 complex의 어떤 성질에 해당하는지를 살펴보자.
 
-## 여접 복합체와 smoothness
+## Smooth한 경우와 local complete intersection
 
-이제 앞에서 얻은 complex를 사용하여 이전 글의 smoothness 판정을 정리하자. [§매끄러운 사상과 에탈 사상, ⁋명제 8](/ko/math/scheme_theory/smooth_and_etale_morphisms#prop8)에서 smoothness는 conormal sequence의 splitting으로 나타났고, 이 글의 도입부에서는 lifting의 obstruction이 $T^1$에 놓인다는 것을 보았다. 이 두 설명은 다음과 같이 연결된다.
+[§매끄러운 사상과 에탈 사상, ⁋명제 8](/ko/math/scheme_theory/smooth_and_etale_morphisms#prop8)에서 smoothness는 conormal sequence의 splitting으로 나타났고, 이 글의 도입부에서는 lifting의 obstruction이 $T^1$에 놓인다는 것을 보았다. 이 두 설명은 다음과 같이 연결된다.
 
 ::: 명제 2
 Finitely presented $A$-algebra $C$가 $A$ 위에서 smooth한 것은
@@ -138,11 +138,25 @@ $$\left[\mathfrak{a}/\mathfrak{a}^2\overset{\id}{\longrightarrow}\mathfrak{a}/\m
 
 와 isomorphic하다. 첫 summand는 homology가 모두 $0$이므로, $\NL_{C/A}$는 degree $0$의 projective module $\Omega_{C/A}$ 하나에 quasi-isomorphic하다. 이 경우에는 $\Omega_{C/A}$만으로도 lifting들의 차이 $T^0(C/A,M)=\Hom_C(\Omega_{C/A},M)$를 계산할 수 있고, lifting의 존재를 가로막는 $T^1$은 항상 사라진다.
 
-일반적인 $C$에서는 conormal morphism의 kernel과 그 image가 direct summand인지 여부를 함께 살펴야 한다. $\Omega_{C/A}$는 이 morphism의 cokernel이므로, 이 두 조건을 직접 다루려면 그 앞의 항과 morphism까지 남긴 $\NL_{C/A}$가 필요하다. 이로써 이전 글의 conormal sequence와 infinitesimal lifting criterion이 하나의 complex를 통해 연결된다.
+일반적인 $C$에서는 conormal morphism의 kernel과 그 image가 direct summand인지 여부를 함께 살펴야 한다. $\Omega_{C/A}$는 이 morphism의 cokernel이므로, 이 두 조건을 직접 다루려면 그 앞의 항과 morphism까지 남긴 $\NL_{C/A}$가 필요하다.
+
+이 관점에서 smooth한 경우와 함께 살펴볼 대상이 *local complete intersection* (lci)이다. Field $\mathbb{K}$ 위의 finitely generated algebra $C=B/\mathfrak{a}$, $B=\mathbb{K}[\x_1,\ldots,\x_n]$에 대하여, $\Spec C$의 각 점 근방에서 $\mathfrak{a}$가 regular sequence로 생성될 때 $C$를 $\mathbb{K}$ 위의 local complete intersection이라 한다. 이 조건은 defining equation들이 conormal module에서 국소적으로 basis를 이룬다는 것을 보장한다.
+
+구체적으로 $\mathfrak{a}=(f_1,\ldots,f_r)$가 regular sequence로 생성되면, 각 $f_j$의 class를 보내는 morphism
+
+$$C^r\longrightarrow\mathfrak{a}/\mathfrak{a}^2,\qquad e_j\longmapsto\overline{f_j}$$
+
+은 isomorphism이다. Surjectivity는 $f_j$들이 $\mathfrak{a}$를 생성한다는 것에서 따른다. Injectivity를 보이기 위해 $\sum_jb_jf_j\in\mathfrak{a}^2$라 하자. 이 합을 $\sum_jc_jf_j$ ($c_j\in\mathfrak{a}$)로 쓰면 $(b_j-c_j)_j$는 $f_1,\ldots,f_r$ 사이의 relation이다. Regular sequence의 relation들은 $f_ie_j-f_je_i$로 생성되므로 모든 $b_j-c_j$가 $\mathfrak{a}$에 속하고, 따라서 모든 $b_j$가 $\mathfrak{a}$에 속한다.
+
+따라서 이 경우 naive cotangent complex는
+
+$$\NL_{C/\mathbb{K}}\cong\left[C^r\overset{\bar{d}}{\longrightarrow}C^n\right],\qquad\bar{d}(e_j)=\sum_i\overline{\frac{\partial f_j}{\partial\x_i}}\dd{\x_i}$$
+
+로 주어진다. Local complete intersection에서는 이 설명이 국소적으로 성립하므로 $\mathfrak{a}/\mathfrak{a}^2$가 finitely generated projective $C$-module이고, $\NL_{C/\mathbb{K}}$의 두 항이 모두 projective이다. Smoothness는 여기에 $\bar{d}$가 split injection이라는 조건까지 더해진 경우이며, 바로 이때 위에서 보았듯 complex가 degree $0$의 projective module 하나로 줄어든다. Lci에서는 두 projective module 사이의 morphism이 남아 $H_1$이나 $T^1$이 $0$이 아닐 수 있다.
 
 ## 평탄변형과 일차변형
 
-앞 절에서는 주어진 algebra의 smoothness를 lifting problem으로 판정하였다. 이제 field $\mathbb{K}$ 위의 algebra $C$에 대하여, $X=\Spec C$ 자체가 어떤 family 안에서 달라질 수 있는지를 생각하자. 가령 singular한 $X$가 smooth한 대상들과 하나의 family를 이룰 수 있는지, 또는 $X$를 포함하는 family들이 서로 독립적인 몇 개의 방향으로 달라질 수 있는지는 $X$의 기하와 분류에서 중요한 문제이다. $X$의 방정식을 다른 좌표로 표현하는 것만으로는 smoothness처럼 isomorphism에 의해 보존되는 성질을 바꿀 수 없으므로, 이 문제를 다루려면 방정식 자체를 매개변수에 따라 바꾸어야 한다.
+앞 절에서는 주어진 algebra가 smooth하거나 lci일 때 naive cotangent complex가 어떤 형태를 갖는지 살펴보았다. 이제 field $\mathbb{K}$ 위의 algebra $C$에 대하여, $X=\Spec C$ 자체가 어떤 family 안에서 달라질 수 있는지를 생각하자. 가령 singular한 $X$가 smooth한 대상들과 하나의 family를 이룰 수 있는지, 또는 $X$를 포함하는 family들이 서로 독립적인 몇 개의 방향으로 달라질 수 있는지는 $X$의 기하와 분류에서 중요한 문제이다. $X$의 방정식을 다른 좌표로 표현하는 것만으로는 smoothness처럼 isomorphism에 의해 보존되는 성질을 바꿀 수 없으므로, 이 문제를 다루려면 방정식 자체를 매개변수에 따라 바꾸어야 한다.
 
 예를 들어 $C=\mathbb{K}[\x,\y]/(\x\y)$이면 $X$는 두 직선이 원점에서 만나는 곡선이다. 방정식을 $\x\y=t$로 바꾸어 얻는 family
 
@@ -311,9 +325,7 @@ $$\operatorname{ob}(\xi)\in T^2(C/\mathbb{K},C)$$
 
 Obstruction의 정체는 이렇게 명료하다. First-order deformation은 syzygy를 일차까지 들어올린 뒤 남는 이차 잔여항 $-t^2\sum c_jg_j$를 만들고, 이 잔여항을 $h_j$의 선택으로 흡수할 수 있는지가 연장 가능성이며, 흡수의 실패를 $T^2$가 잰다. 여기서 잔여항이 syzygy의 데이터로 표현되고, 그것이 trivial relation을 넘어서는 부분에서만 의미를 가지므로 $\operatorname{Rel}/\operatorname{TrivRel}$이 등장한 것이다. 이 obstruction을 반복적으로 소거하며 더 높은 차수로 변형을 쌓아 올리면, 그 limit으로 complete local ring 위의 formal deformation을 얻는다 ([Ser]).
 
-## Smooth한 경우와 local complete intersection
-
-[명제 2](#prop2)에서 얻은 smoothness 판정에 변형의 분류와 연장에 관한 결과를 적용하자. Smooth한 경우에는 일차변형의 자유도와 그 연장을 가로막는 obstruction이 모두 사라진다.
+이제 [명제 2](#prop2)의 smoothness 판정에 [정리 7](#thm7)을 적용하면, 변형의 연장에 관한 다음 결론을 얻는다.
 
 ::: 명제 8
 $C$가 $\mathbb{K}$ 위에서 smooth하면 모든 $C$-module $M$에 대하여
@@ -332,7 +344,7 @@ $$T^2(C/\mathbb{K},M)=\Ext^2_C(\LL_{C/\mathbb{K}},M)=\Ext^2_C(\Omega_{C/\mathbb{
 
 더 일반적으로 $A$ 위의 smooth algebra $C_A$와 base의 square-zero extension $A'\rightarrow A$에 대해서도 $T^1(C_A/A,C_A\otimes_AM)=T^2(C_A/A,C_A\otimes_AM)=0$이다. 여기서 $M=\ker(A'\rightarrow A)$이며, [정리 7](#thm7)에 의하여 $C_A$를 $A'$ 위로 연장하는 변형은 존재하고 그 isomorphism class는 유일하다. 앞부분에서 얻은 morphism의 lifting 판정이, 변형이론에서는 이처럼 algebra 자체의 연장 가능성과 유일성으로 이어진다.
 
-이 $T^2$의 소멸은 affine local complete intersection에서도 성립한다. $C=B/\mathfrak{a}$에서 $\mathfrak{a}$가 국소적으로 regular sequence로 생성되면 $\LL_{C/\mathbb{K}}$는 degree $0,1$의 projective module 두 항으로 표현되므로, 그 dual의 둘째 cohomology는 $0$이다. 곧 모든 $C$-module $M$에 대하여 $T^2(C/\mathbb{K},M)=0$이고, 이러한 변형 문제는 *unobstructed<sub>장애 없음</sub>*이다. 이 경우 $T^1$은 남을 수 있으며, 아래 [예시 9](#ex9)에서는 이 공간이 singularity를 바꾸는 일차 방향을 기록한다.
+앞에서 살펴본 affine lci의 경우에는 완전한 여접 복합체도 naive cotangent complex와 같은 두 projective module로 표현되므로 $T^2(C/\mathbb{K},M)=0$이다. 따라서 [정리 7](#thm7)의 obstruction은 항상 사라지며, 이러한 변형 문제를 *unobstructed<sub>장애 없음</sub>*라 부른다. 연장 가능한 변형들의 자유도는 $T^1$에 남으며, 아래 [예시 9](#ex9)에서 이를 계산한다.
 
 ## 예시: 매끄러운 변형부터 장애까지
 
