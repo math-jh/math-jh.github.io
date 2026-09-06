@@ -15,7 +15,7 @@ weight: 22
 published: false
 ---
 
-## Naive 여접 복합체
+## 소박한 여접 복합체
 
 [§매끄러운 사상과 에탈 사상, ⁋정리 15](/ko/math/scheme_theory/smooth_and_etale_morphisms#thm15)에 따르면, locally of finite presentation인 morphism of schemes $\varphi:X\rightarrow S$가 smooth한 것은 임의의 affine $S$-scheme $T=\Spec R$와, square-zero subscheme $T_0=\Spec R_0$마다, 임의의 $S$-morphism $\varrho_0:T_0\rightarrow X$를 $T$로 연장하는 lifting $\varrho:T\rightarrow X$가 항상 존재하는 것과 동치이다. 여기서 $T_0$이 $T$의 *square-zero subscheme*이라는 것은, $T_0\hookrightarrow T$가 square-zero ideal sheaf $\mathcal{I}\subseteq\mathcal{O}_T$로 정의된다는 의미이며, 이를 affine space에서의 세팅 
 
@@ -86,7 +86,7 @@ $A$-algebra $C$와, $A$ 위의 polynomial algebra $B$에 의한 presentation $C=
 
 $$\NL_{C/A}=\Bigl[\at{1}{\mathfrak{a}/\mathfrak{a}^2}\overset{\bar{d}}{\longrightarrow}\at{0}{\Omega_{B/A}\otimes_BC}\Bigr]$$
 
-를 $C$의 *naive cotangent complex*라 부르고, 그 homology를 각각
+를 $C$의 *naive cotangent complex<sub>소박한 여접 복합체</sub>*라 부르고, 그 homology를 각각
 
 $$H_1(\NL_{C/A})=\ker\bar{d},\qquad H_0(\NL_{C/A})=\coker\bar{d}$$
 
@@ -107,7 +107,7 @@ $$H_0(\NL_{C/A})\cong\Omega_{C/A}$$
 
 를 얻는다. 또, 이 때 $H_0$과 $H_1$은 presentation $C=B/\mathfrak{a}$의 선택에 의존하지 않는다. $T^0$의 경우, degree $0$ cocycle은 $\mathfrak{a}$를 소멸시켜 $C=B/\mathfrak{a}$ 위로 내려오는 derivation $B\rightarrow M$이므로 곧바로 $T^0(C/A,M)\cong\Der_A(C,M)\cong\Hom_C(\Omega_{C/A},M)$이다. 마지막으로 $T^1$은 정의에 의하여 $[\delta]$가 놓인 cokernel이므로, 앞에서 얻은 obstruction space에서 $\mathfrak{b}$만 $M$으로 바꾼 것이다.  
 
-## Smooth한 경우와 local complete intersection
+## 소박한 여접 복합체와 매끄러움
 
 [§매끄러운 사상과 에탈 사상, ⁋명제 8](/ko/math/scheme_theory/smooth_and_etale_morphisms#prop8)에서 smoothness는 conormal sequence의 splitting으로 나타났고, 이 글의 도입부에서는 lifting의 obstruction이 $T^1$에 놓인다는 것을 보았다. 이 두 설명은 다음과 같이 연결된다.
 
@@ -154,23 +154,23 @@ $$\ker p\cong\Bigl[\mathfrak{a}/\mathfrak{a}^2\overset{\id}{\longrightarrow}\mat
 
 $$C^r\longrightarrow\mathfrak{a}/\mathfrak{a}^2,\qquad e_j\longmapsto\bar{f}_j$$
 
-은 isomorphism이다. Surjectivity는 $f_j$들이 $\mathfrak{a}$를 생성한다는 것에서 따른다. Injectivity를 보이기 위해 $\sum_jb_jf_j\in\mathfrak{a}^2$라 하자. 이 합을 $\sum_jc_jf_j$ ($c_j\in\mathfrak{a}$)로 쓰면 $(b_j-c_j)_j$는 $f_1,\ldots,f_r$ 사이의 relation이다. Regular sequence의 relation들은 $f_ie_j-f_je_i$로 생성되므로 모든 $b_j-c_j$가 $\mathfrak{a}$에 속하고, 따라서 모든 $b_j$가 $\mathfrak{a}$에 속한다.
-
-따라서 이 경우 naive cotangent complex는
+은 [§완전교차, ⁋명제 5](/ko/math/scheme_theory/complete_intersections#prop5)와 그 증명에 의하여 isomorphism이므로, 이 경우 naive cotangent complex는 Jacobian에 의해
 
 $$\NL_{C/A}\cong\left[C^r\overset{\bar{d}}{\longrightarrow}C^n\right],\qquad\bar{d}(e_j)=\sum_i\overline{\frac{\partial f_j}{\partial\x_i}}\dd{\x_i}$$
 
-로 주어진다. Local complete intersection에서는 이 설명이 국소적으로 성립하므로 $\mathfrak{a}/\mathfrak{a}^2$가 finitely generated projective $C$-module이고, $\NL_{C/A}$의 두 항이 모두 projective이다. Smoothness는 여기에 $\bar{d}$가 split injection이라는 조건까지 더해진 경우이며, 바로 이때 위에서 보았듯 complex가 degree $0$의 projective module 하나로 줄어든다. Lci에서는 두 projective module 사이의 morphism이 남아 $H_1$이나 $T^1$이 $0$이 아닐 수 있다.
+로 주어지며 두 항은 모두 finitely generated free (따라서 finitely generated projective) $C$-module이다. 일반적인 lci 상황에서는 이들 두 free module 사이의 morphism이 남지만, 위에서 살펴본 smooth 상황에서는 여기에 $\bar{d}$가 split injection이라는 조건이 더해져 complex가 degree $0$의 projective module 하나로 줄어드는 것이다. 
 
-## 평탄변형과 일차변형
+## 변형이론
 
-앞 절에서는 주어진 algebra가 smooth하거나 lci일 때 naive cotangent complex가 어떤 형태를 갖는지 살펴보았다. 이제 field $\mathbb{K}$ 위의 algebra $C$에 대하여, $X=\Spec C$ 자체가 어떤 family 안에서 달라질 수 있는지를 생각하자. 가령 singular한 $X$가 smooth한 대상들과 하나의 family를 이룰 수 있는지, 또는 $X$를 포함하는 family들이 서로 독립적인 몇 개의 방향으로 달라질 수 있는지는 $X$의 기하와 분류에서 중요한 문제이다. $X$의 방정식을 다른 좌표로 표현하는 것만으로는 smoothness처럼 isomorphism에 의해 보존되는 성질을 바꿀 수 없으므로, 이 문제를 다루려면 방정식 자체를 매개변수에 따라 바꾸어야 한다.
+앞에서 우리는 소박한 여접 복합체가 smoothness의 infinitesimal lifting property를 어떻게 기록하는지 살펴보았다. 이 complex는 변형이론에서도 중심적인 역할을 한다. 아래에서 보듯 이를 dualize하여 얻는 $T^0$은 변형의 infinitesimal automorphism을, $T^1$은 first-order deformation의 방향, 곧 변형 문제의 tangent vector를 기록한다. 이제 smoothness에 관한 논의를 마치고, 주어진 대상 자체가 family 안에서 어떻게 달라질 수 있는지를 묻자.
 
-예를 들어 $C=\mathbb{K}[\x,\y]/(\x\y)$이면 $X$는 두 직선이 원점에서 만나는 곡선이다. 방정식을 $\x\y=t$로 바꾸어 얻는 family
+변형이론의 기하학적 출발점은 scheme $X$를 고정하고, pointed scheme $(S,s_0)$ 위의 family $\pi:\mathcal{X}\rightarrow S$와 central fiber의 identification $\mathcal{X}_{s_0}\cong X$를 찾는 것이다. 이때 $\pi$에는 flatness를 요구한다. Flatness는 base ring 위의 tensor product가 exactness를 보존하도록 하여, fiber의 scheme-theoretic size가 parameter torsion 때문에 인위적으로 변하는 것을 막는다. 예를 들어 projective family에서는 Hilbert polynomial과 같은 수치적 자료가 fiber를 따라 일정하게 유지된다. 따라서 $\mathcal{X}_s$들을 하나의 대상 $X$가 변해 가는 모습으로 비교할 수 있다.
+
+예를 들어 $C=\mathbb{K}[\x,\y]/(\x\y)$이고 $X=\Spec C$라 하면, $X$는 두 직선이 원점에서 만나는 곡선이다. 방정식을 $\x\y=t$로 바꾸어 얻는 family
 
 $$\pi:\Spec\bigl(\mathbb{K}[t,\x,\y]/(\x\y-t)\bigr)\longrightarrow\Spec\mathbb{K}[t]$$
 
-는 $t=0$에서 $X$를 fiber로 갖는다. 반면 $t=a\neq0$에서 fiber의 coordinate ring은 $\mathbb{K}[\x,\y]/(\x\y-a)\cong\mathbb{K}[\x,\x^{-1}]$이므로 그 fiber는 smooth하다. 또한 전체 coordinate ring은 $\mathbb{K}[t]$-module로서 $1,\x,\x^2,\ldots,\y,\y^2,\ldots$를 basis로 갖는 free module이므로 이 family는 flat하다. 따라서 이 family를 구성함으로써 원래 $X$의 singularity가 flat family 안에서 사라질 수 있다는 사실을 알게 된다. 이처럼 기준점 $s_0\in S$에서의 fiber를 $X$와 식별한 flat family $\mathcal{X}\rightarrow S$를 찾는 것이 변형을 연구하는 기하학적 출발점이다.
+는 $t=0$에서 $X$를 fiber로 갖는다. 반면 $t=a\neq0$에서 fiber의 coordinate ring은 $\mathbb{K}[\x,\y]/(\x\y-a)\cong\mathbb{K}[\x,\x^{-1}]$이므로 그 fiber는 smooth하다. 또한 전체 coordinate ring은 $\mathbb{K}[t]$-module로서 $1,\x,\x^2,\ldots,\y,\y^2,\ldots$를 basis로 갖는 free module이므로 이 family는 flat하다. 따라서 $\pi$는 $X$를 central fiber로 가지면서 나머지 fiber들이 smooth한 flat family이고, $X$의 singularity가 family 안에서 사라지는 smoothing을 이룬다.
 
 그러나 일반적인 $C$에 대하여 이런 family를 직접 찾으려면, 매개변수에 따라 달라지는 방정식들이 flatness를 만족하도록 하면서 좌표변환으로 서로 같아지는 family들도 구별해 내야 한다. 우리는 이 문제를 먼저 매개변수의 일차항만 남겨서 다룬다. 이후 이 글에서는 $\epsilon^2=0$인 dual numbers를 $\mathbb{K}[\epsilon]=\mathbb{K}[t]/(t^2)$로 적는다. $\mathbb{K}[t]$ 위의 family를 이 ring 위로 base change하면 $f_j+tg_j+t^2h_j+\cdots$ 꼴의 방정식은 $f_j+\epsilon g_j$가 된다. 위의 예에서는 $\x\y=t$가 $\x\y=\epsilon$이 되며, 이는 원래 곡선이 변하는 방향을 일차까지만 기록한다. $\epsilon^2=0$이므로 보정항들 사이의 곱이 사라져, 허용되는 $g_j$와 좌표변환의 효과를 선형적인 조건으로 계산할 수 있게 된다.
 
@@ -187,8 +187,6 @@ First-order deformation에서 *flatness*는 원래 대상이 $\epsilon$ 방향�
 $$0\longrightarrow C\overset{i}{\longrightarrow}C'\longrightarrow C\longrightarrow0,\qquad i(c)=\epsilon\widetilde{c}$$
 
 를 준다. 여기서 $\widetilde{c}\in C'$은 $c\in C$의 임의의 lift이고, $\epsilon^2=0$이므로 $i(c)$는 이 선택에 의존하지 않는다. 또한 $\epsilon C'$은 square-zero ideal이며, 위의 $i$를 통해 $C$-module $C$ 자체와 식별된다. 거꾸로 $C$의 $C$에 의한 square-zero extension이 주어지면 $\epsilon=i(1)$로 놓아 $C'$에 dual numbers 위의 algebra structure를 줄 수 있다. 그럼 $\epsilon C'=i(C)$이고 위의 morphism이 isomorphism이므로 $C'$은 flat하다. 따라서 $C$의 first-order deformation을 분류하는 문제는 $C$의 $C$에 의한 square-zero extension을 분류하는 문제로 바뀐다.
-
-## Square-zero extension과 일차변형의 분류
 
 앞에서 얻은 일차변형의 분류 문제를 일반적인 $A$-algebra $C$와 $C$-module $M$에 대하여 다루자. 우리가 분류하려는 것은 $M^2=0$이고 $M$ 위에 주어진 $C$-module structure를 유도하는 $A$-algebra의 extension
 
@@ -354,8 +352,6 @@ $$T^2(C/\mathbb{K},M)=\Ext^2_C(\LL_{C/\mathbb{K}},M)=\Ext^2_C(\Omega_{C/\mathbb{
 
 앞에서 살펴본 affine lci의 경우에는 완전한 여접 복합체도 naive cotangent complex와 같은 두 projective module로 표현되므로 $T^2(C/\mathbb{K},M)=0$이다. 따라서 [정리 7](#thm7)의 obstruction은 항상 사라지며, 이러한 변형 문제를 *unobstructed<sub>장애 없음</sub>*라 부른다. 연장 가능한 변형들의 자유도는 $T^1$에 남으며, 아래 [예시 9](#ex9)에서 이를 계산한다.
 
-## 예시: 매끄러운 변형부터 장애까지
-
 이제 구체적인 singular point들로 위 이론을 검증한다.
 
 ::: 예시 9 (node)
@@ -401,8 +397,6 @@ $$C=\mathbb{K}[\z_0,\z_1,\z_2,\z_3,\z_4]/\mathfrak{a},\qquad X=\Spec C,\qquad M=
 
 Codimension $3$ 이상에서는 이러한 obstruction이 나타날 수 있는 반면, $\mathbb{P}^3$ 위 rational normal cubic의 cone과 같은 codimension $2$ Cohen–Macaulay singular point는 항상 unobstructed하여 base가 매끄럽다. 따라서 [예시 10](#ex10)처럼 lci가 아니어도 obstruction이 없을 수 있으며, "non-lci"와 "obstructed"는 서로 다른 현상이다. Obstruction의 유무는 $T^2$와 그 위에서 정의되는 이차 morphism $\operatorname{ob}$이 결정하는 것이지, $\Omega$나 $H_1(\NL)$만으로 읽히지 않는다. 이 예시의 명시적 계산은 ([Ser], [Har])를 참조하라.
 :::
-
-## 완전한 여접 복합체의 필요성
 
 지금까지 naive 여접 복합체 $\NL_{C/\mathbb{K}}$로 $T^0, T^1$을 완전히 통제하였고, $T^2$는 syzygy의 셋째 항을 붙인 Lichtenbaum–Schlessinger complex로 다루었다. 그러나 이 유한한 절단만으로는 여접 복합체의 전체 구조를 볼 수 없다.
 
