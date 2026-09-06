@@ -105,9 +105,7 @@ $$T^0(C/A,M)=\ker\bar{d}^\ast,\qquad T^1(C/A,M)=\coker\bar{d}^\ast$$
 
 $$H_0(\NL_{C/A})\cong\Omega_{C/A}$$
 
-를 얻는다. $T^0$의 경우, degree $0$ cocycle은 $\mathfrak{a}$를 소멸시켜 $C=B/\mathfrak{a}$ 위로 내려오는 derivation $B\rightarrow M$이므로 곧바로 $T^0(C/A,M)\cong\Der_A(C,M)\cong\Hom_C(\Omega_{C/A},M)$이다. 마지막으로 $T^1$은 정의에 의하여 $[\delta]$가 놓인 cokernel이므로, 앞에서 얻은 obstruction space에서 $\mathfrak{b}$만 $M$으로 바꾼 것이다.  
-
-한편, 두 homology $H_0,H_1$은 presentation $C=B/\mathfrak{a}$의 선택에 의존하지 않는다. 따라서 $H_0=\Omega_{C/A}$와 $H_1=\ker\bar{d}$는 $A$ 위의 algebra $C$ 자체에 붙는 자료이다. 이를 바탕으로, 이전 글에서 conormal sequence의 splitting으로 표현했던 smoothness가 이 complex의 어떤 성질에 해당하는지를 살펴보자.
+를 얻는다. 또, 이 때 $H_0$과 $H_1$은 presentation $C=B/\mathfrak{a}$의 선택에 의존하지 않는다. $T^0$의 경우, degree $0$ cocycle은 $\mathfrak{a}$를 소멸시켜 $C=B/\mathfrak{a}$ 위로 내려오는 derivation $B\rightarrow M$이므로 곧바로 $T^0(C/A,M)\cong\Der_A(C,M)\cong\Hom_C(\Omega_{C/A},M)$이다. 마지막으로 $T^1$은 정의에 의하여 $[\delta]$가 놓인 cokernel이므로, 앞에서 얻은 obstruction space에서 $\mathfrak{b}$만 $M$으로 바꾼 것이다.  
 
 ## Smooth한 경우와 local complete intersection
 
@@ -116,7 +114,7 @@ $$H_0(\NL_{C/A})\cong\Omega_{C/A}$$
 ::: 명제 2
 Finitely presented $A$-algebra $C$가 $A$ 위에서 smooth한 것은
 
-$$H_1(\NL_{C/A})=0,\qquad \Omega_{C/A}\text{가 finitely generated projective }C\text{-module}$$
+$$H_1(\NL_{C/A})=0,\qquad \Omega_{C/A}\text{ is a finitely generated projective }C\text{-module}$$
 
 인 것과 동치이다. 또한 이는 모든 $C$-module $M$에 대하여 $T^1(C/A,M)=0$인 것과 동치이다.
 :::
@@ -127,32 +125,42 @@ $$0\longrightarrow\mathfrak{a}/\mathfrak{a}^2\overset{\bar{d}}{\longrightarrow}\
 
 는 split short exact sequence이다. 따라서 $H_1(\NL_{C/A})=\ker\bar{d}=0$이고, $\Omega_{C/A}$는 finitely generated free module $\Omega_{B/A}\otimes_BC$의 direct summand이므로 finitely generated projective이다.
 
-이제 $H_1(\NL_{C/A})=0$이고 $\Omega_{C/A}$가 projective라 하자. 첫 조건에 의하여 위 sequence는 왼쪽에서도 exact이고, 둘째 조건에 의하여 split된다. 따라서 $r\circ\bar{d}=\id$인 retraction $r:\Omega_{B/A}\otimes_BC\rightarrow\mathfrak{a}/\mathfrak{a}^2$가 존재한다. 임의의 $C$-module $M$과 $\delta:\mathfrak{a}/\mathfrak{a}^2\rightarrow M$에 대하여 $h=\delta\circ r$로 두면 $h\circ\bar{d}=\delta$이므로 $\bar{d}^\ast$가 surjective이고 $T^1(C/A,M)=0$이다.
+이제 $H_1(\NL_{C/A})=0$이고 $\Omega_{C/A}$가 projective라 하자. Presentation $C=B/\mathfrak{a}$에 대한 conormal sequence
 
-마지막으로 모든 $M$에 대하여 $T^1(C/A,M)=0$이라 하자. 그럼 도입부의 임의의 lifting problem에서 $[\delta]\in T^1(C/A,\mathfrak{b})$가 $0$이므로 lifting이 존재한다. $C$가 finitely presented이므로 [§매끄러운 사상과 에탈 사상, ⁋정리 15](/ko/math/scheme_theory/smooth_and_etale_morphisms#thm15)에 의하여 $C$는 $A$ 위에서 smooth하다.
+$$\mathfrak{a}/\mathfrak{a}^2\overset{\bar{d}}{\longrightarrow}\Omega_{B/A}\otimes_BC\longrightarrow\Omega_{C/A}\longrightarrow0$$
+
+는 항상 right exact이며 ([§미분과 여접층, ⁋명제 2](/ko/math/scheme_theory/sheaf_of_differentials#prop2)) 여기에 조건 $H_1(\NL_{C/A})=\ker\bar{d}=0$이 주어졌으므로 왼쪽에 $0$을 붙여 short exact sequence를 얻을 수 있다. 또, $\Omega_{C/A}$가 projective이므로 surjection $\Omega_{B/A}\otimes_BC\rightarrow\Omega_{C/A}$가 split한다. ([\[다중선형대수학\] §사영가군, 단사가군, 평탄가군, ⁋명제 4](/ko/math/multilinear_algebra/various_modules#prop4)) 따라서 [§매끄러운 사상과 에탈 사상, ⁋명제 8](/ko/math/scheme_theory/smooth_and_etale_morphisms#prop8)에 의하여 $C$는 $A$ 위에서 smooth하다.
+
+마지막으로 smoothness와 모든 $C$-module $M$에 대한 $T^1(C/A,M)=0$인 것이 동치임을 보인다. 우선 $C$가 smooth라면 위에서 얻은 splitting에 의하여 $r\circ\bar{d}=\id$인 retraction $r:\Omega_{B/A}\otimes_BC\rightarrow\mathfrak{a}/\mathfrak{a}^2$가 존재한다. 이제 임의의 $C$-module $M$과 $\delta:\mathfrak{a}/\mathfrak{a}^2\rightarrow M$에 대하여 $h=\delta\circ r$로 두면 $h\circ\bar{d}=\delta$이므로 $\bar{d}^\ast$가 surjective이고 $T^1(C/A,M)=0$이다. 거꾸로 모든 $M$에 대하여 $T^1(C/A,M)=0$이라 하자. 그럼 도입부의 임의의 lifting problem에서 $[\delta]\in T^1(C/A,\mathfrak{b})$가 $0$이므로 lifting이 존재한다. $C$가 finitely presented이므로 [§매끄러운 사상과 에탈 사상, ⁋정리 15](/ko/math/scheme_theory/smooth_and_etale_morphisms#thm15)에 의하여 $C$는 $A$ 위에서 smooth하다.
 :::
 
-Smooth한 경우 위의 splitting을 택하면 $\NL_{C/A}$는 complex로서
+특히 $C$가 smooth라면, 위의 증명에서 얻은 splitting에 의하여 naive cotangent complex의 splitting
 
-$$\left[\mathfrak{a}/\mathfrak{a}^2\overset{\id}{\longrightarrow}\mathfrak{a}/\mathfrak{a}^2\right]\oplus\left[0\longrightarrow\Omega_{C/A}\right]$$
+$$\NL_{C/A}\cong \Bigl[\at{1}{\mathfrak{a}/\mathfrak{a}^2}\overset{\id}{\longrightarrow}\at{0}{\mathfrak{a}/\mathfrak{a}^2}\Bigr]\oplus\Bigl[\at{1}{0}\longrightarrow\at{0}{\Omega_{C/A}}\Bigr]$$
 
-와 isomorphic하다. 첫 summand는 homology가 모두 $0$이므로, $\NL_{C/A}$는 degree $0$의 projective module $\Omega_{C/A}$ 하나에 quasi-isomorphic하다. 이 경우에는 $\Omega_{C/A}$만으로도 lifting들의 차이 $T^0(C/A,M)=\Hom_C(\Omega_{C/A},M)$를 계산할 수 있고, lifting의 존재를 가로막는 $T^1$은 항상 사라진다.
+이 존재한다. 즉, 둘째 summand로의 projection을 $p$라 하면 short exact sequence
 
-일반적인 $C$에서는 conormal morphism의 kernel과 그 image가 direct summand인지 여부를 함께 살펴야 한다. $\Omega_{C/A}$는 이 morphism의 cokernel이므로, 이 두 조건을 직접 다루려면 그 앞의 항과 morphism까지 남긴 $\NL_{C/A}$가 필요하다.
+$$0\longrightarrow\ker p\longrightarrow\NL_{C/A}\overset{p}{\longrightarrow}[0\longrightarrow\Omega_{C/A}]\longrightarrow0$$
 
-이 관점에서 smooth한 경우와 함께 살펴볼 대상이 *local complete intersection* (lci)이다. Field $\mathbb{K}$ 위의 finitely generated algebra $C=B/\mathfrak{a}$, $B=\mathbb{K}[\x_1,\ldots,\x_n]$에 대하여, $\Spec C$의 각 점 근방에서 $\mathfrak{a}$가 regular sequence로 생성될 때 $C$를 $\mathbb{K}$ 위의 local complete intersection이라 한다. 이 조건은 defining equation들이 conormal module에서 국소적으로 basis를 이룬다는 것을 보장한다.
+가 존재하며, 이 때
 
-구체적으로 $\mathfrak{a}=(f_1,\ldots,f_r)$가 regular sequence로 생성되면, 각 $f_j$의 class를 보내는 morphism
+$$\ker p\cong\Bigl[\mathfrak{a}/\mathfrak{a}^2\overset{\id}{\longrightarrow}\mathfrak{a}/\mathfrak{a}^2\Bigr]$$
 
-$$C^r\longrightarrow\mathfrak{a}/\mathfrak{a}^2,\qquad e_j\longmapsto\overline{f_j}$$
+이므로 모든 $n$에 대하여 $H_n(\ker p)=0$이다. 위의 short exact sequence에 [\[호몰로지 대수학\] §긴 완전열, ⁋정리 1](/ko/math/homological_algebra/long_exact_sequence#thm1)을 적용하면 모든 degree에서 $H_n(p)$가 isomorphism이 되어, $p$는 $\NL_{C/A}$에서 degree $0$의 projective module $\Omega_{C/A}$로의 quasi-isomorphism이 된다. 즉, 이 경우에는 $\Omega_{C/A}$만 보아도 lifting들의 차이 $T^0(C/A,M)=\Hom_C(\Omega_{C/A},M)$를 계산할 수 있고, lifting의 존재를 가로막는 obastruction space $T^1$은 항상 사라진다.
+
+그러나 일반적인 $C$에 대해서는 conormal morphism의 kernel과 그 image가 direct summand인지 여부부터 살펴보아야 한다. $\Omega_{C/A}$는 이 morphism의 cokernel이므로, 이 두 조건을 직접 다루려면 그 앞의 항과 morphism까지 남긴 $\NL_{C/A}$가 본격적으로 필요하게 된다. 이 상황을 대표하는 것이 lci의 경우이다. ([§완전교차, ⁋정의 1](/ko/math/scheme_theory/complete_intersections#def1)) 일반적인 non-lci 상황에서는 비슷한 계산을 수행하기 위해 cotangent complex 전체를 살펴보아야 할 수 있지만, lci에서는 naive cotangent complex가 cotangent complex 전체와 quasi-isomorphic하다. 이러한 관점에서 lci는 필요한 cotangent data를 naive cotangent complex에서 직접 읽을 수 있는 대표적인 경우로 생각할 수 있다.
+
+구체적인 상황을 보기 위하여 $B=A[\x_1,\ldots,\x_n]$, $C=B/\mathfrak{a}$로 놓고, $\mathfrak{a}=(f_1,\ldots,f_r)$가 $B$-regular sequence로 생성된다고 하자. 각 $f_j$의 class를 보내는 $C$-linear morphism
+
+$$C^r\longrightarrow\mathfrak{a}/\mathfrak{a}^2,\qquad e_j\longmapsto\bar{f}_j$$
 
 은 isomorphism이다. Surjectivity는 $f_j$들이 $\mathfrak{a}$를 생성한다는 것에서 따른다. Injectivity를 보이기 위해 $\sum_jb_jf_j\in\mathfrak{a}^2$라 하자. 이 합을 $\sum_jc_jf_j$ ($c_j\in\mathfrak{a}$)로 쓰면 $(b_j-c_j)_j$는 $f_1,\ldots,f_r$ 사이의 relation이다. Regular sequence의 relation들은 $f_ie_j-f_je_i$로 생성되므로 모든 $b_j-c_j$가 $\mathfrak{a}$에 속하고, 따라서 모든 $b_j$가 $\mathfrak{a}$에 속한다.
 
 따라서 이 경우 naive cotangent complex는
 
-$$\NL_{C/\mathbb{K}}\cong\left[C^r\overset{\bar{d}}{\longrightarrow}C^n\right],\qquad\bar{d}(e_j)=\sum_i\overline{\frac{\partial f_j}{\partial\x_i}}\dd{\x_i}$$
+$$\NL_{C/A}\cong\left[C^r\overset{\bar{d}}{\longrightarrow}C^n\right],\qquad\bar{d}(e_j)=\sum_i\overline{\frac{\partial f_j}{\partial\x_i}}\dd{\x_i}$$
 
-로 주어진다. Local complete intersection에서는 이 설명이 국소적으로 성립하므로 $\mathfrak{a}/\mathfrak{a}^2$가 finitely generated projective $C$-module이고, $\NL_{C/\mathbb{K}}$의 두 항이 모두 projective이다. Smoothness는 여기에 $\bar{d}$가 split injection이라는 조건까지 더해진 경우이며, 바로 이때 위에서 보았듯 complex가 degree $0$의 projective module 하나로 줄어든다. Lci에서는 두 projective module 사이의 morphism이 남아 $H_1$이나 $T^1$이 $0$이 아닐 수 있다.
+로 주어진다. Local complete intersection에서는 이 설명이 국소적으로 성립하므로 $\mathfrak{a}/\mathfrak{a}^2$가 finitely generated projective $C$-module이고, $\NL_{C/A}$의 두 항이 모두 projective이다. Smoothness는 여기에 $\bar{d}$가 split injection이라는 조건까지 더해진 경우이며, 바로 이때 위에서 보았듯 complex가 degree $0$의 projective module 하나로 줄어든다. Lci에서는 두 projective module 사이의 morphism이 남아 $H_1$이나 $T^1$이 $0$이 아닐 수 있다.
 
 ## 평탄변형과 일차변형
 
@@ -243,11 +251,11 @@ $$\sum_jA_jF_j=\sum_ja_jf_j+\epsilon\Bigl(\sum_ja_jg_j-\sum_jc_jf_j\Bigr)=0$$
 이므로 syzygy $(a_j)$가 $(F_j)$의 syzygy로 들어올려진다.
 :::
 
-이 명제는 flat한 first-order deformation을 매우 구체적으로 기술한다. 곧 flatness는 정확히 "원래 방정식들 사이의 모든 관계가 흔들린 방정식들 사이의 관계로 살아남는다"는 조건이다. $\sum_ja_jf_j=0$인 syzygy에 대하여 조건 $\sum_ja_jg_j\in \mathfrak{a}$를 $C$ 위에서 읽으면 $\sum_j\overline{a_j}\overline{g_j}=0$이므로, 대응 $\overline{f_j}\mapsto\overline{g_j}$는 $C$-module homomorphism
+이 명제는 flat한 first-order deformation을 매우 구체적으로 기술한다. 곧 flatness는 정확히 "원래 방정식들 사이의 모든 관계가 흔들린 방정식들 사이의 관계로 살아남는다"는 조건이다. $\sum_ja_jf_j=0$인 syzygy에 대하여 조건 $\sum_ja_jg_j\in \mathfrak{a}$를 $C$ 위에서 읽으면 $\sum_j\overline{a_j}\overline{g_j}=0$이므로, 대응 $\bar{f}_j\mapsto\overline{g_j}$는 $C$-module homomorphism
 
 $$\varphi:\mathfrak{a}/\mathfrak{a}^2\rightarrow C$$
 
-를 well-defined하게 정의한다. 거꾸로 임의의 $\varphi\in\Hom_C(\mathfrak{a}/\mathfrak{a}^2,C)$은 $g_j\in B$를 $\varphi(\overline{f_j})=\overline{g_j}$이도록 택하여 flat한 first-order deformation을 준다. 즉 flat한 first-order deformation의 집합은 $\Hom_C(\mathfrak{a}/\mathfrak{a}^2,C)$와 자연스럽게 대응하며, 이는 도입부에서 확대의 자료로부터 얻었던 $\delta\in\Hom_C(\mathfrak{a}/\mathfrak{a}^2,\mathfrak{b})$를 $\mathfrak{b}=C$인 경우에 방정식의 언어로 다시 본 것이다.
+를 well-defined하게 정의한다. 거꾸로 임의의 $\varphi\in\Hom_C(\mathfrak{a}/\mathfrak{a}^2,C)$은 $g_j\in B$를 $\varphi(\bar{f}_j)=\overline{g_j}$이도록 택하여 flat한 first-order deformation을 준다. 즉 flat한 first-order deformation의 집합은 $\Hom_C(\mathfrak{a}/\mathfrak{a}^2,C)$와 자연스럽게 대응하며, 이는 도입부에서 확대의 자료로부터 얻었던 $\delta\in\Hom_C(\mathfrak{a}/\mathfrak{a}^2,\mathfrak{b})$를 $\mathfrak{b}=C$인 경우에 방정식의 언어로 다시 본 것이다.
 
 남은 일은 이 중 어떤 것들이 isomorphic인지, 곧 trivial한 변형을 걸러내는 것이다. 변형 $C'=C[\epsilon]$ (즉 모든 $g_j=0$)에 isomorphic인 변형을 *trivial*하다 부른다. 좌표변환 $\x_i\mapsto\x_i+\epsilon\theta(\x_i)$ (각 $\theta(\x_i)\in C$를 임의로 정하고 derivation으로 확장하여 얻는 $\theta\in\Der_\mathbb{K}(B,C)$)에 의한 $B[\epsilon]$의 automorphism은 $f_j$를 $f_j+\epsilon\sum_i\theta(\x_i)(\partial f_j/\partial\x_i)=f_j+\epsilon\theta(f_j)$로 옮기므로, trivial한 변형들은 정확히 $\varphi$가 derivation에서 오는 경우, 곧 합성
 
@@ -371,17 +379,17 @@ $C=\mathbb{K}[\x,\y,\z]/\mathfrak{a}$, $\mathfrak{a}=(\x\y,\y\z,\z\x)$를 생각
 
 $f_1=\x\y$, $f_2=\y\z$, $f_3=\z\x$라 하면, $\bar{d}:\mathfrak{a}/\mathfrak{a}^2\rightarrow C^3$는
 
-$$\bar{d}(\overline{f_1})=(\y,\x,0),\quad\bar{d}(\overline{f_2})=(0,\z,\y),\quad\bar{d}(\overline{f_3})=(\z,0,\x)$$
+$$\bar{d}(\bar{f}_1)=(\y,\x,0),\quad\bar{d}(\bar{f}_2)=(0,\z,\y),\quad\bar{d}(\bar{f}_3)=(\z,0,\x)$$
 
-으로 주어진다 ($C^3=C \dd{\x}\oplus C \dd{\y}\oplus C \dd{\z}$). 이제 원소 $\x\cdot\overline{f_2}\in \mathfrak{a}/\mathfrak{a}^2$을 보자. $C$ 위에서 $\x\z=\x\y=0$이므로
+으로 주어진다 ($C^3=C \dd{\x}\oplus C \dd{\y}\oplus C \dd{\z}$). 이제 원소 $\x\cdot\bar{f}_2\in \mathfrak{a}/\mathfrak{a}^2$을 보자. $C$ 위에서 $\x\z=\x\y=0$이므로
 
-$$\bar{d}(\x\cdot\overline{f_2})=\x\cdot(0,\z,\y)=(0,\x\z,\x\y)=(0,0,0)$$
+$$\bar{d}(\x\cdot\bar{f}_2)=\x\cdot(0,\z,\y)=(0,\x\z,\x\y)=(0,0,0)$$
 
-이어서 $\x\cdot\overline{f_2}\in\ker\bar{d}=H_1(\NL_{C/\mathbb{K}})$이다. 한편 $\x f_2=\x\y\z$는 degree $3$이고 $\mathfrak{a}^2$의 원소는 모두 degree $4$ 이상이므로 $\x\y\z\notin \mathfrak{a}^2$, 곧 $\x\cdot\overline{f_2}=\overline{\x\y\z}\neq0$이다. 따라서
+이어서 $\x\cdot\bar{f}_2\in\ker\bar{d}=H_1(\NL_{C/\mathbb{K}})$이다. 한편 $\x f_2=\x\y\z$는 degree $3$이고 $\mathfrak{a}^2$의 원소는 모두 degree $4$ 이상이므로 $\x\y\z\notin \mathfrak{a}^2$, 곧 $\x\cdot\bar{f}_2=\overline{\x\y\z}\neq0$이다. 따라서
 
 $$H_1(\NL_{C/\mathbb{K}})\neq0,\qquad \overline{\x\y\z}\in H_1(\NL_{C/\mathbb{K}})$$
 
-이다. 이 nonzero class는 conormal morphism $\bar{d}$의 왼쪽 끝 비단사성, 곧 conormal exact sequence를 왼쪽으로 연장했을 때 비로소 보이는 정보이며, $\Omega_{C/\mathbb{K}}$만으로는 결코 검출되지 않는다. ($\overline{\x\y\z}$는 세 generator 어느 쪽으로 보아도 같은 원소로서, $\z\cdot\overline{f_1}=\x\cdot\overline{f_2}=\y\cdot\overline{f_3}$이 모두 kernel에 속한다.) 이것이 naive 여접 복합체의 $H_1$이 smoothness의 실패 가운데 conormal morphism의 비단사성을 포착하는 가장 깨끗한 사례이다.
+이다. 이 nonzero class는 conormal morphism $\bar{d}$의 왼쪽 끝 비단사성, 곧 conormal exact sequence를 왼쪽으로 연장했을 때 비로소 보이는 정보이며, $\Omega_{C/\mathbb{K}}$만으로는 결코 검출되지 않는다. ($\overline{\x\y\z}$는 세 generator 어느 쪽으로 보아도 같은 원소로서, $\z\cdot\bar{f}_1=\x\cdot\bar{f}_2=\y\cdot\bar{f}_3$이 모두 kernel에 속한다.) 이것이 naive 여접 복합체의 $H_1$이 smoothness의 실패 가운데 conormal morphism의 비단사성을 포착하는 가장 깨끗한 사례이다.
 :::
 
 ::: 예시 11 (obstruction이 있는 변형)
