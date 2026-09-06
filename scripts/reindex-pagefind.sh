@@ -7,5 +7,5 @@ REPO="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 # Clean previous index fragments to avoid unbounded accumulation
 rm -rf "$REPO/_site/pagefind"
 
-"$HOME/.cargo/bin/pagefind" --site "$REPO/_site" --quiet
+"${CARGO_HOME:-$HOME/.local/share/cargo}/bin/pagefind" --site "$REPO/_site" --quiet
 echo "Pagefind index refreshed at $REPO/_site/pagefind/"
