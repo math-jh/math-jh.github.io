@@ -162,19 +162,19 @@ $$\NL_{C/A}\cong\left[C^r\overset{\bar{d}}{\longrightarrow}C^n\right],\qquad\bar
 
 ## 변형이론
 
-앞에서 우리는 소박한 여접 복합체가 smoothness의 infinitesimal lifting property를 어떻게 기록하는지 살펴보았다. 이 complex는 변형이론에서도 중심적인 역할을 한다. 아래에서 보듯 이를 dualize하여 얻는 $T^0$은 변형의 infinitesimal automorphism을, $T^1$은 first-order deformation의 방향, 곧 변형 문제의 tangent vector를 기록한다. 이제 smoothness에 관한 논의를 마치고, 주어진 대상 자체가 family 안에서 어떻게 달라질 수 있는지를 묻자.
+앞에서 우리는 naive cotangent complex가 smoothness의 infinitesimal lifting property를 어떻게 기록하는지 살펴보았다. 이 complex는 deformation theory에서도 중심적인 역할을 한다. 
 
-변형이론의 기하학적 출발점은 scheme $X$를 고정하고, pointed scheme $(S,s_0)$ 위의 family $\pi:\mathcal{X}\rightarrow S$와 central fiber의 identification $\mathcal{X}_{s_0}\cong X$를 찾는 것이다. 이때 $\pi$에는 flatness를 요구한다. Flatness는 base ring 위의 tensor product가 exactness를 보존하도록 하여, fiber의 scheme-theoretic size가 parameter torsion 때문에 인위적으로 변하는 것을 막는다. 예를 들어 projective family에서는 Hilbert polynomial과 같은 수치적 자료가 fiber를 따라 일정하게 유지된다. 따라서 $\mathcal{X}_s$들을 하나의 대상 $X$가 변해 가는 모습으로 비교할 수 있다.
+Deformation theory의 기하학적 출발점은 scheme $X_0$를 고정하고, pointed scheme $(T,t_0)$ 위의 family $\pi:X\rightarrow T$와 central fiber의 identification $X_{t_0}\cong X_0$를 찾는 것이다. [§스킴 사이의 사상, ⁋예시 10](/ko/math/scheme_theory/morphism_of_schemes#ex10)에서와 같이 scheme morphism $\pi:X\rightarrow T$를 $T$로 매개화된 family로 보면, 이는 매개변수 $t\in T$로 parametrize된 scheme들 $X_t$들의 family 중, 고정된 점 $t_0\in T$에서의 fiber가 $X_0$으로 나오는 family를 보는 것이다. 이러한 관점을 위해 $\pi$가 flat일 것을 요구하는 것이 합리적이며 ([§평탄사상](/ko/math/scheme_theory/flat_morphisms)) 이러한 가정 아래 이는 fiber들 $X_t$를 하나의 대상 $X_0$가 변해 가는 모습으로 보고 비교하는 것이다.
 
-예를 들어 $C=\mathbb{K}[\x,\y]/(\x\y)$이고 $X=\Spec C$라 하면, $X$는 두 직선이 원점에서 만나는 곡선이다. 방정식을 $\x\y=t$로 바꾸어 얻는 family
+가장 단순한 예시로 두 직선이 원점에서 만나는 node $X_0=\Spec\bigl(\mathbb{K}[\x,\y]/(\x\y)\bigr)$를 생각하자. 이를 deform하는 가장 간단한 방법은 방정식 $\x\y=0$을 $\x\y=t$로 바꾸어 다음의 family
 
-$$\pi:\Spec\bigl(\mathbb{K}[t,\x,\y]/(\x\y-t)\bigr)\longrightarrow\Spec\mathbb{K}[t]$$
+$$\pi:X=\Spec\bigl(\mathbb{K}[t,\x,\y]/(\x\y-t)\bigr)\longrightarrow\Spec\mathbb{K}[t]$$
 
-는 $t=0$에서 $X$를 fiber로 갖는다. 반면 $t=a\neq0$에서 fiber의 coordinate ring은 $\mathbb{K}[\x,\y]/(\x\y-a)\cong\mathbb{K}[\x,\x^{-1}]$이므로 그 fiber는 smooth하다. 또한 전체 coordinate ring은 $\mathbb{K}[t]$-module로서 $1,\x,\x^2,\ldots,\y,\y^2,\ldots$를 basis로 갖는 free module이므로 이 family는 flat하다. 따라서 $\pi$는 $X$를 central fiber로 가지면서 나머지 fiber들이 smooth한 flat family이고, $X$의 singularity가 family 안에서 사라지는 smoothing을 이룬다.
+를 생각하는 것이다. 이는 $t=0$에서 $X_0$를 fiber로 갖고 $t\neq0$에서는 smooth한 fiber를 가지며, [§평탄사상, ⁋명제 5](/ko/math/scheme_theory/flat_morphisms#prop5)을 통해 $\pi$의 flatness 또한 확인할 수 있다. 즉, $\pi$는 $X_0$를 central fiber로 가지면서 나머지 fiber들이 smooth한 flat family이며, 이 family를 보면 우리는 $X_0$의 원점에 있던 singularity가 어떻게 사라지는지를 살펴볼 수 있다. 
 
-그러나 일반적인 $C$에 대하여 이런 family를 직접 찾으려면, 매개변수에 따라 달라지는 방정식들이 flatness를 만족하도록 하면서 좌표변환으로 서로 같아지는 family들도 구별해 내야 한다. 우리는 이 문제를 먼저 매개변수의 일차항만 남겨서 다룬다. 이후 이 글에서는 $\epsilon^2=0$인 dual numbers를 $\mathbb{K}[\epsilon]=\mathbb{K}[t]/(t^2)$로 적는다. $\mathbb{K}[t]$ 위의 family를 이 ring 위로 base change하면 $f_j+tg_j+t^2h_j+\cdots$ 꼴의 방정식은 $f_j+\epsilon g_j$가 된다. 위의 예에서는 $\x\y=t$가 $\x\y=\epsilon$이 되며, 이는 원래 곡선이 변하는 방향을 일차까지만 기록한다. $\epsilon^2=0$이므로 보정항들 사이의 곱이 사라져, 허용되는 $g_j$와 좌표변환의 효과를 선형적인 조건으로 계산할 수 있게 된다.
+일반적인 scheme $X_0$의 deformation을 찾는 첫 단계는 base의 central point $t_0$에서 infinitesimal direction들을 하나씩 살펴보는 것이다. $T$가 $\mathbb{K}$-scheme일 때 이러한 tangent direction은 $\mathbb{K}[\epsilon]\cong\mathbb{K}[t]/(t^2)$-valued point $\Spec\mathbb{K}[\epsilon]\rightarrow T$으로 표현되며 ([§매끄러운 사상과 에탈 사상, §§Infinitesimal lifting criterion](/ko/math/scheme_theory/smooth_and_etale_morphisms#infinitesimal-lifting-criterion)), 이를 따라 $\pi:X\rightarrow T$를 pullback하면 우리는 $\Spec\mathbb{K}[\epsilon]$ 위의 family를 얻는다. 직관적으로 이는 tangent direction 방향으로 $X_0$이 변하는 방향을 기록한 family이다. 
 
-이 일차 단계와 이후의 연장 문제를 함께 다루기 위해, 일반적인 base의 square-zero extension에 대하여 변형을 정의한다.
+$T=\Spec\mathbb{K}[t]$일 때 $t\mapsto\epsilon$에 따른 base change는 $f_j+tg_j+t^2h_j+\cdots$를 $f_j+\epsilon g_j$로 보내며, 위의 예시에서는 $\x\y=t$를 $\x\y=\epsilon$로 보낸다. 한편 projection $\mathbb{K}[\epsilon]\rightarrow\mathbb{K}$의 kernel $(\epsilon)$은 제곱이 $0$이므로 dual numbers는 가장 단순한 square-zero extension이다. 이 일차 단계와 이후의 연장 문제를 함께 다루기 위해 일반적인 square-zero extension 위의 deformation을 정의한다.
 
 ::: 정의 3
 $A$ 위에서 flat한 $A$-algebra $C$와 square-zero extension $0\rightarrow M\rightarrow A'\rightarrow A\rightarrow0$이 주어졌다 하자. $C$의 $A'$ 위로의 *변형<sub>deformation</sub>*이란, $A'$ 위에서 flat한 $A'$-algebra $C'$과 $A'$-algebra isomorphism $C'\otimes_{A'}A\cong C$의 짝을 뜻한다. 두 변형 $C', C''$이 *isomorphic*이라는 것은 $A$ 위로 환원했을 때 $C$ 위의 identity morphism을 유도하는 $A'$-algebra isomorphism $C'\cong C''$이 존재하는 것이다.
