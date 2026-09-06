@@ -14,7 +14,7 @@ sidebar:
 author: Marvin
 
 date: 2026-07-30
-last_modified_at: 2026-08-23
+last_modified_at: 2026-09-06
 weight: 35
 
 ---
@@ -290,3 +290,27 @@ def _err(msg: str) -> None:
 > 응 일단 그렇게 고쳐주고, 이따가 재시도했을 때 성공하면 로그 오류는 지워지는거 맞는지 확인. 아 이제 45분 됐다.
 
 재시도가 성공하면 그 실행에는 타임스탬프 찍힌 성공 줄만 남고, 실패했던 이전 실행의 오류 줄은 자기 경계 안에 갇혀 최신 판정 밖으로 밀려난다. [커밋](https://github.com/math-jh/math-jh.github.io/commit/d1af20cd).
+
+## 수동 정지와 쿼터 정지, 두 개의 hold
+
+`crontab을 안 건드리는 정지 버튼` 절의 `cron-gate`는 잡 하나에 정지 상태 하나만 두는 구조였다. 정지면 정지고, 재개 버튼을 누르면 그게 풀렸다. 그 뒤로 잡을 멈추는 주체가 하나 더 생겼다. Kimi 쿼터가 마르면 번역 워커를 멈춰 두고 리셋 시각에 알아서 풀어주는 `quota-reset-watch.py`다. 대시보드 버튼과 이 governor가 같은 잡을 각자 멈출 수 있게 되면서, `cron-gate`는 정지를 hold 목록으로 바꿨다. 잡마다 `holds` 배열이 오고 각 hold에 누가 걸었는지(`by`)가 붙는다. 대시보드가 건 것은 `by`가 `blog-dash`이고, governor가 건 것은 서버가 `quotaPaused` 플래그로 따로 받는다. `paused`는 둘 중 하나라도 있으면 참이다.
+
+```python
+userPaused=any(h.get("by") == "blog-dash"
+               for h in (r or {}).get("holds", [])),
+quotaPaused=bool((r or {}).get("quotaPaused")),
+```
+{: data-filename="scripts/dashboard/server.py"}
+
+재개 버튼도 그만큼 좁아졌다. 예전엔 `cron-gate --resume <id>`로 그 잡의 정지를 통째로 걷었는데, 이제 `--by blog-dash`를 붙여 자기가 건 hold만 푼다. governor가 걸어 둔 hold는 그것이 계산해 둔 리셋 시각까지 남아야 하므로 손대지 않는다. 주석 그대로 "이 버튼의 소유권(blog-dash)만 해제한다".
+
+쿼터로 멈춘 잡을 리셋 전에 억지로 깨우려면 다른 경로가 필요하다. `강제재개` 버튼이 `/api/cron/force-resume`로 가고, 이건 `cron-gate`가 아니라 `quota-reset-watch.py --force-resume <id>`를 부른다. 이 버튼은 `quotaPaused`인 잡에만 나타나고, 효력은 이번 quota reset에서 끝난다. governor를 영구히 무력화하는 게 아니라 이번 주기만 건너뛰는 것이다. 상태 칸은 이제 hold 조합을 그대로 읽어 `수동+쿼터 정지`·`쿼터 정지`·`정지됨` 셋으로 갈린다. 한 잡에 버튼이 둘 될 수 있으니 배선도 바뀌어, 행에서 `button` 하나를 집던 자리가 `button[data-action]`을 전부 돌면서 각 버튼의 `data-action`(`pause`·`resume`·`force-resume`)을 `cronAction`에 넘기는 형태가 됐다. CSS에서는 초록 강조(`var(--ok)`)를 `강제재개` 쪽에만 남기고 평범한 `재개`는 회색으로 되돌렸다. 되돌릴 수 있는 정상 재개와 governor 판단을 덮어쓰는 강제재개를 같은 색으로 두지 않으려는 것이다. [커밋](https://github.com/math-jh/math-jh.github.io/commit/8a46efe5), [버튼 색 분리](https://github.com/math-jh/math-jh.github.io/commit/82bc6543).
+
+`정지 워커는 stale이 아니다` 절의 처리도 서버 쪽으로 한 겹 내려갔다. 그때는 개요 판정의 `badWorkers`가 `w.paused`인 워커를 걸러내는 걸로 끝냈는데, `status` 필드 자체는 여전히 `stale`이고 `err`도 켜진 채였다. 그 필드를 그대로 읽는 다른 자리에서는 정지가 고장으로 보였다. 이제 서버가 워커에 hold가 있으면 `status`를 `paused`로 정규화하고 `err`를 끈다. [커밋](https://github.com/math-jh/math-jh.github.io/commit/b0dcaa8f).
+
+```python
+if paused:
+    status = "paused"
+    err = False
+```
+{: data-filename="scripts/dashboard/server.py"}
