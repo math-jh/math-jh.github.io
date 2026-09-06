@@ -369,7 +369,12 @@ def sec_workers():
     out = []
     # 일시정지된 워커는 로그가 늙는 게 정상이다 — stale 로 불을 켜면 의도된 정지가
     # 고장으로 읽힌다. 프런트가 그 구분을 할 수 있게 정지 상태를 같이 실어 보낸다.
-    paused_of = {j["worker"]: j for j in sec_cron()["items"] if j.get("worker")}
+    # 번역처럼 같은 워커를 여러 cron이 깨우는 경우가 있다. 하나라도 실행 가능하면
+    # 워커는 정지 상태가 아니다.
+    cron_by_worker = {}
+    for job in sec_cron()["items"]:
+        if job.get("worker"):
+            cron_by_worker.setdefault(job["worker"], []).append(job)
     for w in WORKERS:
         target = w.get("log") or w.get("watch")
         ts = mtime(target)
@@ -394,8 +399,11 @@ def sec_workers():
         # 모델 출력을 그대로 실은 줄(_LOG_ECHO_RE)은 스캔에서 뺀다.
         err = any(_ERR_RE.search(ln) and not _LOG_ECHO_RE.search(ln)
                   for ln in (_last_run_lines(w["log"], w["interval"]) if w.get("log") else []))
-        p = paused_of.get(w["key"]) or {}
-        paused = bool(p.get("paused"))
+        schedules = cron_by_worker.get(w["key"], [])
+        paused = bool(schedules) and all(p.get("paused") for p in schedules)
+        # 기존 단일 cron_id 필드는 유지하되, 실행 가능한 스케줄을 우선 가리킨다.
+        p = next((p for p in schedules if not p.get("paused")),
+                 schedules[0] if schedules else {})
         # 수동/쿼터 hold가 있으면 로그가 낡거나 마지막 실행에 오류가 남아 있어도
         # 현재 상태는 장애가 아니라 의도된 정지다. 소비자가 paused 필드를 놓쳐도
         # stale/error로 오인하지 않도록 status 자체도 정규화한다.
