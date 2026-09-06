@@ -257,9 +257,11 @@ window.KATEX_MACROS = {
     "\\shift":"(#1)\\text{-shifted}",
     // complex 의 각 항이 놓인 degree 표시: \at{degree}{항}. 색은 다이어그램
     // accent1(브래스 #a56f14, _sass/_diagram-colors.scss 와 palette.sty 가 정본)과
-    // 같은 값이고, \rule 은 항과 숫자 사이를 띄우는 strut 이다. 본문의 # 은 매크로
-    // 인자 기호와 겹치므로 TeX 관례대로 ## 로 적는다.
-    "\\at":"\\underset{\\rule{0pt}{0.8em}\\textcolor{##a56f14}{#1}}{#2}",
+    // 같은 값이다. \smash[b]와 \vphantom은 항마다 다른 depth를 정규화하여 degree를
+    // 같은 높이에 놓고, 양쪽 1mu의 kern은 항 주위에 작은 수평 여백을 둔다. \rule은
+    // 항과 숫자 사이를 띄우는 strut이다. 본문의 #은 매크로 인자 기호와 겹치므로
+    // TeX 관례대로 ##로 적는다.
+    "\\at":"\\underset{\\rule{0pt}{0.8em}\\textcolor{##a56f14}{#1}}{\\mkern1mu\\vphantom{X_{X/X}}\\smash[b]{#2}\\mkern1mu}",
     // KaTeX 기본 \not 은 그 자체로 독립된 mrel atom 이라, buildHTML 이 mrel 마다
     // base span 을 끊는 탓에 사선과 뒤따르는 관계기호가 서로 다른 base 로 갈라진다.
     // base 사이는 브라우저가 자유롭게 줄바꿈하므로 좁은 폭에서 "x /" + "∈ A" 처럼
