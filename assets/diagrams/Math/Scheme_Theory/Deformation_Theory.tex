@@ -7,7 +7,19 @@
 \usepackage{diagram-style}
 \begin{document}
 
-%%FIG morphism of extensions (Deformation_Theory-1.svg)
+%%FIG deformation of algebra (Deformation_Theory-1.svg)
+\begin{tikzcd}
+	C' \arrow[r, "\iota"] & C \\
+	A' \arrow[r] \arrow[u] & A \arrow[u]
+\end{tikzcd}
+
+%%FIG isomorphism of deformations (Deformation_Theory-2.svg)
+\begin{tikzcd}
+	C' \arrow[rr, "\psi", "\sim"'] \arrow[rd, "\iota"'] & & C'' \arrow[ld, "\iota'"] \\
+	& C &
+\end{tikzcd}
+
+%%FIG morphism of extensions (Deformation_Theory-3.svg)
 \begin{tikzcd}
 	0 \arrow[r] & M \arrow[r] \arrow[d, equal] & E_1 \arrow[r, "p_1"] \arrow[d, "\alpha"] & C \arrow[r] \arrow[d, equal] & 0 \\
 	0 \arrow[r] & M \arrow[r] & E_2 \arrow[r, "p_2"'] & C \arrow[r] & 0
