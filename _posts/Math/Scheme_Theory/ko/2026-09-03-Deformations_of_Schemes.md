@@ -15,7 +15,7 @@ published: false
 
 ---
 
-Affine scheme의 변형은 이미 손에 있다. Finitely generated $k$-algebra $B$의 first-order deformation이 $T^1(B/k, B)$과 일대일 대응하고 ([§변형이론과 여접 복합체, ⁋정리 4](/ko/math/scheme_theory/deformation_theory#thm4)), 그것을 더 두꺼운 base 위로 연장하는 데 걸리는 obstruction은 [§변형이론과 여접 복합체, ⁋정리 6](/ko/math/scheme_theory/deformation_theory#thm6)에 의하여 $T^2(B/k, B)$에 놓인다. 남은 일은 이 국소적인 분류를 scheme 전체로 붙이는 것이다.
+Affine scheme의 변형은 이미 손에 있다. Finitely generated $k$-algebra $B$의 first-order deformation이 $T^1(B/k, B)$과 일대일 대응하고 ([§변형이론과 여접 복합체, ⁋정리 5](/ko/math/scheme_theory/deformation_theory#thm5)), 그것을 더 두꺼운 base 위로 연장하는 데 걸리는 obstruction은 [§변형이론과 여접 복합체, ⁋정리 7](/ko/math/scheme_theory/deformation_theory#thm7)에 의하여 $T^2(B/k, B)$에 놓인다. 남은 일은 이 국소적인 분류를 scheme 전체로 붙이는 것이다.
 
 붙이는 데에는 두 겹의 자유도가 있다. 하나는 각 affine 조각이 스스로 변형되는 자유도이고, 다른 하나는 조각들을 다시 이어 붙이는 방식의 자유도이다. Smooth한 경우에는 첫째 자유도가 통째로 사라져 둘째 것만 남으며, 그 결과가 tangent sheaf의 첫째 cohomology이다. Singularity가 있으면 두 자유도가 함께 살아 있고, 이들을 한 대상 안에서 다루는 올바른 틀이 cotangent sheaf의 $\Ext$이다.
 
@@ -31,7 +31,7 @@ $$\mathcal{X}\times_{\Spec k[\epsilon]}\Spec k\cong X$$
 의 짝을 뜻한다. 두 first-order deformation $\mathcal{X}, \mathcal{X}'$이 *isomorphic*이라는 것은 $\Spec k[\epsilon]$ 위에서의 isomorphism $\mathcal{X}\cong\mathcal{X}'$으로서 $X$ 위에 항등사상을 유도하는 것이 존재한다는 것이다. 곱 $X\times_{\Spec k}\Spec k[\epsilon]$에 isomorphic한 변형을 *trivial*하다 부른다.
 :::
 
-$\epsilon$이 nilpotent이므로 $\mathcal{X}$와 $X$는 같은 위상공간을 갖고, 두꺼워지는 것은 오직 structure sheaf뿐이다. 따라서 $X$의 열린집합 $U$마다 $\mathcal{X}\vert_U$가 $U$의 first-order deformation을 주며, 이것이 위에서 말한 국소적인 자료이다. Affine $U=\Spec B$에서 이 자료는 정확히 $B$의 first-order deformation이므로 ([§변형이론과 여접 복합체, ⁋정의 2](/ko/math/scheme_theory/deformation_theory#def2)) $T^1(B/k, B)$가 분류한다.
+$\epsilon$이 nilpotent이므로 $\mathcal{X}$와 $X$는 같은 위상공간을 갖고, 두꺼워지는 것은 오직 structure sheaf뿐이다. 따라서 $X$의 열린집합 $U$마다 $\mathcal{X}\vert_U$가 $U$의 first-order deformation을 주며, 이것이 위에서 말한 국소적인 자료이다. Affine $U=\Spec B$에서 이 자료는 정확히 $B$의 first-order deformation이므로 ([§변형이론과 여접 복합체, ⁋정의 3](/ko/math/scheme_theory/deformation_theory#def3)) $T^1(B/k, B)$가 분류한다.
 
 Smooth한 경우 이 국소 자료가 아무것도 주지 않는다는 것을 먼저 확인한다.
 
