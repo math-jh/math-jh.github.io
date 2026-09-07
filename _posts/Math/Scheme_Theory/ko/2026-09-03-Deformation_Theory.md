@@ -1,6 +1,6 @@
 ---
 title: "변형이론과 여접 복합체"
-description: "Square-zero 확대를 따른 변형과 obstruction을 통해 Kähler differential만으로는 부족한 이유를 밝히고, naive 여접 복합체의 H_0·H_1이 변형이론적으로 무엇을 재는지, 그리고 완전한 여접 복합체가 왜 필요한지를 동기화한다."
+description: "Square-zero 확대를 따른 변형과 obstruction을 통해 Kähler differential만으로는 부족한 이유를 밝히고, naive 여접 복합체와 완전한 여접 복합체가 affine algebra의 변형을 어떻게 재는지 계산한 뒤 스킴의 국소 변형과 접합 자료를 local-to-global spectral sequence로 조립한다."
 excerpt: "Square-zero extensions, first-order deformations T^1, obstructions T^2, and why Ω is not enough"
 
 categories: [Math / Scheme Theory]
@@ -11,7 +11,6 @@ sidebar:
 date: 2026-09-03
 
 weight: 22
-
 published: false
 ---
 
@@ -47,7 +46,7 @@ $$\widetilde{\rho}(fg)=\widetilde{\rho}(f)\widetilde{\rho}(g)\in\mathfrak{b}^2=0
 
 $$\delta: \mathfrak{a}/\mathfrak{a}^2\rightarrow \mathfrak{b};\qquad \bar{f}\mapsto \widetilde{\rho}(f)$$
 
-이 잘 정의된다. 뿐만 아니라, 이렇게 얻어진 $\delta$는 $C$-linear map이 된다. 여기서 $\mathfrak{a}/\mathfrak{a}^2$는 $\mathfrak{a}$를 $B$-module로 봤을 때, $B$의 부분집합 $\mathfrak{a}$가 이 위에 $0$으로 작용하므로 $C=B/\mathfrak{a}$-module structure가 주어진 것이고, $\mathfrak{b}$의 경우 $\mathfrak{b}^2=0$인 것으로부터 $\mathfrak{b}$의 $R$-module structure가 $R_0=R/\mathfrak{b}$-module structure를 주고, 이를 $\rho_0$를 따라 $C$-module로 본 것이다. 즉, 고정된 $\widetilde{\rho}$에 대하여 $\widetilde{\rho}(\mathfrak{a})=0$인 것은 정확히 이런 방식으로 정의한 $C$-linear map $\delta\in\Hom_C(\mathfrak{a}/\mathfrak{a}^2, \mathfrak{b})$가 $0$이 되는 것과 같다. 
+이 잘 정의된다. 뿐만 아니라, 이렇게 얻어진 $\delta$는 $C$-linear map이 된다. 여기서 $\mathfrak{a}/\mathfrak{a}^2$는 $\mathfrak{a}$를 $B$-module로 봤을 때, $B$의 ideal $\mathfrak{a}$가 이 위에 $0$으로 작용하므로 $C=B/\mathfrak{a}$-module structure가 주어진 것이고, $\mathfrak{b}$의 경우 $\mathfrak{b}^2=0$인 것으로부터 $\mathfrak{b}$의 $R$-module structure가 $R_0=R/\mathfrak{b}$-module structure를 주고, 이를 $\rho_0$를 따라 $C$-module로 본 것이다. 즉, 고정된 $\widetilde{\rho}$에 대하여 $\widetilde{\rho}(\mathfrak{a})=0$인 것은 정확히 이런 방식으로 정의한 $C$-linear map $\delta\in\Hom_C(\mathfrak{a}/\mathfrak{a}^2, \mathfrak{b})$가 $0$이 되는 것과 같다. 
 
 이를 바탕으로 우리는 $\widetilde{\rho}$의 선택을 바꿀 때의 변화량을 정량화할 수 있다. $\widetilde{\rho}$와 $\widetilde{\rho}'$이 $\overline{\rho}_0$의 두 lift라 하자. 그럼 등식 $q\circ\widetilde{\rho}=q\circ\widetilde{\rho}'$으로부터 그 차 $D=\widetilde{\rho}'-\widetilde{\rho}$는 $B$에서 $\ker q=\mathfrak{b}$로의 $A$-linear map이다. 그런데
 
@@ -146,7 +145,7 @@ $$0\longrightarrow\ker p\longrightarrow\NL_{C/A}\overset{p}{\longrightarrow}[0\l
 
 $$\ker p\cong\Bigl[\mathfrak{a}/\mathfrak{a}^2\overset{\id}{\longrightarrow}\mathfrak{a}/\mathfrak{a}^2\Bigr]$$
 
-이므로 모든 $n$에 대하여 $H_n(\ker p)=0$이다. 위의 short exact sequence에 [\[호몰로지 대수학\] §긴 완전열, ⁋정리 1](/ko/math/homological_algebra/long_exact_sequence#thm1)을 적용하면 모든 degree에서 $H_n(p)$가 isomorphism이 되어, $p$는 $\NL_{C/A}$에서 degree $0$의 projective module $\Omega_{C/A}$로의 quasi-isomorphism이 된다. 즉, 이 경우에는 $\Omega_{C/A}$만 보아도 lifting들의 차이 $T^0(C/A,M)=\Hom_C(\Omega_{C/A},M)$를 계산할 수 있고, lifting의 존재를 가로막는 obastruction space $T^1$은 항상 사라진다.
+이므로 모든 $n$에 대하여 $H_n(\ker p)=0$이다. 위의 short exact sequence에 [\[호몰로지 대수학\] §긴 완전열, ⁋정리 1](/ko/math/homological_algebra/long_exact_sequence#thm1)을 적용하면 모든 degree에서 $H_n(p)$가 isomorphism이 되어, $p$는 $\NL_{C/A}$에서 degree $0$의 projective module $\Omega_{C/A}$로의 quasi-isomorphism이 된다. 즉, 이 경우에는 $\Omega_{C/A}$만 보아도 lifting들의 차이 $T^0(C/A,M)=\Hom_C(\Omega_{C/A},M)$를 계산할 수 있고, lifting의 존재를 가로막는 obstruction space $T^1$은 항상 사라진다.
 
 그러나 일반적인 $C$에 대해서는 conormal morphism의 kernel과 그 image가 direct summand인지 여부부터 살펴보아야 한다. $\Omega_{C/A}$는 이 morphism의 cokernel이므로, 이 두 조건을 직접 다루려면 그 앞의 항과 morphism까지 남긴 $\NL_{C/A}$가 본격적으로 필요하게 된다. 이 상황을 대표하는 것이 lci의 경우이다. ([§완전교차, ⁋정의 1](/ko/math/scheme_theory/complete_intersections#def1)) 일반적인 non-lci 상황에서는 비슷한 계산을 수행하기 위해 cotangent complex 전체를 살펴보아야 할 수 있지만, lci에서는 naive cotangent complex가 cotangent complex 전체와 quasi-isomorphic하다. 이러한 관점에서 lci는 필요한 cotangent data를 naive cotangent complex에서 직접 읽을 수 있는 대표적인 경우로 생각할 수 있다.
 
@@ -166,13 +165,13 @@ $$\NL_{C/A}\cong\left[C^r\overset{\bar{d}}{\longrightarrow}C^n\right],\qquad\bar
 
 Deformation theory의 기하학적 출발점은 $A$-scheme $X_0$를 고정하고, section $t_0:\Spec A\rightarrow T$을 갖춘 pointed $A$-scheme $(T,t_0)$ 위의 family $\pi:X\rightarrow T$와 central fiber의 identification $X\times_T\Spec A\cong X_0$를 찾는 것이다. [§스킴 사이의 사상, ⁋예시 10](/ko/math/scheme_theory/morphism_of_schemes#ex10)에서와 같이 scheme morphism $\pi:X\rightarrow T$를 $T$로 매개화된 family로 보면, 이는 $T$ 위에서 변하는 scheme들 가운데 section $t_0$을 따라 얻는 fiber가 $X_0$으로 주어지는 family를 보는 것이다. 이러한 관점을 위해 $\pi$가 flat일 것을 요구하는 것이 합리적이며 ([§평탄사상](/ko/math/scheme_theory/flat_morphisms)) 이러한 가정 아래 이는 fiber들을 하나의 대상 $X_0$가 변해 가는 모습으로 보고 비교하는 것이다.
 
-가장 단순한 예시로 두 직선이 원점에서 만나는 node $X_0=\Spec\bigl(A[\x,\y]/(\x\y)\bigr)$를 생각하자. 이를 deform하는 가장 간단한 방법은 방정식 $\x\y=0$을 $\x\y=t$로 바꾸어 다음의 family
+가장 단순한 예시로 두 직선이 원점에서 만나는 node $X_0=\Spec\bigl(A[\x,\y]/(\x\y)\bigr)$를 생각하자. 이를 deform하는 가장 간단한 방법은 방정식 $\x\y=0$을 $\x\y=\t$로 바꾸어 다음의 family
 
-$$\pi:X=\Spec\bigl(A[t,\x,\y]/(\x\y-t)\bigr)\longrightarrow\Spec A[t]$$
+$$\pi:X=\Spec\bigl(A[\t,\x,\y]/(\x\y-\t)\bigr)\longrightarrow\Spec A[\t]$$
 
-를 생각하는 것이다. 이는 $t=0$에서 $X_0$를 fiber로 갖고, $t$를 invert한 open set 위에서는 $\x$와 $\y$가 모두 invertible이 되어 smooth한 family를 이루며, [§평탄사상, ⁋명제 5](/ko/math/scheme_theory/flat_morphisms#prop5)을 통해 $\pi$의 flatness 또한 확인할 수 있다. 즉 이 family를 보면 $X_0$의 원점에 있던 singularity가 parameter $t$를 따라 어떻게 사라지는지를 살펴볼 수 있다.
+를 생각하는 것이다. 이는 $\t=0$에서 $X_0$를 fiber로 갖고, $\t$를 invert한 open set 위에서는 $\x$와 $\y$가 모두 invertible이 되어 smooth한 family를 이루며, [§평탄사상, ⁋명제 5](/ko/math/scheme_theory/flat_morphisms#prop5)을 통해 $\pi$의 flatness 또한 확인할 수 있다. 즉 이 family를 보면 $X_0$의 원점에 있던 singularity가 parameter $\t$를 따라 어떻게 사라지는지를 살펴볼 수 있다.
 
-일반적인 scheme $X_0$의 deformation을 찾는 첫 단계는 base의 central section $t_0$에서 infinitesimal direction들을 하나씩 살펴보는 것이다. $A[\epsilon]=A[t]/(t^2)$로 놓으면, $(T,t_0)$의 $A$-상대 tangent direction은 $t=0$에서 $t_0$로 제한되는 $A$-morphism $\Spec A[\epsilon]\rightarrow T$으로 표현된다 ([§매끄러운 사상과 에탈 사상, §§Infinitesimal lifting criterion](/ko/math/scheme_theory/smooth_and_etale_morphisms#infinitesimal-lifting-criterion)). 이를 따라 $\pi:X\rightarrow T$를 pullback하면 $\Spec A[\epsilon]$ 위의 family를 얻으며, 직관적으로 이는 그 tangent direction을 따라 $X_0$이 일차까지 변하는 모습을 기록한다.
+일반적인 scheme $X_0$의 deformation을 찾는 첫 단계는 base의 central section $t_0$에서 infinitesimal direction들을 하나씩 살펴보는 것이다. $A[\epsilon]=A[\t]/(\t^2)$로 놓으면, $(T,t_0)$의 $A$-상대 tangent direction은 $\t=0$에서 $t_0$로 제한되는 $A$-morphism $\Spec A[\epsilon]\rightarrow T$으로 표현된다 ([§매끄러운 사상과 에탈 사상, §§Infinitesimal lifting criterion](/ko/math/scheme_theory/smooth_and_etale_morphisms#infinitesimal-lifting-criterion)). 이를 따라 $\pi:X\rightarrow T$를 pullback하면 $\Spec A[\epsilon]$ 위의 family를 얻으며, 직관적으로 이는 그 tangent direction을 따라 $X_0$이 일차까지 변하는 모습을 기록한다.
 
 그러나 실제로는 이 parameter scheme $T$와 그 위의 family $\pi:X\rightarrow T$ 자체가 미리 주어져 있지 않으며, 이를 찾아내는 것부터가 문제의 시작이다. 우리에게 처음 주어진 것은 $X_0$가 $S$-scheme인 것으로부터 주어지는 structure morphism $X_0\rightarrow S$ 뿐이며, 이를 위해 우리가 택하는 전략은 base $S$를 <em-ko>가능한 모든 방향</em-ko>으로 넓혀서 parameter scheme을 정의하는 것이다. 이때 base를 infinitesimal thickening해 나가는 과정이 바로 square-zero extension들이며, 우리는 parameter space와 동시에, 이 과정으로 두꺼워진 base $S$ 위에 놓인 fiber까지 함께 정의한다. 
 
@@ -193,7 +192,7 @@ $$0\longrightarrow \mathfrak{b}\longrightarrow A'\longrightarrow A\longrightarro
 
    {% diagram Math/Scheme_Theory/Deformation_Theory-2.svg width="10.55em" alt="isomorphism of deformations" %}
 
-특히 $A'=A[\epsilon]=A[t]/(t^2)$인 경우의 deformation을 $C$의 $A$ 위 *first-order deformation<sub>일차 변형</sub>*이라 부른다.
+특히 $A'=A[\epsilon]=A[\t]/(\t^2)$인 경우의 deformation을 $C$의 $A$ 위 *first-order deformation<sub>일차 변형</sub>*이라 부른다.
 :::
 
 일반적으로, 임의의 square-zero extension 
@@ -214,7 +213,7 @@ $$0\longrightarrow M\longrightarrow E\overset{p}{\longrightarrow} C\longrightarr
 
 {% diagram Math/Scheme_Theory/Deformation_Theory-3.svg width="18.74em" alt="morphism of extensions" %}
 
-을 morphism으로 갖는 category $\Ext_{\Alg{A}}(C,M)$을 이루며, 이때 이들 morphism들은 [\[호몰로지 대수학\] §Diagram chasing, ⁋따름정리 3](/ko/math/homological_algebra/diagram_chasing#cor3)에 의해 모두 isomorphism이다. 즉 이 category는 groupoid이고, 그 대상들 사이에 morphism이 존재하는지에 따라 square-zero extension의 isomorphism class들이 나뉜다.실제로, 위의 category의 임의의 데이터
+을 morphism으로 갖는 category $\Ext_{\Alg{A}}(C,M)$을 이루며, 이때 이들 morphism들은 [\[호몰로지 대수학\] §Diagram chasing, ⁋따름정리 3](/ko/math/homological_algebra/diagram_chasing#cor3)에 의해 모두 isomorphism이다. 즉 이 category는 groupoid이고, 그 대상들 사이에 morphism이 존재하는지에 따라 square-zero extension의 isomorphism class들이 나뉜다. 실제로, 위의 category의 임의의 데이터
 
 $$0\longrightarrow M\longrightarrow E\overset{p}{\longrightarrow} C\longrightarrow0$$
 
@@ -236,9 +235,9 @@ $$0\longrightarrow\mathfrak{b}\longrightarrow E\overset{p}{\longrightarrow}C\lon
 
 을 정의한다. 이때 $\rho_0$의 lifting $\rho:C\rightarrow R$가 존재하는 것은 $s(c)=(\rho(c),c)$가 $p$의 $A$-algebra section을 주는 것, 곧 이 extension이 split되는 것과 동치이며, 이 때문에 $[\delta]$가 $0$으로 가는 것이 $\rho_0$의 lifting의 존재와 동치임을 안다.
 
-앞서 보았듯 scheme $X_0$의 deformation을 찾는 과정은 base $S=\Spec A$를 square-zero extension을 통해 infinitesimal thickening해 나가며 그 위의 fiber를 함께 정의하는 작업이며, 방금 살펴본 first-order deformation은 이 베이스의 확장이 가장 단순한 dual numbers $A[\epsilon]$으로 주어진 경우에 해당한다. 우리는 이제 그 위에 놓인 fiber $X_0=\Spec C$가 어떤 방향으로 두꺼워져 flat family $X=\Spec C'$을 이루는지를 보아야 한다.
+앞서 보았듯 scheme $X_0$의 deformation을 찾는 과정은 base $S=\Spec A$를 square-zero extension을 통해 infinitesimal thickening해 나가며 그 위의 fiber를 함께 정의하는 작업이며, 방금 살펴본 first-order deformation은 이 base의 extension이 가장 단순한 dual numbers $A[\epsilon]$으로 주어진 경우에 해당한다. 우리는 이제 그 위에 놓인 fiber $X_0=\Spec C$가 어떤 방향으로 두꺼워져 flat family $X=\Spec C'$을 이루는지를 보아야 한다.
 
-이를 구체적인 방정식의 언어로 살펴보자. 우리 상황에서 $X$는 locally of finite presentation $S$-scheme이므로, 이 affine case에서 $C$는 finite polynomial ring $B=A[\x_1,\ldots,\x_n]$과 finitely generated ideal $\mathfrak{a}=(f_1,\ldots,f_m)$에 의한 quotient $C=B/\mathfrak{a}$로 나타낼 수 있다. 그럼 $B[\epsilon]=A[\epsilon][\x_1,\ldots,\x_n]$에서는 fiber 방향 좌표 $\x_i$와 $\epsilon$ 방향이 자연스레 분리되며, 이 때 fiber를 정의하던 각 방정식 $f_j\in B$을 central fiber 주변에서 확장할 수 있는 후보들은 $F_j=f_j+\epsilon g_j$의 꼴이고, 이들 후보에 의해 deform된 family는 $C'=B[\epsilon]/(F_1,\ldots,F_m)$으로 나타나게 될 것이다. 이 때, 유일한 조건은 이렇게 얻어지는 family가 실제로 flat family가 되어야 한다는 것이다. 
+이를 구체적인 방정식의 언어로 살펴보자. 우리 상황에서 $X$는 locally of finite presentation $S$-scheme이므로, 이 affine case에서 $C$는 finite polynomial ring $B=A[\x_1,\ldots,\x_n]$과 finitely generated ideal $\mathfrak{a}=(f_1,\ldots,f_m)$에 의한 quotient $C=B/\mathfrak{a}$로 나타낼 수 있다. 그럼 $B[\epsilon]=A[\epsilon][\x_1,\ldots,\x_n]$에서는 fiber 방향의 coordinate $\x_i$와 $\epsilon$ 방향이 자연스레 분리되며, 이 때 fiber를 정의하던 각 방정식 $f_j\in B$을 central fiber 주변에서 확장할 수 있는 후보들은 $F_j=f_j+\epsilon g_j$의 꼴이고, 이들 후보에 의해 deform된 family는 $C'=B[\epsilon]/(F_1,\ldots,F_m)$으로 나타나게 될 것이다. 이 때, 유일한 조건은 이렇게 얻어지는 family가 실제로 flat family가 되어야 한다는 것이다. 
 
 ::: 명제 4
 위와 같은 상황에서, $C'$이 $A[\epsilon]$ 위에서 flat한 것은 $(f_1,\ldots,f_m)$의 임의의 관계식 $(a_1,\ldots,a_m)$, 곧 $\sum_ja_jf_j=0$인 $(a_j)\in B^m$에 대하여
@@ -273,7 +272,7 @@ $$\sum_j A_j F_j=0$$
 
 $$\varphi:\mathfrak{a}/\mathfrak{a}^2\rightarrow C$$
 
-를 잘 정의하고, 거꾸로 임의의 $\varphi\in\Hom_C(\mathfrak{a}/\mathfrak{a}^2,C)$은 $g_j\in B$를 $\varphi(\bar{f}_j)=\bar{g}_j$이도록 택하여 first-order deformation을 준다. 즉 first-order deformation들의 집합은 $\Hom_C(\mathfrak{a}/\mathfrak{a}^2,C)$와 자연스럽게 대응하며, 이는 도입부에서 확대의 자료로부터 얻었던 $\delta\in\Hom_C(\mathfrak{a}/\mathfrak{a}^2,\mathfrak{b})$를 $\mathfrak{b}=C$인 경우에 방정식의 언어로 다시 본 것이다.
+를 잘 정의하고, 거꾸로 임의의 $\varphi\in\Hom_C(\mathfrak{a}/\mathfrak{a}^2,C)$은 $g_j\in B$를 $\varphi(\bar{f}_j)=\bar{g}_j$이도록 택하여 first-order deformation을 준다. 즉 first-order deformation과 presentation $B\twoheadrightarrow C$의 lift $B\rightarrow C'$를 함께 택한 자료들의 집합은 $\Hom_C(\mathfrak{a}/\mathfrak{a}^2,C)$와 자연스럽게 대응하며, 이는 도입부에서 확대의 자료로부터 얻었던 $\delta\in\Hom_C(\mathfrak{a}/\mathfrak{a}^2,\mathfrak{b})$를 $\mathfrak{b}=C$인 경우에 방정식의 언어로 다시 본 것이다.
 
 이제 남은 일은 이 중 어떤 것들이 trivial deformation을 주는지 걸러내는 것이다. First-order deformation의 경우, $C'=C[\epsilon]$와 isomorphic한 deformation을 *trivial*하다 부른다. 이러한 것들 중 가장 단순한 형태는 모든 $g_j=0$이어서 $F_j=f_j$인 경우로, 이는 central fiber를 정의하던 방정식을 아무런 변형 없이 $\epsilon$ 방향으로 그대로 복사하여 늘려놓은 것에 불과하다.
 
@@ -295,11 +294,11 @@ Finitely presented $A$-algebra $C=B/\mathfrak{a}$에 대하여 다음의 exact s
 $$0\longrightarrow T^0(C/A,C)\longrightarrow\Der_A(B,C)\overset{\bar{d}^\ast}{\longrightarrow}\Hom_C(\mathfrak{a}/\mathfrak{a}^2,C)\longrightarrow T^1(C/A,C)\longrightarrow0$$
 
 가 성립하며, 각 항은 deformation theory에서 다음과 같은 의미를 가진다.
-1. $\Hom_C(\mathfrak{a}/\mathfrak{a}^2,C)$는 $C$의 first-order deformation들을 분류한다.
+1. $\Hom_C(\mathfrak{a}/\mathfrak{a}^2,C)$는 $C$의 first-order deformation과 presentation $B\twoheadrightarrow C$의 lift $B\rightarrow C'$를 함께 택한 자료를 분류한다.
 2. 두 deformation이 isomorphic인 것은 그 차이가 trivial deformation들의 공간 $\im\bar{d}^\ast$에 속하는 것과 동치이므로, isomorphism class로 본 first-order deformation들의 집합은 quotient
 $$\Hom_C(\mathfrak{a}/\mathfrak{a}^2,C)\big/\im\bar{d}^\ast=T^1(C/A,C)$$
 과 자연스럽게 일대일 대응한다. 이 대응 아래에서 trivial deformation은 $0\in T^1$에 대응한다.
-3. 임의의 deformation $C'$의 infinitesimal automorphism군은 좌표변환의 stabilizer인 $\ker\bar{d}^\ast$, 곧 $T^0(C/A,C)=\Der_A(C,C)$과 동형이다.
+3. 임의의 deformation $C'$의 infinitesimal automorphism group은 좌표변환의 stabilizer인 $\ker\bar{d}^\ast$, 곧 $T^0(C/A,C)=\Der_A(C,C)$과 isomorphic하다.
 :::
 
 ::: 예시 6 (Nodal curve)
@@ -339,125 +338,127 @@ $$F=\x\y-\epsilon,\qquad C'=A[\epsilon][\x,\y]/(\x\y-\epsilon),\qquad X'=\Spec C
 
 {% diagram Math/Scheme_Theory/Deformation_Theory-5.svg width="12.56em" alt="smoothing of node" %}
 
-이 차이는 central fiber의 원점을 deformation 위로 들어올리는 계산에서도 직접 드러난다. 원점은 $A$-algebra homomorphism $C\rightarrow A$, $\x,\y\mapsto0$으로 주어지며, trivial deformation에서는 이를 $C[\epsilon]\rightarrow A[\epsilon]$, $\x,\y\mapsto0$으로 연장할 수 있다. 그러나 위의 $C'$에서 같은 원점을 들어올리는 $A[\epsilon]$-algebra homomorphism $C'\rightarrow A[\epsilon]$이 존재하려면, 적당한 $u,v\in A$에 대하여 $\x\mapsto\epsilon u$, $\y\mapsto\epsilon v$로 보내야 한다. 그럼
+후자의 경우가 nontrivial deformation이 되는 이유는 다음과 같이 직관적인 계산으로도 얻어질 수 있다. Nodal curve $X_0=\Spec C$의 원점은 $\x,\y$를 모두 $0$으로 보내는 ring homomorphism으로 주어진다. Trivial deformation에서는 이 ring homomorphism이 $C[\epsilon]\rightarrow A[\epsilon]$으로 확장되지만, 위의
 
-$$\x\y\longmapsto(\epsilon u)(\epsilon v)=0,\qquad \epsilon\longmapsto\epsilon\neq0$$
+$$C'=A[\epsilon][\x,\y]/(\x\y-\epsilon)$$
 
-이므로 $C'$의 관계식 $\x\y=\epsilon$을 보존할 수 없다. 따라서 trivial deformation에서는 원점을 base의 무한소방향으로 그대로 연장할 수 있지만, 이 deformation에서는 그 원점의 lift가 존재하지 않는다. Central fiber의 identification을 보존하는 isomorphism은 이러한 lift의 존재 여부도 보존하므로, 이 계산만으로도 $C'$이 trivial deformation과 isomorphic하지 않음을 확인할 수 있다.
+의 경우, $\x,\y\mapsto 0$을 확장하는 $A[\epsilon]$-algebra homomorphism $C'\rightarrow A[\epsilon]$이 존재한다면 반드시 $\x\mapsto \epsilon u$, $\y\mapsto \epsilon v$의 꼴이어야 하지만, 이러한 map의 경우
 
-끝으로 $g=-1$인 first-order deformation은 앞에서 보았던 family
+$$\x\y\mapsto (\epsilon u)(\epsilon v)=0$$
 
-$$\pi:X=\Spec\bigl(A[t,\x,\y]/(\x\y-t)\bigr)\longrightarrow\Spec A[t]$$
-
-의 일차 근사이다. 관계식 $\x\y=t$로 mixed monomial들을 정리하면 이 coordinate ring의 각 원소는 $A[t]$의 원소를 coefficient로 갖는 $1,\x,\x^2,\ldots,\y,\y^2,\ldots$의 유한한 linear combination으로 유일하게 표현된다. 따라서 이들은 $A[t]$-basis를 이루며, $\pi$는 flat하다. $A[t]\rightarrow A[\epsilon]$, $t\mapsto\epsilon$을 따라 pullback하면 위의 $X'$를 얻고, $A[t]\rightarrow A[t]/(t^{n+1})$을 따라 pullback하면 모든 $n\geq1$에 대하여 서로 호환되는 고차 deformation을 얻는다. 이 경우에는 방정식 $\x\y-t$에 고차 보정항을 더할 필요가 없다.
+으로 주어지므로 $A[\epsilon,\x,\y]$의 ideal $\x\y-\epsilon$으로 factor through하지 않는다. 즉 $C'$에서 $A'=A[\epsilon]$으로의 $A[\epsilon]$-algebra homomorphism 가운데는 원점에 해당하는 homomorphism을 확장하는 것이 존재하지 않으며, 이는 위에서 살펴보았듯 쌍곡선들이 원점을 놓치는 현상의 대수적 설명이다. 
 :::
 
 ## 변형의 장애와 고차 변형이론
 
-지금까지 우리는 $A$-algebra $C$의 first-order deformation을 구성하고, 그 isomorphism class를 $T^1(C/A,C)$으로 분류하였다. [예시 6](#ex6)에서는 $\x\y-\epsilon$으로 주어진 first-order deformation을 $\x\y-t$라는 flat family로 연장할 수 있었다. 이제 우리의 관심사는 일반적인 presentation에서도 주어진 first-order deformation을 더 높은 차수의 deformation으로 높이는 것이다. 만일 one-parameter flat family가 이미 주어졌다면, 이를 각각 modulo $t^2,t^3,\ldots$으로 제한하여 각 차수를 차례로 보지만, 앞선 절의 도입부에서 살펴봤듯 우리는 이러한 family를 만들어내는 것이 목적이므로 상황은 더 복잡하다.
+지금까지 우리는 $A$-algebra $C$의 first-order deformation을 구성하고, 그 isomorphism class를 $T^1(C/A,C)$으로 분류하였다. 이제 우리의 관심사는 주어진 first-order deformation을 더 높은 차수의 deformation으로 높이는 것이다. 만일 one-parameter flat family가 이미 주어졌다면, 이는 단순히 $\t^2, \t^3, \ldots$ 항으로 잘라주어 각 차수를 차례로 보지만, 앞선 절의 도입부에서 살펴봤듯 우리는 이러한 family를 만들어내는 것이 목적이므로 상황이 단순하지 않다. 
 
 이를 직관적으로 살펴보기 위해 앞에서 고정한 presentation
 
 $$C=B/\mathfrak{a},\qquad B=A[\x_1,\ldots,\x_n],\qquad \mathfrak{a}=(f_1,\ldots,f_m)$$
 
-으로 돌아가자. First-order deformation의 방정식은
+으로 돌아가자. 그럼 first-order deformation의 방정식은, flatness 조건을 만족하는 $g_j$들에 대하여 다음의 꼴
 
-$$F_j=f_j+tg_j\in B[t]/(t^2)$$
+$$F_j=f_j+\t g_j\in B[\t]/(\t^2)$$
 
-이었다. 이를 이차까지 연장하려면 $h_j\in B$를 택하여
+로 나타나는 것들이었으며, 이를 한 차수 올려주기 위해서는 $h_j\in B$를 택하여
 
-$$F_j^{(2)}=f_j+tg_j+t^2h_j\in B[t]/(t^3)$$
+$$F_j^{(2)}=f_j+\t g_j+\t^2h_j\in B[\t]/(\t^3)$$
 
-을 구성해야 한다. 여기서 $f_j,g_j,h_j$는 모두 $B$의 원소이며, 각각 원래의 방정식, 이미 주어진 일차 변화, 이제 선택할 이차 보정항이다. $F_j^{(2)}$는 이들을 매개변수 $t$로 조합한 확장된 환의 원소이다. 목표는 $t^2=0$으로 제한하면 주어진 first-order deformation으로 돌아오면서, algebra
+을 구성해야 한다. 여기서 필수적인 것은 이렇게 정의한 algebra
 
-$$C^{(2)}=\bigl(B[t]/(t^3)\bigr)/(F_1^{(2)},\ldots,F_m^{(2)})$$
+$$C^{(2)}=\bigl(B[\t]/(\t^3)\bigr)/(F_1^{(2)},\ldots,F_m^{(2)})$$
 
-가 $A[t]/(t^3)$ 위에서 flat하도록 $h_j$들을 고르는 것이다.
+가 $A[\t]/(\t^3)$ 위에서 flat하도록 $h_j$들을 골라야 한다는 것으로, 이 조건은 다음과 같이 계산할 수 있다. 
 
-앞서 [명제 4](#prop4)에서 flatness는 원래 방정식들 사이의 relation을 함께 들어올리는 조건으로 나타났다. 일차에서는 $g_j$들이 이 조건을 만족하도록 택했지만, 이차에서는 relation의 일차 보정항과 방정식의 일차 보정항이 곱해져 새로운 잔여항이 나타난다. 이 잔여항을 $h_j$들과 relation의 이차 보정으로 소거할 수 있다면 deformation을 연장할 수 있다. 그러나 가능한 보정을 모두 허용해도 소거되지 않는 부분이 남을 수 있으며, 그 실패를 선택에 무관한 class로 기록한 것이 obstruction class이다. 따라서 특정한 보정이 실패했다는 사실만으로 연장이 불가능한 것은 아니며, 모든 보정의 자유도를 고려한 뒤에도 남는 잔여항을 살펴보아야 한다.
+[명제 4](#prop4)에서 flatness는 원래 방정식들 사이의 relation들을 함께 들어올리는 조건으로 나타났던 것을 기억하자. 구체적으로, $C$를 정의하던 방정식들 사이의 relation $\sum_j a_jf_j=0$이 주어졌다 하면, 이를
 
-고차 deformation을 구성하는 과정은 이처럼 이미 얻은 근사를 유지하면서 다음 차수의 flatness 조건을 차례로 해결하는 과정이다. 모든 차수에서 호환되는 연장을 얻으면 이들의 체계가 formal deformation을 이룬다. 이를 실제 family로 실현하는 문제는 별도로 남는다. 이제 첫 단계인 일차에서 이차로의 연장을 살펴보고, relation에서 발생하는 잔여항을 기록할 수 있도록 complex를 확장하자.
+$$F_j=f_j+\epsilon g_j$$
 
-Naive cotangent complex $\NL_{C/A}=[\mathfrak{a}/\mathfrak{a}^2\rightarrow\Omega_{B/A}\otimes_BC]$에서는 방정식들과 그 관계가 $\mathfrak{a}/\mathfrak{a}^2$라는 하나의 module에 묶여 있었다. Obstruction을 계산하려면 relation에 값을 부여하는 데이터를 별도의 항으로 기록해야 한다. 이를 위해 방정식들을 표시하는 free module $F=B^m$을 두고, $e_j\mapsto f_j$로 주어지는 사상 $F\rightarrow\mathfrak{a}$의 kernel을 $\operatorname{Rel}$이라 하자. 이때 $f_ie_j-f_je_i$ 꼴의 Koszul relation들은 방정식의 선택에 관계없이 성립하는 trivial relation들이며, 이들이 생성하는 submodule을 $\operatorname{TrivRel}$이라 적는다. 이들을 제외한 $\operatorname{Rel}/\operatorname{TrivRel}$이 obstruction을 기록하는 데 필요한 $C$-module이 된다. 따라서 $\NL_{C/A}$의 $\mathfrak{a}/\mathfrak{a}^2$를 $F\otimes_BC$로 풀고, 그 왼쪽에 $\operatorname{Rel}/\operatorname{TrivRel}$을 붙여 3개 항의 complex를 구성한다.
+로 올렸을 때의 방정식
+
+$$\sum_j a_j(f_j+\epsilon g_j)=\epsilon\sum_j a_j g_j$$
+
+에서, $\sum_j a_jg_j$를 $f_j$들에 대한 식 $\sum_j a_jg_j=\sum_j c_jf_j$로 바꾸어줄 수 있으면 이 오차를 $a_j$들로 옮겨 $A_j=a_j-\epsilon c_j$로 정의하면 $\sum_j A_j F_j=0$이 성립하도록 할 수 있었다. 
+
+비슷한 논증을 통해 이를 이차까지 연장하려면 적당한 $d_j\in B$를 택하여 relation의 계수들
+
+$$A_j^{(2)}=a_j-\t c_j+\t^2d_j\in B[\t]/(\t^3)$$
+
+을 구성해야 하며, 이것이 만족할 조건을 구하려면 실제로 두 식의 곱을 $B[\t]/(\t^3)$에서 전개하여
+
+$$\begin{aligned}\sum_j A_j^{(2)}F_j^{(2)}&=\sum_j(a_j-\t c_j+\t^2d_j)(f_j+\t g_j+\t^2h_j)\\
+&=\sum_j a_jf_j+\t\Bigl(\sum_j a_jg_j-\sum_j c_jf_j\Bigr)+\t^2\Bigl(\sum_j a_jh_j-\sum_j c_jg_j+\sum_j d_jf_j\Bigr)\end{aligned}$$
+
+을 보면 된다. 이 식에서, 우변의 $\t^0$ 항은 원래의 relation이므로 $0$이고, $\t^1$ 항은 일차에서 이미 flatness를 만족하도록 택했으므로 $0$이다. 이제 이것이 $B[\t]/(\t^3)$에서 $0$이 되도록 하려면 남은 것은 $\t^2$ 항으로, 여기서 $\sum_j d_jf_j\in\mathfrak{a}$이므로 이 조건은 다음의 식
+
+$$\sum_j a_jh_j\equiv\sum_j c_jg_j\pmod{\mathfrak{a}}$$
+
+으로 나타난다. 문제는 이 식의 우변이 이미 first-order deformation을 만족하기 위해 결정된, 일반적으로는 $0$이 아닐 수도 있는 값이라는 것으로, 이 때문에 $h_j$들을 잘 택하여 relation $(a_1, \ldots, a_m)$들이 <em-ko>주어질 때마다</em-ko> 위의 식이 만족되도록 하는 것이 일반적으로 불가능하다. 이것이 first-order deformation과는 다른 점으로, first-order deformation에서는 식
+
+$$\sum_j a_j g_j\equiv 0\pmod{\mathfrak{a}}$$
+
+의 우변이 $0$이었으므로, 하다못해 모든 $g_j$들을 $0$으로 두어 trivial deformation을 택하면 이 식을 만족하는 것 자체는 항상 가능했다. 그러나 이미 어떤 nontrivial한 1차 변형이 주어진 상황에서는 우변이 $0$이 아닌 고정된 잔여항을 이루므로 더 이상 $h_j=0$ 같은 선택으로 만족될 수 없으며, 이렇게 가능한 모든 보정 $h_j$를 허용해도 소거되지 않고 남는 이 실패를 대수적으로 기록한 것이 바로 *obstruction class<sub>장애류</sub>*이다. 
+
+앞서 우리는 first-order deformation에 대한 정보가 naive cotangent complex의 cohomology들인 $T^0$과 $T^1$에 담겨있다는 것을 살펴보았다. 그럼 자연스러운 의문은 이 obstruction class가 사는 공간이 무엇인지에 대한 것이다. 그러나 naive cotangent complex에서 얻어낼 수 있는 정보는 본질적으로 $T^0$과 $T^1$ 뿐이므로, $2$차항의 정보를 얻기 위해서는 naive cotangent complex보다 더 많은 항을 가진 대상이 필요하다. 
+
+이를 위해 앞선 계산에 나타난 relation들의 역할을 구체적으로 살펴보자. 우선 이미 여러 차례 사용한 $C$를 정의하는 방정식 $f_1, \ldots, f_m$ 사이의 *relation*이란, $\sum_j a_jf_j=0$을 만족하는 계수들의 $m$-tuple $(a_1, \ldots, a_m)\in B^m$이며, 이는 형식적으로 다음의 surjection
+
+$$B^m\rightarrow\mathfrak{a};\qquad e_j\mapsto f_j$$
+
+의 kernel $\Rel$의 원소들이다. 이들 방정식들 사이의 *trivial relation*이란 이들 방정식이 $B$의 commutativity에 의해 만족해야 하는 trivial relation들로, 가령 $f_if_j-f_jf_i=0$와 같은 식을 의미한다. 이는 $B^m$의 원소로서는 $j$번째 성분이 $f_i$이고 $i$번째 성분이 $-f_j$이며 나머지 성분이 $0$인 원소 $f_ie_j-f_je_i\in\Rel$에 대응하며, 이러한 원소들이 생성하는 submodule을 $\TrivRel\subseteq\Rel$이라 하자. 이러한 trivial relation들은 $B$의 commutativity에 의해 언제나 성립하므로 obstruction을 만드는 데 아무런 역할을 하지 않는다. 따라서 이들을 $\Rel$에서 지워낸 quotient module $\Rel/\TrivRel$을 생각하면 된다.
 
 ::: 정의 7
-$C=B/\mathfrak{a}$의 presentation $B=A[\x_1,\ldots,\x_n]$, $\mathfrak{a}=(f_1,\ldots,f_m)$에 대하여, $F=B^m$의 basis를 $e_1,\ldots,e_m$이라 하고 전사사상 $F\rightarrow \mathfrak{a}$, $e_j\mapsto f_j$의 kernel을 $\operatorname{Rel}$이라 하자. 또 $\operatorname{TrivRel}\subseteq\operatorname{Rel}$을 $f_ie_j-f_je_i$ 꼴의 trivial relation들이 생성하는 submodule이라 하자. 이때 *Lichtenbaum–Schlessinger complex* $\operatorname{LS}_{C/A}$는
+Finitely presented $A$-algebra $C=B/\mathfrak{a}$에 대하여, *Lichtenbaum–Schlessinger complex<sub>리히텐바움-슐레진저 복합체</sub>* $\operatorname{LS}_{C/A}$는
 
-$$\operatorname{LS}_{C/A}=\Bigl[\at{2}{\operatorname{Rel}/\operatorname{TrivRel}}\overset{d_2}{\rightarrow}\at{1}{F\otimes_BC}\overset{d_1}{\rightarrow}\at{0}{\Omega_{B/A}\otimes_BC}\Bigr]$$
+$$\operatorname{LS}_{C/A}=\Bigl[\at{2}{\Rel/\TrivRel}\overset{d_2}{\longrightarrow}\at{1}{B^m\otimes_BC}\overset{d_1}{\longrightarrow}\at{0}{\Omega_{B/A}\otimes_BC}\Bigr]$$
 
 로 정의되며, 미분은
 
 $$d_2\bigl(\overline{(a_1,\ldots,a_m)}\bigr)=\sum_j\overline{a_j}e_j,\qquad d_1(e_j)=\dd{f_j}\otimes1$$
 
-이다. 각 $i=0,1,2$에 대하여 함자
+이다. 각 $i=0,1,2$에 대하여 functor
 
 $$T^i(C/A,M)=H^i\bigl(\Hom_C(\operatorname{LS}_{C/A},M)\bigr)$$
 
 를 $C$의 *Lichtenbaum–Schlessinger functor<sub>리히텐바움-슐레진저 함자</sub>*라 부른다.
 :::
 
-이 정의는 $i=0,1$에서 [정의 1](#def1)과 어긋나지 않는다. 양쪽 모두 degree $0$ cocycle은 $\mathfrak{a}$를 죽여 $C=B/\mathfrak{a}$ 위로 내려오는 derivation $B\rightarrow M$, 곧 $\Der_A(C,M)$의 원소이고, quotient
+어렵지 않게 이 정의의 $T^0$과 $T^1$이 [정의 1](#def1)에서 정의한 것과 정확히 같은 것을 알 수 있으며, 우리 주장은 obstruction class가 $T^2$에 사는 class라는 것이다. First-order deformation $\xi$에 대하여, 앞선 계산에서와 같이 relation $(a_1,\ldots,a_m)\in\Rel$마다 $\sum_ja_jg_j=\sum_jc_jf_j$를 만족하는 $c_j\in B$를 택하면
 
-$$\bigl(F\otimes_BC\bigr)/\im d_2\cong \mathfrak{a}/\mathfrak{a}^2$$
+$$\eta(a_1,\ldots, a_m)=\overline{\sum_jc_jg_j}\in C$$
 
-에 의하여 degree $1$ cocycle은 $\Hom_C(\mathfrak{a}/\mathfrak{a}^2,M)$의 원소와 같다. 따라서 위 정의의 $T^1$은 앞서 얻은 $\coker\bar{d}^\ast$, 곧 "flat deformation modulo trivial"과 정확히 일치한다. $T^2$에서 새로 등장한 $\operatorname{Rel}/\operatorname{TrivRel}$은 방정식들 사이의 관계식 가운데 tautological한 Koszul 관계를 넘어서는 부분을 기록한다. 이 점은 obstruction을 다룰 때 분명해진다.
+를 얻는다. 여기서 $c_j$의 다른 선택과의 차이는 다시 $\Rel$의 원소가 되고, $g_j$의 flatness 조건에 의해 그 차이는 $C$에서 $0$이 되며 $\TrivRel$ 위에서는 소멸하므로 이는 잘 정의된 $C$-linear map $\eta: \Rel/\TrivRel\rightarrow C$을 주며 따라서 그 class를 $\ob(\xi)=[\eta]\in T^2(C/A,C)$라 정의할 수 있다. 이는 representative와 presentation의 선택에 무관하게 $\ob(\xi)$는 $\xi$에만 의존하므로 well-defined이다.  
 
-이렇게 $T^0$과 $T^1$은 two-term complex $\NL_{C/A}$만으로 올바르게 계산되지만, $T^2$는 Lichtenbaum–Schlessinger complex의 degree $2$ 항을 추가로 요구한다. 더 정확히는, 뒤에서 다룰 완전한 여접 복합체 $\LL_{C/A}$에 대하여 $T^i(C/A,M)=\Ext^i_C(\LL_{C/A},M)$이며, $\NL_{C/A}$와 $\operatorname{LS}_{C/A}$는 각각 $\LL_{C/A}$의 degree $0,1$ 절단과 degree $0,1,2$ 절단이다. $T^2$가 naive complex의 범위를 벗어난다는 이 사실이, obstruction을 제대로 다루려면 적어도 한 항을 더 보아야 한다는 첫 신호이다.
-
-이제 obstruction class를 실제로 만들어 보자. First-order deformation $\xi$를 [명제 4](#prop4)와 같이 $F_j=f_j+tg_j$로 실현하면, flatness에 의하여 relation $a=(a_1,\ldots,a_m)\in\operatorname{Rel}$마다 $\sum_ja_jg_j=\sum_jc_jf_j$이도록 하는 $c_j\in B$를 고를 수 있다. 이 선택으로
-
-$$\eta(a)=\overline{\sum_jc_jg_j}\in C$$
-
-를 정의한다. $c_j$의 다른 선택과의 차이는 다시 $\operatorname{Rel}$의 원소이고 $g_j$가 [명제 4](#prop4)의 flatness 조건을 만족하므로 그 차이는 $C$에서 $0$이 되며, trivial relation 위에서는 $\eta$가 소멸하므로 이는 $C$-linear map $\eta:\operatorname{Rel}/\operatorname{TrivRel}\rightarrow C$을 준다. 그 class를 $\operatorname{ob}(\xi)=[\eta]\in T^2(C/A,C)$라 적는다.
-
-이 class가 연장 가능성을 정확히 판정한다. $A[t]/(t^3)$ 위의 연장을 $F_j^{(2)}=f_j+tg_j+t^2h_j$ 꼴로 찾고 relation $a$의 일차 lift를 $R_j=a_j-tc_j$로 두어 $t^3=0$ 아래에서 전개하면
-
-$$\sum_jR_jF_j^{(2)}=t^2\left(\sum_ja_jh_j-\sum_jc_jg_j\right)$$
-
-을 얻는다. 여기에 $R_j$를 $t^2s_j$만큼 보정하면 괄호 안에 $\sum_js_jf_j$를 더할 수 있으므로, relation을 이차까지 lift할 수 있는 조건은
+앞선 계산에서 살펴보았듯, $A[\t]/(\t^3)$ 위로의 second-order deformation이 존재할 조건은 모든 relation $a$에 대하여 합동식
 
 $$\sum_jc_jg_j\equiv\sum_ja_jh_j\pmod{\mathfrak{a}}$$
 
-이다. 오른쪽은 $h=(\bar{h}_1,\ldots,\bar{h}_m)\in\Hom_C(F\otimes_BC,C)$가 $d_2$를 따라 만드는 coboundary의 $a$에서의 값이므로, 모든 relation에 대하여 이 합동식을 만족시키는 $h_j$가 존재하는 것은 $[\eta]=0$인 것과 동치이고 바로 이때 이차 연장이 존재한다. $g_j$의 representative와 presentation을 바꾸어도 Lichtenbaum–Schlessinger complex 사이의 canonical homotopy equivalence 아래에서 같은 class를 얻으므로 $\operatorname{ob}(\xi)$는 $\xi$에만 의존한다.
+를 만족시키는 $h_j\in B$가 존재하는 것이었다. 그런데 우변은 $h=(\bar{h}_1,\ldots,\bar{h}_m)\in\Hom_C(B^m\otimes_BC,C)$가 미분 $d_2$를 따라 만드는 coboundary의 $a$에서의 값이다. 따라서 이러한 $h_j$가 존재하는 것은 $\eta$가 coboundary인 것, 곧 $[\eta]=0\in T^2(C/A,C)$인 것과 정확히 동치이며 바로 이때 second-order deformation이 존재한다. 즉 다음이 성립한다. 
 
 ::: 정리 8
-$\xi\in T^1(C/A,C)$를 $A$ 위의 first-order deformation이라 하자. 그럼 $\xi$가 $A[t]/(t^3)$ 위의 flat deformation으로 연장되는 것을 막는 obstruction class
-
-$$\operatorname{ob}(\xi)\in T^2(C/A,C)$$
-
-가 자연스럽게 정의되며, $\xi$가 연장 가능한 것은 $\operatorname{ob}(\xi)=0$인 것과 동치이다. 더 일반적으로, $A$-algebra들의 square-zero extension $0\rightarrow \mathfrak{b}\rightarrow R'\rightarrow R\rightarrow0$과 $R$ 위의 deformation $C_R$에 대하여, $C_R$을 $R'$ 위로 연장하는 것에 대한 obstruction은 $T^2(C_R/R,C_R\otimes_R\mathfrak{b})$의 한 원소이고, 연장이 존재할 때 그 isomorphism class들은 $T^1(C_R/R,C_R\otimes_R\mathfrak{b})$ 위의 torsor를 이룬다.
+First-order deformation $\xi\in T^1(C/A,C)$가 $A[\t]/(\t^3)$ 위의 flat deformation으로 extend 가능한 것은 $\ob(\xi)=0$인 것과 동치이다.
 :::
-일반적인 square-zero extension $0\rightarrow \mathfrak{b}\rightarrow R'\rightarrow R\rightarrow0$에 대해서도 $t$의 거듭제곱 대신 $\mathfrak{b}$를 흔드는 방향으로 같은 계산을 반복하여 obstruction class를 얻으며, 연장이 존재할 때 두 연장의 차이에 [정리 5](#thm5)의 논증을 적용하면 그 isomorphism class들이 $T^1$ 위의 torsor를 이룬다.
 
-Obstruction의 정체는 이렇게 명료하다. First-order deformation은 관계식을 일차까지 들어올린 뒤 남는 이차 잔여항 $-t^2\sum c_jg_j$를 만들고, 이 잔여항을 $h_j$의 선택으로 흡수할 수 있는지가 연장 가능성이며, 흡수의 실패를 $T^2$가 잰다. 여기서 잔여항이 관계식의 데이터로 표현되고, 그것이 trivial relation을 넘어서는 부분에서만 의미를 가지므로 $\operatorname{Rel}/\operatorname{TrivRel}$이 등장한 것이다. 이 obstruction을 반복적으로 소거하며 더 높은 차수로 deformation을 쌓아 올리면, 그 limit으로 complete local ring 위의 formal deformation을 얻는다 ([Ser]).
+일반적인 square-zero extension $0\rightarrow \mathfrak{b}\rightarrow R'\rightarrow R\rightarrow0$에 대해서도 $\t$의 거듭제곱 대신 $\mathfrak{b}$를 흔드는 방향으로 같은 계산을 반복하여 obstruction class를 얻으며, extension이 존재할 때 두 extension의 차이에 [정리 5](#thm5)의 논증을 적용하면 그 isomorphism class들이 $T^1$ 위의 torsor를 이룬다.
 
-여기서부터는 이 계산을 full cotangent complex 전체로 옮긴다. $A$-algebra $C$를 한 번 polynomial algebra의 quotient로 나타내는 대신, 각 항이 polynomial $A$-algebra인 free simplicial resolution $P_\bullet\overset{\sim}{\rightarrow}C$를 택하고 각 degree에서 Kähler differential을 취한다. 그 결과인 simplicial $C$-module
+지금까지의 계산은 더 일반적인 full cotangent complex로 일반화된다. 이를 위해 우리는 $A$-algebra $C$를 한 번 polynomial algebra의 quotient로 나타내는 대신, 각 항이 polynomial $A$-algebra인 free simplicial resolution 
+
+$$P_\bullet\overset{\sim}{\rightarrow}C$$
+
+를 택하고 각 degree에서 Kähler differential을 취한다. 그 결과인 simplicial $C$-module
 
 $$\LL_{C/A}=\Omega_{P_\bullet/A}\otimes_{P_\bullet}C$$
 
-을 chain complex로 본 것이 $C$의 $A$ 위 *cotangent complex<sub>여접 복합체</sub>*이다. Degree $0$에서는 generator의 differential이, degree $1$에서는 relation이, 그보다 높은 degree에서는 relation 사이의 relation과 그 higher coherence가 차례로 기록된다. 따라서 $\LL_{C/A}$는 일반적으로 모든 nonnegative degree에 항을 가지며, 앞에서 사용한 두 complex는 그 낮은 degree의 절단으로 되돌아온다.
+을 chain complex로 본 것이 $C$의 $A$ 위 *cotangent complex<sub>여접 복합체</sub>*이다. 이렇게 정의한 $\LL_{C/A}$의 핵심적인 성질은 이것이 앞서 정의한 두 complex들을 일반화한다는 것으로, 이들은 $\LL_{C/A}$의 truncation
 
 $$\tau_{\leq1}\LL_{C/A}\simeq\NL_{C/A},\qquad \tau_{\leq2}\LL_{C/A}\simeq\operatorname{LS}_{C/A}$$
 
-그러므로 지금까지 얻은 해석은 full cotangent complex에서도 그대로 유지된다. 모든 $C$-module $M$에 대하여
+으로 나타난다. 따라서 임의의 $C$-module $M$에 대하여
 
 $$T^i(C/A,M)=\Ext^i_C(\LL_{C/A},M)$$
 
-로 놓으면, $T^0$는 infinitesimal automorphism을, $T^1$은 first-order deformation과 연장이 존재할 때 그 선택들의 차이를, $T^2$는 연장의 obstruction을 통제한다. Naive cotangent complex와 Lichtenbaum–Schlessinger complex에서 계산한 $T^0,T^1,T^2$는 이 정의의 처음 세 항과 일치하므로, full cotangent complex는 앞의 이론을 폐기하지 않고 그 뒤에 higher degree를 이어 붙인다.
-
-Taylor 차수를 올리는 과정에서도 매번 이 같은 세 항이 다시 나타난다. $A_n=A[t]/(t^{n+1})$로 놓으면 $A_{n+1}\rightarrow A_n$의 kernel $I_n=(t^{n+1})/(t^{n+2})$은 square-zero ideal이다. 따라서 $A_n$ 위의 deformation $C_n$을 $A_{n+1}$ 위로 연장하는 obstruction은
-
-$$T^2(C_n/A_n,C_n\otimes_{A_n}I_n)$$
-
-에 놓이고, 이것이 $0$일 때 연장들의 isomorphism class는 $T^1(C_n/A_n,C_n\otimes_{A_n}I_n)$ 위의 torsor를 이루며 infinitesimal automorphism은 $T^0(C_n/A_n,C_n\otimes_{A_n}I_n)$이 기록한다. 따라서 $n$차 연장에 $T^n$이 새로 대응하는 것이 아니라, base를 한 차수씩 두껍게 할 때마다 $T^0,T^1,T^2$의 deformation–obstruction 구조가 반복된다. 서로 호환되는 연장을 모든 $n$에 대하여 고르는 것이 formal deformation을 구성하는 일이다.
-
-더 높은 $T^i$는 Taylor 전개의 $t^i$항을 직접 분류하는 공간이 아니라, $C$의 방정식 뒤에 놓인 higher relation과 coherence를 재는 André–Quillen cohomology이다. 이 항들까지 보존해야 ring morphism의 chain $A\rightarrow B\rightarrow C$에 대하여 distinguished triangle
-
-$$\LL_{B/A}\otimes_B^{\mathbb{L}}C\longrightarrow\LL_{C/A}\longrightarrow\LL_{C/B}\longrightarrow\LL_{B/A}\otimes_B^{\mathbb{L}}C[1]$$
-
-이 성립하고, 여기서 나오는 long exact sequence가 모든 $T^i$를 연결한다. Base change에서도 ordinary tensor를 derived tensor로 바꾸어야 같은 구조가 보존된다. 한 presentation에서 만든 유한 complex로는 relation의 처음 몇 층만 볼 수 있는 반면, full cotangent complex는 이 transitivity와 derived base change를 모든 degree에서 동시에 만족한다.
-
-이제 [명제 2](#prop2)의 smoothness 판정을 full cotangent complex에 적용하면 deformation의 모든 degree에 대한 다음 결론을 얻는다.
+로 놓으면, $T^0$는 infinitesimal automorphism을, $T^1$은 first-order deformation과 extension이 존재할 때 그 선택들의 차이를 나타내며 ([정리 5](#thm5)), $T^2$는 extension의 obstruction을 통제한다. ([정리 8](#thm8)). 이제 [명제 2](#prop2)의 smoothness 판정을 full cotangent complex에 적용하면 deformation의 모든 degree에 대한 다음 결론을 얻는다.
 
 ::: 명제 9
 $C$가 $A$ 위에서 smooth하면 모든 $C$-module $M$에 대하여
@@ -471,50 +472,72 @@ Smooth한 $C$의 cotangent complex $\LL_{C/A}$는 degree $0$의 $\Omega_{C/A}$�
 
 $$T^i(C/A,M)=\Ext^i_C(\LL_{C/A},M)=\Ext^i_C(\Omega_{C/A},M)=0$$
 
-이다. First-order deformation과 그 infinitesimal automorphism에 관한 주장은 [정리 5](#thm5)에 따르고, 일반적인 square-zero lifting에 관한 주장은 [정리 8](#thm8)에 따른다.
+이다. 
 :::
 
-$A$ 위의 affine lci algebra $C$에 대해서는 $\LL_{C/A}$가 두 projective module로 이루어진 naive cotangent complex와 quasi-isomorphic하므로 $T^i(C/A,M)=0$이 모든 $i\geq2$에서 성립한다. 따라서 각 단계의 obstruction은 사라지고 first-order deformation을 formal deformation으로 계속 연장할 수 있으며, 이러한 deformation 문제를 *unobstructed<sub>장애 없음</sub>*라 부른다. 일반적인 non-lci algebra에서는 $\LL_{C/A}$의 higher homology가 남을 수 있고, Lichtenbaum–Schlessinger complex는 그 가운데 고전적 deformation과 obstruction에 필요한 degree $2$까지를 보여 주며 full cotangent complex는 그 뒤의 higher relation까지 보존한다.
+앞서 살펴보았듯, $A$ 위의 affine lci algebra $C$에 대해서는 $\LL_{C/A}$가 두 projective module로 이루어진 naive cotangent complex와 quasi-isomorphic하므로 $T^i(C/A,M)=0$이 모든 $i\geq2$에서 성립한다. 따라서 각 단계의 obstruction은 사라지고 first-order deformation을 formal deformation으로 계속 연장할 수 있으며, 이러한 경우 obstruction class가 없다는 의미에서 *unobstructed*라 말한다. 일반적인 non-lci algebra에서는 $\LL_{C/A}$의 higher homology가 남을 수 있고, Lichtenbaum–Schlessinger complex는 그 가운데 고전적 deformation과 obstruction에 필요한 degree $2$까지를 보여 주며 full cotangent complex는 그 뒤의 higher relation까지 보존한다.
 
-[예시 6](#ex6)의 $C=A[\x,\y]/(\x\y)$는 하나의 nonzerodivisor로 정의된 hypersurface이므로 이 경우에 해당한다. 따라서 $T^2(C/A,C)=0$이며, 그 예시에서 직접 구성한 고차 연장을 obstruction 이론으로도 설명할 수 있다.
+## 스킴에서의 국소와 대역
 
-## 예시
+지금까지의 계산은 affine scheme 위에서 이루어졌지만 deformation은 affine 조각별 선택만으로 끝나지 않는다. 각 조각의 deformation을 겹치는 곳에서 식별하고, 그 식별들이 세 겹치는 곳에서 cocycle 조건을 만족하도록 해야 하나의 scheme으로 붙기 때문이다. Affine open $U=\Spec B\subseteq X$마다 $\LL_{B/k}$를 associated complex로 바꾸어 붙이면 $X$ 위의 cotangent complex $\LL_{X/k}$를 얻으며, 그 derived dual의 대역 cohomology가 국소 deformation과 접합의 실패를 함께 기록한다.
 
-이제 $A=\mathbb{K}$가 field인 경우로 specialize하여, 구체적인 singular point들로 위 이론을 검증한다.
+::: 정의 10
+$k$-scheme $X$의 *first-order deformation<sub>일차 변형</sub>*이란 $\Spec k[\epsilon]$ 위에서 flat한 scheme $\mathcal{X}$와 isomorphism
 
-::: 예시 10 (세 좌표축)
-$C=\mathbb{K}[\x,\y,\z]/\mathfrak{a}$, $\mathfrak{a}=(\x\y,\y\z,\z\x)$를 생각하자. 이는 $\mathbb{A}^3$의 세 좌표축의 합집합으로, 차원 $1$, codimension $2$이지만 ideal이 세 원소로 최소생성되므로 complete intersection이 아니며, 따라서 lci가 아니다. 이 singular point에서 $H_1(\NL_{C/\mathbb{K}})$이 $0$이 아님을 직접 확인한다.
+$$\mathcal{X}\times_{\Spec k[\epsilon]}\Spec k\cong X$$
 
-$f_1=\x\y$, $f_2=\y\z$, $f_3=\z\x$라 하면, $\bar{d}:\mathfrak{a}/\mathfrak{a}^2\rightarrow C^3$는
-
-$$\bar{d}(\bar{f}_1)=(\y,\x,0),\quad\bar{d}(\bar{f}_2)=(0,\z,\y),\quad\bar{d}(\bar{f}_3)=(\z,0,\x)$$
-
-으로 주어진다 ($C^3=C \dd{\x}\oplus C \dd{\y}\oplus C \dd{\z}$). 이제 원소 $\x\cdot\bar{f}_2\in \mathfrak{a}/\mathfrak{a}^2$을 보자. $C$ 위에서 $\x\z=\x\y=0$이므로
-
-$$\bar{d}(\x\cdot\bar{f}_2)=\x\cdot(0,\z,\y)=(0,\x\z,\x\y)=(0,0,0)$$
-
-이어서 $\x\cdot\bar{f}_2\in\ker\bar{d}=H_1(\NL_{C/\mathbb{K}})$이다. 한편 $\x f_2=\x\y\z$는 degree $3$이고 $\mathfrak{a}^2$의 원소는 모두 degree $4$ 이상이므로 $\x\y\z\notin \mathfrak{a}^2$, 곧 $\x\cdot\bar{f}_2=\overline{\x\y\z}\neq0$이다. 따라서
-
-$$H_1(\NL_{C/\mathbb{K}})\neq0,\qquad \overline{\x\y\z}\in H_1(\NL_{C/\mathbb{K}})$$
-
-이다. 이 nonzero class는 conormal morphism $\bar{d}$의 왼쪽 끝 비단사성, 곧 conormal exact sequence를 왼쪽으로 연장했을 때 비로소 보이는 정보이며, $\Omega_{C/\mathbb{K}}$만으로는 결코 검출되지 않는다. ($\overline{\x\y\z}$는 세 generator 어느 쪽으로 보아도 같은 원소로서, $\z\cdot\bar{f}_1=\x\cdot\bar{f}_2=\y\cdot\bar{f}_3$이 모두 kernel에 속한다.) 이것이 naive 여접 복합체의 $H_1$이 smoothness의 실패 가운데 conormal morphism의 비단사성을 포착하는 가장 깨끗한 사례이다.
+의 짝이다. 두 first-order deformation이 *isomorphic*이라는 것은 $\Spec k[\epsilon]$ 위의 isomorphism으로서 central fiber $X$ 위에 항등사상을 유도하는 것이 존재하는 것을 뜻한다.
 :::
 
-::: 예시 11 (obstruction이 있는 deformation)
-Obstruction이 실제로 $0$이 아닌 고전적 예는 rational normal quartic curve $C_4\subseteq\mathbb{P}^4$ 위의 affine cone
+::: 정리 11 (Cotangent-complex deformation theorem)
+$X$가 $k$ 위의 separated finite type scheme이면 first-order deformation들의 isomorphism class는
 
-$$C=\mathbb{K}[\z_0,\z_1,\z_2,\z_3,\z_4]/\mathfrak{a},\qquad X=\Spec C,\qquad M=\begin{pmatrix}\z_0&\z_1&\z_2&\z_3\\\z_1&\z_2&\z_3&\z_4\end{pmatrix}$$
+$$T^1(X/k)=\Ext^1_{\mathcal{O}_X}(\LL_{X/k},\mathcal{O}_X)$$
 
-이다. 여기서 $\mathfrak{a}=I_2(M)$은 $M$의 $2\times2$ minor들로 생성되는 ideal이다. 이렇게 얻는 cone은 codimension $3$이고 그 vertex가 isolated singular point이다. Pinkham이 계산한 이 singular point의 semiuniversal deformation의 base는 한 점에서 만나는 두 component, 곧 차원 $3$인 성분과 차원 $1$인 성분으로 이루어져, base가 그 교점에서 singular하다. 이는 $T^1$의 어떤 접방향(한 component의 접방향에서 벗어난 방향)이 [정리 8](#thm8)의 의미에서 *obstructed*임을, 곧 그 first-order deformation을 이차로 연장할 때 $\operatorname{ob}(\xi)\neq0\in T^2(C/\mathbb{K},C)$임을 뜻한다.
+와 자연스럽게 일대일 대응하며, trivial deformation은 $0$에 대응한다. 그 infinitesimal automorphism은 $T^0(X/k)$가 분류한다. 더 일반적인 square-zero extension problem에서 kernel이 $\mathcal{G}$이면 해의 존재를 막는 canonical class가 $\Ext^2_{\mathcal{O}_X}(\LL_{X/k},\mathcal{G})$에 놓이고, 이 class가 $0$일 때 해들의 isomorphism class는 $\Ext^1_{\mathcal{O}_X}(\LL_{X/k},\mathcal{G})$ 위의 torsor를 이룬다.
+:::
+::: 증명
+Affine open cover를 택하면 각 조각 위의 deformation과 lifting은 [정리 5](#thm5)와 [정리 8](#thm8)이 각각 $T^1$과 $T^2$로 통제한다. 겹치는 두 조각에서 lifting들을 식별하는 자유도는 $T^0$이고, 세 겹치는 곳에서 이 식별들이 cocycle 조건을 만족하지 못하는 정도가 그다음 obstruction을 만든다. 이 Čech 자료를 한꺼번에 totalize한 complex가
 
-Codimension $3$ 이상에서는 이러한 obstruction이 나타날 수 있는 반면, $\mathbb{P}^3$ 위 rational normal cubic의 cone과 같은 codimension $2$ Cohen–Macaulay singular point는 항상 unobstructed하여 base가 매끄럽다. 따라서 [예시 10](#ex10)처럼 lci가 아니어도 obstruction이 없을 수 있으며, "non-lci"와 "obstructed"는 서로 다른 현상이다. Obstruction의 유무는 $T^2$와 그 위에서 정의되는 이차 morphism $\operatorname{ob}$이 결정하는 것이지, $\Omega$나 $H_1(\NL)$만으로 읽히지 않는다. 이 예시의 명시적 계산은 ([Ser], [Har])를 참조하라.
+$$R\Gamma\bigl(X,R\sHom_{\mathcal{O}_X}(\LL_{X/k},\mathcal{G})\bigr)$$
+
+이므로 그 $0,1,2$차 cohomology가 각각 automorphism, 해들의 차이, existence obstruction을 준다. First-order deformation에서는 trivial deformation $X\times\Spec k[\epsilon]$이 기준점을 주므로 torsor가 $T^1(X/k)$ 자체와 식별된다.
+:::
+
+이 설명에서 total complex의 두 방향을 분리하면, affine 조각 자체를 흔드는 자유도와 그 조각들을 붙이는 자유도가 명시적으로 갈라진다.
+
+::: 정리 12 (국소-대역 exact sequence)
+$X$ 위의 quasi-coherent cohomology sheaf를 갖는 bounded above complex $K$가 $q<0$에서 $\mathcal{E}xt^q(K,\mathcal{O}_X)=0$을 만족한다고 하자. 이때 local-to-global spectral sequence
+
+$$E_2^{p,q}=H^p\bigl(X,\mathcal{E}xt^q_{\mathcal{O}_X}(K,\mathcal{O}_X)\bigr)\Longrightarrow\Ext^{p+q}_{\mathcal{O}_X}(K,\mathcal{O}_X)$$
+
+가 존재한다. 특히 $K=\LL_{X/k}$로 놓고 $\mathcal{T}_X^q=\mathcal{E}xt^q_{\mathcal{O}_X}(\LL_{X/k},\mathcal{O}_X)$라 적으면 그 낮은 차수 부분은 exact sequence
+
+$$0\longrightarrow H^1(X,\mathcal{T}_X^0)\longrightarrow T^1(X/k)\longrightarrow H^0(X,\mathcal{T}_X^1)\overset{d_2}{\longrightarrow}H^2(X,\mathcal{T}_X^0)\longrightarrow T^2(X/k)$$
+
+를 이룬다.
+:::
+::: 증명
+이는 합성 $R\Gamma\circ R\sHom_{\mathcal{O}_X}(K,-)$에 대한 spectral sequence이다. First quadrant spectral sequence의 전체 차수 $1$에 놓인 두 항 $(1,0)$과 $(0,1)$을 filtration으로 읽고, $(0,1)$에서 나가는 첫 비자명한 differential $d_2:E_2^{0,1}\rightarrow E_2^{2,0}$을 붙이면 표시한 five-term exact sequence를 얻는다.
+:::
+
+왼쪽의 $H^1(X,\mathcal{T}_X^0)$은 affine 조각들을 바꾸지 않고 gluing만 흔드는 locally trivial deformation이고, $H^0(X,\mathcal{T}_X^1)$은 각 점에서의 local deformation을 대역적으로 고른 것이다. Differential $d_2$는 그렇게 고른 local deformation들이 실제 scheme deformation으로 붙는지를 판정한다.
+
+::: 따름정리 13
+$X$가 $k$ 위에서 smooth하면 모든 $i$에 대하여
+
+$$T^i(X/k)\cong H^i(X,\mathcal{T}_{X/k})$$
+
+이다. 특히 first-order deformation들의 isomorphism class는 $H^1(X,\mathcal{T}_{X/k})$가 분류한다.
+:::
+::: 증명
+Smooth한 경우 $\LL_{X/k}\simeq\Omega_{X/k}$이고 $\Omega_{X/k}$가 locally free이므로 $q>0$에서 $\mathcal{T}_X^q=0$이며 $\mathcal{T}_X^0=\sHom(\Omega_{X/k},\mathcal{O}_X)=\mathcal{T}_{X/k}$이다. 따라서 [정리 12](#thm12)의 spectral sequence가 $q=0$인 한 행으로 퇴화한다.
 :::
 
 ---
 
 **참고문헌**
 
-**[Ill]** L. Illusie, _Complexe cotangent et déformations I, II_, Lecture Notes in Mathematics 239, 283, Springer, 1971–1972.  
-**[Har]** R. Hartshorne, _Deformation theory_, Graduate Texts in Mathematics 257, Springer, 2010.  
-**[Ser]** E. Sernesi, _Deformations of algebraic schemes_, Grundlehren der mathematischen Wissenschaften 334, Springer, 2006.  
-**[Stacks]** The Stacks project authors, _The Stacks project_, [stacks.math.columbia.edu](https://stacks.math.columbia.edu).
+**[Har]** R. Hartshorne, *Deformation theory*, Graduate Texts in Mathematics 257, Springer, 2010.  
+**[Ill]** L. Illusie, *Complexe cotangent et déformations I, II*, Lecture Notes in Mathematics 239, 283, Springer, 1971--1972.  
+**[Stacks]** The Stacks project authors, *The Stacks project*, [stacks.math.columbia.edu](https://stacks.math.columbia.edu).
