@@ -15,7 +15,7 @@ published: false
 
 ---
 
-Affine scheme의 변형은 이미 손에 있다. Finitely generated $k$-algebra $B$의 first-order deformation이 $T^1(B/k, B)$과 일대일 대응하고 ([§변형이론과 여접 복합체, ⁋정리 5](/ko/math/scheme_theory/deformation_theory#thm5)), 그것을 더 두꺼운 base 위로 연장하는 데 걸리는 obstruction은 [§변형이론과 여접 복합체, ⁋정리 7](/ko/math/scheme_theory/deformation_theory#thm7)에 의하여 $T^2(B/k, B)$에 놓인다. 남은 일은 이 국소적인 분류를 scheme 전체로 붙이는 것이다.
+Affine scheme의 변형은 이미 손에 있다. Finitely generated $k$-algebra $B$의 first-order deformation이 $T^1(B/k, B)$과 일대일 대응하고 ([§변형이론과 여접 복합체, ⁋정리 5](/ko/math/scheme_theory/deformation_theory#thm5)), 그것을 더 두꺼운 base 위로 연장하는 데 걸리는 obstruction은 [§변형이론과 여접 복합체, ⁋정리 8](/ko/math/scheme_theory/deformation_theory#thm8)에 의하여 $T^2(B/k, B)$에 놓인다. 남은 일은 이 국소적인 분류를 scheme 전체로 붙이는 것이다.
 
 붙이는 데에는 두 겹의 자유도가 있다. 하나는 각 affine 조각이 스스로 변형되는 자유도이고, 다른 하나는 조각들을 다시 이어 붙이는 방식의 자유도이다. Smooth한 경우에는 첫째 자유도가 통째로 사라져 둘째 것만 남으며, 그 결과가 tangent sheaf의 첫째 cohomology이다. Singularity가 있으면 두 자유도가 함께 살아 있고, 이들을 한 대상 안에서 다루는 올바른 틀이 cotangent sheaf의 $\Ext$이다.
 
