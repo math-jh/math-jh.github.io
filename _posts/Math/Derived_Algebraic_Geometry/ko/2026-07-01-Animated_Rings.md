@@ -16,7 +16,7 @@ published: false
 
 ---
 
-[\[스킴\] §변형이론과 여접 복합체, §§변형의 장애](/ko/math/scheme_theory/deformation_theory#변형의-장애)에서 우리는 naive 여접 복합체 $\NL_{B/A}$가 변형이론의 요구를 온전히 감당하지 못함을 보았다. 그것은 두 항짜리 절단이라 $T^2$ 이상의 장애를 담지 못하고, ring morphism의 사슬 $A\rightarrow B\rightarrow C$에 대하여 오른쪽에서만 exact한 transition exact sequence밖에 주지 못하며, base change가 $\otimes$의 non-exactness 때문에 어긋난다. 이 세 결함은 모두 같은 뿌리를 가진다. $\Omega$와 $\NL$은 tensor product와 quotient라는 non-exact한 연산을 그 유도된 형태로 다루지 못하고, 오직 $0$차 근사만을 붙든다는 것이다.
+[\[스킴\] §변형이론과 여접 복합체, §§변형의 장애와 고차 변형이론](/ko/math/scheme_theory/deformation_theory#변형의-장애와-고차-변형이론)에서 우리는 naive 여접 복합체 $\NL_{B/A}$가 변형이론의 요구를 온전히 감당하지 못함을 보았다. 그것은 두 항짜리 절단이라 $T^2$ 이상의 장애를 담지 못하고, ring morphism의 사슬 $A\rightarrow B\rightarrow C$에 대하여 오른쪽에서만 exact한 transition exact sequence밖에 주지 못하며, base change가 $\otimes$의 non-exactness 때문에 어긋난다. 이 세 결함은 모두 같은 뿌리를 가진다. $\Omega$와 $\NL$은 tensor product와 quotient라는 non-exact한 연산을 그 유도된 형태로 다루지 못하고, 오직 $0$차 근사만을 붙든다는 것이다.
 
 우리는 이 글에서 그 뿌리를 직접 교정한다. 곧 commutative ring 자체를 homotopy 이론적으로 정련하여, Tor가 처음부터 내장된 대상인 *animated (simplicial) commutative ring*을 도입한다. 그 무대 위에서 tensor product는 자동으로 유도 tensor product $\otimes^{\mathbb{L}}$이 되고, polynomial algebra에 의한 한 번의 presentation은 simplicial 자유 분해로 승격되며, 그 미분을 취해 얻는 완전한 여접 복합체 $\LL_{B/A}$가 모든 degree에서 homology를 갖고 추이 삼각형을 만족하게 된다. 이하에서 별다른 언급이 없으면 모든 ring은 commutative이고 unital이며, $k$는 field이다.
 
@@ -188,7 +188,7 @@ $$\LL_{C/B}\simeq (I/I^2)[1]$$
 로 집중된다.
 :::
 ::: 증명
-삼각형은 free simplicial 분해의 base change로부터 나온다. $P_\bullet\rightarrow B$를 $A$ 위의 free resolution, $Q_\bullet\rightarrow C$를 $B$ 위의 free 분해로 잡고 이들을 합성하여 $C$의 $A$ 위 free 분해를 구성하면, 각 simplicial degree에서 [\[다중선형대수학\] §미분가군, ⁋명제 13](/ko/math/multilinear_algebra/differential_modules#prop13)의 transition exact sequence가 split short exact sequence가 되고 (polynomial algebra 사이의 morphism이므로), 이를 normalize하면 short exact sequence들의 열이 사슬 복합체들의 short exact sequence를 이루어 그 long exact sequence가 위 삼각형이 된다. 오른쪽에서만 exact했던 옛 transition exact sequence가 이렇게 완전한 삼각형으로 승격되는 것이 완전한 여접 복합체를 도입한 핵심 동기였다 ([\[스킴\] §변형이론과 여접 복합체, §§변형의 장애](/ko/math/scheme_theory/deformation_theory#변형의-장애)).
+삼각형은 free simplicial 분해의 base change로부터 나온다. $P_\bullet\rightarrow B$를 $A$ 위의 free resolution, $Q_\bullet\rightarrow C$를 $B$ 위의 free 분해로 잡고 이들을 합성하여 $C$의 $A$ 위 free 분해를 구성하면, 각 simplicial degree에서 [\[다중선형대수학\] §미분가군, ⁋명제 13](/ko/math/multilinear_algebra/differential_modules#prop13)의 transition exact sequence가 split short exact sequence가 되고 (polynomial algebra 사이의 morphism이므로), 이를 normalize하면 short exact sequence들의 열이 사슬 복합체들의 short exact sequence를 이루어 그 long exact sequence가 위 삼각형이 된다. 오른쪽에서만 exact했던 옛 transition exact sequence가 이렇게 완전한 삼각형으로 승격되는 것이 완전한 여접 복합체를 도입한 핵심 동기였다 ([\[스킴\] §변형이론과 여접 복합체, §§변형의 장애와 고차 변형이론](/ko/math/scheme_theory/deformation_theory#변형의-장애와-고차-변형이론)).
 
 전사 $B\rightarrow C=B/I$의 경우 $\Omega_{C/B}=0$이므로 $H_0(\LL_{C/B})=0$이고, $H_1(\LL_{C/B})=I/I^2$은 conormal module이 여접 복합체의 첫 nonzero homology로 나타남을 말한다. $I=(f_1,\ldots,f_r)$이 regular sequence이면 Koszul 분해가 $C$의 free 분해를 주고, 그 미분을 취한 여접 복합체가 정확히 $(I/I^2)[1]$ 한 항으로 축약된다. 세부는 ([Qui], [Ill])에 있다.
 :::
