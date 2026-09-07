@@ -25,5 +25,35 @@
 	0 \arrow[r] & M \arrow[r] & E_2 \arrow[r, "p_2"'] & C \arrow[r] & 0
 \end{tikzcd}
 
-\end{document}
+%%FIG trivial deformation of node (Deformation_Theory-4.svg)
+\begin{tikzpicture}[line cap=round, line join=round]
+  \path[use as bounding box] (-2,-2) rectangle (2,2);
+  % Positive parameter: the horizontal component moves down;
+  % the vertical component is common to every fibre.
+  \foreach \offset/\tone in {0.16/accent3,0.36/accent2,0.60/accent1}{
+    \draw[color=\tone,line width=0.8pt] (-2,-\offset) -- (2,-\offset);
+  }
+  \draw[black!50,line width=0.65pt] (-2,0) -- (2,0);
+  \draw[black!50,line width=0.65pt] (0,-2) -- (0,2);
+\end{tikzpicture}
 
+%%FIG smoothing of node (Deformation_Theory-5.svg)
+\begin{tikzpicture}[line cap=round, line join=round]
+  \path[use as bounding box] (-2,-2) rectangle (2,2);
+  \draw[black!50,line width=0.65pt] (-2,0) -- (2,0);
+  \draw[black!50,line width=0.65pt] (0,-2) -- (0,2);
+  % x=sqrt(t)*exp(s), y=sqrt(t)*exp(-s).
+  % The finite range |s| <= log(2/sqrt(t)) keeps both coordinates
+  % inside the square without evaluating t/x at or near x=0.
+  \foreach \level/\tone in {0.015/accent3,0.085/accent2,0.25/accent1}{
+    \pgfmathsetmacro{\smax}{ln(2/sqrt(\level))}
+    \draw[color=\tone,line width=0.8pt]
+      plot[domain=-\smax:\smax,variable=\s,samples=121]
+      ({sqrt(\level)*exp(\s)},{sqrt(\level)*exp(-\s)});
+    \draw[color=\tone,line width=0.8pt]
+      plot[domain=-\smax:\smax,variable=\s,samples=121]
+      ({-sqrt(\level)*exp(\s)},{-sqrt(\level)*exp(-\s)});
+  }
+\end{tikzpicture}
+
+\end{document}

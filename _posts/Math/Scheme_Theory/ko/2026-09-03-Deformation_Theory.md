@@ -303,37 +303,47 @@ $$\Hom_C(\mathfrak{a}/\mathfrak{a}^2,C)\big/\im\bar{d}^\ast=T^1(C/A,C)$$
 :::
 
 ::: 예시 6 (Nodal curve)
-앞에서 살펴본 node $\x\y=0$을 살펴보자. $B=A[\x,\y]$, $f(\x,\y)=\x\y$, $\mathfrak{a}=(f)$라 하고, $C=B/\mathfrak{a}$, $X_0=\Spec C$라 하자. First-order deformaion $g\in B$를 택하자. 즉, 적당한 $g\in B$에 대하여
+앞에서 살펴본 node $\x\y=0$을 엄밀하게 계산해보자. $B=A[\x,\y]$, $f(\x,\y)=\x\y$, $\mathfrak{a}=(f)$라 하고, $C=B/\mathfrak{a}$, $X_0=\Spec C$라 하자. First-order deformation $g\in B$를 택하자. 즉, 적당한 $g\in B$에 대하여
 
 $$F=f+\epsilon g\in B[\epsilon],\qquad C'=B[\epsilon]/(F)$$
 
-로 주어진다. 직관적으로 $\Spec C'$는 $\Spec A$를 무한소방향으로 늘리고, 이 방향을 따라 정의된 fat point $\Spec A'$를 따라 $X$를 늘려둔 것이다. 
-
- $C'/\epsilon C'\cong C$이므로 $X'=\Spec C'$의 structure morphism $X'\rightarrow\Spec A[\epsilon]$은 central fiber의 identification
-
-$$X'\times_{\Spec A[\epsilon]}\Spec A\cong X_0$$
-
-를 갖는다. 또 $C$는 $1,\x,\x^2,\ldots,\y,\y^2,\ldots$를 basis로 갖는 free $A$-module이고, $f=\x\y$는 $B$의 nonzerodivisor이므로 $a\in B$에 대하여 $af=0$인 relation은 $a=0$뿐이다. 따라서 [명제 4](#prop4)의 조건은 모든 $g\in B$에 대해 성립하며, $C'$은 $A[\epsilon]$ 위에서 flat하다.
-
-이 deformation을 기록하는 $C$-linear map $\varphi$는
+로 주어진다. 직관적으로 $\Spec C'$는 $\Spec A$를 무한소방향으로 늘리고, 이 방향을 따라 정의된 fat point $\Spec A'=\Spec A[\epsilon]$를 따라 $X$를 늘려둔 것이며 이를 어떻게 늘렸는지에 대한 정보가 $g$의 선택에 들어있으며, 더 구체적으로 우리는 [정리 5](#thm5)에서 이 선택이 주는 다음의 $C$-linear map
 
 $$\varphi:\mathfrak{a}/\mathfrak{a}^2\longrightarrow C,\qquad \bar{f}\longmapsto\bar{g}$$
 
-이다. 여기서 $\bar{f}$는 $f$의 $\mathfrak{a}/\mathfrak{a}^2$에서의 class이고, $\bar{g}$는 $g$의 $C=B/\mathfrak{a}$에서의 class이다. $\mathfrak{a}/\mathfrak{a}^2=C\bar{f}$이므로 $\varphi$는 $\bar{g}$ 하나로 결정된다. 즉, $g$로 방정식을 바꾸는 자료를 module의 언어로 기록한 것이 $\varphi$이다.
+이 정확히 first-order deformation에 대한 정보를 모두 담고 있음을 보았다. 즉, $g$의 선택이 deformation을 결정한다. 
 
-이제 [정리 5](#thm5)에 따라 좌표변환에서 오는 변화를 제외하자. $\theta(\x)=a$, $\theta(\y)=b$인 derivation $\theta\in\Der_A(B,C)$에 대하여
+예를 들어 $g=\x$를 택하면
 
-$$\theta(f)=\theta(\x\y)=a\y+b\x$$
+$$F=\x\y+\epsilon\x=\x(\y+\epsilon)$$
 
-이므로, $\Hom_C(\mathfrak{a}/\mathfrak{a}^2,C)\cong C$라는 identification 아래에서 $\im\bar{d}^\ast=(\x,\y)\subseteq C$이다. 따라서
+이므로, 이는 좌표변환 $\y\mapsto\y+\epsilon$으로 원래의 방정식 $f=\x\y$를 옮긴 것이다. 이 좌표변환은 $\epsilon=0$에서 identity로 제한되며 $C[\epsilon]\cong C'$을 유도하므로, $g=\x$는 trivial deformation을 정의한다.
+
+{% diagram Math/Scheme_Theory/Deformation_Theory-4.svg width="12.56em" alt="trivial deformation of node" %}
+
+[정리 5](#thm5)에 따르면 trivial deformation을 주는 것은 $\varphi\in\im\bar{d}^\ast$인 경우이다. 여기서는 $\mathfrak{a}/\mathfrak{a}^2=C\bar{f}$이므로 $\Hom_C(\mathfrak{a}/\mathfrak{a}^2,C)\cong C$이고, 이 identification 아래에서 $\varphi$는 $\bar{g}\in C$에 대응한다. 또 $\theta(\x)=a$, $\theta(\y)=b$인 derivation $\theta\in\Der_A(B,C)$에 대하여
+
+$$\theta(f)=\theta(\x\y)=a\y+b\x\qquad(a,b\in C)$$
+
+이므로 $\im\bar{d}^\ast=(\x,\y)\subseteq C$이다. 따라서 $\bar{g}\in(\x,\y)$인 것이 trivial deformation의 조건이며, 실제로 $g=\x$는 $\theta(\x)=0$, $\theta(\y)=1$인 derivation에 대해 $\theta(f)=\x$이므로 이 조건을 만족한다.
+
+한편 이 image에 속하지 않는 $\bar{g}$를 택하면 nontrivial deformation을 얻는다. 위 계산에 의하여
 
 $$T^1(C/A,C)\cong C/(\x,\y)\cong A$$
 
-이며, $F=f+\epsilon g$의 isomorphism class는 $g$의 constant term으로 결정된다. 특히 $g=-1$을 택하면
+이며, $F=f+\epsilon g$가 주는 deformation의 class는 $g$의 constant term으로 결정된다. 예를 들어 $g=-1$로 택하면
 
-$$F=\x\y-\epsilon,\qquad C'=A[\epsilon][\x,\y]/(\x\y-\epsilon)$$
+$$F=\x\y-\epsilon,\qquad C'=A[\epsilon][\x,\y]/(\x\y-\epsilon),\qquad X'=\Spec C'$$
 
-을 얻고, 이는 $-1\in T^1(C/A,C)\cong A$에 대응하므로 $A\neq0$일 때 nontrivial하다. 반면 $g=\x$이면 $F=\x\y+\epsilon\x=\x(\y+\epsilon)$이므로 좌표변환 $\y\mapsto\y+\epsilon$으로 얻어지는 trivial deformation이다.
+을 얻는다. 이는 $-1\in T^1(C/A,C)\cong A$에 대응하므로 $A\neq0$일 때 nontrivial하다.
+
+{% diagram Math/Scheme_Theory/Deformation_Theory-5.svg width="12.56em" alt="smoothing of node" %}
+
+이 차이는 central fiber의 원점을 deformation 위로 들어올리는 계산에서도 직접 드러난다. 원점은 $A$-algebra homomorphism $C\rightarrow A$, $\x,\y\mapsto0$으로 주어지며, trivial deformation에서는 이를 $C[\epsilon]\rightarrow A[\epsilon]$, $\x,\y\mapsto0$으로 연장할 수 있다. 그러나 위의 $C'$에서 같은 원점을 들어올리는 $A[\epsilon]$-algebra homomorphism $C'\rightarrow A[\epsilon]$이 존재하려면, 적당한 $u,v\in A$에 대하여 $\x\mapsto\epsilon u$, $\y\mapsto\epsilon v$로 보내야 한다. 그럼
+
+$$\x\y\longmapsto(\epsilon u)(\epsilon v)=0,\qquad \epsilon\longmapsto\epsilon\neq0$$
+
+이므로 $C'$의 관계식 $\x\y=\epsilon$을 보존할 수 없다. 따라서 trivial deformation에서는 원점을 base의 무한소방향으로 그대로 연장할 수 있지만, 이 deformation에서는 그 원점의 lift가 존재하지 않는다. Central fiber의 identification을 보존하는 isomorphism은 이러한 lift의 존재 여부도 보존하므로, 이 계산만으로도 $C'$이 trivial deformation과 isomorphic하지 않음을 확인할 수 있다.
 
 끝으로 $g=-1$인 first-order deformation은 앞에서 보았던 family
 
