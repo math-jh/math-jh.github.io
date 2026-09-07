@@ -13,6 +13,7 @@ sidebar:
 author: Marvin
 
 date: 2026-05-22
+last_modified_at: 2026-09-07
 weight: 6
 
 ---
@@ -123,3 +124,42 @@ CSS 비율을 정하는 데 든 시간은 결과에 비해 길었지만, CSS와 
 오른쪽 사이드바용으로 만들었던 `_includes/recents-sidebar.html`, `recent-posts-sidebar.html`, `recent-comments-sidebar.html` 그리고 `_sass/_recents-sidebar.scss`의 상단 절반(vh 기반 3단 레이아웃 규칙)은 어디서도 include되지 않은 채 저장소에 남아있다. 바로 정리하지 않은 이유는, 시도했다가 폐기한 코드도 기록의 일부이고, 나중에 오른쪽 사이드바를 다시 작업할 경우 출발점이 되기 때문이다. 코드 자체는 비활성이라 빌드 결과물에는 영향이 없다.
 
 표시 위치만 다를 뿐, 데이터 파이프라인(Giscus → GraphQL → yml)과 필터링 로직은 처음 잡은 그대로다. 위치만 옮긴 작업인데, 옮기는 데 일주일 정도가 걸렸다.
+
+## 사후: 고정 높이 레일과 전용 슬롯
+
+위에서 남겨 둔 `_sass/_recents-sidebar.scss`의 vh 기반 3단 규칙은 커밋 [b7fb2984](https://github.com/math-jh/math-jh.github.io/commit/b7fb2984)에서 다시 손봤다. 그동안 오른쪽 sticky 사이드바(`.sidebar__right`)는 뷰포트 높이만 한 flex 칼럼이었고, 그 안에서 목차가 위쪽 33vh를 차지하며 자기만의 스크롤 영역을 가졌다. 글이 길면 목차 안에서 또 스크롤을 해야 했다. 이번 커밋은 그 칼럼을 없애고, 레일을 자기 내용 높이만큼만 차지하는 평범한 sticky 칸으로 바꿨다.
+
+`_layouts/single.html`에서 `<aside class="sidebar__right">`는 원래 `<section class="page__content">` 안에 들어 있었다. 이것을 본문 밖으로 꺼내 `<div class="sidebar__right-slot">`이라는 형제 요소로 본문 앞에 두고, 같이 있던 revising·translation·ai-author notice 세 개도 `<div class="page__notices">`로 따로 묶었다. 슬롯은 `_sass/minimal-mistakes/_page.scss`에서 `position: relative`를 새로 받은 `.page__inner-wrap`을 기준으로 절대 위치를 잡아 오른쪽 여백(`right: -1 * $right-sidebar-width-narrow`)에 걸치고, 그 안의 `.sidebar__right`는 `position: sticky; top: 2em`인 칸으로만 남는다.
+
+```scss
+/* 이전: 뷰포트 높이 칼럼 + 33vh 목차 + 목차 자체 스크롤 */
+.sidebar__right.sticky { height: calc(100vh - 2em); display: flex; flex-direction: column; }
+.sidebar__right.sticky > .toc { flex: 0 0 33vh; min-height: 0; overflow-y: auto; }
+
+/* 지금: 레일도 목차도 내용 높이 */
+.sidebar__right.sticky > .toc { overflow: visible; }
+.sidebar__right.sticky .toc__menu { overflow: visible; max-height: none; }
+```
+{: data-filename="_sass/_recents-sidebar.scss"}
+
+뷰포트 높이 칼럼은 수학 글에만 남긴다. `single.html`이 `page.url`에 `/math/`가 들어갈 때만 `.sidebar__right--with-graph` 수식자를 붙이고, 그쪽에서만 `min-height: calc(100vh - 7em)`과 `flex-direction: column`을 걸어 [의존성 그래프](/ko/llm_workshop/dependency_graph)의 작은 판을 `margin-top: auto`로 화면 아래쪽에 붙인다. 목차는 위에, 그래프는 아래에. 그래프가 없는 글은 그럴 이유가 없으니 그냥 내용 높이로 둔다.
+
+목차 안 스크롤 영역이 사라지면서, `_layouts/default.html`의 인라인 `<style>`과 두 스킨(`_custom.scss`, `_custom-dark.scss`)이 `.toc__menu`와 `.sidebar__right.sticky > .toc`에 걸어 두던 hover-reveal 커스텀 스크롤바도 대상을 잃었다. 해당 선택자를 전부 지우고, [스크롤바 CSS 리팩토링](/ko/llm_workshop/scrollbar_refactor)에서 만든 hover-reveal 스크롤바는 왼쪽 네비게이션(`.sidebar.sticky`) 하나에만 남겼다. `default.html`은 `body::-webkit-scrollbar { width: 10px }`도 지워서 페이지 스크롤바 폭이 브라우저 기본값으로 돌아왔다. `_recents-sidebar.scss` 아래쪽의 `.recents-block` 계열 규칙은 이번에도 손대지 않아, 왼쪽으로 옮긴 뒤로 계속 그렇듯 참조되지 않은 채 파일에 남아 있다.
+
+## 사후: 위로가기 버튼과 스크롤 진행률
+
+같은 커밋이 오른쪽 아래 위로가기 버튼도 다시 짰다. 예전 `assets/js/custom/HiddenTopButton.js`는 jQuery로, 로드 3초 뒤 `.hide`를 붙이고 `mousemove`가 올 때마다 `.hide`를 떼고 3초 타이머를 다시 걸었다. 마우스를 움직이지 않으면 버튼이 `opacity: 0.1`로 가라앉는 방식이다. 새 버전은 바닐라 IIFE이고, 스크롤이 첫 화면을 넘어가면 `.sidebar__top`에 `.is-visible`을 토글한다. 스크롤·리사이즈 이벤트는 `requestAnimationFrame` 한 번으로 묶어 프레임당 한 번만 계산한다.
+
+```js
+function updateVisibility() {
+  backToTop.classList.toggle("is-visible", window.scrollY >= window.innerHeight);
+  framePending = false;
+}
+window.addEventListener("scroll", requestUpdate, { passive: true });
+window.addEventListener("resize", requestUpdate, { passive: true });
+```
+{: data-filename="assets/js/custom/HiddenTopButton.js"}
+
+`_sass/minimal-mistakes/_sidebar.scss`는 버튼의 기본 상태를 `visibility: hidden; opacity: 0; pointer-events: none`으로 두고, `.is-visible`에서 `opacity: 0.28`, hover·focus에서 1로 올린다. `prefers-reduced-motion` 블록이 transform과 transition을 없애고, `@include breakpoint(1344px)`에서는 `right`를 `calc((100vw - #{$max-width}) / 2 + 1em)`로 잡아 넓은 화면에서 버튼이 뷰포트 가장자리가 아니라 가운데 정렬된 본문 틀을 따라간다. 링크 자체도 2.5rem 히트 박스와 `:focus-visible` 아웃라인을 받았다.
+
+그리고 이 커밋은 `_includes/scripts.html`의 스크롤 진행률 스크립트와, 그 값을 표시하던 `default.html` 푸터의 `<span id="percent">` 라벨을 지웠다. 화살표 아래에서 페이지를 얼마나 내려왔는지 퍼센트로 보여주던 표시다. `sidebar__top`에 남은 건 화살표 링크 하나이고, 여기에 `aria-label`이 붙었다. 나야 위로 올라갈 일이 없으니 버튼이 떠 있든 말든 상관없지만, 적어도 이제는 마우스를 흔들어야 나타나지는 않는다.
