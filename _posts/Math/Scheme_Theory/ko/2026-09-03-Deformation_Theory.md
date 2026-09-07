@@ -63,11 +63,11 @@ $$D(fg)=f\cdot D(g)+g\cdot D(f)$$
 
 을 만족하고 따라서 $A$-derivation이다. 거꾸로 임의의 $D\in \Der_A(B, \mathfrak{b})$에 대하여, $\widetilde{\rho}+D$ 역시 $A$-algebra homomorphism이고 $q\circ(\widetilde{\rho}+D)=\overline{\rho}_0$을 만족하므로, $\overline{\rho}_0$의 lift를 고르는 자유도가 정확히 $\Der_A(B,\mathfrak{b})=\Hom_C(\Omega_{B/A}\otimes_BC,\mathfrak{b})$에 담기게 된다.
 
-이를 사용하여 차이 $D=\delta'-\delta$에 대응되는 $C$-linear map을 $h:\Omega_{B/A}\otimes_BC\rightarrow \mathfrak{b}$라 하면, 임의의 $f\in \mathfrak{a}$에 대하여
+위의 $D=\widetilde{\rho}'-\widetilde{\rho}\in\Der_A(B,\mathfrak{b})$에 대응되는 $C$-linear map을 $h:\Omega_{B/A}\otimes_BC\rightarrow\mathfrak{b}$라 하면, 임의의 $f\in\mathfrak{a}$에 대하여
 
 $$\delta'(\bar{f})-\delta(\bar{f})=D(f)=h(\dd{f}\otimes1)=h(\bar{d}(\bar{f}))$$
 
-로 주어진다. 여기서 $\bar{d}: \mathfrak{a}/\mathfrak{a}^2\rightarrow\Omega_{B/A}\otimes_BC$는 [§미분과 여접층, ⁋명제 2](/ko/math/scheme_theory/sheaf_of_differentials#prop2)의 conormal morphism이고 $D$는 $\bar{d}^\ast$의 image에 속한다는 것을 알 수 있다. 더 중요하게, 어떤 선택이 존재하여 $\mathfrak{a}$를 죽일 수 있는 것은 이제 적당한 $h:\Omega_{B/A}\otimes_BC\rightarrow \mathfrak{b}$가 존재하여 $\delta+\bar{d}^\ast(h)=0$인 것, 즉 $\delta$가 $\bar{d}^\ast$의 image에 속한다는 것과 동일하다. 즉, 이를 확인하기 위해서는 $\delta$를 다음의 class
+로 주어진다. 여기서 $\bar{d}: \mathfrak{a}/\mathfrak{a}^2\rightarrow\Omega_{B/A}\otimes_BC$는 [§미분과 여접층, ⁋명제 2](/ko/math/scheme_theory/sheaf_of_differentials#prop2)의 conormal morphism이고 $\delta'-\delta$는 $\bar{d}^\ast$의 image에 속한다는 것을 알 수 있다. 더 중요하게, 어떤 선택이 존재하여 $\mathfrak{a}$를 죽일 수 있는 것은 이제 적당한 $h:\Omega_{B/A}\otimes_BC\rightarrow \mathfrak{b}$가 존재하여 $\delta+\bar{d}^\ast(h)=0$인 것, 즉 $\delta$가 $\bar{d}^\ast$의 image에 속한다는 것과 동일하다. 즉, 이를 확인하기 위해서는 $\delta$를 다음의 class
 
 $$[\delta]\in\coker\left(\Hom_C(\Omega_{B/A}\otimes_BC,\mathfrak{b})\overset{\bar{d}^{\ast}}{\longrightarrow}\Hom_C(\mathfrak{a}/\mathfrak{a}^2,\mathfrak{b})\right)$$
 
@@ -277,11 +277,11 @@ $$\varphi:\mathfrak{a}/\mathfrak{a}^2\rightarrow C$$
 
 이제 남은 일은 이 중 어떤 것들이 trivial deformation을 주는지 걸러내는 것이다. First-order deformation의 경우, $C'=C[\epsilon]$와 isomorphic한 deformation을 *trivial*하다 부른다. 이러한 것들 중 가장 단순한 형태는 모든 $g_j=0$이어서 $F_j=f_j$인 경우로, 이는 central fiber를 정의하던 방정식을 아무런 변형 없이 $\epsilon$ 방향으로 그대로 복사하여 늘려놓은 것에 불과하다.
 
-그러나 $g_j\neq0$이어서 방정식이 변형된 것처럼 보이더라도, 실제로는 trivial deformation인 경우가 있다. 위의 construction에서, ambient ring $B[\epsilon]$에서 정의된 deformation $\x_i\mapsto\x_i+\epsilon\theta(\x_i)$을 생각하자. Polynomial ring $B$의 각 변수 $\x_i$에 대하여 $\theta(\x_i)\in C$를 정하는 것은 derivation $\theta\in\Der_A(B,C)$를 유일하게 결정하며, 거꾸로 임의의 derivation $\theta$가 이러한 좌표변환을 정의한다. 그럼 이 좌표변환을 원래의 식 $f_j$에 적용하면
+그러나 $g_j\neq0$이어서 방정식이 변형된 것처럼 보이더라도, 실제로는 trivial deformation인 경우가 있다. Derivation $\theta\in\Der_A(B,C)$를 택하고, 각 $\theta(\x_i)\in C$의 representative $\widetilde{\theta}(\x_i)\in B$를 고르자. 이 선택은 $A$-derivation $\widetilde{\theta}:B\rightarrow B$를 유일하게 결정하며, $\pi\circ\widetilde{\theta}=\theta$를 만족한다. 이제 $B[\epsilon]$의 좌표변환 $\x_i\mapsto\x_i+\epsilon\widetilde{\theta}(\x_i)$를 원래의 식 $f_j$에 적용하면
 
-$$f_j+\epsilon\sum_i\theta(\x_i)\frac{\partial f_j}{\partial\x_i}=f_j+\epsilon\theta(f_j)$$
+$$f_j+\epsilon\sum_i\widetilde{\theta}(\x_i)\frac{\partial f_j}{\partial\x_i}=f_j+\epsilon\widetilde{\theta}(f_j)$$
 
-로 옮겨진다. 이 식은 겉보기에는 $F_j=f_j+\epsilon\theta(f_j)$처럼 $g_j=\theta(f_j)$ 방향으로 변형된 것처럼 보이지만, 이는 ambient space의 좌표를 비틀어 본 것에 불과하므로 본질적으로는 원래의 trivial family $C'=C[\epsilon]$과 isomorphic하다. 이를 일반화하면, trivial deformation들은 정확히 $\varphi$가 derivation에서 오는 경우, 곧 합성
+로 옮겨진다. 따라서 $g_j=\widetilde{\theta}(f_j)\in B$로 택한 방정식 $F_j=f_j+\epsilon g_j$들은 ambient space의 좌표변환으로 얻어지며, 이들이 정의하는 family는 원래의 trivial family $C'=C[\epsilon]$과 isomorphic하다. 이때 $\bar{g}_j=\theta(f_j)\in C$이므로, 대응하는 $\varphi$는 $\bar{f}_j\mapsto\theta(f_j)$로 주어진다. 이를 일반화하면, trivial deformation들은 정확히 $\varphi$가 derivation에서 오는 경우, 곧 합성
 
 $$\Der_A(B,C)=\Hom_C(\Omega_{B/A}\otimes_BC,C)\overset{\bar{d}^\ast}{\rightarrow}\Hom_C(\mathfrak{a}/\mathfrak{a}^2,C)$$
 
@@ -304,17 +304,17 @@ $$\Hom_C(\mathfrak{a}/\mathfrak{a}^2,C)\big/\im\bar{d}^\ast=T^1(C/A,C)$$
 
 ## 변형의 장애와 고차 변형이론
 
-지금까지 우리는 $A$-algebra $C$의 first-order deformation을 구성하고, 그 isomorphism class를 $T^1(C/A,C)$으로 분류하였다. 이제 관심사는 주어진 first-order deformation이 더 높은 차수의 deformation으로 이어질 수 있는지에 있다. 실제 one-parameter flat family가 주어지면 이를 $t^2,t^3,\ldots$으로 차례로 잘라 각 차수의 deformation을 얻는다. 우리는 반대로 일차의 자료에서 출발하여 이러한 근사들을 서로 호환되도록 구성하고자 한다.
+지금까지 우리는 $A$-algebra $C$의 first-order deformation을 구성하고, 그 isomorphism class를 $T^1(C/A,C)$으로 분류하였다. 이제 우리의 관심사는 주어진 first-order deformation을 더 높은 차수의 deformation으로 높이는 것이다. 만일 one-parameter flat family가 이미 주어졌다면, 이는 단순히 $t^2, t^3, \ldots$  항으로 잘라주어 각 차수를 차례로 보지만, 앞선 절의 도입부에서 살펴봤듯 우리는 이러한 family를 만들어내는 것이 목적이므로 상황이 단순하지 않다. 
 
-이 과정이 필요한 이유는 일차의 조건만으로는 보이지 않는 제약이 있기 때문이다. 이를 고정된 공간 안에서 curve를 연장하는 문제로 먼저 살펴보자. 체 $k$ 위에서
+이 과정을 미리 살펴보기 위해, 고정된 $A$-scheme 안에서 curve를 연장하는 문제로 먼저 살펴보자. $A\neq0$이라 하고
 
-$$Y=\Spec k[\x,\y]/(\x\y)$$
+$$Y=\Spec\bigl(A[\x,\y]/(\x\y)\bigr)$$
 
-는 두 좌표축의 합집합이다. 원점에서 출발하는 $\x\mapsto t$, $\y\mapsto t$는 $k[t]/(t^2)$에서 $\x\y\mapsto t^2=0$을 만족하므로 $Y$의 tangent vector를 준다. 그러나 이를 $k[t]/(t^3)$ 위로 연장하려고 $a,b\in k$를 택하여
+를 생각하자. 이는 $\mathbb{A}^2_A$의 두 좌표축으로 이루어져 있으며, $\x=\y=0$으로 주어지는 section $\Spec A\rightarrow Y$를 갖는다. 대응 $\x\mapsto t$, $\y\mapsto t$는 $A[t]/(t^2)$에서 $\x\y\mapsto t^2=0$을 만족하므로 $A$-morphism $\Spec\bigl(A[t]/(t^2)\bigr)\rightarrow Y$를 정의한다. 이는 $t=0$에서 위 section으로 제한되는 $A$-relative tangent direction이다. 이를 $\Spec\bigl(A[t]/(t^3)\bigr)$ 위로 연장하려면 적당한 $a,b\in A$를 택하여
 
 $$\x\mapsto t+at^2,\qquad \y\mapsto t+bt^2$$
 
-로 보정해도, 두 image의 곱은 $k[t]/(t^3)$에서 여전히 $t^2\neq0$이다. 따라서 이 tangent vector는 이차까지 연장되지 않는다. 일차에서는 사라졌던 곱이 다음 차수에서 나타나며, 어떤 이차 보정으로도 이를 없앨 수 없는 것이다.
+로 보내야 한다. 그러나 두 image의 곱은 $A[t]/(t^3)$에서 $t^2\neq0$이므로, 어떤 $a,b$를 택해도 $\x\y=0$을 보존할 수 없다. 따라서 이 tangent direction은 이차까지 연장되지 않는다. 일차에서는 사라졌던 곱이 다음 차수에서 나타나며, 어떤 이차 보정으로도 이를 없앨 수 없는 것이다.
 
 Deformation에서도 일차에서 보이지 않던 조건이 다음 차수에서 나타난다. 앞에서 고정한 presentation
 
