@@ -304,43 +304,41 @@ $$\Hom_C(\mathfrak{a}/\mathfrak{a}^2,C)\big/\im\bar{d}^\ast=T^1(C/A,C)$$
 
 ## 변형의 장애와 고차 변형이론
 
-앞 절에서 우리는 $A$-algebra $C$의 first-order deformation을 square-zero extension 위에서 구성하고, 그 isomorphism class를 $T^1(C/A,C)$으로 분류하였다. 이제 $X_0=\Spec C$의 일차 방향이 실제 family로 이어지는 문제를 방정식의 공간에서 직관적으로 살펴보자. Presentation
+지금까지 우리는 $A$-algebra $C$의 first-order deformation을 구성하고, 그 isomorphism class를 $T^1(C/A,C)$으로 분류하였다. 이제 관심사는 주어진 first-order deformation이 더 높은 차수의 deformation으로 이어질 수 있는지에 있다. 실제 one-parameter flat family가 주어지면 이를 $t^2,t^3,\ldots$으로 차례로 잘라 각 차수의 deformation을 얻는다. 우리는 반대로 일차의 자료에서 출발하여 이러한 근사들을 서로 호환되도록 구성하고자 한다.
+
+이 과정이 필요한 이유는 일차의 조건만으로는 보이지 않는 제약이 있기 때문이다. 이를 고정된 공간 안에서 curve를 연장하는 문제로 먼저 살펴보자. 체 $k$ 위에서
+
+$$Y=\Spec k[\x,\y]/(\x\y)$$
+
+는 두 좌표축의 합집합이다. 원점에서 출발하는 $\x\mapsto t$, $\y\mapsto t$는 $k[t]/(t^2)$에서 $\x\y\mapsto t^2=0$을 만족하므로 $Y$의 tangent vector를 준다. 그러나 이를 $k[t]/(t^3)$ 위로 연장하려고 $a,b\in k$를 택하여
+
+$$\x\mapsto t+at^2,\qquad \y\mapsto t+bt^2$$
+
+로 보정해도, 두 image의 곱은 $k[t]/(t^3)$에서 여전히 $t^2\neq0$이다. 따라서 이 tangent vector는 이차까지 연장되지 않는다. 일차에서는 사라졌던 곱이 다음 차수에서 나타나며, 어떤 이차 보정으로도 이를 없앨 수 없는 것이다.
+
+Deformation에서도 일차에서 보이지 않던 조건이 다음 차수에서 나타난다. 앞에서 고정한 presentation
 
 $$C=B/\mathfrak{a},\qquad B=A[\x_1,\ldots,\x_n],\qquad \mathfrak{a}=(f_1,\ldots,f_m)$$
 
-을 고정하고, 다룰 방정식의 개수와 degree bound도 고정한다. Degree가 주어진 bound 이하인 polynomial들의 coefficient를 좌표로 삼으면, 가능한 방정식의 tuple $(G_1,\ldots,G_m)$들은 어떤 affine $A$-space $P$의 점들을 이룬다. 원래 방정식의 tuple $p=(f_1,\ldots,f_m)$은 $A$-valued point $p:\Spec A\rightarrow P$를 정한다. $P\times_A\mathbb{A}^n_A$ 위에는 coefficient를 그대로 변수로 둔 universal equations $G_1^{\mathrm{univ}},\ldots,G_m^{\mathrm{univ}}$이 있고, 이들이 정의하는 universal family를
+으로 돌아가자. First-order deformation의 방정식은
 
-$$U=V(G_1^{\mathrm{univ}},\ldots,G_m^{\mathrm{univ}})\longrightarrow P$$
+$$F_j=f_j+tg_j\in B[t]/(t^2)$$
 
-로 쓸 수 있다. 임의의 $A$-morphism $S\rightarrow P$를 따라 $U$를 pullback하면, $S$ 위에서 방정식의 coefficient가 달라지는 family를 얻는다.
+이었다. 이를 이차까지 연장하려면 $h_j\in B$를 택하여
 
-이 가운데 pullback family가 $S$ 위에서 flat해지는 morphism들만을 허용하는 조건을 $p$ 근방의 *flat locus* $P_{\mathrm{flat}}$으로 생각하자. 이는 ambient polynomial ring과 presentation을 고정하여 deformation 문제를 나타낸 local model이다. Abstract deformation 자체는 presentation에 의존하지 않지만, 이 model에서는 올바른 deformation이 $P_{\mathrm{flat}}$ 안에서 움직이는 curve로 나타난다.
+$$F_j^{(2)}=f_j+tg_j+t^2h_j\in B[t]/(t^3)$$
 
-First-order deformation $F_j=f_j+tg_j\pmod{t^2}$은 $p$에서 $v=(g_1,\ldots,g_m)$ 방향으로 나가는 infinitesimal segment
+을 구성해야 한다. 여기서 $f_j,g_j,h_j$는 모두 $B$의 원소이며, 각각 원래의 방정식, 이미 주어진 일차 변화, 이제 선택할 이차 보정항이다. $F_j^{(2)}$는 이들을 매개변수 $t$로 조합한 확장된 환의 원소이다. 목표는 $t^2=0$으로 제한하면 주어진 first-order deformation으로 돌아오면서, algebra
 
-$$\gamma_1:\Spec A[t]/(t^2)\longrightarrow P$$
+$$C^{(2)}=\bigl(B[t]/(t^3)\bigr)/(F_1^{(2)},\ldots,F_m^{(2)})$$
 
-를 준다. [명제 4](#prop4)의 relation 조건은 $\gamma_1$이 $P_{\mathrm{flat}}$ 안에 일차까지 놓이는 조건이다. 그러나 $\gamma_1$은 출발점과 tangent direction만 기록하므로, coefficient space의 실제 직선
+가 $A[t]/(t^3)$ 위에서 flat하도록 $h_j$들을 고르는 것이다.
 
-$$\ell(t)=p+tv=(f_1+tg_1,\ldots,f_m+tg_m)$$
+앞서 [명제 4](#prop4)에서 flatness는 원래 방정식들 사이의 relation을 함께 들어올리는 조건으로 나타났다. 일차에서는 $g_j$들이 이 조건을 만족하도록 택했지만, 이차에서는 relation의 일차 보정항과 방정식의 일차 보정항이 곱해져 새로운 잔여항이 나타난다. 이 잔여항을 $h_j$들과 relation의 이차 보정으로 소거할 수 있다면 deformation을 연장할 수 있다. 그러나 가능한 보정을 모두 허용해도 소거되지 않는 부분이 남을 수 있으며, 그 실패를 선택에 무관한 class로 기록한 것이 obstruction class이다. 따라서 특정한 보정이 실패했다는 사실만으로 연장이 불가능한 것은 아니며, 모든 보정의 자유도를 고려한 뒤에도 남는 잔여항을 살펴보아야 한다.
 
-이 더 높은 차수에서도 $P_{\mathrm{flat}}$ 안에 머문다는 결론은 주지 않는다. 직선은 flat locus에 tangent하면서 곧바로 그 밖으로 벗어날 수 있다. 따라서 일차 방향 $v$를 보존하면서 고차항을 더하여
+고차 deformation을 구성하는 과정은 이처럼 이미 얻은 근사를 유지하면서 다음 차수의 flatness 조건을 차례로 해결하는 과정이다. 모든 차수에서 호환되는 연장을 얻으면 이들의 체계가 formal deformation을 이룬다. 이를 실제 family로 실현하는 문제는 별도로 남는다. 이제 첫 단계인 일차에서 이차로의 연장을 살펴보고, relation에서 발생하는 잔여항을 기록할 수 있도록 complex를 확장하자.
 
-$$\gamma(t)=p+tv+t^2w_2+t^3w_3+\cdots$$
-
-꼴의 formal curve를 휘어야 한다. 이를 방정식별로 쓰면
-
-$$F_j(t)=f_j+tg_j+t^2h_j+t^3k_j+\cdots$$
-
-이며, $h_j,k_j,\ldots$를 차례로 고르는 목적은 $\gamma$가 모든 차수에서 $P_{\mathrm{flat}}$ 안에 머물게 하는 것이다. 이러한 formal curve $\gamma:\Spec A[[t]]\rightarrow P_{\mathrm{flat}}$를 따라 $U$를 pullback하면 flat 1-parameter family
-
-$$\pi:X\longrightarrow\Spec A[[t]],\qquad X\times_{\Spec A[[t]]}\Spec A\cong X_0$$
-
-를 얻는다. 여기서 $\Spec A[[t]]$는 family의 formal one-parameter base이고 $X$는 total family이며, ideal $(t)$로 주어진 closed subscheme $\Spec A$ 위의 special fiber가 $X_0$이다. Affine하게 $X=\Spec\widehat{C}$로 쓰면 같은 조건은 $\widehat{C}$가 flat $A[[t]]$-algebra이고 $\widehat{C}/t\widehat{C}\cong C$인 것이다. 서로 다른 curve가 ambient 좌표변환을 통해 isomorphic한 family를 줄 수 있으며, 일차 수준에서 이 중복을 derivation의 image로 quotient한 것이 [정리 5](#thm5)의 $T^1$이다.
-
-문제는 이러한 보정항을 항상 고를 수 있는가에 있다. $t^2=0$에서는 사라졌던 일차 보정항들의 상호작용이 다음 차수에서 나타나고, central fiber의 관계식들을 들어올리는 과정에서 생긴 잔여항을 새 coefficient로 흡수하지 못할 수 있다. 첫 시험은 $A[t]/(t^2)$ 위의 deformation을 $A[t]/(t^3)$ 위로 들어올리는 것이며, 여기서 $h_j$를 골라도 흡수되지 않는 잔여항이 최초의 obstruction을 이룬다. 이후의 obstruction을 차수마다 소거하여 호환되는 근사를 모두 얻으면, 그 limit이 $A[[t]]$ 위의 formal family를 이룬다.
-
-이 obstruction을 계산하려면 관계식들의 데이터를 complex에 반영해야 한다. Naive cotangent complex $\NL_{C/A}=[\mathfrak{a}/\mathfrak{a}^2\rightarrow\Omega_{B/A}\otimes_BC]$는 방정식 $f_j$들만 담고 있어 $T^0$과 $T^1$까지만 계산할 수 있었다. 이제 방정식들을 표시하는 free module $F=B^m$을 두고 ($e_j\mapsto f_j$), 그 kernel로 관계식들의 모임 $\operatorname{Rel}$을 잡자. 이때 $f_ie_j-f_je_i$ 꼴의 Koszul 관계식들은 항상 자명하게 성립하는 trivial relation들이며, 이를 제외한 $\operatorname{Rel}/\operatorname{TrivRel}$이 본질적인 관계식들을 기록하는 $C$-module이 된다. 따라서 $\NL_{C/A}$의 $\mathfrak{a}/\mathfrak{a}^2$를 $F\otimes_BC$로 풀고, 그 왼쪽에 관계식들을 기록하는 항 $\operatorname{Rel}/\operatorname{TrivRel}$을 하나 더 붙여 3개 항의 complex를 구성한다.
+Naive cotangent complex $\NL_{C/A}=[\mathfrak{a}/\mathfrak{a}^2\rightarrow\Omega_{B/A}\otimes_BC]$에서는 방정식들과 그 관계가 $\mathfrak{a}/\mathfrak{a}^2$라는 하나의 module에 묶여 있었다. Obstruction을 계산하려면 relation에 값을 부여하는 데이터를 별도의 항으로 기록해야 한다. 이를 위해 방정식들을 표시하는 free module $F=B^m$을 두고, $e_j\mapsto f_j$로 주어지는 사상 $F\rightarrow\mathfrak{a}$의 kernel을 $\operatorname{Rel}$이라 하자. 이때 $f_ie_j-f_je_i$ 꼴의 Koszul relation들은 방정식의 선택에 관계없이 성립하는 trivial relation들이며, 이들이 생성하는 submodule을 $\operatorname{TrivRel}$이라 적는다. 이들을 제외한 $\operatorname{Rel}/\operatorname{TrivRel}$이 obstruction을 기록하는 데 필요한 $C$-module이 된다. 따라서 $\NL_{C/A}$의 $\mathfrak{a}/\mathfrak{a}^2$를 $F\otimes_BC$로 풀고, 그 왼쪽에 $\operatorname{Rel}/\operatorname{TrivRel}$을 붙여 3개 항의 complex를 구성한다.
 
 ::: 정의 6
 $C=B/\mathfrak{a}$의 presentation $B=A[\x_1,\ldots,\x_n]$, $\mathfrak{a}=(f_1,\ldots,f_m)$에 대하여, $F=B^m$의 basis를 $e_1,\ldots,e_m$이라 하고 전사사상 $F\rightarrow \mathfrak{a}$, $e_j\mapsto f_j$의 kernel을 $\operatorname{Rel}$이라 하자. 또 $\operatorname{TrivRel}\subseteq\operatorname{Rel}$을 $f_ie_j-f_je_i$ 꼴의 trivial relation들이 생성하는 submodule이라 하자. 이때 *Lichtenbaum–Schlessinger complex* $\operatorname{LS}_{C/A}$는
