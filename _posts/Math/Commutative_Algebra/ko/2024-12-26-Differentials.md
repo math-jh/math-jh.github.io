@@ -5,7 +5,6 @@ excerpt: "Kähler differential module의 universal property와 naive cotangent c
 
 categories: [Math / Commutative Algebra]
 permalink: /ko/math/commutative_algebra/differentials
-drift_needed: true
 sidebar: 
     nav: "commutative_algebra-ko"
 
