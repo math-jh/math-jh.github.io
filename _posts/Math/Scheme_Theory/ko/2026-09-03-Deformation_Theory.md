@@ -321,17 +321,17 @@ $$F=\x\y+\epsilon\x=\x(\y+\epsilon)$$
 
 {% diagram Math/Scheme_Theory/Deformation_Theory-4.svg width="12.56em" alt="trivial deformation of node" %}
 
-[정리 5](#thm5)에 따르면 trivial deformation을 주는 것은 $\varphi\in\im\bar{d}^\ast$인 경우이다. 여기서는 $\mathfrak{a}/\mathfrak{a}^2=C\bar{f}$이므로 $\Hom_C(\mathfrak{a}/\mathfrak{a}^2,C)\cong C$이고, 이 identification 아래에서 $\varphi$는 $\bar{g}\in C$에 대응한다. 또 $\theta(\x)=a$, $\theta(\y)=b$인 derivation $\theta\in\Der_A(B,C)$에 대하여
+더 일반적으로, [정리 5](#thm5)에 따르면 trivial deformation은 ambient space $B[\epsilon]$의 무한소 좌표변환에서 오는 경우, 곧 $\varphi\in\im\bar{d}^\ast$인 경우이다. [정리 5](#thm5) 직전에 살펴보았듯, 이러한 좌표변환은 derivation $\theta\in\Der_A(B,C)$이 결정하며, 구체적으로 각 방정식에 그 값 $\theta(f_j)$를 통해 deformation을 정의했다. 우리 예시에서 $B=A[\x,\y]$는 polynomial ring이므로, 임의의 derivation $\theta\in\Der_A(B,C)$는 두 변수의 값
 
-$$\theta(f)=\theta(\x\y)=a\y+b\x\qquad(a,b\in C)$$
+$$\theta(\x)=a,\qquad \theta(\y)=b\qquad(a,b\in C)$$
 
-이므로 $\im\bar{d}^\ast=(\x,\y)\subseteq C$이다. 따라서 $\bar{g}\in(\x,\y)$인 것이 trivial deformation의 조건이며, 실제로 $g=\x$는 $\theta(\x)=0$, $\theta(\y)=1$인 derivation에 대해 $\theta(f)=\x$이므로 이 조건을 만족한다.
+에 의하여 유일하게 결정되며, 이것이 방정식 $f=\x\y$에 주는 변화량은
 
-한편 이 image에 속하지 않는 $\bar{g}$를 택하면 nontrivial deformation을 얻는다. 위 계산에 의하여
+$$\theta(f)=\theta(\x\y)=\theta(\x)\y+\x\theta(\y)=a\y+b\x\tag{$\ast\ast$}$$
 
-$$T^1(C/A,C)\cong C/(\x,\y)\cong A$$
+으로 주어진다. 그럼 $\bar{d}^\ast(\theta)$는 $\mathfrak{a}/\mathfrak{a}^2$의 (유일한) basis $\bar{f}$를 이 값 $\theta(f)\in C$로 보내는 것으로 정의되며, 따라서 $\varphi$가 $\im \bar{d}^\ast$에 속하는 것과, $\bar{g}$가 ($\ast\ast$)의 꼴로 나타나는 것이 동치임을 안다. 특히 앞에서 살펴본 $g=\x$의 경우는 $a=0$이고 $b=1$인 경우이다. 
 
-이며, $F=f+\epsilon g$가 주는 deformation의 class는 $g$의 constant term으로 결정된다. 예를 들어 $g=-1$로 택하면
+이제 이로부터 nontrivial deformation의 예시를 쉽게 얻어낼 수 있다. 한편 이 image에 속하지 않는 $\bar{g}$를 택하면 nontrivial deformation을 얻으며, 위의 계산으로부터 우리는 nonzero constant term을 갖는 $g$가 이러한 것임을 안다. 예를 들어 $g=-1$로 택하면
 
 $$F=\x\y-\epsilon,\qquad C'=A[\epsilon][\x,\y]/(\x\y-\epsilon),\qquad X'=\Spec C'$$
 
