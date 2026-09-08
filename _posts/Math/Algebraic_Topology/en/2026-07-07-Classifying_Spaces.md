@@ -174,7 +174,7 @@ is a well-defined bijection, and is natural in the sense that it is compatible w
 ::: Proof
 That $[f]\mapsto f^\ast \E G$ does not depend on the choice of representative for $[f]$ follows from [Theorem 5](#thm5). We briefly sketch that this is a bijection.
 
-First, suppose a principal $G$-bundle $P$ over $X$ is given. Since $X$ is paracompact Hausdorff, by [\[Topology\] §Compactness and Paracompactness, ⁋Theorem 27](/en/math/topology/compactness#thm27) we may choose an open cover $\{U_i\}$ trivializing $P$ together with a locally finite partition of unity $\{\rho_i\}$ subordinate to it. The trivialization over each $U_i$ gives a $G$-equivariant map $\psi_i:p^{-1}(U_i)\rightarrow G$, so taking $\E G$ as the join from [Theorem 7](#thm7) and writing its points in the form $\sum_i t_ig_i$, we have that
+First, suppose a principal $G$-bundle $P$ over $X$ is given. Since $X$ is paracompact Hausdorff, by [\[Topology\] §Paracompact Spaces and Partitions of Unity, ⁋Theorem 11](/en/math/topology/paracompact_spaces#thm11) we may choose an open cover $\{U_i\}$ trivializing $P$ together with a locally finite partition of unity $\{\rho_i\}$ subordinate to it. The trivialization over each $U_i$ gives a $G$-equivariant map $\psi_i:p^{-1}(U_i)\rightarrow G$, so taking $\E G$ as the join from [Theorem 7](#thm7) and writing its points in the form $\sum_i t_ig_i$, we have that
 
 $$\widetilde{f}:P\rightarrow \E G,\qquad y\mapsto \sum_i \rho_i(p(y))\psi_i(y)$$
 

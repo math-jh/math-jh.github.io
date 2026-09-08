@@ -101,7 +101,7 @@ $$\mathcal{A}_1=\{(\mathbb{R},\id_\mathbb{R})\},\qquad \mathcal{A}_2=\{(\mathbb{
 
 ## Smooth partition of unity
 
-임의의 topological manifold에서는 continuous partition of unity가 존재한다는 것을 보일 수 있었는데 ([\[위상수학\] §Compactness와 paracompactness, ⁋정리 27](/ko/math/topology/compactness#thm27)), differentiable manifold를 다룰 때는 연속인 partition of unity는 별 도움이 되지 않는다. 가령 임의의 $C^\infty$ 함수를 연속이기만 한 partition of unity와 곱한다면 이 함수의 미분가능한 정도가 바로 약화될 것이다.
+임의의 topological manifold에서는 continuous partition of unity가 존재한다는 것을 보일 수 있었는데 ([\[위상수학\] §파라콤팩트 공간과 단위분할, ⁋정리 11](/ko/math/topology/paracompact_spaces#thm11)), differentiable manifold를 다룰 때는 연속인 partition of unity는 별 도움이 되지 않는다. 가령 임의의 $C^\infty$ 함수를 연속이기만 한 partition of unity와 곱한다면 이 함수의 미분가능한 정도가 바로 약화될 것이다.
 
 따라서 우리는 smooth partition of unity를 만들어야 하는데, 이는 다음의 보조정리만 보이면 충분하다.
 

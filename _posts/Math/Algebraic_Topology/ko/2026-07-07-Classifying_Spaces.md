@@ -173,7 +173,7 @@ $$[X,\B G]\rightarrow\{\text{principal $G$-bundles over $X$}\}/{\cong};\qquad [f
 ::: 증명
 $[f]\mapsto f^\ast \E G$가 $[f]$의 대표 선택에 의존하지 않는 것은 [정리 5](#thm5)에 의한 것이다. 우리는 이것이 전단사임을 간략히 살펴본다.
 
-우선 $X$ 위의 principal $G$-bundle $P$가 주어졌다 하자. $X$가 paracompact Hausdorff이므로, [\[위상수학\] §Compactness와 paracompactness, ⁋정리 27](/ko/math/topology/compactness#thm27)에 의하여 $P$를 trivialize하는 open cover $\{U_i\}$와 이에 종속된 locally finite partition of unity $\{\rho_i\}$를 함께 잡을 수 있다. 각 $U_i$ 위의 trivialization은 $G$-equivariant map $\psi_i:p^{-1}(U_i)\rightarrow G$를 주므로, $\E G$를 [정리 7](#thm7)의 join으로 두어 그 점을 $\sum_i t_ig_i$의 꼴로 적으면
+우선 $X$ 위의 principal $G$-bundle $P$가 주어졌다 하자. $X$가 paracompact Hausdorff이므로, [\[위상수학\] §파라콤팩트 공간과 단위분할, ⁋정리 11](/ko/math/topology/paracompact_spaces#thm11)에 의하여 $P$를 trivialize하는 open cover $\{U_i\}$와 이에 종속된 locally finite partition of unity $\{\rho_i\}$를 함께 잡을 수 있다. 각 $U_i$ 위의 trivialization은 $G$-equivariant map $\psi_i:p^{-1}(U_i)\rightarrow G$를 주므로, $\E G$를 [정리 7](#thm7)의 join으로 두어 그 점을 $\sum_i t_ig_i$의 꼴로 적으면
 
 $$\widetilde{f}:P\rightarrow \E G,\qquad y\mapsto \sum_i \rho_i(p(y))\psi_i(y)$$
 

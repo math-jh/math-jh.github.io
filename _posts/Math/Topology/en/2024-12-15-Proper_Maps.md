@@ -9,7 +9,7 @@ sidebar:
     nav: "topology-en"
 
 date: 2024-12-15
-weight: 18
+weight: 19
 translated_at: 2026-06-03T10:00:02+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-06-03T10:00:02+00:00
@@ -87,7 +87,7 @@ Here $\Gamma_f$ and $\Gamma_g$ are homeomorphisms from $X$ and $Y$ onto the grap
 
 ## Compactness and Universally Closed Maps
 
-So far, it is not apparent how this definition is related to compactness; in this section we examine the relationship between them. Before doing so, we need to say a little about filters in order to use [§Compactness and Paracompactness, ⁋Lemma 1](/en/math/topology/compactness#lem1).
+So far, it is not apparent how this definition is related to compactness; in this section we examine the relationship between them. Before doing so, we need to say a little about filters in order to use [§Compactness and Convergence of Filters, ⁋Lemma 18](/en/math/topology/filter_convergence#lem18).
 
 Let an arbitrary topological space $X$ and an arbitrary filter $\mathcal{F}$ on it be given. Consider the set $X'=X\cup \{\ast_X\}$ obtained by adjoining one point to $X$, and the filter
 

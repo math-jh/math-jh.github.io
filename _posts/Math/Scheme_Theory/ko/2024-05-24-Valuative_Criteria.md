@@ -63,7 +63,7 @@ $$\mathcal{O}_{C,p}=\varinjlim_{U\ni p} \mathcal{O}(U)$$
 
 이 그림에서 $\Spec K$의 역할은 함수 쪽을 살펴보면 드러난다. $\Spec A$ 위의 함수들은 $A$ 자신, 곧 $p$에서 regular한 germ들이고, 자명하지 않은 유일한 열린집합 $D(\pi)=\{(0)\}$ 위의 함수들인 $K\cong A_\pi$의 원소는 $f=\pi^nu$의 꼴을 음의 order $n$까지 허용한 것이다. ([\[가환대수학\] §인자, ⁋명제 8](/ko/math/commutative_algebra/divisors#prop8)의 2번) 즉, 이는 $p$에서 pole을 갖되 그 order가 유한한 함수, 곧 $p$ 하나만 빼면 근방 전체에서 regular한 함수를 뜻하며, 따라서 $\Spec K$는 이 germ에서 중심 $p$를 빼내어, $p$의 정보는 잃어버린 채 $p$의 근방에 대한 정보만 가지고 있는 공간이며, canonical morphism $\Spec K \rightarrow \Spec A$는 정확히 이 그림이 정의하는 포함사상이다. 
 
-그럼 morphism $\Spec K \rightarrow X$는 $X$ 안으로 들어가는, 점이 빠진 곡선의 germ이고, 이를 $\Spec A \rightarrow X$로 확장하는 것은 빠져 있던 그 점을 $X$ 안에서 되찾아 곡선을 이어 붙이는 것, 곧 곡선의 극한을 찾는 것이 된다. 이 extension이 많아야 하나 존재한다는 것이 separatedness이고 정확히 하나 존재한다는 것이 properness이며, 이것이 앞으로 볼 두 판정법의 내용이다. 이는 위상적으로는 Hausdorff 공간에서 극한이 유일하고 ([\[위상수학\] §하우스도르프 공간, ⁋명제 4](/ko/math/topology/Hausdorff_spaces#prop4)), compact 공간에서 극한이 항상 존재한다는 사실에 대한 대수기하 analogue이다. ([\[위상수학\] §Compactness와 paracompactness, ⁋보조정리 1](/ko/math/topology/compactness#lem1))
+그럼 morphism $\Spec K \rightarrow X$는 $X$ 안으로 들어가는, 점이 빠진 곡선의 germ이고, 이를 $\Spec A \rightarrow X$로 확장하는 것은 빠져 있던 그 점을 $X$ 안에서 되찾아 곡선을 이어 붙이는 것, 곧 곡선의 극한을 찾는 것이 된다. 이 extension이 많아야 하나 존재한다는 것이 separatedness이고 정확히 하나 존재한다는 것이 properness이며, 이것이 앞으로 볼 두 판정법의 내용이다. 이는 위상적으로는 Hausdorff 공간에서 극한이 유일하고 ([\[위상수학\] §하우스도르프 공간, ⁋명제 4](/ko/math/topology/Hausdorff_spaces#prop4)), compact 공간에서 극한이 항상 존재한다는 사실에 대한 대수기하 analogue이다. ([\[위상수학\] §옹골성과 필터의 수렴, ⁋보조정리 18](/ko/math/topology/filter_convergence#lem18))
 
 ## 분리사상
 

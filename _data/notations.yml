@@ -2708,8 +2708,8 @@
   - symbol: \cl_A
     meaning: 부분공간 $A$에서 취한 폐포
     defs:
-    - label: §Compactness와 paracompactness
-      url: /ko/math/topology/compactness
+    - label: §국소 옹골공간과 일점 옹골화
+      url: /ko/math/topology/locally_compact_spaces
   - symbol: \cl(A)
     meaning: closure
     defs:
@@ -2785,8 +2785,8 @@
   - symbol: \infty
     meaning: 무한원점
     defs:
-    - label: §Compactness와 paracompactness
-      url: /ko/math/topology/compactness#def8
+    - label: §국소 옹골공간과 일점 옹골화
+      url: /ko/math/topology/locally_compact_spaces#def6
   - symbol: \interior
     meaning: 내부 연산자
     defs:
@@ -2862,8 +2862,8 @@
   - symbol: S^n
     meaning: $\mathbb{R}^{n+1}$ 안의 $n$차원 구면
     defs:
-    - label: §Compactness와 paracompactness
-      url: /ko/math/topology/compactness#ex14
+    - label: §국소 옹골공간과 일점 옹골화
+      url: /ko/math/topology/locally_compact_spaces#ex12
     - label: §미분다양체의 예시들
       url: /ko/math/manifolds/examples_of_manifolds#ex6
   - symbol: \Spe(\mathcal{F})
@@ -2879,8 +2879,8 @@
   - symbol: \supp\phi
     meaning: support
     defs:
-    - label: §Compactness와 paracompactness
-      url: /ko/math/topology/compactness
+    - label: §파라콤팩트 공간과 단위분할
+      url: /ko/math/topology/paracompact_spaces
   - symbol: s\vert_U
     meaning: restriction
     defs:
