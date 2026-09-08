@@ -163,7 +163,7 @@ $$\NL_{C/A}\cong\left[C^r\overset{\bar{d}}{\longrightarrow}C^n\right],\qquad\bar
 
 앞에서 우리는 naive cotangent complex가 smoothness의 infinitesimal lifting property를 어떻게 기록하는지 살펴보았다. 이 complex는 deformation theory에서도 중심적인 역할을 한다. 
 
-Deformation theory의 기하학적 출발점은 $A$-scheme $X_0$를 고정하고, section $t_0:\Spec A\rightarrow T$을 갖춘 pointed $A$-scheme $(T,t_0)$ 위의 family $\pi:X\rightarrow T$와 central fiber의 identification $X\times_T\Spec A\cong X_0$를 찾는 것이다. [§스킴 사이의 사상, ⁋예시 10](/ko/math/scheme_theory/morphism_of_schemes#ex10)에서와 같이 scheme morphism $\pi:X\rightarrow T$를 $T$로 매개화된 family로 보면, 이는 $T$ 위에서 변하는 scheme들 가운데 section $t_0$을 따라 얻는 fiber가 $X_0$으로 주어지는 family를 보는 것이다. 이러한 관점을 위해 $\pi$가 flat일 것을 요구하는 것이 합리적이며 ([§평탄사상](/ko/math/scheme_theory/flat_morphisms)) 이러한 가정 아래 이는 fiber들을 하나의 대상 $X_0$가 변해 가는 모습으로 보고 비교하는 것이다.
+Deformation theory의 기하학적 출발점은 $A$-scheme $X_0$를 고정하고, section $\t_0:\Spec A\rightarrow T$을 갖춘 pointed $A$-scheme $(T,\t_0)$ 위의 family $\pi:X\rightarrow T$와 central fiber의 identification $X\times_T\Spec A\cong X_0$를 찾는 것이다. [§스킴 사이의 사상, ⁋예시 10](/ko/math/scheme_theory/morphism_of_schemes#ex10)에서와 같이 scheme morphism $\pi:X\rightarrow T$를 $T$로 매개화된 family로 보면, 이는 $T$ 위에서 변하는 scheme들 가운데 section $\t_0$을 따라 얻는 fiber가 $X_0$으로 주어지는 family를 보는 것이다. 이러한 관점을 위해 $\pi$가 flat일 것을 요구하는 것이 합리적이며 ([§평탄사상](/ko/math/scheme_theory/flat_morphisms)) 이러한 가정 아래 이는 fiber들을 하나의 대상 $X_0$가 변해 가는 모습으로 보고 비교하는 것이다.
 
 가장 단순한 예시로 두 직선이 원점에서 만나는 node $X_0=\Spec\bigl(A[\x,\y]/(\x\y)\bigr)$를 생각하자. 이를 deform하는 가장 간단한 방법은 방정식 $\x\y=0$을 $\x\y=\t$로 바꾸어 다음의 family
 
@@ -171,7 +171,7 @@ $$\pi:X=\Spec\bigl(A[\t,\x,\y]/(\x\y-\t)\bigr)\longrightarrow\Spec A[\t]$$
 
 를 생각하는 것이다. 이는 $\t=0$에서 $X_0$를 fiber로 갖고, $\t$를 invert한 open set 위에서는 $\x$와 $\y$가 모두 invertible이 되어 smooth한 family를 이루며, [§평탄사상, ⁋명제 5](/ko/math/scheme_theory/flat_morphisms#prop5)을 통해 $\pi$의 flatness 또한 확인할 수 있다. 즉 이 family를 보면 $X_0$의 원점에 있던 singularity가 parameter $\t$를 따라 어떻게 사라지는지를 살펴볼 수 있다.
 
-일반적인 scheme $X_0$의 deformation을 찾는 첫 단계는 base의 central section $t_0$에서 infinitesimal direction들을 하나씩 살펴보는 것이다. $A[\epsilon]=A[\t]/(\t^2)$로 놓으면, $(T,t_0)$의 $A$-상대 tangent direction은 $\t=0$에서 $t_0$로 제한되는 $A$-morphism $\Spec A[\epsilon]\rightarrow T$으로 표현된다 ([§매끄러운 사상과 에탈 사상, §§Infinitesimal lifting criterion](/ko/math/scheme_theory/smooth_and_etale_morphisms#infinitesimal-lifting-criterion)). 이를 따라 $\pi:X\rightarrow T$를 pullback하면 $\Spec A[\epsilon]$ 위의 family를 얻으며, 직관적으로 이는 그 tangent direction을 따라 $X_0$이 일차까지 변하는 모습을 기록한다.
+일반적인 scheme $X_0$의 deformation을 찾는 첫 단계는 base의 central section $\t_0$에서 infinitesimal direction들을 하나씩 살펴보는 것이다. $A[\epsilon]=A[\t]/(\t^2)$로 놓으면, $(T,\t_0)$의 $A$-상대 tangent direction은 $\t=0$에서 $\t_0$로 제한되는 $A$-morphism $\Spec A[\epsilon]\rightarrow T$으로 표현된다 ([§매끄러운 사상과 에탈 사상, §§Infinitesimal lifting criterion](/ko/math/scheme_theory/smooth_and_etale_morphisms#infinitesimal-lifting-criterion)). 이를 따라 $\pi:X\rightarrow T$를 pullback하면 $\Spec A[\epsilon]$ 위의 family를 얻으며, 직관적으로 이는 그 tangent direction을 따라 $X_0$이 일차까지 변하는 모습을 기록한다.
 
 그러나 실제로는 이 parameter scheme $T$와 그 위의 family $\pi:X\rightarrow T$ 자체가 미리 주어져 있지 않으며, 이를 찾아내는 것부터가 문제의 시작이다. 우리에게 처음 주어진 것은 $X_0$가 $S$-scheme인 것으로부터 주어지는 structure morphism $X_0\rightarrow S$ 뿐이며, 이를 위해 우리가 택하는 전략은 base $S$를 <em-ko>가능한 모든 방향</em-ko>으로 넓혀서 parameter scheme을 정의하는 것이다. 이때 base를 infinitesimal thickening해 나가는 과정이 바로 square-zero extension들이며, 우리는 parameter space와 동시에, 이 과정으로 두꺼워진 base $S$ 위에 놓인 fiber까지 함께 정의한다. 
 
@@ -479,59 +479,59 @@ $$T^i(C/A,M)=\Ext^i_C(\LL_{C/A},M)=\Ext^i_C(\Omega_{C/A},M)=0$$
 
 ## 스킴에서의 국소와 대역
 
-지금까지의 계산은 affine scheme 위에서 이루어졌지만 deformation은 affine 조각별 선택만으로 끝나지 않는다. 각 조각의 deformation을 겹치는 곳에서 식별하고, 그 식별들이 세 겹치는 곳에서 cocycle 조건을 만족하도록 해야 하나의 scheme으로 붙기 때문이다. Affine open $U=\Spec B\subseteq X$마다 $\LL_{B/k}$를 associated complex로 바꾸어 붙이면 $X$ 위의 cotangent complex $\LL_{X/k}$를 얻으며, 그 derived dual의 대역 cohomology가 국소 deformation과 접합의 실패를 함께 기록한다.
+이 절에서는 $\mathbb{K}$를 field로 고정한다. 지금까지의 계산은 affine scheme 위에서 이루어졌지만 deformation은 affine 조각별 선택만으로 끝나지 않는다. 각 조각의 deformation을 겹치는 곳에서 식별하고, 그 식별들이 세 겹치는 곳에서 cocycle 조건을 만족하도록 해야 하나의 scheme으로 붙기 때문이다. Affine open $U=\Spec B\subseteq X$마다 $\LL_{B/\mathbb{K}}$를 associated complex로 바꾸어 붙이면 $X$ 위의 cotangent complex $\LL_{X/\mathbb{K}}$를 얻으며, 그 derived dual의 대역 cohomology가 국소 deformation과 접합의 실패를 함께 기록한다.
 
 ::: 정의 10
-$k$-scheme $X$의 *first-order deformation<sub>일차 변형</sub>*이란 $\Spec k[\epsilon]$ 위에서 flat한 scheme $\mathcal{X}$와 isomorphism
+$\mathbb{K}$-scheme $X$의 *first-order deformation<sub>일차 변형</sub>*이란 $\Spec \mathbb{K}[\epsilon]$ 위에서 flat한 scheme $\mathcal{X}$와 isomorphism
 
-$$\mathcal{X}\times_{\Spec k[\epsilon]}\Spec k\cong X$$
+$$\mathcal{X}\times_{\Spec \mathbb{K}[\epsilon]}\Spec \mathbb{K}\cong X$$
 
-의 짝이다. 두 first-order deformation이 *isomorphic*이라는 것은 $\Spec k[\epsilon]$ 위의 isomorphism으로서 central fiber $X$ 위에 항등사상을 유도하는 것이 존재하는 것을 뜻한다.
+의 짝이다. 두 first-order deformation이 *isomorphic*이라는 것은 $\Spec \mathbb{K}[\epsilon]$ 위의 isomorphism으로서 central fiber $X$ 위에 항등사상을 유도하는 것이 존재하는 것을 뜻한다.
 :::
 
 ::: 정리 11 (Cotangent-complex deformation theorem)
-$X$가 $k$ 위의 separated finite type scheme이면 first-order deformation들의 isomorphism class는
+$X$가 $\mathbb{K}$ 위의 separated finite type scheme이면 first-order deformation들의 isomorphism class는
 
-$$T^1(X/k)=\Ext^1_{\mathcal{O}_X}(\LL_{X/k},\mathcal{O}_X)$$
+$$T^1(X/\mathbb{K})=\Ext^1_{\mathcal{O}_X}(\LL_{X/\mathbb{K}},\mathcal{O}_X)$$
 
-와 자연스럽게 일대일 대응하며, trivial deformation은 $0$에 대응한다. 그 infinitesimal automorphism은 $T^0(X/k)$가 분류한다. 더 일반적인 square-zero extension problem에서 kernel이 $\mathcal{G}$이면 해의 존재를 막는 canonical class가 $\Ext^2_{\mathcal{O}_X}(\LL_{X/k},\mathcal{G})$에 놓이고, 이 class가 $0$일 때 해들의 isomorphism class는 $\Ext^1_{\mathcal{O}_X}(\LL_{X/k},\mathcal{G})$ 위의 torsor를 이룬다.
+와 자연스럽게 일대일 대응하며, trivial deformation은 $0$에 대응한다. 그 infinitesimal automorphism은 $T^0(X/\mathbb{K})$가 분류한다. 더 일반적인 square-zero extension problem에서 kernel이 $\mathcal{G}$이면 해의 존재를 막는 canonical class가 $\Ext^2_{\mathcal{O}_X}(\LL_{X/\mathbb{K}},\mathcal{G})$에 놓이고, 이 class가 $0$일 때 해들의 isomorphism class는 $\Ext^1_{\mathcal{O}_X}(\LL_{X/\mathbb{K}},\mathcal{G})$ 위의 torsor를 이룬다.
 :::
 ::: 증명
 Affine open cover를 택하면 각 조각 위의 deformation과 lifting은 [정리 5](#thm5)와 [정리 8](#thm8)이 각각 $T^1$과 $T^2$로 통제한다. 겹치는 두 조각에서 lifting들을 식별하는 자유도는 $T^0$이고, 세 겹치는 곳에서 이 식별들이 cocycle 조건을 만족하지 못하는 정도가 그다음 obstruction을 만든다. 이 Čech 자료를 한꺼번에 totalize한 complex가
 
-$$R\Gamma\bigl(X,R\sHom_{\mathcal{O}_X}(\LL_{X/k},\mathcal{G})\bigr)$$
+$$R\Gamma\bigl(X,R\sHom_{\mathcal{O}_X}(\LL_{X/\mathbb{K}},\mathcal{G})\bigr)$$
 
-이므로 그 $0,1,2$차 cohomology가 각각 automorphism, 해들의 차이, existence obstruction을 준다. First-order deformation에서는 trivial deformation $X\times\Spec k[\epsilon]$이 기준점을 주므로 torsor가 $T^1(X/k)$ 자체와 식별된다.
+이므로 그 $0,1,2$차 cohomology가 각각 automorphism, 해들의 차이, existence obstruction을 준다. First-order deformation에서는 trivial deformation $X\times\Spec \mathbb{K}[\epsilon]$이 기준점을 주므로 torsor가 $T^1(X/\mathbb{K})$ 자체와 식별된다.
 :::
 
 이 설명에서 total complex의 두 방향을 분리하면, affine 조각 자체를 흔드는 자유도와 그 조각들을 붙이는 자유도가 명시적으로 갈라진다.
 
 ::: 정리 12 (국소-대역 exact sequence)
-$X$ 위의 quasi-coherent cohomology sheaf를 갖는 bounded above complex $K$가 $q<0$에서 $\mathcal{E}xt^q(K,\mathcal{O}_X)=0$을 만족한다고 하자. 이때 local-to-global spectral sequence
+$X$ 위의 quasi-coherent cohomology sheaf를 갖는 bounded above complex $\mathcal{K}$가 $q<0$에서 $\mathcal{E}xt^q(\mathcal{K},\mathcal{O}_X)=0$을 만족한다고 하자. 이때 local-to-global spectral sequence
 
-$$E_2^{p,q}=H^p\bigl(X,\mathcal{E}xt^q_{\mathcal{O}_X}(K,\mathcal{O}_X)\bigr)\Longrightarrow\Ext^{p+q}_{\mathcal{O}_X}(K,\mathcal{O}_X)$$
+$$E_2^{p,q}=H^p\bigl(X,\mathcal{E}xt^q_{\mathcal{O}_X}(\mathcal{K},\mathcal{O}_X)\bigr)\Longrightarrow\Ext^{p+q}_{\mathcal{O}_X}(\mathcal{K},\mathcal{O}_X)$$
 
-가 존재한다. 특히 $K=\LL_{X/k}$로 놓고 $\mathcal{T}_X^q=\mathcal{E}xt^q_{\mathcal{O}_X}(\LL_{X/k},\mathcal{O}_X)$라 적으면 그 낮은 차수 부분은 exact sequence
+가 존재한다. 특히 $\mathcal{K}=\LL_{X/\mathbb{K}}$로 놓고 $\mathcal{T}_X^q=\mathcal{E}xt^q_{\mathcal{O}_X}(\LL_{X/\mathbb{K}},\mathcal{O}_X)$라 적으면 그 낮은 차수 부분은 exact sequence
 
-$$0\longrightarrow H^1(X,\mathcal{T}_X^0)\longrightarrow T^1(X/k)\longrightarrow H^0(X,\mathcal{T}_X^1)\overset{d_2}{\longrightarrow}H^2(X,\mathcal{T}_X^0)\longrightarrow T^2(X/k)$$
+$$0\longrightarrow H^1(X,\mathcal{T}_X^0)\longrightarrow T^1(X/\mathbb{K})\longrightarrow H^0(X,\mathcal{T}_X^1)\overset{d_2}{\longrightarrow}H^2(X,\mathcal{T}_X^0)\longrightarrow T^2(X/\mathbb{K})$$
 
 를 이룬다.
 :::
 ::: 증명
-이는 합성 $R\Gamma\circ R\sHom_{\mathcal{O}_X}(K,-)$에 대한 spectral sequence이다. First quadrant spectral sequence의 전체 차수 $1$에 놓인 두 항 $(1,0)$과 $(0,1)$을 filtration으로 읽고, $(0,1)$에서 나가는 첫 비자명한 differential $d_2:E_2^{0,1}\rightarrow E_2^{2,0}$을 붙이면 표시한 five-term exact sequence를 얻는다.
+이는 합성 $R\Gamma\circ R\sHom_{\mathcal{O}_X}(\mathcal{K},-)$에 대한 spectral sequence이다. First quadrant spectral sequence의 전체 차수 $1$에 놓인 두 항 $(1,0)$과 $(0,1)$을 filtration으로 읽고, $(0,1)$에서 나가는 첫 비자명한 differential $d_2:E_2^{0,1}\rightarrow E_2^{2,0}$을 붙이면 표시한 five-term exact sequence를 얻는다.
 :::
 
 왼쪽의 $H^1(X,\mathcal{T}_X^0)$은 affine 조각들을 바꾸지 않고 gluing만 흔드는 locally trivial deformation이고, $H^0(X,\mathcal{T}_X^1)$은 각 점에서의 local deformation을 대역적으로 고른 것이다. Differential $d_2$는 그렇게 고른 local deformation들이 실제 scheme deformation으로 붙는지를 판정한다.
 
 ::: 따름정리 13
-$X$가 $k$ 위에서 smooth하면 모든 $i$에 대하여
+$X$가 $\mathbb{K}$ 위에서 smooth하면 모든 $i$에 대하여
 
-$$T^i(X/k)\cong H^i(X,\mathcal{T}_{X/k})$$
+$$T^i(X/\mathbb{K})\cong H^i(X,\mathcal{T}_{X/\mathbb{K}})$$
 
-이다. 특히 first-order deformation들의 isomorphism class는 $H^1(X,\mathcal{T}_{X/k})$가 분류한다.
+이다. 특히 first-order deformation들의 isomorphism class는 $H^1(X,\mathcal{T}_{X/\mathbb{K}})$가 분류한다.
 :::
 ::: 증명
-Smooth한 경우 $\LL_{X/k}\simeq\Omega_{X/k}$이고 $\Omega_{X/k}$가 locally free이므로 $q>0$에서 $\mathcal{T}_X^q=0$이며 $\mathcal{T}_X^0=\sHom(\Omega_{X/k},\mathcal{O}_X)=\mathcal{T}_{X/k}$이다. 따라서 [정리 12](#thm12)의 spectral sequence가 $q=0$인 한 행으로 퇴화한다.
+Smooth한 경우 $\LL_{X/\mathbb{K}}\simeq\Omega_{X/\mathbb{K}}$이고 $\Omega_{X/\mathbb{K}}$가 locally free이므로 $q>0$에서 $\mathcal{T}_X^q=0$이며 $\mathcal{T}_X^0=\sHom(\Omega_{X/\mathbb{K}},\mathcal{O}_X)=\mathcal{T}_{X/\mathbb{K}}$이다. 따라서 [정리 12](#thm12)의 spectral sequence가 $q=0$인 한 행으로 퇴화한다.
 :::
 
 ---
