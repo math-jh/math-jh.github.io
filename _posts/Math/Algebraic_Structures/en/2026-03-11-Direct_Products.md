@@ -76,7 +76,7 @@ so $\im f\subseteq\prod\im f_i$ holds. Conversely, if $y\in\prod\im f_i$ is give
 Let a family $(G_i)_{i\in I}$ of groups be given. If for each $i\in I$ the $H_i$ are normal subgroups of $G_i$, then $\prod H_i$ is also a normal subgroup of $\prod G_i$, and its quotient group is equal to $\prod (G_i/H_i)$.
 :::
 ::: Proof
-It suffices to apply [Corollary 3](#cor3) to the canonical homomorphisms $p_i:G_i\rightarrow G_i/H_i$.
+It suffices to apply [Corollary 3](#cor3){: data-relation="required" } to the canonical homomorphisms $p_i:G_i\rightarrow G_i/H_i$.
 
 {% diagram Math/Algebraic_Structures/Direct_Products-2.svg width="18.32em" alt="product_of_normal_subgroups" %}
 
@@ -93,7 +93,7 @@ Of course, even if the $H_i$ are subgroups of the $G_i$ that are not normal, $\p
 Let a family $(G_i)_{i\in I}$ of groups be given. If for each $i\in I$ we have $H_i\leq G_i$, then $\prod H_i$ is a subgroup of $\prod G_i$.
 :::
 ::: Proof
-Applying [Corollary 3](#cor3) to the inclusion homomorphisms $\iota_i:H_i\hookrightarrow G_i$, $\iota$ is injective, and since $\prod H_i$ is precisely the image of $\iota$, it is a subgroup of $\prod G_i$.
+Applying [Corollary 3](#cor3){: data-relation="required" } to the inclusion homomorphisms $\iota_i:H_i\hookrightarrow G_i$, $\iota$ is injective, and since $\prod H_i$ is precisely the image of $\iota$, it is a subgroup of $\prod G_i$.
 :::
 
 ## Partial Products
@@ -108,7 +108,7 @@ the family $(G_i')$ of groups, and the group homomorphisms from $G_i'$ to $G_i$
 
 $$f_i=\begin{cases} \id_{G_i}&i\in J\\ \iota_i&i\not\in J\end{cases}$$
 
-Then one can show without difficulty that $\prod_{i\in I}G_i'\cong\prod_{j\in J}G_j$, and therefore by [Corollary 4](#cor4) one can verify that the following formula
+Then one can show without difficulty that $\prod_{i\in I}G_i'\cong\prod_{j\in J}G_j$, and therefore by [Corollary 4](#cor4){: data-relation="required" } one can verify that the following formula
 
 $$\biggl(\prod_{i\in I}G_i\biggr)\bigg/\biggl(\prod_{j\in J}G_j\biggr)\cong\prod_{i\in I\setminus J} G_i$$
 
