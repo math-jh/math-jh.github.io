@@ -148,11 +148,17 @@ body {
      Safari 는 text-justify 를 통째로 무시하므로 @supports 로 감싸 그쪽은 왼쪽 정렬로
      남긴다 — 안 그러면 어절 사이만 벌어져 공백이 최대 15px 까지 간다.
      $medium 미만(폰)에서는 한 줄이 짧아 벌어짐이 커지므로 걸지 않는다.
-     overflow-wrap 은 하이픈이 안 걸리는 긴 URL·식별자의 탈출구다. */
+     양끝맞춤 자체는 이어지는 산문이 본체인 글에만 걸므로 single.html 이 붙이는
+     --justified 안에 둔다.
+     overflow-wrap 은 하이픈이 안 걸리는 긴 URL·식별자의 탈출구라 본문 전체에 건다. */
   &:lang(ko) {
     @include breakpoint($medium) {
       overflow-wrap: break-word;
+    }
+  }
 
+  &--justified:lang(ko) {
+    @include breakpoint($medium) {
       @supports (text-justify: inter-character) {
         p,
         li {
@@ -186,7 +192,7 @@ body {
      도 EN 페이지에서는 아무것도 안 한다). 영어는 남는 폭이 어절 사이로만 가므로
      text-justify 는 기본값으로 둔다 — 낱말 안을 벌리지 않고, 하이픈이 그 어절 간격을
      대신 줄여준다. 폰에서는 한 줄이 짧아 공백이 튀므로 KO 와 같이 $medium 이상에서만. */
-  &:lang(en) {
+  &--justified:lang(en) {
     p,
     li {
       hyphens: auto;

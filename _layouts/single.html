@@ -72,7 +72,9 @@ layout: default
         </div>
       {% endif %}
 
-      <section class="page__content" itemprop="text">
+      {% comment %}양끝맞춤은 이어지는 산문이 본체인 수학 글에만 건다. 판정은 permalink 로
+      하며 KO/EN 양쪽에 걸린다.{% endcomment %}
+      <section class="page__content{% if page.url contains '/math/' %} page__content--justified{% endif %}" itemprop="text">
         {{ content }}
         {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
       </section>
