@@ -34,7 +34,7 @@
 
   // required SCC를 한 층으로 축약한 뒤 forward를 순환 없는 소프트 제약으로
   // 더한다. weight는 아직 연결이 적은 노드의 초기 열만 정하는 보조값이다.
-  function linearPositions(data) {
+  function linearPositions(data, viewportWidth, viewportHeight) {
     var nodes = data.nodes, byId = {}, reqAdj = {};
     nodes.forEach(function (n) { byId[n.id] = n; reqAdj[n.id] = []; });
     data.links.forEach(function (l) {
@@ -111,17 +111,33 @@
       (layers[r] = layers[r] || []).push(n);
     });
     var positions = {};
-    Object.keys(layers).forEach(function (rawRank) {
+    var columnGap = 66, rowGap = 34, padX = 56, padY = 52;
+    var capacity = Math.max(1, Math.floor((viewportHeight - 2 * padY) / rowGap) + 1);
+    var visualColumn = 0;
+    Object.keys(layers).sort(function (a, b) { return Number(a) - Number(b); }).forEach(function (rawRank) {
       var layer = layers[rawRank];
       layer.sort(function (a, b) {
         return (a.category || '').localeCompare(b.category || '') ||
           (Number(a.weight) || 0) - (Number(b.weight) || 0) || a.title.localeCompare(b.title);
       });
-      layer.forEach(function (n, i) {
-        positions[n.id] = { x: Number(rawRank) * 175, y: (i - (layer.length - 1) / 2) * 52 };
-      });
+      for (var start = 0; start < layer.length; start += capacity) {
+        var chunk = layer.slice(start, start + capacity);
+        chunk.forEach(function (n, i) {
+          positions[n.id] = {
+            column: visualColumn,
+            y: (i - (chunk.length - 1) / 2) * rowGap
+          };
+        });
+        visualColumn += 1;
+      }
     });
-    return positions;
+    var width = Math.max(viewportWidth, padX * 2 + Math.max(0, visualColumn - 1) * columnGap);
+    Object.keys(positions).forEach(function (id) {
+      positions[id].x = padX + positions[id].column * columnGap;
+      positions[id].y += viewportHeight / 2;
+      delete positions[id].column;
+    });
+    return { positions: positions, width: width, height: viewportHeight };
   }
 
   /* 필터 칩(family) 정의는 그래프 JSON 이 실어 온다 (_data/categories.yml 의
@@ -149,6 +165,7 @@
   function createGraphCard(stage, data, families, cfg) {
     var famKeys = new Set(families.map(function (f) { return f.key; }));
     var deg = {}, outAdj = {}, inAdj = {}, byId = {};
+    var requiredIn = {}, weakIn = {}, forwardOut = {};
     data.nodes.forEach(function (n) {
       byId[n.id] = n;
       n.__c = n.family === 'misc'
@@ -161,8 +178,21 @@
       deg[e[1]] = (deg[e[1]] || 0) + 1;
       (outAdj[e[0]] = outAdj[e[0]] || new Set()).add(e[1]);
       (inAdj[e[1]] = inAdj[e[1]] || new Set()).add(e[0]);
+      if (l.relation === 'required') (requiredIn[e[1]] = requiredIn[e[1]] || []).push(l);
+      else if (l.relation === 'weak') (weakIn[e[1]] = weakIn[e[1]] || []).push(l);
+      else if (l.relation === 'forward') (forwardOut[e[0]] = forwardOut[e[0]] || []).push(l);
     });
-    function radius(n) { return Math.sqrt(2.0 + (deg[n.id] || 0) * 0.7) * 2.95; }
+
+    var hovered = null, selected = null, query = '', layoutMode = 'force';
+    var activeFams = new Set(families.map(function (f) { return f.key; }));
+    var hlNodes = new Set(), hlLinks = new Set();
+    var hoverCb = null, clickCb = null, linearGeometry = null;
+    var linearNodeEls = [], linearLinkEls = [];
+
+    function radius(n) {
+      var value = Math.sqrt(2.0 + (deg[n.id] || 0) * 0.7) * 2.95;
+      return layoutMode === 'linear' ? Math.max(5.5, value) : value;
+    }
     var labelTop = Math.max(6, Math.round(data.nodes.length * 0.04));
     var hubCandidates = data.classified
       ? data.nodes.filter(function (n) { return (deg[n.id] || 0) > 0; })
@@ -171,40 +201,79 @@
       .sort(function (a, b) { return (deg[b.id] || 0) - (deg[a.id] || 0); })
       .slice(0, labelTop).map(function (n) { return n.id; }));
 
-    var hovered = null, selected = null, query = '';
-    var activeFams = new Set(families.map(function (f) { return f.key; }));
-    var hlNodes = new Set(), hlLinks = new Set();
-    var hoverCb = null, clickCb = null;
-
     function passesFilter(n) {
       var mc = !famKeys.has(n.family) || activeFams.has(n.family);
       var ms = !query || n.title.toLowerCase().indexOf(query) >= 0;
       return mc && ms;
     }
+    function activeFocus() {
+      return layoutMode === 'linear' ? (selected || hovered) : (hovered || selected);
+    }
     function nodeState(n) {
       if (!passesFilter(n)) return 'off';
       if (hlNodes.size && !hlNodes.has(n.id)) return 'off';
+      if (layoutMode === 'linear' && !hlNodes.size) return 'idle';
       return 'on';
     }
-    function focusOn(node) {
+    function addHighlightedLink(link) {
+      var e = endpoints(link);
+      hlNodes.add(e[0]); hlNodes.add(e[1]); hlLinks.add(lid(link));
+    }
+    function focusForce(node) {
       hlNodes = new Set(); hlLinks = new Set();
-      if (node) {
-        hlNodes.add(node.id);
-        (outAdj[node.id] || new Set()).forEach(function (x) { hlNodes.add(x); });
-        (inAdj[node.id] || new Set()).forEach(function (x) { hlNodes.add(x); });
-        data.links.forEach(function (l) {
-          var e = endpoints(l);
-          if (e[0] === node.id || e[1] === node.id) hlLinks.add(lid(l));
+      if (!node) return;
+      hlNodes.add(node.id);
+      (outAdj[node.id] || new Set()).forEach(function (x) { hlNodes.add(x); });
+      (inAdj[node.id] || new Set()).forEach(function (x) { hlNodes.add(x); });
+      data.links.forEach(function (l) {
+        var e = endpoints(l);
+        if (e[0] === node.id || e[1] === node.id) hlLinks.add(lid(l));
+      });
+    }
+    function focusLinear(node) {
+      hlNodes = new Set(); hlLinks = new Set();
+      if (!node) return;
+      hlNodes.add(node.id);
+
+      // Only the chosen article may branch to optional context. Weak edges point
+      // cited -> citing, while forward edges point citing -> later reading.
+      (weakIn[node.id] || []).forEach(addHighlightedLink);
+      (forwardOut[node.id] || []).forEach(addHighlightedLink);
+
+      // Required edges point prerequisite -> dependent. Walk only upstream and
+      // never expand weak/forward edges from prerequisites reached on this walk.
+      var todo = [node.id], seen = new Set();
+      while (todo.length) {
+        var id = todo.pop();
+        if (seen.has(id)) continue;
+        seen.add(id);
+        (requiredIn[id] || []).forEach(function (link) {
+          var source = endpoints(link)[0];
+          addHighlightedLink(link);
+          if (!seen.has(source)) todo.push(source);
         });
       }
     }
-    function refocus() { focusOn(hovered || selected); }
+    function refocus() {
+      var node = activeFocus();
+      if (layoutMode === 'linear') focusLinear(node);
+      else focusForce(node);
+      updateLinearStyles();
+    }
 
-    // DOM: canvas + toolbar(layout/fit/reset) + popup (검색/범례 없음)
+    // DOM: native horizontal viewport + canvas surface + fixed toolbar/card.
     stage.innerHTML = '';
+    var canvasViewport = document.createElement('div');
+    canvasViewport.className = 'gc-viewport';
     var canvasWrap = document.createElement('div');
     canvasWrap.className = 'gc-canvas';
-    stage.appendChild(canvasWrap);
+    canvasViewport.appendChild(canvasWrap);
+    var linearSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    linearSvg.setAttribute('class', 'gc-linear');
+    linearSvg.setAttribute('role', 'img');
+    linearSvg.setAttribute('aria-label', cfg.linearLabel);
+    canvasViewport.appendChild(linearSvg);
+    stage.appendChild(canvasViewport);
 
     var top = document.createElement('div');
     top.className = 'gc-top';
@@ -217,10 +286,12 @@
 
     var pop = document.createElement('div');
     pop.className = 'gc-pop';
-    pop.innerHTML = '<div class="gc-pop-title"></div><a class="gc-pop-go" href="#"></a>';
+    pop.innerHTML = '<button class="gc-pop-close" type="button" aria-label="Close">&times;</button>' +
+      '<div class="gc-pop-title"></div><a class="gc-pop-go" href="#"></a>';
     stage.appendChild(pop);
     var popTitle = pop.querySelector('.gc-pop-title');
     var popGo = pop.querySelector('.gc-pop-go');
+    var popClose = pop.querySelector('.gc-pop-close');
     popGo.textContent = cfg.openLabel;
     popGo.addEventListener('click', function (e) { e.stopPropagation(); });
 
@@ -228,14 +299,143 @@
       popTitle.textContent = n.title;
       popGo.setAttribute('href', n.url || '#');
       pop.classList.add('show');
-      placePop();
     }
     function hidePop() { pop.classList.remove('show'); }
-    function placePop() {
-      if (!selected || !pop.classList.contains('show')) return;
-      var c = graph.graph2ScreenCoords(selected.x, selected.y);
-      pop.style.left = c.x + 'px';
-      pop.style.top = c.y + 'px';
+    function notifySelection() { if (clickCb) clickCb(selected ? selected.id : null); }
+    function clearSelection() {
+      selected = null; hidePop(); refocus(); notifySelection();
+    }
+    function selectNode(node) {
+      if (node && selected && selected.id === node.id) clearSelection();
+      else {
+        selected = node; refocus();
+        if (node) { showPop(node); centerActive(); } else hidePop();
+        notifySelection();
+      }
+    }
+    popClose.addEventListener('click', function (e) { e.stopPropagation(); clearSelection(); });
+    linearSvg.addEventListener('click', clearSelection);
+
+    function svgElement(name, attrs) {
+      var el = document.createElementNS('http://www.w3.org/2000/svg', name);
+      Object.keys(attrs || {}).forEach(function (key) { el.setAttribute(key, attrs[key]); });
+      return el;
+    }
+    function gitPath(link, index) {
+      var e = endpoints(link);
+      var source = linearGeometry.positions[e[0]], target = linearGeometry.positions[e[1]];
+      if (!source || !target) return '';
+      var sx = source.x, sy = source.y, tx = target.x, ty = target.y;
+      var dx = tx - sx;
+      if (Math.abs(dx) < 16) {
+        var side = sx < linearGeometry.width / 2 ? 1 : -1;
+        var laneX = sx + side * (20 + (index % 3) * 7);
+        laneX = Math.max(16, Math.min(linearGeometry.width - 16, laneX));
+        return 'M' + sx + ',' + sy + ' C' + laneX + ',' + sy + ' ' + laneX + ',' + ty + ' ' + tx + ',' + ty;
+      }
+      var direction = dx > 0 ? 1 : -1;
+      sx += direction * radius(byId[e[0]]);
+      tx -= direction * (radius(byId[e[1]]) + 3);
+      dx = tx - sx;
+      var stub = Math.min(18, Math.max(10, Math.abs(dx) / 3));
+      var startX = sx + direction * stub;
+      var endX = tx - direction * stub;
+      var laneY = sy;
+      if (link.relation === 'weak') laneY = Math.min(sy, ty) - 16 - (index % 3) * 5;
+      else if (link.relation === 'forward') laneY = Math.max(sy, ty) + 16 + (index % 3) * 5;
+      laneY = Math.max(18, Math.min(linearGeometry.height - 24, laneY));
+      return 'M' + sx + ',' + sy +
+        ' C' + startX + ',' + sy + ' ' + startX + ',' + laneY + ' ' + startX + ',' + laneY +
+        ' L' + endX + ',' + laneY +
+        ' C' + endX + ',' + laneY + ' ' + endX + ',' + ty + ' ' + tx + ',' + ty;
+    }
+    function updateLinearStyles() {
+      if (!linearGeometry) return;
+      linearLinkEls.forEach(function (entry) {
+        var link = entry.link;
+        entry.path.setAttribute('stroke', linkColor(link));
+        entry.path.setAttribute('stroke-width', hlLinks.has(lid(link)) ? '2.4' :
+          (link.relation === 'required' ? '1.2' : link.relation === 'weak' ? '0.85' : '1'));
+      });
+      linearNodeEls.forEach(function (entry) {
+        var node = entry.node;
+        var state = nodeState(node);
+        var isSelected = selected && selected.id === node.id;
+        var focused = hlNodes.size > 0 && hlNodes.has(node.id);
+        var matched = query && node.title.toLowerCase().indexOf(query) >= 0;
+        entry.dot.setAttribute('r', radius(node));
+        entry.dot.setAttribute('fill', isSelected ? 'rgb(' + cfg.accent + ')' : node.__c);
+        entry.dot.setAttribute('fill-opacity', state === 'off' ? '0.09' : state === 'idle' ? '0.3' : '1');
+        entry.dot.setAttribute('stroke', isSelected ? 'rgba(' + cfg.accent + ',0.62)' : 'none');
+        entry.dot.setAttribute('stroke-width', isSelected ? '2' : '0');
+        entry.label.style.display = state !== 'off' && (focused || matched || hubSet.has(node.id)) ? '' : 'none';
+        entry.label.setAttribute('fill', focused || matched
+          ? 'rgba(' + cfg.labelHi + ',0.98)'
+          : 'rgba(' + cfg.label + ',' + (state === 'idle' ? '0.46' : '0.72') + ')');
+        entry.label.setAttribute('font-weight', focused || matched ? '600' : '400');
+      });
+    }
+    function renderLinear() {
+      linearSvg.innerHTML = '';
+      linearNodeEls = []; linearLinkEls = [];
+      linearSvg.setAttribute('width', Math.ceil(linearGeometry.width));
+      linearSvg.setAttribute('height', Math.ceil(linearGeometry.height));
+      linearSvg.setAttribute('viewBox', '0 0 ' + linearGeometry.width + ' ' + linearGeometry.height);
+      linearSvg.style.width = Math.ceil(linearGeometry.width) + 'px';
+      linearSvg.style.height = Math.ceil(linearGeometry.height) + 'px';
+
+      var defs = svgElement('defs');
+      var marker = svgElement('marker', {
+        id: 'gc-linear-arrow', viewBox: '0 0 8 8', refX: '7', refY: '4',
+        markerWidth: '7', markerHeight: '7', orient: 'auto', markerUnits: 'userSpaceOnUse'
+      });
+      marker.appendChild(svgElement('path', { d: 'M0,0 L8,4 L0,8 Z', fill: 'context-stroke' }));
+      defs.appendChild(marker); linearSvg.appendChild(defs);
+
+      var linksGroup = svgElement('g', { class: 'gc-linear__links' });
+      data.links.forEach(function (link, index) {
+        var path = svgElement('path', {
+          d: gitPath(link, index), fill: 'none', 'stroke-linecap': 'round',
+          'stroke-linejoin': 'round', 'vector-effect': 'non-scaling-stroke',
+          'marker-end': 'url(#gc-linear-arrow)'
+        });
+        if (link.relation === 'weak') path.setAttribute('stroke-dasharray', '2 5');
+        else if (link.relation === 'forward') path.setAttribute('stroke-dasharray', '9 5');
+        linksGroup.appendChild(path); linearLinkEls.push({ link: link, path: path });
+      });
+      linearSvg.appendChild(linksGroup);
+
+      var nodesGroup = svgElement('g', { class: 'gc-linear__nodes' });
+      data.nodes.forEach(function (node) {
+        var p = linearGeometry.positions[node.id];
+        var group = svgElement('g', {
+          class: 'gc-linear__node', transform: 'translate(' + p.x + ' ' + p.y + ')',
+          tabindex: '0', role: 'button', 'aria-label': node.title
+        });
+        var hit = svgElement('circle', { r: '11', fill: 'transparent' });
+        var dot = svgElement('circle', { r: radius(node) });
+        var label = svgElement('text', { x: '0', y: radius(node) + 13, 'text-anchor': 'middle' });
+        label.textContent = node.title;
+        var title = svgElement('title'); title.textContent = node.title; group.appendChild(title);
+        group.appendChild(hit); group.appendChild(dot); group.appendChild(label);
+        group.addEventListener('mouseenter', function () {
+          hovered = node; refocus(); if (hoverCb) hoverCb(node.id);
+        });
+        group.addEventListener('mouseleave', function () {
+          if (hovered && hovered.id === node.id) hovered = null;
+          refocus(); if (hoverCb) hoverCb(null);
+        });
+        group.addEventListener('click', function (event) { event.stopPropagation(); selectNode(node); });
+        group.addEventListener('keydown', function (event) {
+          if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault(); event.stopPropagation(); selectNode(node);
+          }
+        });
+        nodesGroup.appendChild(group);
+        linearNodeEls.push({ node: node, dot: dot, label: label });
+      });
+      linearSvg.appendChild(nodesGroup);
+      updateLinearStyles();
     }
 
     function hslaFade(hue, a) { return 'hsla(' + hue + ',38%,55%,' + a + ')'; }
@@ -244,8 +444,8 @@
       var r = radius(node);
       var sel = selected && selected.id === node.id;
       ctx.save();
-      if (st === 'off') {
-        ctx.fillStyle = hslaFade(node.hue, 0.12);
+      if (st === 'off' || st === 'idle') {
+        ctx.fillStyle = hslaFade(node.hue, st === 'idle' ? 0.3 : 0.09);
         ctx.beginPath(); ctx.arc(node.x, node.y, r, 0, 6.2832); ctx.fill();
       } else {
         if (cfg.glow) { ctx.shadowColor = node.__c; ctx.shadowBlur = cfg.glow; }
@@ -269,27 +469,32 @@
         ctx.textAlign = 'center'; ctx.textBaseline = 'top';
         ctx.fillStyle = emph
           ? 'rgba(' + cfg.labelHi + ',0.98)'
-          : 'rgba(' + cfg.label + ',' + (hubSet.has(node.id) ? 0.6 : 0.82) + ')';
+          : 'rgba(' + cfg.label + ',' + (st === 'idle' ? 0.46 : 0.72) + ')';
         ctx.fillText(node.title, node.x, node.y + r + 2.5 / scale);
       }
     }
     function pointerArea(node, color, ctx) {
       ctx.fillStyle = color;
-      ctx.beginPath(); ctx.arc(node.x, node.y, radius(node), 0, 6.2832); ctx.fill();
+      ctx.beginPath(); ctx.arc(node.x, node.y, Math.max(11, radius(node)), 0, 6.2832); ctx.fill();
     }
     function linkColor(l) {
       if (hlLinks.has(lid(l))) {
-        var e = endpoints(l);
-        var focused = hovered || selected;
+        var highlightedEnds = endpoints(l);
+        var focused = activeFocus();
         if (focused) {
-          if (e[0] === focused.id) return 'rgba(' + cfg.accentOut + ',0.9)';
-          if (e[1] === focused.id) return 'rgba(' + cfg.accentIn + ',0.9)';
+          if (highlightedEnds[0] === focused.id) return 'rgba(' + cfg.accentOut + ',0.9)';
+          if (highlightedEnds[1] === focused.id) return 'rgba(' + cfg.accentIn + ',0.9)';
         }
         return 'rgba(' + cfg.accent + ',0.85)';
       }
       var e = endpoints(l);
       var on = passesFilter(byId[e[0]]) && passesFilter(byId[e[1]]) && !hlLinks.size;
-      if (!on) return 'rgba(' + cfg.link + ',0.05)';
+      if (!on) return 'rgba(' + cfg.link + ',0.035)';
+      if (layoutMode === 'linear') {
+        if (l.relation === 'weak') return 'rgba(' + cfg.link + ',0.1)';
+        if (l.relation === 'forward') return 'rgba(' + cfg.link + ',0.14)';
+        return 'rgba(' + cfg.link + ',0.2)';
+      }
       if (l.relation === 'weak') return 'rgba(' + cfg.link + ',0.2)';
       if (l.relation === 'forward') return 'rgba(' + cfg.link + ',0.3)';
       if (l.relation === 'required') return 'rgba(' + cfg.link + ',0.44)';
@@ -299,6 +504,13 @@
       if (l.relation === 'weak') return [2, 5];
       if (l.relation === 'forward') return [9, 5];
       return [];
+    }
+    function linkCurve(l) {
+      var e = endpoints(l);
+      return data.links.some(function (r) {
+        var re = endpoints(r);
+        return re[0] === e[1] && re[1] === e[0];
+      }) ? 0.25 : 0;
     }
 
     var graph = ForceGraph()(canvasWrap)
@@ -321,17 +533,13 @@
       .linkDirectionalArrowLength(15)
       .linkDirectionalArrowRelPos(0.45)
       .linkDirectionalArrowColor(function (l) { return linkColor(l); })
-      .linkCurvature(function (l) {
-        var e = endpoints(l);
-        return data.links.some(function (r) {
-          var re = endpoints(r);
-          return re[0] === e[1] && re[1] === e[0];
-        }) ? 0.25 : 0;
+      .linkCurvature(linkCurve)
+      .onNodeHover(function (n) {
+        hovered = n; refocus(); canvasWrap.style.cursor = n ? 'pointer' : '';
+        if (hoverCb) hoverCb(n ? n.id : null);
       })
-      .onNodeHover(function (n) { hovered = n; refocus(); canvasWrap.style.cursor = n ? 'pointer' : ''; if (hoverCb) hoverCb(n ? n.id : null); })
-      .onNodeClick(function (n) { selected = n; refocus(); showPop(n); if (clickCb) clickCb(n ? n.id : null); })
-      .onBackgroundClick(function () { selected = null; hidePop(); refocus(); if (clickCb) clickCb(null); })
-      .onRenderFramePost(placePop)
+      .onNodeClick(selectNode)
+      .onBackgroundClick(clearSelection)
       .graphData(data);
 
     // 기존 graph 페이지는 force-graph의 기본 실선을 그대로 사용한다.
@@ -339,73 +547,133 @@
 
     graph.d3VelocityDecay(0.34);
     graph.cooldownTicks(220);
-    if (graph.d3Force('charge')) graph.d3Force('charge').strength(-260); // 반발 ↑
+    if (graph.d3Force('charge')) graph.d3Force('charge').strength(-260);
     if (graph.d3Force('link')) graph.d3Force('link').distance(34);
-    graph.d3Force('gravity', radial(0.18)); // 중심 중력 ↑
+    graph.d3Force('gravity', radial(0.18));
     if (graph.d3ReheatSimulation) graph.d3ReheatSimulation();
 
     var fitted = false;
-    graph.onEngineStop(function () { if (!fitted) { graph.zoomToFit(0, 30); fitted = true; } });
+    graph.onEngineStop(function () {
+      if (!fitted && layoutMode === 'force') { graph.zoomToFit(0, 30); fitted = true; }
+    });
 
-    var layoutMode = 'force';
+    function flipShell(linear) {
+      var index = stage.parentElement.querySelector('.graph-index');
+      var elements = [stage, index].filter(Boolean);
+      var first = elements.map(function (el) { return el.getBoundingClientRect(); });
+      document.body.classList.toggle('dependencies-linear', linear);
+      if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      var last = elements.map(function (el) { return el.getBoundingClientRect(); });
+      elements.forEach(function (el, i) {
+        if (!first[i].width || !first[i].height || !last[i].width || !last[i].height) return;
+        el.style.transformOrigin = 'top left';
+        el.style.transition = 'none';
+        el.style.transform = 'translate(' + (first[i].left - last[i].left) + 'px,' +
+          (first[i].top - last[i].top) + 'px) scale(' +
+          (first[i].width / last[i].width) + ',' + (first[i].height / last[i].height) + ')';
+      });
+      stage.offsetWidth;
+      window.requestAnimationFrame(function () {
+        elements.forEach(function (el) {
+          el.style.transition = 'transform 450ms cubic-bezier(.22,.61,.36,1)';
+          el.style.transform = 'none';
+        });
+      });
+      window.setTimeout(function () {
+        elements.forEach(function (el) {
+          el.style.removeProperty('transition'); el.style.removeProperty('transform');
+          el.style.removeProperty('transform-origin');
+        });
+      }, 500);
+    }
+
+    function applyLinearGeometry() {
+      var viewportWidth = canvasViewport.clientWidth;
+      var viewportHeight = canvasViewport.clientHeight;
+      if (!viewportWidth || !viewportHeight) return;
+      linearGeometry = linearPositions(data, viewportWidth, viewportHeight);
+      renderLinear();
+    }
+    function sizeForce() {
+      var w = canvasViewport.clientWidth, h = canvasViewport.clientHeight;
+      if (!w || !h) return;
+      canvasWrap.style.width = '100%'; canvasWrap.style.height = '100%';
+      graph.width(w).height(h);
+    }
+    function centerActive() {
+      var node = activeFocus();
+      if (layoutMode === 'linear') {
+        if (!linearGeometry || !node) {
+          canvasViewport.scrollTo({ left: 0, behavior: 'smooth' });
+          return;
+        }
+        var x = linearGeometry.positions[node.id].x - canvasViewport.clientWidth / 2;
+        var max = Math.max(0, linearGeometry.width - canvasViewport.clientWidth);
+        canvasViewport.scrollTo({ left: Math.max(0, Math.min(max, x)), behavior: 'smooth' });
+      } else if (node) graph.centerAt(node.x, node.y, 450);
+      else graph.zoomToFit(450, 30);
+    }
+    function afterLayout(fn) {
+      window.requestAnimationFrame(function () { window.requestAnimationFrame(fn); });
+    }
     function setLayout(mode, button) {
       if (mode === layoutMode) return;
+      var linear = mode === 'linear';
       layoutMode = mode;
-      if (mode === 'linear') {
-        var positions = linearPositions(data);
-        data.nodes.forEach(function (n) {
-          n.__forceX = n.x; n.__forceY = n.y;
-          n.fx = positions[n.id].x; n.fy = positions[n.id].y;
-          n.x = n.fx; n.y = n.fy;
-        });
+      stage.dataset.layoutMode = mode;
+      flipShell(linear);
+      refocus();
+      if (linear) {
         if (graph.enableNodeDrag) graph.enableNodeDrag(false);
-        button.innerHTML = ICON.force;
-        button.title = cfg.forceLabel;
+        if (graph.enableZoomPanInteraction) graph.enableZoomPanInteraction(false);
+        button.innerHTML = ICON.force; button.title = cfg.forceLabel;
         button.setAttribute('aria-pressed', 'true');
+        afterLayout(function () { applyLinearGeometry(); centerActive(); });
       } else {
-        data.nodes.forEach(function (n) {
-          delete n.fx; delete n.fy;
-          if (isFinite(n.__forceX)) n.x = n.__forceX;
-          if (isFinite(n.__forceY)) n.y = n.__forceY;
-        });
+        linearGeometry = null;
         if (graph.enableNodeDrag) graph.enableNodeDrag(true);
-        button.innerHTML = ICON.tree;
-        button.title = cfg.linearLabel;
+        if (graph.enableZoomPanInteraction) graph.enableZoomPanInteraction(true);
+        button.innerHTML = ICON.tree; button.title = cfg.linearLabel;
         button.setAttribute('aria-pressed', 'false');
-        if (graph.d3ReheatSimulation) graph.d3ReheatSimulation();
+        afterLayout(function () {
+          sizeForce();
+          if (graph.d3ReheatSimulation) graph.d3ReheatSimulation();
+          graph.zoomToFit(450, 30);
+        });
       }
-      hidePop();
-      window.setTimeout(function () { graph.zoomToFit(450, 30); }, 40);
     }
 
     top.querySelectorAll('.gc-btn').forEach(function (b) {
       b.addEventListener('click', function () {
-        if (b.dataset.act === 'layout') { setLayout(layoutMode === 'force' ? 'linear' : 'force', b); }
-        else if (b.dataset.act === 'fit') { graph.zoomToFit(450, 30); }
-        else if (cfg.onReset) { cfg.onReset(); graph.zoomToFit(450, 30); }
-        else { graph.zoomToFit(450, 30); }
+        if (b.dataset.act === 'layout') setLayout(layoutMode === 'force' ? 'linear' : 'force', b);
+        else if (b.dataset.act === 'fit') centerActive();
+        else if (cfg.onReset) { cfg.onReset(); if (layoutMode === 'force') graph.zoomToFit(450, 30); }
+        else if (layoutMode === 'force') graph.zoomToFit(450, 30);
       });
     });
 
     function size() {
-      var w = canvasWrap.clientWidth, h = canvasWrap.clientHeight;
-      if (w && h) graph.width(w).height(h);
+      if (layoutMode === 'linear') applyLinearGeometry();
+      else sizeForce();
     }
     size();
-    if (window.ResizeObserver) new ResizeObserver(size).observe(canvasWrap);
+    if (window.ResizeObserver) new ResizeObserver(size).observe(canvasViewport);
 
     return {
       graph: graph, deg: deg, byId: byId,
-      refit: function () { graph.zoomToFit(450, 30); },
+      refit: centerActive,
       focus: function (id) { hovered = id ? byId[id] : null; refocus(); },
-      setQuery: function (q) { query = (q || '').toLowerCase().trim(); },
-      setFamilies: function (arr) { activeFams = new Set(arr); },
+      setQuery: function (q) { query = (q || '').toLowerCase().trim(); refocus(); },
+      setFamilies: function (arr) { activeFams = new Set(arr); refocus(); },
       select: function (id) {
         var n = id ? byId[id] : null;
-        selected = n; refocus();
-        if (n) { showPop(n); graph.centerAt(n.x, n.y, 450); } else hidePop();
+        if (n) selectNode(n); else clearSelection();
       },
-      clear: function () { selected = null; hovered = null; query = ''; activeFams = new Set(families.map(function (f) { return f.key; })); hidePop(); refocus(); },
+      clear: function () {
+        selected = null; hovered = null; query = '';
+        activeFams = new Set(families.map(function (f) { return f.key; }));
+        hidePop(); refocus(); canvasViewport.scrollLeft = 0; notifySelection();
+      },
       onHover: function (cb) { hoverCb = cb; },
       onClick: function (cb) { clickCb = cb; }
     };
@@ -569,6 +837,10 @@
     var lang = stage.dataset.lang || 'ko';
     var source = stage.dataset.graphSource || 'graph';
     var layoutToggle = stage.dataset.layoutToggle === 'true';
+    if (layoutToggle) {
+      document.body.classList.add('dependencies-page');
+      stage.dataset.layoutMode = 'force';
+    }
 
     fetch('/assets/data/' + source + '-' + lang + '.json')
       .then(function (r) { return r.json(); })

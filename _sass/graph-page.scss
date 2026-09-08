@@ -15,6 +15,7 @@
   &__main {
     display: grid;
     grid-template-columns: 230px 1fr; // 좌: 인덱스 사이드바 · 우: 그래프
+    grid-template-areas: "index graph";
     gap: clamp(14px, 1.8vw, 24px);
     margin-top: 0.8em;
     height: calc(100vh - 270px); // masthead·footer 감안해 스크롤 없게(상단바 제거됨)
@@ -25,13 +26,31 @@
     &__main {
       grid-template-columns: 1fr;
       grid-template-rows: auto minmax(340px, 56vh);
+      grid-template-areas: "index" "graph";
       height: auto;
+    }
+  }
+}
+
+body.dependencies-linear {
+  .graph-page--dependencies {
+    .graph-page__main {
+      grid-template-columns: 1fr;
+      grid-template-rows: clamp(420px, 58vh, 640px) minmax(360px, 56vh);
+      grid-template-areas: "graph" "index";
+      height: auto;
+    }
+
+    .graph-index {
+      width: 230px;
+      max-width: 100%;
     }
   }
 }
 
 /* ---- Index panel (페이지 테마 적응) ---- */
 .graph-index {
+  grid-area: index;
   display: flex;
   flex-direction: column;
   min-height: 0;
@@ -166,8 +185,46 @@
 }
 
 /* ---- Graph card (항상 다크 · Brass) — graphcard.css 에서 ---- */
-.gc-stage { position: relative; border-radius: 20px; overflow: hidden; isolation: isolate; min-height: 0; }
-.gc-canvas { position: absolute; inset: 0; }
+.gc-stage { grid-area: graph; position: relative; border-radius: 20px; overflow: hidden; isolation: isolate; min-height: 0; }
+.gc-viewport { position: absolute; inset: 0; overflow: hidden; }
+.gc-canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
+.gc-linear { display: none; font-family: $sans-serif; }
+
+.gc-linear__links path { transition: stroke 0.12s, stroke-width 0.12s; }
+.gc-linear__node {
+  cursor: pointer;
+
+  circle { transition: fill-opacity 0.12s, stroke 0.12s; }
+  text {
+    pointer-events: none;
+    font-size: 11.5px;
+    paint-order: stroke;
+    stroke: rgba(15, 16, 20, 0.9);
+    stroke-width: 3px;
+    stroke-linejoin: round;
+  }
+  &:focus { outline: none; }
+  &:focus > circle:nth-of-type(2) { stroke: rgb(var(--gc-accent)); stroke-width: 2px; }
+}
+
+body.dependencies-linear .graph-page--dependencies .gc-viewport {
+  overflow-x: auto;
+  overflow-y: hidden;
+  overscroll-behavior-x: contain;
+  scrollbar-width: thin;
+  scrollbar-color: rgb(var(--gc-accent)) rgba(255, 255, 255, 0.05);
+
+  &::-webkit-scrollbar { height: 10px; }
+  &::-webkit-scrollbar-track { background: rgba(255, 255, 255, 0.05); }
+  &::-webkit-scrollbar-thumb {
+    background: rgba(var(--gc-accent), 0.72);
+    border: 2px solid #141519;
+    border-radius: 999px;
+  }
+
+  .gc-canvas { visibility: hidden; pointer-events: none; }
+  .gc-linear { display: block; }
+}
 
 .gc-top { position: absolute; top: 12px; right: 12px; z-index: 4; display: flex; gap: 6px; }
 .gc-btn {
@@ -187,21 +244,38 @@
 
 .gc-pop {
   position: absolute;
+  right: 16px;
+  bottom: 16px;
   z-index: 6;
   display: none;
-  transform: translate(-50%, 12px);
   background: rgba(16, 18, 23, 0.94);
   color: #ece8dd;
   border: 1px solid var(--gc-line);
   border-radius: 9px;
-  padding: 9px 11px;
-  max-width: 230px;
+  padding: 12px 38px 12px 13px;
+  width: min(260px, calc(100% - 32px));
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
 
   &.show { display: block; }
   .gc-pop-title { font-size: 13px; font-weight: 700; line-height: 1.35; margin-bottom: 7px; }
+  .gc-pop-close {
+    position: absolute;
+    top: 7px;
+    right: 8px;
+    width: 25px;
+    height: 25px;
+    padding: 0;
+    cursor: pointer;
+    border: 0;
+    border-radius: 6px;
+    background: transparent;
+    color: var(--gc-dim);
+    font: 500 21px/1 $sans-serif;
+
+    &:hover, &:focus-visible { background: rgba(255, 255, 255, 0.08); color: rgb(var(--gc-accent)); }
+  }
   .gc-pop-go {
     display: inline-block;
     text-decoration: none;

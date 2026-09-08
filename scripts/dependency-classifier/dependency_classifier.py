@@ -238,10 +238,12 @@ Return JSON only: {"items":[{"id":"...","relation":"required|weak|forward","conf
 
 Definitions are about the source article as a learning unit:
 - required: understanding the linked target is genuinely needed before the source passage/article. This includes a cited proof or construction whose substance the source actually reuses.
-- weak: helpful background, analogy, comparison, optional example, attribution, or a reference that is not a prerequisite.
+- weak: helpful background, analogy, comparison, optional example, attribution, terminology, or a reference that is not a prerequisite.
 - forward: the source is self-contained and says the target will later extend, develop, or revisit the present idea.
 
 Classify meaning, not wording or link direction. A link may look like an analogy yet still be required if the source imports the target's proof idea. Conversely, a formal citation may be weak. Same-page anchors must also be classified.
+
+In particular, do not mark a link required merely because the source uses the target's vocabulary. If the source has already established a fact independently and the link only names or recasts it in more advanced language (for example, calling an already described inclusion a "full subcategory"), classify it as weak. Use required only when a reader must know or import the target's definition, theorem, proof, or construction to follow the source's reasoning or subsequent development. Apply this counterfactual test: if removing the linked terminology and parenthetical citation leaves the mathematical argument understandable and complete, the link is weak.
 
 Confidence rule is deliberately strict: HIGH only when the supplied context makes exactly one class clear. If there is any plausible doubt, missing context, mixed role, or interpretive choice, output MEDIUM. Never use HIGH merely because a phrase matches a familiar pattern. Do not use tools and do not alter files.
 
@@ -251,7 +253,7 @@ ITEMS:
 REVIEW_PROMPT = """You are the independent final reviewer for ambiguous dependency-link classifications in a mathematics blog. You have wider excerpts than the first model.
 Return JSON only: {"items":[{"id":"...","relation":"required|weak|forward|ambiguous","reason":"short"}]}.
 
-Use these exact meanings: required = target knowledge/substance is needed before the source; weak = useful but optional background/analogy/citation; forward = source is self-contained and target is a later expansion. Judge semantic use, not surface phrasing. Choose ambiguous if the excerpts still do not justify one class. Do not use tools and do not alter files.
+Use these exact meanings: required = target knowledge/substance is needed before the source; weak = useful but optional background/analogy/citation/terminology; forward = source is self-contained and target is a later expansion. Judge semantic use, not surface phrasing. A definition link is weak when it merely gives an advanced name or reformulation to a fact already established independently, such as calling an already described inclusion a "full subcategory". It is required only when the source's reasoning or later development actually needs the target's definition, theorem, proof, or construction. Apply the counterfactual test: if removing the linked terminology and citation leaves the mathematical argument understandable and complete, choose weak. Choose ambiguous if the excerpts still do not justify one class. Do not use tools and do not alter files.
 
 ITEMS:
 """
