@@ -2,7 +2,7 @@
   Renders a notice block at the top of any post whose frontmatter
   `translation_source` matches the current or legacy tags in _config.yml.
   The text comes from `_data/ui-text.yml` ->
-  `<lang>.kimi_translation_notice` (the key name is retained for compatibility).
+  `<lang>.translationNotice`.
 {% endcomment %}
 {% assign _machine_translation = false %}
 {% if site.translation_source_tag != blank and page.translation_source == site.translation_source_tag %}
@@ -16,7 +16,7 @@
   {% if _lang_prefix contains "en" or _lang_prefix contains "ko" %}
     {% assign _lang = _lang_prefix | remove_first: "/" %}
   {% endif %}
-  {% assign _notice = site.data.ui-text[_lang].kimi_translation_notice %}
+  {% assign _notice = site.data.ui-text[_lang].translationNotice %}
   {% if _notice and _notice != "" %}
   <div class="notice--warning translation-notice" role="note">
     {{ _notice | markdownify }}
