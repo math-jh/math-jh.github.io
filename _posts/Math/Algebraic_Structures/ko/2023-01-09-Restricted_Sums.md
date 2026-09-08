@@ -14,9 +14,9 @@ weight: 8
 
 ---
 
-앞서 우리는 [§군의 직접곱](/ko/math/algebraic_structures/direct_products)에서 $\Grp$에서 임의의 product가 존재한다는 것을 확인하였고, [§군 준동형사상](/ko/math/algebraic_structures/group_homomorphisms)에서 $\Grp$의 임의의 morphism은 equalizer를 갖는다는 것을 확인하였다. 따라서 [\[범주론\] §극한, ⁋예시 7](/ko/math/category_theory/limits#ex7) 이후의 논증에 의해 $\Grp$은 complete category가 된다. 
+앞서 우리는 [§군의 직접곱](/ko/math/algebraic_structures/direct_products)에서 $\Grp$에서 임의의 product가 존재한다는 것을 확인하였고, [§군 준동형사상](/ko/math/algebraic_structures/group_homomorphisms)에서 $\Grp$의 임의의 평행한 morphism의 쌍은 equalizer를 갖는다는 것을 확인하였다. 따라서 [\[범주론\] §극한, ⁋예시 7](/ko/math/category_theory/limits#ex7) 이후의 논증에 의해 $\Grp$은 complete category가 된다. 
 
-한편 $\Grp$의 임의의 morphism은 coequalizer를 갖는다. ([§군 동형사상, ⁋명제 8](/ko/math/algebraic_structures/isomorphism_theorems#prop8)) 따라서 $\Grp$이 임의의 coproduct를 갖는다면, $\Grp$은 cocomplete category가 되고 따라서 bicomplete category가 될 것이다. 
+한편 $\Grp$의 임의의 평행한 morphism의 쌍은 coequalizer 또한 갖는다. ([§군 동형사상, ⁋명제 8](/ko/math/algebraic_structures/isomorphism_theorems#prop8)) 따라서 $\Grp$이 임의의 coproduct를 갖는다면, $\Grp$은 cocomplete category가 되고 따라서 bicomplete category가 될 것이다. 
 
 그러나 [§군의 직접곱, ⁋보조정리 1](/ko/math/algebraic_structures/direct_products#lem1)과 같이 $\Set$에서의 coproduct $\coprod G_i$ 위에 group 구조를 주는 방법을 자명하게 찾는 것은 힘들어 보인다. ([\[집합론\] §집합의 합, ⁋명제 5](/ko/math/set_theory/sum_of_sets#prop5)) 
 
@@ -96,7 +96,7 @@ $f_i$들에 걸려있는 조건
 Weak direct product의 universal property를 이용하면 direct product때와 유사한 몇몇 성질들을 보일 수 있다. 예컨대 다음이 성립한다.
 
 ::: 명제 3
-$G_i$들이 group이고, $H_i$들이 $G_i$들의 normal subgroup이라 하면 $\prod^w H_i$들 또한 $\prod^w G_i$들의 normal subgroup이고 그 quotient group은 $\prod^w (G_i/H_i)$와 같다.
+$G_i$들이 group이고, $H_i$들이 $G_i$들의 normal subgroup이라 하면 $\prod^w H_i$ 또한 $\prod^w G_i$의 normal subgroup이고 그 quotient group은 $\prod^w (G_i/H_i)$와 같다.
 :::
 ::: 증명
 Canonical homomorphism들 $p_i:G_i\rightarrow G_i/H_i$를 생각하자. 임의의 $x\in\prod^wG_i$에 대하여 $\bigl(p_i(\pr_ix)\bigr)_{i\in I}$는 유한개의 $i$를 제외하면 모두 항등원이므로 $\prod^w(G_i/H_i)$의 원소이고, 이렇게 얻어지는 함수 $p:\prod^wG_i\rightarrow\prod^w(G_i/H_i)$는 각 성분에서 $p_i$가 homomorphism이므로 homomorphism이다.

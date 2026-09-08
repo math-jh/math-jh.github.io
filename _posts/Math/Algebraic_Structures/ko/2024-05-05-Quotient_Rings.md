@@ -88,7 +88,7 @@ $$\pi(\alpha x)=\pi(\alpha)\pi(x)\in\bar{\mathfrak{b}}$$
 
 $$\pi(\alpha)\pi(x)=\pi(\alpha x)\in\pi(\mathfrak{b})$$
 
-이므로 이로부터 $\bar{\mathfrak{b}}$가 왼쪽에서의 곱셈에 대해 닫혀있음을 확인할 수 있다. 오른쪽에서 곱하는 경우도 같은 방식으로 보일 수 있으며, 따라서 이들은 two-sided ideal이다.
+이므로 이로부터 $\pi(\mathfrak{b})$가 왼쪽에서의 곱셈에 대해 닫혀있음을 확인할 수 있다. 오른쪽에서 곱하는 경우도 같은 방식으로 보일 수 있으며, 따라서 이들은 two-sided ideal이다.
 :::
 
 ---
