@@ -15,11 +15,11 @@ translation_source: kimi-cli
 last_polished_at: 2026-09-08T07:15:04+00:00
 translation_polish_source: antigravity-gemini-3.8-flash-high
 ---
-Previously, we verified in [§Direct Product of Groups](/en/math/algebraic_structures/direct_products) that arbitrary products exist in $\Grp$, and in [§Group Homomorphisms](/en/math/algebraic_structures/group_homomorphisms) that every morphism in $\Grp$ has an equalizer. Hence, by the argument following [[Category Theory] §Limits, ⁋Example 7](/en/math/category_theory/limits#ex7), $\Grp$ is a complete category. 
+Previously, we verified in [§Direct Product of Groups](/en/math/algebraic_structures/direct_products){: data-relation="required" } that arbitrary products exist in $\Grp$, and in [§Group Homomorphisms](/en/math/algebraic_structures/group_homomorphisms){: data-relation="weak" } that every morphism in $\Grp$ has an equalizer. Hence, by the argument following [[Category Theory] §Limits, ⁋Example 7](/en/math/category_theory/limits#ex7), $\Grp$ is a complete category. 
 
-On the other hand, every morphism in $\Grp$ has a coequalizer. ([§Group Isomorphisms, ⁋Proposition 8](/en/math/algebraic_structures/isomorphism_theorems#prop8)) Therefore, if $\Grp$ has arbitrary coproducts, $\Grp$ would be a cocomplete category, and hence a bicomplete category. 
+On the other hand, every morphism in $\Grp$ has a coequalizer. ([§Group Isomorphisms, ⁋Proposition 8](/en/math/algebraic_structures/isomorphism_theorems#prop8){: data-relation="weak" }) Therefore, if $\Grp$ has arbitrary coproducts, $\Grp$ would be a cocomplete category, and hence a bicomplete category. 
 
-However, as in [§Direct Product of Groups, ⁋Lemma 1](/en/math/algebraic_structures/direct_products#lem1), finding an obvious way to endow the coproduct in $\Set$, $\coprod G_i$, with a group structure seems difficult. ([\[Set Theory\] §Sum of Sets, ⁋Proposition 5](/en/math/set_theory/sum_of_sets#prop5)) 
+However, as in [§Direct Product of Groups, ⁋Lemma 1](/en/math/algebraic_structures/direct_products#lem1){: data-relation="weak" }, finding an obvious way to endow the coproduct in $\Set$, $\coprod G_i$, with a group structure seems difficult. ([\[Set Theory\] §Sum of Sets, ⁋Proposition 5](/en/math/set_theory/sum_of_sets#prop5){: data-relation="weak" }) 
 
 Instead, we look for the answer inside the product $\prod G_i$, whose existence is already known. By viewing each $G_i$ as a subgroup of $\prod G_i$ and considering the subgroup they generate together, in this post we call the group obtained in this way the weak direct product and verify its universal property.
 
@@ -90,7 +90,7 @@ The condition imposed on the $f_i$,
 
 > for any $i\neq j$, if $x\in G_i$ and $y\in G_j$, then $f_i(x)f_j(y)=f_j(y)f_i(x)$
 
-is a condition that inevitably had to arise, because these conditions are precisely those satisfied by the $\iota_i$. Because of this, [Theorem 2](#thm2) is the answer to our question only for abelian groups.
+is a condition that inevitably had to arise, because these conditions are precisely those satisfied by the $\iota_i$. Because of this, [Theorem 2](#thm2){: data-relation="required" } is the answer to our question only for abelian groups.
 
 Using the universal property of the weak direct product, one can show several properties similar to those for the direct product. For example, the following holds.
 
@@ -100,7 +100,7 @@ If the $G_i$ are groups and the $H_i$ are normal subgroups of the $G_i$, then $\
 ::: Proof
 Consider the canonical homomorphisms $p_i:G_i\rightarrow G_i/H_i$. For any $x\in\prod^wG_i$, the element $\bigl(p_i(\pr_ix)\bigr)_{i\in I}$ is the identity except for finitely many $i$, so it is an element of $\prod^w(G_i/H_i)$, and the map $p:\prod^wG_i\rightarrow\prod^w(G_i/H_i)$ obtained in this way is a homomorphism since each $p_i$ is a homomorphism on each component.
 
-Given an element of $\prod^w(G_i/H_i)$, $y$, at indices where $\pr_iy$ is the identity, for such $i$ we choose $e$ as the representative, and for the remaining finitely many $i$ we choose arbitrary representatives to obtain an element of $\prod^wG_i$; hence $p$ is surjective. Also, $p(x)$ being the identity is equivalent to having for every $i$ that $\pr_ix\in H_i$, so $\ker p=\prod^wH_i$. Therefore, by [§Group Isomorphisms, ⁋Lemma 1](/en/math/algebraic_structures/isomorphism_theorems#lem1), $\prod^wH_i$ is a normal subgroup of $\prod^wG_i$, and by [§Group Isomorphisms, ⁋Theorem 2](/en/math/algebraic_structures/isomorphism_theorems#thm2), the identity
+Given an element of $\prod^w(G_i/H_i)$, $y$, at indices where $\pr_iy$ is the identity, for such $i$ we choose $e$ as the representative, and for the remaining finitely many $i$ we choose arbitrary representatives to obtain an element of $\prod^wG_i$; hence $p$ is surjective. Also, $p(x)$ being the identity is equivalent to having for every $i$ that $\pr_ix\in H_i$, so $\ker p=\prod^wH_i$. Therefore, by [§Group Isomorphisms, ⁋Lemma 1](/en/math/algebraic_structures/isomorphism_theorems#lem1){: data-relation="required" }, $\prod^wH_i$ is a normal subgroup of $\prod^wG_i$, and by [§Group Isomorphisms, ⁋Theorem 2](/en/math/algebraic_structures/isomorphism_theorems#thm2){: data-relation="required" }, the identity
 
 $$\biggl({\prod_{i\in I}}^wG_i\biggr)\bigg/\biggl({\prod_{i\in I}}^wH_i\biggr)\cong{\prod_{i\in I}}^w(G_i/H_i)$$
 
@@ -117,7 +117,7 @@ We also define the following.
 In the situation above, if $\iota$ is an isomorphism, we say that $G$ is the *internal weak direct product* of the $H_i$. 
 :::
 
-Considering the form of the homomorphism $f$ constructed in [Theorem 2](#thm2), one can verify that $G$ being the internal weak direct product of the $H_i$ is equivalent to the condition
+Considering the form of the homomorphism $f$ constructed in [Theorem 2](#thm2){: data-relation="required" }, one can verify that $G$ being the internal weak direct product of the $H_i$ is equivalent to the condition
 
 > any $x\in G$ can be uniquely expressed, with $y_i\in H_i$, as the product of a finitely supported family $(y_i)_{i\in I}$, $\prod y_i$.
 
@@ -136,7 +136,7 @@ First, condition 2 shows in particular that $H_i\cap H_j=\{e\}$ holds for every 
 
 $$x_ix_jx_i^{-1}x_j^{-1}=x_i\bigl(x_jx_i^{-1}x_j^{-1}\bigr)=\bigl(x_ix_jx_i^{-1}\bigr)x_j^{-1}\in H_i\cap H_j=\{e\}$$
 
-we see that the elements of $H_i$ and $H_j$ commute. Hence the inclusion homomorphisms $\iota_i$ induce $\iota$ properly as in [Theorem 2](#thm2).
+we see that the elements of $H_i$ and $H_j$ commute. Hence the inclusion homomorphisms $\iota_i$ induce $\iota$ properly as in [Theorem 2](#thm2){: data-relation="required" }.
 
 To show that $G$ is the internal weak direct product of the $H_i$, we must show that the $\iota$ induced in this way is an isomorphism. First, by condition 1, any $a\in G$ is obtained through *finite* operations of $\bigcup H_i$. Moreover, since the $H_i$ commute with each other, we can write $a$ as
 
