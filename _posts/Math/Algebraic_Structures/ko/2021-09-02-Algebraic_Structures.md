@@ -80,11 +80,11 @@ $$x\star y=y\star x$$
 
 $$\prod_{i\in I} (A_i\times A_i)\cong\left(\prod_{i\in I} A_i\right)\times\left(\prod_{i\in I}A_i\right)$$
 
-이므로 ([\[집합론\] §곱집합의 성질, ⁋명제 3](/ko/math/set_theory/property_of_products#prop3)), 함수
+이므로 ([\[집합론\] §곱집합의 성질, ⁋명제 3](/ko/math/set_theory/property_of_products#prop3){: data-relation="required" }), 함수
 
 $$\prod_{i\in I}\star_i:\prod_{i\in I} (A_i\times A_i) \rightarrow \prod_{i\in I} A_i$$
 
-를 $\left(\prod_{i\in I} A_i\right)\times\left(\prod_{i\in I}A_i\right)$에서 $\prod_{i\in I}A_i$로의 함수로 볼 수 있다. ([\[집합론\] §곱집합의 성질, ⁋정의 4](/ko/math/set_theory/property_of_products#def4)) 따라서 $\prod A_i$는 $\star=\prod\star_i$에 대해 마그마 구조를 갖는다. 이렇게 얻어지는 마그마 $(\prod A_i, \star)$를 *곱<sub>product magma</sub>*이라고 부른다. 
+를 $\left(\prod_{i\in I} A_i\right)\times\left(\prod_{i\in I}A_i\right)$에서 $\prod_{i\in I}A_i$로의 함수로 볼 수 있다. ([\[집합론\] §곱집합의 성질, ⁋정의 4](/ko/math/set_theory/property_of_products#def4){: data-relation="required" }) 따라서 $\prod A_i$는 $\star=\prod\star_i$에 대해 마그마 구조를 갖는다. 이렇게 얻어지는 마그마 $(\prod A_i, \star)$를 *곱<sub>product magma</sub>*이라고 부른다. 
 
 위의 두 diagram들을 모든 $i\in I$에 대하여 곱하면, 만일 $\star_i$들이 모두 commutative하거나, 모두 associative하다면 $\star$ 또한 그렇다는 것을 알 수 있다. 
 :::
@@ -118,7 +118,7 @@ $$(g\circ f)(x\star_1 y)=g(f(x\star_1y))=g(f(x)\star_2f(y))=g(f(x))\star_3g(f(y)
 이 성립한다.
 :::
 
-따라서 magma들을 대상으로, magma homomorphism을 morphism으로 갖는 cartesian monoidal category $\Magma$가 존재한다. ([\[범주론\] §모노이드 범주, ⁋정의 3](/ko/math/category_theory/monoidal_categories#def3))
+따라서 magma들을 대상으로, magma homomorphism을 morphism으로 갖는 cartesian monoidal category $\Magma$가 존재한다. ([\[범주론\] §모노이드 범주, ⁋정의 3](/ko/math/category_theory/monoidal_categories#def3){: data-relation="weak" })
 
 대수학에서는 $f$의 image를 $f(A)$ 대신 $\im f$와 같이 적는 것이 보통이다. 임의의 $w,z\in\im f$를 택하자. 그럼 어떤 $x,y\in A$가 존재하여 $w=f(x)$이고, $z=f(y)$이다. 이제
 
@@ -158,7 +158,7 @@ $$x\equiv x'\implies x\star a\equiv x'\star a$$
 
 물론 위의 식에서 $\equiv$는 항상 관계 $R$에 대한 것을 뜻한다.
 
-$R$이 동치관계라면 집합으로써 *quotient set* $A/R$이 잘 정의된다는 것은 이미 집합론에서 살펴본 적이 있다. ([\[집합론\] §동치관계, ⁋정의 4](/ko/math/set_theory/equivalence_relations#def4)) 집합 $A/R$ 위의 연산 $\tiny\char"2606$을 정의하기 위한 가장 자연스러운 시도는
+$R$이 동치관계라면 집합으로써 *quotient set* $A/R$이 잘 정의된다는 것은 이미 집합론에서 살펴본 적이 있다. ([\[집합론\] §동치관계, ⁋정의 4](/ko/math/set_theory/equivalence_relations#def4){: data-relation="required" }) 집합 $A/R$ 위의 연산 $\tiny\char"2606$을 정의하기 위한 가장 자연스러운 시도는
 
 $$[x]\mathbin{\tiny\char"2606}[y]=[x\star y]$$
 

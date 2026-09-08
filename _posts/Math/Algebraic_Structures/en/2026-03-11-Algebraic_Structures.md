@@ -82,11 +82,11 @@ Consider a family of magmas $(A_i, \star_i)_{i\in I}$. Then, since
 
 $$\prod_{i\in I} (A_i\times A_i)\cong\left(\prod_{i\in I} A_i\right)\times\left(\prod_{i\in I}A_i\right)$$
 
-([\[Set Theory\] §Properties of Products, ⁋Proposition 3](/en/math/set_theory/property_of_products#prop3)), the function
+([\[Set Theory\] §Properties of Products, ⁋Proposition 3](/en/math/set_theory/property_of_products#prop3){: data-relation="required" }), the function
 
 $$\prod_{i\in I}\star_i:\prod_{i\in I} (A_i\times A_i) \rightarrow \prod_{i\in I} A_i$$
 
-can be regarded as a function from $\left(\prod_{i\in I} A_i\right)\times\left(\prod_{i\in I}A_i\right)$ to $\prod_{i\in I}A_i$. ([\[Set Theory\] §Properties of Products, ⁋Definition 4](/en/math/set_theory/property_of_products#def4)) Therefore, $\prod A_i$ has a magma structure with respect to $\star=\prod\star_i$. The magma $(\prod A_i, \star)$ obtained in this way is called the *product magma*.
+can be regarded as a function from $\left(\prod_{i\in I} A_i\right)\times\left(\prod_{i\in I}A_i\right)$ to $\prod_{i\in I}A_i$. ([\[Set Theory\] §Properties of Products, ⁋Definition 4](/en/math/set_theory/property_of_products#def4){: data-relation="required" }) Therefore, $\prod A_i$ has a magma structure with respect to $\star=\prod\star_i$. The magma $(\prod A_i, \star)$ obtained in this way is called the *product magma*.
 
 Taking the product of the above two diagrams over all $i\in I$, we see that if the $\star_i$ are all commutative, or all associative, then $\star$ is as well.
 :::
@@ -120,7 +120,7 @@ $$(g\circ f)(x\star_1 y)=g(f(x\star_1y))=g(f(x)\star_2f(y))=g(f(x))\star_3g(f(y)
 holds.
 :::
 
-Therefore, there exists a cartesian monoidal category $\Magma$ whose objects are magmas and whose morphisms are magma homomorphisms. ([\[Category Theory\] §Monoidal Categories, ⁋Definition 3](/en/math/category_theory/monoidal_categories#def3))
+Therefore, there exists a cartesian monoidal category $\Magma$ whose objects are magmas and whose morphisms are magma homomorphisms. ([\[Category Theory\] §Monoidal Categories, ⁋Definition 3](/en/math/category_theory/monoidal_categories#def3){: data-relation="weak" })
 
 In algebra, it is customary to write the image of $f$, instead of $f(A)$, as $\im f$. Let us take arbitrary $w,z\in\im f$. Then there exist some $x,y\in A$ such that $w=f(x)$ and $z=f(y)$. Now
 
@@ -160,7 +160,7 @@ holds for all $a$, then $R$ is said to be *right compatible* with $\star$. An eq
 
 Of course, in the above equations, $\equiv$ always means with respect to the relation $R$.
 
-If $R$ is an equivalence relation, we have already seen in set theory that as a set the *quotient set* $A/R$ is well-defined. ([\[Set Theory\] §Equivalence Relations, ⁋Definition 4](/en/math/set_theory/equivalence_relations#def4)) On the set $A/R$, the most natural attempt to define an operation $\tiny\char"2606$ is
+If $R$ is an equivalence relation, we have already seen in set theory that as a set the *quotient set* $A/R$ is well-defined. ([\[Set Theory\] §Equivalence Relations, ⁋Definition 4](/en/math/set_theory/equivalence_relations#def4){: data-relation="required" }) On the set $A/R$, the most natural attempt to define an operation $\tiny\char"2606$ is
 
 $$[x]\mathbin{\tiny\char"2606}[y]=[x\star y].$$
 
