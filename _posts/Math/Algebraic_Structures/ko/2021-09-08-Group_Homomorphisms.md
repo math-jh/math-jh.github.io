@@ -15,7 +15,7 @@ weight: 4
 
 당분간 우리는 group의 성질들을 탐구한다. 따라서 group들 사이의 group homomorphism도 간단히 homomorphism이라고만 칭하기로 한다.
 
-[§대수적 구조, ⁋정의 6](/ko/math/algebraic_structures/algebraic_structures#def6)으로부터 (group) isomorphism 또한 정의할 수 있는데, 이 정의와 [\[집합론\] §함수들 사이의 연산, ⁋명제 5](/ko/math/set_theory/operation_of_functions#prop5)로부터 임의의 isomorphism은 반드시 전단사함수여야 함이 자명하다. 많은 경우에는 그 역 또한 성립한다.
+[§대수적 구조, ⁋정의 6](/ko/math/algebraic_structures/algebraic_structures#def6){: data-relation="required" }으로부터 (group) isomorphism 또한 정의할 수 있는데, 이 정의와 [\[집합론\] §함수들 사이의 연산, ⁋명제 5](/ko/math/set_theory/operation_of_functions#prop5){: data-relation="required" }로부터 임의의 isomorphism은 반드시 전단사함수여야 함이 자명하다. 많은 경우에는 그 역 또한 성립한다.
 
 ::: 명제 1
 임의의 magma homomorphism $f:A\rightarrow A'$가 isomorphism인 것은 $f$가 전단사인 것과 동치이다. 
@@ -51,18 +51,18 @@ $$\Eq(f,g)=\{x\in G\mid f(x)=g(x)\}$$
 은 $G$의 subgroup이다.
 :::
 ::: 증명
-만일 $x,y\in \Eq(f,g)$라면, [§반군, 모노이드, 군, ⁋정의 11](/ko/math/algebraic_structures/groups#def11) 직후 논증에 의하여 group들 사이의 monoid homomorphism은 역원을 보존하므로 
+만일 $x,y\in \Eq(f,g)$라면, [§반군, 모노이드, 군, ⁋정의 11](/ko/math/algebraic_structures/groups#def11){: data-relation="required" } 직후 논증에 의하여 group들 사이의 monoid homomorphism은 역원을 보존하므로 
 
 $$f(xy^{-1})=f(x)f(y)^{-1}=g(x)g(y)^{-1}=g(xy^{-1})$$
 
-이므로 $xy^{-1}\in\Eq(f,g)$이다. 또, [§반군, 모노이드, 군, ⁋정의 11](/ko/math/algebraic_structures/groups#def11) 이후에 우리는 group들 사이의 monoid homomorphism이 항등원을 보존한다는 것도 살펴보았고, $H$의 항등원은 유일하므로 $\Eq(f,g)$는 공집합이 아니다. 따라서 [§반군, 모노이드, 군, ⁋명제 15](/ko/math/algebraic_structures/groups#prop15)에 의해 원하는 결과를 얻는다. 
+이므로 $xy^{-1}\in\Eq(f,g)$이다. 또, [§반군, 모노이드, 군, ⁋정의 11](/ko/math/algebraic_structures/groups#def11){: data-relation="required" } 이후에 우리는 group들 사이의 monoid homomorphism이 항등원을 보존한다는 것도 살펴보았고, $H$의 항등원은 유일하므로 $\Eq(f,g)$는 공집합이 아니다. 따라서 [§반군, 모노이드, 군, ⁋명제 15](/ko/math/algebraic_structures/groups#prop15){: data-relation="required" }에 의해 원하는 결과를 얻는다. 
 :::
 
 이렇게 정의한 $\Eq(f,g)$에 대하여, inclusion $i:\Eq(f,g)\rightarrow G$는 다음과 같은 성질을 가진다.
 
 > 만일 group homomorphism $j:G' \rightarrow G$가 $f\circ j=g\circ j$를 만족한다면, 유일한 homomorphism $j': G' \rightarrow \Eq(f,g)$가 존재하여 $i\circ j'=j$이다.
 
-이는 정의에 의해 $j$의 image가 $\Eq(f,g)$에 포함되기 때문이다. 따라서 $\Grp$의 임의의 평행한 morphism의 쌍은 equalizer를 갖는다. ([\[범주론\] §극한, ⁋예시 7](/ko/math/category_theory/limits#ex7)) 사실 $\Grp$의 임의의 평행한 morphism의 쌍은 coequalizer 또한 갖지만, 이를 정의하기 위해서는 normal subgroup과 quotient group을 먼저 정의해야 한다. 
+이는 정의에 의해 $j$의 image가 $\Eq(f,g)$에 포함되기 때문이다. 따라서 $\Grp$의 임의의 평행한 morphism의 쌍은 equalizer를 갖는다. ([\[범주론\] §극한, ⁋예시 7](/ko/math/category_theory/limits#ex7){: data-relation="weak" }) 사실 $\Grp$의 임의의 평행한 morphism의 쌍은 coequalizer 또한 갖지만, 이를 정의하기 위해서는 normal subgroup과 quotient group을 먼저 정의해야 한다. 
 
 ## 준동형사상의 kernel과 image
 
@@ -98,13 +98,13 @@ Homomorphism $f:G\rightarrow G'$의 *kernel<sub>핵</sub>*을 집합 $f^{-1}(e')
 정의에 의해 $\ker f=\Eq(f,e)$이다.
 :::
 
-한편, 우리는 임의의 magma homomorphism $f:A\rightarrow A'$이 주어졌을 때, 그 image $\im f$이 $A'$의 부분마그마가 되는 것을 확인했다. ([§대수적 구조, ⁋정의 8](/ko/math/algebraic_structures/algebraic_structures#def8) 이전의 계산) 그러나 일반적으로 group의 부분마그마는 subgroup일 필요가 없으므로, 다음의 명제는 별도로 증명해야 한다. 
+한편, 우리는 임의의 magma homomorphism $f:A\rightarrow A'$이 주어졌을 때, 그 image $\im f$이 $A'$의 부분마그마가 되는 것을 확인했다. ([§대수적 구조, ⁋정의 8](/ko/math/algebraic_structures/algebraic_structures#def8){: data-relation="required" } 이전의 계산) 그러나 일반적으로 group의 부분마그마는 subgroup일 필요가 없으므로, 다음의 명제는 별도로 증명해야 한다. 
 
 ::: 명제 6
 임의의 homomorphism $f:G\rightarrow G'$에 대하여, $\im f$는 $G'$의 subgroup이다.
 :::
 ::: 증명
-$\im f$가 $G'$의 부분마그마인 것은 이미 알고 있으므로, [§반군, 모노이드, 군, ⁋명제 15](/ko/math/algebraic_structures/groups#prop15)를 이용하면 $\im f$가 역원을 취하는 것에 대해 닫혀있음만 보이면 된다. $y\in\im f$라 하고, $x\in G$가 $f(x)=y$를 만족한다 하자. 그럼
+$\im f$가 $G'$의 부분마그마인 것은 이미 알고 있으므로, [§반군, 모노이드, 군, ⁋명제 15](/ko/math/algebraic_structures/groups#prop15){: data-relation="required" }를 이용하면 $\im f$가 역원을 취하는 것에 대해 닫혀있음만 보이면 된다. $y\in\im f$라 하고, $x\in G$가 $f(x)=y$를 만족한다 하자. 그럼
 
 $$f(x^{-1})=f(x)^{-1}=y^{-1}$$
 
