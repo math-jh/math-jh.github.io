@@ -12,11 +12,11 @@ date: 2022-11-30
 weight: 5
 ---
 
-앞서 [§대수적 구조, §§몫구조](/ko/math/algebraic_structures/algebraic_structures#몫구조)에서 우리는 동치관계 $R$이 마그마 $A$의 연산과 compatible할 경우 그 quotient set $A/R$ 위에 자연스러운 방식으로 마그마 구조를 줄 수 있다는 것을 증명하였으며, 뿐만 아니라 [§반군, 모노이드, 군](/ko/math/algebraic_structures/groups)의 말미에서 우리는 $A$가 group일 경우, 이 방식으로 만들어진 마그마 $A/R$ 또한 group이 된다는 것을 살펴보았다. 이 때 group $A/R$을 *quotient group<sub>몫군</sub>*이라 부른다.
+앞서 [§대수적 구조, §§몫구조](/ko/math/algebraic_structures/algebraic_structures#몫구조){: data-relation="required" }에서 우리는 동치관계 $R$이 마그마 $A$의 연산과 compatible할 경우 그 quotient set $A/R$ 위에 자연스러운 방식으로 마그마 구조를 줄 수 있다는 것을 증명하였으며, 뿐만 아니라 [§반군, 모노이드, 군](/ko/math/algebraic_structures/groups){: data-relation="required" }의 말미에서 우리는 $A$가 group일 경우, 이 방식으로 만들어진 마그마 $A/R$ 또한 group이 된다는 것을 살펴보았다. 이 때 group $A/R$을 *quotient group<sub>몫군</sub>*이라 부른다.
 
 ## 정규부분군
 
-한편 [\[집합론\] §동치관계](/ko/math/set_theory/equivalence_relations)을 통해 우리는 다음 두 가지가 같다는 것을 안다.
+한편 [\[집합론\] §동치관계](/ko/math/set_theory/equivalence_relations){: data-relation="required" }을 통해 우리는 다음 두 가지가 같다는 것을 안다.
 
 집합 $G$에 동치관계 $R$을 주는 것 $\iff$ 집합 $G$의 분할 $(G_i)_{i\in I}$을 택하는 것
 {: .text-center}
@@ -29,7 +29,7 @@ weight: 5
 Quotient group $G/R$에 대하여, $[e]$는 $G$의 subgroup이다.
 :::
 ::: 증명
-$a,b\in [e]$라 하자. 즉 $a\sim e\sim b$이다. 이제 $R$은 $G$의 연산과 compatible하므로, $a\sim b$의 양 변의 오른쪽에 $b^{-1}$을 곱하여 $ab^{-1}\sim e$를 얻는다. 즉 $ab^{-1}\in[e]$이므로 [§반군, 모노이드, 군, ⁋명제 15](/ko/math/algebraic_structures/groups#prop15)에 의하여 $[e]$는 subgroup인 것을 안다.
+$a,b\in [e]$라 하자. 즉 $a\sim e\sim b$이다. 이제 $R$은 $G$의 연산과 compatible하므로, $a\sim b$의 양 변의 오른쪽에 $b^{-1}$을 곱하여 $ab^{-1}\sim e$를 얻는다. 즉 $ab^{-1}\in[e]$이므로 [§반군, 모노이드, 군, ⁋명제 15](/ko/math/algebraic_structures/groups#prop15){: data-relation="required" }에 의하여 $[e]$는 subgroup인 것을 안다.
 :::
 
 반대로 $G$의 임의의 subgroup $H$가 주어졌다 하자. 위의 증명의 $[e]$를 $H$로 바꾸어 다음의 관계를 정의할 수 있다.
@@ -64,7 +64,7 @@ Group $G$의 subgroup $H$가 *normal subgroup<sub>정규부분군</sub>*이라�
 
 한편, $g$를 임의로 택할 수 있으므로, $H$가 normal subgroup인 것은 임의의 $g$에 대하여 $gHg^{-1}=H$가 성립하는 것과 동치라는 것을 보일 수 있다. 위의 논의에 의하여, $G$의 normal subgroup $H$가 주어졌을 때 그에 해당하는 quotient group을 얻을 수 있다. 이 때 얻어지는 quotient group을 $G/H$로 적는다.
 
-[명제 1](#prop1)에서, 임의의 $a\in [e]$에 대하여 다음 식
+[명제 1](#prop1){: data-relation="required" }에서, 임의의 $a\in [e]$에 대하여 다음 식
 
 $$a\sim e\implies gag^{-1}\sim geg^{-1}=e$$
 

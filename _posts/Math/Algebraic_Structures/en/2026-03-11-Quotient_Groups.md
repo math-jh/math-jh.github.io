@@ -15,7 +15,7 @@ translation_source: kimi-cli
 last_polished_at: 2026-09-07T15:15:05+00:00
 translation_polish_source: antigravity-gemini-3.8-flash-high
 ---
-We previously proved in [§Algebraic Structures, §§Quotient Structures](/en/math/algebraic_structures/algebraic_structures#quotient-structures) that when an equivalence relation $R$ is compatible with the operation of a magma $A$, the quotient set $A/R$ can be endowed with a magma structure in a natural way; moreover, at the end of [§Semigroups, Monoids, and Groups](/en/math/algebraic_structures/groups), we saw that when $A$ is a group, the magma $A/R$ constructed in this way also becomes a group. In this case, the group $A/R$ is called a *quotient group*.
+We previously proved in [§Algebraic Structures, §§Quotient Structures](/en/math/algebraic_structures/algebraic_structures#quotient-structures){: data-relation="required" } that when an equivalence relation $R$ is compatible with the operation of a magma $A$, the quotient set $A/R$ can be endowed with a magma structure in a natural way; moreover, at the end of [§Semigroups, Monoids, and Groups](/en/math/algebraic_structures/groups){: data-relation="required" }, we saw that when $A$ is a group, the magma $A/R$ constructed in this way also becomes a group. In this case, the group $A/R$ is called a *quotient group*.
 
 ## Normal Subgroups
 
@@ -32,7 +32,7 @@ First, assume that $R$ is compatible with the operation of $G$. Then the element
 For a quotient group $G/R$, $[e]$ is a subgroup of $G$.
 :::
 ::: Proof
-Let $a,b\in [e]$. That is, $a\sim e\sim b$. Since $R$ is compatible with the operation of $G$, multiplying both sides of $a\sim b$ on the right by $b^{-1}$ gives $ab^{-1}\sim e$. That is, $ab^{-1}\in[e]$, so by [§Semigroups, Monoids, and Groups, ⁋Proposition 15](/en/math/algebraic_structures/groups#prop15) we know that $[e]$ is a subgroup.
+Let $a,b\in [e]$. That is, $a\sim e\sim b$. Since $R$ is compatible with the operation of $G$, multiplying both sides of $a\sim b$ on the right by $b^{-1}$ gives $ab^{-1}\sim e$. That is, $ab^{-1}\in[e]$, so by [§Semigroups, Monoids, and Groups, ⁋Proposition 15](/en/math/algebraic_structures/groups#prop15){: data-relation="required" } we know that $[e]$ is a subgroup.
 :::
 
 Conversely, for $G$, suppose an arbitrary subgroup $H$ is given. Replacing $[e]$ in the above proof with $H$, we can define the following relation.
@@ -67,7 +67,7 @@ For a group $G$, a subgroup $H$ is called a *normal subgroup* if for every $g\in
 
 Meanwhile, since $g$ can be chosen arbitrarily, one can show that $H$ being a normal subgroup is equivalent to having, for every $g$, $gHg^{-1}=H$. By the above discussion, for $G$, given a normal subgroup $H$, we obtain the corresponding quotient group. This quotient group is denoted $G/H$.
 
-From [Proposition 1](#prop1), for any $a\in [e]$, from the formula
+From [Proposition 1](#prop1){: data-relation="required" }, for any $a\in [e]$, from the formula
 
 $$a\sim e\implies gag^{-1}\sim geg^{-1}=e$$
 
