@@ -9,7 +9,7 @@ terms.yml 은 오염되면 바로잡기 어려우므로 **LLM 은 terms.yml 을 
 semantic_checks 비악화)를 통과해야만 원자적으로 쓴다. 실패는 글 단위
 격리(3회 → 7일 quarantine + notify 알림).
 
-틱마다 (cron :00/:30) 글 하나:
+틱마다 (cron 홀수 시각 :15) 글 하나:
   선정 (스크립트만, LLM 무관 — 매칭 없어도 로그 한 줄은 남긴다):
     0. 한 번도 안 돌린 글 (path 순)          — published:false 포함
     1. 마지막 검사 후 translation worker 가 재번역한 글 (재번역 = 한때
@@ -35,7 +35,7 @@ semantic_checks 비악화)를 통과해야만 원자적으로 쓴다. 실패는 
   push 는 autopush 몫). 텔레그램은 문제일 때만 — 3회 연속 실패 → 격리.
 
 사용: term_extract_worker.py [--dry-run] [--status] [--audit-letter X]
-cron: 0,30 * * * * cd .../scripts/term-extraction && python3 term_extract_worker.py >>term_extract_worker.log 2>&1
+cron: 15 1-23/2 * * * cd .../scripts/term-extraction && python3 term_extract_worker.py >>term_extract_worker.log 2>&1
 """
 from __future__ import annotations
 

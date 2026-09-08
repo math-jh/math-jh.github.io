@@ -17,6 +17,7 @@ require "fileutils"
 
 module GraphData
   LANGS = %w[ko en].freeze
+  RELATION_PRIORITY = { "weak" => 0, "forward" => 1, "required" => 2 }.freeze
   # 본문 내부의 다른 글 링크. content 가 렌더된 HTML 일 수도(href=), incremental
   # 빌드라 raw 마크다운(](/...))일 수도 있어 둘 다 잡는다. 한 글은 둘 중 한 형태뿐이라
   # 중복 카운트 없음.
@@ -24,6 +25,14 @@ module GraphData
     %r{href="(/(?:ko|en)/[A-Za-z0-9_\-/]+?)(?:#[^"]*)?"},
     %r{\]\((/(?:ko|en)/[A-Za-z0-9_\-/]+?)(?:#[^)\s]*)?\)}
   ].freeze
+
+  # 분류가 끝난 링크만 dependencies 그래프에 넣는다. 보통 post_write 시점의
+  # d.content 는 raw Markdown이지만 빌드 경로에 따라 렌더된 HTML일 수도 있으므로
+  # 두 표현을 모두 지원한다. 기존 graph-*.json의 추출 규칙과 산출물은 건드리지 않는다.
+  RAW_CLASSIFIED_LINK_RE = %r!\]\((/(?:ko|en)/[A-Za-z0-9_\-/]+?)(?:#[^)\s]*)?\)\{:[^}]*\bdata-relation=["'](required|weak|forward)["'][^}]*\}!.freeze
+  HTML_ANCHOR_RE = %r{<a\b[^>]*>}.freeze
+  HTML_HREF_RE = %r{\bhref=["'](/(?:ko|en)/[A-Za-z0-9_\-/]+?)(?:#[^"']*)?["']}.freeze
+  HTML_RELATION_RE = /\bdata-relation=["'](required|weak|forward)["']/.freeze
 
 
   module_function
@@ -153,6 +162,88 @@ module GraphData
     links = edges.map { |(s, t), w| { source: s, target: t, weight: w } }
     { nodes: nodes, links: links, families: families(site) }
   end
+
+  def classified_links(text)
+    found = []
+    text.to_s.scan(RAW_CLASSIFIED_LINK_RE) { |url, relation| found << [url, relation] }
+    text.to_s.scan(HTML_ANCHOR_RE) do |anchor|
+      href = anchor.match(HTML_HREF_RE)
+      relation = anchor.match(HTML_RELATION_RE)
+      found << [href[1], relation[1]] if href && relation
+    end
+    found
+  end
+
+  # Semantic dependency data for /<lang>/dependencies only.
+  #
+  # Aggregation happens twice. First, all citations from A to B are collapsed and
+  # required wins over forward/weak. Then semantic directions are assigned and
+  # reciprocal citations that reinforce the same prerequisite direction are merged.
+  def build_dependencies(site, lang)
+    hmap = hue_map(site)
+    fmap = family_map(site)
+    docs = site.posts.docs.select { |d| d.url.start_with?("/#{lang}/math/") }
+    by_url = {}
+    docs.each { |d| by_url[norm(d.url)] = true }
+
+    nodes = docs.map do |d|
+      cat = category_of(d)
+      {
+        id: norm(d.url),
+        title: (d.data["title"] || d.basename).to_s,
+        url: d.url,
+        category: cat,
+        weight: d.data["weight"]&.to_i,
+        hue: (hmap[cat] || 0),
+        family: (fmap[cat] || "misc"),
+        color: color_for(cat, hmap)
+      }
+    end
+
+    cited_pairs = {}
+    docs.each do |d|
+      src = norm(d.url)
+      classified_links(d.content).each do |raw_target, relation|
+        tgt = norm(raw_target)
+        next if tgt == src || !by_url.key?(tgt)
+
+        key = [src, tgt]
+        entry = (cited_pairs[key] ||= {
+          counts: Hash.new(0), weight: 0, relation: "weak"
+        })
+        entry[:counts][relation] += 1
+        entry[:weight] += 1
+        if RELATION_PRIORITY[relation] > RELATION_PRIORITY[entry[:relation]]
+          entry[:relation] = relation
+        end
+      end
+    end
+
+    directed = {}
+    cited_pairs.each do |(src, tgt), entry|
+      relation = entry[:relation]
+      edge_key = relation == "forward" ? [src, tgt] : [tgt, src]
+      edge = (directed[edge_key] ||= {
+        counts: Hash.new(0), weight: 0, relation: "weak"
+      })
+      entry[:counts].each { |kind, count| edge[:counts][kind] += count }
+      edge[:weight] += entry[:weight]
+      if RELATION_PRIORITY[relation] > RELATION_PRIORITY[edge[:relation]]
+        edge[:relation] = relation
+      end
+    end
+
+    links = directed.map do |(source, target), entry|
+      {
+        source: source,
+        target: target,
+        weight: entry[:weight],
+        relation: entry[:relation],
+        relations: entry[:counts]
+      }
+    end
+    { nodes: nodes, links: links, families: families(site), classified: true }
+  end
 end
 
 Jekyll::Hooks.register :site, :post_write do |site|
@@ -162,5 +253,7 @@ Jekyll::Hooks.register :site, :post_write do |site|
     next if data[:nodes].empty?
     FileUtils.mkdir_p(dir)
     File.write(File.join(dir, "graph-#{lang}.json"), JSON.generate(data))
+    dependency_data = GraphData.build_dependencies(site, lang)
+    File.write(File.join(dir, "dependencies-#{lang}.json"), JSON.generate(dependency_data))
   end
 end

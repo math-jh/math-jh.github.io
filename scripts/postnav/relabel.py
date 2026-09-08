@@ -70,8 +70,8 @@ DATA_DIR = "_data"
 # 도구를 못 쓰게 되면 안 되기 때문. RELABEL_LOCK_DIR은 테스트용 우회로.
 LOCK_DIR = Path(os.environ.get("RELABEL_LOCK_DIR", tempfile.gettempdir()))
 WORKER_LOCKS = (
-    ("translate-worker.lock", "pid", "translate_worker (번역, 매시 :15/:45)"),
-    ("term-extract-worker.lock", "flock", "term_extract_worker (용어 추출, 매시 :00/:30)"),
+    ("translate-worker.lock", "pid", "translate_worker (번역, 짝수 시각 :15)"),
+    ("term-extract-worker.lock", "flock", "term_extract_worker (용어 추출, 홀수 시각 :15)"),
     ("extract-terms.lock", "pid", "extract_terms (terms.yml 갱신)"),
 )
 

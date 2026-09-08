@@ -1,4 +1,5 @@
-/* Graph_page.js — 전역 의존성 그래프 페이지(/ko/graph, /en/graph).
+/* Graph_page.js — 전역 의존성 그래프 페이지(/ko/graph, /en/graph)와
+ * 분류 기반 학습 그래프(/ko/dependencies, /en/dependencies).
  *
  * 핸드오프 graphcard.js 포팅: 항상-다크 Brass 카드(force-graph 래퍼 + 툴바 + 팝업) +
  * 왼쪽 인덱스 패널(검색 · family 필터 · MOST CONNECTED · 카테고리 아코디언). 인덱스와
@@ -31,6 +32,98 @@
     return force;
   }
 
+  // required SCC를 한 층으로 축약한 뒤 forward를 순환 없는 소프트 제약으로
+  // 더한다. weight는 아직 연결이 적은 노드의 초기 열만 정하는 보조값이다.
+  function linearPositions(data) {
+    var nodes = data.nodes, byId = {}, reqAdj = {};
+    nodes.forEach(function (n) { byId[n.id] = n; reqAdj[n.id] = []; });
+    data.links.forEach(function (l) {
+      var e = endpoints(l);
+      if (l.relation === 'required' && reqAdj[e[0]]) reqAdj[e[0]].push(e[1]);
+    });
+
+    var serial = 0, stack = [], onStack = {}, index = {}, low = {}, compOf = {}, comps = [];
+    function visit(id) {
+      index[id] = serial; low[id] = serial; serial += 1;
+      stack.push(id); onStack[id] = true;
+      (reqAdj[id] || []).forEach(function (next) {
+        if (index[next] === undefined) { visit(next); low[id] = Math.min(low[id], low[next]); }
+        else if (onStack[next]) low[id] = Math.min(low[id], index[next]);
+      });
+      if (low[id] !== index[id]) return;
+      var comp = [], member;
+      do {
+        member = stack.pop(); onStack[member] = false;
+        compOf[member] = comps.length; comp.push(member);
+      } while (member !== id);
+      comps.push(comp);
+    }
+    nodes.forEach(function (n) { if (index[n.id] === undefined) visit(n.id); });
+
+    var adj = comps.map(function () { return new Set(); });
+    function addEdge(a, b) { if (a !== b) adj[a].add(b); }
+    data.links.forEach(function (l) {
+      if (l.relation !== 'required') return;
+      var e = endpoints(l); addEdge(compOf[e[0]], compOf[e[1]]);
+    });
+    function reaches(from, target) {
+      var todo = [from], seen = new Set();
+      while (todo.length) {
+        var here = todo.pop();
+        if (here === target) return true;
+        if (seen.has(here)) continue;
+        seen.add(here); adj[here].forEach(function (next) { todo.push(next); });
+      }
+      return false;
+    }
+    data.links.filter(function (l) { return l.relation === 'forward'; })
+      .sort(function (a, b) { return lid(a).localeCompare(lid(b)); })
+      .forEach(function (l) {
+        var e = endpoints(l), a = compOf[e[0]], b = compOf[e[1]];
+        if (a !== b && !reaches(b, a)) addEdge(a, b);
+      });
+
+    var indeg = comps.map(function () { return 0; });
+    adj.forEach(function (nexts) { nexts.forEach(function (v) { indeg[v] += 1; }); });
+    var base = comps.map(function (members) {
+      return members.reduce(function (best, id) {
+        var weight = Number(byId[id].weight);
+        return Math.max(best, isFinite(weight) && weight > 0 ? weight - 1 : 0);
+      }, 0);
+    });
+    var rank = base.slice();
+    var queue = comps.map(function (_, i) { return i; }).filter(function (i) { return indeg[i] === 0; });
+    queue.sort(function (a, b) { return base[a] - base[b]; });
+    while (queue.length) {
+      var current = queue.shift();
+      adj[current].forEach(function (next) {
+        rank[next] = Math.max(rank[next], rank[current] + 1);
+        indeg[next] -= 1;
+        if (indeg[next] === 0) { queue.push(next); queue.sort(function (a, b) { return rank[a] - rank[b]; }); }
+      });
+    }
+
+    var used = Array.from(new Set(rank)).sort(function (a, b) { return a - b; });
+    var compressed = {}; used.forEach(function (value, i) { compressed[value] = i; });
+    var layers = {};
+    nodes.forEach(function (n) {
+      var r = compressed[rank[compOf[n.id]]];
+      (layers[r] = layers[r] || []).push(n);
+    });
+    var positions = {};
+    Object.keys(layers).forEach(function (rawRank) {
+      var layer = layers[rawRank];
+      layer.sort(function (a, b) {
+        return (a.category || '').localeCompare(b.category || '') ||
+          (Number(a.weight) || 0) - (Number(b.weight) || 0) || a.title.localeCompare(b.title);
+      });
+      layer.forEach(function (n, i) {
+        positions[n.id] = { x: Number(rawRank) * 175, y: (i - (layer.length - 1) / 2) * 52 };
+      });
+    });
+    return positions;
+  }
+
   /* 필터 칩(family) 정의는 그래프 JSON 이 실어 온다 (_data/categories.yml 의
      families → _plugins/graph_data.rb). 예전엔 여기 상수로 한 벌 더 있었고, JSON 에만
      있는 family 는 칩이 없어 노드가 회색(misc)으로 떨어졌다. 아래는 옛 JSON 을 위한
@@ -46,6 +139,8 @@
   var ICON = {
     search: '<svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><circle cx="7" cy="7" r="4.2" fill="none" stroke="currentColor" stroke-width="1.4"/><line x1="10.2" y1="10.2" x2="14" y2="14" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>',
     caret: '<svg class="gi-caret" viewBox="0 0 16 16" width="9" height="9" aria-hidden="true"><path d="M5 3l6 5-6 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+    tree: '<svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path d="M3 3v10M3 5h4c2.2 0 2.2-2 4.5-2H13M3 11h4c2.2 0 2.2 2 4.5 2H13" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><circle cx="3" cy="3" r="1.4" fill="currentColor"/><circle cx="13" cy="3" r="1.4" fill="currentColor"/><circle cx="13" cy="13" r="1.4" fill="currentColor"/></svg>',
+    force: '<svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path d="M3.2 4.1l4.4 3.3 5.1-3M7.6 7.4l-2 5M7.6 7.4l5.2 4.3" fill="none" stroke="currentColor" stroke-width="1.2"/><circle cx="3" cy="4" r="1.7" fill="currentColor"/><circle cx="12.8" cy="3.9" r="1.7" fill="currentColor"/><circle cx="7.6" cy="7.5" r="1.7" fill="currentColor"/><circle cx="5.5" cy="12.7" r="1.7" fill="currentColor"/><circle cx="12.9" cy="11.8" r="1.7" fill="currentColor"/></svg>',
     fit: '<svg viewBox="0 0 16 16" width="15" height="15"><path d="M2 5.5V2.5h3M14 5.5V2.5h-3M2 10.5v3h3M14 10.5v3h-3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>',
     reset: '<svg viewBox="0 0 16 16" width="15" height="15"><path d="M13 8a5 5 0 1 1-1.6-3.7M13 2.2V5h-2.8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>'
   };
@@ -69,7 +164,10 @@
     });
     function radius(n) { return Math.sqrt(2.0 + (deg[n.id] || 0) * 0.7) * 2.95; }
     var labelTop = Math.max(6, Math.round(data.nodes.length * 0.04));
-    var hubSet = new Set(data.nodes.slice()
+    var hubCandidates = data.classified
+      ? data.nodes.filter(function (n) { return (deg[n.id] || 0) > 0; })
+      : data.nodes.slice();
+    var hubSet = new Set(hubCandidates
       .sort(function (a, b) { return (deg[b.id] || 0) - (deg[a.id] || 0); })
       .slice(0, labelTop).map(function (n) { return n.id; }));
 
@@ -102,7 +200,7 @@
     }
     function refocus() { focusOn(hovered || selected); }
 
-    // DOM: canvas + toolbar(fit/reset) + popup (검색/범례 없음)
+    // DOM: canvas + toolbar(layout/fit/reset) + popup (검색/범례 없음)
     stage.innerHTML = '';
     var canvasWrap = document.createElement('div');
     canvasWrap.className = 'gc-canvas';
@@ -110,7 +208,9 @@
 
     var top = document.createElement('div');
     top.className = 'gc-top';
-    top.innerHTML =
+    top.innerHTML = (cfg.layoutToggle
+      ? '<button class="gc-btn" data-act="layout" aria-pressed="false" title="' + cfg.linearLabel + '">' + ICON.tree + '</button>'
+      : '') +
       '<button class="gc-btn" data-act="fit" title="Zoom to fit">' + ICON.fit + '</button>' +
       '<button class="gc-btn" data-act="reset" title="Reset view">' + ICON.reset + '</button>';
     stage.appendChild(top);
@@ -189,7 +289,16 @@
       }
       var e = endpoints(l);
       var on = passesFilter(byId[e[0]]) && passesFilter(byId[e[1]]) && !hlLinks.size;
-      return on ? 'rgba(' + cfg.link + ',0.36)' : 'rgba(' + cfg.link + ',0.05)';
+      if (!on) return 'rgba(' + cfg.link + ',0.05)';
+      if (l.relation === 'weak') return 'rgba(' + cfg.link + ',0.2)';
+      if (l.relation === 'forward') return 'rgba(' + cfg.link + ',0.3)';
+      if (l.relation === 'required') return 'rgba(' + cfg.link + ',0.44)';
+      return 'rgba(' + cfg.link + ',0.36)';
+    }
+    function linkDash(l) {
+      if (l.relation === 'weak') return [2, 5];
+      if (l.relation === 'forward') return [9, 5];
+      return [];
     }
 
     var graph = ForceGraph()(canvasWrap)
@@ -203,8 +312,13 @@
       .nodeCanvasObject(draw)
       .nodePointerAreaPaint(pointerArea)
       .linkColor(linkColor)
-      .linkWidth(function (l) { return hlLinks.has(lid(l)) ? 2.4 : 1; })
-      .linkDirectionalArrowLength(10)
+      .linkWidth(function (l) {
+        if (hlLinks.has(lid(l))) return 2.4;
+        if (l.relation === 'required') return 1.2;
+        if (l.relation === 'weak') return 0.85;
+        return 1;
+      })
+      .linkDirectionalArrowLength(15)
       .linkDirectionalArrowRelPos(0.45)
       .linkDirectionalArrowColor(function (l) { return linkColor(l); })
       .linkCurvature(function (l) {
@@ -220,6 +334,9 @@
       .onRenderFramePost(placePop)
       .graphData(data);
 
+    // 기존 graph 페이지는 force-graph의 기본 실선을 그대로 사용한다.
+    if (data.classified && graph.linkLineDash) graph.linkLineDash(linkDash);
+
     graph.d3VelocityDecay(0.34);
     graph.cooldownTicks(220);
     if (graph.d3Force('charge')) graph.d3Force('charge').strength(-260); // 반발 ↑
@@ -230,9 +347,41 @@
     var fitted = false;
     graph.onEngineStop(function () { if (!fitted) { graph.zoomToFit(0, 30); fitted = true; } });
 
+    var layoutMode = 'force';
+    function setLayout(mode, button) {
+      if (mode === layoutMode) return;
+      layoutMode = mode;
+      if (mode === 'linear') {
+        var positions = linearPositions(data);
+        data.nodes.forEach(function (n) {
+          n.__forceX = n.x; n.__forceY = n.y;
+          n.fx = positions[n.id].x; n.fy = positions[n.id].y;
+          n.x = n.fx; n.y = n.fy;
+        });
+        if (graph.enableNodeDrag) graph.enableNodeDrag(false);
+        button.innerHTML = ICON.force;
+        button.title = cfg.forceLabel;
+        button.setAttribute('aria-pressed', 'true');
+      } else {
+        data.nodes.forEach(function (n) {
+          delete n.fx; delete n.fy;
+          if (isFinite(n.__forceX)) n.x = n.__forceX;
+          if (isFinite(n.__forceY)) n.y = n.__forceY;
+        });
+        if (graph.enableNodeDrag) graph.enableNodeDrag(true);
+        button.innerHTML = ICON.tree;
+        button.title = cfg.linearLabel;
+        button.setAttribute('aria-pressed', 'false');
+        if (graph.d3ReheatSimulation) graph.d3ReheatSimulation();
+      }
+      hidePop();
+      window.setTimeout(function () { graph.zoomToFit(450, 30); }, 40);
+    }
+
     top.querySelectorAll('.gc-btn').forEach(function (b) {
       b.addEventListener('click', function () {
-        if (b.dataset.act === 'fit') { graph.zoomToFit(450, 30); }
+        if (b.dataset.act === 'layout') { setLayout(layoutMode === 'force' ? 'linear' : 'force', b); }
+        else if (b.dataset.act === 'fit') { graph.zoomToFit(450, 30); }
         else if (cfg.onReset) { cfg.onReset(); graph.zoomToFit(450, 30); }
         else { graph.zoomToFit(450, 30); }
       });
@@ -418,8 +567,10 @@
     var panel = document.getElementById('graph-index');
     if (!stage || !panel || typeof ForceGraph === 'undefined') return;
     var lang = stage.dataset.lang || 'ko';
+    var source = stage.dataset.graphSource || 'graph';
+    var layoutToggle = stage.dataset.layoutToggle === 'true';
 
-    fetch('/assets/data/graph-' + lang + '.json')
+    fetch('/assets/data/' + source + '-' + lang + '.json')
       .then(function (r) { return r.json(); })
       .then(function (data) {
         var cfg = {
@@ -428,7 +579,10 @@
           accentIn: '165,111,20', accentOut: '107,58,0',
           label: '174,168,150', labelHi: '240,198,116',
           font: '"MySansSerifFont", system-ui, sans-serif',
-          openLabel: lang === 'ko' ? '글로 이동 →' : 'Open post →'
+          openLabel: lang === 'ko' ? '글로 이동 →' : 'Open post →',
+          layoutToggle: layoutToggle,
+          linearLabel: lang === 'ko' ? '선형 학습 보기' : 'Linear learning view',
+          forceLabel: lang === 'ko' ? '힘 기반 그래프로 돌아가기' : 'Return to force-directed graph'
         };
         var fams = (data.families && data.families.length) ? data.families : FAMILIES_FALLBACK;
         var card = createGraphCard(stage, data, fams, cfg);
