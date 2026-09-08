@@ -73,7 +73,7 @@ $$(\alpha\beta)\cdot A=\{(\alpha\beta)\cdot a\mid a\in A\}=\{\alpha\cdot(\beta\c
 논의의 편의를 위해 다음과 같이 정의한다.
 
 ::: 정의 4
-Monoid $M$이 집합 $E$ 위에 left action을 정의할 때, $E$와 이 action을 통틀 (left) $M$-set이라 부른다. 
+Monoid $M$이 집합 $E$ 위에 left action을 정의할 때, $E$와 이 action을 통틀어 (left) $M$-set이라 부른다. 
 :::
 
 ## $M$-set homomorphism

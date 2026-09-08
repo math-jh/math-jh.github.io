@@ -459,8 +459,8 @@ A:
   ko: 알렉산드로프 콤팩트화
   primary: en
   defs:
-  - label: '[위상수학] §Compactness와 paracompactness'
-    url: /ko/math/topology/compactness
+  - label: '[위상수학] §국소 옹골공간과 일점 옹골화'
+    url: /ko/math/topology/locally_compact_spaces
 - id: algebra
   en: algebra
   ko: 대수
@@ -11505,8 +11505,8 @@ L:
   ko: 국소적으로 옹골
   primary: en
   defs:
-  - label: '[위상수학] §Compactness와 paracompactness'
-    url: /ko/math/topology/compactness
+  - label: '[위상수학] §국소 옹골공간과 일점 옹골화'
+    url: /ko/math/topology/locally_compact_spaces
   see:
   - label: Compact
     id: compact
@@ -11515,8 +11515,8 @@ L:
   ko: 국소적 옹골공간
   primary: en
   defs:
-  - label: '[위상수학] §Compactness와 paracompactness'
-    url: /ko/math/topology/compactness
+  - label: '[위상수학] §국소 옹골공간과 일점 옹골화'
+    url: /ko/math/topology/locally_compact_spaces
 - id: locally_connected
   en: locally connected
   ko: 국소연결
@@ -11539,8 +11539,8 @@ L:
   ko: $m$차원 국소 유클리드
   primary: en
   defs:
-  - label: '[위상수학] §Compactness와 paracompactness'
-    url: /ko/math/topology/compactness
+  - label: '[위상수학] §파라콤팩트 공간과 단위분할'
+    url: /ko/math/topology/paracompact_spaces
 - id: locally_finite
   en: locally finite
   ko: 국소적으로 유한
@@ -13375,8 +13375,8 @@ O:
   defs:
   - label: '[복소해석학] §복소수와 복소평면'
     url: /ko/math/complex_analysis/complex_numbers
-  - label: '[위상수학] §Compactness와 paracompactness'
-    url: /ko/math/topology/compactness
+  - label: '[위상수학] §국소 옹골공간과 일점 옹골화'
+    url: /ko/math/topology/locally_compact_spaces
   see:
   - label: Alexandroff compactification
     id: alexandroff_compactification
@@ -13481,8 +13481,8 @@ O:
   ko: 열린 세분
   primary: en
   defs:
-  - label: '[위상수학] §Compactness와 paracompactness'
-    url: /ko/math/topology/compactness
+  - label: '[위상수학] §파라콤팩트 공간과 단위분할'
+    url: /ko/math/topology/paracompact_spaces
   see:
   - label: Refinement
     id: refinement
@@ -13830,8 +13830,8 @@ P:
   ko: 파라콤팩트
   primary: en
   defs:
-  - label: '[위상수학] §Compactness와 paracompactness'
-    url: /ko/math/topology/compactness
+  - label: '[위상수학] §파라콤팩트 공간과 단위분할'
+    url: /ko/math/topology/paracompact_spaces
   see:
   - label: Locally compact
     id: locally_compact
@@ -13990,8 +13990,8 @@ P:
   ko: 단위분할
   primary: en
   defs:
-  - label: '[위상수학] §Compactness와 paracompactness'
-    url: /ko/math/topology/compactness
+  - label: '[위상수학] §파라콤팩트 공간과 단위분할'
+    url: /ko/math/topology/paracompact_spaces
   - label: '[미분다양체] §미분다양체'
     url: /ko/math/manifolds/smooth_manifolds
 - id: path
@@ -14264,8 +14264,8 @@ P:
   ko: 점별유한
   primary: en
   defs:
-  - label: '[위상수학] §Compactness와 paracompactness'
-    url: /ko/math/topology/compactness
+  - label: '[위상수학] §파라콤팩트 공간과 단위분할'
+    url: /ko/math/topology/paracompact_spaces
 - id: pointwise_convergence
   en: pointwise convergence
   ko: 점별수렴
@@ -15807,8 +15807,8 @@ R:
   defs:
   - label: '[해석학] §Riemann integral'
     url: /ko/math/analysis/riemann_integral
-  - label: '[위상수학] §Compactness와 paracompactness'
-    url: /ko/math/topology/compactness
+  - label: '[위상수학] §파라콤팩트 공간과 단위분할'
+    url: /ko/math/topology/paracompact_spaces
   - label: '[대수다양체] §층 코호몰로지'
     url: /ko/math/algebraic_varieties/sheaf_cohomology
 - id: reflection
@@ -18171,8 +18171,8 @@ S:
   ko: $(U_i)$에 종속된
   primary: en
   defs:
-  - label: '[위상수학] §Compactness와 paracompactness'
-    url: /ko/math/topology/compactness
+  - label: '[위상수학] §파라콤팩트 공간과 단위분할'
+    url: /ko/math/topology/paracompact_spaces
 - id: subrepresentation
   en: subrepresentation
   ko: 부분표현
@@ -18314,8 +18314,8 @@ S:
     url: /ko/math/linear_algebra/subspaces
   - label: '[대수적 구조] §가환군'
     url: /ko/math/algebraic_structures/abelian_groups
-  - label: '[위상수학] §Compactness와 paracompactness'
-    url: /ko/math/topology/compactness
+  - label: '[위상수학] §파라콤팩트 공간과 단위분할'
+    url: /ko/math/topology/paracompact_spaces
   - label: '[미분다양체] §적분'
     url: /ko/math/manifolds/integration
   - label: '[스킴] §스킴'
@@ -18965,8 +18965,8 @@ T:
   ko: $m$차원 위상다양체
   primary: en
   defs:
-  - label: '[위상수학] §Compactness와 paracompactness'
-    url: /ko/math/topology/compactness
+  - label: '[위상수학] §파라콤팩트 공간과 단위분할'
+    url: /ko/math/topology/paracompact_spaces
 - id: topological_space
   en: topological space
   ko: 위상공간
