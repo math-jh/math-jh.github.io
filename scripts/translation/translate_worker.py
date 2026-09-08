@@ -432,14 +432,18 @@ def _post_title(path: Path) -> str:
         return path.stem
 
 
-# 제목은 `cron(translate): …` 로 시작한다 — cron 산출물 커밋은 전부 `cron(<워커>):`
-# 접두사를 달아, git log 만 봐도 어느 워커가 낸 것인지 보이게 하는 규약이다
-# (scripts/lib/cron_commit.py 를 쓰는 다른 워커들과 같은 형식).
-_COMMIT_PREFIX = "cron(translate): "
-_COMMIT_SUBJECT = {
-    "pending": "EN 신규 번역",       # Phase 1: EN 이 아예 없던 글
-    "drift":   "EN 재번역(drift)",   # Phase 2: KO 가 바뀌어 `drift_needed` 가 걸린 글
-    "polish":  "EN 원문대조 폴리싱",  # Phase 3: polish-source tag마다 1회
+# 제목은 `[Cron] Translation (…)`, 글 제목은 본문 — cron 산출물 커밋의 공통 규약이다
+# (scripts/lib/cron_commit.py 의 message() 와 같은 형식을 여기서 직접 만든다. 이
+# 워커는 KO·EN 을 서로 다른 마커로 따로 커밋해야 해서 그 헬퍼를 쓰지 않는다).
+_COMMIT_TITLE = {
+    "pending": "Translation (new)",        # Phase 1: EN 이 아예 없던 글
+    "drift":   "Translation (drift)",      # Phase 2: KO 가 바뀌어 `drift_needed` 가 걸린 글
+    "polish":  "Translation (polishing)",  # Phase 3: polish-source tag마다 1회
+}
+_COMMIT_DETAIL = {
+    "pending": "EN 신규 번역",
+    "drift":   "EN 재번역",
+    "polish":  "EN 원문대조 폴리싱",
 }
 
 
@@ -478,21 +482,22 @@ def commit_translation(ko_path: Path, en_path: Path, reason: str) -> None:
         if reason == "drift" and out.strip():
             _git("add", "--", rel_ko)
             rc, _, err = _git("commit", "-m",
-                              _COMMIT_PREFIX
-                              + "재번역 완료된 글의 drift 플래그 소거 [lastmod-skip]")
+                              "[Cron] Translation (flag) [lastmod-skip]\n\n"
+                              f"drift 플래그 소거: {title}\n")
             if rc != 0:
                 log(f"commit(ko) 실패: {err.strip()[:200]}")
                 _git("reset", "-q", "--", rel_ko)
 
         # 2) EN: 번역 결과 (content)
-        subject = _COMMIT_PREFIX + _COMMIT_SUBJECT.get(reason, f"EN 재번역({reason})")
+        subject = f"[Cron] {_COMMIT_TITLE.get(reason, 'Translation')}"
+        detail = f"{_COMMIT_DETAIL.get(reason, f'EN 재번역({reason})')}: {title}"
         _git("add", "--", rel_en)
-        rc, _, err = _git("commit", "-m", f"{subject}: {title}")
+        rc, _, err = _git("commit", "-m", f"{subject}\n\n{detail}\n")
         if rc != 0:
             log(f"commit(en) 실패: {err.strip()[:200]}")
             _git("reset", "-q", "--", rel_en)
             return
-        log(f"committed: {subject}: {title}")
+        log(f"committed: {subject} — {detail}")
     finally:
         os.close(fd)
 

@@ -419,7 +419,7 @@ def run(path: Path, fix: bool, notify: bool) -> int:
             # 자기 수정분은 자기 이름으로 커밋한다 (push 는 autopush). --path 로
             # 다른 파일을 검사하는 테스트 실행은 커밋하지 않는다.
             if path.resolve() == TERMS_PATH.resolve():
-                commit_outputs("terms-lint", [str(TERMS_PATH.relative_to(BLOG_ROOT))],
+                commit_outputs("Terms (lint)", [str(TERMS_PATH.relative_to(BLOG_ROOT))],
                                f"라벨 {n_lbl}·케이스 {n_case}·그룹 {n_grp}·"
                                f"정렬 {n_ord}·defs {n_def}건 자동 수정", log=log)
             issues = (semantic_checks(nd, pmap, ko_by_slug) + check_order(new)

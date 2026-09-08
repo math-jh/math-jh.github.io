@@ -245,7 +245,8 @@ def _commit_pair(ko_path: Path, en_path: Path) -> tuple[bool, str]:
     title = tw._post_title(en_path)
     proc = subprocess.run(
         ["git", "commit", "--only", "-m",
-         f"cron(translate-followup): KO 수정 반영 및 EN 동기화: {title}",
+         "[Cron] Audit\n\n"
+         f"KO 수정 반영 및 EN 동기화: {title}\n",
          "--", rel_ko, rel_en],
         cwd=tw.BLOG_ROOT, capture_output=True, text=True, env=env,
     )

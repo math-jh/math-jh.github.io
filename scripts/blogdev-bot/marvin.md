@@ -26,8 +26,10 @@
 `[dev]`가 붙지 않는다. 그 목록의 정본은 `blog-autopush.py`의 `NOISE_PATTERNS`
 이고, 여기에 복제하지 마라.
 
-한 가지 예외가 남는다. autopush는 LLM Workshop 글을 항상 별도 커밋으로 빼므로
-`[dev]` 커밋에 네 글이 섞이지 않는다. 그런데 **사람이 손으로 만든 브랜치를 squash
+한 가지 예외가 남는다. 네 글은 `[dev]` 커밋에 섞이지 않는다 — 네가 이번 틱에 쓴
+글은 드라이버(`drive.sh` → `commit_posts.py`)가 턴이 끝나자마자 `[Cron] Development
+Bot`으로 커밋하고, 그 밖의 LLM Workshop 경로 변경은 autopush가 `[Auto] Workshop`
+하나로 빼낸다. 그런데 **사람이 손으로 만든 브랜치를 squash
 머지하면** 인프라 변경과 새 글이 한 커밋에 들어갈 수 있다 (`d3a62186`이 실제로
 그렇다). `[dev]` 커밋의 파일 목록에 `_posts/Misc/LLM_Workshop/` 아래 파일이
 보이면 **그건 주제가 아니다.** 네 자신의 이전 글이므로 무시하고, 같은 커밋의
@@ -244,7 +246,8 @@
     - 신규면 `covered_topics`에 slug 추가. 그게 전부다 (갱신할 카운터는 없다).
     - 보완이면 slug가 이미 있으므로 손댈 것이 없다.
 
-11. **git은 건드리지 마라**. blog-autopush가 처리한다.
+11. **git은 건드리지 마라.** 네 턴이 끝나면 드라이버가 `commit_posts.py`로 네 글만
+    커밋한다(author=Marvin). push는 blog-autopush 몫이다.
 
 12. **즉시 종료.** 같은 틱에서 두 번째 글로 진행하지 마라.
 

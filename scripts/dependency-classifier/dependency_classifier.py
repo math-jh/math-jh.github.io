@@ -453,8 +453,8 @@ def process_once(dry_run: bool = False) -> int:
         for path in paths:
             path.write_text(rendered[path], encoding="utf-8")
         committed = commit_outputs(
-            "dependency-classifier", rels,
-            f"classify {len(links)} links in {paths[0].stem}", log=log, repo=ROOT,
+            "Link Dependencies Classifier", rels,
+            f"{paths[0].stem} 링크 {len(links)}건 분류", log=log, repo=ROOT,
         )
         if not committed:
             # The targets were clean before this tick, so restoring them cannot

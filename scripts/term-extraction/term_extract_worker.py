@@ -31,7 +31,7 @@ semantic_checks 비악화)를 통과해야만 원자적으로 쓴다. 실패는 
     - 필수 필드: id(slugify_id 로 생성, LLM id 불신)·en·ko·primary·defs 1+.
       ko 를 모르는 후보는 추가하지 않고 리뷰 파일로.
     - sees: 제안된 관련어 중 실존 항목만 (label 은 대상 항목에서 파생).
-  변경은 자기 이름으로 커밋한다 (scripts/lib/cron_commit.py — `cron(term-extract):`,
+  변경은 자기 이름으로 커밋한다 (scripts/lib/cron_commit.py — `[Cron] Terms (…)`,
   push 는 autopush 몫). 텔레그램은 문제일 때만 — 3회 연속 실패 → 격리.
 
 사용: term_extract_worker.py [--dry-run] [--status] [--audit-letter X]
@@ -913,7 +913,7 @@ def main() -> int:
         if not args.dry_run:
             save_state(state)
             if ch:
-                commit_outputs("term-extract", [REL_TERMS],
+                commit_outputs("Terms (audit)", [REL_TERMS],
                                f"see 링크 {len(ch)}건 (감사 {letter})", log=log)
         return 0
 
@@ -934,7 +934,7 @@ def main() -> int:
                 state["audit"]["last_date"] = today
                 save_state(state)
                 if ch:
-                    commit_outputs("term-extract", [REL_TERMS],
+                    commit_outputs("Terms (audit)", [REL_TERMS],
                                    f"see 링크 {len(ch)}건 (감사 {letter})", log=log)
         else:
             # 할 일이 없어도 한 줄은 남긴다 — 대시보드가 이 로그의 mtime 으로
@@ -979,8 +979,8 @@ def main() -> int:
             paths = [REL_TERMS, REL_REVIEW] + ([] if post_was_dirty else [rel])
             if post_was_dirty:
                 log(f"편집 중인 글이라 커밋에서 제외: {rel} (autopush 가 가져간다)")
-            commit_outputs("term-extract", paths,
-                           f"{Path(rel).stem} {len(changes)}건", log=log)
+            commit_outputs("Terms (extract)", paths,
+                           f"{Path(rel).stem} 병기 {len(changes)}건", log=log)
     else:
         log(f"변경 없음: {rel}")
     return 0

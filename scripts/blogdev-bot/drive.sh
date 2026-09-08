@@ -27,6 +27,11 @@ esac
 
 log "launching claude -p (sonnet) for marvin"
 cd "$BLOG_ROOT"
+# 모델을 띄우기 전 워크숍 경로의 dirty 목록. 실행 후 이 목록에 없는 것만 봇
+# 산출물로 보고 커밋한다 — 사용자가 편집 중이던 글을 봇 커밋에 넣지 않는다.
+BEFORE_DIRTY="$(mktemp)"
+trap 'rm -f "$BEFORE_DIRTY"' EXIT
+"$HERE/commit_posts.py" --snapshot "$BEFORE_DIRTY"
 # 2026-08-08: ~/.claude/settings.json 에 advisorModel(fable)이 전역 기본값으로
 # 들어갔다. 부착 조건이 base_rank <= advisor_rank 라 sonnet(3) 세션인 marvin 도
 # fable(5) 상담이 붙는다. cron 잡은 research 파이프라인의 researcher 하나만
@@ -40,3 +45,8 @@ if ! timeout 2400 "$CLAUDE_BIN" -p --model sonnet \
   exit 1
 fi
 log "marvin turn complete"
+
+# 자기 산출물은 자기 이름(author=Marvin)으로 커밋한다. push 는 autopush 몫.
+"$HERE/commit_posts.py" --before "$BEFORE_DIRTY" 2>&1 | while read -r line; do
+  log "$line"
+done

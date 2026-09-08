@@ -5,7 +5,7 @@
   autopush 는 워킹트리에 남은 것을 전부 긁어 haiku 분류기에 넘긴다. 봇 산출물이
   거기 섞이면 (a) 분류기가 볼 diff 가 커지고 (translate_worker 가 자기 EN 을
   직접 커밋하게 된 것도 이 이유다 — 2026-07-14 에 EN 재번역 몇 편이 분류기 예산을
-  넘겨 autopush 가 멈췄다) (b) 여러 cron 의 산출물이 "Auto-mechanical: N file(s)"
+  넘겨 autopush 가 멈췄다) (b) 여러 cron 의 산출물이 "[Auto] Mechanical (N files)"
   한 커밋에 묶여 어느 cron 이 뭘 했는지 히스토리에서 사라진다.
 
   워커가 자기 파일만 자기 이름으로 커밋해 두면 autopush 는 그걸 건드리지 않는다 —
@@ -35,17 +35,33 @@ LASTMOD_SKIP = "[lastmod-skip]"
 # author 는 사용자, 커밋 행위자는 Claude — autopush·translate_worker 와 같은 정체성
 # 체계(2026-07-22). autopush 의 defer 판정이 **committer 이름으로** cron 산출물을
 # 가리므로, 이 값을 바꾸면 defer 가 에러 없이 무력화된다 (대시보드 sec_git 의
-# auto/manual 구분도 같은 규약을 쓴다).
+# auto/manual 구분도 같은 규약을 쓴다). author 만 다른 워커가 있다 — blogdev-bot 의
+# 글은 Marvin 이 쓴 것이므로 commit_outputs(author=...) 로 덮는다.
 IDENTITY = {
     "GIT_AUTHOR_NAME": "Junhyeok Kim", "GIT_AUTHOR_EMAIL": "kujuburi@icloud.com",
     "GIT_COMMITTER_NAME": "Claude", "GIT_COMMITTER_EMAIL": "noreply@anthropic.com",
 }
+MARVIN_AUTHOR = {"GIT_AUTHOR_NAME": "Marvin", "GIT_AUTHOR_EMAIL": "marvin@math-jh.com"}
 
 
-def _git(repo: Path, *args: str) -> tuple[int, str, str]:
+def _git(repo: Path, *args: str, author: dict[str, str] | None = None) -> tuple[int, str, str]:
     p = subprocess.run(["git", *args], cwd=str(repo), capture_output=True,
-                       text=True, env={**os.environ, **IDENTITY})
+                       text=True, env={**os.environ, **IDENTITY, **(author or {})})
     return p.returncode, p.stdout, p.stderr
+
+
+def message(title: str, detail: str = "", *, marker: str | None = LASTMOD_SKIP) -> str:
+    """`[Cron] <title> <marker>` 한 줄 + 빈 줄 + 세부.
+
+    제목은 어느 크론인지만 밝히고 무엇을 했는지는 본문으로 내린다 — `git log
+    --oneline` 이 크론 소행으로 균일하게 보이고, 글 제목·건수 같은 매 커밋 다른
+    값은 본문에서 읽는다. 마커는 제목에 남긴다: 소비자(last_modified_git.rb)는
+    메시지 전체를 보지만, 사람이 훑을 때 제목에 있어야 보인다.
+    """
+    subject = f"[Cron] {title}".rstrip()
+    if marker:
+        subject += f" {marker}"
+    return f"{subject}\n\n{detail.strip()}\n" if detail.strip() else subject
 
 
 def dirty_paths(paths: Iterable[str], repo: Path = BLOG_ROOT) -> list[str]:
@@ -63,12 +79,13 @@ def dirty_paths(paths: Iterable[str], repo: Path = BLOG_ROOT) -> list[str]:
     return [rec[3:] for rec in out.split("\0") if len(rec) > 3]
 
 
-def commit_outputs(worker: str, paths: Sequence[str], summary: str, *,
+def commit_outputs(title: str, paths: Sequence[str], detail: str, *,
                    marker: str | None = LASTMOD_SKIP,
                    log: Callable[[str], None] | None = None,
                    repo: Path = BLOG_ROOT,
+                   author: dict[str, str] | None = None,
                    wait_sec: int = LOCK_WAIT_SEC) -> bool:
-    """<paths> 중 변경분을 `cron(<worker>): <summary> <marker>` 로 커밋한다.
+    """<paths> 중 변경분을 `[Cron] <title> <marker>` + 본문 <detail> 로 커밋한다.
 
     커밋했으면 True. 변경이 없거나 autopush 가 락을 쥐고 있으면 False 이며 이는
     실패가 아니다 — 파일은 워킹트리에 남고 다음 autopush 틱이 가져간다.
@@ -83,9 +100,7 @@ def commit_outputs(worker: str, paths: Sequence[str], summary: str, *,
     if not changed:
         return False
 
-    subject = f"cron({worker}): {summary}".rstrip()
-    if marker:
-        subject += f" {marker}"
+    msg = message(title, detail, marker=marker)
 
     fd = os.open(str(AUTOPUSH_LOCK), os.O_CREAT | os.O_RDWR)
     try:
@@ -109,12 +124,12 @@ def commit_outputs(worker: str, paths: Sequence[str], summary: str, *,
         if rc != 0:
             say(f"commit: git add 실패 — {err.strip()[:200]}")
             return False
-        rc, out, err = _git(repo, "commit", "-m", subject, "--", *changed)
+        rc, out, err = _git(repo, "commit", "-m", msg, "--", *changed, author=author)
         if rc != 0:
             say(f"commit 실패: {(err.strip() or out.strip())[:200]}")
             _git(repo, "reset", "-q", "--", *changed)
             return False
-        say(f"committed: {subject}")
+        say(f"committed: {msg.splitlines()[0]}")
         return True
     finally:
         os.close(fd)
