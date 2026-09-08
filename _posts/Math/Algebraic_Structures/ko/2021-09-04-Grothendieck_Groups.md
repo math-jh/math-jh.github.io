@@ -64,7 +64,7 @@ $$\bar{\eta}_S'\circ\bar{\eta}_S\circ\eta_S'=\bar{\eta}_S'\circ \eta_S=\eta_S'=\
 만일 $S$가 abelian group이라면 위의 universal mapping problem을 만족하는 abelian group $K(S)$는 $K(S)\cong S$를 만족한다.
 :::
 ::: 증명
-$S$와 $\id_S$가 자명하게 universal property를 만족하므로, 앞선 [명제 1](#prop1)에 의하여 universal property를 만족하는 임의의 abelian group은 $S$와 동형이어야 한다.
+$S$와 $\id_S$가 자명하게 universal property를 만족하므로, 앞선 [명제 1](#prop1){: data-relation="required" }에 의하여 universal property를 만족하는 임의의 abelian group은 $S$와 동형이어야 한다.
 :::
 
 위의 두 명제들은 universal mapping problem을 만족하는 $K(S)$가 우리가 찾는 abelian group이라는 것을 보여주지만, 실제로 $K(S)$가 존재한다는 것은 보여주지 않는다. 
@@ -73,7 +73,7 @@ $S$와 $\id_S$가 자명하게 universal property를 만족하므로, 앞선 [�
 
 $S$가 abelian group이 될 수 없는 이유는 항등원과 임의의 원소에 대한 역원이 존재하지 않을 수도 있기 때문이다. 직관적으로 이는 $0$과 <em-ko>음수</em-ko>를 추가하여 해결할 수 있다.
 
-주어진 commutative semigroup $(S,+)$에 대하여, product semigroup $S\times S$를 생각하자. ([§대수적 구조, ⁋예시 5](/ko/math/algebraic_structures/algebraic_structures#ex5)) $S\times S$의 둘째 부분을 음수처럼 생각하면, 다음 식
+주어진 commutative semigroup $(S,+)$에 대하여, product semigroup $S\times S$를 생각하자. ([§대수적 구조, ⁋예시 5](/ko/math/algebraic_structures/algebraic_structures#ex5){: data-relation="required" }) $S\times S$의 둘째 부분을 음수처럼 생각하면, 다음 식
 
 $$(a_1, b_1)+(a_2, b_2)=(a_1+a_2, b_1+b_2)$$
 
@@ -189,7 +189,7 @@ Monoid $(\mathbb{N},+)$에 대하여, 위의 과정을 통해 얻어지는 abeli
 
 ## Monoid of fractions
 
-위의 논의에서 우리는 $S$의 모든 원소들의 역원을 추가하여 $K(S)$를 얻었다. 한편 [정의 6](#def6)을 살펴보면 우리가 실제로 하는 것은 $\mathbb{N}$의 부분집합 $\mathbb{N}\setminus\{0\}$의 원소들의 역원만 추가하는 것이다. 이 또한 위의 논의들을 약간 수정하면 얻어질 수 있는데, 증명은 생략하고 과정들만 살펴보자.
+위의 논의에서 우리는 $S$의 모든 원소들의 역원을 추가하여 $K(S)$를 얻었다. 한편 [정의 6](#def6){: data-relation="required" }을 살펴보면 우리가 실제로 하는 것은 $\mathbb{N}$의 부분집합 $\mathbb{N}\setminus\{0\}$의 원소들의 역원만 추가하는 것이다. 이 또한 위의 논의들을 약간 수정하면 얻어질 수 있는데, 증명은 생략하고 과정들만 살펴보자.
 
 Commutative monoid $E$와 $E$의 부분집합 $S$, 그리고 $S$에 의해 생성되는 $E$의 submonoid $S'$를 생각하자. 또 $E$의 연산은 곱셈으로 적힌 것으로 생각한다. $E\times S'$ 위에 다음 관계
 
@@ -201,7 +201,7 @@ $$(a,p)\equiv (b,q)\pmod{R}\iff aqs=bps\text{ for some $s\in S'$}$$
 위와 같이 얻어지는 monoid $(E\times S')/R$을 $S$를 분모로 갖는 $E$의 *monoid of fraction<sub>분수 모노이드</sub>*이라 부르고 $E_S$로 표기한다. 이 monoid의 원소 $(a,p)$를 representative로 갖는 원소를 $a/p$로 표기한다. 
 :::
 
-이 때, $E$는 monoid이므로 위의 논의와는 다르게 항등원 $1$을 가진다. 그럼 [명제 5](#prop5)에서의 homomorphism $\eta_S$에 대응하는 canonical morphism은 명시적으로 
+이 때, $E$는 monoid이므로 위의 논의와는 다르게 항등원 $1$을 가진다. 그럼 [명제 5](#prop5){: data-relation="required" }에서의 homomorphism $\eta_S$에 대응하는 canonical morphism은 명시적으로 
 
 $$\epsilon:E\rightarrow E_S;\quad a\mapsto a/1$$
 
