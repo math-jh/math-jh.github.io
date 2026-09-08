@@ -34,7 +34,7 @@ $$x\sim y\iff xy^{-1}\in\ker f$$
 
 $$f(y)=e'f(y)=f(xy^{-1})f(y)=f(xy^{-1}y)=f(x)$$
 
-으로부터 $x\sim y\iff f(x)=f(y)$임을 알 수 있다. 즉, $\sim$은 별다른 것이 아니라 함수 $f$에 의해 정의되는 동치관계이며 ([\[집합론\] §동치관계의 예시들, ⁋정의 2](/ko/math/set_theory/examples_of_equivalence#def2)), quotient group의 정의로부터 canonical map $p:G\rightarrow G/\ker f$는 homomorphism이 된다. 이제 $f$의 canonical decomposition을 생각하면 전단사함수 $h:G/\ker f\rightarrow\im f$를 얻는다. 그럼 임의의 $[x], [x']\in G/\ker f$에 대하여
+으로부터 $x\sim y\iff f(x)=f(y)$임을 알 수 있다. 즉, $\sim$은 별다른 것이 아니라 함수 $f$에 의해 정의되는 동치관계이며 ([\[집합론\] §동치관계의 예시들, ⁋정의 2](/ko/math/set_theory/examples_of_equivalence#def2){: data-relation="required" }), quotient group의 정의로부터 canonical map $p:G\rightarrow G/\ker f$는 homomorphism이 된다. 이제 $f$의 canonical decomposition을 생각하면 전단사함수 $h:G/\ker f\rightarrow\im f$를 얻는다. 그럼 임의의 $[x], [x']\in G/\ker f$에 대하여
 
 $$h([x][x'])=h([xx'])=f(xx')=f(x)f(x')=h([x])h([x'])$$
 
@@ -44,7 +44,7 @@ $$h([x][x'])=h([xx'])=f(xx')=f(x)f(x')=h([x])h([x'])$$
 임의의 homomorphism $f:G\rightarrow G'$에 대하여, $G/\ker f\cong \im f$가 항상 성립한다.
 :::
 
-한편 [\[집합론\] §동치관계의 예시들, ⁋명제 7](/ko/math/set_theory/examples_of_equivalence#prop7)을 이용하면 다음 명제를 얻는다. 
+한편 [\[집합론\] §동치관계의 예시들, ⁋명제 7](/ko/math/set_theory/examples_of_equivalence#prop7){: data-relation="required" }을 이용하면 다음 명제를 얻는다. 
 
 ::: 명제 3
 임의의 homomorphism $f:G\rightarrow G'$와 $G$의 normal subgroup $N$에 대하여, $f=\bar{f}\circ p$를 만족하는 $\bar{f}:G/N\rightarrow G'$가 존재할 필요충분조건은 $N\leq \ker f$인 것이다. 이 경우, $p$가 surjective이므로 $\bar{f}$는 유일하게 결정된다. 
@@ -101,7 +101,7 @@ $$nkN=kn'N=kN=\pi(k)=\pi(\iota(k))\in\im(\pi\iota)$$
 $H$, $K$가 group $G$의 normal subgroup이고, $K\leq H$라 하자. 그럼 $H/K$는 $G/K$의 normal subgroup이며 $(G/K)/(H/K)\cong G/H$가 성립한다.  
 :::
 ::: 증명
-[\[집합론\] §동치관계의 예시들, ⁋정의 8](/ko/math/set_theory/examples_of_equivalence#def8) 이후의 decomposition.
+[\[집합론\] §동치관계의 예시들, ⁋정의 8](/ko/math/set_theory/examples_of_equivalence#def8){: data-relation="required" } 이후의 decomposition.
 :::
 
 ## The fourth isomorphism theorem
@@ -134,11 +134,11 @@ $$S=\{f(x)g(x)^{-1}\mid x\in G\}$$
 ::: 증명
 우선 임의의 $x\in G$에 대하여 $f(x)g(x)^{-1}\in S\subseteq\overline{S}=\ker q$이므로 $q(f(x))=q(g(x))$, 즉 $q\circ f=q\circ g$가 성립한다.
 
-임의의 group homomorphism $q': H \rightarrow H'$가 존재하여 $q'\circ f=q'\circ g$를 만족한다 하자. 그럼 [보조정리 1](#lem1)에 의해 $\ker q'$는 normal subgroup이고, 조건 $q'\circ f=q'\circ g$에 의하여
+임의의 group homomorphism $q': H \rightarrow H'$가 존재하여 $q'\circ f=q'\circ g$를 만족한다 하자. 그럼 [보조정리 1](#lem1){: data-relation="required" }에 의해 $\ker q'$는 normal subgroup이고, 조건 $q'\circ f=q'\circ g$에 의하여
 
 $$q'(f(x))=q'(g(x))\iff q'(f(x)g(x)^{-1})=e$$
 
-이므로 $f(x)g(x)^{-1}\in\ker q'$이 모든 $x\in G$에 대해 성립한다. 따라서, $\overline{S}$의 정의에 의해 $\overline{S}\leq\ker q'$이고, [명제 3](#prop3)을 적용하면 $q'=\overline{q'}\circ q$를 만족하는 $\overline{q'}:H/\overline{S}\rightarrow H'$를 얻는다. 이러한 $\overline{q'}$는 $q$가 전사이므로 유일하다.
+이므로 $f(x)g(x)^{-1}\in\ker q'$이 모든 $x\in G$에 대해 성립한다. 따라서, $\overline{S}$의 정의에 의해 $\overline{S}\leq\ker q'$이고, [명제 3](#prop3){: data-relation="required" }을 적용하면 $q'=\overline{q'}\circ q$를 만족하는 $\overline{q'}:H/\overline{S}\rightarrow H'$를 얻는다. 이러한 $\overline{q'}$는 $q$가 전사이므로 유일하다.
 :::
 
 ---

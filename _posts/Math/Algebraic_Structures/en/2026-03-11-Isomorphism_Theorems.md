@@ -134,11 +134,11 @@ The quotient $q: H \rightarrow H/\overline{S}$ defined as above is a coequalizer
 ::: Proof
 First, for any $x\in G$, since $f(x)g(x)^{-1}\in S\subseteq\overline{S}=\ker q$, we have $q(f(x))=q(g(x))$, that is, $q\circ f=q\circ g$ holds.
 
-Suppose there exists a group homomorphism $q': H \rightarrow H'$ satisfying $q'\circ f=q'\circ g$. Then by [Lemma 1](#lem1), $\ker q'$ is a normal subgroup, and by the condition $q'\circ f=q'\circ g$, since
+Suppose there exists a group homomorphism $q': H \rightarrow H'$ satisfying $q'\circ f=q'\circ g$. Then by [Lemma 1](#lem1){: data-relation="required" }, $\ker q'$ is a normal subgroup, and by the condition $q'\circ f=q'\circ g$, since
 
 $$q'(f(x))=q'(g(x))\iff q'(f(x)g(x)^{-1})=e$$
 
-we have $f(x)g(x)^{-1}\in\ker q'$ for all $x\in G$. Therefore, by the definition of $\overline{S}$, we have $\overline{S}\leq\ker q'$, and applying [Proposition 3](#prop3), we have $q'=\overline{q'}\circ q$ for some $\overline{q'}:H/\overline{S}\rightarrow H'$. Such $\overline{q'}$ is unique because $q$ is surjective.
+we have $f(x)g(x)^{-1}\in\ker q'$ for all $x\in G$. Therefore, by the definition of $\overline{S}$, we have $\overline{S}\leq\ker q'$, and applying [Proposition 3](#prop3){: data-relation="required" }, we have $q'=\overline{q'}\circ q$ for some $\overline{q'}:H/\overline{S}\rightarrow H'$. Such $\overline{q'}$ is unique because $q$ is surjective.
 :::
 
 ---
