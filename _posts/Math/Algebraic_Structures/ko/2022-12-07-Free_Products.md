@@ -44,7 +44,7 @@ $$\begin{aligned}ab&=f_1(1)f_2(1)=f(\iota_1(1))f(\iota_2(1))=f(\iota_1(1)+\iota_
 
 $$\Hom_\Set(X, U(G))\cong\Hom_\Grp(F(X), G)$$
 
-을 만족하는 functor이다. ([\[범주론\] §수반함자, ⁋정의 1](/ko/math/category_theory/adjoints#def1)) 즉 functor $F$는 임의의 집합 $X$와 임의의 group $G$에 대하여, $f\in\Hom_\Set(X, U(G))$마다 $\Hom_\Grp(F(X),G)$의 원소를 유일하게 대응시키는 bijection으로 주어진다. 이를 다시 쓰면 다음과 같다.
+을 만족하는 functor이다. ([\[범주론\] §수반함자, ⁋정의 1](/ko/math/category_theory/adjoints#def1){: data-relation="required" }) 즉 functor $F$는 임의의 집합 $X$와 임의의 group $G$에 대하여, $f\in\Hom_\Set(X, U(G))$마다 $\Hom_\Grp(F(X),G)$의 원소를 유일하게 대응시키는 bijection으로 주어진다. 이를 다시 쓰면 다음과 같다.
 
 ::: 정의 2
 집합 $X$에 대하여, $X$에 의해 정의된 *free group<sub>자유군</sub>* $F(X)$는 다음과 같은 universal mapping problem의 solution $(F(X), \eta_X\in\Hom_\Set(X,UF(X)))$으로 정해진다.
@@ -68,7 +68,7 @@ $$x_3^{-2}x_2x_1^{-1}$$
 
 이 되며, 실제로 이들 둘을 연산해보면 $e$가 됨을 확인할 수 있다. 
 
-이제 우리는 group $F$를 만들었으며, 여기서 $X$의 원소로 이루어진 길이 1짜리 원소들을 $X$의 원소와 동일시하면 $\eta_X:X\rightarrow F$ 또한 얻는다. 그럼 이들이 [정의 2](#def2)의 universal property를 만족한다는 것을 쉽게 보일 수 있다. 이를 위해서는 $\hat{f}$를 $F$에 등장하는 원소들 $x\in X$들을 모두 $f(x)$로 바꿔주는 함수로 정의한 후, 이것이 group homomorphism이 된다는 것을 확인하면 된다.
+이제 우리는 group $F$를 만들었으며, 여기서 $X$의 원소로 이루어진 길이 1짜리 원소들을 $X$의 원소와 동일시하면 $\eta_X:X\rightarrow F$ 또한 얻는다. 그럼 이들이 [정의 2](#def2){: data-relation="required" }의 universal property를 만족한다는 것을 쉽게 보일 수 있다. 이를 위해서는 $\hat{f}$를 $F$에 등장하는 원소들 $x\in X$들을 모두 $f(x)$로 바꿔주는 함수로 정의한 후, 이것이 group homomorphism이 된다는 것을 확인하면 된다.
 
 ::: 따름정리 3
 임의의 group $G$는 free group의 homomorphic image이다.
@@ -95,10 +95,10 @@ $$x_1x_2\cdots x_n$$
 
 임의의 word가 주어졌을 때, 이를 reduced word로 만드는 법은 간단하다. 인접한 원소들이 서로 같은 group에 속하는 원소인지를 모두 체크해본 후, 같은 group에 속하는 원소들은 이 group에서의 연산을 통해 하나의 원소로 합쳐준다. 이 과정에서 (혹은 원래부터) 어떤 group에서의 항등원이 나왔다면, 그 원소는 지워버리면 된다. 
 
-그럼 $\prod^\ast G_i$ 위의 연산은 free group을 정의할 때와 동일하게 <em-ko>이어쓰기</em-ko>연산이며, 어렵지 않게 이 모임이 group structure를 갖는다는 것을 확인할 수 있다. 또, [예시 1](#ex1)과 같은 상황은 더 이상 일어나지 않는데, 이는 자명하지 않은 두 group $G_1,G_2$가 abelian이라 하더라도 그 free product $G_1\ast G_2$는 더 이상 abelian group이 아니기 때문이다.
+그럼 $\prod^\ast G_i$ 위의 연산은 free group을 정의할 때와 동일하게 <em-ko>이어쓰기</em-ko>연산이며, 어렵지 않게 이 모임이 group structure를 갖는다는 것을 확인할 수 있다. 또, [예시 1](#ex1){: data-relation="weak" }과 같은 상황은 더 이상 일어나지 않는데, 이는 자명하지 않은 두 group $G_1,G_2$가 abelian이라 하더라도 그 free product $G_1\ast G_2$는 더 이상 abelian group이 아니기 때문이다.
 
 ::: 예시 4
-[예시 1](#ex1)과 동일한 상황을 생각하자. 대신 표기상의 편의를 위해 $G_1=\langle a\rangle\cong\mathbb{Z}$, $G_2=\langle b\rangle\cong\mathbb{Z}$이라 하자. 그럼 $G_1\ast G_2$의 원소는 다음과 같은 원소들
+[예시 1](#ex1){: data-relation="required" }과 동일한 상황을 생각하자. 대신 표기상의 편의를 위해 $G_1=\langle a\rangle\cong\mathbb{Z}$, $G_2=\langle b\rangle\cong\mathbb{Z}$이라 하자. 그럼 $G_1\ast G_2$의 원소는 다음과 같은 원소들
 
 $$ab, a^2b, a^{-1}ba^3, bab^2, \cdots$$
 
@@ -110,25 +110,25 @@ $$(a^2b)(bab^2)=a^2bbab^2=a^2b^2ab^2$$
 
 이 때 $\langle a\rangle$과 $\langle b\rangle$은 $G_1\ast G_2$의 cyclic subgroup이고, 따라서 $G_1$과 $G_2$에서 $G_1\ast G_2$으로의 homomorphism을 $a\mapsto a$, $b\mapsto b$로 정의하면 자연스러운 inclusion map $\iota_1$과 $\iota_2$를 얻는다. 
 
-물론 [예시 1](#ex1)과 같은 문제 또한 일어나지 않는다. $\iota_1(a)\iota_2(b)=ab$이고 $\iota_2(b)\iota_1(a)=ba$인데, 이 두 원소는 $\prod^\ast G_i$의 서로 다른 원소이기 때문이다.
+물론 [예시 1](#ex1){: data-relation="weak" }과 같은 문제 또한 일어나지 않는다. $\iota_1(a)\iota_2(b)=ab$이고 $\iota_2(b)\iota_1(a)=ba$인데, 이 두 원소는 $\prod^\ast G_i$의 서로 다른 원소이기 때문이다.
 :::
 
 ::: 명제 5
 Free product $\prod^\ast G_i$는 $\Grp$에서의 coproduct이다.
 :::
 ::: 증명
-임의의 group $H$와 group homomorphism들 $f_i:G_i\rightarrow H$가 주어졌다 하자. 그럼 $X=\coprod U(G_i)$의 universal property에 의하여, inclusion map $\iota_i:U(G_i)\rightarrow X$들에 대해 $U(f_i)=f\circ \iota_i$를 만족하는 유일한 함수 $f:X\rightarrow U(H)$가 존재한다. 이제 [정의 2](#def2)의 universal property로부터 group homomorphism $\hat{f}:F(X)\rightarrow H$를 얻으며, 이 때 $f_i$들이 group homomorphism이었다는 사실을 사용하면 $\hat{f}$가 위의 reduction 과정을 통해 factor하며, 따라서 $\prod^\ast G_i\rightarrow H$를 정의한다는 것을 안다.
+임의의 group $H$와 group homomorphism들 $f_i:G_i\rightarrow H$가 주어졌다 하자. 그럼 $X=\coprod U(G_i)$의 universal property에 의하여, inclusion map $\iota_i:U(G_i)\rightarrow X$들에 대해 $U(f_i)=f\circ \iota_i$를 만족하는 유일한 함수 $f:X\rightarrow U(H)$가 존재한다. 이제 [정의 2](#def2){: data-relation="required" }의 universal property로부터 group homomorphism $\hat{f}:F(X)\rightarrow H$를 얻으며, 이 때 $f_i$들이 group homomorphism이었다는 사실을 사용하면 $\hat{f}$가 위의 reduction 과정을 통해 factor하며, 따라서 $\prod^\ast G_i\rightarrow H$를 정의한다는 것을 안다.
 :::
 
 한편 임의의 group $G$에 대하여, group homomorphism $\mathbb{Z}\rightarrow G$는 $1\in \mathbb{Z}$가 $G$의 어떠한 원소로 옮겨지는지에 의해 유일하게 결정된다. 즉 다음 isomorphism
 
 $$\Hom_\Grp(\mathbb{Z},G)\cong U(G)$$
 
-가 존재하며, [\[범주론\] §표현가능한 함자, ⁋예시 2](/ko/math/category_theory/representable_functors#ex2)와 비슷한 논증으로 위의 isomorphism이 $U$의 representation임을 알 수 있으며, 뿐만 아니라
+가 존재하며, [\[범주론\] §표현가능한 함자, ⁋예시 2](/ko/math/category_theory/representable_functors#ex2){: data-relation="weak" }와 비슷한 논증으로 위의 isomorphism이 $U$의 representation임을 알 수 있으며, 뿐만 아니라
 
 $$\Hom_\Grp(\mathbb{Z},G)\cong \Hom_\Set(\ast, U(G))$$
 
-으로 생각하면 $\mathbb{Z}=F(\ast)$인 것으로 해석할 수 있다. 따라서 임의의 집합 $X$에 대하여 [\[범주론\] §수반함자, ⁋정리 9](/ko/math/category_theory/adjoints#thm9)를 이용하면 free group $F(X)$를 $\mathbb{Z}$들의 free product
+으로 생각하면 $\mathbb{Z}=F(\ast)$인 것으로 해석할 수 있다. 따라서 임의의 집합 $X$에 대하여 [\[범주론\] §수반함자, ⁋정리 9](/ko/math/category_theory/adjoints#thm9){: data-relation="required" }를 이용하면 free group $F(X)$를 $\mathbb{Z}$들의 free product
 
 $$F(X)=F\left(\coprod_{x\in X} \{x\}\right)\cong \coprod_{x\in X} F(\ast)={\prod_{x\in X}}^\ast \mathbb{Z}$$
 
