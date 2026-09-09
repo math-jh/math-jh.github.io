@@ -15,23 +15,23 @@ toc: false
 
 ---
 
-앞선 글에서 우리는 $A$-module $M$이 언제 flat인지를 판단하는 몇 가지 기준들을 살펴보았는데, 이번 글에서는 특별히 Noetherian local ring $(A, \mathfrak{m})$ 위에서 이를 판단하는 기준을 살펴본다. 다음 정리는 $\mathfrak{m}E\subseteq \mathfrak{n}$를 만족하는 local Noetherian $A$-algebra $(E, \mathfrak{n})$ 위의 finitely generated module에 대하여 [§평탄성, ⁋명제 1](/ko/math/commutative_algebra/flatness#prop1)을 maximal ideal에 대해서만 확인해도 충분하다는 것을 보여준다.
+앞선 글에서 우리는 $A$-module $M$이 언제 flat인지를 판단하는 몇 가지 기준들을 살펴보았는데, 이번 글에서는 특별히 Noetherian local ring $(A, \mathfrak{m})$ 위에서 이를 판단하는 기준을 살펴본다. 다음 정리는 $\mathfrak{m}E\subseteq \mathfrak{n}$를 만족하는 local Noetherian $A$-algebra $(E, \mathfrak{n})$ 위의 finitely generated module에 대하여 [§평탄성, ⁋명제 1](/ko/math/commutative_algebra/flatness#prop1){: data-relation="required" }을 maximal ideal에 대해서만 확인해도 충분하다는 것을 보여준다.
 
 ::: 정리 1
 Noetherian local ring $(A, \mathfrak{m})$을 고정하고, $(E, \mathfrak{n})$가 $\mathfrak{m}E\subseteq \mathfrak{n}$를 만족하는 local Noetherian $A$-algebra라 가정하자. 그럼 finitely generated $E$-module $M$에 대하여, $M$이 flat $A$-module인 것과 $\Tor_1^A(A/\mathfrak{m}, M)=0$인 것이 동치이다. 
 :::
 ::: 증명
-만일 $M$이 flat $A$-module이라면 $\Tor_1^A(A/\mathfrak{m}, M)=0$인 것은 정확히 [§평탄성, ⁋명제 1](/ko/math/commutative_algebra/flatness#prop1)의 내용이므로, 반대 방향만 보이면 충분하다. 
+만일 $M$이 flat $A$-module이라면 $\Tor_1^A(A/\mathfrak{m}, M)=0$인 것은 정확히 [§평탄성, ⁋명제 1](/ko/math/commutative_algebra/flatness#prop1){: data-relation="required" }의 내용이므로, 반대 방향만 보이면 충분하다. 
 
-반대방향을 보이기 위해서도 마찬가지로 [§평탄성, ⁋명제 1](/ko/math/commutative_algebra/flatness#prop1)를 사용하여, 주어진 조건을 가정한 후 임의의 $A$의 ideal $\mathfrak{a}$에 대하여 multiplication map $m:\mathfrak{a}\otimes_AM \rightarrow M$이 injective인 것을 보이면 충분하다. 이를 위해 $x\in \mathfrak{a}\otimes_AM$이 multiplication map의 kernel $\ker m$에 속한다 가정하고, $x=0$임을 보이자. 우선 $M$ 위에 정의된 $E$-module structure로부터 $\mathfrak{a}\otimes_AM$ 위에도 자연스럽게 $E$-module 구조가 있으며, 가정 $\mathfrak{m}E\subseteq \mathfrak{n}$으로부터, 임의의 $n$에 대해 다음의 식
+반대방향을 보이기 위해서도 마찬가지로 [§평탄성, ⁋명제 1](/ko/math/commutative_algebra/flatness#prop1){: data-relation="required" }를 사용하여, 주어진 조건을 가정한 후 임의의 $A$의 ideal $\mathfrak{a}$에 대하여 multiplication map $m:\mathfrak{a}\otimes_AM \rightarrow M$이 injective인 것을 보이면 충분하다. 이를 위해 $x\in \mathfrak{a}\otimes_AM$이 multiplication map의 kernel $\ker m$에 속한다 가정하고, $x=0$임을 보이자. 우선 $M$ 위에 정의된 $E$-module structure로부터 $\mathfrak{a}\otimes_AM$ 위에도 자연스럽게 $E$-module 구조가 있으며, 가정 $\mathfrak{m}E\subseteq \mathfrak{n}$으로부터, 임의의 $n$에 대해 다음의 식
 
 $$\mathfrak{m}^n(\mathfrak{a}\otimes_AM )\subseteq \mathfrak{n}^n(\mathfrak{a}\otimes_AM)$$	 
 
-이 성립하는 것을 안다. 한편, 이들은 finitely generated $E$-module이므로 [§부풀림 대수, ⁋따름정리 8](/ko/math/commutative_algebra/blowup_algebra#cor8)의 1번으로부터 $(1-a)(\bigcap \mathfrak{n}^n(\mathfrak{a}\otimes_AM))=0$이도록 하는 $a\in \mathfrak{n}$이 존재하고, $E$가 local ring이라 $1-a$가 unit이므로 
+이 성립하는 것을 안다. 한편, 이들은 finitely generated $E$-module이므로 [§부풀림 대수, ⁋따름정리 8](/ko/math/commutative_algebra/blowup_algebra#cor8){: data-relation="required" }의 1번으로부터 $(1-a)(\bigcap \mathfrak{n}^n(\mathfrak{a}\otimes_AM))=0$이도록 하는 $a\in \mathfrak{n}$이 존재하고, $E$가 local ring이라 $1-a$가 unit이므로 
 
 $$\bigcap \mathfrak{m}^n(\mathfrak{a}\otimes_AM)=\bigcap \mathfrak{n}^n(\mathfrak{a}\otimes_AM)=0$$
 
-이다. 따라서, $x=0$인 것을 보이는 것은 모든 $n$에 대하여 $x\in \mathfrak{m}^n(\mathfrak{a}\otimes_AM)$이 성립하는 것을 보이면 충분하다. 한편, $\mathfrak{m}^n(\mathfrak{a}\otimes_AM)$은 $(\mathfrak{m}^n \mathfrak{a})\otimes_AM$과 identify할 수 있고, [§부풀림 대수, ⁋보조정리 7](/ko/math/commutative_algebra/blowup_algebra#lem7)를 다음의 $\mathfrak{m}$-stable filtration
+이다. 따라서, $x=0$인 것을 보이는 것은 모든 $n$에 대하여 $x\in \mathfrak{m}^n(\mathfrak{a}\otimes_AM)$이 성립하는 것을 보이면 충분하다. 한편, $\mathfrak{m}^n(\mathfrak{a}\otimes_AM)$은 $(\mathfrak{m}^n \mathfrak{a})\otimes_AM$과 identify할 수 있고, [§부풀림 대수, ⁋보조정리 7](/ko/math/commutative_algebra/blowup_algebra#lem7){: data-relation="required" }를 다음의 $\mathfrak{m}$-stable filtration
 
 $$\mathfrak{m}\supseteq \mathfrak{m}^2\supseteq\cdots$$
 
@@ -81,7 +81,7 @@ $$\cdots \Tor_1^A(A/(\mathfrak{a}+\mathfrak{m}^t), M) \rightarrow \frac{\mathfra
 
 그런데 $A/(\mathfrak{a}+\mathfrak{m}^t)$는 $\mathfrak{m}^t$로 annihilate되고, $\mathfrak{m}^t$는 finitely generated이므로, 이를 통해 $A/(\mathfrak{a}+\mathfrak{m}^t)$이 finite length를 갖는다는 것을 안다. 따라서, 더 일반적으로 유한한 길이를 갖는 임의의 $A$-module $N$이 주어질 때마다 $\Tor_1^A(N, M)=0$이 성립한다는 것을 보이면 원하는 바를 얻는다.
 
-귀납법으로 진행한다. 만일 $N$이 length $1$이라면 [§조르단-횔더 정리, ⁋정의 1](/ko/math/commutative_algebra/Jordan-Holder_theorem#def1) 이후의 논증으로부터 $N=A/\mathfrak{m}$이어야 하고, 따라서 $\Tor_1^A(N, M)=0$인 것은 정확히 정리의 가정과 일치한다.  finite length의 $A$-module $N$과, $N$의 $0$이 아닌 임의의 proper submodule $N'$을 택하자. 그럼 다음의 exact sequence
+귀납법으로 진행한다. 만일 $N$이 length $1$이라면 [§조르단-횔더 정리, ⁋정의 1](/ko/math/commutative_algebra/Jordan-Holder_theorem#def1){: data-relation="required" } 이후의 논증으로부터 $N=A/\mathfrak{m}$이어야 하고, 따라서 $\Tor_1^A(N, M)=0$인 것은 정확히 정리의 가정과 일치한다.  finite length의 $A$-module $N$과, $N$의 $0$이 아닌 임의의 proper submodule $N'$을 택하자. 그럼 다음의 exact sequence
 
 $$0 \rightarrow N' \rightarrow N \rightarrow N/N' \rightarrow 0$$
 
@@ -96,7 +96,7 @@ $$\cdots \rightarrow\Tor_1^A(N', M) \rightarrow \Tor_1^A(N, M) \rightarrow \Tor_
 
 $$(M/aM)\otimes_{A/(a)}N=(A/(a)\otimes_A M)\otimes_{A/(a)} N\cong M\otimes_AN$$
 
-이므로 $M/aM$은 아무런 조건 없이도 flat $A/(a)$-module이다. 우리는 [따름정리 3](#cor3)에서 [정리 1](#thm1)의 조건을 가정하고 이 주장의 역을 보인다. 이를 위해서는 우선 다음 보조정리가 필요하다.
+이므로 $M/aM$은 아무런 조건 없이도 flat $A/(a)$-module이다. 우리는 [따름정리 3](#cor3){: data-relation="forward" }에서 [정리 1](#thm1){: data-relation="required" }의 조건을 가정하고 이 주장의 역을 보인다. 이를 위해서는 우선 다음 보조정리가 필요하다.
 
 ::: 보조정리 2
 $A$-module $M$이 주어졌다 하고, $a\in A$가 $A$와 $M$ 모두에서 non-zerodivisor라 하자. 그럼 임의의 $A/(a)$-module $N$에 대하여, 
@@ -139,10 +139,10 @@ $M/aM$이 flat $A/(a)$-module이라 하자. $A/(a)$의 residue field가 $A/\math
 
 $$\Tor_1^{A/(a)}(A/\mathfrak{m}, M/aM)=0$$
 
-이 성립하고, 이제 [보조정리 2](#lem2)를 적용하면 $\Tor_1^A(A/\mathfrak{m}, M)=0$이 성립하는 것을 안다. 따라서 [정리 1](#thm1)에 의하여 $M$은 flat $A$-module이다.
+이 성립하고, 이제 [보조정리 2](#lem2){: data-relation="required" }를 적용하면 $\Tor_1^A(A/\mathfrak{m}, M)=0$이 성립하는 것을 안다. 따라서 [정리 1](#thm1){: data-relation="required" }에 의하여 $M$은 flat $A$-module이다.
 :::
 
-위의 정리는 기본적으로 [따름정리 3](#cor3)이 base 쪽의 원소로 자르는 것이었다면, 반대로 fiber 쪽의 원소로 자르는 다음 형태가 flatness를 fiber에서 base 방향으로 들어올리는 데 쓰인다.
+위의 정리는 기본적으로 [따름정리 3](#cor3){: data-relation="weak" }이 base 쪽의 원소로 자르는 것이었다면, 반대로 fiber 쪽의 원소로 자르는 다음 형태가 flatness를 fiber에서 base 방향으로 들어올리는 데 쓰인다.
 
 ::: 따름정리 4
 Noetherian local ring $(A, \mathfrak{m})$을 고정하고, $(E, \mathfrak{n})$가 $\mathfrak{m}E\subseteq \mathfrak{n}$를 만족하는 local Noetherian $A$-algebra라 가정하자. Flat $A$-module인 finitely generated $E$-module $M$과 원소 $f\in \mathfrak{n}$에 대하여 $f$의 image가 $M/\mathfrak{m}M$에서 non-zerodivisor라 하면, $f$는 $M$에서 non-zerodivisor이고 $M/fM$은 flat $A$-module이다. 특히 $f_1,\ldots, f_r\in \mathfrak{n}$의 image가 $M/\mathfrak{m}M$의 regular sequence를 이루면 $f_1,\ldots, f_r$은 $M$의 regular sequence이고 $M/(f_1,\ldots, f_r)M$은 flat $A$-module이다.
@@ -160,17 +160,17 @@ $$0 \rightarrow K \rightarrow M \rightarrow fM \rightarrow 0$$
 
 $$0 \rightarrow fM \rightarrow M \rightarrow C \rightarrow 0$$
 
-에 $\Tor^A_\bullet(\kappa, -)$의 long exact sequence를 적용한다. $M$이 flat이므로 $\Tor_1^A(\kappa, M)=0$이고 ([§평탄성, ⁋명제 1](/ko/math/commutative_algebra/flatness#prop1)), 따라서
+에 $\Tor^A_\bullet(\kappa, -)$의 long exact sequence를 적용한다. $M$이 flat이므로 $\Tor_1^A(\kappa, M)=0$이고 ([§평탄성, ⁋명제 1](/ko/math/commutative_algebra/flatness#prop1){: data-relation="weak" }), 따라서
 
 $$0 \rightarrow \Tor_1^A(\kappa, C) \rightarrow fM\otimes_A\kappa \rightarrow M\otimes_A\kappa$$
 
-이 exact이다. 오른쪽 morphism이 단사임을 앞에서 보았으므로 $\Tor_1^A(\kappa, C)=0$이며, $C$가 finitely generated $E$-module이므로 [정리 1](#thm1)에 의하여 $C=M/fM$은 flat $A$-module이다.
+이 exact이다. 오른쪽 morphism이 단사임을 앞에서 보았으므로 $\Tor_1^A(\kappa, C)=0$이며, $C$가 finitely generated $E$-module이므로 [정리 1](#thm1){: data-relation="required" }에 의하여 $C=M/fM$은 flat $A$-module이다.
 
 이제 $K=0$을 보여야 한다. $C$가 flat이므로 임의의 $A$-module $N$에 대하여 $\Tor_i^A(N, C)$를 $N$의 projective resolution으로 계산하면, $-\otimes_AC$가 exact이므로 $i\geq 1$에서 소멸하고, 마찬가지로 $\Tor_1^A(N,M)=0$이다. 그럼 $0 \rightarrow fM \rightarrow M \rightarrow C \rightarrow 0$의 long exact sequence에서
 
 $$0=\Tor_2^A(N,C) \rightarrow \Tor_1^A(N, fM) \rightarrow \Tor_1^A(N,M)=0$$
 
-이므로 $\Tor_1^A(N, fM)=0$이고, [§평탄성, ⁋명제 1](/ko/math/commutative_algebra/flatness#prop1)에 의하여 $fM$ 또한 flat $A$-module이다. 따라서 $0 \rightarrow K \rightarrow M \rightarrow fM \rightarrow 0$에 $-\otimes_A\kappa$를 적용한 sequence는 왼쪽에서도 exact이 되어 $K\otimes_A\kappa \rightarrow M\otimes_A\kappa$가 단사인데, 그 image는 $M\otimes_A\kappa \rightarrow fM\otimes_A\kappa$의 kernel이고 이 morphism이 isomorphism이므로 image는 영이다. 곧 $K\otimes_A\kappa=K/\mathfrak{m}K=0$이고, $K$가 finitely generated $E$-module이며 $\mathfrak{m}K\subseteq \mathfrak{n}K$이므로 Nakayama 보조정리에 의하여 ([§정수적 확장, ⁋보조정리 8](/ko/math/commutative_algebra/integral_extension#lem8)) $K=0$이다.
+이므로 $\Tor_1^A(N, fM)=0$이고, [§평탄성, ⁋명제 1](/ko/math/commutative_algebra/flatness#prop1){: data-relation="required" }에 의하여 $fM$ 또한 flat $A$-module이다. 따라서 $0 \rightarrow K \rightarrow M \rightarrow fM \rightarrow 0$에 $-\otimes_A\kappa$를 적용한 sequence는 왼쪽에서도 exact이 되어 $K\otimes_A\kappa \rightarrow M\otimes_A\kappa$가 단사인데, 그 image는 $M\otimes_A\kappa \rightarrow fM\otimes_A\kappa$의 kernel이고 이 morphism이 isomorphism이므로 image는 영이다. 곧 $K\otimes_A\kappa=K/\mathfrak{m}K=0$이고, $K$가 finitely generated $E$-module이며 $\mathfrak{m}K\subseteq \mathfrak{n}K$이므로 Nakayama 보조정리에 의하여 ([§정수적 확장, ⁋보조정리 8](/ko/math/commutative_algebra/integral_extension#lem8){: data-relation="required" }) $K=0$이다.
 
 마지막 주장은 $r$에 대한 induction으로 얻는다. 위에서 $M/f_1M$이 flat $A$-module임을 보았고
 
