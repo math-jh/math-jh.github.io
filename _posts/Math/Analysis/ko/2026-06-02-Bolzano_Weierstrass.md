@@ -16,7 +16,7 @@ drift_needed: true
 published: false
 ---
 
-[§수열의 수렴, ⁋정리 7](/ko/math/analysis/convergence_of_sequences#thm7)는 단조수열에만 적용된다. 그러나 bounded이지만 단조가 아닌 수열, 가령 $a_n = (-1)^n$은 수렴하지 않는다. 이런 수열에서도 "수렴하는 부분만 뽑아낼" 수 있다는 것이 Bolzano–Weierstrass 정리이며, 이것이 해석학에서 compactness를 떠받치는 핵심 도구이다.
+[§수열의 수렴, ⁋정리 7](/ko/math/analysis/convergence_of_sequences#thm7){: data-relation="weak" }는 단조수열에만 적용된다. 그러나 bounded이지만 단조가 아닌 수열, 가령 $a_n = (-1)^n$은 수렴하지 않는다. 이런 수열에서도 "수렴하는 부분만 뽑아낼" 수 있다는 것이 Bolzano–Weierstrass 정리이며, 이것이 해석학에서 compactness를 떠받치는 핵심 도구이다.
 
 ## 부분수열
 
@@ -59,21 +59,21 @@ Bounded인 실수열은 수렴하는 부분수열을 가진다.
 :::
 
 ::: 증명
-$(a_n)$이 bounded라 하자. [보조정리 3](#lem3)에 의해 단조 부분수열 $(a_{n_k})$가 있고, 이 부분수열도 bounded이다. 단조이며 bounded인 수열은 [§수열의 수렴, ⁋정리 7](/ko/math/analysis/convergence_of_sequences#thm7)에 의해 수렴하므로, $(a_{n_k})$는 수렴하는 부분수열이다.
+$(a_n)$이 bounded라 하자. [보조정리 3](#lem3){: data-relation="required" }에 의해 단조 부분수열 $(a_{n_k})$가 있고, 이 부분수열도 bounded이다. 단조이며 bounded인 수열은 [§수열의 수렴, ⁋정리 7](/ko/math/analysis/convergence_of_sequences#thm7){: data-relation="required" }에 의해 수렴하므로, $(a_{n_k})$는 수렴하는 부분수열이다.
 :::
 
-[정리 4](#thm4)가 주장하는 것은 부분수열의 *존재*일 뿐, 그것이 유일하다거나 구성적으로 주어진다는 것이 아니다. 하나의 bounded sequence에서 서로 다른 극한으로 가는 여러 부분수열을 동시에 뽑아낼 수 있는 경우가 흔하다.
+[정리 4](#thm4){: data-relation="required" }가 주장하는 것은 부분수열의 *존재*일 뿐, 그것이 유일하다거나 구성적으로 주어진다는 것이 아니다. 하나의 bounded sequence에서 서로 다른 극한으로 가는 여러 부분수열을 동시에 뽑아낼 수 있는 경우가 흔하다.
 
 ## 집적점
 
-[§수열의 수렴](/ko/math/analysis/convergence_of_sequences)에서 본 발산수열 $a_n = (-1)^n$이 가장 단순한 예다. 이는 bounded이므로 [정리 4](#thm4)가 적용되며, 짝수·홀수 첨자만 취한 두 상수 부분수열 $a_{2k} \rightarrow 1$과 $a_{2k-1} \rightarrow -1$이 서로 다른 극한으로 수렴한다. 부분극한이 둘이므로 [명제 2](#prop2)의 대우에 의해 $(a_n)$ 자체는 발산하며, 동시에 [정리 4](#thm4)의 부분수열이 일반적으로 유일하지 않음을, 곧 집적점이 둘 이상일 수 있음을 본다. 집적점의 개수는 훨씬 더 커질 수 있다.
+[§수열의 수렴](/ko/math/analysis/convergence_of_sequences){: data-relation="weak" }에서 본 발산수열 $a_n = (-1)^n$이 가장 단순한 예다. 이는 bounded이므로 [정리 4](#thm4){: data-relation="weak" }가 적용되며, 짝수·홀수 첨자만 취한 두 상수 부분수열 $a_{2k} \rightarrow 1$과 $a_{2k-1} \rightarrow -1$이 서로 다른 극한으로 수렴한다. 부분극한이 둘이므로 [명제 2](#prop2){: data-relation="required" }의 대우에 의해 $(a_n)$ 자체는 발산하며, 동시에 [정리 4](#thm4){: data-relation="weak" }의 부분수열이 일반적으로 유일하지 않음을, 곧 집적점이 둘 이상일 수 있음을 본다. 집적점의 개수는 훨씬 더 커질 수 있다.
 
 ::: 예시 5 (조밀한 집적점)
 유리수 전체를 하나의 수열 $(q_n)$로 늘어놓되, 그 일부를 구간 $[0, 1]$ 안의 유리수로 한정하여 $(r_n)$을 만들면 $(r_n)$은 $[0, 1]$에 들어 있으므로 bounded이다. $[0,1]$의 임의의 실수 $x$와 임의의 $\varepsilon > 0$에 대해 구간 $(x - \varepsilon, x + \varepsilon)$ 안에는 $[0, 1]$의 유리수가 무한히 많으므로, 다음과 같이 첨자를 귀납적으로 고른다.
 
 $$\lvert r_{n_k} - x\rvert < \frac{1}{k} \qquad (n_1 < n_2 < n_3 < \cdots).$$
 
-그러면 $r_{n_k} \rightarrow x$이다. 즉 $[0, 1]$의 *모든* 점이 이 수열의 집적점이며, [정리 4](#thm4)가 보장하는 "적어도 하나"가 실제로는 연속체만큼 많을 수 있음을 보인다.
+그러면 $r_{n_k} \rightarrow x$이다. 즉 $[0, 1]$의 *모든* 점이 이 수열의 집적점이며, [정리 4](#thm4){: data-relation="weak" }가 보장하는 "적어도 하나"가 실제로는 연속체만큼 많을 수 있음을 보인다.
 :::
 
 반대로, 수렴하는 수열에서는 모든 부분수열이 같은 극한을 공유하므로 집적점이 단 하나뿐이다. 그 역으로, bounded sequence에서 집적점이 유일하면 그 수열은 그 점으로 수렴한다.
@@ -83,7 +83,7 @@ Bounded sequence $(a_n)$이 단 하나의 집적점 $L$만을 가지면 $a_n \ri
 :::
 
 ::: 증명
-대우를 보인다. $a_n \not\rightarrow L$이라 하자. 그러면 어떤 $\varepsilon_0 > 0$이 있어, 임의로 큰 첨자에서 $\lvert a_n - L\rvert \geq \varepsilon_0$인 항이 나타난다. 이런 항들의 첨자를 $n_1 < n_2 < \cdots$로 모으면 부분수열 $(a_{n_k})$를 얻는데, 이 부분수열은 bounded이므로 [정리 4](#thm4)에 의해 다시 수렴하는 부분수열 $(a_{n_{k_j}})$를 가지며, 그 극한을 $L'$이라 하자. 모든 $j$에서
+대우를 보인다. $a_n \not\rightarrow L$이라 하자. 그러면 어떤 $\varepsilon_0 > 0$이 있어, 임의로 큰 첨자에서 $\lvert a_n - L\rvert \geq \varepsilon_0$인 항이 나타난다. 이런 항들의 첨자를 $n_1 < n_2 < \cdots$로 모으면 부분수열 $(a_{n_k})$를 얻는데, 이 부분수열은 bounded이므로 [정리 4](#thm4){: data-relation="required" }에 의해 다시 수렴하는 부분수열 $(a_{n_{k_j}})$를 가지며, 그 극한을 $L'$이라 하자. 모든 $j$에서
 
 $$\begin{aligned}
 \lvert L' - L\rvert
@@ -96,10 +96,10 @@ $$\begin{aligned}
 
 ## 구간 이분법에 의한 증명
 
-[보조정리 3](#lem3)을 거치지 않고 [정리 4](#thm4)를 직접 증명하는 또 하나의 표준적 방법이 *구간 이분법<sub>bisection</sub>*이다. Bounded sequence를 가두는 구간을 반씩 잘라 가며 항이 무한히 많은 쪽을 택하는 이 방법은 compactness 증명에서 되풀이되는 기법이므로 따로 정리해 둔다.
+[보조정리 3](#lem3){: data-relation="weak" }을 거치지 않고 [정리 4](#thm4){: data-relation="weak" }를 직접 증명하는 또 하나의 표준적 방법이 *구간 이분법<sub>bisection</sub>*이다. Bounded sequence를 가두는 구간을 반씩 잘라 가며 항이 무한히 많은 쪽을 택하는 이 방법은 compactness 증명에서 되풀이되는 기법이므로 따로 정리해 둔다.
 
 ::: 명제 7 (Bolzano–Weierstrass의 이분법 증명)
-Bounded인 실수열은 수렴하는 부분수열을 가진다 ([정리 4](#thm4)의 다른 증명).
+Bounded인 실수열은 수렴하는 부분수열을 가진다 ([정리 4](#thm4){: data-relation="weak" }의 다른 증명).
 :::
 
 ::: 증명
@@ -111,7 +111,7 @@ $$I_0 \supseteq I_1 \supseteq I_2 \supseteq \cdots, \qquad \length(I_j) = \frac{
 
 $$a_{n_j} \in I_j \qquad (j = 1, 2, 3, \dots).$$
 
-구간의 길이가 $0$으로 가므로, [§실수의 완비성, ⁋정리 7](/ko/math/analysis/completeness_of_reals#thm7)에 의해 모든 $I_j$에 공통으로 들어 있는 점 $L$이 유일하게 존재한다. 이때 $a_{n_j}$와 $L$이 모두 $I_j$ 안에 있으므로
+구간의 길이가 $0$으로 가므로, [§실수의 완비성, ⁋정리 7](/ko/math/analysis/completeness_of_reals#thm7){: data-relation="required" }에 의해 모든 $I_j$에 공통으로 들어 있는 점 $L$이 유일하게 존재한다. 이때 $a_{n_j}$와 $L$이 모두 $I_j$ 안에 있으므로
 
 $$\begin{aligned}
 \lvert a_{n_j} - L\rvert
@@ -122,14 +122,14 @@ $$\begin{aligned}
 이고, 따라서 $a_{n_j} \rightarrow L$이다. 즉 $(a_{n_j})$가 수렴하는 부분수열이다.
 :::
 
-두 증명은 모두 실수의 완비성을 본질적으로 사용한다. [보조정리 3](#lem3)을 거치는 증명은 단조수렴정리를, 이분법 증명은 nested interval property를 쓰는데, 이 둘은 모두 상한 성질과 동치인 완비성의 표현들이다. 어느 길을 택하든 유리수 위에서는 정리가 성립하지 않는다. 가령 $\sqrt{2}$로 수렴하는 bounded 유리수열은 $\mathbb{Q}$ 안에서 수렴하는 부분수열을 갖지 못한다.
+두 증명은 모두 실수의 완비성을 본질적으로 사용한다. [보조정리 3](#lem3){: data-relation="weak" }을 거치는 증명은 단조수렴정리를, 이분법 증명은 nested interval property를 쓰는데, 이 둘은 모두 상한 성질과 동치인 완비성의 표현들이다. 어느 길을 택하든 유리수 위에서는 정리가 성립하지 않는다. 가령 $\sqrt{2}$로 수렴하는 bounded 유리수열은 $\mathbb{Q}$ 안에서 수렴하는 부분수열을 갖지 못한다.
 
 ## 응용
 
-[정리 4](#thm4)의 위력은 극한값을 미리 알지 못한 채 존재만으로 결론을 끌어내는 데 있다. 그 전형적 사례가 앞서 본 [§Cauchy 수열과 완비성, ⁋정리 4](/ko/math/analysis/cauchy_sequences#thm4)의 완성이며, 다음 예시는 그 논증을 한 줄기로 정리한다.
+[정리 4](#thm4){: data-relation="required" }의 위력은 극한값을 미리 알지 못한 채 존재만으로 결론을 끌어내는 데 있다. 그 전형적 사례가 앞서 본 [§Cauchy 수열과 완비성, ⁋정리 4](/ko/math/analysis/cauchy_sequences#thm4){: data-relation="weak" }의 완성이며, 다음 예시는 그 논증을 한 줄기로 정리한다.
 
 ::: 예시 8 (Cauchy 판정법의 골격)
-$(a_n)$이 Cauchy 수열이라 하자. Cauchy 수열은 bounded이므로 [정리 4](#thm4)에 의해 수렴하는 부분수열 $a_{n_k} \rightarrow L$이 존재한다. 임의의 $\varepsilon > 0$에 대해 Cauchy 조건으로 $m, n \geq N$이면 $\lvert a_m - a_n\rvert < \varepsilon/2$이게 $N$을 잡고, 부분수열의 수렴으로 $n_k \geq N$이면서 $\lvert a_{n_k} - L\rvert < \varepsilon/2$인 $k$를 잡으면, 모든 $n \geq N$에서
+$(a_n)$이 Cauchy 수열이라 하자. Cauchy 수열은 bounded이므로 [정리 4](#thm4){: data-relation="required" }에 의해 수렴하는 부분수열 $a_{n_k} \rightarrow L$이 존재한다. 임의의 $\varepsilon > 0$에 대해 Cauchy 조건으로 $m, n \geq N$이면 $\lvert a_m - a_n\rvert < \varepsilon/2$이게 $N$을 잡고, 부분수열의 수렴으로 $n_k \geq N$이면서 $\lvert a_{n_k} - L\rvert < \varepsilon/2$인 $k$를 잡으면, 모든 $n \geq N$에서
 
 $$\begin{aligned}
 \lvert a_n - L\rvert
@@ -140,7 +140,7 @@ $$\begin{aligned}
 이므로 $a_n \rightarrow L$이다. 부분수열의 극한 하나가 전체 수열을 끌어당기는 것이다.
 :::
 
-같은 발상이 연속함수 이론의 최대·최소 정리에서도 작동한다. Closed bounded 구간 위의 연속함수 $f$가 상한 $S = \sup f$에 임의로 가까운 값을 취하는 점들의 수열 $(x_n)$을 잡으면, 이 수열은 bounded이므로 [정리 4](#thm4)에 의해 수렴하는 부분수열 $x_{n_k} \rightarrow c$를 가진다. 구간이 닫혀 있어 limit point $c$도 구간 안에 있고, $f$의 연속성으로 $f(x_{n_k}) \rightarrow f(c)$이므로 $f(c) = S$가 되어, 상한이 실제로 달성된다. 이처럼 "bounded sequence에서 극한을 추출한다"는 [정리 4](#thm4)의 한 문장이 존재 정리의 골격을 이룬다.
+같은 발상이 연속함수 이론의 최대·최소 정리에서도 작동한다. Closed bounded 구간 위의 연속함수 $f$가 상한 $S = \sup f$에 임의로 가까운 값을 취하는 점들의 수열 $(x_n)$을 잡으면, 이 수열은 bounded이므로 [정리 4](#thm4){: data-relation="required" }에 의해 수렴하는 부분수열 $x_{n_k} \rightarrow c$를 가진다. 구간이 닫혀 있어 limit point $c$도 구간 안에 있고, $f$의 연속성으로 $f(x_{n_k}) \rightarrow f(c)$이므로 $f(c) = S$가 되어, 상한이 실제로 달성된다. 이처럼 "bounded sequence에서 극한을 추출한다"는 [정리 4](#thm4){: data-relation="weak" }의 한 문장이 존재 정리의 골격을 이룬다.
 
 앞서 자유로이 쓴 용어를 정리해 두면, 수렴하는 부분수열의 극한을 *부분수열극한<sub>subsequential limit</sub>* 또는 *집적점<sub>cluster point</sub>*이라 한다.
 
