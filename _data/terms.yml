@@ -4101,10 +4101,10 @@ C:
   ko: 여접 복합체
   primary: ko
   defs:
-  - label: '[유도대수기하학] §Simplicial 가환환과 animation'
-    url: /ko/math/derived_algebraic_geometry/animated_rings
   - label: '[스킴] §변형이론과 여접 복합체'
     url: /ko/math/scheme_theory/deformation_theory
+  - label: '[유도대수기하학] §Simplicial 가환환과 animation'
+    url: /ko/math/derived_algebraic_geometry/animated_rings
 - id: cotangent_line_bundle
   en: cotangent line bundle
   ko: 여접선 다발
