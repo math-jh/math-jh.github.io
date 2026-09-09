@@ -44,7 +44,7 @@ $$\bar{\times}: (H(C^\vee)\otimes H(D^\vee))^\bullet\rightarrow H^\bullet(C^\vee
 
 $$C_\bullet(X;A),\qquad C_\bullet(Y;A)$$
 
-들이 주어졌다 하자. $C_\bullet=C_\bullet(X;A), D_\bullet=C_\bullet(Y;A)$로 두고 위의 cochain map을 취하면 우리는 이를 [§코호몰로지](/ko/math/algebraic_topology/cohomology)의 Alexander-Whitney map $\AW$가 유도하는 함수와 합성하여 다음의 cochain map
+들이 주어졌다 하자. $C_\bullet=C_\bullet(X;A), D_\bullet=C_\bullet(Y;A)$로 두고 위의 cochain map을 취하면 우리는 이를 [§코호몰로지](/ko/math/algebraic_topology/cohomology){: data-relation="required" }의 Alexander-Whitney map $\AW$가 유도하는 함수와 합성하여 다음의 cochain map
 
 $$(C^\vee(X;A)\otimes C^\vee(Y;A))^\bullet \overset{\times}{\longrightarrow} \Hom_A(C_\bullet(X;A)\otimes C_\bullet(Y;A),A)\overset{\Hom(\AW,A)}{\longrightarrow} \Hom_A(C_\bullet(X\times Y;A),A)=(C^\vee)^\bullet(X\times Y)$$
 
@@ -94,7 +94,7 @@ $$(H^\bullet(X;A), {\smile}, 1)$$
 - (Associativity) $(\alpha\smile\beta)\smile\gamma=\alpha\smile(\beta\smile\gamma)$
 - (Grade-commutativity) $\alpha\smile\beta=(-1)^{pq}\beta\smile\alpha$
 
-이 성립한다. 이를 보이기 위해서는, 당연히, $\Top^2$ (혹은 $\Top^3$)에서 $\Ch_{\geq 0}(\lMod{A})$로의 functor들에 [§Acyclic models theorem, ⁋정리 3](/ko/math/algebraic_topology/acyclic_models_theorem#thm3)를 적용하면 된다.
+이 성립한다. 이를 보이기 위해서는, 당연히, $\Top^2$ (혹은 $\Top^3$)에서 $\Ch_{\geq 0}(\lMod{A})$로의 functor들에 [§Acyclic models theorem, ⁋정리 3](/ko/math/algebraic_topology/acyclic_models_theorem#thm3){: data-relation="required" }를 적용하면 된다.
 
 ## 합곱의 함자적 성질들
 
@@ -122,7 +122,7 @@ $$\times: H^\bullet(X;A)\otimes_A H^\bullet(Y;A) \rightarrow H^\bullet(X\times Y
 
 $$(\alpha_1\times\beta_1)(\alpha_2\times\beta_2)=\Delta_{X\times Y}^\ast (\alpha_1\times\beta_1\times\alpha_2\times\beta_2)=(-1)^{\lvert\beta_1\rvert\lvert\alpha_2\rvert}(\alpha_1\smile\alpha_2)\times(\beta_1\smile\beta_2)$$
 
-이 성립함을 보이는 것과 같다. 두 번째 등호를 위해 가운데 두 factor를 맞바꾸는 homeomorphism $T:X\times X\times Y\times Y\rightarrow X\times Y\times X\times Y$를 생각하면, $\Delta_{X\times Y}=T\circ(\Delta_X\times\Delta_Y)$이므로 가운데 항은 $(\Delta_X\times\Delta_Y)^\ast T^\ast(\alpha_1\times\beta_1\times\alpha_2\times\beta_2)$와 같다. 그럼 두 factor를 맞바꾸는 homeomorphism $\tau:X\times Y\rightarrow Y\times X$에 대하여 [명제 2](#prop2)와 같은 acyclic models 논증이 주는 식 $\tau^\ast(\beta\times\alpha)=(-1)^{\lvert\alpha\rvert\lvert\beta\rvert}\alpha\times\beta$를 $T=\id_X\times\tau\times\id_Y$에 적용하면
+이 성립함을 보이는 것과 같다. 두 번째 등호를 위해 가운데 두 factor를 맞바꾸는 homeomorphism $T:X\times X\times Y\times Y\rightarrow X\times Y\times X\times Y$를 생각하면, $\Delta_{X\times Y}=T\circ(\Delta_X\times\Delta_Y)$이므로 가운데 항은 $(\Delta_X\times\Delta_Y)^\ast T^\ast(\alpha_1\times\beta_1\times\alpha_2\times\beta_2)$와 같다. 그럼 두 factor를 맞바꾸는 homeomorphism $\tau:X\times Y\rightarrow Y\times X$에 대하여 [명제 2](#prop2){: data-relation="required" }와 같은 acyclic models 논증이 주는 식 $\tau^\ast(\beta\times\alpha)=(-1)^{\lvert\alpha\rvert\lvert\beta\rvert}\alpha\times\beta$를 $T=\id_X\times\tau\times\id_Y$에 적용하면
 
 $$T^\ast(\alpha_1\times\beta_1\times\alpha_2\times\beta_2)=(-1)^{\lvert\beta_1\rvert\lvert\alpha_2\rvert}\alpha_1\times\alpha_2\times\beta_1\times\beta_2$$
 
@@ -151,7 +151,7 @@ $$f^\ast(\alpha\smile\beta)=(f^\ast\alpha)\smile(f^\ast\beta)$$
 
 ## Cap product
 
-이제 남은 부분에서 우리는 homology와 cohomology의 duality를 다루기 위한 준비를 한다. 물론 우리는 이 duality를 [§코호몰로지, ⁋명제 3](/ko/math/algebraic_topology/cohomology#prop3)와 같은 형태로 관찰할 수 있었지만, 이번에 살펴볼 것은 조금 더 미묘한 감이 있다.
+이제 남은 부분에서 우리는 homology와 cohomology의 duality를 다루기 위한 준비를 한다. 물론 우리는 이 duality를 [§코호몰로지, ⁋명제 3](/ko/math/algebraic_topology/cohomology#prop3){: data-relation="weak" }와 같은 형태로 관찰할 수 있었지만, 이번에 살펴볼 것은 조금 더 미묘한 감이 있다.
 
 우리가 지금부터 할 일은 homology module $H_\bullet(X;A)$에 graded ring $H^\bullet(X;A)$의 action을 정의하는 것이다. 이를
 
@@ -183,13 +183,13 @@ $${\frown}:H^p(X;A)\otimes H_{p+q}(X;A) \rightarrow H_q(X;A)$$
 를 *cap product<sub>교곱</sub>*라 부른다. 
 :::
 
-즉 $\frown$은 degree $p+q$의 homology chain과 degree $p$의 cohomology chain을 받아서, homology chain의 degree $p$인 부분과 cohomology chain을 Kronecker pairing을 통해 연산한 후, 이 상수를 남아있는 degree $q$의 homology chain에 scalar multiplication을 해 주어 얻어지는 것이다. 이는 다소 작위적인 정의로 보일 수 있으나 [§Acyclic models theorem, ⁋정리 3](/ko/math/algebraic_topology/acyclic_models_theorem#thm3)의 유일성에 의해 유일하게 말이 되는 정의라 할 수 있다. 뿐만 아니라, 이 표현으로부터 이것이 정확하게 interior product에 해당하는 연산임을 안다.
+즉 $\frown$은 degree $p+q$의 homology chain과 degree $p$의 cohomology chain을 받아서, homology chain의 degree $p$인 부분과 cohomology chain을 Kronecker pairing을 통해 연산한 후, 이 상수를 남아있는 degree $q$의 homology chain에 scalar multiplication을 해 주어 얻어지는 것이다. 이는 다소 작위적인 정의로 보일 수 있으나 [§Acyclic models theorem, ⁋정리 3](/ko/math/algebraic_topology/acyclic_models_theorem#thm3){: data-relation="weak" }의 유일성에 의해 유일하게 말이 되는 정의라 할 수 있다. 뿐만 아니라, 이 표현으로부터 이것이 정확하게 interior product에 해당하는 연산임을 안다.
 
 한편 Alexander-Whitney map은 부분공간 $X_0\subseteq X$의 chain을 다시 $X_0$의 chain들의 tensor로 보내므로, 위의 구성은 pair에 대해서도 그대로 작동한다. 실제로 $\beta$가 $C_p(X_0)$ 위에서 소멸한다면 $X_0$의 chain $\sigma$에 대하여 $\beta(\tau_i)$들이 모두 $0$이 되어 $\beta\frown\sigma=0$이므로, $\frown$은 relative chain들로 내려간다. 이렇게 얻어지는 *relative cap product*
 
 $${\frown}:H^p(X,X_0;A)\otimes H_{p+q}(X,X_0;A) \rightarrow H_q(X;A)$$
 
-또한 앞으로 같은 기호로 적기로 하며, $X_0=\emptyset$인 경우가 [정의 5](#def5)이다. 그럼 다음이 성립한다.
+또한 앞으로 같은 기호로 적기로 하며, $X_0=\emptyset$인 경우가 [정의 5](#def5){: data-relation="required" }이다. 그럼 다음이 성립한다.
 
 ::: 명제 6 (Projection formula)
 Pair들 사이의 연속함수 $f:(X,X_0) \rightarrow (Y,Y_0)$와 $\beta\in H^q(Y,Y_0;A)$, 그리고 $\sigma\in H_{p+q}(X,X_0;A)$에 대하여 다음의 식
@@ -199,7 +199,7 @@ $$f_\ast(f^\ast\beta\frown\sigma)=\beta\frown f_\ast\sigma$$
 이 성립한다. 
 :::
 ::: 증명
-$\sigma$를 대표하는 relative cycle에 Alexander-Whitney map을 취해 $\AW(\sigma)=\sum_i\sigma_i\otimes\tau_i$로 적자. 그럼 $(f^\ast\beta)(\tau_i)=\beta(C_\bullet(f)(\tau_i))$이므로 [정의 5](#def5)를 유도할 때의 명시식으로부터
+$\sigma$를 대표하는 relative cycle에 Alexander-Whitney map을 취해 $\AW(\sigma)=\sum_i\sigma_i\otimes\tau_i$로 적자. 그럼 $(f^\ast\beta)(\tau_i)=\beta(C_\bullet(f)(\tau_i))$이므로 [정의 5](#def5){: data-relation="required" }를 유도할 때의 명시식으로부터
 
 $$C_\bullet(f)(f^\ast\beta\frown\sigma)=\sum_i(-1)^{\lvert\beta\rvert\lvert\sigma_i\rvert}\beta(C_\bullet(f)(\tau_i))C_\bullet(f)(\sigma_i)$$
 
