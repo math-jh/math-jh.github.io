@@ -28,7 +28,7 @@ A topological space $M$ is *locally Euclidean of dimension $m$* if for every $x\
 A space that is second countable, Hausdorff, and locally Euclidean of dimension $m$ is called a *topological manifold of dimension $m$*.
 :::
 
-For convenience, we call a topological manifold of dimension $m$ an *$m$-manifold*. Although [Definition 1](#def1) does not treat this, we sometimes replace $\mathbb{R}^m$ in the above definition by the *half-space*
+For convenience, we call a topological manifold of dimension $m$ an *$m$-manifold*. Although [Definition 1](#def1){: data-relation="required" } does not treat this, we sometimes replace $\mathbb{R}^m$ in the above definition by the *half-space*
 
 $$\mathbb{H}^m=\left\{(x_1,\ldots,x_m)\in \mathbb{R}^m\mid x_m\geq 0\right\}$$
 
@@ -60,7 +60,7 @@ $$x\mapsto (x,f(x)),\qquad (x,f(x))\mapsto x$$
 are inverse to each other, so $\graph(f)$ is homeomorphic to $U$.
 :::
 
-By [[Topology] §Hausdorff Spaces, ⁋Corollary 7](/en/math/topology/Hausdorff_spaces#cor7), $\graph(f)$ is a closed subset of $U\times \mathbb{R}^k$, and in particular when $U=\mathbb{R}^n$ it is a closed subset of $\mathbb{R}^{n+k}$; thus this gives an example of a somewhat different character from [Example 3](#ex3).
+By [[Topology] §Hausdorff Spaces, ⁋Corollary 7](/en/math/topology/Hausdorff_spaces#cor7), $\graph(f)$ is a closed subset of $U\times \mathbb{R}^k$, and in particular when $U=\mathbb{R}^n$ it is a closed subset of $\mathbb{R}^{n+k}$; thus this gives an example of a somewhat different character from [Example 3](#ex3){: data-relation="weak" }.
 
 The same holds for the product topology.
 
