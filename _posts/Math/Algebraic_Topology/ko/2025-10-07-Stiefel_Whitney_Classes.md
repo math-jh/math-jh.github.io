@@ -35,10 +35,10 @@ weight: 13
 
 ## 벡터다발
 
-우선 우리는 $F$가 벡터공간일 경우를 생각한다. Fiber $F$가 topological group일 경우, $F$는 이미 위상구조가 부여되어 있으므로 [정의 1](#def1)에서 product space $U\times F$의 위상구조가 명확하지만 벡터공간일 경우는 다소 애매하다. 가장 일반적인 세팅으로는 topological ring $\mathbb{K}$이 작용하는 topological vector space $V$ 개념을 사용하면 되지만, 우리는 편의를 위해 당장은 $F$의 base field가 $\mathbb{R}$이고, $F$는 canonical inner product로부터 오는 metric topology가 부여된 공간인 경우만 생각하기로 한다.
+우선 우리는 $F$가 벡터공간일 경우를 생각한다. Fiber $F$가 topological group일 경우, $F$는 이미 위상구조가 부여되어 있으므로 [정의 1](#def1){: data-relation="required" }에서 product space $U\times F$의 위상구조가 명확하지만 벡터공간일 경우는 다소 애매하다. 가장 일반적인 세팅으로는 topological ring $\mathbb{K}$이 작용하는 topological vector space $V$ 개념을 사용하면 되지만, 우리는 편의를 위해 당장은 $F$의 base field가 $\mathbb{R}$이고, $F$는 canonical inner product로부터 오는 metric topology가 부여된 공간인 경우만 생각하기로 한다.
 
 ::: 정의 2
-Fiber bundle $p:E \rightarrow B$가 *vector bundle<sub>벡터다발</sub>*이라는 것은, fiber space $F$가 위와 같이 위상구조가 주어진 $\mathbb{R}$-벡터공간이고, 추가로 각각의 $x\in B$마다 $x$를 포함하는 열린집합 $U$와 [정의 1](#def1)의 homeomorphism $\phi:U\times  F\rightarrow p^{-1}(U)$가 존재하여 다음의 함수
+Fiber bundle $p:E \rightarrow B$가 *vector bundle<sub>벡터다발</sub>*이라는 것은, fiber space $F$가 위와 같이 위상구조가 주어진 $\mathbb{R}$-벡터공간이고, 추가로 각각의 $x\in B$마다 $x$를 포함하는 열린집합 $U$와 [정의 1](#def1){: data-relation="required" }의 homeomorphism $\phi:U\times  F\rightarrow p^{-1}(U)$가 존재하여 다음의 함수
 
 $$\phi(x,-):F \rightarrow p^{-1}(x);\qquad v\mapsto \phi(x,v)$$
 
@@ -51,10 +51,10 @@ $$\phi(x,-):F \rightarrow p^{-1}(x);\qquad v\mapsto \phi(x,v)$$
 
 을 의미한다. 단, 여기에서 $g$를 각각의 $x\in B_1$에 대하여 $p_1^{-1}(x)\rightarrow p_2^{-1}(f(x))$로 제한하였을 때 이 함수가 벡터공간들 사이의 linear map이 되어야 한다.  Vector bundle들 사이의 isomorphism을 어떻게 정의해야 하는지는 자명하다. 
 
-한편 위의 [정의 2](#def2)에서, 우리는 $F$가 $\mathbb{R}$-벡터공간인 경우만 생각하여, $\mathbb{R}^n$ 위에 정의된 inner product 구조와 $\mathbb{R}$의 위상구조를 사용하여 이 위에 위상구조를 정의했다. 하지만 엄밀히 말하자면 여기서 필요한 정보는 오직 vector space $F$의 위상구조 뿐으로, $F$를 inner product space로 보았을 때 이는 *Euclidean bundle*이라 부른다. 어쨌든 우리는 대체로 $\mathbb{R}$-벡터공간만 생각할 것이므로 이러한 차이는 넘어가기로 한다. 
+한편 위의 [정의 2](#def2){: data-relation="weak" }에서, 우리는 $F$가 $\mathbb{R}$-벡터공간인 경우만 생각하여, $\mathbb{R}^n$ 위에 정의된 inner product 구조와 $\mathbb{R}$의 위상구조를 사용하여 이 위에 위상구조를 정의했다. 하지만 엄밀히 말하자면 여기서 필요한 정보는 오직 vector space $F$의 위상구조 뿐으로, $F$를 inner product space로 보았을 때 이는 *Euclidean bundle*이라 부른다. 어쨌든 우리는 대체로 $\mathbb{R}$-벡터공간만 생각할 것이므로 이러한 차이는 넘어가기로 한다. 
 
 ::: 예시 3
-Trivial bundle이 아닌 예시로는 $S^1$ 위의 line bundle로 생각한 뫼비우스 띠가 있다. 한편 [§푸앵카레 쌍대성, ⁋예시 5](/ko/math/algebraic_topology/Poincare_duality#ex5)에서 우리는 $S^1$의 non-trivial cover또한 생각했었는데, 이는 다음과 같이 기하학적으로 일반화할 수 있다. 
+Trivial bundle이 아닌 예시로는 $S^1$ 위의 line bundle로 생각한 뫼비우스 띠가 있다. 한편 [§푸앵카레 쌍대성, ⁋예시 5](/ko/math/algebraic_topology/Poincare_duality#ex5){: data-relation="weak" }에서 우리는 $S^1$의 non-trivial cover또한 생각했었는데, 이는 다음과 같이 기하학적으로 일반화할 수 있다. 
 
 $n+1$차원 벡터공간 $\mathbb{R}^{n+1}$에 대하여, 원점을 지나는 직선들의 공간을 우리는 *projective $n$-space*라 부르고 $\RP^n$으로 표기한다. 원점을 지나는 직선 위의 점들 중, 원점까지의 거리가 $1$인 두 점은 같은 직선을 지정하므로, 우리는 이를 unit $n$-sphere $S^n$ 위의 antipodal point들을 identify하여 얻어지는 quotient space로 생각할 수 있다. 
 
@@ -87,7 +87,7 @@ $E$가 trivial bundle이라면 isomorphism $\psi:B\times\mathbb{R}^n\rightarrow 
 
 $$\varphi:B\times\mathbb{R}^n\rightarrow E;\qquad (x,a)\mapsto \sum_i a_is_i(x)$$
 
-로 두자. 그럼 $\varphi$는 $\id_B$를 덮는 연속함수이고 각각의 fiber 위에서 linear이며, $s_1(x),\ldots,s_n(x)$가 일차독립이므로 이들이 $p^{-1}(x)$의 basis를 이루어 $\varphi(x,-)$는 isomorphism이 된다. 남은 것은 $\varphi^{-1}$의 연속성으로, [정의 2](#def2)의 local trivialization $\phi:U\times\mathbb{R}^n \rightarrow p^{-1}(U)$를 하나 잡아 $\phi^{-1}\circ\varphi$를 보면 이는 $(x,a)\mapsto (x,A(x)a)$의 꼴이고 여기서 $A:U\rightarrow \GL(n;\mathbb{R})$은 연속이다. 행렬의 역원을 취하는 연산이 연속이므로 $x\mapsto A(x)^{-1}$ 또한 연속이고, 따라서 $\varphi^{-1}$은 각각의 $U$ 위에서 연속이다. 
+로 두자. 그럼 $\varphi$는 $\id_B$를 덮는 연속함수이고 각각의 fiber 위에서 linear이며, $s_1(x),\ldots,s_n(x)$가 일차독립이므로 이들이 $p^{-1}(x)$의 basis를 이루어 $\varphi(x,-)$는 isomorphism이 된다. 남은 것은 $\varphi^{-1}$의 연속성으로, [정의 2](#def2){: data-relation="required" }의 local trivialization $\phi:U\times\mathbb{R}^n \rightarrow p^{-1}(U)$를 하나 잡아 $\phi^{-1}\circ\varphi$를 보면 이는 $(x,a)\mapsto (x,A(x)a)$의 꼴이고 여기서 $A:U\rightarrow \GL(n;\mathbb{R})$은 연속이다. 행렬의 역원을 취하는 연산이 연속이므로 $x\mapsto A(x)^{-1}$ 또한 연속이고, 따라서 $\varphi^{-1}$은 각각의 $U$ 위에서 연속이다. 
 :::
 
 한편 임의의 vector bundle $p:E \rightarrow B$와 임의의 연속함수 $f:B'\rightarrow B$가 주어졌을 때, 우리는 다음의 식
@@ -110,7 +110,7 @@ $$\Delta: B\rightarrow B\times B$$
 
 ## 체흐 코호몰로지
 
-이쯤에서 우리는 또 다른 cohomology 이론을 정립한다. 이는 [§푸앵카레 쌍대성, ⁋정의 15](/ko/math/algebraic_topology/Poincare_duality#def15)의 sheaf cohomology와 마찬가지로 위상공간 위에 정의되는 sheaf에 대한 cohomology이며, étale space construction을 통하여 stalk이 벡터공간인 sheaf와 vector bundle을 같은 것으로 생각할 수 있으므로 우리 이야기에서 중요한 역할을 한다. 
+이쯤에서 우리는 또 다른 cohomology 이론을 정립한다. 이는 [§푸앵카레 쌍대성, ⁋정의 15](/ko/math/algebraic_topology/Poincare_duality#def15){: data-relation="weak" }의 sheaf cohomology와 마찬가지로 위상공간 위에 정의되는 sheaf에 대한 cohomology이며, étale space construction을 통하여 stalk이 벡터공간인 sheaf와 vector bundle을 같은 것으로 생각할 수 있으므로 우리 이야기에서 중요한 역할을 한다. 
 
 Sheaf cohomology는 sheaf의 global section의 존재에 대한 obstruction을 cohomology가 담고 있다는 것을 보여줬다. 지금 살펴볼 Čech cohomology도 그 결과는 비슷하지만, 이에 대한 답을 local section들을 이어붙여 global section을 만드는 과정에서 살펴본다는 점에서 차이가 있다. 어쨌든, manifold를 포함하는 좋은 경우에 Čech cohomology는 sheaf cohomology와 같은 결과를 주고, 따라서 constant sheaf의 Čech cohomology는 우리가 원래 알던 cohomology를 복원한다.
 
@@ -146,7 +146,7 @@ $$g_{ij}\cdot g_{jk}\cdot g_{ki}=\id$$
 
 을 만족해야 하며, 만일 이 조건이 없다면 triple intersection $U_i\cap U_j\cap U_k$에서, $U_i$의 local trivialization을 $g_{ij}$를 통해 $U_j$로, 이를 다시 $g_{jk}$를 통해 $U_k$로, 이를 다시 $g_{ki}$를 통해 $U_i$로 가져왔을 때 trivialization이 달라져 있겠지만 실제로는 그렇지 않다는 것을 의미한다. 그럼 transition function들 $g_{ij}$들은 위의 조건에 의하여 Čech 1-cocycle을 이룬다. 이 때 각각의 $U_i$ 위의 local trivialization을 함수 $h_i:U_i\rightarrow \GL(n;\mathbb{R})$만큼 바꾸면 $g_{ij}$는 $h_ig_{ij}h_j^{-1}$로 바뀌므로, 같은 vector bundle을 주는 cocycle들은 이 관계로 identify되어야 한다. 즉, open cover $\mathcal{U}$ 위에서 trivializable한 rank $n$ vector bundle들의 isomorphism class들과 $\check{H}^1(\mathcal{U}, \GL(n;\mathbb{R}))$ 사이의 일대일 대응이 있다. 다만 $\GL(n;\mathbb{R})$은 비가환군이므로 여기에서의 $\check{H}^1$은 위의 differential로 정의되는 cohomology group이 아니라, cocycle 조건 $g_{ij}g_{jk}g_{ki}=\id$와 방금의 동치관계로 따로 정의되는 pointed set이다.
 
-앞서 우리는 [§푸앵카레 쌍대성, ⁋명제 7](/ko/math/algebraic_topology/Poincare_duality#prop7)에서 manifold $M$의 $A$-orientability가 다음의 group homomorphism
+앞서 우리는 [§푸앵카레 쌍대성, ⁋명제 7](/ko/math/algebraic_topology/Poincare_duality#prop7){: data-relation="weak" }에서 manifold $M$의 $A$-orientability가 다음의 group homomorphism
 
 $$\pi_1(M,x)\rightarrow A^\times$$
 
@@ -154,13 +154,13 @@ $$\pi_1(M,x)\rightarrow A^\times$$
 
 $$H_1(M)\rightarrow A^\times$$
 
-으로 factor through하고 이는 [§코호몰로지, ⁋명제 3](/ko/math/algebraic_topology/cohomology#prop3)에 의하여 $H^1(M;A^\times)$의 원소이다. 만일 이 원소가 $0$이라면 monodromy action이 trivial action이라는 것과 같고, 이는 곧 $\Spe(\or_M^A)$이 trivial covering space라는 뜻이 되어 $M$이 $A$-orientable manifold가 되었다. 한편 임의의 commutative ring $A$에 대하여, $\cRing$의 initial object가 $\mathbb{Z}$이므로 임의의 manifold $M$에 대하여 $\mathbb{Z}$-orientation $H_1(M)\rightarrow \mathbb{Z}^\times$가 결정되면 이를 $\mathbb{Z}^\times\rightarrow A^\times$와 합성하여 $A$-orientation $H_1(M)\rightarrow A^\times$를 결정할 수 있으므로, $\Spe(\or_M^A)$가 trivial cover인지에 대한 본질적인 정보는 $H^1(M;\mathbb{Z}/2)$에 들어있는 것을 알고 있으며, $\mathbb{Z}/2$를 $\GL(1;\mathbb{Z})$로 생각하면 이것은 first cohomology가 어떻게 covering space에 대한 정보를 담고있는지에 대한 예시이다.
+으로 factor through하고 이는 [§코호몰로지, ⁋명제 3](/ko/math/algebraic_topology/cohomology#prop3){: data-relation="weak" }에 의하여 $H^1(M;A^\times)$의 원소이다. 만일 이 원소가 $0$이라면 monodromy action이 trivial action이라는 것과 같고, 이는 곧 $\Spe(\or_M^A)$이 trivial covering space라는 뜻이 되어 $M$이 $A$-orientable manifold가 되었다. 한편 임의의 commutative ring $A$에 대하여, $\cRing$의 initial object가 $\mathbb{Z}$이므로 임의의 manifold $M$에 대하여 $\mathbb{Z}$-orientation $H_1(M)\rightarrow \mathbb{Z}^\times$가 결정되면 이를 $\mathbb{Z}^\times\rightarrow A^\times$와 합성하여 $A$-orientation $H_1(M)\rightarrow A^\times$를 결정할 수 있으므로, $\Spe(\or_M^A)$가 trivial cover인지에 대한 본질적인 정보는 $H^1(M;\mathbb{Z}/2)$에 들어있는 것을 알고 있으며, $\mathbb{Z}/2$를 $\GL(1;\mathbb{Z})$로 생각하면 이것은 first cohomology가 어떻게 covering space에 대한 정보를 담고있는지에 대한 예시이다.
 
 이러한 방식으로, vector bundle $E\rightarrow B$ of rank $k$에 대한 정보는 $\check{H}^1(B; \underline{\GL(k;\mathbb{R})})$에 담겨있다고 볼 수 있다. 그러나 우리가 사용하는 $B$의 cohomology의 coefficient는 $\mathbb{Z}$이기 때문에 여기에 담겨있는 모든 데이터를 갖고있지는 않다. 대신 우리는 이를 약하게 대체할만한 대상, 즉 invariant들을 cohomology ring $H^\bullet(B)$에서 찾는 것이 목표이다.
 
 ## 슈티펠-휘트니 특성류
 
-첫 번째로 살펴볼 characteristic class는 *Stiefel-Whitney class*이다. 우선 이는 임의의 vector bundle $p:E\rightarrow B$가 주어질 때마다 정의되는 cohomology ring $H^\bullet(B;\mathbb{Z}/2)$의 원소 $w(p)$이며, 위와 마찬가지로 만일 $E$가 trivial bundle이라면 $w(p)=1$이 된다. 실제로 trivial bundle은 [명제 4](#prop4)에 의하여 $n=\rank(E)$개의 everywhere linearly independent continuous section을 가지며, $w(p)$가 $1$에서 벗어나는 정도가 곧 그러한 section을 고르는 데 대한 장애를 잰다. 이를 보기 위해 $w(p)$를 cohomology ring의 degree에 맞춰 
+첫 번째로 살펴볼 characteristic class는 *Stiefel-Whitney class*이다. 우선 이는 임의의 vector bundle $p:E\rightarrow B$가 주어질 때마다 정의되는 cohomology ring $H^\bullet(B;\mathbb{Z}/2)$의 원소 $w(p)$이며, 위와 마찬가지로 만일 $E$가 trivial bundle이라면 $w(p)=1$이 된다. 실제로 trivial bundle은 [명제 4](#prop4){: data-relation="required" }에 의하여 $n=\rank(E)$개의 everywhere linearly independent continuous section을 가지며, $w(p)$가 $1$에서 벗어나는 정도가 곧 그러한 section을 고르는 데 대한 장애를 잰다. 이를 보기 위해 $w(p)$를 cohomology ring의 degree에 맞춰 
 
 $$w(p)=w_0(p)+w_1(p)+\cdots$$
 
@@ -174,7 +174,7 @@ Vector bundle $E \rightarrow B$ of rank $n$과 vector bundle $F\rightarrow B$에
 1. (Rank) $w_0(E)=1$이며, 만일 $i>n$이라면 $w_i(E)=0$이다. 
 2. (Naturality) 임의의 $f:B'\rightarrow B$에 대하여, $w(f^\ast E)=f^\ast w(E)$가 성립한다. 
 3. (Whitney product formula) $w(E\oplus F)=w(E)w(F)$가 성립한다. 
-4. (Normalization) [예시 3](#ex3)의 tautological line bundle $\gamma_1^1:E(\gamma_1^1)\rightarrow \RP^1$에 대하여, $w_1(\gamma_1^1)\neq 0$이다. 
+4. (Normalization) [예시 3](#ex3){: data-relation="required" }의 tautological line bundle $\gamma_1^1:E(\gamma_1^1)\rightarrow \RP^1$에 대하여, $w_1(\gamma_1^1)\neq 0$이다. 
 :::
 
 그럼 다음 결과들을 얻는다. 
@@ -183,13 +183,13 @@ Vector bundle $E \rightarrow B$ of rank $n$과 vector bundle $F\rightarrow B$에
 위상공간 $B$ 위에 정의된 두 vector bundle $p_1:E_1\rightarrow B$, $p_2:E_2\rightarrow B$에 대하여, 만일 $p_1,p_2$이 isomorphic하다면 $w(E_1)=w(E_2)$이다. 특히, 만일 $p:E\rightarrow B$가 trivial bundle이라면 $w(E)=1$이다. 
 :::
 
-첫째 주장의 경우, $E_1$과 $E_2$ 사이의 isomorphism은 $E_1\cong \id_B^\ast E_2$를 주므로, [정의 5](#def5)의 naturality에 의하여 $w(E_1)=\id_B^\ast w(E_2)=w(E_2)$가 된다. 둘째 주장의 경우, trivial bundle은 다음의 pullback
+첫째 주장의 경우, $E_1$과 $E_2$ 사이의 isomorphism은 $E_1\cong \id_B^\ast E_2$를 주므로, [정의 5](#def5){: data-relation="required" }의 naturality에 의하여 $w(E_1)=\id_B^\ast w(E_2)=w(E_2)$가 된다. 둘째 주장의 경우, trivial bundle은 다음의 pullback
 
 {% diagram Math/Algebraic_Topology/Stiefel_Whitney_Classes-3.svg width="5.34em" alt="trivial_bundle" %}
 
 으로 주어지는 것을 확인하면 된다.
 
-흥미로운 관찰은 $S^1$의 line bundle의 isomorphism class는 오직 두 가지, 즉 trivial line bundle과 [예시 3](#ex3)의 line bundle 뿐이라는 것이며, 실제로 $S^1$ 위에 정의된 line bundle 중, "두 번 꼬아" 얻어지는 line bundle은 trivial line bundle과 isomorphic하다는 것을 확인할 수 있다. 이는 [명제 6](#prop6)을 보면 어느정도 예측가능한 것으로, $S^1$ 위의 line bundle의 Stiefel-Whitney class는 $H^1(S^1;\mathbb{Z}/2)$에 존재해야 하며 이는 $\mathbb{Z}/2$와 isomorphic하기 때문이다. 
+흥미로운 관찰은 $S^1$의 line bundle의 isomorphism class는 오직 두 가지, 즉 trivial line bundle과 [예시 3](#ex3){: data-relation="required" }의 line bundle 뿐이라는 것이며, 실제로 $S^1$ 위에 정의된 line bundle 중, "두 번 꼬아" 얻어지는 line bundle은 trivial line bundle과 isomorphic하다는 것을 확인할 수 있다. 이는 [명제 6](#prop6){: data-relation="weak" }을 보면 어느정도 예측가능한 것으로, $S^1$ 위의 line bundle의 Stiefel-Whitney class는 $H^1(S^1;\mathbb{Z}/2)$에 존재해야 하며 이는 $\mathbb{Z}/2$와 isomorphic하기 때문이다. 
 
 또 다른 관찰은 이들이 $\RP^1$의 tautological line bundle의 pullback이라는 것이다. $S^1$의 trivial line bundle의 경우, $S^1$의 모든 점을 $\RP^1$의 고정된 점으로 보내는 연속함수로의 pullback이며 nontrivial한 line bundle은 homeomorphism $S^1 \rightarrow \RP^1$을 통한 line bundle의 pullback이다. 
 
@@ -211,7 +211,7 @@ Vector bundle $E \rightarrow B$ of rank $n$과 vector bundle $F\rightarrow B$에
 
 우선 우리는 $\Gr(k,\mathbb{R}^n)$의 기본적인 성질들과 cohomology ring을 살펴본다. 정의에 의해 $\Gr(k,\mathbb{R}^{n})$은 $\mathbb{R}^{n}$의 모든 $k$차원 linear subspace들의 공간이다. 예를 들어 $\Gr(1,\mathbb{R}^{n+1})$은 그 정의에 의하여 projective space $\RP^n$이다. $\Gr(k,\mathbb{R}^{n})$의 각각의 점들은 $\mathbb{R}^{n}$의 부분공간이므로, 우리는 두 점 (즉 $\mathbb{R}^{n}$의 두 $k$차원 부분공간)이 서로 얼마나 가까운지를 직관적으로 알고 있다. 이는 가령, $\mathbb{R}^{n+1}$에서 "기울기"가 비슷한 두 직선에 해당하는 점들이 $\RP^n$에서 가까운 점들인 것과 동일한 일이며, 이는 $n\times k$행렬을 이용하여 엄밀하게 정의할 수 있으며, 이 위상구조 하에서 $\Gr(k,\mathbb{R}^{n})$은 $k(n-k)$차원 compact topological manifold가 된다. 
 
-이제 이들의 cohomology ring을 살펴보자. 우리는 어차피 $\mathbb{Z}/2$-coefficient를 사용하고 있으므로, [§푸앵카레 쌍대성, ⁋정리 11](/ko/math/algebraic_topology/Poincare_duality#thm11)에 의하여, $\Gr(k,\mathbb{R}^n)$의 homology cycle을 생각해도 된다.
+이제 이들의 cohomology ring을 살펴보자. 우리는 어차피 $\mathbb{Z}/2$-coefficient를 사용하고 있으므로, [§푸앵카레 쌍대성, ⁋정리 11](/ko/math/algebraic_topology/Poincare_duality#thm11){: data-relation="required" }에 의하여, $\Gr(k,\mathbb{R}^n)$의 homology cycle을 생각해도 된다.
 
 이를 위해 $\mathbb{R}^n$의 full flag
 
@@ -262,7 +262,7 @@ $$\Omega_\lambda(F_\bullet)\hookrightarrow \Gr(k,\mathbb{R}^n)$$
 
 $$\sigma_{(1,0)}\smile\sigma_{(1,0)}=\sigma_{(1,1)}+\sigma_{(2,0)}$$
 
-에 대해 살펴볼 것이다. 우리의 기하학적 직관을 활용하기 위해 [§푸앵카레 쌍대성, ⁋예시 16](/ko/math/algebraic_topology/Poincare_duality#ex16)에서와 같이 이를 Schubert cycle들의 intersection으로 생각하자. 우리는 이를 위해 $\sigma_{(1,0)}$에 해당하는 homology class 중, general position에 있는 두 부분공간을 생각해야 하며 이는 flag의 선택을 바꾸어줌으로서 가능하다. 
+에 대해 살펴볼 것이다. 우리의 기하학적 직관을 활용하기 위해 [§푸앵카레 쌍대성, ⁋예시 16](/ko/math/algebraic_topology/Poincare_duality#ex16){: data-relation="required" }에서와 같이 이를 Schubert cycle들의 intersection으로 생각하자. 우리는 이를 위해 $\sigma_{(1,0)}$에 해당하는 homology class 중, general position에 있는 두 부분공간을 생각해야 하며 이는 flag의 선택을 바꾸어줌으로서 가능하다. 
 
 고정된 flag $F_\bullet$에 대해, partition $\lambda=(1,0)$이 나타내는 조건이 무엇인지를 명시적으로 나타내면 이는 다음의 조건
 
@@ -289,7 +289,7 @@ $$S=\left\{L\oplus L'\mid L\subseteq F_2,\ L'\subseteq F_2'\right\}\cong \mathbb
 
 더 일반적으로 우리는 이들 partition을 *Young diagram*으로 나타내고, 이를 이용하여 두 Schubert class의 cup product $\sigma_\lambda\smile\sigma_\mu$를 계산했을 때, $\lvert\nu\rvert=\lvert\lambda\rvert+\lvert\mu\rvert$를 만족하는 $\nu$에 대해 $\sigma_\nu$ 앞에 붙는 계수를 계산할 수 있다. 이 계수를 Young diagram으로부터 읽어내는 규칙을 *Littlewood-Richardson rule*이라 부른다.
 
-이제 우리는 $\Gr(k,\mathbb{R}^\infty)$와 그 위의 universal bundle을 정의해야 한다. 이를 위해 $\Gr(k,\mathbb{R}^n)$ 위의 tautological bundle을 먼저 정의한다. [예시 3](#ex3)과 같은 방식으로, $\Gr(k,\mathbb{R}^{n+k})$의 각각의 점마다 그 점에 해당하는 vector space를 달아주는 다음의 bundle
+이제 우리는 $\Gr(k,\mathbb{R}^\infty)$와 그 위의 universal bundle을 정의해야 한다. 이를 위해 $\Gr(k,\mathbb{R}^n)$ 위의 tautological bundle을 먼저 정의한다. [예시 3](#ex3){: data-relation="weak" }과 같은 방식으로, $\Gr(k,\mathbb{R}^{n+k})$의 각각의 점마다 그 점에 해당하는 vector space를 달아주는 다음의 bundle
 
 $$E(\gamma^k_n)=\left\{([V], x)\in \Gr(k,\mathbb{R}^{n+k})\times \mathbb{R}^{n+k}\mid \text{$V$ a $k$-dimensional subspace of $\mathbb{R}^{n+k}$ and $x\in V$}\right\}$$
 
