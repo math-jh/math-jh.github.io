@@ -14,7 +14,7 @@ published: false
 
 ---
 
-Vector bundle은 algebraic geometry에서 기하적 대상을 다루는 핵심 도구이며, 이번 글에서는 주어진 vector bundle이 얼마나 뒤틀려 있는지를 재는 *Chern class*를 정의한다. 이는 complex vector bundle에 대해 정의되는 위상적·기하학적 불변량으로, 우리는 대수위상에서는 이를 Gysin sequence를 타고 내려오는 방식을 취했지만 ([\[대수적 위상수학\] §벡터다발의 특성류, ⁋정의 6](/ko/math/algebraic_topology/characteristic_classes#def6)) 이번 글에서는 공리적인 접근으로 시작한다. 모든 논의는 적당한 base space $X$ 위의 complex vector bundle에 대해 이루어지며, cohomology는 $H^\bullet(X, \mathbb{Z})$를 사용한다. Cohomology convention상 $k$차 Chern class가 $2k$차 cohomology에 들어감을 기억하자.
+Vector bundle은 algebraic geometry에서 기하적 대상을 다루는 핵심 도구이며, 이번 글에서는 주어진 vector bundle이 얼마나 뒤틀려 있는지를 재는 *Chern class*를 정의한다. 이는 complex vector bundle에 대해 정의되는 위상적·기하학적 불변량으로, 우리는 대수위상에서는 이를 Gysin sequence를 타고 내려오는 방식을 취했지만 ([\[대수적 위상수학\] §벡터다발의 특성류, ⁋정의 6](/ko/math/algebraic_topology/characteristic_classes#def6){: data-relation="weak" }) 이번 글에서는 공리적인 접근으로 시작한다. 모든 논의는 적당한 base space $X$ 위의 complex vector bundle에 대해 이루어지며, cohomology는 $H^\bullet(X, \mathbb{Z})$를 사용한다. Cohomology convention상 $k$차 Chern class가 $2k$차 cohomology에 들어감을 기억하자.
 
 ## 천 특성류의 공리
 
@@ -26,7 +26,7 @@ Complex vector bundle $\mathcal{E} \rightarrow X$마다 cohomology class $c_i(\m
 3. (*Normalization*) $c_0(\mathcal{E})=1$이며, line bundle $\mathcal{L} \rightarrow X$에 대하여 $c(\mathcal{L}) = 1 + c_1(\mathcal{L})$이고, $\mathbb{P}^n$ 위의 hyperplane bundle $\mathcal{O}(1)$에 대하여 $c_1(\mathcal{O}(1))$은 hyperplane의 cycle class로 주어지는 $H^2(\mathbb{P}^n, \mathbb{Z}) \cong \mathbb{Z}$의 generator이다.
 :::
 
-공리는 Chern class를 직접 구성하지 않고 그것이 따라야 할 규칙만 못박는다. Naturality는 Chern class가 다발의 위상적 정보만에 의존함을, Whitney 공식은 direct sum을 곱으로 옮김을, normalization은 가장 단순한 다발인 line bundle에서의 값을 고정한다. 놀랍게도 이 세 규칙만으로 Chern class가 유일하게 결정되고 또 실제로 존재하는데, 이는 splitting principle을 확립한 뒤 [명제 6](#prop6)에서 증명한다. 한편 rank $r$ 다발에서는 $c_i(\mathcal{E}) = 0$ ($i > r$)이므로 total Chern class는 $c(\mathcal{E}) = 1 + c_1(\mathcal{E}) + \cdots + c_r(\mathcal{E})$로 끝난다.
+공리는 Chern class를 직접 구성하지 않고 그것이 따라야 할 규칙만 못박는다. Naturality는 Chern class가 다발의 위상적 정보만에 의존함을, Whitney 공식은 direct sum을 곱으로 옮김을, normalization은 가장 단순한 다발인 line bundle에서의 값을 고정한다. 놀랍게도 이 세 규칙만으로 Chern class가 유일하게 결정되고 또 실제로 존재하는데, 이는 splitting principle을 확립한 뒤 [명제 6](#prop6){: data-relation="forward" }에서 증명한다. 한편 rank $r$ 다발에서는 $c_i(\mathcal{E}) = 0$ ($i > r$)이므로 total Chern class는 $c(\mathcal{E}) = 1 + c_1(\mathcal{E}) + \cdots + c_r(\mathcal{E})$로 끝난다.
 
 ## Line bundle의 천 특성류
 
@@ -45,7 +45,7 @@ Exponential exact sequence
 
 $$0 \rightarrow \mathbb{Z} \rightarrow \mathcal{O}_X \xrightarrow{f\mapsto e^{2\pi if}} \mathcal{O}_X^{\ast} \rightarrow 0$$
 
-의 long exact sequence는 connecting homomorphism $\delta: H^1(X, \mathcal{O}_X^{\ast}) \rightarrow H^2(X, \mathbb{Z})$를 준다. Line bundle은 transition cocycle $\{g_{\alpha\beta}\} \in H^1(X, \mathcal{O}_X^{\ast})$로 분류되며 ([§선다발과 벡터다발](/ko/math/algebraic_varieties/line_bundles)), $c_1(\mathcal{L}) = \delta([\mathcal{L}])$이 위상적 $c_1$과 일치한다. 한편 section $s$를 국소적으로 $s_\alpha$로 적으면 $s_\alpha = g_{\alpha\beta}s_\beta$이고 $D = \divisor(s)$는 국소방정식 $s_\alpha = 0$으로 주어지므로, $\delta$를 추적하면 $\delta([\mathcal{L}])$이 $D$의 cycle class $[D]$와 일치한다. 다른 section $s'$를 택하면 $s'/s$가 전역 유리함수이므로 $\divisor(s') - \divisor(s) = \divisor(s'/s)$는 principal divisor이고, principal divisor의 cycle class는 $0$이므로 $[D]$는 $s$에 무관하다. 위상적 추적의 자세한 계산은 [Hart], [BT]로 미룬다.
+의 long exact sequence는 connecting homomorphism $\delta: H^1(X, \mathcal{O}_X^{\ast}) \rightarrow H^2(X, \mathbb{Z})$를 준다. Line bundle은 transition cocycle $\{g_{\alpha\beta}\} \in H^1(X, \mathcal{O}_X^{\ast})$로 분류되며 ([§선다발과 벡터다발](/ko/math/algebraic_varieties/line_bundles){: data-relation="required" }), $c_1(\mathcal{L}) = \delta([\mathcal{L}])$이 위상적 $c_1$과 일치한다. 한편 section $s$를 국소적으로 $s_\alpha$로 적으면 $s_\alpha = g_{\alpha\beta}s_\beta$이고 $D = \divisor(s)$는 국소방정식 $s_\alpha = 0$으로 주어지므로, $\delta$를 추적하면 $\delta([\mathcal{L}])$이 $D$의 cycle class $[D]$와 일치한다. 다른 section $s'$를 택하면 $s'/s$가 전역 유리함수이므로 $\divisor(s') - \divisor(s) = \divisor(s'/s)$는 principal divisor이고, principal divisor의 cycle class는 $0$이므로 $[D]$는 $s$에 무관하다. 위상적 추적의 자세한 계산은 [Hart], [BT]로 미룬다.
 :::
 
 즉 line bundle의 $c_1$은 임의의 section의 영점 자리이며 그 class는 section 선택에 무관한데, 이것이 Chern class의 기하학적 원형이다. 대수적으로는 이 등식이 $\CH^1(X) = \mathrm{Pic}(X)$에서 성립하고, cycle class map을 거쳐 $H^2(X, \mathbb{Z})$로 보내진 것이 위의 명제이다. 같은 그림이 높은 rank로도 이어진다. Globally generated rank $r$ 다발 $\mathcal{E}$의 generic section $s$는 codimension $r$의 영점자리 $Z(s)$를 가지며 그 class가 top Chern class $c_r(\mathcal{E})$이다. 더 일반적으로 generic section $s_1, \ldots, s_{r-p+1}$을 택하면, 이들이 fiber에서 일차종속이 되는 점들의 자리인 *degeneracy locus*는 codimension $p$의 cycle이고 그 class가 $c_p(\mathcal{E})$이다 ([Ful]). 요컨대 $c_p(\mathcal{E})$는 "$\mathcal{E}$가 $r-p+1$개의 독립 section을 갖지 못하게 하는 obstruction"을 재는 cycle이다.
@@ -60,7 +60,7 @@ Line bundle의 tensor product·쌍대는 $c_1$과 다음과 같이 잘 맞물린
 :::
 
 ::: 증명
-Line bundle은 transition cocycle로 $H^1(X, \mathcal{O}_X^{\ast})$의 원소를 주며, tensor product는 cocycle의 곱(즉 $H^1$에서의 덧셈)에, dual은 역원에 대응한다. [명제 2](#prop2)의 $c_1 = \delta$는 group homomorphism $H^1(X, \mathcal{O}_X^{\ast}) \rightarrow H^2(X, \mathbb{Z})$이므로 곱을 합으로, 역원을 음수로 보낸다. 따라서 1과 2가 성립한다. Divisor의 언어로도 같은 결론을 얻는다. $\mathcal{L} = \mathcal{O}_X(D)$, $\mathcal{M} = \mathcal{O}_X(E)$이면 $\mathcal{L} \otimes \mathcal{M} = \mathcal{O}_X(D+E)$, $\mathcal{L}^{\vee} = \mathcal{O}_X(-D)$이므로 [명제 2](#prop2)로부터 $c_1$이 더해지고 부호가 뒤집힌다.
+Line bundle은 transition cocycle로 $H^1(X, \mathcal{O}_X^{\ast})$의 원소를 주며, tensor product는 cocycle의 곱(즉 $H^1$에서의 덧셈)에, dual은 역원에 대응한다. [명제 2](#prop2){: data-relation="required" }의 $c_1 = \delta$는 group homomorphism $H^1(X, \mathcal{O}_X^{\ast}) \rightarrow H^2(X, \mathbb{Z})$이므로 곱을 합으로, 역원을 음수로 보낸다. 따라서 1과 2가 성립한다. Divisor의 언어로도 같은 결론을 얻는다. $\mathcal{L} = \mathcal{O}_X(D)$, $\mathcal{M} = \mathcal{O}_X(E)$이면 $\mathcal{L} \otimes \mathcal{M} = \mathcal{O}_X(D+E)$, $\mathcal{L}^{\vee} = \mathcal{O}_X(-D)$이므로 [명제 2](#prop2){: data-relation="required" }로부터 $c_1$이 더해지고 부호가 뒤집힌다.
 :::
 
 이처럼 line bundle에서는 $c_1$이 $\mathrm{Pic}(X) \rightarrow H^2(X, \mathbb{Z})$의 group homomorphism으로 완전히 이해된다. 일반적인 vector bundle은 line bundle들의 direct sum으로 분해되지 않지만, 이는 실계수 다항식이 실수 위에서는 인수분해되지 않아도 복소수로 올라가면 일차식들로 쪼개지는 것과 같다. 다음의 splitting principle은 이 "extension"의 기하학적 버전으로, 임의의 다발의 Chern class 계산을 line bundle의 경우로 환원해 준다.
@@ -89,19 +89,19 @@ Rank $r$ vector bundle $\mathcal{E} \rightarrow X$에 대하여, 연속사상 $f
 :::
 
 ::: 증명
-$\pi: \mathbb{P}(\mathcal{E}) \rightarrow X$를 택하면 [명제 4](#prop4)에 의해 $\pi^{\ast}$은 단사이다. $\mathbb{P}(\mathcal{E})$ 위에는 tautological line subbundle $\mathcal{O}_\mathcal{E}(-1) \subseteq \pi^{\ast}\mathcal{E}$가 있어 $\pi^{\ast}\mathcal{E}$가 이 line bundle과 rank $r-1$인 quotient $\mathcal{Q}$로의 short exact sequence를 이루며, metric을 주면 direct sum $\pi^{\ast}\mathcal{E} \cong \mathcal{O}_\mathcal{E}(-1) \oplus \mathcal{Q}$로 분리된다. 이제 $\mathcal{Q}$에 같은 과정을 반복하면 rank가 한 단계마다 하나씩 줄어들어, 유한 번 뒤 얻어지는 합성 $f: Y \rightarrow X$ 위에서 $f^{\ast}\mathcal{E}$가 line bundle들의 direct sum으로 분해된다. 각 단계의 pullback이 단사이므로 합성 $f^{\ast}$ 또한 단사이다.
+$\pi: \mathbb{P}(\mathcal{E}) \rightarrow X$를 택하면 [명제 4](#prop4){: data-relation="required" }에 의해 $\pi^{\ast}$은 단사이다. $\mathbb{P}(\mathcal{E})$ 위에는 tautological line subbundle $\mathcal{O}_\mathcal{E}(-1) \subseteq \pi^{\ast}\mathcal{E}$가 있어 $\pi^{\ast}\mathcal{E}$가 이 line bundle과 rank $r-1$인 quotient $\mathcal{Q}$로의 short exact sequence를 이루며, metric을 주면 direct sum $\pi^{\ast}\mathcal{E} \cong \mathcal{O}_\mathcal{E}(-1) \oplus \mathcal{Q}$로 분리된다. 이제 $\mathcal{Q}$에 같은 과정을 반복하면 rank가 한 단계마다 하나씩 줄어들어, 유한 번 뒤 얻어지는 합성 $f: Y \rightarrow X$ 위에서 $f^{\ast}\mathcal{E}$가 line bundle들의 direct sum으로 분해된다. 각 단계의 pullback이 단사이므로 합성 $f^{\ast}$ 또한 단사이다.
 :::
 
 Splitting principle의 핵심은 $f^{\ast}$이 단사라는 점이다. $Y$는 $X$보다 복잡한 공간이 아니라 $X$의 cohomology 정보를 잃지 않으면서 다발의 twist만 풀어 주는 공간이며, 따라서 $Y$ 위에서 성립하는 cohomology 등식은 그대로 $X$로 내려온다. 덕분에 임의의 다발에 대한 Chern class의 계산을 line bundle의 경우로 환원할 수 있다. 이제 공리의 정당성을 확인할 수 있다.
 
 ::: 명제 6
-[정의 1](#def1)의 공리를 만족하는 Chern class는 유일하게 존재한다.
+[정의 1](#def1){: data-relation="required" }의 공리를 만족하는 Chern class는 유일하게 존재한다.
 :::
 
 ::: 증명
-**존재성.** [명제 4](#prop4)의 관계식 $\xi^r + \pi^{\ast}c_1\xi^{r-1} + \cdots + \pi^{\ast}c_r = 0$을 $c_i(\mathcal{E})$의 정의로 삼으면 (Grothendieck), 이렇게 얻은 $c_i$가 세 공리를 모두 만족함을 확인할 수 있다 ([BT]).
+**존재성.** [명제 4](#prop4){: data-relation="required" }의 관계식 $\xi^r + \pi^{\ast}c_1\xi^{r-1} + \cdots + \pi^{\ast}c_r = 0$을 $c_i(\mathcal{E})$의 정의로 삼으면 (Grothendieck), 이렇게 얻은 $c_i$가 세 공리를 모두 만족함을 확인할 수 있다 ([BT]).
 
-**유일성.** 공리를 만족하는 두 이론 $c, c'$가 있다 하자. 먼저 line bundle에서는 둘이 일치한다. 임의의 line bundle $\mathcal{L}$은 classifying space $\mathbb{P}^{\infty}$로의 연속사상 $g: X \rightarrow \mathbb{P}^{\infty}$에 대해 $\mathcal{L} = g^{\ast}\mathcal{O}(1)$의 꼴이고, naturality와 normalization에 의해 $c_1(\mathcal{L}) = g^{\ast}c_1(\mathcal{O}(1)) = c_1'(\mathcal{L})$이기 때문이다. 일반 $\mathcal{E}$에 대해서는 [명제 5](#prop5)로 $f^{\ast}\mathcal{E} = \bigoplus_i \mathcal{L}_i$이고 $f^{\ast}$이 단사인 $f: Y \rightarrow X$를 택하면, Whitney 공식과 normalization으로
+**유일성.** 공리를 만족하는 두 이론 $c, c'$가 있다 하자. 먼저 line bundle에서는 둘이 일치한다. 임의의 line bundle $\mathcal{L}$은 classifying space $\mathbb{P}^{\infty}$로의 연속사상 $g: X \rightarrow \mathbb{P}^{\infty}$에 대해 $\mathcal{L} = g^{\ast}\mathcal{O}(1)$의 꼴이고, naturality와 normalization에 의해 $c_1(\mathcal{L}) = g^{\ast}c_1(\mathcal{O}(1)) = c_1'(\mathcal{L})$이기 때문이다. 일반 $\mathcal{E}$에 대해서는 [명제 5](#prop5){: data-relation="required" }로 $f^{\ast}\mathcal{E} = \bigoplus_i \mathcal{L}_i$이고 $f^{\ast}$이 단사인 $f: Y \rightarrow X$를 택하면, Whitney 공식과 normalization으로
 
 $$f^{\ast}c(\mathcal{E}) = \prod_i \bigl(1 + c_1(\mathcal{L}_i)\bigr) = f^{\ast}c'(\mathcal{E})$$
 
@@ -144,7 +144,7 @@ Splitting principle로 $\mathcal{E} = \bigoplus_i \mathcal{L}_i$ (Chern root $x_
 
 $$\chern(\mathcal{E} \oplus \mathcal{F}) = \sum_i e^{x_i} + \sum_j e^{y_j} = \chern(\mathcal{E}) + \chern(\mathcal{F})$$
 
-이다. 한편 $\mathcal{E} \otimes \mathcal{F} = \bigoplus_{i,j} \mathcal{L}_i \otimes \mathcal{M}_j$의 Chern root는 [명제 3](#prop3)에 의하여 $c_1(\mathcal{L}_i \otimes \mathcal{M}_j) = x_i + y_j$이므로
+이다. 한편 $\mathcal{E} \otimes \mathcal{F} = \bigoplus_{i,j} \mathcal{L}_i \otimes \mathcal{M}_j$의 Chern root는 [명제 3](#prop3){: data-relation="required" }에 의하여 $c_1(\mathcal{L}_i \otimes \mathcal{M}_j) = x_i + y_j$이므로
 
 $$\chern(\mathcal{E} \otimes \mathcal{F}) = \sum_{i,j} e^{x_i + y_j} = \Bigl(\sum_i e^{x_i}\Bigr)\Bigl(\sum_j e^{y_j}\Bigr) = \chern(\mathcal{E}) \smile \chern(\mathcal{F})$$
 
@@ -170,7 +170,7 @@ Top Chern class $c_n(T_X)$는 complex rank $n$ vector bundle $T_X$를 rank $2n$ 
 :::
 
 ::: 예시 11
-$\mathbb{P}^n$의 tangent bundle은 [§표준선다발, ⁋명제 7](/ko/math/algebraic_varieties/canonical_bundle#prop7)을 dual하여 얻어지는
+$\mathbb{P}^n$의 tangent bundle은 [§표준선다발, ⁋명제 7](/ko/math/algebraic_varieties/canonical_bundle#prop7){: data-relation="required" }을 dual하여 얻어지는
 
 $$0 \rightarrow \mathcal{O} \rightarrow \mathcal{O}(1)^{\oplus(n+1)} \rightarrow T_{\mathbb{P}^n} \rightarrow 0$$
 
@@ -178,7 +178,7 @@ $$0 \rightarrow \mathcal{O} \rightarrow \mathcal{O}(1)^{\oplus(n+1)} \rightarrow
 
 $$c(T_{\mathbb{P}^n}) = c(\mathcal{O}(1))^{n+1} = (1+H)^{n+1}$$
 
-이고, 여기서 $H = c_1(\mathcal{O}(1))$은 $H^{\ast}(\mathbb{P}^n, \mathbb{Z}) = \mathbb{Z}[H]/(H^{n+1})$의 generator이다 ([\[대수적 위상수학\] §벡터다발의 특성류, ⁋예시 11](/ko/math/algebraic_topology/characteristic_classes#ex11)). 따라서 $c_k(T_{\mathbb{P}^n}) = \binom{n+1}{k}H^k$이며, 특히 $c_n(T_{\mathbb{P}^n}) = (n+1)H^n$이다. $\int_{\mathbb{P}^n} H^n = 1$이므로 [명제 10](#prop10)에 의해
+이고, 여기서 $H = c_1(\mathcal{O}(1))$은 $H^{\ast}(\mathbb{P}^n, \mathbb{Z}) = \mathbb{Z}[H]/(H^{n+1})$의 generator이다 ([\[대수적 위상수학\] §벡터다발의 특성류, ⁋예시 11](/ko/math/algebraic_topology/characteristic_classes#ex11){: data-relation="weak" }). 따라서 $c_k(T_{\mathbb{P}^n}) = \binom{n+1}{k}H^k$이며, 특히 $c_n(T_{\mathbb{P}^n}) = (n+1)H^n$이다. $\int_{\mathbb{P}^n} H^n = 1$이므로 [명제 10](#prop10){: data-relation="required" }에 의해
 
 $$\rchi_{\mathrm{top}}(\mathbb{P}^n) = \int_{\mathbb{P}^n} c_n(T_{\mathbb{P}^n}) = n+1$$
 
@@ -186,7 +186,7 @@ $$\rchi_{\mathrm{top}}(\mathbb{P}^n) = \int_{\mathbb{P}^n} c_n(T_{\mathbb{P}^n})
 :::
 
 ::: 예시 12
-$X \subseteq \mathbb{P}^3$를 degree $d$의 smooth surface라 하자. $X$의 normal bundle은 $\mathcal{O}_X(d)$이므로 ([§표준선다발](/ko/math/algebraic_varieties/canonical_bundle)) short exact sequence
+$X \subseteq \mathbb{P}^3$를 degree $d$의 smooth surface라 하자. $X$의 normal bundle은 $\mathcal{O}_X(d)$이므로 ([§표준선다발](/ko/math/algebraic_varieties/canonical_bundle){: data-relation="required" }) short exact sequence
 
 $$0 \rightarrow T_X \rightarrow T_{\mathbb{P}^3}\vert_X \rightarrow \mathcal{O}_X(d) \rightarrow 0$$
 
@@ -198,7 +198,7 @@ $$c(T_X) = \frac{c(T_{\mathbb{P}^3})\vert_X}{1 + dH} = \frac{(1+H)^4}{1 + dH}$$
 
 $$c(T_X) = (1 + 4H + 6H^2)(1 - dH + d^2H^2) = 1 + (4-d)H + (d^2 - 4d + 6)H^2$$
 
-이고, 따라서 $c_2(T_X) = (d^2 - 4d + 6)H^2$이다. $\int_X H^2 = d$이므로 [명제 10](#prop10)에 의해
+이고, 따라서 $c_2(T_X) = (d^2 - 4d + 6)H^2$이다. $\int_X H^2 = d$이므로 [명제 10](#prop10){: data-relation="required" }에 의해
 
 $$\rchi_{\mathrm{top}}(X) = \int_X c_2(T_X) = d(d^2 - 4d + 6)$$
 
