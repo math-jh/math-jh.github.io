@@ -14,13 +14,13 @@ weight: 18
 
 ---
 
-[§사영공간의 코호몰로지, ⁋명제 7](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop7)의 Serre vanishing theorem은 projective variety 위의 ample line bundle $\mathcal{L}$과 coherent sheaf $\mathcal{F}$에 대해, 충분히 큰 $m$에 대하여 $H^i(X, \mathcal{F} \otimes \mathcal{L}^{\otimes m}) = 0$ ($i > 0$)이 성립함을 보장한다. 그러나 이 결과는 단지 asymptotic한 성질에 불과하며, 구체적으로 어떤 $m$에서부터 vanishing이 시작되는지에 대해서는 아무 정보도 주지 않는다.
+[§사영공간의 코호몰로지, ⁋명제 7](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop7){: data-relation="weak" }의 Serre vanishing theorem은 projective variety 위의 ample line bundle $\mathcal{L}$과 coherent sheaf $\mathcal{F}$에 대해, 충분히 큰 $m$에 대하여 $H^i(X, \mathcal{F} \otimes \mathcal{L}^{\otimes m}) = 0$ ($i > 0$)이 성립함을 보장한다. 그러나 이 결과는 단지 asymptotic한 성질에 불과하며, 구체적으로 어떤 $m$에서부터 vanishing이 시작되는지에 대해서는 아무 정보도 주지 않는다.
 
  Kodaira vanishing theorem은 이보다 훨씬 더 정교한 결과로, canonical bundle $\omega_X$와 ample line bundle $\mathcal{L}$의 tensor product $\omega_X \otimes \mathcal{L}$에 대해 higher cohomology가 *항상* 사라진다는 사실을 보장한다. 우리는 이 글에서 Kodaira vanishing theorem과 그 응용, 그리고 이 정리가 algebraic geometry에서 어떻게 활용되는지를 살펴 본다.
 
 ## 고다이라 소멸정리
 
-우리가 다룰 기본적인 설정은 다음과 같다. $X$는 $n$차원 smooth projective variety이고, $\mathcal{L}$은 $X$ 위의 ample line bundle, $\omega_X = \det \Omega_X^1 = \Omega_X^n$은 canonical line bundle이다. ([§표준선다발, ⁋정의 5](/ko/math/algebraic_varieties/canonical_bundle#def5)) 그럼 Kodaira vanishing theorem은 다음과 같이 쓸 수 있다. 
+우리가 다룰 기본적인 설정은 다음과 같다. $X$는 $n$차원 smooth projective variety이고, $\mathcal{L}$은 $X$ 위의 ample line bundle, $\omega_X = \det \Omega_X^1 = \Omega_X^n$은 canonical line bundle이다. ([§표준선다발, ⁋정의 5](/ko/math/algebraic_varieties/canonical_bundle#def5){: data-relation="weak" }) 그럼 Kodaira vanishing theorem은 다음과 같이 쓸 수 있다. 
 
 ::: 명제 1 (Kodaira vanishing)
 $\operatorname{char}\mathbb{K} = 0$일 때, $n$차원 smooth projective variety $X$, ample line bundle $\mathcal{L}$이 주어졌다 하자. 그럼 모든 $p > 0$에 대하여
@@ -34,12 +34,12 @@ $$H^p(X, \Omega^q\otimes \mathcal{L})=0$$
 이 성립한다. 
 :::
 
-첫째 주장은 둘째 주장에서 $q=n$으로 두어 얻어지는 것이며, [§곡면에서의 리만-로흐 정리, ⁋명제 7](/ko/math/algebraic_varieties/riemann_roch_surfaces#prop7)에서 이미 살펴본 것이다. 둘째 주장은 이를 임의의 form degree $q$로 확장한 것으로, Akizuki-Nakano vanishing이라 부른다. 이 명제에 대한 증명은 꽤나 기술적인 부분이 있어 이번 글에서는 이를 엄밀하게 증명하기보다는 algebraic geometry에서 어떻게 사용되는지에 초점을 맞춘다. 
+첫째 주장은 둘째 주장에서 $q=n$으로 두어 얻어지는 것이며, [§곡면에서의 리만-로흐 정리, ⁋명제 7](/ko/math/algebraic_varieties/riemann_roch_surfaces#prop7){: data-relation="weak" }에서 이미 살펴본 것이다. 둘째 주장은 이를 임의의 form degree $q$로 확장한 것으로, Akizuki-Nakano vanishing이라 부른다. 이 명제에 대한 증명은 꽤나 기술적인 부분이 있어 이번 글에서는 이를 엄밀하게 증명하기보다는 algebraic geometry에서 어떻게 사용되는지에 초점을 맞춘다. 
 
 명제의 서술에서 알 수 있듯, Kodaira vanishing은 canonical bundle에 대한 twist 이후의 higher cohomology를 제거한다. Serre duality를 사용하면 이는 다음의 동치된 서술로 바꾸어 쓸 수 있다.
 
 ::: 명제 2
-[명제 1](#prop1)의 가정 아래, 모든 $p < n$에 대하여
+[명제 1](#prop1){: data-relation="required" }의 가정 아래, 모든 $p < n$에 대하여
 
 $$H^p(X, \mathcal{L}^{-1}) = 0$$
 
@@ -47,11 +47,11 @@ $$H^p(X, \mathcal{L}^{-1}) = 0$$
 :::
 
 ::: 증명
-[§세르 쌍대성](/ko/math/algebraic_varieties/serre_duality)의 Serre duality에 의해
+[§세르 쌍대성](/ko/math/algebraic_varieties/serre_duality){: data-relation="required" }의 Serre duality에 의해
 
 $$H^p(X, \mathcal{L}^{-1}) \cong H^{n-p}(X, \omega_X \otimes \mathcal{L})^\vee$$
 
-이 성립한다. $p < n$이면 $n - p > 0$이므로, [명제 1](#prop1)에 의해 우변은 $0$이다.
+이 성립한다. $p < n$이면 $n - p > 0$이므로, [명제 1](#prop1){: data-relation="required" }에 의해 우변은 $0$이다.
 :::
 
 이 두 formulation은 위의 증명에서 살펴본 것과 같이 Serre duality를 통해 완전히 동치이므로 상황에 따라 더 편한 쪽을 사용하면 된다.
@@ -59,17 +59,17 @@ $$H^p(X, \mathcal{L}^{-1}) \cong H^{n-p}(X, \omega_X \otimes \mathcal{L})^\vee$$
 Kodaira vanishing이 가장 단순한 nontrivial한 예시를 제공하는 것은 projective space $X = \mathbb{P}^n$에서이다. 
 
 ::: 예시 3
-우리는 [§표준선다발, ⁋명제 7](/ko/math/algebraic_varieties/canonical_bundle#prop7)의 Euler exact sequence로부터
+우리는 [§표준선다발, ⁋명제 7](/ko/math/algebraic_varieties/canonical_bundle#prop7){: data-relation="weak" }의 Euler exact sequence로부터
 
 $$\omega_{\mathbb{P}^n} \cong \mathcal{O}(-n-1)$$
 
-임을 확인하였고, [§선다발과 벡터다발, ⁋예시 12](/ko/math/algebraic_varieties/line_bundles#ex12)에서 $\mathbb{P}^n$ 위의 임의의 line bundle은 $\mathcal{O}(d)$ 꼴임을 확인하였다. 이 중 $d>0$인 $\mathcal{O}(d)$들이 ample line bundle이다. 따라서, Kodaira vanishing은 다음의 vanishing
+임을 확인하였고, [§선다발과 벡터다발, ⁋예시 12](/ko/math/algebraic_varieties/line_bundles#ex12){: data-relation="weak" }에서 $\mathbb{P}^n$ 위의 임의의 line bundle은 $\mathcal{O}(d)$ 꼴임을 확인하였다. 이 중 $d>0$인 $\mathcal{O}(d)$들이 ample line bundle이다. 따라서, Kodaira vanishing은 다음의 vanishing
 
 $$H^p(\mathbb{P}^n, \mathcal{O}(d - n - 1)) = 0$$
 
 이 모든 $d>0$과 모든 $p>0$에 대해 성립함을 주장한다. 
 
-우리는 [§사영공간의 코호몰로지, ⁋명제 1](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop1)를 통해 모든 line bundle의 cohomology를 알고 있으므로 이를 직접 검증할 수 있다. 이에 따르면
+우리는 [§사영공간의 코호몰로지, ⁋명제 1](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop1){: data-relation="weak" }를 통해 모든 line bundle의 cohomology를 알고 있으므로 이를 직접 검증할 수 있다. 이에 따르면
 
 $$H^q(\mathbb{P}^n, \mathcal{O}(k)) = \begin{cases}
 \mathbb{K}[\x_0, \ldots, \x_n]_k & q = 0, k \geq 0 \\
@@ -86,23 +86,23 @@ $$H^q(\mathbb{P}^n, \mathcal{O}(k)) = \begin{cases}
 
 $$\rchi(\mathcal{O}_S(D)) = \frac{1}{2} D \cdot (D - K_S) + \rchi(\mathcal{O}_S)$$
 
-를 준다. ([§곡면에서의 리만-로흐 정리, ⁋명제 4](/ko/math/algebraic_varieties/riemann_roch_surfaces#prop4)) 이 공식의 강력함은 $\rchi$를 순전히 대수적·위상적 데이터로 계산할 수 있다는 데 있지만, 문제는 $\rchi$가 $h^0, h^1, h^2$의 alternating sum이라는 점이다. 따라서 단순히 $h^0(S, \mathcal{O}_S(D))$만을 알고 싶을 때는 higher cohomology들의 값을 각각 따로 구해야 하므로, Riemann-Roch 공식만으로는 직접적인 답을 얻기 어렵다. 
+를 준다. ([§곡면에서의 리만-로흐 정리, ⁋명제 4](/ko/math/algebraic_varieties/riemann_roch_surfaces#prop4){: data-relation="required" }) 이 공식의 강력함은 $\rchi$를 순전히 대수적·위상적 데이터로 계산할 수 있다는 데 있지만, 문제는 $\rchi$가 $h^0, h^1, h^2$의 alternating sum이라는 점이다. 따라서 단순히 $h^0(S, \mathcal{O}_S(D))$만을 알고 싶을 때는 higher cohomology들의 값을 각각 따로 구해야 하므로, Riemann-Roch 공식만으로는 직접적인 답을 얻기 어렵다. 
 
 이런 상황에서 Kodaira vanishing theorem을 사용하기 위해 $\mathcal{L}\cong \mathcal{O}_S(L)$이 ample line bundle라 하면, 우리는
 
 $$\omega_S\otimes \mathcal{L}\cong \mathcal{O}_S(K_S+L)$$
 
-임을 알고 있으며, 이를 위에 대입하고 [명제 1](#prop1)로부터 $h^1(S, \omega_S \otimes \mathcal{L}) = h^2(S, \omega_S \otimes \mathcal{L}) = 0$임을 사용하면
+임을 알고 있으며, 이를 위에 대입하고 [명제 1](#prop1){: data-relation="required" }로부터 $h^1(S, \omega_S \otimes \mathcal{L}) = h^2(S, \omega_S \otimes \mathcal{L}) = 0$임을 사용하면
 
 $$\rchi(S, \omega_S \otimes \mathcal{L}) = h^0(S, \omega_S \otimes \mathcal{L})$$
 
 를 얻고, 따라서 Riemann-Roch 공식의 우변을 계산하는 것만으로 곧바로 $h^0(S, \omega_S \otimes \mathcal{L})$를 얻을 수 있다. 
 
-또 다른 활용은 plurigenus의 계산이다. Smooth projective variety $X$의 plurigenus $P_m(X)$는 geometric genus $p_g(X)$의 일반화로, surface의 birational invariant이다. ([§곡면에서의 리만-로흐 정리, ⁋정의 12](/ko/math/algebraic_varieties/riemann_roch_surfaces#def12)) Kodaira vanishing은 이들 불변량을 계산하는 데 직접적으로 사용될 수 있다.
+또 다른 활용은 plurigenus의 계산이다. Smooth projective variety $X$의 plurigenus $P_m(X)$는 geometric genus $p_g(X)$의 일반화로, surface의 birational invariant이다. ([§곡면에서의 리만-로흐 정리, ⁋정의 12](/ko/math/algebraic_varieties/riemann_roch_surfaces#def12){: data-relation="required" }) Kodaira vanishing은 이들 불변량을 계산하는 데 직접적으로 사용될 수 있다.
 
 가령 curve $C$의 경우 우리는 이들의 plurigenus가 genus에 의해 결정된다는 것을 알고 있으며, 실제로 $P_m(g)$는 $g$ (와 $m$)에 대한 함수로 주어진다. 즉 본질적으로 curve $C$에 대해서는 plurigenus가 흥미로운 불변량은 아니다. 이것이 흥미로운 경우는 surface 등의 고차원의 경우로, 여기서는 birational invariant가 하나의 숫자로 결정되는 것이 아니며 본격적으로 plurigenus 모두가 필요해진다. 
 
-[§곡면에서의 리만-로흐 정리](/ko/math/algebraic_varieties/riemann_roch_surfaces)에서 보듯, surface $S$ 위의 divisor $D$에 대해 Riemann-Roch formula는
+[§곡면에서의 리만-로흐 정리](/ko/math/algebraic_varieties/riemann_roch_surfaces){: data-relation="required" }에서 보듯, surface $S$ 위의 divisor $D$에 대해 Riemann-Roch formula는
 
 $$\rchi(\mathcal{O}_S(D)) = \frac{1}{2} D \cdot (D - K_S) + \rchi(\mathcal{O}_S)$$
 
@@ -110,7 +110,7 @@ $$\rchi(\mathcal{O}_S(D)) = \frac{1}{2} D \cdot (D - K_S) + \rchi(\mathcal{O}_S)
 
 $$\rchi(\mathcal{O}_S(mK_S)) = \frac{m(m-1)}{2} K_S^2 + \rchi(\mathcal{O}_S)$$
 
-이다. 그런데 만일 $m \geq 2$이고 $K_S$가 ample이면 $(m-1)K_S$도 ample이므로, $mK_S = K_S + (m-1)K_S$에 [명제 1](#prop1)을 적용하여 $h^1 = h^2 = 0$을 얻는다. 따라서 이 formula로부터 직접 $P_m(S) = h^0(S, \mathcal{O}_S(mK_S))$를 계산할 수 있게 된다.
+이다. 그런데 만일 $m \geq 2$이고 $K_S$가 ample이면 $(m-1)K_S$도 ample이므로, $mK_S = K_S + (m-1)K_S$에 [명제 1](#prop1){: data-relation="required" }을 적용하여 $h^1 = h^2 = 0$을 얻는다. 따라서 이 formula로부터 직접 $P_m(S) = h^0(S, \mathcal{O}_S(mK_S))$를 계산할 수 있게 된다.
 
 한편 이러한 경우 plurigenera의 식은 asymptotically 2차식인 것으로 생각할 수 있다. 이는 다음의 정의로 이어진다.
 
@@ -128,7 +128,7 @@ $$\kappa(X) = \limsup_{m \rightarrow \infty} \frac{\log P_m(X)}{\log m}$$
 
 위 정의에서 최소값을 취하는 집합이 공집합이 아닌 것은 임의의 smooth projective variety에 대해 $P_m(X) = O(m^{\dim X})$가 성립하기 때문이며, 이로부터 $\kappa(X)$가 잘 정의되고 동시에 $\kappa(X) \leq \dim X$가 언제나 성립함을 안다. 따라서 surface의 경우 $\kappa \in \{-\infty, 0, 1, 2\}$이다. [Enriques–Kodaira classification](https://en.wikipedia.org/wiki/Enriques-Kodaira_classification)은 surface를 크게는 Kodaira dimension에 의해 분류하고, 여기에 $\kappa=0$과 $\kappa=-\infty$인 경우는 geometric genus $p_g$와 irregularity $q$를 사용하여 추가적인 세부 분류를 해 준다. 
 
-우리는 [§선형계, ⁋정의 9](/ko/math/algebraic_varieties/linear_systems#def9)에서 line bundle $\mathcal{L}$이 very ample이라는 것은 complete linear system $\lvert \mathcal{L} \rvert$가 정의하는 morphism $\varphi_{\mathcal{L}}: X \rightarrow \mathbb{P}(\Gamma(X, \mathcal{L}))$이 closed embedding인 것으로 정의하였다. 당시에는 sheaf cohomology의 언어가 없었으나, 지금은 sheaf cohomology를 도입하였으므로 이를 조금 더 잘 사용할 수 있다. 
+우리는 [§선형계, ⁋정의 9](/ko/math/algebraic_varieties/linear_systems#def9){: data-relation="weak" }에서 line bundle $\mathcal{L}$이 very ample이라는 것은 complete linear system $\lvert \mathcal{L} \rvert$가 정의하는 morphism $\varphi_{\mathcal{L}}: X \rightarrow \mathbb{P}(\Gamma(X, \mathcal{L}))$이 closed embedding인 것으로 정의하였다. 당시에는 sheaf cohomology의 언어가 없었으나, 지금은 sheaf cohomology를 도입하였으므로 이를 조금 더 잘 사용할 수 있다. 
 
 우선 very ample line bundle $\mathcal{L}$이 주어졌다 하고, 이로부터 정의되는 closed embedding $\varphi_\mathcal{L}: X\rightarrow \mathbb{P}^N$을 생각하자. 그럼 $\varphi$가 embedding인 것으로부터 $\varphi_\mathcal{L}(p)\neq \varphi_\mathcal{L}(q)$가 성립하는 것을 알고, 뿐만 아니라 $\varphi_\mathcal{L}$이 closed embedding이므로 $\dd{\varphi_\mathcal{L}}$이 injective이고, 따라서 cotangent space에서의 dual map $\mathfrak{m}_{\varphi_{\mathcal{L}}(p)}/\mathfrak{m}_{\varphi_{\mathcal{L}}(p)}^2 \longrightarrow \mathfrak{m}_p/\mathfrak{m}_p^2$은 surjective이다. 이로부터 다음의 두 결과가 성립함을 안다. 
 
@@ -173,13 +173,13 @@ $$H^0(X, \mathcal{L}^{\otimes m}) \longrightarrow H^0(X, \mathcal{L}^{\otimes m}
 
 를 고려하면, $H^1(X, \mathcal{I}_p^2 \otimes \mathcal{L}^{\otimes m}) = 0$이면 separation of tangent vectors가 성립한다.
 
-$\mathcal{I}_Z$와 $\mathcal{I}_p^2$는 coherent sheaf이므로, [§사영공간의 코호몰로지, ⁋명제 7](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop7)을 $\mathcal{F} = \mathcal{I}_Z$와 $\mathcal{F} = \mathcal{I}_p^2$에 적용하면 충분히 큰 $m$에 대해 위의 두 $H^1$이 모두 사라진다. 따라서 $\mathcal{L}^{\otimes m}$의 section들이 두 separation 조건을 모두 만족하고, [명제 5](#prop5)에 의해 $\mathcal{L}^{\otimes m}$은 very ample이다. 즉 ample line bundle에 대해서는 충분히 큰 <em-ko>모든</em-ko> $m$에서 $\mathcal{L}^{\otimes m}$이 very ample이다.
+$\mathcal{I}_Z$와 $\mathcal{I}_p^2$는 coherent sheaf이므로, [§사영공간의 코호몰로지, ⁋명제 7](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop7){: data-relation="required" }을 $\mathcal{F} = \mathcal{I}_Z$와 $\mathcal{F} = \mathcal{I}_p^2$에 적용하면 충분히 큰 $m$에 대해 위의 두 $H^1$이 모두 사라진다. 따라서 $\mathcal{L}^{\otimes m}$의 section들이 두 separation 조건을 모두 만족하고, [명제 5](#prop5){: data-relation="required" }에 의해 $\mathcal{L}^{\otimes m}$은 very ample이다. 즉 ample line bundle에 대해서는 충분히 큰 <em-ko>모든</em-ko> $m$에서 $\mathcal{L}^{\otimes m}$이 very ample이다.
 
-한편 Kodaira vanishing은 [명제 6](#prop6)의 고전적인 증명에 다른 방식으로 들어온다. 그 증명에서는 $p$와 $q$를 blow-up한 $\pi: \widetilde{X} \rightarrow X$ 위에서 exceptional divisor만큼 twist를 낮춘 line bundle에 vanishing을 적용하므로, vanishing의 대상이 다시 line bundle이 되어 [명제 1](#prop1)의 형태로 환원된다. 더 나아가 $\mathcal{L}^{\otimes m}$이 very ample일 뿐만 아니라 그에 의한 embedding이 projectively normal이 되도록 하는 조건도 관련된 multiplication map
+한편 Kodaira vanishing은 [명제 6](#prop6){: data-relation="forward" }의 고전적인 증명에 다른 방식으로 들어온다. 그 증명에서는 $p$와 $q$를 blow-up한 $\pi: \widetilde{X} \rightarrow X$ 위에서 exceptional divisor만큼 twist를 낮춘 line bundle에 vanishing을 적용하므로, vanishing의 대상이 다시 line bundle이 되어 [명제 1](#prop1){: data-relation="required" }의 형태로 환원된다. 더 나아가 $\mathcal{L}^{\otimes m}$이 very ample일 뿐만 아니라 그에 의한 embedding이 projectively normal이 되도록 하는 조건도 관련된 multiplication map
 
 $$S^\mu H^0(X, \mathcal{L}^{\otimes m}) \longrightarrow H^0(X, \mathcal{L}^{\otimes \mu m})$$
 
-의 surjectivity를 검증함으로써 얻을 수 있는데, 이때 필요한 vanishing을 구체적인 $m$의 범위와 함께 주는 것은 [§사영공간의 코호몰로지, §§Regularity](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#regularity)의 Castelnuovo-Mumford regularity이다. 이러한 vanishing은 higher cohomology가 sections의 생성을 방해하지 않음을 보장하여, linear system의 풍부함을 정량적으로 다룰 수 있게 한다.
+의 surjectivity를 검증함으로써 얻을 수 있는데, 이때 필요한 vanishing을 구체적인 $m$의 범위와 함께 주는 것은 [§사영공간의 코호몰로지, §§Regularity](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#regularity){: data-relation="weak" }의 Castelnuovo-Mumford regularity이다. 이러한 vanishing은 higher cohomology가 sections의 생성을 방해하지 않음을 보장하여, linear system의 풍부함을 정량적으로 다룰 수 있게 한다.
 
 
 ## 고다이라 매장정리

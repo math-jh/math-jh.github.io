@@ -14,13 +14,13 @@ translated_at: 2026-08-19T02:15:04+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-08-19T02:15:04+00:00
 ---
-[§Cohomology of Projective Space, ⁋Proposition 7](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop7)'s Serre vanishing theorem guarantees that for an ample line bundle $\mathcal{L}$ and a coherent sheaf $\mathcal{F}$ on a projective variety, $H^i(X, \mathcal{F} \otimes \mathcal{L}^{\otimes m}) = 0$ for $i > 0$ when $m$ is sufficiently large. However, this result is merely an asymptotic property and gives no information about the specific $m$ at which vanishing begins.
+[§Cohomology of Projective Space, ⁋Proposition 7](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop7){: data-relation="weak" }'s Serre vanishing theorem guarantees that for an ample line bundle $\mathcal{L}$ and a coherent sheaf $\mathcal{F}$ on a projective variety, $H^i(X, \mathcal{F} \otimes \mathcal{L}^{\otimes m}) = 0$ for $i > 0$ when $m$ is sufficiently large. However, this result is merely an asymptotic property and gives no information about the specific $m$ at which vanishing begins.
 
 The Kodaira vanishing theorem is a far more refined result: it guarantees that the higher cohomology of the tensor product $\omega_X \otimes \mathcal{L}$ of the canonical bundle $\omega_X$ and an ample line bundle $\mathcal{L}$ *always* vanishes. In this post we examine the Kodaira vanishing theorem, its applications, and how it is used in algebraic geometry.
 
 ## Kodaira Vanishing Theorem
 
-The basic setup is as follows. $X$ is an $n$-dimensional smooth projective variety, $\mathcal{L}$ is an ample line bundle on $X$, and $\omega_X = \det \Omega_X^1 = \Omega_X^n$ is the canonical line bundle. ([§Canonical Line Bundle, ⁋Definition 5](/en/math/algebraic_varieties/canonical_bundle#def5)) The Kodaira vanishing theorem can then be stated as follows.
+The basic setup is as follows. $X$ is an $n$-dimensional smooth projective variety, $\mathcal{L}$ is an ample line bundle on $X$, and $\omega_X = \det \Omega_X^1 = \Omega_X^n$ is the canonical line bundle. ([§Canonical Line Bundle, ⁋Definition 5](/en/math/algebraic_varieties/canonical_bundle#def5){: data-relation="weak" }) The Kodaira vanishing theorem can then be stated as follows.
 
 ::: Proposition 1 (Kodaira vanishing)
 Suppose $\operatorname{char}\mathbb{K} = 0$, and let $X$ be an $n$-dimensional smooth projective variety with an ample line bundle $\mathcal{L}$. Then for all $p > 0$,
@@ -34,12 +34,12 @@ $$H^p(X, \Omega^q \otimes \mathcal{L}) = 0$$
 holds.
 :::
 
-The first statement is obtained from the second by setting $q = n$, and we have already seen it in [§The Riemann–Roch Theorem for Surfaces, ⁋Proposition 7](/en/math/algebraic_varieties/riemann_roch_surfaces#prop7). The second statement extends this to arbitrary form degree $q$ and is called the Akizuki–Nakano vanishing. The proof of this proposition is quite technical, so in this post we focus on how it is used in algebraic geometry rather than giving a rigorous proof.
+The first statement is obtained from the second by setting $q = n$, and we have already seen it in [§The Riemann–Roch Theorem for Surfaces, ⁋Proposition 7](/en/math/algebraic_varieties/riemann_roch_surfaces#prop7){: data-relation="weak" }. The second statement extends this to arbitrary form degree $q$ and is called the Akizuki–Nakano vanishing. The proof of this proposition is quite technical, so in this post we focus on how it is used in algebraic geometry rather than giving a rigorous proof.
 
 As the statement shows, Kodaira vanishing kills higher cohomology after twisting by the canonical bundle. Using Serre duality, this can be rewritten as the following equivalent statement.
 
 ::: Proposition 2
-Under the hypotheses of [Proposition 1](#prop1), for all $p < n$,
+Under the hypotheses of [Proposition 1](#prop1){: data-relation="required" }, for all $p < n$,
 
 $$H^p(X, \mathcal{L}^{-1}) = 0$$
 
@@ -47,11 +47,11 @@ holds.
 :::
 
 ::: Proof
-By Serre duality from [§Serre Duality](/en/math/algebraic_varieties/serre_duality),
+By Serre duality from [§Serre Duality](/en/math/algebraic_varieties/serre_duality){: data-relation="required" },
 
 $$H^p(X, \mathcal{L}^{-1}) \cong H^{n-p}(X, \omega_X \otimes \mathcal{L})^\vee$$
 
-holds. If $p < n$, then $n - p > 0$, so the right-hand side is $0$ by [Proposition 1](#prop1).
+holds. If $p < n$, then $n - p > 0$, so the right-hand side is $0$ by [Proposition 1](#prop1){: data-relation="required" }.
 :::
 
 Since these two formulations are completely equivalent via Serre duality, as seen in the proof above, we may use whichever is more convenient in a given situation.
@@ -59,17 +59,17 @@ Since these two formulations are completely equivalent via Serre duality, as see
 The simplest nontrivial example to which Kodaira vanishing applies is projective space $X = \mathbb{P}^n$.
 
 ::: Example 3
-From the Euler exact sequence in [§Canonical Line Bundle, ⁋Proposition 7](/en/math/algebraic_varieties/canonical_bundle#prop7), we verified that
+From the Euler exact sequence in [§Canonical Line Bundle, ⁋Proposition 7](/en/math/algebraic_varieties/canonical_bundle#prop7){: data-relation="required" }, we verified that
 
 $$\omega_{\mathbb{P}^n} \cong \mathcal{O}(-n-1)$$
 
-and in [§Line Bundles and Vector Bundles, ⁋Example 12](/en/math/algebraic_varieties/line_bundles#ex12) we checked that any line bundle on $\mathbb{P}^n$ is of the form $\mathcal{O}(d)$. Among these, those with $d > 0$ are ample. Therefore, Kodaira vanishing asserts that
+and in [§Line Bundles and Vector Bundles, ⁋Example 12](/en/math/algebraic_varieties/line_bundles#ex12){: data-relation="required" } we checked that any line bundle on $\mathbb{P}^n$ is of the form $\mathcal{O}(d)$. Among these, those with $d > 0$ are ample. Therefore, Kodaira vanishing asserts that
 
 $$H^p(\mathbb{P}^n, \mathcal{O}(d - n - 1)) = 0$$
 
 for all $d > 0$ and all $p > 0$.
 
-Since we already know the cohomology of every line bundle from [§Cohomology of Projective Space, ⁋Proposition 1](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop1), we can verify this directly. It states that
+Since we already know the cohomology of every line bundle from [§Cohomology of Projective Space, ⁋Proposition 1](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop1){: data-relation="required" }, we can verify this directly. It states that
 
 $$H^q(\mathbb{P}^n, \mathcal{O}(k)) = \begin{cases}
 \mathbb{K}[\x_0, \ldots, \x_n]_k & q = 0, k \geq 0 \\
@@ -86,23 +86,23 @@ Now, as previewed earlier, we examine applications of the Kodaira vanishing theo
 
 $$\rchi(\mathcal{O}_S(D)) = \frac{1}{2} D \cdot (D - K_S) + \rchi(\mathcal{O}_S)$$
 
-holds. ([§The Riemann–Roch Theorem for Surfaces, ⁋Proposition 4](/en/math/algebraic_varieties/riemann_roch_surfaces#prop4)) The power of this formula lies in the fact that $\rchi$ can be computed purely from algebraic and topological data, but the problem is that $\rchi$ is the alternating sum of $h^0, h^1, h^2$. Thus, when we simply want to know $h^0(S, \mathcal{O}_S(D))$, we must determine the higher cohomology groups separately, so the Riemann–Roch formula alone does not give a direct answer.
+holds. ([§The Riemann–Roch Theorem for Surfaces, ⁋Proposition 4](/en/math/algebraic_varieties/riemann_roch_surfaces#prop4){: data-relation="required" }) The power of this formula lies in the fact that $\rchi$ can be computed purely from algebraic and topological data, but the problem is that $\rchi$ is the alternating sum of $h^0, h^1, h^2$. Thus, when we simply want to know $h^0(S, \mathcal{O}_S(D))$, we must determine the higher cohomology groups separately, so the Riemann–Roch formula alone does not give a direct answer.
 
 To apply the Kodaira vanishing theorem in this situation, suppose $\mathcal{L} \cong \mathcal{O}_S(L)$ is an ample line bundle. Then we know that
 
 $$\omega_S \otimes \mathcal{L} \cong \mathcal{O}_S(K_S + L)$$
 
-and substituting this above and using $h^1(S, \omega_S \otimes \mathcal{L}) = h^2(S, \omega_S \otimes \mathcal{L}) = 0$ from [Proposition 1](#prop1), we obtain
+and substituting this above and using $h^1(S, \omega_S \otimes \mathcal{L}) = h^2(S, \omega_S \otimes \mathcal{L}) = 0$ from [Proposition 1](#prop1){: data-relation="required" }, we obtain
 
 $$\rchi(S, \omega_S \otimes \mathcal{L}) = h^0(S, \omega_S \otimes \mathcal{L})$$
 
 Hence we can read off $h^0(S, \omega_S \otimes \mathcal{L})$ immediately from the right-hand side of the Riemann–Roch formula.
 
-Another application is the computation of plurigenera. The plurigenus $P_m(X)$ of a smooth projective variety $X$ is a generalization of the geometric genus $p_g(X)$ and is a birational invariant of surfaces. ([§The Riemann–Roch Theorem for Surfaces, ⁋Definition 12](/en/math/algebraic_varieties/riemann_roch_surfaces#def12)) Kodaira vanishing can be used directly to compute these invariants.
+Another application is the computation of plurigenera. The plurigenus $P_m(X)$ of a smooth projective variety $X$ is a generalization of the geometric genus $p_g(X)$ and is a birational invariant of surfaces. ([§The Riemann–Roch Theorem for Surfaces, ⁋Definition 12](/en/math/algebraic_varieties/riemann_roch_surfaces#def12){: data-relation="required" }) Kodaira vanishing can be used directly to compute these invariants.
 
 For example, for a curve $C$ we know that its plurigenera are determined by the genus; indeed $P_m(g)$ is given as a function of $g$ (and $m$). Thus for curves, plurigenera are not particularly interesting invariants. The interesting case arises in higher dimensions such as surfaces, where a birational invariant is no longer determined by a single number and all plurigenera become genuinely necessary.
 
-As seen in [§The Riemann–Roch Theorem for Surfaces](/en/math/algebraic_varieties/riemann_roch_surfaces), for a divisor $D$ on a surface $S$ the Riemann–Roch formula is
+As seen in [§The Riemann–Roch Theorem for Surfaces](/en/math/algebraic_varieties/riemann_roch_surfaces){: data-relation="required" }, for a divisor $D$ on a surface $S$ the Riemann–Roch formula is
 
 $$\rchi(\mathcal{O}_S(D)) = \frac{1}{2} D \cdot (D - K_S) + \rchi(\mathcal{O}_S)$$
 
@@ -110,7 +110,7 @@ and to compute plurigenera, using $\omega_S^{\otimes m} \cong \mathcal{O}_S(mK_S
 
 $$\rchi(\mathcal{O}_S(mK_S)) = \frac{m(m-1)}{2} K_S^2 + \rchi(\mathcal{O}_S)$$
 
-Now, if $m \geq 2$ and $K_S$ is ample, then $(m-1)K_S$ is also ample, so applying [Proposition 1](#prop1) to $mK_S = K_S + (m-1)K_S$ yields $h^1 = h^2 = 0$. Therefore, from this formula we can directly compute $P_m(S) = h^0(S, \mathcal{O}_S(mK_S))$.
+Now, if $m \geq 2$ and $K_S$ is ample, then $(m-1)K_S$ is also ample, so applying [Proposition 1](#prop1){: data-relation="required" } to $mK_S = K_S + (m-1)K_S$ yields $h^1 = h^2 = 0$. Therefore, from this formula we can directly compute $P_m(S) = h^0(S, \mathcal{O}_S(mK_S))$.
 
 In this case, moreover, the expression for plurigenera is asymptotically quadratic. This leads to the following definition.
 
@@ -126,7 +126,7 @@ $$\kappa(X) = \limsup_{m \rightarrow \infty} \frac{\log P_m(X)}{\log m}$$
 
 That the set over which the minimum is taken is nonempty follows from the fact that $P_m(X) = O(m^{\dim X})$ holds for any smooth projective variety; from this we know that $\kappa(X)$ is well-defined and that $\kappa(X) \leq \dim X$ always holds. Hence for surfaces, $\kappa \in \{-\infty, 0, 1, 2\}$. The [Enriques–Kodaira classification](https://en.wikipedia.org/wiki/Enriques-Kodaira_classification) classifies surfaces largely by Kodaira dimension, and for the cases $\kappa = 0$ and $\kappa = -\infty$ it provides additional detailed classification using the geometric genus $p_g$ and the irregularity $q$.
 
-In [§Linear Systems, ⁋Definition 9](/en/math/algebraic_varieties/linear_systems#def9), we defined a line bundle $\mathcal{L}$ being very ample by the condition that the morphism $\varphi_{\mathcal{L}}: X \rightarrow \mathbb{P}(\Gamma(X, \mathcal{L}))$ defined by the complete linear system $\lvert \mathcal{L} \rvert$ is a closed embedding. At that time we did not yet have the language of sheaf cohomology, but now that we have introduced it, we can put it to better use.
+In [§Linear Systems, ⁋Definition 9](/en/math/algebraic_varieties/linear_systems#def9){: data-relation="weak" }, we defined a line bundle $\mathcal{L}$ being very ample by the condition that the morphism $\varphi_{\mathcal{L}}: X \rightarrow \mathbb{P}(\Gamma(X, \mathcal{L}))$ defined by the complete linear system $\lvert \mathcal{L} \rvert$ is a closed embedding. At that time we did not yet have the language of sheaf cohomology, but now that we have introduced it, we can put it to better use.
 
 First, suppose a very ample line bundle $\mathcal{L}$ is given, and consider the closed embedding $\varphi_\mathcal{L}: X \rightarrow \mathbb{P}^N$ it defines. Since $\varphi$ is an embedding, we know that $\varphi_\mathcal{L}(p) \neq \varphi_\mathcal{L}(q)$; moreover, since $\varphi_\mathcal{L}$ is a closed embedding, $\dd{\varphi_\mathcal{L}}$ is injective, and hence the dual map on cotangent spaces $\mathfrak{m}_{\varphi_{\mathcal{L}}(p)}/\mathfrak{m}_{\varphi_{\mathcal{L}}(p)}^2 \longrightarrow \mathfrak{m}_p/\mathfrak{m}_p^2$ is surjective. From this we know that the following two conditions hold.
 
@@ -171,13 +171,13 @@ $$H^0(X, \mathcal{L}^{\otimes m}) \longrightarrow H^0(X, \mathcal{L}^{\otimes m}
 
 shows that if $H^1(X, \mathcal{I}_p^2 \otimes \mathcal{L}^{\otimes m}) = 0$, then separation of tangent vectors holds.
 
-Since $\mathcal{I}_Z$ and $\mathcal{I}_p^2$ are coherent sheaves, applying [§Cohomology of Projective Space, ⁋Proposition 7](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop7) to $\mathcal{F} = \mathcal{I}_Z$ and $\mathcal{F} = \mathcal{I}_p^2$, the two $H^1$'s above both vanish for sufficiently large $m$. Therefore, the sections of $\mathcal{L}^{\otimes m}$ satisfy both separation conditions, and by [Proposition 5](#prop5), $\mathcal{L}^{\otimes m}$ is very ample. That is, for an ample line bundle, $\mathcal{L}^{\otimes m}$ is very ample for all sufficiently large $m$.
+Since $\mathcal{I}_Z$ and $\mathcal{I}_p^2$ are coherent sheaves, applying [§Cohomology of Projective Space, ⁋Proposition 7](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop7){: data-relation="required" } to $\mathcal{F} = \mathcal{I}_Z$ and $\mathcal{F} = \mathcal{I}_p^2$, the two $H^1$'s above both vanish for sufficiently large $m$. Therefore, the sections of $\mathcal{L}^{\otimes m}$ satisfy both separation conditions, and by [Proposition 5](#prop5){: data-relation="required" }, $\mathcal{L}^{\otimes m}$ is very ample. That is, for an ample line bundle, $\mathcal{L}^{\otimes m}$ is very ample for all sufficiently large $m$.
 
-Meanwhile, Kodaira vanishing enters the classical proof of [Proposition 6](#prop6) in a different way. In that proof, one applies vanishing to a line bundle on the blow-up $\pi: \widetilde{X} \rightarrow X$ of $p$ and $q$ with the twist lowered by the exceptional divisor, so that the object of vanishing becomes a line bundle again, reducing to the form of [Proposition 1](#prop1). Furthermore, the condition that $\mathcal{L}^{\otimes m}$ be not only very ample but also that the embedding it defines be projectively normal can be obtained by verifying the surjectivity of the related multiplication map
+Meanwhile, Kodaira vanishing enters the classical proof of [Proposition 6](#prop6){: data-relation="forward" } in a different way. In that proof, one applies vanishing to a line bundle on the blow-up $\pi: \widetilde{X} \rightarrow X$ of $p$ and $q$ with the twist lowered by the exceptional divisor, so that the object of vanishing becomes a line bundle again, reducing to the form of [Proposition 1](#prop1){: data-relation="required" }. Furthermore, the condition that $\mathcal{L}^{\otimes m}$ be not only very ample but also that the embedding it defines be projectively normal can be obtained by verifying the surjectivity of the related multiplication map
 
 $$S^\mu H^0(X, \mathcal{L}^{\otimes m}) \longrightarrow H^0(X, \mathcal{L}^{\otimes \mu m})$$
 
-and what supplies the necessary vanishing together with a concrete range of $m$ is the Castelnuovo–Mumford regularity from [§Cohomology of Projective Space, §§Regularity](/en/math/algebraic_varieties/cohomology_of_projective_spaces#regularity). Such vanishing guarantees that higher cohomology does not obstruct the generation of sections, allowing one to handle the abundance of linear systems quantitatively.
+and what supplies the necessary vanishing together with a concrete range of $m$ is the Castelnuovo–Mumford regularity from [§Cohomology of Projective Space, §§Regularity](/en/math/algebraic_varieties/cohomology_of_projective_spaces#regularity){: data-relation="weak" }. Such vanishing guarantees that higher cohomology does not obstruct the generation of sections, allowing one to handle the abundance of linear systems quantitatively.
 
 ## Kodaira Embedding Theorem
 
