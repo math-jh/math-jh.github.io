@@ -16,7 +16,7 @@ drift_needed: true
 published: false
 ---
 
-[§Riemann integral](/ko/math/analysis/riemann_integral)에서 적분을 엄밀하게 정초하고, [§미분](/ko/math/analysis/differentiation)에서 미분을 다시 세웠다. 미적분의 기본정리는 이 둘이 서로의 역연산임을 밝히며, [\[미적분학\] §미적분의 기본정리](/ko/math/calculus/fundamental_theorem_of_calculus)에서 다룬 내용을 이제 완비성 위에서 증명한다.
+[§Riemann integral](/ko/math/analysis/riemann_integral){: data-relation="required" }에서 적분을 엄밀하게 정초하고, [§미분](/ko/math/analysis/differentiation){: data-relation="required" }에서 미분을 다시 세웠다. 미적분의 기본정리는 이 둘이 서로의 역연산임을 밝히며, [\[미적분학\] §미적분의 기본정리](/ko/math/calculus/fundamental_theorem_of_calculus){: data-relation="weak" }에서 다룬 내용을 이제 완비성 위에서 증명한다.
 
 미분은 한 점에서의 순간 변화율을, 적분은 한 구간 위에서의 누적량을 잰다. 표면적으로 이 둘은 서로 무관해 보인다 — 하나는 국소적이고 다른 하나는 대역적이며, 미분은 difference quotient의 극한으로, 적분은 분할에 따른 하합의 supremum과 상합의 infimum으로 정의된다. 미적분의 기본정리가 말하는 바는, 그럼에도 두 연산이 서로를 정확히 되돌린다는 것이다. 누적량을 상한에 대해 미분하면 원래의 피적분함수가 되살아나고(제1형), 거꾸로 한 함수의 도함수를 적분하면 그 함수의 증분이 복원된다(제2형).
 
@@ -28,7 +28,7 @@ published: false
 
 $$F(x) = \int_a^x f$$
 
-가 정의된다. 이를 $f$의 *가변상한 적분<sub>integral with variable upper limit</sub>*이라 부른다. 앞으로 상한이 하한보다 작은 경우도 함께 다루기 위해 $x > y$일 때 $\int_x^y f = -\int_y^x f$로, 그리고 $\int_x^x f = 0$으로 약속한다. 이 약속 아래 [§Riemann integral, ⁋명제 8](/ko/math/analysis/riemann_integral#prop8)은 세 끝점의 대소 관계와 무관하게 $\int_x^y f + \int_y^z f = \int_x^z f$ 꼴이 되며, 아래에서 증분이 음수인 difference quotient를 다룰 때 이 형태를 쓴다. 직관적으로 $F(x)$는 $a$에서 $x$까지 누적된 넓이이며, 우리가 가장 먼저 밝힐 것은 이 누적이 상한의 변화에 대해 얼마나 매끄럽게 반응하는가이다. 먼저 $F$가 연속임을, 그다음 $f$가 연속인 점에서는 $F$가 미분가능함을 본다.
+가 정의된다. 이를 $f$의 *가변상한 적분<sub>integral with variable upper limit</sub>*이라 부른다. 앞으로 상한이 하한보다 작은 경우도 함께 다루기 위해 $x > y$일 때 $\int_x^y f = -\int_y^x f$로, 그리고 $\int_x^x f = 0$으로 약속한다. 이 약속 아래 [§Riemann integral, ⁋명제 8](/ko/math/analysis/riemann_integral#prop8){: data-relation="required" }은 세 끝점의 대소 관계와 무관하게 $\int_x^y f + \int_y^z f = \int_x^z f$ 꼴이 되며, 아래에서 증분이 음수인 difference quotient를 다룰 때 이 형태를 쓴다. 직관적으로 $F(x)$는 $a$에서 $x$까지 누적된 넓이이며, 우리가 가장 먼저 밝힐 것은 이 누적이 상한의 변화에 대해 얼마나 매끄럽게 반응하는가이다. 먼저 $F$가 연속임을, 그다음 $f$가 연속인 점에서는 $F$가 미분가능함을 본다.
 
 ::: 명제 1
 $f$가 $[a,b]$에서 Riemann 적분가능하면 $F(x) = \int_a^x f$는 $[a,b]$에서 (립시츠) 연속이다.
@@ -77,7 +77,7 @@ $$\begin{aligned}
 
 ## 평가정리
 
-제1형이 "적분한 뒤 미분하면 제자리"라는 한쪽 방향을 다뤘다면, 평가정리(제2형)는 그 반대 방향 — "미분한 뒤 적분하면 증분이 복원된다" — 을 다룬다. 주목할 점은 제2형이 $f$에 두는 가정이 제1형보다 약하다는 것이다. $f$에 연속성을 요구하지 않고 적분가능성만 가정하며, 원시함수 $G$는 끝점을 포함한 닫힌구간에서 연속이고 열린구간에서 미분가능하면 충분하다. 증명의 핵심 도구는 [§평균값 정리와 테일러 정리, ⁋정리 3](/ko/math/analysis/mean_value_theorem#thm3)로, 분할의 각 조각에서 $G$의 증분을 한 점에서의 도함수값 $f(t_i)$로 바꿔치기하여 $G(b) - G(a)$를 $f$의 한 리만 합으로 변신시킨다.
+제1형이 "적분한 뒤 미분하면 제자리"라는 한쪽 방향을 다뤘다면, 평가정리(제2형)는 그 반대 방향 — "미분한 뒤 적분하면 증분이 복원된다" — 을 다룬다. 주목할 점은 제2형이 $f$에 두는 가정이 제1형보다 약하다는 것이다. $f$에 연속성을 요구하지 않고 적분가능성만 가정하며, 원시함수 $G$는 끝점을 포함한 닫힌구간에서 연속이고 열린구간에서 미분가능하면 충분하다. 증명의 핵심 도구는 [§평균값 정리와 테일러 정리, ⁋정리 3](/ko/math/analysis/mean_value_theorem#thm3){: data-relation="required" }로, 분할의 각 조각에서 $G$의 증분을 한 점에서의 도함수값 $f(t_i)$로 바꿔치기하여 $G(b) - G(a)$를 $f$의 한 리만 합으로 변신시킨다.
 
 ::: 정리 3 (제2형)
 $f$가 $[a,b]$에서 적분가능하고 $G$가 $[a,b]$에서 연속이며 $(a,b)$에서 $G' = f$를 만족하는 함수이면
@@ -88,7 +88,7 @@ $$\int_a^b f = G(b) - G(a)$$
 :::
 
 ::: 증명
-임의의 분할 $P : a = x_0 < \cdots < x_n = b$를 잡는다. 각 부분구간 $[x_{i-1}, x_i]$에서 $G$는 연속이고 그 interior에서 미분가능하므로, [§평균값 정리와 테일러 정리, ⁋정리 3](/ko/math/analysis/mean_value_theorem#thm3)에 의해
+임의의 분할 $P : a = x_0 < \cdots < x_n = b$를 잡는다. 각 부분구간 $[x_{i-1}, x_i]$에서 $G$는 연속이고 그 interior에서 미분가능하므로, [§평균값 정리와 테일러 정리, ⁋정리 3](/ko/math/analysis/mean_value_theorem#thm3){: data-relation="required" }에 의해
 
 $$G(x_i) - G(x_{i-1}) = G'(t_i) (x_i - x_{i-1}) = f(t_i) \Delta x_i$$
 
@@ -107,7 +107,7 @@ $$L(P, f) \leq G(b) - G(a) \leq U(P, f)$$
 가 모든 분할 $P$에 대해 성립한다. $f$가 적분가능하므로 분할을 충분히 잘게 하면 $L(P, f)$와 $U(P, f)$가 모두 $\int_a^b f$로 수렴하고, 가운데에 끼인 상수 $G(b) - G(a)$가 그 값과 같아야 한다. 따라서 $\int_a^b f = G(b) - G(a)$이다.
 :::
 
-증명에서 $G(b) - G(a)$가 분할에 무관한 상수임에도 임의의 분할의 리만 합과 같다는 점이 결정적이다. 분할을 아무리 잘게 해도 그 합은 변하지 않으므로 극한값과 일치할 수밖에 없다. 또한 제2형이 제1형과 합쳐지면 강력한 따름이 나온다. $f$가 연속이면 제1형의 $F(x) = \int_a^x f$가 원시함수이고, 임의의 다른 원시함수 $G$는 $(G - F)' = 0$이므로 [§평균값 정리와 테일러 정리, ⁋따름정리 4](/ko/math/analysis/mean_value_theorem#cor4)에 의해 $G = F + C$ 꼴로 상수만큼만 다르다. 따라서 $G(b) - G(a) = F(b) - F(a) = \int_a^b f$가 되어, 어느 원시함수를 쓰든 같은 값을 준다.
+증명에서 $G(b) - G(a)$가 분할에 무관한 상수임에도 임의의 분할의 리만 합과 같다는 점이 결정적이다. 분할을 아무리 잘게 해도 그 합은 변하지 않으므로 극한값과 일치할 수밖에 없다. 또한 제2형이 제1형과 합쳐지면 강력한 따름이 나온다. $f$가 연속이면 제1형의 $F(x) = \int_a^x f$가 원시함수이고, 임의의 다른 원시함수 $G$는 $(G - F)' = 0$이므로 [§평균값 정리와 테일러 정리, ⁋따름정리 4](/ko/math/analysis/mean_value_theorem#cor4){: data-relation="required" }에 의해 $G = F + C$ 꼴로 상수만큼만 다르다. 따라서 $G(b) - G(a) = F(b) - F(a) = \int_a^b f$가 되어, 어느 원시함수를 쓰든 같은 값을 준다.
 
 ## 적분의 기본 규칙
 
@@ -136,7 +136,7 @@ $$\int_a^b u v' \dd{x} = \bigl[u v\bigr]_a^b - \int_a^b u' v \dd{x}$$
 :::
 
 ::: 증명
-[§미분, ⁋명제 4](/ko/math/analysis/differentiation#prop4)으로 $(uv)' = u'v + uv'$이고, $u, v$가 연속미분가능하므로 $(uv)'$는 연속, 따라서 적분가능하다. 양변을 $[a,b]$에서 적분한 뒤 $uv$가 $(uv)'$의 원시함수임을 써서 평가정리를 적용하면
+[§미분, ⁋명제 4](/ko/math/analysis/differentiation#prop4){: data-relation="required" }으로 $(uv)' = u'v + uv'$이고, $u, v$가 연속미분가능하므로 $(uv)'$는 연속, 따라서 적분가능하다. 양변을 $[a,b]$에서 적분한 뒤 $uv$가 $(uv)'$의 원시함수임을 써서 평가정리를 적용하면
 
 $$\begin{aligned}
 \bigl[u v\bigr]_a^b
@@ -162,7 +162,7 @@ $$\int_a^b f\bigl(\varphi(x)\bigr) \varphi'(x) \dd{x} = \int_{\varphi(a)}^{\varp
 :::
 
 ::: 증명
-$f$가 연속이므로 [정리 2](#thm2)에 의해 원시함수 $F(u) = \int_{\varphi(a)}^{u} f$가 존재하고 $F' = f$이다. 합성 $F \circ \varphi$에 연쇄법칙을 적용하면
+$f$가 연속이므로 [정리 2](#thm2){: data-relation="required" }에 의해 원시함수 $F(u) = \int_{\varphi(a)}^{u} f$가 존재하고 $F' = f$이다. 합성 $F \circ \varphi$에 연쇄법칙을 적용하면
 
 $$\begin{aligned}
 \bigl(F\circ\varphi\bigr)'(x)
@@ -188,7 +188,7 @@ $$\int_0^1 2x e^{x^2} \dd{x} = \int_{0}^{1} e^u \dd{u} = e - 1$$
 
 이 되어, 합성과 곱의 형태로 얽혀 있던 적분이 단순한 지수의 적분으로 풀린다.
 
-평가정리는 [\[미적분학\] §적분](/ko/math/calculus/integration)의 치환·부분적분이 의존하던 토대이며, 이제 그 가정들이 모두 엄밀하게 증명되었다.
+평가정리는 [\[미적분학\] §적분](/ko/math/calculus/integration){: data-relation="weak" }의 치환·부분적분이 의존하던 토대이며, 이제 그 가정들이 모두 엄밀하게 증명되었다.
 
 ---
 
