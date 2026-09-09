@@ -483,11 +483,11 @@ $$T^i(C/A,M)=\Ext^i_C(\LL_{C/A},M)=\Ext^i_C(\Omega_{C/A},M)=0$$
 
 먼저 base의 square-zero thickening을 정하고, 각 affine 조각 위에서 flat family를 만든 다음, 두 조각의 overlap에서 이 family들을 식별하는 isomorphism을 골라야 한다. 마지막으로 이 isomorphism들이 triple overlap에서 cocycle 조건을 만족해야 비로소 하나의 scheme deformation이 된다. 뿐만 아니라, cotangent complex도 affine 조각마다 계산한 뒤 restriction과 compatible하도록 붙여야 한다. 이 절에서는 이 과정을 모두 다시 수행하는 대신, 어느 층위에서 어떤 자료와 obstruction이 나타나는지 밝히고 이들이 하나의 대역적 $\Ext$로 조립되는 과정을 정리한다.
 
-우선 base가 affine이라는 제한부터 없애자. $S$ 위의 quasi-coherent module $\mathcal{I}$에 대하여 $\mathcal{O}_S\oplus\mathcal{I}$에 곱셈
+우선 처음에 주어지는 base space $S$를 affine scheme이 아닌 일반적인 scheme으로 확장하는 방향이 가장 단순하다.  $S$ 위의 quasi-coherent module $\mathcal{I}$에 대하여 $\mathcal{O}_S\oplus\mathcal{I}$에 곱셈
 
 $$(a,u)(b,v)=(ab,av+bu)$$
 
-을 주면 $\mathcal{I}^2=0$인 $\mathcal{O}_S$-algebra가 된다. 이에 대한 relative spectrum $S[\mathcal{I}]=\Spec_S(\mathcal{O}_S\oplus\mathcal{I})$은 $S$의 split square-zero thickening이고, 특히 $\mathcal{I}=\mathcal{O}_S$인 경우를 $S[\epsilon]$이라 적는다. $S=\Spec A$이면 이는 앞에서 사용한 $\Spec(A[\epsilon])$과 같다. 더 일반적으로는 square-zero ideal sheaf $\mathcal{I}=\ker(\mathcal{O}_{S'}\rightarrow\mathcal{O}_S)$로 정의된 closed immersion $S\hookrightarrow S'$을 base의 thickening으로 사용할 수 있다.
+을 주면, 이는 $\mathcal{I}^2=0$인 $\mathcal{O}_S$-algebra가 된다. 그럼 이에 대한 relative spectrum $S[\mathcal{I}]=\rSpec_S(\mathcal{O}_S\oplus\mathcal{I})$은 $S$의 split square-zero thickening이고, 특히 $\mathcal{I}=\mathcal{O}_S$인 경우를 $S[\epsilon]$이라 적는다. $S=\Spec A$이면 이는 앞에서 사용한 $\Spec(A[\epsilon])$과 같다. 더 일반적으로는 square-zero ideal sheaf $\mathcal{I}=\ker(\mathcal{O}_{S'}\rightarrow\mathcal{O}_S)$로 정의된 closed immersion $S\hookrightarrow S'$을 base의 thickening으로 사용할 수 있다.
 
 ::: 정의 10
 $f:X_0\rightarrow S$가 flat scheme morphism이고 $i:S\hookrightarrow S'$이 square-zero ideal sheaf $\mathcal{I}$로 정의된 closed immersion이라 하자. $X_0$의 $S'$ 위 *deformation<sub>변형</sub>*이란 $S'$ 위에서 flat한 scheme $X$와 $S$-isomorphism
