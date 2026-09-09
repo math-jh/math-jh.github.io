@@ -14,7 +14,7 @@ weight: 3
 published: false
 ---
 
-[§수열의 수렴](/ko/math/analysis/convergence_of_sequences)의 [§수열의 수렴, ⁋정리 7](/ko/math/analysis/convergence_of_sequences#thm7)는 강력하지만 단조수열에만 쓸 수 있고, 극한이 무엇인지 알아야 수렴을 정의할 수 있다. 극한값을 미리 지목하지 않고 "항들이 자기들끼리 점점 가까워진다"는 내부적 조건만으로 수렴을 판정할 수 있다면 훨씬 유용할 것이다. 그것이 Cauchy 수열이며, 실수에서는 이 조건이 수렴과 정확히 동치이다.
+[§수열의 수렴](/ko/math/analysis/convergence_of_sequences){: data-relation="required" }의 [§수열의 수렴, ⁋정리 7](/ko/math/analysis/convergence_of_sequences#thm7){: data-relation="weak" }는 강력하지만 단조수열에만 쓸 수 있고, 극한이 무엇인지 알아야 수렴을 정의할 수 있다. 극한값을 미리 지목하지 않고 "항들이 자기들끼리 점점 가까워진다"는 내부적 조건만으로 수렴을 판정할 수 있다면 훨씬 유용할 것이다. 그것이 Cauchy 수열이며, 실수에서는 이 조건이 수렴과 정확히 동치이다.
 
 ## Cauchy 수열
 
@@ -55,7 +55,7 @@ $\varepsilon = 1$에 대응하는 $N$을 잡으면, $n \geq N$에서 $\lvert a_n
 :::
 
 ::: 증명
-수렴 $\implies$ Cauchy는 [명제 2](#prop2)이다. 역을 보이자. $(a_n)$이 Cauchy이면 [명제 3](#prop3)에 의해 bounded이고, [§부분수열과 Bolzano–Weierstrass 정리, ⁋정리 4](/ko/math/analysis/bolzano_weierstrass#thm4)에 의해 수렴하는 부분수열 $a_{n_k} \rightarrow L$이 존재한다. 이제 전체 수열이 같은 $L$로 수렴함을 보인다. 임의의 $\varepsilon > 0$에 대해, Cauchy 조건으로 $m, n \geq N$이면 $\lvert a_m - a_n\rvert < \varepsilon/2$이게 $N$을 잡고, 부분수열의 수렴으로 $n_k \geq N$이면서 $\lvert a_{n_k} - L\rvert < \varepsilon/2$인 $k$를 잡는다. 그러면 모든 $n \geq N$에 대해
+수렴 $\implies$ Cauchy는 [명제 2](#prop2){: data-relation="required" }이다. 역을 보이자. $(a_n)$이 Cauchy이면 [명제 3](#prop3){: data-relation="required" }에 의해 bounded이고, [§부분수열과 Bolzano–Weierstrass 정리, ⁋정리 4](/ko/math/analysis/bolzano_weierstrass#thm4){: data-relation="required" }에 의해 수렴하는 부분수열 $a_{n_k} \rightarrow L$이 존재한다. 이제 전체 수열이 같은 $L$로 수렴함을 보인다. 임의의 $\varepsilon > 0$에 대해, Cauchy 조건으로 $m, n \geq N$이면 $\lvert a_m - a_n\rvert < \varepsilon/2$이게 $N$을 잡고, 부분수열의 수렴으로 $n_k \geq N$이면서 $\lvert a_{n_k} - L\rvert < \varepsilon/2$인 $k$를 잡는다. 그러면 모든 $n \geq N$에 대해
 
 $$\lvert a_n - L\rvert \leq \lvert a_n - a_{n_k}\rvert + \lvert a_{n_k} - L\rvert < \varepsilon$$
 
@@ -65,7 +65,7 @@ $$\lvert a_n - L\rvert \leq \lvert a_n - a_{n_k}\rvert + \lvert a_{n_k} - L\rver
 ## 완비성의 동치 형태
 
 ::: 참고 5
-[정리 4](#thm4)가 보인 것, 곧 임의의 Cauchy sequence가 수렴한다는 성질은 실수의 완비성과 동치이다. 실제로 이 성질을 *완비성*의 정의로 채택하는 길도 있으며, 상한 성질로부터 (Bolzano–Weierstrass를 거쳐) 이를 유도한 것이 [정리 4](#thm4)이다.
+[정리 4](#thm4){: data-relation="weak" }가 보인 것, 곧 임의의 Cauchy sequence가 수렴한다는 성질은 실수의 완비성과 동치이다. 실제로 이 성질을 *완비성*의 정의로 채택하는 길도 있으며, 상한 성질로부터 (Bolzano–Weierstrass를 거쳐) 이를 유도한 것이 [정리 4](#thm4){: data-relation="weak" }이다.
 :::
 
 이 동치는 $\mathbb{Q}$ 위에서는 깨진다. 예컨대 $\sqrt{2}$의 십진 근삿값으로 이루어진 유리수열 $1, 1.4, 1.41, 1.414, \ldots$은 항들끼리 한없이 가까워지므로 Cauchy이지만, 그 극한 $\sqrt{2}$가 유리수가 아니므로 $\mathbb{Q}$ 안에서는 수렴하지 않는다. 완비성이란 바로 이런 "수렴해야 마땅한" Cauchy 수열이 실제로 극한을 갖도록 빈틈을 메운 것이다.
@@ -74,7 +74,7 @@ $$\lvert a_n - L\rvert \leq \lvert a_n - a_{n_k}\rvert + \lvert a_{n_k} - L\rver
 
 $$\lvert a_m - a_n\rvert \leq 10^{-(N-1)}$$
 
-이 성립한다. 따라서 임의의 $\varepsilon > 0$에 대해 $10^{-(N-1)} < \varepsilon$이 되도록 $N$을 크게 잡으면 Cauchy 조건이 충족된다. [정의 1](#def1)의 검증이 극한 $\sqrt 2$를 한 번도 언급하지 않았다는 점이 핵심이다. 같은 부등식이 $\mathbb{R}$ 안에서는 $a_n \rightarrow \sqrt 2$를 보장하지만, $\mathbb{Q}$ 안에서는 갈 곳이 없다.
+이 성립한다. 따라서 임의의 $\varepsilon > 0$에 대해 $10^{-(N-1)} < \varepsilon$이 되도록 $N$을 크게 잡으면 Cauchy 조건이 충족된다. [정의 1](#def1){: data-relation="required" }의 검증이 극한 $\sqrt 2$를 한 번도 언급하지 않았다는 점이 핵심이다. 같은 부등식이 $\mathbb{R}$ 안에서는 $a_n \rightarrow \sqrt 2$를 보장하지만, $\mathbb{Q}$ 안에서는 갈 곳이 없다.
 
 ## 예시와 계산
 
@@ -89,7 +89,7 @@ $$\begin{aligned}
 &= \frac{N}{2N} = \frac{1}{2}
 \end{aligned}$$
 
-이므로, $\varepsilon = \frac12$에 대해서는 아무리 큰 $N$을 잡아도 $m, n \geq N$이면서 $\lvert s_m - s_n\rvert \geq \frac12$인 짝이 존재한다. 따라서 $(s_n)$은 Cauchy 조건을 어기고, [정리 4](#thm4)의 대우에 의해 발산한다. 극한값을 구하지 않고 발산을 증명한 셈이다.
+이므로, $\varepsilon = \frac12$에 대해서는 아무리 큰 $N$을 잡아도 $m, n \geq N$이면서 $\lvert s_m - s_n\rvert \geq \frac12$인 짝이 존재한다. 따라서 $(s_n)$은 Cauchy 조건을 어기고, [정리 4](#thm4){: data-relation="required" }의 대우에 의해 발산한다. 극한값을 구하지 않고 발산을 증명한 셈이다.
 :::
 
 반대로 항 사이의 거리가 충분히 빠르게 줄어들면 수렴을 곧바로 끌어낼 수 있다. 가령 교대조화급수의 부분합 $t_n = \sum_{k\le n} (-1)^{k-1}/k$에서 $m > n$일 때 차 $t_m - t_n$은 절댓값이 단조감소하며 부호가 번갈아 나타나는 교대합이라 첫 항으로 위에서 눌려 $\lvert t_m - t_n\rvert \leq 1/(n+1)$이고, 따라서 $(t_n)$은 그 극한 $\ln 2$를 알지 못한 채로도 Cauchy임이 확인된다. 다음 예시는 거리가 기하급수적으로 줄어드는 경우로, 뒤의 contractive sequence 명제로 이어진다.
@@ -103,10 +103,10 @@ $$\begin{aligned}
 &\leq C \sum_{k=n}^{\infty} r^k = \frac{C r^n}{1 - r}
 \end{aligned}$$
 
-이다. $r < 1$이므로 $r^n \rightarrow 0$이고, 따라서 임의의 $\varepsilon > 0$에 대해 $C r^N/(1-r) < \varepsilon$이 되도록 $N$을 잡으면 모든 $m, n \geq N$에서 $\lvert a_m - a_n\rvert < \varepsilon$이다. 즉 $(a_n)$은 Cauchy이고 [정리 4](#thm4)에 의해 수렴한다.
+이다. $r < 1$이므로 $r^n \rightarrow 0$이고, 따라서 임의의 $\varepsilon > 0$에 대해 $C r^N/(1-r) < \varepsilon$이 되도록 $N$을 잡으면 모든 $m, n \geq N$에서 $\lvert a_m - a_n\rvert < \varepsilon$이다. 즉 $(a_n)$은 Cauchy이고 [정리 4](#thm4){: data-relation="required" }에 의해 수렴한다.
 :::
 
-[예시 7](#ex7)의 가정은 인접한 두 항의 거리만 통제하는데도 수열 전체의 수렴을 보장한다. 다만 인접 항의 거리가 $0$으로 가는 것만으로는 충분하지 않음에 주의해야 한다.
+[예시 7](#ex7){: data-relation="required" }의 가정은 인접한 두 항의 거리만 통제하는데도 수열 전체의 수렴을 보장한다. 다만 인접 항의 거리가 $0$으로 가는 것만으로는 충분하지 않음에 주의해야 한다.
 
 ::: 예시 8 (인접 거리가 0으로 가도 Cauchy가 아닌 예)
 $a_n = \sqrt{n}$이라 하면
@@ -120,11 +120,11 @@ $$\lvert a_{4N} - a_N\rvert = 2\sqrt{N} - \sqrt{N} = \sqrt{N} \rightarrow \infty
 이므로, $\varepsilon = 1$에 대해서조차 Cauchy 조건이 깨진다. 따라서 $(\sqrt n)$은 Cauchy가 아니며, 실제로 $\infty$로 발산한다. Cauchy 조건은 "임의로 멀리 떨어진 두 첨자"를 함께 통제해야 하며, 인접 항만의 거리로 환원되지 않는다.
 :::
 
-[예시 8](#ex8)은 [정의 1](#def1)에서 "모든 $m, n \geq N$"이라는 두 자유 첨자가 본질적임을 보여 준다. 인접 항의 차만 다루면 [예시 7](#ex7)과 같은 추가 가정(거리의 합 가능성)이 따로 필요하다.
+[예시 8](#ex8){: data-relation="required" }은 [정의 1](#def1){: data-relation="required" }에서 "모든 $m, n \geq N$"이라는 두 자유 첨자가 본질적임을 보여 준다. 인접 항의 차만 다루면 [예시 7](#ex7){: data-relation="weak" }과 같은 추가 가정(거리의 합 가능성)이 따로 필요하다.
 
 ## Contractive sequence
 
-극한을 모르고도 수렴을 보장하는 가장 깔끔한 충분조건은, 연속한 두 차가 일정한 비율로 줄어드는 *수축<sub>contractive</sub>* 조건이다. 이는 [예시 7](#ex7)을 명제로 다듬은 것이며, 반복 대입으로 정의되는 수열의 수렴 증명에서 표준적으로 쓰인다.
+극한을 모르고도 수렴을 보장하는 가장 깔끔한 충분조건은, 연속한 두 차가 일정한 비율로 줄어드는 *수축<sub>contractive</sub>* 조건이다. 이는 [예시 7](#ex7){: data-relation="weak" }을 명제로 다듬은 것이며, 반복 대입으로 정의되는 수열의 수렴 증명에서 표준적으로 쓰인다.
 
 ::: 명제 9 (Contractive sequence의 수렴)
 어떤 상수 $0 \leq c < 1$이 존재하여 모든 $n \geq 2$에서
@@ -139,7 +139,7 @@ $$\lvert a_{n+1} - a_n\rvert \leq c \lvert a_n - a_{n-1}\rvert$$
 
 $$\lvert a_{n+1} - a_n\rvert \leq c^{n-1} \lvert a_2 - a_1\rvert$$
 
-이다. 그러면 $m > n$일 때 [예시 7](#ex7)과 같은 계산으로
+이다. 그러면 $m > n$일 때 [예시 7](#ex7){: data-relation="weak" }과 같은 계산으로
 
 $$\begin{aligned}
 \lvert a_m - a_n\rvert &\leq \sum_{k=n}^{m-1} \lvert a_{k+1} - a_k\rvert \\
@@ -147,7 +147,7 @@ $$\begin{aligned}
 &\leq \lvert a_2 - a_1\rvert \cdot \frac{c^{n-1}}{1 - c}
 \end{aligned}$$
 
-을 얻는다. $0 \leq c < 1$이므로 $c^{n-1} \rightarrow 0$이고, 우변은 $n \rightarrow \infty$에서 $0$으로 수렴한다. 따라서 임의의 $\varepsilon > 0$에 대해 $N$을 충분히 크게 잡으면 모든 $m, n \geq N$에서 $\lvert a_m - a_n\rvert < \varepsilon$이 되어 $(a_n)$은 Cauchy이고, [정리 4](#thm4)에 의해 수렴한다.
+을 얻는다. $0 \leq c < 1$이므로 $c^{n-1} \rightarrow 0$이고, 우변은 $n \rightarrow \infty$에서 $0$으로 수렴한다. 따라서 임의의 $\varepsilon > 0$에 대해 $N$을 충분히 크게 잡으면 모든 $m, n \geq N$에서 $\lvert a_m - a_n\rvert < \varepsilon$이 되어 $(a_n)$은 Cauchy이고, [정리 4](#thm4){: data-relation="required" }에 의해 수렴한다.
 :::
 
 수축 조건은 그 자체로 극한값을 알려 주지 않지만, 수열이 어딘가로 모인다는 사실만큼은 보장한다. 이것이 Cauchy 판정법이 빛을 발하는 지점이다.
@@ -157,12 +157,12 @@ $a_1 = 1$이고 $a_{n+1} = 1 + 1/a_n$으로 정의되는 수열을 보자. 모�
 
 $$\lvert a_{n+1} - a_n\rvert = \left\lvert \frac{1}{a_n} - \frac{1}{a_{n-1}} \right\rvert = \frac{\lvert a_n - a_{n-1}\rvert}{a_n  a_{n-1}} \leq \lvert a_n - a_{n-1}\rvert$$
 
-이 된다. 더 정밀하게 보면 두 번째 항부터는 $a_n \geq \frac32$이므로 $n \geq 3$에서 $a_n a_{n-1} \geq \frac94 > 2$이고, $n = 2$에서도 $a_2 a_1 = 2$이므로 어느 경우에나 $a_n a_{n-1} \geq 2$여서 $c = \frac12$로 수축 조건이 성립한다. [명제 9](#prop9)에 의해 $(a_n)$은 수렴한다. 그 극한 $L$은 점화식의 양변에 극한을 취해 얻는 $L = 1 + 1/L$, 곧 $L^2 - L - 1 = 0$의 양의 해 $L = (1 + \sqrt 5)/2$이다. 수렴은 [명제 9](#prop9)가 보장하고, 극한값은 그 다음에 방정식을 풀어 얻는다.
+이 된다. 더 정밀하게 보면 두 번째 항부터는 $a_n \geq \frac32$이므로 $n \geq 3$에서 $a_n a_{n-1} \geq \frac94 > 2$이고, $n = 2$에서도 $a_2 a_1 = 2$이므로 어느 경우에나 $a_n a_{n-1} \geq 2$여서 $c = \frac12$로 수축 조건이 성립한다. [명제 9](#prop9){: data-relation="required" }에 의해 $(a_n)$은 수렴한다. 그 극한 $L$은 점화식의 양변에 극한을 취해 얻는 $L = 1 + 1/L$, 곧 $L^2 - L - 1 = 0$의 양의 해 $L = (1 + \sqrt 5)/2$이다. 수렴은 [명제 9](#prop9){: data-relation="required" }가 보장하고, 극한값은 그 다음에 방정식을 풀어 얻는다.
 :::
 
 이처럼 수렴의 *존재*를 먼저 Cauchy 판정법으로 확보한 뒤 극한값을 따로 결정하는 순서는, 점화식이나 급수로 정의된 대상을 다룰 때 거듭 쓰이는 표준적 전략이다.
 
-Cauchy 판정법의 진정한 가치는 극한을 모르고도 수렴을 보일 수 있다는 데 있으며, 이는 [§무한급수](/ko/math/analysis/series)의 수렴 판정에서 곧바로 활용된다. 또한 항들 사이의 거리만으로 정식화되는 Cauchy 조건은 거리만 주어진 일반적 공간으로 그대로 옮겨져, [§거리공간](/ko/math/analysis/metric_spaces)에서 *완비 거리공간*의 정의가 된다.
+Cauchy 판정법의 진정한 가치는 극한을 모르고도 수렴을 보일 수 있다는 데 있으며, 이는 [§무한급수](/ko/math/analysis/series){: data-relation="forward" }의 수렴 판정에서 곧바로 활용된다. 또한 항들 사이의 거리만으로 정식화되는 Cauchy 조건은 거리만 주어진 일반적 공간으로 그대로 옮겨져, [§거리공간](/ko/math/analysis/metric_spaces){: data-relation="forward" }에서 *완비 거리공간*의 정의가 된다.
 
 ---
 
