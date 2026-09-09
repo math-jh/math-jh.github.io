@@ -12,7 +12,7 @@ date: 2026-07-01
 weight: 14
 ---
 
-앞선 글에서 우리는 공역의 차원을 올려 한 실수를 여러 실수로 보내는 함수, 곧 매개변수로 매개화된 곡선 $\mathbf{r}:\mathbb{R}\rightarrow\mathbb{R}^n$을 다루었다. 이제 거꾸로 정의역의 차원을 올려, 여러 실수를 한 실수로 보내는 다변수함수 $f:\mathbb{R}^m\rightarrow\mathbb{R}$을 다룬다. 미분은 여전히 한 점 근방에서의 일차 근사라는 본질을 갖지만, 정의역이 벡터공간이 되면서 다가오는 방향이 무수히 많아져 방향이 중요해지고, 일차 근사가 숫자 하나가 아닌 선형사상으로 주어진다. 벡터공간과 내적·norm은 [§곡선과 벡터함수](/ko/math/calculus/vector_functions)에서 다루었으므로, 이 글에서는 다변수 미분의 핵심 도구인 선형사상과 행렬, 행렬식을 간략히 정리한 뒤 편미분과 기울기, 미분가능성, 다변수 연쇄법칙, 극값을 다룬다.
+앞선 글에서 우리는 공역의 차원을 올려 한 실수를 여러 실수로 보내는 함수, 곧 매개변수로 매개화된 곡선 $\mathbf{r}:\mathbb{R}\rightarrow\mathbb{R}^n$을 다루었다. 이제 거꾸로 정의역의 차원을 올려, 여러 실수를 한 실수로 보내는 다변수함수 $f:\mathbb{R}^m\rightarrow\mathbb{R}$을 다룬다. 미분은 여전히 한 점 근방에서의 일차 근사라는 본질을 갖지만, 정의역이 벡터공간이 되면서 다가오는 방향이 무수히 많아져 방향이 중요해지고, 일차 근사가 숫자 하나가 아닌 선형사상으로 주어진다. 벡터공간과 내적·norm은 [§곡선과 벡터함수](/ko/math/calculus/vector_functions){: data-relation="required" }에서 다루었으므로, 이 글에서는 다변수 미분의 핵심 도구인 선형사상과 행렬, 행렬식을 간략히 정리한 뒤 편미분과 기울기, 미분가능성, 다변수 연쇄법칙, 극값을 다룬다.
 
 ## 선형사상과 행렬
 
@@ -120,14 +120,14 @@ $$\lim_{\mathbf{h} \rightarrow 0}\frac{f(\mathbf{a} + \mathbf{h}) - f(\mathbf{a}
 이 성립하는 것이다.
 :::
 
-그럼 가장 놀라운 점은 이렇게 정의된 벡터 $\mathbf{n}$이 실제로는 위의 [정의 2](#def2)에서 살펴본 기울기 벡터 $\nabla f(\mathbf{a})$와 일치한다는 것이다. 
+그럼 가장 놀라운 점은 이렇게 정의된 벡터 $\mathbf{n}$이 실제로는 위의 [정의 2](#def2){: data-relation="required" }에서 살펴본 기울기 벡터 $\nabla f(\mathbf{a})$와 일치한다는 것이다. 
 
 ::: 명제 4
-$f$가 점 $\mathbf{a}$에서 미분가능하면, [정의 3](#def3)의 벡터 $\mathbf{n}$은 $\mathbf{n} = \nabla f(\mathbf{a})$이고, $f(\mathbf{a}+\mathbf{h}) \approx f(\mathbf{a}) + \nabla f(\mathbf{a})\cdot \mathbf{h}$가 최선의 일차 근사이다.
+$f$가 점 $\mathbf{a}$에서 미분가능하면, [정의 3](#def3){: data-relation="required" }의 벡터 $\mathbf{n}$은 $\mathbf{n} = \nabla f(\mathbf{a})$이고, $f(\mathbf{a}+\mathbf{h}) \approx f(\mathbf{a}) + \nabla f(\mathbf{a})\cdot \mathbf{h}$가 최선의 일차 근사이다.
 :::
 
 ::: 증명
-[정의 3](#def3)의 극한에서 $\mathbf{h} = t \mathbf{e}_i$로 두면, $\lVert \mathbf{h}\rVert = \lvert t\rvert$이므로
+[정의 3](#def3){: data-relation="required" }의 극한에서 $\mathbf{h} = t \mathbf{e}_i$로 두면, $\lVert \mathbf{h}\rVert = \lvert t\rvert$이므로
 
 $$\lim_{t \rightarrow 0}\frac{f(\mathbf{a} + t \mathbf{e}_i) - f(\mathbf{a}) - \mathbf{n}\cdot (t \mathbf{e}_i)}{\lvert t\rvert} = 0$$
 
@@ -138,7 +138,7 @@ $$\lim_{t\rightarrow 0}\frac{f(\mathbf{a} + t \mathbf{e}_i) - f(\mathbf{a})}{t} 
 를 뜻하며, 좌변의 극한이 존재한다는 것 자체가 편미분의 정의이므로 $\frac{\partial f}{\partial x_i}(\mathbf{a})$가 존재하고 그 값이 $n_i$이다. 모든 $i$에 대해 이를 모으면 $\nabla f(\mathbf{a})$가 잘 정의되고 $\mathbf{n} = \nabla f(\mathbf{a})$이다.
 :::
 
-여기에서 [정의 3](#def3)과 [명제 4](#prop4)를 명확하게 분리하여 서술했다는 것을 주목하자. [명제 4](#prop4)는, <em-ko>만일</em-ko> 함수 $f$가 미분가능하다면, 그 조건을 만족하는 $\mathbf{n}$이 $\nabla f$라는 것이며, 이를 거꾸로 해석하여 모든 편미분이 존재하여 $\nabla f$가 잘 정의되면 함수 $f$가 미분가능하다고 이해하면 <em-ko>안된다.</em-ko> 대신 다음의 조건은 각각의 편미분이 연속이라면 $f$가 미분가능하다는 것을 보여준다. 
+여기에서 [정의 3](#def3){: data-relation="required" }과 [명제 4](#prop4){: data-relation="required" }를 명확하게 분리하여 서술했다는 것을 주목하자. [명제 4](#prop4){: data-relation="required" }는, <em-ko>만일</em-ko> 함수 $f$가 미분가능하다면, 그 조건을 만족하는 $\mathbf{n}$이 $\nabla f$라는 것이며, 이를 거꾸로 해석하여 모든 편미분이 존재하여 $\nabla f$가 잘 정의되면 함수 $f$가 미분가능하다고 이해하면 <em-ko>안된다.</em-ko> 대신 다음의 조건은 각각의 편미분이 연속이라면 $f$가 미분가능하다는 것을 보여준다. 
 
 ::: 명제 5
 $f$의 모든 편미분이 $\mathbf{a}$ 근방에서 존재하고, 이들이 모두 $\mathbf{a}$에서 연속이라면 $f$는 $\mathbf{a}$에서 미분가능하다.
@@ -156,16 +156,16 @@ $$f(a+h,b+k) - f(a,b) = f_x(a+\theta_1 h, b+k) h + f_y(a, b+\theta_2 k) k$$
 
 $$f(a+h,b+k) - f(a,b) - \nabla f(a,b)\cdot(h,k) = \bigl(f_x(a+\theta_1 h, b+k) - f_x(a,b)\bigr)h + \bigl(f_y(a, b+\theta_2 k) - f_y(a,b)\bigr)k$$
 
-를 얻는다. 그럼 $f_x, f_y$가 $(a,b)$에서 연속이므로 $(h,k)\rightarrow(0,0)$일 때 두 괄호가 모두 $0$으로 가고, $\lvert h\rvert, \lvert k\rvert \le \lVert(h,k)\rVert$이므로 [정의 3](#def3)의 극한이 성립한다. 즉, $f$는 $(a,b)$에서 미분가능하고 그 기울기는 $\nabla f(a,b)$이다.
+를 얻는다. 그럼 $f_x, f_y$가 $(a,b)$에서 연속이므로 $(h,k)\rightarrow(0,0)$일 때 두 괄호가 모두 $0$으로 가고, $\lvert h\rvert, \lvert k\rvert \le \lVert(h,k)\rVert$이므로 [정의 3](#def3){: data-relation="required" }의 극한이 성립한다. 즉, $f$는 $(a,b)$에서 미분가능하고 그 기울기는 $\nabla f(a,b)$이다.
 :::
 
-이렇게 편미분의 존재와 연속성을 함께 요구하는 상황은 앞으로도 반복해서 나타나므로, [§미분과 도함수, ⁋정의 5](/ko/math/calculus/derivatives#def5)의 이름을 다변수로 옮겨 쓰기로 한다. 즉 어떤 영역에서 $k$계 이하의 모든 편미분이 존재하고 연속이면 $f$가 그 영역에서 *$C^k$급*이라 하며, 이 말로 다시 적으면 [명제 5](#prop5)는 $C^1$급 함수가 미분가능하다는 것이다.
+이렇게 편미분의 존재와 연속성을 함께 요구하는 상황은 앞으로도 반복해서 나타나므로, [§미분과 도함수, ⁋정의 5](/ko/math/calculus/derivatives#def5){: data-relation="weak" }의 이름을 다변수로 옮겨 쓰기로 한다. 즉 어떤 영역에서 $k$계 이하의 모든 편미분이 존재하고 연속이면 $f$가 그 영역에서 *$C^k$급*이라 하며, 이 말로 다시 적으면 [명제 5](#prop5){: data-relation="weak" }는 $C^1$급 함수가 미분가능하다는 것이다.
 
 ## 연쇄법칙과 혼합편미분
 
 이제 우리는 다변수함수의 연쇄법칙을 살펴본다. 만일 다변수함수가 입력으로 받는 변수 중 하나만이 다른 함수와의 합성으로 나타난다면 이는 해당 변수에 대한 편미분을 사용하여 일변수미분과 동일하게 연쇄법칙을 적용할 수 있지만, 문제는 다변수함수가 입력으로 받는 변수 여럿이 다른 함수를 거쳐 정의되었을 때 나타난다. 
 
-이를 위해서는 하나의 매개변수 $t$로 매개화된 곡선 $\mathbf{x}(t) = (x_1(t), \ldots, x_m(t))$이 필요한데, 이는 [§곡선과 벡터함수, ⁋명제 2](/ko/math/calculus/vector_functions#prop2)에서 정의한 대로 각 성분 $x_i(t)$가 일변수 함수로서 미분가능할 때 미분가능하며, 그 접벡터 $\mathbf{x}'(t) = (x_1'(t), \ldots, x_m'(t))$가 잘 정의된다. 이 하에서 다음이 성립한다.
+이를 위해서는 하나의 매개변수 $t$로 매개화된 곡선 $\mathbf{x}(t) = (x_1(t), \ldots, x_m(t))$이 필요한데, 이는 [§곡선과 벡터함수, ⁋명제 2](/ko/math/calculus/vector_functions#prop2){: data-relation="required" }에서 정의한 대로 각 성분 $x_i(t)$가 일변수 함수로서 미분가능할 때 미분가능하며, 그 접벡터 $\mathbf{x}'(t) = (x_1'(t), \ldots, x_m'(t))$가 잘 정의된다. 이 하에서 다음이 성립한다.
 
 ::: 정리 6 (다변수 연쇄법칙)
 $f$가 미분가능하고 $\mathbf{x}(t) = (x_1(t), \ldots, x_m(t))$가 미분가능한 곡선이면, 합성 $t \mapsto f(\mathbf{x}(t))$도 미분가능하고
@@ -176,14 +176,14 @@ $$\frac{d}{\dd{t}} f(\mathbf{x}(t)) = \nabla f(\mathbf{x}(t)) \cdot \mathbf{x}'(
 :::
 
 ::: 증명
-[정의 3](#def3)을 점 $\mathbf{x}(t)$와 변화량 $\Delta\mathbf{x}=\mathbf{x}(t+\Delta t)-\mathbf{x}(t)$에 적용하면 $\Delta t\rightarrow 0$일 때
+[정의 3](#def3){: data-relation="required" }을 점 $\mathbf{x}(t)$와 변화량 $\Delta\mathbf{x}=\mathbf{x}(t+\Delta t)-\mathbf{x}(t)$에 적용하면 $\Delta t\rightarrow 0$일 때
 
 $$\frac{f(\mathbf{x}(t+\Delta t))-f(\mathbf{x}(t))-\nabla f(\mathbf{x}(t))\cdot\Delta\mathbf{x}}{\lVert\Delta\mathbf{x}\rVert}\rightarrow 0$$
 
 이다. 양변을 $\Delta t$로 나누면 우변은 일차항 $\nabla f(\mathbf{x}(t))\cdot\frac{\Delta\mathbf{x}}{\Delta t}$과 나머지항으로 갈라지는데, 이 나머지항은 위에서 $0$으로 간 양에 $\lVert\Delta\mathbf{x}\rVert/\lvert\Delta t\rvert$가 곱해진 것이다. 곡선의 미분가능성으로 $\Delta\mathbf{x}/\Delta t\rightarrow\mathbf{x}'(t)$이므로 $\lVert\Delta\mathbf{x}\rVert/\lvert\Delta t\rvert$가 유계이며, 따라서 나머지항도 $\Delta t\rightarrow 0$에서 $0$으로 사라져 공식을 얻는다.
 :::
 
-[정리 6](#thm6)는 한 변수가 여러 변수에 의존할 때 편미분이 사슬처럼 연결됨을 말하며, 좌표변환에서 주로 쓰인다. 가령 $z = f(x,y)$에서 극좌표 $x = r\cos\theta$, $y = r\sin\theta$로 바꾸면 $\partial z/\partial r = f_x\cos\theta + f_y\sin\theta$가 곧바로 나온다.
+[정리 6](#thm6){: data-relation="required" }는 한 변수가 여러 변수에 의존할 때 편미분이 사슬처럼 연결됨을 말하며, 좌표변환에서 주로 쓰인다. 가령 $z = f(x,y)$에서 극좌표 $x = r\cos\theta$, $y = r\sin\theta$로 바꾸면 $\partial z/\partial r = f_x\cos\theta + f_y\sin\theta$가 곧바로 나온다.
 
 한편, 이계편미분에 대해서는 미분의 순서가 (적절한 연속성 아래) 문제되지 않는다.
 
@@ -208,7 +208,7 @@ $$\Delta = \frac{\partial^2 f}{\partial x \partial y}(a+\theta_3 h, b+\theta_4 k
 
 ## 방향도함수와 기울기
 
-단위벡터 $\mathbf{u}$를 따라 움직일 때의 변화율인 *방향도함수* $D_{\mathbf{u}} f(\mathbf{a})$는 정의상 한 변수 함수 $g(t) = f(\mathbf{a} + t\mathbf{u})$의 $t = 0$에서의 도함수인데, [정리 6](#thm6)의 연쇄법칙을 $\mathbf{x}(t) = \mathbf{a} + t\mathbf{u}$에 적용하면 $D_{\mathbf{u}} f(\mathbf{a}) = g'(0) = \nabla f(\mathbf{a})\cdot \mathbf{u}$가 곧바로 나온다. 그럼 다음이 성립한다.
+단위벡터 $\mathbf{u}$를 따라 움직일 때의 변화율인 *방향도함수* $D_{\mathbf{u}} f(\mathbf{a})$는 정의상 한 변수 함수 $g(t) = f(\mathbf{a} + t\mathbf{u})$의 $t = 0$에서의 도함수인데, [정리 6](#thm6){: data-relation="required" }의 연쇄법칙을 $\mathbf{x}(t) = \mathbf{a} + t\mathbf{u}$에 적용하면 $D_{\mathbf{u}} f(\mathbf{a}) = g'(0) = \nabla f(\mathbf{a})\cdot \mathbf{u}$가 곧바로 나온다. 그럼 다음이 성립한다.
 
 ::: 명제 8 (최대 경사 방향)
 $f$가 $\mathbf{a}$에서 미분가능하고 $\nabla f(\mathbf{a}) \neq 0$이면, 단위벡터 방향의 방향도함수 $D_{\mathbf{u}} f(\mathbf{a})$는 $\mathbf{u} = \nabla f(\mathbf{a})/\lVert\nabla f(\mathbf{a})\rVert$일 때 최대가 되고, 그 최댓값은 $\lVert\nabla f(\mathbf{a})\rVert$이다.
@@ -225,11 +225,11 @@ D_{\mathbf{u}} f(\mathbf{a}) = \nabla f(\mathbf{a})\cdot \mathbf{u} &\leq \lVert
 이고, 등호는 $\mathbf{u}$가 $\nabla f(\mathbf{a})$와 같은 방향, 즉 $\mathbf{u} = \nabla f(\mathbf{a})/\lVert\nabla f(\mathbf{a})\rVert$일 때 성립한다. 따라서 이 $\mathbf{u}$에서 방향도함수가 최댓값 $\lVert\nabla f(\mathbf{a})\rVert$를 가진다. 같은 논리로 반대 방향에서 최솟값 $-\lVert\nabla f(\mathbf{a})\rVert$를 가지므로, $-\nabla f$는 가장 가파른 감소 방향이다.
 :::
 
-[명제 8](#prop8)은 기울기를 따라 내려가며 최솟값을 찾는 경사하강법의 기하학적 근거가 된다. 한편 기울기는 등위면 $f = c$에 수직이다: 등위면 위의 곡선 $\mathbf{x}(t)$에 대해 $f(\mathbf{x}(t)) = c$가 상수이므로, 연쇄법칙으로 $\nabla f\cdot \mathbf{x}'(t) = 0$이 되어 기울기가 모든 접벡터와 직교하기 때문이다.
+[명제 8](#prop8){: data-relation="weak" }은 기울기를 따라 내려가며 최솟값을 찾는 경사하강법의 기하학적 근거가 된다. 한편 기울기는 등위면 $f = c$에 수직이다: 등위면 위의 곡선 $\mathbf{x}(t)$에 대해 $f(\mathbf{x}(t)) = c$가 상수이므로, 연쇄법칙으로 $\nabla f\cdot \mathbf{x}'(t) = 0$이 되어 기울기가 모든 접벡터와 직교하기 때문이다.
 
 ## 극값과 헤세 행렬
 
-한 변수에서 극값이 critical point에서 일어났듯, 다변수에서도 미분가능한 함수의 극값은 각 편미분이 $0$이 되어야 하므로 $\nabla f = 0$인 *critical point*에서만 일어난다. 일변수함수의 경우 우리는 이 critical point가 극대인지, 극소인지를 이계도함수를 사용하여 판단할 수 있었는데 ([§평균값 정리, ⁋명제 17](/ko/math/calculus/mean_value_theorem#prop17)), 비슷한 상황이 다변수함수에서도 일어난다. 
+한 변수에서 극값이 critical point에서 일어났듯, 다변수에서도 미분가능한 함수의 극값은 각 편미분이 $0$이 되어야 하므로 $\nabla f = 0$인 *critical point*에서만 일어난다. 일변수함수의 경우 우리는 이 critical point가 극대인지, 극소인지를 이계도함수를 사용하여 판단할 수 있었는데 ([§평균값 정리, ⁋명제 17](/ko/math/calculus/mean_value_theorem#prop17){: data-relation="weak" }), 비슷한 상황이 다변수함수에서도 일어난다. 
 
 다만 주의할 것은, 이제 미분을 취할 수 있는 방향이 여럿이므로 한 방향에서는 극소, 다른 한 방향에서는 극대인 점이 존재할 수 있다는 것이다. 이러한 점을 *안장점<sub>saddle point</sub>*이라 부른다. 이 섹션에서 우리는 critical point가 언제 극대, 극소, 안장점인지를 판별할 것인데, 계산의 편의상 $\mathbb{R}^2$에서 정의된 다변수함수로 우리 관심을 제한한다. 
 
@@ -291,7 +291,7 @@ $$\nabla f(\mathbf{a}) = \lambda \nabla g(\mathbf{a})$$
 가 성립한다.
 :::
 ::: 증명
-제약면 $\{g = c\}$ 위에서 $\mathbf{a}$를 지나는 임의의 smooth curve $\mathbf{x}(t)$ ($\mathbf{x}(0) = \mathbf{a}$)를 잡자. $g(\mathbf{x}(t)) = c$가 상수이므로 [정리 6](#thm6)으로 미분하면 $\nabla g(\mathbf{a}) \cdot \mathbf{x}'(0) = 0$이고, 한편 $\mathbf{a}$가 제약 아래에서 $f$의 극값을 주므로 $t \mapsto f(\mathbf{x}(t))$도 $t = 0$에서 극값을 가지고, 따라서 $\nabla f(\mathbf{a}) \cdot \mathbf{x}'(0) = 0$이다. 즉, 두 벡터 $\nabla f(\mathbf{a})$와 $\nabla g(\mathbf{a})$ 모두가 제약면의 tangent space에 직교한다. 그런데 전체 공간이 $m$차원이고, 제약면의 tangent space가 $m-1$차원이므로 이러한 방향은 하나 뿐이고, 따라서 $\nabla f(\mathbf{a}) = \lambda \nabla g(\mathbf{a})$인 실수 $\lambda$가 존재한다.
+제약면 $\{g = c\}$ 위에서 $\mathbf{a}$를 지나는 임의의 smooth curve $\mathbf{x}(t)$ ($\mathbf{x}(0) = \mathbf{a}$)를 잡자. $g(\mathbf{x}(t)) = c$가 상수이므로 [정리 6](#thm6){: data-relation="required" }으로 미분하면 $\nabla g(\mathbf{a}) \cdot \mathbf{x}'(0) = 0$이고, 한편 $\mathbf{a}$가 제약 아래에서 $f$의 극값을 주므로 $t \mapsto f(\mathbf{x}(t))$도 $t = 0$에서 극값을 가지고, 따라서 $\nabla f(\mathbf{a}) \cdot \mathbf{x}'(0) = 0$이다. 즉, 두 벡터 $\nabla f(\mathbf{a})$와 $\nabla g(\mathbf{a})$ 모두가 제약면의 tangent space에 직교한다. 그런데 전체 공간이 $m$차원이고, 제약면의 tangent space가 $m-1$차원이므로 이러한 방향은 하나 뿐이고, 따라서 $\nabla f(\mathbf{a}) = \lambda \nabla g(\mathbf{a})$인 실수 $\lambda$가 존재한다.
 :::
 
 실제 계산에서는 새로 도입된 실수 $\lambda$를 미지수로 추가하여 $\nabla f = \lambda \nabla g$와 제약식 $g = c$를 함께 연립하여 푸는데, 이 $\lambda$를 *라그랑주 승수<sub>Lagrange multiplier</sub>*라 부른다.

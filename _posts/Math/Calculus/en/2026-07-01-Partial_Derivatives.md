@@ -14,7 +14,7 @@ translated_at: 2026-08-19T09:45:05+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-08-19T09:45:05+00:00
 ---
-In the previous post we considered functions that raise the dimension of the codomain, sending one real number to several real numbers, that is, curves parameterized by a parameter $\mathbf{r}:\mathbb{R}\rightarrow\mathbb{R}^n$. Now we do the opposite: we raise the dimension of the domain and consider multivariable functions $f:\mathbb{R}^m\rightarrow\mathbb{R}$ that send several real numbers to one real number. Differentiation still retains its essence as a first-order approximation near a point, but because the domain becomes a vector space there are infinitely many directions of approach, so direction becomes important and the first-order approximation is given not by a single number but by a linear map. Since vector spaces, inner products, and norms were covered in [§Curves and Vector-Valued Functions](/en/math/calculus/vector_functions), in this post we briefly review linear maps, matrices, and determinants (the core tools of multivariable differentiation), and then discuss partial derivatives, the gradient, differentiability, the multivariable chain rule, and extrema.
+In the previous post we considered functions that raise the dimension of the codomain, sending one real number to several real numbers, that is, curves parameterized by a parameter $\mathbf{r}:\mathbb{R}\rightarrow\mathbb{R}^n$. Now we do the opposite: we raise the dimension of the domain and consider multivariable functions $f:\mathbb{R}^m\rightarrow\mathbb{R}$ that send several real numbers to one real number. Differentiation still retains its essence as a first-order approximation near a point, but because the domain becomes a vector space there are infinitely many directions of approach, so direction becomes important and the first-order approximation is given not by a single number but by a linear map. Since vector spaces, inner products, and norms were covered in [§Curves and Vector-Valued Functions](/en/math/calculus/vector_functions){: data-relation="required" }, in this post we briefly review linear maps, matrices, and determinants (the core tools of multivariable differentiation), and then discuss partial derivatives, the gradient, differentiability, the multivariable chain rule, and extrema.
 
 ## Linear Maps and Matrices
 
@@ -120,14 +120,14 @@ $$\lim_{\mathbf{h} \rightarrow 0}\frac{f(\mathbf{a} + \mathbf{h}) - f(\mathbf{a}
 holds.
 :::
 
-The most remarkable point is that the vector $\mathbf{n}$ defined in this way actually coincides with the gradient vector $\nabla f(\mathbf{a})$ examined in [Definition 2](#def2).
+The most remarkable point is that the vector $\mathbf{n}$ defined in this way actually coincides with the gradient vector $\nabla f(\mathbf{a})$ examined in [Definition 2](#def2){: data-relation="required" }.
 
 ::: Proposition 4
-If $f$ is differentiable at a point $\mathbf{a}$, then the vector $\mathbf{n}$ from [Definition 3](#def3) satisfies $\mathbf{n} = \nabla f(\mathbf{a})$, and $f(\mathbf{a}+\mathbf{h}) \approx f(\mathbf{a}) + \nabla f(\mathbf{a})\cdot \mathbf{h}$ is the best first-order approximation.
+If $f$ is differentiable at a point $\mathbf{a}$, then the vector $\mathbf{n}$ from [Definition 3](#def3){: data-relation="required" } satisfies $\mathbf{n} = \nabla f(\mathbf{a})$, and $f(\mathbf{a}+\mathbf{h}) \approx f(\mathbf{a}) + \nabla f(\mathbf{a})\cdot \mathbf{h}$ is the best first-order approximation.
 :::
 
 ::: Proof
-Setting $\mathbf{h} = t \mathbf{e}_i$ in the limit of [Definition 3](#def3), we have $\lVert \mathbf{h}\rVert = \lvert t\rvert$, so
+Setting $\mathbf{h} = t \mathbf{e}_i$ in the limit of [Definition 3](#def3){: data-relation="required" }, we have $\lVert \mathbf{h}\rVert = \lvert t\rvert$, so
 
 $$\lim_{t \rightarrow 0}\frac{f(\mathbf{a} + t \mathbf{e}_i) - f(\mathbf{a}) - \mathbf{n}\cdot (t \mathbf{e}_i)}{\lvert t\rvert} = 0.$$
 
@@ -138,7 +138,7 @@ $$\lim_{t\rightarrow 0}\frac{f(\mathbf{a} + t \mathbf{e}_i) - f(\mathbf{a})}{t} 
 and the very existence of the limit on the left-hand side is the definition of the partial derivative, so $\frac{\partial f}{\partial x_i}(\mathbf{a})$ exists and its value is $n_i$. Collecting this for all $i$ shows that $\nabla f(\mathbf{a})$ is well defined and $\mathbf{n} = \nabla f(\mathbf{a})$.
 :::
 
-Note here that we have explicitly separated [Definition 3](#def3) and [Proposition 4](#prop4). [Proposition 4](#prop4) says that *if* the function $f$ is differentiable, then the vector $\mathbf{n}$ satisfying that condition is $\nabla f$; one must *not* interpret the converse to mean that if all partial derivatives exist and $\nabla f$ is well defined, then $f$ is differentiable. Instead, the following condition shows that if each partial derivative is continuous, then $f$ is differentiable.
+Note here that we have explicitly separated [Definition 3](#def3){: data-relation="required" } and [Proposition 4](#prop4){: data-relation="required" }. [Proposition 4](#prop4){: data-relation="required" } says that *if* the function $f$ is differentiable, then the vector $\mathbf{n}$ satisfying that condition is $\nabla f$; one must *not* interpret the converse to mean that if all partial derivatives exist and $\nabla f$ is well defined, then $f$ is differentiable. Instead, the following condition shows that if each partial derivative is continuous, then $f$ is differentiable.
 
 ::: Proposition 5
 If all partial derivatives of $f$ exist in a neighborhood of $\mathbf{a}$ and are all continuous at $\mathbf{a}$, then $f$ is differentiable at $\mathbf{a}$.
@@ -156,16 +156,16 @@ and subtracting $\nabla f(a,b)\cdot(h,k) = f_x(a,b)h + f_y(a,b)k$ gives
 
 $$f(a+h,b+k) - f(a,b) - \nabla f(a,b)\cdot(h,k) = \bigl(f_x(a+\theta_1 h, b+k) - f_x(a,b)\bigr)h + \bigl(f_y(a, b+\theta_2 k) - f_y(a,b)\bigr)k.$$
 
-Since $f_x, f_y$ are continuous at $(a,b)$, both brackets go to $0$ as $(h,k)\rightarrow(0,0)$, and because $\lvert h\rvert, \lvert k\rvert \le \lVert(h,k)\rVert$, the limit in [Definition 3](#def3) holds. That is, $f$ is differentiable at $(a,b)$ and its gradient is $\nabla f(a,b)$.
+Since $f_x, f_y$ are continuous at $(a,b)$, both brackets go to $0$ as $(h,k)\rightarrow(0,0)$, and because $\lvert h\rvert, \lvert k\rvert \le \lVert(h,k)\rVert$, the limit in [Definition 3](#def3){: data-relation="required" } holds. That is, $f$ is differentiable at $(a,b)$ and its gradient is $\nabla f(a,b)$.
 :::
 
-Because this situation requiring both the existence and continuity of partial derivatives will appear repeatedly, we borrow the name from [§Differentiation and Derivatives, ⁋Definition 5](/en/math/calculus/derivatives#def5) and carry it over to the multivariable setting. That is, if all partial derivatives of order $k$ and below exist and are continuous on some region, we say $f$ is of *class $C^k$* on that region; restated, [Proposition 5](#prop5) says that $C^1$ functions are differentiable.
+Because this situation requiring both the existence and continuity of partial derivatives will appear repeatedly, we borrow the name from [§Differentiation and Derivatives, ⁋Definition 5](/en/math/calculus/derivatives#def5){: data-relation="weak" } and carry it over to the multivariable setting. That is, if all partial derivatives of order $k$ and below exist and are continuous on some region, we say $f$ is of *class $C^k$* on that region; restated, [Proposition 5](#prop5){: data-relation="weak" } says that $C^1$ functions are differentiable.
 
 ## Chain Rule and Mixed Partial Derivatives
 
 Now we examine the chain rule for multivariable functions. If only one of the variables input to a multivariable function is given as a composition with another function, we can apply the chain rule in the same way as in single-variable differentiation using the partial derivative with respect to that variable; the problem arises when several variables input to the multivariable function are defined through other functions.
 
-For this we need a curve $\mathbf{x}(t) = (x_1(t), \ldots, x_m(t))$ parameterized by a single parameter $t$, which, as defined in [§Curves and Vector-Valued Functions, ⁋Proposition 2](/en/math/calculus/vector_functions#prop2), is differentiable when each component $x_i(t)$ is differentiable as a single-variable function, and its tangent vector $\mathbf{x}'(t) = (x_1'(t), \ldots, x_m'(t))$ is well defined. Under this assumption the following holds.
+For this we need a curve $\mathbf{x}(t) = (x_1(t), \ldots, x_m(t))$ parameterized by a single parameter $t$, which, as defined in [§Curves and Vector-Valued Functions, ⁋Proposition 2](/en/math/calculus/vector_functions#prop2){: data-relation="weak" }, is differentiable when each component $x_i(t)$ is differentiable as a single-variable function, and its tangent vector $\mathbf{x}'(t) = (x_1'(t), \ldots, x_m'(t))$ is well defined. Under this assumption the following holds.
 
 ::: Theorem 6 (Multivariable Chain Rule)
 If $f$ is differentiable and $\mathbf{x}(t) = (x_1(t), \ldots, x_m(t))$ is a differentiable curve, then the composition $t \mapsto f(\mathbf{x}(t))$ is also differentiable and
@@ -176,14 +176,14 @@ holds.
 :::
 
 ::: Proof
-Applying [Definition 3](#def3) at the point $\mathbf{x}(t)$ with increment $\Delta\mathbf{x}=\mathbf{x}(t+\Delta t)-\mathbf{x}(t)$, as $\Delta t\rightarrow 0$ we have
+Applying [Definition 3](#def3){: data-relation="required" } at the point $\mathbf{x}(t)$ with increment $\Delta\mathbf{x}=\mathbf{x}(t+\Delta t)-\mathbf{x}(t)$, as $\Delta t\rightarrow 0$ we have
 
 $$\frac{f(\mathbf{x}(t+\Delta t))-f(\mathbf{x}(t))-\nabla f(\mathbf{x}(t))\cdot\Delta\mathbf{x}}{\lVert\Delta\mathbf{x}\rVert}\rightarrow 0.$$
 
 Dividing both sides by $\Delta t$, the right-hand side splits into a linear term $\nabla f(\mathbf{x}(t))\cdot\frac{\Delta\mathbf{x}}{\Delta t}$ and a remainder term, where this remainder term is the quantity that went to $0$ above multiplied by $\lVert\Delta\mathbf{x}\rVert/\lvert\Delta t\rvert$. By differentiability of the curve, $\Delta\mathbf{x}/\Delta t\rightarrow\mathbf{x}'(t)$, so $\lVert\Delta\mathbf{x}\rVert/\lvert\Delta t\rvert$ is bounded, and therefore the remainder term also vanishes as $\Delta t\rightarrow 0$, yielding the formula.
 :::
 
-[Theorem 6](#thm6) says that partial derivatives chain together like links when one variable depends on several variables, and it is mainly used in coordinate changes. For example, if in $z = f(x,y)$ we change to polar coordinates $x = r\cos\theta$, $y = r\sin\theta$, then $\partial z/\partial r = f_x\cos\theta + f_y\sin\theta$ follows immediately.
+[Theorem 6](#thm6){: data-relation="required" } says that partial derivatives chain together like links when one variable depends on several variables, and it is mainly used in coordinate changes. For example, if in $z = f(x,y)$ we change to polar coordinates $x = r\cos\theta$, $y = r\sin\theta$, then $\partial z/\partial r = f_x\cos\theta + f_y\sin\theta$ follows immediately.
 
 On the other hand, for second-order partial derivatives the order of differentiation does not matter (under appropriate continuity).
 
@@ -208,7 +208,7 @@ Dividing both equations by $hk$ and taking the limit as $(h,k)\rightarrow(0,0)$,
 
 ## Directional Derivatives and the Gradient
 
-The *directional derivative* $D_{\mathbf{u}} f(\mathbf{a})$ in the direction of a unit vector $\mathbf{u}$ is by definition the derivative at $t = 0$ of the single-variable function $g(t) = f(\mathbf{a} + t\mathbf{u})$, and applying the chain rule of [Theorem 6](#thm6) to $\mathbf{x}(t) = \mathbf{a} + t\mathbf{u}$ immediately gives $D_{\mathbf{u}} f(\mathbf{a}) = g'(0) = \nabla f(\mathbf{a})\cdot \mathbf{u}$. Then the following holds.
+The *directional derivative* $D_{\mathbf{u}} f(\mathbf{a})$ in the direction of a unit vector $\mathbf{u}$ is by definition the derivative at $t = 0$ of the single-variable function $g(t) = f(\mathbf{a} + t\mathbf{u})$, and applying the chain rule of [Theorem 6](#thm6){: data-relation="required" } to $\mathbf{x}(t) = \mathbf{a} + t\mathbf{u}$ immediately gives $D_{\mathbf{u}} f(\mathbf{a}) = g'(0) = \nabla f(\mathbf{a})\cdot \mathbf{u}$. Then the following holds.
 
 ::: Proposition 8 (Direction of Steepest Ascent)
 If $f$ is differentiable at $\mathbf{a}$ and $\nabla f(\mathbf{a}) \neq 0$, then the directional derivative $D_{\mathbf{u}} f(\mathbf{a})$ in the direction of a unit vector is maximized when $\mathbf{u} = \nabla f(\mathbf{a})/\lVert\nabla f(\mathbf{a})\rVert$, and the maximum value is $\lVert\nabla f(\mathbf{a})\rVert$.
@@ -225,11 +225,11 @@ D_{\mathbf{u}} f(\mathbf{a}) = \nabla f(\mathbf{a})\cdot \mathbf{u} &\leq \lVert
 and equality holds when $\mathbf{u}$ is in the same direction as $\nabla f(\mathbf{a})$, that is, when $\mathbf{u} = \nabla f(\mathbf{a})/\lVert\nabla f(\mathbf{a})\rVert$. Therefore the directional derivative attains its maximum value $\lVert\nabla f(\mathbf{a})\rVert$ at this $\mathbf{u}$. By the same logic it attains its minimum value $-\lVert\nabla f(\mathbf{a})\rVert$ in the opposite direction, so $-\nabla f$ is the direction of steepest descent.
 :::
 
-[Proposition 8](#prop8) provides the geometric justification for gradient descent, which follows the gradient downhill to find a minimum. Meanwhile, the gradient is perpendicular to level surfaces $f = c$: for a curve $\mathbf{x}(t)$ on a level surface, $f(\mathbf{x}(t)) = c$ is constant, so by the chain rule $\nabla f\cdot \mathbf{x}'(t) = 0$, meaning the gradient is orthogonal to every tangent vector.
+[Proposition 8](#prop8){: data-relation="weak" } provides the geometric justification for gradient descent, which follows the gradient downhill to find a minimum. Meanwhile, the gradient is perpendicular to level surfaces $f = c$: for a curve $\mathbf{x}(t)$ on a level surface, $f(\mathbf{x}(t)) = c$ is constant, so by the chain rule $\nabla f\cdot \mathbf{x}'(t) = 0$, meaning the gradient is orthogonal to every tangent vector.
 
 ## Extrema and the Hessian Matrix
 
-Just as extrema of a single-variable function occurred at critical points, extrema of a differentiable multivariable function must occur at *critical points* where all partial derivatives vanish, i.e., where $\nabla f = 0$. In the single-variable case we could determine whether a critical point was a local maximum or minimum using the second derivative ([§Mean Value Theorem, ⁋Proposition 17](/en/math/calculus/mean_value_theorem#prop17)), and a similar situation occurs for multivariable functions.
+Just as extrema of a single-variable function occurred at critical points, extrema of a differentiable multivariable function must occur at *critical points* where all partial derivatives vanish, i.e., where $\nabla f = 0$. In the single-variable case we could determine whether a critical point was a local maximum or minimum using the second derivative ([§Mean Value Theorem, ⁋Proposition 17](/en/math/calculus/mean_value_theorem#prop17){: data-relation="weak" }), and a similar situation occurs for multivariable functions.
 
 However, one must be careful: because there are now many directions in which we can differentiate, there can exist points that are local minima in one direction and local maxima in another. Such a point is called a *saddle point*. In this section we will determine when a critical point is a local maximum, local minimum, or saddle point; for computational convenience we restrict our attention to multivariable functions defined on $\mathbb{R}^2$.
 
@@ -291,7 +291,7 @@ $$\nabla f(\mathbf{a}) = \lambda \nabla g(\mathbf{a})$$
 holds.
 :::
 ::: Proof
-Pick any smooth curve $\mathbf{x}(t)$ on the constraint surface $\{g = c\}$ passing through $\mathbf{a}$ ($\mathbf{x}(0) = \mathbf{a}$). Since $g(\mathbf{x}(t)) = c$ is constant, differentiating by [Theorem 6](#thm6) gives $\nabla g(\mathbf{a}) \cdot \mathbf{x}'(0) = 0$, and on the other hand since $\mathbf{a}$ gives an extremum of $f$ under the constraint, $t \mapsto f(\mathbf{x}(t))$ also has an extremum at $t = 0$, and therefore $\nabla f(\mathbf{a}) \cdot \mathbf{x}'(0) = 0$. That is, both vectors $\nabla f(\mathbf{a})$ and $\nabla g(\mathbf{a})$ are orthogonal to the tangent space of the constraint surface. But since the whole space is $m$-dimensional and the tangent space of the constraint surface is $(m-1)$-dimensional, there is only one such direction, and therefore there exists a real number $\lambda$ such that $\nabla f(\mathbf{a}) = \lambda \nabla g(\mathbf{a})$.
+Pick any smooth curve $\mathbf{x}(t)$ on the constraint surface $\{g = c\}$ passing through $\mathbf{a}$ ($\mathbf{x}(0) = \mathbf{a}$). Since $g(\mathbf{x}(t)) = c$ is constant, differentiating by [Theorem 6](#thm6){: data-relation="required" } gives $\nabla g(\mathbf{a}) \cdot \mathbf{x}'(0) = 0$, and on the other hand since $\mathbf{a}$ gives an extremum of $f$ under the constraint, $t \mapsto f(\mathbf{x}(t))$ also has an extremum at $t = 0$, and therefore $\nabla f(\mathbf{a}) \cdot \mathbf{x}'(0) = 0$. That is, both vectors $\nabla f(\mathbf{a})$ and $\nabla g(\mathbf{a})$ are orthogonal to the tangent space of the constraint surface. But since the whole space is $m$-dimensional and the tangent space of the constraint surface is $(m-1)$-dimensional, there is only one such direction, and therefore there exists a real number $\lambda$ such that $\nabla f(\mathbf{a}) = \lambda \nabla g(\mathbf{a})$.
 :::
 
 In actual computation, one adds the newly introduced real number $\lambda$ as an unknown and solves the system consisting of $\nabla f = \lambda \nabla g$ together with the constraint equation $g = c$; this $\lambda$ is called the *Lagrange multiplier*.
