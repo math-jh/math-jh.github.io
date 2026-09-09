@@ -33,11 +33,11 @@ Similarly, a morphism $\rho: E\otimes A\rightarrow E$ is called a *right action*
 Likewise $E\otimes I \rightarrow E$ is the right unitor. We write this situation as $E \circlearrowleft A$.
 :::
 
-Fix a monoid object $(M,\cdot,1)$ in the monoidal category $(\Set,\times, I)$. Then through this we can consider a left action of $M$ defined on an arbitrary set $E$. Swapping the order of factors as $M\times E\cong E\times M$ and applying [\[Set Theory\] §Product of Sets, ⁋Proposition 4](/en/math/set_theory/product_of_sets#prop4) yields
+Fix a monoid object $(M,\cdot,1)$ in the monoidal category $(\Set,\times, I)$. Then through this we can consider a left action of $M$ defined on an arbitrary set $E$. Swapping the order of factors as $M\times E\cong E\times M$ and applying [\[Set Theory\] §Product of Sets, ⁋Proposition 4](/en/math/set_theory/product_of_sets#prop4){: data-relation="required" } yields
 
 $$\Hom_\Set(M\times E,E)\cong\Hom_\Set(M,\Hom_\Set(E,E))\cong\Hom_\Set(M, \End(E))$$
 
-so any left action defines a function $M \rightarrow \End(E)$. The commutativity of the two diagrams in [Definition 1](#def1) is then equivalent to this function being a monoid homomorphism.
+so any left action defines a function $M \rightarrow \End(E)$. The commutativity of the two diagrams in [Definition 1](#def1){: data-relation="required" } is then equivalent to this function being a monoid homomorphism.
 
 In other words, saying that $M$ acts on $E$ from the left means that for arbitrary $\alpha,\beta\in M$ and $x\in E$, the identities
 
@@ -173,7 +173,7 @@ When a group $G$ acts on a set $E$, for any $x\in E$, since $g^{-1}\cdot(g\cdot 
 
 We now consider the case where the set $E$ is given additional structure. For instance, suppose $E$ also has a monoid structure and a given monoid $M$ acts on $E$; then the $M$-action is given by a monoid homomorphism $M \rightarrow\End(E)=\End_\Mon(E)$.
 
-In particular, consider the case where a group $G$ acts on itself. If a homomorphism $\rho:G\rightarrow\End(G)=\End_\Grp(G)$ is given, then since a bijective group homomorphism is always a group isomorphism ([§Algebraic Structures, ⁋Definition 6](/en/math/algebraic_structures/algebraic_structures#def6)), we know that if $G$ acts on itself, this must necessarily take the form of a group homomorphism $G \rightarrow \Aut(G)$.
+In particular, consider the case where a group $G$ acts on itself. If a homomorphism $\rho:G\rightarrow\End(G)=\End_\Grp(G)$ is given, then since a bijective group homomorphism is always a group isomorphism ([§Algebraic Structures, ⁋Definition 6](/en/math/algebraic_structures/algebraic_structures#def6){: data-relation="weak" }), we know that if $G$ acts on itself, this must necessarily take the form of a group homomorphism $G \rightarrow \Aut(G)$.
 
 Among group actions defined on a group itself, the following example in particular is worth keeping in mind.
 
@@ -199,7 +199,7 @@ so $\rho_{gh}=\rho_g\circ\rho_h$. In particular, substituting $h=g^{-1}$ gives $
 :::
 
 ::: Definition 10
-Let a group $G$ be given. We call the automorphism $\rho_g$ of [Proposition 9](#prop9) the *inner automorphism* defined by $g$, and denote the collection of these by $\Inn(G)$.
+Let a group $G$ be given. We call the automorphism $\rho_g$ of [Proposition 9](#prop9){: data-relation="required" } the *inner automorphism* defined by $g$, and denote the collection of these by $\Inn(G)$.
 :::
 
 ::: Proposition 11
@@ -215,14 +215,14 @@ $$(f\circ\rho_g\circ f^{-1})(x)=f(gf^{-1}(x)g^{-1})=f(g)xf(g^{-1})=\rho_{f(g)}(x
 holds.
 :::
 
-On the other hand, $\rho:G\rightarrow\Inn(G)$ is surjective, and therefore by [§Group Isomorphisms, ⁋Theorem 2](/en/math/algebraic_structures/isomorphism_theorems#thm2),
+On the other hand, $\rho:G\rightarrow\Inn(G)$ is surjective, and therefore by [§Group Isomorphisms, ⁋Theorem 2](/en/math/algebraic_structures/isomorphism_theorems#thm2){: data-relation="required" },
 
 $$G/\ker\rho\cong\Inn(G)$$
 
 holds. $\ker\rho$ also has a special name.
 
 ::: Definition 12
-For a group $G$ and the group homomorphism $\rho:G\rightarrow\Inn(G)$ defined in [Proposition 9](#prop9), we call $\ker\rho$ the *center* of $G$ and denote it by $Z(G)$.
+For a group $G$ and the group homomorphism $\rho:G\rightarrow\Inn(G)$ defined in [Proposition 9](#prop9){: data-relation="required" }, we call $\ker\rho$ the *center* of $G$ and denote it by $Z(G)$.
 :::
 
 By definition,
@@ -255,10 +255,10 @@ $$\lvert G\cdot x\rvert=[G:\Stab(x)]$$
 holds.
 :::
 ::: Proof
-If we define a function $p:G \rightarrow G\cdot x$ by $g\mapsto g\cdot x$, then by the definition of $G\cdot x$, this function is surjective. On the other hand, since $p(g_1)=p(g_2)\iff g_1^{-1}g_2\in \Stab(x)$, we obtain the desired result from the canonical decomposition following [\[Set Theory\] §Examples of Equivalence Relations, ⁋Proposition 7](/en/math/set_theory/examples_of_equivalence#prop7).
+If we define a function $p:G \rightarrow G\cdot x$ by $g\mapsto g\cdot x$, then by the definition of $G\cdot x$, this function is surjective. On the other hand, since $p(g_1)=p(g_2)\iff g_1^{-1}g_2\in \Stab(x)$, we obtain the desired result from the canonical decomposition following [\[Set Theory\] §Examples of Equivalence Relations, ⁋Proposition 7](/en/math/set_theory/examples_of_equivalence#prop7){: data-relation="required" }.
 :::
 
-Therefore, if $G$ is finite, then by [§Quotient Groups, ⁋Proposition 5](/en/math/algebraic_structures/quotient_groups#prop5) we obtain the identity
+Therefore, if $G$ is finite, then by [§Quotient Groups, ⁋Proposition 5](/en/math/algebraic_structures/quotient_groups#prop5){: data-relation="required" } we obtain the identity
 
 $$\lvert G\cdot x\rvert=\frac{\lvert G\rvert}{\lvert\Stab(x)\rvert}\tag{$\ast\ast$}$$
 

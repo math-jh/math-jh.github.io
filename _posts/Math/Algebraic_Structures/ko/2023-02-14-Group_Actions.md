@@ -31,11 +31,11 @@ Monoidal category $(\mathcal{A},\otimes, I)$와 $\mathcal{A}$의 monoid object $
 마찬가지로 $E\otimes I \rightarrow E$는 right unitor이다. 이 상황을 $E \circlearrowleft A$로 적는다.
 :::
 
-Monoidal category $(\Set,\times, I)$ 위의 monoid object $(M,\cdot,1)$을 고정하자. 그럼 이를 통해 임의의 집합 $E$ 위에 정의된 $M$의 left action을 생각할 수 있다. 그럼 $M\times E\cong E\times M$으로 성분의 순서를 바꾼 뒤 [\[집합론\] §집합의 곱, ⁋명제 4](/ko/math/set_theory/product_of_sets#prop4)를 적용하면
+Monoidal category $(\Set,\times, I)$ 위의 monoid object $(M,\cdot,1)$을 고정하자. 그럼 이를 통해 임의의 집합 $E$ 위에 정의된 $M$의 left action을 생각할 수 있다. 그럼 $M\times E\cong E\times M$으로 성분의 순서를 바꾼 뒤 [\[집합론\] §집합의 곱, ⁋명제 4](/ko/math/set_theory/product_of_sets#prop4){: data-relation="required" }를 적용하면
 
 $$\Hom_\Set(M\times E,E)\cong\Hom_\Set(M,\Hom_\Set(E,E))\cong\Hom_\Set(M, \End(E))$$
 
-이므로, 임의의 left action은 함수 $M \rightarrow \End(E)$를 정의한다. 그럼 [정의 1](#def1)의 두 diagram이 commutative라는 것은 이 함수가 실은 monoid homomorphism이라는 것과 같다. 
+이므로, 임의의 left action은 함수 $M \rightarrow \End(E)$를 정의한다. 그럼 [정의 1](#def1){: data-relation="required" }의 두 diagram이 commutative라는 것은 이 함수가 실은 monoid homomorphism이라는 것과 같다. 
 
 바꿔 말하자면 $M$이 $E$에 왼쪽에서 act한다는 것은 임의의 $\alpha,\beta\in M$과 $x\in E$에 대하여, 다음의 식
 
@@ -172,7 +172,7 @@ Group $G$가 집합 $E$에 act할 때, 임의의 $x\in E$에 대하여 $g^{-1}\c
 
 이제 우리는 집합 $E$ 위에 추가적인 구조가 주어진 경우를 생각한다. 가령 $E$ 또한 monoid 구조를 가진다 하고, 주어진 monoid $M$이 $E$ 위에 act한다 하면, $M$-action은 monoid homomorphism $M \rightarrow\End(E)=\End_\Mon(E)$로 주어진다. 
 
-특별히 group $G$가 자기 자신 위에 act하는 경우를 생각하자. Homomorphism $\rho:G\rightarrow\End(G)=\End_\Grp(G)$가 주어져 있다 하면, bijective group homomorphism은 항상 group isomorphism이므로 ([§대수적 구조, ⁋정의 6](/ko/math/algebraic_structures/algebraic_structures#def6)) $G$가 자기 자신 위에 act한다면 이는 반드시 group homomorphism $G \rightarrow \Aut(G)$와 같은 형태로 나타나야 한다는 것을 안다.
+특별히 group $G$가 자기 자신 위에 act하는 경우를 생각하자. Homomorphism $\rho:G\rightarrow\End(G)=\End_\Grp(G)$가 주어져 있다 하면, bijective group homomorphism은 항상 group isomorphism이므로 ([§대수적 구조, ⁋정의 6](/ko/math/algebraic_structures/algebraic_structures#def6){: data-relation="weak" }) $G$가 자기 자신 위에 act한다면 이는 반드시 group homomorphism $G \rightarrow \Aut(G)$와 같은 형태로 나타나야 한다는 것을 안다.
 
 자기 자신 위에서 정의된 group action 중 특히 다음의 예시는 기억해둘 만한 가치가 있다.
 
@@ -198,7 +198,7 @@ $$\rho_{gh}(x)=(gh)x(gh)^{-1}=g(hxh^{-1})g^{-1}=(\rho_g\circ\rho_h)(x)$$
 :::
 
 ::: 정의 10
-Group $G$가 주어졌다 하자. [명제 9](#prop9)의 automorphism $\rho_g$를 $g$에 의해 정의되는 *inner automorphism<sub>내부자기동형사상</sub>*이라 부르고, 이들의 모임을 $\Inn(G)$로 적는다.
+Group $G$가 주어졌다 하자. [명제 9](#prop9){: data-relation="required" }의 automorphism $\rho_g$를 $g$에 의해 정의되는 *inner automorphism<sub>내부자기동형사상</sub>*이라 부르고, 이들의 모임을 $\Inn(G)$로 적는다.
 :::
 
 ::: 명제 11
@@ -214,14 +214,14 @@ $$(f\circ\rho_g\circ f^{-1})(x)=f(gf^{-1}(x)g^{-1})=f(g)xf(g^{-1})=\rho_{f(g)}(x
 이므로 자명하다. 
 :::
 
-한편, $\rho:G\rightarrow\Inn(G)$는 전사이며, 따라서 [§군 동형사상, ⁋정리 2](/ko/math/algebraic_structures/isomorphism_theorems#thm2)에 의하여
+한편, $\rho:G\rightarrow\Inn(G)$는 전사이며, 따라서 [§군 동형사상, ⁋정리 2](/ko/math/algebraic_structures/isomorphism_theorems#thm2){: data-relation="required" }에 의하여
 
 $$G/\ker\rho\cong\Inn(G)$$
 
 가 성립한다. $\ker\rho$에도 특별한 이름이 있다.
 
 ::: 정의 12
-Group $G$와, [명제 9](#prop9)에서 정의한 group homomorphism $\rho:G\rightarrow\Inn(G)$에 대하여, $\ker\rho$를 $G$의 *center<sub>중심</sub>*이라 부르고 $Z(G)$로 표기한다.
+Group $G$와, [명제 9](#prop9){: data-relation="required" }에서 정의한 group homomorphism $\rho:G\rightarrow\Inn(G)$에 대하여, $\ker\rho$를 $G$의 *center<sub>중심</sub>*이라 부르고 $Z(G)$로 표기한다.
 :::
 
 정의에 의하여,
@@ -256,10 +256,10 @@ $$\lvert G\cdot x\rvert=[G:\Stab(x)]$$
 이 성립한다. 
 :::
 ::: 증명
-함수 $p:G \rightarrow G\cdot x$를 $g\mapsto g\cdot x$로 정의하면 $G\cdot x$의 정의에 의해 이 함수는 surjective이다. 한편, $p(g_1)=p(g_2)\iff g_1^{-1}g_2\in \Stab(x)$이므로 [\[집합론\] §동치관계의 예시들, ⁋명제 7](/ko/math/set_theory/examples_of_equivalence#prop7) 이후의 canonical decomposition으로부터 원하는 결과를 얻는다. 
+함수 $p:G \rightarrow G\cdot x$를 $g\mapsto g\cdot x$로 정의하면 $G\cdot x$의 정의에 의해 이 함수는 surjective이다. 한편, $p(g_1)=p(g_2)\iff g_1^{-1}g_2\in \Stab(x)$이므로 [\[집합론\] §동치관계의 예시들, ⁋명제 7](/ko/math/set_theory/examples_of_equivalence#prop7){: data-relation="required" } 이후의 canonical decomposition으로부터 원하는 결과를 얻는다. 
 :::
 
-따라서, 만일 $G$가 finite이라면 [§몫군, ⁋명제 5](/ko/math/algebraic_structures/quotient_groups#prop5)에 의하여 다음의 식
+따라서, 만일 $G$가 finite이라면 [§몫군, ⁋명제 5](/ko/math/algebraic_structures/quotient_groups#prop5){: data-relation="required" }에 의하여 다음의 식
 
 $$\lvert G\cdot x\rvert=\frac{\lvert G\rvert}{\lvert\Stab(x)\rvert}\tag{$\ast\ast$}$$
 
