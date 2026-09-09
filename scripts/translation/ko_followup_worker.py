@@ -266,6 +266,20 @@ def _clear_completed(entry: dict) -> None:
 
 
 def _process_target(target: tuple, state: dict) -> int:
+    _request_key, path, _reviewed_at, entry = target
+    ko_path = tw.BLOG_ROOT / path
+    en_path = tw.BLOG_ROOT / (entry.get("en_path") or "")
+    lease = tw.try_acquire_file_locks([ko_path, en_path])
+    if lease is None:
+        log(f"SKIP {path}: KO/EN content lock 사용 중")
+        return 0
+    try:
+        return _process_target_locked(target, state)
+    finally:
+        lease.release()
+
+
+def _process_target_locked(target: tuple, state: dict) -> int:
     request_key, path, reviewed_at, entry = target
     ko_path = tw.BLOG_ROOT / path
     en_rel = entry.get("en_path") or ""

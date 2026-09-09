@@ -5,6 +5,7 @@ from __future__ import annotations
 import importlib.util
 import json
 import sys
+import tempfile
 import unittest
 from pathlib import Path
 from types import SimpleNamespace
@@ -161,6 +162,56 @@ class IncompleteResponseRecoveryTest(unittest.TestCase):
             result = dc.call_codex([{"id": "a"}], review=False)
 
         self.assertEqual(result, {"items": [row("a")]})
+
+
+class ParallelStateTest(unittest.TestCase):
+    def test_unit_updates_merge_without_overwriting_other_process(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            state_path = root / "state.json"
+            with (
+                patch.object(dc, "STATE_DIR", root),
+                patch.object(dc, "STATE_PATH", state_path),
+                patch.object(dc, "STATE_LOCK_PATH", root / "state.lock"),
+            ):
+                dc.merge_unit_states({"ko-a+en-a": {"status": "done"}})
+                dc.merge_unit_states({"ko-b+en-b": {"status": "error"}})
+                saved = json.loads(state_path.read_text(encoding="utf-8"))
+
+        self.assertEqual(saved["units"]["ko-a+en-a"]["status"], "done")
+        self.assertEqual(saved["units"]["ko-b+en-b"]["status"], "error")
+
+
+class SelectionTest(unittest.TestCase):
+    def test_unpublished_ko_and_en_pair_is_included(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            ko_path = root / "_posts/Math/Test/ko/draft.md"
+            en_path = root / "_posts/Math/Test/en/draft.md"
+            ko_path.parent.mkdir(parents=True)
+            en_path.parent.mkdir(parents=True)
+            ko_path.write_text("ko", encoding="utf-8")
+            en_path.write_text("en", encoding="utf-8")
+            ko = SimpleNamespace(lang="ko", published=False, path=ko_path)
+            en = SimpleNamespace(lang="en", published=False, path=en_path)
+            link = dc.Link("draft-link", ko_path, 0, 1, "", "", "#x", None, None)
+            updates: dict[str, dict] = {}
+            with (
+                patch.object(dc, "ROOT", root),
+                patch.object(dc, "_POSTS", [ko, en]),
+                patch.object(dc, "en_counterpart", side_effect=lambda p, _all: en if p is ko else None),
+                patch.object(dc, "dirty_paths", return_value=[]),
+                patch.object(dc, "extract_links", side_effect=lambda p, _text: [link] if p == ko_path else []),
+            ):
+                selected = dc.select_unit({}, updates)
+
+            self.assertIsNotNone(selected)
+            paths, _texts, links, lease = selected
+            try:
+                self.assertEqual(paths, [ko_path, en_path])
+                self.assertEqual(links, [link])
+            finally:
+                lease.release()
 
 
 if __name__ == "__main__":

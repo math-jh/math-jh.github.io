@@ -1,0 +1,104 @@
+/* Per-post reading path generated from data-relation IALs.
+   These are navigation aids, so they deliberately sit below theorem and notice
+   blocks in the visual hierarchy. The remark rose supplies the family colour,
+   heavily mixed with the page background rather than used as an accent rail. */
+.semantic-reading {
+  margin: 1.6em 0 2.1em;
+  padding: 0.8em 1em 0.9em;
+  border-top: 1px solid mix($remark-color, $background-color, 28%);
+  border-bottom: 1px solid mix($remark-color, $background-color, 28%);
+  background-color: mix($remark-color, $background-color, 2%);
+  color: mix($text-color, $background-color, 78%);
+  text-align: left;
+
+  a {
+    color: inherit;
+    font-family: $sans-serif;
+    font-size: 0.88em;
+    font-weight: 400;
+    text-decoration: none;
+
+    &:hover {
+      color: $link-color;
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 0.16em;
+    }
+  }
+
+  ul,
+  ol {
+    margin: 0.25em 0 0;
+    padding-left: 0.45em;
+    list-style: none;
+  }
+
+  li {
+    margin-bottom: 0.22em;
+
+  }
+}
+
+.layout--single .semantic-reading__title {
+  margin: 0 0 0.7em;
+  padding: 0;
+  color: mix($remark-color, $text-color, 55%);
+  font-family: $sans-serif;
+  font-size: $type-size-5;
+  font-weight: 650;
+
+}
+
+.layout--single .semantic-reading li {
+  text-align: left;
+}
+
+.semantic-reading__columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5em;
+}
+
+.semantic-reading__group:only-child {
+  grid-column: 1 / -1;
+}
+
+.layout--single .semantic-reading__label {
+  margin: 0;
+  color: mix($remark-color, $text-color, 45%);
+  font-family: $sans-serif;
+  font-size: 0.84em;
+  font-weight: 650;
+}
+
+.semantic-reading--after {
+  clear: both;
+  margin-top: 0;
+}
+
+/* When a semantic menu follows, its own upper rule is the section boundary.
+   Remove the otherwise separate rule above pagination, while retaining the
+   bordered pager buttons and the semantic block's two-rule shape. */
+.pagination.pagination--before-semantic {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.pagination + .semantic-reading--after {
+  margin-bottom: 1.5em;
+}
+
+/* The recommendation block already closes with a rule. On those pages the
+   comments heading's own hairline is enough separation, so omit the comments'
+   otherwise useful double section rule instead of stacking both boundaries. */
+.page--has-semantic-next > .page__comments {
+  margin-top: 1.5rem;
+  padding-top: 0;
+  border-top: 0;
+}
+
+.semantic-reading__next-pinned span {
+  color: $muted-text-color;
+  font-family: $sans-serif;
+  font-size: 0.82em;
+}

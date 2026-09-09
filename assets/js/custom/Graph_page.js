@@ -14,6 +14,12 @@
             typeof l.target === 'object' ? l.target.id : l.target];
   }
   function lid(l) { var e = endpoints(l); return e[0] + '>' + e[1]; }
+  // SVG는 나중에 붙은 요소가 위에 그려진다. 의미가 약한 링크부터 칠하고,
+  // 포커스된 링크는 relation과 무관하게 마지막 층으로 올린다.
+  function linearLinkPaintOrder(link, highlighted) {
+    var relationOrder = link.relation === 'weak' ? 0 : link.relation === 'forward' ? 1 : 2;
+    return (highlighted ? 3 : 0) + relationOrder;
+  }
   function prettify(slug) {
     return slug.split('_').map(function (w) { return w ? w[0].toUpperCase() + w.slice(1) : w; }).join(' ');
   }
@@ -33,10 +39,11 @@
   }
 
   // required SCC를 한 층으로 축약한 뒤 forward를 순환 없는 소프트 제약으로
-  // 더한다. weight는 아직 연결이 적은 노드의 초기 열만 정하는 보조값이다.
+  // 더한다. 가로 층은 오직 의존 그래프의 위상 깊이로 정하고, 카테고리 안에서만
+  // 의미가 있는 weight는 같은 층의 노드를 안정적으로 정렬할 때만 쓴다.
   function linearPositions(data, viewportWidth, viewportHeight) {
-    var nodes = data.nodes, byId = {}, reqAdj = {};
-    nodes.forEach(function (n) { byId[n.id] = n; reqAdj[n.id] = []; });
+    var nodes = data.nodes, reqAdj = {};
+    nodes.forEach(function (n) { reqAdj[n.id] = []; });
     data.links.forEach(function (l) {
       var e = endpoints(l);
       if (l.relation === 'required' && reqAdj[e[0]]) reqAdj[e[0]].push(e[1]);
@@ -85,15 +92,9 @@
 
     var indeg = comps.map(function () { return 0; });
     adj.forEach(function (nexts) { nexts.forEach(function (v) { indeg[v] += 1; }); });
-    var base = comps.map(function (members) {
-      return members.reduce(function (best, id) {
-        var weight = Number(byId[id].weight);
-        return Math.max(best, isFinite(weight) && weight > 0 ? weight - 1 : 0);
-      }, 0);
-    });
-    var rank = base.slice();
+    var rank = comps.map(function () { return 0; });
     var queue = comps.map(function (_, i) { return i; }).filter(function (i) { return indeg[i] === 0; });
-    queue.sort(function (a, b) { return base[a] - base[b]; });
+    queue.sort(function (a, b) { return a - b; });
     while (queue.length) {
       var current = queue.shift();
       adj[current].forEach(function (next) {
@@ -519,10 +520,16 @@
         var link = entry.link;
         var color = linkColor(link);
         entry.path.setAttribute('stroke', color);
-        entry.arrow.setAttribute('fill', color);
+        entry.arrow.setAttribute('fill', arrowColor(link));
         entry.path.setAttribute('stroke-width', hlLinks.has(lid(link)) ? '2.4' :
           (link.relation === 'required' ? '1.2' : link.relation === 'weak' ? '0.85' : '1'));
       });
+      // 링크마다 선과 화살촉을 한 묶음으로 두고, 약한 관계부터 DOM 앞쪽에
+      // 재배치한다. 하이라이트가 바뀔 때도 선택된 링크 전체가 맨 위로 올라간다.
+      linearLinkEls.slice().sort(function (a, b) {
+        return linearLinkPaintOrder(a.link, hlLinks.has(lid(a.link))) -
+            linearLinkPaintOrder(b.link, hlLinks.has(lid(b.link))) || a.order - b.order;
+      }).forEach(function (entry) { entry.group.parentNode.appendChild(entry.group); });
       linearNodeEls.forEach(function (entry) {
         var node = entry.node;
         var state = nodeState(node);
@@ -553,13 +560,15 @@
       var linksGroup = svgElement('g', { class: 'gc-linear__links' });
       var pendingLinks = [];
       data.links.forEach(function (link, index) {
+        var group = svgElement('g', { class: 'gc-linear__link' });
         var path = svgElement('path', {
           d: gitPath(link, index), fill: 'none', 'stroke-linecap': 'round',
           'stroke-linejoin': 'round', 'vector-effect': 'non-scaling-stroke'
         });
         if (link.relation === 'weak') path.setAttribute('stroke-dasharray', '2 5');
         else if (link.relation === 'forward') path.setAttribute('stroke-dasharray', '9 5');
-        linksGroup.appendChild(path); pendingLinks.push({ link: link, path: path });
+        group.appendChild(path); linksGroup.appendChild(group);
+        pendingLinks.push({ link: link, path: path, group: group, order: index });
       });
       linearSvg.appendChild(linksGroup);
       pendingLinks.forEach(function (entry) {
@@ -574,8 +583,11 @@
           transform: 'translate(' + point.x + ' ' + point.y + ') rotate(' + angle + ')',
           'aria-hidden': 'true', 'pointer-events': 'none'
         });
-        linksGroup.appendChild(arrow);
-        linearLinkEls.push({ link: entry.link, path: entry.path, arrow: arrow });
+        entry.group.appendChild(arrow);
+        linearLinkEls.push({
+          link: entry.link, path: entry.path, arrow: arrow,
+          group: entry.group, order: entry.order
+        });
       });
 
       var nodesGroup = svgElement('g', { class: 'gc-linear__nodes' });
@@ -679,6 +691,22 @@
       if (l.relation === 'required') return 'rgba(' + cfg.link + ',0.44)';
       return 'rgba(' + cfg.link + ',0.36)';
     }
+    // Dependencies의 화살촉은 반투명 면으로 그리면 뒤의 링크가 비쳐 보인다.
+    // 카드의 주 배경색 위에서 보이던 색을 미리 합성해 불투명 RGB로 만들고,
+    // weak는 면적 때문에 점선보다 도드라지지 않도록 배경 쪽으로 더 누른다.
+    function arrowColor(l) {
+      var color = linkColor(l);
+      if (!data.classified) return color;
+      var rgba = color.match(/^rgba?\(\s*([\d.]+)\s*,\s*([\d.]+)\s*,\s*([\d.]+)(?:\s*,\s*([\d.]+))?\s*\)$/);
+      if (!rgba) return color;
+      var background = [20, 21, 25];
+      var alpha = rgba[4] === undefined ? 1 : Number(rgba[4]);
+      if (l.relation === 'weak') alpha *= 0.55;
+      alpha = Math.max(0, Math.min(1, alpha));
+      return 'rgb(' + [1, 2, 3].map(function (index) {
+        return Math.round(background[index - 1] * (1 - alpha) + Number(rgba[index]) * alpha);
+      }).join(',') + ')';
+    }
     function linkDash(l) {
       if (l.relation === 'weak') return [2, 5];
       if (l.relation === 'forward') return [9, 5];
@@ -711,7 +739,7 @@
       })
       .linkDirectionalArrowLength(15)
       .linkDirectionalArrowRelPos(0.45)
-      .linkDirectionalArrowColor(function (l) { return linkColor(l); })
+      .linkDirectionalArrowColor(arrowColor)
       .linkCurvature(linkCurve)
       .onNodeHover(function (n) {
         hovered = n; refocus(); canvasWrap.style.cursor = n ? 'pointer' : '';

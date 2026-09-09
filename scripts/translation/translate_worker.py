@@ -15,7 +15,8 @@ Usage:
 Files:
     state:  ~/math-jh.github.io/scripts/translation/translation_state.json
     log:    redirect cron stderr (e.g. translation.log)
-    lock:   /tmp/translate-worker.lock
+    locks:  /tmp/translate-worker.lock (translation state serialization) and
+            /tmp/blog-file-locks/* (selected KO/EN content)
 
 Cron suggestion:
     15 */4 * * * cd /home/junhyeok/math-jh.github.io/scripts/translation \\
@@ -159,6 +160,9 @@ import md_lint as _md_lint  # noqa: E402
 # 초안(published:false) 판정의 단일 출처는 terms_common.
 sys.path.insert(0, str(BLOG_ROOT / "scripts" / "term-extraction"))
 from terms_common import published_false_in_fm as _published_false_in_fm  # noqa: E402
+
+sys.path.insert(0, str(BLOG_ROOT / "scripts" / "lib"))
+from blog_file_lock import try_acquire_file_locks  # noqa: E402
 
 
 # ---------------------------------------------------------------------------
@@ -807,16 +811,21 @@ def _iso_to_ts(iso: str) -> float:
         return 0.0
 
 
-def find_next_target(state: dict) -> Optional[Tuple[Path, Path, str]]:
+def find_next_target(
+    state: dict, excluded: Optional[set[Path]] = None,
+) -> Optional[Tuple[Path, Path, str]]:
     """Four-phase priority: pending → drift → polish → verify.
 
     Returns (ko_path, en_path_to_write, reason) or None.
     """
     ko_files = sorted(POSTS_ROOT.glob("*/ko/*.md"))
     now = time.time()
+    excluded = excluded or set()
 
     # --- Phase 1: untranslated (no en counterpart, not a draft) ----------
     for ko in ko_files:
+        if ko in excluded:
+            continue
         key = str(ko.relative_to(BLOG_ROOT))
         entry = state["files"].get(key, {})
 
@@ -839,6 +848,8 @@ def find_next_target(state: dict) -> Optional[Tuple[Path, Path, str]]:
 
     # --- Phase 2: drift (explicit opt-in via `drift_needed: true` in KO) ------
     for ko in ko_files:
+        if ko in excluded:
+            continue
         if is_draft(ko):
             continue
         # Honour the failure backoff, as Phase 1 does. Without it a post that
@@ -871,6 +882,8 @@ def find_next_target(state: dict) -> Optional[Tuple[Path, Path, str]]:
     # Thus changing engines/tags deliberately requeues old Kimi-polished posts
     # without erasing their original translation_source provenance.
     for ko in ko_files:
+        if ko in excluded:
+            continue
         if is_draft(ko):
             continue
         # Phase 1·2 와 같은 실패 백오프. polish source tag가 박혀야
@@ -898,6 +911,8 @@ def find_next_target(state: dict) -> Optional[Tuple[Path, Path, str]]:
     # The EN file is never modified. One-time: a recorded `verified_at` retires
     # the post.
     for ko in ko_files:
+        if ko in excluded:
+            continue
         if is_draft(ko):
             continue
         existing_en = find_en_counterpart(ko)
@@ -3043,10 +3058,20 @@ def main() -> int:
     if _migrated_keys:
         save_state(state)
 
+    file_lease = None
     try:
-        target = find_next_target(state)
+        excluded: set[Path] = set()
+        target = find_next_target(state, excluded)
+        while target is not None:
+            ko_path, en_path, _reason = target
+            file_lease = try_acquire_file_locks([ko_path, en_path])
+            if file_lease is not None:
+                break
+            log(f"content lock busy, skip target: {ko_path.relative_to(BLOG_ROOT)}")
+            excluded.add(ko_path)
+            target = find_next_target(state, excluded)
         if target is None:
-            log("nothing pending")
+            log("nothing pending (or every pending post is content-locked)")
             save_state(state)                # may have updated stub markers
             return 0
         ko_path, en_path, reason = target
@@ -3339,6 +3364,8 @@ def main() -> int:
             log(f"SWEEP exception (non-fatal): {_flat(e)[:160]}")
         return 0
     finally:
+        if file_lease is not None:
+            file_lease.release()
         release_lock()
         if _verify_session_used:
             kill_verify_session()

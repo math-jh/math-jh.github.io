@@ -72,6 +72,7 @@ import gloss_stage  # noqa: E402
 import yaml  # noqa: E402
 
 sys.path.insert(0, str(BLOG_ROOT / "scripts/lib"))
+from blog_file_lock import try_acquire_file_locks  # noqa: E402
 from cron_commit import commit_outputs, dirty_paths  # noqa: E402
 
 STATE_PATH = SCRIPT_DIR / "term_extract_worker_state.json"
@@ -189,15 +190,18 @@ def load_translation_ts() -> dict[str, float]:
             for rel, v in files.items() if v.get("status") == "done"}
 
 
-def select_post(state: dict) -> tuple[str | None, str]:
+def select_post(
+    state: dict, excluded: set[str] | None = None,
+) -> tuple[str | None, str]:
     """(rel, kind) — kind ∈ first|drift|stale. 없으면 (None, '')."""
     now = time.time()
     posts = all_ko_posts()
     st = state["posts"]
+    excluded = excluded or set()
 
     def ok(rel: str) -> bool:
         q = st.get(rel, {}).get("quarantined_until", 0)
-        return q <= now
+        return rel not in excluded and q <= now
 
     never = [r for r in posts if "last_checked" not in st.get(r, {}) and ok(r)]
     if never:
@@ -917,8 +921,20 @@ def main() -> int:
                                f"see 링크 {len(ch)}건 (감사 {letter})", log=log)
         return 0
 
-    rel, kind = select_post(state)
+    excluded: set[str] = set()
+    file_lease = None
+    rel, kind = select_post(state, excluded)
+    while rel is not None:
+        file_lease = try_acquire_file_locks([BLOG_ROOT / rel])
+        if file_lease is not None:
+            break
+        log(f"content lock 사용 중이라 건너뜀: {rel}")
+        excluded.add(rel)
+        rel, kind = select_post(state, excluded)
     if rel is None:
+        if excluded:
+            log("대기 대상이 모두 content-locked — 이번 틱 건너뜀")
+            return 0
         today = f"{datetime.now():%Y-%m-%d}"
         # 감사(see 링크 보강)는 하루 한 번으로 묶는다. 2026-08-10 에 1 차 수확이
         # 끝나 유휴 틱이 대부분이 되면서, 짝수 시각마다 도는 감사가 하루 23 회
@@ -943,47 +959,51 @@ def main() -> int:
             log("대상 없음 (감사는 하루 1회, 오늘치 완료)")
         return 0
 
-    log(f"선정({kind}): {rel}")
-    ps = state["posts"].setdefault(rel, {})
-    # 처리 전에 글이 이미 더러웠으면(사용자가 편집 중) 그 글은 cron 커밋에 넣지
-    # 않는다 — 넣으면 작업 중인 원고가 [lastmod-skip] 붙은 봇 커밋에 딸려 들어간다.
-    # 병기만 워킹트리에 남고, autopush 가 분류해서 가져간다.
-    post_was_dirty = bool(dirty_paths([rel]))
     try:
-        changes = process_post(rel, kind, args.dry_run)
-    except Exception as e:
-        log(f"실패: {rel}: {e}")
-        ps["fails"] = ps.get("fails", 0) + 1
-        if ps["fails"] >= QUARANTINE_FAILS:
-            ps["quarantined_until"] = time.time() + QUARANTINE_SEC
-            ps["fails"] = 0
-            send_notify(f"{rel} {QUARANTINE_FAILS}회 실패 → "
-                        f"7일 격리: {str(e)[:200]}",
-                        subject="[용어 추출]", ttl=None)
+        log(f"선정({kind}): {rel}")
+        ps = state["posts"].setdefault(rel, {})
+        # 처리 전에 글이 이미 더러웠으면(사용자가 편집 중) 그 글은 cron 커밋에 넣지
+        # 않는다 — 넣으면 작업 중인 원고가 [lastmod-skip] 붙은 봇 커밋에 딸려 들어간다.
+        # 병기만 워킹트리에 남고, autopush 가 분류해서 가져간다.
+        post_was_dirty = bool(dirty_paths([rel]))
+        try:
+            changes = process_post(rel, kind, args.dry_run)
+        except Exception as e:
+            log(f"실패: {rel}: {e}")
+            ps["fails"] = ps.get("fails", 0) + 1
+            if ps["fails"] >= QUARANTINE_FAILS:
+                ps["quarantined_until"] = time.time() + QUARANTINE_SEC
+                ps["fails"] = 0
+                send_notify(f"{rel} {QUARANTINE_FAILS}회 실패 → "
+                            f"7일 격리: {str(e)[:200]}",
+                            subject="[용어 추출]", ttl=None)
+            if not args.dry_run:
+                save_state(state)
+            return 1
+
+        ps["last_checked"] = time.time()
+        ps["fails"] = 0
         if not args.dry_run:
             save_state(state)
-        return 1
-
-    ps["last_checked"] = time.time()
-    ps["fails"] = 0
-    if not args.dry_run:
-        save_state(state)
-    if changes:
-        log("변경: " + " · ".join(changes))
-        # 정상 변경은 텔레그램으로 알리지 않는다 (하루 30 회씩 왔다) — 히스토리와
-        # 로그에 남고 대시보드가 보여 준다. 알림은 문제일 때만: 3 회 연속 실패 →
-        # 격리 (위 except 절).
-        if not args.dry_run:
-            # 병기는 글 본문도 고치므로 깨끗했던 글은 같은 커밋에 넣는다. 표기·병기
-            # 정비라 [lastmod-skip] — 독자가 다시 읽을 것은 없다.
-            paths = [REL_TERMS, REL_REVIEW] + ([] if post_was_dirty else [rel])
-            if post_was_dirty:
-                log(f"편집 중인 글이라 커밋에서 제외: {rel} (autopush 가 가져간다)")
-            commit_outputs("Terms (extract)", paths,
-                           f"{Path(rel).stem} 병기 {len(changes)}건", log=log)
-    else:
-        log(f"변경 없음: {rel}")
-    return 0
+        if changes:
+            log("변경: " + " · ".join(changes))
+            # 정상 변경은 텔레그램으로 알리지 않는다 (하루 30 회씩 왔다) — 히스토리와
+            # 로그에 남고 대시보드가 보여 준다. 알림은 문제일 때만: 3 회 연속 실패 →
+            # 격리 (위 except 절).
+            if not args.dry_run:
+                # 병기는 글 본문도 고치므로 깨끗했던 글은 같은 커밋에 넣는다. 표기·병기
+                # 정비라 [lastmod-skip] — 독자가 다시 읽을 것은 없다.
+                paths = [REL_TERMS, REL_REVIEW] + ([] if post_was_dirty else [rel])
+                if post_was_dirty:
+                    log(f"편집 중인 글이라 커밋에서 제외: {rel} (autopush 가 가져간다)")
+                commit_outputs("Terms (extract)", paths,
+                               f"{Path(rel).stem} 병기 {len(changes)}건", log=log)
+        else:
+            log(f"변경 없음: {rel}")
+        return 0
+    finally:
+        if file_lease is not None:
+            file_lease.release()
 
 
 if __name__ == "__main__":

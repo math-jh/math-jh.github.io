@@ -25,7 +25,13 @@
 
 <!--두 번째 문단-->
 {% if prev_post or next_post %}
-  <nav class="pagination" style="margin-bottom:3em">
+  {% assign _pagination_before_semantic = false %}
+  {% if page.semantic_navigation %}
+    {% if page.semantic_navigation.weight_next or page.semantic_navigation.next.size > 0 %}
+      {% assign _pagination_before_semantic = true %}
+    {% endif %}
+  {% endif %}
+  <nav class="pagination{% if _pagination_before_semantic %} pagination--before-semantic{% endif %}" style="margin-bottom:3em">
     {% if prev_post %}
       <a href="{{ prev_post.url }}" class="pagination--pager">{{ site.data.ui-text[lang].pagination_previous | default: "Previous" }}</a>
     {% else %}

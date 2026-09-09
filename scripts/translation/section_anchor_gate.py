@@ -44,6 +44,8 @@ from dataclasses import dataclass, field
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT / "scripts" / "lib"))
+from blog_file_lock import acquire_file_locks  # noqa: E402
 
 # postnav 공용 모듈 (포스트 인덱스·라벨 파서) — 이름 충돌을 피해 경로 로드.
 _spec = importlib.util.spec_from_file_location(
@@ -332,15 +334,26 @@ def sweep_target(en_path: Path, apply: bool = True) -> GateResult:
     for p in _posts():
         if p.lang != "en" or p.path == me.path:
             continue
-        text = p.path.read_text(encoding="utf-8")
-        if needle not in text:
+        # Cheap unlocked prefilter: no write decision is made from this read.
+        # Once the path lock is held we read again before computing any edit.
+        if needle not in p.path.read_text(encoding="utf-8"):
             continue
-        new, res = gate_text(text, p.path, only_target=target_pl)
-        if res.changed and apply:
-            p.path.write_text(new, encoding="utf-8")
-        agg.repairs += res.repairs
-        agg.fails += res.fails
-        agg.changed = agg.changed or res.changed
+        lease = acquire_file_locks([p.path], wait_sec=900)
+        if lease is None:
+            agg.defers.append(f"content lock timeout: {p.path.relative_to(ROOT)}")
+            continue
+        try:
+            text = p.path.read_text(encoding="utf-8")
+            if needle not in text:
+                continue
+            new, res = gate_text(text, p.path, only_target=target_pl)
+            if res.changed and apply:
+                p.path.write_text(new, encoding="utf-8")
+            agg.repairs += res.repairs
+            agg.fails += res.fails
+            agg.changed = agg.changed or res.changed
+        finally:
+            lease.release()
     return agg
 
 

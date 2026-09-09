@@ -21,7 +21,6 @@ import hashlib
 import json
 import os
 import re
-import shutil
 import subprocess
 import sys
 import tempfile
@@ -38,13 +37,14 @@ sys.path.insert(0, str(ROOT / "scripts" / "lib"))
 
 from common import by_permalink, en_counterpart, find_box, iter_posts, parse_labels, protected_spans  # noqa: E402
 import md_lint  # noqa: E402
+from blog_file_lock import FileLockSet, try_acquire_file_locks  # noqa: E402
 from cron_commit import commit_outputs, dirty_paths  # noqa: E402
 
 STATE_DIR = Path.home() / ".local" / "state"
 STATE_PATH = STATE_DIR / "dependency-classifier.json"
-LOCK_PATH = Path("/tmp/dependency-classifier.lock")
-TRANSLATE_LOCK = Path("/tmp/translate-worker.lock")
-TERM_LOCK = Path("/tmp/term-extract-worker.lock")
+STATE_LOCK_PATH = Path("/tmp/dependency-classifier-state.lock")
+LEGACY_LOCK_PATH = Path("/tmp/dependency-classifier.lock")
+SLOT_PATHS = tuple(Path(f"/tmp/dependency-classifier-slot-{i}.lock") for i in range(4))
 
 AGY_BIN = os.environ.get("DEPENDENCY_AGY_BIN", str(Path.home() / ".gemini/bin/agy"))
 AGY_MODEL = os.environ.get("DEPENDENCY_AGY_MODEL", "gemini-3.8-flash-high")
@@ -93,40 +93,57 @@ def load_state() -> dict:
         return {}
 
 
-def save_state(state: dict) -> None:
+def _save_state_unlocked(state: dict) -> None:
     STATE_DIR.mkdir(parents=True, exist_ok=True)
-    tmp = STATE_PATH.with_suffix(".tmp")
-    tmp.write_text(json.dumps(state, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    tmp.replace(STATE_PATH)
-
-
-def acquire_pid_lock(path: Path) -> bool:
-    """Use translation worker's PID-file protocol, with atomic creation."""
-    if path.exists():
+    fd, tmp_name = tempfile.mkstemp(prefix="dependency-classifier.", suffix=".tmp", dir=STATE_DIR)
+    try:
+        with os.fdopen(fd, "w", encoding="utf-8") as fh:
+            fh.write(json.dumps(state, ensure_ascii=False, indent=2) + "\n")
+        os.replace(tmp_name, STATE_PATH)
+    finally:
         try:
-            pid = int(path.read_text().strip())
-            os.kill(pid, 0)
+            os.unlink(tmp_name)
+        except FileNotFoundError:
+            pass
+
+
+def merge_unit_states(updates: dict[str, dict]) -> None:
+    """Merge only this process's unit results under a short state-file lock."""
+    if not updates:
+        return
+    lock_fh = open(STATE_LOCK_PATH, "w")
+    try:
+        fcntl.flock(lock_fh, fcntl.LOCK_EX)
+        latest = load_state()
+        latest.setdefault("units", {}).update(updates)
+        _save_state_unlocked(latest)
+    finally:
+        lock_fh.close()
+
+
+def legacy_classifier_running() -> bool:
+    """Avoid overlapping the pre-file-lock process during live deployment."""
+    lock_fh = open(LEGACY_LOCK_PATH, "w")
+    try:
+        try:
+            fcntl.flock(lock_fh, fcntl.LOCK_EX | fcntl.LOCK_NB)
             return False
-        except (ValueError, ProcessLookupError, PermissionError, OSError):
-            try:
-                path.unlink()
-            except FileNotFoundError:
-                pass
-    try:
-        fd = os.open(path, os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o664)
-    except FileExistsError:
-        return False
-    with os.fdopen(fd, "w") as fh:
-        fh.write(str(os.getpid()))
-    return True
+        except OSError:
+            return True
+    finally:
+        lock_fh.close()
 
 
-def release_pid_lock(path: Path) -> None:
-    try:
-        if path.read_text().strip() == str(os.getpid()):
-            path.unlink()
-    except (FileNotFoundError, OSError):
-        pass
+def acquire_slot():
+    """Cap expensive classifier model calls at four concurrent processes."""
+    for path in SLOT_PATHS:
+        lock_fh = open(path, "w")
+        try:
+            fcntl.flock(lock_fh, fcntl.LOCK_EX | fcntl.LOCK_NB)
+            return lock_fh
+        except OSError:
+            lock_fh.close()
+    return None
 
 
 def overlaps(pos: int, spans: Iterable[tuple[int, int]]) -> bool:
@@ -496,107 +513,128 @@ def unit_key(paths: list[Path]) -> str:
     return "+".join(str(p.relative_to(ROOT)) for p in paths)
 
 
-def select_unit(state: dict) -> tuple[list[Path], dict[Path, str], list[Link]] | None:
+def select_unit(
+    state: dict, updates: dict[str, dict],
+) -> tuple[list[Path], dict[Path, str], list[Link], FileLockSet] | None:
     now = time.time()
     units: list[list[Path]] = []
     paired_en: set[Path] = set()
     for post in _POSTS:
-        if post.lang != "ko" or not post.published:
+        if post.lang != "ko":
             continue
         en = en_counterpart(post, _POSTS)
         paths = [post.path]
-        if en and en.published:
+        if en:
             paths.append(en.path)
             paired_en.add(en.path)
         units.append(paths)
     for post in _POSTS:
-        if post.lang == "en" and post.published and post.path not in paired_en:
+        if post.lang == "en" and post.path not in paired_en:
             units.append([post.path])
     for paths in units:
-        rels = [str(p.relative_to(ROOT)) for p in paths]
-        if dirty_paths(rels, ROOT):
+        lease = try_acquire_file_locks(paths)
+        if lease is None:
             continue
-        texts = {p: p.read_text(encoding="utf-8") for p in paths}
-        key = unit_key(paths)
-        fingerprint = sha("\0".join(texts[p] for p in paths))
-        entry = state.get("units", {}).get(key, {})
-        if entry.get("hash") == fingerprint and entry.get("status") == "done":
-            continue
-        if entry.get("hash") == fingerprint and entry.get("retry_after", 0) > now:
-            continue
-        links = [link for p in paths for link in extract_links(p, texts[p])]
-        if not links:
-            state.setdefault("units", {})[key] = {
-                "status": "done", "hash": fingerprint, "checked_at": int(now), "links": 0,
-            }
-            continue
-        return paths, texts, links
+        try:
+            rels = [str(p.relative_to(ROOT)) for p in paths]
+            if dirty_paths(rels, ROOT):
+                lease.release()
+                continue
+            texts = {p: p.read_text(encoding="utf-8") for p in paths}
+            key = unit_key(paths)
+            fingerprint = sha("\0".join(texts[p] for p in paths))
+            entry = state.get("units", {}).get(key, {})
+            if entry.get("hash") == fingerprint and entry.get("status") == "done":
+                lease.release()
+                continue
+            if entry.get("hash") == fingerprint and entry.get("retry_after", 0) > now:
+                lease.release()
+                continue
+            links = [link for p in paths for link in extract_links(p, texts[p])]
+            if not links:
+                updates[key] = {
+                    "status": "done", "hash": fingerprint,
+                    "checked_at": int(now), "links": 0,
+                }
+                lease.release()
+                continue
+            return paths, texts, links, lease
+        except Exception:
+            lease.release()
+            raise
     return None
 
 
 def process_once(dry_run: bool = False) -> int:
     state = load_state()
-    selected = select_unit(state)
-    save_state(state)
+    scan_updates: dict[str, dict] = {}
+    selected = select_unit(state, scan_updates)
+    merge_unit_states(scan_updates)
     if not selected:
-        log("queue empty (or every pending target is currently dirty/backed off)")
+        log("queue empty (or every pending target is locked/dirty/backed off)")
         return 0
-    paths, originals, links = selected
+    paths, originals, links, lease = selected
     key = unit_key(paths)
-    log(f"selected {key}: {len(links)} unclassified link(s)")
-    if dry_run:
-        for link in links:
-            log(f"dry-run {link.source.relative_to(ROOT)} {link.target}")
-        return 0
-    fingerprint = sha("\0".join(originals[p] for p in paths))
     try:
-        decisions, ambiguous = classify(links)
-        if ambiguous:
-            state.setdefault("units", {})[key] = {
-                "status": "ambiguous", "hash": fingerprint,
-                "checked_at": int(time.time()), "retry_after": int(time.time() + BLOCK_SEC),
-                "items": ambiguous,
-            }
-            save_state(state)
-            log(f"blocked {key}: {len(ambiguous)} ambiguous decision(s); no files changed")
+        log(f"selected {key}: {len(links)} unclassified link(s)")
+        if dry_run:
+            for link in links:
+                log(f"dry-run {link.source.relative_to(ROOT)} {link.target}")
             return 0
-        rels = [str(p.relative_to(ROOT)) for p in paths]
-        if dirty_paths(rels, ROOT) or any(p.read_text(encoding="utf-8") != originals[p] for p in paths):
-            raise RuntimeError("target changed while models were running")
-        by_path = {p: [x for x in links if x.source == p] for p in paths}
-        rendered = {p: annotate(originals[p], by_path[p], decisions) for p in paths}
-        for path in paths:
-            introduced = hard_lint(path, rendered[path]) - hard_lint(path, originals[path])
-            if introduced:
-                raise RuntimeError(f"annotation introduces md_lint findings in {path}: {sorted(introduced)[:3]}")
-        for path in paths:
-            path.write_text(rendered[path], encoding="utf-8")
-        committed = commit_outputs(
-            "Link Dependencies Classifier", rels,
-            f"{paths[0].stem} 링크 {len(links)}건 분류", log=log, repo=ROOT,
-        )
-        if not committed:
-            # The targets were clean before this tick, so restoring them cannot
-            # overwrite user work.  Never leave unowned generated edits behind.
+        fingerprint = sha("\0".join(originals[p] for p in paths))
+        try:
+            decisions, ambiguous = classify(links)
+            if ambiguous:
+                merge_unit_states({key: {
+                    "status": "ambiguous", "hash": fingerprint,
+                    "checked_at": int(time.time()),
+                    "retry_after": int(time.time() + BLOCK_SEC), "items": ambiguous,
+                }})
+                log(f"blocked {key}: {len(ambiguous)} ambiguous decision(s); no files changed")
+                return 0
+            rels = [str(p.relative_to(ROOT)) for p in paths]
+            if dirty_paths(rels, ROOT) or any(
+                p.read_text(encoding="utf-8") != originals[p] for p in paths
+            ):
+                raise RuntimeError("target changed while models were running")
+            by_path = {p: [x for x in links if x.source == p] for p in paths}
+            rendered = {p: annotate(originals[p], by_path[p], decisions) for p in paths}
             for path in paths:
-                if path.exists() and path.read_text(encoding="utf-8") == rendered[path]:
-                    path.write_text(originals[path], encoding="utf-8")
-            raise RuntimeError("could not commit worker outputs; restored originals")
-        state.setdefault("units", {})[key] = {
-            "status": "done", "hash": sha("\0".join(rendered[p] for p in paths)),
-            "checked_at": int(time.time()), "links": len(links),
-        }
-        save_state(state)
-        log(f"done {key}: {len(links)} relation tag(s)")
-        return 0
-    except Exception as exc:
-        state.setdefault("units", {})[key] = {
-            "status": "error", "hash": fingerprint, "checked_at": int(time.time()),
-            "retry_after": int(time.time() + 3600), "error": str(exc)[:1000],
-        }
-        save_state(state)
-        log(f"ERROR {key}: {exc}")
-        return 1
+                introduced = hard_lint(path, rendered[path]) - hard_lint(path, originals[path])
+                if introduced:
+                    raise RuntimeError(
+                        f"annotation introduces md_lint findings in {path}: "
+                        f"{sorted(introduced)[:3]}"
+                    )
+            for path in paths:
+                path.write_text(rendered[path], encoding="utf-8")
+            committed = commit_outputs(
+                "Link Dependencies Classifier", rels,
+                f"{paths[0].stem} 링크 {len(links)}건 분류", log=log, repo=ROOT,
+            )
+            if not committed:
+                # The targets were clean before this tick, so restoring them cannot
+                # overwrite user work.  Never leave unowned generated edits behind.
+                for path in paths:
+                    if path.exists() and path.read_text(encoding="utf-8") == rendered[path]:
+                        path.write_text(originals[path], encoding="utf-8")
+                raise RuntimeError("could not commit worker outputs; restored originals")
+            merge_unit_states({key: {
+                "status": "done", "hash": sha("\0".join(rendered[p] for p in paths)),
+                "checked_at": int(time.time()), "links": len(links),
+            }})
+            log(f"done {key}: {len(links)} relation tag(s)")
+            return 0
+        except Exception as exc:
+            merge_unit_states({key: {
+                "status": "error", "hash": fingerprint,
+                "checked_at": int(time.time()),
+                "retry_after": int(time.time() + 3600), "error": str(exc)[:1000],
+            }})
+            log(f"ERROR {key}: {exc}")
+            return 1
+    finally:
+        lease.release()
 
 
 def status() -> int:
@@ -618,29 +656,17 @@ def main() -> int:
     args = parser.parse_args()
     if args.status:
         return status()
-    lock_fh = open(LOCK_PATH, "w")
+    if legacy_classifier_running():
+        log("legacy dependency classifier is still running; skip this tick")
+        return 0
+    slot_fh = acquire_slot()
+    if slot_fh is None:
+        log("four dependency classifiers are already running; skip this tick")
+        return 0
     try:
-        try:
-            fcntl.flock(lock_fh, fcntl.LOCK_EX | fcntl.LOCK_NB)
-        except OSError:
-            log("another dependency classifier is running; skip")
-            return 0
-        if not acquire_pid_lock(TRANSLATE_LOCK):
-            log("translation/follow-up worker is running; skip")
-            return 0
-        term_fh = open(TERM_LOCK, "w")
-        try:
-            try:
-                fcntl.flock(term_fh, fcntl.LOCK_EX | fcntl.LOCK_NB)
-            except OSError:
-                log("term extraction worker is running; skip")
-                return 0
-            return process_once(args.dry_run)
-        finally:
-            term_fh.close()
-            release_pid_lock(TRANSLATE_LOCK)
+        return process_once(args.dry_run)
     finally:
-        lock_fh.close()
+        slot_fh.close()
 
 
 if __name__ == "__main__":

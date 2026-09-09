@@ -1,0 +1,15 @@
+{% comment %}
+  Pin the same-category next weight first, then show up to three semantic
+  successors. Required reachability determines the semantic frontier and direct
+  citation count breaks ties; the pinned post is removed from that second list.
+{% endcomment %}
+{% assign _semantic = page.semantic_navigation %}
+{% if _semantic and (_semantic.weight_next or _semantic.next.size > 0) %}
+<nav class="semantic-reading semantic-reading--after" aria-labelledby="semantic-next-title">
+  <div id="semantic-next-title" class="semantic-reading__title">{{ site.data.ui-text[lang].semantic_next_title }}</div>
+  <ol class="semantic-reading__next-list">
+    {% if _semantic.weight_next %}<li class="semantic-reading__next-pinned"><a href="{{ _semantic.weight_next.url }}">{{ _semantic.weight_next.title }}</a> <span>({{ site.data.ui-text[lang].semantic_weight_next_label }})</span></li>{% endif %}
+    {% for item in _semantic.next %}<li><a href="{{ item.url }}">{{ item.title }}</a></li>{% endfor %}
+  </ol>
+</nav>
+{% endif %}

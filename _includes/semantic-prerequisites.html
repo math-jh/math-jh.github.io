@@ -1,0 +1,29 @@
+{% comment %}
+  Direct depth-1 prerequisites derived from classified data-relation IALs.
+  `semantic_navigation` is absent unless this post itself contains at least one
+  classified link; do not infer visibility from backlinks.
+{% endcomment %}
+{% assign _semantic = page.semantic_navigation %}
+{% if _semantic and (_semantic.required.size > 0 or _semantic.weak.size > 0) %}
+<aside class="semantic-reading semantic-reading--before" aria-labelledby="semantic-prerequisites-title">
+  <div id="semantic-prerequisites-title" class="semantic-reading__title">{{ site.data.ui-text[lang].semantic_prerequisites_title }}</div>
+  <div class="semantic-reading__columns">
+  {% if _semantic.required.size > 0 %}
+  <section class="semantic-reading__group">
+    <div class="semantic-reading__label semantic-reading__label--required">{{ site.data.ui-text[lang].semantic_required_label }}</div>
+    <ul>
+      {% for item in _semantic.required %}<li><a href="{{ item.url }}">{{ item.title }}</a></li>{% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+  {% if _semantic.weak.size > 0 %}
+  <section class="semantic-reading__group">
+    <div class="semantic-reading__label semantic-reading__label--weak">{{ site.data.ui-text[lang].semantic_weak_label }}</div>
+    <ul>
+      {% for item in _semantic.weak %}<li><a href="{{ item.url }}">{{ item.title }}</a></li>{% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+  </div>
+</aside>
+{% endif %}

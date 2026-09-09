@@ -15,6 +15,7 @@
 @import "settings-dropdown"; // masthead theme/language picker (shared by both skins)
 @import "local-graph"; // per-post floating dependency graph panel
 @import "graph-page"; // global dependency graph page (index panel + Brass card)
+@import "semantic-navigation"; // per-post prerequisite and read-next blocks
 @import "term-index"; // 찾아보기(용어 색인) book-index layout
 @import "terms-overlay"; // 찾아보기 검색 팝업 (색인 페이지의 경량판)
 @import "diagram-colors"; // 인라인 다이어그램 색 체계 (다크 전용 역전 규칙은 main_dark.scss 인라인)

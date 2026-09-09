@@ -18,6 +18,7 @@ require "fileutils"
 module GraphData
   LANGS = %w[ko en].freeze
   RELATION_PRIORITY = { "weak" => 0, "forward" => 1, "required" => 2 }.freeze
+  RECOMMENDATION_LIMIT = 3
   # 본문 내부의 다른 글 링크. content 가 렌더된 HTML 일 수도(href=), incremental
   # 빌드라 raw 마크다운(](/...))일 수도 있어 둘 다 잡는다. 한 글은 둘 중 한 형태뿐이라
   # 중복 카운트 없음.
@@ -174,36 +175,24 @@ module GraphData
     found
   end
 
-  # Semantic dependency data for /<lang>/dependencies only.
-  #
-  # Aggregation happens twice. First, all citations from A to B are collapsed and
-  # required wins over forward/weak. Then semantic directions are assigned and
-  # reciprocal citations that reinforce the same prerequisite direction are merged.
-  def build_dependencies(site, lang)
-    hmap = hue_map(site)
-    fmap = family_map(site)
+  # Build the citation-level semantic model once and share it between the graph
+  # JSON and the per-post reading blocks.  `classified_by_source` deliberately
+  # records self-links and links to pages outside the graph: the display contract
+  # is "hide everything when this post has no classified IAL at all", not "hide
+  # everything when this post has no usable inter-post edge".
+  def dependency_model(site, lang)
     docs = site.posts.docs.select { |d| d.url.start_with?("/#{lang}/math/") }
     by_url = {}
-    docs.each { |d| by_url[norm(d.url)] = true }
+    docs.each { |d| by_url[norm(d.url)] = d }
 
-    nodes = docs.map do |d|
-      cat = category_of(d)
-      {
-        id: norm(d.url),
-        title: (d.data["title"] || d.basename).to_s,
-        url: d.url,
-        category: cat,
-        weight: d.data["weight"]&.to_i,
-        hue: (hmap[cat] || 0),
-        family: (fmap[cat] || "misc"),
-        color: color_for(cat, hmap)
-      }
-    end
-
+    classified_by_source = {}
     cited_pairs = {}
     docs.each do |d|
       src = norm(d.url)
-      classified_links(d.content).each do |raw_target, relation|
+      links = classified_links(d.content)
+      classified_by_source[src] = true unless links.empty?
+
+      links.each do |raw_target, relation|
         tgt = norm(raw_target)
         next if tgt == src || !by_url.key?(tgt)
 
@@ -219,8 +208,195 @@ module GraphData
       end
     end
 
-    directed = {}
+    {
+      docs: docs,
+      by_url: by_url,
+      classified_by_source: classified_by_source,
+      cited_pairs: cited_pairs
+    }
+  end
+
+  def reading_entry(doc, extra = {})
+    {
+      "title" => (doc.data["title"] || doc.basename).to_s,
+      "url" => doc.url
+    }.merge(extra)
+  end
+
+  def reachable_from(start, adjacency)
+    seen = {}
+    stack = Array(adjacency[start]).dup
+    until stack.empty?
+      node = stack.pop
+      next if seen[node]
+
+      seen[node] = true
+      stack.concat(Array(adjacency[node]))
+    end
+    seen
+  end
+
+  # Stable topological ranking of recommendation candidates.  Required paths
+  # win over every popularity signal; within the same available frontier, direct
+  # citation count is the strength signal.  Reciprocal reachability means a
+  # required SCC, so those candidates are tied rather than deadlocking the sort.
+  def rank_recommendations(candidates, cited_pairs, by_url)
+    required_adjacency = Hash.new { |h, k| h[k] = [] }
     cited_pairs.each do |(src, tgt), entry|
+      required_adjacency[tgt] << src if entry[:relation] == "required"
+    end
+
+    urls = candidates.keys
+    reachability = {}
+    urls.each { |url| reachability[url] = reachable_from(url, required_adjacency) }
+
+    outgoing = Hash.new { |h, k| h[k] = [] }
+    indegree = Hash.new(0)
+    urls.combination(2) do |left, right|
+      left_before = reachability[left][right]
+      right_before = reachability[right][left]
+      next if left_before == right_before # incomparable, or in the same SCC
+
+      source, target = left_before ? [left, right] : [right, left]
+      outgoing[source] << target
+      indegree[target] += 1
+    end
+
+    sort_key = lambda do |url|
+      candidate = candidates[url]
+      doc = by_url[url]
+      relation_rank = candidate[:relations].map { |r| RELATION_PRIORITY[r] }.max || 0
+      [
+        -candidate[:strength],
+        -relation_rank,
+        doc.data["weight"] ? doc.data["weight"].to_i : (1 << 30),
+        (doc.data["title"] || doc.basename).to_s,
+        url
+      ]
+    end
+
+    ready = urls.select { |url| indegree[url].zero? }.sort_by(&sort_key)
+    ordered = []
+    until ready.empty?
+      url = ready.shift
+      ordered << url
+      outgoing[url].each do |target|
+        indegree[target] -= 1
+        if indegree[target].zero?
+          ready << target
+          ready.sort_by!(&sort_key)
+        end
+      end
+    end
+
+    # The SCC rule above should make the candidate constraint graph acyclic.
+    # Keep an explicit deterministic fallback so malformed future data cannot
+    # make recommendations disappear silently.
+    ordered.concat((urls - ordered).sort_by(&sort_key))
+    ordered
+  end
+
+  def semantic_navigation(site, lang, current_url, limit: RECOMMENDATION_LIMIT, model: nil)
+    model ||= dependency_model(site, lang)
+    current = norm(current_url)
+    return nil unless model[:classified_by_source][current]
+
+    required = []
+    weak = []
+    model[:cited_pairs].each do |(src, tgt), entry|
+      next unless src == current
+
+      target_doc = model[:by_url][tgt]
+      case entry[:relation]
+      when "required"
+        required << reading_entry(target_doc)
+      when "weak"
+        weak << reading_entry(target_doc)
+      end
+    end
+
+    entry_sort = lambda do |entry|
+      doc = model[:by_url][norm(entry["url"])]
+      [doc.data["weight"] ? doc.data["weight"].to_i : (1 << 30), entry["title"], entry["url"]]
+    end
+    required.sort_by!(&entry_sort)
+    weak.sort_by!(&entry_sort)
+
+    candidates = {}
+    add_candidate = lambda do |url, relation, strength|
+      candidate = (candidates[url] ||= { strength: 0, relations: [] })
+      candidate[:strength] += strength
+      candidate[:relations] << relation unless candidate[:relations].include?(relation)
+    end
+
+    model[:cited_pairs].each do |(src, tgt), entry|
+      if tgt == current && %w[required weak].include?(entry[:relation])
+        add_candidate.call(src, entry[:relation], entry[:weight])
+      elsif src == current && entry[:relation] == "forward"
+        add_candidate.call(tgt, "forward", entry[:weight])
+      end
+    end
+
+    current_doc = model[:by_url][current]
+    current_weight = current_doc.data["weight"]&.to_i
+    weight_next_doc = if current_weight
+      model[:docs]
+        .select do |doc|
+          doc_weight = doc.data["weight"]&.to_i
+          category_of(doc) == category_of(current_doc) && doc_weight && doc_weight > current_weight
+        end
+        .min_by do |doc|
+          [doc.data["weight"].to_i, (doc.data["title"] || doc.basename).to_s, doc.url]
+        end
+    end
+    weight_next_url = weight_next_doc && norm(weight_next_doc.url)
+
+    next_reads = rank_recommendations(candidates, model[:cited_pairs], model[:by_url])
+      .reject { |url| url == weight_next_url }
+      .first(limit)
+      .map do |url|
+        candidate = candidates[url]
+        reading_entry(model[:by_url][url], {
+          "strength" => candidate[:strength],
+          "relations" => candidate[:relations]
+        })
+      end
+
+    {
+      "required" => required,
+      "weak" => weak,
+      "weight_next" => weight_next_doc && reading_entry(weight_next_doc),
+      "next" => next_reads
+    }
+  end
+
+  # Semantic dependency data for /<lang>/dependencies only.
+  #
+  # Aggregation happens twice. First, all citations from A to B are collapsed and
+  # required wins over forward/weak. Then semantic directions are assigned and
+  # reciprocal citations that reinforce the same prerequisite direction are merged.
+  def build_dependencies(site, lang)
+    hmap = hue_map(site)
+    fmap = family_map(site)
+    model = dependency_model(site, lang)
+    docs = model[:docs]
+
+    nodes = docs.map do |d|
+      cat = category_of(d)
+      {
+        id: norm(d.url),
+        title: (d.data["title"] || d.basename).to_s,
+        url: d.url,
+        category: cat,
+        weight: d.data["weight"]&.to_i,
+        hue: (hmap[cat] || 0),
+        family: (fmap[cat] || "misc"),
+        color: color_for(cat, hmap)
+      }
+    end
+
+    directed = {}
+    model[:cited_pairs].each do |(src, tgt), entry|
       relation = entry[:relation]
       edge_key = relation == "forward" ? [src, tgt] : [tgt, src]
       edge = (directed[edge_key] ||= {
@@ -243,6 +419,19 @@ module GraphData
       }
     end
     { nodes: nodes, links: links, families: families(site), classified: true }
+  end
+end
+
+Jekyll::Hooks.register :site, :pre_render do |site|
+  GraphData::LANGS.each do |lang|
+    model = GraphData.dependency_model(site, lang)
+    site.posts.docs.each do |doc|
+      next unless doc.url.start_with?("/#{lang}/math/")
+
+      doc.data.delete("semantic_navigation")
+      navigation = GraphData.semantic_navigation(site, lang, doc.url, model: model)
+      doc.data["semantic_navigation"] = navigation if navigation
+    end
   end
 end
 
