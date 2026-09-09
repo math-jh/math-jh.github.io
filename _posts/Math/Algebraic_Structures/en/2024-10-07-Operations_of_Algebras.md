@@ -14,7 +14,7 @@ translated_at: 2026-08-18T11:45:05+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-08-18T11:45:05+00:00
 ---
-We examined operations on modules in [§Direct Products, Direct Sums, and Tensor Products of Modules](/en/math/algebraic_structures/operations_of_modules), and operations on rings in [§Products, Coproducts, and Tensor Products of Rings](/en/math/algebraic_structures/operations_of_rings). Since an $A$-algebra is a structure obtained by adding a bilinear multiplication to an $A$-module ([§Algebras, ⁋Definition 1](/en/math/algebraic_structures/algebras#def1)), the present post verifies that multiplication is compatible with the operations defined at the module level. As in [§Algebras](/en/math/algebraic_structures/algebras), $A$ is always a commutative ring.
+We examined operations on modules in [§Direct Products, Direct Sums, and Tensor Products of Modules](/en/math/algebraic_structures/operations_of_modules){: data-relation="required" }, and operations on rings in [§Products, Coproducts, and Tensor Products of Rings](/en/math/algebraic_structures/operations_of_rings){: data-relation="weak" }. Since an $A$-algebra is a structure obtained by adding a bilinear multiplication to an $A$-module ([§Algebras, ⁋Definition 1](/en/math/algebraic_structures/algebras#def1){: data-relation="required" }), the present post verifies that multiplication is compatible with the operations defined at the module level. As in [§Algebras](/en/math/algebraic_structures/algebras){: data-relation="weak" }, $A$ is always a commutative ring.
 
 ## Direct Products and Direct Sums of Algebras
 
@@ -38,7 +38,7 @@ and similarly for the second variable. Associativity and commutativity are check
 We name this as follows.
 
 ::: Definition 2
-The $A$-algebra $\prod_{i\in I}E_i$ equipped with the multiplication defined in [Proposition 1](#prop1) is called the *direct product* of the $E_i$. The canonical projections $\pr_i:\prod E_i \rightarrow E_i$ are all $A$-algebra homomorphisms.
+The $A$-algebra $\prod_{i\in I}E_i$ equipped with the multiplication defined in [Proposition 1](#prop1){: data-relation="required" } is called the *direct product* of the $E_i$. The canonical projections $\pr_i:\prod E_i \rightarrow E_i$ are all $A$-algebra homomorphisms.
 :::
 
 Then this direct product is the product in the category of $A$-algebras; that is, the following universal property holds.
@@ -47,7 +47,7 @@ Then this direct product is the product in the category of $A$-algebras; that is
 Let an arbitrary $A$-algebra $F$ and $A$-algebra homomorphisms $u_i:F \rightarrow E_i$ be given. Then there exists a unique $A$-algebra homomorphism $u:F \rightarrow \prod_{i\in I}E_i$ such that $\pr_i\circ u=u_i$ for all $i$.
 :::
 ::: Proof
-By the universal property of the product at the level of $A$-modules ([§Direct Products, Direct Sums, and Tensor Products of Modules, ⁋Theorem 1](/en/math/algebraic_structures/operations_of_modules#thm1)), there exists a unique $A$-linear map $u:F \rightarrow\prod E_i$, namely $u(x)=(u_i(x))_{i\in I}$, satisfying the condition. That this preserves multiplication follows from the fact that each $u_i$ preserves multiplication:
+By the universal property of the product at the level of $A$-modules ([§Direct Products, Direct Sums, and Tensor Products of Modules, ⁋Theorem 1](/en/math/algebraic_structures/operations_of_modules#thm1){: data-relation="required" }), there exists a unique $A$-linear map $u:F \rightarrow\prod E_i$, namely $u(x)=(u_i(x))_{i\in I}$, satisfying the condition. That this preserves multiplication follows from the fact that each $u_i$ preserves multiplication:
 
 $$u(xy)=(u_i(xy))_{i\in I}=(u_i(x)u_i(y))_{i\in I}=u(x)u(y)$$
 :::
@@ -65,7 +65,7 @@ That $\bigoplus E_i$ is a submodule of $\prod E_i$ holds by definition, so we ne
 The (possibly non-unital) $A$-algebra $\bigoplus_{i\in I}E_i$ obtained by restricting the multiplication of the direct product is called the *direct sum* of the $E_i$.
 :::
 
-What must be noted is that this is *not* the coproduct in the category of $A$-algebras. First, even in the general sense of [§Algebras, ⁋Definition 1](/en/math/algebraic_structures/algebras#def1), the canonical injection $\iota_j:E_j\hookrightarrow\bigoplus E_i$ preserves addition, scalar multiplication, and multiplication, yet these data do not satisfy the universal property. For example, consider the case $E_1=E_2=A$ with
+What must be noted is that this is *not* the coproduct in the category of $A$-algebras. First, even in the general sense of [§Algebras, ⁋Definition 1](/en/math/algebraic_structures/algebras#def1){: data-relation="required" }, the canonical injection $\iota_j:E_j\hookrightarrow\bigoplus E_i$ preserves addition, scalar multiplication, and multiplication, yet these data do not satisfy the universal property. For example, consider the case $E_1=E_2=A$ with
 
 $$f_i: E_i\rightarrow A$$
 
@@ -83,11 +83,11 @@ $$f\bigl((a,b)(c,d)\bigr)=ac+bd\neq (a+b)(c+d)=f(a,b)f(c,d)$$
 
 show that $f$ cannot preserve multiplication.
 
-Moreover, under our convention that $A$-algebras and their homomorphisms are always unital, the situation is even worse. The maps $\iota_j$ do not send $1_{E_j}$ to the identity element of $\bigoplus E_i$, so they are not $A$-algebra homomorphisms to begin with, and if $I$ is infinite and all $E_i$ are nonzero, then by [Proposition 4](#prop4), $\bigoplus E_i$ is a proper ideal of $\prod E_i$ and hence has no identity element.
+Moreover, under our convention that $A$-algebras and their homomorphisms are always unital, the situation is even worse. The maps $\iota_j$ do not send $1_{E_j}$ to the identity element of $\bigoplus E_i$, so they are not $A$-algebra homomorphisms to begin with, and if $I$ is infinite and all $E_i$ are nonzero, then by [Proposition 4](#prop4){: data-relation="required" }, $\bigoplus E_i$ is a proper ideal of $\prod E_i$ and hence has no identity element.
 
 ## Tensor Products of Algebras
 
-The notion that yields the correct coproduct in the category of commutative $A$-algebras is the tensor product. Essentially, this is the $A$-algebra obtained by suitably defining multiplication on the $A$-module $E\otimes_AE'$ ([§Direct Products, Direct Sums, and Tensor Products of Modules, ⁋Proposition 8](/en/math/algebraic_structures/operations_of_modules#prop8)); the desired multiplication is given by the formula
+The notion that yields the correct coproduct in the category of commutative $A$-algebras is the tensor product. Essentially, this is the $A$-algebra obtained by suitably defining multiplication on the $A$-module $E\otimes_AE'$ ([§Direct Products, Direct Sums, and Tensor Products of Modules, ⁋Proposition 8](/en/math/algebraic_structures/operations_of_modules#prop8){: data-relation="required" }); the desired multiplication is given by the formula
 
 $$(x\otimes x')(y\otimes y')=xy\otimes x'y'\tag{1}$$
 
@@ -101,7 +101,7 @@ First, fix $(y,y')\in E\times E'$. Then the map
 
 $$E\times E' \rightarrow E\otimes_AE';\qquad (x,x')\mapsto xy\otimes x'y'$$
 
-is $A$-bilinear since multiplication on $E$ and $E'$ is $A$-linear in each variable; therefore, by the universal property of [§Direct Products, Direct Sums, and Tensor Products of Modules, ⁋Proposition 8](/en/math/algebraic_structures/operations_of_modules#prop8), it induces a unique $A$-linear map $m_{(y,y')}:E\otimes_AE' \rightarrow E\otimes_AE'$ such that $x\otimes x'\mapsto xy\otimes x'y'$.
+is $A$-bilinear since multiplication on $E$ and $E'$ is $A$-linear in each variable; therefore, by the universal property of [§Direct Products, Direct Sums, and Tensor Products of Modules, ⁋Proposition 8](/en/math/algebraic_structures/operations_of_modules#prop8){: data-relation="required" }, it induces a unique $A$-linear map $m_{(y,y')}:E\otimes_AE' \rightarrow E\otimes_AE'$ such that $x\otimes x'\mapsto xy\otimes x'y'$.
 
 Now consider the correspondence $(y,y')\mapsto m_{(y,y')}$. This is a map from $E\times E'$ to $\End_{\lMod{A}}(E\otimes_AE')$, and again by the bilinearity of multiplication, it is $A$-bilinear. For example,
 
@@ -115,7 +115,7 @@ we see that $\mu$ is $A$-linear in each variable and satisfies equation $(1)$ on
 :::
 
 ::: Definition 7
-For two $A$-algebras $E,E'$, the $A$-algebra $E\otimes_AE'$ equipped with the multiplication from [Proposition 6](#prop6) is called the *tensor product* of $E$ and $E'$.
+For two $A$-algebras $E,E'$, the $A$-algebra $E\otimes_AE'$ equipped with the multiplication from [Proposition 6](#prop6){: data-relation="required" } is called the *tensor product* of $E$ and $E'$.
 :::
 
 As with the direct product, the tensor product inherits the properties of the two algebras. For example, if $E,E'$ are both associative, then on generators we have
@@ -154,7 +154,7 @@ The tensor product of polynomial algebras is the polynomial algebra with the var
 
 $$A[\x]\otimes_AA[\y]\cong A[\x,\y]$$
 
-This follows from the fact that the functor $A[-]:\Set \rightarrow \cAlg{A}$ examined in [§Algebras, ⁋Proposition 8](/en/math/algebraic_structures/algebras#prop8) is a left adjoint. Since left adjoints preserve colimits, it sends the coproduct $\{\x\}\sqcup\{\y\}=\{\x,\y\}$ of one-point sets (in $\Set$) to the coproduct in $\cAlg{A}$, and by [Theorem 8](#thm8), this is precisely the tensor product. Of course, one can also verify the two isomorphisms $\x\otimes 1\mapsto \x$ and $1\otimes \y\mapsto \y$ directly.
+This follows from the fact that the functor $A[-]:\Set \rightarrow \cAlg{A}$ examined in [§Algebras, ⁋Proposition 8](/en/math/algebraic_structures/algebras#prop8){: data-relation="required" } is a left adjoint. Since left adjoints preserve colimits, it sends the coproduct $\{\x\}\sqcup\{\y\}=\{\x,\y\}$ of one-point sets (in $\Set$) to the coproduct in $\cAlg{A}$, and by [Theorem 8](#thm8){: data-relation="required" }, this is precisely the tensor product. Of course, one can also verify the two isomorphisms $\x\otimes 1\mapsto \x$ and $1\otimes \y\mapsto \y$ directly.
 :::
 
 ---

@@ -13,7 +13,7 @@ weight: 302
 
 ---
 
-우리는 [§가군의 직접곱과 직합, 텐서곱](/ko/math/algebraic_structures/operations_of_modules)에서 module들의 연산을, [§환의 곱, 쌍대곱, 텐서곱](/ko/math/algebraic_structures/operations_of_rings)에서 ring들의 연산을 살펴보았다. $A$-algebra는 $A$-module 위에 bilinear한 곱셈을 추가한 구조이므로 ([§대수, ⁋정의 1](/ko/math/algebraic_structures/algebras#def1)), module의 단계에서 정의된 연산들 위에 곱셈이 잘 따라오는지를 확인하는 것이 이번 글의 내용이다. [§대수](/ko/math/algebraic_structures/algebras)에서와 마찬가지로 $A$는 항상 commutative ring이다.
+우리는 [§가군의 직접곱과 직합, 텐서곱](/ko/math/algebraic_structures/operations_of_modules){: data-relation="required" }에서 module들의 연산을, [§환의 곱, 쌍대곱, 텐서곱](/ko/math/algebraic_structures/operations_of_rings){: data-relation="weak" }에서 ring들의 연산을 살펴보았다. $A$-algebra는 $A$-module 위에 bilinear한 곱셈을 추가한 구조이므로 ([§대수, ⁋정의 1](/ko/math/algebraic_structures/algebras#def1){: data-relation="required" }), module의 단계에서 정의된 연산들 위에 곱셈이 잘 따라오는지를 확인하는 것이 이번 글의 내용이다. [§대수](/ko/math/algebraic_structures/algebras){: data-relation="weak" }에서와 마찬가지로 $A$는 항상 commutative ring이다.
 
 ## 대수의 직접곱과 직합
 
@@ -37,7 +37,7 @@ $$\bigl((\alpha x+y)z\bigr)_i=(\alpha x_i+y_i)z_i=\alpha(x_iz_i)+y_iz_i=\bigl(\a
 이를 다음과 같이 이름붙인다. 
 
 ::: 정의 2
-[명제 1](#prop1)에서 정의된 곱셈이 주어진 $A$-algebra $\prod_{i\in I}E_i$를 $E_i$들의 *direct product<sub>직접곱</sub>*라 부른다. Canonical projection $\pr_i:\prod E_i \rightarrow E_i$들은 모두 $A$-algebra homomorphism이다.
+[명제 1](#prop1){: data-relation="required" }에서 정의된 곱셈이 주어진 $A$-algebra $\prod_{i\in I}E_i$를 $E_i$들의 *direct product<sub>직접곱</sub>*라 부른다. Canonical projection $\pr_i:\prod E_i \rightarrow E_i$들은 모두 $A$-algebra homomorphism이다.
 :::
 
 그럼 이렇게 정의한 direct product는 $A$-algebra들의 category에서의 product이다, 즉, 다음의 universal property가 성립한다. 
@@ -46,7 +46,7 @@ $$\bigl((\alpha x+y)z\bigr)_i=(\alpha x_i+y_i)z_i=\alpha(x_iz_i)+y_iz_i=\bigl(\a
 임의의 $A$-algebra $F$와 $A$-algebra homomorphism들 $u_i:F \rightarrow E_i$가 주어졌다 하자. 그럼 $\pr_i\circ u=u_i$가 모든 $i$에 대해 성립하도록 하는 유일한 $A$-algebra homomorphism $u:F \rightarrow \prod_{i\in I}E_i$가 존재한다.
 :::
 ::: 증명
-$A$-module의 단계에서 product의 universal property에 의하여 ([§가군의 직접곱과 직합, 텐서곱, ⁋정리 1](/ko/math/algebraic_structures/operations_of_modules#thm1)) 조건을 만족하는 유일한 $A$-linear map $u:F \rightarrow\prod E_i$, 즉 $u(x)=(u_i(x))_{i\in I}$가 존재한다. 이것이 곱셈을 보존하는 것은 각각의 $u_i$가 곱셈을 보존한다는 것으로부터
+$A$-module의 단계에서 product의 universal property에 의하여 ([§가군의 직접곱과 직합, 텐서곱, ⁋정리 1](/ko/math/algebraic_structures/operations_of_modules#thm1){: data-relation="required" }) 조건을 만족하는 유일한 $A$-linear map $u:F \rightarrow\prod E_i$, 즉 $u(x)=(u_i(x))_{i\in I}$가 존재한다. 이것이 곱셈을 보존하는 것은 각각의 $u_i$가 곱셈을 보존한다는 것으로부터
 
 $$u(xy)=(u_i(xy))_{i\in I}=(u_i(x)u_i(y))_{i\in I}=u(x)u(y)$$
 
@@ -66,7 +66,7 @@ $\bigoplus E_i$가 $\prod E_i$의 submodule인 것은 정의에 의한 것이므
 Direct product의 곱셈을 제한하여 얻어지는 (possibly non-unital) $A$-algebra $\bigoplus_{i\in I}E_i$를 $E_i$들의 *direct sum<sub>직합</sub>*이라 부른다.
 :::
 
-주의할 것은 이것이 $A$-algebra의 category에서의 coproduct가 <em-ko>아니라는</em-ko> 것이다. 우선 [§대수, ⁋정의 1](/ko/math/algebraic_structures/algebras#def1)의 일반적인 의미에서 보더라도 canonical injection $\iota_j:E_j\hookrightarrow\bigoplus E_i$는 덧셈과 스칼라곱, 그리고 곱셈을 모두 보존하지만, 이들 데이터가 universal property를 만족하지는 않는다. 가령 $E_1=E_2=A$이고, 
+주의할 것은 이것이 $A$-algebra의 category에서의 coproduct가 <em-ko>아니라는</em-ko> 것이다. 우선 [§대수, ⁋정의 1](/ko/math/algebraic_structures/algebras#def1){: data-relation="required" }의 일반적인 의미에서 보더라도 canonical injection $\iota_j:E_j\hookrightarrow\bigoplus E_i$는 덧셈과 스칼라곱, 그리고 곱셈을 모두 보존하지만, 이들 데이터가 universal property를 만족하지는 않는다. 가령 $E_1=E_2=A$이고, 
 
 $$f_i: E_i\rightarrow A$$
 
@@ -84,11 +84,11 @@ $$f\bigl((a,b)(c,d)\bigr)=ac+bd\neq (a+b)(c+d)=f(a,b)f(c,d)$$
 
 에 의해 $f$는 곱셈을 보존하지 못한다. 
 
-한편 $A$-algebra와 그 homomorphism이 항상 unital이라는 우리의 관례 아래에서는 상황이 더 나쁘다. $\iota_j$는 $1_{E_j}$를 $\bigoplus E_i$의 항등원으로 보내지 않으므로 애초에 $A$-algebra homomorphism이 아니며, $I$가 무한집합이고 모든 $E_i$가 nonzero라면 [명제 4](#prop4)의 $\bigoplus E_i$는 $\prod E_i$의 진부분 ideal이라 항등원을 갖지 않는다. 
+한편 $A$-algebra와 그 homomorphism이 항상 unital이라는 우리의 관례 아래에서는 상황이 더 나쁘다. $\iota_j$는 $1_{E_j}$를 $\bigoplus E_i$의 항등원으로 보내지 않으므로 애초에 $A$-algebra homomorphism이 아니며, $I$가 무한집합이고 모든 $E_i$가 nonzero라면 [명제 4](#prop4){: data-relation="required" }의 $\bigoplus E_i$는 $\prod E_i$의 진부분 ideal이라 항등원을 갖지 않는다. 
 
 ## 대수의 텐서곱
 
-Commutative $A$-algebra들의 category에서 올바른 coproduct의 개념을 주는 것은 tensor product이다. 기본적으로 이는 $A$-module $E\otimes_AE'$ ([§가군의 직접곱과 직합, 텐서곱, ⁋명제 8](/ko/math/algebraic_structures/operations_of_modules#prop8)) 위에 곱셈을 적당히 정의하여 얻어지는 $A$-algebra로, 우리가 원하는 곱셈은 다음의 식
+Commutative $A$-algebra들의 category에서 올바른 coproduct의 개념을 주는 것은 tensor product이다. 기본적으로 이는 $A$-module $E\otimes_AE'$ ([§가군의 직접곱과 직합, 텐서곱, ⁋명제 8](/ko/math/algebraic_structures/operations_of_modules#prop8){: data-relation="required" }) 위에 곱셈을 적당히 정의하여 얻어지는 $A$-algebra로, 우리가 원하는 곱셈은 다음의 식
 
 $$(x\otimes x')(y\otimes y')=xy\otimes x'y'\tag{1}$$
 
@@ -102,7 +102,7 @@ $$(x\otimes x')(y\otimes y')=xy\otimes x'y'\tag{1}$$
 
 $$E\times E' \rightarrow E\otimes_AE';\qquad (x,x')\mapsto xy\otimes x'y'$$
 
-은 $E,E'$의 곱셈이 각 변수에 대해 $A$-linear이므로 $A$-bilinear이고, 따라서 [§가군의 직접곱과 직합, 텐서곱, ⁋명제 8](/ko/math/algebraic_structures/operations_of_modules#prop8)의 universal property에 의하여 $x\otimes x'\mapsto xy\otimes x'y'$이도록 하는 유일한 $A$-linear map $m_{(y,y')}:E\otimes_AE' \rightarrow E\otimes_AE'$을 유도한다.
+은 $E,E'$의 곱셈이 각 변수에 대해 $A$-linear이므로 $A$-bilinear이고, 따라서 [§가군의 직접곱과 직합, 텐서곱, ⁋명제 8](/ko/math/algebraic_structures/operations_of_modules#prop8){: data-relation="required" }의 universal property에 의하여 $x\otimes x'\mapsto xy\otimes x'y'$이도록 하는 유일한 $A$-linear map $m_{(y,y')}:E\otimes_AE' \rightarrow E\otimes_AE'$을 유도한다.
 
 이제 대응 $(y,y')\mapsto m_{(y,y')}$를 생각하면, 이는 $E\times E'$에서 $\End_{\lMod{A}}(E\otimes_AE')$로 가는 함수이며, 다시 곱셈의 bilinearity에 의해 $A$-bilinear이다. 가령
 
@@ -116,7 +116,7 @@ $$\mu(s,t)=\tilde{m}(t)(s)$$
 :::
 
 ::: 정의 7
-두 $A$-algebra $E,E'$에 대하여, [명제 6](#prop6)의 곱셈이 주어진 $A$-algebra $E\otimes_AE'$을 $E$와 $E'$의 *tensor product<sub>텐서곱</sub>*라 부른다.
+두 $A$-algebra $E,E'$에 대하여, [명제 6](#prop6){: data-relation="required" }의 곱셈이 주어진 $A$-algebra $E\otimes_AE'$을 $E$와 $E'$의 *tensor product<sub>텐서곱</sub>*라 부른다.
 :::
 
 Direct product에서와 마찬가지로, tensor product는 두 대수의 성질을 그대로 물려받는다. 가령 $E,E'$이 모두 associative라면 generator들 위에서
@@ -155,7 +155,7 @@ Polynomial algebra들의 tensor product는 변수들을 합친 polynomial algebr
 
 $$A[\x]\otimes_AA[\y]\cong A[\x,\y]$$
 
-이 성립한다. 이는 [§대수, ⁋명제 8](/ko/math/algebraic_structures/algebras#prop8)에서 살펴본 functor $A[-]:\Set \rightarrow \cAlg{A}$가 left adjoint라는 사실로부터 나온다. Left adjoint는 colimit을 보존하므로, 한 점 집합들의 (집합에서의) coproduct $\{\x\}\sqcup\{\y\}=\{\x,\y\}$를 $\cAlg{A}$에서의 coproduct로 보내고, [정리 8](#thm8)에 의하여 이는 정확히 tensor product이기 때문이다. 물론 두 isomorphism $\x\otimes 1\mapsto \x$, $1\otimes \y\mapsto \y$를 직접 확인할 수도 있다.
+이 성립한다. 이는 [§대수, ⁋명제 8](/ko/math/algebraic_structures/algebras#prop8){: data-relation="required" }에서 살펴본 functor $A[-]:\Set \rightarrow \cAlg{A}$가 left adjoint라는 사실로부터 나온다. Left adjoint는 colimit을 보존하므로, 한 점 집합들의 (집합에서의) coproduct $\{\x\}\sqcup\{\y\}=\{\x,\y\}$를 $\cAlg{A}$에서의 coproduct로 보내고, [정리 8](#thm8){: data-relation="required" }에 의하여 이는 정확히 tensor product이기 때문이다. 물론 두 isomorphism $\x\otimes 1\mapsto \x$, $1\otimes \y\mapsto \y$를 직접 확인할 수도 있다.
 :::
 
 ---
