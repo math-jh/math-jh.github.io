@@ -888,43 +888,59 @@
     var t = lang === 'ko'
       ? {
           index: '색인', posts: '개 글', search: '글 검색…', connected: '연결 많은 글',
-          selected: '선택한 글', earliest: '가장 앞선 선수 글',
-          selectHint: '그래프의 노드를 클릭하면 선택한 글과 가장 앞선 선수 글을 여기에 고정해 볼 수 있습니다.',
-          noPrereqs: 'required로 연결된 선수 글이 없습니다.'
+          selected: '선택한 글', earliest: '가장 앞선 선수 글', opens: '이 글이 열어주는 글',
+          selectHint: '그래프의 노드를 클릭하면 그 글의 선수 글과 이어지는 글을 여기에 고정해 볼 수 있습니다.',
+          noPrereqs: 'required로 연결된 선수 글이 없습니다.',
+          noOpens: '이 글을 선수로 삼는 글이 아직 없습니다.',
+          countPre: '선수 ', countPost: '편'
         }
       : {
           index: 'INDEX', posts: 'posts', search: 'Search posts…', connected: 'MOST CONNECTED',
-          selected: 'SELECTED POST', earliest: 'EARLIEST PREREQUISITES',
-          selectHint: 'Click a graph node to pin the selected post and its earliest prerequisites here.',
-          noPrereqs: 'This post has no required prerequisites.'
+          selected: 'SELECTED POST', earliest: 'EARLIEST PREREQUISITES', opens: 'UNLOCKED BY THIS',
+          selectHint: 'Click a graph node to pin its prerequisites and what it leads to here.',
+          noPrereqs: 'This post has no required prerequisites.',
+          noOpens: 'No post lists this one as a prerequisite yet.',
+          countPre: '', countPost: ' prerequisites'
         };
     var famByKey = {}; families.forEach(function (f) { famByKey[f.key] = f; });
     var rowIndex = {}; // id -> [row els]
-    var requiredParents = {};
-    data.nodes.forEach(function (n) { requiredParents[n.id] = []; });
+    var requiredParents = {}, requiredChildren = {};
+    data.nodes.forEach(function (n) { requiredParents[n.id] = []; requiredChildren[n.id] = []; });
     data.links.forEach(function (link) {
       if (link.relation !== 'required') return;
       var e = endpoints(link);
       if (requiredParents[e[1]]) requiredParents[e[1]].push(e[0]);
+      if (requiredChildren[e[0]]) requiredChildren[e[0]].push(e[1]);
     });
 
-    function earliestPrerequisites(id) {
-      var reachable = new Set([id]);
-      var todo = [id];
+    // required 만 따라간 도달 집합 (자기 자신 제외).
+    function closure(id, adj) {
+      var seen = new Set(), todo = [id];
       while (todo.length) {
         var current = todo.pop();
-        (requiredParents[current] || []).forEach(function (parent) {
-          if (reachable.has(parent)) return;
-          reachable.add(parent); todo.push(parent);
+        (adj[current] || []).forEach(function (next) {
+          if (seen.has(next)) return;
+          seen.add(next); todo.push(next);
         });
       }
+      seen.delete(id);
+      return seen;
+    }
+    function byWeightThenTitle(a, b) {
+      return (Number(a.weight) || 0) - (Number(b.weight) || 0) ||
+        a.title.localeCompare(b.title, lang);
+    }
+
+    function earliestPrerequisites(id) {
+      var reachable = closure(id, requiredParents);
       var roots = Array.from(reachable).filter(function (candidate) {
-        return candidate !== id && !(requiredParents[candidate] || []).some(function (parent) {
+        return !(requiredParents[candidate] || []).some(function (parent) {
           return reachable.has(parent);
         });
       });
-      if (!roots.length && reachable.size > 1) {
-        var ancestors = Array.from(reachable).filter(function (candidate) { return candidate !== id; });
+      // required 관계에 순환이 있으면 뿌리가 안 남는다 — 그때는 가장 이른 층으로 대신한다.
+      if (!roots.length && reachable.size) {
+        var ancestors = Array.from(reachable);
         var minWeight = Math.min.apply(null, ancestors.map(function (candidate) {
           return Number(byId[candidate].weight) || 0;
         }));
@@ -936,6 +952,25 @@
         .sort(function (a, b) { return a.title.localeCompare(b.title, lang); });
     }
 
+    /* 선수 폐포의 규모와 분야 구성 한 줄 — "선수 9편 · 기초 5 · 대수 4".
+       뿌리 목록만으로는 그 뒤에 몇 편이 더 있는지, 어느 분야인지가 안 보인다. */
+    function prerequisiteMeta(reachable) {
+      if (!reachable.size) return '';
+      var byFamily = {};
+      reachable.forEach(function (id) {
+        var key = (byId[id] || {}).family;
+        if (key) byFamily[key] = (byFamily[key] || 0) + 1;
+      });
+      var parts = Object.keys(byFamily).sort(function (a, b) {
+        return byFamily[b] - byFamily[a] || a.localeCompare(b);
+      }).map(function (key) {
+        var fam = famByKey[key] || {};
+        var label = (lang === 'ko' && fam.label_ko) ? fam.label_ko : (fam.label || key);
+        return label + ' ' + byFamily[key];
+      });
+      return [t.countPre + reachable.size + t.countPost].concat(parts).join(' · ');
+    }
+
     function renderSummary(id) {
       if (!summary) return;
       summary.innerHTML = '';
@@ -944,24 +979,47 @@
         var hint = document.createElement('p'); hint.className = 'gs-empty';
         hint.textContent = t.selectHint; summary.appendChild(hint); return;
       }
-      var selectedLabel = document.createElement('div'); selectedLabel.className = 'gs-kicker';
-      selectedLabel.textContent = t.selected; summary.appendChild(selectedLabel);
+      function kicker(text) {
+        var el = document.createElement('div');
+        el.className = 'gs-kicker'; el.textContent = text;
+        summary.appendChild(el);
+      }
+      function note(text, cls) {
+        var el = document.createElement('p');
+        el.className = cls; el.textContent = text;
+        summary.appendChild(el);
+      }
+      function list(items) {
+        var ul = document.createElement('ul'); ul.className = 'gs-prereqs';
+        items.forEach(function (n) {
+          var li = document.createElement('li'); li.className = 'gs-prereq';
+          var link = document.createElement('a');
+          link.href = n.url; link.textContent = n.title;
+          li.appendChild(link); ul.appendChild(li);
+        });
+        summary.appendChild(ul);
+      }
+
+      kicker(t.selected);
       var title = document.createElement('a'); title.className = 'gs-title';
       title.href = node.url; title.textContent = node.title; summary.appendChild(title);
-      var prereqLabel = document.createElement('div'); prereqLabel.className = 'gs-kicker';
-      prereqLabel.textContent = t.earliest; summary.appendChild(prereqLabel);
+
+      kicker(t.earliest);
+      var ancestors = closure(id, requiredParents);
       var roots = earliestPrerequisites(id);
-      if (!roots.length) {
-        var empty = document.createElement('p'); empty.className = 'gs-empty';
-        empty.textContent = t.noPrereqs; summary.appendChild(empty); return;
+      if (roots.length) {
+        var meta = prerequisiteMeta(ancestors);
+        if (meta) note(meta, 'gs-meta');
+        list(roots);
+      } else {
+        note(t.noPrereqs, 'gs-empty');
       }
-      var list = document.createElement('ul'); list.className = 'gs-prereqs';
-      roots.forEach(function (root) {
-        var item = document.createElement('li'); item.className = 'gs-prereq';
-        var link = document.createElement('a'); link.href = root.url; link.textContent = root.title;
-        item.appendChild(link); list.appendChild(item);
-      });
-      summary.appendChild(list);
+
+      kicker(t.opens);
+      var opens = Array.from(closure(id, requiredChildren))
+        .map(function (x) { return byId[x]; }).filter(Boolean).sort(byWeightThenTitle);
+      if (opens.length) list(opens);
+      else note(t.noOpens, 'gs-empty');
     }
 
     function reg(id, el) { (rowIndex[id] = rowIndex[id] || []).push(el); }
