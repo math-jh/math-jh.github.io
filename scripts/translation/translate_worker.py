@@ -86,11 +86,12 @@ MAX_TRANSLATE_ATTEMPTS = 3                   # re-translate on LOSSY verify verd
 # Sheaf_Cohomology_of_Schemes, KO 본문 53,978c → 출력 100,470c 중간 절단),
 # 그와 별개로 출력 토큰 한도 자체에 걸린다 (2026-09-06 CA/Differentials,
 # KO 22,793c 를 통짜로 보내 agy 가 output token limit 으로 잘림). EN 출력은
-# KO 의 1.5배쯤이므로 경계는 출력 기준으로 잡는다. 이 값은 Kimi 롤백 경로에도
-# 공통이다. 조각 경계는 `:::` 박스 경계(_split_regions)라 정리 박스를 가르지
-# 않고, 폴리싱은 KO/EN 을 같은 경계로 잘라 box id 로 짝지어 보낸다.
-FULL_CHUNK_THRESHOLD  = 10_000               # 이 KO 본문 길이(자)를 넘으면 분할
-MAX_CHUNK_CHARS       = 6_000                # 조각 하나에 담을 KO 본문 목표치
+# 폴리싱 출력은 기존 EN 길이에 가까우므로 KO 와 EN 중 긴 쪽으로 분할 여부와
+# 조각 크기를 정한다. 이 값은 Kimi 롤백 경로에도 공통이다. 조각 경계는 `:::`
+# 박스 경계(_split_regions)라 정리 박스를 가르지 않고, 폴리싱은 KO/EN 을 같은
+# 경계로 잘라 box id 로 짝지어 보낸다.
+FULL_CHUNK_THRESHOLD  = 4_000                # 이 본문 길이(자)를 넘으면 분할
+MAX_CHUNK_CHARS       = 4_000                # 조각 하나의 KO/EN 본문 목표치
 
 # Claude verify. 2026-07-20부터 `claude -p --model haiku` 직접 호출 (구독
 # 과금 확인됨). 옛 tmux 상주 세션 경로(verify_session.sh, .done 폴링)는
@@ -1757,7 +1758,8 @@ def translate(
     if reason == "polish" and en_current_body.strip():
         en_current_body, _ = extract_refs_block(en_current_body)
         chunked = (polish_body_chunked(ko_body, en_current_body)
-                   if len(ko_body) > FULL_CHUNK_THRESHOLD else None)
+                   if max(len(ko_body), len(en_current_body)) > FULL_CHUNK_THRESHOLD
+                   else None)
         if chunked is not None:
             en_body, prompt_chars = chunked
         else:

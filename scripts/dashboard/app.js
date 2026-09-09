@@ -91,6 +91,7 @@ function row(cells, cls) {
   var tr = el('tr', cls);
   cells.forEach(function (c) {
     var td = el('td', c.cls || null);
+    if (c.title) td.title = c.title;
     if (c.html !== undefined) td.innerHTML = c.html;
     else td.textContent = c.text === undefined ? '' : String(c.text);
     tr.appendChild(td);
@@ -887,6 +888,51 @@ function cronAction(job, btn, action) {
     });
 }
 
+/* 크론 표현식을 한국어 문장으로 — 원문은 셀 title 에 남긴다.
+   해석하지 못한 꼴은 표현식을 그대로 돌려준다 (틀린 한국어보다 낫다). */
+var CRON_DOW = ['일', '월', '화', '수', '목', '금', '토'];
+function cronField(f) {
+  if (f === '*') return { kind: 'any' };
+  var m = /^(\*|(\d+)-(\d+))\/(\d+)$/.exec(f);
+  if (m) return { kind: 'step', step: +m[4],
+                  from: m[2] === undefined ? null : +m[2],
+                  to: m[3] === undefined ? null : +m[3] };
+  if (/^\d+(,\d+)*$/.test(f)) return { kind: 'list', values: f.split(',').map(Number) };
+  return { kind: 'raw' };
+}
+function cronText(expr) {
+  if (!expr) return '';
+  var f = String(expr).trim().split(/\s+/);
+  if (f.length !== 5) return expr;
+  var mi = cronField(f[0]), hr = cronField(f[1]), dow = cronField(f[4]);
+  if (f[2] !== '*' || f[3] !== '*' || mi.kind === 'raw' || hr.kind === 'raw') return expr;
+  function p2(n) { return (n < 10 ? '0' : '') + n; }
+
+  /* 요일 한정은 매시/N분 꼴과 섞이면 문장이 길어지기만 한다 — 정시 지정에만 붙인다. */
+  var day = '매일';
+  if (dow.kind === 'list') {
+    day = '매주 ' + dow.values.map(function (d) { return CRON_DOW[d % 7] + '요일'; }).join('·');
+  } else if (dow.kind !== 'any') return expr;
+
+  if (hr.kind === 'any') {
+    if (dow.kind !== 'any') return expr;
+    if (mi.kind === 'any') return '1분마다';
+    if (mi.kind === 'step') {
+      return mi.step + '분마다' + (mi.from === null ? '' : ' (:' + p2(mi.from) + ' 기준)');
+    }
+    return '매시 ' + mi.values.map(function (m) { return ':' + p2(m); }).join(', ');
+  }
+  if (mi.kind !== 'list' || mi.values.length !== 1) return expr;
+  if (hr.kind === 'step') {
+    if (dow.kind !== 'any') return expr;
+    var every = hr.step + '시간마다 :' + p2(mi.values[0]);
+    return hr.from === null ? every : every + ' (' + hr.from + '–' + hr.to + '시)';
+  }
+  return day + ' ' + hr.values.map(function (h) {
+    return p2(h) + ':' + p2(mi.values[0]);
+  }).join(', ');
+}
+
 function secCron(d) {
   var c = d.cron || { items: [], paused: 0 };
   var s = secNode('크론 제어', c.items.length + '개 · 정지 ' + c.paused);
@@ -896,7 +942,9 @@ function secCron(d) {
     var tr = row([
       { html: '<span class="dot dot--' + (j.paused ? 'paused' : 'ok') + '"></span>' +
               esc(j.name) + (j.timer ? '<span class="tag">timer</span>' : '') },
-      { text: j.schedule || (j.missing ? '게이트 없음' : ''), cls: 'mono muted' },
+      { text: j.timer ? 'systemd 타이머'
+              : (cronText(j.schedule) || (j.missing ? '게이트 없음' : '')),
+        title: j.timer ? '' : j.schedule, cls: 'muted nowrap' },
       { text: j.paused ? (j.until ? pauseText + ' · 만료 ' + j.until.slice(5, 16).replace('T', ' ') : pauseText) : '실행 중',
         cls: 'muted' },
       { html: '<span class="cron-actions">' +

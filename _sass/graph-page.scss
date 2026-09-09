@@ -35,15 +35,29 @@
 body.dependencies-linear {
   .graph-page--dependencies {
     .graph-page__main {
-      grid-template-columns: 1fr;
-      grid-template-rows: clamp(420px, 58vh, 640px) minmax(360px, 56vh);
-      grid-template-areas: "graph" "index";
-      height: auto;
+      grid-template-columns: 230px minmax(0, 1fr);
+      grid-template-rows: 360px minmax(0, 1fr);
+      grid-template-areas:
+        "graph graph"
+        "index summary";
+      height: calc(100vh - 270px);
+      min-height: 340px;
     }
 
     .graph-index {
-      width: 230px;
+      width: 100%;
       max-width: 100%;
+    }
+
+    .graph-selection { display: block; }
+  }
+
+  @media (max-width: 820px) {
+    .graph-page--dependencies .graph-page__main {
+      grid-template-columns: 1fr;
+      grid-template-rows: 240px minmax(260px, 55vh) auto;
+      grid-template-areas: "graph" "index" "summary";
+      height: auto;
     }
   }
 }
@@ -182,6 +196,79 @@ body.dependencies-linear {
   }
   .gi-cat.open .gi-caret { transform: rotate(90deg); }
   .gi-cat.open .gi-cat-body { display: block; }
+}
+
+.graph-selection {
+  grid-area: summary;
+  display: none;
+  min-width: 0;
+  min-height: 0;
+  padding: 2px 8px 2px clamp(18px, 2.6vw, 34px);
+  border-left: 1px solid rgba(127, 127, 127, 0.18);
+  color: $text-color;
+  font-family: $sans-serif;
+  overflow-y: auto;
+
+  .gs-kicker {
+    margin-bottom: 7px;
+    color: $muted-text-color;
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+  }
+
+  .gs-title {
+    display: inline-block;
+    margin-bottom: 22px;
+    color: $text-color;
+    font-size: clamp(16px, 1.5vw, 20px);
+    font-weight: 650;
+    line-height: 1.35;
+    text-decoration: none;
+
+    &:hover { color: $highlight-color; }
+  }
+
+  .gs-empty {
+    max-width: 42em;
+    margin: 4px 0 0;
+    color: $muted-text-color;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .gs-prereqs {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    gap: 7px 18px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .gs-prereq a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 2px;
+    color: $text-color;
+    font-size: 13px;
+    line-height: 1.35;
+    text-decoration: none;
+
+    &::before {
+      width: 5px;
+      height: 5px;
+      flex: none;
+      border-radius: 50%;
+      background: $highlight-color;
+      content: "";
+      opacity: 0.72;
+    }
+
+    &:hover { color: $highlight-color; }
+  }
 }
 
 /* ---- Graph card (항상 다크 · Brass) — graphcard.css 에서 ---- */

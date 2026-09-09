@@ -87,7 +87,7 @@ WORKERS = [
          log=f"{ROOT}/scripts/index-monitor/monitor.log"),
     dict(key="blogdev", name="개발 노트 봇", schedule="매일 10:05", interval=86400,
          log=f"{ROOT}/scripts/blogdev-bot/run.log"),
-    dict(key="pagefind", name="Pagefind 재색인", schedule="*/30", interval=1800,
+    dict(key="pagefind", name="Pagefind 재색인", schedule="매일 04:50", interval=86400,
          watch=f"{ROOT}/_site/pagefind/pagefind-entry.json"),
 ]
 WORKER_BY_KEY = {w["key"]: w for w in WORKERS}

@@ -111,7 +111,9 @@
       (layers[r] = layers[r] || []).push(n);
     });
     var positions = {};
-    var columnGap = 66, rowGap = 34, padX = 56, padY = 52;
+    // rowGap 은 행 사이에 가로 레인이 지날 골을 남겨야 한다 — 점 반지름 최대 7px 을
+    // 양쪽에서 빼고 레인 2층(±3.5px)이 들어갈 폭이 나오는 값이다.
+    var columnGap = 66, rowGap = 28, padX = 56, padY = 52;
     var capacity = Math.max(1, Math.floor((viewportHeight - 2 * padY) / rowGap) + 1);
     var visualColumn = 0;
     Object.keys(layers).sort(function (a, b) { return Number(a) - Number(b); }).forEach(function (rawRank) {
@@ -122,11 +124,12 @@
       });
       for (var start = 0; start < layer.length; start += capacity) {
         var chunk = layer.slice(start, start + capacity);
+        // 열마다 제 개수로 중심을 잡으면 홀짝에 따라 행이 rowGap/2 만큼 어긋나
+        // 두 벌의 격자가 생긴다. 그러면 행 사이 골이 남의 행 위로 떨어져 레인이
+        // 노드를 관통한다 — 중심 오프셋을 정수 칸으로 반올림해 격자를 하나로 둔다.
+        var center = Math.round((chunk.length - 1) / 2);
         chunk.forEach(function (n, i) {
-          positions[n.id] = {
-            column: visualColumn,
-            y: (i - (chunk.length - 1) / 2) * rowGap
-          };
+          positions[n.id] = { column: visualColumn, y: (i - center) * rowGap };
         });
         visualColumn += 1;
       }
@@ -137,7 +140,7 @@
       positions[id].y += viewportHeight / 2;
       delete positions[id].column;
     });
-    return { positions: positions, width: width, height: viewportHeight };
+    return { positions: positions, width: width, height: viewportHeight, rowGap: rowGap };
   }
 
   /* 필터 칩(family) 정의는 그래프 JSON 이 실어 온다 (_data/categories.yml 의
@@ -186,7 +189,7 @@
     var hovered = null, selected = null, query = '', layoutMode = 'force';
     var activeFams = new Set(families.map(function (f) { return f.key; }));
     var hlNodes = new Set(), hlLinks = new Set();
-    var hoverCb = null, clickCb = null, linearGeometry = null;
+    var hoverCb = null, clickCb = null, linearGeometry = null, linearLanes = {};
     var linearNodeEls = [], linearLinkEls = [];
 
     function radius(n) {
@@ -230,29 +233,35 @@
         if (e[0] === node.id || e[1] === node.id) hlLinks.add(lid(l));
       });
     }
+    /* 이 노드를 고르면 함께 켜지는 엣지들. 레인 배정기도 같은 집합을 쓴다 —
+       한 번에 같이 보이는 선끼리만 높이를 다투면 된다. */
+    function linearFocusLinks(id) {
+      var out = [];
+      // Only the chosen article may branch to optional context. Weak edges point
+      // cited -> citing, while forward edges point citing -> later reading.
+      (weakIn[id] || []).forEach(function (l) { out.push(l); });
+      (forwardOut[id] || []).forEach(function (l) { out.push(l); });
+
+      // Required edges point prerequisite -> dependent. Walk only upstream and
+      // never expand weak/forward edges from prerequisites reached on this walk.
+      var todo = [id], seen = new Set();
+      while (todo.length) {
+        var here = todo.pop();
+        if (seen.has(here)) continue;
+        seen.add(here);
+        (requiredIn[here] || []).forEach(function (link) {
+          var source = endpoints(link)[0];
+          out.push(link);
+          if (!seen.has(source)) todo.push(source);
+        });
+      }
+      return out;
+    }
     function focusLinear(node) {
       hlNodes = new Set(); hlLinks = new Set();
       if (!node) return;
       hlNodes.add(node.id);
-
-      // Only the chosen article may branch to optional context. Weak edges point
-      // cited -> citing, while forward edges point citing -> later reading.
-      (weakIn[node.id] || []).forEach(addHighlightedLink);
-      (forwardOut[node.id] || []).forEach(addHighlightedLink);
-
-      // Required edges point prerequisite -> dependent. Walk only upstream and
-      // never expand weak/forward edges from prerequisites reached on this walk.
-      var todo = [node.id], seen = new Set();
-      while (todo.length) {
-        var id = todo.pop();
-        if (seen.has(id)) continue;
-        seen.add(id);
-        (requiredIn[id] || []).forEach(function (link) {
-          var source = endpoints(link)[0];
-          addHighlightedLink(link);
-          if (!seen.has(source)) todo.push(source);
-        });
-      }
+      linearFocusLinks(node.id).forEach(addHighlightedLink);
     }
     function refocus() {
       var node = activeFocus();
@@ -292,6 +301,11 @@
     var popTitle = pop.querySelector('.gc-pop-title');
     var popGo = pop.querySelector('.gc-pop-go');
     var popClose = pop.querySelector('.gc-pop-close');
+    [top, pop].forEach(function (overlay) {
+      ['pointerdown', 'pointerup', 'click', 'dblclick'].forEach(function (type) {
+        overlay.addEventListener(type, function (event) { event.stopPropagation(); });
+      });
+    });
     popGo.textContent = cfg.openLabel;
     popGo.addEventListener('click', function (e) { e.stopPropagation(); });
 
@@ -321,39 +335,185 @@
       Object.keys(attrs || {}).forEach(function (key) { el.setAttribute(key, attrs[key]); });
       return el;
     }
+    /* 가로 레인의 높이 배정.
+       기본은 출발 노드의 행 위(오프셋 0)에 그대로 눕히는 것이다. 비키는 경우는 둘뿐:
+       레인이 남의 점을 관통할 때, 그리고 **한 번에 같이 켜지는 다른 레인**과 겹칠 때.
+       서로 다른 선택에서만 보이는 레인끼리는 겹쳐도 화면에 함께 뜨지 않으니 내버려 둔다.
+       비켜야 하면 행 사이 골(행에서 rowGap/2, 한 골에 2층)로 내려간다. */
+    function assignLanes() {
+      linearLanes = {};
+      if (!linearGeometry) return;
+      var gap = linearGeometry.rowGap || 28, SUB = 3.5, CLEAR = 5;
+      var minY = 18, maxY = linearGeometry.height - 24;
+      // 너무 멀리 밀어내면 짧은 엣지가 화면 반대편까지 내려간다 — 골 4칸까지만 본다.
+      var bands = Math.min(4, Math.ceil(linearGeometry.height / gap) + 1);
+      function slots(prefer) {
+        var out = [0];
+        for (var band = 0; band < bands; band++) {
+          var mid = gap / 2 + band * gap;
+          [-SUB, SUB].forEach(function (sub) {
+            [prefer, -prefer].forEach(function (side) { out.push(side * (mid + sub)); });
+          });
+        }
+        return out;
+      }
+
+      // 행별 노드 x 목록 — 레인이 남의 점을 지나는지 보는 데 쓴다.
+      var rows = {};
+      data.nodes.forEach(function (n) {
+        var p = linearGeometry.positions[n.id];
+        if (p) (rows[p.y] = rows[p.y] || []).push({ x: p.x, r: radius(n) });
+      });
+      var rowKeys = Object.keys(rows).map(Number);
+      function crossesNode(y, x0, x1) {
+        return rowKeys.some(function (ry) {
+          if (Math.abs(ry - y) > 12) return false;
+          return rows[ry].some(function (n) {
+            return n.x > x0 + 1 && n.x < x1 - 1 && Math.abs(ry - y) < n.r + 2.5;
+          });
+        });
+      }
+
+      // 한 링크를 켜는 노드들의 집합. 두 링크가 이 집합을 공유해야 자리를 다툰다.
+      var focusOf = {};
+      data.nodes.forEach(function (n) {
+        linearFocusLinks(n.id).forEach(function (l) {
+          var key = lid(l);
+          (focusOf[key] = focusOf[key] || new Set()).add(n.id);
+        });
+      });
+      function sharesFocus(a, b) {
+        var small = focusOf[a], large = focusOf[b];
+        if (!small || !large) return false;
+        if (small.size > large.size) { var swap = small; small = large; large = swap; }
+        var shared = false;
+        small.forEach(function (id) { if (large.has(id)) shared = true; });
+        return shared;
+      }
+
+      var placed = [];
+      var pending = [];
+      data.links.forEach(function (link) {
+        var e = endpoints(link);
+        var s = linearGeometry.positions[e[0]], t = linearGeometry.positions[e[1]];
+        if (!s || !t || Math.abs(t.x - s.x) < 16) return;   // 수직 가지는 laneX 를 쓴다
+        pending.push({ key: lid(link), relation: link.relation, base: s.y,
+                       x0: Math.min(s.x, t.x), x1: Math.max(s.x, t.x) });
+      });
+      // 왼쪽부터 훑어 나가며 칠한다 (구간 그래프 greedy 의 표준 순서).
+      pending.sort(function (a, b) { return a.x0 - b.x0 || a.x1 - b.x1; });
+      pending.forEach(function (lane) {
+        var options = slots(lane.relation === 'weak' ? -1 : 1);
+        var chosen = null, best = null, bestCost = Infinity;
+        for (var i = 0; i < options.length; i++) {
+          var y = lane.base + options[i];
+          if (y < minY || y > maxY) continue;
+          if (crossesNode(y, lane.x0, lane.x1)) continue;
+          // 빈 층이 하나도 없을 때를 대비해 겹치는 길이의 합을 재 둔다.
+          var cost = 0;
+          placed.forEach(function (other) {
+            if (Math.abs(other.y - y) >= CLEAR) return;
+            var overlap = Math.min(other.x1, lane.x1) - Math.max(other.x0, lane.x0);
+            if (overlap > 4 && sharesFocus(other.key, lane.key)) cost += overlap;
+          });
+          if (cost === 0) { chosen = y; break; }
+          if (cost < bestCost) { bestCost = cost; best = y; }
+        }
+        if (chosen === null) chosen = best === null ? lane.base : best;
+        placed.push({ key: lane.key, y: chosen, x0: lane.x0, x1: lane.x1 });
+        linearLanes[lane.key] = chosen;
+      });
+    }
     function gitPath(link, index) {
       var e = endpoints(link);
       var source = linearGeometry.positions[e[0]], target = linearGeometry.positions[e[1]];
       if (!source || !target) return '';
       var sx = source.x, sy = source.y, tx = target.x, ty = target.y;
       var dx = tx - sx;
+
+      /* 노드 → 사선 직선 → (고정 반지름 모서리) → 레인 직선 → (모서리) → 사선 직선 → 노드.
+         모서리만 2차 베지에로 둥글리므로 낙차는 곡선이 아니라 사선이 흡수한다. */
+      function routedPath(start, end, laneStart, laneEnd, mainDirection) {
+        function unit(from, to) {
+          var ux = to.x - from.x, uy = to.y - from.y;
+          var length = Math.sqrt(ux * ux + uy * uy) || 1;
+          return { x: ux / length, y: uy / length };
+        }
+        function span(from, to) {
+          return Math.sqrt(Math.pow(to.x - from.x, 2) + Math.pow(to.y - from.y, 2));
+        }
+        var cornerRadius = 12;
+        var sourceDirection = unit(start, laneStart);
+        var targetDirection = unit(laneEnd, end);
+        var sourceRadius = radius(byId[e[0]]);
+        var targetRadius = radius(byId[e[1]]) + 3;
+        var sourceEdge = {
+          x: start.x + sourceDirection.x * sourceRadius,
+          y: start.y + sourceDirection.y * sourceRadius
+        };
+        var targetEdge = {
+          x: end.x - targetDirection.x * targetRadius,
+          y: end.y - targetDirection.y * targetRadius
+        };
+        // 짧은 변에서는 반지름이 그 변의 절반을 넘지 않게 줄인다 — 넘으면 두 모서리가 겹친다.
+        var laneHalf = span(laneStart, laneEnd) / 2;
+        var sourceCorner = Math.min(cornerRadius, span(sourceEdge, laneStart) / 2, laneHalf);
+        var targetCorner = Math.min(cornerRadius, span(laneEnd, targetEdge) / 2, laneHalf);
+        return 'M' + sourceEdge.x + ',' + sourceEdge.y +
+          ' L' + (laneStart.x - sourceDirection.x * sourceCorner) + ',' + (laneStart.y - sourceDirection.y * sourceCorner) +
+          ' Q' + laneStart.x + ',' + laneStart.y +
+          ' ' + (laneStart.x + mainDirection.x * sourceCorner) + ',' + (laneStart.y + mainDirection.y * sourceCorner) +
+          ' L' + (laneEnd.x - mainDirection.x * targetCorner) + ',' + (laneEnd.y - mainDirection.y * targetCorner) +
+          ' Q' + laneEnd.x + ',' + laneEnd.y +
+          ' ' + (laneEnd.x + targetDirection.x * targetCorner) + ',' + (laneEnd.y + targetDirection.y * targetCorner) +
+          ' L' + targetEdge.x + ',' + targetEdge.y;
+      }
+
       if (Math.abs(dx) < 16) {
         var side = sx < linearGeometry.width / 2 ? 1 : -1;
         var laneX = sx + side * (20 + (index % 3) * 7);
         laneX = Math.max(16, Math.min(linearGeometry.width - 16, laneX));
-        return 'M' + sx + ',' + sy + ' C' + laneX + ',' + sy + ' ' + laneX + ',' + ty + ' ' + tx + ',' + ty;
+        var verticalDirection = ty >= sy ? 1 : -1;
+        var verticalCurve = Math.min(24, Math.max(8, Math.abs(ty - sy) * 0.28));
+        return routedPath(
+          { x: sx, y: sy }, { x: tx, y: ty },
+          { x: laneX, y: sy + verticalDirection * verticalCurve },
+          { x: laneX, y: ty - verticalDirection * verticalCurve },
+          { x: 0, y: verticalDirection }
+        );
       }
       var direction = dx > 0 ? 1 : -1;
-      sx += direction * radius(byId[e[0]]);
-      tx -= direction * (radius(byId[e[1]]) + 3);
-      dx = tx - sx;
-      var stub = Math.min(18, Math.max(10, Math.abs(dx) / 3));
-      var startX = sx + direction * stub;
-      var endX = tx - direction * stub;
-      var laneY = sy;
-      if (link.relation === 'weak') laneY = Math.min(sy, ty) - 16 - (index % 3) * 5;
-      else if (link.relation === 'forward') laneY = Math.max(sy, ty) + 16 + (index % 3) * 5;
+      var laneY = linearLanes[lid(link)];
+      if (laneY === undefined) laneY = sy;
       laneY = Math.max(18, Math.min(linearGeometry.height - 24, laneY));
-      return 'M' + sx + ',' + sy +
-        ' C' + startX + ',' + sy + ' ' + startX + ',' + laneY + ' ' + startX + ',' + laneY +
-        ' L' + endX + ',' + laneY +
-        ' C' + endX + ',' + laneY + ' ' + endX + ',' + ty + ' ' + tx + ',' + ty;
+
+      // 사선 구간의 가로 길이. 낙차가 클수록 벌려 기울기를 SLOPE_LIMIT 아래로 누른다.
+      var MIN_RUN = 22, MAX_RUN = 120, SLOPE_LIMIT = 1.3, MIN_LANE = 26;
+      function runFor(drop) {
+        return Math.max(MIN_RUN, Math.min(MAX_RUN, drop / SLOPE_LIMIT));
+      }
+      var sourceRun = runFor(Math.abs(laneY - sy));
+      var targetRun = runFor(Math.abs(ty - laneY));
+      // 두 사선이 가로 간격을 다 먹으면 레인이 사라진다 — 남는 폭 안으로 비례 축소.
+      var budget = Math.max(0, Math.abs(dx) - MIN_LANE);
+      if (sourceRun + targetRun > budget) {
+        var scale = budget / (sourceRun + targetRun);
+        sourceRun *= scale; targetRun *= scale;
+      }
+      return routedPath(
+        { x: sx, y: sy }, { x: tx, y: ty },
+        { x: sx + direction * sourceRun, y: laneY },
+        { x: tx - direction * targetRun, y: laneY },
+        { x: direction, y: 0 }
+      );
     }
     function updateLinearStyles() {
       if (!linearGeometry) return;
       linearLinkEls.forEach(function (entry) {
         var link = entry.link;
-        entry.path.setAttribute('stroke', linkColor(link));
+        var color = linkColor(link);
+        entry.path.setAttribute('stroke', color);
+        entry.arrow.setAttribute('fill', color);
         entry.path.setAttribute('stroke-width', hlLinks.has(lid(link)) ? '2.4' :
           (link.relation === 'required' ? '1.2' : link.relation === 'weak' ? '0.85' : '1'));
       });
@@ -384,26 +544,33 @@
       linearSvg.style.width = Math.ceil(linearGeometry.width) + 'px';
       linearSvg.style.height = Math.ceil(linearGeometry.height) + 'px';
 
-      var defs = svgElement('defs');
-      var marker = svgElement('marker', {
-        id: 'gc-linear-arrow', viewBox: '0 0 8 8', refX: '7', refY: '4',
-        markerWidth: '7', markerHeight: '7', orient: 'auto', markerUnits: 'userSpaceOnUse'
-      });
-      marker.appendChild(svgElement('path', { d: 'M0,0 L8,4 L0,8 Z', fill: 'context-stroke' }));
-      defs.appendChild(marker); linearSvg.appendChild(defs);
-
       var linksGroup = svgElement('g', { class: 'gc-linear__links' });
+      var pendingLinks = [];
       data.links.forEach(function (link, index) {
         var path = svgElement('path', {
           d: gitPath(link, index), fill: 'none', 'stroke-linecap': 'round',
-          'stroke-linejoin': 'round', 'vector-effect': 'non-scaling-stroke',
-          'marker-end': 'url(#gc-linear-arrow)'
+          'stroke-linejoin': 'round', 'vector-effect': 'non-scaling-stroke'
         });
         if (link.relation === 'weak') path.setAttribute('stroke-dasharray', '2 5');
         else if (link.relation === 'forward') path.setAttribute('stroke-dasharray', '9 5');
-        linksGroup.appendChild(path); linearLinkEls.push({ link: link, path: path });
+        linksGroup.appendChild(path); pendingLinks.push({ link: link, path: path });
       });
       linearSvg.appendChild(linksGroup);
+      pendingLinks.forEach(function (entry) {
+        var length = entry.path.getTotalLength();
+        var middle = length / 2;
+        var point = entry.path.getPointAtLength(middle);
+        var before = entry.path.getPointAtLength(Math.max(0, middle - 0.75));
+        var after = entry.path.getPointAtLength(Math.min(length, middle + 0.75));
+        var angle = Math.atan2(after.y - before.y, after.x - before.x) * 180 / Math.PI;
+        var arrow = svgElement('path', {
+          d: 'M-4,-3 L4,0 L-4,3 Z',
+          transform: 'translate(' + point.x + ' ' + point.y + ') rotate(' + angle + ')',
+          'aria-hidden': 'true', 'pointer-events': 'none'
+        });
+        linksGroup.appendChild(arrow);
+        linearLinkEls.push({ link: entry.link, path: entry.path, arrow: arrow });
+      });
 
       var nodesGroup = svgElement('g', { class: 'gc-linear__nodes' });
       data.nodes.forEach(function (node) {
@@ -481,6 +648,12 @@
       if (hlLinks.has(lid(l))) {
         var highlightedEnds = endpoints(l);
         var focused = activeFocus();
+        if (layoutMode === 'linear') {
+          if (focused && l.relation === 'forward' && highlightedEnds[0] === focused.id) {
+            return 'rgba(' + cfg.accentOut + ',0.9)';
+          }
+          return 'rgba(' + cfg.accent + ',0.85)';
+        }
         if (focused) {
           if (highlightedEnds[0] === focused.id) return 'rgba(' + cfg.accentOut + ',0.9)';
           if (highlightedEnds[1] === focused.id) return 'rgba(' + cfg.accentIn + ',0.9)';
@@ -488,7 +661,7 @@
         return 'rgba(' + cfg.accent + ',0.85)';
       }
       var e = endpoints(l);
-      var on = passesFilter(byId[e[0]]) && passesFilter(byId[e[1]]) && !hlLinks.size;
+      var on = passesFilter(byId[e[0]]) && passesFilter(byId[e[1]]) && !activeFocus();
       if (!on) return 'rgba(' + cfg.link + ',0.035)';
       if (layoutMode === 'linear') {
         if (l.relation === 'weak') return 'rgba(' + cfg.link + ',0.1)';
@@ -592,6 +765,7 @@
       var viewportHeight = canvasViewport.clientHeight;
       if (!viewportWidth || !viewportHeight) return;
       linearGeometry = linearPositions(data, viewportWidth, viewportHeight);
+      assignLanes();
       renderLinear();
     }
     function sizeForce() {
@@ -612,6 +786,27 @@
         canvasViewport.scrollTo({ left: Math.max(0, Math.min(max, x)), behavior: 'smooth' });
       } else if (node) graph.centerAt(node.x, node.y, 450);
       else graph.zoomToFit(450, 30);
+    }
+    function fitForceSelection() {
+      if (!selected) {
+        graph.zoomToFit(450, 30);
+        return;
+      }
+      var visibleIds = new Set([selected.id]);
+      (outAdj[selected.id] || new Set()).forEach(function (id) { visibleIds.add(id); });
+      (inAdj[selected.id] || new Set()).forEach(function (id) { visibleIds.add(id); });
+      var bbox = graph.getGraphBbox(function (node) { return visibleIds.has(node.id); });
+      if (!bbox) return;
+      var padding = 44;
+      var width = Math.max(1, bbox.x[1] - bbox.x[0]);
+      var height = Math.max(1, bbox.y[1] - bbox.y[0]);
+      var zoom = Math.min(
+        8,
+        Math.max(1, (canvasViewport.clientWidth - padding * 2) / width),
+        Math.max(1, (canvasViewport.clientHeight - padding * 2) / height)
+      );
+      graph.centerAt((bbox.x[0] + bbox.x[1]) / 2, (bbox.y[0] + bbox.y[1]) / 2, 450);
+      graph.zoom(zoom, 450);
     }
     function afterLayout(fn) {
       window.requestAnimationFrame(function () { window.requestAnimationFrame(fn); });
@@ -646,7 +841,10 @@
     top.querySelectorAll('.gc-btn').forEach(function (b) {
       b.addEventListener('click', function () {
         if (b.dataset.act === 'layout') setLayout(layoutMode === 'force' ? 'linear' : 'force', b);
-        else if (b.dataset.act === 'fit') centerActive();
+        else if (b.dataset.act === 'fit') {
+          if (layoutMode === 'linear') centerActive();
+          else fitForceSelection();
+        }
         else if (cfg.onReset) { cfg.onReset(); if (layoutMode === 'force') graph.zoomToFit(450, 30); }
         else if (layoutMode === 'force') graph.zoomToFit(450, 30);
       });
@@ -680,12 +878,85 @@
   }
 
   /* ---------- index panel ---------- */
-  function buildIndex(panel, data, deg, byId, families, card, lang) {
+  function buildIndex(panel, summary, data, deg, byId, families, card, lang) {
     var t = lang === 'ko'
-      ? { index: '색인', posts: '개 글', search: '글 검색…', connected: '연결 많은 글' }
-      : { index: 'INDEX', posts: 'posts', search: 'Search posts…', connected: 'MOST CONNECTED' };
+      ? {
+          index: '색인', posts: '개 글', search: '글 검색…', connected: '연결 많은 글',
+          selected: '선택한 글', earliest: '가장 앞선 선수 글',
+          selectHint: '그래프의 노드를 클릭하면 선택한 글과 가장 앞선 선수 글을 여기에 고정해 볼 수 있습니다.',
+          noPrereqs: 'required로 연결된 선수 글이 없습니다.'
+        }
+      : {
+          index: 'INDEX', posts: 'posts', search: 'Search posts…', connected: 'MOST CONNECTED',
+          selected: 'SELECTED POST', earliest: 'EARLIEST PREREQUISITES',
+          selectHint: 'Click a graph node to pin the selected post and its earliest prerequisites here.',
+          noPrereqs: 'This post has no required prerequisites.'
+        };
     var famByKey = {}; families.forEach(function (f) { famByKey[f.key] = f; });
     var rowIndex = {}; // id -> [row els]
+    var requiredParents = {};
+    data.nodes.forEach(function (n) { requiredParents[n.id] = []; });
+    data.links.forEach(function (link) {
+      if (link.relation !== 'required') return;
+      var e = endpoints(link);
+      if (requiredParents[e[1]]) requiredParents[e[1]].push(e[0]);
+    });
+
+    function earliestPrerequisites(id) {
+      var reachable = new Set([id]);
+      var todo = [id];
+      while (todo.length) {
+        var current = todo.pop();
+        (requiredParents[current] || []).forEach(function (parent) {
+          if (reachable.has(parent)) return;
+          reachable.add(parent); todo.push(parent);
+        });
+      }
+      var roots = Array.from(reachable).filter(function (candidate) {
+        return candidate !== id && !(requiredParents[candidate] || []).some(function (parent) {
+          return reachable.has(parent);
+        });
+      });
+      if (!roots.length && reachable.size > 1) {
+        var ancestors = Array.from(reachable).filter(function (candidate) { return candidate !== id; });
+        var minWeight = Math.min.apply(null, ancestors.map(function (candidate) {
+          return Number(byId[candidate].weight) || 0;
+        }));
+        roots = ancestors.filter(function (candidate) {
+          return (Number(byId[candidate].weight) || 0) === minWeight;
+        });
+      }
+      return roots.map(function (root) { return byId[root]; }).filter(Boolean)
+        .sort(function (a, b) { return a.title.localeCompare(b.title, lang); });
+    }
+
+    function renderSummary(id) {
+      if (!summary) return;
+      summary.innerHTML = '';
+      var node = id ? byId[id] : null;
+      if (!node) {
+        var hint = document.createElement('p'); hint.className = 'gs-empty';
+        hint.textContent = t.selectHint; summary.appendChild(hint); return;
+      }
+      var selectedLabel = document.createElement('div'); selectedLabel.className = 'gs-kicker';
+      selectedLabel.textContent = t.selected; summary.appendChild(selectedLabel);
+      var title = document.createElement('a'); title.className = 'gs-title';
+      title.href = node.url; title.textContent = node.title; summary.appendChild(title);
+      var prereqLabel = document.createElement('div'); prereqLabel.className = 'gs-kicker';
+      prereqLabel.textContent = t.earliest; summary.appendChild(prereqLabel);
+      var roots = earliestPrerequisites(id);
+      if (!roots.length) {
+        var empty = document.createElement('p'); empty.className = 'gs-empty';
+        empty.textContent = t.noPrereqs; summary.appendChild(empty); return;
+      }
+      var list = document.createElement('ul'); list.className = 'gs-prereqs';
+      roots.forEach(function (root) {
+        var item = document.createElement('li'); item.className = 'gs-prereq';
+        var link = document.createElement('a'); link.href = root.url; link.textContent = root.title;
+        item.appendChild(link); list.appendChild(item);
+      });
+      summary.appendChild(list);
+    }
 
     function reg(id, el) { (rowIndex[id] = rowIndex[id] || []).push(el); }
     function rowEl(n) {
@@ -818,7 +1089,9 @@
     card.onClick(function (id) {
       selEls.forEach(function (el) { el.classList.remove('sel'); }); selEls = [];
       if (id && rowIndex[id]) { rowIndex[id].forEach(function (el) { el.classList.add('sel'); selEls.push(el); }); }
+      renderSummary(id);
     });
+    renderSummary(null);
 
     // reset button also clears the index UI
     return {
@@ -833,6 +1106,7 @@
   function init() {
     var stage = document.getElementById('xgraph');
     var panel = document.getElementById('graph-index');
+    var summary = document.getElementById('graph-selection');
     if (!stage || !panel || typeof ForceGraph === 'undefined') return;
     var lang = stage.dataset.lang || 'ko';
     var source = stage.dataset.graphSource || 'graph';
@@ -859,7 +1133,7 @@
         var fams = (data.families && data.families.length) ? data.families : FAMILIES_FALLBACK;
         var card = createGraphCard(stage, data, fams, cfg);
         if (!card) return;
-        var idx = buildIndex(panel, data, card.deg, card.byId, fams, card, lang);
+        var idx = buildIndex(panel, summary, data, card.deg, card.byId, fams, card, lang);
         cfg.onReset = function () { card.clear(); idx.reset(); };
       })
       .catch(function () {});
