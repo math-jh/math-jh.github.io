@@ -55,7 +55,7 @@ $$\iint_S f\dd{S} = \iint_D f(\mathbf{r}(u,v))\lvert \mathbf{r}_u \times \mathbf
 이다.
 :::
 
-선적분이 arc length parametrization으로 적분하여 곡선의 매개화에 무관했듯, 면적분도 area element로 적분하여 곡면의 매개화에 무관하다. 실제로 두 매개곡면 $\mathbf{r}(u,v)$와 $\tilde{\mathbf{r}}(s,t)$가 같은 image를 주고 $C^1$ 변수변환 $(u,v) \mapsto (s,t)$로 이어져 있으면, 연쇄법칙에서 $\mathbf{r}_u \times \mathbf{r}_v = (\partial(s,t)/\partial(u,v))(\tilde{\mathbf{r}}_s \times \tilde{\mathbf{r}}_t)$이므로 크기를 취해 [§다중적분, ⁋정리 4](/ko/math/calculus/multiple_integrals#thm4)를 적용하면 두 매개화가 주는 이중적분이 서로 같다. 
+선적분이 arc length parametrization으로 적분하여 곡선의 매개화에 무관했듯, 면적분도 area element로 적분하여 곡면의 매개화에 무관하다. 실제로 두 매개곡면 $\mathbf{r}(u,v)$와 $\tilde{\mathbf{r}}(s,t)$가 같은 image를 주고 $C^1$ 변수변환 $(u,v) \mapsto (s,t)$로 이어져 있으면, 연쇄법칙에서 $\mathbf{r}_u \times \mathbf{r}_v = (\partial(s,t)/\partial(u,v))(\tilde{\mathbf{r}}_s \times \tilde{\mathbf{r}}_t)$이므로 크기를 취해 [§다중적분, ⁋정리 4](/ko/math/calculus/multiple_integrals#thm4){: data-relation="required" }를 적용하면 두 매개화가 주는 이중적분이 서로 같다. 
 
 ## 선속
 
@@ -92,7 +92,7 @@ $$\iint_S \dd{S} = \int_0^{2\pi} \int_0^\pi R^2\sin\phi \dd{\phi} \dd{\theta} = 
 다음은 벡터함수의 적분의 예시이다. 
 
 ::: 예시 6
-[예시 5](#ex5)의 구에, 바깥 방향을 주자. 이 예시에서 우리의 목표는 
+[예시 5](#ex5){: data-relation="required" }의 구에, 바깥 방향을 주자. 이 예시에서 우리의 목표는 
 
 $$\mathbf{F}(x,y,z) = (x,y,z)$$
 

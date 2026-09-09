@@ -56,7 +56,7 @@ $$\iint_S f\dd{S} = \iint_D f(\mathbf{r}(u,v))\lvert \mathbf{r}_u \times \mathbf
 .
 :::
 
-Just as the line integral is independent of the curve's parametrization because it is taken with respect to arc length, the surface integral is independent of the surface's parametrization because it is taken with respect to the area element. Indeed, if two parametrized surfaces $\mathbf{r}(u,v)$ and $\tilde{\mathbf{r}}(s,t)$ have the same image and are related by a $C^1$ change of variables $(u,v) \mapsto (s,t)$, then by the chain rule $\mathbf{r}_u \times \mathbf{r}_v = (\partial(s,t)/\partial(u,v))(\tilde{\mathbf{r}}_s \times \tilde{\mathbf{r}}_t)$; taking absolute values and applying [§Multiple Integrals, ⁋Theorem 4](/en/math/calculus/multiple_integrals#thm4) shows that the two parametrizations yield the same double integral.
+Just as the line integral is independent of the curve's parametrization because it is taken with respect to arc length, the surface integral is independent of the surface's parametrization because it is taken with respect to the area element. Indeed, if two parametrized surfaces $\mathbf{r}(u,v)$ and $\tilde{\mathbf{r}}(s,t)$ have the same image and are related by a $C^1$ change of variables $(u,v) \mapsto (s,t)$, then by the chain rule $\mathbf{r}_u \times \mathbf{r}_v = (\partial(s,t)/\partial(u,v))(\tilde{\mathbf{r}}_s \times \tilde{\mathbf{r}}_t)$; taking absolute values and applying [§Multiple Integrals, ⁋Theorem 4](/en/math/calculus/multiple_integrals#thm4){: data-relation="required" } shows that the two parametrizations yield the same double integral.
 
 ## Flux
 
@@ -93,7 +93,7 @@ which gives the familiar value.
 The next example is that of a vector-field integral.
 
 ::: Example 6
-On the sphere of [Example 5](#ex5), take the outward orientation. Our goal in this example is to compute the flux of
+On the sphere of [Example 5](#ex5){: data-relation="required" }, take the outward orientation. Our goal in this example is to compute the flux of
 
 $$\mathbf{F}(x,y,z) = (x,y,z)$$
 
