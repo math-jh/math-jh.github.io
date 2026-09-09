@@ -12,7 +12,7 @@ date: 2026-07-06
 weight: 16
 ---
 
-우리가 궁극적으로 다루고 싶은 것은 일반적인 함수 $\mathbb{R}^m\rightarrow\mathbb{R}^n$의 미적분학이다. 우리는 우선 [§곡선과 벡터함수](/ko/math/calculus/vector_functions)에서는 공역의 차원을, [§다변수함수와 편미분](/ko/math/calculus/partial_derivatives) 이후에서는 정의역의 차원을 올려 이를 준비했다. 이제 두 방향을 하나로 합쳐 정의역과 공역이 모두 여러 차원인 일반적인 경우를 시작한다. 특히 정의역과 공역의 차원이 같은 $\mathbb{R}^n\rightarrow\mathbb{R}^n$이 가장 자연스러운 대상으로, 그럼 이 함수는 $n$차원 벡터를 받아 $n$차원 벡터를 내놓는 함수이다. 
+우리가 궁극적으로 다루고 싶은 것은 일반적인 함수 $\mathbb{R}^m\rightarrow\mathbb{R}^n$의 미적분학이다. 우리는 우선 [§곡선과 벡터함수](/ko/math/calculus/vector_functions){: data-relation="required" }에서는 공역의 차원을, [§다변수함수와 편미분](/ko/math/calculus/partial_derivatives){: data-relation="required" } 이후에서는 정의역의 차원을 올려 이를 준비했다. 이제 두 방향을 하나로 합쳐 정의역과 공역이 모두 여러 차원인 일반적인 경우를 시작한다. 특히 정의역과 공역의 차원이 같은 $\mathbb{R}^n\rightarrow\mathbb{R}^n$이 가장 자연스러운 대상으로, 그럼 이 함수는 $n$차원 벡터를 받아 $n$차원 벡터를 내놓는 함수이다. 
 
 ## 벡터장
 
@@ -22,7 +22,7 @@ weight: 16
 영역 $D \subseteq \mathbb{R}^n$의 각 점 $\mathbf{x}$에 벡터 $\mathbf{F}(\mathbf{x}) \in \mathbb{R}^n$을 대응시키는 함수 $\mathbf{F}\colon D \rightarrow \mathbb{R}^n$을 *벡터장<sub>vector field</sub>*이라 한다. 평면에서는 $\mathbf{F}(x,y) = (P(x,y), Q(x,y))$, 공간에서는 $\mathbf{F}(x,y,z) = (P, Q, R)$로 적고, 각 성분 $P, Q, R$가 $C^1$이면 $\mathbf{F}$를 $C^1$ 벡터장이라 한다.
 :::
 
-벡터장은 각 점에 그 점에서 출발하는 arrow를 꽂은 그림으로 이해하는 것이 가장 직관적이다. 가령, 유체의 흐름이라면 각 점에서의 유속을 표현한 것은 벡터장을 이룬다. 우리는 이미 이런 대상을 하나 알고 있다. ([§다변수함수와 편미분, ⁋정의 2](/ko/math/calculus/partial_derivatives#def2))
+벡터장은 각 점에 그 점에서 출발하는 arrow를 꽂은 그림으로 이해하는 것이 가장 직관적이다. 가령, 유체의 흐름이라면 각 점에서의 유속을 표현한 것은 벡터장을 이룬다. 우리는 이미 이런 대상을 하나 알고 있다. ([§다변수함수와 편미분, ⁋정의 2](/ko/math/calculus/partial_derivatives#def2){: data-relation="required" })
 
 ::: 정의 2
 $C^1$ scalar field $f$의 기울기 $\nabla f = (\partial f/\partial x_1, \ldots, \partial f/\partial x_n)$로 주어지는 벡터장을 $f$의 *기울기장<sub>gradient field</sub>*이라 한다. 어떤 scalar field $f$에 대해 $\mathbf{F} = \nabla f$로 쓸 수 있는 벡터장 $\mathbf{F}$를 *보존장<sub>conservative field</sub>*이라 하고, 그 $f$를 $\mathbf{F}$의 *potential<sub>퍼텐셜</sub>*이라 한다.
@@ -63,11 +63,11 @@ $$\curl(\nabla f) = 0, \qquad \divergence(\curl \mathbf{F}) = 0$$
 :::
 
 ::: 증명
-$\nabla f = (f_x, f_y, f_z)$의 회전의 첫 성분은 $\partial_y f_z - \partial_z f_y = f_{zy} - f_{yz}$인데, 이는 [§다변수함수와 편미분, ⁋정리 7](/ko/math/calculus/partial_derivatives#thm7)에 의해 $0$이며 나머지 두 성분도 같은 이유로 $0$이다. 또 $\curl \mathbf{F} = (R_y - Q_z,\ P_z - R_x,\ Q_x - P_y)$의 발산은
+$\nabla f = (f_x, f_y, f_z)$의 회전의 첫 성분은 $\partial_y f_z - \partial_z f_y = f_{zy} - f_{yz}$인데, 이는 [§다변수함수와 편미분, ⁋정리 7](/ko/math/calculus/partial_derivatives#thm7){: data-relation="required" }에 의해 $0$이며 나머지 두 성분도 같은 이유로 $0$이다. 또 $\curl \mathbf{F} = (R_y - Q_z,\ P_z - R_x,\ Q_x - P_y)$의 발산은
 
 $$\partial_x(R_y - Q_z) + \partial_y(P_z - R_x) + \partial_z(Q_x - P_y) = (R_{yx} - R_{xy}) + (P_{zy} - P_{yz}) + (Q_{xz} - Q_{zx})$$
 
-로 묶이고, 각 괄호에 다시 [§다변수함수와 편미분, ⁋정리 7](/ko/math/calculus/partial_derivatives#thm7)을 적용하여 $0$임을 보일 수 있다.
+로 묶이고, 각 괄호에 다시 [§다변수함수와 편미분, ⁋정리 7](/ko/math/calculus/partial_derivatives#thm7){: data-relation="required" }을 적용하여 $0$임을 보일 수 있다.
 :::
 
 첫 항등식은 보존장 판정의 필요조건을 준다. 만일 $\mathbf{F} = \nabla f$이면 $\curl \mathbf{F} = \curl(\nabla f) = 0$이므로, 회전이 $0$이 아닌 벡터장은 결코 보존장이 될 수 없기 때문이다. 즉 다음이 성립한다. 

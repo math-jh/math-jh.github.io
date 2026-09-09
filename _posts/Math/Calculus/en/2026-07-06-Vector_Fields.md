@@ -14,7 +14,7 @@ translated_at: 2026-08-19T11:45:04+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-08-19T11:45:04+00:00
 ---
-What we ultimately want to develop is the calculus of general functions $\mathbb{R}^m\rightarrow\mathbb{R}^n$. We prepared for this by raising the dimension of the codomain in [§Curves and Vector-Valued Functions](/en/math/calculus/vector_functions), and then the dimension of the domain starting from [§Functions of Several Variables and Partial Derivatives](/en/math/calculus/partial_derivatives). Now we combine both directions and begin the general case where the domain and codomain are both multidimensional. In particular, the case where the two dimensions coincide, $\mathbb{R}^n\rightarrow\mathbb{R}^n$, is the most natural object of study; such a function takes an $n$-dimensional vector and outputs an $n$-dimensional vector.
+What we ultimately want to develop is the calculus of general functions $\mathbb{R}^m\rightarrow\mathbb{R}^n$. We prepared for this by raising the dimension of the codomain in [§Curves and Vector-Valued Functions](/en/math/calculus/vector_functions){: data-relation="required" }, and then the dimension of the domain starting from [§Functions of Several Variables and Partial Derivatives](/en/math/calculus/partial_derivatives){: data-relation="required" }. Now we combine both directions and begin the general case where the domain and codomain are both multidimensional. In particular, the case where the two dimensions coincide, $\mathbb{R}^n\rightarrow\mathbb{R}^n$, is the most natural object of study; such a function takes an $n$-dimensional vector and outputs an $n$-dimensional vector.
 
 ## Vector Fields
 
@@ -24,7 +24,7 @@ However, since the cross product (one of the most powerful tools at our disposal
 A function $\mathbf{F}\colon D \rightarrow \mathbb{R}^n$ that assigns to each point $\mathbf{x}$ in a domain $D \subseteq \mathbb{R}^n$ a vector $\mathbf{F}(\mathbf{x}) \in \mathbb{R}^n$ is called a *vector field*. In the plane we write $\mathbf{F}(x,y) = (P(x,y), Q(x,y))$, and in space $\mathbf{F}(x,y,z) = (P, Q, R)$; if each component $P, Q, R$ is $C^1$, we call $\mathbf{F}$ a $C^1$ vector field.
 :::
 
-A vector field is most intuitively visualized as a picture of arrows emanating from each point. For instance, the flow velocity of a fluid at each point constitutes a vector field. We have already encountered one such object. ([§Functions of Several Variables and Partial Derivatives, ⁋Definition 2](/en/math/calculus/partial_derivatives#def2))
+A vector field is most intuitively visualized as a picture of arrows emanating from each point. For instance, the flow velocity of a fluid at each point constitutes a vector field. We have already encountered one such object. ([§Functions of Several Variables and Partial Derivatives, ⁋Definition 2](/en/math/calculus/partial_derivatives#def2){: data-relation="required" })
 
 ::: Definition 2
 The vector field given by the gradient $\nabla f = (\partial f/\partial x_1, \ldots, \partial f/\partial x_n)$ of a $C^1$ scalar field $f$ is called the *gradient field* of $f$. A vector field $\mathbf{F}$ that can be written as $\mathbf{F} = \nabla f$ for some scalar field $f$ is called a *conservative field*, and that $f$ is called a *potential* of $\mathbf{F}$.
@@ -64,11 +64,11 @@ $$\curl(\nabla f) = 0, \qquad \divergence(\curl \mathbf{F}) = 0.$$
 :::
 
 ::: Proof
-The first component of the curl of $\nabla f = (f_x, f_y, f_z)$ is $\partial_y f_z - \partial_z f_y = f_{zy} - f_{yz}$, which vanishes by [§Functions of Several Variables and Partial Derivatives, ⁋Theorem 7](/en/math/calculus/partial_derivatives#thm7), and the remaining two components are zero for the same reason. Also, the divergence of $\curl \mathbf{F} = (R_y - Q_z,\ P_z - R_x,\ Q_x - P_y)$ is
+The first component of the curl of $\nabla f = (f_x, f_y, f_z)$ is $\partial_y f_z - \partial_z f_y = f_{zy} - f_{yz}$, which vanishes by [§Functions of Several Variables and Partial Derivatives, ⁋Theorem 7](/en/math/calculus/partial_derivatives#thm7){: data-relation="required" }, and the remaining two components are zero for the same reason. Also, the divergence of $\curl \mathbf{F} = (R_y - Q_z,\ P_z - R_x,\ Q_x - P_y)$ is
 
 $$\partial_x(R_y - Q_z) + \partial_y(P_z - R_x) + \partial_z(Q_x - P_y) = (R_{yx} - R_{xy}) + (P_{zy} - P_{yz}) + (Q_{xz} - Q_{zx})$$
 
-and applying [§Functions of Several Variables and Partial Derivatives, ⁋Theorem 7](/en/math/calculus/partial_derivatives#thm7) to each parenthesis again shows that it is zero.
+and applying [§Functions of Several Variables and Partial Derivatives, ⁋Theorem 7](/en/math/calculus/partial_derivatives#thm7){: data-relation="required" } to each parenthesis again shows that it is zero.
 :::
 
 The first identity yields a necessary condition for conservativity. If $\mathbf{F} = \nabla f$, then $\curl \mathbf{F} = \curl(\nabla f) = 0$, so a vector field with nonzero curl can never be conservative. That is, the following holds.
