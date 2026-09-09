@@ -18,7 +18,7 @@ In previous posts we introduced characteristic classes to classify vector bundle
 
 $$E(\gamma^k_\infty)\rightarrow \Gr(k, \mathbb{R}^\infty)$$
 
-played this role ([§Stiefel-Whitney Characteristic Classes, §§Grassmannians](/en/math/algebraic_topology/stiefel_whitney_classes#grassmannians)), and a similar construction existed for complex vector bundles as well ([§Characteristic Classes of Vector Bundles, ⁋Example 8](/en/math/algebraic_topology/characteristic_classes#ex8)). On the other hand, since the pullback of a vector bundle depends only on the homotopy class of the map, the isomorphism class of a rank $k$ vector bundle over a fixed space $B$ is given by the set of homotopy classes of maps into these spaces, $[B, \Gr(k, \mathbb{R}^\infty)]$ (or $[B, \Gr(k, \mathbb{C}^\infty)]$).
+played this role ([§Stiefel-Whitney Characteristic Classes, §§Grassmannians](/en/math/algebraic_topology/stiefel_whitney_classes#grassmannians){: data-relation="weak" }), and a similar construction existed for complex vector bundles as well ([§Characteristic Classes of Vector Bundles, ⁋Example 8](/en/math/algebraic_topology/characteristic_classes#ex8){: data-relation="weak" }). On the other hand, since the pullback of a vector bundle depends only on the homotopy class of the map, the isomorphism class of a rank $k$ vector bundle over a fixed space $B$ is given by the set of homotopy classes of maps into these spaces, $[B, \Gr(k, \mathbb{R}^\infty)]$ (or $[B, \Gr(k, \mathbb{C}^\infty)]$).
 
 Another perspective on vector bundles was to regard them as collections of transition functions. For example, any vector bundle was determined by specifying
 
@@ -58,7 +58,7 @@ The trivial bundle $X\times G$ has the section $x\mapsto(x,e)$, so if $P$ is tri
 
 $$\Phi:X\times G\rightarrow P,\qquad (x,g)\mapsto s(x)\cdot g.$$
 
-Since the $G$-action is simply transitive on each fiber (condition (2) of [Definition 1](#def1)), the restriction of $\Phi$ to each fiber $\{x\}\times G\rightarrow p^{-1}(x)$ is bijective, and hence $\Phi$ is bijective. By definition $\Phi$ satisfies $p\circ\Phi=\pr_1$ and is compatible with the $G$-action, so it is a morphism over $X$. Finally, that $\Phi$ is a homeomorphism can be checked locally: in a trivialization $\varphi:p^{-1}(U)\rightarrow U\times G$, if $s$ is written as $x\mapsto(x,\sigma(x))$ ($\sigma:U\rightarrow G$ continuous), then $\Phi$ becomes $(x,g)\mapsto(x,\sigma(x)g)$, and its inverse $(x,h)\mapsto(x,\sigma(x)^{-1}h)$ is continuous.
+Since the $G$-action is simply transitive on each fiber (condition (2) of [Definition 1](#def1){: data-relation="required" }), the restriction of $\Phi$ to each fiber $\{x\}\times G\rightarrow p^{-1}(x)$ is bijective, and hence $\Phi$ is bijective. By definition $\Phi$ satisfies $p\circ\Phi=\pr_1$ and is compatible with the $G$-action, so it is a morphism over $X$. Finally, that $\Phi$ is a homeomorphism can be checked locally: in a trivialization $\varphi:p^{-1}(U)\rightarrow U\times G$, if $s$ is written as $x\mapsto(x,\sigma(x))$ ($\sigma:U\rightarrow G$ continuous), then $\Phi$ becomes $(x,g)\mapsto(x,\sigma(x)g)$, and its inverse $(x,h)\mapsto(x,\sigma(x)^{-1}h)$ is continuous.
 :::
 
 This proposition reveals the decisive difference between principal bundles and vector bundles. Therefore, to relate principal bundles and vector bundles we need an object that mediates between the two.
@@ -123,7 +123,7 @@ $$f^\ast P=\{(x',y)\in X'\times P\mid f(x')=p(y)\}$$
 is defined. Giving the action by $(x',y)\cdot g=(x',y\cdot g)$ makes $f^\ast P\rightarrow X'$ again a principal $G$-bundle, and from the perspective of transition functions this corresponds to pulling back $g_{ij}$ to $g_{ij}\circ f$. The crucial fact is that this pullback depends only on the homotopy class of $f$.
 
 ::: Theorem 5 (Homotopy Invariance of Pullback)
-Suppose $X$ is paracompact Hausdorff and $f_0,f_1:X\rightarrow Y$ are homotopic ([§Homotopy, ⁋Definition 2](/en/math/algebraic_topology/homotopy#def2)). Then for any principal $G$-bundle $p:P\rightarrow Y$, the pullbacks $f_0^\ast P$ and $f_1^\ast P$ are isomorphic over $X$.
+Suppose $X$ is paracompact Hausdorff and $f_0,f_1:X\rightarrow Y$ are homotopic ([§Homotopy, ⁋Definition 2](/en/math/algebraic_topology/homotopy#def2){: data-relation="weak" }). Then for any principal $G$-bundle $p:P\rightarrow Y$, the pullbacks $f_0^\ast P$ and $f_1^\ast P$ are isomorphic over $X$.
 :::
 ::: Proof
 The key is the following fact.
@@ -139,13 +139,13 @@ In particular, if $X$ is contractible then the identity map is homotopic to a co
 
 ## Universal Bundle and Classifying Space
 
-[Theorem 5](#thm5) tells us that assigning a function $f$ to $f^\ast P$ depends only on the homotopy class of $f$. Therefore, if we can take some fixed principal $G$-bundle as a source from which all other bundles can be obtained by pullback, the classification of principal $G$-bundles will reduce to counting homotopy classes into that source space, generalizing the situation in vector bundles where the universal bundle over $\Gr(k,\mathbb{R}^\infty)$ was such a source.
+[Theorem 5](#thm5){: data-relation="required" } tells us that assigning a function $f$ to $f^\ast P$ depends only on the homotopy class of $f$. Therefore, if we can take some fixed principal $G$-bundle as a source from which all other bundles can be obtained by pullback, the classification of principal $G$-bundles will reduce to counting homotopy classes into that source space, generalizing the situation in vector bundles where the universal bundle over $\Gr(k,\mathbb{R}^\infty)$ was such a source.
 
 ::: Definition 6
-For a topological group $G$, a principal $G$-bundle $p:\E G\rightarrow \B G$ is called a *universal bundle* if the total space $\E G$ is contractible, that is, $\E G$ is homotopy equivalent to a point ([§Homotopy, ⁋Definition 4](/en/math/algebraic_topology/homotopy#def4)). In this case we call the base space $\B G$ the *classifying space* of $G$.
+For a topological group $G$, a principal $G$-bundle $p:\E G\rightarrow \B G$ is called a *universal bundle* if the total space $\E G$ is contractible, that is, $\E G$ is homotopy equivalent to a point ([§Homotopy, ⁋Definition 4](/en/math/algebraic_topology/homotopy#def4){: data-relation="weak" }). In this case we call the base space $\B G$ the *classifying space* of $G$.
 :::
 
-Thus, a universal $G$-bundle is a free $G$-action on a contractible space, whose orbit space $\B G=\E G/G$ is the base space and whose projection map is the bundle map. The condition that $\E G$ is contractible will be used crucially in [Theorem 8](#thm8). Before that, the following holds.
+Thus, a universal $G$-bundle is a free $G$-action on a contractible space, whose orbit space $\B G=\E G/G$ is the base space and whose projection map is the bundle map. The condition that $\E G$ is contractible will be used crucially in [Theorem 8](#thm8){: data-relation="forward" }. Before that, the following holds.
 
 ::: Theorem 7 (Milnor)
 For any topological group $G$, a universal bundle $\E G\rightarrow \B G$ exists.
@@ -157,7 +157,7 @@ $$\E G=G\ast G\ast G\ast\cdots,$$
 
 and the point is that this space is $n$-connected for every $n$, hence weakly contractible, and under a CW structure it is contractible.
 
-On the other hand, a universal bundle is essentially unique. Suppose two universal bundles $\E G\rightarrow \B G$ and $\E G'\rightarrow \B G'$ are given. Since $\E G'\rightarrow\B G'$ is universal, by [Theorem 8](#thm8) to be shown below there exists a morphism $u:\B G\rightarrow \B G'$ classifying the principal $G$-bundle $\E G$ over $\B G$ such that $\E G\cong u^\ast\E G'$, and swapping the roles of the two bundles likewise gives $v:\B G'\rightarrow \B G$ with $\E G'\cong v^\ast\E G$. Then $(v\circ u)^\ast\E G\cong u^\ast\E G'\cong\E G$, but the identity map also classifies $\E G$, so by the injectivity part of the same theorem $v\circ u$ is homotopic to the identity map of $\B G$, and for the same reason $u\circ v$ is homotopic to the identity map of $\B G'$. Therefore $\B G$ is determined without ambiguity beyond homotopy equivalence, and we speak of $\B G$ as *the* classifying space.
+On the other hand, a universal bundle is essentially unique. Suppose two universal bundles $\E G\rightarrow \B G$ and $\E G'\rightarrow \B G'$ are given. Since $\E G'\rightarrow\B G'$ is universal, by [Theorem 8](#thm8){: data-relation="required" } to be shown below there exists a morphism $u:\B G\rightarrow \B G'$ classifying the principal $G$-bundle $\E G$ over $\B G$ such that $\E G\cong u^\ast\E G'$, and swapping the roles of the two bundles likewise gives $v:\B G'\rightarrow \B G$ with $\E G'\cong v^\ast\E G$. Then $(v\circ u)^\ast\E G\cong u^\ast\E G'\cong\E G$, but the identity map also classifies $\E G$, so by the injectivity part of the same theorem $v\circ u$ is homotopic to the identity map of $\B G$, and for the same reason $u\circ v$ is homotopic to the identity map of $\B G'$. Therefore $\B G$ is determined without ambiguity beyond homotopy equivalence, and we speak of $\B G$ as *the* classifying space.
 
 Even apart from the ingredients of this argument, the most central result of this post is of course the following theorem.
 
@@ -172,9 +172,9 @@ is a well-defined bijection, and is natural in the sense that it is compatible w
 
 :::
 ::: Proof
-That $[f]\mapsto f^\ast \E G$ does not depend on the choice of representative for $[f]$ follows from [Theorem 5](#thm5). We briefly sketch that this is a bijection.
+That $[f]\mapsto f^\ast \E G$ does not depend on the choice of representative for $[f]$ follows from [Theorem 5](#thm5){: data-relation="required" }. We briefly sketch that this is a bijection.
 
-First, suppose a principal $G$-bundle $P$ over $X$ is given. Since $X$ is paracompact Hausdorff, by [\[Topology\] §Paracompact Spaces and Partitions of Unity, ⁋Theorem 11](/en/math/topology/paracompact_spaces#thm11) we may choose an open cover $\{U_i\}$ trivializing $P$ together with a locally finite partition of unity $\{\rho_i\}$ subordinate to it. The trivialization over each $U_i$ gives a $G$-equivariant map $\psi_i:p^{-1}(U_i)\rightarrow G$, so taking $\E G$ as the join from [Theorem 7](#thm7) and writing its points in the form $\sum_i t_ig_i$, we have that
+First, suppose a principal $G$-bundle $P$ over $X$ is given. Since $X$ is paracompact Hausdorff, by [\[Topology\] §Paracompact Spaces and Partitions of Unity, ⁋Theorem 11](/en/math/topology/paracompact_spaces#thm11){: data-relation="required" } we may choose an open cover $\{U_i\}$ trivializing $P$ together with a locally finite partition of unity $\{\rho_i\}$ subordinate to it. The trivialization over each $U_i$ gives a $G$-equivariant map $\psi_i:p^{-1}(U_i)\rightarrow G$, so taking $\E G$ as the join from [Theorem 7](#thm7){: data-relation="required" } and writing its points in the form $\sum_i t_ig_i$, we have that
 
 $$\widetilde{f}:P\rightarrow \E G,\qquad y\mapsto \sum_i \rho_i(p(y))\psi_i(y)$$
 
@@ -183,17 +183,17 @@ is a well-defined $G$-equivariant map. A $G$-equivariant map descends to a morph
 Now to show injectivity, suppose for $f_0,f_1:X\rightarrow \B G$ that $f_0^\ast \E G\cong f_1^\ast \E G=:P$. We must show that $f_0$ and $f_1$ are homotopic. Each $f_i$ yields a bundle map $P\cong f_i^\ast \E G\rightarrow \E G$, that is, a $G$-equivariant bundle map $\Phi_i:P\rightarrow \E G$ from $P$ to the universal bundle. But since $\E G$ is contractible, any two $G$-equivariant maps from a principal bundle $P$ over a paracompact space to $\E G$ are $G$-equivariantly homotopic; hence there exists a $G$-equivariant homotopy $P\times[0,1]\rightarrow \E G$ joining $\Phi_0$ and $\Phi_1$, and this descends to the base to give a homotopy between $f_0$ and $f_1$, so $[f_0]=[f_1]$.
 :::
 
-This theorem translates the geometric classification of principal $G$-bundles into purely homotopy-theoretic data $[X,\B G]$. Combined with [Proposition 4](#prop4), the classification of rank $n$ real vector bundles becomes $[X,\B\GL(n;\mathbb{R})]$, and in the complex case $[X,\B\GL(n;\mathbb{C})]$; and indeed we shall soon see that these $\B\GL(n; \mathbb{R})$ and $\B\GL(n; \mathbb{C})$ are none other than the (real/complex) Grassmannians.
+This theorem translates the geometric classification of principal $G$-bundles into purely homotopy-theoretic data $[X,\B G]$. Combined with [Proposition 4](#prop4){: data-relation="required" }, the classification of rank $n$ real vector bundles becomes $[X,\B\GL(n;\mathbb{R})]$, and in the complex case $[X,\B\GL(n;\mathbb{C})]$; and indeed we shall soon see that these $\B\GL(n; \mathbb{R})$ and $\B\GL(n; \mathbb{C})$ are none other than the (real/complex) Grassmannians.
 
 ::: Lemma 9
 The construction of classifying spaces is functorial in $G$. Given a continuous group homomorphism $\phi:G\rightarrow H$, changing the $G$-action on $\E G$ to an $H$-action via $\phi$ yields the associated bundle $\E G\times_G H$, and the morphism classifying it induces $\B\phi:\B G\rightarrow \B H$. This satisfies $\B(\psi\circ\phi)\simeq \B\psi\circ \B\phi$, making $G\mapsto \B G$ a functor on the homotopy category. For instance, the inclusion $\Umat(n)\hookrightarrow\GL(n;\mathbb{C})$ induces $\B\Umat(n)\rightarrow \B\GL(n;\mathbb{C})$, which will be used below.
 :::
 ::: Proof
-The $\B G$ from [Theorem 7](#thm7) is a CW complex, hence paracompact Hausdorff, so we may apply [Theorem 8](#thm8) to principal bundles over $\B G$. Now $\B\phi$ is determined by $\B\phi^\ast\E H\cong\E G\times_G H$, and since forming associated bundles commutes with pullback, for a continuous group homomorphism $\psi:H\rightarrow K$ we obtain
+The $\B G$ from [Theorem 7](#thm7){: data-relation="required" } is a CW complex, hence paracompact Hausdorff, so we may apply [Theorem 8](#thm8){: data-relation="required" } to principal bundles over $\B G$. Now $\B\phi$ is determined by $\B\phi^\ast\E H\cong\E G\times_G H$, and since forming associated bundles commutes with pullback, for a continuous group homomorphism $\psi:H\rightarrow K$ we obtain
 
 $$(\B\psi\circ\B\phi)^\ast\E K\cong\B\phi^\ast\left(\E H\times_H K\right)\cong\left(\B\phi^\ast\E H\right)\times_H K\cong\left(\E G\times_G H\right)\times_H K\cong \E G\times_G K.$$
 
-In the last term, the action of $G$ on $K$ is via $\psi\circ\phi$, so this is exactly the bundle classified by $\B(\psi\circ\phi)$; hence $\B\psi\circ\B\phi$ and $\B(\psi\circ\phi)$ classify the same principal $K$-bundle over $\B G$. Then by the injectivity in [Theorem 8](#thm8), they are homotopic.
+In the last term, the action of $G$ on $K$ is via $\psi\circ\phi$, so this is exactly the bundle classified by $\B(\psi\circ\phi)$; hence $\B\psi\circ\B\phi$ and $\B(\psi\circ\phi)$ classify the same principal $K$-bundle over $\B G$. Then by the injectivity in [Theorem 8](#thm8){: data-relation="required" }, they are homotopic.
 :::
 
 ## Examples of Classifying Spaces
@@ -203,9 +203,9 @@ In practice, the most useful part of this post is not the existence result but r
 ::: Example 10
 Suppose $G$ is a discrete group. Then any principal $G$-bundle over a base $B$ has discrete fiber, so it becomes a covering space over $B$. From this perspective, the right action of $G$ becomes the Deck transformation, and since the Deck group acts transitively on the fiber, this covering space is a *regular* covering space.
 
-Now apply this to the universal bundle $\E G \rightarrow \B G$. Since $\E G$ is contractible, it is the universal cover of $\B G$, and since the $\B G$ from [Theorem 7](#thm7) is a connected CW complex, the conditions required by covering space theory (path-connected, locally path-connected, and semi-locally simply connected) are all satisfied. Then, as we saw in [§Covering Spaces, §§Fundamental Theorems of Covering Spaces](/en/math/algebraic_topology/covering_spaces#fundamental-theorems-of-covering-spaces), the Deck transformation group of this covering space is isomorphic to $\pi_1(\B G)$; but we observed earlier that this Deck group must be $G$, so $\pi_1(\B G)\cong G$, and since $\E G$ is contractible the universal cover of $\B G$ is also contractible, hence $\pi_n(\B G)=0$ for $n\geq 2$. That is, $\B G$ is an Eilenberg–MacLane space $K(G,1)$.
+Now apply this to the universal bundle $\E G \rightarrow \B G$. Since $\E G$ is contractible, it is the universal cover of $\B G$, and since the $\B G$ from [Theorem 7](#thm7){: data-relation="required" } is a connected CW complex, the conditions required by covering space theory (path-connected, locally path-connected, and semi-locally simply connected) are all satisfied. Then, as we saw in [§Covering Spaces, §§Fundamental Theorems of Covering Spaces](/en/math/algebraic_topology/covering_spaces#fundamental-theorems-of-covering-spaces){: data-relation="required" }, the Deck transformation group of this covering space is isomorphic to $\pi_1(\B G)$; but we observed earlier that this Deck group must be $G$, so $\pi_1(\B G)\cong G$, and since $\E G$ is contractible the universal cover of $\B G$ is also contractible, hence $\pi_n(\B G)=0$ for $n\geq 2$. That is, $\B G$ is an Eilenberg–MacLane space $K(G,1)$.
 
-For more concrete examples, let us consider the cases $G=\mathbb{Z}/2$ and $G=\mathbb{Z}$. First, for $\mathbb{Z}/2$ we need a contractible space on which $\mathbb{Z}/2$ acts freely, and the antipodal action on $S^\infty$ satisfies both of these conditions. Then the orbit space of this action is $\RP^\infty$. The case $G=\mathbb{Z}$ can also be found in a familiar example: namely, the covering $\mathbb{R}\rightarrow S^1$ introduced in [§Covering Spaces, ⁋Definition 3](/en/math/algebraic_topology/covering_spaces#def3) as the standard example of a covering space.
+For more concrete examples, let us consider the cases $G=\mathbb{Z}/2$ and $G=\mathbb{Z}$. First, for $\mathbb{Z}/2$ we need a contractible space on which $\mathbb{Z}/2$ acts freely, and the antipodal action on $S^\infty$ satisfies both of these conditions. Then the orbit space of this action is $\RP^\infty$. The case $G=\mathbb{Z}$ can also be found in a familiar example: namely, the covering $\mathbb{R}\rightarrow S^1$ introduced in [§Covering Spaces, ⁋Definition 3](/en/math/algebraic_topology/covering_spaces#def3){: data-relation="weak" } as the standard example of a covering space.
 :::
 
 Now let us examine the classifying spaces of the groups we are actually interested in. Among non-discrete groups, the most basic example is $G=S^1$, which is commonly thought of as the set of complex numbers of length $1$, that is, the $e^{2\pi it}$. Then $S^1$ acts freely on $\mathbb{C}^\infty\setminus\{0\}$ by scalar multiplication.
@@ -226,17 +226,17 @@ appearing in the definition of $S^\infty$, so the result is the same as $S^\inft
 
 $$\B S^1=S^\infty/S^1=\CP^\infty.$$
 
-To see what this means in the language of vector bundles, let us return to the associated bundle of [Definition 3](#def3). Since $S^1$ acts on $\mathbb{C}$ by scalar multiplication, for any principal $S^1$-bundle $P\rightarrow X$ the associated bundle
+To see what this means in the language of vector bundles, let us return to the associated bundle of [Definition 3](#def3){: data-relation="required" }. Since $S^1$ acts on $\mathbb{C}$ by scalar multiplication, for any principal $S^1$-bundle $P\rightarrow X$ the associated bundle
 
 $$P\times_{S^1}\mathbb{C}\rightarrow X$$
 
-is defined. As we saw earlier, this is a bundle with fiber $\mathbb{C}$ over the same open cover as $P$ and transition functions given by the action of $g_{ij}$ on $\mathbb{C}$; since scalar multiplication is $\mathbb{C}$-linear, these transitions are linear automorphisms given by elements of $S^1\subseteq\mathbb{C}^\times=\GL(1;\mathbb{C})$, and hence $P\times_{S^1}\mathbb{C}$ is a complex line bundle. That is, a principal $S^1$-bundle naturally becomes a line bundle simply by attaching $\mathbb{C}$. Conversely, given a line bundle $L\rightarrow X$, paracompactness allows us to choose a Hermitian metric, and the sphere bundle $S(L)\subseteq L$ consisting of unit vectors in each fiber becomes a principal $S^1$-bundle under scalar multiplication by $S^1$. By the same argument as in [Proposition 4](#prop4), where ordered bases were replaced by unit vectors, one can verify that these two constructions are inverse to each other, and this is why the structure group of a line bundle can be reduced from $\GL(1;\mathbb{C})$ to $S^1=\Umat(1)$.
+is defined. As we saw earlier, this is a bundle with fiber $\mathbb{C}$ over the same open cover as $P$ and transition functions given by the action of $g_{ij}$ on $\mathbb{C}$; since scalar multiplication is $\mathbb{C}$-linear, these transitions are linear automorphisms given by elements of $S^1\subseteq\mathbb{C}^\times=\GL(1;\mathbb{C})$, and hence $P\times_{S^1}\mathbb{C}$ is a complex line bundle. That is, a principal $S^1$-bundle naturally becomes a line bundle simply by attaching $\mathbb{C}$. Conversely, given a line bundle $L\rightarrow X$, paracompactness allows us to choose a Hermitian metric, and the sphere bundle $S(L)\subseteq L$ consisting of unit vectors in each fiber becomes a principal $S^1$-bundle under scalar multiplication by $S^1$. By the same argument as in [Proposition 4](#prop4){: data-relation="required" }, where ordered bases were replaced by unit vectors, one can verify that these two constructions are inverse to each other, and this is why the structure group of a line bundle can be reduced from $\GL(1;\mathbb{C})$ to $S^1=\Umat(1)$.
 
 Applying this explicitly to the universal bundle $\E S^1=S^\infty\rightarrow\CP^\infty$ yields the line bundle
 
 $$S^\infty\times_{S^1}\mathbb{C}\longrightarrow\CP^\infty.$$
 
-Examining the fiber over a point $[\ell]\in\CP^\infty$, the equivalence class $[e,z]$ equals $ze\in\ell$ where the unit vector $e$ determines the line $\ell=\mathbb{C}e$, so this is the tautological line bundle $\gamma$ having each line as its own fiber. That is, the reason $\gamma$ was the universal family of complex line bundles in [§Characteristic Classes of Vector Bundles, ⁋Example 8](/en/math/algebraic_topology/characteristic_classes#ex8) is that attaching $\mathbb{C}$ to the universal principal $S^1$-bundle yields exactly $\gamma$, and conversely the $S^\infty$ appearing there as the sphere bundle of $\gamma$ is precisely $\E S^1$.
+Examining the fiber over a point $[\ell]\in\CP^\infty$, the equivalence class $[e,z]$ equals $ze\in\ell$ where the unit vector $e$ determines the line $\ell=\mathbb{C}e$, so this is the tautological line bundle $\gamma$ having each line as its own fiber. That is, the reason $\gamma$ was the universal family of complex line bundles in [§Characteristic Classes of Vector Bundles, ⁋Example 8](/en/math/algebraic_topology/characteristic_classes#ex8){: data-relation="weak" } is that attaching $\mathbb{C}$ to the universal principal $S^1$-bundle yields exactly $\gamma$, and conversely the $S^\infty$ appearing there as the sphere bundle of $\gamma$ is precisely $\E S^1$.
 
 ::: Example 11 (Classifying Spaces of Linear Groups)
 The above discussion generalizes to arbitrary rank $n$ bundles. First, observe that if a continuous representation
@@ -261,7 +261,7 @@ $$\B\Umat(n)=\Gr(n,\mathbb{C}^\infty)$$
 
 and the universal bundle over it is the tautological $n$-plane bundle.
 
-On the other hand, [Proposition 4](#prop4) (more precisely, the complex version of that proposition) assigns to rank $n$ complex vector bundles a process that strictly speaking uses associated bundles via principal $\GL(n;\mathbb{C})$-bundles. That is, for the above computation to lead to the classification of arbitrary complex vector bundles, $\B\GL(n;\mathbb{C})$ and $\B\Umat(n)$ must be the same, and indeed they are. This follows from [\[Linear Algebra\] §Complex Inner Product Spaces, ⁋Proposition 7](/en/math/linear_algebra/complex_inner_product_spaces#prop7): any element of $\GL(n;\mathbb{C})$ decomposes uniquely as a product of a unitary matrix and an upper-triangular matrix with positive diagonal entries, and one can show that this decomposition is continuous. Contracting the upper-triangular component toward the identity then gives a deformation retract of $\GL(n;\mathbb{C})$ onto $\Umat(n)$. That is, the inclusion $\Umat(n)\hookrightarrow\GL(n;\mathbb{C})$ is a homotopy equivalence, and by the functoriality of classifying spaces [Lemma 9](#lem9),
+On the other hand, [Proposition 4](#prop4){: data-relation="required" } (more precisely, the complex version of that proposition) assigns to rank $n$ complex vector bundles a process that strictly speaking uses associated bundles via principal $\GL(n;\mathbb{C})$-bundles. That is, for the above computation to lead to the classification of arbitrary complex vector bundles, $\B\GL(n;\mathbb{C})$ and $\B\Umat(n)$ must be the same, and indeed they are. This follows from [\[Linear Algebra\] §Complex Inner Product Spaces, ⁋Proposition 7](/en/math/linear_algebra/complex_inner_product_spaces#prop7){: data-relation="required" }: any element of $\GL(n;\mathbb{C})$ decomposes uniquely as a product of a unitary matrix and an upper-triangular matrix with positive diagonal entries, and one can show that this decomposition is continuous. Contracting the upper-triangular component toward the identity then gives a deformation retract of $\GL(n;\mathbb{C})$ onto $\Umat(n)$. That is, the inclusion $\Umat(n)\hookrightarrow\GL(n;\mathbb{C})$ is a homotopy equivalence, and by the functoriality of classifying spaces [Lemma 9](#lem9){: data-relation="required" },
 
 $$\B\GL(n;\mathbb{C})\simeq \B\Umat(n)=\Gr(n,\mathbb{C}^\infty).$$
 
@@ -272,9 +272,9 @@ $$\B\GL(n;\mathbb{R})\simeq \B\Omat(n)=\Gr(n,\mathbb{R}^\infty).$$
 
 ## Cohomology of Classifying Spaces
 
-By [Theorem 8](#thm8), characteristic classes of bundles with structure group $G$ are precisely cohomology classes of $\B G$ pulled back via the classifying map. Thus characteristic class theory is the same as computing the cohomology ring of $\B G$, and we summarize this for the most basic groups.
+By [Theorem 8](#thm8){: data-relation="required" }, characteristic classes of bundles with structure group $G$ are precisely cohomology classes of $\B G$ pulled back via the classifying map. Thus characteristic class theory is the same as computing the cohomology ring of $\B G$, and we summarize this for the most basic groups.
 
-The starting point is the cohomology ring of complex projective space. In [§Characteristic Classes of Vector Bundles, ⁋Example 8](/en/math/algebraic_topology/characteristic_classes#ex8) we saw that
+The starting point is the cohomology ring of complex projective space. In [§Characteristic Classes of Vector Bundles, ⁋Example 8](/en/math/algebraic_topology/characteristic_classes#ex8){: data-relation="required" } we saw that
 
 $$H^\bullet(\CP^\infty;\mathbb{Z})=\mathbb{Z}[t],\qquad \lvert t\rvert=2$$
 
@@ -292,7 +292,7 @@ $$H^\bullet(\B T;\mathbb{Z})=\mathbb{Z}[t_1,\ldots,t_n],\qquad \lvert t_i\rvert=
 is a polynomial ring generated by $n$ generators of degree $2$. Moreover, the degree $2$ part $H^2(\B T;\mathbb{Z})$ is canonically isomorphic to $\Hom(T,S^1)$.
 :::
 ::: Proof
-Since $\B T=(\CP^\infty)^n$, let $\pi_i:\B T\rightarrow\CP^\infty$ be the projection onto the $i$-th factor. From the computation $\B S^1=\CP^\infty$ in the previous section, the cohomology of each factor $H^\bullet(\CP^\infty;\mathbb{Z})=\mathbb{Z}[t]$ is a free abelian group of finite rank in each degree, so by the Künneth formula for cohomology given by [§Cohomology, ⁋Corollary 10](/en/math/algebraic_topology/cohomology#cor10) and [§Cohomology, ⁋Theorem 5](/en/math/algebraic_topology/cohomology#thm5), the $\Tor$ and $\Ext$ terms all vanish. Thus the cross product is an isomorphism in each degree, and by [§Cup Product, ⁋Proposition 3](/en/math/algebraic_topology/cup_products#prop3) this is a graded algebra homomorphism, so by induction on the number of factors we obtain the ring isomorphism
+Since $\B T=(\CP^\infty)^n$, let $\pi_i:\B T\rightarrow\CP^\infty$ be the projection onto the $i$-th factor. From the computation $\B S^1=\CP^\infty$ in the previous section, the cohomology of each factor $H^\bullet(\CP^\infty;\mathbb{Z})=\mathbb{Z}[t]$ is a free abelian group of finite rank in each degree, so by the Künneth formula for cohomology given by [§Cohomology, ⁋Corollary 10](/en/math/algebraic_topology/cohomology#cor10){: data-relation="required" } and [§Cohomology, ⁋Theorem 5](/en/math/algebraic_topology/cohomology#thm5){: data-relation="required" }, the $\Tor$ and $\Ext$ terms all vanish. Thus the cross product is an isomorphism in each degree, and by [§Cup Product, ⁋Proposition 3](/en/math/algebraic_topology/cup_products#prop3){: data-relation="required" } this is a graded algebra homomorphism, so by induction on the number of factors we obtain the ring isomorphism
 
 $$H^\bullet(\B T;\mathbb{Z})\cong\bigotimes_{i=1}^n \mathbb{Z}[t_i]=\mathbb{Z}[t_1,\ldots,t_n]$$
 
@@ -323,17 +323,17 @@ We have $\B\Umat(n)=\Gr(n,\mathbb{C}^\infty)$, and the fact that its cohomology 
 
 $$H^\bullet(\Gr(n,\mathbb{C}^\infty);\mathbb{Z})=\mathbb{Z}[c_1,\ldots,c_n],$$
 
-was already discussed after [§Characteristic Classes of Vector Bundles, ⁋Example 8](/en/math/algebraic_topology/characteristic_classes#ex8). Thus it suffices to show that the generators are Chern classes and that $\lvert c_i\rvert=2i$.
+was already discussed after [§Characteristic Classes of Vector Bundles, ⁋Example 8](/en/math/algebraic_topology/characteristic_classes#ex8){: data-relation="required" }. Thus it suffices to show that the generators are Chern classes and that $\lvert c_i\rvert=2i$.
 
-This computation is essentially the same as [Corollary 12](#cor12), and the key point is, just as before, the map $\B T\rightarrow\B\Umat(n)$ obtained by including the maximal torus $T=(S^1)^n\subseteq\Umat(n)$ as diagonal matrices. Restricting the canonical representation $\mathbb{C}^n$ of $\Umat(n)$ to $T$ splits along the coordinate axes as
+This computation is essentially the same as [Corollary 12](#cor12){: data-relation="required" }, and the key point is, just as before, the map $\B T\rightarrow\B\Umat(n)$ obtained by including the maximal torus $T=(S^1)^n\subseteq\Umat(n)$ as diagonal matrices. Restricting the canonical representation $\mathbb{C}^n$ of $\Umat(n)$ to $T$ splits along the coordinate axes as
 
 $$\mathbb{C}^n=L_1\oplus\cdots\oplus L_n,$$
 
-and $T$ acts on the $i$-th line $L_i$ exactly by the character $\pr_i$. Therefore the pullback of the universal bundle $E$ to $\B T$ is the sum $\bigoplus_i\mathcal{L}_i$ of the line bundles associated to each character, and its $i$-th summand is precisely the line bundle for which we already computed $c_1(\mathcal{L}_i)=(\B\pr_i)^\ast t=t_i$ in [Corollary 12](#cor12). Applying the Whitney formula gives
+and $T$ acts on the $i$-th line $L_i$ exactly by the character $\pr_i$. Therefore the pullback of the universal bundle $E$ to $\B T$ is the sum $\bigoplus_i\mathcal{L}_i$ of the line bundles associated to each character, and its $i$-th summand is precisely the line bundle for which we already computed $c_1(\mathcal{L}_i)=(\B\pr_i)^\ast t=t_i$ in [Corollary 12](#cor12){: data-relation="required" }. Applying the Whitney formula gives
 
 $$c(E)\vert_{\B T}=\prod_{i=1}^n(1+t_i);\qquad c_i\vert_{\B T}=e_i(t_1,\ldots,t_n).$$
 
-Here $e_i$ is the $i$-th elementary symmetric polynomial, and since $\lvert t_i\rvert=2$, we have $\lvert c_i\rvert=2i$. What remains is that $H^\bullet(\B\Umat(n);\mathbb{Z})\rightarrow H^\bullet(\B T;\mathbb{Z})=\mathbb{Z}[t_1,\ldots,t_n]$ is injective and its image is the invariant ring $\mathbb{Z}[t_1,\ldots,t_n]^{S_n}$ under the Weyl group $S_n$; since symmetric polynomials with integer coefficients are freely generated by elementary symmetric polynomials, we have $\mathbb{Z}[t_1,\ldots,t_n]^{S_n}=\mathbb{Z}[e_1,\ldots,e_n]=\mathbb{Z}[c_1,\ldots,c_n]$, and hence the cohomology of $\B\Umat(n)$ is exactly the $S_n$-symmetric part of the polynomial ring in [Corollary 12](#cor12). We refer to [MS] for the detailed computation.
+Here $e_i$ is the $i$-th elementary symmetric polynomial, and since $\lvert t_i\rvert=2$, we have $\lvert c_i\rvert=2i$. What remains is that $H^\bullet(\B\Umat(n);\mathbb{Z})\rightarrow H^\bullet(\B T;\mathbb{Z})=\mathbb{Z}[t_1,\ldots,t_n]$ is injective and its image is the invariant ring $\mathbb{Z}[t_1,\ldots,t_n]^{S_n}$ under the Weyl group $S_n$; since symmetric polynomials with integer coefficients are freely generated by elementary symmetric polynomials, we have $\mathbb{Z}[t_1,\ldots,t_n]^{S_n}=\mathbb{Z}[e_1,\ldots,e_n]=\mathbb{Z}[c_1,\ldots,c_n]$, and hence the cohomology of $\B\Umat(n)$ is exactly the $S_n$-symmetric part of the polynomial ring in [Corollary 12](#cor12){: data-relation="required" }. We refer to [MS] for the detailed computation.
 :::
 
 Thus, since the cohomology of $\B\Umat(n)$ consists entirely of polynomials in the Chern classes, every characteristic class of a complex vector bundle is a polynomial in the Chern classes. In the same way, $H^\bullet(\B\Omat(n);\mathbb{Z}/2)=\mathbb{Z}/2[w_1,\ldots,w_n]$ gives the Stiefel–Whitney classes, and for oriented bundles $\B\SO(n)$ gives the Euler class. When dealing with spaces equipped with a $G$-action instead of a single space $X$, $\B G$ and the homotopy quotient over it form the foundation of equivariant cohomology, taking this cohomology as its base.
