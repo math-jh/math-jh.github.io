@@ -25,7 +25,7 @@ $$\widehat{G}_\mathcal{J}=\varprojlim_i G/H_i=\left\{(g_1,g_2,\ldots)\in \prod G
 
 그리고 canonical morphism들 $\rho_i:\widehat{G}_{\mathcal{J}} \rightarrow G/ H_i$들이 주어지며, 이 때 $\rho_{ji}\circ\rho_j=\rho_i$가 모든 $j>i$에 대해 성립한다. 표기의 편의를 위해 $\mathcal{J}$가 문맥에 따라 명확할 경우 이를 간단히 $\widehat{G}$로 쓰기도 한다.
 
-그럼 이들은 [\[범주론\] §극한, ⁋예시 5](/ko/math/category_theory/limits#ex5)에서 살펴본 것과 같이 categorical limit으로 생각할 수 있으며, 따라서 다음의 universal property 또한 만족한다.
+그럼 이들은 [\[범주론\] §극한, ⁋예시 5](/ko/math/category_theory/limits#ex5){: data-relation="weak" }에서 살펴본 것과 같이 categorical limit으로 생각할 수 있으며, 따라서 다음의 universal property 또한 만족한다.
 
 > $\rho_{ji}\circ\pi_j=\pi_i$를 만족하는 $K \rightarrow G/H_i$들이 주어질 때마다, 유일한 $\pi:K \rightarrow \widehat{G}$가 존재하여 다음의 diagram
 > 
@@ -36,7 +36,7 @@ $$\widehat{G}_\mathcal{J}=\varprojlim_i G/H_i=\left\{(g_1,g_2,\ldots)\in \prod G
 만일 $G$에 ring 구조가 주어져 있고 $H_i$들이 ideal들이었다면 $\widehat{G}$ 또한 자연스러운 ring 구조를 갖는다. 우리가 살펴볼 상황은 다음과 같은 상황이다. 
 
 ::: 정의 1
-Ring $A$와 ideal $\mathfrak{a}$를 고정하자. 그럼 $A$의 ideal들의 $\mathfrak{a}$-filtration ([§부풀림 대수, ⁋정의 3](/ko/math/commutative_algebra/blowup_algebra#def3))
+Ring $A$와 ideal $\mathfrak{a}$를 고정하자. 그럼 $A$의 ideal들의 $\mathfrak{a}$-filtration ([§부풀림 대수, ⁋정의 3](/ko/math/commutative_algebra/blowup_algebra#def3){: data-relation="required" })
 
 $$\mathcal{J}:\qquad A=\mathfrak{a}_0\supseteq \mathfrak{a}_1\supseteq \mathfrak{a}_2\cdots$$
 
@@ -89,9 +89,9 @@ $$G=H_0\supseteq H_1\supseteq\cdots$$
 
 $$\mathcal{N}(0)=\{U\subseteq G\mid\text{$H_n\subseteq U$ for some $n$}\}$$
 
-으로 정의하면 이것이 [\[위상수학\] §열린집합, ⁋명제 6](/ko/math/topology/open_sets#prop6)의 모든 조건을 만족한다는 것을 안다. 이제 임의의 $g\in G$와 $U\in \mathcal{N}(0)$에 대하여, $g+U\in \mathcal{N}(g)$이도록 하면 이것이 $G$ 위에 위상구조를 준다. 
+으로 정의하면 이것이 [\[위상수학\] §열린집합, ⁋명제 6](/ko/math/topology/open_sets#prop6){: data-relation="required" }의 모든 조건을 만족한다는 것을 안다. 이제 임의의 $g\in G$와 $U\in \mathcal{N}(0)$에 대하여, $g+U\in \mathcal{N}(g)$이도록 하면 이것이 $G$ 위에 위상구조를 준다. 
 
-특별히 이를 [정의 1](#def1)의 상황에 대입하면 위의 과정을 통해 정의한 위상구조를 *$\mathfrak{a}$-adic topology<sub>$\mathfrak{a}$진 위상</sub>*이라 부른다. 이 때, $0\in A$는 countable local base
+특별히 이를 [정의 1](#def1){: data-relation="required" }의 상황에 대입하면 위의 과정을 통해 정의한 위상구조를 *$\mathfrak{a}$-adic topology<sub>$\mathfrak{a}$진 위상</sub>*이라 부른다. 이 때, $0\in A$는 countable local base
 
 $$\mathfrak{a}\supseteq \mathfrak{a}^2\supseteq\cdots\tag{2}$$
 
@@ -121,11 +121,11 @@ $$m,n>N \implies x_m-y_n\in U$$
 
 $$\widehat{U}=\{[(x_n)]\in \widehat{G}\mid\text{for any $(y_n)\in [(x_n)]$, $y_n\in U$ for all but finitely many $n$}\}$$
 
-으로 정의하자. 그럼 약간의 계산을 통해, $\widehat{H}_i$들을 coinitial subset으로 갖는 $\widehat{G}$의 집합들의 모임 $\mathcal{N}(0)$이 [\[위상수학\] §열린집합, ⁋명제 6](/ko/math/topology/open_sets#prop6)의 모든 조건을 만족한다는 것을 확인할 수 있고, 따라서 $\widehat{G}$에 위상구조를 정의할 수 있다. 정의에 의해 $\widehat{G}$ 또한 first countable이며, $x\in G$를 받아 상수수열 $(x_i=x)$를 내놓는 함수 $G \rightarrow \widehat{G}$가 연속임을 알 수 있다. 뿐만 아니라, 이 함수는 앞선 절에서 정의한 $G \rightarrow \widehat{G}$와 완전히 같은 것이다. 
+으로 정의하자. 그럼 약간의 계산을 통해, $\widehat{H}_i$들을 coinitial subset으로 갖는 $\widehat{G}$의 집합들의 모임 $\mathcal{N}(0)$이 [\[위상수학\] §열린집합, ⁋명제 6](/ko/math/topology/open_sets#prop6){: data-relation="required" }의 모든 조건을 만족한다는 것을 확인할 수 있고, 따라서 $\widehat{G}$에 위상구조를 정의할 수 있다. 정의에 의해 $\widehat{G}$ 또한 first countable이며, $x\in G$를 받아 상수수열 $(x_i=x)$를 내놓는 함수 $G \rightarrow \widehat{G}$가 연속임을 알 수 있다. 뿐만 아니라, 이 함수는 앞선 절에서 정의한 $G \rightarrow \widehat{G}$와 완전히 같은 것이다. 
 
 ## 완비화의 기본적인 성질들
 
-이제 completion의 기본적인 성질들에 대해 살펴보자. 앞서 살펴본 [정의 3](#def3)에 의하여 $\widehat{A}$의 임의의 원소는 $A$의 $\mathfrak{a}$-adic topology에서의 Cauchy sequence로 생각할 수 있다. 그럼 $b_j\in \mathfrak{a}^j$를 만족하는 $b_j$들에 대하여,
+이제 completion의 기본적인 성질들에 대해 살펴보자. 앞서 살펴본 [정의 3](#def3){: data-relation="required" }에 의하여 $\widehat{A}$의 임의의 원소는 $A$의 $\mathfrak{a}$-adic topology에서의 Cauchy sequence로 생각할 수 있다. 그럼 $b_j\in \mathfrak{a}^j$를 만족하는 $b_j$들에 대하여,
 
 $$a_i=\sum_{j=1}^i b_j\tag{3}$$
 
@@ -174,10 +174,10 @@ $$U=\{1+a\mid a\in \mathfrak{a}\}$$
 Local ring $(A, \mathfrak{m})$에 대하여, $A[[\x_1,\ldots, \x_n]]$도 local ring이며, 그 유일한 maximal ideal은 $\mathfrak{m}+(\x_1,\ldots, \x_n)$이다. 
 :::
 ::: 증명
-$\mathfrak{m}+(\x_1,\ldots,\x_n)$ 바깥의 원소는 상수항이 $\mathfrak{m}$에 속하지 않아 그 상수항이 $A$의 unit이므로, [명제 5](#prop5)에 의해 이것이 unit임을 보일 수 있다. 
+$\mathfrak{m}+(\x_1,\ldots,\x_n)$ 바깥의 원소는 상수항이 $\mathfrak{m}$에 속하지 않아 그 상수항이 $A$의 unit이므로, [명제 5](#prop5){: data-relation="required" }에 의해 이것이 unit임을 보일 수 있다. 
 :::
 
-다시 [정의 1](#def1)의 상황으로 돌아와, $\mathfrak{a}$가 maximal ideal이고 $\widehat{A}$가 이에 대한 $\mathfrak{a}$-adic completion인 경우를 살펴보자. 우선 $\widehat{A}/\widehat{\mathfrak{a}}_1\cong A/\mathfrak{a}$가 field이므로 $\widehat{\mathfrak{a}}_1$은 $\widehat{A}$의 maximal ideal이다. 또 $k>1$일 때 $\rho_1=\rho_{k1}\circ\rho_k$이고 $\widehat{\mathfrak{a}}_1=\ker\rho_1$이므로 $\rho_k(\widehat{\mathfrak{a}}_1)\subseteq \ker\rho_{k1}=\mathfrak{a}/\mathfrak{a}^k$이며, 따라서 $\rho_k(\widehat{\mathfrak{a}}_1^k)\subseteq (\mathfrak{a}/\mathfrak{a}^k)^k=0$, 즉 $\widehat{\mathfrak{a}}_1^k\subseteq \ker \rho_k=\widehat{\mathfrak{a}}_k$이다. 그럼 임의의 $a\in \widehat{\mathfrak{a}}_1$에 대하여 $(-a)^k\in \widehat{\mathfrak{a}}_k$이므로 급수 $\sum_{k=0}^\infty (-a)^k$의 부분합들이 $\widehat{A}$의 Cauchy sequence를 이루고, $\widehat{A}$가 filtration (1)에 대해 complete이므로 [명제 5](#prop5)의 논증이 그대로 적용되어 $1+a$는 unit이 된다. 이제 $x\in \widehat{A}$가 $\widehat{\mathfrak{a}}_1$에 속하지 않는다 하면 $\widehat{A}/\widehat{\mathfrak{a}}_1$이 field이므로 $xy-1\in \widehat{\mathfrak{a}}_1$인 $y$가 존재하고, 앞의 결과로부터 $xy$가 unit이므로 $x$ 또한 unit이다. 즉 $\widehat{\mathfrak{a}}_1$에 속하지 않는 $\widehat{A}$의 원소는 모두 unit이며, 따라서 $\widehat{A}$은 $\widehat{\mathfrak{a}}_1$을 유일한 maximal ideal로 갖는 local ring이다.
+다시 [정의 1](#def1){: data-relation="required" }의 상황으로 돌아와, $\mathfrak{a}$가 maximal ideal이고 $\widehat{A}$가 이에 대한 $\mathfrak{a}$-adic completion인 경우를 살펴보자. 우선 $\widehat{A}/\widehat{\mathfrak{a}}_1\cong A/\mathfrak{a}$가 field이므로 $\widehat{\mathfrak{a}}_1$은 $\widehat{A}$의 maximal ideal이다. 또 $k>1$일 때 $\rho_1=\rho_{k1}\circ\rho_k$이고 $\widehat{\mathfrak{a}}_1=\ker\rho_1$이므로 $\rho_k(\widehat{\mathfrak{a}}_1)\subseteq \ker\rho_{k1}=\mathfrak{a}/\mathfrak{a}^k$이며, 따라서 $\rho_k(\widehat{\mathfrak{a}}_1^k)\subseteq (\mathfrak{a}/\mathfrak{a}^k)^k=0$, 즉 $\widehat{\mathfrak{a}}_1^k\subseteq \ker \rho_k=\widehat{\mathfrak{a}}_k$이다. 그럼 임의의 $a\in \widehat{\mathfrak{a}}_1$에 대하여 $(-a)^k\in \widehat{\mathfrak{a}}_k$이므로 급수 $\sum_{k=0}^\infty (-a)^k$의 부분합들이 $\widehat{A}$의 Cauchy sequence를 이루고, $\widehat{A}$가 filtration (1)에 대해 complete이므로 [명제 5](#prop5){: data-relation="required" }의 논증이 그대로 적용되어 $1+a$는 unit이 된다. 이제 $x\in \widehat{A}$가 $\widehat{\mathfrak{a}}_1$에 속하지 않는다 하면 $\widehat{A}/\widehat{\mathfrak{a}}_1$이 field이므로 $xy-1\in \widehat{\mathfrak{a}}_1$인 $y$가 존재하고, 앞의 결과로부터 $xy$가 unit이므로 $x$ 또한 unit이다. 즉 $\widehat{\mathfrak{a}}_1$에 속하지 않는 $\widehat{A}$의 원소는 모두 unit이며, 따라서 $\widehat{A}$은 $\widehat{\mathfrak{a}}_1$을 유일한 maximal ideal로 갖는 local ring이다.
 
 또, 다음이 성립한다.
 

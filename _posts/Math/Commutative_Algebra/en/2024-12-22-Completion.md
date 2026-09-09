@@ -26,7 +26,7 @@ $$\widehat{G}_\mathcal{J}=\varprojlim_i G/H_i=\left\{(g_1,g_2,\ldots)\in \prod G
 
 together with canonical morphisms $\rho_i:\widehat{G}_{\mathcal{J}} \rightarrow G/ H_i$, which satisfy $\rho_{ji}\circ\rho_j=\rho_i$ for all $j>i$. For notational convenience, when $\mathcal{J}$ is clear from context we simply write $\widehat{G}$.
 
-These data can be regarded as a categorical limit, as we saw in [\[Category Theory\] §Limits, ⁋Example 5](/en/math/category_theory/limits#ex5), and therefore they also satisfy the following universal property.
+These data can be regarded as a categorical limit, as we saw in [\[Category Theory\] §Limits, ⁋Example 5](/en/math/category_theory/limits#ex5){: data-relation="weak" }, and therefore they also satisfy the following universal property.
 
 > Whenever maps $K \rightarrow G/H_i$ satisfying $\rho_{ji}\circ\pi_j=\pi_i$ are given, there exists a unique $\pi:K \rightarrow \widehat{G}$ making the following diagram
 > 
@@ -37,7 +37,7 @@ These data can be regarded as a categorical limit, as we saw in [\[Category Theo
 If $G$ carries a ring structure and the $H_i$ are ideals, then $\widehat{G}$ also carries a natural ring structure. The situation we will consider is the following.
 
 ::: Definition 1
-Fix a ring $A$ and an ideal $\mathfrak{a}$. Then for an $\mathfrak{a}$-filtration of ideals of $A$ ([§Blowup Algebras, ⁋Definition 3](/en/math/commutative_algebra/blowup_algebra#def3))
+Fix a ring $A$ and an ideal $\mathfrak{a}$. Then for an $\mathfrak{a}$-filtration of ideals of $A$ ([§Blowup Algebras, ⁋Definition 3](/en/math/commutative_algebra/blowup_algebra#def3){: data-relation="required" })
 
 $$\mathcal{J}:\qquad A=\mathfrak{a}_0\supseteq \mathfrak{a}_1\supseteq \mathfrak{a}_2\cdots$$
 
@@ -90,9 +90,9 @@ Then setting
 
 $$\mathcal{N}(0)=\{U\subseteq G\mid\text{$H_n\subseteq U$ for some $n$}\}$$
 
-we know that this satisfies all the conditions of [\[Topology\] §Open Sets, ⁋Proposition 6](/en/math/topology/open_sets#prop6). Now, for arbitrary $g\in G$ and $U\in \mathcal{N}(0)$, declaring $g+U\in \mathcal{N}(g)$ gives a topology on $G$.
+we know that this satisfies all the conditions of [\[Topology\] §Open Sets, ⁋Proposition 6](/en/math/topology/open_sets#prop6){: data-relation="required" }. Now, for arbitrary $g\in G$ and $U\in \mathcal{N}(0)$, declaring $g+U\in \mathcal{N}(g)$ gives a topology on $G$.
 
-In particular, applying this to the situation of [Definition 1](#def1), we call the topology defined through the above process the *$\mathfrak{a}$-adic topology*. In this case, since $0\in A$ has the countable local base
+In particular, applying this to the situation of [Definition 1](#def1){: data-relation="required" }, we call the topology defined through the above process the *$\mathfrak{a}$-adic topology*. In this case, since $0\in A$ has the countable local base
 
 $$\mathfrak{a}\supseteq \mathfrak{a}^2\supseteq\cdots\tag{2}$$
 
@@ -122,11 +122,11 @@ Now, for an open neighborhood $U$ of $0\in G$, define
 
 $$\widehat{U}=\{[(x_n)]\in \widehat{G}\mid\text{for any $(y_n)\in [(x_n)]$, $y_n\in U$ for all but finitely many $n$}\}$$
 
-Then a short computation shows that the collection $\mathcal{N}(0)$ of subsets of $\widehat{G}$ having the $\widehat{H}_i$ as a coinitial subset satisfies all the conditions of [\[Topology\] §Open Sets, ⁋Proposition 6](/en/math/topology/open_sets#prop6), and therefore we can define a topology on $\widehat{G}$. By definition, $\widehat{G}$ is also first countable, and one can see that the function $G \rightarrow \widehat{G}$ taking $x\in G$ to the constant sequence $(x_i=x)$ is continuous. Moreover, this function is exactly the same as the map $G \rightarrow \widehat{G}$ defined in the previous section.
+Then a short computation shows that the collection $\mathcal{N}(0)$ of subsets of $\widehat{G}$ having the $\widehat{H}_i$ as a coinitial subset satisfies all the conditions of [\[Topology\] §Open Sets, ⁋Proposition 6](/en/math/topology/open_sets#prop6){: data-relation="required" }, and therefore we can define a topology on $\widehat{G}$. By definition, $\widehat{G}$ is also first countable, and one can see that the function $G \rightarrow \widehat{G}$ taking $x\in G$ to the constant sequence $(x_i=x)$ is continuous. Moreover, this function is exactly the same as the map $G \rightarrow \widehat{G}$ defined in the previous section.
 
 ## Basic Properties of Completion
 
-Let us now examine the basic properties of completion. By [Definition 3](#def3) above, an arbitrary element of $\widehat{A}$ can be thought of as a Cauchy sequence in $A$ with respect to the $\mathfrak{a}$-adic topology. Then, for elements $b_j$ satisfying $b_j\in \mathfrak{a}^j$, writing
+Let us now examine the basic properties of completion. By [Definition 3](#def3){: data-relation="required" } above, an arbitrary element of $\widehat{A}$ can be thought of as a Cauchy sequence in $A$ with respect to the $\mathfrak{a}$-adic topology. Then, for elements $b_j$ satisfying $b_j\in \mathfrak{a}^j$, writing
 
 $$a_i=\sum_{j=1}^i b_j\tag{3}$$
 
@@ -175,10 +175,10 @@ Replace $\x$ with $a$ in the argument above.
 For a local ring $(A, \mathfrak{m})$, $A[[\x_1,\ldots, \x_n]]$ is also a local ring, and its unique maximal ideal is $\mathfrak{m}+(\x_1,\ldots, \x_n)$.
 :::
 ::: Proof
-An element outside $\mathfrak{m}+(\x_1,\ldots,\x_n)$ has constant term not belonging to $\mathfrak{m}$, so its constant term is a unit of $A$; hence by [Proposition 5](#prop5) the element itself is a unit.
+An element outside $\mathfrak{m}+(\x_1,\ldots,\x_n)$ has constant term not belonging to $\mathfrak{m}$, so its constant term is a unit of $A$; hence by [Proposition 5](#prop5){: data-relation="required" } the element itself is a unit.
 :::
 
-Returning once more to the situation of [Definition 1](#def1), let us consider the case where $\mathfrak{a}$ is a maximal ideal and $\widehat{A}$ is its $\mathfrak{a}$-adic completion. First, since $\widehat{A}/\widehat{\mathfrak{a}}_1\cong A/\mathfrak{a}$ is a field, $\widehat{\mathfrak{a}}_1$ is a maximal ideal of $\widehat{A}$. Also, for $k>1$, since $\rho_1=\rho_{k1}\circ\rho_k$ and $\widehat{\mathfrak{a}}_1=\ker\rho_1$, we have $\rho_k(\widehat{\mathfrak{a}}_1)\subseteq \ker\rho_{k1}=\mathfrak{a}/\mathfrak{a}^k$, and therefore $\rho_k(\widehat{\mathfrak{a}}_1^k)\subseteq (\mathfrak{a}/\mathfrak{a}^k)^k=0$, that is, $\widehat{\mathfrak{a}}_1^k\subseteq \ker \rho_k=\widehat{\mathfrak{a}}_k$. Then for an arbitrary $a\in \widehat{\mathfrak{a}}_1$, since $(-a)^k\in \widehat{\mathfrak{a}}_k$, the partial sums of the series $\sum_{k=0}^\infty (-a)^k$ form a Cauchy sequence in $\widehat{A}$, and since $\widehat{A}$ is complete with respect to the filtration (1), the argument of [Proposition 5](#prop5) applies verbatim, so $1+a$ is a unit. Now, if $x\in \widehat{A}$ does not belong to $\widehat{\mathfrak{a}}_1$, then since $\widehat{A}/\widehat{\mathfrak{a}}_1$ is a field there exists $y$ with $xy-1\in \widehat{\mathfrak{a}}_1$, and since $xy$ is a unit by the previous result, $x$ is also a unit. That is, every element of $\widehat{A}$ not belonging to $\widehat{\mathfrak{a}}_1$ is a unit, and therefore $\widehat{A}$ is a local ring with $\widehat{\mathfrak{a}}_1$ as its unique maximal ideal.
+Returning once more to the situation of [Definition 1](#def1){: data-relation="required" }, let us consider the case where $\mathfrak{a}$ is a maximal ideal and $\widehat{A}$ is its $\mathfrak{a}$-adic completion. First, since $\widehat{A}/\widehat{\mathfrak{a}}_1\cong A/\mathfrak{a}$ is a field, $\widehat{\mathfrak{a}}_1$ is a maximal ideal of $\widehat{A}$. Also, for $k>1$, since $\rho_1=\rho_{k1}\circ\rho_k$ and $\widehat{\mathfrak{a}}_1=\ker\rho_1$, we have $\rho_k(\widehat{\mathfrak{a}}_1)\subseteq \ker\rho_{k1}=\mathfrak{a}/\mathfrak{a}^k$, and therefore $\rho_k(\widehat{\mathfrak{a}}_1^k)\subseteq (\mathfrak{a}/\mathfrak{a}^k)^k=0$, that is, $\widehat{\mathfrak{a}}_1^k\subseteq \ker \rho_k=\widehat{\mathfrak{a}}_k$. Then for an arbitrary $a\in \widehat{\mathfrak{a}}_1$, since $(-a)^k\in \widehat{\mathfrak{a}}_k$, the partial sums of the series $\sum_{k=0}^\infty (-a)^k$ form a Cauchy sequence in $\widehat{A}$, and since $\widehat{A}$ is complete with respect to the filtration (1), the argument of [Proposition 5](#prop5){: data-relation="required" } applies verbatim, so $1+a$ is a unit. Now, if $x\in \widehat{A}$ does not belong to $\widehat{\mathfrak{a}}_1$, then since $\widehat{A}/\widehat{\mathfrak{a}}_1$ is a field there exists $y$ with $xy-1\in \widehat{\mathfrak{a}}_1$, and since $xy$ is a unit by the previous result, $x$ is also a unit. That is, every element of $\widehat{A}$ not belonging to $\widehat{\mathfrak{a}}_1$ is a unit, and therefore $\widehat{A}$ is a local ring with $\widehat{\mathfrak{a}}_1$ as its unique maximal ideal.
 
 Also, the following holds.
 
