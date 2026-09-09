@@ -14,7 +14,7 @@ translated_at: 2026-08-19T04:45:05+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-08-19T04:45:05+00:00
 ---
-We have already rigorously defined limits in [§Limits of Functions](/en/math/calculus/functions_and_limits), so we now define continuity on top of that.
+We have already rigorously defined limits in [§Limits of Functions](/en/math/calculus/functions_and_limits){: data-relation="required" }, so we now define continuity on top of that.
 
 ## Definition of Continuity
 
@@ -34,7 +34,7 @@ $$\lvert x - a\rvert < \delta\implies\lvert f(x) - f(a)\rvert < \epsilon$$
 
 holds. Note that the condition $0 < \lvert x-a\rvert$ excluding $x = a$ has disappeared; this is because when $x = a$, we automatically have $\lvert f(a)-f(a)\rvert = 0 < \epsilon$, so there is no need to exclude it.
 
-If we read this with $x$ restricted to the domain, continuity still makes sense even when the domain does not contain an entire neighborhood of $a$. For example, if the domain is a closed interval $[a,b]$, continuity at the endpoint $a$ means the right-hand limit $\lim_{x\rightarrow a^+} f(x) = f(a)$ as in [§Limits of Functions, ⁋Definition 12](/en/math/calculus/functions_and_limits#def12), and continuity at the endpoint $b$ means the left-hand limit $\lim_{x\rightarrow b^-} f(x) = f(b)$. Whenever we speak of continuity on a closed interval $[a,b]$ or on an interval $I$ below, we always mean this.
+If we read this with $x$ restricted to the domain, continuity still makes sense even when the domain does not contain an entire neighborhood of $a$. For example, if the domain is a closed interval $[a,b]$, continuity at the endpoint $a$ means the right-hand limit $\lim_{x\rightarrow a^+} f(x) = f(a)$ as in [§Limits of Functions, ⁋Definition 12](/en/math/calculus/functions_and_limits#def12){: data-relation="weak" }, and continuity at the endpoint $b$ means the left-hand limit $\lim_{x\rightarrow b^-} f(x) = f(b)$. Whenever we speak of continuity on a closed interval $[a,b]$ or on an interval $I$ below, we always mean this.
 
 Unpacking this definition, we see that for continuity to hold, all three of the following must be satisfied:
 
@@ -46,7 +46,7 @@ Depending on which of these conditions fails, different types of discontinuity a
 
 ## Operations on Continuous Functions
 
-Since continuity is the statement that the limit value coincides with the function value, [§Limits of Functions, ⁋Proposition 5](/en/math/calculus/functions_and_limits#prop5) carries over directly to operations on continuous functions.
+Since continuity is the statement that the limit value coincides with the function value, [§Limits of Functions, ⁋Proposition 5](/en/math/calculus/functions_and_limits#prop5){: data-relation="required" } carries over directly to operations on continuous functions.
 
 ::: Proposition 2
 If $f$ and $g$ are continuous at $a$, then $f+g$, $cf$ (where $c$ is a constant), and $fg$ are also continuous at $a$, and if $g(a) \neq 0$, then $f/g$ is continuous at $a$ as well. Moreover, if $f$ is continuous at $a$ and $g$ is continuous at $f(a)$, then the composite function $g \circ f$ is continuous at $a$.
@@ -71,14 +71,14 @@ Let us show that the trigonometric function $\sin x$ is continuous at every poin
 
 $$\lvert \sin x - \sin a\rvert= \left\lvert 2\cos\frac{x+a}{2}\sin\frac{x-a}{2}\right\rvert \leq 2\left\lvert \sin\frac{x-a}{2}\right\rvert$$
 
-always holds. On the other hand, the inequality $\sin t \leq t$ ($0 < t < \pi/2$) obtained in [§Limits of Functions, ⁋Example 10](/en/math/calculus/functions_and_limits#ex10) extends to the inequality $\lvert \sin t\rvert \leq \lvert t\rvert$ for all real $t$, because when $t \geq \pi/2$ we have $\lvert \sin t\rvert \leq 1 < t$, and $\sin(-t) = -\sin t$. Applying this, for any $a \in \mathbb{R}$ we have
+always holds. On the other hand, the inequality $\sin t \leq t$ ($0 < t < \pi/2$) obtained in [§Limits of Functions, ⁋Example 10](/en/math/calculus/functions_and_limits#ex10){: data-relation="required" } extends to the inequality $\lvert \sin t\rvert \leq \lvert t\rvert$ for all real $t$, because when $t \geq \pi/2$ we have $\lvert \sin t\rvert \leq 1 < t$, and $\sin(-t) = -\sin t$. Applying this, for any $a \in \mathbb{R}$ we have
 
 $$\lvert \sin x - \sin a\rvert\leq\lvert x-a\rvert$$
 
 so we may simply take $\delta = \epsilon$.
 :::
 
-Now the $\cos$ function can be obtained by translating the $\sin$ function, so it is continuous by [Proposition 2](#prop2), and hence by the argument above, $\tan x$ is also continuous everywhere except where the denominator is zero.
+Now the $\cos$ function can be obtained by translating the $\sin$ function, so it is continuous by [Proposition 2](#prop2){: data-relation="required" }, and hence by the argument above, $\tan x$ is also continuous everywhere except where the denominator is zero.
 
 ## Properties of Continuous Functions on a Closed Interval
 
@@ -94,9 +94,9 @@ If $f$ is continuous on a closed interval $[a,b]$ and $f(a) \neq f(b)$, then for
 
 The proofs of these two theorems essentially require the *completeness* of the real numbers.
 
-In [Theorem 5](#thm5), the word "between" means excluding the two endpoint values $f(a)$ and $f(b)$, and accordingly the conclusion gives $c$ in the open interval $(a,b)$. If one wishes to include the case where $y$ equals one of the two endpoint values or where $f(a) = f(b)$, one simply finds $c \in [a,b]$ with $f(c) = y$, and then $c$ can be taken to be $a$ or $b$.
+In [Theorem 5](#thm5){: data-relation="weak" }, the word "between" means excluding the two endpoint values $f(a)$ and $f(b)$, and accordingly the conclusion gives $c$ in the open interval $(a,b)$. If one wishes to include the case where $y$ equals one of the two endpoint values or where $f(a) = f(b)$, one simply finds $c \in [a,b]$ with $f(c) = y$, and then $c$ can be taken to be $a$ or $b$.
 
-Finally, it is convenient to classify the ways in which continuity can fail when describing properties of functions. The jump discontinuity of $\lvert x\rvert/x$ mentioned in [§Limits of Functions](/en/math/calculus/functions_and_limits) is one such type.
+Finally, it is convenient to classify the ways in which continuity can fail when describing properties of functions. The jump discontinuity of $\lvert x\rvert/x$ mentioned in [§Limits of Functions](/en/math/calculus/functions_and_limits){: data-relation="weak" } is one such type.
 
 ::: Definition 6 (Classification of Discontinuities)
 Suppose a function $f$ is defined on some deleted neighborhood of $a$ and is not continuous at $a$, or $f(a)$ is not defined. Then this discontinuity is divided into the following three types according to the existence and agreement of the two one-sided limits $\lim_{x\rightarrow a^\pm} f(x)$.

@@ -14,7 +14,7 @@ weight: 2
 
 ---
 
-우리는 [§함수의 극한](/ko/math/calculus/functions_and_limits)에서 극한을 엄밀하게 정의하였으니, 그 위에서 연속성을 정의한다.
+우리는 [§함수의 극한](/ko/math/calculus/functions_and_limits){: data-relation="required" }에서 극한을 엄밀하게 정의하였으니, 그 위에서 연속성을 정의한다.
 
 ## 연속의 정의
 
@@ -34,7 +34,7 @@ $$\lvert x - a\rvert < \delta\implies\lvert f(x) - f(a)\rvert < \epsilon$$
 
 이 성립하는 것이다. 여기서 $x = a$를 제외하는 조건 $0 < \lvert x-a\rvert$가 사라졌는데, 이는 $x = a$일 때는 $\lvert f(a)-f(a)\rvert = 0 < \epsilon$이 자동으로 성립하므로 굳이 제외할 필요가 없기 때문이다.
 
-이렇게 $x$를 정의역 안으로 제한하여 읽으면, 정의역이 $a$의 근방을 통째로 담고 있지 않은 경우에도 연속이 그대로 뜻을 가진다. 가령 정의역이 닫힌구간 $[a,b]$이면 끝점 $a$에서의 연속은 [§함수의 극한, ⁋정의 12](/ko/math/calculus/functions_and_limits#def12)의 오른쪽 극한으로 $\lim_{x\rightarrow a^+} f(x) = f(a)$인 것을 뜻하고, 끝점 $b$에서의 연속은 왼쪽 극한으로 $\lim_{x\rightarrow b^-} f(x) = f(b)$인 것을 뜻한다. 아래에서 닫힌구간 $[a,b]$ 위의 연속이나 구간 $I$ 위의 연속을 말할 때는 언제나 이 뜻이다.
+이렇게 $x$를 정의역 안으로 제한하여 읽으면, 정의역이 $a$의 근방을 통째로 담고 있지 않은 경우에도 연속이 그대로 뜻을 가진다. 가령 정의역이 닫힌구간 $[a,b]$이면 끝점 $a$에서의 연속은 [§함수의 극한, ⁋정의 12](/ko/math/calculus/functions_and_limits#def12){: data-relation="weak" }의 오른쪽 극한으로 $\lim_{x\rightarrow a^+} f(x) = f(a)$인 것을 뜻하고, 끝점 $b$에서의 연속은 왼쪽 극한으로 $\lim_{x\rightarrow b^-} f(x) = f(b)$인 것을 뜻한다. 아래에서 닫힌구간 $[a,b]$ 위의 연속이나 구간 $I$ 위의 연속을 말할 때는 언제나 이 뜻이다.
 
 이 정의를 뜯어 보면 연속이 성립하려면 세 가지가 모두 충족되어야 함을 알 수 있다.
 
@@ -46,7 +46,7 @@ $$\lvert x - a\rvert < \delta\implies\lvert f(x) - f(a)\rvert < \epsilon$$
 
 ## 연속함수의 연산
 
-연속은 극한값이 함숫값과 일치한다는 진술이므로, [§함수의 극한, ⁋명제 5](/ko/math/calculus/functions_and_limits#prop5)이 그대로 연속함수의 연산으로 옮겨 온다.
+연속은 극한값이 함숫값과 일치한다는 진술이므로, [§함수의 극한, ⁋명제 5](/ko/math/calculus/functions_and_limits#prop5){: data-relation="required" }이 그대로 연속함수의 연산으로 옮겨 온다.
 
 ::: 명제 2
 $f$와 $g$가 $a$에서 연속이면 $f+g$, $cf$ ($c$는 상수), $fg$도 $a$에서 연속이고, $g(a) \neq 0$이면 $f/g$도 $a$에서 연속이다. 또한 $f$가 $a$에서 연속이고 $g$가 $f(a)$에서 연속이면 합성함수 $g \circ f$는 $a$에서 연속이다.
@@ -71,14 +71,14 @@ $$\lvert x-a\rvert < \delta\implies\lvert f(x) - b\rvert < \eta$$
 
 $$\lvert \sin x - \sin a\rvert= \left\lvert 2\cos\frac{x+a}{2}\sin\frac{x-a}{2}\right\rvert \leq 2\left\lvert \sin\frac{x-a}{2}\right\rvert$$
 
-이 항상 성립하는 것을 안다. 한편 [§함수의 극한, ⁋예시 10](/ko/math/calculus/functions_and_limits#ex10)에서 얻은 부등식 $\sin t \leq t$ ($0 < t < \pi/2$) 는, $t \geq \pi/2$일 때 $\lvert \sin t\rvert \leq 1 < t$이고 $\sin(-t) = -\sin t$이므로, 모든 실수 $t$에 대한 부등식 $\lvert \sin t\rvert \leq \lvert t\rvert$로 확장된다. 이를 적용하면, 임의의 $a \in \mathbb{R}$에 대해
+이 항상 성립하는 것을 안다. 한편 [§함수의 극한, ⁋예시 10](/ko/math/calculus/functions_and_limits#ex10){: data-relation="required" }에서 얻은 부등식 $\sin t \leq t$ ($0 < t < \pi/2$) 는, $t \geq \pi/2$일 때 $\lvert \sin t\rvert \leq 1 < t$이고 $\sin(-t) = -\sin t$이므로, 모든 실수 $t$에 대한 부등식 $\lvert \sin t\rvert \leq \lvert t\rvert$로 확장된다. 이를 적용하면, 임의의 $a \in \mathbb{R}$에 대해
 
 $$\lvert \sin x - \sin a\rvert\leq\lvert x-a\rvert$$
 
 가 성립하므로 $\delta = \epsilon$으로 두면 된다.
 :::
 
-이제 $\cos$ 함수는 $\sin$함수를 평행이동하여 얻을 수 있으므로 [명제 2](#prop2)에 의해 연속이며, 따라서 위에서 살펴본 논증에 의하여 $\tan x$도 분모가 $0$이 되는 지점을 제외한 곳에서는 모두 연속이다. 
+이제 $\cos$ 함수는 $\sin$함수를 평행이동하여 얻을 수 있으므로 [명제 2](#prop2){: data-relation="required" }에 의해 연속이며, 따라서 위에서 살펴본 논증에 의하여 $\tan x$도 분모가 $0$이 되는 지점을 제외한 곳에서는 모두 연속이다. 
 
 ## 닫힌구간 위 연속함수의 성질
 
@@ -94,9 +94,9 @@ $f$가 닫힌구간 $[a,b]$에서 연속이고 $f(a) \neq f(b)$이면, $f(a)$와
 
 이 두 정리의 증명은 실수의 *완비성*을 본질적으로 필요로 한다.
 
-[정리 5](#thm5)에서 사이라는 말은 양 끝값 $f(a)$와 $f(b)$를 제외한다는 뜻이고, 그래서 결론의 $c$도 열린구간 $(a,b)$에서 얻어진다. $y$가 두 끝값 중 하나와 같거나 $f(a) = f(b)$인 경우까지 함께 적으려면 $f(c) = y$인 $c$를 닫힌구간 $[a,b]$에서 찾으면 되며, 이때는 $c$로 $a$나 $b$를 잡으면 된다.
+[정리 5](#thm5){: data-relation="weak" }에서 사이라는 말은 양 끝값 $f(a)$와 $f(b)$를 제외한다는 뜻이고, 그래서 결론의 $c$도 열린구간 $(a,b)$에서 얻어진다. $y$가 두 끝값 중 하나와 같거나 $f(a) = f(b)$인 경우까지 함께 적으려면 $f(c) = y$인 $c$를 닫힌구간 $[a,b]$에서 찾으면 되며, 이때는 $c$로 $a$나 $b$를 잡으면 된다.
 
-마지막으로, 연속이 깨지는 방식을 분류해 두면 함수의 성질을 기술하는 데 편리하다. [§함수의 극한](/ko/math/calculus/functions_and_limits)에서 $\lvert x\rvert/x$를 두고 언급한 jump discontinuity가 그중 한 종류이다.
+마지막으로, 연속이 깨지는 방식을 분류해 두면 함수의 성질을 기술하는 데 편리하다. [§함수의 극한](/ko/math/calculus/functions_and_limits){: data-relation="weak" }에서 $\lvert x\rvert/x$를 두고 언급한 jump discontinuity가 그중 한 종류이다.
 
 ::: 정의 6 (불연속의 분류)
 함수 $f$가 $a$의 어떤 삭제된 근방에서 정의되어 있고, $a$에서 연속이 아니거나 $f(a)$가 정의되어 있지 않다고 하자. 그럼 두 한쪽 극한 $\lim_{x\rightarrow a^\pm} f(x)$의 존재와 일치 여부에 따라 이 불연속점을 다음 셋으로 나눈다.
