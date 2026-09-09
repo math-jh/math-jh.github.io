@@ -105,7 +105,7 @@ Fixing an abelian group $A$ as the coefficient group, we may form the dual cocha
 
 $$(C^\vee)^\bullet(X;A):\qquad\cdots \leftarrow \Hom_\mathbb{Z}(C_{k+1}(X), A)\leftarrow\Hom_\mathbb{Z}(C_k(X),A)\leftarrow\Hom_\mathbb{Z}(C_{k-1}(X),A)\leftarrow\cdots$$
 
-If $A$ is a commutative ring, ([\[Algebraic Structures\] §Definition of a Ring, ⁋Definition 1](/en/math/algebraic_structures/rings#def1)) then the adjunction of [\[Algebraic Structures\] §Change of Scalars, ⁋Proposition 6](/en/math/algebraic_structures/change_of_base_ring#prop6){: data-relation="required" } for the ring homomorphism $\mathbb{Z}\rightarrow A$ gives an isomorphism $\Hom_A(M\otimes_\mathbb{Z}A,N)\cong\Hom_\mathbb{Z}(M,N)$ for any abelian group $M$ and $A$-module $N$. Hence in this case the above cochain complex may be written as
+If $A$ is a commutative ring, ([\[Algebraic Structures\] §Definition of a Ring, ⁋Definition 1](/en/math/algebraic_structures/rings#def1){: data-relation="weak" }) then the adjunction of [\[Algebraic Structures\] §Change of Scalars, ⁋Proposition 6](/en/math/algebraic_structures/change_of_base_ring#prop6){: data-relation="required" } for the ring homomorphism $\mathbb{Z}\rightarrow A$ gives an isomorphism $\Hom_A(M\otimes_\mathbb{Z}A,N)\cong\Hom_\mathbb{Z}(M,N)$ for any abelian group $M$ and $A$-module $N$. Hence in this case the above cochain complex may be written as
 
 $$\qquad \cdots\leftarrow\Hom_A(C_{k+1}(X;A),A)\leftarrow \Hom_A(C_k(X;A),A)\leftarrow \Hom_A(C_{k-1}(X;A),A)\leftarrow\cdots$$
 

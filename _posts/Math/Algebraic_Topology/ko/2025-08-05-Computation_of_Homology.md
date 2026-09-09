@@ -231,7 +231,7 @@ $$C^\Delta_\bullet(X),\qquad C_\bullet(X)$$
 
 $$C^\Delta_\bullet(X;A):=C^\Delta_\bullet(X)\otimes_\mathbb{Z}A,\qquad C_\bullet(X;A):=C_\bullet(X)\otimes_\mathbb{Z}A$$
 
-로 잡았더라면 이러한 종류의 homology를 얻었을 것이다. ([\[대수적 구조\] §가환군, ⁋정의 13](/ko/math/algebraic_structures/abelian_groups#def13)) 
+로 잡았더라면 이러한 종류의 homology를 얻었을 것이다. ([\[대수적 구조\] §가환군, ⁋정의 13](/ko/math/algebraic_structures/abelian_groups#def13){: data-relation="required" })
 
 Homology의 대부분의 성질들은 [정의 6](#def6){: data-relation="required" }의 공리들로부터 나온다. 예를 들어, 이 글의 목표인 식 (1)의 일반화를 이로부터 유도할 수 있다. 위상공간 $X$가 두 열린집합들의 합집합 $X=U\cup V$로 나타난다 하자. 그럼 다음의 inclusion
 
