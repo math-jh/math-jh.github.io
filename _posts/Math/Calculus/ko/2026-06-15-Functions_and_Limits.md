@@ -63,7 +63,7 @@ $\lim_{x\rightarrow a} f(x) = L$이고 $\lim_{x\rightarrow a} f(x) = L'$이면 $
 :::
 
 ::: 증명
-결론에 반하여 $L \neq L'$이라 가정하자. 그럼 $\epsilon = \frac{1}{2}\lvert L - L'\rvert > 0$이다. 이제 [정의 2](#def2)에 의해 각각에 대응하는 $\delta_1, \delta_2 > 0$이 존재하여 다음 두 조건
+결론에 반하여 $L \neq L'$이라 가정하자. 그럼 $\epsilon = \frac{1}{2}\lvert L - L'\rvert > 0$이다. 이제 [정의 2](#def2){: data-relation="required" }에 의해 각각에 대응하는 $\delta_1, \delta_2 > 0$이 존재하여 다음 두 조건
 
 $$0 < \lvert x-a\rvert < \delta_1\implies \lvert f(x) - L\rvert < \epsilon,\qquad 0 < \lvert x-a\rvert < \delta_2\implies\lvert f(x) - L'\rvert < \epsilon$$
 
@@ -74,7 +74,7 @@ $$\lvert L - L'\rvert \leq \lvert L - f(x)\rvert + \lvert f(x) - L'\rvert < \eps
 이 되어 모순이다. 따라서 $L = L'$이다.
 :::
 
-한편, [정의 2](#def2)는 원칙적으로 함수의 극한값의 후보 $L$이 주어졌을 때 그 극한값이 실제로 $L$이 맞다는 것을 보일 때만 사용할 수 있다. 즉, 이는 함수의 극한값이 <em-ko>무엇인지</em-ko> 알려주는 도구는 아니다. 이를 위해서는 다음 명제가 유용하다.
+한편, [정의 2](#def2){: data-relation="required" }는 원칙적으로 함수의 극한값의 후보 $L$이 주어졌을 때 그 극한값이 실제로 $L$이 맞다는 것을 보일 때만 사용할 수 있다. 즉, 이는 함수의 극한값이 <em-ko>무엇인지</em-ko> 알려주는 도구는 아니다. 이를 위해서는 다음 명제가 유용하다.
 
 ::: 명제 5 (극한법칙)
 $\lim_{x\rightarrow a} f(x) = L$, $\lim_{x\rightarrow a} g(x) = M$이라 하자. 그러면
@@ -101,7 +101,7 @@ $\lim_{x\rightarrow a} f(x) = L$, $\lim_{x\rightarrow a} g(x) = M$이라 하자.
     
     을 사용한다. 그럼 직관적으로 $x$가 $a$로 갈 때 $\lvert g(x)-M\rvert$와 $\lvert f(x)-L\rvert$는 모두 $0$으로 가므로, 만일 그 앞에 붙는 $\lvert f(x)\rvert, \lvert g(x)\rvert$들이 유한하다는 것만 보장된다면 위의 1번과 비슷한 계산을 통해 이를 $\epsilon$보다 작게 만들 수 있다. 
     
-    트릭은 $\epsilon=1$로 두고 [정의 2](#def2)를 $f$와 $g$ 각각에 적용하는 것이다. 그럼 적당한 $\delta_1, \delta_2$가 존재하여
+    트릭은 $\epsilon=1$로 두고 [정의 2](#def2){: data-relation="required" }를 $f$와 $g$ 각각에 적용하는 것이다. 그럼 적당한 $\delta_1, \delta_2$가 존재하여
         
     $$0<\lvert x-a\rvert<\delta_1\implies \lvert f(x)-L\rvert<1\implies \lvert f(x)\rvert< \lvert L\rvert+1$$
 
@@ -130,7 +130,7 @@ $\lim_{x\rightarrow a} f(x) = L$이면
 :::
 
 ::: 증명
-1. [명제 5](#prop5)의 3을 적용하여 $k$에 대한 귀납법을 돌리면 된다.
+1. [명제 5](#prop5){: data-relation="required" }의 3을 적용하여 $k$에 대한 귀납법을 돌리면 된다.
 2. 먼저 $L > 0$이므로, $\epsilon_1 = L/2$에 대응하는 $\delta_1 > 0$을 잡으면 
     
     $$0 < \lvert x-a\rvert < \delta_1\implies\lvert f(x)-L\rvert < L/2$$
@@ -168,11 +168,11 @@ $$\lim_{x\rightarrow a}c=c$$
 
 $$f(x)=c_nx^n+\cdots +c_1x+c_0$$
 
-에 대하여, [명제 5](#prop5)의 합·상수배 법칙으로 극한을 각 항으로 분리하고 거듭제곱에 [따름정리 6](#cor6)을 적용하면
+에 대하여, [명제 5](#prop5){: data-relation="required" }의 합·상수배 법칙으로 극한을 각 항으로 분리하고 거듭제곱에 [따름정리 6](#cor6){: data-relation="required" }을 적용하면
 
 $$\lim_{x\rightarrow a}f(x)=c_n\Bigl(\lim_{x\rightarrow a}x\Bigr)^n+\cdots +c_1\lim_{x\rightarrow a}x+\lim_{x\rightarrow a}c_0$$
 
-이 되어, 마지막으로 [예시 7](#ex7)을 대입하면 $\lim_{x\rightarrow a}f(x)=f(a)$를 얻는다. 비슷한 방식으로, 다항함수의 비로 이루어진 유리함수의 극한도 분모의 극한이 $0$이 아니라면 분자와 분모의 극한의 비로 얻어진다.
+이 되어, 마지막으로 [예시 7](#ex7){: data-relation="required" }을 대입하면 $\lim_{x\rightarrow a}f(x)=f(a)$를 얻는다. 비슷한 방식으로, 다항함수의 비로 이루어진 유리함수의 극한도 분모의 극한이 $0$이 아니라면 분자와 분모의 극한의 비로 얻어진다.
 
 ## 조임정리와 극한의 대소관계
 
@@ -223,7 +223,7 @@ $$0 \leq \lvert 1 - \cos x\rvert = \left\lvert2\sin^2\frac{x}{2}\right\rvert \le
 
 $$-\frac{x^2}{2}\leq 1 - \cos x \leq \frac{x^2}{2}$$
 
-이며, [명제 8](#prop8)를 적용하면 $\cos x \rightarrow 1$임을 안다. 이제 이를 이용하여 앞선 부등식에 다시 [명제 8](#prop8)를 적용하면 $(\sin x)/x$의 극한값이 $1$임을 안다. 
+이며, [명제 8](#prop8){: data-relation="required" }를 적용하면 $\cos x \rightarrow 1$임을 안다. 이제 이를 이용하여 앞선 부등식에 다시 [명제 8](#prop8){: data-relation="required" }를 적용하면 $(\sin x)/x$의 극한값이 $1$임을 안다. 
 :::
 
 다음 예시 또한 고전적이다. 
@@ -274,7 +274,7 @@ $$x < N\implies\lvert f(x) - L\rvert < \epsilon$$
 
 가령 $\lim_{x\rightarrow\infty}1/x = 0$이고, 유리함수에서는 최고차항이 그 행동을 지배하여 $\lim_{x\rightarrow\infty}(2x^2 + 1)/(3x^2 - x) = 2/3$이다. 이러한 유한 극한 $L$이 존재하면 직선 $y = L$이 그래프의 *수평점근선<sub>horizontal asymptote</sub>*이 된다.
 
-직접 대입이 $0/0$ 꼴의 부정형을 줄 때는 인수분해나 분자의 유리화 같은 대수적 변형으로 분모의 영점을 약분하여 극한법칙이 적용되는 형태로 바꾸면 된다. [예시 10](#ex10)의 $\lim(\sin x)/x = 1$ 또한 이러한 대수적 정리와 결합하여 $\sin$이 섞인 부정형을 처리하는 데 쓰인다.
+직접 대입이 $0/0$ 꼴의 부정형을 줄 때는 인수분해나 분자의 유리화 같은 대수적 변형으로 분모의 영점을 약분하여 극한법칙이 적용되는 형태로 바꾸면 된다. [예시 10](#ex10){: data-relation="weak" }의 $\lim(\sin x)/x = 1$ 또한 이러한 대수적 정리와 결합하여 $\sin$이 섞인 부정형을 처리하는 데 쓰인다.
 
 ---
 
