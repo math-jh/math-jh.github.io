@@ -58,7 +58,7 @@ has finite length by the Artinian condition, and since each $M_{k+1}$ is a maxim
 
 The first result is proved in the same way as the Jordan-Hölder theorem, so we omit it. Accepting this, we can refine any given chain to a composition series, and the converse implication of the equivalence follows.
 
-We now prove the second result. From the finiteness of the given chain, we know that there are only finitely many maximal ideals satisfying the condition, so $\bigoplus_\mathfrak{m} M_\mathfrak{m}$ can be identified with $\prod_\mathfrak{m} M_\mathfrak{m}$; the map in question is then obtained by applying the universal property of the direct product to the maps $M \rightarrow M_\mathfrak{m}$. To show that this map is an isomorphism, it suffices to localize at a maximal ideal and apply [§Properties of Localization, ⁋Proposition 4](/en/math/commutative_algebra/properties_of_localization#prop4).
+We now prove the second result. From the finiteness of the given chain, we know that there are only finitely many maximal ideals satisfying the condition, so $\bigoplus_\mathfrak{m} M_\mathfrak{m}$ can be identified with $\prod_\mathfrak{m} M_\mathfrak{m}$; the map in question is then obtained by applying the universal property of the direct product to the maps $M \rightarrow M_\mathfrak{m}$. To show that this map is an isomorphism, it suffices to localize at a maximal ideal and apply [§Properties of Localization, ⁋Proposition 4](/en/math/commutative_algebra/properties_of_localization#prop4){: data-relation="required" }.
 
 For this, we first note that if $M\cong A/\mathfrak{m}$, then for any maximal ideal $\mathfrak{m}'$,
 
@@ -72,7 +72,7 @@ localizing at a maximal ideal $\mathfrak{m}$ yields
 
 $$M_\mathfrak{m}=(M_0)_\mathfrak{m}\supsetneq (M_1)_\mathfrak{m}\supsetneq \cdots\supsetneq (M_n)_\mathfrak{m}=0.$$
 
-Since the localization functor is exact ([§Properties of Localization, ⁋Proposition 2](/en/math/commutative_algebra/properties_of_localization#prop2)) and by the computation above, we have
+Since the localization functor is exact ([§Properties of Localization, ⁋Proposition 2](/en/math/commutative_algebra/properties_of_localization#prop2){: data-relation="required" }) and by the computation above, we have
 
 $$(M_k)_\mathfrak{m}/(M_{k+1})_\mathfrak{m}\cong (M_k/M_{k+1})_\mathfrak{m}=\begin{cases}M_k/M_{k+1}&\text{if $M_k/M_{k+1}\cong A/\mathfrak{m}$,}\\0&\text{otherwise}\end{cases}$$
 
@@ -93,9 +93,9 @@ First, assume the first condition and prove the second. Suppose for contradictio
 
 $$0\longrightarrow A/(\mathfrak{a}:a)\overset{a}{\longrightarrow}A/\mathfrak{a}\longrightarrow A/(\mathfrak{a}+(a))\longrightarrow 0$$
 
-([§Basic Notions, §§Basic Definitions](/en/math/commutative_algebra/basic_notions#basic-definitions)). Since $\mathfrak{a}+(a)$ strictly contains $\mathfrak{a}$, by definition $A/(\mathfrak{a}+(a))$ has finite length. On the other hand, $\mathfrak{a}\subseteq (\mathfrak{a}:(a))$ by definition, and if $b\not\in \mathfrak{a}$ then $\mathfrak{a}\subsetneq (\mathfrak{a}:(a))$, so again by the definition of $\mathfrak{a}$, the module $A/(\mathfrak{a}:a)$ has finite length. Hence, by combining these composition series we obtain a composition series for $A/\mathfrak{a}$, contradicting the assumption that $A$ does not have finite length; therefore $b\in \mathfrak{a}$. Thus $\mathfrak{a}$ is a prime ideal. By condition 1, $\mathfrak{a}$ is maximal, so $A/\mathfrak{a}$ is a field, which again contradicts the assumption that $A/\mathfrak{a}$ does not have finite length. This establishes the desired result.
+([§Basic Notions, §§Basic Definitions](/en/math/commutative_algebra/basic_notions#basic-definitions){: data-relation="required" }). Since $\mathfrak{a}+(a)$ strictly contains $\mathfrak{a}$, by definition $A/(\mathfrak{a}+(a))$ has finite length. On the other hand, $\mathfrak{a}\subseteq (\mathfrak{a}:(a))$ by definition, and if $b\not\in \mathfrak{a}$ then $\mathfrak{a}\subsetneq (\mathfrak{a}:(a))$, so again by the definition of $\mathfrak{a}$, the module $A/(\mathfrak{a}:a)$ has finite length. Hence, by combining these composition series we obtain a composition series for $A/\mathfrak{a}$, contradicting the assumption that $A$ does not have finite length; therefore $b\in \mathfrak{a}$. Thus $\mathfrak{a}$ is a prime ideal. By condition 1, $\mathfrak{a}$ is maximal, so $A/\mathfrak{a}$ is a field, which again contradicts the assumption that $A/\mathfrak{a}$ does not have finite length. This establishes the desired result.
 
-Now if we assume the second condition, the third follows immediately from [Theorem 3](#thm3). Thus it suffices to assume the third condition and prove the first. To this end, consider the collection of ideals that are products of maximal ideals of $A$. Since $A$ is Artinian, there exists a minimal ideal $\mathfrak{a}$ in this collection. Then $\mathfrak{a}=0$, and therefore the zero ideal can be written as a product of maximal ideals $0=\mathfrak{m}_1\cdots\mathfrak{m}_k$.
+Now if we assume the second condition, the third follows immediately from [Theorem 3](#thm3){: data-relation="required" }. Thus it suffices to assume the third condition and prove the first. To this end, consider the collection of ideals that are products of maximal ideals of $A$. Since $A$ is Artinian, there exists a minimal ideal $\mathfrak{a}$ in this collection. Then $\mathfrak{a}=0$, and therefore the zero ideal can be written as a product of maximal ideals $0=\mathfrak{m}_1\cdots\mathfrak{m}_k$.
 
 To prove this claim, we first observe that the minimality of $\mathfrak{a}$ means that $\mathfrak{m}\mathfrak{a}=\mathfrak{a}$ for every maximal ideal $\mathfrak{m}$; that is, $\mathfrak{a}\subseteq \mathfrak{m}$. By the same logic, $\mathfrak{a}^2$ is also a product of maximal ideals, so $\mathfrak{a}^2=\mathfrak{a}$ holds. Now assume for contradiction that $\mathfrak{a}\neq 0$. Then there exists an ideal $\mathfrak{b}$ such that $\mathfrak{a}\mathfrak{b}\neq 0$, and again by the Artinian hypothesis we can choose $\mathfrak{b}$ minimal among ideals satisfying this property. Then
 
@@ -105,7 +105,7 @@ so by the minimality of $\mathfrak{b}$ we must have $\mathfrak{b}\mathfrak{a}=\m
 
 By the definition of $\mathfrak{b}$, there exists some $y\in \mathfrak{b}$ with $y \mathfrak{a}\neq 0$, and by the minimality of $\mathfrak{b}$ we must have $\mathfrak{b}=(y)$. From the equality $\mathfrak{b}\mathfrak{a}=\mathfrak{b}$ above, there exists some $x\in \mathfrak{a}$ such that $xy=y$. That is, $(1-x)y=0$. But since $x\in \mathfrak{a}$ and $\mathfrak{a}$ is contained in every maximal ideal, $1-x$ is not contained in any maximal ideal. Hence $1-x$ is a unit, which implies $y=0$, contradicting the definition of $\mathfrak{b}$. Therefore $\mathfrak{a}=0$, and the zero ideal can be written as a product of maximal ideals $0=\mathfrak{m}_1\cdots\mathfrak{m}_k$.
 
-Now for each $l=1,\ldots, k-1$, viewing $\mathfrak{m}_1\cdots\mathfrak{m}_l/\mathfrak{m}_1\cdots\mathfrak{m}_{l+1}$ as an $A/\mathfrak{m}_{l+1}$-vector space, its submodules are of the form $\mathfrak{a}/\mathfrak{m}_1\cdots\mathfrak{m}_{l+1}$; that is, they correspond to ideals of $A$ containing $\mathfrak{m}_1\cdots\mathfrak{m}_{l+1}$. Since $A$ is Artinian, this implies that $\mathfrak{m}_1\cdots\mathfrak{m}_l/\mathfrak{m}_1\cdots\mathfrak{m}_{l+1}$ is finite-dimensional. Collecting all of these yields a composition series for $A$, and therefore by [Theorem 3](#thm3), $A$ is Noetherian.
+Now for each $l=1,\ldots, k-1$, viewing $\mathfrak{m}_1\cdots\mathfrak{m}_l/\mathfrak{m}_1\cdots\mathfrak{m}_{l+1}$ as an $A/\mathfrak{m}_{l+1}$-vector space, its submodules are of the form $\mathfrak{a}/\mathfrak{m}_1\cdots\mathfrak{m}_{l+1}$; that is, they correspond to ideals of $A$ containing $\mathfrak{m}_1\cdots\mathfrak{m}_{l+1}$. Since $A$ is Artinian, this implies that $\mathfrak{m}_1\cdots\mathfrak{m}_l/\mathfrak{m}_1\cdots\mathfrak{m}_{l+1}$ is finite-dimensional. Collecting all of these yields a composition series for $A$, and therefore by [Theorem 3](#thm3){: data-relation="required" }, $A$ is Noetherian.
 
 To show the remaining condition, take any prime ideal $\mathfrak{p}$ of $A$. From
 
@@ -120,17 +120,17 @@ From this one can show that any Artinian ring is a finite product of local Artin
 For a Noetherian ring $A$, the following are equivalent: $A$ is a finite product of domains if and only if $A_\mathfrak{m}$ is a domain for every maximal ideal $\mathfrak{m}$.
 :::
 ::: Proof
-First, suppose that $A$ is a finite product of domains, say $A=\prod A_i$. Then any prime ideal of $A$ cannot contain the unit $e_i$ of $A_i$, so it is disjoint from the corresponding multiplicative subset, and since this element $e_i$ annihilates $A_j$ for $i\neq j$, we have $A=(A_i)_\mathfrak{p}$. ([§Localization, ⁋Proposition 5](/en/math/commutative_algebra/localization#prop5))
+First, suppose that $A$ is a finite product of domains, say $A=\prod A_i$. Then any prime ideal of $A$ cannot contain the unit $e_i$ of $A_i$, so it is disjoint from the corresponding multiplicative subset, and since this element $e_i$ annihilates $A_j$ for $i\neq j$, we have $A=(A_i)_\mathfrak{p}$. ([§Localization, ⁋Proposition 5](/en/math/commutative_algebra/localization#prop5){: data-relation="required" })
 
-Conversely, assume that the localization at every maximal ideal $\mathfrak{m}$ of $A$ is a domain, and let $\{\mathfrak{q}_i\}$ be the minimal prime ideals of $A$. Then by [§Associated Primes, ⁋Theorem 7](/en/math/commutative_algebra/associated_primes#thm7), which will be proved in the next post, $\{\mathfrak{q}_i\}$ is a finite set. Accepting this, there is a natural map
+Conversely, assume that the localization at every maximal ideal $\mathfrak{m}$ of $A$ is a domain, and let $\{\mathfrak{q}_i\}$ be the minimal prime ideals of $A$. Then by [§Associated Primes, ⁋Theorem 7](/en/math/commutative_algebra/associated_primes#thm7){: data-relation="required" }, which will be proved in the next post, $\{\mathfrak{q}_i\}$ is a finite set. Accepting this, there is a natural map
 
 $$A \rightarrow \prod_{i\in I} A/\mathfrak{q}_i$$
 
-to a finite direct product of domains. We now show that this map is an isomorphism. By [§Properties of Localization, ⁋Proposition 4](/en/math/commutative_algebra/properties_of_localization#prop4), it suffices to show that the localized map
+to a finite direct product of domains. We now show that this map is an isomorphism. By [§Properties of Localization, ⁋Proposition 4](/en/math/commutative_algebra/properties_of_localization#prop4){: data-relation="required" }, it suffices to show that the localized map
 
 $$A_\mathfrak{m} \rightarrow \left(\prod_{i\in I} A/\mathfrak{q}_i\right)_\mathfrak{m}$$
 
-is an isomorphism for every maximal ideal. On the other hand, by [§Localization, ⁋Proposition 8](/en/math/commutative_algebra/localization#prop8), there is a one-to-one correspondence between the minimal prime ideals of $A$ contained in $\mathfrak{m}$ and the minimal prime ideals of $A_\mathfrak{m}$. But by assumption $A_\mathfrak{m}$ is a domain, so $A_\mathfrak{m}$ has a unique minimal prime ideal $(0)$; hence exactly one of the $\mathfrak{q}_i$ is contained in $\mathfrak{m}$. Consequently,
+is an isomorphism for every maximal ideal. On the other hand, by [§Localization, ⁋Proposition 8](/en/math/commutative_algebra/localization#prop8){: data-relation="required" }, there is a one-to-one correspondence between the minimal prime ideals of $A$ contained in $\mathfrak{m}$ and the minimal prime ideals of $A_\mathfrak{m}$. But by assumption $A_\mathfrak{m}$ is a domain, so $A_\mathfrak{m}$ has a unique minimal prime ideal $(0)$; hence exactly one of the $\mathfrak{q}_i$ is contained in $\mathfrak{m}$. Consequently,
 
 $$\left(\prod_{i\in I} A/\mathfrak{q}_i\right)_\mathfrak{m}=(A/\mathfrak{q}_i)_\mathfrak{m}=A_\mathfrak{m}$$
 
@@ -146,7 +146,7 @@ For a Noetherian ring $A$ and a finitely generated $A$-module $M$, the following
 4. $A/\ann(M)$ is Artinian.
 :::
 ::: Proof
-First, assuming condition 1, condition 2 follows immediately from the second and third parts of [Theorem 3](#thm3). Now assume condition 2. Then for any prime ideal $\mathfrak{p}$ containing $\ann(M)$, we have $\mathfrak{p}\supseteq\prod \mathfrak{m}_i$, so $\mathfrak{p}\supseteq \mathfrak{m}_i$ for some $i$, and hence $\mathfrak{p}=\mathfrak{m}_i$. That condition 3 implies condition 4 follows from the equivalence of conditions 1 and 3 in [Theorem 4](#thm4). Finally, assuming condition 4, the ring $A/\ann(M)$ has finite length as an $A/\ann(M)$-module by condition 2 of [Theorem 4](#thm4), and since $M$ is a finitely generated $A/\ann(M)$-module, we obtain the desired result.
+First, assuming condition 1, condition 2 follows immediately from the second and third parts of [Theorem 3](#thm3){: data-relation="required" }. Now assume condition 2. Then for any prime ideal $\mathfrak{p}$ containing $\ann(M)$, we have $\mathfrak{p}\supseteq\prod \mathfrak{m}_i$, so $\mathfrak{p}\supseteq \mathfrak{m}_i$ for some $i$, and hence $\mathfrak{p}=\mathfrak{m}_i$. That condition 3 implies condition 4 follows from the equivalence of conditions 1 and 3 in [Theorem 4](#thm4){: data-relation="required" }. Finally, assuming condition 4, the ring $A/\ann(M)$ has finite length as an $A/\ann(M)$-module by condition 2 of [Theorem 4](#thm4){: data-relation="required" }, and since $M$ is a finitely generated $A/\ann(M)$-module, we obtain the desired result.
 :::
 
 Then the following holds.
@@ -155,9 +155,9 @@ Then the following holds.
 Fix a Noetherian ring $A$, a finitely generated $A$-module $M$, and a prime ideal $\mathfrak{p}$ containing $\ann(M)$. Then $M_\mathfrak{p}$ has finite length as an $A_\mathfrak{p}$-module if and only if $\mathfrak{p}$ is minimal among the primes containing $\ann(M)$.
 :::
 ::: Proof
-If $\mathfrak{p}$ is a minimal prime ideal containing $\ann(M)$, then the $A_\mathfrak{p}$-module $M_\mathfrak{p}$ has finite length. Indeed, the prime ideals of the localization $A_\mathfrak{p}$ correspond by [§Localization, ⁋Proposition 8](/en/math/commutative_algebra/localization#prop8) to the prime ideals of $A$ contained in $\mathfrak{p}$; by the minimality of $\mathfrak{p}$, the only prime ideal containing $\ann(M)A_\mathfrak{p}$ is $\mathfrak{p}A_\mathfrak{p}$, which is the (unique) maximal ideal of the local ring $A_\mathfrak{p}$.
+If $\mathfrak{p}$ is a minimal prime ideal containing $\ann(M)$, then the $A_\mathfrak{p}$-module $M_\mathfrak{p}$ has finite length. Indeed, the prime ideals of the localization $A_\mathfrak{p}$ correspond by [§Localization, ⁋Proposition 8](/en/math/commutative_algebra/localization#prop8){: data-relation="required" } to the prime ideals of $A$ contained in $\mathfrak{p}$; by the minimality of $\mathfrak{p}$, the only prime ideal containing $\ann(M)A_\mathfrak{p}$ is $\mathfrak{p}A_\mathfrak{p}$, which is the (unique) maximal ideal of the local ring $A_\mathfrak{p}$.
 
-Conversely, suppose that $M_\mathfrak{p}$ has finite length as an $A_\mathfrak{p}$-module. Then by [Corollary 6](#cor6), every prime ideal containing the annihilator $\ann(M)A_\mathfrak{p}$ of $M_\mathfrak{p}$ is maximal, and these correspond via [§Localization, ⁋Proposition 8](/en/math/commutative_algebra/localization#prop8) to the prime ideals of $A$ containing $\ann(M)$ and contained in $\mathfrak{p}$; thus the above argument can be reversed.
+Conversely, suppose that $M_\mathfrak{p}$ has finite length as an $A_\mathfrak{p}$-module. Then by [Corollary 6](#cor6){: data-relation="required" }, every prime ideal containing the annihilator $\ann(M)A_\mathfrak{p}$ of $M_\mathfrak{p}$ is maximal, and these correspond via [§Localization, ⁋Proposition 8](/en/math/commutative_algebra/localization#prop8){: data-relation="required" } to the prime ideals of $A$ containing $\ann(M)$ and contained in $\mathfrak{p}$; thus the above argument can be reversed.
 :::
 
 In particular, for any ideal $\mathfrak{a}$ of $A$, considering the $A$-module $A/\mathfrak{a}$ we have $\ann(A/\mathfrak{a})=\mathfrak{a}$, and from this we obtain the following.
