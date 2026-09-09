@@ -14,21 +14,21 @@ weight: 12
 
 ---
 
-[§선형계](/ko/math/algebraic_varieties/linear_systems)에서 우리는 line bundle의 (basepoint-free) complete linear system을 사용하여 projective space에 embed할 수 있다는 것을 살펴보았고, 만일 이것이 closed embedding을 정의한다면 이러한 line bundle을 *very ample*이라 부르기도 하였다. 
+[§선형계](/ko/math/algebraic_varieties/linear_systems){: data-relation="weak" }에서 우리는 line bundle의 (basepoint-free) complete linear system을 사용하여 projective space에 embed할 수 있다는 것을 살펴보았고, 만일 이것이 closed embedding을 정의한다면 이러한 line bundle을 *very ample*이라 부르기도 하였다. 
 
-이렇듯 line bundle이 우리의 기하학에 꽤나 중요한 영향을 미치고 있음에도 불구하고, 우리는 아직까지 임의의 variety 위에 일반적으로 line bundle을 정의하는 방법을 제대로 살펴보지 않았다. 만일 $X$가 *smooth* variety라면, 우리는 [§선다발과 벡터다발, ⁋예시 24](/ko/math/algebraic_varieties/line_bundles#ex24)를 사용하여 이 위에 정의된 cotangent bundle $\Omega_X^1$을 생각할 수 있으며 이것의 top exterior power를 생각하여 *canonical bundle* $\omega_X$를 생각할 수 있다. 이번 글에서 우리의 목표는 이 bundle $\omega_X$를 살펴보는 것이다. 
+이렇듯 line bundle이 우리의 기하학에 꽤나 중요한 영향을 미치고 있음에도 불구하고, 우리는 아직까지 임의의 variety 위에 일반적으로 line bundle을 정의하는 방법을 제대로 살펴보지 않았다. 만일 $X$가 *smooth* variety라면, 우리는 [§선다발과 벡터다발, ⁋예시 24](/ko/math/algebraic_varieties/line_bundles#ex24){: data-relation="required" }를 사용하여 이 위에 정의된 cotangent bundle $\Omega_X^1$을 생각할 수 있으며 이것의 top exterior power를 생각하여 *canonical bundle* $\omega_X$를 생각할 수 있다. 이번 글에서 우리의 목표는 이 bundle $\omega_X$를 살펴보는 것이다. 
 
 ## 벡터다발과 준연접층
 
-위에서 언급한 것과 같이, $\omega_X$를 정의하기 위해서는 cotangent bundle $\Omega_X^1$로부터 시작한다. 이는 $X$ 위에 정의된 differential form들의 bundle인 것을 이미 살펴보았다. 이것이 대수적인 세팅에서의 미분과 맞아떨어짐을 보이자. ([\[가환대수학\] §미분, ⁋정의 3](/ko/math/commutative_algebra/differentials#def3)) 이를 위해서는 임의의 affine variety $X$와 그 coordinate ring $A$, 그리고 $A$-module $M$이 주어졌을 때 $M$을 $X$ 위의 vector bundle로 옮기는 과정을 살펴보아야 한다. 
+위에서 언급한 것과 같이, $\omega_X$를 정의하기 위해서는 cotangent bundle $\Omega_X^1$로부터 시작한다. 이는 $X$ 위에 정의된 differential form들의 bundle인 것을 이미 살펴보았다. 이것이 대수적인 세팅에서의 미분과 맞아떨어짐을 보이자. ([\[가환대수학\] §미분, ⁋정의 3](/ko/math/commutative_algebra/differentials#def3){: data-relation="required" }) 이를 위해서는 임의의 affine variety $X$와 그 coordinate ring $A$, 그리고 $A$-module $M$이 주어졌을 때 $M$을 $X$ 위의 vector bundle로 옮기는 과정을 살펴보아야 한다. 
 
-우리의 기본적인 철학은 [§아핀다양체](/ko/math/algebraic_varieties/affine_varieties)을 이용하여 coordinate *ring* 사이의 homomorphism을 variety들 사이의 반대방향 morphism으로 옮길 수 있으며 따라서 $X$ 위에 정의된 bundle을 얻어낼 수 있다는 것이다. 그러나 문제는 $M$은 ring이 아니라는 것이다. 즉 $M$ 위에는 곱셈이 정의되어 있지 않다. 그러나 [\[다중선형대수학\] §텐서대수, ⁋정의 5](/ko/math/multilinear_algebra/tensor_algebras#def5)에 따르면 우리는 $M$ 위에 (commutative) 곱셈을 강제로 정의해주는 symmetric algebra $\S(M)$을 생각할 수 있다. 
+우리의 기본적인 철학은 [§아핀다양체](/ko/math/algebraic_varieties/affine_varieties){: data-relation="required" }을 이용하여 coordinate *ring* 사이의 homomorphism을 variety들 사이의 반대방향 morphism으로 옮길 수 있으며 따라서 $X$ 위에 정의된 bundle을 얻어낼 수 있다는 것이다. 그러나 문제는 $M$은 ring이 아니라는 것이다. 즉 $M$ 위에는 곱셈이 정의되어 있지 않다. 그러나 [\[다중선형대수학\] §텐서대수, ⁋정의 5](/ko/math/multilinear_algebra/tensor_algebras#def5){: data-relation="required" }에 따르면 우리는 $M$ 위에 (commutative) 곱셈을 강제로 정의해주는 symmetric algebra $\S(M)$을 생각할 수 있다. 
 
-그러나 이를 곧바로 적용하기에는 문제가 있다. 우리의 목적은 $M$을 $X$ 위에 정의된 vector bundle로 보려는 것임을 기억하자. 즉 대략적으로 $X$의 각 점 위에 $M$을 잘 달아주는 것이 우리의 목적인데, [§아핀다양체](/ko/math/algebraic_varieties/affine_varieties)에 따르면 $M$이 variety의 세상에서 (fiber로) 등장한다면, 이를 정의하는 coordinate ring은 이것의 좌표함수여야 한다. 즉, 우리는 $M$ 대신 $M^\vee$를 사용해야만 하고, 따라서 $\S_A(M)$ 대신 $\S_A(M^\vee)$을 생각한다. 그럼 이는 $A$-algebra이며 따라서 coordinate ring 사이의 함수 $A\rightarrow \S_A(M^\vee)$을 얻고, 여기에 [§아핀다양체](/ko/math/algebraic_varieties/affine_varieties)를 적용하면 어떠한 variety $V(M)$에서 $X$로 가는 morphism을 얻는다. 
+그러나 이를 곧바로 적용하기에는 문제가 있다. 우리의 목적은 $M$을 $X$ 위에 정의된 vector bundle로 보려는 것임을 기억하자. 즉 대략적으로 $X$의 각 점 위에 $M$을 잘 달아주는 것이 우리의 목적인데, [§아핀다양체](/ko/math/algebraic_varieties/affine_varieties){: data-relation="required" }에 따르면 $M$이 variety의 세상에서 (fiber로) 등장한다면, 이를 정의하는 coordinate ring은 이것의 좌표함수여야 한다. 즉, 우리는 $M$ 대신 $M^\vee$를 사용해야만 하고, 따라서 $\S_A(M)$ 대신 $\S_A(M^\vee)$을 생각한다. 그럼 이는 $A$-algebra이며 따라서 coordinate ring 사이의 함수 $A\rightarrow \S_A(M^\vee)$을 얻고, 여기에 [§아핀다양체](/ko/math/algebraic_varieties/affine_varieties){: data-relation="required" }를 적용하면 어떠한 variety $V(M)$에서 $X$로 가는 morphism을 얻는다. 
 
 이 morphism이 실제로 $X$ 위의 vector bundle 구조를 갖는지 확인하자. 점 $x\in X$는 coordinate ring $A$의 maximal ideal $\mathfrak{m}_x$에 해당하며, 따라서 $V(M) \rightarrow X$에서 $x$ 위의 set-theoretic fiber $V(M)_x = \pi^{-1}(x)$의 점들은 $\mathfrak{m}_x\cdot \S_A(M^\vee)$를 포함하는 $\S_A(M^\vee)$의 maximal ideal들이다. 
 
-대수적으로 이 fiber를 정의하는 coordinate ring을 얻기 위해서는 이 위에서 정의된 함수가 무엇인지부터 생각해야 한다. 그런데 $x\in X$를 정의하는 maximal ideal $\mathfrak{m}_x$에 포함되는 함수들은 모두 $x$ 위에서 vanish하므로, 이 fiber에서 정의된 함수는 $A/\mathfrak{m}_x$-valued function으로 생각하는 것이 타당하다. 우리는 이 field $\kappa(x)=A/\mathfrak{m}_x$를 $x$에서의 *residue field*라 부르며, 따라서 일반적으로 $\kappa(x)$는 $\mathbb{K}$의 algebraic extension이다. ([\[가환대수학\] §영점정리, ⁋정리 4](/ko/math/commutative_algebra/nullstellensatz#thm4)) 우리는 보통 $\mathbb{K}$가 algebraically closed field인 경우를 생각하므로, $\kappa(x)$는 그냥 $\mathbb{K}$라 생각해도 무방하다. 
+대수적으로 이 fiber를 정의하는 coordinate ring을 얻기 위해서는 이 위에서 정의된 함수가 무엇인지부터 생각해야 한다. 그런데 $x\in X$를 정의하는 maximal ideal $\mathfrak{m}_x$에 포함되는 함수들은 모두 $x$ 위에서 vanish하므로, 이 fiber에서 정의된 함수는 $A/\mathfrak{m}_x$-valued function으로 생각하는 것이 타당하다. 우리는 이 field $\kappa(x)=A/\mathfrak{m}_x$를 $x$에서의 *residue field*라 부르며, 따라서 일반적으로 $\kappa(x)$는 $\mathbb{K}$의 algebraic extension이다. ([\[가환대수학\] §영점정리, ⁋정리 4](/ko/math/commutative_algebra/nullstellensatz#thm4){: data-relation="weak" }) 우리는 보통 $\mathbb{K}$가 algebraically closed field인 경우를 생각하므로, $\kappa(x)$는 그냥 $\mathbb{K}$라 생각해도 무방하다. 
 
 이제 위의 논의로부터 $\S_A(M^\vee)$의 $\kappa(x)$-valued function들의 모임 $\S_A(M^\vee)\otimes_A\kappa(x)$을 생각해야 하는 것을 안다. 그럼 symmetric algebra가 tensor product와 commute하는 것으로부터 다음의 식
 
@@ -54,7 +54,7 @@ $$\widetilde{M}(X)=M\otimes_A A=M$$
 
 이 두 정의는 본질적으로 같은 대상을 다른 기하적 언어로 표현한 것에 불과하다. 즉, affine variety $X$와 그 coordinate ring $A$, finitely generated projective $A$-module $M$에 대하여, $\widetilde{M}$에 대응하는 total space가 곧 $V(M)$이고, $V(M)$의 section sheaf가 $\widetilde{M}$이다. 
 
-일반적으로, 구체적인 기하적 언어에 비교했을 때 sheaf 언어의 장점은 더 일반적인 경우에 적용이 가능하다는 것이다. 가령 다음을 정의한다. ([\[가환대수학\] §기본 개념들, ⁋정의 8](/ko/math/commutative_algebra/basic_notions#def8))
+일반적으로, 구체적인 기하적 언어에 비교했을 때 sheaf 언어의 장점은 더 일반적인 경우에 적용이 가능하다는 것이다. 가령 다음을 정의한다. ([\[가환대수학\] §기본 개념들, ⁋정의 8](/ko/math/commutative_algebra/basic_notions#def8){: data-relation="weak" })
 
 ::: 정의 1
 일반적인 variety $X$ 위의 $\mathcal{O}_X$-module $\mathcal{F}$가 *quasi-coherent sheaf<sub>준연접층</sub>*라는 것은, $X$의 affine open cover $\{U_i\}$와 각각의 coordinate ring $A_i=\mathcal{O}_X(U_i)$-module $M_i$가 존재하여 $\mathcal{F}\vert_{U_i}\cong \widetilde{M_i}$가 되는 것이다. 만일 각 $M_i$가 finitely generated $A_i$-module이라면, $\mathcal{F}$를 *coherent sheaf<sub>연접층</sub>*라 부른다.
@@ -64,11 +64,11 @@ $$\widetilde{M}(X)=M\otimes_A A=M$$
 
 이러한 관점에서는 vector bundle은 아주 특수한 경우의 (quasi-)coherent sheaf라 생각할 수 있다. 혹은 반대로 이들 (quasi-)coherent sheaf들을 생각할 때 아주 일반적인 형태의 vector bundle이라 생각해도 된다. 구체적으로, coherent sheaf는 (finite rank) vector bundle들의 category에서 이들이 abelian category의 연산, 즉 kernel이나 image, cokernel 등에 대해 닫혀있도록 하기 위해서 확장한 것이라 생각할 수 있으며 직관적으로는 fiber dimension이 점마다 달라질 수 있는 vector bundle이라 생각할 수 있다. Quasi-coherent sheaf는 여기에서 finite rank 조건까지 뺀 것이다. 
 
-Variety의 coordinate ring은 Noetherian이므로 [\[가환대수학\] §기본 개념들, ⁋명제 9](/ko/math/commutative_algebra/basic_notions#prop9)에 의하여 coherent 조건과 finitely generated 조건이 일치하는 것은 singular variety 위에서도 마찬가지이며, 따라서 위의 슬로건은 기하학적 상황에서도 그대로 성립한다. 다만 위의 직관에서 다소 주의할 부분은 coherent sheaf가 vector bundle에 얼마나 가까운지가 $X$의 기하에 따라 달라진다는 것이다. Smooth variety 위에 정의된 임의의 coherent sheaf는 유한한 길이의 locally free resolution을 갖지만, singular variety에서는 그렇지 않다. 
+Variety의 coordinate ring은 Noetherian이므로 [\[가환대수학\] §기본 개념들, ⁋명제 9](/ko/math/commutative_algebra/basic_notions#prop9){: data-relation="required" }에 의하여 coherent 조건과 finitely generated 조건이 일치하는 것은 singular variety 위에서도 마찬가지이며, 따라서 위의 슬로건은 기하학적 상황에서도 그대로 성립한다. 다만 위의 직관에서 다소 주의할 부분은 coherent sheaf가 vector bundle에 얼마나 가까운지가 $X$의 기하에 따라 달라진다는 것이다. Smooth variety 위에 정의된 임의의 coherent sheaf는 유한한 길이의 locally free resolution을 갖지만, singular variety에서는 그렇지 않다. 
 
 ## Canonical Bundle
 
-이제 우리는 canonical bundle을 정의할 준비가 되었다. 이를 위해서는 먼저 variety 위의 cotangent bundle을 도입해야 하는데, 다음 정의는 이미 [§선다발과 벡터다발, ⁋예시 24](/ko/math/algebraic_varieties/line_bundles#ex24)에서 살펴본 것이지만 완결성을 위해 다시 소개한다. 
+이제 우리는 canonical bundle을 정의할 준비가 되었다. 이를 위해서는 먼저 variety 위의 cotangent bundle을 도입해야 하는데, 다음 정의는 이미 [§선다발과 벡터다발, ⁋예시 24](/ko/math/algebraic_varieties/line_bundles#ex24){: data-relation="weak" }에서 살펴본 것이지만 완결성을 위해 다시 소개한다. 
 
 ::: 정의 2
 Smooth variety $X$의 *cotangent bundle<sub>여접다발</sub>* $\Omega_X^1$는 tangent bundle $\mathcal{T}_X$의 dual vector bundle이다. 
@@ -77,13 +77,13 @@ Smooth variety $X$의 *cotangent bundle<sub>여접다발</sub>* $\Omega_X^1$는 
 그럼 우리가 이전 섹션에서 살펴본 construction은 다음을 위한 것이다. 
 
 ::: 명제 3
-Smooth affine variety $X$와 $X$의 coordinate ring $A$에 대하여, $\Omega_X^1$은 $\widetilde{\Omega_{A/\mathbb{K}}}$에 대응되는 vector bundle이다. ([\[가환대수학\] §미분, ⁋정의 3](/ko/math/commutative_algebra/differentials#def3))
+Smooth affine variety $X$와 $X$의 coordinate ring $A$에 대하여, $\Omega_X^1$은 $\widetilde{\Omega_{A/\mathbb{K}}}$에 대응되는 vector bundle이다. ([\[가환대수학\] §미분, ⁋정의 3](/ko/math/commutative_algebra/differentials#def3){: data-relation="required" })
 :::
 
 ::: 증명
 이를 위해서는 기존에 정의한 tangent bundle과 cotangent bundle을 sheaf 언어로 바꿔쓰는 것이 편할 것이다. 우선 tangent sheaf $\mathcal{T}_X$를 정의하자. $X$의 열린집합 $U$에 대하여, $\mathcal{T}_X(U)$를 $\mathcal{O}_X(U)$ 위의 $\mathbb{K}$-derivation들의 모임 $\Der_\mathbb{K}(\mathcal{O}_X(U),\mathcal{O}_X(U))$이 정의하는 sheaf를 tangent sheaf라 부른다. 
 
-우리의 메인 도구는 Kähler differential의 universal property이다. ([\[가환대수학\] §미분, ⁋보조정리 2](/ko/math/commutative_algebra/differentials#lem2)) 즉, 임의의 $A$-module $N$에 대하여 natural isomorphism
+우리의 메인 도구는 Kähler differential의 universal property이다. ([\[가환대수학\] §미분, ⁋보조정리 2](/ko/math/commutative_algebra/differentials#lem2){: data-relation="required" }) 즉, 임의의 $A$-module $N$에 대하여 natural isomorphism
 
 $$\Der_\mathbb{K}(A,N)\cong\Hom_A(\Omega_{A/\mathbb{K}},N)$$
 
@@ -112,7 +112,7 @@ $$\widetilde{\Omega_{A/\mathbb{K}}}^\vee\cong \widetilde{\Omega_{A/\mathbb{K}}^\
 $\mathbb{A}^n$의 cotangent bundle은 $\Omega_{\mathbb{A}^n}^1 \cong \mathcal{O}_{\mathbb{A}^n}^{\oplus n}$이다. 대수적으로, 만일 $\mathbb{A}^n$의 coordinate ring $\mathbb{K}[\x_1, \ldots, \x_n]$을 고정하면 이 $\mathbb{K}$-algebra의 Kähler differentials는 free module $\bigoplus_{i=1}^n \mathbb{K}[\x_1, \ldots, \x_n]  \dd{\x_i}$이므로, 이 결과는 우리의 직관과 잘 맞아떨어진다.
 :::
 
-한편 우리는 임의의 smooth variety $X$ of dimension $n$과 그 위의 cotangent bundle $\Omega_X^1$에 대하여, $\Omega_X^1$의 각 fiber는 $n$차원이므로 이를 $n$번 exterior product한 것은 line bundle이 되는 것을 안다. ([§선다발과 벡터다발, ⁋예시 24](/ko/math/algebraic_varieties/line_bundles#ex24))
+한편 우리는 임의의 smooth variety $X$ of dimension $n$과 그 위의 cotangent bundle $\Omega_X^1$에 대하여, $\Omega_X^1$의 각 fiber는 $n$차원이므로 이를 $n$번 exterior product한 것은 line bundle이 되는 것을 안다. ([§선다발과 벡터다발, ⁋예시 24](/ko/math/algebraic_varieties/line_bundles#ex24){: data-relation="weak" })
 
 ::: 정의 5
 Smooth variety $X$ of dimension $n$의 *canonical line bundle<sub>표준 선다발</sub>* $\omega_X$를 cotangent bundle의 top exterior power
@@ -122,7 +122,7 @@ $$\omega_X = \bigwedge\nolimits^{n} \Omega_X^1$$
 로 정의한다. 
 :::
 
-우리는 canonical bundle $\omega_X$의 global section $s\in \Gamma(X, \omega_X)$을 $X$ 위의 *regular $n$-form*이라 부른다. 이들은 만일 $\omega_X$의 trivializing open set $U$를 잡고, 이를 [예시 4](#ex4)과 같이 affine space 위의 cotangent bundle로 identify할 경우 regular function $f$에 대하여 $f\dd{\x_1} \wedge \cdots \wedge \dd{\x_n}$의 꼴로 나타나는 $n$-form들이다. 
+우리는 canonical bundle $\omega_X$의 global section $s\in \Gamma(X, \omega_X)$을 $X$ 위의 *regular $n$-form*이라 부른다. 이들은 만일 $\omega_X$의 trivializing open set $U$를 잡고, 이를 [예시 4](#ex4){: data-relation="weak" }과 같이 affine space 위의 cotangent bundle로 identify할 경우 regular function $f$에 대하여 $f\dd{\x_1} \wedge \cdots \wedge \dd{\x_n}$의 꼴로 나타나는 $n$-form들이다. 
 
 한편 우리는 line bundle과 divisor class의 대응으로부터 다음을 정의할 수 있다.
 
@@ -130,7 +130,7 @@ $$\omega_X = \bigwedge\nolimits^{n} \Omega_X^1$$
 Canonical bundle $\omega_X$에 대응하는 divisor class를 *canonical divisor<sub>표준 인자</sub>*라 하고 $K_X$로 표기한다. 즉, $\omega_X \cong \mathcal{O}_X(K_X)$이다.
 :::
 
-이를 위해서는 [§선다발과 벡터다발, ⁋명제 19](/ko/math/algebraic_varieties/line_bundles#prop19)를 사용하므로, $K_X$는 오직 divisor class로만 정의된다는 것에 유의하자.
+이를 위해서는 [§선다발과 벡터다발, ⁋명제 19](/ko/math/algebraic_varieties/line_bundles#prop19){: data-relation="required" }를 사용하므로, $K_X$는 오직 divisor class로만 정의된다는 것에 유의하자.
 
 ## $\mathbb{P}^n$의 Canonical Bundle
 
@@ -160,7 +160,7 @@ $$0\rightarrow E\rightarrow F\rightarrow L\rightarrow 0$$
 
 $$\det(F)\cong \det(E)\otimes \det(L)$$
 
-임을 안다. 이제 [명제 7](#prop7)의 Euler exact sequence에 이를 적용하자. $E=\Omega_{\mathbb{P}^n}^1$은 rank $n$, $F=\mathcal{O}_{\mathbb{P}^n}(-1)^{\oplus(n+1)}$은 rank $n+1$, $L=\mathcal{O}_{\mathbb{P}^n}$은 rank $1$이므로
+임을 안다. 이제 [명제 7](#prop7){: data-relation="required" }의 Euler exact sequence에 이를 적용하자. $E=\Omega_{\mathbb{P}^n}^1$은 rank $n$, $F=\mathcal{O}_{\mathbb{P}^n}(-1)^{\oplus(n+1)}$은 rank $n+1$, $L=\mathcal{O}_{\mathbb{P}^n}$은 rank $1$이므로
 
 $$\det(\mathcal{O}_{\mathbb{P}^n}(-1)^{\oplus(n+1)})\cong \det(\Omega_{\mathbb{P}^n}^1)\otimes \det(\mathcal{O}_{\mathbb{P}^n})$$
 
@@ -168,7 +168,7 @@ $$\det(\mathcal{O}_{\mathbb{P}^n}(-1)^{\oplus(n+1)})\cong \det(\Omega_{\mathbb{P
 
 $$\omega_{\mathbb{P}^n}=\det(\Omega_{\mathbb{P}^n}^1)\cong \mathcal{O}_{\mathbb{P}^n}(-n-1)$$
 
-을 얻는다. 이 때 canonical divisor는 $K_{\mathbb{P}^n}=-(n+1)H$로 주어진다. 이 계산과 [§선다발과 벡터다발, ⁋예시 16](/ko/math/algebraic_varieties/line_bundles#ex16)으로부터 $\omega_{\mathbb{P}^n}$은 regular section을 갖지 않는다는 것을 안다. 
+을 얻는다. 이 때 canonical divisor는 $K_{\mathbb{P}^n}=-(n+1)H$로 주어진다. 이 계산과 [§선다발과 벡터다발, ⁋예시 16](/ko/math/algebraic_varieties/line_bundles#ex16){: data-relation="weak" }으로부터 $\omega_{\mathbb{P}^n}$은 regular section을 갖지 않는다는 것을 안다. 
 
 ::: 예시 8
 위의 계산을 $n$-form의 transition function 관점에서도 확인할 수 있다. $\mathbb{P}^n$의 standard open cover $U_i = \{\x_i \neq 0\}$ 위에서 affine coordinate를 $\y_j^{(i)} = \x_j / \x_i$ ($j \neq i$)로 놓으면, $U_i$ 위의 $n$-form 
@@ -189,7 +189,7 @@ $$\bigwedge_{k \neq j} \dd{\y_k}^{(j)} = (-1)^{i+j}(\y_j^{(i)})^{-(n+1)} \cdot \
 
 로 변환된다. 여기서 $(-1)^{i+j}$는 $k=i$인 인자의 부호까지 모아 인자들을 순서대로 다시 배열하며 붙는 부호이며, 각 $U_i$ 위의 $n$-form을 $(-1)^i$배 하여 흡수할 수 있으므로 무시해도 안전하다. 
 
-그럼 $U_i$ 위의 $n$-form들은 $\alpha_i = \bigwedge_{k \neq i} \dd{\y_k}^{(i)}$을 frame으로 가지며, 위의 계산은 두 frame 사이의 관계 $\alpha_j = c_{ij}\alpha_i$가 $c_{ij} = (\y_j^{(i)})^{-(n+1)} = (\x_j / \x_i)^{-(n+1)}$로 주어진다는 것을 말한다. 이제 section을 $s = f_i\alpha_i = f_j\alpha_j$로 적으면 $f_i = c_{ij}f_j$이므로, [§선다발과 벡터다발, ⁋예시 12](/ko/math/algebraic_varieties/line_bundles#ex12)의 컨벤션에서 trivialize된 함수들 사이의 transition function은 그 역수 $g_{ij} = c_{ij}^{-1} = (\x_i / \x_j)^{-(n+1)}$이다. 이는 $\mathcal{O}_{\mathbb{P}^n}(-n-1)$의 transition function과 일치한다.
+그럼 $U_i$ 위의 $n$-form들은 $\alpha_i = \bigwedge_{k \neq i} \dd{\y_k}^{(i)}$을 frame으로 가지며, 위의 계산은 두 frame 사이의 관계 $\alpha_j = c_{ij}\alpha_i$가 $c_{ij} = (\y_j^{(i)})^{-(n+1)} = (\x_j / \x_i)^{-(n+1)}$로 주어진다는 것을 말한다. 이제 section을 $s = f_i\alpha_i = f_j\alpha_j$로 적으면 $f_i = c_{ij}f_j$이므로, [§선다발과 벡터다발, ⁋예시 12](/ko/math/algebraic_varieties/line_bundles#ex12){: data-relation="weak" }의 컨벤션에서 trivialize된 함수들 사이의 transition function은 그 역수 $g_{ij} = c_{ij}^{-1} = (\x_i / \x_j)^{-(n+1)}$이다. 이는 $\mathcal{O}_{\mathbb{P}^n}(-n-1)$의 transition function과 일치한다.
 :::
 
 ## Adjunction Formula
@@ -200,7 +200,7 @@ $$\bigwedge_{k \neq j} \dd{\y_k}^{(j)} = (-1)^{i+j}(\y_j^{(i)})^{-(n+1)} \cdot \
 
 $$0\rightarrow \mathcal{I}_D\rightarrow \mathcal{O}_X\rightarrow \mathcal{O}_D\rightarrow 0$$
 
-을 만족하는 ideal sheaf $\mathcal{I}_D=\mathcal{O}_X(-D)$를 기억하자. ([§선다발과 벡터다발, ⁋정의 17](/ko/math/algebraic_varieties/line_bundles#def17)) 그럼 이로부터 $\mathcal{I}_D$의 일차근사 부분은
+을 만족하는 ideal sheaf $\mathcal{I}_D=\mathcal{O}_X(-D)$를 기억하자. ([§선다발과 벡터다발, ⁋정의 17](/ko/math/algebraic_varieties/line_bundles#def17){: data-relation="required" }) 그럼 이로부터 $\mathcal{I}_D$의 일차근사 부분은
 
 $$\mathcal{I}_D/\mathcal{I}_D^2=\mathcal{I}_D\otimes_{\mathcal{O}_X}\mathcal{O}_D=\mathcal{O}_X(-D)\vert_D$$
 
@@ -248,7 +248,7 @@ Degree-genus formula는, 실은 나중에 살펴 볼 Riemann-Roch theorem의 특
 
 ## Blow-up의 canonical divisor
 
-우리는 [§유리사상, ⁋예시 12](/ko/math/algebraic_varieties/rational_maps#ex12)에서 $\mathbb{A}^2$ 위의 한 점 $0$에서의 blow-up을 살펴보았다. 우리는 이제 이 예시를 더 일반화시키고, 이 일반적인 세팅에서 canonical divisor가 어떻게 행동하는지를 살펴볼 것이다.
+우리는 [§유리사상, ⁋예시 12](/ko/math/algebraic_varieties/rational_maps#ex12){: data-relation="required" }에서 $\mathbb{A}^2$ 위의 한 점 $0$에서의 blow-up을 살펴보았다. 우리는 이제 이 예시를 더 일반화시키고, 이 일반적인 세팅에서 canonical divisor가 어떻게 행동하는지를 살펴볼 것이다.
 
 Smooth variety $X$와 codimension $r$ smooth subvariety $Z$에 대하여, $Z$를 따라 $X$를 blowup한 것은 다음의 birational morphism
 
@@ -258,7 +258,7 @@ $$\pi:\widetilde{X}\rightarrow X$$
 
 $$E=\mathbb{P}(\mathcal{N}_{Z/X})$$
 
-로 주어진다. 이 때 $\mathcal{N}_{Z/X}$는 $X$ 안에서 $Z$의 normal bundle이며, $\mathbb{P}(\mathcal{N}_{Z/X})$는 $Z$의 각 점의 fiber에 해당하는 vector space를 projectivize해서 얻어진 projective bundle을 의미한다. 이는 [§유리사상, ⁋예시 12](/ko/math/algebraic_varieties/rational_maps#ex12)에서, 한 점 $0$의 fiber에 해당하는 exceptional divisor는 이 점 바깥에서 이 점으로 <em-ko>들어오는</em-ko> 방향을 projective하여 달아준 것의 analogue이다. 
+로 주어진다. 이 때 $\mathcal{N}_{Z/X}$는 $X$ 안에서 $Z$의 normal bundle이며, $\mathbb{P}(\mathcal{N}_{Z/X})$는 $Z$의 각 점의 fiber에 해당하는 vector space를 projectivize해서 얻어진 projective bundle을 의미한다. 이는 [§유리사상, ⁋예시 12](/ko/math/algebraic_varieties/rational_maps#ex12){: data-relation="weak" }에서, 한 점 $0$의 fiber에 해당하는 exceptional divisor는 이 점 바깥에서 이 점으로 <em-ko>들어오는</em-ko> 방향을 projective하여 달아준 것의 analogue이다. 
 
 그럼 $\pi:\widetilde{X}\rightarrow X$를 $E$로 제한하여 
 
@@ -270,7 +270,7 @@ $$0 \rightarrow T_{E/Z} \rightarrow T_E \rightarrow \pi_E^\ast T_Z \rightarrow 0
 
 를 얻는다. 
 
-한편 가정에 의해 $Z$는 codimension $r$이었으므로, $\mathcal{N}_{Z/X}$는 rank $r$이고 따라서 $E$의 각 fiber는 $\mathbb{P}^{r-1}$이다. 우리는 [명제 7](#prop7)을 일반화하여 다음을 얻는다. 
+한편 가정에 의해 $Z$는 codimension $r$이었으므로, $\mathcal{N}_{Z/X}$는 rank $r$이고 따라서 $E$의 각 fiber는 $\mathbb{P}^{r-1}$이다. 우리는 [명제 7](#prop7){: data-relation="weak" }을 일반화하여 다음을 얻는다. 
 
 ::: 명제 11 (Relative Euler sequence)
 임의의 vector bundle $V\rightarrow B$와 projectivized vector bundle $\pi: \mathbb{P}(V)\rightarrow B$에 대하여, 다음의 short exact sequence
@@ -292,7 +292,7 @@ $$0 \rightarrow \mathcal{O}\rightarrow \mathcal{O}(1)\otimes \pi^\ast V \rightar
 
 $$\mathcal{Q}\otimes \mathcal{O}(1)\cong \Hom(\mathcal{O}(-1),\mathcal{Q})$$
 
-부분을 살펴보면, 우리는 이미 [명제 7](#prop7)의 증명에서 $\mathbb{P}^n$의 line이 어떠한 quotient로 가는지를 보는 것이 곧 tangent space임을 보았으므로 이 또한
+부분을 살펴보면, 우리는 이미 [명제 7](#prop7){: data-relation="required" }의 증명에서 $\mathbb{P}^n$의 line이 어떠한 quotient로 가는지를 보는 것이 곧 tangent space임을 보았으므로 이 또한
 
 $$\Hom(\mathcal{O}(-1),\mathcal{Q})\cong T_{\mathbb{P}(V)/B}$$
 
@@ -368,7 +368,7 @@ $$K_E = \det(T_E)^{-1} = \omega_{E/Z} \otimes \pi_E^\ast K_Z = \pi_E^\ast K_Z \o
 구체적으로 다음을 살펴보자.
 
 ::: 예시 13 ($\mathbb{A}^2$의 점에서의 blow-up)
-$X = \mathbb{A}^2$의 원점 $Z = \{0\}$에서의 blow-up을 고려하자. $K_{\mathbb{A}^2} = 0$이고 $Z$의 codimension은 $r = 2$이므로, [명제 12](#prop12)에 의해
+$X = \mathbb{A}^2$의 원점 $Z = \{0\}$에서의 blow-up을 고려하자. $K_{\mathbb{A}^2} = 0$이고 $Z$의 codimension은 $r = 2$이므로, [명제 12](#prop12){: data-relation="required" }에 의해
 
 $$K_{\widetilde{\mathbb{A}^2}} = E$$
 
