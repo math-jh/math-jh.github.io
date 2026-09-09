@@ -14,7 +14,7 @@ translated_at: 2026-08-19T07:45:04+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-08-19T07:45:04+00:00
 ---
-In [§Differentiation and Derivatives](/en/math/calculus/derivatives), we saw that differentiating a function once yields its derivative, which gives the tangent line
+In [§Differentiation and Derivatives](/en/math/calculus/derivatives){: data-relation="required" }, we saw that differentiating a function once yields its derivative, which gives the tangent line
 
 $$f(x) \approx f(a) + f'(a)(x-a)$$
 
@@ -59,7 +59,7 @@ The endpoint values are $g(x) = 0$, $g(a) = f(x) - P_n(x) = R_n(x)$, and $h(x) =
 
 $$g'(t) = -\frac{f^{(n+1)}(t)}{n!}(x - t)^n$$
 
-remains, while $h'(t) = -(n+1)(x-t)^n$. Applying [§Mean Value Theorem, ⁋Theorem 6](/en/math/calculus/mean_value_theorem#thm6) between $a$ and $x$, there exists $c$ such that
+remains, while $h'(t) = -(n+1)(x-t)^n$. Applying [§Mean Value Theorem, ⁋Theorem 6](/en/math/calculus/mean_value_theorem#thm6){: data-relation="required" } between $a$ and $x$, there exists $c$ such that
 
 $$\bigl(g(x) - g(a)\bigr)h'(c) = \bigl(h(x) - h(a)\bigr)g'(c).$$
 
@@ -75,7 +75,7 @@ Therefore, if we now compute the remainder term in the above theorem and show th
 Let us follow through these calculations in a few concrete examples.
 
 ::: Example 3
-Since any derivative of $f(x) = e^x$ is itself, as verified in [§Differentiation](/en/math/calculus/differentiation_rules), we have $f^{(k)}(0) = 1$ for every $k$. Hence the Taylor polynomial is
+Since any derivative of $f(x) = e^x$ is itself, as verified in [§Differentiation](/en/math/calculus/differentiation_rules){: data-relation="weak" }, we have $f^{(k)}(0) = 1$ for every $k$. Hence the Taylor polynomial is
 
 $$P_n(x) = \sum_{k=0}^n \frac{x^k}{k!}.$$
 
@@ -87,7 +87,7 @@ and for fixed $x$,
 
 $$\lvert R_n(x)\rvert \leq \frac{e^{\lvert x\rvert}\lvert x\rvert^{n+1}}{(n+1)!} \rightarrow 0 \qquad (n \rightarrow \infty)$$
 
-([§Limits of Sequences, ⁋Example 6](/en/math/calculus/sequences#ex6)), so
+([§Limits of Sequences, ⁋Example 6](/en/math/calculus/sequences#ex6){: data-relation="required" }), so
 
 $$e^x = \sum_{k=0}^{\infty}\frac{x^k}{k!}$$
 
@@ -97,7 +97,7 @@ holds for all real $x$. In particular, for $x = 1$ we get $e = \sum_{k=0}^\infty
 Similarly, for the trigonometric functions we are familiar with, the following holds.
 
 ::: Example 4 (Trigonometric functions)
-Since the derivatives of $\sin x$ are periodic: $\cos x, -\sin x, -\cos x, \sin x$, the values $f^{(k)}(0)$ repeat $0, 1, 0, -1$. All derivatives are bounded by $\lvert f^{(n+1)}\rvert \leq 1$, so by the same argument as in [Example 3](#ex3) the remainder goes to $0$, and thus for all $x$,
+Since the derivatives of $\sin x$ are periodic: $\cos x, -\sin x, -\cos x, \sin x$, the values $f^{(k)}(0)$ repeat $0, 1, 0, -1$. All derivatives are bounded by $\lvert f^{(n+1)}\rvert \leq 1$, so by the same argument as in [Example 3](#ex3){: data-relation="required" } the remainder goes to $0$, and thus for all $x$,
 
 $$\sin x = \sum_{k=0}^\infty \frac{(-1)^k x^{2k+1}}{(2k+1)!}, \qquad \cos x = \sum_{k=0}^\infty \frac{(-1)^k x^{2k}}{(2k)!}.$$
 :::
@@ -113,7 +113,7 @@ and differentiating this gives the infinite series identity
 
 $$\frac{1}{1+x}=\sum_{k=0}^\infty (-1)^{k}x^k \qquad (\lvert x\rvert < 1).$$
 
-([§Differentiation, ⁋Proposition 1](/en/math/calculus/differentiation_rules#prop1)) This is the case $\alpha = -1$ of the more general binomial series defined for real $\alpha$:
+([§Differentiation, ⁋Proposition 1](/en/math/calculus/differentiation_rules#prop1){: data-relation="weak" }) This is the case $\alpha = -1$ of the more general binomial series defined for real $\alpha$:
 
 $$(1+x)^\alpha = \sum_{k=0}^\infty \binom{\alpha}{k} x^k, \qquad \binom{\alpha}{k} = \frac{\alpha(\alpha-1)\cdots(\alpha-k+1)}{k!} \qquad (\lvert x\rvert < 1).$$
 
@@ -122,7 +122,7 @@ As another example, $\alpha = 1/2$ gives
 $$\sqrt{1+x} = 1 + \frac{x}{2} - \frac{x^2}{8} + \cdots.$$
 :::
 
-As in [Example 4](#ex4) above, if all derivatives are simultaneously bounded by a single constant, then the Taylor series equals the function itself. Writing this formally gives the following.
+As in [Example 4](#ex4){: data-relation="weak" } above, if all derivatives are simultaneously bounded by a single constant, then the Taylor series equals the function itself. Writing this formally gives the following.
 
 ::: Proposition 6
 If $f$ is infinitely differentiable on an interval $I$ containing $a$, and there exists a constant $M$ such that $\lvert f^{(n)}(x)\rvert \leq M$ for all $n$ and all $x \in I$, then $f$ coincides with its Taylor series on $I$.
@@ -133,19 +133,19 @@ The remainder in Taylor's theorem satisfies
 
 $$\lvert R_n(x)\rvert = \frac{\lvert f^{(n+1)}(c)\rvert}{(n+1)!}\lvert x-a\rvert^{n+1} \leq \frac{M\lvert x-a\rvert^{n+1}}{(n+1)!}.$$
 
-For fixed $x$, the right-hand side goes to $0$ as $n \rightarrow \infty$ ([§Limits of Sequences, ⁋Example 6](/en/math/calculus/sequences#ex6), $r^n/n! \rightarrow 0$), so $R_n(x) \rightarrow 0$ and the partial sums converge to $f(x)$.
+For fixed $x$, the right-hand side goes to $0$ as $n \rightarrow \infty$ ([§Limits of Sequences, ⁋Example 6](/en/math/calculus/sequences#ex6){: data-relation="required" }, $r^n/n! \rightarrow 0$), so $R_n(x) \rightarrow 0$ and the partial sums converge to $f(x)$.
 :::
 
-Meanwhile, [Theorem 2](#thm2) is essentially numerical: using it, we can assess by hand how accurate an approximation is. For instance, approximating $\sin(0.1)$ by $P_3(x) = x - x^3/6$, the fourth-degree remainder is $\lvert R_3(0.1)\rvert \leq (0.1)^4/4! \approx 4.2\times 10^{-6}$, so we can verify accuracy to five decimal places; and the error in truncating $e = \sum_k 1/k!$ after the first $n+1$ terms is $\lvert R_n(1)\rvert \leq 3/(n+1)!$ (since $e^c < 3$).
+Meanwhile, [Theorem 2](#thm2){: data-relation="required" } is essentially numerical: using it, we can assess by hand how accurate an approximation is. For instance, approximating $\sin(0.1)$ by $P_3(x) = x - x^3/6$, the fourth-degree remainder is $\lvert R_3(0.1)\rvert \leq (0.1)^4/4! \approx 4.2\times 10^{-6}$, so we can verify accuracy to five decimal places; and the error in truncating $e = \sum_k 1/k!$ after the first $n+1$ terms is $\lvert R_n(1)\rvert \leq 3/(n+1)!$ (since $e^c < 3$).
 
 As another example, since Taylor expansion retains not just the highest or lowest degree term, it can be used powerfully in computing limits of $0/0$ form.
 
 ::: Example 7 (Limit)
-Let us find the limit $\lim_{x\rightarrow 0}(e^x - 1 - x)/x^2$. From [Example 3](#ex3), $e^x = 1 + x + x^2/2 + x^3/6 + \cdots$, so
+Let us find the limit $\lim_{x\rightarrow 0}(e^x - 1 - x)/x^2$. From [Example 3](#ex3){: data-relation="required" }, $e^x = 1 + x + x^2/2 + x^3/6 + \cdots$, so
 
 $$\frac{e^x - 1 - x}{x^2} = \frac{x^2/2 + x^3/6 + \cdots}{x^2} = \frac12 + \frac{x}{6} + \cdots \rightarrow \frac12.$$
 
-This is a result that can also be checked by applying [§Mean Value Theorem, ⁋Theorem 18](/en/math/calculus/mean_value_theorem#thm18) twice. Taylor expansion succeeds because it retains information from higher-degree terms, so after canceling with the denominator and numerator, information still remains.
+This is a result that can also be checked by applying [§Mean Value Theorem, ⁋Theorem 18](/en/math/calculus/mean_value_theorem#thm18){: data-relation="weak" } twice. Taylor expansion succeeds because it retains information from higher-degree terms, so after canceling with the denominator and numerator, information still remains.
 :::
 
 ---
