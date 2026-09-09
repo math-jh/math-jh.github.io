@@ -13,7 +13,7 @@ weight: 7
 
 ---
 
-우리는 [§미분과 도함수](/ko/math/calculus/derivatives)에서 미분의 정의와 기본적인 성질들을 다루었다. 이번 글에서 우리는 구체적인 함수에 대한 미분들과, 일반적인 함수들에 대해 적용되는 미분규칙들을 다룬다.
+우리는 [§미분과 도함수](/ko/math/calculus/derivatives){: data-relation="required" }에서 미분의 정의와 기본적인 성질들을 다루었다. 이번 글에서 우리는 구체적인 함수에 대한 미분들과, 일반적인 함수들에 대해 적용되는 미분규칙들을 다룬다.
 
 ## 멱급수의 항별 미분
 
@@ -43,7 +43,7 @@ $$f'(x) = \sum_{n=1}^\infty n c_n x^{n-1}$$
 
 본격적으로 미분규칙들을 살펴보기 전에, 우리는 다양한 함수들의 도함수를 유도한다. 
 
-우선 지수함수는 [§멱급수, ⁋예시 3](/ko/math/calculus/power_series#ex3)에서 $e^x = \sum_{n\geq 0} x^n/n!$로 정의하였다. 이제 [명제 1](#prop1)을 적용하면 그 미분은 항별 미분의 합
+우선 지수함수는 [§멱급수, ⁋예시 3](/ko/math/calculus/power_series#ex3){: data-relation="weak" }에서 $e^x = \sum_{n\geq 0} x^n/n!$로 정의하였다. 이제 [명제 1](#prop1){: data-relation="required" }을 적용하면 그 미분은 항별 미분의 합
 
 $$(e^x)' = \sum_{n=1}^\infty n \frac{x^{n-1}}{n!} = \sum_{n=1}^\infty \frac{x^{n-1}}{(n-1)!} = \sum_{m=0}^\infty \frac{x^m}{m!} = e^x$$
 
@@ -57,7 +57,7 @@ $$\lim_{h\rightarrow 0}(e^h-1)/h = 1$$
 
 $$\lim_{h \rightarrow 0} \frac{\sin h}{h} = 1, \qquad \lim_{h \rightarrow 0} \frac{1 - \cos h}{h} = 0$$
 
-을 사용하여 얻어내기로 한다. 첫 극한은 [§함수의 극한, ⁋예시 10](/ko/math/calculus/functions_and_limits#ex10)에서 조임정리로 얻었고, 둘째 극한은 같은 예시가 세운 부등식 $\lvert 1 - \cos h\rvert \leq h^2/2$로부터 $\lvert(1 - \cos h)/h\rvert \leq \lvert h\rvert/2$가 되어 따라온다. 
+을 사용하여 얻어내기로 한다. 첫 극한은 [§함수의 극한, ⁋예시 10](/ko/math/calculus/functions_and_limits#ex10){: data-relation="required" }에서 조임정리로 얻었고, 둘째 극한은 같은 예시가 세운 부등식 $\lvert 1 - \cos h\rvert \leq h^2/2$로부터 $\lvert(1 - \cos h)/h\rvert \leq \lvert h\rvert/2$가 되어 따라온다. 
 
 ::: 명제 2 (삼각함수의 도함수)
 모든 점에서 $(\sin x)' = \cos x$이고 $(\cos x)' = -\sin x$이다.
@@ -73,7 +73,7 @@ $$\frac{\sin(x+h) - \sin x}{h} = \sin x \cdot \frac{\cos h - 1}{h} + \cos x \cdo
 
 ## 여러가지 미분법
 
-이제 우리는 일반적인 형태에 적용되는 미분규칙들을 정의한다. [§미분과 도함수, ⁋명제 4](/ko/math/calculus/derivatives#prop4)에서 우리는 미분이 상수곱과 덧셈에 대해서는 잘 행동하는 것을 보았지만, 곱에 대해서는 단순히 분배되지 않는다.
+이제 우리는 일반적인 형태에 적용되는 미분규칙들을 정의한다. [§미분과 도함수, ⁋명제 4](/ko/math/calculus/derivatives#prop4){: data-relation="weak" }에서 우리는 미분이 상수곱과 덧셈에 대해서는 잘 행동하는 것을 보았지만, 곱에 대해서는 단순히 분배되지 않는다.
 
 ::: 명제 3 (곱의 미분법)
 $f, g$가 $a$에서 미분가능하면 $fg$도 $a$에서 미분가능하고
@@ -88,7 +88,7 @@ $$(fg)'(a) = f'(a) g(a) + f(a) g'(a)$$
 
 $$\frac{f(a+h)g(a+h) - f(a)g(a)}{h} = \frac{f(a+h)-f(a)}{h} g(a+h) + f(a) \frac{g(a+h)-g(a)}{h}$$
 
-이다. $h \rightarrow 0$일 때 첫 항의 평균변화율은 $f'(a)$로, $g(a+h)$는 $g$의 연속성으로 ([§미분과 도함수, ⁋명제 2](/ko/math/calculus/derivatives#prop2)) $g(a)$로, 둘째 항의 평균변화율은 $g'(a)$로 수렴하므로, [§함수의 극한, ⁋명제 5](/ko/math/calculus/functions_and_limits#prop5)에 의해 합은 $f'(a)g(a) + f(a)g'(a)$로 수렴한다.
+이다. $h \rightarrow 0$일 때 첫 항의 평균변화율은 $f'(a)$로, $g(a+h)$는 $g$의 연속성으로 ([§미분과 도함수, ⁋명제 2](/ko/math/calculus/derivatives#prop2){: data-relation="required" }) $g(a)$로, 둘째 항의 평균변화율은 $g'(a)$로 수렴하므로, [§함수의 극한, ⁋명제 5](/ko/math/calculus/functions_and_limits#prop5){: data-relation="required" }에 의해 합은 $f'(a)g(a) + f(a)g'(a)$로 수렴한다.
 :::
 
 가장 널리 쓰이는 규칙은 합성함수의 미분이다.
@@ -124,7 +124,7 @@ $$\left(\frac{f}{g}\right)'(a) = \frac{f'(a) g(a) - f(a) g'(a)}{g(a)^2}$$
 :::
 
 ::: 증명
-함수 $h(t)=1/t$로 정의하면 $1/g =h \circ g$이고, 정수 거듭제곱의 미분으로 $h'(t)=-1/t^2$이므로, [정리 4](#thm4)에 의해 $(1/g)'(a) = -g(a)^{-2}g'(a)$이다. 이제 $f/g = f\cdot(1/g)$에 곱의 미분법을 적용하면
+함수 $h(t)=1/t$로 정의하면 $1/g =h \circ g$이고, 정수 거듭제곱의 미분으로 $h'(t)=-1/t^2$이므로, [정리 4](#thm4){: data-relation="required" }에 의해 $(1/g)'(a) = -g(a)^{-2}g'(a)$이다. 이제 $f/g = f\cdot(1/g)$에 곱의 미분법을 적용하면
 
 $$\left(\frac{f}{g}\right)'(a) = \frac{f'(a)}{g(a)} - \frac{f(a)g'(a)}{g(a)^2} = \frac{f'(a)g(a) - f(a)g'(a)}{g(a)^2}$$
 
@@ -144,13 +144,13 @@ $$(f^{-1})'(b) = \frac{1}{f'(a)} = \frac{1}{f'(f^{-1}(b))}$$
 :::
 
 ::: 증명
-$f$가 정의된 구간을 $I$, 그 image를 $J = f(I)$라 하자. $f$는 단조이면서 역함수를 가져 단사이므로 순단조이고, 따라서 [§연속함수, ⁋명제 7](/ko/math/calculus/continuity#prop7)에 의해 $f^{-1} : J \rightarrow I$는 연속이다.
+$f$가 정의된 구간을 $I$, 그 image를 $J = f(I)$라 하자. $f$는 단조이면서 역함수를 가져 단사이므로 순단조이고, 따라서 [§연속함수, ⁋명제 7](/ko/math/calculus/continuity#prop7){: data-relation="required" }에 의해 $f^{-1} : J \rightarrow I$는 연속이다.
 
 이제 $y \in J$가 $y \neq b$이면 $x = f^{-1}(y)$는 단사성에 의해 $a = f^{-1}(b)$와 다르므로, $f^{-1}$의 평균변화율을
 
 $$\frac{f^{-1}(y) - f^{-1}(b)}{y - b} = \frac{x - a}{f(x) - f(a)} = \left(\frac{f(x)-f(a)}{x-a}\right)^{-1}$$
 
-로 고쳐 쓸 수 있다. $y \rightarrow b$일 때 $f^{-1}$의 연속성에 의해 $x \rightarrow a$이고 우변의 괄호 안은 $f'(a)$로 수렴하므로, $f'(a) \neq 0$과 [§함수의 극한, ⁋명제 5](/ko/math/calculus/functions_and_limits#prop5)의 4에 의해 위 평균변화율은 $1/f'(a)$로 수렴한다. 즉 $f^{-1}$은 $b$에서 미분가능하고 $(f^{-1})'(b) = 1/f'(a)$이다.
+로 고쳐 쓸 수 있다. $y \rightarrow b$일 때 $f^{-1}$의 연속성에 의해 $x \rightarrow a$이고 우변의 괄호 안은 $f'(a)$로 수렴하므로, $f'(a) \neq 0$과 [§함수의 극한, ⁋명제 5](/ko/math/calculus/functions_and_limits#prop5){: data-relation="required" }의 4에 의해 위 평균변화율은 $1/f'(a)$로 수렴한다. 즉 $f^{-1}$은 $b$에서 미분가능하고 $(f^{-1})'(b) = 1/f'(a)$이다.
 :::
 
 이로써 우리는 앞에서 살펴본 함수들의 역함수에 대한 미분 또한 진행할 수 있다. 가령, $e^x$의 역함수 $\ln$에 대해 $(e^x)' = e^x$이므로 $(\ln y)' = 1/e^{\ln y} = 1/y$이고, $\sin$을 $(-\pi/2, \pi/2)$로 제한한 역함수 $\arcsin$에 대해서는 $f'(x) = \cos x = \sqrt{1 - \sin^2 x} > 0$이므로
@@ -166,17 +166,17 @@ $$(\arcsin y)' = \frac{1}{\sqrt{1 - y^2}} \qquad (\lvert y\rvert < 1)$$
 
 $$f(x) = \begin{cases} x^2 \sin(1/x) & (x \neq 0) \\ 0 & (x = 0) \end{cases}$$
 
-는 모든 점에서 미분가능하다. $x \neq 0$에서는 곱의 미분법과 연쇄법칙으로 $f'(x) = 2x\sin(1/x) - \cos(1/x)$이고, $0$에서는 평균변화율이 $x\sin(1/x) \rightarrow 0$이므로 $f'(0) = 0$이다. 그런데 $x \rightarrow 0$일 때 $2x\sin(1/x) \rightarrow 0$이지만 $\cos(1/x)$는 $[-1, 1]$ 사이를 무한히 진동하여 극한을 갖지 않으므로, $f'$은 $0$에서 불연속이다. 즉 $f$는 어디서나 미분가능하지만 도함수가 연속이 아니어서 ([§미분과 도함수, ⁋정의 5](/ko/math/calculus/derivatives#def5)의) $C^1$급이 아니다.
+는 모든 점에서 미분가능하다. $x \neq 0$에서는 곱의 미분법과 연쇄법칙으로 $f'(x) = 2x\sin(1/x) - \cos(1/x)$이고, $0$에서는 평균변화율이 $x\sin(1/x) \rightarrow 0$이므로 $f'(0) = 0$이다. 그런데 $x \rightarrow 0$일 때 $2x\sin(1/x) \rightarrow 0$이지만 $\cos(1/x)$는 $[-1, 1]$ 사이를 무한히 진동하여 극한을 갖지 않으므로, $f'$은 $0$에서 불연속이다. 즉 $f$는 어디서나 미분가능하지만 도함수가 연속이 아니어서 ([§미분과 도함수, ⁋정의 5](/ko/math/calculus/derivatives#def5){: data-relation="weak" }의) $C^1$급이 아니다.
 :::
 
-그럼에도 도함수가 아무 모양으로나 불연속일 수는 없다. 도함수는 연속이 아니더라도 임의의 중간값을 반드시 취하므로(*Darboux 정리*) 점프 불연속을 가질 수 없으며, [예시 7](#ex7)에서 나타난 불연속도 점프가 아니라 진동에 의한 것이다.
+그럼에도 도함수가 아무 모양으로나 불연속일 수는 없다. 도함수는 연속이 아니더라도 임의의 중간값을 반드시 취하므로(*Darboux 정리*) 점프 불연속을 가질 수 없으며, [예시 7](#ex7){: data-relation="weak" }에서 나타난 불연속도 점프가 아니라 진동에 의한 것이다.
 
 ## 미분법의 응용
 
-마지막으로 지금까지 살펴본 규칙들을 적용하는 법을 살펴보며 이 글을 마친다. 먼저, [명제 1](#prop1)은, 우리가 멱급수를 도입한 이유와는 다소 주객이 전도된 방향이지만, 급수의 값을 구할 때 사용할 수 있다. 
+마지막으로 지금까지 살펴본 규칙들을 적용하는 법을 살펴보며 이 글을 마친다. 먼저, [명제 1](#prop1){: data-relation="required" }은, 우리가 멱급수를 도입한 이유와는 다소 주객이 전도된 방향이지만, 급수의 값을 구할 때 사용할 수 있다. 
 
 ::: 예시 8 (무한급수의 합)
-기하급수 ([§무한급수, ⁋예시 2](/ko/math/calculus/series#ex2))
+기하급수 ([§무한급수, ⁋예시 2](/ko/math/calculus/series#ex2){: data-relation="weak" })
 
 $$\frac{1}{1-x} = \sum_{n=0}^\infty x^n \qquad (\lvert x\rvert < 1)$$
 
@@ -184,7 +184,7 @@ $$\frac{1}{1-x} = \sum_{n=0}^\infty x^n \qquad (\lvert x\rvert < 1)$$
 
 $$\left(\frac{1}{1-x}\right)' = 1/(1-x)^2$$
 
-이고, 우변은 [명제 1](#prop1)을 적용하면 $\sum_{n\geq 1} n x^{n-1}$이므로
+이고, 우변은 [명제 1](#prop1){: data-relation="required" }을 적용하면 $\sum_{n\geq 1} n x^{n-1}$이므로
 
 $$\sum_{n=1}^\infty n x^{n-1} = \frac{1}{(1-x)^2} \qquad (\lvert x\rvert < 1)$$
 

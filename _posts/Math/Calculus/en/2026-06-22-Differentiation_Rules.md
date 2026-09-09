@@ -14,7 +14,7 @@ translated_at: 2026-08-19T05:45:05+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-08-19T05:45:05+00:00
 ---
-We covered the definition of differentiation and its basic properties in [§Differentiation and Derivatives](/en/math/calculus/derivatives). In this post, we treat derivatives of concrete functions and differentiation rules applicable to general functions.
+We covered the definition of differentiation and its basic properties in [§Differentiation and Derivatives](/en/math/calculus/derivatives){: data-relation="required" }. In this post, we treat derivatives of concrete functions and differentiation rules applicable to general functions.
 
 ## Term-by-Term Differentiation of Power Series
 
@@ -44,7 +44,7 @@ That the series on the right-hand side has radius of convergence $R$ itself foll
 
 Before examining differentiation rules in earnest, we derive the derivatives of various functions.
 
-First, the exponential function was defined in [§Power Series, ⁋Example 3](/en/math/calculus/power_series#ex3) by $e^x = \sum_{n\geq 0} x^n/n!$. Applying [Proposition 1](#prop1), its derivative is the sum of term-by-term differentiations
+First, the exponential function was defined in [§Power Series, ⁋Example 3](/en/math/calculus/power_series#ex3){: data-relation="weak" } by $e^x = \sum_{n\geq 0} x^n/n!$. Applying [Proposition 1](#prop1){: data-relation="required" }, its derivative is the sum of term-by-term differentiations
 
 $$(e^x)' = \sum_{n=1}^\infty n \frac{x^{n-1}}{n!} = \sum_{n=1}^\infty \frac{x^{n-1}}{(n-1)!} = \sum_{m=0}^\infty \frac{x^m}{m!} = e^x$$
 
@@ -56,7 +56,7 @@ Trigonometric functions will also soon be written in power-series form, but for 
 
 $$\lim_{h \rightarrow 0} \frac{\sin h}{h} = 1, \qquad \lim_{h \rightarrow 0} \frac{1 - \cos h}{h} = 0$$
 
-The first limit was obtained by the squeeze theorem in [§Limits of Functions, ⁋Example 10](/en/math/calculus/functions_and_limits#ex10), and the second follows from the same example's inequality $\lvert 1 - \cos h\rvert \leq h^2/2$, which gives $\lvert(1 - \cos h)/h\rvert \leq \lvert h\rvert/2$.
+The first limit was obtained by the squeeze theorem in [§Limits of Functions, ⁋Example 10](/en/math/calculus/functions_and_limits#ex10){: data-relation="required" }, and the second follows from the same example's inequality $\lvert 1 - \cos h\rvert \leq h^2/2$, which gives $\lvert(1 - \cos h)/h\rvert \leq \lvert h\rvert/2$.
 
 ::: Proposition 2 (Derivatives of trigonometric functions)
 At every point $(\sin x)' = \cos x$ and $(\cos x)' = -\sin x$.
@@ -72,7 +72,7 @@ and as $h \rightarrow 0$ the two limits above give $\sin x \cdot 0 + \cos x \cdo
 
 ## Various Differentiation Rules
 
-We now define differentiation rules applicable to general forms. In [§Differentiation and Derivatives, ⁋Proposition 4](/en/math/calculus/derivatives#prop4) we saw that differentiation behaves well with respect to constant multiples and addition, but it does not simply distribute over products.
+We now define differentiation rules applicable to general forms. In [§Differentiation and Derivatives, ⁋Proposition 4](/en/math/calculus/derivatives#prop4){: data-relation="weak" } we saw that differentiation behaves well with respect to constant multiples and addition, but it does not simply distribute over products.
 
 ::: Proposition 3 (Product rule)
 If $f, g$ are differentiable at $a$, then $fg$ is also differentiable at $a$ and
@@ -87,7 +87,7 @@ Adding and subtracting the same term in the difference quotient gives
 
 $$\frac{f(a+h)g(a+h) - f(a)g(a)}{h} = \frac{f(a+h)-f(a)}{h} g(a+h) + f(a) \frac{g(a+h)-g(a)}{h}$$
 
-As $h \rightarrow 0$, the difference quotient in the first term converges to $f'(a)$, $g(a+h)$ converges to $g(a)$ by continuity of $g$ ([§Differentiation and Derivatives, ⁋Proposition 2](/en/math/calculus/derivatives#prop2)), and the difference quotient in the second term converges to $g'(a)$, so by [§Limits of Functions, ⁋Proposition 5](/en/math/calculus/functions_and_limits#prop5) the sum converges to $f'(a)g(a) + f(a)g'(a)$.
+As $h \rightarrow 0$, the difference quotient in the first term converges to $f'(a)$, $g(a+h)$ converges to $g(a)$ by continuity of $g$ ([§Differentiation and Derivatives, ⁋Proposition 2](/en/math/calculus/derivatives#prop2){: data-relation="required" }), and the difference quotient in the second term converges to $g'(a)$, so by [§Limits of Functions, ⁋Proposition 5](/en/math/calculus/functions_and_limits#prop5){: data-relation="required" } the sum converges to $f'(a)g(a) + f(a)g'(a)$.
 :::
 
 The most widely used rule is the derivative of a composite function.
@@ -123,7 +123,7 @@ holds.
 :::
 
 ::: Proof
-Defining $h(t)=1/t$, we have $1/g =h \circ g$, and by the derivative of integer powers $h'(t)=-1/t^2$, so by [Theorem 4](#thm4) we get $(1/g)'(a) = -g(a)^{-2}g'(a)$. Applying the product rule to $f/g = f\cdot(1/g)$ now yields
+Defining $h(t)=1/t$, we have $1/g =h \circ g$, and by the derivative of integer powers $h'(t)=-1/t^2$, so by [Theorem 4](#thm4){: data-relation="required" } we get $(1/g)'(a) = -g(a)^{-2}g'(a)$. Applying the product rule to $f/g = f\cdot(1/g)$ now yields
 
 $$\left(\frac{f}{g}\right)'(a) = \frac{f'(a)}{g(a)} - \frac{f(a)g'(a)}{g(a)^2} = \frac{f'(a)g(a) - f(a)g'(a)}{g(a)^2}$$
 
@@ -143,13 +143,13 @@ holds.
 :::
 
 ::: Proof
-Let $I$ be the interval on which $f$ is defined and let $J = f(I)$ be its image. Since $f$ is monotone and has an inverse, it is injective, hence strictly monotone, and therefore $f^{-1} : J \rightarrow I$ is continuous by [§Continuous Functions, ⁋Proposition 7](/en/math/calculus/continuity#prop7).
+Let $I$ be the interval on which $f$ is defined and let $J = f(I)$ be its image. Since $f$ is monotone and has an inverse, it is injective, hence strictly monotone, and therefore $f^{-1} : J \rightarrow I$ is continuous by [§Continuous Functions, ⁋Proposition 7](/en/math/calculus/continuity#prop7){: data-relation="required" }.
 
 Now if $y \in J$ with $y \neq b$, then $x = f^{-1}(y)$ differs from $a = f^{-1}(b)$ by injectivity, so we can rewrite the difference quotient of $f^{-1}$ as
 
 $$\frac{f^{-1}(y) - f^{-1}(b)}{y - b} = \frac{x - a}{f(x) - f(a)} = \left(\frac{f(x)-f(a)}{x-a}\right)^{-1}$$
 
-As $y \rightarrow b$, continuity of $f^{-1}$ gives $x \rightarrow a$, and the expression in parentheses on the right converges to $f'(a)$, so by $f'(a) \neq 0$ and part 4 of [§Limits of Functions, ⁋Proposition 5](/en/math/calculus/functions_and_limits#prop5) the above difference quotient converges to $1/f'(a)$. That is, $f^{-1}$ is differentiable at $b$ and $(f^{-1})'(b) = 1/f'(a)$.
+As $y \rightarrow b$, continuity of $f^{-1}$ gives $x \rightarrow a$, and the expression in parentheses on the right converges to $f'(a)$, so by $f'(a) \neq 0$ and part 4 of [§Limits of Functions, ⁋Proposition 5](/en/math/calculus/functions_and_limits#prop5){: data-relation="required" } the above difference quotient converges to $1/f'(a)$. That is, $f^{-1}$ is differentiable at $b$ and $(f^{-1})'(b) = 1/f'(a)$.
 :::
 
 With this we can also proceed with derivatives of the inverses of the functions examined above. For instance, for the inverse $\ln$ of $e^x$, since $(e^x)' = e^x$ we have $(\ln y)' = 1/e^{\ln y} = 1/y$, and for the inverse $\arcsin$ of $\sin$ restricted to $(-\pi/2, \pi/2)$, since $f'(x) = \cos x = \sqrt{1 - \sin^2 x} > 0$ we have
@@ -165,17 +165,17 @@ The function
 
 $$f(x) = \begin{cases} x^2 \sin(1/x) & (x \neq 0) \\ 0 & (x = 0) \end{cases}$$
 
-is differentiable at every point. For $x \neq 0$, the product rule and chain rule give $f'(x) = 2x\sin(1/x) - \cos(1/x)$, and at $0$ the difference quotient is $x\sin(1/x) \rightarrow 0$, so $f'(0) = 0$. However, as $x \rightarrow 0$ we have $2x\sin(1/x) \rightarrow 0$ but $\cos(1/x)$ oscillates infinitely often between $[-1, 1]$ without approaching a limit, so $f'$ is discontinuous at $0$. That is, $f$ is differentiable everywhere but not of class $C^1$ (in the sense of [§Differentiation and Derivatives, ⁋Definition 5](/en/math/calculus/derivatives#def5)).
+is differentiable at every point. For $x \neq 0$, the product rule and chain rule give $f'(x) = 2x\sin(1/x) - \cos(1/x)$, and at $0$ the difference quotient is $x\sin(1/x) \rightarrow 0$, so $f'(0) = 0$. However, as $x \rightarrow 0$ we have $2x\sin(1/x) \rightarrow 0$ but $\cos(1/x)$ oscillates infinitely often between $[-1, 1]$ without approaching a limit, so $f'$ is discontinuous at $0$. That is, $f$ is differentiable everywhere but not of class $C^1$ (in the sense of [§Differentiation and Derivatives, ⁋Definition 5](/en/math/calculus/derivatives#def5){: data-relation="weak" }).
 :::
 
-Nevertheless, a derivative cannot be discontinuous in just any manner. Even if a derivative is not continuous, it necessarily attains every intermediate value (*Darboux's theorem*), so it cannot have a jump discontinuity, and the discontinuity exhibited in [Example 7](#ex7) is due to oscillation rather than a jump.
+Nevertheless, a derivative cannot be discontinuous in just any manner. Even if a derivative is not continuous, it necessarily attains every intermediate value (*Darboux's theorem*), so it cannot have a jump discontinuity, and the discontinuity exhibited in [Example 7](#ex7){: data-relation="required" } is due to oscillation rather than a jump.
 
 ## Applications of Differentiation Rules
 
-We close this post by examining how to apply the rules developed so far. First, although somewhat contrary to the reason we introduced power series, [Proposition 1](#prop1) can be used to evaluate series.
+We close this post by examining how to apply the rules developed so far. First, although somewhat contrary to the reason we introduced power series, [Proposition 1](#prop1){: data-relation="required" } can be used to evaluate series.
 
 ::: Example 8 (Sum of an infinite series)
-Differentiating both sides of the geometric series ([§Infinite Series, ⁋Example 2](/en/math/calculus/series#ex2))
+Differentiating both sides of the geometric series ([§Infinite Series, ⁋Example 2](/en/math/calculus/series#ex2){: data-relation="weak" })
 
 $$\frac{1}{1-x} = \sum_{n=0}^\infty x^n \qquad (\lvert x\rvert < 1)$$
 
@@ -183,7 +183,7 @@ The left-hand side is by the chain rule
 
 $$\left(\frac{1}{1-x}\right)' = 1/(1-x)^2$$
 
-and the right-hand side becomes $\sum_{n\geq 1} n x^{n-1}$ by [Proposition 1](#prop1), so
+and the right-hand side becomes $\sum_{n\geq 1} n x^{n-1}$ by [Proposition 1](#prop1){: data-relation="required" }, so
 
 $$\sum_{n=1}^\infty n x^{n-1} = \frac{1}{(1-x)^2} \qquad (\lvert x\rvert < 1)$$
 
