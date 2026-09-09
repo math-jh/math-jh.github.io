@@ -27,7 +27,7 @@ $$p(\x)=\x^n+p_1\x^{n-1}+\cdots+p_n,\qquad p_k\in \mathfrak{a}^k$$
 ::: 증명
 가정 $u(M)\subseteq \mathfrak{a}M$과 $\mathfrak{a}M=\sum_j \mathfrak{a}e_j$로부터, 각각의 $i$에 대하여 $u(e_i)=\sum_j a_{ij}e_j$이도록 하는 $a_{ij}\in \mathfrak{a}$를 고를 수 있다. 이제 $A^n$의 standard basis를 $\epsilon_1,\ldots,\epsilon_n$이라 하고, $\epsilon_i\mapsto e_i$로 주어지는 surjection $\pi: A^n \rightarrow M$과 $\tilde u(\epsilon_i)=\sum_j a_{ij}\epsilon_j$로 주어지는 $\tilde u\in \End_\rMod{A}(A^n)$을 생각하면 $\pi\circ \tilde u=u\circ \pi$가 성립한다.
 
-한편 $A^n$은 free module이므로 [\[다중선형대수학\] §행렬식, ⁋명제 9](/ko/math/multilinear_algebra/determinants#prop9)를 $\tilde u$에 적용할 수 있고, 따라서 $\tilde u$의 characteristic polynomial $p=\chi_{\tilde u}$는 $p(\tilde u)=0$을 만족하는 $n$차 monic polynomial이다. 그럼 위의 교환관계로부터 $p(u)\circ \pi=\pi\circ p(\tilde u)=0$이고, $\pi$가 surjective이므로 $p(u)=0$을 얻는다.
+한편 $A^n$은 free module이므로 [\[다중선형대수학\] §행렬식, ⁋명제 9](/ko/math/multilinear_algebra/determinants#prop9){: data-relation="required" }를 $\tilde u$에 적용할 수 있고, 따라서 $\tilde u$의 characteristic polynomial $p=\chi_{\tilde u}$는 $p(\tilde u)=0$을 만족하는 $n$차 monic polynomial이다. 그럼 위의 교환관계로부터 $p(u)\circ \pi=\pi\circ p(\tilde u)=0$이고, $\pi$가 surjective이므로 $p(u)=0$을 얻는다.
 
 남은 것은 $p$의 계수들에 대한 조건인데, 이는 characteristic polynomial의 계수들이 다음의 식
 
@@ -45,7 +45,7 @@ Ring $A$에 대하여, ideal $\mathfrak{a}\subseteq A[\x]$이 주어졌다 하�
 2. $B$가 $A$-module로서 rank $n$의 free module인 것은 $\mathfrak{a}$가 $n$차 monic polynomial로 생성되는 것과 동치이다. 이 때 $1,b,\cdots,b^{n-1}$가 $B$의 basis가 된다.
 :::
 ::: 증명
-1. 한쪽 방향은 자명하다. 거꾸로 $B$가 $A$-module로서 $n$개의 원소로 생성된다 하자. 이제 $B$의 원소에 $b$를 곱하여 얻어지는 $A$-module endomorphism $b:B \rightarrow B$를 생각하자. Ideal $A$에 대해 [정리 1](#thm1)을 적용하면 이 endomorphism이 $n$차 monic polynomial $p(x)$를 만족한다는 것을 알고, 이것은 원소로서 $b$를 대입해도 $0$이 되어야 한다. 따라서 $b$의 정의에 의하여 $p(\x)\in \mathfrak{a}$임을 안다.
+1. 한쪽 방향은 자명하다. 거꾸로 $B$가 $A$-module로서 $n$개의 원소로 생성된다 하자. 이제 $B$의 원소에 $b$를 곱하여 얻어지는 $A$-module endomorphism $b:B \rightarrow B$를 생각하자. Ideal $A$에 대해 [정리 1](#thm1){: data-relation="required" }을 적용하면 이 endomorphism이 $n$차 monic polynomial $p(x)$를 만족한다는 것을 알고, 이것은 원소로서 $b$를 대입해도 $0$이 되어야 한다. 따라서 $b$의 정의에 의하여 $p(\x)\in \mathfrak{a}$임을 안다.
 2. 우선 $\mathfrak{a}$가 degree $n$의 monic polynomial로 생성된다 하자. 그럼 방금 전의 결과에 의해 $B$가 $1,b,\ldots, b^{n-1}$에 의해 생성된다는 것을 안다. 이제 이들이 일차독립임을 보이면 충분하다. $A$-module $B$에서 $\sum_{i=0}^{n-1} a_i b^i=0$이라 하면, $q(\x)=\sum_{i=0}^{n-1}a_i\x^i$가 $\mathfrak{a}$에 속해야 하고, degree 때문에 $q=0$이어야 한다.  
 반대로 $B$가 rank $n$의 free $A$-module이라 하면 $B$를 $n$개의 원소로 생성할 수 있으며, 다시 방금 전의 결과로부터 $\mathfrak{a}$가 $n$차 monic polynomial $p$를 포함하며, 이로부터 $1,b,\ldots, b^{n-1}$이 $B$의 basis가 되는 것까지 유도할 수 있다. 남은 것은 $p$가 $\mathfrak{a}$를 생성하는 것을 보이는 것인데, 이는 임의의 $f\in \mathfrak{a}$가 주어졌다 하고 이를 $p$로 나눈 나머지 $r$을 생각하면 된다. 두 다항식 $f$와 $p$가 모두 $\mathfrak{a}$에 속하므로, 이 나머지 또한 $B$로 보내면 $0$이 되어야 한다. 그런데 이는 다항식 $r(\x)$에 $\x=b$를 대입한 것과 같고, 이는 $B$의 basis $1,\ldots, b^{n-1}$의 일차결합이라 생각하면 $r$의 계수들이 모두 $0$이어야 한다는 것을 안다. 
 :::
@@ -58,7 +58,7 @@ Ring $A$에 대하여, ideal $\mathfrak{a}\subseteq A[\x]$이 주어졌다 하�
 
 $$A\overset{\phi}{\rightarrow}E\hookrightarrow E[\x]$$
 
-으로 정의된 ring homomorphism이 $E[\x]$에 $A$-algebra 구조를 주는 것을 안다. 따라서 [\[대수적 구조\] §대수, ⁋명제 8](/ko/math/algebraic_structures/algebras#prop8)에 의해 유일한 $A$-algebra homomorphism $\phi[\x]:A[\x]\rightarrow E[\x]$가 정의되며, 구체적으로 이는 임의의 다항식
+으로 정의된 ring homomorphism이 $E[\x]$에 $A$-algebra 구조를 주는 것을 안다. 따라서 [\[대수적 구조\] §대수, ⁋명제 8](/ko/math/algebraic_structures/algebras#prop8){: data-relation="required" }에 의해 유일한 $A$-algebra homomorphism $\phi[\x]:A[\x]\rightarrow E[\x]$가 정의되며, 구체적으로 이는 임의의 다항식
 
 $$p(\x)=a_n\x^n+\cdots+a_0\in A[\x]$$
 
@@ -80,7 +80,7 @@ Ring homomorphism $\phi:A\rightarrow E$가 주어졌다 하자.
 
 문맥상 structure morphism $\phi: A \rightarrow E$가 명확할 경우, $x$가 $\phi$에 대해 integral이라는 말 대신 $x$가 $A$에 대해 integral이라는 표현을 사용하기도 한다. 비슷하게, 이런 경우에는 $\phi$가 integral homomorphism이라는 말 대신 $E$가 $A$에 대해 integral이라 말한다. 
 
-임의의 finite homomorphism은 그 정의에 의해 finite type homomorphism이다. 한편 finite homomorphism $\phi: A \rightarrow E$와 임의의 $x\in E$에 대하여, $x\times-: E \rightarrow E$는 $A$-module endomorphism이므로 [정리 1](#thm1)을 적용하면 $x$가 $\phi$에 대해 integral임을 안다. 즉, finite homomorphism은 integral이기도 하다. 다음 보조정리는 이 역을 보여준다. 
+임의의 finite homomorphism은 그 정의에 의해 finite type homomorphism이다. 한편 finite homomorphism $\phi: A \rightarrow E$와 임의의 $x\in E$에 대하여, $x\times-: E \rightarrow E$는 $A$-module endomorphism이므로 [정리 1](#thm1){: data-relation="required" }을 적용하면 $x$가 $\phi$에 대해 integral임을 안다. 즉, finite homomorphism은 integral이기도 하다. 다음 보조정리는 이 역을 보여준다. 
 
 ::: 보조정리 4
 Ring homomorphism $\phi$가 finite인 것은 $\phi$가 integral homomorphism of finite type인 것과 동치이다.
@@ -95,10 +95,10 @@ Ring homomorphism $\phi$가 finite인 것은 $\phi$가 integral homomorphism of 
 Ring homomorphism $\phi: A \rightarrow E$와 $E$의 원소 $x$가 주어졌다 하자. 그럼 $x$가 $A$에 대해 integral인 것은, 적당한 $E$-module $N$과, $A$-module로서 finitely generated인 $N$의 $A$-submodule $M$이 존재하여, $M$은 $E$의 어떠한 nonzero element에 대해서도 annihilate되지 않으며 포함관계 $xM\subseteq M$이 성립하는 것과 동치이다. 
 :::
 ::: 증명
-우선 $x$가 $A$에 대하여 integral이라 하자. 그럼 $N=E$로 잡으면 $M=A[x]$는 [명제 2](#prop2)에 의하여 finitely generated인 것을 안다. 반대방향은 [명제 2](#prop2)의 증명과 마찬가지로 $x$를 곱하는 것을 $M$의 endomorphism으로 본 후 [정리 1](#thm1)을 적용하면 된다.
+우선 $x$가 $A$에 대하여 integral이라 하자. 그럼 $N=E$로 잡으면 $M=A[x]$는 [명제 2](#prop2){: data-relation="required" }에 의하여 finitely generated인 것을 안다. 반대방향은 [명제 2](#prop2){: data-relation="required" }의 증명과 마찬가지로 $x$를 곱하는 것을 $M$의 endomorphism으로 본 후 [정리 1](#thm1){: data-relation="required" }을 적용하면 된다.
 :::
 
-다음 정리는 기대하는 것이 당연한 성질이지만, [보조정리 5](#lem5) 없이 이를 정의로부터 바로 증명하는 것은 거의 불가능하다. 
+다음 정리는 기대하는 것이 당연한 성질이지만, [보조정리 5](#lem5){: data-relation="required" } 없이 이를 정의로부터 바로 증명하는 것은 거의 불가능하다. 
 
 ::: 정리 6
 $A$-algebra $E$에 대하여, $E$ 안에서 $A$의 integral closure는 다시 $A$-algebra이다. 
@@ -108,16 +108,16 @@ $A$-algebra $E$에 대하여, $E$ 안에서 $A$의 integral closure는 다시 $A
 
 $$(xy)MM'=(xM)(yM')\subseteq MM',\qquad (x+y)MM'\subseteq xMM'+M(yM')\subseteq MM'$$
 
-이므로 [보조정리 5](#lem5)를 이용하면 원하는 결과를 얻는다. 
+이므로 [보조정리 5](#lem5){: data-relation="required" }를 이용하면 원하는 결과를 얻는다. 
 :::
 
 ## 나카야마 보조정리
 
-이제 우리는 아주 유용한 보조정리를 증명한다. 우선 [\[대수적 구조\] §분수체, ⁋정의 14](/ko/math/algebraic_structures/field_of_fractions#def14)의 *nilradical* $\mathfrak{N}(A)=\sqrt{(0)}$은 다음 식
+이제 우리는 아주 유용한 보조정리를 증명한다. 우선 [\[대수적 구조\] §분수체, ⁋정의 14](/ko/math/algebraic_structures/field_of_fractions#def14){: data-relation="weak" }의 *nilradical* $\mathfrak{N}(A)=\sqrt{(0)}$은 다음 식
 
 $$\mathfrak{N}(A)=\bigcap_\text{\scriptsize$\mathfrak{p}$ prime} \mathfrak{p}$$
 
-으로 주어지는 것을 기억하자. ([§국소화의 성질들, ⁋따름정리 8](/ko/math/commutative_algebra/properties_of_localization#cor8)) 비슷한 식으로 $A$의 *Jacobson radical<sub>제이콥슨 근기</sub>*를 다음 식
+으로 주어지는 것을 기억하자. ([§국소화의 성질들, ⁋따름정리 8](/ko/math/commutative_algebra/properties_of_localization#cor8){: data-relation="weak" }) 비슷한 식으로 $A$의 *Jacobson radical<sub>제이콥슨 근기</sub>*를 다음 식
 
 $$J(A)=\bigcap_\text{\scriptsize$\mathfrak{m}$ maximal} \mathfrak{m}$$
 
@@ -129,7 +129,7 @@ Nakayama lemma를 증명하기 위해서는 우선 다음의 보조정리를 먼
 Finitely generated $A$-module $M$과 $A$의 ideal $\mathfrak{a}$가 $\mathfrak{a}M=M$을 만족한다 하자. 그럼 적당한 $a\in \mathfrak{a}$가 존재하여 $(1-a)M=0$이다.
 :::
 ::: 증명
-주어진 조건으로부터 $M\subseteq \mathfrak{a}M$이므로 [정리 1](#thm1)로부터 적당한 monic polynomial
+주어진 조건으로부터 $M\subseteq \mathfrak{a}M$이므로 [정리 1](#thm1){: data-relation="required" }로부터 적당한 monic polynomial
 
 $$p(\x)=\x^n+p_1\x^{n-1}+\cdots+p_n,\qquad p_k\in \mathfrak{a}^k$$
 
@@ -149,7 +149,7 @@ $A$의 Jacobson radical $J(A)$에 속하는 ideal $\mathfrak{a}$가 주어졌다
 2. 만일 $x_1,\ldots, x_n$의 $M/\mathfrak{a}M$에서의 image가 $M/\mathfrak{a}M$을 $A$-module로써 생성한다면, $x_1,\ldots, x_n$들은 $M$을 $A$-module로써 생성한다.
 :::
 ::: 증명
-1번 결과의 경우 [보조정리 7](#lem7)으로부터 얻어지는 $a\in \mathfrak{a}$가 가정에 의하여 모든 maximal ideal에 속한다는 사실을 안다. 바꾸어 말하면 $1-a$는 어떠한 maximal ideal에도 속할 수 없으므로 $1-a$는 unit이다. 따라서 원하는 결과를 얻는다.
+1번 결과의 경우 [보조정리 7](#lem7){: data-relation="required" }으로부터 얻어지는 $a\in \mathfrak{a}$가 가정에 의하여 모든 maximal ideal에 속한다는 사실을 안다. 바꾸어 말하면 $1-a$는 어떠한 maximal ideal에도 속할 수 없으므로 $1-a$는 unit이다. 따라서 원하는 결과를 얻는다.
 
 2번 결과의 경우, $N=M/\sum_i Ax_i$라 하자. 그럼 $N/\mathfrak{a}N=0$임을 보일 수 있고 1번 결과로부터 $N=0$임을 안다.
 :::
@@ -194,7 +194,7 @@ Normal domain $A$에 대하여, 임의의 monic irreducible polynomial은 prime�
 Ring $A\subseteq B$와 $A$의 multiplicative subset $S$를 고정하자. 그럼 $A$의 $B$에서의 integral closure $A'$에 대하여, $S^{-1}A'$는 $S^{-1}A$의 $S^{-1}B$ 안에서의 integral closure이다.
 :::
 
-Localization과 관련된 또 다른 결과 중 하나는 [§국소화의 성질들, ⁋명제 4](/ko/math/commutative_algebra/properties_of_localization#prop4)를 다소 강화한 것이다. 우선 ring $A$가 *semilocal ring<sub>반국소환</sub>*이라는 것은 $A$가 유한히 많은 maximal ideal만을 갖는 것이다. 그럼 다음이 성립한다.
+Localization과 관련된 또 다른 결과 중 하나는 [§국소화의 성질들, ⁋명제 4](/ko/math/commutative_algebra/properties_of_localization#prop4){: data-relation="weak" }를 다소 강화한 것이다. 우선 ring $A$가 *semilocal ring<sub>반국소환</sub>*이라는 것은 $A$가 유한히 많은 maximal ideal만을 갖는 것이다. 그럼 다음이 성립한다.
 
 ::: 명제 13
 Semilocal ring $A$와 finitely presented $A$-module $M,N$에 대하여, 만일 $M_\mathfrak{m}\cong N_\mathfrak{m}$이 모든 maximal ideal $\mathfrak{m}$에 대해 성립한다면 $M\cong N$이 성립한다. 
@@ -204,20 +204,20 @@ Semilocal ring $A$와 finitely presented $A$-module $M,N$에 대하여, 만일 $
 
 $$\Hom_{A_{\mathfrak{m}_k}}( M_{\mathfrak{m}_k}, N_{\mathfrak{m}_k}) \rightarrow \Hom_A(M,N)_{\mathfrak{m}_k}$$
 
-이 존재한다. ([§국소화의 성질들, ⁋명제 5](/ko/math/commutative_algebra/properties_of_localization#prop5)) 이 isomorphism에 의한 $u_k$의 image는 $\Hom_A(M,N)$의 원소에 $A\setminus \mathfrak{m}_k$의 원소를 분모에 넣어준 것이므로, 필요하다면 $u_k$에 이 분모를 곱해주어 $v_k$를 $\Hom_A(M,N)$의 원소로 취급할 수 있다. 
+이 존재한다. ([§국소화의 성질들, ⁋명제 5](/ko/math/commutative_algebra/properties_of_localization#prop5){: data-relation="required" }) 이 isomorphism에 의한 $u_k$의 image는 $\Hom_A(M,N)$의 원소에 $A\setminus \mathfrak{m}_k$의 원소를 분모에 넣어준 것이므로, 필요하다면 $u_k$에 이 분모를 곱해주어 $v_k$를 $\Hom_A(M,N)$의 원소로 취급할 수 있다. 
 
 한편, $\mathfrak{m}_k$는 prime이므로, 만일 $\bigcap_{l\neq k} \mathfrak{m}_l\subseteq \mathfrak{m}_k$라면 어떠한 $l$에 대해 $\mathfrak{m}_l\subseteq \mathfrak{m}_k$가 되어야 하므로 모순이다. 즉, 다음의 식
 
 $$\bigcap_{l\neq k} \mathfrak{m}_l\not\subseteq \mathfrak{m}_k$$
 
-이 성립하고 그럼 이로부터 $a_k\in \bigcap_{l\neq k}\mathfrak{m}_l$이지만 $a_k\not\in \mathfrak{m}_k$인 $a_k$가 존재한다. 이렇게 만들어진 $a_k$들에 대하여, $v=\sum_{k=1}^n a_kv_k$으로 정의하면, 이것이 우리가 원하는 isomorphism이 되며 그 증명을 위해서는 [§국소화의 성질들, ⁋명제 4](/ko/math/commutative_algebra/properties_of_localization#prop4)에 의해 각각의 maximal ideal들 $\mathfrak{m}_k$에서의 localization을 보면 된다. 
+이 성립하고 그럼 이로부터 $a_k\in \bigcap_{l\neq k}\mathfrak{m}_l$이지만 $a_k\not\in \mathfrak{m}_k$인 $a_k$가 존재한다. 이렇게 만들어진 $a_k$들에 대하여, $v=\sum_{k=1}^n a_kv_k$으로 정의하면, 이것이 우리가 원하는 isomorphism이 되며 그 증명을 위해서는 [§국소화의 성질들, ⁋명제 4](/ko/math/commutative_algebra/properties_of_localization#prop4){: data-relation="required" }에 의해 각각의 maximal ideal들 $\mathfrak{m}_k$에서의 localization을 보면 된다. 
 
 더 일반적으로 우리는 임의의 local ring $(B, \mathfrak{n})$과 finitely generated $B$-module 사이의 map들 $s,t:K \rightarrow L$에 대하여, 만일 $s$가 isomorphism이고 $t(K)\subseteq \mathfrak{n}L$이라면 $s+t$도 isomorphism인 것을 보인다. 그럼 이 결과를 local ring $(A_{\mathfrak{m}_k}, \mathfrak{m}_kA_{\mathfrak{m}_k})$, 그리고 $M_{\mathfrak{m}_k}$에서 $N_{\mathfrak{m}_k}$로의 함수들 $s=a_k v_k$와 $t=\sum_{l\neq k} a_lv_l$에 적용하면 증명이 완료될 것이다. 
 
-이 주장을 증명하자. 우선 $t$는 $K$에서 $L/\mathfrak{n}L$로의 zero map으로 볼 수 있고, $s$는 $K$에서 $L/\mathfrak{n}L$로의 epimorphism으로 볼 수 있으므로 $s+t$ 또한 $K$에서 $L/\mathfrak{n}L$로의 epimorphism으로 볼 수 있다. 그럼 [보조정리 8](#lem8)에 의해 $K$에서 $L$로의 morphism $s+t$도 epimorphism이다. 이제 isomorphism $s$의 inverse $s^{-1}$을 취하여 surjective endomorphism $w=s^{-1}(s+t): K \rightarrow K$를 생각하자. 그럼 $K$를 $\x$가 $w$로 작용하는 $B[\x]$-module로 볼 수 있고, $K$가 $B$-module로서 유한하게 생성되므로 $B[\x]$-module로서도 그러하다. 한편 $w$가 surjective이므로 ideal $\mathfrak{a}=(\x)\subseteq B[\x]$에 대하여 $\mathfrak{a}K=w(K)=K$이고, 따라서 [보조정리 7](#lem7)에 의하여 적당한 $q\in B[\x]$가 존재하여 $(1-\x q(\x))K=0$, 즉 $q(w)\circ w=\id_K$이다. 이로부터 $w$는 monomorphism이기도 하여 isomorphism이고, 따라서 $s+t$는 monomorphism이므로 원하는 결과를 얻는다. 
+이 주장을 증명하자. 우선 $t$는 $K$에서 $L/\mathfrak{n}L$로의 zero map으로 볼 수 있고, $s$는 $K$에서 $L/\mathfrak{n}L$로의 epimorphism으로 볼 수 있으므로 $s+t$ 또한 $K$에서 $L/\mathfrak{n}L$로의 epimorphism으로 볼 수 있다. 그럼 [보조정리 8](#lem8){: data-relation="required" }에 의해 $K$에서 $L$로의 morphism $s+t$도 epimorphism이다. 이제 isomorphism $s$의 inverse $s^{-1}$을 취하여 surjective endomorphism $w=s^{-1}(s+t): K \rightarrow K$를 생각하자. 그럼 $K$를 $\x$가 $w$로 작용하는 $B[\x]$-module로 볼 수 있고, $K$가 $B$-module로서 유한하게 생성되므로 $B[\x]$-module로서도 그러하다. 한편 $w$가 surjective이므로 ideal $\mathfrak{a}=(\x)\subseteq B[\x]$에 대하여 $\mathfrak{a}K=w(K)=K$이고, 따라서 [보조정리 7](#lem7){: data-relation="required" }에 의하여 적당한 $q\in B[\x]$가 존재하여 $(1-\x q(\x))K=0$, 즉 $q(w)\circ w=\id_K$이다. 이로부터 $w$는 monomorphism이기도 하여 isomorphism이고, 따라서 $s+t$는 monomorphism이므로 원하는 결과를 얻는다. 
 :::
 
-이제 [정의 3](#def3)에서의 ring homomorphism들에 대한 성질들을 조금 더 살펴보자. 우선 다음의 명제부터 시작한다.
+이제 [정의 3](#def3){: data-relation="required" }에서의 ring homomorphism들에 대한 성질들을 조금 더 살펴보자. 우선 다음의 명제부터 시작한다.
 
 ::: 명제 14
 Ring homomorphism $\phi:A \rightarrow E$와 $\rho: A \rightarrow A'$가 주어졌다 하자. $E'=A'\otimes_AE$라 하면, $\rho_!\phi: A' \rightarrow E'$에 대하여 다음이 성립한다. 
@@ -251,15 +251,15 @@ $$1=\sum_{i=1}^n \alpha_i a_i$$
 Ring homomorphism $\phi: A \rightarrow E$와 $x\in E$에 대하여, $x$가 $\phi$에 대해 integral인 것은, $A$의 임의의 prime ideal $\mathfrak{p}$에 대하여, $x$의 $E_\mathfrak{p}$에서의 image가 $\phi_\mathfrak{p}: A_\mathfrak{p} \rightarrow E_\mathfrak{p}$에 대해 integral인 것과 동치이다. 
 :::
 ::: 증명
-한쪽 방향은 [명제 14](#prop14)를 이용하면 된다. 따라서 임의의 prime ideal $\mathfrak{p}\subseteq A$에 대하여, $x$의 $E_\mathfrak{p}$에서의 image가 $A_\mathfrak{p}$에 대해 integral이라 하고, $x$가 integral임을 보이자. 이를 위해서는 $\phi(A)$와 $x$로 생성되는 $E$의 $A$-subalgebra $E'$를 잡은 후, $A \rightarrow E'$가 integral임을 보이면 된다. 
+한쪽 방향은 [명제 14](#prop14){: data-relation="required" }를 이용하면 된다. 따라서 임의의 prime ideal $\mathfrak{p}\subseteq A$에 대하여, $x$의 $E_\mathfrak{p}$에서의 image가 $A_\mathfrak{p}$에 대해 integral이라 하고, $x$가 integral임을 보이자. 이를 위해서는 $\phi(A)$와 $x$로 생성되는 $E$의 $A$-subalgebra $E'$를 잡은 후, $A \rightarrow E'$가 integral임을 보이면 된다. 
 
 우선 가정으로부터, $E_\mathfrak{p}$에서 다음의 식
 
 $$x^d+\phi_\mathfrak{p}(a_{d-1})x^{d-1}+\cdots+\phi_\mathfrak{p}(a_0)=0$$
 
-이도록 하는 $a_i\in A_\mathfrak{p}$들이 존재한다. 이제 $\phi_\mathfrak{p}(a_k)$들의 분모를 통분하면, 우리는 적절한 $f\in A\setminus \mathfrak{p}$에 대하여 각각의 $a_k$들이 모두 $A_f$에 속하는 것으로 볼 수 있다. 그럼 위 방정식의 좌변을 $E_f$의 원소로 볼 수 있고, 이 원소는 $E_\mathfrak{p}$로 보냈을 때 $0$이 된다. 그런데 $E_\mathfrak{p}$는 $E_f$를 $A\setminus \mathfrak{p}$의 image에 대해 localize한 것이므로, 적당한 $h\in A\setminus \mathfrak{p}$가 존재하여 이 좌변에 $h$를 곱한 것이 $E_f$에서 $0$이 되고 따라서 $f$를 $fh$로 바꾸면 위의 방정식은 $E_f$에서 성립하는 식이 된다. 그럼 $x$의 $E_f$에서의 image가 $A_f$에 대해 integral이고 $E_f'$가 $A_f$-algebra로서 이 원소로 생성되므로, [보조정리 4](#lem4)에 의하여 $A_f \rightarrow E_f'$가 finite homomorphism인 것을 안다.
+이도록 하는 $a_i\in A_\mathfrak{p}$들이 존재한다. 이제 $\phi_\mathfrak{p}(a_k)$들의 분모를 통분하면, 우리는 적절한 $f\in A\setminus \mathfrak{p}$에 대하여 각각의 $a_k$들이 모두 $A_f$에 속하는 것으로 볼 수 있다. 그럼 위 방정식의 좌변을 $E_f$의 원소로 볼 수 있고, 이 원소는 $E_\mathfrak{p}$로 보냈을 때 $0$이 된다. 그런데 $E_\mathfrak{p}$는 $E_f$를 $A\setminus \mathfrak{p}$의 image에 대해 localize한 것이므로, 적당한 $h\in A\setminus \mathfrak{p}$가 존재하여 이 좌변에 $h$를 곱한 것이 $E_f$에서 $0$이 되고 따라서 $f$를 $fh$로 바꾸면 위의 방정식은 $E_f$에서 성립하는 식이 된다. 그럼 $x$의 $E_f$에서의 image가 $A_f$에 대해 integral이고 $E_f'$가 $A_f$-algebra로서 이 원소로 생성되므로, [보조정리 4](#lem4){: data-relation="required" }에 의하여 $A_f \rightarrow E_f'$가 finite homomorphism인 것을 안다.
 
-이렇게 각각의 prime ideal $\mathfrak{p}$마다 원소 $f_\mathfrak{p}\in A\setminus \mathfrak{p}$를 하나씩 얻는데, 이들이 생성하는 $A$의 ideal은 어떠한 prime ideal에도 포함되지 않으므로 $A$ 자기 자신이다. 따라서 유한히 많은 prime ideal들 $\mathfrak{p}_1,\ldots, \mathfrak{p}_m$을 골라 $(f_{\mathfrak{p}_1},\ldots, f_{\mathfrak{p}_m})=A$이도록 할 수 있고, 각각의 $A_{f_{\mathfrak{p}_i}} \rightarrow E_{f_{\mathfrak{p}_i}}'$가 finite이므로 integral이다. 그럼 [명제 15](#prop15)에 의하여 $A \rightarrow E'$가 integral이고, 특히 $x$가 $\phi$에 대해 integral이다. 
+이렇게 각각의 prime ideal $\mathfrak{p}$마다 원소 $f_\mathfrak{p}\in A\setminus \mathfrak{p}$를 하나씩 얻는데, 이들이 생성하는 $A$의 ideal은 어떠한 prime ideal에도 포함되지 않으므로 $A$ 자기 자신이다. 따라서 유한히 많은 prime ideal들 $\mathfrak{p}_1,\ldots, \mathfrak{p}_m$을 골라 $(f_{\mathfrak{p}_1},\ldots, f_{\mathfrak{p}_m})=A$이도록 할 수 있고, 각각의 $A_{f_{\mathfrak{p}_i}} \rightarrow E_{f_{\mathfrak{p}_i}}'$가 finite이므로 integral이다. 그럼 [명제 15](#prop15){: data-relation="required" }에 의하여 $A \rightarrow E'$가 integral이고, 특히 $x$가 $\phi$에 대해 integral이다. 
 :::
 
 ---
