@@ -5404,3 +5404,7 @@ Decide whether each one is a definition and add it to `_data/terms.yml` (then ru
 
 - _posts/Math/Stacks/ko/2026-08-30-Fibered_Categories_and_Stacks.md: 병기 필요 'lift' — 위키 ko 문서 '리프트' — 병기형 도출 필요
 - _posts/Math/Stacks/ko/2026-08-30-Fibered_Categories_and_Stacks.md: 병기 필요 'cartesian lift' — 위키 ko 문서 '르네 데카르트' — 병기형 도출 필요
+
+## term_extract_worker 2026-09-10 03:15
+
+- _posts/Math/Stacks/ko/2026-09-02-Moduli_Spaces.md: 병기 필요 'set-valued moduli functor' — 위키 ko 문서 '모듈라이 공간' — 병기형 도출 필요

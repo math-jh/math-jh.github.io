@@ -18,7 +18,7 @@ When introducing cohomology earlier, we observed that one of its greatest streng
 
 ## The Exterior Product in Cohomology
 
-Fix a commutative ring $A$, and let $C_\bullet, D_\bullet$ be chain complexes of $A$-modules. For their dual sequences
+Fix a commutative ring $A$, and let $C_\bullet, D_\bullet$ be chain complexes of $A$-modules. ([\[Algebraic Structures\] §Direct Products, Direct Sums, and Tensor Products of Modules, ⁋Proposition 8](/en/math/algebraic_structures/operations_of_modules#prop8){: data-relation="required" }) For their dual sequences
 
 $$(C^\vee)^\bullet=\Hom_A(C_\bullet,A),\qquad (D^\vee)^\bullet=\Hom_A(D_\bullet,A)$$
 
