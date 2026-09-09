@@ -15,7 +15,7 @@ weight: 105
 
 ## 등급환
 
-Index set $I$가 commutative monoid일 경우, 우리는 abelian group들의 family $(A_i)_{i\in I}$를 *graded abelian group*이라 부르기로 하였다. ([§가환군, ⁋정의 16](/ko/math/algebraic_structures/abelian_groups#def16)) 당시에는 $A_i$ 위에 어떠한 조건도 없었기 때문에 이는 별로 흥미로운 정의가 아니었으나, 이제는 $A_i$ 위에 곱셈구조가 더해져 있으므로 이 정의가 더 의미를 갖게 된다. 
+Index set $I$가 commutative monoid일 경우, 우리는 abelian group들의 family $(A_i)_{i\in I}$를 *graded abelian group*이라 부르기로 하였다. ([§가환군, ⁋정의 16](/ko/math/algebraic_structures/abelian_groups#def16){: data-relation="weak" }) 당시에는 $A_i$ 위에 어떠한 조건도 없었기 때문에 이는 별로 흥미로운 정의가 아니었으나, 이제는 $A_i$ 위에 곱셈구조가 더해져 있으므로 이 정의가 더 의미를 갖게 된다. 
 
 ::: 정의 1
 Commutative monoid $I$와 $I$-indexed family of abelian groups $(A_i)_{i\in I}$가 주어졌다 하자. 만일 $A=\bigoplus_{i\in I} A_i$ 위에 정의된 곱셈구조가 이를 ring으로 만들고, 추가적으로 다음 조건
@@ -38,10 +38,10 @@ $$\alpha=1\alpha=\sum_{i\in I} \epsilon_i\alpha\in A_j$$
 이고, 따라서 모든 $i\neq 0$에 대해서는 $\epsilon_i\alpha=0$이고, $i=0$에 대해서만 $\epsilon_0\alpha=\alpha$가 성립한다. 이제 $A$의 임의의 원소는 homogeneous element들의 합으로 나타낼 수 있으므로 모든 $x\in A$에 대하여 $\epsilon_0x=x$가 성립하고, 여기에 $x=1$을 대입하면 $1=\epsilon_0\in A_0$을 얻는다. 
 :::
 
-대부분의 경우 우리가 관심있는 것은 $I=\mathbb{Z}$이거나 $I= \mathbb{N}$인 경우이다. 따라서 [명제 2](#prop2)의 전제조건이 만족된다. 
+대부분의 경우 우리가 관심있는 것은 $I=\mathbb{Z}$이거나 $I= \mathbb{N}$인 경우이다. 따라서 [명제 2](#prop2){: data-relation="required" }의 전제조건이 만족된다. 
 
 ::: 예시 3
-임의의 abelian group $G$에 대하여, $G$에 의해 생성되는 free ring $F(G)=\bigoplus_{n\geq 0} G^{\otimes n}$을 생각하자. $G^{\otimes m}$의 원소와 $G^{\otimes n}$의 원소의 곱은 $G^{\otimes (m+n)}$에 속하므로 $F(G)$는 $\mathbb{N}$-graded ring이다. ([§환의 정의, §§가환군 위에 정의된 자유환](/ko/math/algebraic_structures/rings#가환군-위에-정의된-자유환)) 
+임의의 abelian group $G$에 대하여, $G$에 의해 생성되는 free ring $F(G)=\bigoplus_{n\geq 0} G^{\otimes n}$을 생각하자. $G^{\otimes m}$의 원소와 $G^{\otimes n}$의 원소의 곱은 $G^{\otimes (m+n)}$에 속하므로 $F(G)$는 $\mathbb{N}$-graded ring이다. ([§환의 정의, §§가환군 위에 정의된 자유환](/ko/math/algebraic_structures/rings#가환군-위에-정의된-자유환){: data-relation="weak" }) 
 :::
 
 ## 등급환 준동형사상
@@ -113,7 +113,7 @@ $$A/\mathfrak{a}=\bigoplus_{i\in I}A_i/(\mathfrak{a}\cap A_i)$$
 ::: 증명
 Quotient map을 $\pi:A\rightarrow A/\mathfrak{a}$라 하자. $A=\bigoplus_i A_i$이고 $\pi$가 전사이므로 $A/\mathfrak{a}$는 $\pi(A_i)$들의 합이며, $\pi$를 $A_i$로 제한한 것의 kernel이 $\mathfrak{a}\cap A_i$이므로 $\pi(A_i)\cong A_i/(\mathfrak{a}\cap A_i)$이다.
 
-이 합이 direct sum인 것을 보이기 위해 우리는 finitely supported homogeneous element들의 family $(\alpha_i)$가 $\sum_i \pi(\alpha_i)=0$을 만족한다 가정하고 모든 $i$에 대해 $\pi(\alpha_i)=0$임을 보여야 한다. 가정에 의해 $\sum_i\alpha_i\in\mathfrak{a}$이므로, [명제 6](#prop6)의 둘째 조건에 의해 각 $\alpha_i$가 $\mathfrak{a}$에 속해야 하고, 따라서 $\mathfrak{a}\cap A_i$에 속한다. 즉 모든 $i$에 대해 $\pi(\alpha_i)=0$이다.
+이 합이 direct sum인 것을 보이기 위해 우리는 finitely supported homogeneous element들의 family $(\alpha_i)$가 $\sum_i \pi(\alpha_i)=0$을 만족한다 가정하고 모든 $i$에 대해 $\pi(\alpha_i)=0$임을 보여야 한다. 가정에 의해 $\sum_i\alpha_i\in\mathfrak{a}$이므로, [명제 6](#prop6){: data-relation="required" }의 둘째 조건에 의해 각 $\alpha_i$가 $\mathfrak{a}$에 속해야 하고, 따라서 $\mathfrak{a}\cap A_i$에 속한다. 즉 모든 $i$에 대해 $\pi(\alpha_i)=0$이다.
 
 마지막으로 $A_iA_j\subseteq A_{i+j}$로부터 $\pi(A_i)\pi(A_j)\subseteq \pi(A_{i+j})$가 성립하므로, 이 decomposition은 $A/\mathfrak{a}$ 위에 graded ring의 구조를 준다.
 :::
