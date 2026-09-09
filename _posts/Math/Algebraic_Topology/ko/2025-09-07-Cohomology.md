@@ -19,7 +19,7 @@ Cohomology는, 그 이름에서 알 수 있듯, homology의 dual에 해당하는
 
 ## 호몰로지의 보편계수정리
 
-본격적인 논의를 시작하기 전에 우리는 [§호몰로지의 계산, ⁋정의 6](/ko/math/algebraic_topology/computation_of_homology#def6) 이후에 다루었던 homology with coefficient에 대해 우선 살펴본다. 우리는 simplicial homology 혹은 singular homology를 정의할 때 chain group들 $C_\bullet(X)$ 혹은 $C_\bullet^\Delta(X)$ 대신 abelian group $A$와의 tensor product를 통하여 chain complex
+본격적인 논의를 시작하기 전에 우리는 [§호몰로지의 계산, ⁋정의 6](/ko/math/algebraic_topology/computation_of_homology#def6){: data-relation="weak" } 이후에 다루었던 homology with coefficient에 대해 우선 살펴본다. 우리는 simplicial homology 혹은 singular homology를 정의할 때 chain group들 $C_\bullet(X)$ 혹은 $C_\bullet^\Delta(X)$ 대신 abelian group $A$와의 tensor product를 통하여 chain complex
 
 $$C_\bullet(X;A):=C_\bullet(X)\otimes_\mathbb{Z}A,\qquad C_\bullet^\Delta(X;A):=C_\bullet^\Delta(X)\otimes_\mathbb{Z}A$$
 
@@ -43,7 +43,7 @@ $$0 \rightarrow Z_\bullet\otimes_\mathbb{Z}A \rightarrow C_\bullet\otimes_\mathb
 
 {% diagram Math/Algebraic_Topology/Cohomology-1.svg width="31.09em" alt="snake_lemma" %}
 
-과 같은 꼴이고 따라서  [\[호몰로지 대수학\] §긴 완전열, ⁋정리 1](/ko/math/homological_algebra/long_exact_sequence#thm1)에 의해 다음의 long exact sequence
+과 같은 꼴이고 따라서  [\[호몰로지 대수학\] §긴 완전열, ⁋정리 1](/ko/math/homological_algebra/long_exact_sequence#thm1){: data-relation="required" }에 의해 다음의 long exact sequence
 
 $$\cdots \rightarrow B_k\otimes_\mathbb{Z}A\overset{\delta_k}{\longrightarrow}Z_k\otimes_\mathbb{Z}A\rightarrow H_k(C\otimes A)\rightarrow B_{k-1}\otimes_\mathbb{Z}A\overset{\delta_{k-1}}{\longrightarrow} Z_{k-1}\otimes_\mathbb{Z}A\rightarrow\cdots\tag{2}$$
 
@@ -67,7 +67,7 @@ $$0 \rightarrow H_k(C)\otimes_\mathbb{Z}A\rightarrow H_k(C;A)\rightarrow \Tor_1^
 
 을 얻는다. 
 
-한편 (1)은 splitting short exact sequence이므로, 우리는 retraction $r_k:C_k \rightarrow Z_k$을 하나 택할 수 있다. ([\[다중선형대수학\] §완전열, ⁋명제 10](/ko/math/multilinear_algebra/exact_sequences#prop10)) 그럼 이러한 선택 하에서, $(p_k\circ r_k)\otimes \id_A$는 homology에서의 함수 $H_k(C;A)\rightarrow H_k(C)\otimes_\mathbb{Z} A$를 유도하며 이것이 위의 $H_k(C)\otimes_\mathbb{Z}A\rightarrow H_k(C;A)$의 retraction임을 안다. 즉 다음을 얻는다.
+한편 (1)은 splitting short exact sequence이므로, 우리는 retraction $r_k:C_k \rightarrow Z_k$을 하나 택할 수 있다. ([\[다중선형대수학\] §완전열, ⁋명제 10](/ko/math/multilinear_algebra/exact_sequences#prop10){: data-relation="required" }) 그럼 이러한 선택 하에서, $(p_k\circ r_k)\otimes \id_A$는 homology에서의 함수 $H_k(C;A)\rightarrow H_k(C)\otimes_\mathbb{Z} A$를 유도하며 이것이 위의 $H_k(C)\otimes_\mathbb{Z}A\rightarrow H_k(C;A)$의 retraction임을 안다. 즉 다음을 얻는다.
 
 ::: 명제 1 (Universal coefficient theorem for homology)
 임의의 위상공간 $X$와 abelian group $A$에 대하여, 다음의 short exact sequence
@@ -84,7 +84,7 @@ $$H_k(X;A)\cong \left(H_k(X)\otimes_\mathbb{Z}A\right)\oplus \Tor_1^\mathbb{Z}(H
 
 ## 코호몰로지의 정의와 보편계수정리
 
-[§호몰로지의 계산, ⁋정의 6](/ko/math/algebraic_topology/computation_of_homology#def6)과 마찬가지로 우리는 cohomology의 Eilenberg-Steenrod axiom을 정의하고, 이를 만족하는 contravariant functor와 connecting morphism들을 cohomology라 부를 수 있을 것이다. 이를 명시적으로 적으면 다음과 같다.
+[§호몰로지의 계산, ⁋정의 6](/ko/math/algebraic_topology/computation_of_homology#def6){: data-relation="weak" }과 마찬가지로 우리는 cohomology의 Eilenberg-Steenrod axiom을 정의하고, 이를 만족하는 contravariant functor와 connecting morphism들을 cohomology라 부를 수 있을 것이다. 이를 명시적으로 적으면 다음과 같다.
 
 ::: 정의 2 (Eilenberg-Steenrod axioms)
 위상공간들의 pair들의 category에서 abelian group들의 category로의 contravariant functor들 $H^k$과, 이들 사이의 natural transformation
@@ -94,7 +94,7 @@ $$\delta: H^k(A) \rightarrow H^{k+1}(X,A)$$
 들에 대하여, *Eilenberg-Steenrod axiom*은 다음의 공리들을 뜻한다. 
 
 - (Homotopy) 두 homotopic map $(X,A) \rightarrow (Y,B)$이 주어졌다면, 이들이 유도하는 두 homomorphism들 $H^k(Y,B) \rightarrow H^k(X,A)$들도 동일하다. 
-- (Excision) [§호몰로지의 계산, ⁋정리 2](/ko/math/algebraic_topology/computation_of_homology#thm2)의 조건을 만족하는 $(X,A,Z)$에 대하여, $(X\setminus Z, A\setminus Z)\hookrightarrow (X,A)$는 isomorphism을 유도한다. 
+- (Excision) [§호몰로지의 계산, ⁋정리 2](/ko/math/algebraic_topology/computation_of_homology#thm2){: data-relation="required" }의 조건을 만족하는 $(X,A,Z)$에 대하여, $(X\setminus Z, A\setminus Z)\hookrightarrow (X,A)$는 isomorphism을 유도한다. 
 - (Dimension) One-point space $\ast$에 대하여, $H^k(\ast)=0$이 모든 $k>0$에 대해 성립한다. 
 - (Additivity) 만일 $X=\coprod X_\alpha$라면, $H^k(X)\cong\prod H^k(X_\alpha)$이다. 
 - (Exactness) 각각의 pair $(X,A)$와, 두 inclusion $(A,\emptyset) \hookrightarrow (X,\emptyset)$ 그리고 $(X,\emptyset)\hookrightarrow (X,A)$들은 다음의 long exact sequence
@@ -104,7 +104,7 @@ $$\delta: H^k(A) \rightarrow H^{k+1}(X,A)$$
     에 들어간다. 
 :::
 
-이러한 조건들을 만족하는 cohomology theory의 존재성을 보이기 위해 [§호몰로지](/ko/math/algebraic_topology/homology)에서와 마찬가지로 위상공간 $X$의 singular simplex들로 이루어진 chain complex
+이러한 조건들을 만족하는 cohomology theory의 존재성을 보이기 위해 [§호몰로지](/ko/math/algebraic_topology/homology){: data-relation="required" }에서와 마찬가지로 위상공간 $X$의 singular simplex들로 이루어진 chain complex
 
 $$C_\bullet(X):\qquad\cdots \rightarrow C_{k+1}(X)\rightarrow C_k(X) \rightarrow C_{k-1}(X)\rightarrow \cdots$$
 
@@ -112,7 +112,7 @@ $$C_\bullet(X):\qquad\cdots \rightarrow C_{k+1}(X)\rightarrow C_k(X) \rightarrow
 
 $$(C^\vee)^\bullet(X;A):\qquad\cdots \leftarrow \Hom_\mathbb{Z}(C_{k+1}(X), A)\leftarrow\Hom_\mathbb{Z}(C_k(X),A)\leftarrow\Hom_\mathbb{Z}(C_{k-1}(X),A)\leftarrow\cdots$$
 
-를 생각할 수 있다. 만일 $A$가 commutative ring이라면, ring homomorphism $\mathbb{Z}\rightarrow A$에 대한 [\[대수적 구조\] §스칼라의 변환, ⁋명제 6](/ko/math/algebraic_structures/change_of_base_ring#prop6)의 adjunction은 임의의 abelian group $M$과 $A$-module $N$에 대하여 isomorphism $\Hom_A(M\otimes_\mathbb{Z}A,N)\cong\Hom_\mathbb{Z}(M,N)$을 준다. 따라서 이 경우 위의 chain complex를 
+를 생각할 수 있다. 만일 $A$가 commutative ring이라면, ring homomorphism $\mathbb{Z}\rightarrow A$에 대한 [\[대수적 구조\] §스칼라의 변환, ⁋명제 6](/ko/math/algebraic_structures/change_of_base_ring#prop6){: data-relation="weak" }의 adjunction은 임의의 abelian group $M$과 $A$-module $N$에 대하여 isomorphism $\Hom_A(M\otimes_\mathbb{Z}A,N)\cong\Hom_\mathbb{Z}(M,N)$을 준다. 따라서 이 경우 위의 chain complex를 
 
 $$\qquad \cdots\leftarrow\Hom_A(C_{k+1}(X;A),A)\leftarrow \Hom_A(C_k(X;A),A)\leftarrow \Hom_A(C_{k-1}(X;A),A)\leftarrow\cdots$$
 
@@ -122,7 +122,7 @@ $$H^k(X;A):=H_k(C^\vee)$$
 
 로 적고, 이를 $X$의 *$k$번째 cohomology*라 부른다. 여기서 $H$와 $C^\vee$에 위첨자를 이용하여 index를 표기해주는 이유는 homology와 반대로, long exact sequence가 index가 커지는 방향으로 만들어지기 때문이며, 앞으로는 혼동의 여지가 없다면 $(C^\vee)^\bullet(X)$를 $C^\bullet(X;A)$라 쓰기로 하자.
 
-그럼 이렇게 정의한 $H^k(X;A)$와 $H_k(X)$ 사이에 어떠한 관계가 있는지를 살펴보아야 한다. 이 글의 서두에서 밝힌 것과 같이, 단순히 $H^k(X;A)\cong H_k(X)^\ast$가 성립하는 것은 아니다. 그러나 위의 [명제 1](#prop1)의 증명과 유사한 방식으로 우리는 다음의 명제를 얻어낼 수 있다.
+그럼 이렇게 정의한 $H^k(X;A)$와 $H_k(X)$ 사이에 어떠한 관계가 있는지를 살펴보아야 한다. 이 글의 서두에서 밝힌 것과 같이, 단순히 $H^k(X;A)\cong H_k(X)^\ast$가 성립하는 것은 아니다. 그러나 위의 [명제 1](#prop1){: data-relation="required" }의 증명과 유사한 방식으로 우리는 다음의 명제를 얻어낼 수 있다.
 
 ::: 명제 3 (Universal coefficient theorem for cohomology)
 임의의 위상공간 $X$와 abelian group $A$에 대하여, 다음의 short exact sequence
@@ -136,7 +136,7 @@ $$H^k(X;A)\cong \Hom_\mathbb{Z}(H_k(X),A)\oplus \Ext^1_\mathbb{Z}(H_{k-1}(X),A)$
 을 준다.
 :::
 
-이는 대략적으로, [명제 1](#prop1)을 [\[대수적 구조\] §가환군, ⁋정리 15](/ko/math/algebraic_structures/abelian_groups#thm15)를 통해 번역한 것이라 생각할 수 있다. 
+이는 대략적으로, [명제 1](#prop1){: data-relation="weak" }을 [\[대수적 구조\] §가환군, ⁋정리 15](/ko/math/algebraic_structures/abelian_groups#thm15){: data-relation="weak" }를 통해 번역한 것이라 생각할 수 있다. 
 
 ## 드람 코호몰로지
 
@@ -210,17 +210,17 @@ $$H^0_\dR(\mathbb{R}^n)=\mathbb{R}$$
 
 이다. 
 
-이러한 방식으로 정의된 de Rham cohomology 또한 smooth manifold들의 pair들의 category 위에서 [정의 2](#def2)의 모든 조건들을 만족하며, 따라서 cohomology theory의 유일성, 임의의 singular chain을 smooth chain으로 근사할 수 있다는 사실에 의해 $\mathbb{R}$ 계수의 singular cohomology와 de Rham cohomology가 같다는 것을 확인할 수 있다. 위의 계산은 그럼 [§호몰로지, ⁋명제 11](/ko/math/algebraic_topology/homology#prop11)의 계산을 [명제 3](#prop3)을 통해 $\mathbb{R}$-valued cohomology로 옮겨온 것에 불과하다. 
+이러한 방식으로 정의된 de Rham cohomology 또한 smooth manifold들의 pair들의 category 위에서 [정의 2](#def2){: data-relation="required" }의 모든 조건들을 만족하며, 따라서 cohomology theory의 유일성, 임의의 singular chain을 smooth chain으로 근사할 수 있다는 사실에 의해 $\mathbb{R}$ 계수의 singular cohomology와 de Rham cohomology가 같다는 것을 확인할 수 있다. 위의 계산은 그럼 [§호몰로지, ⁋명제 11](/ko/math/algebraic_topology/homology#prop11){: data-relation="weak" }의 계산을 [명제 3](#prop3){: data-relation="weak" }을 통해 $\mathbb{R}$-valued cohomology로 옮겨온 것에 불과하다. 
  
 ## (코)호몰로지의 계수
 
 위에서 살펴본 de Rham cohomology는 coefficient group이 $\mathbb{Z}$가 아닌 cohomology theory의 한 예시이다. Singular cohomology 혹은 simplicial cohomology theory와는 다르게, de Rham cohomology는 coefficient group이 $\mathbb{R}$인 것이 그 정의상 당연하다. 
   
-이러한 cohomology theory는 좋은 성질들을 가지고 있는데, 가령 $\mathbb{R}$은 torsion-free abelian group이므로 $\Tor_1^\mathbb{Z}(A,\mathbb{R})=0$이 임의의 abelian group $A$에 대해 성립하고, 따라서 [명제 1](#prop1)에 의해 다음의 isomorphism
+이러한 cohomology theory는 좋은 성질들을 가지고 있는데, 가령 $\mathbb{R}$은 torsion-free abelian group이므로 $\Tor_1^\mathbb{Z}(A,\mathbb{R})=0$이 임의의 abelian group $A$에 대해 성립하고, 따라서 [명제 1](#prop1){: data-relation="required" }에 의해 다음의 isomorphism
 
 $$H_k(X;\mathbb{R})\cong H_k(X)\otimes_\mathbb{Z}\mathbb{R}$$
 
-이 성립한다는 것을 안다. 뿐만 아니라, $\mathbb{R}$은 injective $\mathbb{Z}$-module이므로 $\Ext_\mathbb{Z}^1(A,\mathbb{R})=0$이 임의의 abelian group $A$에 대해 성립하고 따라서 이번에는 [명제 3](#prop3)이 다음의 isomorphism
+이 성립한다는 것을 안다. 뿐만 아니라, $\mathbb{R}$은 injective $\mathbb{Z}$-module이므로 $\Ext_\mathbb{Z}^1(A,\mathbb{R})=0$이 임의의 abelian group $A$에 대해 성립하고 따라서 이번에는 [명제 3](#prop3){: data-relation="required" }이 다음의 isomorphism
 
 $$H^k(X;\mathbb{R})\cong \Hom_\mathbb{Z}(H_k(X),\mathbb{R})$$
 
@@ -232,7 +232,7 @@ $$C_\bullet(X;A):=C_\bullet(X)\otimes_\mathbb{Z}A,\qquad C_\bullet^\Delta(X;A):=
 
 들은, 만일 $A$가 ring이었다면, $A$-module들의 chain complex이고, 앞서 정의한 $C^\bullet(X;A)$ 또한 그러하다는 것을 안다. 따라서 이들에 homology 혹은 cohomology를 취하면 그 결과 또한 $A$-module이 될 것이다.
 
-한편, 우리는 만일 $A$가 principal ideal domain이라면 임의의 free $A$-module의 submodule은 다시 free $A$-module임을 알고 있다. [명제 1](#prop1)의 증명을 다시 살펴보면, $\mathbb{Z}$가 principal ideal domain이므로 free $\mathbb{Z}$-module (즉 free abelian group)의 submodule이 다시 free $\mathbb{Z}$-module이 된다는 사실을 활용한 것이며, 이를 바탕으로 앞선 두 명제를 다음과 같이 일반화할 수 있다.
+한편, 우리는 만일 $A$가 principal ideal domain이라면 임의의 free $A$-module의 submodule은 다시 free $A$-module임을 알고 있다. [명제 1](#prop1){: data-relation="required" }의 증명을 다시 살펴보면, $\mathbb{Z}$가 principal ideal domain이므로 free $\mathbb{Z}$-module (즉 free abelian group)의 submodule이 다시 free $\mathbb{Z}$-module이 된다는 사실을 활용한 것이며, 이를 바탕으로 앞선 두 명제를 다음과 같이 일반화할 수 있다.
 
 ::: 정리 4 (Universal coefficient theorem for homology, general version)
 Principal ideal domain $A$와, free $A$-module들의 chain complex $C_\bullet$, 그리고 임의의 $A$-module $M$에 대하여 다음의 short exact sequence
@@ -260,7 +260,7 @@ $$H_k(\Hom_A(C,M))\cong \Hom_A(H_k(C),M)\oplus \Ext^1_A(H_{k-1}(C),M)$$
 
 ## 메이어-피토리스 열
 
-한편 [정의 2](#def2)의 공리들 중 excision axiom은 우리가 작은 공간들의 cohomology로부터 큰 공간의 cohomology를 계산할 수 있게 해 준다. 다음 명제는 [\[대수적 위상수학\] §호몰로지의 계산, ⁋명제 7](/ko/math/algebraic_topology/computation_of_homology#prop7)의 cohomology 버전이며, 그 증명은 [\[대수적 위상수학\] §호몰로지의 계산, ⁋정의 6](/ko/math/algebraic_topology/computation_of_homology#def6)로부터 [\[대수적 위상수학\] §호몰로지의 계산, ⁋명제 7](/ko/math/algebraic_topology/computation_of_homology#prop7)를 얻어낸 과정을, [정의 2](#def2)에서 시작하여 반복하면 된다.
+한편 [정의 2](#def2){: data-relation="required" }의 공리들 중 excision axiom은 우리가 작은 공간들의 cohomology로부터 큰 공간의 cohomology를 계산할 수 있게 해 준다. 다음 명제는 [\[대수적 위상수학\] §호몰로지의 계산, ⁋명제 7](/ko/math/algebraic_topology/computation_of_homology#prop7){: data-relation="required" }의 cohomology 버전이며, 그 증명은 [\[대수적 위상수학\] §호몰로지의 계산, ⁋정의 6](/ko/math/algebraic_topology/computation_of_homology#def6){: data-relation="required" }로부터 [\[대수적 위상수학\] §호몰로지의 계산, ⁋명제 7](/ko/math/algebraic_topology/computation_of_homology#prop7){: data-relation="required" }를 얻어낸 과정을, [정의 2](#def2){: data-relation="required" }에서 시작하여 반복하면 된다.
 
 ::: 명제 6 (Mayer-Vietoris sequence)
 위상공간 $X$가 두 열린집합들의 합집합 $X=U\cup V$로 나타난다 하고, 이 위에 정의된 cohomology theory $H$를 생각하자. 그럼 long exact sequence
@@ -290,7 +290,7 @@ $$\partial(x\otimes y)=\partial^Cx\otimes y+(-1)^{\deg(x)}x\otimes\partial^Dy$$
 으로 정의한 후, 이를 linear하게 확장하여 얻어지는 것이다.
 :::
 
-즉, $(C\otimes D)_\bullet$은 $(p,q)$ 성분이 $C_p\otimes D_q$이고, horizontal differential이 $\partial^C\otimes\id_D$, vertical differential이 $\id_C\otimes \partial^D$로 주어지는 double complex의 total complex라 할 수 있다. ([§호몰로지, ⁋정의 5](/ko/math/homological_algebra/homology#def5))
+즉, $(C\otimes D)_\bullet$은 $(p,q)$ 성분이 $C_p\otimes D_q$이고, horizontal differential이 $\partial^C\otimes\id_D$, vertical differential이 $\id_C\otimes \partial^D$로 주어지는 double complex의 total complex라 할 수 있다. ([§호몰로지, ⁋정의 5](/ko/math/homological_algebra/homology#def5){: data-relation="weak" })
 
 그럼 Künneth formula의 대수적인 내용은 다음 보조정리에 담겨있다.
 
@@ -351,7 +351,7 @@ $$0 \rightarrow Z_\bullet(C)\rightarrow C_\bullet \rightarrow B_{\bullet-1}(C) \
 
 ## 아일렌베르크-질버 정리와 퀴네트 공식
 
-[보조정리 8](#lem8)의 결과를 염두에 두면, 우리가 해야 할 일은 명확하다. 두 위상공간 $X,Y$와 이에 해당하는 chain complex $C_\bullet(X),C_\bullet(Y)$가 주어졌을 때, product space $X\times Y$의 homology $H_\bullet(X\times Y)$와, 두 chain complex $H_\bullet(X)$, $H_\bullet(Y)$의 tensor product $(H(X)\otimes H(Y))_\bullet$의 관계를 살펴보는 것이다. 다음 정리는 이를 두 대수적인 대상들이 동일한 것이라는 것을 보여준다.
+[보조정리 8](#lem8){: data-relation="required" }의 결과를 염두에 두면, 우리가 해야 할 일은 명확하다. 두 위상공간 $X,Y$와 이에 해당하는 chain complex $C_\bullet(X),C_\bullet(Y)$가 주어졌을 때, product space $X\times Y$의 homology $H_\bullet(X\times Y)$와, 두 chain complex $H_\bullet(X)$, $H_\bullet(Y)$의 tensor product $(H(X)\otimes H(Y))_\bullet$의 관계를 살펴보는 것이다. 다음 정리는 이를 두 대수적인 대상들이 동일한 것이라는 것을 보여준다.
 
 ::: 정리 9 (Eilenberg-Zilber)
 두 위상공간 $X,Y$와 이들로부터 얻어지는 chain complex $C_\bullet(X),C_\bullet(Y)$, 그리고 $C_\bullet(X\times Y)$에 대하여, 두 chain complex $(C(X)\otimes C(Y))_\bullet$과 $C_\bullet(X\times Y)$ 사이의 chain homotopy equivalence가 존재하며, 따라서 
@@ -377,13 +377,13 @@ Eilenberg-Zilber map $\EZ:(C(X)\otimes C(Y))_\bullet \rightarrow C_\bullet(X\tim
 
 $$\EZ(\sigma\otimes\tau)=\sum_{\substack{\alpha_1<\cdots <\alpha_p,\quad \beta_1<\cdots <\beta_q\\ \{\alpha_1,\ldots,\alpha_p\}\sqcup\{\beta_1,\ldots,\beta_q\}=\{0,1,\ldots,p+q-1\}}}\sgn(\alpha_1,\ldots,\alpha_p,\beta_1,\ldots,\beta_q)(\sigma\circ s_{\beta_q}\cdots s_{\beta_1})\times(\tau\circ s_{\alpha_p}\cdots s_{\alpha_1})$$
 
-로 정의되며, 이는 식으로 보면 복잡하지만 [§호모토피, ⁋명제 6](/ko/math/algebraic_topology/homotopy#prop6)의 증명에서 등장하는 $h_n$ 함수, 즉 prism $\Delta^p\times \Delta^q$를 simplex들로 쪼개주는 방법을 나타낸 것에 불과하다. 그럼 [정리 9](#thm9)의 결과는 다음의 두 식
+로 정의되며, 이는 식으로 보면 복잡하지만 [§호모토피, ⁋명제 6](/ko/math/algebraic_topology/homotopy#prop6){: data-relation="weak" }의 증명에서 등장하는 $h_n$ 함수, 즉 prism $\Delta^p\times \Delta^q$를 simplex들로 쪼개주는 방법을 나타낸 것에 불과하다. 그럼 [정리 9](#thm9){: data-relation="required" }의 결과는 다음의 두 식
 
 $$\AW\circ\EZ=\id_{(C(X)\otimes C(Y))_\bullet},\qquad \EZ\circ \AW\simeq \id_{C_\bullet(X\times Y)}$$
 
 으로부터 나온다.
 
-[정리 9](#thm9)의 chain homotopy equivalence는 free complex들 사이의 것이므로 $\otimes_\mathbb{Z}A$ 이후에도 유지되고, 이로부터 $C_\bullet(X\times Y)\otimes_\mathbb{Z}A\simeq (C(X)\otimes C(Y))_\bullet\otimes_\mathbb{Z}A\cong C_\bullet(X;A)\otimes_AC_\bullet(Y;A)$를 얻는다. 따라서 [보조정리 8](#lem8)에 [정리 9](#thm9)를 종합하면 다음의 결과를 얻는다.
+[정리 9](#thm9){: data-relation="required" }의 chain homotopy equivalence는 free complex들 사이의 것이므로 $\otimes_\mathbb{Z}A$ 이후에도 유지되고, 이로부터 $C_\bullet(X\times Y)\otimes_\mathbb{Z}A\simeq (C(X)\otimes C(Y))_\bullet\otimes_\mathbb{Z}A\cong C_\bullet(X;A)\otimes_AC_\bullet(Y;A)$를 얻는다. 따라서 [보조정리 8](#lem8){: data-relation="required" }에 [정리 9](#thm9){: data-relation="required" }를 종합하면 다음의 결과를 얻는다.
 
 ::: 따름정리 10 (Künneth)
 위상공간 $X,Y$를 고정하자. 그럼 이들의 곱공간 $X\times Y$와 principal ideal domain $A$에 대하여, 다음의 short exact sequence
@@ -397,7 +397,7 @@ $$H_k(X\times Y;A)\cong \left( \bigoplus_{p+q=k}H_p(X;A)\otimes_AH_q(Y;A)\right)
 이 존재한다.
 :::
 
-물론, 이 결과와 [정리 5](#thm5)를 사용하면 cohomology 버전의 Künneth formula를 얻을 수 있다.
+물론, 이 결과와 [정리 5](#thm5){: data-relation="weak" }를 사용하면 cohomology 버전의 Künneth formula를 얻을 수 있다.
 
 --- 
 
@@ -408,4 +408,4 @@ $$H_k(X\times Y;A)\cong \left( \bigoplus_{p+q=k}H_p(X;A)\otimes_AH_q(Y;A)\right)
 
 ---
 
-[^1]: 물론 우리는 이 pairing이 $H^k(X;A)$에서 $\Hom(H_k(X),A)$로의 homomorphism을 주는 것을 바랄 것이나, 상황이 이처럼 단순하지는 않고 숨겨진 torsion을 담고 있는 $\Ext$ 항이 나와야 한다는 것을 [명제 3](#prop3)로부터 알고 있다.
+[^1]: 물론 우리는 이 pairing이 $H^k(X;A)$에서 $\Hom(H_k(X),A)$로의 homomorphism을 주는 것을 바랄 것이나, 상황이 이처럼 단순하지는 않고 숨겨진 torsion을 담고 있는 $\Ext$ 항이 나와야 한다는 것을 [명제 3](#prop3){: data-relation="weak" }로부터 알고 있다.
