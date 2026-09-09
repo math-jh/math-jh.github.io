@@ -39,9 +39,9 @@ weight: 1
 지금까지 우리가 알고 있던 많은 것들이 이 언어로 쓰여질 수 있다. 가령 집합들의 category $\Set$은 다음과 같은 데이터로 이루어진다.
 
 - $\Set$의 대상들은 집합들이다.
-- 두 대상 $A_1,A_2\in\obj(\Set)$에 대하여, $A_1$에서 $A_2$로의 morphism은 집합 $A_1$에서 $A_2$로의 함수이다. ([\[집합론\] §함수, ⁋정의 1](/ko/math/set_theory/functions#def1))
-- 두 morphism의 합성은 함수의 합성으로 정의한다. ([\[집합론\] §함수들 사이의 연산, ⁋명제 1](/ko/math/set_theory/operation_of_functions#prop1)) 이 합성이 associative한 것은 [\[집합론\] §이항관계들 사이의 연산, ⁋명제 5](/ko/math/set_theory/operation_of_binary_relations#prop5)에서 살펴보았다.
-- 임의의 대상 $A\in\obj(\Set)$에 대하여, $\id_A\in\Hom_\Set(A,A)$는 항등함수 $\id_A$이다. ([\[집합론\] §함수, ⁋정의 2](/ko/math/set_theory/functions#def2)) 항등함수가 위의 [정의 1](#def1)의 두 조건을 만족하는 것은 [\[집합론\] §이항관계들 사이의 연산, ⁋정의 9](/ko/math/set_theory/operation_of_binary_relations#def9) 이후에 살펴보았다.
+- 두 대상 $A_1,A_2\in\obj(\Set)$에 대하여, $A_1$에서 $A_2$로의 morphism은 집합 $A_1$에서 $A_2$로의 함수이다. ([\[집합론\] §함수, ⁋정의 1](/ko/math/set_theory/functions#def1){: data-relation="required" })
+- 두 morphism의 합성은 함수의 합성으로 정의한다. ([\[집합론\] §함수들 사이의 연산, ⁋명제 1](/ko/math/set_theory/operation_of_functions#prop1){: data-relation="weak" }) 이 합성이 associative한 것은 [\[집합론\] §이항관계들 사이의 연산, ⁋명제 5](/ko/math/set_theory/operation_of_binary_relations#prop5){: data-relation="required" }에서 살펴보았다.
+- 임의의 대상 $A\in\obj(\Set)$에 대하여, $\id_A\in\Hom_\Set(A,A)$는 항등함수 $\id_A$이다. ([\[집합론\] §함수, ⁋정의 2](/ko/math/set_theory/functions#def2){: data-relation="weak" }) 항등함수가 위의 [정의 1](#def1){: data-relation="required" }의 두 조건을 만족하는 것은 [\[집합론\] §이항관계들 사이의 연산, ⁋정의 9](/ko/math/set_theory/operation_of_binary_relations#def9){: data-relation="weak" } 이후에 살펴보았다.
 
 한 가지 주의할 점은 위에서 인용한 함수의 정의가 정의역이 공집합이 아닐 것을 요구한다는 것이다. 이대로라면 임의의 집합 $B$에 대하여 $\Hom_\Set(\emptyset,B)$가 공집합이 되어 $\id_\emptyset$이 존재하지 않는다. 앞으로는 임의의 $B$에 대하여 triple $(\emptyset,\emptyset,B)$ 또한 $\emptyset$에서 $B$로의 함수인 것으로 약속하며, 그럼 이것이 $\emptyset$에서 $B$로의 유일한 함수가 되어 $\id_\emptyset$을 얻는다.
 
@@ -72,7 +72,7 @@ weight: 1
 위의 예시에서의 모든 category의 대상들은 집합 위에 추가적인 구조를 부여한 것이다. 이러한 꼴의 category를 *concrete category*라 부른다. Category들 중에서는 concrete category가 아닌 것들도 많이 존재한다.
 
 ::: 예시 3
-임의의 preordered set $(S,\preceq)$를 다음과 같은 과정을 통해 category로 생각할 수 있다. ([\[집합론\] §순서관계의 정의, ⁋정의 7](/ko/math/set_theory/order_relations#def7)) 
+임의의 preordered set $(S,\preceq)$를 다음과 같은 과정을 통해 category로 생각할 수 있다. ([\[집합론\] §순서관계의 정의, ⁋정의 7](/ko/math/set_theory/order_relations#def7){: data-relation="required" }) 
 
 - $\obj(S)=S$이다.
 - 임의의 $x,y\in S$에 대하여, 만일 $x\preceq y$라면 유일한 morphism $x \rightarrow y$가 존재하고, 그렇지 않다면 $\Hom_S(x,y)$는 공집합이다.
@@ -121,9 +121,9 @@ $$f\circ g'=\id_{A_2},\qquad g'\circ f=\id_{A_1}$$
 
 $$g=g\circ\id_{A_2}=g\circ(f\circ g')=(g\circ f)\circ g'=\id_{A_1}\circ g'=g'$$
 
-으로부터 $g=g'$임을 안다. 따라서 임의의 $f\in\Hom_\mathcal{A}(A_1,A_2)$가 주어졌을 때, [정의 6](#def6)의 두 조건을 만족하는 $g\in\Hom_\mathcal{A}(A_2,A_1)$는 존재한다면 유일하고, 따라서 이를 $g=f^{-1}$으로 적을 수 있다.
+으로부터 $g=g'$임을 안다. 따라서 임의의 $f\in\Hom_\mathcal{A}(A_1,A_2)$가 주어졌을 때, [정의 6](#def6){: data-relation="required" }의 두 조건을 만족하는 $g\in\Hom_\mathcal{A}(A_2,A_1)$는 존재한다면 유일하고, 따라서 이를 $g=f^{-1}$으로 적을 수 있다.
 
-많은 예시에서 isomorphism은 bijective인 morphism과 같은 말이지만, 항상 그런 것은 아니다. ([\[위상수학\] §연속함수, ⁋예시 5](/ko/math/topology/continuous_functions#ex5)) 애초에 임의의 category의 morphism들이 반드시 함수라는 보장도 없으므로 morphism이 bijection이라는 것은 애초부터 말이 되지 않는다. 대신 다음을 정의한다.
+많은 예시에서 isomorphism은 bijective인 morphism과 같은 말이지만, 항상 그런 것은 아니다. ([\[위상수학\] §연속함수, ⁋예시 5](/ko/math/topology/continuous_functions#ex5){: data-relation="weak" }) 애초에 임의의 category의 morphism들이 반드시 함수라는 보장도 없으므로 morphism이 bijection이라는 것은 애초부터 말이 되지 않는다. 대신 다음을 정의한다.
 
 ::: 정의 7
 Category $\mathcal{A}$와, morphism $f:A_1\rightarrow A_2$를 생각하자. 
@@ -157,7 +157,7 @@ $$g_1=\id_{A_1}\circ g_1=(f^{-1}\circ f)\circ g_1=f^{-1}\circ(f\circ g_1)=f^{-1}
 - $A$에 대한 *automorphism group<sub>자기동형사상 군</sub>*은 $\End_\mathcal{A}(A)$의 원소들 중 isomorphism만을 모아둔 집합 $\Aut_\mathcal{A}(A)$와 합성 $\circ$으로 이루어진 데이터이다.
 :::
 
-어렵지 않게 $\End(A)$와 $\Aut(A)$가 대수적으로 정의된 monoid와 group의 조건을 만족하는 것을 알 수 있다. ([\[대수적 구조\] §반군, 모노이드, 군, ⁋정의 3](/ko/math/algebraic_structures/groups#def3)과 [§반군, 모노이드, 군, ⁋정의 11](/ko/math/algebraic_structures/groups#def11)) 범주론에서는 monoid와 group을 다음과 같이 정의할 수 있다.
+어렵지 않게 $\End(A)$와 $\Aut(A)$가 대수적으로 정의된 monoid와 group의 조건을 만족하는 것을 알 수 있다. ([\[대수적 구조\] §반군, 모노이드, 군, ⁋정의 3](/ko/math/algebraic_structures/groups#def3){: data-relation="weak" }과 [§반군, 모노이드, 군, ⁋정의 11](/ko/math/algebraic_structures/groups#def11){: data-relation="weak" }) 범주론에서는 monoid와 group을 다음과 같이 정의할 수 있다.
 
 ::: 정의 10
 대상이 하나 뿐인 category를 *monoid*라 부른다. 모든 morphism이 isomorphism인 monoid를 *group*이라 부른다. 

@@ -40,9 +40,9 @@ Additionally, these satisfy the following conditions.
 Many things we have known so far can be written in this language. For example, the category $\Set$ of sets consists of the following data.
 
 - The objects of $\Set$ are sets.
-- For two objects $A_1,A_2\in\obj(\Set)$, a morphism from $A_1$ to $A_2$ is a function from the set $A_1$ to $A_2$. ([\[Set Theory\] §Functions, ⁋Definition 1](/en/math/set_theory/functions#def1))
-- The composition of two morphisms is defined as the composition of functions. ([\[Set Theory\] §Operations on Functions, ⁋Proposition 1](/en/math/set_theory/operation_of_functions#prop1)) That this composition is associative was examined in [\[Set Theory\] §Operations on Binary Relations, ⁋Proposition 5](/en/math/set_theory/operation_of_binary_relations#prop5).
-- For any object $A\in\obj(\Set)$, $\id_A\in\Hom_\Set(A,A)$ is the identity function $\id_A$. ([\[Set Theory\] §Functions, ⁋Definition 2](/en/math/set_theory/functions#def2)) That the identity function satisfies the two conditions of [Definition 1](#def1) was examined after [\[Set Theory\] §Operations on Binary Relations, ⁋Definition 9](/en/math/set_theory/operation_of_binary_relations#def9).
+- For two objects $A_1,A_2\in\obj(\Set)$, a morphism from $A_1$ to $A_2$ is a function from the set $A_1$ to $A_2$. ([\[Set Theory\] §Functions, ⁋Definition 1](/en/math/set_theory/functions#def1){: data-relation="required" })
+- The composition of two morphisms is defined as the composition of functions. ([\[Set Theory\] §Operations on Functions, ⁋Proposition 1](/en/math/set_theory/operation_of_functions#prop1){: data-relation="weak" }) That this composition is associative was examined in [\[Set Theory\] §Operations on Binary Relations, ⁋Proposition 5](/en/math/set_theory/operation_of_binary_relations#prop5){: data-relation="weak" }.
+- For any object $A\in\obj(\Set)$, $\id_A\in\Hom_\Set(A,A)$ is the identity function $\id_A$. ([\[Set Theory\] §Functions, ⁋Definition 2](/en/math/set_theory/functions#def2){: data-relation="weak" }) That the identity function satisfies the two conditions of [Definition 1](#def1){: data-relation="required" } was examined after [\[Set Theory\] §Operations on Binary Relations, ⁋Definition 9](/en/math/set_theory/operation_of_binary_relations#def9){: data-relation="weak" }.
 
 One point to be careful about is that the definition of a function quoted above requires the domain to be non-empty. As it stands, for any set $B$, $\Hom_\Set(\emptyset,B)$ would be empty, and $\id_\emptyset$ would not exist. Henceforth, we agree that for any $B$, the triple $(\emptyset,\emptyset,B)$ is also a function from $\emptyset$ to $B$; then this becomes the unique function from $\emptyset$ to $B$, and we obtain $\id_\emptyset$.
 
@@ -73,7 +73,7 @@ Here, a pointed set means a pair $(S,x)$ where $S$ is a set and $x$ is a fixed e
 In all the categories in the example above, the objects are sets endowed with additional structure. A category of this form is called a *concrete category*. Among categories, there are also many that are not concrete categories.
 
 ::: Example 3
-Any preordered set $(S,\preceq)$ can be regarded as a category through the following process. ([\[Set Theory\] §Definition of Order Relations, ⁋Definition 7](/en/math/set_theory/order_relations#def7))
+Any preordered set $(S,\preceq)$ can be regarded as a category through the following process. ([\[Set Theory\] §Definition of Order Relations, ⁋Definition 7](/en/math/set_theory/order_relations#def7){: data-relation="required" })
 
 - $\obj(S)=S$.
 - For any $x,y\in S$, if $x\preceq y$ then there exists a unique morphism $x \rightarrow y$, and otherwise $\Hom_S(x,y)$ is empty.
@@ -122,9 +122,9 @@ Then from
 
 $$g=g\circ\id_{A_2}=g\circ(f\circ g')=(g\circ f)\circ g'=\id_{A_1}\circ g'=g'$$
 
-we know that $g=g'$. Therefore, given any $f\in\Hom_\mathcal{A}(A_1,A_2)$, if there exists a $g\in\Hom_\mathcal{A}(A_2,A_1)$ satisfying the two conditions of [Definition 6](#def6), it is unique, and hence we can write it as $g=f^{-1}$.
+we know that $g=g'$. Therefore, given any $f\in\Hom_\mathcal{A}(A_1,A_2)$, if there exists a $g\in\Hom_\mathcal{A}(A_2,A_1)$ satisfying the two conditions of [Definition 6](#def6){: data-relation="required" }, it is unique, and hence we can write it as $g=f^{-1}$.
 
-In many examples, an isomorphism is the same as a bijective morphism, but this is not always the case. ([\[Topology\] §Continuous Functions, ⁋Example 5](/en/math/topology/continuous_functions#ex5)) In the first place, there is no guarantee that morphisms in an arbitrary category are necessarily functions, so it does not even make sense to say that a morphism is a bijection. Instead, we define the following.
+In many examples, an isomorphism is the same as a bijective morphism, but this is not always the case. ([\[Topology\] §Continuous Functions, ⁋Example 5](/en/math/topology/continuous_functions#ex5){: data-relation="weak" }) In the first place, there is no guarantee that morphisms in an arbitrary category are necessarily functions, so it does not even make sense to say that a morphism is a bijection. Instead, we define the following.
 
 ::: Definition 7
 Consider a category $\mathcal{A}$ and a morphism $f:A_1\rightarrow A_2$.
@@ -158,7 +158,7 @@ Fix an arbitrary category $\mathcal{A}$ and an object $A\in\obj(\mathcal{A})$.
 - The *automorphism group* of $A$ is the data consisting of the set $\Aut_\mathcal{A}(A)$, which collects only the isomorphisms among the elements of $\End_\mathcal{A}(A)$, and the composition $\circ$.
 :::
 
-It is not difficult to see that $\End(A)$ and $\Aut(A)$ satisfy the conditions of the algebraically defined monoid and group. ([\[Algebraic Structures\] §Semigroups, Monoids, and Groups, ⁋Definition 3](/en/math/algebraic_structures/groups#def3) and [§Semigroups, Monoids, and Groups, ⁋Definition 11](/en/math/algebraic_structures/groups#def11)) In category theory, monoid and group can be defined as follows.
+It is not difficult to see that $\End(A)$ and $\Aut(A)$ satisfy the conditions of the algebraically defined monoid and group. ([\[Algebraic Structures\] §Semigroups, Monoids, and Groups, ⁋Definition 3](/en/math/algebraic_structures/groups#def3){: data-relation="weak" } and [§Semigroups, Monoids, and Groups, ⁋Definition 11](/en/math/algebraic_structures/groups#def11){: data-relation="weak" }) In category theory, monoid and group can be defined as follows.
 
 ::: Definition 10
 A category with only one object is called a *monoid*. A monoid in which every morphism is an isomorphism is called a *group*.
