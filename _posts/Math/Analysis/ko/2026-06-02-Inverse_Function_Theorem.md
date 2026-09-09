@@ -16,7 +16,7 @@ drift_needed: true
 published: false
 ---
 
-[§다변수 미분](/ko/math/analysis/multivariable_differentiation)에서 미분을 선형사상 $Df(a)$로 보았다. 선형사상이 가역이면 그것이 근사하는 함수도 국소적으로 가역이리라 기대할 수 있다. 이 직관을 엄밀하게 만든 것이 역함수 정리이며, 다변수 미적분의 가장 깊은 정리 중 하나이다.
+[§다변수 미분](/ko/math/analysis/multivariable_differentiation){: data-relation="required" }에서 미분을 선형사상 $Df(a)$로 보았다. 선형사상이 가역이면 그것이 근사하는 함수도 국소적으로 가역이리라 기대할 수 있다. 이 직관을 엄밀하게 만든 것이 역함수 정리이며, 다변수 미적분의 가장 깊은 정리 중 하나이다.
 
 한 변수 함수에서는 이 직관이 매우 투명하다. $f : \mathbb{R} \rightarrow \mathbb{R}$이 $C^1$이고 $f'(a) \neq 0$이면, 연속성에 의해 $a$의 어떤 근방에서 $f'$이 부호를 유지하므로 $f$가 그 근방에서 순증가 또는 순감소하고, 따라서 일대일이며 역함수를 가진다. 역함수의 미분은
 
@@ -50,15 +50,15 @@ DT_y(x) &= I - Df(x) \\
 
 $$\lVert DT_y(x)\rVert = \lVert Df(a) - Df(x)\rVert \leq \frac12$$
 
-로 만들 수 있다. 그러면 $\overline{B}$가 convex이므로 두 점 $x_1, x_2 \in \overline{B}$를 잇는 선분이 $\overline{B}$ 안에 있고, 단위벡터 $u$에 대해 실숫값 함수 $u \cdot T_y$에 [§다변수 미분, ⁋명제 6](/ko/math/analysis/multivariable_differentiation#prop6)을 적용하면 그 선분 위의 어떤 점 $\xi$에서 $u \cdot \bigl(T_y(x_1) - T_y(x_2)\bigr) = u \cdot DT_y(\xi)(x_1 - x_2)$이다. 우변의 절댓값이 $\lVert DT_y(\xi)\rVert \lVert x_1 - x_2\rVert$ 이하이므로, $u$를 $T_y(x_1) - T_y(x_2)$ 방향의 단위벡터로 잡으면
+로 만들 수 있다. 그러면 $\overline{B}$가 convex이므로 두 점 $x_1, x_2 \in \overline{B}$를 잇는 선분이 $\overline{B}$ 안에 있고, 단위벡터 $u$에 대해 실숫값 함수 $u \cdot T_y$에 [§다변수 미분, ⁋명제 6](/ko/math/analysis/multivariable_differentiation#prop6){: data-relation="required" }을 적용하면 그 선분 위의 어떤 점 $\xi$에서 $u \cdot \bigl(T_y(x_1) - T_y(x_2)\bigr) = u \cdot DT_y(\xi)(x_1 - x_2)$이다. 우변의 절댓값이 $\lVert DT_y(\xi)\rVert \lVert x_1 - x_2\rVert$ 이하이므로, $u$를 $T_y(x_1) - T_y(x_2)$ 방향의 단위벡터로 잡으면
 
 $$\lVert T_y(x_1) - T_y(x_2)\rVert \leq \frac12 \lVert x_1 - x_2\rVert$$
 
-이 되어 $T_y$가 contraction이고, $\overline{B}$는 [§거리공간, ⁋명제 9](/ko/math/analysis/metric_spaces#prop9)에 의해 완비 거리공간이다. 한편 $T_y(a) - a = y - f(a)$이므로, $\lVert y - f(a)\rVert < r/2$이면 모든 $x \in \overline{B}$에서
+이 되어 $T_y$가 contraction이고, $\overline{B}$는 [§거리공간, ⁋명제 9](/ko/math/analysis/metric_spaces#prop9){: data-relation="required" }에 의해 완비 거리공간이다. 한편 $T_y(a) - a = y - f(a)$이므로, $\lVert y - f(a)\rVert < r/2$이면 모든 $x \in \overline{B}$에서
 
 $$\lVert T_y(x) - a\rVert \leq \lVert T_y(x) - T_y(a)\rVert + \lVert T_y(a) - a\rVert \leq \frac12 \lVert x - a\rVert + \lVert y - f(a)\rVert < r$$
 
-이 되어 $T_y$가 $\overline{B}$를 자기 자신으로 보낸다. 따라서 열린 공 $V = B(f(a), r/2)$로 두면 [§미분방정식의 존재성과 유일성, ⁋정리 2](/ko/math/analysis/existence_uniqueness_ode#thm2)에 의해 각 $y \in V$마다 $T_y$의 fixed point, 곧 $f(x) = y$인 점 $x$가 $\overline{B}$ 안에 유일하게 존재하며 위의 부등식에 의해 그 점은 열린 공 $B(a,r)$에 들어간다. $U = \{x \in B(a,r) \mid f(x) \in V\}$로 두면 $f$의 연속성에 의해 $U$가 열린집합이고, $\overline{B}$ 안에서의 유일성이 단사성을 주므로 $f : U \rightarrow V$는 일대일 대응이다.
+이 되어 $T_y$가 $\overline{B}$를 자기 자신으로 보낸다. 따라서 열린 공 $V = B(f(a), r/2)$로 두면 [§미분방정식의 존재성과 유일성, ⁋정리 2](/ko/math/analysis/existence_uniqueness_ode#thm2){: data-relation="required" }에 의해 각 $y \in V$마다 $T_y$의 fixed point, 곧 $f(x) = y$인 점 $x$가 $\overline{B}$ 안에 유일하게 존재하며 위의 부등식에 의해 그 점은 열린 공 $B(a,r)$에 들어간다. $U = \{x \in B(a,r) \mid f(x) \in V\}$로 두면 $f$의 연속성에 의해 $U$가 열린집합이고, $\overline{B}$ 안에서의 유일성이 단사성을 주므로 $f : U \rightarrow V$는 일대일 대응이다.
 
 역함수의 미분가능성은 따로 확인해야 한다. 축약 부등식의 좌변 $T_y(x_1) - T_y(x_2) = (x_1 - x_2) - \bigl(f(x_1) - f(x_2)\bigr)$이 $y$에 무관하므로
 
@@ -95,7 +95,7 @@ $$\det D\Phi(a,b) = \det I_n \cdot \det D_y F(a,b) = \det D_y F(a,b) \neq 0$$
 이다. 따라서 $D\Phi(a,b)$가 가역이고, 역함수 정리를 $\Phi$에 적용하면 $(a,b)$ 근방에서 $C^1$ 역사상 $\Psi = \Phi^{-1}$이 존재한다. $\Phi$의 첫 성분이 항등이므로 $\Psi$도 첫 성분이 항등인 형태 $\Psi(x, z) = (x, h(x, z))$를 가지고, $z = 0$으로 두면 $g(x) := h(x, 0)$이 원하는 함수이다. 실제로 $\Phi(x, g(x)) = (x, 0)$이 둘째 성분에서 $F(x, g(x)) = 0$을 주고, $g$의 유일성과 $C^1$성은 $\Psi$의 그것에서 따른다.
 :::
 
-음함수 정리에서 $g$의 미분도 명시적으로 구할 수 있다. $F(x, g(x)) = 0$의 양변을 $x$로 미분하면 [§다변수 미분, ⁋정리 3](/ko/math/analysis/multivariable_differentiation#thm3)에 의해
+음함수 정리에서 $g$의 미분도 명시적으로 구할 수 있다. $F(x, g(x)) = 0$의 양변을 $x$로 미분하면 [§다변수 미분, ⁋정리 3](/ko/math/analysis/multivariable_differentiation#thm3){: data-relation="required" }에 의해
 
 $$D_x F(x, g(x)) + D_y F(x, g(x)) \cdot Dg(x) = 0$$
 
@@ -120,7 +120,7 @@ $$(f^{-1})'(y) = \frac{1}{3} y^{-2/3} \xrightarrow{ y\rightarrow 0 } \infty$$
 마지막으로 역함수 정리가 한 변수 미분 공식의 정확한 다변수 일반화임을 따름정리로 정리한다.
 
 ::: 따름정리 4
-[정리 1](#thm1)의 가정 아래, $y = f(x)$가 $f(a)$ 근방에서 가역이고 그 역함수의 야코비 행렬은
+[정리 1](#thm1){: data-relation="required" }의 가정 아래, $y = f(x)$가 $f(a)$ 근방에서 가역이고 그 역함수의 야코비 행렬은
 
 $$Df^{-1}(y) = \bigl(Df(f^{-1}(y))\bigr)^{-1}$$
 
@@ -132,7 +132,7 @@ $$\det Df^{-1}(y) \cdot \det Df(f^{-1}(y)) = 1$$
 :::
 
 ::: 증명
-[정리 1](#thm1)이 $f^{-1}$의 $C^1$성과 $Df^{-1}(f(a)) = \bigl(Df(a)\bigr)^{-1}$을 보장한다. 같은 등식이 근방의 모든 점 $y = f(x)$에서 성립하므로 첫 식을 얻는다. 둘째 식은 첫 식의 양변에 행렬식을 취하고, 곱의 행렬식이 행렬식의 곱이며 $\det A^{-1} = (\det A)^{-1}$임을 쓰면
+[정리 1](#thm1){: data-relation="required" }이 $f^{-1}$의 $C^1$성과 $Df^{-1}(f(a)) = \bigl(Df(a)\bigr)^{-1}$을 보장한다. 같은 등식이 근방의 모든 점 $y = f(x)$에서 성립하므로 첫 식을 얻는다. 둘째 식은 첫 식의 양변에 행렬식을 취하고, 곱의 행렬식이 행렬식의 곱이며 $\det A^{-1} = (\det A)^{-1}$임을 쓰면
 
 $$\det Df^{-1}(y) = \det\bigl(Df(f^{-1}(y))\bigr)^{-1} = \frac{1}{\det Df(f^{-1}(y))}$$
 
