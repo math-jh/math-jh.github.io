@@ -17,7 +17,7 @@ We have not paid much attention to the category $\Ab$ so far, but in this post w
 
 ## Sums of Abelian Groups
 
-First, the universal property of the weak direct product shown in [§Restricted Direct Sum, ⁋Theorem 2](/en/math/algebraic_structures/restricted_sums#thm2) applies particularly well when the group $H$ is abelian.
+First, the universal property of the weak direct product shown in [§Restricted Direct Sum, ⁋Theorem 2](/en/math/algebraic_structures/restricted_sums#thm2){: data-relation="required" } applies particularly well when the group $H$ is abelian.
 
 ::: Theorem 1
 Given a family $(G_i)$ of abelian groups, consider $\prod^w G_i$ and the inclusion maps $\iota_i$. Then for any abelian group $H$ and group homomorphisms $f_i:G_i\rightarrow H$, there exists a unique group homomorphism $f:\prod^wG_i\rightarrow H$ such that $f_i=f\circ\iota_i$.
@@ -66,13 +66,13 @@ On the other hand, for any abelian group $H$, if a group homomorphism $f:G\right
 
 $$e=f(x)^{-1}f(y)^{-1}f(x)f(y)=f(x^{-1}y^{-1}xy)$$
 
-so $[G,G]\leq\ker f$. Now by [§Group Homomorphisms, ⁋Proposition 3](/en/math/algebraic_structures/isomorphism_theorems#prop3) we obtain the following.
+so $[G,G]\leq\ker f$. Now by [§Group Homomorphisms, ⁋Proposition 3](/en/math/algebraic_structures/isomorphism_theorems#prop3){: data-relation="required" } we obtain the following.
 
 ::: Proposition 5
 Let $G$ be any group and let $p:G\rightarrow G/[G,G]$ be the quotient homomorphism. Then for any abelian group $H$ and any group homomorphism $f:G \rightarrow H$, there exists a unique $\bar{f}:G/[G,G]\rightarrow H$ satisfying $f=\bar{f}\circ p$.
 :::
 
-In particular, suppose a group homomorphism $f:G\rightarrow H$ is given. Then by composing $G\rightarrow H\rightarrow H/[H,H]$ we obtain a group homomorphism from $G$ to the abelian group $H/[H,H]$, and by [Proposition 5](#prop5) this induces a group homomorphism from $G/[G,G]$ to $H/[H,H]$.
+In particular, suppose a group homomorphism $f:G\rightarrow H$ is given. Then by composing $G\rightarrow H\rightarrow H/[H,H]$ we obtain a group homomorphism from $G$ to the abelian group $H/[H,H]$, and by [Proposition 5](#prop5){: data-relation="required" } this induces a group homomorphism from $G/[G,G]$ to $H/[H,H]$.
 
 ::: Definition 6
 For any group $G$, we call the quotient group $G/[G,G]$ the *abelianization* of $G$, and denote it by $G^\ab$.
@@ -88,7 +88,7 @@ hold, and these two equalities follow from uniqueness once we show that the righ
 For the forgetful functor $U:\Ab \rightarrow \Grp$ and the abelianization functor $\ab:\Grp \rightarrow \Ab$, there exists an adjunction $\ab\dashv U$.
 :::
 
-The bijection $\Hom_\Ab(G^\ab,H)\cong \Hom_\Grp(G,U(H))$ for this claim follows immediately from the correspondence $\bar{f}\mapsto\bar{f}\circ p$ of [Proposition 5](#prop5), and the only remaining thing to show is naturality in each factor; but this too follows by an argument similar to the uniqueness argument examined above.
+The bijection $\Hom_\Ab(G^\ab,H)\cong \Hom_\Grp(G,U(H))$ for this claim follows immediately from the correspondence $\bar{f}\mapsto\bar{f}\circ p$ of [Proposition 5](#prop5){: data-relation="required" }, and the only remaining thing to show is naturality in each factor; but this too follows by an argument similar to the uniqueness argument examined above.
 
 ## Free Abelian Groups
 
@@ -102,11 +102,11 @@ $$F_\Ab(X)=\bigoplus_{x\in X} \mathbb{Z}$$
 
 and call this the *free abelian group* defined by $X$. Since a function $u:X\rightarrow Y$ induces a homomorphism $F_\Ab(u)$ sending the $x$-th generator to the $u(x)$-th generator, $F_\Ab$ becomes a functor $\Set\rightarrow\Ab$.
 
-Now applying [Theorem 1](#thm1) together with the fact that a group homomorphism out of $\mathbb{Z}$ is determined by the image of $1$, we obtain for any abelian group $H$ the following isomorphism
+Now applying [Theorem 1](#thm1){: data-relation="required" } together with the fact that a group homomorphism out of $\mathbb{Z}$ is determined by the image of $1$, we obtain for any abelian group $H$ the following isomorphism
 
 $$\Hom_\Ab\biggl(\bigoplus_{x\in X}\mathbb{Z},H\biggr)\cong\prod_{x\in X}\Hom_\Ab(\mathbb{Z},H)\cong\prod_{x\in X}U(H)\cong\Hom_\Set(X,U(H))$$
 
-Here each correspondence is given only by composition of homomorphisms and composition of functions, so it is natural in both $X$ and $H$, and thus we obtain the following. ([\[Category Theory\] §Adjoint Functors, ⁋Definition 1](/en/math/category_theory/adjoints#def1))
+Here each correspondence is given only by composition of homomorphisms and composition of functions, so it is natural in both $X$ and $H$, and thus we obtain the following. ([\[Category Theory\] §Adjoint Functors, ⁋Definition 1](/en/math/category_theory/adjoints#def1){: data-relation="weak" })
 
 ::: Proposition 8
 There exists a left adjoint $F_\Ab:\Set \rightarrow\Ab$ of the forgetful functor $U:\Ab \rightarrow \Set$.
@@ -127,10 +127,10 @@ $$(f+g)(x)=f(x)+g(x)\qquad\text{for all $x\in G$}$$
 That $f+g$ is again a group homomorphism is due to $H$ being abelian: in $(f+g)(x+y)=f(x)+f(y)+g(x)+g(y)$ we may swap the middle two terms to obtain $(f+g)(x)+(f+g)(y)$. The identity is the zero map, the inverse of $f$ is $(-f)(x)=-f(x)$, and the commutativity of $\Hom_\Ab(G,H)$ also follows from the commutativity of $H$.
 :::
 
-Although $\Hom_\Ab(-,-)$ was originally defined as a bifunctor from $\Ab^\op\times \Ab$ to $\Set$, by this proposition we can in fact view it as a bifunctor to $\Ab$. That is, we may think of $\Hom_\Ab(-,-)$ as something similar to the internal $\Hom$ of [\[Category Theory\] §Adjoint Functors, ⁋Definition 8](/en/math/category_theory/adjoints#def8). However, with only the language we have so far this is impossible.
+Although $\Hom_\Ab(-,-)$ was originally defined as a bifunctor from $\Ab^\op\times \Ab$ to $\Set$, by this proposition we can in fact view it as a bifunctor to $\Ab$. That is, we may think of $\Hom_\Ab(-,-)$ as something similar to the internal $\Hom$ of [\[Category Theory\] §Adjoint Functors, ⁋Definition 8](/en/math/category_theory/adjoints#def8){: data-relation="weak" }. However, with only the language we have so far this is impossible.
 
 ::: Example 10
-$\Ab$ is a cartesian monoidal category with respect to $\times$, just as in [\[Category Theory\] §Monoidal Categories, ⁋Proposition 4](/en/math/category_theory/monoidal_categories#prop4) and immediately after. However, $\Hom_\Ab(-,-)$ cannot be regarded as an internal $\Hom$ for this structure. That is,
+$\Ab$ is a cartesian monoidal category with respect to $\times$, just as in [\[Category Theory\] §Monoidal Categories, ⁋Proposition 4](/en/math/category_theory/monoidal_categories#prop4){: data-relation="weak" } and immediately after. However, $\Hom_\Ab(-,-)$ cannot be regarded as an internal $\Hom$ for this structure. That is,
 
 $$\Hom_\Ab(G\times H, A)\cong \Hom_\Ab(G,\Hom_\Ab(H,A))$$
 
@@ -145,7 +145,7 @@ Therefore, in order to regard $\Hom_\Ab(-,-)$ as an internal $\Hom$, we must end
 
 ## Tensor Products
 
-The fundamental reason why the equation in [Example 10](#ex10) cannot hold is quite simple. The reason the analogous isomorphism held in $\Set$ was that for any function $f:A\times B \rightarrow C$, fixing an element of $A$ or an element of $B$ left a function from $B$ or from $A$ to $C$.
+The fundamental reason why the equation in [Example 10](#ex10){: data-relation="required" } cannot hold is quite simple. The reason the analogous isomorphism held in $\Set$ was that for any function $f:A\times B \rightarrow C$, fixing an element of $A$ or an element of $B$ left a function from $B$ or from $A$ to $C$.
 
 On the other hand, the only group homomorphisms $f:G\times H \rightarrow A$ for which fixing the first or second component yields a group homomorphism are the zero maps. For if $f(x, -)$ is a group homomorphism for arbitrary $x\in G$, then $f(x,0)=0$, and similarly $f(0,y)=0$ for arbitrary $y\in H$, so substituting this into the condition that $f$ be a group homomorphism
 
@@ -167,7 +167,7 @@ Now for fixed $G,H\in\obj(\Ab)$, define the set $\Bilin(G,H;A)$ by
 
 $$\Bilin(G,H;A)=\{\text{bilinear maps from $G\times H$ to $A$}\}$$
 
-By the above argument, if we replace the left-hand side of the first equation of [Example 10](#ex10) with $\Bilin(G,H;A)$, then we can verify that we obtain the isomorphism
+By the above argument, if we replace the left-hand side of the first equation of [Example 10](#ex10){: data-relation="required" } with $\Bilin(G,H;A)$, then we can verify that we obtain the isomorphism
 
 $$\Bilin(G,H;A)\cong \Hom_\Ab(G,\Hom_\Ab(H,A))$$
 
@@ -187,7 +187,7 @@ Although the naturality of the isomorphism $\Bilin(G,H;A)\cong\Hom_\Ab(F_\Ab(G\t
 :::
 
 ::: Definition 13
-We call the representing object of [Theorem 12](#thm12) the *tensor product* of $G$ and $H$, and denote it by $G\otimes H$.
+We call the representing object of [Theorem 12](#thm12){: data-relation="required" } the *tensor product* of $G$ and $H$, and denote it by $G\otimes H$.
 :::
 
 We know that elements of $G\otimes H$ are represented by finite sums of elements of the form $x\otimes y$. Then we can verify that $\otimes$ is a monoidal product with $\mathbb{Z}$ as tensor unit.

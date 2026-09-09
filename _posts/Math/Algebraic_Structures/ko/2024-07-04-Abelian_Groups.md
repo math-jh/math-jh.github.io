@@ -16,7 +16,7 @@ weight: 10
 
 ## 가환군들의 합
 
-우선, [§제한합, ⁋정리 2](/ko/math/algebraic_structures/restricted_sums#thm2)에서 보인 weak direct product의 universal property는 특히 group $H$가 abelian group일 경우 잘 적용된다.
+우선, [§제한합, ⁋정리 2](/ko/math/algebraic_structures/restricted_sums#thm2){: data-relation="required" }에서 보인 weak direct product의 universal property는 특히 group $H$가 abelian group일 경우 잘 적용된다.
 
 ::: 정리 1
 Abelian group들의 family $(G_i)$가 주어졌다 하고, $\prod^w G_i$와 inclusion map들 $\iota_i$를 생각하자. 그럼 임의의 abelian group $H$와 group homomorphism들 $f_i:G_i\rightarrow H$에 대하여, $f_i=f\circ\iota_i$이도록 하는 유일한 group homomorphism $f:\prod^wG_i\rightarrow H$가 존재한다.
@@ -67,13 +67,13 @@ $$g(x^{-1}y^{-1}xy)g^{-1}=(gx^{-1}g^{-1})(gy^{-1}g^{-1})(gxg^{-1})(gyg^{-1})=(gx
 
 $$e=f(x)^{-1}f(y)^{-1}f(x)f(y)=f(x^{-1}y^{-1}xy)$$
 
-이 성립하므로, $[G,G]\leq\ker f$이다. 이제 [§군 동형사상, ⁋명제 3](/ko/math/algebraic_structures/isomorphism_theorems#prop3)에 의하여 다음을 얻는다.
+이 성립하므로, $[G,G]\leq\ker f$이다. 이제 [§군 동형사상, ⁋명제 3](/ko/math/algebraic_structures/isomorphism_theorems#prop3){: data-relation="required" }에 의하여 다음을 얻는다.
 
 ::: 명제 5
 임의의 group $G$와 quotient homomorphism $p:G\rightarrow G/[G,G]$를 생각하자. 그럼 임의의 abelian group $H$와 group homomorphism $f:G \rightarrow H$에 대하여, $f=\bar{f}\circ p$를 만족하는 $\bar{f}:G/[G,G]\rightarrow H$가 유일하게 존재한다.
 :::
 
-특히, 임의의 group homomorphism $f:G\rightarrow H$가 주어졌다 하자. 그럼 합성 $G\rightarrow H\rightarrow H/[H,H]$에 의해 group $G$로부터 abelian group $H/[H,H]$로의 group homomorphism을 얻고, [명제 5](#prop5)에 의하여 이는 $G/[G,G]$에서 $H/[H,H]$로의 group homomorphism을 유도한다. 
+특히, 임의의 group homomorphism $f:G\rightarrow H$가 주어졌다 하자. 그럼 합성 $G\rightarrow H\rightarrow H/[H,H]$에 의해 group $G$로부터 abelian group $H/[H,H]$로의 group homomorphism을 얻고, [명제 5](#prop5){: data-relation="required" }에 의하여 이는 $G/[G,G]$에서 $H/[H,H]$로의 group homomorphism을 유도한다. 
 
 ::: 정의 6
 임의의 group $G$에 대하여, quotient group $G/[G,G]$를 $G$의 *abelianization<sub>아벨화</sub>*이라 부르고 $G^\ab$으로 표기한다.
@@ -89,7 +89,7 @@ $$\ab(\id_G)=\id_{G^\ab},\qquad \ab(g\circ f)=\ab(g)\circ\ab(f)$$
 Forgetful functor $U:\Ab \rightarrow \Grp$과 abelianization functor $\ab:\Grp \rightarrow \Ab$에 대하여, adjunction $\ab\dashv U$가 존재한다.
 :::
 
-이 주장의 bijection $\Hom_\Ab(G^\ab,H)\cong \Hom_\Grp(G,U(H))$은 [명제 5](#prop5)의 대응 $\bar{f}\mapsto\bar{f}\circ p$으로부터 바로 나오는 것이며, 유일하게 보여야 할 것은 각각의 factor에 대한 naturality 뿐이지만 이 또한 앞에서 살펴본 유일성 논증과 유사한 방식으로 얻을 수 있다. 
+이 주장의 bijection $\Hom_\Ab(G^\ab,H)\cong \Hom_\Grp(G,U(H))$은 [명제 5](#prop5){: data-relation="required" }의 대응 $\bar{f}\mapsto\bar{f}\circ p$으로부터 바로 나오는 것이며, 유일하게 보여야 할 것은 각각의 factor에 대한 naturality 뿐이지만 이 또한 앞에서 살펴본 유일성 논증과 유사한 방식으로 얻을 수 있다. 
 
 ## 자유가환군
 
@@ -103,11 +103,11 @@ $$F_\Ab(X)=\bigoplus_{x\in X} \mathbb{Z}$$
 
 로 두고 이를 $X$에 의해 정의된 *free abelian group*이라 부르기로 한다. 함수 $u:X\rightarrow Y$가 $x$번째 generator를 $u(x)$번째 generator로 보내는 homomorphism $F_\Ab(u)$를 유도하므로 $F_\Ab$는 functor $\Set\rightarrow\Ab$가 된다.
 
-이제 [정리 1](#thm1)과, $\mathbb{Z}$에서 나가는 group homomorphism이 $1$의 image에 의해 결정된다는 사실을 차례로 쓰면 임의의 abelian group $H$에 대하여 다음의 isomorphism
+이제 [정리 1](#thm1){: data-relation="required" }과, $\mathbb{Z}$에서 나가는 group homomorphism이 $1$의 image에 의해 결정된다는 사실을 차례로 쓰면 임의의 abelian group $H$에 대하여 다음의 isomorphism
 
 $$\Hom_\Ab\biggl(\bigoplus_{x\in X}\mathbb{Z},H\biggr)\cong\prod_{x\in X}\Hom_\Ab(\mathbb{Z},H)\cong\prod_{x\in X}U(H)\cong\Hom_\Set(X,U(H))$$
 
-을 얻는다. 여기에서 각 대응은 homomorphism의 합성과 함수의 합성으로만 주어지므로 $X$와 $H$ 양쪽에서 natural하고, 따라서 다음을 얻는다. ([\[범주론\] §수반함자, ⁋정의 1](/ko/math/category_theory/adjoints#def1))
+을 얻는다. 여기에서 각 대응은 homomorphism의 합성과 함수의 합성으로만 주어지므로 $X$와 $H$ 양쪽에서 natural하고, 따라서 다음을 얻는다. ([\[범주론\] §수반함자, ⁋정의 1](/ko/math/category_theory/adjoints#def1){: data-relation="required" })
 
 ::: 명제 8
 Forgetful functor $U:\Ab \rightarrow \Set$의 left adjoint $F_\Ab:\Set \rightarrow\Ab$가 존재한다. 
@@ -128,10 +128,10 @@ $$(f+g)(x)=f(x)+g(x)\qquad\text{for all $x\in G$}$$
 으로 정의하면 된다. 이 때 $f+g$가 다시 group homomorphism인 것은 $H$가 abelian이기 때문으로, $(f+g)(x+y)=f(x)+f(y)+g(x)+g(y)$의 가운데 두 항을 맞바꾸면 $(f+g)(x)+(f+g)(y)$가 된다. 항등원은 zero map이고 $f$의 역원은 $(-f)(x)=-f(x)$이며, $\Hom_\Ab(G,H)$의 commutativity 또한 $H$의 commutativity에서 따라온다.
 :::
 
-$\Hom_\Ab(-,-)$는 원래 $\Ab^\op\times \Ab$에서 $\Set$으로의 bifunctor로 정의되었지만, 이 명제에 의해 실은 이를 $\Ab$로의 bifunctor로 볼 수도 있다. 즉 $\Hom_\Ab(-,-)$를 [\[범주론\] §수반함자, ⁋정의 8](/ko/math/category_theory/adjoints#def8)의 internal $\Hom$과 비슷한 것으로 생각할 수 있다. 그러나 지금까지 갖고 있는 언어로만 보았을 때 이는 불가능하다.
+$\Hom_\Ab(-,-)$는 원래 $\Ab^\op\times \Ab$에서 $\Set$으로의 bifunctor로 정의되었지만, 이 명제에 의해 실은 이를 $\Ab$로의 bifunctor로 볼 수도 있다. 즉 $\Hom_\Ab(-,-)$를 [\[범주론\] §수반함자, ⁋정의 8](/ko/math/category_theory/adjoints#def8){: data-relation="required" }의 internal $\Hom$과 비슷한 것으로 생각할 수 있다. 그러나 지금까지 갖고 있는 언어로만 보았을 때 이는 불가능하다.
 
 ::: 예시 10
-$\Ab$는 $\times$에 대해 [\[범주론\] §모노이드 범주, ⁋명제 4](/ko/math/category_theory/monoidal_categories#prop4) 직후에서와 같이 cartesian monoidal category이다. 그러나 $\Hom_\Ab(-,-)$는 이 구조에 대해 internal $\Hom$으로 생각할 수 없다. 즉
+$\Ab$는 $\times$에 대해 [\[범주론\] §모노이드 범주, ⁋명제 4](/ko/math/category_theory/monoidal_categories#prop4){: data-relation="weak" } 직후에서와 같이 cartesian monoidal category이다. 그러나 $\Hom_\Ab(-,-)$는 이 구조에 대해 internal $\Hom$으로 생각할 수 없다. 즉
 
 $$\Hom_\Ab(G\times H, A)\cong \Hom_\Ab(G,\Hom_\Ab(H,A))$$
 
@@ -146,7 +146,7 @@ $$\Hom_\Ab(\mathbb{Z}\times H,A)\cong \Hom_\Ab(\mathbb{Z},\Hom_\Ab(H,A))\cong \H
 
 ## 텐서곱
 
-[예시 10](#ex10)에서의 식이 성립할 수 없는 근본적인 이유는 꽤나 간단하다. $\Set$에서 위의 isomorphism이 성립했던 이유는 임의의 함수 $f:A\times B \rightarrow C$에 대하여, $A$의 원소 혹은 $B$의 원소를 하나 고정하고 나면 남는 것이 $B$ 혹은 $A$에서 $C$로의 함수가 되었기 때문이다.
+[예시 10](#ex10){: data-relation="required" }에서의 식이 성립할 수 없는 근본적인 이유는 꽤나 간단하다. $\Set$에서 위의 isomorphism이 성립했던 이유는 임의의 함수 $f:A\times B \rightarrow C$에 대하여, $A$의 원소 혹은 $B$의 원소를 하나 고정하고 나면 남는 것이 $B$ 혹은 $A$에서 $C$로의 함수가 되었기 때문이다.
 
 반면, group homomorphism $f:G\times H \rightarrow A$의 첫 번째 혹은 두 번째 성분을 고정한 것이 group homomorphism이 되도록 하는 $f$는 오직 zero map 뿐이다. 임의의 $x\in G$에 대하여 $f(x, -)$이 group homomorphism이라면 $f(x,0)=0$이어야 하고, 비슷하게 임의의 $y\in H$에 대해 $f(0,y)=0$이어야 하므로 이를 $f$가 group homomorphism이라는 조건
 
@@ -168,7 +168,7 @@ $$f(x,y_1+y_2)=f(x,y_1)+f(x,y_2),\qquad f(x_1+x_2,y)=f(x_1,y)+f(x_2,y)$$
 
 $$\Bilin(G,H;A)=\{\text{bilinear maps from $G\times H$ to $A$}\}$$
 
-으로 정의하자. 위의 논증에 의해 [예시 10](#ex10)의 첫 번째 식의 좌변을 $\Bilin(G,H;A)$로 바꾼다면 isomorphism
+으로 정의하자. 위의 논증에 의해 [예시 10](#ex10){: data-relation="required" }의 첫 번째 식의 좌변을 $\Bilin(G,H;A)$로 바꾼다면 isomorphism
 
 $$\Bilin(G,H;A)\cong \Hom_\Ab(G,\Hom_\Ab(H,A))$$
 
@@ -188,7 +188,7 @@ Isomorphism $\Bilin(G,H;A)\cong\Hom_\Ab(F_\Ab(G\times H)/S,A)$의 naturality는 
 :::
 
 ::: 정의 13
-[정리 12](#thm12)의 representation을 $G$와 $H$의 *tensor product<sub>텐서곱</sub>*이라 부르고, $G\otimes H$로 적는다.
+[정리 12](#thm12){: data-relation="required" }의 representation을 $G$와 $H$의 *tensor product<sub>텐서곱</sub>*이라 부르고, $G\otimes H$로 적는다.
 :::
 
 $G\otimes H$의 원소는 $x\otimes y$의 꼴의 원소들의 유한한 합으로 나타난다는 것을 알 수 있다. 그럼 $\otimes$가 $\mathbb{Z}$를 tensor unit으로 갖는 monoidal product임을 확인할 수 있다. 
