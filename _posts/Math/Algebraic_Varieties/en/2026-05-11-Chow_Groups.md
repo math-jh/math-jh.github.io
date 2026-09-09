@@ -14,11 +14,11 @@ translated_at: 2026-08-19T02:45:04+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-08-19T02:45:04+00:00
 ---
-Previously, we defined the intersection number of two divisors in [§The Riemann–Roch Theorem for Surfaces, ⁋Definition 1](/en/math/algebraic_varieties/riemann_roch_surfaces#def1). This is of course a very interesting notion, and in this post we define the *Chow group* in order to generalize this concept to arbitrary varieties.
+Previously, we defined the intersection number of two divisors in [§The Riemann–Roch Theorem for Surfaces, ⁋Definition 1](/en/math/algebraic_varieties/riemann_roch_surfaces#def1){: data-relation="weak" }. This is of course a very interesting notion, and in this post we define the *Chow group* in order to generalize this concept to arbitrary varieties.
 
 ## Chow Groups
 
-In [§Divisors, ⁋Definition 1](/en/math/algebraic_varieties/divisors#def1), we defined a (Weil) divisor as a formal sum of codimension 1 closed irreducible subvarieties, and we defined the divisor class group $\Cl(X)$ by collecting these up to linear equivalence. Similarly, the Chow group is obtained by collecting formal sums of $k$-dimensional closed irreducible subvarieties up to rational equivalence.
+In [§Divisors, ⁋Definition 1](/en/math/algebraic_varieties/divisors#def1){: data-relation="weak" }, we defined a (Weil) divisor as a formal sum of codimension 1 closed irreducible subvarieties, and we defined the divisor class group $\Cl(X)$ by collecting these up to linear equivalence. Similarly, the Chow group is obtained by collecting formal sums of $k$-dimensional closed irreducible subvarieties up to rational equivalence.
 
 ::: Definition 1
 An *algebraic $k$-cycle* of a variety $X$ is a formal sum
@@ -38,13 +38,13 @@ $$\divisor(f) = \sum_{V \subseteq Y, \dim V = k} v_V(f) \cdot V$$
 where $v_V(f)$ is the order of the zero or pole of $f$ along $V$.
 :::
 
-Intuitively, this definition is nothing more than repeating [§Divisors, ⁋Definition 3](/en/math/algebraic_varieties/divisors#def3) with $Y$ as the ambient variety, and thus it is a natural generalization of that definition. A somewhat subtle point is the issue of normality mentioned in the introduction of that post: even if $X$ is a nice (say, normal) variety, an arbitrary subvariety of $X$ need not inherit this property, so normalization enters the above definition a little more essentially.
+Intuitively, this definition is nothing more than repeating [§Divisors, ⁋Definition 3](/en/math/algebraic_varieties/divisors#def3){: data-relation="weak" } with $Y$ as the ambient variety, and thus it is a natural generalization of that definition. A somewhat subtle point is the issue of normality mentioned in the introduction of that post: even if $X$ is a nice (say, normal) variety, an arbitrary subvariety of $X$ need not inherit this property, so normalization enters the above definition a little more essentially.
 
-That is, the order $v_V(f)$ is defined via the normalization $\nu: \widetilde{Y}\rightarrow Y$ of $Y$. ([\[Commutative Algebra\] §Regular Local Rings, ⁋Definition 9](/en/math/commutative_algebra/regular_local_rings#def9)) Namely,
+That is, the order $v_V(f)$ is defined via the normalization $\nu: \widetilde{Y}\rightarrow Y$ of $Y$. ([\[Commutative Algebra\] §Regular Local Rings, ⁋Definition 9](/en/math/commutative_algebra/regular_local_rings#def9){: data-relation="required" }) Namely,
 
 $$v_V(f) = \sum_{\nu(\widetilde{V})=V} [\mathbb{K}(\widetilde{V}):\mathbb{K}(V)]\cdot v_{\widetilde{V}}(\nu^\ast f)$$
 
-where the sum is over the $k$-dimensional irreducible components $\widetilde{V}$ of $\nu^{-1}(V)$. Since $\widetilde{Y}$ is normal, each $v_{\widetilde{V}}$ is the valuation given by the local ring $\mathcal{O}_{\widetilde{Y}, \eta_{\widetilde{V}}}$ at the generic point of $\widetilde{V}$ ([§Tangent Spaces and Smoothness, ⁋Definition 9](/en/math/algebraic_varieties/tangent_spaces_and_smoothness#def9)), and if $\mathcal{O}_{Y, \eta_V}$ itself is a discrete valuation ring then $v_V(f)$ coincides with that valuation. Keeping this in mind, we make the following definition.
+where the sum is over the $k$-dimensional irreducible components $\widetilde{V}$ of $\nu^{-1}(V)$. Since $\widetilde{Y}$ is normal, each $v_{\widetilde{V}}$ is the valuation given by the local ring $\mathcal{O}_{\widetilde{Y}, \eta_{\widetilde{V}}}$ at the generic point of $\widetilde{V}$ ([§Tangent Spaces and Smoothness, ⁋Definition 9](/en/math/algebraic_varieties/tangent_spaces_and_smoothness#def9){: data-relation="required" }), and if $\mathcal{O}_{Y, \eta_V}$ itself is a discrete valuation ring then $v_V(f)$ coincides with that valuation. Keeping this in mind, we make the following definition.
 
 ::: Definition 3
 Two $k$-cycles $Z_1, Z_2$ are said to be *rationally equivalent* if there exist $(k+1)$-dimensional closed irreducible subvarieties $Y_j$ of $X$ and rational functions $f_j \in \mathbb{K}(Y_j)^\times$ on them such that
@@ -54,7 +54,7 @@ $$Z_1 - Z_2 = \sum_j \divisor(f_j)$$
 holds. We write this as $Z_1 \sim_{\text{rat}} Z_2$.
 :::
 
-That is, just as when defining the divisor class group, we regard two cycles as the same if they differ by a principal cycle. This equivalence relation can be thought of, in the same intuitive way explained right after [§Divisors, ⁋Definition 9](/en/math/algebraic_varieties/divisors#def9), as transporting the notion of homotopy into algebraic geometry.
+That is, just as when defining the divisor class group, we regard two cycles as the same if they differ by a principal cycle. This equivalence relation can be thought of, in the same intuitive way explained right after [§Divisors, ⁋Definition 9](/en/math/algebraic_varieties/divisors#def9){: data-relation="weak" }, as transporting the notion of homotopy into algebraic geometry.
 
 Then the following proposition holds.
 
@@ -62,7 +62,7 @@ Then the following proposition holds.
 Rational equivalence is an equivalence relation on $Z_k(X)$.
 :::
 
-The proof of this is almost a repetition of [§Divisors, ⁋Proposition 8](/en/math/algebraic_varieties/divisors#prop8), so we omit it here. As a consequence of this proposition, we can finally make the following definition.
+The proof of this is almost a repetition of [§Divisors, ⁋Proposition 8](/en/math/algebraic_varieties/divisors#prop8){: data-relation="required" }, so we omit it here. As a consequence of this proposition, we can finally make the following definition.
 
 ::: Definition 5
 We define the $k$-th *Chow group* $\CH_k(X)$ as the group of $k$-cycles modulo rational equivalence:
@@ -76,7 +76,7 @@ The codimension $k$ Chow group is defined as $\CH^k(X) = \CH_{n-k}(X)$, and as m
 
 In algebraic topology, homology and cohomology are functorial for arbitrary continuous maps, but the Chow group is not. The Chow group has pushforward functoriality only for **proper morphisms**, and pullback functoriality only for **flat morphisms**.
 
-First, a morphism $f: X \rightarrow Y$ between two varieties being a *proper morphism* can roughly be described as the algebraic-geometric analogue of a compact map. ([\[Schemes\] §Valuation Rings, ⁋Definition 9](/en/math/scheme_theory/valuative_criteria#def9)) Something to be careful about is that compactness does not work well in algebraic geometry, so this cannot be transferred directly. The intuition is that, just as the fiber and image of a compact map do not leak off to infinity, a proper morphism also does not; what is particularly important is that only finitely many additional coordinates are needed to describe this fiber. ([\[Schemes\] §Properties of Scheme Morphisms, ⁋Example 16](/en/math/scheme_theory/properties_of_scheme_morphisms#ex16)) On the other hand, if a subvariety $V\subseteq X$ satisfies $\dim f(V)=\dim V$, then $V$ covers $f(V)$ with finite multiplicity, and this multiplicity is the extension degree $[\mathbb{K}(V):\mathbb{K}(f(V))]$ of function fields. For convenience, writing
+First, a morphism $f: X \rightarrow Y$ between two varieties being a *proper morphism* can roughly be described as the algebraic-geometric analogue of a compact map. ([\[Schemes\] §Valuation Rings, ⁋Definition 9](/en/math/scheme_theory/valuative_criteria#def9){: data-relation="required" }) Something to be careful about is that compactness does not work well in algebraic geometry, so this cannot be transferred directly. The intuition is that, just as the fiber and image of a compact map do not leak off to infinity, a proper morphism also does not; what is particularly important is that only finitely many additional coordinates are needed to describe this fiber. ([\[Schemes\] §Properties of Scheme Morphisms, ⁋Example 16](/en/math/scheme_theory/properties_of_scheme_morphisms#ex16){: data-relation="weak" }) On the other hand, if a subvariety $V\subseteq X$ satisfies $\dim f(V)=\dim V$, then $V$ covers $f(V)$ with finite multiplicity, and this multiplicity is the extension degree $[\mathbb{K}(V):\mathbb{K}(f(V))]$ of function fields. For convenience, writing
 
 $$\deg(V/f(V))=\begin{cases}[\mathbb{K}(V):\mathbb{K}(f(V))]&\text{if $\dim f(V)=\dim V$,}\\ 0&\text{if $\dim f(V)<\dim V$}\end{cases}$$
 
@@ -102,7 +102,7 @@ Here $f^{-1}(V)$ should be read not as the set-theoretic inverse image but as th
 
 $$[f^{-1}(V)] = \sum_i \length(\mathcal{O}_{X, \xi_i}/\mathcal{I}_{\xi_i})\cdot W_i$$
 
-with multiplicities attached to its irreducible components $W_i$. Here $\xi_i$ is the generic point of $W_i$ ([§Tangent Spaces and Smoothness, ⁋Definition 9](/en/math/algebraic_varieties/tangent_spaces_and_smoothness#def9)), and $\length$ is the length of the local ring as a module over itself. ([\[Commutative Algebra\] §The Jordan-Hölder Theorem, ⁋Definition 2](/en/math/commutative_algebra/Jordan-Holder_theorem#def2)) Since $W_i$ is an irreducible component of the zero set of $\mathcal{I}$, the ideal $\mathcal{I}_{\xi_i}$ is primary for the maximal ideal of $\mathcal{O}_{X,\xi_i}$, and hence this length is finite. Without this convention, one cannot capture the case where $f^{-1}(V)$ is non-reduced. For example, for the $f$ in [Example 10](#ex10) and the point $p = [0:1]$, the set-theoretic inverse image $f^{-1}(p)$ consists of the single point $q = [0:1]$, but we must have $f^\ast[p] = d\cdot[q]$.
+with multiplicities attached to its irreducible components $W_i$. Here $\xi_i$ is the generic point of $W_i$ ([§Tangent Spaces and Smoothness, ⁋Definition 9](/en/math/algebraic_varieties/tangent_spaces_and_smoothness#def9){: data-relation="required" }), and $\length$ is the length of the local ring as a module over itself. ([\[Commutative Algebra\] §The Jordan-Hölder Theorem, ⁋Definition 2](/en/math/commutative_algebra/Jordan-Holder_theorem#def2){: data-relation="required" }) Since $W_i$ is an irreducible component of the zero set of $\mathcal{I}$, the ideal $\mathcal{I}_{\xi_i}$ is primary for the maximal ideal of $\mathcal{O}_{X,\xi_i}$, and hence this length is finite. Without this convention, one cannot capture the case where $f^{-1}(V)$ is non-reduced. For example, for the $f$ in [Example 10](#ex10){: data-relation="weak" } and the point $p = [0:1]$, the set-theoretic inverse image $f^{-1}(p)$ consists of the single point $q = [0:1]$, but we must have $f^\ast[p] = d\cdot[q]$.
 
 ## Computing Chow Groups
 
@@ -131,24 +131,24 @@ and
 
 $$\CH_k(\mathbb{P}^n)=\mathbb{Z}\qquad\text{for all $0\leq k\leq n$}$$
 
-hold. This agrees with the Borel–Moore homology of Euclidean space and projective space, showing that our defined Chow group actually reflects geometric intuition well. ([Proposition 12](#prop12))
+hold. This agrees with the Borel–Moore homology of Euclidean space and projective space, showing that our defined Chow group actually reflects geometric intuition well. ([Proposition 12](#prop12){: data-relation="forward" })
 :::
 
-In general, for an $n$-dimensional variety $X$, we have $\CH_n(X) \cong \mathbb{Z}$, and its generator is the class $[X]$ of $X$ itself. This is because the only $n$-dimensional closed irreducible subvariety of $X$ is $X$ itself by [§Dimension, ⁋Proposition 9](/en/math/algebraic_varieties/dimension#prop9), and there exists no $(n+1)$-dimensional subvariety to define rational equivalence. The case $k = n$ in the computation of [Example 9](#ex9) corresponds to this. On the other hand, for $k < n$, the generator of $\CH_k(\mathbb{P}^n)$ is the class $[\ell_k]$ of a $k$-dimensional linear subspace $\ell_k = \mathbb{P}^k \subseteq \mathbb{P}^n$, and any $k$-dimensional closed irreducible subvariety $V \subseteq \mathbb{P}^n$ satisfies $[V] = d[\ell_k]$ for some positive integer $d$. This integer $d$ is the number of intersection points of $V$ with a general $(n-k)$-dimensional linear subspace, and is called the *degree* of $V$.
+In general, for an $n$-dimensional variety $X$, we have $\CH_n(X) \cong \mathbb{Z}$, and its generator is the class $[X]$ of $X$ itself. This is because the only $n$-dimensional closed irreducible subvariety of $X$ is $X$ itself by [§Dimension, ⁋Proposition 9](/en/math/algebraic_varieties/dimension#prop9){: data-relation="required" }, and there exists no $(n+1)$-dimensional subvariety to define rational equivalence. The case $k = n$ in the computation of [Example 9](#ex9){: data-relation="weak" } corresponds to this. On the other hand, for $k < n$, the generator of $\CH_k(\mathbb{P}^n)$ is the class $[\ell_k]$ of a $k$-dimensional linear subspace $\ell_k = \mathbb{P}^k \subseteq \mathbb{P}^n$, and any $k$-dimensional closed irreducible subvariety $V \subseteq \mathbb{P}^n$ satisfies $[V] = d[\ell_k]$ for some positive integer $d$. This integer $d$ is the number of intersection points of $V$ with a general $(n-k)$-dimensional linear subspace, and is called the *degree* of $V$.
 
 ::: Example 10
 To make the above example more concrete, define a degree $d$ morphism $f: \mathbb{P}^1 \rightarrow \mathbb{P}^1$ by
 
 $$f([x:y]) = [x^d:y^d]$$
 
-This is proper, and for the coordinate $t = x/y$ on $\mathbb{P}^1$ we have $f^\ast(t) = t^d$, so the field extension $\mathbb{K}(\mathbb{P}^1) \hookrightarrow \mathbb{K}(\mathbb{P}^1)$ is given by $t \mapsto t^d$, and the extension degree in this case is $d$. Hence by [Proposition 6](#prop6),
+This is proper, and for the coordinate $t = x/y$ on $\mathbb{P}^1$ we have $f^\ast(t) = t^d$, so the field extension $\mathbb{K}(\mathbb{P}^1) \hookrightarrow \mathbb{K}(\mathbb{P}^1)$ is given by $t \mapsto t^d$, and the extension degree in this case is $d$. Hence by [Proposition 6](#prop6){: data-relation="required" },
 
 $$f_\ast[\mathbb{P}^1] = d \cdot [\mathbb{P}^1] \in \CH_1(\mathbb{P}^1) \cong \mathbb{Z}$$
 
 holds. That is, $\mathbb{P}^1$ is covered $d$ times over $\mathbb{P}^1$, and the pushforward captures this.
 :::
 
-The $n$-dimensional closed irreducible subvarieties of $X$ are only $X$ itself, so rational equivalence of codimension 1 cycles is the same as linear equivalence, and adding [§Divisors, ⁋Proposition 14](/en/math/algebraic_varieties/divisors#prop14) and [§Line Bundles and Vector Bundles, ⁋Proposition 19](/en/math/algebraic_varieties/line_bundles#prop19) gives the following.
+The $n$-dimensional closed irreducible subvarieties of $X$ are only $X$ itself, so rational equivalence of codimension 1 cycles is the same as linear equivalence, and adding [§Divisors, ⁋Proposition 14](/en/math/algebraic_varieties/divisors#prop14){: data-relation="required" } and [§Line Bundles and Vector Bundles, ⁋Proposition 19](/en/math/algebraic_varieties/line_bundles#prop19){: data-relation="required" } gives the following.
 
 ::: Proposition 11
 For a smooth variety $X$,
@@ -158,7 +158,7 @@ $$\CH^1(X) \cong \Cl(X) \cong \Pic(X)$$
 holds.
 :::
 
-Also, in [Example 9](#ex9) we saw that the cases of $\mathbb{A}^n$ and $\mathbb{P}^n$ match classical computations, and this can be formulated rigorously as follows.
+Also, in [Example 9](#ex9){: data-relation="weak" } we saw that the cases of $\mathbb{A}^n$ and $\mathbb{P}^n$ match classical computations, and this can be formulated rigorously as follows.
 
 ::: Proposition 12
 For a complex variety $X$, there exists a *cycle class map*
@@ -175,10 +175,10 @@ Here $H^{\text{BM}}$ on the right-hand side is Borel–Moore homology, which unl
 We close this post by introducing the following proposition as motivation for introducing the intersection product.
 
 ::: Proposition 13
-For a smooth variety $X$, the group $\CH^\ast(X) = \bigoplus_k \CH^k(X)$ forms a graded ring under the intersection product. ([§Intersection Product](/en/math/algebraic_varieties/intersection_product))
+For a smooth variety $X$, the group $\CH^\ast(X) = \bigoplus_k \CH^k(X)$ forms a graded ring under the intersection product. ([§Intersection Product](/en/math/algebraic_varieties/intersection_product){: data-relation="forward" })
 :::
 
-This ring structure, like [Proposition 12](#prop12), also matches the cohomology ring structure we already knew.
+This ring structure, like [Proposition 12](#prop12){: data-relation="weak" }, also matches the cohomology ring structure we already knew.
 
 ::: Example 14 ($\mathbb{P}^n$)
 $$\CH^\ast(\mathbb{P}^n) \cong \mathbb{Z}[H] / (H^{n+1})$$
@@ -186,7 +186,7 @@ $$\CH^\ast(\mathbb{P}^n) \cong \mathbb{Z}[H] / (H^{n+1})$$
 Here $H$ is the hyperplane class. The class $H^k$ represents a $k$-codimensional linear subspace.
 :::
 
-The intersection product of [Proposition 13](#prop13) will be introduced rigorously in the next post.
+The intersection product of [Proposition 13](#prop13){: data-relation="weak" } will be introduced rigorously in the next post.
 
 ---
 
