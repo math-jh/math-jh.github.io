@@ -85,10 +85,10 @@ Homogeneous ideals $\mathfrak{a}, \mathfrak{b}, \mathfrak{a}_i \subseteq \mathbb
 :::
 
 ::: 증명
-[§아핀다양체, ⁋명제 4](/ko/math/algebraic_varieties/affine_varieties#prop4)와의 유일한 차이점은 여기서 다루는 다항식들이 모두 homogeneous라는 점이지만, 증명 논리 자체는 동일하므로 증명을 생략하기로 한다. 
+[§아핀다양체, ⁋명제 4](/ko/math/algebraic_varieties/affine_varieties#prop4){: data-relation="required" }와의 유일한 차이점은 여기서 다루는 다항식들이 모두 homogeneous라는 점이지만, 증명 논리 자체는 동일하므로 증명을 생략하기로 한다. 
 :::
 
-Affine case에서와 마찬가지로, 이는 projective space $\mathbb{P}^n$ 위에 projective algebraic set들을 닫힌집합으로 갖는 위상구조가 존재한다는 것을 보여주며, 우리는 각각의 projective variety에 이를 이용하여 subspace topology를 줄 수 있다. 마찬가지로 이러한 topology를 *Zariski topology*라 부른다. ([§아핀다양체](/ko/math/algebraic_varieties/affine_varieties)에서 affine case의 Zariski topology를 먼저 살펴보았다.) 
+Affine case에서와 마찬가지로, 이는 projective space $\mathbb{P}^n$ 위에 projective algebraic set들을 닫힌집합으로 갖는 위상구조가 존재한다는 것을 보여주며, 우리는 각각의 projective variety에 이를 이용하여 subspace topology를 줄 수 있다. 마찬가지로 이러한 topology를 *Zariski topology*라 부른다. ([§아핀다양체](/ko/math/algebraic_varieties/affine_varieties){: data-relation="weak" }에서 affine case의 Zariski topology를 먼저 살펴보았다.) 
 
 ## Projective Nullstellensatz
 
@@ -172,7 +172,7 @@ $$f_j(\x_1, \ldots, \x_n) = F_j(1, \x_1, \ldots, \x_n)$$
 
 $$F_j(x_0, x_1, \ldots, x_n) = x_0^{d_j} f_j\left(\frac{x_1}{x_0}, \ldots, \frac{x_n}{x_0}\right)$$
 
-이 성립한다. 따라서 $[x_0 : \cdots : x_n] \in U_0$가 모든 $F_j$의 zero set에 속하는 것과 [명제 9](#prop9)의 homeomorphism $\varphi_0$가 이 점에 대응시키는 $\mathbb{A}^n$의 점 $(x_1/x_0, \ldots, x_n/x_0)$가 모든 $f_j$의 zero set에 속하는 것은 서로 동치이며, 이로부터 $\varphi_0(X \cap U_0) = Z(f_1, \ldots, f_k) \subseteq \mathbb{A}^n$을 얻는다.
+이 성립한다. 따라서 $[x_0 : \cdots : x_n] \in U_0$가 모든 $F_j$의 zero set에 속하는 것과 [명제 9](#prop9){: data-relation="required" }의 homeomorphism $\varphi_0$가 이 점에 대응시키는 $\mathbb{A}^n$의 점 $(x_1/x_0, \ldots, x_n/x_0)$가 모든 $f_j$의 zero set에 속하는 것은 서로 동치이며, 이로부터 $\varphi_0(X \cap U_0) = Z(f_1, \ldots, f_k) \subseteq \mathbb{A}^n$을 얻는다.
 
 남은 것은 기약성이다. $U_0$는 $\mathbb{P}^n$의 열린집합이므로 $X \cap U_0$는 $X$의 열린 부분집합이고, 가정에 의해 비어 있지 않다. Irreducible한 공간의 비어 있지 않은 열린 부분집합은 irreducible이므로 $X \cap U_0$가 irreducible이며, homeomorphism은 irreducibility를 보존하므로 $Z(f_1, \ldots, f_k)$ 역시 irreducible이다. 즉 $X \cap U_0$는 affine variety이다.
 :::
@@ -180,7 +180,7 @@ $$F_j(x_0, x_1, \ldots, x_n) = x_0^{d_j} f_j\left(\frac{x_1}{x_0}, \ldots, \frac
 ::: 예시 11
 위의 명제를 기하적으로 해석하기 위해 $\mathbb{K}=\mathbb{R}$이라 하고, $\mathbb{P}^2$에서 conic $X = Z(\x_0^2 + \x_1^2 - \x_2^2)$를 생각하자. 
 
-이 conic은 $\mathbb{A}^3$ 안의 원뿔 $\x_0^2 + \x_1^2 = \x_2^2$을 homogeneous coordinates로 표현한 것이다. 그럼 standard open set들에서 $X$가 어떻게 보이는지는 [명제 10](#prop10)에서 알 수 있다. 즉 $U_i$에서 $X$가 어떻게 생겼는지를 보기 위해서는 그냥 $\x_i$ 자리에 $1$을 넣고, 남은 $n$개의 변수가 $\mathbb{A}^n$의 좌표인 것으로 생각하면 된다. 그럼 특히 다음의 결과를 얻는다. 
+이 conic은 $\mathbb{A}^3$ 안의 원뿔 $\x_0^2 + \x_1^2 = \x_2^2$을 homogeneous coordinates로 표현한 것이다. 그럼 standard open set들에서 $X$가 어떻게 보이는지는 [명제 10](#prop10){: data-relation="required" }에서 알 수 있다. 즉 $U_i$에서 $X$가 어떻게 생겼는지를 보기 위해서는 그냥 $\x_i$ 자리에 $1$을 넣고, 남은 $n$개의 변수가 $\mathbb{A}^n$의 좌표인 것으로 생각하면 된다. 그럼 특히 다음의 결과를 얻는다. 
 
 1. $U_0, U_1$에서 $X$는 쌍곡선 $1+y^2-z^2=0$, $x^2+1-z^2=0$이다.
 2. $U_2$에서 $X$는 원 $x^2+y^2=1$이다. 
@@ -209,7 +209,7 @@ $$C(X) = \{(x_0, \ldots, x_n) \in \mathbb{A}^{n+1} \setminus \{0\} \mid [x_0 : \
 :::
 
 ::: 예시 13
-[예시 11](#ex11)의 conic $X = Z(\x_0^2 + \x_1^2 - \x_2^2) \subseteq \mathbb{P}^2$의 affine cone $C(X)$는 $\mathbb{A}^3$에서의 원뿔 $\x_0^2 + \x_1^2 = \x_2^2$이다.
+[예시 11](#ex11){: data-relation="weak" }의 conic $X = Z(\x_0^2 + \x_1^2 - \x_2^2) \subseteq \mathbb{P}^2$의 affine cone $C(X)$는 $\mathbb{A}^3$에서의 원뿔 $\x_0^2 + \x_1^2 = \x_2^2$이다.
 :::
 
 그럼 다음이 성립하며, 그 증명들도 어렵지 않다.
@@ -242,7 +242,7 @@ $$\varphi(y) = [F_0(y) : \cdots : F_m(y)] \in \mathbb{P}^m$$
 
 $$[F_0(\lambda x) : \cdots : F_m(\lambda x)] = [\lambda^d F_0(x) : \cdots : \lambda^d F_m(x)] = [F_0(x) : \cdots : F_m(x)]$$
 
-가 되어 well-definedness가 보장된다는 것을 확인할 수 있다. 한편 [§아핀다양체, ⁋정의 17](/ko/math/algebraic_varieties/affine_varieties#def17)에서와 마찬가지로, morphism $\varphi: X \rightarrow Y$의 역함수 $\psi: Y \rightarrow X$가 존재하고 이 역시 morphism일 때 $\varphi$를 *isomorphism*이라 부르며, 이러한 $\varphi$가 존재하는 두 projective variety를 서로 *isomorphic*하다고 한다. 다음 예시들은 대표적인 morphism들이다. 
+가 되어 well-definedness가 보장된다는 것을 확인할 수 있다. 한편 [§아핀다양체, ⁋정의 17](/ko/math/algebraic_varieties/affine_varieties#def17){: data-relation="weak" }에서와 마찬가지로, morphism $\varphi: X \rightarrow Y$의 역함수 $\psi: Y \rightarrow X$가 존재하고 이 역시 morphism일 때 $\varphi$를 *isomorphism*이라 부르며, 이러한 $\varphi$가 존재하는 두 projective variety를 서로 *isomorphic*하다고 한다. 다음 예시들은 대표적인 morphism들이다. 
 
 ::: 예시 16
 우선 $\mathbb{P}^1$에서 $\mathbb{P}^2$로의 *Veronese embedding* (of degree 2)을
@@ -265,7 +265,7 @@ $$C = \{[1 : t : t^2 : t^3] \mid t \in \mathbb{K}\} \cup \{[0 : 0 : 0 : 1]\}$$
 
 $$\x_0 \x_2 - \x_1^2, \quad \x_0 \x_3 - \x_1 \x_2, \quad \x_1 \x_3 - \x_2^2$$
 
-의 공통 영점이며, $\mathbb{P}^1$과 isomorphic하다. 실은, 위의 [예시 16](#ex16)에서 살펴본 Veronese embedding의 개념을 $d=3$으로 확장하면, 
+의 공통 영점이며, $\mathbb{P}^1$과 isomorphic하다. 실은, 위의 [예시 16](#ex16){: data-relation="weak" }에서 살펴본 Veronese embedding의 개념을 $d=3$으로 확장하면, 
 
 $$[x:y]\mapsto [x^3: x^2y: xy^2: y^3]$$
 

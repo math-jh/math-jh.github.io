@@ -83,10 +83,10 @@ For homogeneous ideals $\mathfrak{a}, \mathfrak{b}, \mathfrak{a}_i \subseteq \ma
 :::
 
 ::: Proof
-The only difference from [§Affine Varieties, ⁋Proposition 4](/en/math/algebraic_varieties/affine_varieties#prop4) is that the polynomials considered here are all homogeneous, but the proof itself is identical, so we omit it.
+The only difference from [§Affine Varieties, ⁋Proposition 4](/en/math/algebraic_varieties/affine_varieties#prop4){: data-relation="required" } is that the polynomials considered here are all homogeneous, but the proof itself is identical, so we omit it.
 :::
 
-As in the affine case, this shows that there exists a topology on projective space $\mathbb{P}^n$ whose closed sets are the projective algebraic sets, and we may endow each projective variety with the induced subspace topology. We call this topology the *Zariski topology*. (We first examined the Zariski topology in the affine case in [§Affine Varieties](/en/math/algebraic_varieties/affine_varieties).)
+As in the affine case, this shows that there exists a topology on projective space $\mathbb{P}^n$ whose closed sets are the projective algebraic sets, and we may endow each projective variety with the induced subspace topology. We call this topology the *Zariski topology*. (We first examined the Zariski topology in the affine case in [§Affine Varieties](/en/math/algebraic_varieties/affine_varieties){: data-relation="weak" }.)
 
 ## Projective Nullstellensatz
 
@@ -168,7 +168,7 @@ Then by the homogeneity of $F_j$, for any point with $x_0 \ne 0$,
 
 $$F_j(x_0, x_1, \ldots, x_n) = x_0^{d_j} f_j\left(\frac{x_1}{x_0}, \ldots, \frac{x_n}{x_0}\right)$$
 
-Hence $[x_0 : \cdots : x_n] \in U_0$ belonging to the zero set of all $F_j$ is equivalent to the point $(x_1/x_0, \ldots, x_n/x_0)$ in $\mathbb{A}^n$ (the image of this point under the homeomorphism $\varphi_0$ of [Proposition 9](#prop9)) belonging to the zero set of all $f_j$, and from this we obtain $\varphi_0(X \cap U_0) = Z(f_1, \ldots, f_k) \subseteq \mathbb{A}^n$.
+Hence $[x_0 : \cdots : x_n] \in U_0$ belonging to the zero set of all $F_j$ is equivalent to the point $(x_1/x_0, \ldots, x_n/x_0)$ in $\mathbb{A}^n$ (the image of this point under the homeomorphism $\varphi_0$ of [Proposition 9](#prop9){: data-relation="required" }) belonging to the zero set of all $f_j$, and from this we obtain $\varphi_0(X \cap U_0) = Z(f_1, \ldots, f_k) \subseteq \mathbb{A}^n$.
 
 It remains to verify irreducibility. Since $U_0$ is an open subset of $\mathbb{P}^n$, $X \cap U_0$ is a nonempty open subset of $X$ by assumption. A nonempty open subset of an irreducible space is irreducible, so $X \cap U_0$ is irreducible, and since a homeomorphism preserves irreducibility, $Z(f_1, \ldots, f_k)$ is also irreducible. Thus $X \cap U_0$ is an affine variety.
 :::
@@ -176,7 +176,7 @@ It remains to verify irreducibility. Since $U_0$ is an open subset of $\mathbb{P
 ::: Example 11
 To interpret the above proposition geometrically, let $\mathbb{K}=\mathbb{R}$ and consider the conic $X = Z(\x_0^2 + \x_1^2 - \x_2^2)$ in $\mathbb{P}^2$.
 
-This conic is the cone $\x_0^2 + \x_1^2 = \x_2^2$ in $\mathbb{A}^3$ expressed in homogeneous coordinates. We can see how $X$ looks in the standard open sets from [Proposition 10](#prop10). That is, to see what $X$ looks like in $U_i$, we simply substitute $1$ for $\x_i$ and regard the remaining $n$ variables as coordinates on $\mathbb{A}^n$. In particular, we obtain the following:
+This conic is the cone $\x_0^2 + \x_1^2 = \x_2^2$ in $\mathbb{A}^3$ expressed in homogeneous coordinates. We can see how $X$ looks in the standard open sets from [Proposition 10](#prop10){: data-relation="required" }. That is, to see what $X$ looks like in $U_i$, we simply substitute $1$ for $\x_i$ and regard the remaining $n$ variables as coordinates on $\mathbb{A}^n$. In particular, we obtain the following:
 
 1. In $U_0$ and $U_1$, the conic $X$ is the hyperbolas $1+y^2-z^2=0$ and $x^2+1-z^2=0$.
 2. In $U_2$, the conic $X$ is the circle $x^2+y^2=1$.
@@ -205,7 +205,7 @@ That is, $C(X)$ is the union of the points in $\mathbb{A}^{n+1}$ that appear whe
 :::
 
 ::: Example 13
-The affine cone $C(X)$ of the conic $X = Z(\x_0^2 + \x_1^2 - \x_2^2) \subseteq \mathbb{P}^2$ from [Example 11](#ex11) is the cone $\x_0^2 + \x_1^2 = \x_2^2$ in $\mathbb{A}^3$.
+The affine cone $C(X)$ of the conic $X = Z(\x_0^2 + \x_1^2 - \x_2^2) \subseteq \mathbb{P}^2$ from [Example 11](#ex11){: data-relation="weak" } is the cone $\x_0^2 + \x_1^2 = \x_2^2$ in $\mathbb{A}^3$.
 :::
 
 The following then holds, and the proofs are not difficult either.
@@ -236,7 +236,7 @@ If $F_0, \ldots, F_m$ are all homogeneous polynomials of the same degree $d$, th
 
 $$[F_0(\lambda x) : \cdots : F_m(\lambda x)] = [\lambda^d F_0(x) : \cdots : \lambda^d F_m(x)] = [F_0(x) : \cdots : F_m(x)]$$
 
-so one verifies that well-definedness is guaranteed. On the other hand, as in [§Affine Varieties, ⁋Definition 17](/en/math/algebraic_varieties/affine_varieties#def17), if the inverse map $\psi: Y \rightarrow X$ of a morphism $\varphi: X \rightarrow Y$ exists and is also a morphism, then we call $\varphi$ an *isomorphism*, and two projective varieties for which such a $\varphi$ exists are said to be *isomorphic* to each other. The following examples are representative morphisms.
+so one verifies that well-definedness is guaranteed. On the other hand, as in [§Affine Varieties, ⁋Definition 17](/en/math/algebraic_varieties/affine_varieties#def17){: data-relation="weak" }, if the inverse map $\psi: Y \rightarrow X$ of a morphism $\varphi: X \rightarrow Y$ exists and is also a morphism, then we call $\varphi$ an *isomorphism*, and two projective varieties for which such a $\varphi$ exists are said to be *isomorphic* to each other. The following examples are representative morphisms.
 
 ::: Example 16
 First, the *Veronese embedding* (of degree 2) from $\mathbb{P}^1$ to $\mathbb{P}^2$ defined by
@@ -259,7 +259,7 @@ is the common zero locus of the three quadratic polynomials
 
 $$\x_0 \x_2 - \x_1^2, \quad \x_0 \x_3 - \x_1 \x_2, \quad \x_1 \x_3 - \x_2^2$$
 
-and is isomorphic to $\mathbb{P}^1$. In fact, extending the concept of the Veronese embedding examined in [Example 16](#ex16) to $d=3$,
+and is isomorphic to $\mathbb{P}^1$. In fact, extending the concept of the Veronese embedding examined in [Example 16](#ex16){: data-relation="weak" } to $d=3$,
 
 $$[x:y] \mapsto [x^3: x^2y: xy^2: y^3]$$
 
