@@ -14,7 +14,7 @@ weight: 17
 
 ---
 
-이제 우리는 벡터함수의 적분을 살펴본다. 이를 위한 첫째 단계는 선적분으로, 이는 벡터장이 정의된 공간 $\mathbb{R}^n$ 안에서 정의된 곡선을 따라가며, 각각의 점에서의 벡터가 기여하는 힘들을 모두 더해 누적시키는 것이다. 흥미로운 것은 벡터장이 보존장이었다면 이 적분이 경로에 <em-ko>무관</em-ko>해져서 오직 끝점에만 의존한다는 것으로, 이는 [§미적분의 기본정리](/ko/math/calculus/fundamental_theorem_of_calculus)의 고차원 버전이라 할 수 있다. 
+이제 우리는 벡터함수의 적분을 살펴본다. 이를 위한 첫째 단계는 선적분으로, 이는 벡터장이 정의된 공간 $\mathbb{R}^n$ 안에서 정의된 곡선을 따라가며, 각각의 점에서의 벡터가 기여하는 힘들을 모두 더해 누적시키는 것이다. 흥미로운 것은 벡터장이 보존장이었다면 이 적분이 경로에 <em-ko>무관</em-ko>해져서 오직 끝점에만 의존한다는 것으로, 이는 [§미적분의 기본정리](/ko/math/calculus/fundamental_theorem_of_calculus){: data-relation="weak" }의 고차원 버전이라 할 수 있다. 
 
 ## 선적분
 
@@ -63,14 +63,14 @@ $$\int_C \nabla f \cdot d\mathbf{r} = f(\mathbf{B}) - f(\mathbf{A})$$
 :::
 
 ::: 증명
-[§다변수함수와 편미분, ⁋정리 6](/ko/math/calculus/partial_derivatives#thm6)으로 $\frac{d}{\dd{t}} f(\mathbf{r}(t)) = \nabla f(\mathbf{r}(t)) \cdot \mathbf{r}'(t)$이다. 따라서 [§미적분의 기본정리, ⁋정리 4](/ko/math/calculus/fundamental_theorem_of_calculus#thm4)를 적용하면 
+[§다변수함수와 편미분, ⁋정리 6](/ko/math/calculus/partial_derivatives#thm6){: data-relation="required" }으로 $\frac{d}{\dd{t}} f(\mathbf{r}(t)) = \nabla f(\mathbf{r}(t)) \cdot \mathbf{r}'(t)$이다. 따라서 [§미적분의 기본정리, ⁋정리 4](/ko/math/calculus/fundamental_theorem_of_calculus#thm4){: data-relation="required" }를 적용하면 
 
 $$\int_C \nabla f \cdot d\mathbf{r} = \int_a^b \nabla f(\mathbf{r}(t)) \cdot \mathbf{r}'(t)\dd{t} = \int_a^b \frac{d}{\dd{t}} f(\mathbf{r}(t))\dd{t} = f(\mathbf{r}(b)) - f(\mathbf{r}(a))$$
 
 를 얻는다.
 :::
 
-[정리 3](#thm3)은 보존장의 선적분이 경로에 무관함을 말한다. 놀랍게도 그 역도 성립한다.
+[정리 3](#thm3){: data-relation="weak" }은 보존장의 선적분이 경로에 무관함을 말한다. 놀랍게도 그 역도 성립한다.
 
 ::: 정리 4
 $\mathbf{F}$가 연결된 열린 영역 $D$에서 연속일 때, 다음은 동치이다.
@@ -81,7 +81,7 @@ $\mathbf{F}$가 연결된 열린 영역 $D$에서 연속일 때, 다음은 동�
 :::
 
 ::: 증명
-$(1 \Rightarrow 3)$은 [정리 3](#thm3)이다. 이때 $\mathbf{F} = \nabla f$가 연속이므로 potential $f$는 자동으로 $C^1$이다. $(3 \Leftrightarrow 2)$는 closed curve를 한 점에서 끊어 두 경로로 보고, 한 경로를 거꾸로 이으면 closed curve가 되는 것에서 따라온다. 이 경로 위의 적분은 $t \mapsto a + b - t$ 치환에 의해 원래 적분에 부호를 붙인 것이므로, closed curve에서의 적분이 $0$이라는 것과 두 경로에서의 적분이 서로 같다는 것이 같은 말이 되기 때문이다. 
+$(1 \Rightarrow 3)$은 [정리 3](#thm3){: data-relation="required" }이다. 이때 $\mathbf{F} = \nabla f$가 연속이므로 potential $f$는 자동으로 $C^1$이다. $(3 \Leftrightarrow 2)$는 closed curve를 한 점에서 끊어 두 경로로 보고, 한 경로를 거꾸로 이으면 closed curve가 되는 것에서 따라온다. 이 경로 위의 적분은 $t \mapsto a + b - t$ 치환에 의해 원래 적분에 부호를 붙인 것이므로, closed curve에서의 적분이 $0$이라는 것과 두 경로에서의 적분이 서로 같다는 것이 같은 말이 되기 때문이다. 
 
 따라서 핵심 주장은 $(3 \Rightarrow 1)$이다. 이를 위해 potential을 직접 만들어야 한다. 기준점 $\mathbf{x}_0 \in D$를 고정하고, 임의의 $\mathbf{x}\in D$에 대해서 $f(\mathbf{x})$를 $\mathbf{x}_0$에서 $\mathbf{x}$를 따라 $\mathbf{F}$를 선적분한 값으로 두자. 이는 원래대로라면 $\mathbf{x}_0$과 $\mathbf{x}$를 잇는 곡선 $\mathbf{r}$의 선택에 의존하지만, 우리는 셋째 조건을 가정하고 있으므로 이 정의가 정당하다. 이제 한 좌표방향 $\mathbf{e}_i$로의 평균변화율 
 
@@ -105,7 +105,7 @@ $$\mathbf{F}\cdot \mathbf{r}' = t^2 + 2t^2 = 3t^2$$
 
 $$\int_C \mathbf{F}\cdot d\mathbf{r} = \int_0^1 3t^2\dd{t} = 1$$
 
-이다. 실제로, $\mathbf{F} = \nabla(xy)$이므로 [정리 3](#thm3)으로 $xy$의 양 끝 값 차이 $1\cdot 1 - 0\cdot 0 = 1$을 계산해보면 위의 계산을 복원할 수 있다. 이는 오직 끝점에만 의존하는 것으로, 가령 $\mathbf{r}(t)=(t,t)$ ($0 \leq t \leq 1$)로 주면
+이다. 실제로, $\mathbf{F} = \nabla(xy)$이므로 [정리 3](#thm3){: data-relation="weak" }으로 $xy$의 양 끝 값 차이 $1\cdot 1 - 0\cdot 0 = 1$을 계산해보면 위의 계산을 복원할 수 있다. 이는 오직 끝점에만 의존하는 것으로, 가령 $\mathbf{r}(t)=(t,t)$ ($0 \leq t \leq 1$)로 주면
 
 $$\mathbf{F}(\mathbf{r}(t))=(t,t),\qquad \mathbf{r}'(t)=(1,1)$$
 
@@ -116,7 +116,7 @@ $$\int_C \mathbf{F}\cdot d\mathbf{r} = \int_0^1 2t\dd{t} = 1$$
 임을 확인할 수 있다.
 :::
 
-한편 [§벡터장, ⁋명제 6](/ko/math/calculus/vector_fields#prop6)에서 보존장은 무회전이라는 필요조건을 가짐을 보았다. [정리 4](#thm4)는 이것이 충분조건이 못 되는 까닭을 경로독립성의 언어로 드러낸다. 보존장은 모든 closed curve에서의 적분이 $0$이라는 것과 동치이므로, 무회전이라도 closed curve 적분이 $0$이 아닌 예가 하나라도 있으면 보존장이 아니다. 그런 예는 정의역에 구멍이 있을 때 실제로 생기는데, 바로 다음 예시가 그것이다.
+한편 [§벡터장, ⁋명제 6](/ko/math/calculus/vector_fields#prop6){: data-relation="required" }에서 보존장은 무회전이라는 필요조건을 가짐을 보았다. [정리 4](#thm4){: data-relation="required" }는 이것이 충분조건이 못 되는 까닭을 경로독립성의 언어로 드러낸다. 보존장은 모든 closed curve에서의 적분이 $0$이라는 것과 동치이므로, 무회전이라도 closed curve 적분이 $0$이 아닌 예가 하나라도 있으면 보존장이 아니다. 그런 예는 정의역에 구멍이 있을 때 실제로 생기는데, 바로 다음 예시가 그것이다.
 
 ::: 예시 6
 원점을 뺀 평면 $\mathbb{R}^2 \setminus \{0\}$에서 정의된 벡터장
@@ -131,7 +131,7 @@ $$\frac{\partial Q}{\partial x} = \frac{\partial P}{\partial y} = \frac{y^2 - x^
 
 $$\oint_C \mathbf{F}\cdot d\mathbf{r} = \int_0^{2\pi} (\sin^2 t + \cos^2 t)\dd{t} = 2\pi \neq 0$$
 
-이다. [정리 4](#thm4)에 의해 $\mathbf{F}$는 이 영역에서 보존장이 아니다. 이는 국소적으로는 이 벡터장이 편각 $\theta = \arctan(y/x)$의 기울기로 나타낼 수 있지만, 편각이 원점을 돌 때 $2\pi$만큼 불어나 한 값으로 정의되지 못하는 것이 그 원인이다. 
+이다. [정리 4](#thm4){: data-relation="required" }에 의해 $\mathbf{F}$는 이 영역에서 보존장이 아니다. 이는 국소적으로는 이 벡터장이 편각 $\theta = \arctan(y/x)$의 기울기로 나타낼 수 있지만, 편각이 원점을 돌 때 $2\pi$만큼 불어나 한 값으로 정의되지 못하는 것이 그 원인이다. 
 :::
 
 ---
