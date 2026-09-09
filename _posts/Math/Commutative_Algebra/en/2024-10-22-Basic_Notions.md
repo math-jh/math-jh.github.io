@@ -14,7 +14,7 @@ translated_at: 2026-06-26T15:00:01+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-06-26T15:00:01+00:00
 ---
-In this category, every ring that appears is a commutative ring. Also, any $A$-algebra is always understood to be a commutative associative unital $A$-algebra. In particular, since we have already seen after [\[Algebraic Structures\] §Algebras, ⁋Definition 1](/en/math/algebraic_structures/algebras#def1) that an associative unital $A$-algebra $E$ and a ring homomorphism $A\rightarrow Z(E)$ are the same thing, it suffices for our subsequent discussion to think of an $A$-algebra as a ring homomorphism $A\rightarrow E$.
+In this category, every ring that appears is a commutative ring. Also, any $A$-algebra is always understood to be a commutative associative unital $A$-algebra. In particular, since we have already seen after [\[Algebraic Structures\] §Algebras, ⁋Definition 1](/en/math/algebraic_structures/algebras#def1){: data-relation="required" } that an associative unital $A$-algebra $E$ and a ring homomorphism $A\rightarrow Z(E)$ are the same thing, it suffices for our subsequent discussion to think of an $A$-algebra as a ring homomorphism $A\rightarrow E$.
 
 ## Basic Definitions
 
@@ -36,7 +36,7 @@ $$(N_1:N_2)=\{a\in A\mid aN_2\subseteq N_1\}$$
 
 The ideal quotient $(\mathfrak{a}:\mathfrak{b})$ can roughly be thought of as something like $\mathfrak{a}/\mathfrak{b}$, and for any $A$-module $M$ we have $\ann(M)=(0:M)$.
 
-On the other hand, in [\[Multilinear Algebra\] §Exact Sequences, ⁋Proposition 7](/en/math/multilinear_algebra/exact_sequences#prop7) we examined two useful short exact sequences; it is worth adding the following short exact sequence to them:
+On the other hand, in [\[Multilinear Algebra\] §Exact Sequences, ⁋Proposition 7](/en/math/multilinear_algebra/exact_sequences#prop7){: data-relation="weak" } we examined two useful short exact sequences; it is worth adding the following short exact sequence to them:
 
 $$0 \longrightarrow A/(\mathfrak{a}:(a)) \overset{a}{\longrightarrow} A/\mathfrak{a}\longrightarrow A/(\mathfrak{a}+(a)) \longrightarrow 0$$
 
@@ -92,7 +92,7 @@ $$M_0\subseteq M_1\subseteq M_2\subseteq\cdots$$
 
 let $M'=\bigcup M_k$; then $M'$ is finitely generated, so write $M'=\langle x_1,\ldots, x_n\rangle$. Now for each $i$, we can choose $k_i$ such that $x_i\in M_{k_i}$ holds, and if $k$ is the largest of these $k_i$ then $M_k$ must equal $M'$.
 
-Now we show that conditions 1 and 3 are equivalent. First, if condition 1 is satisfied, then for any collection of submodules of $M$ the premise of [\[Set Theory\] §Axiom of Choice, ⁋Theorem 4](/en/math/set_theory/axiom_of_choice#thm4) is satisfied by the ACC, so condition 3 obviously holds. Conversely, if condition 3 is satisfied, then given an ascending chain of submodules of $M$
+Now we show that conditions 1 and 3 are equivalent. First, if condition 1 is satisfied, then for any collection of submodules of $M$ the premise of [\[Set Theory\] §Axiom of Choice, ⁋Theorem 4](/en/math/set_theory/axiom_of_choice#thm4){: data-relation="required" } is satisfied by the ACC, so condition 3 obviously holds. Conversely, if condition 3 is satisfied, then given an ascending chain of submodules of $M$
 
 $$M_0\subseteq M_1\subseteq M_2\subseteq\cdots$$
 
@@ -129,7 +129,7 @@ Hence the following holds.
 For a ring $A$ and two Noetherian $A$-modules $M,N$, the direct sum $M\oplus N$ is a Noetherian $A$-module.
 :::
 ::: Proof
-Apply [Proposition 5](#prop5) to $M\oplus N$ and its submodule $M\oplus 0\cong M$.
+Apply [Proposition 5](#prop5){: data-relation="required" } to $M\oplus N$ and its submodule $M\oplus 0\cong M$.
 :::
 
 The condition of a finitely generated $A$-module that we examined in the [\[Multilinear Algebra\]](/en/multilinear_algebra) category is that there exists an exact sequence
@@ -152,7 +152,7 @@ In general a finitely presented module is finitely generated, but the converse d
 
 $$0\longrightarrow\ker u \longrightarrow A^{\oplus n} \overset{u}{\longrightarrow} M \longrightarrow 0$$
 
-and on the other hand $A^{\oplus n}$ is Noetherian by [Corollary 6](#cor6), so its submodule $\ker u$ is finitely generated. Now considering
+and on the other hand $A^{\oplus n}$ is Noetherian by [Corollary 6](#cor6){: data-relation="required" }, so its submodule $\ker u$ is finitely generated. Now considering
 
 $$A^{\oplus m} \rightarrow \ker u \rightarrow 0$$
 
@@ -176,28 +176,28 @@ For a Noetherian ring $A$ and an $A$-module $M$, the following are all equivalen
 3. $M$ is coherent.
 :::
 ::: Proof
-The equivalence of conditions 1 and 2 has already been examined. Also, by definition a coherent $A$-module is always finitely generated. Thus it suffices to assume that $M$ is finitely generated and show that $M$ is coherent. This follows by applying [Proposition 5](#prop5) to the kernel of any given $A$-linear map $A^{\oplus n}\rightarrow M$, which is a submodule of $A^{\oplus n}$.
+The equivalence of conditions 1 and 2 has already been examined. Also, by definition a coherent $A$-module is always finitely generated. Thus it suffices to assume that $M$ is finitely generated and show that $M$ is coherent. This follows by applying [Proposition 5](#prop5){: data-relation="required" } to the kernel of any given $A$-linear map $A^{\oplus n}\rightarrow M$, which is a submodule of $A^{\oplus n}$.
 :::
 
 ## Prime Ideals
 
-Finally we need the notion of *prime ideal* that we defined in [\[Algebraic Structures\] §Field of Fractions, ⁋Proposition 9](/en/math/algebraic_structures/field_of_fractions#prop9).
+Finally we need the notion of *prime ideal* that we defined in [\[Algebraic Structures\] §Field of Fractions, ⁋Proposition 9](/en/math/algebraic_structures/field_of_fractions#prop9){: data-relation="weak" }.
 
 ::: Definition 10
 An ideal $\mathfrak{p}\subsetneq A$ of a ring $A$ is called a *prime ideal* if, whenever $ab\in \mathfrak{p}$, then necessarily $a\in \mathfrak{p}$ or $b\in \mathfrak{p}$ holds.
 :::
 
-Then we can refine the fourth result of [\[Algebraic Structures\] §Quotient Rings and Ring Homomorphisms, ⁋Theorem 3](/en/math/algebraic_structures/quotient_rings#thm3) to obtain the following.
+Then we can refine the fourth result of [\[Algebraic Structures\] §Quotient Rings and Ring Homomorphisms, ⁋Theorem 3](/en/math/algebraic_structures/quotient_rings#thm3){: data-relation="required" } to obtain the following.
 
 ::: Proposition 11
 For any ideal $\mathfrak{a}$ of a ring $A$, there is a one-to-one correspondence between prime ideals of $A/\mathfrak{a}$ and prime ideals of $A$ containing $\mathfrak{a}$.
 :::
 ::: Proof
-By the third result of [\[Algebraic Structures\] §Quotient Rings and Ring Homomorphisms, ⁋Theorem 3](/en/math/algebraic_structures/quotient_rings#thm3), for $\mathfrak{a}\subseteq \mathfrak{p}\subseteq A$ we have
+By the third result of [\[Algebraic Structures\] §Quotient Rings and Ring Homomorphisms, ⁋Theorem 3](/en/math/algebraic_structures/quotient_rings#thm3){: data-relation="required" }, for $\mathfrak{a}\subseteq \mathfrak{p}\subseteq A$ we have
 
 $$A/\mathfrak{p}\cong \frac{A/\mathfrak{a}}{\mathfrak{p}/\mathfrak{a}}$$
 
-and then using the equivalence condition of [\[Algebraic Structures\] §Field of Fractions, ⁋Proposition 9](/en/math/algebraic_structures/field_of_fractions#prop9) gives the result.
+and then using the equivalence condition of [\[Algebraic Structures\] §Field of Fractions, ⁋Proposition 9](/en/math/algebraic_structures/field_of_fractions#prop9){: data-relation="required" } gives the result.
 :::
 
 ## Hilbert Basis Theorem
@@ -208,7 +208,7 @@ So far we have examined the basic properties of Noetherian modules. The rings we
 For a Noetherian ring $A$, the polynomial ring $A[\x]$ is also Noetherian.
 :::
 ::: Proof
-By [Theorem 3](#thm3) it suffices to show that any ideal $I$ of $A[\x]$ is finitely generated. For each integer $n\geq 0$, let $\mathfrak{a}_n$ be the set of leading coefficients of polynomials of degree $n$ belonging to $I$, together with $0$.
+By [Theorem 3](#thm3){: data-relation="required" } it suffices to show that any ideal $I$ of $A[\x]$ is finitely generated. For each integer $n\geq 0$, let $\mathfrak{a}_n$ be the set of leading coefficients of polynomials of degree $n$ belonging to $I$, together with $0$.
 
 First we check that $\mathfrak{a}_n$ is an ideal of $A$. Let $a,b$ be the leading coefficients of two polynomials $f,g\in I$ of degree $n$. Then $f+g\in I$ has degree $n$ and leading coefficient $a+b$, or if $a+b=0$ then its degree is less than $n$; in either case $a+b\in \mathfrak{a}_n$. Also, for any $\lambda\in A$ the leading coefficient of $\lambda f\in I$ is $\lambda a$ or $0$, so $\lambda a\in \mathfrak{a}_n$. On the other hand, if $f\in I$ has degree $n$ then $\x f\in I$ has degree $n+1$ and the same leading coefficient, so $\mathfrak{a}_n\subseteq \mathfrak{a}_{n+1}$ holds.
 
@@ -231,9 +231,9 @@ In particular, by applying this repeatedly we see that the polynomial ring $A[\x
 A finitely generated $A$-algebra $B$ over a Noetherian ring $A$ is Noetherian.
 :::
 ::: Proof
-Since $B$ is a finitely generated $A$-algebra, there exists a surjective ring homomorphism $A[\x_1,\ldots,\x_n]\rightarrow B$ for a suitable $n$. That is, $B\cong A[\x_1,\ldots,\x_n]/I$ for some ideal $I$. Applying [Theorem 12](#thm12) repeatedly, we know that $A[\x_1,\ldots,\x_n]$ is Noetherian.
+Since $B$ is a finitely generated $A$-algebra, there exists a surjective ring homomorphism $A[\x_1,\ldots,\x_n]\rightarrow B$ for a suitable $n$. That is, $B\cong A[\x_1,\ldots,\x_n]/I$ for some ideal $I$. Applying [Theorem 12](#thm12){: data-relation="required" } repeatedly, we know that $A[\x_1,\ldots,\x_n]$ is Noetherian.
 
-Now it suffices to show that a quotient of a Noetherian ring is Noetherian. By [\[Algebraic Structures\] §Quotient Rings and Ring Homomorphisms, ⁋Theorem 3](/en/math/algebraic_structures/quotient_rings#thm3), the ideals of $B$ are in one-to-one correspondence with the ideals of $A[\x_1,\ldots,\x_n]$ containing $I$, preserving inclusion. Thus any ascending chain of ideals of $B$ gives an ascending chain of ideals of $A[\x_1,\ldots,\x_n]$, and the latter stabilizes by the noetherianness of $A[\x_1,\ldots,\x_n]$, so the former also stabilizes. Regarding the ring $B$ as a $B$-module over itself, its submodules are exactly the ideals of $B$, so by [Theorem 3](#thm3) the ring $B$ is Noetherian.
+Now it suffices to show that a quotient of a Noetherian ring is Noetherian. By [\[Algebraic Structures\] §Quotient Rings and Ring Homomorphisms, ⁋Theorem 3](/en/math/algebraic_structures/quotient_rings#thm3){: data-relation="required" }, the ideals of $B$ are in one-to-one correspondence with the ideals of $A[\x_1,\ldots,\x_n]$ containing $I$, preserving inclusion. Thus any ascending chain of ideals of $B$ gives an ascending chain of ideals of $A[\x_1,\ldots,\x_n]$, and the latter stabilizes by the noetherianness of $A[\x_1,\ldots,\x_n]$, so the former also stabilizes. Regarding the ring $B$ as a $B$-module over itself, its submodules are exactly the ideals of $B$, so by [Theorem 3](#thm3){: data-relation="required" } the ring $B$ is Noetherian.
 :::
 
 ---

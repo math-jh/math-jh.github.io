@@ -13,7 +13,7 @@ weight: 1
 
 ---
 
-이 category의 모든 글에서 등장하는 ring은 commutative ring이다. 또, 임의의 $A$-algebra는 항상 commutative associative unital $A$-algebra인 것으로 생각한다. 특히 우리는 [\[대수적 구조\] §대수, ⁋정의 1](/ko/math/algebraic_structures/algebras#def1) 이후에 associative unital $A$-algebra $E$와, ring homomorphism $A\rightarrow Z(E)$가 같은 것임을 살펴보았으므로, 앞으로의 논의에서 $A$-algebra는 ring homomorphism $A\rightarrow E$로 생각해도 충분하다. 
+이 category의 모든 글에서 등장하는 ring은 commutative ring이다. 또, 임의의 $A$-algebra는 항상 commutative associative unital $A$-algebra인 것으로 생각한다. 특히 우리는 [\[대수적 구조\] §대수, ⁋정의 1](/ko/math/algebraic_structures/algebras#def1){: data-relation="required" } 이후에 associative unital $A$-algebra $E$와, ring homomorphism $A\rightarrow Z(E)$가 같은 것임을 살펴보았으므로, 앞으로의 논의에서 $A$-algebra는 ring homomorphism $A\rightarrow E$로 생각해도 충분하다. 
 
 ## 기본 정의들
 
@@ -37,7 +37,7 @@ $$(N_1:N_2)=\{a\in A\mid aN_2\subseteq N_1\}$$
 
 으로 정의한다. Ideal quotient $(\mathfrak{a}:\mathfrak{b})$는 대략적으로 $\mathfrak{a}/\mathfrak{b}$ 정도로 생각할 수 있으며, 임의의 $A$-module $M$에 대하여 $\ann(M)=(0:M)$이다. 
 
-한편 우리는 [\[다중선형대수학\] §완전열, ⁋명제 7](/ko/math/multilinear_algebra/exact_sequences#prop7)에서 유용한 두 개의 short exact sequence를 살펴보았는데, 여기에 다음의 short exact sequence
+한편 우리는 [\[다중선형대수학\] §완전열, ⁋명제 7](/ko/math/multilinear_algebra/exact_sequences#prop7){: data-relation="weak" }에서 유용한 두 개의 short exact sequence를 살펴보았는데, 여기에 다음의 short exact sequence
 
 $$0 \longrightarrow A/(\mathfrak{a}:(a)) \overset{a}{\longrightarrow} A/\mathfrak{a}\longrightarrow A/(\mathfrak{a}+(a)) \longrightarrow 0$$
 
@@ -93,7 +93,7 @@ $$M_0\subseteq M_1\subseteq M_2\subseteq\cdots$$
 
 이 주어졌다 하고 $M'=\bigcup M_k$라 하면 $M'$은 finitely generated이므로 $M'=\langle x_1,\ldots, x_n\rangle$이라 하자. 그럼 이제 각각의 $i$에 대하여, $k_i$를 $x_i\in M_{k_i}$가 성립하도록 잡을 수 있고 이제 이러한 $k_i$들 중 가장 큰 것을 $k$라 하면 $M_k$는 반드시 $M'$과 같게 된다.
 
-이제 1번 조건과 3번 조건이 동치임을 보인다. 우선 1번 조건이 만족된다면 이는 $M$의 임의의 submodule들의 모임이 주어질 때마다 ACC에 의하여 [\[집합론\] §선택공리, ⁋정리 4](/ko/math/set_theory/axiom_of_choice#thm4)의 전제조건이 만족되므로 3번이 성립하는 것이 자명하다. 거꾸로 3번 조건을 만족할 경우, $M$의 submodule들의 ascending chain
+이제 1번 조건과 3번 조건이 동치임을 보인다. 우선 1번 조건이 만족된다면 이는 $M$의 임의의 submodule들의 모임이 주어질 때마다 ACC에 의하여 [\[집합론\] §선택공리, ⁋정리 4](/ko/math/set_theory/axiom_of_choice#thm4){: data-relation="required" }의 전제조건이 만족되므로 3번이 성립하는 것이 자명하다. 거꾸로 3번 조건을 만족할 경우, $M$의 submodule들의 ascending chain
 
 $$M_0\subseteq M_1\subseteq M_2\subseteq\cdots$$
 
@@ -130,7 +130,7 @@ $$x-\sum \alpha_i x_i\in L\cap N$$
 Ring $A$와 두 Noetherian $A$-module $M,N$에 대하여, $M\oplus N$은 Noetherian $A$-module이다.
 :::
 ::: 증명
-[명제 5](#prop5)를 $M\oplus N$과 그 submodule $M\oplus 0\cong M$에 대해 적용하면 된다.
+[명제 5](#prop5){: data-relation="required" }를 $M\oplus N$과 그 submodule $M\oplus 0\cong M$에 대해 적용하면 된다.
 :::
 
 [\[다중선형대수학\]](/ko/multilinear_algebra) category에서 살펴보았던 finitely generated $A$-module의 조건은 다음의 exact sequence
@@ -155,7 +155,7 @@ $$A^{\oplus m} \rightarrow A^{\oplus n} \rightarrow M \rightarrow 0$$
 
 $$0\longrightarrow\ker u \longrightarrow A^{\oplus n} \overset{u}{\longrightarrow} M \longrightarrow 0$$
 
-를 얻고, 한편 $A^{\oplus n}$은 [따름정리 6](#cor6)에 의하여 Noetherian이며 따라서 그 submodule $\ker u$는 finitely generated이다. 이제
+를 얻고, 한편 $A^{\oplus n}$은 [따름정리 6](#cor6){: data-relation="required" }에 의하여 Noetherian이며 따라서 그 submodule $\ker u$는 finitely generated이다. 이제
 
 $$A^{\oplus m} \rightarrow \ker u \rightarrow 0$$
 
@@ -179,28 +179,28 @@ Noetherian ring $A$와 $A$-module $M$에 대하여, 다음이 모두 동치이�
 3. $M$이 coherent이다.
 :::
 ::: 증명
-1번 조건과 2번 조건이 동치인 것은 이미 살펴보았다. 또, 정의에 의해 coherent $A$-module은 항상 finitely generated이다. 따라서 $M$이 finitely generated인 것을 가정하고 $M$이 coherent라는 것을 보이면 충분하다. 이는 임의의 $A$-linear map $A^{\oplus n}\rightarrow M$이 주어졌을 때, 이 linear map의 kernel은 $A^{\oplus n}$의 submodule이고, [따름정리 6](#cor6)에 의하여 $A^{\oplus n}$이 Noetherian이므로 [정리 3](#thm3)에 의하여 finitely generated인 것으로부터 얻어진다.
+1번 조건과 2번 조건이 동치인 것은 이미 살펴보았다. 또, 정의에 의해 coherent $A$-module은 항상 finitely generated이다. 따라서 $M$이 finitely generated인 것을 가정하고 $M$이 coherent라는 것을 보이면 충분하다. 이는 임의의 $A$-linear map $A^{\oplus n}\rightarrow M$이 주어졌을 때, 이 linear map의 kernel은 $A^{\oplus n}$의 submodule이고, [따름정리 6](#cor6){: data-relation="required" }에 의하여 $A^{\oplus n}$이 Noetherian이므로 [정리 3](#thm3){: data-relation="required" }에 의하여 finitely generated인 것으로부터 얻어진다.
 :::
 
 ## 소아이디얼
 
-마지막으로 우리는 [\[대수적 구조\] §분수체, ⁋명제 9](/ko/math/algebraic_structures/field_of_fractions#prop9)에서 정의한 *prime ideal*의 개념이 필요하다. 
+마지막으로 우리는 [\[대수적 구조\] §분수체, ⁋명제 9](/ko/math/algebraic_structures/field_of_fractions#prop9){: data-relation="required" }에서 정의한 *prime ideal*의 개념이 필요하다. 
 
 ::: 정의 10
 Ring $A$의 ideal $\mathfrak{p}\subsetneq A$가 *prime ideal*이라는 것은, 만일 $ab\in \mathfrak{p}$라면 반드시 $a\in \mathfrak{p}$이거나 $b\in \mathfrak{p}$가 성립하는 것이다.
 :::
 
-그럼 우리는 [\[대수적 구조\] §몫환, 환 동형사상, ⁋정리 3](/ko/math/algebraic_structures/quotient_rings#thm3)의 넷째 결과를 더 다듬어서 다음을 보일 수 있다.
+그럼 우리는 [\[대수적 구조\] §몫환, 환 동형사상, ⁋정리 3](/ko/math/algebraic_structures/quotient_rings#thm3){: data-relation="required" }의 넷째 결과를 더 다듬어서 다음을 보일 수 있다.
 
 ::: 명제 11
 Ring $A$의 임의의 ideal $\mathfrak{a}$에 대하여, $A/\mathfrak{a}$의 prime ideal과, $A$의 prime ideal 중 $\mathfrak{a}$을 포함하는 것들 사이의 일대일대응이 존재한다.
 :::
 ::: 증명
-[\[대수적 구조\] §몫환, 환 동형사상, ⁋정리 3](/ko/math/algebraic_structures/quotient_rings#thm3)의 셋째 결과에 의하여, $\mathfrak{a}\subseteq \mathfrak{p}\subseteq A$에 대하여
+[\[대수적 구조\] §몫환, 환 동형사상, ⁋정리 3](/ko/math/algebraic_structures/quotient_rings#thm3){: data-relation="required" }의 셋째 결과에 의하여, $\mathfrak{a}\subseteq \mathfrak{p}\subseteq A$에 대하여
 
 $$A/\mathfrak{p}\cong \frac{A/\mathfrak{a}}{\mathfrak{p}/\mathfrak{a}}$$
 
-이 성립하며, 그 후 [\[대수적 구조\] §분수체, ⁋명제 9](/ko/math/algebraic_structures/field_of_fractions#prop9)의 동치조건을 사용하면 된다. 
+이 성립하며, 그 후 [\[대수적 구조\] §분수체, ⁋명제 9](/ko/math/algebraic_structures/field_of_fractions#prop9){: data-relation="required" }의 동치조건을 사용하면 된다. 
 :::
 
 ## Hilbert 기저 정리
@@ -211,7 +211,7 @@ $$A/\mathfrak{p}\cong \frac{A/\mathfrak{a}}{\mathfrak{p}/\mathfrak{a}}$$
 Noetherian ring $A$에 대하여, polynomial ring $A[\x]$ 또한 Noetherian이다.
 :::
 ::: 증명
-[정리 3](#thm3)에 의하여 $A[\x]$의 임의의 ideal $I$가 finitely generated임을 보이면 충분하다. 각 정수 $n\geq 0$에 대하여, $I$에 속하는 degree $n$의 다항식들의 leading coefficient들과 $0$을 모은 집합을 $\mathfrak{a}_n$이라 하자.
+[정리 3](#thm3){: data-relation="required" }에 의하여 $A[\x]$의 임의의 ideal $I$가 finitely generated임을 보이면 충분하다. 각 정수 $n\geq 0$에 대하여, $I$에 속하는 degree $n$의 다항식들의 leading coefficient들과 $0$을 모은 집합을 $\mathfrak{a}_n$이라 하자.
 
 우선 $\mathfrak{a}_n$이 $A$의 ideal임을 확인한다. 두 degree $n$의 다항식 $f,g\in I$의 leading coefficient를 각각 $a,b$라 하면, $f+g\in I$는 degree $n$이면서 leading coefficient가 $a+b$이거나, 또는 $a+b=0$이라면 degree가 $n$보다 작으므로, 어느 경우건 $a+b\in \mathfrak{a}_n$이다. 또 임의의 $\lambda\in A$에 대하여 $\lambda f\in I$의 leading coefficient는 $\lambda a$이거나 $0$이므로 $\lambda a\in \mathfrak{a}_n$이다. 한편 $f\in I$가 degree $n$이면 $\x f\in I$는 degree $n+1$이고 leading coefficient가 같으므로, $\mathfrak{a}_n\subseteq \mathfrak{a}_{n+1}$이 성립한다.
 
@@ -234,9 +234,9 @@ $$f-\sum_j \lambda_j \x^{d-N} f_{N,j}\in I$$
 Noetherian ring $A$ 위의 finitely generated $A$-algebra $B$는 Noetherian이다.
 :::
 ::: 증명
-$B$가 finitely generated $A$-algebra이므로, 적당한 $n$에 대하여 surjective ring homomorphism $A[\x_1,\ldots,\x_n]\rightarrow B$이 존재한다. 즉 어떠한 ideal $I$에 대하여 $B\cong A[\x_1,\ldots,\x_n]/I$이다. [정리 12](#thm12)를 반복하여 적용하면 $A[\x_1,\ldots,\x_n]$이 Noetherian임을 안다.
+$B$가 finitely generated $A$-algebra이므로, 적당한 $n$에 대하여 surjective ring homomorphism $A[\x_1,\ldots,\x_n]\rightarrow B$이 존재한다. 즉 어떠한 ideal $I$에 대하여 $B\cong A[\x_1,\ldots,\x_n]/I$이다. [정리 12](#thm12){: data-relation="required" }를 반복하여 적용하면 $A[\x_1,\ldots,\x_n]$이 Noetherian임을 안다.
 
-이제 Noetherian ring의 quotient가 Noetherian임을 보이면 충분하다. [\[대수적 구조\] §몫환, 환 동형사상, ⁋정리 3](/ko/math/algebraic_structures/quotient_rings#thm3)에 의하여 $B$의 ideal들은 $I$를 포함하는 $A[\x_1,\ldots,\x_n]$의 ideal들과 포함관계를 보존하는 일대일대응을 이룬다. 따라서 $B$의 ideal들의 임의의 ascending chain은 $A[\x_1,\ldots,\x_n]$의 ideal들의 ascending chain을 주고, 후자는 $A[\x_1,\ldots,\x_n]$의 Noetherian성에 의하여 안정화되므로 전자 또한 안정화된다. Ring $B$를 자기 자신 위의 $B$-module로 보면 그 submodule이 정확히 $B$의 ideal이므로, [정리 3](#thm3)에 의하여 $B$는 Noetherian이다.
+이제 Noetherian ring의 quotient가 Noetherian임을 보이면 충분하다. [\[대수적 구조\] §몫환, 환 동형사상, ⁋정리 3](/ko/math/algebraic_structures/quotient_rings#thm3){: data-relation="required" }에 의하여 $B$의 ideal들은 $I$를 포함하는 $A[\x_1,\ldots,\x_n]$의 ideal들과 포함관계를 보존하는 일대일대응을 이룬다. 따라서 $B$의 ideal들의 임의의 ascending chain은 $A[\x_1,\ldots,\x_n]$의 ideal들의 ascending chain을 주고, 후자는 $A[\x_1,\ldots,\x_n]$의 Noetherian성에 의하여 안정화되므로 전자 또한 안정화된다. Ring $B$를 자기 자신 위의 $B$-module로 보면 그 submodule이 정확히 $B$의 ideal이므로, [정리 3](#thm3){: data-relation="required" }에 의하여 $B$는 Noetherian이다.
 :::
 
 ---
