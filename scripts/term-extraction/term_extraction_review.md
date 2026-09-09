@@ -5399,3 +5399,8 @@ Decide whether each one is a definition and add it to `_data/terms.yml` (then ru
 ## term_extract_worker 2026-08-27 22:00
 
 - _posts/Math/Scheme_Theory/ko/2026-08-25-Faithfully_Flat_Descent.md: 병기 필요 'cocycle condition' — 소스 없음 (KMS exact ✗, 위키 ko ✗)
+
+## term_extract_worker 2026-09-09 17:15
+
+- _posts/Math/Stacks/ko/2026-08-30-Fibered_Categories_and_Stacks.md: 병기 필요 'lift' — 위키 ko 문서 '리프트' — 병기형 도출 필요
+- _posts/Math/Stacks/ko/2026-08-30-Fibered_Categories_and_Stacks.md: 병기 필요 'cartesian lift' — 위키 ko 문서 '르네 데카르트' — 병기형 도출 필요

@@ -2146,6 +2146,13 @@ C:
   defs:
   - label: '[범주론] §모노이드 범주'
     url: /ko/math/category_theory/monoidal_categories
+- id: cartesian_morphism
+  en: Cartesian morphism
+  ko: 데카르트 사상
+  primary: en
+  defs:
+  - label: '[스택] §스택'
+    url: /ko/math/stacks/fibered_categories_and_stacks
 - id: cartesian_product
   en: Cartesian product
   ko: 데카르트 곱
