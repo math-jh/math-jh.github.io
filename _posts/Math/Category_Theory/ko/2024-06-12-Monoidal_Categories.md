@@ -19,7 +19,7 @@ weight: 6
 
 ## 모노이드
 
-우리는 associative unital magma를 *monoid<sub>모노이드</sub>*라 부르기로 하였다. ([\[대수적 구조\] §반군, 모노이드, 군, ⁋정의 3](/ko/math/algebraic_structures/groups#def3)) 이를 풀어 써보자면 $M$이 monoid라는 것은 다음과 같은 뜻이다. 
+우리는 associative unital magma를 *monoid<sub>모노이드</sub>*라 부르기로 하였다. ([\[대수적 구조\] §반군, 모노이드, 군, ⁋정의 3](/ko/math/algebraic_structures/groups#def3){: data-relation="weak" }) 이를 풀어 써보자면 $M$이 monoid라는 것은 다음과 같은 뜻이다. 
 
 > $M$ 위에서 정의된 이항연산 $\mu:M\times M \rightarrow M$과, $M$의 원소 $e\in M$이 존재하여,
 >
@@ -90,7 +90,7 @@ Monoidal category $(\mathcal{A},\otimes,I)$와 natural isomorphism $\gamma_{A,B}
 
 $$\gamma_{A,B\otimes C}=\alpha_{B,C,A}\circ(\id_B\otimes\gamma_{A,C})\circ\alpha_{B,A,C}^{-1}\circ(\gamma_{A,B}\otimes\id_C)\circ\alpha_{A,B,C}$$
 
-이 성립하면, 이 데이터를 *braided monoidal category*라 부른다. 두 hexagon은 일반적으로 서로 독립된 조건이어서 한쪽만으로는 나머지가 따라오지 않지만, inverse law가 성립하면 하나에서 나머지가 따라온다. [정의 1](#def1)이 symmetric monoidal category에 hexagon을 하나만 요구한 것은 이 때문이며, 따라서 symmetric monoidal category란 braided monoidal category 중 inverse law를 만족하는 것들이다.
+이 성립하면, 이 데이터를 *braided monoidal category*라 부른다. 두 hexagon은 일반적으로 서로 독립된 조건이어서 한쪽만으로는 나머지가 따라오지 않지만, inverse law가 성립하면 하나에서 나머지가 따라온다. [정의 1](#def1){: data-relation="required" }이 symmetric monoidal category에 hexagon을 하나만 요구한 것은 이 때문이며, 따라서 symmetric monoidal category란 braided monoidal category 중 inverse law를 만족하는 것들이다.
 
 Associator와 unitor들의 coherence condition은 Mac Lane의 coherence theorem을 증명할 때 사용된다. 대략적으로 말해서, 이는 $n$개의 대상들의 곱 $A_1\otimes\cdots\otimes A_n$이 주어졌을 때, 이를 어떤 것부터 계산하거나 (symmetric monoidal category의 경우) 배열된 순서를 바꾸어 계산하더라도 그 결과들이 naturally isomorphic하며, 이것이 associator, unitor, (symmetric monoidal category인 경우) symmetor들의 합성으로 유일하게 나타난다는 것이다. 다만 symmetric monoidal category에서의 유일성은 대상들의 같은 permutation을 유도하는 합성들 사이에서만 성립한다. 가령 $A_1=A_2=A$인 경우 $A\otimes A$에서 자기 자신으로 가는 합성으로 $\id_{A\otimes A}$와 $\gamma_{A,A}$가 모두 나타난다. 
 
@@ -99,14 +99,14 @@ Associator와 unitor들의 coherence condition은 Mac Lane의 coherence theorem�
 ::: 예시 2
 다음은 모두 monoidal category의 예시들이다.
 
-- $\Set$에 일반적인 product를 장착하고 ([§극한, ⁋예시 6](/ko/math/category_theory/limits#ex6)), $I$는 아무 singleton으로 가져오면 $\Set$은 symmetric monoidal category가 된다.
+- $\Set$에 일반적인 product를 장착하고 ([§극한, ⁋예시 6](/ko/math/category_theory/limits#ex6){: data-relation="weak" }), $I$는 아무 singleton으로 가져오면 $\Set$은 symmetric monoidal category가 된다.
 - $\Grp$에 일반적인 product를 장착하고, $I$는 trivial group $\{e\}$으로 가져오면 $\Grp$이 symmetric monoidal category가 된다. 
 - $\Top$에 product 구조를 product topology로 주고, $I$는 아무 singleton으로 가져오면 $\Top$은 symmetric monoidal category가 된다. 
 - 임의의 commutative ring $R$에 대하여, $R$-module들의 category $\lMod{R}$은 tensor product $\otimes$에 대해 symmetric monoidal category이다.
 - 특히 $R=k$인 경우 위의 예시는 $\Vect_k$가 symmetric monoidal category임을 보여주고, $R=\mathbb{Z}$인 경우 우리는 $\Ab$이 symmetric monoidal category임을 알 수 있다. 
 :::
 
-[예시 2](#ex2)의 앞의 두 예시는 일반화가 가능하다. 우선 다음을 정의하자.
+[예시 2](#ex2){: data-relation="required" }의 앞의 두 예시는 일반화가 가능하다. 우선 다음을 정의하자.
 
 ::: 정의 3
 Category $\mathcal{A}$의 대상들의 유한한 family가 항상 categorical product를 갖는다면, 이 category를 *cartesian category<sub>데카르트 범주</sub>*라 부른다. 
@@ -135,4 +135,4 @@ Cartesian monoidal category가 일반적인 monoidal category와 다른 점 중 
 
 ---
 
-[^1]: 한 category 안의 두 대상의 곱 자체는 [§극한, ⁋예시 6](/ko/math/category_theory/limits#ex6)에서 limit으로 정의하였지만, 아래에서 정의할 monoidal category의 $\otimes$는 이러한 categorical product일 필요가 없다.
+[^1]: 한 category 안의 두 대상의 곱 자체는 [§극한, ⁋예시 6](/ko/math/category_theory/limits#ex6){: data-relation="weak" }에서 limit으로 정의하였지만, 아래에서 정의할 monoidal category의 $\otimes$는 이러한 categorical product일 필요가 없다.
