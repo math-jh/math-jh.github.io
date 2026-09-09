@@ -14,7 +14,7 @@ translated_at: 2026-08-18T15:45:04+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-08-18T15:45:04+00:00
 ---
-As mentioned in [§Cohomology](/en/math/algebraic_topology/cohomology), the acyclic models theorem generalizes the original proof of [§Cohomology, ⁋Theorem 9](/en/math/algebraic_topology/cohomology#thm9) in a systematic way, and it can be applied not only to the proof of [§Cohomology, ⁋Theorem 9](/en/math/algebraic_topology/cohomology#thm9) but also to a variety of other situations. In this post, we prove the acyclic models theorem and present several corollaries, including the proof of [§Cohomology, ⁋Theorem 9](/en/math/algebraic_topology/cohomology#thm9).
+As mentioned in [§Cohomology](/en/math/algebraic_topology/cohomology){: data-relation="weak" }, the acyclic models theorem generalizes the original proof of [§Cohomology, ⁋Theorem 9](/en/math/algebraic_topology/cohomology#thm9){: data-relation="required" } in a systematic way, and it can be applied not only to the proof of [§Cohomology, ⁋Theorem 9](/en/math/algebraic_topology/cohomology#thm9){: data-relation="required" } but also to a variety of other situations. In this post, we prove the acyclic models theorem and present several corollaries, including the proof of [§Cohomology, ⁋Theorem 9](/en/math/algebraic_topology/cohomology#thm9){: data-relation="required" }.
 
 ## Category with models
 
@@ -39,7 +39,7 @@ Let $(\mathcal{A},\mathcal{M})$ be a category with models, and let $F_\bullet:\m
 
 For example, consider the category with models $(\Top, \mathcal{M})$ where $\mathcal{M}$ is the collection of standard $n$-simplices $\Delta^n$. Then the functor $C_\bullet:\Top \rightarrow \Ch_{\geq0}(\Ab)$ assigning to each $X\in \Top$ the singular chain complex $C_\bullet(X)$ is both acyclic on $\mathcal{M}$ and free on $\mathcal{M}$.
 
-- That $C_\bullet$ is acyclic on $\mathcal{M}$ follows because each model $\Delta^n$ is a convex set, hence contractible to a point, and the cone operator induced by the straight-line contraction gives a direct contraction of $C_\bullet(\Delta^n)$ in positive degrees; this can be viewed as a generalization of [§Homology, ⁋Proposition 11](/en/math/algebraic_topology/homology#prop11). Note that the condition that $F_\bullet$ is acyclic on $\mathcal{M}$ does *not* require the $0$th homology of $F_\bullet(X)$ to vanish.
+- That $C_\bullet$ is acyclic on $\mathcal{M}$ follows because each model $\Delta^n$ is a convex set, hence contractible to a point, and the cone operator induced by the straight-line contraction gives a direct contraction of $C_\bullet(\Delta^n)$ in positive degrees; this can be viewed as a generalization of [§Homology, ⁋Proposition 11](/en/math/algebraic_topology/homology#prop11){: data-relation="weak" }. Note that the condition that $F_\bullet$ is acyclic on $\mathcal{M}$ does *not* require the $0$th homology of $F_\bullet(X)$ to vanish.
 - That $C_\bullet$ is free on $\mathcal{M}$ follows because each $C_n(X)$ is the free abelian group with basis precisely the singular $n$-simplices $\Delta^n \rightarrow X$, that is, $C_n(X)=\mathbb{Z}[\Hom_\Top(\Delta^n,X)]$. In this case, the family of models taken for each $n$ consists of the single model $\Delta^n$.
 
 ## Acyclic models theorem
@@ -100,7 +100,7 @@ In the case $n=1$, for any $x_1\in F_1(M)$, the element $d_1^{F(M)}(x_1)$ is a b
 
 ## Applications of the acyclic models theorem
 
-The acyclic models theorem is used first of all in proving [§Cohomology, ⁋Corollary 10](/en/math/algebraic_topology/cohomology#cor10). Consider the category $\Top^2$ of pairs of topological spaces, and the two functors to $\Ch_{\geq 0}(\lMod{A})$
+The acyclic models theorem is used first of all in proving [§Cohomology, ⁋Corollary 10](/en/math/algebraic_topology/cohomology#cor10){: data-relation="required" }. Consider the category $\Top^2$ of pairs of topological spaces, and the two functors to $\Ch_{\geq 0}(\lMod{A})$
 
 $$C_\bullet(-\times -;A),\qquad  C_\bullet(-;A)\otimes_A C_\bullet(-;A)$$
 
@@ -118,7 +118,7 @@ As a similar example, consider the four functors from $\Top^2$ to $\Ch_{\geq 0}(
 
 $$(X,Y)\mapsto C_\bullet(X\times Y;A),\quad (X,Y)\mapsto C_\bullet(Y\times X;A),\quad (X,Y)\mapsto C_\bullet(X;A)\otimes_AC_\bullet(Y;A),\quad (X,Y)\mapsto C_\bullet(Y;A)\otimes_AC_\bullet(X;A)$$
 
-The obvious maps between them, when lifted via [Theorem 3](#thm3), yield a diagram in $\Ch_{\geq0}(\lMod{A})$ that commutes up to natural chain homotopy
+The obvious maps between them, when lifted via [Theorem 3](#thm3){: data-relation="required" }, yield a diagram in $\Ch_{\geq0}(\lMod{A})$ that commutes up to natural chain homotopy
 
 {% diagram Math/Algebraic_Topology/Acyclic_Models_Theorem-5.svg width="23.79em" alt="flip_map" %}
 

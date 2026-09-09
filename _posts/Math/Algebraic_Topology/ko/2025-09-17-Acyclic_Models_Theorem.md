@@ -14,7 +14,7 @@ weight: 10
 
 ---
 
-[§코호몰로지](/ko/math/algebraic_topology/cohomology)에서 언급한 것과 같이, acyclic models theorem은 [§코호몰로지, ⁋정리 9](/ko/math/algebraic_topology/cohomology#thm9)의 원래 증명을 일반적인 방식으로 확장한 것으로, 비단 [§코호몰로지, ⁋정리 9](/ko/math/algebraic_topology/cohomology#thm9)를 증명할 때뿐만 아니라 다양한 경우에 사용할 수 있다. 이번 글에서는 acyclic models theorem을 증명하고, [§코호몰로지, ⁋정리 9](/ko/math/algebraic_topology/cohomology#thm9)의 증명을 포함한 몇몇 따름정리들을 소개한다. 
+[§코호몰로지](/ko/math/algebraic_topology/cohomology){: data-relation="weak" }에서 언급한 것과 같이, acyclic models theorem은 [§코호몰로지, ⁋정리 9](/ko/math/algebraic_topology/cohomology#thm9){: data-relation="required" }의 원래 증명을 일반적인 방식으로 확장한 것으로, 비단 [§코호몰로지, ⁋정리 9](/ko/math/algebraic_topology/cohomology#thm9){: data-relation="required" }를 증명할 때뿐만 아니라 다양한 경우에 사용할 수 있다. 이번 글에서는 acyclic models theorem을 증명하고, [§코호몰로지, ⁋정리 9](/ko/math/algebraic_topology/cohomology#thm9){: data-relation="required" }의 증명을 포함한 몇몇 따름정리들을 소개한다. 
 
 ## Category with models
 
@@ -39,7 +39,7 @@ Category with models $(\mathcal{A},\mathcal{M})$이 주어졌다 하고, covaria
 
 예를 들어, standard $n$-simplex들 $\Delta^n$들의 모임 $\mathcal{M}$을 model들로 갖는 category with models $(\Top, \mathcal{M})$을 생각하자. 그럼 각각의 $X\in \Top$마다 singular $n$-simplex들의 chain complex $C_\bullet(X)$을 대응시키는 functor $C_\bullet:\Top \rightarrow \Ch_{\geq0}(\Ab)$는 acyclic on $\mathcal{M}$인 동시에 free on $\mathcal{M}$이다.
 
-- $C_\bullet$이 acyclic on $\mathcal{M}$이라는 것은, 각 model $\Delta^n$이 convex set이라 한 점으로 수축가능하고, 그 직선 수축이 유도하는 cone 연산자가 $C_\bullet(\Delta^n)$을 $i>0$에서 직접 수축시키기 때문으로, 이는 [§호몰로지, ⁋명제 11](/ko/math/algebraic_topology/homology#prop11)의 일반화라 생각할 수 있다. 여기에서 functor $F_\bullet$이 $\mathcal{M}$ 위에서 acyclic하다는 조건은 $F_\bullet(X)$의 $0$번째 homology가 $0$일 것을 <em-ko>요구하지는 않는다</em-ko>는 것에 주의하자. 
+- $C_\bullet$이 acyclic on $\mathcal{M}$이라는 것은, 각 model $\Delta^n$이 convex set이라 한 점으로 수축가능하고, 그 직선 수축이 유도하는 cone 연산자가 $C_\bullet(\Delta^n)$을 $i>0$에서 직접 수축시키기 때문으로, 이는 [§호몰로지, ⁋명제 11](/ko/math/algebraic_topology/homology#prop11){: data-relation="weak" }의 일반화라 생각할 수 있다. 여기에서 functor $F_\bullet$이 $\mathcal{M}$ 위에서 acyclic하다는 조건은 $F_\bullet(X)$의 $0$번째 homology가 $0$일 것을 <em-ko>요구하지는 않는다</em-ko>는 것에 주의하자. 
 - $C_\bullet$이 free on $\mathcal{M}$이라는 것은 각각의 $C_n(X)$가 정확히 singular $n$-simplex $\Delta^n \rightarrow X$들을 basis로 갖는 free abelian group, 즉 $C_n(X)=\mathbb{Z}[\Hom_\Top(\Delta^n,X)]$이라는 것으로부터 따라온다. 이 때 각각의 $n$에 대하여 잡는 model들의 족은 $\Delta^n$ 하나만으로 이루어진 족이다. 
 
 ## Acyclic models theorem
@@ -100,7 +100,7 @@ $n=1$의 경우, 임의의 $x_1\in F_1(M)$에 대하여 $d_1^{F(M)}(x_1)$은 $F(
 
 ## Acyclic models theorem의 활용
 
-Acyclic models theorem은 우선, [§코호몰로지, ⁋따름정리 10](/ko/math/algebraic_topology/cohomology#cor10)을 증명할 때 사용된다. 두 위상공간의 pair로 이루어진 category $\Top^2$를 생각하고, 여기에서 $\Ch_{\geq 0}(\lMod{A})$로의 두 functor
+Acyclic models theorem은 우선, [§코호몰로지, ⁋따름정리 10](/ko/math/algebraic_topology/cohomology#cor10){: data-relation="required" }을 증명할 때 사용된다. 두 위상공간의 pair로 이루어진 category $\Top^2$를 생각하고, 여기에서 $\Ch_{\geq 0}(\lMod{A})$로의 두 functor
 
 $$C_\bullet(-\times -;A),\qquad  C_\bullet(-;A)\otimes_A C_\bullet(-;A)$$
 
@@ -118,7 +118,7 @@ $$H_0(C_\bullet(X;A)\otimes_AC_\bullet(Y;A))\cong H_0(X;A)\otimes_AH_0(Y;A)\righ
 
 $$(X,Y)\mapsto C_\bullet(X\times Y;A),\quad (X,Y)\mapsto C_\bullet(Y\times X;A),\quad (X,Y)\mapsto C_\bullet(X;A)\otimes_AC_\bullet(Y;A),\quad (X,Y)\mapsto C_\bullet(Y;A)\otimes_AC_\bullet(X;A)$$
 
-를 생각하면, 이들 사이의 자명한 함수들을 생각할 수 있으며 이를 [정리 3](#thm3)을 이용하여 lift하면 natural chain homotopy에 대하여 commute하는 $\Ch_{\geq0}(\lMod{A})$에서의 diagram
+를 생각하면, 이들 사이의 자명한 함수들을 생각할 수 있으며 이를 [정리 3](#thm3){: data-relation="required" }을 이용하여 lift하면 natural chain homotopy에 대하여 commute하는 $\Ch_{\geq0}(\lMod{A})$에서의 diagram
 
 {% diagram Math/Algebraic_Topology/Acyclic_Models_Theorem-5.svg width="23.79em" alt="flip_map" %}
 
