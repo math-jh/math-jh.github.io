@@ -221,7 +221,7 @@ not as free abelian groups but as direct sums of $A$ indexed by simplices
 
 $$C^\Delta_\bullet(X;A):=C^\Delta_\bullet(X)\otimes_\mathbb{Z}A,\qquad C_\bullet(X;A):=C_\bullet(X)\otimes_\mathbb{Z}A$$
 
-we would have obtained this type of homology.
+we would have obtained this type of homology. ([\[Algebraic Structures\] §Abelian Groups, ⁋Definition 13](/en/math/algebraic_structures/abelian_groups#def13))
 
 Most properties of homology follow from the axioms of [Definition 6](#def6){: data-relation="required" }. For example, the generalization of equation (1), which is the goal of this post, can be derived from them. Suppose a topological space $X$ is expressed as the union of two open sets $X=U\cup V$. Then taking homology of the following inclusions
 
