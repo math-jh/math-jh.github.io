@@ -69,7 +69,7 @@ $$(a)+\mathfrak{a}\subseteq \ann(bx)=\mathfrak{a}$$
 
 위의 명제로부터 얻어지는 $\mathfrak{a}$는 prime ideal인 동시에 적당한 원소의 annihilator이므로 정의에 의해 $\Ass M$에 속한다. 
 
-한편 [§국소화의 성질들, ⁋보조정리 3](/ko/math/commutative_algebra/properties_of_localization#lem3)에 의하여, 임의의 $A$-module $M$에 대하여, $x\in M$이 $0$인 것은 localization $\epsilon_\mathfrak{m}: M \rightarrow M_\mathfrak{m}$에서의 image가 모두 $0$인 것과 동치이며, 따라서 $x=0$인 것을 보이기 위해서는 모든 prime ideal $\mathfrak{p}$에 대하여 $\epsilon_\mathfrak{p}(x)=0$임을 보이면 충분하다. 다음 따름정리도 같은 맥락에서 이해할 수 있다. 
+한편 [§국소화의 성질들, ⁋보조정리 3](/ko/math/commutative_algebra/properties_of_localization#lem3){: data-relation="required" }에 의하여, 임의의 $A$-module $M$에 대하여, $x\in M$이 $0$인 것은 localization $\epsilon_\mathfrak{m}: M \rightarrow M_\mathfrak{m}$에서의 image가 모두 $0$인 것과 동치이며, 따라서 $x=0$인 것을 보이기 위해서는 모든 prime ideal $\mathfrak{p}$에 대하여 $\epsilon_\mathfrak{p}(x)=0$임을 보이면 충분하다. 다음 따름정리도 같은 맥락에서 이해할 수 있다. 
 
 ::: 따름정리 4
 Noetherian ring $A$ 위에서 정의된 module $M$을 생각하자. 그럼 다음이 성립한다. 
@@ -79,10 +79,10 @@ Noetherian ring $A$ 위에서 정의된 module $M$을 생각하자. 그럼 다�
 3. $A$-linear map $u:M \rightarrow N$이 injective인 것은 임의의 $\mathfrak{p}\in \Ass M$에 대하여 $u_\mathfrak{p}$가 injective인 것과 동치이다.
 :::
 ::: 증명
-우선 1번 결과의 경우, $A$가 Noetherian이라는 가정으로부터 $0$이 아닌 임의의 $x\in M$이 주어질 때마다 $\ann(x)$를 포함하는 annihilator ideal들 가운데 maximal인 ideal $\mathfrak{p}$를 하나 택할 수 있으며, [명제 3](#prop3)에 의해 $\mathfrak{p}\in \Ass M$이다. 따라서 $M_\mathfrak{p}$에서 $x/1$은 $0$이 되지 않는다. 2번 결과는 1번 결과에 의해 자명하며, 3번 결과는 2번 결과에서 $L=\ker u$로 두면 된다.
+우선 1번 결과의 경우, $A$가 Noetherian이라는 가정으로부터 $0$이 아닌 임의의 $x\in M$이 주어질 때마다 $\ann(x)$를 포함하는 annihilator ideal들 가운데 maximal인 ideal $\mathfrak{p}$를 하나 택할 수 있으며, [명제 3](#prop3){: data-relation="required" }에 의해 $\mathfrak{p}\in \Ass M$이다. 따라서 $M_\mathfrak{p}$에서 $x/1$은 $0$이 되지 않는다. 2번 결과는 1번 결과에 의해 자명하며, 3번 결과는 2번 결과에서 $L=\ker u$로 두면 된다.
 :::
 
-이번 글의 목표는 [정리 7](#thm7)을 증명하는 것이다. 이를 위해 다음의 두 보조정리가 필요하다. 
+이번 글의 목표는 [정리 7](#thm7){: data-relation="forward" }을 증명하는 것이다. 이를 위해 다음의 두 보조정리가 필요하다. 
 
 ::: 보조정리 5
 $A$-module들의 short exact sequence
@@ -111,7 +111,7 @@ $$0=M_0\subseteq M_1\subseteq\cdots\subseteq M_n=M,\qquad \text{$M_k/M_{k-1}\con
 을 찾을 수 있다.
 :::
 ::: 증명
-우선 [명제 3](#prop3)을 이용해 $M$의 associated prime $\mathfrak{p}_1\in\Ass M$을 찾을 수 있고, 따라서 $M_1\cong A/\mathfrak{p}_1$을 만족하는 submodule $M_1$이 존재한다. 똑같은 논리를 $M/M_1$에 적용하여 $M_2$를 얻을 수 있으며, 이러한 과정을 반복하다보면 $M$이 Noetherian인 것으로부터 원하는 결론을 얻는다.
+우선 [명제 3](#prop3){: data-relation="required" }을 이용해 $M$의 associated prime $\mathfrak{p}_1\in\Ass M$을 찾을 수 있고, 따라서 $M_1\cong A/\mathfrak{p}_1$을 만족하는 submodule $M_1$이 존재한다. 똑같은 논리를 $M/M_1$에 적용하여 $M_2$를 얻을 수 있으며, 이러한 과정을 반복하다보면 $M$이 Noetherian인 것으로부터 원하는 결론을 얻는다.
 :::
 
 ::: 정리 7
@@ -126,7 +126,7 @@ Noetherian ring $A$ 위에 정의된 $0$이 아닌 finitely generated module $M$
     이 성립한다. 
 :::
 ::: 증명
-우선 첫 번째 결과의 경우, $\Ass M$이 공집합이 아닌 것은 [명제 3](#prop3)에 의한 것이며, $\Ass M$의 각 원소가 $\ann M$을 포함한다는 것은 자명하다. 한편, [보조정리 5](#lem5)에 의하여 다음 short exact sequence
+우선 첫 번째 결과의 경우, $\Ass M$이 공집합이 아닌 것은 [명제 3](#prop3){: data-relation="required" }에 의한 것이며, $\Ass M$의 각 원소가 $\ann M$을 포함한다는 것은 자명하다. 한편, [보조정리 5](#lem5){: data-relation="required" }에 의하여 다음 short exact sequence
 
 $$0 \rightarrow M_{n-1} \rightarrow M_n \rightarrow M_n/M_{n-1} \rightarrow 0$$
 
@@ -148,7 +148,7 @@ $$\Ass M \subseteq \Ass M_{n-1}\cup \{ \mathfrak{p}_n\}\subseteq \Ass M_{n-2}\cu
 
 를 반복하면 첫 번째 결과의 유한성을 얻는다. 
 
-첫 번째 결과의 나머지 부분은 세 번째 결과를 증명하여 얻어진다. 그 전에 두 번째 결과의 경우, 만일 $a\in A$가 $0$이 아닌 어떤 $x\in M$의 annihilator ideal에 속한다면, 이 annihilator ideal을 포함하는 maximal한 annihilator ideal을 생각할 수 있고 이것이 $\Ass M$에 속하므로 자명하다. 역으로 $\mathfrak{p}=\ann(x)\in \Ass M$이라면 $\mathfrak{p}$의 $0$이 아닌 임의의 원소는 $x$를 소멸시키는 $M$의 zero-divisor이다. 세 번째 결과의 경우는 표기법에 유의하며 [§국소화의 성질들, ⁋명제 5](/ko/math/commutative_algebra/properties_of_localization#prop5)를 사용하면 된다. 
+첫 번째 결과의 나머지 부분은 세 번째 결과를 증명하여 얻어진다. 그 전에 두 번째 결과의 경우, 만일 $a\in A$가 $0$이 아닌 어떤 $x\in M$의 annihilator ideal에 속한다면, 이 annihilator ideal을 포함하는 maximal한 annihilator ideal을 생각할 수 있고 이것이 $\Ass M$에 속하므로 자명하다. 역으로 $\mathfrak{p}=\ann(x)\in \Ass M$이라면 $\mathfrak{p}$의 $0$이 아닌 임의의 원소는 $x$를 소멸시키는 $M$의 zero-divisor이다. 세 번째 결과의 경우는 표기법에 유의하며 [§국소화의 성질들, ⁋명제 5](/ko/math/commutative_algebra/properties_of_localization#prop5){: data-relation="required" }를 사용하면 된다. 
 
 세 번째 결과를 가정하면 남은 부분도 자명하다. 만일 $\mathfrak{p}$가 $\ann M$을 포함하는 prime ideal들 중 minimal한 것이라면, 세 번째 결과를 이용하면 localization $A_\mathfrak{p}$에서의 maximal ideal $\mathfrak{p}$를 생각할 수 있는데, $\ann M$을 포함하는 유일한 prime ideal이 $\mathfrak{p}$ 뿐이므로 반드시 $\mathfrak{p}\in \Ass M$이어야 한다.
 :::
@@ -169,9 +169,9 @@ $$(0)=\mathfrak{N}(A)=\bigcap_\text{\scriptsize$\mathfrak{p}$ a prime}\mathfrak{
 
 따라서, $A$의 total ring of fractions $K$는 $S=A\setminus(\mathfrak{p}_1\cup\cdots\cup \mathfrak{p}_k)$에 대하여 $K=S^{-1}A$이다.
 
-이제 [§국소화, ⁋명제 8](/ko/math/commutative_algebra/localization#prop8)에 의하여 $S^{-1}A$의 prime ideal들은 $S$와 만나지 않는 $A$의 prime ideal들, 곧 $\mathfrak{p}\subseteq \mathfrak{p}_1\cup\cdots\cup \mathfrak{p}_k$를 만족하는 prime ideal $\mathfrak{p}$들에 대응한다. 이러한 $\mathfrak{p}$에 [보조정리 2](#lem2)를 적용하면, $\mathfrak{p}_i$들이 모두 prime ideal이므로 전제조건이 만족되어 적당한 $i$에 대하여 $\mathfrak{p}\subseteq \mathfrak{p}_i$이고, $\mathfrak{p}_i$가 minimal prime ideal인 것으로부터 $\mathfrak{p}=\mathfrak{p}_i$를 얻는다. 즉 $S^{-1}A$의 prime ideal은 정확히 $\mathfrak{p}_1S^{-1}A,\ldots,\mathfrak{p}_kS^{-1}A$이며, 위의 대응이 포함관계를 보존하고 서로 다른 minimal prime ideal 사이에는 포함관계가 없으므로 이들 각각은 $S^{-1}A$의 maximal ideal이고 따라서 pairwise comaximal이다.
+이제 [§국소화, ⁋명제 8](/ko/math/commutative_algebra/localization#prop8){: data-relation="required" }에 의하여 $S^{-1}A$의 prime ideal들은 $S$와 만나지 않는 $A$의 prime ideal들, 곧 $\mathfrak{p}\subseteq \mathfrak{p}_1\cup\cdots\cup \mathfrak{p}_k$를 만족하는 prime ideal $\mathfrak{p}$들에 대응한다. 이러한 $\mathfrak{p}$에 [보조정리 2](#lem2){: data-relation="required" }를 적용하면, $\mathfrak{p}_i$들이 모두 prime ideal이므로 전제조건이 만족되어 적당한 $i$에 대하여 $\mathfrak{p}\subseteq \mathfrak{p}_i$이고, $\mathfrak{p}_i$가 minimal prime ideal인 것으로부터 $\mathfrak{p}=\mathfrak{p}_i$를 얻는다. 즉 $S^{-1}A$의 prime ideal은 정확히 $\mathfrak{p}_1S^{-1}A,\ldots,\mathfrak{p}_kS^{-1}A$이며, 위의 대응이 포함관계를 보존하고 서로 다른 minimal prime ideal 사이에는 포함관계가 없으므로 이들 각각은 $S^{-1}A$의 maximal ideal이고 따라서 pairwise comaximal이다.
 
-한편 $A$가 reduced이므로 $S^{-1}A$ 또한 reduced이다. 만일 $(a/s)^n=0$이라면 적당한 $t\in S$에 대하여 $ta^n=0$이고, 그럼 $(ta)^n=t^{n-1}(ta^n)=0$이므로 $A$가 reduced인 것으로부터 $ta=0$, 즉 $a/s=0$이기 때문이다. 그럼 $S^{-1}A$의 nilradical이 $0$인 것과 위에서 얻은 prime ideal들의 목록으로부터 $\bigcap_{i=1}^k\mathfrak{p}_iS^{-1}A=0$이므로, [\[환론\] §중국인의 나머지정리, ⁋명제 6](/ko/math/ring_theory/chinese_remainder_theorem#prop6)에 의하여
+한편 $A$가 reduced이므로 $S^{-1}A$ 또한 reduced이다. 만일 $(a/s)^n=0$이라면 적당한 $t\in S$에 대하여 $ta^n=0$이고, 그럼 $(ta)^n=t^{n-1}(ta^n)=0$이므로 $A$가 reduced인 것으로부터 $ta=0$, 즉 $a/s=0$이기 때문이다. 그럼 $S^{-1}A$의 nilradical이 $0$인 것과 위에서 얻은 prime ideal들의 목록으로부터 $\bigcap_{i=1}^k\mathfrak{p}_iS^{-1}A=0$이므로, [\[환론\] §중국인의 나머지정리, ⁋명제 6](/ko/math/ring_theory/chinese_remainder_theorem#prop6){: data-relation="required" }에 의하여
 
 $$K=S^{-1}A\cong \prod_{i=1}^k S^{-1}A/\mathfrak{p}_iS^{-1}A$$
 

@@ -70,7 +70,7 @@ and we conclude $a\in \mathfrak{a}$.
 
 The $\mathfrak{a}$ obtained from the above proposition is a prime ideal and also the annihilator of some element, so by definition it belongs to $\Ass M$.
 
-On the other hand, by [§Properties of Localization, ⁋Lemma 3](/en/math/commutative_algebra/properties_of_localization#lem3), for any $A$-module $M$, an element $x\in M$ is zero if and only if its image under the localization map $\epsilon_\mathfrak{m}: M \rightarrow M_\mathfrak{m}$ is zero for every maximal ideal $\mathfrak{m}$; thus to show $x=0$ it suffices to show $\epsilon_\mathfrak{p}(x)=0$ for all prime ideals $\mathfrak{p}$. The following corollary can be understood in the same spirit.
+On the other hand, by [§Properties of Localization, ⁋Lemma 3](/en/math/commutative_algebra/properties_of_localization#lem3){: data-relation="weak" }, for any $A$-module $M$, an element $x\in M$ is zero if and only if its image under the localization map $\epsilon_\mathfrak{m}: M \rightarrow M_\mathfrak{m}$ is zero for every maximal ideal $\mathfrak{m}$; thus to show $x=0$ it suffices to show $\epsilon_\mathfrak{p}(x)=0$ for all prime ideals $\mathfrak{p}$. The following corollary can be understood in the same spirit.
 
 ::: Corollary 4
 Let $M$ be a module over a Noetherian ring $A$. Then the following hold.
@@ -80,10 +80,10 @@ Let $M$ be a module over a Noetherian ring $A$. Then the following hold.
 3. An $A$-linear map $u:M \rightarrow N$ is injective if and only if $u_\mathfrak{p}$ is injective for every $\mathfrak{p}\in \Ass M$.
 :::
 ::: Proof
-For the first result, since $A$ is Noetherian, for any nonzero $x\in M$ we can choose an ideal $\mathfrak{p}$ maximal among annihilator ideals containing $\ann(x)$, and by [Proposition 3](#prop3) we have $\mathfrak{p}\in \Ass M$. Hence $x/1$ is nonzero in $M_\mathfrak{p}$. The second result is immediate from the first, and the third follows from the second by taking $L=\ker u$.
+For the first result, since $A$ is Noetherian, for any nonzero $x\in M$ we can choose an ideal $\mathfrak{p}$ maximal among annihilator ideals containing $\ann(x)$, and by [Proposition 3](#prop3){: data-relation="required" } we have $\mathfrak{p}\in \Ass M$. Hence $x/1$ is nonzero in $M_\mathfrak{p}$. The second result is immediate from the first, and the third follows from the second by taking $L=\ker u$.
 :::
 
-The goal of this post is to prove [Theorem 7](#thm7). For this we need the following two lemmas.
+The goal of this post is to prove [Theorem 7](#thm7){: data-relation="forward" }. For this we need the following two lemmas.
 
 ::: Lemma 5
 Given a short exact sequence of $A$-modules
@@ -110,7 +110,7 @@ $$0=M_0\subseteq M_1\subseteq\cdots\subseteq M_n=M,\qquad \text{$M_k/M_{k-1}\con
 satisfying the above conditions.
 :::
 ::: Proof
-First, using [Proposition 3](#prop3) we can find an associated prime $\mathfrak{p}_1\in\Ass M$ of $M$, and thus there exists a submodule $M_1$ with $M_1\cong A/\mathfrak{p}_1$. Applying the same argument to $M/M_1$ yields $M_2$, and repeating this process, we obtain the desired conclusion from the fact that $M$ is Noetherian.
+First, using [Proposition 3](#prop3){: data-relation="required" } we can find an associated prime $\mathfrak{p}_1\in\Ass M$ of $M$, and thus there exists a submodule $M_1$ with $M_1\cong A/\mathfrak{p}_1$. Applying the same argument to $M/M_1$ yields $M_2$, and repeating this process, we obtain the desired conclusion from the fact that $M$ is Noetherian.
 :::
 
 ::: Theorem 7
@@ -124,7 +124,7 @@ For a nonzero finitely generated module $M$ over a Noetherian ring $A$, the foll
 
 :::
 ::: Proof
-For the first result, that $\Ass M$ is nonempty follows from [Proposition 3](#prop3), and that each element of $\Ass M$ contains $\ann M$ is obvious. Now, by [Lemma 5](#lem5), considering the short exact sequence
+For the first result, that $\Ass M$ is nonempty follows from [Proposition 3](#prop3){: data-relation="required" }, and that each element of $\Ass M$ contains $\ann M$ is obvious. Now, by [Lemma 5](#lem5){: data-relation="required" }, considering the short exact sequence
 
 $$0 \rightarrow M_{n-1} \rightarrow M_n \rightarrow M_n/M_{n-1} \rightarrow 0$$
 
@@ -146,7 +146,7 @@ $$\Ass M \subseteq \Ass M_{n-1}\cup \{ \mathfrak{p}_n\}\subseteq \Ass M_{n-2}\cu
 
 in the above manner yields the finiteness in the first result.
 
-The remaining part of the first result is obtained by proving the third result. Before that, for the second result, if $a\in A$ belongs to the annihilator of some nonzero $x\in M$, then considering a maximal annihilator ideal containing this annihilator, which belongs to $\Ass M$, makes this direction obvious. Conversely, if $\mathfrak{p}=\ann(x)\in \Ass M$, then any nonzero element of $\mathfrak{p}$ is a zero-divisor of $M$ annihilating $x$. For the third result, paying attention to notation and using [§Properties of Localization, ⁋Proposition 5](/en/math/commutative_algebra/properties_of_localization#prop5) suffices.
+The remaining part of the first result is obtained by proving the third result. Before that, for the second result, if $a\in A$ belongs to the annihilator of some nonzero $x\in M$, then considering a maximal annihilator ideal containing this annihilator, which belongs to $\Ass M$, makes this direction obvious. Conversely, if $\mathfrak{p}=\ann(x)\in \Ass M$, then any nonzero element of $\mathfrak{p}$ is a zero-divisor of $M$ annihilating $x$. For the third result, paying attention to notation and using [§Properties of Localization, ⁋Proposition 5](/en/math/commutative_algebra/properties_of_localization#prop5){: data-relation="required" } suffices.
 
 Assuming the third result, the remaining part is also obvious. If $\mathfrak{p}$ is minimal among prime ideals containing $\ann M$, then using the third result we can consider the maximal ideal $\mathfrak{p}$ in the localization $A_\mathfrak{p}$; since $\mathfrak{p}$ is the unique prime ideal containing $\ann M$, we must have $\mathfrak{p}\in \Ass M$.
 :::
@@ -167,9 +167,9 @@ holds. Then for any zero-divisor $a\neq 0$ and $b\neq 0$ with $ab=0$, there must
 
 Therefore, the total ring of fractions $K$ of $A$ is $K=S^{-1}A$ for $S=A\setminus(\mathfrak{p}_1\cup\cdots\cup \mathfrak{p}_k)$.
 
-Now by [§Localization, ⁋Proposition 8](/en/math/commutative_algebra/localization#prop8), the prime ideals of $S^{-1}A$ correspond to the prime ideals of $A$ disjoint from $S$, that is, the prime ideals $\mathfrak{p}$ satisfying $\mathfrak{p}\subseteq \mathfrak{p}_1\cup\cdots\cup \mathfrak{p}_k$. Applying [Lemma 2](#lem2) to such $\mathfrak{p}$, since the $\mathfrak{p}_i$ are all prime ideals the hypothesis is satisfied and we obtain $\mathfrak{p}\subseteq \mathfrak{p}_i$ for some $i$; since $\mathfrak{p}_i$ is a minimal prime ideal we get $\mathfrak{p}=\mathfrak{p}_i$. Thus the prime ideals of $S^{-1}A$ are exactly $\mathfrak{p}_1S^{-1}A,\ldots,\mathfrak{p}_kS^{-1}A$, and since this correspondence preserves inclusion and there are no inclusion relations among distinct minimal prime ideals, each of these is a maximal ideal of $S^{-1}A$ and hence they are pairwise comaximal.
+Now by [§Localization, ⁋Proposition 8](/en/math/commutative_algebra/localization#prop8){: data-relation="required" }, the prime ideals of $S^{-1}A$ correspond to the prime ideals of $A$ disjoint from $S$, that is, the prime ideals $\mathfrak{p}$ satisfying $\mathfrak{p}\subseteq \mathfrak{p}_1\cup\cdots\cup \mathfrak{p}_k$. Applying [Lemma 2](#lem2){: data-relation="required" } to such $\mathfrak{p}$, since the $\mathfrak{p}_i$ are all prime ideals the hypothesis is satisfied and we obtain $\mathfrak{p}\subseteq \mathfrak{p}_i$ for some $i$; since $\mathfrak{p}_i$ is a minimal prime ideal we get $\mathfrak{p}=\mathfrak{p}_i$. Thus the prime ideals of $S^{-1}A$ are exactly $\mathfrak{p}_1S^{-1}A,\ldots,\mathfrak{p}_kS^{-1}A$, and since this correspondence preserves inclusion and there are no inclusion relations among distinct minimal prime ideals, each of these is a maximal ideal of $S^{-1}A$ and hence they are pairwise comaximal.
 
-On the other hand, since $A$ is reduced, $S^{-1}A$ is also reduced: if $(a/s)^n=0$ then $ta^n=0$ for some $t\in S$, and then $(ta)^n=t^{n-1}(ta^n)=0$ implies $ta=0$, i.e. $a/s=0$, because $A$ is reduced. Then since the nilradical of $S^{-1}A$ is $0$ and from the list of prime ideals obtained above we have $\bigcap_{i=1}^k\mathfrak{p}_iS^{-1}A=0$, by [\[Ring Theory\] §Chinese Remainder Theorem, ⁋Proposition 6](/en/math/ring_theory/chinese_remainder_theorem#prop6) we obtain
+On the other hand, since $A$ is reduced, $S^{-1}A$ is also reduced: if $(a/s)^n=0$ then $ta^n=0$ for some $t\in S$, and then $(ta)^n=t^{n-1}(ta^n)=0$ implies $ta=0$, i.e. $a/s=0$, because $A$ is reduced. Then since the nilradical of $S^{-1}A$ is $0$ and from the list of prime ideals obtained above we have $\bigcap_{i=1}^k\mathfrak{p}_iS^{-1}A=0$, by [\[Ring Theory\] §Chinese Remainder Theorem, ⁋Proposition 6](/en/math/ring_theory/chinese_remainder_theorem#prop6){: data-relation="required" } we obtain
 
 $$K=S^{-1}A\cong \prod_{i=1}^k S^{-1}A/\mathfrak{p}_iS^{-1}A$$
 
