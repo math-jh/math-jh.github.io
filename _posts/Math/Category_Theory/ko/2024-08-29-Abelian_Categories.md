@@ -56,7 +56,7 @@ Additive category $\mathcal{A}$가 *abelian category<sub>아벨 카테고리</su
 3. 임의의 epimorphism $f$는 $\ker f$의 cokernel과 같다.
 :::
 
-특히, 이러한 상황에서는 [정의 5](#def5)에서 정의할 다음의 exact sequence
+특히, 이러한 상황에서는 [정의 5](#def5){: data-relation="required" }에서 정의할 다음의 exact sequence
 
 $$0 \rightarrow A \rightarrow B \rightarrow C$$
 

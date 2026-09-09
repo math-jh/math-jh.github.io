@@ -61,7 +61,7 @@ In particular, in this situation, when an exact sequence
 
 $$0 \rightarrow A \rightarrow B \rightarrow C$$
 
-as defined in [Definition 5](#def5) is given, we may identify $A$ with the kernel of $B \rightarrow C$, and when the exact sequence
+as defined in [Definition 5](#def5){: data-relation="required" } is given, we may identify $A$ with the kernel of $B \rightarrow C$, and when the exact sequence
 
 $$A \rightarrow B \rightarrow C \rightarrow 0$$
 
