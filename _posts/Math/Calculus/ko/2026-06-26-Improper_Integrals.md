@@ -78,7 +78,7 @@ $$\int_a^b f(x)\dd{x}=\lim_{t\rightarrow c^-}\int_a^t f(x)\dd{x}+\lim_{s\rightar
 으로 정의한다. 
 :::
 
-역시 $c$가 구간 내부에 있는 경우 위의 [정의 1](#def1)과 같은 미묘함이 여전히 존재한다. 가령
+역시 $c$가 구간 내부에 있는 경우 위의 [정의 1](#def1){: data-relation="weak" }과 같은 미묘함이 여전히 존재한다. 가령
 
 $$\lim_{t\rightarrow 0^-}\int_{-1}^t \frac{\dd{x}}{x}+\lim_{s\rightarrow 0^+}\int_s^1\frac{\dd{x}}{x}$$
 
@@ -97,14 +97,14 @@ $x \geq a$에서 $0 \leq f(x) \leq g(x)$라 하자. $\int_a^\infty g(x) \dd{x}$�
 :::
 
 ::: 증명
-$F(t) = \int_a^t f(x) \dd{x}$는 $f \geq 0$이므로 $t$에 대해 증가하고, [§적분, ⁋명제 11](/ko/math/calculus/integration#prop11)의 단조성에 의해
+$F(t) = \int_a^t f(x) \dd{x}$는 $f \geq 0$이므로 $t$에 대해 증가하고, [§적분, ⁋명제 11](/ko/math/calculus/integration#prop11){: data-relation="required" }의 단조성에 의해
 
 $$F(t) \leq \int_a^t g(x) \dd{x} \leq \int_a^\infty g(x) \dd{x}$$
 
 로 위로 유계이다. 위로 유계인 증가함수는 $t \rightarrow \infty$에서 극한을 가지므로 $\int_a^\infty f(x) \dd{x}$가 수렴한다. 둘째 주장은 대우이다.
 :::
 
-직접 부등식 $0 \leq f \leq g$를 세우기 어려울 때는 급수에서처럼 극한비교를 쓴다. 즉, 두 양함수가 $f(x)/g(x) \rightarrow c$ ($0 < c < \infty$) 를 만족하면 [§무한급수, ⁋명제 7](/ko/math/calculus/series#prop7)과 같은 논증으로 두 적분이 함께 수렴·발산하므로, 피적분함수가 $x \rightarrow \infty$에서 어떤 함수처럼 행동하는지만 알면 판정이 끝난다.
+직접 부등식 $0 \leq f \leq g$를 세우기 어려울 때는 급수에서처럼 극한비교를 쓴다. 즉, 두 양함수가 $f(x)/g(x) \rightarrow c$ ($0 < c < \infty$) 를 만족하면 [§무한급수, ⁋명제 7](/ko/math/calculus/series#prop7){: data-relation="required" }과 같은 논증으로 두 적분이 함께 수렴·발산하므로, 피적분함수가 $x \rightarrow \infty$에서 어떤 함수처럼 행동하는지만 알면 판정이 끝난다.
 
 부호가 바뀌는 피적분함수는 절댓값을 취해 양항으로 환원한다.
 
@@ -113,7 +113,7 @@ $f$가 모든 $t > a$에서 $[a, t]$에서 적분가능하고 $\int_a^\infty \lv
 :::
 
 ::: 증명
-$0 \leq f + \lvert f\rvert \leq 2\lvert f\rvert$이므로 [명제 3](#prop3)으로 $\int_a^\infty (f(x) + \lvert f(x)\rvert) \dd{x}$이 수렴하고, $\int_a^\infty f(x) \dd{x} = \int_a^\infty (f(x) + \lvert f(x)\rvert) \dd{x} - \int_a^\infty \lvert f(x)\rvert \dd{x}$도 수렴한다.
+$0 \leq f + \lvert f\rvert \leq 2\lvert f\rvert$이므로 [명제 3](#prop3){: data-relation="required" }으로 $\int_a^\infty (f(x) + \lvert f(x)\rvert) \dd{x}$이 수렴하고, $\int_a^\infty f(x) \dd{x} = \int_a^\infty (f(x) + \lvert f(x)\rvert) \dd{x} - \int_a^\infty \lvert f(x)\rvert \dd{x}$도 수렴한다.
 :::
 
 역은 성립하지 않는다. $\int_0^\infty \frac{\sin x}{x} \dd{x}$는 수렴하지만 $\int_0^\infty \lvert \sin x/x\rvert \dd{x}$는 발산하므로 *조건수렴*이며, 이는 급수의 조건수렴에 대응한다.
@@ -122,7 +122,7 @@ $0 \leq f + \lvert f\rvert \leq 2\lvert f\rvert$이므로 [명제 3](#prop3)으�
 
 $$\int_c^b f(x) \dd{x} = \int_{1/(b-c)}^\infty \frac{f(c + 1/u)}{u^2} \dd{u}$$
 
-로 무한구간 적분이 된다. 곱해진 $u^{-2} > 0$은 부등식과 절댓값을 보존하므로 [명제 3](#prop3)과 [명제 4](#prop4)가 특이적분의 수렴 판정에도 그대로 성립한다.
+로 무한구간 적분이 된다. 곱해진 $u^{-2} > 0$은 부등식과 절댓값을 보존하므로 [명제 3](#prop3){: data-relation="required" }과 [명제 4](#prop4){: data-relation="required" }가 특이적분의 수렴 판정에도 그대로 성립한다.
 
 이 판정들이 실제로 쓰이려면 비교할 표준 함수가 있어야 하는데, 그 역할은 거의 항상 power function이나 지수함수 $e^{-x}$가 맡는다. 그중 power function의 적분은 수렴과 발산을 가르는 (거의) sharp한 경계를 보여 준다.
 
@@ -153,7 +153,7 @@ $$\int_2^\infty \frac{\dd{x}}{x(\ln x)^p} = \int_{\ln 2}^\infty u^{-p} \dd{u}$$
 
 $$\Gamma(s) = \int_0^\infty x^{s-1}e^{-x} \dd{x}$$
 
-는 $s > 0$에서 수렴한다. $0$ 근처는 $x^{s-1}$의 특이적분이 $s > 0$에서 수렴하고 ([예시 5](#ex5)), $\infty$ 근처는 $e^{-x}$가 거듭제곱을 압도하기 때문이다. 부분적분으로
+는 $s > 0$에서 수렴한다. $0$ 근처는 $x^{s-1}$의 특이적분이 $s > 0$에서 수렴하고 ([예시 5](#ex5){: data-relation="required" }), $\infty$ 근처는 $e^{-x}$가 거듭제곱을 압도하기 때문이다. 부분적분으로
 
 $$\Gamma(s+1) = \bigl[-x^s e^{-x}\bigr]_0^\infty + s\int_0^\infty x^{s-1}e^{-x} \dd{x} = s \Gamma(s)$$
 

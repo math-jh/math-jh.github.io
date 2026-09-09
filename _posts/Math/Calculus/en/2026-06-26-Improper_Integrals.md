@@ -77,7 +77,7 @@ $$\int_a^b f(x)\dd{x}=\lim_{t\rightarrow c^-}\int_a^t f(x)\dd{x}+\lim_{s\rightar
 
 :::
 
-Again, when $c$ lies in the interior of the interval, the same subtlety as in [Definition 1](#def1) persists. For instance,
+Again, when $c$ lies in the interior of the interval, the same subtlety as in [Definition 1](#def1){: data-relation="weak" } persists. For instance,
 
 $$\lim_{t\rightarrow 0^-}\int_{-1}^t \frac{\dd{x}}{x}+\lim_{s\rightarrow 0^+}\int_s^1\frac{\dd{x}}{x}$$
 
@@ -96,14 +96,14 @@ Suppose $0 \leq f(x) \leq g(x)$ for $x \geq a$. If $\int_a^\infty g(x) \dd{x}$ c
 :::
 
 ::: Proof
-Since $f \geq 0$, the function $F(t) = \int_a^t f(x) \dd{x}$ is increasing in $t$, and by monotonicity from [§Integration, ⁋Proposition 11](/en/math/calculus/integration#prop11),
+Since $f \geq 0$, the function $F(t) = \int_a^t f(x) \dd{x}$ is increasing in $t$, and by monotonicity from [§Integration, ⁋Proposition 11](/en/math/calculus/integration#prop11){: data-relation="required" },
 
 $$F(t) \leq \int_a^t g(x) \dd{x} \leq \int_a^\infty g(x) \dd{x}$$
 
 so it is bounded above. An increasing function that is bounded above has a limit as $t \rightarrow \infty$, hence $\int_a^\infty f(x) \dd{x}$ converges. The second claim is the contrapositive.
 :::
 
-When the inequality $0 \leq f \leq g$ is difficult to establish directly, we use limit comparison just as for series. That is, if two positive functions satisfy $f(x)/g(x) \rightarrow c$ ($0 < c < \infty$), then the same argument as in [§Infinite Series, ⁋Proposition 7](/en/math/calculus/series#prop7) shows that the two integrals converge or diverge together; hence it suffices to know which function the integrand resembles as $x \rightarrow \infty$.
+When the inequality $0 \leq f \leq g$ is difficult to establish directly, we use limit comparison just as for series. That is, if two positive functions satisfy $f(x)/g(x) \rightarrow c$ ($0 < c < \infty$), then the same argument as in [§Infinite Series, ⁋Proposition 7](/en/math/calculus/series#prop7){: data-relation="required" } shows that the two integrals converge or diverge together; hence it suffices to know which function the integrand resembles as $x \rightarrow \infty$.
 
 For integrands that change sign, we take absolute values to reduce to the positive case.
 
@@ -112,7 +112,7 @@ If $f$ is integrable on $[a, t]$ for every $t > a$ and $\int_a^\infty \lvert f(x
 :::
 
 ::: Proof
-Since $0 \leq f + \lvert f\rvert \leq 2\lvert f\rvert$, [Proposition 3](#prop3) implies that $\int_a^\infty (f(x) + \lvert f(x)\rvert) \dd{x}$ converges, and therefore $\int_a^\infty f(x) \dd{x} = \int_a^\infty (f(x) + \lvert f(x)\rvert) \dd{x} - \int_a^\infty \lvert f(x)\rvert \dd{x}$ also converges.
+Since $0 \leq f + \lvert f\rvert \leq 2\lvert f\rvert$, [Proposition 3](#prop3){: data-relation="required" } implies that $\int_a^\infty (f(x) + \lvert f(x)\rvert) \dd{x}$ converges, and therefore $\int_a^\infty f(x) \dd{x} = \int_a^\infty (f(x) + \lvert f(x)\rvert) \dd{x} - \int_a^\infty \lvert f(x)\rvert \dd{x}$ also converges.
 :::
 
 The converse does not hold. The integral $\int_0^\infty \frac{\sin x}{x} \dd{x}$ converges, but $\int_0^\infty \lvert \sin x/x\rvert \dd{x}$ diverges, so it is *conditionally convergent*, corresponding to conditional convergence for series.
@@ -121,7 +121,7 @@ The two criteria above were stated for integrals over infinite intervals, but af
 
 $$\int_c^b f(x) \dd{x} = \int_{1/(b-c)}^\infty \frac{f(c + 1/u)}{u^2} \dd{u}$$
 
-which is an integral over an infinite interval. The factor $u^{-2} > 0$ preserves inequalities and absolute values, so [Proposition 3](#prop3) and [Proposition 4](#prop4) remain valid as convergence tests for improper integrals.
+which is an integral over an infinite interval. The factor $u^{-2} > 0$ preserves inequalities and absolute values, so [Proposition 3](#prop3){: data-relation="required" } and [Proposition 4](#prop4){: data-relation="required" } remain valid as convergence tests for improper integrals.
 
 For these tests to be useful in practice, one needs standard functions to compare against, and this role is almost always filled by power functions or the exponential $e^{-x}$. Among these, the integral of a power function provides a (nearly) sharp boundary between convergence and divergence.
 
@@ -152,7 +152,7 @@ The following function, defined as an improper integral,
 
 $$\Gamma(s) = \int_0^\infty x^{s-1}e^{-x} \dd{x}$$
 
-converges for $s > 0$. Near $0$, the singular integral of $x^{s-1}$ converges for $s > 0$ ([Example 5](#ex5)), and near $\infty$, the exponential $e^{-x}$ dominates any power. By integration by parts,
+converges for $s > 0$. Near $0$, the singular integral of $x^{s-1}$ converges for $s > 0$ ([Example 5](#ex5){: data-relation="required" }), and near $\infty$, the exponential $e^{-x}$ dominates any power. By integration by parts,
 
 $$\Gamma(s+1) = \bigl[-x^s e^{-x}\bigr]_0^\infty + s\int_0^\infty x^{s-1}e^{-x} \dd{x} = s \Gamma(s)$$
 
