@@ -231,7 +231,7 @@ $$C^\Delta_\bullet(X),\qquad C_\bullet(X)$$
 
 $$C^\Delta_\bullet(X;A):=C^\Delta_\bullet(X)\otimes_\mathbb{Z}A,\qquad C_\bullet(X;A):=C_\bullet(X)\otimes_\mathbb{Z}A$$
 
-로 잡았더라면 이러한 종류의 homology를 얻었을 것이다. ([\[대수적 구조\] §가환군, ⁋정의 13](/ko/math/algebraic_structures/abelian_groups#def13){: data-relation="required" })
+로 잡았더라면 이러한 종류의 homology를 얻었을 것이다. ([\[대수적 구조\] §가환군, ⁋정의 13](/ko/math/algebraic_structures/abelian_groups#def13){: data-relation="required" }) 특히 계수 $A$가 commutative ring $R$인 경우, 이는 ring homomorphism $\mathbb{Z}\rightarrow R$에 대한 extension of scalar를 취하는 것이며 ([\[대수적 구조\] §스칼라의 변환, ⁋명제 6](/ko/math/algebraic_structures/change_of_base_ring#prop6){: data-relation="required" }), 이로부터 얻어지는 chain complex와 homology는 자연스럽게 $R$-module 구조를 갖는다.
 
 Homology의 대부분의 성질들은 [정의 6](#def6){: data-relation="required" }의 공리들로부터 나온다. 예를 들어, 이 글의 목표인 식 (1)의 일반화를 이로부터 유도할 수 있다. 위상공간 $X$가 두 열린집합들의 합집합 $X=U\cup V$로 나타난다 하자. 그럼 다음의 inclusion
 

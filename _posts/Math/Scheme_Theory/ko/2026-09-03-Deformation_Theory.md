@@ -497,39 +497,38 @@ $$\iota:X\times_{S'}S\xrightarrow{\sim}X_0$$
 의 쌍 $(X,\iota)$이다. 두 deformation $(X,\iota)$와 $(X',\iota')$이 *isomorphic*이라는 것은 $\iota'\circ(\psi\times_{S'}S)=\iota$를 만족하는 $S'$-isomorphism $\psi:X\rightarrow X'$이 존재하는 것이다. 특히 $S'=S[\epsilon]$인 경우의 deformation을 $X_0$의 $S$ 위 *first-order deformation<sub>일차 변형</sub>*이라 부른다.
 :::
 
-이는 위에서 설명한 일반적인 scheme에 대한 infinitesimal thickening을 사용하여 [정의 3](#def3)을 다시 쓴 것에 불과하다. 실제로 square-zero thickening은 underlying topological space를 바꾸지 않으므로 $S$와 $S'$은 같은 열린집합을 가지며, 특히 affine open $V=\Spec A\subseteq S$에 대응하는 $V'\subseteq S'$ 역시 affine이며 이를 $V'=\Spec A'$이라 쓰면 $A'\twoheadrightarrow A$는 square-zero extension이 된다. 즉, 직관적으로 $S$의 infinitesimal thickening은 affine 조각들마다, compatible한 infinitesimal thickening을 한 후 붙여주는 것이라 생각할 수 있다. 마찬가지로 deformation $X$의 underlying space는 central fiber $X_0$와 같아서 $U\subseteq X_0$는 그대로 $X$의 열린집합을 정하며, 덕분에 deformation의 flatness와 central fiber 조건은 affine open들 위에서 확인할 수 있으며, 각 affine 조각에서는 [정의 3](#def3)의 경우로 환원된다. 특히 $V'=\Spec A'$ 위의 affine open을 $U'=\Spec B'\subseteq X$라 하고 $I=\ker(A'\rightarrow A)$라 하자. $B'$은 $A'$ 위에서 flat하므로 $0\rightarrow I\rightarrow A'\rightarrow A\rightarrow0$을 $B'$과 tensor하여 얻는 sequence
+이는 위에서 설명한 일반적인 scheme에 대한 infinitesimal thickening을 사용하여 [정의 3](#def3)을 다시 쓴 것에 불과하다. 실제로 square-zero thickening은 underlying topological space를 바꾸지 않으므로 $S$와 $S'$은 같은 열린집합을 가지며, 특히 affine open $V=\Spec A\subseteq S$에 대응하는 $V'\subseteq S'$ 역시 affine이며 이를 $V'=\Spec A'$이라 쓰면 $A'\twoheadrightarrow A$는 square-zero extension이 된다. 즉, 직관적으로 $S$의 infinitesimal thickening은 affine 조각들마다, compatible한 infinitesimal thickening을 한 후 붙여주는 것이라 생각할 수 있다. 마찬가지로 deformation $X$의 underlying space는 central fiber $X_0$와 같아서 $U\subseteq X_0$는 그대로 $X$의 열린집합을 정하며, 덕분에 deformation의 flatness와 central fiber 조건은 affine open들 위에서 확인할 수 있으며, 각 affine 조각에서는 [정의 3](#def3)의 경우로 환원된다. 특히 $V'=\Spec A'$ 위의 affine open을 $U'=\Spec B'\subseteq X$라 하고 $I=\ker(A'\rightarrow A)$라 하면, $B'$은 $A'$ 위에서 flat하므로 $0\rightarrow I\rightarrow A'\rightarrow A\rightarrow0$을 $B'$과 tensor하여 얻는 sequence
 
 $$0\longrightarrow I\otimes_{A'}B'\longrightarrow B'\longrightarrow B'/IB'\longrightarrow0$$
 
-는 exact하다. 또한 $I^2=0$이므로 $I\otimes_{A'}B'\cong I\otimes_A(B'/IB')$이고, 이를 sheafify하면 $X_0\hookrightarrow X$의 ideal sheaf가 $\mathcal{G}=f^\ast\mathcal{I}$로 식별된다.
+는 exact이고, 또한 $I^2=0$이므로 $I\otimes_{A'}B'\cong I\otimes_A(B'/IB')$가 되어 $X_0\hookrightarrow X$의 ideal sheaf가 $\mathcal{G}=f^\ast\mathcal{I}$로 identify된다.
 
-이제 $X_0$의 affine open cover $X_0=\bigcup_iU_i$를 택하자. 각 $U_i$ 위에서 deformation $U_i'$을 만들었다고 해도 아직 대역적 deformation을 얻은 것은 아니다. 두 조각의 overlap $U_{ij}=U_i\cap U_j$ 위에서 central fiber의 항등사상으로 제한되는 isomorphism
+이제 $X_0$의 affine open cover $X_0=\bigcup_iU_i$를 택하자. 위의 논의에 의해 우리는 각 $U_i$ 위에서 deformation $U_i'$을 만들 수 있지만, 이들을 붙이는 문제가 여전히 남아있다. 우선 overlap $U_{ij}=U_i\cap U_j$ 위에서 central fiber의 항등사상으로 제한되는 isomorphism
 
 $$\varphi_{ij}:U_i'\vert_{U_{ij}}\xrightarrow{\sim}U_j'\vert_{U_{ij}}$$
 
-인 $S'$-isomorphism을 골라야 하고, triple overlap $U_{ijk}$에서 $\varphi_{jk}\circ\varphi_{ij}=\varphi_{ik}$가 성립해야 한다. 이 조건이 성립하면 $U_i'$들이 하나의 scheme $X$로 붙고, 각 structure morphism도 $X\rightarrow S'$으로 붙는다. Flatness는 source와 base에 대하여 local한 조건이므로 이렇게 얻은 morphism은 flat하다. 반대로 모든 deformation은 이와 같은 국소 family와 접합 자료를 준다. 따라서 남은 gluing 문제는 국소 deformation의 선택, overlap isomorphism의 선택, triple-overlap cocycle의 세 층위로 나뉜다. 이와 같이 국소 대상과 overlap 위의 isomorphism, triple overlap의 cocycle로부터 대역적 대상을 얻는 일반적인 원리는 뒤의 [§충실평탄하강, §§하강의 재료](/ko/math/scheme_theory/faithfully_flat_descent#하강의-재료)에서 다룬다.
+인 $S'$-isomorphism을 골라야 하고, triple overlap $U_{ijk}$에서 $\varphi_{jk}\circ\varphi_{ij}=\varphi_{ik}$가 성립해야 한다. 그럼 이 조건 하에서 $U_i'$들은 하나의 scheme $X$로 붙고, 각 structure morphism도 $X\rightarrow S'$으로 붙으며, flatness는 source와 base에 대하여 local한 조건이므로 이렇게 얻은 morphism은 flat하다. 즉 이 과정을 통해 deformation을 얻을 수 있다. 반대로 모든 deformation은 이와 같은 데이터를 주는 것이 자명하다.
 
-Cotangent complex는 이 세 층위를 같은 언어로 기록한다. $U=\Spec B\subseteq X_0$와 $V=\Spec A\subseteq S$가 affine open이고 $f(U)\subseteq V$이면 canonical quasi-isomorphism
+이 과정에서 필요한 세 가지 자료, 곧 affine 조각 위의 local deformation, 두 조각의 overlap 위의 isomorphism, triple overlap 위의 cocycle 조건은 cotangent complex에 동시에 담긴다. 이를 위해 먼저 affine에서 정의한 complex를 scheme 위로 옮겨야 한다. $U=\Spec B\subseteq X_0$와 $V=\Spec A\subseteq S$가 affine open이고 $f(U)\subseteq V$이면, $\LL_{B/A}$의 각 항과 differential을 sheafify하여 quasi-coherent $\mathcal{O}_U$-module들과 그 사이의 morphism으로 이루어진 complex를 얻는다. Affine 조각마다 택한 presentation과 resolution은 다를 수 있으므로 이 complex들이 overlap에서 항별로 같을 필요는 없으며, 대신 canonical quasi-isomorphism
 
 $$\widetilde{\LL_{B/A}}\xrightarrow{\sim}\LL_{X_0/S}\vert_U$$
 
-이 존재하며, 이는 $U$와 $V$를 더 작은 affine open으로 줄이는 것과 양립한다. 따라서 affine open마다 얻은 complex들은 서로 겹치는 곳에서 compatible하고, derived category $D(\mathcal{O}_{X_0})$의 한 대상 $\LL_{X_0/S}$로 붙는다. Affine에서 계산한 $T^0,T^1,T^2$는 이제 $R\sHom_{\mathcal{O}_{X_0}}(\LL_{X_0/S},\mathcal{G})$의 cohomology sheaf가 되고, 그 대역적 cohomology가 deformation의 세 층위를 함께 기록한다.
+이 존재한다. 이 quasi-isomorphism은 $U$와 $V$를 더 작은 affine open으로 줄이는 것과 compatible하므로, local complex들은 quasi-isomorphic complex를 같은 대상으로 보는 의미에서 하나의 cotangent complex $\LL_{X_0/S}$를 정한다.
+
+따라서 affine에서 계산한 $T^0,T^1,T^2$는 $R\sHom_{\mathcal{O}_{X_0}}(\LL_{X_0/S},\mathcal{G})$의 cohomology sheaf로 붙는다. 앞의 affine correspondence에 의하여 각 $U_i$ 위의 local deformation과 그 obstruction은 각각 degree $1$과 $2$에서 읽힌다. 두 local deformation을 $U_{ij}$ 위에서 식별할 수 있는지는 그 restriction들의 차이가 degree $1$에서 $0$인지로 결정되고, 가능한 isomorphism들의 차이는 degree $0$이 잰다. 고른 isomorphism들에 대하여 $\varphi_{ik}^{-1}\circ\varphi_{jk}\circ\varphi_{ij}$는 $U_{ijk}$ 위의 infinitesimal automorphism이므로 degree $0$의 Čech $2$-cocycle를 이루며, 이것이 $0$일 때 정확히 cocycle 조건이 성립한다. Covering의 Čech degree와 local deformation complex의 degree를 함께 모으면
+
+$$R\Gamma\bigl(X_0,R\sHom_{\mathcal{O}_{X_0}}(\LL_{X_0/S},\mathcal{G})\bigr)\simeq R\Hom_{\mathcal{O}_{X_0}}(\LL_{X_0/S},\mathcal{G})$$
+
+을 얻고, 그 $0,1,2$차 cohomology는 각각 대역적 automorphism, deformation들의 차이, existence obstruction을 기록한다. 이에 따라
+
+$$T^i(X_0/S,\mathcal{G})=\Ext^i_{\mathcal{O}_{X_0}}(\LL_{X_0/S},\mathcal{G}),\qquad T^i(X_0/S)=T^i(X_0/S,\mathcal{O}_{X_0})$$
+
+라 적는다.
 
 ::: 정리 11 (Cotangent-complex deformation theorem)
-$X_0$가 $S$ 위에서 flat하고 separated이며 locally of finite presentation인 scheme이면 $X_0$의 first-order deformation들의 isomorphism class는
+$X_0$가 $S$ 위에서 flat하고 separated이며 locally of finite presentation인 scheme이면 $X_0$의 first-order deformation들의 isomorphism class는 $T^1(X_0/S)$와 자연스럽게 일대일 대응하며, trivial deformation은 $0$에 대응하고 그 infinitesimal automorphism은 $T^0(X_0/S)$가 분류한다.
 
-$$T^1(X_0/S)=\Ext^1_{\mathcal{O}_{X_0}}(\LL_{X_0/S},\mathcal{O}_{X_0})$$
-
-와 자연스럽게 일대일 대응하며, trivial deformation $X_0\times_S S[\epsilon]$은 $0$에 대응한다. 그 infinitesimal automorphism은 $T^0(X_0/S)$가 분류한다. 더 일반적으로 $S\hookrightarrow S'$이 square-zero ideal sheaf $\mathcal{I}$로 정의되고 $\mathcal{G}=f^\ast\mathcal{I}$라 하면, $S'$ 위의 deformation이 존재하는 것을 막는 canonical class가 $\Ext^2_{\mathcal{O}_{X_0}}(\LL_{X_0/S},\mathcal{G})$에 놓인다. 이 class가 $0$일 때 deformation들의 isomorphism class는 $\Ext^1_{\mathcal{O}_{X_0}}(\LL_{X_0/S},\mathcal{G})$ 위의 torsor를 이루고, 각 deformation의 infinitesimal automorphism은 $\Ext^0_{\mathcal{O}_{X_0}}(\LL_{X_0/S},\mathcal{G})$가 분류한다.
-:::
-::: 증명
-Affine open cover를 택하면 각 조각 위의 first-order deformation은 [정리 5](#thm5)에 의하여 local $T^1$이 분류하고, [정리 8](#thm8)과 그 직후의 일반적인 square-zero extension에 대한 논증에 의하여 local lifting의 obstruction은 $T^2$에 놓인다. 두 조각의 overlap에서 두 lifting을 식별하는 isomorphism들의 차이는 $T^0$가 재고, 고른 isomorphism들이 triple overlap에서 cocycle 조건을 만족하지 못하는 정도는 다시 $T^0$ 값의 Čech $2$-cocycle로 기록된다.
-
-앞에서 얻은 canonical quasi-isomorphism $\widetilde{\LL_{B/A}}\simeq\LL_{X_0/S}\vert_U$에 의하여 이 local $T^q$들은 $R\sHom_{\mathcal{O}_{X_0}}(\LL_{X_0/S},\mathcal{G})$의 cohomology sheaf로 붙는다. Covering의 Čech degree와 local deformation complex의 degree를 두 방향으로 갖는 double complex를 totalize하면
-
-$$R\Gamma\bigl(X_0,R\sHom_{\mathcal{O}_{X_0}}(\LL_{X_0/S},\mathcal{G})\bigr)$$
-
-을 계산한다. 따라서 이 total complex의 $0,1,2$차 cohomology는 각각 대역적 automorphism, deformation들의 차이, existence obstruction을 주며, 이는 각각 $\Ext^0,\Ext^1,\Ext^2$이다. First-order deformation에서는 trivial deformation $X_0\times_S S[\epsilon]$이 기준점을 주므로 $\Ext^1$ 위의 torsor가 $T^1(X_0/S)$ 자체와 식별된다.
+더 일반적으로 $S\hookrightarrow S'$이 square-zero ideal sheaf $\mathcal{I}$로 정의되고 $\mathcal{G}=f^\ast\mathcal{I}$라 하면, $S'$ 위의 deformation의 existence obstruction은 $T^2(X_0/S,\mathcal{G})$에 놓인다. 이 obstruction이 $0$일 때 deformation들의 isomorphism class는 $T^1(X_0/S,\mathcal{G})$ 위의 torsor를 이루고, 각 deformation의 infinitesimal automorphism은 $T^0(X_0/S,\mathcal{G})$가 분류한다.
 :::
 
 정리의 대역적 $\Ext$ 하나에는 서로 다른 종류의 문제가 함께 들어 있다. 가령 degree $2$에는 각 affine 조각에서 lifting 자체가 존재하지 않는 local obstruction, overlap에서 local lifting들을 서로 identify하지 못하는 obstruction, 고른 identification들이 triple overlap에서 cocycle 조건을 만족하지 못하는 obstruction이 함께 기여한다. 이들은 각각 local deformation degree와 접합 degree가 $(0,2),(1,1),(2,0)$인 위치에 놓인다. 이들을 분리하려면 위 total complex를 두 degree 가운데 어느 방향으로 먼저 계산할지 정해야 한다. 이 filtration이 다음 local-to-global spectral sequence를 만든다.
