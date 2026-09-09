@@ -16,13 +16,13 @@ drift_needed: true
 published: false
 ---
 
-[\[미적분학\] §함수의 극한](/ko/math/calculus/functions_and_limits)에서 우리는 극한을 다루며 실수의 "빈틈 없음"을 직관적으로 사용하였다. 완비성이 없는 유리수 위에서는 [§연결성과 중간값 정리, ⁋따름정리 6](/ko/math/analysis/connectedness#cor6)가 성립하지 않는다. 해석학은 이 직관적 성질을 하나의 공리로 명확히 못박는 데서 출발한다. 그것이 *완비성*이며, 극한과 최댓값과 적분의 존재를 비롯한 미적분학의 모든 존재 정리가 궁극적으로 여기에 기댄다.
+[\[미적분학\] §함수의 극한](/ko/math/calculus/functions_and_limits){: data-relation="weak" }에서 우리는 극한을 다루며 실수의 "빈틈 없음"을 직관적으로 사용하였다. 완비성이 없는 유리수 위에서는 [§연결성과 중간값 정리, ⁋따름정리 6](/ko/math/analysis/connectedness#cor6){: data-relation="weak" }가 성립하지 않는다. 해석학은 이 직관적 성질을 하나의 공리로 명확히 못박는 데서 출발한다. 그것이 *완비성*이며, 극한과 최댓값과 적분의 존재를 비롯한 미적분학의 모든 존재 정리가 궁극적으로 여기에 기댄다.
 
 ## 순서체로서의 실수
 
-실수 $\mathbb{R}$은 사칙연산과 대소관계를 갖춘 *순서체<sub>ordered field</sub>*이다. 즉 $\mathbb{R}$은 체이면서 전순서 $\leq$를 가지고 ([\[집합론\] §순서관계의 정의](/ko/math/set_theory/order_relations)), 그 순서가 연산과 다음과 같이 호환된다: $a \leq b$이면 $a + c \leq b + c$이고, $a \leq b$이고 $0 \leq c$이면 $ac \leq bc$이다. 유리수 $\mathbb{Q}$ 역시 순서체이므로, 이 성질만으로는 $\mathbb{R}$과 $\mathbb{Q}$가 구별되지 않는다. 둘을 가르는 것이 바로 다음에 도입할 완비성이다.
+실수 $\mathbb{R}$은 사칙연산과 대소관계를 갖춘 *순서체<sub>ordered field</sub>*이다. 즉 $\mathbb{R}$은 체이면서 전순서 $\leq$를 가지고 ([\[집합론\] §순서관계의 정의](/ko/math/set_theory/order_relations){: data-relation="weak" }), 그 순서가 연산과 다음과 같이 호환된다: $a \leq b$이면 $a + c \leq b + c$이고, $a \leq b$이고 $0 \leq c$이면 $ac \leq bc$이다. 유리수 $\mathbb{Q}$ 역시 순서체이므로, 이 성질만으로는 $\mathbb{R}$과 $\mathbb{Q}$가 구별되지 않는다. 둘을 가르는 것이 바로 다음에 도입할 완비성이다.
 
-먼저 순서로부터 정해지는 upper bound와 상한의 개념을 정리한다 ([\[집합론\] §순서집합의 원소들](/ko/math/set_theory/elements_in_ordered_set)).
+먼저 순서로부터 정해지는 upper bound와 상한의 개념을 정리한다 ([\[집합론\] §순서집합의 원소들](/ko/math/set_theory/elements_in_ordered_set){: data-relation="weak" }).
 
 ::: 정의 1
 $S \subseteq \mathbb{R}$가 공집합이 아니라 하자. 실수 $M$이 $S$의 *upper bound<sub>상계</sub>*라는 것은 모든 $s \in S$에 대해 $s \leq M$인 것이고, upper bound가 하나라도 존재하면 $S$를 *bounded above<sub>위로 유계</sub>*라 한다. $S$의 upper bound 중 가장 작은 것이 존재하면 그것을 $S$의 *상한<sub>supremum</sub>*이라 하고 $\sup S$로 적는다. Symmetric하게 *lower bound<sub>하계</sub>*, *bounded below*, *하한* $\inf S$를 정의한다.
@@ -45,7 +45,7 @@ Bounded below인 공집합이 아닌 모든 $S \subseteq \mathbb{R}$은 하한 $
 :::
 
 ::: 증명
-$-S = \{-s \mid s \in S\}$를 생각하자. $S$가 lower bound $m$을 가지면 $-m$은 $-S$의 upper bound이므로 $-S$는 bounded above이고, [정의 2](#def2)에 의해 $\alpha = \sup(-S)$가 존재한다. 그러면 $-\alpha = \inf S$임이 정의로부터 직접 확인된다.
+$-S = \{-s \mid s \in S\}$를 생각하자. $S$가 lower bound $m$을 가지면 $-m$은 $-S$의 upper bound이므로 $-S$는 bounded above이고, [정의 2](#def2){: data-relation="required" }에 의해 $\alpha = \sup(-S)$가 존재한다. 그러면 $-\alpha = \inf S$임이 정의로부터 직접 확인된다.
 :::
 
 ## Archimedean property와 density
@@ -67,10 +67,10 @@ Archimedean property의 동치 형태로, 임의의 $\varepsilon > 0$에 대해 
 :::
 
 ::: 증명
-$b - a > 0$이므로 [정리 4](#thm4)에 의해 $1/n < b - a$, 즉 $nb - na > 1$인 자연수 $n$이 있다. 두 실수의 차가 $1$보다 크므로 그 사이에 정수가 존재한다. 구체적으로 $m = \lfloor na\rfloor + 1$로 두면 $na < m \leq na + 1 < nb$이고, 양변을 $n$으로 나누면 $a < m/n < b$이어서 $q = m/n$이 원하는 유리수이다.
+$b - a > 0$이므로 [정리 4](#thm4){: data-relation="required" }에 의해 $1/n < b - a$, 즉 $nb - na > 1$인 자연수 $n$이 있다. 두 실수의 차가 $1$보다 크므로 그 사이에 정수가 존재한다. 구체적으로 $m = \lfloor na\rfloor + 1$로 두면 $na < m \leq na + 1 < nb$이고, 양변을 $n$으로 나누면 $a < m/n < b$이어서 $q = m/n$이 원하는 유리수이다.
 :::
 
-Density는 한 번 더 쓰면 두 실수 사이에 유리수가 *무한히* 많이 있음을 준다. 실제로 $a < q_1 < b$인 유리수 $q_1$을 잡고, 다시 [정리 5](#thm5)를 구간 $(q_1, b)$에 적용하면 $q_1 < q_2 < b$인 $q_2$를 얻으며, 이를 되풀이하면 서로 다른 유리수 $q_1 < q_2 < q_3 < \cdots$가 모두 $(a, b)$ 안에 놓인다. 같은 방식으로 무리수도 조밀하다: $a < b$이면 $a - \sqrt{2} < b - \sqrt{2}$이므로 그 사이에 유리수 $q$가 있고, 그러면 $q + \sqrt{2}$는 $(a, b)$에 속하는 무리수이다 (유리수에 무리수를 더하면 무리수이므로). 따라서 유리수와 무리수는 실직선 위에 서로 뒤섞여 촘촘히 깔려 있다.
+Density는 한 번 더 쓰면 두 실수 사이에 유리수가 *무한히* 많이 있음을 준다. 실제로 $a < q_1 < b$인 유리수 $q_1$을 잡고, 다시 [정리 5](#thm5){: data-relation="required" }를 구간 $(q_1, b)$에 적용하면 $q_1 < q_2 < b$인 $q_2$를 얻으며, 이를 되풀이하면 서로 다른 유리수 $q_1 < q_2 < q_3 < \cdots$가 모두 $(a, b)$ 안에 놓인다. 같은 방식으로 무리수도 조밀하다: $a < b$이면 $a - \sqrt{2} < b - \sqrt{2}$이므로 그 사이에 유리수 $q$가 있고, 그러면 $q + \sqrt{2}$는 $(a, b)$에 속하는 무리수이다 (유리수에 무리수를 더하면 무리수이므로). 따라서 유리수와 무리수는 실직선 위에 서로 뒤섞여 촘촘히 깔려 있다.
 
 ## 상한의 계산과 활용
 
@@ -106,7 +106,7 @@ $$\begin{aligned}
 이므로 $\lambda\alpha - \varepsilon$ 또한 upper bound가 아니다. 따라서 $\sup(\lambda S) = \lambda\alpha$이다.
 :::
 
-위 명제에서 $\lambda > 0$이라는 가정은 본질적이다. $\lambda = -1$이면 부등호의 방향이 뒤집혀 upper bound가 lower bound로 바뀌고, 실제로 [명제 3](#prop3)의 증명과 같은 논증으로 $\inf(-S) = -\sup S$가 된다. 일반적으로 음수배는 상한과 하한을 맞바꾼다.
+위 명제에서 $\lambda > 0$이라는 가정은 본질적이다. $\lambda = -1$이면 부등호의 방향이 뒤집혀 upper bound가 lower bound로 바뀌고, 실제로 [명제 3](#prop3){: data-relation="required" }의 증명과 같은 논증으로 $\inf(-S) = -\sup S$가 된다. 일반적으로 음수배는 상한과 하한을 맞바꾼다.
 
 ## Nested interval theorem
 
@@ -141,7 +141,7 @@ Closed 구간이라는 조건은 없앨 수 없다. 반열린 구간 $I_n = \lef
 
 $$I_n = \left[  0.d_1\cdots d_n,\ \ 0.d_1\cdots d_n + 10^{-n}  \right]$$
 
-로 두면 $I_1 \supseteq I_2 \supseteq \cdots$이고 길이는 $10^{-n} \rightarrow 0$이다. [정리 7](#thm7)에 의해 교집합은 비어 있지 않고, 길이가 $0$으로 가므로 교집합은 한 점뿐이다. 그 점이 바로 무한소수가 나타내는 실수 $x$이다. 완비성이 없다면 이 교집합이 빌 수도 있어, 무한소수가 수렴할 대상이 보장되지 않는다.
+로 두면 $I_1 \supseteq I_2 \supseteq \cdots$이고 길이는 $10^{-n} \rightarrow 0$이다. [정리 7](#thm7){: data-relation="required" }에 의해 교집합은 비어 있지 않고, 길이가 $0$으로 가므로 교집합은 한 점뿐이다. 그 점이 바로 무한소수가 나타내는 실수 $x$이다. 완비성이 없다면 이 교집합이 빌 수도 있어, 무한소수가 수렴할 대상이 보장되지 않는다.
 :::
 
 ## 제곱근의 존재
