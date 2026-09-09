@@ -42,7 +42,7 @@ $$\CoEq(u,v)=N/N',\qquad N'=\langle u(x)-v(x)\rangle$$
 $\lMod{A}$는 bicomplete category이며, 특히 $A$-module들의 family $(M_i)$의 product는 이들의 direct product, coproduct는 이들의 direct sum으로 주어진다.
 :::
 
-그럼 direct product는 kernel을, direct sum은 cokernel을 각각 보존한다. ([\[범주론\] §극한, ⁋명제 10](/ko/math/category_theory/limits#prop10)) 추가로 이들은 다음의 명제 또한 만족한다. 
+그럼 direct product는 kernel을, direct sum은 cokernel을 각각 보존한다. ([\[범주론\] §극한, ⁋명제 10](/ko/math/category_theory/limits#prop10){: data-relation="required" }) 추가로 이들은 다음의 명제 또한 만족한다. 
 
 ::: 명제 2
 두 $A$-module들의 family $(M_i)_{i\in I},(N_i)_{i\in I}$와 이들 사이의 linear map들 $u_i: M_i \rightarrow N_i$가 주어졌다 하고, 이들이 유도하는 함수 $\bigoplus u_i:\bigoplus M_i \rightarrow \bigoplus N_i$와 $\prod u_i: \prod M_i \rightarrow \prod N_i$를 생각하자. 그럼 다음이 성립한다.
@@ -53,13 +53,13 @@ $\lMod{A}$는 bicomplete category이며, 특히 $A$-module들의 family $(M_i)$�
 
 이에 대한 증명은 $\prod u_i$와 $\bigoplus u_i$를 직접 좌표별로 써서 얻어진다. 특히 이 명제에 의해 direct product는 cokernel 또한 보존하고, direct sum은 kernel 또한 보존한다는 것을 알 수 있다. 
 
-앞서 우리는 임의의 $M,N\in\lMod{A}$에 대하여 $\Hom_{\lMod{A}}(M,N)$이 abelian group이 된다는 것을 살펴보았다. 어렵지 않게 이 덧셈이 합성에 대해 잘 행동하고, category $\lMod{A}$는 zero module $0$을 zero object로 갖는 additive category가 된다는 것을 확인할 수 있다. ([\[범주론\] §아벨 카테고리, ⁋정의 1](/ko/math/category_theory/abelian_categories#def1))
+앞서 우리는 임의의 $M,N\in\lMod{A}$에 대하여 $\Hom_{\lMod{A}}(M,N)$이 abelian group이 된다는 것을 살펴보았다. 어렵지 않게 이 덧셈이 합성에 대해 잘 행동하고, category $\lMod{A}$는 zero module $0$을 zero object로 갖는 additive category가 된다는 것을 확인할 수 있다. ([\[범주론\] §아벨 카테고리, ⁋정의 1](/ko/math/category_theory/abelian_categories#def1){: data-relation="weak" })
 
-뿐만 아니라 $\lMod{A}$는 abelian category가 된다. ([\[범주론\] §아벨 카테고리, ⁋정의 3](/ko/math/category_theory/abelian_categories#def3)) 이를 확인하기 위해서는 임의의 monomorphism $u:M \rightarrow N$은 그 cokernel $N \rightarrow N/M$의 kernel과 같고, 임의의 epimorphism $v:M \rightarrow N$은 그 kernel $\ker v$의 cokernel $M \rightarrow M/\ker v$과 같다는 것을 확인하면 된다. 
+뿐만 아니라 $\lMod{A}$는 abelian category가 된다. ([\[범주론\] §아벨 카테고리, ⁋정의 3](/ko/math/category_theory/abelian_categories#def3){: data-relation="required" }) 이를 확인하기 위해서는 임의의 monomorphism $u:M \rightarrow N$은 그 cokernel $N \rightarrow N/M$의 kernel과 같고, 임의의 epimorphism $v:M \rightarrow N$은 그 kernel $\ker v$의 cokernel $M \rightarrow M/\ker v$과 같다는 것을 확인하면 된다. 
 
 ## Free module
 
-[§가군, ⁋예시 5](/ko/math/algebraic_structures/modules#ex5)에서 우리는 ring $A$가 $A$-module의 구조를 가진다는 것을 살펴보았다. 그럼 임의의 $A$-module homomorphism $u:A \rightarrow M$는 $u(1)$에 의해 유일하게 결정된다. 임의의 $\alpha\in A$에 대하여, 
+[§가군, ⁋예시 5](/ko/math/algebraic_structures/modules#ex5){: data-relation="required" }에서 우리는 ring $A$가 $A$-module의 구조를 가진다는 것을 살펴보았다. 그럼 임의의 $A$-module homomorphism $u:A \rightarrow M$는 $u(1)$에 의해 유일하게 결정된다. 임의의 $\alpha\in A$에 대하여, 
 
 $$u(\alpha)=u(\alpha\cdot 1)=\alpha\cdot u(1)$$
 
@@ -136,7 +136,7 @@ $$M\otimes_A\left(\bigoplus_{i\in I} N_i\right)\cong \bigoplus_{i\in I} M\otimes
 
 $$\Hom_{\lMod{A}}\left(M,\prod_{i\in I} N_i\right)\cong\prod_{i\in I}\Hom_{\lMod{A}}(M, N_i),\qquad \Hom_{\lMod{A}}\left(\bigoplus_{i\in I} M_i, N\right)\cong \prod_{i\in I}\Hom_{\lMod{A}}(M_i,N)\tag{2}$$
 
-을 얻는다. 특별히 $A=\mathbb{Z}$인 경우 [§가환군, §§텐서곱](/ko/math/algebraic_structures/abelian_groups#텐서곱)의 내용들을 복구하게 되는데, 위의 isomorphism들은 해당 글에서는 분량의 문제로 적지 않았던 것들이다.
+을 얻는다. 특별히 $A=\mathbb{Z}$인 경우 [§가환군, §§텐서곱](/ko/math/algebraic_structures/abelian_groups#텐서곱){: data-relation="weak" }의 내용들을 복구하게 되는데, 위의 isomorphism들은 해당 글에서는 분량의 문제로 적지 않았던 것들이다.
 
 ## 가환환 위에서 정의된 가군의 텐서곱
 
@@ -184,13 +184,13 @@ $$\Bilin_A(M,N;L)=\{\text{$A$-bilinear maps from $M\times N$ to $L$}\}$$
 Functor $\Bilin_A(M,N;-):\lMod{A}\rightarrow\Set$은 representable functor이며, 그 representation은 위에서 정의한 *$A$-module* $M\otimes_AN$이다. 
 :::
 
-$A$-bilinear map은 특히 $A$-balanced이므로 [정리 5](#thm5)의 대응이 그대로 적용되고, 이 대응 아래에서 $f$가 $A$-bilinear인 것은 $\hat{f}$가 $A$-linear인 것과 같다. 실제로
+$A$-bilinear map은 특히 $A$-balanced이므로 [정리 5](#thm5){: data-relation="required" }의 대응이 그대로 적용되고, 이 대응 아래에서 $f$가 $A$-bilinear인 것은 $\hat{f}$가 $A$-linear인 것과 같다. 실제로
 
 $$\hat{f}(\alpha(x\otimes_Ay))=\hat{f}((\alpha x)\otimes_Ay)=f(\alpha x,y)=\alpha f(x,y)=\alpha\hat{f}(x\otimes_Ay)$$
 
 이고, $M\otimes_AN$은 $x\otimes_Ay$ 꼴의 원소들로 생성되므로 반대방향도 성립한다. 즉 $\Bilin_A(M,N;L)\cong\Hom_A(M\otimes_AN,L)$이다.
 
-한편 $A$가 일반적인 ring이라면 $\Hom_{\lMod{A}}(M,M')$은 $A$-module 구조를 갖지 않았지만, $A$가 commutative ring이라면 $\Hom_{\lMod{A}}(M,M')$ 위에도 $A$-module 구조가 존재한다. 즉, $\Hom_A$는 internal $\Hom$이며,  따라서 [정리 6](#thm6)의 adjunction을 더 다듬어 다음을 증명할 수 있다.
+한편 $A$가 일반적인 ring이라면 $\Hom_{\lMod{A}}(M,M')$은 $A$-module 구조를 갖지 않았지만, $A$가 commutative ring이라면 $\Hom_{\lMod{A}}(M,M')$ 위에도 $A$-module 구조가 존재한다. 즉, $\Hom_A$는 internal $\Hom$이며,  따라서 [정리 6](#thm6){: data-relation="required" }의 adjunction을 더 다듬어 다음을 증명할 수 있다.
 
 ::: 정리 9
 Commutative ring $A$에 대하여, adjunction
