@@ -35,7 +35,7 @@ $$\widetilde{f}(\mathrm{x})=\begin{cases}f_{\lvert\mathrm{x}\rvert}(\mathrm{x}/\
 :::
 
 ::: 정의 2
-만일 [보조정리 1](#lem1)의 동치조건들이 성립한다면, path-connected $X$를 *simply connected space<sub>단순연결공간</sub>*이라 부른다. 
+만일 [보조정리 1](#lem1){: data-relation="required" }의 동치조건들이 성립한다면, path-connected $X$를 *simply connected space<sub>단순연결공간</sub>*이라 부른다. 
 :::
 
 ## 피복공간
@@ -54,7 +54,7 @@ Continuous map $p:E \rightarrow B$에 대하여, $B$의 열린집합 $U$가 $p$�
 
 $$p:\mathbb{R}\rightarrow S^1;\quad t\mapsto (\cos 2\pi t, \sin 2\pi t)$$
 
-를 나타낸 것이며, 이것이 [정의 3](#def3)의 조건을 만족하는 것을 안다. 한편 일반적인 경우, covering map은 다음과 같이 부분공간과 곱공간에 대해 잘 작동한다는 것을 쉽게 증명할 수 있다. 
+를 나타낸 것이며, 이것이 [정의 3](#def3){: data-relation="required" }의 조건을 만족하는 것을 안다. 한편 일반적인 경우, covering map은 다음과 같이 부분공간과 곱공간에 대해 잘 작동한다는 것을 쉽게 증명할 수 있다. 
 
 ::: 명제 4
 다음이 성립한다. 
@@ -110,21 +110,21 @@ $$\widetilde{\alpha}(s)=(p\vert_{V_j})^{-1}(\alpha(s))$$
 
 증명은 다소 기술적으로 보일 수 있지만, 핵심 아이디어는 $x_0\in B$에서 시작하는 임의의 path는 적어도 짧은 시간 동안에는 $p$에 의해 evenly cover되는 $x_0$의 열린근방 $U$에 들어있을 것이고, 정의에 의해 $p^{-1}(U)$는 $U$와 homeomorphic한 $E$의 disjoint open subset들의 합집합이며 따라서 시작점이 이들 중 어디에 속해있는지만 알면 (연결성에 의해) 이 짧은 시간동안 path가 머무는 component가 어떤 것인지가 정해진다는 것이다. Lebesgue number lemma는 이 과정이 유한하다는 것을 보일 때만 쓰였다. 
 
-다시 ($\ast$)의 groupoid homomorphism을 보자. [보조정리 6](#lem6)에 의하여, covering space $p:E \rightarrow B$에서 임의의 $x_0,x_1\in B$와 이들을 끝점으로 하는 path $\alpha$가 주어졌다 하면, $y_0\in p^{-1}(x_0)$의 선택은 $y_1\in p^{-1}(x_1)$과 $\widetilde{\alpha}\in \Hom_{\Pi_1(E)}(y_0,y_1)$을 결정한다. 그렇다면 자연스러운 질문은 만일 $\alpha$와 path-homotopic한 $\alpha'$에 대하여, 동일한 $y_0$의 선택이 동일한 $y_1$과 homotopy type을 주는지의 여부일 것이다. 만일 $p$가 covering map이라면 이에 대한 답도 긍정적이다. 
+다시 ($\ast$)의 groupoid homomorphism을 보자. [보조정리 6](#lem6){: data-relation="required" }에 의하여, covering space $p:E \rightarrow B$에서 임의의 $x_0,x_1\in B$와 이들을 끝점으로 하는 path $\alpha$가 주어졌다 하면, $y_0\in p^{-1}(x_0)$의 선택은 $y_1\in p^{-1}(x_1)$과 $\widetilde{\alpha}\in \Hom_{\Pi_1(E)}(y_0,y_1)$을 결정한다. 그렇다면 자연스러운 질문은 만일 $\alpha$와 path-homotopic한 $\alpha'$에 대하여, 동일한 $y_0$의 선택이 동일한 $y_1$과 homotopy type을 주는지의 여부일 것이다. 만일 $p$가 covering map이라면 이에 대한 답도 긍정적이다. 
 
 ::: 보조정리 7
 Covering map $p:E \rightarrow B$와 $E$의 임의의 한 점 $y_0$을 생각하고 $p(y_0)=x_0$이라 하자. 그럼 $F(0,0)=x_0$을 만족하는 연속함수 $F:I\times I \rightarrow B$가 주어질 때마다, $\widetilde{F}(0,0)=y_0$을 만족하는 lifting $\widetilde{F}:I\times I \rightarrow E$가 유일하게 존재한다. 뿐만 아니라, 만일 $F$가 path homotopy라면 $\widetilde{F}$도 path homotopy이다.  
 :::
 
-이에 대한 증명은 본질적으로 [보조정리 6](#lem6)와 다를 것이 없으므로 생략하기로 한다. 중요한 것은 이 보조정리가 주는 path homotopy에 의하여, covering space $p:E \rightarrow B$와, path class $[\alpha]\in\Hom_{\Pi_1(B)}(x_0,x_1)$이 주어졌다 하면 $y_0\in p^{-1}(x_0)$의 선택이 $E$의 path class $[\widetilde{\alpha}]\in \Hom_{\Pi_1(E)}(y_0,y_1)$을 유일하게 결정한다는 것이다. 
+이에 대한 증명은 본질적으로 [보조정리 6](#lem6){: data-relation="required" }와 다를 것이 없으므로 생략하기로 한다. 중요한 것은 이 보조정리가 주는 path homotopy에 의하여, covering space $p:E \rightarrow B$와, path class $[\alpha]\in\Hom_{\Pi_1(B)}(x_0,x_1)$이 주어졌다 하면 $y_0\in p^{-1}(x_0)$의 선택이 $E$의 path class $[\widetilde{\alpha}]\in \Hom_{\Pi_1(E)}(y_0,y_1)$을 유일하게 결정한다는 것이다. 
 
-이제 다시 fundamental groupoid $\Pi_1(B)$를 생각하고, covering map $p:E \rightarrow B$을 고정하자. 그럼 evenly covered 조건에 의해, 각각의 $x\in B$에 대하여 $p^{-1}(x)$는 discrete set이다. 이 때 임의의 path class $[\alpha]\in\Hom_{\Pi_1(B)}(x_0,x_1)$에 대하여, $y_0\in p^{-1}(x_0)$을 택하면 [보조정리 7](#lem7)는 유일한 path class $[\widetilde{\alpha}]$를 정의하고, 따라서 $y_1\in p^{-1}(x_1)$를 정의한다. 즉 $[\alpha]$는 함수 $p^{-1}(x_0)\rightarrow p^{-1}(x_1)$를 정의한다. 
+이제 다시 fundamental groupoid $\Pi_1(B)$를 생각하고, covering map $p:E \rightarrow B$을 고정하자. 그럼 evenly covered 조건에 의해, 각각의 $x\in B$에 대하여 $p^{-1}(x)$는 discrete set이다. 이 때 임의의 path class $[\alpha]\in\Hom_{\Pi_1(B)}(x_0,x_1)$에 대하여, $y_0\in p^{-1}(x_0)$을 택하면 [보조정리 7](#lem7){: data-relation="required" }는 유일한 path class $[\widetilde{\alpha}]$를 정의하고, 따라서 $y_1\in p^{-1}(x_1)$를 정의한다. 즉 $[\alpha]$는 함수 $p^{-1}(x_0)\rightarrow p^{-1}(x_1)$를 정의한다. 
 
 ::: 정의 8
 위와 같은 상황에서, 함수 $p^{-1}(x_0)\rightarrow p^{-1}(x_1)$을 *transport map*이라 부르고 $T_{[\alpha]}$로 적는다. 
 :::
 
-Transport map은 bijective이다. 이는 우선, 임의의 $y_1\in p^{-1}(x_1)$이 주어진다면 우리는 path class $[\overline{\alpha}]\in\Hom_{\Pi_1(B)}(x_1,x_0)$를 사용하여 $y_1$에서 시작하고 $p^{-1}(x_0)$의 어떤 원소 $y_0$에서 끝나는 path를 찾을 수 있으며, 이러한 과정이 [보조정리 7](#lem7)에 의해 유일하기 때문이다. 비슷하게, lifting의 유일성에 의하여 이러한 대응이 path의 concatenation을 잘 보존한다는 것을 안다. 즉 $x\in \Pi_1(B)$를 $p^{-1}(x)$로, $[\alpha]\in\Hom_{\Pi_1(B)}(x_0,x_1)$을 $T_{[\alpha]}:p^{-1}(x_0)\rightarrow p^{-1}(x_1)$로 보내는 대응은 functorial하다. 
+Transport map은 bijective이다. 이는 우선, 임의의 $y_1\in p^{-1}(x_1)$이 주어진다면 우리는 path class $[\overline{\alpha}]\in\Hom_{\Pi_1(B)}(x_1,x_0)$를 사용하여 $y_1$에서 시작하고 $p^{-1}(x_0)$의 어떤 원소 $y_0$에서 끝나는 path를 찾을 수 있으며, 이러한 과정이 [보조정리 7](#lem7){: data-relation="required" }에 의해 유일하기 때문이다. 비슷하게, lifting의 유일성에 의하여 이러한 대응이 path의 concatenation을 잘 보존한다는 것을 안다. 즉 $x\in \Pi_1(B)$를 $p^{-1}(x)$로, $[\alpha]\in\Hom_{\Pi_1(B)}(x_0,x_1)$을 $T_{[\alpha]}:p^{-1}(x_0)\rightarrow p^{-1}(x_1)$로 보내는 대응은 functorial하다. 
 
 ::: 정의 9
 위에서 정의한 functor $\Pi_1(B) \rightarrow \Set$을 $p$가 정의하는 *monodromy functor*라 부르고 $M_p$로 표기한다. 
@@ -179,7 +179,7 @@ $$M:\Cov(B) \rightarrow \Fun(\Pi_1(B), \Set)$$
 
 즉, 표기에서 짐작할 수 있듯 이 정보는 정확하게 group $\mathcal{G}$의 action이며, $\Fun(\mathcal{G},\Set)$은 정확히 $\mathcal{G}$-set들의 모임이고 이들 사이의 morphism은 $\mathcal{G}$-equivariant map들이다. 일반적인 groupoid $\mathcal{G}$에 대하여는 그저 여러 개의 group이 여러 개의 집합에 따로따로 act하되, isomorphic한 $\mathcal{G}$의 두 object $G,H$는 각각의 (isomorphic한) 집합 $S_G$와 $S_H$에 같은 방식으로 act해야 하는 것이다. 
 
-그런데 공간 $B$가 path-connected이므로, fundamental groupoid $\Pi_1(B)$는 connected groupoid이고 따라서 $\Pi_1(B)$는 임의의 $x\in B$에 대하여 group $\pi_1(B,x)$와 category로서 equivalent하다. 즉 $\Pi_1(B)$의 groupoid action은 group $\pi_1(B,x)$의 group action을 groupoid $\Pi_1(B)$에서의 isomorphism을 따라 복제한 것에 불과하다. 따라서 위의 [정리 11](#thm11)에 담겨있는 정보는 본질적으로 skeleton에 담겨있다. 따라서 
+그런데 공간 $B$가 path-connected이므로, fundamental groupoid $\Pi_1(B)$는 connected groupoid이고 따라서 $\Pi_1(B)$는 임의의 $x\in B$에 대하여 group $\pi_1(B,x)$와 category로서 equivalent하다. 즉 $\Pi_1(B)$의 groupoid action은 group $\pi_1(B,x)$의 group action을 groupoid $\Pi_1(B)$에서의 isomorphism을 따라 복제한 것에 불과하다. 따라서 위의 [정리 11](#thm11){: data-relation="required" }에 담겨있는 정보는 본질적으로 skeleton에 담겨있다. 따라서 
   
 $$\sk(M):\sk(\Cov(B))\rightarrow \sk(\Fun(\Pi_1(B), \Set))$$
 
@@ -189,7 +189,7 @@ $$\sk(\Fun(\Pi_1(B),\Set))\simeq\Fun(\sk(\Pi_1(B)), \Set)$$
 
 이므로, 다시 여기에서 $B$가 path-connected임을 이용하면 우리는 covering space들의 isomorphism class를 받아 $\pi_1(B,x)$-set을 내놓는 categorical equivalence가 존재함을 안다. 
 
-그런데 [\[대수적 구조\] §군의 작용, ⁋정리 14](/ko/math/algebraic_structures/group_actions#thm14)와 그 증명을 생각하면, 임의의 $G$-set $E$가 주어졌을 때 우리는 $E$를 $G$의 orbit들로 분해할 수 있고, 그럼 이들 각각의 orbit들로 제한했을 때의 $G$-action은 transitive하며 이들은 $G$의 적당한 subgroup $H$에 대하여, canonical $G$-action이 주어진 $G/H$과 isomorphic하다. 따라서 transitive group action만 생각하기로 한다면, monodromy functor의 정의에 의해 이는 target에서는 *connected* cover들만 생각하는 것이 된다. 즉 다음의 equivalence
+그런데 [\[대수적 구조\] §군의 작용, ⁋정리 14](/ko/math/algebraic_structures/group_actions#thm14){: data-relation="required" }와 그 증명을 생각하면, 임의의 $G$-set $E$가 주어졌을 때 우리는 $E$를 $G$의 orbit들로 분해할 수 있고, 그럼 이들 각각의 orbit들로 제한했을 때의 $G$-action은 transitive하며 이들은 $G$의 적당한 subgroup $H$에 대하여, canonical $G$-action이 주어진 $G/H$과 isomorphic하다. 따라서 transitive group action만 생각하기로 한다면, monodromy functor의 정의에 의해 이는 target에서는 *connected* cover들만 생각하는 것이 된다. 즉 다음의 equivalence
 
 $$\left\{\text{isomorphism classes of connected covering spaces of $B$}\right\}\simeq \left\{\text{transitive $\pi_1(B,x)$-sets}\right\}$$
 
@@ -197,7 +197,7 @@ $$\left\{\text{isomorphism classes of connected covering spaces of $B$}\right\}\
 
 $$\left\{\text{isomorphism classes of connected covering spaces of $B$}\right\}\simeq \left\{\text{conjugacy classes of subgroups of $\pi_1(B,x)$}\right\}$$
 
-를 얻는다. 이제 이들 각각에 한쪽에서 다른 쪽으로의 morphism이 존재한다는 관계로 순서를 주면, 이들은 그저 partially ordered set에 불과하며 ([\[범주론\] §범주, ⁋예시 3](/ko/math/category_theory/categories#ex3)) 이 equivalence는 poset 사이의 isomorphism임을 안다. 즉 다음의 결과를 얻는다. 
+를 얻는다. 이제 이들 각각에 한쪽에서 다른 쪽으로의 morphism이 존재한다는 관계로 순서를 주면, 이들은 그저 partially ordered set에 불과하며 ([\[범주론\] §범주, ⁋예시 3](/ko/math/category_theory/categories#ex3){: data-relation="weak" }) 이 equivalence는 poset 사이의 isomorphism임을 안다. 즉 다음의 결과를 얻는다. 
 
 ::: 따름정리 12 (Fundamental theorem of covering spaces, classical version)
 Path-connected, locally path-connected, semi-locally simply connected space $B$에 대하여, connected covering space들의 isomorphism class들의 집합과, $\pi_1(B)$의 subgroup의 conjugacy class들 사이의 Galois correspondence가 존재한다. 
@@ -219,11 +219,11 @@ $$\Aut(E_H/B)\cong N_{\pi_1(B,x)}(H)/H$$
 
 우리가 알고있는 좋은 공간들은 정의로부터 fundamental group 혹은 homology를 계산할 수도 있지만, 대부분의 경우 이를 정의로부터 계산하는 것은 과도하게 복잡하거나 거의 불가능하다. 우리의 아이디어는 큰 공간의 fundamental group을 계산하기 위해 이를 작은 공간들로 나타내는 것이다. 
 
-이러한 방법 중 가장 단순한 것은 공간 $X$가 두 열린집합들의 합집합 $X=U\cup V$로 나타나는 경우일 것이다. 그럼 [\[위상수학\] §준층, ⁋보조정리 1](/ko/math/topology/presheaves#lem1)에 의하여 우리는 다음의 diagram 
+이러한 방법 중 가장 단순한 것은 공간 $X$가 두 열린집합들의 합집합 $X=U\cup V$로 나타나는 경우일 것이다. 그럼 [\[위상수학\] §준층, ⁋보조정리 1](/ko/math/topology/presheaves#lem1){: data-relation="required" }에 의하여 우리는 다음의 diagram 
 
 {% diagram Math/Algebraic_Topology/Covering_Spaces-3.svg width="7.54em" alt="union_as_colimit" %}
 
-이 colimit diagram인 것을 안다. 이 경우 우리는 이 diagram에 fundamental groupoid functor $\Pi_1$을 취해 $\Pi_1(X)$를 $\Pi_1(U)$, $\Pi_1(V)$, 그리고 $\Pi_1(U\cap V)$를 이용하여 나타내는 것을 목표로 할 것이다. 한편 [\[위상수학\] §준층, ⁋보조정리 1](/ko/math/topology/presheaves#lem1)에 의하여, 임의의 open covering $(U_i)$에 대하여 다음의 diagram 
+이 colimit diagram인 것을 안다. 이 경우 우리는 이 diagram에 fundamental groupoid functor $\Pi_1$을 취해 $\Pi_1(X)$를 $\Pi_1(U)$, $\Pi_1(V)$, 그리고 $\Pi_1(U\cap V)$를 이용하여 나타내는 것을 목표로 할 것이다. 한편 [\[위상수학\] §준층, ⁋보조정리 1](/ko/math/topology/presheaves#lem1){: data-relation="required" }에 의하여, 임의의 open covering $(U_i)$에 대하여 다음의 diagram 
   
 {% diagram Math/Algebraic_Topology/Covering_Spaces-4.svg width="17.30em" alt="general_union_colimit" %}
 
@@ -236,7 +236,7 @@ $$\Aut(E_H/B)\cong N_{\pi_1(B,x)}(H)/H$$
 즉 임의의 groupoid $\mathcal{G}\in\Grpd$와 임의의 cocone $\lambda:\Pi_1\vert_\mathcal{O}\Rightarrow \mathcal{G}$에 대하여, 각각의 $U\in \mathcal{O}$마다 $\widetilde{\lambda}$와 $\lambda_U$가 같아지도록 하는 $\widetilde{\lambda}:\Pi_1(X)\rightarrow \mathcal{G}$가 유일하게 존재한다는 것을 보이면 된다. 당연히 우리는 임의의 $x\in X$마다, $x\in U$를 만족하는 $U$를 찾은 뒤, $U$ 위에서는 $\lambda_U$가 정의되므로 $\widetilde{\lambda}(x)$를 이 값 $\lambda_U(x)$로 정의하면 된다. 한편 morphism에 대하여도 비슷한 식으로 정의를 할 수 있는데, 어떠한 $U\in \mathcal{O}$에 완전하게 포함되는 path $f$에 대해서는 위와 마찬가지 이유로 이 정의가 잘 정의되며, 유일하게 보여야 하는 것은 path가 단일한 $U\in \mathcal{O}$에 속해있지 않은 경우 어떻게 정의해야 할지에 대한 것이다. 그런데 이 경우 그냥 path의 concatenation을 사용하면 된다. 이것이 항상 정의되며 잘 정의된다는 것을 보이면 된다. 
 :::
 
-이제 위의 [따름정리 12](#cor12)를 얻어낼 때와 마찬가지로 하나의 대상에서만 이 정리를 적용하고, 따라서 $\Grpd$를 $\Grp$로 바꿔준 후, $\Grp$의 pushout이 amalgamated free product임을 사용하면 다음의 결과를 얻는다. 
+이제 위의 [따름정리 12](#cor12){: data-relation="weak" }를 얻어낼 때와 마찬가지로 하나의 대상에서만 이 정리를 적용하고, 따라서 $\Grpd$를 $\Grp$로 바꿔준 후, $\Grp$의 pushout이 amalgamated free product임을 사용하면 다음의 결과를 얻는다. 
 
 ::: 따름정리 14 (Seifert-van Kampen theorem, classical version)
 위상공간 $X$가 두 path-connected open subset $U,V$의 합집합으로 나타난다고 하고, $U\cap V$가 비어 있지 않고 path-connected라 하자. 그럼 다음의 diagram
