@@ -18,7 +18,7 @@ published: false
 
 ## 고차 호모토피 군
 
-앞선 글에서 우리는 fundamental group $\pi_1(X,x_0)$을 정의하고, 이것이 base point $x_0$을 시작점과 끝점으로 갖는 loop들의 homotopy type들이 이루는 group임을 보았다. ([§호모토피, §§Fundamental group](/ko/math/algebraic_topology/homotopy#fundamental-group)) Loop란 본질적으로 $1$차원 구 $S^1$에서 $X$로의 함수이므로, 이를 자연스럽게 고차원으로 일반화하여 $n$차원 구에서 $X$로의 함수들을 생각할 수 있다. 이렇게 얻어지는 불변량이 fundamental group보다 훨씬 섬세한 정보를 담고 있으리라 기대하는 것은 자연스럽다. 다만 이들 고차 불변량은 아직 정의된 바 없으므로, 우리는 우선 이를 엄밀하게 도입한다.
+앞선 글에서 우리는 fundamental group $\pi_1(X,x_0)$을 정의하고, 이것이 base point $x_0$을 시작점과 끝점으로 갖는 loop들의 homotopy type들이 이루는 group임을 보았다. ([§호모토피, §§Fundamental group](/ko/math/algebraic_topology/homotopy#fundamental-group){: data-relation="weak" }) Loop란 본질적으로 $1$차원 구 $S^1$에서 $X$로의 함수이므로, 이를 자연스럽게 고차원으로 일반화하여 $n$차원 구에서 $X$로의 함수들을 생각할 수 있다. 이렇게 얻어지는 불변량이 fundamental group보다 훨씬 섬세한 정보를 담고 있으리라 기대하는 것은 자연스럽다. 다만 이들 고차 불변량은 아직 정의된 바 없으므로, 우리는 우선 이를 엄밀하게 도입한다.
 
 편의를 위해 $n$-cube $I^n=[0,1]^n$과 그 boundary $\partial I^n$을 생각하자. $\partial I^n$은 적어도 하나의 좌표가 $0$ 또는 $1$인 점들의 집합이다. 그럼 $\partial I^n$을 한 점으로 붕괴시킨 quotient space $I^n/\partial I^n$은 $n$차원 구 $S^n$과 homeomorphic하며, 따라서 $\partial I^n$ 전체를 base point $x_0$으로 보내는 연속함수 $(I^n,\partial I^n)\rightarrow(X,x_0)$은 $(S^n,s_0)\rightarrow(X,x_0)$과 같은 정보를 담는다.
 
@@ -30,7 +30,7 @@ Base point $x_0\in X$을 고정하자. 각각의 $n\geq 1$에 대하여, $\parti
 
 $$(f\ast g)(t_1,\ldots,t_n)=\begin{cases}f(2t_1,t_2,\ldots,t_n)&0\leq t_1\leq 1/2\\ g(2t_1-1,t_2,\ldots,t_n)&1/2\leq t_1\leq 1\end{cases}$$
 
-으로 정의하면, $\partial I^n$ 위에서 두 함수가 모두 $x_0$의 값을 가지므로 이 곱이 잘 정의된 연속함수가 된다. 이 연산이 homotopy 관계에서 well-defined이고 결합법칙과 역원을 가짐은 $n=1$인 경우, 곧 [§호모토피, §§Fundamental group](/ko/math/algebraic_topology/homotopy#fundamental-group)에서와 같은 방식으로 확인된다. 뿐만 아니라 $n\geq 2$인 경우 곱을 정의하는 데 쓸 수 있는 좌표가 둘 이상이므로, 이른바 Eckmann-Hilton 논법에 의하여 $\pi_n(X,x_0)$은 abelian group이 된다. 즉 fundamental group과 달리 고차 homotopy group은 항상 commutative하다.
+으로 정의하면, $\partial I^n$ 위에서 두 함수가 모두 $x_0$의 값을 가지므로 이 곱이 잘 정의된 연속함수가 된다. 이 연산이 homotopy 관계에서 well-defined이고 결합법칙과 역원을 가짐은 $n=1$인 경우, 곧 [§호모토피, §§Fundamental group](/ko/math/algebraic_topology/homotopy#fundamental-group){: data-relation="required" }에서와 같은 방식으로 확인된다. 뿐만 아니라 $n\geq 2$인 경우 곱을 정의하는 데 쓸 수 있는 좌표가 둘 이상이므로, 이른바 Eckmann-Hilton 논법에 의하여 $\pi_n(X,x_0)$은 abelian group이 된다. 즉 fundamental group과 달리 고차 homotopy group은 항상 commutative하다.
 
 이렇게 정의된 $\pi_n$은 fundamental group과 마찬가지로 base point를 갖는 공간들과 그 사이의 연속함수들에 대한 functor이며, path-connected space에서는 $x_0$의 선택에 의존하지 않는다. 이후 우리는 base point가 문맥에서 분명할 때 이를 생략하고 $\pi_n(X)$로 적기도 한다.
 
@@ -38,7 +38,7 @@ $$(f\ast g)(t_1,\ldots,t_n)=\begin{cases}f(2t_1,t_2,\ldots,t_n)&0\leq t_1\leq 1/
 
 ## Hurewicz theorem
 
-Homology group은 fundamental group보다 더 단순한 구조를 가지고 있다. 가령 $\pi_1(X)$는 일반적으로 abelian group일 필요가 없지만, $H_1(X)$는 그 정의에 의해 abelian group이다. 그러나 [§호몰로지, ⁋예시 8](/ko/math/algebraic_topology/homology#ex8)에서 살펴본 것처럼 $H_1(X)$의 원소들도 일단은 일종의 loop들처럼 생각할 수 있으므로 이들 사이의 관계를 기대하는 것이 자연스럽다.
+Homology group은 fundamental group보다 더 단순한 구조를 가지고 있다. 가령 $\pi_1(X)$는 일반적으로 abelian group일 필요가 없지만, $H_1(X)$는 그 정의에 의해 abelian group이다. 그러나 [§호몰로지, ⁋예시 8](/ko/math/algebraic_topology/homology#ex8){: data-relation="weak" }에서 살펴본 것처럼 $H_1(X)$의 원소들도 일단은 일종의 loop들처럼 생각할 수 있으므로 이들 사이의 관계를 기대하는 것이 자연스럽다.
 
 ::: 정리 2 (Hurewicz)
 Path-connected space $X$를 고정하자. 그럼 각각의 $n$에 대하여, group homomorphism
@@ -56,7 +56,7 @@ Hurewicz homomorphism $h_n$은 임의의 $f:S^n \rightarrow X$가 주어졌을 �
 
 ## 호모토피 올림 성질과 fibration
 
-Covering space에 대한 우리의 논의에서 가장 핵심적인 성질은 path와 그 homotopy를 위로 들어올릴 수 있다는 것이었다. ([§피복공간, ⁋보조정리 6](/ko/math/algebraic_topology/covering_spaces#lem6), [§피복공간, ⁋보조정리 7](/ko/math/algebraic_topology/covering_spaces#lem7)) 이 lifting property를 임의의 공간에 대한 homotopy로 일반화한 것이 fibration의 정의이며, covering map은 그 특수한 경우에 해당한다.
+Covering space에 대한 우리의 논의에서 가장 핵심적인 성질은 path와 그 homotopy를 위로 들어올릴 수 있다는 것이었다. ([§피복공간, ⁋보조정리 6](/ko/math/algebraic_topology/covering_spaces#lem6){: data-relation="weak" }, [§피복공간, ⁋보조정리 7](/ko/math/algebraic_topology/covering_spaces#lem7){: data-relation="weak" }) 이 lifting property를 임의의 공간에 대한 homotopy로 일반화한 것이 fibration의 정의이며, covering map은 그 특수한 경우에 해당한다.
 
 ::: 정의 3
 연속함수 $p:E\rightarrow B$가 공간 $X$에 대하여 *homotopy lifting property<sub>호모토피 올림 성질</sub>* (줄여서 HLP) 를 갖는다는 것은, 다음의 조건이 성립하는 것이다. 임의의 homotopy $g:X\times I\rightarrow B$와, $g_0=g\vert_{X\times\{0\}}$의 lifting $\widetilde{g}_0:X\rightarrow E$ (즉 $p\circ\widetilde{g}_0=g_0$) 가 주어질 때마다, $g$ 전체의 lifting $\widetilde{G}:X\times I\rightarrow E$가 존재하여 $p\circ\widetilde{G}=g$이고 $\widetilde{G}\vert_{X\times\{0\}}=\widetilde{g}_0$이도록 할 수 있다.
@@ -86,12 +86,12 @@ Fibration의 가장 풍부한 공급원은 locally trivial fiber bundle, 곧 밑
 이제 covering map이 fibration의 특수한 경우임을 확인한다.
 
 ::: 명제 6
-임의의 covering map $p:E\rightarrow B$ ([§피복공간, ⁋정의 3](/ko/math/algebraic_topology/covering_spaces#def3)) 는 Hurewicz fibration이며, 그 각각의 fiber $p^{-1}(b)$는 discrete space이다.
+임의의 covering map $p:E\rightarrow B$ ([§피복공간, ⁋정의 3](/ko/math/algebraic_topology/covering_spaces#def3){: data-relation="required" }) 는 Hurewicz fibration이며, 그 각각의 fiber $p^{-1}(b)$는 discrete space이다.
 :::
 ::: 증명
 Fiber가 discrete라는 것은 covering map의 정의에서 즉시 따라온다. $b\in B$의 evenly covered인 열린근방 $U$에 대하여 $p^{-1}(U)$는 $U$와 homeomorphic한 disjoint open set들의 합집합이므로, $p^{-1}(b)$는 이들 각각의 slice에서 정확히 한 점씩을 가지며 따라서 $E$의 부분공간으로서 discrete이다.
 
-HLP를 확인하자. Homotopy $g:X\times I\rightarrow B$와 초기 lifting $\widetilde{g}_0:X\rightarrow E$가 주어졌다 하자. 각각의 $x\in X$에 대하여, $t\mapsto g(x,t)$는 $g(x,0)=p(\widetilde{g}_0(x))$에서 시작하는 $B$의 path이다. [§피복공간, ⁋보조정리 6](/ko/math/algebraic_topology/covering_spaces#lem6)에 의하여 이 path는 $\widetilde{g}_0(x)$에서 시작하는 유일한 lifting을 가지므로, 이를 $t\mapsto\widetilde{G}(x,t)$로 정의하면 집합 사이의 함수로서 $\widetilde{G}:X\times I\rightarrow E$가 유일하게 결정되고 $p\circ\widetilde{G}=g$, $\widetilde{G}\vert_{X\times\{0\}}=\widetilde{g}_0$을 만족한다.
+HLP를 확인하자. Homotopy $g:X\times I\rightarrow B$와 초기 lifting $\widetilde{g}_0:X\rightarrow E$가 주어졌다 하자. 각각의 $x\in X$에 대하여, $t\mapsto g(x,t)$는 $g(x,0)=p(\widetilde{g}_0(x))$에서 시작하는 $B$의 path이다. [§피복공간, ⁋보조정리 6](/ko/math/algebraic_topology/covering_spaces#lem6){: data-relation="required" }에 의하여 이 path는 $\widetilde{g}_0(x)$에서 시작하는 유일한 lifting을 가지므로, 이를 $t\mapsto\widetilde{G}(x,t)$로 정의하면 집합 사이의 함수로서 $\widetilde{G}:X\times I\rightarrow E$가 유일하게 결정되고 $p\circ\widetilde{G}=g$, $\widetilde{G}\vert_{X\times\{0\}}=\widetilde{g}_0$을 만족한다.
 
 남은 것은 $\widetilde{G}$의 연속성이다. 한 점 $(x_0,t_0)$ 근방에서 이를 보이자. $g(x_0,t_0)$의 evenly covered인 열린근방 $U$를 택하고, $p^{-1}(U)$의 slice들 중 $\widetilde{G}(x_0,t_0)$을 포함하는 것을 $V$라 하자. Path lifting의 유일성에 의하여 $t$가 속하는 slice는 연속적으로 변하므로, $g$의 연속성으로부터 $(x_0,t_0)$의 적당한 근방이 $\widetilde{G}$에 의해 $V$로 보내지며, 이 근방 위에서 $\widetilde{G}=(p\vert_V)^{-1}\circ g$가 성립하여 연속이다. $I$의 콤팩트성을 이용해 이 국소적 논의를 이어 붙이면 $\widetilde{G}$ 전체의 연속성을 얻는다.
 :::
@@ -100,7 +100,7 @@ HLP를 확인하자. Homotopy $g:X\times I\rightarrow B$와 초기 lifting $\wid
 
 ## 상대 호모토피 군과 연결 사상
 
-Fibration의 exact sequence를 얻기 위한 다리로서, 우리는 공간의 쌍 $(X,A)$에 대한 relative homotopy group을 도입한다. 이는 [§호몰로지의 계산, ⁋정의 1](/ko/math/algebraic_topology/computation_of_homology#def1)의 relative homology에 대응하는 homotopy 쪽의 개념이다.
+Fibration의 exact sequence를 얻기 위한 다리로서, 우리는 공간의 쌍 $(X,A)$에 대한 relative homotopy group을 도입한다. 이는 [§호몰로지의 계산, ⁋정의 1](/ko/math/algebraic_topology/computation_of_homology#def1){: data-relation="weak" }의 relative homology에 대응하는 homotopy 쪽의 개념이다.
 
 $I^{n-1}=I^{n-1}\times\{0\}\subseteq I^n$을 $I^n$의 한 face로 보고, $J^{n-1}$을 $\partial I^n$에서 이 face를 뺀 나머지 face들의 합집합의 closure라 하자. 즉 $\partial I^n=I^{n-1}\cup J^{n-1}$이며 이 둘은 $\partial I^{n-1}$을 따라 만난다.
 
@@ -112,7 +112,7 @@ $$f:(I^n,\partial I^n,J^{n-1})\rightarrow(X,A,x_0),$$
 곧 $\partial I^n$을 $A$로, $J^{n-1}$을 $x_0$으로 보내는 연속함수들의 (같은 형태의 조건을 유지하는) homotopy equivalence class들의 집합을 쌍 $(X,A)$의 *relative homotopy group<sub>상대 호모토피 군</sub>* $\pi_n(X,A,x_0)$이라 부른다.
 :::
 
-정의에서 $f$는 남은 face $I^{n-1}$을 $A$로 보내지만 반드시 $x_0$으로 보내지는 않는다. $\pi_n(X,A,x_0)$은 $n\geq 2$에 대하여 [정의 1](#def1)에서와 같은 방식의 곱으로 group이 되며, $n\geq 3$이면 abelian group이다. $n=1$인 경우에는 일반적으로 base point를 가진 집합일 뿐이다. 특별히 $A=\{x_0\}$인 경우, 조건 "$\partial I^n$을 $A=\{x_0\}$으로 보낸다"는 [정의 1](#def1)의 조건과 같아지므로
+정의에서 $f$는 남은 face $I^{n-1}$을 $A$로 보내지만 반드시 $x_0$으로 보내지는 않는다. $\pi_n(X,A,x_0)$은 $n\geq 2$에 대하여 [정의 1](#def1){: data-relation="required" }에서와 같은 방식의 곱으로 group이 되며, $n\geq 3$이면 abelian group이다. $n=1$인 경우에는 일반적으로 base point를 가진 집합일 뿐이다. 특별히 $A=\{x_0\}$인 경우, 조건 "$\partial I^n$을 $A=\{x_0\}$으로 보낸다"는 [정의 1](#def1){: data-relation="required" }의 조건과 같아지므로
 
 $$\pi_n(X,\{x_0\},x_0)=\pi_n(X,x_0)$$
 
@@ -145,7 +145,7 @@ $\pi_{n-1}(A)$에서의 완전성, 곧 $\im\partial=\ker i_\ast$을 보자. $[f]
 각 단계에서 사용한 변형이 쌍의 조건과 base point를 유지함을 확인하는 것은 기술적이지만 직접적이며, 자세한 내용은 [Hat]의 정리 4.3에 있다.
 :::
 
-이 exact sequence는 [§호몰로지의 계산, ⁋정의 1](/ko/math/algebraic_topology/computation_of_homology#def1)에서 relative homology가 이루는 long exact sequence의 homotopy 판본이다. 우리의 전략은 fibration $p:E\rightarrow B$에 대하여 쌍 $(E,F)$의 이 exact sequence를 취한 뒤, 상대항 $\pi_n(E,F)$를 밑공간의 절대 homotopy group $\pi_n(B)$으로 바꾸는 것이다. 이 교체를 가능하게 하는 것이 다음의 보조정리이며, HLP가 결정적으로 쓰이는 곳이다.
+이 exact sequence는 [§호몰로지의 계산, ⁋정의 1](/ko/math/algebraic_topology/computation_of_homology#def1){: data-relation="weak" }에서 relative homology가 이루는 long exact sequence의 homotopy 판본이다. 우리의 전략은 fibration $p:E\rightarrow B$에 대하여 쌍 $(E,F)$의 이 exact sequence를 취한 뒤, 상대항 $\pi_n(E,F)$를 밑공간의 절대 homotopy group $\pi_n(B)$으로 바꾸는 것이다. 이 교체를 가능하게 하는 것이 다음의 보조정리이며, HLP가 결정적으로 쓰이는 곳이다.
 
 ::: 보조정리 9
 $p:E\rightarrow B$가 Serre fibration이고, $b_0\in B$, $F=p^{-1}(b_0)$, $e_0\in F$라 하자. 그럼 $p$가 유도하는 준동형
@@ -180,18 +180,18 @@ $$\cdots\rightarrow\pi_1(B,b_0)\overset{\partial}{\longrightarrow}\pi_0(F)\right
 으로 끝난다. 여기에서 $i:F\hookrightarrow E$는 inclusion이고, 낮은 항에서는 base point를 가진 집합들의 exact sequence로 이해한다.
 :::
 ::: 증명
-쌍 $(E,F)$에 [명제 8](#prop8)을 적용하면 exact sequence
+쌍 $(E,F)$에 [명제 8](#prop8){: data-relation="required" }을 적용하면 exact sequence
 
 $$\cdots\rightarrow\pi_n(F,e_0)\overset{i_\ast}{\longrightarrow}\pi_n(E,e_0)\overset{j_\ast}{\longrightarrow}\pi_n(E,F,e_0)\overset{\partial}{\longrightarrow}\pi_{n-1}(F,e_0)\rightarrow\cdots$$
 
-을 얻는다. 이제 [보조정리 9](#lem9)의 isomorphism $p_\ast:\pi_n(E,F,e_0)\overset{\cong}{\rightarrow}\pi_n(B,b_0)$을 이용하여 각 상대항 $\pi_n(E,F,e_0)$을 $\pi_n(B,b_0)$으로 대체한다. Exact sequence의 한 항을 그것과 isomorphic한 항으로, morphism들과 가환하도록 바꾸면 완전성은 보존되므로, 남은 것은 두 morphism이 어떻게 바뀌는지를 확인하는 것뿐이다.
+을 얻는다. 이제 [보조정리 9](#lem9){: data-relation="required" }의 isomorphism $p_\ast:\pi_n(E,F,e_0)\overset{\cong}{\rightarrow}\pi_n(B,b_0)$을 이용하여 각 상대항 $\pi_n(E,F,e_0)$을 $\pi_n(B,b_0)$으로 대체한다. Exact sequence의 한 항을 그것과 isomorphic한 항으로, morphism들과 가환하도록 바꾸면 완전성은 보존되므로, 남은 것은 두 morphism이 어떻게 바뀌는지를 확인하는 것뿐이다.
 
 우선 $\pi_n(E)\rightarrow\pi_n(E,F)\overset{p_\ast}{\rightarrow}\pi_n(B)$의 합성을 보면, $f:(I^n,\partial I^n)\rightarrow(E,e_0)$에 대하여 $j_\ast[f]$는 $f$를 쌍의 원소로 본 것이고 여기에 $p_\ast$를 취하면 $[p\circ f]$이다. 이는 곧 $p:E\rightarrow B$가 유도하는 절대 준동형 $p_\ast:\pi_n(E)\rightarrow\pi_n(B)$과 같다. 즉 $j_\ast$ 자리에는 $p_\ast$가 온다. 다음으로 상대항의 connecting homomorphism $\partial:\pi_n(E,F)\rightarrow\pi_{n-1}(F)$은 대체 후 $\partial\circ(p_\ast)^{-1}:\pi_n(B)\rightarrow\pi_{n-1}(F)$이 되며, 이것이 정리에서 말하는 $\partial$이다. 이로써 원하는 exact sequence를 얻는다.
 
-수열이 $\pi_0(F)\rightarrow\pi_0(E)$에서 끝나는 것은 [명제 8](#prop8)의 쌍의 exact sequence가 그 지점에서 끝나기 때문이다. $B$가 path-connected라는 가정은 $\pi_0(B)$가 자명하여 마지막 $\pi_0$ 항들의 완전성이 올바르게 해석됨을 보장한다.
+수열이 $\pi_0(F)\rightarrow\pi_0(E)$에서 끝나는 것은 [명제 8](#prop8){: data-relation="required" }의 쌍의 exact sequence가 그 지점에서 끝나기 때문이다. $B$가 path-connected라는 가정은 $\pi_0(B)$가 자명하여 마지막 $\pi_0$ 항들의 완전성이 올바르게 해석됨을 보장한다.
 :::
 
-정리의 exact sequence에서 세 종류의 morphism이 등장한다. $i_\ast$는 fiber의 loop를 전공간의 loop로 포함시키는 것이고, $p_\ast$는 전공간의 함수를 밑공간으로 밀어내리는 것이며, connecting homomorphism $\partial$은 밑공간의 $n$차원 원소를 fiber의 $(n-1)$차원 원소로 떨어뜨리는 것이다. 특히 $\partial$은 [보조정리 9](#lem9)에 의해 밑공간의 원소를 전공간으로 들어올린 뒤 그 경계면이 fiber에 남긴 흔적을 취하는 것으로 이해할 수 있으며, 이것이 이 exact sequence가 계산에서 위력을 발휘하는 근본적인 이유이다. 가령 전공간의 homotopy가 모두 자명하다면 $\partial$이 isomorphism이 되어 밑공간과 fiber의 homotopy group이 한 차원 차이로 맞물리게 된다.
+정리의 exact sequence에서 세 종류의 morphism이 등장한다. $i_\ast$는 fiber의 loop를 전공간의 loop로 포함시키는 것이고, $p_\ast$는 전공간의 함수를 밑공간으로 밀어내리는 것이며, connecting homomorphism $\partial$은 밑공간의 $n$차원 원소를 fiber의 $(n-1)$차원 원소로 떨어뜨리는 것이다. 특히 $\partial$은 [보조정리 9](#lem9){: data-relation="required" }에 의해 밑공간의 원소를 전공간으로 들어올린 뒤 그 경계면이 fiber에 남긴 흔적을 취하는 것으로 이해할 수 있으며, 이것이 이 exact sequence가 계산에서 위력을 발휘하는 근본적인 이유이다. 가령 전공간의 homotopy가 모두 자명하다면 $\partial$이 isomorphism이 되어 밑공간과 fiber의 homotopy group이 한 차원 차이로 맞물리게 된다.
 
 ## 예시
 
@@ -206,7 +206,7 @@ $$PB=\{\gamma:I\rightarrow B\mid \gamma(0)=b_0\}$$
 
 $$H(\gamma,s)(t)=\gamma\bigl((1-s)t\bigr)$$
 
-이 항등함수에서 상수 path $c_{b_0}$으로의 homotopy를 준다. 따라서 모든 $n$에 대하여 $\pi_n(PB)=0$이다. 이제 [정리 10](#thm10)의 exact sequence
+이 항등함수에서 상수 path $c_{b_0}$으로의 homotopy를 준다. 따라서 모든 $n$에 대하여 $\pi_n(PB)=0$이다. 이제 [정리 10](#thm10){: data-relation="required" }의 exact sequence
 
 $$\pi_n(PB)\overset{p_\ast}{\longrightarrow}\pi_n(B)\overset{\partial}{\longrightarrow}\pi_{n-1}(\Omega B)\longrightarrow\pi_{n-1}(PB)$$
 
@@ -218,7 +218,7 @@ $$\pi_n(\Omega B)\cong\pi_{n+1}(B)$$
 :::
 
 ::: 예시 12 (피복사상)
-[명제 6](#prop6)에 의하여 covering map $p:E\rightarrow B$는 fibration이고 그 fiber $F$는 discrete space이다. Discrete space의 각 성분은 한 점이므로 $\pi_n(F)=0$이 모든 $n\geq 1$에 대하여 성립하고, $\pi_0(F)$는 fiber의 점들의 집합이다. 이를 [정리 10](#thm10)의 exact sequence에 대입하면, $n\geq 2$인 부분에서
+[명제 6](#prop6){: data-relation="required" }에 의하여 covering map $p:E\rightarrow B$는 fibration이고 그 fiber $F$는 discrete space이다. Discrete space의 각 성분은 한 점이므로 $\pi_n(F)=0$이 모든 $n\geq 1$에 대하여 성립하고, $\pi_0(F)$는 fiber의 점들의 집합이다. 이를 [정리 10](#thm10){: data-relation="required" }의 exact sequence에 대입하면, $n\geq 2$인 부분에서
 
 $$0=\pi_n(F)\rightarrow\pi_n(E)\overset{p_\ast}{\longrightarrow}\pi_n(B)\rightarrow\pi_{n-1}(F)=0$$
 
@@ -226,7 +226,7 @@ $$0=\pi_n(F)\rightarrow\pi_n(E)\overset{p_\ast}{\longrightarrow}\pi_n(B)\rightar
 
 $$0=\pi_1(F)\rightarrow\pi_1(E)\overset{p_\ast}{\longrightarrow}\pi_1(B)\overset{\partial}{\longrightarrow}\pi_0(F)\rightarrow\pi_0(E)$$
 
-은 $p_\ast:\pi_1(E)\rightarrow\pi_1(B)$이 injective임을 주며, $\partial:\pi_1(B)\rightarrow\pi_0(F)$은 $\pi_1(B,b_0)$이 fiber $F=p^{-1}(b_0)$에 작용하는 monodromy를 나타낸다. 이는 covering space 이론에서 알려진 $\pi_1$의 단사성과 fiber 위의 $\pi_1$-monodromy action([§피복공간, ⁋따름정리 12](/ko/math/algebraic_topology/covering_spaces#cor12) 부근에서 논의되는 Galois 대응의 밑바탕이 되는 사실들)에 대응하는 exact sequence 판본이다.
+은 $p_\ast:\pi_1(E)\rightarrow\pi_1(B)$이 injective임을 주며, $\partial:\pi_1(B)\rightarrow\pi_0(F)$은 $\pi_1(B,b_0)$이 fiber $F=p^{-1}(b_0)$에 작용하는 monodromy를 나타낸다. 이는 covering space 이론에서 알려진 $\pi_1$의 단사성과 fiber 위의 $\pi_1$-monodromy action([§피복공간, ⁋따름정리 12](/ko/math/algebraic_topology/covering_spaces#cor12){: data-relation="weak" } 부근에서 논의되는 Galois 대응의 밑바탕이 되는 사실들)에 대응하는 exact sequence 판본이다.
 
 특히 universal cover $\mathbb{R}\rightarrow S^1$을 생각하면, $\mathbb{R}$이 contractible이므로 $\pi_n(\mathbb{R})=0$이고 따라서
 
@@ -257,32 +257,32 @@ $$S^3=\{(z_0,z_1)\in\mathbb{C}^2: \lvert z_0\rvert^2+\lvert z_1\rvert^2=1\}$$
 
 $$p:S^3\rightarrow\mathbb{CP}^1\cong S^2;\qquad (z_0,z_1)\mapsto[z_0:z_1]$$
 
-를 생각하자. 이를 *Hopf fibration*이라 부른다. 한 점 $[z_0:z_1]$ 위의 fiber는 $\{(\lambda z_0,\lambda z_1): \lambda\in\mathbb{C}, \lvert\lambda\rvert=1\}$이며 이는 $S^1$과 homeomorphic하다. $p$는 locally trivial fiber bundle이므로 Serre fibration이고 ([참고 5](#rmk5)), 따라서 우리는 fibration $S^1\rightarrow S^3\rightarrow S^2$을 얻는다.
+를 생각하자. 이를 *Hopf fibration*이라 부른다. 한 점 $[z_0:z_1]$ 위의 fiber는 $\{(\lambda z_0,\lambda z_1): \lambda\in\mathbb{C}, \lvert\lambda\rvert=1\}$이며 이는 $S^1$과 homeomorphic하다. $p$는 locally trivial fiber bundle이므로 Serre fibration이고 ([참고 5](#rmk5){: data-relation="required" }), 따라서 우리는 fibration $S^1\rightarrow S^3\rightarrow S^2$을 얻는다.
 
-[정리 10](#thm10)의 exact sequence에서 $n=3$ 주변을 보면
+[정리 10](#thm10){: data-relation="required" }의 exact sequence에서 $n=3$ 주변을 보면
 
 $$\pi_3(S^1)\rightarrow\pi_3(S^3)\overset{p_\ast}{\longrightarrow}\pi_3(S^2)\overset{\partial}{\longrightarrow}\pi_2(S^1)$$
 
-이다. [예시 12](#ex12)에 의하여 $\pi_3(S^1)=\pi_2(S^1)=0$이므로, $p_\ast:\pi_3(S^3)\rightarrow\pi_3(S^2)$은 isomorphism이다. 즉
+이다. [예시 12](#ex12){: data-relation="required" }에 의하여 $\pi_3(S^1)=\pi_2(S^1)=0$이므로, $p_\ast:\pi_3(S^3)\rightarrow\pi_3(S^2)$은 isomorphism이다. 즉
 
 $$\pi_3(S^2)\cong\pi_3(S^3)$$
 
-이다. 이제 오른쪽 항을 계산하자. [명제 13](#prop13)에 의하여 $\pi_1(S^3)=\pi_2(S^3)=0$이므로, [정리 2](#thm2)에 의하여 Hurewicz 준동형
+이다. 이제 오른쪽 항을 계산하자. [명제 13](#prop13){: data-relation="required" }에 의하여 $\pi_1(S^3)=\pi_2(S^3)=0$이므로, [정리 2](#thm2){: data-relation="required" }에 의하여 Hurewicz 준동형
 
 $$h_3:\pi_3(S^3)\rightarrow H_3(S^3)$$
 
-이 isomorphism이다. 한편 [§호몰로지의 계산, ⁋명제 7](/ko/math/algebraic_topology/computation_of_homology#prop7)의 Mayer-Vietoris exact sequence를 $S^3$을 두 반구로 덮어 적용하는 표준적 계산으로 $H_3(S^3)\cong\mathbb{Z}$를 얻는다. 따라서
+이 isomorphism이다. 한편 [§호몰로지의 계산, ⁋명제 7](/ko/math/algebraic_topology/computation_of_homology#prop7){: data-relation="required" }의 Mayer-Vietoris exact sequence를 $S^3$을 두 반구로 덮어 적용하는 표준적 계산으로 $H_3(S^3)\cong\mathbb{Z}$를 얻는다. 따라서
 
 $$\pi_3(S^2)\cong\pi_3(S^3)\cong H_3(S^3)\cong\mathbb{Z}$$
 
 이다. 이는 대단히 비자명한 결과인데, 정의역 $S^3$의 차원이 공역 $S^2$보다 높음에도 $\pi_3(S^2)$이 자명하지 않으며, 더구나 무한군임을 말해주기 때문이다. 그 generator는 Hopf fibration $p$ 자신의 homotopy class로 주어진다.
 :::
 
-이 예시는 [명제 13](#prop13)가 주는 $\pi_i(S^n)=0$ ($i<n$) 이라는 소극적 정보 너머에서 구의 homotopy group이 얼마나 복잡할 수 있는지를 보여준다. 실제로 이러한 fibration을 겹겹이 쌓아 얻는 계산을 체계화하면, 밑공간과 fiber의 homology로부터 전공간의 homology (그리고 homotopy) 를 근사하는 강력한 장치인 Serre spectral sequence에 이르게 되며, 이것이 고차 homotopy group에 대한 현대적 계산의 출발점이 된다.
+이 예시는 [명제 13](#prop13){: data-relation="weak" }가 주는 $\pi_i(S^n)=0$ ($i<n$) 이라는 소극적 정보 너머에서 구의 homotopy group이 얼마나 복잡할 수 있는지를 보여준다. 실제로 이러한 fibration을 겹겹이 쌓아 얻는 계산을 체계화하면, 밑공간과 fiber의 homology로부터 전공간의 homology (그리고 homotopy) 를 근사하는 강력한 장치인 Serre spectral sequence에 이르게 되며, 이것이 고차 homotopy group에 대한 현대적 계산의 출발점이 된다.
 
 ## Serre spectral sequence
 
-이 계산을 체계화하는 장치가 Serre spectral sequence로, 밑공간과 fiber의 cohomology에서 출발하여 전공간의 cohomology를 근사해 나가는 [\[호몰로지 대수학\] §스펙트럼 열, ⁋정의 1](/ko/math/homological_algebra/spectral_sequences#def1)의 spectral sequence이다. 우리는 이 글에서 이를 증명 없이 서술하고 그 구성의 출처만 밝힌다.
+이 계산을 체계화하는 장치가 Serre spectral sequence로, 밑공간과 fiber의 cohomology에서 출발하여 전공간의 cohomology를 근사해 나가는 [\[호몰로지 대수학\] §스펙트럼 열, ⁋정의 1](/ko/math/homological_algebra/spectral_sequences#def1){: data-relation="required" }의 spectral sequence이다. 우리는 이 글에서 이를 증명 없이 서술하고 그 구성의 출처만 밝힌다.
 
 ::: 정리 15 (Serre spectral sequence)
 Serre fibration $F\rightarrow E\overset{\pi}{\rightarrow}B$에서 $B$가 path-connected이고 $\pi_1(B)$이 $H^\bullet(F;\mathbb{Z})$에 자명하게 작용한다 하자. (가령 $B$가 simply connected이면 그러하다.) 그럼 first-quadrant cohomological spectral sequence $\{E_r^{p,q}, d_r\}$이 존재하여
@@ -292,9 +292,9 @@ $$E_2^{p,q}=H^p\bigl(B;H^q(F;\mathbb{Z})\bigr)$$
 이고, 미분은 $d_r:E_r^{p,q}\rightarrow E_r^{p+r,q-r+1}$의 형태이며, 이 spectral sequence는 전공간의 cohomology에 수렴한다. 곧 $E_2^{p,q}\Rightarrow H^{p+q}(E;\mathbb{Z})$이다.
 :::
 
-$E_2$-page는 밑공간의 cohomology를 fiber의 cohomology를 계수로 삼아 적은 것이다. 만일 모든 미분 $d_r$이 소멸한다면 $E_2=E_\infty$가 되어 전공간의 cohomology가 $H^\bullet(B)$와 $H^\bullet(F)$의 tensor product처럼 나타나는데, 이는 [§코호몰로지, ⁋따름정리 10](/ko/math/algebraic_topology/cohomology#cor10)이 곱공간 $B\times F$에 대해 주던 결론의 뒤틀린 fibration 판본이다. 일반적으로는 미분들이 이 곱을 보정하며, 그 보정을 누적한 것이 전공간의 cohomology를 준다. [정리 15](#thm15)에서 수렴이 뜻하는 바는 [\[호몰로지 대수학\] §스펙트럼 열, ⁋정의 5](/ko/math/homological_algebra/spectral_sequences#def5)에서와 같이 $H^n(E)$ 위의 filtration의 associated graded가 $\bigoplus_{p+q=n}E_\infty^{p,q}$이라는 것이다.
+$E_2$-page는 밑공간의 cohomology를 fiber의 cohomology를 계수로 삼아 적은 것이다. 만일 모든 미분 $d_r$이 소멸한다면 $E_2=E_\infty$가 되어 전공간의 cohomology가 $H^\bullet(B)$와 $H^\bullet(F)$의 tensor product처럼 나타나는데, 이는 [§코호몰로지, ⁋따름정리 10](/ko/math/algebraic_topology/cohomology#cor10){: data-relation="weak" }이 곱공간 $B\times F$에 대해 주던 결론의 뒤틀린 fibration 판본이다. 일반적으로는 미분들이 이 곱을 보정하며, 그 보정을 누적한 것이 전공간의 cohomology를 준다. [정리 15](#thm15){: data-relation="required" }에서 수렴이 뜻하는 바는 [\[호몰로지 대수학\] §스펙트럼 열, ⁋정의 5](/ko/math/homological_algebra/spectral_sequences#def5){: data-relation="weak" }에서와 같이 $H^n(E)$ 위의 filtration의 associated graded가 $\bigoplus_{p+q=n}E_\infty^{p,q}$이라는 것이다.
 
-이 spectral sequence는 전공간의 singular cochain complex를 밑공간의 skeleton들의 preimage로 여과하여 얻은 filtered complex에 [\[호몰로지 대수학\] §스펙트럼 열, ⁋명제 10](/ko/math/homological_algebra/spectral_sequences#prop10)을 적용하여 얻어지며, 비자명한 부분은 그 $E_2$-page가 위와 같이 밑공간의 cohomology로 식별된다는 데 있다. 밑공간이 단순연결이 아닐 때에는 $\pi_1(B)$의 action을 담는 국소계수계로 $E_2$를 적어야 한다. 자세한 구성은 [May]와 [tD]에 있다.
+이 spectral sequence는 전공간의 singular cochain complex를 밑공간의 skeleton들의 preimage로 여과하여 얻은 filtered complex에 [\[호몰로지 대수학\] §스펙트럼 열, ⁋명제 10](/ko/math/homological_algebra/spectral_sequences#prop10){: data-relation="required" }을 적용하여 얻어지며, 비자명한 부분은 그 $E_2$-page가 위와 같이 밑공간의 cohomology로 식별된다는 데 있다. 밑공간이 단순연결이 아닐 때에는 $\pi_1(B)$의 action을 담는 국소계수계로 $E_2$를 적어야 한다. 자세한 구성은 [May]와 [tD]에 있다.
 
 --- 
 
