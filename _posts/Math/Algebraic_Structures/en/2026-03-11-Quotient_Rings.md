@@ -90,7 +90,7 @@ so $\alpha x\in\pi^{-1}(\bar{\mathfrak{b}})$, and thus $\pi^{-1}(\bar{\mathfrak{
 
 $$\pi(\alpha)\pi(x)=\pi(\alpha x)\in\pi(\mathfrak{b})$$
 
-from which we can verify that $\bar{\mathfrak{b}}$ is closed under left multiplication. The case of right multiplication can be shown in the same way, and hence these are two-sided ideals.
+from which we can verify that $\pi(\mathfrak{b})$ is closed under left multiplication. The case of right multiplication can be shown in the same way, and hence these are two-sided ideals.
 :::
 
 ---
