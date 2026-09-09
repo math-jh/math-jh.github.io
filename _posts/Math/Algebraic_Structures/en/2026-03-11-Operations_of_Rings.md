@@ -1,7 +1,7 @@
 ---
 title: "Products, Coproducts, and Tensor Products of Rings"
 description: "We define products and coproducts of rings categorically, show that the category of rings is complete, and discuss the structure of tensor products."
-excerpt: "Categorical definitions of ring products, coproducts, and tensor products"
+excerpt: "Definitions of products, coproducts, and tensor products of rings"
 
 categories: [Math / Algebraic Structures]
 permalink: /en/math/algebraic_structures/operations_of_rings
@@ -12,60 +12,63 @@ date: 2024-08-10
 weight: 103
 translated_at: 2026-08-18T09:15:04+00:00
 translation_source: kimi-cli
-last_polished_at: 2026-08-18T09:15:04+00:00
+last_polished_at: 2026-09-09T15:15:05+00:00
+translation_polish_source: antigravity-gemini-3.8-flash-high
 ---
 Now we define products and coproducts of rings.
 
 ## Products of Rings
 
-The product of rings can be defined without difficulty. Let a family of rings $(A_i)_{i\in I}$ be given. Then the product of abelian groups $\prod_{i\in I}A_i$ is well-defined. On the other hand, the multiplication structure $\mu_i: A_i\otimes A_i \rightarrow A_i$ on $A_i$ is the same as a bilinear map $A_i\times A_i \rightarrow A_i$, and through this we can define a function between sets
+The product of rings can be defined without difficulty. Let a family of rings $(A_i)_{i\in I}$ be given. Then the product of abelian groups $\prod_{i\in I}A_i$ is well-defined. On the other hand, $\mu_i: A_i\otimes A_i \rightarrow A_i$ giving the multiplication structure on $A_i$ is the same as a bilinear map $A_i\times A_i \rightarrow A_i$, through which a function between sets
 
-$$\left(\prod_{i\in I} A_i\right)\times\left(\prod_{i\in I} A_i\right) \cong \prod_{i\in I} (A_i\times A_i) \overset{\prod \mu_i}{\longrightarrow} \prod_{i\in I}A_i.$$
+$$\left(\prod_{i\in I} A_i\right)\times\left(\prod_{i\in I} A_i\right) \cong \prod_{i\in I} (A_i\times A_i) \overset{\prod \mu_i}{\longrightarrow} \prod_{i\in I}A_i$$
+
+can be defined.
 
 ::: Proposition 1
 The function defined above is a bilinear map from the abelian group $\left(\prod A_i\right)\times\left(\prod A_i\right)$ to $\prod A_i$, and therefore induces an abelian group homomorphism $\left(\prod A_i\right)\otimes\left(\prod A_i\right) \rightarrow \prod A_i$.
 :::
 ::: Proof
-Writing the above function explicitly in terms of elements, elements of $\prod A_i$ are tuples $(\alpha_i)_{i\in I}$, and for two elements $(\alpha_i)_{i\in I}, (\beta_i)_{i\in I}\in \prod A_i$, the result of applying the above function to these two is given by
+If we express the above function directly in terms of elements, the elements of $\prod A_i$ are of the form of tuples $(\alpha_i)_{i\in I}$, and for two elements $(\alpha_i)_{i\in I}, (\beta_i)_{i\in I}\in \prod A_i$, the result of applying the above function to these two gives multiplication via
 
 $$(\alpha_i)_{i\in I}(\beta_i)_{i\in I}=(\alpha_i\beta_i)_{i\in I}$$
 
-so that multiplication is defined. That is, the given function multiplies two elements componentwise. Now bilinearity can also be checked componentwise.
+That is, the given function multiplies two elements componentwise. Now bilinearity can also be checked componentwise.
 :::
 
-Through this, $\prod A_i$ also carries a ring structure. Here, the additive identity of this ring is the element all of whose components are $0$, and the multiplicative identity is the element all of whose components are $1$. On the other hand, for any two ring homomorphisms $\phi,\psi:A \rightarrow B$,
+Through this, $\prod A_i$ also carries a ring structure. Here, the additive identity of this ring is the element all of whose components are $0$, and the multiplicative identity is the element all of whose components are $1$. On the other hand, for any two ring homomorphisms $\phi,\psi:A \rightarrow B$, if we define
 
 $$\Eq(\phi,\psi)=\{\alpha\in A\mid \phi(\alpha)=\psi(\alpha)\}$$
 
-is a subgroup of $A$ by [\[Algebraic Structures\] §Group Homomorphisms, ⁋Proposition 2](/en/math/algebraic_structures/group_homomorphisms#prop2){: data-relation="required" }, and moreover for any $\alpha,\beta\in\Eq(\phi,\psi)$,
+this is a subgroup of $A$ by [§Group Homomorphisms, ⁋Proposition 2](/en/math/algebraic_structures/group_homomorphisms#prop2){: data-relation="required" }, and moreover, for any $\alpha,\beta\in\Eq(\phi,\psi)$, since
 
 $$\phi(\alpha\beta)=\phi(\alpha)\phi(\beta)=\psi(\alpha)\psi(\beta)=\psi(\alpha\beta)$$
 
-so $\alpha\beta\in\Eq(\phi,\psi)$, and also $\phi(1)=1=\psi(1)$ so $1\in\Eq(\phi,\psi)$. That is, $\Eq(\phi,\psi)$ is a subring of $A$, and this defines the equalizer of $\phi$ and $\psi$ in $\Ring$. From this, the following holds.
+we have $\alpha\beta\in\Eq(\phi,\psi)$, and also since $\phi(1)=1=\psi(1)$, we have $1\in\Eq(\phi,\psi)$. That is, $\Eq(\phi,\psi)$ is a subring of $A$, and this defines the equalizer of $\phi$ and $\psi$ in $\Ring$. From this, the following holds.
 
 ::: Theorem 2
-The category $\Ring$ is complete.
+The category $\Ring$ is complete. 
 :::
 
-On the other hand, one useful notion in $\Rng$ is the direct sum. Consider a family of rings $(A_i)_{i\in I}$. Among the elements of the direct product $\prod_{i\in I}A_i$, those that are finitely supported (that is, all but finitely many components are $0$) are closed under addition and multiplication and form a subobject of $\prod A_i$ in $\Rng$. (The sum and product of two finitely supported families are still finitely supported.) This is called the following.
+On the other hand, one useful notion in $\Rng$ is the direct sum. Consider a family of rings $(A_i)_{i\in I}$. Among the elements of the direct product $\prod_{i\in I}A_i$, the collection of those that are $0$ except for finitely many components, that is, finitely supported families, is closed under addition and multiplication and forms a subobject of $\prod A_i$ in $\Rng$. (The sum and product of two finitely supported families are still finitely supported.) We call this the following.
 
 ::: Definition 3
 For a family of rings $(A_i)_{i\in I}$, the collection of finitely supported elements of the direct product $\prod_{i\in I}A_i$ is called the *direct sum* of rings and is written $\bigoplus_{i\in I} A_i$.
 :::
 
-This is exactly the same in spirit as the direct sum defined for abelian groups in [\[Algebraic Structures\] §Abelian Groups, ⁋Definition 2](/en/math/algebraic_structures/abelian_groups#def2){: data-relation="weak" }. However, if all $A_i$ are nonzero and the index set $I$ is infinite, then the direct sum $\bigoplus A_i$ does not contain the identity element $(1)_{i\in I}$, so it is not a (unital) ring; because of this, this notion is mainly used in $\Rng$. Conversely, when $I$ is a finite set, the direct sum coincides exactly with the direct product by definition.
+This is in exactly the same spirit as the direct sum defined for abelian groups in [\[Algebraic Structures\] §Abelian Groups, ⁋Definition 2](/en/math/algebraic_structures/abelian_groups#def2){: data-relation="weak" }. However, if all $A_i$ are nonzero and the index set $I$ is infinite, then the direct sum $\bigoplus A_i$ does not contain the identity element $(1)_{i\in I}$, so it is not a (unital) ring; because of this, this notion is mainly used in $\Rng$. Conversely, when $I$ is a finite set, the direct sum coincides exactly with the direct product by definition.
 
 In the case of abelian groups the direct sum is the coproduct ([\[Algebraic Structures\] §Abelian Groups, ⁋Theorem 1](/en/math/algebraic_structures/abelian_groups#thm1){: data-relation="weak" }), but in (non-commutative) rings the direct sum is not the coproduct. This is analogous to the situation in non-abelian groups, where the direct sum is not the coproduct either, and therefore the coproduct of rings must be defined separately.
 
 ## Coproducts of Rings
 
-Defining the coproduct of rings, however, requires a little effort. This is essentially because the multiplication operation of a ring is not commutative, and there was a similar problem when defining the coproduct in $\Grp$. To overcome this, we had to define the free product in a rather tedious way in [§Free Products](/en/math/algebraic_structures/free_products){: data-relation="required" }. In rings, the coproduct can be defined in the same manner, but since its construction repeats that of the free product verbatim, we omit it here.
+On the other hand, defining the coproduct of rings requires a little effort. This is essentially because, as pointed out above, the multiplication operation of a ring is not commutative, and there was a similar problem when defining the coproduct in $\Grp$. To overcome this, we had to define the free product in a rather tedious way in [§Free Product](/en/math/algebraic_structures/free_products){: data-relation="required" }. In rings, the coproduct can be defined in the same manner, but since its construction repeats that of the free product verbatim, we omit it here.
 
 ::: Proposition 4
 For any family of rings $(A_i)_{i\in I}$, their coproduct exists.
 :::
 
-On the other hand, let any two ring homomorphisms $\phi,\psi:A \rightarrow B$ be given. Let $\mathfrak{b}$ be the two-sided ideal of $B$ generated by the elements $\phi(\alpha)-\psi(\alpha)$; then $B/\mathfrak{b}$ is well-defined. The same proof as in [\[Algebraic Structures\] §Group Homomorphisms, ⁋Proposition 8](/en/math/algebraic_structures/isomorphism_theorems#prop8){: data-relation="required" } then shows that the following holds.
+On the other hand, let any two ring homomorphisms $\phi,\psi:A \rightarrow B$ be given. Let $\mathfrak{b}$ be the two-sided ideal of $B$ generated by the elements $\phi(\alpha)-\psi(\alpha)$; then $B/\mathfrak{b}$ is well-defined. The same proof as in [\[Algebraic Structures\] §Group Isomorphisms, ⁋Proposition 8](/en/math/algebraic_structures/isomorphism_theorems#prop8){: data-relation="required" } then shows that the following holds.
 
 ::: Proposition 5
 In the above situation, $\CoEq(\phi,\psi)=B/\mathfrak{b}$ defines the coequalizer of $\phi,\psi$.
@@ -79,9 +82,9 @@ The category $\Ring$ is a bicomplete category.
 
 ## Tensor Products of Rings
 
-Finally, we define the tensor product $\otimes$ in $\Ring$. For this, it suffices to define a multiplication structure on the abelian group $A\otimes B$ for any two rings $A,B$, that is, an abelian group homomorphism
+Finally, we define the tensor product $\otimes$ in $\Ring$. For this, it suffices to define a multiplication structure on the abelian group $A\otimes B$ for any two rings $A,B$, that is, the following abelian group homomorphism:
 
-$$(A\otimes B)\otimes(A\otimes B) \rightarrow A\otimes B.$$
+$$(A\otimes B)\otimes(A\otimes B) \rightarrow A\otimes B$$
 
 However, by the associativity and commutativity of the tensor product,
 
@@ -89,17 +92,17 @@ $$(A\otimes B)\otimes(A\otimes B)\cong (A\otimes A)\otimes (B\otimes B)$$
 
 holds, and therefore $\mu_A:A\otimes A \rightarrow A$ and $\mu_B: B\otimes B \rightarrow B$ define a multiplication on $A\otimes B$:
 
-$$(A\otimes B)\otimes(A\otimes B)\cong (A\otimes A)\otimes (B\otimes B)\overset{\mu_A\otimes\mu_B}{\longrightarrow} A\otimes B.$$
+$$(A\otimes B)\otimes(A\otimes B)\cong (A\otimes A)\otimes (B\otimes B)\overset{\mu_A\otimes\mu_B}{\longrightarrow} A\otimes B$$
 
 ::: Definition 7
-For any rings $A,B$, the ring $A\otimes B$ defined as above is called their *tensor product*.
+For any rings $A,B$, the ring $A\otimes B$ defined as above is called their *tensor product*. 
 :::
 
 Through this, one can verify that the category $\Ring$ forms a symmetric monoidal category $(\Ring,\otimes, \mathbb{Z})$. Explicitly, the multiplication on $A\otimes B$ is defined by
 
-$$(\alpha\otimes \beta)(\alpha'\otimes \beta')=\alpha\alpha'\otimes \beta\beta'.$$
+$$(\alpha\otimes \beta)(\alpha'\otimes \beta')=\alpha\alpha'\otimes \beta\beta'$$
 
-One interesting fact is that $\otimes$ coincides with the coproduct in $\cRing$. To verify this, it suffices to show that
+One interesting fact is that $\otimes$ coincides with the coproduct in $\cRing$. To verify this, it suffices to show that for any commutative rings $A,B$, the following map
 
 $$\iota_A: A \rightarrow A\otimes B;\quad \alpha\mapsto \alpha\otimes 1$$
 
@@ -107,7 +110,7 @@ and $\iota_B$ defined in a similar way satisfy the universal property of the cop
 
 $$\phi(\alpha\otimes \beta)=\phi((\alpha\otimes 1)(1\otimes \beta))=\cdots=\phi_A(\alpha)\phi_B(\beta)$$
 
-so we see that it is unique. On the other hand, the map $(\alpha,\beta)\mapsto \phi_A(\alpha)\phi_B(\beta)$ from $A\times B$ to $C$ is bilinear, so by the universal property of the tensor product there exists an abelian group homomorphism $A\otimes B \rightarrow C$ sending $\alpha\otimes \beta\mapsto \phi_A(\alpha)\phi_B(\beta)$; since $C$ is commutative, $\phi_B(\beta)$ and $\phi_A(\alpha')$ commute, so this map preserves multiplication and also sends $1\otimes 1$ to $1$, hence it is a ring homomorphism and is exactly $\phi$.
+so we see that it is unique. On the other hand, since the function from $A\times B$ to $C$ given by $(\alpha,\beta)\mapsto \phi_A(\alpha)\phi_B(\beta)$ is bilinear, by the universal property of the tensor product, there exists, satisfying $\alpha\otimes \beta\mapsto \phi_A(\alpha)\phi_B(\beta)$, an abelian group homomorphism $A\otimes B \rightarrow C$; since $C$ is commutative, $\phi_B(\beta)$ and $\phi_A(\alpha')$ commute, so this function preserves multiplication and also sends $1\otimes 1$ to $1$, hence it is a ring homomorphism and is exactly $\phi$.
 
 ---
 
