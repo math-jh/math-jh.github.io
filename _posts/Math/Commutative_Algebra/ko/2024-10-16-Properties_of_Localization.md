@@ -17,7 +17,7 @@ weight: 3
 
 ## 국소화와 Hom, tensor
 
-우선 보조정리 하나를 증명하며 시작한다. 함수 $S^{-1}A\times M \rightarrow  S^{-1}M$을 $(r/u, x)\mapsto rx/u$으로 정의하면 이는 $A$-bilinear map이고, 따라서 $A$-linear map $S^{-1}A\otimes_A M \rightarrow S^{-1}M$을 유도한다. ([\[대수적 구조\] §가군의 직접곱과 직합, 텐서곱, ⁋정리 5](/ko/math/algebraic_structures/operations_of_modules#thm5)) 
+우선 보조정리 하나를 증명하며 시작한다. 함수 $S^{-1}A\times M \rightarrow  S^{-1}M$을 $(r/u, x)\mapsto rx/u$으로 정의하면 이는 $A$-bilinear map이고, 따라서 $A$-linear map $S^{-1}A\otimes_A M \rightarrow S^{-1}M$을 유도한다. ([\[대수적 구조\] §가군의 직접곱과 직합, 텐서곱, ⁋정리 5](/ko/math/algebraic_structures/operations_of_modules#thm5){: data-relation="required" }) 
 
 ::: 보조정리 1
 위에서 정의한 $A$-linear map은 isomorphism이 된다.
@@ -45,10 +45,10 @@ $$S^{-1}A\otimes_A u: S^{-1}A\otimes_AM \rightarrow S^{-1}A\otimes_AM'$$
 의 양 변을 localization과 동일시하여 정의하면 되기 때문이다. 일반적으로 tensor product는 right exact이지만, 이 경우에는 exact functor가 된다.
 
 ::: 명제 2
-$S^{-1}A$는 flat $A$-module이다. ([\[다중선형대수학\] §사영가군, 단사가군, 평탄가군, ⁋정의 7](/ko/math/multilinear_algebra/various_modules#def7))
+$S^{-1}A$는 flat $A$-module이다. ([\[다중선형대수학\] §사영가군, 단사가군, 평탄가군, ⁋정의 7](/ko/math/multilinear_algebra/various_modules#def7){: data-relation="weak" })
 :::
 ::: 증명
-임의의 injective $A$-linear map $u:M \rightarrow M'$이 주어졌다 하고, $S^{-1}A\otimes_A u$이 injective인 것을 보여야 한다. 그런데 [보조정리 1](#lem1)에 의해, 이는 linear map $S^{-1}M \rightarrow S^{-1}M'$이 injective인 것을 보이면 충분하다. 어떠한 $x/s\in S^{-1}M$에 대하여, 이를 $S^{-1}M'$으로 보낸 원소인 $u(x)/s$가 $S^{-1}M'$에서 $0$이라 하자. 그럼 $u(x)/s=0/1$로부터 적당한 $t\in S$가 존재하여 
+임의의 injective $A$-linear map $u:M \rightarrow M'$이 주어졌다 하고, $S^{-1}A\otimes_A u$이 injective인 것을 보여야 한다. 그런데 [보조정리 1](#lem1){: data-relation="required" }에 의해, 이는 linear map $S^{-1}M \rightarrow S^{-1}M'$이 injective인 것을 보이면 충분하다. 어떠한 $x/s\in S^{-1}M$에 대하여, 이를 $S^{-1}M'$으로 보낸 원소인 $u(x)/s$가 $S^{-1}M'$에서 $0$이라 하자. 그럼 $u(x)/s=0/1$로부터 적당한 $t\in S$가 존재하여 
 
 $$tu(x)=u(tx)=0$$
 
@@ -61,7 +61,7 @@ $$\frac{x}{s}=\frac{tx}{ts}=\frac{0}{ts}=0$$
 
 ## 국소화에 의해 결정되는 성질들
 
-위의 [명제 2](#prop2)와 tensor product의 right exactness에 의하여, $u:M \rightarrow M'$이 injective (resp. surjective, bijective)라면 이로부터 유도되는 $S^{-1}M \rightarrow S^{-1}M'$ 또한 그러하다는 것을 안다. [명제 4](#prop4)는 이에 대한 일종의 (강력한) 역이라고 생각할 수 있다. 이를 위해 우선 다음 보조정리를 보인다.
+위의 [명제 2](#prop2){: data-relation="required" }와 tensor product의 right exactness에 의하여, $u:M \rightarrow M'$이 injective (resp. surjective, bijective)라면 이로부터 유도되는 $S^{-1}M \rightarrow S^{-1}M'$ 또한 그러하다는 것을 안다. [명제 4](#prop4){: data-relation="forward" }는 이에 대한 일종의 (강력한) 역이라고 생각할 수 있다. 이를 위해 우선 다음 보조정리를 보인다.
 
 ::: 보조정리 3
 $A$-module $M$과, $A$의 maximal ideal $\mathfrak{m}$에서의 localization $\epsilon_\mathfrak{m}:M \rightarrow M_\mathfrak{m}$을 생각하자. 그럼 $M$의 원소 $x$가 $0$인 것은, <em-ko>모든</em-ko> $A$의 maximal ideal $\mathfrak{m}$에 대하여 위에서 정의한 $\epsilon_\mathfrak{m}$이 $\epsilon_\mathfrak{m}(x)=0$을 만족하는 것이 동치이다. 
@@ -76,7 +76,7 @@ $A$-module $M$과, $A$의 maximal ideal $\mathfrak{m}$에서의 localization $\e
 $A$-linear map $u:M \rightarrow N$이 monomorphism (resp. epimorphism, isomorphism)인 것은 임의의 maximal ideal $\mathfrak{m}$에 대하여 $u_\mathfrak{m}: M_\mathfrak{m} \rightarrow N_\mathfrak{m}$이 그러한 것과 동치이다.
 :::
 
-이에 대한 증명은 [보조정리 3](#lem3)를 kernel과 cokernel에 대해 적용하면 충분하다. 
+이에 대한 증명은 [보조정리 3](#lem3){: data-relation="required" }를 kernel과 cokernel에 대해 적용하면 충분하다. 
 
 다음 정리는 앞으로 종종 사용될 것이므로, 증명은 신경쓰지 않더라도 결과는 기억해두는 것이 좋다.
 
@@ -119,7 +119,7 @@ $$0 \rightarrow M \rightarrow L \rightarrow N \rightarrow 0$$
 
 $$0 \rightarrow \Hom_\rMod{A}(K,M) \rightarrow \Hom_\rMod{A}(K,L)\rightarrow \Hom_\rMod{A}(K,N) \rightarrow 0$$
 
-이 splitting exact sequence인 것과 동치이며, [\[다중선형대수학\] §Hom과 텐서곱, ⁋명제 1](/ko/math/multilinear_algebra/hom_and_tensor#prop1)의 증명을 보면 실은 $K=N$일 때 위의 sequence가 exact이기만 하면, 즉
+이 splitting exact sequence인 것과 동치이며, [\[다중선형대수학\] §Hom과 텐서곱, ⁋명제 1](/ko/math/multilinear_algebra/hom_and_tensor#prop1){: data-relation="required" }의 증명을 보면 실은 $K=N$일 때 위의 sequence가 exact이기만 하면, 즉
 
 $$\Hom_\rMod{A}(N,L) \rightarrow \Hom_\rMod{A}(N,N) \rightarrow 0$$
 
@@ -166,7 +166,7 @@ $$\sqrt{\mathfrak{a}}=\bigcap_\text{\scriptsize$\mathfrak{p}$ prime containing $
 이 성립한다.
 :::
 ::: 증명
-한쪽 방향은 자명하며, 반대로 만일 $a\not\in \sqrt{\mathfrak{a}}$라면 $S=\{a^k\mid k\geq 0\}$로 두고 [§국소화, ⁋명제 8](/ko/math/commutative_algebra/localization#prop8)를 적용하면 된다.
+한쪽 방향은 자명하며, 반대로 만일 $a\not\in \sqrt{\mathfrak{a}}$라면 $S=\{a^k\mid k\geq 0\}$로 두고 [§국소화, ⁋명제 8](/ko/math/commutative_algebra/localization#prop8){: data-relation="required" }를 적용하면 된다.
 :::
 
 ---

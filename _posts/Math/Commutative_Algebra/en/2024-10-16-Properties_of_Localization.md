@@ -18,7 +18,7 @@ We now examine further properties of localization. The first goal of this post i
 
 ## Localization and Hom, Tensor
 
-We begin by proving a lemma. Define an $A$-module homomorphism $S^{-1}A\times_A M \rightarrow  S^{-1}M$ by $(r/u, x)\mapsto rx/u$; this is an $A$-bilinear map, and therefore induces an $A$-linear map $S^{-1}A\otimes_A M \rightarrow S^{-1}M$. ([\[Algebraic Structures\] §Direct Products, Direct Sums, and Tensor Products of Modules, ⁋Theorem 5](/en/math/algebraic_structures/operations_of_modules#thm5))
+We begin by proving a lemma. Define an $A$-module homomorphism $S^{-1}A\times_A M \rightarrow  S^{-1}M$ by $(r/u, x)\mapsto rx/u$; this is an $A$-bilinear map, and therefore induces an $A$-linear map $S^{-1}A\otimes_A M \rightarrow S^{-1}M$. ([\[Algebraic Structures\] §Direct Products, Direct Sums, and Tensor Products of Modules, ⁋Theorem 5](/en/math/algebraic_structures/operations_of_modules#thm5){: data-relation="required" })
 
 ::: Lemma 1
 The $A$-linear map defined above is an isomorphism.
@@ -46,10 +46,10 @@ $$S^{-1}A\otimes_A u: S^{-1}A\otimes_AM \rightarrow S^{-1}A\otimes_AM'$$
 In general, tensor products are right exact, but in this case the functor is exact.
 
 ::: Proposition 2
-$S^{-1}A$ is a flat $A$-module. ([\[Multilinear Algebra\] §Projective, Injective, and Flat Modules, ⁋Definition 7](/en/math/multilinear_algebra/various_modules#def7))
+$S^{-1}A$ is a flat $A$-module. ([\[Multilinear Algebra\] §Projective, Injective, and Flat Modules, ⁋Definition 7](/en/math/multilinear_algebra/various_modules#def7){: data-relation="weak" })
 :::
 ::: Proof
-Suppose an injective $A$-linear map $u:M \rightarrow M'$ is given; we must show that $S^{-1}A\otimes_A u$ is injective. By [Lemma 1](#lem1), it suffices to show that the induced linear map $S^{-1}M \rightarrow S^{-1}M'$ is injective. Take any $x/s\in S^{-1}M$ and suppose its image $u(x)/s$ in $S^{-1}M'$ is zero. Then from $u(x)/s=0/1$ there exists some $t\in S$ such that
+Suppose an injective $A$-linear map $u:M \rightarrow M'$ is given; we must show that $S^{-1}A\otimes_A u$ is injective. By [Lemma 1](#lem1){: data-relation="required" }, it suffices to show that the induced linear map $S^{-1}M \rightarrow S^{-1}M'$ is injective. Take any $x/s\in S^{-1}M$ and suppose its image $u(x)/s$ in $S^{-1}M'$ is zero. Then from $u(x)/s=0/1$ there exists some $t\in S$ such that
 
 $$tu(x)=u(tx)=0$$
 
@@ -62,7 +62,7 @@ so we obtain the desired result.
 
 ## Properties Determined by Localization
 
-By [Proposition 2](#prop2) above, if $u:M \rightarrow M'$ is injective (resp. surjective, bijective), then the induced map $S^{-1}M \rightarrow S^{-1}M'$ is also injective (resp. surjective, bijective). [Proposition 4](#prop4) can be regarded as a sort of (strong) converse to this. To prove it, we first establish the following lemma.
+By [Proposition 2](#prop2){: data-relation="required" } above, if $u:M \rightarrow M'$ is injective (resp. surjective, bijective), then the induced map $S^{-1}M \rightarrow S^{-1}M'$ is also injective (resp. surjective, bijective). [Proposition 4](#prop4){: data-relation="forward" } can be regarded as a sort of (strong) converse to this. To prove it, we first establish the following lemma.
 
 ::: Lemma 3
 Let $M$ be an $A$-module and consider the localization $\epsilon_\mathfrak{m}:M \rightarrow M_\mathfrak{m}$ at a maximal ideal $\mathfrak{m}$ of $A$. Then an element $x$ of $M$ is zero if and only if for *every* maximal ideal $\mathfrak{m}$ of $A$, the map $\epsilon_\mathfrak{m}$ defined above satisfies $\epsilon_\mathfrak{m}(x)=0$.
@@ -77,7 +77,7 @@ Therefore, the following holds.
 An $A$-linear map $u:M \rightarrow N$ is a monomorphism (resp. epimorphism, isomorphism) if and only if for every maximal ideal $\mathfrak{m}$, the localized map $u_\mathfrak{m}: M_\mathfrak{m} \rightarrow N_\mathfrak{m}$ is a monomorphism (resp. epimorphism, isomorphism).
 :::
 
-The proof follows by applying [Lemma 3](#lem3) to the kernel and cokernel.
+The proof follows by applying [Lemma 3](#lem3){: data-relation="required" } to the kernel and cokernel.
 
 The following proposition will be used frequently hereafter, so it is worth remembering the statement even if one does not dwell on the proof.
 
@@ -118,7 +118,7 @@ is given. Then this exact sequence is split if and only if for every $A$-module 
 
 $$0 \rightarrow \Hom_\rMod{A}(K,M) \rightarrow \Hom_\rMod{A}(K,L)\rightarrow \Hom_\rMod{A}(K,N) \rightarrow 0$$
 
-is a splitting exact sequence. Moreover, examining the proof of [\[Multilinear Algebra\] §Hom and the Tensor Product, ⁋Proposition 1](/en/math/multilinear_algebra/hom_and_tensor#prop1), we see that in fact if the above sequence is exact when $K=N$, that is, if
+is a splitting exact sequence. Moreover, examining the proof of [\[Multilinear Algebra\] §Hom and the Tensor Product, ⁋Proposition 1](/en/math/multilinear_algebra/hom_and_tensor#prop1){: data-relation="required" }, we see that in fact if the above sequence is exact when $K=N$, that is, if
 
 $$\Hom_\rMod{A}(N,L) \rightarrow \Hom_\rMod{A}(N,N) \rightarrow 0$$
 
@@ -165,7 +165,7 @@ $$\sqrt{\mathfrak{a}}=\bigcap_\text{\scriptsize$\mathfrak{p}$ prime containing $
 holds.
 :::
 ::: Proof
-One direction is obvious. For the converse, if $a\not\in \sqrt{\mathfrak{a}}$ then set $S=\{a^k\mid k\geq 1\}$ and apply [§Localization, ⁋Proposition 8](/en/math/commutative_algebra/localization#prop8).
+One direction is obvious. For the converse, if $a\not\in \sqrt{\mathfrak{a}}$ then set $S=\{a^k\mid k\geq 1\}$ and apply [§Localization, ⁋Proposition 8](/en/math/commutative_algebra/localization#prop8){: data-relation="required" }.
 :::
 
 ---
