@@ -16,7 +16,7 @@ drift_needed: true
 published: false
 ---
 
-[§미분방정식의 존재성과 유일성](/ko/math/analysis/existence_uniqueness_ode)에서 립시츠 조건 아래 해가 국소적으로 존재함을 보았다. 미분방정식 가운데 가장 잘 이해된 부류가 linear system이며, 여기서는 해가 전역적으로 존재할 뿐 아니라 선형대수로 명시적으로 풀린다. 이로써 해석학의 미분방정식 이론이 선형대수와 만난다.
+[§미분방정식의 존재성과 유일성](/ko/math/analysis/existence_uniqueness_ode){: data-relation="required" }에서 립시츠 조건 아래 해가 국소적으로 존재함을 보았다. 미분방정식 가운데 가장 잘 이해된 부류가 linear system이며, 여기서는 해가 전역적으로 존재할 뿐 아니라 선형대수로 명시적으로 풀린다. 이로써 해석학의 미분방정식 이론이 선형대수와 만난다.
 
 ## 선형계의 전역 존재유일성
 
@@ -41,7 +41,7 @@ $$\begin{aligned}
 &\leq \lVert A(t)\rVert \lvert y_1 - y_2\rvert
 \end{aligned}$$
 
-이 성립한다. 여기서 $\lVert A(t)\rVert$은 행렬의 작용소노름이다. $A(t)$의 각 성분이 $I$에서 연속이므로 $t \mapsto \lVert A(t)\rVert$도 연속이고, 따라서 $I$의 임의의 컴팩트 부분구간에서 bounded이다 ([§연속함수의 성질, ⁋따름정리 2](/ko/math/analysis/continuous_functions#cor2)). 그 bound를 립시츠 상수로 삼으면 $f$는 $y$에 대해 균일하게 립시츠 조건을 만족하므로, [§미분방정식의 존재성과 유일성, ⁋정리 4](/ko/math/analysis/existence_uniqueness_ode#thm4)에 의해 국소해가 존재한다.
+이 성립한다. 여기서 $\lVert A(t)\rVert$은 행렬의 작용소노름이다. $A(t)$의 각 성분이 $I$에서 연속이므로 $t \mapsto \lVert A(t)\rVert$도 연속이고, 따라서 $I$의 임의의 컴팩트 부분구간에서 bounded이다 ([§연속함수의 성질, ⁋따름정리 2](/ko/math/analysis/continuous_functions#cor2){: data-relation="required" }). 그 bound를 립시츠 상수로 삼으면 $f$는 $y$에 대해 균일하게 립시츠 조건을 만족하므로, [§미분방정식의 존재성과 유일성, ⁋정리 4](/ko/math/analysis/existence_uniqueness_ode#thm4){: data-relation="required" }에 의해 국소해가 존재한다.
 
 전역으로의 extension이 핵심인데, 비선형의 경우와 달리 립시츠 상수가 해의 크기 $\lvert y\rvert$에 전혀 의존하지 않는다는 점이 결정적이다. 실제로 해가 존재하는 구간에서 $\lvert y(t)\rvert$의 성장은
 
@@ -68,7 +68,7 @@ $$e^{A} = \sum_{k=0}^{\infty}\frac{A^k}{k!} = I + A + \frac{A^2}{2!} + \cdots$$
 
 $$\left\lVert \frac{A^k}{k!}\right\rVert \leq \frac{\lVert A\rVert^k}{k!}$$
 
-이고, 우변의 합 $\sum_k \lVert A\rVert^k/k! = e^{\lVert A\rVert}$이 수렴하는 스칼라 급수이다. 따라서 [§균등수렴, ⁋정리 4](/ko/math/analysis/uniform_convergence#thm4)에 의해 행렬급수가 (성분별로, 그리고 norm에서) 절대수렴하며, $\lVert e^A\rVert \leq e^{\lVert A\rVert}$이라는 유용한 부등식도 함께 얻는다.
+이고, 우변의 합 $\sum_k \lVert A\rVert^k/k! = e^{\lVert A\rVert}$이 수렴하는 스칼라 급수이다. 따라서 [§균등수렴, ⁋정리 4](/ko/math/analysis/uniform_convergence#thm4){: data-relation="required" }에 의해 행렬급수가 (성분별로, 그리고 norm에서) 절대수렴하며, $\lVert e^A\rVert \leq e^{\lVert A\rVert}$이라는 유용한 부등식도 함께 얻는다.
 
 행렬지수는 스칼라 지수의 여러 성질을 그대로 물려받지만, 한 가지 중요한 예외가 있다. $A$와 $B$가 *교환할 때*, 즉 $AB = BA$일 때
 
@@ -99,7 +99,7 @@ $$y(0) = e^{0\cdot A} y_0 = I y_0 = y_0$$
 
 $$y'(t) = \frac{d}{\dd{t}}\bigl(e^{tA}y_0\bigr) = A e^{tA}y_0 = A y(t)$$
 
-이므로 $y' = Ay$를 만족한다. 따라서 $y(t) = e^{tA}y_0$은 해이며, 상수계수계도 [정리 2](#thm2)의 가정($A(t) \equiv A$가 연속, $b \equiv 0$)을 충족하므로 그 유일성에 의해 이것이 유일한 해이다.
+이므로 $y' = Ay$를 만족한다. 따라서 $y(t) = e^{tA}y_0$은 해이며, 상수계수계도 [정리 2](#thm2){: data-relation="required" }의 가정($A(t) \equiv A$가 연속, $b \equiv 0$)을 충족하므로 그 유일성에 의해 이것이 유일한 해이다.
 :::
 
 ## 고윳값을 통한 계산
@@ -137,7 +137,7 @@ $$y(t) = e^{tA}y_0 = \sum_{i=1}^n c_i e^{\lambda_i t} v_i$$
 
 ## 고유구조에 따른 해의 양상
 
-고윳값이 실수이고 서로 다른 대각화 가능한 경우에는 [명제 5](#prop5)가 그대로 적용되어 해가 $e^{\lambda_i t}$ 꼴 항들의 선형결합으로 적힌다. 이보다 흥미로운 두 가지 양상은 고윳값이 복소수일 때의 진동과 행렬이 대각화되지 않을 때의 다항식 인자이다.
+고윳값이 실수이고 서로 다른 대각화 가능한 경우에는 [명제 5](#prop5){: data-relation="required" }가 그대로 적용되어 해가 $e^{\lambda_i t}$ 꼴 항들의 선형결합으로 적힌다. 이보다 흥미로운 두 가지 양상은 고윳값이 복소수일 때의 진동과 행렬이 대각화되지 않을 때의 다항식 인자이다.
 
 복소 고윳값은 켤레쌍으로 나타나며, 오일러 공식을 통해 해가 진동으로 드러난다.
 
@@ -208,9 +208,9 @@ $$\lvert t^j e^{\lambda t}\rvert = t^j e^{(\Real\lambda) t}$$
 인데, 가정에서 $\Real\lambda < 0$이므로 지수의 감쇠가 다항식 $t^j$의 증가를 압도하여 $t \rightarrow \infty$에서 $0$으로 간다. 따라서 $e^{tA} \rightarrow 0$이고, 임의의 $y_0$에 대해 $y(t) = e^{tA}y_0 \rightarrow 0$이다.
 :::
 
-Symmetric으로, 어떤 고윳값이 $\Real\lambda > 0$이면 그 모드를 따라 해가 지수적으로 발산하고, 고윳값이 모두 순허수이고 $A$가 대각화되면 [예시 6](#ex6)처럼 해가 진동하며 bounded로 머문다 (대각화되지 않으면 순허수 고윳값에서도 $t^j e^{\lambda t}$ 꼴 항이 남아 해가 발산할 수 있다). 이렇게 평형 $y = 0$의 안정·불안정·중립 여부가 고윳값의 실수부 부호로 한꺼번에 읽힌다.
+Symmetric으로, 어떤 고윳값이 $\Real\lambda > 0$이면 그 모드를 따라 해가 지수적으로 발산하고, 고윳값이 모두 순허수이고 $A$가 대각화되면 [예시 6](#ex6){: data-relation="weak" }처럼 해가 진동하며 bounded로 머문다 (대각화되지 않으면 순허수 고윳값에서도 $t^j e^{\lambda t}$ 꼴 항이 남아 해가 발산할 수 있다). 이렇게 평형 $y = 0$의 안정·불안정·중립 여부가 고윳값의 실수부 부호로 한꺼번에 읽힌다.
 
-이렇게 선형 미분방정식의 풀이는 행렬의 고윳값·고유벡터, 곧 선형사상의 spectrum 구조로 완전히 귀착된다 ([\[다중선형대수학\] §행렬과 선형사상](/ko/math/multilinear_algebra/matrices_and_linear_maps)). 미분방정식의 해가 질적으로 어떻게 움직이는지(평형의 stability, 진동, 발산)가 고윳값의 실수부와 허수부로 읽힌다는 사실은 동역학계 이론의 출발점이며, 해석학·선형대수·기하가 만나는 지점이다.
+이렇게 선형 미분방정식의 풀이는 행렬의 고윳값·고유벡터, 곧 선형사상의 spectrum 구조로 완전히 귀착된다 ([\[다중선형대수학\] §행렬과 선형사상](/ko/math/multilinear_algebra/matrices_and_linear_maps){: data-relation="weak" }). 미분방정식의 해가 질적으로 어떻게 움직이는지(평형의 stability, 진동, 발산)가 고윳값의 실수부와 허수부로 읽힌다는 사실은 동역학계 이론의 출발점이며, 해석학·선형대수·기하가 만나는 지점이다.
 
 ---
 
