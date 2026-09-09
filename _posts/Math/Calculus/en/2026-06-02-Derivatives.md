@@ -14,7 +14,7 @@ translated_at: 2026-08-19T03:45:05+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-08-19T03:45:05+00:00
 ---
-We previously reformulated the notion of a function being continuous in the language of $\epsilon$-$\delta$ in [§Continuous Functions](/en/math/calculus/continuity). The natural next step is to define the derivative of a function.
+We previously reformulated the notion of a function being continuous in the language of $\epsilon$-$\delta$ in [§Continuous Functions](/en/math/calculus/continuity){: data-relation="required" }. The natural next step is to define the derivative of a function.
 
 ## Definition of the Derivative
 
@@ -53,7 +53,7 @@ For $x \neq a$,
 
 $$f(x) - f(a) = \frac{f(x)-f(a)}{x-a}\cdot(x-a).$$
 
-As $x \rightarrow a$, the first factor on the right converges to $f'(a)$ and the second factor converges to $0$, so by [§Limits of Functions, ⁋Proposition 5](/en/math/calculus/functions_and_limits#prop5),
+As $x \rightarrow a$, the first factor on the right converges to $f'(a)$ and the second factor converges to $0$, so by [§Limits of Functions, ⁋Proposition 5](/en/math/calculus/functions_and_limits#prop5){: data-relation="required" },
 
 $$\lim_{x\rightarrow a}\bigl(f(x)-f(a)\bigr) = f'(a)\cdot 0 = 0.$$
 
@@ -87,7 +87,7 @@ Consider the function
 
 $$f(x) = \begin{cases} x^2 & (x \in \mathbb{Q}) \\ 0 & (x \notin \mathbb{Q}) \end{cases}.$$
 
-For $a \neq 0$, taking a sequence of rationals and a sequence of irrationals both converging to $a$, the function values diverge to $a^2$ and $0$ respectively, so $f$ is discontinuous, and by the contrapositive of [Proposition 2](#prop2) it is not differentiable. On the other hand, at $0$ we have $\lvert f(x)\rvert \leq x^2$, so $f$ is continuous, and the average rate of change satisfies
+For $a \neq 0$, taking a sequence of rationals and a sequence of irrationals both converging to $a$, the function values diverge to $a^2$ and $0$ respectively, so $f$ is discontinuous, and by the contrapositive of [Proposition 2](#prop2){: data-relation="required" } it is not differentiable. On the other hand, at $0$ we have $\lvert f(x)\rvert \leq x^2$, so $f$ is continuous, and the average rate of change satisfies
 
 $$\left\lvert \frac{f(x) - f(0)}{x - 0} \right\rvert = \frac{\lvert f(x)\rvert}{\lvert x\rvert} \leq \lvert x\rvert \rightarrow 0,$$
 
@@ -96,7 +96,7 @@ so $f'(0) = 0$ exists. That is, $f$ is differentiable only at $0$.
 
 ## Properties of Differentiation
 
-Meanwhile, since the derivative is ultimately the limit of the average rate of change, we can prove from [§Limits of Functions, ⁋Proposition 5](/en/math/calculus/functions_and_limits#prop5) that differentiation also possesses linearity.
+Meanwhile, since the derivative is ultimately the limit of the average rate of change, we can prove from [§Limits of Functions, ⁋Proposition 5](/en/math/calculus/functions_and_limits#prop5){: data-relation="required" } that differentiation also possesses linearity.
 
 ::: Proposition 4
 If $f, g$ are differentiable at $a$ and $c$ is a constant, then $f + g$ and $cf$ are also differentiable at $a$, and
@@ -109,7 +109,7 @@ The average rate of change splits as
 
 $$\frac{(f+g)(a+h)-(f+g)(a)}{h} = \frac{f(a+h)-f(a)}{h} + \frac{g(a+h)-g(a)}{h},$$
 
-and since each term converges to $f'(a), g'(a)$, the sum also converges by [§Limits of Functions, ⁋Proposition 5](/en/math/calculus/functions_and_limits#prop5). The same result for $cf$ follows by examining its average rate of change.
+and since each term converges to $f'(a), g'(a)$, the sum also converges by [§Limits of Functions, ⁋Proposition 5](/en/math/calculus/functions_and_limits#prop5){: data-relation="required" }. The same result for $cf$ follows by examining its average rate of change.
 :::
 
 On the other hand, since the derivative $f'$ is itself a function, if it is differentiable we can differentiate it again.
@@ -128,7 +128,7 @@ The *right-hand derivative* and *left-hand derivative* of a function $f$ at a po
 $$f'_+(a) := \lim_{h \rightarrow 0^+} \frac{f(a+h) - f(a)}{h}, \qquad f'_-(a) := \lim_{h \rightarrow 0^-} \frac{f(a+h) - f(a)}{h}.$$
 :::
 
-Both one-sided derivatives exist and are equal if and only if $f$ is differentiable at $a$, and their common value is $f'(a)$. This is nothing more than applying the fact that a limit exists only when both one-sided limits agree to the average rate of change. ([§Limits of Functions](/en/math/calculus/functions_and_limits)) Revisiting the absolute value function $f(x) = \lvert x\rvert$, we have $f'_+(0) = 1$ and $f'_-(0) = -1$, which differ, so nondifferentiability at $0$ is immediately confirmed. A one-sided derivative is also used naturally when discussing differentiability at an endpoint of the domain; for instance, the differentiability of $f(x) = \sqrt x$ defined on $[0, \infty)$ at $0$ is meaningful only via the right-hand derivative.
+Both one-sided derivatives exist and are equal if and only if $f$ is differentiable at $a$, and their common value is $f'(a)$. This is nothing more than applying the fact that a limit exists only when both one-sided limits agree to the average rate of change. ([§Limits of Functions](/en/math/calculus/functions_and_limits){: data-relation="weak" }) Revisiting the absolute value function $f(x) = \lvert x\rvert$, we have $f'_+(0) = 1$ and $f'_-(0) = -1$, which differ, so nondifferentiability at $0$ is immediately confirmed. A one-sided derivative is also used naturally when discussing differentiability at an endpoint of the domain; for instance, the differentiability of $f(x) = \sqrt x$ defined on $[0, \infty)$ at $0$ is meaningful only via the right-hand derivative.
 
 ---
 

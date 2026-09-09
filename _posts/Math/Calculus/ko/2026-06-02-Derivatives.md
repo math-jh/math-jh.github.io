@@ -14,7 +14,7 @@ weight: 6
 
 ---
 
-우리는 [§연속함수](/ko/math/calculus/continuity)에서 함수가 연속이라는 것을 앞서 도입한 $\epsilon-\delta$의 언어로 재정립했다. 이제 자연스러운 흐름은 함수의 미분을 정의하는 것이다.
+우리는 [§연속함수](/ko/math/calculus/continuity){: data-relation="required" }에서 함수가 연속이라는 것을 앞서 도입한 $\epsilon-\delta$의 언어로 재정립했다. 이제 자연스러운 흐름은 함수의 미분을 정의하는 것이다.
 
 ## 미분계수의 정의
 
@@ -53,7 +53,7 @@ $x \neq a$에서
 
 $$f(x) - f(a) = \frac{f(x)-f(a)}{x-a}\cdot(x-a)$$
 
-이다. $x \rightarrow a$일 때 우변의 첫 인자는 $f'(a)$로, 둘째 인자는 $0$으로 수렴하므로, [§함수의 극한, ⁋명제 5](/ko/math/calculus/functions_and_limits#prop5)에 의해 
+이다. $x \rightarrow a$일 때 우변의 첫 인자는 $f'(a)$로, 둘째 인자는 $0$으로 수렴하므로, [§함수의 극한, ⁋명제 5](/ko/math/calculus/functions_and_limits#prop5){: data-relation="required" }에 의해 
 
 $$\lim_{x\rightarrow a}\bigl(f(x)-f(a)\bigr) = f'(a)\cdot 0 = 0$$
 
@@ -87,7 +87,7 @@ $$\frac{f(h)-f(0)}{h} = \frac{\lvert h\rvert}{h}=\begin{cases}1&\text{if $h>0$}\
 
 $$f(x) = \begin{cases} x^2 & (x \in \mathbb{Q}) \\ 0 & (x \notin \mathbb{Q}) \end{cases}$$
 
-를 보자. $a \neq 0$에서는 $a$에 수렴하는 유리수열과 무리수열을 따라 함숫값이 각각 $a^2$과 $0$으로 갈라지므로 $f$는 불연속이고, [명제 2](#prop2)의 대우에 의해 미분가능하지 않다. 반면 $0$에서는 $\lvert f(x)\rvert \leq x^2$이라 연속이며, 평균변화율이
+를 보자. $a \neq 0$에서는 $a$에 수렴하는 유리수열과 무리수열을 따라 함숫값이 각각 $a^2$과 $0$으로 갈라지므로 $f$는 불연속이고, [명제 2](#prop2){: data-relation="required" }의 대우에 의해 미분가능하지 않다. 반면 $0$에서는 $\lvert f(x)\rvert \leq x^2$이라 연속이며, 평균변화율이
 
 $$\left\lvert \frac{f(x) - f(0)}{x - 0} \right\rvert = \frac{\lvert f(x)\rvert}{\lvert x\rvert} \leq \lvert x\rvert \rightarrow 0$$
 
@@ -96,7 +96,7 @@ $$\left\lvert \frac{f(x) - f(0)}{x - 0} \right\rvert = \frac{\lvert f(x)\rvert}{
 
 ## 미분의 성질
 
-한편, 도함수는 결국엔 평균변화율이라는 함수의 극한이므로, [§함수의 극한, ⁋명제 5](/ko/math/calculus/functions_and_limits#prop5)로부터 미분도 선형성을 갖는다는 것을 증명할 수 있다.
+한편, 도함수는 결국엔 평균변화율이라는 함수의 극한이므로, [§함수의 극한, ⁋명제 5](/ko/math/calculus/functions_and_limits#prop5){: data-relation="required" }로부터 미분도 선형성을 갖는다는 것을 증명할 수 있다.
 
 ::: 명제 4
 $f, g$가 $a$에서 미분가능하고 $c$가 상수이면, $f + g$와 $cf$도 $a$에서 미분가능하고
@@ -111,7 +111,7 @@ $$(f+g)'(a) = f'(a) + g'(a), \qquad (cf)'(a) = c f'(a)$$
 
 $$\frac{(f+g)(a+h)-(f+g)(a)}{h} = \frac{f(a+h)-f(a)}{h} + \frac{g(a+h)-g(a)}{h}$$
 
-로 갈라지고, 각 항이 $f'(a), g'(a)$로 수렴하므로 [§함수의 극한, ⁋명제 5](/ko/math/calculus/functions_and_limits#prop5)에 의해 합도 수렴한다. $cf$도 평균변화율 식을 살펴보면 동일한 결과를 얻는다.
+로 갈라지고, 각 항이 $f'(a), g'(a)$로 수렴하므로 [§함수의 극한, ⁋명제 5](/ko/math/calculus/functions_and_limits#prop5){: data-relation="required" }에 의해 합도 수렴한다. $cf$도 평균변화율 식을 살펴보면 동일한 결과를 얻는다.
 :::
 
 한편 도함수 $f'$도 다시 함수이므로, 그것이 미분가능하면 또 미분할 수 있다.
@@ -132,7 +132,7 @@ $$f'_+(a) := \lim_{h \rightarrow 0^+} \frac{f(a+h) - f(a)}{h}, \qquad f'_-(a) :=
 로 정의한다.
 :::
 
-두 한쪽 derivative가 모두 존재하고 서로 같으면, 그리고 오직 그때에만, $f$는 $a$에서 미분가능하고 그 공통값이 $f'(a)$이다. 이는 양쪽 극한이 일치할 때에만 극한이 존재한다는 사실을 평균변화율에 적용한 것에 지나지 않는다. ([§함수의 극한](/ko/math/calculus/functions_and_limits)) 절댓값함수 $f(x) = \lvert x\rvert$를 다시 보면 $f'_+(0) = 1$, $f'_-(0) = -1$로 둘이 달라 $0$에서 미분 불가능함이 곧바로 확인된다. 한쪽 derivative는 정의역의 끝점에서 미분가능성을 논할 때에도 자연스럽게 쓰이는데, 가령 $[0, \infty)$에서 정의된 $f(x) = \sqrt x$의 $0$에서의 미분가능성은 우미분계수로만 의미를 갖는다.
+두 한쪽 derivative가 모두 존재하고 서로 같으면, 그리고 오직 그때에만, $f$는 $a$에서 미분가능하고 그 공통값이 $f'(a)$이다. 이는 양쪽 극한이 일치할 때에만 극한이 존재한다는 사실을 평균변화율에 적용한 것에 지나지 않는다. ([§함수의 극한](/ko/math/calculus/functions_and_limits){: data-relation="weak" }) 절댓값함수 $f(x) = \lvert x\rvert$를 다시 보면 $f'_+(0) = 1$, $f'_-(0) = -1$로 둘이 달라 $0$에서 미분 불가능함이 곧바로 확인된다. 한쪽 derivative는 정의역의 끝점에서 미분가능성을 논할 때에도 자연스럽게 쓰이는데, 가령 $[0, \infty)$에서 정의된 $f(x) = \sqrt x$의 $0$에서의 미분가능성은 우미분계수로만 의미를 갖는다.
 
 ---
 
