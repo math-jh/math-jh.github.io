@@ -37,7 +37,7 @@ $$D = \{(x,y) \mid a \leq x \leq b,\ g_1(x) \leq y \leq g_2(x)\}$$
 
 $$\oint_C P\dd{x} = -\iint_D \partial P/\partial y\dd{A}$$
 
-를 보인다. 이중적분 쪽은 [§다중적분, §§푸비니 정리](/ko/math/calculus/multiple_integrals#푸비니-정리)의 반복적분 공식으로 안쪽을 먼저 적분하면
+를 보인다. 이중적분 쪽은 [§다중적분, §§푸비니 정리](/ko/math/calculus/multiple_integrals#푸비니-정리){: data-relation="required" }의 반복적분 공식으로 안쪽을 먼저 적분하면
 
 $$\iint_D \frac{\partial P}{\partial y}\dd{A} = \int_a^b \bigl(P(x, g_2(x)) - P(x, g_1(x))\bigr)\dd{x}$$
 
@@ -67,7 +67,7 @@ $$\area(D) = \oint_C x\dd{y} = -\oint_C y\dd{x} = \frac{1}{2}\oint_C (x\dd{y} - 
 :::
 
 ::: 증명
-[정리 1](#thm1)에서 $(P, Q) = (0, x)$로 두면 $Q_x - P_y = 1$이라 
+[정리 1](#thm1){: data-relation="required" }에서 $(P, Q) = (0, x)$로 두면 $Q_x - P_y = 1$이라 
 
 $$\oint_C x\dd{y} = \iint_D 1\dd{A} = \area(D)$$
 
@@ -78,7 +78,7 @@ $$\oint_C -y\dd{x} = \area(D)$$
 이다. 셋째 식은 이 둘을 평균낸 것이다.
 :::
 
-한편, 그린 정리는 평면벡터장 $\mathbf{F} = (P, Q)$의 두 미분량을 각각 boundary 적분으로 해석하는 두 형태로 다시 적힌다. 이때 평면벡터장의 발산은 회전의 경우와 마찬가지로 $\mathbf{F}$를 $z$에 무관한 $(P, Q, 0)$으로 보아 얻는 $\divergence \mathbf{F} = \partial P/\partial x + \partial Q/\partial y$이다. ([§벡터장, ⁋정의 3](/ko/math/calculus/vector_fields#def3))
+한편, 그린 정리는 평면벡터장 $\mathbf{F} = (P, Q)$의 두 미분량을 각각 boundary 적분으로 해석하는 두 형태로 다시 적힌다. 이때 평면벡터장의 발산은 회전의 경우와 마찬가지로 $\mathbf{F}$를 $z$에 무관한 $(P, Q, 0)$으로 보아 얻는 $\divergence \mathbf{F} = \partial P/\partial x + \partial Q/\partial y$이다. ([§벡터장, ⁋정의 3](/ko/math/calculus/vector_fields#def3){: data-relation="weak" })
 
 ::: 명제 3
 $D$의 boundary $C$가 양의 방향이고 $\mathbf{F} = (P, Q)$가 $C^1$이면, 단위접선 $\mathbf{T}$와 바깥 단위법선 $\mathbf{n}$에 대해
@@ -93,20 +93,20 @@ $$\oint_C \mathbf{F} \cdot \mathbf{T}\dd{s} = \iint_D \left(\frac{\partial Q}{\p
 
 $$\oint_C \mathbf{F}\cdot \mathbf{T}\dd{s} = \oint_C P\dd{x} + Q\dd{y}$$
 
-가 바로 [정리 1](#thm1)의 좌변이고, 우변의 피적분함수 $Q_x - P_y$가 평면벡터장의 회전이다. ([§벡터장, ⁋정의 3](/ko/math/calculus/vector_fields#def3)) 
+가 바로 [정리 1](#thm1){: data-relation="required" }의 좌변이고, 우변의 피적분함수 $Q_x - P_y$가 평면벡터장의 회전이다. ([§벡터장, ⁋정의 3](/ko/math/calculus/vector_fields#def3){: data-relation="weak" }) 
 
 둘째 등식의 경우, 양의 방향 boundary에서 바깥 단위법선 $\mathbf{n}$에 대해 $\mathbf{n}\dd{s} = (\dd{y}, -\dd{x})$임을 쓰면 
 
 $$\oint_C \mathbf{F}\cdot \mathbf{n}\dd{s} = \oint_C P\dd{y} - Q\dd{x}$$
 
-인데, [정리 1](#thm1)을 $(P, Q) \mapsto (-Q, P)$에 적용하면 이것이 
+인데, [정리 1](#thm1){: data-relation="required" }을 $(P, Q) \mapsto (-Q, P)$에 적용하면 이것이 
 
 $$\iint_D (P_x + Q_y)\dd{A} = \iint_D \divergence \mathbf{F}\dd{A}$$
 
 와 같다.
 :::
 
-첫째 등식은 그린 정리와 정확히 동일한 것이며, 오직 둘째 등식만이 새로운 것이나 이 또한 직관적 의미가 명확하다. 즉, 함수 $\mathbf{F}$를 boundary에서 <em-ko>나가는</em-ko> 방향으로 boundary를 따라 모두 적분하면, 이것이 곧 divergence에 담겨있다는 것이다. 한편 우리는 앞서 [§선적분, ⁋예시 6](/ko/math/calculus/line_integrals#ex6)에서 이미 영역에 구멍이 뚫려있으면 curl이 없어도 보존장이 되지 않을 수 있다는 것을 살펴보았는데, 이는 다음과 같이 엄밀하게 적을 수 있다. 
+첫째 등식은 그린 정리와 정확히 동일한 것이며, 오직 둘째 등식만이 새로운 것이나 이 또한 직관적 의미가 명확하다. 즉, 함수 $\mathbf{F}$를 boundary에서 <em-ko>나가는</em-ko> 방향으로 boundary를 따라 모두 적분하면, 이것이 곧 divergence에 담겨있다는 것이다. 한편 우리는 앞서 [§선적분, ⁋예시 6](/ko/math/calculus/line_integrals#ex6){: data-relation="weak" }에서 이미 영역에 구멍이 뚫려있으면 curl이 없어도 보존장이 되지 않을 수 있다는 것을 살펴보았는데, 이는 다음과 같이 엄밀하게 적을 수 있다. 
 
 영역이 *단순연결<sub>simply connected</sub>*이라는 것은 그 안의 임의의 closed 곡선을 영역 밖으로 나가지 않고 한 점까지 연속적으로 수축시킬 수 있다는 뜻으로, 직관적으로는 구멍이 없는 영역이라 생각하면 된다. 가령 원반은 단순연결이지만 중심을 뺀 원반은 그렇지 않은데, 중심을 감싸는 원을 한 점으로 줄이려면 반드시 빠진 중심을 지나야 하기 때문이다.
 
@@ -119,15 +119,15 @@ $$\iint_D (P_x + Q_y)\dd{A} = \iint_D \divergence \mathbf{F}\dd{A}$$
 
 $$\oint_C \mathbf{F}\cdot d\mathbf{r} = \iint_D (Q_x - P_y)\dd{A} = 0$$
 
-이고, 모든 closed 곡선에서 적분이 $0$이므로 [§선적분, ⁋정리 4](/ko/math/calculus/line_integrals#thm4)에 의해 $\mathbf{F}$는 보존장이다.
+이고, 모든 closed 곡선에서 적분이 $0$이므로 [§선적분, ⁋정리 4](/ko/math/calculus/line_integrals#thm4){: data-relation="required" }에 의해 $\mathbf{F}$는 보존장이다.
 :::
 
 ::: 예시 5 (단순연결성)
-[§선적분, ⁋예시 6](/ko/math/calculus/line_integrals#ex6)의 
+[§선적분, ⁋예시 6](/ko/math/calculus/line_integrals#ex6){: data-relation="weak" }의 
 
 $$\mathbf{F} = (-y, x)/(x^2+y^2)$$
 
-은 무회전이지만 원점을 도는 단위원에서 적분이 $2\pi$였다. [따름정리 4](#cor4)에 의하면 이는 오직 이 벡터장이 정의된 영역이 단순연결이 아니어야만 말이 되며, 실제로 정의역 $\mathbb{R}^2\setminus\{0\}$이 단순연결이 아니다. 뿐만 아니라, 원점을 품지 않는 closed 곡선에서는 $\mathbf{F}$의 적분이 모두 $0$이므로, 문제가 되는 것은 오직 벡터장이 정의되지 않는 원점 뿐인 것도 확인할 수 있다. 
+은 무회전이지만 원점을 도는 단위원에서 적분이 $2\pi$였다. [따름정리 4](#cor4){: data-relation="required" }에 의하면 이는 오직 이 벡터장이 정의된 영역이 단순연결이 아니어야만 말이 되며, 실제로 정의역 $\mathbb{R}^2\setminus\{0\}$이 단순연결이 아니다. 뿐만 아니라, 원점을 품지 않는 closed 곡선에서는 $\mathbf{F}$의 적분이 모두 $0$이므로, 문제가 되는 것은 오직 벡터장이 정의되지 않는 원점 뿐인 것도 확인할 수 있다. 
 :::
 
 ---

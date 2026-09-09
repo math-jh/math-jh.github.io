@@ -37,7 +37,7 @@ in the case where $D$ is simple with respect to $y$, that is,
 
 $$D = \{(x,y) \mid a \leq x \leq b,\ g_1(x) \leq y \leq g_2(x)\}.$$
 
-For the double integral, applying the iterated integral formula from [§Multiple Integrals, §§Fubini's Theorem](/en/math/calculus/multiple_integrals#fubinis-theorem) and integrating the inner integral first yields
+For the double integral, applying the iterated integral formula from [§Multiple Integrals, §§Fubini's Theorem](/en/math/calculus/multiple_integrals#fubinis-theorem){: data-relation="required" } and integrating the inner integral first yields
 
 $$\iint_D \frac{\partial P}{\partial y}\dd{A} = \int_a^b \bigl(P(x, g_2(x)) - P(x, g_1(x))\bigr)\dd{x}.$$
 
@@ -65,7 +65,7 @@ $$\area(D) = \oint_C x\dd{y} = -\oint_C y\dd{x} = \frac{1}{2}\oint_C (x\dd{y} - 
 :::
 
 ::: Proof
-In [Theorem 1](#thm1), taking $(P, Q) = (0, x)$ gives $Q_x - P_y = 1$, so
+In [Theorem 1](#thm1){: data-relation="required" }, taking $(P, Q) = (0, x)$ gives $Q_x - P_y = 1$, so
 
 $$\oint_C x\dd{y} = \iint_D 1\dd{A} = \area(D),$$
 
@@ -76,7 +76,7 @@ $$\oint_C -y\dd{x} = \area(D).$$
 The third identity is the average of these two.
 :::
 
-Meanwhile, Green's theorem can be rewritten in two forms that interpret two differential quantities of the planar vector field $\mathbf{F} = (P, Q)$ as boundary integrals. Here, the divergence of a planar vector field is obtained by viewing $\mathbf{F}$ as $(P, Q, 0)$ independent of $z$, giving $\divergence \mathbf{F} = \partial P/\partial x + \partial Q/\partial y$, just as in the case of curl. ([§Vector Fields, ⁋Definition 3](/en/math/calculus/vector_fields#def3))
+Meanwhile, Green's theorem can be rewritten in two forms that interpret two differential quantities of the planar vector field $\mathbf{F} = (P, Q)$ as boundary integrals. Here, the divergence of a planar vector field is obtained by viewing $\mathbf{F}$ as $(P, Q, 0)$ independent of $z$, giving $\divergence \mathbf{F} = \partial P/\partial x + \partial Q/\partial y$, just as in the case of curl. ([§Vector Fields, ⁋Definition 3](/en/math/calculus/vector_fields#def3){: data-relation="weak" })
 
 ::: Proposition 3
 If the boundary $C$ of $D$ is positively oriented and $\mathbf{F} = (P, Q)$ is $C^1$, then for the unit tangent $\mathbf{T}$ and the outward unit normal $\mathbf{n}$,
@@ -91,18 +91,18 @@ For the first identity,
 
 $$\oint_C \mathbf{F}\cdot \mathbf{T}\dd{s} = \oint_C P\dd{x} + Q\dd{y}$$
 
-is precisely the left-hand side of [Theorem 1](#thm1), and the integrand $Q_x - P_y$ on the right-hand side is the curl of the planar vector field. ([§Vector Fields, ⁋Definition 3](/en/math/calculus/vector_fields#def3))
+is precisely the left-hand side of [Theorem 1](#thm1){: data-relation="required" }, and the integrand $Q_x - P_y$ on the right-hand side is the curl of the planar vector field. ([§Vector Fields, ⁋Definition 3](/en/math/calculus/vector_fields#def3){: data-relation="weak" })
 
 For the second identity, using that on the positively oriented boundary the outward unit normal $\mathbf{n}$ satisfies $\mathbf{n}\dd{s} = (\dd{y}, -\dd{x})$, we have
 
 $$\oint_C \mathbf{F}\cdot \mathbf{n}\dd{s} = \oint_C P\dd{y} - Q\dd{x},$$
 
-and applying [Theorem 1](#thm1) to $(P, Q) \mapsto (-Q, P)$ shows that this equals
+and applying [Theorem 1](#thm1){: data-relation="required" } to $(P, Q) \mapsto (-Q, P)$ shows that this equals
 
 $$\iint_D (P_x + Q_y)\dd{A} = \iint_D \divergence \mathbf{F}\dd{A}.$$
 :::
 
-The first identity is exactly Green's theorem, and only the second is new, but its intuitive meaning is clear: integrating the function $\mathbf{F}$ along the boundary in the direction <em>outward</em> from the boundary captures precisely the divergence. On the other hand, we have already seen in [§Line Integrals, ⁋Example 6](/en/math/calculus/line_integrals#ex6) that even when curl vanishes, a vector field may fail to be conservative if the region has holes; this can be written rigorously as follows.
+The first identity is exactly Green's theorem, and only the second is new, but its intuitive meaning is clear: integrating the function $\mathbf{F}$ along the boundary in the direction <em>outward</em> from the boundary captures precisely the divergence. On the other hand, we have already seen in [§Line Integrals, ⁋Example 6](/en/math/calculus/line_integrals#ex6){: data-relation="weak" } that even when curl vanishes, a vector field may fail to be conservative if the region has holes; this can be written rigorously as follows.
 
 A region being *simply connected* means that any closed curve inside it can be continuously shrunk to a point without leaving the region; intuitively, one may think of this as a region without holes. For instance, a disk is simply connected, but a disk with its center removed is not, because to shrink a circle surrounding the center to a point one must necessarily pass through the missing center.
 
@@ -115,7 +115,7 @@ Since the region is simply connected, the entire region $D$ enclosed by any simp
 
 $$\oint_C \mathbf{F}\cdot d\mathbf{r} = \iint_D (Q_x - P_y)\dd{A} = 0,$$
 
-and since the integral vanishes over every closed curve, [§Line Integrals, ⁋Theorem 4](/en/math/calculus/line_integrals#thm4) implies that $\mathbf{F}$ is conservative.
+and since the integral vanishes over every closed curve, [§Line Integrals, ⁋Theorem 4](/en/math/calculus/line_integrals#thm4){: data-relation="required" } implies that $\mathbf{F}$ is conservative.
 :::
 
 ::: Example 5 (Simple connectedness)
@@ -123,7 +123,7 @@ The vector field
 
 $$\mathbf{F} = (-y, x)/(x^2+y^2)$$
 
-from [§Line Integrals, ⁋Example 6](/en/math/calculus/line_integrals#ex6) is irrotational, but its integral over the unit circle around the origin was $2\pi$. By [Corollary 4](#cor4), this only makes sense if the domain on which this vector field is defined is not simply connected, and indeed the domain $\mathbb{R}^2\setminus\{0\}$ is not simply connected. Moreover, over any closed curve not enclosing the origin the integral of $\mathbf{F}$ is $0$, so we can also verify that the only problematic point is the origin where the vector field is undefined.
+from [§Line Integrals, ⁋Example 6](/en/math/calculus/line_integrals#ex6){: data-relation="weak" } is irrotational, but its integral over the unit circle around the origin was $2\pi$. By [Corollary 4](#cor4){: data-relation="required" }, this only makes sense if the domain on which this vector field is defined is not simply connected, and indeed the domain $\mathbb{R}^2\setminus\{0\}$ is not simply connected. Moreover, over any closed curve not enclosing the origin the integral of $\mathbf{F}$ is $0$, so we can also verify that the only problematic point is the origin where the vector field is undefined.
 :::
 
 ---
