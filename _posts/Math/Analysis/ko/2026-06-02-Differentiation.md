@@ -15,7 +15,7 @@ published: false
 
 ---
 
-[\[미적분학\] §미분과 도함수](/ko/math/calculus/derivatives)에서 미분을 difference quotient의 극한으로 정의하였다. 이제 극한과 연속의 엄밀한 이론을 갖추었으므로, 미분을 다시 정초하되 difference quotient의 분모가 사라지는 번거로움을 피하는 Carathéodory의 동치 형태를 채택한다.
+[\[미적분학\] §미분과 도함수](/ko/math/calculus/derivatives){: data-relation="required" }에서 미분을 difference quotient의 극한으로 정의하였다. 이제 극한과 연속의 엄밀한 이론을 갖추었으므로, 미분을 다시 정초하되 difference quotient의 분모가 사라지는 번거로움을 피하는 Carathéodory의 동치 형태를 채택한다.
 
 ## Carathéodory derivative
 
@@ -40,7 +40,7 @@ $f$가 $a$에서 미분가능하면 $a$에서 연속이다.
 :::
 
 ::: 증명
-[명제 1](#prop1)의 $\varphi$를 쓰면 $f(x) = f(a) + \varphi(x)(x-a)$이다. 우변은 $a$에서 연속인 함수들의 곱과 합이므로 ([§함수의 극한과 연속](/ko/math/analysis/limits_and_continuity)), $x \rightarrow a$일 때 $f(x) \rightarrow f(a) + \varphi(a)\cdot 0 = f(a)$이다.
+[명제 1](#prop1){: data-relation="required" }의 $\varphi$를 쓰면 $f(x) = f(a) + \varphi(x)(x-a)$이다. 우변은 $a$에서 연속인 함수들의 곱과 합이므로 ([§함수의 극한과 연속](/ko/math/analysis/limits_and_continuity){: data-relation="required" }), $x \rightarrow a$일 때 $f(x) \rightarrow f(a) + \varphi(a)\cdot 0 = f(a)$이다.
 :::
 
 ## 연쇄법칙
@@ -52,18 +52,18 @@ $f$가 $a$에서, $g$가 $b = f(a)$에서 미분가능하면 $g \circ f$가 $a$�
 :::
 
 ::: 증명
-[명제 1](#prop1)로 $a$에서 연속인 $\varphi$와 $b$에서 연속인 $\psi$가 있어 $f(x) - f(a) = \varphi(x)(x-a)$, $g(y) - g(b) = \psi(y)(y - b)$이다. $y = f(x)$를 대입하면
+[명제 1](#prop1){: data-relation="required" }로 $a$에서 연속인 $\varphi$와 $b$에서 연속인 $\psi$가 있어 $f(x) - f(a) = \varphi(x)(x-a)$, $g(y) - g(b) = \psi(y)(y - b)$이다. $y = f(x)$를 대입하면
 
 $$g(f(x)) - g(f(a)) = \psi(f(x)) \bigl(f(x) - f(a)\bigr) = \psi(f(x)) \varphi(x) (x - a)$$
 
-이다. $f$가 $a$에서 연속이고 $\psi$가 $b = f(a)$에서 연속이므로 $x \mapsto \psi(f(x))\varphi(x)$는 $a$에서 연속이고, [명제 1](#prop1)에 의해 $g\circ f$가 $a$에서 미분가능하며 그 derivative는 $\psi(f(a))\varphi(a) = g'(b)f'(a)$이다.
+이다. $f$가 $a$에서 연속이고 $\psi$가 $b = f(a)$에서 연속이므로 $x \mapsto \psi(f(x))\varphi(x)$는 $a$에서 연속이고, [명제 1](#prop1){: data-relation="required" }에 의해 $g\circ f$가 $a$에서 미분가능하며 그 derivative는 $\psi(f(a))\varphi(a) = g'(b)f'(a)$이다.
 :::
 
-Difference quotient를 직접 다룰 때 생기던 "$f(x) - f(a) = 0$일 때 0으로 나누는" 문제가 이 증명에는 전혀 나타나지 않는다. 같은 방식으로 합·곱·quotient의 미분법도 엄밀하게 재현된다 ([\[미적분학\] §미분법](/ko/math/calculus/differentiation_rules)).
+Difference quotient를 직접 다룰 때 생기던 "$f(x) - f(a) = 0$일 때 0으로 나누는" 문제가 이 증명에는 전혀 나타나지 않는다. 같은 방식으로 합·곱·quotient의 미분법도 엄밀하게 재현된다 ([\[미적분학\] §미분법](/ko/math/calculus/differentiation_rules){: data-relation="weak" }).
 
 ## 사칙연산의 미분법
 
-연쇄법칙과 마찬가지로, 합·곱·quotient의 미분법도 Carathéodory 인자를 결합하는 방식으로 분모를 거치지 않고 곧장 따라 나온다. 핵심은 [명제 1](#prop1)의 연속인자 $\varphi$가 곱셈으로 깔끔하게 분배된다는 점이다.
+연쇄법칙과 마찬가지로, 합·곱·quotient의 미분법도 Carathéodory 인자를 결합하는 방식으로 분모를 거치지 않고 곧장 따라 나온다. 핵심은 [명제 1](#prop1){: data-relation="required" }의 연속인자 $\varphi$가 곱셈으로 깔끔하게 분배된다는 점이다.
 
 ::: 명제 4 (곱의 미분법)
 $f, g$가 $a$에서 미분가능하면 곱 $fg$도 $a$에서 미분가능하고
@@ -74,7 +74,7 @@ $$(fg)'(a) = f'(a) g(a) + f(a) g'(a)$$
 :::
 
 ::: 증명
-[명제 1](#prop1)로 $a$에서 연속인 $\varphi, \psi$가 있어 모든 $x \in I$에 대해 $f(x) - f(a) = \varphi(x)(x-a)$, $g(x) - g(a) = \psi(x)(x-a)$이고 $\varphi(a) = f'(a)$, $\psi(a) = g'(a)$이다. 두 항등식을 이용해 $f(x)g(x) - f(a)g(a)$를 전개하면
+[명제 1](#prop1){: data-relation="required" }로 $a$에서 연속인 $\varphi, \psi$가 있어 모든 $x \in I$에 대해 $f(x) - f(a) = \varphi(x)(x-a)$, $g(x) - g(a) = \psi(x)(x-a)$이고 $\varphi(a) = f'(a)$, $\psi(a) = g'(a)$이다. 두 항등식을 이용해 $f(x)g(x) - f(a)g(a)$를 전개하면
 
 $$\begin{aligned}
 f(x)g(x) - f(a)g(a) &= \bigl(f(x) - f(a)\bigr)g(x) + f(a)\bigl(g(x) - g(a)\bigr) \\
@@ -82,7 +82,7 @@ f(x)g(x) - f(a)g(a) &= \bigl(f(x) - f(a)\bigr)g(x) + f(a)\bigl(g(x) - g(a)\bigr)
 &= \bigl[\varphi(x) g(x) + f(a) \psi(x)\bigr](x-a)
 \end{aligned}$$
 
-이다. 대괄호 안을 $\Phi(x) = \varphi(x)g(x) + f(a)\psi(x)$로 두면, $\varphi, \psi, g$가 모두 $a$에서 연속이므로 ($g$의 연속은 [명제 2](#prop2)에서) $\Phi$도 $a$에서 연속이다. 따라서 [명제 1](#prop1)에 의해 $fg$가 $a$에서 미분가능하고
+이다. 대괄호 안을 $\Phi(x) = \varphi(x)g(x) + f(a)\psi(x)$로 두면, $\varphi, \psi, g$가 모두 $a$에서 연속이므로 ($g$의 연속은 [명제 2](#prop2){: data-relation="required" }에서) $\Phi$도 $a$에서 연속이다. 따라서 [명제 1](#prop1){: data-relation="required" }에 의해 $fg$가 $a$에서 미분가능하고
 
 $$(fg)'(a) = \Phi(a) = \varphi(a)g(a) + f(a)\psi(a) = f'(a)g(a) + f(a)g'(a)$$
 
@@ -100,7 +100,7 @@ $$\left(\frac{f}{g}\right)'(a) = \frac{f'(a)g(a) - f(a)g'(a)}{g(a)^2}$$
 :::
 
 ::: 증명
-$g$가 $a$에서 연속이고 $g(a) \neq 0$이므로, [§함수의 극한과 연속, ⁋정의 1](/ko/math/analysis/limits_and_continuity#def1)의 연속 조건에서 $\varepsilon = \lvert g(a)\rvert/2$로 두면 $a$의 한 근방에서 $\lvert g(x)\rvert > \lvert g(a)\rvert/2 > 0$이 되어 $f/g$가 정의된다. 그 근방에서 [명제 1](#prop1)의 $\varphi, \psi$를 써서 차이를 정리하면
+$g$가 $a$에서 연속이고 $g(a) \neq 0$이므로, [§함수의 극한과 연속, ⁋정의 1](/ko/math/analysis/limits_and_continuity#def1){: data-relation="required" }의 연속 조건에서 $\varepsilon = \lvert g(a)\rvert/2$로 두면 $a$의 한 근방에서 $\lvert g(x)\rvert > \lvert g(a)\rvert/2 > 0$이 되어 $f/g$가 정의된다. 그 근방에서 [명제 1](#prop1){: data-relation="required" }의 $\varphi, \psi$를 써서 차이를 정리하면
 
 $$\begin{aligned}
 \frac{f(x)}{g(x)} - \frac{f(a)}{g(a)} &= \frac{f(x)g(a) - f(a)g(x)}{g(x)g(a)} \\
@@ -108,7 +108,7 @@ $$\begin{aligned}
 &= \frac{\varphi(x)g(a) - f(a)\psi(x)}{g(x)g(a)} (x-a)
 \end{aligned}$$
 
-이다. 분수로 둔 계수를 $\Psi(x)$라 하면 분자·분모가 모두 $a$에서 연속이고 분모 $g(x)g(a)$가 $a$에서 $g(a)^2 \neq 0$이므로 $\Psi$는 $a$에서 연속이다. [명제 1](#prop1)에 의해 $f/g$가 미분가능하고
+이다. 분수로 둔 계수를 $\Psi(x)$라 하면 분자·분모가 모두 $a$에서 연속이고 분모 $g(x)g(a)$가 $a$에서 $g(a)^2 \neq 0$이므로 $\Psi$는 $a$에서 연속이다. [명제 1](#prop1){: data-relation="required" }에 의해 $f/g$가 미분가능하고
 
 $$\left(\frac{f}{g}\right)'(a) = \Psi(a) = \frac{\varphi(a)g(a) - f(a)\psi(a)}{g(a)^2} = \frac{f'(a)g(a) - f(a)g'(a)}{g(a)^2}$$
 
@@ -130,7 +130,7 @@ $$(f^{-1})'(b) = \frac{1}{f'(a)} = \frac{1}{f'(f^{-1}(b))}$$
 :::
 
 ::: 증명
-$f^{-1}(f(x)) = x$가 $I$의 모든 $x$에서 성립한다. 양변을 $a$에서 미분하되 좌변에는 [정리 3](#thm3)을 적용하면
+$f^{-1}(f(x)) = x$가 $I$의 모든 $x$에서 성립한다. 양변을 $a$에서 미분하되 좌변에는 [정리 3](#thm3){: data-relation="required" }을 적용하면
 
 $$(f^{-1})'(f(a))\cdot f'(a) = 1$$
 
@@ -145,17 +145,17 @@ $$(f^{-1})'(y) = \frac{1}{n x^{n-1}} = \frac{1}{n (y^{1/n})^{n-1}} = \frac{1}{n}
 
 ## 연속과 미분가능성
 
-[명제 2](#prop2)는 미분가능성이 연속을 함의함을 보였다. 그 역은 성립하지 않으며, 연속인자 형태는 그 실패를 한눈에 드러낸다.
+[명제 2](#prop2){: data-relation="required" }는 미분가능성이 연속을 함의함을 보였다. 그 역은 성립하지 않으며, 연속인자 형태는 그 실패를 한눈에 드러낸다.
 
 ::: 예시 7 (연속이지만 미분 불가능)
-절댓값 함수 $f(x) = \lvert x\rvert$는 $\mathbb{R}$ 전체에서 연속이지만 $0$에서 미분가능하지 않다. [명제 1](#prop1)의 형태로 보면, $a = 0$에서
+절댓값 함수 $f(x) = \lvert x\rvert$는 $\mathbb{R}$ 전체에서 연속이지만 $0$에서 미분가능하지 않다. [명제 1](#prop1){: data-relation="required" }의 형태로 보면, $a = 0$에서
 
 $$f(x) - f(0) = \lvert x\rvert = \varphi(x) x, \qquad \varphi(x) = \begin{cases} 1 & (x > 0), \\ -1 & (x < 0) \end{cases}$$
 
-를 만족하는 $\varphi$는 $x = 0$에서 좌우 극한이 $-1$과 $1$로 달라 연속으로 확장될 수 없다. 따라서 $f$는 $0$에서 미분가능하지 않으며, 이는 [명제 2](#prop2)의 역인 "연속이면 미분가능"이 거짓임을 보인다.
+를 만족하는 $\varphi$는 $x = 0$에서 좌우 극한이 $-1$과 $1$로 달라 연속으로 확장될 수 없다. 따라서 $f$는 $0$에서 미분가능하지 않으며, 이는 [명제 2](#prop2){: data-relation="weak" }의 역인 "연속이면 미분가능"이 거짓임을 보인다.
 :::
 
-미분가능성은 연속보다 진정으로 강한 조건이다. 절댓값 함수처럼 단 한 점의 꺾임만으로도 미분가능성은 무너지지만, [명제 1](#prop1)부터 [명제 6](#prop6)까지의 규칙은 그런 꺾임이 없는 곳에서 미분의 대수적 계산을 모두 연속인자의 결합으로 환원한다. 극한 조작이 함수의 연속성 판정으로 바뀌고, 미분의 대수적 규칙 전체가 "연속인자를 결합해 다시 연속인자를 만든다"는 한 가지 원리로 통합되는 것이다.
+미분가능성은 연속보다 진정으로 강한 조건이다. 절댓값 함수처럼 단 한 점의 꺾임만으로도 미분가능성은 무너지지만, [명제 1](#prop1){: data-relation="weak" }부터 [명제 6](#prop6){: data-relation="weak" }까지의 규칙은 그런 꺾임이 없는 곳에서 미분의 대수적 계산을 모두 연속인자의 결합으로 환원한다. 극한 조작이 함수의 연속성 판정으로 바뀌고, 미분의 대수적 규칙 전체가 "연속인자를 결합해 다시 연속인자를 만든다"는 한 가지 원리로 통합되는 것이다.
 
 ---
 
