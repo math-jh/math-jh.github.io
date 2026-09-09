@@ -13,7 +13,7 @@ weight: 14
 
 ---
 
-우리는 일찍이 [§선다발과 벡터다발, ⁋예시 12](/ko/math/algebraic_varieties/line_bundles#ex12)에서 line bundle $\mathcal{O}(d)$를 정의하고, [§선다발과 벡터다발, ⁋예시 16](/ko/math/algebraic_varieties/line_bundles#ex16) 직후의 계산을 통해 그 global section $H^0(\mathbb{P}^n, \mathcal{O}(d))$이 degree $d$의 homogeneous polynomial들과 동형임을 확인하였다. 그러나 우리가 이전 글에서 도입한 [§층 코호몰로지, ⁋정의 1](/ko/math/algebraic_varieties/sheaf_cohomology#def1)의 sheaf cohomology는 $H^0$뿐만 아니라 higher cohomology group들 $H^1, H^2, \ldots$까지 포함하는 더 풍부한 불변량이므로, 이제 우리는 $H^0$ 뿐만 아니라 higher cohomology group들을 사용하여 $\mathcal{O}(d)$의 정보를 모두 알아낼 것이다.
+우리는 일찍이 [§선다발과 벡터다발, ⁋예시 12](/ko/math/algebraic_varieties/line_bundles#ex12){: data-relation="required" }에서 line bundle $\mathcal{O}(d)$를 정의하고, [§선다발과 벡터다발, ⁋예시 16](/ko/math/algebraic_varieties/line_bundles#ex16){: data-relation="weak" } 직후의 계산을 통해 그 global section $H^0(\mathbb{P}^n, \mathcal{O}(d))$이 degree $d$의 homogeneous polynomial들과 동형임을 확인하였다. 그러나 우리가 이전 글에서 도입한 [§층 코호몰로지, ⁋정의 1](/ko/math/algebraic_varieties/sheaf_cohomology#def1){: data-relation="required" }의 sheaf cohomology는 $H^0$뿐만 아니라 higher cohomology group들 $H^1, H^2, \ldots$까지 포함하는 더 풍부한 불변량이므로, 이제 우리는 $H^0$ 뿐만 아니라 higher cohomology group들을 사용하여 $\mathcal{O}(d)$의 정보를 모두 알아낼 것이다.
 
 ## Bott's Formula
 
@@ -34,7 +34,7 @@ $$H^q(\mathbb{P}^n, \mathcal{O}(d)) = \begin{cases}
 
 $$\x_i^d \cdot \mathbb{K}[\x_0/\x_i, \ldots, \widehat{\x_i/\x_i}, \ldots, \x_n/\x_i]$$
 
-인 것을 기억하자. ([§선다발과 벡터다발, ⁋예시 12](/ko/math/algebraic_varieties/line_bundles#ex12)) 그럼 Čech cochain $f \in \check{C}^p(\mathcal{U}, \mathcal{O}(d))$은 각각의 $(p+1)$-tuple $(i_0, \ldots, i_p)$에 대해 열린집합 $U_{i_0}\cap\cdots\cap U_{i_p}$ 위에서 regular한 section을 대응시키는 것이다. 이 때, 교집합 $U_{i_0}\cap\cdots\cap U_{i_p}$ 위에서 section이 regular하기 위해서는 $0$이 되지 않는 좌표들, 즉 $\x_{i_0}, \ldots, \x_{i_p}$들만 분모로 허용되고, 나머지는 허용되지 않는 monomial들
+인 것을 기억하자. ([§선다발과 벡터다발, ⁋예시 12](/ko/math/algebraic_varieties/line_bundles#ex12){: data-relation="required" }) 그럼 Čech cochain $f \in \check{C}^p(\mathcal{U}, \mathcal{O}(d))$은 각각의 $(p+1)$-tuple $(i_0, \ldots, i_p)$에 대해 열린집합 $U_{i_0}\cap\cdots\cap U_{i_p}$ 위에서 regular한 section을 대응시키는 것이다. 이 때, 교집합 $U_{i_0}\cap\cdots\cap U_{i_p}$ 위에서 section이 regular하기 위해서는 $0$이 되지 않는 좌표들, 즉 $\x_{i_0}, \ldots, \x_{i_p}$들만 분모로 허용되고, 나머지는 허용되지 않는 monomial들
 
 $$f_{i_0 \cdots i_p} = \x_0^{a_0} \cdots \x_n^{a_n},\qquad \sum_{j=0}^n a_j=d,\quad a_j\geq 0\text{ for $j\not\in \{i_0, \ldots, i_p\}$}$$
 
@@ -58,7 +58,7 @@ $$\check{C}^0=\mathcal{O}(d)(U_0)\oplus \mathcal{O}(d)(U_1),\qquad \check{C}^1=\
 
 $$\mathcal{O}(d)(U_0) = \x_0^d \cdot \mathbb{K}[\x_1/\x_0], \qquad \mathcal{O}(d)(U_1) = \x_1^d \cdot \mathbb{K}[\x_0/\x_1], \qquad \mathcal{O}(d)(U_0 \cap U_1) = \mathbb{K}[\x_0^{\pm 1}, \x_1^{\pm 1}]_d$$
 
-이다. 우선 $\check{C}^0$에서의 cohomology를 계산하기 위해 $\ker\delta$를 분석하자. $H^0(\mathbb{P}^n, \mathcal{O}(d))=\Gamma(\mathbb{P}^n, \mathcal{O}(d))$이므로 이는 사실 [§선다발과 벡터다발, ⁋예시 16](/ko/math/algebraic_varieties/line_bundles#ex16) 직후의 계산을 재확인하는 것에 불과하지만, 별도의 예시 대신 이 증명에서 Čech cohomology의 계산을 하는 것으로 하자.
+이다. 우선 $\check{C}^0$에서의 cohomology를 계산하기 위해 $\ker\delta$를 분석하자. $H^0(\mathbb{P}^n, \mathcal{O}(d))=\Gamma(\mathbb{P}^n, \mathcal{O}(d))$이므로 이는 사실 [§선다발과 벡터다발, ⁋예시 16](/ko/math/algebraic_varieties/line_bundles#ex16){: data-relation="weak" } 직후의 계산을 재확인하는 것에 불과하지만, 별도의 예시 대신 이 증명에서 Čech cohomology의 계산을 하는 것으로 하자.
 
 정의에 의해 cochain $(f_0, f_1) \in \check{C}^0$이 $\ker \delta$에 속한다는 것은 $f_0 = f_1$이 $\mathcal{O}(d)(U_0 \cap U_1)$에서 성립한다는 뜻이다. 우선 $U_0$ 부분을 보면, 임의의 monomial이 $\mathcal{O}(d)(U_0)$에 속하기 위해서는 반드시 적당한 $a\geq 0$에 대하여 $\x_0^{d-a}\x_1^a$ 꼴임을 안다. 비슷하게 어떠한 monomial이 $\mathcal{O}(d)(U_1)$에 속하기 위해서는 적당한 $b\geq 0$에 대하여 $\x_0^b\x_1^{d-b}$의 꼴이어야 한다. 이제 특정 cocycle $(f_0,f_1)$이 $\ker\delta$에 속하기 위해서는 $f_0=f_1$이어야 하고, 따라서 $a+b=d$를 만족하는 monomial들만이 $\ker\delta$에 속할 수 있다. 즉, 다음의 monomial들
 
@@ -149,7 +149,7 @@ $$\rchi(\mathbb{P}^n, \mathcal{O}(d)) = \binom{n+d}{n}$$
 :::
 
 ::: 증명
-[명제 1](#prop1)에 의해 cohomology는 세 가지 경우로 나뉜다.
+[명제 1](#prop1){: data-relation="required" }에 의해 cohomology는 세 가지 경우로 나뉜다.
 
 첫째, $d \geq 0$인 경우 $H^0$만 non-zero이므로
 
@@ -163,7 +163,7 @@ $$\rchi(\mathcal{O}(d)) = \dim H^0(\mathbb{P}^n, \mathcal{O}(d)) = \dim \mathbb{
 
 $$\rchi(\mathcal{O}(d)) = (-1)^n \dim \mathbb{K}[\x_0^{-1}, \ldots, \x_n^{-1}]_{-d-n-1}$$
 
-이다. [명제 1](#prop1) 직후의 설명에 의하면, 이 공간의 차원은
+이다. [명제 1](#prop1){: data-relation="required" } 직후의 설명에 의하면, 이 공간의 차원은
 
 $$\binom{-d-1}{n}=(-1)^n\binom{n+d}{n}$$
 
@@ -178,7 +178,7 @@ $$0 \rightarrow \mathcal{F} \rightarrow \mathcal{G} \rightarrow \mathcal{H} \rig
 
 ## Serre Vanishing
 
-[명제 1](#prop1)에 따르면, $\mathbb{P}^n$ 위에서는 충분히 큰 $d$에 대해 $\mathcal{O}(d)$의 higher cohomology가 모두 사라진다. $\mathbb{P}^n$ 위의 임의의 line bundle은 모두 어떠한 $d$에 대하여 $\mathcal{O}(d)$의 꼴이므로, 이는 $\mathbb{P}^n$의 임의의 line bundle $\mathcal{L}$에 대하여, 충분히 큰 $d\gg 0$에 대하여 $\mathcal{O}(d)$를 사용한 twisted line bundle
+[명제 1](#prop1){: data-relation="required" }에 따르면, $\mathbb{P}^n$ 위에서는 충분히 큰 $d$에 대해 $\mathcal{O}(d)$의 higher cohomology가 모두 사라진다. $\mathbb{P}^n$ 위의 임의의 line bundle은 모두 어떠한 $d$에 대하여 $\mathcal{O}(d)$의 꼴이므로, 이는 $\mathbb{P}^n$의 임의의 line bundle $\mathcal{L}$에 대하여, 충분히 큰 $d\gg 0$에 대하여 $\mathcal{O}(d)$를 사용한 twisted line bundle
 
 $$\mathcal{L}\otimes \mathcal{O}(d)$$
 
@@ -186,7 +186,7 @@ $$\mathcal{L}\otimes \mathcal{O}(d)$$
 
 더 일반적으로 우리는 이를 임의의 projective variety와 그 위에 정의된 임의의 coherent sheaf로 확장할 수 있다. 이를 위해서는 우선 $\mathcal{O}(1)$의 역할을 할 것이 필요한데, 우리의 정의에서 projective variety $X$는 항상 embedding $X\hookrightarrow\mathbb{P}^N$으로 주어지므로 $\mathbb{P}^N$ 위의 $\mathcal{O}(1)$들을 끌어오면 된다. 
 
-한편 이를 증명하는 데 핵심이 되는 것은, 충분히 twist하면 coherent sheaf가 *globally generated*가 된다는 사실이다. 이 개념의 직관을 얻기 위해 우선 line bundle의 경우를 생각해보자. Line bundle $\mathcal{L}$이 [§선형계, ⁋정의 5](/ko/math/algebraic_varieties/linear_systems#def5)에서 정의된 바와 같이 *basepoint-free*라는 것은, 모든 점 $p \in X$에 대해 $s(p) \neq 0$인 global section $s \in H^0(X, \mathcal{L})$가 존재한다는 뜻이다. 즉 base locus가 비어있어, linear system $\lvert \mathcal{L} \rvert$가 각 점에서 반드시 nonzero 값을 제공한다. 이는 evaluation map
+한편 이를 증명하는 데 핵심이 되는 것은, 충분히 twist하면 coherent sheaf가 *globally generated*가 된다는 사실이다. 이 개념의 직관을 얻기 위해 우선 line bundle의 경우를 생각해보자. Line bundle $\mathcal{L}$이 [§선형계, ⁋정의 5](/ko/math/algebraic_varieties/linear_systems#def5){: data-relation="weak" }에서 정의된 바와 같이 *basepoint-free*라는 것은, 모든 점 $p \in X$에 대해 $s(p) \neq 0$인 global section $s \in H^0(X, \mathcal{L})$가 존재한다는 뜻이다. 즉 base locus가 비어있어, linear system $\lvert \mathcal{L} \rvert$가 각 점에서 반드시 nonzero 값을 제공한다. 이는 evaluation map
 
 $$H^0(X, \mathcal{L}) \otimes \mathcal{O}_X \rightarrow \mathcal{L}$$
 
@@ -210,7 +210,7 @@ $\mathbb{P}^N$ 위의 coherent sheaf $\mathcal{G}$에 대하여, 충분히 큰 $
 $S = \mathbb{K}[\x_0, \ldots, \x_N]$로 하고, $M = \bigoplus_{n \in \mathbb{Z}} \Gamma(\mathbb{P}^N, \mathcal{G}(n))$을 graded $S$-module이라 하자. 각각의 standard affine open set $D_+(\x_j)$ 위에서 $\Gamma(D_+(\x_j), \mathcal{G})$는 degree-0 localisation $M_{(\x_j)}$이고, 이는 finitely generated $S_{(\x_j)}$-module이다. 이들의 generator들을 $\overline{m}_1, \ldots, \overline{m}_{r_j} \in M_{(\x_j)}$이라 하면, 이들은 homogeneous element들 $m_k \in M$에 대하여 $\overline{m}_k = m_k / \x_j^{d_k}$이라 할 수 있다. $d_0 = \max_{j,k} d_k$로 하면, 각 generator에 $\x_j^{d_0 - d_k}$를 곱하여 homogeneous element $m_k \cdot \x_j^{d_0 - d_k} \in M_{d_0}$를 얻는다. 이는 $\Gamma(\mathbb{P}^N, \mathcal{G}(d_0))$의 원소이며, $\x_j^{d_0}$를 곱하는 것이 $D_+(\x_j)$ 위에서 $\mathcal{G}$와 $\mathcal{G}(d_0)$의 isomorphism이므로 이렇게 얻어진 global section들은 $D_+(\x_j)$ 위에서 $\mathcal{G}(d_0)$의 stalk를 생성한다. $D_+(\x_j)$들이 $\mathbb{P}^N$을 덮으므로, $\mathcal{G}(d_0)$이 globally generated임을 얻는다. 한편 $k \geq 0$에 대하여 monomial $\x_0^k, \ldots, \x_N^k$가 $\mathcal{O}(k)$의 stalk를 생성하므로 $\mathcal{O}(k)$ 또한 globally generated이고, 두 evaluation map의 tensor를 취하면 $n \geq d_0$인 모든 $n$에 대하여 $\mathcal{G}(n) = \mathcal{G}(d_0) \otimes \mathcal{O}(n - d_0)$이 globally generated이다.
 :::
 
-[보조정리 5](#lem5)의 쓸모는 임의의 coherent sheaf를 line bundle들의 direct sum의 quotient로 적을 수 있게 해준다는 것이며, 이로부터 [명제 1](#prop1)의 계산을 임의의 coherent sheaf로 옮길 수 있다.
+[보조정리 5](#lem5){: data-relation="required" }의 쓸모는 임의의 coherent sheaf를 line bundle들의 direct sum의 quotient로 적을 수 있게 해준다는 것이며, 이로부터 [명제 1](#prop1){: data-relation="required" }의 계산을 임의의 coherent sheaf로 옮길 수 있다.
 
 ::: 보조정리 6
 $\mathbb{P}^N$ 위의 coherent sheaf $\mathcal{G}$에 대하여, 충분히 큰 모든 $n$에서
@@ -221,7 +221,7 @@ $$H^i(\mathbb{P}^N, \mathcal{G}(n)) = 0 \quad (i > 0)$$
 :::
 
 ::: 증명
-[보조정리 5](#lem5)에 의해 $\mathcal{G}(a)$가 globally generated인 $a \gg 0$을 택할 수 있고, 이로부터 얻어지는 surjection $\mathcal{O}^{\oplus r} \twoheadrightarrow \mathcal{G}(a)$에 $\mathcal{O}(-a)$를 tensor하면
+[보조정리 5](#lem5){: data-relation="required" }에 의해 $\mathcal{G}(a)$가 globally generated인 $a \gg 0$을 택할 수 있고, 이로부터 얻어지는 surjection $\mathcal{O}^{\oplus r} \twoheadrightarrow \mathcal{G}(a)$에 $\mathcal{O}(-a)$를 tensor하면
 
 $$\mathcal{E} := \mathcal{O}(-a)^{\oplus r} \twoheadrightarrow \mathcal{G}$$
 
@@ -231,10 +231,10 @@ $$\mathcal{E} := \mathcal{O}(-a)^{\oplus r} \twoheadrightarrow \mathcal{G}$$
 
 $$H^i(\mathcal{E}(n)) \rightarrow H^i(\mathcal{G}(n)) \rightarrow H^{i+1}(\mathcal{K}(n))$$
 
-을 준다. $\mathcal{E}(n) = \mathcal{O}(n-a)^{\oplus r}$이므로 [명제 1](#prop1)에 의해 $n - a \geq -N$이면 좌측 항이 사라지고, $\mathcal{K}$에 대한 귀납적 가정에 의해 충분히 큰 모든 $n$에서 우측 항이 사라진다. 따라서 충분히 큰 모든 $n$에 대해 $H^i(\mathcal{G}(n)) = 0$을 얻는다. $i$는 $1$부터 $N$까지의 유한 개이므로 각각에서 얻은 하한의 최댓값을 취하면 모든 $i > 0$에 대해 동시에 vanishing이 성립하는 $n_0$이 존재한다.
+을 준다. $\mathcal{E}(n) = \mathcal{O}(n-a)^{\oplus r}$이므로 [명제 1](#prop1){: data-relation="required" }에 의해 $n - a \geq -N$이면 좌측 항이 사라지고, $\mathcal{K}$에 대한 귀납적 가정에 의해 충분히 큰 모든 $n$에서 우측 항이 사라진다. 따라서 충분히 큰 모든 $n$에 대해 $H^i(\mathcal{G}(n)) = 0$을 얻는다. $i$는 $1$부터 $N$까지의 유한 개이므로 각각에서 얻은 하한의 최댓값을 취하면 모든 $i > 0$에 대해 동시에 vanishing이 성립하는 $n_0$이 존재한다.
 :::
 
-그럼 남은 것은 임의의 projective variety를 $\mathbb{P}^N$ 안에 넣어 [보조정리 6](#lem6)을 끌어다 쓰는 것뿐이다.
+그럼 남은 것은 임의의 projective variety를 $\mathbb{P}^N$ 안에 넣어 [보조정리 6](#lem6){: data-relation="required" }을 끌어다 쓰는 것뿐이다.
 
 ::: 명제 7 (Serre Vanishing)
 $X$를 projective variety, $\mathcal{L}$을 ample line bundle, $\mathcal{F}$를 coherent sheaf라 하자. 그럼 충분히 큰 $m$에 대해
@@ -249,7 +249,7 @@ $\mathcal{L}$이 ample이므로, 충분히 큰 $m_0$에 대해 $\mathcal{L}^{\ot
 
 $$\check{H}^i(\{X \cap U_j\}, \mathcal{F}) = \check{H}^i(\{U_j\}, i_\ast\mathcal{F})$$
 
-이 성립한다. 한편 [§층 코호몰로지, ⁋정리 11](/ko/math/algebraic_varieties/sheaf_cohomology#thm11)에 의해 variety 위의 quasi-coherent sheaf의 cohomology는 affine open cover에 대한 Čech cohomology로 계산되므로, 다음의 식
+이 성립한다. 한편 [§층 코호몰로지, ⁋정리 11](/ko/math/algebraic_varieties/sheaf_cohomology#thm11){: data-relation="required" }에 의해 variety 위의 quasi-coherent sheaf의 cohomology는 affine open cover에 대한 Čech cohomology로 계산되므로, 다음의 식
 
 $$H^i(X, \mathcal{F}) = \check{H}^i(\{X \cap U_j\}, \mathcal{F}) = \check{H}^i(\{U_j\}, i_\ast\mathcal{F}) = H^i(\mathbb{P}^N, i_\ast\mathcal{F})$$
 
@@ -257,10 +257,10 @@ $$H^i(X, \mathcal{F}) = \check{H}^i(\{X \cap U_j\}, \mathcal{F}) = \check{H}^i(\
 
 $$i_\ast(\mathcal{F} \otimes \mathcal{L}^{\otimes m}) = i_\ast(\mathcal{F} \otimes \mathcal{L}^{\otimes r}) \otimes \mathcal{O}(n) = \mathcal{G}_r(n), \qquad \mathcal{G}_r := i_\ast(\mathcal{F} \otimes \mathcal{L}^{\otimes r})$$
 
-이고 따라서 $H^i(X, \mathcal{F} \otimes \mathcal{L}^{\otimes m}) = H^i(\mathbb{P}^N, \mathcal{G}_r(n))$이다. 여기서 $\mathcal{G}_r$은 $r = 0, \ldots, m_0-1$에 의해 결정되는 $\mathbb{P}^N$ 위의 유한 개의 coherent sheaf들이고, $m$이 충분히 크면 $n = (m-r)/m_0$ 역시 충분히 크므로, 각각의 $\mathcal{G}_r$에 [보조정리 6](#lem6)을 적용하고 그렇게 얻어진 유한 개의 하한들의 최댓값을 취하면 충분히 큰 모든 $m$에 대한 원하는 결론을 얻는다.
+이고 따라서 $H^i(X, \mathcal{F} \otimes \mathcal{L}^{\otimes m}) = H^i(\mathbb{P}^N, \mathcal{G}_r(n))$이다. 여기서 $\mathcal{G}_r$은 $r = 0, \ldots, m_0-1$에 의해 결정되는 $\mathbb{P}^N$ 위의 유한 개의 coherent sheaf들이고, $m$이 충분히 크면 $n = (m-r)/m_0$ 역시 충분히 크므로, 각각의 $\mathcal{G}_r$에 [보조정리 6](#lem6){: data-relation="required" }을 적용하고 그렇게 얻어진 유한 개의 하한들의 최댓값을 취하면 충분히 큰 모든 $m$에 대한 원하는 결론을 얻는다.
 :::
 
-일반적으로 이러한 종류의 vanishing theorem은 cohomology 계산에서 큰 역할을 한다. [명제 7](#prop7)이 충분한 twisting을 통해 모든 higher cohomology를 $0$으로 만들 수 있다는 것이었다면, 다음 명제는 충분히 큰 차수의 cohomology는 twist 없이도 항상 $0$이라는 것이다.
+일반적으로 이러한 종류의 vanishing theorem은 cohomology 계산에서 큰 역할을 한다. [명제 7](#prop7){: data-relation="weak" }이 충분한 twisting을 통해 모든 higher cohomology를 $0$으로 만들 수 있다는 것이었다면, 다음 명제는 충분히 큰 차수의 cohomology는 twist 없이도 항상 $0$이라는 것이다.
 
 ::: 명제 8 (Grothendieck Vanishing)
 $n$차원 projective variety $X$와 그 위의 coherent sheaf $\mathcal{F}$에 대하여, $i > n$이면
@@ -271,22 +271,22 @@ $$H^i(X, \mathcal{F}) = 0$$
 :::
 
 ::: 증명
-$X \subseteq \mathbb{P}^M$의 homogeneous coordinate ring $S(X)$는 Krull dimension $n+1$을 가지므로, [\[가환대수학\] §뇌터 정규화, ⁋정리 1](/ko/math/commutative_algebra/noether_normalization#thm1)에 의해 $S(X)$가 그 위에서 finitely generated module이 되는 polynomial subring이 존재하고, $\mathbb{K}$가 algebraically closed이므로 infinite field여서 [\[가환대수학\] §뇌터 정규화, ⁋보조정리 2](/ko/math/commutative_algebra/noether_normalization#lem2)의 둘째 경우에 의해 그 generator들을 linear form $\y_0, \ldots, \y_n$으로 택할 수 있다. 이들은 $X$ 위에 공통영점을 갖지 않으므로 morphism
+$X \subseteq \mathbb{P}^M$의 homogeneous coordinate ring $S(X)$는 Krull dimension $n+1$을 가지므로, [\[가환대수학\] §뇌터 정규화, ⁋정리 1](/ko/math/commutative_algebra/noether_normalization#thm1){: data-relation="required" }에 의해 $S(X)$가 그 위에서 finitely generated module이 되는 polynomial subring이 존재하고, $\mathbb{K}$가 algebraically closed이므로 infinite field여서 [\[가환대수학\] §뇌터 정규화, ⁋보조정리 2](/ko/math/commutative_algebra/noether_normalization#lem2){: data-relation="required" }의 둘째 경우에 의해 그 generator들을 linear form $\y_0, \ldots, \y_n$으로 택할 수 있다. 이들은 $X$ 위에 공통영점을 갖지 않으므로 morphism
 
 $$\pi \colon X \rightarrow \mathbb{P}^n, \qquad p \mapsto [\y_0(p) : \cdots : \y_n(p)]$$
 
-을 정의하며, 각 $D_+(\y_j)$ 위에서 $\pi^{-1}(D_+(\y_j))$의 coordinate ring이 $S(X)_{(\y_j)}$로 $\mathbb{K}[D_+(\y_j)]$ 위의 finitely generated module이므로 [§차원, ⁋정의 11](/ko/math/algebraic_varieties/dimension#def11)의 의미에서 finite이고, integral extension이 주는 lying over에 의해 surjective이다. 기하적으로 이는 $X$와 만나지 않는 linear subspace $V(\y_0, \ldots, \y_n)$을 중심으로 한 projection이다.
+을 정의하며, 각 $D_+(\y_j)$ 위에서 $\pi^{-1}(D_+(\y_j))$의 coordinate ring이 $S(X)_{(\y_j)}$로 $\mathbb{K}[D_+(\y_j)]$ 위의 finitely generated module이므로 [§차원, ⁋정의 11](/ko/math/algebraic_varieties/dimension#def11){: data-relation="required" }의 의미에서 finite이고, integral extension이 주는 lying over에 의해 surjective이다. 기하적으로 이는 $X$와 만나지 않는 linear subspace $V(\y_0, \ldots, \y_n)$을 중심으로 한 projection이다.
 
-Finite morphism은 affine open set의 preimage가 다시 affine이므로, $\mathbb{P}^n$의 standard affine cover $\{U_j\}$를 끌어올린 $\{\pi^{-1}(U_j)\}$는 $X$의 affine open cover이고 그 finite intersection 역시 affine이다. 그럼 [명제 7](#prop7)의 증명에서와 같이 두 Čech complex가 항마다
+Finite morphism은 affine open set의 preimage가 다시 affine이므로, $\mathbb{P}^n$의 standard affine cover $\{U_j\}$를 끌어올린 $\{\pi^{-1}(U_j)\}$는 $X$의 affine open cover이고 그 finite intersection 역시 affine이다. 그럼 [명제 7](#prop7){: data-relation="weak" }의 증명에서와 같이 두 Čech complex가 항마다
 
 $$\check{C}^p(\{\pi^{-1}(U_j)\}, \mathcal{F}) = \prod_{j_0 < \cdots < j_p} \mathcal{F}(\pi^{-1}(U_{j_0} \cap \cdots \cap U_{j_p})) = \check{C}^p(\{U_j\}, \pi_\ast\mathcal{F})$$
 
-로 일치하고, [§층 코호몰로지, ⁋정리 11](/ko/math/algebraic_varieties/sheaf_cohomology#thm11)에 의해 양쪽의 Čech cohomology가 각각 $H^i(X, \mathcal{F})$와 $H^i(\mathbb{P}^n, \pi_\ast\mathcal{F})$이므로 이 둘이 같다. 이제 $\{U_j\}$는 $n+1$개의 열린집합으로 이루어져 있어 $p > n$에서 $\check{C}^p(\{U_j\}, \pi_\ast\mathcal{F}) = 0$이므로, $i > n$이면 우변이 사라진다.
+로 일치하고, [§층 코호몰로지, ⁋정리 11](/ko/math/algebraic_varieties/sheaf_cohomology#thm11){: data-relation="required" }에 의해 양쪽의 Čech cohomology가 각각 $H^i(X, \mathcal{F})$와 $H^i(\mathbb{P}^n, \pi_\ast\mathcal{F})$이므로 이 둘이 같다. 이제 $\{U_j\}$는 $n+1$개의 열린집합으로 이루어져 있어 $p > n$에서 $\check{C}^p(\{U_j\}, \pi_\ast\mathcal{F}) = 0$이므로, $i > n$이면 우변이 사라진다.
 :::
 
 ## Regularity
 
-[명제 7](#prop7)은 higher cohomology가 충분히 큰 twisting 후 vanish한다는 qualitative한 결과를 주었다. Regularity는 이를 정량화하여, 구체적으로 얼마만큼의 twisting이 필요한지를 측정하는 개념이다.
+[명제 7](#prop7){: data-relation="weak" }은 higher cohomology가 충분히 큰 twisting 후 vanish한다는 qualitative한 결과를 주었다. Regularity는 이를 정량화하여, 구체적으로 얼마만큼의 twisting이 필요한지를 측정하는 개념이다.
 
 직관적으로 higher cohomology는 낮은 degree cohomology에서의 실패로 인해 생기는 것이므로, 이 twisting은 높은 degree에서는 "덜" 필요하다. 이를 염두에 두면 다음의 정의가 자연스럽다.
 
@@ -321,7 +321,7 @@ $X$를 projective variety, $\mathcal{L}$을 very ample line bundle, $\mathcal{F}
 ::: 증명
 $n = \dim X$로 두고, $X$의 차원에 대한 귀납법으로 증명한다. $\dim X = 0$인 경우 $X$는 한 점이고 coherent sheaf $\mathcal{F}$는 finite-dimensional vector space이므로 $H^0$ 이외의 cohomology는 자동으로 사라진다. 이제 $\dim X \geq 1$이라 가정하자.
 
-핵심은 $\mathcal{L}$의 global section $s \in H^0(X, \mathcal{L})$으로 정의되는 effective divisor $D$에 대한 restriction exact sequence를 이용하는 것이다. $\mathcal{L}$이 very ample이므로 $D$는 $X$를 projective space에 넣었을 때의 hyperplane section이고, 따라서 일반적인 $s$를 택하면 [§선형계, ⁋명제 11](/ko/math/algebraic_varieties/linear_systems#prop11)에 의해 $D$는 $X$의 singular point 밖에서 smooth이다. 그럼 다음 short exact sequence를 얻는다.
+핵심은 $\mathcal{L}$의 global section $s \in H^0(X, \mathcal{L})$으로 정의되는 effective divisor $D$에 대한 restriction exact sequence를 이용하는 것이다. $\mathcal{L}$이 very ample이므로 $D$는 $X$를 projective space에 넣었을 때의 hyperplane section이고, 따라서 일반적인 $s$를 택하면 [§선형계, ⁋명제 11](/ko/math/algebraic_varieties/linear_systems#prop11){: data-relation="required" }에 의해 $D$는 $X$의 singular point 밖에서 smooth이다. 그럼 다음 short exact sequence를 얻는다.
 
 $$0 \rightarrow \mathcal{F} \otimes \mathcal{L}^{\otimes k-1} \xrightarrow{\cdot s} \mathcal{F} \otimes \mathcal{L}^{\otimes k} \rightarrow \mathcal{F} \otimes \mathcal{L}^{\otimes k}\vert_D \rightarrow 0$$
 
@@ -365,16 +365,16 @@ $$H^0(\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m+p-1}) \rightarr
 
 $$H^i(\mathcal{F} \otimes \mathcal{L}^{\otimes m+p-i-1}) \rightarrow H^i(\mathcal{F} \otimes \mathcal{L}^{\otimes m+p-i}) \rightarrow H^i(\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m+p-i})$$
 
-이다. 귀납적 가정 ($p-1$에 대한)에 의해 좌측 항이 사라진다. 우측 항의 경우, $i \leq n-1$이면 차원에 대한 귀납적 가정에 의해 $\mathcal{F}\vert_D$가 $(m+p)$-regular이므로 $H^i(\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m+p-i}) = 0$이고, $i \geq n$이면 $\dim D = n-1$이므로 [명제 8](#prop8)에 의해 같은 항이 자동으로 사라진다. 어느 경우에나 $H^i(\mathcal{F} \otimes \mathcal{L}^{\otimes m+p-i}) = 0$을 얻는다.
+이다. 귀납적 가정 ($p-1$에 대한)에 의해 좌측 항이 사라진다. 우측 항의 경우, $i \leq n-1$이면 차원에 대한 귀납적 가정에 의해 $\mathcal{F}\vert_D$가 $(m+p)$-regular이므로 $H^i(\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m+p-i}) = 0$이고, $i \geq n$이면 $\dim D = n-1$이므로 [명제 8](#prop8){: data-relation="required" }에 의해 같은 항이 자동으로 사라진다. 어느 경우에나 $H^i(\mathcal{F} \otimes \mathcal{L}^{\otimes m+p-i}) = 0$을 얻는다.
 :::
 
 ::: 예시 11
-$\mathbb{P}^n$ 위의 line bundle $\mathcal{O}(d)$의 regularity를 계산해보자. 여기서 $\mathcal{L} = \mathcal{O}(1)$이므로 twist는 $\mathcal{O}(d) \otimes \mathcal{O}(m) = \mathcal{O}(d+m)$이다. $m$-regularity 조건은 $H^i(\mathbb{P}^n, \mathcal{O}(d+m-i)) = 0$ ($i > 0$)이다. $d \geq 0$이고 $m = 0$을 택하면 $H^i(\mathcal{O}(d-i))$를 확인해야 하는데, $i = 1$일 때 $H^1(\mathcal{O}(d-1))$은 $d \geq 1$이면 $0$이고 $d = 0$이면 $H^1(\mathcal{O}(-1)) = 0$ (Bott's formula에서 $-1 \geq -n$이므로 모든 cohomology가 $0$)이다. 일반적으로 $d \geq 0$이고 $i > 0$일 때 $d - i \geq -n$이면 $H^i(\mathcal{O}(d-i)) = 0$이고, $d - i < -n$, 즉 $i > d + n$인 경우에는 $i > n$이 되어 어차피 $H^i = 0$이다. 따라서 $\mathcal{O}(d)$는 $\mathcal{L} = \mathcal{O}(1)$에 대해 $0$-regular이다. 반면 $d < 0$인 경우, $\mathcal{O}(d)$는 $(-d)$-regular이다. [명제 10](#prop10)에 의해 $\mathcal{O}(d) \otimes \mathcal{L}^{\otimes 0} = \mathcal{O}(d)$는 $d \geq 0$일 때 globally generated이며, 이는 [§선다발과 벡터다발, ⁋예시 16](/ko/math/algebraic_varieties/line_bundles#ex16) 직후의 계산에서 확인한 바와 일치한다.
+$\mathbb{P}^n$ 위의 line bundle $\mathcal{O}(d)$의 regularity를 계산해보자. 여기서 $\mathcal{L} = \mathcal{O}(1)$이므로 twist는 $\mathcal{O}(d) \otimes \mathcal{O}(m) = \mathcal{O}(d+m)$이다. $m$-regularity 조건은 $H^i(\mathbb{P}^n, \mathcal{O}(d+m-i)) = 0$ ($i > 0$)이다. $d \geq 0$이고 $m = 0$을 택하면 $H^i(\mathcal{O}(d-i))$를 확인해야 하는데, $i = 1$일 때 $H^1(\mathcal{O}(d-1))$은 $d \geq 1$이면 $0$이고 $d = 0$이면 $H^1(\mathcal{O}(-1)) = 0$ (Bott's formula에서 $-1 \geq -n$이므로 모든 cohomology가 $0$)이다. 일반적으로 $d \geq 0$이고 $i > 0$일 때 $d - i \geq -n$이면 $H^i(\mathcal{O}(d-i)) = 0$이고, $d - i < -n$, 즉 $i > d + n$인 경우에는 $i > n$이 되어 어차피 $H^i = 0$이다. 따라서 $\mathcal{O}(d)$는 $\mathcal{L} = \mathcal{O}(1)$에 대해 $0$-regular이다. 반면 $d < 0$인 경우, $\mathcal{O}(d)$는 $(-d)$-regular이다. [명제 10](#prop10){: data-relation="required" }에 의해 $\mathcal{O}(d) \otimes \mathcal{L}^{\otimes 0} = \mathcal{O}(d)$는 $d \geq 0$일 때 globally generated이며, 이는 [§선다발과 벡터다발, ⁋예시 16](/ko/math/algebraic_varieties/line_bundles#ex16){: data-relation="weak" } 직후의 계산에서 확인한 바와 일치한다.
 :::
 
 ## Very ample과 ample의 성질
 
-위의 [명제 7](#prop7)과 [명제 10](#prop10)은 ample line bundle의 성질에 대한 대표적인 결과이다. 우리는 이 글을 ample line bundle과 very ample line bundle에 대한 추가적인 성질을 살펴보며 마무리한다. 
+위의 [명제 7](#prop7){: data-relation="weak" }과 [명제 10](#prop10){: data-relation="weak" }은 ample line bundle의 성질에 대한 대표적인 결과이다. 우리는 이 글을 ample line bundle과 very ample line bundle에 대한 추가적인 성질을 살펴보며 마무리한다. 
 
 ::: 명제 12
 $\mathcal{L}$이 very ample이고 $\mathcal{M}$이 globally generated line bundle이면, $\mathcal{L} \otimes \mathcal{M}$은 very ample이다.
@@ -383,7 +383,7 @@ $\mathcal{L}$이 very ample이고 $\mathcal{M}$이 globally generated line bundl
 ::: 증명
 $\mathcal{L}$이 very ample이므로, projective embedding $i: X \hookrightarrow \mathbb{P}^N$이 존재하여 $\mathcal{L} = i^\ast\mathcal{O}_{\mathbb{P}^N}(1)$이도록 할 수 있다. 한편, $\mathcal{M}$이 globally generated이므로, global section들 $s_0, \ldots, s_n \in H^0(X, \mathcal{M})$가 모든 점에서 stalk를 generate하며, 이로부터 morphism $\phi: X \rightarrow \mathbb{P}^n$를 정의할 수 있다.
 
-이제 closed embedding $(i, \phi): X \rightarrow \mathbb{P}^N \times \mathbb{P}^n$을 생각하자. 그럼 여기에 Segre embedding ([§사영다양체, ⁋예시 16](/ko/math/algebraic_varieties/projective_varieties#ex16)) 
+이제 closed embedding $(i, \phi): X \rightarrow \mathbb{P}^N \times \mathbb{P}^n$을 생각하자. 그럼 여기에 Segre embedding ([§사영다양체, ⁋예시 16](/ko/math/algebraic_varieties/projective_varieties#ex16){: data-relation="weak" }) 
 
 $$\sigma: \mathbb{P}^N \times \mathbb{P}^n \hookrightarrow \mathbb{P}^{Nn+N+n}$$
 
@@ -401,11 +401,11 @@ Projective variety $X$ 위에 정의된 ample line bundle $\mathcal{L}$과 임�
 :::
 
 ::: 증명
-우선 $\mathcal{L}$이 ample이므로 적당한 $m>0$에 대해 $\mathcal{L}^{\otimes m}$이 very ample이다. 한편 [명제 7](#prop7)에 의해 적당한 $k_0$가 존재하여 모든 $k \geq k_0$와 $i > 0$에 대해 $H^i(X, \mathcal{M} \otimes \mathcal{L}^{\otimes k}) = 0$이 성립한다. 이제 $k = k_0 + m\dim X$로 두면 $1 \leq i \leq \dim X$에 대해 $k - mi \geq k_0$이므로
+우선 $\mathcal{L}$이 ample이므로 적당한 $m>0$에 대해 $\mathcal{L}^{\otimes m}$이 very ample이다. 한편 [명제 7](#prop7){: data-relation="required" }에 의해 적당한 $k_0$가 존재하여 모든 $k \geq k_0$와 $i > 0$에 대해 $H^i(X, \mathcal{M} \otimes \mathcal{L}^{\otimes k}) = 0$이 성립한다. 이제 $k = k_0 + m\dim X$로 두면 $1 \leq i \leq \dim X$에 대해 $k - mi \geq k_0$이므로
 
 $$H^i(\mathcal{M} \otimes \mathcal{L}^{\otimes k} \otimes (\mathcal{L}^{\otimes m})^{\otimes -i}) = H^i(\mathcal{M} \otimes \mathcal{L}^{\otimes k-mi}) = 0$$
 
-이고, $i > \dim X$에 대해서는 [명제 8](#prop8)에 의해 이 cohomology가 자동으로 사라진다. 즉 $\mathcal{M} \otimes \mathcal{L}^{\otimes k}$는 very ample line bundle $\mathcal{L}^{\otimes m}$에 대해 $0$-regular이므로, [명제 10](#prop10)에 의해 globally generated이다. 이제 [명제 12](#prop12)에 의해 
+이고, $i > \dim X$에 대해서는 [명제 8](#prop8){: data-relation="required" }에 의해 이 cohomology가 자동으로 사라진다. 즉 $\mathcal{M} \otimes \mathcal{L}^{\otimes k}$는 very ample line bundle $\mathcal{L}^{\otimes m}$에 대해 $0$-regular이므로, [명제 10](#prop10){: data-relation="required" }에 의해 globally generated이다. 이제 [명제 12](#prop12){: data-relation="required" }에 의해 
 
 $$(\mathcal{M} \otimes \mathcal{L}^{\otimes k}) \otimes \mathcal{L}^{\otimes m} = \mathcal{M} \otimes \mathcal{L}^{\otimes (k+m)}$$
 
