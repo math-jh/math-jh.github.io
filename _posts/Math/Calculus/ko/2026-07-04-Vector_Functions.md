@@ -97,7 +97,7 @@ $$(f \mathbf{u})' = f' \mathbf{u} + f \mathbf{u}', \qquad (\mathbf{u} \cdot \mat
 :::
 
 ::: 증명
-모두 성분별로 적으면 스칼라함수의 곱미분과 연쇄법칙으로 환원된다. 가령 내적은 $\mathbf{u} \cdot \mathbf{v} = \sum_i u_i v_i$이므로 $(\mathbf{u} \cdot \mathbf{v})' = \sum_i (u_i' v_i + u_i v_i') = \mathbf{u}' \cdot \mathbf{v} + \mathbf{u} \cdot \mathbf{v}'$이고, 외적과 스칼라곱도 각 성분이 $u_i v_j$ 꼴의 곱들의 합이라 같은 방식으로 보일 수 있다. 합성은 [§미분법, ⁋정리 4](/ko/math/calculus/differentiation_rules#thm4)를 각 성분에 적용한 것이다.
+모두 성분별로 적으면 스칼라함수의 곱미분과 연쇄법칙으로 환원된다. 가령 내적은 $\mathbf{u} \cdot \mathbf{v} = \sum_i u_i v_i$이므로 $(\mathbf{u} \cdot \mathbf{v})' = \sum_i (u_i' v_i + u_i v_i') = \mathbf{u}' \cdot \mathbf{v} + \mathbf{u} \cdot \mathbf{v}'$이고, 외적과 스칼라곱도 각 성분이 $u_i v_j$ 꼴의 곱들의 합이라 같은 방식으로 보일 수 있다. 합성은 [§미분법, ⁋정리 4](/ko/math/calculus/differentiation_rules#thm4){: data-relation="required" }를 각 성분에 적용한 것이다.
 :::
 
 이 명제의 유용한 따름정리 중 하나는 $\lVert \mathbf{u}(t)\rVert$가 상수이면 $\mathbf{u} \cdot \mathbf{u} = \lVert \mathbf{u}\rVert^2$도 상수이므로 $(\mathbf{u} \cdot \mathbf{u})' = 2 \mathbf{u} \cdot \mathbf{u}' = 0$, 곧 $\mathbf{u} \perp \mathbf{u}'$라는 것이다. 즉, 길이가 일정한 벡터의 변화율은 항상 그 벡터에 수직이며, 원운동에서 위치벡터와 속도가 수직인 것이 이 사실의 특수한 경우이다.
@@ -139,7 +139,7 @@ $$L = \int_a^b \lVert \mathbf{r}'(t)\rVert \dd{t}$$
 이다.
 :::
 
-피적분함수 $\lVert \mathbf{r}'(t)\rVert$는 연속이므로 적분가능하다 ([§적분, ⁋정리 10](/ko/math/calculus/integration#thm10)). 이제 시작점에서 잰 arc length
+피적분함수 $\lVert \mathbf{r}'(t)\rVert$는 연속이므로 적분가능하다 ([§적분, ⁋정리 10](/ko/math/calculus/integration#thm10){: data-relation="weak" }). 이제 시작점에서 잰 arc length
 
 $$s(t) = \int_a^t \lVert \mathbf{r}'(\tau)\rVert \dd{\tau}$$
 
@@ -171,7 +171,7 @@ $$\mathbf{N} = \frac{d\mathbf{T}/\dd{s}}{\lVert d\mathbf{T}/\dd{s}\rVert}$$
 를 *단위법선벡터<sub>unit normal vector</sub>*라 한다.
 :::
 
-[명제 6](#prop6)에 의해 $\mathbf{T} = d\mathbf{r}/\dd{s}$는 단위벡터인 것에 주목하자. 그럼 [명제 3](#prop3) 직후에 살펴본, 길이가 일정한 벡터의 변화율은 그 벡터에 수직이라는 앞의 관찰에 의해 $d\mathbf{T}/\dd{s} \perp \mathbf{T}$이다. 즉, 단위법선벡터 $\mathbf{N}$은 항상 접선에 수직이며, 곡선이 휘어 들어가는 안쪽을 가리킨다. 
+[명제 6](#prop6){: data-relation="required" }에 의해 $\mathbf{T} = d\mathbf{r}/\dd{s}$는 단위벡터인 것에 주목하자. 그럼 [명제 3](#prop3){: data-relation="required" } 직후에 살펴본, 길이가 일정한 벡터의 변화율은 그 벡터에 수직이라는 앞의 관찰에 의해 $d\mathbf{T}/\dd{s} \perp \mathbf{T}$이다. 즉, 단위법선벡터 $\mathbf{N}$은 항상 접선에 수직이며, 곡선이 휘어 들어가는 안쪽을 가리킨다. 
 
 위의 정의는 일반적인 $n$차원 공간 안에서의 곡선에 대한 것이지만, $3$차원 공간에서는 외적을 사용하면 이를 더 편하게 계산할 수 있다. 특히, 다음 공식은 arc length parametrization 없이 바로 적용 가능하므로 훨씬 편하다.
 
@@ -196,7 +196,7 @@ $$\mathbf{r}'' = v'\mathbf{T} + v\mathbf{T}'(t)$$
 
 $$\mathbf{r}' \times \mathbf{r}'' = (v\mathbf{T}) \times (v'\mathbf{T} + v\mathbf{T}'(t)) = v^2(\mathbf{T} \times \mathbf{T}'(t))$$
 
-이다. 여기서 둘째 등호는 $\mathbf{T}\times \mathbf{T}=0$으로부터 얻어진다. 이제 $\mathbf{T}$는 단위벡터이고, 길이가 일정한 벡터의 변화율은 그 벡터에 수직이라는 [명제 3](#prop3) 직후의 관찰에 의해 $\mathbf{T} \perp \mathbf{T}'(t)$이므로 $\lVert \mathbf{T} \times \mathbf{T}'(t)\rVert = \lVert \mathbf{T}'(t)\rVert = \kappa v$이고, 
+이다. 여기서 둘째 등호는 $\mathbf{T}\times \mathbf{T}=0$으로부터 얻어진다. 이제 $\mathbf{T}$는 단위벡터이고, 길이가 일정한 벡터의 변화율은 그 벡터에 수직이라는 [명제 3](#prop3){: data-relation="required" } 직후의 관찰에 의해 $\mathbf{T} \perp \mathbf{T}'(t)$이므로 $\lVert \mathbf{T} \times \mathbf{T}'(t)\rVert = \lVert \mathbf{T}'(t)\rVert = \kappa v$이고, 
 
 $$\lVert \mathbf{r}' \times \mathbf{r}''\rVert = v^3 \kappa = \lVert \mathbf{r}'\rVert^3 \kappa$$
 
@@ -220,7 +220,7 @@ $$\mathbf{r}'' = \frac{\dd{v}}{\dd{t}}\mathbf{T} + \kappa v^2\mathbf{N}$$
 
 $$\mathbf{r}' \times \mathbf{r}'' = (\sin t,\ -\cos t,\ 1), \qquad \lVert \mathbf{r}' \times \mathbf{r}''\rVert = \sqrt{2}$$
 
-이고 $\lVert \mathbf{r}'\rVert = \sqrt{2}$이므로 곡률은 $\kappa = \sqrt{2}/(\sqrt{2})^3 = 1/2$로 일정하다. 속력 $v = \sqrt{2}$가 일정하므로 [명제 9](#prop9)에서 가속도는 법선 성분뿐이고 그 크기는 $\kappa v^2 = (1/2)\cdot 2 = 1$인데, 실제로 $\lVert \mathbf{r}''(t)\rVert = \lVert(-\cos t, -\sin t, 0)\rVert = 1$로 일치한다.
+이고 $\lVert \mathbf{r}'\rVert = \sqrt{2}$이므로 곡률은 $\kappa = \sqrt{2}/(\sqrt{2})^3 = 1/2$로 일정하다. 속력 $v = \sqrt{2}$가 일정하므로 [명제 9](#prop9){: data-relation="required" }에서 가속도는 법선 성분뿐이고 그 크기는 $\kappa v^2 = (1/2)\cdot 2 = 1$인데, 실제로 $\lVert \mathbf{r}''(t)\rVert = \lVert(-\cos t, -\sin t, 0)\rVert = 1$로 일치한다.
 :::
 
 ---

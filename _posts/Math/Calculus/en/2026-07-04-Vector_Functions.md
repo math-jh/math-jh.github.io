@@ -97,7 +97,7 @@ and when $n = 3$, for the cross product $(\mathbf{u} \times \mathbf{v})' = \math
 :::
 
 ::: Proof
-Writing everything out component-wise reduces each identity to the product rule and chain rule for scalar functions. For example, the inner product is $\mathbf{u} \cdot \mathbf{v} = \sum_i u_i v_i$, so $(\mathbf{u} \cdot \mathbf{v})' = \sum_i (u_i' v_i + u_i v_i') = \mathbf{u}' \cdot \mathbf{v} + \mathbf{u} \cdot \mathbf{v}'$; the cross product and scalar multiplication can be shown in the same way since each component is a sum of products of the form $u_i v_j$. The composition rule follows by applying [§Differentiation, ⁋Theorem 4](/en/math/calculus/differentiation_rules#thm4) to each component.
+Writing everything out component-wise reduces each identity to the product rule and chain rule for scalar functions. For example, the inner product is $\mathbf{u} \cdot \mathbf{v} = \sum_i u_i v_i$, so $(\mathbf{u} \cdot \mathbf{v})' = \sum_i (u_i' v_i + u_i v_i') = \mathbf{u}' \cdot \mathbf{v} + \mathbf{u} \cdot \mathbf{v}'$; the cross product and scalar multiplication can be shown in the same way since each component is a sum of products of the form $u_i v_j$. The composition rule follows by applying [§Differentiation, ⁋Theorem 4](/en/math/calculus/differentiation_rules#thm4){: data-relation="required" } to each component.
 :::
 
 One useful corollary of this proposition is that if $\lVert \mathbf{u}(t)\rVert$ is constant then $\mathbf{u} \cdot \mathbf{u} = \lVert \mathbf{u}\rVert^2$ is also constant, so $(\mathbf{u} \cdot \mathbf{u})' = 2 \mathbf{u} \cdot \mathbf{u}' = 0$, i.e., $\mathbf{u} \perp \mathbf{u}'$. Hence the derivative of a vector of constant length is always perpendicular to that vector, and the fact that in circular motion the position vector and velocity are perpendicular is a special case of this.
@@ -137,7 +137,7 @@ The *arc length* of a $C^1$ curve $\mathbf{r}\colon [a, b] \rightarrow \mathbb{R
 $$L = \int_a^b \lVert \mathbf{r}'(t)\rVert \dd{t}.$$
 :::
 
-The integrand $\lVert \mathbf{r}'(t)\rVert$ is continuous, hence integrable ([§Integration, ⁋Theorem 10](/en/math/calculus/integration#thm10)). We call
+The integrand $\lVert \mathbf{r}'(t)\rVert$ is continuous, hence integrable ([§Integration, ⁋Theorem 10](/en/math/calculus/integration#thm10){: data-relation="weak" }). We call
 
 $$s(t) = \int_a^t \lVert \mathbf{r}'(\tau)\rVert \dd{\tau}$$
 
@@ -169,7 +169,7 @@ $$\mathbf{N} = \frac{d\mathbf{T}/\dd{s}}{\lVert d\mathbf{T}/\dd{s}\rVert}$$
 is called the *unit normal vector*.
 :::
 
-Note that by [Proposition 6](#prop6), $\mathbf{T} = d\mathbf{r}/\dd{s}$ is a unit vector. Then by the observation examined right after [Proposition 3](#prop3), that the derivative of a vector of constant length is perpendicular to that vector, we have $d\mathbf{T}/\dd{s} \perp \mathbf{T}$. Thus the unit normal vector $\mathbf{N}$ is always perpendicular to the tangent, and points to the inside into which the curve is bending.
+Note that by [Proposition 6](#prop6){: data-relation="required" }, $\mathbf{T} = d\mathbf{r}/\dd{s}$ is a unit vector. Then by the observation examined right after [Proposition 3](#prop3){: data-relation="required" }, that the derivative of a vector of constant length is perpendicular to that vector, we have $d\mathbf{T}/\dd{s} \perp \mathbf{T}$. Thus the unit normal vector $\mathbf{N}$ is always perpendicular to the tangent, and points to the inside into which the curve is bending.
 
 The above definition applies to curves in general $n$-dimensional space, but in $3$-dimensional space the cross product allows us to compute curvature more conveniently. In particular, the following formula can be applied directly without arc length parametrization, which is far more practical.
 
@@ -192,7 +192,7 @@ and by the chain rule $\mathbf{T}'(t) = (d\mathbf{T}/\dd{s})v$ and $\lVert d\mat
 
 $$\mathbf{r}' \times \mathbf{r}'' = (v\mathbf{T}) \times (v'\mathbf{T} + v\mathbf{T}'(t)) = v^2(\mathbf{T} \times \mathbf{T}'(t)).$$
 
-Here the second equality follows from $\mathbf{T}\times \mathbf{T}=0$. Now $\mathbf{T}$ is a unit vector, and by the observation right after [Proposition 3](#prop3) that the derivative of a vector of constant length is perpendicular to that vector, we have $\mathbf{T} \perp \mathbf{T}'(t)$, so $\lVert \mathbf{T} \times \mathbf{T}'(t)\rVert = \lVert \mathbf{T}'(t)\rVert = \kappa v$, and
+Here the second equality follows from $\mathbf{T}\times \mathbf{T}=0$. Now $\mathbf{T}$ is a unit vector, and by the observation right after [Proposition 3](#prop3){: data-relation="required" } that the derivative of a vector of constant length is perpendicular to that vector, we have $\mathbf{T} \perp \mathbf{T}'(t)$, so $\lVert \mathbf{T} \times \mathbf{T}'(t)\rVert = \lVert \mathbf{T}'(t)\rVert = \kappa v$, and
 
 $$\lVert \mathbf{r}' \times \mathbf{r}''\rVert = v^3 \kappa = \lVert \mathbf{r}'\rVert^3 \kappa$$
 
@@ -216,7 +216,7 @@ For the helix $\mathbf{r}(t) = (\cos t, \sin t, t)$, we have $\mathbf{r}'(t) = (
 
 $$\mathbf{r}' \times \mathbf{r}'' = (\sin t,\ -\cos t,\ 1), \qquad \lVert \mathbf{r}' \times \mathbf{r}''\rVert = \sqrt{2}$$
 
-and $\lVert \mathbf{r}'\rVert = \sqrt{2}$, so the curvature is $\kappa = \sqrt{2}/(\sqrt{2})^3 = 1/2$, which is constant. Since the speed $v = \sqrt{2}$ is constant, by [Proposition 9](#prop9) the acceleration is purely normal and its magnitude is $\kappa v^2 = (1/2)\cdot 2 = 1$, which indeed matches $\lVert \mathbf{r}''(t)\rVert = \lVert(-\cos t, -\sin t, 0)\rVert = 1$.
+and $\lVert \mathbf{r}'\rVert = \sqrt{2}$, so the curvature is $\kappa = \sqrt{2}/(\sqrt{2})^3 = 1/2$, which is constant. Since the speed $v = \sqrt{2}$ is constant, by [Proposition 9](#prop9){: data-relation="required" } the acceleration is purely normal and its magnitude is $\kappa v^2 = (1/2)\cdot 2 = 1$, which indeed matches $\lVert \mathbf{r}''(t)\rVert = \lVert(-\cos t, -\sin t, 0)\rVert = 1$.
 :::
 
 ---
