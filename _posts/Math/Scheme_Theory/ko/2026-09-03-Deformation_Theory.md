@@ -497,7 +497,11 @@ $$\iota:X\times_{S'}S\xrightarrow{\sim}X_0$$
 의 쌍 $(X,\iota)$이다. 두 deformation $(X,\iota)$와 $(X',\iota')$이 *isomorphic*이라는 것은 $\iota'\circ(\psi\times_{S'}S)=\iota$를 만족하는 $S'$-isomorphism $\psi:X\rightarrow X'$이 존재하는 것이다. 특히 $S'=S[\epsilon]$인 경우의 deformation을 $X_0$의 $S$ 위 *first-order deformation<sub>일차 변형</sub>*이라 부른다.
 :::
 
-이는 위에서 설명한 일반적인 scheme에 대한 infinitesimal thickening을 사용하여 [정의 3](#def3)을 다시 쓴 것에 불과하다. 실제로 square-zero thickening은 underlying topological space를 바꾸지 않으므로 $S$와 $S'$은 같은 열린집합을 가지며, 특히 affine open $V=\Spec A\subseteq S$에 대응하는 $V'\subseteq S'$ 역시 affine이며 이를 $V'=\Spec A'$이라 쓰면 $A'\twoheadrightarrow A$는 square-zero extension이 된다. 즉, 직관적으로 $S$의 infinitesimal thickening은 affine 조각들마다 infinitesimal thickening을 한 후 붙여주는 것이라 생각할 수 있다. 마찬가지로 deformation $X$의 underlying space는 central fiber $X_0$와 같아서 $U\subseteq X_0$는 그대로 $X$의 열린집합을 정하며, 덕분에 deformation의 flatness와 central fiber 조건은 affine open들 위에서 확인할 수 있으며, 각 affine 조각에서는 [정의 3](#def3)의 경우로 환원된다. 특히 flatness에 의해 $X_0\hookrightarrow X$의 ideal sheaf는 $\mathcal{G}=f^\ast\mathcal{I}$로 식별된다.
+이는 위에서 설명한 일반적인 scheme에 대한 infinitesimal thickening을 사용하여 [정의 3](#def3)을 다시 쓴 것에 불과하다. 실제로 square-zero thickening은 underlying topological space를 바꾸지 않으므로 $S$와 $S'$은 같은 열린집합을 가지며, 특히 affine open $V=\Spec A\subseteq S$에 대응하는 $V'\subseteq S'$ 역시 affine이며 이를 $V'=\Spec A'$이라 쓰면 $A'\twoheadrightarrow A$는 square-zero extension이 된다. 즉, 직관적으로 $S$의 infinitesimal thickening은 affine 조각들마다, compatible한 infinitesimal thickening을 한 후 붙여주는 것이라 생각할 수 있다. 마찬가지로 deformation $X$의 underlying space는 central fiber $X_0$와 같아서 $U\subseteq X_0$는 그대로 $X$의 열린집합을 정하며, 덕분에 deformation의 flatness와 central fiber 조건은 affine open들 위에서 확인할 수 있으며, 각 affine 조각에서는 [정의 3](#def3)의 경우로 환원된다. 특히 $V'=\Spec A'$ 위의 affine open을 $U'=\Spec B'\subseteq X$라 하고 $I=\ker(A'\rightarrow A)$라 하자. $B'$은 $A'$ 위에서 flat하므로 $0\rightarrow I\rightarrow A'\rightarrow A\rightarrow0$을 $B'$과 tensor하여 얻는 sequence
+
+$$0\longrightarrow I\otimes_{A'}B'\longrightarrow B'\longrightarrow B'/IB'\longrightarrow0$$
+
+는 exact하다. 또한 $I^2=0$이므로 $I\otimes_{A'}B'\cong I\otimes_A(B'/IB')$이고, 이를 sheafify하면 $X_0\hookrightarrow X$의 ideal sheaf가 $\mathcal{G}=f^\ast\mathcal{I}$로 식별된다.
 
 이제 $X_0$의 affine open cover $X_0=\bigcup_iU_i$를 택하자. 각 $U_i$ 위에서 deformation $U_i'$을 만들었다고 해도 아직 대역적 deformation을 얻은 것은 아니다. 두 조각의 overlap $U_{ij}=U_i\cap U_j$ 위에서 central fiber의 항등사상으로 제한되는 isomorphism
 
