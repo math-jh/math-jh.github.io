@@ -29,14 +29,14 @@ If $F$ is an antiderivative of $f$ on an interval $I$, then every antiderivative
 :::
 
 ::: Proof
-If $G$ is also an antiderivative of $f$, then $(G - F)' = f - f = 0$. By [§Mean Value Theorem, ⁋Corollary 5](/en/math/calculus/mean_value_theorem#cor5), a function whose derivative is identically $0$ on an interval is constant, so there exists a constant $C$ with $G - F = C$, hence $G = F + C$.
+If $G$ is also an antiderivative of $f$, then $(G - F)' = f - f = 0$. By [§Mean Value Theorem, ⁋Corollary 5](/en/math/calculus/mean_value_theorem#cor5){: data-relation="required" }, a function whose derivative is identically $0$ on an interval is constant, so there exists a constant $C$ with $G - F = C$, hence $G = F + C$.
 :::
 
 In view of this proposition, the collection of all antiderivatives of $f$ is expressed in the single formula
 
 $$\int f(x)\dd{x} = F(x) + C$$
 
-and is called the *indefinite integral* of $f$. Here $C$ is the *constant of integration*, $f$ is the *integrand*, and the symbol $\dd{x}$ indicates the variable of integration. Because [Proposition 2](#prop2) guarantees that antiderivatives differ only by a constant, the single integration constant $C$ suffices to represent all of them at once.
+and is called the *indefinite integral* of $f$. Here $C$ is the *constant of integration*, $f$ is the *integrand*, and the symbol $\dd{x}$ indicates the variable of integration. Because [Proposition 2](#prop2){: data-relation="required" } guarantees that antiderivatives differ only by a constant, the single integration constant $C$ suffices to represent all of them at once.
 
 The assumption we are implicitly making, that the interval is connected, is not essential in every respect, but the above proposition holds only when the interval is connected. If the domain is disconnected, the constant may differ on each piece. For instance, $1/x$ is defined separately for $x > 0$ and $x < 0$, and although $F(x) = \ln\lvert x\rvert$ is an antiderivative, adding different constants on the two pieces still yields antiderivatives of $1/x$ on the whole domain, so the proposition does not literally apply there.
 
@@ -44,7 +44,7 @@ Under the assumption that the interval is connected, the integration constant $C
 
 ## Properties and Examples of Indefinite Integrals
 
-Meanwhile, in [§Differentiation](/en/math/calculus/differentiation_rules) we examined the derivatives of various functions, and because indefinite integration is the reverse of differentiation, we can derive integration formulas from them. Before doing so, let us establish the linearity of indefinite integration.
+Meanwhile, in [§Differentiation](/en/math/calculus/differentiation_rules){: data-relation="weak" } we examined the derivatives of various functions, and because indefinite integration is the reverse of differentiation, we can derive integration formulas from them. Before doing so, let us establish the linearity of indefinite integration.
 
 ::: Proposition 3 (Linearity of indefinite integration)
 If $f$ and $g$ have antiderivatives and $a, b$ are constants, then
@@ -54,14 +54,14 @@ $$\int \bigl(a f(x) + b g(x)\bigr)\dd{x} = a\int f(x)\dd{x} + b\int g(x)\dd{x}.$
 :::
 
 ::: Proof
-Let $F$ and $G$ be antiderivatives of $f$ and $g$ respectively. Then by [§Differentiation and Derivatives, ⁋Proposition 4](/en/math/calculus/derivatives#prop4),
+Let $F$ and $G$ be antiderivatives of $f$ and $g$ respectively. Then by [§Differentiation and Derivatives, ⁋Proposition 4](/en/math/calculus/derivatives#prop4){: data-relation="required" },
 
 $$(aF + bG)' = aF' + bG' = af + bg,$$
 
 so $aF + bG$ is an antiderivative of $af + bg$.
 :::
 
-Reversing the derivative formulas for various functions from [§Differentiation](/en/math/calculus/differentiation_rules) now yields the following basic formulas. That is, differentiating the right-hand side of each formula recovers the integrand.
+Reversing the derivative formulas for various functions from [§Differentiation](/en/math/calculus/differentiation_rules){: data-relation="required" } now yields the following basic formulas. That is, differentiating the right-hand side of each formula recovers the integrand.
 
 $$\int x^r\dd{x} = \frac{x^{r+1}}{r+1} + C\ (r \neq -1), \qquad \int \frac{1}{x}\dd{x} = \ln\lvert x\rvert + C,$$
 
@@ -75,7 +75,7 @@ $$\tan^2 x = \sec^2 x - 1$$
 
 or splitting the fraction $(x^2+1)/x$ into $x + 1/x$ so that each term matches one of the formulas above.
 
-Especially useful are integration by substitution and integration by parts, which are respectively the reverses of [§Differentiation, ⁋Theorem 4](/en/math/calculus/differentiation_rules#thm4) and [§Differentiation, ⁋Proposition 3](/en/math/calculus/differentiation_rules#prop3).
+Especially useful are integration by substitution and integration by parts, which are respectively the reverses of [§Differentiation, ⁋Theorem 4](/en/math/calculus/differentiation_rules#thm4){: data-relation="required" } and [§Differentiation, ⁋Proposition 3](/en/math/calculus/differentiation_rules#prop3){: data-relation="required" }.
 
 ::: Theorem 4 (Integration by substitution)
 If $f$ has an antiderivative on an interval $I$, and $g$ is differentiable with $g(x) \in I$ for all $x$, then
@@ -85,7 +85,7 @@ $$\int f(g(x)) g'(x) \dd{x} = \int f(u) \dd{u} \quad (u = g(x)).$$
 :::
 
 ::: Proof
-Let $F$ be an antiderivative of $f$. Then by [§Differentiation, ⁋Theorem 4](/en/math/calculus/differentiation_rules#thm4),
+Let $F$ be an antiderivative of $f$. Then by [§Differentiation, ⁋Theorem 4](/en/math/calculus/differentiation_rules#thm4){: data-relation="required" },
 
 $$\frac{d}{\dd{x}}F(g(x)) = F'(g(x))g'(x) = f(g(x))g'(x),$$
 
@@ -110,7 +110,7 @@ $$\int u v' \dd{x} = uv - \int u' v \dd{x}.$$
 :::
 
 ::: Proof
-By [§Differentiation, ⁋Proposition 3](/en/math/calculus/differentiation_rules#prop3), $(uv)' = u'v + uv'$, so $uv' = (uv)' - u'v$, and integrating both sides gives $\int (uv)' \dd{x} = uv$, from which the claim follows.
+By [§Differentiation, ⁋Proposition 3](/en/math/calculus/differentiation_rules#prop3){: data-relation="required" }, $(uv)' = u'v + uv'$, so $uv' = (uv)' - u'v$, and integrating both sides gives $\int (uv)' \dd{x} = uv$, from which the claim follows.
 :::
 
 The key is to choose $u$ as the factor that simplifies upon differentiation, and $v'$ as the factor that can be integrated. For example, in $\int x e^x \dd{x}$ we set $u = x$ to obtain $xe^x - e^x + C$, while for functions such as logarithms or inverse trigonometric functions whose derivatives actually become simpler, we place them in the $u$ position with $v' = 1$ (giving $\int \ln x \dd{x} = x\ln x - x + C$). There are also cases where integration by parts does not simplify the integrand but returns to the original integral; then we treat the original integral as an unknown and solve algebraically.
@@ -252,25 +252,25 @@ $$\int_a^b f(x)\dd{x} = f(c)(b-a).$$
 :::
 
 ::: Proof
-By [§Continuous Functions, ⁋Theorem 4](/en/math/calculus/continuity#thm4), $f$ attains a minimum $m$ and a maximum $M$ on $[a,b]$. From the above computation, the average value
+By [§Continuous Functions, ⁋Theorem 4](/en/math/calculus/continuity#thm4){: data-relation="required" }, $f$ attains a minimum $m$ and a maximum $M$ on $[a,b]$. From the above computation, the average value
 
 $$\frac{1}{b-a}\int_a^b f(x)\dd{x}$$
 
-lies in $[m, M]$. If this value equals $m$ or $M$, we choose $c$ to be a point attaining the minimum or maximum (the case $f$ constant, so $m = M$, is included here); otherwise we apply [§Continuous Functions, ⁋Theorem 5](/en/math/calculus/continuity#thm5) to the interval between the points attaining the minimum and maximum to obtain a point $c$ with $f(c) = \frac{1}{b-a}\int_a^b f(x)\dd{x}$.
+lies in $[m, M]$. If this value equals $m$ or $M$, we choose $c$ to be a point attaining the minimum or maximum (the case $f$ constant, so $m = M$, is included here); otherwise we apply [§Continuous Functions, ⁋Theorem 5](/en/math/calculus/continuity#thm5){: data-relation="required" } to the interval between the points attaining the minimum and maximum to obtain a point $c$ with $f(c) = \frac{1}{b-a}\int_a^b f(x)\dd{x}$.
 :::
 
 Here
 
 $$\frac{1}{b-a}\int_a^b f(x)\dd{x}$$
 
-is called the *average value* of $f$ on $[a,b]$, and [Proposition 12](#prop12) states that a continuous function actually attains its average value at least at one point.
+is called the *average value* of $f$ on $[a,b]$, and [Proposition 12](#prop12){: data-relation="weak" } states that a continuous function actually attains its average value at least at one point.
 
 ## Area and Applications
 
 The definite integral is most intuitively understood as *signed* area. For instance, on an interval where $f < 0$, the terms $f(c_i)\Delta x_i$ of the Riemann sum are negative, so $\int_a^b f(x)\dd{x}$ attaches a minus sign to the region enclosed by the $x$-axis and $f$. This perspective becomes especially clear when the sign of the function changes over the interval of integration, distinguishing the case where a single integral cancels positive and negative areas to give $0$ from the case where the actual area requires absolute values; this is where the integral version of the triangle inequality appears as a strict inequality.
 
 ::: Example 13
-The reason $\int_{-1}^{1} x\dd{x} = 0$ is that the negative area on $[-1,0]$ and the positive area on $[0,1]$ cancel exactly. Each piece is a right triangle with base and height $1$, so its area is $\frac{1}{2}$, and splitting using the second result of [Proposition 11](#prop11),
+The reason $\int_{-1}^{1} x\dd{x} = 0$ is that the negative area on $[-1,0]$ and the positive area on $[0,1]$ cancel exactly. Each piece is a right triangle with base and height $1$, so its area is $\frac{1}{2}$, and splitting using the second result of [Proposition 11](#prop11){: data-relation="required" },
 
 $$\int_{-1}^{1} x\dd{x} = \int_{-1}^{0} x\dd{x} + \int_{0}^{1} x\dd{x} = -\frac{1}{2} + \frac{1}{2} = 0.$$
 
@@ -291,7 +291,7 @@ $$\int_a^b f(x)\mu(x)\dd{x} = f(c)\int_a^b \mu(x)\dd{x}.$$
 :::
 
 ::: Proof
-By [§Continuous Functions, ⁋Theorem 4](/en/math/calculus/continuity#thm4), $f$ attains a minimum $m$ and a maximum $M$. Since $\mu \geq 0$, we have $m\mu(x) \leq f(x)\mu(x) \leq M\mu(x)$, and integrating using monotonicity and linearity gives
+By [§Continuous Functions, ⁋Theorem 4](/en/math/calculus/continuity#thm4){: data-relation="required" }, $f$ attains a minimum $m$ and a maximum $M$. Since $\mu \geq 0$, we have $m\mu(x) \leq f(x)\mu(x) \leq M\mu(x)$, and integrating using monotonicity and linearity gives
 
 $$m\int_a^b \mu(x)\dd{x} \leq \int_a^b f(x)\mu(x) \dd{x}\leq M\int_a^b \mu(x) \dd{x}.$$
 
@@ -299,10 +299,10 @@ If $\int_a^b \mu(x)\dd{x} = 0$, then the middle integral is also $0$ and the equ
 
 $$\frac{\int_a^b f(x)\mu(x) \dd{x}}{\int_a^b \mu(x)\dd{x}} \in [m, M].$$
 
-If this value equals $m$ or $M$, we choose $c$ to be a point attaining the minimum or maximum; otherwise we apply [§Continuous Functions, ⁋Theorem 5](/en/math/calculus/continuity#thm5) to the interval between the points attaining the minimum and maximum to obtain a point $c$ taking this value. Multiplying both sides by $\int_a^b \mu(x)\dd{x}$ then yields the claimed equality.
+If this value equals $m$ or $M$, we choose $c$ to be a point attaining the minimum or maximum; otherwise we apply [§Continuous Functions, ⁋Theorem 5](/en/math/calculus/continuity#thm5){: data-relation="required" } to the interval between the points attaining the minimum and maximum to obtain a point $c$ taking this value. Multiplying both sides by $\int_a^b \mu(x)\dd{x}$ then yields the claimed equality.
 :::
 
-If we set $\mu \equiv 1$, the Weighted Mean Value Theorem for Integrals reduces to [Proposition 12](#prop12); thus [Proposition 14](#prop14) is a generalization of the Mean Value Theorem for Integrals, and may be thought of as adding a kind of density.
+If we set $\mu \equiv 1$, the Weighted Mean Value Theorem for Integrals reduces to [Proposition 12](#prop12){: data-relation="weak" }; thus [Proposition 14](#prop14){: data-relation="weak" } is a generalization of the Mean Value Theorem for Integrals, and may be thought of as adding a kind of density.
 
 ---
 

@@ -27,14 +27,14 @@ $F$가 구간 $I$에서 $f$의 원시함수이면, $f$의 모든 원시함수는
 :::
 
 ::: 증명
-$G$도 $f$의 원시함수라 하면 $(G - F)' = f - f = 0$이다. [§평균값 정리, ⁋따름정리 5](/ko/math/calculus/mean_value_theorem#cor5)에 의해 구간에서 도함수가 항등적으로 $0$인 함수는 상수이므로, $G - F = C$인 상수 $C$가 있어 $G = F + C$이다.
+$G$도 $f$의 원시함수라 하면 $(G - F)' = f - f = 0$이다. [§평균값 정리, ⁋따름정리 5](/ko/math/calculus/mean_value_theorem#cor5){: data-relation="required" }에 의해 구간에서 도함수가 항등적으로 $0$인 함수는 상수이므로, $G - F = C$인 상수 $C$가 있어 $G = F + C$이다.
 :::
 
 이 명제에 따라 $f$의 원시함수 전체를 하나의 표현으로 묶어
 
 $$\int f(x)\dd{x} = F(x) + C$$
 
-로 적고, 이를 $f$의 *부정적분<sub>indefinite integral</sub>*이라 한다. 여기서 $C$를 *적분상수*, $f$를 *피적분함수*, 기호 $\dd{x}$를 적분변수의 표시로 본다. [명제 2](#prop2)가 보장하는 "상수 차이뿐"이라는 사실 덕분에 적분상수 $C$ 하나로 모든 원시함수를 한꺼번에 나타낼 수 있다.
+로 적고, 이를 $f$의 *부정적분<sub>indefinite integral</sub>*이라 한다. 여기서 $C$를 *적분상수*, $f$를 *피적분함수*, 기호 $\dd{x}$를 적분변수의 표시로 본다. [명제 2](#prop2){: data-relation="required" }가 보장하는 "상수 차이뿐"이라는 사실 덕분에 적분상수 $C$ 하나로 모든 원시함수를 한꺼번에 나타낼 수 있다.
 
 우리가 암묵적으로 가정하는 것, 즉 구간이 연결되어 있다는 가정은 본질적인 것까지는 아니지만, 위의 명제는 오직 구간이 연결되어있을 때만 성립한다. 정의역이 끊겨 있으면 각 조각마다 상수가 달라질 수 있기 때문이다. 가령 $1/x$는 $x > 0$과 $x < 0$에서 따로 정의되는데, $F(x) = \ln\lvert x\rvert$에 두 조각에서 서로 다른 상수를 더한 것도 모두 $1/x$의 원시함수이므로, 정의역 전체에서는 "상수 차이뿐"이라는 명제가 문자 그대로 적용되지는 않는다.
 
@@ -42,7 +42,7 @@ $$\int f(x)\dd{x} = F(x) + C$$
 
 ## 부정적분의 성질과 예시
 
-한편, 우리는 [§미분법](/ko/math/calculus/differentiation_rules)에서 여러 함수의 미분을 살펴보았고, 부정적분은 미분의 반대이므로 이를 통해 적분공식들을 유도할 수 있다. 우선 그 전에 부정적분의 선형성을 보이자. 
+한편, 우리는 [§미분법](/ko/math/calculus/differentiation_rules){: data-relation="weak" }에서 여러 함수의 미분을 살펴보았고, 부정적분은 미분의 반대이므로 이를 통해 적분공식들을 유도할 수 있다. 우선 그 전에 부정적분의 선형성을 보이자. 
 
 ::: 명제 3 (부정적분의 선형성)
 $f, g$가 원시함수를 가지고 $a, b$가 상수이면
@@ -53,14 +53,14 @@ $$\int \bigl(a f(x) + b g(x)\bigr)\dd{x} = a\int f(x)\dd{x} + b\int g(x)\dd{x}$$
 :::
 
 ::: 증명
-$F, G$를 각각 $f, g$의 원시함수라 하면, [§미분과 도함수, ⁋명제 4](/ko/math/calculus/derivatives#prop4)에 의해
+$F, G$를 각각 $f, g$의 원시함수라 하면, [§미분과 도함수, ⁋명제 4](/ko/math/calculus/derivatives#prop4){: data-relation="required" }에 의해
 
 $$(aF + bG)' = aF' + bG' = af + bg$$
 
 이므로 $aF + bG$가 $af + bg$의 원시함수이다.
 :::
 
-이제 [§미분법](/ko/math/calculus/differentiation_rules)에서의 여러 함수들의 도함수 공식을 뒤집으면 다음의 기본 공식들을 얻는다. 즉, 각 공식의 우변을 미분하면 피적분함수가 된다.
+이제 [§미분법](/ko/math/calculus/differentiation_rules){: data-relation="required" }에서의 여러 함수들의 도함수 공식을 뒤집으면 다음의 기본 공식들을 얻는다. 즉, 각 공식의 우변을 미분하면 피적분함수가 된다.
 
 $$\int x^r\dd{x} = \frac{x^{r+1}}{r+1} + C\ (r \neq -1), \qquad \int \frac{1}{x}\dd{x} = \ln\lvert x\rvert + C,$$
 
@@ -74,7 +74,7 @@ $$\tan^2 x = \sec^2 x - 1$$
 
 로 바꾸거나 분수 $(x^2+1)/x$를 $x + 1/x$로 나누어 각 항을 위 공식에 맞추는 식이다.
 
-특히 유용하게 쓰이는 치환적분과 부분적분은 각각 [§미분법, ⁋정리 4](/ko/math/calculus/differentiation_rules#thm4)와 [§미분법, ⁋명제 3](/ko/math/calculus/differentiation_rules#prop3)을 거꾸로 읽은 것이다.
+특히 유용하게 쓰이는 치환적분과 부분적분은 각각 [§미분법, ⁋정리 4](/ko/math/calculus/differentiation_rules#thm4){: data-relation="required" }와 [§미분법, ⁋명제 3](/ko/math/calculus/differentiation_rules#prop3){: data-relation="required" }을 거꾸로 읽은 것이다.
 
 ::: 정리 4 (치환적분)
 $f$가 구간 $I$에서 원시함수를 가지고, $g$가 미분가능하며 모든 $x$에 대해 $g(x) \in I$이면
@@ -85,7 +85,7 @@ $$\int f(g(x)) g'(x) \dd{x} = \int f(u) \dd{u} \quad (u = g(x))$$
 :::
 
 ::: 증명
-$F$를 $f$의 원시함수라 하면 [§미분법, ⁋정리 4](/ko/math/calculus/differentiation_rules#thm4)에 의해
+$F$를 $f$의 원시함수라 하면 [§미분법, ⁋정리 4](/ko/math/calculus/differentiation_rules#thm4){: data-relation="required" }에 의해
 
 $$\frac{d}{\dd{x}}F(g(x)) = F'(g(x))g'(x) = f(g(x))g'(x)$$
 
@@ -111,7 +111,7 @@ $$\int u v' \dd{x} = uv - \int u' v \dd{x}$$
 :::
 
 ::: 증명
-[§미분법, ⁋명제 3](/ko/math/calculus/differentiation_rules#prop3)으로 $(uv)' = u'v + uv'$이므로 $uv' = (uv)' - u'v$이고, 양변을 적분하면 $\int (uv)' \dd{x} = uv$에서 주장이 따른다.
+[§미분법, ⁋명제 3](/ko/math/calculus/differentiation_rules#prop3){: data-relation="required" }으로 $(uv)' = u'v + uv'$이므로 $uv' = (uv)' - u'v$이고, 양변을 적분하면 $\int (uv)' \dd{x} = uv$에서 주장이 따른다.
 :::
 
 핵심은 $u$를 미분하면 단순해지는 쪽, $v'$을 적분할 수 있는 쪽으로 고르는 것이다. 가령 $\int x e^x \dd{x}$는 $u = x$로 두어 $xe^x - e^x + C$가 되고, 로그·역삼각함수처럼 미분이 도리어 간단해지는 함수는 $v' = 1$로 보아 $u$ 자리에 놓는다 ($\int \ln x \dd{x} = x\ln x - x + C$). 부분적분이 피적분함수를 단순화하지 않고 자기 자신으로 되돌아오는 경우도 있는데, 이때는 원래 적분을 미지수로 보고 대수적으로 푼다.
@@ -259,25 +259,25 @@ $$\int_a^b f(x)\dd{x} = f(c)(b-a)$$
 :::
 
 ::: 증명
-[§연속함수, ⁋정리 4](/ko/math/calculus/continuity#thm4)로 $f$는 $[a,b]$에서 최솟값 $m$과 최댓값 $M$을 가진다. 위 계산에서 평균값 
+[§연속함수, ⁋정리 4](/ko/math/calculus/continuity#thm4){: data-relation="required" }로 $f$는 $[a,b]$에서 최솟값 $m$과 최댓값 $M$을 가진다. 위 계산에서 평균값 
 
 $$\frac{1}{b-a}\int_a^b f(x)\dd{x}$$
 
-가 $[m, M]$에 속한다. 이 값이 $m$이거나 $M$이면 최솟값 또는 최댓값을 주는 점을 $c$로 택하면 되고 ($f$가 상수라 $m = M$인 경우도 여기에 포함된다), 그렇지 않으면 최솟값과 최댓값을 주는 두 점 사이의 구간에 [§연속함수, ⁋정리 5](/ko/math/calculus/continuity#thm5)를 적용하여 그 값을 취하는 $c$, 즉 $f(c) = \frac{1}{b-a}\int_a^b f(x)\dd{x}$인 $c$를 얻는다.
+가 $[m, M]$에 속한다. 이 값이 $m$이거나 $M$이면 최솟값 또는 최댓값을 주는 점을 $c$로 택하면 되고 ($f$가 상수라 $m = M$인 경우도 여기에 포함된다), 그렇지 않으면 최솟값과 최댓값을 주는 두 점 사이의 구간에 [§연속함수, ⁋정리 5](/ko/math/calculus/continuity#thm5){: data-relation="required" }를 적용하여 그 값을 취하는 $c$, 즉 $f(c) = \frac{1}{b-a}\int_a^b f(x)\dd{x}$인 $c$를 얻는다.
 :::
 
 여기서 
 
 $$\frac{1}{b-a}\int_a^b f(x)\dd{x}$$
 
-를 $f$의 $[a,b]$에서의 *평균값*이라 하며, [명제 12](#prop12)는 연속함수가 자신의 평균값을 적어도 한 점에서 실제로 취함을 말한다.
+를 $f$의 $[a,b]$에서의 *평균값*이라 하며, [명제 12](#prop12){: data-relation="weak" }는 연속함수가 자신의 평균값을 적어도 한 점에서 실제로 취함을 말한다.
 
 ## 넓이와 응용
 
 정적분은 <em-ko>부호가 있는</em-ko> 넓이로 이해하는 것이 가장 직관적이다. 가령 $f < 0$인 구간에서는 리만 합의 항 $f(c_i)\Delta x_i$가 음수이므로, $\int_a^b f(x)\dd{x}$는 $x$축과 $f$로 둘러싸인 영역에 마이너스 부호를 붙여준 것이다. 이 관점은 적분 구간 위에서 함수의 부호가 바뀔 때 특히 분명해지며, 한 적분이 양·음의 넓이를 상쇄하여 $0$이 되는 경우와 실제 넓이가 절댓값을 요구하는 경우를 가르는 데서 위에서 살펴본 삼각부등식의 적분판이 진부등호로 나타난다.
 
 ::: 예시 13
-$\int_{-1}^{1} x\dd{x} = 0$인 까닭은 $[-1,0]$에서의 음의 넓이와 $[0,1]$에서의 양의 넓이가 정확히 상쇄되기 때문이다. 각 조각은 밑변과 높이가 $1$인 직각삼각형이라 넓이가 $\frac{1}{2}$이고, [명제 11](#prop11)의 둘째 결과를 사용해 갈라 쓰면
+$\int_{-1}^{1} x\dd{x} = 0$인 까닭은 $[-1,0]$에서의 음의 넓이와 $[0,1]$에서의 양의 넓이가 정확히 상쇄되기 때문이다. 각 조각은 밑변과 높이가 $1$인 직각삼각형이라 넓이가 $\frac{1}{2}$이고, [명제 11](#prop11){: data-relation="required" }의 둘째 결과를 사용해 갈라 쓰면
 
 $$\int_{-1}^{1} x\dd{x} = \int_{-1}^{0} x\dd{x} + \int_{0}^{1} x\dd{x} = -\frac{1}{2} + \frac{1}{2} = 0$$
 
@@ -299,7 +299,7 @@ $$\int_a^b f(x)\mu(x)\dd{x} = f(c)\int_a^b \mu(x)\dd{x}$$
 :::
 
 ::: 증명
-[§연속함수, ⁋정리 4](/ko/math/calculus/continuity#thm4)로 $f$는 최솟값 $m$과 최댓값 $M$을 가진다. $\mu \geq 0$이므로 $m\mu(x) \leq f(x)\mu(x) \leq M\mu(x)$이고, 단조성과 선형성으로 적분하면
+[§연속함수, ⁋정리 4](/ko/math/calculus/continuity#thm4){: data-relation="required" }로 $f$는 최솟값 $m$과 최댓값 $M$을 가진다. $\mu \geq 0$이므로 $m\mu(x) \leq f(x)\mu(x) \leq M\mu(x)$이고, 단조성과 선형성으로 적분하면
 
 $$m\int_a^b \mu(x)\dd{x} \leq \int_a^b f(x)\mu(x) \dd{x}\leq M\int_a^b \mu(x) \dd{x}$$
 
@@ -307,10 +307,10 @@ $$m\int_a^b \mu(x)\dd{x} \leq \int_a^b f(x)\mu(x) \dd{x}\leq M\int_a^b \mu(x) \d
 
 $$\frac{\int_a^b f(x)\mu(x) \dd{x}}{\int_a^b \mu(x)\dd{x}} \in [m, M]$$
 
-임을 얻는다. 이 값이 $m$이거나 $M$이면 최솟값 또는 최댓값을 주는 점을 $c$로 택하면 되고, 그렇지 않으면 최솟값과 최댓값을 주는 두 점 사이의 구간에 [§연속함수, ⁋정리 5](/ko/math/calculus/continuity#thm5)를 적용하여 이 값을 취하는 $c$를 얻는다. 따라서 양변에 $\int_a^b \mu(x)\dd{x}$를 곱하면 주장하는 등식을 얻는다.
+임을 얻는다. 이 값이 $m$이거나 $M$이면 최솟값 또는 최댓값을 주는 점을 $c$로 택하면 되고, 그렇지 않으면 최솟값과 최댓값을 주는 두 점 사이의 구간에 [§연속함수, ⁋정리 5](/ko/math/calculus/continuity#thm5){: data-relation="required" }를 적용하여 이 값을 취하는 $c$를 얻는다. 따라서 양변에 $\int_a^b \mu(x)\dd{x}$를 곱하면 주장하는 등식을 얻는다.
 :::
 
-만일 $\mu \equiv 1$로 두면 가중 평균값 정리는 [명제 12](#prop12)로 환원되므로, [명제 14](#prop14)는 평균값 정리의 일반화로, 일종의 밀도를 추가하는 것으로 생각할 수 있다.
+만일 $\mu \equiv 1$로 두면 가중 평균값 정리는 [명제 12](#prop12){: data-relation="weak" }로 환원되므로, [명제 14](#prop14){: data-relation="weak" }는 평균값 정리의 일반화로, 일종의 밀도를 추가하는 것으로 생각할 수 있다.
 
 ---
 
