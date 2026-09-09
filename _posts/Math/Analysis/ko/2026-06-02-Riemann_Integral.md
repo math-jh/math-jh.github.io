@@ -14,7 +14,7 @@ weight: 14
 published: false
 ---
 
-[\[미적분학\] §적분](/ko/math/calculus/integration)에서 정적분을 리만 합의 극한으로 도입하면서, 연속함수의 적분가능성은 증명 없이 받아들였다. 이제 [§컴팩트성](/ko/math/analysis/compactness)과 균등연속성을 갖추었으므로, 적분을 엄밀하게 정초하고 그 사실을 증명한다.
+[\[미적분학\] §적분](/ko/math/calculus/integration){: data-relation="weak" }에서 정적분을 리만 합의 극한으로 도입하면서, 연속함수의 적분가능성은 증명 없이 받아들였다. 이제 [§컴팩트성](/ko/math/analysis/compactness){: data-relation="required" }과 균등연속성을 갖추었으므로, 적분을 엄밀하게 정초하고 그 사실을 증명한다.
 
 ## 다르부 상합과 하합
 
@@ -70,18 +70,18 @@ $[a,b]$에서 연속인 함수는 Riemann 적분가능하다.
 :::
 
 ::: 증명
-$f$는 컴팩트구간 $[a,b]$에서 연속이므로 균등연속이다 ([§연속함수의 성질, ⁋정리 4](/ko/math/analysis/continuous_functions#thm4)). 임의의 $\varepsilon > 0$에 대해, 균등연속성으로 $\lvert x - y\rvert < \delta$이면 $\lvert f(x) - f(y)\rvert < \varepsilon/(b - a)$이게 하는 $\delta$가 있다. Mesh가 $\delta$ 미만인 분할 $P$를 잡으면, 각 부분구간에서 $f$가 (compactness로) 최댓값과 최솟값을 가지고 그 두 점의 거리가 $\delta$ 미만이므로 $M_i - m_i < \varepsilon/(b-a)$이고
+$f$는 컴팩트구간 $[a,b]$에서 연속이므로 균등연속이다 ([§연속함수의 성질, ⁋정리 4](/ko/math/analysis/continuous_functions#thm4){: data-relation="required" }). 임의의 $\varepsilon > 0$에 대해, 균등연속성으로 $\lvert x - y\rvert < \delta$이면 $\lvert f(x) - f(y)\rvert < \varepsilon/(b - a)$이게 하는 $\delta$가 있다. Mesh가 $\delta$ 미만인 분할 $P$를 잡으면, 각 부분구간에서 $f$가 (compactness로) 최댓값과 최솟값을 가지고 그 두 점의 거리가 $\delta$ 미만이므로 $M_i - m_i < \varepsilon/(b-a)$이고
 
 $$U(P, f) - L(P, f) = \sum_i (M_i - m_i)\Delta x_i < \frac{\varepsilon}{b-a}\sum_i \Delta x_i = \varepsilon$$
 
-이다. [정리 3](#thm3)에 의해 $f$는 적분가능하다.
+이다. [정리 3](#thm3){: data-relation="required" }에 의해 $f$는 적분가능하다.
 :::
 
-[정리 4](#thm4)의 증명에서 핵심은 균등연속성이 부분구간 너비 $\delta$를 *위치에 무관하게* 한꺼번에 통제한다는 데 있다. 만약 보통의 연속성만 썼다면 $\delta$가 점마다 달라져 진동 $M_i - m_i$를 일률적으로 작게 만들 수 없었을 것이고, 그렇기에 [§컴팩트성](/ko/math/analysis/compactness)을 통해 얻은 [§연속함수의 성질, ⁋정리 4](/ko/math/analysis/continuous_functions#thm4)가 결정적이었다.
+[정리 4](#thm4){: data-relation="required" }의 증명에서 핵심은 균등연속성이 부분구간 너비 $\delta$를 *위치에 무관하게* 한꺼번에 통제한다는 데 있다. 만약 보통의 연속성만 썼다면 $\delta$가 점마다 달라져 진동 $M_i - m_i$를 일률적으로 작게 만들 수 없었을 것이고, 그렇기에 [§컴팩트성](/ko/math/analysis/compactness){: data-relation="required" }을 통해 얻은 [§연속함수의 성질, ⁋정리 4](/ko/math/analysis/continuous_functions#thm4){: data-relation="required" }가 결정적이었다.
 
 ## 적분 불가능한 함수
 
-[정의 2](#def2)가 공허한 조건이 아님을, 곧 상적분과 하적분이 실제로 갈라지는 함수가 존재함을 다음 예시가 보인다.
+[정의 2](#def2){: data-relation="required" }가 공허한 조건이 아님을, 곧 상적분과 하적분이 실제로 갈라지는 함수가 존재함을 다음 예시가 보인다.
 
 ::: 예시 5 (디리클레 함수)
 $f : [0,1] \rightarrow \mathbb{R}$를 유리수에서 $1$, 무리수에서 $0$으로 정의하자. 임의의 분할 $P$의 각 부분구간은 양의 길이를 가지므로 그 안에 유리수와 무리수를 모두 포함한다. 따라서 모든 $i$에 대해
@@ -95,7 +95,7 @@ $$L(P, f) = \sum_i 0\cdot\Delta x_i = 0, \qquad U(P, f) = \sum_i 1\cdot\Delta x_
 이 모든 분할에서 성립한다. 그러므로 $\underline{\int} f = 0 \neq 1 = \overline{\int} f$이고, 디리클레 함수는 Riemann integral 불가능하다.
 :::
 
-디리클레 함수는 모든 점에서 불연속이라는 점에서 [정리 4](#thm4)의 가설과 정반대 극단에 있다. 불연속점이 얼마나 많아야 적분가능성이 깨지는가는 정교한 질문으로, 르베그의 판정 기준에 따르면 Riemann 적분가능성은 불연속점 집합이 (측도 영의 의미에서) 충분히 작은 것과 동치이다. 그 정밀한 형태는 측도론을 필요로 하지만, 연속성을 넘어서는 충분조건 하나는 다르부 틀 안에서 곧바로 증명된다.
+디리클레 함수는 모든 점에서 불연속이라는 점에서 [정리 4](#thm4){: data-relation="weak" }의 가설과 정반대 극단에 있다. 불연속점이 얼마나 많아야 적분가능성이 깨지는가는 정교한 질문으로, 르베그의 판정 기준에 따르면 Riemann 적분가능성은 불연속점 집합이 (측도 영의 의미에서) 충분히 작은 것과 동치이다. 그 정밀한 형태는 측도론을 필요로 하지만, 연속성을 넘어서는 충분조건 하나는 다르부 틀 안에서 곧바로 증명된다.
 
 ## 적분가능성의 충분조건
 
@@ -112,12 +112,12 @@ U(P_n, f) - L(P_n, f) &= \sum_{i=1}^n \bigl(f(x_i) - f(x_{i-1})\bigr) \frac{b-a}
 &= \frac{b-a}{n}\bigl(f(b) - f(a)\bigr)
 \end{aligned}$$
 
-가 된다. 우변은 $n \rightarrow \infty$일 때 $0$으로 가므로, 임의의 $\varepsilon > 0$에 대해 $U(P_n, f) - L(P_n, f) < \varepsilon$이 되는 $n$이 있다. [정리 3](#thm3)에 의해 $f$는 적분가능하다.
+가 된다. 우변은 $n \rightarrow \infty$일 때 $0$으로 가므로, 임의의 $\varepsilon > 0$에 대해 $U(P_n, f) - L(P_n, f) < \varepsilon$이 되는 $n$이 있다. [정리 3](#thm3){: data-relation="required" }에 의해 $f$는 적분가능하다.
 :::
 
-단조함수는 점프 불연속을 가질 수 있으며, 그 불연속점은 가산개까지 허용된다. 예컨대 $[0,1]$ 위에서 각 $1/k$에서 높이 $2^{-k}$만큼 뛰는 계단형 증가함수는 무한히 많은 불연속점을 가지지만 [명제 6](#prop6)에 의해 적분가능하다. 이는 연속성이 적분가능성의 *필요* 조건은 아님을 분명히 보여 준다.
+단조함수는 점프 불연속을 가질 수 있으며, 그 불연속점은 가산개까지 허용된다. 예컨대 $[0,1]$ 위에서 각 $1/k$에서 높이 $2^{-k}$만큼 뛰는 계단형 증가함수는 무한히 많은 불연속점을 가지지만 [명제 6](#prop6){: data-relation="required" }에 의해 적분가능하다. 이는 연속성이 적분가능성의 *필요* 조건은 아님을 분명히 보여 준다.
 
-같은 결론이 단조성 없이도, 불연속점이 유한개이기만 하면 성립한다. 각 불연속점을 폭 $\varepsilon$의 작은 구간으로 에워싸 거기서 일어나는 진동을 너비로 가두고, 나머지 컴팩트한 부분에서는 [정리 4](#thm4)의 균등연속 논법을 적용하면 상합과 하합의 차를 임의로 작게 만들 수 있기 때문이다. 따라서 *유한개의 점을 제외하고 continuous인 bounded function은 적분가능하다*. 특히 한 점에서의 함숫값 변경은 적분값을 바꾸지 못하는데, 그 점을 폭 $\varepsilon$의 구간으로 가두면 상합과 하합의 차가 진동의 크기와 $\varepsilon$의 곱으로 억제되어 $\varepsilon \rightarrow 0$에서 사라지기 때문이다. 이렇게 다르부 틀은 연속함수를 넘어선 넓은 부류의 적분가능성을 통일적으로 다룬다.
+같은 결론이 단조성 없이도, 불연속점이 유한개이기만 하면 성립한다. 각 불연속점을 폭 $\varepsilon$의 작은 구간으로 에워싸 거기서 일어나는 진동을 너비로 가두고, 나머지 컴팩트한 부분에서는 [정리 4](#thm4){: data-relation="required" }의 균등연속 논법을 적용하면 상합과 하합의 차를 임의로 작게 만들 수 있기 때문이다. 따라서 *유한개의 점을 제외하고 continuous인 bounded function은 적분가능하다*. 특히 한 점에서의 함숫값 변경은 적분값을 바꾸지 못하는데, 그 점을 폭 $\varepsilon$의 구간으로 가두면 상합과 하합의 차가 진동의 크기와 $\varepsilon$의 곱으로 억제되어 $\varepsilon \rightarrow 0$에서 사라지기 때문이다. 이렇게 다르부 틀은 연속함수를 넘어선 넓은 부류의 적분가능성을 통일적으로 다룬다.
 
 ## 적분의 기본 성질
 
@@ -139,7 +139,7 @@ $$L(P,f) + L(P,g) \leq L(P, f+g) \leq U(P, f+g) \leq U(P,f) + U(P,g)$$
 이다. 적분가능성으로 양 끝의 차를 $\varepsilon$ 미만으로 만드는 공통세분을 잡으면 가운데도 그러하여 $f+g$가 적분가능하고, 같은 부등식에서 세 적분이 모두 같은 값으로 죄어들어 $\int(f+g) = \int f + \int g$가 된다. 상수배는 $c \geq 0$이면 infimum·supremum이 $c$배로 곱해지고 $c < 0$이면 infimum과 supremum의 역할이 바뀔 뿐이므로 곧바로 따른다. 단조성은 $f \leq g$일 때 모든 분할에서 $L(P, f) \leq L(P, g)$이고 supremum을 취하면 $\int f = \underline{\int} f \leq \underline{\int} g = \int g$임에서 나온다.
 :::
 
-한편 각 부분구간에서 $\bigl\lvert \lvert f(x)\rvert - \lvert f(y)\rvert\bigr\rvert \leq \lvert f(x) - f(y)\rvert$이므로 $\lvert f\rvert$의 진동이 $f$의 진동을 넘지 못하고, 따라서 $U(P, \lvert f\rvert) - L(P, \lvert f\rvert) \leq U(P, f) - L(P, f)$이어서 [정리 3](#thm3)에 의해 $\lvert f\rvert$도 적분가능하다. 여기에 단조성에서 $g = \lvert f\rvert$, $-\lvert f\rvert \leq f \leq \lvert f\rvert$를 쓰면 적분의 삼각부등식 $\bigl\lvert \int_a^b f\bigr\rvert \leq \int_a^b \lvert f\rvert$도 따라 나온다. 마지막으로 적분 영역을 쪼개고 이어 붙이는 성질을 본다.
+한편 각 부분구간에서 $\bigl\lvert \lvert f(x)\rvert - \lvert f(y)\rvert\bigr\rvert \leq \lvert f(x) - f(y)\rvert$이므로 $\lvert f\rvert$의 진동이 $f$의 진동을 넘지 못하고, 따라서 $U(P, \lvert f\rvert) - L(P, \lvert f\rvert) \leq U(P, f) - L(P, f)$이어서 [정리 3](#thm3){: data-relation="required" }에 의해 $\lvert f\rvert$도 적분가능하다. 여기에 단조성에서 $g = \lvert f\rvert$, $-\lvert f\rvert \leq f \leq \lvert f\rvert$를 쓰면 적분의 삼각부등식 $\bigl\lvert \int_a^b f\bigr\rvert \leq \int_a^b \lvert f\rvert$도 따라 나온다. 마지막으로 적분 영역을 쪼개고 이어 붙이는 성질을 본다.
 
 ::: 명제 8 (구간가법성)
 $a < c < b$일 때, $f$가 $[a,b]$에서 적분가능한 것은 $[a,c]$와 $[c,b]$에서 각각 적분가능한 것과 동치이며, 이때
@@ -157,7 +157,7 @@ $$U(P, f) - L(P, f) = \bigl(U(P_1, f) - L(P_1, f)\bigr) + \bigl(U(P_2, f) - L(P_
 이 성립한다. 좌변을 $\varepsilon$ 미만으로 만들 수 있음과 두 괄호를 각각 작게 만들 수 있음은 (둘 다 음이 아니므로) 동치이고, 이로써 적분가능성의 동치가 따른다. 더불어 $L(P_1, f) + L(P_2, f) = L(P, f)$의 supremum을 취하면 적분값의 가법성 $\int_a^b f = \int_a^c f + \int_c^b f$를 얻는다.
 :::
 
-이로써 [\[미적분학\] §적분, ⁋정리 10](/ko/math/calculus/integration#thm10)에서 받아들였던 연속함수의 적분가능성이 완비성에 기초하여 증명되었고, 같은 다르부 틀에서 선형성·구간가법성·단조성도 모두 따라 나왔다.
+이로써 [\[미적분학\] §적분, ⁋정리 10](/ko/math/calculus/integration#thm10){: data-relation="weak" }에서 받아들였던 연속함수의 적분가능성이 완비성에 기초하여 증명되었고, 같은 다르부 틀에서 선형성·구간가법성·단조성도 모두 따라 나왔다.
 
 ---
 
