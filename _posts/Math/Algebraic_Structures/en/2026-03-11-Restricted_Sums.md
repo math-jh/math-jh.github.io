@@ -15,9 +15,9 @@ translation_source: kimi-cli
 last_polished_at: 2026-09-08T07:15:04+00:00
 translation_polish_source: antigravity-gemini-3.8-flash-high
 ---
-Previously, we verified in [§Direct Product of Groups](/en/math/algebraic_structures/direct_products){: data-relation="required" } that arbitrary products exist in $\Grp$, and in [§Group Homomorphisms](/en/math/algebraic_structures/group_homomorphisms){: data-relation="weak" } that every morphism in $\Grp$ has an equalizer. Hence, by the argument following [[Category Theory] §Limits, ⁋Example 7](/en/math/category_theory/limits#ex7), $\Grp$ is a complete category. 
+Previously, we verified in [§Direct Product of Groups](/en/math/algebraic_structures/direct_products){: data-relation="required" } that arbitrary products exist in $\Grp$, and in [§Group Homomorphisms](/en/math/algebraic_structures/group_homomorphisms){: data-relation="weak" } that every pair of parallel morphisms in $\Grp$ has an equalizer. Hence, by the argument following [[Category Theory] §Limits, ⁋Example 7](/en/math/category_theory/limits#ex7), $\Grp$ is a complete category. 
 
-On the other hand, every morphism in $\Grp$ has a coequalizer. ([§Group Isomorphisms, ⁋Proposition 8](/en/math/algebraic_structures/isomorphism_theorems#prop8){: data-relation="weak" }) Therefore, if $\Grp$ has arbitrary coproducts, $\Grp$ would be a cocomplete category, and hence a bicomplete category. 
+On the other hand, every pair of parallel morphisms in $\Grp$ also has a coequalizer. ([§Group Isomorphisms, ⁋Proposition 8](/en/math/algebraic_structures/isomorphism_theorems#prop8){: data-relation="weak" }) Therefore, if $\Grp$ has arbitrary coproducts, $\Grp$ would be a cocomplete category, and hence a bicomplete category. 
 
 However, as in [§Direct Product of Groups, ⁋Lemma 1](/en/math/algebraic_structures/direct_products#lem1){: data-relation="weak" }, finding an obvious way to endow the coproduct in $\Set$, $\coprod G_i$, with a group structure seems difficult. ([\[Set Theory\] §Sum of Sets, ⁋Proposition 5](/en/math/set_theory/sum_of_sets#prop5){: data-relation="weak" }) 
 
