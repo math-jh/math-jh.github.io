@@ -13,7 +13,7 @@ weight: 3
 
 ---
 
-[§아핀다양체](/ko/math/algebraic_varieties/affine_varieties)와 [§사영다양체](/ko/math/algebraic_varieties/projective_varieties)에서 우리는 각각 affine space와 projective space의 부분집합으로 정의되는 기하적 대상들을 살펴보았다. 그러나 algebraic geometry에서 가장 자연스러운 대상들은 이 둘을 모두 포함하는 더 큰 범주에 속한다. 이 절에서 우리는 *quasi-projective variety*를 정의하고, 이것이 affine variety와 projective variety를 모두 포함함을 보인다. 또 quasi-projective variety들 사이의 morphism을 정의하고 이들이 기존의 개념들과 맞아떨어짐을 보인다. 
+[§아핀다양체](/ko/math/algebraic_varieties/affine_varieties){: data-relation="required" }와 [§사영다양체](/ko/math/algebraic_varieties/projective_varieties){: data-relation="required" }에서 우리는 각각 affine space와 projective space의 부분집합으로 정의되는 기하적 대상들을 살펴보았다. 그러나 algebraic geometry에서 가장 자연스러운 대상들은 이 둘을 모두 포함하는 더 큰 범주에 속한다. 이 절에서 우리는 *quasi-projective variety*를 정의하고, 이것이 affine variety와 projective variety를 모두 포함함을 보인다. 또 quasi-projective variety들 사이의 morphism을 정의하고 이들이 기존의 개념들과 맞아떨어짐을 보인다. 
 
 ## Quasi-projective variety의 정의
 
@@ -33,7 +33,7 @@ Projective variety $Y \subseteq \mathbb{P}^n$의 열린부분집합 $X \subseteq
 
 $$i:\mathbb{A}^n\rightarrow \mathbb{P}^n;\qquad (x_1,\ldots, x_n)\mapsto [1:x_1:\cdots:x_n]$$
 
-이 존재함을 이미 알고 있다. ([§사영다양체, ⁋명제 9](/ko/math/algebraic_varieties/projective_varieties#prop9)) 이제 $X$의 $\mathbb{P}^n$에서의 image $i(X)$를 생각하고, $i(X)$의 $\mathbb{P}^n$에서의 closure $\overline{i(X)}$를 생각하자. 그럼 $\overline{i(X)}$는 projective variety이며, 이 안에서 $i(X)$는
+이 존재함을 이미 알고 있다. ([§사영다양체, ⁋명제 9](/ko/math/algebraic_varieties/projective_varieties#prop9){: data-relation="required" }) 이제 $X$의 $\mathbb{P}^n$에서의 image $i(X)$를 생각하고, $i(X)$의 $\mathbb{P}^n$에서의 closure $\overline{i(X)}$를 생각하자. 그럼 $\overline{i(X)}$는 projective variety이며, 이 안에서 $i(X)$는
 
 $$i(X)=\overline{i(X)}\cap U_0$$
 
@@ -67,7 +67,7 @@ $$Z=X\cap \overline{Z}=(Y\cap U)\cap \overline{Z}=\overline{Z}\cap U$$
 임의의 variety $X$와 임의의 $x\in X$에 대하여, affine variety들로 이루어진 $X$의 open covering이 존재한다. 
 :::
 ::: 증명
-우선 $X$가 quasi-projective이므로, 적당한 projective variety $Y\subseteq \mathbb{P}^n$이 존재하여 $X$가 $Y$의 열린집합이도록 할 수 있다. 이제 $X$는 standard affine chart들을 사용하여 $X\cap U_i$들로 덮을 수 있고, 이 때 각각의 $X\cap U_i$들은 affine variety $Y\cap U_i$의 열린집합이다. ([§사영다양체, ⁋명제 10](/ko/math/algebraic_varieties/projective_varieties#prop10)) 이제 [§아핀다양체, ⁋명제 6](/ko/math/algebraic_varieties/affine_varieties#prop6)에 의해 affine variety의 임의의 열린집합은 principal open set으로 덮을 수 있으며, 이들은 [§아핀다양체, ⁋명제 7](/ko/math/algebraic_varieties/affine_varieties#prop7)에 의해 affine이므로 증명이 완료된다. 
+우선 $X$가 quasi-projective이므로, 적당한 projective variety $Y\subseteq \mathbb{P}^n$이 존재하여 $X$가 $Y$의 열린집합이도록 할 수 있다. 이제 $X$는 standard affine chart들을 사용하여 $X\cap U_i$들로 덮을 수 있고, 이 때 각각의 $X\cap U_i$들은 affine variety $Y\cap U_i$의 열린집합이다. ([§사영다양체, ⁋명제 10](/ko/math/algebraic_varieties/projective_varieties#prop10){: data-relation="required" }) 이제 [§아핀다양체, ⁋명제 6](/ko/math/algebraic_varieties/affine_varieties#prop6){: data-relation="required" }에 의해 affine variety의 임의의 열린집합은 principal open set으로 덮을 수 있으며, 이들은 [§아핀다양체, ⁋명제 7](/ko/math/algebraic_varieties/affine_varieties#prop7){: data-relation="required" }에 의해 affine이므로 증명이 완료된다. 
 :::
 
 이제 위의 명제에 의해, 다음과 같이 정의할 수 있다.
@@ -77,7 +77,7 @@ Quasi-projective variety $X$ 위의 함수 $f: X \rightarrow \mathbb{K}$가 *reg
 
 $$f\vert_{U_i}:U_i\rightarrow\mathbb{K}$$
 
-가 affine variety $U_i$의 coordinate ring $\mathbb{K}[U_i]$의 원소인 것이다. $X$ 위의 모든 regular function들의 sheaf를 $\mathcal{O}_X$ 혹은 더 간단히 $\mathcal{O}$로 표기한다. ([\[위상수학\] §층, ⁋정의 1](/ko/math/topology/sheaves#def1))
+가 affine variety $U_i$의 coordinate ring $\mathbb{K}[U_i]$의 원소인 것이다. $X$ 위의 모든 regular function들의 sheaf를 $\mathcal{O}_X$ 혹은 더 간단히 $\mathcal{O}$로 표기한다. ([\[위상수학\] §층, ⁋정의 1](/ko/math/topology/sheaves#def1){: data-relation="weak" })
 :::
 
 그럼 다음은 regular function의 예시들이다. 
@@ -85,7 +85,7 @@ $$f\vert_{U_i}:U_i\rightarrow\mathbb{K}$$
 ::: 예시 6
 Regular function의 예시들을 살펴보자.
 
-1. Affine variety $X$에서 $\mathcal{O}(X) = \mathbb{K}[X]$이다. [정의 5](#def5)에서 $X$ 자기 자신을 open affine cover로 택할 수 있으므로 $\mathbb{K}[X]\subseteq \mathcal{O}(X)$이고, 반대 방향의 포함은 각 점의 근방에서 유리식으로 쓰이는 함수가 다시 coordinate ring의 원소가 된다는 것, 즉 [§아핀다양체, ⁋정의 11](/ko/math/algebraic_varieties/affine_varieties#def11)과 [§아핀다양체, ⁋정의 14](/ko/math/algebraic_varieties/affine_varieties#def14)의 동치관계이다. 
+1. Affine variety $X$에서 $\mathcal{O}(X) = \mathbb{K}[X]$이다. [정의 5](#def5){: data-relation="required" }에서 $X$ 자기 자신을 open affine cover로 택할 수 있으므로 $\mathbb{K}[X]\subseteq \mathcal{O}(X)$이고, 반대 방향의 포함은 각 점의 근방에서 유리식으로 쓰이는 함수가 다시 coordinate ring의 원소가 된다는 것, 즉 [§아핀다양체, ⁋정의 11](/ko/math/algebraic_varieties/affine_varieties#def11){: data-relation="required" }과 [§아핀다양체, ⁋정의 14](/ko/math/algebraic_varieties/affine_varieties#def14){: data-relation="required" }의 동치관계이다. 
 2. $\mathbb{P}^n$에서 $\mathcal{O}(\mathbb{P}^n) = \mathbb{K}$이다. 이를 확인하기 위해 standard open cover $U_i = \{x_i \ne 0\}$를 생각하자. 특히 $U_0$에서의 regular function은 $\mathbb{K}[\x_1/\x_0, \ldots, \x_n/\x_0]$의 원소이고, $U_1$에서의 regular function은 $\mathbb{K}[\x_0/\x_1, \x_2/\x_1, \ldots, \x_n/\x_1]$의 원소이다. 따라서 만일 어떠한 함수 $f$가 $\mathbb{P}^n$ 전체에서 regular라면, 이 함수는 $U_0$에서는 $\mathrm{s}_i=\x_i/\x_0$들에 대한 다항식이고 $U_1$에서는 $\mathrm{t}_i=\x_i/\x_1$에 대한 다항식이다. 그런데 $U_0\cap U_1$에서, 우리는 이들 좌표함수들이 다음 식  
     
     $$\mathrm{t}_0=\frac{1}{\mathrm{s}_1},\qquad \mathrm{t}_j=\frac{\mathrm{s}_j}{\mathrm{s}_1}\quad (j=2,\ldots, n)$$
@@ -101,7 +101,7 @@ Regular function의 예시들을 살펴보자.
     이 성립해야 하는 것을 안다. 이제 우변의 식이 다항식이 되기 위해서는 반드시 $q$가 상수함수가 되어 분모의 $\mathrm{s}_1$들이 없어져야 하고 이로부터 $p$와 $q$는 상수함수여야 함을 안다. 비슷하게 모든 chart $U_i,U_j$에 대해서도 같은 논리를 적용하면 원하는 결과를 얻는다. 
 :::
 
-이제 우리는 variety들 사이의 morphism, 즉 regular map을 정의한다. 이를 정의하는 방식은 여러가지가 있지만, 우리는 우선 variety가 주어졌다면 이를 포함하는 projective space를 항상 가정하고, projective space들 사이의 morphism은 이미 정의하였으므로 이를 사용하여 다음과 같이 정의한다. ([§사영다양체, ⁋정의 15](/ko/math/algebraic_varieties/projective_varieties#def15))
+이제 우리는 variety들 사이의 morphism, 즉 regular map을 정의한다. 이를 정의하는 방식은 여러가지가 있지만, 우리는 우선 variety가 주어졌다면 이를 포함하는 projective space를 항상 가정하고, projective space들 사이의 morphism은 이미 정의하였으므로 이를 사용하여 다음과 같이 정의한다. ([§사영다양체, ⁋정의 15](/ko/math/algebraic_varieties/projective_varieties#def15){: data-relation="weak" })
 
 ::: 정의 7
 두 variety $X \subseteq \mathbb{P}^n$과 $Y \subseteq \mathbb{P}^m$ 사이의 함수 $\varphi:X \rightarrow Y$가 *morphism<sub>사상</sub>* (또는 *regular map<sub>정칙사상</sub>*)이라는 것은 임의의 $x\in X$마다 $x$의 적당한 열린근방 $U \subseteq X$와 homogeneous polynomial들 $F_0, \ldots, F_m$ of the same degree가 존재하여
@@ -123,7 +123,7 @@ $$\varphi(q) = [F_0(q) : \cdots : F_m(q)] \in \mathbb{P}^m$$
 Affine variety들 사이의 regular map들은 정확하게 이들을 quasi-projective variety로 봤을 때의 regular map들과 같다. 
 :::
 
-이는 본질적으로 [§아핀다양체, ⁋정의 15](/ko/math/algebraic_varieties/affine_varieties#def15)에 의한 것이다. 
+이는 본질적으로 [§아핀다양체, ⁋정의 15](/ko/math/algebraic_varieties/affine_varieties#def15){: data-relation="required" }에 의한 것이다. 
 
 ## 정칙사상의 성질들
 
@@ -134,7 +134,7 @@ Regular map $\varphi: X \rightarrow Y$는 연속함수이다.
 ::: 증명
 $C \subseteq Y$가 닫힌집합이라 하자. 그럼 $\mathbb{K}[\x_0, \ldots, \x_m]$의 homogeneous polynomial들 $G_1, \ldots, G_r$이 존재하여 $C = Y \cap Z(G_1, \ldots, G_r)$이고, $\varphi$의 image가 $Y$에 들어 있으므로 $\varphi^{-1}(C) = \varphi^{-1}(Z(G_1, \ldots, G_r))$이다.
 
-이제 임의의 $x \in X$에 대하여 [정의 7](#def7)이 주는 열린근방 $U \subseteq X$와 같은 degree의 homogeneous polynomial들 $F_0, \ldots, F_m$을 택하자. $U$ 위에서 $\varphi = [F_0 : \cdots : F_m]$이므로
+이제 임의의 $x \in X$에 대하여 [정의 7](#def7){: data-relation="required" }이 주는 열린근방 $U \subseteq X$와 같은 degree의 homogeneous polynomial들 $F_0, \ldots, F_m$을 택하자. $U$ 위에서 $\varphi = [F_0 : \cdots : F_m]$이므로
 
 $$\varphi^{-1}(C) \cap U = \{q \in U \mid G_1(F_0(q), \ldots, F_m(q)) = \cdots = G_r(F_0(q), \ldots, F_m(q)) = 0\}$$
 
@@ -162,7 +162,7 @@ $$f \circ (\psi \circ \varphi) \in \mathcal{O}((\psi \circ \varphi)^{-1}(W))$$
 :::
 
 ::: 증명
-$\varphi: X \rightarrow Y$가 regular map이고 $Z \subseteq Y$가 닫힌집합이라 하자. $\psi = \varphi\vert_{\varphi^{-1}(Z)}: \varphi^{-1}(Z) \rightarrow Z$를 생각하면, [명제 10](#prop10)에 의해 $\varphi$가 연속이므로 $\psi$ 또한 연속이다. 이제 $f$가 $Z$의 열린집합 $V$에서 regular function이라면, $f$는 $V$의 각 점의 근방에서 $Y$의 열린집합 위의 regular function으로 확장된다. 구체적으로, $V$의 한 점을 포함하는 $Y$의 affine open set $W$를 택하면 $W\cap Z$는 affine variety $W$의 닫힌집합이므로 그 위의 regular function은 $\mathbb{K}[W]$의 원소의 restriction이고 ([예시 6](#ex6)), $f$는 그 점의 근방에서 이러한 함수들의 몫으로 쓰이므로 분자와 분모를 $\mathbb{K}[W]$로 올리면 된다. 그럼 $f \circ \psi = (f \circ \varphi)\vert_{\varphi^{-1}(Z)}$이고 regular인지의 여부는 국소적으로 판정되므로, $f \circ \varphi$가 이러한 근방들에서 regular라는 것으로부터 $f\circ\psi$ 또한 regular임을 얻는다.
+$\varphi: X \rightarrow Y$가 regular map이고 $Z \subseteq Y$가 닫힌집합이라 하자. $\psi = \varphi\vert_{\varphi^{-1}(Z)}: \varphi^{-1}(Z) \rightarrow Z$를 생각하면, [명제 10](#prop10){: data-relation="required" }에 의해 $\varphi$가 연속이므로 $\psi$ 또한 연속이다. 이제 $f$가 $Z$의 열린집합 $V$에서 regular function이라면, $f$는 $V$의 각 점의 근방에서 $Y$의 열린집합 위의 regular function으로 확장된다. 구체적으로, $V$의 한 점을 포함하는 $Y$의 affine open set $W$를 택하면 $W\cap Z$는 affine variety $W$의 닫힌집합이므로 그 위의 regular function은 $\mathbb{K}[W]$의 원소의 restriction이고 ([예시 6](#ex6){: data-relation="required" }), $f$는 그 점의 근방에서 이러한 함수들의 몫으로 쓰이므로 분자와 분모를 $\mathbb{K}[W]$로 올리면 된다. 그럼 $f \circ \psi = (f \circ \varphi)\vert_{\varphi^{-1}(Z)}$이고 regular인지의 여부는 국소적으로 판정되므로, $f \circ \varphi$가 이러한 근방들에서 regular라는 것으로부터 $f\circ\psi$ 또한 regular임을 얻는다.
 
 열린집합의 경우는 더 간단하다. $U \subseteq Y$가 열린집합이면, $f$가 $V \subseteq U$에서 regular이면 $f \circ \varphi$는 $\varphi^{-1}(V)$에서 regular이다.
 :::
