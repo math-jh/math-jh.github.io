@@ -31,7 +31,7 @@ $$\int_S c_2(T_S)=\rchi_{\mathrm{top}}(S)$$
 이 성립한다.
 :::
 
-이는 [§천 특성류, ⁋명제 10](/ko/math/algebraic_varieties/chern_classes#prop10)의 일반적인 진술을 surface의 경우에 적용한 것이며, 그 증명은 위상적 논증을 필요로 하므로 [BT] 등의 문헌으로 미룬다. 이 명제는 $c_2(S)$가 단순한 형식적 불변량이 아니라, surface의 위상적 구조를 측정하는 기하학적 양임을 보장한다. 예를 들어 $\mathbb{P}^2$의 경우 $\rchi_{\mathrm{top}}(\mathbb{P}^2)=3$이며, 이는 $c_2(T_{\mathbb{P}^2})=3H^2$의 적분값과 일치함을 아래 [예시 6](#ex6)에서 확인한다.
+이는 [§천 특성류, ⁋명제 10](/ko/math/algebraic_varieties/chern_classes#prop10){: data-relation="required" }의 일반적인 진술을 surface의 경우에 적용한 것이며, 그 증명은 위상적 논증을 필요로 하므로 [BT] 등의 문헌으로 미룬다. 이 명제는 $c_2(S)$가 단순한 형식적 불변량이 아니라, surface의 위상적 구조를 측정하는 기하학적 양임을 보장한다. 예를 들어 $\mathbb{P}^2$의 경우 $\rchi_{\mathrm{top}}(\mathbb{P}^2)=3$이며, 이는 $c_2(T_{\mathbb{P}^2})=3H^2$의 적분값과 일치함을 아래 [예시 6](#ex6){: data-relation="forward" }에서 확인한다.
 
 ::: 정리 3 (Noether formula)
 Algebraically closed field 위의 smooth projective surface $S$에 대하여 다음이 성립한다.
@@ -44,11 +44,11 @@ $$K_S^2+c_2(S)=12\rchi(\mathcal{O}_S)$$
 Noether formula는 surface의 대수적 불변량 $\rchi(\mathcal{O}_S)$와 기하학적 불변량 $K_S^2$, 위상적 불변량 $c_2(S)$를 하나의 선형 관계로 묶는다. 이는 곡면의 기하학을 분류하는 데 있어 핵심적인 도구로, 특히 Enriques-Kodaira 분류에서 각 birational equivalence class의 불변량들을 제한하는 강력한 제약을 제공한다.
 
 ::: 증명
-[§Hirzebruch-Riemann-Roch, ⁋정리 2](/ko/math/algebraic_varieties/hirzebruch_riemann_roch#thm2)에 의해, smooth projective surface $S$ 위의 line bundle $\mathcal{O}_S$에 대하여
+[§Hirzebruch-Riemann-Roch, ⁋정리 2](/ko/math/algebraic_varieties/hirzebruch_riemann_roch#thm2){: data-relation="required" }에 의해, smooth projective surface $S$ 위의 line bundle $\mathcal{O}_S$에 대하여
 
 $$\rchi(S,\mathcal{O}_S)=\int_S\operatorname{ch}(\mathcal{O}_S)\cdot\operatorname{td}(T_S)$$
 
-이 성립한다. Structure sheaf의 Chern character는 $\operatorname{ch}(\mathcal{O}_S)=1$이며, [§Todd Class, ⁋예시 6](/ko/math/algebraic_varieties/todd_class#ex6)에 의해 tangent bundle의 Todd class는
+이 성립한다. Structure sheaf의 Chern character는 $\operatorname{ch}(\mathcal{O}_S)=1$이며, [§Todd Class, ⁋예시 6](/ko/math/algebraic_varieties/todd_class#ex6){: data-relation="required" }에 의해 tangent bundle의 Todd class는
 
 $$\operatorname{td}(T_S)=1+\frac{c_1(T_S)}{2}+\frac{c_1(T_S)^2+c_2(T_S)}{12}$$
 
@@ -63,7 +63,7 @@ $$\rchi(\mathcal{O}_S)=\int_S\frac{K_S^2+c_2(S)}{12}=\frac{K_S^2+c_2(S)}{12}$$
 이다. 양변에 $12$를 곱하면 Noether formula를 얻는다. $\square$
 :::
 
-정리 [3](#thm3)의 증명에서 확인할 수 있듯이, Noether formula는 Hirzebruch-Riemann-Roch 정리에 $\mathcal{F}=\mathcal{O}_S$를 대입한 직접적인 결과이다. 이는 HRR 정리가 단순한 계산적 도구를 넘어, 서로 다른 영역의 불변량들 사이의 심층적인 연결을 제공함을 보여준다.
+정리 [3](#thm3){: data-relation="weak" }의 증명에서 확인할 수 있듯이, Noether formula는 Hirzebruch-Riemann-Roch 정리에 $\mathcal{F}=\mathcal{O}_S$를 대입한 직접적인 결과이다. 이는 HRR 정리가 단순한 계산적 도구를 넘어, 서로 다른 영역의 불변량들 사이의 심층적인 연결을 제공함을 보여준다.
 
 ::: 따름정리 4
 Smooth projective surface $S$에 대하여
@@ -74,10 +74,10 @@ $$12\rchi(\mathcal{O}_S)=K_S^2+\rchi_{\mathrm{top}}(S)$$
 :::
 
 ::: 증명
-명제 [2](#prop2)에 의해 $c_2(S)=\rchi_{\mathrm{top}}(S)$이므로, 이를 Noether formula의 $c_2(S)$에 대입하면 즉각적으로 결과를 얻는다. $\square$
+명제 [2](#prop2){: data-relation="required" }에 의해 $c_2(S)=\rchi_{\mathrm{top}}(S)$이므로, 이를 Noether formula의 $c_2(S)$에 대입하면 즉각적으로 결과를 얻는다. $\square$
 :::
 
-따름정리 [4](#cor4)는 Noether formula를 기하-위상적 관점에서 재해석한다. $K_S^2$은 surface의 "대수적 복잡도"를, $\rchi_{\mathrm{top}}(S)$는 "위상적 복잡도"를 측정하며, 이들의 합이 항상 $12$의 배수가 된다는 사실은 놀라운 정수성 조건을 제공한다.
+따름정리 [4](#cor4){: data-relation="weak" }는 Noether formula를 기하-위상적 관점에서 재해석한다. $K_S^2$은 surface의 "대수적 복잡도"를, $\rchi_{\mathrm{top}}(S)$는 "위상적 복잡도"를 측정하며, 이들의 합이 항상 $12$의 배수가 된다는 사실은 놀라운 정수성 조건을 제공한다.
 
 ## 지표와의 관계
 
@@ -96,7 +96,7 @@ Euler characteristic의 정의에 의해
 
 $$\rchi(\mathcal{O}_S)=h^0(\mathcal{O}_S)-h^1(\mathcal{O}_S)+h^2(\mathcal{O}_S)$$
 
-이다. $S$가 connected projective variety이므로 $h^0(\mathcal{O}_S)=1$이다. [§세르 쌍대성, ⁋명제 2](/ko/math/algebraic_varieties/serre_duality#prop2)에 의해
+이다. $S$가 connected projective variety이므로 $h^0(\mathcal{O}_S)=1$이다. [§세르 쌍대성, ⁋명제 2](/ko/math/algebraic_varieties/serre_duality#prop2){: data-relation="required" }에 의해
 
 $$h^2(\mathcal{O}_S)=h^0(K_S)=p_g$$
 
@@ -107,7 +107,7 @@ $$\rchi(\mathcal{O}_S)=1-q+p_g$$
 를 얻는다. $\square$
 :::
 
-명제 [5](#prop5)에 의해 Noether formula는
+명제 [5](#prop5){: data-relation="required" }에 의해 Noether formula는
 
 $$K_S^2+\rchi_{\mathrm{top}}(S)=12(1-q+p_g)$$
 
@@ -122,7 +122,7 @@ Projective plane $S=\mathbb{P}^2$에 대하여, canonical divisor는 $K_{\mathbb
 
 $$K_{\mathbb{P}^2}^2=(-3H)^2=9H^2=9$$
 
-이다. [§표준선다발, ⁋명제 7](/ko/math/algebraic_varieties/canonical_bundle#prop7)의 Euler exact sequence에 [§천 특성류, ⁋정의 1](/ko/math/algebraic_varieties/chern_classes#def1)의 Whitney sum formula를 적용하면 $c(T_{\mathbb{P}^2})=(1+H)^3=1+3H+3H^2$이다. 따라서 $c_2(T_{\mathbb{P}^2})=3H^2$이므로 $\int_{\mathbb{P}^2}c_2=3$이다. 한편 [§사영공간의 코호몰로지, ⁋명제 1](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop1)에 의해 $h^i(\mathbb{P}^2,\mathcal{O}_{\mathbb{P}^2})=0$ for $i>0$이므로
+이다. [§표준선다발, ⁋명제 7](/ko/math/algebraic_varieties/canonical_bundle#prop7){: data-relation="required" }의 Euler exact sequence에 [§천 특성류, ⁋정의 1](/ko/math/algebraic_varieties/chern_classes#def1){: data-relation="required" }의 Whitney sum formula를 적용하면 $c(T_{\mathbb{P}^2})=(1+H)^3=1+3H+3H^2$이다. 따라서 $c_2(T_{\mathbb{P}^2})=3H^2$이므로 $\int_{\mathbb{P}^2}c_2=3$이다. 한편 [§사영공간의 코호몰로지, ⁋명제 1](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop1){: data-relation="required" }에 의해 $h^i(\mathbb{P}^2,\mathcal{O}_{\mathbb{P}^2})=0$ for $i>0$이므로
 
 $$\rchi(\mathcal{O}_{\mathbb{P}^2})=h^0(\mathcal{O}_{\mathbb{P}^2})=1$$
 
@@ -162,7 +162,7 @@ $$\rchi(\mathcal{O}_{\widetilde{\mathbb{P}}^2})=\rchi(\mathcal{O}_{\mathbb{P}^2}
 :::
 
 ::: 예시 9 ($\mathbb{P}^3$ 속 degree $d$ smooth surface)
-$S\subseteq\mathbb{P}^3$를 degree $d$인 smooth surface라 하자. [§표준선다발, ⁋명제 9](/ko/math/algebraic_varieties/canonical_bundle#prop9)의 adjunction formula에 의해
+$S\subseteq\mathbb{P}^3$를 degree $d$인 smooth surface라 하자. [§표준선다발, ⁋명제 9](/ko/math/algebraic_varieties/canonical_bundle#prop9){: data-relation="required" }의 adjunction formula에 의해
 
 $$K_S=(K_{\mathbb{P}^3}+S)\vert_S=(-4H+dH)\vert_S=(d-4)h$$
 
@@ -201,7 +201,7 @@ $$12\rchi(\mathcal{O}_S)=12+2(d-1)(d-2)(d-3)=2d^3-12d^2+22d$$
 이므로 양쪽이 일치함을 확인한다.
 :::
 
-예시 [9](#ex9)에서 $d=4$인 경우, 즉 quartic K3 surface의 경우 $K_S=0$이고 $K_S^2=0$, $\rchi_{\mathrm{top}}(S)=24$, $\rchi(\mathcal{O}_S)=2$이므로 $0+24=12\cdot 2$가 성립한다. 이는 K3 surface의 대표적인 불변량들과 일치하며, 이러한 계산이 surface의 classification에서 어떻게 활용되는지를 보여준다.
+예시 [9](#ex9){: data-relation="required" }에서 $d=4$인 경우, 즉 quartic K3 surface의 경우 $K_S=0$이고 $K_S^2=0$, $\rchi_{\mathrm{top}}(S)=24$, $\rchi(\mathcal{O}_S)=2$이므로 $0+24=12\cdot 2$가 성립한다. 이는 K3 surface의 대표적인 불변량들과 일치하며, 이러한 계산이 surface의 classification에서 어떻게 활용되는지를 보여준다.
 
 ---
 
