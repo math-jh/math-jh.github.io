@@ -107,7 +107,7 @@ Conversely, given a comodule structure $V \rightarrow V \otimes A$, for each $g 
 
 ## Algebraic Tori and Weight Decomposition
 
-Among algebraic groups, one of the objects we encounter most frequently is a torus $T$. We have already examined the one-dimensional torus. ([Example 2](#ex2))
+Among algebraic groups, one of the objects we encounter most frequently is a torus $T$. We have already examined the one-dimensional torus. ([Example 2](#ex2){: data-relation="weak" })
 
 ::: Definition 9
 An *algebraic torus* is an algebraic group isomorphic to a finite direct sum of copies of $\mathbb{G}_m = \mathbb{C}^\ast$. That is, there exists $n \ge 1$ such that
@@ -142,7 +142,7 @@ The coordinate ring of a torus $T = (\mathbb{C}^\ast)^n$ is isomorphic to the po
 :::
 
 ::: Proof
-Since the torus $T = (\mathbb{C}^\ast)^n$ is the direct product of $n$ copies of $\mathbb{C}^\ast$, its coordinate ring is the tensor product of the coordinate rings of each factor. We know that the coordinate ring of $\mathbb{C}^\ast = \mathbb{C} \setminus \{0\}$ is $\mathbb{C}[x, x^{-1}]$. ([§Schemes, ⁋Example 10](/en/math/scheme_theory/schemes#ex10))
+Since the torus $T = (\mathbb{C}^\ast)^n$ is the direct product of $n$ copies of $\mathbb{C}^\ast$, its coordinate ring is the tensor product of the coordinate rings of each factor. We know that the coordinate ring of $\mathbb{C}^\ast = \mathbb{C} \setminus \{0\}$ is $\mathbb{C}[x, x^{-1}]$. ([§Schemes, ⁋Example 10](/en/math/scheme_theory/schemes#ex10){: data-relation="weak" })
 
 Hence the coordinate ring of $T$ is
 
@@ -210,7 +210,7 @@ Most algebraic groups we deal with are reductive.
 By contrast, $\mathbb{G}_a = \mathbb{C}$ is not reductive.
 :::
 
-The content regarding the finite generation of $A^G$ mentioned after [Definition 15](#def15) is usually treated in Geometric Invariant Theory (GIT), and through this theory we can define the quotient for a reductive group action.
+The content regarding the finite generation of $A^G$ mentioned after [Definition 15](#def15){: data-relation="required" } is usually treated in Geometric Invariant Theory (GIT), and through this theory we can define the quotient for a reductive group action.
 
 ::: Definition 17
 When a reductive group $G$ acts on an affine variety $X = \Spec(A)$, the *GIT quotient* $X /\!/ G$ is defined by
