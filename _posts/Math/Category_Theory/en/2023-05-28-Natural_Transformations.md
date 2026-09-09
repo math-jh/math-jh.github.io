@@ -36,7 +36,7 @@ Based on this, we can define the *functor category* $\Fun(\mathcal{A},\mathcal{B
 
 ## Equivalent Categories
 
-The notion of being *equivalent*, which is frequently used between categories, is not given by isomorphism in $\Cat$. ([§Functor, ⁋Definition 9](/en/math/category_theory/functors#def9)) This is because isomorphism between categories is too strong a condition: two categories that appear sufficiently similar may still be treated as different.
+The notion of being *equivalent*, which is frequently used between categories, is not given by isomorphism in $\Cat$. ([§Functor, ⁋Definition 9](/en/math/category_theory/functors#def9){: data-relation="weak" }) This is because isomorphism between categories is too strong a condition: two categories that appear sufficiently similar may still be treated as different.
 
 ::: Definition 2
 A functor $F$ from a category $\mathcal{A}$ to a category $\mathcal{B}$ is called an *equivalence of categories* if there exists a functor $G:\mathcal{B}\rightarrow \mathcal{A}$ such that $\id_\mathcal{A}\simeq G\circ F$ and $\id_\mathcal{B}\simeq F\circ G$. If there exists an equivalence from $\mathcal{A}$ to $\mathcal{B}$, we say that these two categories are *equivalent* and write $\mathcal{A}\simeq\mathcal{B}$.
@@ -48,7 +48,7 @@ Let us examine in what sense this notion of equivalence between categories furni
 A category $\mathcal{A}$ is called a *skeletal category* if, for every $A\in\obj(\mathcal{A})$, the only object of $\mathcal{A}$ isomorphic to $A$ is $A$ itself.
 :::
 
-Let $\mathcal{A}$ be a small category. Then from the set $\obj(\mathcal{A})$, we may identify isomorphic objects as the same, pick out only the distinct ones, and form a subset $\mathcal{S}$ of $\obj(\mathcal{A})$. For any $S_1,S_2\in\mathcal{S}$, set $\Hom_\mathcal{S}(S_1,S_2)=\Hom_\mathcal{A}(S_1,S_2)$. By definition, $\mathcal{S}$ is a subcategory of $\mathcal{A}$, and the obviously defined inclusion functor $\mathcal{S}\hookrightarrow\mathcal{A}$ is a faithful functor. ([§Category, ⁋Definition 5](/en/math/category_theory/categories#def5)) If this functor is also full, we call $\mathcal{S}$ a *full subcategory*. ([§Functor, ⁋Definition 10](/en/math/category_theory/functors#def10))
+Let $\mathcal{A}$ be a small category. Then from the set $\obj(\mathcal{A})$, we may identify isomorphic objects as the same, pick out only the distinct ones, and form a subset $\mathcal{S}$ of $\obj(\mathcal{A})$. For any $S_1,S_2\in\mathcal{S}$, set $\Hom_\mathcal{S}(S_1,S_2)=\Hom_\mathcal{A}(S_1,S_2)$. By definition, $\mathcal{S}$ is a subcategory of $\mathcal{A}$, and the obviously defined inclusion functor $\mathcal{S}\hookrightarrow\mathcal{A}$ is a faithful functor. ([§Category, ⁋Definition 5](/en/math/category_theory/categories#def5){: data-relation="weak" }) If this functor is also full, we call $\mathcal{S}$ a *full subcategory*. ([§Functor, ⁋Definition 10](/en/math/category_theory/functors#def10){: data-relation="weak" })
 
 When we construct a subcategory $\mathcal{S}$ from a small category $\mathcal{A}$ as above, it is natural to ask whether $\mathcal{S}$ retains enough information to describe $\mathcal{A}$. For instance, if a morphism $f:A_1\rightarrow A_2$ exists in $\mathcal{A}$, but choosing objects $A_1',A_2'$ isomorphic to $A_1,A_2$ yields no morphism $A_1'\rightarrow A_2'$, then one might say that $\mathcal{S}$ has lost information present in $\mathcal{A}$. But a moment's thought shows that this can never happen: whenever a morphism $f:A_1\rightarrow A_2$ is given, we can compose it with isomorphisms $A_1'\rightarrow A_1$ and $A_2\rightarrow A_2'$ to produce a morphism $A_1'\rightarrow A_2'$.
 
@@ -66,7 +66,7 @@ A functor $F:\mathcal{A}\rightarrow\mathcal{B}$ is an equivalence between catego
 > For every $B\in\obj(\mathcal{B})$, there exists some $A\in\obj(\mathcal{A})$ such that $F(A)\cong B$.
 :::
 
-Considering a skeleton of $\mathcal{A}$, the inclusion functor $\sk(\mathcal{A})\hookrightarrow\mathcal{A}$ is fully faithful because it is the inclusion of a full subcategory, and the last condition of [Definition 4](#def4) is precisely that this functor is essentially surjective. Thus, by [Theorem 5](#thm5), this inclusion is an equivalence, and $\mathcal{A}\simeq\sk(\mathcal{A})$ holds. From this we obtain the following.
+Considering a skeleton of $\mathcal{A}$, the inclusion functor $\sk(\mathcal{A})\hookrightarrow\mathcal{A}$ is fully faithful because it is the inclusion of a full subcategory, and the last condition of [Definition 4](#def4){: data-relation="required" } is precisely that this functor is essentially surjective. Thus, by [Theorem 5](#thm5){: data-relation="required" }, this inclusion is an equivalence, and $\mathcal{A}\simeq\sk(\mathcal{A})$ holds. From this we obtain the following.
 
 ::: Corollary 6
 Two small categories $\mathcal{A}$ and $\mathcal{B}$ are equivalent if and only if their skeletal subcategories $\sk(\mathcal{A})$ and $\sk(\mathcal{B})$ are isomorphic.

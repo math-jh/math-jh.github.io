@@ -35,7 +35,7 @@ $$\bigl(\alpha_A:F(A)\rightarrow G(A)\bigr)_{A\in\obj(\mathcal{A})}$$
 
 ## 동등한 카테고리들
 
-Category 사이에서 자주 사용하는 <em-ko>동등하다</em-ko>는 개념은 $\Cat$에서의 isomorphism으로 주어지지 않는다. ([§함자, ⁋정의 9](/ko/math/category_theory/functors#def9)) 이는 category들 사이의 isomorphism은 너무 강한 조건이어서, 충분히 비슷해보이는 두 category도 다른 것으로 취급되기 때문이다. 
+Category 사이에서 자주 사용하는 <em-ko>동등하다</em-ko>는 개념은 $\Cat$에서의 isomorphism으로 주어지지 않는다. ([§함자, ⁋정의 9](/ko/math/category_theory/functors#def9){: data-relation="weak" }) 이는 category들 사이의 isomorphism은 너무 강한 조건이어서, 충분히 비슷해보이는 두 category도 다른 것으로 취급되기 때문이다. 
 
 ::: 정의 2
 Category $\mathcal{A}$에서 $\mathcal{B}$로의 functor $F$가 *equivalence of categories<sub>동등함자</sub>*라는 것은 적당한 functor $G:\mathcal{B}\rightarrow \mathcal{A}$가 존재하여 $\id_\mathcal{A}\simeq G\circ F$이고 $\id_\mathcal{B}\simeq F\circ G$인 것이다. 만일 $\mathcal{A}$에서 $\mathcal{B}$로의 equivalence가 존재한다면 이들 두 category가 *equivalent<sub>동등</sub>*하다고 하고 $\mathcal{A}\simeq\mathcal{B}$으로 표기한다.
@@ -47,7 +47,7 @@ Category $\mathcal{A}$에서 $\mathcal{B}$로의 functor $F$가 *equivalence of 
 Category $\mathcal{A}$가 *skeletal category<sub>뼈대 카테고리</sub>*라는 것은 임의의 $A\in\obj(\mathcal{A})$에 대하여, $A$와 isomorphic한 $\mathcal{A}$의 object가 자기 자신뿐인 것이다.
 :::
 
-$\mathcal{A}$가 small category라 하자. 그럼 집합 $\obj(\mathcal{A})$에서 서로 isomorphic한 대상들을 같은 것으로 본 후, 서로 다른 것들만을 뽑아 $\obj(\mathcal{A})$의 부분집합 $\mathcal{S}$를 만들 수 있다. 임의의 $S_1,S_2\in\mathcal{S}$에 대하여, $\Hom_\mathcal{S}(S_1,S_2)=\Hom_\mathcal{A}(S_1,S_2)$로 두자. 정의로부터 $\mathcal{S}$는 $\mathcal{A}$의 subcategory이고, 자명하게 정의되는 inclusion functor $\mathcal{S}\hookrightarrow\mathcal{A}$가 faithful functor가 된다. ([§범주, ⁋정의 5](/ko/math/category_theory/categories#def5)) 만일 이 functor가 full이기도 하다면 $\mathcal{S}$를 *full subcategory<sub>충만한 부분카테고리</sub>*라 부른다. ([§함자, ⁋정의 10](/ko/math/category_theory/functors#def10))
+$\mathcal{A}$가 small category라 하자. 그럼 집합 $\obj(\mathcal{A})$에서 서로 isomorphic한 대상들을 같은 것으로 본 후, 서로 다른 것들만을 뽑아 $\obj(\mathcal{A})$의 부분집합 $\mathcal{S}$를 만들 수 있다. 임의의 $S_1,S_2\in\mathcal{S}$에 대하여, $\Hom_\mathcal{S}(S_1,S_2)=\Hom_\mathcal{A}(S_1,S_2)$로 두자. 정의로부터 $\mathcal{S}$는 $\mathcal{A}$의 subcategory이고, 자명하게 정의되는 inclusion functor $\mathcal{S}\hookrightarrow\mathcal{A}$가 faithful functor가 된다. ([§범주, ⁋정의 5](/ko/math/category_theory/categories#def5){: data-relation="weak" }) 만일 이 functor가 full이기도 하다면 $\mathcal{S}$를 *full subcategory<sub>충만한 부분카테고리</sub>*라 부른다. ([§함자, ⁋정의 10](/ko/math/category_theory/functors#def10){: data-relation="weak" })
 
 앞선 논증과 같이 small category $\mathcal{A}$로부터 subcategory $\mathcal{S}$를 만들 경우, $\mathcal{S}$가 $\mathcal{A}$를 설명하기에 충분한 정보를 가지고 있는지가 당연한 의문이 된다. 가령 $\mathcal{A}$에서는 morphism $f:A_1\rightarrow A_2$가 존재하지만, $A_1,A_2$와 isomorphic한 대상들 $A_1',A_2'$를 택할 경우 morphism $A_1'\rightarrow A_2'$가 존재하지 않는다면 $\mathcal{S}$는 $\mathcal{A}$가 갖고 있는 정보를 잃어버렸다고 할 수 있을 것이다. 하지만 조금만 생각을 해 보면, 이러한 일은 절대로 일어나지 않는다는 것을 알 수 있다. Morphism $f:A_1\rightarrow A_2$가 주어질 때마다, isomorphism들 $A_1'\rightarrow A_1$, $A_2\rightarrow A_2'$와 $f$를 합성하여 $A_1'\rightarrow A_2'$를 만들어낼 수 있기 때문이다.
 
@@ -65,7 +65,7 @@ Functor $F:\mathcal{A}\rightarrow\mathcal{B}$가 category들 사이의 equivalen
 > 임의의 $B\in\obj(\mathcal{B})$마다 적당한 $A\in\obj(\mathcal{A})$가 존재하여 $F(A)\cong B$가 성립하도록 할 수 있다.
 :::
 
-$\mathcal{A}$의 skeleton을 생각하면, inclusion functor $\sk(\mathcal{A})\hookrightarrow\mathcal{A}$는 full subcategory의 inclusion이므로 fully faithful이고, [정의 4](#def4)의 마지막 조건이 곧 이 functor가 essentially surjective라는 것이다. 따라서 [정리 5](#thm5)에 의하여 이 inclusion은 equivalence이고, $\mathcal{A}\simeq\sk(\mathcal{A})$가 성립한다. 이로부터 다음을 얻는다.
+$\mathcal{A}$의 skeleton을 생각하면, inclusion functor $\sk(\mathcal{A})\hookrightarrow\mathcal{A}$는 full subcategory의 inclusion이므로 fully faithful이고, [정의 4](#def4){: data-relation="required" }의 마지막 조건이 곧 이 functor가 essentially surjective라는 것이다. 따라서 [정리 5](#thm5){: data-relation="required" }에 의하여 이 inclusion은 equivalence이고, $\mathcal{A}\simeq\sk(\mathcal{A})$가 성립한다. 이로부터 다음을 얻는다.
 
 ::: 따름정리 6
 두 small category $\mathcal{A}$와 $\mathcal{B}$가 equivalent한 것은 이들의 skeletal subcategory $\sk(\mathcal{A})$와 $\sk(\mathcal{B})$가 isomorphic한 것이다.
