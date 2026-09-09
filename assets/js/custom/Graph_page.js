@@ -358,37 +358,43 @@
         return out;
       }
 
-      // 행별 노드 x 목록 — 레인이 남의 점을 지나는지 보는 데 쓴다.
-      var rows = {};
+      // 어떤 선택에서 켜지는지 — 링크별·노드별로. 레인과 상대(다른 레인이든 점이든)가
+      // 이 집합을 공유할 때만 자리를 다툰다. 함께 뜨지 않으면 겹쳐도 보이지 않는다.
+      var linkFocus = {}, nodeFocus = {};
+      function mark(store, key, id) { (store[key] = store[key] || new Set()).add(id); }
       data.nodes.forEach(function (n) {
-        var p = linearGeometry.positions[n.id];
-        if (p) (rows[p.y] = rows[p.y] || []).push({ x: p.x, r: radius(n) });
-      });
-      var rowKeys = Object.keys(rows).map(Number);
-      function crossesNode(y, x0, x1) {
-        return rowKeys.some(function (ry) {
-          if (Math.abs(ry - y) > 12) return false;
-          return rows[ry].some(function (n) {
-            return n.x > x0 + 1 && n.x < x1 - 1 && Math.abs(ry - y) < n.r + 2.5;
-          });
-        });
-      }
-
-      // 한 링크를 켜는 노드들의 집합. 두 링크가 이 집합을 공유해야 자리를 다툰다.
-      var focusOf = {};
-      data.nodes.forEach(function (n) {
+        mark(nodeFocus, n.id, n.id);
         linearFocusLinks(n.id).forEach(function (l) {
-          var key = lid(l);
-          (focusOf[key] = focusOf[key] || new Set()).add(n.id);
+          var ends = endpoints(l);
+          mark(linkFocus, lid(l), n.id);
+          mark(nodeFocus, ends[0], n.id);
+          mark(nodeFocus, ends[1], n.id);
         });
       });
-      function sharesFocus(a, b) {
-        var small = focusOf[a], large = focusOf[b];
-        if (!small || !large) return false;
-        if (small.size > large.size) { var swap = small; small = large; large = swap; }
+      function shares(a, b) {
+        if (!a || !b) return false;
+        var small = a, large = b;
+        if (small.size > large.size) { small = b; large = a; }
         var shared = false;
         small.forEach(function (id) { if (large.has(id)) shared = true; });
         return shared;
+      }
+
+      // 행별 노드 목록 — 레인이 같이 켜지는 점을 지나는지 보는 데 쓴다.
+      var rows = {};
+      data.nodes.forEach(function (n) {
+        var p = linearGeometry.positions[n.id];
+        if (p) (rows[p.y] = rows[p.y] || []).push({ id: n.id, x: p.x, r: radius(n) });
+      });
+      var rowKeys = Object.keys(rows).map(Number);
+      function crossesNode(key, y, x0, x1) {
+        return rowKeys.some(function (ry) {
+          if (Math.abs(ry - y) > 12) return false;
+          return rows[ry].some(function (n) {
+            return n.x > x0 + 1 && n.x < x1 - 1 && Math.abs(ry - y) < n.r + 2.5 &&
+              shares(linkFocus[key], nodeFocus[n.id]);
+          });
+        });
       }
 
       var placed = [];
@@ -408,13 +414,13 @@
         for (var i = 0; i < options.length; i++) {
           var y = lane.base + options[i];
           if (y < minY || y > maxY) continue;
-          if (crossesNode(y, lane.x0, lane.x1)) continue;
+          if (crossesNode(lane.key, y, lane.x0, lane.x1)) continue;
           // 빈 층이 하나도 없을 때를 대비해 겹치는 길이의 합을 재 둔다.
           var cost = 0;
           placed.forEach(function (other) {
             if (Math.abs(other.y - y) >= CLEAR) return;
             var overlap = Math.min(other.x1, lane.x1) - Math.max(other.x0, lane.x0);
-            if (overlap > 4 && sharesFocus(other.key, lane.key)) cost += overlap;
+            if (overlap > 4 && shares(linkFocus[other.key], linkFocus[lane.key])) cost += overlap;
           });
           if (cost === 0) { chosen = y; break; }
           if (cost < bestCost) { bestCost = cost; best = y; }
