@@ -150,7 +150,7 @@ Therefore, in order to regard $\Hom_\Ab(-,-)$ as an internal $\Hom$, we must end
 
 The fundamental reason why the equation in [Example 10](#ex10){: data-relation="required" } cannot hold is quite simple. The reason why the above isomorphism held in $\Set$ was that for any function $f:A\times B \rightarrow C$, fixing an element of $A$ or an element of $B$ left a function from $B$ or $A$ to $C$.
 
-On the other hand, among group homomorphisms $f:G\times H \rightarrow A$, the only $f$ such that fixing the first or second component yields a group homomorphism is the zero map. This is because for any $x\in G$, if $f(x, -)$ is a group homomorphism, then we must have $f(x,0)=0$, and similarly for any $y\in H$, we must have $f(0,y)=0$, so substituting this into the condition that $f$ is a group homomorphism
+On the other hand, among group homomorphisms $f:G\times H \rightarrow A$, the only $f$ such that fixing each component yields a group homomorphism is the zero map. This is because for any $x\in G$, if $f(x, -)$ is a group homomorphism, then we must have $f(x,0)=0$, and similarly for any $y\in H$, we must have $f(0,y)=0$, so substituting this into the condition that $f$ is a group homomorphism
 
 $$f(x+0,0+y)=f(x,0)+f(0,y)$$
 
