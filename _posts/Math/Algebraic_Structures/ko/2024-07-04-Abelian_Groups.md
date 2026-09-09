@@ -148,7 +148,7 @@ $$\Hom_\Ab(\mathbb{Z}\times H,A)\cong \Hom_\Ab(\mathbb{Z},\Hom_\Ab(H,A))\cong \H
 
 [예시 10](#ex10){: data-relation="required" }에서의 식이 성립할 수 없는 근본적인 이유는 꽤나 간단하다. $\Set$에서 위의 isomorphism이 성립했던 이유는 임의의 함수 $f:A\times B \rightarrow C$에 대하여, $A$의 원소 혹은 $B$의 원소를 하나 고정하고 나면 남는 것이 $B$ 혹은 $A$에서 $C$로의 함수가 되었기 때문이다.
 
-반면, group homomorphism $f:G\times H \rightarrow A$의 첫 번째 혹은 두 번째 성분을 고정한 것이 group homomorphism이 되도록 하는 $f$는 오직 zero map 뿐이다. 임의의 $x\in G$에 대하여 $f(x, -)$이 group homomorphism이라면 $f(x,0)=0$이어야 하고, 비슷하게 임의의 $y\in H$에 대해 $f(0,y)=0$이어야 하므로 이를 $f$가 group homomorphism이라는 조건
+반면, group homomorphism $f:G\times H \rightarrow A$의 각 성분을 고정한 것들이 group homomorphism이 되도록 하는 $f$는 오직 zero map 뿐이다. 임의의 $x\in G$에 대하여 $f(x, -)$이 group homomorphism이라면 $f(x,0)=0$이어야 하고, 비슷하게 임의의 $y\in H$에 대해 $f(0,y)=0$이어야 하므로 이를 $f$가 group homomorphism이라는 조건
 
 $$f(x+0,0+y)=f(x,0)+f(0,y)$$
 

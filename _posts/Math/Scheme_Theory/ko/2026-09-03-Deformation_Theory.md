@@ -487,17 +487,17 @@ $$T^i(C/A,M)=\Ext^i_C(\LL_{C/A},M)=\Ext^i_C(\Omega_{C/A},M)=0$$
 
 $$(a,u)(b,v)=(ab,av+bu)$$
 
-을 주면, 이는 $\mathcal{I}^2=0$인 $\mathcal{O}_S$-algebra가 된다. 그럼 이에 대한 relative spectrum $S[\mathcal{I}]=\rSpec_S(\mathcal{O}_S\oplus\mathcal{I})$은 $S$의 split square-zero thickening이고, 특히 $\mathcal{I}=\mathcal{O}_S$인 경우를 $S[\epsilon]$이라 적는다. $S=\Spec A$이면 이는 앞에서 사용한 $\Spec(A[\epsilon])$과 같다. 더 일반적으로는 square-zero ideal sheaf $\mathcal{I}=\ker(\mathcal{O}_{S'}\rightarrow\mathcal{O}_S)$로 정의된 closed immersion $S\hookrightarrow S'$을 base의 thickening으로 사용할 수 있다.
+을 주면, 이는 $\mathcal{I}^2=0$인 $\mathcal{O}_S$-algebra가 된다. 그럼 이에 대한 relative spectrum $S[\mathcal{I}]=\rSpec_S(\mathcal{O}_S\oplus\mathcal{I})$은 $S$의 split square-zero thickening이고, 특히 $\mathcal{I}=\mathcal{O}_S$인 경우 우리는 이를 $S[\epsilon]$이라 적는다. $S=\Spec A$이면 이는 앞에서 사용한 $\Spec(A[\epsilon])$과 같으며, 더 일반적으로는 square-zero ideal sheaf $\mathcal{I}=\ker(\mathcal{O}_{S'}\rightarrow\mathcal{O}_S)$로 정의된 closed immersion $S\hookrightarrow S'$을 base의 thickening으로 사용할 수 있다.
 
 ::: 정의 10
-$f:X_0\rightarrow S$가 flat scheme morphism이고 $i:S\hookrightarrow S'$이 square-zero ideal sheaf $\mathcal{I}$로 정의된 closed immersion이라 하자. $X_0$의 $S'$ 위 *deformation<sub>변형</sub>*이란 $S'$ 위에서 flat한 scheme $X$와 $S$-isomorphism
+Flat morphism $f:X_0\rightarrow S$, square-zero ideal sheaf $\mathcal{I}$가 정의하는 closed embedding $i:S\hookrightarrow S'$에 대하여, $X_0$의 $S'$ 위로의 *deformation<sub>변형</sub>*이란 flat $S'$-scheme $X$와 $S$-isomorphism
 
 $$\iota:X\times_{S'}S\xrightarrow{\sim}X_0$$
 
-의 짝 $(X,\iota)$이다. 두 deformation $(X,\iota)$와 $(X',\iota')$이 *isomorphic*이라는 것은 $\iota'\circ(\psi\times_{S'}S)=\iota$를 만족하는 $S'$-isomorphism $\psi:X\rightarrow X'$이 존재하는 것이다. 특히 $S'=S[\epsilon]$인 경우의 deformation을 $X_0$의 $S$ 위 *first-order deformation<sub>일차 변형</sub>*이라 부른다.
+의 쌍 $(X,\iota)$이다. 두 deformation $(X,\iota)$와 $(X',\iota')$이 *isomorphic*이라는 것은 $\iota'\circ(\psi\times_{S'}S)=\iota$를 만족하는 $S'$-isomorphism $\psi:X\rightarrow X'$이 존재하는 것이다. 특히 $S'=S[\epsilon]$인 경우의 deformation을 $X_0$의 $S$ 위 *first-order deformation<sub>일차 변형</sub>*이라 부른다.
 :::
 
-Square-zero thickening은 underlying topological space를 바꾸지 않으므로 $S$와 $S'$은 같은 열린집합을 갖는다. 따라서 affine open $V=\Spec A\subseteq S$에 대응하는 $V'\subseteq S'$ 역시 affine이고, $V'=\Spec A'$이라 쓰면 $A'\twoheadrightarrow A$는 square-zero extension이다. 마찬가지로 deformation $X$의 underlying space는 central fiber $X_0$와 같아서 $U\subseteq X_0$는 그대로 $X$의 열린집합을 정한다. 이 때문에 deformation의 flatness와 central fiber 조건은 affine open들 위에서 확인할 수 있으며, 각 affine 조각에서는 [정의 3](#def3)의 algebra deformation으로 정확히 환원된다. 특히 flatness에 의해 $X_0\hookrightarrow X$의 ideal sheaf는 $\mathcal{G}=f^\ast\mathcal{I}$로 식별된다.
+이는 위에서 설명한 일반적인 scheme에 대한 infinitesimal thickening을 사용하여 [정의 3](#def3)을 다시 쓴 것에 불과하다. 실제로 square-zero thickening은 underlying topological space를 바꾸지 않으므로 $S$와 $S'$은 같은 열린집합을 가지며, 특히 affine open $V=\Spec A\subseteq S$에 대응하는 $V'\subseteq S'$ 역시 affine이며 이를 $V'=\Spec A'$이라 쓰면 $A'\twoheadrightarrow A$는 square-zero extension이 된다. 즉, 직관적으로 $S$의 infinitesimal thickening은 affine 조각들마다 infinitesimal thickening을 한 후 붙여주는 것이라 생각할 수 있다. 마찬가지로 deformation $X$의 underlying space는 central fiber $X_0$와 같아서 $U\subseteq X_0$는 그대로 $X$의 열린집합을 정하며, 덕분에 deformation의 flatness와 central fiber 조건은 affine open들 위에서 확인할 수 있으며, 각 affine 조각에서는 [정의 3](#def3)의 경우로 환원된다. 특히 flatness에 의해 $X_0\hookrightarrow X$의 ideal sheaf는 $\mathcal{G}=f^\ast\mathcal{I}$로 식별된다.
 
 이제 $X_0$의 affine open cover $X_0=\bigcup_iU_i$를 택하자. 각 $U_i$ 위에서 deformation $U_i'$을 만들었다고 해도 아직 대역적 deformation을 얻은 것은 아니다. 두 조각의 overlap $U_{ij}=U_i\cap U_j$ 위에서 central fiber의 항등사상으로 제한되는 isomorphism
 
