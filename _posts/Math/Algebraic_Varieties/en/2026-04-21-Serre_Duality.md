@@ -24,7 +24,7 @@ In this post we examine Serre duality, the algebraic-geometry analogue of dualit
 
 ## Serre Duality on Projective Space
 
-We first look carefully at the case $X=\mathbb{P}^n$ only. We know that every line bundle on $\mathbb{P}^n$ is of the form $\mathcal{O}(d)$, and in particular we saw in [§Canonical Line Bundle, §§Canonical Bundle of $\mathbb{P}^n$](/en/math/algebraic_varieties/canonical_bundle#canonical-bundle-of-mathbbpn) that this is $\mathcal{O}(-n-1)$. Then from [§Cohomology of Projective Space, ⁋Proposition 1](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop1) we obtain the following.
+We first look carefully at the case $X=\mathbb{P}^n$ only. We know that every line bundle on $\mathbb{P}^n$ is of the form $\mathcal{O}(d)$, and in particular we saw in [§Canonical Line Bundle, §§Canonical Bundle of $\mathbb{P}^n$](/en/math/algebraic_varieties/canonical_bundle#canonical-bundle-of-mathbbpn){: data-relation="required" } that this is $\mathcal{O}(-n-1)$. Then from [§Cohomology of Projective Space, ⁋Proposition 1](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop1){: data-relation="required" } we obtain the following.
 
 ::: Proposition 1
 For the canonical line bundle $\omega_X$ on projective space $X=\mathbb{P}^n$, there exists an isomorphism
@@ -53,7 +53,7 @@ and then, using the evaluation map $\mathcal{E}\otimes \mathcal{E}^\vee\rightarr
 
 $$H^k(\mathbb{P}^n, \mathcal{E})\times H^{n-k}(\mathbb{P}^n, \omega_{\mathbb{P}^n}\otimes\mathcal{E}^\vee)\rightarrow \mathbb{K}$$
 
-We show non-degeneracy for $\mathcal{O}(d)$ by direct computation in [§Cohomology of Projective Space, ⁋Proposition 1](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop1), and extend this non-degeneracy to general locally free sheaves $\mathcal{E}$ using the syzygy theorem.
+We show non-degeneracy for $\mathcal{O}(d)$ by direct computation in [§Cohomology of Projective Space, ⁋Proposition 1](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop1){: data-relation="required" }, and extend this non-degeneracy to general locally free sheaves $\mathcal{E}$ using the syzygy theorem.
 
 From the discussion so far we obtain the following.
 
@@ -74,9 +74,9 @@ More generally, by the Noether normalization theorem, for any $n$-dimensional sm
 $$H^i(X, \mathcal{E}) \cong H^{n-i}(X, \omega_X \otimes \mathcal{E}^\vee)^\ast$$
 
 ::: Example 3
-Let us look concretely at [Proposition 2](#prop2) on $\mathbb{P}^2$. Here $\omega_{\mathbb{P}^2} \cong \mathcal{O}(-3)$, so what Serre duality asserts is the isomorphism $H^k(\mathbb{P}^2, \mathcal{O}(d)) \cong H^{2-k}(\mathbb{P}^2, \mathcal{O}(-d-3))^\ast$.
+Let us look concretely at [Proposition 2](#prop2){: data-relation="required" } on $\mathbb{P}^2$. Here $\omega_{\mathbb{P}^2} \cong \mathcal{O}(-3)$, so what Serre duality asserts is the isomorphism $H^k(\mathbb{P}^2, \mathcal{O}(d)) \cong H^{2-k}(\mathbb{P}^2, \mathcal{O}(-d-3))^\ast$.
 
-First, for $d=0$, by [§Cohomology of Projective Space, ⁋Proposition 1](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop1) we have
+First, for $d=0$, by [§Cohomology of Projective Space, ⁋Proposition 1](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop1){: data-relation="required" } we have
 
 $$H^0(\mathbb{P}^2, \mathcal{O}) = \mathbb{K},\qquad H^1(\mathbb{P}^2, \mathcal{O}) = 0, \qquad H^2(\mathbb{P}^2, \mathcal{O}) = 0$$
 
@@ -88,7 +88,7 @@ so we see that Serre duality holds. Similarly, for $d=1$, the only nonzero cohom
 
 $$H^0(\mathbb{P}^2, \mathcal{O}(1)) = \mathbb{K}^3$$
 
-and by Serre duality we must have $H^0(\mathcal{O}(1)) \cong H^2(\mathcal{O}(-4))^\ast$, so $\dim H^2(\mathcal{O}(-4))$ should be $3$. Applying [§Cohomology of Projective Space, ⁋Proposition 1](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop1) again, the $H^2$ of $\mathcal{O}(-4)$ indeed has dimension
+and by Serre duality we must have $H^0(\mathcal{O}(1)) \cong H^2(\mathcal{O}(-4))^\ast$, so $\dim H^2(\mathcal{O}(-4))$ should be $3$. Applying [§Cohomology of Projective Space, ⁋Proposition 1](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop1){: data-relation="required" } again, the $H^2$ of $\mathcal{O}(-4)$ indeed has dimension
 
 $$\binom{2+(-4)}{2}=\binom{-2}{2} = 3$$
 
@@ -97,7 +97,7 @@ so we verify that they match.
 
 ## Generalizations of Serre Duality
 
-We now generalize the preceding discussion. The first thing one can do is to extend from locally free sheaves to arbitrary coherent sheaves. This is not as difficult as it might seem, because on a smooth variety any coherent sheaf has a finite locally free resolution, so one can inductively carry Serre duality along the terms of the resolution. ([§Canonical Line Bundle](/en/math/algebraic_varieties/canonical_bundle)) However, the statement obtained this way is not a duality between $H^i(X,\mathcal{E})$ and $H^{n-i}(X,\omega_X\otimes\mathcal{E}^\vee)$, but rather takes the form using $\Ext$ that we shall see below.
+We now generalize the preceding discussion. The first thing one can do is to extend from locally free sheaves to arbitrary coherent sheaves. This is not as difficult as it might seem, because on a smooth variety any coherent sheaf has a finite locally free resolution, so one can inductively carry Serre duality along the terms of the resolution. ([§Canonical Line Bundle](/en/math/algebraic_varieties/canonical_bundle){: data-relation="weak" }) However, the statement obtained this way is not a duality between $H^i(X,\mathcal{E})$ and $H^{n-i}(X,\omega_X\otimes\mathcal{E}^\vee)$, but rather takes the form using $\Ext$ that we shall see below.
 
 Next we drop the smoothness condition on $X$. In this case there are two major problems. The first visible one is that $X$ need not have a canonical line bundle. Another problem is somewhat more subtle: when we obtained the explicit isomorphism from the perfect pairing, we somewhat implicitly used the isomorphism
 
@@ -125,7 +125,7 @@ In particular, since each fiber is a variety it is connected, and therefore $f_\
 
 ## Grothendieck Duality
 
-Let us retrace the process of generalizing Serre duality. We first proved Serre duality on $\mathbb{P}^n$ using the trace map and cup product ([Proposition 2](#prop2)), and extended this to arbitrary smooth projective varieties via a finite morphism. The extension to coherent sheaves was handled by induction through locally free resolutions, and the extension to singular varieties was handled by introducing the dualizing sheaf. [Proposition 4](#prop4) was the generalization replacing the target point with an arbitrary variety.
+Let us retrace the process of generalizing Serre duality. We first proved Serre duality on $\mathbb{P}^n$ using the trace map and cup product ([Proposition 2](#prop2){: data-relation="weak" }), and extended this to arbitrary smooth projective varieties via a finite morphism. The extension to coherent sheaves was handled by induction through locally free resolutions, and the extension to singular varieties was handled by introducing the dualizing sheaf. [Proposition 4](#prop4){: data-relation="weak" } was the generalization replacing the target point with an arbitrary variety.
 
 The most modern interpretation of Serre duality is Grothendieck duality, which is formulated in the language of derived categories. ([[Homological Algebra] §Derived Categories, ⁋Definition 2](/en/math/homological_algebra/derived_categories#def2)) This generalization has quite a convincing motivation: for example, when we defined sheaf cohomology we already had to think about injective resolutions, and when we generalized Serre duality to arbitrary coherent sheaves above we also had to think about locally free resolutions, so we know that the derived category is where everything actually happens. In particular, the key point is that the perfect pairing in Serre duality encodes exactly the same information as the choice of a concrete isomorphism
 

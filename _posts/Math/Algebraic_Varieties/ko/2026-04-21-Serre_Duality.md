@@ -19,13 +19,13 @@ weight: 15
 
 $$H^k(M;R)\times H^{n-k}(M;R)\rightarrow R$$
 
-을 사용했으며, 이를 통해 [\[대수적 위상수학\] §푸앵카레 쌍대성, ⁋정리 11](/ko/math/algebraic_topology/Poincare_duality#thm11)와 같은 결과를 얻었다. 더 구체적으로, 이 pairing은 cap product와 fundamental class $[M] \in H_n(M;R)$를 통해 구성되므로 위상수학에서 duality의 원천은 orientation class $[M]$이라 할 수 있다. 
+을 사용했으며, 이를 통해 [\[대수적 위상수학\] §푸앵카레 쌍대성, ⁋정리 11](/ko/math/algebraic_topology/Poincare_duality#thm11){: data-relation="weak" }와 같은 결과를 얻었다. 더 구체적으로, 이 pairing은 cap product와 fundamental class $[M] \in H_n(M;R)$를 통해 구성되므로 위상수학에서 duality의 원천은 orientation class $[M]$이라 할 수 있다. 
 
 이번 글에서 우리는 algebraic geometry 버전의 duality인 Serre duality를 살펴본다. 
 
 ## 사영공간에서의 세르 쌍대성
 
-우리는 우선 $X=\mathbb{P}^n$인 경우만 엄밀하게 살펴본다. 우리는 $\mathbb{P}^n$ 위에 정의된 line bundle은 모두 $\mathcal{O}(d)$의 꼴인 것을 알고 있으며, 특히 [§표준선다발, §§$\mathbb{P}^n$의 Canonical Bundle](/ko/math/algebraic_varieties/canonical_bundle#mathbbpn의-canonical-bundle)에서 이것이 $\mathcal{O}(-n-1)$임을 살펴보았다. 그럼 [§사영공간의 코호몰로지, ⁋명제 1](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop1)에서 우리는 다음을 얻는다.
+우리는 우선 $X=\mathbb{P}^n$인 경우만 엄밀하게 살펴본다. 우리는 $\mathbb{P}^n$ 위에 정의된 line bundle은 모두 $\mathcal{O}(d)$의 꼴인 것을 알고 있으며, 특히 [§표준선다발, §§$\mathbb{P}^n$의 Canonical Bundle](/ko/math/algebraic_varieties/canonical_bundle#mathbbpn의-canonical-bundle){: data-relation="required" }에서 이것이 $\mathcal{O}(-n-1)$임을 살펴보았다. 그럼 [§사영공간의 코호몰로지, ⁋명제 1](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop1){: data-relation="required" }에서 우리는 다음을 얻는다.
 
 ::: 명제 1
 Projective space $X=\mathbb{P}^n$ 위의 canonical line bundle $\omega_X$에 대하여, isomorphism
@@ -55,7 +55,7 @@ $$H^k(\mathbb{P}^n, \mathcal{E})\times H^{n-k}(\mathbb{P}^n, \omega_{\mathbb{P}^
 
 $$H^k(\mathbb{P}^n, \mathcal{E})\times H^{n-k}(\mathbb{P}^n, \omega_{\mathbb{P}^n}\otimes\mathcal{E}^\vee)\rightarrow \mathbb{K}$$
 
-를 얻는다. 우리는 이를 $\mathcal{O}(d)$의 경우에 [§사영공간의 코호몰로지, ⁋명제 1](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop1)에서 직접 계산하여 non-degeneracy를 보이고, syzygy theorem을 사용하여 이 non-degeneracy를 일반적인 locally free sheaf $\mathcal{E}$에 대하여 보일 수 있다.
+를 얻는다. 우리는 이를 $\mathcal{O}(d)$의 경우에 [§사영공간의 코호몰로지, ⁋명제 1](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop1){: data-relation="required" }에서 직접 계산하여 non-degeneracy를 보이고, syzygy theorem을 사용하여 이 non-degeneracy를 일반적인 locally free sheaf $\mathcal{E}$에 대하여 보일 수 있다.
 
 지금까지의 논의에서 다음을 얻는다.
 
@@ -80,9 +80,9 @@ $$H^i(X, \mathcal{E}) \cong H^{n-i}(X, \omega_X \otimes \mathcal{E}^\vee)^\ast$$
 을 의미한다.
 
 ::: 예시 3
-$\mathbb{P}^2$에서 [명제 2](#prop2)를 구체적으로 살펴보자. 여기에서 $\omega_{\mathbb{P}^2} \cong \mathcal{O}(-3)$이므로, Serre duality가 주장하는 바는 isomorphism $H^k(\mathbb{P}^2, \mathcal{O}(d)) \cong H^{2-k}(\mathbb{P}^2, \mathcal{O}(-d-3))^\ast$이다.
+$\mathbb{P}^2$에서 [명제 2](#prop2){: data-relation="required" }를 구체적으로 살펴보자. 여기에서 $\omega_{\mathbb{P}^2} \cong \mathcal{O}(-3)$이므로, Serre duality가 주장하는 바는 isomorphism $H^k(\mathbb{P}^2, \mathcal{O}(d)) \cong H^{2-k}(\mathbb{P}^2, \mathcal{O}(-d-3))^\ast$이다.
 
-우선 $d=0$인 경우, [§사영공간의 코호몰로지, ⁋명제 1](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop1)에 의해 
+우선 $d=0$인 경우, [§사영공간의 코호몰로지, ⁋명제 1](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop1){: data-relation="required" }에 의해 
 
 $$H^0(\mathbb{P}^2, \mathcal{O}) = \mathbb{K},\qquad H^1(\mathbb{P}^2, \mathcal{O}) = 0, \qquad H^2(\mathbb{P}^2, \mathcal{O}) = 0$$
 
@@ -94,7 +94,7 @@ $$H^0(\mathbb{P}^2, \mathcal{O}(-3)) = 0, \qquad H^1(\mathbb{P}^2, \mathcal{O}(-
 
 $$H^0(\mathbb{P}^2, \mathcal{O}(1)) = \mathbb{K}^3$$
 
-이며, Serre duality에 의해 $H^0(\mathcal{O}(1)) \cong H^2(\mathcal{O}(-4))^\ast$이어야 하므로 $\dim H^2(\mathcal{O}(-4)) = 3$이어야 할 것이다. 다시 [§사영공간의 코호몰로지, ⁋명제 1](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop1)를 적용하면 실제로 $\mathcal{O}(-4)$의 $H^2$는 
+이며, Serre duality에 의해 $H^0(\mathcal{O}(1)) \cong H^2(\mathcal{O}(-4))^\ast$이어야 하므로 $\dim H^2(\mathcal{O}(-4)) = 3$이어야 할 것이다. 다시 [§사영공간의 코호몰로지, ⁋명제 1](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop1){: data-relation="required" }를 적용하면 실제로 $\mathcal{O}(-4)$의 $H^2$는 
 
 $$\binom{2+(-4)}{2}=\binom{-2}{2} = 3$$
 
@@ -103,7 +103,7 @@ $$\binom{2+(-4)}{2}=\binom{-2}{2} = 3$$
 
 ## 세르 쌍대성의 일반화
 
-우리는 지금까지의 논의를 일반화시킨다. 가장 처음으로 할 수 있는 것은 locally free sheaf $\mathcal{E}$를 임의의 coherent sheaf $\mathcal{E}$로 확장하는 것이다. 이는 생각보다 어려운 일은 아닌데, smooth variety에서는 임의의 coherent sheaf가 finite length locally free resolution을 갖기 때문으로, resolution의 각 항에서 성립하는 Serre duality를 resolution을 따라 귀납적으로 옮기면 된다. ([§표준선다발](/ko/math/algebraic_varieties/canonical_bundle)) 다만 이렇게 옮겨진 주장은 $H^i(X,\mathcal{E})$와 $H^{n-i}(X,\omega_X\otimes\mathcal{E}^\vee)$ 사이의 duality가 아니라, 아래에서 보게 될 $\Ext$를 사용하는 형태를 갖는다.
+우리는 지금까지의 논의를 일반화시킨다. 가장 처음으로 할 수 있는 것은 locally free sheaf $\mathcal{E}$를 임의의 coherent sheaf $\mathcal{E}$로 확장하는 것이다. 이는 생각보다 어려운 일은 아닌데, smooth variety에서는 임의의 coherent sheaf가 finite length locally free resolution을 갖기 때문으로, resolution의 각 항에서 성립하는 Serre duality를 resolution을 따라 귀납적으로 옮기면 된다. ([§표준선다발](/ko/math/algebraic_varieties/canonical_bundle){: data-relation="weak" }) 다만 이렇게 옮겨진 주장은 $H^i(X,\mathcal{E})$와 $H^{n-i}(X,\omega_X\otimes\mathcal{E}^\vee)$ 사이의 duality가 아니라, 아래에서 보게 될 $\Ext$를 사용하는 형태를 갖는다.
 
 그 후 우리는 $X$에서 smooth 조건을 포기한다. 이 경우 크게 두 가지의 문제가 있는데, 처음으로 보이는 문제는 $X$가 canonical line bundle을 갖지 않는다는 사실이다. 또 다른 문제는 약간 미묘한 것으로, 우리는 perfect pairing에서 명시적인 isomorphism을 얻어낼 때 다소 implicit하게 다음의 isomorphism
 
@@ -131,9 +131,9 @@ $$R^i f_\ast \omega_{X/Y} \cong (R^{n-i} f_\ast \mathcal{O}_X)^\vee$$
 
 ## Grothendieck duality
 
-앞서 Serre duality를 일반화하는 과정들을 되짚어보자. 우리는 먼저 $\mathbb{P}^n$ 위에서 trace map과 cup product를 사용하여 Serre duality를 증명하였고 ([명제 2](#prop2)), 이를 finite morphism을 통해 임의의 smooth projective variety로 확장하였다. 이후 coherent sheaf로의 확장은 locally free resolution을 통한 귀납으로 처리하였고, singular variety로의 확장은 dualizing sheaf의 도입으로 처리하였다. [명제 4](#prop4)는 target을 point에서 임의의 variety로 바꾼 일반화였다.
+앞서 Serre duality를 일반화하는 과정들을 되짚어보자. 우리는 먼저 $\mathbb{P}^n$ 위에서 trace map과 cup product를 사용하여 Serre duality를 증명하였고 ([명제 2](#prop2){: data-relation="weak" }), 이를 finite morphism을 통해 임의의 smooth projective variety로 확장하였다. 이후 coherent sheaf로의 확장은 locally free resolution을 통한 귀납으로 처리하였고, singular variety로의 확장은 dualizing sheaf의 도입으로 처리하였다. [명제 4](#prop4){: data-relation="weak" }는 target을 point에서 임의의 variety로 바꾼 일반화였다.
 
-Serre duality의 가장 현대적인 해석은 Grothendieck duality로, 이는 derived category의 언어에서 서술된다. ([\[호몰로지 대수학\] §유도카테고리, ⁋정의 2](/ko/math/homological_algebra/derived_categories#def2)) 이 일반화는 그 언어에 비해 motivation은 상당히 설득력 있는 것으로, 가령 우리는 sheaf cohomology를 정의할 때만 해도 injective resolution을 생각해야 했고, 위에서 Serre duality를 임의의 coherent sheaf로 일반화할 때도 locally free resolution을 생각해야 했으므로 derived category가 모든 일이 실제로 일어나는 곳임을 안다. 특히 핵심적인 내용은 Serre duality에서 perfect pairing이, 사실은 구체적인 isomorphism
+Serre duality의 가장 현대적인 해석은 Grothendieck duality로, 이는 derived category의 언어에서 서술된다. ([\[호몰로지 대수학\] §유도카테고리, ⁋정의 2](/ko/math/homological_algebra/derived_categories#def2){: data-relation="required" }) 이 일반화는 그 언어에 비해 motivation은 상당히 설득력 있는 것으로, 가령 우리는 sheaf cohomology를 정의할 때만 해도 injective resolution을 생각해야 했고, 위에서 Serre duality를 임의의 coherent sheaf로 일반화할 때도 locally free resolution을 생각해야 했으므로 derived category가 모든 일이 실제로 일어나는 곳임을 안다. 특히 핵심적인 내용은 Serre duality에서 perfect pairing이, 사실은 구체적인 isomorphism
 
 $$H^n(X, \omega_X) \cong \mathbb{K}$$
 
@@ -154,7 +154,7 @@ Proper morphism $f \colon X \rightarrow Y$와 coherent sheaf $\mathcal{F}$ on $X
 
 $$R f_\ast R\mathcal{H}om_{\mathcal{O}_X}(\mathcal{F}, f^! \mathcal{G}) \cong R\mathcal{H}om_{\mathcal{O}_Y}(R f_\ast \mathcal{F}, \mathcal{G})$$
 
-이 성립한다. 여기서 $R\mathcal{H}om$은 derived Hom이며 ([\[호몰로지 대수학\] §유도카테고리, ⁋명제 10](/ko/math/homological_algebra/derived_categories#prop10)), $\mathcal{G}$는 $Y$ 위의 coherent sheaf의 bounded complex이다. 
+이 성립한다. 여기서 $R\mathcal{H}om$은 derived Hom이며 ([\[호몰로지 대수학\] §유도카테고리, ⁋명제 10](/ko/math/homological_algebra/derived_categories#prop10){: data-relation="weak" }), $\mathcal{G}$는 $Y$ 위의 coherent sheaf의 bounded complex이다. 
 :::
 
 직관적으로 이 정리는 'pushforward 후 Hom'과 'Hom 후 pushforward'가 같다는 것을 의미한다. 즉, $\mathcal{F}$와 $f^! \mathcal{G}$ 사이의 Hom을 $X$에서 계산한 후 $Y$로 내려보내는 것과, $\mathcal{F}$를 먼저 $Y$로 내려보낸 후 $\mathcal{G}$와의 Hom을 계산하는 것이 같다는 뜻이다. 
