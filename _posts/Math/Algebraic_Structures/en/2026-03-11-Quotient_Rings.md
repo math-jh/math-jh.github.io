@@ -15,7 +15,7 @@ translation_source: kimi-cli
 last_polished_at: 2026-09-08T15:15:05+00:00
 translation_polish_source: antigravity-gemini-3.8-flash-high
 ---
-In this post we define the notion of a quotient ring. Recalling when we defined [§Quotient Groups](/en/math/algebraic_structures/quotient_groups), for any group $G$ and any subgroup $H$, $G/H$ is always defined as a set, but it did not always have a group structure, and for this, the condition that $H$ is a normal subgroup was required. Likewise, for a ring $A$, the manner in which a quotient can be defined is restricted.
+In this post we define the notion of a quotient ring. Recalling when we defined [§Quotient Groups](/en/math/algebraic_structures/quotient_groups){: data-relation="required" }, for any group $G$ and any subgroup $H$, $G/H$ is always defined as a set, but it did not always have a group structure, and for this, the condition that $H$ is a normal subgroup was required. Likewise, for a ring $A$, the manner in which a quotient can be defined is restricted.
 
 ## Definition of Quotient Rings
 
@@ -42,12 +42,12 @@ For a ring $A$ and a two-sided ideal $\mathfrak{a}$, the following hold.
 2. For a ring homomorphism $\phi:A \rightarrow B$, if $\phi(\mathfrak{a})=\{0\}$, then from $A/\mathfrak{a}$ to $B$ there exists a unique ring homomorphism $\bar{\phi}$ such that $\phi=\bar{\phi}\circ\pi$ holds.
 :::
 ::: Proof
-1. That $\pi$ defines an abelian group homomorphism with respect to addition is a result of [§Quotient Groups](/en/math/algebraic_structures/quotient_groups). That $\pi$ preserves multiplication is obtained from the following calculation
+1. That $\pi$ defines an abelian group homomorphism with respect to addition is a result of [§Quotient Groups](/en/math/algebraic_structures/quotient_groups){: data-relation="required" }. That $\pi$ preserves multiplication is obtained from the following calculation
   
     $$\pi(\alpha)\pi(\alpha')=(\alpha+\mathfrak{a})(\alpha'+\mathfrak{a})=\alpha\alpha'+\mathfrak{a}=\pi(\alpha\alpha')$$
     
     and here one can verify that $1+\mathfrak{a}$ becomes the $1$ of $A/\mathfrak{a}$.
-2. First regard $\phi$ as an abelian group homomorphism. Then by the given condition, the subgroup of $A$, $\mathfrak{a}$, is contained in $\ker \phi$, so from $A/\mathfrak{a}$ to $B$ there exists a unique *group* homomorphism $\bar{\phi}:A/\mathfrak{a}\rightarrow B$ such that $\phi=\bar{\phi}\circ\pi$ holds. ([§Group Isomorphisms, ⁋Proposition 3](/en/math/algebraic_structures/isomorphism_theorems#prop3))  
+2. First regard $\phi$ as an abelian group homomorphism. Then by the given condition, the subgroup of $A$, $\mathfrak{a}$, is contained in $\ker \phi$, so from $A/\mathfrak{a}$ to $B$ there exists a unique *group* homomorphism $\bar{\phi}:A/\mathfrak{a}\rightarrow B$ such that $\phi=\bar{\phi}\circ\pi$ holds. ([§Group Isomorphisms, ⁋Proposition 3](/en/math/algebraic_structures/isomorphism_theorems#prop3){: data-relation="required" })  
     Now arbitrarily choose two elements of $A/\mathfrak{a}$, $\alpha+\mathfrak{a}, \beta+\mathfrak{a}$. Then since
 
     $$(\alpha+\mathfrak{a})(\beta+\mathfrak{a})=\alpha\beta+\mathfrak{a}=\pi(\alpha\beta)$$
@@ -59,7 +59,7 @@ For a ring $A$ and a two-sided ideal $\mathfrak{a}$, the following hold.
     $\bar{\phi}$ preserves multiplication. Similarly, from $\bar{\phi}(1+\mathfrak{a})=\bar{\phi}(\pi(1))=\phi(1)=1$, $\bar{\phi}$ sends $1$ to $1$. 
 :::
 
-The following theorem can be regarded as the ring homomorphism version of [§Group Isomorphisms](/en/math/algebraic_structures/isomorphism_theorems).
+The following theorem can be regarded as the ring homomorphism version of [§Group Isomorphisms](/en/math/algebraic_structures/isomorphism_theorems){: data-relation="required" }.
 
 ::: Theorem 3
 For a ring homomorphism $\phi:A \rightarrow B$, its kernel $\ker \phi$, and its image $\im\phi$, the following hold.
@@ -70,7 +70,7 @@ For a ring homomorphism $\phi:A \rightarrow B$, its kernel $\ker \phi$, and its 
 4. For a two-sided ideal of $A$, $\mathfrak{a}$, there exists an inclusion-preserving bijection between the set of two-sided ideals of $A/\mathfrak{a}$ and the set of two-sided ideals containing $\mathfrak{a}$ in $A$.
 :::
 ::: Proof
-Parts 1 and 3 proceed almost identically to what was treated in [§Group Isomorphisms](/en/math/algebraic_structures/isomorphism_theorems); one only needs to verify that the group homomorphism obtained there is in fact also a ring homomorphism in the same manner as part 2 of [Proposition 2](#prop2).
+Parts 1 and 3 proceed almost identically to what was treated in [§Group Isomorphisms](/en/math/algebraic_structures/isomorphism_theorems){: data-relation="required" }; one only needs to verify that the group homomorphism obtained there is in fact also a ring homomorphism in the same manner as part 2 of [Proposition 2](#prop2){: data-relation="required" }.
 
 In the case of 2, that $S+\ker \phi$ is a subgroup under addition is the same as in the case of groups. For any $\alpha,\alpha'\in S$ and $x,x'\in\ker \phi$, in
 
@@ -82,7 +82,7 @@ $$S\hookrightarrow S+\ker \phi\longrightarrow (S+\ker \phi)/\ker \phi$$
 
 this is surjective and its kernel is $S\cap\ker \phi$, so applying 1 yields the desired isomorphism.
 
-That the two correspondences $\bar{\mathfrak{b}}\mapsto\pi^{-1}(\bar{\mathfrak{b}})$ and $\mathfrak{b}\mapsto\pi(\mathfrak{b})$ in 4 are inverses of each other and preserve inclusion follows from [§Group Isomorphisms, ⁋Theorem 7](/en/math/algebraic_structures/isomorphism_theorems#thm7). What remains is that this correspondence sends two-sided ideals to two-sided ideals. First, for any $\alpha\in A$ and $x\in\pi^{-1}(\bar{\mathfrak{b}})$,
+That the two correspondences $\bar{\mathfrak{b}}\mapsto\pi^{-1}(\bar{\mathfrak{b}})$ and $\mathfrak{b}\mapsto\pi(\mathfrak{b})$ in 4 are inverses of each other and preserve inclusion follows from [§Group Isomorphisms, ⁋Theorem 7](/en/math/algebraic_structures/isomorphism_theorems#thm7){: data-relation="required" }. What remains is that this correspondence sends two-sided ideals to two-sided ideals. First, for any $\alpha\in A$ and $x\in\pi^{-1}(\bar{\mathfrak{b}})$,
 
 $$\pi(\alpha x)=\pi(\alpha)\pi(x)\in\bar{\mathfrak{b}}$$
 
