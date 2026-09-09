@@ -16,7 +16,7 @@ last_polished_at: 2026-08-19T06:15:04+00:00
 ---
 There are two main reasons we defined the limit and continuity of functions before defining the limit of sequences and infinite series. First, the method of exhaustion used in definite integration requires infinite series in any case, and we did not want the flow from differentiation to integration to be interrupted by the limit of sequences. Second, we wished to define power series first in this post.
 
-Power series provide another way of writing functions, and their introduction makes it easier to handle functions that could not be treated in high school. For example, when defining the exponential function $2^x$ in high school, we did not rigorously define its values at irrational numbers; doing so requires the completeness of the real numbers used in [§Continuous Functions, ⁋Theorem 5](/en/math/calculus/continuity#thm5) or [§Limits of Sequences, ⁋Proposition 7](/en/math/calculus/sequences#prop7). Moreover, even after defining the exponential function, when defining the natural constant in [§Limits of Sequences, ⁋Example 8](/en/math/calculus/sequences#ex8) we had to resort to a somewhat ambiguous description: *the exponential function that remains itself upon differentiation*. By contrast, if we define the exponential function $e^x$ by a power series, none of this complexity arises, and we can neatly express even functions that are not elementary, such as the integral of $e^{-x^2}$.
+Power series provide another way of writing functions, and their introduction makes it easier to handle functions that could not be treated in high school. For example, when defining the exponential function $2^x$ in high school, we did not rigorously define its values at irrational numbers; doing so requires the completeness of the real numbers used in [§Continuous Functions, ⁋Theorem 5](/en/math/calculus/continuity#thm5){: data-relation="weak" } or [§Limits of Sequences, ⁋Proposition 7](/en/math/calculus/sequences#prop7){: data-relation="weak" }. Moreover, even after defining the exponential function, when defining the natural constant in [§Limits of Sequences, ⁋Example 8](/en/math/calculus/sequences#ex8){: data-relation="weak" } we had to resort to a somewhat ambiguous description: *the exponential function that remains itself upon differentiation*. By contrast, if we define the exponential function $e^x$ by a power series, none of this complexity arises, and we can neatly express even functions that are not elementary, such as the integral of $e^{-x^2}$.
 
 ## Power Series and Radius of Convergence
 
@@ -34,7 +34,7 @@ From the definition, at $x = 0$ only the first term $c_0$ remains, so the domain
 
 $$\lvert c_n x^n\rvert = \lvert c_n x_0^n\rvert \cdot r^n \leq M r^n$$
 
-and the right-hand side is a convergent geometric series with common ratio $r < 1$, so we may apply [§Infinite Series, ⁋Theorem 6](/en/math/calculus/series#thm6). Now let $R$ be the supremum of the absolute values of convergent $x$ (if there are infinitely many such $x$, set $R=\infty$). If $\lvert x\rvert<R$, then there exists a convergent $x_0$ with $\lvert x\rvert<\lvert x_0\rvert$, so the fact shown above gives absolute convergence; if $\lvert x\rvert>R$, then by the definition of supremum the series diverges. Thus we obtain the following theorem.
+and the right-hand side is a convergent geometric series with common ratio $r < 1$, so we may apply [§Infinite Series, ⁋Theorem 6](/en/math/calculus/series#thm6){: data-relation="required" }. Now let $R$ be the supremum of the absolute values of convergent $x$ (if there are infinitely many such $x$, set $R=\infty$). If $\lvert x\rvert<R$, then there exists a convergent $x_0$ with $\lvert x\rvert<\lvert x_0\rvert$, so the fact shown above gives absolute convergence; if $\lvert x\rvert>R$, then by the definition of supremum the series diverges. Thus we obtain the following theorem.
 
 ::: Theorem 2 (Radius of convergence)
 For each power series $\sum c_n x^n$, there exists a *radius of convergence* $R$ with $0 \leq R \leq \infty$ such that the series converges absolutely when $\lvert x\rvert < R$ and diverges when $\lvert x\rvert > R$.
@@ -42,7 +42,7 @@ For each power series $\sum c_n x^n$, there exists a *radius of convergence* $R$
 
 When $R=0$, this is interpreted as the given power series converging only at $x=0$ (hence not of interest to us); at the opposite extreme $R=\infty$, the given power series converges for all real numbers. Apart from these two cases, the radius of convergence does not determine convergence at $\lvert x\rvert=R$, and in fact all combinations are possible depending on the power series.
 
-Because of its form, the radius of convergence of a power series is usually computed by the ratio test or [§Infinite Series, ⁋Proposition 8](/en/math/calculus/series#prop8). For example, when $c_n \neq 0$ for sufficiently large $n$, applying the ratio test and assuming $\left\lvert c_{n+1}/c_n\right\rvert \rightarrow L$, the ratio of adjacent terms approaches $L\lvert x\rvert$, so we may set $R = 1/L$; more generally,
+Because of its form, the radius of convergence of a power series is usually computed by the ratio test or [§Infinite Series, ⁋Proposition 8](/en/math/calculus/series#prop8){: data-relation="weak" }. For example, when $c_n \neq 0$ for sufficiently large $n$, applying the ratio test and assuming $\left\lvert c_{n+1}/c_n\right\rvert \rightarrow L$, the ratio of adjacent terms approaches $L\lvert x\rvert$, so we may set $R = 1/L$; more generally,
 
 $$\frac{1}{R} = \limsup_{n\rightarrow\infty} \lvert c_n\rvert^{1/n}$$
 
@@ -57,9 +57,9 @@ We write the power series converging for all real numbers seen above as
 
 $$e^x = \sum_{n=0}^\infty \frac{x^n}{n!}$$
 
-In particular, substituting $x = 1$ gives $e = \sum 1/n!$, and this number coincides with the natural constant defined as the limit $\lim(1 + 1/n)^n$ in [§Limits of Sequences, ⁋Example 8](/en/math/calculus/sequences#ex8).
+In particular, substituting $x = 1$ gives $e = \sum 1/n!$, and this number coincides with the natural constant defined as the limit $\lim(1 + 1/n)^n$ in [§Limits of Sequences, ⁋Example 8](/en/math/calculus/sequences#ex8){: data-relation="required" }.
 
-The proof is as follows. Let $L = \lim(1+1/n)^n$ be the limit value and $s_m = \sum 1/k!$ be the partial sum of the series. In [§Limits of Sequences, ⁋Example 8](/en/math/calculus/sequences#ex8) above, we already showed by the binomial theorem that
+The proof is as follows. Let $L = \lim(1+1/n)^n$ be the limit value and $s_m = \sum 1/k!$ be the partial sum of the series. In [§Limits of Sequences, ⁋Example 8](/en/math/calculus/sequences#ex8){: data-relation="required" } above, we already showed by the binomial theorem that
 
 $$\left(1 + \frac1n\right)^n = \sum_{k=0}^n \binom{n}{k}\frac{1}{n^k} = \sum_{k=0}^n \frac{1}{k!}\prod_{j=0}^{k-1}\left(1 - \frac{j}{n}\right)$$
 
@@ -69,7 +69,7 @@ First, since each factor $1 - j/n$ in the product is at most $1$, the above sum 
 
 $$\left(1 + \frac1n\right)^n \geq \sum_{k=0}^m \frac{1}{k!}\prod_{j=0}^{k-1}\left(1 - \frac{j}{n}\right)$$
 
-The left-hand side is at most $L$, so the right-hand side is also at most $L$, and sending $n \rightarrow \infty$ with $m$ fixed, the right-hand side is a finite sum and each factor satisfies $1 - j/n \rightarrow 1$, so by [§Limits of Sequences, ⁋Proposition 2](/en/math/calculus/sequences#prop2) it converges to $s_m$. If every term of a convergent sequence is at most $L$, then its limit is also at most $L$, so $s_m \leq L$, and sending $m \rightarrow \infty$ gives $s \leq L$. Combining the two inequalities yields $L = s$, that is, the $e$ defined in the two posts is the same number.
+The left-hand side is at most $L$, so the right-hand side is also at most $L$, and sending $n \rightarrow \infty$ with $m$ fixed, the right-hand side is a finite sum and each factor satisfies $1 - j/n \rightarrow 1$, so by [§Limits of Sequences, ⁋Proposition 2](/en/math/calculus/sequences#prop2){: data-relation="required" } it converges to $s_m$. If every term of a convergent sequence is at most $L$, then its limit is also at most $L$, so $s_m \leq L$, and sending $m \rightarrow \infty$ gives $s \leq L$. Combining the two inequalities yields $L = s$, that is, the $e$ defined in the two posts is the same number.
 :::
 
 ## Operations on Power Series
@@ -82,7 +82,7 @@ $$f(x) + g(x) = \sum_{n=0}^\infty (a_n + b_n)x^n, \qquad f(x)g(x) = \sum_{n=0}^\
 The coefficients of the product are the *Cauchy product* of the two coefficient sequences.
 :::
 
-The Cauchy product is the extension to infinite degree of multiplying two polynomials and collecting terms of the same degree. For example, multiplying $1/(1-x) = \sum_n x^n$ by itself, the coefficient of degree $n$ becomes $\sum_{k=0}^n 1\cdot 1 = n+1$, yielding $1/(1-x)^2 = \sum_n (n+1)x^n$. Applying this computation to $\sum_n x^n/n!$ and $\sum_n y^n/n!$, the $n$th term becomes by the binomial theorem $\sum_{k=0}^n x^ky^{n-k}/(k!(n-k)!) = (x+y)^n/n!$, yielding the exponential law $e^{x+y} = e^xe^y$, which justifies the notation writing the series as $e^x$ in [Example 3](#ex3).
+The Cauchy product is the extension to infinite degree of multiplying two polynomials and collecting terms of the same degree. For example, multiplying $1/(1-x) = \sum_n x^n$ by itself, the coefficient of degree $n$ becomes $\sum_{k=0}^n 1\cdot 1 = n+1$, yielding $1/(1-x)^2 = \sum_n (n+1)x^n$. Applying this computation to $\sum_n x^n/n!$ and $\sum_n y^n/n!$, the $n$th term becomes by the binomial theorem $\sum_{k=0}^n x^ky^{n-k}/(k!(n-k)!) = (x+y)^n/n!$, yielding the exponential law $e^{x+y} = e^xe^y$, which justifies the notation writing the series as $e^x$ in [Example 3](#ex3){: data-relation="weak" }.
 
 ## Analytic Functions
 
