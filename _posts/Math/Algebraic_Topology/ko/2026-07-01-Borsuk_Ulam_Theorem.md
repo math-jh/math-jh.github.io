@@ -18,7 +18,7 @@ published: false
 
 ## Antipode를 보존하는 사상
 
-구 $S^n\subseteq\mathbb{R}^{n+1}$ 위에는 각 점 $x$를 그 대척점 $-x$로 보내는 대합 $x\mapsto-x$이 놓여 있다. 이 대합과 잘 맞물리는 연속함수, 곧 $-x$를 언제나 image의 대척점으로 보내는 함수는 대합의 대칭성을 그대로 물려받아 대단히 강하게 제약된다. Borsuk–Ulam 정리는 이러한 제약의 원형으로서, 겉보기에 순전히 위상적인 진술이면서도 측도를 동시에 이등분하는 hyperplane의 존재나 구의 covering 구조와 같은 구체적인 귀결을 낳는다. 앞선 글에서 우리는 구면 자기사상에 정수 하나를 붙이는 degree 이론을 마련하였으므로 ([§사상의 차수와 Brouwer·Lefschetz 고정점 정리, ⁋정의 2](/ko/math/algebraic_topology/degree_and_fixed_point_theorems#def2)), 이제 antipode를 보존하는 morphism의 degree가 강한 산술적 제약을 받는다는 사실을 지렛대로 삼아 이 정리와 그 여러 동치형을 증명한다.
+구 $S^n\subseteq\mathbb{R}^{n+1}$ 위에는 각 점 $x$를 그 대척점 $-x$로 보내는 대합 $x\mapsto-x$이 놓여 있다. 이 대합과 잘 맞물리는 연속함수, 곧 $-x$를 언제나 image의 대척점으로 보내는 함수는 대합의 대칭성을 그대로 물려받아 대단히 강하게 제약된다. Borsuk–Ulam 정리는 이러한 제약의 원형으로서, 겉보기에 순전히 위상적인 진술이면서도 측도를 동시에 이등분하는 hyperplane의 존재나 구의 covering 구조와 같은 구체적인 귀결을 낳는다. 앞선 글에서 우리는 구면 자기사상에 정수 하나를 붙이는 degree 이론을 마련하였으므로 ([§사상의 차수와 Brouwer·Lefschetz 고정점 정리, ⁋정의 2](/ko/math/algebraic_topology/degree_and_fixed_point_theorems#def2){: data-relation="required" }), 이제 antipode를 보존하는 morphism의 degree가 강한 산술적 제약을 받는다는 사실을 지렛대로 삼아 이 정리와 그 여러 동치형을 증명한다.
 
 ::: 정의 1
 연속함수 $f:S^n\rightarrow\mathbb{R}^m$ 또는 $f:S^n\rightarrow S^m$이 모든 $x\in S^n$에 대하여
@@ -42,10 +42,10 @@ $n\geq 1$에 대하여 다음 세 명제가 성립하며, 서로 밀접히 관�
 3. 임의의 antipodal 자기사상 $f:S^n\rightarrow S^n$의 degree $\deg f$는 홀수이며, 특히 $0$이 아니다.
 :::
 
-우리는 이 절의 나머지에서 이 정리를 증명한다. 논증의 뼈대는 다음과 같다. 먼저 [명제 3](#prop3)에서 (1)과 (2)가 서로 동치임을 순수하게 기초적인 방법으로 보인다. 이로써 정리는 antipodal map $S^n\rightarrow S^{n-1}$이 없다는 진술 (2)로 환원된다. 이어서 세 진술 가운데 가장 강한 (3), 곧 antipodal 자기사상의 degree가 홀수라는 사실을 확립하고 ([정리 5](#thm5)), 이로부터 (2)가 곧바로 따라 나옴을 [따름정리 6](#cor6)에서 확인한다. 결국 (3)이 (2)를, 따라서 (1)을 함의하며 정리 전체가 성립한다.
+우리는 이 절의 나머지에서 이 정리를 증명한다. 논증의 뼈대는 다음과 같다. 먼저 [명제 3](#prop3){: data-relation="forward" }에서 (1)과 (2)가 서로 동치임을 순수하게 기초적인 방법으로 보인다. 이로써 정리는 antipodal map $S^n\rightarrow S^{n-1}$이 없다는 진술 (2)로 환원된다. 이어서 세 진술 가운데 가장 강한 (3), 곧 antipodal 자기사상의 degree가 홀수라는 사실을 확립하고 ([정리 5](#thm5){: data-relation="forward" }), 이로부터 (2)가 곧바로 따라 나옴을 [따름정리 6](#cor6){: data-relation="forward" }에서 확인한다. 결국 (3)이 (2)를, 따라서 (1)을 함의하며 정리 전체가 성립한다.
 
 ::: 명제 3
-$n\geq 1$에 대하여, [정리 2](#thm2)의 진술 (1)과 (2)는 서로 동치이다.
+$n\geq 1$에 대하여, [정리 2](#thm2){: data-relation="required" }의 진술 (1)과 (2)는 서로 동치이다.
 :::
 ::: 증명
 먼저 (1)이 성립한다고 가정하고 (2)를 보인다. Antipodal map $g:S^n\rightarrow S^{n-1}$이 존재한다고 하자. $S^{n-1}\subseteq\mathbb{R}^n$이므로 $g$를 연속함수 $g:S^n\rightarrow\mathbb{R}^n$으로 볼 수 있고, (1)에 의하여 $g(x)=g(-x)$인 점 $x$가 존재한다. 그런데 $g$가 antipodal이므로 $g(-x)=-g(x)$이고, 따라서 $g(x)=-g(x)$, 곧 $g(x)=0$이다. 이는 $g(x)\in S^{n-1}$, 곧 $\lvert g(x)\rvert=1$이라는 사실에 모순이다. 그러므로 그러한 $g$는 존재하지 않으며 (2)가 성립한다.
@@ -73,11 +73,11 @@ $$g(-x)=\frac{f(-x)-f(x)}{\lvert f(-x)-f(x)\rvert}=-g(x)$$
 ::: 증명
 $S^1=\{e^{2\pi i\theta}\mid\theta\in\mathbb{R}\}$으로 보고, covering map $p:\mathbb{R}\rightarrow S^1$, $p(\theta)=e^{2\pi i\theta}$을 생각하자. 이때 대척점 $-e^{2\pi i\theta}=e^{2\pi i(\theta+1/2)}$은 $\theta\mapsto\theta+1/2$에 대응한다.
 
-주어진 연속함수 $f:S^1\rightarrow S^1$에 대하여 합성 $\theta\mapsto f(e^{2\pi i\theta})$은 $\mathbb{R}$에서 $S^1$로 가는 연속함수이다. 정의역 $\mathbb{R}$의 각 구간 위에서 이 morphism을 경로로 보고 [§피복공간, ⁋보조정리 6](/ko/math/algebraic_topology/covering_spaces#lem6)의 유일한 경로 들어올림을 이어붙이면, $F(0)$의 값을 한 번 고정할 때
+주어진 연속함수 $f:S^1\rightarrow S^1$에 대하여 합성 $\theta\mapsto f(e^{2\pi i\theta})$은 $\mathbb{R}$에서 $S^1$로 가는 연속함수이다. 정의역 $\mathbb{R}$의 각 구간 위에서 이 morphism을 경로로 보고 [§피복공간, ⁋보조정리 6](/ko/math/algebraic_topology/covering_spaces#lem6){: data-relation="required" }의 유일한 경로 들어올림을 이어붙이면, $F(0)$의 값을 한 번 고정할 때
 
 $$p(F(\theta))=f(e^{2\pi i\theta})\qquad(\theta\in\mathbb{R})$$
 
-를 만족하는 연속함수 $F:\mathbb{R}\rightarrow\mathbb{R}$이 유일하게 결정된다. $f(e^{2\pi i(\theta+1)})=f(e^{2\pi i\theta})$이므로 $p(F(\theta+1))=p(F(\theta))$, 곧 $F(\theta+1)-F(\theta)$는 정수이고 연속함수이므로 상수이다. 이 정수 $\deg f=F(1)-F(0)$은 [§사상의 차수와 Brouwer·Lefschetz 고정점 정리, ⁋정의 2](/ko/math/algebraic_topology/degree_and_fixed_point_theorems#def2)에서 정의한 $S^1$ 자기사상의 degree와 일치하는 회전수이다.
+를 만족하는 연속함수 $F:\mathbb{R}\rightarrow\mathbb{R}$이 유일하게 결정된다. $f(e^{2\pi i(\theta+1)})=f(e^{2\pi i\theta})$이므로 $p(F(\theta+1))=p(F(\theta))$, 곧 $F(\theta+1)-F(\theta)$는 정수이고 연속함수이므로 상수이다. 이 정수 $\deg f=F(1)-F(0)$은 [§사상의 차수와 Brouwer·Lefschetz 고정점 정리, ⁋정의 2](/ko/math/algebraic_topology/degree_and_fixed_point_theorems#def2){: data-relation="required" }에서 정의한 $S^1$ 자기사상의 degree와 일치하는 회전수이다.
 
 이제 $f$가 antipodal이라 하자. 그럼 $f(e^{2\pi i(\theta+1/2)})=-f(e^{2\pi i\theta})=e^{\pi i}f(e^{2\pi i\theta})$이므로
 
@@ -103,11 +103,11 @@ F(\theta+1)&=F\bigl((\theta+\frac12)+\frac12\bigr)=F(\theta+\frac12)+\frac12+q\\
 $n\geq 1$에 대하여, 임의의 antipodal 연속 자기사상 $f:S^n\rightarrow S^n$의 degree $\deg f$는 홀수이다.
 :::
 ::: 증명
-$n=1$인 경우와 $n\geq 2$인 경우를 나누어 다룬다. $n=1$은 [보조정리 4](#lem4)에서 이미 확립하였다. 이제 $n\geq 2$라 하자. 이 경우의 증명은 antipode에 의한 quotient space, 곧 real projective space $\RP^n=S^n/(x\sim-x)$을 매개로 진행되며, 여기에서는 그 골격만 제시하고 세부는 [Hat]의 §2.B와 [Mat]에 넘긴다.
+$n=1$인 경우와 $n\geq 2$인 경우를 나누어 다룬다. $n=1$은 [보조정리 4](#lem4){: data-relation="required" }에서 이미 확립하였다. 이제 $n\geq 2$라 하자. 이 경우의 증명은 antipode에 의한 quotient space, 곧 real projective space $\RP^n=S^n/(x\sim-x)$을 매개로 진행되며, 여기에서는 그 골격만 제시하고 세부는 [Hat]의 §2.B와 [Mat]에 넘긴다.
 
 첫째, $f$가 antipodal이면 $f(-x)=-f(x)$이므로 이중피복 $p:S^n\rightarrow\RP^n$의 quotient 위에 유도된 연속함수 $\bar f:\RP^n\rightarrow\RP^n$이 $p\circ f=\bar f\circ p$를 만족하며 잘 정의된다.
 
-둘째, $n\geq 2$일 때 $\pi_1(\RP^n)\cong\mathbb{Z}/2$이다. 이 fundamental group의 generator는 $S^n$에서 한 점 $x$와 그 대척점 $-x$를 잇는 경로가 $p$ 아래에서 이루는 loop로 실현된다. $f$는 antipodal이므로 이 경로를 $f(x)$와 $-f(x)$를 잇는 경로로 보내고, 그 image는 다시 $\RP^n$의 자명하지 않은 loop로 projection된다. 따라서 $\bar f$가 유도하는 $\pi_1(\RP^n)\rightarrow\pi_1(\RP^n)$은 항등, 곧 $\mathbb{Z}/2$ 위의 유일한 automorphism이다. ([§피복공간, ⁋보조정리 6](/ko/math/algebraic_topology/covering_spaces#lem6)의 lifting을 사용한다.)
+둘째, $n\geq 2$일 때 $\pi_1(\RP^n)\cong\mathbb{Z}/2$이다. 이 fundamental group의 generator는 $S^n$에서 한 점 $x$와 그 대척점 $-x$를 잇는 경로가 $p$ 아래에서 이루는 loop로 실현된다. $f$는 antipodal이므로 이 경로를 $f(x)$와 $-f(x)$를 잇는 경로로 보내고, 그 image는 다시 $\RP^n$의 자명하지 않은 loop로 projection된다. 따라서 $\bar f$가 유도하는 $\pi_1(\RP^n)\rightarrow\pi_1(\RP^n)$은 항등, 곧 $\mathbb{Z}/2$ 위의 유일한 automorphism이다. ([§피복공간, ⁋보조정리 6](/ko/math/algebraic_topology/covering_spaces#lem6){: data-relation="required" }의 lifting을 사용한다.)
 
 셋째, 계수를 $\mathbb{Z}/2$로 잡은 homology에서 이 정보를 최고차까지 밀어올린다. 여기에서 사용하는 것은 이중피복 $p:S^n\rightarrow\RP^n$에 결부된 Gysin(전달) exact sequence
 
@@ -116,21 +116,21 @@ $$\cdots\rightarrow H_i(S^n;\mathbb{Z}/2)\xrightarrow{p_\ast}H_i(\RP^n;\mathbb{Z
 이며, $w\in H^1(\RP^n;\mathbb{Z}/2)$은 이 이중피복을 분류하는 유일한 비자명 원소이다. $H_i(S^n;\mathbb{Z}/2)$은 $i=0,n$에서만 $\mathbb{Z}/2$이고 그 사이에서는 $0$이므로, $2\leq i\leq n-1$인 중간 degree에서 exact sequence는 $\cap w:H_i(\RP^n;\mathbb{Z}/2)\xrightarrow{\sim}H_{i-1}(\RP^n;\mathbb{Z}/2)$가 isomorphism임을 준다. 최고차 $i=n$에서도 마찬가지인데, $H_{n+1}(\RP^n;\mathbb{Z}/2)=0$이므로 exactness가 전달사상 $H_n(\RP^n;\mathbb{Z}/2)\rightarrow H_n(S^n;\mathbb{Z}/2)$의 단사성을, 따라서 두 group이 모두 $\mathbb{Z}/2$이라는 사실과 합쳐 그 전사성을 주고, 다시 exactness가 $p_\ast:H_n(S^n;\mathbb{Z}/2)\rightarrow H_n(\RP^n;\mathbb{Z}/2)$이 $0$임을 주어 $\cap w$가 단사이며, $H_{n-1}(S^n;\mathbb{Z}/2)=0$이라 전사이기 때문이다. $\bar f$는 $p\circ f=\bar f\circ p$를 만족하므로 이 exact sequence의 자연스러운 사다리를 유도한다. 둘째 단계에서 $\bar f_\ast$가 $H_1(\RP^n;\mathbb{Z}/2)\cong\mathbb{Z}/2$ 위의 항등임을 이미 알고 있고, $H^1(\RP^n;\mathbb{Z}/2)\cong\Hom(H_1(\RP^n;\mathbb{Z}/2),\mathbb{Z}/2)$ 아래에서 $\bar f^\ast$는 그 dual이므로 $\bar f^\ast w=w$이고, 따라서 그 사다리는 $\cap w$와 가환한다. 그럼 이 $\cap w$-isomorphism들을 따라 degree를 하나씩 올리면 $\bar f_\ast$가 모든 $0\leq i\leq n$에서 $H_i(\RP^n;\mathbb{Z}/2)$ 위의 isomorphism임이 따라 나온다. 끝으로 exact sequence의 전달사상이 주는 자연스러운 isomorphism $H_n(\RP^n;\mathbb{Z}/2)\cong H_n(S^n;\mathbb{Z}/2)$과 사다리의 가환성을 결합하면, 최고차에서 $\bar f_\ast$가 isomorphism이라는 사실은 $f$가 $H_n(S^n;\mathbb{Z}/2)\cong\mathbb{Z}/2$ 위에서 항등으로 작용함, 곧 $\deg f\equiv 1\pmod 2$임과 동치이다. 그러므로 $\deg f$는 홀수이다.
 :::
 
-정리 5는 antipodal 자기사상이 degree $0$을 가질 수 없음을 함축하므로, 그러한 morphism은 결코 상수사상과 homotopic하지 않다. 이 결론은 앞선 글에서 얻은 antipodal morphism $a(x)=-x$의 degree 계산과도 정확히 부합한다. [§사상의 차수와 Brouwer·Lefschetz 고정점 정리, ⁋따름정리 5](/ko/math/algebraic_topology/degree_and_fixed_point_theorems#cor5)에 의하여 $\deg a=(-1)^{n+1}$이므로 $n$의 홀짝과 무관하게 $\deg a=\pm 1$은 늘 홀수이며, 이는 antipodal morphism이 antipodal map의 원형이라는 사실과 잘 어울린다. 이제 이 degree의 홀짝성으로부터 antipodal map $S^n\rightarrow S^{n-1}$의 비존재를 이끌어낸다.
+정리 5는 antipodal 자기사상이 degree $0$을 가질 수 없음을 함축하므로, 그러한 morphism은 결코 상수사상과 homotopic하지 않다. 이 결론은 앞선 글에서 얻은 antipodal morphism $a(x)=-x$의 degree 계산과도 정확히 부합한다. [§사상의 차수와 Brouwer·Lefschetz 고정점 정리, ⁋따름정리 5](/ko/math/algebraic_topology/degree_and_fixed_point_theorems#cor5){: data-relation="weak" }에 의하여 $\deg a=(-1)^{n+1}$이므로 $n$의 홀짝과 무관하게 $\deg a=\pm 1$은 늘 홀수이며, 이는 antipodal morphism이 antipodal map의 원형이라는 사실과 잘 어울린다. 이제 이 degree의 홀짝성으로부터 antipodal map $S^n\rightarrow S^{n-1}$의 비존재를 이끌어낸다.
 
 ::: 따름정리 6
-$n\geq 1$에 대하여, antipodal map $g:S^n\rightarrow S^{n-1}$은 존재하지 않는다. 따라서 [정리 2](#thm2)의 세 진술이 모두 성립한다.
+$n\geq 1$에 대하여, antipodal map $g:S^n\rightarrow S^{n-1}$은 존재하지 않는다. 따라서 [정리 2](#thm2){: data-relation="required" }의 세 진술이 모두 성립한다.
 :::
 ::: 증명
 Antipodal map $g:S^n\rightarrow S^{n-1}$이 존재한다고 가정하자. $S^{n-1}$을 $S^n$의 적도, 곧 마지막 좌표가 $0$인 점들의 집합으로 보는 포함사상 $\iota:S^{n-1}\hookrightarrow S^n$을 생각하면, $\iota(-y)=-\iota(y)$이므로 합성 $\iota\circ g:S^n\rightarrow S^n$은 다시 antipodal 자기사상이다. 그런데 이 합성의 image는 적도에 놓여 있어 북극과 남극을 포함하지 않으므로, $\iota\circ g$는 전사가 아니다.
 
-전사가 아닌 자기사상은 어떤 점 $q$를 image에서 빠뜨리므로 그 image가 $S^n\setminus\{q\}$에 담긴다. $S^n\setminus\{q\}$은 stereographic projection에 의해 $\mathbb{R}^n$과 homeomorphic한 contractible 공간이므로, $\iota\circ g$는 이 contractible 공간을 거쳐 인수분해되어 상수사상과 homotopic하다. 따라서 그 degree는 [§사상의 차수와 Brouwer·Lefschetz 고정점 정리, ⁋명제 3](/ko/math/algebraic_topology/degree_and_fixed_point_theorems#prop3)의 homotopy invariance와 상수사상의 degree가 $0$이라는 사실에 의하여 $\deg(\iota\circ g)=0$이다. 그러나 $\iota\circ g$는 antipodal이므로 [정리 5](#thm5)에 의하여 그 degree가 홀수여야 하고, 이는 $0$과 모순이다. 그러므로 그러한 $g$는 존재하지 않는다.
+전사가 아닌 자기사상은 어떤 점 $q$를 image에서 빠뜨리므로 그 image가 $S^n\setminus\{q\}$에 담긴다. $S^n\setminus\{q\}$은 stereographic projection에 의해 $\mathbb{R}^n$과 homeomorphic한 contractible 공간이므로, $\iota\circ g$는 이 contractible 공간을 거쳐 인수분해되어 상수사상과 homotopic하다. 따라서 그 degree는 [§사상의 차수와 Brouwer·Lefschetz 고정점 정리, ⁋명제 3](/ko/math/algebraic_topology/degree_and_fixed_point_theorems#prop3){: data-relation="required" }의 homotopy invariance와 상수사상의 degree가 $0$이라는 사실에 의하여 $\deg(\iota\circ g)=0$이다. 그러나 $\iota\circ g$는 antipodal이므로 [정리 5](#thm5){: data-relation="required" }에 의하여 그 degree가 홀수여야 하고, 이는 $0$과 모순이다. 그러므로 그러한 $g$는 존재하지 않는다.
 
-이로써 [정리 2](#thm2)의 (2)가 성립하고, [명제 3](#prop3)에 의하여 (1)도 성립하며, (3)은 [정리 5](#thm5) 그 자체이다.
+이로써 [정리 2](#thm2){: data-relation="required" }의 (2)가 성립하고, [명제 3](#prop3){: data-relation="required" }에 의하여 (1)도 성립하며, (3)은 [정리 5](#thm5){: data-relation="required" } 그 자체이다.
 :::
 
 ::: 참고 7
-[정리 2](#thm2)의 세 진술은 모두 참이지만, 우리가 실제로 세운 함의의 방향은 (3) $\Rightarrow$ (2) $\Leftrightarrow$ (1)이다. 곧 degree의 홀짝성을 다루는 (3)이 가장 강한 형태이며, 나머지 둘을 함의한다. (1)과 (2)의 동치는 [명제 3](#prop3)에서 보듯 초등적이지만, 이들로부터 degree가 정확히 홀수라는 (3)을 되돌려 얻는 것은 그만큼 직접적이지 않다. 문헌에 따라 "Borsuk–Ulam 정리"는 (1)이나 (2)를 가리키기도 하고, Borsuk의 원래 정리인 (3)을 가리키기도 한다.
+[정리 2](#thm2){: data-relation="required" }의 세 진술은 모두 참이지만, 우리가 실제로 세운 함의의 방향은 (3) $\Rightarrow$ (2) $\Leftrightarrow$ (1)이다. 곧 degree의 홀짝성을 다루는 (3)이 가장 강한 형태이며, 나머지 둘을 함의한다. (1)과 (2)의 동치는 [명제 3](#prop3){: data-relation="weak" }에서 보듯 초등적이지만, 이들로부터 degree가 정확히 홀수라는 (3)을 되돌려 얻는 것은 그만큼 직접적이지 않다. 문헌에 따라 "Borsuk–Ulam 정리"는 (1)이나 (2)를 가리키기도 하고, Borsuk의 원래 정리인 (3)을 가리키기도 한다.
 :::
 
 ## Ham sandwich 정리
@@ -163,7 +163,7 @@ $$\mu_i(H_u)+\mu_i(H_{-u})=\mu_i(\mathbb{R}^n)\tag{$\ast$}$$
 
 $$f:S^n\rightarrow\mathbb{R}^n;\qquad f(u)=\bigl(\mu_1(H_u),\ldots,\mu_n(H_u)\bigr)$$
 
-을 생각하자. 각 $\mu_i$이 유한하고 hyperplane에 측도 $0$을 준다는 조건에서, $u$를 조금 흔들 때 대칭차 $H_u\triangle H_{u'}$의 측도가 $0$으로 수렴하므로 $u\mapsto\mu_i(H_u)$은 연속이다. ([Mat]의 dominated convergence 논증을 따른다.) 따라서 $f$는 연속함수이며, [정리 2](#thm2)의 (1)에 의하여 $f(u)=f(-u)$인 점 $u\in S^n$이 존재한다. 곧 모든 $i$에서 $\mu_i(H_u)=\mu_i(H_{-u})$이고, $(\ast)$과 결합하면
+을 생각하자. 각 $\mu_i$이 유한하고 hyperplane에 측도 $0$을 준다는 조건에서, $u$를 조금 흔들 때 대칭차 $H_u\triangle H_{u'}$의 측도가 $0$으로 수렴하므로 $u\mapsto\mu_i(H_u)$은 연속이다. ([Mat]의 dominated convergence 논증을 따른다.) 따라서 $f$는 연속함수이며, [정리 2](#thm2){: data-relation="required" }의 (1)에 의하여 $f(u)=f(-u)$인 점 $u\in S^n$이 존재한다. 곧 모든 $i$에서 $\mu_i(H_u)=\mu_i(H_{-u})$이고, $(\ast)$과 결합하면
 
 $$\mu_i(H_u)=\mu_i(H_{-u})=\frac12\mu_i(\mathbb{R}^n)$$
 
@@ -186,7 +186,7 @@ $S^n$이 $n+1$개의 닫힌집합 $A_1,\ldots,A_{n+1}$의 합집합으로 덮인
 
 $$f:S^n\rightarrow\mathbb{R}^n;\qquad f(x)=\bigl(\operatorname{dist}(x,A_1),\ldots,\operatorname{dist}(x,A_n)\bigr)$$
 
-을 정의하자. 각 $\operatorname{dist}(\cdot,A_i)$은 연속이므로 $f$도 연속이며, [정리 2](#thm2)의 (1)에 의하여 $f(x)=f(-x)$인 점 $x\in S^n$이 존재한다. 곧 모든 $1\leq i\leq n$에서 $\operatorname{dist}(x,A_i)=\operatorname{dist}(-x,A_i)$이다.
+을 정의하자. 각 $\operatorname{dist}(\cdot,A_i)$은 연속이므로 $f$도 연속이며, [정리 2](#thm2){: data-relation="required" }의 (1)에 의하여 $f(x)=f(-x)$인 점 $x\in S^n$이 존재한다. 곧 모든 $1\leq i\leq n$에서 $\operatorname{dist}(x,A_i)=\operatorname{dist}(-x,A_i)$이다.
 
 두 경우로 나눈다. 만일 어떤 $1\leq i\leq n$에서 $\operatorname{dist}(x,A_i)=0$이라면, $A_i$이 닫힌집합이므로 $x\in A_i$이고, 위의 등식에서 $\operatorname{dist}(-x,A_i)=0$이므로 $-x\in A_i$이다. 따라서 $A_i$이 대척쌍 $x,-x$을 포함한다.
 
@@ -202,7 +202,7 @@ $$\pi:\partial\Delta\rightarrow S^n;\qquad\pi(y)=\frac{y}{\lvert y\rvert}$$
 
 은 homeomorphism이다. 각 $C_j=\pi(F_j)$은 닫힌집합이고 $S^n$을 덮는다.
 
-이제 각 $C_j$이 대척쌍을 포함하지 않음을 보인다. 원점이 $\Delta$의 interior에 있으므로 각 facet $F_j$은 원점을 지나지 않는 affine hyperplane $\{y\mid\langle a_j,y\rangle=1\}$에 놓이며, $\Delta$의 interior는 $\langle a_j,\cdot\rangle<1$ 쪽에 있다. 만일 $v$와 $-v$이 둘 다 $C_j$에 속한다면, 어떤 양수 $s,t>0$에 대하여 $sv,-tv\in F_j$이므로 $\langle a_j,sv\rangle=1$과 $\langle a_j,-tv\rangle=1$이 성립한다. 앞의 식은 $\langle a_j,v\rangle=1/s>0$을, 뒤의 식은 $\langle a_j,v\rangle=-1/t<0$을 주어 서로 모순이다. 그러므로 어떤 $C_j$도 대척쌍을 담지 않으며, $n+2$개의 조각으로는 antipode를 완전히 피할 수 있다. 이로써 [정리 9](#thm9)의 $n+1$이 최적임이 확인된다.
+이제 각 $C_j$이 대척쌍을 포함하지 않음을 보인다. 원점이 $\Delta$의 interior에 있으므로 각 facet $F_j$은 원점을 지나지 않는 affine hyperplane $\{y\mid\langle a_j,y\rangle=1\}$에 놓이며, $\Delta$의 interior는 $\langle a_j,\cdot\rangle<1$ 쪽에 있다. 만일 $v$와 $-v$이 둘 다 $C_j$에 속한다면, 어떤 양수 $s,t>0$에 대하여 $sv,-tv\in F_j$이므로 $\langle a_j,sv\rangle=1$과 $\langle a_j,-tv\rangle=1$이 성립한다. 앞의 식은 $\langle a_j,v\rangle=1/s>0$을, 뒤의 식은 $\langle a_j,v\rangle=-1/t<0$을 주어 서로 모순이다. 그러므로 어떤 $C_j$도 대척쌍을 담지 않으며, $n+2$개의 조각으로는 antipode를 완전히 피할 수 있다. 이로써 [정리 9](#thm9){: data-relation="required" }의 $n+1$이 최적임이 확인된다.
 :::
 
 ## 구의 embedding 불가능성
@@ -213,7 +213,7 @@ $$\pi:\partial\Delta\rightarrow S^n;\qquad\pi(y)=\frac{y}{\lvert y\rvert}$$
 $n\geq 1$에 대하여, $S^n$은 $\mathbb{R}^n$에 위상적으로 embedding되지 않는다. 곧 image 위로의 homeomorphism이 되는 연속 단사함수 $e:S^n\rightarrow\mathbb{R}^n$은 존재하지 않는다.
 :::
 ::: 증명
-그러한 embedding $e:S^n\rightarrow\mathbb{R}^n$이 존재한다고 하자. 특히 $e$은 연속함수이므로 [정리 2](#thm2)의 (1)에 의하여 $e(x)=e(-x)$인 점 $x\in S^n$이 존재한다. $n\geq 1$에서 $x\neq-x$이므로 이는 $e$의 단사성에 모순이다. 따라서 그러한 embedding은 존재하지 않는다.
+그러한 embedding $e:S^n\rightarrow\mathbb{R}^n$이 존재한다고 하자. 특히 $e$은 연속함수이므로 [정리 2](#thm2){: data-relation="required" }의 (1)에 의하여 $e(x)=e(-x)$인 점 $x\in S^n$이 존재한다. $n\geq 1$에서 $x\neq-x$이므로 이는 $e$의 단사성에 모순이다. 따라서 그러한 embedding은 존재하지 않는다.
 :::
 
 같은 논증은 embedding뿐 아니라 임의의 단사 연속함수 $S^n\rightarrow\mathbb{R}^n$의 비존재를 말해준다. 콤팩트 공간 $S^n$에서 Hausdorff 공간으로 가는 단사 연속함수는 자동으로 image 위로의 homeomorphism이 되므로 embedding과 단사 연속함수는 이 맥락에서 사실상 같은 것이다. 결국 $S^n$의 대척 대합이 강제하는 $f(x)=f(-x)$이라는 한 점의 일치가, 구를 낮은 차원에 평탄하게 눕히려는 어떠한 시도도 좌절시키는 셈이다.
