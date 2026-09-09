@@ -12,7 +12,7 @@ date: 2026-07-03
 weight: 15
 ---
 
-우리는 [§다변수함수와 편미분](/ko/math/calculus/partial_derivatives)에서 다변수함수들을 정의하고, 이들의 미분을 살펴보았다. 이제는 적분을 살펴볼 차례다.
+우리는 [§다변수함수와 편미분](/ko/math/calculus/partial_derivatives){: data-relation="weak" }에서 다변수함수들을 정의하고, 이들의 미분을 살펴보았다. 이제는 적분을 살펴볼 차례다.
 
 ## 다중적분
 
@@ -58,7 +58,7 @@ $$\int_R f \dd{V} = \int_{a_1}^{b_1}\left(\int_{a_2}^{b_2}\cdots\left(\int_{a_n}
 이며, 적분 순서는 임의로 바꿀 수 있다.
 :::
 
-엄밀한 증명은 연속함수가 갖는 해석학적 성질에 본질적으로 기대므로, 이 글에서는 생략한다. 어쨌든, 위 정리의 우변에 있는 안쪽 적분은 한 변수를 상수로 고정하고 다른 변수로 적분하는 보통의 정적분이므로, 다중적분은 [§미적분의 기본정리](/ko/math/calculus/fundamental_theorem_of_calculus)와 적분법으로 푸는 한 변수 적분들의 반복이 된다. 피적분함수가 $f(x_1,\ldots,x_n) = g_1(x_1)\cdots g_n(x_n)$처럼 변수분리되고 영역이 상자이면 한 단계 더 나아가, 다중적분은 $n$개의 한 변수 적분의 곱 
+엄밀한 증명은 연속함수가 갖는 해석학적 성질에 본질적으로 기대므로, 이 글에서는 생략한다. 어쨌든, 위 정리의 우변에 있는 안쪽 적분은 한 변수를 상수로 고정하고 다른 변수로 적분하는 보통의 정적분이므로, 다중적분은 [§미적분의 기본정리](/ko/math/calculus/fundamental_theorem_of_calculus){: data-relation="required" }와 적분법으로 푸는 한 변수 적분들의 반복이 된다. 피적분함수가 $f(x_1,\ldots,x_n) = g_1(x_1)\cdots g_n(x_n)$처럼 변수분리되고 영역이 상자이면 한 단계 더 나아가, 다중적분은 $n$개의 한 변수 적분의 곱 
 
 $$(\int_{a_1}^{b_1} g_1)\cdots(\int_{a_n}^{b_n} g_n)$$
 
@@ -109,7 +109,7 @@ $$J_{\mathbf{T}}=\begin{pmatrix} \partial x_1/\partial u_1 & \cdots & \partial x
 
 이다.
 :::
-역시 이 또한 우리는 선형대수의 내용은 블랙박스로 두기로 하였으므로, 그 증명은 해석학에 미뤄둔다. 어쨌든 중요한 것은 직관으로, 야코비 행렬식 $\lvert\det J_{\mathbf{T}}\rvert$은 $\mathbf{T}$가 부피를 늘이는 국소 비율이다. 즉, $\mathbf{u}$ 공간의 작은 상자가 $\mathbf{T}$에 의해 $\mathbf{x}$ 공간의 작은 평행육면체로 옮겨지는데, 그 부피가 원래 상자의 부피에 $\lvert\det J_{\mathbf{T}}\rvert$를 곱해준 것이 되므로 부피 원소는 $\dd{V} = \lvert\det J_{\mathbf{T}}(\mathbf{u})\rvert \dd{V'}$로 변환된다. $n=2$에서 평행육면체는 평행사변형이 되어, 두 변 $\mathbf{T}_u \Delta u$와 $\mathbf{T}_v \Delta v$ ($\mathbf{T}_u, \mathbf{T}_v$는 $\mathbf{T}$의 편도함수 벡터) 가 이루는 넓이가 바로 $\lvert\det J_{\mathbf{T}}\rvert \Delta u \Delta v$인 것이다. 이 식을 리만 합에 대입해 극한을 취한 것이 [정리 4](#thm4)이며, 절댓값을 붙이는 이유는 부피가 항상 양수이기 때문이다.
+역시 이 또한 우리는 선형대수의 내용은 블랙박스로 두기로 하였으므로, 그 증명은 해석학에 미뤄둔다. 어쨌든 중요한 것은 직관으로, 야코비 행렬식 $\lvert\det J_{\mathbf{T}}\rvert$은 $\mathbf{T}$가 부피를 늘이는 국소 비율이다. 즉, $\mathbf{u}$ 공간의 작은 상자가 $\mathbf{T}$에 의해 $\mathbf{x}$ 공간의 작은 평행육면체로 옮겨지는데, 그 부피가 원래 상자의 부피에 $\lvert\det J_{\mathbf{T}}\rvert$를 곱해준 것이 되므로 부피 원소는 $\dd{V} = \lvert\det J_{\mathbf{T}}(\mathbf{u})\rvert \dd{V'}$로 변환된다. $n=2$에서 평행육면체는 평행사변형이 되어, 두 변 $\mathbf{T}_u \Delta u$와 $\mathbf{T}_v \Delta v$ ($\mathbf{T}_u, \mathbf{T}_v$는 $\mathbf{T}$의 편도함수 벡터) 가 이루는 넓이가 바로 $\lvert\det J_{\mathbf{T}}\rvert \Delta u \Delta v$인 것이다. 이 식을 리만 합에 대입해 극한을 취한 것이 [정리 4](#thm4){: data-relation="weak" }이며, 절댓값을 붙이는 이유는 부피가 항상 양수이기 때문이다.
 
 변수변환의 가장 흔한 쓰임은 coordinate system을 바꾸는 것으로, 우리는 $2\times 2$ 행렬과 $3\times 3$ 행렬의 행렬식만 도입하였으므로 이들이 우리 예시의 전부이다. 
 
@@ -128,11 +128,11 @@ $$\iint_D e^{-(x^2+y^2)} \dd{A} = \int_0^{2\pi} \int_0^1 e^{-r^2} r \dd{r}\dd{\t
 위의 예시를 이용하면, 우리는 하나의 변수로 풀리지 않던 Gaussian integral의 값을 구할 수 있다.
 
 ::: 예시 6 (Gaussian integral)
-적분 $I = \int_{-\infty}^{\infty} e^{-x^2} \dd{x}$의 값을 구하자. $x \geq 1$에서 $e^{-x^2} \leq e^{-x}$이고 $\int_1^\infty e^{-x} \dd{x}$가 수렴하므로 [§이상적분, ⁋명제 3](/ko/math/calculus/improper_integrals#prop3)에 의하여 $\int_0^\infty e^{-x^2} \dd{x}$가 수렴하고, $e^{-x^2}$은 $x$와 $-x$에서 같은 값을 가지므로 $\int_{-\infty}^0 e^{-x^2} \dd{x}$도 수렴한다. 따라서 이 이상적분은 수렴한다. 이제 정사각형 $Q_t = [-t,t]\times[-t,t]$ 위에서는 피적분함수가 변수분리되므로 [정리 2](#thm2)에 의하여
+적분 $I = \int_{-\infty}^{\infty} e^{-x^2} \dd{x}$의 값을 구하자. $x \geq 1$에서 $e^{-x^2} \leq e^{-x}$이고 $\int_1^\infty e^{-x} \dd{x}$가 수렴하므로 [§이상적분, ⁋명제 3](/ko/math/calculus/improper_integrals#prop3){: data-relation="required" }에 의하여 $\int_0^\infty e^{-x^2} \dd{x}$가 수렴하고, $e^{-x^2}$은 $x$와 $-x$에서 같은 값을 가지므로 $\int_{-\infty}^0 e^{-x^2} \dd{x}$도 수렴한다. 따라서 이 이상적분은 수렴한다. 이제 정사각형 $Q_t = [-t,t]\times[-t,t]$ 위에서는 피적분함수가 변수분리되므로 [정리 2](#thm2){: data-relation="required" }에 의하여
 
 $$\left(\int_{-t}^{t} e^{-x^2} \dd{x}\right)^2 = \left(\int_{-t}^{t} e^{-x^2} \dd{x}\right)\left(\int_{-t}^{t} e^{-y^2} \dd{y}\right) = \iint_{Q_t} e^{-(x^2+y^2)} \dd{A}$$
 
-이다. 두 이상적분이 모두 수렴하므로 $t \rightarrow \infty$에서 $\int_{-t}^{t} e^{-x^2} \dd{x}$가 $I$로 가고, 따라서 위 식의 좌변은 $I^2$으로 간다. 한편 반지름 $s$인 원판 $B_s$ 위에서는 [예시 5](#ex5)의 계산이 그대로 되풀이되어
+이다. 두 이상적분이 모두 수렴하므로 $t \rightarrow \infty$에서 $\int_{-t}^{t} e^{-x^2} \dd{x}$가 $I$로 가고, 따라서 위 식의 좌변은 $I^2$으로 간다. 한편 반지름 $s$인 원판 $B_s$ 위에서는 [예시 5](#ex5){: data-relation="weak" }의 계산이 그대로 되풀이되어
 
 $$\iint_{B_s} e^{-(x^2+y^2)} \dd{A} = \int_0^{2\pi} \int_0^s e^{-r^2} r \dd{r} \dd{\theta} = \pi(1 - e^{-s^2})$$
 

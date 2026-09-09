@@ -14,7 +14,7 @@ translated_at: 2026-08-19T10:15:05+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-08-19T10:15:05+00:00
 ---
-We defined multivariable functions and examined their derivatives in [§Functions of Several Variables and Partial Derivatives](/en/math/calculus/partial_derivatives). Now we turn to integration.
+We defined multivariable functions and examined their derivatives in [§Functions of Several Variables and Partial Derivatives](/en/math/calculus/partial_derivatives){: data-relation="weak" }. Now we turn to integration.
 
 ## Multiple Integrals
 
@@ -56,7 +56,7 @@ $$\int_R f \dd{V} = \int_{a_1}^{b_1}\left(\int_{a_2}^{b_2}\cdots\left(\int_{a_n}
 and the order of integration may be changed arbitrarily.
 :::
 
-A rigorous proof relies essentially on the analytic properties of continuous functions, so we omit it here. In any case, the inner integrals on the right-hand side of the theorem are ordinary definite integrals in which one variable is held constant and we integrate with respect to the other, so a multiple integral becomes a repetition of single-variable integrals solved by the Fundamental Theorem of Calculus and integration techniques from [§The Fundamental Theorem of Calculus](/en/math/calculus/fundamental_theorem_of_calculus). If the integrand separates variables as $f(x_1,\ldots,x_n) = g_1(x_1)\cdots g_n(x_n)$ and the region is a box, we can go one step further: the multiple integral decomposes into the product of $n$ single-variable integrals
+A rigorous proof relies essentially on the analytic properties of continuous functions, so we omit it here. In any case, the inner integrals on the right-hand side of the theorem are ordinary definite integrals in which one variable is held constant and we integrate with respect to the other, so a multiple integral becomes a repetition of single-variable integrals solved by the Fundamental Theorem of Calculus and integration techniques from [§The Fundamental Theorem of Calculus](/en/math/calculus/fundamental_theorem_of_calculus){: data-relation="required" }. If the integrand separates variables as $f(x_1,\ldots,x_n) = g_1(x_1)\cdots g_n(x_n)$ and the region is a box, we can go one step further: the multiple integral decomposes into the product of $n$ single-variable integrals
 
 $$(\int_{a_1}^{b_1} g_1)\cdots(\int_{a_n}^{b_n} g_n)$$
 
@@ -102,7 +102,7 @@ Here $J_{\mathbf{T}}$ is the *Jacobi matrix* formed from the partial derivatives
 $$J_{\mathbf{T}}=\begin{pmatrix} \partial x_1/\partial u_1 & \cdots & \partial x_1/\partial u_n \\ \vdots & \ddots & \vdots \\ \partial x_n/\partial u_1 & \cdots & \partial x_n/\partial u_n\end{pmatrix}$$
 :::
 
-Again, since we have agreed to treat linear algebra as a black box, we defer the proof to analysis. In any case, what matters is the intuition: the Jacobian determinant $\lvert\det J_{\mathbf{T}}\rvert$ is the local scaling factor by which $\mathbf{T}$ expands volume. That is, a small box in $\mathbf{u}$-space is carried by $\mathbf{T}$ to a small parallelepiped in $\mathbf{x}$-space whose volume is the original box's volume multiplied by $\lvert\det J_{\mathbf{T}}\rvert$, so the volume element transforms as $\dd{V} = \lvert\det J_{\mathbf{T}}(\mathbf{u})\rvert \dd{V'}$. In dimension $n=2$ the parallelepiped becomes a parallelogram, and the area formed by the two edges $\mathbf{T}_u \Delta u$ and $\mathbf{T}_v \Delta v$ (where $\mathbf{T}_u, \mathbf{T}_v$ are the partial derivative vectors of $\mathbf{T}$) is exactly $\lvert\det J_{\mathbf{T}}\rvert \Delta u \Delta v$. Substituting this into the Riemann sum and taking the limit yields [Theorem 4](#thm4); the absolute value is needed because volume is always positive.
+Again, since we have agreed to treat linear algebra as a black box, we defer the proof to analysis. In any case, what matters is the intuition: the Jacobian determinant $\lvert\det J_{\mathbf{T}}\rvert$ is the local scaling factor by which $\mathbf{T}$ expands volume. That is, a small box in $\mathbf{u}$-space is carried by $\mathbf{T}$ to a small parallelepiped in $\mathbf{x}$-space whose volume is the original box's volume multiplied by $\lvert\det J_{\mathbf{T}}\rvert$, so the volume element transforms as $\dd{V} = \lvert\det J_{\mathbf{T}}(\mathbf{u})\rvert \dd{V'}$. In dimension $n=2$ the parallelepiped becomes a parallelogram, and the area formed by the two edges $\mathbf{T}_u \Delta u$ and $\mathbf{T}_v \Delta v$ (where $\mathbf{T}_u, \mathbf{T}_v$ are the partial derivative vectors of $\mathbf{T}$) is exactly $\lvert\det J_{\mathbf{T}}\rvert \Delta u \Delta v$. Substituting this into the Riemann sum and taking the limit yields [Theorem 4](#thm4){: data-relation="weak" }; the absolute value is needed because volume is always positive.
 
 The most common use of change of variables is to switch coordinate systems, and since we have only introduced determinants of $2\times 2$ and $3\times 3$ matrices, these will be the only examples we treat.
 
@@ -121,11 +121,11 @@ can be completed because the antiderivative of $e^{-r^2} r$ is explicitly $-e^{-
 Using the example above, we can evaluate the Gaussian integral, which does not succumb to a single variable.
 
 ::: Example 6 (Gaussian integral)
-Let us find the value of the integral $I = \int_{-\infty}^{\infty} e^{-x^2} \dd{x}$. For $x \geq 1$ we have $e^{-x^2} \leq e^{-x}$ and $\int_1^\infty e^{-x} \dd{x}$ converges, so by [§Improper Integrals, ⁋Proposition 3](/en/math/calculus/improper_integrals#prop3) the integral $\int_0^\infty e^{-x^2} \dd{x}$ converges, and since $e^{-x^2}$ takes the same value at $x$ and $-x$, $\int_{-\infty}^0 e^{-x^2} \dd{x}$ also converges. Hence this improper integral converges. Now on the square $Q_t = [-t,t]\times[-t,t]$ the integrand separates variables, so by [Theorem 2](#thm2)
+Let us find the value of the integral $I = \int_{-\infty}^{\infty} e^{-x^2} \dd{x}$. For $x \geq 1$ we have $e^{-x^2} \leq e^{-x}$ and $\int_1^\infty e^{-x} \dd{x}$ converges, so by [§Improper Integrals, ⁋Proposition 3](/en/math/calculus/improper_integrals#prop3){: data-relation="required" } the integral $\int_0^\infty e^{-x^2} \dd{x}$ converges, and since $e^{-x^2}$ takes the same value at $x$ and $-x$, $\int_{-\infty}^0 e^{-x^2} \dd{x}$ also converges. Hence this improper integral converges. Now on the square $Q_t = [-t,t]\times[-t,t]$ the integrand separates variables, so by [Theorem 2](#thm2){: data-relation="required" }
 
 $$\left(\int_{-t}^{t} e^{-x^2} \dd{x}\right)^2 = \left(\int_{-t}^{t} e^{-x^2} \dd{x}\right)\left(\int_{-t}^{t} e^{-y^2} \dd{y}\right) = \iint_{Q_t} e^{-(x^2+y^2)} \dd{A}$$
 
-Since both improper integrals converge, as $t \rightarrow \infty$ the integral $\int_{-t}^{t} e^{-x^2} \dd{x}$ approaches $I$, and therefore the left-hand side of the above equation goes to $I^2$. On the other hand, over the disk $B_s$ of radius $s$, the calculation of [Example 5](#ex5) repeats verbatim to give
+Since both improper integrals converge, as $t \rightarrow \infty$ the integral $\int_{-t}^{t} e^{-x^2} \dd{x}$ approaches $I$, and therefore the left-hand side of the above equation goes to $I^2$. On the other hand, over the disk $B_s$ of radius $s$, the calculation of [Example 5](#ex5){: data-relation="required" } repeats verbatim to give
 
 $$\iint_{B_s} e^{-(x^2+y^2)} \dd{A} = \int_0^{2\pi} \int_0^s e^{-r^2} r \dd{r} \dd{\theta} = \pi(1 - e^{-s^2})$$
 
