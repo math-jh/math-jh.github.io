@@ -66,7 +66,7 @@ $$\frac{(t+2)(t+1)}{2} - \frac{(t-d+2)(t-d+1)}{2} = dt + \frac{d(3-d)}{2}$$
 를 얻는다.
 :::
 
-이 결과는 이어지는 [명제 5](#prop5)의 증명에서 핵심적으로 사용된다.
+이 결과는 이어지는 [명제 5](#prop5){: data-relation="forward" }의 증명에서 핵심적으로 사용된다.
 
 ::: 명제 4
 $\mathbb{P}^2$ 안의 degree $d$ curve $C = Z(F)$와 $C$의 성분이 아닌 직선 $L$에 대하여, 교차 $C \cap L$은 정확히 $d$개의 점(중복도 포함)으로 이루어진다.
@@ -101,11 +101,11 @@ $$i_{p_i}(C, L) = \dim_\mathbb{K} \mathcal{O}_{\mathbb{A}^2, p_i}/(f, \z) = \dim
 
 > $\sum_{p \in C \cap D} i_p(C, D) = \dim_\mathbb{K} (\mathbb{K}[\x_0, \x_1, \x_2]/(F, G))_t \qquad (t \gg 0)$
 
-$C \cap D$가 유한집합임은 $C$와 $D$가 공통 성분을 갖지 않는다는 가정으로부터 알려져 있다. ([§차원, ⁋명제 9](/ko/math/algebraic_varieties/dimension#prop9)) $\mathbb{K}$가 algebraically closed field이라 무한집합이므로 $C \cap D$의 어느 점도 지나지 않는 직선이 존재하고, 좌표를 바꾸어 이 직선을 $Z(\x_2)$라 둘 수 있다. 즉 $C \cap D \subseteq U_2 = \{\x_2 \neq 0\}$이라 가정하여도 좋으며, 이 가정은 아래에서 중국인의 나머지 정리를 한 chart 위에서 쓰기 위해 필요하다. 점 $p = [a:b:c] \in C \cap D$는 $U_2$에서의 좌표로 $p = (a/c, b/c)$이고, $F, G$를 dehomogenize한 $f, g \in \mathbb{K}[\x, \y]$에 대하여
+$C \cap D$가 유한집합임은 $C$와 $D$가 공통 성분을 갖지 않는다는 가정으로부터 알려져 있다. ([§차원, ⁋명제 9](/ko/math/algebraic_varieties/dimension#prop9){: data-relation="required" }) $\mathbb{K}$가 algebraically closed field이라 무한집합이므로 $C \cap D$의 어느 점도 지나지 않는 직선이 존재하고, 좌표를 바꾸어 이 직선을 $Z(\x_2)$라 둘 수 있다. 즉 $C \cap D \subseteq U_2 = \{\x_2 \neq 0\}$이라 가정하여도 좋으며, 이 가정은 아래에서 중국인의 나머지 정리를 한 chart 위에서 쓰기 위해 필요하다. 점 $p = [a:b:c] \in C \cap D$는 $U_2$에서의 좌표로 $p = (a/c, b/c)$이고, $F, G$를 dehomogenize한 $f, g \in \mathbb{K}[\x, \y]$에 대하여
 
 $$i_p(C, D) = \dim_\mathbb{K} \mathcal{O}_{\mathbb{A}^2, p}/(f, g)$$
 
-이다. ([§교차곱, ⁋정의 1](/ko/math/algebraic_varieties/intersection_product#def1)) $V(F, G)$가 유한집합이므로 $f, g$는 affine ring $\mathbb{K}[\x, \y]$에서 0차원 ideal $(f, g)$을 생성하며, 중국인의 나머지 정리에 의하여
+이다. ([§교차곱, ⁋정의 1](/ko/math/algebraic_varieties/intersection_product#def1){: data-relation="weak" }) $V(F, G)$가 유한집합이므로 $f, g$는 affine ring $\mathbb{K}[\x, \y]$에서 0차원 ideal $(f, g)$을 생성하며, 중국인의 나머지 정리에 의하여
 
 $$\mathbb{K}[\x, \y]/(f, g) \cong \prod_{p \in V(f,g)} \mathcal{O}_{\mathbb{A}^2, p}/(f, g)$$
 
@@ -122,7 +122,7 @@ $$\varphi_t: R_t \rightarrow \mathbb{K}[\x, \y]/(f, g),\qquad H \mapsto H(\x, \y
 $$0 \rightarrow S(-m) \xrightarrow{\cdot F} S \rightarrow S/(F) \rightarrow 0$$
 $$0 \rightarrow S/(F)(-n) \xrightarrow{\cdot G} S/(F) \rightarrow S/(F, G) \rightarrow 0$$
 
-[명제 3](#prop3)에서 degree를 $m$으로 읽으면, $S/(F)$의 Hilbert 다항식은 $P_F(t) = mt + c_1$의 꼴이 된다. 두 번째 exact sequence에 Hilbert 다항식을 적용하면 $S/(F, G)$의 Hilbert 다항식은
+[명제 3](#prop3){: data-relation="required" }에서 degree를 $m$으로 읽으면, $S/(F)$의 Hilbert 다항식은 $P_F(t) = mt + c_1$의 꼴이 된다. 두 번째 exact sequence에 Hilbert 다항식을 적용하면 $S/(F, G)$의 Hilbert 다항식은
 
 $$P_{F,G}(t) = P_F(t) - P_F(t - n) = \bigl(mt + c_1\bigr) - \bigl(m(t-n) + c_1\bigr) = mn$$
 
@@ -135,7 +135,7 @@ $$P_{F,G}(t) = P_F(t) - P_F(t - n) = \bigl(mt + c_1\bigr) - \bigl(m(t-n) + c_1\b
 
 $$\CH^\ast(\mathbb{P}^n) \cong \mathbb{Z}[H]/(H^{n+1})$$
 
-이다. ([§교차곱, ⁋예시 10](/ko/math/algebraic_varieties/intersection_product#ex10)) 여기서 $H$는 hyperplane class이며, codimension이 $k$이며 degree가 $d$인 variety는 class $dH^k$를 갖는다. 특히 degree $d$인 hypersurface는 $dH$에 대응하므로, $n$개의 hypersurface $H_1, \ldots, H_n$의 교차곱은
+이다. ([§교차곱, ⁋예시 10](/ko/math/algebraic_varieties/intersection_product#ex10){: data-relation="weak" }) 여기서 $H$는 hyperplane class이며, codimension이 $k$이며 degree가 $d$인 variety는 class $dH^k$를 갖는다. 특히 degree $d$인 hypersurface는 $dH$에 대응하므로, $n$개의 hypersurface $H_1, \ldots, H_n$의 교차곱은
 
 $$[H_1] \cdot [H_2] \cdots [H_n] = (d_1 H)(d_2 H) \cdots (d_n H) = d_1 d_2 \cdots d_n \cdot H^n$$
 
@@ -153,7 +153,7 @@ $$\deg(V \cap W) \leq \deg(V) \cdot \deg(W)$$
 $\mathbb{P}^3$ 안의 두 이차곡면(quadric surface) $Q_1, Q_2$를 생각하자. 각각 degree 2이므로 proper intersection을 가질 때 교차 $Q_1 \cap Q_2$는 차원 1, degree 4인 곡선이다. 구체적으로, $Q_1 = Z(\x_0\x_3 - \x_1\x_2)$와 $Q_2 = Z(\x_0\x_2 - \x_1\x_3)$를 잡으면 교차는 네 개의 직선(line)으로 분해되며, 이들의 degree 합은 여전히 4이다.
 :::
 
-명제 6의 증명은 Chow ring을 통한 intersection theory의 일반론에 의존한다. 자세한 내용은 [§교차곱](/ko/math/algebraic_varieties/intersection_product)을 참조하라. [§차원, ⁋예시 14](/ko/math/algebraic_varieties/dimension#ex14)의 부등식이 성분의 codimension에 대한 것으로 다시 나타난다.
+명제 6의 증명은 Chow ring을 통한 intersection theory의 일반론에 의존한다. 자세한 내용은 [§교차곱](/ko/math/algebraic_varieties/intersection_product){: data-relation="required" }을 참조하라. [§차원, ⁋예시 14](/ko/math/algebraic_varieties/dimension#ex14){: data-relation="weak" }의 부등식이 성분의 codimension에 대한 것으로 다시 나타난다.
 
 ## 응용
 
@@ -166,11 +166,11 @@ $\mathbb{P}^2$ 안의 두 세차곡선 $C_1 = Z(F_1)$, $C_2 = Z(F_2)$가 공통 
 ::: 증명
 두 세차곡선 $C_1, C_2$가 proper intersection으로 서로 다른 9개의 점 $p_1, \ldots, p_9$에서 만난다고 가정하자. $\mathbb{P}^2$ 위의 degree 3 homogeneous polynomial 공간 $\mathbb{K}[\x_0, \x_1, \x_2]_3$의 차원은 $\binom{3+2}{2} = 10$이며, 각 점 $p_i$를 지나는 조건은 하나의 일차조건이므로 $V = \{F \in \mathbb{K}[\x_0, \x_1, \x_2]_3 \mid F(p_i) = 0 \text{ for } i = 1, \ldots, 8\}$은 차원 $\dim V \ge 10 - 8 = 2$인 부분공간이다. 한편 $F_1, F_2 \in V$이고 $C_1 \neq C_2$이므로 $F_1, F_2$는 일차독립이다. 남은 것은 $\dim V = 2$, 곧 여덟 점이 degree 3 form들에 독립적인 조건을 부과함을 보이는 것이다.
 
-먼저 $\Gamma = \{p_1, \ldots, p_9\}$의 서로 다른 네 점은 한 직선 위에 놓일 수 없다. 직선 $L$이 $\Gamma$의 네 점을 지난다면 $L$과 $C_j$의 교점이 넷 이상이 되어 [명제 5](#prop5)에 어긋나므로 $L$은 $C_j$의 성분이어야 하고, 이것이 $j = 1, 2$ 모두에 대해 성립하여 $C_1$과 $C_2$가 공통 성분을 갖기 때문이다. 같은 방식으로 $\Gamma$의 일곱 점도 하나의 conic 위에 놓일 수 없다. 그 conic이 irreducible이면 [명제 5](#prop5)에 의하여 $C_j$와의 교점이 여섯을 넘지 못하여 다시 $C_1, C_2$의 공통 성분이 되고, 직선들의 합집합이면 그 중 한 직선이 $\Gamma$의 네 점을 지나기 때문이다.
+먼저 $\Gamma = \{p_1, \ldots, p_9\}$의 서로 다른 네 점은 한 직선 위에 놓일 수 없다. 직선 $L$이 $\Gamma$의 네 점을 지난다면 $L$과 $C_j$의 교점이 넷 이상이 되어 [명제 5](#prop5){: data-relation="required" }에 어긋나므로 $L$은 $C_j$의 성분이어야 하고, 이것이 $j = 1, 2$ 모두에 대해 성립하여 $C_1$과 $C_2$가 공통 성분을 갖기 때문이다. 같은 방식으로 $\Gamma$의 일곱 점도 하나의 conic 위에 놓일 수 없다. 그 conic이 irreducible이면 [명제 5](#prop5){: data-relation="required" }에 의하여 $C_j$와의 교점이 여섯을 넘지 못하여 다시 $C_1, C_2$의 공통 성분이 되고, 직선들의 합집합이면 그 중 한 직선이 $\Gamma$의 네 점을 지나기 때문이다.
 
 이제 $A = \{p_1, \ldots, p_8\}$의 각 점 $q$에 대하여 $A \setminus \{q\}$의 일곱 점에서는 $0$이 되고 $q$에서는 $0$이 아닌 degree 3 form $H_q$를 만든다. $q$를 지나는 한 직선은 $\Gamma$의 다른 점을 많아야 둘 포함하므로 $A \setminus \{q\}$의 일곱 점이 그러한 직선 하나에 모두 담길 수 없고, 따라서 $q, a, b$가 collinear가 아닌 $a, b \in A \setminus \{q\}$를 고를 수 있다. $R = A \setminus \{q, a, b\}$라 두면 $\lvert R\rvert = 5$이고 degree 2 form들의 공간은 6차원이므로 $R$의 다섯 점에서 $0$이 되는 conic이 존재하는데, 그러한 conic 가운데 $q$를 지나지 않는 것 $Q$가 있으면 $a, b$를 지나는 직선의 방정식 $L_{ab}$에 대하여 $H_q = L_{ab}Q$로 두면 된다.
 
-$R$의 다섯 점을 지나는 모든 conic이 $q$도 지난다고 하자. 그럼 $R \cup \{q\}$를 지나는 conic $Q$가 있다. 직선 $\overline{qa}$는 $\Gamma$의 점을 셋까지만 포함하므로 $q, a, c$가 collinear가 아닌 $c \in R$을 고를 수 있고, 다섯 점 $\{b\} \cup (R \setminus \{c\})$에 같은 논증을 되풀이한다. 이 다섯 점을 지나면서 $q$를 지나지 않는 conic $Q''$이 있으면 $a, c$를 지나는 직선의 방정식 $L_{ac}$에 대하여 $H_q = L_{ac}Q''$으로 두면 된다. 그렇지 않다면 이 다섯 점과 $q$를 함께 지나는 conic $Q'$이 존재하는데, $Q$와 $Q'$은 $\{q\} \cup (R \setminus \{c\})$의 다섯 점을 공유한다. 두 conic이 공통 성분을 갖지 않으면 [명제 5](#prop5)에 의하여 공유하는 점이 넷을 넘지 못하고, 공통 직선을 가지면 그 직선 위에 $\Gamma$의 점이 셋까지만 있고 남은 두 직선은 한 점에서만 만나므로 역시 넷을 넘지 못한다. 따라서 $Q = Q'$인데 이 conic은 $R \cup \{q, b\}$의 일곱 점을 지나 앞 문단에 모순이다.
+$R$의 다섯 점을 지나는 모든 conic이 $q$도 지난다고 하자. 그럼 $R \cup \{q\}$를 지나는 conic $Q$가 있다. 직선 $\overline{qa}$는 $\Gamma$의 점을 셋까지만 포함하므로 $q, a, c$가 collinear가 아닌 $c \in R$을 고를 수 있고, 다섯 점 $\{b\} \cup (R \setminus \{c\})$에 같은 논증을 되풀이한다. 이 다섯 점을 지나면서 $q$를 지나지 않는 conic $Q''$이 있으면 $a, c$를 지나는 직선의 방정식 $L_{ac}$에 대하여 $H_q = L_{ac}Q''$으로 두면 된다. 그렇지 않다면 이 다섯 점과 $q$를 함께 지나는 conic $Q'$이 존재하는데, $Q$와 $Q'$은 $\{q\} \cup (R \setminus \{c\})$의 다섯 점을 공유한다. 두 conic이 공통 성분을 갖지 않으면 [명제 5](#prop5){: data-relation="required" }에 의하여 공유하는 점이 넷을 넘지 못하고, 공통 직선을 가지면 그 직선 위에 $\Gamma$의 점이 셋까지만 있고 남은 두 직선은 한 점에서만 만나므로 역시 넷을 넘지 못한다. 따라서 $Q = Q'$인데 이 conic은 $R \cup \{q, b\}$의 일곱 점을 지나 앞 문단에 모순이다.
 
 각 점의 homogeneous coordinate를 하나씩 고정하면 평가 $F \mapsto F(q)$는 $\mathbb{K}[\x_0, \x_1, \x_2]_3$ 위의 선형함수이고, $\sum_{q \in A} \lambda_q F(q) = 0$이 모든 $F$에 대해 성립한다면 $F = H_q$를 대입하여 $\lambda_q = 0$을 얻으므로 여덟 개의 평가 함수는 일차독립이다. 즉 $\mathbb{K}[\x_0, \x_1, \x_2]_3 \rightarrow \mathbb{K}^8$의 rank가 $8$이므로 $\dim V = 10 - 8 = 2$이고, $F_1, F_2$가 $V$의 기저를 이룬다. 따라서 임의의 $F_3 \in V$에 대해 상수 $\alpha, \beta$가 존재하여 $F_3 = \alpha F_1 + \beta F_2$이다. 양변에 $p_9$를 대입하면 $F_3(p_9) = \alpha F_1(p_9) + \beta F_2(p_9) = 0$이므로 $C_3$는 $p_9$도 지난다.
 :::
@@ -196,7 +196,7 @@ $$X = \overline{AB} \cup \overline{CD} \cup \overline{EF},\quad Y = \overline{BC
 
 $X \cap Y$는 $A, B, C, D, E, F$와 $P, Q, R$을 모두 포함하므로 적어도 9개의 서로 다른 점을 포함한다. Bézout의 정리에 의하여 $\sum_{p \in X \cap Y} i_p(X, Y) = 3 \times 3 = 9$이므로, $X \cap Y$는 정확히 이 9점이며 각 점에서의 intersection multiplicity는 1이다.
 
-이제 새로운 세차곡선 $Z = \Gamma \cup \overline{PQ}$를 정의하자. 이는 degree 3의 곡선으로, $X \cap Y$의 9점 중 $A, B, C, D, E, F$와 $P, Q$, 즉 8점을 지난다. [명제 8](#prop8)에 의하여 $Z$는 9번째 점 $R$도 지나야 한다. $R \in Z = \Gamma \cup \overline{PQ}$이므로, $R \in \Gamma$이거나 $R \in \overline{PQ}$이다.
+이제 새로운 세차곡선 $Z = \Gamma \cup \overline{PQ}$를 정의하자. 이는 degree 3의 곡선으로, $X \cap Y$의 9점 중 $A, B, C, D, E, F$와 $P, Q$, 즉 8점을 지난다. [명제 8](#prop8){: data-relation="required" }에 의하여 $Z$는 9번째 점 $R$도 지나야 한다. $R \in Z = \Gamma \cup \overline{PQ}$이므로, $R \in \Gamma$이거나 $R \in \overline{PQ}$이다.
 
 만일 $R \in \Gamma$라면 $R = \overline{CD} \cap \overline{FA} \in \Gamma$이어야 한다. 그러나 $\overline{CD}$와 $\Gamma$는 Bézout의 정리에 의해 최대 2점에서 만나며, 이미 $C, D \in \Gamma$이므로 $\overline{CD} \cap \Gamma = \{C, D\}$이다. 마찬가지로 $\overline{FA} \cap \Gamma = \{F, A\}$이므로 $R \in \Gamma$일 수 없다. 결론적으로 $R \in \overline{PQ}$이며, 즉 $P, Q, R$은 공선형이다.
 :::
@@ -218,7 +218,7 @@ $$k + (d - 3) = \frac{(d-1)(d-2)}{2} + d - 2 = \binom{d}{2} - 1$$
 
 이므로, 고른 $k + d - 3$개의 점에서 모두 $0$이 되는 $0$이 아닌 degree $d-2$ form $G$가 존재한다. $C$는 irreducible이고 $\deg C = d > d - 2$이므로 $D = Z(G)$의 성분이 될 수 없고, 따라서 $C$와 $D$는 공통 성분을 갖지 않는다.
 
-각 ordinary double point $p_i$에서 $C$의 국소 방정식 $f$는 lowest degree 항이 이차이므로 $\mathfrak{m}^2$에 속하고, $D$가 $p_i$를 지나므로 그 국소 방정식 $g$는 $\mathfrak{m}$에 속한다. 여기서 $\mathfrak{m}$은 $\mathcal{O}_{\mathbb{A}^2, p_i}$의 maximal ideal이다. 그럼 $(f, g) \subseteq \mathfrak{m}^2 + (g)$인데 $\mathfrak{m}/\mathfrak{m}^2$은 2차원이고 $\mathfrak{m}^2 + (g)$가 그 안에서 잘라내는 부분공간은 많아야 1차원이므로, $i_{p_i}(C, D) = \dim_\mathbb{K}\mathcal{O}_{\mathbb{A}^2, p_i}/(f, g) \geq 2$이다. 나머지 점 $q_j$에서는 $i_{q_j}(C, D) \geq 1$이므로 [명제 5](#prop5)에 의하여
+각 ordinary double point $p_i$에서 $C$의 국소 방정식 $f$는 lowest degree 항이 이차이므로 $\mathfrak{m}^2$에 속하고, $D$가 $p_i$를 지나므로 그 국소 방정식 $g$는 $\mathfrak{m}$에 속한다. 여기서 $\mathfrak{m}$은 $\mathcal{O}_{\mathbb{A}^2, p_i}$의 maximal ideal이다. 그럼 $(f, g) \subseteq \mathfrak{m}^2 + (g)$인데 $\mathfrak{m}/\mathfrak{m}^2$은 2차원이고 $\mathfrak{m}^2 + (g)$가 그 안에서 잘라내는 부분공간은 많아야 1차원이므로, $i_{p_i}(C, D) = \dim_\mathbb{K}\mathcal{O}_{\mathbb{A}^2, p_i}/(f, g) \geq 2$이다. 나머지 점 $q_j$에서는 $i_{q_j}(C, D) \geq 1$이므로 [명제 5](#prop5){: data-relation="required" }에 의하여
 
 $$d(d-2) = \sum_p i_p(C, D) \geq 2k + (d - 3) = (d-1)^2$$
 
