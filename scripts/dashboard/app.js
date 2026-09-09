@@ -63,6 +63,19 @@ function agoIso(iso) {
   var t = Date.parse(iso || '');
   return isNaN(t) ? '—' : ago(t / 1000);
 }
+var KST_SHORT = new Intl.DateTimeFormat('en-CA', {
+  timeZone: 'Asia/Seoul', month: '2-digit', day: '2-digit',
+  hour: '2-digit', minute: '2-digit', hourCycle: 'h23'
+});
+function shortKst(iso) {
+  var t = Date.parse(iso || '');
+  if (isNaN(t)) return '—';
+  var parts = {};
+  KST_SHORT.formatToParts(new Date(t)).forEach(function (p) {
+    if (p.type !== 'literal') parts[p.type] = p.value;
+  });
+  return parts.month + '-' + parts.day + ' ' + parts.hour + ':' + parts.minute;
+}
 function num(n) { return (n === null || n === undefined) ? '—' : n.toLocaleString('ko-KR'); }
 function kchars(n) { return Math.round((n || 0) / 1000).toLocaleString('ko-KR') + 'k'; }
 function shortCat(c) { return String(c).replace(/^Math\//, '').replace(/_/g, ' '); }
@@ -76,8 +89,8 @@ function secNode(title, meta) {
   s.appendChild(hd);
   return s;
 }
-function table(headers, rows) {
-  var wrap = el('div', 'tbl-scroll'), t = el('table'), thead = el('thead'), tr = el('tr');
+function table(headers, rows, cls) {
+  var wrap = el('div', 'tbl-scroll'), t = el('table', cls || null), thead = el('thead'), tr = el('tr');
   headers.forEach(function (h) {
     tr.appendChild(el('th', h.num ? 'num' : null, h.label !== undefined ? h.label : h));
   });
@@ -916,21 +929,28 @@ function cronText(expr) {
 
   if (hr.kind === 'any') {
     if (dow.kind !== 'any') return expr;
-    if (mi.kind === 'any') return '1분마다';
+    if (mi.kind === 'any') return '매분';
     if (mi.kind === 'step') {
-      return mi.step + '분마다' + (mi.from === null ? '' : ' (:' + p2(mi.from) + ' 기준)');
+      return mi.from === null ? mi.step + '분 간격'
+        : '매시 ' + p2(mi.from) + '분부터 ' + mi.step + '분 간격';
     }
-    return '매시 ' + mi.values.map(function (m) { return ':' + p2(m); }).join(', ');
+    return '매시 ' + mi.values.map(function (m) { return p2(m) + '분'; }).join('·');
   }
   if (mi.kind !== 'list' || mi.values.length !== 1) return expr;
   if (hr.kind === 'step') {
     if (dow.kind !== 'any') return expr;
-    var every = hr.step + '시간마다 :' + p2(mi.values[0]);
-    return hr.from === null ? every : every + ' (' + hr.from + '–' + hr.to + '시)';
+    var firstHour = hr.from === null ? 0 : hr.from;
+    return '매일 ' + p2(firstHour) + ':' + p2(mi.values[0]) + '부터 ' + hr.step + '시간 간격';
   }
   return day + ' ' + hr.values.map(function (h) {
     return p2(h) + ':' + p2(mi.values[0]);
   }).join(', ');
+}
+
+function systemdTimerText(expr) {
+  var m = /^\*-\*-\*\s+(\d{2})\/(\d+):(\d{2}):(\d{2})$/.exec(String(expr || '').trim());
+  if (!m) return expr || 'systemd 타이머';
+  return '매일 ' + m[1] + ':' + m[3] + '부터 ' + Number(m[2]) + '시간 간격';
 }
 
 function secCron(d) {
@@ -942,10 +962,10 @@ function secCron(d) {
     var tr = row([
       { html: '<span class="dot dot--' + (j.paused ? 'paused' : 'ok') + '"></span>' +
               esc(j.name) + (j.timer ? '<span class="tag">timer</span>' : '') },
-      { text: j.timer ? 'systemd 타이머'
+      { text: j.timer ? systemdTimerText(j.schedule)
               : (cronText(j.schedule) || (j.missing ? '게이트 없음' : '')),
-        title: j.timer ? '' : j.schedule, cls: 'muted nowrap' },
-      { text: j.paused ? (j.until ? pauseText + ' · 만료 ' + j.until.slice(5, 16).replace('T', ' ') : pauseText) : '실행 중',
+        title: j.schedule, cls: 'muted nowrap' },
+      { text: j.paused ? (j.until ? pauseText + ' · 만료 ' + shortKst(j.until) : pauseText) : '실행 중',
         cls: 'muted' },
       { html: '<span class="cron-actions">' +
               (j.quotaPaused ? '<button data-action="force-resume" class="ghost-btn ghost-btn--force-resume"' +
@@ -959,7 +979,7 @@ function secCron(d) {
     });
     return tr;
   });
-  s.appendChild(table(['잡', '스케줄', '상태', { label: '', num: true }], rows));
+  s.appendChild(table(['잡', '스케줄', '상태', { label: '', num: true }], rows, 'cron-table'));
   var err = el('p', 'hint', '');
   err.id = 'cron-err';
   err.style.color = 'var(--bad)';
