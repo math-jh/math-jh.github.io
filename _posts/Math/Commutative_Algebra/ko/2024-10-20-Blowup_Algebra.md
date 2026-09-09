@@ -59,7 +59,7 @@ $$\gr_\mathcal{J}M=M/M_1\oplus M_1/M_2\oplus\cdots$$
 으로 정의한다.
 :::
 
-위의 정의에서 $\gr_\mathcal{J}M$은 $\gr_\mathfrak{a}A$-module 구조를 가지며, 이는 임의의 $a\in \mathfrak{a}^k/\mathfrak{a}^{k+1}$과 $x\in M_l/M_{l+1}$에 대하여 이들의 representative $\tilde{a}\in \mathfrak{a}^k$, $\tilde{x}\in M_l$을 택한 후 $\tilde{a}\tilde{x}$를 $M_{k+l}/M_{k+l+1}$로 제한시킨 것이며, [보조정리 2](#lem2)와 유사한 계산을 통해 이것이 잘 정의된다는 것을 확인할 수 있다. 특별히 $M=A$이고 $M_i$들이 모든 $i,j$에 대하여 $M_iM_j\subseteq M_{i+j}$를 만족하는 $A$의 ideal들인 경우, [정의 1](#def1)과 마찬가지로 $\gr_\mathcal{J}A$ 또한 ring의 구조를 가지며, 이 또한 filtration $\mathcal{J}$에 대한 associated graded ring이라 부른다. 
+위의 정의에서 $\gr_\mathcal{J}M$은 $\gr_\mathfrak{a}A$-module 구조를 가지며, 이는 임의의 $a\in \mathfrak{a}^k/\mathfrak{a}^{k+1}$과 $x\in M_l/M_{l+1}$에 대하여 이들의 representative $\tilde{a}\in \mathfrak{a}^k$, $\tilde{x}\in M_l$을 택한 후 $\tilde{a}\tilde{x}$를 $M_{k+l}/M_{k+l+1}$로 제한시킨 것이며, [보조정리 2](#lem2){: data-relation="required" }와 유사한 계산을 통해 이것이 잘 정의된다는 것을 확인할 수 있다. 특별히 $M=A$이고 $M_i$들이 모든 $i,j$에 대하여 $M_iM_j\subseteq M_{i+j}$를 만족하는 $A$의 ideal들인 경우, [정의 1](#def1){: data-relation="required" }과 마찬가지로 $\gr_\mathcal{J}A$ 또한 ring의 구조를 가지며, 이 또한 filtration $\mathcal{J}$에 대한 associated graded ring이라 부른다. 
 
 이제 다음이 성립한다. 
 
@@ -113,7 +113,7 @@ $$\mathcal{J}':\quad M'\supseteq M'\cap M_1\supseteq M'\cap M_2\supseteq\cdots$$
 또한 $\mathfrak{a}$-stable이다.
 :::
 ::: 증명
-$\mathcal{J}$가 $\mathfrak{a}$-stable이므로 $\Bl_\mathcal{J}M$은 $\Bl_\mathfrak{a}A$-module로서 finitely generated이다. 한편 $\Bl_\mathfrak{a}A$는 finitely generated $A$-algebra이고 $A$가 Noetherian이므로 [§기본 개념들, ⁋따름정리 13](/ko/math/commutative_algebra/basic_notions#cor13)에 의하여 $\Bl_\mathfrak{a}A$도 Noetherian이다. 따라서, $\Bl_\mathcal{J}M$의 submodule $\Bl_{\mathcal{J}'}M'$ 또한 finitely generated이고, 다시 [명제 6](#prop6)을 적용하면 원하는 결과를 얻는다.
+$\mathcal{J}$가 $\mathfrak{a}$-stable이므로 $\Bl_\mathcal{J}M$은 $\Bl_\mathfrak{a}A$-module로서 finitely generated이다. 한편 $\Bl_\mathfrak{a}A$는 finitely generated $A$-algebra이고 $A$가 Noetherian이므로 [§기본 개념들, ⁋따름정리 13](/ko/math/commutative_algebra/basic_notions#cor13){: data-relation="required" }에 의하여 $\Bl_\mathfrak{a}A$도 Noetherian이다. 따라서, $\Bl_\mathcal{J}M$의 submodule $\Bl_{\mathcal{J}'}M'$ 또한 finitely generated이고, 다시 [명제 6](#prop6){: data-relation="required" }을 적용하면 원하는 결과를 얻는다.
 :::
 
 ::: 따름정리 8 (Krull intersection theorem)
@@ -127,7 +127,7 @@ $M$의 $\mathfrak{a}$-stable filtration
 
 $$M\supseteq \mathfrak{a}M \supseteq \mathfrak{a}^2 M\supseteq\cdots$$
 
-을 생각하자. 그럼 [보조정리 7](#lem7)에 의하여, 다음의 filtration
+을 생각하자. 그럼 [보조정리 7](#lem7){: data-relation="required" }에 의하여, 다음의 filtration
 
 $$\left(\bigcap \mathfrak{a}^iM\right) \cap M\supseteq \left(\bigcap \mathfrak{a}^iM\right)\cap \mathfrak{a}M \supseteq \left(\bigcap \mathfrak{a}^iM\right) \cap \mathfrak{a}^2 M\supseteq\cdots$$
 
@@ -139,7 +139,7 @@ $$\mathfrak{a}\left(\left(\bigcap \mathfrak{a}^iM\right)\cap \mathfrak{a}^p M\ri
 
 $$\mathfrak{a}\left(\bigcap \mathfrak{a}^iM\right)=\left(\bigcap \mathfrak{a}^iM\right)$$
 
-을 얻는다. 이제 $A$가 Noetherian이고 $M$이 finitely generated이므로 $\bigcap \mathfrak{a}^iM$ 또한 finitely generated이고, 따라서 [§정수적 확장, ⁋보조정리 7](/ko/math/commutative_algebra/integral_extension#lem7)을 적용하면 첫째 결과를 얻는다. 
+을 얻는다. 이제 $A$가 Noetherian이고 $M$이 finitely generated이므로 $\bigcap \mathfrak{a}^iM$ 또한 finitely generated이고, 따라서 [§정수적 확장, ⁋보조정리 7](/ko/math/commutative_algebra/integral_extension#lem7){: data-relation="required" }을 적용하면 첫째 결과를 얻는다. 
 
 둘째 결과를 보이기 위해 $M=A$로 두자. 첫째 결과에서 얻어진 $a$에 대하여, $1-a$가 zerodivisor가 아님을 보이면 충분하다. 우선 $\mathfrak{a}$가 $A$의 proper ideal이므로 $1-a\neq 0$이고, 이로부터 $A$가 domain인 경우는 더 이상 증명할 것이 없다. 만일 $A$가 local ring이라면 $\mathfrak{a}$는 $A$의 (유일한) maximal ideal $\mathfrak{m}$에 속할 것이므로 $a\in \mathfrak{m}$이고, 이로부터 $1-a$가 unit이어야 한다. 
 :::
@@ -174,7 +174,7 @@ $$f(\x,\y)\x^2+g(\x,\y)\y^2$$
 Noetherian local ring $A$와, $A$의 proper ideal $\mathfrak{a}$에 대하여, 만일 $\gr_\mathfrak{a}A$가 domain이라면 $A$ 또한 그러하다.
 :::
 ::: 증명
-$A$에서 $ab=0$임을 가정하고, $a=0$이거나 $b=0$임을 보이면 충분하다. 이제 $\gr_\mathfrak{a}A$에서 $\initial(a)\initial(b)=0$이 성립해야 하고, 따라서 $\initial(a)$ 혹은 $\initial(b)$가 $0$이어야 한다. 이제 [따름정리 8](#cor8)로부터 $\bigcap \mathfrak{a}^n=0$이므로, $a=0$이거나 $b=0$이어야 한다. 
+$A$에서 $ab=0$임을 가정하고, $a=0$이거나 $b=0$임을 보이면 충분하다. 이제 $\gr_\mathfrak{a}A$에서 $\initial(a)\initial(b)=0$이 성립해야 하고, 따라서 $\initial(a)$ 혹은 $\initial(b)$가 $0$이어야 한다. 이제 [따름정리 8](#cor8){: data-relation="required" }로부터 $\bigcap \mathfrak{a}^n=0$이므로, $a=0$이거나 $b=0$이어야 한다. 
 :::
 
 ---
