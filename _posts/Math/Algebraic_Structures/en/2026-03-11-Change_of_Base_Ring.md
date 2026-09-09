@@ -84,7 +84,7 @@ The functor $\Hom_A(\phi^\ast B,-): \lMod{A} \rightarrow \lMod{B}$ is called the
 
 ## Adjoint functors
 
-The three functors defined above satisfy certain adjoint relationships. ([\[Category Theory\] §Adjoint Functors, ⁋Definition 1](/en/math/category_theory/adjoints#def1)) We first prove the following lemma.
+The three functors defined above satisfy certain adjoint relationships. ([\[Category Theory\] §Adjoint Functors, ⁋Definition 1](/en/math/category_theory/adjoints#def1){: data-relation="required" }) We first prove the following lemma.
 
 ::: Lemma 5
 For a right $B$-module $N_1$ and a left $B$-module $N_2$, consider the two abelian groups $\phi^\ast N_1\otimes_A \phi^\ast N_2$ and $N_1\otimes_B N_2$. Then there exists a unique homomorphism $\Phi:\phi^\ast N_1\otimes_A \phi^\ast N_2 \rightarrow N_1\otimes_BN_2$ sending any $y_1\otimes_A y_2\in \phi^\ast N_1\otimes_A\phi^\ast N_2$ to $y_1\otimes_B y_2\in N_1\otimes_BN_2$.
@@ -146,7 +146,7 @@ Fix a $B$-module $N$ and an $A$-module $M$; it suffices to show $\Hom_A(\phi^\as
 
 $$\tilde{u}(y)(\alpha\cdot_A\beta)=u\bigl((\phi(\alpha)\beta)\cdot_By\bigr)=u\bigl(\alpha\cdot_A(\beta\cdot_By)\bigr)=\alpha\cdot_A\tilde{u}(y)(\beta)$$
 
-so $\tilde{u}(y)\in\phi_\ast M$, and since $\tilde{u}(\beta'\cdot_By)(\beta)=u((\beta\beta')\cdot_By)=\tilde{u}(y)(\beta\beta')$ equals $(\beta'\cdot_B\tilde{u}(y))(\beta)$ by the $B$-action defined just before [Definition 4](#def4), we have $\tilde{u}\in\Hom_B(N,\phi_\ast M)$.
+so $\tilde{u}(y)\in\phi_\ast M$, and since $\tilde{u}(\beta'\cdot_By)(\beta)=u((\beta\beta')\cdot_By)=\tilde{u}(y)(\beta\beta')$ equals $(\beta'\cdot_B\tilde{u}(y))(\beta)$ by the $B$-action defined just before [Definition 4](#def4){: data-relation="required" }, we have $\tilde{u}\in\Hom_B(N,\phi_\ast M)$.
 
 Conversely, for any $w\in\Hom_B(N,\phi_\ast M)$, setting $u(y)=w(y)(1)$ gives
 

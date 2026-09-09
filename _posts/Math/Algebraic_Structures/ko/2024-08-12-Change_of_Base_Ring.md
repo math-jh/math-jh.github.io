@@ -83,7 +83,7 @@ Functor $\Hom_A(\phi^\ast B,-): \lMod{A} \rightarrow \lMod{B}$를 *coextension o
 
 ## 수반함자
 
-위에서 정의한 세 functor들 사이에는 특정한 adjoint 관계들이 있다. ([\[범주론\] §수반함자, ⁋정의 1](/ko/math/category_theory/adjoints#def1)) 우선 다음 보조정리를 보이자.
+위에서 정의한 세 functor들 사이에는 특정한 adjoint 관계들이 있다. ([\[범주론\] §수반함자, ⁋정의 1](/ko/math/category_theory/adjoints#def1){: data-relation="required" }) 우선 다음 보조정리를 보이자.
 
 ::: 보조정리 5
 Right $B$-module $N_1$, left $B$-module $N_2$에 대하여, 두 abelian group $\phi^\ast N_1\otimes_A \phi^\ast N_2$와 $N_1\otimes_B N_2$를 생각하자. 그럼 이들 사이의 유일한 homomorphism $\Phi:\phi^\ast N_1\otimes_A \phi^\ast N_2 \rightarrow N_1\otimes_BN_2$가 존재하여, 임의의 $y_1\otimes_A y_2\in \phi^\ast N_1\otimes_A\phi^\ast N_2$가 $y_1\otimes_B y_2\in N_1\otimes_BN_2$로 옮겨지도록 할 수 있다. 
@@ -145,7 +145,7 @@ $B$-module $N$과 $A$-module $M$을 고정하고 $\Hom_A(\phi^\ast N,M)\cong\Hom
 
 $$\tilde{u}(y)(\alpha\cdot_A\beta)=u\bigl((\phi(\alpha)\beta)\cdot_By\bigr)=u\bigl(\alpha\cdot_A(\beta\cdot_By)\bigr)=\alpha\cdot_A\tilde{u}(y)(\beta)$$
 
-이므로 $\tilde{u}(y)\in\phi_\ast M$이고, $\tilde{u}(\beta'\cdot_By)(\beta)=u((\beta\beta')\cdot_By)=\tilde{u}(y)(\beta\beta')$이 [정의 4](#def4) 직전에 정의한 $B$-action에 의해 $(\beta'\cdot_B\tilde{u}(y))(\beta)$이므로 $\tilde{u}\in\Hom_B(N,\phi_\ast M)$이다.
+이므로 $\tilde{u}(y)\in\phi_\ast M$이고, $\tilde{u}(\beta'\cdot_By)(\beta)=u((\beta\beta')\cdot_By)=\tilde{u}(y)(\beta\beta')$이 [정의 4](#def4){: data-relation="required" } 직전에 정의한 $B$-action에 의해 $(\beta'\cdot_B\tilde{u}(y))(\beta)$이므로 $\tilde{u}\in\Hom_B(N,\phi_\ast M)$이다.
 
 거꾸로 임의의 $w\in\Hom_B(N,\phi_\ast M)$에 대하여 $u(y)=w(y)(1)$로 두면
 
