@@ -36,7 +36,7 @@ For an affine variety $X$ over an algebraically closed field $\mathbb{K}$, the d
 :::
 
 ::: Proof
-By [§Affine Varieties, ⁋Proposition 12](/en/math/algebraic_varieties/affine_varieties#prop12), irreducible closed subsets of an affine variety correspond bijectively to prime ideals of $\mathbb{K}[X]$.
+By [§Affine Varieties, ⁋Proposition 12](/en/math/algebraic_varieties/affine_varieties#prop12){: data-relation="required" }, irreducible closed subsets of an affine variety correspond bijectively to prime ideals of $\mathbb{K}[X]$.
 :::
 ::: Corollary 3
 For an infinite field $\mathbb{K}$, we have $\dim \mathbb{A}^n = n$.
@@ -128,17 +128,17 @@ $$X \supsetneq Y = Y_0 \supsetneq Y_1 \supsetneq \cdots \supsetneq Y_n$$
 is a chain of closed subvarieties of $X$ of length $n+1$.
 :::
 
-This may be viewed as a weak generalization of [Proposition 6](#prop6). Applied to a hypersurface $Z(f)\subsetneq \mathbb{A}^n$, it yields only $\dim Z(f)\leq n-1$, so it does not suffice to show that a single equation drops the dimension by exactly one. We now turn to the relationship between regular maps and dimension.
+This may be viewed as a weak generalization of [Proposition 6](#prop6){: data-relation="weak" }. Applied to a hypersurface $Z(f)\subsetneq \mathbb{A}^n$, it yields only $\dim Z(f)\leq n-1$, so it does not suffice to show that a single equation drops the dimension by exactly one. We now turn to the relationship between regular maps and dimension.
 
 ::: Proposition 10
 For two varieties $X, Y$ and a regular map $\varphi: X \rightarrow Y$, the following hold.
 
 1. We have $\dim \varphi(X) \le \dim X$.
-2. If $\varphi$ is dominant, then $\dim Y \le \dim X$.  ([§Rational Maps, ⁋Definition 8](/en/math/algebraic_varieties/rational_maps#def8))
+2. If $\varphi$ is dominant, then $\dim Y \le \dim X$.  ([§Rational Maps, ⁋Definition 8](/en/math/algebraic_varieties/rational_maps#def8){: data-relation="weak" })
 :::
 
 ::: Proof
-Let us prove the second statement first. If $\varphi$ is dominant, the pullback $\varphi^\ast: \mathbb{K}(Y)\rightarrow \mathbb{K}(X)$ is injective, and the desired result follows from [Proposition 7](#prop7).
+Let us prove the second statement first. If $\varphi$ is dominant, the pullback $\varphi^\ast: \mathbb{K}(Y)\rightarrow \mathbb{K}(X)$ is injective, and the desired result follows from [Proposition 7](#prop7){: data-relation="required" }.
 
 The first statement follows from this. Since $X$ is irreducible and $\varphi$ is continuous, $\varphi(X)$ is also irreducible; hence its closure $\overline{\varphi(X)}$ in $Y$ is a closed subvariety. The regular map obtained by restricting the codomain of $\varphi$ to $\overline{\varphi(X)}$ is dominant by definition, so the second result gives $\dim \overline{\varphi(X)}\leq \dim X$. On the other hand, given a chain of irreducible closed subsets of $\varphi(X)$
 

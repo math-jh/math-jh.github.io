@@ -19,7 +19,7 @@ weight: 5
 
 ## 위상공간으로서의 차원
 
-Algebraic variety는 이미 위상공간이므로, [\[위상수학\] §차원, ⁋정의 10](/ko/math/topology/dimension#def10)을 사용하여 $X$의 차원을 irreducible closed subset들의 strictly descending chain의 length의 supremum으로 정의할 수 있다. 
+Algebraic variety는 이미 위상공간이므로, [\[위상수학\] §차원, ⁋정의 10](/ko/math/topology/dimension#def10){: data-relation="required" }을 사용하여 $X$의 차원을 irreducible closed subset들의 strictly descending chain의 length의 supremum으로 정의할 수 있다. 
 
 ::: 예시 1
 Infinite field $\mathbb{K}$에 대하여, $\mathbb{A}^1$에서 닫힌집합들은 $\mathbb{A}^1$ 전체와 유한집합들뿐이다. 따라서 가장 긴 chain은 $\mathbb{A}^1 \supsetneq \{p\}$이며, 이는 length $1$ chain이므로 $\mathbb{A}^1$은 이 정의에 따르면 $1$차원이 된다.
@@ -32,25 +32,25 @@ Infinite field $\mathbb{K}$에 대하여, $\mathbb{A}^1$에서 닫힌집합들�
 한편 우리는 이미 algebraic variety와 그 위에 정의된 함수들 사이의 관계가 아주 긴밀하다는 것을 알고 있다. 그렇다면, algebraic variety 위의 함수들의 대수구조가 차원에 대한 정보를 담고있다고 하여도 그렇게 놀라운 일은 아닐 것이다. 이러한 관점을 통해 접근하려면 그 coordinate ring $\mathbb{K}[X]$가 깔끔하게 주어지는 *affine* variety의 경우를 보는 것이 좋을 것이다. 
 
 ::: 명제 2
-Algebraically closed field $\mathbb{K}$ 위에 정의된 affine variety $X$의 차원은 coordinate ring $\mathbb{K}[X]$의 Krull dimension과 같다. ([\[가환대수학\] §차원, ⁋정의 1](/ko/math/commutative_algebra/Krull_dimension#def1))
+Algebraically closed field $\mathbb{K}$ 위에 정의된 affine variety $X$의 차원은 coordinate ring $\mathbb{K}[X]$의 Krull dimension과 같다. ([\[가환대수학\] §차원, ⁋정의 1](/ko/math/commutative_algebra/Krull_dimension#def1){: data-relation="required" })
 :::
 
 ::: 증명
-[§아핀다양체, ⁋명제 12](/ko/math/algebraic_varieties/affine_varieties#prop12)로부터 affine variety의 irreducible closed subset과 $\mathbb{K}[X]$의 prime ideal 사이의 일대일대응이 존재한다. 
+[§아핀다양체, ⁋명제 12](/ko/math/algebraic_varieties/affine_varieties#prop12){: data-relation="required" }로부터 affine variety의 irreducible closed subset과 $\mathbb{K}[X]$의 prime ideal 사이의 일대일대응이 존재한다. 
 :::
 ::: 따름정리 3
 Infinite field $\mathbb{K}$에 대하여, $\dim \mathbb{A}^n = n$이다.
 :::
 
 ::: 증명
-[\[가환대수학\] §매개계, ⁋따름정리 11](/ko/math/commutative_algebra/system_of_parameters#cor11)
+[\[가환대수학\] §매개계, ⁋따름정리 11](/ko/math/commutative_algebra/system_of_parameters#cor11){: data-relation="required" }
 :::
 
 한편, 우리는 임의의 prime ideal $\mathfrak{p}\subseteq \mathbb{K}[\x_1,\ldots, \x_n]$에 대하여 다음의 식
 
 $$\dim \mathbb{K}[\x_1,\ldots, \x_n]/\mathfrak{p}+\codim \mathfrak{p}=\dim \mathbb{K}[\x_1,\ldots, \x_n]=n\tag{$\ast$}$$
 
-이 성립하는 것을 안다. ([\[가환대수학\] §뇌터 정규화, ⁋정리 4](/ko/math/commutative_algebra/noether_normalization#thm4)) 여기서 codimension $\mathfrak{p}$는 [\[가환대수학\] §차원, ⁋정의 2](/ko/math/commutative_algebra/Krull_dimension#def2)에서 정의된 것으로, $\mathfrak{p}$에 포함되는 prime ideal들의 chain의 길이의 supremum이며, 기하적으로는 $X=Z(\mathfrak{p})$를 포함하는 $\mathbb{A}^n$의 closed subvariety들의 chain의 길이의 supremum이다. 기하적으로 우리는 $\dim \mathbb{K}[\x_1,\ldots, \x_n]/\mathfrak{p}$이 $Z(\mathfrak{p})$의 차원인 것을 알고 있으므로, 이를 통해 ($\ast$)에 기하적인 의미를 부여할 수 있다. 
+이 성립하는 것을 안다. ([\[가환대수학\] §뇌터 정규화, ⁋정리 4](/ko/math/commutative_algebra/noether_normalization#thm4){: data-relation="required" }) 여기서 codimension $\mathfrak{p}$는 [\[가환대수학\] §차원, ⁋정의 2](/ko/math/commutative_algebra/Krull_dimension#def2){: data-relation="weak" }에서 정의된 것으로, $\mathfrak{p}$에 포함되는 prime ideal들의 chain의 길이의 supremum이며, 기하적으로는 $X=Z(\mathfrak{p})$를 포함하는 $\mathbb{A}^n$의 closed subvariety들의 chain의 길이의 supremum이다. 기하적으로 우리는 $\dim \mathbb{K}[\x_1,\ldots, \x_n]/\mathfrak{p}$이 $Z(\mathfrak{p})$의 차원인 것을 알고 있으므로, 이를 통해 ($\ast$)에 기하적인 의미를 부여할 수 있다. 
 
 ## Projective variety의 차원
 
@@ -89,12 +89,12 @@ $f$가 irreducible이므로 $(f)$는 prime ideal이고, 따라서 $Z(f)$의 coor
 
 $$\dim \mathbb{K}[\x_1, \ldots, \x_n]/(f) = \dim \mathbb{K}[\x_1, \ldots, \x_n] - \codim(f) = n - 1$$
 
-이다. 여기서 첫째 등식은 [\[가환대수학\] §뇌터 정규화, ⁋정리 4](/ko/math/commutative_algebra/noether_normalization#thm4)에 의한 것이다.
+이다. 여기서 첫째 등식은 [\[가환대수학\] §뇌터 정규화, ⁋정리 4](/ko/math/commutative_algebra/noether_normalization#thm4){: data-relation="required" }에 의한 것이다.
 :::
 
 ## 함수체를 통한 차원
 
-차원을 정의하는 또 다른 방법은 function field를 사용하는 것이다. Function field $\mathbb{K}(X)$는 variety의 generic point에서의 정보를 담고 있으며, birational invariant이기도 하다. 다음 명제 또한 대수적인 사실로부터 유도된다. ([\[가환대수학\] §뇌터 정규화, ⁋정리 3](/ko/math/commutative_algebra/noether_normalization#thm3))
+차원을 정의하는 또 다른 방법은 function field를 사용하는 것이다. Function field $\mathbb{K}(X)$는 variety의 generic point에서의 정보를 담고 있으며, birational invariant이기도 하다. 다음 명제 또한 대수적인 사실로부터 유도된다. ([\[가환대수학\] §뇌터 정규화, ⁋정리 3](/ko/math/commutative_algebra/noether_normalization#thm3){: data-relation="required" })
 
 ::: 명제 7
 Variety $X$의 차원은 function field $\mathbb{K}(X)$의 $\mathbb{K}$ 위에서의 transcendence degree와 같다.
@@ -128,17 +128,17 @@ $$X \supsetneq Y = Y_0 \supsetneq Y_1 \supsetneq \cdots \supsetneq Y_n$$
 은 $X$의 closed subvariety들의 길이가 $n+1$인 chain이다.
 :::
 
-이는 [명제 6](#prop6)의 약한 형태의 일반화라 생각할 수 있다. Hypersurface $Z(f)\subsetneq \mathbb{A}^n$에 적용하면 $\dim Z(f)\leq n-1$만이 나오므로, 하나의 방정식이 차원을 정확히 하나 떨어뜨린다는 것까지는 이로부터 얻을 수 없다. 이제 regular map과 차원의 관계에 대해 살펴보자. 
+이는 [명제 6](#prop6){: data-relation="weak" }의 약한 형태의 일반화라 생각할 수 있다. Hypersurface $Z(f)\subsetneq \mathbb{A}^n$에 적용하면 $\dim Z(f)\leq n-1$만이 나오므로, 하나의 방정식이 차원을 정확히 하나 떨어뜨린다는 것까지는 이로부터 얻을 수 없다. 이제 regular map과 차원의 관계에 대해 살펴보자. 
 
 ::: 명제 10
 두 variety $X, Y$와 regular map $\varphi: X \rightarrow Y$에 대해 다음이 성립한다.
 
 1. $\dim \varphi(X) \le \dim X$가 성립한다.
-2. 만약 $\varphi$가 dominant라면 $\dim Y \le \dim X$이 성립한다.  ([§유리사상, ⁋정의 8](/ko/math/algebraic_varieties/rational_maps#def8))
+2. 만약 $\varphi$가 dominant라면 $\dim Y \le \dim X$이 성립한다.  ([§유리사상, ⁋정의 8](/ko/math/algebraic_varieties/rational_maps#def8){: data-relation="required" })
 :::
 
 ::: 증명
-둘째 결과부터 보이자. $\varphi$가 dominant라면, pullback $\varphi^\ast: \mathbb{K}(Y)\rightarrow \mathbb{K}(X)$가 injective이고, 따라서 [명제 7](#prop7)로부터 원하는 결과를 얻는다. 
+둘째 결과부터 보이자. $\varphi$가 dominant라면, pullback $\varphi^\ast: \mathbb{K}(Y)\rightarrow \mathbb{K}(X)$가 injective이고, 따라서 [명제 7](#prop7){: data-relation="required" }로부터 원하는 결과를 얻는다. 
 
 첫째 결과는 이로부터 따라온다. $X$가 irreducible이고 $\varphi$가 연속이므로 $\varphi(X)$ 또한 irreducible이고, 따라서 $Y$에서의 closure $\overline{\varphi(X)}$는 $Y$의 closed subvariety이다. $\varphi$의 공역을 $\overline{\varphi(X)}$로 제한하여 얻은 regular map은 정의에 의해 dominant이므로, 방금 보인 둘째 결과로부터 $\dim \overline{\varphi(X)}\leq \dim X$를 얻는다. 한편 $\varphi(X)$의 irreducible closed subset들의 chain
 
