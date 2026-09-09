@@ -940,6 +940,7 @@ Conversion rules for the body:
    - Category bracket: `[\\[대수다양체\\] §..., ⁋정의 7]` → `[\\[Algebraic Varieties\\] §..., ⁋Definition 7]`.
    - Labels: 정의→Definition, 명제→Proposition, 정리→Theorem, 보조정리→Lemma, 따름정리→Corollary, 예시→Example, 참고→Remark.
    - Within-doc refs: `[정의 3](#def3)` → `[Definition 3](#def3)` (id unchanged).
+   - A Kramdown IAL immediately after an internal link is part of that link. Its `data-relation` value is `required`, `weak`, or `forward`, as in `[label](path){: data-relation="required" }`. Copy the value exactly, keep the IAL attached to the translated link, and keep it before any following punctuation or outer parenthesis. Never infer, remove, or reclassify it.
    - **Verification rule**: only emit a link `[display](url)` or an in-doc anchor `#labelN` if you are confident the target exists in the source body or in the linked post's English form. If uncertain about the precise English wording of a cross-reference label, keep the KO source form verbatim — a post-processing pass will normalise it. Do NOT invent English titles, definition numbers, or anchor ids that you have not seen.
 
 3. Bilingual italic terms:
@@ -952,6 +953,7 @@ Conversion rules for the body:
    - Attached proof `::: 증명` → `::: Proof`. Standalone proof `::: 증명 (정리 4)` → `::: Proof (Theorem 4)` (translate the label inside the parentheses too).
    - misc box `::: misc 주장 4 (Mirror theorem, $$D$$-module form) {#conj4}` → `::: misc Conjecture 4 (Mirror theorem, $$D$$-module form) {#conj4}`: translate the label text but keep the trailing `{#conj4}` anchor EXACTLY (same id, same braces).
    - The bare closing `:::` line is copied verbatim. Never add, drop, split, merge, or reorder `:::` lines.
+   - Proof presence is source structure. Never add a proof, proof sketch, omission notice, or external-proof pointer because a theorem/proposition has no proof in KO; never drop an existing proof. This blog does not require a proof for every result.
    - Some blocks are still written as legacy HTML rather than `:::` — preserve `<div class="...">`, `</div>`, `<details class="proof">`, `</details>` exactly, and translate only their labels: `<ins id="def1">**정의 1**</ins>` → `<ins id="def1">**Definition 1**</ins>` (id and number N unchanged), `<summary>증명</summary>` → `<summary>Proof</summary>`.
 
 5. Style: first-person plural ("we"); idiomatic, not literal grammar. "우리는 ~를 정의한다" → "we define ~".
@@ -966,6 +968,7 @@ Conversion rules for the body:
 
 - Same math delimiters as the KO body: EN must have exactly as many `$$...$$` display spans AND exactly as many `$...$` inline spans as KO. None downgraded, none promoted, none added/dropped/split/merged.
 - Every `:::` opener from KO appears in EN with the label translated but the SAME derived anchor: the kind→prefix mapping (정의→def, 명제→prop, 정리→thm, 보조정리→lem, 따름정리→cor, 예시→ex, 참고→rmk) plus the unchanged number, and every `::: misc … {#id}` keeps its `{#id}` intact. The `:::` fence lines have the same count and order as KO; no Korean kind word survives on any opener.
+- Every internal-link `data-relation` IAL from KO remains attached to the corresponding EN link with the same value.
 - No Korean labels remain (정의, 명제, 정리, 보조정리, 따름정리, 예시, 참고, 증명, 참고문헌).
 - **No Korean prose remains anywhere.** Every Korean sentence and paragraph is translated into English. Translating only headings, labels, and links while copying Korean paragraphs verbatim is a FAILED translation and will be rejected.
 - If the input contained the line `@@REFERENCES@@`, the output contains it verbatim, exactly once.
@@ -1094,9 +1097,10 @@ After semantic fidelity is restored, make the English idiomatic and precise. Imp
 
 1. **Math spans** — copy from the Korean byte-for-byte: LaTeX commands, variables, spacing, order, and delimiter. Inline `$...$` and display `$$...$$` counts and order must match the Korean exactly. Never silently correct a suspicious Korean formula.
 2. **Fenced theorem boxes** — preserve every `:::` opener and closer in the same order. Keep kind, number, derived anchor, and every explicit `{#id}` unchanged. Translate Korean labels to the established English kind only where required.
-3. **Cross-references** — preserve paths and anchors. Keep `/en/` paths already produced by the translation pipeline; never invent or retarget an anchor. Visible labels may be translated faithfully.
+3. **Cross-references** — preserve paths and anchors. Keep `/en/` paths already produced by the translation pipeline; never invent or retarget an anchor. Visible labels may be translated faithfully. Preserve every existing internal-link Kramdown IAL and its `data-relation` value (`required`, `weak`, or `forward`) exactly; never infer or reclassify it.
 4. **HTML and Markdown structure** — preserve legacy theorem HTML, element ids, inline HTML, heading levels, list structure, footnote identifiers, and fenced blocks.
 5. **References sentinel** — if `@@REFERENCES@@` appears, copy it verbatim exactly once in the same position. Never generate bibliography entries.
+6. **Proof presence** — preserve whether each result has a proof. Never add a proof, proof sketch, omission notice, or external-proof pointer merely because a result has no proof; never drop an existing proof.
 
 # Required self-audit
 
@@ -1104,7 +1108,7 @@ Before output, compare the proposed English against the Korean again and repair 
 
 Confirm that:
 - math spans and delimiters match the Korean in count and order;
-- theorem fences, ids, footnotes, links, and anchors are intact;
+- theorem fences, ids, footnotes, links, anchors, and internal-link `data-relation` IALs are intact;
 - all Korean prose and labels have been translated into English;
 - every English claim is traceable to the Korean;
 - the output contains only the complete English body.
@@ -2098,6 +2102,7 @@ Rules:
 - Do NOT rewrite, restructure, retitle, or renumber anything else.
 - Do NOT touch the References/참고문헌 section under any circumstance.
 - Do NOT alter math spans (`$...$`, `$$...$$`), display blocks, or `\\tag{}`.
+- Do NOT remove or change an internal link's `data-relation` IAL (whose value is `required`, `weak`, or `forward`). If a listed link-label fix is required, keep that IAL attached to the link and before following punctuation or an outer parenthesis.
 - A `§Section Name` citation must match the target post's `title:` exactly —
   read the target file to get it rather than guessing.
 - Residual Korean: translate leftover Korean prose, and replace a Korean anchor

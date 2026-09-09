@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 """Follow up dashboard-confirmed Korean fixes and synchronize the English post.
 
-The dashboard checkbox is a request, not an acknowledgement.  One request is
-handled per run: Antigravity proposes the narrowly scoped EN replacement, then
-Codex sees only the original finding plus KO/EN unified diffs and decides whether
-both changes implement that finding.  The queue item is removed only after a
-passing check and a successful content commit.
+The dashboard checkbox is a request, not an acknowledgement.  Every request
+present when a run starts is handled sequentially: Antigravity proposes the
+narrowly scoped EN replacement, then Codex sees only the original finding plus
+KO/EN unified diffs and decides whether both changes implement that finding.
+Each queue item is removed only after its own passing check and successful
+content commit; a waiting item does not block later requests in the same run.
 """
 
 from __future__ import annotations
@@ -264,31 +265,7 @@ def _clear_completed(entry: dict) -> None:
     )
 
 
-def run_one() -> int:
-    requests = _read_json(REQUEST_STATE)
-    state = tw.load_state()
-    files = state.get("files", {})
-
-    target = None
-    stale = []
-    for request_key in requests:
-        path, sep, reviewed_at = request_key.rpartition("@")
-        entry = files.get(path)
-        if not sep or not entry or entry.get("ko_reviewed_at", "") != reviewed_at:
-            stale.append(request_key)
-            continue
-        target = (request_key, path, reviewed_at, entry)
-        break
-    if stale:
-        latest = _read_json(REQUEST_STATE)
-        for key in stale:
-            latest.pop(key, None)
-        _write_json(REQUEST_STATE, latest)
-        log(f"stale request {len(stale)}건 정리")
-    if target is None:
-        log("nothing requested")
-        return 0
-
+def _process_target(target: tuple, state: dict) -> int:
     request_key, path, reviewed_at, entry = target
     ko_path = tw.BLOG_ROOT / path
     en_rel = entry.get("en_path") or ""
@@ -370,6 +347,46 @@ def run_one() -> int:
     return 0
 
 
+def run_all() -> int:
+    requests = _read_json(REQUEST_STATE)
+    state = tw.load_state()
+    files = state.get("files", {})
+
+    targets = []
+    stale = []
+    for request_key in requests:
+        path, sep, reviewed_at = request_key.rpartition("@")
+        entry = files.get(path)
+        if not sep or not entry or entry.get("ko_reviewed_at", "") != reviewed_at:
+            stale.append(request_key)
+            continue
+        targets.append((request_key, path, reviewed_at, entry))
+    if stale:
+        latest = _read_json(REQUEST_STATE)
+        for key in stale:
+            latest.pop(key, None)
+        _write_json(REQUEST_STATE, latest)
+        log(f"stale request {len(stale)}건 정리")
+    if not targets:
+        log("nothing requested")
+        return 0
+
+    rc = 0
+    log(f"batch start: {len(targets)}건")
+    for target in targets:
+        try:
+            rc = max(rc, _process_target(target, state))
+        except Exception as exc:
+            # An unexpected per-item problem must not strand unrelated checked
+            # requests until the next four-hour tick.
+            rc = 1
+            log(f"WAIT {target[1]}: unexpected {tw._flat(exc)[:220]}")
+    remaining = _read_json(REQUEST_STATE)
+    completed = sum(key not in remaining for key, *_ in targets)
+    log(f"batch done: 완료 {completed}건, 대기 {len(targets) - completed}건")
+    return rc
+
+
 def main() -> int:
     if not Path(tw.AGY_BIN).exists() or not Path(tw.CODEX_BIN).exists():
         log("translator or Codex CLI missing")
@@ -378,7 +395,7 @@ def main() -> int:
         log("another translation instance running, exit")
         return 0
     try:
-        return run_one()
+        return run_all()
     finally:
         tw.release_lock()
 
