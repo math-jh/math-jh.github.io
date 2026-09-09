@@ -13,7 +13,7 @@ weight: 16
 
 ---
 
-우리는 이제 [§선형계, ⁋정의 2](/ko/math/algebraic_varieties/linear_systems#def2)에서 살펴본 line bundle $\mathcal{L}$의 complete linear system을 만드는 global section space $H^0(X, \mathcal{L})$을 더 자세하게 살펴본다. 이는 linear system을 도입한 직후에 소개해도 되었겠지만, 증명을 위해서는 Serre duality가 필요하여 뒤로 두었다. 
+우리는 이제 [§선형계, ⁋정의 2](/ko/math/algebraic_varieties/linear_systems#def2){: data-relation="weak" }에서 살펴본 line bundle $\mathcal{L}$의 complete linear system을 만드는 global section space $H^0(X, \mathcal{L})$을 더 자세하게 살펴본다. 이는 linear system을 도입한 직후에 소개해도 되었겠지만, 증명을 위해서는 Serre duality가 필요하여 뒤로 두었다. 
 
 ## 리만-로흐 정리
 
@@ -27,13 +27,13 @@ $$\ell(D) = \dim H^0(C, \mathcal{O}_C(D))$$
 
 일반적으로 우리는 $\mathcal{O}_C(D)$를 $D$를 따라 각 점 $p$에서 order $\operatorname{ord}_p D$ 이하의 pole을 가질 수 있는 rational function들의 sheaf로 생각하므로, 이러한 관점에서 $H^0(C, \mathcal{O}_C(D))$는 $C$ 위에서 정의된 함수들이 이루는 공간이라 생각할 수 있다. 
 
-이 공간 $H^0(C, \mathcal{O}_C(D))$는 [§선형계, ⁋정의 2](/ko/math/algebraic_varieties/linear_systems#def2)에서 처음 도입했던 것을 기억하자. 그에 따르면 공간 $H^0(C, \mathcal{O}_C(D))$의 nonzero section들은 주어진 divisor $D$와 linearly equivalent한 effective divisor들을 정의하며, 이 공간을 projectivize하여 $\mathcal{O}_C(D)$의 *complete linear system* $\lvert \mathcal{O}_C(D)\rvert$를 얻을 수 있었다. 이 글에서는 편의상 이를 $\lvert D\rvert$으로 적기로 한다. 그럼 위의 Riemann-Roch dimension은 $\lvert D\rvert$의 projective dimension에 $1$을 더한 값이 된다. 
+이 공간 $H^0(C, \mathcal{O}_C(D))$는 [§선형계, ⁋정의 2](/ko/math/algebraic_varieties/linear_systems#def2){: data-relation="required" }에서 처음 도입했던 것을 기억하자. 그에 따르면 공간 $H^0(C, \mathcal{O}_C(D))$의 nonzero section들은 주어진 divisor $D$와 linearly equivalent한 effective divisor들을 정의하며, 이 공간을 projectivize하여 $\mathcal{O}_C(D)$의 *complete linear system* $\lvert \mathcal{O}_C(D)\rvert$를 얻을 수 있었다. 이 글에서는 편의상 이를 $\lvert D\rvert$으로 적기로 한다. 그럼 위의 Riemann-Roch dimension은 $\lvert D\rvert$의 projective dimension에 $1$을 더한 값이 된다. 
 
 이제 점 $p\in C$를 고정하자. 그럼 $p$를 지나는 $\lvert D\rvert$의 원소들은 그 정의에 의해 $H^0(C,\mathcal{O}_C(D))$의 원소들 중 $s(p)=0$을 만족하는 section들로 생각할 수 있다. 즉, 이러한 $s$는 $\divisor(s)-p\geq 0$을 만족하는 $H^0(C, \mathcal{O}_C(D))$의 원소이며, 이를 통해 정확히 이러한 원소들의 모임이
 
 $$\mathcal{O}_C(D-p)\cong \mathcal{O}_C(D)\otimes \mathcal{O}_C(-p)$$
 
-의 global section임을 확인할 수 있다. 따라서 만일 $H^0(C,\mathcal{O}_C(D-p))\subseteq H^0(C, \mathcal{O}_C(D))$에서 등호가 성립한다면, 이는 곧 $\lvert D\rvert$의 모든 원소가 $p$를 지난다는 뜻이므로 $p$가 $\lvert D\rvert$의 base point가 된다. 한편 $\lvert D\rvert$가 basepoint-free라면 우리는 [§선형계](/ko/math/algebraic_varieties/linear_systems)에서 이를 사용하여 regular map $\varphi_D:C\rightarrow \mathbb{P}^{\ell(D)-1}$을 정의할 수 있었는데, 이러한 관점에서 $\ell(D)$와 $\ell(D-p)$의 차이는 점 $p$가 divisor $D$에 가하는 보정항이라 볼 수 있다. 
+의 global section임을 확인할 수 있다. 따라서 만일 $H^0(C,\mathcal{O}_C(D-p))\subseteq H^0(C, \mathcal{O}_C(D))$에서 등호가 성립한다면, 이는 곧 $\lvert D\rvert$의 모든 원소가 $p$를 지난다는 뜻이므로 $p$가 $\lvert D\rvert$의 base point가 된다. 한편 $\lvert D\rvert$가 basepoint-free라면 우리는 [§선형계](/ko/math/algebraic_varieties/linear_systems){: data-relation="weak" }에서 이를 사용하여 regular map $\varphi_D:C\rightarrow \mathbb{P}^{\ell(D)-1}$을 정의할 수 있었는데, 이러한 관점에서 $\ell(D)$와 $\ell(D-p)$의 차이는 점 $p$가 divisor $D$에 가하는 보정항이라 볼 수 있다. 
 
 그럼 이번 글과 다음 글에서 살펴볼 리만-로흐 정리는 이를 어떤 의미에서 확장한 것으로, canonical class $K_C$가 점 $p$의 역할을 대신하는 전역적인 역할을 해 준다. 구체적으로 우리가 증명하고자 하는 식은
 
@@ -45,7 +45,7 @@ $$\ell(D)-\ell(K_C-D)=\deg D+1-g$$
 
 $$H^1(C, \mathcal{O}_C(D)) \cong H^0(C, \omega_C \otimes \mathcal{O}_C(-D))^\vee = H^0(C, \mathcal{O}_C(K_C - D))^\vee\tag{$1$}$$
 
-이 성립한다 ([§세르 쌍대성, ⁋명제 2](/ko/math/algebraic_varieties/serre_duality#prop2)). 여기서 canonical divisor $K_C$는 canonical line bundle에 대응되는 divisor였던 것을 기억하자. 그럼 다음 보조정리에 의해 $\mathcal{O}_C(D)$의 Euler characteristic에서 등장하는 항은 단 두 개 뿐임을 유도할 수 있다. 이 글에서 우리는 $\mathbb{K}$가 *infinite* field임을 가정한다. 
+이 성립한다 ([§세르 쌍대성, ⁋명제 2](/ko/math/algebraic_varieties/serre_duality#prop2){: data-relation="required" }). 여기서 canonical divisor $K_C$는 canonical line bundle에 대응되는 divisor였던 것을 기억하자. 그럼 다음 보조정리에 의해 $\mathcal{O}_C(D)$의 Euler characteristic에서 등장하는 항은 단 두 개 뿐임을 유도할 수 있다. 이 글에서 우리는 $\mathbb{K}$가 *infinite* field임을 가정한다. 
 
 ::: 보조정리 2
 Smooth projective curve $C$ 위의 임의의 coherent sheaf $\mathcal{F}$에 대해
@@ -57,7 +57,7 @@ $$H^i(C, \mathcal{F}) = 0 \quad (i \ge 2)$$
 ::: 증명
 Embedding $C\hookrightarrow \mathbb{P}^N$을 고정하면, dimension count를 통해 $C\cap H_1\cap H_2=\emptyset$이도록 하는 hyperplane $H_1,H_2$가 존재한다. 따라서 $U_i=C\setminus H_i$로 두면 이들은 $C$의 affine open cover를 이루는 것을 안다. 
 
-이제 $\{U_1,U_2\}$에 대한 Čech cohomology를 생각하자. [§층 코호몰로지, ⁋명제 12](/ko/math/algebraic_varieties/sheaf_cohomology#prop12) 직후에 간략하게 소개했듯, projective variety 위의 임의의 affine open cover는 [§층 코호몰로지, ⁋정리 11](/ko/math/algebraic_varieties/sheaf_cohomology#thm11)의 전제조건을 만족하며 따라서 구하고자 하는 sheaf cohomology는 정확하게 이 affine open cover에 대한 계산으로 귀결된다. 이제 Čech complex가 단순히
+이제 $\{U_1,U_2\}$에 대한 Čech cohomology를 생각하자. [§층 코호몰로지, ⁋명제 12](/ko/math/algebraic_varieties/sheaf_cohomology#prop12){: data-relation="required" } 직후에 간략하게 소개했듯, projective variety 위의 임의의 affine open cover는 [§층 코호몰로지, ⁋정리 11](/ko/math/algebraic_varieties/sheaf_cohomology#thm11){: data-relation="required" }의 전제조건을 만족하며 따라서 구하고자 하는 sheaf cohomology는 정확하게 이 affine open cover에 대한 계산으로 귀결된다. 이제 Čech complex가 단순히
 
 $$\check{C}(\mathcal{U}, \mathcal{F}):\qquad \mathcal{F}(U_1)\oplus \mathcal{F}(U_2)\rightarrow \mathcal{F}(U_1\cap U_2)\rightarrow 0$$
 
@@ -138,7 +138,7 @@ $$f\mapsto (a_{-n_i}, \ldots, a_{-1})$$
 
 를 모든 $p_i$에 대해서 한 번에 고려하는 함수이다. 그럼 위의 선형사상의 우변의 차원은 $\sum n_i = \deg D$이고, 이 사상의 kernel은 pole을 갖지 않는 global section, 즉 $H^0(C, \mathcal{O}_C) = \mathbb{K}$와 같으며 이로부터 $\ell(D) \leq 1 + \deg D$를 얻는다. $D$가 effective가 아니지만 $\ell(D) > 0$이라면, $D$는 어떤 effective divisor와 linearly equivalent이므로 동일한 부등식이 성립한다.
 
-일반적으로 이 식이 등식이 되기 위해서는 선형사상이 surjective여야 하지만, 이것이 항상 성립하는 것은 아니다. 이를 확인하기 위해 [명제 3](#prop3)의 증명에서 살펴본 short exact sequence
+일반적으로 이 식이 등식이 되기 위해서는 선형사상이 surjective여야 하지만, 이것이 항상 성립하는 것은 아니다. 이를 확인하기 위해 [명제 3](#prop3){: data-relation="weak" }의 증명에서 살펴본 short exact sequence
 
 $$0\longrightarrow \mathcal{O}_C\overset{i}{\longrightarrow} \mathcal{O}_C(D)\overset{p}{\longrightarrow} \mathcal{O}_D\longrightarrow 0$$
 
@@ -158,7 +158,7 @@ $$\dim\coker p^\ast =\dim \ker (i^\ast: H^1(C, \mathcal{O}_C)\twoheadrightarrow 
 
 $$\dim\coker p^\ast=\dim H^1(C, \mathcal{O}_C)-\dim H^0(C, \mathcal{O}_C(K_C-D))^\vee=g-\ell(K_C-D)$$
 
-임을 안다. 위의 부등식 ($3$)에서 $\deg(D)+1$과 $\ell(D)$의 차이만큼이 cokernel의 차원이므로, 이 계산들이 [명제 3](#prop3)의 결과를 복원한다. 즉, 바꿔말하면 $\ell(K_C-D)$는 $\ell(D)$가 그 upper bound $\deg D+1$로부터 얼마나 떨어지는지를 측정하는 양이며, 이는 본디 $D$를 따라 vanishing하는 $1$-form들의 counting 문제이지만 Serre duality를 사용하여 $\ell(K_C-D)$로 바꾸어 쓴 것이다. 
+임을 안다. 위의 부등식 ($3$)에서 $\deg(D)+1$과 $\ell(D)$의 차이만큼이 cokernel의 차원이므로, 이 계산들이 [명제 3](#prop3){: data-relation="weak" }의 결과를 복원한다. 즉, 바꿔말하면 $\ell(K_C-D)$는 $\ell(D)$가 그 upper bound $\deg D+1$로부터 얼마나 떨어지는지를 측정하는 양이며, 이는 본디 $D$를 따라 vanishing하는 $1$-form들의 counting 문제이지만 Serre duality를 사용하여 $\ell(K_C-D)$로 바꾸어 쓴 것이다. 
 
 예로 $\deg D$가 매우 커서 $\deg(K_C-D)<0$을 만족하는 경우를 생각하자. 그럼 이 경우 $\ell(K_C-D)=0$이고 따라서 Riemann-Roch theorem은 다음의 식
 
@@ -174,12 +174,12 @@ $$\ell(0)-\ell(K_C)=\deg D+1-g$$
 
 $$\ell(K_C)-\ell(0)=\deg K_C +1-g$$
 
-이고 이로부터 [§표준선다발, ⁋예시 10](/ko/math/algebraic_varieties/canonical_bundle#ex10)에서의 계산 $\deg(K_C)=2g-2$를 복원할 수 있다. 해당 예시에서는 degree-genus formula를 잘 알려진 공식으로 언급하고 이로부터 $\deg(K_C)$를 얻어냈지만 (그리고 이것이 역사적인 맥락에서는 더 타당하지만) 우리는 잠시 후 [명제 7](#prop7)에서 degree-genus formula가 Riemann-Roch theorem의 특수한 경우임을 살펴볼 것이다. 
+이고 이로부터 [§표준선다발, ⁋예시 10](/ko/math/algebraic_varieties/canonical_bundle#ex10){: data-relation="weak" }에서의 계산 $\deg(K_C)=2g-2$를 복원할 수 있다. 해당 예시에서는 degree-genus formula를 잘 알려진 공식으로 언급하고 이로부터 $\deg(K_C)$를 얻어냈지만 (그리고 이것이 역사적인 맥락에서는 더 타당하지만) 우리는 잠시 후 [명제 7](#prop7){: data-relation="forward" }에서 degree-genus formula가 Riemann-Roch theorem의 특수한 경우임을 살펴볼 것이다. 
 
 어쨌든 지금까지의 계산을 정리하면 $\ell(D)$는 $D$의 complete linear system의 차원, $\ell(K_C - D)$는 $K_C$가 $D$ 위에 부과하는 수정항이며, 큰 degree에서는 이 수정항이 사라지고 작은 degree에서는 $K_C$의 기하학적 정보를 반영한다는 것으로 생각할 수 있다.
 
 ::: 예시 4
-**$\mathbb{P}^1$**: $\mathbb{P}^1$의 genus는 $g = 0$이고, canonical divisor는 $K_{\mathbb{P}^1} = -2H$이다 ([§표준선다발, ⁋예시 8](/ko/math/algebraic_varieties/canonical_bundle#ex8)). 한편, 우리는 [§선다발과 벡터다발, ⁋예시 16](/ko/math/algebraic_varieties/line_bundles#ex16)에서 $\mathcal{O}_{\mathbb{P}^1}(d)$의 global section이 degree $d$의 homogeneous polynomial들임을 보였으므로,
+**$\mathbb{P}^1$**: $\mathbb{P}^1$의 genus는 $g = 0$이고, canonical divisor는 $K_{\mathbb{P}^1} = -2H$이다 ([§표준선다발, ⁋예시 8](/ko/math/algebraic_varieties/canonical_bundle#ex8){: data-relation="required" }). 한편, 우리는 [§선다발과 벡터다발, ⁋예시 16](/ko/math/algebraic_varieties/line_bundles#ex16){: data-relation="required" }에서 $\mathcal{O}_{\mathbb{P}^1}(d)$의 global section이 degree $d$의 homogeneous polynomial들임을 보였으므로,
 
 $$\ell(dH) = d+1 \quad (d \ge 0), \qquad \ell(dH) = 0 \quad (d < 0)$$
 
@@ -203,7 +203,7 @@ $\deg D=0$인 경우가 위에서 언급한 작은 degree의 경우인데, 우�
 $K_C \sim 0$이므로 elliptic curve에서 Riemann-Roch는 특히 단순해진다. $\deg D > 0$이면 보정항 $\ell(K_C-D)=\ell(-D)$가 사라지므로 $\ell(D)=\deg D$로 완벽히 결정되며, 이는 genus가 커질수록 보정항의 영향이 복잡해지는 과정에서 $g=1$이 가장 간단한 non-trivial case임을 보여준다.
 
 ::: 예시 6 ($g=2$)
-이제 한 단계 더 복잡한 상황인 $g=2$ 경우를 보자. 이 경우 $\deg K_C = 2g - 2 = 2$이고 $\ell(K_C)=2$이며, [명제 3](#prop3)에 $D=p$를 대입하면
+이제 한 단계 더 복잡한 상황인 $g=2$ 경우를 보자. 이 경우 $\deg K_C = 2g - 2 = 2$이고 $\ell(K_C)=2$이며, [명제 3](#prop3){: data-relation="required" }에 $D=p$를 대입하면
 
 $$\ell(p)-\ell(K_C-p)=2-g$$
 
@@ -226,7 +226,7 @@ $$\varphi_{K_C}:C\rightarrow \mathbb{P}^1$$
 
 ## Degree-genus formula
 
-우리는 [§표준선다발, ⁋예시 10](/ko/math/algebraic_varieties/canonical_bundle#ex10)에서 $\deg K_C=2g-2$가 된다는 것을 보이기 위해 다음 명제를 잘 알려진 사실이라고 주장하며 넘겼지만, 이제는 이에 대한 증명을 엄밀하게 할 수 있다. 다만 이는 해당 예시와는 정반대로, 해당 예시에서는 adjunction formula와 degree-genus formula를 활용하여 $\deg K_C=2g-2$임을 증명하였지만 이제 우리는 $\deg K_C=2g-2$라는 사실과 adjunction formula로부터 degree-genus formula를 유도한다. $K_C$의 degree는 앞서 [예시 4](#ex4) 이전에 이미 Riemann-Roch로부터 (degree-genus formula를 사용하지 않고) 얻어졌음에 유의하자.
+우리는 [§표준선다발, ⁋예시 10](/ko/math/algebraic_varieties/canonical_bundle#ex10){: data-relation="weak" }에서 $\deg K_C=2g-2$가 된다는 것을 보이기 위해 다음 명제를 잘 알려진 사실이라고 주장하며 넘겼지만, 이제는 이에 대한 증명을 엄밀하게 할 수 있다. 다만 이는 해당 예시와는 정반대로, 해당 예시에서는 adjunction formula와 degree-genus formula를 활용하여 $\deg K_C=2g-2$임을 증명하였지만 이제 우리는 $\deg K_C=2g-2$라는 사실과 adjunction formula로부터 degree-genus formula를 유도한다. $K_C$의 degree는 앞서 [예시 4](#ex4){: data-relation="weak" } 이전에 이미 Riemann-Roch로부터 (degree-genus formula를 사용하지 않고) 얻어졌음에 유의하자.
 
 ::: 명제 7 (Degree-genus formula)
 Degree $d$의 smooth plane curve $C \subseteq \mathbb{P}^2$에 대해
@@ -237,14 +237,14 @@ $$g(C) = \frac{(d-1)(d-2)}{2}$$
 :::
 
 ::: 증명
-[§표준선다발, ⁋명제 9](/ko/math/algebraic_varieties/canonical_bundle#prop9)의 adjunction formula에 의해 $K_C = (K_{\mathbb{P}^2} + C)\vert_C = (d-3)H\vert_C$이다. 따라서 $\deg K_C = d(d-3)$이고, 이를 $\deg K_C = 2g - 2$에 대입하면
+[§표준선다발, ⁋명제 9](/ko/math/algebraic_varieties/canonical_bundle#prop9){: data-relation="required" }의 adjunction formula에 의해 $K_C = (K_{\mathbb{P}^2} + C)\vert_C = (d-3)H\vert_C$이다. 따라서 $\deg K_C = d(d-3)$이고, 이를 $\deg K_C = 2g - 2$에 대입하면
 
 $$d(d-3) = 2g - 2 \implies g = \frac{d(d-3) + 2}{2} = \frac{(d-1)(d-2)}{2}$$
 
 을 얻는다.
 :::
 
-이 공식은 평면곡선의 기하학적 성질을 직접적으로 계산해준다. 예를 들어 smooth plane cubic의 genus는 1이므로, 이는 [예시 5](#ex5)에서 다룬 elliptic curve와 같다. 반면 $d = 1, 2$인 경우에는 $g = 0$으로, 직선과 원뿔곡선이 모두 $\mathbb{P}^1$과 birationally equivalent임을 반영한다. 직선은 그 자체로 $\mathbb{P}^1$과 isomorphic하고, smooth conic의 경우 그 위의 한 점에서의 projection이 conic과 $\mathbb{P}^1$ 사이의 birational map을 주므로, [§유리사상, ⁋명제 10](/ko/math/algebraic_varieties/rational_maps#prop10)에 의해 이는 이들의 function field가 서로 isomorphic하다는 것과 동치이다.
+이 공식은 평면곡선의 기하학적 성질을 직접적으로 계산해준다. 예를 들어 smooth plane cubic의 genus는 1이므로, 이는 [예시 5](#ex5){: data-relation="weak" }에서 다룬 elliptic curve와 같다. 반면 $d = 1, 2$인 경우에는 $g = 0$으로, 직선과 원뿔곡선이 모두 $\mathbb{P}^1$과 birationally equivalent임을 반영한다. 직선은 그 자체로 $\mathbb{P}^1$과 isomorphic하고, smooth conic의 경우 그 위의 한 점에서의 projection이 conic과 $\mathbb{P}^1$ 사이의 birational map을 주므로, [§유리사상, ⁋명제 10](/ko/math/algebraic_varieties/rational_maps#prop10){: data-relation="weak" }에 의해 이는 이들의 function field가 서로 isomorphic하다는 것과 동치이다.
 
 ::: 예시 8
 Degree $d$에 따른 genus를 계산해보면, degree 3 (cubic)의 경우 $g = \frac{2 \cdot 1}{2} = 1$로 elliptic curve이고, degree 4 (quartic)의 경우 $g = \frac{3 \cdot 2}{2} = 3$, degree 5 (quintic)의 경우 $g = \frac{4 \cdot 3}{2} = 6$이다. Genus가 degree에 따라 빠르게 증가하므로, 높은 degree의 smooth plane curve는 점점 더 복잡한 위상적 구조를 갖는다.

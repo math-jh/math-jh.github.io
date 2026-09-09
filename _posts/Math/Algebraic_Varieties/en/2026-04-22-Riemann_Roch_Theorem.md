@@ -14,7 +14,7 @@ translated_at: 2026-08-19T01:15:04+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-08-19T01:15:04+00:00
 ---
-We now examine in more detail the global section space $H^0(X, \mathcal{L})$ that produces the complete linear system of a line bundle $\mathcal{L}$, which we already encountered in [§Linear Systems, ⁋Definition 2](/en/math/algebraic_varieties/linear_systems#def2). We could have introduced this right after defining linear systems, but the proof requires Serre duality, so we postponed it.
+We now examine in more detail the global section space $H^0(X, \mathcal{L})$ that produces the complete linear system of a line bundle $\mathcal{L}$, which we already encountered in [§Linear Systems, ⁋Definition 2](/en/math/algebraic_varieties/linear_systems#def2){: data-relation="weak" }. We could have introduced this right after defining linear systems, but the proof requires Serre duality, so we postponed it.
 
 ## Riemann–Roch Theorem
 
@@ -27,13 +27,13 @@ $$\ell(D) = \dim H^0(C, \mathcal{O}_C(D))$$
 
 In general, we regard $\mathcal{O}_C(D)$ as the sheaf of rational functions that may have poles of order at most $\operatorname{ord}_p D$ at each point $p$ prescribed by $D$, so from this viewpoint $H^0(C, \mathcal{O}_C(D))$ can be thought of as a space of functions defined on $C$.
 
-Recall that this space $H^0(C, \mathcal{O}_C(D))$ was first introduced in [§Linear Systems, ⁋Definition 2](/en/math/algebraic_varieties/linear_systems#def2). According to that discussion, the nonzero sections of $H^0(C, \mathcal{O}_C(D))$ define effective divisors linearly equivalent to the given divisor $D$, and projectivizing this space yields the *complete linear system* $\lvert \mathcal{O}_C(D)\rvert$ of $\mathcal{O}_C(D)$. For convenience we shall write this as $\lvert D\rvert$ in this post. Then the Riemann–Roch dimension defined above equals the projective dimension of $\lvert D\rvert$ plus $1$.
+Recall that this space $H^0(C, \mathcal{O}_C(D))$ was first introduced in [§Linear Systems, ⁋Definition 2](/en/math/algebraic_varieties/linear_systems#def2){: data-relation="required" }. According to that discussion, the nonzero sections of $H^0(C, \mathcal{O}_C(D))$ define effective divisors linearly equivalent to the given divisor $D$, and projectivizing this space yields the *complete linear system* $\lvert \mathcal{O}_C(D)\rvert$ of $\mathcal{O}_C(D)$. For convenience we shall write this as $\lvert D\rvert$ in this post. Then the Riemann–Roch dimension defined above equals the projective dimension of $\lvert D\rvert$ plus $1$.
 
 Now fix a point $p\in C$. By definition, the elements of $\lvert D\rvert$ passing through $p$ are precisely those sections in $H^0(C,\mathcal{O}_C(D))$ satisfying $s(p)=0$. That is, such $s$ are elements of $H^0(C, \mathcal{O}_C(D))$ with $\divisor(s)-p\geq 0$, and one verifies that the collection of exactly these elements forms the global sections of
 
 $$\mathcal{O}_C(D-p)\cong \mathcal{O}_C(D)\otimes \mathcal{O}_C(-p)$$
 
-Hence, if equality holds in the inclusion $H^0(C,\mathcal{O}_C(D-p))\subseteq H^0(C, \mathcal{O}_C(D))$, this means every element of $\lvert D\rvert$ passes through $p$, so $p$ is a base point of $\lvert D\rvert$. Conversely, if $\lvert D\rvert$ is basepoint-free, then as in [§Linear Systems](/en/math/algebraic_varieties/linear_systems) we can use it to define a regular map $\varphi_D:C\rightarrow \mathbb{P}^{\ell(D)-1}$; from this perspective the difference between $\ell(D)$ and $\ell(D-p)$ can be viewed as a correction term imposed by the point $p$ on the divisor $D$.
+Hence, if equality holds in the inclusion $H^0(C,\mathcal{O}_C(D-p))\subseteq H^0(C, \mathcal{O}_C(D))$, this means every element of $\lvert D\rvert$ passes through $p$, so $p$ is a base point of $\lvert D\rvert$. Conversely, if $\lvert D\rvert$ is basepoint-free, then as in [§Linear Systems](/en/math/algebraic_varieties/linear_systems){: data-relation="weak" } we can use it to define a regular map $\varphi_D:C\rightarrow \mathbb{P}^{\ell(D)-1}$; from this perspective the difference between $\ell(D)$ and $\ell(D-p)$ can be viewed as a correction term imposed by the point $p$ on the divisor $D$.
 
 The Riemann–Roch theorem, which we examine in this post and the next, extends this idea in a certain sense: the canonical class $K_C$ plays a global role that replaces the point $p$. Specifically, the formula we wish to prove is
 
@@ -45,7 +45,7 @@ To see this, we first apply Serre duality to obtain
 
 $$H^1(C, \mathcal{O}_C(D)) \cong H^0(C, \omega_C \otimes \mathcal{O}_C(-D))^\vee = H^0(C, \mathcal{O}_C(K_C - D))^\vee\tag{$1$}$$
 
-([§Serre Duality, ⁋Proposition 2](/en/math/algebraic_varieties/serre_duality#prop2)). Recall that the canonical divisor $K_C$ corresponds to the canonical line bundle. Then by the following lemma we can deduce that only two terms appear in the Euler characteristic of $\mathcal{O}_C(D)$. In this post we assume that $\mathbb{K}$ is an *infinite* field.
+([§Serre Duality, ⁋Proposition 2](/en/math/algebraic_varieties/serre_duality#prop2){: data-relation="required" }). Recall that the canonical divisor $K_C$ corresponds to the canonical line bundle. Then by the following lemma we can deduce that only two terms appear in the Euler characteristic of $\mathcal{O}_C(D)$. In this post we assume that $\mathbb{K}$ is an *infinite* field.
 
 ::: Lemma 2
 For any coherent sheaf $\mathcal{F}$ on a smooth projective curve $C$,
@@ -57,7 +57,7 @@ holds.
 ::: Proof
 Fix an embedding $C\hookrightarrow \mathbb{P}^N$. By a dimension count, there exist hyperplanes $H_1,H_2$ such that $C\cap H_1\cap H_2=\emptyset$. Setting $U_i=C\setminus H_i$, we know that these form an affine open cover of $C$.
 
-Now consider the Čech cohomology for $\{U_1,U_2\}$. As was briefly mentioned shortly after [§Sheaf Cohomology, ⁋Proposition 12](/en/math/algebraic_varieties/sheaf_cohomology#prop12), any affine open cover of a projective variety satisfies the hypotheses of [§Sheaf Cohomology, ⁋Theorem 11](/en/math/algebraic_varieties/sheaf_cohomology#thm11), so the sheaf cohomology we seek reduces exactly to the computation for this affine open cover. Since the Čech complex is simply
+Now consider the Čech cohomology for $\{U_1,U_2\}$. As was briefly mentioned shortly after [§Sheaf Cohomology, ⁋Proposition 12](/en/math/algebraic_varieties/sheaf_cohomology#prop12){: data-relation="required" }, any affine open cover of a projective variety satisfies the hypotheses of [§Sheaf Cohomology, ⁋Theorem 11](/en/math/algebraic_varieties/sheaf_cohomology#thm11){: data-relation="required" }, so the sheaf cohomology we seek reduces exactly to the computation for this affine open cover. Since the Čech complex is simply
 
 $$\check{C}(\mathcal{U}, \mathcal{F}):\qquad \mathcal{F}(U_1)\oplus \mathcal{F}(U_2)\rightarrow \mathcal{F}(U_1\cap U_2)\rightarrow 0$$
 
@@ -138,7 +138,7 @@ $$f\mapsto (a_{-n_i}, \ldots, a_{-1})$$
 
 considered for all $p_i$ simultaneously. Then the dimension of the target of the above linear map is $\sum n_i = \deg D$, and its kernel consists of the pole-free global sections, i.e. $H^0(C, \mathcal{O}_C) = \mathbb{K}$, whence $\ell(D) \leq 1 + \deg D$. If $D$ is not effective but $\ell(D) > 0$, then $D$ is linearly equivalent to some effective divisor, so the same inequality holds.
 
-In general, for this inequality to be an equality the linear map must be surjective, but this is not always the case. To see why, consider the long exact sequence induced by the short exact sequence examined in the proof of [Proposition 3](#prop3):
+In general, for this inequality to be an equality the linear map must be surjective, but this is not always the case. To see why, consider the long exact sequence induced by the short exact sequence examined in the proof of [Proposition 3](#prop3){: data-relation="weak" }:
 
 $$0\longrightarrow \mathcal{O}_C\overset{i}{\longrightarrow} \mathcal{O}_C(D)\overset{p}{\longrightarrow} \mathcal{O}_D\longrightarrow 0$$
 
@@ -156,7 +156,7 @@ Applying formula (1), we obtain
 
 $$\dim\coker p^\ast=\dim H^1(C, \mathcal{O}_C)-\dim H^0(C, \mathcal{O}_C(K_C-D))^\vee=g-\ell(K_C-D)$$
 
-In the inequality ($3$), the gap between $\deg(D)+1$ and $\ell(D)$ is precisely the dimension of this cokernel, so these computations recover the result of [Proposition 3](#prop3). In other words, $\ell(K_C-D)$ measures how far $\ell(D)$ falls below its upper bound $\deg D+1$; originally this was a counting problem for $1$-forms vanishing along $D$, but Serre duality rewrites it as $\ell(K_C-D)$.
+In the inequality ($3$), the gap between $\deg(D)+1$ and $\ell(D)$ is precisely the dimension of this cokernel, so these computations recover the result of [Proposition 3](#prop3){: data-relation="weak" }. In other words, $\ell(K_C-D)$ measures how far $\ell(D)$ falls below its upper bound $\deg D+1$; originally this was a counting problem for $1$-forms vanishing along $D$, but Serre duality rewrites it as $\ell(K_C-D)$.
 
 For example, suppose $\deg D$ is very large, so that $\deg(K_C-D)<0$. Then $\ell(K_C-D)=0$, and the Riemann–Roch theorem gives
 
@@ -172,12 +172,12 @@ where $\deg D=0$ and $\ell(0)=1$, so we find $\ell(K_C)=g$. Substituting $D=K_C$
 
 $$\ell(K_C)-\ell(0)=\deg K_C +1-g$$
 
-and from this we recover the computation $\deg(K_C)=2g-2$ from [§Canonical Line Bundle, ⁋Example 10](/en/math/algebraic_varieties/canonical_bundle#ex10). In that example the degree-genus formula was invoked as a well-known fact to obtain $\deg(K_C)$ (which is historically more justified), but shortly we shall see in [Proposition 7](#prop7) that the degree-genus formula is in fact a special case of the Riemann–Roch theorem.
+and from this we recover the computation $\deg(K_C)=2g-2$ from [§Canonical Line Bundle, ⁋Example 10](/en/math/algebraic_varieties/canonical_bundle#ex10){: data-relation="weak" }. In that example the degree-genus formula was invoked as a well-known fact to obtain $\deg(K_C)$ (which is historically more justified), but shortly we shall see in [Proposition 7](#prop7){: data-relation="forward" } that the degree-genus formula is in fact a special case of the Riemann–Roch theorem.
 
 Summarizing the computations so far, $\ell(D)$ is the dimension of the complete linear system of $D$, while $\ell(K_C - D)$ is the correction term that $K_C$ imposes on $D$; for large degree this correction term vanishes, whereas for small degree it reflects the geometric information of $K_C$.
 
 ::: Example 4
-**$\mathbb{P}^1$**: The genus of $\mathbb{P}^1$ is $g = 0$, and the canonical divisor is $K_{\mathbb{P}^1} = -2H$ ([§Canonical Line Bundle, ⁋Example 8](/en/math/algebraic_varieties/canonical_bundle#ex8)). On the other hand, we showed in [§Line Bundles and Vector Bundles, ⁋Example 16](/en/math/algebraic_varieties/line_bundles#ex16) that the global sections of $\mathcal{O}_{\mathbb{P}^1}(d)$ are the homogeneous polynomials of degree $d$, so
+**$\mathbb{P}^1$**: The genus of $\mathbb{P}^1$ is $g = 0$, and the canonical divisor is $K_{\mathbb{P}^1} = -2H$ ([§Canonical Line Bundle, ⁋Example 8](/en/math/algebraic_varieties/canonical_bundle#ex8){: data-relation="required" }). On the other hand, we showed in [§Line Bundles and Vector Bundles, ⁋Example 16](/en/math/algebraic_varieties/line_bundles#ex16){: data-relation="required" } that the global sections of $\mathcal{O}_{\mathbb{P}^1}(d)$ are the homogeneous polynomials of degree $d$, so
 
 $$\ell(dH) = d+1 \quad (d \ge 0), \qquad \ell(dH) = 0 \quad (d < 0)$$
 
@@ -201,7 +201,7 @@ The case $\deg D=0$ is the small-degree situation mentioned above. From inequali
 Since $K_C \sim 0$, Riemann–Roch is especially simple on an elliptic curve. When $\deg D > 0$, the correction term $\ell(K_C-D)=\ell(-D)$ vanishes and $\ell(D)=\deg D$ is completely determined. This shows that $g=1$ is the simplest non-trivial case in the progression where the influence of correction terms grows more intricate as the genus increases.
 
 ::: Example 6 ($g=2$)
-Now consider the next more complicated case, $g=2$. Here $\deg K_C = 2g - 2 = 2$ and $\ell(K_C)=2$, and substituting $D=p$ into [Proposition 3](#prop3) yields
+Now consider the next more complicated case, $g=2$. Here $\deg K_C = 2g - 2 = 2$ and $\ell(K_C)=2$, and substituting $D=p$ into [Proposition 3](#prop3){: data-relation="required" } yields
 
 $$\ell(p)-\ell(K_C-p)=2-g$$
 
@@ -224,7 +224,7 @@ Now let us examine the properties of the morphism $\varphi_{K_C} : C \rightarrow
 
 ## Degree-Genus Formula
 
-In [§Canonical Line Bundle, ⁋Example 10](/en/math/algebraic_varieties/canonical_bundle#ex10) we asserted the following proposition as a well-known fact in order to show that $\deg K_C=2g-2$, but now we can prove it rigorously. This proceeds in exactly the opposite direction to that example: there the degree-genus formula and adjunction formula were used to prove $\deg K_C=2g-2$, whereas now we derive the degree-genus formula from $\deg K_C=2g-2$ together with the adjunction formula. Note that the degree of $K_C$ was already obtained from Riemann–Roch (without using the degree-genus formula) before [Example 4](#ex4) above.
+In [§Canonical Line Bundle, ⁋Example 10](/en/math/algebraic_varieties/canonical_bundle#ex10){: data-relation="weak" } we asserted the following proposition as a well-known fact in order to show that $\deg K_C=2g-2$, but now we can prove it rigorously. This proceeds in exactly the opposite direction to that example: there the degree-genus formula and adjunction formula were used to prove $\deg K_C=2g-2$, whereas now we derive the degree-genus formula from $\deg K_C=2g-2$ together with the adjunction formula. Note that the degree of $K_C$ was already obtained from Riemann–Roch (without using the degree-genus formula) before [Example 4](#ex4){: data-relation="weak" } above.
 
 ::: Proposition 7 (Degree-genus formula)
 For a smooth plane curve $C \subseteq \mathbb{P}^2$ of degree $d$,
@@ -235,13 +235,13 @@ holds.
 :::
 
 ::: Proof
-By the adjunction formula of [§Canonical Line Bundle, ⁋Proposition 9](/en/math/algebraic_varieties/canonical_bundle#prop9), $K_C = (K_{\mathbb{P}^2} + C)\vert_C = (d-3)H\vert_C$. Hence $\deg K_C = d(d-3)$, and substituting into $\deg K_C = 2g - 2$ yields
+By the adjunction formula of [§Canonical Line Bundle, ⁋Proposition 9](/en/math/algebraic_varieties/canonical_bundle#prop9){: data-relation="required" }, $K_C = (K_{\mathbb{P}^2} + C)\vert_C = (d-3)H\vert_C$. Hence $\deg K_C = d(d-3)$, and substituting into $\deg K_C = 2g - 2$ yields
 
 $$d(d-3) = 2g - 2 \implies g = \frac{d(d-3) + 2}{2} = \frac{(d-1)(d-2)}{2}$$
 
 :::
 
-This formula gives a direct computation of the geometric invariants of plane curves. For example, a smooth plane cubic has genus 1, so it is an elliptic curve as treated in [Example 5](#ex5). On the other hand, for $d = 1, 2$ we obtain $g = 0$, reflecting that both lines and smooth conics are birationally equivalent to $\mathbb{P}^1$. A line is itself isomorphic to $\mathbb{P}^1$, and for a smooth conic the projection from a point on it gives a birational map between the conic and $\mathbb{P}^1$; by [§Rational Maps, ⁋Proposition 10](/en/math/algebraic_varieties/rational_maps#prop10) this is equivalent to their function fields being isomorphic.
+This formula gives a direct computation of the geometric invariants of plane curves. For example, a smooth plane cubic has genus 1, so it is an elliptic curve as treated in [Example 5](#ex5){: data-relation="weak" }. On the other hand, for $d = 1, 2$ we obtain $g = 0$, reflecting that both lines and smooth conics are birationally equivalent to $\mathbb{P}^1$. A line is itself isomorphic to $\mathbb{P}^1$, and for a smooth conic the projection from a point on it gives a birational map between the conic and $\mathbb{P}^1$; by [§Rational Maps, ⁋Proposition 10](/en/math/algebraic_varieties/rational_maps#prop10){: data-relation="weak" } this is equivalent to their function fields being isomorphic.
 
 ::: Example 8
 Computing the genus by degree $d$: for degree 3 (cubic) we have $g = \frac{2 \cdot 1}{2} = 1$, an elliptic curve; for degree 4 (quartic) we have $g = \frac{3 \cdot 2}{2} = 3$; and for degree 5 (quintic) we have $g = \frac{4 \cdot 3}{2} = 6$. Since the genus grows rapidly with degree, smooth plane curves of higher degree have increasingly complex topological structure.
