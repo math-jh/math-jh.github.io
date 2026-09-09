@@ -135,7 +135,7 @@ and
 
 $$\Hom_{\lMod{A}}\left(M,\prod_{i\in I} N_i\right)\cong\prod_{i\in I}\Hom_{\lMod{A}}(M, N_i),\qquad \Hom_{\lMod{A}}\left(\bigoplus_{i\in I} M_i, N\right)\cong \prod_{i\in I}\Hom_{\lMod{A}}(M_i,N)\tag{2}$$
 
-In the special case where $A=\mathbb{Z}$, this recovers the contents of [§Abelian Groups, §§Tensor Products](/en/math/algebraic_structures/abelian_groups#tensor-products){: data-relation="weak" }; the above isomorphisms are ones that were omitted in that article for reasons of length.
+In the special case where $A=\mathbb{Z}$, this recovers the contents of [§Abelian Groups, §§Tensor Product](/en/math/algebraic_structures/abelian_groups#tensor-product){: data-relation="weak" }; the above isomorphisms are ones that were omitted in that article for reasons of length.
 
 ## Tensor Products of Modules over Commutative Rings
 
