@@ -26,11 +26,11 @@ $$\mathfrak{m}_x=\{\mathbf{f}\in \mathcal{C}^\infty_x\mid \mathbf{f}(x)=0\}$$
 
 $$(\mathfrak{m}_x/\mathfrak{m}_x^2)^\ast$$
 
-로 볼 수 있다는 것을 증명하였다. ([\[미분다양체\] §여접공간, ⁋보조정리 1](/ko/math/manifolds/cotangent_space#lem1)) 이 과정은 보통 미분기하학에서는 잘 다루지 않으나, algebraic variety로의 일반화에 큰 도움을 준다. 즉, (편의상 affine case로 고정한다면) 우리는 이미 algebraic variety들 위에 정의된 함수가 무엇인지 알고 ([§준사영다양체, ⁋정의 5](/ko/math/algebraic_varieties/quasi_projective_varieties#def5)), 이 때 $x\in X$에서 vanish하는 모든 함수들의 모임은 이 점에 해당되는 $\mathbb{K}[X]$의 maximal ideal에 해당한다는 것도 안다. 따라서 이를
+로 볼 수 있다는 것을 증명하였다. ([\[미분다양체\] §여접공간, ⁋보조정리 1](/ko/math/manifolds/cotangent_space#lem1){: data-relation="weak" }) 이 과정은 보통 미분기하학에서는 잘 다루지 않으나, algebraic variety로의 일반화에 큰 도움을 준다. 즉, (편의상 affine case로 고정한다면) 우리는 이미 algebraic variety들 위에 정의된 함수가 무엇인지 알고 ([§준사영다양체, ⁋정의 5](/ko/math/algebraic_varieties/quasi_projective_varieties#def5){: data-relation="required" }), 이 때 $x\in X$에서 vanish하는 모든 함수들의 모임은 이 점에 해당되는 $\mathbb{K}[X]$의 maximal ideal에 해당한다는 것도 안다. 따라서 이를
 
 $$\mathfrak{m}_x=\{f\in \mathbb{K}[X]\mid f(x)=0\}$$
 
-으로 정의하고, $\mathbb{K}[X]$의 이 maximal ideal에서의 localization $\mathbb{K}[X]_{\mathfrak{m}_x}=\mathcal{O}_{X,x}$을 생각할 수 있다. ([\[가환대수학\] §국소화, ⁋정의 4](/ko/math/commutative_algebra/localization#def4)) 기하적으로는 [§아핀다양체, ⁋정의 14](/ko/math/algebraic_varieties/affine_varieties#def14)를 생각하면 이들은 점 $x$에서의 regular function들의 germ으로 정의할 수 있다.
+으로 정의하고, $\mathbb{K}[X]$의 이 maximal ideal에서의 localization $\mathbb{K}[X]_{\mathfrak{m}_x}=\mathcal{O}_{X,x}$을 생각할 수 있다. ([\[가환대수학\] §국소화, ⁋정의 4](/ko/math/commutative_algebra/localization#def4){: data-relation="required" }) 기하적으로는 [§아핀다양체, ⁋정의 14](/ko/math/algebraic_varieties/affine_varieties#def14){: data-relation="weak" }를 생각하면 이들은 점 $x$에서의 regular function들의 germ으로 정의할 수 있다.
 
 ::: 정의 1
 Variety $X$의 점 $x$에서의 *Zariski tangent space<sub>자리스키 접공간</sub>* $T_x X$를
@@ -74,7 +74,7 @@ $$T_x X = (\mathfrak{m}_x / \mathfrak{m}_x^2)^\ast \cong \{v \in \mathbb{K}^n \m
 을 얻는다.
 :::
 
-증명은 maximal ideal의 언어를 사용하며 복잡하게 쓰여졌지만, 그 철학은 $X=Z(f_i)$에 대해 생각해보면 간단하다. 이 경우 $(\dd{f_i})_x(v)=0$은 ($\mathbb{K}^n$을 $\mathbb{A}^n$으로 본다면) 정확히 $\mathbb{A}^n$ 안에서 hypersurface $Z(f_i)$의 (일상적인) tangent space이다. [명제 2](#prop2)은 그 자체만으로는 affine variety에 대해서만 적용되는 것이기는 하지만, 임의의 variety $X$의 임의의 점 $x$는 affine neighborhood를 가지므로 본질적으로는 모든 variety에 대해 적용되는 것이다. Tangent space의 차원에 대한 다음 명제 또한 마찬가지다.
+증명은 maximal ideal의 언어를 사용하며 복잡하게 쓰여졌지만, 그 철학은 $X=Z(f_i)$에 대해 생각해보면 간단하다. 이 경우 $(\dd{f_i})_x(v)=0$은 ($\mathbb{K}^n$을 $\mathbb{A}^n$으로 본다면) 정확히 $\mathbb{A}^n$ 안에서 hypersurface $Z(f_i)$의 (일상적인) tangent space이다. [명제 2](#prop2){: data-relation="required" }은 그 자체만으로는 affine variety에 대해서만 적용되는 것이기는 하지만, 임의의 variety $X$의 임의의 점 $x$는 affine neighborhood를 가지므로 본질적으로는 모든 variety에 대해 적용되는 것이다. Tangent space의 차원에 대한 다음 명제 또한 마찬가지다.
 
 ::: 명제 3
 $T_x X$는 $\mathbb{K}$-벡터공간이며, 그 차원은 $n - \rank(J_x)$이다. 여기서 $J_x$는 $k \times n$ Jacobian matrix
@@ -84,7 +84,7 @@ $$J_x = \left(\frac{\partial f_i}{\partial \x_j}(x)\right)_{1 \le i \le k, 1 \le
 이다.
 :::
 ::: 증명
-각 $(\dd{f_i})_x: \mathbb{K}^n \rightarrow \mathbb{K}$는 linear functional이다. [명제 2](#prop2)에서 $T_x X$는 이들의 kernel들의 교집합이므로 $\mathbb{K}^n$의 부분공간이다. Jacobian matrix $J_x$의 행들은 이 linear functional들의 좌표표현이므로,
+각 $(\dd{f_i})_x: \mathbb{K}^n \rightarrow \mathbb{K}$는 linear functional이다. [명제 2](#prop2){: data-relation="required" }에서 $T_x X$는 이들의 kernel들의 교집합이므로 $\mathbb{K}^n$의 부분공간이다. Jacobian matrix $J_x$의 행들은 이 linear functional들의 좌표표현이므로,
 
 $$T_x X = \ker(J_x) = \{v \in \mathbb{K}^n \mid J_x v = 0\}$$
 
@@ -93,20 +93,20 @@ $$T_x X = \ker(J_x) = \{v \in \mathbb{K}^n \mid J_x v = 0\}$$
 
 ## 매끄러운 점과 특이점
 
-미분기하학에서, 임의의 점에서의 tangent space의 차원은 항상 manifold의 차원과 같았다. 그러나 이는 manifold의 정의가 다소 빡빡하기 때문으로, algebraic geometry에서는 단 하나의 다항식으로 정의되는 affine variety마저 (고전적인 그림에서) manifold가 아닐 수 있다. ([예시 6](#ex6), [예시 7](#ex7)) 그럼에도 불구하고, tangent space의 차원과 variety의 차원이 아무런 관계가 없는 것은 아니다.
+미분기하학에서, 임의의 점에서의 tangent space의 차원은 항상 manifold의 차원과 같았다. 그러나 이는 manifold의 정의가 다소 빡빡하기 때문으로, algebraic geometry에서는 단 하나의 다항식으로 정의되는 affine variety마저 (고전적인 그림에서) manifold가 아닐 수 있다. ([예시 6](#ex6){: data-relation="forward" }, [예시 7](#ex7){: data-relation="forward" }) 그럼에도 불구하고, tangent space의 차원과 variety의 차원이 아무런 관계가 없는 것은 아니다.
 
 ::: 명제 4
 Irreducible variety $X$의 임의의 점 $x$에 대해 $\dim T_x X \ge \dim X$이다.
 :::
 
 ::: 증명
-Affine case만 보인다. $X = Z(f_1, \ldots, f_k) \subseteq \mathbb{A}^n$이 irreducible하고 $\dim X = d$라 하자. 점 $x \in X$에서의 local ring $\mathcal{O}_{X,x} = \mathbb{K}[X]_{\mathfrak{m}_x}$를 생각하자. $X$가 irreducible이므로 $\mathbb{K}[X]$는 finitely generated $\mathbb{K}$-algebra인 동시에 domain이고, $\mathfrak{m}_x$가 maximal ideal이므로 $\dim \mathbb{K}[X]/\mathfrak{m}_x = 0$이다. 따라서 [\[가환대수학\] §뇌터 정규화, ⁋정리 4](/ko/math/commutative_algebra/noether_normalization#thm4)의 차원 공식은 $\codim \mathfrak{m}_x = \dim \mathbb{K}[X]$를 주며, prime ideal의 codimension은 그 ideal에서의 localization의 차원으로 정의되었으므로 ([\[가환대수학\] §차원, ⁋정의 2](/ko/math/commutative_algebra/Krull_dimension#def2)) 다음의 식
+Affine case만 보인다. $X = Z(f_1, \ldots, f_k) \subseteq \mathbb{A}^n$이 irreducible하고 $\dim X = d$라 하자. 점 $x \in X$에서의 local ring $\mathcal{O}_{X,x} = \mathbb{K}[X]_{\mathfrak{m}_x}$를 생각하자. $X$가 irreducible이므로 $\mathbb{K}[X]$는 finitely generated $\mathbb{K}$-algebra인 동시에 domain이고, $\mathfrak{m}_x$가 maximal ideal이므로 $\dim \mathbb{K}[X]/\mathfrak{m}_x = 0$이다. 따라서 [\[가환대수학\] §뇌터 정규화, ⁋정리 4](/ko/math/commutative_algebra/noether_normalization#thm4){: data-relation="required" }의 차원 공식은 $\codim \mathfrak{m}_x = \dim \mathbb{K}[X]$를 주며, prime ideal의 codimension은 그 ideal에서의 localization의 차원으로 정의되었으므로 ([\[가환대수학\] §차원, ⁋정의 2](/ko/math/commutative_algebra/Krull_dimension#def2){: data-relation="required" }) 다음의 식
 
 $$\dim \mathcal{O}_{X,x} = \codim \mathfrak{m}_x = \dim \mathbb{K}[X] = \dim X = d$$
 
-을 얻는다. 여기서 셋째 등식은 [§차원, ⁋명제 2](/ko/math/algebraic_varieties/dimension#prop2)에 의한 것이다.
+을 얻는다. 여기서 셋째 등식은 [§차원, ⁋명제 2](/ko/math/algebraic_varieties/dimension#prop2){: data-relation="required" }에 의한 것이다.
 
-일반적으로 Noetherian local ring $(R, \mathfrak{m})$에 대하여 $\dim_{\mathbb{K}}(\mathfrak{m}/\mathfrak{m}^2) \ge \dim R$이다. ([\[가환대수학\] §매개계, ⁋명제 2](/ko/math/commutative_algebra/system_of_parameters#prop2)) 따라서
+일반적으로 Noetherian local ring $(R, \mathfrak{m})$에 대하여 $\dim_{\mathbb{K}}(\mathfrak{m}/\mathfrak{m}^2) \ge \dim R$이다. ([\[가환대수학\] §매개계, ⁋명제 2](/ko/math/commutative_algebra/system_of_parameters#prop2){: data-relation="required" }) 따라서
 
 $$\dim T_x X = \dim_{\mathbb{K}}(\mathfrak{m}_x/\mathfrak{m}_x^2) \ge \dim \mathcal{O}_{X,x} = d = \dim X$$
 
@@ -133,7 +133,7 @@ $$\dim T_x X = \dim_{\mathbb{K}}(\mathfrak{m}_x/\mathfrak{m}_x^2) \ge \dim \math
 
     $$J_{(x,y)} = \begin{pmatrix} -2x - 3x^2 & 2y \end{pmatrix}$$
 
-    이므로, 원점에서 Jacobian은 $(0,0)$이고, 따라서 [명제 3](#prop3)에 의해 원점은 singular point이다. 기하학적으로, tangent space가 2차원이라는 것은 두 갈래의 접선 방향이 모두 포함된다는 것을 의미한다. 구체적으로, $\y^2 - \x^2(\x+1) \approx \y^2 - \x^2 = (\y-\x)(\y+\x)$이므로, 원점 근처에서 곡선은 $\y = \x$와 $\y = -\x$ 두 직선의 합집합처럼 보인다. Node는 "가장 온화한" singular point 중 하나이다.
+    이므로, 원점에서 Jacobian은 $(0,0)$이고, 따라서 [명제 3](#prop3){: data-relation="required" }에 의해 원점은 singular point이다. 기하학적으로, tangent space가 2차원이라는 것은 두 갈래의 접선 방향이 모두 포함된다는 것을 의미한다. 구체적으로, $\y^2 - \x^2(\x+1) \approx \y^2 - \x^2 = (\y-\x)(\y+\x)$이므로, 원점 근처에서 곡선은 $\y = \x$와 $\y = -\x$ 두 직선의 합집합처럼 보인다. Node는 "가장 온화한" singular point 중 하나이다.
 2. (Cusp) 이번에는 $Z(\y^2 - \x^3)\subseteq \mathbb{A}^2$를 생각하자.
 
     {% diagram Math/Algebraic_Varieties/Tangent_Spaces_and_Smoothness-2.svg width="18.80em" alt="cusp" %}
@@ -152,7 +152,7 @@ Affine variety $X = Z(f_1, \ldots, f_k) \subseteq \mathbb{A}^n$와 이에 대응
 :::
 
 ::: 증명
-[명제 3](#prop3)에서 $\dim T_x X = n - \rank(J_x)$임을 보였다. [정의 5](#def5)에서 $x$가 smooth point라는 것은 $\dim T_x X = \dim X$인 것이다. 따라서 $x$가 smooth point일 필요충분조건은
+[명제 3](#prop3){: data-relation="required" }에서 $\dim T_x X = n - \rank(J_x)$임을 보였다. [정의 5](#def5){: data-relation="required" }에서 $x$가 smooth point라는 것은 $\dim T_x X = \dim X$인 것이다. 따라서 $x$가 smooth point일 필요충분조건은
 
 $$n - \rank(J_x) = \dim X$$
 
@@ -174,17 +174,17 @@ Variety $X$의 smooth points들의 집합 $X_\sm$은 $X$의 dense open subset이
 :::
 
 ::: 증명
-$X = Z(f_1, \ldots, f_k) \subseteq \mathbb{A}^n$의 차원이 $\dim X = d$라 하자. [명제 8](#prop8)에 의해
+$X = Z(f_1, \ldots, f_k) \subseteq \mathbb{A}^n$의 차원이 $\dim X = d$라 하자. [명제 8](#prop8){: data-relation="required" }에 의해
 
 $$X_\sm = \{x \in X \mid \rank(J_x) = n - d\}$$
 
-이다. 이제 이 집합이 dense open subset임을 보인다. 우선 $X_\sm$이 열린집합인 것은 상대적으로 자명하다. [명제 3](#prop3)과 [명제 4](#prop4)에 의하여 $X$의 임의의 점에서 $n - \rank(J_x) = \dim T_x X \ge d$, 즉 $\rank(J_x) \le n-d$가 자동으로 성립하므로, $X$ 위에서 rank가 정확히 $n-d$라는 조건은 rank가 $n-d$ 이상이라는 조건과 같다. 그런데 후자는 어떤 $(n-d) \times (n-d)$ 부분행렬의 행렬식이 $0$이 아닌 것과 동치이고, 이는 Zariski 위상에서 열린조건이다. 따라서 $X_\sm$은 $X$의 열린집합이다.
+이다. 이제 이 집합이 dense open subset임을 보인다. 우선 $X_\sm$이 열린집합인 것은 상대적으로 자명하다. [명제 3](#prop3){: data-relation="required" }과 [명제 4](#prop4){: data-relation="required" }에 의하여 $X$의 임의의 점에서 $n - \rank(J_x) = \dim T_x X \ge d$, 즉 $\rank(J_x) \le n-d$가 자동으로 성립하므로, $X$ 위에서 rank가 정확히 $n-d$라는 조건은 rank가 $n-d$ 이상이라는 조건과 같다. 그런데 후자는 어떤 $(n-d) \times (n-d)$ 부분행렬의 행렬식이 $0$이 아닌 것과 동치이고, 이는 Zariski 위상에서 열린조건이다. 따라서 $X_\sm$은 $X$의 열린집합이다.
 
-$X_\sm$이 공집합이 아님을 보이는 것이 다소 기술적인데, 아이디어는 일반적인 점이 smooth point가 되어야 하므로, $X$의 generic point $\eta$를 생각하는 것이다. $\eta$에서의 localization을 생각하면, local ring $\mathcal{O}_{X,\eta} = \mathbb{K}(X)$는 field이므로 regular local ring이다. 그런데 [\[가환대수학\] §매개계, ⁋명제 2](/ko/math/commutative_algebra/system_of_parameters#prop2)에 의해
+$X_\sm$이 공집합이 아님을 보이는 것이 다소 기술적인데, 아이디어는 일반적인 점이 smooth point가 되어야 하므로, $X$의 generic point $\eta$를 생각하는 것이다. $\eta$에서의 localization을 생각하면, local ring $\mathcal{O}_{X,\eta} = \mathbb{K}(X)$는 field이므로 regular local ring이다. 그런데 [\[가환대수학\] §매개계, ⁋명제 2](/ko/math/commutative_algebra/system_of_parameters#prop2){: data-relation="required" }에 의해
 
 $$\dim_{\mathbb{K}}(\mathfrak{m}_\eta/\mathfrak{m}_\eta^2) \ge \dim \mathcal{O}_{X,\eta} = d$$
 
-인데, [명제 4](#prop4)에 의해 반대 부등식도 성립하므로 $\dim T_\eta X = d$이다. 따라서 $\eta \in X_\sm$이다. 이제 임의의 공집합이 아닌 열린집합은 irreducibility에 의해 dense이다. 
+인데, [명제 4](#prop4){: data-relation="required" }에 의해 반대 부등식도 성립하므로 $\dim T_\eta X = d$이다. 따라서 $\eta \in X_\sm$이다. 이제 임의의 공집합이 아닌 열린집합은 irreducibility에 의해 dense이다. 
 :::
 
 그럼 다음을 정의한다.
@@ -194,7 +194,7 @@ Variety $X$가 *smooth* (또는 *nonsingular<sub>비특이</sub>*)라는 것은 
 :::
 
 ::: 예시 12
-[예시 6](#ex6)의 variety들은 모두 smooth이고, [예시 7](#ex7)의 모든 variety들은 singular이다.
+[예시 6](#ex6){: data-relation="required" }의 variety들은 모두 smooth이고, [예시 7](#ex7){: data-relation="required" }의 모든 variety들은 singular이다.
 :::
 
 ## 접원뿔
@@ -207,12 +207,12 @@ Singular point에서는 tangent space가 너무 커서 variety의 국소적 구�
 임의의 affine variety $X\subseteq \mathbb{A}^n$에 대하여, $\initial(I(X))$이 정의하는 algebraic variety를 $X$의 원점에서의 *tangent cone<sub>접뿔</sub>*이라 정의하고, 이를 $TC_0 X$로 표기한다.
 :::
 
-더 일반적으로, $f$를 $\x_i-x_i$들에 대한 다항식으로 쓰고 비슷한 정의를 하면 임의의 점에서의 tangent cone을 정의할 수 있다. 이것이 cone이라 불리는 이유는, [§사영다양체, ⁋정의 12](/ko/math/algebraic_varieties/projective_varieties#def12)와 마찬가지로 homogeneous ideal의 zero set이기 때문이다.
+더 일반적으로, $f$를 $\x_i-x_i$들에 대한 다항식으로 쓰고 비슷한 정의를 하면 임의의 점에서의 tangent cone을 정의할 수 있다. 이것이 cone이라 불리는 이유는, [§사영다양체, ⁋정의 12](/ko/math/algebraic_varieties/projective_varieties#def12){: data-relation="weak" }와 마찬가지로 homogeneous ideal의 zero set이기 때문이다.
 
 이제 이것이 어떻게 singular point를 더 세밀하게 분류하는지 살펴보자. 
 
 ::: 예시 14
-[예시 7](#ex7)의 nodal curve $X = Z(\y^2 - \x^2(\x+1))$에서, $f$의 lowest degree term은 $\y^2 - \x^2 = (\y-\x)(\y+\x)$이므로
+[예시 7](#ex7){: data-relation="weak" }의 nodal curve $X = Z(\y^2 - \x^2(\x+1))$에서, $f$의 lowest degree term은 $\y^2 - \x^2 = (\y-\x)(\y+\x)$이므로
 
 $$TC_0 X = Z(\y-\x) \cup Z(\y+\x)$$
 
@@ -220,14 +220,14 @@ $$TC_0 X = Z(\y-\x) \cup Z(\y+\x)$$
 :::
 
 ::: 예시 15
-[예시 7](#ex7)의 곡선 $X = Z(\y^2 - \x^3)$에서, $f$의 lowest degree term은 $\y^2$이므로
+[예시 7](#ex7){: data-relation="weak" }의 곡선 $X = Z(\y^2 - \x^3)$에서, $f$의 lowest degree term은 $\y^2$이므로
 
 $$TC_0 X = Z(\y^2)$$
 
 이다. 이는 $\y = 0$ 직선을 두 번 count한 것이며, cusp가 $\x$-축 방향으로 뾰족하게 끝남을 보여준다. 비교하면, tangent space $T_0 X = \mathbb{K}^2$는 모든 방향을 포함하여 너무 크다.
 :::
 
-일반적으로, [§유리사상, ⁋예시 12](/ko/math/algebraic_varieties/rational_maps#ex12)을 생각하면 nodal curve의 singularity는 blowup을 통해 해소할 수 있다. 즉 blowup을 하고 나면 원점에서 두 갈래 직선 $\y-\x$와 $\y+\x$는 $\mathbb{P}^1$에 의해 갈라지게 된다. 그러나 cusp의 경우 원점 근처에서 곡선이 두 갈래로 갈라지지 않으므로 blowup을 하여도 원점 위로 올라오는 점은 $\mathbb{P}^1$의 한 점뿐이며, 이러한 의미에서 일반적으로 cusp이 node보다 좋지 않은 singularity로 생각한다. 
+일반적으로, [§유리사상, ⁋예시 12](/ko/math/algebraic_varieties/rational_maps#ex12){: data-relation="required" }을 생각하면 nodal curve의 singularity는 blowup을 통해 해소할 수 있다. 즉 blowup을 하고 나면 원점에서 두 갈래 직선 $\y-\x$와 $\y+\x$는 $\mathbb{P}^1$에 의해 갈라지게 된다. 그러나 cusp의 경우 원점 근처에서 곡선이 두 갈래로 갈라지지 않으므로 blowup을 하여도 원점 위로 올라오는 점은 $\mathbb{P}^1$의 한 점뿐이며, 이러한 의미에서 일반적으로 cusp이 node보다 좋지 않은 singularity로 생각한다. 
 
 ---
 
