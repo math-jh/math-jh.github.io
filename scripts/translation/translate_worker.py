@@ -105,7 +105,7 @@ CLAUDE_VERIFY_DONE_TIMEOUT = 240             # max wait for the session to write
 # 설명 보강이 정말 필요한지와 최소 수정안을 판단한다. 별도 codex-ask 래퍼는
 # redteam 정확도 로그의 producer라 쓰지 않는다.
 CODEX_BIN               = os.environ.get("CODEX_BIN") or str(
-    Path.home() / ".npm-global/bin/codex")
+    Path.home() / ".npm-global/bin/codex-multi-auth-codex")
 CODEX_REVIEW_MODEL      = os.environ.get("CODEX_REVIEW_MODEL", "gpt-5.6-sol")
 CODEX_REVIEW_EFFORT     = os.environ.get("CODEX_REVIEW_EFFORT", "high")
 CODEX_REVIEW_TIMEOUT_SEC = 900
@@ -2305,7 +2305,7 @@ def call_codex_ko_review(ko_path: Path, findings: List[dict]) -> dict:
     with tempfile.TemporaryDirectory(prefix="codex-ko-review-") as tmp:
         out_path = Path(tmp) / "last-message.json"
         proc = subprocess.run(
-            [CODEX_BIN, "exec", "--ignore-user-config",
+            [CODEX_BIN, "exec",
              "--model", CODEX_REVIEW_MODEL,
              "-c", f'model_reasoning_effort="{CODEX_REVIEW_EFFORT}"',
              "--sandbox", "read-only", "--skip-git-repo-check", "--ephemeral",

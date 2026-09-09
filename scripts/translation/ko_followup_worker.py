@@ -187,7 +187,7 @@ def codex_pass(findings: list[dict], ko_diff: str, en_diff: str) -> tuple[bool, 
     with tempfile.TemporaryDirectory(prefix="codex-ko-followup-") as tmp:
         out_path = Path(tmp) / "last-message.json"
         proc = subprocess.run(
-            [tw.CODEX_BIN, "exec", "--ignore-user-config",
+            [tw.CODEX_BIN, "exec",
              "--model", tw.CODEX_REVIEW_MODEL,
              "-c", f'model_reasoning_effort="{tw.CODEX_REVIEW_EFFORT}"',
              "--sandbox", "read-only", "--skip-git-repo-check", "--ephemeral",

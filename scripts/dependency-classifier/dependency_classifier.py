@@ -24,6 +24,7 @@ import re
 import shutil
 import subprocess
 import sys
+import tempfile
 import time
 from dataclasses import dataclass
 from datetime import datetime
@@ -49,6 +50,10 @@ AGY_BIN = os.environ.get("DEPENDENCY_AGY_BIN", str(Path.home() / ".gemini/bin/ag
 AGY_MODEL = os.environ.get("DEPENDENCY_AGY_MODEL", "gemini-3.8-flash-high")
 CLAUDE_BIN = os.environ.get("DEPENDENCY_CLAUDE_BIN", str(Path.home() / ".local/bin/claude"))
 CLAUDE_MODEL = os.environ.get("DEPENDENCY_CLAUDE_MODEL", "opus")
+CODEX_BIN = os.environ.get(
+    "DEPENDENCY_CODEX_BIN", str(Path.home() / ".npm-global/bin/codex-multi-auth-codex"))
+CODEX_MODEL = os.environ.get("DEPENDENCY_CODEX_MODEL", "gpt-5.6-sol")
+CODEX_EFFORT = os.environ.get("DEPENDENCY_CODEX_EFFORT", "high")
 MODEL_TIMEOUT = int(os.environ.get("DEPENDENCY_MODEL_TIMEOUT", "900"))
 BLOCK_SEC = 24 * 3600
 CHUNK_SIZE = 10
@@ -276,8 +281,8 @@ def parse_json_value(raw: str) -> dict:
     raise RuntimeError(f"model returned no JSON value: {raw[:300]!r}")
 
 
-def call_antigravity(items: list[dict]) -> dict:
-    prompt = FIRST_PROMPT + json.dumps(items, ensure_ascii=False)
+def call_antigravity(items: list[dict], *, review: bool = False) -> dict:
+    prompt = (REVIEW_PROMPT if review else FIRST_PROMPT) + json.dumps(items, ensure_ascii=False)
     proc = subprocess.run(
         [AGY_BIN, "--print", prompt, "--model", AGY_MODEL,
          "--output-format", "json", "--disable-slash-commands", "--print-timeout", "15m"],
@@ -292,8 +297,8 @@ def call_antigravity(items: list[dict]) -> dict:
     return parse_json_value(str(envelope.get("response", "")))
 
 
-def call_opus(items: list[dict]) -> dict:
-    prompt = REVIEW_PROMPT + json.dumps(items, ensure_ascii=False)
+def call_opus(items: list[dict], *, review: bool = True) -> dict:
+    prompt = (REVIEW_PROMPT if review else FIRST_PROMPT) + json.dumps(items, ensure_ascii=False)
     env = {**os.environ, "CLAUDE_CODE_DISABLE_ADVISOR_TOOL": "1"}
     proc = subprocess.run(
         [CLAUDE_BIN, "-p", "--model", CLAUDE_MODEL, "--output-format", "text"],
@@ -305,10 +310,71 @@ def call_opus(items: list[dict]) -> dict:
     return parse_json_value(proc.stdout)
 
 
-def validate_results(payload: dict, expected: set[str], *, review: bool) -> dict[str, dict]:
+def codex_output_schema(items: list[dict], *, review: bool) -> dict:
+    properties = {
+        "id": {"type": "string", "enum": [str(item["id"]) for item in items]},
+        "relation": {
+            "type": "string",
+            "enum": sorted(RELATIONS | ({"ambiguous"} if review else set())),
+        },
+        "reason": {"type": "string"},
+    }
+    required = ["id", "relation", "reason"]
+    if not review:
+        properties["confidence"] = {"type": "string", "enum": ["high", "medium"]}
+        required.append("confidence")
+    count = len(items)
+    return {
+        "type": "object",
+        "properties": {
+            "items": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "properties": properties,
+                    "required": required,
+                    "additionalProperties": False,
+                },
+                "minItems": count,
+                "maxItems": count,
+            },
+        },
+        "required": ["items"],
+        "additionalProperties": False,
+    }
+
+
+def call_codex(items: list[dict], *, review: bool) -> dict:
+    """Use the multi-auth Codex CLI as the final structured-output fallback."""
+    prompt = (REVIEW_PROMPT if review else FIRST_PROMPT) + json.dumps(items, ensure_ascii=False)
+    with tempfile.TemporaryDirectory(prefix="dependency-codex-") as tmp:
+        tmp_path = Path(tmp)
+        schema_path = tmp_path / "schema.json"
+        output_path = tmp_path / "last-message.json"
+        schema_path.write_text(
+            json.dumps(codex_output_schema(items, review=review), ensure_ascii=False),
+            encoding="utf-8",
+        )
+        proc = subprocess.run(
+            [CODEX_BIN, "exec", "--model", CODEX_MODEL,
+             "-c", f'model_reasoning_effort="{CODEX_EFFORT}"',
+             "--sandbox", "read-only", "--skip-git-repo-check", "--ephemeral",
+             "--color", "never", "--output-schema", str(schema_path),
+             "--output-last-message", str(output_path), "-"],
+            input="[cron]\n\n" + prompt, cwd=tmp,
+            capture_output=True, text=True, timeout=MODEL_TIMEOUT,
+        )
+        if proc.returncode:
+            raise RuntimeError(f"Codex exited {proc.returncode}: {proc.stderr.strip()[:400]}")
+        if not output_path.exists():
+            raise RuntimeError("Codex produced no last-message file")
+        return parse_json_value(output_path.read_text(encoding="utf-8"))
+
+
+def valid_results(payload: dict, expected: set[str], *, review: bool) -> dict[str, dict]:
     rows = payload.get("items")
     if not isinstance(rows, list):
-        raise RuntimeError("model JSON has no items array")
+        return {}
     out = {}
     allowed = RELATIONS | ({"ambiguous"} if review else set())
     for row in rows:
@@ -320,18 +386,64 @@ def validate_results(payload: dict, expected: set[str], *, review: bool) -> dict
         if not review and str(row.get("confidence", "")).lower() not in {"high", "medium"}:
             continue
         out[row["id"]] = row
-    missing = expected - set(out)
-    if missing:
-        raise RuntimeError(f"model omitted/invalidated {len(missing)} item(s): {sorted(missing)[:4]}")
     return out
+
+
+def request_complete_results(
+    items: list[dict], *, review: bool, stage: str,
+    primary_name: str, primary, fallback_name: str, fallback,
+    final_fallback_name: str | None = None, final_fallback=None,
+) -> dict[str, dict]:
+    """Keep valid rows and recover only incomplete IDs within this cron tick."""
+    accepted: dict[str, dict] = {}
+    pending = items
+    last_issue = "incomplete model response"
+    attempts = [
+        (primary_name, primary),
+        (primary_name, primary),
+        (fallback_name, fallback),
+    ]
+    if final_fallback_name is not None and final_fallback is not None:
+        attempts.append((final_fallback_name, final_fallback))
+    for attempt_index, (model_name, caller) in enumerate(attempts):
+        expected = {str(item["id"]) for item in pending}
+        try:
+            payload = caller(pending)
+            accepted.update(valid_results(payload, expected, review=review))
+            last_issue = "model omitted or invalidated requested items"
+        except Exception as exc:
+            # A malformed envelope, timeout, or provider failure is recoverable here.
+            # Do not log the exception on a recovered run: the dashboard treats words
+            # such as "error" and "failed" in the run log as a real job failure.
+            last_issue = f"{type(exc).__name__}: {str(exc)[:240]}"
+        pending = [item for item in pending if str(item["id"]) not in accepted]
+        if not pending:
+            return accepted
+        if attempt_index == 0:
+            log(f"{stage}: retrying {len(pending)} incomplete item(s) with {model_name}")
+        elif attempt_index + 1 < len(attempts):
+            next_name = attempts[attempt_index + 1][0]
+            log(f"{stage}: falling back for {len(pending)} incomplete item(s) to {next_name}")
+    missing = sorted(str(item["id"]) for item in pending)
+    raise RuntimeError(
+        f"{stage} omitted/invalidated {len(missing)} item(s) after retry and fallback: "
+        f"{missing[:4]} ({last_issue})"
+    )
 
 
 def classify(links: list[Link]) -> tuple[dict[str, str], list[dict]]:
     first: dict[str, dict] = {}
     for i in range(0, len(links), CHUNK_SIZE):
         chunk = links[i:i + CHUNK_SIZE]
-        values = validate_results(call_antigravity(prompt_items(chunk, False)),
-                                  {x.ident for x in chunk}, review=False)
+        values = request_complete_results(
+            prompt_items(chunk, False), review=False, stage="first pass",
+            primary_name="Antigravity",
+            primary=lambda items: call_antigravity(items, review=False),
+            fallback_name="Claude Opus",
+            fallback=lambda items: call_opus(items, review=False),
+            final_fallback_name="Codex",
+            final_fallback=lambda items: call_codex(items, review=False),
+        )
         first.update(values)
     decisions = {ident: str(row["relation"]).lower() for ident, row in first.items()
                  if str(row["confidence"]).lower() == "high"}
@@ -340,8 +452,13 @@ def classify(links: list[Link]) -> tuple[dict[str, str], list[dict]]:
     ambiguous = []
     for i in range(0, len(medium), CHUNK_SIZE):
         chunk = medium[i:i + CHUNK_SIZE]
-        values = validate_results(call_opus(prompt_items(chunk, True)),
-                                  {x.ident for x in chunk}, review=True)
+        values = request_complete_results(
+            prompt_items(chunk, True), review=True, stage="Opus review",
+            primary_name="Claude Opus",
+            primary=lambda items: call_opus(items, review=True),
+            fallback_name="Codex",
+            fallback=lambda items: call_codex(items, review=True),
+        )
         for ident, row in values.items():
             relation = str(row["relation"]).lower()
             if relation == "ambiguous":
