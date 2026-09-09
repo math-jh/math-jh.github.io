@@ -16087,6 +16087,13 @@ R:
   defs:
   - label: '[복소해석학] §고립특이점과 Laurent 급수'
     url: /ko/math/complex_analysis/isolated_singularities
+- id: representability
+  en: representability
+  ko: 표현가능성
+  primary: en
+  defs:
+  - label: '[스택] §대수적 스택'
+    url: /ko/math/stacks/algebraic_stacks
 - id: representable
   en: representable
   ko: 표현가능
