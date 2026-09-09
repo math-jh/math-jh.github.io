@@ -57,7 +57,7 @@ $$\operatorname{ch}(E\otimes F)=\sum_{i,j} e^{x_i+y_j}=\left(\sum_i e^{x_i}\righ
 가 성립한다. $\square$
 :::
 
-[명제 2](#prop2)의 첫 번째 성질은 Chern character를 Grothendieck group $K_0(X)$ 위에서 잘 정의된 group homomorphism
+[명제 2](#prop2){: data-relation="required" }의 첫 번째 성질은 Chern character를 Grothendieck group $K_0(X)$ 위에서 잘 정의된 group homomorphism
 
 $$\operatorname{ch}: K_0(X)\longrightarrow A^\bullet(X)\otimes_\mathbb{Z}\mathbb{Q}$$
 
@@ -119,7 +119,7 @@ $$\operatorname{ch}(\mathcal{L})\cdot\operatorname{td}(T_X)=(1+c_1(\mathcal{L}))
 
 $$\chi(X,\mathcal{L})=\int_X\left(c_1(\mathcal{L})-\frac{1}{2}K_X\right)=\deg(\mathcal{L})+1-g$$
 
-가 되어, classical Riemann-Roch theorem이 복원된다. ([§곡선에서의 리만-로흐 정리](/ko/math/algebraic_varieties/riemann_roch_theorem) 참조)
+가 되어, classical Riemann-Roch theorem이 복원된다. ([§곡선에서의 리만-로흐 정리](/ko/math/algebraic_varieties/riemann_roch_theorem){: data-relation="weak" } 참조)
 :::
 
 ::: 예시 6 (곡면)
@@ -135,7 +135,7 @@ $$\left(1+\frac{x_1}{2}+\frac{x_1^2}{12}\right)\left(1+\frac{x_2}{2}+\frac{x_2^2
 
 $$\operatorname{td}(T_X)=1+\frac{c_1}{2}+\frac{c_1^2+c_2}{12}$$
 
-을 얻는다. ([§곡면에서의 리만-로흐 정리](/ko/math/algebraic_varieties/riemann_roch_surfaces) 참조)
+을 얻는다. ([§곡면에서의 리만-로흐 정리](/ko/math/algebraic_varieties/riemann_roch_surfaces){: data-relation="weak" } 참조)
 :::
 
 ::: 예시 7 (Projective space)
@@ -143,7 +143,7 @@ Projective space $\mathbb{P}^n$에 대하여, Euler exact sequence
 
 $$0\longrightarrow\mathcal{O}_{\mathbb{P}^n}\longrightarrow\mathcal{O}_{\mathbb{P}^n}(1)^{\oplus(n+1)}\longrightarrow T_{\mathbb{P}^n}\longrightarrow 0$$
 
-으로부터 $c(T_{\mathbb{P}^n})=(1+h)^{n+1}$을 얻는다. 한편 $\mathcal{O}_{\mathbb{P}^n}(1)$의 Chern root는 hyperplane class $h$이고 $\operatorname{td}(\mathcal{O}_{\mathbb{P}^n})=1$이므로, 위의 exact sequence에 [명제 4](#prop4)를 적용하면
+으로부터 $c(T_{\mathbb{P}^n})=(1+h)^{n+1}$을 얻는다. 한편 $\mathcal{O}_{\mathbb{P}^n}(1)$의 Chern root는 hyperplane class $h$이고 $\operatorname{td}(\mathcal{O}_{\mathbb{P}^n})=1$이므로, 위의 exact sequence에 [명제 4](#prop4){: data-relation="required" }를 적용하면
 
 $$\operatorname{td}(T_{\mathbb{P}^n})=\left(\frac{h}{1-e^{-h}}\right)^{n+1}$$
 
