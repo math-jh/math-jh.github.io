@@ -21,7 +21,7 @@ $$M(n)_k=M_{n+k}\qquad\text{for all $k$}$$
 
 ## 몫아이디얼
 
-우선 임의의 ring $A$와 $A$의 두 ideal $\mathfrak{a}, \mathfrak{b}$에 대하여, ideal quotient의 정의를 기억하자. ([§기본 개념들, §§기본 정의들](/ko/math/commutative_algebra/basic_notions#기본-정의들))
+우선 임의의 ring $A$와 $A$의 두 ideal $\mathfrak{a}, \mathfrak{b}$에 대하여, ideal quotient의 정의를 기억하자. ([§기본 개념들, §§기본 정의들](/ko/math/commutative_algebra/basic_notions#기본-정의들){: data-relation="weak" })
 
 ::: 정의 1
 Ring $A$와 $A$의 두 ideal $\mathfrak{a}, \mathfrak{b}$에 대하여, *ideal quotient<sub>몫아이디얼</sub>*를 다음의 식
@@ -39,7 +39,7 @@ $$xa \mathfrak{b}\subseteq x \mathfrak{a}\subseteq \mathfrak{a}$$
 
 ## 동차아이디얼의 성질들
 
-우리는 [\[대수적 구조\] §등급환, ⁋명제 6](/ko/math/algebraic_structures/graded_rings#prop6)에서 임의의 homogeneous ideal은 항상 homogeneous element들로 생성됨을 보였는데, 이를 이용하면 다음의 [보조정리 2](#lem2)를 보일 수 있다. 
+우리는 [\[대수적 구조\] §등급환, ⁋명제 6](/ko/math/algebraic_structures/graded_rings#prop6){: data-relation="required" }에서 임의의 homogeneous ideal은 항상 homogeneous element들로 생성됨을 보였는데, 이를 이용하면 다음의 [보조정리 2](#lem2){: data-relation="forward" }를 보일 수 있다. 
 
 ::: 보조정리 2
 Graded ring $A$와 $A$의 homogeneous ideal들 $\mathfrak{a},\mathfrak{b}$에 대하여 다음이 성립한다.
@@ -90,7 +90,7 @@ $$(S^{-1}A)_0[T_1, T_2]/(T_1T_2-1)$$
 으로 정의된다.
 :::
 ::: 증명
-함수 $\{T_1,T_2\} \rightarrow S^{-1}A$를 $T_1\mapsto f, T_2\mapsto f^{-1}$으로 정의하면 [\[대수적 구조\] §대수, ⁋명제 8](/ko/math/algebraic_structures/algebras#prop8)에 의하여 $(S^{-1}A)_0$-algebra homomorphism
+함수 $\{T_1,T_2\} \rightarrow S^{-1}A$를 $T_1\mapsto f, T_2\mapsto f^{-1}$으로 정의하면 [\[대수적 구조\] §대수, ⁋명제 8](/ko/math/algebraic_structures/algebras#prop8){: data-relation="required" }에 의하여 $(S^{-1}A)_0$-algebra homomorphism
 
 $$(S^{-1}A)_0[T_1,T_2] \rightarrow S^{-1}A$$
 
@@ -133,7 +133,7 @@ $$\left(\sum_{j\geq 1} a_{j,j}(T_1^jT_2^j-1)\right)+\sum_{d>0}\left(\sum_{j\geq 
 
 $$M^{(d)}=\bigoplus_{k\geq 0} M_{kd}$$
 
-으로 적기로 한다. 그럼 다음은 [명제 4](#prop4)의 일반화이다.
+으로 적기로 한다. 그럼 다음은 [명제 4](#prop4){: data-relation="weak" }의 일반화이다.
 
 ::: 명제 6
 $d\geq 1$에 대하여, degree $d$의 homogeneous element $f\in A$를 고정하자. 그럼 다음의 isomorphism
@@ -152,13 +152,13 @@ $$u_k:M_{kd} \rightarrow M_{(f)};\qquad x\mapsto x/f^k$$
 
 만일 $\deg f=1$이라면 위의 isomorphism은 $M_{(f)}\cong M/(f-1)M$으로 쓸 수 있다.
 
-한편, $S$가 degree $1$의 원소를 하나 이상 포함한다 하면 [명제 4](#prop4)을 각각의 원소에 적용하여 다음을 얻는다. 
+한편, $S$가 degree $1$의 원소를 하나 이상 포함한다 하면 [명제 4](#prop4){: data-relation="required" }을 각각의 원소에 적용하여 다음을 얻는다. 
 
 ::: 명제 7
 $S$가 degree $1$의 원소를 적어도 하나 포함하는 homogeneous multiplicative set이라면 $S^{-1}A\cong (S^{-1}A)_0[T,T^{-1}]$이 성립한다.
 :::
 ::: 증명
-이는 본질적으로 [명제 4](#prop4)과 동일한 증명으로, $S$에 속하는 degree $1$의 원소 $f$를 택하여 [명제 4](#prop4)의 증명과 동일한 방식으로 homomorphism $(S^{-1}A)_0[T_1,T_2] \rightarrow S^{-1}A$을 정의하면 된다. 그럼 이 homomorphism의 kernel이 $(T_1T_2-1)$이 되는 것은 동일한 증명으로 보일 수 있으며, 이 homomorphism이 surjective인 것은 임의의 degree $d$짜리 $S^{-1}A$의 원소 $a/s$를 다음의 꼴
+이는 본질적으로 [명제 4](#prop4){: data-relation="required" }과 동일한 증명으로, $S$에 속하는 degree $1$의 원소 $f$를 택하여 [명제 4](#prop4){: data-relation="required" }의 증명과 동일한 방식으로 homomorphism $(S^{-1}A)_0[T_1,T_2] \rightarrow S^{-1}A$을 정의하면 된다. 그럼 이 homomorphism의 kernel이 $(T_1T_2-1)$이 되는 것은 동일한 증명으로 보일 수 있으며, 이 homomorphism이 surjective인 것은 임의의 degree $d$짜리 $S^{-1}A$의 원소 $a/s$를 다음의 꼴
 
 $$\frac{a}{s}=\left(\frac{a}{s}f^{-d}\right)f^d$$
 
@@ -183,7 +183,7 @@ Ring homomorphism $q:A \rightarrow A/\mathfrak{p}$를 생각하고, $q$에 의�
 
 $$\frac{A/(f-1)}{\mathfrak{q}}\cong \frac{A/\mathfrak{p}}{(\bar{f}-1)}$$
 
-이며, [명제 6](#prop6)에 의하여 우변은 다시 $(A/\mathfrak{p})[f^{-1}]_0$과 isomorphic하다. 그런데 $\mathfrak{p}$가 prime ideal이므로, $A/\mathfrak{p}$는 integral domain이고 따라서 localization $(A/\mathfrak{p})[f^{-1}]$ 또한 integral domain이고, 따라서 $(A/\mathfrak{p})[f^{-1}]_0$도 integral domain이다. 이로부터 $\mathfrak{q}$가 $A/(f-1)$의 prime ideal인 것을 안다. 편의상 $\mathfrak{a}=(f-1)$라 적으면, 원하는 isomorphism은 다음의 homomorphism
+이며, [명제 6](#prop6){: data-relation="required" }에 의하여 우변은 다시 $(A/\mathfrak{p})[f^{-1}]_0$과 isomorphic하다. 그런데 $\mathfrak{p}$가 prime ideal이므로, $A/\mathfrak{p}$는 integral domain이고 따라서 localization $(A/\mathfrak{p})[f^{-1}]$ 또한 integral domain이고, 따라서 $(A/\mathfrak{p})[f^{-1}]_0$도 integral domain이다. 이로부터 $\mathfrak{q}$가 $A/(f-1)$의 prime ideal인 것을 안다. 편의상 $\mathfrak{a}=(f-1)$라 적으면, 원하는 isomorphism은 다음의 homomorphism
 
 $$A \overset{a\mapsto a/1}{\longrightarrow} S^{-1}A \overset{f\mapsto T}{\longrightarrow} A_{(\mathfrak{p})}[T, T^{-1}] \overset{T\mapsto 1}{\longrightarrow} A_{(\mathfrak{p})}$$
 
