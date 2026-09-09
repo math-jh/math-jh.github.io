@@ -16,7 +16,7 @@ drift_needed: true
 published: false
 ---
 
-[§미분](/ko/math/analysis/differentiation)에서 미분을 엄밀하게 정초하고, [§연속함수의 성질](/ko/math/analysis/continuous_functions)에서 [§연속함수의 성질, ⁋따름정리 2](/ko/math/analysis/continuous_functions#cor2)를 완비성으로부터 증명하였다. 이 둘을 결합하면 미적분학에서 도구로 받아들였던 평균값 정리와 테일러 정리를 빈틈없이 세울 수 있다.
+[§미분](/ko/math/analysis/differentiation){: data-relation="required" }에서 미분을 엄밀하게 정초하고, [§연속함수의 성질](/ko/math/analysis/continuous_functions){: data-relation="weak" }에서 [§연속함수의 성질, ⁋따름정리 2](/ko/math/analysis/continuous_functions#cor2){: data-relation="required" }를 완비성으로부터 증명하였다. 이 둘을 결합하면 미적분학에서 도구로 받아들였던 평균값 정리와 테일러 정리를 빈틈없이 세울 수 있다.
 
 평균값 정리는 도함수라는 국소적 정보가 함수의 전역적 성질을 어떻게 통제하는지를 알려 주는 다리이다. 한 점에서의 미분은 그 점 근방에서의 일차 근사에 지나지 않지만, 두 끝점을 잇는 할선의 기울기가 어딘가의 접선 기울기로 정확히 실현된다는 사실은 국소와 전역을 잇는다. 도함수의 부호로 단조성을 읽고, 도함수의 크기로 함수값의 변화를 가두며, higher-order derivative로 함수를 다항식으로 근사하는 일이 모두 이 한 정리에서 갈라져 나온다.
 
@@ -50,9 +50,9 @@ $f$가 $[a,b]$에서 연속, $(a,b)$에서 미분가능하고 $f(a) = f(b)$이�
 :::
 
 ::: 증명
-[§연속함수의 성질, ⁋따름정리 2](/ko/math/analysis/continuous_functions#cor2)에 의해 $f$는 $[a,b]$에서 최댓값 $M$과 최솟값 $m$을 가진다. 두 경우로 나눈다.
+[§연속함수의 성질, ⁋따름정리 2](/ko/math/analysis/continuous_functions#cor2){: data-relation="required" }에 의해 $f$는 $[a,b]$에서 최댓값 $M$과 최솟값 $m$을 가진다. 두 경우로 나눈다.
 
-$M = m$이면 $f$는 $[a,b]$에서 상수이므로 모든 interior point에서 $f' = 0$이고, 아무 $c \in (a,b)$를 택하면 된다. $M > m$이면 두 값 중 적어도 하나는 끝점에서의 공통값 $f(a) = f(b)$와 다르다. 그 값을 주는 점을 $c$라 하면 $c$는 끝점이 아니므로 interior point이고, 거기서 $f$가 극값을 가지므로 [정리 1](#thm1)에 의해
+$M = m$이면 $f$는 $[a,b]$에서 상수이므로 모든 interior point에서 $f' = 0$이고, 아무 $c \in (a,b)$를 택하면 된다. $M > m$이면 두 값 중 적어도 하나는 끝점에서의 공통값 $f(a) = f(b)$와 다르다. 그 값을 주는 점을 $c$라 하면 $c$는 끝점이 아니므로 interior point이고, 거기서 $f$가 극값을 가지므로 [정리 1](#thm1){: data-relation="required" }에 의해
 
 $$f'(c) = 0, \qquad c \in (a,b)$$
 
@@ -79,7 +79,7 @@ h(a) &= \bigl(f(b)-f(a)\bigr)g(a) - \bigl(g(b)-g(a)\bigr)f(a) = f(b)g(a) - g(b)f
 h(b) &= \bigl(f(b)-f(a)\bigr)g(b) - \bigl(g(b)-g(a)\bigr)f(b) = f(b)g(a) - g(b)f(a)
 \end{aligned}$$
 
-이므로 $h(a) = h(b)$이다. 따라서 [정리 2](#thm2)에 의해 $h'(c) = 0$인 $c \in (a,b)$가 존재한다. $h'(x) = \bigl(f(b)-f(a)\bigr)g'(x) - \bigl(g(b)-g(a)\bigr)f'(x)$이므로 $x = c$에서
+이므로 $h(a) = h(b)$이다. 따라서 [정리 2](#thm2){: data-relation="required" }에 의해 $h'(c) = 0$인 $c \in (a,b)$가 존재한다. $h'(x) = \bigl(f(b)-f(a)\bigr)g'(x) - \bigl(g(b)-g(a)\bigr)f'(x)$이므로 $x = c$에서
 
 $$\bigl(f(b)-f(a)\bigr)g'(c) = \bigl(g(b)-g(a)\bigr)f'(c)$$
 
@@ -95,7 +95,7 @@ $f$가 구간에서 미분가능할 때, 항상 $f' = 0$이면 $f$는 상수이�
 :::
 
 ::: 증명
-구간의 두 점 $x_1 < x_2$를 임의로 잡고 $[x_1, x_2]$에서 [정리 3](#thm3)를 적용하면, 어떤 $c \in (x_1, x_2)$가 존재하여
+구간의 두 점 $x_1 < x_2$를 임의로 잡고 $[x_1, x_2]$에서 [정리 3](#thm3){: data-relation="required" }를 적용하면, 어떤 $c \in (x_1, x_2)$가 존재하여
 
 $$f(x_2) - f(x_1) = f'(c)(x_2 - x_1)$$
 
@@ -107,7 +107,7 @@ $$f(x_2) - f(x_1) = f'(c)(x_2 - x_1)$$
 평균값 정리는 부등식 증명의 표준 도구이기도 하다. 도함수를 구간에서 위·아래로 가두면 함수값의 변화량이 곧바로 갇히기 때문이다. 다음 두 예시로 이를 본다.
 
 ::: 예시 5 (평균값 정리에 의한 부등식)
-$0 < a < b$에 대해 $\ln x$에 $[a,b]$에서 [정리 3](#thm3)를 적용하면, 어떤 $c \in (a,b)$가 존재하여
+$0 < a < b$에 대해 $\ln x$에 $[a,b]$에서 [정리 3](#thm3){: data-relation="required" }를 적용하면, 어떤 $c \in (a,b)$가 존재하여
 
 $$\frac{\ln b - \ln a}{b - a} = \frac{1}{c}$$
 
@@ -123,7 +123,7 @@ $$\frac{x}{1+x} < \ln(1+x) < x$$
 :::
 
 ::: 예시 6 (사인 함수의 립시츠 추정)
-$f(x) = \sin x$의 도함수는 $\cos x$로 $\lvert \cos x\rvert \leq 1$을 만족한다. 임의의 두 점 $x, y$에 대해 [정리 3](#thm3)를 쓰면 그 사이의 어떤 $c$로
+$f(x) = \sin x$의 도함수는 $\cos x$로 $\lvert \cos x\rvert \leq 1$을 만족한다. 임의의 두 점 $x, y$에 대해 [정리 3](#thm3){: data-relation="required" }를 쓰면 그 사이의 어떤 $c$로
 
 $$\sin x - \sin y = \cos c  (x - y)$$
 
@@ -158,7 +158,7 @@ g'(t) &= -\sum_{k=0}^n \frac{f^{(k+1)}(t)}{k!}(x-t)^k + \sum_{k=1}^n \frac{f^{(k
 &= -\frac{f^{(n+1)}(t)}{n!}(x-t)^n
 \end{aligned}$$
 
-이고, 한편 $h'(t) = -(n+1)(x-t)^n$이다. $a$와 $x$ 사이에서 Cauchy [정리 3](#thm3)를 적용하면
+이고, 한편 $h'(t) = -(n+1)(x-t)^n$이다. $a$와 $x$ 사이에서 Cauchy [정리 3](#thm3){: data-relation="required" }를 적용하면
 
 $$\bigl(g(x)-g(a)\bigr)h'(c) = \bigl(h(x)-h(a)\bigr)g'(c)$$
 
@@ -173,7 +173,7 @@ $$g(a) = \frac{(x-a)^{n+1}}{-(n+1)(x-c)^n}\cdot\Bigl(-\frac{f^{(n+1)}(c)}{n!}(x-
 이 되고, $g(a) = f(x) - \sum_{k=0}^n f^{(k)}(a)(x-a)^k/k!$이므로 이를 옮기면 정리한 나머지항 공식을 얻는다.
 :::
 
-이 증명은 [\[미적분학\] §테일러 정리](/ko/math/calculus/taylor_theorem)에서와 같지만, 이제 그 토대인 최대·최소 정리와 미분의 성질이 모두 엄밀하게 증명되어 있다. $n = 0$인 경우 테일러 정리는 정확히 평균값 정리로 환원되므로, 테일러 정리는 평균값 정리의 고계 일반화라 부를 만하다. 라그랑주 나머지의 효용은 그것을 직접 가둘 수 있다는 데 있다. $\lvert f^{(n+1)}\rvert$이 구간에서 $M$으로 bounded이면
+이 증명은 [\[미적분학\] §테일러 정리](/ko/math/calculus/taylor_theorem){: data-relation="weak" }에서와 같지만, 이제 그 토대인 최대·최소 정리와 미분의 성질이 모두 엄밀하게 증명되어 있다. $n = 0$인 경우 테일러 정리는 정확히 평균값 정리로 환원되므로, 테일러 정리는 평균값 정리의 고계 일반화라 부를 만하다. 라그랑주 나머지의 효용은 그것을 직접 가둘 수 있다는 데 있다. $\lvert f^{(n+1)}\rvert$이 구간에서 $M$으로 bounded이면
 
 $$\left\lvert f(x) - \sum_{k=0}^n \frac{f^{(k)}(a)}{k!}(x-a)^k\right\rvert \leq \frac{M}{(n+1)!} \lvert x-a\rvert^{n+1}$$
 
@@ -218,21 +218,21 @@ $f, g$가 $a$의 근방에서 미분가능하고 $g' \neq 0$이며 $f(a) = g(a) 
 :::
 
 ::: 증명
-$x$를 $a$에 가까운 점이라 하자. $f(a) = g(a) = 0$이므로 $a$와 $x$ 사이에서 Cauchy [정리 3](#thm3)를 적용하면, 어떤 $\xi$가 $a$와 $x$ 사이에 존재하여
+$x$를 $a$에 가까운 점이라 하자. $f(a) = g(a) = 0$이므로 $a$와 $x$ 사이에서 Cauchy [정리 3](#thm3){: data-relation="required" }를 적용하면, 어떤 $\xi$가 $a$와 $x$ 사이에 존재하여
 
 $$\frac{f(x)}{g(x)} = \frac{f(x)-f(a)}{g(x)-g(a)} = \frac{f'(\xi)}{g'(\xi)}$$
 
 이다 (분모가 $0$이 아님은 $g' \neq 0$과 롤의 정리로 보장된다). $x \rightarrow a$이면 $\xi$도 $a$로 끼어 들어가므로 $f'(\xi)/g'(\xi) \rightarrow L$이고, 따라서 $f(x)/g(x) \rightarrow L$이다.
 :::
 
-가령 $\lim_{x\rightarrow 0} (\sin x)/x$은 $0/0$ 꼴이지만 도함수의 비 $\cos x$가 $1$로 수렴하므로 [명제 10](#prop10)에 의해 $1$이다. 끝으로, 평균값 정리는 도함수 자체의 구조에도 제약을 가한다. 도함수는 비록 연속이 아닐 수 있어도 중간값을 건너뛰지 못한다.
+가령 $\lim_{x\rightarrow 0} (\sin x)/x$은 $0/0$ 꼴이지만 도함수의 비 $\cos x$가 $1$로 수렴하므로 [명제 10](#prop10){: data-relation="required" }에 의해 $1$이다. 끝으로, 평균값 정리는 도함수 자체의 구조에도 제약을 가한다. 도함수는 비록 연속이 아닐 수 있어도 중간값을 건너뛰지 못한다.
 
 ::: 명제 11 (다르부 정리)
 $f$가 $[a,b]$에서 미분가능하면 $f'$은 $f'(a)$와 $f'(b)$ 사이의 모든 값을 $(a,b)$에서 취한다.
 :::
 
 ::: 증명
-$f'(a) < \lambda < f'(b)$인 $\lambda$를 잡고 $\varphi(x) = f(x) - \lambda x$로 두자. $\varphi$는 $[a,b]$에서 연속이므로 최대·최소 정리로 최솟값을 갖는다. $\varphi'(a) = f'(a) - \lambda < 0$이므로 $a$에 충분히 가까운 $x > a$에서 $\varphi(x) < \varphi(a)$가 되어 최솟값이 $a$에서 일어날 수 없고, $\varphi'(b) = f'(b) - \lambda > 0$이므로 $b$에 충분히 가까운 $x < b$에서 $\varphi(x) < \varphi(b)$가 되어 $b$에서도 일어날 수 없다. 따라서 최솟값은 interior point $c \in (a,b)$에서 일어나고, [정리 1](#thm1)에 의해
+$f'(a) < \lambda < f'(b)$인 $\lambda$를 잡고 $\varphi(x) = f(x) - \lambda x$로 두자. $\varphi$는 $[a,b]$에서 연속이므로 최대·최소 정리로 최솟값을 갖는다. $\varphi'(a) = f'(a) - \lambda < 0$이므로 $a$에 충분히 가까운 $x > a$에서 $\varphi(x) < \varphi(a)$가 되어 최솟값이 $a$에서 일어날 수 없고, $\varphi'(b) = f'(b) - \lambda > 0$이므로 $b$에 충분히 가까운 $x < b$에서 $\varphi(x) < \varphi(b)$가 되어 $b$에서도 일어날 수 없다. 따라서 최솟값은 interior point $c \in (a,b)$에서 일어나고, [정리 1](#thm1){: data-relation="required" }에 의해
 
 $$\varphi'(c) = f'(c) - \lambda = 0  \Longrightarrow  f'(c) = \lambda$$
 
@@ -241,7 +241,7 @@ $$\varphi'(c) = f'(c) - \lambda = 0  \Longrightarrow  f'(c) = \lambda$$
 
 다르부 정리는 도함수가 중간값 성질을 가진다는 뜻으로, 그 결과 도함수는 점프 불연속점을 가질 수 없다. 예컨대 $x > 0$에서 $1$, $x \leq 0$에서 $-1$인 계단함수는 중간값 $0$을 건너뛰므로 그 어떤 함수의 도함수도 될 수 없다. 이는 연속이 아니면서도 도함수가 될 수 있는 함수가 만족해야 하는 강한 제약이다.
 
-이상에서 보았듯 평균값 정리는 단조성·부등식·극한·근사·도함수의 구조를 한데 묶는 중심 정리이다. 이 증명들의 토대인 최대·최소 정리와 미분의 성질이 모두 엄밀하게 증명되어 있으므로, 다음으로는 미분의 짝이 되는 적분을 엄밀하게 정초하는 [§Riemann integral](/ko/math/analysis/riemann_integral)으로 나아간다.
+이상에서 보았듯 평균값 정리는 단조성·부등식·극한·근사·도함수의 구조를 한데 묶는 중심 정리이다. 이 증명들의 토대인 최대·최소 정리와 미분의 성질이 모두 엄밀하게 증명되어 있으므로, 다음으로는 미분의 짝이 되는 적분을 엄밀하게 정초하는 [§Riemann integral](/ko/math/analysis/riemann_integral){: data-relation="forward" }으로 나아간다.
 
 ---
 
