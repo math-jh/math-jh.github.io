@@ -105,7 +105,7 @@ Letting $e_G$ be the composite $G\rightarrow I\overset{\eta}{\rightarrow}G$, the
   commutes.
 :::
 
-Since [Definition 3](#def3) started from a cartesian monoidal category, we were able to draw the diagrams as above omitting the associator and unitors by using the universal property of the categorical product. If we wrote them all out explicitly, the first two diagrams are exactly the conditions for a monoid object, and the last condition can be regarded as the newly added one.
+Since [Definition 3](#def3){: data-relation="required" } started from a cartesian monoidal category, we were able to draw the diagrams as above omitting the associator and unitors by using the universal property of the categorical product. If we wrote them all out explicitly, the first two diagrams are exactly the conditions for a monoid object, and the last condition can be regarded as the newly added one.
 
 ::: Example 4
 The following are all group objects.
@@ -118,17 +118,17 @@ The following are all group objects.
 - A group object in $\Grp$ is an abelian group.
 :::
 
-Only the last example may look slightly less obvious, but this follows from the condition that the multiplication $\mu:G\times G \rightarrow G$ must be a group homomorphism. Since the terminal object of $\Grp$ is the trivial group, the image of the unit $\eta$ is the identity element $e$ of $G$, and by the second condition of [Definition 3](#def3), $e$ is also the identity element for $\mu$. On the other hand, since the operation on $G\times G$ is given componentwise, the fact that $\mu$ is a group homomorphism means that $\mu(xz,yw)=\mu(x,y)\mu(z,w)$ holds for arbitrary $x,y,z,w\in G$, which is precisely the interchange law between $\mu$ and the original product of $G$. Since two operations sharing the same identity element satisfy the interchange law, the Eckmann–Hilton argument implies that $\mu$ coincides with the original product and this product is commutative.
+Only the last example may look slightly less obvious, but this follows from the condition that the multiplication $\mu:G\times G \rightarrow G$ must be a group homomorphism. Since the terminal object of $\Grp$ is the trivial group, the image of the unit $\eta$ is the identity element $e$ of $G$, and by the second condition of [Definition 3](#def3){: data-relation="required" }, $e$ is also the identity element for $\mu$. On the other hand, since the operation on $G\times G$ is given componentwise, the fact that $\mu$ is a group homomorphism means that $\mu(xz,yw)=\mu(x,y)\mu(z,w)$ holds for arbitrary $x,y,z,w\in G$, which is precisely the interchange law between $\mu$ and the original product of $G$. Since two operations sharing the same identity element satisfy the interchange law, the Eckmann–Hilton argument implies that $\mu$ coincides with the original product and this product is commutative.
 
 ## Hopf Monoid
 
-Looking back at what was needed to make [Definition 3](#def3) above, what we needed was exactly the diagonal map $\Delta: G \rightarrow G\otimes G$, the augmentation map $G \rightarrow I$, and the inverse map $\iota: G \rightarrow G$. Sorting out what is needed here, we can first make the following definition.
+Looking back at what was needed to make [Definition 3](#def3){: data-relation="required" } above, what we needed was exactly the diagonal map $\Delta: G \rightarrow G\otimes G$, the augmentation map $G \rightarrow I$, and the inverse map $\iota: G \rightarrow G$. Sorting out what is needed here, we can first make the following definition.
 
 ::: Definition 5
 Let a monoidal category $(\mathcal{A},\otimes,I)$ be given. We say that an object $M$ of $\mathcal{A}$ is a *comonoid* if $M$ is a monoid object in $\mathcal{A}^\op$.
 :::
 
-Unpacking this, the data contained in a comonoid consists of a *comultiplication* $\Delta: M \rightarrow M\otimes M$ and a *counit* $\epsilon:M \rightarrow I$, and these satisfy the dual versions of the two conditions of [Definition 1](#def1).
+Unpacking this, the data contained in a comonoid consists of a *comultiplication* $\Delta: M \rightarrow M\otimes M$ and a *counit* $\epsilon:M \rightarrow I$, and these satisfy the dual versions of the two conditions of [Definition 1](#def1){: data-relation="required" }.
 
 ::: Definition 6
 Let a symmetric monoidal category $(\mathcal{A},\otimes,I)$ be given. Then $(M,\mu,\eta,\Delta,\epsilon)$ is a *bimonoid* if the following hold.
@@ -141,10 +141,10 @@ Let a symmetric monoidal category $(\mathcal{A},\otimes,I)$ be given. Then $(M,\
 When a monoid object $M$ is given, the role of the symmetry is important in giving $M\otimes M$ a monoid structure, so the notion of a bimonoid is generally defined only in a symmetric monoidal category. We now define a Hopf monoid as follows.
 
 ::: Definition 7
-In a symmetric monoidal category $(\mathcal{A},\otimes,I)$, $(H,\mu,\eta,\Delta,\epsilon,\iota)$ is a *Hopf monoid* if $(H,\mu,\eta,\Delta,\epsilon)$ is a bimonoid and $\iota$ satisfies the same condition as the last diagram of [Definition 3](#def3).
+In a symmetric monoidal category $(\mathcal{A},\otimes,I)$, $(H,\mu,\eta,\Delta,\epsilon,\iota)$ is a *Hopf monoid* if $(H,\mu,\eta,\Delta,\epsilon)$ is a bimonoid and $\iota$ satisfies the same condition as the last diagram of [Definition 3](#def3){: data-relation="required" }.
 :::
 
-To write the condition on $\iota$ explicitly, we need to translate all the diagrams given in [Definition 3](#def3) into the data that a Hopf monoid possesses; for instance, one of the triangles can be expanded as the diagram
+To write the condition on $\iota$ explicitly, we need to translate all the diagrams given in [Definition 3](#def3){: data-relation="required" } into the data that a Hopf monoid possesses; for instance, one of the triangles can be expanded as the diagram
 
 {% diagram Math/Category_Theory/Monoid_Objects-8.svg width="14.39em" alt="Hopf_inverse" %}
 

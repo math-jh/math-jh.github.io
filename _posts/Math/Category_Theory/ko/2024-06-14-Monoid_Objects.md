@@ -110,7 +110,7 @@ Cartesian monoidal category $(\mathcal{A},\times, I)$에 대하여, 이 category
   이 commute한다.
 :::
 
-[정의 3](#def3)은 cartesian monoidal category에서부터 시작했기 때문에, categorical product의 universal property를 이용하면 위와 같이 associator와 unitor들을 빼고 diagram을 그릴 수 있었다. 이들을 모두 살려서 적는다면 처음 두 diagram은 정확히 monoid object의 조건이고, 마지막 조건이 새롭게 추가된 것으로 볼 수 있다. 
+[정의 3](#def3){: data-relation="required" }은 cartesian monoidal category에서부터 시작했기 때문에, categorical product의 universal property를 이용하면 위와 같이 associator와 unitor들을 빼고 diagram을 그릴 수 있었다. 이들을 모두 살려서 적는다면 처음 두 diagram은 정확히 monoid object의 조건이고, 마지막 조건이 새롭게 추가된 것으로 볼 수 있다. 
 
 ::: 예시 4
 다음은 모두 group object이다.
@@ -123,17 +123,17 @@ Cartesian monoidal category $(\mathcal{A},\times, I)$에 대하여, 이 category
 - $\Grp$에서의 group object는 abelian group이다.
 :::
 
-마지막 예시만이 조금 덜 자명해보일 수 있지만, 이는 multiplication $\mu:G\times G \rightarrow G$가 group homomorphism이어야 한다는 조건에서 나온다. $\Grp$의 terminal object는 trivial group이므로 unit $\eta$의 image는 $G$의 항등원 $e$이고, [정의 3](#def3)의 둘째 조건에 의해 $e$는 $\mu$에 대한 항등원이기도 하다. 한편 $G\times G$의 연산이 성분별로 주어지므로, $\mu$가 group homomorphism이라는 것은 임의의 $x,y,z,w\in G$에 대하여 $\mu(xz,yw)=\mu(x,y)\mu(z,w)$가 성립한다는 뜻이고, 이는 곧 $\mu$와 $G$의 원래 곱 사이의 interchange law이다. 같은 항등원을 갖는 두 연산이 interchange law를 만족하므로 Eckmann–Hilton 논법에 의해 $\mu$는 원래의 곱과 일치하고 이 곱은 commutative이다. 
+마지막 예시만이 조금 덜 자명해보일 수 있지만, 이는 multiplication $\mu:G\times G \rightarrow G$가 group homomorphism이어야 한다는 조건에서 나온다. $\Grp$의 terminal object는 trivial group이므로 unit $\eta$의 image는 $G$의 항등원 $e$이고, [정의 3](#def3){: data-relation="required" }의 둘째 조건에 의해 $e$는 $\mu$에 대한 항등원이기도 하다. 한편 $G\times G$의 연산이 성분별로 주어지므로, $\mu$가 group homomorphism이라는 것은 임의의 $x,y,z,w\in G$에 대하여 $\mu(xz,yw)=\mu(x,y)\mu(z,w)$가 성립한다는 뜻이고, 이는 곧 $\mu$와 $G$의 원래 곱 사이의 interchange law이다. 같은 항등원을 갖는 두 연산이 interchange law를 만족하므로 Eckmann–Hilton 논법에 의해 $\mu$는 원래의 곱과 일치하고 이 곱은 commutative이다. 
 
 ## Hopf monoid
 
-위의 [정의 3](#def3)을 만들 때 필요했던 것을 살펴보면, 우리가 필요한 것은 정확히 diagonal map $\Delta: G \rightarrow G\otimes G$와 augmentation map $G \rightarrow I$, 그리고 inverse map $\iota: G \rightarrow G$이다. 여기에서 필요한 것들을 잘 나눠보면 우선 다음을 정의할 수 있다.
+위의 [정의 3](#def3){: data-relation="required" }을 만들 때 필요했던 것을 살펴보면, 우리가 필요한 것은 정확히 diagonal map $\Delta: G \rightarrow G\otimes G$와 augmentation map $G \rightarrow I$, 그리고 inverse map $\iota: G \rightarrow G$이다. 여기에서 필요한 것들을 잘 나눠보면 우선 다음을 정의할 수 있다.
 
 ::: 정의 5
 Monoidal category $(\mathcal{A},\otimes,I)$가 주어졌다 하자. $\mathcal{A}$의 대상 $M$이 *comonoid<sub>쌍대모노이드</sub>*라는 것은 $M$이 $\mathcal{A}^\op$에서 monoid object인 것이다.
 :::
 
-이를 풀어 써 보자면, comonoid가 담고 있는 정보는 *comultiplication<sub>쌍대곱</sub>* $\Delta: M \rightarrow M\otimes M$과 *counit<sub>쌍대단위원</sub>* $\epsilon:M \rightarrow I$으로 이루어지며, 이들은 [정의 1](#def1)의 두 조건의 dual 버전을 만족한다. 
+이를 풀어 써 보자면, comonoid가 담고 있는 정보는 *comultiplication<sub>쌍대곱</sub>* $\Delta: M \rightarrow M\otimes M$과 *counit<sub>쌍대단위원</sub>* $\epsilon:M \rightarrow I$으로 이루어지며, 이들은 [정의 1](#def1){: data-relation="required" }의 두 조건의 dual 버전을 만족한다. 
 
 ::: 정의 6
 Symmetric monoidal category $(\mathcal{A},\otimes,I)$가 주어졌다 하자. 그럼 $(M,\mu,\eta,\Delta,\epsilon)$이 *bimonoid<sub>쌍모노이드</sub>*라는 것은 다음과 같은 뜻이다.
@@ -146,10 +146,10 @@ Symmetric monoidal category $(\mathcal{A},\otimes,I)$가 주어졌다 하자. �
 Monoid object $M$이 주어졌을 때, $M\otimes M$에 monoid 구조를 주기 위해서는 symmetry의 역할이 중요하기 때문에, 일반적으로 bimonoid의 개념도 symmetric monoidal category에서만 정의한다. 이제 Hopf monoid를 다음과 같이 정의한다.
 
 ::: 정의 7
-Symmetric monoidal category $(\mathcal{A},\otimes,I)$에서 $(H,\mu,\eta,\Delta,\epsilon,\iota)$가 *Hopf monoid<sub>호프 모노이드</sub>*라는 것은 $(H,\mu,\eta,\Delta,\epsilon)$이 bimonoid이고 $\iota$가 [정의 3](#def3)의 마지막 diagram과 동일한 조건을 만족하는 것이다.
+Symmetric monoidal category $(\mathcal{A},\otimes,I)$에서 $(H,\mu,\eta,\Delta,\epsilon,\iota)$가 *Hopf monoid<sub>호프 모노이드</sub>*라는 것은 $(H,\mu,\eta,\Delta,\epsilon)$이 bimonoid이고 $\iota$가 [정의 3](#def3){: data-relation="required" }의 마지막 diagram과 동일한 조건을 만족하는 것이다.
 :::
 
-$\iota$에 대한 조건을 명시적으로 쓰기 위해서는 [정의 3](#def3)에서 주어졌던 diagram을 모두 Hopf monoid가 갖고 있는 정보로 옮겨야 하는데, 가령 한쪽 삼각형은 다음의 diagram
+$\iota$에 대한 조건을 명시적으로 쓰기 위해서는 [정의 3](#def3){: data-relation="required" }에서 주어졌던 diagram을 모두 Hopf monoid가 갖고 있는 정보로 옮겨야 하는데, 가령 한쪽 삼각형은 다음의 diagram
 
 {% diagram Math/Category_Theory/Monoid_Objects-8.svg width="14.39em" alt="Hopf_inverse" %}
 
