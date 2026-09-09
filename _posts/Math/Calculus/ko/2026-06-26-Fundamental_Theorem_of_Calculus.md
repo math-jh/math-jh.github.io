@@ -27,19 +27,19 @@ $f$가 $[a,b]$에서 연속이고 $F(x) = \int_a^x f(t)\dd{t}$로 정의하면, 
 
 $$F'(x) = f(x)$$
 
-이다. 여기서 끝점 $a, b$에서의 미분가능성은 [§미분과 도함수, ⁋정의 6](/ko/math/calculus/derivatives#def6)의 우미분계수·좌미분계수를 뜻한다.
+이다. 여기서 끝점 $a, b$에서의 미분가능성은 [§미분과 도함수, ⁋정의 6](/ko/math/calculus/derivatives#def6){: data-relation="weak" }의 우미분계수·좌미분계수를 뜻한다.
 :::
 
 ::: 증명
-[§적분, ⁋명제 11](/ko/math/calculus/integration#prop11)의 둘째 결과에 의해, $h>0$에 대해서는
+[§적분, ⁋명제 11](/ko/math/calculus/integration#prop11){: data-relation="required" }의 둘째 결과에 의해, $h>0$에 대해서는
 
 $$F(x+h) - F(x) = \int_a^{x+h} f - \int_a^x f = \int_x^{x+h} f(t)\dd{t}$$
 
-이다. 그럼 $f$가 $[x, x+h]$에서 연속이므로 [§연속함수, ⁋정리 4](/ko/math/calculus/continuity#thm4)에 의해 그 구간에서 최솟값 $m_h$와 최댓값 $M_h$를 가지며, [§적분, ⁋명제 11](/ko/math/calculus/integration#prop11)의 셋째 결과에 의해
+이다. 그럼 $f$가 $[x, x+h]$에서 연속이므로 [§연속함수, ⁋정리 4](/ko/math/calculus/continuity#thm4){: data-relation="required" }에 의해 그 구간에서 최솟값 $m_h$와 최댓값 $M_h$를 가지며, [§적분, ⁋명제 11](/ko/math/calculus/integration#prop11){: data-relation="required" }의 셋째 결과에 의해
 
 $$m_h \leq \frac{F(x+h) - F(x)}{h} \leq M_h$$
 
-이 성립한다. 이제 $h \rightarrow 0$일 때 구간 $[x, x+h]$가 한 점 $x$로 줄어들고, $f$의 연속성에 의해 $m_h, M_h \rightarrow f(x)$이므로, [§함수의 극한, ⁋명제 8](/ko/math/calculus/functions_and_limits#prop8)에 의해 평균변화율이 $f(x)$로 수렴한다. $h < 0$인 경우도 비슷한 방식으로 증명을 완료할 수 있다. 
+이 성립한다. 이제 $h \rightarrow 0$일 때 구간 $[x, x+h]$가 한 점 $x$로 줄어들고, $f$의 연속성에 의해 $m_h, M_h \rightarrow f(x)$이므로, [§함수의 극한, ⁋명제 8](/ko/math/calculus/functions_and_limits#prop8){: data-relation="required" }에 의해 평균변화율이 $f(x)$로 수렴한다. $h < 0$인 경우도 비슷한 방식으로 증명을 완료할 수 있다. 
 :::
 
 이 정리는 <em-ko>넓이가 쌓이는 속도가 곧 높이</em-ko>라는 직관의 엄밀한 표현이다. 즉, 적분으로 정의된 함수 $F(x)$가 한 점에서 늘어나는 비율 $F'(x)$는 바로 그 점에서의 피적분함수 값 $f(x)$이다.
@@ -57,16 +57,16 @@ $[a,b]$에서 연속인 모든 함수는 원시함수를 가진다. 구체적으
 
 $$\erf(x) = \frac{2}{\sqrt{\pi}}\int_0^x e^{-t^2}\dd{t}$$
 
-로 정의된다. $e^{-t^2}$의 원시함수는 초등함수로 적히지 않으므로 이 적분은 닫힌 꼴이 없지만, [정리 1](#thm1)에 의해 $\erf$는 미분가능하고
+로 정의된다. $e^{-t^2}$의 원시함수는 초등함수로 적히지 않으므로 이 적분은 닫힌 꼴이 없지만, [정리 1](#thm1){: data-relation="required" }에 의해 $\erf$는 미분가능하고
 
 $$\erf'(x) = \frac{2}{\sqrt{\pi}}e^{-x^2}$$
 
 이다. 마찬가지로 *로그적분* $\mathrm{Li}(x) = \int_2^x \dd{t}/\ln t$도 $x > 1$에서 $\mathrm{Li}'(x) = 1/\ln x$로 도함수가 즉시 나온다. 이처럼 적분으로 정의된 함수는 그 자체로 미적분의 대상이 된다.
 :::
 
-이보다 약간 더 발전한 형태의 표현은 [명제 7](#prop7)에서 멱급수의 적분을 살펴본 후 다시 도입하게 된다.
+이보다 약간 더 발전한 형태의 표현은 [명제 7](#prop7){: data-relation="forward" }에서 멱급수의 적분을 살펴본 후 다시 도입하게 된다.
 
-한편 [정리 1](#thm1)과, 미분이 $0$인 함수는 상수함수뿐이라는 사실을 결합하면, 정적분을 원시함수의 차로 계산하는 강력한 도구를 얻는다.
+한편 [정리 1](#thm1){: data-relation="required" }과, 미분이 $0$인 함수는 상수함수뿐이라는 사실을 결합하면, 정적분을 원시함수의 차로 계산하는 강력한 도구를 얻는다.
 
 ::: 정리 4
 $f$가 $[a,b]$에서 연속이고 $G$가 $f$의 임의의 원시함수이면
@@ -77,16 +77,16 @@ $$\int_a^b f(x)\dd{x} = G(b) - G(a)$$
 :::
 
 ::: 증명
-$F(x) = \int_a^x f$로 두면 [정리 1](#thm1)에 의해 $F$도 $f$의 원시함수이다. 두 원시함수는 상수 차이뿐이므로 ([§평균값 정리, ⁋따름정리 5](/ko/math/calculus/mean_value_theorem#cor5)) $F = G + C$인 상수 $C$가 있다. $F(a) = \int_a^a f = 0$이므로 $C = -G(a)$이고, 따라서
+$F(x) = \int_a^x f$로 두면 [정리 1](#thm1){: data-relation="required" }에 의해 $F$도 $f$의 원시함수이다. 두 원시함수는 상수 차이뿐이므로 ([§평균값 정리, ⁋따름정리 5](/ko/math/calculus/mean_value_theorem#cor5){: data-relation="required" }) $F = G + C$인 상수 $C$가 있다. $F(a) = \int_a^a f = 0$이므로 $C = -G(a)$이고, 따라서
 
 $$\int_a^b f = F(b) = G(b) + C = G(b) - G(a)$$
 
 이다.
 :::
 
-흔히 $G(b) - G(a)$를 $\bigl[G(x)\bigr]_a^b$로 적는다. 이 정리 덕분에 정적분의 계산은 리만 합의 극한이 아니라 원시함수를 찾는 문제로 환원된다. 가령 $\int_0^1 x^2\dd{x} = \bigl[x^3/3\bigr]_0^1 = 1/3$은 [§적분](/ko/math/calculus/integration)에서 리만 합으로 힘겹게 얻은 값과 일치하지만, 여기서는 전혀 다른 계산, 즉 원시함수에 양 끝점을 대입하는 것으로 얻어진다.
+흔히 $G(b) - G(a)$를 $\bigl[G(x)\bigr]_a^b$로 적는다. 이 정리 덕분에 정적분의 계산은 리만 합의 극한이 아니라 원시함수를 찾는 문제로 환원된다. 가령 $\int_0^1 x^2\dd{x} = \bigl[x^3/3\bigr]_0^1 = 1/3$은 [§적분](/ko/math/calculus/integration){: data-relation="weak" }에서 리만 합으로 힘겹게 얻은 값과 일치하지만, 여기서는 전혀 다른 계산, 즉 원시함수에 양 끝점을 대입하는 것으로 얻어진다.
 
-특히 [정리 1](#thm1)은 적분의 상·하한이 변수에 의존할 때 [§미분법, ⁋정리 4](/ko/math/calculus/differentiation_rules#thm4)와 결합된다. 상한이 함수 $g(x)$이면 $F(u) = \int_a^u f$로 두어 $\int_a^{g(x)} f = F(g(x))$이고, $F'(u) = f(u)$이므로 연쇄법칙으로 $\frac{d}{\dd{x}}\int_a^{g(x)} f(t)\dd{t} = f(g(x))g'(x)$이다. 상·하한이 모두 변수이면 이를 두 개의 구간으로 나누어 양쪽에 적용하면 된다.
+특히 [정리 1](#thm1){: data-relation="required" }은 적분의 상·하한이 변수에 의존할 때 [§미분법, ⁋정리 4](/ko/math/calculus/differentiation_rules#thm4){: data-relation="required" }와 결합된다. 상한이 함수 $g(x)$이면 $F(u) = \int_a^u f$로 두어 $\int_a^{g(x)} f = F(g(x))$이고, $F'(u) = f(u)$이므로 연쇄법칙으로 $\frac{d}{\dd{x}}\int_a^{g(x)} f(t)\dd{t} = f(g(x))g'(x)$이다. 상·하한이 모두 변수이면 이를 두 개의 구간으로 나누어 양쪽에 적용하면 된다.
 
 ::: 명제 5 (Leibniz rule)
 $f$가 구간 $I$에서 연속이고, $g, h$가 미분가능하며 그 값이 $I$에 속하면
@@ -97,11 +97,11 @@ $$\frac{d}{\dd{x}}\int_{h(x)}^{g(x)} f(t)\dd{t} = f(g(x))g'(x) - f(h(x))h'(x)$$
 :::
 
 ::: 증명
-$I$의 한 점 $c$를 잡아 [§적분, ⁋명제 11](/ko/math/calculus/integration#prop11)의 구간가법성으로 적분을 둘로 나눈다.
+$I$의 한 점 $c$를 잡아 [§적분, ⁋명제 11](/ko/math/calculus/integration#prop11){: data-relation="required" }의 구간가법성으로 적분을 둘로 나눈다.
 
 $$\int_{h(x)}^{g(x)} f(t)\dd{t} = \int_c^{g(x)} f(t)\dd{t} - \int_c^{h(x)} f(t)\dd{t}$$
 
-이다. $F(u) = \int_c^u f(v)\dd{v}$로 두면 [정리 1](#thm1)에 의해 $F'(u) = f(u)$이고, 우변은 $F(g(x)) - F(h(x))$이다. 연쇄법칙을 두 항에 각각 적용하면
+이다. $F(u) = \int_c^u f(v)\dd{v}$로 두면 [정리 1](#thm1){: data-relation="required" }에 의해 $F'(u) = f(u)$이고, 우변은 $F(g(x)) - F(h(x))$이다. 연쇄법칙을 두 항에 각각 적용하면
 
 $$\begin{aligned}
 \frac{d}{\dd{x}}\bigl[F(g(x)) - F(h(x))\bigr] &= F'(g(x))g'(x) - F'(h(x))h'(x) \\[2pt]
@@ -122,7 +122,7 @@ $$\int_{-1}^{1} \frac{\dd{x}}{x^2}$$
 
 $$\bigl[-x^{-1}\bigr]_{-1}^{1} = -1 - 1 = -2$$
 
-를 대입하면 음수가 나오는데, 피적분함수 $1/x^2$는 항상 양수이므로 이는 명백히 틀린 계산이다. 이것이 틀린 원인은 $x = 0$에서 피적분함수가 발산하여 $[-1,1]$에서 연속이 아니라는 데 있다. [정리 4](#thm4)의 가정이 깨졌으므로 이 정리를 그대로 쓸 수 없으며, 실제로 이 적분은 발산한다.
+를 대입하면 음수가 나오는데, 피적분함수 $1/x^2$는 항상 양수이므로 이는 명백히 틀린 계산이다. 이것이 틀린 원인은 $x = 0$에서 피적분함수가 발산하여 $[-1,1]$에서 연속이 아니라는 데 있다. [정리 4](#thm4){: data-relation="required" }의 가정이 깨졌으므로 이 정리를 그대로 쓸 수 없으며, 실제로 이 적분은 발산한다.
 :::
 
 ## 멱급수의 항별 적분
@@ -137,14 +137,14 @@ $$\int_0^x f(t)\dd{t} = \sum_{n=0}^\infty \frac{c_n}{n+1} x^{n+1}$$
 이고, 이 급수의 수렴반경도 $R$이다.
 :::
 
-그럼 앞서 [예시 3](#ex3)에서 살펴본 $e^{-x^2}$가 어떤 형태로 쓰이는지 알 수 있다. 
+그럼 앞서 [예시 3](#ex3){: data-relation="weak" }에서 살펴본 $e^{-x^2}$가 어떤 형태로 쓰이는지 알 수 있다. 
 
 ::: 예시 8
-[예시 3](#ex3)의 오차함수로 돌아가자. 지수함수의 멱급수로부터 
+[예시 3](#ex3){: data-relation="weak" }의 오차함수로 돌아가자. 지수함수의 멱급수로부터 
 
 $$e^{-t^2} = \sum_{n=0}^\infty \frac{(-1)^n}{n!}t^{2n}$$
 
-이며, 그 수렴반경은 $\infty$이다. 이제 [명제 7](#prop7)로 항별 적분하면
+이며, 그 수렴반경은 $\infty$이다. 이제 [명제 7](#prop7){: data-relation="required" }로 항별 적분하면
 
 $$\int_0^x e^{-t^2}\dd{t} = \sum_{n=0}^\infty \frac{(-1)^n}{n!(2n+1)}x^{2n+1}$$
 
