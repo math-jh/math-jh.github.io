@@ -31,7 +31,7 @@ Ring $A$에 대하여, 다음이 동치이다.
 3. $A$의 모든 non-unit을 모아둔 것이 ideal을 이룬다.
 :::
 ::: 증명
-우선 1번을 가정하고, $A$의 임의의 non-unit $a\in A$가 주어졌다 하자. 그럼 $a$가 unit이 아닌 것으로부터 $(a)$는 $(a)\subsetneq A$를 만족하는 $A$의 ideal이므로 [\[대수적 구조\] §환의 정의, ⁋정리 10](/ko/math/algebraic_structures/rings#thm10)에 의하여 어떠한 maximal ideal에 포함된다. 그런데 $A$는 유일한 maximal ideal $\mathfrak{m}$을 가지므로, $(a)\subseteq \mathfrak{m}$일 수밖에 없고, 따라서 $a\in \mathfrak{m}$이다.
+우선 1번을 가정하고, $A$의 임의의 non-unit $a\in A$가 주어졌다 하자. 그럼 $a$가 unit이 아닌 것으로부터 $(a)$는 $(a)\subsetneq A$를 만족하는 $A$의 ideal이므로 [\[대수적 구조\] §환의 정의, ⁋정리 10](/ko/math/algebraic_structures/rings#thm10){: data-relation="required" }에 의하여 어떠한 maximal ideal에 포함된다. 그런데 $A$는 유일한 maximal ideal $\mathfrak{m}$을 가지므로, $(a)\subseteq \mathfrak{m}$일 수밖에 없고, 따라서 $a\in \mathfrak{m}$이다.
 
 이제 2번을 가정하고 3번을 보이자. 이를 위해서는 $A$의 non-unit들을 모아둔 것이 덧셈에 대해 닫혀있음만 보이면 충분하다. 우선 $\mathfrak{m}\neq A$인 것으로부터 $\mathfrak{m}$은 $A$의 unit을 포함하지 않음을 안다. 이로부터 $A$의 non-unit을 모두 모아두면 반드시 이것이 $\mathfrak{m}$과 같아야 함을 안다. 
 
@@ -94,11 +94,11 @@ $$s(1x-0\cdot1)=sx=0$$
 
 ## 환의 국소화
 
-Localization의 가장 단순한 예시는 [\[대수적 구조\] §분수체, ⁋정의 2](/ko/math/algebraic_structures/field_of_fractions#def2)에서 살펴본 ring of fraction이다. 여기에서는 $M=A$로 잡았다. 특별히 우리는 $A$가 integral domain이라면 그 ring of fraction $\Frac(A)$가 field가 되는 것 또한 살펴보았다. ([\[대수적 구조\] §분수체, ⁋명제 6](/ko/math/algebraic_structures/field_of_fractions#prop6))
+Localization의 가장 단순한 예시는 [\[대수적 구조\] §분수체, ⁋정의 2](/ko/math/algebraic_structures/field_of_fractions#def2){: data-relation="weak" }에서 살펴본 ring of fraction이다. 여기에서는 $M=A$로 잡았다. 특별히 우리는 $A$가 integral domain이라면 그 ring of fraction $\Frac(A)$가 field가 되는 것 또한 살펴보았다. ([\[대수적 구조\] §분수체, ⁋명제 6](/ko/math/algebraic_structures/field_of_fractions#prop6){: data-relation="weak" })
 
-또 다른 예시로, 마찬가지로 $M=A$로 두고, $A$의 prime ideal $\mathfrak{p}$에 대하여 $S=A\setminus \mathfrak{p}$로 두어 $A_\mathfrak{p}=S^{-1}A$을 생각할 수 있었다. [정의 4](#def4)을 이용하여 이를 임의의 $A$-module $M$에도 적용할 수 있는데, 그렇게 하여 얻어지는 $A$-module을 $M_\mathfrak{p}$로 적는다. 
+또 다른 예시로, 마찬가지로 $M=A$로 두고, $A$의 prime ideal $\mathfrak{p}$에 대하여 $S=A\setminus \mathfrak{p}$로 두어 $A_\mathfrak{p}=S^{-1}A$을 생각할 수 있었다. [정의 4](#def4){: data-relation="required" }을 이용하여 이를 임의의 $A$-module $M$에도 적용할 수 있는데, 그렇게 하여 얻어지는 $A$-module을 $M_\mathfrak{p}$로 적는다. 
 
-위의 두 예시 모두 [정의 4](#def4)에서 정의한 덧셈구조 및 $A$의 스칼라곱 외에도 곱셈구조를 가지고 있다. 명시적으로 이 구조는
+위의 두 예시 모두 [정의 4](#def4){: data-relation="required" }에서 정의한 덧셈구조 및 $A$의 스칼라곱 외에도 곱셈구조를 가지고 있다. 명시적으로 이 구조는
 
 $$\frac{x}{s}\frac{x'}{s'}=\frac{xx'}{ss'}$$
 
@@ -152,7 +152,7 @@ Ring homomorphism $f:A \rightarrow B$와 $A$의 ideal $\mathfrak{a}$, $B$의 ide
 
   이다.
 
-이제 2번 결과로부터 임의의 prime ideal $\mathfrak{b}\subseteq S^{-1}A$가 주어졌을 때 $\mathfrak{b}^c$는 $S$와 만나지 않는 $A$의 prime ideal임을 안다. ([\[대수적 구조\] §분수체, ⁋명제 10](/ko/math/algebraic_structures/field_of_fractions#prop10)) 반대로 $\mathfrak{a}\subseteq A$가 $S$와 만나지 않는 $A$의 prime ideal이라 하자. 그럼 $\mathfrak{a}^e$는 $S^{-1}A$의 prime ideal이다. 임의의 $b/t,b'/t'$에 대하여 $(b/t)(b'/t')\in \mathfrak{a}^e$라 하자. 그럼 적당한 $a\in \mathfrak{a}$와 $s\in S$가 존재하여 $(bb')/(tt')=a/s$라 할 수 있고, 따라서 적당한 $u\in S$가 존재하여 $utt'a=usbb'\in \mathfrak{a}$이다. 이제 $\mathfrak{a}\cap S=\emptyset$인 것으로부터 $us\not\in \mathfrak{a}$인 것을 알고, $\mathfrak{a}$는 prime ideal이므로 $bb'\in \mathfrak{a}$가 성립한다. 따라서 $b\in \mathfrak{a}$이거나 $b'\in \mathfrak{a}$이고 $\mathfrak{a}^e$는 prime ideal이다. 이들 대응이 서로간의 inverse가 된다는 것은 1번과 2번 결과에서 자연스레 따라나오는 것이다. 
+이제 2번 결과로부터 임의의 prime ideal $\mathfrak{b}\subseteq S^{-1}A$가 주어졌을 때 $\mathfrak{b}^c$는 $S$와 만나지 않는 $A$의 prime ideal임을 안다. ([\[대수적 구조\] §분수체, ⁋명제 10](/ko/math/algebraic_structures/field_of_fractions#prop10){: data-relation="required" }) 반대로 $\mathfrak{a}\subseteq A$가 $S$와 만나지 않는 $A$의 prime ideal이라 하자. 그럼 $\mathfrak{a}^e$는 $S^{-1}A$의 prime ideal이다. 임의의 $b/t,b'/t'$에 대하여 $(b/t)(b'/t')\in \mathfrak{a}^e$라 하자. 그럼 적당한 $a\in \mathfrak{a}$와 $s\in S$가 존재하여 $(bb')/(tt')=a/s$라 할 수 있고, 따라서 적당한 $u\in S$가 존재하여 $utt'a=usbb'\in \mathfrak{a}$이다. 이제 $\mathfrak{a}\cap S=\emptyset$인 것으로부터 $us\not\in \mathfrak{a}$인 것을 알고, $\mathfrak{a}$는 prime ideal이므로 $bb'\in \mathfrak{a}$가 성립한다. 따라서 $b\in \mathfrak{a}$이거나 $b'\in \mathfrak{a}$이고 $\mathfrak{a}^e$는 prime ideal이다. 이들 대응이 서로간의 inverse가 된다는 것은 1번과 2번 결과에서 자연스레 따라나오는 것이다. 
 :::
 
 위의 명제로부터 다음이 자명하다.
@@ -176,7 +176,7 @@ $$\mathfrak{b}_n=\mathfrak{b}_n^{ce}=\mathfrak{b}_{n+1}^{ce}=\mathfrak{b}_{n+1}$
 이다. 
 :::
 
-한편 [명제 8](#prop8)로부터, $A$의 임의의 prime ideal $\mathfrak{p}$에 대하여 $\mathfrak{p}^e=\mathfrak{p}A_\mathfrak{p}$는 $A_\mathfrak{p}$의 유일한 *maximal* ideal이라는 것이 자명하다. 즉 $A_\mathfrak{p}$는 local ring이며, 그 quotient $A_\mathfrak{p}/\mathfrak{p}A_\mathfrak{p}$가 field가 된다. 
+한편 [명제 8](#prop8){: data-relation="required" }로부터, $A$의 임의의 prime ideal $\mathfrak{p}$에 대하여 $\mathfrak{p}^e=\mathfrak{p}A_\mathfrak{p}$는 $A_\mathfrak{p}$의 유일한 *maximal* ideal이라는 것이 자명하다. 즉 $A_\mathfrak{p}$는 local ring이며, 그 quotient $A_\mathfrak{p}/\mathfrak{p}A_\mathfrak{p}$가 field가 된다. 
 
 ::: 정의 10
 Ring $A$와 prime ideal $\mathfrak{p}$에 대하여, field $A_\mathfrak{p}/\mathfrak{p}A_\mathfrak{p}$를 $A$의 $\mathfrak{p}$에서의 *residue field<sub>잉여류체</sub>*라 부르고 $\kappa(\mathfrak{p})$로 적는다. 

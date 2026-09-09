@@ -97,9 +97,9 @@ The above argument also works in the reverse direction.
 
 The simplest example of localization is the ring of fractions examined in [[Algebraic Structures] §Field of Fractions, ⁋Definition 2](/en/math/algebraic_structures/field_of_fractions#def2). Here we take $M=A$. In particular, we also saw that if $A$ is an integral domain, then its ring of fractions $\Frac(A)$ is a field. ([[Algebraic Structures] §Field of Fractions, ⁋Proposition 6](/en/math/algebraic_structures/field_of_fractions#prop6))
 
-As another example, again taking $M=A$ and letting $S=A\setminus \mathfrak{p}$ for a prime ideal $\mathfrak{p}$ of $A$, we can consider $A_\mathfrak{p}=S^{-1}A$. Using [Definition 4](#def4) we can apply this to any $A$-module $M$, and the resulting $A$-module is denoted $M_\mathfrak{p}$.
+As another example, again taking $M=A$ and letting $S=A\setminus \mathfrak{p}$ for a prime ideal $\mathfrak{p}$ of $A$, we can consider $A_\mathfrak{p}=S^{-1}A$. Using [Definition 4](#def4){: data-relation="required" } we can apply this to any $A$-module $M$, and the resulting $A$-module is denoted $M_\mathfrak{p}$.
 
-Both of the above examples carry a multiplication structure in addition to the addition and scalar multiplication by $A$ defined in [Definition 4](#def4). Explicitly, this structure is given by
+Both of the above examples carry a multiplication structure in addition to the addition and scalar multiplication by $A$ defined in [Definition 4](#def4){: data-relation="required" }. Explicitly, this structure is given by
 
 $$\frac{x}{s}\frac{x'}{s'}=\frac{xx'}{ss'}$$
 
@@ -173,7 +173,7 @@ which is an ascending chain of ideals in the Noetherian ring $A$, so there exist
 $$\mathfrak{b}_n=\mathfrak{b}_n^{ce}=\mathfrak{b}_{n+1}^{ce}=\mathfrak{b}_{n+1}$$
 :::
 
-Meanwhile, from [Proposition 8](#prop8), for any prime ideal $\mathfrak{p}$ of $A$ it is immediate that $\mathfrak{p}^e=\mathfrak{p}A_\mathfrak{p}$ is the unique *maximal* ideal of $A_\mathfrak{p}$. That is, $A_\mathfrak{p}$ is a local ring, and its quotient field $A_\mathfrak{p}/\mathfrak{p}A_\mathfrak{p}$ is well-defined.
+Meanwhile, from [Proposition 8](#prop8){: data-relation="required" }, for any prime ideal $\mathfrak{p}$ of $A$ it is immediate that $\mathfrak{p}^e=\mathfrak{p}A_\mathfrak{p}$ is the unique *maximal* ideal of $A_\mathfrak{p}$. That is, $A_\mathfrak{p}$ is a local ring, and its quotient field $A_\mathfrak{p}/\mathfrak{p}A_\mathfrak{p}$ is well-defined.
 
 ::: Definition 10
 For a ring $A$ and a prime ideal $\mathfrak{p}$, we call the field $A_\mathfrak{p}/\mathfrak{p}A_\mathfrak{p}$ the *residue field* of $A$ at $\mathfrak{p}$ and denote it by $\kappa(\mathfrak{p})$.
