@@ -99,7 +99,7 @@ For the fixed basis $e_1,\ldots,e_n$, since $\bigwedge^kV$ has the $e_{i_1}\wedg
 
 $$v_1\wedge\cdots\wedge v_k=\sum_{i_1<\cdots<i_k}p_{i_1\cdots i_k}e_{i_1}\wedge\cdots\wedge e_{i_k}$$
 
-in the expansion with respect to this basis are called the *Plücker coordinates* of $W$. These are the $k\times k$ minors formed by choosing the columns $i_1,\ldots,i_k$ from the $k\times n$ matrix representing $W$, and as we saw in the proof of [Proposition 7](#prop7), when the basis of $W$ is changed, all of these are scaled by the same scalar, so they become homogeneous coordinates on $\mathbb{P}^{\binom{n}{k}-1}$. Henceforth, when indices are not given in increasing order, we understand $p$ as extended antisymmetrically in the indices, and if the same index is repeated, we set it to $0$.
+in the expansion with respect to this basis are called the *Plücker coordinates* of $W$. These are the $k\times k$ minors formed by choosing the columns $i_1,\ldots,i_k$ from the $k\times n$ matrix representing $W$, and as we saw in the proof of [Proposition 7](#prop7){: data-relation="required" }, when the basis of $W$ is changed, all of these are scaled by the same scalar, so they become homogeneous coordinates on $\mathbb{P}^{\binom{n}{k}-1}$. Henceforth, when indices are not given in increasing order, we understand $p$ as extended antisymmetrically in the indices, and if the same index is repeated, we set it to $0$.
 
 Therefore, to claim that the image of $\iota$ is a closed subvariety, it suffices to define polynomials having these as their zero set, and this is obtained through the following *Plücker relations* from the properties of the wedge product:
 

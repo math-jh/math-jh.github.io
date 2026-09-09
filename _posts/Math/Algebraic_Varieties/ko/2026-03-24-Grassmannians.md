@@ -78,7 +78,7 @@ $\dim \Gr(k, V) = k(n - k)$이다.
 
 $$\iota(W) = [v_1 \wedge v_2 \wedge \cdots \wedge v_k]$$
 
-를 대응시키는 함수이다. ([\[다중선형대수학\] §텐서대수, ⁋정의 10](/ko/math/multilinear_algebra/tensor_algebras#def10))
+를 대응시키는 함수이다. ([\[다중선형대수학\] §텐서대수, ⁋정의 10](/ko/math/multilinear_algebra/tensor_algebras#def10){: data-relation="required" })
 :::
 
 그럼 다음이 성립한다. 
@@ -101,7 +101,7 @@ $$v_1\wedge\cdots\wedge v_k$$
 
 $$v_1\wedge\cdots\wedge v_k=\sum_{i_1<\cdots<i_k}p_{i_1\cdots i_k}e_{i_1}\wedge\cdots\wedge e_{i_k}$$
 
-의 계수 $p_{i_1\cdots i_k}$를 $W$의 *Plücker coordinates*라 부른다. 이는 $W$를 나타내는 $k\times n$ 행렬에서 $i_1,\ldots,i_k$번째 column을 골라 만든 $k\times k$ minor이고, $W$의 basis를 바꾸면 [명제 7](#prop7)의 증명에서 보았듯 이들 전체가 같은 scalar배가 되므로 $\mathbb{P}^{\binom{n}{k}-1}$의 homogeneous coordinates가 된다. 앞으로 index가 증가 순서로 주어지지 않은 경우에는 $p$를 index에 대해 antisymmetric하게 연장한 것으로 이해하며, 같은 index가 반복되면 $0$으로 둔다.
+의 계수 $p_{i_1\cdots i_k}$를 $W$의 *Plücker coordinates*라 부른다. 이는 $W$를 나타내는 $k\times n$ 행렬에서 $i_1,\ldots,i_k$번째 column을 골라 만든 $k\times k$ minor이고, $W$의 basis를 바꾸면 [명제 7](#prop7){: data-relation="required" }의 증명에서 보았듯 이들 전체가 같은 scalar배가 되므로 $\mathbb{P}^{\binom{n}{k}-1}$의 homogeneous coordinates가 된다. 앞으로 index가 증가 순서로 주어지지 않은 경우에는 $p$를 index에 대해 antisymmetric하게 연장한 것으로 이해하며, 같은 index가 반복되면 $0$으로 둔다.
 
 따라서 $\iota$의 image가 closed subvariety임을 주장하기 위해서는 이들을 zero set으로 갖는 다항식을 정의하면 되고, 이는 wedge product의 성질로부터 다음의 *Plücker relations*
 
