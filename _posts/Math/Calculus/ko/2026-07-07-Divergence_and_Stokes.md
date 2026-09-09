@@ -33,7 +33,7 @@ $$\iint_{\partial E} (0,0,R)\cdot d\mathbf{S} = \iiint_E \partial R/\partial z\d
 
 를 보이면 $P, Q$도 symmetric하게 처리되어 셋을 더해 정리가 나온다. 
 
-$E$가 세 좌표방향 모두로 단순한 입체, 특히 $z$방향으로는 $E = \{(x,y,z) \mid (x,y) \in D,\ u_1(x,y) \leq z \leq u_2(x,y)\}$라 하자. 오른쪽 삼중적분은 [§다중적분, ⁋정리 2](/ko/math/calculus/multiple_integrals#thm2)로 $z$를 먼저 적분하면
+$E$가 세 좌표방향 모두로 단순한 입체, 특히 $z$방향으로는 $E = \{(x,y,z) \mid (x,y) \in D,\ u_1(x,y) \leq z \leq u_2(x,y)\}$라 하자. 오른쪽 삼중적분은 [§다중적분, ⁋정리 2](/ko/math/calculus/multiple_integrals#thm2){: data-relation="required" }로 $z$를 먼저 적분하면
 
 $$\iiint_E \frac{\partial R}{\partial z}\dd{V} = \iint_D \bigl(R(x,y,u_2) - R(x,y,u_1)\bigr)\dd{A}$$
 
@@ -43,7 +43,7 @@ $$\iiint_E \frac{\partial R}{\partial z}\dd{V} = \iint_D \bigl(R(x,y,u_2) - R(x,
 발산정리는 closed 곡면을 통해 흘러나가는 양이 interior에서 솟아나는 양 $\divergence \mathbf{F}$를 모두 모은 것과 같음을 말한다. 이로써 발산이 "단위부피당 흘러나가는 양"이라는 직관이 정리로 확정된다. Closed 곡면 위의 선속을, 곡면을 직접 적분하는 대신 부피적분으로 바꾸어 계산할 수 있다는 점에서 실용적이기도 하다.
 
 ::: 예시 2 (선속의 부피적분 환원)
-[§면적분과 선속, ⁋예시 6](/ko/math/calculus/surface_integrals#ex6)에서 반지름 $R$인 구를 통한 $\mathbf{F} = (x,y,z)$의 선속을 곡면적분으로 직접 계산해 $4\pi R^3$을 얻었다. 발산정리로는 $\divergence \mathbf{F} = 3$이라
+[§면적분과 선속, ⁋예시 6](/ko/math/calculus/surface_integrals#ex6){: data-relation="weak" }에서 반지름 $R$인 구를 통한 $\mathbf{F} = (x,y,z)$의 선속을 곡면적분으로 직접 계산해 $4\pi R^3$을 얻었다. 발산정리로는 $\divergence \mathbf{F} = 3$이라
 
 $$\iint_{\partial E} \mathbf{F}\cdot d\mathbf{S} = \iiint_E 3\dd{V} = 3\cdot\frac{4}{3}\pi R^3 = 4\pi R^3$$
 
@@ -67,11 +67,11 @@ $S$가 $C^2$ 함수 $g$의 위로 방향지어진 그래프 $z = g(x,y)$인 경�
 
 $$\oint_{\partial S} \mathbf{F}\cdot d\mathbf{r} = \oint_{\partial D} P\dd{x} + Q\dd{y} + R\dd{z} = \oint_{\partial D} (P + R g_x)\dd{x} + (Q + R g_y)\dd{y}$$
 
-이고, 평면 영역 $D$에 [§그린 정리, ⁋정리 1](/ko/math/calculus/greens_theorem#thm1)을 적용하면 이는 
+이고, 평면 영역 $D$에 [§그린 정리, ⁋정리 1](/ko/math/calculus/greens_theorem#thm1){: data-relation="required" }을 적용하면 이는 
 
 $$\iint_D \bigl[\partial_x(Q + R g_y) - \partial_y(P + R g_x)\bigr]\dd{A}$$
 
-와 같다. $P, Q, R$가 $(x, y, g(x,y))$에서 계산된다는 것만 주의하며 연쇄법칙으로 미분하면, $R g_{xy}$와 $R g_{yx}$ 항이 [§다변수함수와 편미분, ⁋정리 7](/ko/math/calculus/partial_derivatives#thm7)로 상쇄되고, 이를 사용하여 정리하면 피적분함수가
+와 같다. $P, Q, R$가 $(x, y, g(x,y))$에서 계산된다는 것만 주의하며 연쇄법칙으로 미분하면, $R g_{xy}$와 $R g_{yx}$ 항이 [§다변수함수와 편미분, ⁋정리 7](/ko/math/calculus/partial_derivatives#thm7){: data-relation="required" }로 상쇄되고, 이를 사용하여 정리하면 피적분함수가
 
 $$(Q_x - P_y) + (Q_z - R_y)g_x + (R_x - P_z)g_y$$
 
@@ -93,7 +93,7 @@ $D$가 단순연결이므로 $D$ 안의 임의의 closed curve $C$는 $D$ 안에
 
 $$\oint_C \mathbf{F}\cdot d\mathbf{r} = \iint_S \curl \mathbf{F}\cdot d\mathbf{S} = 0$$
 
-이고, 모든 closed 곡선에서 적분이 $0$이므로 [§선적분, ⁋정리 4](/ko/math/calculus/line_integrals#thm4)에 의해 $\mathbf{F}$는 보존장이다.
+이고, 모든 closed 곡선에서 적분이 $0$이므로 [§선적분, ⁋정리 4](/ko/math/calculus/line_integrals#thm4){: data-relation="required" }에 의해 $\mathbf{F}$는 보존장이다.
 :::
 
 ::: 예시 5
