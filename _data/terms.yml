@@ -4096,6 +4096,8 @@ C:
   defs:
   - label: '[유도대수기하학] §Simplicial 가환환과 animation'
     url: /ko/math/derived_algebraic_geometry/animated_rings
+  - label: '[스킴] §변형이론과 여접 복합체'
+    url: /ko/math/scheme_theory/deformation_theory
 - id: cotangent_line_bundle
   en: cotangent line bundle
   ko: 여접선 다발
@@ -11015,6 +11017,13 @@ L:
   defs:
   - label: '[리만기하학] §레비-치비타 접속'
     url: /ko/math/riemannian_geometry/Levi-Civita_connection
+- id: lichtenbaum_schlessinger_complex
+  en: lichtenbaum–schlessinger complex
+  ko: 리히텐바움-슐레진저 복합체
+  primary: en
+  defs:
+  - label: '[스킴] §변형이론과 여접 복합체'
+    url: /ko/math/scheme_theory/deformation_theory
 - id: lichtenbaum_schlessinger_functor
   en: Lichtenbaum–Schlessinger functor
   ko: 리히텐바움-슐레진저 함자
@@ -13319,6 +13328,13 @@ O:
   - label: 변형이론
     lang: ko
     id: deformation_theory
+- id: obstruction_class
+  en: obstruction class
+  ko: 장애류
+  primary: en
+  defs:
+  - label: '[스킴] §변형이론과 여접 복합체'
+    url: /ko/math/scheme_theory/deformation_theory
 - id: obstruction_theory
   en: obstruction theory
   ko: 장애이론
@@ -17158,6 +17174,13 @@ S:
   defs:
   - label: '[스킴] §미분과 여접층'
     url: /ko/math/scheme_theory/sheaf_of_differentials
+- id: sheaf_operatorname_ext
+  en: sheaf $\operatorname{Ext}$
+  ko: 층 $\operatorname{Ext}$
+  primary: en
+  defs:
+  - label: '[스킴] §변형이론과 여접 복합체'
+    url: /ko/math/scheme_theory/deformation_theory
 - id: sheafification
   en: sheafification
   ko: 층화
