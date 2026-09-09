@@ -43,9 +43,9 @@ $$Z(f_1, \ldots, f_k) = \{x=(x_1, \ldots, x_n) \in \mathbb{A}^n \mid f_1(x) = \c
 
 $$Z(S)=Z((S))$$
 
-을 만족한다. 거꾸로 field $\mathbb{K}$는 Noetherian이므로 [\[가환대수학\] §기본 개념들, ⁋정리 12](/ko/math/commutative_algebra/basic_notions#thm12)를 반복하여 적용하면 $\mathbb{K}[\x_1,\ldots, \x_n]$ 또한 Noetherian이고, 따라서 임의의 ideal $\mathfrak{a}$는 유한 개의 다항식 $f_1,\ldots, f_k$로 생성되어 $Z(\mathfrak{a})=Z(f_1,\ldots, f_k)$가 성립한다. 즉 [정의 2](#def2)의 뜻에서의 affine algebraic set들과 ideal의 zero set들은 정확히 같은 모임을 이루며, 따라서 우리는 ideal $\mathfrak{a}$들이 정의하는 affine algebraic set들만 신경써도 된다.
+을 만족한다. 거꾸로 field $\mathbb{K}$는 Noetherian이므로 [\[가환대수학\] §기본 개념들, ⁋정리 12](/ko/math/commutative_algebra/basic_notions#thm12){: data-relation="required" }를 반복하여 적용하면 $\mathbb{K}[\x_1,\ldots, \x_n]$ 또한 Noetherian이고, 따라서 임의의 ideal $\mathfrak{a}$는 유한 개의 다항식 $f_1,\ldots, f_k$로 생성되어 $Z(\mathfrak{a})=Z(f_1,\ldots, f_k)$가 성립한다. 즉 [정의 2](#def2){: data-relation="required" }의 뜻에서의 affine algebraic set들과 ideal의 zero set들은 정확히 같은 모임을 이루며, 따라서 우리는 ideal $\mathfrak{a}$들이 정의하는 affine algebraic set들만 신경써도 된다.
 
-일반적으로 공간 $X$가 *irreducible*이라는 것은 $X$가 proper closed subset 두 개의 합집합으로 나타나지 않는다는 것이다. ([\[위상수학\] §차원, ⁋정의 6](/ko/math/topology/dimension#def6)) 따라서 우리의 정의는 irreducible affine algebraic set을 affine variety라고 부른다는 뜻이다. 이는 기하학적으로 여러 조각으로 나뉘지 않는 하나의 대상만을 다루기 위함이다.
+일반적으로 공간 $X$가 *irreducible*이라는 것은 $X$가 proper closed subset 두 개의 합집합으로 나타나지 않는다는 것이다. ([\[위상수학\] §차원, ⁋정의 6](/ko/math/topology/dimension#def6){: data-relation="weak" }) 따라서 우리의 정의는 irreducible affine algebraic set을 affine variety라고 부른다는 뜻이다. 이는 기하학적으로 여러 조각으로 나뉘지 않는 하나의 대상만을 다루기 위함이다.
 
 ::: 예시 3
 우리가 아는 대다수의 기하학적인 대상들은 다항식으로 나타나므로, 이들이 모두 affine algebraic set의 예시가 된다.
@@ -53,7 +53,7 @@ $$Z(S)=Z((S))$$
 1. $\mathbb{A}^2$ 안에서 정의된 affine variety $Z(\x^2+\y^2-1)$을 생각하자. 정의에 의해, 이 집합은 식 $\x^2+\y^2-1=0$을 만족하는 $\mathbb{A}^2$의 점들의 모임이므로, 단위원을 나타낸다.
 2. 일반적으로, 임의의 affine space $\mathbb{A}^n$와 상수가 아닌 임의의 다항식 $f\in \mathbb{K}[\x_1,\ldots, \x_n]$에 대하여, affine algebraic set $Z(f)$를 *hypersurface<sub>초곡면</sub>*라 부른다.
 3. 또 다른 중요한 예시로, $\mathbb{A}^3$ 위에 정의된 *twisted cubic*이 있다. 이는 $\mathbb{A}^3$ 위에 정의된 두 다항식 $\y-\x^2$, $\z-\x^3$으로 정의되는 곡선으로, 매개화 $(t,t^2,t^3)$을 통해 $\mathbb{A}^1$과 일대일로 대응된다.
-4. Affine space $\mathbb{A}^n$ 자기자신과 공집합은 affine variety이다. 이는 $Z(0)=\mathbb{A}^n$, $Z(1)=\emptyset$으로부터 자명하다. 이는 [명제 4](#prop4)에서 Zariski topology를 정의할 때 중요하게 사용된다.
+4. Affine space $\mathbb{A}^n$ 자기자신과 공집합은 affine variety이다. 이는 $Z(0)=\mathbb{A}^n$, $Z(1)=\emptyset$으로부터 자명하다. 이는 [명제 4](#prop4){: data-relation="forward" }에서 Zariski topology를 정의할 때 중요하게 사용된다.
 :::
 
 위의 예시에서 우리는 친숙한 기하학적 대상들이 모두 집합으로서는 affine algebraic set으로 쓰여질 수 있음을 보았다. 그러나 이를 기하학적 대상이라 생각하기 위해서는 그 위에 위상구조가 존재해야 한다. 우리의 유일한 도구는 다항식이므로, 이를 사용하여 위상구조를 정의할 것이다. 
@@ -68,7 +68,7 @@ $$Z(S)=Z((S))$$
 5. $Z(\mathfrak{a}) \cup Z(\mathfrak{b}) = Z(\mathfrak{a} \cap \mathfrak{b}) = Z(\mathfrak{a}\mathfrak{b})$.
 :::
 ::: 증명
-처음 두 명제는 [예시 3](#ex3)에서 이미 살펴보았다. 
+처음 두 명제는 [예시 3](#ex3){: data-relation="required" }에서 이미 살펴보았다. 
 
 세 번째 결과를 증명하기 위해, $\mathfrak{a}\subseteq \mathfrak{b}$라 하고 $x\in Z(\mathfrak{b})$라 하자. 그럼 모든 $f \in \mathfrak{b}$에 대해 $f(x) = 0$이고, $\mathfrak{a} \subseteq \mathfrak{b}$이므로 특히 모든 $\mathfrak{a}$의 원소에 대해서도 원하는 식이 성립한다.
 
@@ -85,9 +85,9 @@ $$f_1g_1+\cdots+ f_kg_k,\qquad f_i\in \mathfrak{a}, g_i\in \mathfrak{b}$$
 
 우선 위 명제의 마지막 결과는 $Z(\mathfrak{a}\mathfrak{b})$가 affine variety이기 위해서는 반드시 $Z(\mathfrak{a})\subseteq Z(\mathfrak{b})$이거나 $Z(\mathfrak{b})\subseteq Z(\mathfrak{a})$이어야 함을 보여준다. 이는 affine variety가 무엇인지를 대수적으로 살펴보는데 좋은 직관 중 하나가 된다.
 
-그보다 중요한 것은 위의 명제에 의해, 만일 $\mathbb{A}^n$ 위에서 정의된 affine algebraic set들을 닫힌집합이라고 선언한다면, [\[위상수학\] §집합의 내부, 폐포, 경계, ⁋명제 2](/ko/math/topology/other_concepts#prop2)의 조건들이 모두 만족되고 따라서 $\mathbb{A}^n$ 위의 위상구조가 유일하게 결정된다는 것이다. 이를 *Zariski topology<sub>자리스키 위상</sub>*이라 부른다. 정의에 의해 임의의 affine variety $X$는 적당한 affine space $\mathbb{A}^n$의 닫힌 부분집합이며, 우리는 $\mathbb{A}^n$에서 정의된 위상의 subspace topology를 통해 $X$에서의 위상을 정의할 수 있다. 
+그보다 중요한 것은 위의 명제에 의해, 만일 $\mathbb{A}^n$ 위에서 정의된 affine algebraic set들을 닫힌집합이라고 선언한다면, [\[위상수학\] §집합의 내부, 폐포, 경계, ⁋명제 2](/ko/math/topology/other_concepts#prop2){: data-relation="required" }의 조건들이 모두 만족되고 따라서 $\mathbb{A}^n$ 위의 위상구조가 유일하게 결정된다는 것이다. 이를 *Zariski topology<sub>자리스키 위상</sub>*이라 부른다. 정의에 의해 임의의 affine variety $X$는 적당한 affine space $\mathbb{A}^n$의 닫힌 부분집합이며, 우리는 $\mathbb{A}^n$에서 정의된 위상의 subspace topology를 통해 $X$에서의 위상을 정의할 수 있다. 
 
-특별한 예시로 $\mathbb{A}^1$에서의 Zariski topology를 보면, $\mathbb{K}$의 임의의 원소는 일차식 $\x-x$의 zero set이므로 임의의 singleton은 닫힌집합이고, 따라서 임의의 유한집합은 닫힌집합이다. 그러나 $\mathbb{K}[\x]$의 $0$이 아닌 임의의 원소는 많아야 유한 개의 해만을 가지므로, 이 위상구조 상에서는 ($\mathbb{K}$가 유한집합이 아닌 한) 무한한 원소를 가진 닫힌집합은 오직 $\mathbb{K}$ 자기자신 뿐이다. 즉 $\mathbb{A}^1$의 Zariski topology는 cofinite topology이며, 이로부터 우리는 Zariski topology가 Hausdorff일 필요가 없다는 것을 관찰할 수 있다. 더 일반적으로 irreducible space는 한점공간이 아닌 한 Hausdorff가 될 수 없고, 우리의 정의에서 affine variety들은 모두 irreducible이므로 임의의 affine variety는 Hausdorff space가 아니다. ([\[위상수학\] §차원, ⁋명제 7](/ko/math/topology/dimension#prop7))
+특별한 예시로 $\mathbb{A}^1$에서의 Zariski topology를 보면, $\mathbb{K}$의 임의의 원소는 일차식 $\x-x$의 zero set이므로 임의의 singleton은 닫힌집합이고, 따라서 임의의 유한집합은 닫힌집합이다. 그러나 $\mathbb{K}[\x]$의 $0$이 아닌 임의의 원소는 많아야 유한 개의 해만을 가지므로, 이 위상구조 상에서는 ($\mathbb{K}$가 유한집합이 아닌 한) 무한한 원소를 가진 닫힌집합은 오직 $\mathbb{K}$ 자기자신 뿐이다. 즉 $\mathbb{A}^1$의 Zariski topology는 cofinite topology이며, 이로부터 우리는 Zariski topology가 Hausdorff일 필요가 없다는 것을 관찰할 수 있다. 더 일반적으로 irreducible space는 한점공간이 아닌 한 Hausdorff가 될 수 없고, 우리의 정의에서 affine variety들은 모두 irreducible이므로 임의의 affine variety는 Hausdorff space가 아니다. ([\[위상수학\] §차원, ⁋명제 7](/ko/math/topology/dimension#prop7){: data-relation="weak" })
 
 이제 우리는 Zariski topology의 열린집합들을 살펴보자.
 
@@ -99,7 +99,7 @@ $$D(f) = \{x\in \mathbb{A}^n \mid f(x) \ne 0\} = \mathbb{A}^n \setminus Z(f)$$
 으로 정의한다.
 :::
 
-다음 명제는 principal open set들이 affine variety의 base를 이룬다는 것을 보여준다. ([\[위상수학\] §위상공간의 기저, ⁋정의 1](/ko/math/topology/topological_bases#def1))
+다음 명제는 principal open set들이 affine variety의 base를 이룬다는 것을 보여준다. ([\[위상수학\] §위상공간의 기저, ⁋정의 1](/ko/math/topology/topological_bases#def1){: data-relation="weak" })
 
 ::: 명제 6
 Affine variety $X \subseteq \mathbb{A}^n$의 임의의 열린집합 $U$에 대하여,
@@ -150,10 +150,10 @@ $$(x_1,\ldots, x_n,y)\mapsto (x_1,\ldots, x_n)$$
 
 을 얻는다. 이것이 homeomorphism인 것은 자명하다. 
 
-마지막으로 $Z(\mathfrak{b})$가 irreducible임을 보이자. 가정에 의하여 $D(f)\cap X$는 $X$의 공집합이 아닌 열린 부분집합이다. 그럼 $D(f)\cap X$의 공집합이 아닌 두 열린집합은 $X$의 공집합이 아닌 열린집합이기도 하므로, $X$가 irreducible이라는 것과 [\[위상수학\] §차원, ⁋명제 7](/ko/math/topology/dimension#prop7)의 둘째 조건으로부터 이 둘은 서로 만난다. 즉 $D(f)\cap X$는 irreducible이고, 위의 homeomorphism에 의하여 $Z(\mathfrak{b})$ 또한 irreducible이다. 
+마지막으로 $Z(\mathfrak{b})$가 irreducible임을 보이자. 가정에 의하여 $D(f)\cap X$는 $X$의 공집합이 아닌 열린 부분집합이다. 그럼 $D(f)\cap X$의 공집합이 아닌 두 열린집합은 $X$의 공집합이 아닌 열린집합이기도 하므로, $X$가 irreducible이라는 것과 [\[위상수학\] §차원, ⁋명제 7](/ko/math/topology/dimension#prop7){: data-relation="required" }의 둘째 조건으로부터 이 둘은 서로 만난다. 즉 $D(f)\cap X$는 irreducible이고, 위의 homeomorphism에 의하여 $Z(\mathfrak{b})$ 또한 irreducible이다. 
 :::
 
-이쯤에서 짚고 넘어가야 할 사실은, affine variety에 대한 우리의 정의가 엄밀하게는 ambient space $\mathbb{A}^n$에 의존한다는 사실이다. 가령 $\mathbb{A}^1$의 principal open set $D(\x)$는, 위의 명제에 따르면, affine variety이다. 그러나 우리는 이미 $\mathbb{A}^1$의 Zariski topology는 cofinite topology임을 살펴보았고, 따라서 $D(\x)$는 $\mathbb{K}[\x]$ 안에서의 다항식의 zero set들로 정의될 수 없다. 실제로 [명제 7](#prop7)의 증명을 뜯어보면, $D(\x)$가 affine variety라는 사실은 isomorphism
+이쯤에서 짚고 넘어가야 할 사실은, affine variety에 대한 우리의 정의가 엄밀하게는 ambient space $\mathbb{A}^n$에 의존한다는 사실이다. 가령 $\mathbb{A}^1$의 principal open set $D(\x)$는, 위의 명제에 따르면, affine variety이다. 그러나 우리는 이미 $\mathbb{A}^1$의 Zariski topology는 cofinite topology임을 살펴보았고, 따라서 $D(\x)$는 $\mathbb{K}[\x]$ 안에서의 다항식의 zero set들로 정의될 수 없다. 실제로 [명제 7](#prop7){: data-relation="required" }의 증명을 뜯어보면, $D(\x)$가 affine variety라는 사실은 isomorphism
 
 $$D(\x)\cong Z(\x\y-1)\subseteq \mathbb{A}^2$$
 
@@ -161,7 +161,7 @@ $$D(\x)\cong Z(\x\y-1)\subseteq \mathbb{A}^2$$
 
 ## 영점정리
 
-[명제 4](#prop4)에서 살펴본 $Z$는 대수적인 대상들, 즉 $\mathbb{K}[\x_1,\ldots, \x_n]$의 다항식들을 기하적인 대상들, 즉 이들 다항식들이 정의하는 zero set으로 보내준다. 거꾸로 우리는 기하적인 대상을 받아 대수적인 대상들을 대응시켜줄 수도 있다.
+[명제 4](#prop4){: data-relation="weak" }에서 살펴본 $Z$는 대수적인 대상들, 즉 $\mathbb{K}[\x_1,\ldots, \x_n]$의 다항식들을 기하적인 대상들, 즉 이들 다항식들이 정의하는 zero set으로 보내준다. 거꾸로 우리는 기하적인 대상을 받아 대수적인 대상들을 대응시켜줄 수도 있다.
 
 ::: 정의 8
 임의의 부분집합 $X \subseteq \mathbb{A}^n$에 대하여, $\mathbb{K}[\x_1,\ldots, \x_n]$의 부분집합 $I(X)$를
@@ -190,7 +190,7 @@ $\mathbb{A}^n$의 부분집합들 $X,Y$, $\mathbb{K}[\x_1,\ldots, \x_n]$의 임�
 5. $f \in S$이고 $a \in Z(S)$라면 $f(a) = 0$이다. 즉 $f \in I(Z(S))$이다.
 :::
 
-즉, $Z$와 $I$는 antitone Galois connection을 정의한다. ([\[집합론\] §필터와 아이디얼, 갈루아 대응, ⁋정의 6](/ko/math/set_theory/filter_and_ideal#def6)) 따라서 두 operator의 합성 $ZI$와 $IZ$ 각각은 closure operator를 정의한다. $ZI$의 경우, 이 closure는 실제로 Zariski topology에서의 closure가 된다. 이는 만일 $X \subseteq Y = Z(J)$이면 $I(Z(J)) \subseteq I(X)$이고, [명제 9](#prop9)의 5번 조건에서 $J \subseteq I(Z(J))$이므로 $ZI(X) \subseteq Z(J) = Y$가 되어, $ZI(X)$가 $X$를 포함하는 Zariski closed set 중 가장 작은 것이 되기 때문이다. $IZ$의 경우에는 바로 보이지 않는데, 이를 위해서는 ideal의 radical 개념이 필요하다. ([\[가환대수학\] §국소화의 성질들, ⁋따름정리 8](/ko/math/commutative_algebra/properties_of_localization#cor8))
+즉, $Z$와 $I$는 antitone Galois connection을 정의한다. ([\[집합론\] §필터와 아이디얼, 갈루아 대응, ⁋정의 6](/ko/math/set_theory/filter_and_ideal#def6){: data-relation="weak" }) 따라서 두 operator의 합성 $ZI$와 $IZ$ 각각은 closure operator를 정의한다. $ZI$의 경우, 이 closure는 실제로 Zariski topology에서의 closure가 된다. 이는 만일 $X \subseteq Y = Z(J)$이면 $I(Z(J)) \subseteq I(X)$이고, [명제 9](#prop9){: data-relation="required" }의 5번 조건에서 $J \subseteq I(Z(J))$이므로 $ZI(X) \subseteq Z(J) = Y$가 되어, $ZI(X)$가 $X$를 포함하는 Zariski closed set 중 가장 작은 것이 되기 때문이다. $IZ$의 경우에는 바로 보이지 않는데, 이를 위해서는 ideal의 radical 개념이 필요하다. ([\[가환대수학\] §국소화의 성질들, ⁋따름정리 8](/ko/math/commutative_algebra/properties_of_localization#cor8){: data-relation="required" })
 
 ::: 정리 10 (Nullstellensatz)
 Algebraically closed field $\mathbb{K}$와 ideal $\mathfrak{a}\subseteq \mathbb{K}[\x_1,\ldots, \x_n]$이 주어졌다 하자. 그럼 
@@ -200,20 +200,20 @@ $$I(Z(\mathfrak{a}))=\sqrt{\mathfrak{a}}$$
 이 성립한다.
 :::
 ::: 증명
-[\[가환대수학\] §영점정리, ⁋명제 6](/ko/math/commutative_algebra/nullstellensatz#prop6)
+[\[가환대수학\] §영점정리, ⁋명제 6](/ko/math/commutative_algebra/nullstellensatz#prop6){: data-relation="required" }
 :::
 
-이는 넓게 본다면 이미 [명제 4](#prop4)의 5번 조건으로부터
+이는 넓게 본다면 이미 [명제 4](#prop4){: data-relation="weak" }의 5번 조건으로부터
 
 $$Z(\mathfrak{a}^k)=Z(\mathfrak{a}\cap\cdots\cap \mathfrak{a})=Z(\mathfrak{a})$$
 
 이므로, 어느정도 예견된 결과라고 할 수도 있다.
 
-한편, $\mathfrak{a}\subseteq \sqrt{\mathfrak{a}}$가 임의의 ideal $\mathfrak{a}$에 대해 성립하므로 [명제 4](#prop4)의 셋째 조건으로부터 $Z(\sqrt{\mathfrak{a}})\subseteq Z(\mathfrak{a})$임을 안다. 그런데 정의에 의하여 임의의 $f\in \sqrt{\mathfrak{a}}$가 주어졌을 때, 적당한 $r$이 존재하여 $f^r\in \mathfrak{a}$이다. 따라서 $x\in Z(\mathfrak{a})$라면 $x\in Z(\sqrt{\mathfrak{a}})$여야 하고 이로부터 $Z(\mathfrak{a})=Z(\sqrt{\mathfrak{a}})$임을 안다. 즉 ideal의 radical은 affine algebraic set을 ideal의 zero set으로 나타낼 때, 이 ideal을 얻어내는 표준적인 방법을 주는 것으로 생각할 수 있으며, 이들 사이의 차이를 구별하기 위해서는 *scheme*을 정의하면 된다. 
+한편, $\mathfrak{a}\subseteq \sqrt{\mathfrak{a}}$가 임의의 ideal $\mathfrak{a}$에 대해 성립하므로 [명제 4](#prop4){: data-relation="required" }의 셋째 조건으로부터 $Z(\sqrt{\mathfrak{a}})\subseteq Z(\mathfrak{a})$임을 안다. 그런데 정의에 의하여 임의의 $f\in \sqrt{\mathfrak{a}}$가 주어졌을 때, 적당한 $r$이 존재하여 $f^r\in \mathfrak{a}$이다. 따라서 $x\in Z(\mathfrak{a})$라면 $x\in Z(\sqrt{\mathfrak{a}})$여야 하고 이로부터 $Z(\mathfrak{a})=Z(\sqrt{\mathfrak{a}})$임을 안다. 즉 ideal의 radical은 affine algebraic set을 ideal의 zero set으로 나타낼 때, 이 ideal을 얻어내는 표준적인 방법을 주는 것으로 생각할 수 있으며, 이들 사이의 차이를 구별하기 위해서는 *scheme*을 정의하면 된다. 
 
-앞으로 우리는 [정리 10](#thm10)을 자유롭게 사용하기 위하여, 별다른 언급이 없는 한 $\mathbb{K}$가 algebraically closed field인 것으로 가정하기로 한다.
+앞으로 우리는 [정리 10](#thm10){: data-relation="required" }을 자유롭게 사용하기 위하여, 별다른 언급이 없는 한 $\mathbb{K}$가 algebraically closed field인 것으로 가정하기로 한다.
 
-이제 [명제 4](#prop4)의 다섯번째 결과와 위의 결과를 종합하면, 우리는 $Z(\mathfrak{a})$가 affine variety이기 위해서는 $\sqrt{\mathfrak{a}}$가 prime ideal이어야 함을 알 수 있다. ([\[가환대수학\] §기본 개념들, ⁋정의 10](/ko/math/commutative_algebra/basic_notions#def10)) 즉, $\mathbb{A}^n$의 irreducible closed algebraic set들과 $\mathbb{K}[\x_1,\ldots, \x_n]$의 prime ideal들 사이의 Galois correspondence가 존재한다. 
+이제 [명제 4](#prop4){: data-relation="required" }의 다섯번째 결과와 위의 결과를 종합하면, 우리는 $Z(\mathfrak{a})$가 affine variety이기 위해서는 $\sqrt{\mathfrak{a}}$가 prime ideal이어야 함을 알 수 있다. ([\[가환대수학\] §기본 개념들, ⁋정의 10](/ko/math/commutative_algebra/basic_notions#def10){: data-relation="required" }) 즉, $\mathbb{A}^n$의 irreducible closed algebraic set들과 $\mathbb{K}[\x_1,\ldots, \x_n]$의 prime ideal들 사이의 Galois correspondence가 존재한다. 
 
 ## 좌표환과 정칙성
 
@@ -251,7 +251,7 @@ Algebraically closed field $\mathbb{K}$ 위의 affine variety $X \subseteq \math
 이에 대한 증명은 본질적으로 fourth isomorphism theorem으로부터 자명하다. 
 
 ::: 예시 13
-[예시 3](#ex3)에서 살펴본 affine variety들의 경우, ideal들 $(\x^2+\y^2-1)$ 그리고 $(\y-\x^2,\z-\x^3)$은 radical임을 보일 수 있다. 따라서 단위원 $X = Z(\x^2+\y^2-1)$의 coordinate ring은 $\mathbb{K}[X] = \mathbb{K}[\x, \y]/(\x^2+\y^2-1)$이고 twisted cubic $C$의 coordinate ring은 $\mathbb{K}[C] = \mathbb{K}[\x, \y, \z]/(\y-\x^2, \z-\x^3) \cong \mathbb{K}[\x]$이다.
+[예시 3](#ex3){: data-relation="weak" }에서 살펴본 affine variety들의 경우, ideal들 $(\x^2+\y^2-1)$ 그리고 $(\y-\x^2,\z-\x^3)$은 radical임을 보일 수 있다. 따라서 단위원 $X = Z(\x^2+\y^2-1)$의 coordinate ring은 $\mathbb{K}[X] = \mathbb{K}[\x, \y]/(\x^2+\y^2-1)$이고 twisted cubic $C$의 coordinate ring은 $\mathbb{K}[C] = \mathbb{K}[\x, \y, \z]/(\y-\x^2, \z-\x^3) \cong \mathbb{K}[\x]$이다.
 
 그러나 일반적으로 hypersurface $Z(f)$의 coordinate ring은 $\mathbb{K}[Z(f)] = \mathbb{K}[\x_1, \ldots, \x_n]/I(Z(f)) = \mathbb{K}[\x_1, \ldots, \x_n]/\sqrt{(f)}$이므로, coordinate ring을 계산할 때는 주어진 ideal이 radical인지를 판단하여야 한다.
 :::
@@ -266,7 +266,7 @@ $$\mathbb{K}[X]=\mathbb{K}[\x,\y]/(\x\y-1)\cong \mathbb{K}[\x,1/\x]$$
 임의의 affine variety $V\subseteq \mathbb{A}^k$와 그 위에서 정의된 함수 $f:V\rightarrow \mathbb{K}$에 대하여, $f$가 점 $p\in V$에서 *regular*라는 것은 $p$의 적당한 열린근방 $D(h)$와 다항식 $g$가 존재하여, $U$ 위에서 $f=g/h$이 성립하는 것이다. 여기서 $h$는 $U=D(h)$ 위에서 $0$이 되지 않는 다항식이다. 
 :::
 
-그럼 이 정의 하에서, 모든 점에서 regular인 함수를 regular function이라 부르는 것이 자연스러울 것이다. $\mathbb{K}$가 algebraically closed일 때 이 두 정의 [정의 11](#def11)과 [정의 14](#def14)이 동치라는 것에 대한 증명은 다소 귀찮을 수 있으나, 본질적인 내용은 위에서 살펴본 예시에 들어있으므로 그 증명은 하지 않기로 한다. 증명의 핵심은 [정의 14](#def14)에서 [정의 11](#def11)을 얻어내는 것인데, 이는 각각의 $D(h)$에서 $g/h$꼴로 나타나는 함수들을 잘 붙이는 것으로부터 얻어진다. 
+그럼 이 정의 하에서, 모든 점에서 regular인 함수를 regular function이라 부르는 것이 자연스러울 것이다. $\mathbb{K}$가 algebraically closed일 때 이 두 정의 [정의 11](#def11){: data-relation="required" }과 [정의 14](#def14){: data-relation="required" }이 동치라는 것에 대한 증명은 다소 귀찮을 수 있으나, 본질적인 내용은 위에서 살펴본 예시에 들어있으므로 그 증명은 하지 않기로 한다. 증명의 핵심은 [정의 14](#def14){: data-relation="required" }에서 [정의 11](#def11){: data-relation="required" }을 얻어내는 것인데, 이는 각각의 $D(h)$에서 $g/h$꼴로 나타나는 함수들을 잘 붙이는 것으로부터 얻어진다. 
 
 ## 아핀다양체 사이의 사상
 
@@ -280,7 +280,7 @@ $$\varphi(a_1, \ldots, a_n) = (f_1(a), \ldots, f_m(a))$$
 으로 나타낼 수 있는 것이다. 
 :::
 
-예를 들어, 우리는 [예시 3](#ex3)에서 twisted cubic이 $t\mapsto (t,t^2,t^3)$을 통해 $\mathbb{A}^1$과 대응됨을 보였는데, 위의 정의는 이것이 affine variety들 사이의 morphism이라는 것을 보여준다.
+예를 들어, 우리는 [예시 3](#ex3){: data-relation="weak" }에서 twisted cubic이 $t\mapsto (t,t^2,t^3)$을 통해 $\mathbb{A}^1$과 대응됨을 보였는데, 위의 정의는 이것이 affine variety들 사이의 morphism이라는 것을 보여준다.
 
 직관적으로 $\mathbb{K}[X]$들은 $X$ 위에 정의된 함수이므로, 만일 morphism $X\rightarrow Y$가 주어졌다면 이 morphism과의 합성을 통해 $Y$의 regular function들을 $X$로 옮겨올 수 있을 것이다. 이는 기하학적 morphism에서 대수적 morphism으로 가는 한 방향이다. 더 중요한 것은 그 역방향, 즉 coordinate ring homomorphism $\mathbb{K}[Y]\rightarrow \mathbb{K}[X]$가 주어졌을 때 이를 기하학적 morphism $X\rightarrow Y$로 복원할 수 있다는 사실이다.
 
@@ -301,7 +301,7 @@ $$(g \circ \varphi)(a) - (h \circ \varphi)(a) = (g - h)(\varphi(a)) = 0$$
 이제 $\varphi^\ast$가 ring homomorphism임은 자명하다.
 :::
 
-즉, morphism $\varphi: X \rightarrow Y$는 coordinate ring homomorphism $\varphi^\ast: \mathbb{K}[Y] \rightarrow \mathbb{K}[X]$를 유도한다. 이는 $X\mapsto \mathbb{K}[X]$가 affine variety들의 category에서 $\Ring$으로의 contravariant functor임을 의미한다. ([\[범주론\] §함자, ⁋정의 5](/ko/math/category_theory/functors#def5))
+즉, morphism $\varphi: X \rightarrow Y$는 coordinate ring homomorphism $\varphi^\ast: \mathbb{K}[Y] \rightarrow \mathbb{K}[X]$를 유도한다. 이는 $X\mapsto \mathbb{K}[X]$가 affine variety들의 category에서 $\Ring$으로의 contravariant functor임을 의미한다. ([\[범주론\] §함자, ⁋정의 5](/ko/math/category_theory/functors#def5){: data-relation="weak" })
 
 한편 morphism의 개념을 정의했다면, 당연히 isomorphism의 개념이 존재한다.
 
@@ -317,7 +317,7 @@ Morphism $\varphi: X \rightarrow Y$가 *isomorphism<sub>동형사상</sub>*이�
 Morphism $\varphi: X \rightarrow Y$가 isomorphism일 필요충분조건은 $\varphi^\ast: \mathbb{K}[Y] \rightarrow \mathbb{K}[X]$가 ring isomorphism인 것이다.
 :::
 
-[명제 16](#prop16)에서 우리는 morphism $\varphi: X \rightarrow Y$가 coordinate ring homomorphism $\varphi^\ast: \mathbb{K}[Y] \rightarrow \mathbb{K}[X]$를 유도함을 보았다. 직관적으로, $\varphi^\ast$는 $Y$ 위의 함수 $g$를 $X$ 위의 함수 $g \circ \varphi$로 대응시키는데, 이는 $Y$의 기하학적 정보를 $X$로 pullback하는 연산이다. 따라서 $\varphi^\ast$가 isomorphism이라면, 양쪽 coordinate ring의 함수들이 서로 완벽하게 대응하므로, 기하학적으로도 $X$와 $Y$의 구조가 본질적으로 같을 것이라는 기대가 자연스럽다. 다음 증명은 이 직관을 엄밀하게 구현한다.
+[명제 16](#prop16){: data-relation="required" }에서 우리는 morphism $\varphi: X \rightarrow Y$가 coordinate ring homomorphism $\varphi^\ast: \mathbb{K}[Y] \rightarrow \mathbb{K}[X]$를 유도함을 보았다. 직관적으로, $\varphi^\ast$는 $Y$ 위의 함수 $g$를 $X$ 위의 함수 $g \circ \varphi$로 대응시키는데, 이는 $Y$의 기하학적 정보를 $X$로 pullback하는 연산이다. 따라서 $\varphi^\ast$가 isomorphism이라면, 양쪽 coordinate ring의 함수들이 서로 완벽하게 대응하므로, 기하학적으로도 $X$와 $Y$의 구조가 본질적으로 같을 것이라는 기대가 자연스럽다. 다음 증명은 이 직관을 엄밀하게 구현한다.
 
 ::: 증명 (명제 18)
 반대방향만 보이면 충분하다. $\varphi^\ast$가 isomorphism이라 하자. 그럼 $\psi^\ast = (\varphi^\ast)^{-1}: \mathbb{K}[X] \rightarrow \mathbb{K}[Y]$가 존재한다.
