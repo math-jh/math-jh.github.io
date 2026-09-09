@@ -21,7 +21,7 @@ $$\chi(X,\mathcal{F})=\sum_{i\geq 0}(-1)^i\dim H^i(X,\mathcal{F})$$
 으로 정의한다. $X$가 projective이고 $\mathcal{F}$가 coherent이므로 각 cohomology group이 finite dimensional이며, $i>\dim X$에서는 소멸하므로 위의 합은 유한합이다.
 :::
 
-HRR 정리의 좌변은 바로 이 Euler characteristic이며, 우변은 $X$의 intersection theory 위에서의 적분으로 주어진다. 이를 위해서는 Chern character와 Todd class라는 두 가지 characteristic class가 필요하다. 이들의 정의와 성질은 [§Todd Class](/ko/math/algebraic_varieties/todd_class)에서 자세히 다루었으므로, 본 글에서는 필요한 최소한의 사실만을 상기시킨다.
+HRR 정리의 좌변은 바로 이 Euler characteristic이며, 우변은 $X$의 intersection theory 위에서의 적분으로 주어진다. 이를 위해서는 Chern character와 Todd class라는 두 가지 characteristic class가 필요하다. 이들의 정의와 성질은 [§Todd Class](/ko/math/algebraic_varieties/todd_class){: data-relation="required" }에서 자세히 다루었으므로, 본 글에서는 필요한 최소한의 사실만을 상기시킨다.
 
 ::: 정리 2 (Hirzebruch-Riemann-Roch)
 Algebraically closed field 위의 smooth projective variety $X$와 그 위의 coherent sheaf $\mathcal{F}$에 대하여 다음이 성립한다.
@@ -31,7 +31,7 @@ $$\chi(X,\mathcal{F})=\int_X\operatorname{ch}(\mathcal{F})\cdot\operatorname{td}
 여기서 $\operatorname{ch}(\mathcal{F})$는 $\mathcal{F}$의 Chern character, $\operatorname{td}(T_X)$는 tangent bundle $T_X$의 Todd class이며, $\int_X$는 Chow group $A^{\dim X}(X)$ (또는 cohomology $H^{2\dim X}(X,\mathbb{Q})$) 위의 degree map을 의미한다.
 :::
 
-정리 [2](#thm2)에서 우변의 $\operatorname{ch}(\mathcal{F})\cdot\operatorname{td}(T_X)$는 Chow ring $A^\bullet(X)\otimes_\mathbb{Z}\mathbb{Q}$ 위에서의 곱셈이며, $\int_X$는 이 곱의 $\dim X$차 homogeneous 성분을 취한 후 그 degree를 적분하는 연산이다. 즉, $n=\dim X$일 때
+정리 [2](#thm2){: data-relation="required" }에서 우변의 $\operatorname{ch}(\mathcal{F})\cdot\operatorname{td}(T_X)$는 Chow ring $A^\bullet(X)\otimes_\mathbb{Z}\mathbb{Q}$ 위에서의 곱셈이며, $\int_X$는 이 곱의 $\dim X$차 homogeneous 성분을 취한 후 그 degree를 적분하는 연산이다. 즉, $n=\dim X$일 때
 
 $$\int_X\operatorname{ch}(\mathcal{F})\cdot\operatorname{td}(T_X)=\deg\bigl[\operatorname{ch}(\mathcal{F})\cdot\operatorname{td}(T_X)\bigr]_n$$
 
@@ -49,7 +49,7 @@ $$\ell(D)-\ell(K_C-D)=\deg D+1-g$$
 로 환원된다. 여기서 $K_C$는 canonical divisor이며, $\ell(D)=\dim H^0(C,\mathcal{O}_C(D))$이다.
 :::
 ::: 증명
-Curve $C$의 차원은 $n=1$이다. Line bundle $\mathcal{L}=\mathcal{O}_C(D)$에 대하여 Chern character는 $\operatorname{ch}(\mathcal{L})=1+c_1(\mathcal{L})$이고, tangent bundle $T_C$의 rank가 $1$이므로 [§Todd Class, ⁋예시 5](/ko/math/algebraic_varieties/todd_class#ex5)에 의해
+Curve $C$의 차원은 $n=1$이다. Line bundle $\mathcal{L}=\mathcal{O}_C(D)$에 대하여 Chern character는 $\operatorname{ch}(\mathcal{L})=1+c_1(\mathcal{L})$이고, tangent bundle $T_C$의 rank가 $1$이므로 [§Todd Class, ⁋예시 5](/ko/math/algebraic_varieties/todd_class#ex5){: data-relation="required" }에 의해
 
 $$\operatorname{td}(T_C)=1+\frac{1}{2}c_1(T_C)=1-\frac{1}{2}K_C$$
 
@@ -65,7 +65,7 @@ $$\chi(C,\mathcal{L})=\int_C\left(c_1(\mathcal{L})-\frac{1}{2}K_C\right)=\deg(\m
 
 $$\chi(C,\mathcal{L})=\dim H^0(C,\mathcal{L})-\dim H^1(C,\mathcal{L})=\ell(D)-\ell(K_C-D)$$
 
-이므로 classical Riemann-Roch 정리 [§곡선에서의 리만-로흐 정리, ⁋명제 3](/ko/math/algebraic_varieties/riemann_roch_theorem#prop3)을 복원한다. $\square$
+이므로 classical Riemann-Roch 정리 [§곡선에서의 리만-로흐 정리, ⁋명제 3](/ko/math/algebraic_varieties/riemann_roch_theorem#prop3){: data-relation="weak" }을 복원한다. $\square$
 :::
 
 ::: 명제 4 (곡면에서의 환원)
@@ -84,7 +84,7 @@ Surface $S$의 차원은 $n=2$이다. Line bundle $\mathcal{O}_S(D)$에 대하�
 
 $$\operatorname{ch}(\mathcal{O}_S(D))=1+D+\frac{D^2}{2}$$
 
-이며, [§Todd Class, ⁋예시 6](/ko/math/algebraic_varieties/todd_class#ex6)에 의해 tangent bundle의 Todd class는
+이며, [§Todd Class, ⁋예시 6](/ko/math/algebraic_varieties/todd_class#ex6){: data-relation="required" }에 의해 tangent bundle의 Todd class는
 
 $$\operatorname{td}(T_S)=1+\frac{c_1(T_S)}{2}+\frac{c_1(T_S)^2+c_2(T_S)}{12}=1-\frac{K_S}{2}+\frac{K_S^2+c_2(S)}{12}$$
 
@@ -104,7 +104,7 @@ $$K_S^2+c_2(S)=12\chi(\mathcal{O}_S)$$
 
 $$\chi(S,\mathcal{O}_S(D))=\frac{1}{2}D\cdot(D-K_S)+\chi(\mathcal{O}_S)$$
 
-를 얻어 [§곡면에서의 리만-로흐 정리](/ko/math/algebraic_varieties/riemann_roch_surfaces)의 결과와 일치함을 확인한다. $\square$
+를 얻어 [§곡면에서의 리만-로흐 정리](/ko/math/algebraic_varieties/riemann_roch_surfaces){: data-relation="weak" }의 결과와 일치함을 확인한다. $\square$
 :::
 
 ## Grothendieck-Riemann-Roch 정리
@@ -119,11 +119,11 @@ $$f_\ast\bigl(\operatorname{ch}(\mathcal{F})\cdot\operatorname{td}(T_X)\bigr)=\o
 여기서 $f_\ast:A^\bullet(X)\otimes\mathbb{Q}\rightarrow A^\bullet(Y)\otimes\mathbb{Q}$는 Chow group에서의 push-forward, $Rf_\ast\mathcal{F}$는 $\mathcal{F}$의 derived direct image이며, 이의 Chern character는 $\operatorname{ch}(Rf_\ast\mathcal{F})=\sum_i(-1)^i\operatorname{ch}(R^i f_\ast\mathcal{F})$로 정의된다.
 :::
 
-정리 [5](#thm5)에서 $Y=\Spec(k)$로 두면, $f_\ast$는 적분 $\int_X$가 되고 $Rf_\ast\mathcal{F}$는 $H^\bullet(X,\mathcal{F})$를 나타내므로
+정리 [5](#thm5){: data-relation="required" }에서 $Y=\Spec(k)$로 두면, $f_\ast$는 적분 $\int_X$가 되고 $Rf_\ast\mathcal{F}$는 $H^\bullet(X,\mathcal{F})$를 나타내므로
 
 $$\int_X\operatorname{ch}(\mathcal{F})\cdot\operatorname{td}(T_X)=\sum_i(-1)^i\dim H^i(X,\mathcal{F})=\chi(X,\mathcal{F})$$
 
-이 되어 정리 [2](#thm2)의 HRR 공식이 특수한 경우로 얻어진다. 따라서 Grothendieck-Riemann-Roch 정리는 HRR 정리의 자연스러운 일반화이다.
+이 되어 정리 [2](#thm2){: data-relation="weak" }의 HRR 공식이 특수한 경우로 얻어진다. 따라서 Grothendieck-Riemann-Roch 정리는 HRR 정리의 자연스러운 일반화이다.
 
 ## 증명 개요
 
@@ -165,7 +165,7 @@ $$\chi(\mathbb{P}^n,\mathcal{O}_{\mathbb{P}^n}(d))=\binom{n+d}{n}$$
 이 유도된다.
 :::
 ::: 증명
-[§Todd Class, ⁋예시 7](/ko/math/algebraic_varieties/todd_class#ex7)에서 살펴보았듯이, $\mathbb{P}^n$의 Chow ring은 $A^\bullet(\mathbb{P}^n)\cong\mathbb{Z}[h]/(h^{n+1})$이며, tangent bundle의 total Chern class는 $c(T_{\mathbb{P}^n})=(1+h)^{n+1}$이다. 따라서 Chern roots는 모두 hyperplane class $h$이며,
+[§Todd Class, ⁋예시 7](/ko/math/algebraic_varieties/todd_class#ex7){: data-relation="required" }에서 살펴보았듯이, $\mathbb{P}^n$의 Chow ring은 $A^\bullet(\mathbb{P}^n)\cong\mathbb{Z}[h]/(h^{n+1})$이며, tangent bundle의 total Chern class는 $c(T_{\mathbb{P}^n})=(1+h)^{n+1}$이다. 따라서 Chern roots는 모두 hyperplane class $h$이며,
 
 $$\operatorname{td}(T_{\mathbb{P}^n})=\left(\frac{h}{1-e^{-h}}\right)^{n+1}$$
 
@@ -195,10 +195,10 @@ $$\operatorname{td}(T_{\mathbb{P}^2})=1+\frac{3h}{2}+h^2,\qquad \operatorname{ch
 
 $$\chi(\mathbb{P}^2,\mathcal{O}_{\mathbb{P}^2}(d))=\frac{d^2}{2}+\frac{3d}{2}+1=\frac{(d+1)(d+2)}{2}=\binom{d+2}{2}$$
 
-를 얻는다. 일반적으로는 residue theorem을 사용하거나, Todd class의 정의로부터 직접 계산하여 $\binom{n+d}{n}$이 됨을 확인할 수 있다. 이는 [§사영공간의 코호몰로지](/ko/math/algebraic_varieties/cohomology_of_projective_spaces)에서 직접 계산한 cohomology의 결과와 일치하며, 특히 $d\geq 0$일 때 $i>0$에 대하여 $H^i(\mathbb{P}^n,\mathcal{O}_{\mathbb{P}^n}(d))=0$이므로 $\chi$가 $h^0$와 일치하여 $\binom{n+d}{n}$이 됨을 알 수 있다. $\square$
+를 얻는다. 일반적으로는 residue theorem을 사용하거나, Todd class의 정의로부터 직접 계산하여 $\binom{n+d}{n}$이 됨을 확인할 수 있다. 이는 [§사영공간의 코호몰로지](/ko/math/algebraic_varieties/cohomology_of_projective_spaces){: data-relation="weak" }에서 직접 계산한 cohomology의 결과와 일치하며, 특히 $d\geq 0$일 때 $i>0$에 대하여 $H^i(\mathbb{P}^n,\mathcal{O}_{\mathbb{P}^n}(d))=0$이므로 $\chi$가 $h^0$와 일치하여 $\binom{n+d}{n}$이 됨을 알 수 있다. $\square$
 :::
 
-예시 [6](#ex6)에서 얻어진 $\chi(\mathbb{P}^n,\mathcal{O}_{\mathbb{P}^n}(d))$는 $d$에 대한 $n$차 polynomial이며, 이를 $\mathbb{P}^n$ 위의 coherent sheaf에 대한 **Hilbert polynomial**의 원형으로 볼 수 있다. 임의의 coherent sheaf $\mathcal{F}$에 대하여 $d\gg 0$이면 Serre vanishing에 의해 $H^i(\mathbb{P}^n,\mathcal{F}(d))=0$ ($i>0$)이 되므로
+예시 [6](#ex6){: data-relation="required" }에서 얻어진 $\chi(\mathbb{P}^n,\mathcal{O}_{\mathbb{P}^n}(d))$는 $d$에 대한 $n$차 polynomial이며, 이를 $\mathbb{P}^n$ 위의 coherent sheaf에 대한 **Hilbert polynomial**의 원형으로 볼 수 있다. 임의의 coherent sheaf $\mathcal{F}$에 대하여 $d\gg 0$이면 Serre vanishing에 의해 $H^i(\mathbb{P}^n,\mathcal{F}(d))=0$ ($i>0$)이 되므로
 
 $$P_{\mathcal{F}}(d)=\chi(\mathbb{P}^n,\mathcal{F}(d))$$
 
