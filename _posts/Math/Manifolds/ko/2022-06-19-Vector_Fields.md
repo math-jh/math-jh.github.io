@@ -60,7 +60,7 @@ $$x^i\circ\pi\circ (X\vert_U)=x^i\circ\id_U=x^i,\qquad \dd{x}^i\circ(X\vert_U)=X
 가 성립하므로 이들은 모두 $C^\infty$가 된다.
 :::
 
-$M$ 위에서 정의된 $C^\infty$-벡터장들의 모임을 $\mathfrak{X}(M)$으로 적으며, 앞으로 벡터장은 모두 $C^\infty$인 것으로 가정한다. 한편 partition of unity에 의하여, $M$의 열린집합 $U$에서만 정의된 벡터장은 각 점 $p\in U$의 충분히 작은 근방 위에서 $M$ 전체에서 정의된 벡터장과 일치하도록 만들 수 있다. ([§접공간, 각주 1](/ko/math/manifolds/tangent_space#fn:1))
+$M$ 위에서 정의된 $C^\infty$-벡터장들의 모임을 $\mathfrak{X}(M)$으로 적으며, 앞으로 벡터장은 모두 $C^\infty$인 것으로 가정한다. 한편 partition of unity에 의하여, $M$의 열린집합 $U$에서만 정의된 벡터장은 각 점 $p\in U$의 충분히 작은 근방 위에서 $M$ 전체에서 정의된 벡터장과 일치하도록 만들 수 있다. ([§접공간, 각주 1](/ko/math/manifolds/tangent_space#fn:1){: data-relation="weak" })
 
 ## Local frame
 
@@ -83,7 +83,7 @@ $$X:M\rightarrow TM;\qquad p\mapsto \frac{d}{\dd{x}}\bigg\vert_p$$
 
 $$fX:M\rightarrow TM;\qquad p\mapsto f(p)\frac{d}{\dd{x}}\bigg\vert_p$$
 
-또한 $\mathfrak{X}(M)$에 속하며 ([명제 2](#prop2)) $f$가 상수함수가 아닌 이상 $fX$는 $X$의 상수배로 표현되지 않는다. 뿐만 아니라 $C^\infty(M)$은 $\mathbb{R}$ 위의 무한차원 벡터공간이므로 $\mathfrak{X}(M)$ 또한 무한차원 벡터공간이다.
+또한 $\mathfrak{X}(M)$에 속하며 ([명제 2](#prop2){: data-relation="required" }) $f$가 상수함수가 아닌 이상 $fX$는 $X$의 상수배로 표현되지 않는다. 뿐만 아니라 $C^\infty(M)$은 $\mathbb{R}$ 위의 무한차원 벡터공간이므로 $\mathfrak{X}(M)$ 또한 무한차원 벡터공간이다.
 :::
 
 위와 같은 상황에서 $\mathfrak{X}(M)$을 $C^\infty(M)$-module로 본다면 $\mathfrak{X}(M)$을 다루는 것이 상대적으로 편해진다. 

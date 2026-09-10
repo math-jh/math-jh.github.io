@@ -61,7 +61,7 @@ $$x^i\circ\pi\circ (X\vert_U)=x^i\circ\id_U=x^i,\qquad \dd{x}^i\circ(X\vert_U)=X
 so they are all $C^\infty$.
 :::
 
-We write $\mathfrak{X}(M)$ for the set of $C^\infty$ vector fields on $M$, and henceforth assume all vector fields are $C^\infty$. Meanwhile, by a partition of unity, any vector field defined only on some open set $U$ of $M$ can be extended to all of $M$. ([§Tangent Space, footnote 1](/en/math/manifolds/tangent_space#fn:1))
+We write $\mathfrak{X}(M)$ for the set of $C^\infty$ vector fields on $M$, and henceforth assume all vector fields are $C^\infty$. Meanwhile, by a partition of unity, any vector field defined only on some open set $U$ of $M$ can be extended to all of $M$. ([§Tangent Space, footnote 1](/en/math/manifolds/tangent_space#fn:1){: data-relation="weak" })
 
 ## Local Frame
 
@@ -84,7 +84,7 @@ is an element of $\mathfrak{X}(M)$. However, for any $C^\infty$ function $f:\mat
 
 $$fX:M\rightarrow TM;\qquad p\mapsto f(p)\frac{d}{\dd{x}}\bigg\vert_p$$
 
-also belongs to $\mathfrak{X}(M)$ ([Proposition 2](#prop2)), and this element cannot be expressed as a constant multiple of $X$ unless $f$ is constant. Moreover, since $C^\infty(M)$ is an infinite-dimensional vector space over $\mathbb{R}$, the space $\mathfrak{X}(M)$ is also infinite-dimensional.
+also belongs to $\mathfrak{X}(M)$ ([Proposition 2](#prop2){: data-relation="required" }), and this element cannot be expressed as a constant multiple of $X$ unless $f$ is constant. Moreover, since $C^\infty(M)$ is an infinite-dimensional vector space over $\mathbb{R}$, the space $\mathfrak{X}(M)$ is also infinite-dimensional.
 :::
 
 In such a situation, it is relatively more convenient to regard $\mathfrak{X}(M)$ as a $C^\infty(M)$-module.
