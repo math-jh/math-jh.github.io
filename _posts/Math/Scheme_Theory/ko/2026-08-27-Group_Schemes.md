@@ -17,23 +17,23 @@ weight: 28
 
 ## 군 스킴
 
-고전적으로 algebraic group은 group 구조를 가진 variety로서, 곱셈과 역원이 morphism인 것으로 정의되었다. ([\[대수다양체\] §대수적 군, ⁋정의 1](/ko/math/algebraic_varieties/algebraic_groups#def1)) 이를 scheme의 세계로 옮기기 위하여 $\Sch_{/S}$의 categorical product와 terminal object를 사용한다. 곧 $\Sch_{/S}$를 cartesian monoidal category로 보고 그 안의 group object를 생각한다. 
+고전적으로 algebraic group은 group 구조를 가진 variety로서, 곱셈과 역원이 morphism인 것으로 정의되었다. ([\[대수다양체\] §대수적 군, ⁋정의 1](/ko/math/algebraic_varieties/algebraic_groups#def1){: data-relation="weak" }) 이를 scheme의 세계로 옮기기 위하여 $\Sch_{/S}$의 categorical product와 terminal object를 사용한다. 곧 $\Sch_{/S}$를 cartesian monoidal category로 보고 그 안의 group object를 생각한다. 
 
 ::: 정의 1
 Scheme $S$ 위의 *group scheme<sub>군 스킴</sub>*은 $\Sch_{/S}$의 group object이다. 즉 group scheme $G$는 structure morphism $\vartheta: G \rightarrow S$를 가진 $S$-scheme $G$으로서, 이 위에 정의된 세 $S$-morphism
 
 $$\mu_G: G\times_SG \rightarrow G,\qquad \iota_G: G \rightarrow G,\qquad \epsilon_G: S \rightarrow G$$
 
-이 함께 주어져서 [\[범주론\] §모노이드 대상, ⁋정의 3](/ko/math/category_theory/monoid_objects#def3)의 모든 조건들을 만족하는 것이다. 두 group scheme $G, H$ 사이의 *homomorphism*은 이 구조를 보존하는 $S$-morphism이다. 
+이 함께 주어져서 [\[범주론\] §모노이드 대상, ⁋정의 3](/ko/math/category_theory/monoid_objects#def3){: data-relation="required" }의 모든 조건들을 만족하는 것이다. 두 group scheme $G, H$ 사이의 *homomorphism*은 이 구조를 보존하는 $S$-morphism이다. 
 :::
 
-[정의 1](#def1)은 group scheme을 $\Sch_{/S}$ 내부의 구조로 규정한다. 한편, [§점함자](/ko/math/scheme_theory/functor_of_points)를 사용하면 이를 실제로 group으로 가져올 수 있는데, 임의의 test scheme $T$에 대해 정의된 $T$-point들의 집합 $G(T)$가 group이 되기 때문이다. 
+[정의 1](#def1){: data-relation="weak" }은 group scheme을 $\Sch_{/S}$ 내부의 구조로 규정한다. 한편, [§점함자](/ko/math/scheme_theory/functor_of_points){: data-relation="required" }를 사용하면 이를 실제로 group으로 가져올 수 있는데, 임의의 test scheme $T$에 대해 정의된 $T$-point들의 집합 $G(T)$가 group이 되기 때문이다. 
 
 ::: 명제 2
 $S$-scheme $G$가 group scheme이 되는 것은 적당한 functor $\widetilde{h}_G:(\Sch_{/S})^\op\rightarrow\Grp$가 주어져서 forgetful functor $U:\Grp\rightarrow\Set$과의 합성이 $G$의 functor of points $h_G$와 같아지는 것과 동치이다. 뿐만 아니라, 두 group scheme $G,H$ 사이의 $S$-morphism $\varphi:G\rightarrow H$가 group scheme homomorphism인 것과 각각의 $T$에 대하여 $\varphi_T:G(T)\rightarrow H(T)$가 group homomorphism인 것은 동치이다.
 :::
 ::: 증명
-[\[범주론\] §표현가능한 함자, ⁋정리 4](/ko/math/category_theory/representable_functors#thm4)에 의하여 Yoneda embedding $h_{(-)}:\Sch_{/S}\rightarrow\Fun((\Sch_{/S})^\op,\Set)$은 fully faithful하고, [§점함자, ⁋명제 7](/ko/math/scheme_theory/functor_of_points#prop7)에 의하여 finite product를 보존한다. 한편 functor category에서 group object의 구조는 pointwise하게 주어지므로, $h_G$ 위의 group object 구조는 $U\circ\widetilde{h}_G=h_G$인 functor $\widetilde{h}_G:(\Sch_{/S})^\op\rightarrow\Grp$와 같은 데이터이다. 따라서 Yoneda embedding의 fully faithfulness는 $G$ 위의 group object 구조와 이러한 functor $\widetilde{h}_G$를 일대일대응시키며, group object 사이의 morphism에도 같은 논의를 적용하면 마지막 주장도 따라온다.
+[\[범주론\] §표현가능한 함자, ⁋정리 4](/ko/math/category_theory/representable_functors#thm4){: data-relation="required" }에 의하여 Yoneda embedding $h_{(-)}:\Sch_{/S}\rightarrow\Fun((\Sch_{/S})^\op,\Set)$은 fully faithful하고, [§점함자, ⁋명제 7](/ko/math/scheme_theory/functor_of_points#prop7){: data-relation="required" }에 의하여 finite product를 보존한다. 한편 functor category에서 group object의 구조는 pointwise하게 주어지므로, $h_G$ 위의 group object 구조는 $U\circ\widetilde{h}_G=h_G$인 functor $\widetilde{h}_G:(\Sch_{/S})^\op\rightarrow\Grp$와 같은 데이터이다. 따라서 Yoneda embedding의 fully faithfulness는 $G$ 위의 group object 구조와 이러한 functor $\widetilde{h}_G$를 일대일대응시키며, group object 사이의 morphism에도 같은 논의를 적용하면 마지막 주장도 따라온다.
 :::
 
 다음은 자주 등장하는 몇몇 예시들이다. 
@@ -41,11 +41,11 @@ $S$-scheme $G$가 group scheme이 되는 것은 적당한 functor $\widetilde{h}
 ::: 예시 3
 다음은 모두 $\Spec \mathbb{Z}$ 위의 group scheme이다.
 
-1. *Additive group<sub>덧셈군</sub>* $\mathbb{G}_a=\Spec \mathbb{Z}[\x]=\mathbb{A}^1$. [§점함자, ⁋명제 1](/ko/math/scheme_theory/functor_of_points#prop1)에 의하여 $\mathbb{G}_a(T)\cong \Gamma(T, \mathcal{O}_T)$이며, 여기에 ring $\Gamma(T, \mathcal{O}_T)$의 덧셈을 주면 group이 된다. 임의의 morphism이 유도하는 사상은 ring homomorphism이므로 덧셈을 보존하고, 따라서 functoriality가 성립한다.
+1. *Additive group<sub>덧셈군</sub>* $\mathbb{G}_a=\Spec \mathbb{Z}[\x]=\mathbb{A}^1$. [§점함자, ⁋명제 1](/ko/math/scheme_theory/functor_of_points#prop1){: data-relation="required" }에 의하여 $\mathbb{G}_a(T)\cong \Gamma(T, \mathcal{O}_T)$이며, 여기에 ring $\Gamma(T, \mathcal{O}_T)$의 덧셈을 주면 group이 된다. 임의의 morphism이 유도하는 사상은 ring homomorphism이므로 덧셈을 보존하고, 따라서 functoriality가 성립한다.
 
-2. *Multiplicative group<sub>곱셈군</sub>* $\mathbb{G}_m=\Spec \mathbb{Z}[\x, \x^{-1}]$. [§점함자, ⁋명제 3](/ko/math/scheme_theory/functor_of_points#prop3)에 의하여 $\mathbb{G}_m(T)\cong \Gamma(T, \mathcal{O}_T)^\times$이며, 여기에 가역원들의 곱셈을 준다.
+2. *Multiplicative group<sub>곱셈군</sub>* $\mathbb{G}_m=\Spec \mathbb{Z}[\x, \x^{-1}]$. [§점함자, ⁋명제 3](/ko/math/scheme_theory/functor_of_points#prop3){: data-relation="required" }에 의하여 $\mathbb{G}_m(T)\cong \Gamma(T, \mathcal{O}_T)^\times$이며, 여기에 가역원들의 곱셈을 준다.
 
-3. *$n$-th roots of unity* $\mu_n=\Spec \mathbb{Z}[\x]/(\x^n-1)$. [§아핀스킴, ⁋정리 13](/ko/math/scheme_theory/affine_schemes#thm13)의 adjunction에 의하여 
+3. *$n$-th roots of unity* $\mu_n=\Spec \mathbb{Z}[\x]/(\x^n-1)$. [§아핀스킴, ⁋정리 13](/ko/math/scheme_theory/affine_schemes#thm13){: data-relation="required" }의 adjunction에 의하여 
     
     $$\mu_n(T)\cong \{a\in \Gamma(T, \mathcal{O}_T)\mid a^n=1\}$$
     
@@ -55,7 +55,7 @@ $S$-scheme $G$가 group scheme이 되는 것은 적당한 functor $\widetilde{h}
 
    $$\GL_n(T)=\GL(n;\Gamma(T,\mathcal{O}_T))$$
 
-   이다. ([\[환론\] §가역원과 영인자, ⁋예시 9](/ko/math/ring_theory/units_and_zero_divisors#ex9)) 특별히 $T=\Spec A$인 경우 $\GL_n(T)=\GL(n; A)$이다.
+   이다. ([\[환론\] §가역원과 영인자, ⁋예시 9](/ko/math/ring_theory/units_and_zero_divisors#ex9){: data-relation="required" }) 특별히 $T=\Spec A$인 경우 $\GL_n(T)=\GL(n; A)$이다.
 
 5. *Special linear group* $\SL_n=\Spec \mathbb{Z}[\x_{11},\ldots, \x_{nn}]/(\det-1)$. 각각의 $T$에 대하여
 
@@ -70,11 +70,11 @@ $S$-scheme $G$가 group scheme이 되는 것은 적당한 functor $\widetilde{h}
    을 생각하면, 임의의 scheme $T$에 대하여 $\underline{\Gamma}(T)$는 위상공간 $\lvert T\rvert$에서 discrete topology가 주어진 topological group $\Gamma$로 가는 locally constant function들의 군이다. 특히 $T$가 connected인 경우 $\underline{\Gamma}(T)\cong \Gamma$이다.
 :::
 
-위의 예시에서 각 경우의 group scheme의 구조는 [명제 2](#prop2)를 사용하여 얻어진 것으로, 해당 명제의 유용성을 증명한다. 뿐만 아니라, 위의 예시는 $\Spec \mathbb{Z}$ 위에서 정의한 것이지만 본질적으로 이는 모든 base $S$에서 정의한 것이다. [§스킴 사이의 사상, ⁋예시 4](/ko/math/scheme_theory/morphism_of_schemes#ex4) 이후에서 보았듯 $\Spec \mathbb{Z}$는 $\Sch$의 terminal object로서, 임의의 scheme $S$마다 유일한 structure morphism $p: S\rightarrow \Spec \mathbb{Z}$가 존재하며, 이것이 유도하는 base change morphism
+위의 예시에서 각 경우의 group scheme의 구조는 [명제 2](#prop2){: data-relation="required" }를 사용하여 얻어진 것으로, 해당 명제의 유용성을 증명한다. 뿐만 아니라, 위의 예시는 $\Spec \mathbb{Z}$ 위에서 정의한 것이지만 본질적으로 이는 모든 base $S$에서 정의한 것이다. [§스킴 사이의 사상, ⁋예시 4](/ko/math/scheme_theory/morphism_of_schemes#ex4){: data-relation="required" } 이후에서 보았듯 $\Spec \mathbb{Z}$는 $\Sch$의 terminal object로서, 임의의 scheme $S$마다 유일한 structure morphism $p: S\rightarrow \Spec \mathbb{Z}$가 존재하며, 이것이 유도하는 base change morphism
 
 $$p^\ast: \Sch\rightarrow \Sch_{/S};\qquad X\mapsto X\times_\mathbb{Z}S$$
 
-을 생각할 수 있으며, 이를 통해 $\mathbb{Z}$ 위에서 정의된 group scheme $G$를 $G_S=p^\ast G$로 옮겨 $S$-scheme으로 볼 수 있기 때문이다. [명제 2](#prop2)의 관점에서 보자면, 이는  $\widetilde{h}_G: \Sch^\op\rightarrow \Grp$ 이전에 다음의 functor
+을 생각할 수 있으며, 이를 통해 $\mathbb{Z}$ 위에서 정의된 group scheme $G$를 $G_S=p^\ast G$로 옮겨 $S$-scheme으로 볼 수 있기 때문이다. [명제 2](#prop2){: data-relation="required" }의 관점에서 보자면, 이는  $\widetilde{h}_G: \Sch^\op\rightarrow \Grp$ 이전에 다음의 functor
 
 $$p_\ast: \Sch_{/S}\rightarrow \Sch;\qquad (T\rightarrow S)\mapsto (T\rightarrow S\rightarrow \Spec\mathbb{Z})$$
 
@@ -84,37 +84,37 @@ $$\Hom_S(T, p^\ast G)\cong \Hom_\mathbb{Z}(p_\ast T, G)$$
 
 에 의해 보장되는 것이다. 이러한 방식으로 얻어지는 relative group schemes over $S$는 아래첨자를 사용하여 $\mathbb{G}_{a,S}, \mathbb{G}_{m,S},\underline{\Gamma}_S,\mu_{n,S},\GL_{n,S},\SL_{n,S}$ 등으로 적고, 문맥상 base가 명확한 경우에는 첨자를 생략하고 $\mathbb{G}_a, \mathbb{G}_m, \underline{\Gamma}$ 등으로 적기로 한다.
 
-한편 위의 예시에서 주어진 것들은 모두 affine group scheme들이며, 이들이 정의된 방식 또한 명확하다. 뿐만 아니라, $\mu_n$을 제외한 예시들이 affine space 위에서 smooth인 것도 쉽게 보일 수 있다. 우선 $\mathbb{G}_a$는 affine line 그 자체이므로 별도의 논증이 필요없으며, $\GL_n$은 $\det$이 정의하는 $n^2$-dimensional affine space의 open subscheme $D(\det)$이며 그 특수한 경우 $n=1$이 $\mathbb{G}_m$이다. 마지막으로 $\SL_n$의 경우, [\[선형대수학\] §행렬식의 존재성과 유일성, ⁋정리 12](/ko/math/linear_algebra/existence_and_uniqueness_of_determinant#thm12)의 Laplace expansion으로부터 $f=\det-1$의 $\x_{ij}$에 대한 편미분이 $(i,j)$ 방향의 cofactor $C_{ij}$임을 확인할 수 있다. 따라서 [§매끄러운 사상과 에탈 사상, ⁋정리 4](/ko/math/scheme_theory/smooth_and_etale_morphisms#thm4)에 의해 그 Jacobian은 다음의 $1\times n^2$ 행렬
+한편 위의 예시에서 주어진 것들은 모두 affine group scheme들이며, 이들이 정의된 방식 또한 명확하다. 뿐만 아니라, $\mu_n$을 제외한 예시들이 affine space 위에서 smooth인 것도 쉽게 보일 수 있다. 우선 $\mathbb{G}_a$는 affine line 그 자체이므로 별도의 논증이 필요없으며, $\GL_n$은 $\det$이 정의하는 $n^2$-dimensional affine space의 open subscheme $D(\det)$이며 그 특수한 경우 $n=1$이 $\mathbb{G}_m$이다. 마지막으로 $\SL_n$의 경우, [\[선형대수학\] §행렬식의 존재성과 유일성, ⁋정리 12](/ko/math/linear_algebra/existence_and_uniqueness_of_determinant#thm12){: data-relation="required" }의 Laplace expansion으로부터 $f=\det-1$의 $\x_{ij}$에 대한 편미분이 $(i,j)$ 방향의 cofactor $C_{ij}$임을 확인할 수 있다. 따라서 [§매끄러운 사상과 에탈 사상, ⁋정리 4](/ko/math/scheme_theory/smooth_and_etale_morphisms#thm4){: data-relation="required" }에 의해 그 Jacobian은 다음의 $1\times n^2$ 행렬
 
 $$J_f=(\partial f/\partial\x_{ij})_{i,j}=(C_{ij})_{ij}$$
 
 로 주어진다. 이 때, $\SL_n$에 속하는 임의의 행렬에 대하여, 이 행렬의 $i$번째 행을 고정하고 Laplace expansion을 생각하면 항등식 $\sum_j\x_{ij}C_{ij}=1$이 성립하며 따라서 위 Jacobian의 성분들 중 $C_{i1},\ldots, C_{in}$이 생성하는 ideal이 전체 ring이 되므로 이는 모든 점에서 full rank를 가지고, 따라서 $\SL_n$은 그 base 위에서 relative dimension $n^2-1$의 smooth morphism이 된다. 
 
-한편 $\mu_n$은 $n$이 base에서 가역이면 finite étale이다. 반면 characteristic $p$인 field $\mathbb{K}$ 위에서는 $\mu_p$와 $\alpha_p=\ker(\Frob:\mathbb{G}_a\rightarrow\mathbb{G}_a)$가 underlying topological space로는 한 점이지만 nonreduced인 *infinitesimal* group scheme이 된다. 이는 [§매끄러운 사상과 에탈 사상, ⁋예시 14](/ko/math/scheme_theory/smooth_and_etale_morphisms#ex14)에서 inseparable extension의 geometric fiber에 nontrivial thickening이 남아 étale하지 않았던 것과 같은 현상으로, characteristic $p$ 특유의 성질을 보여주는 또 다른 예시이다.
+한편 $\mu_n$은 $n$이 base에서 가역이면 finite étale이다. 반면 characteristic $p$인 field $\mathbb{K}$ 위에서는 $\mu_p$와 $\alpha_p=\ker(\Frob:\mathbb{G}_a\rightarrow\mathbb{G}_a)$가 underlying topological space로는 한 점이지만 nonreduced인 *infinitesimal* group scheme이 된다. 이는 [§매끄러운 사상과 에탈 사상, ⁋예시 14](/ko/math/scheme_theory/smooth_and_etale_morphisms#ex14){: data-relation="weak" }에서 inseparable extension의 geometric fiber에 nontrivial thickening이 남아 étale하지 않았던 것과 같은 현상으로, characteristic $p$ 특유의 성질을 보여주는 또 다른 예시이다.
 
 ## 부분군 스킴
 
-일반적으로 $S$ 위의 group scheme $G$의 *subgroup scheme*은 group scheme $H$와 group scheme homomorphism인 monomorphism $\iota:H\rightarrow G$의 데이터이며, 특히 $\iota$가 closed embedding이면 이를 *closed subgroup scheme*이라 부른다. [\[리 이론\] §리 군, ⁋정리 5](/ko/math/lie_theory/Lie_groups#thm5)가 Lie group의 closed subgroup에 canonical Lie group structure를 주듯, group scheme에서도 주로 다루는 algebraic subgroup들은 closed subgroup scheme으로 나타난다. 예를 들어 group scheme homomorphism을 정의하고 나면 가장 먼저 살펴보는 것은 그 kernel이다. Group의 kernel은 항등원의 preimage이므로, scheme의 언어에서 이는 identity morphism을 따른 fiber product가 된다.
+일반적으로 $S$ 위의 group scheme $G$의 *subgroup scheme*은 group scheme $H$와 group scheme homomorphism인 monomorphism $\iota:H\rightarrow G$의 데이터이며, 특히 $\iota$가 closed embedding이면 이를 *closed subgroup scheme*이라 부른다. [\[리 이론\] §리 군, ⁋정리 5](/ko/math/lie_theory/Lie_groups#thm5){: data-relation="weak" }가 Lie group의 closed subgroup에 canonical Lie group structure를 주듯, group scheme에서도 주로 다루는 algebraic subgroup들은 closed subgroup scheme으로 나타난다. 예를 들어 group scheme homomorphism을 정의하고 나면 가장 먼저 살펴보는 것은 그 kernel이다. Group의 kernel은 항등원의 preimage이므로, scheme의 언어에서 이는 identity morphism을 따른 fiber product가 된다.
 
 ::: 정의 4
 $S$ 위의 group scheme homomorphism $\varphi:G\rightarrow H$에 대하여 그 *kernel*을 fiber product
 
 $$\ker \varphi=G\times_{\varphi, H, \epsilon_H}S$$
 
-으로 정의한다. 여기에서 $\epsilon_H:S\rightarrow H$는 [정의 1](#def1)의 identity morphism이다.
+으로 정의한다. 여기에서 $\epsilon_H:S\rightarrow H$는 [정의 1](#def1){: data-relation="required" }의 identity morphism이다.
 :::
 
-[§점함자, ⁋명제 7](/ko/math/scheme_theory/functor_of_points#prop7)로 계산하면 각각의 $S$-scheme $T$에 대하여
+[§점함자, ⁋명제 7](/ko/math/scheme_theory/functor_of_points#prop7){: data-relation="required" }로 계산하면 각각의 $S$-scheme $T$에 대하여
 
 $$(\ker \varphi)(T)=G(T)\times_{H(T)}S(T)=\{g\in G(T)\mid \varphi_T(g)=\epsilon_{H,T}\}$$
 
-이므로, 이 정의는 통상적인 kernel의 정의를 그대로 옮긴 것이다. 우변이 $G(T)$의 subgroup이고 그 대응이 $T$에 대해 자연스러우므로, [명제 2](#prop2)에 의하여 $\ker \varphi$는 group scheme이다. 남는 것은 $\ker \varphi \rightarrow G$가 closed embedding인지의 여부인데, 이는 $\epsilon_H$가 closed embedding인 것에 달려 있고 그 조건이 곧 separatedness이다. ([§값매김환, ⁋정의 3](/ko/math/scheme_theory/valuative_criteria#def3))
+이므로, 이 정의는 통상적인 kernel의 정의를 그대로 옮긴 것이다. 우변이 $G(T)$의 subgroup이고 그 대응이 $T$에 대해 자연스러우므로, [명제 2](#prop2){: data-relation="required" }에 의하여 $\ker \varphi$는 group scheme이다. 남는 것은 $\ker \varphi \rightarrow G$가 closed embedding인지의 여부인데, 이는 $\epsilon_H$가 closed embedding인 것에 달려 있고 그 조건이 곧 separatedness이다. ([§값매김환, ⁋정의 3](/ko/math/scheme_theory/valuative_criteria#def3){: data-relation="required" })
 
 ::: 명제 5
 $S$ 위의 group scheme homomorphism $\varphi: G \rightarrow H$에 대하여, $H \rightarrow S$가 separated이면 $\ker \varphi$는 $G$의 closed subgroup scheme이다.
 :::
 ::: 증명
-먼저 closed embedding은 base change에 대해 보존된다. ([§닫힌 부분스킴, ⁋명제 3](/ko/math/scheme_theory/closed_subschemes#prop3)) 이제 $\vartheta_H:H\rightarrow S$를 structure morphism이라 하고, 다음의 diagram을 생각하자.
+먼저 closed embedding은 base change에 대해 보존된다. ([§닫힌 부분스킴, ⁋명제 3](/ko/math/scheme_theory/closed_subschemes#prop3){: data-relation="required" }) 이제 $\vartheta_H:H\rightarrow S$를 structure morphism이라 하고, 다음의 diagram을 생각하자.
 
 {% diagram Math/Scheme_Theory/Group_Schemes-1.svg width="11.23em" alt="section_as_base_change" %}
 
@@ -129,34 +129,34 @@ $$(\epsilon_H\circ \vartheta_H,\id_H)\circ a=\Delta_{H/S}\circ b \iff(\epsilon_H
 이므로 $a=b=\epsilon_H\circ t$이도록 하는 $t$는 $\vartheta_H\circ a$로 유일하게 결정된다. 즉, 위 diagram은 Cartesian이며, 왼쪽의 $\epsilon_H$는 $\Delta_{H/S}$의 base change이다. 이제 $\vartheta_H$가 separated이므로 $\Delta_{H/S}$는 closed embedding이고, 따라서 $\epsilon_H$도 closed embedding이다. 다시 $\ker\varphi\rightarrow G$는 $\epsilon_H$를 $\varphi$를 따라 base change한 것이므로 closed embedding이다. 위에서 이미 $\ker\varphi$가 group scheme임을 확인하였으므로 이는 $G$의 closed subgroup scheme이다.
 :::
 
-Affine scheme 사이의 morphism은 항상 separated이므로 ([§값매김환, ⁋보조정리 5](/ko/math/scheme_theory/valuative_criteria#lem5)), affine base 위의 affine group scheme에 대해서는 [명제 5](#prop5)의 가정이 자동으로 성립한다. 가장 중요한 예시 중 하나는 $n$제곱 morphism $(-)^n:\mathbb{G}_m \rightarrow \mathbb{G}_m$, 곧 각각의 $T$에서 $a\mapsto a^n$인 homomorphism이다. 공역의 좌표를 $\y$로 적으면 이는 ring 수준에서 $\y\mapsto \x^n$에 대응하고, 항등원 morphism은 $\y\mapsto 1$인 counit에 대응하므로
+Affine scheme 사이의 morphism은 항상 separated이므로 ([§값매김환, ⁋보조정리 5](/ko/math/scheme_theory/valuative_criteria#lem5){: data-relation="required" }), affine base 위의 affine group scheme에 대해서는 [명제 5](#prop5){: data-relation="required" }의 가정이 자동으로 성립한다. 가장 중요한 예시 중 하나는 $n$제곱 morphism $(-)^n:\mathbb{G}_m \rightarrow \mathbb{G}_m$, 곧 각각의 $T$에서 $a\mapsto a^n$인 homomorphism이다. 공역의 좌표를 $\y$로 적으면 이는 ring 수준에서 $\y\mapsto \x^n$에 대응하고, 항등원 morphism은 $\y\mapsto 1$인 counit에 대응하므로
 
 $$\ker(-)^n=\Spec\left(\mathbb{Z}[\x,\x^{-1}]\otimes_{\mathbb{Z}[\y,\y^{-1}]}\mathbb{Z}\right)=\Spec \mathbb{Z}[\x,\x^{-1}]/(\x^n-1)=\Spec \mathbb{Z}[\x]/(\x^n-1)=\mu_n$$
 
-이다. ([§올곱, ⁋보조정리 2](/ko/math/scheme_theory/fiber_products#lem2)) 여기에서 $\mathbb{Z}=\mathbb{Z}[\y,\y^{-1}]/(\y-1)$이므로 tensor product는 $\x^n-1$이 생성하는 ideal로 나눈 quotient가 되고, 여기에서는 $\x$가 이미 가역이므로 localization을 떼어낼 수 있다. 즉 $\mu_n$은 $\mathbb{G}_m$의 closed subgroup scheme이다.
+이다. ([§올곱, ⁋보조정리 2](/ko/math/scheme_theory/fiber_products#lem2){: data-relation="required" }) 여기에서 $\mathbb{Z}=\mathbb{Z}[\y,\y^{-1}]/(\y-1)$이므로 tensor product는 $\x^n-1$이 생성하는 ideal로 나눈 quotient가 되고, 여기에서는 $\x$가 이미 가역이므로 localization을 떼어낼 수 있다. 즉 $\mu_n$은 $\mathbb{G}_m$의 closed subgroup scheme이다.
 
 ## 호프 대수
 
-이제 base와 group scheme 자신이 모두 affine인 경우를 보자. $G=\Spec B$, $S=\Spec A$라 하면 $\Spec$은 contravariant이므로 [정의 1](#def1)의 세 morphism $\mu_G,\epsilon_G,\iota_G$는 coordinate ring 위에서 방향이 뒤집힌 $A$-algebra homomorphism
+이제 base와 group scheme 자신이 모두 affine인 경우를 보자. $G=\Spec B$, $S=\Spec A$라 하면 $\Spec$은 contravariant이므로 [정의 1](#def1){: data-relation="required" }의 세 morphism $\mu_G,\epsilon_G,\iota_G$는 coordinate ring 위에서 방향이 뒤집힌 $A$-algebra homomorphism
 
 $$\Delta:B\rightarrow B\otimes_AB,\qquad \epsilon:B\rightarrow A,\qquad \iota:B\rightarrow B$$
 
-으로 나타난다. Group object의 결합법칙·항등원·역원 조건도 각각 coassociativity·counit·antipode 조건으로 뒤집히는데, 우리는 마침 이러한 대상을 정의한 적이 있다. ([\[범주론\] §모노이드 대상, ⁋정의 7](/ko/math/category_theory/monoid_objects#def7)) 그럼 symmetric monoidal category $(\rMod{A},\otimes_A,A)$의 Hopf monoid object를 *Hopf algebra<sub>호프 대수</sub>*라고 부르며, 우리가 다루는 경우에서는 $B$가 commutative ring이라 가정하면 충분하다. 그럼 다음을 기대하는 것이 자연스럽다.
+으로 나타난다. Group object의 결합법칙·항등원·역원 조건도 각각 coassociativity·counit·antipode 조건으로 뒤집히는데, 우리는 마침 이러한 대상을 정의한 적이 있다. ([\[범주론\] §모노이드 대상, ⁋정의 7](/ko/math/category_theory/monoid_objects#def7){: data-relation="required" }) 그럼 symmetric monoidal category $(\rMod{A},\otimes_A,A)$의 Hopf monoid object를 *Hopf algebra<sub>호프 대수</sub>*라고 부르며, 우리가 다루는 경우에서는 $B$가 commutative ring이라 가정하면 충분하다. 그럼 다음을 기대하는 것이 자연스럽다.
 
 ::: 정리 6
 Ring $A$에 대하여, $\Spec$은 commutative Hopf $A$-algebra들의 category와 $\Spec A$ 위의 affine group scheme들의 category 사이의 anti-equivalence를 준다. 이 대응 아래에서 $\Delta,\epsilon,\iota$는 각각 $\mu_G,\epsilon_G,\iota_G$에 대응한다.
 :::
 ::: 증명
-[§아핀스킴, ⁋정리 13](/ko/math/scheme_theory/affine_schemes#thm13)에 의하여 commutative $A$-algebra들과 $\Spec A$ 위의 affine scheme들은 anti-equivalent이고, 이 대응은 tensor product와 $A$를 각각 fiber product와 terminal object로 옮긴다. ([§올곱, ⁋보조정리 2](/ko/math/scheme_theory/fiber_products#lem2)) 따라서 [정의 1](#def1)의 데이터 $\mu_G,\epsilon_G,\iota_G$는 arrow를 뒤집으면 위의 데이터 $\Delta,\epsilon,\iota$가 된다. 이 동치가 합성과 항등사상을 보존하므로 group object의 세 공리는 각각 Hopf algebra의 세 공리로 옮겨지고, 같은 논리를 구조를 보존하는 morphism에 적용하면 주장한 anti-equivalence를 얻는다.
+[§아핀스킴, ⁋정리 13](/ko/math/scheme_theory/affine_schemes#thm13){: data-relation="required" }에 의하여 commutative $A$-algebra들과 $\Spec A$ 위의 affine scheme들은 anti-equivalent이고, 이 대응은 tensor product와 $A$를 각각 fiber product와 terminal object로 옮긴다. ([§올곱, ⁋보조정리 2](/ko/math/scheme_theory/fiber_products#lem2){: data-relation="required" }) 따라서 [정의 1](#def1){: data-relation="required" }의 데이터 $\mu_G,\epsilon_G,\iota_G$는 arrow를 뒤집으면 위의 데이터 $\Delta,\epsilon,\iota$가 된다. 이 동치가 합성과 항등사상을 보존하므로 group object의 세 공리는 각각 Hopf algebra의 세 공리로 옮겨지고, 같은 논리를 구조를 보존하는 morphism에 적용하면 주장한 anti-equivalence를 얻는다.
 :::
 
 특히 affine group scheme $G=\Spec B$와 임의의 $A$-algebra $E$에 대하여, $G$의 $E$-point들의 group $G(E)=\Hom_{\cAlg{A}}(B,E)$의 구조는 $B$의 Hopf algebra structure로 완벽하게 설명할 수 있다. 즉, 곱셈은 $g\ast h=\mu_E\circ(g\otimes h)\circ\Delta$, 항등원은 $\eta_E\circ\epsilon$, 역원은 $g\mapsto g\circ\iota$로 정의하면 되고, 여기서 $\mu_E:E\otimes_AE\rightarrow E$는 곱셈이고 $\eta_E:A\rightarrow E$는 structure morphism이다.
 
 ## 군 스킴의 표현론
 
-한편 group object를 다룰 때 유용한 도구는 표현론으로, 우리는 [\[표현론\] §유한군의 표현론, ⁋명제 4](/ko/math/representation_theory/representations_of_finite_groups#prop4)에서 ordinary group $G$의 representation을 group algebra 위의 module, 곧 $G$-module로 해석하였고, 이 관점은 Lie group의 representation에서도 유용하게 사용되었다. Group scheme에서도 이를 살펴보는 것이 타당한 일일 것이다.
+한편 group object를 다룰 때 유용한 도구는 표현론으로, 우리는 [\[표현론\] §유한군의 표현론, ⁋명제 4](/ko/math/representation_theory/representations_of_finite_groups#prop4){: data-relation="weak" }에서 ordinary group $G$의 representation을 group algebra 위의 module, 곧 $G$-module로 해석하였고, 이 관점은 Lie group의 representation에서도 유용하게 사용되었다. Group scheme에서도 이를 살펴보는 것이 타당한 일일 것이다.
 
-이를 위해서는 [예시 3](#ex3)에서 그러했듯 임의의 $S$-scheme $p:T\rightarrow S$마다 어떤 $\mathcal{O}_T$-module $\mathcal{E}_T$ 위의 작용을 생각하고, 이것이 $S$-morphism $\varphi: T'\rightarrow T$를 통한 pullback과 compatible하도록 하면 된다. 이를 묶어주기 위해서는 $\mathcal{O}_S$-module $\mathcal{E}$를 하나 고정한 후, 모든 $p:T\rightarrow S$에 대하여 $\mathcal{E}_T=p^\ast \mathcal{E}$로 두면 된다.
+이를 위해서는 [예시 3](#ex3){: data-relation="weak" }에서 그러했듯 임의의 $S$-scheme $p:T\rightarrow S$마다 어떤 $\mathcal{O}_T$-module $\mathcal{E}_T$ 위의 작용을 생각하고, 이것이 $S$-morphism $\varphi: T'\rightarrow T$를 통한 pullback과 compatible하도록 하면 된다. 이를 묶어주기 위해서는 $\mathcal{O}_S$-module $\mathcal{E}$를 하나 고정한 후, 모든 $p:T\rightarrow S$에 대하여 $\mathcal{E}_T=p^\ast \mathcal{E}$로 두면 된다.
 
 그럼 이제 이렇게 정의된 $\mathcal{E}_T$가 $G(T)$-module이라는 것은 group homomorphism
 
@@ -168,7 +168,7 @@ $$\rAut(\mathcal{E}): (\Sch_{/S})^\op\rightarrow\Grp,\qquad T\mapsto\Aut_{\mathc
 
 를 생각한 후, 이들 사이의 morphism (즉 natural transformation) $\widetilde{\rho}: \widetilde{h}_G\Rightarrow\rAut(\mathcal{E})$을 주면 되며, 그럼 위에서 설명한 것과 마찬가지로 $\widetilde{\rho}$의 $T$-component가 바로 앞에서 요구한 group homomorphism $\varrho_T$이다.
 
-이제 [\[범주론\] §표현가능한 함자](/ko/math/category_theory/representable_functors)의 결과들을 적용하기 위해, 이들 두 functor 각각에 forgetful functor $U: \Grp\rightarrow\Set$를 합성하고, 이를 통해 $\widetilde{\rho}:\widetilde{h}_G\Rightarrow \rAut(\mathcal{E})$를 두 $\Set$-valued functor $h_G = \Hom_S(-, G)$와 $F = U \circ \rAut(\mathcal{E})$ 사이의 natural transformation $\rho: h_G \Rightarrow F$로 보자. 즉 각각의 $S$-scheme $T$에 대하여, $\rho_T$는 group homomorphism $\widetilde{\rho}_T:G(T)\rightarrow \Aut_{\mathcal{O}_T}(\mathcal{E}_T)$를 underlying set들 사이의 함수로 생각한 것이다. 그럼 [\[범주론\] §표현가능한 함자, ⁋정리 4](/ko/math/category_theory/representable_functors#thm4)에 의하여 $\rho$는 universal element $\id_G\in h_G(G)$에서의 값
+이제 [\[범주론\] §표현가능한 함자](/ko/math/category_theory/representable_functors){: data-relation="required" }의 결과들을 적용하기 위해, 이들 두 functor 각각에 forgetful functor $U: \Grp\rightarrow\Set$를 합성하고, 이를 통해 $\widetilde{\rho}:\widetilde{h}_G\Rightarrow \rAut(\mathcal{E})$를 두 $\Set$-valued functor $h_G = \Hom_S(-, G)$와 $F = U \circ \rAut(\mathcal{E})$ 사이의 natural transformation $\rho: h_G \Rightarrow F$로 보자. 즉 각각의 $S$-scheme $T$에 대하여, $\rho_T$는 group homomorphism $\widetilde{\rho}_T:G(T)\rightarrow \Aut_{\mathcal{O}_T}(\mathcal{E}_T)$를 underlying set들 사이의 함수로 생각한 것이다. 그럼 [\[범주론\] §표현가능한 함자, ⁋정리 4](/ko/math/category_theory/representable_functors#thm4){: data-relation="required" }에 의하여 $\rho$는 universal element $\id_G\in h_G(G)$에서의 값
 
 $$\lambda:=\rho_G(\id_G)\in F(G)=\Aut_{\mathcal{O}_G}(\mathcal{E}_G)$$
 
@@ -182,7 +182,7 @@ $$\varrho_T(g)=\rho_T(g)=\rho_T(g^\ast\id_G)=g^\ast(\rho_G(\id_G))=g^\ast\lambda
 
 이므로 임의의 $g\in G(T)$의 작용 $\varrho_T(g)$는 이 하나의 automorphism $\lambda$의 pullback으로 복원된다.
 
-문제는 [\[범주론\] §표현가능한 함자, ⁋정리 4](/ko/math/category_theory/representable_functors#thm4)는 $\Set$-valued functor들에 대한 결과이므로, <em-ko>임의의</em-ko> $\lambda\in\Aut_{\mathcal{O}_G}(\mathcal{E}_G)$에 대하여 위의 방식으로 정의된 함수 $\varrho_T: G(T)\rightarrow \Aut_{\mathcal{O}_T}(\mathcal{E}_T)$는 집합들 사이의 함수일 뿐, 자동으로 group homomorphism이 되지는 않는다는 것이다. 다행히 $\varrho_T$가 group homomorphism이도록 하는 조건은 명시적으로 쓸 수 있으며, 이는 다음과 같이 $\lambda$에 대한 두 조건으로 번역된다.
+문제는 [\[범주론\] §표현가능한 함자, ⁋정리 4](/ko/math/category_theory/representable_functors#thm4){: data-relation="required" }는 $\Set$-valued functor들에 대한 결과이므로, <em-ko>임의의</em-ko> $\lambda\in\Aut_{\mathcal{O}_G}(\mathcal{E}_G)$에 대하여 위의 방식으로 정의된 함수 $\varrho_T: G(T)\rightarrow \Aut_{\mathcal{O}_T}(\mathcal{E}_T)$는 집합들 사이의 함수일 뿐, 자동으로 group homomorphism이 되지는 않는다는 것이다. 다행히 $\varrho_T$가 group homomorphism이도록 하는 조건은 명시적으로 쓸 수 있으며, 이는 다음과 같이 $\lambda$에 대한 두 조건으로 번역된다.
 
 1. 우선 임의의 $g, h\in G(T)$에 대하여 $gh=\mu_G\circ(g, h)$이므로, 조건 $\varrho_T(gh)=\varrho_T(g)\circ\varrho_T(h)$은 다음의 조건 
     
@@ -246,7 +246,7 @@ Hopf $A$-algebra $B$에 대하여, $B$-*comodule<sub>쌍대모듈</sub>*이란 $
 Ring $A$ 위의 affine group scheme $G=\Spec B$와 $A$-module $V$에 대하여, $G$의 $V$ 위로의 linear representation과 $V$ 위의 $B$-comodule 구조는 서로 일대일대응한다. 더 나아가, 이는 이들 category 사이의 equivalence를 준다.
 :::
 ::: 증명
-[§아핀스킴, ⁋정리 13](/ko/math/scheme_theory/affine_schemes#thm13)에 의하여 임의의 $A$-algebra $E$에 대해 $G(E)=\Hom_{\cAlg{A}}(B, E)$이고, [정리 6](#thm6) 직후에 적은 대로 그 group 구조는 $g\ast h=\mu_E\circ(g\otimes h)\circ\Delta$, 항등원 $\eta_E\circ\epsilon$, 역원 $g\circ\iota$로 주어진다.
+[§아핀스킴, ⁋정리 13](/ko/math/scheme_theory/affine_schemes#thm13){: data-relation="required" }에 의하여 임의의 $A$-algebra $E$에 대해 $G(E)=\Hom_{\cAlg{A}}(B, E)$이고, [정리 6](#thm6){: data-relation="required" } 직후에 적은 대로 그 group 구조는 $g\ast h=\mu_E\circ(g\otimes h)\circ\Delta$, 항등원 $\eta_E\circ\epsilon$, 역원 $g\circ\iota$로 주어진다.
 
 Representation $\{\varrho_E\}_E$가 주어졌다 하자. Universal element $\id_B\in G(B)$를 택하여 $\sigma=\varrho_B(\id_B)$라 하고
 
@@ -264,7 +264,7 @@ $$\varrho_E(g)(v\otimes 1)=(\id_V\otimes g)(\rho(v))\tag{$\ast$}$$
 가장 기본적인 경우는 다음과 같다.
 
 ::: 예시 10
-우리는 [정리 9](#thm9)를 이용해 torus $\mathbb{G}_m=\Spec A[\x,\x^{-1}]$의 linear representation을 분류한다. 우리 주장은 $\mathbb{G}_m$의 $V$ 위로의 representation은 $V$의 $\mathbb{Z}$-grading
+우리는 [정리 9](#thm9){: data-relation="required" }를 이용해 torus $\mathbb{G}_m=\Spec A[\x,\x^{-1}]$의 linear representation을 분류한다. 우리 주장은 $\mathbb{G}_m$의 $V$ 위로의 representation은 $V$의 $\mathbb{Z}$-grading
 
 $$V=\bigoplus_{n\in \mathbb{Z}}V_n$$
 
@@ -276,7 +276,7 @@ $$\rho(v)=\sum_{n\in\mathbb{Z}}\rho_n(v)\otimes\x^n$$
 
 꼴로 전개된다. 여기서 각 $\rho_n: V \rightarrow V$는 $A$-linear map이고, 각 $v\in V$마다 $0$이 아닌 $\rho_n(v)$는 유한개뿐이다.
 
-이제 $\rho$가 [정의 8](#def8)의 comodule 조건을 만족할 필요충분조건을 구해보자. 우선 counit 조건의 경우, identification $V\otimes_AA\cong V$ 아래에서 $(\id_V\otimes\epsilon)\circ\rho=\id_V$이어야 하므로
+이제 $\rho$가 [정의 8](#def8){: data-relation="required" }의 comodule 조건을 만족할 필요충분조건을 구해보자. 우선 counit 조건의 경우, identification $V\otimes_AA\cong V$ 아래에서 $(\id_V\otimes\epsilon)\circ\rho=\id_V$이어야 하므로
 
 $$v=(\id_V\otimes\epsilon)(\rho(v))=(\id_V\otimes\epsilon)\left(\sum_{n\in\mathbb{Z}}\rho_n(v)\otimes\x^n\right)=\sum_{n\in\mathbb{Z}}\rho_n(v)\epsilon(\x^n)=\sum_{n\in\mathbb{Z}}\rho_n(v)$$
 
@@ -301,7 +301,7 @@ $$\varrho_E(u)(v\otimes 1)=(\id_V\otimes g_u)(\rho(v))=(\id_V\otimes g_u)(v\otim
 이 된다. 즉 $E$-linearity에 의하여, $u\in\mathbb{G}_m(E)=E^\times$는 $V_n\otimes_AE$의 원소 위에 정확히 $u^n$배로 작용한다.
 :::
 
-[예시 10](#ex10)의 $V_n$을 weight $n$의 부분이라 부르며, 이 분해는 torus의 작용을 다룰 때 표준적인 도구가 된다. Torus $\mathbb{G}_m^r$의 경우 같은 계산을 반복하면 grading이 $\mathbb{Z}^r$에 의해 매겨지며, 그 각각의 성분이 torus의 한 character에 대응한다.
+[예시 10](#ex10){: data-relation="required" }의 $V_n$을 weight $n$의 부분이라 부르며, 이 분해는 torus의 작용을 다룰 때 표준적인 도구가 된다. Torus $\mathbb{G}_m^r$의 경우 같은 계산을 반복하면 grading이 $\mathbb{Z}^r$에 의해 매겨지며, 그 각각의 성분이 torus의 한 character에 대응한다.
 
 ## Torsor
 
@@ -315,18 +315,18 @@ $$\varrho_T: G(T)\times X(T) \rightarrow X(T)$$
 이 $G(T)$의 집합 $X(T)$ 위로의 action인 것이다.
 :::
 
-그럼 다시 [명제 2](#prop2)의 정신에 의하여, 위의 조건은 정확히 group action이 가져야 할 다음의 두 조건
+그럼 다시 [명제 2](#prop2){: data-relation="required" }의 정신에 의하여, 위의 조건은 정확히 group action이 가져야 할 다음의 두 조건
 
 $$\varrho\circ(\mu_G\times\id_X)=\varrho\circ(\id_G\times\varrho),\qquad \varrho\circ(\epsilon_G\circ p, \id_X)=\id_X$$
 
 이 성립하는 것과 동치이다. 여기에서 $p: X \rightarrow S$는 structure morphism이다. 
 
-Scheme 위에 group action이 주어지면, 기하학적으로 자연스러운 다음 관심사는 orbit들의 공간, 곧 quotient $\overline{X}=X/G$와 quotient morphism $\varpi: X \rightarrow \overline{X}$를 구성하고 그 구조를 이해하는 것이다. 그러나 이는 위상공간에서조차 항상 기대되는 성질이 아니며, 우리는 적어도 이 action이 각 orbit 위에서 free, simply transitive하게 작동하기를 원한다. 이 경우 각 orbit의 점 $\overline{x}\in \overline{X}$ 위의 fiber $\varpi^{-1}(\overline{x})$는 $G$와 같은 모양을 가지게 되며, 이 경우 $X\rightarrow \overline{X}$를 $G$ 모양의 fiber들을 모아둔 것으로 해석할 수 있다. 이제 문제는 [\[대수적 위상수학\] §분류공간, ⁋정의 1](/ko/math/algebraic_topology/classifying_spaces#def1)에서와 비슷하게, 각각의 orbit마다 $G$의 항등원에 대응되는 기준점을 골라줄 수가 없다는 것으로, 이 때문에 각 fiber는 $G$ 자체가 아니라, $G$가 작용하는 방식만 기억하는 fiber가 된다. 
+Scheme 위에 group action이 주어지면, 기하학적으로 자연스러운 다음 관심사는 orbit들의 공간, 곧 quotient $\overline{X}=X/G$와 quotient morphism $\varpi: X \rightarrow \overline{X}$를 구성하고 그 구조를 이해하는 것이다. 그러나 이는 위상공간에서조차 항상 기대되는 성질이 아니며, 우리는 적어도 이 action이 각 orbit 위에서 free, simply transitive하게 작동하기를 원한다. 이 경우 각 orbit의 점 $\overline{x}\in \overline{X}$ 위의 fiber $\varpi^{-1}(\overline{x})$는 $G$와 같은 모양을 가지게 되며, 이 경우 $X\rightarrow \overline{X}$를 $G$ 모양의 fiber들을 모아둔 것으로 해석할 수 있다. 이제 문제는 [\[대수적 위상수학\] §분류공간, ⁋정의 1](/ko/math/algebraic_topology/classifying_spaces#def1){: data-relation="weak" }에서와 비슷하게, 각각의 orbit마다 $G$의 항등원에 대응되는 기준점을 골라줄 수가 없다는 것으로, 이 때문에 각 fiber는 $G$ 자체가 아니라, $G$가 작용하는 방식만 기억하는 fiber가 된다. 
 
 ::: 정의 12
 $S$ 위의 group scheme $G$와 left action $\varrho: G\times_SP \rightarrow P$를 가진 $S$-scheme $P$에 대하여, $P$가 *$G$-torsor*라는 것은 다음 두 조건이 성립하는 것이다.
 
-1. $P \rightarrow S$는 faithfully flat, locally of finite presentation이다. ([§평탄사상, ⁋정의 1](/ko/math/scheme_theory/flat_morphisms#def1), [§스킴 사상의 성질들, ⁋정의 18](/ko/math/scheme_theory/properties_of_scheme_morphisms#def18))
+1. $P \rightarrow S$는 faithfully flat, locally of finite presentation이다. ([§평탄사상, ⁋정의 1](/ko/math/scheme_theory/flat_morphisms#def1){: data-relation="required" }, [§스킴 사상의 성질들, ⁋정의 18](/ko/math/scheme_theory/properties_of_scheme_morphisms#def18){: data-relation="required" })
 2. Action과 projection이 유도하는 morphism
 
    $$(\varrho, \pr_2): G\times_SP \rightarrow P\times_SP$$
@@ -340,9 +340,9 @@ $G$-torsor $P$가 *trivial*하다는 것은, left translation action을 가진 $
 
 $$G(T)\times P(T) \rightarrow P(T)\times P(T);\qquad (g, q)\mapsto (g\cdot q, q)$$
 
-이 bijection인 것, 즉 simply transitive 조건을 반영하는 것이다. 첫째 조건은 대략적으로는 local triviality를 잘 적기 위해 필요한 것인데, [§충실평탄하강](/ko/math/scheme_theory/faithfully_flat_descent)에서 보았듯 algebraic geometry에서는 Zariski open cover만으로는 충분한 정보를 담지 못하므로, $P \rightarrow S$ 자신이 *fppf covering*의 역할을 하도록 요구하는 것이다. 여기서 fppf는 *fidèlement plat de présentation finie*의 약자이다.
+이 bijection인 것, 즉 simply transitive 조건을 반영하는 것이다. 첫째 조건은 대략적으로는 local triviality를 잘 적기 위해 필요한 것인데, [§충실평탄하강](/ko/math/scheme_theory/faithfully_flat_descent){: data-relation="weak" }에서 보았듯 algebraic geometry에서는 Zariski open cover만으로는 충분한 정보를 담지 못하므로, $P \rightarrow S$ 자신이 *fppf covering*의 역할을 하도록 요구하는 것이다. 여기서 fppf는 *fidèlement plat de présentation finie*의 약자이다.
 
-한편 [\[대수적 위상수학\] §분류공간, ⁋명제 2](/ko/math/algebraic_topology/classifying_spaces#prop2)에서와 마찬가지로, torsor의 (global한) triviality는 global section의 존재와 정확히 동치이다.
+한편 [\[대수적 위상수학\] §분류공간, ⁋명제 2](/ko/math/algebraic_topology/classifying_spaces#prop2){: data-relation="weak" }에서와 마찬가지로, torsor의 (global한) triviality는 global section의 존재와 정확히 동치이다.
 
 ::: 명제 13
 $S$ 위의 $G$-torsor $P$에 대하여, $P$가 trivial한 것과 $P(S)\neq \emptyset$인 것, 곧 $P \rightarrow S$가 section을 가지는 것은 동치이다.
@@ -350,49 +350,49 @@ $S$ 위의 $G$-torsor $P$에 대하여, $P$가 trivial한 것과 $P(S)\neq \empt
 ::: 증명
 $P$가 trivial하면 $G$의 항등원 $\epsilon_G\in G(S)$에 대응하는 원소가 $P(S)$의 원소를 주므로 section이 존재한다.
 
-거꾸로 section $s\in P(S)$가 주어졌다 하자. [\[대수적 위상수학\] §분류공간, ⁋명제 2](/ko/math/algebraic_topology/classifying_spaces#prop2)에서와 마찬가지로 합성
+거꾸로 section $s\in P(S)$가 주어졌다 하자. [\[대수적 위상수학\] §분류공간, ⁋명제 2](/ko/math/algebraic_topology/classifying_spaces#prop2){: data-relation="required" }에서와 마찬가지로 합성
 
 $$\varphi: G\cong G\times_SS\xrightarrow{\ \id_G\times s\ }G\times_SP\xrightarrow{\ \varrho\ }P$$
 
-를 생각하면, 각각의 $S$-scheme $T$에서 $\varphi_T(g)=g\cdot s_T$이다. [정의 12](#def12)의 둘째 조건에 의하여 $g\mapsto g\cdot s_T$는 $G(T)$에서 $P(T)$로의 bijection이므로, [\[범주론\] §표현가능한 함자, ⁋정리 4](/ko/math/category_theory/representable_functors#thm4)에 의하여 $\varphi$는 isomorphism이다. 또 $\varphi_T(g'g)=(g'g)\cdot s_T=g'\cdot\varphi_T(g)$이므로 $\varphi$는 $G$-equivariant이며, 따라서 $P$는 trivial하다.
+를 생각하면, 각각의 $S$-scheme $T$에서 $\varphi_T(g)=g\cdot s_T$이다. [정의 12](#def12){: data-relation="required" }의 둘째 조건에 의하여 $g\mapsto g\cdot s_T$는 $G(T)$에서 $P(T)$로의 bijection이므로, [\[범주론\] §표현가능한 함자, ⁋정리 4](/ko/math/category_theory/representable_functors#thm4){: data-relation="required" }에 의하여 $\varphi$는 isomorphism이다. 또 $\varphi_T(g'g)=(g'g)\cdot s_T=g'\cdot\varphi_T(g)$이므로 $\varphi$는 $G$-equivariant이며, 따라서 $P$는 trivial하다.
 :::
 
-[명제 13](#prop13)은 torsor가 원래의 base $S$ 위에서 trivial한지의 여부가 오로지 global section $S \rightarrow P$의 존재에 달려 있음을 말한다. 따라서 global section이 없는 torsor는 $S$ 위에서 결코 trivial하지 않다. 반면 torsor $P$를 사상 $P \rightarrow S$를 통해 자기 자신 위로 base change하면, diagonal morphism $\Delta: P \rightarrow P\times_SP$가 항상 section 역할을 해주므로 $P$ 위에서는 $P\times_SP \cong G\times_SP$로 언제나 trivial해진다. 이는 위상수학에서 principal bundle을 total space 위로 끌어올리면 항상 trivial해지는 것과 마찬가지 현상이다.
+[명제 13](#prop13){: data-relation="required" }은 torsor가 원래의 base $S$ 위에서 trivial한지의 여부가 오로지 global section $S \rightarrow P$의 존재에 달려 있음을 말한다. 따라서 global section이 없는 torsor는 $S$ 위에서 결코 trivial하지 않다. 반면 torsor $P$를 사상 $P \rightarrow S$를 통해 자기 자신 위로 base change하면, diagonal morphism $\Delta: P \rightarrow P\times_SP$가 항상 section 역할을 해주므로 $P$ 위에서는 $P\times_SP \cong G\times_SP$로 언제나 trivial해진다. 이는 위상수학에서 principal bundle을 total space 위로 끌어올리면 항상 trivial해지는 것과 마찬가지 현상이다.
 
 ::: 명제 14
 $S$ 위의 $G$-torsor $P$에 대하여 다음이 성립한다.
 
 1. 둘째 projection $P\times_SP \rightarrow P$는 $P$ 위의 group scheme $G_P=G\times_SP$에 대한 torsor이며 trivial하다. 곧 $P$는 fppf covering $\{P \rightarrow S\}$ 위에서 자명해진다.
-2. $G \rightarrow S$가 affine이고 $P \rightarrow S$가 quasi-compact이면 ([§스킴 사상의 성질들, ⁋정의 2](/ko/math/scheme_theory/properties_of_scheme_morphisms#def2)) $P \rightarrow S$ 또한 affine이다.
+2. $G \rightarrow S$가 affine이고 $P \rightarrow S$가 quasi-compact이면 ([§스킴 사상의 성질들, ⁋정의 2](/ko/math/scheme_theory/properties_of_scheme_morphisms#def2){: data-relation="required" }) $P \rightarrow S$ 또한 affine이다.
 :::
 ::: 증명
-1번을 보자. Flat, locally of finite presentation, surjective 성질과 fiber product의 isomorphism은 모두 base change에 대해 보존되므로 ([§평탄사상, ⁋명제 3](/ko/math/scheme_theory/flat_morphisms#prop3), [§올곱, ⁋명제 16](/ko/math/scheme_theory/fiber_products#prop16)), 둘째 projection $P\times_SP \rightarrow P$는 $P$ 위의 $G_P$-torsor이다. 그런데 diagonal morphism $\Delta: P \rightarrow P\times_SP$가 이 projection의 section이므로, [명제 13](#prop13)에 의하여 이 torsor는 trivial하다. 곧 $P$ 위에서 $P\times_SP\cong G\times_SP$이다. 한편 $P \rightarrow S$는 정의에 의하여 fppf covering이다.
+1번을 보자. Flat, locally of finite presentation, surjective 성질과 fiber product의 isomorphism은 모두 base change에 대해 보존되므로 ([§평탄사상, ⁋명제 3](/ko/math/scheme_theory/flat_morphisms#prop3){: data-relation="required" }, [§올곱, ⁋명제 16](/ko/math/scheme_theory/fiber_products#prop16){: data-relation="required" }), 둘째 projection $P\times_SP \rightarrow P$는 $P$ 위의 $G_P$-torsor이다. 그런데 diagonal morphism $\Delta: P \rightarrow P\times_SP$가 이 projection의 section이므로, [명제 13](#prop13){: data-relation="required" }에 의하여 이 torsor는 trivial하다. 곧 $P$ 위에서 $P\times_SP\cong G\times_SP$이다. 한편 $P \rightarrow S$는 정의에 의하여 fppf covering이다.
 
-2번을 보자. $S$의 affine open subset $V$를 택하면 $V$는 quasi-compact이고 ([§스펙트럼, ⁋보조정리 12](/ko/math/scheme_theory/spectrums#lem12)), $P \rightarrow S$가 quasi-compact이므로 그 preimage 또한 quasi-compact이다. 따라서 $\{P \rightarrow S\}$는 [§충실평탄하강, ⁋정의 9](/ko/math/scheme_theory/faithfully_flat_descent#def9)의 fpqc covering이 된다. 이제 affine은 base change에 대해 보존되므로 $G\times_SP \rightarrow P$는 affine이고, 1번에 의해 $P\times_SP \rightarrow P$ 역시 affine이다. Affine이라는 성질은 fpqc covering에 대해 base에서 국소적이므로 ([§충실평탄하강, ⁋명제 13](/ko/math/scheme_theory/faithfully_flat_descent#prop13)), $P \rightarrow S$ 자신이 affine이다.
+2번을 보자. $S$의 affine open subset $V$를 택하면 $V$는 quasi-compact이고 ([§스펙트럼, ⁋보조정리 12](/ko/math/scheme_theory/spectrums#lem12){: data-relation="required" }), $P \rightarrow S$가 quasi-compact이므로 그 preimage 또한 quasi-compact이다. 따라서 $\{P \rightarrow S\}$는 [§충실평탄하강, ⁋정의 9](/ko/math/scheme_theory/faithfully_flat_descent#def9){: data-relation="required" }의 fpqc covering이 된다. 이제 affine은 base change에 대해 보존되므로 $G\times_SP \rightarrow P$는 affine이고, 1번에 의해 $P\times_SP \rightarrow P$ 역시 affine이다. Affine이라는 성질은 fpqc covering에 대해 base에서 국소적이므로 ([§충실평탄하강, ⁋명제 13](/ko/math/scheme_theory/faithfully_flat_descent#prop13){: data-relation="required" }), $P \rightarrow S$ 자신이 affine이다.
 :::
 
-위의 증명에서 볼 수 있듯, [명제 14](#prop14)의 둘째 항에 붙은 quasi-compact 가정은 fppf covering $\{P \rightarrow S\}$를 fpqc covering으로 올리기 위한 것으로, 일반적으로 quasi-compact fppf covering은 항상 fpqc covering이다. 만일 $P$가 Noetherian scheme인 경우에는 [§스킴 사상의 성질들, ⁋명제 4](/ko/math/scheme_theory/properties_of_scheme_morphisms#prop4)에 의하여 fppf 사상이 자동으로 quasi-compact가 되어 이 가정이 언제나 성립한다. 
+위의 증명에서 볼 수 있듯, [명제 14](#prop14){: data-relation="weak" }의 둘째 항에 붙은 quasi-compact 가정은 fppf covering $\{P \rightarrow S\}$를 fpqc covering으로 올리기 위한 것으로, 일반적으로 quasi-compact fppf covering은 항상 fpqc covering이다. 만일 $P$가 Noetherian scheme인 경우에는 [§스킴 사상의 성질들, ⁋명제 4](/ko/math/scheme_theory/properties_of_scheme_morphisms#prop4){: data-relation="required" }에 의하여 fppf 사상이 자동으로 quasi-compact가 되어 이 가정이 언제나 성립한다. 
 
 더 일반적으로, scheme $X$ 위의 covering family $\{f_i: U_i \rightarrow X\}$에 대하여, $f_i$가 open embedding인 것을 *Zariski covering*, flat이고 unramified인 것을 *étale covering*, flat이고 locally of finite presentation인 것을 *fppf covering*, flat이고 quasi-compact인 것을 *fpqc covering*이라 부른다. 그럼 그 정의에 의해 주어진 covering의 성질들 사이의 함의관계
 
 $$\text{Zariski}\implies\text{étale}\implies\text{fppf}$$
 
-가 성립한다. 위의 [명제 14](#prop14)는 이 함의관계를 사용하는 방식을 부분적으로 보여준다. 위의 증명에서 살펴보았듯 quasi-compact fppf covering은 fpqc covering이 되며, 이 사실을 이용하여 [§충실평탄하강, ⁋명제 13](/ko/math/scheme_theory/faithfully_flat_descent#prop13)에서 살펴본 fpqc covering의 affineness 관련 주장을 fppf로 옮겨왔다. 
+가 성립한다. 위의 [명제 14](#prop14){: data-relation="weak" }는 이 함의관계를 사용하는 방식을 부분적으로 보여준다. 위의 증명에서 살펴보았듯 quasi-compact fppf covering은 fpqc covering이 되며, 이 사실을 이용하여 [§충실평탄하강, ⁋명제 13](/ko/math/scheme_theory/faithfully_flat_descent#prop13){: data-relation="required" }에서 살펴본 fpqc covering의 affineness 관련 주장을 fppf로 옮겨왔다. 
 
-직관적으로 [명제 14](#prop14)는 torsor $P$가 base $S$ 위에서는 $G$와 다를 수 있어도, fppf covering $\{P \rightarrow S\}$ 위로 올라가면 자명한 torsor $G\times_SP$가 된다는 것을 보여준다. 바꿔말하면, torsor는 [§충실평탄하강, ⁋정의 4](/ko/math/scheme_theory/faithfully_flat_descent#def4)의 descent datum을 통해 $G$를 fppf covering을 따라 붙여서 얻는 대상으로 이해할 수 있으며, $G$가 affine인 경우 [§충실평탄하강, ⁋정리 12](/ko/math/scheme_theory/faithfully_flat_descent#thm12)에 의하여 이러한 데이터가 실제로 $S$ 위의 scheme을 준다.
+직관적으로 [명제 14](#prop14){: data-relation="weak" }는 torsor $P$가 base $S$ 위에서는 $G$와 다를 수 있어도, fppf covering $\{P \rightarrow S\}$ 위로 올라가면 자명한 torsor $G\times_SP$가 된다는 것을 보여준다. 바꿔말하면, torsor는 [§충실평탄하강, ⁋정의 4](/ko/math/scheme_theory/faithfully_flat_descent#def4){: data-relation="weak" }의 descent datum을 통해 $G$를 fppf covering을 따라 붙여서 얻는 대상으로 이해할 수 있으며, $G$가 affine인 경우 [§충실평탄하강, ⁋정리 12](/ko/math/scheme_theory/faithfully_flat_descent#thm12){: data-relation="required" }에 의하여 이러한 데이터가 실제로 $S$ 위의 scheme을 준다.
 
 ::: 예시 15
 1. $S=\Spec\mathbb{R}$-scheme $p:P=\Spec \mathbb{C}\rightarrow S$를 생각하고, $\vartheta:G\rightarrow S$를 finite group $\mathbb{Z}/2$이 정의하는 constant group $S$-scheme 
     
     $$G=\underline{(\mathbb{Z}/2)}_S=S\amalg S=\Spec(\mathbb{R}\times\mathbb{R})$$
     
-    을 생각하자. ([예시 3](#ex3)) 이는 두 점 집합이며 각각의 점들이 $\mathbb{R}$의 정보를 갖고 있는 group scheme이다. 이제 이것이 또 다른 한점집합인 $\Spec \mathbb{C}$ 위에 작용하는 상황을 본다. 이를 위해 complex conjugation을 $c$라 표기하면, 이 위의 group scheme action $\varrho: G\times_SP\rightarrow P$를 다음의 diagram
+    을 생각하자. ([예시 3](#ex3){: data-relation="weak" }) 이는 두 점 집합이며 각각의 점들이 $\mathbb{R}$의 정보를 갖고 있는 group scheme이다. 이제 이것이 또 다른 한점집합인 $\Spec \mathbb{C}$ 위에 작용하는 상황을 본다. 이를 위해 complex conjugation을 $c$라 표기하면, 이 위의 group scheme action $\varrho: G\times_SP\rightarrow P$를 다음의 diagram
 
     {% diagram Math/Scheme_Theory/Group_Schemes-4.svg width="13.92em" alt="action_definition" %}
 
     으로 정의할 수 있다. 직관적으로 $\varrho$는 한 성분 $P$는 $\id_P$로 그대로 옮겨지되, 다른 성분 $P$는 $c$가 유도하는 사상으로 옮겨지는 것이다. 
 
-    그럼 이는 $G$-torsor이다. 이를 위해 [정의 12](#def12)의 조건들을 확인해보면 우선  $\mathbb{C}$가 $\mathbb{R}$ 위의 rank $2$ free module이므로 $P \rightarrow S$는 faithfully flat이고 locally of finite presentation이다. 둘째 조건의 경우, $G\times_SP=\Spec(\mathbb{C}\times\mathbb{C})$이고 $P\times_SP=\Spec(\mathbb{C}\otimes_\mathbb{R}\mathbb{C})$인데, $\varrho$에 대응하는 algebra homomorphism을 대수적으로 써 보면 이는
+    그럼 이는 $G$-torsor이다. 이를 위해 [정의 12](#def12){: data-relation="required" }의 조건들을 확인해보면 우선  $\mathbb{C}$가 $\mathbb{R}$ 위의 rank $2$ free module이므로 $P \rightarrow S$는 faithfully flat이고 locally of finite presentation이다. 둘째 조건의 경우, $G\times_SP=\Spec(\mathbb{C}\times\mathbb{C})$이고 $P\times_SP=\Spec(\mathbb{C}\otimes_\mathbb{R}\mathbb{C})$인데, $\varrho$에 대응하는 algebra homomorphism을 대수적으로 써 보면 이는
     
     $$\rho:\mathbb{C}\rightarrow\mathbb{C}\times\mathbb{C};\qquad z\mapsto(z,\bar z)$$
     
@@ -400,11 +400,11 @@ $$\text{Zariski}\implies\text{étale}\implies\text{fppf}$$
 
    $$\mathbb{C}\otimes_\mathbb{R}\mathbb{C} \rightarrow \mathbb{C}\times\mathbb{C};\qquad z\otimes w\mapsto (zw, \bar zw)$$
 
-   이고, 이것이 $\mathbb{R}$-algebra isomorphism이므로 [정의 12](#def12)의 둘째 조건이 성립한다. 
+   이고, 이것이 $\mathbb{R}$-algebra isomorphism이므로 [정의 12](#def12){: data-relation="required" }의 둘째 조건이 성립한다. 
    
-   반면 $\mathbb{R}$-algebra homomorphism $\mathbb{C} \rightarrow \mathbb{R}$은 존재하지 않으므로 $P(S)=\emptyset$이고, [명제 13](#prop13)에 의하여 이 torsor는 trivial하지 않다.
+   반면 $\mathbb{R}$-algebra homomorphism $\mathbb{C} \rightarrow \mathbb{R}$은 존재하지 않으므로 $P(S)=\emptyset$이고, [명제 13](#prop13){: data-relation="required" }에 의하여 이 torsor는 trivial하지 않다.
 
-2. Base scheme $S$ 위의 multiplicative group scheme $G=\mathbb{G}_{m, S}=\Spec_S \mathcal{O}_S[\x, \x^{-1}]$와 invertible sheaf $\mathcal{L}$을 생각하자. [\[대수적 위상수학\] §분류공간, ⁋명제 4](/ko/math/algebraic_topology/classifying_spaces#prop4)에서 vector bundle의 각 fiber에서 기저(frame)를 모아 principal bundle을 구성했듯, 대수기하에서도 $\mathcal{L}$로부터 일종의 frame bundle인 $\mathbb{G}_m$-torsor $P_\mathcal{L}$을 구성할 수 있다. 우선 $\mathcal{L}$은 정의상 Zariski-locally free of rank $1$이므로, local trivialization $\varphi_i: \mathcal{L}\vert_{U_i} \xrightarrow{\sim} \mathcal{O}_{U_i}$를 갖는 affine Zariski open cover $\{U_i\}$가 존재한다. 이 때의 transition function들을
+2. Base scheme $S$ 위의 multiplicative group scheme $G=\mathbb{G}_{m, S}=\Spec_S \mathcal{O}_S[\x, \x^{-1}]$와 invertible sheaf $\mathcal{L}$을 생각하자. [\[대수적 위상수학\] §분류공간, ⁋명제 4](/ko/math/algebraic_topology/classifying_spaces#prop4){: data-relation="weak" }에서 vector bundle의 각 fiber에서 기저(frame)를 모아 principal bundle을 구성했듯, 대수기하에서도 $\mathcal{L}$로부터 일종의 frame bundle인 $\mathbb{G}_m$-torsor $P_\mathcal{L}$을 구성할 수 있다. 우선 $\mathcal{L}$은 정의상 Zariski-locally free of rank $1$이므로, local trivialization $\varphi_i: \mathcal{L}\vert_{U_i} \xrightarrow{\sim} \mathcal{O}_{U_i}$를 갖는 affine Zariski open cover $\{U_i\}$가 존재한다. 이 때의 transition function들을
     
     $$g_{ij} = \varphi_i\circ \varphi_j^{-1}\in \Gamma(U_i\cap U_j, \mathcal{O}_S^\times)=\mathbb{G}_m(U_i\cap U_j)$$
     
@@ -412,13 +412,13 @@ $$\text{Zariski}\implies\text{étale}\implies\text{fppf}$$
     
     $$(t, u)\sim (g_{ij}(u)t, u)$$
     
-    로 붙이면, [§스킴, ⁋보조정리 9](/ko/math/scheme_theory/schemes#lem9)에 의하여 $S$-scheme $p:P_\mathcal{L}\rightarrow S$가 잘 정의된다. 이제 이 위의 group scheme action $\varrho: \mathbb{G}_m\times_S P_\mathcal{L} \rightarrow P_\mathcal{L}$은 각 $U_i$ 위에서 $\mathbb{G}_m$의 곱셈
+    로 붙이면, [§스킴, ⁋보조정리 9](/ko/math/scheme_theory/schemes#lem9){: data-relation="required" }에 의하여 $S$-scheme $p:P_\mathcal{L}\rightarrow S$가 잘 정의된다. 이제 이 위의 group scheme action $\varrho: \mathbb{G}_m\times_S P_\mathcal{L} \rightarrow P_\mathcal{L}$은 각 $U_i$ 위에서 $\mathbb{G}_m$의 곱셈
     
     $$\mathbb{G}_{m, U_i}\times_{U_i} \mathbb{G}_{m, U_i} \longrightarrow \mathbb{G}_{m, U_i};\qquad (a, t)\mapsto at$$
     
     로 정의된다. 우리 주장은 이것이 $G$-torsor라는 것이다. 
 
-    우선 국소적으로 $P_\mathcal{L}\vert_{U_i}\cong \mathbb{G}_{m, U_i} \rightarrow U_i$는 faithfully flat이고 of finite presentation이므로, 이 성질들이 base의 국소적 성질임에 따라 $p:P_\mathcal{L}\rightarrow S$는 faithfully flat이고 locally of finite presentation이다. [정의 12](#def12)의 둘째 조건의 사상 $(\varrho, \pr_2): \mathbb{G}_m\times_S P_\mathcal{L} \rightarrow P_\mathcal{L}\times_S P_\mathcal{L}$의 경우, 이는 각 $U_i$ 위에서 다음의 morphism
+    우선 국소적으로 $P_\mathcal{L}\vert_{U_i}\cong \mathbb{G}_{m, U_i} \rightarrow U_i$는 faithfully flat이고 of finite presentation이므로, 이 성질들이 base의 국소적 성질임에 따라 $p:P_\mathcal{L}\rightarrow S$는 faithfully flat이고 locally of finite presentation이다. [정의 12](#def12){: data-relation="required" }의 둘째 조건의 사상 $(\varrho, \pr_2): \mathbb{G}_m\times_S P_\mathcal{L} \rightarrow P_\mathcal{L}\times_S P_\mathcal{L}$의 경우, 이는 각 $U_i$ 위에서 다음의 morphism
       
     $$\mathbb{G}_{m, U_i}\times_{U_i}\mathbb{G}_{m, U_i} \longrightarrow \mathbb{G}_{m, U_i}\times_{U_i}\mathbb{G}_{m, U_i};\qquad (a, t)\mapsto (at, t)$$
       
@@ -428,7 +428,7 @@ $$\text{Zariski}\implies\text{étale}\implies\text{fppf}$$
       
     로 주어지는 것이다. 이는 $\x\mapsto \x\y^{-1}$, $\y\mapsto \y$를 그 inverse로 갖는 isomorphism이므로, $(\varrho, \pr_2)$는 isomorphism이다.
 
-    따라서 $P_\mathcal{L}$은 $S$ 위의 $\mathbb{G}_m$-torsor이며, [명제 13](#prop13)에 의하여 $P_\mathcal{L}$이 trivial한 것과 $\mathcal{L}\cong \mathcal{O}_S$인 것이 동치임을 확인할 수 있다. 
+    따라서 $P_\mathcal{L}$은 $S$ 위의 $\mathbb{G}_m$-torsor이며, [명제 13](#prop13){: data-relation="required" }에 의하여 $P_\mathcal{L}$이 trivial한 것과 $\mathcal{L}\cong \mathcal{O}_S$인 것이 동치임을 확인할 수 있다. 
 
     이 gluing이 작동하는 방식을 cohomology 관점에서 들여다보면 $P_\mathcal{L}$을 붙이는 transition data $g_{ij}\in \Gamma(U_i\cap U_j, \mathcal{O}_S^\times)$들은 $U_i\cap U_j\cap U_k$ 위에서 정확히 Čech 1-cocycle condition $g_{ij}g_{jk}=g_{ik}$를 만족한다. 또한 각 $U_i$ 위에서 local trivialization $\varphi_i$의 base를 $0$이 되지 않는 함수 $c_i\in \Gamma(U_i, \mathcal{O}_S^\times)$만큼 바꾸면 새 transition data는 $c_i g_{ij} c_j^{-1}$이 되므로, trivialization의 선택에 따른 차이는 정확히 Čech 1-coboundary에 해당한다. 따라서 이 transition data는 Čech cohomology의 class $[g_{ij}]\in \check{H}^1(\{U_i\}, \mathcal{O}_S^\times)$를 정하며, 이 class의 sheaf cohomology로의 image는 $\mathcal{L}$의 isomorphism class $[\mathcal{L}]\in H^1_\Zar(S, \mathcal{O}_S^\times)\cong \Pic(S)$에 대응한다.
 
@@ -445,7 +445,7 @@ $$\text{Zariski}\implies\text{étale}\implies\text{fppf}$$
     이 성립한다.
 :::
 
-[예시 15](#ex15)에서 보듯, affine group scheme $G$에 대하여 covering 위에서 $G$-torsor를 붙이는 transition data의 equivalence class들은 $1$차 cohomology set $H^1(S, G)$ (fppf topology에서는 $H^1_\fppf(S, G)$)를 이룬다. $G$가 abelian이 아닌 경우 $H^1(S, G)$는 군 구조를 갖지 않는 pointed set이지만, 여전히 $S$ 위의 $G$-torsor들의 isomorphism class 전체를 분류한다. 한편 torsor들을 단순한 집합으로 세는 대신 이들이 이루는 groupoid를 하나의 기하학적 대상으로 다룰 수도 있는데, field $\mathbb{K}$ 위에서 $\mathbb{G}_m$-torsor를 분류하는 $[\Spec \mathbb{K}/\mathbb{G}_m]$과 같은 quotient stack이 바로 그렇게 얻어지는 대상으로서 stack 이론의 출발점이 된다.
+[예시 15](#ex15){: data-relation="weak" }에서 보듯, affine group scheme $G$에 대하여 covering 위에서 $G$-torsor를 붙이는 transition data의 equivalence class들은 $1$차 cohomology set $H^1(S, G)$ (fppf topology에서는 $H^1_\fppf(S, G)$)를 이룬다. $G$가 abelian이 아닌 경우 $H^1(S, G)$는 군 구조를 갖지 않는 pointed set이지만, 여전히 $S$ 위의 $G$-torsor들의 isomorphism class 전체를 분류한다. 한편 torsor들을 단순한 집합으로 세는 대신 이들이 이루는 groupoid를 하나의 기하학적 대상으로 다룰 수도 있는데, field $\mathbb{K}$ 위에서 $\mathbb{G}_m$-torsor를 분류하는 $[\Spec \mathbb{K}/\mathbb{G}_m]$과 같은 quotient stack이 바로 그렇게 얻어지는 대상으로서 stack 이론의 출발점이 된다.
 
 ---
 
