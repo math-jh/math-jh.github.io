@@ -32,7 +32,7 @@ If $f:X \rightarrow Y$ is a continuous injective map, then the following are equ
 3. $f$ is a homeomorphism between $X$ and $f(X)$.
 :::
 ::: Proof
-By the argument above, it is obvious that the first condition implies the second. On the other hand, since $f$ is injective, its canonical decomposition shows that it is a homeomorphism between $X$ and $f(X)$. ([§Open Mappings and Closed Mappings, ⁋Proposition 5](/en/math/topology/open_mappings_and_closed_mappings#prop5)) Now assume that the third condition holds. Then for any $Z$, the map $f\times\id_Z$ is a homeomorphism from $X\times Z$ onto the closed subset $f(X)\times Z$ of $Y\times Z$, which yields the desired result.
+By the argument above, it is obvious that the first condition implies the second. On the other hand, since $f$ is injective, its canonical decomposition shows that it is a homeomorphism between $X$ and $f(X)$. ([§Open Mappings and Closed Mappings, ⁋Proposition 5](/en/math/topology/open_mappings_and_closed_mappings#prop5){: data-relation="required" }) Now assume that the third condition holds. Then for any $Z$, the map $f\times\id_Z$ is a homeomorphism from $X\times Z$ onto the closed subset $f(X)\times Z$ of $Y\times Z$, which yields the desired result.
 :::
 
 However, in general one must check directly whether a function $f$ is universally closed. The second result of the following proposition shows that this can be examined on the target $Y$.
@@ -54,7 +54,7 @@ Now let us prove the second statement. If $(A_i)$ satisfies the given condition,
 
 $$(f\times\id_Z)\vert_{f^{-1}(A_i\times Z)}$$
 
-are closed, and thus $f\times\id_Z$ is also closed. ([§Open Mappings and Closed Mappings, ⁋Proposition 3](/en/math/topology/open_mappings_and_closed_mappings#prop3))
+are closed, and thus $f\times\id_Z$ is also closed. ([§Open Mappings and Closed Mappings, ⁋Proposition 3](/en/math/topology/open_mappings_and_closed_mappings#prop3){: data-relation="required" })
 :::
 
 Moreover, the following holds.
@@ -72,7 +72,7 @@ The first three statements are all immediate from the identity
 
 $$(g\circ f)\times\id_Z=(g\times\id_Z)\circ(f\times\id_Z)$$
 
-and the results of [§Open Mappings and Closed Mappings, ⁋Proposition 2](/en/math/topology/open_mappings_and_closed_mappings#prop2).
+and the results of [§Open Mappings and Closed Mappings, ⁋Proposition 2](/en/math/topology/open_mappings_and_closed_mappings#prop2){: data-relation="required" }.
 
 For the last statement, define two functions $\Gamma_f: X \rightarrow X\times Y$ and $\Gamma_g: Y \rightarrow Z\times Y$ respectively by
 
@@ -82,18 +82,18 @@ Then one easily verifies the identity
 
 $$((g\circ f)\times\id_Y)\circ\Gamma_f=\Gamma_g\circ f$$
 
-Here $\Gamma_f$ and $\Gamma_g$ are homeomorphisms from $X$ and $Y$ onto the graphs of $f$ and $g$, respectively. ([§Product Spaces, ⁋Corollary 4](/en/math/topology/product_spaces#cor4)) Moreover, since $Y$ is Hausdorff, we know that $\graph(f)\subseteq X\times Y$ is a closed set. ([§Hausdorff Spaces, ⁋Corollary 7](/en/math/topology/Hausdorff_spaces#cor7)) Hence, by [Proposition 2](#prop2), we know that $\Gamma_f$ is universally closed. On the other hand, one can show without difficulty that the product of universally closed maps is universally closed; combining this with [Proposition 4](#prop4), we know that $(g\circ f)\times\id_Y$ is universally closed. Therefore the right-hand side $\Gamma_g\circ f$ of the above identity is also universally closed, and since $\Gamma_g$ is injective, $f$ is universally closed.
+Here $\Gamma_f$ and $\Gamma_g$ are homeomorphisms from $X$ and $Y$ onto the graphs of $f$ and $g$, respectively. ([§Product Spaces, ⁋Corollary 4](/en/math/topology/product_spaces#cor4){: data-relation="required" }) Moreover, since $Y$ is Hausdorff, we know that $\graph(f)\subseteq X\times Y$ is a closed set. ([§Hausdorff Spaces, ⁋Corollary 7](/en/math/topology/Hausdorff_spaces#cor7){: data-relation="required" }) Hence, by [Proposition 2](#prop2){: data-relation="required" }, we know that $\Gamma_f$ is universally closed. On the other hand, one can show without difficulty that the product of universally closed maps is universally closed; combining this with [Proposition 4](#prop4){: data-relation="required" }, we know that $(g\circ f)\times\id_Y$ is universally closed. Therefore the right-hand side $\Gamma_g\circ f$ of the above identity is also universally closed, and since $\Gamma_g$ is injective, $f$ is universally closed.
 :::
 
 ## Compactness and Universally Closed Maps
 
-So far, it is not apparent how this definition is related to compactness; in this section we examine the relationship between them. Before doing so, we need to say a little about filters in order to use [§Compactness and Convergence of Filters, ⁋Lemma 18](/en/math/topology/filter_convergence#lem18).
+So far, it is not apparent how this definition is related to compactness; in this section we examine the relationship between them. Before doing so, we need to say a little about filters in order to use [§Compactness and Convergence of Filters, ⁋Lemma 18](/en/math/topology/filter_convergence#lem18){: data-relation="required" }.
 
 Let an arbitrary topological space $X$ and an arbitrary filter $\mathcal{F}$ on it be given. Consider the set $X'=X\cup \{\ast_X\}$ obtained by adjoining one point to $X$, and the filter
 
 $$\mathcal{F}'=\{F\cup\{\ast_X\}\mid F\in \mathcal{F}\}$$
 
-on it. Now define $\mathcal{N}(x)=\uparrow\{x\}$ for any $x\in X'$ other than $\ast_X$, and $\mathcal{N}(\ast_X)=\mathcal{F}'$. Then this satisfies all four conditions of [§Open Sets, ⁋Proposition 6](/en/math/topology/open_sets#prop6), and thus defines a topology on $X'$. In this topological space $X'$, the point $\ast_X$ lies in the closure of $X$, and it is obvious that $\mathcal{F}=\mathcal{F}'\vert_X=\mathcal{N}(\ast_X)\vert_X$.
+on it. Now define $\mathcal{N}(x)=\uparrow\{x\}$ for any $x\in X'$ other than $\ast_X$, and $\mathcal{N}(\ast_X)=\mathcal{F}'$. Then this satisfies all four conditions of [§Open Sets, ⁋Proposition 6](/en/math/topology/open_sets#prop6){: data-relation="required" }, and thus defines a topology on $X'$. In this topological space $X'$, the point $\ast_X$ lies in the closure of $X$, and it is obvious that $\mathcal{F}=\mathcal{F}'\vert_X=\mathcal{N}(\ast_X)\vert_X$.
 
 Then we can prove the following lemma.
 
@@ -131,13 +131,13 @@ Since $f$ is universally closed, $f\vert_{f^{-1}(C)}$ is universally closed. On 
 
 ## Proper Maps
 
-A function $f$ satisfying the conclusion of [Corollary 7](#cor7) is called a *proper map*. The following proposition shows that the converse of the above corollary also holds in a special case.
+A function $f$ satisfying the conclusion of [Corollary 7](#cor7){: data-relation="required" } is called a *proper map*. The following proposition shows that the converse of the above corollary also holds in a special case.
 
 ::: Proposition 8
 Let a continuous function $f:X \rightarrow Y$ between Hausdorff spaces be given, and additionally assume that $Y$ is locally compact. Then $f$ being universally closed and $f$ being proper are equivalent.
 :::
 ::: Proof
-As noted earlier, that $f$ being universally closed implies $f$ is proper is the content of [Corollary 7](#cor7). Thus the heart of this proposition is the reverse direction. Since $Y$ is locally compact, there exists an open covering $(U_i)$ of $Y$ consisting of open sets each contained in some compact set. Then the $f^{-1}(\cl U_i)$ are compact in $X$ and each $f\vert_{f^{-1}(\cl U_i)}$ is universally closed. Hence by [Proposition 3](#prop3), we obtain the desired result.
+As noted earlier, that $f$ being universally closed implies $f$ is proper is the content of [Corollary 7](#cor7){: data-relation="required" }. Thus the heart of this proposition is the reverse direction. Since $Y$ is locally compact, there exists an open covering $(U_i)$ of $Y$ consisting of open sets each contained in some compact set. Then the $f^{-1}(\cl U_i)$ are compact in $X$ and each $f\vert_{f^{-1}(\cl U_i)}$ is universally closed. Hence by [Proposition 3](#prop3){: data-relation="required" }, we obtain the desired result.
 :::
 
 In particular, applying this to the one-point compactification examined earlier yields the following result.

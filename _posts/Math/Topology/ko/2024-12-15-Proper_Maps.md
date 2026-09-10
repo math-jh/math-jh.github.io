@@ -31,7 +31,7 @@ $Z=\{\ast\}$로 두면 임의의 universally closed map은 closed map인 것을 
 3. $f$는 $X$와 $f(X)$ 사이의 homeomorphism이고 $f(X)$는 $Y$의 닫힌집합이다.
 :::
 ::: 증명
-위의 논증에 의해 첫 번째 조건이 성립하면 두 번째 조건이 성립하는 것은 자명하다. 한편, $f$가 injective이므로 $f$의 canonical decomposition을 생각하면 $X$와 $f(X)$ 사이의 homeomorphism이 되는 것을 안다. ([§열린사상과 닫힌사상, ⁋명제 5](/ko/math/topology/open_mappings_and_closed_mappings#prop5)) 이제 세 번째 조건이 성립한다 가정하면, 임의의 $Z$에 대하여 $f\times\id_Z$가 $X\times Z$에서 $Y\times Z$의 닫힌집합 $f(X)\times Z$로의 homeomorphism이므로 원하는 결과를 얻는다.
+위의 논증에 의해 첫 번째 조건이 성립하면 두 번째 조건이 성립하는 것은 자명하다. 한편, $f$가 injective이므로 $f$의 canonical decomposition을 생각하면 $X$와 $f(X)$ 사이의 homeomorphism이 되는 것을 안다. ([§열린사상과 닫힌사상, ⁋명제 5](/ko/math/topology/open_mappings_and_closed_mappings#prop5){: data-relation="required" }) 이제 세 번째 조건이 성립한다 가정하면, 임의의 $Z$에 대하여 $f\times\id_Z$가 $X\times Z$에서 $Y\times Z$의 닫힌집합 $f(X)\times Z$로의 homeomorphism이므로 원하는 결과를 얻는다.
 :::
 
 그러나 일반적으로는 함수 $f$가 universally closed인 것은 직접 체크해보아야 한다. 다음 명제의 두 번째 결과는 이를 target $Y$에서 살펴볼 수 있다는 것을 보여준다. 
@@ -53,7 +53,7 @@ $$(f\vert_{f^{-1}(A)})\times \id_Z=(f\times\id_Z)\vert_{(f\times\id_Z)^{-1}(A\ti
 
 $$(f\times\id_Z)\vert_{(f\times\id_Z)^{-1}(A_i\times Z)}$$
 
-이 closed이므로, $f\times\id_Z$ 또한 그러하다. ([§열린사상과 닫힌사상, ⁋명제 3](/ko/math/topology/open_mappings_and_closed_mappings#prop3))
+이 closed이므로, $f\times\id_Z$ 또한 그러하다. ([§열린사상과 닫힌사상, ⁋명제 3](/ko/math/topology/open_mappings_and_closed_mappings#prop3){: data-relation="required" })
 :::
 
 또, 다음이 성립한다.
@@ -71,7 +71,7 @@ $$(f\times\id_Z)\vert_{(f\times\id_Z)^{-1}(A_i\times Z)}$$
 
 $$(g\circ f)\times\id_Z=(g\times\id_Z)\circ(f\times\id_Z)$$
 
-과 [§열린사상과 닫힌사상, ⁋명제 2](/ko/math/topology/open_mappings_and_closed_mappings#prop2)의 결과들로부터 자명하다. 
+과 [§열린사상과 닫힌사상, ⁋명제 2](/ko/math/topology/open_mappings_and_closed_mappings#prop2){: data-relation="required" }의 결과들로부터 자명하다. 
 
 마지막 결과의 경우, 두 함수 $\Gamma_f: X \rightarrow X\times Y$와 $\Gamma_g: Y \rightarrow Z\times Y$를 각각 
 
@@ -81,18 +81,18 @@ $$\Gamma_f(x)=(x,f(x)),\qquad \Gamma_g(y)=(g(y), y)$$
 
 $$((g\circ f)\times\id_Y)\circ\Gamma_f=\Gamma_g\circ f$$
 
-이 성립하는 것을 쉽게 확인할 수 있다. 이 때 $\Gamma_f$와 $\Gamma_g$들은 각각 $X, Y$에서 $f,g$의 graph로의 homeomorphism이다. ([§곱공간, ⁋따름정리 4](/ko/math/topology/product_spaces#cor4)) 또, $Y$가 Hausdorff라는 가정으로부터 $\graph(f)\subseteq X\times Y$가 닫힌집합임을 안다. ([§하우스도르프 공간, ⁋따름정리 7](/ko/math/topology/Hausdorff_spaces#cor7)) 따라서 [명제 2](#prop2)로부터 $\Gamma_f$가 universally closed인 것을 안다. 한편 어렵지 않게 universally closed map들의 곱은 universally closed인 것을 보일 수 있으므로, 이것과 [명제 4](#prop4)를 종합하면 $(g\circ f)\times\id_Y$가 universally closed임을 안다. 따라서 위의 식의 우변 $\Gamma_g\circ f$ 또한 universally closed이고, $\Gamma_g$가 injective이므로 $f$는 universally closed이다.
+이 성립하는 것을 쉽게 확인할 수 있다. 이 때 $\Gamma_f$와 $\Gamma_g$들은 각각 $X, Y$에서 $f,g$의 graph로의 homeomorphism이다. ([§곱공간, ⁋따름정리 4](/ko/math/topology/product_spaces#cor4){: data-relation="required" }) 또, $Y$가 Hausdorff라는 가정으로부터 $\graph(f)\subseteq X\times Y$가 닫힌집합임을 안다. ([§하우스도르프 공간, ⁋따름정리 7](/ko/math/topology/Hausdorff_spaces#cor7){: data-relation="required" }) 따라서 [명제 2](#prop2){: data-relation="required" }로부터 $\Gamma_f$가 universally closed인 것을 안다. 한편 어렵지 않게 universally closed map들의 곱은 universally closed인 것을 보일 수 있으므로, 이것과 [명제 4](#prop4){: data-relation="required" }를 종합하면 $(g\circ f)\times\id_Y$가 universally closed임을 안다. 따라서 위의 식의 우변 $\Gamma_g\circ f$ 또한 universally closed이고, $\Gamma_g$가 injective이므로 $f$는 universally closed이다.
 :::
 
 ## 옹골성과 보편닫힌사상
 
-아직까지는 이 정의가 옹골성과 관련되어 있는 부분이 보이지 않는데, 이 절에서는 이들 사이의 관계를 살펴본다. 그 전에 [§옹골성과 필터의 수렴, ⁋보조정리 18](/ko/math/topology/filter_convergence#lem18)을 사용하기 위해 filter에 대한 이야기를 조금 해야한다. 
+아직까지는 이 정의가 옹골성과 관련되어 있는 부분이 보이지 않는데, 이 절에서는 이들 사이의 관계를 살펴본다. 그 전에 [§옹골성과 필터의 수렴, ⁋보조정리 18](/ko/math/topology/filter_convergence#lem18){: data-relation="required" }을 사용하기 위해 filter에 대한 이야기를 조금 해야한다. 
 
 임의의 위상공간 $X$와 그 위의 임의의 filter $\mathcal{F}$가 주어졌다 하자. $X$에 한 점을 추가하여 만든 집합 $X'=X\cup \{\ast_X\}$을 생각하고, 이 위의 filter
 
 $$\mathcal{F}'=\{F\cup\{\ast_X\}\mid F\in \mathcal{F}\}$$
 
-를 생각하자. 이제 $\ast_X$를 제외한 임의의 $x\in X'$에 대하여는 $\mathcal{N}(x)=\uparrow\{x\}$으로 정의하고, $\mathcal{N}(\ast_X)=\mathcal{F}'$로 정의하면 이는 [§열린집합, ⁋명제 6](/ko/math/topology/open_sets#prop6)의 네 가지 조건을 모두 만족하며 따라서 $X'$ 위에서의 위상구조가 정의된다. 이 위상공간 $X'$에서, $\ast_X$는 $X$의 closure에 포함되며, $\mathcal{F}=\mathcal{F}'\vert_X=\mathcal{N}(\ast_X)\vert_X$임이 자명하다. 
+를 생각하자. 이제 $\ast_X$를 제외한 임의의 $x\in X'$에 대하여는 $\mathcal{N}(x)=\uparrow\{x\}$으로 정의하고, $\mathcal{N}(\ast_X)=\mathcal{F}'$로 정의하면 이는 [§열린집합, ⁋명제 6](/ko/math/topology/open_sets#prop6){: data-relation="required" }의 네 가지 조건을 모두 만족하며 따라서 $X'$ 위에서의 위상구조가 정의된다. 이 위상공간 $X'$에서, $\ast_X$는 $X$의 closure에 포함되며, $\mathcal{F}=\mathcal{F}'\vert_X=\mathcal{N}(\ast_X)\vert_X$임이 자명하다. 
 
 그럼 다음 보조정리를 보일 수 있다. 
 
@@ -130,15 +130,15 @@ $f$가 universally closed이므로 $f\vert_{f^{-1}(C)}$는 universally closed이
 
 ## 고유함수
 
-[따름정리 7](#cor7)의 결과를 만족하는 함수 $f$를 *proper map<sub>고유함수</sub>*라 부른다. 다음 명제는 특별한 경우에서 위의 따름정리의 역 또한 성립한다는 것을 보여준다.
+[따름정리 7](#cor7){: data-relation="required" }의 결과를 만족하는 함수 $f$를 *proper map<sub>고유함수</sub>*라 부른다. 다음 명제는 특별한 경우에서 위의 따름정리의 역 또한 성립한다는 것을 보여준다.
 
 ::: 명제 8
 Hausdorff space들 사이의 연속함수 $f:X \rightarrow Y$가 주어졌다 하고, 추가로 $Y$가 locally compact라 가정하자. 그럼 $f$가 universally closed인 것과 $f$가 proper인 것이 동치이다. 
 :::
 ::: 증명
-앞서 언급한 것과 같이, $f$가 universally closed라면 $f$가 proper라는 것은 [따름정리 7](#cor7)의 결과이다. 
+앞서 언급한 것과 같이, $f$가 universally closed라면 $f$가 proper라는 것은 [따름정리 7](#cor7){: data-relation="required" }의 결과이다. 
 
-따라서 이 명제의 핵심은 역방향이다. $Y$가 locally compact이므로, 적당한 compact set들 안에 포함되는 열린집합들로 이루어진 $Y$의 open covering $(U_i)$가 존재한다. 그럼 $f^{-1}(\cl U_i)$들은 $X$에서 compact이고 각각의 $f\vert_{f^{-1}(\cl U_i)}$가 universally closed이다. 이제 [명제 3](#prop3)으로부터 원하는 결과를 얻는다. 
+따라서 이 명제의 핵심은 역방향이다. $Y$가 locally compact이므로, 적당한 compact set들 안에 포함되는 열린집합들로 이루어진 $Y$의 open covering $(U_i)$가 존재한다. 그럼 $f^{-1}(\cl U_i)$들은 $X$에서 compact이고 각각의 $f\vert_{f^{-1}(\cl U_i)}$가 universally closed이다. 이제 [명제 3](#prop3){: data-relation="required" }으로부터 원하는 결과를 얻는다. 
 :::
 
 특히 이는 앞서 살펴본 one-point compactification에 적용하여 다음 결과를 준다.
