@@ -97,7 +97,7 @@ $$\langle u,u\rangle+2\langle u,v\rangle+\langle v,v\rangle\leq \lVert u\rVert^2
 그러나 일반적으로 위 명제의 역은 성립하지 않는다. 즉, $V$에 정의된 내적은 norm을 정의하지만, 거꾸로 norm이 주어졌다 해서 내적이 정의될 수 있는 것은 아니다. 
 
 ::: 명제 5
-$V$가 $\mathbb{R}$-내적공간이라 하자. 만일 $\lVert -\rVert$이 $V$의 내적으로부터 [명제 4](#prop4)의 식으로 얻어진 norm이라면, 다음의 *평행사변형 법칙<sub>parallelogram law</sub>*
+$V$가 $\mathbb{R}$-내적공간이라 하자. 만일 $\lVert -\rVert$이 $V$의 내적으로부터 [명제 4](#prop4){: data-relation="required" }의 식으로 얻어진 norm이라면, 다음의 *평행사변형 법칙<sub>parallelogram law</sub>*
 
 $$\lVert u+v\rVert^2+\lVert u-v\rVert^2=2\lVert u\rVert^2+2\lVert v\rVert^2$$
 
@@ -115,14 +115,14 @@ $$\lVert v\rVert_1=\sum_{i=1}^n \lvert v_i\rvert$$
 
 $$\lVert v\rVert_1=\sqrt{\langle v,v\rangle_1}$$
 
-의 꼴로 쓰여질 수 있었다면, [명제 5](#prop5)에 의하여 다음의 식
+의 꼴로 쓰여질 수 있었다면, [명제 5](#prop5){: data-relation="required" }에 의하여 다음의 식
 
 $$\lVert u+v\rVert_1^2+\lVert u-v\rVert_1^2=2\lVert u\rVert^2_1+2\lVert v\rVert^2_1$$
 
 이 성립하여야 한다. 그런데 $u=(1,0,\ldots, 0)$, 그리고 $v=(0,1,\ldots, 0)$을 대입하면 평행사변형 법칙이 만족되지 않는 것을 알 수 있다. 따라서 $\lVert -\rVert_1$은 내적으로부터 유도되지 않는다.
 :::
 
-사실 [명제 5](#prop5)는 역 또한 성립한다. 즉, 만일 $\lVert-\rVert$이 평행사변형 법칙을 만족한다면, 다음의 식
+사실 [명제 5](#prop5){: data-relation="required" }는 역 또한 성립한다. 즉, 만일 $\lVert-\rVert$이 평행사변형 법칙을 만족한다면, 다음의 식
 
 $$\langle u,v\rangle:=\frac{1}{4}\left(\lVert u+v\rVert^2-\lVert u-v\rVert^2\right)$$
 
@@ -130,7 +130,7 @@ $$\langle u,v\rangle:=\frac{1}{4}\left(\lVert u+v\rVert^2-\lVert u-v\rVert^2\rig
 
 ## 정규직교기저
 
-우리는 $\ch\mathbb{R}=0$임을 알고 있으므로, [§쌍선형형식, ⁋명제 12](/ko/math/linear_algebra/bilinear_form#prop12)으로부터 임의의 $\mathbb{R}$-내적공간 $V$에는 orthogonal basis가 존재한다는 것을 안다. 
+우리는 $\ch\mathbb{R}=0$임을 알고 있으므로, [§쌍선형형식, ⁋명제 12](/ko/math/linear_algebra/bilinear_form#prop12){: data-relation="required" }으로부터 임의의 $\mathbb{R}$-내적공간 $V$에는 orthogonal basis가 존재한다는 것을 안다. 
 
 임의의 $\mathbb{R}$-내적공간 $V$가 주어졌다 하고, $V$에 basis $\mathcal{B}=\{x_1,\ldots, x_n\}$이 주어졌다 하자. 우선
 
@@ -152,11 +152,11 @@ $$v=\langle v, x_1\rangle x_1+\cdots+\langle v, x_n\rangle x_n$$
 
 ## 직교행렬
 
-$\mathbb{R}$-내적공간 $V$와 그 위의 linear operator $L:V\rightarrow V$를 생각하자. [§쌍대공간](/ko/math/linear_algebra/dual_space)에서 우리는 $L$의 dual $L^\ast:V^\ast\rightarrow V^\ast$를 canonical pairing $(-,-)$에 대하여
+$\mathbb{R}$-내적공간 $V$와 그 위의 linear operator $L:V\rightarrow V$를 생각하자. [§쌍대공간](/ko/math/linear_algebra/dual_space){: data-relation="required" }에서 우리는 $L$의 dual $L^\ast:V^\ast\rightarrow V^\ast$를 canonical pairing $(-,-)$에 대하여
 
 $$(Lv,f)=(v,L^\ast f)\qquad\text{for all $v\in V$, $f\in V^\ast$}$$
 
-을 만족하는 linear operator로 정의하였다. 한편 $V$에 내적이 주어져 있으면 임의의 $0\neq v\in V$에 대하여 $\langle v,v\rangle>0$이므로 내적은 non-degenerate이고, 따라서 [§쌍대공간, ⁋명제 4](/ko/math/linear_algebra/dual_space#prop4)에 의하여
+을 만족하는 linear operator로 정의하였다. 한편 $V$에 내적이 주어져 있으면 임의의 $0\neq v\in V$에 대하여 $\langle v,v\rangle>0$이므로 내적은 non-degenerate이고, 따라서 [§쌍대공간, ⁋명제 4](/ko/math/linear_algebra/dual_space#prop4){: data-relation="required" }에 의하여
 
 $$v\mapsto\langle v,-\rangle$$
 
@@ -170,7 +170,7 @@ $$\langle v,Lw\rangle=\langle L^t v,w\rangle$$
 
 이 모든 $v,w\in V$에 대해 성립한다는 것과 동치이다.
 
-특별히 $V$의 orthonormal basis $\mathcal{B}=\{x_1,\ldots, x_n\}$를 택하면 $\langle x_i,x_j\rangle=\delta_{ij}$이므로, $\{\langle x_1,-\rangle,\ldots,\langle x_n,-\rangle\}$이 정확히 $\mathcal{B}$의 dual basis가 된다. 즉 위의 동형은 orthonormal basis를 그 dual basis로 보내므로, $L^t$의 $\mathcal{B}$에 대한 행렬표현은 $L^\ast$의 dual basis에 대한 행렬표현과 일치한다. [§쌍대공간](/ko/math/linear_algebra/dual_space)에서 보았듯 후자는 $[L]_\mathcal{B}^\mathcal{B}$의 transpose이므로, orthonormal basis에 대하여 adjoint $L^t$의 행렬은 $L$의 행렬의 전치행렬이다. 표기 $L^t$는 여기에서 유래한다.
+특별히 $V$의 orthonormal basis $\mathcal{B}=\{x_1,\ldots, x_n\}$를 택하면 $\langle x_i,x_j\rangle=\delta_{ij}$이므로, $\{\langle x_1,-\rangle,\ldots,\langle x_n,-\rangle\}$이 정확히 $\mathcal{B}$의 dual basis가 된다. 즉 위의 동형은 orthonormal basis를 그 dual basis로 보내므로, $L^t$의 $\mathcal{B}$에 대한 행렬표현은 $L^\ast$의 dual basis에 대한 행렬표현과 일치한다. [§쌍대공간](/ko/math/linear_algebra/dual_space){: data-relation="required" }에서 보았듯 후자는 $[L]_\mathcal{B}^\mathcal{B}$의 transpose이므로, orthonormal basis에 대하여 adjoint $L^t$의 행렬은 $L$의 행렬의 전치행렬이다. 표기 $L^t$는 여기에서 유래한다.
 
 이제 임의의 linear map $L$이 $\langle-,-\rangle$을 보존한다면 임의의 $v,w$에 대하여
 
