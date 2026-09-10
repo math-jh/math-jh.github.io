@@ -20,7 +20,7 @@ In this post we show that the determinant exists uniquely and examine methods fo
 
 ## The Symmetric Group
 
-In this section we define the symmetric group. The results introduced here are presented without detailed proof, but the proofs can be found in [\[Group Theory\] §Symmetric Groups](/en/math/group_theory/symmetric_groups) if desired.
+In this section we define the symmetric group. The results introduced here are presented without detailed proof, but the proofs can be found in [\[Group Theory\] §Symmetric Groups](/en/math/group_theory/symmetric_groups){: data-relation="weak" } if desired.
 
 ::: Definition 1
 The collection of all bijections from the set $\{1,\ldots, n\}$ to itself is called the *symmetric group*, denoted $S_n$. The elements of $S_n$ are called *permutations*.
@@ -57,7 +57,7 @@ holds.
 ## Existence and Uniqueness of the Determinant
 
 ::: Lemma 2
-The function $D$ satisfying [§Determinant, ⁋Definition 4](/en/math/linear_algebra/determinant#def4) exists uniquely.
+The function $D$ satisfying [§Determinant, ⁋Definition 4](/en/math/linear_algebra/determinant#def4){: data-relation="required" } exists uniquely.
 :::
 ::: Proof
 Let $f$ be an alternating linear map. For arbitrary $v_1,\ldots, v_n\in V$, if
@@ -69,7 +69,7 @@ then
 $$\begin{aligned}f(v_1,\ldots, v_n)&=\sum_{i_1=1}^nv_{i_1}^1f(e_{i_1},v_2,\ldots, v_n)\\
 &=\sum_{i_1,i_2=1}^n v_{i_1}^1v_{i_2}^2f(e_{i_1},e_{i_2},v_3,\ldots, v_n)\\&=\cdots\\&=\sum_{i_1,\ldots, i_n=1}^nv_{i_1}^1v_{i_2}^2\ldots, v_{i_n}^nf(e_{i_1},\ldots, e_{i_n})\end{aligned}$$
 
-holds. By [§Determinant, ⁋Proposition 3](/en/math/linear_algebra/determinant#prop3), if there are duplicates among $i_1,\ldots, i_n$, then the value of $f(e_{i_1},\ldots,e_{i_n})$ is always 0, so the right-hand side becomes
+holds. By [§Determinant, ⁋Proposition 3](/en/math/linear_algebra/determinant#prop3){: data-relation="required" }, if there are duplicates among $i_1,\ldots, i_n$, then the value of $f(e_{i_1},\ldots,e_{i_n})$ is always 0, so the right-hand side becomes
 
 $$f(v_1,\ldots, v_n)=\sum_{\tau\in S_n}v^1_{\tau(1)}v^2_{\tau(2)}\cdots v^n_{\tau(n)}f(e_{\tau(1)},\ldots, e_{\tau(n)})$$
 
@@ -136,13 +136,13 @@ $$\sum_{\upsilon\in S_n}\sgn(\upsilon)\det(A)B_{\upsilon(1)1}\cdots B_{\upsilon(
 thus completing the proof.
 :::
 
-In the previous post we explained geometrically that a matrix $A$ is invertible if and only if $\det A\neq 0$. Using [Lemma 4](#lem4) above, we can prove this rigorously.
+In the previous post we explained geometrically that a matrix $A$ is invertible if and only if $\det A\neq 0$. Using [Lemma 4](#lem4){: data-relation="required" } above, we can prove this rigorously.
 
 ::: Proposition 5
 For any matrix $A\in\Mat_n(\mathbb{K})$, $\det A\neq 0$ is equivalent to $A$ being invertible.
 :::
 ::: Proof
-From the fundamental theorem of linear algebra, we know that $A$ being invertible is equivalent to the linear map $L_A:\mathbb{K}^n\rightarrow \mathbb{K}^n$ defined by $A$ being invertible. Since $\mathbb{K}^n$ is finite-dimensional, this is equivalent to $L_A$ being surjective, which is equivalent to the column vectors $A_1,\ldots, A_n$ forming a basis of $\col(A)$, i.e., being linearly independent. If $A_1,\ldots, A_n$ are not linearly independent, then by [§Determinant, ⁋Proposition 3](/en/math/linear_algebra/determinant#prop3), $\det A=0$. That is, if $\det A\neq 0$, then $A$ is invertible.
+From the fundamental theorem of linear algebra, we know that $A$ being invertible is equivalent to the linear map $L_A:\mathbb{K}^n\rightarrow \mathbb{K}^n$ defined by $A$ being invertible. Since $\mathbb{K}^n$ is finite-dimensional, this is equivalent to $L_A$ being surjective, which is equivalent to the column vectors $A_1,\ldots, A_n$ forming a basis of $\col(A)$, i.e., being linearly independent. If $A_1,\ldots, A_n$ are not linearly independent, then by [§Determinant, ⁋Proposition 3](/en/math/linear_algebra/determinant#prop3){: data-relation="required" }, $\det A=0$. That is, if $\det A\neq 0$, then $A$ is invertible.
 
 Conversely, assume $A$ is invertible. Then from the formula
 
@@ -167,7 +167,7 @@ A matrix $A\in\Mat_n(\mathbb{K})$ is called an *upper triangular matrix* if $A_{
 On the other hand, the entries $A_{ii}$ of a matrix $A$ are called the *diagonal entries*, and if $A_{ij}=0$ whenever $i\neq j$, then $A$ is called a *diagonal matrix*.
 :::
 
-In particular, every $n\times n$ row echelon matrix is an upper triangular matrix. ([§Gaussian Elimination, ⁋Definition 4](/en/math/linear_algebra/Gaussian_elimination#def4))
+In particular, every $n\times n$ row echelon matrix is an upper triangular matrix. ([§Gaussian Elimination, ⁋Definition 4](/en/math/linear_algebra/Gaussian_elimination#def4){: data-relation="weak" })
 
 
 ::: Proposition 8
@@ -181,7 +181,7 @@ $$\det A=\sum_{\tau\in S_n}\sgn(\tau)A_{\tau(1)1}A_{\tau(2)2}\cdots A_{\tau(n)n}
 For any $\tau\in S_n$, since $\tau$ is a bijection, if there exists an $i$ such that $\tau(i)>i$, then there must necessarily exist a $j$ such that $\tau(j)<j$. Therefore, among the terms summed in the above formula, all are 0 except when $\tau=\id$.
 :::
 
-By [§Gaussian Elimination](/en/math/linear_algebra/Gaussian_elimination), any matrix can be transformed into row echelon form by repeated elementary row operations. Since every row echelon matrix is an upper triangular matrix, by the above proposition we can very easily find the determinant of the resulting row echelon matrix. On the other hand, applying elementary row operations is equivalent to multiplying by elementary matrices. Therefore, if from a matrix $A$ we obtain a row echelon matrix $A'$ by repeated elementary row operations $E_1,\ldots, E_k$, then
+By [§Gaussian Elimination](/en/math/linear_algebra/Gaussian_elimination){: data-relation="required" }, any matrix can be transformed into row echelon form by repeated elementary row operations. Since every row echelon matrix is an upper triangular matrix, by the above proposition we can very easily find the determinant of the resulting row echelon matrix. On the other hand, applying elementary row operations is equivalent to multiplying by elementary matrices. Therefore, if from a matrix $A$ we obtain a row echelon matrix $A'$ by repeated elementary row operations $E_1,\ldots, E_k$, then
 
 $$A'=E_kE_{k-1}\cdots E_1 A$$
 
@@ -207,7 +207,7 @@ $$\begin{pmatrix}A&O\\O&I\end{pmatrix}$$
 equals $\det A$.
 :::
 ::: Proof
-This is almost identical to the proof of [Proposition 8](#prop8). Computing the determinant of the given matrix using formula (2), we get
+This is almost identical to the proof of [Proposition 8](#prop8){: data-relation="required" }. Computing the determinant of the given matrix using formula (2), we get
 
 $$\det \begin{pmatrix}A&O\\O&I\end{pmatrix}=\sum_{\tau\in S_{k+l}}\sgn(\tau)A_{\tau(1)1}A_{\tau(2)2}\cdots A_{\tau(k)k}B_{\tau(k+1)(k+1)}\cdots B_{\tau(k+l)(k+l)}$$
 
@@ -230,7 +230,7 @@ This follows immediately from the formula
 
 $$\begin{pmatrix}A&O\\C&B\end{pmatrix}=\begin{pmatrix}A&O\\O&E\end{pmatrix}\begin{pmatrix}I&O\\O&I\end{pmatrix}\begin{pmatrix}I&O\\O&B\end{pmatrix}$$
 
-and [Proposition 9](#prop9), and [Lemma 4](#lem4). For the last matrix, after $l$ row swaps and $l$ column swaps, there are $2l$ sign changes, so the determinant of the given matrix becomes equal to $\det B$.
+and [Proposition 9](#prop9){: data-relation="required" }, and [Lemma 4](#lem4){: data-relation="required" }. For the last matrix, after $l$ row swaps and $l$ column swaps, there are $2l$ sign changes, so the determinant of the given matrix becomes equal to $\det B$.
 :::
 
 It is not difficult to extend the above results inductively. That is,
@@ -264,7 +264,7 @@ First fix $i,j$. Let $B_j$ be the matrix obtained from $A$ by replacing all entr
 
 $$B_j'=\begin{pmatrix}A_{ij}&0&\cdots&0\\A_{1j}&&&\\\vdots&&A^{(i,j)}&\\A_{nj}&&&\end{pmatrix}$$
 
-Now by [Proposition 9](#prop9), the determinant of this matrix equals $A_{ij}\det A^{(i,j)}$, and therefore
+Now by [Proposition 9](#prop9){: data-relation="required" }, the determinant of this matrix equals $A_{ij}\det A^{(i,j)}$, and therefore
 
 $$\det B_j=(-1)^{i+j-2}\det B_j'=(-1)^{i+j-2}A_{ij}\det A^{(i,j)}=(-1)^{i+j}A_{ij}\det A^{(i,j)}$$
 

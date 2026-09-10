@@ -20,7 +20,7 @@ weight: 14
 
 ## 대칭군
 
-이 섹션에서 우리는 symmetric group을 정의한다. 여기에서 소개하는 결과들은 별다른 증명없이 진행하지만, 원한다면 그 증명은 [\[군론\] §대칭군](/ko/math/group_theory/symmetric_groups)에서 찾아볼 수 있다. 
+이 섹션에서 우리는 symmetric group을 정의한다. 여기에서 소개하는 결과들은 별다른 증명없이 진행하지만, 원한다면 그 증명은 [\[군론\] §대칭군](/ko/math/group_theory/symmetric_groups){: data-relation="weak" }에서 찾아볼 수 있다. 
 
 ::: 정의 1
 집합 $\{1,\ldots, n\}$에서 자기 자신으로의 모든 전단사함수들의 모임을 *symmetric group<sub>대칭군</sub>*이라 부르고, $S_n$으로 표기한다. $S_n$의 원소들을 *permutation<sub>치환</sub>*이라 부른다.
@@ -57,7 +57,7 @@ $$f(v_1,v_2,\ldots, v_n)=\sgn(\tau)f(v_{\tau(1)},v_{\tau(2)},\ldots, v_{\tau(n)}
 ## 행렬식의 존재성과 유일성
 
 ::: 보조정리 2
-[§행렬식, ⁋정의 4](/ko/math/linear_algebra/determinant#def4)을 만족하는 함수 $D$는 유일하게 존재한다.
+[§행렬식, ⁋정의 4](/ko/math/linear_algebra/determinant#def4){: data-relation="required" }을 만족하는 함수 $D$는 유일하게 존재한다.
 :::
 ::: 증명
 $f$가 alternating multilinear map이라 하자. 임의의 $v_1,\ldots, v_n\in \mathbb{K}^n$에 대하여, 만일
@@ -69,7 +69,7 @@ $$v_i=v_1^ie_1+\cdots+v_n^ie_n,\qquad i=1,\ldots, n$$
 $$\begin{aligned}f(v_1,\ldots, v_n)&=\sum_{i_1=1}^nv_{i_1}^1f(e_{i_1},v_2,\ldots, v_n)\\
 &=\sum_{i_1,i_2=1}^n v_{i_1}^1v_{i_2}^2f(e_{i_1},e_{i_2},v_3,\ldots, v_n)\\&=\cdots\\&=\sum_{i_1,\ldots, i_n=1}^nv_{i_1}^1v_{i_2}^2\ldots v_{i_n}^nf(e_{i_1},\ldots, e_{i_n})\end{aligned}$$
 
-이 성립한다. [§행렬식, ⁋명제 3](/ko/math/linear_algebra/determinant#prop3)에 의하여, $i_1,\ldots, i_n$들 중 같은 것이 존재한다면 $f(e_{i_1},\ldots,e_{i_n})$의 값은 항상 0이 되므로, 우변의 식은 
+이 성립한다. [§행렬식, ⁋명제 3](/ko/math/linear_algebra/determinant#prop3){: data-relation="required" }에 의하여, $i_1,\ldots, i_n$들 중 같은 것이 존재한다면 $f(e_{i_1},\ldots,e_{i_n})$의 값은 항상 0이 되므로, 우변의 식은 
 
 $$f(v_1,\ldots, v_n)=\sum_{\tau\in S_n}v^1_{\tau(1)}v^2_{\tau(2)}\cdots v^n_{\tau(n)}f(e_{\tau(1)},\ldots, e_{\tau(n)})$$
 
@@ -125,7 +125,7 @@ $$(AB)_{ij}=\sum_{k=1}^nA_{ik}B_{kj}$$
 
 $$\begin{aligned}\det(AB)&=\det((AB)_1, (AB)_2,\ldots, (AB)_n)\\&=\sum_{\tau\in S_n}\sgn(\tau)(AB)_{\tau(1)1}(AB)_{\tau(2)2}\cdots(AB)_{\tau(n)n}\\&=\sum_{\tau\in S_n}\sgn(\tau)\left(\sum_{i_1=1}^nA_{\tau(1)i_1}B_{i_11}\right)\cdots\left(\sum_{i_n=1}^nA_{\tau(n)i_n}B_{i_nn}\right)\\&=\sum_{\tau\in S_n}\sum_{i_1,\ldots, i_n=1}^n\sgn(\tau)A_{\tau(1)i_1}\cdots A_{\tau(n)i_n}B_{i_11}\cdots B_{i_nn}\\&=\sum_{i_1,\ldots, i_n=1}^nB_{i_11}\cdots B_{i_nn}\left(\sum_{\tau\in S_n}\sgn(\tau)A_{\tau(1)i_1}\cdots A_{\tau(n)i_n}\right)\\&=\sum_{i_1,\ldots, i_n=1}^n\det(A_{i_1},\ldots, A_{i_n})B_{i_11}\cdots B_{i_nn}\end{aligned}$$
 
-[§행렬식, ⁋명제 3](/ko/math/linear_algebra/determinant#prop3)에 의하여 $i_1,\ldots, i_n$들 중 같은 것이 존재한다면 $\det(A_{i_1},\ldots, A_{i_n})$의 값은 항상 0이 되므로, 위 식의 우변에서는 $i_1,\ldots, i_n$이 서로 다른 항들만 남는다. 이제 $\upsilon\in S_n$을 다음의 식
+[§행렬식, ⁋명제 3](/ko/math/linear_algebra/determinant#prop3){: data-relation="required" }에 의하여 $i_1,\ldots, i_n$들 중 같은 것이 존재한다면 $\det(A_{i_1},\ldots, A_{i_n})$의 값은 항상 0이 되므로, 위 식의 우변에서는 $i_1,\ldots, i_n$이 서로 다른 항들만 남는다. 이제 $\upsilon\in S_n$을 다음의 식
 
 $$\upsilon(1)=i_1,\ldots, \upsilon(n)=i_n$$
 
@@ -136,13 +136,13 @@ $$\sum_{\upsilon\in S_n}\sgn(\upsilon)\det(A)B_{\upsilon(1)1}\cdots B_{\upsilon(
 가 되므로, 증명이 완료된다.
 :::
 
-우리는 이전 글에서 행렬 $A$가 가역인 것과 $\det A\neq 0$이 동치라는 것을 기하학적으로 설명했다. 방금 전의 [보조정리 4](#lem4)를 이용하면 이를 엄밀하게 증명할 수 있다.
+우리는 이전 글에서 행렬 $A$가 가역인 것과 $\det A\neq 0$이 동치라는 것을 기하학적으로 설명했다. 방금 전의 [보조정리 4](#lem4){: data-relation="required" }를 이용하면 이를 엄밀하게 증명할 수 있다.
 
 ::: 명제 5
 임의의 행렬 $A\in\Mat_n(\mathbb{K})$에 대하여, $\det A\neq 0$인 것과 $A$가 가역인 것이 동치이다.
 :::
 ::: 증명
-[§선형대수학의 기본정리](/ko/math/linear_algebra/ftla)로부터, $A$가 가역인 것은 $A$에 의해 정의되는 linear map $L_A:\mathbb{K}^n\rightarrow \mathbb{K}^n$이 가역인 것과 동치라는 것을 안다. $\mathbb{K}^n$은 유한차원이므로 이는 다시 $L_A$가 surjective인 것과 동치이고, 이는 $\col(A)$의 basis인 열벡터들 $A_1,\ldots, A_n$들이 일차독립인 것과 동치이다. 만일 $A_1,\ldots, A_n$들이 일차독립이 아니라면 [§행렬식, ⁋명제 3](/ko/math/linear_algebra/determinant#prop3)에 의하여 $\det A=0$이 된다. 즉, $\det A\neq 0$이라면 $A$는 가역이다.
+[§선형대수학의 기본정리](/ko/math/linear_algebra/ftla){: data-relation="required" }로부터, $A$가 가역인 것은 $A$에 의해 정의되는 linear map $L_A:\mathbb{K}^n\rightarrow \mathbb{K}^n$이 가역인 것과 동치라는 것을 안다. $\mathbb{K}^n$은 유한차원이므로 이는 다시 $L_A$가 surjective인 것과 동치이고, 이는 $\col(A)$의 basis인 열벡터들 $A_1,\ldots, A_n$들이 일차독립인 것과 동치이다. 만일 $A_1,\ldots, A_n$들이 일차독립이 아니라면 [§행렬식, ⁋명제 3](/ko/math/linear_algebra/determinant#prop3){: data-relation="required" }에 의하여 $\det A=0$이 된다. 즉, $\det A\neq 0$이라면 $A$는 가역이다.
 
 거꾸로 $A$가 가역이라 가정하자. 그럼 다음의 식
 
@@ -167,7 +167,7 @@ $$1=\det(I)=\det(A^{-1}A)=\det(A^{-1})\det(A)\tag{3}$$
 한편, 행렬 $A$의 성분들 $A_{ii}$를 $A$의 *대각성분*이라 하고, 만일 $i\neq j$일 때마다 $A_{ij}=0$이라면 $A$를 *대각행렬<sub>diagonal matrix</sub>*이라 부른다. 
 :::
 
-특별히 모든 $n\times n$ 행사다리꼴행렬은 모두 상삼각행렬이다. ([§가우스 소거법, ⁋정의 4](/ko/math/linear_algebra/Gaussian_elimination#def4))
+특별히 모든 $n\times n$ 행사다리꼴행렬은 모두 상삼각행렬이다. ([§가우스 소거법, ⁋정의 4](/ko/math/linear_algebra/Gaussian_elimination#def4){: data-relation="required" })
 
 
 ::: 명제 8
@@ -181,7 +181,7 @@ $$\det A=\sum_{\tau\in S_n}\sgn(\tau)A_{\tau(1)1}A_{\tau(2)2}\cdots A_{\tau(n)n}
 을 다시 한 번 살펴보자. 임의의 $\tau\in S_n$에 대하여, $\tau$는 전단사함수이므로 만일 $\tau(i)>i$인 $i$가 존재한다면 반드시 $\tau(j)<j$인 $j$가 존재해야 한다. 따라서 위의 식에서 더해지는 값들은 $\tau=\id$인 경우를 제외하면 항상 0이 된다. 
 :::
 
-[§가우스 소거법](/ko/math/linear_algebra/Gaussian_elimination)에 의해 임의의 행렬은 기본행연산을 반복하여 행사다리꼴행렬로 바꿀 수 있다. 임의의 행사다리꼴행렬은 모두 상삼각행렬이므로, 위의 명제를 통하면 이렇게 얻어진 행사다리꼴행렬의 행렬식을 매우 쉽게 구할 수 있다. 한편 기본행연산을 적용하는 것은 기본행렬들을 곱하는 것과 같다. 따라서, 만일 행렬 $A$로부터 기본행연산 $E_1,\ldots, E_k$를 반복하여 행사다리꼴행렬 $A'$를 얻었다면, 
+[§가우스 소거법](/ko/math/linear_algebra/Gaussian_elimination){: data-relation="required" }에 의해 임의의 행렬은 기본행연산을 반복하여 행사다리꼴행렬로 바꿀 수 있다. 임의의 행사다리꼴행렬은 모두 상삼각행렬이므로, 위의 명제를 통하면 이렇게 얻어진 행사다리꼴행렬의 행렬식을 매우 쉽게 구할 수 있다. 한편 기본행연산을 적용하는 것은 기본행렬들을 곱하는 것과 같다. 따라서, 만일 행렬 $A$로부터 기본행연산 $E_1,\ldots, E_k$를 반복하여 행사다리꼴행렬 $A'$를 얻었다면, 
 
 $$A'=E_kE_{k-1}\cdots E_1 A$$
 
@@ -207,7 +207,7 @@ $$\begin{pmatrix}A&O\\O&I\end{pmatrix}$$
 의 행렬식의 값은 $\det A$와 같다.
 :::
 ::: 증명
-[명제 8](#prop8)의 증명과 거의 동일하다. 식 (2)을 통해 주어진 행렬의 행렬식을 계산하면
+[명제 8](#prop8){: data-relation="required" }의 증명과 거의 동일하다. 식 (2)을 통해 주어진 행렬의 행렬식을 계산하면
 
 $$\det \begin{pmatrix}A&O\\O&I\end{pmatrix}=\sum_{\tau\in S_{k+l}}\sgn(\tau)A_{\tau(1)1}A_{\tau(2)2}\cdots A_{\tau(k)k}B_{\tau(k+1)(k+1)}\cdots B_{\tau(k+l)(k+l)}$$
 
@@ -230,7 +230,7 @@ $$\begin{pmatrix}A&O\\C&B\end{pmatrix}$$
 
 $$\begin{pmatrix}A&O\\C&B\end{pmatrix}=\begin{pmatrix}A&O\\O&I\end{pmatrix}\begin{pmatrix}I&O\\C&I\end{pmatrix}\begin{pmatrix}I&O\\O&B\end{pmatrix}$$
 
-과 [명제 9](#prop9), 그리고 [보조정리 4](#lem4)에 의해 자명하다. 가운데 행렬의 경우 대각성분이 모두 1인 하삼각행렬이므로 [명제 8](#prop8)에 의해 그 행렬식은 1이다. 마지막 행렬의 경우, $l$번의 행 바꿈 후 $l$번의 열 바꿈을 하여 $2l$번의 부호 변경이 생겨 주어진 행렬의 행렬식이 $\det B$와 같게 된다.
+과 [명제 9](#prop9){: data-relation="required" }, 그리고 [보조정리 4](#lem4){: data-relation="required" }에 의해 자명하다. 가운데 행렬의 경우 대각성분이 모두 1인 하삼각행렬이므로 [명제 8](#prop8){: data-relation="required" }에 의해 그 행렬식은 1이다. 마지막 행렬의 경우, $l$번의 행 바꿈 후 $l$번의 열 바꿈을 하여 $2l$번의 부호 변경이 생겨 주어진 행렬의 행렬식이 $\det B$와 같게 된다.
 :::
 
 어렵지 않게 위의 결과들을 귀납적으로 확장할 수 있다. 즉
@@ -266,11 +266,11 @@ $$\det A=\sum_{j=1}^n(-1)^{i+j}A_{ij}\det (A^{(i,j)})$$
 
 $$B_j'=\begin{pmatrix}A_{ij}&0&\cdots&0\\A_{1j}&&&\\\vdots&&A^{(i,j)}&\\A_{nj}&&&\end{pmatrix}$$
 
-이다. 이제 [따름정리 10](#cor10)에 의하여 이 행렬의 행렬식은 $A_{ij}\det A^{(i,j)}$와 같고, 따라서
+이다. 이제 [따름정리 10](#cor10){: data-relation="required" }에 의하여 이 행렬의 행렬식은 $A_{ij}\det A^{(i,j)}$와 같고, 따라서
 
 $$\det B_j=(-1)^{i+j-2}\det B_j'=(-1)^{i+j-2}A_{ij}\det A^{(i,j)}=(-1)^{i+j}A_{ij}\det A^{(i,j)}$$
 
-이다. 한편, [따름정리 3](#cor3)에 의해 행렬식은 행에 대해서도 multilinear하고, $i$번째 행에 대한 multilinearity를 사용하면 $B_j$들의 행렬식의 합은 $A$의 행렬식과 같으므로 원하는 식
+이다. 한편, [따름정리 3](#cor3){: data-relation="required" }에 의해 행렬식은 행에 대해서도 multilinear하고, $i$번째 행에 대한 multilinearity를 사용하면 $B_j$들의 행렬식의 합은 $A$의 행렬식과 같으므로 원하는 식
 
 $$\det A=\sum_{j=1}^n\det B_j=\sum_{j=1}^n (-1)^{i+j}A_{ij}\det A^{(i,j)}$$
 
