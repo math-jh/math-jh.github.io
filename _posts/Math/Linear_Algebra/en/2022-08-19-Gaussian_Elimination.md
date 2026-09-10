@@ -20,9 +20,9 @@ In the previous post, we learned that linear maps between vector spaces are esse
 
 $$B=PAQ\tag{1}$$
 
-for suitable invertible matrices $P,Q$, we might want to regard these matrices $A,B$ as essentially the same. However, if we allow complete freedom in choosing bases of the two vector spaces $V,W$ on which these matrices $L_A, L_B: V\rightarrow W$ act, then we have seen that any two matrices of the same rank must be treated as identical. Therefore, in [§Fundamental Theorem of Linear Algebra, ⁋Definition 8](/en/math/linear_algebra/ftla#def8), we had to define a finer equivalence relation. Roughly speaking, if the only information contained in the matrix $A$ in equation (1) is the rank of $A$, then the remaining information is contained in the matrices $P,Q$—that is, in the *linear operators* from $V$ to $V$ or from $W$ to $W$. If we fix a basis of $V$ (or $W$) to examine these, this equivalence relation is not so unnatural. Thus, for the time being, our discussion proceeds with a fixed vector space $V$ and basis $\mathcal{B}$. In other words, we examine $n\times n$ matrices. The powerful tool for this is the determinant, which we define in the next post.
+for suitable invertible matrices $P,Q$, we might want to regard these matrices $A,B$ as essentially the same. However, if we allow complete freedom in choosing bases of the two vector spaces $V,W$ on which these matrices $L_A, L_B: V\rightarrow W$ act, then we have seen that any two matrices of the same rank must be treated as identical. Therefore, in [§Fundamental Theorem of Linear Algebra, ⁋Definition 8](/en/math/linear_algebra/ftla#def8){: data-relation="required" }, we had to define a finer equivalence relation. Roughly speaking, if the only information contained in the matrix $A$ in equation (1) is the rank of $A$, then the remaining information is contained in the matrices $P,Q$—that is, in the *linear operators* from $V$ to $V$ or from $W$ to $W$. If we fix a basis of $V$ (or $W$) to examine these, this equivalence relation is not so unnatural. Thus, for the time being, our discussion proceeds with a fixed vector space $V$ and basis $\mathcal{B}$. In other words, we examine $n\times n$ matrices. The powerful tool for this is the determinant, which we define in the next post.
 
-On the other hand, we proved that for an arbitrary matrix $A$ to be invertible, it must necessarily be a square matrix, using the trace of a matrix ([§Matrices, ⁋Definition 6](/en/math/linear_algebra/matrices#def6)). Now that we know matrices and linear maps are the same, this result is obvious by [§Isomorphisms, ⁋Corollary 4](/en/math/linear_algebra/isomorphic_vector_spaces#cor4). However, we have not yet examined how to compute this inverse matrix. The method is simple, so we could have presented it right after [§Matrices](/en/math/linear_algebra/matrices), but now that we have begun to examine $n\times n$ matrices in earnest, we briefly introduce this procedure.
+On the other hand, we proved that for an arbitrary matrix $A$ to be invertible, it must necessarily be a square matrix, using the trace of a matrix ([§Matrices, ⁋Definition 6](/en/math/linear_algebra/matrices#def6){: data-relation="weak" }). Now that we know matrices and linear maps are the same, this result is obvious by [§Isomorphisms, ⁋Corollary 4](/en/math/linear_algebra/isomorphic_vector_spaces#cor4){: data-relation="required" }. However, we have not yet examined how to compute this inverse matrix. The method is simple, so we could have presented it right after [§Matrices](/en/math/linear_algebra/matrices){: data-relation="weak" }, but now that we have begun to examine $n\times n$ matrices in earnest, we briefly introduce this procedure.
 
 First, we show the following simple lemma.
 
@@ -42,7 +42,7 @@ First, assume that there exists a suitable $B\in\Mat_n(\mathbb{K})$ such that $A
 
 $$L_A\circ L_B=\id_{\mathbb{K}^n}$$
 
-holds. Since $\id_{\mathbb{K}^n}$ is bijective, we know that $L_A:\mathbb{K}^n\rightarrow \mathbb{K}^n$ is surjective. ([\[Set Theory\] §Retraction and Section, ⁋Proposition 3](/en/math/set_theory/retraction_and_section#prop3)) Therefore, from the equation ([§Isomorphisms, ⁋Theorem 7](/en/math/linear_algebra/isomorphic_vector_spaces#thm7))
+holds. Since $\id_{\mathbb{K}^n}$ is bijective, we know that $L_A:\mathbb{K}^n\rightarrow \mathbb{K}^n$ is surjective. ([\[Set Theory\] §Retraction and Section, ⁋Proposition 3](/en/math/set_theory/retraction_and_section#prop3){: data-relation="required" }) Therefore, from the equation ([§Isomorphisms, ⁋Theorem 7](/en/math/linear_algebra/isomorphic_vector_spaces#thm7){: data-relation="required" })
 
 $$\rank L_A+\nullity L_A=\dim \mathbb{K}^n=n$$
 
@@ -63,7 +63,7 @@ Now, consider the following system of linear equations:
 
 $$\begin{aligned}a_{11}x_{1}+a_{12}x_2+\cdots+a_{1n}x_n&=b_1\\a_{21}x_1+a_{22}x_2+\cdots+a_{2n}x_n&=b_2\\\hspace{10pt}\vdots&\\a_{m1}x_1+a_{m2}x_2+\cdots+a_{mn}x_n&=b_m\end{aligned}\tag{3}$$
 
-By [§Matrices, ⁋Definition 1](/en/math/linear_algebra/matrices#def1), the above system can be written as $Ax=b$ for the following matrices:
+By [§Matrices, ⁋Definition 1](/en/math/linear_algebra/matrices#def1){: data-relation="required" }, the above system can be written as $Ax=b$ for the following matrices:
 
 $$A=\begin{pmatrix}a_{11}&a_{12}&\cdots&a_{1n}\\a_{21}&a_{22}&\cdots&a_{2n}\\\vdots&\vdots&\ddots&\vdots\\a_{m1}&a_{m2}&\cdots&a_{mn}\end{pmatrix},\quad x=\begin{pmatrix}x_1\\x_2\\\vdots\\x_n\end{pmatrix},\quad b=\begin{pmatrix}b_1\\b_2\\\vdots\\b_m\end{pmatrix}$$
 
@@ -137,7 +137,7 @@ For a given matrix $A$, an *elementary row operation* refers to the following th
 3. Adding a multiple of one row to another row.
 :::
 
-The specific [Example 2](#ex2) we examined was about appropriately manipulating a system of linear equations to satisfy condition (*) and then writing it in a specific way. However, it is worth noting that the calculations examined before that were also essentially obtained from elementary row operations (corresponding equation manipulations).
+The specific [Example 2](#ex2){: data-relation="weak" } we examined was about appropriately manipulating a system of linear equations to satisfy condition (*) and then writing it in a specific way. However, it is worth noting that the calculations examined before that were also essentially obtained from elementary row operations (corresponding equation manipulations).
 
 Also, we define the following.
 
@@ -188,7 +188,7 @@ Now, when an arbitrary system of linear equations is given, we can manipulate th
 The basic idea is that when performing Gaussian elimination, the columns do not mix with each other, which can also be said to be obvious from the definition of matrix multiplication if we think of elementary row operations as multiplication by the elementary matrices examined above. Moreover, when performing Gaussian elimination, since the right-hand side containing constants is subjected to the same operations as the left-hand side, we can add the components of the right-hand side to the matrix and compute them all at once.
 
 ::: Example 5
-Let us use the system of equations given in [Example 2](#ex2):
+Let us use the system of equations given in [Example 2](#ex2){: data-relation="weak" }:
 
 $$\begin{aligned}x_1+2x_2+4x_3+3x_4&=2\\\phantom{x_1+}3x_2\phantom{+2x_3}+6x_4&=3\\\phantom{x_1+2x_2+}x_3+5x_4&=1\end{aligned}$$
 
@@ -196,7 +196,7 @@ From this system of equations, we consider the following *augmented matrix*:
 
 $$\begin{pmatrix} 1&2&4&3&2\\ 0&3&0&6&3\\ 0&0&1&5&1\end{pmatrix}$$
 
-The rightmost column of this matrix corresponds to the right-hand side of the system of equations, and the rest corresponds to the coefficients in front of the variables of the system of equations. Now, let us apply the same operations as in [Example 2](#ex2) to this matrix. First, subtract 4 times the last row from the first row to obtain the following matrix:
+The rightmost column of this matrix corresponds to the right-hand side of the system of equations, and the rest corresponds to the coefficients in front of the variables of the system of equations. Now, let us apply the same operations as in [Example 2](#ex2){: data-relation="weak" } to this matrix. First, subtract 4 times the last row from the first row to obtain the following matrix:
 
 $$\begin{pmatrix}1&2&0&-17&-2\\ 0&3&0&6&3\\0&0&1&5&1\end{pmatrix}$$
 
@@ -208,12 +208,12 @@ and multiply the second row by $1/3$ to obtain:
 
 $$\begin{pmatrix}1&0&0&-21&-4\\0&1&0&2&1\\0&0&1&5&1\end{pmatrix}$$
 
-Restoring the system of equations from this augmented matrix, we know that this is exactly what we obtained in [Example 2](#ex2):
+Restoring the system of equations from this augmented matrix, we know that this is exactly what we obtained in [Example 2](#ex2){: data-relation="weak" }:
 
 $$\begin{aligned}x_1\phantom{+2x_2+4x_3}-21x_4&=-4\\\phantom{x_1+}x_2\phantom{+2x_3}+\phantom{1}2x_4&=1\\\phantom{x_1+2x_2+}x_3+\phantom{1}5x_4&=1\end{aligned}$$
 :::
 
-The example just examined is essentially no different from the calculation of [Example 2](#ex2) (even in terms of convenience). A meaningful difference is obtained when finding the inverse matrix by using the augmented matrix. For this, consider the case where the matrix $A$ defining the system of equations (3) is an $n\times n$ invertible matrix. First, the following lemma is obvious.
+The example just examined is essentially no different from the calculation of [Example 2](#ex2){: data-relation="weak" } (even in terms of convenience). A meaningful difference is obtained when finding the inverse matrix by using the augmented matrix. For this, consider the case where the matrix $A$ defining the system of equations (3) is an $n\times n$ invertible matrix. First, the following lemma is obvious.
 
 ::: Lemma 6
 Any $n\times n$ reduced row echelon matrix is either the identity matrix or has a column consisting only of $0$s.
@@ -309,7 +309,7 @@ $$L=\begin{pmatrix}1&0&0\\2&1&0\\4&3&1\end{pmatrix}$$
 and we can verify that $A=LU$.
 :::
 
-However, (mainly for small matrices) applying Gaussian elimination every time to determine whether a matrix is invertible can sometimes be inefficient. The determinant, which we will examine in the next post, tells us whether a given $n\times n$ matrix is invertible or not. However, (especially for complex matrices) one of the easiest ways to compute the determinant is still Gaussian elimination. ([§Existence and Uniqueness of the Determinant, ⁋Proposition 8](/en/math/linear_algebra/existence_and_uniqueness_of_determinant#prop8))
+However, (mainly for small matrices) applying Gaussian elimination every time to determine whether a matrix is invertible can sometimes be inefficient. The determinant, which we will examine in the next post, tells us whether a given $n\times n$ matrix is invertible or not. However, (especially for complex matrices) one of the easiest ways to compute the determinant is still Gaussian elimination. ([§Existence and Uniqueness of the Determinant, ⁋Proposition 8](/en/math/linear_algebra/existence_and_uniqueness_of_determinant#prop8){: data-relation="required" })
 
 ---
 

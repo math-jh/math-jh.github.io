@@ -20,9 +20,9 @@ weight: 12
 
 $$B=PAQ\tag{1}$$
 
-을 만족한다면 이들 행렬 $A,B$가 본질적으로 같은 행렬인 것으로 생각하고 싶을 것이나, 이 행렬들 $L_A, L_B: V\rightarrow W$이 작용하는 두 벡터공간 $V,W$의 basis를 택할 자유를 완전하게 허용한다면, rank가 같은 두 행렬은 모두 같은 행렬으로 취급해야 한다는 것을 보았다. 이 때문에 우리는 [§선형대수학의 기본정리, ⁋정의 8](/ko/math/linear_algebra/ftla#def8)에서 이보다 더 세밀한 동치관계를 정의해야만 했다. 대략적으로 이야기하여, 위의 식 (1)에서 행렬 $A$가 담고 있는 정보가 오직 $A$의 rank 뿐이라고 한다면 나머지 정보들은 행렬 $P,Q$, 즉 $V$에서 $V$, 혹은 $W$에서 $W$로의 *linear operator<sub>선형연산자</sub>*에 담겨있을 것이며 이들을 살펴보기 위해 $V$ (혹은 $W$)의 basis를 하나 고정한다고 생각하면 이 동치관계가 그리 어색하지 않다. 따라서 당분간 우리의 논의는 벡터공간 $V$와 basis $\mathcal{B}$를 고정한 상태로 진행할 것이다. 다른 말로 하면, 우리는 $n\times n$ 행렬에 대해 살펴볼 것이다. 이를 위한 강력한 도구는 다음 글에서 정의할 행렬식이다. 
+을 만족한다면 이들 행렬 $A,B$가 본질적으로 같은 행렬인 것으로 생각하고 싶을 것이나, 이 행렬들 $L_A, L_B: V\rightarrow W$이 작용하는 두 벡터공간 $V,W$의 basis를 택할 자유를 완전하게 허용한다면, rank가 같은 두 행렬은 모두 같은 행렬으로 취급해야 한다는 것을 보았다. 이 때문에 우리는 [§선형대수학의 기본정리, ⁋정의 8](/ko/math/linear_algebra/ftla#def8){: data-relation="required" }에서 이보다 더 세밀한 동치관계를 정의해야만 했다. 대략적으로 이야기하여, 위의 식 (1)에서 행렬 $A$가 담고 있는 정보가 오직 $A$의 rank 뿐이라고 한다면 나머지 정보들은 행렬 $P,Q$, 즉 $V$에서 $V$, 혹은 $W$에서 $W$로의 *linear operator<sub>선형연산자</sub>*에 담겨있을 것이며 이들을 살펴보기 위해 $V$ (혹은 $W$)의 basis를 하나 고정한다고 생각하면 이 동치관계가 그리 어색하지 않다. 따라서 당분간 우리의 논의는 벡터공간 $V$와 basis $\mathcal{B}$를 고정한 상태로 진행할 것이다. 다른 말로 하면, 우리는 $n\times n$ 행렬에 대해 살펴볼 것이다. 이를 위한 강력한 도구는 다음 글에서 정의할 행렬식이다. 
 
-한편, 우리는 임의의 행렬 $A$가 가역이기 위해서는 반드시 이 행렬은 정사각행렬이어야 한다는 것을 행렬의 trace를 이용하여 증명하였으며 ([§행렬, ⁋정의 6](/ko/math/linear_algebra/matrices#def6)) 행렬과 선형사상은 같다는 것을 알게 된 지금 이 결과는 [§동형사상, ⁋명제 5](/ko/math/linear_algebra/isomorphic_vector_spaces#prop5)에 의하여 자명한 것이다. 그러나 아직 우리는 이 역행렬을 계산하는 방법을 살펴보지 않았다. 이 방법은 단순한 것이므로 [§행렬](/ko/math/linear_algebra/matrices) 직후에 살펴볼 수도 있었겠지만, 본격적으로 $n\times n$ 행렬을 살펴보기 시작한 지금 이 과정을 간략히 소개하기로 한다. 
+한편, 우리는 임의의 행렬 $A$가 가역이기 위해서는 반드시 이 행렬은 정사각행렬이어야 한다는 것을 행렬의 trace를 이용하여 증명하였으며 ([§행렬, ⁋정의 6](/ko/math/linear_algebra/matrices#def6){: data-relation="weak" }) 행렬과 선형사상은 같다는 것을 알게 된 지금 이 결과는 [§동형사상, ⁋명제 5](/ko/math/linear_algebra/isomorphic_vector_spaces#prop5){: data-relation="weak" }에 의하여 자명한 것이다. 그러나 아직 우리는 이 역행렬을 계산하는 방법을 살펴보지 않았다. 이 방법은 단순한 것이므로 [§행렬](/ko/math/linear_algebra/matrices){: data-relation="required" } 직후에 살펴볼 수도 있었겠지만, 본격적으로 $n\times n$ 행렬을 살펴보기 시작한 지금 이 과정을 간략히 소개하기로 한다. 
 
 우선 다음의 간단한 보조정리를 보이자.
 
@@ -42,7 +42,7 @@ $$B=PAQ\tag{1}$$
 
 $$L_A\circ L_B=\id_{\mathbb{K}^n}$$
 
-이 성립한다. 이제 $\id_{\mathbb{K}^n}$이 전단사함수라는 것으로부터 $L_A:\mathbb{K}^n\rightarrow \mathbb{K}^n$이 전사함수라는 것을 안다. ([\[집합론\] §Retraction과 section, ⁋명제 3](/ko/math/set_theory/retraction_and_section#prop3)) 따라서 다음의 식 ([§동형사상, ⁋정리 7](/ko/math/linear_algebra/isomorphic_vector_spaces#thm7))
+이 성립한다. 이제 $\id_{\mathbb{K}^n}$이 전단사함수라는 것으로부터 $L_A:\mathbb{K}^n\rightarrow \mathbb{K}^n$이 전사함수라는 것을 안다. ([\[집합론\] §Retraction과 section, ⁋명제 3](/ko/math/set_theory/retraction_and_section#prop3){: data-relation="required" }) 따라서 다음의 식 ([§동형사상, ⁋정리 7](/ko/math/linear_algebra/isomorphic_vector_spaces#thm7){: data-relation="required" })
 
 $$\rank L_A+\nullity L_A=\dim \mathbb{K}^n=n$$
 
@@ -65,7 +65,7 @@ $$v_i=A^{-1}e_i\iff Av_i=e_i\tag{2}$$
 
 $$\begin{aligned}a_{11}x_{1}+a_{12}x_2+\cdots+a_{1n}x_n&=b_1\\a_{21}x_1+a_{22}x_2+\cdots+a_{2n}x_n&=b_2\\\hspace{10pt}\vdots&\\a_{m1}x_1+a_{m2}x_2+\cdots+a_{mn}x_n&=b_m\end{aligned}\tag{3}$$
 
-이 주어졌다 하자. 그럼 [§행렬, ⁋정의 1](/ko/math/linear_algebra/matrices#def1)에 의해 위의 식은 다음의 행렬들
+이 주어졌다 하자. 그럼 [§행렬, ⁋정의 1](/ko/math/linear_algebra/matrices#def1){: data-relation="required" }에 의해 위의 식은 다음의 행렬들
 
 $$A=\begin{pmatrix}a_{11}&a_{12}&\cdots&a_{1n}\\a_{21}&a_{22}&\cdots&a_{2n}\\\vdots&\vdots&\ddots&\vdots\\a_{m1}&a_{m2}&\cdots&a_{mn}\end{pmatrix},\quad x=\begin{pmatrix}x_1\\x_2\\\vdots\\x_n\end{pmatrix},\quad b=\begin{pmatrix}b_1\\b_2\\\vdots\\b_m\end{pmatrix}$$
 
@@ -141,7 +141,7 @@ $$x_1=-4+21x_4,\quad x_2=1-2x_4,\quad x_3=1-5x_4$$
 3. 한 행의 배수를 다른 행에 더하는 연산.
 :::
 
-우리가 구체적으로 살펴본 [예시 2](#ex2)는 일차연립방정식을 적절히 조작하여 조건 (\*)을 만족하도록 설정한 후 이를 특정한 방식으로 쓰는 것에 대한 것이었으나, 그 이전에 살펴본 계산 또한 본질적으로는 기본행연산(에 해당하는 식 조작)으로부터 얻어진다는 것을 눈여겨볼 필요가 있다. 
+우리가 구체적으로 살펴본 [예시 2](#ex2){: data-relation="weak" }는 일차연립방정식을 적절히 조작하여 조건 (\*)을 만족하도록 설정한 후 이를 특정한 방식으로 쓰는 것에 대한 것이었으나, 그 이전에 살펴본 계산 또한 본질적으로는 기본행연산(에 해당하는 식 조작)으로부터 얻어진다는 것을 눈여겨볼 필요가 있다. 
 
 또, 다음을 정의한다.
 
@@ -192,7 +192,7 @@ $$E''_{1,2,r}=\begin{pmatrix}1&0&0&\cdots&0\\r&1&0&\cdots&0\\ 0&0&1&\cdots&0\\\v
 기본적인 아이디어는 가우스 소거법을 행할 때 각 열들은 서로 섞이지 않는다는 것이며, 이는 기본행연산을 위에서 살펴본 기본행렬의 곱으로 생각한다면 행렬의 곱의 정의에 의하여 자명하다고 할 수도 있다. 뿐만 아니라, 가우스 소거법을 할 때, 상수가 존재하는 우변 또한 좌변과 같은 연산을 행하게 되므로, 우변의 성분들을 행렬에 추가하여 한 번에 계산할 수 있다. 
 
 ::: 예시 5
-[예시 2](#ex2)에서 주어진 연립방정식
+[예시 2](#ex2){: data-relation="required" }에서 주어진 연립방정식
 
 $$\begin{aligned}x_1+2x_2+4x_3+3x_4&=2\\\phantom{x_1+}3x_2\phantom{+2x_3}+6x_4&=3\\\phantom{x_1+2x_2+}x_3+5x_4&=1\end{aligned}$$
 
@@ -200,7 +200,7 @@ $$\begin{aligned}x_1+2x_2+4x_3+3x_4&=2\\\phantom{x_1+}3x_2\phantom{+2x_3}+6x_4&=
 
 $$\begin{pmatrix} 1&2&4&3&2\\ 0&3&0&6&3\\ 0&0&1&5&1\end{pmatrix}$$
 
-을 생각한다. 이 행렬의 가장 오른쪽 열은 연립방정식의 우변에 해당하는 것이며, 나머지는 연립방정식의 변수 앞의 계수에 해당하는 것이다. 이제 이 행렬에 [예시 2](#ex2)에서의 연산들을 그대로 적용하자. 우선 마지막 행에 4를 곱한 것을 첫째 행에서 빼 주면 다음의 행렬
+을 생각한다. 이 행렬의 가장 오른쪽 열은 연립방정식의 우변에 해당하는 것이며, 나머지는 연립방정식의 변수 앞의 계수에 해당하는 것이다. 이제 이 행렬에 [예시 2](#ex2){: data-relation="required" }에서의 연산들을 그대로 적용하자. 우선 마지막 행에 4를 곱한 것을 첫째 행에서 빼 주면 다음의 행렬
 
 $$\begin{pmatrix}1&2&0&-17&-2\\ 0&3&0&6&3\\0&0&1&5&1\end{pmatrix}$$
 
@@ -212,14 +212,14 @@ $$\begin{pmatrix}1&0&0&-21&-4\\0&3&0&6&3\\0&0&1&5&1\end{pmatrix}$$
 
 $$\begin{pmatrix}1&0&0&-21&-4\\0&1&0&2&1\\0&0&1&5&1\end{pmatrix}$$
 
-을 얻는다. 이 첨가행렬로부터 다시 연립방정식을 복원하면 이것이 정확히 우리가 [예시 2](#ex2)에서 얻은
+을 얻는다. 이 첨가행렬로부터 다시 연립방정식을 복원하면 이것이 정확히 우리가 [예시 2](#ex2){: data-relation="weak" }에서 얻은
 
 $$\begin{aligned}x_1\phantom{+2x_2+4x_3}-21x_4&=-4\\\phantom{x_1+}x_2\phantom{+2x_3}+\phantom{1}2x_4&=1\\\phantom{x_1+2x_2+}x_3+\phantom{1}5x_4&=1\end{aligned}$$
 
 임을 안다.
 :::
 
-방금 살펴본 예시는 [예시 2](#ex2)의 계산과 (편의성 면에서도) 본질적으로 차이가 없다. 유의미한 차이는 역행렬을 구할 때 이를 첨가행렬을 사용함으로써 얻어진다. 이를 위해 연립방정식 (3)을 정의하는 행렬 $A$가 $n\times n$ 가역행렬인 경우를 생각하자. 우선 다음의 보조정리가 자명하다. 
+방금 살펴본 예시는 [예시 2](#ex2){: data-relation="weak" }의 계산과 (편의성 면에서도) 본질적으로 차이가 없다. 유의미한 차이는 역행렬을 구할 때 이를 첨가행렬을 사용함으로써 얻어진다. 이를 위해 연립방정식 (3)을 정의하는 행렬 $A$가 $n\times n$ 가역행렬인 경우를 생각하자. 우선 다음의 보조정리가 자명하다. 
 
 ::: 보조정리 6
 임의의 $n\times n$ 기약행사다리꼴행렬은 항등행렬이거나, $0$으로만 이루어진 행이 존재한다. 
@@ -317,7 +317,7 @@ $$L=\begin{pmatrix}1&0&0\\2&1&0\\4&3&1\end{pmatrix}$$
 이 되어 $A=LU$임을 확인할 수 있다.
 :::
 
-그러나, (주로 작은 행렬의 경우) 어떠한 행렬이 가역인지 판단하기 위해 가우스 소거법을 매번 적용하는 것은 때때로 비효율적인 일이 될 수도 있다. 다음 글에서 살펴볼 행렬식은 주어진 $n\times n$ 행렬이 가역인지 아닌지를 결정하는 방법을 알려준다. 그러나, (특히 복잡한 행렬의 경우) 행렬식을 가장 쉽게 계산하는 방법 중 하나는 여전히 가우스 소거법이다. ([§행렬식의 존재성과 유일성, ⁋명제 8](/ko/math/linear_algebra/existence_and_uniqueness_of_determinant#prop8))
+그러나, (주로 작은 행렬의 경우) 어떠한 행렬이 가역인지 판단하기 위해 가우스 소거법을 매번 적용하는 것은 때때로 비효율적인 일이 될 수도 있다. 다음 글에서 살펴볼 행렬식은 주어진 $n\times n$ 행렬이 가역인지 아닌지를 결정하는 방법을 알려준다. 그러나, (특히 복잡한 행렬의 경우) 행렬식을 가장 쉽게 계산하는 방법 중 하나는 여전히 가우스 소거법이다. ([§행렬식의 존재성과 유일성, ⁋명제 8](/ko/math/linear_algebra/existence_and_uniqueness_of_determinant#prop8){: data-relation="required" })
 
 ---
 
