@@ -24,9 +24,9 @@ on $M$ is that $p+tv$ is not defined. However, if a suitable $C^\infty$ curve $\
 
 $$\lim_{h\rightarrow 0}\frac{f(\gamma(h))-f(p)}{h}\tag{1}$$
 
-([§Examples of Differentials, ⁋Definition 1](/en/math/manifolds/examples_of_differentials#def1)) 
+([§Examples of Differentials, ⁋Definition 1](/en/math/manifolds/examples_of_differentials#def1){: data-relation="required" }) 
 
-Now suppose a vector field $X$ on $M$ is given, and consider the problem of finding the directional derivative $X_pf$ at each point $p$ in the direction of $X_p$. Geometrically, this amounts to choosing, for every point $p$, a curve $\gamma_p$ satisfying $\gamma(0)=p$ and $\gamma'(0)=X_p$, and applying formula (1) above. But we know that such a curve always exists. ([§Vector Fields, ⁋Theorem 6](/en/math/manifolds/vector_fields#thm6))
+Now suppose a vector field $X$ on $M$ is given, and consider the problem of finding the directional derivative $X_pf$ at each point $p$ in the direction of $X_p$. Geometrically, this amounts to choosing, for every point $p$, a curve $\gamma_p$ satisfying $\gamma(0)=p$ and $\gamma'(0)=X_p$, and applying formula (1) above. But we know that such a curve always exists. ([§Vector Fields, ⁋Theorem 6](/en/math/manifolds/vector_fields#thm6){: data-relation="required" })
 
 ::: Definition 1
 Fix a manifold $M$ and a vector field $X$ defined on it, and suppose a function $f:M\rightarrow\mathbb{R}$ is given. Then the *Lie derivative* $\mathcal{L}_Xf$ of $f$ is the function defined by the formula
@@ -38,9 +38,9 @@ Of course, by the preceding argument this is nothing other than the directional 
 
 ## Lie Derivative of Vector Fields
 
-The simplest example is the derivative of a vector field. Since a vector field $Y$ is a map from $M$ to $TM$, one might attempt to differentiate it by a method similar to [Definition 1](#def1) above, but this is far from straightforward. The obstacle here is more fundamental than for functions: $Y(\phi^t(p))$ is an element of $T_{\phi^t(p)}M$, whereas $Y(p)$ is an element of $T_pM$, so there is no way even to form their difference $Y_{\phi^t(p)}-Y_p$. 
+The simplest example is the derivative of a vector field. Since a vector field $Y$ is a map from $M$ to $TM$, one might attempt to differentiate it by a method similar to [Definition 1](#def1){: data-relation="weak" } above, but this is far from straightforward. The obstacle here is more fundamental than for functions: $Y(\phi^t(p))$ is an element of $T_{\phi^t(p)}M$, whereas $Y(p)$ is an element of $T_pM$, so there is no way even to form their difference $Y_{\phi^t(p)}-Y_p$. 
 
-Nevertheless, differentiation is still possible in our setting. Recalling [§Vector Fields, ⁋Theorem 6](/en/math/manifolds/vector_fields#thm6), since $\phi^t$ is a diffeomorphism, $\dd{\phi}^t$ induces an isomorphism from $T_pM$ to $T_{\phi^t(p)}M$. Moreover, the same theorem tells us that the inverse of this isomorphism is $\dd{\phi}^{-t}$. Therefore, by pulling $Y_{\phi^t(p)}$ back to $T_pM$ via $\dd{\phi}^{-t}$, we can make the following definition.
+Nevertheless, differentiation is still possible in our setting. Recalling [§Vector Fields, ⁋Theorem 6](/en/math/manifolds/vector_fields#thm6){: data-relation="required" }, since $\phi^t$ is a diffeomorphism, $\dd{\phi}^t$ induces an isomorphism from $T_pM$ to $T_{\phi^t(p)}M$. Moreover, the same theorem tells us that the inverse of this isomorphism is $\dd{\phi}^{-t}$. Therefore, by pulling $Y_{\phi^t(p)}$ back to $T_pM$ via $\dd{\phi}^{-t}$, we can make the following definition.
 
 ::: Definition 2
 Fix a manifold $M$ and a vector field $X$ defined on it, and suppose another vector field $Y:M\rightarrow TM$ is given. Then the *Lie derivative* $\mathcal{L}_XY$ of $Y$ is the vector field defined by the formula
@@ -118,7 +118,7 @@ In other words, $X$ and $Y$ being $F$-related means that the following diagram c
 
 {% diagram Math/Manifolds/Lie_Derivative-1.svg width="7.49em" alt="F-related" %}
 
-As we can see by applying the fact that $X$ is $C^\infty$ (from [§Vector Fields, ⁋Proposition 2](/en/math/manifolds/vector_fields#prop2)) to each function $f$, whether $X$ and $Y$ are $F$-related can also be tested by applying them to each function.
+As we can see by applying the fact that $X$ is $C^\infty$ (from [§Vector Fields, ⁋Proposition 2](/en/math/manifolds/vector_fields#prop2){: data-relation="weak" }) to each function $f$, whether $X$ and $Y$ are $F$-related can also be tested by applying them to each function.
 
 ::: Proposition 7
 Let $F:M\rightarrow N$ be a $C^\infty$ map, and let $X\in\mathfrak{X}(M)$ and $Y\in\mathfrak{X}(N)$. Then $X$ and $Y$ are $F$-related if and only if for every $f$,

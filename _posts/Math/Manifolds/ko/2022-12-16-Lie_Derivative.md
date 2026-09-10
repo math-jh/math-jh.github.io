@@ -23,9 +23,9 @@ $$\lim_{t \rightarrow0}\frac{f(p+tv)-f(p)}{t}$$
 
 $$\lim_{h\rightarrow 0}\frac{f(\gamma(h))-f(p)}{h}\tag{1}$$
 
-을 통해 방향미분의 값을 구해낼 수 있다는 것을 알고 있다. ([§미분사상의 예시들, ⁋정의 1](/ko/math/manifolds/examples_of_differentials#def1)) 
+을 통해 방향미분의 값을 구해낼 수 있다는 것을 알고 있다. ([§미분사상의 예시들, ⁋정의 1](/ko/math/manifolds/examples_of_differentials#def1){: data-relation="required" }) 
 
-이제 $M$ 위에 벡터장 $X$가 주어졌다 하고, 각 점 $p$에서 $X_p$ 방향으로의 방향미분 $X_pf$를 구하는 문제를 생각해보자. 이는 기하학적으로는 위와 같이 모든 점 $p$마다 $\gamma(0)=p$, $\gamma'(0)=X_p$를 만족하는 곡선 $\gamma_p$를 잡아 위의 식 (1)을 적용하는 것과 같다. 그런데 우리는 이러한 성질을 만족하는 곡선이 반드시 존재한다는 것을 알고 있다. ([§벡터장, ⁋정리 6](/ko/math/manifolds/vector_fields#thm6))
+이제 $M$ 위에 벡터장 $X$가 주어졌다 하고, 각 점 $p$에서 $X_p$ 방향으로의 방향미분 $X_pf$를 구하는 문제를 생각해보자. 이는 기하학적으로는 위와 같이 모든 점 $p$마다 $\gamma(0)=p$, $\gamma'(0)=X_p$를 만족하는 곡선 $\gamma_p$를 잡아 위의 식 (1)을 적용하는 것과 같다. 그런데 우리는 이러한 성질을 만족하는 곡선이 반드시 존재한다는 것을 알고 있다. ([§벡터장, ⁋정리 6](/ko/math/manifolds/vector_fields#thm6){: data-relation="required" })
 
 ::: 정의 1
 Manifold $M$과 그 위에 정의된 벡터장 $X$를 고정하고, 함수 $f\in C^\infty(M)$이 주어졌다 하자. 그럼 $f$의 *Lie derivative<sub>리 미분</sub>* $\mathcal{L}_Xf$는 다음의 식
@@ -39,9 +39,9 @@ $$(\mathcal{L}_Xf)(p)=\lim_{t\rightarrow 0}\frac{f(\phi^t(p))-f(\phi^0(p))}{t}=\
 
 ## 벡터장의 리 미분
 
-가장 간단한 예시는 벡터장의 미분이다. 벡터장 $Y$는 $M$에서 $TM$으로의 함수이므로, 위의 [정의 1](#def1)과 유사한 방법을 사용하여 미분을 시도해볼 수 있으나 이는 만만한 일이 아니다. 여기에는 함수의 미분보다 조금 더 근본적인 문제가 있는데, $Y(\phi^t(p))$는 $T_{\phi^t(p)}M$의 원소인 반면 $Y(p)$는 $T_pM$의 원소이므로 이들 둘의 차 $Y_{\phi^t(p)}-Y_p$를 계산하는 방법이 애초부터 없기 때문이다. 
+가장 간단한 예시는 벡터장의 미분이다. 벡터장 $Y$는 $M$에서 $TM$으로의 함수이므로, 위의 [정의 1](#def1){: data-relation="weak" }과 유사한 방법을 사용하여 미분을 시도해볼 수 있으나 이는 만만한 일이 아니다. 여기에는 함수의 미분보다 조금 더 근본적인 문제가 있는데, $Y(\phi^t(p))$는 $T_{\phi^t(p)}M$의 원소인 반면 $Y(p)$는 $T_pM$의 원소이므로 이들 둘의 차 $Y_{\phi^t(p)}-Y_p$를 계산하는 방법이 애초부터 없기 때문이다. 
 
-그럼에도 불구하고 우리 상황에서는 이를 미분하는 것이 가능하다. [§벡터장, ⁋정리 6](/ko/math/manifolds/vector_fields#thm6)을 생각하면 $\phi^t$는 diffeomorphism이므로, $\dd{\phi}^t$는 $T_pM$에서 $T_{\phi^t(p)}M$으로의 isomorphism을 유도한다. 또, 같은 정리에서 이 isomorphism의 역함수는 $\dd{\phi}^{-t}$라는 것 또한 안다. 따라서 $Y_{\phi^t(p)}$를 $\dd{\phi}^{-t}$를 통해 $T_pM$으로 가져오면 다음과 같이 정의할 수 있다.
+그럼에도 불구하고 우리 상황에서는 이를 미분하는 것이 가능하다. [§벡터장, ⁋정리 6](/ko/math/manifolds/vector_fields#thm6){: data-relation="required" }을 생각하면 $\phi^t$는 diffeomorphism이므로, $\dd{\phi}^t$는 $T_pM$에서 $T_{\phi^t(p)}M$으로의 isomorphism을 유도한다. 또, 같은 정리에서 이 isomorphism의 역함수는 $\dd{\phi}^{-t}$라는 것 또한 안다. 따라서 $Y_{\phi^t(p)}$를 $\dd{\phi}^{-t}$를 통해 $T_pM$으로 가져오면 다음과 같이 정의할 수 있다.
 
 ::: 정의 2
 Manifold $M$과 그 위에 정의된 벡터장 $X$를 고정하고, 또 다른 벡터장 $Y:M\rightarrow TM$이 주어졌다 하자. 그럼 $Y$의 *Lie derivative* $\mathcal{L}_XY$는 다음의 식
@@ -103,7 +103,7 @@ $$[X,Y]f=X(Yf)-Y(Xf)$$
 으로 정의되는 원소이다.
 :::
 
-물론 이 정의가 말이 되기 위해서는 우변의 식이 실제로 $\mathfrak{X}(M)$의 원소가 된다는 것을 확인해야 하지만, 이는 위에서 계산한 식 (2)에서 $X$와 $Y$의 정의를 바꾸어 $(YX)(fg)$를 얻은 후, 이를 빼면 된다. 애초부터 이 정의는 문제가 되는 두 항을 소거하기 위한 정의였으므로 당연히 라이프니츠 법칙이 성립할 것이다. 또, 이렇게 얻어진 $[X,Y]$가 $C^\infty$ 벡터장이라는 것은 [§벡터장, ⁋명제 2](/ko/math/manifolds/vector_fields#prop2)의 세 번째 조건에 $X(Yf)-Y(Xf)$를 대입하면 얻어진다.
+물론 이 정의가 말이 되기 위해서는 우변의 식이 실제로 $\mathfrak{X}(M)$의 원소가 된다는 것을 확인해야 하지만, 이는 위에서 계산한 식 (2)에서 $X$와 $Y$의 정의를 바꾸어 $(YX)(fg)$를 얻은 후, 이를 빼면 된다. 애초부터 이 정의는 문제가 되는 두 항을 소거하기 위한 정의였으므로 당연히 라이프니츠 법칙이 성립할 것이다. 또, 이렇게 얻어진 $[X,Y]$가 $C^\infty$ 벡터장이라는 것은 [§벡터장, ⁋명제 2](/ko/math/manifolds/vector_fields#prop2){: data-relation="required" }의 세 번째 조건에 $X(Yf)-Y(Xf)$를 대입하면 얻어진다.
 
 이렇게 정의된 벡터장 $[X,Y]$를 $X$와 $Y$의 *Lie bracket*이라 부른다. 이 정의는 나중에 아주 중요하게 쓰이므로, 몇 가지 결과를 미리 정리해 두는 것이 좋아보인다.
 
@@ -125,7 +125,7 @@ $$\dd{F_p}(X_p)=Y_{F(p)}$$
 
 {% diagram Math/Manifolds/Lie_Derivative-1.svg width="7.49em" alt="F-related" %}
 
-[§벡터장, ⁋명제 2](/ko/math/manifolds/vector_fields#prop2)에서 $X$가 $C^\infty$임을 각각의 함수 $f$에 적용해보아 알 수 있듯, $X$와 $Y$가 $F$-related인지의 여부 또한 마찬가지로 각각의 함수에 적용하여 알아낼 수 있다.
+[§벡터장, ⁋명제 2](/ko/math/manifolds/vector_fields#prop2){: data-relation="weak" }에서 $X$가 $C^\infty$임을 각각의 함수 $f$에 적용해보아 알 수 있듯, $X$와 $Y$가 $F$-related인지의 여부 또한 마찬가지로 각각의 함수에 적용하여 알아낼 수 있다.
 
 ::: 명제 7
 $F:M\rightarrow N$이 $C^\infty$ 함수라 하고, $X\in\mathfrak{X}(M)$, $Y\in\mathfrak{X}(N)$이라 하자. 그럼 $X,Y$가 $F$-related인 것은 임의의 열린집합 $V\subseteq N$과 $f\in C^\infty(V)$에 대하여, 다음의 식
