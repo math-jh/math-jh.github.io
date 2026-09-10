@@ -58,7 +58,7 @@ On the other hand, by definition,
 
 $$\rchi_\rho(hgh^{-1})=\tr(\rho(h)\rho(g)\rho(h)^{-1})=\tr(\rho(g))=\rchi_\rho(g)$$
 
-holds, so ([\[Linear Algebra\] §Characteristic Polynomial, ⁋Corollary 5](/en/math/linear_algebra/characteristic_polynomial#cor5)) we see that $\rchi_\rho$ is constant on the *conjugacy classes* of $G$. Such functions also have a name.
+holds, so ([\[Linear Algebra\] §Characteristic Polynomial, ⁋Corollary 5](/en/math/linear_algebra/characteristic_polynomial#cor5){: data-relation="required" }) we see that $\rchi_\rho$ is constant on the *conjugacy classes* of $G$. Such functions also have a name.
 
 ::: Definition 3
 A function $\rchi:G\rightarrow\mathbb{C}$ is called a *class function* if $\rchi(hgh^{-1})=\rchi(g)$ holds for all $g,h\in G$. We denote the collection of all class functions defined on $G$ by $\mathbb{C}_\class(G)$.
@@ -114,7 +114,7 @@ $$\dim U^G=\tr(\varphi)=\tr\left(\frac{1}{\lvert G\rvert}\sum_{g\in G}\rho(g)\ri
 
 .
 
-More generally, in [§Representation Theory of Finite Groups, ⁋Definition 3](/en/math/representation_theory/representations_of_finite_groups#def3) we defined, for any $G$-representations $V,W$, a $G$-action on their $\Hom$-set $\Hom_\mathbb{C}(V,W)$ (as underlying $\mathbb{C}$-vector spaces) by
+More generally, in [§Representation Theory of Finite Groups, ⁋Definition 3](/en/math/representation_theory/representations_of_finite_groups#def3){: data-relation="required" } we defined, for any $G$-representations $V,W$, a $G$-action on their $\Hom$-set $\Hom_\mathbb{C}(V,W)$ (as underlying $\mathbb{C}$-vector spaces) by
 
 $$(g\cdot f)(v)=g\cdot f(g^{-1}\cdot v)\qquad\text{for all $v\in V$}$$
 
@@ -140,7 +140,7 @@ $$\dim\Hom_G(V,W)=\frac{1}{\lvert G\rvert}\sum_{g\in G}\overline{\rchi_V(g)}\rch
 
 .
 
-Finally, assuming $V,W$ are irreducible representations, by [§Representation Theory of Finite Groups, ⁋Lemma 8](/en/math/representation_theory/representations_of_finite_groups#lem8), $\Hom_G(V,W)$ is $1$-dimensional if $V\cong W$ and $0$-dimensional otherwise, so
+Finally, assuming $V,W$ are irreducible representations, by [§Representation Theory of Finite Groups, ⁋Lemma 8](/en/math/representation_theory/representations_of_finite_groups#lem8){: data-relation="required" }, $\Hom_G(V,W)$ is $1$-dimensional if $V\cong W$ and $0$-dimensional otherwise, so
 
 $$\dim \Hom_\mathbb{C}(V,W)^G=\dim \Hom_G(V,W)=\begin{cases}1&\text{if $V\cong W$,}\\0&\text{otherwise}\end{cases}$$
 
@@ -150,11 +150,11 @@ $$\langle \rchi_W,\rchi_V\rangle=\delta_{VW}$$
 
 .
 
-That is, with respect to the inner product of [Definition 4](#def4), the irreducible characters form an orthonormal set. Since we know that $\mathbb{C}_\class(G)$ has dimension equal to the number of conjugacy classes of $G$, it follows that there cannot be more irreducible representations than the number of conjugacy classes of $G$. Moreover, using this inner product we can compute the multiplicity of $V_i$ inside $V$ by taking the inner product of the character $\rchi_V$ of any representation $V$ with the character $\rchi_{V_i}$ of a fixed irreducible representation $V_i$.
+That is, with respect to the inner product of [Definition 4](#def4){: data-relation="required" }, the irreducible characters form an orthonormal set. Since we know that $\mathbb{C}_\class(G)$ has dimension equal to the number of conjugacy classes of $G$, it follows that there cannot be more irreducible representations than the number of conjugacy classes of $G$. Moreover, using this inner product we can compute the multiplicity of $V_i$ inside $V$ by taking the inner product of the character $\rchi_V$ of any representation $V$ with the character $\rchi_{V_i}$ of a fixed irreducible representation $V_i$.
 
 ## Regular Representation
 
-In this section we obtain the Artin–Wedderburn decomposition considered in the previous post ([§Representation Theory of Finite Groups](/en/math/representation_theory/representations_of_finite_groups#cor7)) using characters. To this end, first observe that $\mathbb{C}[G]$ is a left $\mathbb{C}[G]$-module over itself, and hence by the categorical equivalence
+In this section we obtain the Artin–Wedderburn decomposition considered in the previous post ([§Representation Theory of Finite Groups](/en/math/representation_theory/representations_of_finite_groups#cor7){: data-relation="weak" }) using characters. To this end, first observe that $\mathbb{C}[G]$ is a left $\mathbb{C}[G]$-module over itself, and hence by the categorical equivalence
 
 $$\Rep_\mathbb{C}(G)\cong \lMod{\mathbb{C}[G]}$$
 
@@ -180,7 +180,7 @@ $$\mathbb{C}[G]\cong \bigoplus_{i=1}^r V_i^{\dim V_i}$$
 
 .
 
-Moreover, $\mathbb{C}[G]$ acts on itself by multiplication, and under this action, thinking that by [§Representation Theory of Finite Groups, ⁋Lemma 8](/en/math/representation_theory/representations_of_finite_groups#lem8) each $V_i$ maps only into $V_i$, we know that each $V_i^{\dim V_i}$ is exactly the matrix algebra $\Mat_{d_i}(\mathbb{C})$, and by the uniqueness of the Artin–Wedderburn theorem we can verify that this is precisely
+Moreover, $\mathbb{C}[G]$ acts on itself by multiplication, and under this action, thinking that by [§Representation Theory of Finite Groups, ⁋Lemma 8](/en/math/representation_theory/representations_of_finite_groups#lem8){: data-relation="required" } each $V_i$ maps only into $V_i$, we know that each $V_i^{\dim V_i}$ is exactly the matrix algebra $\Mat_{d_i}(\mathbb{C})$, and by the uniqueness of the Artin–Wedderburn theorem we can verify that this is precisely
 
 $$\mathbb{C}[G]\cong \bigoplus_{i=1}^r\Mat_{d_i}(\mathbb{C})$$
 
@@ -219,7 +219,7 @@ we must have exactly $\phi(g)=\phi(hgh^{-1})$, that is, $\phi$ must be a class f
 
 Now we use this to show that every class function can be expressed as a linear combination of irreducible characters. That is, we must show that if for a class function $\phi$, $\langle \rchi_V,\phi\rangle=0$ holds for all irreducible characters $\rchi_V$, then $\phi=0$.
 
-To this end, apply the above lemma to a class function $\phi$ and an irreducible representation $\rho:G\rightarrow\Aut(V)$. Since $\phi$ is a class function, so is $\overline{\phi}$, and thus $\rho_{\overline{\phi}}$ is a $G$-map; by [§Representation Theory of Finite Groups, ⁋Lemma 8](/en/math/representation_theory/representations_of_finite_groups#lem8), $\rho_{\overline{\phi}}$ is of the form $\lambda\id_V$. Now taking the trace here, we know that
+To this end, apply the above lemma to a class function $\phi$ and an irreducible representation $\rho:G\rightarrow\Aut(V)$. Since $\phi$ is a class function, so is $\overline{\phi}$, and thus $\rho_{\overline{\phi}}$ is a $G$-map; by [§Representation Theory of Finite Groups, ⁋Lemma 8](/en/math/representation_theory/representations_of_finite_groups#lem8){: data-relation="required" }, $\rho_{\overline{\phi}}$ is of the form $\lambda\id_V$. Now taking the trace here, we know that
 
 $$(\dim V)\lambda=\tr(\rho_{\overline{\phi}})=\tr\left(\sum_{g\in G}\overline{\phi(g)}\rho(g)\right)=\sum_{g\in G}\overline{\phi(g)}\rchi_V(g)=\lvert G\rvert\langle \rchi_V,\phi\rangle=0$$
 
@@ -306,7 +306,7 @@ We already know that the character of $V_0$ is $(1,1,1)$. Now considering the ac
 
 $$\rho_\perm((\;))=\begin{pmatrix}1&0&0\\0&1&0\\0&0&1\end{pmatrix},\quad \rho_\perm((1\;2))=\begin{pmatrix}0&1&0\\1&0&0\\0&0&1\end{pmatrix},\quad \rho_\perm((1\;2\;3))=\begin{pmatrix}0&1&0\\0&0&1\\1&0&0\end{pmatrix}$$
 
-we know that $\rchi_\perm$ is $(3,1,0)$, and now by [Proposition 2](#prop2) we have $\rchi_\perm=\rchi_0+\rchi_\std$, so we can see that $\rchi_\std$ is $(2,0,-1)$. These three characters obtained in this way,
+we know that $\rchi_\perm$ is $(3,1,0)$, and now by [Proposition 2](#prop2){: data-relation="required" } we have $\rchi_\perm=\rchi_0+\rchi_\std$, so we can see that $\rchi_\std$ is $(2,0,-1)$. These three characters obtained in this way,
 
 $$\rchi_0=(1,1,1),\qquad \rchi_\sgn=(1,-1,1),\qquad \rchi_\std=(2,0,-1)$$
 

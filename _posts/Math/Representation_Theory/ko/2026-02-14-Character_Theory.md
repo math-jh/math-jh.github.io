@@ -58,7 +58,7 @@ $$\rchi_V=a_1\rchi_{V_1}+\cdots+a_r\rchi_{V_r}$$
 
 $$\rchi_\rho(hgh^{-1})=\tr(\rho(h)\rho(g)\rho(h)^{-1})=\tr(\rho(g))=\rchi_\rho(g)$$
 
-가 성립하므로 ([\[선형대수학\] §특성다항식, ⁋따름정리 5](/ko/math/linear_algebra/characteristic_polynomial#cor5)), 우리는 이로부터 $\rchi_\rho$가 $G$의 *conjugacy class*들 위에서 상수임을 안다. 이러한 함수들에도 이름이 있다. 
+가 성립하므로 ([\[선형대수학\] §특성다항식, ⁋따름정리 5](/ko/math/linear_algebra/characteristic_polynomial#cor5){: data-relation="required" }), 우리는 이로부터 $\rchi_\rho$가 $G$의 *conjugacy class*들 위에서 상수임을 안다. 이러한 함수들에도 이름이 있다. 
 
 ::: 정의 3
 함수 $\rchi:G\rightarrow\mathbb{C}$가 *class function<sub>유함수</sub>*이라는 것은 $\rchi(hgh^{-1})=\rchi(g)$가 모든 $g,h\in G$에 대해 성립하는 것이다. $G$ 위에 정의된 모든 class function들의 모임을 $\mathbb{C}_\class(G)$으로 적는다. 
@@ -74,7 +74,7 @@ $$\langle \rchi_1,\rchi_2\rangle=\frac{1}{\lvert G\rvert}\sum_{g\in G} \rchi_1(g
 으로 정의한다. 
 :::
 
-이는 단순히 target space $\mathbb{C}$에 정의된 standard Hermitian product를 $\mathbb{C}_\class(G)$ 위에 옮겨준 것에 불과하다. 한편, 어떠한 representation $\rho$의 character $\rchi_\rho$에 대해서는, [§유한군의 표현론, ⁋명제 6](/ko/math/representation_theory/representations_of_finite_groups#prop6)에 의하여 $\rho$를 unitary로 잡을 수 있으므로, 임의의 $g\in G$에 대하여
+이는 단순히 target space $\mathbb{C}$에 정의된 standard Hermitian product를 $\mathbb{C}_\class(G)$ 위에 옮겨준 것에 불과하다. 한편, 어떠한 representation $\rho$의 character $\rchi_\rho$에 대해서는, [§유한군의 표현론, ⁋명제 6](/ko/math/representation_theory/representations_of_finite_groups#prop6){: data-relation="required" }에 의하여 $\rho$를 unitary로 잡을 수 있으므로, 임의의 $g\in G$에 대하여
 
 $$\rchi_\rho(g^{-1})=\tr(\rho(g^{-1}))=\tr(\rho(g)^{-1})=\tr(\rho(g)^\dagger)=\overline{\tr(\rho(g))}=\overline{\rchi_\rho(g)}$$
 
@@ -114,7 +114,7 @@ $$\dim U^G=\tr(p)=\tr\left(\frac{1}{\lvert G\rvert}\sum_{g\in G}\rho(g)\right)=\
 
 이다. 
 
-더 일반적으로, 우리는 [§유한군의 표현론, ⁋정의 3](/ko/math/representation_theory/representations_of_finite_groups#def3)에서 임의의 $G$-representation $V,W$에 대하여, 이들의 (underlying $\mathbb{C}$-벡터공간으로서의) $\Hom$-set $\Hom_\mathbb{C}(V,W)$에 $G$-action
+더 일반적으로, 우리는 [§유한군의 표현론, ⁋정의 3](/ko/math/representation_theory/representations_of_finite_groups#def3){: data-relation="required" }에서 임의의 $G$-representation $V,W$에 대하여, 이들의 (underlying $\mathbb{C}$-벡터공간으로서의) $\Hom$-set $\Hom_\mathbb{C}(V,W)$에 $G$-action
 
 $$(g\cdot f)(v)=g\cdot f(g^{-1}\cdot v)\qquad\text{for all $v\in V$}$$
 
@@ -134,7 +134,7 @@ $$\rchi_{\Hom_\mathbb{C}(V,W)}(g)=\overline{\rchi_V(g)}\rchi_W(g)$$
 
 $$\dim\Hom_G(V,W)=\frac{1}{\lvert G\rvert}\sum_{g\in G}\overline{\rchi_V(g)}\rchi_W(g)=\langle \rchi_W, \rchi_V\rangle$$
 
-으로 쓸 수 있다. 한편, 마지막으로 $V,W$가 irreducible representation들이라 가정하면 $\Hom_G(V,W)$는 [§유한군의 표현론, ⁋보조정리 8](/ko/math/representation_theory/representations_of_finite_groups#lem8)으로부터 $V\cong W$라면 $1$차원, 그렇지 않다면 $0$차원이므로
+으로 쓸 수 있다. 한편, 마지막으로 $V,W$가 irreducible representation들이라 가정하면 $\Hom_G(V,W)$는 [§유한군의 표현론, ⁋보조정리 8](/ko/math/representation_theory/representations_of_finite_groups#lem8){: data-relation="required" }으로부터 $V\cong W$라면 $1$차원, 그렇지 않다면 $0$차원이므로
 
 $$\dim \Hom_\mathbb{C}(V,W)^G=\dim \Hom_G(V,W)=\begin{cases}1&\text{if $V\cong W$,}\\0&\text{otherwise}\end{cases}$$
 
@@ -142,11 +142,11 @@ $$\dim \Hom_\mathbb{C}(V,W)^G=\dim \Hom_G(V,W)=\begin{cases}1&\text{if $V\cong W
 
 $$\langle \rchi_W,\rchi_V\rangle=\delta_{VW}$$
 
-을 얻는다. 즉 [정의 4](#def4)의 inner product에 대하여 irreducible character들은 orthonormal set이다. 우리는 $\mathbb{C}_\class(G)$가 $G$의 conjugacy class들의 개수만큼의 차원을 가지고 있는 것을 알고 있으므로, 이로부터 irreducible representation들은 $G$의 conjugacy class의 개수보다 많을 수 없다는 것을 안다. 뿐만 아니라, 이 inner product를 사용하면 우리는 임의의 representation $V$의 character $\rchi_V$와, 고정된 irreducible representation $V_i$의 character $\rchi_{V_i}$을 내적하여 $V$ 안에서 $V_i$의 multiplicity를 계산할 수 있다. 
+을 얻는다. 즉 [정의 4](#def4){: data-relation="required" }의 inner product에 대하여 irreducible character들은 orthonormal set이다. 우리는 $\mathbb{C}_\class(G)$가 $G$의 conjugacy class들의 개수만큼의 차원을 가지고 있는 것을 알고 있으므로, 이로부터 irreducible representation들은 $G$의 conjugacy class의 개수보다 많을 수 없다는 것을 안다. 뿐만 아니라, 이 inner product를 사용하면 우리는 임의의 representation $V$의 character $\rchi_V$와, 고정된 irreducible representation $V_i$의 character $\rchi_{V_i}$을 내적하여 $V$ 안에서 $V_i$의 multiplicity를 계산할 수 있다. 
 
 ## Regular representation
 
-이 섹션에서 우리는 [§유한군의 표현론, §§마슈케의 정리](/ko/math/representation_theory/representations_of_finite_groups#마슈케의-정리)에서 고려했던 Artin-Wedderburn decomposition을 character를 이용해 얻어낸다. 이를 위해, 우선 $\mathbb{C}[G]$는 자기자신 위에 정의된 left $\mathbb{C}[G]$-module이고 따라서 categorical equivalence
+이 섹션에서 우리는 [§유한군의 표현론, §§마슈케의 정리](/ko/math/representation_theory/representations_of_finite_groups#마슈케의-정리){: data-relation="weak" }에서 고려했던 Artin-Wedderburn decomposition을 character를 이용해 얻어낸다. 이를 위해, 우선 $\mathbb{C}[G]$는 자기자신 위에 정의된 left $\mathbb{C}[G]$-module이고 따라서 categorical equivalence
 
 $$\Rep_\mathbb{C}(G)\cong \lMod{\mathbb{C}[G]}$$
 
@@ -168,7 +168,7 @@ $$\langle\rchi_{\mathbb{C}[G]}, \rchi_{V_i}\rangle=\frac{1}{\lvert G\rvert}\sum_
 
 $$\mathbb{C}[G]\cong \bigoplus_{i=1}^r V_i^{\oplus\dim V_i}$$
 
-을 얻는다. 뿐만 아니라 $\mathbb{C}[G]$는 자기 자신 위에 곱셈으로 작용하고, 이 작용 하에서 [§유한군의 표현론, ⁋보조정리 8](/ko/math/representation_theory/representations_of_finite_groups#lem8)에 의하여 $V_i$는 $V_i$로만 간다는 것을 생각하면 각각의 $V_i^{\oplus\dim V_i}$이 정확하게 matrix algebra $\Mat_{d_i}(\mathbb{C})$라는 것을 알고,  Artin-Wedderburn theorem의 유일성으로부터 이것이 곧
+을 얻는다. 뿐만 아니라 $\mathbb{C}[G]$는 자기 자신 위에 곱셈으로 작용하고, 이 작용 하에서 [§유한군의 표현론, ⁋보조정리 8](/ko/math/representation_theory/representations_of_finite_groups#lem8){: data-relation="required" }에 의하여 $V_i$는 $V_i$로만 간다는 것을 생각하면 각각의 $V_i^{\oplus\dim V_i}$이 정확하게 matrix algebra $\Mat_{d_i}(\mathbb{C})$라는 것을 알고,  Artin-Wedderburn theorem의 유일성으로부터 이것이 곧
 
 $$\mathbb{C}[G]\cong \bigoplus_{i=1}^r\Mat_{d_i}(\mathbb{C})$$
 
@@ -207,7 +207,7 @@ $$h\cdot\rho_\phi(v)=\rho(h)\rho_\phi(v)=\rho(h)\left(\sum_{g\in G}\phi(g)\rho(g
 
 이제 우리는 이를 사용하여 모든 class function이 irreducible character들의 일차결합으로 나타난다는 것을 보인다. 즉 만일 class function $\phi$에 대하여, $\langle \rchi_V,\phi\rangle=0$이 모든 irreducible character $\rchi_V$에 대해 성립한다면 $\phi=0$이라는 것을 보여야 한다. 
 
-이를 위해 위의 보조정리를 class function $\phi$와 irreducible representation $\rho:G\rightarrow\Aut(V)$에 사용하자. $\phi$가 class function이므로 $\overline{\phi}$도 그러하고, 따라서 $\rho_{\overline{\phi}}$는 $G$-map이며 [§유한군의 표현론, ⁋보조정리 8](/ko/math/representation_theory/representations_of_finite_groups#lem8)에 의하여 $\rho_{\overline{\phi}}$는 $\lambda\id_V$의 꼴이다. 이제 여기에 trace를 취하면
+이를 위해 위의 보조정리를 class function $\phi$와 irreducible representation $\rho:G\rightarrow\Aut(V)$에 사용하자. $\phi$가 class function이므로 $\overline{\phi}$도 그러하고, 따라서 $\rho_{\overline{\phi}}$는 $G$-map이며 [§유한군의 표현론, ⁋보조정리 8](/ko/math/representation_theory/representations_of_finite_groups#lem8){: data-relation="required" }에 의하여 $\rho_{\overline{\phi}}$는 $\lambda\id_V$의 꼴이다. 이제 여기에 trace를 취하면
 
 $$(\dim V)\lambda=\tr(\rho_{\overline{\phi}})=\tr\left(\sum_{g\in G}\overline{\phi(g)}\rho(g)\right)=\sum_{g\in G}\overline{\phi(g)}\rchi_V(g)=\lvert G\rvert\langle \rchi_V,\phi\rangle=0$$
 
@@ -219,7 +219,7 @@ $$\left(\sum\overline{\phi(g)}g\right)\cdot \delta_e=\sum_{g\in G}\overline{\phi
 
 ## 예시: $S_3$
 
-우리는 이전 글부터 세운 이론을 살펴보는 예시로 이 글을 마무리한다. 우선 임의의 *abelian* group $G$의 irreducible representation $\rho:G\rightarrow\Aut(V)$에서는 각각의 $\rho(h)$가 $G$-map이므로 [§유한군의 표현론, ⁋보조정리 8](/ko/math/representation_theory/representations_of_finite_groups#lem8)에 의하여 scalar로 작용하고, 이로부터 $V$의 임의의 subspace가 subrepresentation이 되어 $V$가 $1$차원임을 안다. 따라서 우리의 이론을 테스트하기 위해서는 non-abelian group이 필요하다. 계산의 편의상 가장 작은 non-abelian group인 $S_3$을 생각하자. 명시적으로
+우리는 이전 글부터 세운 이론을 살펴보는 예시로 이 글을 마무리한다. 우선 임의의 *abelian* group $G$의 irreducible representation $\rho:G\rightarrow\Aut(V)$에서는 각각의 $\rho(h)$가 $G$-map이므로 [§유한군의 표현론, ⁋보조정리 8](/ko/math/representation_theory/representations_of_finite_groups#lem8){: data-relation="required" }에 의하여 scalar로 작용하고, 이로부터 $V$의 임의의 subspace가 subrepresentation이 되어 $V$가 $1$차원임을 안다. 따라서 우리의 이론을 테스트하기 위해서는 non-abelian group이 필요하다. 계산의 편의상 가장 작은 non-abelian group인 $S_3$을 생각하자. 명시적으로
 
 $$S_3=\{(\;),\,(1\;2),\,(1\;3),\,(2\;3),\,(1\;2\;3),\,(1\;3\;2)\}$$
 
@@ -282,7 +282,7 @@ $$V_\perm=V_0\oplus V_\std$$
 
 $$\rho_\perm((\;))=\begin{pmatrix}1&0&0\\0&1&0\\0&0&1\end{pmatrix},\quad \rho_\perm((1\;2))=\begin{pmatrix}0&1&0\\1&0&0\\0&0&1\end{pmatrix},\quad \rho_\perm((1\;2\;3))=\begin{pmatrix}0&1&0\\0&0&1\\1&0&0\end{pmatrix}$$
 
-이므로 $\rchi_\perm$은 $(3,1,0)$임을 알고 이제 [명제 2](#prop2)로부터 $\rchi_\perm=\rchi_0+\rchi_\std$이므로 $\rchi_\std$이 $(2,0,-1)$임을 알 수 있다. 이렇게 구한 세 개의 character들 
+이므로 $\rchi_\perm$은 $(3,1,0)$임을 알고 이제 [명제 2](#prop2){: data-relation="required" }로부터 $\rchi_\perm=\rchi_0+\rchi_\std$이므로 $\rchi_\std$이 $(2,0,-1)$임을 알 수 있다. 이렇게 구한 세 개의 character들 
 
 $$\rchi_0=(1,1,1),\qquad \rchi_\sgn=(1,-1,1),\qquad \rchi_\std=(2,0,-1)$$
 
