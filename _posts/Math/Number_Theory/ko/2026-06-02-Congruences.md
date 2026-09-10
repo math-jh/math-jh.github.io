@@ -14,7 +14,7 @@ weight: 5
 published: false
 ---
 
-정수론의 많은 문제는 "어떤 수로 나눈 나머지"만이 중요하다. 가우스는 이 관점을 *합동*이라는 산뜻한 언어로 정식화하여, 나머지에 관한 추론을 마치 등식처럼 다룰 수 있게 했다. 이 글에서는 합동의 정의와 연산, 그리고 [§유클리드 호제법과 Bézout 항등식](/ko/math/number_theory/euclidean_algorithm)에서 얻은 도구로 합동식에서의 소거와 역원을 다룬다.
+정수론의 많은 문제는 "어떤 수로 나눈 나머지"만이 중요하다. 가우스는 이 관점을 *합동*이라는 산뜻한 언어로 정식화하여, 나머지에 관한 추론을 마치 등식처럼 다룰 수 있게 했다. 이 글에서는 합동의 정의와 연산, 그리고 [§유클리드 호제법과 Bézout 항등식](/ko/math/number_theory/euclidean_algorithm){: data-relation="required" }에서 얻은 도구로 합동식에서의 소거와 역원을 다룬다.
 
 ## 합동
 
@@ -26,14 +26,14 @@ $$a \equiv b \pmod{n}$$
 으로 적는다. $n$을 *법<sub>modulus</sub>*이라 한다.
 :::
 
-[§나눗셈과 최대공약수, ⁋정리 3](/ko/math/number_theory/divisibility#thm3)에 의해 $a \equiv b \pmod n$인 것은 $a$와 $b$를 $n$으로 나눈 나머지가 같은 것과 동치이다. 즉 합동은 "나머지가 같음"을 그대로 옮긴 것이다.
+[§나눗셈과 최대공약수, ⁋정리 3](/ko/math/number_theory/divisibility#thm3){: data-relation="required" }에 의해 $a \equiv b \pmod n$인 것은 $a$와 $b$를 $n$으로 나눈 나머지가 같은 것과 동치이다. 즉 합동은 "나머지가 같음"을 그대로 옮긴 것이다.
 
 ::: 명제 2
 법 $n$에 대한 합동은 정수 위의 동치관계이다. 즉 reflexive($a \equiv a$), symmetric($a\equiv b \Rightarrow b \equiv a$), transitive($a \equiv b,\ b\equiv c \Rightarrow a \equiv c$)이다.
 :::
 
 ::: 증명
-$n \mid 0 = a - a$이므로 reflexive하다. $n \mid (a-b)$이면 $n \mid (b - a)$이므로 symmetric하다. $n \mid (a-b)$이고 $n \mid (b-c)$이면 [§나눗셈과 최대공약수, ⁋명제 2](/ko/math/number_theory/divisibility#prop2)의 선형결합 성질에 의해 $n \mid (a - c)$이므로 transitive하다.
+$n \mid 0 = a - a$이므로 reflexive하다. $n \mid (a-b)$이면 $n \mid (b - a)$이므로 symmetric하다. $n \mid (a-b)$이고 $n \mid (b-c)$이면 [§나눗셈과 최대공약수, ⁋명제 2](/ko/math/number_theory/divisibility#prop2){: data-relation="required" }의 선형결합 성질에 의해 $n \mid (a - c)$이므로 transitive하다.
 :::
 
 ## 합동의 연산
@@ -91,7 +91,7 @@ $\gcd(c, n) = 1$이면 $ca \equiv cb \pmod n$에서 $c$를 소거하여 $a \equi
 :::
 
 ::: 증명
-$ca \equiv cb$이면 정의에 의해 $n \mid c(a - b)$이다. $\gcd(c, n) = 1$이므로 [§유클리드 호제법과 Bézout 항등식, ⁋정리 3](/ko/math/number_theory/euclidean_algorithm#thm3)으로 $cx + ny = 1$인 정수 $x, y$가 존재한다. 이 등식의 양변에 $a - b$를 곱하면
+$ca \equiv cb$이면 정의에 의해 $n \mid c(a - b)$이다. $\gcd(c, n) = 1$이므로 [§유클리드 호제법과 Bézout 항등식, ⁋정리 3](/ko/math/number_theory/euclidean_algorithm#thm3){: data-relation="required" }으로 $cx + ny = 1$인 정수 $x, y$가 존재한다. 이 등식의 양변에 $a - b$를 곱하면
 
 $$\begin{aligned}
 a - b &= (cx + ny)(a - b) \\
@@ -112,7 +112,7 @@ $\gcd(a, n) = 1$이면 Bézout 항등식으로 $ax + ny = 1$인 정수 $x, y$가
 
 $$ax = 1 - ny \equiv 1 \pmod n$$
 
-이 되어 $x$가 $a$의 곱셈 역원이다. 거꾸로 $ax \equiv 1 \pmod n$인 $x$가 존재하면 어떤 정수 $y$에 대해 $ax - 1 = ny$, 곧 $ax - ny = 1$이다. $d = \gcd(a, n)$이라 하면 $d \mid a$이고 $d \mid n$이므로 좌변을 나누어 $d \mid 1$이고 ([§나눗셈과 최대공약수, ⁋명제 2](/ko/math/number_theory/divisibility#prop2)), 따라서 $d = 1$, 즉 $\gcd(a, n) = 1$이다.
+이 되어 $x$가 $a$의 곱셈 역원이다. 거꾸로 $ax \equiv 1 \pmod n$인 $x$가 존재하면 어떤 정수 $y$에 대해 $ax - 1 = ny$, 곧 $ax - ny = 1$이다. $d = \gcd(a, n)$이라 하면 $d \mid a$이고 $d \mid n$이므로 좌변을 나누어 $d \mid 1$이고 ([§나눗셈과 최대공약수, ⁋명제 2](/ko/math/number_theory/divisibility#prop2){: data-relation="required" }), 따라서 $d = 1$, 즉 $\gcd(a, n) = 1$이다.
 :::
 
 따라서 $\mathbb{Z}/n\mathbb{Z}$에서 곱셈 역원을 갖는 원소는 정확히 $n$과 서로소인 residue class들이다. $n = p$가 소수이면 $1, \ldots, p-1$이 모두 $p$와 서로소이므로 $0$이 아닌 모든 원소가 역원을 가지며, 이때 $\mathbb{Z}/p\mathbb{Z}$는 field를 이룬다. 역원이 존재할 때 그것은 법 $n$에 대해 유일하다.
@@ -126,7 +126,7 @@ $ax \equiv 1$이고 $ax' \equiv 1 \pmod n$이라 하자. 그럼
 
 $$ax \equiv ax' \pmod n$$
 
-이고, $\gcd(a, n) = 1$이므로 [명제 6](#prop6)으로 $a$를 소거하여 $x \equiv x' \pmod n$, 곧 $[x] = [x']$을 얻는다.
+이고, $\gcd(a, n) = 1$이므로 [명제 6](#prop6){: data-relation="required" }으로 $a$를 소거하여 $x \equiv x' \pmod n$, 곧 $[x] = [x']$을 얻는다.
 :::
 
 이 유일한 residue class를 $a$의 *법 $n$에서의 역원*이라 하고 $a^{-1} \pmod n$으로 적는다. 역원을 실제로 구하는 일은 Bézout 계수 $x$를 찾는 일, 곧 확장 유클리드 호제법을 돌리는 일과 같다.
