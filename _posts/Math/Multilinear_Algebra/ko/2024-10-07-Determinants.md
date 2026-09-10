@@ -19,7 +19,7 @@ weight: 11
 
 $$e_J=e_{j_1}\wedge e_{j_2}\wedge\cdots\wedge e_{j_k},\qquad j_1<\cdots < j_k, \quad J=\{j_1,\ldots, j_k\}$$
 
-의 꼴로 나타나는 원소 $e_J$들이 $\bigwedge(M)$의 basis가 되는 것을 확인했다. ([§텐서대수, ⁋명제 13](/ko/math/multilinear_algebra/tensor_algebras#prop13)) 특히, $\lvert J\rvert=n$을 만족하는 $J$들을 모아둔다면 이들은 $\bigwedge^n(M)$의 basis가 된다. 
+의 꼴로 나타나는 원소 $e_J$들이 $\bigwedge(M)$의 basis가 되는 것을 확인했다. ([§텐서대수, ⁋명제 13](/ko/math/multilinear_algebra/tensor_algebras#prop13){: data-relation="required" }) 특히, $\lvert J\rvert=n$을 만족하는 $J$들을 모아둔다면 이들은 $\bigwedge^n(M)$의 basis가 된다. 
 
 이제 $M$이 유한한 basis $e_1,\ldots, e_n$을 갖는다 하자. 그럼 $\bigwedge^n(M)$의 basis는 단 하나의 원소 $e_1\wedge\cdots\wedge e_n$ 뿐이다. 한편 임의의 $u\in\End_\rMod{A}(M)$에 대하여, $\bigwedge$의 functoriality로부터 $\bigwedge^n(u):\bigwedge^n(M)\rightarrow\bigwedge^n(M)$이 유도되며, 위의 논의로부터 이 linear map은 반드시 $x\mapsto \alpha x$의 꼴로 쓰여야 한다.
 
@@ -55,11 +55,11 @@ Free $A$-module $M$과 그 basis $e_1,\ldots, e_n$을 고정하면, 임의의 $M
 
 $$x_1\wedge \cdots\wedge x_n=\alpha e_1\wedge\cdots\wedge e_n$$
 
-이도록 하는 $\alpha$가 존재하며, 이를 $\det(x_1,\ldots, x_n)$과 같이 적는다. 이 값을 실제로 계산하기 위해서는 $x_i$들 각각을 $e_1,\ldots, e_n$에 대한 linear combination으로 나타낸 후 $e_i\wedge e_i=0$과 $e_i\wedge e_j=-e_j\wedge e_i$를 이용하여 이를 모두 정리해주면 된다. $A=\mathbb{K}$인 경우 이는 이미 [\[선형대수학\] §행렬식의 존재성과 유일성](/ko/math/linear_algebra/existence_and_uniqueness_of_determinant#lem2)에서 살펴본 것이다. 조금 더 자세히 설명하자면, 임의의 $X\in\Mat_n(A)$를 열벡터들을 이용해 $X=(x_1,\ldots, x_n)$으로 적을 경우, $u(e_i)=x_i$를 만족하는 유일한 $u\in\End_\rMod{A}(M)$에 대하여 $\det(u)$가 잘 정의되며, 이는 [따름정리 3](#cor3)의 증명에서 나온 식과 비교해보면 $\det (x_1,\ldots, x_n)=\det(u)$이다. 그럼 이로부터 [명제 2](#prop2)의 행렬 버전의 명제를 만들 수 있으며, 이를 계산하는 과정이 곧 [\[선형대수학\] §행렬식의 존재성과 유일성](/ko/math/linear_algebra/existence_and_uniqueness_of_determinant#lem2)이 된다. 특히 이로부터 $\det(u^\ast)=\det(u)$인 것을 알 수 있다.
+이도록 하는 $\alpha$가 존재하며, 이를 $\det(x_1,\ldots, x_n)$과 같이 적는다. 이 값을 실제로 계산하기 위해서는 $x_i$들 각각을 $e_1,\ldots, e_n$에 대한 linear combination으로 나타낸 후 $e_i\wedge e_i=0$과 $e_i\wedge e_j=-e_j\wedge e_i$를 이용하여 이를 모두 정리해주면 된다. $A=\mathbb{K}$인 경우 이는 이미 [\[선형대수학\] §행렬식의 존재성과 유일성](/ko/math/linear_algebra/existence_and_uniqueness_of_determinant#lem2){: data-relation="weak" }에서 살펴본 것이다. 조금 더 자세히 설명하자면, 임의의 $X\in\Mat_n(A)$를 열벡터들을 이용해 $X=(x_1,\ldots, x_n)$으로 적을 경우, $u(e_i)=x_i$를 만족하는 유일한 $u\in\End_\rMod{A}(M)$에 대하여 $\det(u)$가 잘 정의되며, 이는 [따름정리 3](#cor3){: data-relation="required" }의 증명에서 나온 식과 비교해보면 $\det (x_1,\ldots, x_n)=\det(u)$이다. 그럼 이로부터 [명제 2](#prop2){: data-relation="required" }의 행렬 버전의 명제를 만들 수 있으며, 이를 계산하는 과정이 곧 [\[선형대수학\] §행렬식의 존재성과 유일성](/ko/math/linear_algebra/existence_and_uniqueness_of_determinant#lem2){: data-relation="weak" }이 된다. 특히 이로부터 $\det(u^\ast)=\det(u)$인 것을 알 수 있다.
 
 ## 행렬의 소행렬식
 
-한편 행렬식을 계산하는 방법 중, 라플라스 전개를 이용하는 [\[선형대수학\] §행렬식의 존재성과 유일성, ⁋정리 12](/ko/math/linear_algebra/existence_and_uniqueness_of_determinant#thm12)이 있었는데, 이 계산 자체는 이미 다루었으므로 반복하지 않지만, 여기에서 등장했던 $\det A^{(i,j)}$들을 일반화할 수 있다.
+한편 행렬식을 계산하는 방법 중, 라플라스 전개를 이용하는 [\[선형대수학\] §행렬식의 존재성과 유일성, ⁋정리 12](/ko/math/linear_algebra/existence_and_uniqueness_of_determinant#thm12){: data-relation="weak" }이 있었는데, 이 계산 자체는 이미 다루었으므로 반복하지 않지만, 여기에서 등장했던 $\det A^{(i,j)}$들을 일반화할 수 있다.
 
 이를 위해 임의의 $X=(\xi_{ij})\in\Mat_{I\times J}$가 주어졌다 하자. $I$와 $J$ 위에 정의된 total ordering을 하나 고정하면, 임의의 유한한 부분집합 $H\subseteq I$, $K\subseteq J$가 주어질 때마다 이들로 만들어진 부분행렬 $X_{H,K}=(\xi_{i,j})_{i\in H,j\in K}$의 index에도 total order가 주어진다. 특히 만일 $\lvert H\rvert=\lvert K\rvert$인 경우를 생각하자. 그럼 다음의 보조정리는 자명하다.
 
@@ -120,7 +120,7 @@ $$x_P=\gamma_{P,Q}e_{j_1}\wedge\cdots\wedge e_{j_{n-p}}\wedge u(e_{i_1})\wedge\c
 
 $$\gamma_{P,Q}=(-1)^{\lvert S\rvert},\qquad S=\{(i,j)\in P\times Q\mid i< j\}$$
 
-으로 주어진다. 그럼 $X$의 정의와 [보조정리 4](#lem4)에 의해 
+으로 주어진다. 그럼 $X$의 정의와 [보조정리 4](#lem4){: data-relation="required" }에 의해 
 
 $$u(e_{i_1})\wedge\cdots\wedge u(e_{i_p})=\sum_{\lvert I\rvert=p}\det(X_{I,P})e_I$$
 
@@ -132,7 +132,7 @@ $$x_P=\gamma_{P,Q}\sum_{\lvert I\rvert=p}\det X_{I,P} e_Q\wedge e_I$$
 
 $$x_P=\det (X_{P,P} )e_1\wedge e_2\wedge\cdots\wedge e_n$$
 
-으로 쓸 수 있다. [명제 5](#prop5)에 의하여, 고정된 $p$에 대해 $\lvert P\rvert=p$를 만족하는 모든 $P$에 대해 $\det(X_{P,P})$를 모두 더한 것이 $\tr\left(\bigwedge^p(u)\right)$이므로 이로써 증명이 완료된다. 
+으로 쓸 수 있다. [명제 5](#prop5){: data-relation="required" }에 의하여, 고정된 $p$에 대해 $\lvert P\rvert=p$를 만족하는 모든 $P$에 대해 $\det(X_{P,P})$를 모두 더한 것이 $\tr\left(\bigwedge^p(u)\right)$이므로 이로써 증명이 완료된다. 
 :::
 
 특히 $\alpha=\beta=1$로 두면 $\tr(\bigwedge(u))=\det(\id_M+u)$를 얻는다. 
@@ -141,7 +141,7 @@ $$x_P=\det (X_{P,P} )e_1\wedge e_2\wedge\cdots\wedge e_n$$
 
 이제 우리는 특성다항식을 정의한다. 
 
-Polynomial algebra $A[\x]$와 canonical inclusion $\iota: A \hookrightarrow A[\x]$를 생각하면, extension of scalar를 통해 $\iota_!M=A[\x]\otimes_A M$ 위에 $A[\x]$-module의 구조가 정의된다. ([\[대수적 구조\] §스칼라의 변환, ⁋정의 3](/ko/math/algebraic_structures/change_of_base_ring#def3)) 뿐만 아니라, 임의의 $u\in\End_\rMod{A}(M)$이 주어질 때마다 $\iota_!u\in\End_\rMod{A[\x]}(\iota_!M)$ 또한 정의된다.
+Polynomial algebra $A[\x]$와 canonical inclusion $\iota: A \hookrightarrow A[\x]$를 생각하면, extension of scalar를 통해 $\iota_!M=A[\x]\otimes_A M$ 위에 $A[\x]$-module의 구조가 정의된다. ([\[대수적 구조\] §스칼라의 변환, ⁋정의 3](/ko/math/algebraic_structures/change_of_base_ring#def3){: data-relation="required" }) 뿐만 아니라, 임의의 $u\in\End_\rMod{A}(M)$이 주어질 때마다 $\iota_!u\in\End_\rMod{A[\x]}(\iota_!M)$ 또한 정의된다.
 
 임의의 $u\in\End_\rMod{A}(M)$에 대하여, 다음 표기법
 
@@ -206,7 +206,7 @@ $$\sum_k (\x-\iota_!u)\circ\left(\sum_{j=0}^{k-1} \x^j (\iota_!u)^{k-j-1}\right)
 으로 쓸 수 있으므로 증명이 완료된다. 
 :::
 
-한편, $\psi$의 행렬식을 생각하면 [따름정리 6](#cor6)으로부터 
+한편, $\psi$의 행렬식을 생각하면 [따름정리 6](#cor6){: data-relation="required" }으로부터 
 
 $$\det (\x-\iota_!u)=\sum_{k=0}^n (-1)^k\tr\left({\bigwedge}^k(\iota_!u)\right)\x^{n-k}$$
 
@@ -234,7 +234,7 @@ $$\chi_u(\x)\otimes_Ax=\chi_u(\x)(1\otimes_Ax)=\det(\x-\iota_!u)(1\otimes_Ax)$$
 
 $$\det(\x-\iota_!u)(1\otimes_Ax)=(\x-\iota_!u)(v(1\otimes_A x))$$
 
-으로 쓸 수 있고 따라서 [명제 7](#prop7)에 의해 원하는 결과를 얻는다.
+으로 쓸 수 있고 따라서 [명제 7](#prop7){: data-relation="required" }에 의해 원하는 결과를 얻는다.
 :::
 
 ---

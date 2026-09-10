@@ -56,11 +56,11 @@ Fixing a free $A$-module $M$ and its basis $e_1,\ldots, e_n$, for any elements $
 
 $$x_1\wedge \cdots\wedge x_n=\alpha e_1\wedge\cdots\wedge e_n,$$
 
-and we write this as $\det(x_1,\ldots, x_n)$. To compute this value explicitly, one expresses each $x_i$ as a linear combination of $e_1,\ldots, e_n$ and then simplifies using $e_i\wedge e_i=0$ and $e_i\wedge e_j=-e_j\wedge e_i$. In the case $A=\mathbb{K}$, this was already examined in [\[Linear Algebra\] §Existence and Uniqueness of the Determinant](/en/math/linear_algebra/existence_and_uniqueness_of_determinant#lem2). More precisely, for any $X\in\Mat_n(A)$, writing $X=(x_1,\ldots, x_n)$ using column vectors, there is a unique $u\in\End_\rMod{A}(M)$ satisfying $u(e_i)=x_i$, and $\det(u)$ is well-defined; comparing this with the expression appearing in the proof of [Corollary 3](#cor3), we see that $\det (x_1,\ldots, x_n)=\det(u)$. From this we obtain a matrix version of [Proposition 2](#prop2), and the process of computing it is exactly [\[Linear Algebra\] §Existence and Uniqueness of the Determinant](/en/math/linear_algebra/existence_and_uniqueness_of_determinant#lem2). In particular, we obtain $\det(u^\ast)=\det(u)$.
+and we write this as $\det(x_1,\ldots, x_n)$. To compute this value explicitly, one expresses each $x_i$ as a linear combination of $e_1,\ldots, e_n$ and then simplifies using $e_i\wedge e_i=0$ and $e_i\wedge e_j=-e_j\wedge e_i$. In the case $A=\mathbb{K}$, this was already examined in [\[Linear Algebra\] §Existence and Uniqueness of the Determinant](/en/math/linear_algebra/existence_and_uniqueness_of_determinant#lem2){: data-relation="weak" }. More precisely, for any $X\in\Mat_n(A)$, writing $X=(x_1,\ldots, x_n)$ using column vectors, there is a unique $u\in\End_\rMod{A}(M)$ satisfying $u(e_i)=x_i$, and $\det(u)$ is well-defined; comparing this with the expression appearing in the proof of [Corollary 3](#cor3){: data-relation="weak" }, we see that $\det (x_1,\ldots, x_n)=\det(u)$. From this we obtain a matrix version of [Proposition 2](#prop2){: data-relation="weak" }, and the process of computing it is exactly [\[Linear Algebra\] §Existence and Uniqueness of the Determinant](/en/math/linear_algebra/existence_and_uniqueness_of_determinant#lem2){: data-relation="weak" }. In particular, we obtain $\det(u^\ast)=\det(u)$.
 
 ## Minors of a Matrix
 
-Among methods for computing determinants, there is Laplace expansion, which was discussed in [\[Linear Algebra\] §Existence and Uniqueness of the Determinant, ⁋Theorem 12](/en/math/linear_algebra/existence_and_uniqueness_of_determinant#thm12). We will not repeat that computation since it was already covered, but we can generalize the $\det A^{(i,j)}$ that appeared there.
+Among methods for computing determinants, there is Laplace expansion, which was discussed in [\[Linear Algebra\] §Existence and Uniqueness of the Determinant, ⁋Theorem 12](/en/math/linear_algebra/existence_and_uniqueness_of_determinant#thm12){: data-relation="required" }. We will not repeat that computation since it was already covered, but we can generalize the $\det A^{(i,j)}$ that appeared there.
 
 To this end, suppose we are given an arbitrary $X=(\xi_{ij})\in\Mat_{I\times J}$. Fixing a total ordering on $I$ and $J$, whenever finite subsets $H\subseteq I$ and $K\subseteq J$ are given, the submatrix $X_{H,K}=(\xi_{i,j})_{i\in H,j\in K}$ also inherits a total order on its indices. In particular, consider the case where $\lvert H\rvert=\lvert K\rvert$. Then the following lemma is obvious.
 
@@ -117,7 +117,7 @@ Here $\gamma_{P,Q}$ is the sign arising from this reordering, given concretely b
 
 $$\gamma_{P,Q}=(-1)^{\lvert A\rvert},\qquad A=\{(p,q)\in P\times Q\mid p>q\}.$$
 
-Then by the definition of $X$ and [Lemma 4](#lem4),
+Then by the definition of $X$ and [Lemma 4](#lem4){: data-relation="required" },
 
 $$u(e_{i_1})\wedge\cdots\wedge u(e_{i_p})=\sum_{\lvert I\rvert=p}\det(X_{I,Q})e_Q,$$
 
@@ -129,7 +129,7 @@ However, since $\lvert I\rvert=p$ and $\lvert Q\rvert=n-p$, unless $I=P$ they al
 
 $$x_P=\det (X_{P,P} )e_1\wedge e_2\wedge\cdots\wedge e_n.$$
 
-By [Proposition 5](#prop5), for a fixed $p$, the sum of $\det(X_{p,p})$ over all $P$ satisfying $\lvert P\rvert=p$ equals $\tr\left(\bigwedge^k(u)\right)$, and thus the proof is complete.
+By [Proposition 5](#prop5){: data-relation="required" }, for a fixed $p$, the sum of $\det(X_{p,p})$ over all $P$ satisfying $\lvert P\rvert=p$ equals $\tr\left(\bigwedge^k(u)\right)$, and thus the proof is complete.
 :::
 
 In particular, setting $\alpha=\beta=1$ gives $\tr(\bigwedge(u))=\det(\id_M+u)$.
@@ -138,7 +138,7 @@ In particular, setting $\alpha=\beta=1$ gives $\tr(\bigwedge(u))=\det(\id_M+u)$.
 
 We now define the characteristic polynomial.
 
-Consider the polynomial algebra $A[\x]$ and the canonical inclusion $\iota: A \hookrightarrow A[\x]$. By extension of scalars, this defines an $A[\x]$-module structure on $\iota_!M=A[\x]\otimes_A M$. ([\[Algebraic Structures\] §Change of Base Ring, ⁋Definition 3](/en/math/algebraic_structures/change_of_base_ring#def3)) Moreover, whenever $u\in\End_\rMod{A}(M)$ is given, $\iota_!u\in\End_\rMod{A[\x]}(\iota_!M)$ is also defined.
+Consider the polynomial algebra $A[\x]$ and the canonical inclusion $\iota: A \hookrightarrow A[\x]$. By extension of scalars, this defines an $A[\x]$-module structure on $\iota_!M=A[\x]\otimes_A M$. ([\[Algebraic Structures\] §Change of Base Ring, ⁋Definition 3](/en/math/algebraic_structures/change_of_base_ring#def3){: data-relation="required" }) Moreover, whenever $u\in\End_\rMod{A}(M)$ is given, $\iota_!u\in\End_\rMod{A[\x]}(\iota_!M)$ is also defined.
 
 For any $u\in\End_\rMod{A}(M)$, let us introduce the notation
 
@@ -201,7 +201,7 @@ $$\sum_k (\x-\iota_!u)\circ\left(\sum_{j=0}^{k-1} \x^j (\iota_!u)^{k-j-1}\right)
 which completes the proof.
 :::
 
-On the other hand, considering the determinant of $\psi$, from [Corollary 6](#cor6) we obtain
+On the other hand, considering the determinant of $\psi$, from [Corollary 6](#cor6){: data-relation="required" } we obtain
 
 $$\det (\x-\iota_!u)=\sum_{k=0}^n (-1)^k\tr\left({\bigwedge}^k(\iota_!u)\right)\x^{n-k}.$$
 
@@ -227,7 +227,7 @@ But thinking of Laplace expansion, for any matrix $X$ and its cofactor matrix $Y
 
 $$\det(\x-\iota_!u)(1\otimes_Ax)=(\x-\iota_!u)(v(1\otimes_A x)),$$
 
-and therefore we obtain the desired result by [Proposition 7](#prop7).
+and therefore we obtain the desired result by [Proposition 7](#prop7){: data-relation="required" }.
 :::
 
 ---
