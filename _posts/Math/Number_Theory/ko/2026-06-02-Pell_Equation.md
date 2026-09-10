@@ -14,7 +14,7 @@ weight: 16
 published: false
 ---
 
-[§연분수](/ko/math/number_theory/continued_fractions)는 무리수를 유리수로 근사하는 도구였다. 그 가장 빛나는 응용이 펠 방정식 $x^2 - Dy^2 = 1$의 정수해를 모두 찾는 것이다. 이 방정식은 [§가우스 정수와 두 제곱수의 합](/ko/math/number_theory/gaussian_integers)에서 본 norm의 산술과 깊이 연결된다.
+[§연분수](/ko/math/number_theory/continued_fractions){: data-relation="required" }는 무리수를 유리수로 근사하는 도구였다. 그 가장 빛나는 응용이 펠 방정식 $x^2 - Dy^2 = 1$의 정수해를 모두 찾는 것이다. 이 방정식은 [§가우스 정수와 두 제곱수의 합](/ko/math/number_theory/gaussian_integers){: data-relation="weak" }에서 본 norm의 산술과 깊이 연결된다.
 
 ## 펠 방정식과 노름
 
@@ -35,7 +35,7 @@ published: false
 :::
 
 ::: 증명
-[§연분수, ⁋정리 3](/ko/math/number_theory/continued_fractions#thm3)에 의해 $\lvert \sqrt D - p/q\rvert < 1/q^2$인 유리수가 무한히 많다. 이런 $p, q$에 대해 $\lvert p^2 - Dq^2\rvert = \lvert p - q\sqrt D\rvert\lvert p + q\sqrt D\rvert < (2q\sqrt D + 1)/q$이 bounded이므로, $p^2 - Dq^2$이 같은 값 $k$를 갖는 해가 무한히 많다. 그중 $p, q$가 법 $\lvert k\rvert$에 대해 같은 coset인 두 해 $\alpha_1, \alpha_2$를 고르면, 비 $\alpha_1/\alpha_2$가 norm $1$인 자명하지 않은 정수해 $\mathbb{Z}[\sqrt D]$의 원소를 준다. 실제로 $\sqrt D$의 순환연분수의 한 주기에서 나오는 점근분수가 fundamental solution을 직접 산출한다.
+[§연분수, ⁋정리 3](/ko/math/number_theory/continued_fractions#thm3){: data-relation="required" }에 의해 $\lvert \sqrt D - p/q\rvert < 1/q^2$인 유리수가 무한히 많다. 이런 $p, q$에 대해 $\lvert p^2 - Dq^2\rvert = \lvert p - q\sqrt D\rvert\lvert p + q\sqrt D\rvert < (2q\sqrt D + 1)/q$이 bounded이므로, $p^2 - Dq^2$이 같은 값 $k$를 갖는 해가 무한히 많다. 그중 $p, q$가 법 $\lvert k\rvert$에 대해 같은 coset인 두 해 $\alpha_1, \alpha_2$를 고르면, 비 $\alpha_1/\alpha_2$가 norm $1$인 자명하지 않은 정수해 $\mathbb{Z}[\sqrt D]$의 원소를 준다. 실제로 $\sqrt D$의 순환연분수의 한 주기에서 나오는 점근분수가 fundamental solution을 직접 산출한다.
 :::
 
 자명하지 않은 양의 해 중 $x + y\sqrt D$가 가장 작은 것을 *fundamental solution<sub>기본해</sub>* $\varepsilon_1 = x_1 + y_1\sqrt D$라 한다.
@@ -126,7 +126,7 @@ $x^2 - Dy^2 = -1$이 정수해를 가지면 $D$는 $4$로 나눈 나머지가 $3
 :::
 
 ::: 증명
-$x^2 - Dy^2 = -1$이면 $x^2 + 1 = D y^2$이다. $p \mid D$인 홀소수 $p$를 잡으면 $p \mid x^2 + 1$, 곧 $x^2 \equiv -1 \pmod p$이므로 $-1$이 법 $p$의 이차잉여이다. [§이차 잉여, ⁋따름정리 5](/ko/math/number_theory/quadratic_residues#cor5)에 의해 이는 $p \equiv 1 \pmod 4$와 동치이다. 또 $y$는 홀수여야 하는데, 만일 $y$가 짝수이면 $Dy^2 \equiv 0 \pmod 4$이어서 $x^2 \equiv -1 \equiv 3 \pmod 4$가 되고 이는 불가능하기 때문이다. 그러면 $y^2 \equiv 1 \pmod 4$이므로 $D \equiv Dy^2 = x^2 + 1 \pmod 4$이고, $x^2 \equiv 0$ 또는 $1$이어서 $D \equiv 1$ 또는 $2 \pmod 4$, 특히 $D \not\equiv 3 \pmod 4$이다. 종합하면 $D$의 모든 홀소인수가 $1 \pmod 4$여서 $4$로 나눈 나머지가 $3$인 소수가 $D$의 소인수분해에 아예 나타나지 않고, [§가우스 정수와 두 제곱수의 합, ⁋정리 8](/ko/math/number_theory/gaussian_integers#thm8)에 의해 $D$는 두 제곱수의 합이다.
+$x^2 - Dy^2 = -1$이면 $x^2 + 1 = D y^2$이다. $p \mid D$인 홀소수 $p$를 잡으면 $p \mid x^2 + 1$, 곧 $x^2 \equiv -1 \pmod p$이므로 $-1$이 법 $p$의 이차잉여이다. [§이차 잉여, ⁋따름정리 5](/ko/math/number_theory/quadratic_residues#cor5){: data-relation="required" }에 의해 이는 $p \equiv 1 \pmod 4$와 동치이다. 또 $y$는 홀수여야 하는데, 만일 $y$가 짝수이면 $Dy^2 \equiv 0 \pmod 4$이어서 $x^2 \equiv -1 \equiv 3 \pmod 4$가 되고 이는 불가능하기 때문이다. 그러면 $y^2 \equiv 1 \pmod 4$이므로 $D \equiv Dy^2 = x^2 + 1 \pmod 4$이고, $x^2 \equiv 0$ 또는 $1$이어서 $D \equiv 1$ 또는 $2 \pmod 4$, 특히 $D \not\equiv 3 \pmod 4$이다. 종합하면 $D$의 모든 홀소인수가 $1 \pmod 4$여서 $4$로 나눈 나머지가 $3$인 소수가 $D$의 소인수분해에 아예 나타나지 않고, [§가우스 정수와 두 제곱수의 합, ⁋정리 8](/ko/math/number_theory/gaussian_integers#thm8){: data-relation="required" }에 의해 $D$는 두 제곱수의 합이다.
 :::
 
 위 조건은 필요조건일 뿐 충분조건은 아니다. 가령 $D = 34 = 25 + 9$는 두 제곱수의 합이고 유일한 홀소인수 $17$이 적격이지만, $x^2 - 34 y^2 = -1$은 해가 없다. 정확한 판정은 $\sqrt D$ 연분수의 최소 주기 길이 $\ell$이 홀수일 때 음의 펠 방정식이 풀리고 짝수이면 풀리지 않는다는 것이며, 풀리는 경우 $x^2 - Dy^2 = -1$의 가장 작은 양의 해 $\eta$가 norm $-1$을 갖고 $\eta^2$이 norm $1$ 펠 방정식의 fundamental solution $\varepsilon_1$이 된다.
@@ -171,7 +171,7 @@ $$\left\lvert \frac{x}{y} - \sqrt D \right\rvert < \frac{1}{2\sqrt D y^2}$$
 이다. 따라서 해 $(x_n, y_n)$의 비 $x_n/y_n$은 $\sqrt D$로 매우 빠르게 (오차가 $y_n^{-2}$ 규모로) 수렴한다. $D = 2$의 경우 $3/2, 17/12, 99/70, 577/408$이 차례로 $\sqrt2 = 1.41421356\ldots$에 접근하며, $577/408 = 1.41421568\ldots$은 이미 소수점 아래 다섯 자리까지 정확하다.
 :::
 
-정리 3은 펠 방정식의 해가 infinite cyclic group (자명한 부호를 곱하면 $\mathbb{Z} \times \mathbb{Z}/2\mathbb{Z}$의 구조) 을 이룸을 뜻한다. 이는 real quadratic field $\mathbb{Q}(\sqrt D)$의 정수환의 단원군에 관한 디리클레 단원정리의 가장 단순한 경우로, [§가우스 정수와 두 제곱수의 합](/ko/math/number_theory/gaussian_integers)에서 본 단원 $\pm 1, \pm i$가 유한했던 것과 대비된다. 두 글은 함께 대수적 정수론으로 들어가는 두 문(imaginary quadratic field와 real quadratic field)을 보여 준다.
+정리 3은 펠 방정식의 해가 infinite cyclic group (자명한 부호를 곱하면 $\mathbb{Z} \times \mathbb{Z}/2\mathbb{Z}$의 구조) 을 이룸을 뜻한다. 이는 real quadratic field $\mathbb{Q}(\sqrt D)$의 정수환의 단원군에 관한 디리클레 단원정리의 가장 단순한 경우로, [§가우스 정수와 두 제곱수의 합](/ko/math/number_theory/gaussian_integers){: data-relation="weak" }에서 본 단원 $\pm 1, \pm i$가 유한했던 것과 대비된다. 두 글은 함께 대수적 정수론으로 들어가는 두 문(imaginary quadratic field와 real quadratic field)을 보여 준다.
 
 ---
 
