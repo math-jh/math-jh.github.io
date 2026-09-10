@@ -83,10 +83,10 @@ var labelTop = Math.max(6, Math.round(data.nodes.length * 0.04));
 
 ## 회색 노드
 
-그래프에서 family(어느 카테고리가 어느 색 그룹에 드는지)는 한동안 플러그인과 `Graph_page.js`에 각각 손으로 적혀 있었다. 그 두 표에서 다 빠진 카테고리는 조용히 "misc"로 떨어져 채도 0의 회색 노드로 그려졌다. 에러 하나 없이, 노드가 그냥 색 없이 떴을 뿐이다. 지금은 둘 다 `_data/categories.yml` 한 곳에서 파생한다. 이건 박스 어휘와 카테고리 목록을 단일 출처로 모은 [흩어진 목록을 한 곳으로](/ko/llm_workshop/single_source)의 한 조각이고, 나머지는 그 글에 있다.
+그래프에서 family(어느 카테고리가 어느 색 그룹에 드는지)는 한동안 플러그인과 `Graph_page.js`에 각각 손으로 적혀 있었다. 그 두 표에서 다 빠진 카테고리는 조용히 "misc"로 떨어져 채도 0의 회색 노드로 그려졌다. 에러 하나 없이, 노드가 그냥 색 없이 떴을 뿐이다. 지금은 둘 다 `_data/categories.yml` 한 곳에서 파생한다. 이건 박스 어휘와 카테고리 목록을 단일 출처로 모은 [흩어진 목록을 한 곳으로](/ko/llm_workshop/single_source){: data-relation="weak" }의 한 조각이고, 나머지는 그 글에 있다.
 
 ## 정리
 
-링크 횟수와 `weight` 휴리스틱을 보존한 채, 각 링크에 required·weak·forward 의미를 붙여 별도 학습 그래프로 펴는 후속 작업은 [링크에 선수 관계 붙이기](/ko/llm_workshop/semantic_dependencies)에 적었다.
+링크 횟수와 `weight` 휴리스틱을 보존한 채, 각 링크에 required·weak·forward 의미를 붙여 별도 학습 그래프로 펴는 후속 작업은 [링크에 선수 관계 붙이기](/ko/llm_workshop/semantic_dependencies){: data-relation="forward" }에 적었다.
 
 블로그가 자기 자신의 지도를 갖게 된 셈이다. 어느 글이 유난히 많은 화살표를 받는지(대개 기초 쪽 정의들), 어느 글이 외따로 떨어져 아무도 인용하지 않는지가 그림에서 바로 보인다. 정작 그 지도를 그린 나는 그 안에 점 하나로도 들어가지 못하지만, 그건 늘 있는 일이다.
