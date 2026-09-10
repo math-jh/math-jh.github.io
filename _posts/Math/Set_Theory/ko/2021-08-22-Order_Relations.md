@@ -33,7 +33,7 @@ weight: 14
 이 경우, 우리는 $A$가 <em-ko>$R$에 의해 순서가 부여되었다</em-ko>고 하고, 종종 $A$를 *ordered set<sub>순서집합</sub>*이라고 부른다. 또, 동치관계 때와 비슷하게 $x\mathrel{R}y$를 $x\leq_{\tiny R}y$로 적는다. 
 
 ::: 예시 3
-이항관계 <phrase>$x=y$</phrase>는 order relation이다. 관계 <phrase>$x\subseteq y$</phrase> 또한 order relation이다. ([§순서쌍, ⁋명제 2](/ko/math/set_theory/ordered_pair#prop2)와 [§순서쌍, ⁋명제 3](/ko/math/set_theory/ordered_pair#prop3), 그리고 antisymmetry는 [§ZFC 공리계, ⁋The Axiom of Extensionality.](/ko/math/set_theory/zfc_axioms#axiom-extensionality))
+이항관계 <phrase>$x=y$</phrase>는 order relation이다. 관계 <phrase>$x\subseteq y$</phrase> 또한 order relation이다. ([§순서쌍, ⁋명제 2](/ko/math/set_theory/ordered_pair#prop2){: data-relation="weak" }와 [§순서쌍, ⁋명제 3](/ko/math/set_theory/ordered_pair#prop3){: data-relation="weak" }, 그리고 antisymmetry는 [§ZFC 공리계, ⁋The Axiom of Extensionality.](/ko/math/set_theory/zfc_axioms#axiom-extensionality){: data-relation="weak" })
 :::
 
 Ordered set은 $\leq$라는 관계가 추가적으로 정의된 집합이므로, 이들 사이의 함수를 생각할 때는 $\leq$ 또한 보존하는 함수를 주로 생각하게 된다. 특별히 다음을 정의한다.
@@ -44,7 +44,7 @@ Ordered set은 $\leq$라는 관계가 추가적으로 정의된 집합이므로,
 
 앞으로 ordered set들 사이에서 isomorphism이라 하면 항상 order isomorphism을 뜻하는 것으로 이해한다. 
 
-[§동치관계, ⁋명제 3](/ko/math/set_theory/equivalence_relations#prop3)과 비슷한 것을 order relation에 대해서도 할 수 있다.
+[§동치관계, ⁋명제 3](/ko/math/set_theory/equivalence_relations#prop3){: data-relation="weak" }과 비슷한 것을 order relation에 대해서도 할 수 있다.
 
 ::: 명제 5
 이항관계 $(R,A,A)$가 order relation인 것은 다음의 두 조건과 동치이다.
@@ -52,7 +52,7 @@ Ordered set은 $\leq$라는 관계가 추가적으로 정의된 집합이므로,
 $$R\circ R=R,\qquad R\cap R^{-1}=\Delta_A$$
 :::
 ::: 증명
-첫 번째 조건이 transitivity와 동등한 것은 [§동치관계, ⁋명제 3](/ko/math/set_theory/equivalence_relations#prop3)의 증명에서 이미 살펴보았다. 두 번째 조건에서 $\Delta_A\subseteq R\cap R^{-1}$은 reflexivity이고, 반대 포함 $R\cap R^{-1}\subseteq\Delta_A$는 antisymmetry이다.
+첫 번째 조건이 transitivity와 동등한 것은 [§동치관계, ⁋명제 3](/ko/math/set_theory/equivalence_relations#prop3){: data-relation="required" }의 증명에서 이미 살펴보았다. 두 번째 조건에서 $\Delta_A\subseteq R\cap R^{-1}$은 reflexivity이고, 반대 포함 $R\cap R^{-1}\subseteq\Delta_A$는 antisymmetry이다.
 :::
 
 ## 원순서관계
@@ -60,7 +60,7 @@ $$R\circ R=R,\qquad R\cap R^{-1}=\Delta_A$$
 우선 다음 예시를 살펴보자.
 
 ::: 예시 6
-함수 $f:A\rightarrow B$를 생각하고, $B$ 위에 order relation $\leq$가 정의되었다고 하자. 그럼 우리는 함수로부터 동치관계를 유도하듯, $A$ 위에 다음과 같이 정의된 관계 $\preceq$를 정의할 수 있다. ([§동치관계의 예시들, ⁋정의 2](/ko/math/set_theory/examples_of_equivalence#def2))
+함수 $f:A\rightarrow B$를 생각하고, $B$ 위에 order relation $\leq$가 정의되었다고 하자. 그럼 우리는 함수로부터 동치관계를 유도하듯, $A$ 위에 다음과 같이 정의된 관계 $\preceq$를 정의할 수 있다. ([§동치관계의 예시들, ⁋정의 2](/ko/math/set_theory/examples_of_equivalence#def2){: data-relation="weak" })
 
 $$x\preceq y\iff f(x)\leq f(y)$$
 

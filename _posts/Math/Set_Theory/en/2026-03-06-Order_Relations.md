@@ -33,7 +33,7 @@ A binary relation $(R,A,A)$ is called an *order relation* if $R$ is reflexive, t
 In this case, we say that $A$ is *ordered by* $R$, and we often call $A$ an *ordered set*. Also, as with equivalence relations, we write $x\mathrel{R}y$ as $x\leq_{\tiny R}y$.
 
 ::: Example 3
-The binary relation <phrase>$x=y$</phrase> is an order relation. The relation <phrase>$x\subseteq y$</phrase> is also an order relation. ([§Ordered Pairs, ⁋Proposition 2](/en/math/set_theory/ordered_pair#prop2) and [§Ordered Pairs, ⁋Proposition 3](/en/math/set_theory/ordered_pair#prop3))
+The binary relation <phrase>$x=y$</phrase> is an order relation. The relation <phrase>$x\subseteq y$</phrase> is also an order relation. ([§Ordered Pairs, ⁋Proposition 2](/en/math/set_theory/ordered_pair#prop2){: data-relation="weak" } and [§Ordered Pairs, ⁋Proposition 3](/en/math/set_theory/ordered_pair#prop3){: data-relation="weak" })
 :::
 
 Since an ordered set is a set equipped with an additional relation $\leq$, when we consider functions between such sets we usually focus on those that also preserve $\leq$. In particular, we define the following.
@@ -44,7 +44,7 @@ If for two order relations $(R, A, A)$ and $(R', A',A')$ there exists a bijectio
 
 Henceforth, when we speak of an isomorphism between ordered sets, we shall always mean an order isomorphism.
 
-We can do for order relations something analogous to [§Equivalence Relations, ⁋Proposition 3](/en/math/set_theory/equivalence_relations#prop3).
+We can do for order relations something analogous to [§Equivalence Relations, ⁋Proposition 3](/en/math/set_theory/equivalence_relations#prop3){: data-relation="weak" }.
 
 ::: Proposition 5
 A binary relation $(R,A,A)$ is an order relation if and only if the following two conditions hold.
@@ -52,7 +52,7 @@ A binary relation $(R,A,A)$ is an order relation if and only if the following tw
 $$R\circ R=R,\qquad R\cap R^{-1}=\Delta_A$$
 :::
 ::: Proof
-That the first condition is equivalent to transitivity was already shown in the proof of [§Equivalence Relations, ⁋Proposition 3](/en/math/set_theory/equivalence_relations#prop3). That the second condition combines reflexivity and antisymmetry can also be easily seen.
+That the first condition is equivalent to transitivity was already shown in the proof of [§Equivalence Relations, ⁋Proposition 3](/en/math/set_theory/equivalence_relations#prop3){: data-relation="required" }. That the second condition combines reflexivity and antisymmetry can also be easily seen.
 :::
 
 ## Preorder Relations
@@ -60,7 +60,7 @@ That the first condition is equivalent to transitivity was already shown in the 
 First let us look at the following example.
 
 ::: Example 6
-Consider a function $f:A\rightarrow B$, and suppose an order relation $\leq$ is defined on $B$. Then, just as we derive an equivalence relation from a function, we can define a relation $\preceq$ on $A$ as follows. ([§Examples of Equivalence Relations, ⁋Definition 2](/en/math/set_theory/examples_of_equivalence#def2))
+Consider a function $f:A\rightarrow B$, and suppose an order relation $\leq$ is defined on $B$. Then, just as we derive an equivalence relation from a function, we can define a relation $\preceq$ on $A$ as follows. ([§Examples of Equivalence Relations, ⁋Definition 2](/en/math/set_theory/examples_of_equivalence#def2){: data-relation="weak" })
 
 $$x\preceq y\iff f(x)\leq f(y)$$
 
