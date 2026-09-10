@@ -16,13 +16,13 @@ translated_at: 2026-06-26T22:00:01+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-06-26T22:00:01+00:00
 ---
-We investigated in [§Eigenspace Decomposition](/en/math/linear_algebra/eigenspace_decomposition) when a matrix is diagonalizable. Additionally, if an inner product is given on the space, we can explore whether these eigenvectors can be made mutually orthogonal—that is, whether diagonalization through an orthonormal basis is possible.
+We investigated in [§Eigenspace Decomposition](/en/math/linear_algebra/eigenspace_decomposition){: data-relation="weak" } when a matrix is diagonalizable. Additionally, if an inner product is given on the space, we can explore whether these eigenvectors can be made mutually orthogonal—that is, whether diagonalization through an orthonormal basis is possible.
 
-In this post, we show that the answer to this question is the self-adjoint operator. As we saw in [§Inner Product Spaces](/en/math/linear_algebra/inner_product_spaces), the inner product depends heavily on the base field, so we divide this theorem into the cases where the base field is $\mathbb{R}$ and $\mathbb{C}$, treating the latter separately in [§Complex Spectral Theorem](/en/math/linear_algebra/complex_spectral_theorem).
+In this post, we show that the answer to this question is the self-adjoint operator. As we saw in [§Inner Product Spaces](/en/math/linear_algebra/inner_product_spaces){: data-relation="required" }, the inner product depends heavily on the base field, so we divide this theorem into the cases where the base field is $\mathbb{R}$ and $\mathbb{C}$, treating the latter separately in [§Complex Spectral Theorem](/en/math/linear_algebra/complex_spectral_theorem){: data-relation="forward" }.
 
 ## Self-Adjoint Operator
 
-In [§Inner Product Spaces](/en/math/linear_algebra/inner_product_spaces), we defined the adjoint $L^t:V\rightarrow V$ of a linear operator $L:V\rightarrow V$ on an $\mathbb{R}$-inner product space $V$ as the operator obtained by translating the dual $L^\ast$ via the isomorphism $V\cong V^\ast$ given by the inner product. This is the unique operator satisfying $\langle Lv,w\rangle=\langle v,L^t w\rangle$ for all $v,w\in V$. We pay special attention to operators that coincide with their own adjoint.
+In [§Inner Product Spaces](/en/math/linear_algebra/inner_product_spaces){: data-relation="required" }, we defined the adjoint $L^t:V\rightarrow V$ of a linear operator $L:V\rightarrow V$ on an $\mathbb{R}$-inner product space $V$ as the operator obtained by translating the dual $L^\ast$ via the isomorphism $V\cong V^\ast$ given by the inner product. This is the unique operator satisfying $\langle Lv,w\rangle=\langle v,L^t w\rangle$ for all $v,w\in V$. We pay special attention to operators that coincide with their own adjoint.
 
 ::: Definition 1
 A linear operator $L:V\rightarrow V$ on an $\mathbb{R}$-inner product space $V$ is called *self-adjoint* if $L=L^t$, that is,
@@ -40,7 +40,7 @@ The key fact in the diagonalization of a self-adjoint operator is that the eigen
 All eigenvalues of a real symmetric matrix $A$ are real. That is, all roots of the characteristic polynomial of $A$ are real.
 :::
 ::: Proof
-The characteristic polynomial of $A$ is a polynomial of degree $n$ with real coefficients, and by [§Characteristic Polynomial, ⁋Theorem 8](/en/math/linear_algebra/characteristic_polynomial#thm8), this polynomial has $n$ roots $\lambda$ when extended to $\mathbb{C}$.
+The characteristic polynomial of $A$ is a polynomial of degree $n$ with real coefficients, and by [§Characteristic Polynomial, ⁋Theorem 8](/en/math/linear_algebra/characteristic_polynomial#thm8){: data-relation="required" }, this polynomial has $n$ roots $\lambda$ when extended to $\mathbb{C}$.
 
 Now consider an eigenvector $z\in\mathbb{C}^n$ corresponding to such a root, and let $\bar z$ be the vector obtained by taking the complex conjugate of each component of $z$. Consider the complex number
 
@@ -63,7 +63,7 @@ The necessity of moving the polynomial to $\mathbb{C}$ for the proof of this pro
 A self-adjoint operator $L:V\rightarrow V$ on a nonzero $\mathbb{R}$-inner product space $V$ always has an eigenvector.
 :::
 ::: Proof
-Choosing an orthonormal basis of $V$, the matrix representation $A$ of $L$ is a real symmetric matrix. Since $\dim V\geq 1$, the characteristic polynomial of $A$ has degree at least $1$, and by the fundamental theorem of algebra it has a root in $\mathbb{C}$. By [Lemma 2](#lem2), this root is real, so $A$ has a real eigenvalue $\lambda$. Then $\lambda I-A$ is singular, so there exists a nonzero $v\in\mathbb{R}^n$ satisfying $(\lambda I-A)v=0$, and this is an eigenvector of $L$.
+Choosing an orthonormal basis of $V$, the matrix representation $A$ of $L$ is a real symmetric matrix. Since $\dim V\geq 1$, the characteristic polynomial of $A$ has degree at least $1$, and by the fundamental theorem of algebra it has a root in $\mathbb{C}$. By [Lemma 2](#lem2){: data-relation="required" }, this root is real, so $A$ has a real eigenvalue $\lambda$. Then $\lambda I-A$ is singular, so there exists a nonzero $v\in\mathbb{R}^n$ satisfying $(\lambda I-A)v=0$, and this is an eigenvector of $L$.
 :::
 
 ## Spectral Theorem
@@ -87,9 +87,9 @@ We are now ready to prove the spectral theorem.
 For a self-adjoint operator $L:V\rightarrow V$ on an $\mathbb{R}$-inner product space $V$, there exists an orthonormal basis of $V$ consisting of eigenvectors of $L$. In particular, all of these eigenvalues are real.
 :::
 ::: Proof
-We prove this by induction on $\dim V$. The case $\dim V=0$ is trivial. Suppose $\dim V\geq 1$. By [Corollary 3](#cor3), $L$ has an eigenvector, and dividing by its norm we obtain an eigenvector $v_1$ with $\lVert v_1\rVert=1$. Its eigenvalue $\lambda_1$ is real by [Lemma 2](#lem2).
+We prove this by induction on $\dim V$. The case $\dim V=0$ is trivial. Suppose $\dim V\geq 1$. By [Corollary 3](#cor3){: data-relation="required" }, $L$ has an eigenvector, and dividing by its norm we obtain an eigenvector $v_1$ with $\lVert v_1\rVert=1$. Its eigenvalue $\lambda_1$ is real by [Lemma 2](#lem2){: data-relation="required" }.
 
-Let $U=\span v_1$. Then $L(U)\subseteq U$, so by [Lemma 4](#lem4), $L(U^\perp)\subseteq U^\perp$. On the other hand, as we saw in the discussion after [§Inner Product Spaces, ⁋Theorem 9](/en/math/linear_algebra/inner_product_spaces#thm9), we have $V=U\oplus U^\perp$ and $\dim U^\perp=\dim V-1$. Moreover, the restriction $L\vert_{U^\perp}:U^\perp\rightarrow U^\perp$ still satisfies $\langle Lw,w'\rangle=\langle w,Lw'\rangle$ for all $w,w'\in U^\perp$, so it is again self-adjoint on $U^\perp$. Therefore, by the inductive hypothesis, there exists an orthonormal basis $\{v_2,\ldots, v_n\}$ of $U^\perp$ consisting of eigenvectors of $L\vert_{U^\perp}$.
+Let $U=\span v_1$. Then $L(U)\subseteq U$, so by [Lemma 4](#lem4){: data-relation="required" }, $L(U^\perp)\subseteq U^\perp$. On the other hand, as we saw in the discussion after [§Inner Product Spaces, ⁋Theorem 9](/en/math/linear_algebra/inner_product_spaces#thm9){: data-relation="required" }, we have $V=U\oplus U^\perp$ and $\dim U^\perp=\dim V-1$. Moreover, the restriction $L\vert_{U^\perp}:U^\perp\rightarrow U^\perp$ still satisfies $\langle Lw,w'\rangle=\langle w,Lw'\rangle$ for all $w,w'\in U^\perp$, so it is again self-adjoint on $U^\perp$. Therefore, by the inductive hypothesis, there exists an orthonormal basis $\{v_2,\ldots, v_n\}$ of $U^\perp$ consisting of eigenvectors of $L\vert_{U^\perp}$.
 
 These vectors are also eigenvectors of $L$, and since $v_1\in U$ and $v_2,\ldots, v_n\in U^\perp$, the vector $v_1$ is orthogonal to the rest. Therefore $\{v_1,v_2,\ldots, v_n\}$ is an orthonormal basis of $V$ consisting of eigenvectors of $L$.
 :::
@@ -104,7 +104,7 @@ $$A=QDQ^t$$
 holds. Here the diagonal entries of $D$ are the eigenvalues of $A$, and the columns of $Q$ are the corresponding orthonormal eigenvectors.
 :::
 ::: Proof
-Viewing $A$ as a self-adjoint operator on $\mathbb{R}^n$, by [Theorem 5](#thm5) there exists an orthonormal basis $\{v_1,\ldots, v_n\}$ consisting of eigenvectors of $A$. Let $Av_i=\lambda_iv_i$, and consider the matrix $Q=(v_1\mid\cdots\mid v_n)$ having $v_i$ as columns. Since the columns of $Q$ are orthonormal, $Q$ is an orthogonal matrix. ([§Inner Product Spaces, ⁋Definition 7](/en/math/linear_algebra/inner_product_spaces#def7)) Then
+Viewing $A$ as a self-adjoint operator on $\mathbb{R}^n$, by [Theorem 5](#thm5){: data-relation="required" } there exists an orthonormal basis $\{v_1,\ldots, v_n\}$ consisting of eigenvectors of $A$. Let $Av_i=\lambda_iv_i$, and consider the matrix $Q=(v_1\mid\cdots\mid v_n)$ having $v_i$ as columns. Since the columns of $Q$ are orthonormal, $Q$ is an orthogonal matrix. ([§Inner Product Spaces, ⁋Definition 7](/en/math/linear_algebra/inner_product_spaces#def7){: data-relation="weak" }) Then
 
 $$AQ=(Av_1\mid\cdots\mid Av_n)=(\lambda_1v_1\mid\cdots\mid\lambda_nv_n)=QD$$
 
@@ -121,7 +121,7 @@ Since $L$ is self-adjoint,
 
 $$\lambda\langle v,w\rangle=\langle Lv,w\rangle=\langle v,Lw\rangle=\mu\langle v,w\rangle$$
 
-and thus $(\lambda-\mu)\langle v,w\rangle=0$. Since $\lambda\neq\mu$, we have $\langle v,w\rangle=0$. Grouping the orthonormal basis from [Theorem 5](#thm5) by eigenvalues, we obtain an orthonormal basis for each eigenspace, and by the orthogonality just shown, distinct eigenspaces are orthogonal.
+and thus $(\lambda-\mu)\langle v,w\rangle=0$. Since $\lambda\neq\mu$, we have $\langle v,w\rangle=0$. Grouping the orthonormal basis from [Theorem 5](#thm5){: data-relation="required" } by eigenvalues, we obtain an orthonormal basis for each eigenspace, and by the orthogonality just shown, distinct eigenspaces are orthogonal.
 :::
 
 ## Positive Definite Operator
@@ -136,14 +136,14 @@ A self-adjoint operator $L:V\rightarrow V$ on an $\mathbb{R}$-inner product spac
 A self-adjoint operator $L$ on an $\mathbb{R}$-inner product space $V$ is positive semidefinite if and only if all eigenvalues of $L$ are nonnegative, and positive definite if and only if all eigenvalues of $L$ are positive.
 :::
 ::: Proof
-By [Theorem 5](#thm5), choose an orthonormal basis $\{v_1,\ldots, v_n\}$ consisting of eigenvectors of $L$, and let $Lv_i=\lambda_iv_i$. For any $v=\sum_i a_iv_i$,
+By [Theorem 5](#thm5){: data-relation="required" }, choose an orthonormal basis $\{v_1,\ldots, v_n\}$ consisting of eigenvectors of $L$, and let $Lv_i=\lambda_iv_i$. For any $v=\sum_i a_iv_i$,
 
 $$\langle Lv,v\rangle=\left\langle\sum_i a_i\lambda_iv_i,\sum_j a_jv_j\right\rangle=\sum_i\lambda_ia_i^2$$
 
 The last equality follows from $\langle v_i,v_j\rangle=\delta_{ij}$. If all $\lambda_i\geq 0$, then this value is always nonnegative, and conversely if some $\lambda_i<0$, then for $v=v_i$ we have $\langle Lv_i,v_i\rangle=\lambda_i<0$. Thus positive semidefiniteness is equivalent to all eigenvalues being nonnegative. The equivalence for positive definiteness—that $\sum_i\lambda_ia_i^2>0$ for all $0\neq v$ is equivalent to all $\lambda_i>0$—is verified in the same way.
 :::
 
-The matrix of a positive definite operator also admits a concise decomposition via a triangular matrix. In fact, this decomposition is a simplified form of the LU decomposition ([§Gaussian Elimination, ⁋Definition 8](/en/math/linear_algebra/Gaussian_elimination#def8)) for general square matrices, specialized to symmetric positive definite matrices: only the $L$ factor needs to be computed, since the $U$ factor is determined automatically, thus halving the computational cost.
+The matrix of a positive definite operator also admits a concise decomposition via a triangular matrix. In fact, this decomposition is a simplified form of the LU decomposition ([§Gaussian Elimination, ⁋Definition 8](/en/math/linear_algebra/Gaussian_elimination#def8){: data-relation="weak" }) for general square matrices, specialized to symmetric positive definite matrices: only the $L$ factor needs to be computed, since the $U$ factor is determined automatically, thus halving the computational cost.
 
 ::: Proposition 10 (Cholesky Decomposition)
 For a positive definite real symmetric matrix $A$, there exists a unique lower triangular matrix $L$ with all positive diagonal entries such that $A=LL^t$.
