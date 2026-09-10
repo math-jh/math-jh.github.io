@@ -15,7 +15,7 @@ translated_at: 2026-07-14T06:00:04+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-07-14T06:00:04+00:00
 ---
-In this post we organize the two most fundamental classes of elements in the multiplicative structure of a ring: the *unit*, which possesses a multiplicative inverse, and the *zero divisor*, which has a partner multiplying to $0$. Both concepts have already appeared implicitly in many places. An integral domain was defined as a commutative ring with no zero divisors ([\[Algebraic Structures\] §Field of Fractions, ⁋Definition 5](/en/math/algebraic_structures/field_of_fractions#def5)), and a field was a division ring in which every nonzero element is a unit ([\[Algebraic Structures\] §Field of Fractions, ⁋Definition 3](/en/math/algebraic_structures/field_of_fractions#def3)). Here we formally define the unit, verify that its collection forms a group, show that units and zero divisors are mutually exclusive, and prove that in a finite commutative ring every element that is not a zero divisor is automatically a unit. As an immediate corollary we obtain that every finite integral domain is a field.
+In this post we organize the two most fundamental classes of elements in the multiplicative structure of a ring: the *unit*, which possesses a multiplicative inverse, and the *zero divisor*, which has a partner multiplying to $0$. Both concepts have already appeared implicitly in many places. An integral domain was defined as a commutative ring with no zero divisors ([\[Algebraic Structures\] §Field of Fractions, ⁋Definition 5](/en/math/algebraic_structures/field_of_fractions#def5){: data-relation="weak" }), and a field was a division ring in which every nonzero element is a unit ([\[Algebraic Structures\] §Field of Fractions, ⁋Definition 3](/en/math/algebraic_structures/field_of_fractions#def3){: data-relation="weak" }). Here we formally define the unit, verify that its collection forms a group, show that units and zero divisors are mutually exclusive, and prove that in a finite commutative ring every element that is not a zero divisor is automatically a unit. As an immediate corollary we obtain that every finite integral domain is a field.
 
 Unless otherwise stated, $A$ denotes a ring with identity $1\neq 0$; commutativity is assumed only where explicitly needed.
 
@@ -40,14 +40,14 @@ and similarly $(u'^{-1}u^{-1})(uu')=1$, so $uu'\in A^\times$ and its inverse is 
 ::: Example 2
 In the ring $\mathbb{Z}$, the only integers $u,v$ satisfying $uv=1$ are $u=v=1$ or $u=v=-1$, so $\mathbb{Z}^\times=\{1,-1\}$.
 
-In any division ring $A$, every nonzero element has an inverse by definition, so $A^\times=A\setminus\{0\}$ ([\[Algebraic Structures\] §Field of Fractions, ⁋Definition 3](/en/math/algebraic_structures/field_of_fractions#def3)). In particular, for a field $\mathbb{K}$, the set $\mathbb{K}^\times=\mathbb{K}\setminus\{0\}$ is an abelian group under multiplication.
+In any division ring $A$, every nonzero element has an inverse by definition, so $A^\times=A\setminus\{0\}$ ([\[Algebraic Structures\] §Field of Fractions, ⁋Definition 3](/en/math/algebraic_structures/field_of_fractions#def3){: data-relation="weak" }). In particular, for a field $\mathbb{K}$, the set $\mathbb{K}^\times=\mathbb{K}\setminus\{0\}$ is an abelian group under multiplication.
 
 One subtlety is that a unit in a ring need not remain a unit in a given subring. For example, $2\in\mathbb{Q}$ lies in $\mathbb{Q}^\times$, yet in $\mathbb{Z}$ there is no integer $v$ with $2v=1$, so $2\not\in\mathbb{Z}^\times$.
 :::
 
 ## Zero Divisors and Regular Elements
 
-In the multiplicative structure, the opposite extreme from a unit may be said to be $0$. Extending this, we examine elements that multiply to $0$, namely zero divisors. ([\[Algebraic Structures\] §Field of Fractions, ⁋Definition 5](/en/math/algebraic_structures/field_of_fractions#def5)) Let us first refine the definition a little further.
+In the multiplicative structure, the opposite extreme from a unit may be said to be $0$. Extending this, we examine elements that multiply to $0$, namely zero divisors. ([\[Algebraic Structures\] §Field of Fractions, ⁋Definition 5](/en/math/algebraic_structures/field_of_fractions#def5){: data-relation="weak" }) Let us first refine the definition a little further.
 
 ::: Definition 3
 For an element $a\in A$ of a ring $A$, we define the following.
@@ -57,7 +57,7 @@ For an element $a\in A$ of a ring $A$, we define the following.
 3. An element that is not a zero divisor is called a *regular element* or a non-zero-divisor.
 :::
 
-[\[Algebraic Structures\] §Field of Fractions, ⁋Definition 5](/en/math/algebraic_structures/field_of_fractions#def5) does not distinguish between left and right zero divisors, and encompasses both notions. In particular, in a commutative ring this distinction vanishes, so omitting the direction causes no confusion.
+[\[Algebraic Structures\] §Field of Fractions, ⁋Definition 5](/en/math/algebraic_structures/field_of_fractions#def5){: data-relation="weak" } does not distinguish between left and right zero divisors, and encompasses both notions. In particular, in a commutative ring this distinction vanishes, so omitting the direction causes no confusion.
 
 By definition, $0$ itself is a zero divisor: whenever $A\neq 0$, multiplying $0$ by any nonzero element (for instance $1$) yields $0$. The contrapositive shows that every regular element must be nonzero.
 
@@ -74,19 +74,19 @@ $$b=1\cdot b=(u^{-1}u)b=u^{-1}(ub)=u^{-1}\cdot 0=0$$
 so $b=0$, a contradiction. A similar argument applies assuming $bu=0$, and therefore $u$ is a regular element.
 :::
 
-[Proposition 4](#prop4) shows that every unit is regular, but the converse fails in general. For example, in $\mathbb{Z}$ the element $2$ is easily seen to be regular, yet it is not a unit. ([Example 2](#ex2))
+[Proposition 4](#prop4){: data-relation="required" } shows that every unit is regular, but the converse fails in general. For example, in $\mathbb{Z}$ the element $2$ is easily seen to be regular, yet it is not a unit. ([Example 2](#ex2){: data-relation="weak" })
 
-However, if the ring is *finite*, the converse does hold. This rests essentially on the definition of a finite set ([\[Set Theory\] §Natural Numbers and Infinite Sets, ⁋Definition 1](/en/math/set_theory/natural_numbers#def1)): a function from a finite set to itself is automatically bijective as soon as it is either injective or surjective.
+However, if the ring is *finite*, the converse does hold. This rests essentially on the definition of a finite set ([\[Set Theory\] §Natural Numbers and Infinite Sets, ⁋Definition 1](/en/math/set_theory/natural_numbers#def1){: data-relation="weak" }): a function from a finite set to itself is automatically bijective as soon as it is either injective or surjective.
 
 ::: Theorem 5
 In a finite ring $A$, an element is a regular element if and only if it is a unit.
 :::
 ::: Proof
-By [Proposition 4](#prop4) every unit is regular, so it suffices to show that a regular element is a unit. Let $a\in A$ be regular, and consider the left multiplication map
+By [Proposition 4](#prop4){: data-relation="required" } every unit is regular, so it suffices to show that a regular element is a unit. Let $a\in A$ be regular, and consider the left multiplication map
 
 $$\lambda_a:A\rightarrow A;\qquad x\mapsto ax$$
 
-If $\lambda_a(x)=\lambda_a(y)$, then $a(x-y)=0$, and since $a$ is regular we have $x-y=0$, i.e. $x=y$. Thus $\lambda_a$ is injective. But $A$ is finite, and an injective self-map of a finite set is surjective; hence $\lambda_a$ is surjective. Therefore there exists $v\in A$ with $\lambda_a(v)=1$, which means $av=1$. In the same way, surjectivity of the right multiplication map yields a left inverse for $a$, and the argument immediately following [Definition 1](#def1) shows that these two inverses must coincide.
+If $\lambda_a(x)=\lambda_a(y)$, then $a(x-y)=0$, and since $a$ is regular we have $x-y=0$, i.e. $x=y$. Thus $\lambda_a$ is injective. But $A$ is finite, and an injective self-map of a finite set is surjective; hence $\lambda_a$ is surjective. Therefore there exists $v\in A$ with $\lambda_a(v)=1$, which means $av=1$. In the same way, surjectivity of the right multiplication map yields a left inverse for $a$, and the argument immediately following [Definition 1](#def1){: data-relation="required" } shows that these two inverses must coincide.
 :::
 
 The most important corollary of this theorem concerns integral domains.
@@ -95,7 +95,7 @@ The most important corollary of this theorem concerns integral domains.
 Every finite integral domain is a field.
 :::
 ::: Proof
-By definition any finite integral domain $A$ is commutative and satisfies $0\neq 1$. ([\[Algebraic Structures\] §Field of Fractions, ⁋Definition 5](/en/math/algebraic_structures/field_of_fractions#def5)) To show further that $A$ is a field, we must verify that every nonzero element is a unit. Since an integral domain has no zero divisors other than $0$, any nonzero element $a$ is regular and hence a unit by [Theorem 5](#thm5).
+By definition any finite integral domain $A$ is commutative and satisfies $0\neq 1$. ([\[Algebraic Structures\] §Field of Fractions, ⁋Definition 5](/en/math/algebraic_structures/field_of_fractions#def5){: data-relation="required" }) To show further that $A$ is a field, we must verify that every nonzero element is a unit. Since an integral domain has no zero divisors other than $0$, any nonzero element $a$ is regular and hence a unit by [Theorem 5](#thm5){: data-relation="required" }.
 :::
 
 ## Examples
@@ -117,9 +117,9 @@ On the other hand, if $\gcd(a,n)=d>1$ and $a+n\mathbb{Z}\neq 0+n\mathbb{Z}$, the
 
 $$(a+n\mathbb{Z})(n/d+n\mathbb{Z})=a\cdot(n/d)+n\mathbb{Z}=(a/d)n+n\mathbb{Z}=0+n\mathbb{Z}$$
 
-Hence every nonzero element of $\mathbb{Z}/n\mathbb{Z}$ is either a unit or a zero divisor, and this classification again illustrates [Theorem 5](#thm5).
+Hence every nonzero element of $\mathbb{Z}/n\mathbb{Z}$ is either a unit or a zero divisor, and this classification again illustrates [Theorem 5](#thm5){: data-relation="weak" }.
 
-In particular, when $n=p$ is prime, the integers $1,\ldots,p-1$ are all coprime to $p$, so $(\mathbb{Z}/p\mathbb{Z})^\times=\mathbb{Z}/p\mathbb{Z}\setminus\{0+p\mathbb{Z}\}$ and $\mathbb{Z}/p\mathbb{Z}$ is a finite integral domain with no zero divisors. By [Corollary 6](#cor6) it is a field, namely the *prime field* $\mathbb{F}_p$ with $p$ elements ([\[Field Theory\] §Fields, §§Prime Fields](/en/math/field_theory/fields#prime-fields)).
+In particular, when $n=p$ is prime, the integers $1,\ldots,p-1$ are all coprime to $p$, so $(\mathbb{Z}/p\mathbb{Z})^\times=\mathbb{Z}/p\mathbb{Z}\setminus\{0+p\mathbb{Z}\}$ and $\mathbb{Z}/p\mathbb{Z}$ is a finite integral domain with no zero divisors. By [Corollary 6](#cor6){: data-relation="required" } it is a field, namely the *prime field* $\mathbb{F}_p$ with $p$ elements ([\[Field Theory\] §Fields, §§Prime Fields](/en/math/field_theory/fields#prime-fields){: data-relation="weak" }).
 :::
 
 Meanwhile, the unit group of a product ring is determined componentwise, because multiplication in a product ring is computed componentwise.
@@ -148,7 +148,7 @@ Consider the ring $\Mat_n(R)$ of $n\times n$ matrices with entries in a ring $R$
 
 $$\Mat_n(R)^\times=\GL(n;R)$$
 
-([\[Multilinear Algebra\] §Matrices, ⁋Definition 1](/en/math/multilinear_algebra/matrices#def1)). It is known that when $R$ is a commutative ring, a matrix $M\in \Mat_n(R)$ is invertible if and only if its determinant $\det M$ lies in $R^\times$. ([\[Multilinear Algebra\] §Determinants, ⁋Corollary 3](/en/math/multilinear_algebra/determinants#cor3)) Hence in this case
+([\[Multilinear Algebra\] §Matrices, ⁋Definition 1](/en/math/multilinear_algebra/matrices#def1){: data-relation="weak" }). It is known that when $R$ is a commutative ring, a matrix $M\in \Mat_n(R)$ is invertible if and only if its determinant $\det M$ lies in $R^\times$. ([\[Multilinear Algebra\] §Determinants, ⁋Corollary 3](/en/math/multilinear_algebra/determinants#cor3){: data-relation="required" }) Hence in this case
 
 $$\GL(n;R)=\{M\in \Mat_n(R)\mid\det M\in R^\times\}$$
 
@@ -158,7 +158,7 @@ When $n\geq 2$, the ring $\Mat_n(R)$ contains nontrivial zero divisors, so the d
 
 $$E_{11}=\begin{pmatrix}1&0\\0&0\end{pmatrix},\qquad E_{12}=\begin{pmatrix}0&1\\0&0\end{pmatrix}$$
 
-satisfy $E_{12}E_{11}=0$ while $E_{12}\neq 0$ and $E_{11}\neq 0$; thus both are zero divisors and hence not invertible by [Proposition 4](#prop4).
+satisfy $E_{12}E_{11}=0$ while $E_{12}\neq 0$ and $E_{11}\neq 0$; thus both are zero divisors and hence not invertible by [Proposition 4](#prop4){: data-relation="required" }.
 :::
 
 ---
