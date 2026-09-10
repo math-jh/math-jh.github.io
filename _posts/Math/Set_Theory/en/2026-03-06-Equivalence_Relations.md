@@ -75,7 +75,7 @@ By definition, $R(x)$ is the set of elements that are regarded as equivalent to 
 ::: Example 5
 We have already seen that <phrase>$x=y$</phrase> is an equivalence relation on a set $A$. In this relation, the equivalence class of $x$ is the set $\{x\}$. In the same example, <phrase>$x\in A$ and $y\in A$</phrase> was also an equivalence relation, and in this case the equivalence class of $x$ becomes the whole set $A$.
 
-In the preceding [Example 2](#ex2) we said that $\Delta_A$ is the *smallest* and $A\times A$ is the *largest*; however, rather than comparing them by set inclusion, it is more common to say that $\Delta_A$ is the *finest* equivalence relation and $A\times A$ is the *coarsest* equivalence relation from the above point of view. ([§Sum of Sets, ⁋Definition 1](/en/math/set_theory/sum_of_sets#def1))
+In the preceding [Example 2](#ex2){: data-relation="weak" } we said that $\Delta_A$ is the *smallest* and $A\times A$ is the *largest*; however, rather than comparing them by set inclusion, it is more common to say that $\Delta_A$ is the *finest* equivalence relation and $A\times A$ is the *coarsest* equivalence relation from the above point of view. ([§Sum of Sets, ⁋Definition 1](/en/math/set_theory/sum_of_sets#def1){: data-relation="weak" })
 :::
 
 ::: Lemma 6
@@ -84,7 +84,7 @@ For an equivalence relation $(R,A,A)$, define $p:A\rightarrow A/R$ by $x\mapsto 
 ::: Proof
 First, it is not difficult to show that the map $p$ defined by the above formula is indeed a function. Here we only prove the equivalence of the two statements.
 
-First, assume that $x\sim_{\tiny R} y$. Then from $y\in [x]_R=R(x)$ we have $\{y\}\subseteq R(x)$, and therefore by [§Operations on Binary Relations, ⁋Proposition 6](/en/math/set_theory/operation_of_binary_relations#prop6) and [Proposition 3](#prop3)
+First, assume that $x\sim_{\tiny R} y$. Then from $y\in [x]_R=R(x)$ we have $\{y\}\subseteq R(x)$, and therefore by [§Operations on Binary Relations, ⁋Proposition 6](/en/math/set_theory/operation_of_binary_relations#prop6){: data-relation="required" } and [Proposition 3](#prop3){: data-relation="required" }
 
 $$R(y)\subseteq R(R(x))=(R\circ R)(x)=R(x)$$
 
