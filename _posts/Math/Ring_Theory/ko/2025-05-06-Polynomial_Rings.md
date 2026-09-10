@@ -17,7 +17,7 @@ weight: 4
 이번 글에서 $A$는 항상 commutative ring이다.
 :::
 
-우리는 [\[대수적 구조\] §대수, ⁋정의 7](/ko/math/algebraic_structures/algebras#def7)에서 임의의 (commutative) ring $A$에 대하여 polynomial algebra $A[\x_i]_{i\in I}$를 정의하였다. 이는 $A$-algebra 구조를 갖지만, 어차피 $A[\x_i]_{i\in I}$ 위에 정의된 $A$의 스칼라곱은 $A[\x_i]_{i\in I}$를 ring으로 보았을 때, inclusion $A\hookrightarrow A[\x_i]_{i\in I}$으로부터 오는 것이므로 $A[\x_i]_{i\in I}$의 성질을 살펴보기 위해서는 $A[\x_i]_{i\in I}$를 ring으로 생각하는 것만으로 충분하다. 
+우리는 [\[대수적 구조\] §대수, ⁋정의 7](/ko/math/algebraic_structures/algebras#def7){: data-relation="required" }에서 임의의 (commutative) ring $A$에 대하여 polynomial algebra $A[\x_i]_{i\in I}$를 정의하였다. 이는 $A$-algebra 구조를 갖지만, 어차피 $A[\x_i]_{i\in I}$ 위에 정의된 $A$의 스칼라곱은 $A[\x_i]_{i\in I}$를 ring으로 보았을 때, inclusion $A\hookrightarrow A[\x_i]_{i\in I}$으로부터 오는 것이므로 $A[\x_i]_{i\in I}$의 성질을 살펴보기 위해서는 $A[\x_i]_{i\in I}$를 ring으로 생각하는 것만으로 충분하다. 
 
 ## 다항식의 차수
 
@@ -94,7 +94,7 @@ Integral domain $A$에 대하여, 다음이 성립한다.
 3. $A[\x]$는 integral domain이다. 
 :::
 
-이제 다시 일반적인 경우를 생각하자. 임의의 두 다항식 $u,v\in A[\x_i]_{i\in I}$가 주어졌다 하면, 이들 다항식에서 등장하는 미지수는 어차피 유한하므로 $uv$를 계산할 때에는 $A[\x_i]_{i\in I}$ 대신, 유한집합 $J\subseteq I$를 택하여 이를 $A[\x_j]_{j\in J}$를 보아도 충분하다. 그럼 이 때 $A[\x_j]_{j\in J}$가 integral domain인 것은 [보조정리 3](#lem3)과 다음의 isomorphism
+이제 다시 일반적인 경우를 생각하자. 임의의 두 다항식 $u,v\in A[\x_i]_{i\in I}$가 주어졌다 하면, 이들 다항식에서 등장하는 미지수는 어차피 유한하므로 $uv$를 계산할 때에는 $A[\x_i]_{i\in I}$ 대신, 유한집합 $J\subseteq I$를 택하여 이를 $A[\x_j]_{j\in J}$를 보아도 충분하다. 그럼 이 때 $A[\x_j]_{j\in J}$가 integral domain인 것은 [보조정리 3](#lem3){: data-relation="required" }과 다음의 isomorphism
 
 $$A[\x_1,\x_2]\cong (A[\x_1])[\x_2]$$
 
@@ -150,7 +150,7 @@ $$b_n^k u(\x)=(b_n^{k-1}a_m\x^{m-n}+q_1(\x))v(\x)+r(\x)$$
 
 $$u=qv+r,\qquad \deg r < n$$
 
-을 만족하는 $q,r$을 유일하게 결정할 수 있다. 뿐만 아니라, 이 경우 polynomial ring $\mathbb{K}[\x]$는 [보조정리 3](#lem3)에 의하여 integral domain이고, 따라서 $N:\mathbb{K}[\x] \rightarrow \mathbb{Z}_{\geq 0}$를 
+을 만족하는 $q,r$을 유일하게 결정할 수 있다. 뿐만 아니라, 이 경우 polynomial ring $\mathbb{K}[\x]$는 [보조정리 3](#lem3){: data-relation="required" }에 의하여 integral domain이고, 따라서 $N:\mathbb{K}[\x] \rightarrow \mathbb{Z}_{\geq 0}$를 
 
 $$N: u\mapsto \deg(u)\qquad \text{단, $N(0)=0$}$$
 
@@ -160,17 +160,17 @@ $$N: u\mapsto \deg(u)\qquad \text{단, $N(0)=0$}$$
 임의의 field $\mathbb{K}$에 대하여, $\mathbb{K}[\x]$는 Euclidean domain이다. 
 :::
 
-특히 Euclidean domain 위에서는 최대공약수의 개념이 잘 정의되며, 이와 관련하여 Bézout lemma 또한 성립한다. ([§정역, ⁋정리 7](/ko/math/ring_theory/integral_domains#thm7))
+특히 Euclidean domain 위에서는 최대공약수의 개념이 잘 정의되며, 이와 관련하여 Bézout lemma 또한 성립한다. ([§정역, ⁋정리 7](/ko/math/ring_theory/integral_domains#thm7){: data-relation="weak" })
 
-앞서 $\mathbb{K}[\x]$에서 $\mathbb{K}$의 임의의 (non-zero) 원소들의 image가 $\mathbb{K}[\x]$의 unit인 것을 살펴보았다. ([보조정리 3](#lem3)) 한편 Euclidean domain에서 어떠한 원소가 다른 한 원소를 나누는지의 여부는 Euclidean algorithm을 돌려서 알아낼 수 있으므로, 상수가 아닌 임의의 $u\in \mathbb{K}[\x]$가 irreducible인 것은 $u$가 $1\leq \deg(v)<\deg(u)$를 만족하는 임의의 $v\in \mathbb{K}[\x]$에 의해 나누어떨어지지 않는 것과 동치이다. 
+앞서 $\mathbb{K}[\x]$에서 $\mathbb{K}$의 임의의 (non-zero) 원소들의 image가 $\mathbb{K}[\x]$의 unit인 것을 살펴보았다. ([보조정리 3](#lem3){: data-relation="required" }) 한편 Euclidean domain에서 어떠한 원소가 다른 한 원소를 나누는지의 여부는 Euclidean algorithm을 돌려서 알아낼 수 있으므로, 상수가 아닌 임의의 $u\in \mathbb{K}[\x]$가 irreducible인 것은 $u$가 $1\leq \deg(v)<\deg(u)$를 만족하는 임의의 $v\in \mathbb{K}[\x]$에 의해 나누어떨어지지 않는 것과 동치이다. 
 
-한편 [명제 6](#prop6)과 [§정역, ⁋정리 19](/ko/math/ring_theory/integral_domains#thm19)에 의하여 $\mathbb{K}[\x]$는 UFD이며, 따라서 $\mathbb{K}[\x]$의 irreducible element 등을 정의할 수 있다. 한편 $\mathbb{K}[\x]$의 unit은 정확히 $\mathbb{K}$의 unit과 동일하므로, 임의의 irreducible polynomial $u$는 (정의에 의해) $\deg(u)\geq 1$을 만족하며, $u$가 irreducible이므로 만일 $v\mid u$라면 $v$는 상수 다항식이거나 $u$의 상수배이다. 특히, 상수가 아닌 공통인수를 갖는 두 irreducible polynomial은 서로의 상수배여야만 하므로, 서로 다른 두 *monic* irreducible polynomial은 서로소이다. 이와 같이 $\mathbb{K}[\x]$의 $0$이 아닌 임의의 다항식은, leading coefficient와 monic irreducible polynomial들의 곱으로 유일하게 나타낼 수 있다. 
+한편 [명제 6](#prop6){: data-relation="required" }과 [§정역, ⁋정리 19](/ko/math/ring_theory/integral_domains#thm19){: data-relation="required" }에 의하여 $\mathbb{K}[\x]$는 UFD이며, 따라서 $\mathbb{K}[\x]$의 irreducible element 등을 정의할 수 있다. 한편 $\mathbb{K}[\x]$의 unit은 정확히 $\mathbb{K}$의 unit과 동일하므로, 임의의 irreducible polynomial $u$는 (정의에 의해) $\deg(u)\geq 1$을 만족하며, $u$가 irreducible이므로 만일 $v\mid u$라면 $v$는 상수 다항식이거나 $u$의 상수배이다. 특히, 상수가 아닌 공통인수를 갖는 두 irreducible polynomial은 서로의 상수배여야만 하므로, 서로 다른 두 *monic* irreducible polynomial은 서로소이다. 이와 같이 $\mathbb{K}[\x]$의 $0$이 아닌 임의의 다항식은, leading coefficient와 monic irreducible polynomial들의 곱으로 유일하게 나타낼 수 있다. 
 
 ::: 명제 7
 임의의 다항식 $u\in A[\x]$와 $a\in A$에 대하여, $u(\x)$를 $\x-a$로 나눈 나머지는 $u(a)$이다. 따라서, $u$가 해 $a$를 갖는 것과 $\x-a$가 $A[\x]$ 안에서 $u$의 약수인 것이 동치이다. 
 :::
 
-이에 대한 증명은 [명제 5](#prop5)를 monic polynomial $v(\x)=\x-a$에 적용하면 되며, 이는 사실 중학교 때부터 익숙한 결과이다. 또 다른 결과로, 만일 $u$가 해 $a$를 갖는다면 $u$는 반드시 다음의 꼴
+이에 대한 증명은 [명제 5](#prop5){: data-relation="required" }를 monic polynomial $v(\x)=\x-a$에 적용하면 되며, 이는 사실 중학교 때부터 익숙한 결과이다. 또 다른 결과로, 만일 $u$가 해 $a$를 갖는다면 $u$는 반드시 다음의 꼴
 
 $$u(\x)=(\x-a)^p v(\x),\qquad v(a)\neq 0$$
 
@@ -230,7 +230,7 @@ $$u=b_1 u_1 + \cdots + b_n u_n$$
 유일성은 위의 논증에 의해 자명하고, 남는 것은 $u$에 각각의 $a_i$를 대입하여 그 값이 $b_i$가 나오는 것을 확인하는 것 뿐이다. 만일 $j\neq i$라면 $u_j$의 분자에 인수 $\x-a_i$가 등장하므로 $u_j(a_i)=0$이고, $u_i(a_i)=1$이므로 $u(a_i)=b_i$를 얻는다. 
 :::
 
-한편, 중근을 찾아내는 방법 중 유용한 것은 주어진 다항식을 미분하는 것이다. 우리는 대수적으로 derivation이 무엇인지를 정의할 수 있으나 ([\[다중선형대수학\] §미분](/ko/math/multilinear_algebra/derivations)) 이 카테고리에서는 이러한 논의 없이 정의로서 $D: A[\x] \rightarrow A[\x]$를 다음의 식
+한편, 중근을 찾아내는 방법 중 유용한 것은 주어진 다항식을 미분하는 것이다. 우리는 대수적으로 derivation이 무엇인지를 정의할 수 있으나 ([\[다중선형대수학\] §미분](/ko/math/multilinear_algebra/derivations){: data-relation="weak" }) 이 카테고리에서는 이러한 논의 없이 정의로서 $D: A[\x] \rightarrow A[\x]$를 다음의 식
 
 $$D:\left(u(\x)=\sum_{i=0}^n a_i\x^i\right)\mapsto \left((Du)(\x)=\sum_{i=1}^n i.a_i\x^{i-1}\right)\tag{$\ast$}$$
 
@@ -242,7 +242,7 @@ $$i.a_i=\underbrace{a_i+\cdots+a_i}_\text{\scriptsize$i$ times}$$
 
 $$D(uv)=(Du)v+u(Dv)$$
 
-이며, 이는 [\[다중선형대수학\] §미분](/ko/math/multilinear_algebra/derivations)에서는 derivation의 정의이지만 위의 식 ($\ast$)를 정의로 받아들인다면 직접 계산을 통해 확인할 수 있다. 
+이며, 이는 [\[다중선형대수학\] §미분](/ko/math/multilinear_algebra/derivations){: data-relation="weak" }에서는 derivation의 정의이지만 위의 식 ($\ast$)를 정의로 받아들인다면 직접 계산을 통해 확인할 수 있다. 
 
 ::: 명제 11
 임의의 다항식 $u \in A[\x]$에 대하여, $u$의 해 $a \in A$가 중근이 아니기 위한 필요충분조건은 $a$가 $Du$의 해가 아닌 것이다. 
@@ -288,7 +288,7 @@ $$w(\x)=\sum_{k=0}^mv_k(x_1,\ldots, x_{n-1})\x_n^k$$
 
 $$\{a\in H_n\mid w(a)\neq 0\}$$
 
-은, $H_n$이 무한집합이라는 사실과 [명제 9](#prop9) 이후의 논증, 그리고 [\[집합론\] §자연수와 무한집합, ⁋명제 13](/ko/math/set_theory/natural_numbers#prop13)로부터
+은, $H_n$이 무한집합이라는 사실과 [명제 9](#prop9){: data-relation="required" } 이후의 논증, 그리고 [\[집합론\] §자연수와 무한집합, ⁋명제 13](/ko/math/set_theory/natural_numbers#prop13){: data-relation="required" }로부터
 
 $$\lvert H\rvert\geq \lvert H_u\rvert\geq \lvert H_{v_m}\rvert\lvert H_n\rvert=\lvert H\rvert$$
 
@@ -301,7 +301,7 @@ $$\lvert H\rvert\geq \lvert H_u\rvert\geq \lvert H_{v_m}\rvert\lvert H_n\rvert=\
 
 임의의 ring homomorphism $\phi:A \rightarrow B$가 주어졌다 하면, 임의의 $u\in A[\x_i]_{i\in I}$는 $\phi$를 통해 $B[\x_i]_{i\in I}$의 원소로 볼 수 있다.
 
-특별히 $A$가 integral domain이고 $\phi$가 canonical inclusion $A \hookrightarrow \Frac(A)$인 경우를 생각하자. 그럼 $\Frac(A)$는 field이므로 [명제 6](#prop6)에 의하여 $(\Frac A)[\x]$는 Euclidean domain이고, 따라서 임의의 $u\in A[\x]$를 $(\Frac A)[\x]$로 본다면 $u$는 적어도 $(\Frac A)[\x]$에서는 인수분해가 가능하다. 그렇다면 여기에서 실행한 인수분해가 $A[\x]$에서는 어떻게 반영되는지를 살펴보는 것이 당연한 순서일 것이다. 
+특별히 $A$가 integral domain이고 $\phi$가 canonical inclusion $A \hookrightarrow \Frac(A)$인 경우를 생각하자. 그럼 $\Frac(A)$는 field이므로 [명제 6](#prop6){: data-relation="required" }에 의하여 $(\Frac A)[\x]$는 Euclidean domain이고, 따라서 임의의 $u\in A[\x]$를 $(\Frac A)[\x]$로 본다면 $u$는 적어도 $(\Frac A)[\x]$에서는 인수분해가 가능하다. 그렇다면 여기에서 실행한 인수분해가 $A[\x]$에서는 어떻게 반영되는지를 살펴보는 것이 당연한 순서일 것이다. 
 
 ::: 명제 14 (Gauss)
 UFD $A$와 그 field of fraction $\Frac(A)$, 그리고 $A[\x]$의 원소 $u$를 생각하자. 만일 $u$가 $(\Frac A)[\x]$에서 reducible이라면, $u$는 $A[\x]$에서도 reducible이다.
@@ -315,11 +315,11 @@ $$u(\x)=\tilde{v}_1(\x)\tilde{v}_2(\x),\qquad \tilde{v}_i\in (\Frac A)[\x]$$
 
 $$a u(\x)=v_1(\x)v_2(\x)$$
 
-이도록 하는 $v_i\in A[\x]$들이 존재한다. 만일 $a$가 unit이라면 더 증명할 것이 없으므로, $a$가 unit이 아니라 가정하자. 그럼 $a=p_1\cdots p_r$이도록 하는 irreducible element $p_i\in A$들이 존재한다. 이 때, [§정역, ⁋명제 17](/ko/math/ring_theory/integral_domains#prop17)에 의하여 $(p_i)$는 $A$의 prime ideal이며, 따라서 
+이도록 하는 $v_i\in A[\x]$들이 존재한다. 만일 $a$가 unit이라면 더 증명할 것이 없으므로, $a$가 unit이 아니라 가정하자. 그럼 $a=p_1\cdots p_r$이도록 하는 irreducible element $p_i\in A$들이 존재한다. 이 때, [§정역, ⁋명제 17](/ko/math/ring_theory/integral_domains#prop17){: data-relation="required" }에 의하여 $(p_i)$는 $A$의 prime ideal이며, 따라서 
 
 $$(A/p_iA)[\x]\cong A[\x]/p_iA[\x]$$
 
-는 [명제 4](#prop4)에 의해 integral domain이다. 따라서 등식 $au=v_1v_2$를 $p_iA[\x]$로 mod out 하고 나면, $v_1$ 혹은 $v_2$가 $(A/p_iA)[\x]$에서 $0$이 되어야 하는 것을 안다. 즉, $v_1$ 혹은 $v_2$ 중 하나의 계수들은 모두 $p_i$의 배수이며, 따라서 이 $p_i$를 약분하여 $A[\x]$의 또 다른 polynomial을 얻을 수 있다. 이제 이를 모든 $p_i$에 대해 적용하면 원하는 결과를 얻는다.
+는 [명제 4](#prop4){: data-relation="required" }에 의해 integral domain이다. 따라서 등식 $au=v_1v_2$를 $p_iA[\x]$로 mod out 하고 나면, $v_1$ 혹은 $v_2$가 $(A/p_iA)[\x]$에서 $0$이 되어야 하는 것을 안다. 즉, $v_1$ 혹은 $v_2$ 중 하나의 계수들은 모두 $p_i$의 배수이며, 따라서 이 $p_i$를 약분하여 $A[\x]$의 또 다른 polynomial을 얻을 수 있다. 이제 이를 모든 $p_i$에 대해 적용하면 원하는 결과를 얻는다.
 :::
 
 이로부터 다음을 얻는다. 
@@ -328,7 +328,7 @@ $$(A/p_iA)[\x]\cong A[\x]/p_iA[\x]$$
 UFD $A$와 그 field of fraction $\Frac A$, 다항식 $u(\x) \in A[\x]$를 생각하고 $u(\x)$의 계수들의 최대공약수를 $1$이라 하자. 그럼 $u(\x)$가 $A[\x]$에서 irreducible인 것과 $u(\x)$가 $(\Frac A)[\x]$에서 irreducible인 것이 동치이다.
 :::
 ::: 증명
-[명제 14](#prop14)에 의하여, $u(\x)$가 $(\Frac A)[\x]$에서 reducible이면, $A[\x]$에서도 reducible하다. 
+[명제 14](#prop14){: data-relation="required" }에 의하여, $u(\x)$가 $(\Frac A)[\x]$에서 reducible이면, $A[\x]$에서도 reducible하다. 
 
 반대로, $u(\x)$의 계수들의 최대공약수가 1이라고 하고, $u(\x)$가 $A[\x]$에서 reducible이라 하자. 즉 
 
@@ -347,12 +347,12 @@ $A[\x]$가 UFD이면 $A$도 UFD임은 자명하므로, 반대방향만 보이면
 
 UFD $A$에 대하여, $A[\x]$의 $0$이 아닌 원소를 $u(\x)$라 하고, $u(\x)$의 계수들의 최대공약수를 $d$라 하면 $u(\x)=du_0(\x)$로 두어 계수들의 최대공약수가 $1$인 다항식 $u_0\in A[\x]$를 얻어낼 수 있으므로 우리는 일반성을 잃지 않고 $u$의 계수들의 최대공약수가 $1$이라 가정할 수 있다. 
 
-[명제 6](#prop6)과 [§정역, ⁋정리 19](/ko/math/ring_theory/integral_domains#thm19)에 의해 $u$는 $(\Frac A)[\x]$에서 유일한 방식으로 인수분해를 할 수 있으며, [명제 14](#prop14)를 이 인수분해에 적용하면 우리는 $u$를 $A[\x]$에서 인수분해할 수 있다. 한편, $u$의 계수들의 최대공약수는 $1$이므로, 이렇게 얻어진 $u$의 factor들의 계수들의 최대공약수 또한 $1$이고 따라서 [따름정리 15](#cor15)에 의해 이들은 $A[\x]$에서 irreducible이다. 이로부터 $u$의 $A[\x]$에서의 인수분해를 얻으며, 유일성은 이들 각각의 성분이 $(\Frac A)[\x]$에서 해당하는 인수들의 $\Frac A$-multiple이라는 사실을 이용하면 자명하다. 
+[명제 6](#prop6){: data-relation="required" }과 [§정역, ⁋정리 19](/ko/math/ring_theory/integral_domains#thm19){: data-relation="required" }에 의해 $u$는 $(\Frac A)[\x]$에서 유일한 방식으로 인수분해를 할 수 있으며, [명제 14](#prop14){: data-relation="required" }를 이 인수분해에 적용하면 우리는 $u$를 $A[\x]$에서 인수분해할 수 있다. 한편, $u$의 계수들의 최대공약수는 $1$이므로, 이렇게 얻어진 $u$의 factor들의 계수들의 최대공약수 또한 $1$이고 따라서 [따름정리 15](#cor15){: data-relation="required" }에 의해 이들은 $A[\x]$에서 irreducible이다. 이로부터 $u$의 $A[\x]$에서의 인수분해를 얻으며, 유일성은 이들 각각의 성분이 $(\Frac A)[\x]$에서 해당하는 인수들의 $\Frac A$-multiple이라는 사실을 이용하면 자명하다. 
 :::
 
 ## 유리식환
 
-이제 우리는 polynomial ring의 변형인 유리식환과 멱급수환을 정의한다. 앞서 [명제 4](#prop4)에서 우리는 임의의 field $\mathbb{K}$에 대하여, $\mathbb{K}[\x_i]_{i\in I}$는 integral domain이라는 것을 증명하였다. 따라서 $\mathbb{K}[\x_i]_{i\in I}$의 field of fraction이 잘 정의된다.
+이제 우리는 polynomial ring의 변형인 유리식환과 멱급수환을 정의한다. 앞서 [명제 4](#prop4){: data-relation="required" }에서 우리는 임의의 field $\mathbb{K}$에 대하여, $\mathbb{K}[\x_i]_{i\in I}$는 integral domain이라는 것을 증명하였다. 따라서 $\mathbb{K}[\x_i]_{i\in I}$의 field of fraction이 잘 정의된다.
 
 ::: 정의 17
 Field $\mathbb{K}$ 위에 정의된 polynomial ring $\mathbb{K}[\x_i]_{i\in I}$의 field of fraction을 *field of rational functions<sub>유리함수체</sub>*라 부르고 $\mathbb{K}(\x_i)_{i\in I}$으로 적는다. 
@@ -364,7 +364,7 @@ $$\deg(u/v)=\deg(u)-\deg(v)$$
 
 으로 정의하는 것이며, 이것이 잘 정의된다는 것을 확인할 수 있다. 다항식에서와 마찬가지로 $\deg(0)=-\infty$로 정의한다. 
 
-그럼 다음 명제는 [명제 2](#prop2)의 analogue이다. 
+그럼 다음 명제는 [명제 2](#prop2){: data-relation="weak" }의 analogue이다. 
 
 ::: 명제 18
 두 rational fraction $r, s$에 대해 다음이 성립한다.
@@ -377,7 +377,7 @@ $$\deg(u/v)=\deg(u)-\deg(v)$$
 2. $\deg(rs) = \deg r + \deg s$이다.
 :::
 ::: 증명
-두 주장 모두 $r, s \ne 0$인 경우만 생각해도 충분하다. 따라서 $r =u/v$, $s = w/z$이고 $u, v, w, z$가 모두 0이 아닌 다항식이라 하자. 어떠한 경우건 아이디어는 주어진 식을 먼저 계산한 후, [명제 2](#prop2)와 [보조정리 3](#lem3)을 적용하는 것이다. 
+두 주장 모두 $r, s \ne 0$인 경우만 생각해도 충분하다. 따라서 $r =u/v$, $s = w/z$이고 $u, v, w, z$가 모두 0이 아닌 다항식이라 하자. 어떠한 경우건 아이디어는 주어진 식을 먼저 계산한 후, [명제 2](#prop2){: data-relation="required" }와 [보조정리 3](#lem3){: data-relation="required" }을 적용하는 것이다. 
 
 1. $r + s = (uz+vw)/(vz)$이다. 우선 $\deg r \ne \deg s$, 즉 $\deg u + \deg z \ne \deg w + \deg v$라 하자. 그러면 $uz + vw \ne 0$이고,
     
@@ -417,7 +417,7 @@ $$\omega(uv)\geq \omega(u)+\omega(v)$$
 
 이 성립한다. 
 
-Degree에 대해서는 $A$가 integral domain일 때 둘째 식에 대응하는 등식이 성립했었다. ([명제 4](#prop4)) 이와 같이 다음이 성립한다. 
+Degree에 대해서는 $A$가 integral domain일 때 둘째 식에 대응하는 등식이 성립했었다. ([명제 4](#prop4){: data-relation="weak" }) 이와 같이 다음이 성립한다. 
 
 ::: 명제 19
 Integral domain $A$에 대하여 다음이 성립한다. 
@@ -426,7 +426,7 @@ Integral domain $A$에 대하여 다음이 성립한다.
 2. 두 nonzero element $u,v\in A[[\x_i]]_{i\in I}$에 대하여, $\omega(uv)=\omega(u)+\omega(v)$가 성립한다. 
 :::
 
-단, 다소 주의할 것은 [명제 4](#prop4)와는 다르게 $A[[\x_i]]_{i\in I}$의 unit은 $A$의 unit보다 크다는 것이다. 가령 다음의 식
+단, 다소 주의할 것은 [명제 4](#prop4){: data-relation="weak" }와는 다르게 $A[[\x_i]]_{i\in I}$의 unit은 $A$의 unit보다 크다는 것이다. 가령 다음의 식
 
 $$(1-\x)\left( \sum_{n=0}^\infty \x^n\right)=1$$
 
