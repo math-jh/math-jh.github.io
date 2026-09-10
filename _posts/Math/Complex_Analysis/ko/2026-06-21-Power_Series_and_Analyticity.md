@@ -14,7 +14,7 @@ weight: 6
 published: false
 ---
 
-Cauchy 적분공식은 ([§Cauchy 적분공식, ⁋정리 1](/ko/math/complex_analysis/cauchy_integral_formula#thm1)) holomorphic function의 내부값을 경계적분 한 번으로 복원해 주었고, 그 적분기호 안에서 미분을 반복할 수 있어 holomorphic function이 무한히 미분가능함을 ([§Cauchy 적분공식, ⁋따름정리 3](/ko/math/complex_analysis/cauchy_integral_formula#cor3)) 끌어냈다. 무한미분가능성이 확보되면 자연스럽게 떠오르는 물음은, holomorphic function이 각 점에서 자신의 Taylor 급수와 실제로 일치하느냐는 것이다. 실변수에서는 무한히 미분가능해도 Taylor 급수가 함수로 수렴하지 않을 수 있어 이 일치는 결코 자동이 아니다 ([\[해석학\] §멱급수와 해석함수, ⁋정의 4](/ko/math/analysis/power_series#def4) 뒤에 든 $e^{-1/x^2}$의 예). 그러나 복소변수에서는 사정이 완전히 다르다. Cauchy 적분공식의 kernel $1/(w-z)$를 기하급수로 펼치기만 하면 holomorphic function이 언제나 자신의 Taylor 급수로 전개됨이 곧장 따라 나오며, 그 수렴반지름은 중심에서 가장 가까운 singular point까지의 거리 이상으로 보장된다. 역으로 수렴하는 멱급수의 합은 holomorphic이므로 ([§복소정칙함수, ⁋정리 9](/ko/math/complex_analysis/holomorphic_functions#thm9)), holomorphicity와 한 점 근방에서의 멱급수 전개 가능성은 서로 완전히 같은 조건이 된다. Holomorphic function을 가리키는 *해석함수<sub>analytic function</sub>*라는 또 하나의 이름은 바로 이 동치에서 비롯한다.
+Cauchy 적분공식은 ([§Cauchy 적분공식, ⁋정리 1](/ko/math/complex_analysis/cauchy_integral_formula#thm1){: data-relation="required" }) holomorphic function의 내부값을 경계적분 한 번으로 복원해 주었고, 그 적분기호 안에서 미분을 반복할 수 있어 holomorphic function이 무한히 미분가능함을 ([§Cauchy 적분공식, ⁋따름정리 3](/ko/math/complex_analysis/cauchy_integral_formula#cor3){: data-relation="weak" }) 끌어냈다. 무한미분가능성이 확보되면 자연스럽게 떠오르는 물음은, holomorphic function이 각 점에서 자신의 Taylor 급수와 실제로 일치하느냐는 것이다. 실변수에서는 무한히 미분가능해도 Taylor 급수가 함수로 수렴하지 않을 수 있어 이 일치는 결코 자동이 아니다 ([\[해석학\] §멱급수와 해석함수, ⁋정의 4](/ko/math/analysis/power_series#def4){: data-relation="weak" } 뒤에 든 $e^{-1/x^2}$의 예). 그러나 복소변수에서는 사정이 완전히 다르다. Cauchy 적분공식의 kernel $1/(w-z)$를 기하급수로 펼치기만 하면 holomorphic function이 언제나 자신의 Taylor 급수로 전개됨이 곧장 따라 나오며, 그 수렴반지름은 중심에서 가장 가까운 singular point까지의 거리 이상으로 보장된다. 역으로 수렴하는 멱급수의 합은 holomorphic이므로 ([§복소정칙함수, ⁋정리 9](/ko/math/complex_analysis/holomorphic_functions#thm9){: data-relation="required" }), holomorphicity와 한 점 근방에서의 멱급수 전개 가능성은 서로 완전히 같은 조건이 된다. Holomorphic function을 가리키는 *해석함수<sub>analytic function</sub>*라는 또 하나의 이름은 바로 이 동치에서 비롯한다.
 
 ## Holomorphic function의 Taylor 전개
 
@@ -33,7 +33,7 @@ $$f(z) = \sum_{n=0}^{\infty} \frac{f^{(n)}(z_0)}{n!}\,(z - z_0)^n$$
 :::
 
 ::: 증명
-$z \in D(z_0, R)$을 고정하고, $\lvert z - z_0\rvert < r < R$이 되도록 반지름 $r$을 잡는다. Closed 원판 $\overline{D(z_0, r)}$이 holomorphic인 영역에 들어 있으므로 Cauchy 적분공식 ([§Cauchy 적분공식, ⁋정리 1](/ko/math/complex_analysis/cauchy_integral_formula#thm1)) 에 의해
+$z \in D(z_0, R)$을 고정하고, $\lvert z - z_0\rvert < r < R$이 되도록 반지름 $r$을 잡는다. Closed 원판 $\overline{D(z_0, r)}$이 holomorphic인 영역에 들어 있으므로 Cauchy 적분공식 ([§Cauchy 적분공식, ⁋정리 1](/ko/math/complex_analysis/cauchy_integral_formula#thm1){: data-relation="required" }) 에 의해
 
 $$f(z) = \frac{1}{2\pi i}\oint_{\lvert w - z_0\rvert = r} \frac{f(w)}{w - z}\dd{w}$$
 
@@ -49,11 +49,11 @@ $$\frac{1}{w - z} = \frac{1}{w - z_0}\sum_{n=0}^{\infty}\left(\frac{z - z_0}{w -
 
 $$f(z) = \frac{1}{2\pi i}\oint_{\lvert w - z_0\rvert = r}\left(\sum_{n=0}^{\infty}\frac{f(w)\,(z - z_0)^n}{(w - z_0)^{n+1}}\right)\dd{w} = \sum_{n=0}^{\infty}\left(\frac{1}{2\pi i}\oint_{\lvert w - z_0\rvert = r}\frac{f(w)}{(w - z_0)^{n+1}}\dd{w}\right)(z - z_0)^n$$
 
-이다. 괄호 안의 적분은 Cauchy 미분공식 ([§Cauchy 적분공식, ⁋정리 2](/ko/math/complex_analysis/cauchy_integral_formula#thm2)) 에 의해 $f^{(n)}(z_0)/n!$과 같으므로
+이다. 괄호 안의 적분은 Cauchy 미분공식 ([§Cauchy 적분공식, ⁋정리 2](/ko/math/complex_analysis/cauchy_integral_formula#thm2){: data-relation="required" }) 에 의해 $f^{(n)}(z_0)/n!$과 같으므로
 
 $$f(z) = \sum_{n=0}^{\infty}\frac{f^{(n)}(z_0)}{n!}\,(z - z_0)^n$$
 
-을 얻는다. 절대수렴은 위 항별 어림에서 일반항의 크기가 $\lvert f^{(n)}(z_0)/n!\rvert\,\lvert z - z_0\rvert^n \leq M\,(\lvert z - z_0\rvert/r)^n$으로 수렴하는 기하급수에 지배되기 때문이다 (Cauchy 부등식 [§Cauchy 적분공식, ⁋정리 4](/ko/math/complex_analysis/cauchy_integral_formula#thm4) 로 $\lvert f^{(n)}(z_0)/n!\rvert \leq M/r^n$). 끝으로 $z$가 임의였고 $r < R$을 $z$에 맞춰 잡았으므로 전개는 $D(z_0, R)$ 전체에서 성립한다.
+을 얻는다. 절대수렴은 위 항별 어림에서 일반항의 크기가 $\lvert f^{(n)}(z_0)/n!\rvert\,\lvert z - z_0\rvert^n \leq M\,(\lvert z - z_0\rvert/r)^n$으로 수렴하는 기하급수에 지배되기 때문이다 (Cauchy 부등식 [§Cauchy 적분공식, ⁋정리 4](/ko/math/complex_analysis/cauchy_integral_formula#thm4){: data-relation="required" } 로 $\lvert f^{(n)}(z_0)/n!\rvert \leq M/r^n$). 끝으로 $z$가 임의였고 $r < R$을 $z$에 맞춰 잡았으므로 전개는 $D(z_0, R)$ 전체에서 성립한다.
 :::
 
 정리 1은 holomorphic function이 holomorphic인 영역 안의 어느 점을 중심으로 잡아도 그 점을 중심으로 하는 멱급수로 전개됨을 말한다. 계수가 $f^{(n)}(z_0)/n!$로 도함수에 의해 결정되므로 이 급수는 정확히 $f$의 Taylor 급수이며, 실변수에서와 달리 나머지항을 따로 따질 필요 없이 항상 함수 자신으로 수렴한다. 전개의 중심을 $z_0$으로 옮겨 놓고 보면, 한 점에서 무한히 미분가능하다는 국소적 정보가 그 점 근방 전체에서의 함수값을 멱급수를 통해 완전히 복원한다는 뜻이다.
@@ -67,7 +67,7 @@ $f$가 점 $z_0$에서 holomorphic이라 하고, $f$의 $z_0$에서의 Taylor �
 ::: 증명
 $f$가 holomorphic하게 확장되는 가장 큰 열린 원판의 반지름을 $R_\ast \in (0, \infty]$이라 하자. 곧 $f$는 $D(z_0, R_\ast)$에서 holomorphic이지만 그보다 큰 어떤 중심 $z_0$의 원판으로도 holomorphic하게 확장되지 않는다. 정리 1을 $D(z_0, R_\ast)$에 적용하면 Taylor 급수가 이 원판 전체에서 수렴하므로 수렴반지름은 $\rho \geq R_\ast$이다.
 
-반대로 $\rho > R_\ast$이라 가정하면, 멱급수 $\sum_n \frac{f^{(n)}(z_0)}{n!}(z - z_0)^n$가 $D(z_0, \rho)$에서 수렴하고, 수렴 멱급수의 합은 그 수렴원판에서 holomorphic이므로 ([§복소정칙함수, ⁋정리 9](/ko/math/complex_analysis/holomorphic_functions#thm9)) 이 급수는 $D(z_0, \rho) \supsetneq D(z_0, R_\ast)$에서 holomorphic인 함수 $g$를 정의한다. $g$는 $D(z_0, R_\ast)$에서 $f$와 일치하므로 $f$를 더 큰 원판 $D(z_0, \rho)$로 holomorphic하게 확장한 것이 되어, $R_\ast$이 그러한 원판의 최대 반지름이라는 정의에 어긋난다. 따라서 $\rho = R_\ast$이다.
+반대로 $\rho > R_\ast$이라 가정하면, 멱급수 $\sum_n \frac{f^{(n)}(z_0)}{n!}(z - z_0)^n$가 $D(z_0, \rho)$에서 수렴하고, 수렴 멱급수의 합은 그 수렴원판에서 holomorphic이므로 ([§복소정칙함수, ⁋정리 9](/ko/math/complex_analysis/holomorphic_functions#thm9){: data-relation="required" }) 이 급수는 $D(z_0, \rho) \supsetneq D(z_0, R_\ast)$에서 holomorphic인 함수 $g$를 정의한다. $g$는 $D(z_0, R_\ast)$에서 $f$와 일치하므로 $f$를 더 큰 원판 $D(z_0, \rho)$로 holomorphic하게 확장한 것이 되어, $R_\ast$이 그러한 원판의 최대 반지름이라는 정의에 어긋난다. 따라서 $\rho = R_\ast$이다.
 
 마지막 진술은 $f$가 $D(z_0, R)$에서 holomorphic이면 정의상 $R_\ast \geq R$이므로 $\rho \geq R$이라는 데서 나온다. 가장 가까운 singular point까지의 거리란 $f$가 holomorphic하게 확장되지 못하게 막는 점까지의 거리이므로, $\rho = R_\ast$은 그 거리와 같다 (singular point가 없으면 $\rho = \infty$).
 :::
@@ -76,7 +76,7 @@ $f$가 holomorphic하게 확장되는 가장 큰 열린 원판의 반지름을 $
 
 ## Holomorphicity와 해석성의 동치
 
-이제 holomorphic function이 해석적이라는 정리 1의 결론과, 멱급수의 합이 holomorphic이라는 역방향을 합쳐 두 개념의 동치를 정식으로 적는다. 함수가 한 점 근방에서 그곳을 중심으로 하는 멱급수와 일치하면 그 점에서 해석적이라 하는데 ([\[해석학\] §멱급수와 해석함수, ⁋정의 4](/ko/math/analysis/power_series#def4)), 복소변수에서는 이 해석성이 holomorphicity와 완전히 같은 조건이 된다.
+이제 holomorphic function이 해석적이라는 정리 1의 결론과, 멱급수의 합이 holomorphic이라는 역방향을 합쳐 두 개념의 동치를 정식으로 적는다. 함수가 한 점 근방에서 그곳을 중심으로 하는 멱급수와 일치하면 그 점에서 해석적이라 하는데 ([\[해석학\] §멱급수와 해석함수, ⁋정의 4](/ko/math/analysis/power_series#def4){: data-relation="weak" }), 복소변수에서는 이 해석성이 holomorphicity와 완전히 같은 조건이 된다.
 
 ::: 정리 3 (holomorphic $\iff$ 해석적)
 열린집합 $\Omega \subseteq \mathbb{C}$ 위의 함수 $f$에 대하여 다음 두 조건은 동치이다.
@@ -88,14 +88,14 @@ $f$가 holomorphic하게 확장되는 가장 큰 열린 원판의 반지름을 $
 ::: 증명
 $(1) \Rightarrow (2)$. $f$가 $\Omega$에서 holomorphic이고 $z_0 \in \Omega$이라 하자. $\Omega$가 열려 있으므로 $D(z_0, R) \subseteq \Omega$인 $R > 0$이 있고, 정리 1에 의해 $f$는 이 원판에서 자신의 Taylor 급수와 같다. 곧 $f$는 $z_0$의 근방 $D(z_0, R)$에서 멱급수의 합이므로 $z_0$에서 해석적이다.
 
-$(2) \Rightarrow (1)$. $z_0 \in \Omega$을 임의로 잡으면 가정에 의해 어떤 근방 $D(z_0, r) \subseteq \Omega$에서 $f(z) = \sum_{n} a_n (z - z_0)^n$이 성립한다. 수렴하는 멱급수의 합은 그 수렴원판에서 holomorphic이므로 ([§복소정칙함수, ⁋정리 9](/ko/math/complex_analysis/holomorphic_functions#thm9)) $f$는 $D(z_0, r)$에서, 특히 $z_0$에서 복소미분가능하다. $z_0$이 임의였으므로 $f$는 $\Omega$의 모든 점에서 복소미분가능하고, 따라서 $\Omega$에서 holomorphic이다 ([§복소정칙함수, ⁋정의 2](/ko/math/complex_analysis/holomorphic_functions#def2)).
+$(2) \Rightarrow (1)$. $z_0 \in \Omega$을 임의로 잡으면 가정에 의해 어떤 근방 $D(z_0, r) \subseteq \Omega$에서 $f(z) = \sum_{n} a_n (z - z_0)^n$이 성립한다. 수렴하는 멱급수의 합은 그 수렴원판에서 holomorphic이므로 ([§복소정칙함수, ⁋정리 9](/ko/math/complex_analysis/holomorphic_functions#thm9){: data-relation="required" }) $f$는 $D(z_0, r)$에서, 특히 $z_0$에서 복소미분가능하다. $z_0$이 임의였으므로 $f$는 $\Omega$의 모든 점에서 복소미분가능하고, 따라서 $\Omega$에서 holomorphic이다 ([§복소정칙함수, ⁋정의 2](/ko/math/complex_analysis/holomorphic_functions#def2){: data-relation="required" }).
 :::
 
 정리 3은 복소해석에서 "holomorphic"와 "해석적"이라는 두 용어가 같은 함수족을 가리킴을 확정한다. Holomorphicity는 한 번의 복소미분가능성이라는 국소적 미분 조건으로 정의되고 해석성은 멱급수 전개라는 대수적·해석적 조건으로 정의되지만, 복소변수에서는 둘이 정확히 겹친다. 이 동치 덕분에 holomorphic function을 다룰 때 미분의 관점과 급수의 관점을 자유로이 오갈 수 있으며, 한쪽에서 자명한 사실이 다른 쪽에서는 비자명한 정리가 되기도 한다. 실변수와의 결정적 차이는 $(2) \Rightarrow (1)$이 아니라 $(1) \Rightarrow (2)$에 있다. 실해석에서는 무한미분가능성이 해석성을 함의하지 않지만, 복소변수에서는 한 번의 미분가능성이 이미 해석성을 강제한다.
 
 ## 항별 미분과 적분
 
-해석성과 holomorphicity가 같으므로, holomorphic function에 대한 연산을 그 멱급수 표현 위에서 항별로 수행할 수 있다. 멱급수는 수렴원판 안에서 마치 다항식처럼 미분되고 적분되며, 이 항별 연산은 ([§복소정칙함수, ⁋정리 9](/ko/math/complex_analysis/holomorphic_functions#thm9)) 의 항별미분과 그 원시함수 구성으로 정당화된다. 미분 쪽은 이미 정리 1에서 도함수가 다시 같은 중심의 멱급수로 주어짐을 보았으니, 여기서는 도함수의 계수가 어떻게 이동하는지와 항별 적분을 함께 정리한다.
+해석성과 holomorphicity가 같으므로, holomorphic function에 대한 연산을 그 멱급수 표현 위에서 항별로 수행할 수 있다. 멱급수는 수렴원판 안에서 마치 다항식처럼 미분되고 적분되며, 이 항별 연산은 ([§복소정칙함수, ⁋정리 9](/ko/math/complex_analysis/holomorphic_functions#thm9){: data-relation="required" }) 의 항별미분과 그 원시함수 구성으로 정당화된다. 미분 쪽은 이미 정리 1에서 도함수가 다시 같은 중심의 멱급수로 주어짐을 보았으니, 여기서는 도함수의 계수가 어떻게 이동하는지와 항별 적분을 함께 정리한다.
 
 ::: 명제 4 (항별 미분과 적분)
 $f(z) = \sum_{n=0}^{\infty} a_n (z - z_0)^n$이 수렴반지름 $\rho > 0$을 가진다고 하자. 그러면 항별 미분 급수와 항별 적분 급수
@@ -106,13 +106,13 @@ $$\sum_{n=1}^{\infty} n\,a_n (z - z_0)^{n-1}, \qquad \sum_{n=0}^{\infty} \frac{a
 :::
 
 ::: 증명
-먼저 수렴반지름이 보존됨을 본다. $\lim_{n\rightarrow\infty} n^{1/n} = 1$이므로 Cauchy–Hadamard 공식 ([\[해석학\] §멱급수와 해석함수, ⁋정리 1](/ko/math/analysis/power_series#thm1)) 에서
+먼저 수렴반지름이 보존됨을 본다. $\lim_{n\rightarrow\infty} n^{1/n} = 1$이므로 Cauchy–Hadamard 공식 ([\[해석학\] §멱급수와 해석함수, ⁋정리 1](/ko/math/analysis/power_series#thm1){: data-relation="required" }) 에서
 
 $$\limsup_{n\rightarrow\infty}\lvert n\,a_n\rvert^{1/n} = \left(\lim_{n\rightarrow\infty} n^{1/n}\right)\limsup_{n\rightarrow\infty}\lvert a_n\rvert^{1/n} = \limsup_{n\rightarrow\infty}\lvert a_n\rvert^{1/n}$$
 
 이고, 같은 식이 계수 $a_n/(n+1)$에 대해서도 $\lim_{n\rightarrow\infty}(n+1)^{1/n} = 1$로 성립한다. 따라서 세 급수의 수렴반지름이 모두 같은 $\rho$이다.
 
-항별 미분이 $f'$을 준다는 것은 멱급수의 holomorphicity와 항별미분 정리의 내용 그대로이다 ([§복소정칙함수, ⁋정리 9](/ko/math/complex_analysis/holomorphic_functions#thm9)). 항별 적분에 대해서는 $G(z) = \sum_{n=0}^{\infty} \frac{a_n}{n+1}(z - z_0)^{n+1}$이 위에서 보인 대로 $D(z_0, \rho)$에서 수렴하므로 같은 항별미분 정리에 의해 holomorphic이고, 그 도함수는 항별로
+항별 미분이 $f'$을 준다는 것은 멱급수의 holomorphicity와 항별미분 정리의 내용 그대로이다 ([§복소정칙함수, ⁋정리 9](/ko/math/complex_analysis/holomorphic_functions#thm9){: data-relation="required" }). 항별 적분에 대해서는 $G(z) = \sum_{n=0}^{\infty} \frac{a_n}{n+1}(z - z_0)^{n+1}$이 위에서 보인 대로 $D(z_0, \rho)$에서 수렴하므로 같은 항별미분 정리에 의해 holomorphic이고, 그 도함수는 항별로
 
 $$G'(z) = \sum_{n=0}^{\infty} \frac{a_n}{n+1}\cdot(n+1)(z - z_0)^n = \sum_{n=0}^{\infty} a_n (z - z_0)^n = f(z)$$
 
@@ -152,7 +152,7 @@ $$f(z) = \sum_{n=m}^{\infty} a_n (z - z_0)^n = (z - z_0)^m \sum_{k=0}^{\infty} a
 
 $$g(z) = \sum_{k=0}^{\infty} a_{m+k}(z - z_0)^k$$
 
-로 두면, 이 멱급수는 원래 급수에서 앞쪽 유한 개 항을 떼고 지수를 평행이동한 것이므로 같은 수렴반지름을 가져 $D(z_0, R)$에서 수렴하고, 따라서 holomorphic이다 ([§복소정칙함수, ⁋정리 9](/ko/math/complex_analysis/holomorphic_functions#thm9)). 또 $g(z_0) = a_m \neq 0$이다. 이로써 $f(z) = (z - z_0)^m g(z)$를 얻는다.
+로 두면, 이 멱급수는 원래 급수에서 앞쪽 유한 개 항을 떼고 지수를 평행이동한 것이므로 같은 수렴반지름을 가져 $D(z_0, R)$에서 수렴하고, 따라서 holomorphic이다 ([§복소정칙함수, ⁋정리 9](/ko/math/complex_analysis/holomorphic_functions#thm9){: data-relation="required" }). 또 $g(z_0) = a_m \neq 0$이다. 이로써 $f(z) = (z - z_0)^m g(z)$를 얻는다.
 
 역으로 $f(z) = (z - z_0)^m g(z)$이고 $g$가 $z_0$에서 holomorphic이며 $g(z_0) \neq 0$이라 하자. $g$를 $g(z) = \sum_{k=0}^{\infty} b_k (z - z_0)^k$로 전개하면 $b_0 = g(z_0) \neq 0$이고, 곱하면
 
@@ -164,7 +164,7 @@ $$f(z) = \sum_{k=0}^{\infty} b_k (z - z_0)^{m+k}$$
 명제 6은 holomorphic function의 영점이 다항식의 해와 똑같은 방식으로 인수 $(z - z_0)^m$을 내놓되, 남는 인수 $g$가 영점에서 사라지지 않는 holomorphic function이라는 점만 다름을 보인다. 이 인수분해에서 $g$가 연속이고 $g(z_0) \neq 0$이므로 $z_0$의 어떤 근방 전체에서 $g$가 $0$에서 떨어져 있고, 따라서 $z_0$ 근처에서 $f$의 영점은 $z_0$ 하나뿐이다. 곧 항등적으로 $0$이 아닌 holomorphic function의 영점은 고립되어 있다. 또 order $m$은 $f$가 영점 근방에서 $\lvert f(z)\rvert \approx \lvert g(z_0)\rvert\,\lvert z - z_0\rvert^m$의 비율로 사라짐을 알려 주어, 영점의 깊이를 정량적으로 잰다.
 
 ::: 예시 7 (위수의 계산)
-함수 $f(z) = z^2(e^z - 1)$의 원점에서의 영점의 order를 구한다. $e^z = \sum_{n\geq 0} z^n/n!$이므로 ([§복소정칙함수, ⁋정의 10](/ko/math/complex_analysis/holomorphic_functions#def10))
+함수 $f(z) = z^2(e^z - 1)$의 원점에서의 영점의 order를 구한다. $e^z = \sum_{n\geq 0} z^n/n!$이므로 ([§복소정칙함수, ⁋정의 10](/ko/math/complex_analysis/holomorphic_functions#def10){: data-relation="weak" })
 
 $$e^z - 1 = z + \frac{z^2}{2!} + \frac{z^3}{3!} + \cdots = z\left(1 + \frac{z}{2!} + \frac{z^2}{3!} + \cdots\right)$$
 
@@ -192,7 +192,7 @@ $$f(z)\,g(z) = \sum_{n=0}^{\infty} c_n (z - z_0)^n, \qquad c_n = \sum_{k=0}^{n} 
 
 $$f(z)\,g(z) = \sum_{k=0}^{\infty}\sum_{l=0}^{\infty} a_k\,b_l\,(z - z_0)^{k+l} = \sum_{n=0}^{\infty}\left(\sum_{k=0}^{n} a_k\,b_{n-k}\right)(z - z_0)^n$$
 
-이 되어 주장하는 계수 $c_n = \sum_{k=0}^{n} a_k b_{n-k}$를 얻는다. 한편 $f$와 $g$가 모두 $D(z_0, \rho)$에서 holomorphic이므로 그 곱 $fg$도 $D(z_0, \rho)$에서 holomorphic이고 ([§복소정칙함수, ⁋명제 3](/ko/math/complex_analysis/holomorphic_functions#prop3)), 정리 1에 의해 그 Taylor 급수가 $D(z_0, \rho)$ 전체에서 수렴하므로 곱급수의 수렴반지름은 $\rho$ 이상이다.
+이 되어 주장하는 계수 $c_n = \sum_{k=0}^{n} a_k b_{n-k}$를 얻는다. 한편 $f$와 $g$가 모두 $D(z_0, \rho)$에서 holomorphic이므로 그 곱 $fg$도 $D(z_0, \rho)$에서 holomorphic이고 ([§복소정칙함수, ⁋명제 3](/ko/math/complex_analysis/holomorphic_functions#prop3){: data-relation="required" }), 정리 1에 의해 그 Taylor 급수가 $D(z_0, \rho)$ 전체에서 수렴하므로 곱급수의 수렴반지름은 $\rho$ 이상이다.
 :::
 
 명제 8의 계수 공식 $c_n = \sum_{k=0}^{n} a_k b_{n-k}$는 두 계수열의 합성곱이며, degree $n$의 계수가 두 인수에서 degree의 합이 $n$이 되는 모든 조합의 기여를 모은 것이다. 이는 다항식의 곱셈을 무한급수로 확장한 것에 지나지 않으나, holomorphic function의 절대수렴이 재배열을 정당화해 주는 덕분에 유한 다항식에서와 똑같이 작동한다. 곱의 수렴반지름이 두 인수의 더 작은 쪽 이상이라는 결론도 따름정리 2의 시각에서 자연스럽다. 곱 $fg$의 singular point는 $f$나 $g$ 가운데 적어도 하나가 특이한 곳에서만 생기므로, 가장 가까운 singular point까지의 거리가 두 함수 각각의 그것보다 가까워질 수 없기 때문이다.
