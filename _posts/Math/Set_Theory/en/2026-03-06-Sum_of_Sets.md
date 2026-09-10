@@ -83,19 +83,19 @@ This set is sometimes called the *disjoint union*, and is also written as $\bigs
 Consider a pairwise disjoint family $(A_i)_{i\in I}$. Let $A$ be their union and $S$ their sum. Then there exists a bijection between $A$ and $S$.
 :::
 ::: Proof
-If $f_i:A_i\rightarrow S_i$ are bijections satisfying the conditions of [Proposition 5](#prop5), then by [Proposition 2](#prop2) we can extend $(f_i)_{i\in I}$ to $\bigcup_{i\in I} A_i=A$.
+If $f_i:A_i\rightarrow S_i$ are bijections satisfying the conditions of [Proposition 5](#prop5){: data-relation="required" }, then by [Proposition 2](#prop2){: data-relation="required" } we can extend $(f_i)_{i\in I}$ to $\bigcup_{i\in I} A_i=A$.
 :::
 
-The intuition for why this is called the sum of sets will appear later. ([§Operations on Cardinals, ⁋Definition 1](/en/math/set_theory/operation_of_cardinals#def1))
+The intuition for why this is called the sum of sets will appear later. ([§Operations on Cardinals, ⁋Definition 1](/en/math/set_theory/operation_of_cardinals#def1){: data-relation="forward" })
 
 ## Universal property
 
-There is something we did not mention in [Definition 6](#def6). The sum $X$ of a family of sets $(A_i)$ is not unique. There are infinitely many sets satisfying the conditions of [Proposition 5](#prop5). For example, in the proof of that proposition we took $S$ to be the set of pairs $(x,i)$, but one can see that taking the set of pairs $(i,x)$ also satisfies the definition of sum. Therefore, strictly speaking, writing the sum of the $A_i$ as $\sum A_i$ is not a well-defined expression.
+There is something we did not mention in [Definition 6](#def6){: data-relation="weak" }. The sum $X$ of a family of sets $(A_i)$ is not unique. There are infinitely many sets satisfying the conditions of [Proposition 5](#prop5){: data-relation="required" }. For example, in the proof of that proposition we took $S$ to be the set of pairs $(x,i)$, but one can see that taking the set of pairs $(i,x)$ also satisfies the definition of sum. Therefore, strictly speaking, writing the sum of the $A_i$ as $\sum A_i$ is not a well-defined expression.
 
 First, let us examine the *universal property* of the sum as follows.
 
 ::: Theorem 8 (Universal property of sum)
-Let a family of sets $(A_i)$, a set $S$ as defined in [Proposition 5](#prop5), and injections $\iota_i:A_i\rightarrow S$ be given. Then, whenever another set $B$ and maps $f_i:A_i\rightarrow B$ are given, there exists a unique $f:S\rightarrow B$ such that $f_i=f\circ\iota_i$. 
+Let a family of sets $(A_i)$, a set $S$ as defined in [Proposition 5](#prop5){: data-relation="required" }, and injections $\iota_i:A_i\rightarrow S$ be given. Then, whenever another set $B$ and maps $f_i:A_i\rightarrow B$ are given, there exists a unique $f:S\rightarrow B$ such that $f_i=f\circ\iota_i$. 
 :::
 ::: Proof
 First, let us show that such a function $f$ is unique (if it exists). For this, it suffices to show that for any $x\in S$, its function value $f(x)$ is always uniquely determined. Since $S$ is the union of a pairwise disjoint family $(S_i)$, there exists a unique $i\in I$ such that $x\in S_i$. Then since $\iota_i:A_i\rightarrow S_i$ is a bijection, there again exists a unique element $x_i$ of $A_i$ such that $\iota_i(x_i)=x$. Now,
@@ -107,7 +107,7 @@ so the function value $f(x)$ at $x$ must equal $f_i(x_i)$, and therefore $f$ is 
 Now, taking a hint from the uniqueness proof, let us show the existence of the function $f$. Define $f(x)$ to be $f_i(x_i)$ as in the above equation, and prove that $f$ is actually a function. For instance, with this definition $f$ will be defined for all elements of $S$, and moreover a single $x$ is assigned exactly one function value as discussed above.
 :::
 
-In many cases the set $S$ appearing in the proof of [Proposition 5](#prop5) is defined to be the sum of the $A_i$, but in fact this is putting the cart before the horse. The reason we think of $S$ as the sum of the $A_i$ in many areas is not because the set $S$ itself has any special meaning, but because of notational convenience. The properties of the sum do not come from the set $S$, but from the universal property above.
+In many cases the set $S$ appearing in the proof of [Proposition 5](#prop5){: data-relation="weak" } is defined to be the sum of the $A_i$, but in fact this is putting the cart before the horse. The reason we think of $S$ as the sum of the $A_i$ in many areas is not because the set $S$ itself has any special meaning, but because of notational convenience. The properties of the sum do not come from the set $S$, but from the universal property above.
 
 Therefore, we could simply define it as follows from the start.
 
@@ -119,9 +119,9 @@ The *sum* of a given family of sets $(A_i)$ is a set $\sum A_i$ together with ma
 {% diagram Math/Set_Theory/Sum_of_Sets-1.svg width="13.49em" alt="universal_property_of_sum" %}
 :::
 
-Of course, to use this as a definition we must show that at least one object satisfying the universal property exists. And [Theorem 8](#thm8) does exactly that. 
+Of course, to use this as a definition we must show that at least one object satisfying the universal property exists. And [Theorem 8](#thm8){: data-relation="required" } does exactly that. 
 
-We mentioned earlier that the set $\sum A_i$ is not well-defined in the strict sense. But even if such a set itself is not well-defined, if several such sets are given then there exists a bijection between them. This situation is called *unique up to bijection*. From [Definition 6$'$](#def6-1) one can show that the sum of sets is unique up to bijection. 
+We mentioned earlier that the set $\sum A_i$ is not well-defined in the strict sense. But even if such a set itself is not well-defined, if several such sets are given then there exists a bijection between them. This situation is called *unique up to bijection*. From [Definition 6$'$](#def6-1){: data-relation="required" } one can show that the sum of sets is unique up to bijection. 
 
 ::: Corollary 9
 For a family of sets $(A_i)$, the sum $\sum A_i$ is unique up to bijection.
@@ -131,7 +131,7 @@ Let two sums $S$ and $S'$ be given, and let $\iota_i$ and $\iota_i'$ be the inje
 
 $$\iota_i'=\phi'\circ\iota_i=\phi'\circ(\phi\circ\iota_i')=(\phi'\circ\phi)\circ\iota_i'$$
 
-On the other hand, apply the universal property of $S'$ to the functions $\iota_i':A_i\rightarrow S'$ this time. Then there exists a unique function $\psi:S'\rightarrow S'$ satisfying $\iota_i'=\psi\circ\iota_i'$. This is obviously satisfied by $\psi=\id_{S'}$, so by uniqueness every function $\psi$ satisfying this equation equals $\id_{S'}$. Therefore $\phi'\circ\phi=\id_{S'}$, and since $\id_{S'}$ is bijective, $\phi'$ is surjective and $\phi$ is injective. ([§Retraction and Section, ⁋Proposition 3](/en/math/set_theory/retraction_and_section#prop3))
+On the other hand, apply the universal property of $S'$ to the functions $\iota_i':A_i\rightarrow S'$ this time. Then there exists a unique function $\psi:S'\rightarrow S'$ satisfying $\iota_i'=\psi\circ\iota_i'$. This is obviously satisfied by $\psi=\id_{S'}$, so by uniqueness every function $\psi$ satisfying this equation equals $\id_{S'}$. Therefore $\phi'\circ\phi=\id_{S'}$, and since $\id_{S'}$ is bijective, $\phi'$ is surjective and $\phi$ is injective. ([§Retraction and Section, ⁋Proposition 3](/en/math/set_theory/retraction_and_section#prop3){: data-relation="required" })
 
 Likewise, one can show that $\phi\circ\phi'=\id_S$, which implies that $\phi$ is surjective and $\phi'$ is injective. Thus they are both bijections, so there exists a bijection between $S$ and $S'$. 
 :::

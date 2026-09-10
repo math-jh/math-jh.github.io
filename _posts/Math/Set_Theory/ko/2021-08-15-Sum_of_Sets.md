@@ -83,19 +83,19 @@ $S_i$를 <phrase>$x\in A_i$를 만족하는 $(x, i)$들로 이루어진 집합</
 쌍마다 서로소인 family $(A_i)_{i\in I}$를 생각하자. 이들의 합집합을 $A$, 합을 $S$라 하면 $A$와 $S$ 간의 전단사함수가 존재한다.
 :::
 ::: 증명
-$f_i:A_i\rightarrow S_i$가 [명제 5](#prop5)의 조건을 만족하는 전단사함수라면, [명제 2](#prop2)를 통해 $(f_i)_{i\in I}$를 $\bigcup_{i\in I} A_i=A$로 확장하면 된다. 이렇게 얻은 $f:A\rightarrow S$는 각 $x\in A$가 유일한 $A_i$에 속하고 $(S_i)_{i\in I}$가 쌍마다 서로소이며 각 $f_i$가 단사함수이므로 단사함수이고, $S=\bigcup_{i\in I} S_i$이며 각 $f_i$가 $S_i$ 위로의 전사함수이므로 전사함수이다.
+$f_i:A_i\rightarrow S_i$가 [명제 5](#prop5){: data-relation="required" }의 조건을 만족하는 전단사함수라면, [명제 2](#prop2){: data-relation="required" }를 통해 $(f_i)_{i\in I}$를 $\bigcup_{i\in I} A_i=A$로 확장하면 된다. 이렇게 얻은 $f:A\rightarrow S$는 각 $x\in A$가 유일한 $A_i$에 속하고 $(S_i)_{i\in I}$가 쌍마다 서로소이며 각 $f_i$가 단사함수이므로 단사함수이고, $S=\bigcup_{i\in I} S_i$이며 각 $f_i$가 $S_i$ 위로의 전사함수이므로 전사함수이다.
 :::
 
-이를 집합의 합이라고 부르는 것에 대한 직관은 나중에 나온다. ([§기수들 사이의 연산, ⁋정의 1](/ko/math/set_theory/operation_of_cardinals#def1))
+이를 집합의 합이라고 부르는 것에 대한 직관은 나중에 나온다. ([§기수들 사이의 연산, ⁋정의 1](/ko/math/set_theory/operation_of_cardinals#def1){: data-relation="forward" })
 
 ## Universal property
 
-[정의 6](#def6)에서 우리가 언급하지 않은 사실이 있다. 집합들의 family $(A_i)$들의 합 $S$는 유일하지 않다는 것이다. [명제 5](#prop5)의 조건을 만족하는 집합은 무수히 많다. 예를 들어 해당 명제의 증명에서는 $S$를 $(x,i)$들의 집합으로 두었는데, $(i,x)$들의 집합으로 두어도 합의 정의를 만족한다는 것을 알 수 있다. 때문에 엄밀히 말하자면 $A_i$들의 합을 $\sum A_i$로 적는 것은 잘 정의된 표현이 아니다.
+[정의 6](#def6){: data-relation="weak" }에서 우리가 언급하지 않은 사실이 있다. 집합들의 family $(A_i)$들의 합 $S$는 유일하지 않다는 것이다. [명제 5](#prop5){: data-relation="required" }의 조건을 만족하는 집합은 무수히 많다. 예를 들어 해당 명제의 증명에서는 $S$를 $(x,i)$들의 집합으로 두었는데, $(i,x)$들의 집합으로 두어도 합의 정의를 만족한다는 것을 알 수 있다. 때문에 엄밀히 말하자면 $A_i$들의 합을 $\sum A_i$로 적는 것은 잘 정의된 표현이 아니다.
 
 우선 다음과 같이 합의 *universal property<sub>보편성질</sub>*를 살펴보자.
 
 ::: 정리 8 (Universal property of sum)
-집합들의 family $(A_i)$와 [명제 5](#prop5)에서 정의한 집합 $S$, 그리고 같은 명제의 전단사함수 $A_i\rightarrow S_i$에 포함관계 $S_i\subseteq S$를 합성하여 얻는 함수들 $\iota_i:A_i\rightarrow S$가 주어졌다 하자. 그럼, 또 다른 어떤 집합 $B$와, $f_i:A_i\rightarrow B$들이 주어질 때마다, 이에 해당하는 유일한 $f:S\rightarrow B$가 존재하여 $f_i=f\circ\iota_i$가 성립한다. 
+집합들의 family $(A_i)$와 [명제 5](#prop5){: data-relation="required" }에서 정의한 집합 $S$, 그리고 같은 명제의 전단사함수 $A_i\rightarrow S_i$에 포함관계 $S_i\subseteq S$를 합성하여 얻는 함수들 $\iota_i:A_i\rightarrow S$가 주어졌다 하자. 그럼, 또 다른 어떤 집합 $B$와, $f_i:A_i\rightarrow B$들이 주어질 때마다, 이에 해당하는 유일한 $f:S\rightarrow B$가 존재하여 $f_i=f\circ\iota_i$가 성립한다. 
 :::
 ::: 증명
 우선, 이러한 함수 $f$가 (존재한다면) 유일하다는 것을 보이자. 이를 위해서는 임의의 $x\in S$에 대하여, 그 함숫값 $f(x)$가 항상 유일하게 결정된다는 것을 보이면 충분하다. $S$는 쌍마다 서로소인 family $(S_i)$들의 합집합이므로, $x\in S_i$이도록 하는 유일한 $i\in I$가 존재한다. 그럼 $\iota_i:A_i\rightarrow S_i$가 전단사함수이므로, 또 다시 $A_i$의 유일한 원소 $x_i$가 존재하여 $\iota_i(x_i)=x$이도록 할 수 있다. 이제,
@@ -108,7 +108,7 @@ $$f(x)=f(\iota_i(x_i))=(f\circ\iota_i)(x_i)=f_i(x_i)$$
 :::
 
 
-많은 경우에 [명제 5](#prop5)의 증명에 등장한 집합 $S$를 $A_i$들의 합이라 정의하지만, 사실 이는 주객이 전도된 정의다. 우리가 많은 분야들에서 $S$를 $A_i$들의 합으로 생각하는 이유는 표기법 상의 편리함 때문이지, $S$라는 집합 자체가 특별한 의미를 가져서가 아니다. 합의 성질은 집합 $S$에서 나오는 것이 아니라, 위의 universal property에서 나온다.
+많은 경우에 [명제 5](#prop5){: data-relation="weak" }의 증명에 등장한 집합 $S$를 $A_i$들의 합이라 정의하지만, 사실 이는 주객이 전도된 정의다. 우리가 많은 분야들에서 $S$를 $A_i$들의 합으로 생각하는 이유는 표기법 상의 편리함 때문이지, $S$라는 집합 자체가 특별한 의미를 가져서가 아니다. 합의 성질은 집합 $S$에서 나오는 것이 아니라, 위의 universal property에서 나온다.
 
 따라서 애초에 다음과 같이 정의를 해 버릴 수도 있다.
 
@@ -122,9 +122,9 @@ $$f(x)=f(\iota_i(x_i))=(f\circ\iota_i)(x_i)=f_i(x_i)$$
 을 만족하는 집합 $\sum A_i$와 $\iota_i:A_i\rightarrow \sum A_i$들의 모임이다.
 :::
 
-물론 이를 정의로 쓰기 위해서는 universal property를 만족하는 대상이 적어도 하나 존재한다는 것은 보여줘야 한다. 그리고 [정리 8](#thm8)이 정확히 그런 역할을 해 준다. 
+물론 이를 정의로 쓰기 위해서는 universal property를 만족하는 대상이 적어도 하나 존재한다는 것은 보여줘야 한다. 그리고 [정리 8](#thm8){: data-relation="required" }이 정확히 그런 역할을 해 준다. 
 
-우리는 앞서 $\sum A_i$라는 집합이 엄밀한 의미에서는 잘 정의되지 않는다는 것을 언급했다. 하지만 이러한 집합 자체는 잘 정의되지 않더라도, 이러한 집합들이 여럿 주어진다면 이들 사이의 전단사함수가 존재한다. 이런 상황을 *전단사함수에 대하여 유일하다<sub>unique up to bijection</sub>*고 말한다. [정의 6$'$](#def6-1)으로부터 집합의 합은 전단사함수에 대하여 유일하다는 것을 보일 수 있다. 
+우리는 앞서 $\sum A_i$라는 집합이 엄밀한 의미에서는 잘 정의되지 않는다는 것을 언급했다. 하지만 이러한 집합 자체는 잘 정의되지 않더라도, 이러한 집합들이 여럿 주어진다면 이들 사이의 전단사함수가 존재한다. 이런 상황을 *전단사함수에 대하여 유일하다<sub>unique up to bijection</sub>*고 말한다. [정의 6$'$](#def6-1){: data-relation="required" }으로부터 집합의 합은 전단사함수에 대하여 유일하다는 것을 보일 수 있다. 
 
 ::: 따름정리 9
 집합들의 family $(A_i)$에 대하여, $\sum A_i$는 전단사함수에 대하여 유일하다.
@@ -134,7 +134,7 @@ $$f(x)=f(\iota_i(x_i))=(f\circ\iota_i)(x_i)=f_i(x_i)$$
 
 $$\iota_i'=\phi'\circ\iota_i=\phi'\circ(\phi\circ\iota_i')=(\phi'\circ\phi)\circ\iota_i'$$
 
-이다. 한편, 함수들 $\iota_i':A_i\rightarrow S'$에 이번에는 $S'$의 universal property를 적용하자. 그럼 어떤 유일한 함수 $\psi:S'\rightarrow S'$가 존재하여 $\iota_i'=\psi\circ\iota_i'$를 만족한다. 이는 당연히 $\psi=\id_{S'}$에 의해 만족되는 식이므로, 유일성에 의해 이 식을 만족하는 모든 함수 $\psi$들은 $\id_{S'}$와 같다. 따라서 $\phi'\circ\phi=\id_{S'}$이고, $\id_{S'}$는 전단사이므로 $\phi'$는 전사함수, $\phi$는 단사함수이다. ([§Retraction과 section, ⁋명제 3](/ko/math/set_theory/retraction_and_section#prop3))
+이다. 한편, 함수들 $\iota_i':A_i\rightarrow S'$에 이번에는 $S'$의 universal property를 적용하자. 그럼 어떤 유일한 함수 $\psi:S'\rightarrow S'$가 존재하여 $\iota_i'=\psi\circ\iota_i'$를 만족한다. 이는 당연히 $\psi=\id_{S'}$에 의해 만족되는 식이므로, 유일성에 의해 이 식을 만족하는 모든 함수 $\psi$들은 $\id_{S'}$와 같다. 따라서 $\phi'\circ\phi=\id_{S'}$이고, $\id_{S'}$는 전단사이므로 $\phi'$는 전사함수, $\phi$는 단사함수이다. ([§Retraction과 section, ⁋명제 3](/ko/math/set_theory/retraction_and_section#prop3){: data-relation="required" })
 
 마찬가지로, $\phi\circ\phi'=\id_S$임을 보일 수 있고, 이로 인해 $\phi$는 전사함수, $\phi'$는 단사함수다. 즉, 이들은 각각 전단사함수가 되므로 $S$와 $S'$ 사이의 전단사함수가 존재한다. 
 :::
