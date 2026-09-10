@@ -34,7 +34,7 @@ For example, in the figure above, $N=\mathbb{R}$, $M=\mathbb{R}^2$, and (a) is a
 
 
 ::: Example 2
-For a manifold $M$ and its open submanifold $U$, the inclusion $\iota:U\hookrightarrow M$ is an embedded submanifold of $M$. That $\dd{\iota_p}$ is injective for every $p\in U$ follows from [§Differentials, ⁋Proposition 8](/en/math/manifolds/differentials#prop8), namely the fact that $\dd{\iota_p}$ is an isomorphism between $T_pU$ and $T_{\iota(p)}M$, and moreover, by the definition of open submanifold, the subspace topology is given on $\iota(U)$.
+For a manifold $M$ and its open submanifold $U$, the inclusion $\iota:U\hookrightarrow M$ is an embedded submanifold of $M$. That $\dd{\iota_p}$ is injective for every $p\in U$ follows from [§Differentials, ⁋Proposition 8](/en/math/manifolds/differentials#prop8){: data-relation="required" }, namely the fact that $\dd{\iota_p}$ is an isomorphism between $T_pU$ and $T_{\iota(p)}M$, and moreover, by the definition of open submanifold, the subspace topology is given on $\iota(U)$.
 :::
 
 ::: Example 3
@@ -91,7 +91,7 @@ as given. Then since each component function $y^i$ is $C^\infty$, so is $\varphi
 
 $$\left(\dd{\varphi_{p_0}}\right)^\ast\left(\dd{r}^i\vert_{\varphi(p_0)}\right)=\left(\dd{r}^i\vert_{\varphi(p_0)}\right)\circ\left(\dd{\varphi_{p_0}}\right)=\dd{(r^i\circ\varphi)_{p_0}}=\dd{y}^i\vert_{p_0}$$
 
-so the basis elements $\dd{r}^i\vert_{\varphi(p_0)}$ of $T_{\varphi(p_0)}^\ast\mathbb{R}^m$ are each mapped to a basis of $T_{p_0}^\ast M$, and thus $(\dd{\varphi_{p_0}})^\ast$ is an isomorphism. Hence $\dd{\varphi_{p_0}}$ is also an isomorphism, and therefore, applying [Corollary 5](#cor5), we see that there exists a suitable $V$ with $p_0\in V\subseteq U$ such that $\varphi\vert_V:V\rightarrow\varphi(V)$ is a coordinate system.
+so the basis elements $\dd{r}^i\vert_{\varphi(p_0)}$ of $T_{\varphi(p_0)}^\ast\mathbb{R}^m$ are each mapped to a basis of $T_{p_0}^\ast M$, and thus $(\dd{\varphi_{p_0}})^\ast$ is an isomorphism. Hence $\dd{\varphi_{p_0}}$ is also an isomorphism, and therefore, applying [Corollary 5](#cor5){: data-relation="required" }, we see that there exists a suitable $V$ with $p_0\in V\subseteq U$ such that $\varphi\vert_V:V\rightarrow\varphi(V)$ is a coordinate system.
 :::
 
 Obtaining the following two corollaries from the above is essentially undergraduate linear algebra.
@@ -100,14 +100,14 @@ Obtaining the following two corollaries from the above is essentially undergradu
 For an $m$-dimensional manifold $M$, a point $p_0\in M$, and an integer $0<k<m$, let $y^1,\ldots, y^k$ be elements of $\mathcal{C}_{M,p_0}^\infty$ that are independent functions at $p_0$. Then there exist suitable functions $x^{k+1},\ldots, x^{m}$ such that $(y^1,\ldots, y^k, x^{k+1}, \ldots, x^m)$ defines a coordinate system in a neighborhood of $p_0$.
 :::
 ::: Proof
-Let a coordinate system $(U,\varphi)$, $\varphi=(x^i)_{i=1}^{m}$ about the point $p_0$ be given. Then the $\dd{x}^i$ form a basis of $T_{p_0}^\ast M$. Now, just as in the proof of [\[Linear Algebra\] §Dimension of Vector Spaces, ⁋Lemma 2](/en/math/linear_algebra/dimension#lem2), we insert the $\dd{y}^i$ one by one and remove the $\dd{x}^j$ one by one, adjusting indices appropriately.
+Let a coordinate system $(U,\varphi)$, $\varphi=(x^i)_{i=1}^{m}$ about the point $p_0$ be given. Then the $\dd{x}^i$ form a basis of $T_{p_0}^\ast M$. Now, just as in the proof of [\[Linear Algebra\] §Dimension of Vector Spaces, ⁋Lemma 2](/en/math/linear_algebra/dimension#lem2){: data-relation="required" }, we insert the $\dd{y}^i$ one by one and remove the $\dd{x}^j$ one by one, adjusting indices appropriately.
 :::
 
 ::: Corollary 8
 For an $m$-dimensional manifold $M$ and a point $p_0\in M$, let elements $y^1,\ldots, y^k$ of $\mathcal{C}_{M,p_0}^\infty$ be given. If the $\dd{y}^i$ span $T_{p_0}^\ast M$, then a suitable subset of $\{y^1,\ldots, y^k\}$ forms a coordinate system in a neighborhood of $p_0$.
 :::
 ::: Proof
-Find an appropriate subset of $\{\dd{y}^1,\ldots, \dd{y}^k\}$ that forms a basis of $T_{p_0}^\ast M$; this subset must necessarily consist of $m$ elements. Therefore, applying [Corollary 6](#cor6) suffices.
+Find an appropriate subset of $\{\dd{y}^1,\ldots, \dd{y}^k\}$ that forms a basis of $T_{p_0}^\ast M$; this subset must necessarily consist of $m$ elements. Therefore, applying [Corollary 6](#cor6){: data-relation="required" } suffices.
 :::
 
 The following two corollaries will be used frequently in what follows under the name *rank theorem*.
@@ -124,7 +124,7 @@ Since $\dd{F_p}$ is surjective, its dual $(\dd{F_p})^\ast:T_{F(p)}^\ast N\righta
 
 $$(\dd{F_p})^\ast(\dd{y}^j\vert_{F(p)})=\dd{y}^j\vert_{F(p)}\circ \dd{F_p}=\dd{(y^j\circ F)_p}=\dd{x}^j\vert_p$$
 
-are linearly independent in $T_p^\ast M$. Therefore, the desired result follows from [Corollary 7](#cor7).
+are linearly independent in $T_p^\ast M$. Therefore, the desired result follows from [Corollary 7](#cor7){: data-relation="required" }.
 :::
 
 ::: Corollary 10 (Rank theorem, Immersion case)
@@ -139,7 +139,7 @@ Since $\dd{F_p}$ is injective, its dual $(\dd{F_p})^\ast:T_{F(p)}^\ast N\rightar
 
 $$(\dd{F_p})^\ast(\dd{y}^j\vert_{F(p)})=\dd{y}^j\vert_{F(p)}\circ \dd{F_p}=\dd{(y^j\circ F)_p}=\dd{x}^j\vert_p$$
 
-must span $T_p^\ast M$, and therefore by [Corollary 8](#cor8) a subset of the given set forms a coordinate system on $M$ in a neighborhood of $p$.
+must span $T_p^\ast M$, and therefore by [Corollary 8](#cor8){: data-relation="required" } a subset of the given set forms a coordinate system on $M$ in a neighborhood of $p$.
 :::
 
 

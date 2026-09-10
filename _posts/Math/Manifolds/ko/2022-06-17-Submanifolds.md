@@ -33,7 +33,7 @@ weight: 7
 
 
 ::: 예시 2
-Manifold $M$과 그 open submanifold $U$에 대하여, $\iota:U\hookrightarrow M$은 $M$의 embedded submanifold이다. 모든 $p\in U$에 대하여 $\dd{\iota_p}$가 injective라는 것은 [§미분사상, ⁋명제 8](/ko/math/manifolds/differentials#prop8), 즉 $\dd{\iota_p}$가 $T_pU$와 $T_{\iota(p)}M$ 사이의 isomorphism이라는 사실로부터 명확하고, 또 open submanifold의 정의에 의해 $\iota(U)$에는 subspace topology가 주어져 있다.
+Manifold $M$과 그 open submanifold $U$에 대하여, $\iota:U\hookrightarrow M$은 $M$의 embedded submanifold이다. 모든 $p\in U$에 대하여 $\dd{\iota_p}$가 injective라는 것은 [§미분사상, ⁋명제 8](/ko/math/manifolds/differentials#prop8){: data-relation="required" }, 즉 $\dd{\iota_p}$가 $T_pU$와 $T_{\iota(p)}M$ 사이의 isomorphism이라는 사실로부터 명확하고, 또 open submanifold의 정의에 의해 $\iota(U)$에는 subspace topology가 주어져 있다.
 :::
 
 ::: 예시 3
@@ -90,7 +90,7 @@ $$\varphi(p)=(y^1(p),\ldots, y^m(p))$$
 
 $$\left(\dd{\varphi_{p_0}}\right)^\ast\left(\dd{r}^i\vert_{\varphi(p_0)}\right)=\left(\dd{r}^i\vert_{\varphi(p_0)}\right)\circ\left(\dd{\varphi_{p_0}}\right)=\dd{(r^i\circ\varphi)_{p_0}}=\dd{y}^i\vert_{p_0}$$
 
-이므로, $T_{\varphi(p_0)}^\ast\mathbb{R}^m$에서의 basis $\dd{r}^i\vert_{\varphi(p_0)}$들이 모두 $T_{p_0}^\ast M$의 basis로 각각 옮겨지고 따라서 $(\dd{\varphi_{p_0}})^\ast$는 isomorphism이다. 따라서 $\dd{\varphi_{p_0}}$도 isomorphism이며, 따라서 [따름정리 5](#cor5)를 적용하면 $p_0\in V\subseteq U$를 만족하는 적당한 $V$가 존재하여 $\varphi\vert_V:V\rightarrow\varphi(V)$가 coordinate system이 된다는 것을 알 수 있다.
+이므로, $T_{\varphi(p_0)}^\ast\mathbb{R}^m$에서의 basis $\dd{r}^i\vert_{\varphi(p_0)}$들이 모두 $T_{p_0}^\ast M$의 basis로 각각 옮겨지고 따라서 $(\dd{\varphi_{p_0}})^\ast$는 isomorphism이다. 따라서 $\dd{\varphi_{p_0}}$도 isomorphism이며, 따라서 [따름정리 5](#cor5){: data-relation="required" }를 적용하면 $p_0\in V\subseteq U$를 만족하는 적당한 $V$가 존재하여 $\varphi\vert_V:V\rightarrow\varphi(V)$가 coordinate system이 된다는 것을 알 수 있다.
 :::
 
 위의 따름정리로부터 다음 두 따름정리들을 얻어내는 것은 본질적으로 학부 선형대수의 내용이다.
@@ -99,14 +99,14 @@ $$\left(\dd{\varphi_{p_0}}\right)^\ast\left(\dd{r}^i\vert_{\varphi(p_0)}\right)=
 $m$차원 manifold $M$과 $p_0\in M$, 정수 $0<k<m$에 대하여, $\mathcal{C}_{M,p_0}^\infty$의 원소들 $y^1,\ldots, y^k$가 $p_0$에서 independent한 함수들이라 하자. 그럼 적당한 함수 $x^{k+1},\ldots, x^{m}$들이 존재하여 $(y^1,\ldots, y^k, x^{k+1}, \ldots, x^m)$들이 $p_0$ 근방에서 coordinate system을 정의한다.
 :::
 ::: 증명
-점 $p_0$에 대한 coordinate system $(U,\varphi)$, $\varphi=(x^i)_{i=1}^{m}$이 주어졌다 하자. 그럼 $\dd{x}^i$들이 $T_{p_0}^\ast M$의 basis가 된다. 이제 [\[선형대수학\] §벡터공간의 차원, ⁋보조정리 2](/ko/math/linear_algebra/dimension#lem2)의 증명과 마찬가지로 $\dd{y}^i$들을 하나씩 넣고, $\dd{x}^j$들을 하나씩 빼며 적절히 index를 수정해주면 된다.
+점 $p_0$에 대한 coordinate system $(U,\varphi)$, $\varphi=(x^i)_{i=1}^{m}$이 주어졌다 하자. 그럼 $\dd{x}^i$들이 $T_{p_0}^\ast M$의 basis가 된다. 이제 [\[선형대수학\] §벡터공간의 차원, ⁋보조정리 2](/ko/math/linear_algebra/dimension#lem2){: data-relation="required" }의 증명과 마찬가지로 $\dd{y}^i$들을 하나씩 넣고, $\dd{x}^j$들을 하나씩 빼며 적절히 index를 수정해주면 된다.
 :::
 
 ::: 따름정리 8
 $m$차원 manifold $M$과 점 $p_0\in M$에 대하여, $\mathcal{C}_{M,p_0}^\infty$의 원소들 $y^1,\ldots, y^k$들이 주어졌다 하자. 만일 $\dd{y}^i$들이 $T_{p_0}^\ast M$을 span한다면 집합 $\{y^1,\ldots, y^k\}$의 적절한 부분집합이 $p_0$ 근방의 coordinate system을 이룬다.
 :::
 ::: 증명
-$T_{p_0}^\ast M$의 basis를 이루는 집합 $\{\dd{y}^1,\ldots, \dd{y}^k\}$의 적절한 부분집합을 찾으면 이 부분집합은 반드시 $m$개의 원소로 이루어져 있다. 따라서 [따름정리 6](#cor6)을 적용하면 된다.
+$T_{p_0}^\ast M$의 basis를 이루는 집합 $\{\dd{y}^1,\ldots, \dd{y}^k\}$의 적절한 부분집합을 찾으면 이 부분집합은 반드시 $m$개의 원소로 이루어져 있다. 따라서 [따름정리 6](#cor6){: data-relation="required" }을 적용하면 된다.
 :::
 
 다음 두 따름정리들은 앞으로 *rank theorem*이라는 이름으로 자주 사용하게 된다. 
@@ -123,7 +123,7 @@ $\dd{F_p}$가 surjective이므로, 그 dual $(\dd{F_p})^\ast:T_{F(p)}^\ast N\rig
 
 $$(\dd{F_p})^\ast(\dd{y}^j\vert_{F(p)})=\dd{y}^j\vert_{F(p)}\circ \dd{F_p}=\dd{(y^j\circ F)_p}=\dd{x}^j\vert_p$$
 
-이 $T_p^\ast M$에서 linearly independent하다. 따라서 [따름정리 7](#cor7)에 의하여 원하는 결과를 얻는다. 
+이 $T_p^\ast M$에서 linearly independent하다. 따라서 [따름정리 7](#cor7){: data-relation="required" }에 의하여 원하는 결과를 얻는다. 
 :::
 
 ::: 따름정리 10 (Rank theorem, Immersion case)
@@ -138,7 +138,7 @@ $\dd{F_p}$가 injective이므로, 그 dual $(\dd{F_p})^\ast:T_{F(p)}^\ast N\righ
 
 $$(\dd{F_p})^\ast(\dd{y}^j\vert_{F(p)})=\dd{y}^j\vert_{F(p)}\circ \dd{F_p}=\dd{(y^j\circ F)_p}=\dd{x}^j\vert_p$$
 
-들이 $T_p^\ast M$을 span해야 하고, 따라서 [따름정리 8](#cor8)에 의해 주어진 집합의 부분집합이 $p$ 근방에서 $M$의 coordinate system을 이룬다. 
+들이 $T_p^\ast M$을 span해야 하고, 따라서 [따름정리 8](#cor8){: data-relation="required" }에 의해 주어진 집합의 부분집합이 $p$ 근방에서 $M$의 coordinate system을 이룬다. 
 :::
 
 
