@@ -17,7 +17,7 @@ weight: 7
 
 ---
 
-앞선 글의 말미는 단사함수와 전사함수의 새로운 정의를 내릴 수 있도록 해 준다. ([§함수들 사이의 연산, ⁋참고 6](/ko/math/set_theory/operation_of_functions#rmk6))
+앞선 글의 말미는 단사함수와 전사함수의 새로운 정의를 내릴 수 있도록 해 준다. ([§함수들 사이의 연산, ⁋참고 6](/ko/math/set_theory/operation_of_functions#rmk6){: data-relation="required" })
 
 ::: 명제 1
 함수 $f:A\rightarrow B$를 생각하자. 만일 어떠한 $r:B\rightarrow A$가 존재하여 $r\circ f=\id_A$라면 $f$는 단사함수다. 또 어떠한 $s:B\rightarrow A$가 존재하여 $f\circ s=\id_B$라면 $f$는 전사함수다.  
@@ -57,11 +57,11 @@ $f$가 $A$에서 $B$로의 단사함수라 하자. 그럼 $r\circ f=\id_A$를 �
 
 $$X\subseteq f^{-1}(f(X)),\qquad f(f^{-1}(Y))\subseteq Y$$
 
-가 성립한다. 실제로 $x\in X$라면 $f(x)\in f(X)$이므로 $x\in f^{-1}(f(X))$이고, $y\in f(f^{-1}(Y))$라면 $y=f(x)$이도록 하는 $x\in f^{-1}(Y)$가 존재하므로 $y=f(x)\in Y$이다. 만일 $f$가 단사라면, [§함수들 사이의 연산, ⁋참고 6](/ko/math/set_theory/operation_of_functions#rmk6)와 같이 정의된 $r$에 대하여
+가 성립한다. 실제로 $x\in X$라면 $f(x)\in f(X)$이므로 $x\in f^{-1}(f(X))$이고, $y\in f(f^{-1}(Y))$라면 $y=f(x)$이도록 하는 $x\in f^{-1}(Y)$가 존재하므로 $y=f(x)\in Y$이다. 만일 $f$가 단사라면, [§함수들 사이의 연산, ⁋참고 6](/ko/math/set_theory/operation_of_functions#rmk6){: data-relation="required" }와 같이 정의된 $r$에 대하여
 
 $$f^{-1}(f(X))=r(f(X))=\id_A(X)=X$$
 
-이고, 만일 $f$가 전사라면 마찬가지로 [§함수들 사이의 연산, ⁋참고 6](/ko/math/set_theory/operation_of_functions#rmk6)와 같이 정의된 $s$에 대하여
+이고, 만일 $f$가 전사라면 마찬가지로 [§함수들 사이의 연산, ⁋참고 6](/ko/math/set_theory/operation_of_functions#rmk6){: data-relation="required" }와 같이 정의된 $s$에 대하여
 
 $$Y=\id_B(Y)=f(s(Y))\subseteq f(f^{-1}(Y))$$
 
