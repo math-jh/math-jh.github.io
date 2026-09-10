@@ -18,7 +18,7 @@ last_polished_at: 2026-06-26T20:30:02+00:00
 ---
 ## Least Squares Method
 
-The method of least squares we introduce now is first considered for Euclidean spaces $\mathbb{R}^n$ with the dot product defined on them. However, as was done in [§Bilinear Forms, §§Non-degenerate Bilinear Forms](/en/math/linear_algebra/bilinear_form#non-degenerate-bilinear-forms), this can be generalized to an arbitrary $\mathbb{R}$-inner product space in the same way.
+The method of least squares we introduce now is first considered for Euclidean spaces $\mathbb{R}^n$ with the dot product defined on them. However, as was done in [§Bilinear Forms, §§Non-degenerate Bilinear Forms](/en/math/linear_algebra/bilinear_form#non-degenerate-bilinear-forms){: data-relation="weak" }, this can be generalized to an arbitrary $\mathbb{R}$-inner product space in the same way.
 
 Consider an arbitrary matrix $A\in\Mat_{m\times n}(\mathbb{R})$ and the system of linear equations $Ax=y$. If $m=n$ and $A$ is invertible, this equation has a unique solution, but this is not the case in general. In particular, consider the case where $m>n$. Then since $\rank(A)\leq n< m$, for most $y$—excluding those vectors lying in the image of $A$—this equation cannot be solved.
 
@@ -59,7 +59,7 @@ must have a solution, but since the three points are not collinear, no exact sol
 
 $$A=\begin{pmatrix}0&1\\ 1&1\\ 2&1\end{pmatrix},\qquad x=\begin{pmatrix}a\\ b\end{pmatrix},\qquad y=\begin{pmatrix}1\\ 3\\ 4\end{pmatrix}$$
 
-where the first column of $A$ contains the $x$-coordinates of each point, and the second column contains the constant $1$. By [Proposition 1](#prop1), the pair $(a,b)$ that minimizes $\lVert Ax-y\rVert$ is given as the solution of the normal equation
+where the first column of $A$ contains the $x$-coordinates of each point, and the second column contains the constant $1$. By [Proposition 1](#prop1){: data-relation="required" }, the pair $(a,b)$ that minimizes $\lVert Ax-y\rVert$ is given as the solution of the normal equation
 
 $$A^tAx=A^ty$$
 
@@ -78,7 +78,7 @@ That is, the straight line that best represents the given three points in the le
 
 More generally, even if we choose the inner product $\langle-,-\rangle$ to be the $L^2$-inner product on a space of functions instead of the dot product, we can repeat similar examples.
 
-What was essentially used in [Example 2](#ex2) is only the fact that the function to be found is linear in the unknown coefficients. That is, as long as the model we wish to use is of the form of a linear combination $c_1f_1+\cdots+c_kf_k$ of previously chosen functions $f_1,\ldots, f_k$, we can construct a matrix $A$ whose $(i,j)$-entry is the value of $f_j$ at the $i$-th data point and solve the same normal equation to obtain the coefficients $c_j$. In particular, [Example 2](#ex2) was the case with $f_1(t)=t$, $f_2(t)=1$, and the same method applies directly to the case of general polynomial functions as well.
+What was essentially used in [Example 2](#ex2){: data-relation="weak" } is only the fact that the function to be found is linear in the unknown coefficients. That is, as long as the model we wish to use is of the form of a linear combination $c_1f_1+\cdots+c_kf_k$ of previously chosen functions $f_1,\ldots, f_k$, we can construct a matrix $A$ whose $(i,j)$-entry is the value of $f_j$ at the $i$-th data point and solve the same normal equation to obtain the coefficients $c_j$. In particular, [Example 2](#ex2){: data-relation="weak" } was the case with $f_1(t)=t$, $f_2(t)=1$, and the same method applies directly to the case of general polynomial functions as well.
 
 ::: Example 3
 Consider the problem of finding the quadratic function $y=a\x^2+b\x+c$ that best represents the four points $(-2,5)$, $(-1,2)$, $(1,1)$, $(2,4)$ in the plane. Stacking the values of $(\x^2,\x,1)$ at each point as rows gives
@@ -98,14 +98,14 @@ The determinant of this coefficient matrix is $34\cdot 4-10\cdot 10=36$, so it i
 {% diagram Math/Linear_Algebra/Least_Squares_Method-2.svg width="19.74em" alt="quadratic least squares fit" %}
 :::
 
-Looking back at the derivation of [Proposition 1](#prop1), the $Ax$ produced by the least-squares solution $x$ was exactly equal to the vector $\proj_{\im A}y$ obtained by projecting $y$ onto $\im A$, and this was the starting point that led to the equation $A^tAx=A^ty$. That is, the approximation $\hat y=Ax$ is the foot of the perpendicular from $y$ to $\im A$, and the error $y-\hat y$ is perpendicular to $\im A$. In particular, if $A$ has full column rank so that $A^tA$ is invertible, then $x=(A^tA)^{-1}A^ty$, so the approximation is given by
+Looking back at the derivation of [Proposition 1](#prop1){: data-relation="required" }, the $Ax$ produced by the least-squares solution $x$ was exactly equal to the vector $\proj_{\im A}y$ obtained by projecting $y$ onto $\im A$, and this was the starting point that led to the equation $A^tAx=A^ty$. That is, the approximation $\hat y=Ax$ is the foot of the perpendicular from $y$ to $\im A$, and the error $y-\hat y$ is perpendicular to $\im A$. In particular, if $A$ has full column rank so that $A^tA$ is invertible, then $x=(A^tA)^{-1}A^ty$, so the approximation is given by
 
 $$\hat y=A(A^tA)^{-1}A^ty$$
 
 The matrix $P=A(A^tA)^{-1}A^t$ appearing here represents the orthogonal projection onto $\im A$.
 
 ::: Example 4
-Returning to [Example 2](#ex2), let us compute the error with respect to the approximating function directly. Since $x=(3/2,7/6)$, we have
+Returning to [Example 2](#ex2){: data-relation="required" }, let us compute the error with respect to the approximating function directly. Since $x=(3/2,7/6)$, we have
 
 $$\hat y=Ax=\begin{pmatrix}0&1\\ 1&1\\ 2&1\end{pmatrix}\begin{pmatrix}3/2\\ 7/6\end{pmatrix}=\begin{pmatrix}7/6\\ 8/3\\ 25/6\end{pmatrix}$$
 
@@ -126,13 +126,13 @@ Now we consider the opposite case: a matrix $A\in\Mat_{m\times n}(\mathbb{R})$ w
 
 First, suppose arbitrary $A\in\Mat_{m\times n}(\mathbb{R})$ and $y\in\im(A)$ are given, and assume $A$ is not injective. Then there exist non-zero vectors $u$ satisfying $Au=0$, and therefore if a vector $x$ satisfying $Ax=y$ is given, we can see that the $x+u$ are also solutions. Now let us find among these the solution with the smallest norm and call it the *minimum-norm solution*. That is, the entire set of solutions of $Ax=y$ forms $x_0+\ker A$ for a particular solution $x_0$, and we seek the point on this affine subspace that minimizes the norm.
 
-This is exactly the situation treated by the projection theorem in [§Inner Product Spaces, ⁋Theorem 9](/en/math/linear_algebra/inner_product_spaces#thm9). The point that minimizes the distance from the origin to the affine subspace $x_0+\ker A$ is unique, and the vector drawn from this point to the affine subspace is perpendicular to $\ker A$. Therefore the minimum-norm solution is the unique solution lying in $(\ker A)^\perp$. On the other hand, by [§Bilinear Forms, ⁋Proposition 10](/en/math/linear_algebra/bilinear_form#prop10), we have $(\ker A)^\perp=\im A^t$. This can be summarized as follows.
+This is exactly the situation treated by the projection theorem in [§Inner Product Spaces, ⁋Theorem 9](/en/math/linear_algebra/inner_product_spaces#thm9){: data-relation="required" }. The point that minimizes the distance from the origin to the affine subspace $x_0+\ker A$ is unique, and the vector drawn from this point to the affine subspace is perpendicular to $\ker A$. Therefore the minimum-norm solution is the unique solution lying in $(\ker A)^\perp$. On the other hand, by [§Bilinear Forms, ⁋Proposition 10](/en/math/linear_algebra/bilinear_form#prop10){: data-relation="required" }, we have $(\ker A)^\perp=\im A^t$. This can be summarized as follows.
 
 ::: Proposition 5
 For an arbitrary matrix $A\in\Mat_{m\times n}(\mathbb{R})$ and $y\in\im A$, among the solutions of the equation $Ax=y$ there exists a unique solution that minimizes the norm, and this is the unique solution belonging to $\im A^t$.
 :::
 ::: Proof
-Since $y\in\im A$, there exists $x_0$ satisfying $Ax_0=y$, and the entire set of solutions of $Ax=y$ is $x_0+\ker A$. By [§Bilinear Forms, ⁋Proposition 10](/en/math/linear_algebra/bilinear_form#prop10),
+Since $y\in\im A$, there exists $x_0$ satisfying $Ax_0=y$, and the entire set of solutions of $Ax=y$ is $x_0+\ker A$. By [§Bilinear Forms, ⁋Proposition 10](/en/math/linear_algebra/bilinear_form#prop10){: data-relation="required" },
 
 $$\mathbb{R}^n=\ker A\oplus(\ker A)^\perp$$
 
@@ -161,12 +161,12 @@ Now setting $x=A^t(AA^t)^{-1}y$, we have
 
 $$Ax=AA^t(AA^t)^{-1}y=y$$
 
-so $x$ is a solution of $Ax=y$. Moreover, since $x=A^t\big((AA^t)^{-1}y\big)\in\im A^t$, by [Proposition 5](#prop5) the vector $x$ is the minimum-norm solution.
+so $x$ is a solution of $Ax=y$. Moreover, since $x=A^t\big((AA^t)^{-1}y\big)\in\im A^t$, by [Proposition 5](#prop5){: data-relation="required" } the vector $x$ is the minimum-norm solution.
 :::
 
 As seen in the proof, from the fact that the minimum-norm solution lies on $\im A^t$ we can assume the form $x=A^tz$, substitute this into $Ax=y$, and solve $AA^tz=y$ to obtain $z=(AA^t)^{-1}y$. Then $A^t(AA^t)^{-1}$ becomes a *right inverse* of $A$, i.e., a matrix satisfying $A\cdot A^t(AA^t)^{-1}=I_m$.
 
-The case of least squares treated in the previous section and the case of minimum norm treated in this section can be viewed as dual situations. When $A$ is of *full column rank*, i.e., $\rank A=n$, the matrix $A^tA$ becomes invertible and the normal equation of [Proposition 1](#prop1) gives the unique least-squares solution $x=(A^tA)^{-1}A^ty$, and then $(A^tA)^{-1}A^t$ becomes a left inverse of $A$. On the other hand, when $A$ is of full row rank, the right inverse $A^t(AA^t)^{-1}$ gives the minimum-norm solution as above. The following concept unifies these two matrices.
+The case of least squares treated in the previous section and the case of minimum norm treated in this section can be viewed as dual situations. When $A$ is of *full column rank*, i.e., $\rank A=n$, the matrix $A^tA$ becomes invertible and the normal equation of [Proposition 1](#prop1){: data-relation="weak" } gives the unique least-squares solution $x=(A^tA)^{-1}A^ty$, and then $(A^tA)^{-1}A^t$ becomes a left inverse of $A$. On the other hand, when $A$ is of full row rank, the right inverse $A^t(AA^t)^{-1}$ gives the minimum-norm solution as above. The following concept unifies these two matrices.
 
 ::: Definition 7
 For a matrix $A\in\Mat_{m\times n}(\mathbb{R})$, if $A$ has full column rank we define

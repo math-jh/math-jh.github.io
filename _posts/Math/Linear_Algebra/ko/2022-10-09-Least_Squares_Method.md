@@ -19,7 +19,7 @@ weight: 23
 
 ## 최소제곱법
 
-지금 소개할 최소제곱법은 우선 유클리드 공간 $\mathbb{R}^n$들과 이 위에 주어진 dot product에 대해서 생각한다. 그러나 [§쌍선형형식, §§비퇴화 쌍선형형식](/ko/math/linear_algebra/bilinear_form#비퇴화-쌍선형형식)에서 했던 것과 동일한 방식으로 이를 일반적인 $\mathbb{R}$-내적공간으로 일반화할 수 있다.
+지금 소개할 최소제곱법은 우선 유클리드 공간 $\mathbb{R}^n$들과 이 위에 주어진 dot product에 대해서 생각한다. 그러나 [§쌍선형형식, §§비퇴화 쌍선형형식](/ko/math/linear_algebra/bilinear_form#비퇴화-쌍선형형식){: data-relation="weak" }에서 했던 것과 동일한 방식으로 이를 일반적인 $\mathbb{R}$-내적공간으로 일반화할 수 있다.
 
 임의의 행렬 $A\in\Mat_{m\times n}(\mathbb{R})$과 연립일차방정식 $Ax=y$를 생각하자. 만일 $m=n$이고 $A$가 가역이라면 이 방정식은 유일한 해를 갖지만, 일반적인 경우는 그렇지 않다. 특별히 $m>n$인 경우를 생각하자. 그럼 $\rank(A)\leq n< m$이므로, $A$의 image에 해당하는 벡터들을 제외한 대부분의 $y$에 대해서는 이 방정식을 풀 수 없다. 
 
@@ -62,7 +62,7 @@ $$\begin{aligned}a\cdot 0+b&=1\\ a\cdot 1+b&=3\\ a\cdot 2+b&=4\end{aligned}$$
 
 $$A=\begin{pmatrix}0&1\\ 1&1\\ 2&1\end{pmatrix},\qquad x=\begin{pmatrix}a\\ b\end{pmatrix},\qquad y=\begin{pmatrix}1\\ 3\\ 4\end{pmatrix}$$
 
-이며, $A$의 첫째 열은 각 점의 $x$좌표를, 둘째 열은 상수 $1$을 담는다. [명제 1](#prop1)에 따라, $\lVert Ax-y\rVert$을 최소로 하는 $(a,b)$는 normal equation
+이며, $A$의 첫째 열은 각 점의 $x$좌표를, 둘째 열은 상수 $1$을 담는다. [명제 1](#prop1){: data-relation="required" }에 따라, $\lVert Ax-y\rVert$을 최소로 하는 $(a,b)$는 normal equation
 
 $$A^tAx=A^ty$$
 
@@ -81,7 +81,7 @@ $$\begin{pmatrix}a\\ b\end{pmatrix}=(A^tA)^{-1}A^ty=\frac{1}{6}\begin{pmatrix}3&
 
 더 일반적으로, 내적 $\langle-,-\rangle$을 dot product 대신 함수들의 공간에서의 $L^2$-내적 등으로 택하여도 이와 비슷한 예시를 반복할 수 있다. 
 
-[예시 2](#ex2)에서 본질적으로 쓰인 것은 구하려는 함수가 미지의 계수들에 대해 일차라는 사실 뿐이다. 즉 사용하려는 model이 미리 고른 함수들 $f_1,\ldots, f_k$의 일차결합 $c_1f_1+\cdots+c_kf_k$의 꼴이기만 하면, $(i,j)$ 성분이 $i$번째 데이터점에서의 $f_j$의 값인 행렬 $A$를 세우고 같은 normal equation을 풀어 계수 $c_j$를 얻을 수 있다. 특별히 [예시 2](#ex2)는 $f_1(t)=t$, $f_2(t)=1$인 경우였으며, 같은 방법이 일반적인 다항함수의 경우에도 그대로 적용된다. 
+[예시 2](#ex2){: data-relation="weak" }에서 본질적으로 쓰인 것은 구하려는 함수가 미지의 계수들에 대해 일차라는 사실 뿐이다. 즉 사용하려는 model이 미리 고른 함수들 $f_1,\ldots, f_k$의 일차결합 $c_1f_1+\cdots+c_kf_k$의 꼴이기만 하면, $(i,j)$ 성분이 $i$번째 데이터점에서의 $f_j$의 값인 행렬 $A$를 세우고 같은 normal equation을 풀어 계수 $c_j$를 얻을 수 있다. 특별히 [예시 2](#ex2){: data-relation="weak" }는 $f_1(t)=t$, $f_2(t)=1$인 경우였으며, 같은 방법이 일반적인 다항함수의 경우에도 그대로 적용된다. 
 
 ::: 예시 3
 평면 위의 네 점 $(-2,5)$, $(-1,2)$, $(1,1)$, $(2,4)$를 가장 잘 표현하는 이차함수 $y=a\x^2+b\x+c$를 찾는 문제를 생각하자. 각 점에서 $(\x^2,\x,1)$의 값을 행으로 쌓으면 
@@ -101,14 +101,14 @@ $$\begin{pmatrix}34&10\\ 10&4\end{pmatrix}\begin{pmatrix}a\\ c\end{pmatrix}=\beg
 {% diagram Math/Linear_Algebra/Least_Squares_Method-2.svg width="19.74em" alt="quadratic least squares fit" %}
 :::
 
-[명제 1](#prop1)의 유도과정을 돌이켜보면, least-squares solution $x$가 만드는 $Ax$는 $y$를 $\im A$로 정사영한 벡터 $\proj_{\im A}y$와 정확히 같았으며, 이것이 애초에 방정식 $A^tAx=A^ty$을 이끌어낸 출발점이었다. 즉 근사값 $\hat y=Ax$는 $y$에서 $\im A$로 내린 수선의 발이고, 오차 $y-\hat y$는 $\im A$에 수직이다. 특히 $A$가 full column rank여서 $A^tA$이 가역이라면 $x=(A^tA)^{-1}A^ty$이므로 근사값은 
+[명제 1](#prop1){: data-relation="required" }의 유도과정을 돌이켜보면, least-squares solution $x$가 만드는 $Ax$는 $y$를 $\im A$로 정사영한 벡터 $\proj_{\im A}y$와 정확히 같았으며, 이것이 애초에 방정식 $A^tAx=A^ty$을 이끌어낸 출발점이었다. 즉 근사값 $\hat y=Ax$는 $y$에서 $\im A$로 내린 수선의 발이고, 오차 $y-\hat y$는 $\im A$에 수직이다. 특히 $A$가 full column rank여서 $A^tA$이 가역이라면 $x=(A^tA)^{-1}A^ty$이므로 근사값은 
 
 $$\hat y=A(A^tA)^{-1}A^ty$$
 
 로 주어진다. 여기서 등장한 행렬 $P=A(A^tA)^{-1}A^t$은 $\im A$로의 정사영을 나타낸다. 
 
 ::: 예시 4
-[예시 2](#ex2)로 돌아가 근사함수와의 오차를 직접 구해보자. $x=(3/2,7/6)$이었으므로 
+[예시 2](#ex2){: data-relation="required" }로 돌아가 근사함수와의 오차를 직접 구해보자. $x=(3/2,7/6)$이었으므로 
 
 $$\hat y=Ax=\begin{pmatrix}0&1\\ 1&1\\ 2&1\end{pmatrix}\begin{pmatrix}3/2\\ 7/6\end{pmatrix}=\begin{pmatrix}7/6\\ 8/3\\ 25/6\end{pmatrix}$$
 
@@ -129,13 +129,13 @@ $$0\cdot\left(-\frac{1}{6}\right)+1\cdot\frac{1}{3}+2\cdot\left(-\frac{1}{6}\rig
 
 우선 임의의 $A\in\Mat_{m\times n}(\mathbb{R})$과 $y\in\im(A)$가 주어졌다 하고, $A$가 단사가 아니라 하자. 그럼 $Au=0$을 만족하는 영이 아닌 벡터 $u$들이 존재하며, 따라서 $Ax=y$를 만족하는 벡터 $x$가 하나 주어진다면, $x+u$들 또한 해가 된다는 것을 알 수 있다. 이제 이들 중 가장 작은 norm을 갖는 해를 찾아 이를 *최소노름해<sub>minimum-norm solution</sub>*라 부르자. 즉, $Ax=y$의 해 전체는 한 특수해 $x_0$에 대하여 $x_0+\ker A$의 꼴을 이루며, 우리는 이 affine 부분공간 위에서 norm을 최소로 만드는 점을 찾는다.
 
-이는 [§내적공간, ⁋정리 9](/ko/math/linear_algebra/inner_product_spaces#thm9)의 projection theorem이 다루는 상황과 정확히 같다. 원점에서 affine 부분공간 $x_0+\ker A$까지의 거리를 최소로 만드는 점은 유일하며, 원점에서 이 점으로 그은 벡터는 $\ker A$에 수직이다. 따라서 최소노름해는 $(\ker A)^\perp$에 놓인 유일한 해이다. 한편 [§쌍선형형식, ⁋명제 10](/ko/math/linear_algebra/bilinear_form#prop10)에 의하여 $(\ker A)^\perp=\im A^t$이 성립한다. 이를 정리하면 다음과 같다.
+이는 [§내적공간, ⁋정리 9](/ko/math/linear_algebra/inner_product_spaces#thm9){: data-relation="required" }의 projection theorem이 다루는 상황과 정확히 같다. 원점에서 affine 부분공간 $x_0+\ker A$까지의 거리를 최소로 만드는 점은 유일하며, 원점에서 이 점으로 그은 벡터는 $\ker A$에 수직이다. 따라서 최소노름해는 $(\ker A)^\perp$에 놓인 유일한 해이다. 한편 [§쌍선형형식, ⁋명제 10](/ko/math/linear_algebra/bilinear_form#prop10){: data-relation="required" }에 의하여 $(\ker A)^\perp=\im A^t$이 성립한다. 이를 정리하면 다음과 같다.
 
 ::: 명제 5
 임의의 행렬 $A\in\Mat_{m\times n}(\mathbb{R})$과 $y\in\im A$에 대하여, 방정식 $Ax=y$의 해들 중 norm을 최소로 하는 해는 유일하게 존재하며, 이는 $\im A^t$에 속하는 유일한 해이다.
 :::
 ::: 증명
-$y\in\im A$이므로 $Ax_0=y$를 만족하는 $x_0$이 존재하고, $Ax=y$의 해 전체는 $x_0+\ker A$와 같다. [§쌍선형형식, ⁋명제 8](/ko/math/linear_algebra/bilinear_form#prop8)에 의하여
+$y\in\im A$이므로 $Ax_0=y$를 만족하는 $x_0$이 존재하고, $Ax=y$의 해 전체는 $x_0+\ker A$와 같다. [§쌍선형형식, ⁋명제 8](/ko/math/linear_algebra/bilinear_form#prop8){: data-relation="required" }에 의하여
 
 $$\mathbb{R}^n=\ker A\oplus(\ker A)^\perp$$
 
@@ -143,7 +143,7 @@ $$\mathbb{R}^n=\ker A\oplus(\ker A)^\perp$$
 
 $$\lVert x\rVert^2=\lVert p\rVert^2+\lVert u\rVert^2\geq \lVert p\rVert^2$$
 
-이 성립한다. 등호는 $u=0$, 즉 $x=p$일 때만 성립하므로 norm을 최소로 하는 해는 $p$로 유일하다. 또한 [§쌍선형형식, ⁋명제 10](/ko/math/linear_algebra/bilinear_form#prop10)에 의하여 $(\ker A)^\perp=\im A^t$이므로 $p\in\im A^t$이다. 게다가 임의의 해 $p+u$ (단 $u\in\ker A$)가 $\im A^t=(\ker A)^\perp$에 속한다면 $u=(p+u)-p\in(\ker A)^\perp\cap\ker A=\{0\}$이므로, $p$는 $\im A^t$에 속하는 유일한 해이다.
+이 성립한다. 등호는 $u=0$, 즉 $x=p$일 때만 성립하므로 norm을 최소로 하는 해는 $p$로 유일하다. 또한 [§쌍선형형식, ⁋명제 10](/ko/math/linear_algebra/bilinear_form#prop10){: data-relation="required" }에 의하여 $(\ker A)^\perp=\im A^t$이므로 $p\in\im A^t$이다. 게다가 임의의 해 $p+u$ (단 $u\in\ker A$)가 $\im A^t=(\ker A)^\perp$에 속한다면 $u=(p+u)-p\in(\ker A)^\perp\cap\ker A=\{0\}$이므로, $p$는 $\im A^t$에 속하는 유일한 해이다.
 :::
 
 이제 이 최소노름해를 명시적으로 구할 수 있는 경우를 생각하자. $A$가 *full row rank*, 즉 $\rank A=m$인 경우에는 $\im A=\mathbb{R}^m$이므로 모든 $y\in\mathbb{R}^m$에 대하여 $Ax=y$가 해를 가지며, 위 명제에 따라 최소노름해는 $\im A^t$ 위에서 유일하게 결정된다.
@@ -166,12 +166,12 @@ $$\lVert A^tz\rVert^2=\langle A^tz, A^tz\rangle=\langle z, AA^tz\rangle=0$$
 
 $$Ax=AA^t(AA^t)^{-1}y=y$$
 
-이므로 $x$는 $Ax=y$의 해이다. 뿐만 아니라 $x=A^t\big((AA^t)^{-1}y\big)\in\im A^t$이므로, [명제 5](#prop5)에 의하여 $x$는 최소노름해이다.
+이므로 $x$는 $Ax=y$의 해이다. 뿐만 아니라 $x=A^t\big((AA^t)^{-1}y\big)\in\im A^t$이므로, [명제 5](#prop5){: data-relation="required" }에 의하여 $x$는 최소노름해이다.
 :::
 
 증명에서 보았듯이, 최소노름해가 $\im A^t$ 위에 있다는 사실로부터 $x=A^tz$의 꼴을 가정하고 이를 $Ax=y$에 대입하여 $AA^tz=y$를 풀면 $z=(AA^t)^{-1}y$를 얻는다. 이때 $A^t(AA^t)^{-1}$은 $A$의 *오른쪽 역행렬*, 즉 $A\cdot A^t(AA^t)^{-1}=I_m$을 만족하는 행렬이 된다.
 
-앞 절에서 다룬 최소제곱의 경우와 이 절에서 다룬 최소노름의 경우는 서로 쌍대적인 상황으로 볼 수 있다. $A$가 *full column rank*, 즉 $\rank A=n$인 경우 $A^tA$이 가역이 되어 [명제 1](#prop1)의 normal equation이 유일한 최소제곱해 $x=(A^tA)^{-1}A^ty$를 주며, 이때 $(A^tA)^{-1}A^t$은 $A$의 왼쪽 역행렬이 된다. 반면 $A$가 full row rank인 경우에는 위와 같이 오른쪽 역행렬 $A^t(AA^t)^{-1}$이 최소노름해를 준다. 이 두 행렬을 통합하는 것이 다음의 개념이다.
+앞 절에서 다룬 최소제곱의 경우와 이 절에서 다룬 최소노름의 경우는 서로 쌍대적인 상황으로 볼 수 있다. $A$가 *full column rank*, 즉 $\rank A=n$인 경우 $A^tA$이 가역이 되어 [명제 1](#prop1){: data-relation="weak" }의 normal equation이 유일한 최소제곱해 $x=(A^tA)^{-1}A^ty$를 주며, 이때 $(A^tA)^{-1}A^t$은 $A$의 왼쪽 역행렬이 된다. 반면 $A$가 full row rank인 경우에는 위와 같이 오른쪽 역행렬 $A^t(AA^t)^{-1}$이 최소노름해를 준다. 이 두 행렬을 통합하는 것이 다음의 개념이다.
 
 ::: 정의 7
 행렬 $A\in\Mat_{m\times n}(\mathbb{R})$에 대하여, 만일 $A$가 full column rank라면
