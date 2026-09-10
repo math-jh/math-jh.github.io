@@ -16,13 +16,13 @@ published: false
 
 ---
 
-고전 symplectic 기하는 smooth variety 위의 closed 비축퇴 $2$-형식을 재료로 삼는다. 그런데 대수기하에서 자연스럽게 나타나는 공간의 대부분은 매끄럽지도 않고, 심지어 scheme조차 아닌 moduli stack이다. Pantev, Toën, Vaquié, Vezzosi (이하 PTVV)는 이러한 대상에 symplectic 기하를 세우려면 두 가지를 동시에 확장해야 함을 발견하였다. 첫째로 tangent bundle과 cotangent bundle을 접복합체 $T_X$와 여접 복합체 $L_X$로 대체하고 ([§Derived scheme과 derived stack, ⁋정의 10](/ko/math/derived_algebraic_geometry/derived_schemes#def10)), 둘째로 형식이 사는 곳을 cohomological degree 방향으로 옮겨 *shift*를 허용하는 것이다. 그 결과가 *n-shifted symplectic 구조*이며, PTVV는 Calabi–Yau 위의 sheaf의 moduli, local system의 moduli, mapping stack 등 수많은 유도 moduli stack이 표준적인 shifted symplectic 구조를 지님을 보였다. 이 구조가 virtual fundamental class와 Donaldson–Thomas류 불변량을 조직하는 뼈대가 된다.
+고전 symplectic 기하는 smooth variety 위의 closed 비축퇴 $2$-형식을 재료로 삼는다. 그런데 대수기하에서 자연스럽게 나타나는 공간의 대부분은 매끄럽지도 않고, 심지어 scheme조차 아닌 moduli stack이다. Pantev, Toën, Vaquié, Vezzosi (이하 PTVV)는 이러한 대상에 symplectic 기하를 세우려면 두 가지를 동시에 확장해야 함을 발견하였다. 첫째로 tangent bundle과 cotangent bundle을 접복합체 $T_X$와 여접 복합체 $L_X$로 대체하고 ([§Derived scheme과 derived stack, ⁋정의 10](/ko/math/derived_algebraic_geometry/derived_schemes#def10){: data-relation="required" }), 둘째로 형식이 사는 곳을 cohomological degree 방향으로 옮겨 *shift*를 허용하는 것이다. 그 결과가 *n-shifted symplectic 구조*이며, PTVV는 Calabi–Yau 위의 sheaf의 moduli, local system의 moduli, mapping stack 등 수많은 유도 moduli stack이 표준적인 shifted symplectic 구조를 지님을 보였다. 이 구조가 virtual fundamental class와 Donaldson–Thomas류 불변량을 조직하는 뼈대가 된다.
 
-이 글에서 우리는 먼저 derived stack 위의 $p$-형식과 closed 형식의 공간을 여접 복합체의 exterior power로부터 정의한다. 여기서 결정적인 점은 "닫혀 있음"이 하나의 *성질*이 아니라 정합적 homotopy로 주어지는 *자료*라는 것이다. 이어서 접복합체와 여접 복합체를 동형으로 잇는 비축퇴 조건을 부과하여 $n$-shifted symplectic 구조를 정의하고, degree별 예시로 smooth symplectic variety($0$-shifted), 분류 stack $\mathbf{B}G$($2$-shifted)를 다룬다. 그다음 derived critical locus가 canonically $(-1)$-shifted symplectic임을 보이고, 이것이 $(-1)$-shifted 대상의 국소 모형임을 말하는 Darboux 정리를 서술한다. 마지막으로 Lagrangian morphism과 그 교차, 그리고 AKSZ mapping stack 구성을 통해 이 구조들이 어떻게 생산되는지를 본다. 이하에서 $k$는 characteristic $0$의 field이고, $X$는 별다른 언급이 없으면 $k$ 위에서 유한표현인 derived Artin stack이라 하여 그 여접 복합체 $L_X$가 perfect, 곧 dualizable이 되도록 한다. ([§Derived scheme과 derived stack, ⁋정의 8](/ko/math/derived_algebraic_geometry/derived_schemes#def8))
+이 글에서 우리는 먼저 derived stack 위의 $p$-형식과 closed 형식의 공간을 여접 복합체의 exterior power로부터 정의한다. 여기서 결정적인 점은 "닫혀 있음"이 하나의 *성질*이 아니라 정합적 homotopy로 주어지는 *자료*라는 것이다. 이어서 접복합체와 여접 복합체를 동형으로 잇는 비축퇴 조건을 부과하여 $n$-shifted symplectic 구조를 정의하고, degree별 예시로 smooth symplectic variety($0$-shifted), 분류 stack $\mathbf{B}G$($2$-shifted)를 다룬다. 그다음 derived critical locus가 canonically $(-1)$-shifted symplectic임을 보이고, 이것이 $(-1)$-shifted 대상의 국소 모형임을 말하는 Darboux 정리를 서술한다. 마지막으로 Lagrangian morphism과 그 교차, 그리고 AKSZ mapping stack 구성을 통해 이 구조들이 어떻게 생산되는지를 본다. 이하에서 $k$는 characteristic $0$의 field이고, $X$는 별다른 언급이 없으면 $k$ 위에서 유한표현인 derived Artin stack이라 하여 그 여접 복합체 $L_X$가 perfect, 곧 dualizable이 되도록 한다. ([§Derived scheme과 derived stack, ⁋정의 8](/ko/math/derived_algebraic_geometry/derived_schemes#def8){: data-relation="required" })
 
 ## Derived stack 위의 p-형식
 
-고전적으로 smooth variety 위의 $p$-형식은 $\wedge^p\Omega_X$의 대역 절단이었다. Derived 세계에서 $\Omega_X$의 자리를 여접 복합체 $L_X$가 차지하므로, $p$-형식은 $L_X$의 $p$번째 exterior power의 절단이 되어야 한다. ([\[다중선형대수학\] §텐서대수, ⁋정의 10](/ko/math/multilinear_algebra/tensor_algebras#def10)) 그러나 $L_X$는 여러 degree에 걸친 복합체이므로, 절단은 $0$차 cohomology뿐 아니라 임의의 degree에서 취할 수 있다. 이 여분의 degree가 바로 형식의 *shift*이다.
+고전적으로 smooth variety 위의 $p$-형식은 $\wedge^p\Omega_X$의 대역 절단이었다. Derived 세계에서 $\Omega_X$의 자리를 여접 복합체 $L_X$가 차지하므로, $p$-형식은 $L_X$의 $p$번째 exterior power의 절단이 되어야 한다. ([\[다중선형대수학\] §텐서대수, ⁋정의 10](/ko/math/multilinear_algebra/tensor_algebras#def10){: data-relation="weak" }) 그러나 $L_X$는 여러 degree에 걸친 복합체이므로, 절단은 $0$차 cohomology뿐 아니라 임의의 degree에서 취할 수 있다. 이 여분의 degree가 바로 형식의 *shift*이다.
 
 ::: 정의 1
 Derived stack $X$와 정수 $p\geq0$, $n\in\mathbb{Z}$에 대하여, $X$ 위의 *degree $n$의 $p$-형식<sub>$p$-form of degree $n$</sub>*들의 *공간*을 $\QCoh(X)$에서의 mapping space
@@ -40,7 +40,7 @@ $$\omega\in H^n\bigl(X,\wedge^pL_X\bigr)=\pi_0\mathcal{A}^p(X,n)$$
 
 ## 닫힌 형식과 de Rham 복합체
 
-고전적으로 형식 $\omega$이 닫혀 있다는 것은 de Rham 미분이 소멸한다는 성질 $d_{\dR}\omega=0$이었다. Derived 세계에서 등식 $d_{\dR}\omega=0$은 너무 거칠다. Cochain 수준에서 정확히 $0$이 되기를 요구하는 대신, 우리는 $d_{\dR}\omega$을 $0$으로 이어 주는 homotopy, 그리고 그 homotopy들 사이의 더 높은 homotopy까지 모두 자료로 기억해야 한다. 이를 담는 그릇이 de Rham 복합체이다. 각 affine 조각에서 여접 복합체 $L_{B/A}$을 이어붙여 $L_X$을 얻었듯 ([§Simplicial 가환환과 animation, ⁋정의 10](/ko/math/derived_algebraic_geometry/animated_rings#def10)), 그 exterior power들을 weight에 따라 쌓아 대역적 de Rham 복합체를 만든다.
+고전적으로 형식 $\omega$이 닫혀 있다는 것은 de Rham 미분이 소멸한다는 성질 $d_{\dR}\omega=0$이었다. Derived 세계에서 등식 $d_{\dR}\omega=0$은 너무 거칠다. Cochain 수준에서 정확히 $0$이 되기를 요구하는 대신, 우리는 $d_{\dR}\omega$을 $0$으로 이어 주는 homotopy, 그리고 그 homotopy들 사이의 더 높은 homotopy까지 모두 자료로 기억해야 한다. 이를 담는 그릇이 de Rham 복합체이다. 각 affine 조각에서 여접 복합체 $L_{B/A}$을 이어붙여 $L_X$을 얻었듯 ([§Simplicial 가환환과 animation, ⁋정의 10](/ko/math/derived_algebraic_geometry/animated_rings#def10){: data-relation="required" }), 그 exterior power들을 weight에 따라 쌓아 대역적 de Rham 복합체를 만든다.
 
 ::: 정의 2
 Derived stack $X$의 *de Rham 복합체<sub>de Rham complex</sub>*는 weight로 매겨진 graded mixed complex
@@ -80,7 +80,7 @@ $$\omega^\flat:V\longrightarrow V^\ast,\qquad \omega^\flat(v)=\omega(v,-)$$
 으로 둔다. $\omega$이 *nondegenerate<sub>비퇴화</sub>*하다는 것은 $\omega^\flat$이 동형인 것을 뜻하며, 이때 쌍 $(V,\omega)$을 *symplectic vector space*라 부른다.
 :::
 
-Alternating 조건은 characteristic $0$에서 반대칭 $\omega(v,w)=-\omega(w,v)$과 동치이고, nondegeneracy는 $\omega^\flat$이 동형이라는 것이므로 $\dim V$이 짝수임을 강제한다. 이 그림에서 우리가 shifted symplectic 기하로 옮겨 갈 때 바꾸는 것은 단 하나이다. Vector space $V$을 접복합체 $T_X$로, 그 쌍대 $V^\ast$을 여접 복합체 $L_X$로 대체하되, 동형을 요구하던 곳에서 shift $[n]$을 허용한 동치를 요구한다. 여기서 $T_X=L_X^\vee$은 $L_X$의 쌍대이며 ([§Derived scheme과 derived stack, ⁋정의 10](/ko/math/derived_algebraic_geometry/derived_schemes#def10)), $L_X$이 perfect이므로 이 쌍대는 잘 정의된다.
+Alternating 조건은 characteristic $0$에서 반대칭 $\omega(v,w)=-\omega(w,v)$과 동치이고, nondegeneracy는 $\omega^\flat$이 동형이라는 것이므로 $\dim V$이 짝수임을 강제한다. 이 그림에서 우리가 shifted symplectic 기하로 옮겨 갈 때 바꾸는 것은 단 하나이다. Vector space $V$을 접복합체 $T_X$로, 그 쌍대 $V^\ast$을 여접 복합체 $L_X$로 대체하되, 동형을 요구하던 곳에서 shift $[n]$을 허용한 동치를 요구한다. 여기서 $T_X=L_X^\vee$은 $L_X$의 쌍대이며 ([§Derived scheme과 derived stack, ⁋정의 10](/ko/math/derived_algebraic_geometry/derived_schemes#def10){: data-relation="required" }), $L_X$이 perfect이므로 이 쌍대는 잘 정의된다.
 
 ::: 정의 5
 Derived stack $X$ 위의 *$n$-shifted symplectic 구조<sub>$n$-shifted symplectic structure</sub>*란, degree $n$의 closed $2$-형식 $\omega\in\mathcal{A}^{2,\mathrm{cl}}(X,n)$으로서, 그 밑에 깔린 $2$-형식 $\omega_0:\mathcal{O}_X\rightarrow(\wedge^2L_X)[n]$이 유도하는 morphism
@@ -90,14 +90,14 @@ $$\omega_0^\flat:T_X\longrightarrow L_X[n]$$
 이 $\QCoh(X)$에서 동치인 것을 뜻한다. 이 마지막 조건을 $\omega$의 *nondegeneracy<sub>비퇴화성</sub>*라 부르고, $n$-shifted symplectic 구조를 갖춘 $X$을 $n$-shifted symplectic derived stack이라 한다.
 :::
 
-밑에 깔린 형식 $\omega_0$은 $\wedge^2T_X\rightarrow\mathcal{O}_X[n]$, 곧 접복합체 위의 반대칭 쌍선형 짝짓기를 주며, 이를 한 변수에 대하여 수반으로 옮긴 것이 $\omega_0^\flat:T_X\rightarrow L_X[n]$이다. 따라서 nondegeneracy는 [정의 4](#def4)의 flat 사상이 동형이라는 조건을 복합체 수준으로, 그리고 shift $[n]$을 허용하여 옮긴 것이다. 여기서 닫힘 자료 전체가 아니라 오직 $\omega_0$만이 nondegeneracy에 관여함에 유의한다. 곧 $n$-shifted symplectic 구조는 "비축퇴 형식"이라는 국소적 조건과 "닫힘"이라는 대역적 정합 자료를 함께 묶은 대상이다. Degree $n$을 바꾸면 서로 다른 기하가 나타나는데, 이를 낮은 degree부터 살펴본다.
+밑에 깔린 형식 $\omega_0$은 $\wedge^2T_X\rightarrow\mathcal{O}_X[n]$, 곧 접복합체 위의 반대칭 쌍선형 짝짓기를 주며, 이를 한 변수에 대하여 수반으로 옮긴 것이 $\omega_0^\flat:T_X\rightarrow L_X[n]$이다. 따라서 nondegeneracy는 [정의 4](#def4){: data-relation="required" }의 flat 사상이 동형이라는 조건을 복합체 수준으로, 그리고 shift $[n]$을 허용하여 옮긴 것이다. 여기서 닫힘 자료 전체가 아니라 오직 $\omega_0$만이 nondegeneracy에 관여함에 유의한다. 곧 $n$-shifted symplectic 구조는 "비축퇴 형식"이라는 국소적 조건과 "닫힘"이라는 대역적 정합 자료를 함께 묶은 대상이다. Degree $n$을 바꾸면 서로 다른 기하가 나타나는데, 이를 낮은 degree부터 살펴본다.
 
 ::: 예시 6 ($0$-shifted: 고전적 symplectic variety)
-$X$이 smooth 고전적 variety이면 $L_X=\Omega_X$, $T_X=\mathcal{T}_X$이 모두 degree $0$에 집중된 locally free sheaf이다. Degree $0$의 closed $2$-형식은 [참고 3](#rmk3)에 의하여 통상적 closed $2$-형식 $\omega\in H^0(X,\Omega_X^2)$, $d_{\dR}\omega=0$과 같고, nondegeneracy $\omega_0^\flat:\mathcal{T}_X\overset{\sim}{\rightarrow}\Omega_X$은 각 점에서 [정의 4](#def4)의 비축퇴성이다. 따라서 $0$-shifted symplectic derived stack 가운데 smooth 고전적 variety인 것은 정확히 통상적 symplectic variety이다. 예컨대 smooth affine variety $Y$의 cotangent bundle $T^\ast Y$은 canonical Liouville 형식 $\lambda$의 미분 $\omega=\dd{\lambda}$으로 $0$-shifted symplectic이며, 이것이 shifted 세계에서도 가장 기본적인 국소 모형이 된다.
+$X$이 smooth 고전적 variety이면 $L_X=\Omega_X$, $T_X=\mathcal{T}_X$이 모두 degree $0$에 집중된 locally free sheaf이다. Degree $0$의 closed $2$-형식은 [참고 3](#rmk3){: data-relation="required" }에 의하여 통상적 closed $2$-형식 $\omega\in H^0(X,\Omega_X^2)$, $d_{\dR}\omega=0$과 같고, nondegeneracy $\omega_0^\flat:\mathcal{T}_X\overset{\sim}{\rightarrow}\Omega_X$은 각 점에서 [정의 4](#def4){: data-relation="required" }의 비축퇴성이다. 따라서 $0$-shifted symplectic derived stack 가운데 smooth 고전적 variety인 것은 정확히 통상적 symplectic variety이다. 예컨대 smooth affine variety $Y$의 cotangent bundle $T^\ast Y$은 canonical Liouville 형식 $\lambda$의 미분 $\omega=\dd{\lambda}$으로 $0$-shifted symplectic이며, 이것이 shifted 세계에서도 가장 기본적인 국소 모형이 된다.
 :::
 
 ::: 예시 7 ($2$-shifted: 분류 stack $\mathbf{B}G$)
-$G$을 $k$ 위의 reductive algebraic group, $\mathfrak{g}=\Lie(G)$을 그 Lie algebra라 하자. 분류 stack $\mathbf{B}G$은 geometric derived stack이고 ([§Derived scheme과 derived stack, ⁋예시 9](/ko/math/derived_algebraic_geometry/derived_schemes#ex9)), 그 atlas $u:\Spec k\rightarrow\mathbf{B}G$은 $G$-torsor로서 relative dimension $\dim G$의 smooth morphism이므로 상대 여접 복합체는 fiber $G$의 항등원 cotangent space가 degree $0$에 놓인 $L_{\Spec k/\mathbf{B}G}\simeq\mathfrak{g}^\ast$이다. 추이 삼각형 ([§Derived scheme과 derived stack, ⁋명제 11](/ko/math/derived_algebraic_geometry/derived_schemes#prop11)) $u^\ast L_{\mathbf{B}G}\rightarrow L_{\Spec k}\rightarrow L_{\Spec k/\mathbf{B}G}$에서 $L_{\Spec k}=0$이므로 $u^\ast L_{\mathbf{B}G}\simeq L_{\Spec k/\mathbf{B}G}[-1]=\mathfrak{g}^\ast[-1]$, 곧 여접 복합체는 $L_{\mathbf{B}G}=\mathfrak{g}^\ast[-1]$이고 그 쌍대인 접복합체는 $T_{\mathbf{B}G}=\mathfrak{g}[1]$이다. Odd degree 대상의 exterior power에 대한 Koszul 부호 규칙에 의하여
+$G$을 $k$ 위의 reductive algebraic group, $\mathfrak{g}=\Lie(G)$을 그 Lie algebra라 하자. 분류 stack $\mathbf{B}G$은 geometric derived stack이고 ([§Derived scheme과 derived stack, ⁋예시 9](/ko/math/derived_algebraic_geometry/derived_schemes#ex9){: data-relation="weak" }), 그 atlas $u:\Spec k\rightarrow\mathbf{B}G$은 $G$-torsor로서 relative dimension $\dim G$의 smooth morphism이므로 상대 여접 복합체는 fiber $G$의 항등원 cotangent space가 degree $0$에 놓인 $L_{\Spec k/\mathbf{B}G}\simeq\mathfrak{g}^\ast$이다. 추이 삼각형 ([§Derived scheme과 derived stack, ⁋명제 11](/ko/math/derived_algebraic_geometry/derived_schemes#prop11){: data-relation="required" }) $u^\ast L_{\mathbf{B}G}\rightarrow L_{\Spec k}\rightarrow L_{\Spec k/\mathbf{B}G}$에서 $L_{\Spec k}=0$이므로 $u^\ast L_{\mathbf{B}G}\simeq L_{\Spec k/\mathbf{B}G}[-1]=\mathfrak{g}^\ast[-1]$, 곧 여접 복합체는 $L_{\mathbf{B}G}=\mathfrak{g}^\ast[-1]$이고 그 쌍대인 접복합체는 $T_{\mathbf{B}G}=\mathfrak{g}[1]$이다. Odd degree 대상의 exterior power에 대한 Koszul 부호 규칙에 의하여
 
 $$\wedge^2L_{\mathbf{B}G}=\wedge^2\bigl(\mathfrak{g}^\ast[-1]\bigr)\simeq\Sym^2(\mathfrak{g}^\ast)[-2]$$
 
@@ -112,7 +112,7 @@ $0$-shifted 구조가 고전적 symplectic 기하를 그대로 담고 $2$-shifte
 
 ## Derived critical locus의 (-1)-shifted 구조
 
-Smooth variety $U$ 위의 함수 $f:U\rightarrow\mathbb{A}^1$에 대하여, 그 미분 $\dd{f}$은 cotangent bundle $\Omega_U$의 절단이고, derived critical locus $\Crit(f)$은 $\dd{f}$의 유도 영점자리로 정의되었다. ([§Derived scheme과 derived stack, ⁋예시 17](/ko/math/derived_algebraic_geometry/derived_schemes#ex17)) 이 대상은 quasi-smooth이고 virtual dimension $0$이며, 그 접복합체가 Hessian의 대칭성 때문에 여접 복합체와 자기쌍대적이라는 점을 우리는 이미 관찰하였다. 이 self-duality가 정확히 $(-1)$-shifted symplectic 구조로 정착됨을 이제 밝힌다.
+Smooth variety $U$ 위의 함수 $f:U\rightarrow\mathbb{A}^1$에 대하여, 그 미분 $\dd{f}$은 cotangent bundle $\Omega_U$의 절단이고, derived critical locus $\Crit(f)$은 $\dd{f}$의 유도 영점자리로 정의되었다. ([§Derived scheme과 derived stack, ⁋예시 17](/ko/math/derived_algebraic_geometry/derived_schemes#ex17){: data-relation="required" }) 이 대상은 quasi-smooth이고 virtual dimension $0$이며, 그 접복합체가 Hessian의 대칭성 때문에 여접 복합체와 자기쌍대적이라는 점을 우리는 이미 관찰하였다. 이 self-duality가 정확히 $(-1)$-shifted symplectic 구조로 정착됨을 이제 밝힌다.
 
 ::: 정리 8
 $U$을 smooth $k$-scheme, $f:U\rightarrow\mathbb{A}^1$을 함수라 하자. Derived critical locus $\Crit(f)$은 canonically $(-1)$-shifted symplectic이다. 그 밑에 깔린 $2$-형식이 유도하는 nondegeneracy 동치
@@ -122,7 +122,7 @@ $$T_{\Crit(f)}\overset{\sim}{\longrightarrow}L_{\Crit(f)}[-1]$$
 은 Hessian $\Hess(f)$의 대칭성에서 나오며, 이로써 $\Crit(f)$은 자기쌍대적 대칭 obstruction 이론을 가진다.
 :::
 ::: 증명
-$Z=\Crit(f)$이라 적자. 이는 rank $\dim U$의 다발 $\Omega_U$의 절단 $\dd{f}$의 유도 영점자리이므로, [§Derived scheme과 derived stack, ⁋명제 13](/ko/math/derived_algebraic_geometry/derived_schemes#prop13)을 $E=\Omega_U$, $s=\dd{f}$에 적용하면 embedding $Z\hookrightarrow U$의 상대 여접 복합체가 $L_{Z/U}\simeq(T_U\vert_Z)[1]$이 된다. $U$이 매끄러우므로 $L_U=\Omega_U$은 degree $0$에 집중되고, [§Derived scheme과 derived stack, ⁋명제 11](/ko/math/derived_algebraic_geometry/derived_schemes#prop11)의 추이 삼각형이
+$Z=\Crit(f)$이라 적자. 이는 rank $\dim U$의 다발 $\Omega_U$의 절단 $\dd{f}$의 유도 영점자리이므로, [§Derived scheme과 derived stack, ⁋명제 13](/ko/math/derived_algebraic_geometry/derived_schemes#prop13){: data-relation="required" }을 $E=\Omega_U$, $s=\dd{f}$에 적용하면 embedding $Z\hookrightarrow U$의 상대 여접 복합체가 $L_{Z/U}\simeq(T_U\vert_Z)[1]$이 된다. $U$이 매끄러우므로 $L_U=\Omega_U$은 degree $0$에 집중되고, [§Derived scheme과 derived stack, ⁋명제 11](/ko/math/derived_algebraic_geometry/derived_schemes#prop11){: data-relation="required" }의 추이 삼각형이
 
 $$L_Z\simeq\Bigl[T_U\vert_Z\xrightarrow{\Hess(f)}\Omega_U\vert_Z\Bigr]$$
 
@@ -136,10 +136,10 @@ $$T_Z\simeq L_Z[-1]$$
 
 의 동치이며, degree를 대조하면 $n=-1$인 nondegeneracy 조건 $T_Z\simeq L_Z[n]$이다.
 
-Closed $2$-형식 자체는 다음에서 온다. $\Crit(f)$은 cotangent bundle $T^\ast U$ 안에서 영절단 $U$과 $\dd{f}$의 graph를 유도적으로 겹친 것이고, $T^\ast U$은 canonical 형식 $\omega_{\mathrm{can}}=\dd{\lambda}$으로 $0$-shifted symplectic이다. ([예시 6](#ex6)) 이 형식이 두 겹침 위에서 소멸하는 정합 자료가 $\Crit(f)$ 위의 degree $-1$의 closed $2$-형식을 낳으며, 위에서 계산한 $\omega_0^\flat$이 그 nondegeneracy를 준다. 이 구성이 뒤의 [정리 11](#thm11)에서 Lagrangian 교차의 특수한 경우로 다시 나타난다. 완전한 논증은 ([PTVV], [BBJ])에 있다.
+Closed $2$-형식 자체는 다음에서 온다. $\Crit(f)$은 cotangent bundle $T^\ast U$ 안에서 영절단 $U$과 $\dd{f}$의 graph를 유도적으로 겹친 것이고, $T^\ast U$은 canonical 형식 $\omega_{\mathrm{can}}=\dd{\lambda}$으로 $0$-shifted symplectic이다. ([예시 6](#ex6){: data-relation="weak" }) 이 형식이 두 겹침 위에서 소멸하는 정합 자료가 $\Crit(f)$ 위의 degree $-1$의 closed $2$-형식을 낳으며, 위에서 계산한 $\omega_0^\flat$이 그 nondegeneracy를 준다. 이 구성이 뒤의 [정리 11](#thm11){: data-relation="forward" }에서 Lagrangian 교차의 특수한 경우로 다시 나타난다. 완전한 논증은 ([PTVV], [BBJ])에 있다.
 :::
 
-[정리 8](#thm8)의 핵심은 Hessian의 대칭성이라는 순전히 미적분적인 사실이 $(-1)$-shifted symplectic 구조라는 대역적 자료로 승격된다는 것이다. 고전적으로 $t_0(\Crit(f))=\Spec\bigl(k[U]/(\partial_1f,\ldots,\partial_nf)\bigr)$은 Jacobian ring의 spectrum일 뿐이지만, 유도 구조는 그 위에 자기쌍대적 obstruction 이론을 얹어 접방향과 여접방향을 한 번의 shift로 맞바꾼다. 이 국소 그림이 실은 모든 $(-1)$-shifted symplectic 대상의 보편적 모형이라는 것이 Brav–Bussi–Joyce의 Darboux 정리이다.
+[정리 8](#thm8){: data-relation="forward" }의 핵심은 Hessian의 대칭성이라는 순전히 미적분적인 사실이 $(-1)$-shifted symplectic 구조라는 대역적 자료로 승격된다는 것이다. 고전적으로 $t_0(\Crit(f))=\Spec\bigl(k[U]/(\partial_1f,\ldots,\partial_nf)\bigr)$은 Jacobian ring의 spectrum일 뿐이지만, 유도 구조는 그 위에 자기쌍대적 obstruction 이론을 얹어 접방향과 여접방향을 한 번의 shift로 맞바꾼다. 이 국소 그림이 실은 모든 $(-1)$-shifted symplectic 대상의 보편적 모형이라는 것이 Brav–Bussi–Joyce의 Darboux 정리이다.
 
 ::: 정리 9 (Brav–Bussi–Joyce의 Darboux 정리)
 $(X,\omega)$을 $(-1)$-shifted symplectic derived scheme이라 하자. 그러면 $X$은 Zariski 국소적으로 어떤 smooth scheme $U$ 위의 함수 $f:U\rightarrow\mathbb{A}^1$의 derived critical locus
@@ -152,7 +152,7 @@ $$X\vert_{\text{국소}}\simeq\Crit(f)$$
 증명은 $X$을 국소적으로 표준 좌표를 갖는 affine derived scheme $\Spec A$으로 실현하는 데 있다. $A$을 smooth algebra 위의 free graded-commutative cdga로 cofibrant하게 놓으면, degree $-1$의 symplectic 형식은 Poincaré 보조정리의 shifted 판본에 의하여 국소적으로 $\omega=\dd{\lambda}$의 형태로 normalize되어 Darboux 좌표에서 표준형이 되고, 이때 $A$의 미분이 어떤 degree $0$의 Hamiltonian $\Phi$과의 Poisson bracket $\{\Phi,-\}$으로 주어짐을 보인다. 이 $\Phi$이 곧 smooth 국소 모형 $U$ 위의 함수 $f$이며, 표준형 cdga가 정확히 $\Crit(\Phi)$의 Koszul 복합체와 일치한다. Truncation이 d-critical 구조를 얻는 것은, 서로 다른 국소 표현에서 나온 함수 $f$들이 정합적으로 접착되어 $t_0(X)$ 위의 하나의 canonical section을 이루기 때문이다. 완전한 논증은 ([BBJ])에 있다.
 :::
 
-Darboux 정리는 $(-1)$-shifted symplectic 기하가 왜 열거기하와 맞닿는지를 설명한다. Calabi–Yau 3-fold 위의 안정층의 moduli는 PTVV에 의하여 $(-1)$-shifted symplectic이고 ([정리 12](#thm12) 뒤의 논의), [정리 9](#thm9)에 의하여 국소적으로 $\Crit(f)$이므로, 그 위에서 $f$이 정의하는 vanishing cycle sheaf이나 Behrend 함수가 대역적으로 접착되어 Donaldson–Thomas 불변량의 categorified·motivic 판본을 낳는다. 곧 $(-1)$-shifted 구조는 DT 이론의 국소 재료인 critical point 자료를 기하적으로 조직하는 언어이다.
+Darboux 정리는 $(-1)$-shifted symplectic 기하가 왜 열거기하와 맞닿는지를 설명한다. Calabi–Yau 3-fold 위의 안정층의 moduli는 PTVV에 의하여 $(-1)$-shifted symplectic이고 ([정리 12](#thm12){: data-relation="forward" } 뒤의 논의), [정리 9](#thm9){: data-relation="required" }에 의하여 국소적으로 $\Crit(f)$이므로, 그 위에서 $f$이 정의하는 vanishing cycle sheaf이나 Behrend 함수가 대역적으로 접착되어 Donaldson–Thomas 불변량의 categorified·motivic 판본을 낳는다. 곧 $(-1)$-shifted 구조는 DT 이론의 국소 재료인 critical point 자료를 기하적으로 조직하는 언어이다.
 
 ## Lagrangian과 mapping stack 구성
 
@@ -183,7 +183,7 @@ $$T_W\longrightarrow \pi_1^\ast T_{L_1}\oplus\pi_2^\ast T_{L_2}\longrightarrow T
 에 들어맞고, 각 $L_j$의 Lagrangian 동치 $T_{L_j/X}\simeq L_{L_j}[n-1]$을 대입하여 $T_W\simeq L_W[n-1]$을 얻는 데서 나온다. 이 마지막 대각 논증이 정확히 고전적 symplectic 선형대수에서 두 Lagrangian 부분공간의 교차와 합이 서로 여접적으로 짝지어진다는 사실의 유도 판본이다. 완전한 논증은 ([PTVV])에 있다.
 :::
 
-[정리 11](#thm11)은 [정리 8](#thm8)을 특수한 경우로 포함한다. $U$이 매끄러우면 cotangent bundle $T^\ast U$은 $0$-shifted symplectic이고, 영절단 $0:U\rightarrow T^\ast U$과 임의의 closed $1$-형식의 graph는 모두 Lagrangian morphism이다. 특히 $\dd{f}$은 exact하므로 closed이고, 그 graph $\Gamma_{\dd{f}}$은 Lagrangian이다. 두 Lagrangian $0$과 $\Gamma_{\dd{f}}$의 유도 교차가 바로 $\Crit(f)$이므로, [정리 11](#thm11)이 $n=0$에서 $\Crit(f)$을 $(-1)$-shifted symplectic으로 만든다.
+[정리 11](#thm11){: data-relation="required" }은 [정리 8](#thm8){: data-relation="weak" }을 특수한 경우로 포함한다. $U$이 매끄러우면 cotangent bundle $T^\ast U$은 $0$-shifted symplectic이고, 영절단 $0:U\rightarrow T^\ast U$과 임의의 closed $1$-형식의 graph는 모두 Lagrangian morphism이다. 특히 $\dd{f}$은 exact하므로 closed이고, 그 graph $\Gamma_{\dd{f}}$은 Lagrangian이다. 두 Lagrangian $0$과 $\Gamma_{\dd{f}}$의 유도 교차가 바로 $\Crit(f)$이므로, [정리 11](#thm11){: data-relation="required" }이 $n=0$에서 $\Crit(f)$을 $(-1)$-shifted symplectic으로 만든다.
 
 {% diagram Math/Derived_Algebraic_Geometry/Shifted_Symplectic_Structures-1.svg width="9.20em" alt="Crit(f)를 두 Lagrangian의 유도 교차로 본 pullback 사각형" %}
 
@@ -213,31 +213,31 @@ $$T_M\simeq p_\ast\operatorname{ev}^\ast L_X[n]\simeq(p_\ast\operatorname{ev}^\a
 :::
 
 ::: 참고 13
-[정리 12](#thm12)의 $d$-orientation은 여러 형태로 실현된다. Betti 판본에서는 compact oriented $d$-manifold $M$의 상수 stack이 그 fundamental class로 $d$-orientation을 주고, Calabi–Yau 판본에서는 차원 $d$의 smooth projective Calabi–Yau variety가 그 trivial canonical bundle과 trace morphism으로 $d$-orientation을 준다. 이로부터 shift의 부호에 따른 열거기하의 계층이 나온다. $X$이 $2$-shifted인 $\mathbf{B}G$이나 perfect 복합체의 moduli $\operatorname{Perf}$일 때, source의 차원 $d$에 따라 $\operatorname{Map}(F,X)$은 $(2-d)$-shifted가 된다. $d=2$이면 $0$-shifted가 되어 K3나 abelian surface 위의 sheaf의 moduli가 고전적 (holomorphic) symplectic 구조를 얻고, $d=3$이면 $(-1)$-shifted가 되어 [정리 9](#thm9)를 거쳐 Donaldson–Thomas 이론으로 이어지며, $d=4$이면 $(-2)$-shifted가 되어 Calabi–Yau 4-fold의 열거기하로 이어진다. 곧 shift의 정수값이 source Calabi–Yau의 차원을 직접 기록한다.
+[정리 12](#thm12){: data-relation="required" }의 $d$-orientation은 여러 형태로 실현된다. Betti 판본에서는 compact oriented $d$-manifold $M$의 상수 stack이 그 fundamental class로 $d$-orientation을 주고, Calabi–Yau 판본에서는 차원 $d$의 smooth projective Calabi–Yau variety가 그 trivial canonical bundle과 trace morphism으로 $d$-orientation을 준다. 이로부터 shift의 부호에 따른 열거기하의 계층이 나온다. $X$이 $2$-shifted인 $\mathbf{B}G$이나 perfect 복합체의 moduli $\operatorname{Perf}$일 때, source의 차원 $d$에 따라 $\operatorname{Map}(F,X)$은 $(2-d)$-shifted가 된다. $d=2$이면 $0$-shifted가 되어 K3나 abelian surface 위의 sheaf의 moduli가 고전적 (holomorphic) symplectic 구조를 얻고, $d=3$이면 $(-1)$-shifted가 되어 [정리 9](#thm9){: data-relation="weak" }를 거쳐 Donaldson–Thomas 이론으로 이어지며, $d=4$이면 $(-2)$-shifted가 되어 Calabi–Yau 4-fold의 열거기하로 이어진다. 곧 shift의 정수값이 source Calabi–Yau의 차원을 직접 기록한다.
 :::
 
 ## 예시: shifted 구조의 생산
 
-앞의 두 정리는 구체적 moduli를 계산 가능한 대상으로 만든다. 먼저 [예시 6](#ex6)의 cotangent bundle을 임의의 shift로 올린 표준 대상을 본다.
+앞의 두 정리는 구체적 moduli를 계산 가능한 대상으로 만든다. 먼저 [예시 6](#ex6){: data-relation="weak" }의 cotangent bundle을 임의의 shift로 올린 표준 대상을 본다.
 
 ::: 예시 14 (shifted 여접 stack)
 Derived stack $X$과 정수 $n$에 대하여, *$n$-shifted 여접 stack*을 $X$ 위의 상대 Spec
 
 $$T^\ast[n]X=\Spec_{\mathcal{O}_X}\Sym_{\mathcal{O}_X}\bigl(T_X[-n]\bigr)$$
 
-으로 정의한다. 이는 여접 복합체 $L_X[n]$의 전체 공간에 해당하며, degree $n$의 canonical Liouville $1$-형식 $\lambda$을 가지고, 그 de Rham differential $\omega=d_{\dR}\lambda$이 $T^\ast[n]X$ 위의 $n$-shifted symplectic 구조를 준다. $n=0$이고 $X$이 smooth 고전적 variety이면 $T^\ast[0]X=T^\ast X$은 [예시 6](#ex6)의 통상적 cotangent bundle과 그 Liouville symplectic 구조로 되돌아온다. 반면 $n\neq0$이면 base $X$ 자체가 stack이거나 유도 두께를 가져도 되므로, 이 구성은 임의의 유도 대상 위에 표준적 shifted symplectic 두께를 자유롭게 공급한다. 특히 $X=\mathbf{B}G$, $n=1$이면 $T^\ast[1]\mathbf{B}G\simeq[\mathfrak{g}^\ast/G]$이 coadjoint quotient로서 $1$-shifted symplectic이 되어, 고전적 moment map 기하의 유도 판본을 준다.
+으로 정의한다. 이는 여접 복합체 $L_X[n]$의 전체 공간에 해당하며, degree $n$의 canonical Liouville $1$-형식 $\lambda$을 가지고, 그 de Rham differential $\omega=d_{\dR}\lambda$이 $T^\ast[n]X$ 위의 $n$-shifted symplectic 구조를 준다. $n=0$이고 $X$이 smooth 고전적 variety이면 $T^\ast[0]X=T^\ast X$은 [예시 6](#ex6){: data-relation="weak" }의 통상적 cotangent bundle과 그 Liouville symplectic 구조로 되돌아온다. 반면 $n\neq0$이면 base $X$ 자체가 stack이거나 유도 두께를 가져도 되므로, 이 구성은 임의의 유도 대상 위에 표준적 shifted symplectic 두께를 자유롭게 공급한다. 특히 $X=\mathbf{B}G$, $n=1$이면 $T^\ast[1]\mathbf{B}G\simeq[\mathfrak{g}^\ast/G]$이 coadjoint quotient로서 $1$-shifted symplectic이 되어, 고전적 moment map 기하의 유도 판본을 준다.
 :::
 
 ::: 예시 15 (local system의 moduli)
-$G$을 semisimple algebraic group이라 하면 $\mathbf{B}G$은 [예시 7](#ex7)에 의하여 $2$-shifted symplectic이다. Compact oriented $d$-manifold $M$의 Betti stack을 $M_B$이라 하면, mapping stack
+$G$을 semisimple algebraic group이라 하면 $\mathbf{B}G$은 [예시 7](#ex7){: data-relation="required" }에 의하여 $2$-shifted symplectic이다. Compact oriented $d$-manifold $M$의 Betti stack을 $M_B$이라 하면, mapping stack
 
 $$\operatorname{Loc}_G(M)=\operatorname{Map}(M_B,\mathbf{B}G)$$
 
-은 $M$ 위의 $G$-local system들의 유도 moduli stack이고, $M_B$이 fundamental class로 $d$-orientation을 가지므로 [정리 12](#thm12)에 의하여 $(2-d)$-shifted symplectic이다. $d=1$, 곧 $M=S^1$이면
+은 $M$ 위의 $G$-local system들의 유도 moduli stack이고, $M_B$이 fundamental class로 $d$-orientation을 가지므로 [정리 12](#thm12){: data-relation="required" }에 의하여 $(2-d)$-shifted symplectic이다. $d=1$, 곧 $M=S^1$이면
 
 $$\operatorname{Loc}_G(S^1)=\operatorname{Map}(S^1_B,\mathbf{B}G)\simeq[G/G]$$
 
-이 adjoint quotient로서 $1$-shifted symplectic이 되는데, 이는 group-valued moment map 이론의 quasi-Hamiltonian 구조를 유도 기하로 실현한 것이다. $d=2$, 곧 $M$이 genus $g$의 compact Riemann surface $\Sigma_g$이면 $\operatorname{Loc}_G(\Sigma_g)$은 $0$-shifted symplectic이 되고, 그 truncation 위의 형식이 character variety 위의 고전적 Atiyah–Bott–Goldman symplectic 형식을 정확히 복원한다. 이 마지막 형식을 Lagrangian 교차로도 볼 수 있다. Surface를 두 handle body류 조각으로 자르면 $\operatorname{Loc}_G(\Sigma_g)$이 $1$-shifted symplectic인 $[G/G]$류 대상 안에서 두 Lagrangian의 유도 교차로 나타나고, [정리 11](#thm11)이 shift를 $1$에서 $0$으로 내려 같은 $0$-shifted 구조를 준다. 곧 하나의 shifted symplectic 형식이 mapping stack 관점과 Lagrangian 교차 관점에서 동시에 나오며, 이 정합성이 shifted symplectic 기하가 위상적 장이론의 언어를 대수기하 안에서 재현하는 방식이다.
+이 adjoint quotient로서 $1$-shifted symplectic이 되는데, 이는 group-valued moment map 이론의 quasi-Hamiltonian 구조를 유도 기하로 실현한 것이다. $d=2$, 곧 $M$이 genus $g$의 compact Riemann surface $\Sigma_g$이면 $\operatorname{Loc}_G(\Sigma_g)$은 $0$-shifted symplectic이 되고, 그 truncation 위의 형식이 character variety 위의 고전적 Atiyah–Bott–Goldman symplectic 형식을 정확히 복원한다. 이 마지막 형식을 Lagrangian 교차로도 볼 수 있다. Surface를 두 handle body류 조각으로 자르면 $\operatorname{Loc}_G(\Sigma_g)$이 $1$-shifted symplectic인 $[G/G]$류 대상 안에서 두 Lagrangian의 유도 교차로 나타나고, [정리 11](#thm11){: data-relation="required" }이 shift를 $1$에서 $0$으로 내려 같은 $0$-shifted 구조를 준다. 곧 하나의 shifted symplectic 형식이 mapping stack 관점과 Lagrangian 교차 관점에서 동시에 나오며, 이 정합성이 shifted symplectic 기하가 위상적 장이론의 언어를 대수기하 안에서 재현하는 방식이다.
 :::
 
 이로써 우리는 여접 복합체의 exterior power에서 출발하여 $p$-형식과 closed 형식의 공간을 세우고, 접복합체와 여접 복합체를 shift만큼 어긋난 동형으로 잇는 nondegeneracy를 부과하여 $n$-shifted symplectic 구조를 얻었다. Degree $0$은 고전적 symplectic variety를, degree $2$는 reductive group의 분류 stack을, degree $-1$은 derived critical locus와 Calabi–Yau 3-fold의 열거기하를 담는다. 그리고 Lagrangian 교차와 AKSZ mapping stack이라는 두 보편적 조작이 이 구조들을 서로 낳으며, 유도 moduli 위에 virtual class를 조직하는 symmetric 뼈대를 제공한다. 이것이 PTVV가 derived algebraic geometry 위에 세운 shifted symplectic 기하의 골격이다.
