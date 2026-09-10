@@ -15,11 +15,11 @@ weight: 1
 published: false
 ---
 
-Complex analysis는 복소수 위에서 정의된 함수의 미분과 적분을 다룬다. 실해석학과 달리 복소미분가능성은 매우 강한 조건이어서, 한 번 미분가능한 함수가 자동으로 무한히 미분가능하고 멱급수로 전개되는 등 풍부한 구조가 따라 나온다. 이 모든 이론의 무대가 되는 것이 복소수 전체의 집합 $\mathbb{C}$이며, 이 글에서는 $\mathbb{C}$를 대수적 대상(field)로, 또 기하적·위상적 대상(평면과 거리공간)으로 정비한다. 복소수의 field 구조 자체는 선형대수학에서 이미 다루었으므로 ([\[선형대수학\] §가환군과 체, ⁋예시 4](/ko/math/linear_algebra/fields#ex4)) 여기서 다시 구성하지 않고, 절댓값·켤레·극형식이라는 추가 구조와 그로부터 따라 나오는 해석학적 성질에 집중한다.
+Complex analysis는 복소수 위에서 정의된 함수의 미분과 적분을 다룬다. 실해석학과 달리 복소미분가능성은 매우 강한 조건이어서, 한 번 미분가능한 함수가 자동으로 무한히 미분가능하고 멱급수로 전개되는 등 풍부한 구조가 따라 나온다. 이 모든 이론의 무대가 되는 것이 복소수 전체의 집합 $\mathbb{C}$이며, 이 글에서는 $\mathbb{C}$를 대수적 대상(field)로, 또 기하적·위상적 대상(평면과 거리공간)으로 정비한다. 복소수의 field 구조 자체는 선형대수학에서 이미 다루었으므로 ([\[선형대수학\] §가환군과 체, ⁋예시 4](/ko/math/linear_algebra/fields#ex4){: data-relation="weak" }) 여기서 다시 구성하지 않고, 절댓값·켤레·극형식이라는 추가 구조와 그로부터 따라 나오는 해석학적 성질에 집중한다.
 
 ## 체 ℂ와 그 위의 대수적 구조
 
-복소수 전체의 집합 $\mathbb{C}$가 덧셈과 곱셈에 대하여 field<sub>체</sub>를 이룬다는 것은 이미 알고 있다 ([\[선형대수학\] §가환군과 체, ⁋정의 5](/ko/math/linear_algebra/fields#def5)). 우리는 그 표준적 표현, 곧 $i^2 = -1$을 만족하는 *허수단위<sub>imaginary unit</sub>* $i$를 도입하여 모든 복소수를 실수 두 개로 적는 방식을 출발점으로 삼는다.
+복소수 전체의 집합 $\mathbb{C}$가 덧셈과 곱셈에 대하여 field<sub>체</sub>를 이룬다는 것은 이미 알고 있다 ([\[선형대수학\] §가환군과 체, ⁋정의 5](/ko/math/linear_algebra/fields#def5){: data-relation="weak" }). 우리는 그 표준적 표현, 곧 $i^2 = -1$을 만족하는 *허수단위<sub>imaginary unit</sub>* $i$를 도입하여 모든 복소수를 실수 두 개로 적는 방식을 출발점으로 삼는다.
 
 ::: 정의 1
 *복소수<sub>complex number</sub>*는 실수 $a, b$에 대하여 $z = a + bi$ 꼴로 적히는 수이며, 여기서 $i$는 $i^2 = -1$을 만족하는 기호이다. 이때 $a$를 $z$의 *실수부<sub>real part</sub>*라 하여 $\Real z$로, $b$를 *허수부<sub>imaginary part</sub>*라 하여 $\Img z$로 적는다. 두 복소수의 덧셈과 곱셈은
@@ -52,7 +52,7 @@ $$\lvert z\rvert = \sqrt{a^2 + b^2}$$
 ::: 증명
 $z = a + bi$, $w = c + di$로 둔다.
 
-1. 덧셈에 대하여 $\overline{z + w} = \overline{(a+c)+(b+d)i} = (a+c)-(b+d)i = (a-bi)+(c-di) = \bar{z}+\bar{w}$이다. 곱셈에 대하여는 [정의 1](#def1)의 곱셈 공식으로
+1. 덧셈에 대하여 $\overline{z + w} = \overline{(a+c)+(b+d)i} = (a+c)-(b+d)i = (a-bi)+(c-di) = \bar{z}+\bar{w}$이다. 곱셈에 대하여는 [정의 1](#def1){: data-relation="required" }의 곱셈 공식으로
 
     $$\overline{zw} = \overline{(ac - bd) + (ad + bc)i} = (ac - bd) - (ad + bc)i$$
 
@@ -64,7 +64,7 @@ $z = a + bi$, $w = c + di$로 둔다.
 
     $$z \cdot \frac{\bar{z}}{\lvert z\rvert^2} = \frac{z\bar{z}}{\lvert z\rvert^2} = \frac{\lvert z\rvert^2}{\lvert z\rvert^2} = 1$$
 
-    이므로 $\bar{z}/\lvert z\rvert^2$가 $z$의 곱셈에 대한 역원이다. 역원의 유일성 ([\[선형대수학\] §가환군과 체, ⁋명제 2](/ko/math/linear_algebra/fields#prop2)) 에 의해 이것이 $z^{-1}$이다.
+    이므로 $\bar{z}/\lvert z\rvert^2$가 $z$의 곱셈에 대한 역원이다. 역원의 유일성 ([\[선형대수학\] §가환군과 체, ⁋명제 2](/ko/math/linear_algebra/fields#prop2){: data-relation="required" }) 에 의해 이것이 $z^{-1}$이다.
 :::
 
 명제 3의 셋째 항은 복소수 나눗셈을 실질적으로 계산하는 방법을 준다. 분모와 분자에 분모의 켤레를 곱하면 분모가 실수가 되어, 가령 $\dfrac{1}{1+i} = \dfrac{1-i}{(1+i)(1-i)} = \dfrac{1-i}{2}$와 같이 표준형 $a + bi$로 정리된다. 이어서 절댓값이 곱셈과 어떻게 어울리는지를 보면, 절댓값은 곱셈을 정확히 보존하며 덧셈에 대해서는 삼각부등식을 만족한다.
@@ -80,7 +80,7 @@ $z = a + bi$, $w = c + di$로 둔다.
 ::: 증명
 1. $\lvert z\rvert = \sqrt{a^2 + b^2} \geq 0$이고, 이것이 $0$인 것은 $a^2 + b^2 = 0$, 곧 $a = b = 0$인 것과 동치이다.
 
-2. 곱셈의 보존성은 [명제 3](#prop3)의 켤레의 곱셈성으로부터 따라 나온다.
+2. 곱셈의 보존성은 [명제 3](#prop3){: data-relation="required" }의 켤레의 곱셈성으로부터 따라 나온다.
 
     $$\lvert zw\rvert^2 = (zw)\overline{(zw)} = zw\bar{z}\bar{w} = (z\bar{z})(w\bar{w}) = \lvert z\rvert^2\,\lvert w\rvert^2$$
 
@@ -183,7 +183,7 @@ $$d(z, w) = \lvert z - w\rvert$$
 로 정의한다.
 :::
 
-이 $d$가 [\[해석학\] §거리공간, ⁋정의 1](/ko/math/analysis/metric_spaces#def1)의 거리공간 공리를 만족함은 명제 4에서 곧바로 나온다. 비음성과 $d(z,w)=0 \Leftrightarrow z=w$는 명제 4의 첫째 항이고, 대칭성 $\lvert z - w\rvert = \lvert w - z\rvert$는 $\lvert -u\rvert = \lvert u\rvert$로부터, 삼각부등식 $\lvert z - w\rvert \leq \lvert z - v\rvert + \lvert v - w\rvert$는 $z - w = (z - v) + (v - w)$에 명제 4의 삼각부등식을 적용하여 얻는다. 더 나아가 이 거리는 $\mathbb{R}^2$의 유클리드 거리와 글자 그대로 일치한다.
+이 $d$가 [\[해석학\] §거리공간, ⁋정의 1](/ko/math/analysis/metric_spaces#def1){: data-relation="weak" }의 거리공간 공리를 만족함은 명제 4에서 곧바로 나온다. 비음성과 $d(z,w)=0 \Leftrightarrow z=w$는 명제 4의 첫째 항이고, 대칭성 $\lvert z - w\rvert = \lvert w - z\rvert$는 $\lvert -u\rvert = \lvert u\rvert$로부터, 삼각부등식 $\lvert z - w\rvert \leq \lvert z - v\rvert + \lvert v - w\rvert$는 $z - w = (z - v) + (v - w)$에 명제 4의 삼각부등식을 적용하여 얻는다. 더 나아가 이 거리는 $\mathbb{R}^2$의 유클리드 거리와 글자 그대로 일치한다.
 
 ::: 명제 9
 $z = a + bi$를 $(a, b) \in \mathbb{R}^2$와 동일시하면, $\mathbb{C}$의 거리 $d(z, w) = \lvert z - w\rvert$는 $\mathbb{R}^2$의 유클리드 거리와 같다. 따라서 점열 $z_n = a_n + b_n i$가 $z = a + bi$로 수렴하는 것은 $a_n \rightarrow a$이고 $b_n \rightarrow b$인 것과 동치이다.
@@ -194,7 +194,7 @@ $z = a + bi$, $w = c + di$이면 $z - w = (a - c) + (b - d)i$이므로
 
 $$d(z, w) = \lvert z - w\rvert = \sqrt{(a - c)^2 + (b - d)^2}$$
 
-이고, 이것이 곧 $\mathbb{R}^2$에서 점 $(a, b)$와 $(c, d)$ 사이의 유클리드 거리이다 ([\[해석학\] §거리공간, ⁋예시 2](/ko/math/analysis/metric_spaces#ex2)). 수렴의 동치성은 좌표별 부등식
+이고, 이것이 곧 $\mathbb{R}^2$에서 점 $(a, b)$와 $(c, d)$ 사이의 유클리드 거리이다 ([\[해석학\] §거리공간, ⁋예시 2](/ko/math/analysis/metric_spaces#ex2){: data-relation="weak" }). 수렴의 동치성은 좌표별 부등식
 
 $$\lvert a_n - a\rvert,\ \lvert b_n - b\rvert \;\leq\; \sqrt{(a_n - a)^2 + (b_n - b)^2} \;\leq\; \lvert a_n - a\rvert + \lvert b_n - b\rvert$$
 
@@ -208,19 +208,19 @@ $(\mathbb{C}, d)$는 완비 거리공간이다. 곧 $\mathbb{C}$의 모든 Cauch
 :::
 
 ::: 증명
-$z_n = a_n + b_n i$가 $\mathbb{C}$에서 Cauchy라 하자. 좌표별 부등식 $\lvert a_m - a_n\rvert \leq \lvert z_m - z_n\rvert$과 $\lvert b_m - b_n\rvert \leq \lvert z_m - z_n\rvert$에 의해 두 실수열 $(a_n)$, $(b_n)$도 각각 Cauchy이다. [\[해석학\] §Cauchy 수열과 완비성, ⁋정리 4](/ko/math/analysis/cauchy_sequences#thm4)에 의해 $a_n \rightarrow a$, $b_n \rightarrow b$인 실수 $a, b$가 존재한다. 그러면 명제 9에 의해 $z_n \rightarrow a + bi \in \mathbb{C}$이다. 따라서 임의의 Cauchy 점열이 $\mathbb{C}$ 안에서 수렴하므로 $(\mathbb{C}, d)$는 완비이다.
+$z_n = a_n + b_n i$가 $\mathbb{C}$에서 Cauchy라 하자. 좌표별 부등식 $\lvert a_m - a_n\rvert \leq \lvert z_m - z_n\rvert$과 $\lvert b_m - b_n\rvert \leq \lvert z_m - z_n\rvert$에 의해 두 실수열 $(a_n)$, $(b_n)$도 각각 Cauchy이다. [\[해석학\] §Cauchy 수열과 완비성, ⁋정리 4](/ko/math/analysis/cauchy_sequences#thm4){: data-relation="required" }에 의해 $a_n \rightarrow a$, $b_n \rightarrow b$인 실수 $a, b$가 존재한다. 그러면 명제 9에 의해 $z_n \rightarrow a + bi \in \mathbb{C}$이다. 따라서 임의의 Cauchy 점열이 $\mathbb{C}$ 안에서 수렴하므로 $(\mathbb{C}, d)$는 완비이다.
 :::
 
-이는 $\mathbb{R}^2$가 완비라는 사실 ([\[해석학\] §거리공간](/ko/math/analysis/metric_spaces)에서 좌표별 논증으로 언급된 것) 의 한 표현이기도 하다. 완비성은 멱급수의 수렴, 적분의 존재, 부동점 논증 등 complex analysis의 거의 모든 존재 정리가 의지하는 토대이다. 컴팩트성 또한 같은 동일시를 통해 그대로 따라 나온다.
+이는 $\mathbb{R}^2$가 완비라는 사실 ([\[해석학\] §거리공간](/ko/math/analysis/metric_spaces){: data-relation="weak" }에서 좌표별 논증으로 언급된 것) 의 한 표현이기도 하다. 완비성은 멱급수의 수렴, 적분의 존재, 부동점 논증 등 complex analysis의 거의 모든 존재 정리가 의지하는 토대이다. 컴팩트성 또한 같은 동일시를 통해 그대로 따라 나온다.
 
 ::: 정리 11 (ℂ의 Bolzano–Weierstrass / Heine–Borel)
 $\mathbb{C}$의 부분집합 $K$가 점렬컴팩트인 것은 $K$가 닫혀 있고 bounded인 것과 동치이다. 특히 $\mathbb{C}$의 임의의 bounded 점열은 수렴하는 부분수열을 가진다.
 :::
 
 ::: 증명
-명제 9에 의해 $(\mathbb{C}, d)$는 거리공간으로서 $(\mathbb{R}^2, d_{\text{euc}})$와 동일하며, 닫힘·boundedness·점렬컴팩트는 모두 거리만으로 정의되는 개념이므로 두 공간에서 일치한다. 따라서 $\mathbb{R}^2$에 대한 [\[해석학\] §컴팩트성, ⁋정리 2](/ko/math/analysis/compactness#thm2)를 그대로 옮기면 결론을 얻는다.
+명제 9에 의해 $(\mathbb{C}, d)$는 거리공간으로서 $(\mathbb{R}^2, d_{\text{euc}})$와 동일하며, 닫힘·boundedness·점렬컴팩트는 모두 거리만으로 정의되는 개념이므로 두 공간에서 일치한다. 따라서 $\mathbb{R}^2$에 대한 [\[해석학\] §컴팩트성, ⁋정리 2](/ko/math/analysis/compactness#thm2){: data-relation="required" }를 그대로 옮기면 결론을 얻는다.
 
-뒷부분은 다음과 같이도 직접 볼 수 있다. $(z_n)$이 bounded, 곧 모든 $n$에서 $\lvert z_n\rvert \leq M$이라 하자. $z_n = a_n + b_n i$로 적으면 $\lvert a_n\rvert, \lvert b_n\rvert \leq \lvert z_n\rvert \leq M$이므로 두 실수열이 bounded이다. 먼저 $(a_n)$에 [\[해석학\] §부분수열과 Bolzano–Weierstrass 정리, ⁋정리 4](/ko/math/analysis/bolzano_weierstrass#thm4)를 적용하여 $a_{n_k} \rightarrow a$인 부분수열을 뽑고, 그 부분수열 위에서 $(b_{n_k})$가 여전히 bounded이므로 다시 Bolzano–Weierstrass를 적용하여 $b_{n_{k_j}} \rightarrow b$인 부분수열을 뽑는다. 이 부분수열 위에서 두 좌표가 동시에 수렴하므로 명제 9에 의해 $z_{n_{k_j}} \rightarrow a + bi$이다.
+뒷부분은 다음과 같이도 직접 볼 수 있다. $(z_n)$이 bounded, 곧 모든 $n$에서 $\lvert z_n\rvert \leq M$이라 하자. $z_n = a_n + b_n i$로 적으면 $\lvert a_n\rvert, \lvert b_n\rvert \leq \lvert z_n\rvert \leq M$이므로 두 실수열이 bounded이다. 먼저 $(a_n)$에 [\[해석학\] §부분수열과 Bolzano–Weierstrass 정리, ⁋정리 4](/ko/math/analysis/bolzano_weierstrass#thm4){: data-relation="required" }를 적용하여 $a_{n_k} \rightarrow a$인 부분수열을 뽑고, 그 부분수열 위에서 $(b_{n_k})$가 여전히 bounded이므로 다시 Bolzano–Weierstrass를 적용하여 $b_{n_{k_j}} \rightarrow b$인 부분수열을 뽑는다. 이 부분수열 위에서 두 좌표가 동시에 수렴하므로 명제 9에 의해 $z_{n_{k_j}} \rightarrow a + bi$이다.
 :::
 
 따라서 닫힌 원판 $\overline{B}(z_0, R) = \{z \in \mathbb{C} : \lvert z - z_0\rvert \leq R\}$이나 원 $\{z : \lvert z\rvert = 1\}$ 같은 집합은 컴팩트이고, 반면 열린 원판이나 $\mathbb{C}$ 전체는 컴팩트가 아니다. 이 컴팩트성은 곧 연속함수가 컴팩트집합 위에서 최댓값을 가진다는 결과로 이어져, 최대절댓값원리나 Liouville 정리 같은 complex analysis의 정리들이 서는 발판이 된다.
@@ -230,7 +230,7 @@ $\mathbb{C}$의 부분집합 $K$가 점렬컴팩트인 것은 $K$가 닫혀 있�
 
 $$\lvert z^n - 0\rvert = \lvert z\rvert^n \rightarrow 0$$
 
-이어서 $z^n \rightarrow 0$이다 ([\[해석학\] §수열의 수렴, ⁋예시 8](/ko/math/analysis/convergence_of_sequences#ex8)에서 본 실수열 $\lvert z\rvert^n$의 수렴). 반대로 $\lvert z\rvert > 1$이면 $\lvert z^n\rvert \rightarrow \infty$이므로 $(z^n)$은 bounded가 아니어서 수렴하지 않는다. $\lvert z\rvert = 1$인 경계의 경우는 더 섬세하다. $z = 1$이면 $z^n = 1$로 일정하지만, 가령 $z = i$이면 $z^n$이 $i, -1, -i, 1$을 주기적으로 순환하여 ($\lvert z^n\rvert = 1$로 bounded이지만) 수렴하지 않는다. 후자는 정리 11이 보장하는 수렴 부분수열의 존재를 명시적으로 보여 주는 예이기도 하다. 점열 $(i^n)$은 네 개의 상수 부분수열로 쪼개지며, 각각은 $i, -1, -i, 1$로 수렴한다.
+이어서 $z^n \rightarrow 0$이다 ([\[해석학\] §수열의 수렴, ⁋예시 8](/ko/math/analysis/convergence_of_sequences#ex8){: data-relation="weak" }에서 본 실수열 $\lvert z\rvert^n$의 수렴). 반대로 $\lvert z\rvert > 1$이면 $\lvert z^n\rvert \rightarrow \infty$이므로 $(z^n)$은 bounded가 아니어서 수렴하지 않는다. $\lvert z\rvert = 1$인 경계의 경우는 더 섬세하다. $z = 1$이면 $z^n = 1$로 일정하지만, 가령 $z = i$이면 $z^n$이 $i, -1, -i, 1$을 주기적으로 순환하여 ($\lvert z^n\rvert = 1$로 bounded이지만) 수렴하지 않는다. 후자는 정리 11이 보장하는 수렴 부분수열의 존재를 명시적으로 보여 주는 예이기도 하다. 점열 $(i^n)$은 네 개의 상수 부분수열로 쪼개지며, 각각은 $i, -1, -i, 1$로 수렴한다.
 :::
 
 ## 확장복소평면과 Riemann 구면
