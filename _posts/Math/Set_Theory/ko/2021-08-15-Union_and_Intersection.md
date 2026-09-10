@@ -21,7 +21,7 @@ Family $(A_i)_{i\in I}$의 모든 집합들이 어떤 집합 $A$의 부분집합
 
 ## 합집합과 교집합
 
-[§ZFC 공리계](/ko/math/set_theory/zfc_axioms)에서 우리는 합집합이 존재한다는 것을 공리로 받아들였다. 이 공리를 도입했을 때 사용한 표기법보다는 다음의 표기법이 좀 더 자주 쓰인다.
+[§ZFC 공리계](/ko/math/set_theory/zfc_axioms){: data-relation="weak" }에서 우리는 합집합이 존재한다는 것을 공리로 받아들였다. 이 공리를 도입했을 때 사용한 표기법보다는 다음의 표기법이 좀 더 자주 쓰인다.
 
 ::: 정의 1
 $(A_i)_{i\in I}$가 집합들의 family라 하자. 그럼 <phrase>적어도 하나의 $A_i$에 속해있는 $x$들을 모두 모아둔 집합</phrase>을 이 family의 *합집합<sub>union</sub>*이라 하고, 이를 $\bigcup_{i\in I}A_i$로 적는다.
@@ -41,7 +41,7 @@ $(A_i)_{i\in I}$가 집합들의 family이고, $I$가 공집합이 아니라 하
 
 $$\forall i(i\in I\implies x\in A_i)$$
 
-를 만족하는 $x$들의 모임이다. 만일 $I=\emptyset$이라면 $i\in I$가 거짓이 되어 전체 문장이 $x$에 관계없이 참이 되고 $\bigcap_{i\in\emptyset} A_i$는 전체집합이 되어야 하므로 모순이다. ([§ZFC 공리계, ⁋예시 4](/ko/math/set_theory/zfc_axioms#ex4)) $(A_i)_{i\in I}$의 target $\mathcal{S}$를 잘 정해준다면 이러한 모순을 피해 교집합을 정의할 수 있다.
+를 만족하는 $x$들의 모임이다. 만일 $I=\emptyset$이라면 $i\in I$가 거짓이 되어 전체 문장이 $x$에 관계없이 참이 되고 $\bigcap_{i\in\emptyset} A_i$는 전체집합이 되어야 하므로 모순이다. ([§ZFC 공리계, ⁋예시 4](/ko/math/set_theory/zfc_axioms#ex4){: data-relation="required" }) $(A_i)_{i\in I}$의 target $\mathcal{S}$를 잘 정해준다면 이러한 모순을 피해 교집합을 정의할 수 있다.
 
 ::: 정의 3
 집합들의 family $(A_i)_{i\in I}$가 집합 $A$의 부분집합들의 family라 하자. 그럼 <phrase>$A$의 원소이면서 동시에 모든 $A_i$에 속해있는 $x$들의 집합</phrase>을 이 family의 *교집합*이라 부르며, $\bigcap_{i\in I}A_i$로 적는다.
