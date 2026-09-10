@@ -67,7 +67,7 @@ $$\det(\x I-A)=\det(\x I-PBP^{-1})=\det(P(\x I-B)P^{-1})=\det P\det(\x I-B)\det 
 임의의 유한차원 벡터공간 $V$와 linear map $L:V\rightarrow V$에 대하여, $L$의 특성다항식을 <phrase>행렬 $[L]_\mathcal{B}^\mathcal{B}$의 특성다항식</phrase>으로 정의한 것이 잘 정의된다.
 :::
 ::: 증명
-즉, $V$의 basis $\mathcal{B}$ 대신 $\mathcal{C}$를 택하여도 $L$의 특성다항식에는 변화가 없다는 것을 보여야 한다. 앞선 논증에 의하여, 이는 [\[다중선형대수학\] §기저변환, ⁋명제 5](/ko/math/multilinear_algebra/change_of_basis#prop5) 이후의 식으로부터 두 행렬표현 $[L]_\mathcal{B}^\mathcal{B}$와 $[L]_\mathcal{C}^\mathcal{C}$가 서로 similar라는 것을 관찰하는 것으로 충분하다.
+즉, $V$의 basis $\mathcal{B}$ 대신 $\mathcal{C}$를 택하여도 $L$의 특성다항식에는 변화가 없다는 것을 보여야 한다. 앞선 논증에 의하여, 이는 [\[다중선형대수학\] §기저변환, ⁋명제 5](/ko/math/multilinear_algebra/change_of_basis#prop5){: data-relation="required" } 이후의 식으로부터 두 행렬표현 $[L]_\mathcal{B}^\mathcal{B}$와 $[L]_\mathcal{C}^\mathcal{C}$가 서로 similar라는 것을 관찰하는 것으로 충분하다.
 :::
 
 편의상 앞으로의 논의는 모두 행렬에 대한 것으로 통일하지만, 위의 따름정리를 통해 우리는 똑같은 내용을 임의의 linear map $L$에 대하여도 증명할 수 있다.
@@ -76,7 +76,7 @@ $$\det(\x I-A)=\det(\x I-PBP^{-1})=\det(P(\x I-B)P^{-1})=\det P\det(\x I-B)\det 
 서로 similar한 행렬의 trace와 행렬식은 같다. 
 :::
 ::: 증명
-앞선 논증으로부터 $A$와 $B$는 같은 특성다항식을 갖는다는 것을 알고, [명제 2](#prop2)로부터 행렬의 trace와 행렬식은 특성다항식으로부터 결정된다. 
+앞선 논증으로부터 $A$와 $B$는 같은 특성다항식을 갖는다는 것을 알고, [명제 2](#prop2){: data-relation="required" }로부터 행렬의 trace와 행렬식은 특성다항식으로부터 결정된다. 
 :::
 
 특히 임의의 linear map $L:V\rightarrow V$가 주어졌을 때, 다음 글에서 다룰 행렬의 대각화를 통해 $[L]_\mathcal{B}^\mathcal{B}$를 분해하면 $V$를 $L$의 고유공간으로 분해할 수 있다.
@@ -107,7 +107,7 @@ $$J=\begin{pmatrix}0&-1\\1&0\end{pmatrix}$$
 복소수 집합 $\mathbb{C}$는 algebraically closed field이다.
 :::
 
-위의 [예시 7](#ex7)의 행렬 $J$의 특성방정식은 $\mathbb{R}$에서는 해를 갖지 않지만, $\mathbb{C}$에서는 두 개의 해를 갖는다. 앞으로도 이와 같이 다항식의 해가 어떠한 field 위에서 정의되었는지를 구분하는 것이 중요하다. 
+위의 [예시 7](#ex7){: data-relation="weak" }의 행렬 $J$의 특성방정식은 $\mathbb{R}$에서는 해를 갖지 않지만, $\mathbb{C}$에서는 두 개의 해를 갖는다. 앞으로도 이와 같이 다항식의 해가 어떠한 field 위에서 정의되었는지를 구분하는 것이 중요하다. 
 
 ## 고유벡터와 기하적 중복도
 

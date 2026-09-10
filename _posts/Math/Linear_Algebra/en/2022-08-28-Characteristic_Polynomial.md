@@ -64,7 +64,7 @@ Hence $A$ and $B$ have the same characteristic polynomial. From this we obtain t
 For any linear map $L:V\rightarrow V$, defining the characteristic polynomial of $L$ as <phrase>the characteristic polynomial of the matrix $[L]_\mathcal{B}^\mathcal{B}$</phrase> is well-defined.
 :::
 ::: Proof
-That is, we must show that the characteristic polynomial of $L$ does not change if we choose a basis $\mathcal{C}$ of $V$ instead of $\mathcal{B}$. By the preceding argument, it suffices to observe from the formula after [§Change of Basis, ⁋Proposition 5](/en/math/multilinear_algebra/change_of_basis#prop5) that the two matrix representations $[L]_\mathcal{B}^\mathcal{B}$ and $[L]_\mathcal{C}^\mathcal{C}$ are similar matrices.
+That is, we must show that the characteristic polynomial of $L$ does not change if we choose a basis $\mathcal{C}$ of $V$ instead of $\mathcal{B}$. By the preceding argument, it suffices to observe from the formula after [§Change of Basis, ⁋Proposition 5](/en/math/multilinear_algebra/change_of_basis#prop5){: data-relation="required" } that the two matrix representations $[L]_\mathcal{B}^\mathcal{B}$ and $[L]_\mathcal{C}^\mathcal{C}$ are similar matrices.
 :::
 
 For convenience, all subsequent discussion will be phrased in terms of matrices, but by the above corollary we can prove the same results for any linear map $L$ as well.
@@ -73,7 +73,7 @@ For convenience, all subsequent discussion will be phrased in terms of matrices,
 Similar matrices have the same trace and determinant.
 :::
 ::: Proof
-From the preceding argument we know that $A$ and $B$ have the same characteristic polynomial, and by [Proposition 2](#prop2) the trace and determinant of a matrix are determined by its characteristic polynomial.
+From the preceding argument we know that $A$ and $B$ have the same characteristic polynomial, and by [Proposition 2](#prop2){: data-relation="required" } the trace and determinant of a matrix are determined by its characteristic polynomial.
 :::
 
 In particular, given any linear map $L:V\rightarrow V$, by decomposing $[L]_\mathcal{B}^\mathcal{B}$ via diagonalization—which we will cover in the next post—we can decompose $V$ into the eigenspaces of $L$.
@@ -104,7 +104,7 @@ A field in which this does not happen is called an *algebraically closed field*.
 The set of complex numbers $\mathbb{C}$ is an algebraically closed field.
 :::
 
-The characteristic equation of the matrix $J$ in [Example 7](#ex7) above has no roots in $\mathbb{R}$, but has two roots in $\mathbb{C}$. Henceforth, it will be important to distinguish over which field the roots of a polynomial are defined.
+The characteristic equation of the matrix $J$ in [Example 7](#ex7){: data-relation="weak" } above has no roots in $\mathbb{R}$, but has two roots in $\mathbb{C}$. Henceforth, it will be important to distinguish over which field the roots of a polynomial are defined.
 
 ## Eigenvectors and Geometric Multiplicity
 
