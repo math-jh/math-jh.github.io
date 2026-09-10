@@ -14,7 +14,7 @@ weight: 3
 published: false
 ---
 
-Holomorphic function의 미분 이론을 ([§복소정칙함수](/ko/math/complex_analysis/holomorphic_functions)) 정비한 다음 단계는 적분이다. Complex analysis의 깊은 정리들, 가령 holomorphic function의 무한미분가능성이나 멱급수 전개는 모두 함수를 평면의 곡선을 따라 적분하는 데서 출발한다. 실변수 적분이 구간 $[a, b]$ 위에서 이루어지는 것과 달리, 복소적분의 정의역은 평면을 가로지르는 곡선이며, 같은 두 끝점을 잇는 곡선이 무수히 많으므로 적분값이 *경로*에 어떻게 의존하는가가 핵심 물음이 된다. 이 글에서는 곡선을 따라가는 경로적분을 정의하고 그 기본 성질을 확립한 뒤, 원시함수가 있는 함수에 대해서는 적분이 경로와 무관하게 끝점만으로 결정됨을 보인다. 끝으로 원시함수를 갖지 않아 이 환원이 실패하는 가장 중요한 예 $\oint \frac{\dd{z}}{z} = 2\pi i$를 계산하는데, 이 한 등식이 뒤따르는 적분 이론 전체의 씨앗이 된다.
+Holomorphic function의 미분 이론을 ([§복소정칙함수](/ko/math/complex_analysis/holomorphic_functions){: data-relation="required" }) 정비한 다음 단계는 적분이다. Complex analysis의 깊은 정리들, 가령 holomorphic function의 무한미분가능성이나 멱급수 전개는 모두 함수를 평면의 곡선을 따라 적분하는 데서 출발한다. 실변수 적분이 구간 $[a, b]$ 위에서 이루어지는 것과 달리, 복소적분의 정의역은 평면을 가로지르는 곡선이며, 같은 두 끝점을 잇는 곡선이 무수히 많으므로 적분값이 *경로*에 어떻게 의존하는가가 핵심 물음이 된다. 이 글에서는 곡선을 따라가는 경로적분을 정의하고 그 기본 성질을 확립한 뒤, 원시함수가 있는 함수에 대해서는 적분이 경로와 무관하게 끝점만으로 결정됨을 보인다. 끝으로 원시함수를 갖지 않아 이 환원이 실패하는 가장 중요한 예 $\oint \frac{\dd{z}}{z} = 2\pi i$를 계산하는데, 이 한 등식이 뒤따르는 적분 이론 전체의 씨앗이 된다.
 
 ## 경로와 경로적분
 
@@ -24,7 +24,7 @@ Holomorphic function의 미분 이론을 ([§복소정칙함수](/ko/math/comple
 연속사상 $\gamma : [a, b] \rightarrow \mathbb{C}$가 *piecewise $C^1$ curve<sub>조각마다 C¹인 곡선</sub>*이라는 것은, 구간의 분할 $a = t_0 < t_1 < \cdots < t_n = b$이 있어 각 부분구간 $[t_{k-1}, t_k]$ 위에서 $\gamma$가 $C^1$급(곧 도함수 $\gamma'$이 존재하고 연속)인 것이다. 점 $\gamma(a)$를 곡선의 *시점<sub>initial point</sub>*, $\gamma(b)$를 *종점<sub>terminal point</sub>*이라 하고, $\gamma(a) = \gamma(b)$이면 $\gamma$를 *closed curve<sub>닫힌 곡선</sub>*라 한다.
 :::
 
-여기서 $\gamma$를 실수부와 허수부로 갈라 $\gamma(t) = x(t) + iy(t)$로 적으면, 그 도함수는 $\gamma'(t) = x'(t) + iy'(t)$로 정의되는 복소숫값 함수이다. 곧 복소숫값 함수의 미분은 실허 두 성분을 각각 미분한 것이며, 각 부분구간 위에서 $x, y$가 $C^1$이라는 뜻이다. 분할의 끝점 $t_k$에서는 좌·우 도함수가 다를 수 있어 $\gamma'$이 불연속일 수 있지만, 그런 점은 유한 개뿐이므로 아래 적분에는 영향을 주지 않는다. 같은 자취를 그리는 곡선이라도 매개변수 $t$를 어떻게 잡느냐에 따라 사상 $\gamma$ 자체는 달라지는데, 적분값이 이 선택에 무관함은 [명제 4](#prop4)에서 확인한다.
+여기서 $\gamma$를 실수부와 허수부로 갈라 $\gamma(t) = x(t) + iy(t)$로 적으면, 그 도함수는 $\gamma'(t) = x'(t) + iy'(t)$로 정의되는 복소숫값 함수이다. 곧 복소숫값 함수의 미분은 실허 두 성분을 각각 미분한 것이며, 각 부분구간 위에서 $x, y$가 $C^1$이라는 뜻이다. 분할의 끝점 $t_k$에서는 좌·우 도함수가 다를 수 있어 $\gamma'$이 불연속일 수 있지만, 그런 점은 유한 개뿐이므로 아래 적분에는 영향을 주지 않는다. 같은 자취를 그리는 곡선이라도 매개변수 $t$를 어떻게 잡느냐에 따라 사상 $\gamma$ 자체는 달라지는데, 적분값이 이 선택에 무관함은 [명제 4](#prop4){: data-relation="forward" }에서 확인한다.
 
 이제 곡선 위에서 함수를 적분한다. 발상은 곡선을 따라 미소 변위 $\dd{z} = \gamma'(t)\dd{t}$를 잡고 $f$ 값을 곱해 더하는 것으로, 형식적으로는 치환 $z = \gamma(t)$를 통해 실변수 적분으로 환원된다.
 
@@ -133,7 +133,7 @@ ML 부등식은 적분의 정확한 값을 모르더라도 그 크기에 상한�
 열린집합 $\Omega \subseteq \mathbb{C}$ 위의 함수 $f$에 대하여, $\Omega$에서 holomorphic이고 $F'(z) = f(z)$ ($z \in \Omega$) 를 만족하는 함수 $F$를 $f$의 *원시함수<sub>primitive</sub>* 혹은 *antiderivative<sub>역도함수</sub>*라 한다.
 :::
 
-원시함수는 실변수의 부정적분에 해당하는 복소판이며, holomorphic function $F$의 도함수 $F'$이 다시 $f$가 되는 관계로 정의된다. 가령 $n \geq 0$인 정수에 대해 $z^n$은 평면 전체에서 원시함수 $z^{n+1}/(n+1)$을 가지고, $e^z$는 자기 자신을 원시함수로 가진다 ([§복소정칙함수, ⁋정의 10](/ko/math/complex_analysis/holomorphic_functions#def10)에서 $(e^z)' = e^z$). 원시함수가 존재할 때, 경로적분은 다음과 같이 끝값의 차로 환원된다.
+원시함수는 실변수의 부정적분에 해당하는 복소판이며, holomorphic function $F$의 도함수 $F'$이 다시 $f$가 되는 관계로 정의된다. 가령 $n \geq 0$인 정수에 대해 $z^n$은 평면 전체에서 원시함수 $z^{n+1}/(n+1)$을 가지고, $e^z$는 자기 자신을 원시함수로 가진다 ([§복소정칙함수, ⁋정의 10](/ko/math/complex_analysis/holomorphic_functions#def10){: data-relation="weak" }에서 $(e^z)' = e^z$). 원시함수가 존재할 때, 경로적분은 다음과 같이 끝값의 차로 환원된다.
 
 ::: 정리 8 (경로적분에 대한 미적분의 기본정리)
 $\Omega \subseteq \mathbb{C}$가 열려 있고 $f$가 $\Omega$에서 연속이며 $F$가 $\Omega$ 위의 $f$의 원시함수라 하자. 그러면 시점 $\gamma(a)$, 종점 $\gamma(b)$를 갖고 자취가 $\Omega$에 들어 있는 임의의 piecewise $C^1$ curve $\gamma : [a, b] \rightarrow \mathbb{C}$에 대하여
@@ -144,7 +144,7 @@ $$\int_\gamma f(z)\dd{z} = F(\gamma(b)) - F(\gamma(a))$$
 :::
 
 ::: 증명
-먼저 $\gamma$이 한 구간 $[a, b]$ 전체에서 $C^1$인 경우를 본다. 합성함수 $t \mapsto F(\gamma(t))$를 생각하면, $F$가 holomorphic이므로 [§복소정칙함수, ⁋명제 3](/ko/math/complex_analysis/holomorphic_functions#prop3)의 합성 규칙 증명에 쓰인 보조함수 논증이 실수 증분 $h \rightarrow 0$에 대해서도 그대로 통하여
+먼저 $\gamma$이 한 구간 $[a, b]$ 전체에서 $C^1$인 경우를 본다. 합성함수 $t \mapsto F(\gamma(t))$를 생각하면, $F$가 holomorphic이므로 [§복소정칙함수, ⁋명제 3](/ko/math/complex_analysis/holomorphic_functions#prop3){: data-relation="required" }의 합성 규칙 증명에 쓰인 보조함수 논증이 실수 증분 $h \rightarrow 0$에 대해서도 그대로 통하여
 
 $$\frac{d}{\dd{t}}F(\gamma(t)) = F'(\gamma(t))\gamma'(t) = f(\gamma(t))\gamma'(t)$$
 
@@ -201,13 +201,13 @@ $$\oint_{\gamma_r} z^{-1}\dd{z} = i r^0 \int_0^{2\pi} 1\dd{t} = i \cdot 2\pi = 2
 
 $$\int_0^{2\pi} e^{imt}\dd{t} = \left[ \frac{e^{imt}}{im} \right]_0^{2\pi} = \frac{e^{2\pi i m} - 1}{im} = 0$$
 
-인데, $m$이 정수이므로 $e^{2\pi i m} = 1$ ([§복소수와 복소평면, ⁋정의 5](/ko/math/complex_analysis/complex_numbers#def5)의 Euler 형식에서 $e^{2\pi i m} = \cos(2\pi m) + i\sin(2\pi m) = 1$) 이기 때문이다. 따라서 $n \neq -1$이면 적분이 $0$이다.
+인데, $m$이 정수이므로 $e^{2\pi i m} = 1$ ([§복소수와 복소평면, ⁋정의 5](/ko/math/complex_analysis/complex_numbers#def5){: data-relation="weak" }의 Euler 형식에서 $e^{2\pi i m} = \cos(2\pi m) + i\sin(2\pi m) = 1$) 이기 때문이다. 따라서 $n \neq -1$이면 적분이 $0$이다.
 :::
 
 명제 10의 두 경우를 따름정리 9에 비추어 해석하면, 이 글 전체의 결론이 또렷해진다. $n \neq -1$인 멱함수 $z^n$은 적분이 $0$인데, 이는 우연이 아니라 $z^n$이 원시함수 $z^{n+1}/(n+1)$을 가지기 때문이다. $n \geq 0$이면 이 원시함수가 평면 전체에서 holomorphic이고, $n \leq -2$이면 원점을 뺀 영역 $\mathbb{C}\setminus\{0\}$에서 holomorphic이어서, 어느 경우든 원 $\gamma_r$의 자취를 품는 영역에서 원시함수가 존재하므로 따름정리 9에 의해 적분이 $0$이다. 유독 $n = -1$, 곧 $f(z) = 1/z$만이 예외인데, 적분값 $2\pi i \neq 0$은 따름정리 9에 의해 $1/z$이 원 $\gamma_r$의 자취를 포함하는 어떤 영역에서도 원시함수를 가질 수 없음을 뜻한다.
 
 ::: 참고 11
-$1/z$이 원시함수를 가지지 못하는 까닭은 그 자연스러운 원시함수인 complex logarithm $\log z$가 원점을 둘러싼 영역에서 단일한 값으로 정의되지 않기 때문이다. 곡선을 따라 한 바퀴 돌면 편각 $\arg z$가 ([§복소수와 복소평면, ⁋정의 5](/ko/math/complex_analysis/complex_numbers#def5)) $2\pi$만큼 증가하여 $\log z$가 $2\pi i$만큼 점프하는데, 명제 10의 $2\pi i$가 바로 이 점프의 크기이다. 이는 $1/z$이 국소적으로는(원점을 둘러싸지 않는 작은 영역에서는) 원시함수를 갖지만 전역적으로는 갖지 못한다는 뜻으로, 영역의 위상이 적분에 개입하는 첫 신호이다.
+$1/z$이 원시함수를 가지지 못하는 까닭은 그 자연스러운 원시함수인 complex logarithm $\log z$가 원점을 둘러싼 영역에서 단일한 값으로 정의되지 않기 때문이다. 곡선을 따라 한 바퀴 돌면 편각 $\arg z$가 ([§복소수와 복소평면, ⁋정의 5](/ko/math/complex_analysis/complex_numbers#def5){: data-relation="weak" }) $2\pi$만큼 증가하여 $\log z$가 $2\pi i$만큼 점프하는데, 명제 10의 $2\pi i$가 바로 이 점프의 크기이다. 이는 $1/z$이 국소적으로는(원점을 둘러싸지 않는 작은 영역에서는) 원시함수를 갖지만 전역적으로는 갖지 못한다는 뜻으로, 영역의 위상이 적분에 개입하는 첫 신호이다.
 :::
 
 명제 10은 작아 보이지만, closed curve 적분이 피적분함수의 singular point를 어떻게 감지하는가를 보여 주는 원형이다. 적분값 $2\pi i$는 반지름 $r$에 무관하게 항상 같으며, 이는 원을 연속적으로 부풀리거나 수축시켜도 그 안에 갇힌 원점이라는 singular point가 그대로 남아 있는 한 적분이 변하지 않음을 시사한다. 이 invariance는 같은 두 끝점을 잇되 singular point를 사이에 두고 양쪽으로 갈라지는 두 경로의 적분이 서로 다를 수 있다는 사실, 곧 경로 독립성이 영역의 위상에 의존한다는 사실과 동전의 양면이다.
