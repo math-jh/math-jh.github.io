@@ -88,7 +88,7 @@ Moreover, if $S(g)\subseteq S(f)$, then the following diagram
 commutes.
 :::
 ::: Proof
-Write the canonical morphisms as $\epsilon(f): A \rightarrow S(f)^{-1}A$ and $\epsilon_f:A \rightarrow S_f^{-1}A$. Since $D(f)=D(f^n)$ for any $n\geq 1$, we have $S_f\subseteq S(f)$, so the image of $S_f$ under $\epsilon(f)$ consists entirely of units in $S(f)^{-1}A$. Conversely, for any $h\in S(f)$, [Lemma 4](#lem4) gives $n\geq 1$ and $a\in A$ with $f^n=ah$, so
+Write the canonical morphisms as $\epsilon(f): A \rightarrow S(f)^{-1}A$ and $\epsilon_f:A \rightarrow S_f^{-1}A$. Since $D(f)=D(f^n)$ for any $n\geq 1$, we have $S_f\subseteq S(f)$, so the image of $S_f$ under $\epsilon(f)$ consists entirely of units in $S(f)^{-1}A$. Conversely, for any $h\in S(f)$, [Lemma 4](#lem4){: data-relation="required" } gives $n\geq 1$ and $a\in A$ with $f^n=ah$, so
 
 $$\frac{h}{1}\frac{a}{f^n}=1\qquad\text{in $S_f^{-1}A$}$$
 
@@ -119,7 +119,7 @@ $$\rho_{ji}: S(f_j)^{-1}(A) \rightarrow S(f_i)^{-1}(A)$$
 to be the map obtained by applying [[Commutative Algebra] §Localization, ⁋Proposition 6]](/en/math/commutative_algebra/localization#prop6) to the canonical morphism $A\rightarrow S(f_i)^{-1}(A)$. Then these data satisfy the two conditions of [[Topology] §Sheaves, ⁋Proposition 8]](/en/math/topology/sheaves#prop8), and therefore determine uniquely a ($\cRing$-valued) sheaf $\mathcal{F}$ on $\Spec A$ extending this assignment.
 :::
 ::: Proof
-That the $\rho_{ji}$ satisfy the conditions for restriction maps in [[Topology] §Presheaves, ⁋Definition 2]](/en/math/topology/presheaves#def2) is immediate from the universal property of [[Commutative Algebra] §Localization, ⁋Proposition 6]](/en/math/commutative_algebra/localization#prop6). Here, $\rho_{ji}: S(f_j)^{-1}(A) \rightarrow S(f_i)^{-1}(A)$ is, by [Lemma 5](#lem5), simply the map that regards an element of $S(f_j)^{-1}(A)$ written in the form
+That the $\rho_{ji}$ satisfy the conditions for restriction maps in [[Topology] §Presheaves, ⁋Definition 2]](/en/math/topology/presheaves#def2) is immediate from the universal property of [[Commutative Algebra] §Localization, ⁋Proposition 6]](/en/math/commutative_algebra/localization#prop6). Here, $\rho_{ji}: S(f_j)^{-1}(A) \rightarrow S(f_i)^{-1}(A)$ is, by [Lemma 5](#lem5){: data-relation="required" }, simply the map that regards an element of $S(f_j)^{-1}(A)$ written in the form
 
 $$g/h,\qquad\text{where $h\in S(f_j)$}\tag{$\ast$}$$
 
@@ -193,7 +193,7 @@ This holds for every $\alpha$, so $s$ restricts to $s_\alpha$ on any $D(f_\alpha
 :::
 
 ::: Definition 7
-The sheaf on $\Spec A$ defined by [Lemma 6](#lem6) is denoted $\mathcal{O}_{\Spec A}$ and called the *structure sheaf*.
+The sheaf on $\Spec A$ defined by [Lemma 6](#lem6){: data-relation="required" } is denoted $\mathcal{O}_{\Spec A}$ and called the *structure sheaf*.
 :::
 
 Although this definition was made only on principal open sets, since the $D(f)$ form a base for $\Spec A$, sections over arbitrary open sets $U$ are determined by the extension in [[Topology] §Sheaves, ⁋Proposition 8]](/en/math/topology/sheaves#prop8). That is, an element of $\mathcal{O}_{\Spec A}(U)$ is data given on $D(f)$ covering $U$ in the form $g/h$ that agree on intersections, which corresponds to the local definition mentioned earlier.
@@ -269,7 +269,7 @@ From the above, $(\Spec\phi, (\Spec\phi)^\sharp): (\Spec B, \mathcal{O}_{\Spec B
 
 $$(\Spec\phi)^\sharp_\mathfrak{q}:\mathcal{O}_{\Spec A, (\Spec \phi)(\mathfrak{q})} \rightarrow\mathcal{O}_{\Spec B, \mathfrak{q}}$$
 
-is a local homomorphism. But $(\Spec \phi)(\mathfrak{q})=\phi^{-1}(\mathfrak{q})$, so by [Lemma 8](#lem8), $(\Spec\phi)^\sharp_\mathfrak{q}$ is a ring homomorphism from $A_{\phi^{-1}(\mathfrak{q})}$ to $B_{\mathfrak{q}}$ sending the unique maximal ideal $\phi^{-1}(\mathfrak{q})A_{\phi^{-1}(\mathfrak{q})}$ of $A_{\phi^{-1}(\mathfrak{q})}$ to the unique maximal ideal $\mathfrak{q}B_\mathfrak{q}$ of $B_\mathfrak{q}$.
+is a local homomorphism. But $(\Spec \phi)(\mathfrak{q})=\phi^{-1}(\mathfrak{q})$, so by [Lemma 8](#lem8){: data-relation="required" }, $(\Spec\phi)^\sharp_\mathfrak{q}$ is a ring homomorphism from $A_{\phi^{-1}(\mathfrak{q})}$ to $B_{\mathfrak{q}}$ sending the unique maximal ideal $\phi^{-1}(\mathfrak{q})A_{\phi^{-1}(\mathfrak{q})}$ of $A_{\phi^{-1}(\mathfrak{q})}$ to the unique maximal ideal $\mathfrak{q}B_\mathfrak{q}$ of $B_\mathfrak{q}$.
 
 Finally, let us verify functoriality. For the map on points this was already checked in [[§Spectrums, ⁋Proposition 2]](/en/math/scheme_theory/spectrums#prop2), so we only need to check the structure sheaf side. When $\phi=\id_A$, the above construction gives, for each $D(f)$, the unique map $A_f \rightarrow A_f$ extending $\epsilon_f$, which is the identity; hence $\Spec(\id_A)=\id$. Also, for two ring homomorphisms $\phi: A \rightarrow B$ and $\psi: B \rightarrow C$, the map $\Spec(\psi\circ\phi)^\sharp(D(f))$ is the unique map extending the composite $A \rightarrow C \rightarrow C_{\psi(\phi(f))}$, and the composite $A_f \rightarrow B_{\phi(f)} \rightarrow C_{\psi(\phi(f))}$ also extends the same map, so by uniqueness they are equal. Since two sheaf morphisms agreeing on a base are equal, $\Spec(\psi\circ\phi)=(\Spec\phi)\circ(\Spec\psi)$.
 :::
@@ -277,10 +277,10 @@ Finally, let us verify functoriality. For the map on points this was already che
 ## Affine scheme
 
 ::: Definition 10
-The essential image of the functor $\Spec:\cRing^\op \rightarrow \LRS$ from [Proposition 9](#prop9) is called an *affine scheme*.
+The essential image of the functor $\Spec:\cRing^\op \rightarrow \LRS$ from [Proposition 9](#prop9){: data-relation="required" } is called an *affine scheme*.
 :::
 
-We write $\AffSch$ for the category of affine schemes. Then the contravariant functor $\Spec:\cRing^\op \rightarrow \AffSch$ is essentially surjective by definition. ([[Category Theory] §Natural Transformations, ⁋Theorem 5]](/en/math/category_theory/natural_transformations#thm5)) Moreover, if $(\varphi, \varphi^\sharp): (\Spec B, \mathcal{O}_{\Spec B}) \rightarrow (\Spec A, \mathcal{O}_{\Spec A})$ is induced from some ring homomorphism $\phi$, then taking $1=f\in A$ in the proof of [Proposition 9](#prop9) gives
+We write $\AffSch$ for the category of affine schemes. Then the contravariant functor $\Spec:\cRing^\op \rightarrow \AffSch$ is essentially surjective by definition. ([[Category Theory] §Natural Transformations, ⁋Theorem 5]](/en/math/category_theory/natural_transformations#thm5)) Moreover, if $(\varphi, \varphi^\sharp): (\Spec B, \mathcal{O}_{\Spec B}) \rightarrow (\Spec A, \mathcal{O}_{\Spec A})$ is induced from some ring homomorphism $\phi$, then taking $1=f\in A$ in the proof of [Proposition 9](#prop9){: data-relation="required" } gives
 
 $$\varphi^\sharp(D(1))= \bigl(A \overset{\phi}{\longrightarrow} B \overset{\id_B}{\longrightarrow} B_{\phi(1)}=B\bigr)=\phi$$
 
@@ -306,7 +306,7 @@ To complete the claim we must show $\Spec\phi=(\varphi,\varphi^\sharp)$. First, 
 
 $$(\Spec \phi)(\mathfrak{q})=\phi^{-1}(\mathfrak{q})=\varphi(\mathfrak{q})$$
 
-Setting $f=1$ in [Lemma 8](#lem8), we obtain the following diagram
+Setting $f=1$ in [Lemma 8](#lem8){: data-relation="required" }, we obtain the following diagram
 
 {% diagram Math/Scheme_Theory/Affine_Schemes-9.svg width="39.41em" alt="faithful" %}
 
@@ -320,10 +320,10 @@ Now we show the two sheaf morphisms are equal. Since $\varphi^\sharp$ commutes w
 
 $$\varphi^\sharp(D(f))\circ\epsilon_f=\epsilon_{\phi(f)}\circ\phi$$
 
-But in the construction of [Proposition 9](#prop9), $(\Spec\phi)^\sharp(D(f))$ was exactly the unique map satisfying this equation, so by the uniqueness in [[Commutative Algebra] §Localization, ⁋Proposition 6]](/en/math/commutative_algebra/localization#prop6), $\varphi^\sharp(D(f))=(\Spec\phi)^\sharp(D(f))$. Since two sheaf morphisms agreeing on the base $\{D(f)\}_{f\in A}$ are equal, by the identity axiom for $\varphi_\ast\mathcal{O}_{\Spec B}$ we have $\varphi^\sharp=(\Spec\phi)^\sharp$.
+But in the construction of [Proposition 9](#prop9){: data-relation="required" }, $(\Spec\phi)^\sharp(D(f))$ was exactly the unique map satisfying this equation, so by the uniqueness in [[Commutative Algebra] §Localization, ⁋Proposition 6]](/en/math/commutative_algebra/localization#prop6), $\varphi^\sharp(D(f))=(\Spec\phi)^\sharp(D(f))$. Since two sheaf morphisms agreeing on the base $\{D(f)\}_{f\in A}$ are equal, by the identity axiom for $\varphi_\ast\mathcal{O}_{\Spec B}$ we have $\varphi^\sharp=(\Spec\phi)^\sharp$.
 :::
 
-Thus, viewing $\Spec$ as a contravariant functor from $\cRing$ to $\AffSch$, it is a categorical equivalence between $\cRing^\op$ and $\AffSch$. Moreover, by [Proposition 11](#prop11), $\AffSch$ is a full subcategory of $\LRS$.
+Thus, viewing $\Spec$ as a contravariant functor from $\cRing$ to $\AffSch$, it is a categorical equivalence between $\cRing^\op$ and $\AffSch$. Moreover, by [Proposition 11](#prop11){: data-relation="required" }, $\AffSch$ is a full subcategory of $\LRS$.
 
 On the other hand, for any spectrum $(\Spec A, \mathcal{O}_{\Spec A})$, by definition we know
 
@@ -345,7 +345,7 @@ $$\Gamma(\varphi,\varphi^\sharp)=\varphi^\sharp(Y):\Gamma(Y, \mathcal{O}_Y) \rig
 
 Here, $\varphi^\sharp(Y)$ is a map in $\cRing$ from $\Gamma(Y)$ to $\Gamma(X)$, which we can read as a map $\Gamma(X) \rightarrow \Gamma(Y)$ in $\cRing^\op$. That this correspondence preserves identities and composition follows from the fact that composition of morphisms of ringed spaces is given by composition of the $\varphi^\sharp$, so this is indeed a functor.
 
-Meanwhile, a notable fact from the proof of [Proposition 11](#prop11) is that the assumption that $(X, \mathcal{O}_X)$ is an affine scheme was unnecessary. That is, even if we drop the assumption $(X, \mathcal{O}_X)\cong(\Spec B, \mathcal{O}_{\Spec B})$ and use the following diagram instead of the one in [Proposition 11](#prop11)
+Meanwhile, a notable fact from the proof of [Proposition 11](#prop11){: data-relation="required" } is that the assumption that $(X, \mathcal{O}_X)$ is an affine scheme was unnecessary. That is, even if we drop the assumption $(X, \mathcal{O}_X)\cong(\Spec B, \mathcal{O}_{\Spec B})$ and use the following diagram instead of the one in [Proposition 11](#prop11){: data-relation="required" }
 
 {% diagram Math/Scheme_Theory/Affine_Schemes-11.svg width="34.92em" alt="adjoint" %}
 
@@ -359,7 +359,7 @@ $$\Hom_\LRS(X, \Spec A)\cong \Hom_{\cRing^\op}(\Gamma(X), A)=\Hom_{\cRing}(A, \G
 That is, the global section functor $\Gamma: \LRS \rightarrow \cRing^\op$ is the left adjoint of the $\Spec$ functor $\Spec:\cRing^\op \rightarrow \LRS$.
 :::
 ::: Proof
-Through the isomorphism $\mathcal{O}_{\Spec A}(D(f))\cong A_f$ from [Lemma 6](#lem6), we identify $\mathcal{O}_{\Spec A}(\Spec A)=\mathcal{O}_{\Spec A}(D(1))$ with $A$. Under this identification, the restriction map $\mathcal{O}_{\Spec A}(\Spec A) \rightarrow \mathcal{O}_{\Spec A}(D(f))$ of $\mathcal{O}_{\Spec A}$ is the canonical morphism $\epsilon_f: A \rightarrow A_f$.
+Through the isomorphism $\mathcal{O}_{\Spec A}(D(f))\cong A_f$ from [Lemma 6](#lem6){: data-relation="required" }, we identify $\mathcal{O}_{\Spec A}(\Spec A)=\mathcal{O}_{\Spec A}(D(1))$ with $A$. Under this identification, the restriction map $\mathcal{O}_{\Spec A}(\Spec A) \rightarrow \mathcal{O}_{\Spec A}(D(f))$ of $\mathcal{O}_{\Spec A}$ is the canonical morphism $\epsilon_f: A \rightarrow A_f$.
 
 First define two correspondences $\Phi$ and $\Psi$, then show they are inverses of each other. Given a morphism $(\varphi,\varphi^\sharp): X \rightarrow \Spec A$ of locally ringed spaces, evaluating $\varphi^\sharp$ on the open set $\Spec A$ yields the ring homomorphism
 
@@ -403,9 +403,9 @@ $$A_f \overset{\varphi^\sharp(D(f))}{\longrightarrow} \mathcal{O}_X(V_f) \longri
 
 both compose with $\epsilon_f$ to give $\theta_g$, so again by the uniqueness in [[Commutative Algebra] §Localization, ⁋Proposition 6]](/en/math/commutative_algebra/localization#prop6) they are equal. That is, the $\varphi^\sharp(D(f))$ commute with restriction maps.
 
-Then, just as in the proof of [Proposition 9](#prop9), the maps given on the base extend uniquely to a sheaf morphism $\varphi^\sharp$ by the gluability and identity axioms of $\varphi_\ast\mathcal{O}_X$.
+Then, just as in the proof of [Proposition 9](#prop9){: data-relation="required" }, the maps given on the base extend uniquely to a sheaf morphism $\varphi^\sharp$ by the gluability and identity axioms of $\varphi_\ast\mathcal{O}_X$.
 
-Finally, we show $(\varphi,\varphi^\sharp)$ is a morphism of locally ringed spaces. For any $x\in X$ and $\mathfrak{p}=\varphi(x)$, by [Lemma 8](#lem8) we have $\mathcal{O}_{\Spec A,\mathfrak{p}}\cong A_\mathfrak{p}$, and under this identification the stalk morphism $\varphi_x^\sharp: A_\mathfrak{p} \rightarrow \mathcal{O}_{X,x}$ induced by $\varphi^\sharp$ satisfies, taking germs at $x$ of both sides of the equation $\varphi^\sharp(D(f))\circ\epsilon_f=\theta_f$,
+Finally, we show $(\varphi,\varphi^\sharp)$ is a morphism of locally ringed spaces. For any $x\in X$ and $\mathfrak{p}=\varphi(x)$, by [Lemma 8](#lem8){: data-relation="required" } we have $\mathcal{O}_{\Spec A,\mathfrak{p}}\cong A_\mathfrak{p}$, and under this identification the stalk morphism $\varphi_x^\sharp: A_\mathfrak{p} \rightarrow \mathcal{O}_{X,x}$ induced by $\varphi^\sharp$ satisfies, taking germs at $x$ of both sides of the equation $\varphi^\sharp(D(f))\circ\epsilon_f=\theta_f$,
 
 $$\varphi^\sharp_x\circ\epsilon=\phi_x$$
 
@@ -417,13 +417,13 @@ In particular, if $a\in \mathfrak{p}$ then $\phi_x(a)\in \mathfrak{m}_x$, so $\v
 
 $$(\varphi_x^\sharp)^{-1}(\mathfrak{m}_x)=\mathfrak{p}A_\mathfrak{p}$$
 
-That is, $\varphi_x^\sharp$ is a local homomorphism, and by [Definition 2](#def2), $\Psi(\phi)=(\varphi,\varphi^\sharp)$ is a morphism of locally ringed spaces.
+That is, $\varphi_x^\sharp$ is a local homomorphism, and by [Definition 2](#def2){: data-relation="required" }, $\Psi(\phi)=(\varphi,\varphi^\sharp)$ is a morphism of locally ringed spaces.
 
 Now we show $\Phi$ and $\Psi$ are inverses of each other. First, for $\Psi(\phi)=(\varphi,\varphi^\sharp)$, taking $f=1$ gives $D(1)=\Spec A$, $V_1=X$, and $\epsilon_1=\id_A$, so the above construction yields
 
 $$\Phi(\Psi(\phi))=\varphi^\sharp(\Spec A)=\theta_1=\phi$$
 
-Conversely, given a morphism $(\varphi,\varphi^\sharp): X \rightarrow \Spec A$ of locally ringed spaces, let $\phi=\Phi(\varphi,\varphi^\sharp)=\varphi^\sharp(\Spec A)$ and $\Psi(\phi)=(\varphi',(\varphi')^\sharp)$. For any $x\in X$, since $\varphi^\sharp$ commutes with restriction maps, the stalk morphism $\varphi_x^\sharp: \mathcal{O}_{\Spec A, \varphi(x)}\cong A_{\varphi(x)} \rightarrow \mathcal{O}_{X,x}$ induced by $\varphi^\sharp$ satisfies $\varphi_x^\sharp\circ\epsilon=\phi_x$, where $\epsilon: A \rightarrow A_{\varphi(x)}$ being the canonical morphism follows from [Lemma 8](#lem8). On the other hand, since $(\varphi,\varphi^\sharp)$ is a morphism of locally ringed spaces, $\varphi_x^\sharp$ is a local homomorphism, so the ideal $(\varphi_x^\sharp)^{-1}(\mathfrak{m}_x)$ is a proper ideal containing $\varphi(x)A_{\varphi(x)}$, i.e., $\varphi(x)A_{\varphi(x)}$ itself. Therefore, by [[Commutative Algebra] §Localization, ⁋Proposition 8]](/en/math/commutative_algebra/localization#prop8),
+Conversely, given a morphism $(\varphi,\varphi^\sharp): X \rightarrow \Spec A$ of locally ringed spaces, let $\phi=\Phi(\varphi,\varphi^\sharp)=\varphi^\sharp(\Spec A)$ and $\Psi(\phi)=(\varphi',(\varphi')^\sharp)$. For any $x\in X$, since $\varphi^\sharp$ commutes with restriction maps, the stalk morphism $\varphi_x^\sharp: \mathcal{O}_{\Spec A, \varphi(x)}\cong A_{\varphi(x)} \rightarrow \mathcal{O}_{X,x}$ induced by $\varphi^\sharp$ satisfies $\varphi_x^\sharp\circ\epsilon=\phi_x$, where $\epsilon: A \rightarrow A_{\varphi(x)}$ being the canonical morphism follows from [Lemma 8](#lem8){: data-relation="required" }. On the other hand, since $(\varphi,\varphi^\sharp)$ is a morphism of locally ringed spaces, $\varphi_x^\sharp$ is a local homomorphism, so the ideal $(\varphi_x^\sharp)^{-1}(\mathfrak{m}_x)$ is a proper ideal containing $\varphi(x)A_{\varphi(x)}$, i.e., $\varphi(x)A_{\varphi(x)}$ itself. Therefore, by [[Commutative Algebra] §Localization, ⁋Proposition 8]](/en/math/commutative_algebra/localization#prop8),
 
 $$\varphi'(x)=\phi_x^{-1}(\mathfrak{m}_x)=\epsilon^{-1}\left((\varphi_x^\sharp)^{-1}(\mathfrak{m}_x)\right)=\epsilon^{-1}\left(\varphi(x)A_{\varphi(x)}\right)=\varphi(x)$$
 
@@ -437,7 +437,7 @@ Finally, we verify that this bijection is natural. Given a morphism $\psi: X' \r
 
 $$\Phi(\varphi\circ\psi)=\Gamma(\psi)\circ\Phi(\varphi)$$
 
-Also, given a ring homomorphism $\theta: A \rightarrow A'$, from the construction in [Proposition 9](#prop9) with $f=1$ we have $(\Spec\theta)^\sharp(\Spec A)=\theta$, so for any $\varphi: X \rightarrow \Spec A'$,
+Also, given a ring homomorphism $\theta: A \rightarrow A'$, from the construction in [Proposition 9](#prop9){: data-relation="required" } with $f=1$ we have $(\Spec\theta)^\sharp(\Spec A)=\theta$, so for any $\varphi: X \rightarrow \Spec A'$,
 
 $$\Phi((\Spec\theta)\circ\varphi)=\Phi(\varphi)\circ\theta$$
 
