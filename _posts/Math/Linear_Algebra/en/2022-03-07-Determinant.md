@@ -116,9 +116,9 @@ In the usual notion of area, multiplying the length of one side of a parallelogr
 
 {% diagram Math/Linear_Algebra/Determinant-4.svg width="12em" alt="Multilinearity" %}
 
-Moreover, considering shear transformations, for a fixed side $v_n$, adding to $v_n$ any linear combination of the $n-1$ base vectors $v_1,\ldots, v_{n-1}$ preserves the value of $D$. This means that if $v_n$ is a linear combination of $v_1,\ldots, v_{n-1}$ then $D(v_1,\ldots, v_n)=0$, and hence by [Proposition 3](#prop3) this is equivalent to $D$ being alternating.
+Moreover, considering shear transformations, for a fixed side $v_n$, adding to $v_n$ any linear combination of the $n-1$ base vectors $v_1,\ldots, v_{n-1}$ preserves the value of $D$. This means that if $v_n$ is a linear combination of $v_1,\ldots, v_{n-1}$ then $D(v_1,\ldots, v_n)=0$, and hence by [Proposition 3](#prop3){: data-relation="required" } this is equivalent to $D$ being alternating.
 
-We have not yet proved the uniqueness of the determinant, but we can verify that [Definition 4](#def4) completely determines it; thus we may think of the determinant as signed volume. From this picture, we can also see why the determinant being $0$ is equivalent to $A$ being non-invertible: in $n$-dimensional space, the volume of a parallelepiped of dimension less than $n$ is always 0.
+We have not yet proved the uniqueness of the determinant, but we can verify that [Definition 4](#def4){: data-relation="required" } completely determines it; thus we may think of the determinant as signed volume. From this picture, we can also see why the determinant being $0$ is equivalent to $A$ being non-invertible: in $n$-dimensional space, the volume of a parallelepiped of dimension less than $n$ is always 0.
 
 In the next post we actually show that the determinant exists uniquely. Through this we will learn various computational methods for the determinant.
 
