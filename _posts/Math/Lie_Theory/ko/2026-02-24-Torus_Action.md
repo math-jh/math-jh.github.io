@@ -21,7 +21,7 @@ $$\rho:G\rightarrow \Aut(V)$$
 
 Lie group의 경우 이러한 표현론적 관점은 더 도움이 되는데, Lie group은 $\GL(n;\mathbb{R})$이나 $\Diff(M)$과 같이, 본질적으로 다른 대상 위에 작용하는 것이기 때문이다. 
 
-다만 [\[표현론\] §유한군의 표현론, ⁋정의 1](/ko/math/representation_theory/representations_of_finite_groups#def1)에서처럼 $G$의 representation theory를 정의하면 Lie group $G$ 위에 있는 smooth structure는 놓치게 되므로, 다음과 같이 정의해주어야 한다.
+다만 [\[표현론\] §유한군의 표현론, ⁋정의 1](/ko/math/representation_theory/representations_of_finite_groups#def1){: data-relation="weak" }에서처럼 $G$의 representation theory를 정의하면 Lie group $G$ 위에 있는 smooth structure는 놓치게 되므로, 다음과 같이 정의해주어야 한다.
 
 ::: 정의 1
 Lie group $G$에 대하여, $G$의 *representation<sub>표현</sub>*은 유한차원 벡터공간 $V$와, smooth homomorphism
@@ -31,7 +31,7 @@ $$\rho:G\rightarrow \Aut(V)$$
 이 주어진 것이다. 
 :::
 
-만일 $G$를 discrete topology와 trivial smooth structure가 주어진 Lie group으로 본다면 이 정의는 [\[표현론\] §유한군의 표현론, ⁋정의 1](/ko/math/representation_theory/representations_of_finite_groups#def1)의 일반화라 생각할 수도 있다. 비슷하게 [\[표현론\] §유한군의 표현론, §§표현론의 기본 개념들](/ko/math/representation_theory/representations_of_finite_groups#표현론의-기본-개념들)에 있는 모든 정의를 Lie group에 대해서도 할 수 있다. 
+만일 $G$를 discrete topology와 trivial smooth structure가 주어진 Lie group으로 본다면 이 정의는 [\[표현론\] §유한군의 표현론, ⁋정의 1](/ko/math/representation_theory/representations_of_finite_groups#def1){: data-relation="weak" }의 일반화라 생각할 수도 있다. 비슷하게 [\[표현론\] §유한군의 표현론, §§표현론의 기본 개념들](/ko/math/representation_theory/representations_of_finite_groups#표현론의-기본-개념들){: data-relation="weak" }에 있는 모든 정의를 Lie group에 대해서도 할 수 있다. 
 
 이 글에서 중요한 역할을 했던 것은 group $G$가 finite group이라는 사실이었다. 가령 $G$의 모든 원소에 대해 평균을 내는 아이디어는 이러한 사실을 바탕으로 했다. 이를 Lie group으로 일반화하기 위해서는 $G$에 어떠한 종류의 유한성을 강제해야 한다. 
 
@@ -39,13 +39,13 @@ $$\rho:G\rightarrow \Aut(V)$$
 
 한편, 유한차원 representation $G\rightarrow\Aut(V)$가 주어졌다 할 때, 가장 좋은 점은 이들의 image $\rho(g)$들을 (basis의 선택을 통해) 행렬로 생각할 수 있다는 것이다. 따라서 이를 통해 우리는 행렬과 선형사상에 대한 우리의 도구들을 사용하여 이를 탐구할 수 있다. 
 
-선형대수에서 가장 중요한 도구 중 하나는 대각화이다. 따라서 우리는 주어진 Lie group action $\rho:G \rightarrow \Aut(V)$에 대하여, $V$의 basis를 적당히 택하여 $\rho(g)$의 행렬표현을 대각행렬로 만드는 데에 관심이 있다. 만일 $G$가 finite group이었다면, 각각의 $g$에 대해 이러한 basis를 찾아줄 수 있었겠지만 현재는 $G$가 무한하므로 이러한 일을 하기 힘들다. 따라서 우리는 simultaneously diagonalizable인 원소들에 자연스럽게 관심을 갖게 된다. 그런데 [\[선형대수학\] §고유공간분해, ⁋명제 10](/ko/math/linear_algebra/eigenspace_decomposition#prop10)은 서로 commute하는 두 diagonalizable matrix가 simultaneously diagonalizable임을 알고 있으므로, 다음 정의를 내리는 것이 합당하다. 
+선형대수에서 가장 중요한 도구 중 하나는 대각화이다. 따라서 우리는 주어진 Lie group action $\rho:G \rightarrow \Aut(V)$에 대하여, $V$의 basis를 적당히 택하여 $\rho(g)$의 행렬표현을 대각행렬로 만드는 데에 관심이 있다. 만일 $G$가 finite group이었다면, 각각의 $g$에 대해 이러한 basis를 찾아줄 수 있었겠지만 현재는 $G$가 무한하므로 이러한 일을 하기 힘들다. 따라서 우리는 simultaneously diagonalizable인 원소들에 자연스럽게 관심을 갖게 된다. 그런데 [\[선형대수학\] §고유공간분해, ⁋명제 10](/ko/math/linear_algebra/eigenspace_decomposition#prop10){: data-relation="required" }은 서로 commute하는 두 diagonalizable matrix가 simultaneously diagonalizable임을 알고 있으므로, 다음 정의를 내리는 것이 합당하다. 
 
 ::: 정의 2
 Compact, connected Lie group $G$에 대하여, $G$의 subgroup $T$가 *maximal torus<sub>극대 원환면</sub>*라는 것은 $T$가 torus이고, 포함관계에 대하여 maximal인 것이다. 
 :::
 
-Lie algebra $\mathfrak{g}$의 임의의 원소 $X$를 택한 후, 이 방향으로의 exponential map이 그리는 one-parameter subgroup의 closure가 torus가 된다. 따라서 maximal torus의 존재성은 [\[집합론\] §선택공리, ⁋정리 4](/ko/math/set_theory/axiom_of_choice#thm4)에 의해 자명하다. 
+Lie algebra $\mathfrak{g}$의 임의의 원소 $X$를 택한 후, 이 방향으로의 exponential map이 그리는 one-parameter subgroup의 closure가 torus가 된다. 따라서 maximal torus의 존재성은 [\[집합론\] §선택공리, ⁋정리 4](/ko/math/set_theory/axiom_of_choice#thm4){: data-relation="required" }에 의해 자명하다. 
 
 주의할 것은, 위에서 생각하는 one-parameter group $\exp(tX)$가 1차원 torus를 만들 것이라는 착각을 하기 쉬운데 이것이 항상 그렇지는 않다는 것이다. 가령 2차원 torus
 
@@ -59,13 +59,13 @@ $$T=\overline{\langle t\rangle}$$
 
 ## Weight decomposition
 
-우리의 주장은 $\rho(T)$가 simultaneously diagonalizable이라는 것이다. 이를 위해서는 $\rho(T)$의 각각의 원소들이 diagonalizable인 것을 보이면 충분하다. 이를 위해 임의의 finite-dimensional representation $\rho:G\rightarrow \Aut(V)$을 생각하고 이를 maximal torus $T$로 제한한 representation $\rho\vert_T$을 생각하자. 가장 먼저 확인할 수 있는 것은 $T$가 compact Lie group이라는 사실이다. 따라서 [\[표현론\] §유한군의 표현론, ⁋명제 6](/ko/math/representation_theory/representations_of_finite_groups#prop6)과 [\[표현론\] §유한군의 표현론, ⁋보조정리 8](/ko/math/representation_theory/representations_of_finite_groups#lem8)이 모두 성립한다. 
+우리의 주장은 $\rho(T)$가 simultaneously diagonalizable이라는 것이다. 이를 위해서는 $\rho(T)$의 각각의 원소들이 diagonalizable인 것을 보이면 충분하다. 이를 위해 임의의 finite-dimensional representation $\rho:G\rightarrow \Aut(V)$을 생각하고 이를 maximal torus $T$로 제한한 representation $\rho\vert_T$을 생각하자. 가장 먼저 확인할 수 있는 것은 $T$가 compact Lie group이라는 사실이다. 따라서 [\[표현론\] §유한군의 표현론, ⁋명제 6](/ko/math/representation_theory/representations_of_finite_groups#prop6){: data-relation="required" }과 [\[표현론\] §유한군의 표현론, ⁋보조정리 8](/ko/math/representation_theory/representations_of_finite_groups#lem8){: data-relation="required" }이 모두 성립한다. 
 
 보다 자세하게 이들을 하나하나 써 보면, 우선 $\rho\vert_T$가 unitary representation이라는 사실로부터 우리는 다음의 irreducible decomposition
 
 $$V=\bigoplus_i V_i$$
 
-을 생각할 수 있다. 여기에서 각각의 $V_i$는 irreducible $T$-representation들이다. 한편, $T$가 abelian이므로 임의의 $t\in T$에 대하여, $\rho(t)$은 $T$-action과 모두 commute하고, 따라서 각각의 $V_i$로 제한하였을 때 $\rho(t)$는 $T$-automorphism이다. 이제 [\[표현론\] §유한군의 표현론, ⁋보조정리 8](/ko/math/representation_theory/representations_of_finite_groups#lem8)의 두 번째 결과에 의하여 $\rho(t)$는 상수배
+을 생각할 수 있다. 여기에서 각각의 $V_i$는 irreducible $T$-representation들이다. 한편, $T$가 abelian이므로 임의의 $t\in T$에 대하여, $\rho(t)$은 $T$-action과 모두 commute하고, 따라서 각각의 $V_i$로 제한하였을 때 $\rho(t)$는 $T$-automorphism이다. 이제 [\[표현론\] §유한군의 표현론, ⁋보조정리 8](/ko/math/representation_theory/representations_of_finite_groups#lem8){: data-relation="required" }의 두 번째 결과에 의하여 $\rho(t)$는 상수배
 
 $$\rho(t)(v)=\lambda_i(t)v\qquad \lambda_i(t)\in \mathbb{C}^\times$$
 
@@ -167,7 +167,7 @@ $$N\rightarrow\Aut(T);\qquad n\mapsto (t\mapsto ntn^{-1})$$
 
 으로 작용한다. 그런데 $\Aut(T)$는 torus $T=\mathbb{R}^k/\mathbb{Z}^k$의 lattice가 어디로 옮겨지는지에 의해 결정되고, 이는 $\GL(k;\mathbb{Z})$에 $\Ad(n)$을 통해 담겨있다. 즉 이 action은 $N$에서 $\GL(k;\mathbb{Z})$로의 연속함수로 생각할 수 있다. 그런데 $\GL(k;\mathbb{Z})$는 discrete이므로 $N$의 identity component $N_0$을 생각하면 $N_0$은 모두 항등행렬로 옮겨져야 한다. 즉, $N_0$은 $T$ 위에 자명하게 작용한다. 
 
-이제 임의의 1-parameter subgroup $\alpha:\mathbb{R}\rightarrow N_0$에 대하여, $\alpha(\mathbb{R})\cdot T=T$가 성립해야 하고, 이로부터 $\alpha(\mathbb{R})\subseteq T$여야 함을 안다. 그런데 [\[미분다양체\] §벡터장, ⁋정리 6](/ko/math/manifolds/vector_fields#thm6)에 의하여 이들은 $N_0$에서 항등원의 어떠한 열린근방을 덮으며, 따라서 $N_0$을 생성한다. 즉 $N_0=T$이다.
+이제 임의의 1-parameter subgroup $\alpha:\mathbb{R}\rightarrow N_0$에 대하여, $\alpha(\mathbb{R})\cdot T=T$가 성립해야 하고, 이로부터 $\alpha(\mathbb{R})\subseteq T$여야 함을 안다. 그런데 [\[미분다양체\] §벡터장, ⁋정리 6](/ko/math/manifolds/vector_fields#thm6){: data-relation="required" }에 의하여 이들은 $N_0$에서 항등원의 어떠한 열린근방을 덮으며, 따라서 $N_0$을 생성한다. 즉 $N_0=T$이다.
 
 따라서 $N/T$는 정확하게 $N$의 connected component의 개수이며, $N$은 compact Lie group $G$의 closed subspace로서 마찬가지로 compact이므로 이것이 무한할 수 없다.
 :::
@@ -264,7 +264,7 @@ $$G=\bigcup_{g\in G}gTg^{-1}$$
 
 ## Weyl group parametrization
 
-Cartan decomposition은 $G$의 각 원소가 어떠한 maximal torus에 속한다는 것을 말해주지만, 이 decomposition을 더 명시적으로 기술할 수 있다. 핵심은 [보조정리 7](#lem7)에서 정의한 map
+Cartan decomposition은 $G$의 각 원소가 어떠한 maximal torus에 속한다는 것을 말해주지만, 이 decomposition을 더 명시적으로 기술할 수 있다. 핵심은 [보조정리 7](#lem7){: data-relation="required" }에서 정의한 map
 
 $$q:G/T\times T\rightarrow G;\qquad (gT,t)\mapsto gtg^{-1}$$
 
@@ -282,7 +282,7 @@ $$q(w\cdot(gT,t))=q(gw^{-1}T, wtw^{-1})=gw^{-1}(wtw^{-1})wg^{-1}=gtg^{-1}=q(gT,t
 
 $$(G/T\times T)/W\rightarrow G$$
 
-을 유도한다. [보조정리 7](#lem7)은 이 함수가 bijection임을 증명한다.
+을 유도한다. [보조정리 7](#lem7){: data-relation="required" }은 이 함수가 bijection임을 증명한다.
 
 한편, $G$의 conjugacy class들의 공간을 $\Conj(G)$라 하자. 그럼 각 conjugacy class 
 
@@ -333,7 +333,7 @@ $$h\cdot[(gT,t)]=[(hgT,t)]$$
 즉, $G/T$ 성분에는 left multiplication으로 작용하고, $T$ 성분은 보존한다.
 :::
 
-한편, 우리는 [명제 10](#prop10)에 의하여 $T/W$와 $\Conj(G)$ 사이에 일대일대응이 존재함을 안다. $c_h$는, 정의에 의해, $G$의 conjugacy class를 변화시키지 않으며 이것이 위의 명제에서 $T$ 방향의 변화가 없는 것으로 반영된 것을 확인할 수 있다. 그 대신 conjugation action은 정확하게 $G/T$ 위에 작용하는 것으로 생각할 수 있다.
+한편, 우리는 [명제 10](#prop10){: data-relation="required" }에 의하여 $T/W$와 $\Conj(G)$ 사이에 일대일대응이 존재함을 안다. $c_h$는, 정의에 의해, $G$의 conjugacy class를 변화시키지 않으며 이것이 위의 명제에서 $T$ 방향의 변화가 없는 것으로 반영된 것을 확인할 수 있다. 그 대신 conjugation action은 정확하게 $G/T$ 위에 작용하는 것으로 생각할 수 있다.
 
 이제 $G/T$ 위에서의 $G$-action을 더 자세히 이해하기 위해, 우리는 이 공간을 Weyl group을 이용하여 다시 쓸 것이다. 우선 $N=N(T)$에 대하여, 다음의 projection map
 
@@ -343,7 +343,7 @@ $$\pi: G/T\rightarrow G/N;\qquad gT\mapsto gN$$
 
 $$\pi^{-1}(gN)=\{hT\mid h\in gN\}=\{gxT\mid x\in N\}$$
 
-이며, $g$가 고정되어 있으므로 이 fiber는 본질적으로 $\{xT\mid x\in N\}$, 즉 $N/T$와 같다. 더 나아가 위상적으로 $\pi$는 정확하게 $\lvert W\rvert$-fold covering map이라는 것을 확인할 수 있다. ([\[대수적 위상수학\] §피복공간, ⁋정의 3](/ko/math/algebraic_topology/covering_spaces#def3)) 더 정확히 이는 각 fiber가 $W$인 principal $W$-bundle이다. 
+이며, $g$가 고정되어 있으므로 이 fiber는 본질적으로 $\{xT\mid x\in N\}$, 즉 $N/T$와 같다. 더 나아가 위상적으로 $\pi$는 정확하게 $\lvert W\rvert$-fold covering map이라는 것을 확인할 수 있다. ([\[대수적 위상수학\] §피복공간, ⁋정의 3](/ko/math/algebraic_topology/covering_spaces#def3){: data-relation="required" }) 더 정확히 이는 각 fiber가 $W$인 principal $W$-bundle이다. 
 
 ## 예시: $\SU(2)$
 
@@ -399,7 +399,7 @@ $$\begin{pmatrix}0&1\\-1&0\end{pmatrix}\begin{pmatrix}e^{i\theta}&0\\0&e^{-i\the
 
 ## Weyl chamber
 
-마지막으로 우리는 다음 글에서 다룰 root system의 motivation을 맛볼 수 있는 정의를 살펴본다. [보조정리 7](#lem7)에서, 우리가 $T$의 generator $t$에서의 $q$에 대한 preimage를 계산하고 그 개수가 $\lvert W\rvert$개임을 확인하였다. 이제 $T$위에 $W$가 작용한다는 것을 알게되었으므로 이 조건을 다음과 같이 쓸 수 있다.
+마지막으로 우리는 다음 글에서 다룰 root system의 motivation을 맛볼 수 있는 정의를 살펴본다. [보조정리 7](#lem7){: data-relation="weak" }에서, 우리가 $T$의 generator $t$에서의 $q$에 대한 preimage를 계산하고 그 개수가 $\lvert W\rvert$개임을 확인하였다. 이제 $T$위에 $W$가 작용한다는 것을 알게되었으므로 이 조건을 다음과 같이 쓸 수 있다.
 
 ::: 정의 12
 Maximal torus $T$의 원소 $t$가 *regular*라는 것은 $wtw^{-1}=t$를 만족하는 $w\in W$가 오직 $w=e$뿐인 것이다. 반대로, $wtw^{-1}=t$인 $w\neq e$가 존재하면 $t$를 *singular<sub>특이</sub>*라 한다.

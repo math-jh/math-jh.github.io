@@ -22,7 +22,7 @@ Once we choose a basis for $V$, analyzing the image of $G$ under $\rho$ becomes 
 
 For Lie groups, this representation-theoretic perspective is even more useful, because Lie groups such as $\GL(n;\mathbb{R})$ or $\Diff(M)$ are inherently things that act on other objects.
 
-However, as in [\[Representation Theory\] §Representation Theory of Finite Groups, ⁋Definition 1](/en/math/representation_theory/representations_of_finite_groups#def1), if we define the representation theory of $G$ in this way, we lose the smooth structure on the Lie group $G$. Thus we must modify the definition as follows.
+However, as in [\[Representation Theory\] §Representation Theory of Finite Groups, ⁋Definition 1](/en/math/representation_theory/representations_of_finite_groups#def1){: data-relation="weak" }, if we define the representation theory of $G$ in this way, we lose the smooth structure on the Lie group $G$. Thus we must modify the definition as follows.
 
 ::: Definition 1
 For a Lie group $G$, a *representation* of $G$ consists of a finite-dimensional vector space $V$ together with a smooth map
@@ -30,7 +30,7 @@ For a Lie group $G$, a *representation* of $G$ consists of a finite-dimensional 
 $$\rho:G\rightarrow \Aut(V)$$
 :::
 
-If we regard $G$ as a Lie group equipped with the discrete topology and the trivial smooth structure, then this definition can be viewed as a generalization of [\[Representation Theory\] §Representation Theory of Finite Groups, ⁋Definition 1](/en/math/representation_theory/representations_of_finite_groups#def1). Similarly, all definitions in [\[Representation Theory\] §Representation Theory of Finite Groups, §§Basic Notions of Representation Theory](/en/math/representation_theory/representations_of_finite_groups#basic-notions-of-representation-theory) can be carried over to Lie groups.
+If we regard $G$ as a Lie group equipped with the discrete topology and the trivial smooth structure, then this definition can be viewed as a generalization of [\[Representation Theory\] §Representation Theory of Finite Groups, ⁋Definition 1](/en/math/representation_theory/representations_of_finite_groups#def1){: data-relation="weak" }. Similarly, all definitions in [\[Representation Theory\] §Representation Theory of Finite Groups, §§Basic Notions of Representation Theory](/en/math/representation_theory/representations_of_finite_groups#basic-notions-of-representation-theory){: data-relation="weak" } can be carried over to Lie groups.
 
 What played a crucial role in the preceding discussion was the fact that $G$ is a finite group. For instance, the idea of averaging over all elements of $G$ relied on this. To generalize this to Lie groups, we must impose some kind of finiteness condition on $G$.
 
@@ -38,13 +38,13 @@ Therefore, we often consider the case where $G$ is a *compact* Lie group. In thi
 
 On the other hand, given a finite-dimensional representation $G\rightarrow\Aut(V)$, the greatest advantage is that we can regard the images $\rho(g)$ as matrices (via a choice of basis). Hence we can investigate them using our tools for matrices and linear maps.
 
-One of the most important tools in linear algebra is diagonalization. Thus, for a given Lie group action $\rho:G \rightarrow \Aut(V)$, we are interested in choosing a basis of $V$ so that the matrix representation of each $\rho(g)$ becomes diagonal. If $G$ were finite, we could find such a basis for each $g$ individually, but since $G$ is now infinite, this is difficult. Therefore, we naturally become interested in elements that are simultaneously diagonalizable. Now, [\[Linear Algebra\] §Eigenspace Decomposition, ⁋Proposition 10](/en/math/linear_algebra/eigenspace_decomposition#prop10) tells us that two diagonalizable matrices are simultaneously diagonalizable if and only if they commute, so the following definition is appropriate.
+One of the most important tools in linear algebra is diagonalization. Thus, for a given Lie group action $\rho:G \rightarrow \Aut(V)$, we are interested in choosing a basis of $V$ so that the matrix representation of each $\rho(g)$ becomes diagonal. If $G$ were finite, we could find such a basis for each $g$ individually, but since $G$ is now infinite, this is difficult. Therefore, we naturally become interested in elements that are simultaneously diagonalizable. Now, [\[Linear Algebra\] §Eigenspace Decomposition, ⁋Proposition 10](/en/math/linear_algebra/eigenspace_decomposition#prop10){: data-relation="weak" } tells us that two diagonalizable matrices are simultaneously diagonalizable if and only if they commute, so the following definition is appropriate.
 
 ::: Definition 2
 For a compact, connected Lie group $G$, a subgroup $T$ of $G$ is called a *maximal torus* if $T$ is a torus and is maximal with respect to inclusion.
 :::
 
-Choosing an arbitrary element $X$ of the Lie algebra $\mathfrak{g}$, the closure of the one-parameter subgroup traced by the exponential map in this direction becomes a torus. Hence the existence of a maximal torus is immediate by [\[Set Theory\] §Axiom of Choice, ⁋Theorem 4](/en/math/set_theory/axiom_of_choice#thm4).
+Choosing an arbitrary element $X$ of the Lie algebra $\mathfrak{g}$, the closure of the one-parameter subgroup traced by the exponential map in this direction becomes a torus. Hence the existence of a maximal torus is immediate by [\[Set Theory\] §Axiom of Choice, ⁋Theorem 4](/en/math/set_theory/axiom_of_choice#thm4){: data-relation="required" }.
 
 It is worth noting that one might be tempted to think that the one-parameter group $\exp(tX)$ above always produces a one-dimensional torus, but this is not always the case. For example, consider the two-dimensional torus
 
@@ -58,13 +58,13 @@ is called a *generator* of $T$.
 
 ## Weight decomposition
 
-Our claim is that $\rho(T)$ is simultaneously diagonalizable. To show this, it suffices to prove that each element of $\rho(T)$ is diagonalizable. To this end, consider an arbitrary finite-dimensional representation $\rho:G\rightarrow \Aut(V)$ and its restriction $\rho\vert_T$ to a maximal torus $T$. The first thing to check is that $T$ is a compact Lie group. Therefore, both [\[Representation Theory\] §Representation Theory of Finite Groups, ⁋Proposition 6](/en/math/representation_theory/representations_of_finite_groups#prop6) and [\[Representation Theory\] §Representation Theory of Finite Groups, ⁋Lemma 8](/en/math/representation_theory/representations_of_finite_groups#lem8) hold.
+Our claim is that $\rho(T)$ is simultaneously diagonalizable. To show this, it suffices to prove that each element of $\rho(T)$ is diagonalizable. To this end, consider an arbitrary finite-dimensional representation $\rho:G\rightarrow \Aut(V)$ and its restriction $\rho\vert_T$ to a maximal torus $T$. The first thing to check is that $T$ is a compact Lie group. Therefore, both [\[Representation Theory\] §Representation Theory of Finite Groups, ⁋Proposition 6](/en/math/representation_theory/representations_of_finite_groups#prop6){: data-relation="required" } and [\[Representation Theory\] §Representation Theory of Finite Groups, ⁋Lemma 8](/en/math/representation_theory/representations_of_finite_groups#lem8){: data-relation="required" } hold.
 
 Writing these out in more detail, first from the fact that $\rho\vert_T$ is a unitary representation, we obtain the following irreducible decomposition
 
 $$V=\bigoplus_i V_i$$
 
-Here each $V_i$ is an irreducible $T$-representation. On the other hand, since $T$ is abelian, for any $t\in T$, $\rho(t)$ commutes with the $T$-action, and thus the restriction of $\rho(t)$ to each $V_i$ is a $T$-automorphism. Now by the second result of [\[Representation Theory\] §Representation Theory of Finite Groups, ⁋Lemma 8](/en/math/representation_theory/representations_of_finite_groups#lem8), $\rho(t)$ acts by a scalar multiple
+Here each $V_i$ is an irreducible $T$-representation. On the other hand, since $T$ is abelian, for any $t\in T$, $\rho(t)$ commutes with the $T$-action, and thus the restriction of $\rho(t)$ to each $V_i$ is a $T$-automorphism. Now by the second result of [\[Representation Theory\] §Representation Theory of Finite Groups, ⁋Lemma 8](/en/math/representation_theory/representations_of_finite_groups#lem8){: data-relation="required" }, $\rho(t)$ acts by a scalar multiple
 
 $$\rho(t)(v)=\lambda_i(t)v\qquad \lambda_i(t)\in \mathbb{C}^\times$$
 
@@ -166,7 +166,7 @@ $$N\rightarrow\Aut(T);\qquad n\mapsto (t\mapsto ntn^{-1})$$
 
 However, $\Aut(T)$ is determined by where the lattice of the torus $T=\mathbb{R}^k/\mathbb{Z}^k$ is sent, and this is embedded in $\GL(k;\mathbb{Z})$ via $\Ad(n)$. That is, this action can be thought of as a continuous map from $N$ to $\GL(k;\mathbb{Z})$. But since $\GL(k;\mathbb{Z})$ is discrete, considering the identity component $N_0$ of $N$, $N_0$ must all be sent to the identity matrix. That is, $N_0$ acts trivially on $T$.
 
-Now for an arbitrary one-parameter subgroup $\alpha:\mathbb{R}\rightarrow N_0$, we must have $\alpha(\mathbb{R})\cdot T=T$, and from this we know that $\alpha(\mathbb{R})\subseteq T$. But by [\[Manifolds\] §Vector Fields, ⁋Theorem 6](/en/math/manifolds/vector_fields#thm6), these cover some open neighborhood of the identity in $N_0$, and therefore generate $N_0$. That is, $N_0=T$.
+Now for an arbitrary one-parameter subgroup $\alpha:\mathbb{R}\rightarrow N_0$, we must have $\alpha(\mathbb{R})\cdot T=T$, and from this we know that $\alpha(\mathbb{R})\subseteq T$. But by [\[Manifolds\] §Vector Fields, ⁋Theorem 6](/en/math/manifolds/vector_fields#thm6){: data-relation="required" }, these cover some open neighborhood of the identity in $N_0$, and therefore generate $N_0$. That is, $N_0=T$.
 
 Therefore $N/T$ is exactly the number of connected components of $N$, and since $N$ is a closed subspace of the compact Lie group $G$, it is likewise compact, so this cannot be infinite.
 :::
@@ -267,7 +267,7 @@ The Cartan decomposition tells us that each element of $G$ belongs to some maxim
 
 $$q:G/T\times T\rightarrow G;\qquad (gT,t)\mapsto gtg^{-1}$$
 
-defined in [Lemma 7](#lem7) is a $\lvert W\rvert$-to-1 covering. From this, each element of $G$ has $\lvert W\rvert$ preimages, and the relations among them are exactly described by the Weyl group.
+defined in [Lemma 7](#lem7){: data-relation="required" } is a $\lvert W\rvert$-to-1 covering. From this, each element of $G$ has $\lvert W\rvert$ preimages, and the relations among them are exactly described by the Weyl group.
 
 Specifically, define the following $W$-action on $G/T\times T$:
 
@@ -281,7 +281,7 @@ so $q$ is $W$-invariant, and thus induces a function from the orbit space $(G/T\
 
 $$(G/T\times T)/W\rightarrow G$$
 
-[Lemma 7](#lem7) proves that this function is a bijection.
+[Lemma 7](#lem7){: data-relation="required" } proves that this function is a bijection.
 
 On the other hand, let $\Conj(G)$ denote the space of conjugacy classes of $G$. Then each conjugacy class
 
@@ -332,7 +332,7 @@ $$h\cdot[(gT,t)]=[(hgT,t)]$$
 That is, it acts by left multiplication on the $G/T$ component and preserves the $T$ component.
 :::
 
-On the other hand, by [Proposition 10](#prop10), we know that there is a one-to-one correspondence between $T/W$ and $\Conj(G)$. By definition, $c_h$ does not change the conjugacy class of $G$, and we can check that this is reflected in the fact that there is no change in the $T$ direction in the above proposition. Instead, the conjugation action can be thought of as acting exactly on $G/T$.
+On the other hand, by [Proposition 10](#prop10){: data-relation="required" }, we know that there is a one-to-one correspondence between $T/W$ and $\Conj(G)$. By definition, $c_h$ does not change the conjugacy class of $G$, and we can check that this is reflected in the fact that there is no change in the $T$ direction in the above proposition. Instead, the conjugation action can be thought of as acting exactly on $G/T$.
 
 To understand the $G$-action on $G/T$ in more detail, we will rewrite this space using the Weyl group. First, for $N=N(T)$, consider the following projection map
 
@@ -342,7 +342,7 @@ Then for each coset $gN\in G/N$, its fiber is
 
 $$\pi^{-1}(gN)=\{hT\mid h\in gN\}=\{gxT\mid x\in N\}$$
 
-and since $g$ is fixed, this fiber is essentially $\{xT\mid x\in N\}$, that is, the same as $N/T$. Furthermore, topologically we can verify that $\pi$ is exactly a $\lvert W\rvert$-fold covering map. ([\[Algebraic Topology\] §Covering Spaces, ⁋Definition 3](/en/math/algebraic_topology/covering_spaces#def3)) More precisely, this is a principal $W$-bundle with each fiber being $W$.
+and since $g$ is fixed, this fiber is essentially $\{xT\mid x\in N\}$, that is, the same as $N/T$. Furthermore, topologically we can verify that $\pi$ is exactly a $\lvert W\rvert$-fold covering map. ([\[Algebraic Topology\] §Covering Spaces, ⁋Definition 3](/en/math/algebraic_topology/covering_spaces#def3){: data-relation="weak" }) More precisely, this is a principal $W$-bundle with each fiber being $W$.
 
 ## Example: $\SU(2)$
 
@@ -398,7 +398,7 @@ Now considering the standard representation of $\SU(2)$ on $\mathbb{C}^2$, we ha
 
 ## Weyl chamber
 
-Finally, we examine a definition that gives a taste of the motivation for root systems, which we will cover in the next post. In [Lemma 7](#lem7), we computed the preimage of $q$ at a generator $t$ of $T$ and checked that there are $\lvert W\rvert$ of them. Now that we know $W$ acts on $T$, we can write this condition as follows.
+Finally, we examine a definition that gives a taste of the motivation for root systems, which we will cover in the next post. In [Lemma 7](#lem7){: data-relation="weak" }, we computed the preimage of $q$ at a generator $t$ of $T$ and checked that there are $\lvert W\rvert$ of them. Now that we know $W$ acts on $T$, we can write this condition as follows.
 
 ::: Definition 12
 An element $t$ of a maximal torus $T$ is called *regular* if the only $w\in W$ satisfying $wtw^{-1}=t$ is $w=e$. Conversely, if there exists $w\neq e$ such that $wtw^{-1}=t$, then $t$ is called *singular*.
