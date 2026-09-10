@@ -14,7 +14,7 @@ weight: 8
 published: false
 ---
 
-[§합동식](/ko/math/number_theory/congruences)에서 소수 $p$를 법으로 하면 $0$이 아닌 모든 coset이 곱셈 역원을 가져 $\mathbb{Z}/p\mathbb{Z}$가 field를 이룸을 보았다. 이 곱셈 구조에서 나오는 가장 기본적이고 강력한 사실이 페르마 소정리이며, 거듭제곱의 합동을 극적으로 단순화한다.
+[§합동식](/ko/math/number_theory/congruences){: data-relation="required" }에서 소수 $p$를 법으로 하면 $0$이 아닌 모든 coset이 곱셈 역원을 가져 $\mathbb{Z}/p\mathbb{Z}$가 field를 이룸을 보았다. 이 곱셈 구조에서 나오는 가장 기본적이고 강력한 사실이 페르마 소정리이며, 거듭제곱의 합동을 극적으로 단순화한다.
 
 ## 페르마 소정리
 
@@ -27,7 +27,7 @@ $$a^{p-1} \equiv 1 \pmod p$$
 :::
 
 ::: 증명
-$0$이 아닌 coset들 $1, 2, \ldots, p-1$에 각각 $a$를 곱한 $a, 2a, \ldots, (p-1)a$를 생각한다. $p \nmid a$이고 $1 \leq i \leq p-1$이면 $p \nmid ia$이므로 이들은 모두 $0$이 아니고, $ia \equiv ja \pmod p$이면 [§합동식, ⁋명제 6](/ko/math/number_theory/congruences#prop6)에 의해 $i \equiv j$이므로 서로 다르다. 따라서 $a, 2a, \ldots, (p-1)a$는 법 $p$에 대해 $1, 2, \ldots, p-1$을 순서만 바꾸어 놓은 것이다. 양쪽을 모두 곱하면
+$0$이 아닌 coset들 $1, 2, \ldots, p-1$에 각각 $a$를 곱한 $a, 2a, \ldots, (p-1)a$를 생각한다. $p \nmid a$이고 $1 \leq i \leq p-1$이면 $p \nmid ia$이므로 이들은 모두 $0$이 아니고, $ia \equiv ja \pmod p$이면 [§합동식, ⁋명제 6](/ko/math/number_theory/congruences#prop6){: data-relation="required" }에 의해 $i \equiv j$이므로 서로 다르다. 따라서 $a, 2a, \ldots, (p-1)a$는 법 $p$에 대해 $1, 2, \ldots, p-1$을 순서만 바꾸어 놓은 것이다. 양쪽을 모두 곱하면
 
 $$\begin{aligned}
 a \cdot 2a \cdots (p-1)a &= a^{p-1}\cdot \bigl(1 \cdot 2 \cdots (p-1)\bigr) \\
@@ -127,7 +127,7 @@ $$\begin{aligned}
 즉 나머지는 $5$이다. 지수가 다시 거듭제곱으로 주어질 때에는, 바깥쪽 법 $p$에 대해서는 지수를 법 $p-1$로 줄이고, 그 지수 자체를 계산할 때 또 합동을 쓰는 식으로 한 단계씩 내려가면 된다.
 :::
 
-페르마 소정리는 곱셈 역원을 명시적으로 주는 데에도 쓰인다. $p \nmid a$이면 $a \cdot a^{p-2} = a^{p-1} \equiv 1 \pmod p$이므로, $a$의 법 $p$에 대한 역원은 곧 $a^{p-2}$이다. 이는 [§일차 합동식, ⁋예시 4](/ko/math/number_theory/linear_congruences#ex4)의 확장 유클리드 알고리즘과는 다른, 거듭제곱만으로 역원을 얻는 길을 열어 준다.
+페르마 소정리는 곱셈 역원을 명시적으로 주는 데에도 쓰인다. $p \nmid a$이면 $a \cdot a^{p-2} = a^{p-1} \equiv 1 \pmod p$이므로, $a$의 법 $p$에 대한 역원은 곧 $a^{p-2}$이다. 이는 [§일차 합동식, ⁋예시 4](/ko/math/number_theory/linear_congruences#ex4){: data-relation="weak" }의 확장 유클리드 알고리즘과는 다른, 거듭제곱만으로 역원을 얻는 길을 열어 준다.
 
 ::: 명제 8 (거듭제곱에 의한 역원)
 $p$가 소수이고 $p \nmid a$이면, $a$의 법 $p$에 대한 곱셈 역원은 $a^{p-2}$이다. 즉 $a^{-1} \equiv a^{p-2} \pmod p$이다.
@@ -138,7 +138,7 @@ $p$가 소수이고 $p \nmid a$이면, $a$의 법 $p$에 대한 곱셈 역원은
 
 $$a \cdot a^{p-2} = a^{p-1} \equiv 1 \pmod p$$
 
-이고, 따라서 $a^{p-2}$가 $a$의 곱셈 역원이다. 역원은 유일하므로 ([§합동식, ⁋명제 8](/ko/math/number_theory/congruences#prop8)) 이것이 $a^{-1}$이다.
+이고, 따라서 $a^{p-2}$가 $a$의 곱셈 역원이다. 역원은 유일하므로 ([§합동식, ⁋명제 8](/ko/math/number_theory/congruences#prop8){: data-relation="required" }) 이것이 $a^{-1}$이다.
 :::
 
 ::: 예시 9 (거듭제곱으로 역원 구하기)
