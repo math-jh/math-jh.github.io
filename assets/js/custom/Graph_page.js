@@ -39,8 +39,9 @@
   }
 
   // required SCC를 한 층으로 축약한 뒤 forward를 순환 없는 소프트 제약으로
-  // 더한다. 가로 층은 오직 의존 그래프의 위상 깊이로 정하고, 카테고리 안에서만
-  // 의미가 있는 weight는 같은 층의 노드를 안정적으로 정렬할 때만 쓴다.
+  // 더한다. weight는 카테고리마다 0, 1, 2…의 연속 순번으로 정규화한 뒤
+  // 초기 층으로 쓴다. 따라서 카테고리 내부 순서는 살리되 101→201 같은 구획
+  // 간격을 전역 거리로 오해하지 않는다.
   function linearPositions(data, viewportWidth, viewportHeight) {
     var nodes = data.nodes, reqAdj = {};
     nodes.forEach(function (n) { reqAdj[n.id] = []; });
@@ -92,9 +93,31 @@
 
     var indeg = comps.map(function () { return 0; });
     adj.forEach(function (nexts) { nexts.forEach(function (v) { indeg[v] += 1; }); });
-    var rank = comps.map(function () { return 0; });
+
+    // raw weight는 카테고리 사이에서 비교할 수 없다. 각 카테고리를 따로 정렬해
+    // 빈 구간을 제거한 순번만 초기 rank로 넘긴다.
+    var categoryNodes = {}, categoryRank = {};
+    nodes.forEach(function (n) {
+      var category = n.category || '';
+      (categoryNodes[category] = categoryNodes[category] || []).push(n);
+    });
+    Object.keys(categoryNodes).forEach(function (category) {
+      categoryNodes[category].sort(function (a, b) {
+        var aw = Number(a.weight), bw = Number(b.weight);
+        var aMissing = a.weight === null || a.weight === undefined || a.weight === '' || !isFinite(aw);
+        var bMissing = b.weight === null || b.weight === undefined || b.weight === '' || !isFinite(bw);
+        return aMissing - bMissing || (aMissing ? 0 : aw - bw) ||
+          a.title.localeCompare(b.title) || a.id.localeCompare(b.id);
+      }).forEach(function (n, i) { categoryRank[n.id] = i; });
+    });
+    var base = comps.map(function (members) {
+      return members.reduce(function (best, id) {
+        return Math.max(best, categoryRank[id] || 0);
+      }, 0);
+    });
+    var rank = base.slice();
     var queue = comps.map(function (_, i) { return i; }).filter(function (i) { return indeg[i] === 0; });
-    queue.sort(function (a, b) { return a - b; });
+    queue.sort(function (a, b) { return base[a] - base[b] || a - b; });
     while (queue.length) {
       var current = queue.shift();
       adj[current].forEach(function (next) {
