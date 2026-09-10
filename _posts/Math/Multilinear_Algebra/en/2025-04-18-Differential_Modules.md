@@ -14,7 +14,7 @@ translated_at: 2026-06-01T19:30:01+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-06-01T19:30:01+00:00
 ---
-Now we define differential modules. For this we need a simple lemma; first consider the second case assumed in [§Differentiation, ⁋Definition 2](/en/math/multilinear_algebra/derivations#def2). That is, we consider a commutative ring $A$, a $\Delta$-graded $A$-algebra $E$, a graded $A$-module $F$, and an $\varepsilon$-derivation $d:E \rightarrow F$.
+Now we define differential modules. For this we need a simple lemma; first consider the second case assumed in [§Differentiation, ⁋Definition 2](/en/math/multilinear_algebra/derivations#def2){: data-relation="required" }. That is, we consider a commutative ring $A$, a $\Delta$-graded $A$-algebra $E$, a graded $A$-module $F$, and an $\varepsilon$-derivation $d:E \rightarrow F$.
 
 ## Functoriality of Derivations
 
@@ -30,10 +30,10 @@ Let $E$ and $F$ be two associative unital graded $A$-algebras, let $M$ be an $(E
 The proof is immediate from the definition of $\rho^\ast$. Meanwhile, in this situation we can also endow $F$ with an $(E,E)$-bimodule structure. It is then natural to ask when $d':F \rightarrow N$ is also (left/right) $E$-linear.
 
 ::: Proposition 2
-Assume the situation of [Proposition 1](#prop1), and let an $\varepsilon$-derivation $d': F \rightarrow N$ be given. Then $d'$ is left (resp. right) $E$-linear if and only if $d'$ vanishes identically on the subalgebra $\rho(E)$ of $F$.
+Assume the situation of [Proposition 1](#prop1){: data-relation="required" }, and let an $\varepsilon$-derivation $d': F \rightarrow N$ be given. Then $d'$ is left (resp. right) $E$-linear if and only if $d'$ vanishes identically on the subalgebra $\rho(E)$ of $F$.
 :::
 
-Now define $\Der_A(F, N)$ to be the set of $A$-derivations from $F$ to $N$. Then the subset of derivations satisfying the condition of [Proposition 2](#prop2) — that is, those that become $E$-linear — coincides with the set of derivations vanishing identically on $\rho(E)$; hence this subset forms an $A$-submodule of $\Der_A(F, N)$. We denote it by $\Der_E(F,N)$.
+Now define $\Der_A(F, N)$ to be the set of $A$-derivations from $F$ to $N$. Then the subset of derivations satisfying the condition of [Proposition 2](#prop2){: data-relation="required" } — that is, those that become $E$-linear — coincides with the set of derivations vanishing identically on $\rho(E)$; hence this subset forms an $A$-submodule of $\Der_A(F, N)$. We denote it by $\Der_E(F,N)$.
 
 Furthermore, let three graded $A$-algebras $E,F,G$ be given, and let graded $A$-algebra homomorphisms $\rho: E \rightarrow F$, $\sigma: F \rightarrow G$ be given. Then for any graded $A$-algebra $H$, for the three $A$-modules
 
@@ -95,11 +95,11 @@ $$(b, t)(b', t') = (bb', bt' + b't)$$
 
 and regard this as an associative $\mathbb{Z}$-algebra. Then via the canonical injection $t\mapsto (0,t)$ we can identify $E$ with a two-sided ideal of the $\mathbb{Z}$-algebra $B\oplus E$, and in this case $E^2=0$.
 
-On the other hand, defining $h_0: A \rightarrow B \oplus E$ by $h_0(a) = (a, d_0(a))$, this is a (unital) ring homomorphism by [Proposition 3](#prop3), and via this $B \oplus E$ becomes an $A$-algebra. Now after giving $B\oplus E$ such an $A$-module structure, consider the function $h_1: M \rightarrow B\oplus E$ defined by $h_1(x) = (x, d_1(x))$. Then by the given conditions the formula
+On the other hand, defining $h_0: A \rightarrow B \oplus E$ by $h_0(a) = (a, d_0(a))$, this is a (unital) ring homomorphism by [Proposition 3](#prop3){: data-relation="required" }, and via this $B \oplus E$ becomes an $A$-algebra. Now after giving $B\oplus E$ such an $A$-module structure, consider the function $h_1: M \rightarrow B\oplus E$ defined by $h_1(x) = (x, d_1(x))$. Then by the given conditions the formula
 
 $$h_1(ax) = h_0(a) h_1(x)$$
 
-holds, so $h_1$ is an $A$-linear map from $M$ to $B\oplus E$. Therefore, using the given assumptions and the universal property of $\T(M)$, $\S(M)$, or $\bigwedge(M)$, we obtain a unique $A$-algebra homomorphism $h:B \rightarrow B\oplus E$ satisfying $h\vert_M=h_1$. Meanwhile, we can easily check that composing $h$ with the augmentation map $B\oplus E \rightarrow B$ yields $\id_B$, so again by [Proposition 3](#prop3) there exists a unique $\varepsilon$-derivation $d:B \rightarrow E$ such that $h(b)=(b,\dd{(b)})$, and from this we obtain the desired result.
+holds, so $h_1$ is an $A$-linear map from $M$ to $B\oplus E$. Therefore, using the given assumptions and the universal property of $\T(M)$, $\S(M)$, or $\bigwedge(M)$, we obtain a unique $A$-algebra homomorphism $h:B \rightarrow B\oplus E$ satisfying $h\vert_M=h_1$. Meanwhile, we can easily check that composing $h$ with the augmentation map $B\oplus E \rightarrow B$ yields $\id_B$, so again by [Proposition 3](#prop3){: data-relation="required" } there exists a unique $\varepsilon$-derivation $d:B \rightarrow E$ such that $h(b)=(b,\dd{(b)})$, and from this we obtain the desired result.
 :::
 
 ## Universal Property
@@ -130,18 +130,18 @@ so the second claim is also immediate.
 From this we now obtain the following universal property.
 
 ::: Proposition 7
-The map $\delta_E$ obtained in [Lemma 6](#lem6) satisfies the following universal property.
+The map $\delta_E$ obtained in [Lemma 6](#lem6){: data-relation="required" } satisfies the following universal property.
 
 > For every $(E,E)$-bimodule $M$ and every $A$-derivation $d: E \rightarrow M$, there exists a unique $(E,E)$-bimodule homomorphism $f: \mathfrak{I} \rightarrow M$ such that $d=f\circ\delta_E$.
 :::
 ::: Proof
-First, by [Proposition 1](#prop1) we know that for every $(E, E)$-bimodule homomorphism $f: \mathfrak{I} \rightarrow M$, the composition $f \circ \delta_E$ is an $A$-derivation from $E$ to $M$.
+First, by [Proposition 1](#prop1){: data-relation="required" } we know that for every $(E, E)$-bimodule homomorphism $f: \mathfrak{I} \rightarrow M$, the composition $f \circ \delta_E$ is an $A$-derivation from $E$ to $M$.
 
 On the other hand, for uniqueness, from the definition of $\delta_E$ we know that we must have
 
 $$f(x \otimes 1 - 1 \otimes x) = \dd{x},$$
 
-and since by [Lemma 6](#lem6) $\mathfrak{I}$ is generated by the image of $\delta_E$, any $f$ satisfying the given condition must be unique if it exists. Moreover, using the calculation from the preceding lemma, we know that for any $\sum x_i \otimes y_i\in \mathfrak{I}$ the formula
+and since by [Lemma 6](#lem6){: data-relation="required" } $\mathfrak{I}$ is generated by the image of $\delta_E$, any $f$ satisfying the given condition must be unique if it exists. Moreover, using the calculation from the preceding lemma, we know that for any $\sum x_i \otimes y_i\in \mathfrak{I}$ the formula
 
 $$f\left( \sum_i x_i \otimes y_i \right) = \sum_i x_i  f(1 \otimes y_i - y_i \otimes 1) = - \sum_i x_i  \dd{y_i}$$
 
@@ -221,7 +221,7 @@ $$D=g\circ d_{\S(M)/A}$$
 
 holds.
 
-Meanwhile, given any $A$-derivation $D:\S(M)\rightarrow L$, we can verify through [Proposition 5](#prop5) that its restriction $D\vert_M$ to $M$ is an $A$-module homomorphism from $M$ to $L$, and that this correspondence $D\mapsto D\vert_M$ is in fact an $\S(M)$-module isomorphism. On the other hand, since $L$ is an $\S(M)$-module, by [\[Algebraic Structures\] §Change of Base Ring, ⁋Proposition 6](/en/math/algebraic_structures/change_of_base_ring#prop6) we have
+Meanwhile, given any $A$-derivation $D:\S(M)\rightarrow L$, we can verify through [Proposition 5](#prop5){: data-relation="required" } that its restriction $D\vert_M$ to $M$ is an $A$-module homomorphism from $M$ to $L$, and that this correspondence $D\mapsto D\vert_M$ is in fact an $\S(M)$-module isomorphism. On the other hand, since $L$ is an $\S(M)$-module, by [\[Algebraic Structures\] §Change of Base Ring, ⁋Proposition 6](/en/math/algebraic_structures/change_of_base_ring#prop6){: data-relation="required" } we have
 
 $$\Hom_{\S(M)}(M\otimes_A\S(M),L)\cong\Hom_A(M,L),$$
 
@@ -256,12 +256,12 @@ making the following diagram commute:
 {% diagram Math/Multilinear_Algebra/Differential_Modules-2.svg width="11.54em" alt="change_of_base_ring-2" %}
 :::
 ::: Proof
-The proof is nothing but an appropriate use of the other universal properties employed in proving [Proposition 8](#prop8).
+The proof is nothing but an appropriate use of the other universal properties employed in proving [Proposition 8](#prop8){: data-relation="required" }.
 :::
 
 From this we see that if we regard $\Omega$ as the correspondence taking an $A$-algebra $A \rightarrow E$ to the module of its differentials $\Omega_A(E)$, then $\Omega$ also possesses functoriality.
 
-On the other hand, since $\Omega_{A'}(E')$ is an $A'$-module, by [\[Algebraic Structures\] §Change of Base Ring, ⁋Proposition 6](/en/math/algebraic_structures/change_of_base_ring#prop6) we obtain from [Proposition 11](#prop11) the following $A'$-linear map:
+On the other hand, since $\Omega_{A'}(E')$ is an $A'$-module, by [\[Algebraic Structures\] §Change of Base Ring, ⁋Proposition 6](/en/math/algebraic_structures/change_of_base_ring#prop6){: data-relation="required" } we obtain from [Proposition 11](#prop11){: data-relation="required" } the following $A'$-linear map:
 
 $$\Omega_0(u):\Omega_A(E)\otimes_E E'\rightarrow\Omega_{A'}(E').$$
 
@@ -271,11 +271,11 @@ Considering the isomorphism
 
 $$\Hom_E(\Omega_A(E), M)\cong\Der_A(E, M)$$
 
-given by the universal property of [Proposition 8](#prop8), we obtain the following commutative diagram:
+given by the universal property of [Proposition 8](#prop8){: data-relation="required" }, we obtain the following commutative diagram:
 
 {% diagram Math/Multilinear_Algebra/Differential_Modules-3.svg width="29.41em" alt="change_of_base_ring-3" %}
 
-Here the right-hand vertical map is the composite of the above isomorphism and the isomorphism of [\[Algebraic Structures\] §Change of Base Ring, ⁋Proposition 6](/en/math/algebraic_structures/change_of_base_ring#prop6),
+Here the right-hand vertical map is the composite of the above isomorphism and the isomorphism of [\[Algebraic Structures\] §Change of Base Ring, ⁋Proposition 6](/en/math/algebraic_structures/change_of_base_ring#prop6){: data-relation="required" },
 
 $$\Hom_{E'}(\Omega_A(E)\otimes_EE', N) \rightarrow \Hom_E(\Omega_A(E), N)\rightarrow\Der_A(E, N),$$
 
@@ -301,7 +301,7 @@ is an isomorphism. That is, the sequence
 
 $$0\rightarrow\Hom_{E'}(\Omega_{E'/A'} , N) \rightarrow \Hom_{E'}(\Omega_{E/A}\otimes_AE',N)\rightarrow 0$$
 
-is exact for any $N$. Now since $\Hom$ is a left exact functor ([§Projective, Injective, and Flat Modules, ⁋Proposition 2](/en/math/multilinear_algebra/various_modules#prop2)), the exactness of the above sequence for all $N$ is equivalent to the exactness of the sequence
+is exact for any $N$. Now since $\Hom$ is a left exact functor ([§Projective, Injective, and Flat Modules, ⁋Proposition 2](/en/math/multilinear_algebra/various_modules#prop2){: data-relation="required" }), the exactness of the above sequence for all $N$ is equivalent to the exactness of the sequence
 
 $$0 \rightarrow\Omega_{E/A}\otimes_EE'\rightarrow\Omega_{E'/A'}\rightarrow 0.$$
 
@@ -336,15 +336,15 @@ $$\Omega_A(E)\otimes_EE'\overset{\Omega_0(u)}{\longrightarrow}\Omega_{E'/A}\over
 is exact.
 :::
 ::: Proof
-Again from the fact that $\Hom$ is a left exact functor ([§Projective, Injective, and Flat Modules, ⁋Proposition 2](/en/math/multilinear_algebra/various_modules#prop2)), it suffices to show that the sequence
+Again from the fact that $\Hom$ is a left exact functor ([§Projective, Injective, and Flat Modules, ⁋Proposition 2](/en/math/multilinear_algebra/various_modules#prop2){: data-relation="required" }), it suffices to show that the sequence
 
 $$0 \rightarrow \Hom_{E'}(\Omega_{E'/E},N) \rightarrow \Hom_{E'}(\Omega_{E'/A}, N) \rightarrow \Hom_{E'}(\Omega_{E/A}\otimes_EE',N)$$
 
-is exact for any $E'$-module $N$. However, using the commutative diagrams employed before and after [Proposition 12](#prop12), we can convert this into the sequence of modules of derivations
+is exact for any $E'$-module $N$. However, using the commutative diagrams employed before and after [Proposition 12](#prop12){: data-relation="required" }, we can convert this into the sequence of modules of derivations
 
 $$0 \rightarrow \Der_E(E', N) \rightarrow \Der_A(E', N) \rightarrow \Der_A(E, N),$$
 
-and we showed immediately after [Proposition 2](#prop2) that this is exact.
+and we showed immediately after [Proposition 2](#prop2){: data-relation="required" } that this is exact.
 :::
 
 Now consider in particular the case where $u:E \rightarrow E'$ is surjective, so that for $\mathfrak{I}=\ker u$ we have an isomorphism $E'\cong E/\mathfrak{I}$. Denote by $d'$ the composition of the restriction of the canonical derivation $d=d_{E/A}$ to $\mathfrak{I}$ with $i_E$:

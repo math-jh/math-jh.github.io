@@ -13,7 +13,7 @@ weight: 15
 
 ---
 
-이제 우리는 differential module을 정의한다. 이를 위해 우리는 간단한 보조정리가 필요한데, 우선 [§미분, ⁋정의 2](/ko/math/multilinear_algebra/derivations#def2) 뒤에서 가정했던 두 번째 경우를 생각하자. 즉 우리는 commutative ring $A$, $\Delta$-graded $A$-algebra $E$, graded $A$-module $F$와 $\varepsilon$-derivation $d:E \rightarrow F$를 생각할 것이다. 
+이제 우리는 differential module을 정의한다. 이를 위해 우리는 간단한 보조정리가 필요한데, 우선 [§미분, ⁋정의 2](/ko/math/multilinear_algebra/derivations#def2){: data-relation="required" } 뒤에서 가정했던 두 번째 경우를 생각하자. 즉 우리는 commutative ring $A$, $\Delta$-graded $A$-algebra $E$, graded $A$-module $F$와 $\varepsilon$-derivation $d:E \rightarrow F$를 생각할 것이다. 
 
 ## 미분의 functoriality
 
@@ -29,10 +29,10 @@ weight: 15
 이에 대한 증명은 $\rho^\ast$의 정의에 의해 자명하다. 한편, 이와 같은 상황에서 우리는 $F$에도 $(E,E)$-bimodule structure를 줄 수 있다. 그렇다면 $d':F \rightarrow N$이 언제 (left/right) $E$-linear이기도 한지를 살펴보는 것이 당연할 것이다. 
 
 ::: 명제 2
-[명제 1](#prop1)의 상황을 가정하고, $\varepsilon$-derivation $d': F \rightarrow N$이 주어졌다 하자. 그럼 $d'$가 left (resp. right) $E$-linear한 것은 $d'$가 $F$의 subalgebra $\rho(E)$에서 항등적으로 $0$인 것과 동치이다. 
+[명제 1](#prop1){: data-relation="required" }의 상황을 가정하고, $\varepsilon$-derivation $d': F \rightarrow N$이 주어졌다 하자. 그럼 $d'$가 left (resp. right) $E$-linear한 것은 $d'$가 $F$의 subalgebra $\rho(E)$에서 항등적으로 $0$인 것과 동치이다. 
 :::
 
-이제 $\Der_A(F, N)$을 $F$에서 $N$으로 가는 $A$-derivation들의 모임으로 정의하자. 그럼 [명제 2](#prop2)의 조건을 만족하여 $E$-linear가 되는 derivation들의 모임은 $\rho(E)$에서 identically zero인 derivation들의 모임과 같으므로 이들 모임은 $\Der_A(F, N)$의 $A$-submodule이 된다. 이를 $\Der_E(F,N)$으로 적자. 
+이제 $\Der_A(F, N)$을 $F$에서 $N$으로 가는 $A$-derivation들의 모임으로 정의하자. 그럼 [명제 2](#prop2){: data-relation="required" }의 조건을 만족하여 $E$-linear가 되는 derivation들의 모임은 $\rho(E)$에서 identically zero인 derivation들의 모임과 같으므로 이들 모임은 $\Der_A(F, N)$의 $A$-submodule이 된다. 이를 $\Der_E(F,N)$으로 적자. 
 
 추가로 세 개의 graded $A$-algebra들 $E,F,G$가 주어졌다 하고, graded $A$-algebra homomorphism들 $\rho: E \rightarrow F$, $\sigma: F \rightarrow G$가 주어졌다 하자. 그럼 임의의 graded $(G,G)$-bimodule $H$에 대하여, 다음의 세 $A$-module
 
@@ -96,11 +96,11 @@ $$(b, t)(b', t') = (bb', bt' + b't)$$
 
 으로 곱셈을 정의하여 이를 associative $\mathbb{Z}$-algebra로 생각하자. 그럼 canonical injection $t\mapsto (0,t)$에 의하여 $E$를 $\mathbb{Z}$-algebra $B\oplus E$의 two-sided ideal과 동일시할 수 있으며 이 때 $E^2=0$이다. 
 
-한편, $h_0: A \rightarrow B \oplus E$를 $h_0(a) = (a, d_0(a))$로 정의하면, 이는 [명제 3](#prop3)에 의해 (unital) ring homomorphism이며 이를 통해 $B \oplus E$는 $A$-algebra가 된다. 이제 $B\oplus E$ 위에 이러한 $A$-module 구조를 준 후 $h_1(x) = (x, d_1(x))$로 정의된 함수 $h_1: M \rightarrow B\oplus E$를 생각하자. 그럼 주어진 조건에 의하여 다음의 식
+한편, $h_0: A \rightarrow B \oplus E$를 $h_0(a) = (a, d_0(a))$로 정의하면, 이는 [명제 3](#prop3){: data-relation="required" }에 의해 (unital) ring homomorphism이며 이를 통해 $B \oplus E$는 $A$-algebra가 된다. 이제 $B\oplus E$ 위에 이러한 $A$-module 구조를 준 후 $h_1(x) = (x, d_1(x))$로 정의된 함수 $h_1: M \rightarrow B\oplus E$를 생각하자. 그럼 주어진 조건에 의하여 다음의 식
 
 $$h_1(ax) = h_0(a) h_1(x)$$
 
-이 성립하므로, $h_1$은 $M$에서 $B\oplus E$로의 $A$-linear map이다. 따라서 우리는 주어진 가정들을 사용하여, $\T(M)$, $\S(M)$ 혹은 $\bigwedge(M)$의 universal property를 사용하여 $h\vert_M=h_1$을 만족하는 유일한 $A$-algebra homomorphism $h:B \rightarrow B\oplus E$를 얻는다. 한편, $h$를 augmentation map $B\oplus E \rightarrow B$와 합성하면 $\id_B$가 되는 것을 쉽게 확인할 수 있으므로, 다시 [명제 3](#prop3)에 의해 $h(b)=(b,\dd{(b)})$이도록 하는 유일한 derivation $d:B \rightarrow E$가 존재하고 이로부터 원하는 결과를 얻는다. 
+이 성립하므로, $h_1$은 $M$에서 $B\oplus E$로의 $A$-linear map이다. 따라서 우리는 주어진 가정들을 사용하여, $\T(M)$, $\S(M)$ 혹은 $\bigwedge(M)$의 universal property를 사용하여 $h\vert_M=h_1$을 만족하는 유일한 $A$-algebra homomorphism $h:B \rightarrow B\oplus E$를 얻는다. 한편, $h$를 augmentation map $B\oplus E \rightarrow B$와 합성하면 $\id_B$가 되는 것을 쉽게 확인할 수 있으므로, 다시 [명제 3](#prop3){: data-relation="required" }에 의해 $h(b)=(b,\dd{(b)})$이도록 하는 유일한 derivation $d:B \rightarrow E$가 존재하고 이로부터 원하는 결과를 얻는다. 
 :::
 
 ## Universal property
@@ -131,18 +131,18 @@ $$\sum_i x_i\otimes y_i=\sum_i \left(x_i(1\otimes y_i)-(x_iy_i)\otimes 1\right)=
 이제 이로부터 다음의 universal property를 얻는다. 
 
 ::: 명제 7
-[보조정리 6](#lem6)에서 얻어진 $\delta_E$는 다음의 universal property을 만족한다. 
+[보조정리 6](#lem6){: data-relation="required" }에서 얻어진 $\delta_E$는 다음의 universal property을 만족한다. 
 
 > 모든 $(E,E)$-bimodule $M$과 모든 $A$-derivation $d: E \rightarrow M$에 대하여, 유일한 $(E,E)$-bimodule homomorphism $f: \mathfrak{I} \rightarrow M$가 존재하여 $d=f\circ\delta_E$이도록 할 수 있다. 
 :::
 ::: 증명
-우선 [명제 1](#prop1)에 의하여 모든 $(E, E)$-bimodule homomorphism $f: \mathfrak{I} \rightarrow M$에 대해 $f \circ \delta_E$는 $E$에서 $M$으로 가는 $A$-derivation이라는 것을 안다.
+우선 [명제 1](#prop1){: data-relation="required" }에 의하여 모든 $(E, E)$-bimodule homomorphism $f: \mathfrak{I} \rightarrow M$에 대해 $f \circ \delta_E$는 $E$에서 $M$으로 가는 $A$-derivation이라는 것을 안다.
 
 한편, 유일성의 경우 $\delta_E$의 정의로부터
 
 $$f(x \otimes 1 - 1 \otimes x) = \dd{x}$$
 
-여야 함을 알고 있고, [보조정리 6](#lem6)에 의하여 $\mathfrak{I}$는 $\delta_E$의 image에 의하여 유일하게 생성되므로 주어진 조건을 만족하는 $f$는 존재한다면 유일해야 한다. 추가적으로 앞선 보조정리에서의 계산을 활용하면 임의의 $\sum x_i \otimes y_i\in \mathfrak{I}$에 대하여 다음의 식
+여야 함을 알고 있고, [보조정리 6](#lem6){: data-relation="required" }에 의하여 $\mathfrak{I}$는 $\delta_E$의 image에 의하여 유일하게 생성되므로 주어진 조건을 만족하는 $f$는 존재한다면 유일해야 한다. 추가적으로 앞선 보조정리에서의 계산을 활용하면 임의의 $\sum x_i \otimes y_i\in \mathfrak{I}$에 대하여 다음의 식
 
 $$f\left( \sum_i x_i \otimes y_i \right) = \sum_i x_i  f(1 \otimes y_i - y_i \otimes 1) = - \sum_i x_i  \dd{y_i}$$
 
@@ -228,7 +228,7 @@ $$D=g\circ d_{\S(M)/A}$$
 
 이 성립하도록 하는 $\S(M)$-linear map $g:\Omega_{\S(M)/A}\rightarrow N$이 유일하게 존재한다. 
 
-한편, 우리는 임의의 $A$-derivation $D:\S(M)\rightarrow L$이 주어졌을 때, 이를 $M$으로 제한한 $D\vert_M$이 $M$에서 $L$로의 $A$-module homomorphism이며, 이 대응 $D\mapsto D\vert_M$이 실은 $\S(M)$-module isomorphism이라는 것을 [명제 5](#prop5)를 통해 확인할 수 있다. 한편 $L$은 $\S(M)$-module이므로 [\[대수적 구조\] §스칼라의 변환, ⁋명제 6](/ko/math/algebraic_structures/change_of_base_ring#prop6)에 의하여 
+한편, 우리는 임의의 $A$-derivation $D:\S(M)\rightarrow L$이 주어졌을 때, 이를 $M$으로 제한한 $D\vert_M$이 $M$에서 $L$로의 $A$-module homomorphism이며, 이 대응 $D\mapsto D\vert_M$이 실은 $\S(M)$-module isomorphism이라는 것을 [명제 5](#prop5){: data-relation="required" }를 통해 확인할 수 있다. 한편 $L$은 $\S(M)$-module이므로 [\[대수적 구조\] §스칼라의 변환, ⁋명제 6](/ko/math/algebraic_structures/change_of_base_ring#prop6){: data-relation="required" }에 의하여 
 
 $$\Hom_{\S(M)}(M\otimes_A\S(M),L)\cong\Hom_A(M,L)$$
 
@@ -265,18 +265,18 @@ $$\nu: \Omega_{E/A} \rightarrow \Omega_{E'/A'}$$
 가 존재한다.
 :::
 ::: 증명
-이에 대한 증명은 [명제 8](#prop8)을 증명할 때 쓰였던 다른 universal property들을 적절히 이용한 것에 불과하다.
+이에 대한 증명은 [명제 8](#prop8){: data-relation="required" }을 증명할 때 쓰였던 다른 universal property들을 적절히 이용한 것에 불과하다.
 :::
 
 이로부터 $\Omega$를 $A$-algebra $A \rightarrow E$를 받아 그 differential들의 module $\Omega_A(E)$를 내놓는 대응으로 본다면, $\Omega$는 functoriality 또한 갖는다는 것을 안다. 
 
-한편 $\Omega_{A'}(E')$는 $A'$-module이므로, [\[대수적 구조\] §스칼라의 변환, ⁋명제 6](/ko/math/algebraic_structures/change_of_base_ring#prop6)에 의하여 우리는 [명제 11](#prop11)로부터 다음의 $A'$-linear map
+한편 $\Omega_{A'}(E')$는 $A'$-module이므로, [\[대수적 구조\] §스칼라의 변환, ⁋명제 6](/ko/math/algebraic_structures/change_of_base_ring#prop6){: data-relation="required" }에 의하여 우리는 [명제 11](#prop11){: data-relation="required" }로부터 다음의 $A'$-linear map
 
 $$\Omega_0(u):\Omega_A(E)\otimes_E E'\rightarrow\Omega_{A'}(E')$$
 
 를 얻으며, $i_E$를 canonical morphism $\Omega_A(E)\rightarrow \Omega_A(E)\otimes_EE'$라 하면 $\Omega(u)=\Omega_0(u)\circ i_E$임을 안다. 
 
-한편 [명제 8](#prop8)의 universal property가 주는 다음의 isomorphism
+한편 [명제 8](#prop8){: data-relation="required" }의 universal property가 주는 다음의 isomorphism
 
 $$\Hom_E(\Omega_A(E), M)\cong\Der_A(E, M)$$
 
@@ -284,7 +284,7 @@ $$\Hom_E(\Omega_A(E), M)\cong\Der_A(E, M)$$
 
 {% diagram Math/Multilinear_Algebra/Differential_Modules-3.svg width="29.41em" alt="change_of_base_ring-3" %}
 
-을 얻는다. 여기서 오른쪽의 수직방향 함수는 위의 isomorphism과 [\[대수적 구조\] §스칼라의 변환, ⁋명제 6](/ko/math/algebraic_structures/change_of_base_ring#prop6)의 isomorphism을 합친
+을 얻는다. 여기서 오른쪽의 수직방향 함수는 위의 isomorphism과 [\[대수적 구조\] §스칼라의 변환, ⁋명제 6](/ko/math/algebraic_structures/change_of_base_ring#prop6){: data-relation="required" }의 isomorphism을 합친
 
 $$\Hom_{E'}(\Omega_A(E)\otimes_EE', N) \rightarrow \Hom_E(\Omega_A(E), N)\rightarrow\Der_A(E, N)$$
 
@@ -310,7 +310,7 @@ $$\Hom_{E'}(\Omega_{E'/A'} , N) \rightarrow \Hom_{E'}(\Omega_{E/A}\otimes_EE',N)
 
 $$0\rightarrow\Hom_{E'}(\Omega_{E'/A'} , N) \rightarrow \Hom_{E'}(\Omega_{E/A}\otimes_EE',N)\rightarrow 0$$
 
-가 임의의 $N$에 대하여 exact이다. 이제 $\Hom$이 left exact functor이므로 ([§사영가군, 단사가군, 평탄가군, ⁋명제 2](/ko/math/multilinear_algebra/various_modules#prop2)) 위의 sequence가 모든 $N$에 대해 exact라는 것은 다음의 sequence
+가 임의의 $N$에 대하여 exact이다. 이제 $\Hom$이 left exact functor이므로 ([§사영가군, 단사가군, 평탄가군, ⁋명제 2](/ko/math/multilinear_algebra/various_modules#prop2){: data-relation="required" }) 위의 sequence가 모든 $N$에 대해 exact라는 것은 다음의 sequence
 
 $$0 \rightarrow\Omega_{E/A}\otimes_EE'\rightarrow\Omega_{E'/A'}\rightarrow 0$$
 
@@ -347,15 +347,15 @@ $$\Omega_A(E)\otimes_EE'\overset{\Omega_0(u)}{\longrightarrow}\Omega_{E'/A}\over
 가 exact이다. 
 :::
 ::: 증명
-다시 $\Hom$이 left exact functor라는 사실로부터 ([§사영가군, 단사가군, 평탄가군, ⁋명제 2](/ko/math/multilinear_algebra/various_modules#prop2)) 다음의 sequence
+다시 $\Hom$이 left exact functor라는 사실로부터 ([§사영가군, 단사가군, 평탄가군, ⁋명제 2](/ko/math/multilinear_algebra/various_modules#prop2){: data-relation="required" }) 다음의 sequence
 
 $$0 \rightarrow \Hom_{E'}(\Omega_{E'/E},N) \rightarrow \Hom_{E'}(\Omega_{E'/A}, N) \rightarrow \Hom_{E'}(\Omega_{E/A}\otimes_EE',N)$$
 
-가 임의의 $E'$-module $N$에 대하여 exact라는 것을 보이면 충분하다. 그런데 [명제 12](#prop12) 이전과 이후에 사용한 commutative diagram을 이용하면, 이를 derivation들의 module들의 sequence
+가 임의의 $E'$-module $N$에 대하여 exact라는 것을 보이면 충분하다. 그런데 [명제 12](#prop12){: data-relation="required" } 이전과 이후에 사용한 commutative diagram을 이용하면, 이를 derivation들의 module들의 sequence
 
 $$0 \rightarrow \Der_E(E', N) \rightarrow \Der_A(E', N) \rightarrow \Der_A(E, N)$$
 
-으로 바꿀 수 있으며, 이것이 exact라는 것은 [명제 2](#prop2) 직후에 보였다. 
+으로 바꿀 수 있으며, 이것이 exact라는 것은 [명제 2](#prop2){: data-relation="required" } 직후에 보였다. 
 :::
 
 이번에는 특히 $u:E \rightarrow E'$가 surjective이고, 따라서 $\mathfrak{I}=\ker u$에 대하여 isomorphism $E'\cong E/\mathfrak{I}$인 경우를 생각하자. 그럼 canonical derivation $d=d_{E/A}$의 $\mathfrak{I}$로의 restriction
