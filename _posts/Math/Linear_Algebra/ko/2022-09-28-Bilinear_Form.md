@@ -52,7 +52,7 @@ $$\langle v,w\rangle=-\langle w,v\rangle$$
 
 ## 비퇴화 쌍선형형식
 
-유한차원 $\mathbb{K}$-벡터공간 $V$가 주어졌다 하고, 앞서 언급한 canonical pairing $\langle-,-\rangle:V\times V^\ast\rightarrow \mathbb{K}$을 생각하자. 만일 $V$ 위에 non-degenerate pairing $\langle -,-\rangle:V\times V\rightarrow \mathbb{K}$가 주어졌다면, 우리는 [§쌍대공간, ⁋명제 4](/ko/math/linear_algebra/dual_space#prop4)와 $\dim V=\dim V^\ast$로부터 $\langle -,-\rangle$이 isomorphism 
+유한차원 $\mathbb{K}$-벡터공간 $V$가 주어졌다 하고, 앞서 언급한 canonical pairing $\langle-,-\rangle:V\times V^\ast\rightarrow \mathbb{K}$을 생각하자. 만일 $V$ 위에 non-degenerate pairing $\langle -,-\rangle:V\times V\rightarrow \mathbb{K}$가 주어졌다면, 우리는 [§쌍대공간, ⁋명제 4](/ko/math/linear_algebra/dual_space#prop4){: data-relation="required" }와 $\dim V=\dim V^\ast$로부터 $\langle -,-\rangle$이 isomorphism 
 
 $$V\rightarrow V^\ast;\qquad v\mapsto \langle -,v\rangle\tag{1}$$
 
@@ -78,7 +78,7 @@ $$S^\perp=\bigcap_{v\in S}v^\perp$$
 을 $S$의 orthogonal complement로 정의한다.
 :::
 
-벡터 $w\in V$는 [따름정리 3](#cor3)에 의해 $f\in V^\ast$를 유일하게 지정하는데, 위의 정의는 만일 이렇게 얻어진 $f$가 [§쌍대공간, ⁋정의 7](/ko/math/linear_algebra/dual_space#def7)의 의미에서 $v$의 orthogonal complement에 속한다면, $w$를 $v$에 직교하는 것으로 생각하고, 이러한 $w$들을 모아둔 것을 orthogonal complement로 생각하겠다는 의미이다. 이러한 과정을 통해 [§쌍대공간](/ko/math/linear_algebra/dual_space)의 결과들을 모두 $V$로 가져올 수 있다. 남은 글에서 우리는 이 과정을 자세히 살펴본다.
+벡터 $w\in V$는 [따름정리 3](#cor3){: data-relation="required" }에 의해 $f\in V^\ast$를 유일하게 지정하는데, 위의 정의는 만일 이렇게 얻어진 $f$가 [§쌍대공간, ⁋정의 7](/ko/math/linear_algebra/dual_space#def7){: data-relation="required" }의 의미에서 $v$의 orthogonal complement에 속한다면, $w$를 $v$에 직교하는 것으로 생각하고, 이러한 $w$들을 모아둔 것을 orthogonal complement로 생각하겠다는 의미이다. 이러한 과정을 통해 [§쌍대공간](/ko/math/linear_algebra/dual_space){: data-relation="required" }의 결과들을 모두 $V$로 가져올 수 있다. 남은 글에서 우리는 이 과정을 자세히 살펴본다.
 
 일반적인 bilinear form에서는 $\langle w,v\rangle=0$으로 정의한 $v^\perp$과 $\langle v,w\rangle=0$으로 정의한 것이 서로 다를 수 있어, $W^\perp$이 왼쪽에서 정의되었는지, 오른쪽에서 정의되었는지에 따라 그 정의가 달라질 수 있다. 이와 같은 현상을 피하기 위해서는 다음과 같은 성질을 생각하는 것이 현명하다. 
 
@@ -146,17 +146,17 @@ Non-degenerate reflexive bilinear form이 주어진 유한차원 $\mathbb{K}$-�
 3. $W$가 non-degenerate인 것, $W^\perp$가 non-degenerate인 것, 그리고 $V=W\oplus W^\perp$인 것은 서로 동치이다.
 :::
 ::: 증명
-Inclusion map $W\hookrightarrow V$의 dual인 restriction $V^\ast\rightarrow W^\ast$은 전사이다. ([§쌍대공간, ⁋명제 6](/ko/math/linear_algebra/dual_space#prop6)) 한편 $\langle-,-\rangle$이 non-degenerate이므로, $v\mapsto\langle v,-\rangle$은 단사이고 차원이 같아 isomorphism $V\rightarrow V^\ast$을 정의한다. 따라서 이를 위 restriction과 합성한 
+Inclusion map $W\hookrightarrow V$의 dual인 restriction $V^\ast\rightarrow W^\ast$은 전사이다. ([§쌍대공간, ⁋명제 6](/ko/math/linear_algebra/dual_space#prop6){: data-relation="required" }) 한편 $\langle-,-\rangle$이 non-degenerate이므로, $v\mapsto\langle v,-\rangle$은 단사이고 차원이 같아 isomorphism $V\rightarrow V^\ast$을 정의한다. 따라서 이를 위 restriction과 합성한 
 
 $$V\rightarrow W^\ast;\qquad v\mapsto\langle v,-\rangle\vert_W$$
 
-또한 전사이고 그 kernel은 정의에 의하여 $W^\perp$이다. 따라서 [§동형사상, ⁋정리 7](/ko/math/linear_algebra/isomorphic_vector_spaces#thm7)에 의하여 $\dim W^\perp=\dim V-\dim W^\ast=\dim V-\dim W$이므로 첫째 등호가 성립한다. 둘째 주장은 reflexivity에 의해 $W\subseteq(W^\perp)^\perp$이고, 따라서 첫째 등식을 두 번 적용하면 
+또한 전사이고 그 kernel은 정의에 의하여 $W^\perp$이다. 따라서 [§동형사상, ⁋정리 7](/ko/math/linear_algebra/isomorphic_vector_spaces#thm7){: data-relation="required" }에 의하여 $\dim W^\perp=\dim V-\dim W^\ast=\dim V-\dim W$이므로 첫째 등호가 성립한다. 둘째 주장은 reflexivity에 의해 $W\subseteq(W^\perp)^\perp$이고, 따라서 첫째 등식을 두 번 적용하면 
 
 $$\dim(W^\perp)^\perp=\dim V-\dim W^\perp=\dim W$$
 
 이므로 두 공간이 일치한다.
 
-마지막으로 [§벡터공간의 차원, ⁋예시 8](/ko/math/linear_algebra/dimension#ex8)과 1번을 결합하면
+마지막으로 [§벡터공간의 차원, ⁋예시 8](/ko/math/linear_algebra/dimension#ex8){: data-relation="required" }과 1번을 결합하면
 
 $$\dim(W+W^\perp)=\dim W+\dim W^\perp-\dim(W\cap W^\perp)=\dim V-\dim(W\cap W^\perp)$$
 
@@ -166,17 +166,17 @@ $$\dim(W+W^\perp)=\dim W+\dim W^\perp-\dim(W\cap W^\perp)=\dim V-\dim(W\cap W^\p
 위의 조건을 만족하는 non-degenerate 부분공간에 대해서는 이렇게 정의된 orthogonal complement가 quotient space와 canonical하게 isomorphic하다. 
 
 ::: 명제 9
-Non-degenerate reflexive bilinear form이 주어진 유한차원 $\mathbb{K}$-벡터공간 $V$의 non-degenerate 부분공간 $W\leq V$에 대하여, [§몫공간, ⁋정의 3](/ko/math/linear_algebra/quotient_space#def3)의 natural projection $p:V\rightarrow V/W$을 $W^\perp$로 제한한
+Non-degenerate reflexive bilinear form이 주어진 유한차원 $\mathbb{K}$-벡터공간 $V$의 non-degenerate 부분공간 $W\leq V$에 대하여, [§몫공간, ⁋정의 3](/ko/math/linear_algebra/quotient_space#def3){: data-relation="required" }의 natural projection $p:V\rightarrow V/W$을 $W^\perp$로 제한한
 
 $$p\vert_{W^\perp}:W^\perp\rightarrow V/W$$
 
 은 isomorphism이다.
 :::
 ::: 증명
-$W$가 non-degenerate이므로 [명제 8](#prop8)에 의하여 $V=W\oplus W^\perp$이다. Natural projection은 $\ker p=W$를 만족하므로 $p\vert_{W^\perp}$의 kernel은 $W^\perp\cap W=\{0\}$이라 단사이고, $V=W+W^\perp$이므로 임의의 $v=w+w'$ ($w\in W$, $w'\in W^\perp$)에 대하여 $p(w')=w'+W=v+W$이라 전사이다. 따라서 $p\vert_{W^\perp}$은 isomorphism이다.
+$W$가 non-degenerate이므로 [명제 8](#prop8){: data-relation="required" }에 의하여 $V=W\oplus W^\perp$이다. Natural projection은 $\ker p=W$를 만족하므로 $p\vert_{W^\perp}$의 kernel은 $W^\perp\cap W=\{0\}$이라 단사이고, $V=W+W^\perp$이므로 임의의 $v=w+w'$ ($w\in W$, $w'\in W^\perp$)에 대하여 $p(w')=w'+W=v+W$이라 전사이다. 따라서 $p\vert_{W^\perp}$은 isomorphism이다.
 :::
 
-곧 direct sum $V=W\oplus W^\perp$에서 $W$를 접어 없애면 $W^\perp$이 정확히 그 quotient $V/W$을 실현하게 된다. 일반적으로 quotient space $V/W$는 $\langle-,-\rangle$ 없이도 정의되는 표준적인 대상인 반면, 이를 $V$ 안에서 실현한 대상인 $W^\perp$은 form에 의존하게 되며 [명제 8](#prop8)의 non-degeneracy 없이는 이러한 표현이 불가능하다. 가령 $W\neq\{0\}$이 isotropic이면 $W\cap W^\perp\neq\{0\}$이라 $p\vert_{W^\perp}$이 단사가 되지 못한다.
+곧 direct sum $V=W\oplus W^\perp$에서 $W$를 접어 없애면 $W^\perp$이 정확히 그 quotient $V/W$을 실현하게 된다. 일반적으로 quotient space $V/W$는 $\langle-,-\rangle$ 없이도 정의되는 표준적인 대상인 반면, 이를 $V$ 안에서 실현한 대상인 $W^\perp$은 form에 의존하게 되며 [명제 8](#prop8){: data-relation="required" }의 non-degeneracy 없이는 이러한 표현이 불가능하다. 가령 $W\neq\{0\}$이 isotropic이면 $W\cap W^\perp\neq\{0\}$이라 $p\vert_{W^\perp}$이 단사가 되지 못한다.
 
 ## 네 개의 기본공간들
 
@@ -218,7 +218,7 @@ $$\langle Lv,w\rangle=(\varphi^{-1}_W(w))(Lv)=(\varphi^{-1}_W(w)\circ L)(v)=(L^\
 
 으로부터 확인할 수 있다. 이러한 식을 만족하는 $L'$을 우리는 linear map $L$의 *adjoint*라 부르고, 약간의 abuse of notation을 통해 $L^\ast$으로 적기도 한다. 
 
-[§쌍대공간, §§직교여공간](/ko/math/linear_algebra/dual_space#직교여공간)의 결과들은 모두 canonical pairing에 대한 식 $(Lv,f)=(v,L^\ast f)$로부터 얻어졌다. 따라서, 이를 위에서 얻은 non-degenerate bilinear form $\langle -,-\rangle$들에 대한 식 (2)로 대체하면 다음 결과들을 얻는다.
+[§쌍대공간, §§직교여공간](/ko/math/linear_algebra/dual_space#직교여공간){: data-relation="required" }의 결과들은 모두 canonical pairing에 대한 식 $(Lv,f)=(v,L^\ast f)$로부터 얻어졌다. 따라서, 이를 위에서 얻은 non-degenerate bilinear form $\langle -,-\rangle$들에 대한 식 (2)로 대체하면 다음 결과들을 얻는다.
 
 ::: 명제 10
 Symmetric non-degenerate bilinear form들이 주어진 두 유한차원 $\mathbb{K}$-벡터공간 $V,W$, linear map $L:V\rightarrow W$와 그 adjoint $L^\ast:W\rightarrow V$가 주어졌다 하자. 그럼
@@ -233,7 +233,7 @@ Symmetric non-degenerate bilinear form들이 주어진 두 유한차원 $\mathbb
 
 $$\ker L, \quad(\ker L)^\perp, \quad\im L,\quad(\im L)^\perp$$
 
-를 $L$에 의해 결정되는 *네 개의 기본공간들<sub>four fundamental subspaces</sub>*이라 부르기도 한다. $\ker L$과 $\im L$이 [정의 7](#def7)의 뜻에서 non-degenerate이면 [명제 8](#prop8)에 의하여 이들은
+를 $L$에 의해 결정되는 *네 개의 기본공간들<sub>four fundamental subspaces</sub>*이라 부르기도 한다. $\ker L$과 $\im L$이 [정의 7](#def7){: data-relation="required" }의 뜻에서 non-degenerate이면 [명제 8](#prop8){: data-relation="required" }에 의하여 이들은
 
 $$V=\ker L\oplus(\ker L)^\perp,\qquad W=\im L\oplus(\im L)^\perp$$
 
@@ -275,7 +275,7 @@ $$2\langle u,v\rangle=\langle u+v,u+v\rangle-\langle u,u\rangle-\langle v,v\rang
 
 원래의 명제는 $V$의 차원에 대한 귀납법으로 증명한다. $\dim V=0$인 경우는 증명할 것이 없다. 이제 $\dim V=k$인 경우 증명이 완료되었다 가정하자. 그럼 $\dim V=k+1$를 만족하는 임의의 벡터공간 $V$에 대하여, $\langle w,w\rangle\neq 0$을 만족하는 벡터 $w$가 존재한다. 
 
-이제 $W=\span w$라 하자. $\langle w,w\rangle\neq 0$이므로 $w\notin W^\perp$이고, $W$가 $1$차원이라 $W\cap W^\perp=\{0\}$, 곧 $W$는 [정의 7](#def7)의 뜻에서 non-degenerate이다. 따라서 [명제 8](#prop8)에 의하여 $V=W\oplus W^\perp$이고 $W^\perp$ 또한 non-degenerate이며 $\dim W^\perp=\dim V-1=k$이다. 귀납가정을 non-degenerate form을 갖춘 $k$차원 공간 $W^\perp$에 적용하면 orthogonal basis $\mathcal{B}$가 존재하고, $W=\span w$가 $W^\perp$과 직교하므로 $\mathcal{B}\cup\{w\}$가 $V$의 orthogonal basis이다.
+이제 $W=\span w$라 하자. $\langle w,w\rangle\neq 0$이므로 $w\notin W^\perp$이고, $W$가 $1$차원이라 $W\cap W^\perp=\{0\}$, 곧 $W$는 [정의 7](#def7){: data-relation="required" }의 뜻에서 non-degenerate이다. 따라서 [명제 8](#prop8){: data-relation="required" }에 의하여 $V=W\oplus W^\perp$이고 $W^\perp$ 또한 non-degenerate이며 $\dim W^\perp=\dim V-1=k$이다. 귀납가정을 non-degenerate form을 갖춘 $k$차원 공간 $W^\perp$에 적용하면 orthogonal basis $\mathcal{B}$가 존재하고, $W=\span w$가 $W^\perp$과 직교하므로 $\mathcal{B}\cup\{w\}$가 $V$의 orthogonal basis이다.
 :::
 
 ## Gram matrix

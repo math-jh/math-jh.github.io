@@ -52,7 +52,7 @@ holds for all $v,w\in V$, we say this form is *alternating*.
 
 ## Non-degenerate Bilinear Forms
 
-Let $V$ be a finite-dimensional $\mathbb{K}$-vector space, and consider the canonical pairing $\langle-,-\rangle:V\times V^\ast\rightarrow \mathbb{K}$ mentioned above. If a non-degenerate pairing $\langle -,-\rangle:V\times V\rightarrow \mathbb{K}$ on $V$ is given, then by [§Dual Space, ⁋Corollary 5](/en/math/linear_algebra/dual_space#cor5) we know that $\langle -,-\rangle$ defines an isomorphism
+Let $V$ be a finite-dimensional $\mathbb{K}$-vector space, and consider the canonical pairing $\langle-,-\rangle:V\times V^\ast\rightarrow \mathbb{K}$ mentioned above. If a non-degenerate pairing $\langle -,-\rangle:V\times V\rightarrow \mathbb{K}$ on $V$ is given, then by [§Dual Space, ⁋Corollary 5](/en/math/linear_algebra/dual_space#cor5){: data-relation="required" } we know that $\langle -,-\rangle$ defines an isomorphism
 
 $$V\rightarrow V^\ast;\qquad v\mapsto \langle -,v\rangle\tag{1}$$
 
@@ -76,7 +76,7 @@ $$S^\perp=\bigcap_{v\in S}v^\perp$$
 as the orthogonal complement of $S$.
 :::
 
-By [Corollary 3](#cor3), a vector $w\in V$ uniquely determines $f\in V^\ast$, and the above definition means that if the $f$ obtained in this way is the orthogonal complement of $v$ in the sense of [§Dual Space, ⁋Definition 7](/en/math/linear_algebra/dual_space#def7), then we think of $w$ as being orthogonal to $v$, and collect all such $w$ to form the orthogonal complement. Through this process, all results from [§Dual Space](/en/math/linear_algebra/dual_space) can be brought into $V$. In the remainder of this post, we examine this process in detail.
+By [Corollary 3](#cor3){: data-relation="required" }, a vector $w\in V$ uniquely determines $f\in V^\ast$, and the above definition means that if the $f$ obtained in this way is the orthogonal complement of $v$ in the sense of [§Dual Space, ⁋Definition 7](/en/math/linear_algebra/dual_space#def7){: data-relation="required" }, then we think of $w$ as being orthogonal to $v$, and collect all such $w$ to form the orthogonal complement. Through this process, all results from [§Dual Space](/en/math/linear_algebra/dual_space){: data-relation="required" } can be brought into $V$. In the remainder of this post, we examine this process in detail.
 
 For a general bilinear form, the $v^\perp$ defined by $\langle w,v\rangle=0$ and the one defined by $\langle v,w\rangle=0$ may differ, so the definition of $W^\perp$ may vary depending on whether it is defined from the left or from the right. To avoid this phenomenon, it is wise to consider the following property.
 
@@ -144,17 +144,17 @@ For any subspace $W\leq V$ of a finite-dimensional $\mathbb{K}$-vector space $V$
 3. The conditions that $W$ is non-degenerate, that $W^\perp$ is non-degenerate, and that $V=W\oplus W^\perp$ are all equivalent.
 :::
 ::: Proof
-The restriction $V^\ast\rightarrow W^\ast$, which is the dual of the inclusion map $W\hookrightarrow V$, is surjective. ([§Dual Space, ⁋Proposition 6](/en/math/linear_algebra/dual_space#prop6)) On the other hand, since $\langle-,-\rangle$ is non-degenerate, $v\mapsto\langle v,-\rangle$ is injective and has the same dimension, so it defines an isomorphism $V\rightarrow V^\ast$. Therefore, the composition of this with the above restriction
+The restriction $V^\ast\rightarrow W^\ast$, which is the dual of the inclusion map $W\hookrightarrow V$, is surjective. ([§Dual Space, ⁋Proposition 6](/en/math/linear_algebra/dual_space#prop6){: data-relation="required" }) On the other hand, since $\langle-,-\rangle$ is non-degenerate, $v\mapsto\langle v,-\rangle$ is injective and has the same dimension, so it defines an isomorphism $V\rightarrow V^\ast$. Therefore, the composition of this with the above restriction
 
 $$V\rightarrow W^\ast;\qquad v\mapsto\langle v,-\rangle\vert_W$$
 
-is also surjective, and its kernel is $W^\perp$ by definition. Thus by [§Isomorphisms, ⁋Theorem 7](/en/math/linear_algebra/isomorphic_vector_spaces#thm7), we have $\dim W^\perp=\dim V-\dim W^\ast=\dim V-\dim W$, so the first equality holds. The second claim follows from reflexivity giving $W\subseteq(W^\perp)^\perp$, and thus applying the first equality twice gives
+is also surjective, and its kernel is $W^\perp$ by definition. Thus by [§Isomorphisms, ⁋Theorem 7](/en/math/linear_algebra/isomorphic_vector_spaces#thm7){: data-relation="required" }, we have $\dim W^\perp=\dim V-\dim W^\ast=\dim V-\dim W$, so the first equality holds. The second claim follows from reflexivity giving $W\subseteq(W^\perp)^\perp$, and thus applying the first equality twice gives
 
 $$\dim(W^\perp)^\perp=\dim V-\dim W^\perp=\dim W$$
 
 so the two spaces coincide, which is obvious.
 
-Finally, combining [§Dimension of Vector Spaces, ⁋Example 8](/en/math/linear_algebra/dimension#ex8) with 1,
+Finally, combining [§Dimension of Vector Spaces, ⁋Example 8](/en/math/linear_algebra/dimension#ex8){: data-relation="required" } with 1,
 
 $$\dim(W+W^\perp)=\dim W+\dim W^\perp-\dim(W\cap W^\perp)=\dim V-\dim(W\cap W^\perp)$$
 
@@ -164,17 +164,17 @@ Thus the radical $W\cap W^\perp$ of $W$ being $\{0\}$ is equivalent to $W+W^\per
 For non-degenerate subspaces satisfying the above condition, the orthogonal complement defined in this way is canonically isomorphic to the quotient space.
 
 ::: Proposition 9
-For a non-degenerate subspace $W\leq V$ of a finite-dimensional $\mathbb{K}$-vector space $V$ with a non-degenerate reflexive bilinear form given, the restriction of the natural projection $p:V\rightarrow V/W$ ([§Quotient Spaces, ⁋Definition 3](/en/math/linear_algebra/quotient_space#def3)) to $W^\perp$
+For a non-degenerate subspace $W\leq V$ of a finite-dimensional $\mathbb{K}$-vector space $V$ with a non-degenerate reflexive bilinear form given, the restriction of the natural projection $p:V\rightarrow V/W$ ([§Quotient Spaces, ⁋Definition 3](/en/math/linear_algebra/quotient_space#def3){: data-relation="required" }) to $W^\perp$
 
 $$p\vert_{W^\perp}:W^\perp\rightarrow V/W$$
 
 is an isomorphism.
 :::
 ::: Proof
-Since $W$ is non-degenerate, by [Proposition 8](#prop8) we have $V=W\oplus W^\perp$. The natural projection satisfies $\ker p=W$, so the kernel of $p\vert_{W^\perp}$ is $W^\perp\cap W=\{0\}$, hence it is injective; and since $V=W+W^\perp$, for any $v=w+w'$ ($w\in W$, $w'\in W^\perp$) we have $p(w')=w'+W=v+W$, so it is surjective. Therefore $p\vert_{W^\perp}$ is an isomorphism.
+Since $W$ is non-degenerate, by [Proposition 8](#prop8){: data-relation="required" } we have $V=W\oplus W^\perp$. The natural projection satisfies $\ker p=W$, so the kernel of $p\vert_{W^\perp}$ is $W^\perp\cap W=\{0\}$, hence it is injective; and since $V=W+W^\perp$, for any $v=w+w'$ ($w\in W$, $w'\in W^\perp$) we have $p(w')=w'+W=v+W$, so it is surjective. Therefore $p\vert_{W^\perp}$ is an isomorphism.
 :::
 
-Thus, from the direct sum $V=W\oplus W^\perp$, if we fold away $W$, then $W^\perp$ exactly realizes the quotient $V/W$. In general, the quotient space $V/W$ is a canonical object defined even without $\langle-,-\rangle$, whereas $W^\perp$, which realizes it inside $V$, depends on the form, and without the non-degeneracy of [Proposition 8](#prop8) such an expression is impossible. For example, if $W$ is isotropic, then $W\cap W^\perp\neq\{0\}$, so $p\vert_{W^\perp}$ cannot be injective.
+Thus, from the direct sum $V=W\oplus W^\perp$, if we fold away $W$, then $W^\perp$ exactly realizes the quotient $V/W$. In general, the quotient space $V/W$ is a canonical object defined even without $\langle-,-\rangle$, whereas $W^\perp$, which realizes it inside $V$, depends on the form, and without the non-degeneracy of [Proposition 8](#prop8){: data-relation="required" } such an expression is impossible. For example, if $W$ is isotropic, then $W\cap W^\perp\neq\{0\}$, so $p\vert_{W^\perp}$ cannot be injective.
 
 ## The Four Fundamental Subspaces
 
@@ -214,7 +214,7 @@ $$\langle Lv,w\rangle=(\varphi^{-1}(w))(Lv)=(\varphi^{-1}_W(w)\circ L)(v)=(L^\as
 
 We call such an $L'$ satisfying this equation the *adjoint* of the linear map $L$, and with slight abuse of notation, we also write it as $L^\ast$.
 
-The results of [§Dual Space, §§Orthogonal Complement](/en/math/linear_algebra/dual_space#orthogonal-complement) were all obtained from the equation $(Lv,f)=(v,L^\ast f)$ for the canonical pairing. Therefore, replacing this with equation (2) for the non-degenerate bilinear forms $\langle -,-\rangle$ obtained above, we get the following results.
+The results of [§Dual Space, §§Orthogonal Complement](/en/math/linear_algebra/dual_space#orthogonal-complement){: data-relation="required" } were all obtained from the equation $(Lv,f)=(v,L^\ast f)$ for the canonical pairing. Therefore, replacing this with equation (2) for the non-degenerate bilinear forms $\langle -,-\rangle$ obtained above, we get the following results.
 
 ::: Proposition 10
 Let $V,W$ be two $\mathbb{K}$-vector spaces with symmetric non-degenerate bilinear forms given, and let $L:V\rightarrow W$ be a linear map with adjoint $L^\ast:W\rightarrow V$. Then
@@ -229,7 +229,7 @@ In particular, the subspaces of $V$ and $W$ obtained from 3 and 4
 
 $$\ker L, \quad(\ker L)^\perp, \quad\im L,\quad(\im L)^\perp$$
 
-are sometimes called the *four fundamental subspaces* determined by $L$. If $\ker L$ and $\im L$ are non-degenerate in the sense of [Definition 7](#def7), then by [Proposition 8](#prop8) they decompose orthogonally as
+are sometimes called the *four fundamental subspaces* determined by $L$. If $\ker L$ and $\im L$ are non-degenerate in the sense of [Definition 7](#def7){: data-relation="required" }, then by [Proposition 8](#prop8){: data-relation="required" } they decompose orthogonally as
 
 $$V=\ker L\oplus(\ker L)^\perp,\qquad W=\im L\oplus(\im L)^\perp$$
 
@@ -271,7 +271,7 @@ and from the two conditions $\langle u,v\rangle\neq 0$ and $\ch \mathbb{K}\neq 2
 
 We prove the original proposition by induction on the dimension of $V$. The case $\dim V=0$ is trivial. Now assume the proof is complete for $\dim V=k$. Then for any vector space $V$ with $\dim V=k+1$, there exists a vector $w$ satisfying $\langle w,w\rangle\neq 0$.
 
-Now let $W=\span w$. Since $\langle w,w\rangle\neq 0$, we have $w\notin W^\perp$, and since $W$ is 1-dimensional, $W\cap W^\perp=\{0\}$, so $W$ is non-degenerate in the sense of [Definition 7](#def7). Therefore by [Proposition 8](#prop8), $V=W\oplus W^\perp$ and $W^\perp$ is also non-degenerate with $\dim W^\perp=\dim V-1=k$. Applying the induction hypothesis to the $k$-dimensional space $W^\perp$ with non-degenerate form, there exists an orthogonal basis $\mathcal{B}$, and since $W=\span w$ is orthogonal to $W^\perp$, $\mathcal{B}\cup\{w\}$ is an orthogonal basis for $V$.
+Now let $W=\span w$. Since $\langle w,w\rangle\neq 0$, we have $w\notin W^\perp$, and since $W$ is 1-dimensional, $W\cap W^\perp=\{0\}$, so $W$ is non-degenerate in the sense of [Definition 7](#def7){: data-relation="required" }. Therefore by [Proposition 8](#prop8){: data-relation="required" }, $V=W\oplus W^\perp$ and $W^\perp$ is also non-degenerate with $\dim W^\perp=\dim V-1=k$. Applying the induction hypothesis to the $k$-dimensional space $W^\perp$ with non-degenerate form, there exists an orthogonal basis $\mathcal{B}$, and since $W=\span w$ is orthogonal to $W^\perp$, $\mathcal{B}\cup\{w\}$ is an orthogonal basis for $V$.
 :::
 
 ## Gram Matrix
