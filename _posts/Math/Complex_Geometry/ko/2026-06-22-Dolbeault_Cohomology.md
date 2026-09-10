@@ -14,7 +14,7 @@ weight: 3
 published: false
 ---
 
-거의 복소구조의 언어로 복소화 differential form이 차수별로 $(p,q)$-형식으로 갈라짐을 보았다 ([§거의 복소구조, ⁋명제 7](/ko/math/complex_geometry/almost_complex_structures#prop7)). 그러나 이 분해는 형식 자체의 정적인 분류일 뿐, 그 위에서 작동하는 미분연산자 $d$가 이 분해와 어떻게 어울리는지는 아직 묻지 않았다. Smooth manifold에서 $d$와 그로부터 얻는 de Rham cohomology가 위상을 읽어냈듯이 ([\[미분다양체\] §미분형식, ⁋정리 2](/ko/math/manifolds/differential_forms#thm2)), complex manifold에서는 $d$가 $(p,q)$-분해와 맞물려 두 연산자 $\partial$와 $\bar\partial$로 갈라지고, 그중 $\bar\partial$가 holomorphicity를 측정하는 복합체를 만든다.
+거의 복소구조의 언어로 복소화 differential form이 차수별로 $(p,q)$-형식으로 갈라짐을 보았다 ([§거의 복소구조, ⁋명제 7](/ko/math/complex_geometry/almost_complex_structures#prop7){: data-relation="required" }). 그러나 이 분해는 형식 자체의 정적인 분류일 뿐, 그 위에서 작동하는 미분연산자 $d$가 이 분해와 어떻게 어울리는지는 아직 묻지 않았다. Smooth manifold에서 $d$와 그로부터 얻는 de Rham cohomology가 위상을 읽어냈듯이 ([\[미분다양체\] §미분형식, ⁋정리 2](/ko/math/manifolds/differential_forms#thm2){: data-relation="weak" }), complex manifold에서는 $d$가 $(p,q)$-분해와 맞물려 두 연산자 $\partial$와 $\bar\partial$로 갈라지고, 그중 $\bar\partial$가 holomorphicity를 측정하는 복합체를 만든다.
 
 이 글의 목표는 적분가능한 거의 복소구조, 곧 complex manifold 위에서 $d = \partial + \bar\partial$ 분해를 세우고, $\bar\partial$로부터 Dolbeault cohomology $H^{p,q}_{\bar\partial}(X)$를 정의하며, 그것이 holomorphic $p$-형식의 sheaf $\Omega^p$의 sheaf cohomology $H^q(X, \Omega^p)$와 일치한다는 Dolbeault 정리를 증명하는 것이다. 핵심 도구는 폴리디스크에서 $\bar\partial$-closed 형식이 항상 $\bar\partial$-완전하다는 $\bar\partial$-Poincaré 보조정리이며, 이것이 Dolbeault 복합체를 holomorphic 형식 sheaf의 fine resolution으로 바꿔준다.
 
@@ -46,7 +46,7 @@ $$
 으로 정의한다. 그러면 $\partial : \Omega^{p,q}(X) \rightarrow \Omega^{p+1,q}(X)$이고 $\bar\partial : \Omega^{p,q}(X) \rightarrow \Omega^{p,q+1}(X)$이다.
 :::
 
-위 정의는 좌표 표현으로 주어졌지만 좌표에 무관하게 잘 정의된다. 이를 보는 가장 깔끔한 방법은 $\partial$와 $\bar\partial$를 exterior derivative $d$의 성분으로 규정하는 것이다. $(p,q)$-형식에 $d$를 작용시키면 그 값은 $(p+1,q)$-형식과 $(p,q+1)$-형식의 합이며, $\partial \omega$와 $\bar\partial \omega$는 각각 그 두 성분이다. $d$가 좌표 무관이고 $(p,q)$-분해가 좌표 무관이므로 ([§거의 복소구조, ⁋명제 7](/ko/math/complex_geometry/almost_complex_structures#prop7)), 두 성분으로 추출한 $\partial$와 $\bar\partial$도 좌표에 무관하다. 다음 명제가 이 관점을 정식화한다.
+위 정의는 좌표 표현으로 주어졌지만 좌표에 무관하게 잘 정의된다. 이를 보는 가장 깔끔한 방법은 $\partial$와 $\bar\partial$를 exterior derivative $d$의 성분으로 규정하는 것이다. $(p,q)$-형식에 $d$를 작용시키면 그 값은 $(p+1,q)$-형식과 $(p,q+1)$-형식의 합이며, $\partial \omega$와 $\bar\partial \omega$는 각각 그 두 성분이다. $d$가 좌표 무관이고 $(p,q)$-분해가 좌표 무관이므로 ([§거의 복소구조, ⁋명제 7](/ko/math/complex_geometry/almost_complex_structures#prop7){: data-relation="required" }), 두 성분으로 추출한 $\partial$와 $\bar\partial$도 좌표에 무관하다. 다음 명제가 이 관점을 정식화한다.
 
 ::: 명제 2
 Complex manifold $X$ 위에서 exterior derivative는 $\Omega^{p,q}(X)$ 위에서
@@ -59,7 +59,7 @@ $$
 :::
 
 ::: 증명
-$X$가 complex manifold이므로 그 표준 거의 복소구조는 적분가능하고 ([§거의 복소구조, ⁋정리 12](/ko/math/complex_geometry/almost_complex_structures#thm12)), 따라서 $\dd{(\Omega^{1,0})} \subseteq \Omega^{2,0} \oplus \Omega^{1,1}$이 성립한다 ([§거의 복소구조, ⁋명제 11](/ko/math/complex_geometry/almost_complex_structures#prop11)의 동치조건 (3)). 켤레를 취하면 $\dd{(\Omega^{0,1})} \subseteq \Omega^{1,1} \oplus \Omega^{0,2}$도 성립한다.
+$X$가 complex manifold이므로 그 표준 거의 복소구조는 적분가능하고 ([§거의 복소구조, ⁋정리 12](/ko/math/complex_geometry/almost_complex_structures#thm12){: data-relation="weak" }), 따라서 $\dd{(\Omega^{1,0})} \subseteq \Omega^{2,0} \oplus \Omega^{1,1}$이 성립한다 ([§거의 복소구조, ⁋명제 11](/ko/math/complex_geometry/almost_complex_structures#prop11){: data-relation="required" }의 동치조건 (3)). 켤레를 취하면 $\dd{(\Omega^{0,1})} \subseteq \Omega^{1,1} \oplus \Omega^{0,2}$도 성립한다.
 
 이제 국소좌표에서 $\omega = \sum_{I,J} f_{IJ}\dd{z_I} \wedge \dd{\bar{z}_J}$를 미분하자. $d$는 antiderivation이고 $\dd{z_j}, \dd{\bar{z}_j}$가 닫혀 있으므로
 
@@ -67,7 +67,7 @@ $$
 \dd{\omega} = \sum_{I,J} \dd{f_{IJ}} \wedge \dd{z_I} \wedge \dd{\bar{z}_J}
 $$
 
-이다. 함수 $f_{IJ}$에 대하여 $\dd{f_{IJ}} = \partial f_{IJ} + \bar\partial f_{IJ}$이고, 여기서 $\partial f_{IJ} = \sum_k (\partial f_{IJ}/\partial z_k)\dd{z_k}$는 $(1,0)$-형식, $\bar\partial f_{IJ} = \sum_k (\partial f_{IJ}/\partial \bar{z}_k)\dd{\bar{z}_k}$는 $(0,1)$-형식이다. 위 표현에서 $\dd{z_I} \wedge d\bar z_J$가 degree $(p,q)$이므로, $\partial f_{IJ}$를 wedge한 항은 정확히 $(p+1,q)$-형식이고 이들의 합이 [정의 1](#def1)의 $\partial\omega$이다. 마찬가지로 $\bar\partial f_{IJ}$를 wedge한 항은 $(p,q+1)$-형식이고 그 합이 $\bar\partial\omega$이다. 다른 degree의 항은 나타나지 않으므로 $\dd{\omega} = \partial\omega + \bar\partial\omega$이고 분해가 차수별로 성립한다.
+이다. 함수 $f_{IJ}$에 대하여 $\dd{f_{IJ}} = \partial f_{IJ} + \bar\partial f_{IJ}$이고, 여기서 $\partial f_{IJ} = \sum_k (\partial f_{IJ}/\partial z_k)\dd{z_k}$는 $(1,0)$-형식, $\bar\partial f_{IJ} = \sum_k (\partial f_{IJ}/\partial \bar{z}_k)\dd{\bar{z}_k}$는 $(0,1)$-형식이다. 위 표현에서 $\dd{z_I} \wedge d\bar z_J$가 degree $(p,q)$이므로, $\partial f_{IJ}$를 wedge한 항은 정확히 $(p+1,q)$-형식이고 이들의 합이 [정의 1](#def1){: data-relation="required" }의 $\partial\omega$이다. 마찬가지로 $\bar\partial f_{IJ}$를 wedge한 항은 $(p,q+1)$-형식이고 그 합이 $\bar\partial\omega$이다. 다른 degree의 항은 나타나지 않으므로 $\dd{\omega} = \partial\omega + \bar\partial\omega$이고 분해가 차수별로 성립한다.
 :::
 
 이 분해는 본질적으로 $X$의 적분가능성에 의존한다. 적분가능하지 않은 거의 complex manifold에서는 $d$가 $(p,q)$-형식을 네 개의 degree $(p+2,q-1), (p+1,q), (p,q+1), (p-1,q+2)$로 흩뜨려 $d = \mu + \partial + \bar\partial + \bar\mu$ 꼴이 되며, 두 여분의 항 $\mu, \bar\mu$가 정확히 Nijenhuis 텐서를 담는다. Complex manifold에서는 이 여분 항이 소멸하여 깔끔한 두 항 분해가 살아남고, 비로소 $\bar\partial$만으로 닫힌 복합체를 세울 수 있다.
@@ -85,13 +85,13 @@ $$
 :::
 
 ::: 증명
-Exterior derivative는 $d^2 = 0$을 만족한다 ([\[미분다양체\] §미분형식, ⁋정리 2](/ko/math/manifolds/differential_forms#thm2)). [명제 2](#prop2)에 의해 $(p,q)$-형식 $\omega$에 대하여 $d = \partial + \bar\partial$이므로
+Exterior derivative는 $d^2 = 0$을 만족한다 ([\[미분다양체\] §미분형식, ⁋정리 2](/ko/math/manifolds/differential_forms#thm2){: data-relation="required" }). [명제 2](#prop2){: data-relation="required" }에 의해 $(p,q)$-형식 $\omega$에 대하여 $d = \partial + \bar\partial$이므로
 
 $$
 0 = d^2 \omega = (\partial + \bar\partial)(\partial + \bar\partial)\omega = \partial^2 \omega + (\partial\bar\partial + \bar\partial\partial)\omega + \bar\partial^2 \omega
 $$
 
-이다. 우변의 세 항은 각각 degree $(p+2,q)$, $(p+1,q+1)$, $(p,q+2)$의 형식이다. 서로 다른 degree의 형식들의 합이 $0$이 되려면 각 degree의 성분이 따로 $0$이어야 하므로 ([명제 2](#prop2)와 같은 $(p,q)$-분해의 직합성에 의해),
+이다. 우변의 세 항은 각각 degree $(p+2,q)$, $(p+1,q+1)$, $(p,q+2)$의 형식이다. 서로 다른 degree의 형식들의 합이 $0$이 되려면 각 degree의 성분이 따로 $0$이어야 하므로 ([명제 2](#prop2){: data-relation="required" }와 같은 $(p,q)$-분해의 직합성에 의해),
 
 $$
 \partial^2 \omega = 0, \qquad (\partial\bar\partial + \bar\partial\partial)\omega = 0, \qquad \bar\partial^2 \omega = 0
@@ -134,7 +134,7 @@ $$
 H^{0,0}_{\bar\partial}(X) = \ker\left( \bar\partial : \Omega^{0,0}(X) \rightarrow \Omega^{0,1}(X) \right) = \mathcal{O}(X)
 $$
 
-로 전역 holomorphic function의 공간이 된다. $X$가 콤팩트 연결이면 이는 $\mathbb{C}$이다 ([§복소다양체, ⁋정리 14](/ko/math/complex_geometry/complex_manifolds#thm14)). 더 높은 $q$에서는 $\bar\partial$-방정식의 풀이가능성이 비자명한 정보가 되며, 이 정보가 정확히 holomorphic 형식 sheaf의 cohomology로 해석된다는 것이 이 글의 주된 결과이다. 그 다리를 놓는 국소 보조정리부터 세운다.
+로 전역 holomorphic function의 공간이 된다. $X$가 콤팩트 연결이면 이는 $\mathbb{C}$이다 ([§복소다양체, ⁋정리 14](/ko/math/complex_geometry/complex_manifolds#thm14){: data-relation="weak" }). 더 높은 $q$에서는 $\bar\partial$-방정식의 풀이가능성이 비자명한 정보가 되며, 이 정보가 정확히 holomorphic 형식 sheaf의 cohomology로 해석된다는 것이 이 글의 주된 결과이다. 그 다리를 놓는 국소 보조정리부터 세운다.
 
 ## $\bar\partial$-Poincaré 보조정리
 
@@ -211,7 +211,7 @@ $$
 g(z) = \frac{1}{2\pi i} \int \frac{f_m(z_1, \ldots, z_{m-1}, w, z_{m+1}, \ldots, z_n)}{w - z_m}\dd{w} \wedge \dd{\bar{w}}
 $$
 
-로 정의하자. 곧 [보조정리 5](#lem5)의 한 변수 풀이를 $m$번째 변수에 적용한 것이다. 그러면 $\partial g/\partial\bar{z}_m = f_m$이다. 한편 $l > m$인 변수에 대해서는 $f_m$이 그 변수에 대해 holomorphic($\partial f_m/\partial\bar{z}_l = 0$, 형식에 $d\bar z_l$이 없으므로 닫힘조건에서 따라온다)이므로 적분기호 아래 미분으로 $\partial g/\partial\bar{z}_l = 0$ ($l > m$)이다. 이제
+로 정의하자. 곧 [보조정리 5](#lem5){: data-relation="required" }의 한 변수 풀이를 $m$번째 변수에 적용한 것이다. 그러면 $\partial g/\partial\bar{z}_m = f_m$이다. 한편 $l > m$인 변수에 대해서는 $f_m$이 그 변수에 대해 holomorphic($\partial f_m/\partial\bar{z}_l = 0$, 형식에 $d\bar z_l$이 없으므로 닫힘조건에서 따라온다)이므로 적분기호 아래 미분으로 $\partial g/\partial\bar{z}_l = 0$ ($l > m$)이다. 이제
 
 $$
 \omega' = \omega - \bar\partial g
@@ -227,7 +227,7 @@ $$
 
 $q \geq 2$의 일반 경우도 같은 귀납이 작동한다. $\omega$를 $\omega = \dd{\bar{z}_m} \wedge \alpha + \beta$로 쓰되 $\alpha, \beta$가 $\dd{\bar{z}_m}$을 포함하지 않게 분해하고, $\alpha$의 각 계수에 위와 같이 $m$번째 변수의 Cauchy 적분을 적용해 만든 형식 $\gamma$로 $\omega - \bar\partial\gamma$에서 $\dd{\bar{z}_m}$ 항을 모두 제거한다. $\bar\partial$-닫힘조건이 이 제거 후에도 $l > m$ index가 다시 생기지 않도록 보장하므로, 포함된 index 집합이 $\{1, \ldots, m-1\}$로 줄어든 closed 형식을 얻고 귀납가정을 적용한다. $m = q$에서 시작해 $m$을 하나씩 줄여 $m < q$에 이르면 형식이 $0$이 되어 귀납이 끝난다.
 
-엄밀히는 [보조정리 5](#lem5)가 닫힌원판 근방에서의 풀이를 주므로, 폴리디스크 $\Delta$ 전체에서의 결과를 얻으려면 $\Delta$를 안쪽 폴리디스크들의 증가열로 소진하고 각 단계의 풀이를 이어 붙이는 극한 논법이 필요하다. 각 콤팩트 부분폴리디스크에서 위 구성이 풀이를 주고, Mittag-Leffler 형 수렴 논법으로 전역 풀이로 이어붙이면 $\Delta$ 위의 $\eta$를 얻는다.
+엄밀히는 [보조정리 5](#lem5){: data-relation="required" }가 닫힌원판 근방에서의 풀이를 주므로, 폴리디스크 $\Delta$ 전체에서의 결과를 얻으려면 $\Delta$를 안쪽 폴리디스크들의 증가열로 소진하고 각 단계의 풀이를 이어 붙이는 극한 논법이 필요하다. 각 콤팩트 부분폴리디스크에서 위 구성이 풀이를 주고, Mittag-Leffler 형 수렴 논법으로 전역 풀이로 이어붙이면 $\Delta$ 위의 $\eta$를 얻는다.
 :::
 
 이 보조정리는 $\bar\partial$-cohomology가 순전히 국소적으로는 자명함을 말한다. 폴리디스크 위에서는 모든 $\bar\partial$-closed 형식($q \geq 1$)이 완전하므로 $H^{p,q}_{\bar\partial}(\Delta) = 0$이고, $q = 0$ 부분만 holomorphic $p$-형식으로 살아남는다. 따라서 대역적인 $H^{p,q}_{\bar\partial}(X)$의 비자명함은 국소 정보가 아니라 폴리디스크들을 이어 붙이는 대역적 방식, 곧 위상에서 온다. 이 국소 자명성과 대역 비자명성의 간극을 정확히 재는 장치가 sheaf cohomology이며, 그 일치가 Dolbeault 정리이다.
@@ -246,7 +246,7 @@ $$
 들로 정의되는 sheaf라 한다. 곧 국소적으로 $\omega = \sum_{\lvert I \rvert = p} f_I\dd{z_I}$이되 모든 계수 $f_I$가 holomorphic인 형식들의 sheaf이다.
 :::
 
-$p = 0$일 때 $\Omega^0$은 holomorphic function의 structure sheaf $\mathcal{O}_X$이다. $p = 1$일 때 $\Omega^1$은 holomorphic 1-형식의 sheaf로, holomorphic cotangent bundle의 holomorphic section들이 이루는 sheaf이다 ([§복소다양체, ⁋정의 11](/ko/math/complex_geometry/complex_manifolds#def11)). 조건 $\bar\partial\omega = 0$은 $(p,0)$-형식의 계수에 대한 Cauchy–Riemann 방정식이며, 정의에 의해 $\Omega^p = \ker(\bar\partial : \Omega^{p,0} \rightarrow \Omega^{p,1})$로 $\bar\partial$-closed $(p,0)$-형식들의 sheaf이다. 이 sheaf의 sheaf cohomology ([\[대수다양체\] §층 코호몰로지, ⁋정의 1](/ko/math/algebraic_varieties/sheaf_cohomology#def1)) $H^q(X, \Omega^p)$가 Dolbeault cohomology의 정체임을 보이려 한다.
+$p = 0$일 때 $\Omega^0$은 holomorphic function의 structure sheaf $\mathcal{O}_X$이다. $p = 1$일 때 $\Omega^1$은 holomorphic 1-형식의 sheaf로, holomorphic cotangent bundle의 holomorphic section들이 이루는 sheaf이다 ([§복소다양체, ⁋정의 11](/ko/math/complex_geometry/complex_manifolds#def11){: data-relation="weak" }). 조건 $\bar\partial\omega = 0$은 $(p,0)$-형식의 계수에 대한 Cauchy–Riemann 방정식이며, 정의에 의해 $\Omega^p = \ker(\bar\partial : \Omega^{p,0} \rightarrow \Omega^{p,1})$로 $\bar\partial$-closed $(p,0)$-형식들의 sheaf이다. 이 sheaf의 sheaf cohomology ([\[대수다양체\] §층 코호몰로지, ⁋정의 1](/ko/math/algebraic_varieties/sheaf_cohomology#def1){: data-relation="required" }) $H^q(X, \Omega^p)$가 Dolbeault cohomology의 정체임을 보이려 한다.
 
 추상 de Rham 논법의 핵심은 smooth 형식의 sheaf $\mathcal{A}^{p,q}$ (각 $U$에 $\Omega^{p,q}(U)$를 대응시키는 sheaf)가 *fine sheaf<sub>미세층</sub>* 라는 점이다. Fine sheaf는 임의의 open covering에 종속된 partition of unity를 가지는 sheaf로, 그러한 partition of unity가 존재하면 그 sheaf는 sheaf cohomology에서 acyclic하다. Smooth 함수의 partition of unity가 $\mathcal{A}^{p,q}$의 section에 그대로 곱해지므로 $\mathcal{A}^{p,q}$는 fine sheaf이고, 따라서 모든 $q' > 0$에 대하여 $H^{q'}(X, \mathcal{A}^{p,q}) = 0$이다. 이제 $\bar\partial$-복합체가 $\Omega^p$의 분해임을 확인한다.
 
@@ -261,16 +261,16 @@ $$
 :::
 
 ::: 증명
-완전성은 stalk 수준에서, 곧 각 점의 임의로 작은 근방에서 확인하면 충분하다. 각 점은 폴리디스크 근방을 가지므로 [보조정리 6](#lem6)을 그러한 근방에서 쓸 수 있다.
+완전성은 stalk 수준에서, 곧 각 점의 임의로 작은 근방에서 확인하면 충분하다. 각 점은 폴리디스크 근방을 가지므로 [보조정리 6](#lem6){: data-relation="required" }을 그러한 근방에서 쓸 수 있다.
 
-먼저 $\Omega^p \rightarrow \mathcal{A}^{p,0}$의 위치에서의 완전성, 곧 $\Omega^p = \ker(\bar\partial : \mathcal{A}^{p,0} \rightarrow \mathcal{A}^{p,1})$이다. 이는 [정의 7](#def7) 그 자체이다. $\Omega^p$로의 morphism은 inclusion이고, holomorphic $(p,0)$-형식이 정확히 $\bar\partial$로 죽는 smooth $(p,0)$-형식이므로 이 위치에서 완전하다 ($\Omega^p \rightarrow \mathcal{A}^{p,0}$이 단사이고 그 image가 $\bar\partial$의 kernel과 같다).
+먼저 $\Omega^p \rightarrow \mathcal{A}^{p,0}$의 위치에서의 완전성, 곧 $\Omega^p = \ker(\bar\partial : \mathcal{A}^{p,0} \rightarrow \mathcal{A}^{p,1})$이다. 이는 [정의 7](#def7){: data-relation="weak" } 그 자체이다. $\Omega^p$로의 morphism은 inclusion이고, holomorphic $(p,0)$-형식이 정확히 $\bar\partial$로 죽는 smooth $(p,0)$-형식이므로 이 위치에서 완전하다 ($\Omega^p \rightarrow \mathcal{A}^{p,0}$이 단사이고 그 image가 $\bar\partial$의 kernel과 같다).
 
-다음으로 $q \geq 1$에서 $\ker(\bar\partial : \mathcal{A}^{p,q} \rightarrow \mathcal{A}^{p,q+1}) = \Img(\bar\partial : \mathcal{A}^{p,q-1} \rightarrow \mathcal{A}^{p,q})$임을 보인다. 포함 $\Img \subseteq \ker$은 [명제 3](#prop3)의 $\bar\partial^2 = 0$에서 따라온다. 반대 포함을 stalk에서 본다. $x \in X$와 $x$ 근방의 $\bar\partial$-closed $(p,q)$-형식 $\omega$의 stalk가 주어지면, $x$의 충분히 작은 폴리디스크 근방 $\Delta$를 잡아 $\omega$가 $\Delta$에서 정의된 $\bar\partial$-closed 형식이게 할 수 있다. [보조정리 6](#lem6)에 의해 $\Delta$에서 $\omega = \bar\partial\eta$인 $\eta \in \mathcal{A}^{p,q-1}(\Delta)$가 존재하므로, stalk 수준에서 $\omega$는 $\bar\partial$의 image에 든다. 따라서 $\ker \subseteq \Img$이고 이 위치에서도 완전하다.
+다음으로 $q \geq 1$에서 $\ker(\bar\partial : \mathcal{A}^{p,q} \rightarrow \mathcal{A}^{p,q+1}) = \Img(\bar\partial : \mathcal{A}^{p,q-1} \rightarrow \mathcal{A}^{p,q})$임을 보인다. 포함 $\Img \subseteq \ker$은 [명제 3](#prop3){: data-relation="required" }의 $\bar\partial^2 = 0$에서 따라온다. 반대 포함을 stalk에서 본다. $x \in X$와 $x$ 근방의 $\bar\partial$-closed $(p,q)$-형식 $\omega$의 stalk가 주어지면, $x$의 충분히 작은 폴리디스크 근방 $\Delta$를 잡아 $\omega$가 $\Delta$에서 정의된 $\bar\partial$-closed 형식이게 할 수 있다. [보조정리 6](#lem6){: data-relation="required" }에 의해 $\Delta$에서 $\omega = \bar\partial\eta$인 $\eta \in \mathcal{A}^{p,q-1}(\Delta)$가 존재하므로, stalk 수준에서 $\omega$는 $\bar\partial$의 image에 든다. 따라서 $\ker \subseteq \Img$이고 이 위치에서도 완전하다.
 
 각 $\mathcal{A}^{p,q}$가 fine sheaf임은 smooth 함수의 partition of unity $\{\rho_i\}$를 $(p,q)$-형식의 section에 점별로 곱하는 연산 $\omega \mapsto \rho_i\omega$이 sheaf morphism이고 $\sum_i \rho_i = 1$을 주므로 따라온다. 따라서 sequence는 $\Omega^p$의 fine resolution이다.
 :::
 
-Fine sheaf는 sheaf cohomology에서 acyclic하므로, 이 fine resolution으로부터 추상 de Rham 정리를 적용할 수 있다. Sheaf cohomology에서 acyclic resolution은 그 global section 복합체의 cohomology로 원래 sheaf의 cohomology를 계산해 준다 ([\[대수다양체\] §층 코호몰로지, ⁋명제 17](/ko/math/algebraic_varieties/sheaf_cohomology#prop17)). 이를 위 분해에 적용하면 Dolbeault 정리가 나온다.
+Fine sheaf는 sheaf cohomology에서 acyclic하므로, 이 fine resolution으로부터 추상 de Rham 정리를 적용할 수 있다. Sheaf cohomology에서 acyclic resolution은 그 global section 복합체의 cohomology로 원래 sheaf의 cohomology를 계산해 준다 ([\[대수다양체\] §층 코호몰로지, ⁋명제 17](/ko/math/algebraic_varieties/sheaf_cohomology#prop17){: data-relation="required" }). 이를 위 분해에 적용하면 Dolbeault 정리가 나온다.
 
 ::: 정리 9 (Dolbeault)
 Complex manifold $X$와 정수 $p, q \geq 0$에 대하여, 표준적인 isomorphism
@@ -283,7 +283,7 @@ $$
 :::
 
 ::: 증명
-[명제 8](#prop8)에 의해
+[명제 8](#prop8){: data-relation="required" }에 의해
 
 $$
 0 \longrightarrow \Omega^p \longrightarrow \mathcal{A}^{p,0} \xrightarrow{\ \bar\partial\ } \mathcal{A}^{p,1} \xrightarrow{\ \bar\partial\ } \cdots
@@ -297,7 +297,7 @@ $$
 H^q(X, \mathcal{F}) \cong \frac{\ker\left( \Gamma(X, \mathcal{A}^q) \rightarrow \Gamma(X, \mathcal{A}^{q+1}) \right)}{\Img\left( \Gamma(X, \mathcal{A}^{q-1}) \rightarrow \Gamma(X, \mathcal{A}^q) \right)}
 $$
 
-임을 준다 ([\[대수다양체\] §층 코호몰로지, ⁋명제 17](/ko/math/algebraic_varieties/sheaf_cohomology#prop17)). 우리 분해에 적용하면 $\mathcal{F} = \Omega^p$, $\mathcal{A}^q = \mathcal{A}^{p,q}$이고 global section은 $\Gamma(X, \mathcal{A}^{p,q}) = \Omega^{p,q}(X)$, 그 사이의 morphism은 $\bar\partial$이다. 따라서
+임을 준다 ([\[대수다양체\] §층 코호몰로지, ⁋명제 17](/ko/math/algebraic_varieties/sheaf_cohomology#prop17){: data-relation="required" }). 우리 분해에 적용하면 $\mathcal{F} = \Omega^p$, $\mathcal{A}^q = \mathcal{A}^{p,q}$이고 global section은 $\Gamma(X, \mathcal{A}^{p,q}) = \Omega^{p,q}(X)$, 그 사이의 morphism은 $\bar\partial$이다. 따라서
 
 $$
 H^q(X, \Omega^p) \cong \frac{\ker\left( \bar\partial : \Omega^{p,q}(X) \rightarrow \Omega^{p,q+1}(X) \right)}{\Img\left( \bar\partial : \Omega^{p,q-1}(X) \rightarrow \Omega^{p,q}(X) \right)} = H^{p,q}_{\bar\partial}(X)
@@ -325,13 +325,13 @@ $$
 가장 단순한 경우는 $\mathbb{C}^n$이며, $\bar\partial$-Poincaré 보조정리가 거의 모든 것을 소멸시킨다.
 
 ::: 예시 10 ($\mathbb{C}^n$의 Dolbeault cohomology)
-$\mathbb{C}^n$ 자체가 폴리디스크 (반지름 무한) 이므로 [보조정리 6](#lem6)이 적용되어, $q \geq 1$에 대하여
+$\mathbb{C}^n$ 자체가 폴리디스크 (반지름 무한) 이므로 [보조정리 6](#lem6){: data-relation="required" }이 적용되어, $q \geq 1$에 대하여
 
 $$
 H^{p,q}_{\bar\partial}(\mathbb{C}^n) = 0
 $$
 
-이다. $q = 0$인 경우 $H^{p,0}_{\bar\partial}(\mathbb{C}^n)$은 $\bar\partial$-closed $(p,0)$-형식, 곧 holomorphic $p$-형식의 공간 $\Omega^p(\mathbb{C}^n)$이며, 이는 holomorphic function을 계수로 갖는 $\sum_I f_I\dd{z_I}$들로 이루어진 무한차원 공간이다. 특히 $H^{0,0}_{\bar\partial}(\mathbb{C}^n) = \mathcal{O}(\mathbb{C}^n)$은 전역 holomorphic function 전체이다. $\mathbb{C}^n$이 콤팩트하지 않으므로 [§복소다양체, ⁋정리 14](/ko/math/complex_geometry/complex_manifolds#thm14)의 상수성은 적용되지 않고, 다항식을 비롯한 풍부한 holomorphic function이 살아남는다.
+이다. $q = 0$인 경우 $H^{p,0}_{\bar\partial}(\mathbb{C}^n)$은 $\bar\partial$-closed $(p,0)$-형식, 곧 holomorphic $p$-형식의 공간 $\Omega^p(\mathbb{C}^n)$이며, 이는 holomorphic function을 계수로 갖는 $\sum_I f_I\dd{z_I}$들로 이루어진 무한차원 공간이다. 특히 $H^{0,0}_{\bar\partial}(\mathbb{C}^n) = \mathcal{O}(\mathbb{C}^n)$은 전역 holomorphic function 전체이다. $\mathbb{C}^n$이 콤팩트하지 않으므로 [§복소다양체, ⁋정리 14](/ko/math/complex_geometry/complex_manifolds#thm14){: data-relation="weak" }의 상수성은 적용되지 않고, 다항식을 비롯한 풍부한 holomorphic function이 살아남는다.
 :::
 
 콤팩트한 경우의 가장 기본적인 예는 복소차원 $1$의 Riemann 곡면이다. 차원이 $1$이므로 $(p,q)$는 $p, q \in \{0, 1\}$의 네 가지뿐이다.
@@ -339,7 +339,7 @@ $$
 ::: 예시 11 (콤팩트 Riemann 곡면의 Hodge 수)
 $X$를 genus $g$의 콤팩트 connected Riemann 곡면이라 하자. 복소차원이 $1$이므로 Dolbeault cohomology는 $H^{0,0}, H^{1,0}, H^{0,1}, H^{1,1}$의 넷이고, 그 Hodge 수는 다음과 같다.
 
-먼저 $H^{0,0}_{\bar\partial}(X) = \mathcal{O}(X) = \mathbb{C}$이므로 $h^{0,0} = 1$이다 ([§복소다양체, ⁋정리 14](/ko/math/complex_geometry/complex_manifolds#thm14)에 의해 콤팩트 connected complex manifold 위 holomorphic function은 상수). 다음으로 $H^{1,0}_{\bar\partial}(X)$은 $\bar\partial$-closed $(1,0)$-형식, 곧 전역 holomorphic 1-형식의 공간 $\Omega^1(X)$이다 (분모인 $\bar\partial(\Omega^{1,-1})$는 degree가 음수라 없다). 콤팩트 Riemann 곡면 위 holomorphic 1-형식의 공간의 차원이 정확히 genus와 같다는 것은 Riemann 곡면론의 기본 사실로, 따라서 $h^{1,0} = \dim_{\mathbb{C}} \Omega^1(X) = g$이다. Dolbeault 정리로 $h^{0,1} = \dim_{\mathbb{C}} H^1(X, \mathcal{O}_X)$이고, Serre duality $H^1(X, \mathcal{O}_X) \cong H^0(X, \Omega^1)^\ast$에 의해 $h^{0,1} = h^{1,0} = g$이다. 마지막으로 $H^{1,1}_{\bar\partial}(X) \cong H^1(X, \Omega^1)$이며, 이는 다시 Serre duality로 $H^0(X, \mathcal{O}_X)^\ast \cong \mathbb{C}$와 isomorphic하므로 $h^{1,1} = 1$이다.
+먼저 $H^{0,0}_{\bar\partial}(X) = \mathcal{O}(X) = \mathbb{C}$이므로 $h^{0,0} = 1$이다 ([§복소다양체, ⁋정리 14](/ko/math/complex_geometry/complex_manifolds#thm14){: data-relation="required" }에 의해 콤팩트 connected complex manifold 위 holomorphic function은 상수). 다음으로 $H^{1,0}_{\bar\partial}(X)$은 $\bar\partial$-closed $(1,0)$-형식, 곧 전역 holomorphic 1-형식의 공간 $\Omega^1(X)$이다 (분모인 $\bar\partial(\Omega^{1,-1})$는 degree가 음수라 없다). 콤팩트 Riemann 곡면 위 holomorphic 1-형식의 공간의 차원이 정확히 genus와 같다는 것은 Riemann 곡면론의 기본 사실로, 따라서 $h^{1,0} = \dim_{\mathbb{C}} \Omega^1(X) = g$이다. Dolbeault 정리로 $h^{0,1} = \dim_{\mathbb{C}} H^1(X, \mathcal{O}_X)$이고, Serre duality $H^1(X, \mathcal{O}_X) \cong H^0(X, \Omega^1)^\ast$에 의해 $h^{0,1} = h^{1,0} = g$이다. 마지막으로 $H^{1,1}_{\bar\partial}(X) \cong H^1(X, \Omega^1)$이며, 이는 다시 Serre duality로 $H^0(X, \mathcal{O}_X)^\ast \cong \mathbb{C}$와 isomorphic하므로 $h^{1,1} = 1$이다.
 
 정리하면 콤팩트 Riemann 곡면의 Hodge 수는 $h^{0,0} = h^{1,1} = 1$, $h^{1,0} = h^{0,1} = g$이다. 한편 위상적으로 $X$의 Betti 수는 $b_0 = b_2 = 1$, $b_1 = 2g$이므로, $b_1 = h^{1,0} + h^{0,1} = 2g$로 degree $1$에서 Hodge 분해가 실제로 성립함을 확인할 수 있다. 곧 Riemann 곡면에서는 앞 절에서 일반적으로 깨진다고 한 분해가 회복되며, 이는 복소차원 $1$ 콤팩트 complex manifold가 갖추는 추가 기하구조의 한 귀결이다.
 :::
