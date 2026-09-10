@@ -14,7 +14,7 @@ translated_at: 2026-06-01T12:30:04+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-06-01T12:30:04+00:00
 ---
-In [§Overview of Mirror Symmetry](/en/math/mirror_symmetry/overview) we saw that the mirror symmetry of a toric Fano variety $X_\Sigma$ is summarized by an isomorphism
+In [§Overview of Mirror Symmetry](/en/math/mirror_symmetry/overview){: data-relation="weak" } we saw that the mirror symmetry of a toric Fano variety $X_\Sigma$ is summarized by an isomorphism
 
 $$\Jac(W_q) \cong QH^\ast(X_\Sigma)$$
 
@@ -54,7 +54,7 @@ $$\eta(\alpha \smile \beta, \gamma) = \eta(\alpha, \beta \smile \gamma)$$
 holds for all $\alpha,\beta,\gamma$, which follows from the associativity of the cup product.
 :::
 
-Meanwhile, in the examples of [§Overview of Mirror Symmetry](/en/math/mirror_symmetry/overview) we introduced the Landau–Ginzburg model, which consists of a holomorphic function $W$ on a given manifold $\check{X}$; the Jacobi ring containing the critical points of $W$ carried the information of the B-model. Locally this is written as follows.
+Meanwhile, in the examples of [§Overview of Mirror Symmetry](/en/math/mirror_symmetry/overview){: data-relation="weak" } we introduced the Landau–Ginzburg model, which consists of a holomorphic function $W$ on a given manifold $\check{X}$; the Jacobi ring containing the critical points of $W$ carried the information of the B-model. Locally this is written as follows.
 
 ::: Definition 3
 A holomorphic function $f : \mathbb{C}^n \rightarrow \mathbb{C}$ is said to have an *isolated hypersurface singularity* at the origin if the following two conditions hold.
@@ -78,7 +78,7 @@ $$\eta(g, h) := \frac{1}{(2\pi i)^n} \oint_{\Gamma_\epsilon} \frac{g(\x) h(\x) \
 
 Here the integration path $\Gamma_\epsilon$ is a small contour surrounding all points of $\Crit(f)=\{\dd{f}=0\}$; this integral can be thought of as the contribution at that point when the critical point is regarded as a fat point containing multiplicity information.
 
-In other words, intuitively this can be viewed as localizing the global integral $\int_X$ of [Example 2](#ex2) to integrals over the (finitely many) points of the critical scheme, and one can show that $(\Jac(f), \eta)$ is indeed a Frobenius algebra in a manner similar to that example.
+In other words, intuitively this can be viewed as localizing the global integral $\int_X$ of [Example 2](#ex2){: data-relation="weak" } to integrals over the (finitely many) points of the critical scheme, and one can show that $(\Jac(f), \eta)$ is indeed a Frobenius algebra in a manner similar to that example.
 
 In general, if all critical points of $f$ are *non-degenerate*, i.e., the Hessian $\Hess_p(f) = (\partial_i \partial_j f(p))_{ij}$ is invertible at each $p \in \Crit(f)$, then the above integral simplifies to
 
@@ -90,7 +90,7 @@ $$\Jac(f)=\bigoplus_{p\in \Crit(f)}\mathbb{C},$$
 
 and with respect to this basis the residue pairing is diagonalized as $\operatorname{diag}(1/\det \Hess_p(f))$ in the critical-point basis.
 
-As a special example, consider the Hori–Vafa superpotential of $\mathbb{P}^1$ seen in [§Overview of Mirror Symmetry, ⁋Example 5](/en/math/mirror_symmetry/overview#ex5):
+As a special example, consider the Hori–Vafa superpotential of $\mathbb{P}^1$ seen in [§Overview of Mirror Symmetry, ⁋Example 5](/en/math/mirror_symmetry/overview#ex5){: data-relation="weak" }:
 
 $$W_q = \x + \frac{q}{\x}.$$
 
@@ -114,7 +114,7 @@ $$\eta(1, 1) = \frac{1}{2\sqrt{q}} + \frac{1}{-2\sqrt{q}} = 0, \qquad \eta(1, \x
 
 so the matrix representation of $\eta$ in this basis is $\begin{pmatrix}0&1\\1&0\end{pmatrix}$. This exactly coincides with the classical Poincaré pairing of $\mathbb{P}^1$, showing that the ring isomorphism $\Jac(W_q) \cong QH^\ast(\mathbb{P}^1)$ was in fact a Frobenius algebra isomorphism.
 
-In the same way, consider the Hori–Vafa superpotential of $\mathbb{P}^2$ seen in [§Overview of Mirror Symmetry, ⁋Example 6](/en/math/mirror_symmetry/overview#ex6):
+In the same way, consider the Hori–Vafa superpotential of $\mathbb{P}^2$ seen in [§Overview of Mirror Symmetry, ⁋Example 6](/en/math/mirror_symmetry/overview#ex6){: data-relation="weak" }:
 
 $$W_q = \z_1 + \z_2 + \frac{q}{\z_1 \z_2}.$$
 
@@ -171,7 +171,7 @@ The data of this grading are encoded by a *vector field* on the manifold $M$ cal
 
 $$\mathcal{L}_E(\circ) = \circ.$$
 
-Similarly, in our intuition $\eta$ is the Poincaré pairing ([Example 2](#ex2)), which survives only in the top degree, so this degree condition translates to
+Similarly, in our intuition $\eta$ is the Poincaré pairing ([Example 2](#ex2){: data-relation="weak" }), which survives only in the top degree, so this degree condition translates to
 
 $$\mathcal{L}_E(\eta) = (2 - d)\eta.$$
 
@@ -196,7 +196,7 @@ A tuple $(M, \eta, \circ, e, E)$ is called a *Frobenius manifold* if the followi
 
 ## The WDVV Equation
 
-The last condition in [Definition 5](#def5) is called potentiality because it allows the trilinear form $c$ to be expressed as the third partial derivatives of a suitable scalar function $F:M \rightarrow \mathbb{C}$.
+The last condition in [Definition 5](#def5){: data-relation="required" } is called potentiality because it allows the trilinear form $c$ to be expressed as the third partial derivatives of a suitable scalar function $F:M \rightarrow \mathbb{C}$.
 
 ::: Proposition 6
 For a Frobenius manifold $(M, \eta, \circ, e, E)$ with flat coordinates $t^1, \ldots, t^n$, there exists a holomorphic function $F: M \rightarrow \mathbb{C}$ (defined locally) such that
@@ -207,7 +207,7 @@ holds for all $\alpha, \beta, \gamma$.
 :::
 
 ::: Proof
-For flat coordinates $t^\alpha$ the covariant derivative $\nabla_{\partial_{t^\delta}}$ coincides with the ordinary partial derivative $\partial_{t^\delta}$, so the potentiality condition in [Definition 5](#def5) means that
+For flat coordinates $t^\alpha$ the covariant derivative $\nabla_{\partial_{t^\delta}}$ coincides with the ordinary partial derivative $\partial_{t^\delta}$, so the potentiality condition in [Definition 5](#def5){: data-relation="required" } means that
 
 $$\partial_{t^\delta} c_{\alpha\beta\gamma} = \partial_{t^\alpha} c_{\delta\beta\gamma}$$
 
@@ -221,7 +221,7 @@ $$\partial_{t^\alpha} \circ \partial_{t^\beta} = \sum_{\gamma, \delta} \frac{\pa
 Since this multiplication $\circ$ is associative, writing this out in structure constants yields the following.
 
 ::: Proposition 7 (Witten–Dijkgraaf–Verlinde–Verlinde)
-The potential $F$ of [Proposition 6](#prop6) satisfies the following equation for all $\alpha, \beta, \gamma, \delta$:
+The potential $F$ of [Proposition 6](#prop6){: data-relation="required" } satisfies the following equation for all $\alpha, \beta, \gamma, \delta$:
 
 $$\sum_{e, f} \frac{\partial^3 F}{\partial t^\alpha \partial t^\beta \partial t^e} \eta^{ef} \frac{\partial^3 F}{\partial t^f \partial t^\gamma \partial t^\delta} = \sum_{e, f} \frac{\partial^3 F}{\partial t^\alpha \partial t^\gamma \partial t^e} \eta^{ef} \frac{\partial^3 F}{\partial t^f \partial t^\beta \partial t^\delta}.$$
 :::
@@ -235,7 +235,7 @@ and associativity is expressed as
 
 $$\sum_e C_{\alpha\beta}{}^e C_{e\gamma}{}^\delta = \sum_e C_{\alpha\gamma}{}^e C_{e\beta}{}^\delta.$$
 
-Substituting the result $c_{\alpha\beta\gamma} = \partial_{t^\alpha} \partial_{t^\beta} \partial_{t^\gamma} F$ of [Proposition 6](#prop6) gives
+Substituting the result $c_{\alpha\beta\gamma} = \partial_{t^\alpha} \partial_{t^\beta} \partial_{t^\gamma} F$ of [Proposition 6](#prop6){: data-relation="required" } gives
 
 $$\sum_{e, f} \frac{\partial^3 F}{\partial t^\alpha \partial t^\beta \partial t^e} \eta^{ef} \frac{\partial^3 F}{\partial t^f \partial t^\gamma \partial t^\delta} = \sum_{e, f} \frac{\partial^3 F}{\partial t^\alpha \partial t^\gamma \partial t^e} \eta^{ef} \frac{\partial^3 F}{\partial t^f \partial t^\beta \partial t^\delta}.$$
 
@@ -278,7 +278,7 @@ $$\sum_e C_{\alpha\beta}{}^e C_{e\gamma}{}^\delta = \delta_{\alpha\beta}\delta_{
 holds trivially.
 :::
 
-In this example the coordinates $t^i$ are very nice: in these coordinates the multiplication $\circ$ is naturally diagonalized. In general, if the multiplication $\circ_p$ is represented as a direct sum of idempotents at a generic point, we call this a *semisimple* Frobenius manifold; [Example 8](#ex8) is the simplest such example.
+In this example the coordinates $t^i$ are very nice: in these coordinates the multiplication $\circ$ is naturally diagonalized. In general, if the multiplication $\circ_p$ is represented as a direct sum of idempotents at a generic point, we call this a *semisimple* Frobenius manifold; [Example 8](#ex8){: data-relation="weak" } is the simplest such example.
 
 Let us now turn to what we originally intended to discuss in this post: understanding quantum cohomology as a Frobenius manifold. For a compact Kähler manifold $X$ we take the base to be the cohomology vector space itself,
 
@@ -291,17 +291,17 @@ For a compact Kähler manifold $X$, the tuple $(M, \eta, \circ_t, e, E)$ with $M
 
 $$E = \sum_\alpha \Bigl(1 - \frac{1}{2}\deg \sigma^\alpha\Bigr) t^\alpha \partial_{t^\alpha} + \sum_\alpha r^\alpha \partial_{t^\alpha}, \qquad c_1(X) = \sum_\alpha r^\alpha \sigma^\alpha$$
 
-is a Frobenius manifold ([Definition 5](#def5)).
+is a Frobenius manifold ([Definition 5](#def5){: data-relation="required" }).
 :::
 
 ::: Proof
-We verify the six conditions of [Definition 5](#def5) in order.
+We verify the six conditions of [Definition 5](#def5){: data-relation="required" } in order.
 
 1. First, the Poincaré pairing $\eta_{\alpha\beta} = \int_X \sigma_\alpha \smile \sigma_\beta$ is constant in the linear coordinates $t^\alpha$, so its Levi-Civita connection is flat and the $t^\alpha$ form flat coordinates.
 2. For the second condition, the multiplication $\circ_t$ is commutative and associative by [[Symplectic Geometry] §Quantum Cohomology, ⁋Theorem 6](/en/math/symplectic_geometry/quantum_cohomology#thm6), and smooth in $t$.
 3. The unit for this multiplication is $1 \in H^0(X)$, which is a constant section in flat coordinates, so $\nabla e = 0$.
 4. Meanwhile, by [[Symplectic Geometry] §Quantum Cohomology, ⁋Definition 12](/en/math/symplectic_geometry/quantum_cohomology#def12) the structure constants are $c_{\alpha\beta\gamma}(t) = \eta(\partial_{t^\alpha} \circ_t \partial_{t^\beta}, \partial_{t^\gamma}) = \partial_{t^\alpha}\partial_{t^\beta}\partial_{t^\gamma} F$, and the symmetry of this expression in the three indices gives $\eta(X \circ Y, Z) = \eta(X, Y \circ Z)$.
-5. Similarly one checks that $\nabla c$ is symmetric in the four indices; under this potentiality, associativity is equivalent to the WDVV equation of [Proposition 7](#prop7), and on the A-model side it is guaranteed by the splitting axiom for GW invariants.
+5. Similarly one checks that $\nabla c$ is symmetric in the four indices; under this potentiality, associativity is equivalent to the WDVV equation of [Proposition 7](#prop7){: data-relation="required" }, and on the A-model side it is guaranteed by the splitting axiom for GW invariants.
 6. Finally, the grading of quantum cohomology ([[Symplectic Geometry] §Quantum Cohomology, ⁋Definition 2](/en/math/symplectic_geometry/quantum_cohomology#def2)) translates as described in the main text into $\mathcal{L}_E(\circ) = \circ$ and $\mathcal{L}_E(\eta) = (2-d)\eta$, and the given $E$ satisfies this as an affine vector field with $\nabla^2 E = 0$.
 :::
 
@@ -309,7 +309,7 @@ Considering our mirror symmetry statement
 
 $$\Jac(W_q)\cong QH^\ast(X),$$
 
-this ultimately depends on the deformation by the quantum parameter $q$, so if we only care about this level big quantum cohomology is somewhat too large, and we need only consider the deformation in the $H^2$ direction, or small quantum cohomology. At a more general level one can study mirror symmetry including bulk deformations of big quantum cohomology and of $W_q$, but this goes beyond our primary goal, so in most cases we shall consider only the deformation in the $H^2$ direction. In the following $\mathbb{P}^1$ example, apart from the unit direction $H^0$ the space $H^2$ is the whole cohomology (there are no classes of degree $\ge 4$), so big quantum cohomology coincides with small quantum cohomology; hence the computation below realizes [Proposition 9](#prop9) directly.
+this ultimately depends on the deformation by the quantum parameter $q$, so if we only care about this level big quantum cohomology is somewhat too large, and we need only consider the deformation in the $H^2$ direction, or small quantum cohomology. At a more general level one can study mirror symmetry including bulk deformations of big quantum cohomology and of $W_q$, but this goes beyond our primary goal, so in most cases we shall consider only the deformation in the $H^2$ direction. In the following $\mathbb{P}^1$ example, apart from the unit direction $H^0$ the space $H^2$ is the whole cohomology (there are no classes of degree $\ge 4$), so big quantum cohomology coincides with small quantum cohomology; hence the computation below realizes [Proposition 9](#prop9){: data-relation="weak" } directly.
 
 ::: Example 10
 To verify explicitly that the above multiplication $\circ_t$ varies with $t$, let us compute the case $X = \mathbb{P}^1$. Since the manifold $M = H^\ast(\mathbb{P}^1) = \mathbb{C}\langle 1, H\rangle$ is itself a vector space, coordinates on it are given by the dual of the cohomology basis $\{1, H\}$; let us denote these by $t^0, t^1$.
@@ -318,7 +318,7 @@ The Gromov–Witten potential of $\mathbb{P}^1$ is now given by
 
 $$F(t^0, t^1) = \frac{1}{2}(t^0)^2 t^1 + e^{t^1}.$$
 
-([[Symplectic Geometry] §Quantum Cohomology, ⁋Definition 12](/en/math/symplectic_geometry/quantum_cohomology#def12)) Here the first term is the contribution from the classical cup product, and the second term can be thought of as the contribution $\langle H, H, H\rangle_{0,3,1} = 1$ from the degree-$1$ rational curve of [§Overview of Mirror Symmetry, ⁋Example 5](/en/math/mirror_symmetry/overview#ex5), accumulated exponentially along the $H^2$ direction coordinate $t^1$ (via the Euler vector field). The metric was already computed in [Example 4](#ex4), and computing the third partial derivatives of $F$ from the above formula gives
+([[Symplectic Geometry] §Quantum Cohomology, ⁋Definition 12](/en/math/symplectic_geometry/quantum_cohomology#def12)) Here the first term is the contribution from the classical cup product, and the second term can be thought of as the contribution $\langle H, H, H\rangle_{0,3,1} = 1$ from the degree-$1$ rational curve of [§Overview of Mirror Symmetry, ⁋Example 5](/en/math/mirror_symmetry/overview#ex5){: data-relation="weak" }, accumulated exponentially along the $H^2$ direction coordinate $t^1$ (via the Euler vector field). The metric was already computed in [Example 4](#ex4){: data-relation="required" }, and computing the third partial derivatives of $F$ from the above formula gives
 
 $$\partial_{t^0}^3 F = 0,\qquad \partial_{t^0}^2\partial_{t^1} F = 1,\qquad \partial_{t^0}\partial_{t^1}^2 F = 0,\qquad \partial_{t^1}^3 F = e^{t^1}.$$
 
@@ -348,7 +348,7 @@ $$\mathcal{L}_E\bigl(e^{t^1}\dd{t}^1 \otimes \dd{t}^1 \otimes \partial_{t^0}\big
 
 so $\mathcal{L}_E(\circ) = \circ$.
 
-Now setting the Novikov variable to $q = e^{t^1}$, the second equation becomes $\partial_{t^1} \circ \partial_{t^1} = qe$, which translates back into cohomology language as $H \star H = q \cdot 1$, recovering the small quantum ring of [§Overview of Mirror Symmetry, ⁋Example 5](/en/math/mirror_symmetry/overview#ex5). Moreover, this isomorphism is now parametrized by the variation of $q=e^{t^1}$, upgrading the previous mirror symmetry at the level of ring isomorphisms.
+Now setting the Novikov variable to $q = e^{t^1}$, the second equation becomes $\partial_{t^1} \circ \partial_{t^1} = qe$, which translates back into cohomology language as $H \star H = q \cdot 1$, recovering the small quantum ring of [§Overview of Mirror Symmetry, ⁋Example 5](/en/math/mirror_symmetry/overview#ex5){: data-relation="weak" }. Moreover, this isomorphism is now parametrized by the variation of $q=e^{t^1}$, upgrading the previous mirror symmetry at the level of ring isomorphisms.
 :::
 
 Thus a Frobenius manifold provides the stage on which the ring structure of quantum cohomology can be treated consistently as a *function of the deformation parameter $t$*. From the next post onward we can now explore mirror symmetry in earnest.
