@@ -11,7 +11,7 @@ weight: 9
 
 ---
 
-[Sofle](/ko/misc/peripherals/keyboards/sofle)을 통해 스플릿 키보드에 입문한 나는 마침내 Charybdis를 사 버렸다. Charybdis는 Sofle과 같은 스플릿 키보드이지만 (1) 트랙볼이 존재하고, (2) 더 굴곡지다는 점에서 Sofle과 대비된다. 
+[Sofle](/ko/misc/peripherals/keyboards/sofle){: data-relation="weak" }을 통해 스플릿 키보드에 입문한 나는 마침내 Charybdis를 사 버렸다. Charybdis는 Sofle과 같은 스플릿 키보드이지만 (1) 트랙볼이 존재하고, (2) 더 굴곡지다는 점에서 Sofle과 대비된다. 
 
 Charybdis는 원래 [Bastard Keyboards](https://bastardkb.com)에서 나온 키보드인데, 오픈소스라서 [Bastardkb GitHub](https://github.com/Bastardkb)에 가면 기판 설계도와 3D 프린팅 파일들이 있다. 뿌리를 따라 올라가면 Dactyl keyboard의 포크이고, 형제 키보드로는 ([당연히](https://ko.wikipedia.org/wiki/%EC%98%A4%EB%94%94%EC%84%B8%EC%9D%B4%EC%95%84)) Scylla와 Dilemma가 있는데, Scylla는 Charybdis의 우측 thumb cluster 자리에 있는 트랙볼을 없애고, 좌측과 똑같이 5개 키를 넣은 키보드고 Dilemma는 트랙패드를 붙여놓은 물건이다. 
 
