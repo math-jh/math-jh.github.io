@@ -36,11 +36,11 @@ $E_r$ page의 원소들을 평면 상의 점 $(p,q)$로 시각화한다면, $d_r
 
 $$d^n:\bigoplus_{p+q=n}C^{p,q}\rightarrow \bigoplus_{p+q=n+1}C^{p,q}$$
 
-의 각 성분을 세밀하게 분석하는 것처럼 생각할 수 있다. 우리는 이를 분석하여, 최종적으로는 이 total complex의 homology를 계산하는 것이 주된 목적이었는데, 이를 위해 우리는 앞서 [§Ext와 Tor, ⁋명제 3](/ko/math/homological_algebra/ext_and_tor#prop3)의 증명에서 total complex $A^\bullet=\Tot(K)^\bullet$의 horizontal/vertical degree를 이용하여 filtration을 정의했었다. 따라서 우리는 더 일반적으로 *filtered complex*의 개념을 도입해야 한다.
+의 각 성분을 세밀하게 분석하는 것처럼 생각할 수 있다. 우리는 이를 분석하여, 최종적으로는 이 total complex의 homology를 계산하는 것이 주된 목적이었는데, 이를 위해 우리는 앞서 [§Ext와 Tor, ⁋명제 3](/ko/math/homological_algebra/ext_and_tor#prop3){: data-relation="weak" }의 증명에서 total complex $A^\bullet=\Tot(K)^\bullet$의 horizontal/vertical degree를 이용하여 filtration을 정의했었다. 따라서 우리는 더 일반적으로 *filtered complex*의 개념을 도입해야 한다.
 
 ## 여과열
 
-위에서 언급한 것과 같이, 다음의 [정의 2](#def2)는 이보다 아주 일반화된 버전이라 생각할 수 있지만, 어쨌든 complex를 더 세밀하게 쪼갠다는 철학 자체는 동일한 것으로 보아도 좋다.
+위에서 언급한 것과 같이, 다음의 [정의 2](#def2){: data-relation="required" }는 이보다 아주 일반화된 버전이라 생각할 수 있지만, 어쨌든 complex를 더 세밀하게 쪼갠다는 철학 자체는 동일한 것으로 보아도 좋다.
 
 ::: 정의 2
 Cochain complex $A^\bullet$ 위의 *decreasing filtration<sub>감소 여과</sub>* $F$는 다음 조건
@@ -50,7 +50,7 @@ $$\cdots \supset F^{p-1}A^\bullet \supset F^pA^\bullet \supset F^{p+1}A^\bullet 
 을 만족하는 subcomplex들의 열 $(F^p A^\bullet)_p$이다. 이 때, (decreasing) filtration이 주어진 cochain complex를 *filtered complex<sub>여과 복합체</sub>*라 부르고, $(A^\bullet, F)$로 표기한다.
 :::
 
-특히 $F^p A^\bullet$이 $A^\bullet$의 subcomplex라는 가정으로부터 $F^pA^\bullet$은 $A^\bullet$으로부터 differential을 잘 물려받고 이에 대한 cohomology 또한 잘 정의된다. 어쨌든 직관적으로 $p$가 증가함에 따라 $F^p A^\bullet$은 점점 더 작아지며, 각 단계에서 새로운 정보가 추가되는 것으로 이해할 수 있다. 우리는 위의 [§Ext와 Tor, ⁋명제 3](/ko/math/homological_algebra/ext_and_tor#prop3)의 증명에서 귀납법을 적용하기 위해 $F^pA^\bullet/F^{p+1}A^\bullet$을 생각하여 이를 원래의 double complex $K^{p, \bullet-p}$로 생각하였는데, 일반적인 경우에도 이 정보는 <em-ko>정확히</em-ko> $p$번째 filtration을 담는다는 점에서 중요하다. 이렇게 얻어진 cochain complex
+특히 $F^p A^\bullet$이 $A^\bullet$의 subcomplex라는 가정으로부터 $F^pA^\bullet$은 $A^\bullet$으로부터 differential을 잘 물려받고 이에 대한 cohomology 또한 잘 정의된다. 어쨌든 직관적으로 $p$가 증가함에 따라 $F^p A^\bullet$은 점점 더 작아지며, 각 단계에서 새로운 정보가 추가되는 것으로 이해할 수 있다. 우리는 위의 [§Ext와 Tor, ⁋명제 3](/ko/math/homological_algebra/ext_and_tor#prop3){: data-relation="weak" }의 증명에서 귀납법을 적용하기 위해 $F^pA^\bullet/F^{p+1}A^\bullet$을 생각하여 이를 원래의 double complex $K^{p, \bullet-p}$로 생각하였는데, 일반적인 경우에도 이 정보는 <em-ko>정확히</em-ko> $p$번째 filtration을 담는다는 점에서 중요하다. 이렇게 얻어진 cochain complex
 
 $$\gr^p A^\bullet = F^p A^\bullet / F^{p+1} A^\bullet$$
 
@@ -98,7 +98,7 @@ First quadrant spectral sequence, 즉 $p < 0$ 또는 $q < 0$인 $(p,q)$에 대�
 
 ## 여과열과 스펙트럼 열
 
-지금까지 우리는 double complex의 total complex를 생각하고, 여기에 연동된 spectral sequence를 생각하는 식으로 우리의 직관을 만족시켰지만 아직은 이 total complex가 정의하는 spectral sequence가 무엇인지 모른다는 점에서 그 연결고리가 다소 불명확하다. 이번 섹션에서 우리는 임의의 filtered complex로부터 spectral sequence를 구성하는 구체적인 방법을 설명한다. 특히 [§Ext와 Tor, ⁋명제 3](/ko/math/homological_algebra/ext_and_tor#prop3)에서, 양 변의 대상들은 각각 vertical 방향, horizontal 방향으로 걸어둔 filtration이 주는 spectral sequence에 해당하는 것이며, 이것이 같은 대상에 수렴한다는 것이 해당 증명의 기본적인 아이디어이다.
+지금까지 우리는 double complex의 total complex를 생각하고, 여기에 연동된 spectral sequence를 생각하는 식으로 우리의 직관을 만족시켰지만 아직은 이 total complex가 정의하는 spectral sequence가 무엇인지 모른다는 점에서 그 연결고리가 다소 불명확하다. 이번 섹션에서 우리는 임의의 filtered complex로부터 spectral sequence를 구성하는 구체적인 방법을 설명한다. 특히 [§Ext와 Tor, ⁋명제 3](/ko/math/homological_algebra/ext_and_tor#prop3){: data-relation="weak" }에서, 양 변의 대상들은 각각 vertical 방향, horizontal 방향으로 걸어둔 filtration이 주는 spectral sequence에 해당하는 것이며, 이것이 같은 대상에 수렴한다는 것이 해당 증명의 기본적인 아이디어이다.
 
 Filtered complex $(A^\bullet, F)$가 주어졌다 하자. 그럼 우리는 다음의 식
 
@@ -130,7 +130,7 @@ $$d_r^{p,q}([x])=[\dd{x}]\in E_r^{p+r, q-r+1}\tag{$\ast$}$$
 에 의해 정의될 수 있다는 것이다. 특히 ($\ast$)가 알려주는 것은 $d_r$들이 모두 본질적으로는 $d$와 같은 것이며, 그 index $r$은 filtration을 건너뛰는 정도를 측정해주는 데에만 쓰인다는 것이다. 즉 다음이 성립한다.
 
 ::: 명제 7
-Filtered complex $(A^\bullet, F)$로부터 위에서 구성한 $E_r^{p,q}$와 $d_r$은 [정의 1](#def1)의 spectral sequence 조건을 만족한다. 즉 
+Filtered complex $(A^\bullet, F)$로부터 위에서 구성한 $E_r^{p,q}$와 $d_r$은 [정의 1](#def1){: data-relation="required" }의 spectral sequence 조건을 만족한다. 즉 
 
 $$d_r \circ d_r = 0$$
 
@@ -156,7 +156,7 @@ $f$가 chain map이므로 cocycle을 cocycle으로, boundary를 boundary로 보�
 Filtered complex $(A^\bullet, F)$이 *bounded*라는 것은 각각의 $n$마다 $F^pA^n=0$을 만족하는 충분히 큰 $p$와, $F^pA^n=A^n$을 만족하는 충분히 작은 $p$가 존재하는 것이다. 
 :::
 
-즉 [정의 2](#def2)를 degree $n$으로 고정해두고 여기서의 filtration 
+즉 [정의 2](#def2){: data-relation="required" }를 degree $n$으로 고정해두고 여기서의 filtration 
 
 $$\cdots\supset F^{p-1}A^n\supset F^p A^n \supset F^{p+1}A^n\supset\cdots$$
 
@@ -169,12 +169,12 @@ $$E_\infty^{p,q}\cong F^p H^{p+q}(A^\bullet)/F^{p+1}H^{p+q}(A^\bullet)$$
 임을 보일 수 있고, 이로부터 다음의 결과를 얻는다. 
 
 ::: 명제 10
-Bounded filtered complex $(A^\bullet, F)$가 주어졌다 하고, 이것이 정의하는 spectral sequence $(E_r^{p,q})$가 주어졌다 하자. 그럼 $(E_r^{p,q})$는 [정의 3](#def3)의 filtered graded object $(H^\bullet, F)$에 수렴한다. 즉 $E_r^{p,q}\Rightarrow H^{p+q}(A^\bullet)$이다. 
+Bounded filtered complex $(A^\bullet, F)$가 주어졌다 하고, 이것이 정의하는 spectral sequence $(E_r^{p,q})$가 주어졌다 하자. 그럼 $(E_r^{p,q})$는 [정의 3](#def3){: data-relation="required" }의 filtered graded object $(H^\bullet, F)$에 수렴한다. 즉 $E_r^{p,q}\Rightarrow H^{p+q}(A^\bullet)$이다. 
 :::
 
 ## 이중열의 스펙트럼 열
 
-우리는 지금까지 $\Ext$와 $\Tor$의 balancing을 증명했던 [§Ext와 Tor, ⁋명제 3](/ko/math/homological_algebra/ext_and_tor#prop3)을 우리 이론의 motivation으로 삼았다. 우리는 이 글의 마지막을 double sequence로부터 정의되는 spectral sequence를 살펴보며 마무리한다. 
+우리는 지금까지 $\Ext$와 $\Tor$의 balancing을 증명했던 [§Ext와 Tor, ⁋명제 3](/ko/math/homological_algebra/ext_and_tor#prop3){: data-relation="weak" }을 우리 이론의 motivation으로 삼았다. 우리는 이 글의 마지막을 double sequence로부터 정의되는 spectral sequence를 살펴보며 마무리한다. 
 
 ::: 예시 11
 임의의 double complex $K^{p,q}$의 total complex $\Tot(K)^\bullet$을 생각하자. 이 total complex에 두 가지 방식으로 filtration을 걸 수 있다. 
@@ -206,7 +206,7 @@ $$E_1^{p,q} = H^q_v(K^{p,\bullet})$$
 이며, $d_1$은 horizontal differential $d_h$에 의해 유도된다. 
 :::
 
-특별히 $K^{p,q}$가 first quadrant double complex라 하자. 그럼 두 filtration이 모두 bounded filtered complex를 정의하므로, [명제 10](#prop10)에 의해 각각의 spectral sequence는 $H^\bullet(\Tot(K))$에 수렴한다. 이로부터 우리는 [§Ext와 Tor, ⁋명제 3](/ko/math/homological_algebra/ext_and_tor#prop3)의 증명을 더 fancy한 언어로 다시 복원해낼 수 있다. 
+특별히 $K^{p,q}$가 first quadrant double complex라 하자. 그럼 두 filtration이 모두 bounded filtered complex를 정의하므로, [명제 10](#prop10){: data-relation="required" }에 의해 각각의 spectral sequence는 $H^\bullet(\Tot(K))$에 수렴한다. 이로부터 우리는 [§Ext와 Tor, ⁋명제 3](/ko/math/homological_algebra/ext_and_tor#prop3){: data-relation="weak" }의 증명을 더 fancy한 언어로 다시 복원해낼 수 있다. 
 
 ---
 

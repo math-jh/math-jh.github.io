@@ -35,11 +35,11 @@ Drawing on our experience, if we view a spectral sequence as arising from the to
 
 $$d^n:\bigoplus_{p+q=n}C^{p,q}\rightarrow \bigoplus_{p+q=n+1}C^{p,q}$$
 
-We analyzed this, and our main goal was ultimately to compute the homology of this total complex. Toward this end, in the proof of [§Ext and Tor, ⁋Proposition 3](/en/math/homological_algebra/ext_and_tor#prop3) we defined a filtration using the horizontal and vertical degrees of the total complex $A^\bullet=\Tot(K)^\bullet$. Thus we need to introduce the notion of a *filtered complex* in greater generality.
+We analyzed this, and our main goal was ultimately to compute the homology of this total complex. Toward this end, in the proof of [§Ext and Tor, ⁋Proposition 3](/en/math/homological_algebra/ext_and_tor#prop3){: data-relation="required" } we defined a filtration using the horizontal and vertical degrees of the total complex $A^\bullet=\Tot(K)^\bullet$. Thus we need to introduce the notion of a *filtered complex* in greater generality.
 
 ## Filtrations
 
-As mentioned above, the following [Definition 2](#def2) is a much more general version, but the philosophy of decomposing a complex more finely remains essentially the same.
+As mentioned above, the following [Definition 2](#def2){: data-relation="required" } is a much more general version, but the philosophy of decomposing a complex more finely remains essentially the same.
 
 ::: Definition 2
 A *decreasing filtration* $F$ on a cochain complex $A^\bullet$ is a sequence of subcomplexes $(F^p A^\bullet)_p$ satisfying
@@ -49,7 +49,7 @@ $$\cdots \supset F^{p-1}A^\bullet \supset F^pA^\bullet \supset F^{p+1}A^\bullet 
 A cochain complex equipped with a (decreasing) filtration is called a *filtered complex*, denoted $(A^\bullet, F)$.
 :::
 
-In particular, since each $F^p A^\bullet$ is a subcomplex of $A^\bullet$, the differential of $A^\bullet$ restricts to $F^pA^\bullet$ and the cohomology with respect to this restricted differential is well defined. Intuitively, as $p$ increases, $F^p A^\bullet$ becomes smaller, and one can understand that new information is added at each stage. In the proof of [§Ext and Tor, ⁋Proposition 3](/en/math/homological_algebra/ext_and_tor#prop3) above, we considered $F^pA^\bullet/F^{p+1}A^\bullet$ in order to apply induction and identified this with the original double complex $K^{p, \bullet-p}$; in the general case too, this information is important in that it *exactly* captures the $p$-th filtration step. The cochain complex obtained in this way,
+In particular, since each $F^p A^\bullet$ is a subcomplex of $A^\bullet$, the differential of $A^\bullet$ restricts to $F^pA^\bullet$ and the cohomology with respect to this restricted differential is well defined. Intuitively, as $p$ increases, $F^p A^\bullet$ becomes smaller, and one can understand that new information is added at each stage. In the proof of [§Ext and Tor, ⁋Proposition 3](/en/math/homological_algebra/ext_and_tor#prop3){: data-relation="required" } above, we considered $F^pA^\bullet/F^{p+1}A^\bullet$ in order to apply induction and identified this with the original double complex $K^{p, \bullet-p}$; in the general case too, this information is important in that it *exactly* captures the $p$-th filtration step. The cochain complex obtained in this way,
 
 $$\gr^p A^\bullet = F^p A^\bullet / F^{p+1} A^\bullet$$
 
@@ -95,7 +95,7 @@ A first quadrant spectral sequence, i.e., one for which $E_r^{p,q} = 0$ whenever
 
 ## Filtrations and Spectral Sequences
 
-Until now, we have guided our intuition by thinking of the total complex of a double complex and the spectral sequence associated to it, but the connection remains somewhat unclear because we have not yet identified the spectral sequence that this total complex actually defines. In this section we explain the concrete construction of a spectral sequence from an arbitrary filtered complex. In particular, in the proof of [§Ext and Tor, ⁋Proposition 3](/en/math/homological_algebra/ext_and_tor#prop3), the objects on the two sides correspond to the spectral sequences arising from the filtrations taken in the vertical and horizontal directions, respectively, and the basic idea of the proof is that these converge to the same object.
+Until now, we have guided our intuition by thinking of the total complex of a double complex and the spectral sequence associated to it, but the connection remains somewhat unclear because we have not yet identified the spectral sequence that this total complex actually defines. In this section we explain the concrete construction of a spectral sequence from an arbitrary filtered complex. In particular, in the proof of [§Ext and Tor, ⁋Proposition 3](/en/math/homological_algebra/ext_and_tor#prop3){: data-relation="weak" }, the objects on the two sides correspond to the spectral sequences arising from the filtrations taken in the vertical and horizontal directions, respectively, and the basic idea of the proof is that these converge to the same object.
 
 Let $(A^\bullet, F)$ be a filtered complex. We construct the $E_0$ page directly by the formula
 
@@ -127,7 +127,7 @@ Of course, verifying that this correspondence is well defined and actually defin
 In particular, what ($\ast$) reveals is that all the $d_r$ are essentially the same map as $d$, and the index $r$ serves only to measure how far across the filtration one jumps. That is, the following holds.
 
 ::: Proposition 7
-The $E_r^{p,q}$ and $d_r$ constructed from a filtered complex $(A^\bullet, F)$ as above satisfy the conditions of a spectral sequence in [Definition 1](#def1). Namely,
+The $E_r^{p,q}$ and $d_r$ constructed from a filtered complex $(A^\bullet, F)$ as above satisfy the conditions of a spectral sequence in [Definition 1](#def1){: data-relation="required" }. Namely,
 
 $$d_r \circ d_r = 0$$
 
@@ -153,7 +153,7 @@ Our core result is that this spectral sequence actually reaches the cohomology o
 A filtered complex $(A^\bullet, F)$ is *bounded* if for each $n$ there exists a sufficiently large $p$ with $F^pA^n=0$, and a sufficiently small $p$ with $F^pA^n=A^n$.
 :::
 
-That is, fixing [Definition 2](#def2) in degree $n$ and considering the filtration
+That is, fixing [Definition 2](#def2){: data-relation="required" } in degree $n$ and considering the filtration
 
 $$\cdots\supset F^{p-1}A^n\supset \cdots F^p A^n \supset \cdots F^{p+1}A^n\supset\cdots$$
 
@@ -166,12 +166,12 @@ $$E_\infty^{p,q}\cong F^p H^{p+q}(A^\bullet)/F^{p+1}H^{p+q}(A^\bullet)$$
 and from this we obtain the following result.
 
 ::: Proposition 10
-Let $(A^\bullet, F)$ be a bounded filtered complex, and let $(E_r^{p,q})$ be the spectral sequence it defines. Then $(E_r^{p,q})$ converges to the filtered graded object $(H^\bullet, F)$ of [Definition 3](#def3). That is, $E_r^{p,q}\Rightarrow H^{p+q}(A^\bullet)$.
+Let $(A^\bullet, F)$ be a bounded filtered complex, and let $(E_r^{p,q})$ be the spectral sequence it defines. Then $(E_r^{p,q})$ converges to the filtered graded object $(H^\bullet, F)$ of [Definition 3](#def3){: data-relation="required" }. That is, $E_r^{p,q}\Rightarrow H^{p+q}(A^\bullet)$.
 :::
 
 ## Spectral Sequences of Double Complexes
 
-We have taken the proof of the balancing of $\Ext$ and $\Tor$ in [§Ext and Tor, ⁋Proposition 3](/en/math/homological_algebra/ext_and_tor#prop3) as the motivation for our theory. We close this post by examining the spectral sequence defined from a double complex.
+We have taken the proof of the balancing of $\Ext$ and $\Tor$ in [§Ext and Tor, ⁋Proposition 3](/en/math/homological_algebra/ext_and_tor#prop3){: data-relation="weak" } as the motivation for our theory. We close this post by examining the spectral sequence defined from a double complex.
 
 ::: Example 11
 Consider the total complex $\Tot(K)^\bullet$ of an arbitrary double complex $K^{p,q}$. We can equip this total complex with a filtration in two ways.
@@ -203,7 +203,7 @@ $$E_1^{p,q} = H^p_h(K^{\bullet, q})$$
 and $d_1$ is induced by the vertical differential $d_v$.
 :::
 
-In particular, let $K^{p,q}$ be a first quadrant double complex. Then both filtrations define bounded filtered complexes, so by [Proposition 10](#prop10) each spectral sequence converges to $H^\bullet(\Tot(K))$. From this we can reconstruct the proof of [§Ext and Tor, ⁋Proposition 3](/en/math/homological_algebra/ext_and_tor#prop3) in fancier language.
+In particular, let $K^{p,q}$ be a first quadrant double complex. Then both filtrations define bounded filtered complexes, so by [Proposition 10](#prop10){: data-relation="required" } each spectral sequence converges to $H^\bullet(\Tot(K))$. From this we can reconstruct the proof of [§Ext and Tor, ⁋Proposition 3](/en/math/homological_algebra/ext_and_tor#prop3){: data-relation="weak" } in fancier language.
 
 ---
 
