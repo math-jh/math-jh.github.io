@@ -87,7 +87,7 @@ $$\dd{F_p}(v)=(F\circ\gamma)'(0).$$
 
 ## Tangent Spaces of Vector Spaces
 
-In [§Examples of Differentiable Manifolds, ⁋Example 2](/en/math/manifolds/examples_of_manifolds#ex2), we saw that any $m$-dimensional $\mathbb{R}$-vector space $V$ carries the structure of an $m$-dimensional manifold. Hence for any point $x\in V$, the tangent space $T_xV$ at $x$ has the same dimension as the manifold $V$, so $\dim T_xV=m$. Therefore $V\cong T_xV$.
+In [§Examples of Differentiable Manifolds, ⁋Example 2](/en/math/manifolds/examples_of_manifolds#ex2){: data-relation="required" }, we saw that any $m$-dimensional $\mathbb{R}$-vector space $V$ carries the structure of an $m$-dimensional manifold. Hence for any point $x\in V$, the tangent space $T_xV$ at $x$ has the same dimension as the manifold $V$, so $\dim T_xV=m$. Therefore $V\cong T_xV$.
 
 This can be seen from the fact that in Euclidean space, the standard basis vectors of $\mathbb{R}^m$ and the bases
 
@@ -132,7 +132,7 @@ On the other hand, following $V\rightarrow T_xV\rightarrow T_{L(x)}W$, we first 
 
 $$v\mapsto D_v\vert_x$$
 
-via $V\rightarrow T_xV$, and then using $\gamma(t)=x+tv$ and [Proposition 3](#prop3) we get
+via $V\rightarrow T_xV$, and then using $\gamma(t)=x+tv$ and [Proposition 3](#prop3){: data-relation="required" } we get
 
 $$\dd{L_x}(D_v\vert_x)=(L\circ \gamma)'(0).$$
 
@@ -159,7 +159,7 @@ In particular, for the open submanifold $\GL(n;\mathbb{R})$ of $\Mat_n(\mathbb{R
 
 ## Tangent Covectors
 
-Let $M$ be an arbitrary manifold and $f:M\rightarrow\mathbb{R}$ a $C^\infty$ function. Then for every point $p\in M$, the differential $\dd{f_p}:T_pM\rightarrow T_{f(p)}\mathbb{R}$ is well defined. By [Proposition 4](#prop4), there exists an isomorphism between $\mathbb{R}$ and its tangent space $T_{f(p)}\mathbb{R}$ as 1-dimensional $\mathbb{R}$-vector spaces. Thus, via
+Let $M$ be an arbitrary manifold and $f:M\rightarrow\mathbb{R}$ a $C^\infty$ function. Then for every point $p\in M$, the differential $\dd{f_p}:T_pM\rightarrow T_{f(p)}\mathbb{R}$ is well defined. By [Proposition 4](#prop4){: data-relation="required" }, there exists an isomorphism between $\mathbb{R}$ and its tangent space $T_{f(p)}\mathbb{R}$ as 1-dimensional $\mathbb{R}$-vector spaces. Thus, via
 
 $$T_pM\overset{\dd{f_p}}{\longrightarrow}T_{f(p)}\mathbb{R}\overset{\sim}{\longrightarrow}\mathbb{R}$$
 
@@ -192,7 +192,7 @@ It suffices to show that the $\dd{x}^i$ satisfy equation (1). By definition,
 $$\dd{x}^i\vert_p\left(\frac{\partial}{\partial x^j}\bigg\vert_p\right)=\frac{\partial}{\partial x^j}\bigg\vert_p x^i=\delta_{ij}.$$
 :::
 
-This proof becomes more transparent if we recall [§Cotangent Space, ⁋Lemma 1](/en/math/manifolds/cotangent_space#lem1), proved when we first introduced the tangent space. That is, passing from the first equality to the second is by definition of the differential $\dd{x}^i\vert_p$, but simultaneously it is the process of naturally identifying the double dual of the finite-dimensional $\mathbb{R}$-vector space $\mathfrak{m}_p/\mathfrak{m}^2_p$ with itself via
+This proof becomes more transparent if we recall [§Cotangent Space, ⁋Lemma 1](/en/math/manifolds/cotangent_space#lem1){: data-relation="weak" }, proved when we first introduced the tangent space. That is, passing from the first equality to the second is by definition of the differential $\dd{x}^i\vert_p$, but simultaneously it is the process of naturally identifying the double dual of the finite-dimensional $\mathbb{R}$-vector space $\mathfrak{m}_p/\mathfrak{m}^2_p$ with itself via
 
 $$T_p^\ast M\cong (\mathfrak{m}_p/\mathfrak{m}_p^2)^{\ast\ast}\cong\mathfrak{m}_p/\mathfrak{m}^2_p.$$
 
@@ -206,4 +206,4 @@ $$T_p^\ast M\cong (\mathfrak{m}_p/\mathfrak{m}_p^2)^{\ast\ast}\cong\mathfrak{m}_
 ---
 
 [^1]: More precisely, we must impose an equivalence relation by treating curves having the same velocity vector at the point $p$ as identical.
-[^2]: By [Proposition 2](#prop2), at least one such curve exists.
+[^2]: By [Proposition 2](#prop2){: data-relation="required" }, at least one such curve exists.

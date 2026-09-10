@@ -92,7 +92,7 @@ $$\dd{F_p}(v)=(F\circ\gamma)'(0)$$
 
 ## 벡터공간의 접공간
 
-우리는 앞서 [§미분다양체의 예시들, ⁋예시 2](/ko/math/manifolds/examples_of_manifolds#ex2)에서 임의의 $m$차원 $\mathbb{R}$-벡터공간 $V$가 $m$차원의 manifold 구조를 갖는다는 것을 살펴봤다. 그럼 임의의 점 $x\in V$에 대하여, 점 $x$에서의 tangent space $T_xV$ 또한 manifold $V$의 차원과 동일한 차원을 가지므로 $\dim T_xV=m$이 성립한다. 따라서 $V\cong T_xV$가 성립해야 한다. 
+우리는 앞서 [§미분다양체의 예시들, ⁋예시 2](/ko/math/manifolds/examples_of_manifolds#ex2){: data-relation="required" }에서 임의의 $m$차원 $\mathbb{R}$-벡터공간 $V$가 $m$차원의 manifold 구조를 갖는다는 것을 살펴봤다. 그럼 임의의 점 $x\in V$에 대하여, 점 $x$에서의 tangent space $T_xV$ 또한 manifold $V$의 차원과 동일한 차원을 가지므로 $\dim T_xV=m$이 성립한다. 따라서 $V\cong T_xV$가 성립해야 한다. 
 
 이는 본질적으로 유클리드 공간에서 $\mathbb{R}^m$의 표준벡터들과, $T_x\mathbb{R}^m$의 basis들
 
@@ -137,7 +137,7 @@ $$v\mapsto L(v)\mapsto D_{L(v)}\vert_{L(x)}$$
 
 $$v\mapsto D_v\vert_x$$
 
-를 얻고, 이후에는 $\gamma(t)=x+tv$를 이용해 [명제 3](#prop3)을 사용하면
+를 얻고, 이후에는 $\gamma(t)=x+tv$를 이용해 [명제 3](#prop3){: data-relation="required" }을 사용하면
 
 $$\dd{L_x}(D_v\vert_x)=(L\circ \gamma)'(0)$$
 
@@ -166,7 +166,7 @@ $n\times n$ 행렬들의 모임 $\Mat_n(\mathbb{R})$은 $n^2$차원 $\mathbb{R}$
 
 ## Tangent covector
 
-임의의 manifold $M$과 $C^\infty$ 함수 $f:M\rightarrow\mathbb{R}$이 주어졌다 하자. 그럼 임의의 점 $p\in M$마다 differential $\dd{f_p}:T_pM\rightarrow T_{f(p)}\mathbb{R}$이 잘 정의된다. 앞선 [명제 4](#prop4)에 의하여, 1차원 $\mathbb{R}$-벡터공간으로서 $\mathbb{R}$과 그 tangent space $T_{f(p)}\mathbb{R}$ 사이의 isomorphism이 존재한다. 그럼 이제
+임의의 manifold $M$과 $C^\infty$ 함수 $f:M\rightarrow\mathbb{R}$이 주어졌다 하자. 그럼 임의의 점 $p\in M$마다 differential $\dd{f_p}:T_pM\rightarrow T_{f(p)}\mathbb{R}$이 잘 정의된다. 앞선 [명제 4](#prop4){: data-relation="required" }에 의하여, 1차원 $\mathbb{R}$-벡터공간으로서 $\mathbb{R}$과 그 tangent space $T_{f(p)}\mathbb{R}$ 사이의 isomorphism이 존재한다. 그럼 이제
 
 $$T_pM\overset{\dd{f_p}}{\longrightarrow}T_{f(p)}\mathbb{R}\overset{\sim}{\longrightarrow}\mathbb{R}$$
 
@@ -201,7 +201,7 @@ $$\dd{x}^i\vert_p\left(\frac{\partial}{\partial x^j}\bigg\vert_p\right)=\frac{\p
 가 성립한다. 
 :::
 
-위 증명은 우리가 tangent space를 처음 도입할 때 증명했던 [§여접공간, ⁋보조정리 1](/ko/math/manifolds/cotangent_space#lem1)을 떠올리면 좀 더 그럴듯하다. 즉 첫째 등식에서 둘째 식으로 넘어가는 것은 differential $\dd{x}^i\vert_p$의 정의이기도 하지만, 동시에 
+위 증명은 우리가 tangent space를 처음 도입할 때 증명했던 [§여접공간, ⁋보조정리 1](/ko/math/manifolds/cotangent_space#lem1){: data-relation="weak" }을 떠올리면 좀 더 그럴듯하다. 즉 첫째 등식에서 둘째 식으로 넘어가는 것은 differential $\dd{x}^i\vert_p$의 정의이기도 하지만, 동시에 
 
 $$T_p^\ast M\cong (\mathfrak{m}_p/\mathfrak{m}_p^2)^{\ast\ast}\cong\mathfrak{m}_p/\mathfrak{m}^2_p$$
 
@@ -218,4 +218,4 @@ $$T_p^\ast M\cong (\mathfrak{m}_p/\mathfrak{m}_p^2)^{\ast\ast}\cong\mathfrak{m}_
 ---
 
 [^1]: 더 정확하게는 점 $p$에서 같은 속도벡터를 갖는 곡선들은 동일하게 취급하여 equivalence relation을 주어야 한다.
-[^2]: [명제 2](#prop2)에 의해 이러한 곡선은 적어도 하나 존재한다.
+[^2]: [명제 2](#prop2){: data-relation="required" }에 의해 이러한 곡선은 적어도 하나 존재한다.
