@@ -26,7 +26,7 @@ Field $A/\mathfrak{m}$는 algebraically closed field $\mathbb{K}$의 finite degr
 
 $$A \rightarrow \mathfrak{m}/\mathfrak{m}^2;\qquad a\mapsto a-\lambda$$
 
-으로 정의된 함수 $D:A \rightarrow \mathfrak{m}/\mathfrak{m}^2$이 $\mathbb{K}$-derivation이 되는 것이 자명하다. 이제 [\[다중선형대수학\] §미분가군, ⁋명제 8](/ko/math/multilinear_algebra/differential_modules#prop8)의 universal property로부터 $D$는 반드시 $\Omega_{A/\mathbb{K}}$를 factor through 해야 하고, 가정에 의해 이것이 $0$이므로 $D=0$이어야 한다. 
+으로 정의된 함수 $D:A \rightarrow \mathfrak{m}/\mathfrak{m}^2$이 $\mathbb{K}$-derivation이 되는 것이 자명하다. 이제 [\[다중선형대수학\] §미분가군, ⁋명제 8](/ko/math/multilinear_algebra/differential_modules#prop8){: data-relation="required" }의 universal property로부터 $D$는 반드시 $\Omega_{A/\mathbb{K}}$를 factor through 해야 하고, 가정에 의해 이것이 $0$이므로 $D=0$이어야 한다. 
 :::
 
 Étale algebra에 대한 우리의 characterization을 위해서는 위의 보조정리의 결과로부터 출발하는 다음의 보조정리를 보여야 한다. 
@@ -54,29 +54,29 @@ $$NM=(\det M) I_r$$
 Finite degree commutative $\mathbb{K}$-algebra $A$에 대하여, $A$가 étale인 것과 $\Omega_{A/\mathbb{K}}=0$인 것이 동치이다. 
 :::
 ::: 증명
-우선 $\Omega_{A/\mathbb{K}}$와 étale algebra의 개념은 base change에 대해 잘 행동하므로 우리는 $\mathbb{K}$가 algebraically closed라 가정해도 된다. 더 정확히 말해, $A$가 étale인 것은 $\mathbb{K}$의 algebraic closure $\overline{\mathbb{K}}$에 대해 $\overline{\mathbb{K}}$-algebra $A_{(\overline{\mathbb{K}})}=A\otimes_\mathbb{K}\overline{\mathbb{K}}$이 diagonalizable인 것과 동치이며 ([§에탈대수, ⁋명제 8](/ko/math/field_theory/etale_algebras#prop8)), 한편 [\[다중선형대수학\] §미분가군, ⁋명제 12](/ko/math/multilinear_algebra/differential_modules#prop12)의 canonical isomorphism과 $\overline{\mathbb{K}}$-algebra $A_{(\overline{\mathbb{K}})}$의 정의에 의하여 다음의 isomorphism
+우선 $\Omega_{A/\mathbb{K}}$와 étale algebra의 개념은 base change에 대해 잘 행동하므로 우리는 $\mathbb{K}$가 algebraically closed라 가정해도 된다. 더 정확히 말해, $A$가 étale인 것은 $\mathbb{K}$의 algebraic closure $\overline{\mathbb{K}}$에 대해 $\overline{\mathbb{K}}$-algebra $A_{(\overline{\mathbb{K}})}=A\otimes_\mathbb{K}\overline{\mathbb{K}}$이 diagonalizable인 것과 동치이며 ([§에탈대수, ⁋명제 8](/ko/math/field_theory/etale_algebras#prop8){: data-relation="required" }), 한편 [\[다중선형대수학\] §미분가군, ⁋명제 12](/ko/math/multilinear_algebra/differential_modules#prop12){: data-relation="required" }의 canonical isomorphism과 $\overline{\mathbb{K}}$-algebra $A_{(\overline{\mathbb{K}})}$의 정의에 의하여 다음의 isomorphism
 
 $$\Omega_{A_{(\overline{\mathbb{K}})}/\overline{\mathbb{K}}}\cong \Omega_{A/\mathbb{K}}\otimes_A A_{(\overline{\mathbb{K}})}=\Omega_{A/\mathbb{K}}\otimes_A A\otimes_\mathbb{K}\overline{\mathbb{K}}\cong \Omega_{A/\mathbb{K}}\otimes_\mathbb{K}\overline{\mathbb{K}}$$
 
 을 얻고, 따라서 $\Omega_{A/\mathbb{K}}=0$인 것과 $\Omega_{A_{(\overline{\mathbb{K}})}/\overline{\mathbb{K}}}=0$인 것이 동치이다. 즉, 주어진 정리를 증명하는 것은 $\mathbb{K}$가 algebraically closed라 가정하고, $A$가 diagonalizable인 것과 $\Omega_{A/\mathbb{K}}=0$인 것이 동치임을 보이면 된다. 
 
-우선 $A$가 diagonalizable이라 가정하면, $A$는 [§에탈대수, ⁋명제 6](/ko/math/field_theory/etale_algebras#prop6)의 둘째 조건에 의하여 idempotent들로 생성된다. 그런데 임의의 idempotent $e$에 대하여, Leibniz rule을 생각하면
+우선 $A$가 diagonalizable이라 가정하면, $A$는 [§에탈대수, ⁋명제 6](/ko/math/field_theory/etale_algebras#prop6){: data-relation="required" }의 둘째 조건에 의하여 idempotent들로 생성된다. 그런데 임의의 idempotent $e$에 대하여, Leibniz rule을 생각하면
 
 $$\dd{(e)}=\dd{(e^2)}=e\dd{(e)}+e\dd{(e)}=2e\dd{(e)}$$
 
-이고 양 변에 $e$를 곱하면 $e\dd{(e)}=0$이어야 하므로, 이를 다시 위에 대입하면 $\dd{e}=0$이어야 함을 안다. 한편 명시적으로 $\Omega_{A/\mathbb{K}}$는 이러한 원소들 $\dd{e}$로 생성되는 free module에 적절한 relation들로 자른 것으로 나타나므로 ([\[다중선형대수학\] §미분가군, ⁋예시 10](/ko/math/multilinear_algebra/differential_modules#ex10)) 이로부터 $\Omega_{A/\mathbb{K}}=0$이어야 함을 안다. 
+이고 양 변에 $e$를 곱하면 $e\dd{(e)}=0$이어야 하므로, 이를 다시 위에 대입하면 $\dd{e}=0$이어야 함을 안다. 한편 명시적으로 $\Omega_{A/\mathbb{K}}$는 이러한 원소들 $\dd{e}$로 생성되는 free module에 적절한 relation들로 자른 것으로 나타나므로 ([\[다중선형대수학\] §미분가군, ⁋예시 10](/ko/math/multilinear_algebra/differential_modules#ex10){: data-relation="required" }) 이로부터 $\Omega_{A/\mathbb{K}}=0$이어야 함을 안다. 
 
-이제 거꾸로 $\Omega_{A/\mathbb{K}}=0$이라 가정하고 $A$가 diagonalizable임을 보이자. $A$의 degree에 대한 귀납법으로 진행하며, degree $1$인 경우는 자명하다. 이제 일반적인 경우에 $A$의 maximal ideal $\mathfrak{m}$을 하나 택하자. 그럼 [보조정리 1](#lem1)에 의하여 $\mathfrak{m}=\mathfrak{m}^2$이고, 따라서 [보조정리 2](#lem2)를 적용하면 $\mathfrak{m}=Ae$이도록 하는 idempotent $e$를 찾을 수 있다. 한편, 이로부터 $A$를 $\mathfrak{a}=(1-e)A$와 $\mathfrak{m}$의 direct sum으로 쪼개놓으면  $\mathbb{K}$가 algebraically closed라는 가정으로부터 extension $A/\mathfrak{m}$이 degree $1$이어야 함을 안다. 즉, 이 direct sum을 
+이제 거꾸로 $\Omega_{A/\mathbb{K}}=0$이라 가정하고 $A$가 diagonalizable임을 보이자. $A$의 degree에 대한 귀납법으로 진행하며, degree $1$인 경우는 자명하다. 이제 일반적인 경우에 $A$의 maximal ideal $\mathfrak{m}$을 하나 택하자. 그럼 [보조정리 1](#lem1){: data-relation="required" }에 의하여 $\mathfrak{m}=\mathfrak{m}^2$이고, 따라서 [보조정리 2](#lem2){: data-relation="required" }를 적용하면 $\mathfrak{m}=Ae$이도록 하는 idempotent $e$를 찾을 수 있다. 한편, 이로부터 $A$를 $\mathfrak{a}=(1-e)A$와 $\mathfrak{m}$의 direct sum으로 쪼개놓으면  $\mathbb{K}$가 algebraically closed라는 가정으로부터 extension $A/\mathfrak{m}$이 degree $1$이어야 함을 안다. 즉, 이 direct sum을 
 
 $$A\cong \mathfrak{a}\oplus\mathfrak{m}\cong \mathbb{K}\times A/\mathfrak{a}$$
 
-으로 적을 수 있다. 이제 $\Omega$가 right exact functor이므로 ([\[다중선형대수학\] §미분가군, ⁋명제 13](/ko/math/multilinear_algebra/differential_modules#prop13)) $\Omega_{(A/\mathfrak{a})/\mathbb{K}}$는 $\Omega_{A/\mathbb{K}}=0$의 quotient가 되어 $0$이다. 따라서, $A/\mathfrak{a}$는 귀납적 가정에 의하여 diagonalizable이고, 이를 $\mathbb{K}$와 곱한 $A$ 또한 마찬가지이다. 
+으로 적을 수 있다. 이제 $\Omega$가 right exact functor이므로 ([\[다중선형대수학\] §미분가군, ⁋명제 13](/ko/math/multilinear_algebra/differential_modules#prop13){: data-relation="required" }) $\Omega_{(A/\mathfrak{a})/\mathbb{K}}$는 $\Omega_{A/\mathbb{K}}=0$의 quotient가 되어 $0$이다. 따라서, $A/\mathfrak{a}$는 귀납적 가정에 의하여 diagonalizable이고, 이를 $\mathbb{K}$와 곱한 $A$ 또한 마찬가지이다. 
 :::
 
-앞서 우리는 [§순수비분리확대체, ⁋예시 9](/ko/math/field_theory/purely_inseparable_extensions#ex9)에서 Galois 이론을 전개할 때 문제가 될 수 있는 상황을 살펴보았었는데, 이 예시를 바탕으로 [정리 3](#thm3)을 살펴보자. 
+앞서 우리는 [§순수비분리확대체, ⁋예시 9](/ko/math/field_theory/purely_inseparable_extensions#ex9){: data-relation="weak" }에서 Galois 이론을 전개할 때 문제가 될 수 있는 상황을 살펴보았었는데, 이 예시를 바탕으로 [정리 3](#thm3){: data-relation="required" }을 살펴보자. 
 
 ::: 예시 4
-좋은 경우는, [§순수비분리확대체](/ko/math/field_theory/purely_inseparable_extensions)의 서두에서 살펴보았듯, $\mathbb{Q}(\sqrt{2})/\mathbb{Q}$가 있다. 우리는 [\[다중선형대수학\] §미분가군, ⁋예시 10](/ko/math/multilinear_algebra/differential_modules#ex10)의 계산으로부터, $\Omega_{\mathbb{Q}[\x]/\mathbb{Q}}$는 $\dd{\x}$로 생성되는 free $\mathbb{Q}[\x]$-module임을 안다. 한편 $\mathbb{Q}[\x]$의 ideal $\mathfrak{I}=(\x^2-2)$를 생각하면 [\[다중선형대수학\] §미분가군, ⁋명제 14](/ko/math/multilinear_algebra/differential_modules#prop14)로부터 다음의 exact sequence
+좋은 경우는, [§순수비분리확대체](/ko/math/field_theory/purely_inseparable_extensions){: data-relation="weak" }의 서두에서 살펴보았듯, $\mathbb{Q}(\sqrt{2})/\mathbb{Q}$가 있다. 우리는 [\[다중선형대수학\] §미분가군, ⁋예시 10](/ko/math/multilinear_algebra/differential_modules#ex10){: data-relation="required" }의 계산으로부터, $\Omega_{\mathbb{Q}[\x]/\mathbb{Q}}$는 $\dd{\x}$로 생성되는 free $\mathbb{Q}[\x]$-module임을 안다. 한편 $\mathbb{Q}[\x]$의 ideal $\mathfrak{I}=(\x^2-2)$를 생각하면 [\[다중선형대수학\] §미분가군, ⁋명제 14](/ko/math/multilinear_algebra/differential_modules#prop14){: data-relation="required" }로부터 다음의 exact sequence
 
 $$\mathfrak{I}/\mathfrak{I}^2\overset{\overline{d}}{\longrightarrow}\Omega_{\mathbb{Q}[\x]/\mathbb{Q}}\otimes_{\mathbb{Q}[\x]}\mathbb{Q}(\sqrt{2})\overset{\Omega_0(u)}{\longrightarrow}\Omega_{\mathbb{Q}(\sqrt{2})/\mathbb{Q}}\longrightarrow 0$$
 
@@ -86,7 +86,7 @@ $$0=\dd{(2)}=\dd{((\sqrt{2})^2)}=2\sqrt{2}\dd{(\sqrt{2})}$$
 
 와 $2\sqrt{2}$가 $\mathbb{Q}(\sqrt{2})$에서 invertible이라는 사실로부터 $\dd{(\sqrt{2})}=0$이어야 하고 따라서 $\Omega_{\mathbb{Q}(\sqrt{2})/\mathbb{Q}}=0$이어야 함을 안다. 
 
-반면 [§순수비분리확대체, ⁋예시 9](/ko/math/field_theory/purely_inseparable_extensions#ex9)에서 살펴본 $\mathbb{K}=\mathbb{F}_p(t)$의 algebraic extension $\mathbb{K}(t^{1/p})=\mathbb{K}[\x]/(\x^p-t)$에서는 위의 계산이 틀어지게 되는데, 위의 계산과 마찬가지로 $\Omega_{\mathbb{K}(t^{1/p})/\mathbb{K}}$는 $\dd{(t^{1/p})}$로 생성되는 $\mathbb{K}(t^{1/p})$-module이지만, 다음의 계산
+반면 [§순수비분리확대체, ⁋예시 9](/ko/math/field_theory/purely_inseparable_extensions#ex9){: data-relation="weak" }에서 살펴본 $\mathbb{K}=\mathbb{F}_p(t)$의 algebraic extension $\mathbb{K}(t^{1/p})=\mathbb{K}[\x]/(\x^p-t)$에서는 위의 계산이 틀어지게 되는데, 위의 계산과 마찬가지로 $\Omega_{\mathbb{K}(t^{1/p})/\mathbb{K}}$는 $\dd{(t^{1/p})}$로 생성되는 $\mathbb{K}(t^{1/p})$-module이지만, 다음의 계산
 
 $$0=\dd{(t)}=\dd{((t^{1/p})^p)}=p(t^{1/p})^{p-1}\dd{(t^{1/p})}$$
 
@@ -97,7 +97,7 @@ $$\Omega_{(\mathbb{K}[\x]/(f))/\mathbb{K}}\cong\frac{\Omega_{\mathbb{K}[\x]/\mat
 이므로 이로부터 위의 두 계산이 따라나온다. 
 :::
 
-우리가 배제하고자 하는 경우는 정확히 minimal polynomial $f$가 중근을 갖는 경우, 즉 $\dd{f}=0$인 경우이므로 étale algebra의 개념을 유용하게 사용할 수 있을 것이다. 곧 우리는 *separable extension*을 임의의 finite degree subextension이 étale인 field extension으로 정의할 것이다. ([정의 8](#def8)) 그럼 [예시 4](#ex4)에서 살펴봤듯 $\mathbb{Q}$의 임의의 algebraic extension은 separable extension이 된다. 더 나아가 우리는 perfect field의 임의의 algebraic extension은 separable인 것을 보일 것이다. ([명제 9](#prop9)) 이 과정에서 사용할 étale algebra의 성질들을 조금 더 살펴보자. 
+우리가 배제하고자 하는 경우는 정확히 minimal polynomial $f$가 중근을 갖는 경우, 즉 $\dd{f}=0$인 경우이므로 étale algebra의 개념을 유용하게 사용할 수 있을 것이다. 곧 우리는 *separable extension*을 임의의 finite degree subextension이 étale인 field extension으로 정의할 것이다. ([정의 8](#def8){: data-relation="forward" }) 그럼 [예시 4](#ex4){: data-relation="required" }에서 살펴봤듯 $\mathbb{Q}$의 임의의 algebraic extension은 separable extension이 된다. 더 나아가 우리는 perfect field의 임의의 algebraic extension은 separable인 것을 보일 것이다. ([명제 9](#prop9){: data-relation="forward" }) 이 과정에서 사용할 étale algebra의 성질들을 조금 더 살펴보자. 
 
 ::: 명제 5
 임의의 field $\mathbb{K}$에 대하여, finite degree, commutative $\mathbb{K}$-algebra $A$가 reduced인 것은 $\mathbb{K}$의 적당한 finite degree field extension $\mathbb{L}_1,\ldots, \mathbb{L}_n$이 존재하여 $A$가 $\mathbb{L}_1\times\cdots\times \mathbb{L}_n$과 $\mathbb{K}$-algebra로서 isomorphic한 것이 동치이다. 
@@ -105,18 +105,18 @@ $$\Omega_{(\mathbb{K}[\x]/(f))/\mathbb{K}}\cong\frac{\Omega_{\mathbb{K}[\x]/\mat
 ::: 증명
 $\mathbb{L}_1\times\cdots\times \mathbb{L}_n$은 reduced이므로 한쪽 방향은 자명하다. 거꾸로 $A$가 finite degree reduced commutative $\mathbb{K}$-algebra라 하자. 만일 $A$가 field라면 더 이상 보일 것이 없으므로 $A$가 field가 아닌 경우만 증명하면 충분하고, 언제나처럼 $A$의 degree에 대한 귀납법을 사용하면 임의의 (field가 아닌) reduced algebra $A$가 항상 nontrivial한 product $A_1\times A_2$로 나타난다는 것을 보이면 된다. 
 
-이를 위해 $A$가 $0,1$이 아닌 idempotent를 갖는다는 것을 보이자. $A$의 임의의 ideal은 유한차원 $\mathbb{K}$-벡터공간이므로 $A$의 $0$이 아닌 ideal들 가운데 $\mathbb{K}$-벡터공간으로서 가장 작은 차원을 갖는 ideal $\mathfrak{a}$를 택할 수 있다. 그럼 $\mathfrak{a}$의 minimality와 $A$가 reduced라는 가정으로부터 $\mathfrak{a}^2=\mathfrak{a}$이고 따라서 [보조정리 2](#lem2)를 적용할 수 있다.
+이를 위해 $A$가 $0,1$이 아닌 idempotent를 갖는다는 것을 보이자. $A$의 임의의 ideal은 유한차원 $\mathbb{K}$-벡터공간이므로 $A$의 $0$이 아닌 ideal들 가운데 $\mathbb{K}$-벡터공간으로서 가장 작은 차원을 갖는 ideal $\mathfrak{a}$를 택할 수 있다. 그럼 $\mathfrak{a}$의 minimality와 $A$가 reduced라는 가정으로부터 $\mathfrak{a}^2=\mathfrak{a}$이고 따라서 [보조정리 2](#lem2){: data-relation="required" }를 적용할 수 있다.
 :::
 
-그럼, 위에서 언급한 [명제 9](#prop9)의 주장은 본질적으로 다음 보조정리에 담겨있다. 
+그럼, 위에서 언급한 [명제 9](#prop9){: data-relation="forward" }의 주장은 본질적으로 다음 보조정리에 담겨있다. 
 
 ::: 보조정리 6
 Perfect field $\mathbb{K}$에 대하여, 임의의 finite degree, reduced $\mathbb{K}$-algebra는 étale이다. 
 :::
 ::: 증명
-주장의 조건을 만족하는 $\mathbb{K}$-algebra $A$를 생각하자. 우선 [명제 5](#prop5)로부터 $A\cong \mathbb{L}_1\times\cdots \times\mathbb{L}_n$이도록 하는 extension들이 존재한다. 한편 étale algebra들의 곱은 étale이므로 주어진 주장은 임의의 finite degree field extension over perfect field $\mathbb{K}$가 étale임을 보이면 충분하다. 따라서 [정리 3](#thm3)을 적용하여, 임의의 $\alpha\in A$에 대하여 $\dd{\alpha}=0$임을 보이면 충분하다. [예시 4](#ex4)의 계산에 의하여 우리는 식 $f'(\alpha)\dd{\alpha}=0$이 성립해야 함을 알고, 비슷한 논리에 의하여 우리는 $f'(\alpha)\neq 0$임을 보여야 한다. 
+주장의 조건을 만족하는 $\mathbb{K}$-algebra $A$를 생각하자. 우선 [명제 5](#prop5){: data-relation="required" }로부터 $A\cong \mathbb{L}_1\times\cdots \times\mathbb{L}_n$이도록 하는 extension들이 존재한다. 한편 étale algebra들의 곱은 étale이므로 주어진 주장은 임의의 finite degree field extension over perfect field $\mathbb{K}$가 étale임을 보이면 충분하다. 따라서 [정리 3](#thm3){: data-relation="required" }을 적용하여, 임의의 $\alpha\in A$에 대하여 $\dd{\alpha}=0$임을 보이면 충분하다. [예시 4](#ex4){: data-relation="required" }의 계산에 의하여 우리는 식 $f'(\alpha)\dd{\alpha}=0$이 성립해야 함을 알고, 비슷한 논리에 의하여 우리는 $f'(\alpha)\neq 0$임을 보여야 한다. 
 
-결론에 반하여 $f'(\alpha)=0$이라 하자. 어차피 $f$가 상수인 경우에는 증명할 것이 없으므로 $f$가 일차식 이상이라 가정할 수 있고, 그럼 [§체, ⁋명제 19](/ko/math/field_theory/fields#prop19)의 결과에 의하여 $\ch(\mathbb{K})=p\neq 0$이며 $f\in \mathbb{K}[\x^p]=\mathbb{K}[\x]^p$여야 한다. 그런데 $f$는 minimal polynomial이므로 irreducible이고, irreducible polynomial은 정의에 의하여 $\mathbb{K}[\x]^p$에 속할 수 없으므로 이는 모순이다. 따라서 $f'(\alpha)\neq 0$이다. 
+결론에 반하여 $f'(\alpha)=0$이라 하자. 어차피 $f$가 상수인 경우에는 증명할 것이 없으므로 $f$가 일차식 이상이라 가정할 수 있고, 그럼 [§체, ⁋명제 19](/ko/math/field_theory/fields#prop19){: data-relation="required" }의 결과에 의하여 $\ch(\mathbb{K})=p\neq 0$이며 $f\in \mathbb{K}[\x^p]=\mathbb{K}[\x]^p$여야 한다. 그런데 $f$는 minimal polynomial이므로 irreducible이고, irreducible polynomial은 정의에 의하여 $\mathbb{K}[\x]^p$에 속할 수 없으므로 이는 모순이다. 따라서 $f'(\alpha)\neq 0$이다. 
 :::
 
 이제 위의 보조정리를 이용하면 다음과 같이 étale algebra의 또 다른 characterization을 만들어줄 수 있다. 
@@ -129,7 +129,7 @@ Perfect field $\mathbb{K}$에 대하여, 임의의 finite degree, reduced $\math
 3. 적당한 extension $\mathbb{L}/\mathbb{K}$이 존재하여 $\mathbb{L}$이 perfect이고 $A_{(\mathbb{L})}$이 reduced이다. 
 :::
 ::: 증명
-둘째 조건이 성립하면 셋째 조건이 성립하는 것은 perfect closure의 존재성으로부터 자명하며, 첫째 조건이 둘째 조건을 함의하는 것은 [§에탈대수, ⁋명제 8](/ko/math/field_theory/etale_algebras#prop8)의 결과이다. 따라서 셋째 조건이 첫째 조건을 함의하는 것만 보이면 충분하다. 이제 셋째 결과는 다시 [보조정리 6](#lem6)과 [§에탈대수, ⁋명제 8](/ko/math/field_theory/etale_algebras#prop8)로부터 나온다. 
+둘째 조건이 성립하면 셋째 조건이 성립하는 것은 perfect closure의 존재성으로부터 자명하며, 첫째 조건이 둘째 조건을 함의하는 것은 [§에탈대수, ⁋명제 8](/ko/math/field_theory/etale_algebras#prop8){: data-relation="required" }의 결과이다. 따라서 셋째 조건이 첫째 조건을 함의하는 것만 보이면 충분하다. 이제 셋째 결과는 다시 [보조정리 6](#lem6){: data-relation="required" }과 [§에탈대수, ⁋명제 8](/ko/math/field_theory/etale_algebras#prop8){: data-relation="required" }로부터 나온다. 
 :::
 
 ## 분해가능확대체
@@ -150,9 +150,9 @@ Algebraic extension $\mathbb{L}/\mathbb{K}$가 *separable extension<sub>분해�
 Field $\mathbb{K}$가 perfect인 것과 임의의 algebraic extension $\mathbb{L}/\mathbb{K}$가 separable인 것이 동치이다. 
 :::
 ::: 증명
-임의의 algebraic extension $\mathbb{L}/\mathbb{K}$의 임의의 finite degree subextension은 finite degree reduced $\mathbb{K}$-algebra이므로, 만일 $\mathbb{K}$가 perfect라면 한쪽 주장은 [보조정리 6](#lem6)으로부터 자명하다. 따라서 반대방향만 보이면 충분하다.
+임의의 algebraic extension $\mathbb{L}/\mathbb{K}$의 임의의 finite degree subextension은 finite degree reduced $\mathbb{K}$-algebra이므로, 만일 $\mathbb{K}$가 perfect라면 한쪽 주장은 [보조정리 6](#lem6){: data-relation="required" }으로부터 자명하다. 따라서 반대방향만 보이면 충분하다.
 
-결론에 반하여 $\mathbb{K}$가 perfect가 아니라 가정하고, 따라서 characteristic $p\neq 0$을 갖는다 하자. 그럼 $\mathbb{K}$가 perfect가 아니라는 가정으로부터 (algebraic closure $\overline{\mathbb{K}}/\mathbb{K}$ 안에서의 relative) $p$-radical extension $\mathbb{K}(a)/\mathbb{K}$를 생각할 수 있다. 한편, embedding $\mathbb{K}\hookrightarrow\overline{\mathbb{K}}$로부터 얻어지는 $\mathbb{K}(a)\rightarrow\overline{\mathbb{K}}$는 [§순수비분리확대체, ⁋명제 6](/ko/math/field_theory/purely_inseparable_extensions#prop6)에 의하여 유일하다. 다르게 말하면, 집합 $\Hom_{\Alg{\mathbb{K}}}(\mathbb{K}(a), \overline{\mathbb{K}})$는 singleton이며 따라서 
+결론에 반하여 $\mathbb{K}$가 perfect가 아니라 가정하고, 따라서 characteristic $p\neq 0$을 갖는다 하자. 그럼 $\mathbb{K}$가 perfect가 아니라는 가정으로부터 (algebraic closure $\overline{\mathbb{K}}/\mathbb{K}$ 안에서의 relative) $p$-radical extension $\mathbb{K}(a)/\mathbb{K}$를 생각할 수 있다. 한편, embedding $\mathbb{K}\hookrightarrow\overline{\mathbb{K}}$로부터 얻어지는 $\mathbb{K}(a)\rightarrow\overline{\mathbb{K}}$는 [§순수비분리확대체, ⁋명제 6](/ko/math/field_theory/purely_inseparable_extensions#prop6){: data-relation="required" }에 의하여 유일하다. 다르게 말하면, 집합 $\Hom_{\Alg{\mathbb{K}}}(\mathbb{K}(a), \overline{\mathbb{K}})$는 singleton이며 따라서 
 
 $$1=[\mathbb{K}(a):\mathbb{K}]_s\lneq [\mathbb{K}(a):\mathbb{K}]=p^e$$
 
@@ -173,7 +173,7 @@ Irreducible polynomial $f\in \mathbb{K}[\x]$에 대하여 다음이 모두 동�
 7. $\mathbb{K}$가 characteristic $0$이거나, $\ch(\mathbb{K})=p$이고 $f\not\in\mathbb{K}[\x^p]$이다. 
 :::
 
-이 조건을 만족하는 $f$를 *separable polynomial*이라 부른다. 그럼 [명제 9](#prop9)를 다시 한 번 적어보면, $\mathbb{K}$가 perfect인 것과 $\mathbb{K}[\x]$의 모든 irreducible polynomial이 separable인 것이 동치임을 안다. 이를 $f$를 통해 추가되는 원소에 초점을 맞추면 다음과 같이 정의할 수 있다. 
+이 조건을 만족하는 $f$를 *separable polynomial*이라 부른다. 그럼 [명제 9](#prop9){: data-relation="required" }를 다시 한 번 적어보면, $\mathbb{K}$가 perfect인 것과 $\mathbb{K}[\x]$의 모든 irreducible polynomial이 separable인 것이 동치임을 안다. 이를 $f$를 통해 추가되는 원소에 초점을 맞추면 다음과 같이 정의할 수 있다. 
 
 ::: 정의 11
 Field extension $\mathbb{L}/\mathbb{K}$에 대하여, algebraic element $x\in \mathbb{L}$이 *separable element<sub>분리가능 원소</sub>*라는 것은 $\mathbb{K}(x)/\mathbb{K}$이 separable extension인 것이다. 
@@ -198,12 +198,12 @@ Algebraic extension $\mathbb{L}/\mathbb{K}$에 대하여 다음이 성립한다.
 
 $$\mathbb{M}\subseteq \mathbb{K}(x_1,\ldots, x_m)=\mathbb{K}[x_1,\ldots, x_m]$$
 
-이도록 할 수 있다. 이 때 각각의 $\mathbb{K}[x_i]$들이 separable extension인 것은 $A$의 가정으로부터 자명하므로 이들은 étale이고, 그럼 $\mathbb{K}[x_1,\ldots, x_m]$은 이들의 tensor product $\mathbb{K}[x_1]\otimes\cdots\otimes \mathbb{K}[x_m]$을 이들의 associativity와 commutativity를 나타내는 relation으로 잘라서 얻어지고 $\mathbb{M}$이 이것의 subalgebra이므로 [§에탈대수, ⁋따름정리 14](/ko/math/field_theory/etale_algebras#cor14)에 의하여 $\mathbb{M}$이 étale이다.
+이도록 할 수 있다. 이 때 각각의 $\mathbb{K}[x_i]$들이 separable extension인 것은 $A$의 가정으로부터 자명하므로 이들은 étale이고, 그럼 $\mathbb{K}[x_1,\ldots, x_m]$은 이들의 tensor product $\mathbb{K}[x_1]\otimes\cdots\otimes \mathbb{K}[x_m]$을 이들의 associativity와 commutativity를 나타내는 relation으로 잘라서 얻어지고 $\mathbb{M}$이 이것의 subalgebra이므로 [§에탈대수, ⁋따름정리 14](/ko/math/field_theory/etale_algebras#cor14){: data-relation="required" }에 의하여 $\mathbb{M}$이 étale이다.
 :::
 
 뿐만 아니라, finite degree separable extension은 단 하나의 원소로 생성될 수 있다. 즉, 만일 $\mathbb{L}/\mathbb{K}$가 finite degree separable extension이라면, 적절한 $x\in \mathbb{L}$을 택하여 $\mathbb{L}=\mathbb{K}[x]$이도록 할 수 있다. 이러한 원소를 *primitive element*라 부른다. 
 
-[정리 14](#thm14)는 finite degree separable extension에 대해서는 항상 primitive element를 찾을 수 있다는 것을 보여준다. 이를 위해서는 다음 보조정리가 필요하다.
+[정리 14](#thm14){: data-relation="forward" }는 finite degree separable extension에 대해서는 항상 primitive element를 찾을 수 있다는 것을 보여준다. 이를 위해서는 다음 보조정리가 필요하다.
 
 ::: 보조정리 13
 Infinite field $\mathbb{K}$에 대하여, commutative $\mathbb{K}$-algebra $A$를 고정하자. 만일 $A$가 오직 유한히 많은 subalgebra만을 가지고, $V$가 $A$를 생성하는 부분 벡터공간이라 하면 적당한 $x\in V$가 존재하여 $A=\mathbb{K}[x]$이도록 할 수 있다. 
@@ -229,28 +229,28 @@ Infinite field $\mathbb{K}$를 고정하자. Algebraic extension $\mathbb{L}/\ma
 ::: 증명
 우선 $\mathbb{L}$이 primitive element $x$를 갖는다 하고, $f(\x)\in \mathbb{K}[\x]$가 $x$의 minimal polynomial이라 하자. 다항식 $f(\x)$를 $\mathbb{L}[\x]$에서 나누는 monic polynomial $g(\x)\in \mathbb{L}[\x]$를 생각하면, 우리는 이러한 다항식 $g$가 주어질 때마다 $g$의 계수들로 생성되는 $\mathbb{L}$의 subextension을 생각할 수 있다. 이를 $\mathbb{K}_g$로 적자. 그럼 우리 주장은 이들 $\mathbb{K}_g$들이 정확히 $\mathbb{L}$의 subextension이라는 것이다. 특히 이러한 extension들은 $f$를 $d$차식이라 할 때, 많아야 $2^d$개이므로 둘째 조건이 성립할 것이다. 
 
-주장을 보이기 위해 임의의 subextension $\mathbb{M}$을 택하자. 그럼 $x$가 primitive element이므로 $\mathbb{M}[x]=\mathbb{L}$이 성립한다. 즉, $x$는 extension $\mathbb{L}/\mathbb{M}$의 algebraic element이므로, minimal polynomial $h(\x)\in\mathbb{M}[\x]$를 택할 수 있으며 이는 [§대수적 확장, ⁋정리 15](/ko/math/field_theory/algebraic_extensions#thm15)에 의하여 $\mathbb{L}[\x]$에서 $f$를 나누는 monic polynomial이다. 따라서 $\mathbb{K}_h$가 위와 같이 정의되며, 그 정의에 의하여 $\mathbb{K}_h\subseteq\mathbb{M}$이다. 한편 $x$가 $\mathbb{L}/\mathbb{K}$의 primitive element이므로, 우리는 다음의 등식
+주장을 보이기 위해 임의의 subextension $\mathbb{M}$을 택하자. 그럼 $x$가 primitive element이므로 $\mathbb{M}[x]=\mathbb{L}$이 성립한다. 즉, $x$는 extension $\mathbb{L}/\mathbb{M}$의 algebraic element이므로, minimal polynomial $h(\x)\in\mathbb{M}[\x]$를 택할 수 있으며 이는 [§대수적 확장, ⁋정리 15](/ko/math/field_theory/algebraic_extensions#thm15){: data-relation="required" }에 의하여 $\mathbb{L}[\x]$에서 $f$를 나누는 monic polynomial이다. 따라서 $\mathbb{K}_h$가 위와 같이 정의되며, 그 정의에 의하여 $\mathbb{K}_h\subseteq\mathbb{M}$이다. 한편 $x$가 $\mathbb{L}/\mathbb{K}$의 primitive element이므로, 우리는 다음의 등식
 
 $$\mathbb{K}_h[x]=\mathbb{M}[x]=\mathbb{L}$$
 
 을 갖는다. 그런데 정의에 의하여 $[\mathbb{L}:\mathbb{M}]=\deg h$이며, $h(\x)\in \mathbb{K}_h[\x]$가 $h(x)=0$을 만족하므로 $[\mathbb{L}:\mathbb{K}_h]\leq\deg h$이다. 이로부터 반드시 $\mathbb{K}_h=\mathbb{M}$이어야 함을 안다. 
 
-이제 둘째 조건을 가정하면, $\mathbb{L}/\mathbb{K}$는 오직 유한히 많은 subextension들만 가지므로, $A=\mathbb{L}$로 두면 [보조정리 13](#lem13)의 가정을 만족하고 따라서 원하는 결과를 얻는다. 
+이제 둘째 조건을 가정하면, $\mathbb{L}/\mathbb{K}$는 오직 유한히 많은 subextension들만 가지므로, $A=\mathbb{L}$로 두면 [보조정리 13](#lem13){: data-relation="required" }의 가정을 만족하고 따라서 원하는 결과를 얻는다. 
 :::
 
-특히 만일 $\mathbb{L}/\mathbb{K}$가 finite degree separable extension이라면 이는 특히 finite degree étale $\mathbb{K}$-algebra이고, 따라서 [§에탈대수, ⁋명제 9](/ko/math/field_theory/etale_algebras#prop9)로부터 위 정리의 둘째 조건이 성립한다는 것을 안다. 
+특히 만일 $\mathbb{L}/\mathbb{K}$가 finite degree separable extension이라면 이는 특히 finite degree étale $\mathbb{K}$-algebra이고, 따라서 [§에탈대수, ⁋명제 9](/ko/math/field_theory/etale_algebras#prop9){: data-relation="required" }로부터 위 정리의 둘째 조건이 성립한다는 것을 안다. 
 
-[정리 14](#thm14)는 $\mathbb{K}$가 finite field여도 항상 성립하지만, 이를 증명하기 위해서는 [보조정리 13](#lem13)보다 조금 더 정교한 counting argument가 필요하므로 나중으로 미뤄둔다.
+[정리 14](#thm14){: data-relation="weak" }는 $\mathbb{K}$가 finite field여도 항상 성립하지만, 이를 증명하기 위해서는 [보조정리 13](#lem13){: data-relation="weak" }보다 조금 더 정교한 counting argument가 필요하므로 나중으로 미뤄둔다.
 
-한편 separability는 본질적으로는 (거의) étale algebra이고, étale algebra는 base change에 대해 잘 행동하므로 ([§에탈대수, ⁋따름정리 14](/ko/math/field_theory/etale_algebras#cor14)) [명제 12](#prop12)의 증명에서와 마찬가지로 약간의 수정을 가하면 다음의 두 경우에 separability도 base change에 대해 잘 행동한다는 것을 보일 수 있다. 
+한편 separability는 본질적으로는 (거의) étale algebra이고, étale algebra는 base change에 대해 잘 행동하므로 ([§에탈대수, ⁋따름정리 14](/ko/math/field_theory/etale_algebras#cor14){: data-relation="required" }) [명제 12](#prop12){: data-relation="required" }의 증명에서와 마찬가지로 약간의 수정을 가하면 다음의 두 경우에 separability도 base change에 대해 잘 행동한다는 것을 보일 수 있다. 
 
 ::: 명제 15
 Algebraic extension $\mathbb{M}/\mathbb{L}/\mathbb{K}$에 대하여, $\mathbb{M}/\mathbb{K}$가 separable인 것과 $\mathbb{M}/\mathbb{L}$, $\mathbb{L}/\mathbb{K}$가 모두 separable인 것이 동치이다. 
 :::
 ::: 증명
-만일 $\mathbb{M}/\mathbb{K}$가 separable이라면 그 subextension $\mathbb{L}/\mathbb{K}$가 separable인 것은 정의로부터 자명하고, 이 때 $\mathbb{M}$의 임의의 원소는 $\mathbb{K}$에 대해 separable이므로 ([명제 12](#prop12)), 이를 extension $\mathbb{M}/\mathbb{L}$로 보았을 때 $\mathbb{L}$에 대해서도 separable이다. ([명제 10](#prop10)) 즉, $\mathbb{M}$의 임의의 원소가 separable이므로 다시 [명제 12](#prop12)에 의해 $\mathbb{M}/\mathbb{L}$이 separable임을 안다. 
+만일 $\mathbb{M}/\mathbb{K}$가 separable이라면 그 subextension $\mathbb{L}/\mathbb{K}$가 separable인 것은 정의로부터 자명하고, 이 때 $\mathbb{M}$의 임의의 원소는 $\mathbb{K}$에 대해 separable이므로 ([명제 12](#prop12){: data-relation="required" }), 이를 extension $\mathbb{M}/\mathbb{L}$로 보았을 때 $\mathbb{L}$에 대해서도 separable이다. ([명제 10](#prop10){: data-relation="required" }) 즉, $\mathbb{M}$의 임의의 원소가 separable이므로 다시 [명제 12](#prop12){: data-relation="required" }에 의해 $\mathbb{M}/\mathbb{L}$이 separable임을 안다. 
 
-따라서 이 명제의 핵심은 반대방향이다. 우선, 만일 $\mathbb{M}/\mathbb{K}$가 finite degree였다면 separable algebra와 étale algebra가 같은 말이므로, 주장은 [§에탈대수, ⁋명제 12](/ko/math/field_theory/etale_algebras#prop12)의 셋째 결과로부터 자명하다. 증명의 아이디어는 위와 비슷하게, $\mathbb{M}/\mathbb{K}$는 무한한 degree를 갖더라도 특정 원소 하나만 보면 이를 finite degree로 치환할 수 있다는 것이다.
+따라서 이 명제의 핵심은 반대방향이다. 우선, 만일 $\mathbb{M}/\mathbb{K}$가 finite degree였다면 separable algebra와 étale algebra가 같은 말이므로, 주장은 [§에탈대수, ⁋명제 12](/ko/math/field_theory/etale_algebras#prop12){: data-relation="required" }의 셋째 결과로부터 자명하다. 증명의 아이디어는 위와 비슷하게, $\mathbb{M}/\mathbb{K}$는 무한한 degree를 갖더라도 특정 원소 하나만 보면 이를 finite degree로 치환할 수 있다는 것이다.
 
 임의의 $x\in \mathbb{M}$이 주어졌다 하고, minimal polynomial $f\in\mathbb{L}[\x]$이 주어졌다 하면, $f$는 separable polynomial이다. 이제 $\mathbb{L}/\mathbb{K}$의 subextension $\mathbb{L}'$을, $f$에 등장하는 계수들을 $\mathbb{K}$에 넣어주어 생기는 subextension으로 정의하자. 그럼 $\mathbb{L}'$는 algebraic element들 유한개로 생성되므로 $\mathbb{L}'/\mathbb{K}$가 finite degree extension이다. 이제 $f$는 $\mathbb{L}$과 $\mathbb{L}'$ 모두에서 $x$의 minimal polynomial이고 $\mathbb{L}$에서 separable이므로 $\mathbb{L}'$에서도 separable이다. 즉 $x$는 extension $\mathbb{M}/\mathbb{L}'$의 separable element이며, $\mathbb{M}'=\mathbb{L}'(x)$라 하면 $\mathbb{M}'/\mathbb{L}'$는 finite degree separable extension, 즉 finite degree étale algebra다. 한편 $\mathbb{L}/\mathbb{K}$가 separable이므로 그 subextension $\mathbb{L}'$도 separable이고, 따라서 $\mathbb{L}'/\mathbb{K}$도 finite degree étale algebra다. 따라서 이들의 tower $\mathbb{M}'/\mathbb{K}$도 finite degree étale algebra이고, 따라서 finite degree separable extension이다. 즉 $x$가 $\mathbb{K}$에 대한 separable element이며, $x$의 선택은 임의로 주어진 것이므로 원하는 결과를 얻는다. 
 :::
@@ -263,7 +263,7 @@ $\mathbb{K}$의 적당한 extension을 하나 고정하고, 이 extension의 sub
 :::
 ::: 증명
 1. 가정에 의해 $\mathbb{L}$의 임의의 원소가 $\mathbb{K}$에 대해 separable이므로, $\mathbb{K}'(\mathbb{L})$의 모든 원소가 $\mathbb{K}'$에 대해 separable이다.
-2. 이를 보이기 위해서는 임의의 finite degree subextension $\mathbb{M}/\mathbb{K}$가 étale임을 보여야 한다. 우선 주어진 가정으로부터 $\mathbb{M}$과 $\mathbb{K}'$는 linearly disjoint이고, 따라서 $\mathbb{M}_{(\mathbb{K}')}=\mathbb{M}\otimes_\mathbb{K}\mathbb{K}'$가 $\mathbb{K}'(\mathbb{M})$과 isomorphic하다. ([§대수적 확장, ⁋명제 10](/ko/math/field_theory/algebraic_extensions#prop10)) 한편 $\mathbb{K}'(\mathbb{M})/\mathbb{K}'$는 finite degree이므로, $\mathbb{L}'/\mathbb{K}'$가 separable이라는 가정으로부터 étale이다. 이제 étale morphism은 base change에 대해 stable하므로 원하는 결과를 얻는다. ([§에탈대수, ⁋따름정리 14](/ko/math/field_theory/etale_algebras#cor14))
+2. 이를 보이기 위해서는 임의의 finite degree subextension $\mathbb{M}/\mathbb{K}$가 étale임을 보여야 한다. 우선 주어진 가정으로부터 $\mathbb{M}$과 $\mathbb{K}'$는 linearly disjoint이고, 따라서 $\mathbb{M}_{(\mathbb{K}')}=\mathbb{M}\otimes_\mathbb{K}\mathbb{K}'$가 $\mathbb{K}'(\mathbb{M})$과 isomorphic하다. ([§대수적 확장, ⁋명제 10](/ko/math/field_theory/algebraic_extensions#prop10){: data-relation="required" }) 한편 $\mathbb{K}'(\mathbb{M})/\mathbb{K}'$는 finite degree이므로, $\mathbb{L}'/\mathbb{K}'$가 separable이라는 가정으로부터 étale이다. 이제 étale morphism은 base change에 대해 stable하므로 원하는 결과를 얻는다. ([§에탈대수, ⁋따름정리 14](/ko/math/field_theory/etale_algebras#cor14){: data-relation="required" })
 :::
 
 ---
