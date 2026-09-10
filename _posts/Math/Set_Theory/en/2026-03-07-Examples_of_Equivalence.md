@@ -32,7 +32,7 @@ That the given relation is reflexive on $A$ is obvious. On the other hand, if $f
 The equivalence relation defined in the above proposition is called the *equivalence relation defined by $f$*.
 :::
 
-For an equivalence relation $(R,A,A)$ and the induced $p:A\rightarrow A/R$, one can verify that the equivalence relation $R$ is exactly the same as the equivalence relation obtained by applying [Definition 2](#def2) to $p$.
+For an equivalence relation $(R,A,A)$ and the induced $p:A\rightarrow A/R$, one can verify that the equivalence relation $R$ is exactly the same as the equivalence relation obtained by applying [Definition 2](#def2){: data-relation="required" } to $p$.
 
 ## Equivalence relations compatible with a unary relation
 
@@ -79,7 +79,7 @@ According to the above definition, for a set $X$ to be $R$-saturated, <phrase>if
 1. If $(A_i)_{i\in I}$ is a family of $R$-saturated subsets, then $\bigcup_{i\in I} A_i$ and $\bigcap_{i\in I} A_i$ are also $R$-saturated.
 2. If $X\subseteq A$ is $R$-saturated, then $A\setminus X$ is also $R$-saturated.
 
-Now consider the canonical projection $p:A\rightarrow A/R$ and $X\subseteq A$. By [§Operations on Binary Relations, ⁋Proposition 7](/en/math/set_theory/operation_of_binary_relations#prop7), we obtain
+Now consider the canonical projection $p:A\rightarrow A/R$ and $X\subseteq A$. By [§Operations on Binary Relations, ⁋Proposition 7](/en/math/set_theory/operation_of_binary_relations#prop7){: data-relation="required" }, we obtain
 
 $$p^{-1}(p(X))\supseteq X$$
 
@@ -103,7 +103,7 @@ so $p^{-1}(p(X))$ is the smallest $R$-saturated subset containing $X$. We call t
 For an equivalence relation $(R,A,A)$ and a function $f$ with domain $A$, we say that $f$ is *compatible* with $R$ if the unary relation $y=f(x)$ in $x$ is compatible with $R$.
 :::
 
-That is, for $f$ to be compatible with $R$, $f$ must become a constant function when restricted to each equivalence class. Now applying [§Retraction and Section, ⁋Proposition 4](/en/math/set_theory/retraction_and_section#prop4), we obtain the following.
+That is, for $f$ to be compatible with $R$, $f$ must become a constant function when restricted to each equivalence class. Now applying [§Retraction and Section, ⁋Proposition 4](/en/math/set_theory/retraction_and_section#prop4){: data-relation="required" }, we obtain the following.
 
 ::: Proposition 7
 Consider an equivalence relation $(R,A,A)$ and the canonical $p:A\rightarrow A/R$. Then $f:A\rightarrow B$ is compatible with $R$ if and only if there exists $h:A/R\rightarrow B$ such that $f=h\circ p$.
@@ -115,7 +115,7 @@ That is, the following diagram commutes.
 
 In this case, $h$ is uniquely determined by a section $s$ of $p$ via $h=f\circ s$.
 
-In particular, suppose $R$ is the equivalence relation defined by $f$. ([Definition 2](#def2)) Then we can consider the following diagram.
+In particular, suppose $R$ is the equivalence relation defined by $f$. ([Definition 2](#def2){: data-relation="required" }) Then we can consider the following diagram.
 
 {% diagram Math/Set_Theory/Examples_of_Equivalence-3.svg width="12.57em" alt="canonical_decomposition" %}
 
@@ -129,7 +129,7 @@ Additionally, suppose an equivalence relation $S$ is given on the codomain $B$. 
 
 {% diagram Math/Set_Theory/Examples_of_Equivalence-4.svg width="7.95em" alt="induced_mapping_of_equivalence" %}
 
-If $q\circ f$ is compatible with $R$, then we say that $f$ is *$(R,S)$-compatible*. By [Proposition 7](#prop7), this is equivalent to the existence of $h:A/R\rightarrow B/S$ such that $h\circ p=q\circ f$.
+If $q\circ f$ is compatible with $R$, then we say that $f$ is *$(R,S)$-compatible*. By [Proposition 7](#prop7){: data-relation="required" }, this is equivalent to the existence of $h:A/R\rightarrow B/S$ such that $h\circ p=q\circ f$.
 
 ## Preimage of an equivalence relation
 
@@ -137,11 +137,11 @@ Let a function $f:A\rightarrow B$ be given, and consider the equivalence relatio
 
 {% diagram Math/Set_Theory/Examples_of_Equivalence-5.svg width="6.57em" alt="inverse_image_of_equivalence" %}
 
-Then the function $p\circ f:A\rightarrow B/S$ is naturally defined, and the equivalence relation on $A$ created by this function via [Definition 2](#def2) is called the *preimage* of $S$ under $f$.
+Then the function $p\circ f:A\rightarrow B/S$ is naturally defined, and the equivalence relation on $A$ created by this function via [Definition 2](#def2){: data-relation="required" } is called the *preimage* of $S$ under $f$.
 
 ## Quotient of equivalence relations
 
-The following definition was already mentioned in [§Equivalence Relations, ⁋Example 5](/en/math/set_theory/equivalence_relations#ex5).
+The following definition was already mentioned in [§Equivalence Relations, ⁋Example 5](/en/math/set_theory/equivalence_relations#ex5){: data-relation="weak" }.
 
 ::: Definition 8
 For two equivalence relations $R,S$ defined on a set $A$, we say that $S$ is *finer* than $R$ if $x\sim_{\tiny S}y\implies x\sim_{\tiny R}y$ always holds.
@@ -151,7 +151,7 @@ Let two equivalence relations $R,S$ be defined on a set $A$, and suppose $S$ is 
 
 {% diagram Math/Set_Theory/Examples_of_Equivalence-6.svg width="8.11em" alt="third_iso_1" %}
 
-Then the function $p_S$ is surjective, and $p_S(x)=p_S(y)\implies p_R(x)=p_R(y)$ always holds. Therefore, there exists a unique $h:A/S \rightarrow A/R$ such that $p_R=h\circ p_S$. ([§Retraction and Section, ⁋Proposition 4](/en/math/set_theory/retraction_and_section#prop4)) In this case, we call the equivalence relation that $h$ defines on $A/S$ the *quotient* of $R$ by $S$, and denote it by $R/S$. Passing through the canonical decomposition, we have
+Then the function $p_S$ is surjective, and $p_S(x)=p_S(y)\implies p_R(x)=p_R(y)$ always holds. Therefore, there exists a unique $h:A/S \rightarrow A/R$ such that $p_R=h\circ p_S$. ([§Retraction and Section, ⁋Proposition 4](/en/math/set_theory/retraction_and_section#prop4){: data-relation="required" }) In this case, we call the equivalence relation that $h$ defines on $A/S$ the *quotient* of $R$ by $S$, and denote it by $R/S$. Passing through the canonical decomposition, we have
 
 {% diagram Math/Set_Theory/Examples_of_Equivalence-7.svg width="18.05em" alt="third_iso_2" %}
 

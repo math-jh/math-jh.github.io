@@ -32,7 +32,7 @@ weight: 13
 위의 명제에서 정의된 동치관계를 *$f$에 의해 정의된 동치관계*라 부른다.
 :::
 
-동치관계 $(R,A,A)$와 이로부터 유도된 $p:A\rightarrow A/R$에 대하여, 동치관계 $R$은 [정의 2](#def2)를 $p$에 적용하여 얻은 동치관계와 정확하게 같다는 것을 확인할 수 있다.
+동치관계 $(R,A,A)$와 이로부터 유도된 $p:A\rightarrow A/R$에 대하여, 동치관계 $R$은 [정의 2](#def2){: data-relation="required" }를 $p$에 적용하여 얻은 동치관계와 정확하게 같다는 것을 확인할 수 있다.
 
 ## 단항관계와 compatible한 동치관계
 
@@ -79,7 +79,7 @@ $R$이 $A$ 위에서의 동치관계이고 $X$가 $A$의 부분집합이라 하�
 1. 만일 $(A_i)_{i\in I}$가 $R$-saturated인 부분집합들의 family라면, $\bigcup_{i\in I} A_i$와 $\bigcap_{i\in I} A_i$도 마찬가지다.
 2. $X\subseteq A$가 $R$-saturated라면 $A\setminus X$도 그러하다.
 
-이번에는 canonical projection $p:A\rightarrow A/R$와 $X\subseteq A$를 생각하자. [§이항관계들 사이의 연산, ⁋명제 7](/ko/math/set_theory/operation_of_binary_relations#prop7)에 의하여 
+이번에는 canonical projection $p:A\rightarrow A/R$와 $X\subseteq A$를 생각하자. [§이항관계들 사이의 연산, ⁋명제 7](/ko/math/set_theory/operation_of_binary_relations#prop7){: data-relation="required" }에 의하여 
 
 $$p^{-1}(p(X))\supseteq X$$
 
@@ -105,7 +105,7 @@ $$X'=p^{-1}(p(X'))\supseteq p^{-1}(p(X))$$
 동치관계 $(R,A,A)$와 $A$를 정의역으로 갖는 함수 $f$에 대하여, $f$가 $R$과 *compatible*하다는 것은 $x$에 대한 단항관계 $y=f(x)$가 $R$과 compatible하다는 것을 의미한다.
 :::
 
-즉, $f$가 $R$과 compatible하려면 $f$는 각각의 equivalence class로 제한하였을 때 상수함수가 되어야 한다. 이제 [§Retraction과 section, ⁋명제 4](/ko/math/set_theory/retraction_and_section#prop4)를 적용하면 다음을 얻는다.
+즉, $f$가 $R$과 compatible하려면 $f$는 각각의 equivalence class로 제한하였을 때 상수함수가 되어야 한다. 이제 [§Retraction과 section, ⁋명제 4](/ko/math/set_theory/retraction_and_section#prop4){: data-relation="required" }를 적용하면 다음을 얻는다.
 
 ::: 명제 7
 동치관계 $(R,A,A)$와 canonical $p:A\rightarrow A/R$을 생각하자. 그럼 $f:A\rightarrow B$가 $R$과 compatible한 것은 $f=h\circ p$이도록 하는 $h:A/R\rightarrow B$가 존재하는 것과 동치이다.
@@ -117,7 +117,7 @@ $$X'=p^{-1}(p(X'))\supseteq p^{-1}(p(X))$$
 
 이 때 $h$는 $p$의 section $s$에 의하여 $h=f\circ s$로 유일하게 결정된다. 
 
-특별히 $R$이 $f$에 의해 정의된 동치관계라 하자. ([정의 2](#def2)) 그럼 다음의 diagram을 생각할 수 있다.
+특별히 $R$이 $f$에 의해 정의된 동치관계라 하자. ([정의 2](#def2){: data-relation="required" }) 그럼 다음의 diagram을 생각할 수 있다.
 
 {% diagram Math/Set_Theory/Examples_of_Equivalence-3.svg width="12.57em" alt="canonical_decomposition" %}
 
@@ -131,7 +131,7 @@ $$f=j\circ\tilde{f}=j\circ h\circ p$$
 
 {% diagram Math/Set_Theory/Examples_of_Equivalence-4.svg width="7.95em" alt="induced_mapping_of_equivalence" %}
 
-만일 $q\circ f$가 $R$과 compatible하다면, $f$가 *$(R,S)$-compatible*하다고 한다. [명제 7](#prop7)에 의해 이는 다시 $h:A/R\rightarrow B/S$가 존재하여 $h\circ p=q\circ f$인 것과 동치이다. 
+만일 $q\circ f$가 $R$과 compatible하다면, $f$가 *$(R,S)$-compatible*하다고 한다. [명제 7](#prop7){: data-relation="required" }에 의해 이는 다시 $h:A/R\rightarrow B/S$가 존재하여 $h\circ p=q\circ f$인 것과 동치이다. 
 
 ## 동치관계의 preimage
 
@@ -139,11 +139,11 @@ $$f=j\circ\tilde{f}=j\circ h\circ p$$
 
 {% diagram Math/Set_Theory/Examples_of_Equivalence-5.svg width="6.57em" alt="inverse_image_of_equivalence" %}
 
-그럼 자연스레 함수 $p\circ f:A\rightarrow B/S$가 정의되며, 이 함수가 [정의 2](#def2)를 통해 만드는 동치관계를 $f$에 의한 $S$의 *preimage*라 부른다.
+그럼 자연스레 함수 $p\circ f:A\rightarrow B/S$가 정의되며, 이 함수가 [정의 2](#def2){: data-relation="required" }를 통해 만드는 동치관계를 $f$에 의한 $S$의 *preimage*라 부른다.
 
 ## 동치관계의 quotient
 
-다음 정의는 이미 [§동치관계, ⁋예시 5](/ko/math/set_theory/equivalence_relations#ex5)에서 언급했던 것이다.
+다음 정의는 이미 [§동치관계, ⁋예시 5](/ko/math/set_theory/equivalence_relations#ex5){: data-relation="weak" }에서 언급했던 것이다.
 
 ::: 정의 8
 집합 $A$ 위에 정의된 두 동치관계 $R,S$에 대해, $S$가 $R$보다 *finer<sub>세밀하다</sub>*하다는 것은 $x\sim_{\tiny S}y\implies x\sim_{\tiny R}y$가 항상 성립하는 것이다.
@@ -153,7 +153,7 @@ $$f=j\circ\tilde{f}=j\circ h\circ p$$
 
 {% diagram Math/Set_Theory/Examples_of_Equivalence-6.svg width="8.11em" alt="third_iso_1" %}
 
-그럼 함수 $p_S$가 전사함수이고, $p_S(x)=p_S(y)\implies p_R(x)=p_R(y)$가 항상 성립한다. 따라서 $p_R=h\circ p_S$이도록 하는 유일한 $h:A/S \rightarrow A/R$이 존재한다. ([§Retraction과 section, ⁋명제 4](/ko/math/set_theory/retraction_and_section#prop4)) 이 때, $h$가 $A/S$ 위에 정의하는 동치관계를 $R$의 $S$에 의한 *quotient*라 부르고, $R/S$로 적는다. Canonical decomposition을 거치면
+그럼 함수 $p_S$가 전사함수이고, $p_S(x)=p_S(y)\implies p_R(x)=p_R(y)$가 항상 성립한다. 따라서 $p_R=h\circ p_S$이도록 하는 유일한 $h:A/S \rightarrow A/R$이 존재한다. ([§Retraction과 section, ⁋명제 4](/ko/math/set_theory/retraction_and_section#prop4){: data-relation="required" }) 이 때, $h$가 $A/S$ 위에 정의하는 동치관계를 $R$의 $S$에 의한 *quotient*라 부르고, $R/S$로 적는다. Canonical decomposition을 거치면
 
 {% diagram Math/Set_Theory/Examples_of_Equivalence-7.svg width="18.05em" alt="third_iso_2" %}
 
