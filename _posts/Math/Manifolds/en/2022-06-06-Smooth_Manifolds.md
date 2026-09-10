@@ -54,7 +54,7 @@ but also another atlas
 
 $$\mathcal{A}'=\{((-\infty, 1), \id_{(-\infty, 1)}), ((-1, \infty),\id_{(-1,\infty)})\}$$
 
-However, as we will see in [Proposition 3](#prop3), since a maximal atlas containing any given atlas is uniquely determined, in an essential sense this is not such a big difference.
+However, as we will see in [Proposition 3](#prop3){: data-relation="required" }, since a maximal atlas containing any given atlas is uniquely determined, in an essential sense this is not such a big difference.
 
 On the other hand, to understand an object in mathematics it suffices to know the functions defined on it. Henceforth we assume all manifolds are smooth differentiable manifolds.
 
@@ -95,10 +95,10 @@ On the real numbers $\mathbb{R}$, consider the two atlases
 
 $$\mathcal{A}_1=\{(\mathbb{R},\id_\mathbb{R})\},\qquad \mathcal{A}_2=\{(\mathbb{R}, x\mapsto x^3)\}$$
 
-These are atlases consisting of a single chart, so they are trivially $C^\infty$. By the preceding [Proposition 3](#prop3), there exists a differentiable structure containing each of them. However, they are not equal, because the two charts $(\mathbb{R},\id_\mathbb{R})$ and $(\mathbb{R}, x\mapsto x^3)$ are not $C^\infty$-compatible. (While $x\mapsto x^3$ is a $C^\infty$ function, its inverse $x\mapsto x^{1/3}$ is not.)
+These are atlases consisting of a single chart, so they are trivially $C^\infty$. By the preceding [Proposition 3](#prop3){: data-relation="required" }, there exists a differentiable structure containing each of them. However, they are not equal, because the two charts $(\mathbb{R},\id_\mathbb{R})$ and $(\mathbb{R}, x\mapsto x^3)$ are not $C^\infty$-compatible. (While $x\mapsto x^3$ is a $C^\infty$ function, its inverse $x\mapsto x^{1/3}$ is not.)
 :::
 
-However, although the two atlases in [Example 4](#ex4) do not give the *same* differentiable structure, they give differentiable structures that are *diffeomorphic* to each other.
+However, although the two atlases in [Example 4](#ex4){: data-relation="required" } do not give the *same* differentiable structure, they give differentiable structures that are *diffeomorphic* to each other.
 
 ## Smooth Partition of Unity
 
