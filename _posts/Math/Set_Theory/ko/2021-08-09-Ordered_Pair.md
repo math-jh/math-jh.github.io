@@ -39,7 +39,7 @@ $A\subseteq B$이고 $B\subseteq C$이면 $A\subseteq C$이다.
 우선 전제는 임의의 $x$에 대하여 두 명제 $x\in A\implies x\in B$와 $x\in B\implies x\in C$가 참이라는 것을 뜻한다. 따라서 삼단논법에 의해 $x\in A\implies x\in C$도 참이고, $x$는 임의로 택할 수 있으므로 $A\subseteq C$가 성립한다. 
 :::
 
-위 두 명제로부터 $\subseteq$가 집합들 사이의 order relation이 된다는 것을 안다. ([§순서관계의 정의, ⁋정의 2](/ko/math/set_theory/order_relations#def2))
+위 두 명제로부터 $\subseteq$가 집합들 사이의 order relation이 된다는 것을 안다. ([§순서관계의 정의, ⁋정의 2](/ko/math/set_theory/order_relations#def2){: data-relation="required" })
 
 ## 순서쌍
 
@@ -124,7 +124,7 @@ $$\{z\mid(z=(x,y))\wedge (x\in A)\wedge(y\in B)\}$$
 
 을 $A$와 $B$의 *cartesian product<sub>데카르트 곱</sub>*라 부르고, 간단히 $A\times B$로 표시한다. 
 
-또, [정의 7](#def7)과 유사하게 집합 $A$와 $B$를 $A\times B$의 첫 번째와 두 번째 성분이라 부른다.
+또, [정의 7](#def7){: data-relation="weak" }과 유사하게 집합 $A$와 $B$를 $A\times B$의 첫 번째와 두 번째 성분이라 부른다.
 :::
 
 두 곱집합 $A\times B$와 $A'\times B'$가 동일해질 조건을 알기 위해서는 하나의 곱집합이 다른 곱집합에 언제 <em-ko>포함되는지</em-ko>만 확실하게 결정해주면 된다. 
@@ -159,5 +159,5 @@ $A,B$ 둘 중 하나가 공집합일 때는 다음 명제를 적용할 수 있�
 
 ---
 
-[^1]: 물론 이 "집합"은 집합이 아니다. ([§ZFC 공리계, ⁋예시 4](/ko/math/set_theory/zfc_axioms#ex4))
+[^1]: 물론 이 "집합"은 집합이 아니다. ([§ZFC 공리계, ⁋예시 4](/ko/math/set_theory/zfc_axioms#ex4){: data-relation="weak" })
 [^2]: 이 보조정리의 증명을 끝으로, 더 이상 증명과정에서 사용한 공리들을 언급하지 않는다.
