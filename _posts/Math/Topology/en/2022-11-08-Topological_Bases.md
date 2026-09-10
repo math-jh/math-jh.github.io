@@ -45,7 +45,7 @@ From the above proposition, the following question arises naturally.
 
 The answer to this question is affirmative. **[Mun]** gives a direct proof of this, but we will first define a local base and then prove it in a simpler way.
 
-Meanwhile, by refining [Definition 1](#def1), we can define a *subbase* as follows.
+Meanwhile, by refining [Definition 1](#def1){: data-relation="required" }, we can define a *subbase* as follows.
 
 ::: Definition 3
 A *subbase* for a topological space $(X,\mathcal{T})$ is an open covering $\mathcal{S}$ of $X$ such that for every $U\in\mathcal{T}$, there exists $S\in\mathcal{S}$ with $S\subseteq U$.
@@ -55,13 +55,13 @@ Collecting all finite intersections of elements of $\mathcal{S}$, we obtain a ne
 
 ## Local Bases of a Topological Space
 
-[§Open Sets, ⁋Proposition 6](/en/math/topology/open_sets#prop6) shows that if we can describe the neighborhood filter $\mathcal{N}(x)$ centered at a point $x$ in a topological space $X$, then we can completely recover the topology of $X$. On the other hand, since $\mathcal{N}(x)$ satisfies the conditions of [§Open Sets, ⁋Proposition 6](/en/math/topology/open_sets#prop6), in particular the first condition, we do not need all of $\mathcal{N}(x)$ to describe it.
+[§Open Sets, ⁋Proposition 6](/en/math/topology/open_sets#prop6){: data-relation="required" } shows that if we can describe the neighborhood filter $\mathcal{N}(x)$ centered at a point $x$ in a topological space $X$, then we can completely recover the topology of $X$. On the other hand, since $\mathcal{N}(x)$ satisfies the conditions of [§Open Sets, ⁋Proposition 6](/en/math/topology/open_sets#prop6){: data-relation="required" }, in particular the first condition, we do not need all of $\mathcal{N}(x)$ to describe it.
 
 ::: Definition 4
 Let $X$ be a topological space and let $A$ be a subset of $X$. A *local base* at $A$ is a coinitial subset of $(\mathcal{N}(A),\subseteq)$ consisting of open sets. ([[Set Theory] §Elements of Ordered Sets](/en/math/set_theory/elements_in_ordered_set))
 :::
 
-As in [§Open Sets, ⁋Definition 4](/en/math/topology/open_sets#def4), when $A$ is a singleton $\{x\}$, we call a local base at $A$ a local base at the point $x$. Then the following holds.
+As in [§Open Sets, ⁋Definition 4](/en/math/topology/open_sets#def4){: data-relation="required" }, when $A$ is a singleton $\{x\}$, we call a local base at $A$ a local base at the point $x$. Then the following holds.
 
 ::: Proposition 5
 Let $(X,\mathcal{T})$ be a topological space. Then a subset $\mathcal{B}$ of $\mathcal{T}$ is a base for $X$ if and only if for each $x\in X$, the <phrase>elements of $\mathcal{B}$ containing $x$</phrase> form a local base at $x$.
@@ -74,7 +74,7 @@ First, suppose that $\mathcal{B}$ is a base for $X$, and pick an arbitrary point
 Conversely, suppose that $\mathcal{B}$ satisfies the given condition and let $U$ be an arbitrary open set. Then for any $x\in U$, we have $U\in\mathcal{N}(x)$, so the given condition yields a suitable $V(x)\in\mathcal{B}(x)$ such that $x\in V(x)\subseteq U$. Now $U=\bigcup V(x)$, which gives the desired result.
 :::
 
-Earlier we asked whether, given an arbitrary collection satisfying the first and second conditions of [Proposition 2](#prop2), there exists a topology on $X$ having it as a base. This becomes an easy corollary of the above proposition.
+Earlier we asked whether, given an arbitrary collection satisfying the first and second conditions of [Proposition 2](#prop2){: data-relation="required" }, there exists a topology on $X$ having it as a base. This becomes an easy corollary of the above proposition.
 
 ::: Corollary 6
 Let $X$ be a set, and let $\mathcal{B}$ be a subset of $\mathcal{P}(X)$ satisfying the following two conditions.
@@ -92,11 +92,11 @@ $$\mathcal{N}(x)=\mathop{\uparrow}\mathcal{B}(x):=\bigcup_{B\in\mathcal{B}(x)}\m
 That is, $\mathcal{N}(x)$ is the collection containing every element of $\mathcal{B}$ that contains the given $x\in X$, together with all elements of $\mathcal{P}(X)$ larger than it.
 
 - For any $V\in\mathcal{N}(x)$, suppose $V\subseteq V'$. By the definition of $\mathcal{N}(x)$, there exists $U\in\mathcal{B}(x)$ such that $U\subseteq V$, and for such $U$ we have $U\subseteq V'$, so $V'\in\mathcal{N}(x)$.
-- Suppose that elements $V_1,\ldots,V_n$ of $\mathcal{N}(x)$ are given. Then there exist $U_i\in\mathcal{B}(x)$ such that $U_i\subseteq V_i$. Using the second condition of [Proposition 2](#prop2) inductively, we can find a suitable $U\in\mathcal{B}(x)$ such that $U\subseteq U_1\cap\cdots\cap U_n$. In particular, $U\subseteq V_1\cap\cdots\cap V_n$, so $V_1\cap\cdots\cap V_n\in\mathcal{N}(x)$.
+- Suppose that elements $V_1,\ldots,V_n$ of $\mathcal{N}(x)$ are given. Then there exist $U_i\in\mathcal{B}(x)$ such that $U_i\subseteq V_i$. Using the second condition of [Proposition 2](#prop2){: data-relation="required" } inductively, we can find a suitable $U\in\mathcal{B}(x)$ such that $U\subseteq U_1\cap\cdots\cap U_n$. In particular, $U\subseteq V_1\cap\cdots\cap V_n$, so $V_1\cap\cdots\cap V_n\in\mathcal{N}(x)$.
 - For any element $V$ of $\mathcal{N}(x)$, there exists $W\in\mathcal{B}(x)$ such that $W\subseteq V$, so $x\in V$.
 - For any element $V$ of $\mathcal{N}(x)$, pick $W\in\mathcal{B}(x)$ such that $W\subseteq V$. Then $W\in\mathcal{B}$, and therefore $W\in\mathcal{B}(y)$ for any $y\in W$. Since $W\subseteq V$, it follows that $V\in\mathcal{N}(y)$ for all $y$.
 
-Now we can apply [§Open Sets, ⁋Proposition 6](/en/math/topology/open_sets#prop6) to obtain a topology $\mathcal{T}$, and in this topological space $\mathcal{B}(x)$ is a local base at $x$, so by [Proposition 5](#prop5), $\mathcal{B}$ is a base for $\mathcal{T}$.
+Now we can apply [§Open Sets, ⁋Proposition 6](/en/math/topology/open_sets#prop6){: data-relation="required" } to obtain a topology $\mathcal{T}$, and in this topological space $\mathcal{B}(x)$ is a local base at $x$, so by [Proposition 5](#prop5){: data-relation="required" }, $\mathcal{B}$ is a base for $\mathcal{T}$.
 :::
 
 The topology obtained from $\mathcal{B}$ through this process is called the topology generated by $\mathcal{B}$. Similarly, we make a base from a subbase $\mathcal{S}$, and the topology generated by this base is called the topology obtained from $\mathcal{S}$.
