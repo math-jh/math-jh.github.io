@@ -78,7 +78,7 @@ $$a = bq + r, \qquad 0 \leq r < b$$
 :::
 
 ::: 증명
-존재성: 집합 $S = \{a - bk \mid k \in \mathbb{Z}, a - bk \geq 0\}$을 생각하자. $k$를 충분히 작은 (음수) 정수로 잡으면 $a - bk \geq 0$이므로 $S$는 공집합이 아닌 음이 아닌 정수의 집합이고, 정렬성에 의해 최솟값 $r = a - bq$를 갖는다 ([\[집합론\] §정렬집합의 성질들](/ko/math/set_theory/well_ordering)). $r \geq 0$이다. 만약 $r \geq b$라면 $r - b = a - b(q+1) \geq 0$이 $S$의 원소이면서 $r$보다 작아 최소성에 모순이다. 따라서 $0 \leq r < b$이다.
+존재성: 집합 $S = \{a - bk \mid k \in \mathbb{Z}, a - bk \geq 0\}$을 생각하자. $k$를 충분히 작은 (음수) 정수로 잡으면 $a - bk \geq 0$이므로 $S$는 공집합이 아닌 음이 아닌 정수의 집합이고, 정렬성에 의해 최솟값 $r = a - bq$를 갖는다 ([\[집합론\] §정렬집합의 성질들](/ko/math/set_theory/well_ordering){: data-relation="required" }). $r \geq 0$이다. 만약 $r \geq b$라면 $r - b = a - b(q+1) \geq 0$이 $S$의 원소이면서 $r$보다 작아 최소성에 모순이다. 따라서 $0 \leq r < b$이다.
 
 유일성: 두 표현 $a = bq + r = bq' + r'$ ($0 \leq r, r' < b$) 이 있다고 하자. 두 식을 빼면
 
@@ -178,7 +178,7 @@ $$\gcd(1071, 462) = \gcd(462, 147) = \gcd(147, 21) = \gcd(21, 0) = 21$$
 :::
 
 ::: 증명
-$\gcd(a, b) = 1$이면 [§유클리드 호제법과 Bézout 항등식, ⁋정리 3](/ko/math/number_theory/euclidean_algorithm#thm3)에 의해 적당한 정수 $x, y$가 존재하여
+$\gcd(a, b) = 1$이면 [§유클리드 호제법과 Bézout 항등식, ⁋정리 3](/ko/math/number_theory/euclidean_algorithm#thm3){: data-relation="required" }에 의해 적당한 정수 $x, y$가 존재하여
 
 $$ax + by = 1$$
 
