@@ -37,7 +37,7 @@ As in the definition above, from now on we will write elements of the field $\ma
 
 Likewise, we will write scalar multiplication as $\alpha u$ instead of $\alpha\cdot u$. The only worry in this case is that when we write $\alpha\beta u$, one might be unsure whether it means $(\alpha\beta)u$ or $\alpha(\beta u)$; but by the first condition of the definition above, both choices give the same value, so there is nothing to worry about.
 
-A vector space is an abelian group $V$ equipped with the additional structure of $\mathbb{K}$-scalar multiplication. Therefore $V$ enjoys all the properties that abelian groups have. ([§Abelian Groups and Fields, ⁋Proposition 2](/en/math/linear_algebra/fields#prop2) and [§Abelian Groups and Fields, ⁋Corollary 3](/en/math/linear_algebra/fields#cor3))
+A vector space is an abelian group $V$ equipped with the additional structure of $\mathbb{K}$-scalar multiplication. Therefore $V$ enjoys all the properties that abelian groups have. ([§Abelian Groups and Fields, ⁋Proposition 2](/en/math/linear_algebra/fields#prop2){: data-relation="weak" } and [§Abelian Groups and Fields, ⁋Corollary 3](/en/math/linear_algebra/fields#cor3){: data-relation="weak" })
 
 The following are additional properties determined by the $\mathbb{K}$-scalar multiplication.
 
@@ -50,7 +50,7 @@ Let $V$ be a $\mathbb{K}$-vector space. Then
 Conversely, if $\alpha v=0$, then either $\alpha=0$ or $v=0$.
 :::
 ::: Proof
-The first two claims proceed similarly to [§Abelian Groups and Fields, ⁋Proposition 6](/en/math/linear_algebra/fields#prop6). For example, since
+The first two claims proceed similarly to [§Abelian Groups and Fields, ⁋Proposition 6](/en/math/linear_algebra/fields#prop6){: data-relation="weak" }. For example, since
 
 $$\alpha0+\alpha0=\alpha(0+0)=\alpha0$$
 
@@ -85,7 +85,7 @@ Let us now look at a few examples of vector spaces.
 ::: Example 4
 The simplest example of a vector space is $\{0\}$. There is only one way to give this set an addition structure (namely $0+0=0$), and under this structure the set is an abelian group. Moreover, no matter which field $\mathbb{K}$ we take, there is also only one way to define scalar multiplication on this set (namely $\alpha 0=0$), and the scalar multiplication so defined makes $\{0\}$ into a $\mathbb{K}$-vector space. This is called the *trivial space*.
 
-A slightly less trivial example is a field itself. For any field $\mathbb{K}$, $\mathbb{K}$ is a $\mathbb{K}$-vector space. Since $\mathbb{K}$ is a field, it is trivially an abelian group under addition. It suffices to give it a scalar multiplication structure, which we can do simply by taking multiplication in $\mathbb{K}$, $\mathbb{K}\times \mathbb{K}\rightarrow \mathbb{K}$. With this definition, one can check that scalar multiplication satisfies all the conditions of [Definition 1](#def1), and therefore $\mathbb{K}$ is a $\mathbb{K}$-vector space in its own right.
+A slightly less trivial example is a field itself. For any field $\mathbb{K}$, $\mathbb{K}$ is a $\mathbb{K}$-vector space. Since $\mathbb{K}$ is a field, it is trivially an abelian group under addition. It suffices to give it a scalar multiplication structure, which we can do simply by taking multiplication in $\mathbb{K}$, $\mathbb{K}\times \mathbb{K}\rightarrow \mathbb{K}$. With this definition, one can check that scalar multiplication satisfies all the conditions of [Definition 1](#def1){: data-relation="required" }, and therefore $\mathbb{K}$ is a $\mathbb{K}$-vector space in its own right.
 
 More generally, suppose that $\mathbb{K}$ is a field and that there is another field $\mathbb{K}'$ which contains $\mathbb{K}$ as a subset and whose operations, restricted to $\mathbb{K}$, agree with the operations of $\mathbb{K}$. (Such a $\mathbb{K}'$ is called an *extension* of $\mathbb{K}$.) Then $\mathbb{K}'$ is a $\mathbb{K}$-vector space. Since $\mathbb{K}'$ is a field, it forms an abelian group under addition as before, and scalar multiplication by an element $\alpha\in\mathbb{K}$ can be defined by treating $\alpha$ as an element of $\mathbb{K}'$ and using the multiplication structure of $\mathbb{K}'$. For example, $\mathbb{C}$ is an $\mathbb{R}$-vector space, and $\mathbb{R}$ is a $\mathbb{Q}$-vector space.
 :::
@@ -118,7 +118,7 @@ Then one can verify that $\Fun(I,\mathbb{R})$ has the structure of a vector spac
 Moreover, various subsets of $\Fun(I,\mathbb{R})$ are also $\mathbb{R}$-vector spaces. For example, the collection $C(I)$ of continuous functions from $I$ to $\mathbb{R}$ is also an $\mathbb{R}$-vector space, and more generally one can check that the collection $C^k(I)$ of functions whose $k$-th derivative is continuous is also an $\mathbb{R}$-vector space.
 :::
 
-If we think of $\Fun(I,\mathbb{R})$ as the product set $\mathbb{R}^I$, [Example 6](#ex6) can also be regarded as a natural generalization of [Example 5](#ex5). ([\[Set Theory\] §Product of Sets, ⁋Definition 1](/en/math/set_theory/product_of_sets#def1))
+If we think of $\Fun(I,\mathbb{R})$ as the product set $\mathbb{R}^I$, [Example 6](#ex6){: data-relation="weak" } can also be regarded as a natural generalization of [Example 5](#ex5){: data-relation="weak" }. ([\[Set Theory\] §Product of Sets, ⁋Definition 1](/en/math/set_theory/product_of_sets#def1){: data-relation="weak" })
 
 ---
 
