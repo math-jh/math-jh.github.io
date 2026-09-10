@@ -35,7 +35,7 @@ $$\det[x_1\;x_2\;\cdots\;x_m]$$
 
 ## Determinant and Orientation
 
-Let $V,W$ be $n$-dimensional $\mathbb{R}$-vector spaces and let $L:V\rightarrow W$ be a linear map. Then, by the universal property of [\[Multilinear Algebra\] §Tensor Algebras, ⁋Proposition 11](/en/math/multilinear_algebra/tensor_algebras#prop11), the following linear map
+Let $V,W$ be $n$-dimensional $\mathbb{R}$-vector spaces and let $L:V\rightarrow W$ be a linear map. Then, by the universal property of [\[Multilinear Algebra\] §Tensor Algebras, ⁋Proposition 11](/en/math/multilinear_algebra/tensor_algebras#prop11){: data-relation="required" }, the following linear map
 
 $$\bigwedge\nolimits^n(L):\bigwedge\nolimits^n(V)\rightarrow\bigwedge\nolimits^n(W)$$
 

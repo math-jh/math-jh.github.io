@@ -37,7 +37,7 @@ $$\det[x_1\;x_2\;\cdots\;x_m]$$
 
 ## 행렬식과 방향
 
-$V,W$가 $n$차원 $\mathbb{R}$ 벡터공간이라 하고, linear map $L:V\rightarrow W$가 주어졌다 하자. 그럼 [\[다중선형대수학\] §텐서대수, ⁋명제 11](/ko/math/multilinear_algebra/tensor_algebras#prop11)의 universal property에 의하여, 다음의 linear map
+$V,W$가 $n$차원 $\mathbb{R}$ 벡터공간이라 하고, linear map $L:V\rightarrow W$가 주어졌다 하자. 그럼 [\[다중선형대수학\] §텐서대수, ⁋명제 11](/ko/math/multilinear_algebra/tensor_algebras#prop11){: data-relation="required" }의 universal property에 의하여, 다음의 linear map
 
 $$\bigwedge\nolimits^n(L):\bigwedge\nolimits^n(V)\rightarrow\bigwedge\nolimits^n(W)$$
 
@@ -85,7 +85,7 @@ $$\Lambda\vert_{U_\alpha}\cong U_\alpha\times \mathbb{R};\qquad t\,\omega_{U_\al
 
 따라서 각 fiber는 두 component와 ray 하나씩으로 만난다. 이제 component 하나를 택해 $\Lambda^+$라 부르자. 임의의 connected coordinate system $(U,x)$에 대하여 $\omega_U(U)$는 connected이므로 하나의 component에 포함되고, 만일 그것이 $\Lambda^+$가 아니라면 (3)$\implies$(2)에서와 같이 좌표를 맞바꾸어 $\omega_U(U)\subseteq \Lambda^+$이도록 할 수 있다. 이렇게 얻은 coordinate system들의 모임에 대하여, 겹치는 점 $p$에서 $\omega_{U}(p)$와 $\omega_{V}(p)$는 같은 fiber에서 모두 $\Lambda^+$에 속하므로 같은 ray에 속하고, 즉 서로의 positive multiple이다. 따라서 변환식에 의해 Jacobian의 행렬식이 항상 $0$보다 크다.
 
-**(2)$\implies$(3)** 조건을 만족하는 coordinate system들의 모임 $(U_\alpha,x_\alpha)$를 생각하자. Manifold는 paracompact Hausdorff이므로 open cover $(U_\alpha)$에 subordinate한 partition of unity가 존재하고 ([\[위상수학\] §파라콤팩트 공간과 단위분할, ⁋정리 11](/ko/math/topology/paracompact_spaces#thm11)), [§미분다양체, §§Smooth partition of unity](/ko/math/manifolds/smooth_manifolds#smooth-partition-of-unity)에서 살펴본 것과 같이 이를 $C^\infty$이도록 택할 수 있다. 이 partition of unity를 $(\phi_i)_{i\in I}$라 하고 각각의 $i$마다 $\supp\phi_i\subseteq U_{\alpha(i)}$라 하자. 이제
+**(2)$\implies$(3)** 조건을 만족하는 coordinate system들의 모임 $(U_\alpha,x_\alpha)$를 생각하자. Manifold는 paracompact Hausdorff이므로 open cover $(U_\alpha)$에 subordinate한 partition of unity가 존재하고 ([\[위상수학\] §파라콤팩트 공간과 단위분할, ⁋정리 11](/ko/math/topology/paracompact_spaces#thm11){: data-relation="required" }), [§미분다양체, §§Smooth partition of unity](/ko/math/manifolds/smooth_manifolds#smooth-partition-of-unity){: data-relation="required" }에서 살펴본 것과 같이 이를 $C^\infty$이도록 택할 수 있다. 이 partition of unity를 $(\phi_i)_{i\in I}$라 하고 각각의 $i$마다 $\supp\phi_i\subseteq U_{\alpha(i)}$라 하자. 이제
 
 $$\omega=\sum_{i\in I}\phi_i\,\omega_{U_{\alpha(i)}}$$
 
@@ -95,7 +95,7 @@ $$\omega=\sum_{i\in I}\phi_i\,\omega_{U_{\alpha(i)}}$$
 :::
 
 ::: 예시 3
-임의의 Lie group은 orientable이다. 이는 [\[리 이론\] §리 군, ⁋정의 13](/ko/math/lie_theory/Lie_groups#def13)의 $\Omega_\text{l.inv}^1(G)$에서의 임의의 basis $\omega_1,\ldots,\omega_n$을 택한 후, 이들의 wedge $\omega_1\wedge\cdots\wedge\omega_n$을 생각하면 이것이 $G$ 위에서 nonvanishing $n$-form을 정의하기 때문이다.
+임의의 Lie group은 orientable이다. 이는 [\[리 이론\] §리 군, ⁋정의 13](/ko/math/lie_theory/Lie_groups#def13){: data-relation="required" }의 $\Omega_\text{l.inv}^1(G)$에서의 임의의 basis $\omega_1,\ldots,\omega_n$을 택한 후, 이들의 wedge $\omega_1\wedge\cdots\wedge\omega_n$을 생각하면 이것이 $G$ 위에서 nonvanishing $n$-form을 정의하기 때문이다.
 :::
 
 ---
