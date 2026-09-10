@@ -26,7 +26,7 @@ $$\mathcal{I}(z) = \int_\gamma e^{W(x)/z}\,\omega$$
 우선 critical point와 그 non-degeneracy 개념을 정확히 하자.
 
 ::: 정의 1
-Smooth manifold ([\[미분다양체\] §미분다양체, ⁋정의 1](/ko/math/manifolds/smooth_manifolds#def1)) $M$과 smooth function $f:M\rightarrow\mathbb{R}$이 주어졌다 하자. 점 $p\in M$이 $f$의 *critical point<sub>임계점</sub>*라는 것은 differential ([\[미분다양체\] §미분사상, ⁋정의 7](/ko/math/manifolds/differentials#def7)) $\dd{f_p}:T_pM\rightarrow\mathbb{R}$이 zero map인 것을 뜻한다. 여기서 $T_pM$은 $p$에서의 tangent space이다 ([\[미분다양체\] §접공간, ⁋정의 3](/ko/math/manifolds/tangent_space#def3)).
+Smooth manifold ([\[미분다양체\] §미분다양체, ⁋정의 1](/ko/math/manifolds/smooth_manifolds#def1){: data-relation="required" }) $M$과 smooth function $f:M\rightarrow\mathbb{R}$이 주어졌다 하자. 점 $p\in M$이 $f$의 *critical point<sub>임계점</sub>*라는 것은 differential ([\[미분다양체\] §미분사상, ⁋정의 7](/ko/math/manifolds/differentials#def7){: data-relation="required" }) $\dd{f_p}:T_pM\rightarrow\mathbb{R}$이 zero map인 것을 뜻한다. 여기서 $T_pM$은 $p$에서의 tangent space이다 ([\[미분다양체\] §접공간, ⁋정의 3](/ko/math/manifolds/tangent_space#def3){: data-relation="required" }).
 :::
 
 좌표 $(x_1,\ldots,x_n)$을 점 $p$ 근방에 잡으면 위 조건은 $\partial f/\partial x_i(p)=0$이 모든 $i$에 대해 성립한다는 것과 동치이다. Critical point에서는 일차 정보가 사라지므로, 함수의 국소적 형상은 이차 정보, 즉 Hessian이 결정한다.
@@ -120,13 +120,13 @@ $f$의 non-degenerate critical point는 고립되어 있다. 특히 compact mani
 :::
 
 ::: 증명
-[정리 6](#thm6)의 표준형 $f(y)=f(p)-y_1^2-\cdots-y_{\lambda_p}^2+y_{\lambda_p+1}^2+\cdots+y_n^2$에서 $\dd{f}(y)=(-2y_1,\ldots,-2y_{\lambda_p},2y_{\lambda_p+1},\ldots,2y_n)$이므로, $y=0$ 외에는 critical point가 존재하지 않는다. 즉 $p$의 적당한 근방에는 $p$ 외의 critical point가 없으므로 $p$는 isolated critical point이다. $M$이 compact이면 critical point 집합이 closed이며 isolated point들로 구성되므로 유한집합이다.
+[정리 6](#thm6){: data-relation="required" }의 표준형 $f(y)=f(p)-y_1^2-\cdots-y_{\lambda_p}^2+y_{\lambda_p+1}^2+\cdots+y_n^2$에서 $\dd{f}(y)=(-2y_1,\ldots,-2y_{\lambda_p},2y_{\lambda_p+1},\ldots,2y_n)$이므로, $y=0$ 외에는 critical point가 존재하지 않는다. 즉 $p$의 적당한 근방에는 $p$ 외의 critical point가 없으므로 $p$는 isolated critical point이다. $M$이 compact이면 critical point 집합이 closed이며 isolated point들로 구성되므로 유한집합이다.
 :::
 
 두 가지 표준적인 예시를 살펴본다.
 
 ::: 예시 8
-평면 $\mathbb{R}^2$ 위의 함수 $f(x,y)=x^2-y^2$을 생각하자. $\dd{f}=(2x,-2y)$이므로 유일한 critical point는 원점이며, 그 Hessian은 $\operatorname{diag}(2,-2)$이므로 nondegenerate하고 Morse index는 $1$, signature는 $0$이다. 즉 원점은 *안장점<sub>saddle point</sub>*이며, 이미 $f$ 자체가 [정리 6](#thm6)의 표준형으로 주어진 형태이다.
+평면 $\mathbb{R}^2$ 위의 함수 $f(x,y)=x^2-y^2$을 생각하자. $\dd{f}=(2x,-2y)$이므로 유일한 critical point는 원점이며, 그 Hessian은 $\operatorname{diag}(2,-2)$이므로 nondegenerate하고 Morse index는 $1$, signature는 $0$이다. 즉 원점은 *안장점<sub>saddle point</sub>*이며, 이미 $f$ 자체가 [정리 6](#thm6){: data-relation="weak" }의 표준형으로 주어진 형태이다.
 :::
 
 ::: 예시 9
@@ -137,7 +137,7 @@ $$\sum_p (-1)^{\lambda_p} = \chi(T^2) = 0$$
 이 $1 - 2 + 1 = 0$으로 성립함을 즉시 확인할 수 있다.
 :::
 
-[예시 9](#ex9)는 Morse 이론이 단순한 국소 표준화를 넘어 manifold의 *전역적인* 위상 정보 (Euler characteristic, Betti number 등)를 critical point 데이터로부터 복원하는 도구임을 시사하지만, 본 글의 목적상 우리는 국소적 측면만 사용한다. 전역 Morse 이론의 본격적인 전개는 **[Mil]** 또는 **[AD]**를 참조한다.
+[예시 9](#ex9){: data-relation="weak" }는 Morse 이론이 단순한 국소 표준화를 넘어 manifold의 *전역적인* 위상 정보 (Euler characteristic, Betti number 등)를 critical point 데이터로부터 복원하는 도구임을 시사하지만, 본 글의 목적상 우리는 국소적 측면만 사용한다. 전역 Morse 이론의 본격적인 전개는 **[Mil]** 또는 **[AD]**를 참조한다.
 
 ## Stationary phase 근사
 
@@ -152,7 +152,7 @@ $\phi:M\rightarrow\mathbb{R}$이 $\operatorname{supp}(a)$ 위에서 유한 개�
 
 $$I(\hbar) = (2\pi\hbar)^{n/2}\sum_{p\in\operatorname{Crit}(\phi)\cap\operatorname{supp}(a)} \frac{e^{i\phi(p)/\hbar}\,e^{i\pi\sigma_p/4}}{\sqrt{\lvert\det\operatorname{Hess}_p(\phi)\rvert}}\,a(p) + O(\hbar^{n/2+1})$$
 
-여기서 $\sigma_p$는 [정의 4](#def4)의 Hessian signature이다.
+여기서 $\sigma_p$는 [정의 4](#def4){: data-relation="required" }의 Hessian signature이다.
 :::
 
 ::: 증명
@@ -162,9 +162,9 @@ $$I(\hbar) = (2\pi\hbar)^{n/2}\sum_{p\in\operatorname{Crit}(\phi)\cap\operatorna
 
 $$X\bigl(e^{i\phi/\hbar}\bigr) = \frac{i}{\hbar}(X\phi)e^{i\phi/\hbar} = \frac{i}{\hbar}e^{i\phi/\hbar}$$
 
-이므로 $e^{i\phi/\hbar} = (\hbar/i)\,X(e^{i\phi/\hbar})$로 쓸 수 있다. 이를 적분에 대입하고 divergence theorem (즉 $X$의 transpose에 대한 부분적분)을 $N$번 적용하면 $I(\hbar)$ 중 critical point의 밖에 해당하는 기여가 $O(\hbar^N)$임을 알 수 있다. 따라서 [\[미분다양체\] §미분다양체](/ko/math/manifolds/smooth_manifolds)의 smooth partition of unity를 이용하여 $a$의 support를 critical point들의 작은 근방으로 잘라내도 점근전개의 오차는 임의의 차수로 통제된다. 이제 $\operatorname{supp}(a)$가 단 하나의 critical point $p$의 작은 근방에 들어 있는 경우만 다루면 충분하다.
+이므로 $e^{i\phi/\hbar} = (\hbar/i)\,X(e^{i\phi/\hbar})$로 쓸 수 있다. 이를 적분에 대입하고 divergence theorem (즉 $X$의 transpose에 대한 부분적분)을 $N$번 적용하면 $I(\hbar)$ 중 critical point의 밖에 해당하는 기여가 $O(\hbar^N)$임을 알 수 있다. 따라서 [\[미분다양체\] §미분다양체](/ko/math/manifolds/smooth_manifolds){: data-relation="required" }의 smooth partition of unity를 이용하여 $a$의 support를 critical point들의 작은 근방으로 잘라내도 점근전개의 오차는 임의의 차수로 통제된다. 이제 $\operatorname{supp}(a)$가 단 하나의 critical point $p$의 작은 근방에 들어 있는 경우만 다루면 충분하다.
 
-**2단계 (Morse lemma에 의한 표준화).** [정리 6](#thm6)을 $\phi$에 적용하면 $p$ 근방에서 좌표 $y=(y_1,\ldots,y_n)$이 존재하여
+**2단계 (Morse lemma에 의한 표준화).** [정리 6](#thm6){: data-relation="required" }을 $\phi$에 적용하면 $p$ 근방에서 좌표 $y=(y_1,\ldots,y_n)$이 존재하여
 
 $$\phi(y) = \phi(p) - y_1^2 - \cdots - y_{\lambda_p}^2 + y_{\lambda_p+1}^2 + \cdots + y_n^2 = \phi(p) + \frac12 Q(y)$$
 
@@ -199,7 +199,7 @@ $$I(\hbar) = (2\pi\hbar)^{n/2}\,\frac{e^{i\phi(p)/\hbar}\,e^{i\pi\sigma_p/4}}{\s
 을 얻는다. 1단계의 partition of unity에 의해 여러 critical point가 있는 일반적인 경우 위 leading term이 각 점에서 합산되어 원하는 공식이 성립한다.
 :::
 
-[정리 10](#thm10)의 본질은 다음과 같이 요약된다. Oscillating integral의 $\hbar\rightarrow 0$ 점근은 *critical point의 국소 데이터*인 (1) critical value $\phi(p)$, (2) Hessian의 determinant modulus, (3) Hessian의 signature, 그리고 (4) amplitude의 critical point에서의 값으로 완전히 결정된다. Signature가 위상 인자 $e^{i\pi\sigma_p/4}$로 나타나는 것은 Fresnel 적분의 부호별 위상회전이 누적된 결과이며, 이는 *Maslov index*가 등장하는 가장 단순한 정황이기도 하다.
+[정리 10](#thm10){: data-relation="required" }의 본질은 다음과 같이 요약된다. Oscillating integral의 $\hbar\rightarrow 0$ 점근은 *critical point의 국소 데이터*인 (1) critical value $\phi(p)$, (2) Hessian의 determinant modulus, (3) Hessian의 signature, 그리고 (4) amplitude의 critical point에서의 값으로 완전히 결정된다. Signature가 위상 인자 $e^{i\pi\sigma_p/4}$로 나타나는 것은 Fresnel 적분의 부호별 위상회전이 누적된 결과이며, 이는 *Maslov index*가 등장하는 가장 단순한 정황이기도 하다.
 
 ::: 참고 11
 위 정리는 leading order만을 진술하였으나, 동일한 방법은 모든 차수의 점근전개를 제공한다. 즉
@@ -212,7 +212,7 @@ $$I(\hbar) \sim (2\pi\hbar)^{n/2}\sum_p e^{i\phi(p)/\hbar}\,e^{i\pi\sigma_p/4}\,
 간단한 예시 두 개를 본다.
 
 ::: 예시 12
-$M=\mathbb{R}$ 위에서 $\phi(x)=x^2/2$, $a\in C_c^\infty(\mathbb{R})$이라 하자. 유일한 critical point는 $0$이며 $\phi(0)=0$, $\operatorname{Hess}_0(\phi)=1$, $\sigma_0=+1$이다. [정리 10](#thm10)에 의해
+$M=\mathbb{R}$ 위에서 $\phi(x)=x^2/2$, $a\in C_c^\infty(\mathbb{R})$이라 하자. 유일한 critical point는 $0$이며 $\phi(0)=0$, $\operatorname{Hess}_0(\phi)=1$, $\sigma_0=+1$이다. [정리 10](#thm10){: data-relation="required" }에 의해
 
 $$\int_{\mathbb{R}} e^{ix^2/(2\hbar)}\,a(x)\dd{x} = \sqrt{2\pi\hbar}\,e^{i\pi/4}\,a(0) + O(\hbar^{3/2})$$
 
@@ -224,14 +224,14 @@ $M=\mathbb{R}^2$ 위의 $\phi(x,y)=xy$를 생각하자. $\dd{\phi}=(y,x)$이므�
 
 $$\operatorname{Hess}_0(\phi) = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}$$
 
-이며 eigenvalue가 $\pm 1$이므로 nondegenerate하고 $\sigma_0=0$, $\lvert\det\operatorname{Hess}_0(\phi)\rvert=1$이다. 따라서 [정리 10](#thm10)에 의해
+이며 eigenvalue가 $\pm 1$이므로 nondegenerate하고 $\sigma_0=0$, $\lvert\det\operatorname{Hess}_0(\phi)\rvert=1$이다. 따라서 [정리 10](#thm10){: data-relation="required" }에 의해
 
 $$\int_{\mathbb{R}^2} e^{ixy/\hbar}\,a(x,y)\dd{x}\dd{y} = 2\pi\hbar\,a(0,0) + O(\hbar^2)$$
 
 가 성립한다. 이 식은 Fourier 변환과 inverse Fourier 변환을 연결하는 *Fourier inversion* 정형과 동등하며, $a$의 Fourier 변환을 적당히 재배열하면 직접 검증할 수 있다.
 :::
 
-[예시 13](#ex13)에서 보듯이 signature가 $0$인 경우 위상 인자가 자명하므로 stationary phase formula는 Fourier 해석에서 친숙한 형태로 환원된다. 일반적으로 signature가 0이 아닐 때 등장하는 위상 인자가 Morse 이론에서 *index*가 가지는 의미와 결합하여 Maslov class, half-density bundle 등 보다 정교한 구조로 발전한다.
+[예시 13](#ex13){: data-relation="weak" }에서 보듯이 signature가 $0$인 경우 위상 인자가 자명하므로 stationary phase formula는 Fourier 해석에서 친숙한 형태로 환원된다. 일반적으로 signature가 0이 아닐 때 등장하는 위상 인자가 Morse 이론에서 *index*가 가지는 의미와 결합하여 Maslov class, half-density bundle 등 보다 정교한 구조로 발전한다.
 
 ## Lefschetz thimble
 
@@ -245,9 +245,9 @@ $$\int_\Gamma e^{W(x)/\hbar}\,\omega$$
 
 $$h(x) = -\operatorname{Re}(W(x)/\hbar)$$
 
-라 하면, $h$는 smooth real-valued function이며, $W$의 holomorphic critical point $p$ (즉 $\dd{W}(p)=0$) 가 정확히 $h$의 critical point에 대응한다. 또한 $W$가 $p$에서 non-degenerate, 즉 complex Hessian이 가역이라는 조건은 $h$가 $p$에서 nondegenerate critical point를 가짐과 동치이다. 단 그 *Morse index*는 항상 $n$ (= 절반 차원)이며, 이는 아래 [명제 15](#prop15)에서 정식으로 보인다.
+라 하면, $h$는 smooth real-valued function이며, $W$의 holomorphic critical point $p$ (즉 $\dd{W}(p)=0$) 가 정확히 $h$의 critical point에 대응한다. 또한 $W$가 $p$에서 non-degenerate, 즉 complex Hessian이 가역이라는 조건은 $h$가 $p$에서 nondegenerate critical point를 가짐과 동치이다. 단 그 *Morse index*는 항상 $n$ (= 절반 차원)이며, 이는 아래 [명제 15](#prop15){: data-relation="forward" }에서 정식으로 보인다.
 
-$X$ 위에 적당한 Kähler metric을 고정하고 (실 부분이 Riemannian metric을 이루므로 [\[리만기하학\] §리만 계량](/ko/math/riemannian_geometry/Riemannian_metric)의 일반론에 따라 gradient vector field가 정의된다) $h$의 gradient flow를 생각하자.
+$X$ 위에 적당한 Kähler metric을 고정하고 (실 부분이 Riemannian metric을 이루므로 [\[리만기하학\] §리만 계량](/ko/math/riemannian_geometry/Riemannian_metric){: data-relation="required" }의 일반론에 따라 gradient vector field가 정의된다) $h$의 gradient flow를 생각하자.
 
 ::: 정의 14
 $W$의 nondegenerate critical point $p$에 대하여, $h=-\operatorname{Re}(W/\hbar)$의 *Lefschetz thimble<sub>레프셰츠 팀블</sub>* $\Gamma_p$는 $h$의 negative gradient flow
@@ -274,12 +274,12 @@ $$\operatorname{Hess}_p(h) = -\begin{pmatrix} b_1 & -b_2 \\ -b_2 & -b_1 \end{pma
 
 이고, determinant $= -(b_1^2 + b_2^2) = -\lvert b\rvert^2 < 0$. 음의 determinant는 signature $(1, 1)$, 즉 Morse index $1 = n$을 의미한다.
 
-$n$차원의 경우 [정리 6](#thm6)의 복소 버전 (holomorphic Morse lemma)에 의해 적당한 좌표에서 $W = W(p) + \left(\sum_{i=1}^n z_i^2\right)/2$로 쓸 수 있고, 위 1차원 계산이 각 $z_i$-direction에 독립적으로 적용되어 signature $(n, n)$, Morse index $n$.
+$n$차원의 경우 [정리 6](#thm6){: data-relation="required" }의 복소 버전 (holomorphic Morse lemma)에 의해 적당한 좌표에서 $W = W(p) + \left(\sum_{i=1}^n z_i^2\right)/2$로 쓸 수 있고, 위 1차원 계산이 각 $z_i$-direction에 독립적으로 적용되어 signature $(n, n)$, Morse index $n$.
 :::
 
 기하적으로는 complex 구조 $J$ (즉 $i$를 곱하는 operator)가 $\operatorname{Hess}_p(h)$의 양·음 eigenspace를 서로 swap한다는 사실 ($HJ = -JH$, anti-$J$-invariance)로 해석할 수 있으며, 이는 두 eigenspace의 차원이 자동으로 $n$씩 split됨을 강제한다. Holomorphic이라는 가정이 real-valued Morse function이 항상 *saddle* (index $n$)만 갖도록 만들어, real Morse 이론의 "극대점 (index $2n$)"이나 "극소점 (index $0$)" 타입은 holomorphic setting에서 존재할 수 없다.
 
-[명제 15](#prop15)로부터, $\Gamma_p$는 $X$의 실차원의 절반에 해당하는 real submanifold이며, 정확히 적분의 수렴 조건 $\operatorname{Re}(W/\hbar)\rightarrow -\infty$를 따라가는 경로의 다발이 된다. 정의에 의해 $h$는 $\Gamma_p$ 위에서 $p$에서 최소를 가지므로 $\operatorname{Re}(W/\hbar)$는 $p$에서 최대를 가지며, $\Gamma_p$를 따라 무한대로 가면 $\operatorname{Re}(W/\hbar)\rightarrow-\infty$이다. 따라서 적분
+[명제 15](#prop15){: data-relation="required" }로부터, $\Gamma_p$는 $X$의 실차원의 절반에 해당하는 real submanifold이며, 정확히 적분의 수렴 조건 $\operatorname{Re}(W/\hbar)\rightarrow -\infty$를 따라가는 경로의 다발이 된다. 정의에 의해 $h$는 $\Gamma_p$ 위에서 $p$에서 최소를 가지므로 $\operatorname{Re}(W/\hbar)$는 $p$에서 최대를 가지며, $\Gamma_p$를 따라 무한대로 가면 $\operatorname{Re}(W/\hbar)\rightarrow-\infty$이다. 따라서 적분
 
 $$\mathcal{I}_p(\hbar) = \int_{\Gamma_p} e^{W(x)/\hbar}\,\omega$$
 
@@ -287,7 +287,7 @@ $$\mathcal{I}_p(\hbar) = \int_{\Gamma_p} e^{W(x)/\hbar}\,\omega$$
 
 이렇게 정의된 thimble들 $\{\Gamma_p\}_{p\in\operatorname{Crit}(W)}$는 rapid decay relative cohomology의 기저를 이루며, 임의의 적분 contour의 deformation을 thimble들의 정수계수 선형결합으로 분해할 수 있다. 이는 *Picard–Lefschetz 공식*의 출발점이며, 자세한 내용은 **[AGV]**의 II장 또는 **[Pha]**를 참조한다.
 
-각 thimble $\Gamma_p$ 위에서 $\hbar\rightarrow 0$ 점근을 계산하면 [정리 10](#thm10)을 holomorphic 세팅으로 확장한 다음의 진술을 얻는다.
+각 thimble $\Gamma_p$ 위에서 $\hbar\rightarrow 0$ 점근을 계산하면 [정리 10](#thm10){: data-relation="required" }을 holomorphic 세팅으로 확장한 다음의 진술을 얻는다.
 
 ::: 명제 16
 $W$가 nondegenerate critical point $p$를 가질 때, $\hbar\rightarrow 0^+$에서
@@ -298,7 +298,7 @@ $$\int_{\Gamma_p} e^{W(x)/\hbar}\,\omega = (2\pi\hbar)^{n/2}\,\frac{e^{W(p)/\hba
 :::
 
 ::: 증명
-$p$ 근방에서 holomorphic Morse lemma (즉 [정리 6](#thm6)의 복소 버전)에 의해 holomorphic coordinate $z=(z_1,\ldots,z_n)$이 존재하여
+$p$ 근방에서 holomorphic Morse lemma (즉 [정리 6](#thm6){: data-relation="required" }의 복소 버전)에 의해 holomorphic coordinate $z=(z_1,\ldots,z_n)$이 존재하여
 
 $$W(z) = W(p) + \frac12\sum_{i=1}^n z_i^2$$
 
@@ -306,10 +306,10 @@ $$W(z) = W(p) + \frac12\sum_{i=1}^n z_i^2$$
 
 $$e^{W(p)/\hbar}\,\alpha(p)\,\prod_{i=1}^n \int_{\mathbb{R}} e^{e^{2i\theta_i}t_i^2/(2\hbar)}\dd{t_i}$$
 
-으로 환원되며, 각 1차원 적분은 [정리 10](#thm10)의 증명 3단계와 동일한 방식으로 $\sqrt{2\pi\hbar/(-e^{2i\theta_i})}=\sqrt{2\pi\hbar}/\sqrt{-e^{2i\theta_i}}$를 준다. 이를 모두 곱하면 $(2\pi\hbar)^{n/2}/\sqrt{\det\operatorname{Hess}_p(W)}$가 나오며, square root의 branch는 thimble의 orientation $\{e^{i\theta_i}\}$에 의해 결정된다. 자세한 부호 추적은 **[Pha]** §5를 참조한다.
+으로 환원되며, 각 1차원 적분은 [정리 10](#thm10){: data-relation="required" }의 증명 3단계와 동일한 방식으로 $\sqrt{2\pi\hbar/(-e^{2i\theta_i})}=\sqrt{2\pi\hbar}/\sqrt{-e^{2i\theta_i}}$를 준다. 이를 모두 곱하면 $(2\pi\hbar)^{n/2}/\sqrt{\det\operatorname{Hess}_p(W)}$가 나오며, square root의 branch는 thimble의 orientation $\{e^{i\theta_i}\}$에 의해 결정된다. 자세한 부호 추적은 **[Pha]** §5를 참조한다.
 :::
 
-[명제 16](#prop16)는 위의 [정리 10](#thm10)을 holomorphic 세팅으로 확장한 것이며, holomorphic superpotential에 대한 oscillating integral의 thimble별 점근 분해의 표준적인 출발점이다. 일반적으로 critical point가 매개변수에 따라 이동할 때, thimble들의 monodromy는 Picard–Lefschetz 변환을 통해 적분의 분해를 통제한다.
+[명제 16](#prop16){: data-relation="weak" }는 위의 [정리 10](#thm10){: data-relation="required" }을 holomorphic 세팅으로 확장한 것이며, holomorphic superpotential에 대한 oscillating integral의 thimble별 점근 분해의 표준적인 출발점이다. 일반적으로 critical point가 매개변수에 따라 이동할 때, thimble들의 monodromy는 Picard–Lefschetz 변환을 통해 적분의 분해를 통제한다.
 
 ---
 
