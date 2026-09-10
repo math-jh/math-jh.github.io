@@ -34,10 +34,10 @@ $$n\geq N\implies x_n\in U$$
 
 ## 분리공리들
 
-위의 [예시 2](#ex2)와 같은 현상이 일어나는 이유는 직관적으로 $X$ 위에 정의된 위상이 $X$의 점들을 분리시켜줄만큼 충분히 강하지 않기 때문이다. 우리는 위상공간에서 점들을 분리하는 정도에 따라 다양한 종류의 *separation axiom<sub>분리공리</sub>*들을 정의하고 이들 각각을 만족하는 공간들을 분류할 수 있다. 이를 위해 몇 가지 용어를 정리하자.
+위의 [예시 2](#ex2){: data-relation="required" }와 같은 현상이 일어나는 이유는 직관적으로 $X$ 위에 정의된 위상이 $X$의 점들을 분리시켜줄만큼 충분히 강하지 않기 때문이다. 우리는 위상공간에서 점들을 분리하는 정도에 따라 다양한 종류의 *separation axiom<sub>분리공리</sub>*들을 정의하고 이들 각각을 만족하는 공간들을 분류할 수 있다. 이를 위해 몇 가지 용어를 정리하자.
 
 - 위상공간 $X$의 두 점 $x,y$가 서로 다르다는 것은 $x\neq y$인 것이다. 
-- 위상공간 $X$의 두 점 $x,y$가 *위상적으로 구별가능<sub>topologically distinguishable</sub>*하다는 것은 $\mathcal{N}(x)\neq \mathcal{N}(y)$인 것이다.[^1] ([§열린집합, §§Neighborhood filter](/ko/math/topology/open_sets#neighborhood-filter))
+- 위상공간 $X$의 두 점 $x,y$가 *위상적으로 구별가능<sub>topologically distinguishable</sub>*하다는 것은 $\mathcal{N}(x)\neq \mathcal{N}(y)$인 것이다.[^1] ([§열린집합, §§Neighborhood filter](/ko/math/topology/open_sets#neighborhood-filter){: data-relation="weak" })
 - 위상공간 $X$의 두 부분집합 $A,B$가 *분리가능<sub>separated</sub>*이라는 것은 $A,B$ 각각이 서로와 서로소인 근방을 갖는 것이다.
 - 위상공간 $X$의 두 부분집합 $A,B$가 *근방으로 분리가능<sub>separated by neighborhoods</sub>*이라는 것은 이들이 서로소인 근방을 갖는 것이다.
 - 위상공간 $X$의 두 부분집합 $A,B$가 *닫힌근방으로 분리가능<sub>separated by closed neighborhoods</sub>*이라는 것은 이들이 서로소인 닫힌근방을 갖는 것이다.
@@ -73,7 +73,7 @@ $$n\geq N\implies x_n\in U$$
 
 ## 하우스도르프 공간
 
-[정의 3](#def3)에서 특히 중요한 것 중 하나는 Hausdorff space이다. 여기에서는 우리의 직관이 잘 성립한다. 
+[정의 3](#def3){: data-relation="required" }에서 특히 중요한 것 중 하나는 Hausdorff space이다. 여기에서는 우리의 직관이 잘 성립한다. 
 
 ::: 명제 4
 Hausdorff space $X$의 임의의 점열 $(x_n)$에 대하여, $(x_n)$가 수렴하는 점은 많아야 하나 존재한다.
@@ -105,7 +105,7 @@ $$\Delta_X=\{(x,x)\mid x\in X\}$$
 
 $$\Delta_X=\{(x_i)_{i\in I}\mid\text{$x_i=x$ for all $i$, where $x\in X$}\}$$
 
-이 닫힌집합인 것이 서로 동치라는 것을 동일한 논증으로 보일 수 있다. [보조정리 5](#lem5)로부터 다음이 성립한다.
+이 닫힌집합인 것이 서로 동치라는 것을 동일한 논증으로 보일 수 있다. [보조정리 5](#lem5){: data-relation="required" }로부터 다음이 성립한다.
 
 ::: 따름정리 6
 연속함수 $f,g:X \rightarrow Y$에 대하여, 만일 $Y$가 Hausdorff라면 다음 집합
@@ -130,7 +130,7 @@ $X\times Y$에서 $Y$로의 두 연속함수
 
 $$(x,y)\mapsto f(x),\quad (x,y)\mapsto y$$
 
-를 생각한 후 [따름정리 6](#cor6)을 적용하면 된다. 
+를 생각한 후 [따름정리 6](#cor6){: data-relation="required" }을 적용하면 된다. 
 :::
 
 ## 하우스도르프 공간의 부분공간과 곱

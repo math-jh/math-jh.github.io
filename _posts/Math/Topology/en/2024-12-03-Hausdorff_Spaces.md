@@ -34,10 +34,10 @@ Let $X$ be any set endowed with the trivial topology, considered as a topologica
 
 ## Separation Axioms
 
-The reason phenomena like [Example 2](#ex2) occur is, intuitively, that the topology on $X$ is not strong enough to separate the points of $X$. We may define various *separation axioms* according to the degree to which points are separated in a topological space, and classify spaces satisfying each of them. To this end, let us fix some terminology.
+The reason phenomena like [Example 2](#ex2){: data-relation="required" } occur is, intuitively, that the topology on $X$ is not strong enough to separate the points of $X$. We may define various *separation axioms* according to the degree to which points are separated in a topological space, and classify spaces satisfying each of them. To this end, let us fix some terminology.
 
 - Two points $x,y$ of a topological space $X$ are distinct if $x\neq y$. 
-- Two points $x,y$ of a topological space $X$ are *topologically distinguishable* if $\mathcal{N}(x)\neq \mathcal{N}(y)$.[^1] ([§Open Sets, §§Neighborhood filter](/en/math/topology/open_sets#neighborhood-filter))
+- Two points $x,y$ of a topological space $X$ are *topologically distinguishable* if $\mathcal{N}(x)\neq \mathcal{N}(y)$.[^1] ([§Open Sets, §§Neighborhood filter](/en/math/topology/open_sets#neighborhood-filter){: data-relation="weak" })
 - Two subsets $A,B$ of a topological space $X$ are *separated* if each has a neighborhood not containing the other.
 - Two subsets $A,B$ of a topological space $X$ are *separated by neighborhoods* if they have disjoint neighborhoods.
 - Two subsets $A,B$ of a topological space $X$ are *separated by closed neighborhoods* if they have disjoint closed neighborhoods.
@@ -73,7 +73,7 @@ For a topological space $X$, we define the following.
 
 ## Hausdorff Spaces
 
-One of the notions of particular importance in [Definition 3](#def3) is that of a Hausdorff space. Here our intuition is well-founded.
+One of the notions of particular importance in [Definition 3](#def3){: data-relation="required" } is that of a Hausdorff space. Here our intuition is well-founded.
 
 ::: Proposition 4
 In a Hausdorff space $X$, any sequence $(x_n)$ converges to at most one point.
@@ -105,7 +105,7 @@ More generally, by the same argument one can show that $X$ is Hausdorff if and o
 
 $$\Delta_X=\{(x_i)_{i\in I}\mid\text{$x_i=x$ for all $i$, where $x\in X$}\}$$
 
-in $X^I=\prod_{i\in I}X$ is closed. From [Lemma 5](#lem5) we obtain the following.
+in $X^I=\prod_{i\in I}X$ is closed. From [Lemma 5](#lem5){: data-relation="required" } we obtain the following.
 
 ::: Corollary 6
 For continuous functions $f,g:X \rightarrow Y$, if $Y$ is Hausdorff then the set
@@ -126,7 +126,7 @@ $$\graph(f)=\{(x,f(x))\mid x\in X\}$$
 is a closed subset of $X\times Y$.
 :::
 ::: Proof
-Apply [Corollary 6](#cor6) to the two continuous functions
+Apply [Corollary 6](#cor6){: data-relation="required" } to the two continuous functions
 
 $$(x,y)\mapsto f(x),\quad (x,y)\mapsto y$$
 
