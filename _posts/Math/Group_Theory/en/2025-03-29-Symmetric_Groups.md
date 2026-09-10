@@ -87,7 +87,7 @@ Meanwhile, let us call a cycle of length $2$ a *transposition*. This is simply t
 Any permutation of $S_n$ can be written as a product of transpositions.
 :::
 ::: Proof
-By [Proposition 4](#prop4) it suffices to prove that an arbitrary cycle can be written as a product of transpositions.
+By [Proposition 4](#prop4){: data-relation="required" } it suffices to prove that an arbitrary cycle can be written as a product of transpositions.
 
 $$(k_1\;k_2\;\cdots\;k_r)=(k_{r-1}\;k_r)(k_{r-2}\;k_r)\cdots(k_2\;k_r)(k_1\;k_r).$$
 :::
@@ -114,7 +114,7 @@ $\sigma(1)$ is first moved to $1$ via $\sigma^{-1}$. Then, in $(1\;2)$ this valu
 Therefore $\sigma(1\;2)\sigma^{-1}=(\sigma(1)\;\sigma(2))$ holds.
 :::
 
-Substituting $\sigma=(1\;2\;\cdots\;n)$, $(1\;2\;\cdots\;n)^2$, $\ldots$ into [Lemma 7](#lem7), we obtain $(2\;3)$, $(3\;4)$, $\ldots$. On the other hand, for any $(a\;b)$, assuming without loss of generality that $a<b$,
+Substituting $\sigma=(1\;2\;\cdots\;n)$, $(1\;2\;\cdots\;n)^2$, $\ldots$ into [Lemma 7](#lem7){: data-relation="required" }, we obtain $(2\;3)$, $(3\;4)$, $\ldots$. On the other hand, for any $(a\;b)$, assuming without loss of generality that $a<b$,
 
 $$\begin{aligned}
     (a\;b)&=(a\;a+1)(a+1\;b)(a\;a+1)\\
@@ -127,7 +127,7 @@ thus $(a\;b)$ can be written as a product of cycles of the form $(i\;i+1)$. Ther
 
 $$(a_1\;a_2\;\cdots\;a_k)=(a_1\;a_2)(a_2\;a_3)\cdots(a_{k-1}\;a_k)$$
 
-holds, so $(1\;2)$ and $(1\;2\;\cdots\;n)$ can generate all cycles, and hence any element of $S_n$, so [Proposition 6](#prop6) holds.
+holds, so $(1\;2)$ and $(1\;2\;\cdots\;n)$ can generate all cycles, and hence any element of $S_n$, so [Proposition 6](#prop6){: data-relation="required" } holds.
 
 ::: Theorem 8 (Cayley)
 For any finite group $G$, there exists a natural number $n$ such that $G$ can be made isomorphic to some subgroup of $S_n$.
@@ -162,7 +162,7 @@ For example, the identity permutation has 0 inversions so is an even permutation
 
 > a permutation that can be expressed as a product of an even number of transpositions
 
-The strength of this definition compared to ours just now is that properties such as the product of two even permutations being even and the product of an odd and an even permutation being odd are more intuitively obvious. But unlike our definition just now, it is not obvious that the parity (i.e., whether $\sigma$ is even or odd) is well defined. Therefore it is convenient to carry both definitions along. These books therefore show through the following lemma that this definition is the same as [Definition 9](#def9) we just defined.
+The strength of this definition compared to ours just now is that properties such as the product of two even permutations being even and the product of an odd and an even permutation being odd are more intuitively obvious. But unlike our definition just now, it is not obvious that the parity (i.e., whether $\sigma$ is even or odd) is well defined. Therefore it is convenient to carry both definitions along. These books therefore show through the following lemma that this definition is the same as [Definition 9](#def9){: data-relation="required" } we just defined.
 
 ::: Lemma 10
 That $\sigma$ is an even permutation is equivalent to $\sigma$ being expressible as a product of an even number of transpositions.
@@ -180,7 +180,7 @@ Then for each pair $(i,j)$, the term $(x_{\sigma(i)}-x_{\sigma(j)})$ can be rewr
 
 $$(x_{\sigma(i)}-x_{\sigma(j)})=\begin{cases}(x_{\sigma(i)}-x_{\sigma(j)})&\text{if $\sigma(i)<\sigma(j)$}\\-(x_{\sigma(j)}-x_{\sigma(i)})&\text{if $\sigma(i)>\sigma(j)$}\end{cases}\tag{1}$$
 
-Moreover, since $\sigma$ is a bijection, if we rewrite all terms in this way we see that $\sigma(\Delta)$ is exactly the same polynomial as $\Delta$ up to sign. Therefore, defining $\sgn(\sigma)=\sigma(\Delta)/\Delta$, the quantity $\sgn(\sigma)$ becomes exactly the parity of $\sigma$ defined in the sense of [Definition 9](#def9).
+Moreover, since $\sigma$ is a bijection, if we rewrite all terms in this way we see that $\sigma(\Delta)$ is exactly the same polynomial as $\Delta$ up to sign. Therefore, defining $\sgn(\sigma)=\sigma(\Delta)/\Delta$, the quantity $\sgn(\sigma)$ becomes exactly the parity of $\sigma$ defined in the sense of [Definition 9](#def9){: data-relation="required" }.
 
 From the definition, it is obvious that if $\sigma$ is a transposition then $\sgn(\sigma)=-1$. Therefore, if we can only show that $\sgn$ is multiplicative,
 
@@ -219,7 +219,7 @@ First, the permutations inside $A_5$ can be classified into the following types:
 
 That these four types of permutations are mutually distinct can be seen by looking at the orders of the individual elements, and that elements belonging to the same type are distinct from one another can be seen directly by looking at function values.
 
-In general, for a subgroup $N$ of a group $G$ to be a normal subgroup, by definition $N$ must be expressible as a union of conjugacy classes under inner automorphisms. Now using [Lemma 7](#lem7), we can see that the 3-cycles and the products of two disjoint 2-cycles each form single conjugacy classes, while the $5$-cycles split into two conjugacy classes each containing 12 elements. The size of a normal subgroup of $A_5$ must divide the size of $A_5$, which is $60$, but no union of non-trivial conjugacy classes containing the identity can produce a divisor of $60$, so $A_5$ has no non-trivial normal subgroup.
+In general, for a subgroup $N$ of a group $G$ to be a normal subgroup, by definition $N$ must be expressible as a union of conjugacy classes under inner automorphisms. Now using [Lemma 7](#lem7){: data-relation="required" }, we can see that the 3-cycles and the products of two disjoint 2-cycles each form single conjugacy classes, while the $5$-cycles split into two conjugacy classes each containing 12 elements. The size of a normal subgroup of $A_5$ must divide the size of $A_5$, which is $60$, but no union of non-trivial conjugacy classes containing the identity can produce a divisor of $60$, so $A_5$ has no non-trivial normal subgroup.
 :::
 
 ---

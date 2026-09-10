@@ -20,7 +20,7 @@ weight: 1
 [군론](/ko/group_theory) 카테고리에서 처음으로 살펴볼 것은 특정한 group들이다. 
 
 ::: 정의 1
-집합 $[n]=\{1,\ldots, n\}$에 대하여, $[n]$의 $\Set$에서의 automorphism group $\Aut([n])$을 *symmetric group<sub>대칭군</sub>*이라 부르고 $S_n$으로 적는다. ([\[범주론\] §범주, ⁋정의 9](/ko/math/category_theory/categories#def9))  
+집합 $[n]=\{1,\ldots, n\}$에 대하여, $[n]$의 $\Set$에서의 automorphism group $\Aut([n])$을 *symmetric group<sub>대칭군</sub>*이라 부르고 $S_n$으로 적는다. ([\[범주론\] §범주, ⁋정의 9](/ko/math/category_theory/categories#def9){: data-relation="required" })  
 :::
 
 즉 $S_n$의 원소들은 집합 $[n]$에서 $[n]$으로 가는 전단사함수들이며, $S_n$의 연산은 함수의 합성으로 주어진다. $S_n$의 원소들은 *permutation*이라 부른다.
@@ -57,7 +57,7 @@ $S_n$의 원소들의 합성은 함수의 합성이고, 일반적으로 함수�
 Permutation $\sigma_1,\ldots,\sigma_r\in S_n$가 *disjoint<sub>서로소</sub>*라는 것은 만일 어떠한 $i$가 $\sigma_i(k)\neq k$를 만족한다면, 다른 모든 $j\neq i$에 대하여는 $\sigma_j(k)=k$인 것이다. 
 :::
 
-그럼 어떠한 $k$에 대하여 $\sigma_i(k)\neq k$라면 $\sigma_i$가 injective이므로 $\sigma_i(\sigma_i(k))\neq \sigma_i(k)$이고, 따라서 [정의 3](#def3)에 의하여 $i$가 아닌 모든 $j$에 대하여 $\sigma_j$는 $k$와 $\sigma_i(k)$를 모두 고정하므로, 임의의 disjoint permutation들 $\sigma_1,\ldots,\sigma_r\in S_n$의 곱은 이들의 순서에 의존하지 않는다. 뿐만 아니라 다음이 성립한다. 
+그럼 어떠한 $k$에 대하여 $\sigma_i(k)\neq k$라면 $\sigma_i$가 injective이므로 $\sigma_i(\sigma_i(k))\neq \sigma_i(k)$이고, 따라서 [정의 3](#def3){: data-relation="required" }에 의하여 $i$가 아닌 모든 $j$에 대하여 $\sigma_j$는 $k$와 $\sigma_i(k)$를 모두 고정하므로, 임의의 disjoint permutation들 $\sigma_1,\ldots,\sigma_r\in S_n$의 곱은 이들의 순서에 의존하지 않는다. 뿐만 아니라 다음이 성립한다. 
 
 ::: 명제 4
 $S_n$의 임의의 non-identity permutation은 disjoint cycle들의 곱으로 나타낼 수 있다. 
@@ -86,7 +86,7 @@ $$\sigma_k(x)=\begin{cases}\sigma(x)&\text{if $x\in C_k$}\\x&\text{otherwise}\en
 $S_n$의 임의의 permutation은 transposition들의 곱으로 나타낼 수 있다. 
 :::
 ::: 증명
-[명제 4](#prop4)에 의하여 임의의 cycle이 transposition들의 곱으로 나타난다는 것만 증명하면 충분하다. 
+[명제 4](#prop4){: data-relation="required" }에 의하여 임의의 cycle이 transposition들의 곱으로 나타난다는 것만 증명하면 충분하다. 
 
 $$(k_1\;k_2\;\cdots\;k_r)=(k_{r-1}\;k_r)(k_{r-2}\;k_r)\cdots(k_2\;k_r)(k_1\;k_r).$$
 :::
@@ -113,7 +113,7 @@ $\sigma(1)$은 우선 $\sigma^{-1}$을 통해 $1$로 옮겨진다. 그 후, $(1\
 따라서 $\sigma(1\;2)\sigma^{-1}=(\sigma(1)\;\sigma(2))$가 성립한다.
 :::
 
-[보조정리 7](#lem7)에 $\sigma=(1\;2\;\cdots\;n)$, $(1\;2\;\cdots\;n)^2$, $\ldots$를 대입하다보면, 우리는 $(2\;3)$, $(3\;4)$, $\ldots$를 얻는다. 한편, 임의의 $(a\;b)$에 대하여, 일반성을 잃지 않고 $a<b$라 한다면
+[보조정리 7](#lem7){: data-relation="required" }에 $\sigma=(1\;2\;\cdots\;n)$, $(1\;2\;\cdots\;n)^2$, $\ldots$를 대입하다보면, 우리는 $(2\;3)$, $(3\;4)$, $\ldots$를 얻는다. 한편, 임의의 $(a\;b)$에 대하여, 일반성을 잃지 않고 $a<b$라 한다면
 
 $$\begin{aligned}
     (a\;b)&=(a\;a+1)(a+1\;b)(a\;a+1)\\
@@ -126,7 +126,7 @@ $$\begin{aligned}
 
 $$(a_1\;a_2\;\cdots\;a_k)=(a_1\;a_2)(a_2\;a_3)\cdots(a_{k-1}\;a_k)$$
 
-이 성립하므로, $(1\;2)$과 $(1\;2\;\cdots\;n)$은 모든 cycle을 만들 수 있고, 따라서 $S_n$의 임의의 원소도 만들 수 있으므로 [명제 6](#prop6)이 성립한다.
+이 성립하므로, $(1\;2)$과 $(1\;2\;\cdots\;n)$은 모든 cycle을 만들 수 있고, 따라서 $S_n$의 임의의 원소도 만들 수 있으므로 [명제 6](#prop6){: data-relation="required" }이 성립한다.
 
 ::: 정리 8 (Cayley)
 임의의 finite group $G$에 대하여, 적당한 자연수 $n$이 존재하여 $G$를 $S_n$의 어떤 subgroup과 isomorphic하도록 할 수 있다.
@@ -161,7 +161,7 @@ $S_n$의 각 원소 $\sigma$에 대하여, $i<j$이지만 $\sigma(i)>\sigma(j)$�
 
 > 짝수 개의 transposition들의 곱으로 표현할 수 있는 permutation
 
-으로 정의한다. 방금 우리의 정의에 비해 이 정의가 강점을 갖는 것은, 예를 들어 even permutation과 even permutation의 곱이 even이고 odd permutation과 even permutation의 곱이 odd인 성질 등등이 더 직관적으로 보인다는 것이다. 하지만 방금 우리의 정의와는 다르게 parity (즉, $\sigma$가 even인지 odd인지)가 잘 정의된다는 것이 명백하지 않다. 때문에 이 두 정의를 모두 들고 가는 것이 편리하다. 이들 책에서는 그래서 다음 보조정리를 통해, 해당 정의가 방금 우리가 정의한 [정의 9](#def9)와 동일하다는 것을 보인다. 
+으로 정의한다. 방금 우리의 정의에 비해 이 정의가 강점을 갖는 것은, 예를 들어 even permutation과 even permutation의 곱이 even이고 odd permutation과 even permutation의 곱이 odd인 성질 등등이 더 직관적으로 보인다는 것이다. 하지만 방금 우리의 정의와는 다르게 parity (즉, $\sigma$가 even인지 odd인지)가 잘 정의된다는 것이 명백하지 않다. 때문에 이 두 정의를 모두 들고 가는 것이 편리하다. 이들 책에서는 그래서 다음 보조정리를 통해, 해당 정의가 방금 우리가 정의한 [정의 9](#def9){: data-relation="required" }와 동일하다는 것을 보인다. 
 
 ::: 보조정리 10
 $\sigma$가 even permutation인 것은 $\sigma$가 짝수개의 transposition들의 곱으로 나타날 수 있는 것과 동치이다.
@@ -179,9 +179,9 @@ $$\sigma(\Delta)=\prod_{1\leq i< j\leq n}(x_{\sigma(i)}-x_{\sigma(j)})$$
 
 $$(x_{\sigma(i)}-x_{\sigma(j)})=\begin{cases}(x_{\sigma(i)}-x_{\sigma(j)})&\text{if $\sigma(i)<\sigma(j)$}\\-(x_{\sigma(j)}-x_{\sigma(i)})&\text{if $\sigma(i)>\sigma(j)$}\end{cases}\tag{1}$$
 
-으로 바꾸어 쓸 수 있다. 또, $\sigma$는 bijection이므로, 이렇게 모든 term을 바꾸어 써 주면 $\sigma(\Delta)$는 부호만 제외하면 $\Delta$와 정확하게 같은 polynomial이 됨을 알 수 있다. 따라서 $\sgn(\sigma)=\sigma(\Delta)/\Delta$로 정의하면, $\sgn(\sigma)$는 정확하게 [정의 9](#def9)의 sense에서 정의된 $\sigma$의 parity가 된다.   
+으로 바꾸어 쓸 수 있다. 또, $\sigma$는 bijection이므로, 이렇게 모든 term을 바꾸어 써 주면 $\sigma(\Delta)$는 부호만 제외하면 $\Delta$와 정확하게 같은 polynomial이 됨을 알 수 있다. 따라서 $\sgn(\sigma)=\sigma(\Delta)/\Delta$로 정의하면, $\sgn(\sigma)$는 정확하게 [정의 9](#def9){: data-relation="required" }의 sense에서 정의된 $\sigma$의 parity가 된다.   
 
-[정의 9](#def9)로부터, $\sigma$가 $a<b$인 두 수 $a$와 $b$를 서로 바꾸는 transposition이라면 그 inversion은 $a<j<b$인 $(a,j)$가 $b-a-1$개, $a<i<b$인 $(i,b)$가 $b-a-1$개, 그리고 $(a,b)$ 하나로 총 $2(b-a)-1$개이므로 $\sgn(\sigma)=-1$이다. 따라서 만일 $\sgn$이 multiplicative하다는 것만 보인다면, 
+[정의 9](#def9){: data-relation="required" }로부터, $\sigma$가 $a<b$인 두 수 $a$와 $b$를 서로 바꾸는 transposition이라면 그 inversion은 $a<j<b$인 $(a,j)$가 $b-a-1$개, $a<i<b$인 $(i,b)$가 $b-a-1$개, 그리고 $(a,b)$ 하나로 총 $2(b-a)-1$개이므로 $\sgn(\sigma)=-1$이다. 따라서 만일 $\sgn$이 multiplicative하다는 것만 보인다면, 
 
 $$\text{$\sigma$ odd}\iff\text{$\sgn(\sigma)=-1$}\iff\text{$\sigma$ is a product of odd number of transpositions}$$ 
 
@@ -218,7 +218,7 @@ $A_5$는 simple이다. 이는 Sylow theorem을 사용하여 조금 더 고상하
 
 이들 네 종류의 permutation이 서로 다르다는 것은 각 원소들의 order를 보면 되고, 각 종류에 속하는 원소들이 서로 다른 것은 함수값을 직접 보면 된다. 
 
-한편, 일반적으로 group $G$의 subgroup $N$이 normal subgroup이기 위해서는, 정확하게 정의에 의해 $N$이 inner automorphism에 의한 conjugacy class들의 합집합으로 나타나야 한다. 그런데 [보조정리 7](#lem7)을 사용하면, 위에서 3-cycle, 두 disjoint 2-cycle의 곱은 각각 conjugacy class들이 되며, $5$-cycle은 각각 원소 12개를 갖는 두 개의 conjugacy class들로 나뉜다는 것을 알 수 있다. 이제 $A_5$의 normal subgroup의 크기가 $A_5$의 크기 $60$을 나눠야 하는데, 항등원을 포함하며 $A_5$ 전체는 아닌 non-trivial한 conjugacy class들의 합집합으로는 $60$의 약수를 만들 수 없으므로 $A_5$는 non-trivial한 normal subgroup을 갖지 않는다. 
+한편, 일반적으로 group $G$의 subgroup $N$이 normal subgroup이기 위해서는, 정확하게 정의에 의해 $N$이 inner automorphism에 의한 conjugacy class들의 합집합으로 나타나야 한다. 그런데 [보조정리 7](#lem7){: data-relation="required" }을 사용하면, 위에서 3-cycle, 두 disjoint 2-cycle의 곱은 각각 conjugacy class들이 되며, $5$-cycle은 각각 원소 12개를 갖는 두 개의 conjugacy class들로 나뉜다는 것을 알 수 있다. 이제 $A_5$의 normal subgroup의 크기가 $A_5$의 크기 $60$을 나눠야 하는데, 항등원을 포함하며 $A_5$ 전체는 아닌 non-trivial한 conjugacy class들의 합집합으로는 $60$의 약수를 만들 수 없으므로 $A_5$는 non-trivial한 normal subgroup을 갖지 않는다. 
 :::
 
 ---
