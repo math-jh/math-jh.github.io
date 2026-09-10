@@ -27,7 +27,7 @@ endowed with the subspace topology and the coordinate system $(S, (x^j\vert_S)_{
 Let an immersion $F:M\rightarrow N$ between two manifolds be given. Then for each $p\in M$, there exist a coordinate system $(V,\varphi)$ containing $F(p)$ and an open neighborhood $U$ of $p$ such that $F\vert_U$ is injective and $F(U)$ is a slice of $(V,\varphi)$.
 :::
 ::: Proof
-Let $\dim M=k$ and $\dim N=n$. Choose, containing $F(p)$, a coordinate system $(V_0,\psi)$, $\psi=(y^i)_{i=1}^n$. Since $\dd{F_p}$ is injective, by [§Submanifolds and the Inverse Function Theorem, ⁋Corollary 10](/en/math/manifolds/submanifolds#cor10), a suitable subset of the set $\{y^i\circ F\}$ forms, near the point $p$, a coordinate system for $M$. Rearranging the order of coordinates, we may assume that $x^j=y^j\circ F$ ($j=1,\ldots,k$) form, on a suitable open neighborhood of $p$, denoted $U_1$, a coordinate system $(U_1,x)$, $x=(x^j)_{j=1}^k$. Shrinking $U_1$ if necessary, we may assume $F(U_1)\subseteq V_0$.
+Let $\dim M=k$ and $\dim N=n$. Choose, containing $F(p)$, a coordinate system $(V_0,\psi)$, $\psi=(y^i)_{i=1}^n$. Since $\dd{F_p}$ is injective, by [§Submanifolds and the Inverse Function Theorem, ⁋Corollary 10](/en/math/manifolds/submanifolds#cor10){: data-relation="required" }, a suitable subset of the set $\{y^i\circ F\}$ forms, near the point $p$, a coordinate system for $M$. Rearranging the order of coordinates, we may assume that $x^j=y^j\circ F$ ($j=1,\ldots,k$) form, on a suitable open neighborhood of $p$, denoted $U_1$, a coordinate system $(U_1,x)$, $x=(x^j)_{j=1}^k$. Shrinking $U_1$ if necessary, we may assume $F(U_1)\subseteq V_0$.
 
 First, $F\vert_{U_1}$ is injective. If $q,q'\in U_1$ satisfy $F(q)=F(q')$, then for each $j\leq k$ we have $x^j(q)=y^j(F(q))=y^j(F(q'))=x^j(q')$, because $x$ is injective on $U_1$.
 
@@ -49,7 +49,7 @@ Then at the point $F(p)$,
 
 $$\dd{w}^j=\dd{y}^j\quad(j\leq k),\qquad \dd{w}^i=\dd{y}^i-\sum_{j=1}^k\frac{\partial h^i}{\partial y^j}\dd{y}^j\quad(i>k)$$
 
-so the $\dd{w}^i$ are obtained from the basis $\dd{y}^i$ via a triangular matrix transformation whose diagonal entries are all $1$, and thus are linearly independent. Therefore, by [§Submanifolds and the Inverse Function Theorem, ⁋Corollary 6](/en/math/manifolds/submanifolds#cor6), on a suitable open neighborhood of $F(p)$, $V\subseteq V'$, $\varphi=(w^1,\ldots,w^n)$ becomes a coordinate system.
+so the $\dd{w}^i$ are obtained from the basis $\dd{y}^i$ via a triangular matrix transformation whose diagonal entries are all $1$, and thus are linearly independent. Therefore, by [§Submanifolds and the Inverse Function Theorem, ⁋Corollary 6](/en/math/manifolds/submanifolds#cor6){: data-relation="required" }, on a suitable open neighborhood of $F(p)$, $V\subseteq V'$, $\varphi=(w^1,\ldots,w^n)$ becomes a coordinate system.
 
 Finally, let $U=U_1\cap F^{-1}(V)$. For any $q\in U$ and $i>k$,
 
@@ -96,7 +96,7 @@ Let $F:M\rightarrow N$ be $C^\infty$, fix $q\in F(M)$, and let $P=F^{-1}(q)$. If
 Moreover, in this case $\iota$ is an embedding, and the codimension of $P$, $\dim M-\dim P$, is equal to $\dim N$."
 :::
 ::: Proof
-Let $\dim M=m$ and $\dim N=n$. Fix an arbitrary $p\in P$, and choose a coordinate system $(Y,\psi)$, $\psi=(y^j)_{j=1}^n$ containing $q=F(p)$ such that $\psi(q)=0$. Since $\dd{F_p}$ is surjective, by [§Submanifolds and the Inverse Function Theorem, ⁋Corollary 9](/en/math/manifolds/submanifolds#cor9), there exist functions $x^{n+1},\ldots,x^m$ such that
+Let $\dim M=m$ and $\dim N=n$. Fix an arbitrary $p\in P$, and choose a coordinate system $(Y,\psi)$, $\psi=(y^j)_{j=1}^n$ containing $q=F(p)$ such that $\psi(q)=0$. Since $\dd{F_p}$ is surjective, by [§Submanifolds and the Inverse Function Theorem, ⁋Corollary 9](/en/math/manifolds/submanifolds#cor9){: data-relation="required" }, there exist functions $x^{n+1},\ldots,x^m$ such that
 
 $$x^1=y^1\circ F,\quad\ldots,\quad x^n=y^n\circ F,\qquad x^{n+1},\quad\ldots,\quad x^m$$
 
@@ -118,7 +118,7 @@ which, between two coordinate systems of $M$, is the composition and restriction
 
 With respect to this structure, $\iota:P\hookrightarrow M$ is of the form $a\mapsto(0,a)$ in coordinates and thus is $C^\infty$, and $\dd{\iota}$ is injective at every point. That is, $\iota$ is an injective immersion and therefore a submanifold, and since $P$ was endowed with the subspace topology from the beginning, it is an embedding. Counting dimensions, the codimension of $P$ is $\dim M-\dim P=m-(m-n)=n=\dim N$.
 
-Finally, the uniqueness of this manifold structure follows from [§Uniqueness of Submanifolds, ⁋Proposition 5](/en/math/manifolds/uniqueness_of_submanifold#prop5). This is because $(P,\iota)$ has a differential structure that makes it a submanifold of $M$ with respect to the subspace topology, and this structure is the unique manifold structure making $(P,\iota)$ a submanifold of $M$.
+Finally, the uniqueness of this manifold structure follows from [§Uniqueness of Submanifolds, ⁋Proposition 5](/en/math/manifolds/uniqueness_of_submanifold#prop5){: data-relation="required" }. This is because $(P,\iota)$ has a differential structure that makes it a submanifold of $M$ with respect to the subspace topology, and this structure is the unique manifold structure making $(P,\iota)$ a submanifold of $M$.
 :::
 
 The following corollary does not require $\dd{F_p}$ to be surjective, but only that its rank is constant, so it can be used even when the preceding corollary does not apply.
@@ -140,7 +140,7 @@ For any point $x\in \mathbb{R}^{n+1}$ and $v\in T_x\mathbb{R}^{n+1}$,
 
 $$\dd{f_x}(v)=v(f)=\sum v^i\frac{\partial f}{\partial r^i}\bigg\vert_{x}=2\sum r^i(x) v^i$$
 
-holds, from which we see that as long as $x$ is not the origin, by adjusting $v$ we can make $\dd{f_x}(v)$ take any real value. That is, since $\dd{f_x}$ is always surjective away from the origin, there exists a unique manifold structure such that $f^{-1}(1)$ is a submanifold of $\mathbb{R}^{n+1}$. By uniqueness, this structure coincides with the manifold structure given to $S^n$, and by [Corollary 4](#cor4) again, we see that this is an embedded submanifold of $\mathbb{R}^{n+1}$.
+holds, from which we see that as long as $x$ is not the origin, by adjusting $v$ we can make $\dd{f_x}(v)$ take any real value. That is, since $\dd{f_x}$ is always surjective away from the origin, there exists a unique manifold structure such that $f^{-1}(1)$ is a submanifold of $\mathbb{R}^{n+1}$. By uniqueness, this structure coincides with the manifold structure given to $S^n$, and by [Corollary 4](#cor4){: data-relation="required" } again, we see that this is an embedded submanifold of $\mathbb{R}^{n+1}$.
 :::
 
 ---
