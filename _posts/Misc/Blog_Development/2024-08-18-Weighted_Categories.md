@@ -55,7 +55,7 @@ sidebar:
 {: data-filename="_layouts/categories.html"}
 {% endraw %}
 
-우선 위의 블럭에서는 변수 `categories_max`를 정의한다. 셋째 줄의 `lang_full` 태그가 있는 라인에서의 조건 `where_exp` 부분은 이전에 [다국어 지원](/ko/misc/blog_development/multilingual)에서 추가된 것이다. 이는 `site.categories` 안에 들어있는 모든 카테고리들에 대해서, 각 카테고리들에 속하는 포스트의 개수를 다 세서 가장 큰 것을 저장하게 되어있다.
+우선 위의 블럭에서는 변수 `categories_max`를 정의한다. 셋째 줄의 `lang_full` 태그가 있는 라인에서의 조건 `where_exp` 부분은 이전에 [다국어 지원](/ko/misc/blog_development/multilingual){: data-relation="weak" }에서 추가된 것이다. 이는 `site.categories` 안에 들어있는 모든 카테고리들에 대해서, 각 카테고리들에 속하는 포스트의 개수를 다 세서 가장 큰 것을 저장하게 되어있다.
 
 이 블럭으로부터 중요한 사실을 하나 알 수 있는데, `site.categories` 태그는 2-카테고리라는 것이다. 즉 위의 변수 이름들을 빌려와서 설명하자면 `site.categories` 안에는 카테고리 제목들로 이루어진 `category`가 있고, 각각의 카테고리 제목들 안에는 다시 포스트의 제목으로 이루어진 `post`들이 있다. 이를 신경쓰면서 다음 태그를 보면 다시 하는 일이 명확하다.
 
@@ -77,7 +77,7 @@ sidebar:
 {: data-filename="_layouts/categories.html"}
 {% endraw %}
 
-역시 `lang_full` 태그가 있는 라인의 조건은 이전에 [다국어 지원](/ko/misc/blog_development/multilingual) 그리고 [포스트 순서 정렬하기](/ko/misc/blog_development/weight)에서 추가된 것들이다. 카테고리별 글 목록 페이지를 보면, 각 카테고리에 해당하는 글 목록의 나열이 있고, 이들을 카테고리별로 볼 때 쉽게 이동할 수 있도록 맨 위에 목록이 있는데, 이 블럭은 해당 목록에 관한 것이다. 
+역시 `lang_full` 태그가 있는 라인의 조건은 이전에 [다국어 지원](/ko/misc/blog_development/multilingual){: data-relation="weak" } 그리고 [포스트 순서 정렬하기](/ko/misc/blog_development/weight){: data-relation="required" }에서 추가된 것들이다. 카테고리별 글 목록 페이지를 보면, 각 카테고리에 해당하는 글 목록의 나열이 있고, 이들을 카테고리별로 볼 때 쉽게 이동할 수 있도록 맨 위에 목록이 있는데, 이 블럭은 해당 목록에 관한 것이다. 
 
 여기서 보면, `for`문을 포스트 수에 대해서 돌리면서 해당 포스트 수를 갖는 카테고리를 만날 때마다 `<li>` 이하의 내용이 위의 링크를 생성하고 있다. 따라서 내가 원하는대로 하기 위해서는 이 `for`문을 갈아엎어야 한다. 참고로 {% raw %}`{{ category[0] | slugify }}`{% endraw %}는 카테고리 제목에 Liquid 필터 `slugify`를 걸어서 임의의 카테고리 제목을 링크로 쓸 수 있도록 변경해주고 있고, 그 다음 줄에서는 이 링크가 `카테고리 이름 / 포스트 수`의 형태로 그려지도록 해 두었다.
 
