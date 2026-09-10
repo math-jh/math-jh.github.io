@@ -13,7 +13,7 @@ weight: 10
 
 ---
 
-이제 우리는 행렬식을 정의할 것인데, 이를 위해 우선 tensor algebra와 symmetric algebra, exterior algebra를 정의한다. 이 과정에서 $A$는 항상 commutative ring인 것으로 생각한다. 그럼 특히 $A$는 IBN property를 갖는다. ([§기저, ⁋명제 6](/ko/math/multilinear_algebra/basis_of_free_modules#prop6))
+이제 우리는 행렬식을 정의할 것인데, 이를 위해 우선 tensor algebra와 symmetric algebra, exterior algebra를 정의한다. 이 과정에서 $A$는 항상 commutative ring인 것으로 생각한다. 그럼 특히 $A$는 IBN property를 갖는다. ([§기저, ⁋명제 6](/ko/math/multilinear_algebra/basis_of_free_modules#prop6){: data-relation="weak" })
 
 ## 텐서대수의 정의
 
@@ -21,7 +21,7 @@ weight: 10
 
 $$F(M)=\bigoplus_{n\geq 0} M^{\otimes n}$$
 
-으로 정의했었다. ([\[대수적 구조\] §대수, ⁋명제 4](/ko/math/algebraic_structures/algebras#prop4)) 이는 단순한 algebra일 뿐 아니라, 자연스럽게 $\mathbb{N}_{\geq 0}$-graded associative unital algebra의 구조를 갖는다. 이를 다음과 같이 이름붙인다.
+으로 정의했었다. ([\[대수적 구조\] §대수, ⁋명제 4](/ko/math/algebraic_structures/algebras#prop4){: data-relation="required" }) 이는 단순한 algebra일 뿐 아니라, 자연스럽게 $\mathbb{N}_{\geq 0}$-graded associative unital algebra의 구조를 갖는다. 이를 다음과 같이 이름붙인다.
 
 ::: 정의 1
 위에서 정의한 $F(M)$을 $M$의 *tensor algebra<sub>텐서대수</sub>*라 부르고, $\T(M)$으로 표기한다. 
@@ -45,7 +45,7 @@ $$\Hom_{\Alg{A}}(\T(M), \T(M))\cong \Hom_{\rMod{A}}(M, U\T(M))$$
 
 ## 텐서대수의 성질들
 
-이제 우리는 $\rMod{A}$에서의 연산들이 functor $T:\rMod{A} \rightarrow \Alg{A}$를 통해 옮겨졌을 때, 이들이 어떻게 행동하는지를 살펴본다. 특히 direct sum과 extension of scalar에 관심이 있다. 이 절의 논의는 [명제 2](#prop2)와 같이, $T$를 $\rMod{A}$에서 associative unital $\mathbb{N}$-graded $A$-algebra들의 category들로 가는 functor로 이해하여도 동일한 논증이 성립하지만, 표기상의 복잡함을 해소하기 위해 target category를 $\Alg{A}$로 적기로 한다. 
+이제 우리는 $\rMod{A}$에서의 연산들이 functor $T:\rMod{A} \rightarrow \Alg{A}$를 통해 옮겨졌을 때, 이들이 어떻게 행동하는지를 살펴본다. 특히 direct sum과 extension of scalar에 관심이 있다. 이 절의 논의는 [명제 2](#prop2){: data-relation="required" }와 같이, $T$를 $\rMod{A}$에서 associative unital $\mathbb{N}$-graded $A$-algebra들의 category들로 가는 functor로 이해하여도 동일한 논증이 성립하지만, 표기상의 복잡함을 해소하기 위해 target category를 $\Alg{A}$로 적기로 한다. 
 
 우선 direct sum의 경우를 살펴본다. $M=\bigoplus_{i\in I} M_i$가 $A$-module들 $M_i$들의 direct sum이라 하자. 그럼 $\otimes$가 $\Hom$의 left adjoint라는 사실과 약간의 귀납법을 통해 다음의 isomorphism
 
@@ -75,7 +75,7 @@ $$e_s=e_{i_1}\otimes\cdots\otimes e_{i_n},\qquad\text{$s$ a finite sequence $(i_
 들의 원소 $e_s$를 basis로 갖는다.
 :::
 
-이는 $\T^n(M)$ 각각이 길이 $n$짜리 유한한 수열 $s$를 사용해 정의한 $e_s$들을 basis로 갖고, 이들의 direct sum이 $\T(M)$이기 때문이다. 한편 우리는 [§기저, ⁋정의 9](/ko/math/multilinear_algebra/basis_of_free_modules#def9)의 structure constant를 사용하면 $\T(M)$의 곱셈을 서술할 수 있다는 것을 알고 있는데, 위의 설명에 따르면 이는 다른 것이 아니라 단순히 수열을 이어쓰기하여 얻어지는 것이다. 즉 두 수열
+이는 $\T^n(M)$ 각각이 길이 $n$짜리 유한한 수열 $s$를 사용해 정의한 $e_s$들을 basis로 갖고, 이들의 direct sum이 $\T(M)$이기 때문이다. 한편 우리는 [§기저, ⁋정의 9](/ko/math/multilinear_algebra/basis_of_free_modules#def9){: data-relation="weak" }의 structure constant를 사용하면 $\T(M)$의 곱셈을 서술할 수 있다는 것을 알고 있는데, 위의 설명에 따르면 이는 다른 것이 아니라 단순히 수열을 이어쓰기하여 얻어지는 것이다. 즉 두 수열
 
 $$s=(i_1,\ldots, i_m),\qquad t=(j_1,\ldots, j_n)$$
 
@@ -103,11 +103,11 @@ Extension of scalar의 경우, ring homomorphism $\phi: A \rightarrow B$가 주�
 
 $$\Hom_\rMod{B}(\phi_!M,\phi_!M)\cong\Hom_\rMod{A}(M, \phi^\ast \phi_!M)$$
 
-로부터 $\id_{\phi_!M}$에 해당하는 $A$-linear map $i: M \rightarrow \phi^\ast\phi_!M$을 얻자. ([\[대수적 구조\] §스칼라의 변환, ⁋명제 6](/ko/math/algebraic_structures/change_of_base_ring#prop6)) 그 후, $A$-module $\phi^\ast\phi_!M$을 $B$-module $\phi_!M$으로 본 후 
+로부터 $\id_{\phi_!M}$에 해당하는 $A$-linear map $i: M \rightarrow \phi^\ast\phi_!M$을 얻자. ([\[대수적 구조\] §스칼라의 변환, ⁋명제 6](/ko/math/algebraic_structures/change_of_base_ring#prop6){: data-relation="required" }) 그 후, $A$-module $\phi^\ast\phi_!M$을 $B$-module $\phi_!M$으로 본 후 
 
 $$\iota_{\phi_!M}: \phi_!M \rightarrow \T_B(\phi_!M)$$
 
-을 생각하면 이는 $A$-module $M$에서 $A$-module $\phi^\ast \T_B(\phi_!M)$ (더 정확히는 $U\phi^\ast \T_B(\phi_!M)$)으로의 $A$-linear map이다. 따라서 [명제 2](#prop2)에 의하여 다음의 diagram
+을 생각하면 이는 $A$-module $M$에서 $A$-module $\phi^\ast \T_B(\phi_!M)$ (더 정확히는 $U\phi^\ast \T_B(\phi_!M)$)으로의 $A$-linear map이다. 따라서 [명제 2](#prop2){: data-relation="required" }에 의하여 다음의 diagram
 
 {% diagram Math/Multilinear_Algebra/Tensor_Algebras-2.svg width="10.30em" alt="Extension_of_scalar_proof" %}
 
@@ -120,7 +120,7 @@ $$\Hom_{\Alg{A}}(\T_A(M), \phi^\ast \T_B(\phi_!M))\cong \Hom_\Alg{B}(\phi_! \T_A
 
 ## Mixed tensor
 
-이제 $A$-module $M$과 그 dual module $M^\ast$, 그리고 이 둘 사이의 Kronecker pairing $\langle x,\xi\rangle$를 기억하자. ([§쌍대공간, ⁋정의 1](/ko/math/multilinear_algebra/dual_spaces#def1)) 선형대수에서 다루는 많은 대상들은 $M$과 $M^\ast$ 여러 개의 tensor product 안에서 찾을 수 있는데, 가령 $M$이 finitely generated projective라면 [§Hom과 텐서곱, ⁋따름정리 4](/ko/math/multilinear_algebra/hom_and_tensor#cor4)에 의하여 $M^\ast\otimes_AM\cong \End_\rMod{A}(M)$이다. 이러한 대상들을 한꺼번에 다루기 위해 tensor algebra $\T(M\oplus M^\ast)$를 생각하면, 앞 절에서 살펴본 direct sum 분해를 $M_1=M$, $M_2=M^\ast$에 적용하여 다음의 isomorphism
+이제 $A$-module $M$과 그 dual module $M^\ast$, 그리고 이 둘 사이의 Kronecker pairing $\langle x,\xi\rangle$를 기억하자. ([§쌍대공간, ⁋정의 1](/ko/math/multilinear_algebra/dual_spaces#def1){: data-relation="required" }) 선형대수에서 다루는 많은 대상들은 $M$과 $M^\ast$ 여러 개의 tensor product 안에서 찾을 수 있는데, 가령 $M$이 finitely generated projective라면 [§Hom과 텐서곱, ⁋따름정리 4](/ko/math/multilinear_algebra/hom_and_tensor#cor4){: data-relation="required" }에 의하여 $M^\ast\otimes_AM\cong \End_\rMod{A}(M)$이다. 이러한 대상들을 한꺼번에 다루기 위해 tensor algebra $\T(M\oplus M^\ast)$를 생각하면, 앞 절에서 살펴본 direct sum 분해를 $M_1=M$, $M_2=M^\ast$에 적용하여 다음의 isomorphism
 
 $$\T^n(M\oplus M^\ast)\cong\bigoplus_{(i_1,\ldots, i_n)\in\{1,2\}^n} M_{i_1}\otimes\cdots\otimes M_{i_n}$$
 
@@ -146,9 +146,9 @@ $$c^i_j: \T^p_q(M)\rightarrow \T^{p-1}_{q-1}(M)$$
 
 이 유도되며, 우리는 이를 $i$번째 contravariant 성분과 $j$번째 covariant 성분의 *contraction*이라 부른다. Contraction은 이름 그대로 tensor의 type을 $(p,q)$에서 $(p-1,q-1)$로 줄이는 연산이다.
 
-가장 간단한 경우인 $p=q=1$에서 $c^1_1: M\otimes_AM^\ast\rightarrow A$는 $x\otimes\xi$를 $\langle x,\xi\rangle$로 보내는 map이며, 두 성분의 위치를 바꾸는 canonical isomorphism $M\otimes_AM^\ast\cong M^\ast\otimes_AM$을 통해 보면 이는 [§Hom과 텐서곱, §§Trace](/ko/math/multilinear_algebra/hom_and_tensor#trace)에서 정의한 $A$-linear map $\tau: M^\ast\otimes_AM \rightarrow A$와 일치한다. 특히 만일 $M$이 finitely generated projective라면 위에서 언급한 isomorphism $M^\ast\otimes_AM\cong\End_\rMod{A}(M)$ 아래에서 $c^1_1$은 정확히 [§Hom과 텐서곱, ⁋정의 6](/ko/math/multilinear_algebra/hom_and_tensor#def6)의 trace map이 된다. 이러한 의미에서 일반적인 contraction $c^i_j$는 $i$번째 contravariant 성분과 $j$번째 covariant 성분이 이루는 type $(1,1)$ 부분에 trace를 취하고 나머지 성분들은 그대로 두는 연산이라 생각할 수 있다.
+가장 간단한 경우인 $p=q=1$에서 $c^1_1: M\otimes_AM^\ast\rightarrow A$는 $x\otimes\xi$를 $\langle x,\xi\rangle$로 보내는 map이며, 두 성분의 위치를 바꾸는 canonical isomorphism $M\otimes_AM^\ast\cong M^\ast\otimes_AM$을 통해 보면 이는 [§Hom과 텐서곱, §§Trace](/ko/math/multilinear_algebra/hom_and_tensor#trace){: data-relation="weak" }에서 정의한 $A$-linear map $\tau: M^\ast\otimes_AM \rightarrow A$와 일치한다. 특히 만일 $M$이 finitely generated projective라면 위에서 언급한 isomorphism $M^\ast\otimes_AM\cong\End_\rMod{A}(M)$ 아래에서 $c^1_1$은 정확히 [§Hom과 텐서곱, ⁋정의 6](/ko/math/multilinear_algebra/hom_and_tensor#def6){: data-relation="weak" }의 trace map이 된다. 이러한 의미에서 일반적인 contraction $c^i_j$는 $i$번째 contravariant 성분과 $j$번째 covariant 성분이 이루는 type $(1,1)$ 부분에 trace를 취하고 나머지 성분들은 그대로 두는 연산이라 생각할 수 있다.
 
-이를 좌표로도 살펴보자. $M$이 finitely generated free $A$-module이라 하고, $M$의 basis $(e_k)_{1\leq k\leq r}$과 그 dual basis $(e_k^\ast)_{1\leq k\leq r}$를 고정하자. ([§쌍대공간, ⁋정의 6](/ko/math/multilinear_algebra/dual_spaces#def6)) 그럼 [명제 3](#prop3)에서와 같은 논증에 의하여 $\T^p_q(M)$은 다음의 꼴
+이를 좌표로도 살펴보자. $M$이 finitely generated free $A$-module이라 하고, $M$의 basis $(e_k)_{1\leq k\leq r}$과 그 dual basis $(e_k^\ast)_{1\leq k\leq r}$를 고정하자. ([§쌍대공간, ⁋정의 6](/ko/math/multilinear_algebra/dual_spaces#def6){: data-relation="required" }) 그럼 [명제 3](#prop3){: data-relation="required" }에서와 같은 논증에 의하여 $\T^p_q(M)$은 다음의 꼴
 
 $$e_{s_1}\otimes\cdots\otimes e_{s_p}\otimes e_{t_1}^\ast\otimes\cdots\otimes e_{t_q}^\ast$$
 
@@ -180,7 +180,7 @@ $$x\otimes y\equiv y\otimes x\pmod{\mathfrak{I}}$$
 
 이기 때문이다. $\S(M)$의 두 원소의 곱은 곱셈처럼 $xy$ 등과 같이 쓰는 것이 관례이다.
 
-한편 quotient algebra의 universal property와 [명제 2](#prop2)로부터 다음의 universal property 또한 자명하게 얻어진다. 
+한편 quotient algebra의 universal property와 [명제 2](#prop2){: data-relation="required" }로부터 다음의 universal property 또한 자명하게 얻어진다. 
 
 ::: 명제 6
 임의의 $A$-algebra $E$와 $A$-linear map $u:M \rightarrow E$가 다음 조건
@@ -214,7 +214,7 @@ $$(x_1,x_2,\ldots, x_n) \mapsto g(x_1x_2\cdots x_n)$$
 
 $$\S(M)\cong \bigotimes_{i\in I} \S(M_i)$$
 
-를 얻는다. 이는 $S$가 forgetful functor $U:\cAlg{A}\rightarrow \rMod{A}$의 left adjoint이므로 colimit을 보존하고, $\cAlg{A}$에서의 coproduct는 ($\cRing$에서의 coproduct가 tensor product이듯) $\otimes_A$로 주어지기 때문이다. 특히 [명제 3](#prop3)과 같이 free $A$-module의 basis $(e_i)$를 고정해두고 나면 다음의 명제를 얻는다.
+를 얻는다. 이는 $S$가 forgetful functor $U:\cAlg{A}\rightarrow \rMod{A}$의 left adjoint이므로 colimit을 보존하고, $\cAlg{A}$에서의 coproduct는 ($\cRing$에서의 coproduct가 tensor product이듯) $\otimes_A$로 주어지기 때문이다. 특히 [명제 3](#prop3){: data-relation="weak" }과 같이 free $A$-module의 basis $(e_i)$를 고정해두고 나면 다음의 명제를 얻는다.
 
 ::: 명제 8
 Free $A$-module $M$과 그 basis $(e_i)_{i\in I}$에 대하여, $\alpha:I \rightarrow \mathbb{N}$을 finitely supported function이라 하자. 
@@ -226,7 +226,7 @@ $$e^\alpha=\prod_{i\in I} e_i^{\alpha(i)}$$
 
 이들의 multiplication은 $e^\alpha e^\beta=e^{\alpha+\beta}$로 주어진다. 즉 이 경우 $\S(M)$은 정확하게 polynomial algebra $A[\x_i]_{i\in I}$가 된다. 
 
-[명제 4](#prop4)에 대응되는 결과는 다음의 명제이며, 그 증명 또한 동일하다. 
+[명제 4](#prop4){: data-relation="required" }에 대응되는 결과는 다음의 명제이며, 그 증명 또한 동일하다. 
 
 ::: 명제 9
 $\S_{B}(B\otimes_AM)\rightarrow B\otimes_A\S_A(M)$은 isomorphism이다. 
@@ -242,7 +242,7 @@ $$\mathfrak{J}=\langle x\otimes x\mid x\in M\rangle$$
 을 생각하자. 그럼 quotient algebra $\T(M)/\mathfrak{J}$를 $M$의 *exterior algebra<sub>외대수</sub>*라 부르고 $\bigwedge(M)$으로 적는다. 
 :::
 
-$\bigwedge(M)$에서의 원소들의 곱셈은 $\wedge$로 적는 것이 관례이다. 한편 [정의 5](#def5) 이후의 논의와 마찬가지로, $\mathfrak{J}$는 homogeneous ideal이고 canonical inclusion $\iota:M \hookrightarrow\bigwedge(M)$이 존재한다는 것이 자명하다. 또, [명제 6](#prop6)과 마찬가지 이유에서 다음의 universal property가 성립한다.
+$\bigwedge(M)$에서의 원소들의 곱셈은 $\wedge$로 적는 것이 관례이다. 한편 [정의 5](#def5){: data-relation="weak" } 이후의 논의와 마찬가지로, $\mathfrak{J}$는 homogeneous ideal이고 canonical inclusion $\iota:M \hookrightarrow\bigwedge(M)$이 존재한다는 것이 자명하다. 또, [명제 6](#prop6){: data-relation="weak" }과 마찬가지 이유에서 다음의 universal property가 성립한다.
 
 ::: 명제 11
 임의의 $A$-algebra $E$와 $A$-linear map $u:M \rightarrow E$가 다음 조건
@@ -252,7 +252,7 @@ $$u(x)^2=0\qquad\text{for all $x\in M$}$$
 주어졌다 하자. 그럼 유일한 $A$-algebra homomorphism $g: \bigwedge(M) \rightarrow E$가 존재하여 $u=g \circ\iota$이도록 할 수 있다. 
 :::
 
-[명제 7](#prop7)과 비슷한 성질이 exterior algebra에서도 성립한다. 이하 $A$의 표수는 $2$가 아니라고 가정한다. 임의의 $A$-module $M,N$과 정수 $n\geq 1$에 대하여, $M^n$에서 $N$로의 $n$-linear map $f$가 *alternating $n$-linear map*이라는 것은 다음 조건
+[명제 7](#prop7){: data-relation="weak" }과 비슷한 성질이 exterior algebra에서도 성립한다. 이하 $A$의 표수는 $2$가 아니라고 가정한다. 임의의 $A$-module $M,N$과 정수 $n\geq 1$에 대하여, $M^n$에서 $N$로의 $n$-linear map $f$가 *alternating $n$-linear map*이라는 것은 다음 조건
 
 $$f(x_{\sigma(1)},x_{\sigma(2)},\ldots, x_{\sigma(n)})=\epsilon(\sigma)f(x_1,x_2,\ldots, x_n),\qquad \sigma\in S_n$$
 
@@ -297,4 +297,4 @@ $\bigwedge_{B}(B\otimes_AM)\rightarrow B\otimes_A\bigwedge_A(M)$은 isomorphism�
 
 ---
 
-[^1]: Category $\Ring$에서의 coproduct는 free product와 비슷한 식으로 정의되었던 것을 기억하자. ([§환의 곱, 쌍대곱, 텐서곱, ⁋명제 4](/ko/math/algebraic_structures/operations_of_rings#prop4)) 반면, 같은 글에서 우리는 category $\cRing$의 coproduct는 tensor product $\otimes$로 주어진다는 것 또한 확인하였다.
+[^1]: Category $\Ring$에서의 coproduct는 free product와 비슷한 식으로 정의되었던 것을 기억하자. ([§환의 곱, 쌍대곱, 텐서곱, ⁋명제 4](/ko/math/algebraic_structures/operations_of_rings#prop4){: data-relation="weak" }) 반면, 같은 글에서 우리는 category $\cRing$의 coproduct는 tensor product $\otimes$로 주어진다는 것 또한 확인하였다.
