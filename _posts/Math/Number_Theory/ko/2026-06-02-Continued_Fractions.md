@@ -14,7 +14,7 @@ weight: 15
 published: false
 ---
 
-[§유클리드 호제법과 Bézout 항등식](/ko/math/number_theory/euclidean_algorithm)의 나눗셈을 거듭하면 유리수가 정수부와 나머지의 역수로 펼쳐진다. 이 펼침을 무리수까지 확장한 것이 연분수이며, 실수를 유리수로 가장 잘 근사하는 도구이다.
+[§유클리드 호제법과 Bézout 항등식](/ko/math/number_theory/euclidean_algorithm){: data-relation="required" }의 나눗셈을 거듭하면 유리수가 정수부와 나머지의 역수로 펼쳐진다. 이 펼침을 무리수까지 확장한 것이 연분수이며, 실수를 유리수로 가장 잘 근사하는 도구이다.
 
 구체적으로, 유리수 $\dfrac{a}{b}$에 유클리드 호제법을 적용하면 매 단계의 quotient가 연분수의 항으로 그대로 나타난다. 가령 $\dfrac{67}{29}$를 호제법으로 풀면
 
