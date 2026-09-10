@@ -51,7 +51,7 @@ Group $G$의 representation $G\times V\rightarrow V$에 대하여 다음을 정�
 3. 만일 $V$가 zero representation이 아니고 $V$의 subrepresentation들이 trivial subrepresentation들, 즉 자기 자신과 $G\times\{0\}\rightarrow\{0\}$ 뿐이라면 $V$를 *irreducible representation<sub>기약표현</sub>*이라 부른다. 
 :::
 
-이와 마찬가지 관점에서 우리는 임의의 representation $V,W$에 대하여, 이들의 벡터공간에서의 연산을 이용하여 $V\oplus W$, $V\otimes W$ 등을 정의할 수 있다. 다음 정의에서 다소 주의할 것은, 위의 [정의 2](#def2)와는 다르게 $V\otimes W$ 등에서는 <em-ko>자연스러운</em-ko> $G$-action이 존재하지 않을 수도 있다는 것으로, 우리는 이 때문에 각 벡터공간 위에 $G$-action을 명시적으로 정의해준다. 
+이와 마찬가지 관점에서 우리는 임의의 representation $V,W$에 대하여, 이들의 벡터공간에서의 연산을 이용하여 $V\oplus W$, $V\otimes W$ 등을 정의할 수 있다. 다음 정의에서 다소 주의할 것은, 위의 [정의 2](#def2){: data-relation="required" }와는 다르게 $V\otimes W$ 등에서는 <em-ko>자연스러운</em-ko> $G$-action이 존재하지 않을 수도 있다는 것으로, 우리는 이 때문에 각 벡터공간 위에 $G$-action을 명시적으로 정의해준다. 
 
 ::: 정의 3
 $G$-representation $V, W$에 대하여, 다음의 $G$-action을 통해 새로운 $G$-representation들을 정의한다.
@@ -65,7 +65,7 @@ $G$-representation $V, W$에 대하여, 다음의 $G$-action을 통해 새로운
 
 ## Category $\lMod{\mathbb{C}[G]}$
 
-위의 [정의 3](#def3)에서 tensor product와 $\Hom$의 경우 다소 그 정의가 인위적으로 보일 수 있는데, 이를 탐구하기 위해서는  group algebra의 언어가 유용하다. ([\[대수적 구조\] §대수, ⁋정의 5](/ko/math/algebraic_structures/algebras#def5)) 이를 간단히 리뷰하자면, 집합으로서 $\mathbb{C}[G]$는 $G$에서 $\mathbb{C}$로의 함수들의 모임이었다. 각각의 $x\in G$에 대하여 $\delta_x:G\rightarrow \mathbb{C}$를
+위의 [정의 3](#def3){: data-relation="required" }에서 tensor product와 $\Hom$의 경우 다소 그 정의가 인위적으로 보일 수 있는데, 이를 탐구하기 위해서는  group algebra의 언어가 유용하다. ([\[대수적 구조\] §대수, ⁋정의 5](/ko/math/algebraic_structures/algebras#def5){: data-relation="required" }) 이를 간단히 리뷰하자면, 집합으로서 $\mathbb{C}[G]$는 $G$에서 $\mathbb{C}$로의 함수들의 모임이었다. 각각의 $x\in G$에 대하여 $\delta_x:G\rightarrow \mathbb{C}$를
 
 $$\delta_x(y)=\begin{cases}1&\text{if $y=x$}\\0&\text{otherwise}\end{cases}$$
 
@@ -107,7 +107,7 @@ $$\Rep_\mathbb{C}(G)\cong \lMod{\mathbb{C}[G]}$$
 
 즉 우리가  $G$-module이라 부르던 것은, 엄밀히 말하자면 $\mathbb{C}[G]$-module 구조에서 $G\hookrightarrow \mathbb{C}[G]$가 주어졌을 때의 action만 본 것이라 생각할 수도 있다. 
 
-실제로 위에서 논의한 대부분의 것들이 이 categorical equivalence로 설명될 수 있다. 가령 임의의 $G$-representation $V$에 대하여, $V$의 subrepresentation은 $V$의 $G$-submodule (정확히는 $\mathbb{C}[G]$-submodule)이다. 또, [정의 3](#def3)의 tensor product도 납득할만한데, 일반적으로 coproduct $\Delta:A\rightarrow A\otimes A$가 주어진 $\mathbb{K}$-algebra $A$와 두 $A$-module $M,N$에 대하여 이들의 tensor product를 정의하기 위해서는 $\Delta$를 활용하여 
+실제로 위에서 논의한 대부분의 것들이 이 categorical equivalence로 설명될 수 있다. 가령 임의의 $G$-representation $V$에 대하여, $V$의 subrepresentation은 $V$의 $G$-submodule (정확히는 $\mathbb{C}[G]$-submodule)이다. 또, [정의 3](#def3){: data-relation="required" }의 tensor product도 납득할만한데, 일반적으로 coproduct $\Delta:A\rightarrow A\otimes A$가 주어진 $\mathbb{K}$-algebra $A$와 두 $A$-module $M,N$에 대하여 이들의 tensor product를 정의하기 위해서는 $\Delta$를 활용하여 
 
 $$A\otimes (M\otimes N)\rightarrow (A\otimes A)\otimes (M\otimes N)\rightarrow (A\otimes M)\otimes (A\otimes N)\rightarrow M\otimes N$$
 
@@ -115,7 +115,7 @@ $$A\otimes (M\otimes N)\rightarrow (A\otimes A)\otimes (M\otimes N)\rightarrow (
 
 $$\mathbb{C}[G]\rightarrow \mathbb{C}[G]\otimes \mathbb{C}[G]$$
 
-이기 때문이다. 그럼 마찬가지로 [정의 3](#def3)에서 정의한 $\Hom$이 이 $\otimes$와 adjunction 관계에 있고, 이러한 이유로 다소 인위적으로 보이는 [정의 3](#def3)의 $G$-action들이 등장하는 것이다. 
+이기 때문이다. 그럼 마찬가지로 [정의 3](#def3){: data-relation="required" }에서 정의한 $\Hom$이 이 $\otimes$와 adjunction 관계에 있고, 이러한 이유로 다소 인위적으로 보이는 [정의 3](#def3){: data-relation="required" }의 $G$-action들이 등장하는 것이다. 
 
 특별히 $G$의 subrepresentation과 $\mathbb{C}[G]$-submodule이 같은 것이라는 것을 생각하면, $V$가 irreducible representation인 것은 $V$가 *simple* $\mathbb{C}[G]$-module인 것과 같다. 
 
@@ -175,7 +175,7 @@ $W'$를 $W$의 orthogonal complement로 잡으면, $W'$ 또한 $G$-invariant sub
 
 $$\Rep_\mathbb{C}(G)\cong \lMod{\mathbb{C}[G]}$$
 
-을 살펴보았다. 그럼 [따름정리 7](#cor7)이 주장하는 것은 임의의 유한차원 $G$-representation $V$는 항상 *semisimple* $\mathbb{C}[G]$-module이라는 것이다 ([\[환론\] §Semisimple module, ⁋정의 2](/ko/math/ring_theory/semisimple_modules#def2)). 따라서 $\mathbb{C}[G]$는 그 자체를 regular representation으로 보면 [따름정리 7](#cor7)에 의해 semisimple module이므로 Artinian semisimple ring이 되며, [\[환론\] §Artin-Wedderburn 정리, ⁋정리 11](/ko/math/ring_theory/artin_wedderburn#thm11)에 의하여 simple algebra들의 곱으로의 decomposition
+을 살펴보았다. 그럼 [따름정리 7](#cor7){: data-relation="required" }이 주장하는 것은 임의의 유한차원 $G$-representation $V$는 항상 *semisimple* $\mathbb{C}[G]$-module이라는 것이다 ([\[환론\] §Semisimple module, ⁋정의 2](/ko/math/ring_theory/semisimple_modules#def2){: data-relation="required" }). 따라서 $\mathbb{C}[G]$는 그 자체를 regular representation으로 보면 [따름정리 7](#cor7){: data-relation="required" }에 의해 semisimple module이므로 Artinian semisimple ring이 되며, [\[환론\] §Artin-Wedderburn 정리, ⁋정리 11](/ko/math/ring_theory/artin_wedderburn#thm11){: data-relation="required" }에 의하여 simple algebra들의 곱으로의 decomposition
 
 $$\mathbb{C}[G]\cong \bigoplus_{i=1}^r \Mat_{n_i}(\mathbb{C})\tag{1}$$
 
@@ -193,7 +193,7 @@ Finite group $G$와 irreducible $G$-module들 $V,W$가 주어졌다 하자. 그�
 3. $G$-map들의 모임 $\Hom_G(V,W)$은 $\mathbb{C}$이거나 $0$이다. 
 :::
 ::: 증명
-1. $G$-map은 $\mathbb{C}[G]$-module homomorphism이고 irreducible $G$-module은 simple $\mathbb{C}[G]$-module이므로, 이는 [\[환론\] §나눗셈환, ⁋보조정리 10](/ko/math/ring_theory/division_rings#lem10)의 특수한 경우이다. 
+1. $G$-map은 $\mathbb{C}[G]$-module homomorphism이고 irreducible $G$-module은 simple $\mathbb{C}[G]$-module이므로, 이는 [\[환론\] §나눗셈환, ⁋보조정리 10](/ko/math/ring_theory/division_rings#lem10){: data-relation="required" }의 특수한 경우이다. 
 2. 주어진 $f$는 $G$-linear map이기 이전에 $\mathbb{C}$-linear map이므로, $f$의 eigenvalue $\lambda$가 존재한다. 이 eigenvalue의 eigenspace를 $V_\lambda$라 하면, 임의의 $w\in V_\lambda$와 $g\in G$에 대하여 $f(g\cdot w)=g\cdot f(w)=\lambda(g\cdot w)$이므로 $V_\lambda$는 $V$의 nonzero $G$-submodule이다. $V$가 irreducible이므로 $V_\lambda=V$이고, 곧 $f=\lambda\id_V$이다. 
 3. $V\not\cong W$라면 1에 의하여 $\Hom_G(V,W)=0$이다. $V\cong W$라면 $\Hom_G(V,W)\cong\End_G(V)$이고, 임의의 nonzero $f\in\End_G(V)$가 2에 의해 $\lambda\id_V$의 꼴이므로 $\End_G(V)=\mathbb{C}\id_V\cong\mathbb{C}$이다. 
 :::
@@ -208,11 +208,11 @@ $$d=\bigoplus_{W\in\Irr(G, \mathbb{C})} d_W:\bigoplus_{W\in \Irr(G, \mathbb{C})}
 는 isomorphism이다. 
 :::
 ::: 증명
-[따름정리 7](#cor7)에 의해 irreducible decomposition $V=\bigoplus_j V_j$가 존재하고, 따라서 다음의 식
+[따름정리 7](#cor7){: data-relation="required" }에 의해 irreducible decomposition $V=\bigoplus_j V_j$가 존재하고, 따라서 다음의 식
 
 $$\Hom_G(W, V)=\Hom_G\left(W, \bigoplus V_j\right)\cong \bigoplus \Hom_G(W, V_j) $$
 
-을 얻는다. [보조정리 8](#lem8)에 의해 각 항은 $V_j\cong W$일 때 $1$차원이고 그렇지 않으면 $0$이므로, $V_j\cong W$인 각 $j$마다 isomorphism $u_j:W\rightarrow V_j$를 하나씩 고르면 이들이 $\Hom_G(W,V)$의 기저를 이룬다. 그럼 $d_W$는 각 $\mathbb{C}u_j\otimes_\mathbb{C}W$를 $u_j$를 통해 $V_j$ 위로 보내는 isomorphism들의 direct sum이므로 $\bigoplus_{V_j\cong W}V_j$ 위로의 isomorphism이고, 모든 isomorphism class에 대하여 direct sum을 취하면 $\bigoplus_jV_j=V$ 전체를 얻으므로 $d$는 isomorphism이다.
+을 얻는다. [보조정리 8](#lem8){: data-relation="required" }에 의해 각 항은 $V_j\cong W$일 때 $1$차원이고 그렇지 않으면 $0$이므로, $V_j\cong W$인 각 $j$마다 isomorphism $u_j:W\rightarrow V_j$를 하나씩 고르면 이들이 $\Hom_G(W,V)$의 기저를 이룬다. 그럼 $d_W$는 각 $\mathbb{C}u_j\otimes_\mathbb{C}W$를 $u_j$를 통해 $V_j$ 위로 보내는 isomorphism들의 direct sum이므로 $\bigoplus_{V_j\cong W}V_j$ 위로의 isomorphism이고, 모든 isomorphism class에 대하여 direct sum을 취하면 $\bigoplus_jV_j=V$ 전체를 얻으므로 $d$는 isomorphism이다.
 :::
 
 복잡하게 써 두기는 했지만, 위의 $d$는 각각의 irreducible $G$-module $W$(의 isomorphism class)들이 $V$ 안에 얼마나 들어있는지를 세는 것이며, 따라서 다음 정의가 자연스럽다. 
@@ -221,9 +221,9 @@ $$\Hom_G(W, V)=\Hom_G\left(W, \bigoplus V_j\right)\cong \bigoplus \Hom_G(W, V_j)
 $W\in\Irr(G, \mathbb{C})$에 대하여, 위의 함수 $d_W$에 의한 $\Hom_G(W, V)\otimes_\mathbb{C}W$의 image를 $V$의 *$W$-isotypical summand*라 부르고, $\dim_\mathbb{C}\Hom_G(W, V)$를 $W$의 *multiplicity*라 부른다. 
 :::
 
-이 정의는 일반론과 일치한다. $d_W$의 image는 $W$와 isomorphic한 $V$의 simple submodule들이 생성하는 부분공간이므로 정확히 [\[환론\] §Semisimple module, ⁋정의 8](/ko/math/ring_theory/semisimple_modules#def8)의 $W$-isotypic component이고, [같은 글, ⁋명제 9](/ko/math/ring_theory/semisimple_modules#prop9)에 의해 이 분해는 irreducible decomposition의 선택과 무관하게 canonical하다.
+이 정의는 일반론과 일치한다. $d_W$의 image는 $W$와 isomorphic한 $V$의 simple submodule들이 생성하는 부분공간이므로 정확히 [\[환론\] §Semisimple module, ⁋정의 8](/ko/math/ring_theory/semisimple_modules#def8){: data-relation="weak" }의 $W$-isotypic component이고, [같은 글, ⁋명제 9](/ko/math/ring_theory/semisimple_modules#prop9){: data-relation="required" }에 의해 이 분해는 irreducible decomposition의 선택과 무관하게 canonical하다.
 
-Representation의 유일성 또한 이제 [\[환론\] §Semisimple module, ⁋명제 10](/ko/math/ring_theory/semisimple_modules#prop10)로부터 얻어진다. 즉, 우리는 임의의 representation $V$가 주어졌을 때 이를 다음의 decomposition
+Representation의 유일성 또한 이제 [\[환론\] §Semisimple module, ⁋명제 10](/ko/math/ring_theory/semisimple_modules#prop10){: data-relation="required" }로부터 얻어진다. 즉, 우리는 임의의 representation $V$가 주어졌을 때 이를 다음의 decomposition
 
 $$V=V_1^{\oplus r_1}\oplus\cdots\oplus V_k^{\oplus r_k}$$
 
