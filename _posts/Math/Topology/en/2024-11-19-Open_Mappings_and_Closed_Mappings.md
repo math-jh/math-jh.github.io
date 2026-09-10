@@ -38,8 +38,8 @@ Let topological spaces $X,Y,Z$ and functions $f:X \rightarrow Y$, $g:Y \rightarr
     
     $$(g\circ f)(f^{-1}(V))=g(f(f^{-1}(V)))=g(V)$$
 
-    holds, so $g(V)$ is an open set of $Z$. Here we used that $f(f^{-1}(V))=V$ since $f$ is a surjection. ([\[Set Theory\] §Retraction and Section, ⁋Definition 2](/en/math/set_theory/retraction_and_section#def2)) On the other hand, if $B$ is an arbitrary closed set of $Y$, then by [§Continuous Functions, ⁋Theorem 4](/en/math/topology/continuous_functions#thm4) we can apply the same argument as above.
-3. As in the second proof, it suffices to consider the open case. For any open set $U$ of $X$, since $g\circ f$ is open, $g(f(U))$ is open, and thus using that $g$ is continuous and the above [\[Set Theory\] §Retraction and Section, ⁋Definition 2](/en/math/set_theory/retraction_and_section#def2), from the following formula
+    holds, so $g(V)$ is an open set of $Z$. Here we used that $f(f^{-1}(V))=V$ since $f$ is a surjection. ([\[Set Theory\] §Retraction and Section, ⁋Definition 2](/en/math/set_theory/retraction_and_section#def2){: data-relation="required" }) On the other hand, if $B$ is an arbitrary closed set of $Y$, then by [§Continuous Functions, ⁋Theorem 4](/en/math/topology/continuous_functions#thm4){: data-relation="required" } we can apply the same argument as above.
+3. As in the second proof, it suffices to consider the open case. For any open set $U$ of $X$, since $g\circ f$ is open, $g(f(U))$ is open, and thus using that $g$ is continuous and the above [\[Set Theory\] §Retraction and Section, ⁋Definition 2](/en/math/set_theory/retraction_and_section#def2){: data-relation="required" }, from the following formula
     
     $$g^{-1}(g(f(U)))=f(U)$$
 
@@ -65,7 +65,7 @@ The second result can be proved similarly. Let $U$ be an open set (resp. closed 
 
 $$U_i=U\cap f^{-1}(A_i)$$
 
-Then $f\vert_{f^{-1}(A_i)}(U_i)=f(U)\cap A_i$ holds, and thus by assumption $f(U)\cap A_i$ is an open set (resp. closed set) for all $i$. Therefore, if $U$ is an open set then $f(U)$ is a union of open sets and hence open, and if $U$ is a closed set then by [§Interior, Closure, and Boundary, ⁋Proposition 4](/en/math/topology/other_concepts#prop4) it is a closed set. 
+Then $f\vert_{f^{-1}(A_i)}(U_i)=f(U)\cap A_i$ holds, and thus by assumption $f(U)\cap A_i$ is an open set (resp. closed set) for all $i$. Therefore, if $U$ is an open set then $f(U)$ is a union of open sets and hence open, and if $U$ is a closed set then by [§Interior, Closure, and Boundary, ⁋Proposition 4](/en/math/topology/other_concepts#prop4){: data-relation="required" } it is a closed set. 
 :::
 
 ## Equivalence Relations

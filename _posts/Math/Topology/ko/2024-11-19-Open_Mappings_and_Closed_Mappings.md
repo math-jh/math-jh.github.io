@@ -37,8 +37,8 @@ weight: 12
     
     $$(g\circ f)(f^{-1}(V))=g(f(f^{-1}(V)))=g(V)$$
 
-    가 성립하므로 $g(V)$는 $Z$의 열린집합이다. 여기서 $f(f^{-1}(V))=V$인 것은 $f$가 전사함수임을 이용하였다. ([\[집합론\] §Retraction과 section, ⁋정의 2](/ko/math/set_theory/retraction_and_section#def2)) 한편 마찬가지 방식으로 $Y$의 임의의 닫힌집합 $B$가 주어졌다 하면 [§연속함수, ⁋정리 4](/ko/math/topology/continuous_functions#thm4)에 의하여 위와 동일한 논증을 적용할 수 있다.
-3. 둘째 증명과 마찬가지로 open인 경우만 생각하면 충분하다. $X$의 임의의 열린집합 $U$에 대하여, $g\circ f$가 open이므로 $g(f(U))$는 open이고, 따라서 $g$가 연속이라는 것과 위의 [\[집합론\] §Retraction과 section, ⁋정의 2](/ko/math/set_theory/retraction_and_section#def2)을 사용하면 다음 식
+    가 성립하므로 $g(V)$는 $Z$의 열린집합이다. 여기서 $f(f^{-1}(V))=V$인 것은 $f$가 전사함수임을 이용하였다. ([\[집합론\] §Retraction과 section, ⁋정의 2](/ko/math/set_theory/retraction_and_section#def2){: data-relation="required" }) 한편 마찬가지 방식으로 $Y$의 임의의 닫힌집합 $B$가 주어졌다 하면 [§연속함수, ⁋정리 4](/ko/math/topology/continuous_functions#thm4){: data-relation="required" }에 의하여 위와 동일한 논증을 적용할 수 있다.
+3. 둘째 증명과 마찬가지로 open인 경우만 생각하면 충분하다. $X$의 임의의 열린집합 $U$에 대하여, $g\circ f$가 open이므로 $g(f(U))$는 open이고, 따라서 $g$가 연속이라는 것과 위의 [\[집합론\] §Retraction과 section, ⁋정의 2](/ko/math/set_theory/retraction_and_section#def2){: data-relation="required" }을 사용하면 다음 식
     
     $$g^{-1}(g(f(U)))=f(U)$$
 
@@ -64,7 +64,7 @@ $$f\vert_{f^{-1}(A)}(U\cap f^{-1}(A))=f(U)\cap A$$
 
 $$U_i=U\cap f^{-1}(A_i)$$
 
-으로 정의하자. 그럼 $f\vert_{f^{-1}(A_i)}(U_i)=f(U)\cap A_i$이 성립하고, 따라서 가정에 의하여 $f(U)\cap A_i$가 모든 $i$에 대해 열린집합 (resp. 닫힌집합)이다. 따라서 만일 $U$가 열린집합이라면 $f(U)$는 열린집합들의 합집합이므로 열린집합이고, $U$가 닫힌집합이면 [§집합의 내부, 폐포, 경계, ⁋명제 4](/ko/math/topology/other_concepts#prop4)에 의하여 닫힌집합이 된다. 
+으로 정의하자. 그럼 $f\vert_{f^{-1}(A_i)}(U_i)=f(U)\cap A_i$이 성립하고, 따라서 가정에 의하여 $f(U)\cap A_i$가 모든 $i$에 대해 열린집합 (resp. 닫힌집합)이다. 따라서 만일 $U$가 열린집합이라면 $f(U)$는 열린집합들의 합집합이므로 열린집합이고, $U$가 닫힌집합이면 [§집합의 내부, 폐포, 경계, ⁋명제 4](/ko/math/topology/other_concepts#prop4){: data-relation="required" }에 의하여 닫힌집합이 된다. 
 :::
 
 ## 동치관계들
