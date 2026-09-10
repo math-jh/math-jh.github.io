@@ -101,7 +101,7 @@ $m$차원 manifold $M$과, $m-k$개의 independent 1-form들로 생성된 differ
 ::: 증명
 간단히 흐름만 소개한다.
 
-1. 우선 [§미분다양체의 예시들, ⁋예시 5](/ko/math/manifolds/examples_of_manifolds#ex5)를 따라 다음의 집합
+1. 우선 [§미분다양체의 예시들, ⁋예시 5](/ko/math/manifolds/examples_of_manifolds#ex5){: data-relation="required" }를 따라 다음의 집합
     
     $$\graph(f)=\{(p,q)\mid f(p)=q\}$$
     

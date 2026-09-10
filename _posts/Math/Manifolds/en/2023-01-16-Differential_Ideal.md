@@ -99,7 +99,7 @@ Let $M^m$ and $N^n$ be two manifolds, and let $\pi_1:N\times M\rightarrow N$ and
 ::: Proof
 We briefly sketch the argument.
 
-1. First, following [§Examples of Differentiable Manifolds, ⁋Example 5](/en/math/manifolds/examples_of_manifolds#ex5), we show that the set
+1. First, following [§Examples of Differentiable Manifolds, ⁋Example 5](/en/math/manifolds/examples_of_manifolds#ex5){: data-relation="required" }, we show that the set
     
     $$\graph(f)=\{(p,q)\mid f(p)=q\}$$
     
