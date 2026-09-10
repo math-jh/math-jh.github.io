@@ -19,7 +19,7 @@ weight: 22
 
 ## 복소내적과 노름
 
-[§내적공간](/ko/math/linear_algebra/inner_product_spaces)에서 우리는 $\mathbb{R}$-벡터공간 위의 내적을 정의하였다. 내적의 핵심 조건은 $\langle v,v\rangle\geq 0$이라는 positive-definiteness이며, 이는 $\mathbb{K}$에 대소관계가 있어야 하므로 일반적인 field에서는 곧바로 옮겨지지 않는다. 특히 $\mathbb{C}$ 위에서 $\langle v,w\rangle=\sum_i v_iw_i$를 그대로 쓰면 $\langle v,v\rangle=\sum_i v_i^2$이 복소수가 되어 부호를 말할 수 없다. 해결책은 한쪽 변수에 켤레복소수를 취하는 것이다. $\sum_i\bar v_iv_i=\sum_i\lvert v_i\rvert^2$은 언제나 음이 아닌 실수이기 때문이다. 이렇게 한 변수에 대해 conjugate-linear가 되도록 수정한 내적을 *Hermitian inner product*라 부르며, 이 글에서는 이를 갖춘 $\mathbb{C}$-벡터공간 위에서 [§내적공간](/ko/math/linear_algebra/inner_product_spaces)의 이론이 어떻게 옮겨지는지를 살펴본다.
+[§내적공간](/ko/math/linear_algebra/inner_product_spaces){: data-relation="required" }에서 우리는 $\mathbb{R}$-벡터공간 위의 내적을 정의하였다. 내적의 핵심 조건은 $\langle v,v\rangle\geq 0$이라는 positive-definiteness이며, 이는 $\mathbb{K}$에 대소관계가 있어야 하므로 일반적인 field에서는 곧바로 옮겨지지 않는다. 특히 $\mathbb{C}$ 위에서 $\langle v,w\rangle=\sum_i v_iw_i$를 그대로 쓰면 $\langle v,v\rangle=\sum_i v_i^2$이 복소수가 되어 부호를 말할 수 없다. 해결책은 한쪽 변수에 켤레복소수를 취하는 것이다. $\sum_i\bar v_iv_i=\sum_i\lvert v_i\rvert^2$은 언제나 음이 아닌 실수이기 때문이다. 이렇게 한 변수에 대해 conjugate-linear가 되도록 수정한 내적을 *Hermitian inner product*라 부르며, 이 글에서는 이를 갖춘 $\mathbb{C}$-벡터공간 위에서 [§내적공간](/ko/math/linear_algebra/inner_product_spaces){: data-relation="required" }의 이론이 어떻게 옮겨지는지를 살펴본다.
 
 ::: 정의 1
 $\mathbb{C}$-벡터공간 $V$ 위의 함수 $\langle-,-\rangle:V\times V\rightarrow\mathbb{C}$가 *Hermitian inner product<sub>에르미트 내적</sub>*라는 것은 다음을 만족하는 것이다.
@@ -86,7 +86,7 @@ $$\bar\lambda\langle w,v\rangle=\frac{\overline{\langle w,v\rangle}\langle w,v\r
 
 $$\lVert v+w\rVert^2\leq\lVert v\rVert^2+2\lVert v\rVert\lVert w\rVert+\lVert w\rVert^2=(\lVert v\rVert+\lVert w\rVert)^2$$
 
-이 되어 $\lVert v+w\rVert\leq\lVert v\rVert+\lVert w\rVert$을 얻는다. $\lVert\alpha v\rVert=\lvert\alpha\rvert\lVert v\rVert$은 $\langle\alpha v,\alpha v\rangle=\bar\alpha\alpha\langle v,v\rangle=\lvert\alpha\rvert^2\lVert v\rVert^2$로부터 자명하므로, $\lVert-\rVert$은 실제로 norm이다. ([§내적공간, ⁋정의 2](/ko/math/linear_algebra/inner_product_spaces#def2))
+이 되어 $\lVert v+w\rVert\leq\lVert v\rVert+\lVert w\rVert$을 얻는다. $\lVert\alpha v\rVert=\lvert\alpha\rvert\lVert v\rVert$은 $\langle\alpha v,\alpha v\rangle=\bar\alpha\alpha\langle v,v\rangle=\lvert\alpha\rvert^2\lVert v\rVert^2$로부터 자명하므로, $\lVert-\rVert$은 실제로 norm이다. ([§내적공간, ⁋정의 2](/ko/math/linear_algebra/inner_product_spaces#def2){: data-relation="required" })
 
 ## Orthonormal basis
 
@@ -113,13 +113,13 @@ $$v=\sum_{i=1}^n\langle x_i,v\rangle x_i$$
 
 $$V=U\oplus U^\perp,\qquad\dim U^\perp=\dim V-\dim U$$
 
-이 성립한다. 나아가 [§몫공간, ⁋정의 3](/ko/math/linear_algebra/quotient_space#def3)의 natural projection $p:V\rightarrow V/U$을 $U^\perp$로 제한한 $p\vert_{U^\perp}:U^\perp\rightarrow V/U$은 isomorphism이며, 따라서 $U^\perp$은 quotient space $V/U$을 표준적으로 실현한다.
+이 성립한다. 나아가 [§몫공간, ⁋정의 3](/ko/math/linear_algebra/quotient_space#def3){: data-relation="required" }의 natural projection $p:V\rightarrow V/U$을 $U^\perp$로 제한한 $p\vert_{U^\perp}:U^\perp\rightarrow V/U$은 isomorphism이며, 따라서 $U^\perp$은 quotient space $V/U$을 표준적으로 실현한다.
 :::
 ::: 증명
 위에서 $V$의 orthonormal basis $\{x_1,\ldots,x_n\}$을 $U$의 것 $\{x_1,\ldots,x_k\}$로부터 확장했으므로, 나머지 $\{x_{k+1},\ldots,x_n\}$은 $U$와 직교하여 $U^\perp$을 span한다. 따라서 $V=U\oplus U^\perp$이고 $\dim U^\perp=\dim V-\dim U$이다. 그럼 $\ker p=U$이므로 $p\vert_{U^\perp}$의 kernel은 $U^\perp\cap U=\{0\}$이라 단사이고, $V=U+U^\perp$이라 전사이므로 isomorphism이다.
 :::
 
-여기서 positive-definiteness가 결정적이다. 내적이 positive-definite이면 $U\cap U^\perp$의 임의의 원소 $u$는 $\langle u,u\rangle=0$을 만족해 $u=0$이므로, 모든 부분공간 $U$가 $U\cap U^\perp=\{0\}$을 자동으로 만족한다. 일반적인 symmetric bilinear form에서는 이 직교분해와 표준동형이 부분공간의 non-degeneracy를 요구하지만 ([§쌍선형형식, ⁋명제 9](/ko/math/linear_algebra/bilinear_form#prop9)), Hermitian 내적을 포함한 positive-definite인 경우에는 아무 조건 없이 성립하는 것이다.
+여기서 positive-definiteness가 결정적이다. 내적이 positive-definite이면 $U\cap U^\perp$의 임의의 원소 $u$는 $\langle u,u\rangle=0$을 만족해 $u=0$이므로, 모든 부분공간 $U$가 $U\cap U^\perp=\{0\}$을 자동으로 만족한다. 일반적인 symmetric bilinear form에서는 이 직교분해와 표준동형이 부분공간의 non-degeneracy를 요구하지만 ([§쌍선형형식, ⁋명제 9](/ko/math/linear_algebra/bilinear_form#prop9){: data-relation="weak" }), Hermitian 내적을 포함한 positive-definite인 경우에는 아무 조건 없이 성립하는 것이다.
 
 ## 수반작용소와 unitary matrix
 
@@ -152,7 +152,7 @@ $$U^\ast U=UU^\ast=I$$
 가 성립하는 것이다. 복소내적공간 위의 operator $L$이 $L^\ast L=I$를 만족할 때 *unitary operator<sub>unitary operator</sub>*라 부른다.
 :::
 
-[§동형사상, ⁋정리 7](/ko/math/linear_algebra/isomorphic_vector_spaces#thm7)로부터 $U^\ast U=I$이면 자동으로 $UU^\ast=I$임을 알 수 있으므로, 한쪽 조건만으로 충분하다. Unitary operator는 정확히 내적을 보존하는 operator이다. 실제로 $L$이 내적을 보존하면 임의의 $v,w$에 대하여 $\langle v,w\rangle=\langle Lv,Lw\rangle=\langle v,L^\ast Lw\rangle$이 모든 $v$에 대해 성립하므로 $L^\ast L=I$이고, 거꾸로 $L^\ast L=I$이면
+[§동형사상, ⁋정리 7](/ko/math/linear_algebra/isomorphic_vector_spaces#thm7){: data-relation="required" }로부터 $U^\ast U=I$이면 자동으로 $UU^\ast=I$임을 알 수 있으므로, 한쪽 조건만으로 충분하다. Unitary operator는 정확히 내적을 보존하는 operator이다. 실제로 $L$이 내적을 보존하면 임의의 $v,w$에 대하여 $\langle v,w\rangle=\langle Lv,Lw\rangle=\langle v,L^\ast Lw\rangle$이 모든 $v$에 대해 성립하므로 $L^\ast L=I$이고, 거꾸로 $L^\ast L=I$이면
 
 $$\langle Lv,Lw\rangle=\langle v,L^\ast Lw\rangle=\langle v,w\rangle$$
 
@@ -183,13 +183,13 @@ $$R_{kk}=\lVert\hat a_k\rVert,\qquad R_{ik}=\langle q_i,a_k\rangle\quad(i<k),\qq
 유일성을 보이기 위해 $A=Q_1R_1=Q_2R_2$가 조건을 만족하는 두 분해라 하고 $T=Q_2^\ast Q_1=R_2R_1^{-1}$로 두자. 우선 upper triangular 가역행렬은 정확히 각 $k=1,\ldots,n$마다 부분공간 $\span(e_1,\ldots,e_k)$을 자기 자신 위로 보내는 가역행렬이므로, 이러한 행렬들의 역행렬과 곱은 다시 upper triangular이다. 또 두 triangular matrix의 곱의 대각성분은 대각성분끼리의 곱이므로, $R_1^{-1}$의 대각성분은 $(R_1)_{kk}^{-1}$이고 $T=R_2R_1^{-1}$의 대각성분은 $(R_2)_{kk}/(R_1)_{kk}$, 곧 모두 양의 실수이다. 한편 $T=Q_2^\ast Q_1$은 unitary matrix들의 곱이므로 unitary이고, 따라서 $T^{-1}=T^\ast$인데, 좌변은 upper triangular matrix의 역행렬이라 upper triangular이고 우변은 upper triangular matrix의 conjugate transpose라 lower triangular이다. 그러므로 $T^{-1}$, 따라서 $T$는 diagonal matrix이다. Unitary diagonal matrix의 대각성분은 크기가 $1$이어야 하는데 $T$의 대각성분은 양의 실수이므로 모두 $1$이고, 곧 $T=I$이다. 이는 $Q_1=Q_2$, $R_1=R_2$를 뜻한다.
 :::
 
-이 분해를 *QR 분해<sub>QR decomposition</sub>*라 부르며, 증명이 보여주듯 이는 Gram-Schmidt 과정을 행렬의 언어로 옮겨 적은 것이다. $Q$의 열에는 직교화의 결과가, $R$에는 그 과정에 사용된 계수들이 기록된다. 특히 $A$의 열들이 이미 orthonormal이라면, 즉 $A$가 이미 unitary matrix라면 분해는 $Q=A$, $R=I$로 퇴화한다. 같은 증명이 실수의 경우에도 그대로 작동하여, 임의의 가역행렬 $A\in\Mat_n(\mathbb{R})$는 [§내적공간, §§직교행렬](/ko/math/linear_algebra/inner_product_spaces#직교행렬)의 orthogonal matrix와 대각성분이 모두 양의 실수인 upper triangular matrix의 곱으로 유일하게 분해되며, 위 증명의 모든 단계가 $A$의 성분들에 대한 사칙연산과 내적, norm만으로 이루어져 있으므로 두 인자 $Q,R$은 $A$에 연속적으로 의존한다.
+이 분해를 *QR 분해<sub>QR decomposition</sub>*라 부르며, 증명이 보여주듯 이는 Gram-Schmidt 과정을 행렬의 언어로 옮겨 적은 것이다. $Q$의 열에는 직교화의 결과가, $R$에는 그 과정에 사용된 계수들이 기록된다. 특히 $A$의 열들이 이미 orthonormal이라면, 즉 $A$가 이미 unitary matrix라면 분해는 $Q=A$, $R=I$로 퇴화한다. 같은 증명이 실수의 경우에도 그대로 작동하여, 임의의 가역행렬 $A\in\Mat_n(\mathbb{R})$는 [§내적공간, §§직교행렬](/ko/math/linear_algebra/inner_product_spaces#직교행렬){: data-relation="weak" }의 orthogonal matrix와 대각성분이 모두 양의 실수인 upper triangular matrix의 곱으로 유일하게 분해되며, 위 증명의 모든 단계가 $A$의 성분들에 대한 사칙연산과 내적, norm만으로 이루어져 있으므로 두 인자 $Q,R$은 $A$에 연속적으로 의존한다.
 
 한편 Gram-Schmidt 과정 대신 반사를 사용해 같은 분해에 도달할 수도 있다. 벡터 $0\neq v\in\mathbb{C}^n$에 대하여 *Householder reflection<sub>하우스홀더 반사</sub>*
 
 $$H_v=I-2\frac{vv^\ast}{v^\ast v}$$
 
-는 $H_v^\ast=H_v$와 $H_v^2=I$를 만족하므로 unitary matrix이며, $v^\perp$의 벡터를 고정하고 $v$를 $-v$로 보내는, 곧 hyperplane $v^\perp$에 대한 반사이다. 크기가 같고 $\langle y,x\rangle$이 실수인 두 벡터 $x\neq y$에 대하여 $v=x-y$로 두면 $H_vx=y$가 되는 것을 직접 계산으로 확인할 수 있으므로, 가역행렬 $A$의 첫 열 $a_1$에 대해 $\lvert\alpha\rvert=\lVert a_1\rVert$이고 $\langle\alpha e_1,a_1\rangle$이 실수가 되도록 $\alpha$를 잡으면 $a_1$을 $\alpha e_1$로 보내는 Householder reflection $H_1$을 얻는다. 이때 조건을 만족하는 $\alpha$는 부호만 다른 둘이므로 그중 $\alpha e_1\neq a_1$인 쪽을 골라 $v=a_1-\alpha e_1\neq 0$을 보장한다. 그럼 $H_1A$의 첫 열이 $e_1$ 방향으로 정렬되고, 남은 오른쪽 아래 블록에 같은 과정을 반복하면 (아래 블록의 반사는 앞쪽 좌표를 고정하는 $\mathbb{C}^n$의 반사로 확장된다) $H_{n-1}\cdots H_1A$가 upper triangular matrix가 된다. 즉 $Q=H_1\cdots H_{n-1}$로 두면 $A=QR$인데, 이렇게 얻은 $R$의 대각성분은 크기 $1$인 복소수 배만큼 양의 실수에서 어긋날 수 있으므로, diagonal unitary matrix로 보정하면 [명제 7](#prop7)의 꼴을 회수한다. 이 구성은 부동소수점 연산에서 Gram-Schmidt 과정보다 수치적으로 안정적이므로, 수치적인 계산에서 $QR$ 분해를 구하는 표준적인 방법으로 쓰인다.
+는 $H_v^\ast=H_v$와 $H_v^2=I$를 만족하므로 unitary matrix이며, $v^\perp$의 벡터를 고정하고 $v$를 $-v$로 보내는, 곧 hyperplane $v^\perp$에 대한 반사이다. 크기가 같고 $\langle y,x\rangle$이 실수인 두 벡터 $x\neq y$에 대하여 $v=x-y$로 두면 $H_vx=y$가 되는 것을 직접 계산으로 확인할 수 있으므로, 가역행렬 $A$의 첫 열 $a_1$에 대해 $\lvert\alpha\rvert=\lVert a_1\rVert$이고 $\langle\alpha e_1,a_1\rangle$이 실수가 되도록 $\alpha$를 잡으면 $a_1$을 $\alpha e_1$로 보내는 Householder reflection $H_1$을 얻는다. 이때 조건을 만족하는 $\alpha$는 부호만 다른 둘이므로 그중 $\alpha e_1\neq a_1$인 쪽을 골라 $v=a_1-\alpha e_1\neq 0$을 보장한다. 그럼 $H_1A$의 첫 열이 $e_1$ 방향으로 정렬되고, 남은 오른쪽 아래 블록에 같은 과정을 반복하면 (아래 블록의 반사는 앞쪽 좌표를 고정하는 $\mathbb{C}^n$의 반사로 확장된다) $H_{n-1}\cdots H_1A$가 upper triangular matrix가 된다. 즉 $Q=H_1\cdots H_{n-1}$로 두면 $A=QR$인데, 이렇게 얻은 $R$의 대각성분은 크기 $1$인 복소수 배만큼 양의 실수에서 어긋날 수 있으므로, diagonal unitary matrix로 보정하면 [명제 7](#prop7){: data-relation="required" }의 꼴을 회수한다. 이 구성은 부동소수점 연산에서 Gram-Schmidt 과정보다 수치적으로 안정적이므로, 수치적인 계산에서 $QR$ 분해를 구하는 표준적인 방법으로 쓰인다.
 
 ---
 
