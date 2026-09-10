@@ -13,13 +13,13 @@ weight: 7
 
 ---
 
-일반적으로 기하학적 대상이 주어졌을 때 그 구조를 이해하기 위해 우리는 이 대상을 잘게 분해한다. 가령 위상적 공간 중 가장 만만한 것은 CW complex이며, 이를 cell structure로 분해하면 구체적인 계산을 할 수 있다. Lie group 또한 대수적 대상인 동시에 기하적 대상이므로, 이러한 방식을 시도해볼 수 있고, [§Borel subgroup, ⁋명제 16](/ko/math/lie_theory/borel_subgroup#prop16)에서 도입한 Bruhat decomposition이 바로 이러한 역할을 해 준다. 
+일반적으로 기하학적 대상이 주어졌을 때 그 구조를 이해하기 위해 우리는 이 대상을 잘게 분해한다. 가령 위상적 공간 중 가장 만만한 것은 CW complex이며, 이를 cell structure로 분해하면 구체적인 계산을 할 수 있다. Lie group 또한 대수적 대상인 동시에 기하적 대상이므로, 이러한 방식을 시도해볼 수 있고, [§Borel subgroup, ⁋명제 16](/ko/math/lie_theory/borel_subgroup#prop16){: data-relation="required" }에서 도입한 Bruhat decomposition이 바로 이러한 역할을 해 준다. 
 
 우리는 이번 글에서 Bruhat decomposition을 조금 더 자세히 살펴본 후, Borel subgroup $B$를 포함하는 더 큰 parabolic subgroup $P\supseteq B$로 일반화하여 partial flag variety $G/P$의 cell decomposition을 살펴본다. 
 
 ## Coxeter group과 length function
 
-Bruhat decomposition이 일반적인 cell decomposition과 다른 점은, cell들이 임의로 붙은 것이 아니라 $G/B$ 위 Borel subgroup $B$의 작용에서 orbit으로 자연스럽게 나온다는 것이다. 더 중요한 것은, 이 orbit들의 집합 $B\backslash G/B$가 정확히 [§근계, ⁋정의 17](/ko/math/lie_theory/root_systems#def17)의 Weyl group $W$로 색인된다는 점이다. 따라서 각 cell의 기하는 전적으로 $W$의 조합론으로 환원되며, 바로 여기서 root system이 다시 등장한다. 
+Bruhat decomposition이 일반적인 cell decomposition과 다른 점은, cell들이 임의로 붙은 것이 아니라 $G/B$ 위 Borel subgroup $B$의 작용에서 orbit으로 자연스럽게 나온다는 것이다. 더 중요한 것은, 이 orbit들의 집합 $B\backslash G/B$가 정확히 [§근계, ⁋정의 17](/ko/math/lie_theory/root_systems#def17){: data-relation="required" }의 Weyl group $W$로 색인된다는 점이다. 따라서 각 cell의 기하는 전적으로 $W$의 조합론으로 환원되며, 바로 여기서 root system이 다시 등장한다. 
 
 이를 위해 우선 Coxeter group을 정의한다. 
 
@@ -33,7 +33,7 @@ $$W=\left\langle s_1,\ldots,s_r\;\middle\vert\;(s_is_j)^{m_{ij}}=e\right\rangle$
 
 조건 $m_{ii}=1$은 각 generator가 $s_i^2=e$를 만족하는 involution임을 뜻하고, $i\neq j$에 대한 관계 $(s_is_j)^{m_{ij}}=e$는 *braid relation*이라 불린다. 가령 $m_{ij}=2$이면 $s_is_j=s_js_i$, 즉 두 generator가 commute하며, $m_{ij}=3$이면 $s_is_js_i=s_js_is_j$가 된다. $m_{ij}=\infty$인 경우는 $s_i$와 $s_j$ 사이에 아무런 관계도 부과하지 않음을 의미한다. 
 
-가장 작은 비자명한 경우는 generator가 둘인 경우다. $S=\{s_1,s_2\}$이고 $m_{12}=m$이면 $(W,S)$는 정확히 order $2m$의 dihedral group이며 ([\[대수적 구조\] §반군, 모노이드, 군, ⁋예시 16](/ko/math/algebraic_structures/groups#ex16)), 두 generator는 정$m$각형의 인접한 두 대칭축에 대한 reflection으로, 그 곱 $s_1s_2$는 order $m$의 회전으로 실현된다. 일반적인 Coxeter group은 이러한 dihedral 조각들을 generator를 공유하며 이어붙인 것으로 이해할 수 있다. 실제로 임의의 두 generator $s_i,s_j$가 만드는 subgroup $\langle s_i,s_j\rangle$는 언제나 order $2m_{ij}$의 dihedral group이고, [정의 1](#def1)의 presentation이 말하는 핵심은 이러한 pairwise relation 외에 셋 이상의 generator가 얽히는 새로운 relation이 없다는 것이다.
+가장 작은 비자명한 경우는 generator가 둘인 경우다. $S=\{s_1,s_2\}$이고 $m_{12}=m$이면 $(W,S)$는 정확히 order $2m$의 dihedral group이며 ([\[대수적 구조\] §반군, 모노이드, 군, ⁋예시 16](/ko/math/algebraic_structures/groups#ex16){: data-relation="weak" }), 두 generator는 정$m$각형의 인접한 두 대칭축에 대한 reflection으로, 그 곱 $s_1s_2$는 order $m$의 회전으로 실현된다. 일반적인 Coxeter group은 이러한 dihedral 조각들을 generator를 공유하며 이어붙인 것으로 이해할 수 있다. 실제로 임의의 두 generator $s_i,s_j$가 만드는 subgroup $\langle s_i,s_j\rangle$는 언제나 order $2m_{ij}$의 dihedral group이고, [정의 1](#def1){: data-relation="required" }의 presentation이 말하는 핵심은 이러한 pairwise relation 외에 셋 이상의 generator가 얽히는 새로운 relation이 없다는 것이다.
 
 이 정수들 $m_{ij}$를 모은 대칭행렬이 Coxeter system의 모든 정보를 담으며, 유한 reflection group은 정확히 유한 Coxeter group으로 특징지어진다.
 
@@ -41,10 +41,10 @@ $$W=\left\langle s_1,\ldots,s_r\;\middle\vert\;(s_is_j)^{m_{ij}}=e\right\rangle$
 Weyl group $W$는 simple reflection들의 집합 $S=\{s_1,\ldots,s_r\}$에 의해 생성되며, $(W,S)$는 Coxeter system을 이룬다. 더욱이 각 $m_{ij}$ ($i\neq j$)는 $2,3,4,6$ 중 하나이다.
 :::
 ::: 증명
-$W$가 reflection들로 생성된다는 것은 [§근계, ⁋정의 17](/ko/math/lie_theory/root_systems#def17)의 정의이다. 두 simple reflection $s_i,s_j$의 곱 $s_is_j$는 $\alpha_i$와 $\alpha_j$가 생성하는 2차원 평면 위에서의 rotation이며, 그 rotation 각도는 두 simple root가 이루는 각의 두 배이다. [§근계](/ko/math/lie_theory/root_systems)에서 확인한 것과 같이 서로 다른 두 simple root가 이룰 수 있는 각은 $90^\circ,120^\circ,135^\circ,150^\circ$ 중 하나이므로, $s_is_j$의 order $m_{ij}$는 각각 $2,3,4,6$이 된다. 이들 braid relation만으로 $W$가 완전히 결정된다는 것이 가장 비자명한 부분으로, 이것이 바로 Coxeter의 정리에 해당하는 부분이다.
+$W$가 reflection들로 생성된다는 것은 [§근계, ⁋정의 17](/ko/math/lie_theory/root_systems#def17){: data-relation="required" }의 정의이다. 두 simple reflection $s_i,s_j$의 곱 $s_is_j$는 $\alpha_i$와 $\alpha_j$가 생성하는 2차원 평면 위에서의 rotation이며, 그 rotation 각도는 두 simple root가 이루는 각의 두 배이다. [§근계](/ko/math/lie_theory/root_systems){: data-relation="required" }에서 확인한 것과 같이 서로 다른 두 simple root가 이룰 수 있는 각은 $90^\circ,120^\circ,135^\circ,150^\circ$ 중 하나이므로, $s_is_j$의 order $m_{ij}$는 각각 $2,3,4,6$이 된다. 이들 braid relation만으로 $W$가 완전히 결정된다는 것이 가장 비자명한 부분으로, 이것이 바로 Coxeter의 정리에 해당하는 부분이다.
 :::
 
-우리 경우에 이 정수 $m_{ij}$들은 [§Borel subgroup, ⁋정의 1](/ko/math/lie_theory/borel_subgroup#def1)의 Dynkin diagram에서 곧바로 읽힌다. 두 vertex가 연결되지 않았으면 $m_{ij}=2$, single edge면 $3$, double edge면 $4$, triple edge면 $6$이다. 예컨대 [§Borel subgroup, ⁋정의 8](/ko/math/lie_theory/borel_subgroup#def8)의 그림에서 type $A_{n-1}$의 Weyl group $W=S_n$에서 인접한 두 simple reflection은 $m=3$을 가지므로 익숙한 braid relation $s_is_{i+1}s_i=s_{i+1}s_is_{i+1}$을 만족한다.
+우리 경우에 이 정수 $m_{ij}$들은 [§Borel subgroup, ⁋정의 1](/ko/math/lie_theory/borel_subgroup#def1){: data-relation="required" }의 Dynkin diagram에서 곧바로 읽힌다. 두 vertex가 연결되지 않았으면 $m_{ij}=2$, single edge면 $3$, double edge면 $4$, triple edge면 $6$이다. 예컨대 [§Borel subgroup, ⁋정의 8](/ko/math/lie_theory/borel_subgroup#def8){: data-relation="weak" }의 그림에서 type $A_{n-1}$의 Weyl group $W=S_n$에서 인접한 두 simple reflection은 $m=3$을 가지므로 익숙한 braid relation $s_is_{i+1}s_i=s_{i+1}s_is_{i+1}$을 만족한다.
 
 Coxeter system $(W,S)$가 주어지면 각 원소를 generator의 곱으로 표현하는 데 드는 "비용"을 잴 수 있다.
 
@@ -54,7 +54,7 @@ Coxeter system $(W,S)$의 원소 $w$에 대하여, $w$의 *length<sub>길이</su
 
 정의에 의해 $\ell(e)=0$이고 $\ell(s_i)=1$이며, $\ell(w^{-1})=\ell(w)$이다. Length function의 의미는 root system을 통해 가장 투명하게 드러나는데, 그 출발점은 simple reflection이 positive root 전체에 미치는 영향이 극히 제한적이라는 사실이다.
 
-[§근계, ⁋정의 9](/ko/math/lie_theory/root_systems#def9)의 reflection 공식에 의하면 simple reflection $s_i$는 $\alpha_i$를 $-\alpha_i$로 보낸다. 나머지 positive root $\beta\in\Phi^+$, $\beta\neq\alpha_i$에 대해서는, $\beta$를 simple root들의 positive linear combination으로 쓴다 생각하면 $\alpha_i$를 제외한 계수 중 하나가 양수인데, 해당 정의의 Cartan integer $\langle\beta,\alpha_i\rangle$를 사용하면 
+[§근계, ⁋정의 9](/ko/math/lie_theory/root_systems#def9){: data-relation="required" }의 reflection 공식에 의하면 simple reflection $s_i$는 $\alpha_i$를 $-\alpha_i$로 보낸다. 나머지 positive root $\beta\in\Phi^+$, $\beta\neq\alpha_i$에 대해서는, $\beta$를 simple root들의 positive linear combination으로 쓴다 생각하면 $\alpha_i$를 제외한 계수 중 하나가 양수인데, 해당 정의의 Cartan integer $\langle\beta,\alpha_i\rangle$를 사용하면 
 
 $$s_i(\beta)=\beta-\langle\beta,\alpha_i\rangle\alpha_i$$
 
@@ -82,7 +82,7 @@ $$\ell(w)=\lvert\{(i,j)\mid i<j,\ w(i)>w(j)\}\rvert=\operatorname{inv}(w)$$
 
 ## Bruhat decomposition
 
-이제 우리는 위에서 살펴본 결과들을 이용하여 Bruhat decomposition을 생각한다. 다음 정리는 [§Borel subgroup, ⁋명제 16](/ko/math/lie_theory/borel_subgroup#prop16)에서 이미 살펴본 결과로, 편의를 위해 재서술해둔다. 
+이제 우리는 위에서 살펴본 결과들을 이용하여 Bruhat decomposition을 생각한다. 다음 정리는 [§Borel subgroup, ⁋명제 16](/ko/math/lie_theory/borel_subgroup#prop16){: data-relation="weak" }에서 이미 살펴본 결과로, 편의를 위해 재서술해둔다. 
 
 ::: 정리 5 (Bruhat decomposition)
 Connected reductive algebraic group $G$, Borel subgroup $B$, maximal torus $T\subseteq B$, 그리고 Weyl group $W=N_G(T)/T$에 대하여, 다음의 disjoint union이 성립한다.
@@ -96,7 +96,7 @@ $$(b_1,b_2)\cdot g=b_1gb_2^{-1}$$
 
 을 생각하는 것이다. 이 action의 orbit이 바로 double coset $BwB$이며, 위의 정리는 이 orbit이 $W$로 index된다는 뜻이다. 
 
-이것이 담고있는 기하학적 의미를 살펴보기 위해 $G=\GL_n(\mathbb{C})$에서의 예시를 살펴보자. 여기서 reference flag $E_i=\span\{e_1,\ldots,e_i\}$를 고정하면, 임의의 flag $V_\bullet$는 $gB$에 대응하는 $V_i=\span\{ge_1,\ldots,ge_i\}$인 것을 살펴보았다. ([§Borel subgroup, ⁋예시 13](/ko/math/lie_theory/borel_subgroup#ex13)) 일반적으로 reference flag $E_\bullet$과 $V_\bullet$가 이루는 위치는 다음의 intersection
+이것이 담고있는 기하학적 의미를 살펴보기 위해 $G=\GL_n(\mathbb{C})$에서의 예시를 살펴보자. 여기서 reference flag $E_i=\span\{e_1,\ldots,e_i\}$를 고정하면, 임의의 flag $V_\bullet$는 $gB$에 대응하는 $V_i=\span\{ge_1,\ldots,ge_i\}$인 것을 살펴보았다. ([§Borel subgroup, ⁋예시 13](/ko/math/lie_theory/borel_subgroup#ex13){: data-relation="required" }) 일반적으로 reference flag $E_\bullet$과 $V_\bullet$가 이루는 위치는 다음의 intersection
 
 $$d_{ij}=\dim(V_i\cap E_j)$$
 
@@ -141,10 +141,10 @@ $$BwB=UwB=U_wU_w'wB=U_ww(w^{-1}U_w'w)B=U_wwB$$
 
 $$G/B=\bigsqcup_{w\in W}X_w^\circ,\qquad X_w^\circ\cong\mathbb{A}^{\ell(w)}$$
 
-각 cell의 closure가 더 낮은 차원의 cell들의 합집합이므로 ([§Borel subgroup, ⁋명제 16](/ko/math/lie_theory/borel_subgroup#prop16)) 이 분해는 $G/B$의 *affine paving*을 이루고, cell closure가 정의하는 class $[X_w]$들은 Chow ring $A^\ast(G/B)$(나아가 cohomology $H^\ast(G/B)$)의 basis를 정의한다. 차원이 가장 큰 cell은 longest element $w_0$에 대응하는 *big cell* $X_{w_0}^\circ$로, $G/B$에서 open dense이며 $\dim X_{w_0}^\circ=\ell(w_0)=\lvert\Phi^+\rvert=\dim G/B$이다. 반대로 가장 작은 cell은 한 점 $X_e^\circ=\{eB\}$로, $B$-fixed point이다. 이렇게 Bruhat decomposition은 flag variety의 기하를 $(W,S,\ell)$의 조합론으로 환원한다. 이를 위에서 살펴본 구체적인 예시 $\GL_n$에서 살펴보자. 
+각 cell의 closure가 더 낮은 차원의 cell들의 합집합이므로 ([§Borel subgroup, ⁋명제 16](/ko/math/lie_theory/borel_subgroup#prop16){: data-relation="required" }) 이 분해는 $G/B$의 *affine paving*을 이루고, cell closure가 정의하는 class $[X_w]$들은 Chow ring $A^\ast(G/B)$(나아가 cohomology $H^\ast(G/B)$)의 basis를 정의한다. 차원이 가장 큰 cell은 longest element $w_0$에 대응하는 *big cell* $X_{w_0}^\circ$로, $G/B$에서 open dense이며 $\dim X_{w_0}^\circ=\ell(w_0)=\lvert\Phi^+\rvert=\dim G/B$이다. 반대로 가장 작은 cell은 한 점 $X_e^\circ=\{eB\}$로, $B$-fixed point이다. 이렇게 Bruhat decomposition은 flag variety의 기하를 $(W,S,\ell)$의 조합론으로 환원한다. 이를 위에서 살펴본 구체적인 예시 $\GL_n$에서 살펴보자. 
 
 ::: 예시 7
-$G=\GL_n(\mathbb{C})$의 경우를 끝까지 따라가 보자. 여기서 $B$는 invertible upper triangular matrix, $T$는 invertible diagonal matrix들의 group이고, Weyl group은 $W=N_G(T)/T\cong S_n$으로, $w\in S_n$은 $we_k=e_{w(k)}$로 작용하는 permutation matrix와 동일하게 취급된다. 이 표기 아래 Bruhat decomposition $\GL_n=\bigsqcup_{w\in S_n}BwB$은 *Gauss elimination*의 좌표불변 버전이라 생각할 수 있다. 가역행렬 $g$에 왼쪽에서 upper unipotent matrix를 곱하는 것과 오른쪽에서 upper triangular matrix를 곱하는 것만으로 줄여 나가면, 마지막에 남는 것은 각 행과 열에 $1$이 정확히 하나씩 있는 permutation matrix $w$ 하나뿐이기 때문이다. 이 $w$가 유일하게 결정된다는 것이 곧 [정리 5](#thm5)의 disjointness이며, 그 $w$가 $g$의 Bruhat cell $BwB$를 가른다.
+$G=\GL_n(\mathbb{C})$의 경우를 끝까지 따라가 보자. 여기서 $B$는 invertible upper triangular matrix, $T$는 invertible diagonal matrix들의 group이고, Weyl group은 $W=N_G(T)/T\cong S_n$으로, $w\in S_n$은 $we_k=e_{w(k)}$로 작용하는 permutation matrix와 동일하게 취급된다. 이 표기 아래 Bruhat decomposition $\GL_n=\bigsqcup_{w\in S_n}BwB$은 *Gauss elimination*의 좌표불변 버전이라 생각할 수 있다. 가역행렬 $g$에 왼쪽에서 upper unipotent matrix를 곱하는 것과 오른쪽에서 upper triangular matrix를 곱하는 것만으로 줄여 나가면, 마지막에 남는 것은 각 행과 열에 $1$이 정확히 하나씩 있는 permutation matrix $w$ 하나뿐이기 때문이다. 이 $w$가 유일하게 결정된다는 것이 곧 [정리 5](#thm5){: data-relation="required" }의 disjointness이며, 그 $w$가 $g$의 Bruhat cell $BwB$를 가른다.
 
 $n=2$의 경우를 명시적으로 보자. 그럼 $G$의 임의의 원소는 
 
@@ -156,7 +156,7 @@ $$\begin{pmatrix}a&b\\c&d\end{pmatrix}=\begin{pmatrix}1&a/c\\0&1\end{pmatrix}\be
 
 이고, 따라서 $\GL_2(\mathbb{C})$의 cell은 upper triangle matrix들과 그렇지 않은 부분으로 나뉘게 된다. 
 
-이제 [명제 6](#prop6)을 따라 이들을 $\GL_2(\mathbb{C})/B\cong \mathbb{P}^1$으로 내리자. 위에서 보았듯 $c=0$에 해당하는 부분은 $B$ 그 자체이므로 이들은 한 점으로 떨어지며, 이는 명제의 $\ell(w)=0$에 해당하는 부분이다. 한편 $c\neq 0$인 부분에서는 위에서 살펴본 것과 같이 하나의 좌표 $a/c$로 매개되는 $\mathbb{P}^1$의 점 $[a:c]\in \mathbb{P}^1$이 나온다. 즉, $c=0$에 해당하는 flag variety의 점은 $[1:0]$이며, 나머지는 $\mathbb{A}^1$의 형태로 여기에 붙어있는 것이다. 
+이제 [명제 6](#prop6){: data-relation="required" }을 따라 이들을 $\GL_2(\mathbb{C})/B\cong \mathbb{P}^1$으로 내리자. 위에서 보았듯 $c=0$에 해당하는 부분은 $B$ 그 자체이므로 이들은 한 점으로 떨어지며, 이는 명제의 $\ell(w)=0$에 해당하는 부분이다. 한편 $c\neq 0$인 부분에서는 위에서 살펴본 것과 같이 하나의 좌표 $a/c$로 매개되는 $\mathbb{P}^1$의 점 $[a:c]\in \mathbb{P}^1$이 나온다. 즉, $c=0$에 해당하는 flag variety의 점은 $[1:0]$이며, 나머지는 $\mathbb{A}^1$의 형태로 여기에 붙어있는 것이다. 
 :::
 
 위의 $\GL_n(\mathbb{C})$의 Bruhat decomposition에서 우리는 Borel subgroup $B$가 upper triangular matrix라는 것을 활용하여 선형대수학의 언어로 살펴볼 수 있었다. 한편 opposite Bruhat cell은 lower triangular matrix들의 모임이므로, 이들을 활용해도 비슷한 분해를 얻어낼 수 있으며 뿐만 아니라 다음과 같이 mixed decomposition을 생각할 수도 있다.  
@@ -180,7 +180,7 @@ $$G=w_0Gw_0^{-1}=\bigsqcup_{w\in W}(w_0Bw_0^{-1})(w_0ww_0^{-1})(w_0Bw_0^{-1})=\b
 
 이는 $\GL_n(\mathbb{C})$에서는 그 의미가 명확한데, identity cell $B^-B$는 lower triangular matrix와 upper triangular matrix의 곱으로 나타나는 행렬들, 곧 *LU decomposition*을 갖는 행렬들의 모임이다. 선형대수에서 잘 알려져 있듯 이는 모든 leading principal minor가 $0$이 아닌 행렬들과 정확히 일치하며, 그러한 행렬들은 $\GL_n$ 안에서 open dense이다. 
 
-앞서 [예시 7](#ex7)의 $n=2$ 상황을 생각하면, $2\times2$ 행렬의 leading principal minor는 첫 성분 $g_{11}$, 그리고 전체 determinant $\det g$ 둘이다. 그런데 $\GL_2(\mathbb{C})$에서는 $\det g\neq0$이 자동이므로 LU 조건은 $g_{11}\neq0$ 하나로 줄어들게 되므로, $B^-B$의 원소는 정확히 $(1,1)$-성분이 $0$이 아닌 행렬들이며 이는 정확히 첫 pivot이 살아 있어 행 교환 없이 Gauss elimination이 진행되는 성분들이다. 이와 같이, 일반적으로 leading principal minor들은 Gauss elimination의 pivot에 대응하여, 어느 단계에서 minor가 $0$이 되면 그 자리의 pivot이 사라져 행 교환이 불가피해진다. 이 행 교환의 패턴을 기록하는 것이 permutation $w$이며, Birkhoff가 보인 것은 임의의 $g$가
+앞서 [예시 7](#ex7){: data-relation="weak" }의 $n=2$ 상황을 생각하면, $2\times2$ 행렬의 leading principal minor는 첫 성분 $g_{11}$, 그리고 전체 determinant $\det g$ 둘이다. 그런데 $\GL_2(\mathbb{C})$에서는 $\det g\neq0$이 자동이므로 LU 조건은 $g_{11}\neq0$ 하나로 줄어들게 되므로, $B^-B$의 원소는 정확히 $(1,1)$-성분이 $0$이 아닌 행렬들이며 이는 정확히 첫 pivot이 살아 있어 행 교환 없이 Gauss elimination이 진행되는 성분들이다. 이와 같이, 일반적으로 leading principal minor들은 Gauss elimination의 pivot에 대응하여, 어느 단계에서 minor가 $0$이 되면 그 자리의 pivot이 사라져 행 교환이 불가피해진다. 이 행 교환의 패턴을 기록하는 것이 permutation $w$이며, Birkhoff가 보인 것은 임의의 $g$가
 
 $$g=LwU\qquad(L\in B^-,\ U\in B,\ w\in W)$$
 
@@ -209,7 +209,7 @@ $P_I=BW_IB$는 $G$의 connected closed subgroup이며, Levi decomposition $P_I=L
 $B=U\rtimes T$이고 $W_I\subseteq W$이므로 $P_I$는 $B$와 $W_I$의 representative들로 생성되는 subgroup이다. $W_I$의 각 원소 $w$에 대해 $BwB$는 locally closed이고, 정리 5의 disjointness로부터 이들의 union $P_I$는 well-defined subgroup이자 closed subset이다. Root space 차원에서 보면 $\mathfrak{p}_I$는 $\mathfrak{b}$에 $I$가 생성하는 negative root들의 root space를 더한 것으로, 이를 reductive part $\mathfrak{l}_I$ (양·음 root가 짝지어진 부분)와 nilpotent part $\mathfrak{u}_I$ (나머지 positive root)로 가르면 위의 Levi decomposition을 얻는다. 따라서 $P_I$는 connected closed subgroup이다.
 :::
 
-[명제 10](#prop10)의 Levi decomposition은 Borel subgroup의 분해 $B=U\rtimes T$를 한 단계 키운 것으로 보면 자연스럽다. 즉, $B$가 torus $T$와 위쪽 unipotent $U$의 두 정보로 구성되었듯, $P_I$는 더 큰 reductive part $L_I$와 그 위의 unipotent $U_I$의 semidirect product이다. $I$에 속한 root들은 positive root와 negative root가 짝을 이뤄 살아남아 ($T$를 maximal torus로 갖는) reductive group $L_I$를 이루고, $I$ 밖의 positive root들은 짝이 없어 nilpotent radical $U_I$를 이룬다. 특히 $L_I$의 Weyl group은 정확히 $W_I$로, 바로 아래에서 $W$를 quotient하게 될 그 subgroup이다.
+[명제 10](#prop10){: data-relation="weak" }의 Levi decomposition은 Borel subgroup의 분해 $B=U\rtimes T$를 한 단계 키운 것으로 보면 자연스럽다. 즉, $B$가 torus $T$와 위쪽 unipotent $U$의 두 정보로 구성되었듯, $P_I$는 더 큰 reductive part $L_I$와 그 위의 unipotent $U_I$의 semidirect product이다. $I$에 속한 root들은 positive root와 negative root가 짝을 이뤄 살아남아 ($T$를 maximal torus로 갖는) reductive group $L_I$를 이루고, $I$ 밖의 positive root들은 짝이 없어 nilpotent radical $U_I$를 이룬다. 특히 $L_I$의 Weyl group은 정확히 $W_I$로, 바로 아래에서 $W$를 quotient하게 될 그 subgroup이다.
 
 $G=\GL_n(\mathbb{C})$에서는 이 분해가 block 행렬로 곧장 드러난다. $I$에서 빠진 simple root $\alpha_k$마다 $k$와 $k+1$ 사이가 끊겨 $\{1,\ldots,n\}$이 토막으로 나뉘고, $P_I$는 그 토막들을 대각 block으로 갖는 block upper triangular matrix들의 모임이다. 이 때 대각 block들이 reductive Levi $L_I\cong\GL_{k_1}\times\cdots\times\GL_{k_r}$를, 대각 위쪽 block들이 unipotent radical $U_I$를 이룬다. 이제 parabolic subgroup $P=P_I$에 대한 $G/P$의 cell decomposition을 얻으려면 Weyl group $W$를 $W_I$로 quotient해야 한다. 이 때 각 coset을 대표하는 표준적인 방법은 minimal length 원소를 고르는 것이다.
 
@@ -245,7 +245,7 @@ $$G/P=\bigsqcup_{w\in W^I}BwP/P,\qquad BwP/P\cong\mathbb{A}^{\ell(w)}$$
 
 ## Grassmannian
 
-Generalized Bruhat decomposition의 가장 대표적인 예시는 Grassmannian $\Gr(k,n)$이다. ([\[대수다양체\] §그라스만 다양체, ⁋정의 1](/ko/math/algebraic_varieties/grassmannians#def1)) 이는 그 정의에 의하여 1-step partial flag variety로 생각할 수 있다. 이를 위해 simple root system $\Delta=\{\alpha_1,\ldots,\alpha_{n-1}\}$에서 $\alpha_k$ 하나만 제외한 부분집합 $I=\Delta\setminus\{\alpha_k\}$를 택하고, 이에 대응하는 maximal parabolic subgroup을 $P_k$라 하자. $P_k$는 block upper triangular matrix들의 모임으로
+Generalized Bruhat decomposition의 가장 대표적인 예시는 Grassmannian $\Gr(k,n)$이다. ([\[대수다양체\] §그라스만 다양체, ⁋정의 1](/ko/math/algebraic_varieties/grassmannians#def1){: data-relation="required" }) 이는 그 정의에 의하여 1-step partial flag variety로 생각할 수 있다. 이를 위해 simple root system $\Delta=\{\alpha_1,\ldots,\alpha_{n-1}\}$에서 $\alpha_k$ 하나만 제외한 부분집합 $I=\Delta\setminus\{\alpha_k\}$를 택하고, 이에 대응하는 maximal parabolic subgroup을 $P_k$라 하자. $P_k$는 block upper triangular matrix들의 모임으로
 
 $$P_k=\left\{\begin{pmatrix}A&C\\0&D\end{pmatrix}\in \GL_n(\mathbb{C})\;\middle\vert\;A\in \GL_k(\mathbb{C}),\;D\in \GL_{n-k}(\mathbb{C})\right\}$$
 
@@ -297,7 +297,7 @@ $$0\subseteq V_1\subseteq \cdots \subseteq V_m\subseteq \mathbb{C}^n,\qquad \dim
 
 $$W^{P_2}=\{1234,\,1324,\,1423,\,2314,\,2413,\,3412\}$$
 
-의 여섯 개이다. 각 representative의 길이는 [예시 4](#ex4)에서처럼 inversion을 세어
+의 여섯 개이다. 각 representative의 길이는 [예시 4](#ex4){: data-relation="weak" }에서처럼 inversion을 세어
 
 $$\ell(1234)=0,\quad\ell(1324)=1,\quad\ell(1423)=\ell(2314)=2,\quad\ell(2413)=3,\quad\ell(3412)=4$$
 
@@ -328,7 +328,7 @@ $$X_w=\overline{X_w^\circ},\qquad X^w=\overline{X^w_\circ}$$
 
 정의에 의해 $X_w^\circ\cong\mathbb{A}^{\ell(w)}$이고 $X^w_\circ\cong\mathbb{A}^{\dim(G/P)-\ell(w)}$이다. 특히 $X_{w_0^P}^\circ$ ($w_0^P$는 $W^P$의 longest element)는 $\ell(w_0^P)=\dim(G/P)$인 open dense cell이고, $X_e^\circ=\{eP\}$는 $B$-fixed point이다. 대칭적으로 opposite 쪽에서는 $X^e_\circ=B^-P/P$가 open dense cell, $X^{w_0^P}_\circ=\{w_0^PP\}$가 $B^-$-fixed point가 된다. 즉 두 cell 구조는 서로 차원을 뒤집은 형태로 맞물린다.
 
-Schubert variety들 사이의 포함관계는 Weyl group 위의 *Bruhat order*가 지배한다. Bruhat order $\leq$는 $v$의 어떤 reduced expression이 $w$의 어떤 reduced expression의 subword로 나타날 때 $v\leq w$로 정의되는 순서로, 기하적으로는 [§Borel subgroup, ⁋명제 16](/ko/math/lie_theory/borel_subgroup#prop16)에서 본 cell closure $\overline{BwB}=\bigsqcup_{v\leq w}BvB$를 통해 드러난다.
+Schubert variety들 사이의 포함관계는 Weyl group 위의 *Bruhat order*가 지배한다. Bruhat order $\leq$는 $v$의 어떤 reduced expression이 $w$의 어떤 reduced expression의 subword로 나타날 때 $v\leq w$로 정의되는 순서로, 기하적으로는 [§Borel subgroup, ⁋명제 16](/ko/math/lie_theory/borel_subgroup#prop16){: data-relation="required" }에서 본 cell closure $\overline{BwB}=\bigsqcup_{v\leq w}BvB$를 통해 드러난다.
 
 ::: 명제 17
 $x,w\in W^P$에 대하여 다음이 성립한다.
@@ -358,17 +358,17 @@ $$1234\leq 1324\leq 2314\leq 2413\leq 3412$$
 
 즉 $1324$ 아래에는 $1234$만 있고, 길이가 같은 $1423$과 $2314$는 서로 비교 불가능하며 둘 다 $1324$ 위·$2413$ 아래에 놓인다. 이 Hasse diagram은 두 갈래로 갈라졌다 다시 만나는 마름모꼴로, $\Gr(2,4)$의 Schubert class들 사이의 포함관계를 그대로 보여준다. 가령 Schubert variety $X_{2413}$은 $X_{1423}^\circ$, $X_{2314}^\circ$, $X_{1324}^\circ$, $X_{1234}^\circ$를 모두 포함하는 차원 $3$의 subvariety이다.
 
-이 순서는 [예시 15](#ex15)의 jump set으로 곧장 읽힌다. $w$를 그 jump set $\{w(1)<w(2)\}$으로 보면 Bruhat order는 성분별 순서, 즉 $v\le w\iff v(1)\le w(1)$이고 $v(2)\le w(2)$이다. 그래서 두 maximal chain은 $\{1,2\}\le\{1,3\}\le\{1,4\}\le\{2,4\}\le\{3,4\}$와 $\{1,2\}\le\{1,3\}\le\{2,3\}\le\{2,4\}\le\{3,4\}$이고, $1423\leftrightarrow\{1,4\}$와 $2314\leftrightarrow\{2,3\}$이 비교 불가능한 것은 $4\not\le3$이면서 $2\not\le1$이기 때문이다. 기하적으로 이는 [예시 15](#ex15)에서 살펴봤듯, 이 두 원소에 의해 결정되는 행렬들이
+이 순서는 [예시 15](#ex15){: data-relation="weak" }의 jump set으로 곧장 읽힌다. $w$를 그 jump set $\{w(1)<w(2)\}$으로 보면 Bruhat order는 성분별 순서, 즉 $v\le w\iff v(1)\le w(1)$이고 $v(2)\le w(2)$이다. 그래서 두 maximal chain은 $\{1,2\}\le\{1,3\}\le\{1,4\}\le\{2,4\}\le\{3,4\}$와 $\{1,2\}\le\{1,3\}\le\{2,3\}\le\{2,4\}\le\{3,4\}$이고, $1423\leftrightarrow\{1,4\}$와 $2314\leftrightarrow\{2,3\}$이 비교 불가능한 것은 $4\not\le3$이면서 $2\not\le1$이기 때문이다. 기하적으로 이는 [예시 15](#ex15){: data-relation="required" }에서 살펴봤듯, 이 두 원소에 의해 결정되는 행렬들이
 
 $$\begin{pmatrix}1&0&0&0\\0&\ast&\ast&1\end{pmatrix},\quad \begin{pmatrix}\ast&1&0&0\\\ast&0&1&0\end{pmatrix}$$
 
-인 것으로도 확인할 수 있다. 왼쪽 cell의 점은 언제나 $e_1$을 포함하지만 ($\dim(V\cap E_1)=1$) 둘째 행의 마지막 성분 $1$ 때문에 $E_3$ 안에 있지 않고 ($\dim(V\cap E_3)=1$), 오른쪽 cell의 점은 마지막 열이 통째로 $0$이라 언제나 $E_3$ 안에 있지만 두 행의 어떤 일차결합도 $e_1$의 배수가 아니므로 $E_1$과는 자명하게만 만난다 ($\dim(V\cap E_1)=0$). 곧 왼쪽 cell은 $X_{2314}$의 rank 조건 $\dim(V\cap E_3)\geq2$를, 오른쪽 cell은 $X_{1423}$의 rank 조건 $\dim(V\cap E_1)\geq1$을 위반하므로, [명제 17](#prop17)대로 어느 쪽 Schubert variety도 다른 쪽을 포함하지 않는다.
+인 것으로도 확인할 수 있다. 왼쪽 cell의 점은 언제나 $e_1$을 포함하지만 ($\dim(V\cap E_1)=1$) 둘째 행의 마지막 성분 $1$ 때문에 $E_3$ 안에 있지 않고 ($\dim(V\cap E_3)=1$), 오른쪽 cell의 점은 마지막 열이 통째로 $0$이라 언제나 $E_3$ 안에 있지만 두 행의 어떤 일차결합도 $e_1$의 배수가 아니므로 $E_1$과는 자명하게만 만난다 ($\dim(V\cap E_1)=0$). 곧 왼쪽 cell은 $X_{2314}$의 rank 조건 $\dim(V\cap E_3)\geq2$를, 오른쪽 cell은 $X_{1423}$의 rank 조건 $\dim(V\cap E_1)\geq1$을 위반하므로, [명제 17](#prop17){: data-relation="required" }대로 어느 쪽 Schubert variety도 다른 쪽을 포함하지 않는다.
 
 포함관계도 rank 조건으로 손에 잡힌다. $X_{2413}$의 조건 $\dim(V\cap E_2)\ge1$, $\dim(V\cap E_4)\ge2$ 중 뒤는 $E_4=\mathbb{C}^4$이라 자동이므로
 
 $$X_{2413}=\{V\in\Gr(2,4)\mid\dim(V\cap E_2)\ge1\},$$
 
-곧 $E_2$와 만나는 $2$-plane 전체다. [예시 15](#ex15)의 여섯 cell 중 $E_2$와 transverse한 big cell $3412$만 이 조건을 어기므로, $X_{2413}$은 나머지 다섯 cell을 정확히 포함한다.
+곧 $E_2$와 만나는 $2$-plane 전체다. [예시 15](#ex15){: data-relation="required" }의 여섯 cell 중 $E_2$와 transverse한 big cell $3412$만 이 조건을 어기므로, $X_{2413}$은 나머지 다섯 cell을 정확히 포함한다.
 :::
 
 마지막으로, Bruhat 분해의 직접적인 귀결 하나를 기록해 둔다. Cell 분해는 $G/P$ 위 maximal torus $T$의 작용의 fixed point들을 완전히 분류해 준다.
@@ -377,10 +377,10 @@ $$X_{2413}=\{V\in\Gr(2,4)\mid\dim(V\cap E_2)\ge1\},$$
 Maximal torus $T\subseteq B$의 $G/P$ 위 작용에 대하여, fixed point는 정확히 coordinate point $wP$ ($w\in W^P$)들이며, 각 Bruhat cell $X_w^\circ$마다 하나씩 들어 있다.
 :::
 ::: 증명
-우선 각 coordinate point가 fixed point이다. $w$의 대표원소 $\dot w\in N_G(T)$에 대하여 $\dot w^{-1}t\dot w\in T\subseteq P$이므로 $t\cdot\dot wP=\dot w(\dot w^{-1}t\dot w)P=\dot wP$이기 때문이다. 역으로 fixed point $x$를 잡으면, Bruhat 분해에 의해 $x$는 어떤 cell $X_w^\circ=BwP/P$에 속하고, $T\subseteq B$이므로 각 cell은 $T$-stable이다. 그런데 cell의 좌표화 $X_w^\circ\cong\mathbb{A}^{\ell(w)}$에서 $T$는 각 좌표를 nontrivial character로 scale한다. Type $A$에서는 이를 [예시 15](#ex15)의 행렬 좌표에서 직접 볼 수 있는데, $t=\diag(t_1,\ldots,t_n)$는 pivot이 열 $p$인 행의 자유 성분 (열 $b$ 자리)을 $t_bt_p^{-1}$배 한다 (각 행을 $t$로 옮긴 뒤 pivot을 다시 $1$로 normalize하면 된다). 일반형에서는 cell이 root subgroup들의 곱 $\prod_\alpha U_\alpha$로 좌표화되고 $T$-conjugation이 각 $U_\alpha\cong\mathbb{G}_a$ 위에 root $\alpha$로 작용한다 ([Spr] 참조). 어느 쪽이든 모든 character가 nontrivial하므로, 좌표가 모두 $0$인 원점, 곧 $wP$만이 그 cell의 fixed point이다.
+우선 각 coordinate point가 fixed point이다. $w$의 대표원소 $\dot w\in N_G(T)$에 대하여 $\dot w^{-1}t\dot w\in T\subseteq P$이므로 $t\cdot\dot wP=\dot w(\dot w^{-1}t\dot w)P=\dot wP$이기 때문이다. 역으로 fixed point $x$를 잡으면, Bruhat 분해에 의해 $x$는 어떤 cell $X_w^\circ=BwP/P$에 속하고, $T\subseteq B$이므로 각 cell은 $T$-stable이다. 그런데 cell의 좌표화 $X_w^\circ\cong\mathbb{A}^{\ell(w)}$에서 $T$는 각 좌표를 nontrivial character로 scale한다. Type $A$에서는 이를 [예시 15](#ex15){: data-relation="weak" }의 행렬 좌표에서 직접 볼 수 있는데, $t=\diag(t_1,\ldots,t_n)$는 pivot이 열 $p$인 행의 자유 성분 (열 $b$ 자리)을 $t_bt_p^{-1}$배 한다 (각 행을 $t$로 옮긴 뒤 pivot을 다시 $1$로 normalize하면 된다). 일반형에서는 cell이 root subgroup들의 곱 $\prod_\alpha U_\alpha$로 좌표화되고 $T$-conjugation이 각 $U_\alpha\cong\mathbb{G}_a$ 위에 root $\alpha$로 작용한다 ([Spr] 참조). 어느 쪽이든 모든 character가 nontrivial하므로, 좌표가 모두 $0$인 원점, 곧 $wP$만이 그 cell의 fixed point이다.
 :::
 
-특히 fixed point의 개수는 $\lvert W^P\rvert$로 유한하다. $\Gr(2,4)$에서는 [예시 15](#ex15)의 여섯 coordinate flag가 그 전부이며, complete flag variety $\Fl_n$에서는 좌표 flag $E^w_\bullet$ ($w\in S_n$)들 $n!$개가 전부이다.
+특히 fixed point의 개수는 $\lvert W^P\rvert$로 유한하다. $\Gr(2,4)$에서는 [예시 15](#ex15){: data-relation="weak" }의 여섯 coordinate flag가 그 전부이며, complete flag variety $\Fl_n$에서는 좌표 flag $E^w_\bullet$ ($w\in S_n$)들 $n!$개가 전부이다.
 
 Schubert variety $X_w\subseteq G/P$는 일반적으로 singular하며, 그 singular locus 역시 더 작은 Schubert variety들의 union으로 표현된다. 한편 cohomology class $[X_w]\in H^\ast(G/P)$들은 명제 6 이후 논의한 대로 $H^\ast(G/P)$의 additive basis를 이루며, 이로부터 classical *Schubert calculus*라 불리는 intersection theory가 전개된다. 특히 Grassmannian의 경우 Schubert variety는 Young diagram으로 색인되고, 그들의 intersection number는 Littlewood–Richardson coefficient로 주어진다.
 
