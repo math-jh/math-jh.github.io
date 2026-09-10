@@ -32,17 +32,17 @@ $$0 \rightarrow \Hom_\lMod{A}(N,K) \rightarrow\Hom_\lMod{A}(L,K) \rightarrow\Hom
 is a splitting exact sequence. Conversely, if the above sequence is exact for every $K$, then the original exact sequence is a splitting exact sequence.
 :::
 ::: Proof
-That the given exact sequence $0 \rightarrow M \rightarrow L \rightarrow N \rightarrow 0$ splits is equivalent to the existence of a suitable retraction $r:L \rightarrow M$. ([§Exact Sequences, ⁋Proposition 10](/en/math/multilinear_algebra/exact_sequences#prop10)) Now consider
+That the given exact sequence $0 \rightarrow M \rightarrow L \rightarrow N \rightarrow 0$ splits is equivalent to the existence of a suitable retraction $r:L \rightarrow M$. ([§Exact Sequences, ⁋Proposition 10](/en/math/multilinear_algebra/exact_sequences#prop10){: data-relation="required" }) Now consider
 
 $$\Hom_\lMod{A}(r, \id_K):\Hom_\lMod{A}(M,K) \rightarrow\Hom_\lMod{A}(L,K)$$
 
-From the identity $r\circ u=\id_M$ we know that $\Hom_\lMod{A}(r,\id_K)$ has a section, and applying [§Exact Sequences, ⁋Proposition 10](/en/math/multilinear_algebra/exact_sequences#prop10) again shows that the second sequence splits.
+From the identity $r\circ u=\id_M$ we know that $\Hom_\lMod{A}(r,\id_K)$ has a section, and applying [§Exact Sequences, ⁋Proposition 10](/en/math/multilinear_algebra/exact_sequences#prop10){: data-relation="required" } again shows that the second sequence splits.
 
 For the converse, set $K=M$ and consider the short exact sequence
 
 $$0 \rightarrow \Hom_\lMod{A}(N,M) \rightarrow \Hom_\lMod{A}(L,M) \rightarrow\Hom_\lMod{A}(M,M) \rightarrow 0$$
 
-Then there exists a suitable $f\in\Hom_\lMod{A}(L,M)$ with $f\circ u=\id_M$, so applying [§Exact Sequences, ⁋Proposition 10](/en/math/multilinear_algebra/exact_sequences#prop10) again completes the proof.
+Then there exists a suitable $f\in\Hom_\lMod{A}(L,M)$ with $f\circ u=\id_M$, so applying [§Exact Sequences, ⁋Proposition 10](/en/math/multilinear_algebra/exact_sequences#prop10){: data-relation="required" } again completes the proof.
 :::
 
 Similarly, the following holds.
@@ -116,7 +116,7 @@ is $A$-balanced. Therefore this function satisfies the following $A$-linear map
 
 $$\tau: M^\ast\otimes_A M \rightarrow A$$
 
-Now if $M$ is a finitely generated projective $A$-module, then by [Corollary 4](#cor4) we can identify the left-hand side with $\End_\rMod{A}(M)=\Hom_\rMod{A}(M,M)$, and thus a unique $A$-linear map from $\End_\rMod{A}(M)$ to $A$ is defined.
+Now if $M$ is a finitely generated projective $A$-module, then by [Corollary 4](#cor4){: data-relation="required" } we can identify the left-hand side with $\End_\rMod{A}(M)=\Hom_\rMod{A}(M,M)$, and thus a unique $A$-linear map from $\End_\rMod{A}(M)$ to $A$ is defined.
 
 ::: Definition 6
 The map defined above is called the *trace map* and is denoted by $\tr$.
@@ -126,7 +126,7 @@ Let an arbitrary $u\in\End_\rMod{A}(M)$ be given. After identifying $\End_\rMod{
 
 $$\sum_i \xi_i\otimes_A x_i\tag{1}$$
 
-and the fact that this element corresponds to $u$ by [Corollary 4](#cor4) means that the formula
+and the fact that this element corresponds to $u$ by [Corollary 4](#cor4){: data-relation="required" } means that the formula
 
 $$u(x)=\sum_i\langle x,\xi_i\rangle x_i\qquad\text{for all $x\in M$}\tag{2}$$
 

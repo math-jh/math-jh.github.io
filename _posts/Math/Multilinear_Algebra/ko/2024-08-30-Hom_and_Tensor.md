@@ -32,17 +32,17 @@ $$0 \rightarrow \Hom_\lMod{A}(N,K) \rightarrow\Hom_\lMod{A}(L,K) \rightarrow\Hom
 은 splitting exact sequence이다. 거꾸로 만일 위의 sequence가 임의의 $K$에 대하여 exact sequence라면 원래의 exact sequence는 splitting exact sequence이다.
 :::
 ::: 증명
-주어진 exact sequence $0 \rightarrow M \rightarrow L \rightarrow N \rightarrow 0$이 split하는 것은 적당한 retraction $r:L \rightarrow M$이 존재하는 것과 동치이다. ([§완전열, ⁋명제 10](/ko/math/multilinear_algebra/exact_sequences#prop10)) 이제 
+주어진 exact sequence $0 \rightarrow M \rightarrow L \rightarrow N \rightarrow 0$이 split하는 것은 적당한 retraction $r:L \rightarrow M$이 존재하는 것과 동치이다. ([§완전열, ⁋명제 10](/ko/math/multilinear_algebra/exact_sequences#prop10){: data-relation="required" }) 이제 
 
 $$\Hom_\lMod{A}(r, \id_K):\Hom_\lMod{A}(M,K) \rightarrow\Hom_\lMod{A}(L,K)$$
 
-를 생각하면, 식 $r\circ u=\id_M$으로부터 $\Hom_\lMod{A}(u,\id_K)$가 section을 갖는다는 사실을 알고 다시 [§완전열, ⁋명제 10](/ko/math/multilinear_algebra/exact_sequences#prop10)를 적용하면 두 번째 sequence가 split한다는 것을 보일 수 있다. 
+를 생각하면, 식 $r\circ u=\id_M$으로부터 $\Hom_\lMod{A}(u,\id_K)$가 section을 갖는다는 사실을 알고 다시 [§완전열, ⁋명제 10](/ko/math/multilinear_algebra/exact_sequences#prop10){: data-relation="required" }를 적용하면 두 번째 sequence가 split한다는 것을 보일 수 있다. 
 
 반대 방향은 $K=M$으로 두고 short exact sequence
 
 $$0 \rightarrow \Hom_\lMod{A}(N,M) \rightarrow \Hom_\lMod{A}(L,M) \rightarrow\Hom_\lMod{A}(M,M) \rightarrow 0$$
 
-를 생각하면 적당한 $f\in\Hom_\lMod{A}(L,M)$이 존재하여 $f\circ u=\id_M$이도록 할 수 있으므로 다시 [§완전열, ⁋명제 10](/ko/math/multilinear_algebra/exact_sequences#prop10)를 적용하면 된다.
+를 생각하면 적당한 $f\in\Hom_\lMod{A}(L,M)$이 존재하여 $f\circ u=\id_M$이도록 할 수 있으므로 다시 [§완전열, ⁋명제 10](/ko/math/multilinear_algebra/exact_sequences#prop10){: data-relation="required" }를 적용하면 된다.
 :::
 
 비슷하게, 다음이 성립한다.
@@ -118,7 +118,7 @@ $$M^\ast\times M \rightarrow A;\qquad (\xi,x) \mapsto \langle x, \xi\rangle$$
 
 $$\tau: M^\ast\otimes_A M \rightarrow A$$
 
-을 유도한다. 이제 만일 $M$이 finitely generated projective $A$-module이라면 [따름정리 4](#cor4)에 의하여 좌변을 $\End_\rMod{A}(M)=\Hom_\rMod{A}(M,M)$과 identify할 수 있고, 따라서 이로부터 $\End_\rMod{A}(M)$에서 $A$로 가는 $A$-linear map이 유일하게 결정된다.
+을 유도한다. 이제 만일 $M$이 finitely generated projective $A$-module이라면 [따름정리 4](#cor4){: data-relation="required" }에 의하여 좌변을 $\End_\rMod{A}(M)=\Hom_\rMod{A}(M,M)$과 identify할 수 있고, 따라서 이로부터 $\End_\rMod{A}(M)$에서 $A$로 가는 $A$-linear map이 유일하게 결정된다.
 
 ::: 정의 6
 위와 같이 정의된 map을 *trace map<sub>대각합 사상</sub>*이라 하고, $\tr$로 표기한다.
@@ -128,7 +128,7 @@ $$\tau: M^\ast\otimes_A M \rightarrow A$$
 
 $$\sum_i \xi_i\otimes_A x_i\tag{1}$$
 
-으로 쓸 수 있으며, 이 원소가 [따름정리 4](#cor4)에 의해 $u$에 대응된다는 것은 다음의 식
+으로 쓸 수 있으며, 이 원소가 [따름정리 4](#cor4){: data-relation="required" }에 의해 $u$에 대응된다는 것은 다음의 식
 
 $$u(x)=\sum_i\langle x,\xi_i\rangle x_i\qquad\text{for all $x\in M$}\tag{2}$$
 
