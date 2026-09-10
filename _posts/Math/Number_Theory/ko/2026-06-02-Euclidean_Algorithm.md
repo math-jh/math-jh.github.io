@@ -14,7 +14,7 @@ weight: 2
 published: false
 ---
 
-[§나눗셈과 최대공약수](/ko/math/number_theory/divisibility)에서 최대공약수를 정의하였으나, 약수를 일일이 나열하는 계산법은 큰 수에 대해 비효율적이다. 이 글에서는 나눗셈 정리만으로 최대공약수를 빠르게 계산하는 고전 알고리즘과, 그것이 부수적으로 주는 강력한 표현 정리를 다룬다.
+[§나눗셈과 최대공약수](/ko/math/number_theory/divisibility){: data-relation="required" }에서 최대공약수를 정의하였으나, 약수를 일일이 나열하는 계산법은 큰 수에 대해 비효율적이다. 이 글에서는 나눗셈 정리만으로 최대공약수를 빠르게 계산하는 고전 알고리즘과, 그것이 부수적으로 주는 강력한 표현 정리를 다룬다.
 
 ## 유클리드 호제법
 
@@ -25,7 +25,7 @@ published: false
 :::
 
 ::: 증명
-$a$와 $b$의 공약수와, $b$와 $r$의 공약수가 정확히 일치함을 보이면 충분하다. $d \mid a$이고 $d \mid b$이면, $r = a - bq$이므로 ([§나눗셈과 최대공약수, ⁋명제 2](/ko/math/number_theory/divisibility#prop2)의 선형결합 성질에 의해) $d \mid r$이다. 거꾸로 $d \mid b$이고 $d \mid r$이면 $a = bq + r$이므로 $d \mid a$이다. 따라서 두 쌍의 공약수 집합이 같고, 그 최댓값도 같다.
+$a$와 $b$의 공약수와, $b$와 $r$의 공약수가 정확히 일치함을 보이면 충분하다. $d \mid a$이고 $d \mid b$이면, $r = a - bq$이므로 ([§나눗셈과 최대공약수, ⁋명제 2](/ko/math/number_theory/divisibility#prop2){: data-relation="required" }의 선형결합 성질에 의해) $d \mid r$이다. 거꾸로 $d \mid b$이고 $d \mid r$이면 $a = bq + r$이므로 $d \mid a$이다. 따라서 두 쌍의 공약수 집합이 같고, 그 최댓값도 같다.
 :::
 
 보조정리 1을 반복하면 *유클리드 호제법<sub>Euclidean algorithm</sub>*을 얻는다. $a \geq b > 0$에서 출발하여 나눗셈 정리를 거듭 적용한다.
@@ -66,7 +66,7 @@ $$\gcd(a, b) = ax + by$$
 :::
 
 ::: 증명
-집합 $S = \{ax + by \mid x, y \in \mathbb{Z}\} \cap \mathbb{Z}_{>0}$를 생각하자. $a \neq 0$이면 $\lvert a\rvert = a\cdot(\pm 1) + b\cdot 0 \in S$이고, $a = 0$이면 가정에서 $b \neq 0$이므로 $\lvert b\rvert = a\cdot 0 + b\cdot(\pm 1) \in S$이다. 어느 경우든 $S$는 공집합이 아니고, 정렬성에 의해 최솟값 $d = ax_0 + by_0 > 0$을 갖는다 ([\[집합론\] §정렬집합의 성질들](/ko/math/set_theory/well_ordering)).
+집합 $S = \{ax + by \mid x, y \in \mathbb{Z}\} \cap \mathbb{Z}_{>0}$를 생각하자. $a \neq 0$이면 $\lvert a\rvert = a\cdot(\pm 1) + b\cdot 0 \in S$이고, $a = 0$이면 가정에서 $b \neq 0$이므로 $\lvert b\rvert = a\cdot 0 + b\cdot(\pm 1) \in S$이다. 어느 경우든 $S$는 공집합이 아니고, 정렬성에 의해 최솟값 $d = ax_0 + by_0 > 0$을 갖는다 ([\[집합론\] §정렬집합의 성질들](/ko/math/set_theory/well_ordering){: data-relation="required" }).
 
 $d \mid a$임을 보이자. 나눗셈 정리로 $a = dq + r$ ($0 \leq r < d$) 라 하면
 
