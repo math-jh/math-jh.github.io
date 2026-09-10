@@ -15,7 +15,7 @@ weight: 8
 
 ## Gluing lemma
 
-앞서 살펴본 [§부분공간, ⁋명제 8](/ko/math/topology/subspaces#prop8)은 연속함수 $f:X \rightarrow Y$가 주어졌다 할 때, 이를 [§부분공간, ⁋명제 6](/ko/math/topology/subspaces#prop6)의 두 조건 중 하나를 만족하는 부분집합들의 family로 제한한 것이 연속임을 말해준다. 특히 이 조건은 다음 두 조건
+앞서 살펴본 [§부분공간, ⁋명제 8](/ko/math/topology/subspaces#prop8){: data-relation="required" }은 연속함수 $f:X \rightarrow Y$가 주어졌다 할 때, 이를 [§부분공간, ⁋명제 6](/ko/math/topology/subspaces#prop6){: data-relation="required" }의 두 조건 중 하나를 만족하는 부분집합들의 family로 제한한 것이 연속임을 말해준다. 특히 이 조건은 다음 두 조건
 
 1. $(A_i)$가 $X$의 open covering이거나,
 2. $(A_i)$가 $X$의 locally finite closed covering인 경우
@@ -23,14 +23,14 @@ weight: 8
 두 경우가 해당한다. 거꾸로 이러한 조건을 만족하는 $(A_i)$와 그 위에서 정의된 연속함수들 $f_i$들이 주어졌을 때, 이들이 $X=\bigcup A_i$ 위에서의 연속함수를 지정하는지의 여부를 생각할 수 있다. 
 
 ::: 보조정리 1
-위상공간 $X$와 [§부분공간, ⁋명제 6](/ko/math/topology/subspaces#prop6)의 두 조건 중 하나를 만족하는 부분집합들의 family $(A_i)$가 주어졌다 하자. 만일 연속함수들의 family $(f_i: A_i \rightarrow Y)$가 다음 조건
+위상공간 $X$와 [§부분공간, ⁋명제 6](/ko/math/topology/subspaces#prop6){: data-relation="required" }의 두 조건 중 하나를 만족하는 부분집합들의 family $(A_i)$가 주어졌다 하자. 만일 연속함수들의 family $(f_i: A_i \rightarrow Y)$가 다음 조건
 
 $$f_i\vert_{A_i\cap A_j}=f_j\vert_{A_i\cap A_j}\qquad\text{for all $i,j$}$$
 
 을 만족한다면, 이들을 확장하여 생기는 함수 $f:X \rightarrow Y$는 연속함수이다. 
 :::
 ::: 증명
-우선 함수 $f$는 [\[집합론\] §집합의 합, ⁋명제 2](/ko/math/set_theory/sum_of_sets#prop2)에 의해 얻어진다. 이 함수가 연속이라는 것은 [§부분공간, ⁋명제 8](/ko/math/topology/subspaces#prop8)에서 얻어진다.
+우선 함수 $f$는 [\[집합론\] §집합의 합, ⁋명제 2](/ko/math/set_theory/sum_of_sets#prop2){: data-relation="required" }에 의해 얻어진다. 이 함수가 연속이라는 것은 [§부분공간, ⁋명제 8](/ko/math/topology/subspaces#prop8){: data-relation="required" }에서 얻어진다.
 :::
 
 ## 연속함수들의 준층
@@ -56,7 +56,7 @@ Category $\Open(X)$를 ordered set $(\mathcal{T}, \subseteq)$를 category로 본
 그럼 $\mathcal{F}$는 presheaf가 된다. 
 :::
 
-특별히 이 정의는 projection $p:Y \rightarrow X$가 주어졌을 때, 열린집합 $U$마다 $U$ 위에서 정의된 $p$의 continuous section들의 ([\[집합론\] §Retraction과 section, ⁋정의 2](/ko/math/set_theory/retraction_and_section#def2)) 모임을 대응시키는 presheaf $\mathcal{F}$를 생각하는 식으로 응용할 수 있다. 이를 일반화하여 다음과 같은 정의를 내린다. 
+특별히 이 정의는 projection $p:Y \rightarrow X$가 주어졌을 때, 열린집합 $U$마다 $U$ 위에서 정의된 $p$의 continuous section들의 ([\[집합론\] §Retraction과 section, ⁋정의 2](/ko/math/set_theory/retraction_and_section#def2){: data-relation="required" }) 모임을 대응시키는 presheaf $\mathcal{F}$를 생각하는 식으로 응용할 수 있다. 이를 일반화하여 다음과 같은 정의를 내린다. 
 
 ::: 정의 4
 위상공간 $X$ 위에서 정의된 presheaf $\mathcal{F}$가 주어졌다 하자. 
@@ -66,7 +66,7 @@ Category $\Open(X)$를 ordered set $(\mathcal{T}, \subseteq)$를 category로 본
 - 특별히 열린집합들 $U\subseteq V$와 $s\in \mathcal{F}(V)$에 대하여, $\rho_{VU}(s)\in \mathcal{F}(U)$를 간단히 $s\vert_U$로 표기한다.
 :::
 
-한편 위의 [정의 2](#def2)에서, $\Set$은 적절한 category, 예를 들어 $\Ab$와 같은 category로 바꿀 수도 있다. 가령 [예시 3](#ex3)에서 $Y=\mathbb{R}$이었다면, $\mathbb{R}$ 위에 정의된 덧셈을 사용하여 연속함수들의 덧셈을 정의할 수도 있었을 것이며, 그럼 $\mathcal{F}(U)$는 abelian group의 구조를 가지게 되었을 것이다. 이러한 경우 $\mathcal{F}$를 $X$ 위에 정의된 abelian group들의 presheaf라 부른다. 편의상 앞으로 presheaf $\mathcal{F}: \Open(X)^\op \rightarrow \mathcal{A}$를 $\mathcal{A}$-valued presheaf라 부르기로 한다. Presheaf 중 위의 [보조정리 1](#lem1)의 gluing condition을 만족하는 것들을 sheaf라 부르는데, 이는 다음 글에서 정의한다. 
+한편 위의 [정의 2](#def2){: data-relation="required" }에서, $\Set$은 적절한 category, 예를 들어 $\Ab$와 같은 category로 바꿀 수도 있다. 가령 [예시 3](#ex3){: data-relation="weak" }에서 $Y=\mathbb{R}$이었다면, $\mathbb{R}$ 위에 정의된 덧셈을 사용하여 연속함수들의 덧셈을 정의할 수도 있었을 것이며, 그럼 $\mathcal{F}(U)$는 abelian group의 구조를 가지게 되었을 것이다. 이러한 경우 $\mathcal{F}$를 $X$ 위에 정의된 abelian group들의 presheaf라 부른다. 편의상 앞으로 presheaf $\mathcal{F}: \Open(X)^\op \rightarrow \mathcal{A}$를 $\mathcal{A}$-valued presheaf라 부르기로 한다. Presheaf 중 위의 [보조정리 1](#lem1){: data-relation="weak" }의 gluing condition을 만족하는 것들을 sheaf라 부르는데, 이는 다음 글에서 정의한다. 
 
 ## 준층의 예시들
 
@@ -91,7 +91,7 @@ $X$ 위에 정의된 presheaf $\mathcal{F}$가 주어졌을 때, 임의의 열�
 
 $$\mathcal{F}\vert_U(V)=\mathcal{F}(V)\quad\text{for all open $V\subseteq U$}$$
 
-으로 정의할 수 있다. 그럼 $\mathcal{F}\vert_U$는 presheaf가 된다. ([§부분공간, ⁋보조정리 2](/ko/math/topology/subspaces#lem2)) 
+으로 정의할 수 있다. 그럼 $\mathcal{F}\vert_U$는 presheaf가 된다. ([§부분공간, ⁋보조정리 2](/ko/math/topology/subspaces#lem2){: data-relation="required" }) 
 :::
 
 ::: 예시 8 (Pushforward)
@@ -132,7 +132,7 @@ $$\Spe(\mathcal{F})=\coprod_{x\in X} \mathcal{F}_x=\{(x,\xi)\mid x\in X, \xi\in 
  
 $$\tilde{s}:U \rightarrow \Spe(\mathcal{F}); \quad x\mapsto (x,s_x)$$
 
-이 존재한다. 이제 우리는 $\Spe(\mathcal{F})$에 이들 함수들의 family가 정의하는 final topology를 부여하고 ([§Initial topology와 final topology, ⁋정의 4](/ko/math/topology/initial_and_final_topology#def4)) 이 공간을 $\mathcal{F}$의 *étalé space*라 부른다.
+이 존재한다. 이제 우리는 $\Spe(\mathcal{F})$에 이들 함수들의 family가 정의하는 final topology를 부여하고 ([§Initial topology와 final topology, ⁋정의 4](/ko/math/topology/initial_and_final_topology#def4){: data-relation="required" }) 이 공간을 $\mathcal{F}$의 *étalé space*라 부른다.
 
 ## 준층들 사이의 사상
 
@@ -140,9 +140,9 @@ $$\tilde{s}:U \rightarrow \Spe(\mathcal{F}); \quad x\mapsto (x,s_x)$$
 고정된 위상공간 $X$ 위에서 정의된 두 presheaf $\mathcal{F}, \mathcal{G}:\Open(X) \rightarrow \mathcal{A}$ 사이의 natural transformation을 *presheaf morphism<sub>준층 사상</sub>*으로 정의한다.
 :::
 
-즉 $X$ 위에서 정의된 $\mathcal{A}$-valued presheaf들의 category는 functor category $[\Open(X)^\op, \mathcal{A}]$이다. 이를 $\PSh(X; \mathcal{A})$로 표기하며, 문맥상 혼동의 여지가 없을 때에는 $\PSh(X)$로만 적기도 한다. 여담으로 [예시 8](#ex8)의 $f_\ast$는 functor $\PSh(X; \mathcal{A})\rightarrow \PSh(Y; \mathcal{A})$이다. 
+즉 $X$ 위에서 정의된 $\mathcal{A}$-valued presheaf들의 category는 functor category $[\Open(X)^\op, \mathcal{A}]$이다. 이를 $\PSh(X; \mathcal{A})$로 표기하며, 문맥상 혼동의 여지가 없을 때에는 $\PSh(X)$로만 적기도 한다. 여담으로 [예시 8](#ex8){: data-relation="weak" }의 $f_\ast$는 functor $\PSh(X; \mathcal{A})\rightarrow \PSh(Y; \mathcal{A})$이다. 
 
-우리에게 직관을 주는 [예시 3](#ex3)를 생각해보면, 열린집합 $U$에 대하여 정의된 $\phi(U):\mathcal{F}(U) \rightarrow \mathcal{G}(U)$는 $\phi:\mathcal{F}\rightarrow \mathcal{G}$를 열린집합 $U$로 제한하여 얻어지는 함수라 생각할 수 있으므로, 이를 종종 $\phi(U)$ 대신 $\phi\vert_U$로 적는다. 
+우리에게 직관을 주는 [예시 3](#ex3){: data-relation="weak" }를 생각해보면, 열린집합 $U$에 대하여 정의된 $\phi(U):\mathcal{F}(U) \rightarrow \mathcal{G}(U)$는 $\phi:\mathcal{F}\rightarrow \mathcal{G}$를 열린집합 $U$로 제한하여 얻어지는 함수라 생각할 수 있으므로, 이를 종종 $\phi(U)$ 대신 $\phi\vert_U$로 적는다. 
 
 한편 colimit cone의 universal property에 의해 다음 명제가 성립한다. 
 
@@ -150,7 +150,7 @@ $$\tilde{s}:U \rightarrow \Spe(\mathcal{F}); \quad x\mapsto (x,s_x)$$
 위상공간 $X$ 위에 정의된 presheaf들 사이의 morphism $\phi:\mathcal{F}\rightarrow\mathcal{G}$가 주어졌다 하자. 그럼 임의의 $x\in X$에 대하여, stalk들 사이의 morphism $\phi_x:\mathcal{F}_x\rightarrow\mathcal{G}_x$가 자연스럽게 유도된다.
 :::
 
-다음 예시들은 위의 [준층의 예시들](#준층의-예시들) 아래에 있었어야 했지만, 아직 presheaf morphism을 정의하지 않았었기 때문에 뒤로 밀렸다. 
+다음 예시들은 위의 [준층의 예시들](#준층의-예시들){: data-relation="weak" } 아래에 있었어야 했지만, 아직 presheaf morphism을 정의하지 않았었기 때문에 뒤로 밀렸다. 
 
 ::: 예시 12 (Sheaf Hom)
 두 presheaf $\mathcal{F}, \mathcal{G}$를 고정하고, 임의의 $U$에 대하여 

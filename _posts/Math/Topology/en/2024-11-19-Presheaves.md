@@ -16,7 +16,7 @@ last_polished_at: 2026-06-03T06:30:02+00:00
 ---
 ## Gluing lemma
 
-As we saw in [§Subspaces, ⁋Proposition 8](/en/math/topology/subspaces#prop8), given a continuous function $f:X \rightarrow Y$, restricting it to a family of subsets satisfying one of the two conditions in [§Subspaces, ⁋Proposition 6](/en/math/topology/subspaces#prop6) yields a continuous map. Specifically, these conditions correspond to the following two cases:
+As we saw in [§Subspaces, ⁋Proposition 8](/en/math/topology/subspaces#prop8){: data-relation="required" }, given a continuous function $f:X \rightarrow Y$, restricting it to a family of subsets satisfying one of the two conditions in [§Subspaces, ⁋Proposition 6](/en/math/topology/subspaces#prop6){: data-relation="required" } yields a continuous map. Specifically, these conditions correspond to the following two cases:
 
 1. $(A_i)$ is an open covering of $X$, or
 2. $(A_i)$ is a locally finite closed covering of $X$.
@@ -24,14 +24,14 @@ As we saw in [§Subspaces, ⁋Proposition 8](/en/math/topology/subspaces#prop8),
 Conversely, given such a family $(A_i)$ and continuous functions $f_i$ defined on them, we may ask whether they determine a continuous function on $X=\bigcup A_i$.
 
 ::: Lemma 1
-Let $X$ be a set and $(A_i)$ a family of subsets satisfying one of the two conditions in [§Subspaces, ⁋Proposition 6](/en/math/topology/subspaces#prop6). If a family of continuous functions $(f_i: A_i \rightarrow Y)$ satisfies
+Let $X$ be a set and $(A_i)$ a family of subsets satisfying one of the two conditions in [§Subspaces, ⁋Proposition 6](/en/math/topology/subspaces#prop6){: data-relation="required" }. If a family of continuous functions $(f_i: A_i \rightarrow Y)$ satisfies
 
 $$f_i\vert_{A_i\cap A_j}=f_j\vert_{A_i\cap A_j}\qquad\text{for all $i,j$}$$
 
 then the function $f:X \rightarrow Y$ obtained by gluing them together is continuous.
 :::
 ::: Proof
-First, the function $f$ is obtained from [\[Set Theory\] §Sum of Sets, ⁋Proposition 2](/en/math/set_theory/sum_of_sets#prop2). Its continuity follows from [§Subspaces, ⁋Proposition 8](/en/math/topology/subspaces#prop8).
+First, the function $f$ is obtained from [\[Set Theory\] §Sum of Sets, ⁋Proposition 2](/en/math/set_theory/sum_of_sets#prop2){: data-relation="required" }. Its continuity follows from [§Subspaces, ⁋Proposition 8](/en/math/topology/subspaces#prop8){: data-relation="required" }.
 :::
 
 ## Presheaves of continuous functions
@@ -57,7 +57,7 @@ Let $X, Y$ be two topological spaces, and define $\mathcal{F}$ as follows.
 Then $\mathcal{F}$ is a presheaf.
 :::
 
-In particular, this definition can be applied when a projection $p:Y \rightarrow X$ is given, by considering the presheaf $\mathcal{F}$ of continuous sections from $X$ to $Y$ ([\[Set Theory\] §Retraction and Section, ⁋Definition 2](/en/math/set_theory/retraction_and_section#def2)). Generalizing this, we make the following definition.
+In particular, this definition can be applied when a projection $p:Y \rightarrow X$ is given, by considering the presheaf $\mathcal{F}$ of continuous sections from $X$ to $Y$ ([\[Set Theory\] §Retraction and Section, ⁋Definition 2](/en/math/set_theory/retraction_and_section#def2){: data-relation="required" }). Generalizing this, we make the following definition.
 
 ::: Definition 4
 Let $\mathcal{F}$ be a presheaf defined on a topological space $X$.
@@ -67,7 +67,7 @@ Let $\mathcal{F}$ be a presheaf defined on a topological space $X$.
 - In particular, for open sets $U\subseteq V$ and $s\in \mathcal{F}(V)$, we write $\rho_{VU}(s)\in \mathcal{F}(U)$ simply as $s\vert_U$.
 :::
 
-Meanwhile, in [Definition 2](#def2) above, $\Set$ can be replaced by an appropriate category, such as $\Ab$. For instance, in [Example 3](#ex3), if $Y=\mathbb{R}$, we could use addition on $\mathbb{R}$ to define addition of continuous functions, and then $\mathcal{F}(U)$ would carry the structure of an abelian group. In such a case, $\mathcal{F}$ is called a presheaf of abelian groups on $X$. For convenience, we shall call a presheaf $\mathcal{F}: \Open(X)^\op \rightarrow \mathcal{A}$ an $\mathcal{A}$-valued presheaf. Among presheaves, those satisfying the gluing condition ([Lemma 1](#lem1)) are called sheaves; we define these in the next post.
+Meanwhile, in [Definition 2](#def2){: data-relation="required" } above, $\Set$ can be replaced by an appropriate category, such as $\Ab$. For instance, in [Example 3](#ex3){: data-relation="weak" }, if $Y=\mathbb{R}$, we could use addition on $\mathbb{R}$ to define addition of continuous functions, and then $\mathcal{F}(U)$ would carry the structure of an abelian group. In such a case, $\mathcal{F}$ is called a presheaf of abelian groups on $X$. For convenience, we shall call a presheaf $\mathcal{F}: \Open(X)^\op \rightarrow \mathcal{A}$ an $\mathcal{A}$-valued presheaf. Among presheaves, those satisfying the gluing condition ([Lemma 1](#lem1){: data-relation="required" }) are called sheaves; we define these in the next post.
 
 ## Examples of presheaves
 
@@ -92,7 +92,7 @@ Given a presheaf $\mathcal{F}$ on $X$, for any open set $U$ we can define $\math
 
 $$\mathcal{F}\vert_U(V)=\mathcal{F}(V)\quad\text{for all open $V\subseteq U$}$$
 
-Then $\mathcal{F}\vert_U$ is a presheaf. ([§Subspaces, ⁋Lemma 2](/en/math/topology/subspaces#lem2))
+Then $\mathcal{F}\vert_U$ is a presheaf. ([§Subspaces, ⁋Lemma 2](/en/math/topology/subspaces#lem2){: data-relation="required" })
 :::
 
 ::: Example 8 (Pushforward)
@@ -131,7 +131,7 @@ Then for any open set $U\subseteq X$ and any $s\in \mathcal{F}(U)$, the function
 
 $$\tilde{s}:U \rightarrow \Spe(\mathcal{F}); \quad x\mapsto (x,s_x)$$
 
-exist. We endow $\Spe(\mathcal{F})$ with the final topology defined by this family of functions ([§Initial and Final Topology, ⁋Definition 4](/en/math/topology/initial_and_final_topology#def4)), and call this space the *étalé space* of $\mathcal{F}$.
+exist. We endow $\Spe(\mathcal{F})$ with the final topology defined by this family of functions ([§Initial and Final Topology, ⁋Definition 4](/en/math/topology/initial_and_final_topology#def4){: data-relation="required" }), and call this space the *étalé space* of $\mathcal{F}$.
 
 ## Morphisms of presheaves
 
@@ -139,9 +139,9 @@ exist. We endow $\Spe(\mathcal{F})$ with the final topology defined by this fami
 Let $\mathcal{F}, \mathcal{G}:\Open(X) \rightarrow \mathcal{A}$ be two presheaves on a fixed topological space $X$. A natural transformation between them is called a *presheaf morphism*.
 :::
 
-Thus the category of $\mathcal{A}$-valued presheaves on $X$ is the functor category $[\Open(X)^\op, \mathcal{A}]$. We denote this by $\PSh(X; \mathcal{A})$, and when there is no risk of confusion from context, we simply write $\PSh(X)$. As a side note, the $f_\ast$ from [Example 8](#ex8) is a functor $\PSh(X; \mathcal{A})\rightarrow \PSh(Y; \mathcal{A})$.
+Thus the category of $\mathcal{A}$-valued presheaves on $X$ is the functor category $[\Open(X)^\op, \mathcal{A}]$. We denote this by $\PSh(X; \mathcal{A})$, and when there is no risk of confusion from context, we simply write $\PSh(X)$. As a side note, the $f_\ast$ from [Example 8](#ex8){: data-relation="weak" } is a functor $\PSh(X; \mathcal{A})\rightarrow \PSh(Y; \mathcal{A})$.
 
-Thinking of the intuitive [Example 3](#ex3), for an open set $U$ the map $\phi(U):\mathcal{F}(U) \rightarrow \mathcal{G}(U)$ can be thought of as the function obtained by restricting $\phi:\mathcal{F}\rightarrow \mathcal{G}$ to $U$, so we sometimes write $\phi\vert_U$ instead of $\phi(U)$.
+Thinking of the intuitive [Example 3](#ex3){: data-relation="weak" }, for an open set $U$ the map $\phi(U):\mathcal{F}(U) \rightarrow \mathcal{G}(U)$ can be thought of as the function obtained by restricting $\phi:\mathcal{F}\rightarrow \mathcal{G}$ to $U$, so we sometimes write $\phi\vert_U$ instead of $\phi(U)$.
 
 Meanwhile, by the universal property of the limit cone, the following proposition holds.
 
@@ -149,7 +149,7 @@ Meanwhile, by the universal property of the limit cone, the following propositio
 Let $\phi:\mathcal{F}\rightarrow\mathcal{G}$ be a morphism of presheaves on a topological space $X$. Then for any $x\in X$, a morphism $\phi_x:\mathcal{F}_x\rightarrow\mathcal{G}_x$ between stalks is naturally induced.
 :::
 
-The following examples should have appeared under [Examples of presheaves](#examples-of-presheaves) above, but were postponed because we had not yet defined presheaf morphisms.
+The following examples should have appeared under [Examples of presheaves](#examples-of-presheaves){: data-relation="weak" } above, but were postponed because we had not yet defined presheaf morphisms.
 
 ::: Example 12 (Sheaf Hom)
 Fix two presheaves $\mathcal{F}, \mathcal{G}$ and define, for any $U$,
