@@ -21,7 +21,7 @@ $$\mathbb{P}^n = (\mathbb{C}^{n+1} \setminus \{0\}) / \mathbb{C}^\ast$$
 
 로 나타낼 수 있다. 이 구성은 projective space 위의 대수적 구조를 다루는 데 매우 유용하며, 가령 closed subvariety는 homogeneous ideal에 의해 정의되고 coherent sheaf는 graded module에 대응한다. Cox는 이러한 구성을 임의의 toric variety로 일반화하였다. 본 글에서는 fan $\Sigma$로부터 toric variety $X_\Sigma$를 homogeneous coordinate ring과 *GIT quotient*로 재구성하는 Cox의 방법을 설명한다. 이 구성은 toric variety 위의 line bundle이나 coherent sheaf를 다루는 데 필수적인 도구이며, 마지막에 짧게 짚을 secondary fan을 통한 birational geometry의 이해에도 직결된다. 
 
-Algebraic group의 action과 orbit, orbit closure에 관한 기본 사항은 [\[대수다양체\] §대수적 군](/ko/math/algebraic_varieties/algebraic_groups)에 있다. GIT 고유의 개념인 reductive group, invariant ring, affine GIT quotient $X/\!/G = \Spec A^G$, linearization, (semi)stable 점, projective GIT quotient는 이 글에서 쓰이는 자리마다 그 자리에서 규정하며, 첫 절에서는 Cox 구성에 본질적으로 필요한 *categorical quotient vs geometric quotient*의 구분을 정리한 뒤 본 주제로 들어간다. 이하에서 $N \cong \mathbb{Z}^n$은 rank $n$의 free abelian group, $M = \Hom_\mathbb{Z}(N, \mathbb{Z})$는 그 dual lattice, $\Sigma$는 $N_\mathbb{R}$ 위의 rational polyhedral fan으로 $N_\mathbb{R}$를 span한다고 가정한다. 각 $\rho \in \Sigma(1)$에 대해 $u_\rho \in N$은 $\rho$의 primitive generator이다.
+Algebraic group의 action과 orbit, orbit closure에 관한 기본 사항은 [\[대수다양체\] §대수적 군](/ko/math/algebraic_varieties/algebraic_groups){: data-relation="weak" }에 있다. GIT 고유의 개념인 reductive group, invariant ring, affine GIT quotient $X/\!/G = \Spec A^G$, linearization, (semi)stable 점, projective GIT quotient는 이 글에서 쓰이는 자리마다 그 자리에서 규정하며, 첫 절에서는 Cox 구성에 본질적으로 필요한 *categorical quotient vs geometric quotient*의 구분을 정리한 뒤 본 주제로 들어간다. 이하에서 $N \cong \mathbb{Z}^n$은 rank $n$의 free abelian group, $M = \Hom_\mathbb{Z}(N, \mathbb{Z})$는 그 dual lattice, $\Sigma$는 $N_\mathbb{R}$ 위의 rational polyhedral fan으로 $N_\mathbb{R}$를 span한다고 가정한다. 각 $\rho \in \Sigma(1)$에 대해 $u_\rho \in N$은 $\rho$의 primitive generator이다.
 
 ## Categorical quotient와 geometric quotient
 
@@ -34,7 +34,7 @@ Algebraic group $G$가 작용하는 variety $X$에 대해, morphism $\varphi: X 
 2. $G$-invariant morphism $f: X \rightarrow Z$가 주어질 때마다 유일한 morphism $\tilde{f}: Y \rightarrow Z$가 존재하여 $f = \tilde{f} \circ \varphi$.
 :::
 
-이는 universal property이므로 $Y$가 존재한다면 유일성은 자동이다. 다만 정의는 $Y$가 한 점으로 붕괴할 가능성을 배제하지 않으며, 위에서 본 $\mathbb{C}^\ast$의 scaling 예시에서는 실제로 categorical quotient가 한 점에 불과하다 ([예시 5](#ex5)). 즉 categorical quotient는 *너무 적은 정보*를 담을 수 있다.
+이는 universal property이므로 $Y$가 존재한다면 유일성은 자동이다. 다만 정의는 $Y$가 한 점으로 붕괴할 가능성을 배제하지 않으며, 위에서 본 $\mathbb{C}^\ast$의 scaling 예시에서는 실제로 categorical quotient가 한 점에 불과하다 ([예시 5](#ex5){: data-relation="required" }). 즉 categorical quotient는 *너무 적은 정보*를 담을 수 있다.
 
 ::: 정의 2
 Categorical quotient $\varphi: X \rightarrow Y$가 *geometric quotient<sub>기하학적 몫</sub>*라 함은 추가로 다음 조건이 성립함을 의미한다:
@@ -44,7 +44,7 @@ Categorical quotient $\varphi: X \rightarrow Y$가 *geometric quotient<sub>기�
 3. Structure sheaf의 차원에서 $\mathcal{O}_Y = (\varphi_\ast \mathcal{O}_X)^G$.
 :::
 
-Geometric quotient는 통상 $Y = X/G$로 표기하며, $Y$의 점은 정확히 $X$의 $G$-orbit과 일대일 대응한다. Categorical quotient는 closure가 서로 만나는 orbit들을 한 점으로 묶지만 ([명제 3](#prop3)), geometric quotient는 모든 orbit을 분리한다. 직관적으로 두 개념 사이의 간극은 $X$ 안에 *다른 orbit의 closure에 포함되는 orbit*이 있을 때 발생한다.
+Geometric quotient는 통상 $Y = X/G$로 표기하며, $Y$의 점은 정확히 $X$의 $G$-orbit과 일대일 대응한다. Categorical quotient는 closure가 서로 만나는 orbit들을 한 점으로 묶지만 ([명제 3](#prop3){: data-relation="required" }), geometric quotient는 모든 orbit을 분리한다. 직관적으로 두 개념 사이의 간극은 $X$ 안에 *다른 orbit의 closure에 포함되는 orbit*이 있을 때 발생한다.
 
 ::: 명제 3
 Reductive group $G$가 affine variety $X = \Spec A$ 위에 작용한다고 하자. 그러면 invariant subring
@@ -85,15 +85,15 @@ $G = \mathbb{C}^\ast$가 $X = \mathbb{C}^2$ 위에 scaling
 
 $$t \cdot (z_1, z_2) = (tz_1, tz_2)$$
 
-으로 작용한다고 하자. 우선 trivial linearization, 즉 character $\chi = 1$의 경우 affine GIT을 본다. Coordinate ring $A = \mathbb{C}[\z_1, \z_2]$ 위의 $G$-action은 (이 글에서는 자매 글인 [§아핀 토릭 다양체](/ko/math/toric_geometry/affine_toric_varieties)의 *inverse 없는* convention $t \cdot f = f \circ t$와는 반대로, 표준 GIT 컨벤션을 따라 $(t \cdot f)(x) = f(t^{-1} x)$를 채택한다) $\z_i$를 $t^{-1}\z_i$로 보내며, 임의의 monomial $\z_1^a \z_2^b$는 $t^{-(a+b)}$ 배가 된다. 따라서
+으로 작용한다고 하자. 우선 trivial linearization, 즉 character $\chi = 1$의 경우 affine GIT을 본다. Coordinate ring $A = \mathbb{C}[\z_1, \z_2]$ 위의 $G$-action은 (이 글에서는 자매 글인 [§아핀 토릭 다양체](/ko/math/toric_geometry/affine_toric_varieties){: data-relation="weak" }의 *inverse 없는* convention $t \cdot f = f \circ t$와는 반대로, 표준 GIT 컨벤션을 따라 $(t \cdot f)(x) = f(t^{-1} x)$를 채택한다) $\z_i$를 $t^{-1}\z_i$로 보내며, 임의의 monomial $\z_1^a \z_2^b$는 $t^{-(a+b)}$ 배가 된다. 따라서
 
 $$A^G = \mathbb{C}$$
 
-이고, [명제 3](#prop3)에 의해
+이고, [명제 3](#prop3){: data-relation="required" }에 의해
 
 $$\mathbb{C}^2 /\!/ \mathbb{C}^\ast = \Spec \mathbb{C} = \{\mathrm{pt}\}$$
 
-으로 한 점으로 붕괴한다. 모든 비원점 orbit의 closure가 원점을 포함하여 [명제 3](#prop3)에 의해 모든 점이 같은 equivalence class에 속한 결과이다.
+으로 한 점으로 붕괴한다. 모든 비원점 orbit의 closure가 원점을 포함하여 [명제 3](#prop3){: data-relation="required" }에 의해 모든 점이 같은 equivalence class에 속한 결과이다.
 
 이제 비자명 character $\chi(t) = t$를 써서 자명 line bundle $L = X \times \mathbb{C}$ 위에 $t \cdot (x, v) = (t \cdot x, \chi(t)v)$로 $G$-action을 얹자. 이렇게 $X$ 위의 action을 line bundle 위의 action으로 들어올리는 것을 *linearization*이라 부른다. 그럼 invariant section은
 
@@ -142,11 +142,11 @@ $$S = \mathbb{C}[\x_\rho \mid \rho \in \Sigma(1)].$$
 
 Cox ring $S$는 polynomial ring이므로 특히 UFD이다. 이로써 toric variety의 coordinate ring은 일반 variety보다 훨씬 단순한 형태로 인코딩된다 — 실제로 toric variety가 아닌 일반 variety에 대해서도 Cox ring을 정의할 수 있으나, polynomial ring이 되는 것은 toric의 경우뿐이다.
 
-이제 $S$ 위의 grading을 도입한다. [§토러스 인자와 선다발, ⁋정의 1](/ko/math/toric_geometry/toric_divisors#def1)에서 살펴본 torus-invariant prime divisor $D_\rho$에 대해, [§토러스 인자와 선다발, ⁋명제 4](/ko/math/toric_geometry/toric_divisors#prop4)에서 우리는 Weil divisor class group $\Cl(X_\Sigma)$가 exact sequence
+이제 $S$ 위의 grading을 도입한다. [§토러스 인자와 선다발, ⁋정의 1](/ko/math/toric_geometry/toric_divisors#def1){: data-relation="required" }에서 살펴본 torus-invariant prime divisor $D_\rho$에 대해, [§토러스 인자와 선다발, ⁋명제 4](/ko/math/toric_geometry/toric_divisors#prop4){: data-relation="required" }에서 우리는 Weil divisor class group $\Cl(X_\Sigma)$가 exact sequence
 
 $$0 \longrightarrow M \longrightarrow \bigoplus_{\rho \in \Sigma(1)} \mathbb{Z} \cdot D_\rho \longrightarrow \Cl(X_\Sigma) \longrightarrow 0$$
 
-로부터 얻어짐을 확인하였다 (첫 번째 arrow는 [§토러스 인자와 선다발, ⁋명제 3](/ko/math/toric_geometry/toric_divisors#prop3)에 의해 $m \mapsto \sum_\rho \langle m, u_\rho \rangle D_\rho$). 이 exact sequence에 $\Hom_\mathbb{Z}(-, \mathbb{C}^\ast)$를 적용하면
+로부터 얻어짐을 확인하였다 (첫 번째 arrow는 [§토러스 인자와 선다발, ⁋명제 3](/ko/math/toric_geometry/toric_divisors#prop3){: data-relation="required" }에 의해 $m \mapsto \sum_\rho \langle m, u_\rho \rangle D_\rho$). 이 exact sequence에 $\Hom_\mathbb{Z}(-, \mathbb{C}^\ast)$를 적용하면
 
 $$1 \longrightarrow G \longrightarrow (\mathbb{C}^\ast)^{\Sigma(1)} \longrightarrow T_N \longrightarrow 1$$
 
@@ -191,7 +191,7 @@ $$(S_{\hat{\x}_\sigma})^{(0)} \cong \mathbb{C}[\sigma^\vee \cap M].$$
 
 이로부터 $U_\sigma$가 $\mathbb{C}^{\Sigma(1)} \setminus Z(\Sigma)$의 $G$-invariant open subset에 대한 quotient로 얻어진다. 이러한 affine chart들이 fan의 조합론에 따라 적절히 glueing되어 전체 $X_\Sigma$가 categorical quotient로서 얻어진다.
 
-Simplicial인 경우, 각 cone이 simplicial이므로 local chart $U_\sigma$에 대한 action의 stabilizer가 유한군이 되어 ([명제 3](#prop3)의 orbit closure 기준이 단순화됨) geometric quotient가 된다. 역으로 geometric quotient이려면 stabilizer가 유한해야 하고, 이는 각 cone이 simplicial임을 의미한다.
+Simplicial인 경우, 각 cone이 simplicial이므로 local chart $U_\sigma$에 대한 action의 stabilizer가 유한군이 되어 ([명제 3](#prop3){: data-relation="required" }의 orbit closure 기준이 단순화됨) geometric quotient가 된다. 역으로 geometric quotient이려면 stabilizer가 유한해야 하고, 이는 각 cone이 simplicial임을 의미한다.
 :::
 
 명제 9의 geometric quotient 버전은 매우 중요하다. Simplicial toric variety의 경우 점들이 실제로 $G$의 orbit으로 대응되므로 homogeneous coordinate의 직관적 이해가 가능하다. Non-simplicial 경우에는 categorical quotient에 그치므로 점들이 $G$-orbit과 일대일 대응하지는 않지만, 여전히 좋은 geometric interpretation을 제공한다.
@@ -211,11 +211,11 @@ $$0 \longrightarrow \mathbb{Z}^n \longrightarrow \mathbb{Z}^{n+1} \longrightarro
 
 $$t \cdot (\x_0, \ldots, \x_n) = (t\x_0, \ldots, t\x_n)$$
 
-이다. 그러므로 [명제 9](#prop9)는 익숙한
+이다. 그러므로 [명제 9](#prop9){: data-relation="forward" }는 익숙한
 
 $$\mathbb{P}^n = (\mathbb{C}^{n+1} \setminus \{0\}) / \mathbb{C}^\ast$$
 
-를 재현한다. 이는 [예시 6](#ex6)에서 본 GIT 시점과 정확히 일치한다.
+를 재현한다. 이는 [예시 6](#ex6){: data-relation="weak" }에서 본 GIT 시점과 정확히 일치한다.
 :::
 
 ::: 예시 11 (projective line의 곱)
@@ -251,7 +251,7 @@ $$S_\beta \cong H^0(X_\Sigma, \mathcal{O}_{X_\Sigma}(D)).$$
 :::
 
 ::: 증명
-Cox ring $S$의 $\beta$차 성분은 monomial $\prod_\rho \x_\rho^{a_\rho}$들로 생성되며, 여기서 $\sum_\rho a_\rho D_\rho$가 class $\beta$를 갖는다. 한편 [§토러스 인자와 선다발, ⁋명제 7](/ko/math/toric_geometry/toric_divisors#prop7)에 의해 $H^0(X_\Sigma, \mathcal{O}_{X_\Sigma}(D))$는 $\langle m, u_\rho \rangle \ge -a_\rho$를 만족하는 lattice point $m \in M$에 대응하는 character $\chi^m$들로 이루어진다. 이 조건은 $\beta$차 monomial의 정의와 정확히 일치하며, 각 lattice point $m$에 대응하는 monomial $\prod_\rho \x_\rho^{\langle m, u_\rho \rangle + a_\rho}$의 degree가 $\sum_\rho (\langle m, u_\rho \rangle + a_\rho) D_\rho = \sum_\rho a_\rho D_\rho + \divisor(\chi^m) = \beta$가 되므로 ($\divisor(\chi^m)$은 principal divisor이므로 class group에서 사라짐) 자연스러운 isomorphism이 얻어진다.
+Cox ring $S$의 $\beta$차 성분은 monomial $\prod_\rho \x_\rho^{a_\rho}$들로 생성되며, 여기서 $\sum_\rho a_\rho D_\rho$가 class $\beta$를 갖는다. 한편 [§토러스 인자와 선다발, ⁋명제 7](/ko/math/toric_geometry/toric_divisors#prop7){: data-relation="required" }에 의해 $H^0(X_\Sigma, \mathcal{O}_{X_\Sigma}(D))$는 $\langle m, u_\rho \rangle \ge -a_\rho$를 만족하는 lattice point $m \in M$에 대응하는 character $\chi^m$들로 이루어진다. 이 조건은 $\beta$차 monomial의 정의와 정확히 일치하며, 각 lattice point $m$에 대응하는 monomial $\prod_\rho \x_\rho^{\langle m, u_\rho \rangle + a_\rho}$의 degree가 $\sum_\rho (\langle m, u_\rho \rangle + a_\rho) D_\rho = \sum_\rho a_\rho D_\rho + \divisor(\chi^m) = \beta$가 되므로 ($\divisor(\chi^m)$은 principal divisor이므로 class group에서 사라짐) 자연스러운 isomorphism이 얻어진다.
 :::
 
 명제 12는 Cox ring이 toric variety의 모든 line bundle의 global section을 동시에 인코딩한다는 것을 의미한다. 이는 projective space에서 $\mathbb{C}[\x_0, \ldots, \x_n]$이 모든 $\mathcal{O}_{\mathbb{P}^n}(d)$의 global section을 담고 있는 것과 정확히 일치한다. 이 관점에서 Cox ring은 toric variety의 divisor class group으로 graded된 "universal" coordinate ring이다.
@@ -260,7 +260,7 @@ Cox ring $S$의 $\beta$차 성분은 monomial $\prod_\rho \x_\rho^{a_\rho}$들�
 
 ## Secondary fan과 birational geometry
 
-Cox 구성은 toric variety의 birational geometry를 이해하는 데도 강력한 도구이다. [§토릭 다양체의 정의, ⁋명제 8](/ko/math/toric_geometry/toric_varieties#prop8)에서 보았듯이 lattice polytope으로부터 projective toric variety가 구성되며, Cox 구성의 관점에서 이러한 polytope의 변화는 GIT quotient에서 linearization의 변화에 정확히 대응한다.
+Cox 구성은 toric variety의 birational geometry를 이해하는 데도 강력한 도구이다. [§토릭 다양체의 정의, ⁋명제 8](/ko/math/toric_geometry/toric_varieties#prop8){: data-relation="required" }에서 보았듯이 lattice polytope으로부터 projective toric variety가 구성되며, Cox 구성의 관점에서 이러한 polytope의 변화는 GIT quotient에서 linearization의 변화에 정확히 대응한다.
 
 구체적으로, Cox ring $S$와 group $G$를 고정하면 서로 다른 linearization은 서로 다른 ample line bundle의 선택, 즉 character space의 chamber 선택에 대응한다. Effective cone $\mathrm{Eff}(X_\Sigma)$ — divisor class group에서 pseudo-effective divisor들이 이루는 cone — 은 유한 개의 rational polyhedral chamber로 분해되며, 각 chamber 내부에서는 GIT quotient가 같은 birational type의 toric variety를 준다. 이 chamber 분해를 *secondary fan*이라 부른다.
 
