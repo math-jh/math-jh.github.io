@@ -66,9 +66,9 @@ $$\GL(n; \mathbb{R}) =\left\{A\in \Mat_{n\times n}(\mathbb{R})\mid \det(A)\neq 0
 
 $$\SL(n;\mathbb{R})=\left\{A\in \GL(n; \mathbb{R})\mid \det(A)=1\right\}$$
 
-을 통해 $\GL(n;\mathbb{R})$의 부분집합 $\SL(n; \mathbb{R})$을 정의할 수 있다. 이 함수는 행렬의 각 성분들에 대한 다항함수이므로 smooth이고, 약간의 계산을 통해 모든 점에서 regular임을 알 수 있다. [\[미분다양체\] §음함수 정리, ⁋따름정리 4](/ko/math/manifolds/implicit_function_theorem#cor4)로부터 $\SL(n;\mathbb{R})$은 $n^2-1$차원 manifold가 된다. 이 때 $\GL(n;\mathbb{R})$의 곱셈과 역원 또한 $\SL(n;\mathbb{R})$로 잘 제한되며 따라서 $\SL(n; \mathbb{R})$ 또한 Lie group이다. 
+을 통해 $\GL(n;\mathbb{R})$의 부분집합 $\SL(n; \mathbb{R})$을 정의할 수 있다. 이 함수는 행렬의 각 성분들에 대한 다항함수이므로 smooth이고, 약간의 계산을 통해 모든 점에서 regular임을 알 수 있다. [\[미분다양체\] §음함수 정리, ⁋따름정리 4](/ko/math/manifolds/implicit_function_theorem#cor4){: data-relation="required" }로부터 $\SL(n;\mathbb{R})$은 $n^2-1$차원 manifold가 된다. 이 때 $\GL(n;\mathbb{R})$의 곱셈과 역원 또한 $\SL(n;\mathbb{R})$로 잘 제한되며 따라서 $\SL(n; \mathbb{R})$ 또한 Lie group이다. 
 
-비슷한 방식으로, classical matrix group들 $\Omat(n)$, $\SO(n)$, $\Umat(n)$, $\SU(n)$ 등의 matrix group들 또한 Lie group 구조를 갖는 것을 확인할 수 있다. 더 일반적으로는 아래 [정리 5](#thm5)를 통해 $\GL(n;\mathbb{R})$의 임의의 closed subgroup이 자동으로 Lie group이 됨을 알 수 있다. 
+비슷한 방식으로, classical matrix group들 $\Omat(n)$, $\SO(n)$, $\Umat(n)$, $\SU(n)$ 등의 matrix group들 또한 Lie group 구조를 갖는 것을 확인할 수 있다. 더 일반적으로는 아래 [정리 5](#thm5){: data-relation="required" }를 통해 $\GL(n;\mathbb{R})$의 임의의 closed subgroup이 자동으로 Lie group이 됨을 알 수 있다. 
 :::
 
 한편, 비록 determinant가 어떻게 생겼는지는 알지 못하더라도, $\SL(n;\mathbb{R})$이 group으로서 어떻게 생겼는지에 대한 정보는 선형대수학으로부터 나오는 것이다. 임의의 Lie group $G$에 대한 다음의 정리는 더 일반적으로 임의의 *closed* subgroup은 항상 embedded submanifold라는 것을 보여준다.
@@ -111,7 +111,7 @@ $$\left(\dd{(L_g)}\right)(X_p)=X_{gp}$$
 
 이 항상 성립하는 것이다. 위의 식으로부터, $G$ 위에 정의된 left invariant인 벡터장 $X$를 명시하기 위해서는 <em-ko>오직 하나의 점</em-ko> $p\in G$에서의 값 $X_p$만 알면 충분하다는 것을 알 수 있으며, 당연하게도 가장 평범한 $p$의 선택은 $G$의 항등원 $e$이다. 또, 각 점에서의 $X$의 값이 이러한 방식으로 정의되었기 때문에, $X$가 left-invariant라는 사실이 $X$의 smoothness를 줄 것이라는 것도 추측할 수 있다. 
 
-바꿔말하면, $G$ 위에서 정의된 left-invariant vector field는 정확하게 $G$의 identity에서의 tangent space $T_eG$와 같은 것이다. 한편 [\[미분다양체\] §리 미분, ⁋정의 5](/ko/math/manifolds/Lie_derivative#def5)에서 우리는 $\mathfrak{X}(G)$를 $\mathbb{R}$ 위의 Lie algebra가 되도록 하는 연산 $[-,-]$를 정의했는데, 그렇다면 left-invariant vector field들의 모임이 이 연산에 대한 subalgebra가 되는지 또한 우리의 의문 중 하나이다. 우선 $[-,-]$를 일반화하는 다음의 정의부터 생각하자. 
+바꿔말하면, $G$ 위에서 정의된 left-invariant vector field는 정확하게 $G$의 identity에서의 tangent space $T_eG$와 같은 것이다. 한편 [\[미분다양체\] §리 미분, ⁋정의 5](/ko/math/manifolds/Lie_derivative#def5){: data-relation="required" }에서 우리는 $\mathfrak{X}(G)$를 $\mathbb{R}$ 위의 Lie algebra가 되도록 하는 연산 $[-,-]$를 정의했는데, 그렇다면 left-invariant vector field들의 모임이 이 연산에 대한 subalgebra가 되는지 또한 우리의 의문 중 하나이다. 우선 $[-,-]$를 일반화하는 다음의 정의부터 생각하자. 
 
 ::: 정의 8
 $\mathbb{R}$-벡터공간 $\mathfrak{g}$가 $\mathbb{R}$ 위에 정의된 *Lie algebra<sub>리 대수</sub>*라는 것은 이 위에 다음의 두 조건
@@ -141,7 +141,7 @@ Lie group $G$가 주어졌다 하고, $\mathfrak{g}$를 $G$ 위에서 정의된 
     $$X_g=(\dd{L_g})_e(X_e)=(\dd{L_g})_e(Y_e)=Y_g$$
 
     이므로 $X=Y$이다. 거꾸로 임의의 $v\in T_eG$에 대하여 $X_g$를 $(\dd{L_g})_e(v)$으로 정의하면 $X$가 left invariant인 벡터장이고, $\alpha(X)=v$를 만족함이 자명하다. 
-2. $X\in\mathfrak{g}$가 $C^\infty$임을 보이기 위해서는 임의의 함수 $f$에 대하여 $Xf$가 $C^\infty$임을 보이면 충분하다. ([\[미분다양체\] §벡터장, ⁋명제 2](/ko/math/manifolds/vector_fields#prop2)) 한편 임의의 $p\in G$에 대하여, 
+2. $X\in\mathfrak{g}$가 $C^\infty$임을 보이기 위해서는 임의의 함수 $f$에 대하여 $Xf$가 $C^\infty$임을 보이면 충분하다. ([\[미분다양체\] §벡터장, ⁋명제 2](/ko/math/manifolds/vector_fields#prop2){: data-relation="required" }) 한편 임의의 $p\in G$에 대하여, 
     
     $$(Xf)(p)=X_pf=(\dd{L_p})_e(X_e)f=X_e(f\circ L_p)$$
     
@@ -158,15 +158,15 @@ Lie group $G$가 주어졌다 하고, $\mathfrak{g}$를 $G$ 위에서 정의된 
     $$\begin{aligned}\bigl((0,Y)(f\circ m)\bigr)(\iota_1^e(p))&=(0,Y)_{(p,e)}(f\circ m)=0_p(f\circ m\circ\iota_1^e)+Y_e(f\circ m\circ\iota_2^p)\\&=X_e(f\circ m\circ\iota_2^p)=X_e(f\circ L_p)\end{aligned}$$
 
     이므로 원하는 결과를 얻는다.
-3. [\[미분다양체\] §리 미분, ⁋명제 9](/ko/math/manifolds/Lie_derivative#prop9)에 의하여 자명하다.
+3. [\[미분다양체\] §리 미분, ⁋명제 9](/ko/math/manifolds/Lie_derivative#prop9){: data-relation="required" }에 의하여 자명하다.
 :::
 
 위의 과정을 통해 얻어진 Lie algebra $\mathfrak{g}$를 *$G$의 Lie algebra*라 부른다. 일반적으로 Lie group을 $G$라 적으면, 이에 해당하는 프락투어 소문자 $\mathfrak{g}$를 통해 $G$의 Lie algebra를 적는 것이 보통이다. 
 
-특별한 예시로, 임의의 manifold $M$에서 자기자신으로의 diffeomorphism들의 group $\Diff(M)$을 생각하면, 이는 무한차원 Lie group으로 생각할 수 있다. 이 Lie group의 identity $\id_M$에서의 tangent space는 $\id_M$을 지나는 $\Diff(M)$의 curve들의 적당한 equivalence class이며, 이 때 [\[미분다양체\] §벡터장, ⁋정리 6](/ko/math/manifolds/vector_fields#thm6)을 생각하면 이 정보는 정확하게 $\mathfrak{X}(M)$에 담겨있다. 이러한 방식으로 Lie group $G$의 Lie algebra $\mathfrak{g}$는 $G$가 자기 자신 위에 act할 때의 infinitesimal action을 정의한다.
+특별한 예시로, 임의의 manifold $M$에서 자기자신으로의 diffeomorphism들의 group $\Diff(M)$을 생각하면, 이는 무한차원 Lie group으로 생각할 수 있다. 이 Lie group의 identity $\id_M$에서의 tangent space는 $\id_M$을 지나는 $\Diff(M)$의 curve들의 적당한 equivalence class이며, 이 때 [\[미분다양체\] §벡터장, ⁋정리 6](/ko/math/manifolds/vector_fields#thm6){: data-relation="required" }을 생각하면 이 정보는 정확하게 $\mathfrak{X}(M)$에 담겨있다. 이러한 방식으로 Lie group $G$의 Lie algebra $\mathfrak{g}$는 $G$가 자기 자신 위에 act할 때의 infinitesimal action을 정의한다.
 
 ::: 예시 10
-앞선 [예시 2](#ex2), [예시 3](#ex3), 그리고 [예시 4](#ex4)의 $\GL(n;\mathbb{R})$의 경우는 모두 벡터공간으로부터 오므로, 이들의 tangent space는 각각 원래의 벡터공간과 isomorphic하다. 즉 $\mathbb{R}^n$의 경우 그 tangent space는 $\mathbb{R}^n$ 자기자신이며, 비슷하게 $n$-torus $T^n\cong \mathbb{R}^n/\mathbb{Z}^n$의 경우 각 점에서의 tangent space는 quotient topology를 취하기 전인 $\mathbb{R}^n$과 같다. $\GL(n;\mathbb{R})$의 경우, 벡터공간 $\Mat_n(\mathbb{R})$의 open submanifold이므로 마찬가지로 각 점에서의 tangent space는 $\Mat_n(\mathbb{R})$과 같다.
+앞선 [예시 2](#ex2){: data-relation="weak" }, [예시 3](#ex3){: data-relation="weak" }, 그리고 [예시 4](#ex4){: data-relation="weak" }의 $\GL(n;\mathbb{R})$의 경우는 모두 벡터공간으로부터 오므로, 이들의 tangent space는 각각 원래의 벡터공간과 isomorphic하다. 즉 $\mathbb{R}^n$의 경우 그 tangent space는 $\mathbb{R}^n$ 자기자신이며, 비슷하게 $n$-torus $T^n\cong \mathbb{R}^n/\mathbb{Z}^n$의 경우 각 점에서의 tangent space는 quotient topology를 취하기 전인 $\mathbb{R}^n$과 같다. $\GL(n;\mathbb{R})$의 경우, 벡터공간 $\Mat_n(\mathbb{R})$의 open submanifold이므로 마찬가지로 각 점에서의 tangent space는 $\Mat_n(\mathbb{R})$과 같다.
 :::
 
 그러나 $\SL(n;\mathbb{R})$의 Lie algebra를 알기 위해서는 조금 더 복잡한 계산이 필요하다. 구체적으로 우리는 determinant map $\GL(n; \mathbb{R})\rightarrow \mathbb{R}$의 미분을 알아야 한다. 
@@ -235,7 +235,7 @@ Lie group $G$ 위에 정의된 form $\omega$가 *left invariant<sub>좌불변</s
 
 특별히 $\Omega_\text{l.inv}^1(G)$의 원소들은 *Maurer-Cartan form*이라 부른다.
 
-[명제 9](#prop9)과 마찬가지 방식으로 다음 명제를 증명할 수 있다.
+[명제 9](#prop9){: data-relation="weak" }과 마찬가지 방식으로 다음 명제를 증명할 수 있다.
     
 ::: 명제 14
 Lie group $G$와 $\Omega_\text{l.inv}^\ast(G)$에 대하여 다음이 성립한다.
@@ -278,7 +278,7 @@ Lie group $G$와 $\Omega_\text{l.inv}^\ast(G)$에 대하여 다음이 성립한�
 
 즉, 바꾸어 말하자면 $\LieGrp$에서 $\LieAlg$로의 functor $\Lie:\LieGrp \rightarrow \LieAlg$는, simply connected Lie group들로 이루어진 $\LieGrp$의 full subcategory로 제한했을 때 두 category의 equivalence를 준다. 
 
-Category-theoretic한 결과 외에도 이 정리는, 가령, 임의의 Lie group $G$와 그 Lie algebra $\mathfrak{g}$에 대하여 matrix exponential과 비슷한 exponential map을 정의할 수 있도록 해 준다. 이는 $(\mathbb{R},+)$이 1차원 simply connected Lie group이므로 그 Lie algebra 또한 1차원이고, 따라서 여기에서 다른 Lie algebra로의 Lie algebra homomorphism은 basis $d/\dd{t}$가 어디로 가는지에 의해 유일하게 결정되며 이 때 $d/\dd{t}$가 $X\in \mathfrak{g}$로 옮겨진다면 이 Lie algebra homomorphism에 [정리 15](#thm15)을 적용하여 얻어지는 Lie group homomorphism $\gamma: \mathbb{R}\rightarrow G$이 원하는 곡선을 정의하기 때문이다. 
+Category-theoretic한 결과 외에도 이 정리는, 가령, 임의의 Lie group $G$와 그 Lie algebra $\mathfrak{g}$에 대하여 matrix exponential과 비슷한 exponential map을 정의할 수 있도록 해 준다. 이는 $(\mathbb{R},+)$이 1차원 simply connected Lie group이므로 그 Lie algebra 또한 1차원이고, 따라서 여기에서 다른 Lie algebra로의 Lie algebra homomorphism은 basis $d/\dd{t}$가 어디로 가는지에 의해 유일하게 결정되며 이 때 $d/\dd{t}$가 $X\in \mathfrak{g}$로 옮겨진다면 이 Lie algebra homomorphism에 [정리 15](#thm15){: data-relation="required" }을 적용하여 얻어지는 Lie group homomorphism $\gamma: \mathbb{R}\rightarrow G$이 원하는 곡선을 정의하기 때문이다. 
 
 ::: 정의 16
 임의의 Lie group $G$와 그 Lie algebra $\mathfrak{g}$, 그리고 원소 $X\in \mathfrak{g}$에 대하여, 위의 과정을 통해 얻어지는 곡선을 $\gamma_X$로 표기하자. 그럼 $\exp:\mathfrak{g}\rightarrow G$를 $X\mapsto \gamma_X(1)$로 정의한다.
@@ -298,7 +298,7 @@ $$\exp(X)\exp(Y)=\exp\left(X+Y+\frac{1}{2}[X,Y]+\frac{1}{12}[X,[X,Y]]+\frac{1}{1
 
 엄밀히 말하자면 위의 "정리"는 $\cdots$에 해당하는 항의 계수에 대한 정보가 없기는 하지만 이 계수들이 구체적으로 필요할 일은 드물다. 중요한 것은 Lie algebra의 원소 $X,Y$가 지정하는 방향의 두 (Lie group의) 원소를 각각 곱하였을 때 이들의 곱이 $X,Y$의 일차결합과 그 Lie bracket들의 합에 해당하는 방향이며, 만일 $X,Y$가 충분히 작은 벡터들이라면 이 급수 또한 수렴한다는 것이다. 한편 Lie group $G$에서, identity $e$와 가까운 임의의 원소는 $g=\exp(X)$의 꼴로 쓸 수 있으므로 이 정리는 (identity 근처에서) $G$의 group operation에 대한 정보를 정확하게 모두 담고 있다. 더 구체적으로, 우리는 Lie algebra $\mathfrak{g}$를 manifold로 보고, $\exp: \mathfrak{g}\rightarrow G$를 manifold 사이에서의 smooth map이라 생각할 수 있고 이 때 $0\in \mathfrak{g}$에서의 differential이 정확히 $\id_\mathfrak{g}$가 된다. 따라서 $\mathfrak{g}$에서 $0$의 적당한 neighborhood $U$가 존재하여 $\exp$가 $U$와 $\exp(U)$ 사이의 diffeomorphism을 정의하도록 할 수 있겠으나 (특히 local diffeomorphism의 inverse $\log$가 존재하겠지만), 이 $U$ 바깥에서 exponential map이 어떻게 행동할지는 단언할 수 없다. 
 
-위의 [정리 15](#thm15)를 알게 되었을 때, 자연스러운 질문 중 하나는 Lie group $G$와 그 Lie algebra $\mathfrak{g}$, 그리고 $\mathfrak{g}$의 Lie subalgebra $\mathfrak{h}$가 주어졌을 때, $\mathfrak{h}$를 identity에서의 tangent space로 갖는 $G$의 Lie subgroup $H$가 존재하는지의 여부일 것이다. 그런데 정의에 의해 Lie subalgebra는 Lie bracket에 의해 닫혀있으므로 [\[미분다양체\] §Distribution, ⁋정리 3](/ko/math/manifolds/distribution#thm3)에 의해 이는 $G$의 submanifold를 정의한다. 이들은 위의 [정리 17](#thm17)에 의해 group operation도 가질 것이지만, 문제는 이 정리는 앞서 지적했듯 오직 국소적인 영역에서만 효과가 있다는 것이다. 그러나, 만일 $G$가 simply connected였다면 이를 $G$ 전체로 확장하는 데에 위상적인 문제가 없어지므로 다음 정리가 성립한다. 
+위의 [정리 15](#thm15){: data-relation="required" }를 알게 되었을 때, 자연스러운 질문 중 하나는 Lie group $G$와 그 Lie algebra $\mathfrak{g}$, 그리고 $\mathfrak{g}$의 Lie subalgebra $\mathfrak{h}$가 주어졌을 때, $\mathfrak{h}$를 identity에서의 tangent space로 갖는 $G$의 Lie subgroup $H$가 존재하는지의 여부일 것이다. 그런데 정의에 의해 Lie subalgebra는 Lie bracket에 의해 닫혀있으므로 [\[미분다양체\] §Distribution, ⁋정리 3](/ko/math/manifolds/distribution#thm3){: data-relation="required" }에 의해 이는 $G$의 submanifold를 정의한다. 이들은 위의 [정리 17](#thm17){: data-relation="required" }에 의해 group operation도 가질 것이지만, 문제는 이 정리는 앞서 지적했듯 오직 국소적인 영역에서만 효과가 있다는 것이다. 그러나, 만일 $G$가 simply connected였다면 이를 $G$ 전체로 확장하는 데에 위상적인 문제가 없어지므로 다음 정리가 성립한다. 
 
 ::: 정리 18
 Simply connected Lie group $G$와 그 Lie algebra $\mathfrak{g}$, 그리고 $\mathfrak{g}$의 Lie subalgebra $\mathfrak{h}$가 주어졌을 때, $\mathfrak{h}$를 Lie algebra로 갖는 $G$의 Lie subgroup $H$가 존재한다. 
@@ -310,7 +310,7 @@ Simply connected Lie group $G$와 그 Lie algebra $\mathfrak{g}$, 그리고 $\ma
 
 $$\rho_g: G \rightarrow G; \quad h\mapsto \rho_g(h)=ghg^{-1}$$
 
-을 생각하자. ([\[대수적 구조\] §군의 작용, ⁋명제 9](/ko/math/algebraic_structures/group_actions#prop9)) 이는 Lie group automorphism이며, 따라서 identity $h=e$에서 이를 미분하면 $\dd{\rho_g}: \mathfrak{g}\rightarrow \mathfrak{g}$를 얻으며 이는 Lie algebra automorphism이 된다. 
+을 생각하자. ([\[대수적 구조\] §군의 작용, ⁋명제 9](/ko/math/algebraic_structures/group_actions#prop9){: data-relation="required" }) 이는 Lie group automorphism이며, 따라서 identity $h=e$에서 이를 미분하면 $\dd{\rho_g}: \mathfrak{g}\rightarrow \mathfrak{g}$를 얻으며 이는 Lie algebra automorphism이 된다. 
 
 ::: 정의 19
 Lie group $G$에 대하여, 다음의 대응
@@ -324,7 +324,7 @@ $$\ad: \mathfrak{g}\rightarrow \Lie(\Aut(\mathfrak{g}))$$
 을 $\mathfrak{g}$의 *adjoint representation*이라 부른다. 
 :::
 
-그럼 left invariant인 벡터장 $X$의 flow가 right translation $R_{\exp(tX)}$로 주어지므로, 충분히 작은 범위 내에서 $G$의 adjoint representation은 정확하게 Lie derivative를 보는 것과 같고, 따라서 [\[미분다양체\] §리 미분, ⁋명제 4](/ko/math/manifolds/Lie_derivative#prop4)에 의하여 다음의 식
+그럼 left invariant인 벡터장 $X$의 flow가 right translation $R_{\exp(tX)}$로 주어지므로, 충분히 작은 범위 내에서 $G$의 adjoint representation은 정확하게 Lie derivative를 보는 것과 같고, 따라서 [\[미분다양체\] §리 미분, ⁋명제 4](/ko/math/manifolds/Lie_derivative#prop4){: data-relation="required" }에 의하여 다음의 식
 
 $$\ad(X)Y =[X,Y]$$
 
@@ -338,9 +338,9 @@ Connected compact Lie group $G$에 대하여 다음이 성립한다.
 3. $\rho_x\circ\exp=\exp\circ\Ad(x)$
 :::
 
-만일 $G$가 abelian group이었다면 $\rho_g$는 그냥 identity map이고 따라서 $\Ad_g(X)=X$가 임의의 $g\in G$와 임의의 $X\in \mathfrak{g}$에 대해 성립하고, 따라서 그 미분인 $\mathfrak{g}$의 adjoint representation은 $0$이다. 즉, 임의의 abelian Lie group에 대하여, 그 Lie algebra의 Lie bracket은 항상 $0$이고 우리는 이를 *abelian* Lie algebra라 부른다. 이는 [정의 8](#def8)에 의해 anticommutative인 Lie bracket이 commutative이기도 하기 위한 유일한 방법이므로 그 이름이 어색하지 않다. 
+만일 $G$가 abelian group이었다면 $\rho_g$는 그냥 identity map이고 따라서 $\Ad_g(X)=X$가 임의의 $g\in G$와 임의의 $X\in \mathfrak{g}$에 대해 성립하고, 따라서 그 미분인 $\mathfrak{g}$의 adjoint representation은 $0$이다. 즉, 임의의 abelian Lie group에 대하여, 그 Lie algebra의 Lie bracket은 항상 $0$이고 우리는 이를 *abelian* Lie algebra라 부른다. 이는 [정의 8](#def8){: data-relation="required" }에 의해 anticommutative인 Lie bracket이 commutative이기도 하기 위한 유일한 방법이므로 그 이름이 어색하지 않다. 
 
-그럼, $G$가 abelian일 경우 특히 [정리 17](#thm17)에 의하여 $\exp(X+Y)=\exp(X)\exp(Y)$이 성립한다. 즉 $\exp$는 group homomorphism이다. 뿐만 아니라 이 경우 [정리 17](#thm17)의 우변 $\exp$ 안의 식은 반드시 수렴하며 이는 ($G$가 connected일 경우) $\exp$가 *surjective* group homomorphism이라는 결과로 나타난다. 따라서, first isomorphism theorem에 의하여
+그럼, $G$가 abelian일 경우 특히 [정리 17](#thm17){: data-relation="required" }에 의하여 $\exp(X+Y)=\exp(X)\exp(Y)$이 성립한다. 즉 $\exp$는 group homomorphism이다. 뿐만 아니라 이 경우 [정리 17](#thm17){: data-relation="required" }의 우변 $\exp$ 안의 식은 반드시 수렴하며 이는 ($G$가 connected일 경우) $\exp$가 *surjective* group homomorphism이라는 결과로 나타난다. 따라서, first isomorphism theorem에 의하여
 
 $$G\cong \mathfrak{g}/\ker(\exp)$$
 
