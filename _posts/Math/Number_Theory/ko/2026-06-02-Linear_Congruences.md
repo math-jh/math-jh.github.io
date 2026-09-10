@@ -14,7 +14,7 @@ weight: 6
 published: false
 ---
 
-[§합동식](/ko/math/number_theory/congruences)에서 합동의 연산과 곱셈 역원을 다루었다. 이제 가장 기본적인 합동방정식인 일차 합동식 $ax \equiv b \pmod n$의 해를 분석한다. 이는 일차 부정방정식 $ax + ny = b$를 푸는 것과 같은 문제이며, Bézout 항등식이 그 가해성을 완전히 결정한다.
+[§합동식](/ko/math/number_theory/congruences){: data-relation="required" }에서 합동의 연산과 곱셈 역원을 다루었다. 이제 가장 기본적인 합동방정식인 일차 합동식 $ax \equiv b \pmod n$의 해를 분석한다. 이는 일차 부정방정식 $ax + ny = b$를 푸는 것과 같은 문제이며, Bézout 항등식이 그 가해성을 완전히 결정한다.
 
 일차 합동식이 다루기 까다로운 것은 정수에서의 일차방정식 $ax = b$와 달리 "나눗셈"이 늘 가능하지는 않기 때문이다. 실수 위에서라면 $a \neq 0$일 때 $x = b/a$가 유일한 해이지만, 법 $n$ 아래에서는 $a$로 나누는 일이 $a$의 역원을 곱하는 일로 바뀌고, 그 역원은 $\gcd(a, n) = 1$일 때에만 존재한다. 따라서 $a$와 $n$이 공약수를 가지면 해가 아예 없거나, 반대로 여러 개로 갈라진다. 이 글에서 우리는 그 갈림을 $d = \gcd(a, n)$ 하나로 깔끔하게 정리한다.
 
@@ -34,13 +34,13 @@ ax - b &= ny \\
 ax - ny &= b
 \end{aligned}$$
 
-가 성립한다는 것과 동치이다. 좌변 $ax - ny$가 $x, y$를 정수 전체에 걸쳐 움직일 때 취하는 값 전체는 $\gcd(a, n) = d$의 배수 전체와 정확히 일치하므로 ([§유클리드 호제법과 Bézout 항등식, ⁋명제 5](/ko/math/number_theory/euclidean_algorithm#prop5)), 위 방정식이 풀릴 필요충분조건은 $d \mid b$이다.
+가 성립한다는 것과 동치이다. 좌변 $ax - ny$가 $x, y$를 정수 전체에 걸쳐 움직일 때 취하는 값 전체는 $\gcd(a, n) = d$의 배수 전체와 정확히 일치하므로 ([§유클리드 호제법과 Bézout 항등식, ⁋명제 5](/ko/math/number_theory/euclidean_algorithm#prop5){: data-relation="required" }), 위 방정식이 풀릴 필요충분조건은 $d \mid b$이다.
 
 이제 $d \mid b$라 하고 $a = da'$, $n = dn'$, $b = db'$로 쓰자. 이때 $\gcd(a', n') = 1$이며, $ax \equiv b \pmod n$의 양변과 법을 공통인수 $d$로 나누면
 
 $$a'x \equiv b' \pmod{n'}$$
 
-과 동치가 된다. (뒤의 [명제 7](#prop7)) 합동식을 그 법과 서로소가 아닌 공약수로 약분할 때 법도 함께 나눠야 함에 주의한다. $\gcd(a', n') = 1$이므로 $a'$은 법 $n'$에 대해 곱셈 역원 $(a')^{-1}$을 가지고 ([§합동식, ⁋명제 7](/ko/math/number_theory/congruences#prop7)), 양변에 그것을 곱하면
+과 동치가 된다. (뒤의 [명제 7](#prop7){: data-relation="required" }) 합동식을 그 법과 서로소가 아닌 공약수로 약분할 때 법도 함께 나눠야 함에 주의한다. $\gcd(a', n') = 1$이므로 $a'$은 법 $n'$에 대해 곱셈 역원 $(a')^{-1}$을 가지고 ([§합동식, ⁋명제 7](/ko/math/number_theory/congruences#prop7){: data-relation="required" }), 양변에 그것을 곱하면
 
 $$x \equiv (a')^{-1} b' \pmod{n'}$$
 
@@ -103,7 +103,7 @@ $7x \equiv 3 \pmod{10}$을 풀자. $\gcd(7, 10) = 1$이므로 해가 유일하�
 
 $$3 \equiv 13 \equiv 23 \equiv 33 \equiv 43 \equiv 53 \equiv 63 \pmod{10},$$
 
-이고 $63 = 7\cdot 9$이므로 $7x \equiv 63 \pmod{10}$이다. 양변에서 $\gcd(7, 10) = 1$이라 계수 $7$을 법을 바꾸지 않고 그대로 약분할 수 있어 ([명제 7](#prop7))
+이고 $63 = 7\cdot 9$이므로 $7x \equiv 63 \pmod{10}$이다. 양변에서 $\gcd(7, 10) = 1$이라 계수 $7$을 법을 바꾸지 않고 그대로 약분할 수 있어 ([명제 7](#prop7){: data-relation="required" })
 
 $$x \equiv 9 \pmod{10}$$
 
@@ -130,7 +130,7 @@ dn' &\mid da'(x - x_0) \\
 n' &\mid a'(x - x_0)
 \end{aligned}$$
 
-이고, $\gcd(a', n') = 1$이므로 $n' \mid x - x_0$이다 ([§합동식, ⁋명제 6](/ko/math/number_theory/congruences#prop6)). 곧 $x = x_0 + n' k = x_0 + (n/d)k$ 꼴이며, 역으로 이런 모든 $x$가 $a(x - x_0) = a n' k = a' n k$를 만족해 해가 된다. 법 $n$ 아래에서 $k$와 $k + d$는 같은 coset을 주므로 ($(n/d)(k+d) = (n/d)k + n$), 서로 다른 해는 $k = 0, 1, \ldots, d-1$의 $d$개이다.
+이고, $\gcd(a', n') = 1$이므로 $n' \mid x - x_0$이다 ([§합동식, ⁋명제 6](/ko/math/number_theory/congruences#prop6){: data-relation="required" }). 곧 $x = x_0 + n' k = x_0 + (n/d)k$ 꼴이며, 역으로 이런 모든 $x$가 $a(x - x_0) = a n' k = a' n k$를 만족해 해가 된다. 법 $n$ 아래에서 $k$와 $k + d$는 같은 coset을 주므로 ($(n/d)(k+d) = (n/d)k + n$), 서로 다른 해는 $k = 0, 1, \ldots, d-1$의 $d$개이다.
 :::
 
 명제 6은 해들이 등차적으로 $n/d$ 간격으로 배열됨을 말한다. 예시 2에서 $d = 2$, $n/d = 7$이었고 해가 $6, 13$으로 정확히 $7$만큼 떨어져 있었던 것이 이 명제의 구체적 사례이다. 또 합동식을 약분할 때 법을 함께 나눠야 하는 이유도 여기서 분명하다. $\gcd(a, n) = d$로 양변을 나누면 정보가 법 $n$ 수준에서 법 $n/d$ 수준으로 줄어들고, 잃어버린 $d$겹의 정보가 바로 해의 다중성이다.
@@ -152,7 +152,7 @@ n \mid c(a-b) &\iff gn' \mid gc'(a-b) \\
 &\iff n' \mid a - b
 \end{aligned}$$
 
-이며, 마지막 동치는 $\gcd(c', n') = 1$에서 따른다. ([§합동식, ⁋명제 6](/ko/math/number_theory/congruences#prop6)) 곧 $a \equiv b \pmod{n/g}$이다. 특히 $\gcd(c, n) = 1$이면 $g = 1$, $n/g = n$이어서 법이 그대로 보존되는 통상의 cancellation law를 얻는다.
+이며, 마지막 동치는 $\gcd(c', n') = 1$에서 따른다. ([§합동식, ⁋명제 6](/ko/math/number_theory/congruences#prop6){: data-relation="required" }) 곧 $a \equiv b \pmod{n/g}$이다. 특히 $\gcd(c, n) = 1$이면 $g = 1$, $n/g = n$이어서 법이 그대로 보존되는 통상의 cancellation law를 얻는다.
 :::
 
 Cancellation law는 일차 합동식을 손으로 풀 때 가장 자주 쓰는 도구이다. 계수와 법이 공약수를 가지면 무턱대고 약분해서는 안 되고, 명제 7에 따라 법을 동시에 조정해야 등치가 유지된다. 가령 $8x \equiv 12 \pmod{20}$에서 양변을 $4$로 나눌 때 $g = \gcd(4, 20) = 4$이므로 법도 $20/4 = 5$로 줄여 $2x \equiv 3 \pmod 5$를 얻어야 하며, 이는 $x \equiv 4 \pmod 5$, 곧 법 $20$에 대해 $x \equiv 4, 9, 14, 19$의 네 해를 준다 ($d = \gcd(8, 20) = 4$와 일치).
@@ -169,7 +169,7 @@ $$\begin{aligned}
 4\cdot 2 &\equiv 1, & 5\cdot 3 &\equiv 1, & 6\cdot 6 &\equiv 1 \pmod 7.
 \end{aligned}$$
 
-따라서 $1^{-1} = 1$, $2^{-1} = 4$, $3^{-1} = 5$, $4^{-1} = 2$, $5^{-1} = 3$, $6^{-1} = 6$이다. 법이 소수일 때 $0$을 제외한 모든 원소가 역원을 가짐은 [§합동식, ⁋명제 7](/ko/math/number_theory/congruences#prop7)의 직접적 귀결이다.
+따라서 $1^{-1} = 1$, $2^{-1} = 4$, $3^{-1} = 5$, $4^{-1} = 2$, $5^{-1} = 3$, $6^{-1} = 6$이다. 법이 소수일 때 $0$을 제외한 모든 원소가 역원을 가짐은 [§합동식, ⁋명제 7](/ko/math/number_theory/congruences#prop7){: data-relation="required" }의 직접적 귀결이다.
 :::
 
 또 일차 합동식은 일차 디오판토스 방정식의 특수해를 빠르게 찾는 데에도 쓰인다. $ax + ny = b$의 정수해를 구할 때, 먼저 $ax \equiv b \pmod n$을 풀어 $x$를 얻고 그로부터 $y = (b - ax)/n$을 결정하면 된다.
