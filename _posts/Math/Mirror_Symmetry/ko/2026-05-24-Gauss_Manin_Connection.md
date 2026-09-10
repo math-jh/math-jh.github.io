@@ -14,11 +14,11 @@ weight: 5
 published: false
 ---
 
-이번 글에서 우리는 [§두브로빈 접속, ⁋주장 4](/ko/math/mirror_symmetry/dubrovin_connection#conj4)에서 주장한 $D$-module isomorphism을 구체적으로 살펴본다. 이를 위해서는 A-side와 B-side 모두를 보아야 한다. A-side의 경우는 이미 [\[사교기하학\] §양자 코호몰로지, ⁋정의 7](/ko/math/symplectic_geometry/quantum_cohomology#def7)에서 어느정도 다룬 것이므로, 우리는 우선 B-side, 즉 oscillating integral과 Gauss-Manin system에 대해 살펴본다. 
+이번 글에서 우리는 [§두브로빈 접속, ⁋주장 4](/ko/math/mirror_symmetry/dubrovin_connection#conj4){: data-relation="required" }에서 주장한 $D$-module isomorphism을 구체적으로 살펴본다. 이를 위해서는 A-side와 B-side 모두를 보아야 한다. A-side의 경우는 이미 [\[사교기하학\] §양자 코호몰로지, ⁋정의 7](/ko/math/symplectic_geometry/quantum_cohomology#def7){: data-relation="weak" }에서 어느정도 다룬 것이므로, 우리는 우선 B-side, 즉 oscillating integral과 Gauss-Manin system에 대해 살펴본다. 
 
 ## Landau-Ginzburg model과 volume form
 
-우선 우리는 B-model의 무대를 만들어야 한다. [§거울대칭 개요, ⁋정의 4](/ko/math/mirror_symmetry/overview#def4)에서 살펴보았듯, Landau-Ginzburg model $(\check{X}, W_q)$에서 $\check{X}$는 보통 algebraic torus $(\mathbb{C}^\ast)^N$ 혹은 그 안에 있는 subvariety이며, $W_q$는 *quantum parameter* $q = (q_1, \ldots, q_r) \in (\mathbb{C}^\ast)^r$로 parametrize되는 holomorphic function이다. 여기서 $r$은 A-side mirror $X$의 *complexified Kähler moduli*의 차원이었으며, Fano variety의 경우
+우선 우리는 B-model의 무대를 만들어야 한다. [§거울대칭 개요, ⁋정의 4](/ko/math/mirror_symmetry/overview#def4){: data-relation="required" }에서 살펴보았듯, Landau-Ginzburg model $(\check{X}, W_q)$에서 $\check{X}$는 보통 algebraic torus $(\mathbb{C}^\ast)^N$ 혹은 그 안에 있는 subvariety이며, $W_q$는 *quantum parameter* $q = (q_1, \ldots, q_r) \in (\mathbb{C}^\ast)^r$로 parametrize되는 holomorphic function이다. 여기서 $r$은 A-side mirror $X$의 *complexified Kähler moduli*의 차원이었으며, Fano variety의 경우
 
 $$r = \rank\,\operatorname{Pic}(X) = \dim_\mathbb{C} H^2(X; \mathbb{C})$$
 
@@ -35,7 +35,7 @@ $$\omega = d\log \rchi^{m_1} \wedge \cdots \wedge d\log \rchi^{m_N}$$
 을 만드는 구성[^1]의 일반화이다. 한편 이 구성이 작동하는 ambient 데이터 $(Y, D)$ 자체를 추상화하면 다음 정의의 log Calabi-Yau pair가 된다.
 
 ::: 정의 1
-Smooth projective variety $Y$와 reduced SNC divisor ([\[토릭 기하학\] §토릭 다양체 위의 로그 미분형식, ⁋정의 5](/ko/math/toric_geometry/logarithmic_differentials#def5)) $D \subseteq Y$의 쌍 $(Y, D)$가 $K_Y + D \sim 0$을 만족할 때 이를 *log Calabi-Yau pair<sub>로그 칼라비-야우 쌍</sub>*라 부른다. 이 때, 위의 construction을 통해 얻어지는 non-vanishing volume form $\omega=\Omega\vert_{\check{X}}$을 log CY pair의 *canonical holomorphic volume form<sub>표준 정칙 부피 형식</sub>*이라 부른다. 
+Smooth projective variety $Y$와 reduced SNC divisor ([\[토릭 기하학\] §토릭 다양체 위의 로그 미분형식, ⁋정의 5](/ko/math/toric_geometry/logarithmic_differentials#def5){: data-relation="required" }) $D \subseteq Y$의 쌍 $(Y, D)$가 $K_Y + D \sim 0$을 만족할 때 이를 *log Calabi-Yau pair<sub>로그 칼라비-야우 쌍</sub>*라 부른다. 이 때, 위의 construction을 통해 얻어지는 non-vanishing volume form $\omega=\Omega\vert_{\check{X}}$을 log CY pair의 *canonical holomorphic volume form<sub>표준 정칙 부피 형식</sub>*이라 부른다. 
 :::
 
 기하적으로, 앞선 construction에서 $\mathcal{K}_Y\otimes \mathcal{O}_Y(D)\cong \mathcal{O}_Y$의 nowhere-vanishing global section을 통해 $\omega$를 택하는 것은 trivialization $\Omega^N_Y(\log D)\cong\mathcal{O}_Y$를 택하는 것과 같다. 특히 $\check{X}=(\mathbb{C}^\ast)^N$인 경우 standard affine coordinate들 $\x_i$에 대한 canonical volume form은
@@ -56,7 +56,7 @@ $$\mathcal{I}_\Gamma(q,z)=\int_\Gamma e^{W_q/z}\omega$$
 
 $$\Gamma_p := \left\{ x(0) \in \check{X} \,\middle\vert\, \lim_{t \rightarrow -\infty} x(t) = p,\; \lim_{t \rightarrow +\infty} \Real\!\left(\frac{W_q(x(t))}{z}\right) = -\infty \right\}$$
 
-로 나타나는 cycle을 *Lefschetz thimble*이라 부른다. 여기서 $x(t)$는 $\Real(W_q/z)$의 negative gradient flow line이며, 따라서 $\Gamma_p$는 $p$의 unstable manifold이다. ([\[사교기하학\] §Morse 이론과 stationary phase 근사, ⁋정의 14](/ko/math/symplectic_geometry/morse_stationary_phase#def14)) 만일 $W_q$가 Morse type이라면 $\Gamma_p$는 real dimension $N$의 cycle을 이룬다는 것이 알려져 있다 ([\[사교기하학\] §Morse 이론과 stationary phase 근사, ⁋명제 15](/ko/math/symplectic_geometry/morse_stationary_phase#prop15)). 한편 [§거울대칭 개요](/ko/math/mirror_symmetry/overview)에서 살펴본 ring isomorphism $\Jac(W_q) \cong QH^\ast(X)$로부터 critical point의 개수는 정확히 $\dim_\mathbb{C} H^\ast(X, \mathbb{C})$와 일치한다. 이 critical point에 대응하는 Lefschetz thimble들 $\{\Gamma_p\}_{p \in \Crit(W_q)}$는 *$N$th rapid decay homology*
+로 나타나는 cycle을 *Lefschetz thimble*이라 부른다. 여기서 $x(t)$는 $\Real(W_q/z)$의 negative gradient flow line이며, 따라서 $\Gamma_p$는 $p$의 unstable manifold이다. ([\[사교기하학\] §Morse 이론과 stationary phase 근사, ⁋정의 14](/ko/math/symplectic_geometry/morse_stationary_phase#def14){: data-relation="weak" }) 만일 $W_q$가 Morse type이라면 $\Gamma_p$는 real dimension $N$의 cycle을 이룬다는 것이 알려져 있다 ([\[사교기하학\] §Morse 이론과 stationary phase 근사, ⁋명제 15](/ko/math/symplectic_geometry/morse_stationary_phase#prop15){: data-relation="required" }). 한편 [§거울대칭 개요](/ko/math/mirror_symmetry/overview){: data-relation="required" }에서 살펴본 ring isomorphism $\Jac(W_q) \cong QH^\ast(X)$로부터 critical point의 개수는 정확히 $\dim_\mathbb{C} H^\ast(X, \mathbb{C})$와 일치한다. 이 critical point에 대응하는 Lefschetz thimble들 $\{\Gamma_p\}_{p \in \Crit(W_q)}$는 *$N$th rapid decay homology*
 
 $$H_N(\check{X}, \{\Real(W_q/z) \ll 0\}; \mathbb{C})$$
 
@@ -86,7 +86,7 @@ $$\mathcal{I}_{\Gamma_p}(q, z) := \int_{\Gamma_p} e^{W_q / z}\, \omega$$
 
 여기서 $\Gamma_p$를 $(q,z)$의 변화에 따라 continuously isotoped 될 수 있도록 택하는 것은 $(q,z)$의 변화에 따라 critical point가 변하고, 따라서 thimble 또한 변형되는데 그 변형 정도가 연속이도록 해 주는 것이다. 즉 parameter $(q,z)$의 변화에 따라 cycle을 parallel하게 transport하는 것이며, 이것이 곧 정의할 Gauss-Manin connection의 base를 주게 된다. 
 
-위에서 언급했듯, $e^{W_q/z}$는 $W_q$의 phase에 따라 급격히 진동하므로, 적분의 dominant contribution은 phase가 stationary한 점, 즉 critical point 근처에서만 발생한다. 다음 명제는 [\[사교기하학\] §Morse 이론과 stationary phase 근사, ⁋명제 16](/ko/math/symplectic_geometry/morse_stationary_phase#prop16)을 우리 세팅에 맞추어 다시 적어둔 것이다. 
+위에서 언급했듯, $e^{W_q/z}$는 $W_q$의 phase에 따라 급격히 진동하므로, 적분의 dominant contribution은 phase가 stationary한 점, 즉 critical point 근처에서만 발생한다. 다음 명제는 [\[사교기하학\] §Morse 이론과 stationary phase 근사, ⁋명제 16](/ko/math/symplectic_geometry/morse_stationary_phase#prop16){: data-relation="weak" }을 우리 세팅에 맞추어 다시 적어둔 것이다. 
 
 ::: 명제 3 (Stationary phase asymptotic)
 $W_q$의 non-degenerate critical point $p$와 이를 통과하는 Lefschetz thimble $\Gamma_p$에 대해, $z \rightarrow 0^+$에서
@@ -96,7 +96,7 @@ $$\mathcal{I}_{\Gamma_p}(q, z) \sim (2\pi z)^{N/2} \frac{e^{W_q(p)/z}}{\sqrt{\de
 이 성립한다. 여기서 $N = \dim_\mathbb{C} \check{X}$이고, $\Hess_p$는 $\omega$가 standard volume form $\dd{y_1}\wedge\cdots\wedge\dd{y_N}$이 되는 $p$ 근방의 holomorphic coordinate $y$에 대한 $p$에서의 Hessian이며, $\sqrt{}$의 branch는 $\Gamma_p$의 orientation으로 결정된다.
 :::
 
-증명의 핵심은 $p$ 근방에서 [\[사교기하학\] §Morse 이론과 stationary phase 근사, ⁋정리 6](/ko/math/symplectic_geometry/morse_stationary_phase#thm6)을 사용하여 $W_q$를 quadratic form으로 환원한 뒤 Gaussian 적분을 적용하는 것이다. 어쨌든 우리 상황에서 중요한 것은 $z \rightarrow 0^+$일 때 oscillating integral이 *각 critical point의 local data*, 즉 critical value $W_q(p)$와 Hessian determinant로 완전히 결정된다는 사실이다. 특히 mirror symmetry isomorphism $\Jac(W_q) \cong QH^\ast(X_\Sigma)$ 관점에서, critical value들 $\{ W_q(p) \}$는 A-side에서는 quantum cohomology의 *canonical coordinate*로 해석된다.
+증명의 핵심은 $p$ 근방에서 [\[사교기하학\] §Morse 이론과 stationary phase 근사, ⁋정리 6](/ko/math/symplectic_geometry/morse_stationary_phase#thm6){: data-relation="required" }을 사용하여 $W_q$를 quadratic form으로 환원한 뒤 Gaussian 적분을 적용하는 것이다. 어쨌든 우리 상황에서 중요한 것은 $z \rightarrow 0^+$일 때 oscillating integral이 *각 critical point의 local data*, 즉 critical value $W_q(p)$와 Hessian determinant로 완전히 결정된다는 사실이다. 특히 mirror symmetry isomorphism $\Jac(W_q) \cong QH^\ast(X_\Sigma)$ 관점에서, critical value들 $\{ W_q(p) \}$는 A-side에서는 quantum cohomology의 *canonical coordinate*로 해석된다.
 
 ## 가우스-마닌 접속
 
@@ -108,14 +108,14 @@ $$\mathcal{H}_{(q, z)} := H^N(\check{X}, \{ \Real(W_q/z) \ll 0 \};\, \mathbb{C})
 
 $$\{\mathcal{H}_{(q, z)}\}_{(q, z) \in B}$$
 
-를 생각한다. 각각의 점 $(q,z)$에서 이들은 위의 cohomology의 원소로서, rapidly decay homology의 원소와 pairing되어 값을 주는 것이 그 본질이다. Rapid decay homology는 Lefschetz thimble들을 그 basis로 가지므로, [정의 2](#def2)를 생각하면 위의 cohomology의 원소는 $[e^{W_q/z}\omega]$로 그 representative를 잡는 것이 자연스럽다. 
+를 생각한다. 각각의 점 $(q,z)$에서 이들은 위의 cohomology의 원소로서, rapidly decay homology의 원소와 pairing되어 값을 주는 것이 그 본질이다. Rapid decay homology는 Lefschetz thimble들을 그 basis로 가지므로, [정의 2](#def2){: data-relation="weak" }를 생각하면 위의 cohomology의 원소는 $[e^{W_q/z}\omega]$로 그 representative를 잡는 것이 자연스럽다. 
 
 이 family는 만일 $W_q$가 Morse type이라면 $B$ 위에 정의된 vector bundle $\mathcal{H}$를 정의한다는 것이 알려져 있다. 특히 이들 각각의 fiber가 잘 붙는다는 것은 앞서 Lefschetz thimble을 택할 때 $(q,z)$에 따라 continuously isotoped될 수 있는 것들을 모았기 때문에 가능하다. 즉, cycle $\Gamma$가 $(q, z)$의 변화에 따라 연속적으로 움직일 때 그와 pairing되는 cohomology class도 함께 "따라가도록" 평행 이동시킬 수 있고, 이 평행 이동을 connection 형태로 정리한 것이 *Gauss-Manin connection*이다.
 
 ::: 정의 4 (Gauss-Manin connection)
 Vector bundle $\mathcal{H} \rightarrow (\mathbb{C}^\ast)^r \times \mathbb{C}^\ast$ 위의 *Gauss-Manin connection<sub>가우스-마닌 접속</sub>* $\nabla^{GM}$은 다음 조건으로 유일하게 결정되는 flat connection이다.
 
-> Section $\mathbf{s}: (q, z) \mapsto [\alpha(q, z)] \in \mathcal{H}_{(q,z)}$가 *$\nabla^{GM}$-flat*이라는 것은, [정의 2](#def2) 직후의 의미로 continuously isotoped된 *임의의* cycle family $\{\Gamma(q, z)\}$에 대해 *period<sub>주기</sub>*
+> Section $\mathbf{s}: (q, z) \mapsto [\alpha(q, z)] \in \mathcal{H}_{(q,z)}$가 *$\nabla^{GM}$-flat*이라는 것은, [정의 2](#def2){: data-relation="required" } 직후의 의미로 continuously isotoped된 *임의의* cycle family $\{\Gamma(q, z)\}$에 대해 *period<sub>주기</sub>*
 > 
 > $\Pi_\Gamma(q, z) := \int_{\Gamma(q, z)} \alpha(q, z)$
 > 
@@ -144,7 +144,7 @@ $$\partial_{q_i}\!\left(e^{W_q/z}\,\omega\right) = \frac{\partial_{q_i} W_q}{z}\
 
 ## B-model connection
 
-[§두브로빈 접속, ⁋정의 1](/ko/math/mirror_symmetry/dubrovin_connection#def1)의 A-model Dubrovin connection $\nabla^z$와 직접 비교 가능하도록, Gauss-Manin connection을 $z$만큼 rescaling한 *B-model connection*을 정의한다.
+[§두브로빈 접속, ⁋정의 1](/ko/math/mirror_symmetry/dubrovin_connection#def1){: data-relation="weak" }의 A-model Dubrovin connection $\nabla^z$와 직접 비교 가능하도록, Gauss-Manin connection을 $z$만큼 rescaling한 *B-model connection*을 정의한다.
 
 ::: 정의 6 (B-model connection)
 $\mathcal{H}$ 위에 *B-model connection<sub>B-모델 접속</sub>* $\nabla^z_B$을
@@ -154,17 +154,17 @@ $$\nabla^z_B := z\nabla^{GM}$$
 으로 정의한다. 
 :::
 
-명시적으로, frame $[e^{W_q/z}\omega]$에 B-model connection을 적용해보면 [명제 5](#prop5)에서 
+명시적으로, frame $[e^{W_q/z}\omega]$에 B-model connection을 적용해보면 [명제 5](#prop5){: data-relation="required" }에서 
 
 $$\nabla^z_{B, \partial_{q_i}}[e^{W_q/z}\omega] = \partial_{q_i} W_q \cdot [e^{W_q/z}\omega],\qquad \nabla^z_{B, z\partial_z}[e^{W_q/z}\omega] = -W_q \cdot [e^{W_q/z}\omega]$$
 
-가 성립한다. 이 rescaling으로 [명제 5](#prop5)의 $1/z$ 인자가 흡수되므로, $z \rightarrow 0$ 극한에서 B-model connection의 connection 1-form은 정확하게 cohomology class에 대한 $\partial_{q_i} W_q$의 곱셈이 된다. 이는 앞서 [§두브로빈 접속, ⁋주장 4](/ko/math/mirror_symmetry/dubrovin_connection#conj4)에서 살펴본 것과 같은 맥락으로, $z\rightarrow 0$인 상황에서 Frobenius manifold $M\times \mathbb{C}^\ast$에서 $z$를 $0$으로 보낼 때 Frobenius algebra의 product 구조를 복원해내는 것과 동일한 상황이다.
+가 성립한다. 이 rescaling으로 [명제 5](#prop5){: data-relation="required" }의 $1/z$ 인자가 흡수되므로, $z \rightarrow 0$ 극한에서 B-model connection의 connection 1-form은 정확하게 cohomology class에 대한 $\partial_{q_i} W_q$의 곱셈이 된다. 이는 앞서 [§두브로빈 접속, ⁋주장 4](/ko/math/mirror_symmetry/dubrovin_connection#conj4){: data-relation="weak" }에서 살펴본 것과 같은 맥락으로, $z\rightarrow 0$인 상황에서 Frobenius manifold $M\times \mathbb{C}^\ast$에서 $z$를 $0$으로 보낼 때 Frobenius algebra의 product 구조를 복원해내는 것과 동일한 상황이다.
 
 위의 식은 cohomology class 차원의 statement이므로, 이를 구체적으로 계산하려면 임의의 Lefschetz thimble (즉 rapid decay homology의 basis)와 pair하여 실제 적분을 계산하면 된다. 그 결과는 다음의 
 
 $$z\,\partial_{q_i}\mathcal{I}_\Gamma = \int_\Gamma \partial_{q_i}W_q\cdot e^{W_q/z}\,\omega,\qquad z^2\,\partial_z\mathcal{I}_\Gamma = -\int_\Gamma W_q\cdot e^{W_q/z}\,\omega \tag{$\ast$}$$
 
-이다. 그런데 ($\ast$)의 우변은 우리가 알고 있는 [정의 2](#def2)의 형태와는 다른 것으로, 이를 해결하기 위해서는 $f$가 rapid decay homology의 decaying condition을 깨지 않는 한에서 $f e^{W_q/z}\omega$ 꼴로 integrand를 넓혀주어야 한다. Thimble $\Gamma$의 boundary 부근에서 $\lvert e^{W_q/z}\rvert = e^{\Real(W_q/z)}$가 지수적으로 $0$으로 사라지므로, $f$가 polynomial 정도의 성장만 한다면 충분히 컨트롤이 가능하며 따라서 자연스러운 함수 공간은 regular function들의 공간 $\mathcal{O}(\check{X})$이다. 
+이다. 그런데 ($\ast$)의 우변은 우리가 알고 있는 [정의 2](#def2){: data-relation="required" }의 형태와는 다른 것으로, 이를 해결하기 위해서는 $f$가 rapid decay homology의 decaying condition을 깨지 않는 한에서 $f e^{W_q/z}\omega$ 꼴로 integrand를 넓혀주어야 한다. Thimble $\Gamma$의 boundary 부근에서 $\lvert e^{W_q/z}\rvert = e^{\Real(W_q/z)}$가 지수적으로 $0$으로 사라지므로, $f$가 polynomial 정도의 성장만 한다면 충분히 컨트롤이 가능하며 따라서 자연스러운 함수 공간은 regular function들의 공간 $\mathcal{O}(\check{X})$이다. 
 
 문제는 이렇게 정의할 경우 regular function들의 모임은 (벡터공간으로서) 무한차원이므로 이들을 모두 추가하는 것이 불가능하다는 것에 있다. 이를 해결하기 위해 우리는 period integral을 사용해서 pairing을 정의할 경우, 그 값이 cohomology class에만 의존한다는 것을 관찰한다. 이는 만일 $f, g \in \mathcal{O}(\check{X})$가 같은 cohomology class를 정의한다면, 즉 만일 적당한 rapid decay form $\alpha$에 대하여 다음의 식 $(f-g)\cdot e^{W_q/z}\omega = \dd{\alpha}$이 성립한다면, Stokes 정리로부터
 
@@ -202,7 +202,7 @@ $$z\,\partial_{q_i}\mathcal{I}^a_p = \sum_b (M_i)^a_b\,\mathcal{I}^b_p,\qquad z^
 을 만족한다. 특히 $\mathcal{I}$는 invertible matrix-valued function이며, frame $\{e_a\}_a$로 trivialize한 B-model connection $\nabla^z_B$의 *fundamental solution matrix*를 이룬다.
 :::
 
-구체적으로, $\{[\Gamma_p]\}$의 dual basis $\{f^p\}\subseteq\mathcal{H}_{(q,z)}$는 [정의 4](#def4)에 의해 $\nabla^z_B$의 *horizontal sections*이고, $\mathcal{H}$ 안에서 non-flat frame $\{e_a\}$와 flat frame $\{f^p\}$ 사이의 change-of-basis가 정확히
+구체적으로, $\{[\Gamma_p]\}$의 dual basis $\{f^p\}\subseteq\mathcal{H}_{(q,z)}$는 [정의 4](#def4){: data-relation="required" }에 의해 $\nabla^z_B$의 *horizontal sections*이고, $\mathcal{H}$ 안에서 non-flat frame $\{e_a\}$와 flat frame $\{f^p\}$ 사이의 change-of-basis가 정확히
 
 $$e_a = \sum_p \mathcal{I}^a_p\,f^p,\qquad f^p = \sum_a (\mathcal{I}^{-1})^p_a\,e_a$$
 
@@ -211,7 +211,7 @@ $$e_a = \sum_p \mathcal{I}^a_p\,f^p,\qquad f^p = \sum_a (\mathcal{I}^{-1})^p_a\,
 ## 예시: $\mathbb{P}^n$의 oscillating integral
 
 ::: 예시 8 ($X = \mathbb{P}^n$)
-[§거울대칭 개요, ⁋정의 4](/ko/math/mirror_symmetry/overview#def4)로부터 $\mathbb{P}^n$의 Hori-Vafa mirror는
+[§거울대칭 개요, ⁋정의 4](/ko/math/mirror_symmetry/overview#def4){: data-relation="required" }로부터 $\mathbb{P}^n$의 Hori-Vafa mirror는
 
 $$\check{X} = (\mathbb{C}^\ast)^n,\qquad W_q = \x_1 + \cdots + \x_n + \frac{q}{\x_1 \cdots \x_n},\qquad \omega = \frac{\dd{\x_1} \wedge \cdots \wedge \dd{\x_n}}{\x_1 \cdots \x_n}$$
 
@@ -231,7 +231,7 @@ $$\partial_qW_q = \x^{-n} = \x/q,\qquad W_q = n\x + q\cdot\x/q = (n+1)\x$$
 
 $$M_q = \begin{pmatrix} 0 & 1/q & & & \\ & 0 & 1/q & & \\ & & \ddots & \ddots & \\ & & & 0 & 1/q \\ 1 & & & & 0\end{pmatrix},\qquad E = (n+1)qM_q$$
 
-이다. 이제 [명제 7](#prop7)에 따라 period matrix $\mathcal{I}^a_p(q,z)$는 
+이다. 이제 [명제 7](#prop7){: data-relation="required" }에 따라 period matrix $\mathcal{I}^a_p(q,z)$는 
 
 $$z\partial_q\mathcal{I}^a_p = \sum_b (M_q)^a_b\mathcal{I}^b_p$$
 
@@ -247,11 +247,11 @@ $$z\partial_q\mathcal{I}_p^n=\mathcal{I}_p^0$$
 
 $$(z\partial_q)\bigl(qz\partial_q\bigr)^n\,\mathcal{I}^0_p = \mathcal{I}^0_p$$
 
-를 얻으며, 이것이 곧 $\mathbb{P}^n$의 quantum differential equation으로, A-side $J$-function이 만족하는 hypergeometric ODE와 동일하다. Stationary phase asymptotic의 경우, $\omega$가 standard volume form이 되는 coordinate는 $u_i = \log\x_i$이므로 [명제 3](#prop3)의 Hessian은 $u$에 대해 계산해야 한다. $x_\zeta$에서 $\partial_{u_i}\partial_{u_j} W_q$는 대각 $2x_\zeta$, 비대각 $x_\zeta$ ($\mathbf{1} := (1,\ldots,1)^\top$)이므로
+를 얻으며, 이것이 곧 $\mathbb{P}^n$의 quantum differential equation으로, A-side $J$-function이 만족하는 hypergeometric ODE와 동일하다. Stationary phase asymptotic의 경우, $\omega$가 standard volume form이 되는 coordinate는 $u_i = \log\x_i$이므로 [명제 3](#prop3){: data-relation="required" }의 Hessian은 $u$에 대해 계산해야 한다. $x_\zeta$에서 $\partial_{u_i}\partial_{u_j} W_q$는 대각 $2x_\zeta$, 비대각 $x_\zeta$ ($\mathbf{1} := (1,\ldots,1)^\top$)이므로
 
 $$\Hess_{x_\zeta}(W_q) = x_\zeta\bigl(I_n + \mathbf{1}\mathbf{1}^\top\bigr),\qquad \det \Hess_{x_\zeta}(W_q) = (n+1)\,(\zeta\,q^{1/(n+1)})^{n}$$
 
-이고 critical value $W_q(x_\zeta) = (n+1)\,\zeta\,q^{1/(n+1)}$이므로 [명제 3](#prop3)에 의해
+이고 critical value $W_q(x_\zeta) = (n+1)\,\zeta\,q^{1/(n+1)}$이므로 [명제 3](#prop3){: data-relation="required" }에 의해
 
 $$\mathcal{I}_{\Gamma_{x_\zeta}}(q, z) \sim (2\pi z)^{n/2}\,\frac{\exp\bigl((n+1)\,\zeta\,q^{1/(n+1)}/z\bigr)}{\sqrt{(n+1)(\zeta\,q^{1/(n+1)})^{n}}}\,(1 + O(z))$$
 
@@ -267,4 +267,4 @@ $$\mathcal{I}_{\Gamma_{x_\zeta}}(q, z) \sim (2\pi z)^{n/2}\,\frac{\exp\bigl((n+1
 
 ---
 
-[^1]: 여기서 $m_1, \ldots, m_N$은 character lattice $M$의 $\mathbb{Z}$-basis이다 ([\[토릭 기하학\] §토릭 다양체 위의 로그 미분형식, ⁋명제 13](/ko/math/toric_geometry/logarithmic_differentials#prop13)).
+[^1]: 여기서 $m_1, \ldots, m_N$은 character lattice $M$의 $\mathbb{Z}$-basis이다 ([\[토릭 기하학\] §토릭 다양체 위의 로그 미분형식, ⁋명제 13](/ko/math/toric_geometry/logarithmic_differentials#prop13){: data-relation="weak" }).
