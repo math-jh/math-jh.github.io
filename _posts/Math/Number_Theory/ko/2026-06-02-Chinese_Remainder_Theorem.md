@@ -14,7 +14,7 @@ weight: 7
 published: false
 ---
 
-[§일차 합동식](/ko/math/number_theory/linear_congruences)은 하나의 법에 대한 방정식을 다루었다. 이제 서로 다른 여러 법에 대한 조건을 동시에 부과한다. 법들이 쌍마다 서로소이면 이러한 연립은 언제나 유일한 해를 가진다는 것이 중국인의 나머지 정리로, 정수론과 대수학 전반에서 "법별로 따로 풀어 합치는" 분해 원리의 출발점이다.
+[§일차 합동식](/ko/math/number_theory/linear_congruences){: data-relation="weak" }은 하나의 법에 대한 방정식을 다루었다. 이제 서로 다른 여러 법에 대한 조건을 동시에 부과한다. 법들이 쌍마다 서로소이면 이러한 연립은 언제나 유일한 해를 가진다는 것이 중국인의 나머지 정리로, 정수론과 대수학 전반에서 "법별로 따로 풀어 합치는" 분해 원리의 출발점이다.
 
 ## 두 법에 대한 정리
 
@@ -27,9 +27,9 @@ $$x \equiv a \pmod m, \qquad x \equiv b \pmod n$$
 :::
 
 ::: 증명
-*존재성.* $\gcd(m, n) = 1$이므로 [§유클리드 호제법과 Bézout 항등식, ⁋정리 3](/ko/math/number_theory/euclidean_algorithm#thm3)으로 $mu + nv = 1$인 정수 $u, v$가 있다. $x_0 = a\,nv + b\,mu$로 두면, $nv = 1 - mu \equiv 1 \pmod m$이므로 $x_0 \equiv a\cdot 1 + 0 = a \pmod m$이고, symmetric으로 $mu \equiv 1 \pmod n$이므로 $x_0 \equiv b \pmod n$이다. 따라서 $x_0$이 해이다.
+*존재성.* $\gcd(m, n) = 1$이므로 [§유클리드 호제법과 Bézout 항등식, ⁋정리 3](/ko/math/number_theory/euclidean_algorithm#thm3){: data-relation="required" }으로 $mu + nv = 1$인 정수 $u, v$가 있다. $x_0 = a\,nv + b\,mu$로 두면, $nv = 1 - mu \equiv 1 \pmod m$이므로 $x_0 \equiv a\cdot 1 + 0 = a \pmod m$이고, symmetric으로 $mu \equiv 1 \pmod n$이므로 $x_0 \equiv b \pmod n$이다. 따라서 $x_0$이 해이다.
 
-*유일성.* $x_0, x_1$이 모두 해이면 $x_0 - x_1$이 $m$과 $n$ 모두로 나누어떨어진다. $x_0 - x_1 = ms$로 쓰면 $n \mid ms$이고 $\gcd(n, m) = 1$이므로 [§나눗셈과 최대공약수, ⁋명제 9](/ko/math/number_theory/divisibility#prop9)로 $n \mid s$이다. 따라서 $mn \mid (x_0 - x_1)$이고 $x_0 \equiv x_1 \pmod{mn}$이다.
+*유일성.* $x_0, x_1$이 모두 해이면 $x_0 - x_1$이 $m$과 $n$ 모두로 나누어떨어진다. $x_0 - x_1 = ms$로 쓰면 $n \mid ms$이고 $\gcd(n, m) = 1$이므로 [§나눗셈과 최대공약수, ⁋명제 9](/ko/math/number_theory/divisibility#prop9){: data-relation="required" }로 $n \mid s$이다. 따라서 $mn \mid (x_0 - x_1)$이고 $x_0 \equiv x_1 \pmod{mn}$이다.
 :::
 
 ::: 예시 2
@@ -55,7 +55,7 @@ $m_1, \ldots, m_r$이 쌍마다 서로소이고 $M = \prod m_i$이면, coset을 
 
 $$\mathbb{Z}/M\mathbb{Z} \;\xrightarrow{\;\sim\;}\; \mathbb{Z}/m_1\mathbb{Z} \times \cdots \times \mathbb{Z}/m_r\mathbb{Z}, \qquad [x] \mapsto ([x]_{m_1}, \ldots, [x]_{m_r})$$
 
-는 ring의 동형이다. 따름정리 3은 이 morphism이 전단사임을 말하며, 사칙연산과의 호환은 합동의 연산 성질에서 따른다 ([§합동식, ⁋명제 3](/ko/math/number_theory/congruences#prop3)).
+는 ring의 동형이다. 따름정리 3은 이 morphism이 전단사임을 말하며, 사칙연산과의 호환은 합동의 연산 성질에서 따른다 ([§합동식, ⁋명제 3](/ko/math/number_theory/congruences#prop3){: data-relation="required" }).
 :::
 
 이 분해는 법 $M$에 대한 계산을 서로소인 소수 거듭제곱 법들로 쪼개어 처리하게 해 준다. 그 직접적 귀결로 오일러 $\varphi$ 함수의 곱셈성이 따른다.
@@ -73,7 +73,7 @@ $$x \equiv \sum_{i=1}^{r} a_i M_i N_i \pmod{M}$$
 :::
 
 ::: 증명
-먼저 $\gcd(M_i, m_i) = 1$임을 본다. $M_i = \prod_{j \neq i} m_j$는 $m_i$와 서로소인 인수들의 곱이고, $m_i$와 서로소인 수들의 곱은 다시 $m_i$와 서로소이므로 ([§유클리드 호제법과 Bézout 항등식](/ko/math/number_theory/euclidean_algorithm)의 결과로 얻는다) $\gcd(M_i, m_i) = 1$이다. 따라서 곱셈 역원 $N_i \equiv M_i^{-1} \pmod{m_i}$가 존재한다. 이제 $x = \sum_{k} a_k M_k N_k$를 고정된 법 $m_i$로 환원하자. $j \neq i$이면 $m_i \mid M_j$이므로 $M_j N_j \equiv 0 \pmod{m_i}$이고, $k = i$인 항만 살아남아
+먼저 $\gcd(M_i, m_i) = 1$임을 본다. $M_i = \prod_{j \neq i} m_j$는 $m_i$와 서로소인 인수들의 곱이고, $m_i$와 서로소인 수들의 곱은 다시 $m_i$와 서로소이므로 ([§유클리드 호제법과 Bézout 항등식](/ko/math/number_theory/euclidean_algorithm){: data-relation="required" }의 결과로 얻는다) $\gcd(M_i, m_i) = 1$이다. 따라서 곱셈 역원 $N_i \equiv M_i^{-1} \pmod{m_i}$가 존재한다. 이제 $x = \sum_{k} a_k M_k N_k$를 고정된 법 $m_i$로 환원하자. $j \neq i$이면 $m_i \mid M_j$이므로 $M_j N_j \equiv 0 \pmod{m_i}$이고, $k = i$인 항만 살아남아
 
 $$\begin{aligned}
 x &= \sum_{k=1}^{r} a_k M_k N_k \\
@@ -139,7 +139,7 @@ $$x \equiv a \pmod m, \qquad x \equiv b \pmod n$$
 ::: 증명
 $d = \gcd(m, n)$으로 두자. $x$가 해이면 $x - a$가 $m$의 배수, 따라서 $d$의 배수이고, $x - b$도 $d$의 배수이므로 그 차 $(x - a) - (x - b) = b - a$가 $d$로 나누어떨어진다. 즉 $d \mid (a - b)$가 필요조건이다.
 
-역으로 $d \mid (a - b)$라 하자. 첫 식에서 $x = a + m t$로 쓰고 둘째 식에 넣으면 $a + mt \equiv b \pmod n$, 곧 $mt \equiv b - a \pmod n$이다. 이 $t$에 관한 일차 합동식은 $\gcd(m, n) = d$가 우변 $b - a$를 나누므로 ([§일차 합동식, ⁋정리 1](/ko/math/number_theory/linear_congruences#thm1)) 해를 가진다. 그러한 $t$를 하나 잡으면 $x = a + mt$가 연립의 해이다.
+역으로 $d \mid (a - b)$라 하자. 첫 식에서 $x = a + m t$로 쓰고 둘째 식에 넣으면 $a + mt \equiv b \pmod n$, 곧 $mt \equiv b - a \pmod n$이다. 이 $t$에 관한 일차 합동식은 $\gcd(m, n) = d$가 우변 $b - a$를 나누므로 ([§일차 합동식, ⁋정리 1](/ko/math/number_theory/linear_congruences#thm1){: data-relation="required" }) 해를 가진다. 그러한 $t$를 하나 잡으면 $x = a + mt$가 연립의 해이다.
 
 유일성은 다음과 같다. $x_0, x_1$이 모두 해이면 $x_0 - x_1$이 $m$과 $n$의 공배수, 즉 $\lcm(m, n)$의 배수이므로 $x_0 \equiv x_1 \pmod{\lcm(m, n)}$이다. $\gcd(m, n) = 1$인 특수한 경우에는 $d = 1$이 항상 $a - b$를 나누고 $\lcm(m, n) = mn$이 되어 정리 1로 환원된다.
 :::
