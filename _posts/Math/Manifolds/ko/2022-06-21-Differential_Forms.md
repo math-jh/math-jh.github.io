@@ -15,7 +15,7 @@ weight: 12
 
 ## 벡터다발들
 
-[§접다발과 여접다발, ⁋예시 5](/ko/math/manifolds/tangent_and_cotangent_bundles#ex5)와 [§접다발과 여접다발, ⁋정리 6](/ko/math/manifolds/tangent_and_cotangent_bundles#thm6)을 이용하면 다음을 정의할 수 있다.
+[§접다발과 여접다발, ⁋예시 5](/ko/math/manifolds/tangent_and_cotangent_bundles#ex5){: data-relation="required" }와 [§접다발과 여접다발, ⁋정리 6](/ko/math/manifolds/tangent_and_cotangent_bundles#thm6){: data-relation="required" }을 이용하면 다음을 정의할 수 있다.
 
 ::: 정의 1
 Manifold $M$에 대하여, 
@@ -37,7 +37,7 @@ $$\omega=\alpha^1\otimes\cdots\otimes \alpha^r\otimes u_{r+1}\otimes\cdots\otime
 
 $$(\omega,u)=\alpha^1(u_1)\alpha^2(u_2)\cdots \alpha^{r+s}(u_{r+s})$$
 
-으로 정의하자. 그럼 $(-,-)$은 non-degenerate pairing이므로 $\mathcal{T}^{r,s}(T_p^\ast M)\cong\mathcal{T}^{r,s}(T_pM)^\ast$이 성립한다. ([\[선형대수학\] §쌍대공간, ⁋따름정리 5](/ko/math/linear_algebra/dual_space#cor5))
+으로 정의하자. 그럼 $(-,-)$은 non-degenerate pairing이므로 $\mathcal{T}^{r,s}(T_p^\ast M)\cong\mathcal{T}^{r,s}(T_pM)^\ast$이 성립한다. ([\[선형대수학\] §쌍대공간, ⁋따름정리 5](/ko/math/linear_algebra/dual_space#cor5){: data-relation="required" })
 
 이와 유사하게, 두 원소
 
@@ -59,7 +59,7 @@ $$\bigwedge(T_p^\ast M)=\bigoplus_{k\geq 0}\bigwedge\nolimits^k(T_p^\ast M)\cong
 
 ## 미분형식과 pullback
 
-위의 [정의 1](#def1) 중 특히 $\Omega^\ast(M)$의 원소들이 관심의 대상이 된다. 정의에 의하여 임의의 differential form $\omega\in\Omega^\ast(M)$은 함수 $M\rightarrow\bigwedge\nolimits^\ast(M)$이며, 이 함수값을
+위의 [정의 1](#def1){: data-relation="required" } 중 특히 $\Omega^\ast(M)$의 원소들이 관심의 대상이 된다. 정의에 의하여 임의의 differential form $\omega\in\Omega^\ast(M)$은 함수 $M\rightarrow\bigwedge\nolimits^\ast(M)$이며, 이 함수값을
 
 $$p\mapsto \omega_p\in\bigwedge(T_p^\ast M)$$
 
@@ -77,7 +77,7 @@ $$\Omega^\ast(M)=\bigoplus_{k=0}^n\Omega^k(M)$$
 
 $$\bigwedge({\dd{F}}_p^\ast):\bigwedge(T_{F(p)}^\ast N)\rightarrow\bigwedge(T_p^\ast M)$$
 
-를 얻는다. ([\[다중선형대수학\] §텐서대수, ⁋명제 11](/ko/math/multilinear_algebra/tensor_algebras#prop11)) 각 점 $p$마다 $\bigwedge({\dd{F}}_p^\ast)$를 대응시켜 얻은 linear map $\Omega^\ast(N)\rightarrow\Omega^\ast(M)$을 $F^\ast$로 적자. 즉 임의의 $\omega\in\Omega^\ast(N)$에 대하여
+를 얻는다. ([\[다중선형대수학\] §텐서대수, ⁋명제 11](/ko/math/multilinear_algebra/tensor_algebras#prop11){: data-relation="required" }) 각 점 $p$마다 $\bigwedge({\dd{F}}_p^\ast)$를 대응시켜 얻은 linear map $\Omega^\ast(N)\rightarrow\Omega^\ast(M)$을 $F^\ast$로 적자. 즉 임의의 $\omega\in\Omega^\ast(N)$에 대하여
 
 $$(F^\ast\omega)_p=\bigwedge({\dd{F}}_p^\ast)(\omega_{F(p)})$$
 
@@ -91,7 +91,7 @@ $$(F^\ast\omega)_p(X_1(p),\ldots, X_k(p))=(F^\ast_p\omega_{F(p)})\bigl(X_1(p),\l
 
 ## 외미분과 드람 코호몰로지
 
-각 점 $p$에서 $\bigwedge\nolimits^0(T_p^\ast M)=\mathbb{R}$이므로 [정의 1](#def1)의 $\Omega^0(M)$은 $C^\infty(M)$과 같다. 임의의 $f\in C^\infty(M)$에 대하여, 그 differential $\dd{f}$는 각 점 $p\in M$을 받아 $\dd{f_p}:T_pM\rightarrow\mathbb{R}$를 내놓는 함수이다. ([§미분사상의 예시들, ⁋정의 6](/ko/math/manifolds/examples_of_differentials#def6)) 즉, $\dd{f}\in\Gamma(T^\ast M)=\Omega^1(M)$이다. 이 operator $d$는 다음과 같이 일반적인 differential form에 대해서도 정의된다.
+각 점 $p$에서 $\bigwedge\nolimits^0(T_p^\ast M)=\mathbb{R}$이므로 [정의 1](#def1){: data-relation="required" }의 $\Omega^0(M)$은 $C^\infty(M)$과 같다. 임의의 $f\in C^\infty(M)$에 대하여, 그 differential $\dd{f}$는 각 점 $p\in M$을 받아 $\dd{f_p}:T_pM\rightarrow\mathbb{R}$를 내놓는 함수이다. ([§미분사상의 예시들, ⁋정의 6](/ko/math/manifolds/examples_of_differentials#def6){: data-relation="required" }) 즉, $\dd{f}\in\Gamma(T^\ast M)=\Omega^1(M)$이다. 이 operator $d$는 다음과 같이 일반적인 differential form에 대해서도 정의된다.
 
 ::: 정리 2
 Manifold $M$에 대하여, degree $1$의 anti-derivation $d:\Omega^\ast(M)\rightarrow\Omega^\ast(M)$가 유일하게 존재하여 다음의 두 조건을 만족한다. (증명은 **[War]**를 보라.)

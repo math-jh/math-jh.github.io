@@ -16,7 +16,7 @@ last_polished_at: 2026-06-01T08:30:06+00:00
 ---
 ## Vector Bundles
 
-Using [§Tangent and Cotangent Bundles, ⁋Example 5](/en/math/manifolds/tangent_and_cotangent_bundles#ex5) and [§Tangent and Cotangent Bundles, ⁋Theorem 6](/en/math/manifolds/tangent_and_cotangent_bundles#thm6), we can make the following definitions.
+Using [§Tangent and Cotangent Bundles, ⁋Example 5](/en/math/manifolds/tangent_and_cotangent_bundles#ex5){: data-relation="required" } and [§Tangent and Cotangent Bundles, ⁋Theorem 6](/en/math/manifolds/tangent_and_cotangent_bundles#thm6){: data-relation="required" }, we can make the following definitions.
 
 ::: Definition 1
 For a manifold $M$, we define
@@ -38,7 +38,7 @@ we define
 
 $$(\omega,u)=\alpha^1(u_1)\alpha^2(u_2)\cdots \alpha^{r+s}(u_{r+s}).$$
 
-Then $(-,-)$ is a non-degenerate pairing, so $\mathcal{T}^{r,s}(T_p^\ast M)\cong\mathcal{T}^{r,s}(T_pM)^\ast$. ([\[Linear Algebra\] §Dual Space, ⁋Corollary 5](/en/math/linear_algebra/dual_space#cor5))
+Then $(-,-)$ is a non-degenerate pairing, so $\mathcal{T}^{r,s}(T_p^\ast M)\cong\mathcal{T}^{r,s}(T_pM)^\ast$. ([\[Linear Algebra\] §Dual Space, ⁋Corollary 5](/en/math/linear_algebra/dual_space#cor5){: data-relation="required" })
 
 Similarly, for two elements
 
@@ -60,7 +60,7 @@ holds.
 
 ## Differential Forms and Pullback
 
-Among the objects introduced in [Definition 1](#def1), the elements of $\Omega^\ast(M)$ are of particular interest. By definition, any differential form $\omega\in\Omega^\ast(M)$ is a function $M\rightarrow\bigwedge\nolimits^\ast(M)$, and we write its values as
+Among the objects introduced in [Definition 1](#def1){: data-relation="required" }, the elements of $\Omega^\ast(M)$ are of particular interest. By definition, any differential form $\omega\in\Omega^\ast(M)$ is a function $M\rightarrow\bigwedge\nolimits^\ast(M)$, and we write its values as
 
 $$p\mapsto \omega_p\in\bigwedge\nolimits^\ast(T_pM).$$
 
@@ -78,7 +78,7 @@ Now suppose a $C^\infty$ function $F:M\rightarrow N$ is given. Then the linear m
 
 $$\bigwedge({\dd{F}}_p^\ast):\bigwedge(T_{F(p)}^\ast N)\rightarrow\bigwedge(T_p^\ast M).$$
 
-([\[Multilinear Algebra\] §Tensor Algebra, ⁋Definition 10](/en/math/multilinear_algebra/tensor_algebras#def10)) Let $F^\ast$ denote the linear map $\Omega^\ast(N)\rightarrow\Omega^\ast(M)$ obtained by assigning $\bigwedge({\dd{F}}_p^\ast)$ to each point $p$. That is, for any $\omega\in\Omega^\ast(N)$,
+([\[Multilinear Algebra\] §Tensor Algebra, ⁋Definition 10](/en/math/multilinear_algebra/tensor_algebras#def10){: data-relation="required" }) Let $F^\ast$ denote the linear map $\Omega^\ast(N)\rightarrow\Omega^\ast(M)$ obtained by assigning $\bigwedge({\dd{F}}_p^\ast)$ to each point $p$. That is, for any $\omega\in\Omega^\ast(N)$,
 
 $$(F^\ast\omega)_p=\bigwedge({\dd{F}}_p^\ast)(\omega_{F(p)}).$$
 
@@ -90,7 +90,7 @@ $$(F^\ast\omega)_p(X_1(p),\ldots, X_k(p))=(F^\ast_p\omega_{F(p)})\bigl(X_1(p),\l
 
 ## Exterior Derivative and de Rham Cohomology
 
-Earlier we verified that $\Omega^0(M)=C^\infty(M)$. For any $f\in C^\infty(M)$, its differential $\dd{f}$ is the function that takes each point $p\in M$ and outputs $\dd{f_p}:T_pM\rightarrow\mathbb{R}$. ([§Examples of Differentials, ⁋Definition 6](/en/math/manifolds/examples_of_differentials#def6)) That is, $\dd{f}\in T^\ast M=\Omega^1(M)$. This operator $d$ is defined for general differential forms as follows.
+Earlier we verified that $\Omega^0(M)=C^\infty(M)$. For any $f\in C^\infty(M)$, its differential $\dd{f}$ is the function that takes each point $p\in M$ and outputs $\dd{f_p}:T_pM\rightarrow\mathbb{R}$. ([§Examples of Differentials, ⁋Definition 6](/en/math/manifolds/examples_of_differentials#def6){: data-relation="required" }) That is, $\dd{f}\in T^\ast M=\Omega^1(M)$. This operator $d$ is defined for general differential forms as follows.
 
 ::: Theorem 2
 For a manifold $M$, there exists a unique degree $1$ anti-derivation $d:\Omega^\ast(M)\rightarrow\Omega^\ast(M)$ satisfying the following two conditions. (See **[War]** for a proof.)
