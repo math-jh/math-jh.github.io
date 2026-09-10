@@ -17,7 +17,7 @@ published: false
 
 표현론의 기본적인 전략은 추상적인 대수적 대상을 벡터공간 위의 선형사상으로 실현하여 선형대수학의 언어로 분석하는 것이다. 앞선 글들에서 우리는 finite group $G$와 유한차원 가환대수를 그러한 방식으로 다루었다. 이번 글에서 우리는 *quiver*, 곧 유향그래프를 출발점으로 삼는다. Quiver $Q$ 하나에는 *path algebra* $kQ$라 부르는 결합대수가 자연스럽게 따라붙으며, $Q$의 *representation*은 각 vertex에 벡터공간을, 각 arrow에 선형사상을 얹은 자료이다. 이 글의 핵심은 $Q$의 representation들이 이루는 category가 $kQ$ 위의 left module들이 이루는 category와 동치라는 것이다. 이 동치는 이어지는 논의들의 토대가 된다.
 
-이 글에서 $k$는 field를 가리킨다. Quiver는 vertex의 집합과 arrow의 집합이 모두 유한한 경우만을 다루며, 대수와 module의 일반론은 [\[대수적 구조\] §대수](/ko/math/algebraic_structures/algebras)와 [\[대수적 구조\] §가군](/ko/math/algebraic_structures/modules)에서 다룬 것을 따른다. 특히 associative unital $k$-algebra란 곱셈이 결합법칙을 만족하고 항등원을 가지는 $k$-algebra를 뜻한다 ([\[대수적 구조\] §대수, ⁋정의 1](/ko/math/algebraic_structures/algebras#def1)).
+이 글에서 $k$는 field를 가리킨다. Quiver는 vertex의 집합과 arrow의 집합이 모두 유한한 경우만을 다루며, 대수와 module의 일반론은 [\[대수적 구조\] §대수](/ko/math/algebraic_structures/algebras){: data-relation="required" }와 [\[대수적 구조\] §가군](/ko/math/algebraic_structures/modules){: data-relation="required" }에서 다룬 것을 따른다. 특히 associative unital $k$-algebra란 곱셈이 결합법칙을 만족하고 항등원을 가지는 $k$-algebra를 뜻한다 ([\[대수적 구조\] §대수, ⁋정의 1](/ko/math/algebraic_structures/algebras#def1){: data-relation="required" }).
 
 ## Quiver와 path
 
@@ -58,7 +58,7 @@ $$p\cdot q=\begin{cases}pq&\text{if }s(p)=t(q)\\0&\text{otherwise}\end{cases}$$
 정의에서 곱 $p\cdot q$가 $0$이 아니려면 $q$의 target $t(q)$가 $p$의 source $s(p)$와 일치해야 하며, 이는 함수를 합성할 때 안쪽 함수의 치역이 바깥쪽 함수의 정의역과 맞아야 하는 것과 같다. 곱셈을 basis인 path들 위에서 정의한 뒤 양변에 대해 선형으로 확장하였으므로, $kQ$의 일반적인 두 원소의 곱은 각 path 곱들의 $k$-선형결합이다. 이 곱셈이 실제로 결합대수의 구조를 줌을 확인한다.
 
 ::: 명제 4
-$kQ$는 [정의 3](#def3)의 곱셈에 대하여 associative $k$-algebra이며, 원소
+$kQ$는 [정의 3](#def3){: data-relation="required" }의 곱셈에 대하여 associative $k$-algebra이며, 원소
 
 $$1=\sum_{i\in Q_0}e_i$$
 
@@ -114,7 +114,7 @@ $n\geq 1$에 대하여 *선형 $A_n$ quiver*를 vertex 집합 $Q_0=\{1,2,\ldots,
 
 $$1\xrightarrow{\ \alpha_1\ }2\xrightarrow{\ \alpha_2\ }3\rightarrow\cdots\rightarrow n-1\xrightarrow{\ \alpha_{n-1}\ }n$$
 
-이 quiver에는 oriented cycle이 없으므로 [명제 5](#prop5)에 의하여 $kQ$는 유한차원이다. 각 $i\leq j$에 대하여 $i$에서 $j$로 가는 path는
+이 quiver에는 oriented cycle이 없으므로 [명제 5](#prop5){: data-relation="required" }에 의하여 $kQ$는 유한차원이다. 각 $i\leq j$에 대하여 $i$에서 $j$로 가는 path는
 
 $$\alpha_{j-1}\alpha_{j-2}\cdots\alpha_i$$
 
@@ -136,7 +136,7 @@ $$\alpha^m\cdot\alpha^{m'}=\alpha^{m+m'}$$
 
 $$kQ\xrightarrow{\ \cong\ }k[\x]$$
 
-을 준다. 실제로 이 대응은 basis $\{e_1,\alpha,\alpha^2,\ldots\}$를 polynomial algebra의 basis $\{1,\x,\x^2,\ldots\}$로 일대일로 보내고 곱셈규칙 $\alpha^m\cdot\alpha^{m'}=\alpha^{m+m'}$이 $\x^m\x^{m'}=\x^{m+m'}$과 일치하므로, 선형으로 확장하면 곱셈을 보존하는 가역사상이 된다. 특히 $kQ\cong k[\x]$은 commutative이고 무한차원이다. 후자는 one-loop quiver가 oriented cycle $\alpha$를 가진다는 사실과 [명제 5](#prop5)에 부합한다.
+을 준다. 실제로 이 대응은 basis $\{e_1,\alpha,\alpha^2,\ldots\}$를 polynomial algebra의 basis $\{1,\x,\x^2,\ldots\}$로 일대일로 보내고 곱셈규칙 $\alpha^m\cdot\alpha^{m'}=\alpha^{m+m'}$이 $\x^m\x^{m'}=\x^{m+m'}$과 일치하므로, 선형으로 확장하면 곱셈을 보존하는 가역사상이 된다. 특히 $kQ\cong k[\x]$은 commutative이고 무한차원이다. 후자는 one-loop quiver가 oriented cycle $\alpha$를 가진다는 사실과 [명제 5](#prop5){: data-relation="required" }에 부합한다.
 :::
 
 마지막 예시는 다중 arrow를 가지는 경우로, indecomposable representation의 구조가 풍부하여 표현론에서 핵심적인 역할을 한다.
@@ -146,7 +146,7 @@ $$kQ\xrightarrow{\ \cong\ }k[\x]$$
 
 $$1\ \substack{\xrightarrow{\ \alpha\ }\\[-0.3em]\xrightarrow{\ \beta\ }}\ 2$$
 
-이 quiver에는 oriented cycle이 없으므로 [명제 5](#prop5)에 의하여 $kQ$는 유한차원이다. Path는 trivial path $e_1,e_2$와 두 arrow $\alpha,\beta$의 넷뿐이며, 길이 $2$ 이상의 path는 없다. $\alpha$와 $\beta$의 source가 모두 $1$이고 target이 모두 $2$이므로 $\alpha\cdot\beta$와 $\beta\cdot\alpha$는 둘 다 source와 target이 맞지 않아 $0$이기 때문이다. 따라서 $\dim_k kQ=4$이고, $kQ$는 $k$ 위의 행렬대수
+이 quiver에는 oriented cycle이 없으므로 [명제 5](#prop5){: data-relation="required" }에 의하여 $kQ$는 유한차원이다. Path는 trivial path $e_1,e_2$와 두 arrow $\alpha,\beta$의 넷뿐이며, 길이 $2$ 이상의 path는 없다. $\alpha$와 $\beta$의 source가 모두 $1$이고 target이 모두 $2$이므로 $\alpha\cdot\beta$와 $\beta\cdot\alpha$는 둘 다 source와 target이 맞지 않아 $0$이기 때문이다. 따라서 $\dim_k kQ=4$이고, $kQ$는 $k$ 위의 행렬대수
 
 $$\begin{pmatrix}k&0\\k^2&k\end{pmatrix}=\left\{\begin{pmatrix}a&0\\v&b\end{pmatrix}\ \middle\vert\ a,b\in k,\ v\in k^2\right\}$$
 
@@ -192,7 +192,7 @@ $$V_\alpha\oplus W_\alpha:V_i\oplus W_i\rightarrow V_j\oplus W_j$$
 를 배정하여 얻는 representation이다.
 :::
 
-Subrepresentation에서 부분공간들이 arrow를 따라 닫혀 있어야 한다는 조건은 morphism의 commutativity 조건을 부분공간에 제한한 것이며, 이 조건 덕분에 제한된 선형사상 $V_\alpha\vert_{W_i}:W_i\rightarrow W_j$가 잘 정의된다. Direct sum의 경우 포함사상 $V\hookrightarrow V\oplus W$와 projection map $V\oplus W\twoheadrightarrow V$가 모두 $\Rep(Q)$의 morphism이 되며, 이는 module의 direct sum이 가지는 보편적 성질의 representation 판본이다. ([\[대수적 구조\] §가군의 직접곱과 직합, 텐서곱, ⁋정리 1](/ko/math/algebraic_structures/operations_of_modules#thm1)) 이러한 평행성은 우연이 아니며, 다음 절에서 보일 category 동치로 완전히 설명된다.
+Subrepresentation에서 부분공간들이 arrow를 따라 닫혀 있어야 한다는 조건은 morphism의 commutativity 조건을 부분공간에 제한한 것이며, 이 조건 덕분에 제한된 선형사상 $V_\alpha\vert_{W_i}:W_i\rightarrow W_j$가 잘 정의된다. Direct sum의 경우 포함사상 $V\hookrightarrow V\oplus W$와 projection map $V\oplus W\twoheadrightarrow V$가 모두 $\Rep(Q)$의 morphism이 되며, 이는 module의 direct sum이 가지는 보편적 성질의 representation 판본이다. ([\[대수적 구조\] §가군의 직접곱과 직합, 텐서곱, ⁋정리 1](/ko/math/algebraic_structures/operations_of_modules#thm1){: data-relation="weak" }) 이러한 평행성은 우연이 아니며, 다음 절에서 보일 category 동치로 완전히 설명된다.
 
 ## $\Rep(Q)$와 $kQ$-module의 동치
 
@@ -216,7 +216,7 @@ $$M=\bigoplus_{i\in Q_0}V_i$$
 
 $$V_{\alpha_\ell}\circ\cdots\circ V_{\alpha_1}$$
 
-(을 적절한 성분에 넣은 것) 으로 작용시킨다. 이 action이 $kQ$-module 구조를 줌을 확인하자. 우선 $\sum_i e_i$는 각 성분 $V_i$를 그대로 두므로 $M$ 위에서 항등사상으로 작용한다. 또 두 path $p,q$에 대하여, $s(p)\neq t(q)$이면 $q$의 action의 image는 $V_{t(q)}$ 성분에 놓이는데 $p$의 action은 $V_{s(p)}$ 성분에서만 비자명하므로 합성이 $0$이고, 이는 $kQ$에서 $p\cdot q=0$인 것과 일치한다. $s(p)=t(q)$이면 $p$의 action과 $q$의 action의 합성은 path $pq$를 따라 선형사상들을 차례로 합성한 것이며, 이는 $pq$의 action과 같다. 따라서 action은 곱셈을 보존하고 $M$은 left $kQ$-module이다. 이 대응을 $M=F(V)$로 적는다. Morphism $f:V\rightarrow W$에 대해서는 $F(f)=\bigoplus_i f_i:\bigoplus_i V_i\rightarrow\bigoplus_i W_i$로 정의한다. 이것이 $kQ$-linear임은, $e_i$의 action과 $F(f)$의 교환은 $f$가 성분을 보존한다는 사실로부터, arrow $\alpha$의 action과의 교환은 정확히 [정의 10](#def10)의 조건 $f_j\circ V_\alpha=W_\alpha\circ f_i$로부터 따라온다.
+(을 적절한 성분에 넣은 것) 으로 작용시킨다. 이 action이 $kQ$-module 구조를 줌을 확인하자. 우선 $\sum_i e_i$는 각 성분 $V_i$를 그대로 두므로 $M$ 위에서 항등사상으로 작용한다. 또 두 path $p,q$에 대하여, $s(p)\neq t(q)$이면 $q$의 action의 image는 $V_{t(q)}$ 성분에 놓이는데 $p$의 action은 $V_{s(p)}$ 성분에서만 비자명하므로 합성이 $0$이고, 이는 $kQ$에서 $p\cdot q=0$인 것과 일치한다. $s(p)=t(q)$이면 $p$의 action과 $q$의 action의 합성은 path $pq$를 따라 선형사상들을 차례로 합성한 것이며, 이는 $pq$의 action과 같다. 따라서 action은 곱셈을 보존하고 $M$은 left $kQ$-module이다. 이 대응을 $M=F(V)$로 적는다. Morphism $f:V\rightarrow W$에 대해서는 $F(f)=\bigoplus_i f_i:\bigoplus_i V_i\rightarrow\bigoplus_i W_i$로 정의한다. 이것이 $kQ$-linear임은, $e_i$의 action과 $F(f)$의 교환은 $f$가 성분을 보존한다는 사실로부터, arrow $\alpha$의 action과의 교환은 정확히 [정의 10](#def10){: data-relation="required" }의 조건 $f_j\circ V_\alpha=W_\alpha\circ f_i$로부터 따라온다.
 
 **Module에서 representation으로.** Left $kQ$-module $M$이 주어졌다 하자. 각 vertex $i$에 대하여
 
@@ -230,14 +230,14 @@ $$\alpha m=\alpha e_i m=e_j\alpha e_i m=e_j(\alpha m)\in e_jM=V_j$$
 
 $$M=1\cdot M=\sum_{i\in Q_0}e_iM=\bigoplus_{i\in Q_0}V_i$$
 
-이다. Direct sum인 것은 $e_ie_j=\delta_{ij}e_i$에 의하여 각 $e_iM$이 서로 만나지 않기 때문이다. 이 대응을 $V=G(M)$으로 적는다. Module homomorphism $\varphi:M\rightarrow N$에 대해서는 $G(\varphi)_i=\varphi\vert_{e_iM}:e_iM\rightarrow e_iN$으로 정의한다. $\varphi$가 $e_i$와 교환하므로 $\varphi(e_iM)\subseteq e_iN$이어서 restriction이 잘 정의되고, $\alpha$와의 교환으로부터 [정의 10](#def10)의 commutativity 조건이 성립하여 $G(\varphi)$는 morphism이다.
+이다. Direct sum인 것은 $e_ie_j=\delta_{ij}e_i$에 의하여 각 $e_iM$이 서로 만나지 않기 때문이다. 이 대응을 $V=G(M)$으로 적는다. Module homomorphism $\varphi:M\rightarrow N$에 대해서는 $G(\varphi)_i=\varphi\vert_{e_iM}:e_iM\rightarrow e_iN$으로 정의한다. $\varphi$가 $e_i$와 교환하므로 $\varphi(e_iM)\subseteq e_iN$이어서 restriction이 잘 정의되고, $\alpha$와의 교환으로부터 [정의 10](#def10){: data-relation="required" }의 commutativity 조건이 성립하여 $G(\varphi)$는 morphism이다.
 
 **두 functor가 서로 역.** Representation $V$에서 출발하여 $G(F(V))$를 계산하면, $F(V)=\bigoplus_i V_i$ 위에서 $e_i$의 action이 $V_i$ 성분으로의 projection이므로 $e_i\bigl(\bigoplus_j V_j\bigr)=V_i$이고, arrow $\alpha$의 action은 정의에 의하여 $V_\alpha$이다. 따라서 $G(F(V))=V$이며, 이 동일시는 morphism에 대해서도 자연스럽다. 거꾸로 module $M$에서 출발하면, $G(M)$의 vertex 공간은 $e_iM$이고 그 direct sum은 위에서 본 것처럼 $M$ 자신이며, 이 동일시 아래에서 path $p$의 action은 $G(M)$ 위에서 정의한 arrow별 action의 합성과 일치한다. 따라서 $F(G(M))=M$이다. 두 동일시가 natural isomorphism을 이루므로 $F,G$는 서로 quasi-inverse인 functor이고, $\Rep(Q)\cong\lMod{kQ}$이다.
 
 마지막으로 차원에 관한 주장을 보자. $V$가 유한차원이면 $\dim_k F(V)=\sum_i\dim_k V_i<\infty$이고, 거꾸로 $M$이 $k$ 위에서 유한차원이면 각 $V_i=e_iM$이 $M$의 부분공간으로서 유한차원이다. 따라서 동치는 유한차원 대상들 사이로 제한된다.
 :::
 
-정리 12의 동치 아래에서 [정의 11](#def11)의 representation 구성들은 정확히 module의 대응하는 구성으로 번역된다. Subrepresentation은 $kQ$-submodule에 대응하는데, 부분공간들이 arrow를 따라 닫혀 있다는 조건이 바로 $\bigoplus_i W_i$가 $kQ$의 action에 대하여 닫혀 있다는 조건이기 때문이다. 마찬가지로 representation의 direct sum은 module의 direct sum에 대응한다. 따라서 representation에 대한 모든 분해 이론을 module의 언어로, 또는 그 반대로 옮길 수 있으며, 우리는 다음 글들에서 이 자유로운 번역을 전제로 한다.
+정리 12의 동치 아래에서 [정의 11](#def11){: data-relation="required" }의 representation 구성들은 정확히 module의 대응하는 구성으로 번역된다. Subrepresentation은 $kQ$-submodule에 대응하는데, 부분공간들이 arrow를 따라 닫혀 있다는 조건이 바로 $\bigoplus_i W_i$가 $kQ$의 action에 대하여 닫혀 있다는 조건이기 때문이다. 마찬가지로 representation의 direct sum은 module의 direct sum에 대응한다. 따라서 representation에 대한 모든 분해 이론을 module의 언어로, 또는 그 반대로 옮길 수 있으며, 우리는 다음 글들에서 이 자유로운 번역을 전제로 한다.
 
 이 동치는 또한 representation을 다룰 때 굳이 path algebra 전체를 명시하지 않고 quiver의 자료만으로 작업해도 좋다는 것을 정당화한다. 가령 선형 $A_2$ quiver의 representation은 선형사상 $V_\alpha:V_1\rightarrow V_2$ 하나이고, 이를 분류하는 것은 곧 선형사상을 isomorphism 차이를 무시하고 분류하는 문제, 곧 rank에 의한 분류이다.
 
