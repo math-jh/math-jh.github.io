@@ -84,7 +84,7 @@ In particular, if $TM$ is a trivial bundle, we call $M$ a *parallelizable manifo
 
 ## Smooth Functors
 
-The reason the tangent bundle $TM$ is important is that most vector bundles defined over a manifold are constructed from $TM$. For example, the cotangent bundle $T^\ast M$ is the vector bundle with the cotangent space $T_p^\ast M$, which is the dual space of the tangent space, attached at each $p\in M$. Similarly, various vector bundles are defined at each point $p$ through the operations of linear algebra ([Example 5](#ex5)).
+The reason the tangent bundle $TM$ is important is that most vector bundles defined over a manifold are constructed from $TM$. For example, the cotangent bundle $T^\ast M$ is the vector bundle with the cotangent space $T_p^\ast M$, which is the dual space of the tangent space, attached at each $p\in M$. Similarly, various vector bundles are defined at each point $p$ through the operations of linear algebra ([Example 5](#ex5){: data-relation="forward" }).
 
 Originally, each time we define these we would have to show that they satisfy the conditions of a vector bundle, but **[Mil]** presents a more fundamental approach.
 
@@ -107,7 +107,7 @@ Thus a functor $F$ from $\mathbf{FVect}_\text{iso}\times\mathbf{FVect}_\text{iso
 A functor $F:\mathbf{FVect}_\text{iso}\times\mathbf{FVect}_\text{iso}\rightarrow \mathbf{FVect}_\text{iso}$ is called a *smooth functor* if $F(f,g)$ depends smoothly on $f,g$.
 :::
 
-If $f\in\Hom(V,V'), g\in\Hom(W,W')$, then $F(f,g)\in\Hom(F(V,W),F(V',W'))$. Since these are all vector spaces, they carry the smooth structure described in [§Examples of Differentiable Manifolds, ⁋Example 2](/en/math/manifolds/examples_of_manifolds#ex2), and through this we can apply the above definition. Also, it is not difficult to extend this definition to a general $k$-fold product
+If $f\in\Hom(V,V'), g\in\Hom(W,W')$, then $F(f,g)\in\Hom(F(V,W),F(V',W'))$. Since these are all vector spaces, they carry the smooth structure described in [§Examples of Differentiable Manifolds, ⁋Example 2](/en/math/manifolds/examples_of_manifolds#ex2){: data-relation="required" }, and through this we can apply the above definition. Also, it is not difficult to extend this definition to a general $k$-fold product
 
 $$\mathbf{FVect}_\text{iso}\times\cdots\times\mathbf{FVect}_\text{iso}\rightarrow \mathbf{FVect}_\text{iso}$$
 
@@ -124,10 +124,10 @@ holds for all $u$, so the directional derivative of this correspondence in the $
 
 The following are all examples of smooth functors.
 
-- Dual functor $(-)^\ast$ ([\[Linear Algebra\] §Dual Space](/en/math/linear_algebra/dual_space)),
-- $k$-th tensor functor $\mathcal{T}^k(-)$ ([\[Multilinear Algebra\] §Tensor Algebra](/en/math/multilinear_algebra/tensor_algebras)),
-- $k$-th symmetric functor $\mathcal{S}^k(-)$ ([\[Multilinear Algebra\] §Tensor Algebra](/en/math/multilinear_algebra/tensor_algebras)),
-- $k$-th exterior functor $\bigwedge\nolimits^k(-)$ ([\[Multilinear Algebra\] §Tensor Algebra](/en/math/multilinear_algebra/tensor_algebras)),
+- Dual functor $(-)^\ast$ ([\[Linear Algebra\] §Dual Space](/en/math/linear_algebra/dual_space){: data-relation="weak" }),
+- $k$-th tensor functor $\mathcal{T}^k(-)$ ([\[Multilinear Algebra\] §Tensor Algebra](/en/math/multilinear_algebra/tensor_algebras){: data-relation="weak" }),
+- $k$-th symmetric functor $\mathcal{S}^k(-)$ ([\[Multilinear Algebra\] §Tensor Algebra](/en/math/multilinear_algebra/tensor_algebras){: data-relation="weak" }),
+- $k$-th exterior functor $\bigwedge\nolimits^k(-)$ ([\[Multilinear Algebra\] §Tensor Algebra](/en/math/multilinear_algebra/tensor_algebras){: data-relation="weak" }),
 - Tensor product $-\otimes -$,
 - Direct sum $-\oplus-$.
 :::
@@ -144,10 +144,10 @@ We denote the vector bundle $E$ obtained by the above process simply as $F(E_1,\
 
 ## Cotangent Bundle
 
-Applying [Theorem 6](#thm6) to an arbitrary manifold $M$, the tangent bundle $E=TM\rightarrow M$, and the dual functor $(-)^\ast$, we obtain the following.
+Applying [Theorem 6](#thm6){: data-relation="required" } to an arbitrary manifold $M$, the tangent bundle $E=TM\rightarrow M$, and the dual functor $(-)^\ast$, we obtain the following.
 
 ::: Definition 7
-The *cotangent bundle* defined over a manifold $M$ means the vector bundle $(TM)^\ast$ obtained by [Theorem 6](#thm6). Following the notation for cotangent space $T_p^\ast M$, we denote this by $T^\ast M$.
+The *cotangent bundle* defined over a manifold $M$ means the vector bundle $(TM)^\ast$ obtained by [Theorem 6](#thm6){: data-relation="required" }. Following the notation for cotangent space $T_p^\ast M$, we denote this by $T^\ast M$.
 :::
 
 $T^\ast M$ is the space with the vector space $T_p^\ast M$ attached at each point $p$. Here $T_p^\ast M$ is the dual space of the vector space $T_pM$, that is, the space of linear maps that take a vector of $T_pM$ and output a real number. We will revisit vector bundles obtained by applying other smooth functors before long.

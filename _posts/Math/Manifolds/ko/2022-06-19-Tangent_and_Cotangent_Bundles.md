@@ -85,7 +85,7 @@ $$\tilde{\varphi}=(\varphi\times\id_{\mathbb{R}^m})\circ\phi$$
 
 ## Smooth functors
 
-Tangent bundle $TM$이 중요한 것은 manifold 위에 정의된 대다수의 vector bundle이 $TM$으로부터 정의되기 때문이다. 가령 cotangent bundle $T^\ast M$은 각각의 $p\in M$마다 tangent space의 dual space인 cotangent space $T_p^\ast M$이 붙어있는 vector bundle이다. 이와 비슷하게, 각 점 $p$마다 선형대수에서의 연산들을 통해 다양한 vector bundle이 정의된다. ([예시 5](#ex5))
+Tangent bundle $TM$이 중요한 것은 manifold 위에 정의된 대다수의 vector bundle이 $TM$으로부터 정의되기 때문이다. 가령 cotangent bundle $T^\ast M$은 각각의 $p\in M$마다 tangent space의 dual space인 cotangent space $T_p^\ast M$이 붙어있는 vector bundle이다. 이와 비슷하게, 각 점 $p$마다 선형대수에서의 연산들을 통해 다양한 vector bundle이 정의된다. ([예시 5](#ex5){: data-relation="forward" })
 
 원래대로라면 이들을 정의할 때마다 이들이 vector bundle의 조건을 만족한다는 것을 보여야 하지만, **[Mil]**에 조금 더 근본적인 방식이 있다.
 
@@ -108,7 +108,7 @@ Tangent bundle $TM$이 중요한 것은 manifold 위에 정의된 대다수의 v
 Functor $F:\mathbf{FVect}_\text{iso}\times\mathbf{FVect}_\text{iso}\rightarrow \mathbf{FVect}_\text{iso}$이 *smooth functor<sub>매끄러운 함자</sub>*라는 것은 $F(f,g)$가 $f,g$에 대해 smooth하게 의존하는 것이다.
 :::
 
-만일 $f\in\Hom(V,V'), g\in\Hom(W,W')$가 isomorphism이라면 $F(f,g)\in\Hom(F(V,W),F(V',W'))$이다. 이들은 모두 벡터공간이므로 [§미분다양체의 예시들, ⁋예시 2](/ko/math/manifolds/examples_of_manifolds#ex2)와 같은 미분구조가 주어져 있고, 이를 통해 위의 정의를 적용할 수 있다. 또, 어렵지 않게 이 정의를 일반적인 $k$-fold product 
+만일 $f\in\Hom(V,V'), g\in\Hom(W,W')$가 isomorphism이라면 $F(f,g)\in\Hom(F(V,W),F(V',W'))$이다. 이들은 모두 벡터공간이므로 [§미분다양체의 예시들, ⁋예시 2](/ko/math/manifolds/examples_of_manifolds#ex2){: data-relation="required" }와 같은 미분구조가 주어져 있고, 이를 통해 위의 정의를 적용할 수 있다. 또, 어렵지 않게 이 정의를 일반적인 $k$-fold product 
 
 $$\mathbf{FVect}_\text{iso}\times\cdots\times\mathbf{FVect}_\text{iso}\rightarrow \mathbf{FVect}_\text{iso}$$
 
@@ -127,10 +127,10 @@ $$(g+tw_i^j)\circ u\circ f^{-1}=g\circ u\circ f^{-1}+tw_i^j\circ u\circ f^{-1}$$
 
 다음은 모두 smooth functor의 예시들이다.
 
-- Dual functor $(-)^\ast$ ([\[선형대수학\] §쌍대공간](/ko/math/linear_algebra/dual_space)),
-- $k$-th tensor functor $\mathcal{T}^k(-)$ ([\[다중선형대수학\] §텐서대수](/ko/math/multilinear_algebra/tensor_algebras)),
-- $k$-th symmetric functor $\mathcal{S}^k(-)$ ([\[다중선형대수학\] §텐서대수](/ko/math/multilinear_algebra/tensor_algebras)),
-- $k$-th exterior functor $\bigwedge\nolimits^k(-)$ ([\[다중선형대수학\] §텐서대수](/ko/math/multilinear_algebra/tensor_algebras)),
+- Dual functor $(-)^\ast$ ([\[선형대수학\] §쌍대공간](/ko/math/linear_algebra/dual_space){: data-relation="weak" }),
+- $k$-th tensor functor $\mathcal{T}^k(-)$ ([\[다중선형대수학\] §텐서대수](/ko/math/multilinear_algebra/tensor_algebras){: data-relation="weak" }),
+- $k$-th symmetric functor $\mathcal{S}^k(-)$ ([\[다중선형대수학\] §텐서대수](/ko/math/multilinear_algebra/tensor_algebras){: data-relation="weak" }),
+- $k$-th exterior functor $\bigwedge\nolimits^k(-)$ ([\[다중선형대수학\] §텐서대수](/ko/math/multilinear_algebra/tensor_algebras){: data-relation="weak" }),
 - Tensor product $-\otimes -$,
 - Direct sum $-\oplus-$.
 :::
@@ -149,10 +149,10 @@ $$E_b=F((E_1)_b,\ldots,(E_n)_b)$$
 
 ## 여접다발
 
-임의의 manifold $M$과 tangent bundle $E=TM\rightarrow M$, 그리고 dual functor $(-)^\ast$에 위의 [정리 6](#thm6)을 적용하면 다음을 얻는다.
+임의의 manifold $M$과 tangent bundle $E=TM\rightarrow M$, 그리고 dual functor $(-)^\ast$에 위의 [정리 6](#thm6){: data-relation="required" }을 적용하면 다음을 얻는다.
 
 ::: 정의 7
-Manifold $M$ 위에 정의된 *cotangent bundle<sub>여접다발</sub>*은 [정리 6](#thm6)에 의해 얻어진 vector bundle $(TM)^\ast$을 의미한다. Cotangent space $T_p^\ast M$의 표기에 맞추어 이를 $T^\ast M$으로 표기한다.
+Manifold $M$ 위에 정의된 *cotangent bundle<sub>여접다발</sub>*은 [정리 6](#thm6){: data-relation="required" }에 의해 얻어진 vector bundle $(TM)^\ast$을 의미한다. Cotangent space $T_p^\ast M$의 표기에 맞추어 이를 $T^\ast M$으로 표기한다.
 :::
 
 $T^\ast M$은 점 $p$마다 벡터공간 $T_p^\ast M$이 붙어있는 공간이다. 이 때 $T_p^\ast M$은 벡터공간 $T_pM$의 dual space, 곧 $T_pM$의 벡터를 하나 받아 실수를 내놓는 linear map들의 공간이다. 또 다른 smooth functor들을 적용하여 얻어지는 vector bundle들은 조만간 다시 살펴보게 된다.
