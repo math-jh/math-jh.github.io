@@ -17,7 +17,7 @@ weight: 4
 
 앞선 글에서 $T_pM$은 $\mathbb{R}$-벡터공간이 된다는 것을 살펴보았다. 이제 우리는 $T_pM$이 실은 유한차원이라는 것을 보일 것인데, 이를 직접 보이는 대신 $T_pM$의 dual space가 유한차원임을 보인다.
 
-[§접공간, ⁋명제 2](/ko/math/manifolds/tangent_space#prop2)에 의하여, $\mathcal{C}^\infty_p$의 ideal들의 descending chain
+[§접공간, ⁋명제 2](/ko/math/manifolds/tangent_space#prop2){: data-relation="required" }에 의하여, $\mathcal{C}^\infty_p$의 ideal들의 descending chain
 
 $$\mathcal{C}^\infty_p\supset\mathfrak{m}_p\supset\mathfrak{m}_p^2\supset\cdots$$
 
@@ -37,7 +37,7 @@ $$v(\mathbf{f}_i\mathbf{f}_j)=\mathbf{f}_i(p)v(\mathbf{f}_j)+\mathbf{f}_j(p)v(\m
 
 $$v_L(\mathbf{f})=L((\mathbf{f}-\mathbf{f(p)})+\mathfrak{m}_p^2)$$
 
-으로 정의하는 것이 잘 정의된다. 이렇게 정의된 $v_L$이 linear map일 뿐만 아니라 [§접공간, ⁋정의 3](/ko/math/manifolds/tangent_space#def3)도 만족한다는 것을 보여야 하므로, 
+으로 정의하는 것이 잘 정의된다. 이렇게 정의된 $v_L$이 linear map일 뿐만 아니라 [§접공간, ⁋정의 3](/ko/math/manifolds/tangent_space#def3){: data-relation="required" }도 만족한다는 것을 보여야 하므로, 
 
 $$\begin{aligned}
             v_L(\mathbf{f}\cdot\mathbf{g})&=L((\mathbf{fg}-\mathbf{f(p)g(p)})+\mathfrak{m}_p^2)\\

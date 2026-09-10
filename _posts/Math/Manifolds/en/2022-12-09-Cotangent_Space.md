@@ -18,7 +18,7 @@ last_polished_at: 2026-06-01T09:00:07+00:00
 
 In the previous post we saw that $T_pM$ is an $\mathbb{R}$-vector space. Now we will show that $T_pM$ is in fact finite-dimensional; instead of proving this directly, we show that the dual space of $T_pM$ is finite-dimensional.
 
-By [§Tangent Space, ⁋Proposition 2](/en/math/manifolds/tangent_space#prop2), the descending chain of ideals in $\mathcal{C}^\infty_p$
+By [§Tangent Space, ⁋Proposition 2](/en/math/manifolds/tangent_space#prop2){: data-relation="required" }, the descending chain of ideals in $\mathcal{C}^\infty_p$
 
 $$\mathcal{C}^\infty_p\supset\mathfrak{m}_p\supset\mathfrak{m}_p^2\supset\cdots$$
 
@@ -38,7 +38,7 @@ Conversely, let an arbitrary $L\in(\mathfrak{m}_p/\mathfrak{m}_p^2)^\ast$ be giv
 
 $$v_L(\mathbf{f})=L((\mathbf{f}-\mathbf{f(p)})+\mathfrak{m}_p^2)$$
 
-is well-defined. We must show that this $v_L$ is not only a linear map but also satisfies [§Tangent Space, ⁋Definition 3](/en/math/manifolds/tangent_space#def3); thus we compute
+is well-defined. We must show that this $v_L$ is not only a linear map but also satisfies [§Tangent Space, ⁋Definition 3](/en/math/manifolds/tangent_space#def3){: data-relation="required" }; thus we compute
 
 $$\begin{aligned}
             v_L(\mathbf{f}\cdot\mathbf{g})&=L((\mathbf{fg}-\mathbf{f(p)g(p)})+\mathfrak{m}_p^2)\\
