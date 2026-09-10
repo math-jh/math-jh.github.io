@@ -51,12 +51,12 @@ holds, and therefore $(x_i)\leq (z_i)$.
 ::: Example 3
  Any function $f$ from a set $A$ to a set $B$ can be viewed as an element of the set $B^A=\prod_{a\in A}B$, which is the product of copies of $B$ indexed by $A$.
 
-Now suppose a preorder relation $R$ is defined on $B$. By [Proposition 2](#prop2), the product of preorder relations defines a preorder relation on the set of functions $B^A$. Writing this as $\leq$, the condition $f\leq g$ means that $f(x)\leq_{\tiny R} g(x)$ for all $x\in A$.
+Now suppose a preorder relation $R$ is defined on $B$. By [Proposition 2](#prop2){: data-relation="required" }, the product of preorder relations defines a preorder relation on the set of functions $B^A$. Writing this as $\leq$, the condition $f\leq g$ means that $f(x)\leq_{\tiny R} g(x)$ for all $x\in A$.
 :::
 
-The contents of the preceding two sections remain valid if all preorder relations are replaced by order relations. That is, if the originally given preorder relations are antisymmetric and hence become order relations, then the preorder relations obtained in [Proposition 1](#prop1) and [Proposition 2](#prop2) also satisfy antisymmetry and hence become order relations.
+The contents of the preceding two sections remain valid if all preorder relations are replaced by order relations. That is, if the originally given preorder relations are antisymmetric and hence become order relations, then the preorder relations obtained in [Proposition 1](#prop1){: data-relation="weak" } and [Proposition 2](#prop2){: data-relation="required" } also satisfy antisymmetry and hence become order relations.
 
-In this case, some care is needed when examining strict orders. For instance, suppose an order relation $R$ is given on a set $B$, and let $S$ be the strict order defined by $R$. The strict order $<$ arising from the order relation $\leq$ constructed in [Example 3](#ex3) is *different* from the relation defined by
+In this case, some care is needed when examining strict orders. For instance, suppose an order relation $R$ is given on a set $B$, and let $S$ be the strict order defined by $R$. The strict order $<$ arising from the order relation $\leq$ constructed in [Example 3](#ex3){: data-relation="required" } is *different* from the relation defined by
 
 $$f< g\iff\forall x\bigl((x\in A)\implies (f(x)<_{\tiny R}g(x))\bigr)$$
 

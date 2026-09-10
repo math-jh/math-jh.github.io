@@ -53,12 +53,12 @@ $$x_i\leq y_i\leq z_i\implies x_i\leq z_i$$
 ::: 예시 3
  임의의 집합 $A$에서 $B$로의 함수 $f$는 index set을 $A$로 하여, 각각의 $a\in A$마다 $B$를 곱한 집합 $B^A=\prod_{a\in A}B$의 원소로 볼 수 있다.
 
-이제 집합 $B$ 위에 preorder relation $R$이 정의되었다 하자. 앞선 [명제 2](#prop2)에 의하여 preorder relation들의 곱은 함수들의 집합 $B^A$ 위에 preorder relation을 정의한다. 이를 $\leq$라 적기로 하면, $f\leq g$는 임의의 $x\in A$에 대하여 $f(x)\leq_{\tiny R} g(x)$임을 의미한다. 
+이제 집합 $B$ 위에 preorder relation $R$이 정의되었다 하자. 앞선 [명제 2](#prop2){: data-relation="required" }에 의하여 preorder relation들의 곱은 함수들의 집합 $B^A$ 위에 preorder relation을 정의한다. 이를 $\leq$라 적기로 하면, $f\leq g$는 임의의 $x\in A$에 대하여 $f(x)\leq_{\tiny R} g(x)$임을 의미한다. 
 :::
 
-앞선 두 절의 내용은 preorder relation을 모두 order relation으로 바꾸어도 성립한다. 즉 원래 주어진 preorder relation이 antisymmetry를 가져서 order relation이 되었다면, [명제 1](#prop1)과 [명제 2](#prop2)에서 얻어지는 preorder relation 또한 antisymmetry를 만족하고 따라서 order relation이 된다.
+앞선 두 절의 내용은 preorder relation을 모두 order relation으로 바꾸어도 성립한다. 즉 원래 주어진 preorder relation이 antisymmetry를 가져서 order relation이 되었다면, [명제 1](#prop1){: data-relation="weak" }과 [명제 2](#prop2){: data-relation="required" }에서 얻어지는 preorder relation 또한 antisymmetry를 만족하고 따라서 order relation이 된다.
 
-이 경우 strict order를 살펴볼 때에는 약간의 주의가 필요하다. 가령 집합 $B$에 order relation $R$이 주어졌다 하고, $R$에 의해 정의되는 strict order를 $S$라 하자. [예시 3](#ex3)을 통해 만들어진 order relation $\leq$로부터 만들어지는 strict order $<$는 다음의 관계
+이 경우 strict order를 살펴볼 때에는 약간의 주의가 필요하다. 가령 집합 $B$에 order relation $R$이 주어졌다 하고, $R$에 의해 정의되는 strict order를 $S$라 하자. [예시 3](#ex3){: data-relation="required" }을 통해 만들어진 order relation $\leq$로부터 만들어지는 strict order $<$는 다음의 관계
 
 $$f< g\iff\forall x\bigl((x\in A)\implies (f(x)<_{\tiny R}g(x))\bigr)$$
 
