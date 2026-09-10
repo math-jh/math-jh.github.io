@@ -29,7 +29,7 @@ weight: 1
 공집합이 아닌 index set $I$에 대하여 $A$-module $M$의 submodule들의 family $(N_i)_{i\in I}$가 주어졌다 하자. 그럼 교집합 $\bigcap_{i\in I} N_i$는 $M$의 submodule이다.
 :::
 ::: 증명
-[\[선형대수학\] §벡터공간의 기저, ⁋보조정리 3](/ko/math/linear_algebra/basis#lem3)의 증명은 $\mathbb{K}$가 field라는 사실을 사용하지 않았으므로 해당 증명을 동일하게 사용하면 된다.
+[\[선형대수학\] §벡터공간의 기저, ⁋보조정리 3](/ko/math/linear_algebra/basis#lem3){: data-relation="required" }의 증명은 $\mathbb{K}$가 field라는 사실을 사용하지 않았으므로 해당 증명을 동일하게 사용하면 된다.
 :::
 
 ::: 정의 2
@@ -44,7 +44,7 @@ $A$-module $M$의 부분집합 $X$가 주어졌다 하자. 그럼 $X$를 포함�
 $A$-module $M$의 임의의 부분집합 $X$에 대하여, $\langle X\rangle$은 $X$의 원소들로 이루어진 임의의 일차결합들의 집합과 같다. 
 :::
 ::: 증명
-[\[선형대수학\] §벡터공간의 기저, ⁋보조정리 4](/ko/math/linear_algebra/basis#lem4)과 동일하게 증명하면 된다.
+[\[선형대수학\] §벡터공간의 기저, ⁋보조정리 4](/ko/math/linear_algebra/basis#lem4){: data-relation="required" }과 동일하게 증명하면 된다.
 :::
 
 특별히 $A$-module $M$의 submodule들의 family $(N_i)_{i\in I}$가 주어졌다 하자. 그럼 $M$의 부분집합 $\bigcup N_i$로 생성된 $M$의 submodule $\left\langle \bigcup N_i\right\rangle$을 $\sum N_i$로 표기한다. 이제 각각의 $i$에 대하여, $N_i$는 $M$의 submodule이므로 inclusion들 $N_i \hookrightarrow M$이 존재한다. 이로부터 다음의 canonical morphism
@@ -100,7 +100,7 @@ $$x_j=\sum_{i\neq j}(-x_i)$$
 
 ## 보조부분가군
 
-다음 명제는 특별히 $M$이 두 개의 submodule $N_1,N_2$의 direct sum일 때 [명제 6](#prop6)을 조금 더 직관적으로 살펴보도록 도와준다. 
+다음 명제는 특별히 $M$이 두 개의 submodule $N_1,N_2$의 direct sum일 때 [명제 6](#prop6){: data-relation="weak" }을 조금 더 직관적으로 살펴보도록 도와준다. 
 
 ::: 명제 7
 $A$-module $M$의 두 submodule $N_1,N_2$가 주어졌다 하자. 그럼 다음의 두 exact sequence
@@ -142,7 +142,7 @@ $$i_1-i_2:N_1\oplus N_2 \rightarrow N_1+N_2;\qquad (x_1,x_2)\mapsto x_1-x_2$$
 
 ## 분해완전열
 
-마지막으로 splitting exact sequence를 정의하기 전에 다음 보조정리를 소개한다. 이에 대한 증명은 [\[호몰로지 대수학\] §Diagram chasing, ⁋명제 1](/ko/math/homological_algebra/diagram_chasing#prop1)에 있다. 
+마지막으로 splitting exact sequence를 정의하기 전에 다음 보조정리를 소개한다. 이에 대한 증명은 [\[호몰로지 대수학\] §Diagram chasing, ⁋명제 1](/ko/math/homological_algebra/diagram_chasing#prop1){: data-relation="weak" }에 있다. 
 
 ::: 보조정리 9 (Four lemma)
 각 행들이 exact인 commutative diagram
@@ -168,8 +168,8 @@ $$0\longrightarrow M \overset{u}{\longrightarrow}L \overset{v}{\longrightarrow}N
 
 에 대하여, 다음 조건들이 모두 동치이다.
 
-1. $u$의 linear retraction $r:L \rightarrow M$이 존재한다. ([\[집합론\] §Retraction과 section, ⁋정의 2](/ko/math/set_theory/retraction_and_section#def2))
-2. $v$의 linear section $s:N \rightarrow L$이 존재한다. ([\[집합론\] §Retraction과 section, ⁋정의 2](/ko/math/set_theory/retraction_and_section#def2))
+1. $u$의 linear retraction $r:L \rightarrow M$이 존재한다. ([\[집합론\] §Retraction과 section, ⁋정의 2](/ko/math/set_theory/retraction_and_section#def2){: data-relation="required" })
+2. $v$의 linear section $s:N \rightarrow L$이 존재한다. ([\[집합론\] §Retraction과 section, ⁋정의 2](/ko/math/set_theory/retraction_and_section#def2){: data-relation="required" })
 3. 다음의 diagram
     
     {% diagram Math/Multilinear_Algebra/Exact_Sequences-2.svg width="21.10em" alt="splitting_sequence" %}
@@ -179,7 +179,7 @@ $$0\longrightarrow M \overset{u}{\longrightarrow}L \overset{v}{\longrightarrow}N
 ::: 증명
 우선 3번 조건을 가정하자. 그럼 $r=\pr_M\circ\alpha$로 두면 1번 조건을 얻으며, 비슷하게 canonical inclusion $i_N: N \rightarrow M\oplus N$과 $\alpha^{-1}$를 합성하여 $s=\alpha^{-1}\circ i_N$으로 두면 2번 조건을 얻는다.
 
-나머지 방향은 1번과 2번 조건을 각각 가정하고 3번 조건을 보인다. 만일 1번 조건이 성립한다면 $\alpha:L \rightarrow M\oplus N$을 $z\mapsto (r(z), v(z))$로 정의하고, 2번 조건이 성립한다면 $\beta: M\oplus N \rightarrow L$을 $(x,y)\mapsto u(x)+s(y)$로 정의한다. 그럼 [보조정리 9](#lem9)에 의하여 $\alpha,\beta^{-1}$가 3번 조건에서 요구하는 isomorphism을 정의한다는 것을 알 수 있다. 
+나머지 방향은 1번과 2번 조건을 각각 가정하고 3번 조건을 보인다. 만일 1번 조건이 성립한다면 $\alpha:L \rightarrow M\oplus N$을 $z\mapsto (r(z), v(z))$로 정의하고, 2번 조건이 성립한다면 $\beta: M\oplus N \rightarrow L$을 $(x,y)\mapsto u(x)+s(y)$로 정의한다. 그럼 [보조정리 9](#lem9){: data-relation="required" }에 의하여 $\alpha,\beta^{-1}$가 3번 조건에서 요구하는 isomorphism을 정의한다는 것을 알 수 있다. 
 :::
 
 ---

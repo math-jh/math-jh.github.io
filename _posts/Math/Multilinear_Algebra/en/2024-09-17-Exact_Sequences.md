@@ -97,7 +97,7 @@ and assuming the last condition, the above equation forces $x_j=0$, completing t
 
 ## Supplementary Submodules
 
-The following proposition helps us examine [Proposition 6](#prop6) a little more intuitively when $M$ is the direct sum of two submodules $N_1,N_2$.
+The following proposition helps us examine [Proposition 6](#prop6){: data-relation="weak" } a little more intuitively when $M$ is the direct sum of two submodules $N_1,N_2$.
 
 ::: Proposition 7
 Let two submodules $N_1,N_2$ of an $A$-module $M$ be given. Then there exist the following two exact sequences
@@ -172,7 +172,7 @@ the following conditions are all equivalent.
 ::: Proof
 First assume condition 3. Then setting $r=\pr_M\circ\alpha$ gives condition 1, and similarly, composing the canonical inclusion $i_N: N \rightarrow M\oplus N$ with $\alpha^{-1}$ and setting $s=\alpha^{-1}\circ i_N$ gives condition 2.
 
-For the remaining directions, we assume conditions 1 and 2 respectively and prove condition 3. If condition 1 holds, define $\alpha:L \rightarrow M\oplus N$ by $z\mapsto (r(z), v(z))$; if condition 2 holds, define $\beta: M\oplus N \rightarrow L$ by $(x,y)\mapsto u(x)+s(y)$. Then by [Lemma 9](#lem9) one sees that $\alpha,\beta^{-1}$ define the isomorphism required in condition 3.
+For the remaining directions, we assume conditions 1 and 2 respectively and prove condition 3. If condition 1 holds, define $\alpha:L \rightarrow M\oplus N$ by $z\mapsto (r(z), v(z))$; if condition 2 holds, define $\beta: M\oplus N \rightarrow L$ by $(x,y)\mapsto u(x)+s(y)$. Then by [Lemma 9](#lem9){: data-relation="required" } one sees that $\alpha,\beta^{-1}$ define the isomorphism required in condition 3.
 :::
 
 ---
