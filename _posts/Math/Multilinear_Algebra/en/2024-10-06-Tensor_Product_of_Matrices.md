@@ -14,7 +14,7 @@ translated_at: 2026-08-02T16:45:05+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-08-02T16:45:05+00:00
 ---
-In [§Matrices and Linear Maps](/en/math/multilinear_algebra/matrices_and_linear_maps), we represented linear maps between free $A$-modules as matrices and observed that composition of linear maps corresponds to matrix multiplication. Another operation available on linear maps is the tensor product, so it is natural to ask which matrix operation emerges at the level of matrix representations. In this post, we examine the answer: the tensor product of matrices, i.e., the Kronecker product. Throughout, $A$ denotes a commutative ring.
+In [§Matrices and Linear Maps](/en/math/multilinear_algebra/matrices_and_linear_maps){: data-relation="required" }, we represented linear maps between free $A$-modules as matrices and observed that composition of linear maps corresponds to matrix multiplication. Another operation available on linear maps is the tensor product, so it is natural to ask which matrix operation emerges at the level of matrix representations. In this post, we examine the answer: the tensor product of matrices, i.e., the Kronecker product. Throughout, $A$ denotes a commutative ring.
 
 ## Tensor Product of Linear Maps
 
@@ -22,7 +22,7 @@ Let $M,M',L,L'$ be four $A$-modules and let $u:M \rightarrow L$, $u':M' \rightar
 
 $$M\times M' \rightarrow L\otimes_AL';\qquad (x,x')\mapsto u(x)\otimes u'(x')$$
 
-is $A$-bilinear, so by the universal property of [\[Algebraic Structures\] §Direct Products, Direct Sums, and Tensor Products of Modules, ⁋Proposition 8](/en/math/algebraic_structures/operations_of_modules#prop8), the following definition is well-posed.
+is $A$-bilinear, so by the universal property of [\[Algebraic Structures\] §Direct Products, Direct Sums, and Tensor Products of Modules, ⁋Proposition 8](/en/math/algebraic_structures/operations_of_modules#prop8){: data-relation="required" }, the following definition is well-posed.
 
 ::: Definition 1
 In the above situation, the *tensor product* $u\otimes u': M\otimes_AM' \rightarrow L\otimes_AL'$ is the unique $A$-linear map satisfying
@@ -59,7 +59,7 @@ $$\mathcal{B}\otimes\mathcal{B}'=(e_i\otimes e'_{i'})_{(i,i')\in I\times I'}$$
 is a basis of $M\otimes_AM'$.
 :::
 ::: Proof
-By definition of basis, there exist isomorphisms $M\cong\bigoplus_{i\in I}A$ and $M'\cong\bigoplus_{i'\in I'}A$. Moreover, by the adjunction of [\[Algebraic Structures\] §Direct Products, Direct Sums, and Tensor Products of Modules, ⁋Theorem 9](/en/math/algebraic_structures/operations_of_modules#thm9), the functor $-\otimes_AN$ is a left adjoint, hence preserves colimits and in particular direct sums. Applying this successively in each variable yields
+By definition of basis, there exist isomorphisms $M\cong\bigoplus_{i\in I}A$ and $M'\cong\bigoplus_{i'\in I'}A$. Moreover, by the adjunction of [\[Algebraic Structures\] §Direct Products, Direct Sums, and Tensor Products of Modules, ⁋Theorem 9](/en/math/algebraic_structures/operations_of_modules#thm9){: data-relation="required" }, the functor $-\otimes_AN$ is a left adjoint, hence preserves colimits and in particular direct sums. Applying this successively in each variable yields
 
 $$M\otimes_AM'\cong\left(\bigoplus_{i\in I}A\right)\otimes_AM'\cong\bigoplus_{i\in I}(A\otimes_AM')\cong \bigoplus_{i\in I}\bigoplus_{i'\in I'}(A\otimes_AA)\cong\bigoplus_{(i,i')\in I\times I'}A.$$
 
@@ -68,7 +68,7 @@ Here $A\otimes_AA\cong A$ is the isomorphism given by multiplication $a\otimes b
 
 ## Tensor Product of Matrices
 
-Now let us define the operation at the level of matrices that corresponds to the tensor product. Since in [§Matrices, ⁋Definition 1](/en/math/multilinear_algebra/matrices#def1) we allowed matrix indices to range over arbitrary sets, the following definition is natural.
+Now let us define the operation at the level of matrices that corresponds to the tensor product. Since in [§Matrices, ⁋Definition 1](/en/math/multilinear_algebra/matrices#def1){: data-relation="required" } we allowed matrix indices to range over arbitrary sets, the following definition is natural.
 
 ::: Definition 4
 For two matrices $X=(x_{ji})\in\Mat_{J\times I}(A)$, $X'=(x'_{j'i'})\in\Mat_{J'\times I'}(A)$, their *tensor product* or *Kronecker product* $X\otimes X'$ is the $(J\times J')\times (I\times I')$ matrix defined by
@@ -90,7 +90,7 @@ $$[u\otimes u']_{\mathcal{C}\otimes\mathcal{C}'}^{\mathcal{B}\otimes\mathcal{B}'
 holds.
 :::
 ::: Proof
-Write $[u]_\mathcal{C}^\mathcal{B}=(x_{ji})$ and $[u']_{\mathcal{C}'}^{\mathcal{B}'}=(x'_{j'i'})$. By [§Matrices and Linear Maps, ⁋Definition 1](/en/math/multilinear_algebra/matrices_and_linear_maps#def1),
+Write $[u]_\mathcal{C}^\mathcal{B}=(x_{ji})$ and $[u']_{\mathcal{C}'}^{\mathcal{B}'}=(x'_{j'i'})$. By [§Matrices and Linear Maps, ⁋Definition 1](/en/math/multilinear_algebra/matrices_and_linear_maps#def1){: data-relation="required" },
 
 $$u(e_i)=\sum_{j\in J}x_{ji}f_j,\qquad u'(e'_{i'})=\sum_{j'\in J'}x'_{j'i'}f'_{j'}$$
 
@@ -98,10 +98,10 @@ and therefore
 
 $$(u\otimes u')(e_i\otimes e'_{i'})=u(e_i)\otimes u'(e'_{i'})=\sum_{(j,j')\in J\times J'}x_{ji}x'_{j'i'}(f_j\otimes f'_{j'}).$$
 
-By [Lemma 3](#lem3), the elements $(f_j\otimes f'_{j'})$ form a basis of $L\otimes_AL'$, so the $\bigl((j,j'),(i,i')\bigr)$-entry of $[u\otimes u']_{\mathcal{C}\otimes\mathcal{C}'}^{\mathcal{B}\otimes\mathcal{B}'}$ is $x_{ji}x'_{j'i'}$, which is exactly the corresponding entry of $[u]_\mathcal{C}^\mathcal{B}\otimes[u']_{\mathcal{C}'}^{\mathcal{B}'}$.
+By [Lemma 3](#lem3){: data-relation="required" }, the elements $(f_j\otimes f'_{j'})$ form a basis of $L\otimes_AL'$, so the $\bigl((j,j'),(i,i')\bigr)$-entry of $[u\otimes u']_{\mathcal{C}\otimes\mathcal{C}'}^{\mathcal{B}\otimes\mathcal{B}'}$ is $x_{ji}x'_{j'i'}$, which is exactly the corresponding entry of $[u]_\mathcal{C}^\mathcal{B}\otimes[u']_{\mathcal{C}'}^{\mathcal{B}'}$.
 :::
 
-Thus [Definition 4](#def4) gives the matrix representation of the linear map produced by [Definition 1](#def1).
+Thus [Definition 4](#def4){: data-relation="required" } gives the matrix representation of the linear map produced by [Definition 1](#def1){: data-relation="required" }.
 
 ## Properties of the Tensor Product
 
@@ -122,7 +122,7 @@ $$\sum_{(j,j')\in J\times J'}(X\otimes X')_{(k,k'),(j,j')}(Y\otimes Y')_{(j,j'),
 which equals $(XY)_{ki}(X'Y')_{k'i'}$, i.e., the corresponding entry of the right-hand side. The last equality uses commutativity of $A$.
 :::
 
-Of course, this proposition can also be obtained by combining [Proposition 2](#prop2), [Proposition 5](#prop5), and [§Matrices and Linear Maps, ⁋Corollary 4](/en/math/multilinear_algebra/matrices_and_linear_maps#cor4), which states that the matrix representation of a composition is the matrix product. From this, the following properties follow.
+Of course, this proposition can also be obtained by combining [Proposition 2](#prop2){: data-relation="weak" }, [Proposition 5](#prop5){: data-relation="weak" }, and [§Matrices and Linear Maps, ⁋Corollary 4](/en/math/multilinear_algebra/matrices_and_linear_maps#cor4){: data-relation="weak" }, which states that the matrix representation of a composition is the matrix product. From this, the following properties follow.
 
 ::: Proposition 7
 For matrices $X\in\Mat_{J\times I}(A)$, $X'\in\Mat_{J'\times I'}(A)$, the following hold.
@@ -140,7 +140,7 @@ For the second claim, let $\lvert I\rvert=n$ and $\lvert I'\rvert=m$; then $\lve
 
 $$(I_n\otimes I_m)_{(j,j'),(i,i')}=\delta_{ji}\delta_{j'i'}=\delta_{(j,j'),(i,i')}$$
 
-so $I_n\otimes I_m=I_{nm}$. Hence by [Proposition 6](#prop6),
+so $I_n\otimes I_m=I_{nm}$. Hence by [Proposition 6](#prop6){: data-relation="required" },
 
 $$(X\otimes X')(X^{-1}\otimes X'^{-1})=(XX^{-1})\otimes(X'X'^{-1})=I_n\otimes I_m=I_{nm}$$
 
@@ -151,7 +151,7 @@ Finally, let us compute the trace. Even for a square matrix $X=(x_{ji})$ indexed
 $$\tr(X\otimes X')=\sum_{(i,i')\in I\times I'}(X\otimes X')_{(i,i'),(i,i')}=\sum_{i\in I}\sum_{i'\in I'}x_{ii}x'_{i'i'}=\left(\sum_{i\in I}x_{ii}\right)\left(\sum_{i'\in I'}x'_{i'i'}\right)=\tr(X)\tr(X').$$
 :::
 
-To read the third property at the level of linear maps, we require $L=M$ and $L'=M'$ to be finitely generated free $A$-modules, with $u\in\End_\rMod{A}(M)$ and $u'\in\End_\rMod{A}(M')$, and we must choose a single basis $\mathcal{B}$ for $M$ and $\mathcal{B}'$ for $M'$. Then $u\otimes u'\in\End_\rMod{A}(M\otimes_AM')$, and combining the fact that the trace is independent of the choice of matrix representation with [Proposition 5](#prop5), we obtain $\tr(u\otimes u')=\tr(u)\tr(u')$. ([§Matrices and Linear Maps, §§Matrix Representations and Trace](/en/math/multilinear_algebra/matrices_and_linear_maps#matrix-representations-and-trace))
+To read the third property at the level of linear maps, we require $L=M$ and $L'=M'$ to be finitely generated free $A$-modules, with $u\in\End_\rMod{A}(M)$ and $u'\in\End_\rMod{A}(M')$, and we must choose a single basis $\mathcal{B}$ for $M$ and $\mathcal{B}'$ for $M'$. Then $u\otimes u'\in\End_\rMod{A}(M\otimes_AM')$, and combining the fact that the trace is independent of the choice of matrix representation with [Proposition 5](#prop5){: data-relation="required" }, we obtain $\tr(u\otimes u')=\tr(u)\tr(u')$. ([§Matrices and Linear Maps, §§Matrix Representations and Trace](/en/math/multilinear_algebra/matrices_and_linear_maps#matrix-representations-and-trace){: data-relation="required" })
 
 ---
 

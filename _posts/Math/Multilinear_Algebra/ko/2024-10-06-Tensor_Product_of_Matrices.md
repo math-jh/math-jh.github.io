@@ -13,7 +13,7 @@ weight: 9
 
 ---
 
-[§행렬과 선형사상](/ko/math/multilinear_algebra/matrices_and_linear_maps)에서 우리는 free $A$-module들 사이의 linear map을 행렬로 표현하였고, linear map들의 합성이 행렬의 곱셈에 대응된다는 것을 살펴보았다. 한편 linear map들에 대해 우리가 할 수 있는 또 다른 연산으로 tensor product가 있으므로, 이 연산이 행렬표현의 단계에서 어떤 행렬 연산으로 나타나는지 묻는 것이 자연스럽다. 이번 글에서는 그 답인 행렬의 tensor product, 즉 Kronecker product를 살펴본다. 이번 글에서 $A$는 항상 commutative ring이다.
+[§행렬과 선형사상](/ko/math/multilinear_algebra/matrices_and_linear_maps){: data-relation="required" }에서 우리는 free $A$-module들 사이의 linear map을 행렬로 표현하였고, linear map들의 합성이 행렬의 곱셈에 대응된다는 것을 살펴보았다. 한편 linear map들에 대해 우리가 할 수 있는 또 다른 연산으로 tensor product가 있으므로, 이 연산이 행렬표현의 단계에서 어떤 행렬 연산으로 나타나는지 묻는 것이 자연스럽다. 이번 글에서는 그 답인 행렬의 tensor product, 즉 Kronecker product를 살펴본다. 이번 글에서 $A$는 항상 commutative ring이다.
 
 ## 선형사상의 텐서곱
 
@@ -21,7 +21,7 @@ weight: 9
 
 $$M\times M' \rightarrow L\otimes_AL';\qquad (x,x')\mapsto u(x)\otimes u'(x')$$
 
-는 $A$-bilinear이므로, [\[대수적 구조\] §가군의 직접곱과 직합, 텐서곱, ⁋명제 8](/ko/math/algebraic_structures/operations_of_modules#prop8)의 universal property에 의하여 다음 정의가 잘 정의된다.
+는 $A$-bilinear이므로, [\[대수적 구조\] §가군의 직접곱과 직합, 텐서곱, ⁋명제 8](/ko/math/algebraic_structures/operations_of_modules#prop8){: data-relation="required" }의 universal property에 의하여 다음 정의가 잘 정의된다.
 
 ::: 정의 1
 위와 같은 상황에서, $u$와 $u'$의 *tensor product<sub>텐서곱</sub>* $u\otimes u': M\otimes_AM' \rightarrow L\otimes_AL'$은 다음 식
@@ -60,7 +60,7 @@ $$\mathcal{B}\otimes\mathcal{B}'=(e_i\otimes e'_{i'})_{(i,i')\in I\times I'}$$
 는 $M\otimes_AM'$의 basis이다.
 :::
 ::: 증명
-Basis의 정의에 의하여 isomorphism $M\cong\bigoplus_{i\in I}A$, $M'\cong\bigoplus_{i'\in I'}A$이 존재한다. 한편 [\[대수적 구조\] §가군의 직접곱과 직합, 텐서곱, ⁋정리 9](/ko/math/algebraic_structures/operations_of_modules#thm9)의 adjunction에 의하여 functor $-\otimes_AN$은 left adjoint이므로 colimit을, 특히 direct sum을 보존한다. 이를 두 변수에 대해 차례로 적용하면
+Basis의 정의에 의하여 isomorphism $M\cong\bigoplus_{i\in I}A$, $M'\cong\bigoplus_{i'\in I'}A$이 존재한다. 한편 [\[대수적 구조\] §가군의 직접곱과 직합, 텐서곱, ⁋정리 9](/ko/math/algebraic_structures/operations_of_modules#thm9){: data-relation="required" }의 adjunction에 의하여 functor $-\otimes_AN$은 left adjoint이므로 colimit을, 특히 direct sum을 보존한다. 이를 두 변수에 대해 차례로 적용하면
 
 $$M\otimes_AM'\cong\left(\bigoplus_{i\in I}A\right)\otimes_AM'\cong\bigoplus_{i\in I}(A\otimes_AM')\cong \bigoplus_{i\in I}\bigoplus_{i'\in I'}(A\otimes_AA)\cong\bigoplus_{(i,i')\in I\times I'}A$$
 
@@ -69,7 +69,7 @@ $$M\otimes_AM'\cong\left(\bigoplus_{i\in I}A\right)\otimes_AM'\cong\bigoplus_{i\
 
 ## 행렬의 텐서곱
 
-이제 행렬의 단계에서 tensor product에 대응하는 연산을 정의하자. [§행렬, ⁋정의 1](/ko/math/multilinear_algebra/matrices#def1)에서 행렬의 index를 임의의 집합으로 허용해 두었으므로, 다음 정의는 자연스럽다.
+이제 행렬의 단계에서 tensor product에 대응하는 연산을 정의하자. [§행렬, ⁋정의 1](/ko/math/multilinear_algebra/matrices#def1){: data-relation="required" }에서 행렬의 index를 임의의 집합으로 허용해 두었으므로, 다음 정의는 자연스럽다.
 
 ::: 정의 4
 두 행렬 $X=(x_{ji})\in\Mat_{J\times I}(A)$, $X'=(x'_{j'i'})\in\Mat_{J'\times I'}(A)$에 대하여, 이들의 *tensor product<sub>텐서곱</sub>* 혹은 *Kronecker product<sub>크로네커 곱</sub>* $X\otimes X'$은 다음 식
@@ -93,7 +93,7 @@ $$[u\otimes u']_{\mathcal{C}\otimes\mathcal{C}'}^{\mathcal{B}\otimes\mathcal{B}'
 이 성립한다.
 :::
 ::: 증명
-$[u]_\mathcal{C}^\mathcal{B}=(x_{ji})$, $[u']_{\mathcal{C}'}^{\mathcal{B}'}=(x'_{j'i'})$라 하자. [§행렬과 선형사상, ⁋정의 1](/ko/math/multilinear_algebra/matrices_and_linear_maps#def1)에 의하여
+$[u]_\mathcal{C}^\mathcal{B}=(x_{ji})$, $[u']_{\mathcal{C}'}^{\mathcal{B}'}=(x'_{j'i'})$라 하자. [§행렬과 선형사상, ⁋정의 1](/ko/math/multilinear_algebra/matrices_and_linear_maps#def1){: data-relation="required" }에 의하여
 
 $$u(e_i)=\sum_{j\in J}x_{ji}f_j,\qquad u'(e'_{i'})=\sum_{j'\in J'}x'_{j'i'}f'_{j'}$$
 
@@ -101,10 +101,10 @@ $$u(e_i)=\sum_{j\in J}x_{ji}f_j,\qquad u'(e'_{i'})=\sum_{j'\in J'}x'_{j'i'}f'_{j
 
 $$(u\otimes u')(e_i\otimes e'_{i'})=u(e_i)\otimes u'(e'_{i'})=\sum_{(j,j')\in J\times J'}x_{ji}x'_{j'i'}(f_j\otimes f'_{j'})$$
 
-이다. [보조정리 3](#lem3)에 의해 $(f_j\otimes f'_{j'})$들이 $L\otimes_AL'$의 basis이므로, $[u\otimes u']_{\mathcal{C}\otimes\mathcal{C}'}^{\mathcal{B}\otimes\mathcal{B}'}$의 $\bigl((j,j'),(i,i')\bigr)$ 성분은 $x_{ji}x'_{j'i'}$이고, 이는 정확히 $[u]_\mathcal{C}^\mathcal{B}\otimes[u']_{\mathcal{C}'}^{\mathcal{B}'}$의 해당 성분이다.
+이다. [보조정리 3](#lem3){: data-relation="required" }에 의해 $(f_j\otimes f'_{j'})$들이 $L\otimes_AL'$의 basis이므로, $[u\otimes u']_{\mathcal{C}\otimes\mathcal{C}'}^{\mathcal{B}\otimes\mathcal{B}'}$의 $\bigl((j,j'),(i,i')\bigr)$ 성분은 $x_{ji}x'_{j'i'}$이고, 이는 정확히 $[u]_\mathcal{C}^\mathcal{B}\otimes[u']_{\mathcal{C}'}^{\mathcal{B}'}$의 해당 성분이다.
 :::
 
-즉 [정의 4](#def4)는 [정의 1](#def1)이 만드는 linear map의 행렬표현이다. 
+즉 [정의 4](#def4){: data-relation="weak" }는 [정의 1](#def1){: data-relation="weak" }이 만드는 linear map의 행렬표현이다. 
 
 ## 텐서곱의 성질
 
@@ -125,7 +125,7 @@ $$\sum_{(j,j')\in J\times J'}(X\otimes X')_{(k,k'),(j,j')}(Y\otimes Y')_{(j,j'),
 이고, 이는 $(XY)_{ki}(X'Y')_{k'i'}$, 즉 우변의 해당 성분과 같다. 마지막 등식에서 $A$의 commutativity를 사용하였다.
 :::
 
-물론 이 명제는 [명제 2](#prop2)와 [명제 5](#prop5), 그리고 합성의 행렬표현이 행렬곱이라는 [§행렬과 선형사상, ⁋따름정리 4](/ko/math/multilinear_algebra/matrices_and_linear_maps#cor4)를 조합하여 얻을 수도 있다. 이로부터 다음의 성질들이 따라나온다.
+물론 이 명제는 [명제 2](#prop2){: data-relation="weak" }와 [명제 5](#prop5){: data-relation="weak" }, 그리고 합성의 행렬표현이 행렬곱이라는 [§행렬과 선형사상, ⁋따름정리 4](/ko/math/multilinear_algebra/matrices_and_linear_maps#cor4){: data-relation="weak" }를 조합하여 얻을 수도 있다. 이로부터 다음의 성질들이 따라나온다.
 
 ::: 명제 7
 행렬 $X\in\Mat_{J\times I}(A)$, $X'\in\Mat_{J'\times I'}(A)$에 대하여 다음이 성립한다.
@@ -145,7 +145,7 @@ $$\bigl((X\otimes X')^t\bigr)_{(i,i'),(j,j')}=(X\otimes X')_{(j,j'),(i,i')}=x_{j
 
 $$(I_n\otimes I_m)_{(j,j'),(i,i')}=\delta_{ji}\delta_{j'i'}=\delta_{(j,j'),(i,i')}$$
 
-이므로 $I_n\otimes I_m=I_{nm}$이다. 그럼 [명제 6](#prop6)에 의하여
+이므로 $I_n\otimes I_m=I_{nm}$이다. 그럼 [명제 6](#prop6){: data-relation="required" }에 의하여
 
 $$(X\otimes X')(X^{-1}\otimes X'^{-1})=(XX^{-1})\otimes(X'X'^{-1})=I_n\otimes I_m=I_{nm}$$
 
@@ -158,7 +158,7 @@ $$\tr(X\otimes X')=\sum_{(i,i')\in I\times I'}(X\otimes X')_{(i,i'),(i,i')}=\sum
 이다.
 :::
 
-셋째 성질을 linear map의 단계에서 읽으려면 $L=M$, $L'=M'$이 finitely generated free $A$-module이고 $u\in\End_\rMod{A}(M)$, $u'\in\End_\rMod{A}(M')$이며, 각각에 대해 하나의 basis $\mathcal{B}$, $\mathcal{B}'$만을 택해야 한다. 이 경우 $u\otimes u'\in\End_\rMod{A}(M\otimes_AM')$이고, trace가 행렬표현의 선택에 의존하지 않는다는 사실과 [명제 5](#prop5)를 결합하면 $\tr(u\otimes u')=\tr(u)\tr(u')$을 얻는다. ([§행렬과 선형사상, §§행렬표현과 trace](/ko/math/multilinear_algebra/matrices_and_linear_maps#행렬표현과-trace))
+셋째 성질을 linear map의 단계에서 읽으려면 $L=M$, $L'=M'$이 finitely generated free $A$-module이고 $u\in\End_\rMod{A}(M)$, $u'\in\End_\rMod{A}(M')$이며, 각각에 대해 하나의 basis $\mathcal{B}$, $\mathcal{B}'$만을 택해야 한다. 이 경우 $u\otimes u'\in\End_\rMod{A}(M\otimes_AM')$이고, trace가 행렬표현의 선택에 의존하지 않는다는 사실과 [명제 5](#prop5){: data-relation="required" }를 결합하면 $\tr(u\otimes u')=\tr(u)\tr(u')$을 얻는다. ([§행렬과 선형사상, §§행렬표현과 trace](/ko/math/multilinear_algebra/matrices_and_linear_maps#행렬표현과-trace){: data-relation="required" })
 
 ---
 
