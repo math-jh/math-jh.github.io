@@ -38,11 +38,11 @@ and therefore the formula
 
 $$\langle v,w\rangle=\frac{1}{2}\bigl(Q(v+w)-Q(v)-Q(w)\bigr)\tag{1}$$
 
-holds. This formula is called the *polarization identity*. Thus over $\mathbb{R}$, a symmetric bilinear form and a quadratic form uniquely determine each other, and since we can freely move between the two, they are essentially the same thing. The fact that formula (1) holds essentially uses the fact that we can divide by $2$, i.e., that $\ch\mathbb{R}\neq 2$, which was already the situation in [§Bilinear Forms, ⁋Proposition 12](/en/math/linear_algebra/bilinear_form#prop12).
+holds. This formula is called the *polarization identity*. Thus over $\mathbb{R}$, a symmetric bilinear form and a quadratic form uniquely determine each other, and since we can freely move between the two, they are essentially the same thing. The fact that formula (1) holds essentially uses the fact that we can divide by $2$, i.e., that $\ch\mathbb{R}\neq 2$, which was already the situation in [§Bilinear Forms, ⁋Proposition 12](/en/math/linear_algebra/bilinear_form#prop12){: data-relation="weak" }.
 
 ## Congruence and Diagonal Form
 
-Suppose a symmetric bilinear form $\langle -,-\rangle$ is given on $V$, and choose a basis $\mathcal{B}$ of $V$. Then as seen in [§Bilinear Forms, §§Gram Matrix](/en/math/linear_algebra/bilinear_form#gram-matrix), for the Gram matrix $G_\mathcal{B}$ whose $(i,j)$ entry is $\langle x_i,x_j\rangle$, we have $\langle v,w\rangle=[v]_\mathcal{B}^tG_\mathcal{B}[w]_\mathcal{B}$, and since $\langle-,-\rangle$ is symmetric, $G_\mathcal{B}$ is a symmetric matrix. If we choose another basis $\mathcal{C}$, then for the change-of-basis matrix $P=[\id]_\mathcal{C}^\mathcal{B}$ we have seen that
+Suppose a symmetric bilinear form $\langle -,-\rangle$ is given on $V$, and choose a basis $\mathcal{B}$ of $V$. Then as seen in [§Bilinear Forms, §§Gram Matrix](/en/math/linear_algebra/bilinear_form#gram-matrix){: data-relation="required" }, for the Gram matrix $G_\mathcal{B}$ whose $(i,j)$ entry is $\langle x_i,x_j\rangle$, we have $\langle v,w\rangle=[v]_\mathcal{B}^tG_\mathcal{B}[w]_\mathcal{B}$, and since $\langle-,-\rangle$ is symmetric, $G_\mathcal{B}$ is a symmetric matrix. If we choose another basis $\mathcal{C}$, then for the change-of-basis matrix $P=[\id]_\mathcal{C}^\mathcal{B}$ we have seen that
 
 $$G_\mathcal{C}=P^tG_\mathcal{B}P$$
 
@@ -60,7 +60,7 @@ the left-hand side is nonzero, so at least one of the three terms on the right-h
 
 $$v=\frac{\langle v,w\rangle}{\langle w,w\rangle}w+\left(v-\frac{\langle v,w\rangle}{\langle w,w\rangle}w\right)$$
 
-and see that $V=W\oplus w^\perp$. (This is the same as the proof of [§Bilinear Forms, ⁋Proposition 12](/en/math/linear_algebra/bilinear_form#prop12).) Here $w^\perp=\{v\mid\langle v,w\rangle=0\}$. The bilinear form restricted to $w^\perp$ is also symmetric, so by the inductive hypothesis there exists an orthogonal basis of $w^\perp$, and adding $w$ to it gives an orthogonal basis $\{f_1,\ldots,f_n\}$ of $V$.
+and see that $V=W\oplus w^\perp$. (This is the same as the proof of [§Bilinear Forms, ⁋Proposition 12](/en/math/linear_algebra/bilinear_form#prop12){: data-relation="weak" }.) Here $w^\perp=\{v\mid\langle v,w\rangle=0\}$. The bilinear form restricted to $w^\perp$ is also symmetric, so by the inductive hypothesis there exists an orthogonal basis of $w^\perp$, and adding $w$ to it gives an orthogonal basis $\{f_1,\ldots,f_n\}$ of $V$.
 
 Now we scale each $f_i$ appropriately so that $\langle f_i,f_i\rangle$ becomes one of $1$, $-1$, or $0$. If $\langle f_i,f_i\rangle=0$, set $e_i=f_i$; otherwise, for $c=\sqrt{\lvert\langle f_i,f_i\rangle\rvert}$ set $e_i=f_i/c$, then
 
@@ -69,7 +69,7 @@ $$\langle e_i,e_i\rangle=\frac{\langle f_i,f_i\rangle}{\lvert\langle f_i,f_i\ran
 holds. Scalar multiplication preserves orthogonality, so $\{e_1,\ldots,e_n\}$ is a basis satisfying all the desired conditions.
 :::
 
-The Gram matrix with respect to the basis of [Proposition 2](#prop2) is a diagonal matrix with diagonal entries $1$, $-1$, or $0$. By reordering the basis appropriately, we can make this diagonal matrix into the form with $p$ copies of $1$, $q$ copies of $-1$, and $r$ copies of $0$:
+The Gram matrix with respect to the basis of [Proposition 2](#prop2){: data-relation="required" } is a diagonal matrix with diagonal entries $1$, $-1$, or $0$. By reordering the basis appropriately, we can make this diagonal matrix into the form with $p$ copies of $1$, $q$ copies of $-1$, and $r$ copies of $0$:
 
 $$\begin{pmatrix}I_p&&\\&-I_q&\\&&0_r\end{pmatrix}$$
 
@@ -79,13 +79,13 @@ $$Q(v)=a_1^2+\cdots+a_p^2-a_{p+1}^2-\cdots-a_{p+q}^2$$
 
 ## Sylvester's Law of Inertia
 
-[Proposition 2](#prop2) shows that by choosing an appropriate basis, a quadratic form can be reduced to a sum of signed squares, but it is not yet clear whether the numbers $p,q,r$ appearing in this process can vary depending on the choice of basis. The following theorem shows that these three numbers are actually invariants of the bilinear form itself.
+[Proposition 2](#prop2){: data-relation="required" } shows that by choosing an appropriate basis, a quadratic form can be reduced to a sum of signed squares, but it is not yet clear whether the numbers $p,q,r$ appearing in this process can vary depending on the choice of basis. The following theorem shows that these three numbers are actually invariants of the bilinear form itself.
 
 ::: Theorem 3 (Sylvester's Law of Inertia)
-For a symmetric bilinear form $\langle-,-\rangle$ defined on an $\mathbb{R}$-vector space $V$, the numbers $p$, $q$, and $r$ counting how many of the values $\langle e_i,e_i\rangle$ are $1$, $-1$, and $0$ respectively in a basis as in [Proposition 2](#prop2) are determined independently of the choice of basis.
+For a symmetric bilinear form $\langle-,-\rangle$ defined on an $\mathbb{R}$-vector space $V$, the numbers $p$, $q$, and $r$ counting how many of the values $\langle e_i,e_i\rangle$ are $1$, $-1$, and $0$ respectively in a basis as in [Proposition 2](#prop2){: data-relation="required" } are determined independently of the choice of basis.
 :::
 ::: Proof
-Let the basis of [Proposition 2](#prop2) be $\{e_1,\ldots, e_n\}$, and suppose it has been reordered so that there are $p$ copies of $+1$, $q$ copies of $-1$, and $r$ copies of $0$. The rank of a Gram matrix is invariant under congruence (since if $P$ is invertible, $\rank(P^tGP)=\rank G$), and the rank in this basis is $p+q$, so $p+q$ is independent of the choice of basis. Therefore $r=n-(p+q)$ is also independent. Now if we show that $p$ is invariant, then $q$ follows as well.
+Let the basis of [Proposition 2](#prop2){: data-relation="required" } be $\{e_1,\ldots, e_n\}$, and suppose it has been reordered so that there are $p$ copies of $+1$, $q$ copies of $-1$, and $r$ copies of $0$. The rank of a Gram matrix is invariant under congruence (since if $P$ is invertible, $\rank(P^tGP)=\rank G$), and the rank in this basis is $p+q$, so $p+q$ is independent of the choice of basis. Therefore $r=n-(p+q)$ is also independent. Now if we show that $p$ is invariant, then $q$ follows as well.
 
 We show that $p$ can be characterized by the formula
 
@@ -101,7 +101,7 @@ so $Q$ is positive definite on a subspace of dimension $p$. Thus the maximum abo
 
 $$Q(v)=-\sum_{i=p+1}^{p+q}a_i^2\leq 0$$
 
-so if there existed $0\neq v\in U\cap U_-$, then $Q(v)>0$ and $Q(v)\leq 0$ would hold simultaneously, a contradiction. Therefore $U\cap U_-=\{0\}$, and by [§Dimension of Vector Spaces, ⁋Example 8](/en/math/linear_algebra/dimension#ex8),
+so if there existed $0\neq v\in U\cap U_-$, then $Q(v)>0$ and $Q(v)\leq 0$ would hold simultaneously, a contradiction. Therefore $U\cap U_-=\{0\}$, and by [§Dimension of Vector Spaces, ⁋Example 8](/en/math/linear_algebra/dimension#ex8){: data-relation="required" },
 
 $$\dim U+\dim U_-=\dim(U+U_-)\leq n$$
 
@@ -111,7 +111,7 @@ Since $\dim U_-=n-p$, we have $\dim U\leq p$. Thus the maximum is $p$, and this 
 This makes the following definition meaningful.
 
 ::: Definition 4
-For a symmetric bilinear form $\langle-,-\rangle$ defined on an $\mathbb{R}$-vector space $V$, the three numbers $(p,q,r)$ determined by [Theorem 3](#thm3) are called the *signature* of $\langle-,-\rangle$.
+For a symmetric bilinear form $\langle-,-\rangle$ defined on an $\mathbb{R}$-vector space $V$, the three numbers $(p,q,r)$ determined by [Theorem 3](#thm3){: data-relation="required" } are called the *signature* of $\langle-,-\rangle$.
 :::
 
 In the signature, $p+q$ is the rank of the Gram matrix, and $r$ is the degree of degeneracy of $\langle-,-\rangle$, i.e., the dimension of the subspace consisting of vectors orthogonal to all vectors. In particular, $\langle-,-\rangle$ being non-degenerate is equivalent to $r=0$.
@@ -122,12 +122,12 @@ Sylvester's law immediately gives a complete classification of real symmetric ma
 Two real symmetric matrices are congruent if and only if the bilinear forms they define have the same signature.
 :::
 ::: Proof
-If two matrices $G,G'$ are congruent, then they are the same bilinear form written with respect to different bases, so their signatures are the same. Conversely, if the signature is $(p,q,r)$ for both, then by [Proposition 2](#prop2) both $G$ and $G'$ are congruent to the same diagonal matrix with $p$ copies of $1$, $q$ copies of $-1$, and $r$ copies of $0$, and since congruence is an equivalence relation, $G$ and $G'$ are congruent to each other.
+If two matrices $G,G'$ are congruent, then they are the same bilinear form written with respect to different bases, so their signatures are the same. Conversely, if the signature is $(p,q,r)$ for both, then by [Proposition 2](#prop2){: data-relation="required" } both $G$ and $G'$ are congruent to the same diagonal matrix with $p$ copies of $1$, $q$ copies of $-1$, and $r$ copies of $0$, and since congruence is an equivalence relation, $G$ and $G'$ are congruent to each other.
 :::
 
 ## Positive Definiteness
 
-The case where the signature is $(n,0,0)$, i.e., where $\langle v,v\rangle>0$ for all $0\neq v\in V$, is particularly important. This is the same as the Gram matrix being positive definite in the sense of [§Spectral Theorem, ⁋Definition 8](/en/math/linear_algebra/spectral_theorem#def8), and in this case we call $\langle-,-\rangle$ itself positive definite.
+The case where the signature is $(n,0,0)$, i.e., where $\langle v,v\rangle>0$ for all $0\neq v\in V$, is particularly important. This is the same as the Gram matrix being positive definite in the sense of [§Spectral Theorem, ⁋Definition 8](/en/math/linear_algebra/spectral_theorem#def8){: data-relation="weak" }, and in this case we call $\langle-,-\rangle$ itself positive definite.
 
 ::: Proposition 6
 For a symmetric bilinear form $\langle-,-\rangle$ defined on an $\mathbb{R}$-vector space $V$, the following are all equivalent:
@@ -137,9 +137,9 @@ For a symmetric bilinear form $\langle-,-\rangle$ defined on an $\mathbb{R}$-vec
 3. $\langle-,-\rangle$ is an inner product on $V$.
 :::
 ::: Proof
-For the basis $\{e_1,\ldots, e_n\}$ of [Proposition 2](#prop2), if $v=\sum a_ie_i$ then $Q(v)=\sum_i\langle e_i,e_i\rangle a_i^2$. If some $\langle e_i,e_i\rangle$ is $-1$ or $0$, then for $v=e_i$ we have $Q(e_i)\leq 0$, so it is not positive definite. Conversely, if all $\langle e_i,e_i\rangle$ are $1$, i.e., the signature is $(n,0,0)$, then for any $0\neq v$ we have $Q(v)=\sum a_i^2>0$. Thus 1 and 2 are equivalent.
+For the basis $\{e_1,\ldots, e_n\}$ of [Proposition 2](#prop2){: data-relation="required" }, if $v=\sum a_ie_i$ then $Q(v)=\sum_i\langle e_i,e_i\rangle a_i^2$. If some $\langle e_i,e_i\rangle$ is $-1$ or $0$, then for $v=e_i$ we have $Q(e_i)\leq 0$, so it is not positive definite. Conversely, if all $\langle e_i,e_i\rangle$ are $1$, i.e., the signature is $(n,0,0)$, then for any $0\neq v$ we have $Q(v)=\sum a_i^2>0$. Thus 1 and 2 are equivalent.
 
-On the other hand, the definition of an inner product is a symmetric bilinear form such that $\langle v,v\rangle\geq 0$ for all $v$ and equality holds only when $v=0$ ([§Inner Product Spaces, ⁋Definition 1](/en/math/linear_algebra/inner_product_spaces#def1)), which is exactly the condition of being positive definite. Thus 1 and 3 are equivalent.
+On the other hand, the definition of an inner product is a symmetric bilinear form such that $\langle v,v\rangle\geq 0$ for all $v$ and equality holds only when $v=0$ ([§Inner Product Spaces, ⁋Definition 1](/en/math/linear_algebra/inner_product_spaces#def1){: data-relation="weak" }), which is exactly the condition of being positive definite. Thus 1 and 3 are equivalent.
 :::
 
 That is, an inner product is nothing but a symmetric bilinear form with signature $(n,0,0)$, and from the perspective of Sylvester's law, an inner product space corresponds to the most special point among all possible signatures.
