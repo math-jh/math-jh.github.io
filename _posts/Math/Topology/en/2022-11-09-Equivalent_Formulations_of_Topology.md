@@ -18,7 +18,7 @@ We have covered the basics of topology so far. Historically, defining a topologi
 
 ## Closed Sets
 
-By [§Interior, Closure, and Boundary, ⁋Proposition 2](/en/math/topology/other_concepts#prop2), defining a collection $\mathcal{C}$ of subsets of $X$ that tells us *which sets are closed* suffices to give $X$ a topological structure. This is hardly different from the original definition, but it is particularly useful when defining the Zariski topology in algebraic geometry.
+By [§Interior, Closure, and Boundary, ⁋Proposition 2](/en/math/topology/other_concepts#prop2){: data-relation="required" }, defining a collection $\mathcal{C}$ of subsets of $X$ that tells us *which sets are closed* suffices to give $X$ a topological structure. This is hardly different from the original definition, but it is particularly useful when defining the Zariski topology in algebraic geometry.
 
 ## Closure Axiom
 
@@ -30,7 +30,7 @@ For an arbitrary *set* $X$, suppose a function $\cl:\mathcal{P}(X)\rightarrow\ma
 - $$\cl(A\cup B)=\cl(A)\cup\cl(B)$$
 - $$\cl(\emptyset)=\emptyset$$
 
-A function satisfying these conditions is called a *closure operator*. ([\[Set Theory\] §Filters, Ideals, and Galois Connections, ⁋Definition 8](/en/math/set_theory/filter_and_ideal#def8))
+A function satisfying these conditions is called a *closure operator*. ([\[Set Theory\] §Filters, Ideals, and Galois Connections, ⁋Definition 8](/en/math/set_theory/filter_and_ideal#def8){: data-relation="weak" })
 :::
 
 From the third condition, if $A\subseteq B$ then
@@ -54,7 +54,7 @@ Conversely, suppose a closure operator $\cl:\mathcal{P}(X)\rightarrow\mathcal{P}
 From this we obtain the following theorem.
 
 ::: Theorem 2
-Suppose a function $\cl:\mathcal{P}(X)\rightarrow\mathcal{P}(X)$ satisfying all the conditions of [Definition 1](#def1) is given. Define $\mathcal{C}$ to be <phrase>the collection of all $C$ satisfying $\cl(C)=C$</phrase>. Then $\mathcal{C}$ satisfies all the conditions of [§Interior, Closure, and Boundary, ⁋Proposition 2](/en/math/topology/other_concepts#prop2), and therefore defines a unique topological structure.
+Suppose a function $\cl:\mathcal{P}(X)\rightarrow\mathcal{P}(X)$ satisfying all the conditions of [Definition 1](#def1){: data-relation="required" } is given. Define $\mathcal{C}$ to be <phrase>the collection of all $C$ satisfying $\cl(C)=C$</phrase>. Then $\mathcal{C}$ satisfies all the conditions of [§Interior, Closure, and Boundary, ⁋Proposition 2](/en/math/topology/other_concepts#prop2){: data-relation="required" }, and therefore defines a unique topological structure.
 :::
 
 Of course, one can just as easily define a topological structure using the interior of a set. In this case, the axioms that the interior operator $\interior$ must satisfy are as follows.
@@ -72,7 +72,7 @@ A function satisfying these conditions is called an *interior operator*.
 
 ## Neighborhood Filter
 
-We verified in [§Open Sets, ⁋Proposition 6](/en/math/topology/open_sets#prop6) that giving a *neighborhood filter* $\mathcal{N}(x)$ for each point $x$ also endows $X$ with a topological structure in a unique way. In that proposition, the first three conditions that $\mathcal{N}(x)$ must satisfy are precisely the filter axioms. Although the following definition has already been introduced, we record it here for later reference.
+We verified in [§Open Sets, ⁋Proposition 6](/en/math/topology/open_sets#prop6){: data-relation="required" } that giving a *neighborhood filter* $\mathcal{N}(x)$ for each point $x$ also endows $X$ with a topological structure in a unique way. In that proposition, the first three conditions that $\mathcal{N}(x)$ must satisfy are precisely the filter axioms. Although the following definition has already been introduced, we record it here for later reference.
 
 ::: Definition 3
 A *filter* on a set $X$ is a subset $\mathcal{F}$ of $\mathcal{P}(X)$ satisfying the following three conditions.
@@ -86,7 +86,7 @@ A *filter* on a set $X$ is a subset $\mathcal{F}$ of $\mathcal{P}(X)$ satisfying
 For an infinite set $X$, the collection of all $A$ such that $X\setminus A$ is finite forms a filter. In particular, when $X=\mathbb{N}$, this filter is called the *Fréchet filter*.
 :::
 
-Regarding the ordered set $(\mathcal{P}(X),\subseteq)$, the above definition coincides with that given in [\[Set Theory\] §Filters, Ideals, and Galois Connections, ⁋Definition 1](/en/math/set_theory/filter_and_ideal#def1), except for the additional condition $\emptyset\not\in\mathcal{F}$. Likewise, an *ultrafilter* on $X$ is understood as a maximal filter not containing $\emptyset$.
+Regarding the ordered set $(\mathcal{P}(X),\subseteq)$, the above definition coincides with that given in [\[Set Theory\] §Filters, Ideals, and Galois Connections, ⁋Definition 1](/en/math/set_theory/filter_and_ideal#def1){: data-relation="weak" }, except for the additional condition $\emptyset\not\in\mathcal{F}$. Likewise, an *ultrafilter* on $X$ is understood as a maximal filter not containing $\emptyset$.
 
 Thus, among the four conditions that $\mathcal{N}(x)$ must satisfy, the first three can be summarized as the requirement that $\mathcal{N}(x)$ be a filter for every $x$. The fourth condition has its own name.
 
@@ -94,7 +94,7 @@ Thus, among the four conditions that $\mathcal{N}(x)$ must satisfy, the first th
 For an arbitrary $z\in X$, suppose a filter $\mathcal{N}(z)$ on $X$ is given whose elements each contain $z$. Then for every $S\in\mathcal{N}(z)$, there exists a suitable $S'\in\mathcal{N}(z)$ such that <phrase>for every $x\in S'$, $S\in\mathcal{N}(x)$</phrase>.
 :::
 
-Moreover, regarding $\mathcal{N}(x)$ as playing a role similar to a local base, we showed that a topological space can also be defined via a base $\mathcal{B}$. ([§Bases of a Topological Space, ⁋Corollary 6](/en/math/topology/topological_bases#cor6))
+Moreover, regarding $\mathcal{N}(x)$ as playing a role similar to a local base, we showed that a topological space can also be defined via a base $\mathcal{B}$. ([§Bases of a Topological Space, ⁋Corollary 6](/en/math/topology/topological_bases#cor6){: data-relation="weak" })
 
 More generally, one can define a base for a filter.
 

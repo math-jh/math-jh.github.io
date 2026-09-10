@@ -17,7 +17,7 @@ weight: 4
 
 ## 닫힌집합
 
-[§집합의 내부, 폐포, 경계, ⁋명제 2](/ko/math/topology/other_concepts#prop2)에 의하여, 집합 $X$ 위에 <em-ko>어떠한 집합이 닫힌 집합인지</em-ko>를 알려주는 집합들의 모임 $\mathcal{C}$를 정의하는 것으로 $X$에 위상구조를 줄 수 있다. 이는 원래의 정의와 거의 다르지 않지만, 특히 algebraic geometry에서 Zariski topology를 정의할 때 유용하게 사용할 수 있다.
+[§집합의 내부, 폐포, 경계, ⁋명제 2](/ko/math/topology/other_concepts#prop2){: data-relation="required" }에 의하여, 집합 $X$ 위에 <em-ko>어떠한 집합이 닫힌 집합인지</em-ko>를 알려주는 집합들의 모임 $\mathcal{C}$를 정의하는 것으로 $X$에 위상구조를 줄 수 있다. 이는 원래의 정의와 거의 다르지 않지만, 특히 algebraic geometry에서 Zariski topology를 정의할 때 유용하게 사용할 수 있다.
 
 ## Closure axiom
 
@@ -29,7 +29,7 @@ weight: 4
 - $$\cl(A\cup B)=\cl(A)\cup\cl(B)$$
 - $$\cl(\emptyset)=\emptyset$$
 
-이 조건들을 만족하는 함수를 *closure operator*라 부른다. ([\[집합론\] §필터와 아이디얼, 갈루아 대응, ⁋정의 8](/ko/math/set_theory/filter_and_ideal#def8))
+이 조건들을 만족하는 함수를 *closure operator*라 부른다. ([\[집합론\] §필터와 아이디얼, 갈루아 대응, ⁋정의 8](/ko/math/set_theory/filter_and_ideal#def8){: data-relation="weak" })
 :::
 
 세 번째 조건으로부터, 만일 $A\subseteq B$라면
@@ -53,7 +53,7 @@ $$\cl(A)\subseteq\cl(A)\cup\cl(B)=\cl(A\cup B)=\cl(B)$$
 이로부터 다음의 정리가 얻어진다.
 
 ::: 정리 2
-[정의 1](#def1)의 조건을 모두 만족하는 함수 $\cl:\mathcal{P}(X)\rightarrow\mathcal{P}(X)$가 주어졌다 하자. $\mathcal{C}$를 <phrase>$\cl(C)=C$를 만족하는 모든 $C$들의 모임</phrase>으로 정의하면, $\mathcal{C}$는 [§집합의 내부, 폐포, 경계, ⁋명제 2](/ko/math/topology/other_concepts#prop2)의 조건을 모두 만족하며 따라서 유일한 위상구조를 정의한다.
+[정의 1](#def1){: data-relation="required" }의 조건을 모두 만족하는 함수 $\cl:\mathcal{P}(X)\rightarrow\mathcal{P}(X)$가 주어졌다 하자. $\mathcal{C}$를 <phrase>$\cl(C)=C$를 만족하는 모든 $C$들의 모임</phrase>으로 정의하면, $\mathcal{C}$는 [§집합의 내부, 폐포, 경계, ⁋명제 2](/ko/math/topology/other_concepts#prop2){: data-relation="required" }의 조건을 모두 만족하며 따라서 유일한 위상구조를 정의한다.
 :::
 
 물론 집합의 interior를 이용하여도 어렵지 않게 위상구조를 하나 정의할 수 있다. 이 경우, interior operator $\interior$가 만족해야 할 공리들은 다음과 같다.
@@ -71,7 +71,7 @@ $$\cl(A)\subseteq\cl(A)\cup\cl(B)=\cl(A\cup B)=\cl(B)$$
 
 ## Neighborhood filter
 
-우리는 [§열린집합, ⁋명제 6](/ko/math/topology/open_sets#prop6)에서 각 점 $x$마다 *neighborhood filter* $\mathcal{N}(x)$를 주면, 이 정보 또한 유일한 방식으로 $X$에 위상구조를 준다는 것을 확인했다. 해당 명제에서 $\mathcal{N}(x)$가 만족해야 할 첫 번째와 두 번째 조건은 filter의 조건이고 세 번째 조건은 $\mathcal{N}(x)$의 각 원소가 $x$를 포함한다는 것이며, 다음 정의 또한 이미 정의하였던 것이지만 나중의 reference를 위해 남겨둔다.
+우리는 [§열린집합, ⁋명제 6](/ko/math/topology/open_sets#prop6){: data-relation="weak" }에서 각 점 $x$마다 *neighborhood filter* $\mathcal{N}(x)$를 주면, 이 정보 또한 유일한 방식으로 $X$에 위상구조를 준다는 것을 확인했다. 해당 명제에서 $\mathcal{N}(x)$가 만족해야 할 첫 번째와 두 번째 조건은 filter의 조건이고 세 번째 조건은 $\mathcal{N}(x)$의 각 원소가 $x$를 포함한다는 것이며, 다음 정의 또한 이미 정의하였던 것이지만 나중의 reference를 위해 남겨둔다.
 
 ::: 정의 3
 집합 $X$ 위에서 정의된 *filter*라는 것은 다음의 세 조건을 만족하는 $\mathcal{P}(X)$의 부분집합 $\mathcal{F}$를 뜻한다.
@@ -85,7 +85,7 @@ $$\cl(A)\subseteq\cl(A)\cup\cl(B)=\cl(A\cup B)=\cl(B)$$
 무한집합 $X$에 대하여, $X\setminus A$가 유한집합이도록 하는 $A$들의 모임은 filter이다. 특별히 $X=\mathbb{N}$인 경우 이 filter를 *Fréchet filter*라 부른다.
 :::
 
-Ordered set $(\mathcal{P}(X),\subseteq)$를 생각하면, 위 정의는 [\[집합론\] §필터와 아이디얼, 갈루아 대응, ⁋정의 1](/ko/math/set_theory/filter_and_ideal#def1)에서 정의한 것과 동일하지만 조건 $\emptyset\not\in\mathcal{F}$가 추가된 것으로 생각할 수 있다. 비슷하게, $X$ 위에 정의된 *ultrafilter* 또한 $\emptyset$을 포함하지 않는 maximal filter를 의미하는 것으로 생각한다.
+Ordered set $(\mathcal{P}(X),\subseteq)$를 생각하면, 위 정의는 [\[집합론\] §필터와 아이디얼, 갈루아 대응, ⁋정의 1](/ko/math/set_theory/filter_and_ideal#def1){: data-relation="weak" }에서 정의한 것과 동일하지만 조건 $\emptyset\not\in\mathcal{F}$가 추가된 것으로 생각할 수 있다. 비슷하게, $X$ 위에 정의된 *ultrafilter* 또한 $\emptyset$을 포함하지 않는 maximal filter를 의미하는 것으로 생각한다.
 
 그럼 $\mathcal{N}(x)$가 만족해야 할 네 가지 조건 중 앞의 세 가지는 모든 $x$에 대하여 $\mathcal{N}(x)$가 각 원소마다 $x$를 포함하는 filter라는 것으로 축약할 수 있다. 네 번째 조건은 별도로 이름을 갖는다.
 
@@ -93,7 +93,7 @@ Ordered set $(\mathcal{P}(X),\subseteq)$를 생각하면, 위 정의는 [\[집�
 임의의 $z\in X$와, 각각의 원소가 $z$를 포함하는 $X$의 filter $\mathcal{N}(z)$가 주어졌다 하자. 그럼 임의의 $S\in\mathcal{N}(z)$마다 적당한 $S'\in\mathcal{N}(z)$가 존재하여, <phrase>임의의 $x\in S'$마다 $S\in\mathcal{N}(x)$</phrase>가 성립하도록 할 수 있다.
 :::
 
-뿐만 아니라, $\mathcal{N}(x)$를 local base와 같은 역할을 한다고 생각하면, 이를 통해 위상공간이 base $\mathcal{B}$를 통해서도 정의됨을 보일 수 있었다. ([§위상공간의 기저, ⁋따름정리 6](/ko/math/topology/topological_bases#cor6))
+뿐만 아니라, $\mathcal{N}(x)$를 local base와 같은 역할을 한다고 생각하면, 이를 통해 위상공간이 base $\mathcal{B}$를 통해서도 정의됨을 보일 수 있었다. ([§위상공간의 기저, ⁋따름정리 6](/ko/math/topology/topological_bases#cor6){: data-relation="weak" })
 
 한편, 더 일반적으로 filter의 base를 정의할 수 있다. 
 
