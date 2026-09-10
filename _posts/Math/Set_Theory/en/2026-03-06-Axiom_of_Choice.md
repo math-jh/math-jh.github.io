@@ -28,7 +28,7 @@ Next, we prove that
 
 > Every well-ordered set is order-isomorphic to some ordinal.
 
-As we saw in [§Ordinals and Well-Ordered Sets, ⁋Example 3](/en/math/set_theory/ordinals#ex3), many ordered sets are not well-ordered, so the condition in the above proposition may seem very restrictive. However, by a clever use of the axiom of choice, we can prove the following theorem.
+As we saw in [§Ordinals and Well-Ordered Sets, ⁋Example 3](/en/math/set_theory/ordinals#ex3){: data-relation="weak" }, many ordered sets are not well-ordered, so the condition in the above proposition may seem very restrictive. However, by a clever use of the axiom of choice, we can prove the following theorem.
 
 ::: Theorem 1. (Zermelo)
 Every set $A$ can be well-ordered.
@@ -49,13 +49,13 @@ Let $\mathcal{M}$ be the collection of relations $R\subseteq A\times A$ satisfyi
 1. $G$ is a well-ordering on $R=\pr_1R$.
 2. For each $x\in U$, we have $S_x\in\mathcal{S}$ and $p(S_x)=x$.
 
-We will show that for each $G\in\mathcal{M}$, the set $U=\pr_1G$ satisfies the conditions of [§Properties of Well-Ordered Sets, ⁋Proposition 4](/en/math/set_theory/well_ordering#prop4). To this end, we show that for any $U$, $U'$, either $U$ is a segment of $U'$ or vice versa.
+We will show that for each $G\in\mathcal{M}$, the set $U=\pr_1G$ satisfies the conditions of [§Properties of Well-Ordered Sets, ⁋Proposition 4](/en/math/set_theory/well_ordering#prop4){: data-relation="required" }. To this end, we show that for any $U$, $U'$, either $U$ is a segment of $U'$ or vice versa.
 
 Let $G$, $G'\in \mathcal{M}$ be arbitrary, and let $U$, $U'$ be their domains, respectively. Let $V$ be the set of all $x\in U\cap U'$ such that (1) the segment with endpoint $x$ represents the same set in $U$ and in $U'$, and (2) the order on that segment agrees with $G$. If $x\in V$ and $y\in U$ satisfies $y\leq x$, then $y\in S_x$ in both $U$ and $U'$. Moreover, elements less than $y$ in $U$ are also less than $y$ in $U'$. Thus $y\in V$, and $V$ is a segment of $U$.
 
 Now, to show that $U$ and $U'$ satisfy the desired condition, it suffices to show that either $U=V$ or $U'=V$. Assume $V\neq U$ and $V\neq U'$. Then for the least elements $x$ and $x'$ of $U\setminus V$ and $U'\setminus V$, we have $V=S_x=S_{x'}$ in $U$ and $U'$, respectively. However, by the second condition, $V\in\mathcal{S}$, so $x=p(S_x)=p(V)=p(S_{x'})=x'$, and thus $x\in V$.
 
-Now, using [§Properties of Well-Ordered Sets, ⁋Proposition 4](/en/math/set_theory/well_ordering#prop4), we obtain the well-ordered set $M=\bigcup_{G\in\mathcal{M}}\pr_1G$. Trivially $M\in\mathcal{M}$, so $M$ satisfies condition 1 of the lemma. If $M\in\mathcal{S}$, then by the condition on $\mathcal{S}$ we have $p(M)\not\in M$. Adding a greatest element $a=p(M)$ to $M$, we obtain another well-ordered set $M'=M\cup\{a\}$ ($S_a=M$). Since $S_a=M\in\mathcal{S}$ and $p(S_a)=a$, we have $M'\in\mathcal{M}$, contradicting the maximality of $M$. Thus condition 2 of the lemma also holds.
+Now, using [§Properties of Well-Ordered Sets, ⁋Proposition 4](/en/math/set_theory/well_ordering#prop4){: data-relation="required" }, we obtain the well-ordered set $M=\bigcup_{G\in\mathcal{M}}\pr_1G$. Trivially $M\in\mathcal{M}$, so $M$ satisfies condition 1 of the lemma. If $M\in\mathcal{S}$, then by the condition on $\mathcal{S}$ we have $p(M)\not\in M$. Adding a greatest element $a=p(M)$ to $M$, we obtain another well-ordered set $M'=M\cup\{a\}$ ($S_a=M$). Since $S_a=M\in\mathcal{S}$ and $p(S_a)=a$, we have $M'\in\mathcal{M}$, contradicting the maximality of $M$. Thus condition 2 of the lemma also holds.
 :::
 
 ::: Proof (Theorem 1)
@@ -83,7 +83,7 @@ An ordered set $A$ in which every well-ordered subset is bounded above has a max
 ::: Proof
 If $v$ is an upper bound of $X\subseteq A$ and $v\not\in X$, then we call $v\in A$ a *strict upper bound* of $X$.
 
-Now, let $\mathcal{S}$ be the collection of subsets of $A$ that have a strict upper bound, and let $p:\mathcal{S}\rightarrow A$ be a function picking out a strict upper bound. That is, for every $S$, $p(S)$ is a strict upper bound of $S$. Since $p(S)\not\in S$, by [§Properties of Well-Ordered Sets, ⁋Lemma 5](/en/math/set_theory/well_ordering#lem5) we obtain a well-ordered subset $M$. Moreover, this well-ordering coincides with the restriction of the order relation of $A$ to $M$. If $x<y$ holds in $M$, then this is equivalent to $x\in S_y$ (where $S_y$ is the segment in $M$), and if $p(S_y)=y$, then $y$ is a strict upper bound of $S_y$. (Here $S_y$ is a subset of $M$, so although it is not a segment, it has a strict upper bound $y$ simply as a subset.) In particular, from $x\in S_y$ we get that $x<y$ also holds in $A$. Since $M$ is now well-ordered, by hypothesis $M$ has an upper bound $m$. But by definition $M$ cannot have a strict upper bound, so $m\in M$, and if some $m'$ satisfies $m\leq m'$, then $m=m'$. Otherwise $m'$ would be a strict upper bound of $M$.
+Now, let $\mathcal{S}$ be the collection of subsets of $A$ that have a strict upper bound, and let $p:\mathcal{S}\rightarrow A$ be a function picking out a strict upper bound. That is, for every $S$, $p(S)$ is a strict upper bound of $S$. Since $p(S)\not\in S$, by [§Properties of Well-Ordered Sets, ⁋Lemma 5](/en/math/set_theory/well_ordering#lem5){: data-relation="required" } we obtain a well-ordered subset $M$. Moreover, this well-ordering coincides with the restriction of the order relation of $A$ to $M$. If $x<y$ holds in $M$, then this is equivalent to $x\in S_y$ (where $S_y$ is the segment in $M$), and if $p(S_y)=y$, then $y$ is a strict upper bound of $S_y$. (Here $S_y$ is a subset of $M$, so although it is not a segment, it has a strict upper bound $y$ simply as a subset.) In particular, from $x\in S_y$ we get that $x<y$ also holds in $A$. Since $M$ is now well-ordered, by hypothesis $M$ has an upper bound $m$. But by definition $M$ cannot have a strict upper bound, so $m\in M$, and if some $m'$ satisfies $m\leq m'$, then $m=m'$. Otherwise $m'$ would be a strict upper bound of $M$.
 :::
 
 For completeness, let us briefly show that the three statements—the axiom of choice, Zermelo's theorem, and Zorn's lemma—are equivalent. Since we used the axiom of choice to prove Zermelo's theorem and Zorn's lemma, it now suffices to construct a choice function from each of Zermelo's theorem and Zorn's lemma.
