@@ -33,7 +33,7 @@ $X$ 위의 임의의 위상 $\mathcal{T}$에서 $\emptyset$과 $X$는 열린집�
 그럼 $\mathcal{C}$의 각 원소들의 여집합들을 정확히 열린집합으로 갖는 위상 $\mathcal{T}$가 유일하게 존재한다.
 :::
 ::: 증명
-다음의 De Morgan 법칙 ([\[집합론\] §합집합과 교집합, ⁋명제 8](/ko/math/set_theory/union_and_intersection#prop8))
+다음의 De Morgan 법칙 ([\[집합론\] §합집합과 교집합, ⁋명제 8](/ko/math/set_theory/union_and_intersection#prop8){: data-relation="required" })
 
 $$\left(\bigcap A_i\right)^c=\bigcup A_i^c,\quad\left(\bigcup A_i\right)^c=\bigcap A_i^c$$
 
@@ -77,7 +77,7 @@ $$\interior(A^c)=(\cl(A))^c$$
 
 위와 같은 논증을 통해 interior와 closure, exterior 중 어느 하나만 있더라도 다른 둘을 만들 수 있다는 것을 안다. 
 
-집합 $A$의 interior를 생각하자. $x\in\interior(A)$라는 것은 $x$를 포함하고, $A$에 포함되는 열린집합 $U$가 존재한다는 뜻이고, 따라서 $A$가 $x$의 근방이라는 것과 동치이다. 따라서 임의의 두 집합 $A,B$에 대하여, $x\in\interior(A\cap B)$인 것은 $x\in\interior(A)\cap\interior(B)$인 것과 동치이다. ([§열린집합, ⁋명제 6](/ko/math/topology/open_sets#prop6)의 둘째 조건) 이를 위에서 설명한 방식을 따라 closure에 대한 명제로 바꾸면 다음 등식
+집합 $A$의 interior를 생각하자. $x\in\interior(A)$라는 것은 $x$를 포함하고, $A$에 포함되는 열린집합 $U$가 존재한다는 뜻이고, 따라서 $A$가 $x$의 근방이라는 것과 동치이다. 따라서 임의의 두 집합 $A,B$에 대하여, $x\in\interior(A\cap B)$인 것은 $x\in\interior(A)\cap\interior(B)$인 것과 동치이다. ([§열린집합, ⁋명제 6](/ko/math/topology/open_sets#prop6){: data-relation="required" }의 둘째 조건) 이를 위에서 설명한 방식을 따라 closure에 대한 명제로 바꾸면 다음 등식
 
 $$\cl(A\cup B)=\cl(A)\cup\cl(B)$$
 
@@ -105,14 +105,14 @@ $$A\cap\cl(B)\subseteq\cl(A\cap B)$$
 이 성립한다.
 :::
 ::: 증명
-$x\in A\cap\cl(B)$라 하자. $A$는 $x$의 열린근방이므로, $x$의 임의의 근방 $V$에 대하여 $V\cap A$ 또한 $x$의 근방이 된다. 따라서 $x\in\cl(B)$인 것과 [명제 6](#prop6)으로부터 $(V\cap A)\cap B\neq\emptyset$임을 안다. 그런데 이는 $A\cap B$와 $V$의 교집합이 공집합이 아니라는 것으로 해석할 수도 있고, $V$는 $x$의 임의의 근방이므로 다시 [명제 6](#prop6)에 의하여 $x\in\cl(A\cap B)$이다.
+$x\in A\cap\cl(B)$라 하자. $A$는 $x$의 열린근방이므로, $x$의 임의의 근방 $V$에 대하여 $V\cap A$ 또한 $x$의 근방이 된다. 따라서 $x\in\cl(B)$인 것과 [명제 6](#prop6){: data-relation="required" }으로부터 $(V\cap A)\cap B\neq\emptyset$임을 안다. 그런데 이는 $A\cap B$와 $V$의 교집합이 공집합이 아니라는 것으로 해석할 수도 있고, $V$는 $x$의 임의의 근방이므로 다시 [명제 6](#prop6){: data-relation="required" }에 의하여 $x\in\cl(A\cap B)$이다.
 :::
 
 ::: 정의 8
 위상공간 $X$와 $X$의 임의의 부분집합 $A$에 대하여, $x\in X$가 $A$의 *limit point<sub>극한점</sub>*이라는 것은 $x$의 임의의 근방이 $x$ 자기 자신을 제외한 점에서 $A$와 만나는 것이다. 
 :::
 
-그럼 $\cl(A)$는 $A$의 limit point들과 $A$의 합집합이다. 만일 $x\in\cl(A)\setminus A$라면, [명제 6](#prop6)에 의하여 $x$는 반드시 $A$의 limit point여야 하고, 거꾸로 $A$의 limit point는 그 임의의 근방이 $A$와 만나므로 다시 [명제 6](#prop6)에 의하여 $\cl(A)$에 속한다는 것을 안다. 반면, $x\in A$라 하면 이것이 반드시 참일 필요가 없다. 이와 같이 $x\in A$에 대하여 적당한 근방 $V$가 존재하여 $V\cap A=\{x\}$이도록 할 수 있다면 $x$를 $A$의 *isolated point<sub>고립점</sub>*이라 부른다. Isolated point를 갖지 않는 닫힌집합을 *perfect set<sub>완전집합</sub>*이라 부른다.
+그럼 $\cl(A)$는 $A$의 limit point들과 $A$의 합집합이다. 만일 $x\in\cl(A)\setminus A$라면, [명제 6](#prop6){: data-relation="required" }에 의하여 $x$는 반드시 $A$의 limit point여야 하고, 거꾸로 $A$의 limit point는 그 임의의 근방이 $A$와 만나므로 다시 [명제 6](#prop6){: data-relation="required" }에 의하여 $\cl(A)$에 속한다는 것을 안다. 반면, $x\in A$라 하면 이것이 반드시 참일 필요가 없다. 이와 같이 $x\in A$에 대하여 적당한 근방 $V$가 존재하여 $V\cap A=\{x\}$이도록 할 수 있다면 $x$를 $A$의 *isolated point<sub>고립점</sub>*이라 부른다. Isolated point를 갖지 않는 닫힌집합을 *perfect set<sub>완전집합</sub>*이라 부른다.
 
 ## 집합의 경계
 
@@ -132,7 +132,7 @@ $$\partial A=\cl A\setminus\interior A$$
 위상공간 $X$의 임의의 부분집합 $A$가 *dense subset<sub>조밀 부분집합</sub>*이라는 것은 $\cl(A)=X$인 것이다.
 :::
 
-[명제 6](#prop6)에 의하여, $A$가 $X$에서 dense라는 것은 공집합이 아닌 $X$의 열린집합이 반드시 $A$와 만난다는 것을 의미한다. 직관적으로 $X$의 dense subset을 찾으면, 약간의 perturbation만 거치면 $X$를 전부 얻어낼 수 있다는 것으로 생각할 수 있다. 이를 더 일상적인 언어로 쓰면 $X$의 dense subset은 $X$의 "거의 모든" 부분을 포함한다고 생각할 수 있다.
+[명제 6](#prop6){: data-relation="required" }에 의하여, $A$가 $X$에서 dense라는 것은 공집합이 아닌 $X$의 열린집합이 반드시 $A$와 만난다는 것을 의미한다. 직관적으로 $X$의 dense subset을 찾으면, 약간의 perturbation만 거치면 $X$를 전부 얻어낼 수 있다는 것으로 생각할 수 있다. 이를 더 일상적인 언어로 쓰면 $X$의 dense subset은 $X$의 "거의 모든" 부분을 포함한다고 생각할 수 있다.
 
 한편, 위상수학에서도 크기의 개념은 base의 크기로 주어지는데, 이는 다음 명제에 따른 것이다.
 

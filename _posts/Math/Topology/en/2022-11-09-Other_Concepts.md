@@ -34,7 +34,7 @@ Suppose a collection $\mathcal{C}$ on a set $X$ is given satisfying the followin
 Then there exists a unique topology $\mathcal{T}$ whose open sets are exactly the complements of the elements of $\mathcal{C}$.
 :::
 ::: Proof
-From De Morgan's laws ([\[Set Theory\] §Union and Intersection, ⁋Proposition 8](/en/math/set_theory/union_and_intersection#prop8))
+From De Morgan's laws ([\[Set Theory\] §Union and Intersection, ⁋Proposition 8](/en/math/set_theory/union_and_intersection#prop8){: data-relation="required" })
 
 $$\left(\bigcap A_i\right)^c=\bigcup A_i^c,\quad\left(\bigcup A_i\right)^c=\bigcap A_i^c$$
 
@@ -78,7 +78,7 @@ By definition, $\interior(A^c)$ is the largest open set contained in $A^c$, whic
 
 The same argument shows that if we have any one of interior, closure, or exterior, we can construct the other two.
 
-Consider the interior of a set $A$. The statement $x\in\interior(A)$ means that there exists an open set $U$ containing $x$ and contained in $A$, which is equivalent to saying that $A$ is a neighborhood of $x$. Therefore, for any two sets $A,B$, the condition $x\in\interior(A\cap B)$ is equivalent to $x\in\interior(A)\cap\interior(B)$. (The second condition of [§Open Sets, ⁋Proposition 6](/en/math/topology/open_sets#prop6).) Translating this into a proposition about closure via the method explained above, we obtain the equality
+Consider the interior of a set $A$. The statement $x\in\interior(A)$ means that there exists an open set $U$ containing $x$ and contained in $A$, which is equivalent to saying that $A$ is a neighborhood of $x$. Therefore, for any two sets $A,B$, the condition $x\in\interior(A\cap B)$ is equivalent to $x\in\interior(A)\cap\interior(B)$. (The second condition of [§Open Sets, ⁋Proposition 6](/en/math/topology/open_sets#prop6){: data-relation="required" }.) Translating this into a proposition about closure via the method explained above, we obtain the equality
 
 $$\cl(A\cup B)=\cl(A)\cup\cl(B).$$
 
@@ -103,14 +103,14 @@ $$A\cap\cl(B)\subseteq\cl(A\cap B)$$
 holds.
 :::
 ::: Proof
-Suppose $x\in A\cap\cl(B)$. Since $A$ is an open neighborhood of $x$, for any neighborhood $V$ of $x$, the intersection $V\cap A$ is also a neighborhood of $x$. Thus, from the fact that $x\in\cl(B)$ and [Proposition 6](#prop6), we know that $(V\cap A)\cap B\neq\emptyset$. However, this can also be interpreted as saying that the intersection of $A\cap B$ and $V$ is nonempty, and since $V$ is an arbitrary neighborhood of $x$, we again have $x\in\cl(A\cap B)$ by [Proposition 6](#prop6).
+Suppose $x\in A\cap\cl(B)$. Since $A$ is an open neighborhood of $x$, for any neighborhood $V$ of $x$, the intersection $V\cap A$ is also a neighborhood of $x$. Thus, from the fact that $x\in\cl(B)$ and [Proposition 6](#prop6){: data-relation="required" }, we know that $(V\cap A)\cap B\neq\emptyset$. However, this can also be interpreted as saying that the intersection of $A\cap B$ and $V$ is nonempty, and since $V$ is an arbitrary neighborhood of $x$, we again have $x\in\cl(A\cap B)$ by [Proposition 6](#prop6){: data-relation="required" }.
 :::
 
 ::: Definition 8
 For a topological space $X$ and any subset $A$ of $X$, a point $x\in X$ is called a *limit point* of $A$ if every neighborhood of $x$ meets $A$ at some point other than $x$ itself.
 :::
 
-Then $\cl(A)$ is the union of $A$ and the limit points of $A$. If $x\in\cl(A)\setminus A$, then by [Proposition 6](#prop6) the point $x$ must be a limit point of $A$; conversely, any limit point of $A$ belongs to $\cl(A)$ by [Proposition 6](#prop6) again, because every neighborhood of it meets $A$. On the other hand, if $x\in A$ this need not hold. If, for $x\in A$, there exists a neighborhood $V$ such that $V\cap A=\{x\}$, then we call $x$ an *isolated point* of $A$. A closed set with no isolated points is called a *perfect set*.
+Then $\cl(A)$ is the union of $A$ and the limit points of $A$. If $x\in\cl(A)\setminus A$, then by [Proposition 6](#prop6){: data-relation="required" } the point $x$ must be a limit point of $A$; conversely, any limit point of $A$ belongs to $\cl(A)$ by [Proposition 6](#prop6){: data-relation="required" } again, because every neighborhood of it meets $A$. On the other hand, if $x\in A$ this need not hold. If, for $x\in A$, there exists a neighborhood $V$ such that $V\cap A=\{x\}$, then we call $x$ an *isolated point* of $A$. A closed set with no isolated points is called a *perfect set*.
 
 ## Boundary of a Set
 
@@ -129,7 +129,7 @@ Thus $\partial A$ is a closed set.
 A subset $A$ of a topological space $X$ is called a *dense subset* if $\cl(A)=X$.
 :::
 
-By [Proposition 6](#prop6), the condition that $A$ is dense in $X$ means that every nonempty open subset of $X$ must intersect $A$. Intuitively, one may think that if we find a dense subset of $X$, then we can recover all of $X$ with only a slight perturbation. In more everyday language, a dense subset of $X$ can be thought of as containing "almost all" of $X$.
+By [Proposition 6](#prop6){: data-relation="required" }, the condition that $A$ is dense in $X$ means that every nonempty open subset of $X$ must intersect $A$. Intuitively, one may think that if we find a dense subset of $X$, then we can recover all of $X$ with only a slight perturbation. In more everyday language, a dense subset of $X$ can be thought of as containing "almost all" of $X$.
 
 On the other hand, in topology the notion of size is also given by the cardinality of a base, as shown in the following proposition.
 
