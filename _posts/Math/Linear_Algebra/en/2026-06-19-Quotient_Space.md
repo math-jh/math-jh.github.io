@@ -36,7 +36,7 @@ $$v+W=\{v+w\mid w\in W\}$$
 is called the *coset* of $W$ containing $v$.
 :::
 
-By definition, the coset $v+W$ is the set of all vectors whose difference from $v$ lies in $W$, i.e. the vectors that we agreed to treat as equal to $v$ in $V/W$. This is an example of an equivalence class from set theory ([\[Set Theory\] §Equivalence Relations, ⁋Definition 4](/en/math/set_theory/equivalence_relations#def4)), but all we need is the following fact, claimed in the introduction, that two cosets are equal precisely when the difference of their representatives lies in $W$.
+By definition, the coset $v+W$ is the set of all vectors whose difference from $v$ lies in $W$, i.e. the vectors that we agreed to treat as equal to $v$ in $V/W$. This is an example of an equivalence class from set theory ([\[Set Theory\] §Equivalence Relations, ⁋Definition 4](/en/math/set_theory/equivalence_relations#def4){: data-relation="weak" }), but all we need is the following fact, claimed in the introduction, that two cosets are equal precisely when the difference of their representatives lies in $W$.
 
 ::: Lemma 2
 For a $\mathbb{K}$-vector space $V$, its subspace $W\leq V$, and any two vectors $v,v'\in V$, the equivalence
@@ -77,10 +77,10 @@ and since $W$ is closed under scalar multiplication,
 
 $$(\alpha v)-(\alpha v_1)=\alpha(v-v_1)\in W.$$
 
-By [Lemma 2](#lem2) this is exactly the equality we wanted. Hence the two operations on $V/W$ are well defined.
+By [Lemma 2](#lem2){: data-relation="required" } this is exactly the equality we wanted. Hence the two operations on $V/W$ are well defined.
 
 ::: Proposition 4
-The set $V/W$ equipped with the operations of [Definition 3](#def3) is a $\mathbb{K}$-vector space. The additive identity is $0+W=W$, and the additive inverse of $v+W$ is $(-v)+W$.
+The set $V/W$ equipped with the operations of [Definition 3](#def3){: data-relation="required" } is a $\mathbb{K}$-vector space. The additive identity is $0+W=W$, and the additive inverse of $v+W$ is $(-v)+W$.
 :::
 ::: Proof
 All vector space axioms follow immediately from the fact that the operations on $V/W$ are induced coset-wise from those on $V$. For example, associativity of addition follows from
@@ -106,7 +106,7 @@ $$\dim(V/W)=\dim V-\dim W$$
 holds.
 :::
 ::: Proof
-Let $\dim W=k$, $\dim V=n$, and choose a basis $\{x_1,\ldots, x_k\}$ of $W$. Since this is a linearly independent subset of $V$, by [§Dimension of Vector Spaces, ⁋Proposition 5](/en/math/linear_algebra/dimension#prop5) we can extend it to a basis $\{x_1,\ldots, x_k, x_{k+1},\ldots, x_n\}$ of $V$. We show that the cosets
+Let $\dim W=k$, $\dim V=n$, and choose a basis $\{x_1,\ldots, x_k\}$ of $W$. Since this is a linearly independent subset of $V$, by [§Dimension of Vector Spaces, ⁋Proposition 5](/en/math/linear_algebra/dimension#prop5){: data-relation="required" } we can extend it to a basis $\{x_1,\ldots, x_k, x_{k+1},\ldots, x_n\}$ of $V$. We show that the cosets
 
 $$x_{k+1}+W,\quad\ldots,\quad x_n+W$$
 
@@ -122,7 +122,7 @@ Next, to show linear independence, let scalars $\alpha_{k+1},\ldots,\alpha_n$ sa
 
 $$\sum_{i=k+1}^n\alpha_i(x_i+W)=0+W.$$
 
-Then, as seen above, $\sum_{i=k+1}^n\alpha_ix_i+W=W=0+W$, so by [Lemma 2](#lem2) we have $\sum_{i=k+1}^n\alpha_ix_i\in W$. Hence we can express this vector in the basis of $W$ to obtain scalars $\beta_1,\ldots,\beta_k$ such that
+Then, as seen above, $\sum_{i=k+1}^n\alpha_ix_i+W=W=0+W$, so by [Lemma 2](#lem2){: data-relation="required" } we have $\sum_{i=k+1}^n\alpha_ix_i\in W$. Hence we can express this vector in the basis of $W$ to obtain scalars $\beta_1,\ldots,\beta_k$ such that
 
 $$\sum_{i=k+1}^n\alpha_ix_i=\sum_{i=1}^k\beta_ix_i,$$
 
@@ -137,13 +137,13 @@ Therefore $\{x_{k+1}+W,\ldots, x_n+W\}$ is a basis of $V/W$, and since it has $n
 
 ## First Isomorphism Theorem
 
-One reason this post exists as a separate article is to give a more essential meaning to [§Isomorphisms, ⁋Theorem 7](/en/math/linear_algebra/isomorphic_vector_spaces#thm7). In this final section we resolve this.
+One reason this post exists as a separate article is to give a more essential meaning to [§Isomorphisms, ⁋Theorem 7](/en/math/linear_algebra/isomorphic_vector_spaces#thm7){: data-relation="weak" }. In this final section we resolve this.
 
 For any $\mathbb{K}$-vector space $V$ and subspace $W\leq V$, consider the function $p:V\rightarrow V/W$ defined by
 
 $$p(v)=v+W.$$
 
-Then the operations of [Definition 3](#def3) are defined precisely so that $p$ satisfies the two identities
+Then the operations of [Definition 3](#def3){: data-relation="required" } are defined precisely so that $p$ satisfies the two identities
 
 $$p(\alpha v)=(\alpha v)+W=\alpha(v+W)=\alpha  p(v),\qquad p(v+v')=(v+v')+W=(v+W)+(v'+W)=p(v)+p(v').$$
 
@@ -184,14 +184,14 @@ $$\bar L(v+\ker L)=L(v)$$
 is an isomorphism. That is, $V/\ker L\cong\im L$.
 :::
 ::: Proof
-Setting $W=\ker L$, [Proposition 6](#prop6) gives that the linear map $\bar L:V/\ker L\rightarrow U$ defined by $\bar L(v+\ker L)=L(v)$ is well defined, and its image equals $\im L$. Restricting the codomain to $\im L$, we obtain that $\bar L:V/\ker L\rightarrow\im L$ is surjective. On the other hand, if $\bar L(v+\ker L)=0$, then $L(v)=0$, i.e. $v\in\ker L$, so $v+\ker L=\ker L$ is the zero vector of $V/\ker L$. Hence $\ker\bar L=\{0\}$, and therefore $\bar L$ is injective. ([§Linear Maps, ⁋Proposition 8](/en/math/linear_algebra/linear_map#prop8)) Thus $\bar L$ is a bijective linear map, hence an isomorphism. ([§Isomorphisms, ⁋Lemma 2](/en/math/linear_algebra/isomorphic_vector_spaces#lem2))
+Setting $W=\ker L$, [Proposition 6](#prop6){: data-relation="required" } gives that the linear map $\bar L:V/\ker L\rightarrow U$ defined by $\bar L(v+\ker L)=L(v)$ is well defined, and its image equals $\im L$. Restricting the codomain to $\im L$, we obtain that $\bar L:V/\ker L\rightarrow\im L$ is surjective. On the other hand, if $\bar L(v+\ker L)=0$, then $L(v)=0$, i.e. $v\in\ker L$, so $v+\ker L=\ker L$ is the zero vector of $V/\ker L$. Hence $\ker\bar L=\{0\}$, and therefore $\bar L$ is injective. ([§Linear Maps, ⁋Proposition 8](/en/math/linear_algebra/linear_map#prop8){: data-relation="required" }) Thus $\bar L$ is a bijective linear map, hence an isomorphism. ([§Isomorphisms, ⁋Lemma 2](/en/math/linear_algebra/isomorphic_vector_spaces#lem2){: data-relation="required" })
 :::
 
-Combining [Theorem 7](#thm7) and [Theorem 5](#thm5) above, we recover the rank-nullity theorem. Indeed, for finite-dimensional $V$,
+Combining [Theorem 7](#thm7){: data-relation="required" } and [Theorem 5](#thm5){: data-relation="required" } above, we recover the rank-nullity theorem. Indeed, for finite-dimensional $V$,
 
 $$\rank L=\dim\im L=\dim(V/\ker L)=\dim V-\dim\ker L=\dim V-\nullity L$$
 
-holds, which is exactly the formula of [§Isomorphisms, ⁋Theorem 7](/en/math/linear_algebra/isomorphic_vector_spaces#thm7). In other words, the rank-nullity theorem is nothing more than the statement that after "folding away" $\ker L$, $L$ becomes injective, expressed in the language of dimensions.
+holds, which is exactly the formula of [§Isomorphisms, ⁋Theorem 7](/en/math/linear_algebra/isomorphic_vector_spaces#thm7){: data-relation="weak" }. In other words, the rank-nullity theorem is nothing more than the statement that after "folding away" $\ker L$, $L$ becomes injective, expressed in the language of dimensions.
 
 ---
 

@@ -36,7 +36,7 @@ $$v+W=\{v+w\mid w\in W\}$$
 을 $v$를 포함하는 $W$의 *coset<sub>잉여류</sub>*라 부른다.
 :::
 
-정의에서 coset $v+W$은 $v$와의 차이가 $W$에 속하는 벡터들, 즉 도입부에서 $V/W$ 안에서 $v$와 같게 취급하기로 한 벡터들을 모두 모은 집합이다. 이는 집합론에서 다루는 equivalence class의 한 예시이지만 ([\[집합론\] §동치관계, ⁋정의 4](/ko/math/set_theory/equivalence_relations#def4)), 우리에게 필요한 것은 위의 도입에서 주장한, 두 coset이 같은지를 representative의 차이로 판정하는 다음 사실 뿐이다.
+정의에서 coset $v+W$은 $v$와의 차이가 $W$에 속하는 벡터들, 즉 도입부에서 $V/W$ 안에서 $v$와 같게 취급하기로 한 벡터들을 모두 모은 집합이다. 이는 집합론에서 다루는 equivalence class의 한 예시이지만 ([\[집합론\] §동치관계, ⁋정의 4](/ko/math/set_theory/equivalence_relations#def4){: data-relation="weak" }), 우리에게 필요한 것은 위의 도입에서 주장한, 두 coset이 같은지를 representative의 차이로 판정하는 다음 사실 뿐이다.
 
 ::: 보조정리 2
 $\mathbb{K}$-벡터공간 $V$와 그 부분공간 $W\leq V$, 그리고 임의의 두 벡터 $v,v'\in V$에 대하여, 다음의 동치
@@ -77,10 +77,10 @@ $$(v+v')-(v_1+v_1')=(v-v_1)+(v'-v_1')\in W$$
 
 $$(\alpha v)-(\alpha v_1)=\alpha(v-v_1)\in W$$
 
-이다. [보조정리 2](#lem2)에 의해 이는 정확히 우리가 원하던 식이다. 따라서 $V/W$ 위의 두 연산은 잘 정의된다.
+이다. [보조정리 2](#lem2){: data-relation="required" }에 의해 이는 정확히 우리가 원하던 식이다. 따라서 $V/W$ 위의 두 연산은 잘 정의된다.
 
 ::: 명제 4
-[정의 3](#def3)의 연산을 부여한 $V/W$는 $\mathbb{K}$-벡터공간이다. 이 때 덧셈에 대한 항등원은 $0+W=W$이고, $v+W$의 덧셈에 대한 역원은 $(-v)+W$이다.
+[정의 3](#def3){: data-relation="required" }의 연산을 부여한 $V/W$는 $\mathbb{K}$-벡터공간이다. 이 때 덧셈에 대한 항등원은 $0+W=W$이고, $v+W$의 덧셈에 대한 역원은 $(-v)+W$이다.
 :::
 ::: 증명
 벡터공간의 모든 공리는 $V/W$의 연산이 $V$의 연산으로부터 coset 단위로 유도된다는 사실로부터 곧바로 따라온다. 예를 들어 덧셈의 결합법칙은 임의의 $v,v',v''\in V$에 대하여
@@ -106,7 +106,7 @@ $$\dim(V/W)=\dim V-\dim W$$
 이 성립한다.
 :::
 ::: 증명
-$\dim W=k$, $\dim V=n$이라 하고, $W$의 basis $\{x_1,\ldots, x_k\}$를 택하자. 이는 $V$의 일차독립인 부분집합이므로, [§벡터공간의 차원, ⁋명제 5](/ko/math/linear_algebra/dimension#prop5)에 의하여 이를 확장하여 $V$의 basis $\{x_1,\ldots, x_k, x_{k+1},\ldots, x_n\}$을 얻을 수 있다. 우리는 다음의 coset들
+$\dim W=k$, $\dim V=n$이라 하고, $W$의 basis $\{x_1,\ldots, x_k\}$를 택하자. 이는 $V$의 일차독립인 부분집합이므로, [§벡터공간의 차원, ⁋명제 5](/ko/math/linear_algebra/dimension#prop5){: data-relation="required" }에 의하여 이를 확장하여 $V$의 basis $\{x_1,\ldots, x_k, x_{k+1},\ldots, x_n\}$을 얻을 수 있다. 우리는 다음의 coset들
 
 $$x_{k+1}+W,\quad\ldots,\quad x_n+W$$
 
@@ -122,7 +122,7 @@ $$v+W=\sum_{i=1}^n\alpha_i(x_i+W)=\sum_{i=k+1}^n\alpha_i(x_i+W)$$
 
 $$\sum_{i=k+1}^n\alpha_i(x_i+W)=0+W$$
 
-라 하자. 그럼 앞에서 살펴봤듯 $\sum_{i=k+1}^n\alpha_ix_i+W=W=0+W$이므로, [보조정리 2](#lem2)에 의해 $\sum_{i=k+1}^n\alpha_ix_i\in W$이다. 따라서 이 벡터를 $W$의 basis로 나타내어 적당한 스칼라들 $\beta_1,\ldots,\beta_k$에 대해
+라 하자. 그럼 앞에서 살펴봤듯 $\sum_{i=k+1}^n\alpha_ix_i+W=W=0+W$이므로, [보조정리 2](#lem2){: data-relation="required" }에 의해 $\sum_{i=k+1}^n\alpha_ix_i\in W$이다. 따라서 이 벡터를 $W$의 basis로 나타내어 적당한 스칼라들 $\beta_1,\ldots,\beta_k$에 대해
 
 $$\sum_{i=k+1}^n\alpha_ix_i=\sum_{i=1}^k\beta_ix_i$$
 
@@ -137,13 +137,13 @@ $$-\sum_{i=1}^k\beta_ix_i+\sum_{i=k+1}^n\alpha_ix_i=0$$
 
 ## 제1동형정리
 
-이 글이 별도의 글로 존재하는 이유 중 하나는 [§동형사상, ⁋정리 7](/ko/math/linear_algebra/isomorphic_vector_spaces#thm7)에 더 본질적인 의미를 부여하기 위한 것이다. 이 마지막 섹션에서 우리는 이를 해결한다.  
+이 글이 별도의 글로 존재하는 이유 중 하나는 [§동형사상, ⁋정리 7](/ko/math/linear_algebra/isomorphic_vector_spaces#thm7){: data-relation="weak" }에 더 본질적인 의미를 부여하기 위한 것이다. 이 마지막 섹션에서 우리는 이를 해결한다.  
 
 임의의 $\mathbb{K}$-벡터공간 $V$와 부분공간 $W\leq V$에 대하여, 다음의 식
 
 $$p(v)=v+W$$
 
-으로 정의된 함수 $p:V\rightarrow V/W$를 생각하자. 그럼 [정의 3](#def3)의 연산은 정확히 $p$가 다음의 두 식 
+으로 정의된 함수 $p:V\rightarrow V/W$를 생각하자. 그럼 [정의 3](#def3){: data-relation="required" }의 연산은 정확히 $p$가 다음의 두 식 
 
 $$p(\alpha v)=(\alpha v)+W=\alpha(v+W)=\alpha  p(v),\qquad p(v+v')=(v+v')+W=(v+W)+(v'+W)=p(v)+p(v')$$
 
@@ -184,14 +184,14 @@ $$\bar L(v+\ker L)=L(v)$$
 으로 정의된 linear map $\bar L:V/\ker L\rightarrow \im L$은 isomorphism이다. 즉 $V/\ker L\cong\im L$이다.
 :::
 ::: 증명
-$W=\ker L$로 두면 [명제 6](#prop6)에 의하여 $\bar L(v+\ker L)=L(v)$으로 정의된 linear map $\bar L:V/\ker L\rightarrow U$이 잘 정의되며, 그 image는 $\im L$과 같다. 따라서 공역을 $\im L$로 제한하면 $\bar L:V/\ker L\rightarrow\im L$은 전사이다. 한편 $\bar L(v+\ker L)=0$이라 하면 $L(v)=0$, 즉 $v\in\ker L$이므로 $v+\ker L=\ker L$이 $V/\ker L$의 영벡터이다. 따라서 $\ker\bar L=\{0\}$이고 따라서 $\bar L$은 단사이다. ([§선형사상, ⁋명제 8](/ko/math/linear_algebra/linear_map#prop8)) 즉, $\bar L$은 전단사인 linear map이므로 isomorphism이다. ([§동형사상, ⁋보조정리 2](/ko/math/linear_algebra/isomorphic_vector_spaces#lem2))
+$W=\ker L$로 두면 [명제 6](#prop6){: data-relation="required" }에 의하여 $\bar L(v+\ker L)=L(v)$으로 정의된 linear map $\bar L:V/\ker L\rightarrow U$이 잘 정의되며, 그 image는 $\im L$과 같다. 따라서 공역을 $\im L$로 제한하면 $\bar L:V/\ker L\rightarrow\im L$은 전사이다. 한편 $\bar L(v+\ker L)=0$이라 하면 $L(v)=0$, 즉 $v\in\ker L$이므로 $v+\ker L=\ker L$이 $V/\ker L$의 영벡터이다. 따라서 $\ker\bar L=\{0\}$이고 따라서 $\bar L$은 단사이다. ([§선형사상, ⁋명제 8](/ko/math/linear_algebra/linear_map#prop8){: data-relation="required" }) 즉, $\bar L$은 전단사인 linear map이므로 isomorphism이다. ([§동형사상, ⁋보조정리 2](/ko/math/linear_algebra/isomorphic_vector_spaces#lem2){: data-relation="weak" })
 :::
 
-위의 [정리 7](#thm7)과 [정리 5](#thm5)를 결합하면 rank-nullity 정리를 다시 얻는다. 실제로 유한차원 $V$에 대하여 
+위의 [정리 7](#thm7){: data-relation="required" }과 [정리 5](#thm5){: data-relation="required" }를 결합하면 rank-nullity 정리를 다시 얻는다. 실제로 유한차원 $V$에 대하여 
 
 $$\rank L=\dim\im L=\dim(V/\ker L)=\dim V-\dim\ker L=\dim V-\nullity L$$
 
-이 성립하며, 이는 정확히 [§동형사상, ⁋정리 7](/ko/math/linear_algebra/isomorphic_vector_spaces#thm7)의 식이다. 즉 rank-nullity 정리는 $L$이 $\ker L$을 "접어버린" 후에는 단사가 된다는 사실을 차원의 언어로 옮긴 것에 지나지 않는다. 
+이 성립하며, 이는 정확히 [§동형사상, ⁋정리 7](/ko/math/linear_algebra/isomorphic_vector_spaces#thm7){: data-relation="weak" }의 식이다. 즉 rank-nullity 정리는 $L$이 $\ker L$을 "접어버린" 후에는 단사가 된다는 사실을 차원의 언어로 옮긴 것에 지나지 않는다. 
 
 ---
 
