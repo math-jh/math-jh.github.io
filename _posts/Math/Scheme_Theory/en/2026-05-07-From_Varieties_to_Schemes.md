@@ -14,11 +14,11 @@ last_polished_at: 2026-07-27T02:15:02+00:00
 ---
 ## Algebraic Varieties
 
-Posts in the [Algebraic Varieties](/en/algebraic_varieties/) category followed the basic framework of classical algebraic geometry. That is, the theory of affine varieties—defined as subsets of affine space $\mathbb{A}_\mathbb{K}^n$ over an algebraically closed field $\mathbb{K}$—and of projective varieties obtained by gluing these together appropriately, has yielded rich results in many directions. In particular, the correspondence between the coordinate ring of a variety and the ideal defined by the variety ([\[Algebraic Varieties\] §Affine Varieties, ⁋Proposition 18](/en/math/algebraic_varieties/affine_varieties#prop18)) is a representative example showing the deep connection between geometry and algebra.
+Posts in the [Algebraic Varieties](/en/algebraic_varieties/) category followed the basic framework of classical algebraic geometry. That is, the theory of affine varieties—defined as subsets of affine space $\mathbb{A}_\mathbb{K}^n$ over an algebraically closed field $\mathbb{K}$—and of projective varieties obtained by gluing these together appropriately, has yielded rich results in many directions. In particular, the correspondence between the coordinate ring of a variety and the ideal defined by the variety ([\[Algebraic Varieties\] §Affine Varieties, ⁋Proposition 18](/en/math/algebraic_varieties/affine_varieties#prop18){: data-relation="weak" }) is a representative example showing the deep connection between geometry and algebra.
 
 A scheme is a systematically constructed space designed to overcome what these varieties miss. Before developing scheme theory, this post aims to examine the respects in which it extends varieties and what new geometric intuition it provides, so as to grasp the big picture in advance.
 
-To this end, let us briefly recall the setting of algebraic varieties. The objects of departure are the *affine variety* from [\[Algebraic Varieties\] §Affine Varieties, ⁋Definition 2](/en/math/algebraic_varieties/affine_varieties#def2) and the *projective variety* from [\[Algebraic Varieties\] §Projective Varieties, ⁋Definition 3](/en/math/algebraic_varieties/projective_varieties#def3), which were defined respectively as irreducible algebraic subsets of affine space $\mathbb{A}_\mathbb{K}^n$ and projective space $\mathbb{P}_\mathbb{K}^n$ over an algebraically closed field $\mathbb{K}$. More important was that these could be understood as locally ringed spaces $(V,\mathcal{O}_V)$ equipped with the sheaf $\mathcal{O}_V$ of regular functions defined on them.
+To this end, let us briefly recall the setting of algebraic varieties. The objects of departure are the *affine variety* from [\[Algebraic Varieties\] §Affine Varieties, ⁋Definition 2](/en/math/algebraic_varieties/affine_varieties#def2){: data-relation="weak" } and the *projective variety* from [\[Algebraic Varieties\] §Projective Varieties, ⁋Definition 3](/en/math/algebraic_varieties/projective_varieties#def3){: data-relation="weak" }, which were defined respectively as irreducible algebraic subsets of affine space $\mathbb{A}_\mathbb{K}^n$ and projective space $\mathbb{P}_\mathbb{K}^n$ over an algebraically closed field $\mathbb{K}$. More important was that these could be understood as locally ringed spaces $(V,\mathcal{O}_V)$ equipped with the sheaf $\mathcal{O}_V$ of regular functions defined on them.
 
 In this world, every point was a closed point. That is, a point on $\mathbb{A}_\mathbb{K}^2$ was completely determined by the maximal ideal $(\x-a, \y-b)\subseteq \mathbb{K}[\x,\y]$ corresponding to the coordinates $(a,b)\in \mathbb{K}^2$. While this may be called geometrically intuitive, it is not a particularly favorable environment for developing theory; for example, if we consider the line $V(\y)$ and the parabola $V(\y-\x^2)$ on $\mathbb{A}_\mathbb{K}^2$, the fact that they meet at the point $(0,0)$ is readily visible in classical algebraic varieties, but the fact that the intersection degree is not $1$ is invisible.
 
@@ -36,7 +36,7 @@ $$\frac{\mathbb{K}[\x,\y]}{(\x^2,\y)} \cong \frac{\mathbb{K}[\epsilon]}{(\epsilo
 holds, and the dimension of this ring as a $\mathbb{K}$-vector space is $2$. This dimension is precisely the heart of the scheme-theoretic intersection, which reflects the intersection multiplicity as a coefficient.
 :::
 
-This was in fact anticipated to some extent by [\[Algebraic Varieties\] §Affine Varieties, ⁋Theorem 10](/en/math/algebraic_varieties/affine_varieties#thm10): since the points of a classical variety are defined only by radical ideals, all nilpotent elements are discarded, and as a result all infinitesimal information must be thrown away. The key idea of schemes is to preserve and retain all of this information that was previously discarded.
+This was in fact anticipated to some extent by [\[Algebraic Varieties\] §Affine Varieties, ⁋Theorem 10](/en/math/algebraic_varieties/affine_varieties#thm10){: data-relation="weak" }: since the points of a classical variety are defined only by radical ideals, all nilpotent elements are discarded, and as a result all infinitesimal information must be thrown away. The key idea of schemes is to preserve and retain all of this information that was previously discarded.
 
 ::: Example 2
 Consider the ring $\mathbb{K}[\epsilon]/(\epsilon^2)$ examined above. Since this ring has a single prime ideal $(\epsilon)$, in classical algebraic geometry this space looks like a single point, and this remains true in the world of schemes as well.
@@ -64,7 +64,7 @@ First, $(0)$ is the generic point of the whole space. $(\x)$ is the generic poin
 
 That is, intuitively, a generic point represents the irreducible subvariety that a prime ideal used to define in the classical setting **as a single point**, and the closure of that point recovers the original subvariety.
 
-The fact that schemes allow nilpotents was already seen in the fat point of [Example 2](#ex2). In general, a scheme can retain nilpotents in its structure sheaf, thereby geometrically realizing a *non-reduced* structure, and it is this flexibility that justifies the intuition regarding multiplicity and infinitesimal deformation seen earlier.
+The fact that schemes allow nilpotents was already seen in the fat point of [Example 2](#ex2){: data-relation="weak" }. In general, a scheme can retain nilpotents in its structure sheaf, thereby geometrically realizing a *non-reduced* structure, and it is this flexibility that justifies the intuition regarding multiplicity and infinitesimal deformation seen earlier.
 
 ## Relative geometry and functor of points
 
@@ -72,7 +72,7 @@ Up to now, the coordinate rings of the varieties we have dealt with were all $\m
 
 In the world of schemes we replace this base $\Spec\mathbb{K}$ by an arbitrary scheme $S$, and naturally work with *$S$-schemes*, i.e. schemes equipped with a structure morphism $X\rightarrow S$. Under this *relative viewpoint* one can discuss families over an arbitrary base, and even the product, which was troublesome above, is neatly defined as the fiber product $X\times_S Y$ over the base; the product above was merely the case $S=\Spec \mathbb{K}$.
 
-On the other hand this perspective also dovetails with [\[Category Theory\] §Representable Functors, ⁋Theorem 4](/en/math/category_theory/representable_functors#thm4): if we view a scheme $X$ not as a set of points but via its *functor of points* $h_X$, understanding the scheme as the functor receiving morphisms from all other schemes
+On the other hand this perspective also dovetails with [\[Category Theory\] §Representable Functors, ⁋Theorem 4](/en/math/category_theory/representable_functors#thm4){: data-relation="required" }: if we view a scheme $X$ not as a set of points but via its *functor of points* $h_X$, understanding the scheme as the functor receiving morphisms from all other schemes
 
 $$h_X:(\Sch_{/S})^{\op}\rightarrow\Set,\qquad h_X(T)=\Hom_S(T,X)$$
 

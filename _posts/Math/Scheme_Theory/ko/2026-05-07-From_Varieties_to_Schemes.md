@@ -12,11 +12,11 @@ weight: 1
 
 ## 대수다양체
 
-[대수다양체](/ko/algebraic_varieties/) 카테고리의 글에서는 classical algebraic geometry의 기본적인 틀을 따라 왔다. 즉, algebraically closed field $\mathbb{K}$ 위에서 affine space $\mathbb{A}_\mathbb{K}^n$의 부분집합으로 정의되는 affine variety, 그리고 이들을 적절히 붙여 얻어지는 projective variety의 이론은 여러 방면에서 풍부한 결과를 낳았다. 특히 variety의 isomorphism과 coordinate ring의 isomorphism 사이의 대응 ([\[대수다양체\] §아핀다양체, ⁋명제 18](/ko/math/algebraic_varieties/affine_varieties#prop18)) 등은 기하와 대수의 깊은 연관성을 보여주는 대표적인 예이다.
+[대수다양체](/ko/algebraic_varieties/) 카테고리의 글에서는 classical algebraic geometry의 기본적인 틀을 따라 왔다. 즉, algebraically closed field $\mathbb{K}$ 위에서 affine space $\mathbb{A}_\mathbb{K}^n$의 부분집합으로 정의되는 affine variety, 그리고 이들을 적절히 붙여 얻어지는 projective variety의 이론은 여러 방면에서 풍부한 결과를 낳았다. 특히 variety의 isomorphism과 coordinate ring의 isomorphism 사이의 대응 ([\[대수다양체\] §아핀다양체, ⁋명제 18](/ko/math/algebraic_varieties/affine_varieties#prop18){: data-relation="weak" }) 등은 기하와 대수의 깊은 연관성을 보여주는 대표적인 예이다.
 
 Scheme은 이러한 variety들이 놓치는 것들을 극복하기 위해 체계화된 공간이다. 이번 글은 scheme theory를 전개하기 전에, 이것이 어떤 차원에서 variety를 확장하고, 어떠한 새로운 기하학적 직관을 제공하는지를 살펴보아 큰 흐름을 미리 잡아두는 것에 있다. 
 
-이를 위해 간단히 algebraic variety에서의 세팅을 기억하자. 출발점이 되는 대상은 [\[대수다양체\] §아핀다양체, ⁋정의 2](/ko/math/algebraic_varieties/affine_varieties#def2)의 *affine variety*와 [\[대수다양체\] §사영다양체, ⁋정의 3](/ko/math/algebraic_varieties/projective_varieties#def3)의 *projective variety*로, 이들은 각각 algebraically closed field $\mathbb{K}$ 위의 affine space $\mathbb{A}_\mathbb{K}^n$과 projective space $\mathbb{P}_\mathbb{K}^n$의 irreducible algebraic subset으로 정의되었다. 더욱 중요한 것은 이들이 그 위에 정의된 regular function들의 sheaf $\mathcal{O}_V$를 갖는 locally ringed space $(V,\mathcal{O}_V)$로 이해될 수 있다는 것이었다. 
+이를 위해 간단히 algebraic variety에서의 세팅을 기억하자. 출발점이 되는 대상은 [\[대수다양체\] §아핀다양체, ⁋정의 2](/ko/math/algebraic_varieties/affine_varieties#def2){: data-relation="weak" }의 *affine variety*와 [\[대수다양체\] §사영다양체, ⁋정의 3](/ko/math/algebraic_varieties/projective_varieties#def3){: data-relation="weak" }의 *projective variety*로, 이들은 각각 algebraically closed field $\mathbb{K}$ 위의 affine space $\mathbb{A}_\mathbb{K}^n$과 projective space $\mathbb{P}_\mathbb{K}^n$의 irreducible algebraic subset으로 정의되었다. 더욱 중요한 것은 이들이 그 위에 정의된 regular function들의 sheaf $\mathcal{O}_V$를 갖는 locally ringed space $(V,\mathcal{O}_V)$로 이해될 수 있다는 것이었다. 
 
 이 세계에서는 모든 점이 closed point였다. 즉, $\mathbb{A}_\mathbb{K}^2$ 위의 점은 단순히 좌표 $(a,b)\in \mathbb{K}^2$에 해당하는 maximal ideal $(\x-a, \y-b)\subseteq \mathbb{K}[\x,\y]$로 완전히 결정되었다. 이는 기하적 직관으로는 타당하다고도 할 수 있지만, 이론을 펼치기에는 썩 좋은 환경은 아닌데 예를 들어 $\mathbb{A}_\mathbb{K}^2$ 위에서 직선 $Z(\y)$와 포물선 $Z(\y-\x^2)$을 생각하면, 이들이 만나는 점이 $(0,0)$으로 주어진다는 것 자체는 classical algebraic variety에서 잘 보이는 것이지만, 이 만나는 degree가 $1$차가 아니라는 것이 전혀 보이지 않는다. 
 
@@ -34,7 +34,7 @@ $$\frac{\mathbb{K}[\x,\y]}{(\x^2,\y)} \cong \frac{\mathbb{K}[\epsilon]}{(\epsilo
 이 성립하며, 이 ring의 $\mathbb{K}$-벡터공간으로서의 차원은 $2$이다. 이 차원이 바로 교차 multiplicity를 계수로 반영하는 scheme-theoretic intersection의 핵심이다.
 :::
 
-이는 사실, [\[대수다양체\] §아핀다양체, ⁋정리 10](/ko/math/algebraic_varieties/affine_varieties#thm10)로부터 어느 정도 예견되었던 것인데, classical variety의 점들은 radical ideal에 의해서만 정의되므로, nilpotent element들을 모두 버리게 되고, 그 결과 infinitesimal한 정보를 모두 버려야 하기 때문이었다. Scheme의 핵심적인 아이디어는 이 버리던 정보들을 그대로 살려서 모두 담아두는 것이다. 
+이는 사실, [\[대수다양체\] §아핀다양체, ⁋정리 10](/ko/math/algebraic_varieties/affine_varieties#thm10){: data-relation="weak" }로부터 어느 정도 예견되었던 것인데, classical variety의 점들은 radical ideal에 의해서만 정의되므로, nilpotent element들을 모두 버리게 되고, 그 결과 infinitesimal한 정보를 모두 버려야 하기 때문이었다. Scheme의 핵심적인 아이디어는 이 버리던 정보들을 그대로 살려서 모두 담아두는 것이다. 
 
 ::: 예시 2
 위에서 살펴본 ring $\mathbb{K}[\epsilon]/(\epsilon^2)$를 생각하자. 이 ring은 단 하나의 prime ideal $(\epsilon)$을 가지므로, classical algebraic geometry에서 이 공간은 점 하나로 이루어진 공간처럼 보이며, 이는 사실 scheme의 세상에서도 마찬가지이다. 
@@ -62,7 +62,7 @@ $\Spec \mathbb{Z}[\x]$를 생각하자. 이 scheme은 $\mathbb{Z}$ 위에서 정
 
 즉, 직관적으로 generic point는 classical에서 prime ideal이 정의하던 irreducible subvariety를 **하나의 점으로 대표**시킨 것으로, 그 점의 닫힘이 바로 원래의 subvariety를 복원한다.
 
-Scheme이 nilpotent를 허용한다는 점은 이미 [예시 2](#ex2)의 fat point에서 보았다. 일반적으로 scheme은 structure sheaf에 nilpotent를 그대로 둘 수 있어 *non-reduced* 구조를 기하학적으로 실현하며, 이 여유 덕분에 앞서 본 multiplicity와 infinitesimal deformation의 직관이 정당화된다.
+Scheme이 nilpotent를 허용한다는 점은 이미 [예시 2](#ex2){: data-relation="weak" }의 fat point에서 보았다. 일반적으로 scheme은 structure sheaf에 nilpotent를 그대로 둘 수 있어 *non-reduced* 구조를 기하학적으로 실현하며, 이 여유 덕분에 앞서 본 multiplicity와 infinitesimal deformation의 직관이 정당화된다.
 
 ## Relative geometry와 functor of points
 
@@ -70,7 +70,7 @@ Scheme이 nilpotent를 허용한다는 점은 이미 [예시 2](#ex2)의 fat poi
 
 Scheme의 세계에서는 이 base $\Spec\mathbb{K}$를 임의의 scheme $S$로 바꾸어, structure morphism $X\rightarrow S$를 갖는 *$S$-scheme*을 자연스럽게 다룬다. 이 *relative viewpoint* 아래에서는 임의의 base 위에서 family를 논할 수 있으며, 위에서 만만치 않았던 곱조차 base 위에서의 fiber product $X\times_S Y$로 깔끔하게 정의되며, 위에서의 product는 $S=\Spec \mathbb{K}$인 경우에 불과하다. 
 
-한편 이 관점은 [\[범주론\] §표현가능한 함자, ⁋정리 4](/ko/math/category_theory/representable_functors#thm4)와도 맞아떨어지는데, scheme $X$를 점들의 집합 대신, *functor of points* $h_X$로 보아, scheme을 다른 모든 scheme으로부터 morphism을 받는 functor
+한편 이 관점은 [\[범주론\] §표현가능한 함자, ⁋정리 4](/ko/math/category_theory/representable_functors#thm4){: data-relation="required" }와도 맞아떨어지는데, scheme $X$를 점들의 집합 대신, *functor of points* $h_X$로 보아, scheme을 다른 모든 scheme으로부터 morphism을 받는 functor
 
 $$h_X:(\Sch_{/S})^{\op}\rightarrow\Set,\qquad h_X(T)=\Hom_S(T,X)$$
 
