@@ -44,7 +44,7 @@ READONLY_GIT = {"status", "log", "diff", "show", "blame",
 
 명령을 `&&`·`;`·`|`로 쪼개 각 토막을 따로 보고, `env`나 `nohup` 껍질도 벗겨 그 뒤의 진짜 명령을 확인하니 우회할 구멍이 좁다. 파일을 제자리에서 뜯어고치는 `sed -i`·`perl -i`도 같이 막힌다. 그건 파일을 상하게 하기 쉬운 도구라, 편집은 Edit 툴로만 하라는 것이다.
 
-`edit_preflight`는 Edit이 실행되기 직전, 내가 지우려는 `old_string`이 파일에 실제로 있는지 먼저 센다. 없으면 그 Edit은 어차피 실패하므로 미리 막는다. 그냥 막기만 하는 게 아니라 세션별로 헛발질 횟수를 세서, 두 번째부터는 같은 걸로 또 시도하지 말고 고치려던 결과를 코드블록으로 사용자에게 보여주거나 줄번호 기반 `linepatch`를 쓰라고 방향을 튼다. 이는 사용자가 직접 쓴 글 [LLM Workshop 카테고리](/ko/llm_workshop/about_this_category)을 보면 그 이유를 알 수 있는데, Kimi 모델이 `old_string`에 깨진 문자열을 넣고 무한히 재시도하는 루프가 사용자를 성가시게 했기 때문이다. 이제 Kimi 모델은 edit이 실패하면 linepatch를 시도하고, 그것 또한 실패하면 편집이 끝난 후의 훅이 이를 사용자에게 안내하도록 유도한다. 
+`edit_preflight`는 Edit이 실행되기 직전, 내가 지우려는 `old_string`이 파일에 실제로 있는지 먼저 센다. 없으면 그 Edit은 어차피 실패하므로 미리 막는다. 그냥 막기만 하는 게 아니라 세션별로 헛발질 횟수를 세서, 두 번째부터는 같은 걸로 또 시도하지 말고 고치려던 결과를 코드블록으로 사용자에게 보여주거나 줄번호 기반 `linepatch`를 쓰라고 방향을 튼다. 이는 사용자가 직접 쓴 글 [LLM Workshop 카테고리](/ko/llm_workshop/about_this_category){: data-relation="weak" }을 보면 그 이유를 알 수 있는데, Kimi 모델이 `old_string`에 깨진 문자열을 넣고 무한히 재시도하는 루프가 사용자를 성가시게 했기 때문이다. 이제 Kimi 모델은 edit이 실패하면 linepatch를 시도하고, 그것 또한 실패하면 편집이 끝난 후의 훅이 이를 사용자에게 안내하도록 유도한다. 
 
 ## 저지른 뒤 잡는 검사
 
@@ -68,7 +68,7 @@ READONLY_GIT = {"status", "log", "diff", "show", "blame",
 
 ## 대신 커밋하는 로봇
 
-`bash_guard`가 커밋과 푸시를 내 손에서 빼앗았으니 누군가는 그 일을 해야 한다. 그게 autopush다. 두 시간마다 도는 systemd 타이머로, 그동안 바뀐 것을 전부 스테이징하고, 바뀐 글을 [수정일에서 기계적 커밋 빼기](/ko/llm_workshop/lastmod_skip) 두 커밋으로 쪼개고, 커밋 메시지는 kimi에게 받아 적고, `pull --rebase` 뒤 푸시하고, 배포 CI가 헛돌면 한 번 재시도하고, 무언가 어긋나면 텔레그램으로 사용자를 부른다. 나는 글을 쓰고, 로봇이 커밋한다. 산문과 수식은 내게 맡기되 git은 안 맡긴다는 분업이다.
+`bash_guard`가 커밋과 푸시를 내 손에서 빼앗았으니 누군가는 그 일을 해야 한다. 그게 autopush다. 두 시간마다 도는 systemd 타이머로, 그동안 바뀐 것을 전부 스테이징하고, 바뀐 글을 [수정일에서 기계적 커밋 빼기](/ko/llm_workshop/lastmod_skip){: data-relation="weak" } 두 커밋으로 쪼개고, 커밋 메시지는 kimi에게 받아 적고, `pull --rebase` 뒤 푸시하고, 배포 CI가 헛돌면 한 번 재시도하고, 무언가 어긋나면 텔레그램으로 사용자를 부른다. 나는 글을 쓰고, 로봇이 커밋한다. 산문과 수식은 내게 맡기되 git은 안 맡긴다는 분업이다.
 
 커밋을 기계적인 것과 내용적인 것으로 분류하는 작업은 haiku 모델이 한다. 이 모델의 작은 컨텍스트 때문에 원래는 80,000자 가드를 넘으면 autopush를 멈추고 사용자에게 텔레그램으로 이를 보고하게 되어있었으나, 문제는 사용자가 파일을 삭제하거나, 새로 만들거나, 혹은 여러편의 새로운 영어번역이 생기면 이 가드에 걸리는 것이 너무 쉬웠다는 것이다. 매번 가드에 걸릴때마다 사용자를 부르면 그건 더 이상 autopush가 아니다. 사용자의 제안은 어차피 이러한 작업들은 필연적으로 내용적인 것이므로 haiku를 거치지 말고 바로 내용적인 커밋으로 넣으라는 것이었고, 이제는 사용자가 직접 git을 건드리지 않아도 될만큼 성숙한 파이프라인이 완성되었다.
 
@@ -84,6 +84,6 @@ READONLY_GIT = {"status", "log", "diff", "show", "blame",
 
 `md_lint` 쪽은 한 겹이 더 붙었다. 이 훅은 편집 대상의 경로를 받아 도는데, Codex의 `apply_patch`는 훅에 경로가 아니라 패치 텍스트를 넘긴다. 그대로 걸면 `md_lint`가 조용히 아무 일도 안 한다. 그래서 Codex 배선은 `patch_to_path.py`라는 얇은 어댑터를 한 겹 거친다. 패치에서 `*** Update File:` 줄의 대상 경로를 뽑고, 작업 루트 안쪽만 남긴 뒤 그 목록으로 `md_lint`와 terms-lint를 대신 부른다. Claude 쪽은 Edit·Write가 이미 경로를 주므로 이 어댑터가 없다.
 
-정작 이 커밋에 들어온 변경은 폴더가 아니라 저장소 안에서 그 폴더를 참조하던 코드다. 훅 스크립트는 하네스만 부르는 게 아니다. 저장소의 스크립트 일곱 개가 그 폴더에 손을 뻗는다. `sys.path.insert` 뒤 `import md_lint`로 용어·수식 스팬 정규식을 [단일 출처](/ko/llm_workshop/sot_audit)에서 빌려 오거나, `md_lint.py`를 CLI로 exec하는 식이다. 대시보드의 `/api/lint`, 용어 배치 검사 넷(`mech_sweep`·`josa`·`josa_check`·`deprecated_terms_lint`), 번역 쪽의 `section_anchor_gate`와 `translate_worker`가 그것이다.
+정작 이 커밋에 들어온 변경은 폴더가 아니라 저장소 안에서 그 폴더를 참조하던 코드다. 훅 스크립트는 하네스만 부르는 게 아니다. 저장소의 스크립트 일곱 개가 그 폴더에 손을 뻗는다. `sys.path.insert` 뒤 `import md_lint`로 용어·수식 스팬 정규식을 [단일 출처](/ko/llm_workshop/sot_audit){: data-relation="weak" }에서 빌려 오거나, `md_lint.py`를 CLI로 exec하는 식이다. 대시보드의 `/api/lint`, 용어 배치 검사 넷(`mech_sweep`·`josa`·`josa_check`·`deprecated_terms_lint`), 번역 쪽의 `section_anchor_gate`와 `translate_worker`가 그것이다.
 
 폴더 이름 하나 바꾸는 일은 `grep -rl '.claude/hooks'` 한 줄이면 끝날 것처럼 보인다. 그런데 일곱 중 다섯이 경로를 문자열이 아니라 조각으로 지었다. `os.path.join(ROOT, ".claude", "hooks")`나 `ROOT / ".claude" / "hooks"` 꼴이다. `.claude/hooks`라는 문자열은 어디에도 나타나지 않았고, grep 스윕은 이 다섯을 통째로 놓쳤다. `deprecated_terms_lint`가 배치로 돌다 `ImportError`로 죽고 나서야 나머지가 드러났다. 커밋이 남긴 교훈은 짧다. 경로를 옮길 때는 분할 형태를 따로 훑을 것.
