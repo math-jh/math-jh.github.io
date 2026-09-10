@@ -69,7 +69,7 @@ $$T^\perp=\{x\in M\mid \langle x, \xi\rangle=0\text{ for all $\xi\in T$}\}$$
 
 ## 선형사상의 전치
 
-임의의 $A$-linear map $u:M \rightarrow N$이 주어졌다 하자. 그럼 [\[대수적 구조\] §가군, ⁋명제 8](/ko/math/algebraic_structures/modules#prop8)의 abelian group homomorphism
+임의의 $A$-linear map $u:M \rightarrow N$이 주어졌다 하자. 그럼 [\[대수적 구조\] §가군, ⁋명제 8](/ko/math/algebraic_structures/modules#prop8){: data-relation="required" }의 abelian group homomorphism
 
 $$\Hom(u,A):\Hom_{\lMod{A}}(N,A)\rightarrow\Hom_{\lMod{A}}(M,A)$$
 
@@ -89,7 +89,7 @@ $$\langle u(x),\xi\rangle=\langle x, u^t\xi\rangle$$
 
 으로 쓸 수 있으며, 거꾸로 이 식이 모든 $x\in M$과 모든 $\xi\in N^\ast$에 대해 성립한다면 $u^t$가 유일하게 결정된다. 
 
-또, 두 $A$-linear map $u,v:M \rightarrow N$과 임의의 $\xi\in N^\ast$, $x\in M$에 대하여 $\xi((u+v)(x))=\xi(u(x))+\xi(v(x))$인 것과 $\Hom(-,A)$의 functoriality, 그리고 [\[대수적 구조\] §가군, ⁋명제 8](/ko/math/algebraic_structures/modules#prop8)에 의해 다음 명제를 얻는다. 
+또, 두 $A$-linear map $u,v:M \rightarrow N$과 임의의 $\xi\in N^\ast$, $x\in M$에 대하여 $\xi((u+v)(x))=\xi(u(x))+\xi(v(x))$인 것과 $\Hom(-,A)$의 functoriality, 그리고 [\[대수적 구조\] §가군, ⁋명제 8](/ko/math/algebraic_structures/modules#prop8){: data-relation="required" }에 의해 다음 명제를 얻는다. 
 
 ::: 명제 5
 다음이 성립한다.
@@ -102,7 +102,7 @@ $$\langle u(x),\xi\rangle=\langle x, u^t\xi\rangle$$
 
 ## 쌍대기저
 
-$A$-module $M$이 basis $(e_i)_{i\in I}$를 갖는다 하자. ([§기저, ⁋정의 1](/ko/math/multilinear_algebra/basis_of_free_modules#def1)) 즉 다음의 isomorphism
+$A$-module $M$이 basis $(e_i)_{i\in I}$를 갖는다 하자. ([§기저, ⁋정의 1](/ko/math/multilinear_algebra/basis_of_free_modules#def1){: data-relation="weak" }) 즉 다음의 isomorphism
 
 $$\varepsilon: A^{\oplus I} \rightarrow M$$
 

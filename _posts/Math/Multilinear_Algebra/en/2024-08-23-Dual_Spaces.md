@@ -103,7 +103,7 @@ The following hold.
 
 ## Dual Basis
 
-Suppose that the $A$-module $M$ has a basis $(e_i)_{i\in I}$. ([§Bases, ⁋Definition 1](/en/math/multilinear_algebra/basis_of_free_modules#def1)) That is, there exists an isomorphism
+Suppose that the $A$-module $M$ has a basis $(e_i)_{i\in I}$. ([§Bases, ⁋Definition 1](/en/math/multilinear_algebra/basis_of_free_modules#def1){: data-relation="weak" }) That is, there exists an isomorphism
 
 $$\varepsilon: A^{\oplus I} \rightarrow M.$$
 
