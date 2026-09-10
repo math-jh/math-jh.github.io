@@ -16,11 +16,11 @@ last_polished_at: 2026-05-31T04:00:04+00:00
 ---
 ## Field Extensions
 
-We saw in [§Fields, ⁋Proposition 2](/en/math/field_theory/fields#prop2) that a morphism between fields is either injective or the zero map. In this post we examine the former case.
+We saw in [§Fields, ⁋Proposition 2](/en/math/field_theory/fields#prop2){: data-relation="required" } that a morphism between fields is either injective or the zero map. In this post we examine the former case.
 
 We call an injective field morphism a *field extension*. Then, for a fixed field $\mathbb{K}\in\Field$, the under category of $\mathbb{K}$ becomes the category of extensions of $\mathbb{K}$.
 
-Although this notation differs slightly from that of [\[Category Theory\] §Categories, ⁋Example 13](/en/math/category_theory/categories#ex13), we often denote a field extension $\mathbb{K}\rightarrow \mathbb{L}$ by $\mathbb{L}/\mathbb{K}$. Then, whenever a field extension $\mathbb{L}/\mathbb{K}$ is given, we can identify $\mathbb{K}$ with a subfield of $\mathbb{L}$ via the injective map $\mathbb{K}\hookrightarrow\mathbb{L}$. However, if $\mathbb{L}=\mathbb{K}$ and $\mathbb{K}\hookrightarrow\mathbb{L}=\mathbb{K}$ is an endomorphism, such an identification may cause confusion, so in this case we do not identify $\mathbb{K}$ with a subfield of $\mathbb{L}$.
+Although this notation differs slightly from that of [\[Category Theory\] §Categories, ⁋Example 13](/en/math/category_theory/categories#ex13){: data-relation="required" }, we often denote a field extension $\mathbb{K}\rightarrow \mathbb{L}$ by $\mathbb{L}/\mathbb{K}$. Then, whenever a field extension $\mathbb{L}/\mathbb{K}$ is given, we can identify $\mathbb{K}$ with a subfield of $\mathbb{L}$ via the injective map $\mathbb{K}\hookrightarrow\mathbb{L}$. However, if $\mathbb{L}=\mathbb{K}$ and $\mathbb{K}\hookrightarrow\mathbb{L}=\mathbb{K}$ is an endomorphism, such an identification may cause confusion, so in this case we do not identify $\mathbb{K}$ with a subfield of $\mathbb{L}$.
 
 By definition, given two extensions $\mathbb{K} \rightarrow \mathbb{L}_1$ and $\mathbb{K} \rightarrow \mathbb{L}_2$, the following commutative diagram
 
@@ -34,7 +34,7 @@ Thus any field extension $\mathbb{L}/\mathbb{K}$ can be regarded as an associati
 We consider $\mathbb{K}$-algebras and homomorphisms between them in order to treat situations similar to the above; henceforth in our posts the category $\Alg{\mathbb{K}}$ will always be the category of unital associative $\mathbb{K}$-algebras. That is, by a $\mathbb{K}$-algebra we shall always mean a unital associative $\mathbb{K}$-algebra, and by a $\mathbb{K}$-algebra homomorphism we shall always mean a unital $\mathbb{K}$-algebra homomorpihsm.
 :::
 
-Any $\mathbb{K}$-algebra is also a $\mathbb{K}$-module, so its dimension is well-defined. ([\[Multilinear Algebra\] §Basis, ⁋Proposition 6](/en/math/multilinear_algebra/basis_of_free_modules#prop6))
+Any $\mathbb{K}$-algebra is also a $\mathbb{K}$-module, so its dimension is well-defined. ([\[Multilinear Algebra\] §Basis, ⁋Proposition 6](/en/math/multilinear_algebra/basis_of_free_modules#prop6){: data-relation="required" })
 
 ::: Definition 1
 For any $\mathbb{K}$-algebra $A$, we call $\dim_{\mathbb{K}}A$ the *degree* of $A$ and denote it by $[A:\mathbb{K}]$.
@@ -79,7 +79,7 @@ holds.
 
 The proof of this is almost obvious from the minimality in the definition.
 
-Meanwhile, to obtain the field $\mathbb{K}(A)$ of [Definition 4](#def4), one can fix an extension $\mathbb{L}$ of $\mathbb{K}$ and then take the intersection of all subextensions of $\mathbb{L}$ containing $A$. On the other hand, since we have shown that morphisms in the category of extensions of $\mathbb{K}$ are nothing but extensions, the following holds.
+Meanwhile, to obtain the field $\mathbb{K}(A)$ of [Definition 4](#def4){: data-relation="required" }, one can fix an extension $\mathbb{L}$ of $\mathbb{K}$ and then take the intersection of all subextensions of $\mathbb{L}$ containing $A$. On the other hand, since we have shown that morphisms in the category of extensions of $\mathbb{K}$ are nothing but extensions, the following holds.
 
 ::: Proposition 6
 Let $\mathcal{F}$ be the set of subfields of a field $E$; with the inclusion relation $\subseteq$ it becomes a directed set. In particular, the union $L$ of the fields belonging to $\mathcal{F}$ is a field.
@@ -110,12 +110,12 @@ Let two $\mathbb{K}$-extensions $\mathbb{L}_1, \mathbb{L}_2$ be given.
 2. Conversely, for any prime ideal $\mathfrak{p}$ of $\mathbb{L}_1\otimes_\mathbb{K} \mathbb{L}_2$, there exist a suitable composite field $\mathbb{M}$ and extensions $u_i: \mathbb{L}_i \rightarrow \mathbb{M}$ such that $\mathfrak{p}$ is the kernel of $u_1\ast u_2$.
 :::
 ::: Proof
-1. The image $\im(u_1\ast u_2)$ of $u_1\ast u_2$ is a subring of the field $\mathbb{M}$, and hence an integral domain. The given claim is now obvious from [\[Algebraic Structures\] §Field of Fractions, ⁋Proposition 9](/en/math/algebraic_structures/field_of_fractions#prop9) and [\[Algebraic Structures\] §Quotient Rings and Ring Homomorphisms, ⁋Theorem 3](/en/math/algebraic_structures/quotient_rings#thm3).
+1. The image $\im(u_1\ast u_2)$ of $u_1\ast u_2$ is a subring of the field $\mathbb{M}$, and hence an integral domain. The given claim is now obvious from [\[Algebraic Structures\] §Field of Fractions, ⁋Proposition 9](/en/math/algebraic_structures/field_of_fractions#prop9){: data-relation="required" } and [\[Algebraic Structures\] §Quotient Rings and Ring Homomorphisms, ⁋Theorem 3](/en/math/algebraic_structures/quotient_rings#thm3){: data-relation="required" }.
 
 2. Conversely, let $\mathfrak{p}$ be a prime ideal of $\mathbb{L}_1\otimes_\mathbb{K}\mathbb{L}_2$, and let $\mathbb{M}=\Frac((\mathbb{L}_1\otimes_\mathbb{K}\mathbb{L}_2)/\mathfrak{p})$ be the field of fractions of the integral domain $(\mathbb{L}_1\otimes_\mathbb{K}\mathbb{L}_2)/\mathfrak{p}$. Then for each $x_1\in \mathbb{L}_1$ and $x_2\in \mathbb{L}_2$, defining $u_1(x_1)$ to be the image of $x_1\otimes 1$ in $\mathbb{M}$ and $u_2(x_2)$ to be the image of $1\otimes x_2$ in $\mathbb{M}$, we see that these satisfy the required conditions.
 :::
 
-Moreover, it is also obvious that the composite field obtained from the second result is uniquely determined up to isomorphism. Meanwhile, for any two $\mathbb{K}$-extensions $\mathbb{L}_1, \mathbb{L}_2$, since $\mathbb{L}_1\otimes_\mathbb{K} \mathbb{L}_2$ always has a prime ideal ([\[Algebraic Structures\] §Definition of a Ring, ⁋Theorem 10 (Krull)](/en/math/algebraic_structures/rings#thm10)), we can verify that any two $\mathbb{K}$-extensions have a composite field.
+Moreover, it is also obvious that the composite field obtained from the second result is uniquely determined up to isomorphism. Meanwhile, for any two $\mathbb{K}$-extensions $\mathbb{L}_1, \mathbb{L}_2$, since $\mathbb{L}_1\otimes_\mathbb{K} \mathbb{L}_2$ always has a prime ideal ([\[Algebraic Structures\] §Definition of a Ring, ⁋Theorem 10 (Krull)](/en/math/algebraic_structures/rings#thm10){: data-relation="required" }), we can verify that any two $\mathbb{K}$-extensions have a composite field.
 
 ## Algebraic Extensions
 
@@ -147,7 +147,7 @@ For two $\mathbb{K}$-extensions $\mathbb{L}_1, \mathbb{L}_2$, the following hold
 :::
 
 ::: Proof
-1. Let $G$ be the subring of $\Omega$ generated by $\mathbb{L}_1 \cup \mathbb{L}_2$. If $(y_j)_{1 \leq j \leq n}$ is a $\mathbb{K}$-basis of $\mathbb{L}_2$, then $G$ is generated as an $\mathbb{L}_1$-vector space by the $y_j$. Thus $G$ becomes an $\mathbb{L}_1$-algebra of finite rank $\leq n$. Since $G$ is contained in the field $\Omega$, it is an integral domain, and hence is a field by [Proposition 3](#prop3). Consequently $G=\mathbb{L}_1(\mathbb{L}_2)$, and
+1. Let $G$ be the subring of $\Omega$ generated by $\mathbb{L}_1 \cup \mathbb{L}_2$. If $(y_j)_{1 \leq j \leq n}$ is a $\mathbb{K}$-basis of $\mathbb{L}_2$, then $G$ is generated as an $\mathbb{L}_1$-vector space by the $y_j$. Thus $G$ becomes an $\mathbb{L}_1$-algebra of finite rank $\leq n$. Since $G$ is contained in the field $\Omega$, it is an integral domain, and hence is a field by [Proposition 3](#prop3){: data-relation="required" }. Consequently $G=\mathbb{L}_1(\mathbb{L}_2)$, and
     
     $$[\mathbb{L}_1(\mathbb{L}_2) : \mathbb{L}_1] \leq [\mathbb{L}_2 : \mathbb{K}]$$
 
@@ -190,7 +190,7 @@ Let three $\mathbb{K}$-extensions $\mathbb{L},\mathbb{M}_1,\mathbb{M}_2$ be give
 :::
 
 ::: Proof
-First assume that $\mathbb{L}$ and $\mathbb{M}_2$ are linearly disjoint. Then by [Proposition 12](#prop12), $\mathbb{L}$ and $\mathbb{M}_1$ are also linearly disjoint. On the other hand, a $\mathbb{K}$-basis of $\mathbb{L}$ is also an $\mathbb{M}_1$-basis of $\mathbb{M}_1[\mathbb{L}]$. But by assumption this basis is $\mathbb{M}_2$-free, so $\mathbb{M}_1[\mathbb{L}]$ and $\mathbb{M}_2$ are linearly disjoint. Moreover, by [Proposition 11](#prop11), $\mathbb{L}(\mathbb{M}_1) = \mathbb{M}_1(\mathbb{L})$ and $\mathbb{M}_2$ are also linearly disjoint.
+First assume that $\mathbb{L}$ and $\mathbb{M}_2$ are linearly disjoint. Then by [Proposition 12](#prop12){: data-relation="required" }, $\mathbb{L}$ and $\mathbb{M}_1$ are also linearly disjoint. On the other hand, a $\mathbb{K}$-basis of $\mathbb{L}$ is also an $\mathbb{M}_1$-basis of $\mathbb{M}_1[\mathbb{L}]$. But by assumption this basis is $\mathbb{M}_2$-free, so $\mathbb{M}_1[\mathbb{L}]$ and $\mathbb{M}_2$ are linearly disjoint. Moreover, by [Proposition 11](#prop11){: data-relation="required" }, $\mathbb{L}(\mathbb{M}_1) = \mathbb{M}_1(\mathbb{L})$ and $\mathbb{M}_2$ are also linearly disjoint.
 
 Now let us show the converse. As above, taking a $\mathbb{K}$-basis $B$ of $\mathbb{L}$, the hypothesis implies that $B$ is $\mathbb{M}_1$-free. Hence $B$ is an $\mathbb{M}_1$-basis of $\mathbb{M}_1[\mathbb{L}]$, and again by hypothesis $\mathbb{M}_1[\mathbb{L}]$ and $\mathbb{M}_2$ are linearly disjoint, so we obtain the desired result.
 :::
@@ -261,7 +261,7 @@ One direction is obvious, so it suffices to show the converse. Assume that $\mat
 
 First, by assumption $x$ is algebraic over $\mathbb{L}$. Let $g \in \mathbb{L}[\x]$ be the minimal polynomial of $x$, and let $A$ be the set of coefficients of $g$. Then $g \in \mathbb{K}(A)[\x]$, and therefore $x$ is algebraic over $\mathbb{K}(A)$.
 
-Moreover, $\mathbb{K}(A \cup \{x\}) = \mathbb{K}(A)(x)$ has finite degree over $\mathbb{K}(A)$. Since $A \subseteq \mathbb{L}$ and $\mathbb{L}$ is algebraic over $\mathbb{K}$, by [Theorem 18](#thm18) the extension $\mathbb{K}(A)$ has finite degree over $\mathbb{K}$. Hence $\mathbb{K}(A \cup \{x\})$ has finite degree over $\mathbb{K}$, and therefore $x$ is algebraic over $\mathbb{K}$.
+Moreover, $\mathbb{K}(A \cup \{x\}) = \mathbb{K}(A)(x)$ has finite degree over $\mathbb{K}(A)$. Since $A \subseteq \mathbb{L}$ and $\mathbb{L}$ is algebraic over $\mathbb{K}$, by [Theorem 18](#thm18){: data-relation="required" } the extension $\mathbb{K}(A)$ has finite degree over $\mathbb{K}$. Hence $\mathbb{K}(A \cup \{x\})$ has finite degree over $\mathbb{K}$, and therefore $x$ is algebraic over $\mathbb{K}$.
 :::
 
 ---

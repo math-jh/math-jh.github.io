@@ -16,11 +16,11 @@ weight: 2
 
 ## 체의 확장
 
-우리는 [§체, ⁋명제 2](/ko/math/field_theory/fields#prop2)에 의하여 field들 사이의 morphism은 injective이거나 zero map 뿐이라는 것을 살펴보았다. 이번 글에서 우리는 전자의 경우에 대하여 살펴본다. 
+우리는 [§체, ⁋명제 2](/ko/math/field_theory/fields#prop2){: data-relation="required" }에 의하여 field들 사이의 morphism은 injective이거나 zero map 뿐이라는 것을 살펴보았다. 이번 글에서 우리는 전자의 경우에 대하여 살펴본다. 
 
 우리는 field morphism 중 injective인 것을 *field extension*이라 부른다. 그럼 고정된 field $\mathbb{K}\in\Field$에 대하여, $\mathbb{K}$의 under category는 $\mathbb{K}$의 extension들의 category가 된다. 
 
-[\[범주론\] §범주, ⁋예시 13](/ko/math/category_theory/categories#ex13)의 표기법과는 다소 차이가 있으나, 우리는 field extension $\mathbb{K}\rightarrow \mathbb{L}$을 종종 $\mathbb{L}/\mathbb{K}$와 같이 표기한다. 그럼 field extension $\mathbb{L}/\mathbb{K}$가 주어질 때마다 우리는 injective map $\mathbb{K}\hookrightarrow\mathbb{L}$을 통해 $\mathbb{K}$를 $\mathbb{L}$의 subfield와 identify할 수 있다. 그러나, 만일 $\mathbb{L}=\mathbb{K}$이고 $\mathbb{K}\hookrightarrow\mathbb{L}=\mathbb{K}$이 endomorphism인 경우, 이러한 identification은 혼동의 여지가 있으므로 이 경우에는 $\mathbb{K}$와 $\mathbb{L}$의 subfield를 identify하지 않는다.  
+[\[범주론\] §범주, ⁋예시 13](/ko/math/category_theory/categories#ex13){: data-relation="required" }의 표기법과는 다소 차이가 있으나, 우리는 field extension $\mathbb{K}\rightarrow \mathbb{L}$을 종종 $\mathbb{L}/\mathbb{K}$와 같이 표기한다. 그럼 field extension $\mathbb{L}/\mathbb{K}$가 주어질 때마다 우리는 injective map $\mathbb{K}\hookrightarrow\mathbb{L}$을 통해 $\mathbb{K}$를 $\mathbb{L}$의 subfield와 identify할 수 있다. 그러나, 만일 $\mathbb{L}=\mathbb{K}$이고 $\mathbb{K}\hookrightarrow\mathbb{L}=\mathbb{K}$이 endomorphism인 경우, 이러한 identification은 혼동의 여지가 있으므로 이 경우에는 $\mathbb{K}$와 $\mathbb{L}$의 subfield를 identify하지 않는다.  
 
 정의에 의하여, 두 extension $\mathbb{K} \rightarrow \mathbb{L}_1$과 $\mathbb{K} \rightarrow \mathbb{L}_2$가 주어졌다 하면, 다음 commutative diagram
 
@@ -34,7 +34,7 @@ weight: 2
 우리가 $\mathbb{K}$-algebra와 이들 사이의 homomorpihsm을 생각하는 것은 위와 유사한 경우를 다루기 위해서이므로, 앞으로의 글에서 category $\Alg{\mathbb{K}}$는 항상 unital associative $\mathbb{K}$-algebra들의 category가 될 것이다. 즉, 앞으로 $\mathbb{K}$-algebra라고 함은 항상 unital associative $\mathbb{K}$-algebra가 될 것이며, $\mathbb{K}$-algebra homomorphism 또한 unital $\mathbb{K}$-algebra homomorpihsm을 의미할 것이다. 
 :::
 
-임의의 $\mathbb{K}$-algebra는 $\mathbb{K}$-module이기도 하므로 그 차원이 잘 정의된다. ([\[다중선형대수학\] §기저, ⁋명제 6](/ko/math/multilinear_algebra/basis_of_free_modules#prop6))
+임의의 $\mathbb{K}$-algebra는 $\mathbb{K}$-module이기도 하므로 그 차원이 잘 정의된다. ([\[다중선형대수학\] §기저, ⁋명제 6](/ko/math/multilinear_algebra/basis_of_free_modules#prop6){: data-relation="required" })
 
 ::: 정의 1
 임의의 $\mathbb{K}$-algebra $A$에 대하여, $\dim_{\mathbb{K}}A$을 $A$의 *degree*라 부르고 $[A:\mathbb{K}]$로 표기한다. 
@@ -79,7 +79,7 @@ $$\mathbb{K}(M \cup N) = \mathbb{K}(M)(N) = \mathbb{K}(N)(M)$$
 
 이에 대한 증명은 정의의 최소성에 의해 거의 자명하다. 
 
-한편 [정의 4](#def4)의 field $\mathbb{K}(A)$를 얻기 위해서는 $\mathbb{K}$의 extension $\mathbb{L}$을 하나 고정한 다음, $A$를 포함하는 $\mathbb{L}$의 모든 subextension들을 교집합하면 될 것이다. 한편, 우리는 $\mathbb{K}$의 extension들의 category에서의 morphism은 오직 extension 뿐임을 보였으므로, 다음이 성립한다.
+한편 [정의 4](#def4){: data-relation="required" }의 field $\mathbb{K}(A)$를 얻기 위해서는 $\mathbb{K}$의 extension $\mathbb{L}$을 하나 고정한 다음, $A$를 포함하는 $\mathbb{L}$의 모든 subextension들을 교집합하면 될 것이다. 한편, 우리는 $\mathbb{K}$의 extension들의 category에서의 morphism은 오직 extension 뿐임을 보였으므로, 다음이 성립한다.
 
 ::: 명제 6
  $\mathcal{F}$를 field $E$의 subfield들의 집합이라고 하고, 여기에 포함관계 $\subseteq$를 사용하면 directed set이 된다. 특히, $\mathcal{F}$에 속한 field들의 합집합 $L$은 field이다.
@@ -110,12 +110,12 @@ $$\mathbb{K}(M \cup N) = \mathbb{K}(M)(N) = \mathbb{K}(N)(M)$$
 2. 거꾸로, $\mathbb{L}_1\otimes_\mathbb{K} \mathbb{L}_2$의 임의의 prime ideal $\mathfrak{p}$에 대하여, 적당한 composite field $\mathbb{M}$과 extension $u_i: \mathbb{L}_i \rightarrow \mathbb{M}$가 존재하여, $\mathfrak{p}$가 $u_1\ast u_2$의 kernel이도록 할 수 있다. 
 :::
 ::: 증명
-1. $u_1\ast u_2$의 image $\im(u_1\ast u_2)$는 field $\mathbb{M}$의 subring이고, 따라서 integral domain이다. 이제 주어진 주장은 [\[대수적 구조\] §분수체, ⁋명제 9](/ko/math/algebraic_structures/field_of_fractions#prop9)와 [\[대수적 구조\] §몫환, 환 동형사상, ⁋정리 3](/ko/math/algebraic_structures/quotient_rings#thm3)으로부터 자명하다. 
+1. $u_1\ast u_2$의 image $\im(u_1\ast u_2)$는 field $\mathbb{M}$의 subring이고, 따라서 integral domain이다. 이제 주어진 주장은 [\[대수적 구조\] §분수체, ⁋명제 9](/ko/math/algebraic_structures/field_of_fractions#prop9){: data-relation="required" }와 [\[대수적 구조\] §몫환, 환 동형사상, ⁋정리 3](/ko/math/algebraic_structures/quotient_rings#thm3){: data-relation="required" }으로부터 자명하다. 
 
 2. 거꾸로 $\mathfrak{p}$가 $\mathbb{L}_1\otimes_\mathbb{K}\mathbb{L}_2$의 prime ideal이라 하고, integral domain $(\mathbb{L}_1\otimes_\mathbb{K}\mathbb{L}_2)/\mathfrak{p}$의 field of fraction을 $\mathbb{M}=\Frac((\mathbb{L}_1\otimes_\mathbb{K}\mathbb{L}_2)/\mathfrak{p})$라 하자. 그럼 각각의 $x_1\in \mathbb{L}_1$과 $x_2\in \mathbb{L}_2$에 대하여, $u_1(x_1)$을 $x_1\otimes 1$의 $\mathbb{M}$에서의 image, $u_2(x_2)$를 $1\otimes x_2$의 $\mathbb{M}$에서의 image로 정의하면 이들이 원하는 조건을 만족함을 알 수 있다. 
 :::
 
-뿐만 아니라, 두 번째 결과에 의해 얻어지는 composite field가 isomorphism에 대하여 유일하게 결정된다는 것 또한 자명하다. 한편, 임의의 두 $\mathbb{K}$-extension $\mathbb{L}_1, \mathbb{L}_2$에 대하여, $\mathbb{L}_1\otimes_\mathbb{K} \mathbb{L}_2$는 항상 prime ideal을 가지므로 ([\[대수적 구조\] §환의 정의, ⁋정리 10](/ko/math/algebraic_structures/rings#thm10)) 임의의 두 $\mathbb{K}$-extension은 composite field를 갖는다는 것을 확인할 수 있다. 
+뿐만 아니라, 두 번째 결과에 의해 얻어지는 composite field가 isomorphism에 대하여 유일하게 결정된다는 것 또한 자명하다. 한편, 임의의 두 $\mathbb{K}$-extension $\mathbb{L}_1, \mathbb{L}_2$에 대하여, $\mathbb{L}_1\otimes_\mathbb{K} \mathbb{L}_2$는 항상 prime ideal을 가지므로 ([\[대수적 구조\] §환의 정의, ⁋정리 10](/ko/math/algebraic_structures/rings#thm10){: data-relation="required" }) 임의의 두 $\mathbb{K}$-extension은 composite field를 갖는다는 것을 확인할 수 있다. 
 
 ## 대수적 확장
 
@@ -147,7 +147,7 @@ $\Omega$의 임의의 두 $\mathbb{K}$-subalgebra $E,F$에 대하여, multiplica
 :::
 
 ::: 증명
-1. $\mathbb{L}_1 \cup \mathbb{L}_2$로 생성되는 $\Omega$의 subring을 $G$라 하자. 만약 $(y_j)_{1 \leq j \leq n}$이 $\mathbb{L}_2$의 $\mathbb{K}$-basis라면, $G$는 $\mathbb{L}_1$-벡터공간으로서 $y_j$들로 생성된다. 그러면 $G$는 finite rank $\leq n$을 가지는 $\mathbb{L}_1$-algebra가 된다. 이제 $G$는 field $\Omega$ 안에 포함되어 있으므로 integral domain이며, 따라서 [명제 3](#prop3)에 의하여 field가 된다. 결과적으로 $G=\mathbb{L}_1(\mathbb{L}_2)$이고, 
+1. $\mathbb{L}_1 \cup \mathbb{L}_2$로 생성되는 $\Omega$의 subring을 $G$라 하자. 만약 $(y_j)_{1 \leq j \leq n}$이 $\mathbb{L}_2$의 $\mathbb{K}$-basis라면, $G$는 $\mathbb{L}_1$-벡터공간으로서 $y_j$들로 생성된다. 그러면 $G$는 finite rank $\leq n$을 가지는 $\mathbb{L}_1$-algebra가 된다. 이제 $G$는 field $\Omega$ 안에 포함되어 있으므로 integral domain이며, 따라서 [명제 3](#prop3){: data-relation="required" }에 의하여 field가 된다. 결과적으로 $G=\mathbb{L}_1(\mathbb{L}_2)$이고, 
     
     $$[\mathbb{L}_1(\mathbb{L}_2) : \mathbb{L}_1] \leq [\mathbb{L}_2 : \mathbb{K}]$$
 
@@ -190,7 +190,7 @@ Field $\mathbb{K}$의 두 extension $\mathbb{L}_1$, $\mathbb{L}_2$를 생각하�
 :::
 
 ::: 증명
-우선  $\mathbb{L}$과 $\mathbb{M}_2$가 linearly disjoint하다고 가정하자. 그럼 [명제 12](#prop12)에 의하여 $\mathbb{L}$와 $\mathbb{M}_1$도 linearly disjoint이다. 한편, $\mathbb{L}$의 $\mathbb{K}$-basis는 $\mathbb{M}_1[\mathbb{L}]$의 $\mathbb{M}_1$-basis이기도 하다. 그런데 가정에 의해 이 basis는 $\mathbb{M}_2$-free이므로, $\mathbb{M}_1[\mathbb{L}]$와 $\mathbb{M}_2$는 $\mathbb{M}_1$ 위에서 linearly disjoint이다. 또, [명제 11](#prop11)에 의해 $\mathbb{L}(\mathbb{M}_1) = \mathbb{M}_1(\mathbb{L})$와 $\mathbb{M}_2$ 역시 $\mathbb{M}_1$ 위에서 linearly disjoint하다.
+우선  $\mathbb{L}$과 $\mathbb{M}_2$가 linearly disjoint하다고 가정하자. 그럼 [명제 12](#prop12){: data-relation="required" }에 의하여 $\mathbb{L}$와 $\mathbb{M}_1$도 linearly disjoint이다. 한편, $\mathbb{L}$의 $\mathbb{K}$-basis는 $\mathbb{M}_1[\mathbb{L}]$의 $\mathbb{M}_1$-basis이기도 하다. 그런데 가정에 의해 이 basis는 $\mathbb{M}_2$-free이므로, $\mathbb{M}_1[\mathbb{L}]$와 $\mathbb{M}_2$는 $\mathbb{M}_1$ 위에서 linearly disjoint이다. 또, [명제 11](#prop11){: data-relation="required" }에 의해 $\mathbb{L}(\mathbb{M}_1) = \mathbb{M}_1(\mathbb{L})$와 $\mathbb{M}_2$ 역시 $\mathbb{M}_1$ 위에서 linearly disjoint하다.
 
 이제 반대방향을 보이자. 위에서와 마찬가지로 $\mathbb{L}$의 $\mathbb{K}$-basis $B$를 생각하면, 가정으로부터 $B$는 $\mathbb{M}_1$-free이다. 따라서 $B$는 $\mathbb{M}_1[\mathbb{L}]$의 $\mathbb{M}_1$-basis이며, 다시 가정에 의해 $\mathbb{M}_1[\mathbb{L}]$와 $\mathbb{M}_2$는 $\mathbb{M}_1$ 위에서 linearly disjoint이므로 원하는 결과를 얻는다.
 :::
@@ -261,7 +261,7 @@ Field extension $\mathbb{M}/\mathbb{L}/\mathbb{K}$에 대하여, $\mathbb{M}$이
 
 우선 가정에 의해 $x$는 $\mathbb{L}$ 위에서 algebraic하다. $g \in \mathbb{L}[\x]$를 $x$의 minimal polynomial이라 하고, $g$의 계수들의 집합을 $A$라 하자. 그러면 $g \in \mathbb{K}(A)[\x]$가 되고, 따라서 $x$는 $\mathbb{K}(A)$ 위에서 algebraic하다.
 
-또한 $\mathbb{K}(A \cup \{x\}) = \mathbb{K}(A)(x)$는 $\mathbb{K}(A)$ 위에서 finite degree를 가진다. $A$는 $g$의 계수들로 이루어진 유한집합이며 $A \subseteq \mathbb{L}$이고, $\mathbb{L}$가 $\mathbb{K}$ 위에서 algebraic이므로 [정리 18](#thm18)에 의해 $\mathbb{K}(A)$는 $\mathbb{K}$ 위에서 finite degree를 가진다. 이로부터 $\mathbb{K}(A \cup \{x\})$는 $\mathbb{K}$ 위에서 finite degree를 가지고, 따라서 $x$가 $\mathbb{K}$에 대해 algebraic이다. 
+또한 $\mathbb{K}(A \cup \{x\}) = \mathbb{K}(A)(x)$는 $\mathbb{K}(A)$ 위에서 finite degree를 가진다. $A$는 $g$의 계수들로 이루어진 유한집합이며 $A \subseteq \mathbb{L}$이고, $\mathbb{L}$가 $\mathbb{K}$ 위에서 algebraic이므로 [정리 18](#thm18){: data-relation="required" }에 의해 $\mathbb{K}(A)$는 $\mathbb{K}$ 위에서 finite degree를 가진다. 이로부터 $\mathbb{K}(A \cup \{x\})$는 $\mathbb{K}$ 위에서 finite degree를 가지고, 따라서 $x$가 $\mathbb{K}$에 대해 algebraic이다. 
 :::
 
 ---
