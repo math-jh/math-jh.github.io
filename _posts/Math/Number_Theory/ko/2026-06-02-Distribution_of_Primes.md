@@ -14,7 +14,7 @@ weight: 4
 published: false
 ---
 
-[§소수와 산술의 기본정리](/ko/math/number_theory/primes)에서 소수가 정수의 multiplicative 구성 요소임을 보았다. 그렇다면 소수가 몇 개나 있으며 자연수 안에 어떻게 흩어져 있는지가 자연스러운 물음이다. 이 글에서는 소수가 무한히 많다는 고전적 사실에서 출발하여, 소수의 분포라는 정수론의 깊은 주제를 개관한다.
+[§소수와 산술의 기본정리](/ko/math/number_theory/primes){: data-relation="weak" }에서 소수가 정수의 multiplicative 구성 요소임을 보았다. 그렇다면 소수가 몇 개나 있으며 자연수 안에 어떻게 흩어져 있는지가 자연스러운 물음이다. 이 글에서는 소수가 무한히 많다는 고전적 사실에서 출발하여, 소수의 분포라는 정수론의 깊은 주제를 개관한다.
 
 ## 소수의 무한성
 
@@ -27,7 +27,7 @@ published: false
 
 $$N = p_1 p_2 \cdots p_k + 1$$
 
-을 생각하자. $N > 1$이므로 [§소수와 산술의 기본정리, ⁋정리 3](/ko/math/number_theory/primes#thm3)에 의해 $N$은 어떤 소수 $p$로 나누어떨어지고, 가정에 의해 $p$는 $p_1, \ldots, p_k$ 중 하나이다. 그러면 $p \mid N$이고 $p \mid p_1\cdots p_k$이므로 [§나눗셈과 최대공약수, ⁋명제 2](/ko/math/number_theory/divisibility#prop2)의 선형결합 성질에 의해 $p \mid (N - p_1\cdots p_k) = 1$이 되어, 소수가 $1$을 나눈다는 모순이 생긴다. 따라서 소수는 유한할 수 없다.
+을 생각하자. $N > 1$이므로 [§소수와 산술의 기본정리, ⁋정리 3](/ko/math/number_theory/primes#thm3){: data-relation="required" }에 의해 $N$은 어떤 소수 $p$로 나누어떨어지고, 가정에 의해 $p$는 $p_1, \ldots, p_k$ 중 하나이다. 그러면 $p \mid N$이고 $p \mid p_1\cdots p_k$이므로 [§나눗셈과 최대공약수, ⁋명제 2](/ko/math/number_theory/divisibility#prop2){: data-relation="required" }의 선형결합 성질에 의해 $p \mid (N - p_1\cdots p_k) = 1$이 되어, 소수가 $1$을 나눈다는 모순이 생긴다. 따라서 소수는 유한할 수 없다.
 :::
 
 ## 소수 사이의 간격
@@ -97,7 +97,7 @@ $$2,\ 3,\ 5,\ 7,\ 11,\ 13,\ 17,\ 19,\ 23,\ 29$$
 가 $30$ 이하의 소수 전부, 즉 $\pi(30) = 10$이다.
 :::
 
-체가 $\sqrt{x}$ 이하의 소수만 처리해도 되는 까닭은 다음과 같다. $n \leq x$가 합성수이면 $n = ab$ ($1 < a \leq b$) 로 쓸 수 있고, $a \leq \sqrt{n} \leq \sqrt{x}$이다. [§소수와 산술의 기본정리, ⁋정리 3](/ko/math/number_theory/primes#thm3)에 의해 $a$는 소인수 $p$를 가지고, $p \leq a \leq \sqrt{x}$이므로 $n$은 $\sqrt{x}$ 이하의 소수 $p$의 배수로서 이미 지워진다. 따라서 $\sqrt{x}$를 넘는 소수의 배수는 새로 지울 것이 없다.
+체가 $\sqrt{x}$ 이하의 소수만 처리해도 되는 까닭은 다음과 같다. $n \leq x$가 합성수이면 $n = ab$ ($1 < a \leq b$) 로 쓸 수 있고, $a \leq \sqrt{n} \leq \sqrt{x}$이다. [§소수와 산술의 기본정리, ⁋정리 3](/ko/math/number_theory/primes#thm3){: data-relation="required" }에 의해 $a$는 소인수 $p$를 가지고, $p \leq a \leq \sqrt{x}$이므로 $n$은 $\sqrt{x}$ 이하의 소수 $p$의 배수로서 이미 지워진다. 따라서 $\sqrt{x}$를 넘는 소수의 배수는 새로 지울 것이 없다.
 
 ## 오일러 곱과 역수의 합
 
