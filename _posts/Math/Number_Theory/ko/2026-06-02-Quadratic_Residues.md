@@ -14,7 +14,7 @@ weight: 12
 published: false
 ---
 
-선형 합동식 $ax \equiv b$는 [§일차 합동식](/ko/math/number_theory/linear_congruences)에서 완전히 풀렸다. 다음 단계는 이차 합동식 $x^2 \equiv a \pmod p$이다. 이 식이 해를 갖는가, 즉 $a$가 법 $p$에서 제곱수인가라는 물음이 정수론에서 가장 아름다운 이론 중 하나로 이어진다.
+선형 합동식 $ax \equiv b$는 [§일차 합동식](/ko/math/number_theory/linear_congruences){: data-relation="forward" }에서 완전히 풀렸다. 다음 단계는 이차 합동식 $x^2 \equiv a \pmod p$이다. 이 식이 해를 갖는가, 즉 $a$가 법 $p$에서 제곱수인가라는 물음이 정수론에서 가장 아름다운 이론 중 하나로 이어진다.
 
 ## 이차 잉여
 
@@ -29,7 +29,7 @@ $\gcd(a, p) = 1$일 때, $x^2 \equiv a \pmod p$가 해를 가지면 $a$를 법 $
 :::
 
 ::: 증명
-제곱 morphism $x \mapsto x^2$를 기약잉여계 위에서 본다. $x^2 \equiv y^2 \pmod p$인 것은 $p \mid (x-y)(x+y)$, 즉 $y \equiv \pm x \pmod p$인 것과 동치이다. ([§소수와 산술의 기본정리, ⁋보조정리 2](/ko/math/number_theory/primes#lem2)) $p$가 홀수이므로 $x \not\equiv -x$이고, 따라서 제곱 morphism은 정확히 두 원소 $\pm x$를 같은 값으로 보낸다. 그러므로 서로 다른 제곱값, 곧 이차 잉여는 $(p-1)/2$개이다.
+제곱 morphism $x \mapsto x^2$를 기약잉여계 위에서 본다. $x^2 \equiv y^2 \pmod p$인 것은 $p \mid (x-y)(x+y)$, 즉 $y \equiv \pm x \pmod p$인 것과 동치이다. ([§소수와 산술의 기본정리, ⁋보조정리 2](/ko/math/number_theory/primes#lem2){: data-relation="required" }) $p$가 홀수이므로 $x \not\equiv -x$이고, 따라서 제곱 morphism은 정확히 두 원소 $\pm x$를 같은 값으로 보낸다. 그러므로 서로 다른 제곱값, 곧 이차 잉여는 $(p-1)/2$개이다.
 :::
 
 ## 르장드르 기호와 오일러 판정법
@@ -53,9 +53,9 @@ $$\left(\frac{a}{p}\right) \equiv a^{(p-1)/2} \pmod p$$
 :::
 
 ::: 증명
-[§페르마 소정리, ⁋정리 1](/ko/math/number_theory/fermat_little_theorem#thm1)로 $a^{p-1} \equiv 1$이므로 $\bigl(a^{(p-1)/2} - 1\bigr)\bigl(a^{(p-1)/2} + 1\bigr) \equiv 0 \pmod p$이고, 따라서 $a^{(p-1)/2} \equiv \pm 1 \pmod p$이다.
+[§페르마 소정리, ⁋정리 1](/ko/math/number_theory/fermat_little_theorem#thm1){: data-relation="required" }로 $a^{p-1} \equiv 1$이므로 $\bigl(a^{(p-1)/2} - 1\bigr)\bigl(a^{(p-1)/2} + 1\bigr) \equiv 0 \pmod p$이고, 따라서 $a^{(p-1)/2} \equiv \pm 1 \pmod p$이다.
 
-$a$가 이차 잉여이면 $a \equiv x^2$인 $x$가 있어 $a^{(p-1)/2} \equiv x^{p-1} \equiv 1$이다. 거꾸로 $g$를 법 $p$의 원시근이라 하고 ([§원시근, ⁋정리 4](/ko/math/number_theory/primitive_roots#thm4)) $a \equiv g^j$로 쓰면, $a$가 이차 잉여인 것은 $j$가 짝수인 것과 동치이다. 실제로 $j = 2k$이면 $a \equiv (g^k)^2$이고, 반대로 $a \equiv x^2$이고 $x \equiv g^k$이면 $g^j \equiv g^{2k}$에서 $j \equiv 2k \pmod{p-1}$인데 $p-1$이 짝수이므로 $j$도 짝수이다. 한편 $a^{(p-1)/2} \equiv g^{j(p-1)/2} \equiv 1$인 것은 $\ord_p(g) = p-1$이 $j(p-1)/2$를 나누는 것, 곧 $j$가 짝수인 것과 동치이다. 따라서 $a^{(p-1)/2} \equiv 1$인 것과 $a$가 이차 잉여인 것이 일치하고, 비잉여이면 $a^{(p-1)/2} \equiv -1$이다.
+$a$가 이차 잉여이면 $a \equiv x^2$인 $x$가 있어 $a^{(p-1)/2} \equiv x^{p-1} \equiv 1$이다. 거꾸로 $g$를 법 $p$의 원시근이라 하고 ([§원시근, ⁋정리 4](/ko/math/number_theory/primitive_roots#thm4){: data-relation="required" }) $a \equiv g^j$로 쓰면, $a$가 이차 잉여인 것은 $j$가 짝수인 것과 동치이다. 실제로 $j = 2k$이면 $a \equiv (g^k)^2$이고, 반대로 $a \equiv x^2$이고 $x \equiv g^k$이면 $g^j \equiv g^{2k}$에서 $j \equiv 2k \pmod{p-1}$인데 $p-1$이 짝수이므로 $j$도 짝수이다. 한편 $a^{(p-1)/2} \equiv g^{j(p-1)/2} \equiv 1$인 것은 $\ord_p(g) = p-1$이 $j(p-1)/2$를 나누는 것, 곧 $j$가 짝수인 것과 동치이다. 따라서 $a^{(p-1)/2} \equiv 1$인 것과 $a$가 이차 잉여인 것이 일치하고, 비잉여이면 $a^{(p-1)/2} \equiv -1$이다.
 :::
 
 오일러 판정법은 거듭제곱의 합동을 계산하여 이차 잉여 여부를 판정하게 해 줄 뿐 아니라, 르장드르 기호가 multiplicative임을 즉시 준다.
@@ -65,7 +65,7 @@ $\left(\frac{ab}{p}\right) = \left(\frac{a}{p}\right)\left(\frac{b}{p}\right)$�
 :::
 
 ::: 증명
-$p \mid ab$이면 [§소수와 산술의 기본정리, ⁋보조정리 2](/ko/math/number_theory/primes#lem2)에 의해 $p \mid a$이거나 $p \mid b$여서 양변이 모두 $0$이므로, $p \nmid ab$인 경우만 보면 된다. 오일러 판정법으로 $\left(\frac{ab}{p}\right) \equiv (ab)^{(p-1)/2} = a^{(p-1)/2}b^{(p-1)/2} \equiv \left(\frac{a}{p}\right)\left(\frac{b}{p}\right) \pmod p$이고, 양변이 $\pm 1$이며 $p > 2$이므로 합동은 등호가 된다. $a = -1$로 두면 같은 이유로 $\left(\frac{-1}{p}\right) = (-1)^{(p-1)/2}$를 얻는다.
+$p \mid ab$이면 [§소수와 산술의 기본정리, ⁋보조정리 2](/ko/math/number_theory/primes#lem2){: data-relation="required" }에 의해 $p \mid a$이거나 $p \mid b$여서 양변이 모두 $0$이므로, $p \nmid ab$인 경우만 보면 된다. 오일러 판정법으로 $\left(\frac{ab}{p}\right) \equiv (ab)^{(p-1)/2} = a^{(p-1)/2}b^{(p-1)/2} \equiv \left(\frac{a}{p}\right)\left(\frac{b}{p}\right) \pmod p$이고, 양변이 $\pm 1$이며 $p > 2$이므로 합동은 등호가 된다. $a = -1$로 두면 같은 이유로 $\left(\frac{-1}{p}\right) = (-1)^{(p-1)/2}$를 얻는다.
 :::
 
 오일러 판정법은 작은 법에서 르장드르 기호를 직접 계산하게 해 준다. 핵심은 $a^{(p-1)/2}$를 반복제곱으로 빠르게 줄인 뒤 $\pm 1$ 중 어느 쪽인지 읽는 것이다.
@@ -89,14 +89,14 @@ $$1, 4, 9, 5, 3 \pmod{11}$$
 이 $1^2, \ldots, 5^2$로 나오므로 이차 잉여는 $\{1, 3, 4, 5, 9\}$, 비잉여는 $\{2, 6, 7, 8, 10\}$이고 각각 $5$개이다.
 :::
 
-다음으로 [정리 4](#thm4)를 거듭제곱 계산에 적용한다. 큰 수의 거듭제곱은 법을 줄여 가며 반복제곱하는 것이 요령이다.
+다음으로 [정리 4](#thm4){: data-relation="required" }를 거듭제곱 계산에 적용한다. 큰 수의 거듭제곱은 법을 줄여 가며 반복제곱하는 것이 요령이다.
 
 ::: 예시 7 (오일러 판정법에 의한 판정)
 $\left(\frac{2}{7}\right)$을 구하자. $(7-1)/2 = 3$이므로
 
 $$2^{3} = 8 \equiv 1 \pmod 7$$
 
-이고, [정리 4](#thm4)에 의해 $\left(\frac{2}{7}\right) = 1$이다. 실제로 $3^2 = 9 \equiv 2$이므로 $2$는 법 $7$의 이차 잉여이다. 반면 $\left(\frac{3}{7}\right)$은
+이고, [정리 4](#thm4){: data-relation="required" }에 의해 $\left(\frac{2}{7}\right) = 1$이다. 실제로 $3^2 = 9 \equiv 2$이므로 $2$는 법 $7$의 이차 잉여이다. 반면 $\left(\frac{3}{7}\right)$은
 
 $$3^{3} = 27 \equiv 6 \equiv -1 \pmod 7$$
 
@@ -111,7 +111,7 @@ $$\begin{aligned}
 이므로 $\left(\frac{6}{11}\right) = -1$이다. 이는 예시 6에서 본 비잉여 목록 $\{2,6,7,8,10\}$에 $6$이 들어 있는 것과 일치한다.
 :::
 
-[따름정리 5](#cor5)의 곱셈성은 큰 르장드르 기호를 작은 인수의 곱으로 쪼개 준다.
+[따름정리 5](#cor5){: data-relation="required" }의 곱셈성은 큰 르장드르 기호를 작은 인수의 곱으로 쪼개 준다.
 
 ::: 예시 8 (곱셈성을 이용한 계산)
 $\left(\frac{6}{11}\right)$을 다시, 이번에는 따름정리 5로 분해해 보자. $6 = 2 \cdot 3$이므로
@@ -134,7 +134,7 @@ $$\left(\frac{2}{11}\right) = -1, \qquad \left(\frac{3}{11}\right) = +1 \quad\Lo
 :::
 
 ::: 증명
-[따름정리 5](#cor5)의 곱셈성으로 $\left(\frac{ab}{p}\right) = \left(\frac{a}{p}\right)\left(\frac{b}{p}\right)$이다. 따라서
+[따름정리 5](#cor5){: data-relation="required" }의 곱셈성으로 $\left(\frac{ab}{p}\right) = \left(\frac{a}{p}\right)\left(\frac{b}{p}\right)$이다. 따라서
 
 $$\begin{aligned}
 (+1)(+1) &= +1, \\
@@ -156,7 +156,7 @@ $$\sum_{a=1}^{p-1} \left(\frac{a}{p}\right) = 0$$
 :::
 
 ::: 증명
-[명제 2](#prop2)에 의해 $1, \ldots, p-1$ 중 이차 잉여가 정확히 $(p-1)/2$개, 비잉여가 정확히 $(p-1)/2$개이다. 잉여에서는 르장드르 기호가 $+1$, 비잉여에서는 $-1$이므로
+[명제 2](#prop2){: data-relation="required" }에 의해 $1, \ldots, p-1$ 중 이차 잉여가 정확히 $(p-1)/2$개, 비잉여가 정확히 $(p-1)/2$개이다. 잉여에서는 르장드르 기호가 $+1$, 비잉여에서는 $-1$이므로
 
 $$\sum_{a=1}^{p-1} \left(\frac{a}{p}\right) = \frac{p-1}{2}\cdot(+1) + \frac{p-1}{2}\cdot(-1) = 0$$
 
@@ -174,7 +174,7 @@ $$\begin{aligned}
 5^6 &\equiv 5^4 \cdot 5^2 \equiv 1 \cdot (-1) = -1 \pmod{13}
 \end{aligned}$$
 
-이므로 $\left(\frac{5}{13}\right) = -1$이고, 따라서 $x^2 \equiv 5 \pmod{13}$은 해를 갖지 않는다. 반대로 $x^2 \equiv 3 \pmod{13}$은 $3^6 = (3^3)^2 = 27^2 \equiv 1^2 = 1 \pmod{13}$이므로 가해이며, 실제로 $4^2 = 16 \equiv 3 \pmod{13}$이 한 해이고 $-4 \equiv 9$가 다른 해이다. 이렇게 [명제 2](#prop2)의 증명에서 본 두 해 $\pm x$가 함께 나타난다.
+이므로 $\left(\frac{5}{13}\right) = -1$이고, 따라서 $x^2 \equiv 5 \pmod{13}$은 해를 갖지 않는다. 반대로 $x^2 \equiv 3 \pmod{13}$은 $3^6 = (3^3)^2 = 27^2 \equiv 1^2 = 1 \pmod{13}$이므로 가해이며, 실제로 $4^2 = 16 \equiv 3 \pmod{13}$이 한 해이고 $-4 \equiv 9$가 다른 해이다. 이렇게 [명제 2](#prop2){: data-relation="weak" }의 증명에서 본 두 해 $\pm x$가 함께 나타난다.
 :::
 
 곱셈성에 의해 르장드르 기호의 계산은 소수와 $-1$에서의 값으로 환원된다. 남은 핵심은 두 홀수 소수 $p, q$에 대해 $\left(\frac{q}{p}\right)$와 $\left(\frac{p}{q}\right)$가 어떻게 연관되는가이다.
