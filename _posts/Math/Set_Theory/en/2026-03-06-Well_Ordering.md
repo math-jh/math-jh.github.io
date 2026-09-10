@@ -22,11 +22,11 @@ In the previous post we briefly introduced ordinals, but postponed defining them
 Let $A^\ast$ be the set of all segments of a well-ordered set $A$. Then $(A^\ast,\subseteq)$ is also a well-ordered set, and the map $x\mapsto S_x$ is an order isomorphism between $A$ and $A^\ast\setminus\{A\}$.
 :::
 ::: Proof
-We use [§Directed Sets, ⁋Proposition 6](/en/math/set_theory/directed_set#prop6). We show that $S$ is strictly increasing and that $s(A)=A^\ast\setminus\{A\}$.
+We use [§Directed Sets, ⁋Proposition 6](/en/math/set_theory/directed_set#prop6){: data-relation="required" }. We show that $S$ is strictly increasing and that $s(A)=A^\ast\setminus\{A\}$.
 
-That $s$ is an increasing function is obvious: if $x\leq y$ and $a\in S_x$, then $a < x\leq y$, so $a\in S_y$. Moreover, this inclusion is strict, since if $x < y$, then $x\not< x$ and $x < y$, so $x\not\in S_x$ but $x\in S_y$. Hence the function $s$ is an isomorphism between $A$ and its image. Therefore, by [§Ordinals and Well-Ordered Sets, ⁋Proposition 5](/en/math/set_theory/ordinals#prop5), we have $s(A)=A^\ast\setminus\{A\}$.
+That $s$ is an increasing function is obvious: if $x\leq y$ and $a\in S_x$, then $a < x\leq y$, so $a\in S_y$. Moreover, this inclusion is strict, since if $x < y$, then $x\not< x$ and $x < y$, so $x\not\in S_x$ but $x\in S_y$. Hence the function $s$ is an isomorphism between $A$ and its image. Therefore, by [§Ordinals and Well-Ordered Sets, ⁋Proposition 5](/en/math/set_theory/ordinals#prop5){: data-relation="required" }, we have $s(A)=A^\ast\setminus\{A\}$.
 
-Finally, we show that $A^\ast$ is well-ordered. Since $s(A)$ is well-ordered, adding the maximum element $A$ to $s(A)=A^\ast\setminus\{A\}$ ([§Elements of Ordered Sets, ⁋Proposition 4](/en/math/set_theory/elements_in_ordered_set#prop4)) yields $A^\ast$, and the resulting set is again well-ordered.
+Finally, we show that $A^\ast$ is well-ordered. Since $s(A)$ is well-ordered, adding the maximum element $A$ to $s(A)=A^\ast\setminus\{A\}$ ([§Elements of Ordered Sets, ⁋Proposition 4](/en/math/set_theory/elements_in_ordered_set#prop4){: data-relation="weak" }) yields $A^\ast$, and the resulting set is again well-ordered.
 :::
 
 Via the isomorphism in the above proposition, we may regard each well-ordered set as
