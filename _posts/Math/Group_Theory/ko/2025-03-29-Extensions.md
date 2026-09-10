@@ -49,7 +49,7 @@ $$E\cong (E/i(F))\oplus i(F)$$
 을 commute하도록 하는 $u:E_1 \rightarrow E_2$를 의미한다.  
 :::
 
-그럼 만일 $u:E_1 \rightarrow E_2$가 group homomorphism으로서 isomorphism이라면, $u$의 inverse $u^{-1}: E_2 \rightarrow E_1$ 또한 [정의 2](#def2)의 조건을 만족하고 따라서 $u$는 extension들 사이의 morphism으로서 isomorphism이라는 것을 확인할 수 있다. 
+그럼 만일 $u:E_1 \rightarrow E_2$가 group homomorphism으로서 isomorphism이라면, $u$의 inverse $u^{-1}: E_2 \rightarrow E_1$ 또한 [정의 2](#def2){: data-relation="required" }의 조건을 만족하고 따라서 $u$는 extension들 사이의 morphism으로서 isomorphism이라는 것을 확인할 수 있다. 
 
 앞선 정의를 확장하여, 다음을 정의한다. 
 
@@ -71,7 +71,7 @@ Extension $\mathcal{E}:F \rightarrow E \rightarrow G$에 대하여, 다음이 �
 3. Section $s: G \rightarrow E$가 존재하여 $s(G)$가 $i(F)$의 centralizer에 포함되도록 할 수 있다. 
 :::
 
-물론 여기에서 retraction과 section은 단순한 함수가 아니라 group homomorphism을 의미한다. ([\[집합론\] §Retraction과 section, ⁋정의 2](/ko/math/set_theory/retraction_and_section#def2))
+물론 여기에서 retraction과 section은 단순한 함수가 아니라 group homomorphism을 의미한다. ([\[집합론\] §Retraction과 section, ⁋정의 2](/ko/math/set_theory/retraction_and_section#def2){: data-relation="required" })
 
 ::: 증명 (명제 4)
 우선 첫째 조건을 가정하고 다음의 diagram
@@ -83,7 +83,7 @@ Extension $\mathcal{E}:F \rightarrow E \rightarrow G$에 대하여, 다음이 �
 거꾸로 둘째 조건이 성립한다 가정하자. 그럼 $(r,p): E \rightarrow F\oplus G$가 주어진 extension과 $F \rightarrow F\oplus G \rightarrow G$ 사이의 isomorphism이 된다. 비슷하게 셋째 조건을 가정하자. 그럼 $s(G)$가 $i(F)$의 centralizer에 포함되므로 $F\oplus G$에서 $F$와 $G$의 weak direct product를 거친 후 $E$로 가는 morphism을 만들 수 있다. 
 :::
 
-만일 $i(F)$가 $E$의 center $Z(E)$에 포함되었다면, 세 번째 조건에서 $s(G)$와 $i(F)$의 관계는 무시하여도 좋을 것이다. ([\[대수적 구조\] §군의 작용, ⁋정의 12](/ko/math/algebraic_structures/group_actions#def12))
+만일 $i(F)$가 $E$의 center $Z(E)$에 포함되었다면, 세 번째 조건에서 $s(G)$와 $i(F)$의 관계는 무시하여도 좋을 것이다. ([\[대수적 구조\] §군의 작용, ⁋정의 12](/ko/math/algebraic_structures/group_actions#def12){: data-relation="required" })
 
 ::: 정의 5
 Extension $\mathcal{E}:F \rightarrow E \rightarrow G$가 *central extension<sub>중심확장</sub>*이라는 것은 $F$의 $E$에서의 image가 $E$의 center에 포함되는 것이다. 
@@ -120,12 +120,12 @@ $$\mathcal{E}_\tau: N \overset{i}{\rightarrow} N\rtimes_\tau H\overset{p}{\right
 
 $$s(y)=(e_N, y)$$
 
-으로 정의하면 $s$는 $p$의 section이며, 이것이 $N\rtimes_\tau H$의 centralizer에 포함되므로 [명제 4](#prop4)에 의하여 $\mathcal{E}_\tau$는 trivial extension이다.
+으로 정의하면 $s$는 $p$의 section이며, 이것이 $N\rtimes_\tau H$의 centralizer에 포함되므로 [명제 4](#prop4){: data-relation="required" }에 의하여 $\mathcal{E}_\tau$는 trivial extension이다.
 :::
 
 이에 대한 증명은 단순한 계산이다. 
 
-이번에는 위에서 살펴본 $N,H$가 특정한 group $G$의 subgroup이었다 하자. 만일 $N$이 $G$의 *normal* subgroup이었다면 각각의 $h\in H$가 정의하는 inner automorphism $\rho_h$는 $N$의 automorphism이며 따라서 $\rho: H \rightarrow \Aut(N)$이 정의된다. ([\[대수적 구조\] §군의 작용, ⁋정의 10](/ko/math/algebraic_structures/group_actions#def10)) 그럼 위의 명제로부터 다음을 얻는다.
+이번에는 위에서 살펴본 $N,H$가 특정한 group $G$의 subgroup이었다 하자. 만일 $N$이 $G$의 *normal* subgroup이었다면 각각의 $h\in H$가 정의하는 inner automorphism $\rho_h$는 $N$의 automorphism이며 따라서 $\rho: H \rightarrow \Aut(N)$이 정의된다. ([\[대수적 구조\] §군의 작용, ⁋정의 10](/ko/math/algebraic_structures/group_actions#def10){: data-relation="weak" }) 그럼 위의 명제로부터 다음을 얻는다.
 
 ::: 따름정리 8
 Group $G$와 $G$의 normal subgroup $N$, $G$의 subgroup $H$가 주어졌다 하자. 만일 $N\cap H=\{e_G\}$이고 $NH=G$가 성립한다면, 다음의 식

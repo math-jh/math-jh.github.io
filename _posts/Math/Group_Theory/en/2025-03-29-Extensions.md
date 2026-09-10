@@ -48,7 +48,7 @@ For two extensions $\mathcal{E}_1: F \rightarrow E_1 \rightarrow G$ and $\mathca
 {% diagram Math/Group_Theory/Extensions-1.svg width="10.17em" alt="morphism_of_extensions" %}
 :::
 
-Then if $u:E_1 \rightarrow E_2$ is an isomorphism of groups, its inverse $u^{-1}: E_2 \rightarrow E_1$ also satisfies the condition of [Definition 2](#def2), and hence $u$ is an isomorphism of extensions.
+Then if $u:E_1 \rightarrow E_2$ is an isomorphism of groups, its inverse $u^{-1}: E_2 \rightarrow E_1$ also satisfies the condition of [Definition 2](#def2){: data-relation="required" }, and hence $u$ is an isomorphism of extensions.
 
 Extending the previous definition, we give the following.
 
@@ -70,7 +70,7 @@ For an extension $\mathcal{E}:F \rightarrow E \rightarrow G$, the following are 
 3. A section $s: G \rightarrow E$ exists such that $s(G)$ can be chosen to lie in the centralizer of $i(F)$.
 :::
 
-Of course, here retraction and section mean group homomorphisms, not merely functions. ([\[Set Theory\] §Retraction and Section, ⁋Definition 2](/en/math/set_theory/retraction_and_section#def2))
+Of course, here retraction and section mean group homomorphisms, not merely functions. ([\[Set Theory\] §Retraction and Section, ⁋Definition 2](/en/math/set_theory/retraction_and_section#def2){: data-relation="required" })
 
 ::: Proof (Proposition 4)
 First, assume the first condition and consider the following diagram:
@@ -82,7 +82,7 @@ Then we define the retraction $r:E \rightarrow F$ as $\pr_1\circ u$, and $s:G \r
 Conversely, assume that the second condition holds. Then $(r,p): E \rightarrow F\oplus G$ is an isomorphism between the given extension and $F \rightarrow F\oplus G \rightarrow G$. Similarly, assume the third condition. Then since $s(G)$ is contained in the centralizer of $i(F)$, we can construct a morphism from $F\oplus G$ to $E$ by taking the weak direct product of $F$ and $G$.
 :::
 
-If $i(F)$ is contained in the center $Z(E)$ of $E$, then in the third condition we may ignore the relationship between $s(G)$ and $i(F)$. ([\[Algebraic Structures\] §Group Actions, ⁋Definition 12](/en/math/algebraic_structures/group_actions#def12))
+If $i(F)$ is contained in the center $Z(E)$ of $E$, then in the third condition we may ignore the relationship between $s(G)$ and $i(F)$. ([\[Algebraic Structures\] §Group Actions, ⁋Definition 12](/en/math/algebraic_structures/group_actions#def12){: data-relation="required" })
 
 ::: Definition 5
 An extension $\mathcal{E}:F \rightarrow E \rightarrow G$ is called a *central extension* if the image of $F$ in $E$ is contained in the center of $E$.
@@ -117,12 +117,12 @@ obtained from them is an extension of $H$ by $N$. Moreover, if we define a map $
 
 $$s(y)=(e_N, y)$$
 
-then $s$ is a section of $p$, and since it is contained in the centralizer of $N\rtimes_\tau H$, by [Proposition 4](#prop4) the extension $\mathcal{E}_\tau$ is trivial.
+then $s$ is a section of $p$, and since it is contained in the centralizer of $N\rtimes_\tau H$, by [Proposition 4](#prop4){: data-relation="required" } the extension $\mathcal{E}_\tau$ is trivial.
 :::
 
 The proof of this is a straightforward computation.
 
-Now suppose the $N,H$ examined above are subgroups of a specific group $G$. If $N$ is a *normal* subgroup of $G$, then for each $h\in H$ the inner automorphism $\rho_h$ is an automorphism of $N$, and thus $\rho: H \rightarrow \Aut(N)$ is defined. ([\[Algebraic Structures\] §Group Actions, ⁋Definition 10](/en/math/algebraic_structures/group_actions#def10)) Then from the above proposition we obtain the following.
+Now suppose the $N,H$ examined above are subgroups of a specific group $G$. If $N$ is a *normal* subgroup of $G$, then for each $h\in H$ the inner automorphism $\rho_h$ is an automorphism of $N$, and thus $\rho: H \rightarrow \Aut(N)$ is defined. ([\[Algebraic Structures\] §Group Actions, ⁋Definition 10](/en/math/algebraic_structures/group_actions#def10){: data-relation="weak" }) Then from the above proposition we obtain the following.
 
 ::: Corollary 8
 Let $G$ be a group, and let $N$ be a normal subgroup of $G$ and $H$ a subgroup of $G$. If $N\cap H=\{e_G\}$ and $NH=G$, then the group homomorphism defined by the formula
