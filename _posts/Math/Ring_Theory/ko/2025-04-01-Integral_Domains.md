@@ -13,7 +13,7 @@ weight: 2
 
 ---
 
-이 카테고리의 글들에서 우리는 ring에 대한 성질들을 조금 더 자세하게 살펴본다. 처음으로 다룰 것은 integral domain이다. ([\[대수적 구조\] §분수체, ⁋정의 5](/ko/math/algebraic_structures/field_of_fractions#def5)) 
+이 카테고리의 글들에서 우리는 ring에 대한 성질들을 조금 더 자세하게 살펴본다. 처음으로 다룰 것은 integral domain이다. ([\[대수적 구조\] §분수체, ⁋정의 5](/ko/math/algebraic_structures/field_of_fractions#def5){: data-relation="required" }) 
 
 ## 유클리드 정역
 
@@ -31,7 +31,7 @@ $$a = qb + r \qquad\text{with $r = 0$ or $N(r) < N(b)$}$$
 를 만족하는 것이다. 여기서 $q$를 *quotient<sub>몫</sub>*, $r$을 *나머지<sub>remainder</sub>*라고 부른다.
 :::
 
-이는 $A$를 정수 $\mathbb{Z}$로 대체하고, $N$을 절댓값 함수 $\lvert-\rvert:\mathbb{Z} \rightarrow \mathbb{Z}_{\geq 0}$으로 보면 우리가 잘 알고 있는 정수의 나눗셈 알고리즘, 즉 [\[정수론\] §나눗셈과 최대공약수, ⁋정리 3](/ko/math/number_theory/divisibility#thm3)으로부터 얻어진다. 또 다른 예로, polynomial ring $\mathbb{K}[\x]$ 위에 $N$을 다항식의 degree를 주는 함수로 정의하면 (단, $N(0)=0$으로 둔다) 다항식의 나눗셈 알고리즘을 얻게 될 것이다. 마지막으로, 임의의 field $\mathbb{K}$는 Euclidean domain이며, 이는 모든 $x\in\mathbb{K}$를 $0$으로 보내는 함수 $N$에 의해 얻어진다. 이것이 위의 조건을 만족하는 이유는 field의 모든 (nonzero) 원소는 항상 다른 원소를 나누기 때문이다. 
+이는 $A$를 정수 $\mathbb{Z}$로 대체하고, $N$을 절댓값 함수 $\lvert-\rvert:\mathbb{Z} \rightarrow \mathbb{Z}_{\geq 0}$으로 보면 우리가 잘 알고 있는 정수의 나눗셈 알고리즘, 즉 [\[정수론\] §나눗셈과 최대공약수, ⁋정리 3](/ko/math/number_theory/divisibility#thm3){: data-relation="weak" }으로부터 얻어진다. 또 다른 예로, polynomial ring $\mathbb{K}[\x]$ 위에 $N$을 다항식의 degree를 주는 함수로 정의하면 (단, $N(0)=0$으로 둔다) 다항식의 나눗셈 알고리즘을 얻게 될 것이다. 마지막으로, 임의의 field $\mathbb{K}$는 Euclidean domain이며, 이는 모든 $x\in\mathbb{K}$를 $0$으로 보내는 함수 $N$에 의해 얻어진다. 이것이 위의 조건을 만족하는 이유는 field의 모든 (nonzero) 원소는 항상 다른 원소를 나누기 때문이다. 
 
 ::: 명제 3
 Euclidean Domain의 모든 ideal은 principal이다. 좀 더 정확히 말하면, Euclidean Domain $A$의 임의의 영이 아닌 ideal $\mathfrak{a}$에 대하여, $\mathfrak{a}$의 영이 아닌 원소들 중 minimal norm을 갖는 원소를 $a$라 하면 $\mathfrak{a}=(a)$이다. 
@@ -78,7 +78,7 @@ Commutative ring $A$ 안의 $a, b \in A$가 $0$이 아니라고 하자. 만약 $
 그럼 최대공약수는 유일하게 결정된다. 이 유일성을 말할 때는 다소 주의해야 하는데, 가령 정수에서 $(2)$와 $(-2)$는 같은 ideal이 되기 때문이다. 
 
 ::: 명제 6
-$A$를 integral domain이라 하자. $A$의 두 원소 $d, d' \in A$가 같은 principal ideal, 즉 $(d) = (d')$를 생성한다고 하자. 그러면 $d' = ud$인 어떤 unit $u \in A$가 존재한다. ([§가역원과 영인자, ⁋정의 1](/ko/math/ring_theory/units_and_zero_divisors#def1))
+$A$를 integral domain이라 하자. $A$의 두 원소 $d, d' \in A$가 같은 principal ideal, 즉 $(d) = (d')$를 생성한다고 하자. 그러면 $d' = ud$인 어떤 unit $u \in A$가 존재한다. ([§가역원과 영인자, ⁋정의 1](/ko/math/ring_theory/units_and_zero_divisors#def1){: data-relation="required" })
 :::
 
 ::: 증명
@@ -89,10 +89,10 @@ $$d = xd',\qquad d' = yd$$
 를 만족한다. 그러면 $d = xyd$로부터 $(1-xy)d=0$이다. 이제 $A$가 integral domain이라는 가정과 $d \neq 0$으로부터 $xy = 1$이라는 것을 알고, 따라서 $x, y$는 각각이 서로의 역원이 되는 unit이다. 
 :::
 
-정수의 경우 [\[정수론\] §유클리드 호제법과 Bézout 항등식, ⁋정리 3](/ko/math/number_theory/euclidean_algorithm#thm3)이 Bézout lemma에 해당하며, Euclidean domain에 대해서도 다음과 같은 Bézout 항등식이 성립한다. 
+정수의 경우 [\[정수론\] §유클리드 호제법과 Bézout 항등식, ⁋정리 3](/ko/math/number_theory/euclidean_algorithm#thm3){: data-relation="weak" }이 Bézout lemma에 해당하며, Euclidean domain에 대해서도 다음과 같은 Bézout 항등식이 성립한다. 
 
 ::: 정리 7
-$A$를 Euclidean domain이라 하자. $a, b \in A$가 $0$이 아닌 원소들이고, $r_n$을 $a, b$에 대하여 [정의 2](#def2)의 과정을 반복하였을 때 더 진행이 불가능한 마지막 nonzero remainder라 하자. 그러면 다음이 성립한다:
+$A$를 Euclidean domain이라 하자. $a, b \in A$가 $0$이 아닌 원소들이고, $r_n$을 $a, b$에 대하여 [정의 2](#def2){: data-relation="required" }의 과정을 반복하였을 때 더 진행이 불가능한 마지막 nonzero remainder라 하자. 그러면 다음이 성립한다:
 
 1. $r_n$은 $a, b$의 greatest common divisor이다. 
 2. $(r_n)$은 $(a, b)$와 같은 ideal이다. 특히 $r_n$은 $a, b$의 $A$-linear combination으로 쓸 수 있으며, 즉 어떤 $x, y \in A$가 존재하여 $r_n=ax+by$를 만족한다.
@@ -121,7 +121,7 @@ $$r_{k-2}=q_{k}r_{k-1}+r_{k}$$
 Ring $A$가 *principal ideal domain<sub>주아이디얼정역</sub>*이라는 것은 모든 ideal이 principal인 integral domain을 말한다.
 :::
 
-그럼 [명제 3](#prop3)으로부터 우리는 임의의 Euclidean domain은 항상 PID임을 안다. 그러나 그 역은 성립하지 않는다. Division algorithm은 두 원소 $a,b$가 주어졌을 때 이들의 최대공약수를 얻는 방법을 구체적으로 주지만, [명제 5](#prop5)에 의하여 다음이 성립한다. 
+그럼 [명제 3](#prop3){: data-relation="required" }으로부터 우리는 임의의 Euclidean domain은 항상 PID임을 안다. 그러나 그 역은 성립하지 않는다. Division algorithm은 두 원소 $a,b$가 주어졌을 때 이들의 최대공약수를 얻는 방법을 구체적으로 주지만, [명제 5](#prop5){: data-relation="required" }에 의하여 다음이 성립한다. 
 
 ::: 따름정리 9
 $A$를 Principal Ideal Domain이라 하고, $a, b \in A$가 $0$이 아닌 원소들이라 하자. $a, b$로 생성된 principal ideal $(a, b)$의 generator를 $d$라 하면 다음이 성립한다:
@@ -132,10 +132,10 @@ $A$를 Principal Ideal Domain이라 하고, $a, b \in A$가 $0$이 아닌 원소
    $$d = ax + by$$
 
    를 만족한다.
-3. $d$는 [명제 6](#prop6)의 센스에서 유일하다. 
+3. $d$는 [명제 6](#prop6){: data-relation="required" }의 센스에서 유일하다. 
 :::
 ::: 증명
-[명제 5](#prop5), [명제 6](#prop6)의 결과이며, 둘째 결과는 $(a,b)=(d)$라는 가정으로부터 자명하다. 
+[명제 5](#prop5){: data-relation="required" }, [명제 6](#prop6){: data-relation="required" }의 결과이며, 둘째 결과는 $(a,b)=(d)$라는 가정으로부터 자명하다. 
 :::
 
 Principal ideal domain의 유용한 성질 중 하나는 임의의 prime ideal이 항상 maximal이라는 것이다. 
@@ -216,18 +216,18 @@ $A$의 irreducible element $p \in A$를 고정하자. 보일 것은 $p$가 prime
 따라서 $(p)$를 포함하는 ideal은 $(p)$ 자신이거나 $A$뿐이므로, $(p)$는 maximal이고, P.I.D.에서는 maximal ideal은 항상 prime이므로 $(p)$는 prime ideal이다. 따라서 $p$는 prime element이다.
 :::
 
-따라서 [예시 13](#ex13)의 $A=\mathbb{Z}[\sqrt{-5}]$는 PID가 아니다.
+따라서 [예시 13](#ex13){: data-relation="required" }의 $A=\mathbb{Z}[\sqrt{-5}]$는 PID가 아니다.
 
 ::: 예시 15
 정의를 사용하여 $A=\mathbb{Z}[\sqrt{-5}]$가 실제로 PID가 아님을 보이자. 우리 주장은 다음의 ideal
 
 $$\mathfrak{a}=(3, 1+\sqrt{-5})$$
 
-이 non-principal이라는 것이다. 앞서 [예시 13](#ex13)에서 정의한 norm을 계속 사용하자. 그럼 
+이 non-principal이라는 것이다. 앞서 [예시 13](#ex13){: data-relation="required" }에서 정의한 norm을 계속 사용하자. 그럼 
 
 $$N(3)=9,\qquad N(1+\sqrt{-5})=6$$
 
-이므로 만일 적당한 $x\in A$가 존재하여 $\mathfrak{a}=(x)$라면 $N(x)$는 $3$의 약수여야 한다. 그러나 [예시 13](#ex13)에서 살펴본 것과 같이 $N(x)=3$을 만족하는 $x\in A$는 존재하지 않으므로, 유일한 가능성은 $N(x)=1$이고 따라서 $(3, 1+\sqrt{-5})$가 unit ideal인 것이다. 
+이므로 만일 적당한 $x\in A$가 존재하여 $\mathfrak{a}=(x)$라면 $N(x)$는 $3$의 약수여야 한다. 그러나 [예시 13](#ex13){: data-relation="required" }에서 살펴본 것과 같이 $N(x)=3$을 만족하는 $x\in A$는 존재하지 않으므로, 유일한 가능성은 $N(x)=1$이고 따라서 $(3, 1+\sqrt{-5})$가 unit ideal인 것이다. 
 
 그러나 $2\not\in \mathfrak{a}$이다. 이를 보이기 위해, 적당한 $x,y\in A$에 대하여
 
@@ -322,7 +322,7 @@ $$(r)=(r_0) \subsetneq (r_1) \subsetneq (r_2) \subsetneq \cdots$$
 
 $$r = p_1 \cdots p_m = q_1 \cdots q_n$$
 
-와 같이 두 개의 표현이 주어졌다 가정하고, [명제 14](#prop14)에 의해 각 $p_i$가 prime이므로 $p_1$부터 순서대로 associate관계에 있는 $q_j$들을 찾아가면 된다. 
+와 같이 두 개의 표현이 주어졌다 가정하고, [명제 14](#prop14){: data-relation="required" }에 의해 각 $p_i$가 prime이므로 $p_1$부터 순서대로 associate관계에 있는 $q_j$들을 찾아가면 된다. 
 :::
 
 ---
