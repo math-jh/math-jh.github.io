@@ -39,7 +39,7 @@ For two $\mathbb{K}$-vector spaces $V,W$ and a linear map $L:V\rightarrow W$,
 3. For any $u,v\in V$, $L(u-v)=L(u)-L(v)$.
 :::
 ::: Proof
-Since a linear map preserves scalar multiplication, the first and second claims follow respectively from [§Vector Spaces, ⁋Proposition 2](/en/math/linear_algebra/vector_spaces#prop2) and [§Vector Spaces, ⁋Corollary 3](/en/math/linear_algebra/vector_spaces#cor3). Now, using the fact that a linear map preserves vector addition together with the second claim, we have
+Since a linear map preserves scalar multiplication, the first and second claims follow respectively from [§Vector Spaces, ⁋Proposition 2](/en/math/linear_algebra/vector_spaces#prop2){: data-relation="required" } and [§Vector Spaces, ⁋Corollary 3](/en/math/linear_algebra/vector_spaces#cor3){: data-relation="required" }. Now, using the fact that a linear map preserves vector addition together with the second claim, we have
 
 $$L(u-v)=L\bigl(u+(-v)\bigr)=L(u)+L(-v)=L(u)+\bigl(-L(v)\bigr)=L(u)-L(v)$$
 
@@ -133,11 +133,11 @@ For two $\mathbb{K}$-vector spaces $V,W$ and a linear map $L:V\rightarrow W$,
 ::: Proof
 The second claim is a tautology.
 
-If $L$ is injective, then the $v$ satisfying $L(v)=0$ must be unique, and by [Proposition 2](#prop2), $0$ satisfies this equation, so we must have $\ker L=\{0\}$. Thus, for the first claim it suffices to show
+If $L$ is injective, then the $v$ satisfying $L(v)=0$ must be unique, and by [Proposition 2](#prop2){: data-relation="required" }, $0$ satisfies this equation, so we must have $\ker L=\{0\}$. Thus, for the first claim it suffices to show
 
 > $$\ker L=\{0\}\implies\text{$L$ is injective}$$
 
-Assume $v_1,v_2\in V$ are given with $L(v_1)=L(v_2)$. Then by [Proposition 3](#prop3),
+Assume $v_1,v_2\in V$ are given with $L(v_1)=L(v_2)$. Then by [Proposition 3](#prop3){: data-relation="required" },
 
 $$0=L(v_1)-L(v_2)=L(v_1-v_2)$$
 
@@ -157,7 +157,7 @@ Let two $\mathbb{K}$-vector spaces $V,W$ and a linear map $L:V\rightarrow W$ be 
 
     $$\sum_{i=1}^k\alpha_i L(x_i)=0$$
 
-    then by [Proposition 3](#prop3),
+    then by [Proposition 3](#prop3){: data-relation="required" },
 
     $$0=L\left(\sum_{i=1}^k\alpha_ix_i\right)$$
 
@@ -167,7 +167,7 @@ Let two $\mathbb{K}$-vector spaces $V,W$ and a linear map $L:V\rightarrow W$ be 
 
     $$v=\sum_{i=1}^n\alpha_ix_i$$
     
-    Applying $L$ to both sides and using [Proposition 3](#prop3),
+    Applying $L$ to both sides and using [Proposition 3](#prop3){: data-relation="required" },
     
     $$w=L(v)=L\left(\sum_{i=1}^n\alpha_ix_i\right)=\sum_{i=1}^n\alpha_i L(x_i)$$
     
@@ -196,7 +196,7 @@ $$\iota(w)=w\text{ for all $w\in W$}$$
 is a linear map. In this case, $\im\iota=W$ and $\ker \iota=\{0\}$. That is, $\iota$ is injective.
 :::
 
-In the above example, in the special case where $W=V$, the map $\iota$ becomes the identity function $\id_V$. ([\[Set Theory\] §Operations on Functions, ⁋Example 3](/en/math/set_theory/operation_of_functions#ex3)) 
+In the above example, in the special case where $W=V$, the map $\iota$ becomes the identity function $\id_V$. ([\[Set Theory\] §Operations on Functions, ⁋Example 3](/en/math/set_theory/operation_of_functions#ex3){: data-relation="weak" }) 
 
 ::: Example 12
 Consider arbitrary $\mathbb{K}$-vector spaces $V$, $W$, and their product $V\times W$. Then the map $\pr_1:V\times W\rightarrow V$ defined by the formula

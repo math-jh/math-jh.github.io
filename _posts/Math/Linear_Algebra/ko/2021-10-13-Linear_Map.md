@@ -41,7 +41,7 @@ weight: 6
 3. 임의의 $u,v\in V$에 대하여 $L(u-v)=L(u)-L(v)$.
 :::
 ::: 증명
-Linear map은 스칼라곱을 보존하므로, 첫 번째와 두 번째 주장은 각각 [§벡터공간, ⁋명제 2](/ko/math/linear_algebra/vector_spaces#prop2), 그리고 [§벡터공간, ⁋따름정리 3](/ko/math/linear_algebra/vector_spaces#cor3)의 결과이다. 이제 linear map이 벡터의 덧셈을 보존하는 것과, 둘째 주장으로부터
+Linear map은 스칼라곱을 보존하므로, 첫 번째와 두 번째 주장은 각각 [§벡터공간, ⁋명제 2](/ko/math/linear_algebra/vector_spaces#prop2){: data-relation="required" }, 그리고 [§벡터공간, ⁋따름정리 3](/ko/math/linear_algebra/vector_spaces#cor3){: data-relation="required" }의 결과이다. 이제 linear map이 벡터의 덧셈을 보존하는 것과, 둘째 주장으로부터
 
 $$L(u-v)=L\bigl(u+(-v)\bigr)=L(u)+L(-v)=L(u)+\bigl(-L(v)\bigr)=L(u)-L(v)$$
 
@@ -139,11 +139,11 @@ $$w_1+w_2=L(v_1)+L(v_2)=L(v_1+v_2)\in \im L$$
 ::: 증명
 둘째 주장은 동어반복이다.
 
-만약 $L$이 단사라면 $L(v)=0$을 만족하는 $v$는 유일해야 하고, [명제 2](#prop2)에 의해 $0$은 이 식을 만족하므로 $\ker L=\{0\}$이어야 한다. 따라서 첫째 주장 중에서도 다음의 명제
+만약 $L$이 단사라면 $L(v)=0$을 만족하는 $v$는 유일해야 하고, [명제 2](#prop2){: data-relation="required" }에 의해 $0$은 이 식을 만족하므로 $\ker L=\{0\}$이어야 한다. 따라서 첫째 주장 중에서도 다음의 명제
 
 > $$\ker L=\{0\}\implies\text{$L$ injective}$$
 
-만 보이면 충분하다. $L(v_1)=L(v_2)$인 $v_1,v_2\in V$가 주어졌다 가정하자. 그럼 다시 [명제 2](#prop2)에 의하여,
+만 보이면 충분하다. $L(v_1)=L(v_2)$인 $v_1,v_2\in V$가 주어졌다 가정하자. 그럼 다시 [명제 2](#prop2){: data-relation="required" }에 의하여,
 
 $$0=L(v_1)-L(v_2)=L(v_1-v_2)$$
 
@@ -163,17 +163,17 @@ $$0=L(v_1)-L(v_2)=L(v_1-v_2)$$
 
     $$\sum_{i=1}^k\alpha_i L(x_i)=0$$
 
-    라면, [명제 3](#prop3)에 의해
+    라면, [명제 3](#prop3){: data-relation="required" }에 의해
 
     $$0=L\left(\sum_{i=1}^k\alpha_ix_i\right)$$
 
-    이므로, [명제 8](#prop8)에 의해 $\sum\alpha_ix_i=0$이어야 한다. 이제, $S$는 일차독립인 부분집합이므로, $\alpha_i=0$이 모든 $i$에 대해 성립한다.
+    이므로, [명제 8](#prop8){: data-relation="required" }에 의해 $\sum\alpha_ix_i=0$이어야 한다. 이제, $S$는 일차독립인 부분집합이므로, $\alpha_i=0$이 모든 $i$에 대해 성립한다.
 
 2. 임의의 $w\in W$가 주어졌다 하자. 그럼 $\im L=W$이므로, 적당한 $v\in V$가 존재하여 $L(v)=w$이다. 한편, $\langle S\rangle=V$이므로 $v$를 $S$의 원소들의 일차결합
 
     $$v=\sum_{i=1}^n\alpha_ix_i$$
     
-    으로 나타낼 수 있다. 양 변에 $L$을 취한 후 [명제 3](#prop3)을 적용하면
+    으로 나타낼 수 있다. 양 변에 $L$을 취한 후 [명제 3](#prop3){: data-relation="required" }을 적용하면
     
     $$w=L(v)=L\left(\sum_{i=1}^n\alpha_ix_i\right)=\sum_{i=1}^n\alpha_i L(x_i)$$
     
@@ -202,7 +202,7 @@ $$\iota(w)=w\text{ for all $w\in W$}$$
 으로 정의된 $\iota:W\rightarrow V$는 linear map이다. 이번에는 $\im\iota=W$이고, $\ker \iota=\{0\}$이다. 즉, $\iota$는 단사함수이다.
 :::
 
-위의 예시에서 특별히 $W=V$인 경우 $\iota$는 항등함수 $\id_V$와 같게 된다. ([\[집합론\] §함수들 사이의 연산, ⁋예시 3](/ko/math/set_theory/operation_of_functions#ex3)) 
+위의 예시에서 특별히 $W=V$인 경우 $\iota$는 항등함수 $\id_V$와 같게 된다. ([\[집합론\] §함수들 사이의 연산, ⁋예시 3](/ko/math/set_theory/operation_of_functions#ex3){: data-relation="weak" }) 
 
 ::: 예시 12
 임의의 $\mathbb{K}$-벡터공간 $V$, $W$와, 그들의 곱 $V\times W$를 생각하자. 그럼 다음의 식
