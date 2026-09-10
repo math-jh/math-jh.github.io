@@ -21,7 +21,7 @@ weight: 3
 
 $$\mathbb{C}[M] = \mathbb{C}[t_1^{\pm 1}, \ldots, t_n^{\pm 1}]$$
 
-이므로 UFD이기 때문이다 ([\[환론\] §다항식환, ⁋정리 16](/ko/math/ring_theory/polynomial_rings#thm16)). UFD에서는 모든 height-1 prime ideal이 principal이므로 ([\[가환대수학\] §으뜸분해, ⁋정리 7](/ko/math/commutative_algebra/primary_decomposition#thm7)) 모든 codimension 1 irreducible subvariety가 단일 Laurent polynomial의 zero set이고, 따라서 모든 Weil divisor가 principal이 된다. 결과적으로 $\Cl(T_N) = 0$이 되므로 이 위에서는 divisor를 연구할 동기가 없다. 
+이므로 UFD이기 때문이다 ([\[환론\] §다항식환, ⁋정리 16](/ko/math/ring_theory/polynomial_rings#thm16){: data-relation="required" }). UFD에서는 모든 height-1 prime ideal이 principal이므로 ([\[가환대수학\] §으뜸분해, ⁋정리 7](/ko/math/commutative_algebra/primary_decomposition#thm7){: data-relation="required" }) 모든 codimension 1 irreducible subvariety가 단일 Laurent polynomial의 zero set이고, 따라서 모든 Weil divisor가 principal이 된다. 결과적으로 $\Cl(T_N) = 0$이 되므로 이 위에서는 divisor를 연구할 동기가 없다. 
 
 바꿔말하면, $X_\Sigma$의 비자명한 divisor 정보는 모두 *boundary* $X_\Sigma \setminus T_N$에 모여 있는 셈이며, 이 boundary는 정확히 $T_N$의 작용에 의해 고정되는 part로 구성된다. 따라서 우리는 $X_\Sigma$ 위의 divisor 이론을 *torus-invariant* divisor들을 중심으로 전개하게 된다.
 
@@ -31,7 +31,7 @@ Fan $\Sigma$의 각 1차원 cone, 즉 *ray* $\rho \in \Sigma(1)$에 대해 primi
 각 ray $\rho \in \Sigma(1)$에 대해, 대응하는 torus orbit의 Zariski closure를 $D_\rho$라 적는다. $D_\rho$는 $X_\Sigma$ 위의 irreducible Weil divisor이며, 이러한 $D_\rho$를 *torus-invariant prime divisor<sub>토러스 불변 소인자</sub>*라 부른다.
 :::
 
-이 정의는 toric variety의 orbit 구조로부터 자연스럽게 유도된다. [§토릭 다양체의 정의, ⁋명제 5](/ko/math/toric_geometry/toric_varieties#prop5)에서 보았듯이, $d$-차원 cone은 차원 $n-d$의 torus orbit에 대응하므로 1차원 cone $\rho$는 차원 $n-1$의 orbit, 즉 codimension 1의 torus-invariant 부분다양체에 해당한다. 이 orbit의 Zariski closure는 자연스럽게 divisor가 된다.
+이 정의는 toric variety의 orbit 구조로부터 자연스럽게 유도된다. [§토릭 다양체의 정의, ⁋명제 5](/ko/math/toric_geometry/toric_varieties#prop5){: data-relation="required" }에서 보았듯이, $d$-차원 cone은 차원 $n-d$의 torus orbit에 대응하므로 1차원 cone $\rho$는 차원 $n-1$의 orbit, 즉 codimension 1의 torus-invariant 부분다양체에 해당한다. 이 orbit의 Zariski closure는 자연스럽게 divisor가 된다.
 
 ::: 정의 2
 $X_\Sigma$ 위의 torus-invariant Weil divisor들이 생성하는 free abelian group을 $\Div_T(X_\Sigma)$라 적는다. 즉,
@@ -53,11 +53,11 @@ $$\Div_T(X_\Sigma) \hookrightarrow \Div(X_\Sigma) \twoheadrightarrow \Cl(X_\Sigm
 
 정의에 의해 이 kernel은 $\Div_T(X_\Sigma)$의 원소 중 $\Cl(X_\Sigma)$에서 $0$이 되는 것들, 즉 *torus-invariant이면서 동시에 principal*한 divisor들의 모임이다. 그러므로 이는 결국 toric variety 위에서 어떤 rational function이 torus-invariant principal divisor를 정의하는지를 묻는 문제로 귀결된다.
 
-그럼 가장 자연스러운 후보는 lattice $M$의 원소 $m \in M$에 대응하는 *character* $\rchi^m$이다. 각각의 $m \in M$에 대해, character $\rchi^m: T_N \rightarrow \mathbb{C}^\ast$는 $T_N \subseteq X_\Sigma$가 open dense이므로 $X_\Sigma$ 위의 유리함수로 볼 수 있다 ([§아핀 토릭 다양체, ⁋명제 11](/ko/math/toric_geometry/affine_toric_varieties#prop11)). 이 때, $\rchi^m$ 자체는 $T_N$의 작용 하에서 invariant하지 않지만, $t \in T_N$에 대해
+그럼 가장 자연스러운 후보는 lattice $M$의 원소 $m \in M$에 대응하는 *character* $\rchi^m$이다. 각각의 $m \in M$에 대해, character $\rchi^m: T_N \rightarrow \mathbb{C}^\ast$는 $T_N \subseteq X_\Sigma$가 open dense이므로 $X_\Sigma$ 위의 유리함수로 볼 수 있다 ([§아핀 토릭 다양체, ⁋명제 11](/ko/math/toric_geometry/affine_toric_varieties#prop11){: data-relation="required" }). 이 때, $\rchi^m$ 자체는 $T_N$의 작용 하에서 invariant하지 않지만, $t \in T_N$에 대해
 
 $$(t \cdot \rchi^m)(x) = \rchi^m(t x) = \rchi^m(t) \cdot \rchi^m(x)$$
 
-으로 ([§아핀 토릭 다양체, ⁋명제 10](/ko/math/toric_geometry/affine_toric_varieties#prop10)의 convention) 이들은 상수배만큼만 차이난다. 그런데 상수배는 zero와 pole을 변화시키지 않으므로, $\rchi^m$들 자체는 torus-invariant가 아니더라도 $\divisor(\rchi^m)$은 torus-invariant이고, $\divisor(\rchi^m) \in \Div_T(X_\Sigma)$이다. 우리의 첫 목표는 이 divisor를 fan의 데이터로 명시적으로 적는 것이다.
+으로 ([§아핀 토릭 다양체, ⁋명제 10](/ko/math/toric_geometry/affine_toric_varieties#prop10){: data-relation="required" }의 convention) 이들은 상수배만큼만 차이난다. 그런데 상수배는 zero와 pole을 변화시키지 않으므로, $\rchi^m$들 자체는 torus-invariant가 아니더라도 $\divisor(\rchi^m)$은 torus-invariant이고, $\divisor(\rchi^m) \in \Div_T(X_\Sigma)$이다. 우리의 첫 목표는 이 divisor를 fan의 데이터로 명시적으로 적는 것이다.
 
 ::: 명제 3
 Character $\rchi^m$에 대응하는 principal divisor는 다음과 같이 주어진다.
@@ -66,7 +66,7 @@ $$\divisor(\rchi^m) = \sum_{\rho \in \Sigma(1)} \langle m, v_\rho \rangle D_\rho
 :::
 
 ::: 증명
-$X_\Sigma$가 normal이므로 ([§토릭 다양체의 정의, ⁋명제 4](/ko/math/toric_geometry/toric_varieties#prop4)) 각 prime divisor $D_\rho$의 generic point에서의 local ring $\mathcal{O}_{X_\Sigma, D_\rho}$은 DVR이고, 이 위의 valuation을 $v_{D_\rho}: \mathbb{C}(X_\Sigma)^\times \rightarrow \mathbb{Z}$로 적자. Principal divisor의 정의에 의해
+$X_\Sigma$가 normal이므로 ([§토릭 다양체의 정의, ⁋명제 4](/ko/math/toric_geometry/toric_varieties#prop4){: data-relation="required" }) 각 prime divisor $D_\rho$의 generic point에서의 local ring $\mathcal{O}_{X_\Sigma, D_\rho}$은 DVR이고, 이 위의 valuation을 $v_{D_\rho}: \mathbb{C}(X_\Sigma)^\times \rightarrow \mathbb{Z}$로 적자. Principal divisor의 정의에 의해
 
 $$\divisor(\rchi^m) = \sum_{\rho \in \Sigma(1)} v_{D_\rho}(\rchi^m) D_\rho$$
 
@@ -129,7 +129,7 @@ $$D\rvert_{U_\sigma} = \divisor(\rchi^{-m_\sigma}) = \sum_{\rho \in \sigma(1)} \
 
 ## 선다발
 
-이제 우리는 Cartier divisor를 어느정도 살펴봤으니 이를 통해 line bundle을 탐구할 것이다. Cartier divisor $D$가 주어졌을 때, 우리는 [\[대수다양체\] §선다발과 벡터다발, ⁋정의 17](/ko/math/algebraic_varieties/line_bundles#def17)에서 line bundle $\mathcal{O}_{X_\Sigma}(D)$을 정의했다. 그 sheaf of sections는 각 열린 집합 $U \subseteq X_\Sigma$에 대해
+이제 우리는 Cartier divisor를 어느정도 살펴봤으니 이를 통해 line bundle을 탐구할 것이다. Cartier divisor $D$가 주어졌을 때, 우리는 [\[대수다양체\] §선다발과 벡터다발, ⁋정의 17](/ko/math/algebraic_varieties/line_bundles#def17){: data-relation="required" }에서 line bundle $\mathcal{O}_{X_\Sigma}(D)$을 정의했다. 그 sheaf of sections는 각 열린 집합 $U \subseteq X_\Sigma$에 대해
 
 $$\mathcal{O}_{X_\Sigma}(D)(U) = \{f \in \mathbb{C}(X_\Sigma)^\times \mid \divisor(f)\rvert_U + D\rvert_U \ge 0\} \cup \{0\}$$
 
@@ -150,20 +150,20 @@ $$H^0(X_\Sigma, \mathcal{O}_{X_\Sigma}(D)) = \bigoplus_{m \in M} H^0(X_\Sigma, \
 
 로 분해된다. 여기서 weight $m$의 component는 $t \in T_N$의 작용 하에서 $\rchi^m(t)$로 곱해지는 section들로 이루어진다. 그런데 그러한 section은 정확히 $c \cdot \rchi^m$ ($c \in \mathbb{C}$)의 꼴이다. 실제로 $s \in H^0(\mathcal{O}_{X_\Sigma}(D))_m$이면 $s/\rchi^m$은 $X_\Sigma$ 위에서 $T$-invariant한 rational function이고, $T_N$이 $X_\Sigma$에서 open dense이므로 $\mathbb{C}(X_\Sigma)^{T_N} = \mathbb{C}(T_N)^{T_N} = \Frac(\mathbb{C}[M])^{T_N} = \mathbb{C}$이 되어 $s = c \cdot \rchi^m$이다. 즉 각 weight space는 $\rchi^m$에 의해 $1$차원으로 spanned된다 (해당 $m$이 section을 줄 때).
 
-이제 $c \cdot \rchi^m$이 section이 되기 위한 조건은 $\divisor(\rchi^m) + D \ge 0$이다. [명제 3](#prop3)에 의해
+이제 $c \cdot \rchi^m$이 section이 되기 위한 조건은 $\divisor(\rchi^m) + D \ge 0$이다. [명제 3](#prop3){: data-relation="required" }에 의해
 
 $$\divisor(\rchi^m) + D = \sum_{\rho \in \Sigma(1)} (\langle m, v_\rho \rangle + a_\rho) D_\rho$$
 
 이므로, 이 divisor가 effective하기 위한 필요충분조건은 모든 $\rho$에 대해 $\langle m, v_\rho \rangle + a_\rho \ge 0$, 즉 $\langle m, v_\rho \rangle \ge -a_\rho$가 성립하는 것이다. 이러한 $m \in M$들에 해당하는 1차원 character spaces $\mathbb{C} \cdot \rchi^m$들의 direct sum이 global section space 전체를 이룬다.
 :::
 
-[명제 7](#prop7)에 등장하는 조건 *$\langle m, v_\rho\rangle \ge -a_\rho$ for all $\rho \in \Sigma(1)$*을 생각하면, 우리는 이 조건을 만족하는 $m$들을 모아 $M_\mathbb{R}$ 안의 polyhedron
+[명제 7](#prop7){: data-relation="required" }에 등장하는 조건 *$\langle m, v_\rho\rangle \ge -a_\rho$ for all $\rho \in \Sigma(1)$*을 생각하면, 우리는 이 조건을 만족하는 $m$들을 모아 $M_\mathbb{R}$ 안의 polyhedron
 
 $$\Delta_D = \{m \in M_\mathbb{R} \mid \langle m, v_\rho \rangle \ge -a_\rho \text{ for all } \rho \in \Sigma(1)\}$$
 
 을 정의할 수 있다. 이 때, $\Delta_D$의 lattice point들의 모임이 summand의 $m$들과 정확히 일치한다는 것을 안다. 
 
-한편 우리는 이렇게 polyhedron 내부의 lattice point들이 기하적인 의미를 갖는 상황을 처음 마주치는 것이 아닌데, [§토릭 다양체의 정의, ⁋명제 9](/ko/math/toric_geometry/toric_varieties#prop9)에서 우리는 lattice polytope $P$의 lattice points $P \cap M = \{m_0, \ldots, m_s\}$로부터 monomial map $\phi_P: T_N \rightarrow \mathbb{P}^s$를 구성하였고, 이 map의 image의 Zariski closure가 $X_P$와 isomorphic함을 보였다. 그럼 이 lattice points들은 위 [명제 7](#prop7)의 관점에서 보면 정확히 $P = \Delta_D$에 대응되는 $H^0(X_\Sigma, \mathcal{O}_{X_\Sigma}(D))$의 character basis와 일치한다. 즉, lattice point가 결정하던 projective embedding은 사실 line bundle $\mathcal{O}_{X_\Sigma}(D)$의 global sections이 결정하는 standard linear system embedding이었던 것이다.
+한편 우리는 이렇게 polyhedron 내부의 lattice point들이 기하적인 의미를 갖는 상황을 처음 마주치는 것이 아닌데, [§토릭 다양체의 정의, ⁋명제 9](/ko/math/toric_geometry/toric_varieties#prop9){: data-relation="weak" }에서 우리는 lattice polytope $P$의 lattice points $P \cap M = \{m_0, \ldots, m_s\}$로부터 monomial map $\phi_P: T_N \rightarrow \mathbb{P}^s$를 구성하였고, 이 map의 image의 Zariski closure가 $X_P$와 isomorphic함을 보였다. 그럼 이 lattice points들은 위 [명제 7](#prop7){: data-relation="required" }의 관점에서 보면 정확히 $P = \Delta_D$에 대응되는 $H^0(X_\Sigma, \mathcal{O}_{X_\Sigma}(D))$의 character basis와 일치한다. 즉, lattice point가 결정하던 projective embedding은 사실 line bundle $\mathcal{O}_{X_\Sigma}(D)$의 global sections이 결정하는 standard linear system embedding이었던 것이다.
 
 이 관점은 toric variety에서 ample이라는 기하학적 조건이 fan의 조합론으로 어떻게 번역되는지를 묻는 것을 자연스럽게 만든다. 결과부터 적자면, 이는 piecewise linear function의 볼록성으로 완전히 기술된다.
 
@@ -176,7 +176,7 @@ $$\psi(v) = \langle m_{\sigma_1}, v \rangle \text{ for } v \in \sigma_1, \qquad 
 
 $$\psi(v) < \langle m_{\sigma_2}, v \rangle$$
 
-이 항상 성립하는 것이다. 동치인 기술로, 각 maximal cone $\sigma$의 데이터 $m_\sigma$가 정의하는 linear function $\langle m_\sigma, \cdot\rangle$이 $\psi$의 *upper bound*가 되며, 등호는 정확히 $v \in \sigma$일 때만 성립한다 ([명제 6](#prop6)의 부호 규약 $\psi_D(v_\rho) = -a_\rho$ 하에서, ample $D$에 대해 $\psi_D$는 이 의미로 위로 볼록하다).
+이 항상 성립하는 것이다. 동치인 기술로, 각 maximal cone $\sigma$의 데이터 $m_\sigma$가 정의하는 linear function $\langle m_\sigma, \cdot\rangle$이 $\psi$의 *upper bound*가 되며, 등호는 정확히 $v \in \sigma$일 때만 성립한다 ([명제 6](#prop6){: data-relation="required" }의 부호 규약 $\psi_D(v_\rho) = -a_\rho$ 하에서, ample $D$에 대해 $\psi_D$는 이 의미로 위로 볼록하다).
 :::
 
 Strictly convex piecewise linear function은 fan의 구조를 완전히 결정하는 강력한 조건으로, 다음 정리는 이 조건이 정확히 divisor의 ampleness와 대응됨을 보여준다. 
@@ -186,13 +186,13 @@ Toric variety $X_\Sigma$가 complete일 때, torus-invariant Cartier divisor $D$
 :::
 
 ::: 증명
-($\Rightarrow$) $D$가 ample하다고 가정하자. 정의에 의해 어떤 $k > 0$에 대해 $kD$는 very ample이므로 projective embedding $\phi_{kD}: X_\Sigma \hookrightarrow \mathbb{P}^N$을 유도하며, 이 embedding은 polytope $\Delta_{kD} \cap M$의 lattice points로 정의되는 monomial map과 일치한다 ([§토릭 다양체의 정의, ⁋명제 9](/ko/math/toric_geometry/toric_varieties#prop9)). $X_\Sigma$가 complete이므로 image $\overline{\phi_{kD}(T_N)}$는 $\Delta_{kD}$의 normal fan으로부터 얻어지는 projective toric variety와 동형이며 ([CLS] Theorem 6.2.1 참고), $X_\Sigma$와의 동형으로부터 $\Delta_{kD}$의 normal fan이 $\Sigma$와 일치함을 얻는다. 이는 $\psi_{kD} = k\psi_D$가 strictly convex함을 의미하며, 따라서 $\psi_D$ 역시 strictly convex이다.
+($\Rightarrow$) $D$가 ample하다고 가정하자. 정의에 의해 어떤 $k > 0$에 대해 $kD$는 very ample이므로 projective embedding $\phi_{kD}: X_\Sigma \hookrightarrow \mathbb{P}^N$을 유도하며, 이 embedding은 polytope $\Delta_{kD} \cap M$의 lattice points로 정의되는 monomial map과 일치한다 ([§토릭 다양체의 정의, ⁋명제 9](/ko/math/toric_geometry/toric_varieties#prop9){: data-relation="required" }). $X_\Sigma$가 complete이므로 image $\overline{\phi_{kD}(T_N)}$는 $\Delta_{kD}$의 normal fan으로부터 얻어지는 projective toric variety와 동형이며 ([CLS] Theorem 6.2.1 참고), $X_\Sigma$와의 동형으로부터 $\Delta_{kD}$의 normal fan이 $\Sigma$와 일치함을 얻는다. 이는 $\psi_{kD} = k\psi_D$가 strictly convex함을 의미하며, 따라서 $\psi_D$ 역시 strictly convex이다.
 
 ($\Leftarrow$) 반대로 $\psi_D$가 strictly convex라고 가정하자. 이는 $\Sigma$가 어떤 lattice polytope의 normal fan임을 의미한다. 구체적으로, strict convexity에 의해
 
 $$\Delta_D = \{m \in M_\mathbb{R} \mid \langle m, v_\rho \rangle \ge -a_\rho \text{ for all } \rho \in \Sigma(1)\}$$
 
-은 bounded region이며 따라서 lattice polytope이다. 이 polytope의 normal fan이 $\Sigma$와 일치하므로, [§토릭 다양체의 정의, ⁋명제 8](/ko/math/toric_geometry/toric_varieties#prop8)에 의해 $X_\Sigma$는 projective variety이다. 더 나아가 $D$에 대응하는 line bundle $\mathcal{O}_{X_\Sigma}(D)$가 very ample line bundle을 정의하므로 $D$는 ample이다.
+은 bounded region이며 따라서 lattice polytope이다. 이 polytope의 normal fan이 $\Sigma$와 일치하므로, [§토릭 다양체의 정의, ⁋명제 8](/ko/math/toric_geometry/toric_varieties#prop8){: data-relation="required" }에 의해 $X_\Sigma$는 projective variety이다. 더 나아가 $D$에 대응하는 line bundle $\mathcal{O}_{X_\Sigma}(D)$가 very ample line bundle을 정의하므로 $D$는 ample이다.
 :::
 
 ## Toric variety의 Picard group
@@ -218,23 +218,23 @@ Fan $\Sigma$의 ray들 $\Sigma(1)$이 $N_\mathbb{R}$를 span한다고 가정하�
 
 Toric variety의 Picard group은 piecewise linear function의 언어로 명시적으로 기술될 수 있다. $\PL(\Sigma, M)$에서 globally linear한 것들, 즉 전역적으로 하나의 $m \in M$에 의해 $\psi(v) = \langle m, v \rangle$로 주어지는 함수들을 quotient하면 Picard group을 얻는다. 이는 toric variety의 조합론적 불변량을 계산하는 강력한 방법을 제공한다.
 
-이제 마지막으로 지금까지 정리한 도구들을 가장 익숙한 toric variety인 projective space $\mathbb{P}^n$에 적용해 보자. ([§토릭 다양체의 정의, ⁋예시 10](/ko/math/toric_geometry/toric_varieties#ex10))
+이제 마지막으로 지금까지 정리한 도구들을 가장 익숙한 toric variety인 projective space $\mathbb{P}^n$에 적용해 보자. ([§토릭 다양체의 정의, ⁋예시 10](/ko/math/toric_geometry/toric_varieties#ex10){: data-relation="weak" })
 
 ::: 예시 11
-$\mathbb{P}^n$을 정의하는 fan의 ray들은 $v_0 = -e_1 - \cdots - e_n$, $v_i = e_i$ ($1 \le i \le n$)에 의해 생성되는 $\rho_0, \rho_1, \ldots, \rho_n$이고, 각 maximal cone $\sigma_i$는 이들 중 $\rho_i$를 빼고 나머지 $n$개로 생성되는 $n$차원 cone으로 $\mathbb{P}^n$의 standard affine chart $U_{\sigma_i} = \{\x_i \neq 0\}$에 대응된다 ([§토릭 다양체의 정의, ⁋예시 10](/ko/math/toric_geometry/toric_varieties#ex10)). 각 torus-invariant prime divisor $D_i = D_{\rho_i}$는 homogeneous coordinate 표현으로 coordinate hyperplane
+$\mathbb{P}^n$을 정의하는 fan의 ray들은 $v_0 = -e_1 - \cdots - e_n$, $v_i = e_i$ ($1 \le i \le n$)에 의해 생성되는 $\rho_0, \rho_1, \ldots, \rho_n$이고, 각 maximal cone $\sigma_i$는 이들 중 $\rho_i$를 빼고 나머지 $n$개로 생성되는 $n$차원 cone으로 $\mathbb{P}^n$의 standard affine chart $U_{\sigma_i} = \{\x_i \neq 0\}$에 대응된다 ([§토릭 다양체의 정의, ⁋예시 10](/ko/math/toric_geometry/toric_varieties#ex10){: data-relation="weak" }). 각 torus-invariant prime divisor $D_i = D_{\rho_i}$는 homogeneous coordinate 표현으로 coordinate hyperplane
 
 $$D_0 = \{\x_0 = 0\}, \quad D_1 = \{\x_1 = 0\}, \quad \ldots, \quad D_n = \{\x_n = 0\}$$
 
 에 대응한다. 이들은 각각 $\mathbb{P}^n$의 hyperplane divisor이고, 우리는 기본적인 algebraic geometry로부터 이들이 하나의 *hyperplane class*를 결정한다는 것을 안다. 편의상 그 representative로 $H = D_0$을 택하자. 
 
-$H$에 대응하는 piecewise linear function $\psi_H$를 계산해 보자. [§토릭 다양체의 정의, ⁋예시 10](/ko/math/toric_geometry/toric_varieties#ex10)의 monomial map convention $(t_1, \ldots, t_n) \mapsto [1 : t_1 : \cdots : t_n]$ 하에서 $t_i = \x_i/\x_0$이므로, 각 affine chart에서 $H = \{\x_0 = 0\}$의 local equation은
+$H$에 대응하는 piecewise linear function $\psi_H$를 계산해 보자. [§토릭 다양체의 정의, ⁋예시 10](/ko/math/toric_geometry/toric_varieties#ex10){: data-relation="weak" }의 monomial map convention $(t_1, \ldots, t_n) \mapsto [1 : t_1 : \cdots : t_n]$ 하에서 $t_i = \x_i/\x_0$이므로, 각 affine chart에서 $H = \{\x_0 = 0\}$의 local equation은
 
 - $i = 0$일 때 $U_{\sigma_0} = \{\x_0 \neq 0\}$에서는 $H$가 비어 있어 $H\rvert_{U_{\sigma_0}} = \divisor(1) = \divisor(\rchi^0)$, 즉 $m_{\sigma_0} = 0$이며,
-- $i \ge 1$일 때 $H \cap U_{\sigma_i}$의 local equation은 $\x_0/\x_i = t_i^{-1} = \rchi^{-e_i^\ast}$이므로 [명제 6](#prop6)의 규약 $H\rvert_{U_{\sigma_i}} = \divisor(\rchi^{-m_{\sigma_i}})$에서 $m_{\sigma_i} = e_i^\ast$이다.
+- $i \ge 1$일 때 $H \cap U_{\sigma_i}$의 local equation은 $\x_0/\x_i = t_i^{-1} = \rchi^{-e_i^\ast}$이므로 [명제 6](#prop6){: data-relation="required" }의 규약 $H\rvert_{U_{\sigma_i}} = \divisor(\rchi^{-m_{\sigma_i}})$에서 $m_{\sigma_i} = e_i^\ast$이다.
 
-이로부터 $\psi_H$는 $\sigma_0$ 위에서 $0$, $\sigma_i$ ($i \ge 1$) 위에서 $\langle e_i^\ast, -\rangle$로 주어지며, 그 ray 값은 $\psi_H(v_0) = -1$, $\psi_H(v_i) = 0$ ($i \ge 1$)으로 [명제 6](#prop6)의 $\psi_H(v_\rho) = -a_\rho$와 부합한다. 
+이로부터 $\psi_H$는 $\sigma_0$ 위에서 $0$, $\sigma_i$ ($i \ge 1$) 위에서 $\langle e_i^\ast, -\rangle$로 주어지며, 그 ray 값은 $\psi_H(v_0) = -1$, $\psi_H(v_i) = 0$ ($i \ge 1$)으로 [명제 6](#prop6){: data-relation="required" }의 $\psi_H(v_\rho) = -a_\rho$와 부합한다. 
 
-이 $\psi_H$가 strictly convex임은 [정의 8](#def8)을 직접 적용하여 확인할 수 있다: 각 maximal cone $\sigma_i$의 interior에 있는 점 $v$를 잡고 (i.e., $\sigma_i$의 generator들의 양의 결합으로 적어, $\sigma_i = \mathrm{cone}(v_l : l \neq i)$의 generator $\{v_l\}_{l \neq i}$에 대해 $v = \sum_{l \neq i} a_l v_l$, $a_l > 0$) 다른 maximal cone $\sigma_k$의 $m_{\sigma_k}$로 evaluate하면, 어느 경우든 $\psi_H(v) = \langle m_{\sigma_i}, v\rangle$가 $\langle m_{\sigma_k}, v\rangle$보다 strictly 작음을 직접 계산할 수 있다. 가령 $i \ge 1$이고 $k = 0$일 때 $\langle e_i^\ast, v\rangle = -a_0 < 0 = \langle 0, v\rangle$이고, $i = 0$이고 $k \ge 1$일 때 $0 = \langle 0, v\rangle < a_k = \langle e_k^\ast, v\rangle$이다. 따라서 [명제 9](#prop9)에 의해 $H$는 ample이고, 이는 $\mathbb{P}^n$의 hyperplane divisor가 ample이라는 친숙한 사실의 toric 버전 재확인이다.
+이 $\psi_H$가 strictly convex임은 [정의 8](#def8){: data-relation="required" }을 직접 적용하여 확인할 수 있다: 각 maximal cone $\sigma_i$의 interior에 있는 점 $v$를 잡고 (i.e., $\sigma_i$의 generator들의 양의 결합으로 적어, $\sigma_i = \mathrm{cone}(v_l : l \neq i)$의 generator $\{v_l\}_{l \neq i}$에 대해 $v = \sum_{l \neq i} a_l v_l$, $a_l > 0$) 다른 maximal cone $\sigma_k$의 $m_{\sigma_k}$로 evaluate하면, 어느 경우든 $\psi_H(v) = \langle m_{\sigma_i}, v\rangle$가 $\langle m_{\sigma_k}, v\rangle$보다 strictly 작음을 직접 계산할 수 있다. 가령 $i \ge 1$이고 $k = 0$일 때 $\langle e_i^\ast, v\rangle = -a_0 < 0 = \langle 0, v\rangle$이고, $i = 0$이고 $k \ge 1$일 때 $0 = \langle 0, v\rangle < a_k = \langle e_k^\ast, v\rangle$이다. 따라서 [명제 9](#prop9){: data-relation="required" }에 의해 $H$는 ample이고, 이는 $\mathbb{P}^n$의 hyperplane divisor가 ample이라는 친숙한 사실의 toric 버전 재확인이다.
 :::
 
 ---
