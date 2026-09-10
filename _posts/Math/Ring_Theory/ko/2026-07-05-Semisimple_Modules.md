@@ -20,7 +20,7 @@ published: false
 
 ## Semisimple module의 정의
 
-우리는 [§나눗셈환, §§단순 가군의 자기사상환](/ko/math/ring_theory/division_rings#단순-가군의-자기사상환)에서 simple module을 정의하였는데, 이번 글에서는 이들의 direct sum으로 나타나는 *semisimple* module들에 대해 다룰 것이다. 따라서 우선 simple module을 정식으로 정의하자.
+우리는 [§나눗셈환, §§단순 가군의 자기사상환](/ko/math/ring_theory/division_rings#단순-가군의-자기사상환){: data-relation="weak" }에서 simple module을 정의하였는데, 이번 글에서는 이들의 direct sum으로 나타나는 *semisimple* module들에 대해 다룰 것이다. 따라서 우선 simple module을 정식으로 정의하자.
 
 ::: 정의 1
 $0$이 아닌 $A$-module $M$이 $0$과 $M$ 이외의 submodule을 갖지 않을 때, $M$을 *simple module<sub>단순가군</sub>*이라 부른다.
@@ -67,7 +67,7 @@ $A$-module $M$에 대하여 다음이 모두 동치이다.
 3. $M$의 모든 submodule은 direct summand이다.
 :::
 ::: 증명
-$1\implies 2$는 [보조정리 4](#lem4)을 $N=0$에 적용하면 되고, $2\implies 1$은 자명하며, $1\implies 3$은 다시 [보조정리 4](#lem4) 그 자체이다. 남은 것은 $3\implies 1$이고, 이를 세 단계로 보인다.
+$1\implies 2$는 [보조정리 4](#lem4){: data-relation="required" }을 $N=0$에 적용하면 되고, $2\implies 1$은 자명하며, $1\implies 3$은 다시 [보조정리 4](#lem4){: data-relation="required" } 그 자체이다. 남은 것은 $3\implies 1$이고, 이를 세 단계로 보인다.
 
 우선 성질 3이 submodule에 유전됨을 확인한다. $N$이 $M$의 submodule이고 $L$이 $N$의 submodule이라 하자. 가정에 의해 $M=L\oplus C$인 submodule $C$가 존재한다. 임의의 $n\in N$을 $n=l+c$로 쓰면 $l\in L\subseteq N$이므로 $c=n-l\in N\cap C$이고, 따라서 $N=L+(N\cap C)$이다. 한편 $L\cap(N\cap C)\subseteq L\cap C=0$이므로 이 합은 직합이고, $L$은 $N$의 direct summand이다.
 
@@ -82,20 +82,20 @@ $1\implies 2$는 [보조정리 4](#lem4)을 $N=0$에 적용하면 되고, $2\imp
 Semisimple module $M$의 모든 submodule과 quotient는 semisimple이다.
 :::
 ::: 증명
-먼저 quotient의 경우를 보자. $\pi:M\rightarrow M/N$을 canonical projection이라 하고 $M=\sum_{i\in I}S_i$를 simple들의 합으로 쓰면 $M/N=\sum_{i\in I}\pi(S_i)$이다. 각 $i$에 대하여 $\pi(S_i)\cong S_i/(S_i\cap N)$인데, $S_i$가 simple이므로 $S_i\cap N$은 $0$이거나 $S_i$이고, 따라서 $\pi(S_i)$는 $S_i$와 isomorphic하거나 $0$이다. 즉 $M/N$은 simple submodule들의 합이고 [정리 5](#thm5)에 의해 semisimple이다.
+먼저 quotient의 경우를 보자. $\pi:M\rightarrow M/N$을 canonical projection이라 하고 $M=\sum_{i\in I}S_i$를 simple들의 합으로 쓰면 $M/N=\sum_{i\in I}\pi(S_i)$이다. 각 $i$에 대하여 $\pi(S_i)\cong S_i/(S_i\cap N)$인데, $S_i$가 simple이므로 $S_i\cap N$은 $0$이거나 $S_i$이고, 따라서 $\pi(S_i)$는 $S_i$와 isomorphic하거나 $0$이다. 즉 $M/N$은 simple submodule들의 합이고 [정리 5](#thm5){: data-relation="required" }에 의해 semisimple이다.
 
-Submodule $N$의 경우, [보조정리 4](#lem4)에 의해 $M=N\oplus\bigoplus_{j\in J}S_j$인 $J$가 존재하므로 $N\cong M/\bigoplus_{j\in J}S_j$이고, 방금 보인 quotient의 경우로 환원된다.
+Submodule $N$의 경우, [보조정리 4](#lem4){: data-relation="required" }에 의해 $M=N\oplus\bigoplus_{j\in J}S_j$인 $J$가 존재하므로 $N\cong M/\bigoplus_{j\in J}S_j$이고, 방금 보인 quotient의 경우로 환원된다.
 :::
 
 ## Isotypic decomposition
 
-[예시 3](#ex3)의 벡터 space에서 보듯 semisimple module의 direct sum 분해는 기저의 선택만큼이나 유일하지 않다. 그러나 서로 isomorphic한 인자들을 한데 모으면 분해는 canonical해진다. 이를 정확히 하기 위해 먼저 simple submodule들의 합 안에 어떤 simple submodule들이 살 수 있는지를 확인한다.
+[예시 3](#ex3){: data-relation="weak" }의 벡터 space에서 보듯 semisimple module의 direct sum 분해는 기저의 선택만큼이나 유일하지 않다. 그러나 서로 isomorphic한 인자들을 한데 모으면 분해는 canonical해진다. 이를 정확히 하기 위해 먼저 simple submodule들의 합 안에 어떤 simple submodule들이 살 수 있는지를 확인한다.
 
 ::: 보조정리 7
 $M=\sum_{i\in I}S_i$가 simple submodule들의 합이라 하자. 그럼 $M$의 임의의 simple submodule $U$는 적당한 $i\in I$에 대하여 $S_i$와 isomorphic하다.
 :::
 ::: 증명
-[보조정리 4](#lem4)을 $N=U$에 적용하면 $M=U\oplus\bigoplus_{j\in J}S_j$인 $J$가 존재한다. $p:M\rightarrow U$를 이 분해에 대한 projection이라 하자. $U=p(M)=\sum_{i\in I}p(S_i)$이고 $U\neq 0$이므로 $p(S_i)\neq 0$인 $i$가 존재한다. 그럼 $p$의 restriction $S_i\rightarrow U$는 simple module 사이의 nonzero homomorphism이므로 [§나눗셈환, ⁋보조정리 10](/ko/math/ring_theory/division_rings#lem10)에 의해 isomorphism이다.
+[보조정리 4](#lem4){: data-relation="required" }을 $N=U$에 적용하면 $M=U\oplus\bigoplus_{j\in J}S_j$인 $J$가 존재한다. $p:M\rightarrow U$를 이 분해에 대한 projection이라 하자. $U=p(M)=\sum_{i\in I}p(S_i)$이고 $U\neq 0$이므로 $p(S_i)\neq 0$인 $i$가 존재한다. 그럼 $p$의 restriction $S_i\rightarrow U$는 simple module 사이의 nonzero homomorphism이므로 [§나눗셈환, ⁋보조정리 10](/ko/math/ring_theory/division_rings#lem10){: data-relation="required" }에 의해 isomorphism이다.
 :::
 
 ::: 정의 8
@@ -113,7 +113,7 @@ Semisimple module $M$, $N$에 대하여 다음이 성립한다.
 ::: 증명
 2를 먼저 보인다. $T$가 $S$와 isomorphic한 $M$의 simple submodule이라 하자. $f(T)\cong T/(T\cap\ker f)$는 $T$가 simple이므로 $0$이거나 $T\cong S$와 isomorphic하고, 어느 경우에도 $f(T)\subseteq N_S$이다. $M_S$는 이러한 $T$들의 합이므로 $f(M_S)\subseteq N_S$이다.
 
-이제 1을 보인다. $M$의 semisimple 분해의 각 인자는 자신의 isomorphism class에 대응하는 isotypic component에 포함되므로 $M=\sum_{[S]}M_S$이다. 직합임을 보이기 위해, 고정된 class $[S]$에 대하여 $W=M_S\cap\sum_{[T]\neq[S]}M_T$가 $0$임을 확인하면 충분하다. $W$는 semisimple module $M$의 submodule이므로 [따름정리 6](#cor6)에 의해 semisimple이고, 만일 $W\neq 0$이라면 simple submodule $U\subseteq W$가 존재한다. $U$는 $S$-type simple들의 합 $M_S$에 포함되므로 [보조정리 7](#lem7)에 의해 $U\cong S$이다. 그러나 $U$는 동시에 $S$와 isomorphic하지 않은 simple들의 합 $\sum_{[T]\neq[S]}M_T$에도 포함되므로, 다시 [보조정리 7](#lem7)에 의해 $U$는 어떤 $T\not\cong S$와 isomorphic해야 하고 이는 모순이다. 따라서 $W=0$이다.
+이제 1을 보인다. $M$의 semisimple 분해의 각 인자는 자신의 isomorphism class에 대응하는 isotypic component에 포함되므로 $M=\sum_{[S]}M_S$이다. 직합임을 보이기 위해, 고정된 class $[S]$에 대하여 $W=M_S\cap\sum_{[T]\neq[S]}M_T$가 $0$임을 확인하면 충분하다. $W$는 semisimple module $M$의 submodule이므로 [따름정리 6](#cor6){: data-relation="required" }에 의해 semisimple이고, 만일 $W\neq 0$이라면 simple submodule $U\subseteq W$가 존재한다. $U$는 $S$-type simple들의 합 $M_S$에 포함되므로 [보조정리 7](#lem7){: data-relation="required" }에 의해 $U\cong S$이다. 그러나 $U$는 동시에 $S$와 isomorphic하지 않은 simple들의 합 $\sum_{[T]\neq[S]}M_T$에도 포함되므로, 다시 [보조정리 7](#lem7){: data-relation="required" }에 의해 $U$는 어떤 $T\not\cong S$와 isomorphic해야 하고 이는 모순이다. 따라서 $W=0$이다.
 :::
 
 명제의 둘째 결과는 isotypic 분해가 canonical하다는 말의 정확한 내용이다. 임의의 endomorphism이 각 isotypic component를 보존하므로, 이 분해는 직합 인자의 선택과 무관하게 $M$의 module 구조만으로 결정된다.
@@ -128,7 +128,7 @@ Simple module들 $S_1,\ldots,S_n$과 $T_1,\ldots,T_m$에 대하여 $\bigoplus_{a
 ::: 증명
 $n$에 대한 induction으로 보인다. $n=0$이면 좌변이 $0$이므로 우변도 $0$이고 $m=0$이다.
 
-$n\geq 1$이라 하고 $\varphi:\bigoplus_aS_a\rightarrow\bigoplus_bT_b$를 isomorphism이라 하자. $\varphi(S_1)\neq 0$이므로 projection $\pi_b:\bigoplus T_b\rightarrow T_b$ 중 $\pi_b\vert_{\varphi(S_1)}\neq 0$인 $b$가 존재하고, 재배열하여 $b=1$이라 하자. $N=\varphi(S_1)$으로 두면 $N\cong S_1$은 simple이고, $\pi_1\vert_N:N\rightarrow T_1$은 simple module 사이의 nonzero homomorphism이므로 [§나눗셈환, ⁋보조정리 10](/ko/math/ring_theory/division_rings#lem10)에 의해 isomorphism이다. 특히 $S_1\cong T_1$이다.
+$n\geq 1$이라 하고 $\varphi:\bigoplus_aS_a\rightarrow\bigoplus_bT_b$를 isomorphism이라 하자. $\varphi(S_1)\neq 0$이므로 projection $\pi_b:\bigoplus T_b\rightarrow T_b$ 중 $\pi_b\vert_{\varphi(S_1)}\neq 0$인 $b$가 존재하고, 재배열하여 $b=1$이라 하자. $N=\varphi(S_1)$으로 두면 $N\cong S_1$은 simple이고, $\pi_1\vert_N:N\rightarrow T_1$은 simple module 사이의 nonzero homomorphism이므로 [§나눗셈환, ⁋보조정리 10](/ko/math/ring_theory/division_rings#lem10){: data-relation="required" }에 의해 isomorphism이다. 특히 $S_1\cong T_1$이다.
 
 이제 $\bigoplus_bT_b=N\oplus(T_2\oplus\cdots\oplus T_m)$임을 주장한다. $N\cap(T_2\oplus\cdots\oplus T_m)=N\cap\ker\pi_1=\ker(\pi_1\vert_N)=0$이다. 또 임의의 $t\in\bigoplus T_b$에 대하여 $x=(\pi_1\vert_N)^{-1}(\pi_1(t))\in N$으로 두면 $t-x\in\ker\pi_1=T_2\oplus\cdots\oplus T_m$이므로 합이 전체가 된다. 따라서
 
@@ -137,7 +137,7 @@ $$T_2\oplus\cdots\oplus T_m\cong\Big(\bigoplus_bT_b\Big)/N\cong\Big(\bigoplus_aS
 이고, 가운데 isomorphism은 $\varphi(S_1)=N$이므로 $\varphi$가 유도하는 것이다. Induction 가정에 의해 $n-1=m-1$이고 나머지 인자들이 대응되므로, $S_1\cong T_1$과 합쳐 증명이 끝난다.
 :::
 
-즉 유한개의 simple module의 direct sum은 그 인자들의 isomorphism class와 중복도를 (순서를 무시하면) 완전히 결정한다. [명제 9](#prop9)의 isotypic 분해와 함께 쓰면, 유한개의 simple의 직합인 semisimple module은 각 class $[S]$의 중복도 자료만으로 분류된다. 이 유일성은 semisimple ring의 구조 정리에서 행렬 크기와 division ring의 유일성을 담당하게 된다.
+즉 유한개의 simple module의 direct sum은 그 인자들의 isomorphism class와 중복도를 (순서를 무시하면) 완전히 결정한다. [명제 9](#prop9){: data-relation="weak" }의 isotypic 분해와 함께 쓰면, 유한개의 simple의 직합인 semisimple module은 각 class $[S]$의 중복도 자료만으로 분류된다. 이 유일성은 semisimple ring의 구조 정리에서 행렬 크기와 division ring의 유일성을 담당하게 된다.
 
 ---
 
