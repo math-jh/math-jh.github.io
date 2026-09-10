@@ -82,11 +82,11 @@ For existence, taking a cue from the uniqueness proof above, we define the value
 and then verify that the correspondence $y\mapsto f(y)$ is indeed a function.
 :::
 
-Since at least one $(P, \pr_i)$ satisfying the conditions of [Theorem 3](#thm3) exists ([Definition 1](#def1)), we may take this as the definition of the product set. That is, the product of $(A_i)_{i\in I}$ can be characterized as a set $\prod_{i\in I} A_i$ together with functions $\pr_i:\prod_{i\in I}A_i\rightarrow A_i$ satisfying the following universal property.
+Since at least one $(P, \pr_i)$ satisfying the conditions of [Theorem 3](#thm3){: data-relation="required" } exists ([Definition 1](#def1){: data-relation="required" }), we may take this as the definition of the product set. That is, the product of $(A_i)_{i\in I}$ can be characterized as a set $\prod_{i\in I} A_i$ together with functions $\pr_i:\prod_{i\in I}A_i\rightarrow A_i$ satisfying the following universal property.
 
 {% diagram Math/Set_Theory/Product_of_Sets-2.svg width="13.37em" alt="universal_property_of_product" %}
 
-By the same reasoning as in [§Sum of Sets, ⁋Corollary 9](/en/math/set_theory/sum_of_sets#cor9), one can verify that the object and projections $\pr_i$ satisfying this universal property are unique up to bijection.
+By the same reasoning as in [§Sum of Sets, ⁋Corollary 9](/en/math/set_theory/sum_of_sets#cor9){: data-relation="required" }, one can verify that the object and projections $\pr_i$ satisfying this universal property are unique up to bijection.
 
 ::: Proposition 4
 Let $A$, $B$, $C$ be sets and let $f:B\times C\rightarrow A$. If $\tilde{f}$ is the function from $C$ to $\Fun(B,A)$ defined by $y\mapsto f(-,y)$, then $f\mapsto\tilde{f}$ is a bijection. That is, there exists a bijection between $\Fun(B\times C,A)$ and $\Fun(C, \Fun(B, A))$.
@@ -132,7 +132,7 @@ Consider the diagram
 
 {% diagram frozen/81b7e8af/Math/Set_Theory/Product_of_Sets-3.svg width="13.03em" alt="induced_bijection" %}
 
-Here $v$ is the bijection sending $(x_i)_{i\in I}$ to $(x_{u(k)})_{k\in K}$. By [Proposition 2](#prop2) above, $F\mapsto F\circ U$ is a bijection.
+Here $v$ is the bijection sending $(x_i)_{i\in I}$ to $(x_{u(k)})_{k\in K}$. By [Proposition 2](#prop2){: data-relation="required" } above, $F\mapsto F\circ U$ is a bijection.
 :::
 
 
