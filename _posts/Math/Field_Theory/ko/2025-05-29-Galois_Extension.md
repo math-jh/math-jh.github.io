@@ -27,9 +27,9 @@ Algebraic extension $\mathbb{L}/\mathbb{K}$과 injective $\mathbb{K}$-homomorphi
 
     $$0=u(0)=u(f(\alpha))=f(u(\alpha))$$
     
-    이므로 $u(\Phi)\subseteq\Phi$가 성립한다. 그런데 $u$는 zero map이 아니므로 injective이고 ([§체, ⁋명제 2](/ko/math/field_theory/fields#prop2)), 따라서 $u$는 $\Phi$에서 $\Phi$로의 bijection이다. 따라서 $x\in\Phi=u(\Phi)\subseteq u(\mathbb{L})$이고 이로부터 $u(\mathbb{L})=\mathbb{L}$이다.
+    이므로 $u(\Phi)\subseteq\Phi$가 성립한다. 그런데 $u$는 zero map이 아니므로 injective이고 ([§체, ⁋명제 2](/ko/math/field_theory/fields#prop2){: data-relation="weak" }), 따라서 $u$는 $\Phi$에서 $\Phi$로의 bijection이다. 따라서 $x\in\Phi=u(\Phi)\subseteq u(\mathbb{L})$이고 이로부터 $u(\mathbb{L})=\mathbb{L}$이다.
 
-2. $\overline{\mathbb{K}}$는 $u(\mathbb{L})$과 $\mathbb{L}$의 algebraic closure이므로 [§대수적 폐포, ⁋정리 5](/ko/math/field_theory/algebraically_closed_extensions#thm5)의 universal property로부터 $u$를 확장하는 $\overline{\mathbb{K}}$의 $\mathbb{K}$-endomorphism $w$를 얻는다. 이 때 $w$는 injective이므로 $w(\overline{\mathbb{K}})$는 $\overline{\mathbb{K}}$와 isomorphic하여 algebraically closed이고, $\overline{\mathbb{K}}/\mathbb{K}$가 algebraic이므로 $\overline{\mathbb{K}}$는 $w(\overline{\mathbb{K}})$의 algebraic extension이 되어 [§대수적 폐포, ⁋명제 1](/ko/math/field_theory/algebraically_closed_extensions#prop1)의 넷째 조건으로부터 $w(\overline{\mathbb{K}})=\overline{\mathbb{K}}$, 즉 $w$가 automorphism임을 얻는다. 
+2. $\overline{\mathbb{K}}$는 $u(\mathbb{L})$과 $\mathbb{L}$의 algebraic closure이므로 [§대수적 폐포, ⁋정리 5](/ko/math/field_theory/algebraically_closed_extensions#thm5){: data-relation="required" }의 universal property로부터 $u$를 확장하는 $\overline{\mathbb{K}}$의 $\mathbb{K}$-endomorphism $w$를 얻는다. 이 때 $w$는 injective이므로 $w(\overline{\mathbb{K}})$는 $\overline{\mathbb{K}}$와 isomorphic하여 algebraically closed이고, $\overline{\mathbb{K}}/\mathbb{K}$가 algebraic이므로 $\overline{\mathbb{K}}$는 $w(\overline{\mathbb{K}})$의 algebraic extension이 되어 [§대수적 폐포, ⁋명제 1](/ko/math/field_theory/algebraically_closed_extensions#prop1){: data-relation="required" }의 넷째 조건으로부터 $w(\overline{\mathbb{K}})=\overline{\mathbb{K}}$, 즉 $w$가 automorphism임을 얻는다. 
 :::
 
 우리의 목적은 고정된 field $\mathbb{K}$의 algebraic extension들을 모두 살펴보는 것이며, 더 정확히는 algebraic extension들의 equivalence class들을 보는 것이다.  
@@ -38,7 +38,7 @@ Algebraic extension $\mathbb{L}/\mathbb{K}$과 injective $\mathbb{K}$-homomorphi
 Field $\mathbb{K}$의 algebraic closure $\overline{\mathbb{K}}$ 안에서의 두 algebraic extension $\mathbb{L}$, $\mathbb{M}$에 대하여, $u(\mathbb{L})=\mathbb{M}$이도록 하는 $\mathbb{K}$-automorphism $u:\overline{\mathbb{K}}\rightarrow \overline{\mathbb{K}}$이 존재한다면 이들이 *conjugate<sub>켤레</sub>*한다고 말한다. 두 원소 $x,y\in\overline{\mathbb{K}}$이 *conjugate*이라는 것은 적당한 $\mathbb{K}$-automorphism $u: \overline{\mathbb{K}}\rightarrow \overline{\mathbb{K}}$이 존재하여 $u(x)=y$인 것이다. 
 :::
 
-[명제 1](#prop1)에 의하여, 만일 $\mathbb{M}$과 $\mathbb{L}$이 $\mathbb{K}$-isomorphic한 extension이라면 이들은 conjugate extension들이며, 정의에 의해 conjugate extension들은 isomorphic하다. 뿐만 아니라 다음이 성립한다. 
+[명제 1](#prop1){: data-relation="required" }에 의하여, 만일 $\mathbb{M}$과 $\mathbb{L}$이 $\mathbb{K}$-isomorphic한 extension이라면 이들은 conjugate extension들이며, 정의에 의해 conjugate extension들은 isomorphic하다. 뿐만 아니라 다음이 성립한다. 
 
 ::: 명제 3
 $\overline{\mathbb{K}}$의 두 원소 $x,y$를 고정하자. 다음이 모두 동치이다. 
@@ -58,10 +58,10 @@ $$f(y)=f(u(x))=u(f(x))=u(0)=0$$
 
 $$\mathbb{K}(x)\cong \mathbb{K}[\x]/(f)\cong \mathbb{K}(y)$$
 
-이고, $\mathbb{K}[\x]/(f)$에서 출발하는 두 isomorphism이 $\x$의 class를 각각 $x$와 $y$로 보내므로 이들을 합성하면 $x$를 $y$로 보내는 $\mathbb{K}$-isomorphism $\mathbb{K}(x)\rightarrow \mathbb{K}(y)$를 얻는다. 즉 셋째 조건은 둘째 조건을 함의한다. 마지막으로 둘째 조건을 가정하면 [명제 1](#prop1)로부터 $v$를 확장하는 $\mathbb{K}$-isomorphism $u:\overline{\mathbb{K}}\rightarrow\overline{\mathbb{K}}$이 존재하고 따라서 $x$, $y$가 conjugate이다. 
+이고, $\mathbb{K}[\x]/(f)$에서 출발하는 두 isomorphism이 $\x$의 class를 각각 $x$와 $y$로 보내므로 이들을 합성하면 $x$를 $y$로 보내는 $\mathbb{K}$-isomorphism $\mathbb{K}(x)\rightarrow \mathbb{K}(y)$를 얻는다. 즉 셋째 조건은 둘째 조건을 함의한다. 마지막으로 둘째 조건을 가정하면 [명제 1](#prop1){: data-relation="required" }로부터 $v$를 확장하는 $\mathbb{K}$-isomorphism $u:\overline{\mathbb{K}}\rightarrow\overline{\mathbb{K}}$이 존재하고 따라서 $x$, $y$가 conjugate이다. 
 :::
 
-이로부터 만일 degree $n$의 algebraic element $x\in \overline{\mathbb{K}}$가 주어졌다면, $x$와 conjugate인 원소들은 반드시 $x$의 minimal polynomial의 해이고 따라서 이러한 원소는 많아야 $n$개 뿐임을 안다. 뿐만 아니라, 여기에서 $x$와 conjugate한 원소가 $n$개 <em-ko>미만</em-ko>인 것은 정확하게 $x$의 minimal polynomial이 separable하지 않은 것과 동치이다. 즉, $\overline{\mathbb{K}}$의 $\mathbb{K}$-automorphism들의 group을 $\Aut_\mathbb{K}(\overline{\mathbb{K}})$라 하고 $\Aut_\mathbb{K}\overline{\mathbb{K}}$가 $\overline{\mathbb{K}}$에 자연스러운 방식으로 act할 때, 이 action에 의해 fix되는 원소들의 모임 $\overline{\mathbb{K}}^{\Aut_{\mathbb{K}}(\overline{\mathbb{K}})}$은 정확히 $\mathbb{K}^{p^{-\infty}}$와 같다. 여기에서 $p$는 $\mathbb{K}$의 characteristic exponent이며, 따라서 $\ch(\mathbb{K})=0$인 경우 이 모임은 $\mathbb{K}$ 자기 자신이다. 실제로 $x\in\overline{\mathbb{K}}$가 모든 $\mathbb{K}$-automorphism에 의해 fix되는 것은 $x$의 conjugate이 자기 자신 뿐인 것, 즉 $x$의 minimal polynomial $f$가 $\overline{\mathbb{K}}$에서 유일한 해를 갖는 것과 동치이고, 이는 다시 적당한 $e\geq 0$에 대하여 $f=(\x-x)^{p^e}=\x^{p^e}-x^{p^e}$인 것, 즉 $x$가 $\mathbb{K}$ 위에서 $p$-radical인 것과 동치이다. ([§순수비분리확대체, ⁋보조정리 3](/ko/math/field_theory/purely_inseparable_extensions#lem3)과 [§순수비분리확대체, ⁋명제 2](/ko/math/field_theory/purely_inseparable_extensions#prop2)) 
+이로부터 만일 degree $n$의 algebraic element $x\in \overline{\mathbb{K}}$가 주어졌다면, $x$와 conjugate인 원소들은 반드시 $x$의 minimal polynomial의 해이고 따라서 이러한 원소는 많아야 $n$개 뿐임을 안다. 뿐만 아니라, 여기에서 $x$와 conjugate한 원소가 $n$개 <em-ko>미만</em-ko>인 것은 정확하게 $x$의 minimal polynomial이 separable하지 않은 것과 동치이다. 즉, $\overline{\mathbb{K}}$의 $\mathbb{K}$-automorphism들의 group을 $\Aut_\mathbb{K}(\overline{\mathbb{K}})$라 하고 $\Aut_\mathbb{K}\overline{\mathbb{K}}$가 $\overline{\mathbb{K}}$에 자연스러운 방식으로 act할 때, 이 action에 의해 fix되는 원소들의 모임 $\overline{\mathbb{K}}^{\Aut_{\mathbb{K}}(\overline{\mathbb{K}})}$은 정확히 $\mathbb{K}^{p^{-\infty}}$와 같다. 여기에서 $p$는 $\mathbb{K}$의 characteristic exponent이며, 따라서 $\ch(\mathbb{K})=0$인 경우 이 모임은 $\mathbb{K}$ 자기 자신이다. 실제로 $x\in\overline{\mathbb{K}}$가 모든 $\mathbb{K}$-automorphism에 의해 fix되는 것은 $x$의 conjugate이 자기 자신 뿐인 것, 즉 $x$의 minimal polynomial $f$가 $\overline{\mathbb{K}}$에서 유일한 해를 갖는 것과 동치이고, 이는 다시 적당한 $e\geq 0$에 대하여 $f=(\x-x)^{p^e}=\x^{p^e}-x^{p^e}$인 것, 즉 $x$가 $\mathbb{K}$ 위에서 $p$-radical인 것과 동치이다. ([§순수비분리확대체, ⁋보조정리 3](/ko/math/field_theory/purely_inseparable_extensions#lem3){: data-relation="required" }과 [§순수비분리확대체, ⁋명제 2](/ko/math/field_theory/purely_inseparable_extensions#prop2){: data-relation="required" }) 
 
 ## 갈루아 확장
 
@@ -81,7 +81,7 @@ Algebraic extension $\mathbb{L}/\mathbb{K}$에 대하여, 다음이 모두 동�
 5. $\mathbb{L}$은 어떠한 non-constant polynomial들의 family $(f_i\in \mathbb{K}[\x])$의 splitting field이다. 
 :::
 ::: 증명
-우선 셋째 조건과 넷째 조건의 동치는 [명제 1](#prop1)로부터 나온다. 한편 quasi-Galois extension은 그 원소들의 minimal polynomial들의 splitting field로 볼 수 있으므로 마지막 조건은 첫째 조건에 의해 유도된다. 한편 마지막 조건이 성립한다면 [명제 1](#prop1)과 같은 논리로 $\overline{\mathbb{K}}$의 임의의 $\mathbb{K}$-automorphism은 $f_i$의 해를 $f_i$의 해로 보내므로 $\mathbb{L}$을 $\mathbb{L}$로 보낸다. 따라서 셋째 조건이 성립한다. 또 셋째 조건이 성립한다면 $x\in \mathbb{L}$의 conjugate들은 $\overline{\mathbb{K}}$의 $\mathbb{K}$-automorphism에 의한 $x$의 image이므로 모두 $\mathbb{L}$에 속하고, 이로부터 둘째 조건이 성립한다. 따라서 
+우선 셋째 조건과 넷째 조건의 동치는 [명제 1](#prop1){: data-relation="required" }로부터 나온다. 한편 quasi-Galois extension은 그 원소들의 minimal polynomial들의 splitting field로 볼 수 있으므로 마지막 조건은 첫째 조건에 의해 유도된다. 한편 마지막 조건이 성립한다면 [명제 1](#prop1){: data-relation="weak" }과 같은 논리로 $\overline{\mathbb{K}}$의 임의의 $\mathbb{K}$-automorphism은 $f_i$의 해를 $f_i$의 해로 보내므로 $\mathbb{L}$을 $\mathbb{L}$로 보낸다. 따라서 셋째 조건이 성립한다. 또 셋째 조건이 성립한다면 $x\in \mathbb{L}$의 conjugate들은 $\overline{\mathbb{K}}$의 $\mathbb{K}$-automorphism에 의한 $x$의 image이므로 모두 $\mathbb{L}$에 속하고, 이로부터 둘째 조건이 성립한다. 따라서 
 
 $$(1)\implies (5)\implies (3)\iff (4)\implies (2)$$
 
@@ -103,10 +103,10 @@ $$f(\x)=\prod_{i=1}^d (\x- a_i), \qquad a_i\in \overline{\mathbb{K}}$$
 4. 공통의 extension 안에 놓인 field extension $\mathbb{K}'/\mathbb{K}$와 quasi-Galois extension $\mathbb{L}/\mathbb{K}$에 대해, 이들의 compositum $\mathbb{K}'(\mathbb{L})$은 $\mathbb{K}'$에 대해 quasi-Galois이다. 
 :::
 ::: 증명
-1. [명제 5](#prop5)에 의해 $\mathbb{L}/\mathbb{K}$가 quasi-Galois인 것과 $\overline{\mathbb{K}}$의 임의의 $\mathbb{K}$-automorphism이 $\mathbb{L}$을 $\mathbb{L}$로 보내는 것이 동치이다. 
-2. $\mathbb{M}/\mathbb{K}$가 quasi-Galois라 하자. 그럼 우선 $\overline{\mathbb{K}}$는 $\mathbb{L}$의 algebraic closure이기도 하므로, [명제 5](#prop5)에 의해 임의의 $\mathbb{L}$-automorphism $u: \overline{\mathbb{K}}\rightarrow\overline{\mathbb{K}}$에 대해 $u(\mathbb{M})=\mathbb{M}$임을 보이면 충분하다. 그런데 $\mathbb{M}$은 $\mathbb{K}$의 quasi-Galois extension이고, $u$는 $\mathbb{L}$-automorphism이므로 자동적으로 $\mathbb{K}$-automorphism이기도 하다. 이로부터 $u$가 원하는 조건을 만족해야 함을 안다. 
-3. [명제 1](#prop1)로부터 $u$를 확장하는 $\mathbb{K}$-automorphism $v:\overline{\mathbb{K}}\rightarrow\overline{\mathbb{K}}$이 존재함을 안다. 이 때, 이를 $\mathbb{M}$으로 제한한 것은 $\mathbb{M}$이 quasi-Galois라는 가정으로부터 $v(\mathbb{M})=\mathbb{M}$을 만족해야 하고, 따라서 원하는 주장이 성립한다. 
-4. [명제 5](#prop5)에 의해 $\mathbb{L}$은 적당한 $f_i\in \mathbb{K}[\x]$들의 splitting field이다. 그럼 $\mathbb{K}'(\mathbb{L})$은 같은 다항식들을 $\mathbb{K}'[\x]$의 원소로 보았을 때의 splitting field이므로, 다시 [명제 5](#prop5)에 의해 $\mathbb{K}'$에 대해 quasi-Galois이다. 
+1. [명제 5](#prop5){: data-relation="required" }에 의해 $\mathbb{L}/\mathbb{K}$가 quasi-Galois인 것과 $\overline{\mathbb{K}}$의 임의의 $\mathbb{K}$-automorphism이 $\mathbb{L}$을 $\mathbb{L}$로 보내는 것이 동치이다. 
+2. $\mathbb{M}/\mathbb{K}$가 quasi-Galois라 하자. 그럼 우선 $\overline{\mathbb{K}}$는 $\mathbb{L}$의 algebraic closure이기도 하므로, [명제 5](#prop5){: data-relation="required" }에 의해 임의의 $\mathbb{L}$-automorphism $u: \overline{\mathbb{K}}\rightarrow\overline{\mathbb{K}}$에 대해 $u(\mathbb{M})=\mathbb{M}$임을 보이면 충분하다. 그런데 $\mathbb{M}$은 $\mathbb{K}$의 quasi-Galois extension이고, $u$는 $\mathbb{L}$-automorphism이므로 자동적으로 $\mathbb{K}$-automorphism이기도 하다. 이로부터 $u$가 원하는 조건을 만족해야 함을 안다. 
+3. [명제 1](#prop1){: data-relation="required" }로부터 $u$를 확장하는 $\mathbb{K}$-automorphism $v:\overline{\mathbb{K}}\rightarrow\overline{\mathbb{K}}$이 존재함을 안다. 이 때, 이를 $\mathbb{M}$으로 제한한 것은 $\mathbb{M}$이 quasi-Galois라는 가정으로부터 $v(\mathbb{M})=\mathbb{M}$을 만족해야 하고, 따라서 원하는 주장이 성립한다. 
+4. [명제 5](#prop5){: data-relation="required" }에 의해 $\mathbb{L}$은 적당한 $f_i\in \mathbb{K}[\x]$들의 splitting field이다. 그럼 $\mathbb{K}'(\mathbb{L})$은 같은 다항식들을 $\mathbb{K}'[\x]$의 원소로 보았을 때의 splitting field이므로, 다시 [명제 5](#prop5){: data-relation="required" }에 의해 $\mathbb{K}'$에 대해 quasi-Galois이다. 
 :::
 
 위의 따름정리의 증명에서 볼 수 있듯 quasi-Galois extension $\mathbb{L}/\mathbb{K}$를 특징짓는 가장 중요한 성질은 임의의 $\mathbb{K}$-automorphism이 $\mathbb{L}$을 $\mathbb{L}$로 보낸다는 것이다. 다음 명제도 이 사실로부터 자명하다. 
@@ -115,7 +115,7 @@ $$f(\x)=\prod_{i=1}^d (\x- a_i), \qquad a_i\in \overline{\mathbb{K}}$$
 $\mathbb{K}$의 algebraic closure $\overline{\mathbb{K}}$ 안에서의 quasi-Galois extension들 $\mathbb{L}_i$이 주어졌다 하자. 그럼 $\bigcap \mathbb{L}_i$와 $\mathbb{K}(\bigcup \mathbb{L}_i)$도 모두 quasi-Galois이다. 
 :::
 ::: 증명
-두 extension 모두 $\overline{\mathbb{K}}$의 subextension이므로 algebraic이고, 따라서 [명제 5](#prop5)의 셋째 조건만 확인하면 충분하다. $\overline{\mathbb{K}}$의 임의의 $\mathbb{K}$-automorphism $u$가 주어졌다 하자. 각각의 $\mathbb{L}_i$가 quasi-Galois이므로, 다시 [명제 5](#prop5)에 의하여 $u(\mathbb{L}_i)=\mathbb{L}_i$이다.
+두 extension 모두 $\overline{\mathbb{K}}$의 subextension이므로 algebraic이고, 따라서 [명제 5](#prop5){: data-relation="required" }의 셋째 조건만 확인하면 충분하다. $\overline{\mathbb{K}}$의 임의의 $\mathbb{K}$-automorphism $u$가 주어졌다 하자. 각각의 $\mathbb{L}_i$가 quasi-Galois이므로, 다시 [명제 5](#prop5){: data-relation="required" }에 의하여 $u(\mathbb{L}_i)=\mathbb{L}_i$이다.
 
 우선 $u$가 bijective이므로
 
@@ -130,7 +130,7 @@ $$u\left(\mathbb{K}\left(\bigcup_i\mathbb{L}_i\right)\right)=\mathbb{K}\left(\bi
 
 특히 $\overline{\mathbb{K}}$의 임의의 원소들의 집합 $S$에 대하여, 이를 포함하는 quasi-Galois extension 중 가장 작은 것을 생각할 수 있다. 이는 정의에 의해, $S$의 각 원소들의 conjugate들을 모두 모은 후, 이들로 생성되는 $\mathbb{K}$의 extension이다. 이를 $S$에 의해 생성되는 quasi-Galois extension이라 부른다. 
 
-[정의 4](#def4)에서 우리는 quasi-Galois extension을 정의할 때, irreducible polynomial $f$가 일차식들의 곱으로 쪼개질 것을 요구했지만 이들이 서로 다를 필요는 없었다. Galois extension은 여기에 separable 조건을 추가하여 얻어진다. 
+[정의 4](#def4){: data-relation="weak" }에서 우리는 quasi-Galois extension을 정의할 때, irreducible polynomial $f$가 일차식들의 곱으로 쪼개질 것을 요구했지만 이들이 서로 다를 필요는 없었다. Galois extension은 여기에 separable 조건을 추가하여 얻어진다. 
 
 ::: 정리 8
 Algebraic extension $\mathbb{L}/\mathbb{K}$와, $\mathbb{L}$의 $\mathbb{K}$-automorphism들의 group $\Gamma$가 주어졌다 하자. 다음이 모두 동치이다. 
@@ -140,7 +140,7 @@ Algebraic extension $\mathbb{L}/\mathbb{K}$와, $\mathbb{L}$의 $\mathbb{K}$-aut
 3. 임의의 $x\in \mathbb{L}$에 대하여, $x$의 minimal polynomial $f\in \mathbb{K}[\x]$는 $\mathbb{L}[\x]$에서 서로 다른 일차식들의 곱으로 쪼개진다. 
 :::
 ::: 증명
-둘째 조건과 셋째 조건의 동치는 [정의 4](#def4)와 [§분리가능확대체, ⁋명제 12](/ko/math/field_theory/separable_extensions#prop12)로부터 나온다. $\mathbb{L}/\mathbb{K}$가 quasi-Galois라면 $x\in \mathbb{L}$의 minimal polynomial $f$는 $\mathbb{L}[\x]$에서 일차식들의 곱으로 쪼개지고, $\mathbb{L}/\mathbb{K}$가 separable이라면 같은 명제의 첫째 결과에 의해 $f$가 separable이므로 이 일차식들이 서로 다르다. 거꾸로 셋째 조건이 성립한다면 $\mathbb{L}$에서 해를 갖는 irreducible polynomial은 그 해의 minimal polynomial의 상수배이므로 $\mathbb{L}[\x]$에서 쪼개지고, $\mathbb{L}$의 모든 원소가 separable element이므로 같은 명제의 둘째 결과에 의해 $\mathbb{L}/\mathbb{K}$가 separable이다. 따라서 이들과 첫째 조건이 동치임만 보이면 충분하다. 
+둘째 조건과 셋째 조건의 동치는 [정의 4](#def4){: data-relation="weak" }와 [§분리가능확대체, ⁋명제 12](/ko/math/field_theory/separable_extensions#prop12){: data-relation="required" }로부터 나온다. $\mathbb{L}/\mathbb{K}$가 quasi-Galois라면 $x\in \mathbb{L}$의 minimal polynomial $f$는 $\mathbb{L}[\x]$에서 일차식들의 곱으로 쪼개지고, $\mathbb{L}/\mathbb{K}$가 separable이라면 같은 명제의 첫째 결과에 의해 $f$가 separable이므로 이 일차식들이 서로 다르다. 거꾸로 셋째 조건이 성립한다면 $\mathbb{L}$에서 해를 갖는 irreducible polynomial은 그 해의 minimal polynomial의 상수배이므로 $\mathbb{L}[\x]$에서 쪼개지고, $\mathbb{L}$의 모든 원소가 separable element이므로 같은 명제의 둘째 결과에 의해 $\mathbb{L}/\mathbb{K}$가 separable이다. 따라서 이들과 첫째 조건이 동치임만 보이면 충분하다. 
 
 우선 첫째 조건을 가정하자. 임의의 $x\in \mathbb{L}$와 그 minimal polynomial $f\in \mathbb{K}[\x]$에 대하여 $f$가 $\mathbb{L}[\x]$에서 서로 다른 일차식들의 곱으로 쪼개진다는 것을 보여야 한다. 이를 위해 $f$의 $\mathbb{L}$에서의 모든 해들의 모임을 $S$라 하고, 새로운 다항식 
 
@@ -150,39 +150,39 @@ $$g(\x)=\prod_{a\in S}(\x-a)$$
 
 $$(\sigma\cdot g)(\x)=\prod_{a\in S}(\x-\sigma(a))=\prod_{a\in S}(\x-a)$$
 
-이므로 $g$의 계수들은 $\sigma$에 의해 변하지 않고 따라서 첫째 조건의 가정으로부터 $g\in\mathbb{K}[\x]$이다. 이제 $g(x)=0$이므로 [§대수적 확장, ⁋정리 15](/ko/math/field_theory/algebraic_extensions#thm15)에 의하여 $f$는 $g$를 나눈다. 한편 $S$는 $f$의 해들 중 일부이므로 $g$의 degree는 $f$의 degree를 넘지 않고, 따라서 monic polynomial인 $f$와 $g$는 서로 같다. 즉 셋째 조건이 성립한다. 
+이므로 $g$의 계수들은 $\sigma$에 의해 변하지 않고 따라서 첫째 조건의 가정으로부터 $g\in\mathbb{K}[\x]$이다. 이제 $g(x)=0$이므로 [§대수적 확장, ⁋정리 15](/ko/math/field_theory/algebraic_extensions#thm15){: data-relation="required" }에 의하여 $f$는 $g$를 나눈다. 한편 $S$는 $f$의 해들 중 일부이므로 $g$의 degree는 $f$의 degree를 넘지 않고, 따라서 monic polynomial인 $f$와 $g$는 서로 같다. 즉 셋째 조건이 성립한다. 
 
 거꾸로 셋째 조건을 가정하고 첫째 조건을 보이자. $x\in\mathbb{L}$이 $\mathbb{K}$에 속하지 않는다면 $x$를 다른 원소로 보내는 $\sigma\in\Gamma$가 존재함을 보여야 한다. $x$의 minimal polynomial을 $f$라 하면, $x\not\in\mathbb{K}$인 것으로부터 $f$는 2차 이상이고, 가정에 의해 
 
 $$f(\x)=\prod_{a\in R}(\x-a), \qquad \text{$R$ the set of conjugates of $x$ in $\overline{\mathbb{K}}$}$$
 
-로 쪼갤 수 있으며 한편 $\mathbb{L}/\mathbb{K}$는 quasi-Galois이므로 $x$를 자신과 다른 $a\in R$로 보내는 $\overline{\mathbb{K}}$의 $\mathbb{K}$-automorphism $u$가 존재하며 이는 [명제 5](#prop5)에 의해 $\mathbb{L}$의 $\mathbb{K}$-automorphism이다. 이로부터 원하는 결과를 얻는다.
+로 쪼갤 수 있으며 한편 $\mathbb{L}/\mathbb{K}$는 quasi-Galois이므로 $x$를 자신과 다른 $a\in R$로 보내는 $\overline{\mathbb{K}}$의 $\mathbb{K}$-automorphism $u$가 존재하며 이는 [명제 5](#prop5){: data-relation="required" }에 의해 $\mathbb{L}$의 $\mathbb{K}$-automorphism이다. 이로부터 원하는 결과를 얻는다.
 :::
 
 이제 다음을 정의할 수 있다.
 
 ::: 정의 9
-Algebraic extension $\mathbb{L}/\mathbb{K}$이 *Galois<sub>갈루아</sub>*라는 것은 $\mathbb{L}/\mathbb{K}$이 [정리 8](#thm8)의 조건을 만족하는 것이다. 
+Algebraic extension $\mathbb{L}/\mathbb{K}$이 *Galois<sub>갈루아</sub>*라는 것은 $\mathbb{L}/\mathbb{K}$이 [정리 8](#thm8){: data-relation="required" }의 조건을 만족하는 것이다. 
 :::
 
-그럼 [명제 7](#prop7)의 결과와 separable extension에 대한 결과로부터 다음의 두 명제를 얻는다.
+그럼 [명제 7](#prop7){: data-relation="required" }의 결과와 separable extension에 대한 결과로부터 다음의 두 명제를 얻는다.
 
 ::: 명제 10
 $\mathbb{K}$의 algebraic closure $\overline{\mathbb{K}}$ 안에서의 Galois extension들의 비어 있지 않은 family $(\mathbb{L}_i)$가 주어졌다 하자. 그럼 $\bigcap \mathbb{L}_i$와 $\mathbb{K}(\bigcup \mathbb{L}_i)$도 모두 Galois이다. 
 :::
 ::: 증명
-[정리 8](#thm8)의 둘째 조건에 의하여 Galois extension은 separable quasi-Galois extension과 같은 말이다. 두 extension이 quasi-Galois인 것은 [명제 7](#prop7)에서 보았으므로 separable인 것만 확인하면 된다.
+[정리 8](#thm8){: data-relation="required" }의 둘째 조건에 의하여 Galois extension은 separable quasi-Galois extension과 같은 말이다. 두 extension이 quasi-Galois인 것은 [명제 7](#prop7){: data-relation="required" }에서 보았으므로 separable인 것만 확인하면 된다.
 
-우선 $\bigcap_i\mathbb{L}_i$는 separable extension $\mathbb{L}_{i_0}/\mathbb{K}$의 subextension이므로 separable이다. ([§분리가능확대체, ⁋명제 15](/ko/math/field_theory/separable_extensions#prop15)) 한편 $\bigcup_i\mathbb{L}_i$의 원소들은 각각 separable extension의 원소이므로 모두 $\mathbb{K}$에 대해 separable element들이고 ([§분리가능확대체, ⁋명제 12](/ko/math/field_theory/separable_extensions#prop12)의 첫째 결과), 따라서 $\mathbb{K}(\bigcup_i\mathbb{L}_i)$는 separable element들로 생성되는 extension이 되어 같은 명제의 둘째 결과에 의해 separable이다.
+우선 $\bigcap_i\mathbb{L}_i$는 separable extension $\mathbb{L}_{i_0}/\mathbb{K}$의 subextension이므로 separable이다. ([§분리가능확대체, ⁋명제 15](/ko/math/field_theory/separable_extensions#prop15){: data-relation="required" }) 한편 $\bigcup_i\mathbb{L}_i$의 원소들은 각각 separable extension의 원소이므로 모두 $\mathbb{K}$에 대해 separable element들이고 ([§분리가능확대체, ⁋명제 12](/ko/math/field_theory/separable_extensions#prop12){: data-relation="required" }의 첫째 결과), 따라서 $\mathbb{K}(\bigcup_i\mathbb{L}_i)$는 separable element들로 생성되는 extension이 되어 같은 명제의 둘째 결과에 의해 separable이다.
 :::
 
 ::: 명제 11
 Galois extension $\mathbb{L}/\mathbb{K}$와 finite degree subextension $\mathbb{M}/\mathbb{K}$가 주어졌다 하자. 그럼 $\mathbb{M}$을 포함하고, finite degree Galois인 $\mathbb{L}/\mathbb{K}$의 적당한 subextension $\mathbb{N}/\mathbb{K}$이 존재한다.
 :::
 ::: 증명
-$\mathbb{M}/\mathbb{K}$가 finite degree이므로 $\mathbb{M}=\mathbb{K}(x_1,\ldots,x_n)$으로 쓸 수 있다. $S$를 $x_1,\ldots,x_n$들의 ($\overline{\mathbb{K}}$에서의) conjugate들을 모두 모아둔 집합이라 하자. 각각의 $x_i$는 algebraic이므로 그 conjugate은 유한 개 뿐이고 ([명제 3](#prop3)), $\mathbb{L}/\mathbb{K}$가 quasi-Galois이므로 [명제 5](#prop5)의 둘째 조건에 의하여 이들이 모두 $\mathbb{L}$에 속한다. 즉 $S$는 $\mathbb{L}$의 유한 부분집합이고, $\mathbb{N}=\mathbb{K}(S)$는 유한히 많은 algebraic element들로 생성되므로 $\mathbb{M}$을 포함하는 finite degree subextension이다.
+$\mathbb{M}/\mathbb{K}$가 finite degree이므로 $\mathbb{M}=\mathbb{K}(x_1,\ldots,x_n)$으로 쓸 수 있다. $S$를 $x_1,\ldots,x_n$들의 ($\overline{\mathbb{K}}$에서의) conjugate들을 모두 모아둔 집합이라 하자. 각각의 $x_i$는 algebraic이므로 그 conjugate은 유한 개 뿐이고 ([명제 3](#prop3){: data-relation="required" }), $\mathbb{L}/\mathbb{K}$가 quasi-Galois이므로 [명제 5](#prop5){: data-relation="required" }의 둘째 조건에 의하여 이들이 모두 $\mathbb{L}$에 속한다. 즉 $S$는 $\mathbb{L}$의 유한 부분집합이고, $\mathbb{N}=\mathbb{K}(S)$는 유한히 많은 algebraic element들로 생성되므로 $\mathbb{M}$을 포함하는 finite degree subextension이다.
 
-이제 $\mathbb{N}/\mathbb{K}$가 Galois임을 보이자. 우선 $\overline{\mathbb{K}}$의 임의의 $\mathbb{K}$-automorphism $u$는 conjugate들을 conjugate들로 보내므로 $u(S)=S$이고, 따라서 $u(\mathbb{N})=\mathbb{K}(u(S))=\mathbb{N}$이 되어 [명제 5](#prop5)에 의해 $\mathbb{N}/\mathbb{K}$는 quasi-Galois이다. 한편 $\mathbb{N}$은 separable extension $\mathbb{L}/\mathbb{K}$의 subextension이므로 separable이고 ([§분리가능확대체, ⁋명제 15](/ko/math/field_theory/separable_extensions#prop15)), 따라서 [정리 8](#thm8)의 둘째 조건에 의해 Galois이다.
+이제 $\mathbb{N}/\mathbb{K}$가 Galois임을 보이자. 우선 $\overline{\mathbb{K}}$의 임의의 $\mathbb{K}$-automorphism $u$는 conjugate들을 conjugate들로 보내므로 $u(S)=S$이고, 따라서 $u(\mathbb{N})=\mathbb{K}(u(S))=\mathbb{N}$이 되어 [명제 5](#prop5){: data-relation="required" }에 의해 $\mathbb{N}/\mathbb{K}$는 quasi-Galois이다. 한편 $\mathbb{N}$은 separable extension $\mathbb{L}/\mathbb{K}$의 subextension이므로 separable이고 ([§분리가능확대체, ⁋명제 15](/ko/math/field_theory/separable_extensions#prop15){: data-relation="required" }), 따라서 [정리 8](#thm8){: data-relation="required" }의 둘째 조건에 의해 Galois이다.
 :::
 
 ## 갈루아 군
@@ -193,15 +193,15 @@ $\mathbb{M}/\mathbb{K}$가 finite degree이므로 $\mathbb{M}=\mathbb{K}(x_1,\ld
 Galois extension $\mathbb{L}/\mathbb{K}$에 대하여, $\mathbb{L}$의 $\mathbb{K}$-automorphism들의 group을 *Galois group<sub>갈루아 군</sub>*이라 부르고 $\Gal(\mathbb{L}/\mathbb{K})$으로 적는다.
 :::
 
-특별히 field $\mathbb{K}$를 고정하고 그 algebraic closure $\overline{\mathbb{K}}$를 생각하자. $\mathbb{K}[\x]$의 separable polynomial $f$와, $f$의 해들의 집합 $A$에 대하여 $\mathbb{L}=\mathbb{K}(A)$는 $f$의 splitting field이므로 [명제 5](#prop5)에 의해 quasi-Galois이고, $A$의 각 원소의 minimal polynomial은 $f$를 나누어 서로 다른 해들을 가지므로 ([§대수적 확장, ⁋정리 15](/ko/math/field_theory/algebraic_extensions#thm15)) [§분리가능확대체, ⁋명제 12](/ko/math/field_theory/separable_extensions#prop12)의 둘째 결과에 의해 separable이다. 즉 $\mathbb{L}$은 $\mathbb{K}$의 Galois extension이다. 그런데 $\mathbb{L}$은 $A$에 의해 생성되므로 임의의 $\sigma\in \Gal(\mathbb{L}/\mathbb{K})$는 $A$에서의 값으로 완전히 결정되며 이로부터 injective group homomorphism 
+특별히 field $\mathbb{K}$를 고정하고 그 algebraic closure $\overline{\mathbb{K}}$를 생각하자. $\mathbb{K}[\x]$의 separable polynomial $f$와, $f$의 해들의 집합 $A$에 대하여 $\mathbb{L}=\mathbb{K}(A)$는 $f$의 splitting field이므로 [명제 5](#prop5){: data-relation="required" }에 의해 quasi-Galois이고, $A$의 각 원소의 minimal polynomial은 $f$를 나누어 서로 다른 해들을 가지므로 ([§대수적 확장, ⁋정리 15](/ko/math/field_theory/algebraic_extensions#thm15){: data-relation="required" }) [§분리가능확대체, ⁋명제 12](/ko/math/field_theory/separable_extensions#prop12){: data-relation="required" }의 둘째 결과에 의해 separable이다. 즉 $\mathbb{L}$은 $\mathbb{K}$의 Galois extension이다. 그런데 $\mathbb{L}$은 $A$에 의해 생성되므로 임의의 $\sigma\in \Gal(\mathbb{L}/\mathbb{K})$는 $A$에서의 값으로 완전히 결정되며 이로부터 injective group homomorphism 
 
 $$\Gal(\mathbb{L}/\mathbb{K})\rightarrow S_A$$
 
-이 유도된다. 일반적으로 이 homomorphism은 surjective일 필요가 없다. 우선 $A$의 두 원소 $x,y$가 서로 conjugate하지 않을 수 있으며, 이는 [명제 3](#prop3)에 의하여 이들이 서로 다른 minimal polynomial을 갖는 것과 동치이다. 한편 $x,y$는 $f$의 해이므로 [§대수적 확장, ⁋정리 15](/ko/math/field_theory/algebraic_extensions#thm15)로부터 이들의 minimal polynomial들은 각각 $f$를 나누므로, $x$와 $y$가 conjugate하지 않다는 것은 이들이 $f$의 서로 다른 irreducible factor의 해라는 것과 같다. 즉 $f$의 irreducible factor들의 해 집합을 $A_1,\ldots,A_r$이라 하면 이들은 정확히 $\Gal(\mathbb{L}/\mathbb{K})$의 $A$ 위에서의 orbit들이고, 위 homomorphism의 image는 subgroup $S_{A_1}\times\cdots\times S_{A_r}$에 포함된다.
+이 유도된다. 일반적으로 이 homomorphism은 surjective일 필요가 없다. 우선 $A$의 두 원소 $x,y$가 서로 conjugate하지 않을 수 있으며, 이는 [명제 3](#prop3){: data-relation="required" }에 의하여 이들이 서로 다른 minimal polynomial을 갖는 것과 동치이다. 한편 $x,y$는 $f$의 해이므로 [§대수적 확장, ⁋정리 15](/ko/math/field_theory/algebraic_extensions#thm15){: data-relation="required" }로부터 이들의 minimal polynomial들은 각각 $f$를 나누므로, $x$와 $y$가 conjugate하지 않다는 것은 이들이 $f$의 서로 다른 irreducible factor의 해라는 것과 같다. 즉 $f$의 irreducible factor들의 해 집합을 $A_1,\ldots,A_r$이라 하면 이들은 정확히 $\Gal(\mathbb{L}/\mathbb{K})$의 $A$ 위에서의 orbit들이고, 위 homomorphism의 image는 subgroup $S_{A_1}\times\cdots\times S_{A_r}$에 포함된다.
 
 이 포함관계 또한 일반적으로 등호가 아니어서, $f$가 irreducible인 경우에도 image가 $S_A$ 전체일 필요는 없다. 가령 $f=\x^3-3\x+1\in \mathbb{Q}[\x]$은 유리수 해를 갖지 않으므로 irreducible이고 따라서 그 세 해는 서로 conjugate이다. 그런데 $f$의 해 $\alpha$에 대하여 $\alpha^3=3\alpha-1$을 이용하면 $\alpha^2-2$ 또한 $f$의 해임을 계산할 수 있고, 세 해의 합이 $0$이므로 나머지 하나도 $\mathbb{Q}(\alpha)$에 속한다. 즉 $\mathbb{L}=\mathbb{Q}(\alpha)$가 이미 $f$의 splitting field이며, 임의의 $\sigma\in\Gal(\mathbb{L}/\mathbb{Q})$는 $\sigma(\alpha)$에 의해 결정되므로 $\Gal(\mathbb{L}/\mathbb{Q})$의 원소는 많아야 세 개이고, 그 image는 여섯 개의 원소를 갖는 $S_A$ 전체가 될 수 없다.
 
-한편 Galois extension $\mathbb{L}/\mathbb{K}$와, $\mathbb{L}$의 subextension인 또 다른 Galois extension $\mathbb{M}/\mathbb{K}$에 대하여, 우리는 [명제 1](#prop1)로부터 다음의 결과를 얻는다.
+한편 Galois extension $\mathbb{L}/\mathbb{K}$와, $\mathbb{L}$의 subextension인 또 다른 Galois extension $\mathbb{M}/\mathbb{K}$에 대하여, 우리는 [명제 1](#prop1){: data-relation="required" }로부터 다음의 결과를 얻는다.
 
 ::: 명제 13
 위와 같은 상황에서 restriction homomorphism
@@ -211,9 +211,9 @@ $$\Gal(\mathbb{L}/\mathbb{K})\rightarrow\Gal(\mathbb{M}/\mathbb{K});\qquad \sigm
 은 surjective이다.
 :::
 ::: 증명
-우선 이 함수가 잘 정의되는 것을 확인하자. 임의의 $\sigma\in\Gal(\mathbb{L}/\mathbb{K})$에 대하여, [명제 1](#prop1)에 의해 $\sigma$를 확장하는 $\overline{\mathbb{K}}$의 $\mathbb{K}$-automorphism $v$가 존재한다. $\mathbb{M}/\mathbb{K}$가 quasi-Galois이므로 [명제 5](#prop5)에 의해 $v(\mathbb{M})=\mathbb{M}$이고, 따라서 $\sigma\vert_\mathbb{M}=v\vert_\mathbb{M}$은 $\mathbb{M}$의 $\mathbb{K}$-automorphism, 즉 $\Gal(\mathbb{M}/\mathbb{K})$의 원소이다.
+우선 이 함수가 잘 정의되는 것을 확인하자. 임의의 $\sigma\in\Gal(\mathbb{L}/\mathbb{K})$에 대하여, [명제 1](#prop1){: data-relation="required" }에 의해 $\sigma$를 확장하는 $\overline{\mathbb{K}}$의 $\mathbb{K}$-automorphism $v$가 존재한다. $\mathbb{M}/\mathbb{K}$가 quasi-Galois이므로 [명제 5](#prop5){: data-relation="required" }에 의해 $v(\mathbb{M})=\mathbb{M}$이고, 따라서 $\sigma\vert_\mathbb{M}=v\vert_\mathbb{M}$은 $\mathbb{M}$의 $\mathbb{K}$-automorphism, 즉 $\Gal(\mathbb{M}/\mathbb{K})$의 원소이다.
 
-이제 surjectivity를 보이자. 임의의 $\tau\in\Gal(\mathbb{M}/\mathbb{K})$가 주어졌다 하면, $\tau$를 $\mathbb{M}$에서 $\overline{\mathbb{K}}$로의 $\mathbb{K}$-homomorphism으로 보고 다시 [명제 1](#prop1)을 적용하여 $\tau$를 확장하는 $\overline{\mathbb{K}}$의 $\mathbb{K}$-automorphism $u$를 얻는다. 그럼 $\mathbb{L}/\mathbb{K}$가 quasi-Galois이므로 $u(\mathbb{L})=\mathbb{L}$이고, $\sigma=u\vert_\mathbb{L}$은 $\Gal(\mathbb{L}/\mathbb{K})$의 원소이며 $\sigma\vert_\mathbb{M}=u\vert_\mathbb{M}=\tau$이다.
+이제 surjectivity를 보이자. 임의의 $\tau\in\Gal(\mathbb{M}/\mathbb{K})$가 주어졌다 하면, $\tau$를 $\mathbb{M}$에서 $\overline{\mathbb{K}}$로의 $\mathbb{K}$-homomorphism으로 보고 다시 [명제 1](#prop1){: data-relation="required" }을 적용하여 $\tau$를 확장하는 $\overline{\mathbb{K}}$의 $\mathbb{K}$-automorphism $u$를 얻는다. 그럼 $\mathbb{L}/\mathbb{K}$가 quasi-Galois이므로 $u(\mathbb{L})=\mathbb{L}$이고, $\sigma=u\vert_\mathbb{L}$은 $\Gal(\mathbb{L}/\mathbb{K})$의 원소이며 $\sigma\vert_\mathbb{M}=u\vert_\mathbb{M}=\tau$이다.
 :::
 
 ---
