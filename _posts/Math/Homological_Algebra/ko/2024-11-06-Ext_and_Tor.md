@@ -28,7 +28,7 @@ $$\Ext_A^i(M,N)=R^i\Hom_\lMod{A}(M,-)(N)$$
 으로 정의하고, 이들을 *$\Ext$ group*들이라 부른다.
 :::
 
-$\Hom_\lMod{A}(-,N)$가 exact functor인 것이 $N$가 injective object인 것과 동치이다. ([\[다중선형대수학\] §사영가군, 단사가군, 평탄가군, ⁋정의 3](/ko/math/multilinear_algebra/various_modules#def3)) 이를 derived functor를 사용해서 보면, 만일 $N$이 injective module이었다면 $0 \rightarrow N \rightarrow N \rightarrow 0$이 injective resolution이 되고, 따라서 $\Ext_A^1(M,N)=0$이 모든 $M$에 대해 성립하는 것을 안다. 그럼 임의의 short exact sequence
+$\Hom_\lMod{A}(-,N)$가 exact functor인 것이 $N$가 injective object인 것과 동치이다. ([\[다중선형대수학\] §사영가군, 단사가군, 평탄가군, ⁋정의 3](/ko/math/multilinear_algebra/various_modules#def3){: data-relation="required" }) 이를 derived functor를 사용해서 보면, 만일 $N$이 injective module이었다면 $0 \rightarrow N \rightarrow N \rightarrow 0$이 injective resolution이 되고, 따라서 $\Ext_A^1(M,N)=0$이 모든 $M$에 대해 성립하는 것을 안다. 그럼 임의의 short exact sequence
 
 $$0 \rightarrow M_1 \rightarrow M_2 \rightarrow M_3 \rightarrow 0$$
 
@@ -39,7 +39,7 @@ $$\begin{aligned}0 &\rightarrow \Hom_\lMod{A}(M_3, N) \rightarrow \Hom_\lMod{A}(
 
 에서, $\Ext_A^1(M_3,N)=0$이 성립하므로 $\Hom_\lMod{A}(-,N)$이 exact라는 것을 알 수 있다.
 
-한편, [정의 1](#def1) 대신 우리는 고정된 $N$에 대하여 $\Hom_\lMod{A}(-,N):\lMod{A} \rightarrow \Ab$를 생각한 후 이 left exact functor의 right derived functor로서 $\Ext$를 정의할 수도 있었을 것이다. 이 두 정의가 같다는 것은 아래 [명제 3](#prop3)에서 확인할 수 있다.
+한편, [정의 1](#def1){: data-relation="required" } 대신 우리는 고정된 $N$에 대하여 $\Hom_\lMod{A}(-,N):\lMod{A} \rightarrow \Ab$를 생각한 후 이 left exact functor의 right derived functor로서 $\Ext$를 정의할 수도 있었을 것이다. 이 두 정의가 같다는 것은 아래 [명제 3](#prop3){: data-relation="forward" }에서 확인할 수 있다.
 
 ## Tor 함자의 정의
 
@@ -75,7 +75,7 @@ $$\cdots \rightarrow M\otimes_AN_1\rightarrow M\otimes_AN_0\rightarrow0$$
 
 중 어느 것을 택하는지에 따라 $\Tor^A_i(M,N)$의 값이 달라져서는 안될 것이다.
 
-우리는 따라서 이들이 주는 cohomology를 비교해야 한다. 이를 위한 증명 전략은 $(p,q)$ 성분이 $\Hom_{\lMod{A}}(P_q, I^p)$인 (혹은 텐서의 경우, $P_p\otimes P'_q$인) double complex를 생각하는 것이다. ([§호몰로지, ⁋정의 4](/ko/math/homological_algebra/homology#def4))
+우리는 따라서 이들이 주는 cohomology를 비교해야 한다. 이를 위한 증명 전략은 $(p,q)$ 성분이 $\Hom_{\lMod{A}}(P_q, I^p)$인 (혹은 텐서의 경우, $P_p\otimes P'_q$인) double complex를 생각하는 것이다. ([§호몰로지, ⁋정의 4](/ko/math/homological_algebra/homology#def4){: data-relation="required" })
 
 ::: 명제 3
 두 $A$-module $M \in \lMod{A}$, $N \in \lMod{A}$, 그리고 이들의 projective resolution $P_\bullet\rightarrow M\rightarrow 0$과 injective resolution $0\rightarrow N\rightarrow I^\bullet$에 대하여, 다음의 isomorphism
@@ -90,15 +90,15 @@ $$H^n(\Hom_\lMod{A}(M, I^\bullet)) \cong H^n(\Hom_\lMod{A}(P_\bullet, N))$$
 
 $$K^{p,q}=\Hom_\lMod{A}(P_q, I^p)$$
 
-를 생각하자. Horizontal differential $d_h:K^{p,q} \rightarrow K^{p+1,q}$은 $I^p\rightarrow I^{p+1}$에 $\Hom_\lMod{A}(P_q,-)$를 취하여 얻고, 비슷하게 vertical differential $d_v: K^{p,q}\rightarrow K^{p,q+1}$은 $P_{q+1}\rightarrow P_q$에 $\Hom_\lMod{A}(-,I^p)$를 취하여 얻는다. 이제 이 double complex의 total complex $\Tot(K)^\bullet$을 생각하자. ([§호몰로지, ⁋정의 5](/ko/math/homological_algebra/homology#def5)) 그럼 주어진 isomorphism은 $\Tot(K)^\bullet$의 $n$번째 cohomology를 다른 방법으로 계산한 것이다.
+를 생각하자. Horizontal differential $d_h:K^{p,q} \rightarrow K^{p+1,q}$은 $I^p\rightarrow I^{p+1}$에 $\Hom_\lMod{A}(P_q,-)$를 취하여 얻고, 비슷하게 vertical differential $d_v: K^{p,q}\rightarrow K^{p,q+1}$은 $P_{q+1}\rightarrow P_q$에 $\Hom_\lMod{A}(-,I^p)$를 취하여 얻는다. 이제 이 double complex의 total complex $\Tot(K)^\bullet$을 생각하자. ([§호몰로지, ⁋정의 5](/ko/math/homological_algebra/homology#def5){: data-relation="required" }) 그럼 주어진 isomorphism은 $\Tot(K)^\bullet$의 $n$번째 cohomology를 다른 방법으로 계산한 것이다.
 
 이를 확인하기 위해, 우선 cochain complex의 row $K^{\bullet, q}$와 column $K^{p,\bullet}$의 cohomology는 다음의 식
 
 $$H^q(K^{p, \bullet}) = \begin{cases} \Hom_\lMod{A}(M, I^p) & q = 0 \\ 0 & q > 0, \end{cases}\qquad H^p(K^{\bullet, q}) = \begin{cases} \Hom_\lMod{A}(P_q, N) & p = 0 \\ 0 & p > 0. \end{cases}\tag{$\ast$}$$
 
-으로 계산된다는 것을 확인하자. 여기서 cohomology가 사라지는 것들은 projective module과 injective module의 정의에 따른 것이다. ([\[다중선형대수학\] §사영가군, 단사가군, 평탄가군, ⁋정의 3](/ko/math/multilinear_algebra/various_modules#def3))
+으로 계산된다는 것을 확인하자. 여기서 cohomology가 사라지는 것들은 projective module과 injective module의 정의에 따른 것이다. ([\[다중선형대수학\] §사영가군, 단사가군, 평탄가군, ⁋정의 3](/ko/math/multilinear_algebra/various_modules#def3){: data-relation="required" })
 
-[§호몰로지, ⁋정의 5](/ko/math/homological_algebra/homology#def5) 직후에 수행한 계산과 마찬가지로, total complex의 cohomology를 계산하려면 differential들이 각 항을 섞어놓기 때문에 다소 주의해야 한다. 이를 위해 우리는 *filtration*을 사용한다. 
+[§호몰로지, ⁋정의 5](/ko/math/homological_algebra/homology#def5){: data-relation="required" } 직후에 수행한 계산과 마찬가지로, total complex의 cohomology를 계산하려면 differential들이 각 항을 섞어놓기 때문에 다소 주의해야 한다. 이를 위해 우리는 *filtration*을 사용한다. 
 
 우선 $\Tot(K)^\bullet$에 filtration
 
@@ -155,7 +155,7 @@ $$G^q \Tot(K)^k = \bigoplus_{\substack{j \geq q \\ p+j=k}} K^{p,j}$$
 을 걸고 계산하면 $H^n(\Tot(K)^\bullet) = H^n(\Hom_\lMod{A}(P_\bullet, N))$를 얻고, 이로부터 원하는 결과를 얻는다.
 :::
 
-비슷한 방식으로 $\Tor$에 대해서도 balancing을 증명할 수 있다. 증명 구조는 동일하며, 차이는 projective module들이 flat module이므로 ([\[다중선형대수학\] §사영가군, 단사가군, 평탄가군, ⁋정의 7](/ko/math/multilinear_algebra/various_modules#def7)) 이를 사용하여 계산을 처리해주면 된다는 것이다. 자세한 증명은 생략하기로 한다.
+비슷한 방식으로 $\Tor$에 대해서도 balancing을 증명할 수 있다. 증명 구조는 동일하며, 차이는 projective module들이 flat module이므로 ([\[다중선형대수학\] §사영가군, 단사가군, 평탄가군, ⁋정의 7](/ko/math/multilinear_algebra/various_modules#def7){: data-relation="required" }) 이를 사용하여 계산을 처리해주면 된다는 것이다. 자세한 증명은 생략하기로 한다.
 
 ::: 명제 4
 두 $A$-module $M \in \rMod{A}$, $N \in \lMod{A}$, 그리고 이들의 projective resolution $P_\bullet\rightarrow M\rightarrow 0$, $P_\bullet'\rightarrow N\rightarrow 0$에 대하여
@@ -206,7 +206,7 @@ $$\Ext^i_\mathbb{Z}(\mathbb{Z}/n\mathbb{Z}, A) \cong \begin{cases} A[n] & i = 0,
 :::
 
 ::: 증명
-[명제 5](#prop5)에서와 마찬가지의 projective resolution 
+[명제 5](#prop5){: data-relation="weak" }에서와 마찬가지의 projective resolution 
 
 $$0 \rightarrow \mathbb{Z}\rightarrow \mathbb{Z}\rightarrow \mathbb{Z}/n\mathbb{Z}\rightarrow 0$$
 
@@ -221,7 +221,7 @@ $$\Ext^1_\mathbb{Z}(\mathbb{Z}/n\mathbb{Z}, A) \cong \coker(\cdot n ) = A/nA$$
 이다. $\Hom_\mathbb{Z}(\mathbb{Z}/n\mathbb{Z}, A)=A[n]$인 것은 단순 계산이다.
 :::
 
-더 일반적으로, $\Ext^1(M,N)$는 $0 \rightarrow N \rightarrow E \rightarrow M \rightarrow 0$ 형태의 short exact sequence, 즉 $N$에 의한 $M$의 extension의 equivalence class와 연결되며, 이는 Yoneda Ext를 통해 확인할 수 있다. ([Wikipedia](https://en.wikipedia.org/wiki/Ext_functor)) [명제 5](#prop5)보다는 덜 직관적이지만, [명제 6](#prop6) 또한 이러한 의미에서 $\Ext$라는 명칭의 기원을 보여준다 할 수 있다. 
+더 일반적으로, $\Ext^1(M,N)$는 $0 \rightarrow N \rightarrow E \rightarrow M \rightarrow 0$ 형태의 short exact sequence, 즉 $N$에 의한 $M$의 extension의 equivalence class와 연결되며, 이는 Yoneda Ext를 통해 확인할 수 있다. ([Wikipedia](https://en.wikipedia.org/wiki/Ext_functor)) [명제 5](#prop5){: data-relation="weak" }보다는 덜 직관적이지만, [명제 6](#prop6){: data-relation="weak" } 또한 이러한 의미에서 $\Ext$라는 명칭의 기원을 보여준다 할 수 있다. 
 
 마지막으로 우리는 다음을 정의한다. 
 
@@ -238,7 +238,7 @@ Commutative ring $A$와 rank $n$ free $A$-module $F$, 그리고 $A$-linear map $
 
 Augmentation map $\epsilon: K_0=A\rightarrow A/\im\varphi$를 canonical projection으로 정의하면, $K(\varphi)_\bullet$을 $A/\im\varphi$의 resolution으로 생각할 수 있다. 편의상 $F$의 basis $e_1, \ldots, e_n$을 고정하고 $\x_i = \varphi(e_i)$라 하면 $\im\varphi = (\x_1, \ldots, \x_n)$이므로, 이를 $K_\bullet(\x_1, \ldots, \x_n)$이라고도 쓴다.
 
-만일 $\x_1, \ldots, \x_n$이 $A$에서 regular sequence라면, Koszul complex는 $A/(\x_1, \ldots, \x_n)$의 *free resolution*이 된다. ([\[가환대수학\] §정칙국소환, ⁋정의 2](/ko/math/commutative_algebra/regular_local_rings#def2)) 즉
+만일 $\x_1, \ldots, \x_n$이 $A$에서 regular sequence라면, Koszul complex는 $A/(\x_1, \ldots, \x_n)$의 *free resolution*이 된다. ([\[가환대수학\] §정칙국소환, ⁋정의 2](/ko/math/commutative_algebra/regular_local_rings#def2){: data-relation="required" }) 즉
 
 $$0 \rightarrow K_n \rightarrow \cdots \rightarrow K_1 \xrightarrow{d_1} A \xrightarrow{\epsilon} A/(\x_1, \ldots, \x_n) \rightarrow 0$$
 

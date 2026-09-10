@@ -28,7 +28,7 @@ $$\Ext_A^i(M,N)=R^i\Hom_\lMod{A}(M,-)(N)$$
 and call these the *$\Ext$ groups*.
 :::
 
-$\Hom_\lMod{A}(-,N)$ is an exact functor if and only if $N$ is an injective object. ([\[Multilinear Algebra\] §Projective, Injective, and Flat Modules, ⁋Definition 3](/en/math/multilinear_algebra/various_modules#def3)) From the viewpoint of derived functors, if $N$ were an injective module then $0 \rightarrow N \rightarrow N \rightarrow 0$ would be an injective resolution, so we would know that $\Ext_A^1(M,N)=0$ for all $M$. Then for any short exact sequence
+$\Hom_\lMod{A}(-,N)$ is an exact functor if and only if $N$ is an injective object. ([\[Multilinear Algebra\] §Projective, Injective, and Flat Modules, ⁋Definition 3](/en/math/multilinear_algebra/various_modules#def3){: data-relation="required" }) From the viewpoint of derived functors, if $N$ were an injective module then $0 \rightarrow N \rightarrow N \rightarrow 0$ would be an injective resolution, so we would know that $\Ext_A^1(M,N)=0$ for all $M$. Then for any short exact sequence
 
 $$0 \rightarrow M_1 \rightarrow M_2 \rightarrow M_3 \rightarrow 0$$
 
@@ -39,7 +39,7 @@ $$\begin{aligned}0 &\rightarrow \Hom_\lMod{A}(M_3, N) \rightarrow \Hom_\lMod{A}(
 
 we see from $\Ext_A^1(M_3,N)=0$ that $\Hom_\lMod{A}(-,N)$ is exact.
 
-On the other hand, instead of [Definition 1](#def1), we could have defined $\Ext$ as the right derived functor of the left exact functor $\Hom_\lMod{A}(-,N):\lMod{A} \rightarrow \Ab$ for a fixed $N$. That these two definitions agree is verified in [Proposition 3](#prop3) below.
+On the other hand, instead of [Definition 1](#def1){: data-relation="required" }, we could have defined $\Ext$ as the right derived functor of the left exact functor $\Hom_\lMod{A}(-,N):\lMod{A} \rightarrow \Ab$ for a fixed $N$. That these two definitions agree is verified in [Proposition 3](#prop3){: data-relation="forward" } below.
 
 ## The Tor Functor
 
@@ -73,7 +73,7 @@ and
 
 $$\cdots \rightarrow M\otimes_AN_1\rightarrow M\otimes_AN_0\rightarrow M\otimes_A N\rightarrow0$$
 
-We must therefore compare the cohomologies they yield. The proof strategy is to consider a double complex whose $(p,q)$-entry is $\Hom_{\lMod{A}}(P_q, I^p)$ (or, in the tensor case, $P_p\otimes P'_q$). ([§Homology, ⁋Definition 4](/en/math/homological_algebra/homology#def4))
+We must therefore compare the cohomologies they yield. The proof strategy is to consider a double complex whose $(p,q)$-entry is $\Hom_{\lMod{A}}(P_q, I^p)$ (or, in the tensor case, $P_p\otimes P'_q$). ([§Homology, ⁋Definition 4](/en/math/homological_algebra/homology#def4){: data-relation="required" })
 
 ::: Proposition 3
 For two $A$-modules $M \in \lMod{A}$, $N \in \lMod{A}$, and their projective resolution $P_\bullet\rightarrow M\rightarrow 0$ and injective resolution $0\rightarrow N\rightarrow I^\bullet$, the following isomorphism holds:
@@ -88,15 +88,15 @@ Consider the double complex
 
 $$K^{p,q}=\Hom_\lMod{A}(P_q, I^p)$$
 
-The horizontal differential $d_h:K^{p,q} \rightarrow K^{p+1,q}$ is obtained by applying $\Hom_\lMod{A}(P_q,-)$ to $I^p\rightarrow I^{p+1}$, and similarly the vertical differential $d_v: K^{p,q}\rightarrow K^{p,q+1}$ is obtained by applying $\Hom_\lMod{A}(-,I^p)$ to $P_{q+1}\rightarrow P_q$. Now consider the total complex $\Tot(K)^\bullet$ of this double complex. ([§Homology, ⁋Definition 5](/en/math/homological_algebra/homology#def5)) Then the stated isomorphism is obtained by computing the $n$-th cohomology of $\Tot(K)^\bullet$ in two different ways.
+The horizontal differential $d_h:K^{p,q} \rightarrow K^{p+1,q}$ is obtained by applying $\Hom_\lMod{A}(P_q,-)$ to $I^p\rightarrow I^{p+1}$, and similarly the vertical differential $d_v: K^{p,q}\rightarrow K^{p,q+1}$ is obtained by applying $\Hom_\lMod{A}(-,I^p)$ to $P_{q+1}\rightarrow P_q$. Now consider the total complex $\Tot(K)^\bullet$ of this double complex. ([§Homology, ⁋Definition 5](/en/math/homological_algebra/homology#def5){: data-relation="required" }) Then the stated isomorphism is obtained by computing the $n$-th cohomology of $\Tot(K)^\bullet$ in two different ways.
 
 To verify this, we first check that the cohomologies of the rows $K^{\bullet, q}$ and columns $K^{p,\bullet}$ of the cochain complex are given by
 
 $$H^q(K^{p, \bullet}) = \begin{cases} \Hom_\lMod{A}(M, I^p) & q = 0 \\ 0 & q > 0, \end{cases}\qquad H^p(K^{\bullet, q}) = \begin{cases} \Hom_\lMod{A}(P_q, N) & p = 0 \\ 0 & p > 0. \end{cases}\tag{$\ast$}$$
 
-Here, the vanishing of cohomology follows from the definitions of projective and injective modules. ([\[Multilinear Algebra\] §Projective, Injective, and Flat Modules, ⁋Definition 3](/en/math/multilinear_algebra/various_modules#def3))
+Here, the vanishing of cohomology follows from the definitions of projective and injective modules. ([\[Multilinear Algebra\] §Projective, Injective, and Flat Modules, ⁋Definition 3](/en/math/multilinear_algebra/various_modules#def3){: data-relation="required" })
 
-As in the computation carried out right after [§Homology, ⁋Definition 5](/en/math/homological_algebra/homology#def5), computing the cohomology of the total complex requires some care because the differentials mix the terms. For this we use a *filtration*.
+As in the computation carried out right after [§Homology, ⁋Definition 5](/en/math/homological_algebra/homology#def5){: data-relation="required" }, computing the cohomology of the total complex requires some care because the differentials mix the terms. For this we use a *filtration*.
 
 First, consider the filtration on $\Tot(K)^\bullet$ defined by
 
@@ -155,7 +155,7 @@ $$G^q \Tot(K)^k = \bigoplus_{\substack{j \geq q \\ p+j=k}} K^{p,j}$$
 we obtain $H^n(\Tot(K)^\bullet) = H^n(\Hom_\lMod{A}(P_\bullet, N))$, and from this we get the desired result.
 :::
 
-In a similar way one can prove balancing for $\Tor$. The proof structure is the same; the only difference is that projective modules are flat modules ([\[Multilinear Algebra\] §Projective, Injective, and Flat Modules, ⁋Definition 7](/en/math/multilinear_algebra/various_modules#def7)), and this is used to handle the computation. We omit the detailed proof.
+In a similar way one can prove balancing for $\Tor$. The proof structure is the same; the only difference is that projective modules are flat modules ([\[Multilinear Algebra\] §Projective, Injective, and Flat Modules, ⁋Definition 7](/en/math/multilinear_algebra/various_modules#def7){: data-relation="required" }), and this is used to handle the computation. We omit the detailed proof.
 
 ::: Proposition 4
 For two $A$-modules $M \in \lMod{A}$, $N \in \lMod{A}$, and their projective resolutions $P_\bullet\rightarrow M\rightarrow 0$, $P_\bullet'\rightarrow N\rightarrow 0$,
@@ -206,7 +206,7 @@ Here $A[n] = \{a \in A \mid na = 0\}$ is the $n$-torsion subgroup.
 :::
 
 ::: Proof
-Consider the same projective resolution as in [Proposition 5](#prop5),
+Consider the same projective resolution as in [Proposition 5](#prop5){: data-relation="required" },
 
 $$0 \rightarrow \mathbb{Z}\rightarrow \mathbb{Z}\rightarrow \mathbb{Z}/n\mathbb{Z}\rightarrow 0$$
 
@@ -221,7 +221,7 @@ $$\Ext^1_\mathbb{Z}(\mathbb{Z}/n\mathbb{Z}, A) \cong \coker(\cdot n ) = A/nA$$
 That $\Hom_\mathbb{Z}(\mathbb{Z}/n\mathbb{Z}, A)=A[n]$ is a simple computation.
 :::
 
-More generally, $\Ext^1(M,N)$ is connected to equivalence classes of short exact sequences of the form $0 \rightarrow N \rightarrow E \rightarrow M \rightarrow 0$, i.e. extensions of $M$ by $N$, which can be seen through Yoneda Ext. ([Wikipedia](https://en.wikipedia.org/wiki/Ext_functor)) Although less intuitive than [Proposition 5](#prop5), [Proposition 6](#prop6) can also be said to show the origin of the name $\Ext$ in this sense.
+More generally, $\Ext^1(M,N)$ is connected to equivalence classes of short exact sequences of the form $0 \rightarrow N \rightarrow E \rightarrow M \rightarrow 0$, i.e. extensions of $M$ by $N$, which can be seen through Yoneda Ext. ([Wikipedia](https://en.wikipedia.org/wiki/Ext_functor)) Although less intuitive than [Proposition 5](#prop5){: data-relation="weak" }, [Proposition 6](#prop6){: data-relation="forward" } can also be said to show the origin of the name $\Ext$ in this sense.
 
 Finally we define the following.
 
@@ -236,7 +236,7 @@ Let a commutative ring $A$, a free $A$-module $F$ of rank $n$, and an $A$-linear
 
 Defining the augmentation map $\epsilon: K_0=A\rightarrow A/\im\varphi$ as the canonical projection, we can regard $K(\varphi)_\bullet$ as a resolution of $A/\im\varphi$. For convenience, fix a basis $e_1, \ldots, e_n$ of $F$ and set $\x_i = \varphi(e_i)$; then $\im\varphi = (\x_1, \ldots, \x_n)$, so we also write this as $K_\bullet(\x_1, \ldots, \x_n)$.
 
-If $\x_1, \ldots, \x_n$ is a regular sequence in $A$, then the Koszul complex becomes a *free resolution* of $A/(\x_1, \ldots, \x_n)$. ([\[Commutative Algebra\] §Regular Local Rings, ⁋Definition 2](/en/math/commutative_algebra/regular_local_rings#def2)) That is,
+If $\x_1, \ldots, \x_n$ is a regular sequence in $A$, then the Koszul complex becomes a *free resolution* of $A/(\x_1, \ldots, \x_n)$. ([\[Commutative Algebra\] §Regular Local Rings, ⁋Definition 2](/en/math/commutative_algebra/regular_local_rings#def2){: data-relation="required" }) That is,
 
 $$0 \rightarrow K_n \rightarrow \cdots \rightarrow K_1 \xrightarrow{d_1} A \xrightarrow{\epsilon} A/(\x_1, \ldots, \x_n) \rightarrow 0$$
 
