@@ -26,13 +26,13 @@ weight: 5
 만일 $F$가 모든 점에서 $C^\infty$라면 이를 간단히 $C^\infty$ 함수라 한다.
 :::
 
-앞서 manifold에서 $\mathbb{R}$로의 $C^\infty$ 함수를 정의했을 때와 마찬가지로, 이 정의 또한 coordinate system의 선택과 무관하다는 것을 보여야 하지만 이는 기본적으로 [§미분다양체, ⁋정의 2](/ko/math/manifolds/smooth_manifolds#def2) 이후에 증명한 것과 똑같기에 생략한다.
+앞서 manifold에서 $\mathbb{R}$로의 $C^\infty$ 함수를 정의했을 때와 마찬가지로, 이 정의 또한 coordinate system의 선택과 무관하다는 것을 보여야 하지만 이는 기본적으로 [§미분다양체, ⁋정의 2](/ko/math/manifolds/smooth_manifolds#def2){: data-relation="required" } 이후에 증명한 것과 똑같기에 생략한다.
 
 ::: 명제 2
 두 manifold $M,N$이 주어졌다 하자. 만일 $F:M\rightarrow N$이 점 $p\in M$에서 $C^\infty$라면, 이 함수는 $p$에서 연속이다. 
 :::
 ::: 증명
-[정의 1](#def1)의 상황을 그대로 가정하자. 그럼 우선 유클리드 공간 사이의 함수 $\psi\circ F\circ\varphi^{-1}:\varphi(U)\rightarrow\psi(V)$가 $C^\infty$이다. 이 함수는 미분가능하므로 당연히 연속이다. 그런데 $\varphi$와 $\psi$는 모두 homeomorphism이므로, 
+[정의 1](#def1){: data-relation="required" }의 상황을 그대로 가정하자. 그럼 우선 유클리드 공간 사이의 함수 $\psi\circ F\circ\varphi^{-1}:\varphi(U)\rightarrow\psi(V)$가 $C^\infty$이다. 이 함수는 미분가능하므로 당연히 연속이다. 그런데 $\varphi$와 $\psi$는 모두 homeomorphism이므로, 
 
 $$F=\psi^{-1}\circ(\psi\circ F\circ\varphi^{-1})\circ\varphi$$
 
@@ -41,7 +41,7 @@ $$F=\psi^{-1}\circ(\psi\circ F\circ\varphi^{-1})\circ\varphi$$
 
 
 ::: 예시 3
-$\id_M:M\rightarrow M$은 당연하게 $C^\infty$ 함수이다. 더 일반적으로, 임의의 열린집합 $U\subseteq M$에 open submanifold 구조를 주면 ([§미분다양체의 예시들, ⁋정의 3](/ko/math/manifolds/examples_of_manifolds#def3)) inclusion map $U\hookrightarrow M$은 $C^\infty$ 함수이다. 
+$\id_M:M\rightarrow M$은 당연하게 $C^\infty$ 함수이다. 더 일반적으로, 임의의 열린집합 $U\subseteq M$에 open submanifold 구조를 주면 ([§미분다양체의 예시들, ⁋정의 3](/ko/math/manifolds/examples_of_manifolds#def3){: data-relation="required" }) inclusion map $U\hookrightarrow M$은 $C^\infty$ 함수이다. 
 :::
 
 ::: 예시 4
@@ -63,7 +63,7 @@ $\id_M:M\rightarrow M$은 당연하게 $C^\infty$ 함수이다. 더 일반적으
 따라서, manifold들과 smooth function들은 category $\Man$을 이룬다.
 
 ::: remark 참고 {#rmk}
-동일한 topological manifold $M$ 위에 diffeomorphic하지만 서로 같지는 않은 미분구조를 줄 수 있다. 두 미분구조 $\mathcal{A}_1$, $\mathcal{A}_2$를 각각 single chart들 $(\mathbb{R},\id_\mathbb{R})$, $(\mathbb{R}, x\mapsto x^{3})$을 통해 정의하자. 그럼 $\mathcal{A}_1$과 $\mathcal{A}_2$는 서로 다른 미분구조를 정의한다. ([§미분다양체, ⁋예시 4](/ko/math/manifolds/smooth_manifolds#ex4))  
+동일한 topological manifold $M$ 위에 diffeomorphic하지만 서로 같지는 않은 미분구조를 줄 수 있다. 두 미분구조 $\mathcal{A}_1$, $\mathcal{A}_2$를 각각 single chart들 $(\mathbb{R},\id_\mathbb{R})$, $(\mathbb{R}, x\mapsto x^{3})$을 통해 정의하자. 그럼 $\mathcal{A}_1$과 $\mathcal{A}_2$는 서로 다른 미분구조를 정의한다. ([§미분다양체, ⁋예시 4](/ko/math/manifolds/smooth_manifolds#ex4){: data-relation="weak" })  
 편의상 $(M,\mathcal{A}_1)$을 $M_1$, $(M,\mathcal{A}_2)$를 $M_2$로 이름붙이고, $\varphi=\id_\mathbb{R}$, 그리고 $\psi=(x\mapsto x^3)$이라 하자. 
 
 이들 두 manifold $M_1, M_2$는 서로 diffeomorphic하다. $M_1$에서 $M_2$로의 함수 $F$를 $x\mapsto x^{1/3}$으로 정의하자. 그럼 자명하게 $F^{-1}$은 $y\mapsto y^3$으로 정의된다. 정의에 의해 $F$는 $C^\infty$이다. 임의의 점 $p\in M_1$에 대하여, $M_1$과 $M_2$ 각각에 정의된 두 coordinate system $(\mathbb{R},\varphi)$와 $(\mathbb{R},\psi)$을 잡으면 $p\in\mathbb{R}$,  $F(\mathbb{R})\subseteq\mathbb{R}$을 만족하는 것은 자명하고, 또 이들이
@@ -122,11 +122,11 @@ $$(\dd{F_p}(v))g=v(g\circ F)$$
 으로 정의되는 linear map이다.
 :::
 
-정의로부터 몇 가지 결과는 자명하다. 우선 $\id_M:M\rightarrow M$에 대하여 $\dd{(\id_M)_p}$는 항상 $T_pM$에서 $T_pM$으로의 identity인 $\id_{T_pM}$이 된다. 이는 [정의 7](#def7)의 식으로부터 명백하다. 또, 세 manifold $M,N,P$에 대하여 $F:M\rightarrow N$, $G:N\rightarrow P$가 $C^\infty$라면, 다음의 식
+정의로부터 몇 가지 결과는 자명하다. 우선 $\id_M:M\rightarrow M$에 대하여 $\dd{(\id_M)_p}$는 항상 $T_pM$에서 $T_pM$으로의 identity인 $\id_{T_pM}$이 된다. 이는 [정의 7](#def7){: data-relation="required" }의 식으로부터 명백하다. 또, 세 manifold $M,N,P$에 대하여 $F:M\rightarrow N$, $G:N\rightarrow P$가 $C^\infty$라면, 다음의 식
 
 $$\dd{(G\circ F)_p}=(\dd{G_{F(p)}})\circ (\dd{F_p})$$ 
 
-이 성립한다. 이는 differential을 정의할 때 사용한 pullback이 합성을 잘 보존한다는 것으로부터도 자명하고, 혹은 마찬가지로 [정의 7](#def7)의 식에 $G\circ F$를 직접 대입해보아도 된다. 이로부터 diffeomorphism $F$에 대해 $\dd{F_p}$는 항상 벡터공간 사이의 isomorphism이 된다는 것 등을 보일 수 있다. 
+이 성립한다. 이는 differential을 정의할 때 사용한 pullback이 합성을 잘 보존한다는 것으로부터도 자명하고, 혹은 마찬가지로 [정의 7](#def7){: data-relation="required" }의 식에 $G\circ F$를 직접 대입해보아도 된다. 이로부터 diffeomorphism $F$에 대해 $\dd{F_p}$는 항상 벡터공간 사이의 isomorphism이 된다는 것 등을 보일 수 있다. 
 
 그러나 differential이 isomorphism이 되는 $C^\infty$ 함수 중 diffeomorphism이 아닌 것은 매우 많다.
 
@@ -151,7 +151,7 @@ $$\frac{\partial}{\partial x^1}\bigg\vert_p,\cdots,\frac{\partial}{\partial x^m}
 
 $$\frac{\partial}{\partial x^i}\bigg\vert_pf=\frac{\partial}{\partial r^i}\bigg\vert_{\varphi(p)} (f\circ\varphi^{-1})$$
 
-이다. 그런데 [정의 7](#def7)을 염두에 두고 이 식을 다시 살펴보면, 이는 $\varphi^{-1}:\varphi(U)\rightarrow U$의 differential과 동일한 모양임을 알 수 있다.[^1] 즉 tangent space의 basis는 다른 것이 아니라, 단지 $\mathbb{R}^m$의 tangent space $T_{\varphi(p)}\mathbb{R}^m$의 $m$개의 basis들을 differential $\dd{\varphi}^{-1}_{\varphi(p)}$를 통해 옮겨온 것일 뿐이다.
+이다. 그런데 [정의 7](#def7){: data-relation="required" }을 염두에 두고 이 식을 다시 살펴보면, 이는 $\varphi^{-1}:\varphi(U)\rightarrow U$의 differential과 동일한 모양임을 알 수 있다.[^1] 즉 tangent space의 basis는 다른 것이 아니라, 단지 $\mathbb{R}^m$의 tangent space $T_{\varphi(p)}\mathbb{R}^m$의 $m$개의 basis들을 differential $\dd{\varphi}^{-1}_{\varphi(p)}$를 통해 옮겨온 것일 뿐이다.
 
 이를 좀 더 선형대수학적인 관점에서 보자면, $\mathcal{B}$를 $\mathbb{R}^m$의 standard basis, $\mathcal{C}$를 $\partial/\partial x^i$들로 이루어진 $T_pM$의 basis라 하면 $(T_{\varphi(p)}\mathbb{R}^m, \mathcal{B})$에서 $(T_pM, \mathcal{C})$로의 linear map $\dd{\varphi}^{-1}_{\varphi(p)}$의 행렬표현이 정확히 항등행렬이 된다고 할 수 있다.
 
@@ -163,7 +163,7 @@ $$\frac{\partial}{\partial x^1}\bigg\vert_p,\cdots,\frac{\partial}{\partial x^m}
 
 $$\dd{F_p}\left(\frac{\partial}{\partial x^i}\bigg\vert_p\right)=a_{1i}\frac{\partial}{\partial y^1}\bigg\vert_{F(p)}+\cdots+a_{ni}\frac{\partial}{\partial y^n}\bigg\vert_{F(p)}$$
 
-의 각 계수들 $a_{ji}$를 구해주면 된다. 그런데 $\mathcal{C}^\infty_{N,F(p)}$의 maximal ideal을 $\mathfrak{n}$이라 하면, 어차피 [§여접공간, ⁋정의 3](/ko/math/manifolds/cotangent_space#def3)에서 보았듯 $\partial/\partial y^j$들은 $\mathfrak{n}/\mathfrak{n}^2$의 원소들 $y^j+\mathfrak{n}^2$의 dual basis이므로, 이를 위해서는 양 변을 함수 $y^j$에 적용해주면 된다.[^2] 즉
+의 각 계수들 $a_{ji}$를 구해주면 된다. 그런데 $\mathcal{C}^\infty_{N,F(p)}$의 maximal ideal을 $\mathfrak{n}$이라 하면, 어차피 [§여접공간, ⁋정의 3](/ko/math/manifolds/cotangent_space#def3){: data-relation="required" }에서 보았듯 $\partial/\partial y^j$들은 $\mathfrak{n}/\mathfrak{n}^2$의 원소들 $y^j+\mathfrak{n}^2$의 dual basis이므로, 이를 위해서는 양 변을 함수 $y^j$에 적용해주면 된다.[^2] 즉
 
 $$\dd{F_p}\left(\frac{\partial}{\partial x^i}\bigg\vert_p\right)y^j=a_{1i}\frac{\partial}{\partial y^1}\bigg\vert_{F(p)}y^j+\cdots+a_{ji}\frac{\partial}{\partial y^j}\bigg\vert_{F(p)}y^j+\cdots+a_{ni}\frac{\partial}{\partial y^n}\bigg\vert_{F(p)}y^j$$
 

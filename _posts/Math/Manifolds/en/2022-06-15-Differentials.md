@@ -27,13 +27,13 @@ Let two manifolds $M,N$ be given. A function $F:M\rightarrow N$ is said to be $C
 If $F$ is $C^\infty$ at every point, we simply call it a $C^\infty$ function.
 :::
 
-As when we previously defined $C^\infty$ functions from a manifold to $\mathbb{R}$, one should verify that this definition is independent of the choice of coordinate system; but this is essentially identical to what we proved after [§Smooth Manifolds, ⁋Definition 2](/en/math/manifolds/smooth_manifolds#def2), so we omit it.
+As when we previously defined $C^\infty$ functions from a manifold to $\mathbb{R}$, one should verify that this definition is independent of the choice of coordinate system; but this is essentially identical to what we proved after [§Smooth Manifolds, ⁋Definition 2](/en/math/manifolds/smooth_manifolds#def2){: data-relation="required" }, so we omit it.
 
 ::: Proposition 2
 Let two manifolds $M,N$ be given. If $F:M\rightarrow N$ is $C^\infty$ at a point $p\in M$, then $F$ is continuous at $p$.
 :::
 ::: Proof
-Assume the situation of [Definition 1](#def1). Then the function $\psi\circ F\circ\varphi^{-1}:\varphi(U)\rightarrow\psi(V)$ between Euclidean spaces is $C^\infty$. Since it is differentiable, it is certainly continuous. But $\varphi$ and $\psi$ are both homeomorphisms, so
+Assume the situation of [Definition 1](#def1){: data-relation="required" }. Then the function $\psi\circ F\circ\varphi^{-1}:\varphi(U)\rightarrow\psi(V)$ between Euclidean spaces is $C^\infty$. Since it is differentiable, it is certainly continuous. But $\varphi$ and $\psi$ are both homeomorphisms, so
 
 $$F=\psi^{-1}\circ(\psi\circ F\circ\varphi^{-1})\circ\varphi$$
 
@@ -42,7 +42,7 @@ is continuous as a composition of continuous functions.
 
 
 ::: Example 3
-$\id_M:M\rightarrow M$ is obviously a $C^\infty$ function. More generally, if any open subset $U\subseteq M$ is given the open submanifold structure ([§Examples of Differentiable Manifolds, ⁋Definition 3](/en/math/manifolds/examples_of_manifolds#def3)), the inclusion map $U\hookrightarrow M$ is a $C^\infty$ function.
+$\id_M:M\rightarrow M$ is obviously a $C^\infty$ function. More generally, if any open subset $U\subseteq M$ is given the open submanifold structure ([§Examples of Differentiable Manifolds, ⁋Definition 3](/en/math/manifolds/examples_of_manifolds#def3){: data-relation="required" }), the inclusion map $U\hookrightarrow M$ is a $C^\infty$ function.
 :::
 
 ::: Example 4
@@ -64,7 +64,7 @@ If for two manifolds $M,N$ there exist $F:M\rightarrow N$ and $G:N\rightarrow M$
 Thus, manifolds and smooth functions form the category $\Man$.
 
 ::: remark Remark {#rmk}
-One can endow the same topological manifold $M$ with distinct smooth structures that are diffeomorphic to each other but not identical. Define two smooth structures $\mathcal{A}_1$, $\mathcal{A}_2$ by the single charts $(\mathbb{R},\id_\mathbb{R})$ and $(\mathbb{R}, x\mapsto x^{3})$, respectively. Then $\mathcal{A}_1$ and $\mathcal{A}_2$ define different smooth structures. ([§Smooth Manifolds, ⁋Example 4](/en/math/manifolds/smooth_manifolds#ex4))  
+One can endow the same topological manifold $M$ with distinct smooth structures that are diffeomorphic to each other but not identical. Define two smooth structures $\mathcal{A}_1$, $\mathcal{A}_2$ by the single charts $(\mathbb{R},\id_\mathbb{R})$ and $(\mathbb{R}, x\mapsto x^{3})$, respectively. Then $\mathcal{A}_1$ and $\mathcal{A}_2$ define different smooth structures. ([§Smooth Manifolds, ⁋Example 4](/en/math/manifolds/smooth_manifolds#ex4){: data-relation="required" })  
 For convenience, write $(M,\mathcal{A}_1)=M_1$, $(M,\mathcal{A}_2)=M_2$, $\varphi=\id_\mathbb{R}$, and $\psi=(x\mapsto x^3)$.
 
 These two manifolds $M_1, M_2$ are diffeomorphic to each other. Define the function $F:M_1\rightarrow M_2$ by $x\mapsto x^{1/3}$. Then obviously $F^{-1}$ is given by $y\mapsto y^3$. By definition $F$ is $C^\infty$. For any point $p\in M_1$, taking the coordinate systems $(\mathbb{R},\varphi)$ on $M_1$ and $(\mathbb{R},\psi)$ on $M_2$, it is obvious that $p\in\mathbb{R}$ and $F(\mathbb{R})\subseteq\mathbb{R}$, and since they satisfy
@@ -121,11 +121,11 @@ Let $F:M\rightarrow N$ be a $C^\infty$ function between two manifolds. For any $
 $$(\dd{F_p}(v))g=v(g\circ F)$$
 :::
 
-Several consequences are immediate from the definition. First, for $\id_M:M\rightarrow M$, the differential $\dd{(\id_M)_p}$ is always the identity map $\id_{T_pM}$ on $T_pM$. This is clear from the formula in [Definition 7](#def7). Also, for three manifolds $M,N,P$, if $F:M\rightarrow N$ and $G:N\rightarrow P$ are $C^\infty$, then the formula
+Several consequences are immediate from the definition. First, for $\id_M:M\rightarrow M$, the differential $\dd{(\id_M)_p}$ is always the identity map $\id_{T_pM}$ on $T_pM$. This is clear from the formula in [Definition 7](#def7){: data-relation="required" }. Also, for three manifolds $M,N,P$, if $F:M\rightarrow N$ and $G:N\rightarrow P$ are $C^\infty$, then the formula
 
 $$\dd{(G\circ F)_p}=(\dd{G_{F(p)}})\circ (\dd{F_p})$$
 
-holds. This is obvious either from the fact that the pullback used to define the differential preserves composition, or by directly substituting $G\circ F$ into the formula of [Definition 7](#def7). From this one can show, among other things, that for a diffeomorphism $F$, the differential $\dd{F_p}$ is always an isomorphism of vector spaces.
+holds. This is obvious either from the fact that the pullback used to define the differential preserves composition, or by directly substituting $G\circ F$ into the formula of [Definition 7](#def7){: data-relation="required" }. From this one can show, among other things, that for a diffeomorphism $F$, the differential $\dd{F_p}$ is always an isomorphism of vector spaces.
 
 However, there are many $C^\infty$ functions whose differential is an isomorphism but which are not diffeomorphisms.
 
@@ -150,7 +150,7 @@ Then, for any $f\in C^\infty_p(M)$,
 
 $$\frac{\partial}{\partial x^i}\bigg\vert_pf=\frac{\partial}{\partial r^i}\bigg\vert_p (f\circ\varphi^{-1})$$
 
-holds. However, keeping [Definition 7](#def7) in mind and examining this formula again, we see that it has exactly the same form as the differential of $\varphi^{-1}:\varphi(U)\rightarrow U$.[^1] In other words, the basis of the tangent space is nothing other than the $m$ bases of the tangent space $T_{\varphi(p)}\mathbb{R}^m$ of $\mathbb{R}^m$ carried over via the differential $\dd{\varphi}^{-1}_{\varphi(p)}$.
+holds. However, keeping [Definition 7](#def7){: data-relation="required" } in mind and examining this formula again, we see that it has exactly the same form as the differential of $\varphi^{-1}:\varphi(U)\rightarrow U$.[^1] In other words, the basis of the tangent space is nothing other than the $m$ bases of the tangent space $T_{\varphi(p)}\mathbb{R}^m$ of $\mathbb{R}^m$ carried over via the differential $\dd{\varphi}^{-1}_{\varphi(p)}$.
 
 From a more linear-algebraic point of view, if $\mathcal{B}$ is the standard basis of $\mathbb{R}^m$ and $\mathcal{C}$ is the basis of $T_pM$ consisting of the $\partial/\partial x^i$, then the matrix representation of the linear map $\dd{\varphi}^{-1}_{\varphi(p)}$ from $(T_{\varphi(p)}\mathbb{R}^m, \mathcal{B})$ to $(T_pM, \mathcal{C})$ is precisely the identity matrix.
 
