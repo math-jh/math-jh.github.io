@@ -31,9 +31,9 @@ $$v(x)=u(x) < u(y)=v(y)$$
   
 에서 $v$는 $S$에서 $v(S)$로의 isomorphism이다. 따라서 $\mathcal{F}$는 inductive이다.
 
-이제 [§선택공리, ⁋정리 4](/ko/math/set_theory/axiom_of_choice#thm4)에 의해 $\mathcal{F}$는 maximal element를 갖는다. 이를 $u_0$이라 하고, 이의 정의역을 $S_0$이라 하자. 우리는 $S_0=A$이거나 $u_0(S_0)=B$임을 보여야 한다. 
+이제 [§선택공리, ⁋정리 4](/ko/math/set_theory/axiom_of_choice#thm4){: data-relation="required" }에 의해 $\mathcal{F}$는 maximal element를 갖는다. 이를 $u_0$이라 하고, 이의 정의역을 $S_0$이라 하자. 우리는 $S_0=A$이거나 $u_0(S_0)=B$임을 보여야 한다. 
 
-만일 그렇지 않다면, [§서수와 정렬집합, ⁋명제 5](/ko/math/set_theory/ordinals#prop5)에 의해 어떤 $a\in A$와 $b\in B$가 존재하여 $S_0=(-\infty, a)$이고 $u_0(S_0)=(-\infty, b)$일 것이다. 이제 $u_0$에 $(a,b)$를 추가하면 $u_0$을 strict하게 확장하는 새로운 함수가 생기고, 이는 $u_0$의 maximality에 모순이므로 $S_0=A$이거나 $u_0(S_0)=B$이다.
+만일 그렇지 않다면, [§서수와 정렬집합, ⁋명제 5](/ko/math/set_theory/ordinals#prop5){: data-relation="required" }에 의해 어떤 $a\in A$와 $b\in B$가 존재하여 $S_0=(-\infty, a)$이고 $u_0(S_0)=(-\infty, b)$일 것이다. 이제 $u_0$에 $(a,b)$를 추가하면 $u_0$을 strict하게 확장하는 새로운 함수가 생기고, 이는 $u_0$의 maximality에 모순이므로 $S_0=A$이거나 $u_0(S_0)=B$이다.
 :::
 
 앞서 말한 것과 같이 임의의 ordinal은 well-ordered set이므로, 위 명제에 의하면 임의의 well-ordered set을 어떤 ordinal의 initial segment와 order isomorphic한 segment로 볼 수 있는 길이 열렸다. 그러나, 이를 위해서는 다음의 새로운 공리를 도입해야 한다.
@@ -76,7 +76,7 @@ $A$가 well-ordered set이라 하고, 집합 $X$를
 1. $B$는 ordinal들의 집합이므로, $\in$에 의해 well-ordering이 주어져있다. 
 2. 임의의 $\alpha_x\in B$에 대하여, 만일 $\gamma\in\alpha_x$라면 $\alpha_x$와 $S_x$ 사이의 order isomorphism $\varphi$에 의한 inverse image $\varphi^{-1}(\gamma)\in S_x$를 생각할 수 있다. 이를 $c$라 하면, $\varphi$를 $S_c$로 제한한 함수가 $S_c$와 $\gamma$ 사이의 order isomorphism을 정의하므로 $B$의 정의에 의해 $\gamma\in B$이다. 
 
-이상에서 $B$는 ordinal number임을 알 수 있다. 또, 2번 증명을 똑같이 적용한다면 임의의 $x\in X$에 대하여, 만일 $y<x$라면 $y\in X$임도 보일 수 있다. 즉, $X$는 $A$의 segment이고, 따라서 $X=S_x$이거나 $X=A$이다. ([§서수와 정렬집합, ⁋명제 5](/ko/math/set_theory/ordinals#prop5)) 
+이상에서 $B$는 ordinal number임을 알 수 있다. 또, 2번 증명을 똑같이 적용한다면 임의의 $x\in X$에 대하여, 만일 $y<x$라면 $y\in X$임도 보일 수 있다. 즉, $X$는 $A$의 segment이고, 따라서 $X=S_x$이거나 $X=A$이다. ([§서수와 정렬집합, ⁋명제 5](/ko/math/set_theory/ordinals#prop5){: data-relation="required" }) 
 
 이제 $X=A$임을 보이기 위해, 결론을 부정하여 모순을 찾자. 우선 우리는 $f:X\rightarrow B$를 $f(x)=\alpha_x$로 정의할 수 있으며, 이 경우 $f$는 $B$와 $X$ 사이의 order isomorphism이 된다는 것을 확인할 수 있다. 그런데 만일 $X=S_x$였다면, $B$는 ordinal이므로, $S_x$가 ordinal $B$와 isomorphic하다는 이야기가 되므로, 정의에 의해 $x\in X$여야 한다. 이는 모순이므로, $X=A$이다. 
 :::
@@ -97,7 +97,7 @@ $A$가 well-ordered set이라 하고, 집합 $X$를
 Ordinal $\alpha$가 *initial ordinal*이라는 것은, $\beta<\alpha$를 만족하는 모든 $\beta$에 대해, $\beta$와 $\alpha$ 사이의 전단사함수가 존재하지 않는 것이다.
 :::
 
-그렇다면 임의의 집합의 크기는 initial ordinal의 크기로 표현할 수 있다. 어떤 집합 $X$가 주어졌을 때, 여기에 [§선택공리, ⁋정리 1](/ko/math/set_theory/axiom_of_choice#thm1)에 의해 well-order를 주어 ordinal $\alpha$를 택한 다음, 이와 같은 크기를 갖는 ordinal들 중 가장 작은 것을 (well-ordering에 의해) 뽑아오면 된다. 
+그렇다면 임의의 집합의 크기는 initial ordinal의 크기로 표현할 수 있다. 어떤 집합 $X$가 주어졌을 때, 여기에 [§선택공리, ⁋정리 1](/ko/math/set_theory/axiom_of_choice#thm1){: data-relation="required" }에 의해 well-order를 주어 ordinal $\alpha$를 택한 다음, 이와 같은 크기를 갖는 ordinal들 중 가장 작은 것을 (well-ordering에 의해) 뽑아오면 된다. 
 
 우리는 ordinal number를 이용해서 cardinal number를 정의할 수 있다. 무한한 initial ordinal들을 모아둔 다음, 여기에 순서대로 $0, 1, \ldots$번째 순서를 붙인다고 생각하자. 즉, $\omega_0$은 0번째 initial ordinal, 즉 $\omega$와 같고, 그 후로 집합의 크기가 strict하게 커지는 $\omega_1,\omega_2,\ldots$와 같이 정의하는 것이다. Cardinal을 정의할 때에는, 이들을 (ordinal을 정의하는 문자인 $\omega$ 대신) $\aleph_\alpha$와 같이 적는 것이 보통이다.  
 
