@@ -24,7 +24,7 @@ published: false
 
 ## Borel 구성
 
-우리는 $EG$를 곱하여 작용을 free하게 만든 뒤 quotient를 취하는 위 아이디어를 정의로 옮긴다. [\[대수적 위상수학\] §분류공간, ⁋정의 6](/ko/math/algebraic_topology/classifying_spaces#def6)에서 구성한 universal bundle $EG\rightarrow BG$와 classifying space $BG$를 다시 쓰면, $EG$는 contractible하며 $G$는 그 위에 right action으로 free하게 작용한다. 한편 $X$ 위의 $G$-작용은 left action으로 둔다.
+우리는 $EG$를 곱하여 작용을 free하게 만든 뒤 quotient를 취하는 위 아이디어를 정의로 옮긴다. [\[대수적 위상수학\] §분류공간, ⁋정의 6](/ko/math/algebraic_topology/classifying_spaces#def6){: data-relation="required" }에서 구성한 universal bundle $EG\rightarrow BG$와 classifying space $BG$를 다시 쓰면, $EG$는 contractible하며 $G$는 그 위에 right action으로 free하게 작용한다. 한편 $X$ 위의 $G$-작용은 left action으로 둔다.
 
 ::: 정의 1
 Topological group $G$와 left $G$-space $X$에 대하여, 곱공간 $EG\times X$ 위에 $G$-작용을
@@ -42,9 +42,9 @@ $$H_G^\bullet(X;R):=H^\bullet(X_G;R)$$
 로 정의한다.
 :::
 
-$X_G$는 정확히 principal $G$-bundle $EG\rightarrow BG$에 fiber $X$를 붙인 associated bundle이다. ([\[대수적 위상수학\] §분류공간, ⁋정의 3](/ko/math/algebraic_topology/classifying_spaces#def3)) 계수환 $R$을 고정한 동안에는 이를 생략하고 $H_G^\bullet(X)$로 적는다. Cohomology의 cup product가 $H^\bullet(X_G)$에 graded-commutative $R$-algebra 구조를 주므로 ([\[대수적 위상수학\] §합곱, ⁋정의 1](/ko/math/algebraic_topology/cup_products#def1)) $H_G^\bullet(X)$ 역시 graded-commutative $R$-algebra이다.
+$X_G$는 정확히 principal $G$-bundle $EG\rightarrow BG$에 fiber $X$를 붙인 associated bundle이다. ([\[대수적 위상수학\] §분류공간, ⁋정의 3](/ko/math/algebraic_topology/classifying_spaces#def3){: data-relation="required" }) 계수환 $R$을 고정한 동안에는 이를 생략하고 $H_G^\bullet(X)$로 적는다. Cohomology의 cup product가 $H^\bullet(X_G)$에 graded-commutative $R$-algebra 구조를 주므로 ([\[대수적 위상수학\] §합곱, ⁋정의 1](/ko/math/algebraic_topology/cup_products#def1){: data-relation="weak" }) $H_G^\bullet(X)$ 역시 graded-commutative $R$-algebra이다.
 
-이 구성은 두 가지 방향으로 functorial하다. 첫째, $X$에 대해 contravariant이다. $G$-equivariant 연속함수 $f:X\rightarrow Y$는 $\id\times f:EG\times X\rightarrow EG\times Y$를 주고, 이것이 $G$-작용과 호환되므로 quotient 사이의 morphism $f_G:X_G\rightarrow Y_G$로 내려간다. 따라서 $f^\ast:H_G^\bullet(Y)\rightarrow H_G^\bullet(X)$를 얻으며, 항등사상과 합성을 보존한다. 둘째, $G$에 대해서도 contravariant이다. Continuous group homomorphism $\phi:H\rightarrow G$가 주어지면 $G$-space $X$는 $\phi$를 통해 $H$-space가 되고, $BH\rightarrow BG$를 덮는 $H$-equivariant morphism $EH\rightarrow EG$가 존재한다. ([\[대수적 위상수학\] §분류공간, ⁋보조정리 9](/ko/math/algebraic_topology/classifying_spaces#lem9)) 이 morphism이 $X_H=EH\times_H X\rightarrow EG\times_G X=X_G$를 유도하여 $H_G^\bullet(X)\rightarrow H_H^\bullet(X)$를 준다. 특히 $H=\{e\}$인 경우가 곧 아래에서 다룰 ordinary cohomology로의 restriction이다.
+이 구성은 두 가지 방향으로 functorial하다. 첫째, $X$에 대해 contravariant이다. $G$-equivariant 연속함수 $f:X\rightarrow Y$는 $\id\times f:EG\times X\rightarrow EG\times Y$를 주고, 이것이 $G$-작용과 호환되므로 quotient 사이의 morphism $f_G:X_G\rightarrow Y_G$로 내려간다. 따라서 $f^\ast:H_G^\bullet(Y)\rightarrow H_G^\bullet(X)$를 얻으며, 항등사상과 합성을 보존한다. 둘째, $G$에 대해서도 contravariant이다. Continuous group homomorphism $\phi:H\rightarrow G$가 주어지면 $G$-space $X$는 $\phi$를 통해 $H$-space가 되고, $BH\rightarrow BG$를 덮는 $H$-equivariant morphism $EH\rightarrow EG$가 존재한다. ([\[대수적 위상수학\] §분류공간, ⁋보조정리 9](/ko/math/algebraic_topology/classifying_spaces#lem9){: data-relation="required" }) 이 morphism이 $X_H=EH\times_H X\rightarrow EG\times_G X=X_G$를 유도하여 $H_G^\bullet(X)\rightarrow H_H^\bullet(X)$를 준다. 특히 $H=\{e\}$인 경우가 곧 아래에서 다룰 ordinary cohomology로의 restriction이다.
 
 ## 동변 코호몰로지의 기본 성질
 
@@ -58,7 +58,7 @@ $G$-space $X$에 대하여 projection $\pi:X_G\rightarrow BG$, $[e,x]\mapsto [e]
 3. Fiber의 포함 $\iota:X\hookrightarrow X_G$은 algebra homomorphism인 *restriction* $\iota^\ast:H_G^\bullet(X)\rightarrow H^\bullet(X)$을 유도한다.
 :::
 ::: 증명
-$X_G=EG\times_G X$는 principal $G$-bundle $EG\rightarrow BG$에 fiber $X$를 붙인 associated bundle이고 ([\[대수적 위상수학\] §분류공간, ⁋정의 3](/ko/math/algebraic_topology/classifying_spaces#def3)) associated bundle은 fiber bundle이므로, $\pi:X_G\rightarrow BG$는 fiber $X$를 갖는 fiber bundle이다.
+$X_G=EG\times_G X$는 principal $G$-bundle $EG\rightarrow BG$에 fiber $X$를 붙인 associated bundle이고 ([\[대수적 위상수학\] §분류공간, ⁋정의 3](/ko/math/algebraic_topology/classifying_spaces#def3){: data-relation="required" }) associated bundle은 fiber bundle이므로, $\pi:X_G\rightarrow BG$는 fiber $X$를 갖는 fiber bundle이다.
 
 (1) $X=\mathrm{pt}$이면 $G$가 한 점 위에 자명하게 작용하므로
 
@@ -112,10 +112,10 @@ $$H_T^\bullet(\mathrm{pt};\mathbb{Z})=H^\bullet(BT;\mathbb{Z})=\mathrm{Sym}_{\ma
 이다. 여기서 $M$은 degree $2$ 부분 $H^2(BT;\mathbb{Z})$에 놓이며, 각 character $\chi\in M$은 associated line bundle $L_\chi=ET\times_T\mathbb{C}_\chi$의 first Chern class $c_1(L_\chi)\in H^2(BT;\mathbb{Z})$에 대응한다.
 :::
 ::: 증명
-$H^\bullet(BT;\mathbb{Z})=\mathbb{Z}[t_1,\ldots,t_n]$이며 degree $2$ 부분 $H^2(BT;\mathbb{Z})$이 character lattice $\mathrm{Hom}(T,S^1)$과 표준적으로 동형이라는 사실은 [\[대수적 위상수학\] §분류공간, ⁋따름정리 12](/ko/math/algebraic_topology/classifying_spaces#cor12)에서 보였다. 그 동형은 character $\chi:T\rightarrow S^1$에 $B\chi:BT\rightarrow BS^1=\mathbb{CP}^\infty$의 pullback $(B\chi)^\ast(t)\in H^2(BT;\mathbb{Z})$를 대응시키는 것이었고, $t=c_1$이 $BS^1=\mathbb{CP}^\infty$ 위의 tautological line bundle의 first Chern class였으므로, 이 pullback은 곧 $\chi$가 주는 일차원 representation $\mathbb{C}_\chi$에 대한 associated line bundle $L_\chi=ET\times_T\mathbb{C}_\chi$의 $c_1(L_\chi)$이다. Polynomial ring이 그 degree $2$ 부분 위의 symmetric algebra이므로 $\mathbb{Z}[t_1,\ldots,t_n]=\mathrm{Sym}_{\mathbb{Z}}(M)$이다.
+$H^\bullet(BT;\mathbb{Z})=\mathbb{Z}[t_1,\ldots,t_n]$이며 degree $2$ 부분 $H^2(BT;\mathbb{Z})$이 character lattice $\mathrm{Hom}(T,S^1)$과 표준적으로 동형이라는 사실은 [\[대수적 위상수학\] §분류공간, ⁋따름정리 12](/ko/math/algebraic_topology/classifying_spaces#cor12){: data-relation="required" }에서 보였다. 그 동형은 character $\chi:T\rightarrow S^1$에 $B\chi:BT\rightarrow BS^1=\mathbb{CP}^\infty$의 pullback $(B\chi)^\ast(t)\in H^2(BT;\mathbb{Z})$를 대응시키는 것이었고, $t=c_1$이 $BS^1=\mathbb{CP}^\infty$ 위의 tautological line bundle의 first Chern class였으므로, 이 pullback은 곧 $\chi$가 주는 일차원 representation $\mathbb{C}_\chi$에 대한 associated line bundle $L_\chi=ET\times_T\mathbb{C}_\chi$의 $c_1(L_\chi)$이다. Polynomial ring이 그 degree $2$ 부분 위의 symmetric algebra이므로 $\mathbb{Z}[t_1,\ldots,t_n]=\mathrm{Sym}_{\mathbb{Z}}(M)$이다.
 :::
 
-이 동형은 character lattice의 원소, 곧 [\[리 이론\] §원환면의 작용, ⁋정의 4](/ko/math/lie_theory/torus_action#def4)에서 정의한 torus representation의 weight를 $H_T^\bullet(\mathrm{pt})$의 degree $2$ class로 읽게 해 준다. 좌표 character $T\rightarrow S^1$, $(\lambda_1,\ldots,\lambda_n)\mapsto\lambda_i$를 $t_i$로 적으면, weight $a=(a_1,\ldots,a_n)\in M\cong\mathbb{Z}^n$인 representation은 degree $2$ class $a_1t_1+\cdots+a_nt_n$에 대응한다. 이 degree의 두 배 차이 (weight는 degree $1$처럼 세지만 cohomology에서는 degree $2$에 놓인다) 는 $\mathbb{CP}^\infty$의 cohomology가 짝수 degree에만 있다는 사실에서 비롯한다. 앞으로 보게 될 계산에서 fixed point에 놓인 representation의 weight들이 $H_T^\bullet(\mathrm{pt})=\mathbb{Z}[t_1,\ldots,t_n]$의 일차식으로 직접 나타난다.
+이 동형은 character lattice의 원소, 곧 [\[리 이론\] §원환면의 작용, ⁋정의 4](/ko/math/lie_theory/torus_action#def4){: data-relation="weak" }에서 정의한 torus representation의 weight를 $H_T^\bullet(\mathrm{pt})$의 degree $2$ class로 읽게 해 준다. 좌표 character $T\rightarrow S^1$, $(\lambda_1,\ldots,\lambda_n)\mapsto\lambda_i$를 $t_i$로 적으면, weight $a=(a_1,\ldots,a_n)\in M\cong\mathbb{Z}^n$인 representation은 degree $2$ class $a_1t_1+\cdots+a_nt_n$에 대응한다. 이 degree의 두 배 차이 (weight는 degree $1$처럼 세지만 cohomology에서는 degree $2$에 놓인다) 는 $\mathbb{CP}^\infty$의 cohomology가 짝수 degree에만 있다는 사실에서 비롯한다. 앞으로 보게 될 계산에서 fixed point에 놓인 representation의 weight들이 $H_T^\bullet(\mathrm{pt})=\mathbb{Z}[t_1,\ldots,t_n]$의 일차식으로 직접 나타난다.
 
 ## 사영다발 정리
 
@@ -148,17 +148,17 @@ $$0=c_r\big(\pi^\ast E\otimes\mathcal{O}(1)\big)=\prod_{i=1}^r(x_i-h)$$
 
 $$\lambda\cdot[z_0:z_1]=[z_0:\lambda z_1]$$
 
-로 작용한다 하자. 곧 두 좌표선은 각각 weight $0$, weight $1$인 일차원 representation $\mathbb{C}_0$, $\mathbb{C}_1$이며, 작용은 두 fixed point $p_0=[1:0]$과 $p_1=[0:1]$을 갖는다. ([\[리 이론\] §원환면의 작용, ⁋예시 3](/ko/math/lie_theory/torus_action#ex3)) Projectivization이 associated bundle 구성과 교환하므로
+로 작용한다 하자. 곧 두 좌표선은 각각 weight $0$, weight $1$인 일차원 representation $\mathbb{C}_0$, $\mathbb{C}_1$이며, 작용은 두 fixed point $p_0=[1:0]$과 $p_1=[0:1]$을 갖는다. ([\[리 이론\] §원환면의 작용, ⁋예시 3](/ko/math/lie_theory/torus_action#ex3){: data-relation="weak" }) Projectivization이 associated bundle 구성과 교환하므로
 
 $$S^2_{S^1}=ES^1\times_{S^1}\mathbb{P}(\mathbb{C}_0\oplus\mathbb{C}_1)=\mathbb{P}(L_0\oplus L_1)$$
 
-이다. 여기서 $L_a=ES^1\times_{S^1}\mathbb{C}_a$이고, $H^\bullet(BS^1)=\mathbb{Z}[t]$ 안에서 $c_1(L_0)=0$, $c_1(L_1)=t$이다. ([명제 4](#prop4)) 따라서 [명제 5](#prop5)에 의해
+이다. 여기서 $L_a=ES^1\times_{S^1}\mathbb{C}_a$이고, $H^\bullet(BS^1)=\mathbb{Z}[t]$ 안에서 $c_1(L_0)=0$, $c_1(L_1)=t$이다. ([명제 4](#prop4){: data-relation="required" }) 따라서 [명제 5](#prop5){: data-relation="required" }에 의해
 
 $$H_{S^1}^\bullet(S^2)=\mathbb{Z}[t][h]\big/\big((h-0)(h-t)\big)=\mathbb{Z}[t][h]/(h^2-th)$$
 
 이고, 이는 $\{1,h\}$를 기저로 갖는 free $\mathbb{Z}[t]$-module이다 ($\lvert t\rvert=\lvert h\rvert=2$).
 
-이 결과를 naive quotient와 대조하자. 앞서 보았듯 $S^2/S^1\cong[-1,1]$은 contractible이므로 $H^\bullet(S^2/S^1)=\mathbb{Z}$로 $0$차에만 남는다. 반면 $H_{S^1}^\bullet(S^2)$은 rank $2$의 free $\mathbb{Z}[t]$-module로, $S^2$의 위상을 ($2$라는 rank가 $H^\bullet(S^2)$의 차원과 같다는 점에서) 그리고 회전 작용을 (관계식 $h^2-th$에 나타나는 두 fixed point의 weight $0,1$을 통해) 모두 기억한다. 실제로 restriction $\iota^\ast:H_{S^1}^\bullet(S^2)\rightarrow H^\bullet(S^2)$은 $t=0$을 대입하는 것에 해당하여 ([명제 2](#prop2)의 (3))
+이 결과를 naive quotient와 대조하자. 앞서 보았듯 $S^2/S^1\cong[-1,1]$은 contractible이므로 $H^\bullet(S^2/S^1)=\mathbb{Z}$로 $0$차에만 남는다. 반면 $H_{S^1}^\bullet(S^2)$은 rank $2$의 free $\mathbb{Z}[t]$-module로, $S^2$의 위상을 ($2$라는 rank가 $H^\bullet(S^2)$의 차원과 같다는 점에서) 그리고 회전 작용을 (관계식 $h^2-th$에 나타나는 두 fixed point의 weight $0,1$을 통해) 모두 기억한다. 실제로 restriction $\iota^\ast:H_{S^1}^\bullet(S^2)\rightarrow H^\bullet(S^2)$은 $t=0$을 대입하는 것에 해당하여 ([명제 2](#prop2){: data-relation="required" }의 (3))
 
 $$\mathbb{Z}[t][h]/(h^2-th)\xrightarrow{t\mapsto 0}\mathbb{Z}[h]/(h^2)=H^\bullet(S^2)$$
 
@@ -200,7 +200,7 @@ $$\mathbb{C}^{n+1}=\bigoplus_{i=0}^n\mathbb{C}_{t_i}$$
 
 $$\mathbb{P}^n_T=ET\times_T\mathbb{P}\Big(\bigoplus_i\mathbb{C}_{t_i}\Big)=\mathbb{P}\Big(\bigoplus_{i=0}^n L_i\Big),\qquad L_i=ET\times_T\mathbb{C}_{t_i}$$
 
-이다. [명제 4](#prop4)에 의해 $c_1(L_i)=t_i\in H^2(BT)=\bigoplus_i\mathbb{Z}t_i$이므로, $E=\bigoplus_i L_i$에 [명제 5](#prop5)를 적용하면 $h=c_1(\mathcal{O}(-1))$에 대하여
+이다. [명제 4](#prop4){: data-relation="required" }에 의해 $c_1(L_i)=t_i\in H^2(BT)=\bigoplus_i\mathbb{Z}t_i$이므로, $E=\bigoplus_i L_i$에 [명제 5](#prop5){: data-relation="required" }를 적용하면 $h=c_1(\mathcal{O}(-1))$에 대하여
 
 $$H_T^\bullet(\mathbb{P}^n)=H^\bullet(\mathbb{P}^n_T)=\mathbb{Z}[t_0,\ldots,t_n][h]\Big/\prod_{i=0}^n(h-t_i)$$
 
@@ -211,7 +211,7 @@ $$H_T^\bullet(\mathbb{P}^n)=H^\bullet(\mathbb{P}^n_T)=\mathbb{Z}[t_0,\ldots,t_n]
 
 $$\prod_{i=0}^n(h-t_i)=h^{n+1}-e_1 h^n+e_2 h^{n-1}-\cdots+(-1)^{n+1}e_{n+1}$$
 
-이며, 여기서 $e_j=e_j(t_0,\ldots,t_n)$은 $j$번째 elementary symmetric polynomial이다. 이 식에서 $t_i$를 모두 $0$으로 보내는 restriction $\iota^\ast$은 ([명제 2](#prop2)의 (3))
+이며, 여기서 $e_j=e_j(t_0,\ldots,t_n)$은 $j$번째 elementary symmetric polynomial이다. 이 식에서 $t_i$를 모두 $0$으로 보내는 restriction $\iota^\ast$은 ([명제 2](#prop2){: data-relation="required" }의 (3))
 
 $$\mathbb{Z}[t_0,\ldots,t_n][h]\Big/\prod_{i}(h-t_i)\xrightarrow{t_i\mapsto 0}\mathbb{Z}[h]/(h^{n+1})=H^\bullet(\mathbb{P}^n)$$
 
@@ -229,7 +229,7 @@ $$H_T^\bullet(X)\otimes_{H_T^\bullet(\mathrm{pt})}\mathbb{Z}\xrightarrow{\cong}H
 이 동형인 것이다.
 :::
 
-여기서 오른쪽으로 가는 morphism은 [명제 2](#prop2)의 restriction $\iota^\ast$이 유도하는 것이다. [예시 6](#ex6)의 $S^2$와 [정리 7](#thm7)의 $\mathbb{P}^n$은 모두 equivariantly formal이다. 두 경우 모두 $H_T^\bullet(X)$이 $h$의 거듭제곱을 free 기저로 가졌고, $t_i\mapsto 0$이 $H^\bullet(X)$를 회복하였기 때문이다. 더 일반적으로 fiber bundle $X\rightarrow X_T\rightarrow BT$의 Serre spectral sequence
+여기서 오른쪽으로 가는 morphism은 [명제 2](#prop2){: data-relation="required" }의 restriction $\iota^\ast$이 유도하는 것이다. [예시 6](#ex6){: data-relation="weak" }의 $S^2$와 [정리 7](#thm7){: data-relation="required" }의 $\mathbb{P}^n$은 모두 equivariantly formal이다. 두 경우 모두 $H_T^\bullet(X)$이 $h$의 거듭제곱을 free 기저로 가졌고, $t_i\mapsto 0$이 $H^\bullet(X)$를 회복하였기 때문이다. 더 일반적으로 fiber bundle $X\rightarrow X_T\rightarrow BT$의 Serre spectral sequence
 
 $$E_2^{p,q}=H^p\big(BT;H^q(X)\big)\Longrightarrow H_T^{p+q}(X)$$
 
