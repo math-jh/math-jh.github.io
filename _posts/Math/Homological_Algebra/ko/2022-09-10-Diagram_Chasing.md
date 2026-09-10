@@ -13,7 +13,7 @@ weight: 1
 
 ---
 
-Homology 대수학은 말 그대로 chain complex들이 주어졌을 때 이들의 homology를 이용하여 그 성질을 살펴보는 학문이다. ([\[범주론\] §아벨 카테고리, ⁋정의 4](/ko/math/category_theory/abelian_categories#def4)) Chain complex는 임의의 abelian category에서 정의되지만, Freyd-Mitchell embedding theorem에 의해 이들은 모두 적당한 $\lMod{A}$의 full subcategory로 embed될 수 있다. ([\[범주론\] §아벨 카테고리, ⁋정리 8 (Freyd-Mitchell embedding theorem)](/ko/math/category_theory/abelian_categories#thm8)) 
+Homology 대수학은 말 그대로 chain complex들이 주어졌을 때 이들의 homology를 이용하여 그 성질을 살펴보는 학문이다. ([\[범주론\] §아벨 카테고리, ⁋정의 4](/ko/math/category_theory/abelian_categories#def4){: data-relation="weak" }) Chain complex는 임의의 abelian category에서 정의되지만, Freyd-Mitchell embedding theorem에 의해 이들은 모두 적당한 $\lMod{A}$의 full subcategory로 embed될 수 있다. ([\[범주론\] §아벨 카테고리, ⁋정리 8 (Freyd-Mitchell embedding theorem)](/ko/math/category_theory/abelian_categories#thm8){: data-relation="required" }) 
 
 이번 글에서는 homology 대수를 할 때 필수적인 보조정리인 5항 보조정리와 snake lemma를 증명한다. 이들의 증명은 kernel과 cokernel의 universal property를 사용하여 하는 것이 가능하지만, 이는 증명을 불필요하게 길게 만들 수 있으므로 우리는 모든 증명을 $\lMod{A}$에서 진행한다. 이는 특히 각 대상들에서 원소를 뽑아올 수 있음을 의미한다. 이와 같은 증명을 diagram chasing이라 부르며, 임의의 abelian category 대신 $\lMod{A}$에서 증명을 진행하는 것은 위에서 언급한 Freyd-Mitchell embedding theorem에 의해 정당화될 수 있다.
 
@@ -137,7 +137,7 @@ $f,g$와 $f',g'$이 각각 주어진 두 개의 열
 
 $$\ker(\alpha)\overset{f^\sharp}{\longrightarrow}\ker(\beta)\overset{g^\sharp}{\longrightarrow}\ker(\gamma),\qquad \coker(\alpha)\overset{(f')^\ast}{\longrightarrow}\coker(\beta)\overset{(g')^\ast}{\longrightarrow}\coker(\gamma)$$
 
-을 유도하는 것은 [보조정리 4](#lem4)의 결과이다. 뿐만 아니라, $i_A, i_B, i_C$를 각각 kernel들에서 $A,B,C$로의 자명한 함수들이라 하면
+을 유도하는 것은 [보조정리 4](#lem4){: data-relation="required" }의 결과이다. 뿐만 아니라, $i_A, i_B, i_C$를 각각 kernel들에서 $A,B,C$로의 자명한 함수들이라 하면
 
 $$i_C\circ g^\sharp\circ f^\sharp=g\circ i_B\circ f^\sharp=g\circ f\circ i_A=0$$
 
@@ -175,7 +175,7 @@ $$((f')^\ast)(a'+\im(\alpha))=b'+\im(\beta)$$
 
 {% diagram Math/Homological_Algebra/Diagram_Chasing-8.svg width="18.88em" alt="snake_diagram" %}
 
-이 주어졌다 하자. 이 때, 위와 아래의 행은 각각 exact이다. 그럼 [보조정리 5](#lem5)에서부터 얻어진 두 개의 exact sequence 
+이 주어졌다 하자. 이 때, 위와 아래의 행은 각각 exact이다. 그럼 [보조정리 5](#lem5){: data-relation="required" }에서부터 얻어진 두 개의 exact sequence 
 
 $$\ker(\alpha)\rightarrow\ker(\beta)\rightarrow\ker(\gamma),\qquad \coker(\alpha)\rightarrow\coker(\beta)\rightarrow\coker(\gamma)$$
 

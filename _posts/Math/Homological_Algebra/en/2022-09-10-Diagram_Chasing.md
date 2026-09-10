@@ -14,7 +14,7 @@ translated_at: 2026-05-31T12:00:04+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-05-31T12:00:04+00:00
 ---
-Homological algebra is, literally, the study of the properties of chain complexes via their homology. ([\[Category Theory\] §Abelian Categories, ⁋Definition 4](/en/math/category_theory/abelian_categories#def4)) Chain complexes are defined in any abelian category, but by the Freyd-Mitchell embedding theorem they can all be embedded as a full subcategory of some $\lMod{A}$. ([\[Category Theory\] §Abelian Categories, ⁋Theorem 8 (Freyd-Mitchell embedding theorem)](/en/math/category_theory/abelian_categories#thm8))
+Homological algebra is, literally, the study of the properties of chain complexes via their homology. ([\[Category Theory\] §Abelian Categories, ⁋Definition 4](/en/math/category_theory/abelian_categories#def4){: data-relation="weak" }) Chain complexes are defined in any abelian category, but by the Freyd-Mitchell embedding theorem they can all be embedded as a full subcategory of some $\lMod{A}$. ([\[Category Theory\] §Abelian Categories, ⁋Theorem 8 (Freyd-Mitchell embedding theorem)](/en/math/category_theory/abelian_categories#thm8){: data-relation="required" })
 
 In this post we prove the five lemma and the snake lemma, two essential lemmas in homological algebra. Their proofs can be carried out using the universal properties of kernels and cokernels, but this would make the arguments unnecessarily long, so we work throughout in $\lMod{A}$. In particular, this means we may pick elements from each object. Such arguments are called diagram chasing, and the passage from an arbitrary abelian category to $\lMod{A}$ is justified by the Freyd-Mitchell embedding theorem mentioned above.
 
@@ -138,7 +138,7 @@ That $f,g$ and $f',g'$ induce the two given columns
 
 $$\ker(\alpha)\overset{f^\sharp}{\longrightarrow}\ker(\beta)\overset{g^\sharp}{\longrightarrow}\ker(\gamma),\qquad \coker(\alpha)\overset{(f')^\ast}{\longrightarrow}\coker(\beta)\overset{(g')^\ast}{\longrightarrow}\coker(\gamma)$$
 
-is a consequence of [Lemma 4](#lem4). Moreover, letting $i_A, i_B, i_C$ be the canonical maps from the kernels to $A,B,C$ respectively,
+is a consequence of [Lemma 4](#lem4){: data-relation="required" }. Moreover, letting $i_A, i_B, i_C$ be the canonical maps from the kernels to $A,B,C$ respectively,
 
 $$i_C\circ g^\sharp\circ f^\sharp=g\circ i_B\circ f^\sharp=g\circ f\circ i_A=0$$
 
@@ -176,7 +176,7 @@ Consider a commutative diagram whose rows are exact
 
 {% diagram Math/Homological_Algebra/Diagram_Chasing-8.svg width="18.88em" alt="snake_diagram" %}
 
-Here the top and bottom rows are each exact. Then there exists a map $\delta:\ker(\gamma)\rightarrow\coker(\alpha)$ connecting the two exact sequences obtained from [Lemma 5](#lem5)
+Here the top and bottom rows are each exact. Then there exists a map $\delta:\ker(\gamma)\rightarrow\coker(\alpha)$ connecting the two exact sequences obtained from [Lemma 5](#lem5){: data-relation="required" }
 
 $$\ker(\alpha)\rightarrow\ker(\beta)\rightarrow\ker(\gamma),\qquad \coker(\alpha)\rightarrow\coker(\beta)\rightarrow\coker(\gamma)$$
 
