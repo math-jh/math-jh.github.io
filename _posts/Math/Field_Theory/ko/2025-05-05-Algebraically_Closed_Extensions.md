@@ -24,9 +24,9 @@ Field $\mathbb{K}$에 대하여 다음이 모두 동치이다.
 4. $\mathbb{K}$의 임의의 algebraic extension은 항상 degree $1$이다. 
 :::
 ::: 증명
-우선 첫째 조건과 둘째 조건이 동치임은 자명하다. 만일 첫째 조건이 성립한다면 셋째 조건이 성립하는 것은 자명하다. 또, [\[환론\] §다항식환, ⁋명제 6](/ko/math/ring_theory/polynomial_rings#prop6)에 의하여 $\mathbb{K}[\x]$의 임의의 원소는 irreducible polynomial의 곱으로 나타낼 수 있고, 일차식은 자명한 이유로 $\mathbb{K}$ 안에서 해를 가지므로 셋째 조건이 둘째 조건을 함의한다. 따라서 첫째 조건부터 셋째 조건까지가 모두 동치이다.
+우선 첫째 조건과 둘째 조건이 동치임은 자명하다. 만일 첫째 조건이 성립한다면 셋째 조건이 성립하는 것은 자명하다. 또, [\[환론\] §다항식환, ⁋명제 6](/ko/math/ring_theory/polynomial_rings#prop6){: data-relation="required" }에 의하여 $\mathbb{K}[\x]$의 임의의 원소는 irreducible polynomial의 곱으로 나타낼 수 있고, 일차식은 자명한 이유로 $\mathbb{K}$ 안에서 해를 가지므로 셋째 조건이 둘째 조건을 함의한다. 따라서 첫째 조건부터 셋째 조건까지가 모두 동치이다.
 
-이제 셋째 조건과 넷째 조건이 동치임을 보이자. 우선 셋째 조건이 성립한다 가정하면, 우리는 algebraic extension $\mathbb{L}/\mathbb{K}$의 임의의 원소 $x$의 minimal polynomial이 irreducible이므로 ([§대수적 확장, ⁋정리 15](/ko/math/field_theory/algebraic_extensions#thm15)) 셋째 조건으로부터 이 minimal polynomial이 일차식이어야 함을 안다. 
+이제 셋째 조건과 넷째 조건이 동치임을 보이자. 우선 셋째 조건이 성립한다 가정하면, 우리는 algebraic extension $\mathbb{L}/\mathbb{K}$의 임의의 원소 $x$의 minimal polynomial이 irreducible이므로 ([§대수적 확장, ⁋정리 15](/ko/math/field_theory/algebraic_extensions#thm15){: data-relation="required" }) 셋째 조건으로부터 이 minimal polynomial이 일차식이어야 함을 안다. 
 
 이제 넷째 조건을 가정하자. $\mathbb{K}[\x]$의 irreducible polynomial $f$에 대하여, $\mathbb{K}[\x]/(f)$를 생각하면 이는 $\mathbb{K}$의 degree $\deg f$ algebraic extension이다. 우리는 이 extension의 degree가 $1$이어야 함을 가정하고 있으므로, 셋째 조건이 얻어진다. 
 :::
@@ -58,7 +58,7 @@ $$1+\prod_{a\in \Omega}(\x-a)$$
 Algebraic extension $\mathbb{L}/\mathbb{K}$가 주어졌다 하고, $\Omega$가 $\mathbb{K}$의 algebraically closed  extension이라 하자. 그럼 $\mathbb{L}/\mathbb{K}$에서 $\Omega/\mathbb{K}$로의 morphism이 존재한다. 
 :::
 
-이에 대한 증명은 [§대수적 확장, ⁋명제 8](/ko/math/field_theory/algebraic_extensions#prop8)로부터 얻어진다. 실제로 이로부터 $\mathbb{L}$과 $\Omega$의 composite field $\mathbb{M}$과 extension $u_1: \mathbb{L}\rightarrow \mathbb{M}$, $u_2: \Omega\rightarrow \mathbb{M}$을 얻는데, $\mathbb{L}/\mathbb{K}$가 algebraic이므로 $\mathbb{M}/u_2(\Omega)$ 또한 algebraic이고 $u_2(\Omega)\cong\Omega$가 algebraically closed이므로 [명제 1](#prop1)의 넷째 조건에 의하여 $\mathbb{M}=u_2(\Omega)$이며, 따라서 $u_2^{-1}\circ u_1$이 원하는 morphism을 준다. 
+이에 대한 증명은 [§대수적 확장, ⁋명제 8](/ko/math/field_theory/algebraic_extensions#prop8){: data-relation="required" }로부터 얻어진다. 실제로 이로부터 $\mathbb{L}$과 $\Omega$의 composite field $\mathbb{M}$과 extension $u_1: \mathbb{L}\rightarrow \mathbb{M}$, $u_2: \Omega\rightarrow \mathbb{M}$을 얻는데, $\mathbb{L}/\mathbb{K}$가 algebraic이므로 $\mathbb{M}/u_2(\Omega)$ 또한 algebraic이고 $u_2(\Omega)\cong\Omega$가 algebraically closed이므로 [명제 1](#prop1){: data-relation="required" }의 넷째 조건에 의하여 $\mathbb{M}=u_2(\Omega)$이며, 따라서 $u_2^{-1}\circ u_1$이 원하는 morphism을 준다. 
 
 ## 분해확대체
 
@@ -77,7 +77,7 @@ Field $\mathbb{K}$와 non-constant 다항식들 $f_i\in \mathbb{K}[\x]$에 대�
 Field $\mathbb{K}$와 non-constant 다항식들 $f_i\in \mathbb{K}[\x]$에 대하여, 이들 다항식들의 splitting extension이 존재한다. 
 :::
 ::: 증명
-Algebraic extension을 할 때는 어차피 다항식의 해만이 중요하므로, 주어진 다항식들 $f_i$들이 모두 monic polynomial이라 가정하여도 된다. 각각의 $f_i$가 degree $d_i$ monic polynomial이라 하자. 그럼 [\[다중선형대수학\] §대칭텐서, §§대칭함수](/ko/math/multilinear_algebra/symmetric_tensors#대칭함수)의 구성에 의하여, 각각의 $i$마다 다음의 두 조건
+Algebraic extension을 할 때는 어차피 다항식의 해만이 중요하므로, 주어진 다항식들 $f_i$들이 모두 monic polynomial이라 가정하여도 된다. 각각의 $f_i$가 degree $d_i$ monic polynomial이라 하자. 그럼 [\[다중선형대수학\] §대칭텐서, §§대칭함수](/ko/math/multilinear_algebra/symmetric_tensors#대칭함수){: data-relation="required" }의 구성에 의하여, 각각의 $i$마다 다음의 두 조건
 
 1. $A_i$는 $\mathbb{K}$-algebra로서 $\xi_{i,1},\ldots, \xi_{i, d_i}$에 의해 생성된다. 
 2. $A_i[\x]$에서 $f_i(\x)=\prod_{k=1}^{d_i} (\x-\xi_{i,k})$이 성립한다. 
@@ -88,7 +88,7 @@ Algebraic extension을 할 때는 어차피 다항식의 해만이 중요하므�
 
 $$A=\bigotimes_{i\in I} A_i$$
 
-이라 하면, Krull theorem에 의하여 $A$의 maximal ideal $\mathfrak{m}$이 존재하므로 ([\[대수적 구조\] §환의 정의, ⁋정리 10](/ko/math/algebraic_structures/rings#thm10)) $\mathbb{L}=A/\mathfrak{m}$이라 할 수 있으며, 이것이 원하는 splitting extension을 준다. 
+이라 하면, Krull theorem에 의하여 $A$의 maximal ideal $\mathfrak{m}$이 존재하므로 ([\[대수적 구조\] §환의 정의, ⁋정리 10](/ko/math/algebraic_structures/rings#thm10){: data-relation="required" }) $\mathbb{L}=A/\mathfrak{m}$이라 할 수 있으며, 이것이 원하는 splitting extension을 준다. 
 :::
 
 뿐만 아니라, splitting extension은 다음과 같은 센스에서 유일하다. 
@@ -111,7 +111,7 @@ Algebraic closure의 존재성을 보이기 위해서 $\mathbb{K}[\x]$의 모든
 Algebraic extension $\Omega/\mathbb{K}$가 algebraically closed인 것은 $\mathbb{K}[\x]$의 임의의 non-constant polynomial이 $\Omega[\x]$ 안에서 일차식의 곱으로 인수분해되는 것과 동치이다. 
 :::
 ::: 증명
-당연히 한쪽 방향만 보이면 충분하다. 이를 위해 $\Omega$의 임의의 algebraic extension $\Omega'$를 잡고, $x\in\Omega'$라 하자. 우리는 $x\in \Omega$임을 보여야 한다. 우선 $x$는 $\Omega$에 대해 algebraic이고, $\Omega/\mathbb{K}$가 algebraic이므로 [§대수적 확장, ⁋명제 19](/ko/math/field_theory/algebraic_extensions#prop19)에 의하여 $x$는 $\mathbb{K}$에 대해서도 algebraic이다. 이제 $u\in \mathbb{K}[\x]$를 $x$의 minimal polynomial이라 하면, $u$는 $\Omega[\x]$에서 일차식들의 곱으로 쪼개지며 따라서 $x\in \Omega$이다. 
+당연히 한쪽 방향만 보이면 충분하다. 이를 위해 $\Omega$의 임의의 algebraic extension $\Omega'$를 잡고, $x\in\Omega'$라 하자. 우리는 $x\in \Omega$임을 보여야 한다. 우선 $x$는 $\Omega$에 대해 algebraic이고, $\Omega/\mathbb{K}$가 algebraic이므로 [§대수적 확장, ⁋명제 19](/ko/math/field_theory/algebraic_extensions#prop19){: data-relation="required" }에 의하여 $x$는 $\mathbb{K}$에 대해서도 algebraic이다. 이제 $u\in \mathbb{K}[\x]$를 $x$의 minimal polynomial이라 하면, $u$는 $\Omega[\x]$에서 일차식들의 곱으로 쪼개지며 따라서 $x\in \Omega$이다. 
 :::
 
 따라서, 주어진 field $\mathbb{K}$의 algebraic closure를 찾기 위해서는 $\mathbb{K}$의 임의의 non-constant polynomial들의 splitting extension을 생각하면 된다. 

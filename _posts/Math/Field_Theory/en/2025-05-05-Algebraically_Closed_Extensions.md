@@ -25,9 +25,9 @@ For a field $\mathbb{K}$, the following are equivalent.
 4. Every algebraic extension of $\mathbb{K}$ has degree $1$. 
 :::
 ::: Proof
-First, the equivalence of the first and second conditions is obvious. If the first condition holds, then the third condition is obvious. Also, by [\[Ring Theory\] §Polynomial Rings, ⁋Proposition 6](/en/math/ring_theory/polynomial_rings#prop6), any element of $\mathbb{K}[\x]$ can be written as a product of irreducible polynomials, and linear polynomials have roots in $\mathbb{K}$ for obvious reasons, so the third condition implies the second. Therefore the first three conditions are all equivalent.
+First, the equivalence of the first and second conditions is obvious. If the first condition holds, then the third condition is obvious. Also, by [\[Ring Theory\] §Polynomial Rings, ⁋Proposition 6](/en/math/ring_theory/polynomial_rings#prop6){: data-relation="required" }, any element of $\mathbb{K}[\x]$ can be written as a product of irreducible polynomials, and linear polynomials have roots in $\mathbb{K}$ for obvious reasons, so the third condition implies the second. Therefore the first three conditions are all equivalent.
 
-Now let us show that the third and fourth conditions are equivalent. Assume that the third condition holds; then for any element $x$ of an algebraic extension $\mathbb{L}/\mathbb{K}$, its minimal polynomial is irreducible ([§Algebraic Extensions, ⁋Theorem 15](/en/math/field_theory/algebraic_extensions#thm15)), so from the third condition this minimal polynomial must be linear. 
+Now let us show that the third and fourth conditions are equivalent. Assume that the third condition holds; then for any element $x$ of an algebraic extension $\mathbb{L}/\mathbb{K}$, its minimal polynomial is irreducible ([§Algebraic Extensions, ⁋Theorem 15](/en/math/field_theory/algebraic_extensions#thm15){: data-relation="required" }), so from the third condition this minimal polynomial must be linear. 
 
 Now assume the fourth condition. For an irreducible polynomial $f$ in $\mathbb{K}[\x]$, consider $\mathbb{K}[\x]/(f)$; this is an algebraic extension of $\mathbb{K}$ of degree $n$. Since we are assuming that every algebraic extension of $\mathbb{K}$ has degree $1$, the third condition follows. 
 :::
@@ -59,7 +59,7 @@ This polynomial has no root in $\Omega$.
 Let an algebraic extension $\mathbb{L}/\mathbb{K}$ be given, and let $\Omega$ be an algebraically closed extension of $\mathbb{K}$. Then there exists a morphism from $\mathbb{L}/\mathbb{K}$ to $\Omega/\mathbb{K}$. 
 :::
 
-The proof of this is immediate from [§Algebraic Extensions, ⁋Proposition 8](/en/math/field_theory/algebraic_extensions#prop8). 
+The proof of this is immediate from [§Algebraic Extensions, ⁋Proposition 8](/en/math/field_theory/algebraic_extensions#prop8){: data-relation="required" }. 
 
 ## Splitting Extensions
 
@@ -78,7 +78,7 @@ Then we must prove the existence of a splitting extension.
 For a field $\mathbb{K}$ and polynomials $f_i\in \mathbb{K}[\x]$, a splitting extension of these polynomials exists. 
 :::
 ::: Proof
-When dealing with algebraic extensions, only the roots of the polynomials matter anyway, so we may assume that the given polynomials $f_i$ are all monic. Suppose each $f_i$ is a monic polynomial of degree $d_i$. Then by [\[Multilinear Algebra\] §Symmetric Tensors, ⁋Proposition 14](/en/math/multilinear_algebra/symmetric_tensors#prop14), for each $i$ we can choose a $\mathbb{K}$-algebra $A_i$ and elements $\xi_{i,1},\ldots, \xi_{i, d_i}\in A_i$ satisfying the following two conditions:
+When dealing with algebraic extensions, only the roots of the polynomials matter anyway, so we may assume that the given polynomials $f_i$ are all monic. Suppose each $f_i$ is a monic polynomial of degree $d_i$. Then by [\[Multilinear Algebra\] §Symmetric Tensors, ⁋Proposition 14](/en/math/multilinear_algebra/symmetric_tensors#prop14){: data-relation="required" }, for each $i$ we can choose a $\mathbb{K}$-algebra $A_i$ and elements $\xi_{i,1},\ldots, \xi_{i, d_i}\in A_i$ satisfying the following two conditions:
 
 1. $A_i$ is generated as a $\mathbb{K}$-algebra by $\xi_{i,1},\ldots, \xi_{i, d_i}$. 
 2. In $A_i[\x]$, the equality $f_i(\x)=\prod_{k=1}^{d_i} (\x-\xi_{i,k})$ holds. 
@@ -113,7 +113,7 @@ An algebraic extension $\Omega/\mathbb{K}$ is algebraically closed if and only i
 Of course, it suffices to show only one direction. For this, take any algebraic extension $\Omega'$ of $\Omega$, and let $x\in\Omega'$. We must show that $x\in \Omega$. First, $x$ is algebraic over $\Omega$, and since $\Omega/\mathbb{K}$ is algebraic, $x$ is also algebraic over $\mathbb{K}$. Now let $u\in \mathbb{K}[\x]$ be the minimal polynomial of $x$; then $u$ splits into a product of linear polynomials in $\Omega[\x]$, and therefore $x\in \Omega$. 
 :::
 
-Therefore, to find an algebraic closure of a given field $\mathbb{K}$, it suffices to consider the splitting field of all non-constant polynomials in $\mathbb{K}[\x]$. This is necessarily unique by [Proposition 8](#prop8). 
+Therefore, to find an algebraic closure of a given field $\mathbb{K}$, it suffices to consider the splitting field of all non-constant polynomials in $\mathbb{K}[\x]$. This is necessarily unique by [Proposition 8](#prop8){: data-relation="required" }. 
 
 ::: Proposition 11
 For an algebraic extension $\Omega/\mathbb{K}$ of a field $\mathbb{K}$, the following hold.
