@@ -30,7 +30,7 @@ For a topological space $X$ and a subset $A$, the following are all equivalent.
 3. $A$ is open in its closure $\cl A$ (in $X$).
 :::
 ::: Proof
-First, suppose $A$ is locally closed, and for each $x\in A$ let $V_x$ be an open neighborhood of $x$ in $X$ satisfying the condition of [Definition 1](#def1). Then $U=\bigcup_{x\in A} V_x$ is an open set. Also, by applying [§Subspaces, ⁋Proposition 6](/en/math/topology/subspaces#prop6), we see that $A$ is closed in $U$. Thus $A=U\cap C$ for some closed set $C$ in $X$, so the second condition holds.
+First, suppose $A$ is locally closed, and for each $x\in A$ let $V_x$ be an open neighborhood of $x$ in $X$ satisfying the condition of [Definition 1](#def1){: data-relation="required" }. Then $U=\bigcup_{x\in A} V_x$ is an open set. Also, by applying [§Subspaces, ⁋Proposition 6](/en/math/topology/subspaces#prop6){: data-relation="required" }, we see that $A$ is closed in $U$. Thus $A=U\cap C$ for some closed set $C$ in $X$, so the second condition holds.
 
 Now suppose $A=U\cap C$ holds for an open set $U$ and a closed set $C$ in $X$. Then $\cl A\subseteq C$, so
 
@@ -49,9 +49,9 @@ In particular, from condition 2, if a continuous function $f:X\rightarrow Y$ and
 Let a topological space $X$ be given, and let $R$ be an equivalence relation on the set $X$. Then the *quotient space* of $X$ by $R$ means the space $X/R$ equipped with the final topology defined by the canonical projection $p:X\rightarrow X/R$.
 :::
 
-By [§Initial and Final Topology, ⁋Proposition 5](/en/math/topology/initial_and_final_topology#prop5), the open sets in $X/R$ are exactly those sets $U$ such that $p^{-1}(U)$ is open in $X$.[^1] Rewriting this in the language of [[Set Theory] §Examples of Equivalence Relations, ⁋Definition 5](/en/math/set_theory/examples_of_equivalence#def5), we can verify that the open sets on $X/R$ correspond bijectively to the open sets of $X$ that are *saturated* with respect to $R$.
+By [§Initial and Final Topology, ⁋Proposition 5](/en/math/topology/initial_and_final_topology#prop5){: data-relation="required" }, the open sets in $X/R$ are exactly those sets $U$ such that $p^{-1}(U)$ is open in $X$.[^1] Rewriting this in the language of [[Set Theory] §Examples of Equivalence Relations, ⁋Definition 5](/en/math/set_theory/examples_of_equivalence#def5), we can verify that the open sets on $X/R$ correspond bijectively to the open sets of $X$ that are *saturated* with respect to $R$.
 
-Meanwhile, by [§Initial and Final Topology, ⁋Proposition 6](/en/math/topology/initial_and_final_topology#prop6), the following holds.
+Meanwhile, by [§Initial and Final Topology, ⁋Proposition 6](/en/math/topology/initial_and_final_topology#prop6){: data-relation="required" }, the following holds.
 
 ::: Proposition 4
 Let a topological space $X$, a quotient space $X/R$, and the canonical projection $p:X\rightarrow X/R$ be given. For any topological space $Y$, a function $f:X/R\rightarrow Y$ is continuous if and only if $f\circ p$ is a continuous function from $X$ to $Y$.
@@ -61,7 +61,7 @@ Let a topological space $X$, a quotient space $X/R$, and the canonical projectio
 Consider a topological space $X$ and two equivalence relations $R,S$ defined on $X$. If $S$ is a finer equivalence relation than $R$, then the bijection $(X/S)/(R/S)\rightarrow X/R$ is a homeomorphism for the equivalence relation $R/S$ defined on $X/S$.
 :::
 ::: Proof
-That $(X/S)/(R/S)\rightarrow X/R$ is a bijection was already shown in [[Set Theory] §Examples of Equivalence Relations, ⁋Definition 8](/en/math/set_theory/examples_of_equivalence#def8). By [Proposition 4](#prop4), the continuity of this function is equivalent to the continuity of $X/S\rightarrow X/R$, and the continuity of this function in turn follows from the continuity of $X\rightarrow X/R$.
+That $(X/S)/(R/S)\rightarrow X/R$ is a bijection was already shown in [[Set Theory] §Examples of Equivalence Relations, ⁋Definition 8](/en/math/set_theory/examples_of_equivalence#def8). By [Proposition 4](#prop4){: data-relation="required" }, the continuity of this function is equivalent to the continuity of $X/S\rightarrow X/R$, and the continuity of this function in turn follows from the continuity of $X\rightarrow X/R$.
 
 Similarly, the continuity of $X/R\rightarrow(X/S)/(R/S)$ is obtained from the continuity of $X\rightarrow(X/S)/(R/S)$, and this function is the composition of two continuous functions
 
@@ -74,7 +74,7 @@ Meanwhile, let topological spaces $X,Y$ and a continuous function $f:X\rightarro
 
 $$X\overset{p}{\longrightarrow}X/R\overset{\bar{f}}{\longrightarrow}f(X)\overset{i}{\longrightarrow}Y$$
 
-Now if we give $f(X)$ the subspace topology, it is immediate from [Proposition 4](#prop4) and [§Initial and Final Topology, ⁋Proposition 3](/en/math/topology/initial_and_final_topology#prop3) that $\bar{f}$ is continuous. Also, by the definition of the canonical decomposition, $\bar{f}$ is a bijection. In general $\bar{f}$ need not be a homeomorphism ([§Continuous Functions, ⁋Example 5](/en/math/topology/continuous_functions#ex5)), but the following holds.
+Now if we give $f(X)$ the subspace topology, it is immediate from [Proposition 4](#prop4){: data-relation="required" } and [§Initial and Final Topology, ⁋Proposition 3](/en/math/topology/initial_and_final_topology#prop3){: data-relation="required" } that $\bar{f}$ is continuous. Also, by the definition of the canonical decomposition, $\bar{f}$ is a bijection. In general $\bar{f}$ need not be a homeomorphism ([§Continuous Functions, ⁋Example 5](/en/math/topology/continuous_functions#ex5){: data-relation="weak" }), but the following holds.
 
 ::: Proposition 6
 For the above diagram, the following are equivalent.

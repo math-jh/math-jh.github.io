@@ -14,7 +14,7 @@ weight: 10
 
 ---
 
-이제 우리는 quotient set 위에 위상을 정의하는 방법을 살펴본다. ([\[집합론\] §동치관계, ⁋정의 4](/ko/math/set_theory/equivalence_relations#def4))
+이제 우리는 quotient set 위에 위상을 정의하는 방법을 살펴본다. ([\[집합론\] §동치관계, ⁋정의 4](/ko/math/set_theory/equivalence_relations#def4){: data-relation="required" })
 
 ## Locally closed subspace
 
@@ -30,7 +30,7 @@ weight: 10
 3. $A$은 자기 자신의 ($X$에서의) closure $\cl A$에 대하여 열린집합이다.
 :::
 ::: 증명
-우선 $A$가 locally closed라 하고, 임의의 $x\in A$에 대하여 [정의 1](#def1)의 조건을 만족하는 $X$에서의 $x$의 근방 $V$를 생각하자. $x\in W\subseteq V$인 열린집합 $W$를 택하면 $A\cap W=(A\cap V)\cap W$이므로 $A\cap W$ 또한 $W$에서 닫힌집합이고, 따라서 같은 조건을 만족하는 $x$의 열린근방이 존재한다. 이를 $V_x$라 하자. 그럼 $U=\bigcup_{x\in A} V_x$는 열린집합이다. 또, [§부분공간, ⁋명제 6](/ko/math/topology/subspaces#prop6)을 적용하면 $A$는 $U$에서 닫힌집합임을 안다. 따라서 $X$의 적당한 닫힌집합 $C$에 대하여 $A=U\cap C$이므로 둘째 조건이 성립한다.
+우선 $A$가 locally closed라 하고, 임의의 $x\in A$에 대하여 [정의 1](#def1){: data-relation="required" }의 조건을 만족하는 $X$에서의 $x$의 근방 $V$를 생각하자. $x\in W\subseteq V$인 열린집합 $W$를 택하면 $A\cap W=(A\cap V)\cap W$이므로 $A\cap W$ 또한 $W$에서 닫힌집합이고, 따라서 같은 조건을 만족하는 $x$의 열린근방이 존재한다. 이를 $V_x$라 하자. 그럼 $U=\bigcup_{x\in A} V_x$는 열린집합이다. 또, [§부분공간, ⁋명제 6](/ko/math/topology/subspaces#prop6){: data-relation="required" }을 적용하면 $A$는 $U$에서 닫힌집합임을 안다. 따라서 $X$의 적당한 닫힌집합 $C$에 대하여 $A=U\cap C$이므로 둘째 조건이 성립한다.
 
 이제 $X$의 열린집합 $U$와 닫힌집합 $C$에 대하여 $A=U\cap C$가 성립한다고 가정하자. 그럼 $\cl A\subseteq C$이므로,
 
@@ -49,9 +49,9 @@ $$A\subseteq U\cap\cl A\subseteq U\cap C=A$$
 위상공간 $X$가 주어졌다 하고, 집합 $X$ 위에 동치관계 $R$이 주어졌다 하자. 그럼 $R$에 의한 $X$의 *quotient space<sub>몫공간</sub>*은 canonical projection $p:X\rightarrow X/R$에 의해 정의되는 final topology가 주어진 공간 $X/R$을 의미한다.
 :::
 
-[§Initial topology와 final topology, ⁋명제 5](/ko/math/topology/initial_and_final_topology#prop5)에 의하여 $X/R$에서의 열린집합은 정확하게 $p^{-1}(U)$가 $X$에서 열린집합이도록 하는 집합을 의미한다.[^1] [\[집합론\] §동치관계의 예시들, ⁋정의 5](/ko/math/set_theory/examples_of_equivalence#def5)의 언어로 이를 풀어쓰면, $X/R$ 위의 열린집합들은 $R$에 대해 *saturated*인 $X$의 열린집합에 일대일로 대응된다는 것을 확인할 수 있다. 
+[§Initial topology와 final topology, ⁋명제 5](/ko/math/topology/initial_and_final_topology#prop5){: data-relation="required" }에 의하여 $X/R$에서의 열린집합은 정확하게 $p^{-1}(U)$가 $X$에서 열린집합이도록 하는 집합을 의미한다.[^1] [\[집합론\] §동치관계의 예시들, ⁋정의 5](/ko/math/set_theory/examples_of_equivalence#def5){: data-relation="weak" }의 언어로 이를 풀어쓰면, $X/R$ 위의 열린집합들은 $R$에 대해 *saturated*인 $X$의 열린집합에 일대일로 대응된다는 것을 확인할 수 있다. 
 
-한편 [§Initial topology와 final topology, ⁋명제 6](/ko/math/topology/initial_and_final_topology#prop6)에 의하여 다음이 성립한다.
+한편 [§Initial topology와 final topology, ⁋명제 6](/ko/math/topology/initial_and_final_topology#prop6){: data-relation="required" }에 의하여 다음이 성립한다.
 
 ::: 명제 4
 위상공간 $X$와 quotient space $X/R$, 그리고 canonical projection $p:X\rightarrow X/R$이 주어졌다 하자. 임의의 위상공간 $Y$에 대하여, 함수 $f:X/R\rightarrow Y$가 연속인 것은 $f\circ p$가 $X$에서 $Y$로의 연속함수인 것과 동치이다.
@@ -61,7 +61,7 @@ $$A\subseteq U\cap\cl A\subseteq U\cap C=A$$
 위상공간 $X$와, $X$ 위에 정의된 두 동치관계 $R,S$를 생각하자. 만일 $S$가 $R$보다 세밀한 동치관계라면, $X/S$ 위에 정의된 동치관계 $R/S$에 대하여 전단사함수 $(X/S)/(R/S)\rightarrow X/R$는 homeomorphism이 된다.
 :::
 ::: 증명
-$(X/S)/(R/S)\rightarrow X/R$이 전단사함수가 되는 것은 [\[집합론\] §동치관계의 예시들, §§동치관계의 quotient](/ko/math/set_theory/examples_of_equivalence#동치관계의-quotient)에서 이미 보인 것이다. [명제 4](#prop4)에 의하여, 이 함수가 연속인 것은 $X/S\rightarrow X/R$이 연속인 것과 동치이고, 다시 이 함수의 연속성은 $X\rightarrow X/R$이 연속인 것으로부터 얻어진다. 
+$(X/S)/(R/S)\rightarrow X/R$이 전단사함수가 되는 것은 [\[집합론\] §동치관계의 예시들, §§동치관계의 quotient](/ko/math/set_theory/examples_of_equivalence#동치관계의-quotient){: data-relation="required" }에서 이미 보인 것이다. [명제 4](#prop4){: data-relation="required" }에 의하여, 이 함수가 연속인 것은 $X/S\rightarrow X/R$이 연속인 것과 동치이고, 다시 이 함수의 연속성은 $X\rightarrow X/R$이 연속인 것으로부터 얻어진다. 
 
 이와 유사하게 $X/R\rightarrow(X/S)/(R/S)$의 연속성은 $X\rightarrow(X/S)/(R/S)$의 연속성으로부터 얻어지며, 이 함수는 두 연속함수의 합성
 
@@ -70,11 +70,11 @@ $$X\longrightarrow X/S\longrightarrow (X/S)/(R/S)$$
 과 같으므로 연속이다. 
 :::
 
-한편 위상공간 $X,Y$와 연속함수 $f:X\rightarrow Y$가 주어졌다 하고, $f$에 의해 정의된 동치관계 $R$을 생각하자. ([\[집합론\] §동치관계의 예시들, ⁋정의 2](/ko/math/set_theory/examples_of_equivalence#def2)) 그럼 $f$의 canonical decomposition 
+한편 위상공간 $X,Y$와 연속함수 $f:X\rightarrow Y$가 주어졌다 하고, $f$에 의해 정의된 동치관계 $R$을 생각하자. ([\[집합론\] §동치관계의 예시들, ⁋정의 2](/ko/math/set_theory/examples_of_equivalence#def2){: data-relation="required" }) 그럼 $f$의 canonical decomposition 
 
 $$X\overset{p}{\longrightarrow}X/R\overset{\bar{f}}{\longrightarrow}f(X)\overset{i}{\longrightarrow}Y$$
 
-을 생각할 수 있다. 이제 $f(X)$에 부분위상을 부여하면, [명제 4](#prop4)와 [§Initial topology와 final topology, ⁋명제 3](/ko/math/topology/initial_and_final_topology#prop3)에 의하여 $\bar{f}$가 연속인 것은 자명하다. 또, canonical decomposition의 정의에 의하여 $\bar{f}$는 전단사함수이다. 일반적으로 $\bar{f}$가 homeomorphism이 될 필요는 없지만 ([§연속함수, ⁋예시 5](/ko/math/topology/continuous_functions#ex5)), 다음이 성립한다. 
+을 생각할 수 있다. 이제 $f(X)$에 부분위상을 부여하면, [명제 4](#prop4){: data-relation="required" }와 [§Initial topology와 final topology, ⁋명제 3](/ko/math/topology/initial_and_final_topology#prop3){: data-relation="required" }에 의하여 $\bar{f}$가 연속인 것은 자명하다. 또, canonical decomposition의 정의에 의하여 $\bar{f}$는 전단사함수이다. 일반적으로 $\bar{f}$가 homeomorphism이 될 필요는 없지만 ([§연속함수, ⁋예시 5](/ko/math/topology/continuous_functions#ex5){: data-relation="weak" }), 다음이 성립한다. 
 
 ::: 명제 6
 위의 diagram에 대하여, 다음이 동치이다.
@@ -120,4 +120,4 @@ $$A\overset{q}{\longrightarrow}A/(R\vert_A)\overset{\overline{(p\vert_A)}}{\long
 
 ---
 
-[^1]: [§부분공간](/ko/math/topology/subspaces)에서와 마찬가지로, **[Mun]**에서는 이를 quotient topology의 정의로 삼는다. 
+[^1]: [§부분공간](/ko/math/topology/subspaces){: data-relation="forward" }에서와 마찬가지로, **[Mun]**에서는 이를 quotient topology의 정의로 삼는다. 
