@@ -29,7 +29,7 @@ Abelian group $(\Delta, +, 0)$에 대하여, 함수 $\varepsilon : \Delta \times
 
 그럼 특히 $\varepsilon(2.\alpha, \beta) = \varepsilon(\alpha, 2.\beta) = 1$이다.
 
-우리가 가장 관심있는 예시는 $\Delta=\mathbb{Z}$인 경우이다. 이 경우, [정의 1](#def1)에 의하여 $\varepsilon$은 $\varepsilon(1,1)$에서의 값에 의해 완전하게 결정되며, 따라서 $\Delta=\mathbb{Z}$에 정의되는 commutation factor는 오직
+우리가 가장 관심있는 예시는 $\Delta=\mathbb{Z}$인 경우이다. 이 경우, [정의 1](#def1){: data-relation="required" }에 의하여 $\varepsilon$은 $\varepsilon(1,1)$에서의 값에 의해 완전하게 결정되며, 따라서 $\Delta=\mathbb{Z}$에 정의되는 commutation factor는 오직
 
 $$\varepsilon(p,q)=1,\qquad \varepsilon(p,q)=(-1)^{pq}$$
 
@@ -68,7 +68,7 @@ $$d''(xx') = (\dd{x})x' + \varepsilon(\delta, \deg(x))x(d'x')$$
 
     을 만족하는 <em-ko>단일한</em-ko> $d:E \rightarrow F$를 $E$에서 $F$로의 $\varepsilon$-derivation이라 부른다. 
 
-두 번째 경우를 motivation 삼아 우리는 표기의 편의상 $d, d', d''$를 모두 같은 문자 $d$로 통일하여 쓰기도 하며, 그럼 [정의 2](#def2)의 식은
+두 번째 경우를 motivation 삼아 우리는 표기의 편의상 $d, d', d''$를 모두 같은 문자 $d$로 통일하여 쓰기도 하며, 그럼 [정의 2](#def2){: data-relation="required" }의 식은
 
 $$\dd{(xx')}=(\dd{x})x'+\varepsilon(\delta,\deg(x))x (\dd{x}')$$
 
@@ -86,7 +86,7 @@ $$\dd{(xx')}=(\dd{x})x'+(-1)^{\deg x}x(\dd{x}')$$
 
 지금까지의 논의가 어떻게 적용될 수 있는지를 알기 위해, 잠시 간단한 예시를 살펴보자. 여기에서 $\mathbb{K}$는 field이고 polynomial algebra $E=\mathbb{K}[\x_1,\ldots, \x_n]$이다. 
 
-우선 degree $0$ derivation은 항상 commutation factor를 무시할 수 있으므로, $E$를 non-graded $\mathbb{K}$-algebra로 본 후 $E$에서 $E$로의 derivation을 생각하면 $\varepsilon$은 등장하지 않는다. 이제 각각의 $i$에 대하여, $\partial_i:E \rightarrow E$를 편미분 $\partial/\partial \x_i$로 정의하면 Leibniz rule에 의해 [정의 2](#def2)의 등식이 만족된다. 
+우선 degree $0$ derivation은 항상 commutation factor를 무시할 수 있으므로, $E$를 non-graded $\mathbb{K}$-algebra로 본 후 $E$에서 $E$로의 derivation을 생각하면 $\varepsilon$은 등장하지 않는다. 이제 각각의 $i$에 대하여, $\partial_i:E \rightarrow E$를 편미분 $\partial/\partial \x_i$로 정의하면 Leibniz rule에 의해 [정의 2](#def2){: data-relation="required" }의 등식이 만족된다. 
 
 이번에는 graded algebra의 예시를 보자. 위와 같이 정의된 polynomial algebra $E$에 대하여, free $E$-module $M$을 다음의 원소들 
 
@@ -100,7 +100,7 @@ $$\bigwedge(M)=\bigoplus_{d=0}^n{\bigwedge}^d(M)$$
 
 $$\dd{\x_J}=\dd{\x_{j_1}}\wedge \dd{\x_{j_2}}\wedge\cdots\wedge \dd{\x_{j_k}},\qquad j_1<\cdots< j_k$$
 
-의 꼴로 생성되는 free $E$-module이다. ([§텐서대수, ⁋명제 13](/ko/math/multilinear_algebra/tensor_algebras#prop13)) 이제 각각의 원소
+의 꼴로 생성되는 free $E$-module이다. ([§텐서대수, ⁋명제 13](/ko/math/multilinear_algebra/tensor_algebras#prop13){: data-relation="required" }) 이제 각각의 원소
 
 $$f\dd{\x_{j_1}}\wedge \dd{\x_{j_2}}\wedge\cdots\wedge \dd{\x_{j_k}}\in {\bigwedge}^k(M)$$
 
@@ -112,7 +112,7 @@ $$\dd{(f\dd{\x_{j_1}}\wedge \dd{\x_{j_2}}\wedge\cdots\wedge \dd{\x_{j_k}})}=\sum
 
 ## Bracket
 
-한편, 위의 두 경우 중 첫째 조건이 성립한다 가정하자. 그럼 $d=(d,d',d'')$은 $(E,E',E'')$에서 자기자신으로의 함수로 생각할 수 있으므로, $\varepsilon$-derivation들의 합성 또한 생각할 수 있다. 그러나 일반적으로 [정의 2](#def2)의 식을 보면, 임의로 주어진 두 degree $\delta_1$, $\delta_2$의 $\varepsilon$-derivation $d_1,d_2$와 임의의 $x\in E$, $x'\in E'$에 대하여
+한편, 위의 두 경우 중 첫째 조건이 성립한다 가정하자. 그럼 $d=(d,d',d'')$은 $(E,E',E'')$에서 자기자신으로의 함수로 생각할 수 있으므로, $\varepsilon$-derivation들의 합성 또한 생각할 수 있다. 그러나 일반적으로 [정의 2](#def2){: data-relation="required" }의 식을 보면, 임의로 주어진 두 degree $\delta_1$, $\delta_2$의 $\varepsilon$-derivation $d_1,d_2$와 임의의 $x\in E$, $x'\in E'$에 대하여
 
 $$\begin{aligned}(d_2\circ d_1)(xx')&=d_2((d_1x)x'+\varepsilon(\delta_1, \deg(x))x(d_1'x'))\\&=(d_2d_1x)x'+\varepsilon(\delta_2,\deg(d_1x))(d_1x)(d_2'x')+\varepsilon(\delta_1, \deg(x))(d_2x)(d_1'x')+\varepsilon(\delta_1, \deg(x))\varepsilon(\delta_2, \deg(x))x(d_2' d_1'x')\end{aligned}$$
 
@@ -184,7 +184,7 @@ $$F(D)(x x') = \sum_i (Q_i(D) x)(R_i(D) x')$$
 
 ## $A$-대수의 미분
 
-이제 우리는 [정의 2](#def2) 이후 다뤘던 두 가지 특별한 경우 중 두 번째 경우를 살펴본다. 즉 $\Delta$-graded $A$-algebra $E$와 graded $A$-module $F$, 그리고 두 개의 곱셈 $E\otimes_AF \rightarrow F$와 $F\otimes_AE \rightarrow F$가 주어졌다 하자. 
+이제 우리는 [정의 2](#def2){: data-relation="required" } 이후 다뤘던 두 가지 특별한 경우 중 두 번째 경우를 살펴본다. 즉 $\Delta$-graded $A$-algebra $E$와 graded $A$-module $F$, 그리고 두 개의 곱셈 $E\otimes_AF \rightarrow F$와 $F\otimes_AE \rightarrow F$가 주어졌다 하자. 
 
 ::: 명제 6
 Degree $\delta$의 $\varepsilon$-derivation $d:E \rightarrow F$에 대하여, $\ker(d)$는 $E$의 graded subalgebra이며, 만약 $E$가 $1$을 갖는다면 $1 \in \ker(d)$이다.
@@ -214,7 +214,7 @@ $$\dd{(x^{-1})} = -\varepsilon_{\delta, \deg(x)} x^{-1}(\dd{(x)})x^{-1}
 이 성립한다. 
 :::
 ::: 증명
-[명제 6](#prop6)에 의해 $\dd{(1)} = 0$이므로,
+[명제 6](#prop6){: data-relation="required" }에 의해 $\dd{(1)} = 0$이므로,
 
 $$0 = \dd{(xx^{-1})} = (\dd{(x)})x^{-1} + \varepsilon_{\delta, \deg(x)}x(\dd{(x^{-1})})$$
 
@@ -235,7 +235,7 @@ $$
 :::
 
 ::: 증명
-임의의 derivation $d:E \rightarrow F$가 주어졌다 하고, $d$를 $K$ 위로 확장한 $\bar{d}$가 존재한다면, [명제 7](#prop7)을 적용하여 다음의 식
+임의의 derivation $d:E \rightarrow F$가 주어졌다 하고, $d$를 $K$ 위로 확장한 $\bar{d}$가 존재한다면, [명제 7](#prop7){: data-relation="required" }을 적용하여 다음의 식
 
 $$\bar{d}(u/v) = v^{-1} \dd{(u)} - v^{-2} u\dd{(v)}$$
 
@@ -315,7 +315,7 @@ $$x\mapsto [z,x]_\varepsilon$$
     이다.
 :::
 
-따라서, $E$가 associative graded $A$-algebra라면 [정의 10](#def10)을 통해 $E$의 임의의 homogeneous element가 $E$에서 자기 자신으로의 $\varepsilon$-derivation을 정의하며, 우리는 이를 *inner $\varepsilon$-derivation*이라 부른다. 
+따라서, $E$가 associative graded $A$-algebra라면 [정의 10](#def10){: data-relation="required" }을 통해 $E$의 임의의 homogeneous element가 $E$에서 자기 자신으로의 $\varepsilon$-derivation을 정의하며, 우리는 이를 *inner $\varepsilon$-derivation*이라 부른다. 
 
 이것이 성립할 경우, 위의 식에서 $d$를 inner $\varepsilon$-derivation으로 대체해주면 다음 따름정리를 얻는다. 
 
