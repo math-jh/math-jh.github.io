@@ -14,7 +14,7 @@ weight: 13
 published: false
 ---
 
-[§이차 잉여](/ko/math/number_theory/quadratic_residues)에서 르장드르 기호가 multiplicative임을 보았고, 그 계산이 소수와 $-1$에서의 값으로 환원됨을 알았다. $-1$의 경우는 이미 해결했으니, 남은 것은 두 홀수 소수의 르장드르 기호 사이의 관계, 곧 가우스가 "황금 정리"라 부른 이차 상호법칙이다.
+[§이차 잉여](/ko/math/number_theory/quadratic_residues){: data-relation="required" }에서 르장드르 기호가 multiplicative임을 보았고, 그 계산이 소수와 $-1$에서의 값으로 환원됨을 알았다. $-1$의 경우는 이미 해결했으니, 남은 것은 두 홀수 소수의 르장드르 기호 사이의 관계, 곧 가우스가 "황금 정리"라 부른 이차 상호법칙이다.
 
 이 관계가 왜 놀라운지를 먼저 짚어 두자. 르장드르 기호 $\left(\frac{q}{p}\right)$는 "$q$가 법 $p$의 이차 잉여인가"라는, $p$를 법으로 한 산술에 관한 물음이다. 반대로 $\left(\frac{p}{q}\right)$는 법 $q$의 산술에 관한 물음으로, 표면적으로는 전혀 다른 세계의 정보이다. 이차 상호법칙은 이 두 물음의 답이 $p, q$를 $4$로 나눈 나머지라는 사소한 정보만으로 서로 결정됨을 말한다. 즉 한쪽의 어려운 계산을 다른 쪽의 같은 종류 계산으로 뒤집을 수 있고, 분모를 줄여 가며 유클리드 호제법처럼 답에 도달할 수 있다. 가우스 스스로 평생에 걸쳐 여덟 가지의 증명을 남긴 것도 이 대칭의 깊이를 반영한다.
 
@@ -46,7 +46,7 @@ $$\begin{aligned}
 &\equiv (-1)^{\mu} a^{(p-1)/2} \left(\frac{p-1}{2}\right)! \pmod p
 \end{aligned}$$
 
-이다. 부호 $(-1)^\mu$는 $r_j > p/2$인 $\mu$개의 항에서 $p - r_j$를 $-r_j$로 바꾼 데서 나온다. 양변에서 $\left((p-1)/2\right)!$은 $p$와 서로소이므로 소거할 수 있고, 남은 합동식에 [§이차 잉여, ⁋정리 4](/ko/math/number_theory/quadratic_residues#thm4)을 쓰면
+이다. 부호 $(-1)^\mu$는 $r_j > p/2$인 $\mu$개의 항에서 $p - r_j$를 $-r_j$로 바꾼 데서 나온다. 양변에서 $\left((p-1)/2\right)!$은 $p$와 서로소이므로 소거할 수 있고, 남은 합동식에 [§이차 잉여, ⁋정리 4](/ko/math/number_theory/quadratic_residues#thm4){: data-relation="required" }을 쓰면
 
 $$\left(\frac{a}{p}\right) \equiv a^{(p-1)/2} \equiv (-1)^\mu \pmod p$$
 
