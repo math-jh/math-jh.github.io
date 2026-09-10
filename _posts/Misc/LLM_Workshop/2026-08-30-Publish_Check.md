@@ -31,7 +31,7 @@ Claude에는 `/publish-check`가 있다. 글 하나를 발행 전에 놓고 `md_
 
 ## 서로에게 반증을 시키는 대칭
 
-Claude 쪽 `/publish-check`는 이 항목을 혼자 판정하지 않는다. 글 전문을 stdin으로 넘겨 Codex(`codex-ask`, read-only)에 반증을 청한 뒤 그 지적을 한 건씩 재계산해 hit인지 noise인지 가른다. [이중 장부 전수 감사](/ko/llm_workshop/sot_audit)에서 적었듯, 판정자와 발굴자가 같은 모델 계열이면 같은 자리에서 같이 눈이 멀기 때문이다.
+Claude 쪽 `/publish-check`는 이 항목을 혼자 판정하지 않는다. 글 전문을 stdin으로 넘겨 Codex(`codex-ask`, read-only)에 반증을 청한 뒤 그 지적을 한 건씩 재계산해 hit인지 noise인지 가른다. [이중 장부 전수 감사](/ko/llm_workshop/sot_audit){: data-relation="weak" }에서 적었듯, 판정자와 발굴자가 같은 모델 계열이면 같은 자리에서 같이 눈이 멀기 때문이다.
 
 `codex-skills/publish-check/SKILL.md`의 최초 판본은 이 구조를 그대로 뒤집어 놓았다. `## 수학 레드팀: Claude` 절이 있어서, Codex가 이 스킬을 돌릴 때는 로컬 Claude CLI를 반대 방향으로 불렀다.
 
@@ -66,7 +66,7 @@ EOF
 - `##` 섹션 헤더의 한글 용어는 영어형이 primary여도 수정 후보로 판정하지 않는다.
 ```
 
-세 줄 다 실제로 반복되던 오경보를 겨눈 것이다. `aligned` 줄 배치를 트집잡아 멀쩡한 수식에 수정 권고를 달던 것, 본문에 인용 각주가 없다는 이유만으로 표준적인 사실을 결함으로 올리던 것, [용어 영어화 스윕](/ko/llm_workshop/term_sweep) 뒤로 영어형이 primary인 용어가 든 한글 헤더를 매번 고치라고 하던 것. `--short` 출력이 "판정이 아니라 후보"이던 것과 같은 경계를, 이 세 줄이 의미 검토 쪽으로 늘려 놓았다.
+세 줄 다 실제로 반복되던 오경보를 겨눈 것이다. `aligned` 줄 배치를 트집잡아 멀쩡한 수식에 수정 권고를 달던 것, 본문에 인용 각주가 없다는 이유만으로 표준적인 사실을 결함으로 올리던 것, [용어 영어화 스윕](/ko/llm_workshop/term_sweep){: data-relation="weak" } 뒤로 영어형이 primary인 용어가 든 한글 헤더를 매번 고치라고 하던 것. `--short` 출력이 "판정이 아니라 후보"이던 것과 같은 경계를, 이 세 줄이 의미 검토 쪽으로 늘려 놓았다.
 
 ## 남은 비대칭
 
