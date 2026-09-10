@@ -54,7 +54,7 @@ Let a family $(A_i)_{i\in I}$ with non-empty index set $I$ be given. If $(J_k)_{
 :::
 
 ::: Proof
-Since $(J_k)_{k\in K}$ is a partition, the functions $f_k:J_k\rightarrow \bigcup_{i\in I} A_i$ form a family of functions with pairwise disjoint domains; hence by [§Sum of Sets, ⁋Proposition 2](/en/math/set_theory/sum_of_sets#prop2) we obtain a bijection.
+Since $(J_k)_{k\in K}$ is a partition, the functions $f_k:J_k\rightarrow \bigcup_{i\in I} A_i$ form a family of functions with pairwise disjoint domains; hence by [§Sum of Sets, ⁋Proposition 2](/en/math/set_theory/sum_of_sets#prop2){: data-relation="required" } we obtain a bijection.
 :::
 
 The proof above is concise, but the following argument using the universal property is equally elegant.

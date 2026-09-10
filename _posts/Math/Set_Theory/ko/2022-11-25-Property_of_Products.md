@@ -54,7 +54,7 @@ $$F=G\cup\biggl(\bigcup_{i\in I\setminus J}\{(i, x_i)\}\biggr)$$
 :::
 
 ::: 증명
-$(J_k)_{k\in K}$이 분할이므로, $f_k:J_k\rightarrow \bigcup_{i\in I} A_i$는 쌍마다 서로소인 정의역을 갖는 함수들의 family이고, 따라서 [§집합의 합, ⁋명제 2](/ko/math/set_theory/sum_of_sets#prop2)를 적용하면 전단사함수를 얻는다.
+$(J_k)_{k\in K}$이 분할이므로, $f_k:J_k\rightarrow \bigcup_{i\in I} A_i$는 쌍마다 서로소인 정의역을 갖는 함수들의 family이고, 따라서 [§집합의 합, ⁋명제 2](/ko/math/set_theory/sum_of_sets#prop2){: data-relation="required" }를 적용하면 전단사함수를 얻는다.
 :::
 
 위의 증명도 간결하지만, universal property를 이용하는 다음의 증명 또한 아름답다.
