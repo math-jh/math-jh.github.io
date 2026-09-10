@@ -14,7 +14,7 @@ translated_at: 2026-08-01T12:15:04+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-08-01T12:15:04+00:00
 ---
-Previously, in [§Chinese Remainder Theorem, ⁋Proposition 6](/en/math/ring_theory/chinese_remainder_theorem#prop6), we saw that pairwise comaximal two-sided ideals decompose a given ring into a product of quotient rings. In that decomposition, the elements selecting each factor were those whose $i$th component is $1$ and the rest are $0$, and such elements are characterized as *idempotents* lying in the center of the ring.
+Previously, in [§Chinese Remainder Theorem, ⁋Proposition 6](/en/math/ring_theory/chinese_remainder_theorem#prop6){: data-relation="weak" }, we saw that pairwise comaximal two-sided ideals decompose a given ring into a product of quotient rings. In that decomposition, the elements selecting each factor were those whose $i$th component is $1$ and the rest are $0$, and such elements are characterized as *idempotents* lying in the center of the ring.
 
 In this post, we formally define these idempotents, prove that a complete set of central orthogonal idempotents is in bijection with a direct product decomposition of the ring, and then examine how the general Chinese remainder theorem is recovered from this.
 
@@ -52,7 +52,7 @@ $$e_1+\cdots+e_n=1,\qquad e_ie_j=0\quad\text{for $i\neq j$}.$$
 If each $e_i$ is central, we call this a *central* complete set.
 :::
 
-The simplest complete set is $\{1\}$ when $n=1$, and in [Example 2](#ex2) the sets $\{0,1\}$ and $\{3,4\}$ in $\mathbb{Z}/6\mathbb{Z}$ are examples of central complete sets with $n=2$. More generally, given a single idempotent $e$, the set $\{e,1-e\}$ is always a complete set of orthogonal idempotents. Thus a complete set can be viewed as a generalization of splitting an idempotent into several pieces. Let us now see how this splitting decomposes the ring.
+The simplest complete set is $\{1\}$ when $n=1$, and in [Example 2](#ex2){: data-relation="weak" } the sets $\{0,1\}$ and $\{3,4\}$ in $\mathbb{Z}/6\mathbb{Z}$ are examples of central complete sets with $n=2$. More generally, given a single idempotent $e$, the set $\{e,1-e\}$ is always a complete set of orthogonal idempotents. Thus a complete set can be viewed as a generalization of splitting an idempotent into several pieces. Let us now see how this splitting decomposes the ring.
 
 ::: Proposition 4
 Let a ring $A$ and a complete set of orthogonal idempotents $\{e_1,\ldots, e_n\}$ in $A$ be given. Then the decomposition as left $A$-modules
@@ -100,7 +100,7 @@ For a ring $A$, there is a bijection between the following two data:
 This correspondence is given by $\mathfrak{a}_i=Ae_i$.
 :::
 ::: Proof
-First, suppose the first datum is given. Setting $\mathfrak{a}_i:=Ae_i$ as indicated, [Proposition 4](#prop4) implies that each $\mathfrak{a}_i$ is a two-sided ideal and $A=\mathfrak{a}_1\oplus\cdots\oplus\mathfrak{a}_n$ is a direct sum of left modules. It remains to show that this direct sum is also a direct product of rings. Consider the morphism
+First, suppose the first datum is given. Setting $\mathfrak{a}_i:=Ae_i$ as indicated, [Proposition 4](#prop4){: data-relation="required" } implies that each $\mathfrak{a}_i$ is a two-sided ideal and $A=\mathfrak{a}_1\oplus\cdots\oplus\mathfrak{a}_n$ is a direct sum of left modules. It remains to show that this direct sum is also a direct product of rings. Consider the morphism
 
 $$\varphi:A\rightarrow \prod_{i=1}^n Ae_i;\quad x\mapsto (xe_1,\ldots, xe_n).$$
 
@@ -108,7 +108,7 @@ This preserves addition, and since the $e_i$ are central and orthogonal,
 
 $$\varphi(x)\varphi(y)=(xe_1\cdot ye_1,\ldots, xe_n\cdot ye_n)=(xye_1,\ldots, xye_n)=\varphi(xy)$$
 
-so it also preserves multiplication. Moreover $\varphi(1)=(e_1,\ldots, e_n)$ and each $e_i$ is the identity of $Ae_i$, so $\varphi$ is a ring homomorphism. That this is an isomorphism follows because the direct sum decomposition of [Proposition 4](#prop4) is an isomorphism.
+so it also preserves multiplication. Moreover $\varphi(1)=(e_1,\ldots, e_n)$ and each $e_i$ is the identity of $Ae_i$, so $\varphi$ is a ring homomorphism. That this is an isomorphism follows because the direct sum decomposition of [Proposition 4](#prop4){: data-relation="required" } is an isomorphism.
 
 Conversely, suppose the second datum is given. A direct product decomposition yields in particular a direct sum $A=\mathfrak{a}_1\oplus\cdots\oplus\mathfrak{a}_n$ with respect to addition, so the identity element can be written uniquely in this decomposition as
 
@@ -127,16 +127,16 @@ we have from above that $y_ie_j$ is $y_i$ when $i=j$ and $0$ otherwise, and the 
 Finally, let us verify that these two constructions are mutual inverses. Starting from the first datum and setting $\mathfrak{a}_i=Ae_i$, since $1=e_1+\cdots+e_n$ is the unique expression of $1$ in this decomposition, the second construction returns the idempotents $e_i$ again. Conversely, starting from the second datum, from $e_i\in\mathfrak{a}_i$ we have $Ae_i\subseteq\mathfrak{a}_i$, and the equation $x=xe_i$ obtained above for any $x\in\mathfrak{a}_i$ gives the reverse inclusion, so $\mathfrak{a}_i=Ae_i$. Therefore this correspondence is bijective.
 :::
 
-By [Theorem 5](#thm5), a ring having no nontrivial central idempotents is equivalent to it not decomposing as a product of two nonzero rings. Such a ring is called *connected* or *indecomposable*. For instance, a division ring $A$ is always indecomposable. If $A$ decomposed as a product of two nonzero rings, then the elements $(1,0)$ and $(0,1)$ corresponding to the identity elements of the factors would both be nonzero while their product is $0$, so $A$ would have zero divisors.
+By [Theorem 5](#thm5){: data-relation="required" }, a ring having no nontrivial central idempotents is equivalent to it not decomposing as a product of two nonzero rings. Such a ring is called *connected* or *indecomposable*. For instance, a division ring $A$ is always indecomposable. If $A$ decomposed as a product of two nonzero rings, then the elements $(1,0)$ and $(0,1)$ corresponding to the identity elements of the factors would both be nonzero while their product is $0$, so $A$ would have zero divisors.
 
-The next example shows in particular what happens when the centrality condition is dropped. In this case [Theorem 5](#thm5) does not apply as is, but the decomposition as modules is still guaranteed by [Proposition 4](#prop4).
+The next example shows in particular what happens when the centrality condition is dropped. In this case [Theorem 5](#thm5){: data-relation="required" } does not apply as is, but the decomposition as modules is still guaranteed by [Proposition 4](#prop4){: data-relation="required" }.
 
 ::: Example 6
 For a ring $A$, consider the $n\times n$ matrix ring $\Mat_n(A)$. Let $E_{ij}$ be the matrix unit whose $(i,j)$ entry is $1$ and the rest are $0$; then the diagonal entries $E_{11},\ldots, E_{nn}$ satisfy
 
 $$E_{ii}^2=E_{ii},\qquad E_{ii}E_{jj}=0\ (i\neq j),\qquad E_{11}+\cdots+E_{nn}=I$$
 
-so they form a complete set of orthogonal idempotents. Hence by [Proposition 4](#prop4) we obtain the left module decomposition
+so they form a complete set of orthogonal idempotents. Hence by [Proposition 4](#prop4){: data-relation="required" } we obtain the left module decomposition
 
 $$\Mat_n(A)=\Mat_n(A)E_{11}\oplus\cdots\oplus \Mat_n(A)E_{nn},$$
 
@@ -167,11 +167,11 @@ On the other hand, whether an idempotent is central depends on which ring we vie
 
 $$B=\left\{\diag(M_1,\ldots, M_r)\mid M_k\in \Mat_{n_k}(A)\right\}\cong\prod_{k=1}^r \Mat_{n_k}(A).$$
 
-Inside this ring, the element $P_k$ which places the identity matrix only in the $k$th block is central, and by the correspondence of [Theorem 5](#thm5) it yields this direct product decomposition. However, we have already verified that this $P_k$ is not central in the example ring $\Mat_n(A)$ above.
+Inside this ring, the element $P_k$ which places the identity matrix only in the $k$th block is central, and by the correspondence of [Theorem 5](#thm5){: data-relation="required" } it yields this direct product decomposition. However, we have already verified that this $P_k$ is not central in the example ring $\Mat_n(A)$ above.
 
 ## Connection with the Chinese Remainder Theorem
 
-Meanwhile, even before [Theorem 5](#thm5), we had already seen a method of decomposing a given ring as a direct product. ([§Chinese Remainder Theorem, ⁋Proposition 6](/en/math/ring_theory/chinese_remainder_theorem#prop6)) These two results are not independent, and in the remainder of this post we examine the relationship between them. The key point is that the pairwise comaximal condition pulls the natural idempotents of the product ring back into $A$, and in the following theorem $\pi:A\rightarrow\prod_{i=1}^n A/\mathfrak{a}_i$ denotes the morphism induced by the projections onto each quotient
+Meanwhile, even before [Theorem 5](#thm5){: data-relation="required" }, we had already seen a method of decomposing a given ring as a direct product. ([§Chinese Remainder Theorem, ⁋Proposition 6](/en/math/ring_theory/chinese_remainder_theorem#prop6){: data-relation="required" }) These two results are not independent, and in the remainder of this post we examine the relationship between them. The key point is that the pairwise comaximal condition pulls the natural idempotents of the product ring back into $A$, and in the following theorem $\pi:A\rightarrow\prod_{i=1}^n A/\mathfrak{a}_i$ denotes the morphism induced by the projections onto each quotient
 
 $$x\mapsto (x+\mathfrak{a}_1,\ldots, x+\mathfrak{a}_n).$$
 
@@ -189,7 +189,7 @@ $$1=(1-e_i)+e_i\in\mathfrak{a}_i+\mathfrak{a}_j$$
 
 and hence $\mathfrak{a}_i+\mathfrak{a}_j=A$.
 
-Now assume the second condition and show the third. From the pairwise comaximal condition and $\bigcap_i\mathfrak{a}_i=\ker\pi=0$, [§Chinese Remainder Theorem, ⁋Proposition 6](/en/math/ring_theory/chinese_remainder_theorem#prop6) implies that $\pi$ is an isomorphism. Consider the elements
+Now assume the second condition and show the third. From the pairwise comaximal condition and $\bigcap_i\mathfrak{a}_i=\ker\pi=0$, [§Chinese Remainder Theorem, ⁋Proposition 6](/en/math/ring_theory/chinese_remainder_theorem#prop6){: data-relation="required" } implies that $\pi$ is an isomorphism. Consider the elements
 
 $$\bar e_i=(0,\ldots, 0,1,0,\ldots, 0)$$
 
@@ -197,7 +197,7 @@ in the product ring $\prod_i A/\mathfrak{a}_i$ whose $i$th component is $1+\math
 
 $$a=ae_i+a(1-e_i)=a(1-e_i)\in A(1-e_i).$$
 
-Finally, assume the third condition and show the first. By [Theorem 5](#thm5), a central complete set $\{e_1,\ldots, e_n\}$ yields a direct product decomposition $A\cong\prod_i Ae_i$ given by the ring isomorphism $x\mapsto (xe_1,\ldots, xe_n)$. On the other hand, for each $i$ the morphism
+Finally, assume the third condition and show the first. By [Theorem 5](#thm5){: data-relation="required" }, a central complete set $\{e_1,\ldots, e_n\}$ yields a direct product decomposition $A\cong\prod_i Ae_i$ given by the ring isomorphism $x\mapsto (xe_1,\ldots, xe_n)$. On the other hand, for each $i$ the morphism
 
 $$A\rightarrow Ae_i;\quad a\mapsto ae_i$$
 
@@ -207,15 +207,15 @@ is clearly surjective, and if $ae_i=0$ then $a=a(1-e_i)$ while conversely $a(1-e
 Let us apply this to the most familiar case, the ring of integers.
 
 ::: Example 8
-Let the prime factorization of $n\geq 2$ be $n=p_1^{a_1}\cdots p_r^{a_r}$ (distinct primes $p_k$), and consider the ideals $\mathfrak{a}_k=p_k^{a_k}\mathbb{Z}/n\mathbb{Z}$ of $A=\mathbb{Z}/n\mathbb{Z}$. In $\mathbb{Z}$, the ideals $p_k^{a_k}\mathbb{Z}$ are pairwise comaximal and their intersection is $n\mathbb{Z}$, so inside $A$ the $\mathfrak{a}_k$ are pairwise comaximal and $\bigcap_k\mathfrak{a}_k=0$. Hence [Theorem 7](#thm7) applies, yielding the classical Chinese remainder theorem
+Let the prime factorization of $n\geq 2$ be $n=p_1^{a_1}\cdots p_r^{a_r}$ (distinct primes $p_k$), and consider the ideals $\mathfrak{a}_k=p_k^{a_k}\mathbb{Z}/n\mathbb{Z}$ of $A=\mathbb{Z}/n\mathbb{Z}$. In $\mathbb{Z}$, the ideals $p_k^{a_k}\mathbb{Z}$ are pairwise comaximal and their intersection is $n\mathbb{Z}$, so inside $A$ the $\mathfrak{a}_k$ are pairwise comaximal and $\bigcap_k\mathfrak{a}_k=0$. Hence [Theorem 7](#thm7){: data-relation="required" } applies, yielding the classical Chinese remainder theorem
 
 $$\mathbb{Z}/n\mathbb{Z}\cong\prod_{k=1}^r\mathbb{Z}/p_k^{a_k}\mathbb{Z}$$
 
 together with the central complete set of orthogonal idempotents in $\mathbb{Z}/n\mathbb{Z}$ corresponding to this decomposition.
 
-Concretely, for $n=6=2\cdot 3$ we have $\mathbb{Z}/6\mathbb{Z}\cong\mathbb{Z}/2\mathbb{Z}\times\mathbb{Z}/3\mathbb{Z}$. Pulling back the two idempotents $\bar e_1=(1,0)$, $\bar e_2=(0,1)$ of the product ring $\mathbb{Z}/2\mathbb{Z}\times\mathbb{Z}/3\mathbb{Z}$ along the isomorphism, the element of $\mathbb{Z}/6\mathbb{Z}$ corresponding to $(1,0)$ is $3$, and the one corresponding to $(0,1)$ is $4$. Indeed $3\equiv 1\ (\mathrm{mod}\ 2)$, $3\equiv 0\ (\mathrm{mod}\ 3)$ and $4\equiv 0\ (\mathrm{mod}\ 2)$, $4\equiv 1\ (\mathrm{mod}\ 3)$. This matches exactly the idempotents $3,4$ found by hand in [Example 2](#ex2).
+Concretely, for $n=6=2\cdot 3$ we have $\mathbb{Z}/6\mathbb{Z}\cong\mathbb{Z}/2\mathbb{Z}\times\mathbb{Z}/3\mathbb{Z}$. Pulling back the two idempotents $\bar e_1=(1,0)$, $\bar e_2=(0,1)$ of the product ring $\mathbb{Z}/2\mathbb{Z}\times\mathbb{Z}/3\mathbb{Z}$ along the isomorphism, the element of $\mathbb{Z}/6\mathbb{Z}$ corresponding to $(1,0)$ is $3$, and the one corresponding to $(0,1)$ is $4$. Indeed $3\equiv 1\ (\mathrm{mod}\ 2)$, $3\equiv 0\ (\mathrm{mod}\ 3)$ and $4\equiv 0\ (\mathrm{mod}\ 2)$, $4\equiv 1\ (\mathrm{mod}\ 3)$. This matches exactly the idempotents $3,4$ found by hand in [Example 2](#ex2){: data-relation="weak" }.
 
-On the other hand, for a prime $p$ and $a\geq 1$, the ring $\mathbb{Z}/p^a\mathbb{Z}$ has no idempotents other than $0,1$. This is because $x^2\equiv x\ (\mathrm{mod}\ p^a)$ is the same as $x(x-1)\equiv 0\ (\mathrm{mod}\ p^a)$, and since $x$ and $x-1$ are coprime, $p^a$ must divide exactly one of them. Hence each factor in the above decomposition is indecomposable in the sense of [Theorem 5](#thm5), and the direct product decomposition according to prime factorization is the finest decomposition that cannot be split any further. That $\mathbb{Z}/4\mathbb{Z}$ had only trivial idempotents in [Example 2](#ex2) is the special case of this.
+On the other hand, for a prime $p$ and $a\geq 1$, the ring $\mathbb{Z}/p^a\mathbb{Z}$ has no idempotents other than $0,1$. This is because $x^2\equiv x\ (\mathrm{mod}\ p^a)$ is the same as $x(x-1)\equiv 0\ (\mathrm{mod}\ p^a)$, and since $x$ and $x-1$ are coprime, $p^a$ must divide exactly one of them. Hence each factor in the above decomposition is indecomposable in the sense of [Theorem 5](#thm5){: data-relation="required" }, and the direct product decomposition according to prime factorization is the finest decomposition that cannot be split any further. That $\mathbb{Z}/4\mathbb{Z}$ had only trivial idempotents in [Example 2](#ex2){: data-relation="weak" } is the special case of this.
 :::
 
 ---

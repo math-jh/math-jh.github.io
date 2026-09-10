@@ -14,7 +14,7 @@ weight: 6
 
 ---
 
-앞서 [§중국인의 나머지정리, ⁋명제 6](/ko/math/ring_theory/chinese_remainder_theorem#prop6)에서 우리는 pairwise comaximal이고 교집합이 $0$인 two-sided ideal들이 주어진 ring을 quotient ring들의 곱으로 분해한다는 것을 보았다. 그 분해에서 각 인자를 골라내는 역할을 한 것은 $i$번째 성분만 $1$이고 나머지가 $0$인 원소였으며, 이러한 원소는 ring의 center에 놓인 *idempotent*로 특징지어진다. 
+앞서 [§중국인의 나머지정리, ⁋명제 6](/ko/math/ring_theory/chinese_remainder_theorem#prop6){: data-relation="weak" }에서 우리는 pairwise comaximal이고 교집합이 $0$인 two-sided ideal들이 주어진 ring을 quotient ring들의 곱으로 분해한다는 것을 보았다. 그 분해에서 각 인자를 골라내는 역할을 한 것은 $i$번째 성분만 $1$이고 나머지가 $0$인 원소였으며, 이러한 원소는 ring의 center에 놓인 *idempotent*로 특징지어진다. 
 
 이 글에서는 이러한 idempotent들을 공식적으로 정의하고, central idempotent의 complete orthogonal set이 ring의 direct product 분해와 일대일대응함을 증명한 뒤, 이로부터 일반 ring에서의 중국인의 나머지정리가 어떻게 복원되는지 살펴본다. 
 
@@ -52,7 +52,7 @@ $$e_1+\cdots+e_n=1,\qquad e_ie_j=0\quad\text{for $i\neq j$}$$
 을 모두 만족하면, $\{e_1,\ldots, e_n\}$을 *orthogonal idempotent의 complete set<sub>완전 직교 멱등원</sub>*이라 한다. 만일 각 $e_i$가 모두 central이면 이를 *central*한 complete set이라 한다.
 :::
 
-가장 단순한 complete set은 $n=1$일 때의 $\{1\}$이며, [예시 2](#ex2)에서 $\mathbb{Z}/6\mathbb{Z}$의 $\{0,1\}$과 $\{3,4\}$는 $n=2$인 central complete set의 예이다. 더 일반적으로, 하나의 idempotent $e$가 주어지면 $\{e,1-e\}$는 언제나 orthogonal idempotent의 complete set이 된다. 따라서 complete set은 idempotent를 여러 조각으로 분할하는 일반화로 볼 수 있다. 이제 이 분할이 ring을 어떻게 쪼개는지 살펴본다.
+가장 단순한 complete set은 $n=1$일 때의 $\{1\}$이며, [예시 2](#ex2){: data-relation="weak" }에서 $\mathbb{Z}/6\mathbb{Z}$의 $\{0,1\}$과 $\{3,4\}$는 $n=2$인 central complete set의 예이다. 더 일반적으로, 하나의 idempotent $e$가 주어지면 $\{e,1-e\}$는 언제나 orthogonal idempotent의 complete set이 된다. 따라서 complete set은 idempotent를 여러 조각으로 분할하는 일반화로 볼 수 있다. 이제 이 분할이 ring을 어떻게 쪼개는지 살펴본다.
 
 ::: 명제 4
 Ring $A$와 $A$의 complete set of orthogonal idempotents $\{e_1,\ldots, e_n\}$이 주어졌다 하자. 그럼 left $A$-module로서의 분해
@@ -100,7 +100,7 @@ Ring $A$에 대하여 다음 두 데이터 사이에 일대일대응이 존재�
 이 대응은 $\mathfrak{a}_i=Ae_i$로 주어진다.
 :::
 ::: 증명
-우선 첫째 데이터가 주어졌다 하자. 위의 대응이 주는대로 $\mathfrak{a}_i:=Ae_i$로 두면 [명제 4](#prop4)에 의해 각 $\mathfrak{a}_i$는 two-sided ideal이고 $A=\mathfrak{a}_1\oplus\cdots\oplus\mathfrak{a}_n$은 left module로서의 direct sum이다. 따라서 남은 것은 이 direct sum이 ring의 direct product이기도 하다는 것이다. Morphism
+우선 첫째 데이터가 주어졌다 하자. 위의 대응이 주는대로 $\mathfrak{a}_i:=Ae_i$로 두면 [명제 4](#prop4){: data-relation="required" }에 의해 각 $\mathfrak{a}_i$는 two-sided ideal이고 $A=\mathfrak{a}_1\oplus\cdots\oplus\mathfrak{a}_n$은 left module로서의 direct sum이다. 따라서 남은 것은 이 direct sum이 ring의 direct product이기도 하다는 것이다. Morphism
 
 $$\varphi:A\rightarrow \prod_{i=1}^n Ae_i;\quad x\mapsto (xe_1,\ldots, xe_n)$$
 
@@ -108,7 +108,7 @@ $$\varphi:A\rightarrow \prod_{i=1}^n Ae_i;\quad x\mapsto (xe_1,\ldots, xe_n)$$
 
 $$\varphi(x)\varphi(y)=(xe_1\cdot ye_1,\ldots, xe_n\cdot ye_n)=(xye_1,\ldots, xye_n)=\varphi(xy)$$
 
-에서 곱셈도 보존한다. 또 $\varphi(1)=(e_1,\ldots, e_n)$이고 각 $e_i$가 $Ae_i$의 항등원이므로 $\varphi$는 ring homomorphism이다. 이것이 isomorphism이 되는 이유는 [명제 4](#prop4)의 direct sum decomposition이 isomorphism이기 때문이다. 
+에서 곱셈도 보존한다. 또 $\varphi(1)=(e_1,\ldots, e_n)$이고 각 $e_i$가 $Ae_i$의 항등원이므로 $\varphi$는 ring homomorphism이다. 이것이 isomorphism이 되는 이유는 [명제 4](#prop4){: data-relation="required" }의 direct sum decomposition이 isomorphism이기 때문이다. 
 
 거꾸로 둘째 데이터가 주어졌다 하자. Direct product decomposition은 특히 덧셈에 대한 direct sum $A=\mathfrak{a}_1\oplus\cdots\oplus\mathfrak{a}_n$을 주므로, 항등원을 이 분해에 따라
 
@@ -127,16 +127,16 @@ $$y=y_1+\cdots+y_n,\qquad y_i\in\mathfrak{a}_i$$
 마지막으로 이 두 구성이 서로의 역함수임을 확인하자. 첫째 데이터에서 출발하여 $\mathfrak{a}_i=Ae_i$로 두면 $1=e_1+\cdots+e_n$이 이 분해에 따른 $1$의 유일한 표현이므로, 둘째 구성이 돌려주는 idempotent는 다시 $e_i$이다. 거꾸로 둘째 데이터에서 출발하면 $e_i\in\mathfrak{a}_i$에서 $Ae_i\subseteq\mathfrak{a}_i$이고, 위에서 얻은 등식 $x=xe_i$가 임의의 $x\in\mathfrak{a}_i$에 대해 역포함을 주므로 $\mathfrak{a}_i=Ae_i$이다. 따라서 이 대응은 일대일이다.
 :::
 
-[정리 5](#thm5)에 의해, ring이 nontrivial한 central idempotent를 갖지 않는 것은 그것이 두 nonzero ring의 곱으로 쪼개지지 않는 것과 동치이다. 이러한 ring을 *connected* 혹은 *indecomposable*하다고 부른다. 가령 division ring $A$는 언제나 indecomposable하다. 만일 $A$가 두 nonzero ring의 곱으로 쪼개진다면 각 인자의 항등원에 해당하는 $(1,0)$과 $(0,1)$이 모두 nonzero이면서 그 곱이 $0$이 되어 $A$가 zero divisor를 갖게 되기 때문이다.
+[정리 5](#thm5){: data-relation="required" }에 의해, ring이 nontrivial한 central idempotent를 갖지 않는 것은 그것이 두 nonzero ring의 곱으로 쪼개지지 않는 것과 동치이다. 이러한 ring을 *connected* 혹은 *indecomposable*하다고 부른다. 가령 division ring $A$는 언제나 indecomposable하다. 만일 $A$가 두 nonzero ring의 곱으로 쪼개진다면 각 인자의 항등원에 해당하는 $(1,0)$과 $(0,1)$이 모두 nonzero이면서 그 곱이 $0$이 되어 $A$가 zero divisor를 갖게 되기 때문이다.
 
-다음 예시는 특히 centrality 조건이 빠졌을 때 일어나는 일을 보여준다. 이 경우, [정리 5](#thm5)는 그 자체로 적용할 수 없지만, 여전히 module로서의 decomposition은 [명제 4](#prop4)에 의해 보장된다.
+다음 예시는 특히 centrality 조건이 빠졌을 때 일어나는 일을 보여준다. 이 경우, [정리 5](#thm5){: data-relation="required" }는 그 자체로 적용할 수 없지만, 여전히 module로서의 decomposition은 [명제 4](#prop4){: data-relation="required" }에 의해 보장된다.
 
 ::: 예시 6
 Ring $A$에 대하여 $n\times n$ matrix ring $\Mat_n(A)$를 생각하자. $E_{ij}$를 $(i,j)$ 성분이 $1$이고 나머지가 $0$인 matrix unit이라 하면, 대각 성분들 $E_{11},\ldots, E_{nn}$은
 
 $$E_{ii}^2=E_{ii},\qquad E_{ii}E_{jj}=0\ (i\neq j),\qquad E_{11}+\cdots+E_{nn}=I$$
 
-를 만족하므로 orthogonal idempotent의 complete set이다. 따라서 [명제 4](#prop4)에 의해 left module 분해
+를 만족하므로 orthogonal idempotent의 complete set이다. 따라서 [명제 4](#prop4){: data-relation="required" }에 의해 left module 분해
 
 $$\Mat_n(A)=\Mat_n(A)E_{11}\oplus\cdots\oplus \Mat_n(A)E_{nn}$$
 
@@ -167,11 +167,11 @@ $$Z(\Mat_n(A))=\{cI\mid c\in Z(A)\}$$
 
 $$B=\left\{\diag(M_1,\ldots, M_r)\mid M_k\in \Mat_{n_k}(A)\right\}\cong\prod_{k=1}^r \Mat_{n_k}(A)$$
 
-안에서, $k$번째 block에만 항등행렬을 놓은 원소 $P_k$는 central이어서 [정리 5](#thm5)의 대응에 따라 이 direct product decomposition을 준다. 그러나 이 $P_k$가 위의 예시 ring $\Mat_n(A)$ 안에서는 central이 아닌 것을 이미 확인하였다. 
+안에서, $k$번째 block에만 항등행렬을 놓은 원소 $P_k$는 central이어서 [정리 5](#thm5){: data-relation="required" }의 대응에 따라 이 direct product decomposition을 준다. 그러나 이 $P_k$가 위의 예시 ring $\Mat_n(A)$ 안에서는 central이 아닌 것을 이미 확인하였다. 
 
 ## 중국인의 나머지정리와의 연결
 
-한편, 우리는 [정리 5](#thm5) 이전에 이미 주어진 ring을 direct product로 분해하는 방법을 살펴본 적이 있다. ([§중국인의 나머지정리, ⁋명제 6](/ko/math/ring_theory/chinese_remainder_theorem#prop6)) 이 두 결과는 독립적인 것이 아니며, 우리는 글의 남은 부분에서 이들 둘의 관계를 살펴본다. 핵심은 pairwise comaximal 조건이 product ring의 자연스러운 idempotent들을 $A$ 안으로 끌어온다는 것으로, 다음 정리에서 $\pi:A\rightarrow\prod_{i=1}^n A/\mathfrak{a}_i$는 각 quotient로의 projection이 유도하는 morphism 
+한편, 우리는 [정리 5](#thm5){: data-relation="required" } 이전에 이미 주어진 ring을 direct product로 분해하는 방법을 살펴본 적이 있다. ([§중국인의 나머지정리, ⁋명제 6](/ko/math/ring_theory/chinese_remainder_theorem#prop6){: data-relation="weak" }) 이 두 결과는 독립적인 것이 아니며, 우리는 글의 남은 부분에서 이들 둘의 관계를 살펴본다. 핵심은 pairwise comaximal 조건이 product ring의 자연스러운 idempotent들을 $A$ 안으로 끌어온다는 것으로, 다음 정리에서 $\pi:A\rightarrow\prod_{i=1}^n A/\mathfrak{a}_i$는 각 quotient로의 projection이 유도하는 morphism 
 
 $$x\mapsto (x+\mathfrak{a}_1,\ldots, x+\mathfrak{a}_n)$$
 
@@ -191,7 +191,7 @@ $$1=(1-e_i)+e_i\in\mathfrak{a}_i+\mathfrak{a}_j$$
 
 이고, 따라서 $\mathfrak{a}_i+\mathfrak{a}_j=A$이다.
 
-이제 둘째 조건을 가정하고 셋째 조건을 보이자. Pairwise comaximal 조건과 $\bigcap_i\mathfrak{a}_i=\ker\pi=0$으로부터 [§중국인의 나머지정리, ⁋명제 6](/ko/math/ring_theory/chinese_remainder_theorem#prop6)에 의해 $\pi$는 isomorphism이다. Product ring $\prod_i A/\mathfrak{a}_i$에서 $i$번째 성분만 $1+\mathfrak{a}_i$이고 나머지가 $0$인 원소
+이제 둘째 조건을 가정하고 셋째 조건을 보이자. Pairwise comaximal 조건과 $\bigcap_i\mathfrak{a}_i=\ker\pi=0$으로부터 [§중국인의 나머지정리, ⁋명제 6](/ko/math/ring_theory/chinese_remainder_theorem#prop6){: data-relation="required" }에 의해 $\pi$는 isomorphism이다. Product ring $\prod_i A/\mathfrak{a}_i$에서 $i$번째 성분만 $1+\mathfrak{a}_i$이고 나머지가 $0$인 원소
 
 $$\bar e_i=(0,\ldots, 0,1,0,\ldots, 0)$$
 
@@ -201,7 +201,7 @@ $$a=ae_i+a(1-e_i)=a(1-e_i)\in A(1-e_i)$$
 
 이다.
 
-마지막으로 셋째 조건을 가정하고 첫째 조건을 보이자. [정리 5](#thm5)에 의해 central한 complete set $\{e_1,\ldots, e_n\}$은 ring isomorphism $x\mapsto (xe_1,\ldots, xe_n)$으로 주어지는 direct product decomposition $A\cong\prod_i Ae_i$를 준다. 한편 각 $i$에 대하여 morphism
+마지막으로 셋째 조건을 가정하고 첫째 조건을 보이자. [정리 5](#thm5){: data-relation="required" }에 의해 central한 complete set $\{e_1,\ldots, e_n\}$은 ring isomorphism $x\mapsto (xe_1,\ldots, xe_n)$으로 주어지는 direct product decomposition $A\cong\prod_i Ae_i$를 준다. 한편 각 $i$에 대하여 morphism
 
 $$A\rightarrow Ae_i;\quad a\mapsto ae_i$$
 
@@ -211,15 +211,15 @@ $$A\rightarrow Ae_i;\quad a\mapsto ae_i$$
 이를 가장 친숙한 경우인 정수환에 적용해 보자.
 
 ::: 예시 8
-$n\geq 2$의 소인수분해를 $n=p_1^{a_1}\cdots p_r^{a_r}$ (서로 다른 소수 $p_k$)이라 하고, $A=\mathbb{Z}/n\mathbb{Z}$의 ideal들 $\mathfrak{a}_k=p_k^{a_k}\mathbb{Z}/n\mathbb{Z}$를 생각하자. $\mathbb{Z}$ 안에서 $p_k^{a_k}\mathbb{Z}$들은 pairwise comaximal이고 그 교차가 $n\mathbb{Z}$이므로, $A$ 안에서 $\mathfrak{a}_k$들은 pairwise comaximal이고 $\bigcap_k\mathfrak{a}_k=0$이다. 따라서 [정리 7](#thm7)이 적용되어 고전적인 중국인의 나머지정리
+$n\geq 2$의 소인수분해를 $n=p_1^{a_1}\cdots p_r^{a_r}$ (서로 다른 소수 $p_k$)이라 하고, $A=\mathbb{Z}/n\mathbb{Z}$의 ideal들 $\mathfrak{a}_k=p_k^{a_k}\mathbb{Z}/n\mathbb{Z}$를 생각하자. $\mathbb{Z}$ 안에서 $p_k^{a_k}\mathbb{Z}$들은 pairwise comaximal이고 그 교차가 $n\mathbb{Z}$이므로, $A$ 안에서 $\mathfrak{a}_k$들은 pairwise comaximal이고 $\bigcap_k\mathfrak{a}_k=0$이다. 따라서 [정리 7](#thm7){: data-relation="required" }이 적용되어 고전적인 중국인의 나머지정리
 
 $$\mathbb{Z}/n\mathbb{Z}\cong\prod_{k=1}^r\mathbb{Z}/p_k^{a_k}\mathbb{Z}$$
 
 와 함께, 이 분해에 대응하는 $\mathbb{Z}/n\mathbb{Z}$의 central한 orthogonal idempotent의 complete set을 얻는다.
 
-구체적으로 $n=6=2\cdot 3$인 경우를 보면 $\mathbb{Z}/6\mathbb{Z}\cong\mathbb{Z}/2\mathbb{Z}\times\mathbb{Z}/3\mathbb{Z}$이다. Product ring $\mathbb{Z}/2\mathbb{Z}\times\mathbb{Z}/3\mathbb{Z}$의 두 idempotent $\bar e_1=(1,0)$, $\bar e_2=(0,1)$을 isomorphism으로 끌어오면, $\mathbb{Z}/6\mathbb{Z}$에서 $(1,0)$에 대응하는 원소는 $3$, $(0,1)$에 대응하는 원소는 $4$이다. 실제로 $3\equiv 1\ (\mathrm{mod}\ 2)$, $3\equiv 0\ (\mathrm{mod}\ 3)$이고 $4\equiv 0\ (\mathrm{mod}\ 2)$, $4\equiv 1\ (\mathrm{mod}\ 3)$이다. 이는 [예시 2](#ex2)에서 손으로 찾은 idempotent $3,4$와 정확히 일치한다.
+구체적으로 $n=6=2\cdot 3$인 경우를 보면 $\mathbb{Z}/6\mathbb{Z}\cong\mathbb{Z}/2\mathbb{Z}\times\mathbb{Z}/3\mathbb{Z}$이다. Product ring $\mathbb{Z}/2\mathbb{Z}\times\mathbb{Z}/3\mathbb{Z}$의 두 idempotent $\bar e_1=(1,0)$, $\bar e_2=(0,1)$을 isomorphism으로 끌어오면, $\mathbb{Z}/6\mathbb{Z}$에서 $(1,0)$에 대응하는 원소는 $3$, $(0,1)$에 대응하는 원소는 $4$이다. 실제로 $3\equiv 1\ (\mathrm{mod}\ 2)$, $3\equiv 0\ (\mathrm{mod}\ 3)$이고 $4\equiv 0\ (\mathrm{mod}\ 2)$, $4\equiv 1\ (\mathrm{mod}\ 3)$이다. 이는 [예시 2](#ex2){: data-relation="weak" }에서 손으로 찾은 idempotent $3,4$와 정확히 일치한다.
 
-한편 소수 $p$와 $a\geq 1$에 대하여 $\mathbb{Z}/p^a\mathbb{Z}$는 $0,1$ 외의 idempotent를 갖지 않는다. 이는 $x^2\equiv x\ (\mathrm{mod}\ p^a)$가 $x(x-1)\equiv 0\ (\mathrm{mod}\ p^a)$와 같고, $x$와 $x-1$이 서로소라 $p^a$이 둘 중 하나만을 나누어야 하기 때문이다. 따라서 위 분해의 각 인수는 [정리 5](#thm5)의 의미에서 indecomposable하며, 소인수분해에 따른 direct product decomposition은 더 이상 쪼갤 수 없는 가장 미세한 분해이다. [예시 2](#ex2)에서 $\mathbb{Z}/4\mathbb{Z}$가 trivial idempotent만 가졌던 것이 그 특수한 경우이다.
+한편 소수 $p$와 $a\geq 1$에 대하여 $\mathbb{Z}/p^a\mathbb{Z}$는 $0,1$ 외의 idempotent를 갖지 않는다. 이는 $x^2\equiv x\ (\mathrm{mod}\ p^a)$가 $x(x-1)\equiv 0\ (\mathrm{mod}\ p^a)$와 같고, $x$와 $x-1$이 서로소라 $p^a$이 둘 중 하나만을 나누어야 하기 때문이다. 따라서 위 분해의 각 인수는 [정리 5](#thm5){: data-relation="required" }의 의미에서 indecomposable하며, 소인수분해에 따른 direct product decomposition은 더 이상 쪼갤 수 없는 가장 미세한 분해이다. [예시 2](#ex2){: data-relation="weak" }에서 $\mathbb{Z}/4\mathbb{Z}$가 trivial idempotent만 가졌던 것이 그 특수한 경우이다.
 :::
 
 ---
