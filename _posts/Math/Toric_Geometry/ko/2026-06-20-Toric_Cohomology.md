@@ -15,13 +15,13 @@ weight: 8
 published: false
 ---
 
-[§토러스 인자와 선다발, ⁋명제 7](/ko/math/toric_geometry/toric_divisors#prop7)에서 우리는 torus-invariant Weil divisor $D$가 정의하는 sheaf $\mathcal{O}_{X_\Sigma}(D)$의 global section이 lattice $M$ 위의 조합론적 조건으로 완전히 기술됨을 보았다. 이번 글의 목표는 이 기술을 고차 cohomology $H^i(X_\Sigma, \mathcal{O}_{X_\Sigma}(D))$ ($i > 0$)까지 확장하는 것이다. 일반적인 variety에서 sheaf cohomology를 명시적으로 계산하는 일은 어렵지만 ([\[대수다양체\] §층 코호몰로지](/ko/math/algebraic_varieties/sheaf_cohomology)), toric variety에서는 모든 degree의 cohomology가 fan $\Sigma$의 조합론으로 환원되며, 특히 nef divisor에 대한 Demazure vanishing과 complete toric variety에서 structure sheaf의 고차 cohomology 소멸이라는 강력한 결론을 얻는다.
+[§토러스 인자와 선다발, ⁋명제 7](/ko/math/toric_geometry/toric_divisors#prop7){: data-relation="required" }에서 우리는 torus-invariant Weil divisor $D$가 정의하는 sheaf $\mathcal{O}_{X_\Sigma}(D)$의 global section이 lattice $M$ 위의 조합론적 조건으로 완전히 기술됨을 보았다. 이번 글의 목표는 이 기술을 고차 cohomology $H^i(X_\Sigma, \mathcal{O}_{X_\Sigma}(D))$ ($i > 0$)까지 확장하는 것이다. 일반적인 variety에서 sheaf cohomology를 명시적으로 계산하는 일은 어렵지만 ([\[대수다양체\] §층 코호몰로지](/ko/math/algebraic_varieties/sheaf_cohomology){: data-relation="weak" }), toric variety에서는 모든 degree의 cohomology가 fan $\Sigma$의 조합론으로 환원되며, 특히 nef divisor에 대한 Demazure vanishing과 complete toric variety에서 structure sheaf의 고차 cohomology 소멸이라는 강력한 결론을 얻는다.
 
-이하에서 $N \cong \mathbb{Z}^n$은 rank $n$의 lattice, $M = \Hom_\mathbb{Z}(N, \mathbb{Z})$는 그 dual lattice이며, $\Sigma$는 $N_\mathbb{R}$ 위의 fan으로 $X_\Sigma$를 그것이 정의하는 toric variety로 둔다. $\Sigma(1)$은 ray들의 모임이고 각 $\rho \in \Sigma(1)$에 대해 $v_\rho \in N$은 그 primitive generator이다. Torus-invariant Weil divisor는 $D = \sum_{\rho \in \Sigma(1)} a_\rho D_\rho$의 꼴이며 ([§토러스 인자와 선다발, ⁋정의 2](/ko/math/toric_geometry/toric_divisors#def2)), 우리는 $\mathcal{O}_{X_\Sigma}(D)$의 cohomology가 lattice $M$의 character로 graded됨을 본질적으로 사용한다. 계수체는 $\mathbb{C}$로 둔다.
+이하에서 $N \cong \mathbb{Z}^n$은 rank $n$의 lattice, $M = \Hom_\mathbb{Z}(N, \mathbb{Z})$는 그 dual lattice이며, $\Sigma$는 $N_\mathbb{R}$ 위의 fan으로 $X_\Sigma$를 그것이 정의하는 toric variety로 둔다. $\Sigma(1)$은 ray들의 모임이고 각 $\rho \in \Sigma(1)$에 대해 $v_\rho \in N$은 그 primitive generator이다. Torus-invariant Weil divisor는 $D = \sum_{\rho \in \Sigma(1)} a_\rho D_\rho$의 꼴이며 ([§토러스 인자와 선다발, ⁋정의 2](/ko/math/toric_geometry/toric_divisors#def2){: data-relation="required" }), 우리는 $\mathcal{O}_{X_\Sigma}(D)$의 cohomology가 lattice $M$의 character로 graded됨을 본질적으로 사용한다. 계수체는 $\mathbb{C}$로 둔다.
 
 ## Global section의 격자점 기술
 
-먼저 $H^0$을 다시 정리한다. 이것은 이미 [§토러스 인자와 선다발, ⁋명제 7](/ko/math/toric_geometry/toric_divisors#prop7)에서 증명한 결과이지만, 이번 글에서 고차 cohomology를 graded 형태로 다루기 위한 출발점이므로 polytope의 언어로 다시 적어 둔다. Divisor $D = \sum_\rho a_\rho D_\rho$에 대해 polyhedron
+먼저 $H^0$을 다시 정리한다. 이것은 이미 [§토러스 인자와 선다발, ⁋명제 7](/ko/math/toric_geometry/toric_divisors#prop7){: data-relation="required" }에서 증명한 결과이지만, 이번 글에서 고차 cohomology를 graded 형태로 다루기 위한 출발점이므로 polytope의 언어로 다시 적어 둔다. Divisor $D = \sum_\rho a_\rho D_\rho$에 대해 polyhedron
 
 $$P_D = \{m \in M_\mathbb{R} \mid \langle m, v_\rho \rangle \ge -a_\rho \text{ for all } \rho \in \Sigma(1)\}$$
 
@@ -36,10 +36,10 @@ $$H^0(X_\Sigma, \mathcal{O}_{X_\Sigma}(D)) = \bigoplus_{m \in P_D \cap M} \mathb
 :::
 
 ::: 증명
-[§토러스 인자와 선다발, ⁋명제 7](/ko/math/toric_geometry/toric_divisors#prop7)에 의해 $H^0(X_\Sigma, \mathcal{O}_{X_\Sigma}(D))$은 조건 $\langle m, v_\rho \rangle \ge -a_\rho$ ($\forall \rho \in \Sigma(1)$)을 만족하는 $m \in M$들의 character $\rchi^m$으로 basis를 이룬다. 이 조건은 정확히 $m \in P_D$를 뜻하므로 basis를 이루는 character는 $P_D \cap M$로 색인된다. $X_\Sigma$가 complete이면 $\Sigma$의 support가 $N_\mathbb{R}$ 전체이므로 임의의 $v \in N_\mathbb{R}$가 ray들의 nonnegative 결합으로 적히고, 따라서 $P_D$의 recession cone $\{m \in M_\mathbb{R} \mid \langle m, v_\rho \rangle \ge 0 \ \forall \rho\}$은 $\{0\}$이 되어 $P_D$는 bounded polyhedron, 즉 polytope이고 $P_D \cap M$이 유한집합이다.
+[§토러스 인자와 선다발, ⁋명제 7](/ko/math/toric_geometry/toric_divisors#prop7){: data-relation="required" }에 의해 $H^0(X_\Sigma, \mathcal{O}_{X_\Sigma}(D))$은 조건 $\langle m, v_\rho \rangle \ge -a_\rho$ ($\forall \rho \in \Sigma(1)$)을 만족하는 $m \in M$들의 character $\rchi^m$으로 basis를 이룬다. 이 조건은 정확히 $m \in P_D$를 뜻하므로 basis를 이루는 character는 $P_D \cap M$로 색인된다. $X_\Sigma$가 complete이면 $\Sigma$의 support가 $N_\mathbb{R}$ 전체이므로 임의의 $v \in N_\mathbb{R}$가 ray들의 nonnegative 결합으로 적히고, 따라서 $P_D$의 recession cone $\{m \in M_\mathbb{R} \mid \langle m, v_\rho \rangle \ge 0 \ \forall \rho\}$은 $\{0\}$이 되어 $P_D$는 bounded polyhedron, 즉 polytope이고 $P_D \cap M$이 유한집합이다.
 :::
 
-이 description은 $D$가 nef일 때 [\[대수다양체\] §사영공간의 코호몰로지, ⁋정의 2](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#def2)의 Euler characteristic 계산에서 핵심적으로 쓰이며, 격자점의 개수 $\#(kP_D \cap M)$가 Ehrhart 다항식을 이루어 intersection number와 polytope의 부피를 잇는다 ([§토릭 다양체의 교차 이론, ⁋명제 8](/ko/math/toric_geometry/toric_intersection_theory#prop8)). 우리의 다음 과제는 같은 character grading을 $i > 0$의 cohomology로 끌어올리는 것이다.
+이 description은 $D$가 nef일 때 [\[대수다양체\] §사영공간의 코호몰로지, ⁋정의 2](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#def2){: data-relation="weak" }의 Euler characteristic 계산에서 핵심적으로 쓰이며, 격자점의 개수 $\#(kP_D \cap M)$가 Ehrhart 다항식을 이루어 intersection number와 polytope의 부피를 잇는다 ([§토릭 다양체의 교차 이론, ⁋명제 8](/ko/math/toric_geometry/toric_intersection_theory#prop8){: data-relation="weak" }). 우리의 다음 과제는 같은 character grading을 $i > 0$의 cohomology로 끌어올리는 것이다.
 
 ## 고차 코호몰로지의 character grading
 
@@ -72,9 +72,9 @@ $$H^i(X_\Sigma, \mathcal{O}_{X_\Sigma}(D)) = \bigoplus_{m \in M} \widetilde{H}^{
 ::: 증명
 증명의 골격은 $\mathcal{O}_{X_\Sigma}(D)$를 Čech 복합체로 계산하되, $T_N$-action에 의한 weight decomposition을 각 degree에서 취하는 것이다. 자세한 전개는 [CLS] Theorem 9.1.3을 따른다.
 
-$X_\Sigma$의 affine open cover로 maximal cone들이 주는 $\{U_\sigma\}_{\sigma \in \Sigma_{\max}}$를 택한다. 각 $U_\sigma$는 affine이므로 $\mathcal{O}_{X_\Sigma}(D)$에 대해 acyclic하고 ([\[대수다양체\] §층 코호몰로지, ⁋명제 12](/ko/math/algebraic_varieties/sheaf_cohomology#prop12)), 유한 교집합 $U_{\sigma_0} \cap \cdots \cap U_{\sigma_p} = U_{\sigma_0 \cap \cdots \cap \sigma_p}$ 역시 affine이므로, [\[대수다양체\] §층 코호몰로지, ⁋정리 11](/ko/math/algebraic_varieties/sheaf_cohomology#thm11)에 의해 이 cover로 계산한 Čech cohomology가 sheaf cohomology와 일치한다.
+$X_\Sigma$의 affine open cover로 maximal cone들이 주는 $\{U_\sigma\}_{\sigma \in \Sigma_{\max}}$를 택한다. 각 $U_\sigma$는 affine이므로 $\mathcal{O}_{X_\Sigma}(D)$에 대해 acyclic하고 ([\[대수다양체\] §층 코호몰로지, ⁋명제 12](/ko/math/algebraic_varieties/sheaf_cohomology#prop12){: data-relation="required" }), 유한 교집합 $U_{\sigma_0} \cap \cdots \cap U_{\sigma_p} = U_{\sigma_0 \cap \cdots \cap \sigma_p}$ 역시 affine이므로, [\[대수다양체\] §층 코호몰로지, ⁋정리 11](/ko/math/algebraic_varieties/sheaf_cohomology#thm11){: data-relation="required" }에 의해 이 cover로 계산한 Čech cohomology가 sheaf cohomology와 일치한다.
 
-각 affine chart 위의 section $H^0(U_\sigma, \mathcal{O}_{X_\Sigma}(D))$은 [§토러스 인자와 선다발, ⁋명제 7](/ko/math/toric_geometry/toric_divisors#prop7)의 국소판에 의해 $\langle m, v_\rho \rangle \ge -a_\rho$ ($\rho \in \sigma(1)$)를 만족하는 $\rchi^m$들로 spanned되며, 따라서 $T_N$-action에 대해 $M$으로 graded된다. 이 grading은 교집합 위에서도 보존되고 Čech coboundary와 호환되므로, 전체 Čech 복합체가 weight $m$ 성분으로 분해된다. 고정된 $m$에 대한 weight-$m$ Čech 복합체에서, chart $U_\sigma$가 $\rchi^m$을 section으로 가질 조건은 모든 $\rho \in \sigma(1)$에 대해 $\langle m, v_\rho \rangle \ge -a_\rho$인 것, 즉 $\sigma$가 $\langle m, v_\rho \rangle < -a_\rho$인 ray를 하나도 갖지 않는 것이다.
+각 affine chart 위의 section $H^0(U_\sigma, \mathcal{O}_{X_\Sigma}(D))$은 [§토러스 인자와 선다발, ⁋명제 7](/ko/math/toric_geometry/toric_divisors#prop7){: data-relation="required" }의 국소판에 의해 $\langle m, v_\rho \rangle \ge -a_\rho$ ($\rho \in \sigma(1)$)를 만족하는 $\rchi^m$들로 spanned되며, 따라서 $T_N$-action에 대해 $M$으로 graded된다. 이 grading은 교집합 위에서도 보존되고 Čech coboundary와 호환되므로, 전체 Čech 복합체가 weight $m$ 성분으로 분해된다. 고정된 $m$에 대한 weight-$m$ Čech 복합체에서, chart $U_\sigma$가 $\rchi^m$을 section으로 가질 조건은 모든 $\rho \in \sigma(1)$에 대해 $\langle m, v_\rho \rangle \ge -a_\rho$인 것, 즉 $\sigma$가 $\langle m, v_\rho \rangle < -a_\rho$인 ray를 하나도 갖지 않는 것이다.
 
 이로부터 weight-$m$ 복합체는 $\rchi^m$이 "들어가는" chart들이 이루는 단체적 데이터의 (reduced) cohomology를 계산하는 복합체가 됨을 확인할 수 있고, 표준적인 nerve 논증을 거치면 그 cohomology가 정확히 정의 2의 $V_{D, m}$의 reduced cohomology $\widetilde{H}^{i-1}(V_{D,m}; \mathbb{C})$로 동일시된다. Degree 이동 $i \mapsto i - 1$은 Čech 복합체의 $\check{C}^0$ 항이 reduced cohomology의 $(-1)$차 자리에 대응하기 때문이며, 이 때문에 $V_{D,m} = \emptyset$인 경우 $\widetilde{H}^{-1}(\emptyset) = \mathbb{C}$가 $H^0$의 한 character 차원을 정확히 준다. 빈 집합에 대한 이 관례 하에서 $i = 0$ 항을 모으면 명제 1과 일치함을 확인할 수 있다.
 :::
@@ -87,7 +87,7 @@ $X_\Sigma$의 affine open cover로 maximal cone들이 주는 $\{U_\sigma\}_{\sig
 
 ## Demazure vanishing
 
-이제 nef divisor에 대한 고차 cohomology 소멸을 본다. Divisor $D$가 *nef<sub>numerically effective</sub>*라는 것은 모든 irreducible complete curve $C \subseteq X_\Sigma$에 대해 intersection number $D \cdot C \ge 0$인 것이다. Complete toric variety에서 nef 조건은 $D$가 Cartier일 때 그에 대응하는 piecewise linear function ([§토러스 인자와 선다발, ⁋명제 6](/ko/math/toric_geometry/toric_divisors#prop6)) $\psi_D$가 *convex*한 것, 즉 $\psi_D$가 위로 볼록인 것과 동치이다. 이는 ample에 대응하는 strictly convex의 부등호를 등호 허용으로 완화한 조건이다 ([§토러스 인자와 선다발, ⁋정의 8](/ko/math/toric_geometry/toric_divisors#def8)). Nef인 Cartier divisor는 동치로 basepoint-free, 즉 대응 line bundle이 globally generated인 것으로도 특징지어진다 ([\[대수다양체\] §사영공간의 코호몰로지, ⁋정의 4](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#def4)).
+이제 nef divisor에 대한 고차 cohomology 소멸을 본다. Divisor $D$가 *nef<sub>numerically effective</sub>*라는 것은 모든 irreducible complete curve $C \subseteq X_\Sigma$에 대해 intersection number $D \cdot C \ge 0$인 것이다. Complete toric variety에서 nef 조건은 $D$가 Cartier일 때 그에 대응하는 piecewise linear function ([§토러스 인자와 선다발, ⁋명제 6](/ko/math/toric_geometry/toric_divisors#prop6){: data-relation="required" }) $\psi_D$가 *convex*한 것, 즉 $\psi_D$가 위로 볼록인 것과 동치이다. 이는 ample에 대응하는 strictly convex의 부등호를 등호 허용으로 완화한 조건이다 ([§토러스 인자와 선다발, ⁋정의 8](/ko/math/toric_geometry/toric_divisors#def8){: data-relation="weak" }). Nef인 Cartier divisor는 동치로 basepoint-free, 즉 대응 line bundle이 globally generated인 것으로도 특징지어진다 ([\[대수다양체\] §사영공간의 코호몰로지, ⁋정의 4](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#def4){: data-relation="weak" }).
 
 ::: 정리 5 (Demazure vanishing)
 $X_\Sigma$가 complete toric variety이고 $D$가 nef인 torus-invariant Cartier divisor라 하자. 그러면
@@ -100,7 +100,7 @@ $$H^i(X_\Sigma, \mathcal{O}_{X_\Sigma}(D)) = 0 \qquad (i > 0)$$
 ::: 증명
 정리 3에 의해 각 $m \in M$에서 $H^i(X_\Sigma, \mathcal{O}_{X_\Sigma}(D))_m = \widetilde{H}^{i-1}(V_{D, m}; \mathbb{C})$이므로, 모든 $m \in M$에 대해 $V_{D, m}$이 비어 있거나 contractible함을 보이면 $i > 0$에서 $\widetilde{H}^{i-1}(V_{D,m}) = 0$이 되어 증명이 끝난다.
 
-$D$가 nef이므로 $\psi_D$는 convex piecewise linear function이고, 각 maximal cone $\sigma$ 위에서 $\psi_D(v) = \langle m_\sigma, v \rangle$ ($m_\sigma \in M$)이며 convexity로부터 모든 $v \in N_\mathbb{R}$에서 $\psi_D(v) \le \langle m_\sigma, v \rangle$가 성립한다 ([§토러스 인자와 선다발, ⁋명제 6](/ko/math/toric_geometry/toric_divisors#prop6) 직후 및 [§토러스 인자와 선다발, ⁋정의 8](/ko/math/toric_geometry/toric_divisors#def8)). 부호 규약 $\psi_D(v_\rho) = -a_\rho$를 상기하면, 조건 $\langle m, v_\rho \rangle < -a_\rho$는 $\langle m, v_\rho \rangle < \psi_D(v_\rho)$로 다시 적힌다. 함수
+$D$가 nef이므로 $\psi_D$는 convex piecewise linear function이고, 각 maximal cone $\sigma$ 위에서 $\psi_D(v) = \langle m_\sigma, v \rangle$ ($m_\sigma \in M$)이며 convexity로부터 모든 $v \in N_\mathbb{R}$에서 $\psi_D(v) \le \langle m_\sigma, v \rangle$가 성립한다 ([§토러스 인자와 선다발, ⁋명제 6](/ko/math/toric_geometry/toric_divisors#prop6){: data-relation="required" } 직후 및 [§토러스 인자와 선다발, ⁋정의 8](/ko/math/toric_geometry/toric_divisors#def8){: data-relation="weak" }). 부호 규약 $\psi_D(v_\rho) = -a_\rho$를 상기하면, 조건 $\langle m, v_\rho \rangle < -a_\rho$는 $\langle m, v_\rho \rangle < \psi_D(v_\rho)$로 다시 적힌다. 함수
 
 $$h_m(v) = \langle m, v \rangle - \psi_D(v)$$
 
@@ -115,7 +115,7 @@ $$h_m(v) = \max_{\sigma} \langle m - m_\sigma, v \rangle$$
 그러므로 모든 $i > 0$과 모든 $m \in M$에 대해 $H^i(X_\Sigma, \mathcal{O}_{X_\Sigma}(D))_m = \widetilde{H}^{i-1}(V_{D, m}; \mathbb{C}) = 0$이고, weight를 모두 합하면 $H^i(X_\Sigma, \mathcal{O}_{X_\Sigma}(D)) = 0$을 얻는다. Smooth인 경우 Cartier와 Weil이 일치하므로 nef Weil divisor에 대해서도 같은 결론이 성립한다.
 :::
 
-Demazure vanishing은 toric variety에서 nef line bundle이 acyclic임을 말한다. 이는 일반적인 projective variety에서 ample line bundle에 대한 [\[대수다양체\] §사영공간의 코호몰로지, ⁋명제 7](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop7)이 "충분히 큰 twist에 대해서만" 소멸을 주는 것에 비해 훨씬 강하다. Toric의 조합론적 강성 덕분에 twist 없이 nef 자체에서 즉시 소멸이 일어나며, 이는 nef cone의 모든 lattice point에서 cohomology가 $H^0$에 집중됨을 뜻한다. 한 가지 직접적 귀결로, nef divisor의 Euler characteristic이 $H^0$의 차원과 같아져 lattice point counting $\#(P_D \cap M)$로 계산된다.
+Demazure vanishing은 toric variety에서 nef line bundle이 acyclic임을 말한다. 이는 일반적인 projective variety에서 ample line bundle에 대한 [\[대수다양체\] §사영공간의 코호몰로지, ⁋명제 7](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop7){: data-relation="weak" }이 "충분히 큰 twist에 대해서만" 소멸을 주는 것에 비해 훨씬 강하다. Toric의 조합론적 강성 덕분에 twist 없이 nef 자체에서 즉시 소멸이 일어나며, 이는 nef cone의 모든 lattice point에서 cohomology가 $H^0$에 집중됨을 뜻한다. 한 가지 직접적 귀결로, nef divisor의 Euler characteristic이 $H^0$의 차원과 같아져 lattice point counting $\#(P_D \cap M)$로 계산된다.
 
 ::: 따름정리 6
 $X_\Sigma$가 complete toric variety이고 $D$가 nef Cartier divisor이면
@@ -126,7 +126,7 @@ $$\chi(\mathcal{O}_{X_\Sigma}(D)) = \dim_\mathbb{C} H^0(X_\Sigma, \mathcal{O}_{X
 :::
 
 ::: 증명
-Euler characteristic의 정의 $\chi(\mathcal{O}_{X_\Sigma}(D)) = \sum_{i \ge 0} (-1)^i \dim H^i(X_\Sigma, \mathcal{O}_{X_\Sigma}(D))$에서 ([\[대수다양체\] §사영공간의 코호몰로지, ⁋정의 2](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#def2)), 정리 5에 의해 $i > 0$ 항이 모두 사라지므로 $\chi = \dim H^0$이다. 명제 1에 의해 $\dim H^0 = \#(P_D \cap M)$이다.
+Euler characteristic의 정의 $\chi(\mathcal{O}_{X_\Sigma}(D)) = \sum_{i \ge 0} (-1)^i \dim H^i(X_\Sigma, \mathcal{O}_{X_\Sigma}(D))$에서 ([\[대수다양체\] §사영공간의 코호몰로지, ⁋정의 2](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#def2){: data-relation="weak" }), 정리 5에 의해 $i > 0$ 항이 모두 사라지므로 $\chi = \dim H^0$이다. 명제 1에 의해 $\dim H^0 = \#(P_D \cap M)$이다.
 :::
 
 ## 구조층의 고차 코호몰로지 소멸
@@ -145,20 +145,20 @@ $$H^i(X_\Sigma, \mathcal{O}_{X_\Sigma}) = 0 \qquad (i > 0)$$
 $D = 0$은 $\psi_D \equiv 0$에 대응하며 이는 convex piecewise linear function이므로 nef Cartier divisor이다. 따라서 정리 5에 의해 $H^i(X_\Sigma, \mathcal{O}_{X_\Sigma}) = 0$ ($i > 0$)이다. $H^0$의 경우 명제 1에서 $P_0 = \{m \in M_\mathbb{R} \mid \langle m, v_\rho \rangle \ge 0 \ \forall \rho\}$인데, $X_\Sigma$가 complete이면 임의의 $v \in N_\mathbb{R}$가 ray들의 nonnegative 결합이므로 이 조건은 모든 $v \in N_\mathbb{R}$에서 $\langle m, v \rangle \ge 0$을 뜻하고, 따라서 $m = 0$뿐이다. 따라서 $P_0 \cap M = \{0\}$이고 $H^0(X_\Sigma, \mathcal{O}_{X_\Sigma}) = \mathbb{C} \cdot \rchi^0 = \mathbb{C}$이다.
 :::
 
-따름정리 7은 complete toric variety가 cohomology의 관점에서 매우 "단순"함을 말한다. Structure sheaf의 고차 cohomology가 통째로 사라지므로, 가령 smooth complete toric variety는 Hodge 수 $h^{0, q} = \dim H^q(X_\Sigma, \mathcal{O}_{X_\Sigma}) = 0$ ($q > 0$)을 가지며, 이는 smooth complete toric variety가 홀수 degree cohomology를 갖지 않고 그 cohomology가 algebraic cycle로 채워진다는 사실과 정합적이다 ([§토릭 다양체의 교차 이론, ⁋참고 6](/ko/math/toric_geometry/toric_intersection_theory#rmk6)). 또한 이로부터 picard group과 class group을 잇는 exponential 계열 논증에서 $\Pic(X_\Sigma)$가 free이고 위상적 $H^2$와 일치함을 끌어낼 수 있다.
+따름정리 7은 complete toric variety가 cohomology의 관점에서 매우 "단순"함을 말한다. Structure sheaf의 고차 cohomology가 통째로 사라지므로, 가령 smooth complete toric variety는 Hodge 수 $h^{0, q} = \dim H^q(X_\Sigma, \mathcal{O}_{X_\Sigma}) = 0$ ($q > 0$)을 가지며, 이는 smooth complete toric variety가 홀수 degree cohomology를 갖지 않고 그 cohomology가 algebraic cycle로 채워진다는 사실과 정합적이다 ([§토릭 다양체의 교차 이론, ⁋참고 6](/ko/math/toric_geometry/toric_intersection_theory#rmk6){: data-relation="weak" }). 또한 이로부터 picard group과 class group을 잇는 exponential 계열 논증에서 $\Pic(X_\Sigma)$가 free이고 위상적 $H^2$와 일치함을 끌어낼 수 있다.
 
 ## 사영공간
 
-이제 위 도구들을 구체적 예시에 적용해 고전적 답을 회복한다. 먼저 $\mathbb{P}^n$ 위의 $\mathcal{O}(d)$의 cohomology가 [\[대수다양체\] §사영공간의 코호몰로지, ⁋명제 1](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop1)과 일치함을 확인한다.
+이제 위 도구들을 구체적 예시에 적용해 고전적 답을 회복한다. 먼저 $\mathbb{P}^n$ 위의 $\mathcal{O}(d)$의 cohomology가 [\[대수다양체\] §사영공간의 코호몰로지, ⁋명제 1](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop1){: data-relation="weak" }과 일치함을 확인한다.
 
 ::: 예시 8 ($\mathbb{P}^n$ 위의 $\mathcal{O}(d)$)
-[§Cox 구성과 GIT quotient, ⁋예시 10](/ko/math/toric_geometry/cox_construction#ex10)에서 보았듯 $\mathbb{P}^n$의 fan은 ray $\rho_0, \ldots, \rho_n$을 가지며 그 primitive generator는
+[§Cox 구성과 GIT quotient, ⁋예시 10](/ko/math/toric_geometry/cox_construction#ex10){: data-relation="required" }에서 보았듯 $\mathbb{P}^n$의 fan은 ray $\rho_0, \ldots, \rho_n$을 가지며 그 primitive generator는
 
 $$v_i = e_i \ (1 \le i \le n), \qquad v_0 = -e_1 - \cdots - e_n$$
 
 이고, hyperplane class $H = D_0$에 대응하는 divisor가 $d > 0$에 대해 $\mathcal{O}_{\mathbb{P}^n}(d) = \mathcal{O}_{\mathbb{P}^n}(dH)$를 준다. $D = dH = d D_0$이므로 $a_0 = d$, $a_i = 0$ ($i \ge 1$)이다.
 
-먼저 $d \ge 0$인 경우를 본다. $\psi_{dH}$는 [§토러스 인자와 선다발, ⁋예시 11](/ko/math/toric_geometry/toric_divisors#ex11)에서 본 $\psi_H$의 $d$배이며, $\psi_H$가 strictly convex이므로 $d \ge 0$에서 $\psi_{dH}$는 convex이고 따라서 $dH$는 nef이다. 정리 5에 의해 $H^i(\mathbb{P}^n, \mathcal{O}(d)) = 0$ ($i > 0$)이고, 명제 1에 의해 $H^0$은
+먼저 $d \ge 0$인 경우를 본다. $\psi_{dH}$는 [§토러스 인자와 선다발, ⁋예시 11](/ko/math/toric_geometry/toric_divisors#ex11){: data-relation="required" }에서 본 $\psi_H$의 $d$배이며, $\psi_H$가 strictly convex이므로 $d \ge 0$에서 $\psi_{dH}$는 convex이고 따라서 $dH$는 nef이다. 정리 5에 의해 $H^i(\mathbb{P}^n, \mathcal{O}(d)) = 0$ ($i > 0$)이고, 명제 1에 의해 $H^0$은
 
 $$P_{dH} = \{m \in M_\mathbb{R} \mid \langle m, v_0 \rangle \ge -d,\ \langle m, v_i \rangle \ge 0 \ (1 \le i \le n)\}$$
 
@@ -166,9 +166,9 @@ $$P_{dH} = \{m \in M_\mathbb{R} \mid \langle m, v_0 \rangle \ge -d,\ \langle m, 
 
 $$\#(d\Delta_n \cap M) = \binom{n + d}{n}$$
 
-이다. 이것은 정확히 degree $d$의 homogeneous 다항식 공간 $\mathbb{C}[\x_0, \ldots, \x_n]_d$의 차원으로, [\[대수다양체\] §사영공간의 코호몰로지, ⁋명제 1](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop1)의 $q = 0$, $d \ge 0$ 경우와 일치한다.
+이다. 이것은 정확히 degree $d$의 homogeneous 다항식 공간 $\mathbb{C}[\x_0, \ldots, \x_n]_d$의 차원으로, [\[대수다양체\] §사영공간의 코호몰로지, ⁋명제 1](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop1){: data-relation="weak" }의 $q = 0$, $d \ge 0$ 경우와 일치한다.
 
-이제 $d < 0$인 경우를 본다. $d < 0$이면 $a_0 = d < 0$이고 $P_{dH}$의 조건 $m_i \ge 0$, $\sum m_i \le d < 0$은 양립 불가능하므로 $P_{dH} \cap M = \emptyset$, 즉 $H^0 = 0$이다. 고차 cohomology는 정리 3으로 계산한다. Weight $m$의 piece는 $\widetilde{H}^{i-1}(V_{dH, m})$인데, $V_{dH, m}$은 $\langle m, v_\rho \rangle < -a_\rho$인 ray들이 각 cone 안에서 이루는 convex hull들의 합집합이다. $\mathbb{P}^n$의 fan에서 $n+1$개의 ray 중 $n$개씩이 maximal cone을 이루고 $n+1$개 전체는 cone을 이루지 않으므로 ([§토릭 다양체의 교차 이론, ⁋예시 9](/ko/math/toric_geometry/toric_intersection_theory#ex9)), 모든 $n+1$개 ray가 "부족한" weight $m$에 대해서는 $V_{dH, m}$이 각 maximal cone마다 그 안의 $n$개 ray의 convex hull을 담아 그 합집합이 simplex $\operatorname{conv}\{v_0, \ldots, v_n\}$의 boundary가 되며, $v_0 + \cdots + v_n = 0$이라 원점이 이 simplex의 interior에 있으므로 그 boundary는 $(n-1)$차원 구면 $S^{n-1}$과 homeomorphic하다. 이 때 $\widetilde{H}^{n-1}(V_{dH, m}; \mathbb{C}) = \mathbb{C}$이 되어 $H^n$에 기여하고, 그 외 degree는 $0$이다. 이러한 $m$들을 세면 $\langle m, v_i \rangle < 0$ ($0 \le i \le n$)인 $m$, 즉 $m_i < 0$과 $\sum m_i > d$를 만족하는 격자점들로 그 개수가 $\binom{-d-1}{n} = \binom{-d - 1}{-d - n - 1}$이다. 이는 [\[대수다양체\] §사영공간의 코호몰로지, ⁋명제 1](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop1)의 $q = n$, $d \le -n-1$ 경우 $\mathbb{C}[\x_0^{-1}, \ldots, \x_n^{-1}]_{-d-n-1}$의 차원과 일치한다. 중간 degree $0 < i < n$에서는 모든 weight $m$에 대해 $V_{dH, m}$이 비어 있거나 contractible하여 $H^i = 0$이며, 이로써 Bott 공식 전체가 fan의 조합론으로부터 회복된다.
+이제 $d < 0$인 경우를 본다. $d < 0$이면 $a_0 = d < 0$이고 $P_{dH}$의 조건 $m_i \ge 0$, $\sum m_i \le d < 0$은 양립 불가능하므로 $P_{dH} \cap M = \emptyset$, 즉 $H^0 = 0$이다. 고차 cohomology는 정리 3으로 계산한다. Weight $m$의 piece는 $\widetilde{H}^{i-1}(V_{dH, m})$인데, $V_{dH, m}$은 $\langle m, v_\rho \rangle < -a_\rho$인 ray들이 각 cone 안에서 이루는 convex hull들의 합집합이다. $\mathbb{P}^n$의 fan에서 $n+1$개의 ray 중 $n$개씩이 maximal cone을 이루고 $n+1$개 전체는 cone을 이루지 않으므로 ([§토릭 다양체의 교차 이론, ⁋예시 9](/ko/math/toric_geometry/toric_intersection_theory#ex9){: data-relation="weak" }), 모든 $n+1$개 ray가 "부족한" weight $m$에 대해서는 $V_{dH, m}$이 각 maximal cone마다 그 안의 $n$개 ray의 convex hull을 담아 그 합집합이 simplex $\operatorname{conv}\{v_0, \ldots, v_n\}$의 boundary가 되며, $v_0 + \cdots + v_n = 0$이라 원점이 이 simplex의 interior에 있으므로 그 boundary는 $(n-1)$차원 구면 $S^{n-1}$과 homeomorphic하다. 이 때 $\widetilde{H}^{n-1}(V_{dH, m}; \mathbb{C}) = \mathbb{C}$이 되어 $H^n$에 기여하고, 그 외 degree는 $0$이다. 이러한 $m$들을 세면 $\langle m, v_i \rangle < 0$ ($0 \le i \le n$)인 $m$, 즉 $m_i < 0$과 $\sum m_i > d$를 만족하는 격자점들로 그 개수가 $\binom{-d-1}{n} = \binom{-d - 1}{-d - n - 1}$이다. 이는 [\[대수다양체\] §사영공간의 코호몰로지, ⁋명제 1](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop1){: data-relation="weak" }의 $q = n$, $d \le -n-1$ 경우 $\mathbb{C}[\x_0^{-1}, \ldots, \x_n^{-1}]_{-d-n-1}$의 차원과 일치한다. 중간 degree $0 < i < n$에서는 모든 weight $m$에 대해 $V_{dH, m}$이 비어 있거나 contractible하여 $H^i = 0$이며, 이로써 Bott 공식 전체가 fan의 조합론으로부터 회복된다.
 :::
 
 ## 사영선의 곱
@@ -176,11 +176,11 @@ $$\#(d\Delta_n \cap M) = \binom{n + d}{n}$$
 다음으로 Picard rank가 $2$인 가장 단순한 곱공간 $\mathbb{P}^1 \times \mathbb{P}^1$ 위에서 bidegree $(a, b)$ line bundle의 cohomology를 계산한다.
 
 ::: 예시 9 ($\mathbb{P}^1 \times \mathbb{P}^1$)
-[§Cox 구성과 GIT quotient, ⁋예시 11](/ko/math/toric_geometry/cox_construction#ex11)에서 보았듯 $\mathbb{P}^1 \times \mathbb{P}^1$의 fan은 $N = \mathbb{Z}^2$에서 $4$개의 ray
+[§Cox 구성과 GIT quotient, ⁋예시 11](/ko/math/toric_geometry/cox_construction#ex11){: data-relation="weak" }에서 보았듯 $\mathbb{P}^1 \times \mathbb{P}^1$의 fan은 $N = \mathbb{Z}^2$에서 $4$개의 ray
 
 $$v_1 = (1, 0), \quad v_2 = (0, 1), \quad v_3 = (-1, 0), \quad v_4 = (0, -1)$$
 
-을 가지며 maximal cone은 인접한 두 ray로 생성되는 $4$개이다. 두 hyperplane class를 [§토릭 다양체의 교차 이론, ⁋예시 10](/ko/math/toric_geometry/toric_intersection_theory#ex10)에서처럼 $H_1 = D_1 = D_3$, $H_2 = D_2 = D_4$로 두면, line bundle $\mathcal{O}(a, b)$는 divisor $D = a D_3 + b D_4$ ($a, b \in \mathbb{Z}$)에 대응한다. (Linear equivalence로 $D_1 \sim D_3$, $D_2 \sim D_4$이므로 이 한 표현이 일반적인 bidegree를 모두 준다. 우리의 부호 규약 $P_D=\{m\mid \langle m,v_\rho\rangle\ge -a_\rho\}$에서 이 표현이 아래의 표준 polytope $[0,a]\times[0,b]$를 준다.)
+을 가지며 maximal cone은 인접한 두 ray로 생성되는 $4$개이다. 두 hyperplane class를 [§토릭 다양체의 교차 이론, ⁋예시 10](/ko/math/toric_geometry/toric_intersection_theory#ex10){: data-relation="weak" }에서처럼 $H_1 = D_1 = D_3$, $H_2 = D_2 = D_4$로 두면, line bundle $\mathcal{O}(a, b)$는 divisor $D = a D_3 + b D_4$ ($a, b \in \mathbb{Z}$)에 대응한다. (Linear equivalence로 $D_1 \sim D_3$, $D_2 \sim D_4$이므로 이 한 표현이 일반적인 bidegree를 모두 준다. 우리의 부호 규약 $P_D=\{m\mid \langle m,v_\rho\rangle\ge -a_\rho\}$에서 이 표현이 아래의 표준 polytope $[0,a]\times[0,b]$를 준다.)
 
 $a, b \ge 0$인 경우, $D$의 polytope은
 
