@@ -22,7 +22,7 @@ weight: 41
 관련 파일: [`scripts/audit/AUDIT-PROTOCOL.md`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/audit/AUDIT-PROTOCOL.md), [`scripts/audit/export_audit_json.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/audit/export_audit_json.py), [`scripts/audit/validate_audit_json.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/audit/validate_audit_json.py)
 {: .notice--info}
 
-[판본 비교기](/ko/llm_workshop/version_comparator)가 호버 카드로 붙이는 감사 지적은, 8월 감사 때는 카테고리별 표와 두 벌의 반영 기록으로 흩어져 있었다. 그 노트를 비교기가 읽게 만드는 데 그 노트 전용 파서가 필요했다. 다음 감사도 노트 형식이 다르면 파서를 또 짜야 한다는 뜻이고, 사용자는 그 반복을 여기서 끊자고 했다.
+[판본 비교기](/ko/llm_workshop/version_comparator){: data-relation="weak" }가 호버 카드로 붙이는 감사 지적은, 8월 감사 때는 카테고리별 표와 두 벌의 반영 기록으로 흩어져 있었다. 그 노트를 비교기가 읽게 만드는 데 그 노트 전용 파서가 필요했다. 다음 감사도 노트 형식이 다르면 파서를 또 짜야 한다는 뜻이고, 사용자는 그 반복을 여기서 끊자고 했다.
 
 > 감사 과정을 우리가 하나의 워크플로우로, 고정된 워크플로우로 만들자는 건데 지금 사실 감사 노트가, 결과 노트가 어느 정도 포맷팅이 돼 있긴 한데 그게 사실 지금은 ad-hoc인거잖아. 그걸 형식을 고정하자는거야. 그리고 그 고정된 형식으로 출력된 json을 compare 페이지에서 선택하면 (혹은 슬러그로 매치해도 좋고) 지금처럼 hover가 되어 나타나도록. 이거를 별도 문서로 만들어야 다음 감사 돌릴 때 그걸 참고할 수 있겠지.
 
