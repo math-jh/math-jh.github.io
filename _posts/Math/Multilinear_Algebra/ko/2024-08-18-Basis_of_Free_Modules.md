@@ -17,7 +17,7 @@ weight: 3
 
 $$F(X)=\bigoplus_{x\in X} A$$
 
-으로 주어지는 것을 살펴보았다. ([\[대수적 구조\] §가군의 직접곱과 직합, 텐서곱, ⁋명제 3](/ko/math/algebraic_structures/operations_of_modules#prop3)) 이번 글에서 우리는 free $A$-module의 성질을 조금 더 자세히 살펴본다. 
+으로 주어지는 것을 살펴보았다. ([\[대수적 구조\] §가군의 직접곱과 직합, 텐서곱, ⁋명제 3](/ko/math/algebraic_structures/operations_of_modules#prop3){: data-relation="required" }) 이번 글에서 우리는 free $A$-module의 성질을 조금 더 자세히 살펴본다. 
 
 ## 기저
 
@@ -33,7 +33,7 @@ $$F(X)=\bigoplus_{x\in X} A$$
 Free family가 아닌 family를 *related family*라 부른다.
 :::
 
-Free family는 벡터공간에서의 일차독립의 개념을 일반화한 것이다. 즉, $A$가 field이고, $M$이 $A$ 위에 정의된 벡터공간이었다면 $M$의 원소들의 family $(x_i)_{i\in I}$가 free family라는 것은 $x_i$들이 일차독립인 것과 동치이다. ([\[선형대수학\] §벡터공간의 기저, ⁋정의 5](/ko/math/linear_algebra/basis#def5)) 이러한 관점에서 related family의 원소들은 서로 *linearly dependent<sub>일차종속</sub>*라 부른다. 
+Free family는 벡터공간에서의 일차독립의 개념을 일반화한 것이다. 즉, $A$가 field이고, $M$이 $A$ 위에 정의된 벡터공간이었다면 $M$의 원소들의 family $(x_i)_{i\in I}$가 free family라는 것은 $x_i$들이 일차독립인 것과 동치이다. ([\[선형대수학\] §벡터공간의 기저, ⁋정의 5](/ko/math/linear_algebra/basis#def5){: data-relation="weak" }) 이러한 관점에서 related family의 원소들은 서로 *linearly dependent<sub>일차종속</sub>*라 부른다. 
 
 한편, 임의의 $A$-module $M$은 항상 spanning set을 갖는다. 이는 적어도 $M$의 원소들을 전부 모아두면 이것이 $M$을 생성하기 때문이다.  이로부터 다음을 얻는다.
 
@@ -74,15 +74,15 @@ $$I \rightarrow X\times\mathbb{N};\qquad i\mapsto \bigl(x(i),\nu_{x(i)}(i)\bigr)
 
 $$\card I\leq \card(X\times\mathbb{N})=\card X\cdot\aleph_0\leq \card X$$
 
-이고, 마지막 부등식은 $X$가 무한집합이라는 것과 [\[집합론\] §자연수와 무한집합, ⁋따름정리 16](/ko/math/set_theory/natural_numbers#cor16)에 따른 것이다.
+이고, 마지막 부등식은 $X$가 무한집합이라는 것과 [\[집합론\] §자연수와 무한집합, ⁋따름정리 16](/ko/math/set_theory/natural_numbers#cor16){: data-relation="required" }에 따른 것이다.
 :::
 
-[정의 3](#def3)의 상황에서, $M$의 임의의 원소는 적당한 $\alpha\in A$에 대하여 $\alpha x$의 꼴로 쓸 수 있다. 따라서 이러한 경우 $M$을 $Ax$와 같이 표기하기도 한다. 이 표기를 이용하면, 임의의 $A$-module $M$과 그 원소들의 family $(x_i)_{i\in I}$에 대하여,
+[정의 3](#def3){: data-relation="required" }의 상황에서, $M$의 임의의 원소는 적당한 $\alpha\in A$에 대하여 $\alpha x$의 꼴로 쓸 수 있다. 따라서 이러한 경우 $M$을 $Ax$와 같이 표기하기도 한다. 이 표기를 이용하면, 임의의 $A$-module $M$과 그 원소들의 family $(x_i)_{i\in I}$에 대하여,
 
 - $(x_i)_{i\in I}$가 $M$의 generating family인 것은 $M=\sum_{i\in I}Ax_i$인 것과 동치이다.
 - $(x_i)_{i\in I}$가 $M$의 basis인 것은 $M$이 direct sum $\bigoplus_{i\in I}Ax_i$와 같고, 각각의 $x_i$가 모두 free element인 것과 동치이다.
 
-이를 통해 [명제 4](#prop4)를 각각의 $N_i$가 free element에 의해 생성되는 monogenous module인 경우로 한정하면, $A\neq 0$일 때 무한한 basis를 갖는 free $A$-module $M$의 모든 basis는 같은 cardinality를 갖는다는 것을 안다. 그러나 유한한 basis를 갖는 경우 이것이 항상 성립하는 것은 아니다.
+이를 통해 [명제 4](#prop4){: data-relation="required" }를 각각의 $N_i$가 free element에 의해 생성되는 monogenous module인 경우로 한정하면, $A\neq 0$일 때 무한한 basis를 갖는 free $A$-module $M$의 모든 basis는 같은 cardinality를 갖는다는 것을 안다. 그러나 유한한 basis를 갖는 경우 이것이 항상 성립하는 것은 아니다.
 
 ::: 정의 5
 임의의 ring $A$에 대하여, $A^m\cong A^n$인 것과 $m=n$인 것이 항상 동치일 경우, $A$가 *invariant basis number property<sub>불변 기저수 성질</sub>*를 만족한다고 한다. 
@@ -90,7 +90,7 @@ $$\card I\leq \card(X\times\mathbb{N})=\card X\cdot\aleph_0\leq \card X$$
 
 예를들어, $A=0$은 이 성질을 만족하지 않는다. 임의의 $m,n$에 대해 $0^m\cong 0^n$이기 때문이다. 
 
-[\[선형대수학\] §벡터공간의 차원, ⁋보조정리 2](/ko/math/linear_algebra/dimension#lem2)에 의해, 임의의 field는 invariant basis number property를 갖는다. 이를 사용하면 다음의 더 일반적인 명제를 보일 수 있다.
+[\[선형대수학\] §벡터공간의 차원, ⁋보조정리 2](/ko/math/linear_algebra/dimension#lem2){: data-relation="required" }에 의해, 임의의 field는 invariant basis number property를 갖는다. 이를 사용하면 다음의 더 일반적인 명제를 보일 수 있다.
 
 ::: 명제 6
 Ring $A$에 대하여, 적당한 field $\mathbb{K}$와 homomorphism $\phi: A \rightarrow \mathbb{K}$가 존재한다 하자. 그럼 $A$는 IBN property를 가진다.
@@ -104,10 +104,10 @@ $$M\cong \bigoplus_{i\in I} Ax_i$$
 
 $$\phi_! M\cong\phi_!\left(\bigoplus_{i\in I} Ax_i\right)\cong \bigoplus_{i\in I}\phi_! Ax_i$$
 
-이 성립한다. ([\[대수적 구조\] §스칼라의 변환, ⁋명제 6](/ko/math/algebraic_structures/change_of_base_ring#prop6)) 또, $x_i$가 free element라는 사실로부터 $Ax_i\cong A$이고, $\phi_! A\cong \mathbb{K}$이므로 $\phi_! M\cong \bigoplus_{i\in I}\mathbb{K}$이다. 이제 [\[선형대수학\] §벡터공간의 차원, ⁋보조정리 2](/ko/math/linear_algebra/dimension#lem2)를 적용하면 원하는 결과를 얻는다.
+이 성립한다. ([\[대수적 구조\] §스칼라의 변환, ⁋명제 6](/ko/math/algebraic_structures/change_of_base_ring#prop6){: data-relation="required" }) 또, $x_i$가 free element라는 사실로부터 $Ax_i\cong A$이고, $\phi_! A\cong \mathbb{K}$이므로 $\phi_! M\cong \bigoplus_{i\in I}\mathbb{K}$이다. 이제 [\[선형대수학\] §벡터공간의 차원, ⁋보조정리 2](/ko/math/linear_algebra/dimension#lem2){: data-relation="required" }를 적용하면 원하는 결과를 얻는다.
 :::
 
-[\[선형대수학\] §벡터공간의 차원, ⁋보조정리 2](/ko/math/linear_algebra/dimension#lem2)의 증명은 $\mathbb{K}$가 commutative라는 성질이 아니라 $0$이 아닌 scalar가 invertible이라는 사실만을 사용하므로, 위의 명제는 더 일반적으로 $\mathbb{K}$를 division ring $D$로 바꾸어도 성립한다. 한편 $0$이 아닌 임의의 commutative ring $A$는 [\[대수적 구조\] §환의 정의, ⁋정리 10](/ko/math/algebraic_structures/rings#thm10)에 의하여 maximal ideal $\mathfrak{m}$을 가지므로 field로의 homomorphism $A \rightarrow A/\mathfrak{m}$이 존재하고, 따라서 IBN property를 갖는다.
+[\[선형대수학\] §벡터공간의 차원, ⁋보조정리 2](/ko/math/linear_algebra/dimension#lem2){: data-relation="required" }의 증명은 $\mathbb{K}$가 commutative라는 성질이 아니라 $0$이 아닌 scalar가 invertible이라는 사실만을 사용하므로, 위의 명제는 더 일반적으로 $\mathbb{K}$를 division ring $D$로 바꾸어도 성립한다. 한편 $0$이 아닌 임의의 commutative ring $A$는 [\[대수적 구조\] §환의 정의, ⁋정리 10](/ko/math/algebraic_structures/rings#thm10){: data-relation="required" }에 의하여 maximal ideal $\mathfrak{m}$을 가지므로 field로의 homomorphism $A \rightarrow A/\mathfrak{m}$이 존재하고, 따라서 IBN property를 갖는다.
 
 ::: 정의 7
 Ring $A$가 IBN을 만족한다 하자. 그럼 임의의 free $A$-module $M$에 대하여, $M$의 basis의 크기를 $M$의 *rank<sub>랭크</sub>*이라 한다. 
