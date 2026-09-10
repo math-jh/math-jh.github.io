@@ -60,7 +60,7 @@ First, assume $V=W_1\oplus W_2$. By definition, $W_1+W_2\subseteq V$ is clear. C
 
 $$w=0+w=w+0$$
 
-which contradicts the uniqueness in [Definition 1](#def1).
+which contradicts the uniqueness in [Definition 1](#def1){: data-relation="required" }.
 
 Conversely, suppose $V=W_1+W_2$ and $W_1\cap W_2=\{0\}$. For any $v\in V$, since $V=W_1+W_2$, there exist $w_i\in W_i$ such that $v=w_1+w_2$. Moreover, this expression is unique: if
 
@@ -87,7 +87,7 @@ As another example, choose a basis $\mathcal{B}=\{x_1,\ldots, x_n\}$ of $V$. If 
 For any $\mathbb{K}$-vector space $V$ and subspaces $(W_i)_{i\in I}$, the condition $V=\bigoplus_{i\in I} W_i$ is equivalent to the bases $\mathcal{B}_i$ of $W_i$ satisfying $\mathcal{B}_i\cap\mathcal{B}_j=\emptyset$ whenever $i\neq j$, and $\bigcup_{i\in I}\mathcal{B}_i$ being a basis of $V$.
 :::
 ::: Proof
-First, assume $V=\bigoplus W_i$ and choose bases $\mathcal{B}_i$ of the $W_i$. If $\mathcal{B}_i\cap\mathcal{B}_j\neq\emptyset$, then $W_i\cap W_j\neq\emptyset$, which contradicts the discussion after [Proposition 2](#prop2), so we must have $\mathcal{B}_i\cap\mathcal{B}_j=\emptyset$. For any $v\in V$, from $V=\bigoplus W_i$ there exist unique $w_i$ satisfying
+First, assume $V=\bigoplus W_i$ and choose bases $\mathcal{B}_i$ of the $W_i$. If $\mathcal{B}_i\cap\mathcal{B}_j\neq\emptyset$, then $W_i\cap W_j\neq\emptyset$, which contradicts the discussion after [Proposition 2](#prop2){: data-relation="required" }, so we must have $\mathcal{B}_i\cap\mathcal{B}_j=\emptyset$. For any $v\in V$, from $V=\bigoplus W_i$ there exist unique $w_i$ satisfying
 
 $$v=\sum_{i\in I} w_i$$
 
@@ -100,7 +100,7 @@ Thus we see that $\dim V=\sum_{i\in I}\dim W_i$.
 
 ## Diagonalization
 
-Now we examine how to decompose $\mathbb{K}^n$ into eigenspaces. From [Proposition 3](#prop3) we know that decomposing the vector space $\mathbb{K}^n$ into the eigenspaces $E_\lambda$ is the same as collecting bases of the $E_\lambda$ to form a basis of $\mathbb{K}^n$. Also, if a nonzero vector $x_1$ is an eigenvector corresponding to an eigenvalue $\lambda_1$, then for another eigenvalue $\lambda_2$,
+Now we examine how to decompose $\mathbb{K}^n$ into eigenspaces. From [Proposition 3](#prop3){: data-relation="required" } we know that decomposing the vector space $\mathbb{K}^n$ into the eigenspaces $E_\lambda$ is the same as collecting bases of the $E_\lambda$ to form a basis of $\mathbb{K}^n$. Also, if a nonzero vector $x_1$ is an eigenvector corresponding to an eigenvalue $\lambda_1$, then for another eigenvalue $\lambda_2$,
 
 $$Ax_1=\lambda_1x_1\neq\lambda_2 x_1$$
 
@@ -151,7 +151,7 @@ $$\beta_1''x_1+\beta_2''x_2+\cdots+\beta_m''x_m=0$$
 By assumption, $\lambda_i-\lambda_m\neq 0$, so for $1\leq i\leq m-1$, the condition $\beta_i''=0$ is equivalent to $\beta_i=0$. Therefore, the number of $1\leq i\leq m-1$ with $\beta_i''\neq 0$ is $k-1$, and since $\beta_m''=0$, the size of $\supp(\beta_i'')_{1\leq i\leq m}$ is $k-1$. This contradicts the minimality of $(\beta_i)_{1\leq i\leq m}$, so the set $\{x_1,x_2,\ldots, x_m\}$ is linearly independent.
 :::
 
-From this, for any matrix $A$ with eigenvalues $\lambda\in\sigma(A)$, corresponding eigenspaces $E_\lambda$, and bases $\mathcal{B}_\lambda$, we know that $\mathcal{B}=\bigcup_{\lambda\in\sigma(A)}\mathcal{B}_\lambda$ is a linearly independent subset of $\mathbb{K}^n$. However, there is no reason for $\mathcal{B}$ to be a basis of $\mathbb{K}^n$ in general. For example, in [§Characteristic Polynomial, ⁋Example 7](/en/math/linear_algebra/characteristic_polynomial#ex7), when $\mathbb{K}=\mathbb{R}$ we have $\sigma(J)=\emptyset$, so $\mathcal{B}=\emptyset$. Moreover, even if we assume that the characteristic polynomial of $A$ has exactly $n$ roots, a similar problem can arise; for instance, for the matrix
+From this, for any matrix $A$ with eigenvalues $\lambda\in\sigma(A)$, corresponding eigenspaces $E_\lambda$, and bases $\mathcal{B}_\lambda$, we know that $\mathcal{B}=\bigcup_{\lambda\in\sigma(A)}\mathcal{B}_\lambda$ is a linearly independent subset of $\mathbb{K}^n$. However, there is no reason for $\mathcal{B}$ to be a basis of $\mathbb{K}^n$ in general. For example, in [§Characteristic Polynomial, ⁋Example 7](/en/math/linear_algebra/characteristic_polynomial#ex7){: data-relation="weak" }, when $\mathbb{K}=\mathbb{R}$ we have $\sigma(J)=\emptyset$, so $\mathcal{B}=\emptyset$. Moreover, even if we assume that the characteristic polynomial of $A$ has exactly $n$ roots, a similar problem can arise; for instance, for the matrix
 
 $$A=\begin{pmatrix}1&1&1\\0&1&1\\0&0&1\end{pmatrix}$$
 
@@ -179,14 +179,14 @@ $$\begin{aligned}A'&=X^{-1}(AX)=\begin{pmatrix}y_1\\ y_2\\ \vdots\\ y_n\end{pmat
 &=\begin{pmatrix}\lambda&0&\cdots& 0&\cdots&y_1\cdot Ax_n\\ 0&\lambda&\cdots &0&\cdots &y_2\cdot Ax_n\\ \vdots&\vdots&\ddots&\vdots&\ddots&\vdots\\ 0&0&\cdots&\lambda&\cdots&y_k\cdot Ax_n\\ \vdots&\vdots&\ddots&\vdots&\ddots&\vdots\\ 0&0&\cdots &0&\cdots&y_n\cdot Ax_n \end{pmatrix}\\
 &=\begin{pmatrix}\lambda I_k&B\\ 0&C\end{pmatrix}\end{aligned}$$
 
-Thus, writing the characteristic polynomial of $A$ as $p_A(\mathbf{x})$, by [§Characteristic Polynomial, ⁋Corollary 4](/en/math/linear_algebra/characteristic_polynomial#cor4) we have $p_A(\mathbf{x})=p_{A'}(\mathbf{x})$, and therefore
+Thus, writing the characteristic polynomial of $A$ as $p_A(\mathbf{x})$, by [§Characteristic Polynomial, ⁋Corollary 4](/en/math/linear_algebra/characteristic_polynomial#cor4){: data-relation="required" } we have $p_A(\mathbf{x})=p_{A'}(\mathbf{x})$, and therefore
 
 $$p_A(\mathbf{x})=p_{A'}(\mathbf{x})=\det(\mathbf{x}I-A')=(\mathbf{x}-\lambda)^k\det(\mathbf{x}I_{n-k}-C)$$
 
 That is, the algebraic multiplicity of $\lambda$ in $p_A$ is at least $k$.
 :::
 
-Given an $n\times n$ matrix $A$ with characteristic polynomial $p_A$, the sum of the algebraic multiplicities of the eigenvalues $\lambda$ cannot exceed $n$, the degree of $p_A$. Also, for a fixed eigenvalue $\lambda$, the above proposition shows that the geometric multiplicity of $\lambda$ cannot exceed its algebraic multiplicity. Finally, from the argument after [Proposition 4](#prop4), we see that in order to decompose $\mathbb{K}^n$ into eigenspaces, the sum of the geometric multiplicities of the $\lambda$ must equal $n$. Putting all this together, we obtain the following proposition.
+Given an $n\times n$ matrix $A$ with characteristic polynomial $p_A$, the sum of the algebraic multiplicities of the eigenvalues $\lambda$ cannot exceed $n$, the degree of $p_A$. Also, for a fixed eigenvalue $\lambda$, the above proposition shows that the geometric multiplicity of $\lambda$ cannot exceed its algebraic multiplicity. Finally, from the argument after [Proposition 4](#prop4){: data-relation="required" }, we see that in order to decompose $\mathbb{K}^n$ into eigenspaces, the sum of the geometric multiplicities of the $\lambda$ must equal $n$. Putting all this together, we obtain the following proposition.
 
 ::: Proposition 6
 For any $n\times n$ matrix $A$, the necessary and sufficient condition for $\mathbb{K}^n$ to be expressible as a direct sum of the eigenspaces of $A$ is:
@@ -197,22 +197,22 @@ For any $n\times n$ matrix $A$, the necessary and sufficient condition for $\mat
 
 In particular, if $\mathbb{K}$ is algebraically closed, the first condition is always satisfied, so only the second condition need be considered.
 
-We assume that the field $\mathbb{K}$ is algebraically closed while dealing with diagonalization of matrices. This is purely for convenience; if $\mathbb{K}$ is not algebraically closed, we simply consider a field extension obtained by adjoining the roots of the characteristic polynomial of the matrix of interest. ([\[Field Theory\] §Algebraic Extensions](/en/math/field_theory/algebraic_extensions)) This is exactly the same as obtaining $\mathbb{C}$ from $\mathbb{R}$ by adjoining the imaginary root $i$ of the equation $\x^2+1=0$, for example.
+We assume that the field $\mathbb{K}$ is algebraically closed while dealing with diagonalization of matrices. This is purely for convenience; if $\mathbb{K}$ is not algebraically closed, we simply consider a field extension obtained by adjoining the roots of the characteristic polynomial of the matrix of interest. ([\[Field Theory\] §Algebraic Extensions](/en/math/field_theory/algebraic_extensions){: data-relation="weak" }) This is exactly the same as obtaining $\mathbb{C}$ from $\mathbb{R}$ by adjoining the imaginary root $i$ of the equation $\x^2+1=0$, for example.
 
 ## Diagonalization of Matrices
 
-We have previously examined how to decompose $\mathbb{R}^n$ through the eigenvalues and eigenspaces of an arbitrary $n\times n$ matrix $A$, and from [Proposition 6](#prop6) we have also learned when such a decomposition is possible. Let us look again at the proof of [Proposition 5](#prop5) that we used to establish this. We added $n-k$ arbitrary vectors to a basis $x_1,\ldots, x_k$ of $E_\lambda$, then defined the matrix $X=(x_1\mid\cdots\mid x_n)$ through these, and showed by calculation that
+We have previously examined how to decompose $\mathbb{R}^n$ through the eigenvalues and eigenspaces of an arbitrary $n\times n$ matrix $A$, and from [Proposition 6](#prop6){: data-relation="required" } we have also learned when such a decomposition is possible. Let us look again at the proof of [Proposition 5](#prop5){: data-relation="required" } that we used to establish this. We added $n-k$ arbitrary vectors to a basis $x_1,\ldots, x_k$ of $E_\lambda$, then defined the matrix $X=(x_1\mid\cdots\mid x_n)$ through these, and showed by calculation that
 
 $$X^{-1}AX=\begin{pmatrix}\lambda I_k&B\\0&C\end{pmatrix}$$
 
-has the upper left $k\times k$ block equal to the diagonal matrix $\lambda I_k$. However, if $A$ satisfies all the conditions of [Proposition 6](#prop6), instead of adding the $n-k$ vectors $x_{k+1},\ldots, x_n$ arbitrarily, we can choose them so that all $n$ vectors $x_1,\ldots, x_n$ form a basis of eigenspaces of $A$. Then from
+has the upper left $k\times k$ block equal to the diagonal matrix $\lambda I_k$. However, if $A$ satisfies all the conditions of [Proposition 6](#prop6){: data-relation="required" }, instead of adding the $n-k$ vectors $x_{k+1},\ldots, x_n$ arbitrarily, we can choose them so that all $n$ vectors $x_1,\ldots, x_n$ form a basis of eigenspaces of $A$. Then from
 
 $$y_i\cdot x_j=\begin{cases}1&i=j\\0&i\neq j\end{cases}$$
 
-in the proof of [Proposition 5](#prop5), we see that $C$ also becomes a diagonal matrix and $B$ becomes the zero matrix. Therefore the following holds.
+in the proof of [Proposition 5](#prop5){: data-relation="required" }, we see that $C$ also becomes a diagonal matrix and $B$ becomes the zero matrix. Therefore the following holds.
 
 ::: Proposition 7
-Consider an $n\times n$ matrix $A$ satisfying all the conditions of [Proposition 6](#prop6), and let $x_1,\ldots, x_n$ be a basis of $\mathbb{R}^n$ consisting of eigenvectors of $A$. Let $Ax_i=\lambda_ix_i$ and $X=(x_1\mid\cdots\mid x_n)$. Then for the diagonal matrix
+Consider an $n\times n$ matrix $A$ satisfying all the conditions of [Proposition 6](#prop6){: data-relation="required" }, and let $x_1,\ldots, x_n$ be a basis of $\mathbb{R}^n$ consisting of eigenvectors of $A$. Let $Ax_i=\lambda_ix_i$ and $X=(x_1\mid\cdots\mid x_n)$. Then for the diagonal matrix
 
 $$D=\begin{pmatrix}\lambda_1&0&\cdots&0\\ 0&\lambda_2&\cdots&0\\ \vdots&\vdots&\ddots&\vdots\\0&0&\cdots&\lambda_n\end{pmatrix}$$
 
@@ -222,10 +222,10 @@ we have $A=XDX^{-1}$.
 Thus we can give a suitable name to a matrix $A$ satisfying this condition.
 
 ::: Definition 8
-An $n\times n$ matrix $A$ satisfying all the conditions of [Proposition 6](#prop6) is called *diagonalizable*.
+An $n\times n$ matrix $A$ satisfying all the conditions of [Proposition 6](#prop6){: data-relation="required" } is called *diagonalizable*.
 :::
 
-Alternatively, since [Proposition 6](#prop6) gives a necessary and sufficient condition, there is no problem in calling a matrix similar to a diagonal matrix diagonalizable. In other words, the similarity class of any diagonalizable matrix is completely determined by its eigenvalues.
+Alternatively, since [Proposition 6](#prop6){: data-relation="weak" } gives a necessary and sufficient condition, there is no problem in calling a matrix similar to a diagonal matrix diagonalizable. In other words, the similarity class of any diagonalizable matrix is completely determined by its eigenvalues.
 
 That diagonalizable matrices are conceptually important has been sufficiently examined above. Moreover, diagonalizable matrices are also of great computational utility. For example, if a matrix $A$ is diagonalizable with $A=XDX^{-1}$, then the powers of $A$ are given by $A^k=XD^kX^{-1}$, and since the power of a diagonal matrix is merely the diagonal matrix formed from the powers of each diagonal entry, computing powers of $A$ becomes a very easy task.
 
@@ -272,11 +272,11 @@ For a finite-dimensional vector space $V$ and a linear operator $L:V\rightarrow 
 
 $$\rank L +\nullity L=\dim V$$
 
-holds. ([§Isomorphisms, ⁋Theorem 7](/en/math/linear_algebra/isomorphic_vector_spaces#thm7)) Here $\rank L=\dim\im L$ and $\nullity L=\dim\ker L$. However, this does not mean that $V$ can be expressed as a direct sum of $\im L$ and $\ker L$. For example, for the matrix $A$ that was the non-diagonalizable example after [Proposition 4](#prop4),
+holds. ([§Isomorphisms, ⁋Theorem 7](/en/math/linear_algebra/isomorphic_vector_spaces#thm7){: data-relation="required" }) Here $\rank L=\dim\im L$ and $\nullity L=\dim\ker L$. However, this does not mean that $V$ can be expressed as a direct sum of $\im L$ and $\ker L$. For example, for the matrix $A$ that was the non-diagonalizable example after [Proposition 4](#prop4){: data-relation="required" },
 
 $$A-I=\begin{pmatrix}0&1&1\\0&0&1\\0&0&0\end{pmatrix}$$
 
-the operator defined by this satisfies $\ker (A-I)\cap \im(A-I)\neq \{0\}$. However, if $\ker L\cap \im L=\{0\}$ holds, then from [§Dimension of Vector Spaces, ⁋Example 8](/en/math/linear_algebra/dimension#ex8) and [Proposition 2](#prop2) we know that necessarily $V=\ker L\oplus \im L$. The following lemma gives a condition equivalent to this.
+the operator defined by this satisfies $\ker (A-I)\cap \im(A-I)\neq \{0\}$. However, if $\ker L\cap \im L=\{0\}$ holds, then from [§Dimension of Vector Spaces, ⁋Example 8](/en/math/linear_algebra/dimension#ex8){: data-relation="required" } and [Proposition 2](#prop2){: data-relation="required" } we know that necessarily $V=\ker L\oplus \im L$. The following lemma gives a condition equivalent to this.
 
 ::: Lemma 11
 In the above situation, the condition $\ker L\cap \im L=\{0\}$ is equivalent to $\ker L^2=\ker L$.
@@ -293,7 +293,7 @@ $$0=Lv=L(Lw)=L^2w\implies w\in\ker(L^2)\subseteq \ker L$$
 so $w\in \ker L$. That is, $v=Lw=0$.
 :::
 
-Returning to the original story, we are particularly interested in the case where $L$ is of the form $A-\lambda I$ for some linear operator and its eigenvalue. The following proposition uses [Lemma 11](#lem11) to characterize diagonalizability concisely.
+Returning to the original story, we are particularly interested in the case where $L$ is of the form $A-\lambda I$ for some linear operator and its eigenvalue. The following proposition uses [Lemma 11](#lem11){: data-relation="required" } to characterize diagonalizability concisely.
 
 ::: Proposition 12
 A linear operator $A:V\rightarrow V$ is diagonalizable if and only if for every eigenvalue $\lambda\in\sigma(A)$,
@@ -311,11 +311,11 @@ By the uniqueness of the eigenspace decomposition, $(\mu-\lambda)^2v_\mu=0$ must
 
 $$v=v_\lambda\in E_\lambda(A)=\ker(A-\lambda I)$$
 
-Conversely, suppose that for every eigenvalue $\lambda$, we have $\ker(A-\lambda I)^2=\ker(A-\lambda I)$. From [Lemma 11](#lem11), for each $\lambda$,
+Conversely, suppose that for every eigenvalue $\lambda$, we have $\ker(A-\lambda I)^2=\ker(A-\lambda I)$. From [Lemma 11](#lem11){: data-relation="required" }, for each $\lambda$,
 
 $$\ker(A-\lambda I)\cap\im(A-\lambda I)=\{0\}$$
 
-and by [§Isomorphisms, ⁋Theorem 7](/en/math/linear_algebra/isomorphic_vector_spaces#thm7),
+and by [§Isomorphisms, ⁋Theorem 7](/en/math/linear_algebra/isomorphic_vector_spaces#thm7){: data-relation="required" },
 
 $$\dim\ker(A-\lambda I)+\dim\im(A-\lambda I)=\dim V$$
 
@@ -327,7 +327,7 @@ we see that $W_\lambda(A)$ is an $A$-invariant subspace. That is,
 
 $$A\vert_{W_\lambda(A)}: W_\lambda(A) \rightarrow W_\lambda(A)$$
 
-is well-defined. Then from [Proposition 4](#prop4), if $w\in W_\lambda(A)$ is an eigenvector of $A\vert_{W_\lambda(A)}$ with eigenvalue $\mu$, then viewing $w$ as an element of $V$, it is also an eigenvector of $A$ (corresponding to eigenvalue $\mu$), and conversely, if an eigenvalue $\mu\neq \lambda$ of $A$ and its corresponding eigenvector are given, this can be viewed as an eigenvalue-eigenvector pair of $A\vert_{W_\lambda(A)}$. Also, for any eigenvalue $\mu$ of $A\vert_{W_\lambda(A)}$,
+is well-defined. Then from [Proposition 4](#prop4){: data-relation="required" }, if $w\in W_\lambda(A)$ is an eigenvector of $A\vert_{W_\lambda(A)}$ with eigenvalue $\mu$, then viewing $w$ as an element of $V$, it is also an eigenvector of $A$ (corresponding to eigenvalue $\mu$), and conversely, if an eigenvalue $\mu\neq \lambda$ of $A$ and its corresponding eigenvector are given, this can be viewed as an eigenvalue-eigenvector pair of $A\vert_{W_\lambda(A)}$. Also, for any eigenvalue $\mu$ of $A\vert_{W_\lambda(A)}$,
 
 $$\ker (A_{W_\lambda(A)}-\mu I)=\ker (A_{W_\lambda(A)}-\mu I)^2$$
 
