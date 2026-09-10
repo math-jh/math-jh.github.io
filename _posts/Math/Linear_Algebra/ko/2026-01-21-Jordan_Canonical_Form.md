@@ -16,9 +16,9 @@ weight: 17
 
 ## 일반화된 고유공간
 
-앞서 우리는 diagonalizable operator $A$가 주어질 때마다 주어진 공간을 eigenspace들로 분해하여 이 위에서는 $A$가 스칼라곱처럼 행동하도록 할 수 있음을 보았다. 그러나 [§고유공간분해, ⁋명제 6](/ko/math/linear_algebra/eigenspace_decomposition#prop6)에서 살펴봤듯, 설령 $\mathbb{K}$가 algebraically closed field라 가정하여도 (그리고, 해당 명제 이후에 살펴봤듯 우리는 항상 이를 가정할 것이다.) 모든 linear operator가 항상 diagonalizable인 것은 아니다. 
+앞서 우리는 diagonalizable operator $A$가 주어질 때마다 주어진 공간을 eigenspace들로 분해하여 이 위에서는 $A$가 스칼라곱처럼 행동하도록 할 수 있음을 보았다. 그러나 [§고유공간분해, ⁋명제 6](/ko/math/linear_algebra/eigenspace_decomposition#prop6){: data-relation="required" }에서 살펴봤듯, 설령 $\mathbb{K}$가 algebraically closed field라 가정하여도 (그리고, 해당 명제 이후에 살펴봤듯 우리는 항상 이를 가정할 것이다.) 모든 linear operator가 항상 diagonalizable인 것은 아니다. 
 
-[§고유공간분해, ⁋명제 6](/ko/math/linear_algebra/eigenspace_decomposition#prop6)의 둘째 조건이 깨지는 것은 $A$의 어떤 고유값 $\lambda$에 대하여 $\lambda$의 기하적 중복도가 $\lambda$의 대수적 중복도보다 작을 때이다. ([§고유공간분해, ⁋명제 5](/ko/math/linear_algebra/eigenspace_decomposition#prop5)) 즉, 직관적으로 다음의 벡터공간
+[§고유공간분해, ⁋명제 6](/ko/math/linear_algebra/eigenspace_decomposition#prop6){: data-relation="required" }의 둘째 조건이 깨지는 것은 $A$의 어떤 고유값 $\lambda$에 대하여 $\lambda$의 기하적 중복도가 $\lambda$의 대수적 중복도보다 작을 때이다. ([§고유공간분해, ⁋명제 5](/ko/math/linear_algebra/eigenspace_decomposition#prop5){: data-relation="required" }) 즉, 직관적으로 다음의 벡터공간
 
 $$E_\lambda(A)=\ker(A-\lambda I)$$
 
@@ -43,7 +43,7 @@ $$L^{k+1}v=L^k(Lv)=0\implies v\in \ker L^{k+1}$$
 과 base step $\ker L^k=\ker L^{k+1}$로부터 원하는 결과를 얻는다. 
 :::
 
-우리의 핵심 관찰은, 고유공간 $E_\lambda(A)$는 그 차원이 부족하지만, [보조정리 1](#lem1)을 $L=A-\lambda I$에 사용하여 이 공간을 늘려가다 보면 "맞는 차원"을 얻게 된다는 것이다. 
+우리의 핵심 관찰은, 고유공간 $E_\lambda(A)$는 그 차원이 부족하지만, [보조정리 1](#lem1){: data-relation="required" }을 $L=A-\lambda I$에 사용하여 이 공간을 늘려가다 보면 "맞는 차원"을 얻게 된다는 것이다. 
 
 ::: 예시 2
 다음의 행렬
@@ -89,13 +89,13 @@ $$G_\lambda(A)=\left\{v\in V\mid (A-\lambda I)^kv=0\text{ for some $k\geq 0$}\ri
 으로 정의한다. 
 :::
 
-그럼 우리는 [보조정리 1](#lem1)로부터 다음을 얻는다.
+그럼 우리는 [보조정리 1](#lem1){: data-relation="required" }로부터 다음을 얻는다.
 
 ::: 따름정리 4
 유한차원 벡터공간 $V$ 위에 정의된 linear operator $A:V\rightarrow V$과 그 eigenvalue $\lambda$에 대하여, 적당한 양의 정수 $k$가 존재하여 $G_\lambda(A)=\ker(A-\lambda I)^k$이다.
 :::
 ::: 증명
-[보조정리 1](#lem1)을 linear operator $A-\lambda I$에 적용하면, 
+[보조정리 1](#lem1){: data-relation="required" }을 linear operator $A-\lambda I$에 적용하면, 
 
 $$\ker(A-\lambda I)^k=\ker(A-\lambda I)^{k+1}=\cdots$$
 
@@ -114,17 +114,17 @@ $$(A-\lambda I)^{k'}v =0$$
 
 ## 일차분해정리
 
-본격적인 결과를 소개하기 전에 [§고유공간분해, ⁋명제 12](/ko/math/linear_algebra/eigenspace_decomposition#prop12)의 증명을 간단히 요약해보자. $A$의 diagonalizability를 보이기 위해, 우리는 고정된 고유값 $\lambda$에 대하여 다음 식
+본격적인 결과를 소개하기 전에 [§고유공간분해, ⁋명제 12](/ko/math/linear_algebra/eigenspace_decomposition#prop12){: data-relation="forward" }의 증명을 간단히 요약해보자. $A$의 diagonalizability를 보이기 위해, 우리는 고정된 고유값 $\lambda$에 대하여 다음 식
 
 $$\ker(A-\lambda I)=\ker(A-\lambda I)^2$$
 
-이 성립하는 것을 가정하고, 그럼 [§고유공간분해, ⁋보조정리 11](/ko/math/linear_algebra/eigenspace_decomposition#lem11)에 의하여 
+이 성립하는 것을 가정하고, 그럼 [§고유공간분해, ⁋보조정리 11](/ko/math/linear_algebra/eigenspace_decomposition#lem11){: data-relation="required" }에 의하여 
 
 $$\ker (A-\lambda I)\cap \im (A-\lambda I)=\{0\}$$
 
-이므로 반드시 $V=\ker (A-\lambda I)\oplus \im(A-\lambda I)$ 꼴로 나타낼 수 있다는 것을 보았다. 그럼 $\im (A-\lambda I)$가 $A$-invariant가 되어 $A$를 이 위의 linear operator로 볼 수 있고 그 때 ([§고유공간분해, ⁋명제 4](/ko/math/linear_algebra/eigenspace_decomposition#prop4)에 의해 $E_\lambda(A)\cap E_\mu(A)=\{0\}$이므로) 고유값--고유벡터가 맞아떨어지므로 이를 귀납적으로 반복하여 고유공간분해를 얻는 것이 증명의 요지였다. 
+이므로 반드시 $V=\ker (A-\lambda I)\oplus \im(A-\lambda I)$ 꼴로 나타낼 수 있다는 것을 보았다. 그럼 $\im (A-\lambda I)$가 $A$-invariant가 되어 $A$를 이 위의 linear operator로 볼 수 있고 그 때 ([§고유공간분해, ⁋명제 4](/ko/math/linear_algebra/eigenspace_decomposition#prop4){: data-relation="required" }에 의해 $E_\lambda(A)\cap E_\mu(A)=\{0\}$이므로) 고유값--고유벡터가 맞아떨어지므로 이를 귀납적으로 반복하여 고유공간분해를 얻는 것이 증명의 요지였다. 
 
-이제 위의 관점에서 [정의 3](#def3)을 어떻게 활용할지를 생각해보면, 우리는 임의의 linear operator $L$과
+이제 위의 관점에서 [정의 3](#def3){: data-relation="required" }을 어떻게 활용할지를 생각해보면, 우리는 임의의 linear operator $L$과
 
 $$\ker L^k=\ker L^{k+1}=\cdots$$
 
@@ -132,7 +132,7 @@ $$\ker L^k=\ker L^{k+1}=\cdots$$
 
 $$\ker L^k=\ker L^{2k}$$
 
-이 성립하는 것을 알고있다. 바꿔말하면, $L^k:V \rightarrow V$에 대하여 [§고유공간분해, ⁋보조정리 11](/ko/math/linear_algebra/eigenspace_decomposition#lem11)의 전제가 만족되는 것이다. 이를 $L=A-\lambda I$에 적용하여 귀납법의 첫 단계, 즉 direct sum decomposition $V=\ker (A-\lambda I)^k \oplus \im (A-\lambda I)^k$를 얻을 수 있다. [§고유공간분해, ⁋명제 12](/ko/math/linear_algebra/eigenspace_decomposition#prop12)의 증명에서와 마찬가지로 이를
+이 성립하는 것을 알고있다. 바꿔말하면, $L^k:V \rightarrow V$에 대하여 [§고유공간분해, ⁋보조정리 11](/ko/math/linear_algebra/eigenspace_decomposition#lem11){: data-relation="required" }의 전제가 만족되는 것이다. 이를 $L=A-\lambda I$에 적용하여 귀납법의 첫 단계, 즉 direct sum decomposition $V=\ker (A-\lambda I)^k \oplus \im (A-\lambda I)^k$를 얻을 수 있다. [§고유공간분해, ⁋명제 12](/ko/math/linear_algebra/eigenspace_decomposition#prop12){: data-relation="required" }의 증명에서와 마찬가지로 이를
 
 $$V=G_\lambda(A)\oplus W_\lambda(A)$$
 
@@ -142,7 +142,7 @@ $$V=G_\lambda(A)\oplus W_\lambda(A)$$
 유한차원 벡터공간 $V$ 위에 정의된 linear operator $A:V\rightarrow V$와 $A$의 서로 다른 두 eigenvalue $\lambda, \mu$에 대하여, $G_\lambda(A)\cap G_\mu(A)=\{0\}$이 성립한다. 
 :::
 ::: 증명
-먼저 $v\in G_{\lambda}(A)\cap G_{\mu}(A)$이고 $v\neq 0$이라 가정하자. [따름정리 4](#cor4)로부터 다음 두 식
+먼저 $v\in G_{\lambda}(A)\cap G_{\mu}(A)$이고 $v\neq 0$이라 가정하자. [따름정리 4](#cor4){: data-relation="required" }로부터 다음 두 식
 
 $$G_{\lambda}(A)=\ker(A-\lambda I)^{k},\qquad G_{\mu}(A)=\ker(A-\mu I)^{l}$$
 
@@ -166,7 +166,7 @@ $$0=(A-\mu I)^{q}w=(A-\mu I)w'$$
 
 $$Aw'=A(A-\mu I)^{q-1}w=(A-\mu I)^{q-1}Aw=(A-\mu I)^{q-1}\lambda w=\lambda (A-\mu I)^{q-1}w=\lambda w'$$
 
-으로부터 $w'$ 또한 $\lambda$에 해당하는 고유벡터임을 안다. 이는 [§고유공간분해, ⁋명제 4](/ko/math/linear_algebra/eigenspace_decomposition#prop4)에 모순이므로 귀류법에 의하여 $G_{\lambda}(A)\cap G_{\mu}(A)=\{0\}$임을 안다. 
+으로부터 $w'$ 또한 $\lambda$에 해당하는 고유벡터임을 안다. 이는 [§고유공간분해, ⁋명제 4](/ko/math/linear_algebra/eigenspace_decomposition#prop4){: data-relation="required" }에 모순이므로 귀류법에 의하여 $G_{\lambda}(A)\cap G_{\mu}(A)=\{0\}$임을 안다. 
 :::
 
 그러므로 앞선 분해
@@ -193,7 +193,7 @@ $$p_A(\x)=\prod_{\lambda\in\sigma(A)}(\x-\lambda)^{d_\lambda}$$
 
 $$p_A(\x)=\prod_{\lambda\in\sigma(A)} p_{G_\lambda(A)}(\x)$$
 
-을 얻는다. ([§행렬식의 존재성과 유일성, ⁋따름정리 10](/ko/math/linear_algebra/existence_and_uniqueness_of_determinant#cor10)) 우리는 [보조정리 5](#lem5)에서 $G_\lambda(A)$로 $A$를 제한했을 때 고유값은 오직 $\lambda$ 뿐인 것을 확인하였으므로 각각의 $p_{G_\lambda(A)}(\x)$는 오직 $\x-\lambda$만을 인수로 가져야한다. 따라서, 위의 두 식이 같기 위해서는 $p_{G_\lambda(A)}(\x)$가 정확히 $d_\lambda$차 다항식 
+을 얻는다. ([§행렬식의 존재성과 유일성, ⁋따름정리 10](/ko/math/linear_algebra/existence_and_uniqueness_of_determinant#cor10){: data-relation="required" }) 우리는 [보조정리 5](#lem5){: data-relation="required" }에서 $G_\lambda(A)$로 $A$를 제한했을 때 고유값은 오직 $\lambda$ 뿐인 것을 확인하였으므로 각각의 $p_{G_\lambda(A)}(\x)$는 오직 $\x-\lambda$만을 인수로 가져야한다. 따라서, 위의 두 식이 같기 위해서는 $p_{G_\lambda(A)}(\x)$가 정확히 $d_\lambda$차 다항식 
 
 $$p_{G_\lambda(A)}(\x)=(\x-\lambda)^{d_\lambda}$$
 
@@ -203,7 +203,7 @@ $$p_{G_\lambda(A)}(\x)=(\x-\lambda)^{d_\lambda}$$
 
 $$V=\bigoplus_{\lambda\in\sigma(A)}G_\lambda(A)$$
 
-가 성립하며, 뿐만 아니라 각각의 $\lambda$에 대하여 $\dim G_\lambda(A)$가 우리가 기대하는 차원, 즉 $A$의 특성다항식에서 $\lambda$의 대수적 중복도와 맞아떨어지는 것을 확인한 것이다. 그렇다면 우리에게 남아있는 일은 $V$의 적당한 basis를 찾아 [§고유공간분해, ⁋명제 7](/ko/math/linear_algebra/eigenspace_decomposition#prop7)와 유사한 형태로 임의의 행렬을 표현하는 일이다. 
+가 성립하며, 뿐만 아니라 각각의 $\lambda$에 대하여 $\dim G_\lambda(A)$가 우리가 기대하는 차원, 즉 $A$의 특성다항식에서 $\lambda$의 대수적 중복도와 맞아떨어지는 것을 확인한 것이다. 그렇다면 우리에게 남아있는 일은 $V$의 적당한 basis를 찾아 [§고유공간분해, ⁋명제 7](/ko/math/linear_algebra/eigenspace_decomposition#prop7){: data-relation="weak" }와 유사한 형태로 임의의 행렬을 표현하는 일이다. 
 
 여기에서 유용하게 쓰이는 사실은 linear operator $A:V\rightarrow V$의 임의의 고유값 $\lambda\in \sigma(A)$에 대하여, generalized eigenspace $G_\lambda(A)$로 제한하였을 때 linear operator
 
@@ -217,7 +217,7 @@ $$N_\lambda:=(A-\lambda I)\vert_{G_\lambda(A)}: G_\lambda(A)\rightarrow G_\lambd
 
 즉, 만일 우리가 임의의 nilpotent operator의 표준형을 구할 수 있다면 우리는 전체 행렬 $A$ 또한 표준형으로 나타낼 수 있게 된다. 
 
-Index $k$의 nilpotent operator $N: V\rightarrow V$가 주어졌다 하자. 그럼 적당한 $v\in V$가 존재하여 $N^{k-1}v\neq 0$이다. 이 벡터를 이용하면 우리는 [보조정리 1](#lem1)에서 포함관계가 strict하다는 것도 보일 수 있는데, $N^{k-i}v\in \ker N^i$이지만 $N^{k-i}v\not\in\ker N^{i-1}$이기 때문이다. 바꾸어 말하자면 $v, Nv, \ldots, N^{k-1}v$는 모두 다른 원소들이다. 더 일반적으로 다음이 성립한다. 
+Index $k$의 nilpotent operator $N: V\rightarrow V$가 주어졌다 하자. 그럼 적당한 $v\in V$가 존재하여 $N^{k-1}v\neq 0$이다. 이 벡터를 이용하면 우리는 [보조정리 1](#lem1){: data-relation="required" }에서 포함관계가 strict하다는 것도 보일 수 있는데, $N^{k-i}v\in \ker N^i$이지만 $N^{k-i}v\not\in\ker N^{i-1}$이기 때문이다. 바꾸어 말하자면 $v, Nv, \ldots, N^{k-1}v$는 모두 다른 원소들이다. 더 일반적으로 다음이 성립한다. 
 
 ::: 보조정리 8
 벡터공간 $V$ 위에 정의된 linear operator $N: V\rightarrow V$와 벡터 $v$가 $N^kv=0$과 $N^{k-1}v\neq 0$을 만족한다 하자. 그럼 다음의 벡터들
@@ -286,7 +286,7 @@ $$J_k(\lambda)=\begin{pmatrix}\lambda&1&0&\cdots&0\\0&\lambda&1&\cdots&0\\\vdots
 로 정의한다. 
 :::
 
-그럼 [정리 6](#thm6)과 [정리 9](#thm9)을 합치면 다음의 정리를 얻는다. 
+그럼 [정리 6](#thm6){: data-relation="required" }과 [정리 9](#thm9){: data-relation="required" }을 합치면 다음의 정리를 얻는다. 
 
 ::: 정리 12 (Jordan canonical form)
 유한차원 벡터공간 $V$ 위에 정의된 임의의 linear operator $A:V\rightarrow V$에 대하여, $V$의 적당한 basis를 선택하면 $A$의 행렬 표현이 다음의 형태를 갖는다:
@@ -297,7 +297,7 @@ $$J=\begin{pmatrix}J_{k_1}(\lambda_1)&0&\cdots&0\\0&J_{k_2}(\lambda_2)&\cdots&0\
 :::
 
 ::: 예시 13
-[예시 2](#ex2)의 행렬
+[예시 2](#ex2){: data-relation="weak" }의 행렬
 
 $$A=\begin{pmatrix}1&1&1\\0&1&1\\0&0&1\end{pmatrix}$$
 
@@ -309,9 +309,9 @@ $$A-I=\begin{pmatrix}0&1&1\\0&0&1\\0&0&0\end{pmatrix}$$
 
 $$\ker(A-I)=\span\{(1,0,0)\},\quad \ker(A-I)^2=\span\{(1,0,0),(0,1,0)\},\quad \ker(A-I)^3=\mathbb{R}^3$$
 
-임을 이미 계산하였다. 즉 $A$에 [정리 6](#thm6)을 적용한 것은 그냥 $V=G_1(A)$이 된다. 
+임을 이미 계산하였다. 즉 $A$에 [정리 6](#thm6){: data-relation="required" }을 적용한 것은 그냥 $V=G_1(A)$이 된다. 
 
-이제 $G_1(A)$ 위에서 [정리 9](#thm9)을 적용해야 한다. 앞서 살펴본 것과 같이 $(A-I)^3=0$이지만 $(A-I)^2\neq 0$이며, 실제로 $v=(0,0,1)$이 $(A-I)^2 v\neq 0$을 만족하는 것을 안다. 그럼 
+이제 $G_1(A)$ 위에서 [정리 9](#thm9){: data-relation="required" }을 적용해야 한다. 앞서 살펴본 것과 같이 $(A-I)^3=0$이지만 $(A-I)^2\neq 0$이며, 실제로 $v=(0,0,1)$이 $(A-I)^2 v\neq 0$을 만족하는 것을 안다. 그럼 
 
 $$v_1=(A-I)^2v=(1,0,0),\qquad v_2=(A-I)v=(1,1,0),\qquad v_3=v=(0,0,1)$$
 
@@ -347,7 +347,7 @@ $$C(p)=\begin{pmatrix}0&0&\cdots&0&-c_0\\1&0&\cdots&0&-c_1\\0&1&\cdots&0&-c_2\\\
 Operator $T:V\rightarrow V$가 *cyclic*이라는 것은 적당한 $v\in V$가 존재하여 $\{v,Tv,\ldots,T^{d-1}v\}$ ($d=\dim V$)가 $V$의 기저가 되는 것이며, 이러한 $v$를 cyclic vector라 부른다. 
 
 ::: 명제 15
-Cyclic vector $v$를 갖는 차원 $d$의 operator $T:V\rightarrow V$의 minimal polynomial $p$는 degree가 $d$이고, cyclic basis $\{v,Tv,\ldots,T^{d-1}v\}$에 대한 $T$의 행렬표현은 $C(p)$이다. 특히 [정의 11](#def11)의 Jordan block $J_k(\lambda)$는 $(\x-\lambda)^k$의 companion matrix와 닮음이다.
+Cyclic vector $v$를 갖는 차원 $d$의 operator $T:V\rightarrow V$의 minimal polynomial $p$는 degree가 $d$이고, cyclic basis $\{v,Tv,\ldots,T^{d-1}v\}$에 대한 $T$의 행렬표현은 $C(p)$이다. 특히 [정의 11](#def11){: data-relation="required" }의 Jordan block $J_k(\lambda)$는 $(\x-\lambda)^k$의 companion matrix와 닮음이다.
 :::
 ::: 증명
 $\{v,Tv,\ldots,T^{d-1}v\}$가 일차독립이므로 $T^dv$를 이들의 일차결합으로 나타낸
@@ -356,10 +356,10 @@ $$T^dv=-(c_0v+c_1Tv+\cdots+c_{d-1}T^{d-1}v)$$
 
 의 계수로 $p(\x)=\x^d+c_{d-1}\x^{d-1}+\cdots+c_0$을 정의하면 $p(T)v=0$이다. 그럼 임의의 $T^iv$에 대해서도 $p(T)T^iv=T^ip(T)v=0$이고 이들이 $V$를 생성하므로 $p(T)=0$이다. 한편 degree가 $d$보다 작은 $0$ 아닌 다항식 $q$에 대해서는 $q(T)v$가 $\{v,\ldots,T^{d-1}v\}$의 자명하지 않은 일차결합이라 $0$이 아니므로, $p$가 $T$의 minimal polynomial이다. 이 기저에서 $T$는 $T^iv\mapsto T^{i+1}v$ ($i<d-1$)로, 그리고 $T^{d-1}v$는 위의 식으로 작용하므로 그 행렬표현은 정확히 $C(p)$이다.
 
-$J_k(\lambda)$의 경우, $N=J_k(\lambda)-\lambda I$가 index $k$의 nilpotent이므로 $N^{k-1}v\neq 0$인 $v$를 택하면 [보조정리 8](#lem8)에 의하여 $\{v,Nv,\ldots,N^{k-1}v\}$이 기저이다. $J_k(\lambda)=\lambda I+N$이라 $\{v,J_k(\lambda)v,\ldots,J_k(\lambda)^{k-1}v\}$도 같은 공간을 생성하므로 $v$는 cyclic vector이고, $J_k(\lambda)$의 minimal polynomial이 $(\x-\lambda)^k$이므로 위의 결과에 의해 $J_k(\lambda)$는 $(\x-\lambda)^k$의 companion matrix와 닮음이다.
+$J_k(\lambda)$의 경우, $N=J_k(\lambda)-\lambda I$가 index $k$의 nilpotent이므로 $N^{k-1}v\neq 0$인 $v$를 택하면 [보조정리 8](#lem8){: data-relation="required" }에 의하여 $\{v,Nv,\ldots,N^{k-1}v\}$이 기저이다. $J_k(\lambda)=\lambda I+N$이라 $\{v,J_k(\lambda)v,\ldots,J_k(\lambda)^{k-1}v\}$도 같은 공간을 생성하므로 $v$는 cyclic vector이고, $J_k(\lambda)$의 minimal polynomial이 $(\x-\lambda)^k$이므로 위의 결과에 의해 $J_k(\lambda)$는 $(\x-\lambda)^k$의 companion matrix와 닮음이다.
 :::
 
-이것이 실제로 같은 행렬이 되지 않는 것은 두 basis를 서로 다른 operator의 거듭제곱으로 잡았기 때문이다. [정의 14](#def14)의 companion matrix를 주는 basis가 $\{v, Tv, \ldots, T^{d-1}v\}$인 반면 Jordan block을 주는 basis는 $N=T-\lambda I$에 대한 $\{N^{k-1}v, \ldots, Nv, v\}$이고, 정렬 관례의 차이로 설명되는 것은 $\lambda=0$이라 이 둘이 서로 역순의 같은 basis가 되는 경우뿐이다. 그러나 이 두 표준형 모두 뿌리를 깊이 내린 형태들이고, 어느 하나를 다른 하나와 맞추면 이 표준이 깨지므로 이렇게 간략한 remark로만 대체한다. 그럼 더 일반적으로 다음을 얻는다. 
+이것이 실제로 같은 행렬이 되지 않는 것은 두 basis를 서로 다른 operator의 거듭제곱으로 잡았기 때문이다. [정의 14](#def14){: data-relation="required" }의 companion matrix를 주는 basis가 $\{v, Tv, \ldots, T^{d-1}v\}$인 반면 Jordan block을 주는 basis는 $N=T-\lambda I$에 대한 $\{N^{k-1}v, \ldots, Nv, v\}$이고, 정렬 관례의 차이로 설명되는 것은 $\lambda=0$이라 이 둘이 서로 역순의 같은 basis가 되는 경우뿐이다. 그러나 이 두 표준형 모두 뿌리를 깊이 내린 형태들이고, 어느 하나를 다른 하나와 맞추면 이 표준이 깨지므로 이렇게 간략한 remark로만 대체한다. 그럼 더 일반적으로 다음을 얻는다. 
 
 ::: 정리 16 (유리표준형)
 Algebraically closed field 위의 유한차원 벡터공간에 정의된 임의의 linear operator $A$에 대하여, $V$의 적당한 기저를 택하면 $A$의 행렬표현이 companion matrix들의 block diagonal
@@ -369,7 +369,7 @@ $$\begin{pmatrix}C(p_1)&&\\&\ddots&\\&&C(p_r)\end{pmatrix},\qquad p_i=(\x-\lambd
 가 된다. 여기서 각 $(\x-\lambda_i)^{k_i}$는 $A$의 Jordan block $J_{k_i}(\lambda_i)$에 대응되는 *elementary divisor*이다.
 :::
 ::: 증명
-[정리 12](#thm12)에 의하여 $A$는 Jordan block들 $J_{k_i}(\lambda_i)$의 direct sum과 닮음이고, [명제 15](#prop15)에 의하여 각 $J_{k_i}(\lambda_i)$는 $C((\x-\lambda_i)^{k_i})$와 닮음이므로, 이들을 모으면 원하는 block diagonal 형태를 얻는다.
+[정리 12](#thm12){: data-relation="required" }에 의하여 $A$는 Jordan block들 $J_{k_i}(\lambda_i)$의 direct sum과 닮음이고, [명제 15](#prop15){: data-relation="required" }에 의하여 각 $J_{k_i}(\lambda_i)$는 $C((\x-\lambda_i)^{k_i})$와 닮음이므로, 이들을 모으면 원하는 block diagonal 형태를 얻는다.
 :::
 
 당연한 이야기지만, 유리표준형의 진정한 쓸모는 $\mathbb{K}$가 algebraically closed가 <em-ko>아닐</em-ko> 때에도 적용할 수 있다는 것에 있다. 흐름상 위의 증명에서는 Jordan form을 사용하여 elementary divisor $(\x-\lambda_i)^{k_i}$들의 companion form을 얻었지만, 고유값이 $\mathbb{K}$ 안에 존재하지 않는 경우에도 임의의 operator는 minimal polynomial의 기약인수분해와 cyclic 분해를 통해 *invariant factor* $p_1\mid p_2\mid\cdots\mid p_r$ ($p_r$이 minimal polynomial)들의 companion matrix들로 표준화된다. 이 일반적 형태는 $\mathbb{K}[\x]$-module의 structure theorem으로부터 따라오며, 고유값을 전혀 언급하지 않고 $\mathbb{K}$ 위에서만 정의되는 표준형을 준다.
