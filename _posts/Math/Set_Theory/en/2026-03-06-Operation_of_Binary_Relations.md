@@ -108,7 +108,7 @@ Let $(R,A,B)$ be a binary relation, and let $X\subseteq A$, $Y\subseteq B$. Then
 hold, respectively.
 :::
 ::: Proof
-Before beginning the proof proper, we observe that since the two formulas above must hold for <em>all</em> $R$, they must also hold when $R^{-1}$ is substituted for $R$. Therefore, once we prove 1, then 2 follows immediately from [Proposition 2](#prop2).  
+Before beginning the proof proper, we observe that since the two formulas above must hold for <em>all</em> $R$, they must also hold when $R^{-1}$ is substituted for $R$. Therefore, once we prove 1, then 2 follows immediately from [Proposition 2](#prop2){: data-relation="required" }.  
 
 Now let $x\in X\cap\pr_1R$. Then since $x\in\pr_1R$, there exists some $y$ such that $(x,y)\in R$, and because $x\in X$, this $y$ satisfies $y\in R(X)$. Since $(y,x)\in R^{-1}$, we have $x\in R^{-1}(R(X))$.
 :::
