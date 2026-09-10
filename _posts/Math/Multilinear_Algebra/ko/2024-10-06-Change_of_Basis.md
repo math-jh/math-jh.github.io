@@ -25,7 +25,7 @@ $I\times I$ 행렬을 *정사각행렬<sub>square matrix</sub>*이라 부른다.
 이러한 상황에서 $\Mat_n(A)$는 unital associative algebra이다.
 :::
 ::: 증명
-$\Mat_n(A)$가 associative $A$-algebra인 것은 [§행렬, §§행렬의 곱셈](/ko/math/multilinear_algebra/matrices#행렬의-곱셈)에서 이미 확인하였다. $\Mat_n(A)$의 곱셈에 대한 항등원은 다음의 항등행렬
+$\Mat_n(A)$가 associative $A$-algebra인 것은 [§행렬, §§행렬의 곱셈](/ko/math/multilinear_algebra/matrices#행렬의-곱셈){: data-relation="required" }에서 이미 확인하였다. $\Mat_n(A)$의 곱셈에 대한 항등원은 다음의 항등행렬
 
 $$I_n=\begin{pmatrix}1&0&\cdots&0\\0&1&\cdots&0\\\vdots&\vdots&\ddots&\vdots\\0&0&\cdots&1\end{pmatrix}$$
 
@@ -42,7 +42,7 @@ $$E_{ij}E_{hk}=\delta_{jh}E_{ik}$$
 $\Mat_n(A)$의 원소들 가운데 곱셈에 대한 역원이 존재하는 것들을 모아 $\GL_n(A)$로 적는다. 
 :::
 
-Free $A$-module $M$의 basis $\mathcal{B}=(e_i)_{i\in I}$를 고정하고, $\lvert I\rvert=n$이라 하자. 그럼 임의의 $u\in \End_{\lMod{A}}(M)$에 대하여, $[u]_{\mathcal{B}}^\mathcal{B}\in\Mat_n(A)$이며, 만일 $u$가 isomorphism이라면 [§행렬과 선형사상, ⁋따름정리 4](/ko/math/multilinear_algebra/matrices_and_linear_maps#cor4)에 의하여 $[u]_{\mathcal{B}}^\mathcal{B}\in\GL_n(A)$이다. 그럼 [§쌍대공간, ⁋명제 5](/ko/math/multilinear_algebra/dual_spaces#prop5)와 [§행렬과 선형사상, ⁋명제 5](/ko/math/multilinear_algebra/matrices_and_linear_maps#prop5)에 의하여 다음 식
+Free $A$-module $M$의 basis $\mathcal{B}=(e_i)_{i\in I}$를 고정하고, $\lvert I\rvert=n$이라 하자. 그럼 임의의 $u\in \End_{\lMod{A}}(M)$에 대하여, $[u]_{\mathcal{B}}^\mathcal{B}\in\Mat_n(A)$이며, 만일 $u$가 isomorphism이라면 [§행렬과 선형사상, ⁋따름정리 4](/ko/math/multilinear_algebra/matrices_and_linear_maps#cor4){: data-relation="required" }에 의하여 $[u]_{\mathcal{B}}^\mathcal{B}\in\GL_n(A)$이다. 그럼 [§쌍대공간, ⁋명제 5](/ko/math/multilinear_algebra/dual_spaces#prop5){: data-relation="required" }와 [§행렬과 선형사상, ⁋명제 5](/ko/math/multilinear_algebra/matrices_and_linear_maps#prop5){: data-relation="required" }에 의하여 다음 식
 
 $$\bigl([u^{-1}]_{\mathcal{B}}^\mathcal{B}\bigr)^t=\bigl(\bigl[u^t\bigr]_{\mathcal{B}^\ast}^{\mathcal{B}^\ast}\bigr)^{-1}$$
 
@@ -91,13 +91,13 @@ $$[u]_{\mathcal{C}'}^{\mathcal{B}'}=[\id_N]^\mathcal{C}_{\mathcal{C}'}[u]^\mathc
 두 $m\times n$ 행렬 $X, X'$가 *equivalent<sub>동치인 행렬</sub>*이라는 것은 정사각행렬 $P\in\GL_m(A)$와 $Q\in\GL_n(A)$가 존재하여 $X'=PXQ$이도록 할 수 있는 것을 뜻한다. 
 :::
 
-[정의 6](#def6) 이전의 논의와 같은 맥락에서, equivalent matrix보다는 더 세밀한 다음의 동치관계를 생각하는 것이 좋다.
+[정의 6](#def6){: data-relation="required" } 이전의 논의와 같은 맥락에서, equivalent matrix보다는 더 세밀한 다음의 동치관계를 생각하는 것이 좋다.
 
 ::: 정의 7
 두 $n\times n$ 행렬 $X, X'$가 *similar<sub>닮은 행렬</sub>*이라는 것은 정사각행렬 $P\in\GL_n(A)$가 존재하여 $X'=PXP^{-1}$이도록 할 수 있는 것을 뜻한다. 
 :::
 
-그럼 위의 [명제 5](#prop5)에서 $M=N$, $\mathcal{B}=\mathcal{C}$, $\mathcal{B}'=\mathcal{C}'$로 두면, $\End_{\lMod{A}}(M)$의 원소 $u$를 서로 다른 basis를 통해 행렬표현한 것은 서로 similar함임을 안다. 
+그럼 위의 [명제 5](#prop5){: data-relation="required" }에서 $M=N$, $\mathcal{B}=\mathcal{C}$, $\mathcal{B}'=\mathcal{C}'$로 두면, $\End_{\lMod{A}}(M)$의 원소 $u$를 서로 다른 basis를 통해 행렬표현한 것은 서로 similar함임을 안다. 
 
 ---
 
