@@ -12,11 +12,11 @@ date: 2026-06-09
 weight: 8
 ---
 
-[§Bruhat decomposition](/ko/math/lie_theory/bruhat_decomposition)에서 우리는 partial flag variety $G/P$가 Bruhat cell들로 분해되고, 각 cell의 closure인 Schubert variety가 $G/P$의 기하가 Weyl group의 조합론에 담겨있는 것을 보았다. 이 글에서는 그 분해 위에 자연스럽게 얹히는 두 종류의 부분다양체를 다룬다. 하나는 서로 opposite인 두 Bruhat decomposition의 intersection으로 얻는 *Richardson variety*이고, 다른 하나는 regular nilpotent element 하나가 잘라내는 *Peterson variety*이다. 
+[§Bruhat decomposition](/ko/math/lie_theory/bruhat_decomposition){: data-relation="required" }에서 우리는 partial flag variety $G/P$가 Bruhat cell들로 분해되고, 각 cell의 closure인 Schubert variety가 $G/P$의 기하가 Weyl group의 조합론에 담겨있는 것을 보았다. 이 글에서는 그 분해 위에 자연스럽게 얹히는 두 종류의 부분다양체를 다룬다. 하나는 서로 opposite인 두 Bruhat decomposition의 intersection으로 얻는 *Richardson variety*이고, 다른 하나는 regular nilpotent element 하나가 잘라내는 *Peterson variety*이다. 
 
 ## Richardson variety
 
-우리는 [§Bruhat decomposition](/ko/math/lie_theory/bruhat_decomposition)에서와 같이 field $\mathbb{C}$ 위 connected reductive algebraic group $G$와 그 Borel subgroup $B$, 그리고 $B$를 포함하는 parabolic subgroup $P$를 고정한다. Opposite Borel subgroup $B^-$ ($B\cap B^-=T$)를 함께 두면, [§Bruhat decomposition, ⁋정의 16](/ko/math/lie_theory/bruhat_decomposition#def16)에서 도입한 두 방향의 cell 구조
+우리는 [§Bruhat decomposition](/ko/math/lie_theory/bruhat_decomposition){: data-relation="required" }에서와 같이 field $\mathbb{C}$ 위 connected reductive algebraic group $G$와 그 Borel subgroup $B$, 그리고 $B$를 포함하는 parabolic subgroup $P$를 고정한다. Opposite Borel subgroup $B^-$ ($B\cap B^-=T$)를 함께 두면, [§Bruhat decomposition, ⁋정의 16](/ko/math/lie_theory/bruhat_decomposition#def16){: data-relation="required" }에서 도입한 두 방향의 cell 구조
 
 $$X_w^\circ=BwP/P,\qquad X^w_\circ=B^-wP/P\qquad(w\in W^P)$$
 
@@ -54,13 +54,13 @@ $$\ell(w)+\dim (G/P)-\ell(u)-\dim (G/P)=\ell(w)-\ell(u)$$
 
 이다.
 
-그러나 차원이 맞는 것만으로 교집합이 비어있지 않다고 결론지을 수는 없다. 가령 [§Bruhat decomposition, ⁋예시 18](/ko/math/lie_theory/bruhat_decomposition#ex18)의 비교 불가능한 쌍 $u=1423$, $w=2314$를 생각하면, 이들의 길이가 같아 기대차원이 $0$차원임에도 불구하고, 이들의 교집합은 점들의 집합이 아니라 공집합이다. 실제로 무슨 일이 일어나는지 $\Gr(2,4)$에서 직접 살펴보자. $X_{2314}$의 점은 rank 조건 $\dim(V\cap E_3)\geq2$, 곧 $V\subseteq E_3$을 만족한다. 반면 opposite cell $X^{1423}_\circ=B^-\cdot\span\{e_1,e_4\}$의 점은 모두 $e_4$를 포함하며 (lower triangular 행렬은 $e_4$를 scalar배까지 고정한다), $e_4\in V$는 closed 조건이므로 closure $X^{1423}$에서도 유지된다. $e_4\notin E_3$이므로 두 요구는 양립할 수 없고, 두 variety는 차원이 충분한데도 서로 비껴간다.
+그러나 차원이 맞는 것만으로 교집합이 비어있지 않다고 결론지을 수는 없다. 가령 [§Bruhat decomposition, ⁋예시 18](/ko/math/lie_theory/bruhat_decomposition#ex18){: data-relation="weak" }의 비교 불가능한 쌍 $u=1423$, $w=2314$를 생각하면, 이들의 길이가 같아 기대차원이 $0$차원임에도 불구하고, 이들의 교집합은 점들의 집합이 아니라 공집합이다. 실제로 무슨 일이 일어나는지 $\Gr(2,4)$에서 직접 살펴보자. $X_{2314}$의 점은 rank 조건 $\dim(V\cap E_3)\geq2$, 곧 $V\subseteq E_3$을 만족한다. 반면 opposite cell $X^{1423}_\circ=B^-\cdot\span\{e_1,e_4\}$의 점은 모두 $e_4$를 포함하며 (lower triangular 행렬은 $e_4$를 scalar배까지 고정한다), $e_4\in V$는 closed 조건이므로 closure $X^{1423}$에서도 유지된다. $e_4\notin E_3$이므로 두 요구는 양립할 수 없고, 두 variety는 차원이 충분한데도 서로 비껴간다.
 
-이러한 현상은 $X_w$와 $X^u$가 general position에 있는 임의의 subvariety들이 아니라, 둘 다 maximal torus $T$의 작용에 invariant인 특별한 위치의 subvariety들이라는 점에서 기인한다. 이러한 성질 때문에 이들의 교집합 $X_w\cap X^u$도 closed $T$-stable subvariety인데, 비어있지 않은 closed $T$-stable subvariety는 언제나 $T$-fixed point를 포함한다는 것이 알려져 있다 (Borel fixed point theorem, [Bri] 참조). 그런데 $G/P$의 $T$-fixed point는 coordinate point $vP$ ($v\in W^P$)들 뿐이다 ([§Bruhat decomposition, ⁋명제 19](/ko/math/lie_theory/bruhat_decomposition#prop19)). 한편 $vP\in X_w$는 ([§Bruhat decomposition, ⁋명제 17](/ko/math/lie_theory/bruhat_decomposition#prop17)에 의해) $v\leq w$와 동치이고, 대칭적으로 $vP\in X^u$는 $u\leq v$와 동치이다. 따라서
+이러한 현상은 $X_w$와 $X^u$가 general position에 있는 임의의 subvariety들이 아니라, 둘 다 maximal torus $T$의 작용에 invariant인 특별한 위치의 subvariety들이라는 점에서 기인한다. 이러한 성질 때문에 이들의 교집합 $X_w\cap X^u$도 closed $T$-stable subvariety인데, 비어있지 않은 closed $T$-stable subvariety는 언제나 $T$-fixed point를 포함한다는 것이 알려져 있다 (Borel fixed point theorem, [Bri] 참조). 그런데 $G/P$의 $T$-fixed point는 coordinate point $vP$ ($v\in W^P$)들 뿐이다 ([§Bruhat decomposition, ⁋명제 19](/ko/math/lie_theory/bruhat_decomposition#prop19){: data-relation="required" }). 한편 $vP\in X_w$는 ([§Bruhat decomposition, ⁋명제 17](/ko/math/lie_theory/bruhat_decomposition#prop17){: data-relation="required" }에 의해) $v\leq w$와 동치이고, 대칭적으로 $vP\in X^u$는 $u\leq v$와 동치이다. 따라서
 
 $$X_w\cap X^u\neq\emptyset\iff\text{$u\leq v\leq w$인 $v\in W^P$가 존재}\iff u\leq w$$
 
-이다. 위의 예에서는 jump set 조건 $\{1,4\}\leq\{v(1),v(2)\}\leq\{2,3\}$이 $4\leq v(2)\leq3$을 요구하므로 그런 $v$가 없고, 역으로 $u\leq w$이면 $v=u$를 택할 수 있어 fixed point $uP$가 이미 $R_{u,w}$의 점이 된다. 이것이 [명제 2](#prop2)의 조건 $u\leq w$의 정확한 기하학적 내용이다.
+이다. 위의 예에서는 jump set 조건 $\{1,4\}\leq\{v(1),v(2)\}\leq\{2,3\}$이 $4\leq v(2)\leq3$을 요구하므로 그런 $v$가 없고, 역으로 $u\leq w$이면 $v=u$를 택할 수 있어 fixed point $uP$가 이미 $R_{u,w}$의 점이 된다. 이것이 [명제 2](#prop2){: data-relation="weak" }의 조건 $u\leq w$의 정확한 기하학적 내용이다.
 
 그렇다면 다음 명제를 기대하는 것이 자연스럽다. 
 
@@ -76,15 +76,15 @@ $$\int_{G/P}[X_w]\cdot[X^u]=\delta_{u,w}$$
 이므로, opposite Schubert class들 $\{[X^u]\}_{u\in W^P}$은 Schubert class들 $\{[X_w]\}_{w\in W^P}$의 Poincaré dual basis를 이룬다.
 :::
 ::: 증명
-$X_w$와 $X^u$는 $B$와 $B^-$가 주는 generic position에서 transversal하게 만나므로, 그 intersection class는 두 class의 곱과 같다. 이것이 $[X_w]\cdot[X^u]=[R_{u,w}]$이다 ([Bri] 참조). $\ell(u)=\ell(w)$인 경우 $R_{u,w}$의 차원은 $\ell(w)-\ell(u)=0$이고, [명제 2](#prop2)에 의해 $u=w$이면 reduced point 하나, $u\neq w$이면 ($u\leq w$가 깨져) 공집합이다. 따라서 그 0차원 class의 degree, 곧 $\int_{G/P}[X_w]\cdot[X^u]$은 $\delta_{u,w}$이다.
+$X_w$와 $X^u$는 $B$와 $B^-$가 주는 generic position에서 transversal하게 만나므로, 그 intersection class는 두 class의 곱과 같다. 이것이 $[X_w]\cdot[X^u]=[R_{u,w}]$이다 ([Bri] 참조). $\ell(u)=\ell(w)$인 경우 $R_{u,w}$의 차원은 $\ell(w)-\ell(u)=0$이고, [명제 2](#prop2){: data-relation="required" }에 의해 $u=w$이면 reduced point 하나, $u\neq w$이면 ($u\leq w$가 깨져) 공집합이다. 따라서 그 0차원 class의 degree, 곧 $\int_{G/P}[X_w]\cdot[X^u]$은 $\delta_{u,w}$이다.
 :::
 
-[명제 3](#prop3)은 Schubert basis의 곱셈 structure constant를 Richardson variety의 degree로 환원한다. 세 class의 곱 $[X_w]\cdot[X^u]\cdot[X_v]$을 적분하면 세 generic position Schubert variety의 intersection number가 나오는데, 이것이 곧 structure constant이고, Grassmannian의 경우에는 Littlewood–Richardson 계수가 되며, 이로부터 classical Schubert calculus가 전개된다.
+[명제 3](#prop3){: data-relation="weak" }은 Schubert basis의 곱셈 structure constant를 Richardson variety의 degree로 환원한다. 세 class의 곱 $[X_w]\cdot[X^u]\cdot[X_v]$을 적분하면 세 generic position Schubert variety의 intersection number가 나오는데, 이것이 곧 structure constant이고, Grassmannian의 경우에는 Littlewood–Richardson 계수가 되며, 이로부터 classical Schubert calculus가 전개된다.
 
-역시 가장 손에 잡히는 경우는 $G/P=\Gr(k,n)\cong\GL_n(\mathbb{C})/P_k$인 Grassmannian이다. 이때 $W=S_n$, $W_{P_k}=S_k\times S_{n-k}$이고, minimal length coset representative $W^{P_k}$은 [§Bruhat decomposition, ⁋명제 14](/ko/math/lie_theory/bruhat_decomposition#prop14)에서 본 $(k,n-k)$-shuffle들이다. Schubert variety $X_w$는 표준 flag $E_\bullet$에 대한 $\dim(V\cap E_{w(a)})\geq a$ 꼴의 rank 조건으로, opposite Schubert variety $X^u$는 opposite flag $\tilde{E}_\bullet$ ($\tilde{E}_j=\span\{e_n,\ldots,e_{n-j+1}\}$)에 대한 symmetric rank 조건으로 잘린다. Richardson variety는 이 두 조건을 동시에 부과한 것이다.
+역시 가장 손에 잡히는 경우는 $G/P=\Gr(k,n)\cong\GL_n(\mathbb{C})/P_k$인 Grassmannian이다. 이때 $W=S_n$, $W_{P_k}=S_k\times S_{n-k}$이고, minimal length coset representative $W^{P_k}$은 [§Bruhat decomposition, ⁋명제 14](/ko/math/lie_theory/bruhat_decomposition#prop14){: data-relation="required" }에서 본 $(k,n-k)$-shuffle들이다. Schubert variety $X_w$는 표준 flag $E_\bullet$에 대한 $\dim(V\cap E_{w(a)})\geq a$ 꼴의 rank 조건으로, opposite Schubert variety $X^u$는 opposite flag $\tilde{E}_\bullet$ ($\tilde{E}_j=\span\{e_n,\ldots,e_{n-j+1}\}$)에 대한 symmetric rank 조건으로 잘린다. Richardson variety는 이 두 조건을 동시에 부과한 것이다.
 
 ::: 예시 4
-$\Gr(2,4)$에서 $u=1324$, $w=2413$을 택하자. [§Bruhat decomposition, ⁋예시 18](/ko/math/lie_theory/bruhat_decomposition#ex18)의 jump set 순서로 $1324\leftrightarrow\{1,3\}$, $2413\leftrightarrow\{2,4\}$이고 성분별로 $1\leq2$, $3\leq4$이므로 $u\leq w$이며, $\ell(2413)-\ell(1324)=3-1=2$이다. 두 Schubert 조건은 각각
+$\Gr(2,4)$에서 $u=1324$, $w=2413$을 택하자. [§Bruhat decomposition, ⁋예시 18](/ko/math/lie_theory/bruhat_decomposition#ex18){: data-relation="required" }의 jump set 순서로 $1324\leftrightarrow\{1,3\}$, $2413\leftrightarrow\{2,4\}$이고 성분별로 $1\leq2$, $3\leq4$이므로 $u\leq w$이며, $\ell(2413)-\ell(1324)=3-1=2$이다. 두 Schubert 조건은 각각
 
 $$X_{2413}=\{V\mid\dim(V\cap E_2)\geq1\},\qquad X^{1324}=\{V\mid\dim(V\cap\tilde{E}_2)\geq1\}$$
 
@@ -96,7 +96,7 @@ $$R_{1324,2413}=\{V\in\Gr(2,4)\mid V\cap E_2\neq0,\ V\cap\tilde{E}_2\neq0\}$$
 
 $$R_{1324,2413}\cong\mathbb{P}(E_2)\times\mathbb{P}(\tilde{E}_2)\cong\mathbb{P}^1\times\mathbb{P}^1$$
 
-을 준다. 차원 $2$의 variety로, [명제 2](#prop2)의 차원과 정확히 맞는다. 그 open part는 행렬
+을 준다. 차원 $2$의 variety로, [명제 2](#prop2){: data-relation="weak" }의 차원과 정확히 맞는다. 그 open part는 행렬
 
 $$V=\operatorname{rowspan}\begin{pmatrix}1&s&0&0\\0&0&1&t\end{pmatrix}\qquad(s,t)\in\mathbb{A}^2$$
 
@@ -109,7 +109,7 @@ $$V=\operatorname{rowspan}\begin{pmatrix}1&s&0&0\\0&0&1&t\end{pmatrix}\qquad(s,t
 
 $$g\cdot\mathfrak{b}'=\Ad(g)\,\mathfrak{b}'$$
 
-으로 작용하는 것을 기억하자 ([§Borel subgroup, ⁋명제 10](/ko/math/lie_theory/borel_subgroup#prop10)). 이 때, 임의의 두 Borel subalgebra는 conjugate이므로, 이 action은 transitive하고, $\mathfrak{b}$의 stabilizer는 그 normalizer $N_G(\mathfrak{b})=B$이다. 따라서 orbit-stabilizer 정리로 얻어지는 $gB\mapsto\Ad(g)\mathfrak{b}$가 $G/B$와 Borel subalgebra들의 집합 사이의 일대일 대응을 준다. 즉, $G/B$는 $G$의 Borel subalgebra들의 variety로 생각할 수 있다. 
+으로 작용하는 것을 기억하자 ([§Borel subgroup, ⁋명제 10](/ko/math/lie_theory/borel_subgroup#prop10){: data-relation="required" }). 이 때, 임의의 두 Borel subalgebra는 conjugate이므로, 이 action은 transitive하고, $\mathfrak{b}$의 stabilizer는 그 normalizer $N_G(\mathfrak{b})=B$이다. 따라서 orbit-stabilizer 정리로 얻어지는 $gB\mapsto\Ad(g)\mathfrak{b}$가 $G/B$와 Borel subalgebra들의 집합 사이의 일대일 대응을 준다. 즉, $G/B$는 $G$의 Borel subalgebra들의 variety로 생각할 수 있다. 
 
 이제 다시 $G/B$가 flag variety이고, $gB$는 이 variety의 한 점으로서 flag 하나를 결정한다는 것을 기억하자. 즉, 위의 bijection은 $G/B$의 flag 하나마다 그에 대응하는 Borel subalgebra $\Ad(g)\mathfrak{b}$를 붙여준 것이다. 그런데 이는 조금 더 일반화할 수 있다. $\mathfrak{b}$를 포함하는 $\ad(\mathfrak{b})$-stable subspace $H\subseteq\mathfrak{g}$를 택하면, $H$가 $B$-stable이므로 $\Ad(g)H$ 역시 coset $gB$에만 의존하기 때문이다. 즉, 각 flag마다 subspace $\Ad(g)H$를 하나씩 대응시켜줄 수 있다. 
 
@@ -151,9 +151,9 @@ $$\mathcal{B}(X,H)=\{\,gB\in G/B\;\mid\;\Ad(g^{-1})X\in H\,\}$$
 
 위에서 살펴봤듯 $X$는 그 centralizer를 통해 variety의 크기에 영향을 미치며, 이 subspace $H$ 또한 마찬가지이다. 두 극단적인 상황으로, 우리는 $H=\mathfrak{g}$인 경우 조건 $\Ad(g^{-1})X\in\mathfrak{g}$가 자명하게 성립하여 Hessenberg variety는 $G/B$ 전체이다. 반대쪽 극단 $H=\mathfrak{b}$에서는 조건 $\Ad(g^{-1})X\in\mathfrak{b}$가 Borel subalgebra $\Ad(g)\mathfrak{b}$가 $X$를 포함한다는 말과 같으며, 만일 $X$가 nilpotent라면 우리는 이를 $X$의 *Springer fiber*라 부른다. 
 
-우리가 정의할 Peterson variety는 $X$와 $H$를 이용하여 최대한의 조건을 부과한 closed subvariety로 생각할 수 있다. $X$에 대해서는 [정의 6](#def6) 이전의 논증에 의하여 regular nilpotent 조건이 가장 강한 조건을 부과함을 살펴보았는데, 이 경우 $X$는 정확히 하나의 Borel subalgebra에만 속하여 Springer fiber $\mathcal{B}(X, \mathfrak{b})$는 한 점으로 줄어들게 된다. 따라서 우리는 여기서 $H$에 대한 조건을 약간 널널하게 잡아 Peterson variety를 정의하게 된다. 
+우리가 정의할 Peterson variety는 $X$와 $H$를 이용하여 최대한의 조건을 부과한 closed subvariety로 생각할 수 있다. $X$에 대해서는 [정의 6](#def6){: data-relation="required" } 이전의 논증에 의하여 regular nilpotent 조건이 가장 강한 조건을 부과함을 살펴보았는데, 이 경우 $X$는 정확히 하나의 Borel subalgebra에만 속하여 Springer fiber $\mathcal{B}(X, \mathfrak{b})$는 한 점으로 줄어들게 된다. 따라서 우리는 여기서 $H$에 대한 조건을 약간 널널하게 잡아 Peterson variety를 정의하게 된다. 
 
-$H$를 어느 방향으로 키울 수 있는지는 type $A$에서 [정의 6](#def6)의 조건을 좌표로 직접 풀어 보면 선명해진다.
+$H$를 어느 방향으로 키울 수 있는지는 type $A$에서 [정의 6](#def6){: data-relation="required" }의 조건을 좌표로 직접 풀어 보면 선명해진다.
 
 ::: 예시 7
 위에서 살펴본 type $A_{n-1}$로 돌아가자. 이 경우, $G=\GL_n(\mathbb{C})$이고 $\mathfrak{b}$는 upper triangular 행렬들의 공간이며, $\gl_n$의 Cartan subalgebra는 대각행렬들의 공간 $\mathfrak{h}$이다.[^1]
@@ -189,7 +189,7 @@ $$\Ad(g^{-1})X\in H_h\iff g^{-1}Xg\in H_h\iff XgE_i\subseteq gE_{h(i)}\iff XV_i\
 이 성립한다. 곧 type $A$의 Hessenberg variety는 $X$가 flag를 단계마다 $h$가 허용하는 만큼만 흘러내리게 한다는 조건으로 잘라낸 flag들의 variety이다.
 :::
 
-[예시 7](#ex7)의 그림은 일반적인 경우에서도 그대로 성립한다. 이 경우, 위에서처럼 staircase가 $\mathfrak{b}$ 위로 더 채우는 자리들은 대각선 아래쪽, 곧 *negative* root 방향이다. 실제로 $\mathfrak{b}=\mathfrak{h}\oplus\bigoplus_{\alpha>0}\mathfrak{g}_\alpha$는 이미 모든 positive root 방향을 포함하므로, $H$를 $\mathfrak{b}$보다 키우는 일은 negative root 방향을 더하는 일일 수밖에 없다. 그러나, $\ad(\mathfrak{b})$-stability에 의하여 추가로 simple 조건이 강제되는데, 실제로 simple이 아닌 positive root $\alpha=\beta+\gamma$의 방향은 $[\mathfrak{g}_\beta,\mathfrak{g}_{-\alpha}]=\mathfrak{g}_{-\gamma}$를 통해 더 얕은 자리들을 함께 끌고 들어오는 반면, negative simple root 방향은 $\mathfrak{b}\oplus\mathfrak{g}_{-\alpha_i}$가 그 자체로 stable하다. 즉, $\mathfrak{b}$에서 한 칸씩 늘리는 최소 단위의 확장은 정확히 $\mathfrak{g}_{-\alpha_i}$들이고, type $A$에서는 위 그림의 subdiagonal 자리들이 이들이다. 그럼 $\mathfrak{b}$에 이 방향을 추가하여 만들어진 것이 Peterson variety의 $H$이다.
+[예시 7](#ex7){: data-relation="required" }의 그림은 일반적인 경우에서도 그대로 성립한다. 이 경우, 위에서처럼 staircase가 $\mathfrak{b}$ 위로 더 채우는 자리들은 대각선 아래쪽, 곧 *negative* root 방향이다. 실제로 $\mathfrak{b}=\mathfrak{h}\oplus\bigoplus_{\alpha>0}\mathfrak{g}_\alpha$는 이미 모든 positive root 방향을 포함하므로, $H$를 $\mathfrak{b}$보다 키우는 일은 negative root 방향을 더하는 일일 수밖에 없다. 그러나, $\ad(\mathfrak{b})$-stability에 의하여 추가로 simple 조건이 강제되는데, 실제로 simple이 아닌 positive root $\alpha=\beta+\gamma$의 방향은 $[\mathfrak{g}_\beta,\mathfrak{g}_{-\alpha}]=\mathfrak{g}_{-\gamma}$를 통해 더 얕은 자리들을 함께 끌고 들어오는 반면, negative simple root 방향은 $\mathfrak{b}\oplus\mathfrak{g}_{-\alpha_i}$가 그 자체로 stable하다. 즉, $\mathfrak{b}$에서 한 칸씩 늘리는 최소 단위의 확장은 정확히 $\mathfrak{g}_{-\alpha_i}$들이고, type $A$에서는 위 그림의 subdiagonal 자리들이 이들이다. 그럼 $\mathfrak{b}$에 이 방향을 추가하여 만들어진 것이 Peterson variety의 $H$이다.
 
 ::: 정의 8
 *Peterson variety<sub>피터슨 다양체</sub>* $\mathcal{Y}$는 $G/B$의 closed subvariety
@@ -199,15 +199,15 @@ $$\mathcal{Y}=\{\,gB\in G/B\;\mid\;\Ad(g^{-1})e\in H\,\}$$
 로 정의된다. 여기서 $e=\sum_i e_i$는 regular nilpotent element이고, $H=\mathfrak{b}\oplus\bigoplus_i\mathbb{C}f_i$이며 $f_i\in\mathfrak{g}_{-\alpha_i}$는 simple negative root의 root vector이다.
 :::
 
-이 정의는 여러 선택에 의존하는 것처럼 보이지만 사실상 유일하다. $f_i$의 선택은 $\mathbb{C}f_i=\mathfrak{g}_{-\alpha_i}$가 $1$차원이므로 $H$를 바꾸지 않고, $e$를 다른 regular nilpotent로 바꾸는 것은 ([정의 5](#def5) 직후 논의의 conjugacy에 의해) $\mathcal{Y}$를 $G/B$ 안에서 translate할 뿐이기 때문이다.
+이 정의는 여러 선택에 의존하는 것처럼 보이지만 사실상 유일하다. $f_i$의 선택은 $\mathbb{C}f_i=\mathfrak{g}_{-\alpha_i}$가 $1$차원이므로 $H$를 바꾸지 않고, $e$를 다른 regular nilpotent로 바꾸는 것은 ([정의 5](#def5){: data-relation="required" } 직후 논의의 conjugacy에 의해) $\mathcal{Y}$를 $G/B$ 안에서 translate할 뿐이기 때문이다.
 
-위에서 살펴봤듯, $H$가 $\mathfrak{b}$에 더한 자유도는 simple root마다 하나씩, 총 $\rank(\mathfrak{g})$개이다. $H=\mathfrak{b}$가 한 점을 주었으므로 ([정의 6](#def6) 직후의 논의), Peterson variety의 차원은 한 점에서 그만큼 자라리라 기대할 수 있다. 실제로 그렇게 된다는 것이 다음 명제의 내용이다.
+위에서 살펴봤듯, $H$가 $\mathfrak{b}$에 더한 자유도는 simple root마다 하나씩, 총 $\rank(\mathfrak{g})$개이다. $H=\mathfrak{b}$가 한 점을 주었으므로 ([정의 6](#def6){: data-relation="required" } 직후의 논의), Peterson variety의 차원은 한 점에서 그만큼 자라리라 기대할 수 있다. 실제로 그렇게 된다는 것이 다음 명제의 내용이다.
 
 ::: 명제 9 (Tymoczko [Tym], Precup [Pre], Insko–Tymoczko [IT])
 Peterson variety $\mathcal{Y}$는 Bruhat decomposition과의 교집합으로 affine paving 구조를 이룬다. 즉, 각각의 $\mathcal{Y}\cap BwB/B$들이 각각 affine space와 isomorphic하며, $\mathcal{Y}$는 이들의 disjoint union이다. 특히, 이 구조 하에서 가장 큰 조각의 차원이 $\rank(\mathfrak{g})$가 되어 $\mathcal{Y}$의 차원 또한 $\rank (\mathfrak{g})$와 같다.
 :::
 
-이 명제의 증명은 생략하지만, 주장하는 affine paving 구조 자체는 기억할 필요가 있다. 핵심은 이 affine paving이 simple root들의 부분집합 $\mathcal{P}(\Delta)$로 index된다는 것으로, 가령 어떤 simple root 방향도 포함하지 않는 부분집합, 즉 공집합의 경우 $\mathfrak{b}$에 더해지는 방향이 없으므로 [정의 6](#def6) 이후의 논증에 의하여 이에 해당하는 affine space는 한 점이 된다. 그 위의 affine space들은 $\Delta$의 부분집합에 의해 결정되는 것들로, 이는 단순한 analogy가 아니라 이들의 위치관계 또한 실제로 $\Delta$의 부분집합이 결정한다. 
+이 명제의 증명은 생략하지만, 주장하는 affine paving 구조 자체는 기억할 필요가 있다. 핵심은 이 affine paving이 simple root들의 부분집합 $\mathcal{P}(\Delta)$로 index된다는 것으로, 가령 어떤 simple root 방향도 포함하지 않는 부분집합, 즉 공집합의 경우 $\mathfrak{b}$에 더해지는 방향이 없으므로 [정의 6](#def6){: data-relation="required" } 이후의 논증에 의하여 이에 해당하는 affine space는 한 점이 된다. 그 위의 affine space들은 $\Delta$의 부분집합에 의해 결정되는 것들로, 이는 단순한 analogy가 아니라 이들의 위치관계 또한 실제로 $\Delta$의 부분집합이 결정한다. 
 
 정확히 말해, $A\subseteq\Delta$에 대응하는 조각은 $A$에 해당하는 simple root들이 정의하는 reflection들로 생성되는 Weyl group의 subgroup $W_A$에 대하여, $W_A$의 longest element $w_A$가 정의하는 Bruhat cell과의 교집합
 
@@ -220,7 +220,7 @@ $$\overline{\mathcal{Y}\cap Bw_AB/B}\;=\;\bigsqcup_{A'\subseteq A}\bigl(\mathcal
 이 성립한다. 실제로 이 closure는 $H$를 $A$ 방향으로만 키운 중간 단계의 Hessenberg variety $\mathcal{B}(e,\,\mathfrak{b}\oplus\bigoplus_{i\in A}\mathbb{C}f_i)$와 일치하며, 나아가 $A$가 생성하는 Levi subgroup의 Peterson variety와 동형이다 ([IT]). 즉, Peterson variety는 더 작은 Peterson variety들이 부분집합 순서로 포개진 구조를 가지며, 자유도를 하나도 쓰지 않는 한 점 $B/B$ ($A=\emptyset$)에서 big Bruhat cell과의 교집합인 가장 큰 조각 ($A=\Delta$)까지 그 사이의 모든 위치관계를 simple root들의 조합론이 지배한다. 
 
 ::: 예시 10
-이 구조를 앞서 살펴본 type $A$에서 예시로 살펴보자. [예시 7](#ex7)과 마찬가지로 Hessenberg function을 $h(i)=\min(i+1, n)$으로 택하면, $H$는 대각선 아래로 정확히 한 칸씩을 내리는 것이 허용되는 행렬들의 모임이며, 이 예시의 마지막 동치관계에서 우리는 Peterson variety가 complete flag variety $\Fl_n=\GL_n(\mathbb{C})/B$ 안에서
+이 구조를 앞서 살펴본 type $A$에서 예시로 살펴보자. [예시 7](#ex7){: data-relation="required" }과 마찬가지로 Hessenberg function을 $h(i)=\min(i+1, n)$으로 택하면, $H$는 대각선 아래로 정확히 한 칸씩을 내리는 것이 허용되는 행렬들의 모임이며, 이 예시의 마지막 동치관계에서 우리는 Peterson variety가 complete flag variety $\Fl_n=\GL_n(\mathbb{C})/B$ 안에서
 
 $$\Pet_n=\{\,V_\bullet\mid NV_i\subseteq V_{i+1},\ i=1,\ldots,n-1\,\}$$
 
@@ -228,7 +228,7 @@ $$\Pet_n=\{\,V_\bullet\mid NV_i\subseteq V_{i+1},\ i=1,\ldots,n-1\,\}$$
 
 $$\sum_{j=1}^n\bigl(h(j)-j\bigr)=n-1$$
 
-이며, 이는 $\rank(\mathfrak{sl}_n)$와 같으므로 [명제 9](#prop9)를 다시 확인할 수 있다.
+이며, 이는 $\rank(\mathfrak{sl}_n)$와 같으므로 [명제 9](#prop9){: data-relation="weak" }를 다시 확인할 수 있다.
 
 이제 각각의 cell을 보기 위해 더 구체적으로 $n=3$인 경우를 보자. $Ne_1=0$, $Ne_2=e_1$, $Ne_3=e_2$이고 마지막 조건 $NV_2\subseteq V_3=\mathbb{C}^3$은 자동이므로 위의 정의를 그대로 사용하면
 
@@ -247,7 +247,7 @@ $$w\in\{e,\,s_1,\,s_2,\,w_0\}=\{123,\,213,\,132,\,321\}$$
 위에서 구한 네 개의 flag들은 simple root 부분집합 $A\subseteq\{\alpha_1,\alpha_2\}$와, 이들이 정의하는 Weyl group $W_A$의 maximal length element $w_A$를 대응시킨 $2^{n-1}=4$개의 coordinate flag로, Peterson variety가 simple root들의 조합론을 기억하고 있음을 보여준다.
 :::
 
-한편 [명제 9](#prop9)의 핵심적인 아이디어는 $G/B$의 Bruhat decomposition과 $\mathcal{Y}$의 교집합을 취하여 $\mathcal{Y}$를 분해하는 것이었다. 그런데 우리는 이미 [§Bruhat decomposition, ⁋정리 8](/ko/math/lie_theory/bruhat_decomposition#thm8)에서 opposite Borel subgroup을 통한 decomposition을 살펴보았으므로 $\mathcal{Y}\cap B^-wB/B$를 통해 $\mathcal{Y}$의 성질을 탐구할 수도 있다. 
+한편 [명제 9](#prop9){: data-relation="required" }의 핵심적인 아이디어는 $G/B$의 Bruhat decomposition과 $\mathcal{Y}$의 교집합을 취하여 $\mathcal{Y}$를 분해하는 것이었다. 그런데 우리는 이미 [§Bruhat decomposition, ⁋정리 8](/ko/math/lie_theory/bruhat_decomposition#thm8){: data-relation="required" }에서 opposite Borel subgroup을 통한 decomposition을 살펴보았으므로 $\mathcal{Y}\cap B^-wB/B$를 통해 $\mathcal{Y}$의 성질을 탐구할 수도 있다. 
 
 결과의 성격은 전혀 다르다. 조각들이 더 이상 affine space가 아닌 대신, 각 조각이 그 자체로 의미를 갖는 affine variety가 된다. 이번에도 비어있지 않은 조각은 정확히 $2^{\rank(\mathfrak{g})}$개인데, 그 index마저 paving과 같다. 즉, 비어있지 않은 조각은 각 $A\subseteq\Delta$마다 같은 longest element $w_A$의 $B^-$쪽 Bruhat cell과의 교집합
 
@@ -263,7 +263,7 @@ $$\mathcal{Y}_B=\mathcal{Y}\cap B^-B/B$$
 
 으로 주어지는 $\mathcal{Y}$의 Zariski dense open subset이다. 일반적으로 $\mathcal{Y}_P$의 차원은 $\lvert\Delta\setminus A\rvert$, 곧 $P$에 들어있지 않은 simple root의 개수와 같다. 즉 paving의 cell과 stratification의 stratum은 같은 $w_A$에 매달린 두 조각으로, 개수가 같고 둘 다 점 $w_AB$를 담으면서 차원은 $\lvert A\rvert$와 $\lvert\Delta\setminus A\rvert$로 서로 보완적인 방향으로 자란다.
 
-이 분해가 단순히 $B$를 $B^-$으로 바꾼 것 이상의 의미를 갖는 이유는 이것이 quantum cohomology에 대한 정보를 담고 있기 때문이다. 다음 정리에서, Lie group $G$의 *Langlands dual group<sub>랭글랜즈 쌍대군</sub>* $G^\vee$는 root datum에서 root와 coroot를 맞바꾼 dual group으로, 이 상황에서 [정의 8](#def8)을 따라 만든 Peterson variety가 $\mathcal{Y}^\vee$이고, $G$의 parabolic subgroup $P$의 Langlands dual $P^\vee$에 해당하는 $\mathcal{Y}^\vee$의 stratum을 $\mathcal{Y}^\vee_P$으로 쓰자.
+이 분해가 단순히 $B$를 $B^-$으로 바꾼 것 이상의 의미를 갖는 이유는 이것이 quantum cohomology에 대한 정보를 담고 있기 때문이다. 다음 정리에서, Lie group $G$의 *Langlands dual group<sub>랭글랜즈 쌍대군</sub>* $G^\vee$는 root datum에서 root와 coroot를 맞바꾼 dual group으로, 이 상황에서 [정의 8](#def8){: data-relation="required" }을 따라 만든 Peterson variety가 $\mathcal{Y}^\vee$이고, $G$의 parabolic subgroup $P$의 Langlands dual $P^\vee$에 해당하는 $\mathcal{Y}^\vee$의 stratum을 $\mathcal{Y}^\vee_P$으로 쓰자.
 
 ::: 정리 11 (Peterson)
 $G$의 Langlands dual $G^\vee$의 Peterson variety에서, 각 standard parabolic subgroup $P\supseteq B$에 대응하는 stratum $\mathcal{Y}^\vee_P$의 coordinate ring은 partial flag variety $G/P$의 small quantum cohomology ring과 동형이다.
@@ -273,7 +273,7 @@ $$\mathbb{C}[\mathcal{Y}^\vee_P]\cong QH^\ast(G/P)$$
 
 이 정리는 Peterson의 1997년 MIT lecture에서 소개된 것으로, 별도의 출판본은 없지만 [강의노트](https://math.soimeme.org/~arunram/Resources/PetersonGmodBcourse1997.pdf) 등에서 그 증명을 찾아볼 수 있다. 다만 우리가 주로 살펴보던 Grassmannian의 경우, $\GL_n$은 Langlands self-dual이므로 $G\cong G^\vee$가 되어 이 duality가 잘 보이지는 않는다. 
 
-우리는 [§Borel subgroup, ⁋정의 12](/ko/math/lie_theory/borel_subgroup#def12)에서 flag variety를 도입한 후, 지금까지 대수기하의 언어를 아주 본격적으로 사용하지는 않았지만, 이 정리의 정신을 이해하기 위해서는 이를 더 이상 미룰 수 없다. 핵심적인 것은 algebraic geometry에서 ring $A$를 그 자체로 $\mathbb{C}$ 위의 기하적인 공간 $\Spec A$으로, $A$는 그 공간 위의 함수들의 ring으로 해석하는 방식이다. 이 사전에서, 공간 $\Spec A$의 각 점들은 $A$의 maximal ideal에 대응되며, ring homomorphism $A\rightarrow B$는 기하적인 함수 $\Spec B\rightarrow \Spec A$에 대응된다. 중요한 특수한 케이스는 $A=\mathbb{C}$와 $B=\mathbb{C}$일 때 각각으로, 우선 $A=\mathbb{C}$이면 대수적인 세계에서의 $\mathbb{C}\rightarrow B$는 ring $B$를 $\mathbb{C}$-algebra로 보게 하는 structure morphism이다. 이에 대응되는 기하적인 세상에서는 $\Spec \mathbb{C}$는 한 점이므로, 함수 $\Spec B\rightarrow \Spec A$는 한 점으로의 함수가 된다. 만일 $A,B$가 모두 $\mathbb{C}$-algebra가 되어 다음의 commutative diagram
+우리는 [§Borel subgroup, ⁋정의 12](/ko/math/lie_theory/borel_subgroup#def12){: data-relation="required" }에서 flag variety를 도입한 후, 지금까지 대수기하의 언어를 아주 본격적으로 사용하지는 않았지만, 이 정리의 정신을 이해하기 위해서는 이를 더 이상 미룰 수 없다. 핵심적인 것은 algebraic geometry에서 ring $A$를 그 자체로 $\mathbb{C}$ 위의 기하적인 공간 $\Spec A$으로, $A$는 그 공간 위의 함수들의 ring으로 해석하는 방식이다. 이 사전에서, 공간 $\Spec A$의 각 점들은 $A$의 maximal ideal에 대응되며, ring homomorphism $A\rightarrow B$는 기하적인 함수 $\Spec B\rightarrow \Spec A$에 대응된다. 중요한 특수한 케이스는 $A=\mathbb{C}$와 $B=\mathbb{C}$일 때 각각으로, 우선 $A=\mathbb{C}$이면 대수적인 세계에서의 $\mathbb{C}\rightarrow B$는 ring $B$를 $\mathbb{C}$-algebra로 보게 하는 structure morphism이다. 이에 대응되는 기하적인 세상에서는 $\Spec \mathbb{C}$는 한 점이므로, 함수 $\Spec B\rightarrow \Spec A$는 한 점으로의 함수가 된다. 만일 $A,B$가 모두 $\mathbb{C}$-algebra가 되어 다음의 commutative diagram
 
 {% diagram Math/Lie_Theory/Richardson_Peterson_Variety-1.svg width="12em" alt="$A, B$가 $\mathbb{C}$-algebra이면 unit이 주는 structure morphism $\mathbb{C}\rightarrow A$, $\mathbb{C}\rightarrow B$가 있고, ring homomorphism $\varphi\colon A\rightarrow B$가 이 둘과 commute하는 것(곧 $\mathbb{C}$를 고정하는 것)이 $\varphi$가 $\mathbb{C}$-algebra homomorphism이라는 조건이다." %}
 
@@ -283,7 +283,7 @@ $$\mathbb{C}[\mathcal{Y}^\vee_P]\cong QH^\ast(G/P)$$
 
 으로 번역된다. 한편 $B=\mathbb{C}$인 경우 ring homomorphism $A\rightarrow \mathbb{C}$는 기하적인 세계에서는 $\Spec \mathbb{C}\rightarrow\Spec A$로 번역되며, 즉 이 ring homomorphism은 그 자체로 하나의 점이 된다. 만일 $A$가 $\mathbb{C}$-algebra인 경우, 이 ring homomorphism을 우리는 보통 evaluation map으로 해석했던 것 또한 기억하자. 마지막으로, ring homomorphism $A\rightarrow B$로 $B$를 $A$-algebra로 보는 것은 위에서 보았듯 morphism $\Spec B\rightarrow\Spec A$, 곧 base $\Spec A$ 위에 놓인 상대적인 공간으로 해석되며, $A$-module은 $\Spec A$ 위의 sheaf(vector bundle에 준하는 대상)로 본다. 특히 rank $N$짜리 free module은 trivial rank $N$ bundle에 해당하여, 그런 $A$-algebra의 $\Spec$은 base로 보내는 fiber가 ($\dim$을 세면) $N$개인 finite morphism이 된다. 가장 기본적인 경우가 affine space로, polynomial algebra $\mathbb{C}[\x_1,\ldots,\x_n]$은 $\Spec$을 먹이면 affine $n$-space $\mathbb{A}^n$이며, 더 일반적으로 $A[\x_1,\ldots,\x_n]$은 base $\Spec A$ 위의 relative affine space에 대응한다.
 
-이제 다시 [정리 11](#thm11)의 해석으로 돌아가기 위해 우선 $QH^\ast(G/P)$에 기하학적인 설정을 추가하자. 표기의 편의를 위해 $k$개의 quantum parameter들이 있다고 하고, 이들 family를 간단히 $q$라 적으면 $QH^\ast(G/P)$는 (module로서는) quantum parameter들의 polynomial ring $\mathbb{C}[q]$ 위의 rank $N=\dim_\mathbb{C}H^\ast(G/P)$ free module이다. 이제 structure morphism $\mathbb{C}[q]\rightarrow QH^\ast(G/P)$를 생각하면, 기하적으로 이는 $\Spec QH^\ast(G/P)\rightarrow \Spec\mathbb{C}[q]$를 정의한다. 그럼 위에서 살펴본 것과 같이 이는 $\Spec QH^\ast(G/P)$에서 $\mathbb{A}^k$로의 rank $N$ finite morphism이다. 
+이제 다시 [정리 11](#thm11){: data-relation="required" }의 해석으로 돌아가기 위해 우선 $QH^\ast(G/P)$에 기하학적인 설정을 추가하자. 표기의 편의를 위해 $k$개의 quantum parameter들이 있다고 하고, 이들 family를 간단히 $q$라 적으면 $QH^\ast(G/P)$는 (module로서는) quantum parameter들의 polynomial ring $\mathbb{C}[q]$ 위의 rank $N=\dim_\mathbb{C}H^\ast(G/P)$ free module이다. 이제 structure morphism $\mathbb{C}[q]\rightarrow QH^\ast(G/P)$를 생각하면, 기하적으로 이는 $\Spec QH^\ast(G/P)\rightarrow \Spec\mathbb{C}[q]$를 정의한다. 그럼 위에서 살펴본 것과 같이 이는 $\Spec QH^\ast(G/P)$에서 $\mathbb{A}^k$로의 rank $N$ finite morphism이다. 
 
 그럼 $\Spec \mathbb{C}[q]\cong\mathbb{A}^k$에서의 임의의 generic point $q_0$에서의 fiber를 생각하는 것은 다음의 diagram
 
@@ -293,20 +293,20 @@ $$\mathbb{C}[\mathcal{Y}^\vee_P]\cong QH^\ast(G/P)$$
 
 $$QH^\ast(G/P)\otimes_{\mathbb{C}[q]}\mathbb{C}[q]/(q-q_0)\cong QH^\ast(G/P)/(q-q_0)$$
 
-이며, 이 때 fiber의 한 점은 다시 ring homomorphism $QH^\ast(G/P)/(q-q_0)\rightarrow \mathbb{C}$이 된다. 비슷하게, [정리 11](#thm11)의 isomorphism을 적용하면 다음의 commutative diagram
+이며, 이 때 fiber의 한 점은 다시 ring homomorphism $QH^\ast(G/P)/(q-q_0)\rightarrow \mathbb{C}$이 된다. 비슷하게, [정리 11](#thm11){: data-relation="required" }의 isomorphism을 적용하면 다음의 commutative diagram
 
 {% diagram Math/Lie_Theory/Richardson_Peterson_Variety-4.svg width="24em" alt="Peterson 동형이 quantum cohomology의 spectrum을 flag로 실현하는 그림. $\mathcal{Y}^\vee_P$의 한 점 $y$ (곧 $G^\vee/B^\vee$의 flag) 가 주는 evaluation $\operatorname{ev}_y$는 Peterson 동형 $\Phi\colon a\mapsto f_a$를 통해 character $\rchi_y=\operatorname{ev}_y\circ\Phi$ (오른쪽 사각형, $\rchi_y(a)=f_a(y)$) 로 끌어올려지고, $\mathbb{C}[q]$로 제한하면 $y$의 quantum parameter 값 $q_0$에서의 evaluation이 된다 (왼쪽 사각형). 곧 $q_0$ 위의 fiber 점 $=$ $q_0$ 위의 character $=$ flag." %}
 
 을 생각할 수 있으며, 이 때 마지막 수직방향 $\ev_y$가 $\mathcal{Y}^\vee_P$ 위의 한 점을 정의하게 된다. 이제 이 점이 무엇을 담고 있는지를 사전을 따라 풀어 보자. 우선 $QH^\ast(G/P)/(q-q_0)$은 $\mathbb{C}$ 위의 finite-dimensional algebra이고, 그 위에서 각 cohomology class $a$는 quantum product로 곱하는 연산자 $a\qtimes-$를 준다. 위에서 얻은 점 $y$에 대응하는 character $\rchi_y\colon QH^\ast(G/P)/(q-q_0)\rightarrow\mathbb{C}$는 각 $a$에 스칼라 $\rchi_y(a)$를 배정하되, ring homomorphism이므로 $\rchi_y(a\qtimes b)=\rchi_y(a)\,\rchi_y(b)$와 $\rchi_y(1)=1$을 지킨다. 이는 $\rchi_y(a)$가 연산자 $a\qtimes-$의 고유값이고, 그 고유값들이 quantum product와 모순 없이 동시에 배정된다는 말과 같다. 곧 fiber의 한 점은 generic $q_0$에서 모든 quantum 곱셈 연산자에 동시 고유값 한 벌을 일관되게 주는 방법이다. 
 
-그리고 이 동시 고유값들이 어디에 놓여 있는지를 말해 주는 것이 [정리 11](#thm11)이다. Isomorphism $\mathbb{C}[\mathcal{Y}^\vee_P]\cong QH^\ast(G/P)$ 아래에서 각 class $a$는 $\mathcal{Y}^\vee_P$ 위의 regular function $f_a$에 대응하므로, 사전의 언어로 위 character $\rchi_y$는 다름 아닌 flag $y$에서의 evaluation $\rchi_y=\ev_y$이고, 따라서 $\rchi_y(a)=f_a(y)$이다. 즉 동시 고유값 $\rchi_y(a)$는 추상적으로 떠 있는 수가 아니라, $G^\vee/B^\vee$ 안의 구체적인 flag $y$에서 좌표함수 $f_a$의 값을 읽은 것이다. 이렇게 추상적인 대수 $QH^\ast(G/P)$의 spectrum $\Spec QH^\ast(G/P)=\mathcal{Y}^\vee_P$이 flag variety $G^\vee/B^\vee$ 안에 실제 점들로 앉고, 그 점(곧 flag) 하나하나가 quantum 곱셈의 동시 고유값 한 벌을 손에 쥐어 준다. 
+그리고 이 동시 고유값들이 어디에 놓여 있는지를 말해 주는 것이 [정리 11](#thm11){: data-relation="weak" }이다. Isomorphism $\mathbb{C}[\mathcal{Y}^\vee_P]\cong QH^\ast(G/P)$ 아래에서 각 class $a$는 $\mathcal{Y}^\vee_P$ 위의 regular function $f_a$에 대응하므로, 사전의 언어로 위 character $\rchi_y$는 다름 아닌 flag $y$에서의 evaluation $\rchi_y=\ev_y$이고, 따라서 $\rchi_y(a)=f_a(y)$이다. 즉 동시 고유값 $\rchi_y(a)$는 추상적으로 떠 있는 수가 아니라, $G^\vee/B^\vee$ 안의 구체적인 flag $y$에서 좌표함수 $f_a$의 값을 읽은 것이다. 이렇게 추상적인 대수 $QH^\ast(G/P)$의 spectrum $\Spec QH^\ast(G/P)=\mathcal{Y}^\vee_P$이 flag variety $G^\vee/B^\vee$ 안에 실제 점들로 앉고, 그 점(곧 flag) 하나하나가 quantum 곱셈의 동시 고유값 한 벌을 손에 쥐어 준다. 
 
 가장 작은 Grassmannian $\mathbb{P}^1=\Gr(1,2)$에서는 이 전부를 손으로 볼 수 있다. $n=2$에서는 Peterson 조건 $NV_1\subseteq V_2=\mathbb{C}^2$이 공허하여 $\mathcal{Y}=\Fl_2=\mathbb{P}^1$ 전체이고, stratum $\mathcal{Y}_B$는 opposite big cell과의 교집합 $\mathbb{P}^1\setminus\{w_0B\}\cong\mathbb{A}^1$이다. 한편 $QH^\ast(\mathbb{P}^1)=\mathbb{C}[\sigma,q]/(\sigma^2-q)\cong\mathbb{C}[\sigma]$ 역시 한 변수 polynomial ring이라 정리의 동형과 부합하고, 이 동형 아래에서 quantum parameter는 affine 좌표의 제곱 $q=\sigma^2$으로 실현된다. Generic $q_0$의 fiber는 $\sigma=\pm\sqrt{q_0}$의 두 점, 곧 $\binom{2}{1}=2$개이고, $q_0=0$의 fiber는 한 점 $B/B$ 위에 길이 $2$로 앉은 double point로서 그 coordinate ring이 classical cohomology $\mathbb{C}[\sigma]/(\sigma^2)=H^\ast(\mathbb{P}^1)$이다. 곧 quantum에서 classical로의 퇴화까지 stratum 안에서 기하적으로 일어난다.
 
 일반적인 $\Gr(k,n)$에서도 마찬가지로 generic $q_0$의 fiber는 $\binom{n}{k}$개의 서로 다른 점으로 이루어진다. 이 유한 개의 점들은 또 하나의 명시적인 model을 갖는데, 이들이 어떤 Laurent 다항식, 곧 superpotential의 critical point들로 실현된다는 것이 mirror symmetry의 내용 중 하나이며, 일반적인 $G/P$에 대해 이 대응을 구성하는 것은 현재도 활발히 연구되는 주제다 ([거울대칭](/ko/mirror_symmetry/) 참조).
 
 ::: 참고 12
-[명제 9](#prop9)의 affine paving은 cohomology 계산의 출발점이기도 하다. Paving에 의해 $\mathcal{Y}$의 cohomology는 cell들로 색인된 basis를 갖는 free module이고 홀수 degree에서 사라진다. 즉 [§Bruhat decomposition, ⁋명제 17](/ko/math/lie_theory/bruhat_decomposition#prop17)에서 본 flag variety의 affine paving 논법이 Peterson variety에도 그대로 작동하며, Insko–Tymoczko [IT]는 이를 바탕으로 Peterson variety의 intersection theory를 전개하였다.
+[명제 9](#prop9){: data-relation="required" }의 affine paving은 cohomology 계산의 출발점이기도 하다. Paving에 의해 $\mathcal{Y}$의 cohomology는 cell들로 색인된 basis를 갖는 free module이고 홀수 degree에서 사라진다. 즉 [§Bruhat decomposition, ⁋명제 17](/ko/math/lie_theory/bruhat_decomposition#prop17){: data-relation="required" }에서 본 flag variety의 affine paving 논법이 Peterson variety에도 그대로 작동하며, Insko–Tymoczko [IT]는 이를 바탕으로 Peterson variety의 intersection theory를 전개하였다.
 :::
 
 ---
@@ -327,4 +327,4 @@ $$QH^\ast(G/P)\otimes_{\mathbb{C}[q]}\mathbb{C}[q]/(q-q_0)\cong QH^\ast(G/P)/(q-
 **[IT]** E. Insko, J. Tymoczko, *Affine pavings of regular nilpotent Hessenberg varieties and intersection theory of the Peterson variety*, J. Combin. Theory Ser. A **187** (2022), 105572.
 
 ---
-[^1]: Cartan subalgebra를 나타내는 $\mathfrak{h}$는 [§근계, ⁋정의 4](/ko/math/lie_theory/root_systems#def4)에서부터 오는 것으로, 우리 논의에서의 $H$와는 <em-ko>무관한</em-ko> 것임을 유의하자. 
+[^1]: Cartan subalgebra를 나타내는 $\mathfrak{h}$는 [§근계, ⁋정의 4](/ko/math/lie_theory/root_systems#def4){: data-relation="weak" }에서부터 오는 것으로, 우리 논의에서의 $H$와는 <em-ko>무관한</em-ko> 것임을 유의하자. 
