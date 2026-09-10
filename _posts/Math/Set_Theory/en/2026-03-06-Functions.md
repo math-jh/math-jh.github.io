@@ -20,7 +20,7 @@ $${<}=\{(0,1),(0,2),\ldots, (1,2),(1,3),\ldots, \}$$
 
 {% diagram Math/Set_Theory/Functions-1.svg width="12.56em" alt="elements" %}
 
-Following the notation of [§Binary Relations, ⁋Definition 6](/en/math/set_theory/binary_relation#def6), ${<}(1)$ is the collection of all $n\in\mathbb{N}$ such that $(1,n)\in\mathbb{N}$, hence
+Following the notation of [§Binary Relations, ⁋Definition 6](/en/math/set_theory/binary_relation#def6){: data-relation="required" }, ${<}(1)$ is the collection of all $n\in\mathbb{N}$ such that $(1,n)\in\mathbb{N}$, hence
 
 $${<}(1)=\{2,3,\ldots\}$$
 
@@ -40,7 +40,7 @@ The condition $A=\pr_1F$ means that every element $x$ of $A$ corresponds to *at 
 
 This $y$ is called the *function value* of $f$ at $x$, and the unique element of $F(\{x\})$ is denoted by $f(x)$. The set $A=\pr_1F$ is called the *domain* of $f$.
 
-Following this notation, the image of a set $X\subseteq A$ under the binary relation $F$ is written $f(X)$ rather than $F(X)$, and the preimage of a set $Y\subseteq B$ is written $f^{-1}(Y)$ rather than $F^{-1}(Y)$. ([§Binary Relations, ⁋Definition 4](/en/math/set_theory/binary_relation#def4) and [§Operations on Binary Relations, ⁋Definition 1](/en/math/set_theory/operation_of_binary_relations#def1)) The triple $f=(F,A,B)$ is written more concisely as $f:A\rightarrow B$.
+Following this notation, the image of a set $X\subseteq A$ under the binary relation $F$ is written $f(X)$ rather than $F(X)$, and the preimage of a set $Y\subseteq B$ is written $f^{-1}(Y)$ rather than $F^{-1}(Y)$. ([§Binary Relations, ⁋Definition 4](/en/math/set_theory/binary_relation#def4){: data-relation="required" } and [§Operations on Binary Relations, ⁋Definition 1](/en/math/set_theory/operation_of_binary_relations#def1){: data-relation="required" }) The triple $f=(F,A,B)$ is written more concisely as $f:A\rightarrow B$.
 
 The set
 
@@ -80,7 +80,7 @@ When working with diagrams, we regard the identity function $\id_A$ on each obje
 
 $${\id_B}\circ h=f\circ g,\qquad h\circ{\id_C}=f\circ{\id_A}\circ g,\quad\cdots$$
 
-However, by the identity function properties examined in [§Operations on Binary Relations, ⁋Definition 9](/en/math/set_theory/operation_of_binary_relations#def9), all the above equations are equivalent to $h=f\circ g$. On the other hand,
+However, by the identity function properties examined in [§Operations on Binary Relations, ⁋Definition 9](/en/math/set_theory/operation_of_binary_relations#def9){: data-relation="required" }, all the above equations are equivalent to $h=f\circ g$. On the other hand,
 
 {% diagram Math/Set_Theory/Functions-5.svg width="5.62em" alt="commuting_triangle_2" %}
 

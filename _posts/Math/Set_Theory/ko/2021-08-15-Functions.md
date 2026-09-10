@@ -22,7 +22,7 @@ $${<}=\{(0,1),(0,2),\ldots, (1,2),(1,3),\ldots\}$$
 
 {% diagram Math/Set_Theory/Functions-1.svg width="12.56em" alt="elements" %}
 
-이제 [§이항관계, ⁋정의 6](/ko/math/set_theory/binary_relation#def6)의 표기를 따르면 ${<}(1)$은 $(1,n)\in{<}$이도록 하는 모든 $n\in\mathbb{N}$들의 모임이고 따라서
+이제 [§이항관계, ⁋정의 6](/ko/math/set_theory/binary_relation#def6){: data-relation="required" }의 표기를 따르면 ${<}(1)$은 $(1,n)\in{<}$이도록 하는 모든 $n\in\mathbb{N}$들의 모임이고 따라서
 
 $${<}(1)=\{2,3,\ldots\}$$
 
@@ -42,7 +42,7 @@ $${<}(1)=\{2,3,\ldots\}$$
 
 인 것이다. 이 때의 $y$를 $f$의 $x$에서의 *함숫값*이라 부르고, 이 때 집합 $F(\{x\})$의 유일한 원소를 $f(x)$로 표기한다. 또, 집합 $A=\pr_1F$를 $f$의 *정의역<sub>domain</sub>*이라 부른다.
 
-위의 표기를 따라, 이항관계 $F$에 대한 집합 $X\subseteq A$의 image는 $F(X)$ 대신 $f(X)$로, 집합 $Y\subseteq B$의 preimage도 $F^{-1}(Y)$ 대신 $f^{-1}(Y)$로 적는다. ([§이항관계, ⁋정의 4](/ko/math/set_theory/binary_relation#def4)와 [§이항관계들 사이의 연산, ⁋정의 1](/ko/math/set_theory/operation_of_binary_relations#def1)) 또, triple $f=(F,A,B)$는 간단히 $f:A\rightarrow B$과 같이 적는다.
+위의 표기를 따라, 이항관계 $F$에 대한 집합 $X\subseteq A$의 image는 $F(X)$ 대신 $f(X)$로, 집합 $Y\subseteq B$의 preimage도 $F^{-1}(Y)$ 대신 $f^{-1}(Y)$로 적는다. ([§이항관계, ⁋정의 4](/ko/math/set_theory/binary_relation#def4){: data-relation="required" }와 [§이항관계들 사이의 연산, ⁋정의 1](/ko/math/set_theory/operation_of_binary_relations#def1){: data-relation="required" }) 또, triple $f=(F,A,B)$는 간단히 $f:A\rightarrow B$과 같이 적는다.
 
 한편, 함수 $f=(F,A,B)$를 나타내는 집합
 
@@ -82,7 +82,7 @@ $$F=\{(x,y)\mid (y=f(x))\wedge(x\in A)\}$$
 
 $${\id_B}\circ h=f\circ g,\qquad h\circ{\id_C}=f\circ{\id_A}\circ g,\quad\cdots$$
 
-를 모두 포함하는 것이다. 그러나 [§이항관계들 사이의 연산, ⁋정의 9](/ko/math/set_theory/operation_of_binary_relations#def9)에서 살펴본 항등함수의 성질에 의해 위의 식들은 모두 $h=f\circ g$와 다를 것이 없다. 반면
+를 모두 포함하는 것이다. 그러나 [§이항관계들 사이의 연산, ⁋정의 9](/ko/math/set_theory/operation_of_binary_relations#def9){: data-relation="required" }에서 살펴본 항등함수의 성질에 의해 위의 식들은 모두 $h=f\circ g$와 다를 것이 없다. 반면
 
 {% diagram Math/Set_Theory/Functions-5.svg width="5.62em" alt="commuting_triangle_2" %}
 
