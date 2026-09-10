@@ -17,7 +17,7 @@ published: false
 
 Lie algebra $\mathfrak{g}$의 표현론은 본질적으로 결합대수의 module 이론으로 환원된다. 그 환원을 가능하게 하는 대상이 *universal enveloping algebra*이며, 이는 $\mathfrak{g}$의 Lie bracket을 결합대수의 commutator로 실현하는 가장 보편적인 결합대수이다. 이 글에서 우리는 이 대수를 tensor algebra의 quotient로 정의하고, 그 보편 성질을 서술한 뒤, canonical filtration을 통해 얻어지는 associated graded가 symmetric algebra와 isomorphic임을 주장하는 Poincaré–Birkhoff–Witt 정리를 증명한다. 이 정리는 자연스러운 morphism $\mathfrak{g}\rightarrow U(\mathfrak{g})$가 단사임을 즉시 함의하며, semisimple Lie algebra의 표현론 전체의 기초가 된다.
 
-이 글 전체에서 $k$는 고정된 체이고, $\mathfrak{g}$는 $k$ 위에 정의된 Lie algebra이다. ([§리 군, ⁋정의 8](/ko/math/lie_theory/Lie_groups#def8)) Lie algebra의 정의는 임의의 체 위에서 동일하게 주어지므로, 우리는 기반 체를 $k$로 일반화하여 사용한다.
+이 글 전체에서 $k$는 고정된 체이고, $\mathfrak{g}$는 $k$ 위에 정의된 Lie algebra이다. ([§리 군, ⁋정의 8](/ko/math/lie_theory/Lie_groups#def8){: data-relation="required" }) Lie algebra의 정의는 임의의 체 위에서 동일하게 주어지므로, 우리는 기반 체를 $k$로 일반화하여 사용한다.
 
 ## 결합대수의 commutator
 
@@ -45,7 +45,7 @@ $$\begin{aligned}
 
 ## 보편 포락 대수의 정의
 
-이제 우리는 $\mathfrak{g}$의 Lie bracket을 commutator로 강제하는 결합대수를 구성한다. $\mathfrak{g}$를 단순한 벡터공간으로 보고 그 tensor algebra $\T(\mathfrak{g})$를 취하면 ([\[다중선형대수학\] §텐서대수, ⁋정의 1](/ko/math/multilinear_algebra/tensor_algebras#def1)), 이는 $\mathfrak{g}$로 생성되는 자유 결합대수이다. 여기에서 $x\otimes y-y\otimes x$가 $[x,y]$와 일치하도록 적절한 이데알로 quotient를 취한다.
+이제 우리는 $\mathfrak{g}$의 Lie bracket을 commutator로 강제하는 결합대수를 구성한다. $\mathfrak{g}$를 단순한 벡터공간으로 보고 그 tensor algebra $\T(\mathfrak{g})$를 취하면 ([\[다중선형대수학\] §텐서대수, ⁋정의 1](/ko/math/multilinear_algebra/tensor_algebras#def1){: data-relation="required" }), 이는 $\mathfrak{g}$로 생성되는 자유 결합대수이다. 여기에서 $x\otimes y-y\otimes x$가 $[x,y]$와 일치하도록 적절한 이데알로 quotient를 취한다.
 
 ::: 정의 2
 Lie algebra $\mathfrak{g}$에 대하여, tensor algebra $\T(\mathfrak{g})$의 two-sided ideal
@@ -59,20 +59,20 @@ $$U(\mathfrak{g})=\T(\mathfrak{g})/\mathfrak{I}$$
 를 $\mathfrak{g}$의 *universal enveloping algebra<sub>보편 포락 대수</sub>*라 부른다. 합성 $\mathfrak{g}=\T^1(\mathfrak{g})\hookrightarrow\T(\mathfrak{g})\twoheadrightarrow U(\mathfrak{g})$로 얻어지는 $k$-linear map을 $\iota:\mathfrak{g}\rightarrow U(\mathfrak{g})$로 표기한다.
 :::
 
-Generator $x\otimes y-y\otimes x-[x,y]$는 $[x,y]\neq 0$일 때 tensor algebra의 degree $2$ 성분과 degree $1$ 성분이 섞인 비동차<sub>inhomogeneous</sub> 원소이므로, abelian이 아닌 $\mathfrak{g}$에 대하여 $\mathfrak{I}$는 homogeneous 이데알이 아니다. 이는 symmetric algebra나 exterior algebra를 정의할 때 사용한 [\[다중선형대수학\] §텐서대수, ⁋정의 5](/ko/math/multilinear_algebra/tensor_algebras#def5)의 homogeneous 이데알과의 결정적인 차이이며, 따라서 $U(\mathfrak{g})$는 $\T(\mathfrak{g})$의 grading을 물려받지 않는다. 그 대신 $U(\mathfrak{g})$는 아래 [정의 6](#def6)에서 보듯 자연스러운 여과를 가지며, PBW 정리의 핵심은 이 여과의 associated graded가 symmetric algebra와 isomorphic이라는 데에 있다.
+Generator $x\otimes y-y\otimes x-[x,y]$는 $[x,y]\neq 0$일 때 tensor algebra의 degree $2$ 성분과 degree $1$ 성분이 섞인 비동차<sub>inhomogeneous</sub> 원소이므로, abelian이 아닌 $\mathfrak{g}$에 대하여 $\mathfrak{I}$는 homogeneous 이데알이 아니다. 이는 symmetric algebra나 exterior algebra를 정의할 때 사용한 [\[다중선형대수학\] §텐서대수, ⁋정의 5](/ko/math/multilinear_algebra/tensor_algebras#def5){: data-relation="required" }의 homogeneous 이데알과의 결정적인 차이이며, 따라서 $U(\mathfrak{g})$는 $\T(\mathfrak{g})$의 grading을 물려받지 않는다. 그 대신 $U(\mathfrak{g})$는 아래 [정의 6](#def6){: data-relation="forward" }에서 보듯 자연스러운 여과를 가지며, PBW 정리의 핵심은 이 여과의 associated graded가 symmetric algebra와 isomorphic이라는 데에 있다.
 
 $U(\mathfrak{g})$에서 $\iota(x)\iota(y)-\iota(y)\iota(x)=\iota([x,y])$가 성립함을 강조해 둔다. 정의에 의하여 $x\otimes y-y\otimes x-[x,y]\in\mathfrak{I}$이므로 quotient에서 이 원소는 $0$이 되고, $\iota$가 $\T^1$에서의 morphism이라는 점을 함께 쓰면 위 등식을 얻는다. 표기의 번거로움을 피하기 위해, 이후 $\iota$를 생략하고 $\mathfrak{g}$의 원소와 그 $U(\mathfrak{g})$에서의 상을 같은 기호로 적으며, $U(\mathfrak{g})$에서의 곱은 병치<sub>juxtaposition</sub>로 적는다. 이 표기 하에서 위의 관계는 $U(\mathfrak{g})$ 안에서
 
 $$xy-yx=[x,y]\qquad\text{for all $x,y\in\mathfrak{g}$}$$
 
-로 적힌다. 다만 이 시점에서 $\iota$가 단사인지는 아직 알 수 없으며, 이는 PBW 정리의 따름정리로 비로소 확립된다. ([따름정리 11](#cor11))
+로 적힌다. 다만 이 시점에서 $\iota$가 단사인지는 아직 알 수 없으며, 이는 PBW 정리의 따름정리로 비로소 확립된다. ([따름정리 11](#cor11){: data-relation="required" })
 
 ::: 예시 3
 $\mathfrak{g}$가 abelian Lie algebra, 곧 모든 $x,y$에 대하여 $[x,y]=0$인 경우를 생각하자. 이 때 $\mathfrak{I}$의 generator는 $x\otimes y-y\otimes x$가 되며, 이는 정확히 symmetric algebra $\S(\mathfrak{g})$를 정의하는 이데알의 generator이다. 따라서
 
 $$U(\mathfrak{g})\cong\S(\mathfrak{g})$$
 
-이고, $\mathfrak{g}$의 기저를 고정하면 이는 polynomial algebra $k[\x_i]_{i\in I}$가 된다. ([\[다중선형대수학\] §텐서대수, ⁋명제 8](/ko/math/multilinear_algebra/tensor_algebras#prop8)) 즉 abelian인 경우 보편 포락 대수는 가환대수이며, PBW 정리는 이 동형이 일반적인 $\mathfrak{g}$에 대해서도 그 associated graded 수준에서 성립함을 주장하는 것으로 이해할 수 있다.
+이고, $\mathfrak{g}$의 기저를 고정하면 이는 polynomial algebra $k[\x_i]_{i\in I}$가 된다. ([\[다중선형대수학\] §텐서대수, ⁋명제 8](/ko/math/multilinear_algebra/tensor_algebras#prop8){: data-relation="weak" }) 즉 abelian인 경우 보편 포락 대수는 가환대수이며, PBW 정리는 이 동형이 일반적인 $\mathfrak{g}$에 대해서도 그 associated graded 수준에서 성립함을 주장하는 것으로 이해할 수 있다.
 :::
 
 ## 보편 성질
@@ -87,7 +87,7 @@ $$\iota:\mathfrak{g}\rightarrow U(\mathfrak{g}),\qquad f=\bar{f}\circ\iota$$
 을 만족하는 결합 단위 대수 준동형 $\bar{f}:U(\mathfrak{g})\rightarrow A$가 유일하게 존재한다.
 :::
 ::: 증명
-$f$를 단순히 벡터공간 사이의 $k$-linear map으로 보면, [\[다중선형대수학\] §텐서대수, ⁋명제 2](/ko/math/multilinear_algebra/tensor_algebras#prop2)의 보편 성질에 의하여 결합 단위 대수 준동형 $\tilde{f}:\T(\mathfrak{g})\rightarrow A$가 유일하게 존재하여 $\T^1(\mathfrak{g})=\mathfrak{g}$ 위에서 $\tilde{f}=f$이도록 할 수 있다. 이제 $\tilde{f}$가 이데알 $\mathfrak{I}$를 $0$으로 보냄을 보이면 충분하다. $\mathfrak{I}$는 $x\otimes y-y\otimes x-[x,y]$ 꼴의 원소들로 생성되는 two-sided ideal이므로, 이 generator들이 $\ker\tilde{f}$에 속함을 확인하면 된다. 임의의 $x,y\in\mathfrak{g}$에 대하여
+$f$를 단순히 벡터공간 사이의 $k$-linear map으로 보면, [\[다중선형대수학\] §텐서대수, ⁋명제 2](/ko/math/multilinear_algebra/tensor_algebras#prop2){: data-relation="required" }의 보편 성질에 의하여 결합 단위 대수 준동형 $\tilde{f}:\T(\mathfrak{g})\rightarrow A$가 유일하게 존재하여 $\T^1(\mathfrak{g})=\mathfrak{g}$ 위에서 $\tilde{f}=f$이도록 할 수 있다. 이제 $\tilde{f}$가 이데알 $\mathfrak{I}$를 $0$으로 보냄을 보이면 충분하다. $\mathfrak{I}$는 $x\otimes y-y\otimes x-[x,y]$ 꼴의 원소들로 생성되는 two-sided ideal이므로, 이 generator들이 $\ker\tilde{f}$에 속함을 확인하면 된다. 임의의 $x,y\in\mathfrak{g}$에 대하여
 
 $$\tilde{f}(x\otimes y-y\otimes x-[x,y])=f(x)f(y)-f(y)f(x)-f([x,y])=[f(x),f(y)]_A-f([x,y])$$
 
@@ -110,7 +110,7 @@ $$\iota_{\mathfrak{h}}\circ\phi=U(\phi)\circ\iota_{\mathfrak{g}}$$
 을 만족하는 결합 단위 대수 준동형 $U(\phi):U(\mathfrak{g})\rightarrow U(\mathfrak{h})$가 유일하게 존재하며, 이 대응은 $U$를 functor로 만든다.
 :::
 ::: 증명
-합성 $\iota_{\mathfrak{h}}\circ\phi:\mathfrak{g}\rightarrow U(\mathfrak{h})_{\mathrm{Lie}}$는 Lie algebra 준동형의 합성이므로 다시 Lie algebra 준동형이다. 따라서 [명제 4](#prop4)를 $A=U(\mathfrak{h})$, $f=\iota_{\mathfrak{h}}\circ\phi$에 적용하면, $U(\phi)\circ\iota_{\mathfrak{g}}=\iota_{\mathfrak{h}}\circ\phi$를 만족하는 결합 단위 대수 준동형 $U(\phi):U(\mathfrak{g})\rightarrow U(\mathfrak{h})$가 유일하게 존재한다. Functoriality는 보편 성질의 유일성 부분에서 따라온다. $\id_{\mathfrak{g}}$에 대응되는 $U(\id_{\mathfrak{g}})$와 항등사상 $\id_{U(\mathfrak{g})}$은 모두 $\iota_{\mathfrak{g}}$를 $\iota_{\mathfrak{g}}$로 보내므로 유일성에 의해 같고, 두 Lie algebra 준동형 $\phi,\psi$에 대하여 $U(\psi)\circ U(\phi)$와 $U(\psi\circ\phi)$도 같은 방식으로 일치한다.
+합성 $\iota_{\mathfrak{h}}\circ\phi:\mathfrak{g}\rightarrow U(\mathfrak{h})_{\mathrm{Lie}}$는 Lie algebra 준동형의 합성이므로 다시 Lie algebra 준동형이다. 따라서 [명제 4](#prop4){: data-relation="required" }를 $A=U(\mathfrak{h})$, $f=\iota_{\mathfrak{h}}\circ\phi$에 적용하면, $U(\phi)\circ\iota_{\mathfrak{g}}=\iota_{\mathfrak{h}}\circ\phi$를 만족하는 결합 단위 대수 준동형 $U(\phi):U(\mathfrak{g})\rightarrow U(\mathfrak{h})$가 유일하게 존재한다. Functoriality는 보편 성질의 유일성 부분에서 따라온다. $\id_{\mathfrak{g}}$에 대응되는 $U(\id_{\mathfrak{g}})$와 항등사상 $\id_{U(\mathfrak{g})}$은 모두 $\iota_{\mathfrak{g}}$를 $\iota_{\mathfrak{g}}$로 보내므로 유일성에 의해 같고, 두 Lie algebra 준동형 $\phi,\psi$에 대하여 $U(\psi)\circ U(\phi)$와 $U(\psi\circ\phi)$도 같은 방식으로 일치한다.
 :::
 
 ## 표준 여과와 associated graded
@@ -131,7 +131,7 @@ $$U_m\cdot U_n\subseteq U_{m+n}$$
 
 이 성립한다. 즉 $\bigl(U_n\bigr)_{n\geq 0}$은 $U(\mathfrak{g})$를 여과 대수로 만든다.
 
-핵심적인 관찰은 관계식 $xy-yx=[x,y]$가 여과의 관점에서 commutator의 degree를 떨어뜨린다는 것이다. $x,y\in\mathfrak{g}\subseteq U_1$이면 $xy,yx\in U_2$이지만 그 차 $xy-yx=[x,y]$는 $U_1$에 속한다. 일반적으로 $a\in U_m$, $b\in U_n$에 대하여 $ab-ba\in U_{m+n-1}$이 성립하며, 이는 아래 [보조정리 8](#lem8)에서 정밀하게 다룬다. 이로부터 associated graded는 commutative함이 예상된다.
+핵심적인 관찰은 관계식 $xy-yx=[x,y]$가 여과의 관점에서 commutator의 degree를 떨어뜨린다는 것이다. $x,y\in\mathfrak{g}\subseteq U_1$이면 $xy,yx\in U_2$이지만 그 차 $xy-yx=[x,y]$는 $U_1$에 속한다. 일반적으로 $a\in U_m$, $b\in U_n$에 대하여 $ab-ba\in U_{m+n-1}$이 성립하며, 이는 아래 [보조정리 8](#lem8){: data-relation="required" }에서 정밀하게 다룬다. 이로부터 associated graded는 commutative함이 예상된다.
 
 ::: 정의 7
 canonical filtration $\bigl(U_n\bigr)$에 대한 *associated graded<sub>동반 등급</sub>* 대수를
@@ -154,7 +154,7 @@ $$\bar{x}\bar{y}-\bar{y}\bar{x}=\overline{xy-yx}\in U_2/U_1$$
 인데, $U(\mathfrak{g})$에서 $xy-yx=[x,y]\in\mathfrak{g}\subseteq U_1$이므로 $xy-yx$의 $U_2/U_1$에서의 상은 $0$이다. 따라서 $\bar{x}\bar{y}=\bar{y}\bar{x}$이고, generator들이 서로 commute하므로 $\gr U(\mathfrak{g})$ 전체가 commutative하다.
 :::
 
-$\gr U(\mathfrak{g})$가 commutative하고 $\mathfrak{g}$의 상으로 생성되므로, [\[다중선형대수학\] §텐서대수, ⁋명제 6](/ko/math/multilinear_algebra/tensor_algebras#prop6)의 보편 성질에 의하여 자연스러운 결합대수 준동형이 하나 정해진다. $\mathfrak{g}$를 $U_1/U_0\subseteq\gr U(\mathfrak{g})$로 보내는 $k$-linear map은 가환대수로 들어가므로, 유일한 결합대수 준동형
+$\gr U(\mathfrak{g})$가 commutative하고 $\mathfrak{g}$의 상으로 생성되므로, [\[다중선형대수학\] §텐서대수, ⁋명제 6](/ko/math/multilinear_algebra/tensor_algebras#prop6){: data-relation="required" }의 보편 성질에 의하여 자연스러운 결합대수 준동형이 하나 정해진다. $\mathfrak{g}$를 $U_1/U_0\subseteq\gr U(\mathfrak{g})$로 보내는 $k$-linear map은 가환대수로 들어가므로, 유일한 결합대수 준동형
 
 $$\omega:\S(\mathfrak{g})\longrightarrow\gr U(\mathfrak{g})$$
 
@@ -182,7 +182,7 @@ $$x_{i_j}x_{i_{j+1}}=x_{i_{j+1}}x_{i_j}+[x_{i_j},x_{i_{j+1}}]$$
 
 $$z_S=x_{i_1}x_{i_2}\cdots x_{i_n},\qquad S=(i_1\leq i_2\leq\cdots\leq i_n)$$
 
-들을 기저로 갖는 polynomial algebra이다. ([\[다중선형대수학\] §텐서대수, ⁋명제 8](/ko/math/multilinear_algebra/tensor_algebras#prop8)) 여기에서 $S$는 $I$의 원소들로 이루어진 비내림차순<sub>nondecreasing</sub> 유한열을 가리킨다. 우리는 다음 두 조건을 만족하는 $k$-linear action $x_i\cdot(-):\S(\mathfrak{g})\rightarrow\S(\mathfrak{g})$들을 구성하고자 한다.
+들을 기저로 갖는 polynomial algebra이다. ([\[다중선형대수학\] §텐서대수, ⁋명제 8](/ko/math/multilinear_algebra/tensor_algebras#prop8){: data-relation="required" }) 여기에서 $S$는 $I$의 원소들로 이루어진 비내림차순<sub>nondecreasing</sub> 유한열을 가리킨다. 우리는 다음 두 조건을 만족하는 $k$-linear action $x_i\cdot(-):\S(\mathfrak{g})\rightarrow\S(\mathfrak{g})$들을 구성하고자 한다.
 
 1. $i\leq S$ ($i$가 $S$의 모든 첨자 이하)인 경우 $x_i\cdot z_S=z_{(i,S)}$, 곧 $i$를 맨 앞에 덧붙인 정렬된 단항식이다.
 2. 임의의 $i,j\in I$와 $s\in\S(\mathfrak{g})$에 대하여 $x_i\cdot(x_j\cdot s)-x_j\cdot(x_i\cdot s)=[x_i,x_j]\cdot s$이 성립한다.
@@ -193,9 +193,9 @@ $$x_i\cdot z_S=x_j\cdot(x_i\cdot z_{S'})+[x_i,x_j]\cdot z_{S'}$$
 
 로 정의한다. 우변의 $x_i\cdot z_{S'}$은 길이 $n-1$짜리 기저원소에 대한 action이라 귀납 가정으로 이미 정의되어 있으며, 귀납 가정에는 그 값이 $x_i\cdot z_{S'}=z_{(i,S')}+w$의 꼴로 $w$가 길이 $n-1$ 이하인 기저원소들의 일차결합이 된다는 것을 함께 포함시킨다. 그럼 $j<i$이고 $j\leq S'$이므로 $j\leq(i,S')$이고, 따라서 $x_j\cdot z_{(i,S')}$은 길이 $n$인 기저원소에 대한 action이지만 조건 1로 이미 주어져 있으며, $x_j\cdot w$는 길이 $n-1$ 이하인 기저원소들에 대한 action이라 다시 귀납 가정 안에 든다. $[x_i,x_j]\cdot z_{S'}$도 길이 $n-1$짜리에 대한 action이다. 이렇게 정의된 $x_i\cdot z_S$ 또한 $z_{(i,S)}$와 길이 $n$ 이하인 기저원소들의 일차결합의 합이 되므로 귀납 가정이 그대로 이어지며, 이 정의가 조건 1을 만족함은 구성에서 자명하다.
 
-이제 조건 2가 모든 $i,j$와 모든 기저원소 $z_S$에 대하여 성립함을 $\lvert S\rvert$에 대한 귀납법으로 확인한다. 대칭성에 의해 $i>j$인 경우만 보면 되고, $i=j$이면 좌변이 자명히 $0$이며 $[x_i,x_i]=0$이다. $i>j$이고 $j\leq S$인 경우, action의 정의가 정확히 $x_i\cdot(x_j\cdot z_S)=x_j\cdot(x_i\cdot z_S)+[x_i,x_j]\cdot z_S$가 되도록 위에서 $x_i\cdot z_{(j,S)}$을 정의하였으므로 조건 2가 성립한다. $j\leq S$가 아닌 일반적인 경우는 $S=(l,S')$ ($l\leq S'$, $l<j<i$)로 쓰고, $x_l$을 한 칸 끄집어낸 뒤 길이 $n-1$인 $S'$에 대한 귀납 가정과 $\mathfrak{g}$의 Jacobi identity를 사용하여 정리하면 얻어진다. Jacobi identity가 들어가는 곳은 세 첨자 $i,j,l$에 대한 이중 commutator들이 상쇄되어야 하는 부분이며, 이는 $\mathfrak{g}$가 [§리 군, ⁋정의 8](/ko/math/lie_theory/Lie_groups#def8)의 Lie algebra라는 가정이 사용되는 유일한 지점이다.
+이제 조건 2가 모든 $i,j$와 모든 기저원소 $z_S$에 대하여 성립함을 $\lvert S\rvert$에 대한 귀납법으로 확인한다. 대칭성에 의해 $i>j$인 경우만 보면 되고, $i=j$이면 좌변이 자명히 $0$이며 $[x_i,x_i]=0$이다. $i>j$이고 $j\leq S$인 경우, action의 정의가 정확히 $x_i\cdot(x_j\cdot z_S)=x_j\cdot(x_i\cdot z_S)+[x_i,x_j]\cdot z_S$가 되도록 위에서 $x_i\cdot z_{(j,S)}$을 정의하였으므로 조건 2가 성립한다. $j\leq S$가 아닌 일반적인 경우는 $S=(l,S')$ ($l\leq S'$, $l<j<i$)로 쓰고, $x_l$을 한 칸 끄집어낸 뒤 길이 $n-1$인 $S'$에 대한 귀납 가정과 $\mathfrak{g}$의 Jacobi identity를 사용하여 정리하면 얻어진다. Jacobi identity가 들어가는 곳은 세 첨자 $i,j,l$에 대한 이중 commutator들이 상쇄되어야 하는 부분이며, 이는 $\mathfrak{g}$가 [§리 군, ⁋정의 8](/ko/math/lie_theory/Lie_groups#def8){: data-relation="required" }의 Lie algebra라는 가정이 사용되는 유일한 지점이다.
 
-조건 2가 확립되면, 대응 $x_i\mapsto\bigl(s\mapsto x_i\cdot s\bigr)$은 $\mathfrak{g}$에서 $\End_k(\S(\mathfrak{g}))_{\mathrm{Lie}}$로의 Lie algebra 준동형이다. 실제로 조건 2가 바로 $[x_i,x_j]$의 action이 action들의 commutator와 일치한다는 진술이고, $\bigl(x_i\bigr)$가 $\mathfrak{g}$의 기저이므로 이는 $\mathfrak{g}$ 전체에서의 Lie algebra 준동형으로 확장된다. [명제 4](#prop4)에 의하여 이는 결합대수 준동형, 곧 $U(\mathfrak{g})$-module 구조
+조건 2가 확립되면, 대응 $x_i\mapsto\bigl(s\mapsto x_i\cdot s\bigr)$은 $\mathfrak{g}$에서 $\End_k(\S(\mathfrak{g}))_{\mathrm{Lie}}$로의 Lie algebra 준동형이다. 실제로 조건 2가 바로 $[x_i,x_j]$의 action이 action들의 commutator와 일치한다는 진술이고, $\bigl(x_i\bigr)$가 $\mathfrak{g}$의 기저이므로 이는 $\mathfrak{g}$ 전체에서의 Lie algebra 준동형으로 확장된다. [명제 4](#prop4){: data-relation="required" }에 의하여 이는 결합대수 준동형, 곧 $U(\mathfrak{g})$-module 구조
 
 $$\rho:U(\mathfrak{g})\longrightarrow\End_k(\S(\mathfrak{g}))$$
 
@@ -209,18 +209,18 @@ $$\rho(x_{i_1}\cdots x_{i_n})(1)=x_{i_1}\cdot\bigl(x_{i_2}\cdot(\cdots(x_{i_n}\c
 위 증명에서 구성한 action $\rho$는 $\S(\mathfrak{g})$를 $U(\mathfrak{g})$-module로 만들며, $1\in\S(\mathfrak{g})$를 사용하면 $U(\mathfrak{g})$에서 $\S(\mathfrak{g})$로의 $k$-linear 동형 $u\mapsto\rho(u)(1)$을 정의한다. 이 동형이 정렬된 단항식 기저를 정렬된 단항식 기저로 보낸다는 점이 일차독립성 논증의 핵심이었다. 정리 9를 associated graded의 언어로 옮기면 다음을 얻는다.
 
 ::: 정리 10
-[정의 7](#def7) 이후 구성한 자연스러운 전사 준동형
+[정의 7](#def7){: data-relation="required" } 이후 구성한 자연스러운 전사 준동형
 
 $$\omega:\S(\mathfrak{g})\longrightarrow\gr U(\mathfrak{g})$$
 
 는 graded 결합대수의 동형이다.
 :::
 ::: 증명
-$\omega$가 전사임은 [보조정리 8](#lem8) 이후 이미 확인하였으므로 단사임을 보이면 된다. 각 degree $n$에서 $\omega$가 단사임을 보이면 충분하다. $\S^n(\mathfrak{g})$는 길이 정확히 $n$인 정렬된 단항식 $z_S$ ($\lvert S\rvert=n$)들을 기저로 갖고, $\omega$는 이를 $x_{i_1}\cdots x_{i_n}$의 $U_n/U_{n-1}$에서의 상으로 보낸다. Degree $n$ 성분에서 $\sum_{\lvert S\rvert=n}\lambda_S\omega(z_S)=0$이라 하면, 이는 $U_n/U_{n-1}$에서의 관계, 곧
+$\omega$가 전사임은 [보조정리 8](#lem8){: data-relation="required" } 이후 이미 확인하였으므로 단사임을 보이면 된다. 각 degree $n$에서 $\omega$가 단사임을 보이면 충분하다. $\S^n(\mathfrak{g})$는 길이 정확히 $n$인 정렬된 단항식 $z_S$ ($\lvert S\rvert=n$)들을 기저로 갖고, $\omega$는 이를 $x_{i_1}\cdots x_{i_n}$의 $U_n/U_{n-1}$에서의 상으로 보낸다. Degree $n$ 성분에서 $\sum_{\lvert S\rvert=n}\lambda_S\omega(z_S)=0$이라 하면, 이는 $U_n/U_{n-1}$에서의 관계, 곧
 
 $$\sum_{\lvert S\rvert=n}\lambda_S x_{i_1^S}\cdots x_{i_n^S}\in U_{n-1}$$
 
-을 뜻한다. $U_{n-1}$은 길이 $n-1$ 이하의 정렬된 단항식들로 생성되므로, 위 식을 옮기면 길이 $n$인 정렬된 단항식들과 길이 $n-1$ 이하의 정렬된 단항식들 사이의 일차관계가 된다. [정리 9](#thm9)에 의하여 $U(\mathfrak{g})$의 모든 정렬된 단항식은 일차독립이므로, 특히 길이 $n$짜리 계수들 $\lambda_S$는 모두 $0$이어야 한다. 따라서 $\omega$는 각 degree에서 단사이고, 전체로서 동형이다.
+을 뜻한다. $U_{n-1}$은 길이 $n-1$ 이하의 정렬된 단항식들로 생성되므로, 위 식을 옮기면 길이 $n$인 정렬된 단항식들과 길이 $n-1$ 이하의 정렬된 단항식들 사이의 일차관계가 된다. [정리 9](#thm9){: data-relation="required" }에 의하여 $U(\mathfrak{g})$의 모든 정렬된 단항식은 일차독립이므로, 특히 길이 $n$짜리 계수들 $\lambda_S$는 모두 $0$이어야 한다. 따라서 $\omega$는 각 degree에서 단사이고, 전체로서 동형이다.
 :::
 
 정리 9와 정리 10은 동일한 사실의 두 표현이다. 정렬된 단항식이 $U(\mathfrak{g})$의 기저를 이룬다는 진술은, 여과의 각 층 $U_n/U_{n-1}$이 길이 $n$짜리 정렬 단항식으로 정확히 생성된다는 것이고, 이는 $\gr U(\mathfrak{g})$가 $\S(\mathfrak{g})$와 isomorphic하다는 것과 같다. 어느 형태로 쓰든 본질적인 내용은 commutator relation $xy-yx=[x,y]$가 $U(\mathfrak{g})$를 $\S(\mathfrak{g})$보다 "작게" 만들지 않는다는 것이며, 그 증명은 Jacobi identity가 무모순성을 보장하는 데에 의존한다.
@@ -231,14 +231,14 @@ $$\sum_{\lvert S\rvert=n}\lambda_S x_{i_1^S}\cdots x_{i_n^S}\in U_{n-1}$$
 표준 사상 $\iota:\mathfrak{g}\rightarrow U(\mathfrak{g})$은 단사이다.
 :::
 ::: 증명
-$\iota(\mathfrak{g})$는 길이 $1$인 정렬된 단항식 $x_i$들로 생성되며, $x\in\mathfrak{g}$를 기저로 $x=\sum_i a_i x_i$로 쓰면 $\iota(x)=\sum_i a_i x_i$이다. [정리 9](#thm9)에 의하여 길이 $1$짜리 정렬 단항식 $x_i$들은 $U(\mathfrak{g})$ 안에서 일차독립이므로, $\iota(x)=0$이면 모든 $a_i=0$, 곧 $x=0$이다. 따라서 $\iota$는 단사이다.
+$\iota(\mathfrak{g})$는 길이 $1$인 정렬된 단항식 $x_i$들로 생성되며, $x\in\mathfrak{g}$를 기저로 $x=\sum_i a_i x_i$로 쓰면 $\iota(x)=\sum_i a_i x_i$이다. [정리 9](#thm9){: data-relation="required" }에 의하여 길이 $1$짜리 정렬 단항식 $x_i$들은 $U(\mathfrak{g})$ 안에서 일차독립이므로, $\iota(x)=0$이면 모든 $a_i=0$, 곧 $x=0$이다. 따라서 $\iota$는 단사이다.
 :::
 
 따름정리 11에 의하여 우리는 $\mathfrak{g}$를 $U(\mathfrak{g})$의 부분공간으로, 더 정확히는 $U_1/U_0$과 동일시되는 부분으로 취급할 수 있으며, 이것이 앞서 $\iota$를 생략하고 $\mathfrak{g}\subseteq U(\mathfrak{g})$로 적은 표기를 정당화한다. 또한 PBW 정리는 $U(\mathfrak{g})$의 크기에 대한 구체적인 정보를 준다. $\mathfrak{g}$가 유한차원 $d$이면, $U_n/U_{n-1}\cong\S^n(\mathfrak{g})$의 차원은 $\binom{n+d-1}{d-1}$이고, $U_n$의 차원은 $\binom{n+d}{d}$이다. 또 한 가지 따름정리로, $\mathfrak{h}\subseteq\mathfrak{g}$가 부분 Lie algebra이면 포함사상이 유도하는 $U(\mathfrak{h})\rightarrow U(\mathfrak{g})$는 단사이다. 이는 $\mathfrak{h}$의 기저를 $\mathfrak{g}$의 기저로 확장하고 그 순서가 $\mathfrak{h}$의 원소들을 앞에 두도록 하면, $\mathfrak{h}$의 정렬 단항식이 $\mathfrak{g}$의 정렬 단항식 가운데 일부로서 일차독립이기 때문이다.
 
 ## 예시: $U(\sl_2)$
 
-PBW 정리가 주는 구체적인 그림을 보기 위해 $\sl_2=\sl(2;k)$의 보편 포락 대수를 살펴본다. $\sl_2$는 traceless $2\times 2$ 행렬들의 Lie algebra이며 ([§리 군, ⁋명제 12](/ko/math/lie_theory/Lie_groups#prop12)), standard basis
+PBW 정리가 주는 구체적인 그림을 보기 위해 $\sl_2=\sl(2;k)$의 보편 포락 대수를 살펴본다. $\sl_2$는 traceless $2\times 2$ 행렬들의 Lie algebra이며 ([§리 군, ⁋명제 12](/ko/math/lie_theory/Lie_groups#prop12){: data-relation="weak" }), standard basis
 
 $$h=\begin{pmatrix}1&0\\0&-1\end{pmatrix},\quad e=\begin{pmatrix}0&1\\0&0\end{pmatrix},\quad f=\begin{pmatrix}0&0\\1&0\end{pmatrix}$$
 
@@ -246,7 +246,7 @@ $$h=\begin{pmatrix}1&0\\0&-1\end{pmatrix},\quad e=\begin{pmatrix}0&1\\0&0\end{pm
 
 $$[h,e]=2e,\quad [h,f]=-2f,\quad [e,f]=h$$
 
-을 갖는다. 이 commutation relation은 $\sl_2$의 표현론에서 핵심적인 역할을 하며, $e,f$는 각각 weight을 올리고 내리는 raising, lowering operator로 작용한다. ([§근계, ⁋정의 8](/ko/math/lie_theory/root_systems#def8)) 따라서 $U(\sl_2)$는 세 generator $e,f,h$와 관계식
+을 갖는다. 이 commutation relation은 $\sl_2$의 표현론에서 핵심적인 역할을 하며, $e,f$는 각각 weight을 올리고 내리는 raising, lowering operator로 작용한다. ([§근계, ⁋정의 8](/ko/math/lie_theory/root_systems#def8){: data-relation="forward" }) 따라서 $U(\sl_2)$는 세 generator $e,f,h$와 관계식
 
 $$he-eh=2e,\qquad hf-fh=-2f,\qquad ef-fe=h$$
 
@@ -279,7 +279,7 @@ $$\begin{aligned}
 
 $$\Omega=2fe+h+\frac{1}{2}h^2$$
 
-으로 다시 쓸 수 있는데, 이는 $ef=fe+h$를 사용해 $ef+fe=2fe+h$로 정렬한 것이다. 이 Casimir element는 $\sl_2$의 유한차원 representation 분류에서 각 irreducible representation 위에 스칼라로 작용하여, representation을 구별하는 불변량의 역할을 한다. ([§근계, ⁋정의 8](/ko/math/lie_theory/root_systems#def8))
+으로 다시 쓸 수 있는데, 이는 $ef=fe+h$를 사용해 $ef+fe=2fe+h$로 정렬한 것이다. 이 Casimir element는 $\sl_2$의 유한차원 representation 분류에서 각 irreducible representation 위에 스칼라로 작용하여, representation을 구별하는 불변량의 역할을 한다. ([§근계, ⁋정의 8](/ko/math/lie_theory/root_systems#def8){: data-relation="weak" })
 
 ---
 
