@@ -41,7 +41,7 @@ $$\uparrow x=\{y\in A\mid y\geq x\}$$
 는 $A$의 filter가 되며 이러한 filter를 *principal filter*라 부른다.
 :::
 
-우리는 대부분 $A$가 lattice인 경우에 관심이 있다. 이 때, ([§유향집합, ⁋정의 4](/ko/math/set_theory/directed_set#def4))
+우리는 대부분 $A$가 lattice인 경우에 관심이 있다. 이 때, ([§유향집합, ⁋정의 4](/ko/math/set_theory/directed_set#def4){: data-relation="required" })
 
 - 공집합이 아닌 lower set $I$가 ideal인 것은 임의의 $x,y\in I$에 대하여 $x\vee y\in I$인 것과 동치이다.
 - 공집합이 아닌 upper set $F$가 filter인 것은 임의의 $x,y\in F$에 대하여 $x\wedge y\in F$인 것과 동치이다.
@@ -59,7 +59,7 @@ $$X\vee(Y\wedge Z)=(X\vee Y)\wedge(X\vee Z),\qquad X\wedge(Y\vee Z)=(X\wedge Y)\
 :::
 
 ::: 정의 4
-Lattice $A$가 주어졌다 하고, $I$와 $F$가 각각 $A$의 proper ideal과 proper filter라 하자. $I$가 *prime ideal*이라는 것은 임의의 $x,y\in A$에 대하여 $x\wedge y\in I$이면 반드시 $x\in I$ 혹은 $y\in I$가 성립하는 것이다. 비슷하게 $F$가 *prime filter<sub>소필터</sub>*라는 것은 임의의 $x,y\in A$에 대하여 $x\vee y\in F$이면 반드시 $x\in F$ 혹은 $y\in F$가 성립하는 것이다. ([\[대수적 구조\] §분수체, ⁋명제 9](/ko/math/algebraic_structures/field_of_fractions#prop9))
+Lattice $A$가 주어졌다 하고, $I$와 $F$가 각각 $A$의 proper ideal과 proper filter라 하자. $I$가 *prime ideal*이라는 것은 임의의 $x,y\in A$에 대하여 $x\wedge y\in I$이면 반드시 $x\in I$ 혹은 $y\in I$가 성립하는 것이다. 비슷하게 $F$가 *prime filter<sub>소필터</sub>*라는 것은 임의의 $x,y\in A$에 대하여 $x\vee y\in F$이면 반드시 $x\in F$ 혹은 $y\in F$가 성립하는 것이다. ([\[대수적 구조\] §분수체, ⁋명제 9](/ko/math/algebraic_structures/field_of_fractions#prop9){: data-relation="weak" })
 :::
 
 혹은, $I$가 prime ideal이라는 것은 $A\setminus I$가 filter라는 것으로 정의하여도 동등한 정의를 얻는다. 
@@ -143,13 +143,13 @@ Ordered set $A$에 대하여, 함수 $f:A\rightarrow A$가 *closure operator<sub
 이 때, $x$가 *closed*라는 것은 $f(x)=x$인 것이다.
 :::
 
-Antitone Galois connection을 고정하자. [명제 7](#prop7)의 결과인 $GFG(y)=G(y)$로부터, 임의의 $x\in A$에 대하여 $y=F(x)$를 대입하면
+Antitone Galois connection을 고정하자. [명제 7](#prop7){: data-relation="required" }의 결과인 $GFG(y)=G(y)$로부터, 임의의 $x\in A$에 대하여 $y=F(x)$를 대입하면
 
 $$GFGF(x)=GF(x)$$
 
 이 성립한다. 따라서 함수 $GF$는 위의 모든 조건을 만족하므로 closure operator이다. 마찬가지로 antitone Galois connection에서는 $FG$ 또한 closure operator가 된다. 
 
-정의에 의하여, $x,y$가 각각 $GF$와 $FG$에 대해 closed라는 것은 각각 $GF(x)=x$, 그리고 $FG(y)=y$가 성립한다는 것이다. 우리는 [명제 7](#prop7)로부터 $F$와 $G$의 image에 속한 원소들은 모두 closed라는 것을 안다. 거꾸로 임의의 원소 $x$가 $GF$에 대해 closed라면 $GF(x)=x$로부터 $x$가 $G$의 image에 속한다는 것을 알고, 비슷하게 $FG$에 대한 명제 또한 증명할 수 있다.
+정의에 의하여, $x,y$가 각각 $GF$와 $FG$에 대해 closed라는 것은 각각 $GF(x)=x$, 그리고 $FG(y)=y$가 성립한다는 것이다. 우리는 [명제 7](#prop7){: data-relation="required" }로부터 $F$와 $G$의 image에 속한 원소들은 모두 closed라는 것을 안다. 거꾸로 임의의 원소 $x$가 $GF$에 대해 closed라면 $GF(x)=x$로부터 $x$가 $G$의 image에 속한다는 것을 알고, 비슷하게 $FG$에 대한 명제 또한 증명할 수 있다.
 
 우리는 이 과정을 통해 ordered set $A,B$ 사이의 Galois connection에 대해, closed인 원소들의 모임 $A'\subseteq A$, $B'\subseteq B$를 만들 수 있으며, $F$와 $G$를 이 모임에 제한한 것이 잘 정의된다. 뿐만 아니라 이들 $F\vert_{A'}$와 $G\vert_{B'}$는 일대일 대응이며, *anti-isomorphism*이 된다. 이들을 특별히 *Galois correspondence<sub>갈루아 대응</sub>*라 부른다.
 

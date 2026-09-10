@@ -42,7 +42,7 @@ $$\uparrow x=\{y\in A\mid y\geq x\}$$
 is a filter of $A$, and such a filter is called a *principal filter*.
 :::
 
-We are mostly interested in the case where $A$ is a lattice. In this case, ([§Directed Sets, ⁋Definition 4](/en/math/set_theory/directed_set#def4))
+We are mostly interested in the case where $A$ is a lattice. In this case, ([§Directed Sets, ⁋Definition 4](/en/math/set_theory/directed_set#def4){: data-relation="required" })
 
 - A nonempty lower set $I$ is an ideal if and only if $x\vee y\in I$ for all $x,y\in I$.
 - A nonempty upper set $F$ is a filter if and only if $x\wedge y\in F$ for all $x,y\in F$.
@@ -58,7 +58,7 @@ $$X\vee(Y\wedge Z)=(X\vee Y)\wedge(X\vee Z),\qquad X\wedge(Y\vee Z)=(X\wedge Y)\
 :::
 
 ::: Definition 4
-Let a lattice $A$ be given, and let $I$ and $F$ be a proper ideal and a proper filter of $E$, respectively. $I$ is a *prime ideal* if for any $x,y\in A$, whenever $x\wedge y\in I$, then either $x\in I$ or $y\in I$. Similarly, $F$ is a *prime filter* if for any $x,y\in A$, whenever $x\vee y\in F$, then either $x\in F$ or $y\in F$. ([\[Algebraic Structures\] §Field of Fractions, ⁋Proposition 9](/en/math/algebraic_structures/field_of_fractions#prop9))
+Let a lattice $A$ be given, and let $I$ and $F$ be a proper ideal and a proper filter of $E$, respectively. $I$ is a *prime ideal* if for any $x,y\in A$, whenever $x\wedge y\in I$, then either $x\in I$ or $y\in I$. Similarly, $F$ is a *prime filter* if for any $x,y\in A$, whenever $x\vee y\in F$, then either $x\in F$ or $y\in F$. ([\[Algebraic Structures\] §Field of Fractions, ⁋Proposition 9](/en/math/algebraic_structures/field_of_fractions#prop9){: data-relation="weak" })
 :::
 
 Equivalently, one may define $I$ to be a prime ideal by requiring that $A\setminus I$ be a filter.
@@ -142,13 +142,13 @@ For an ordered set $A$, a function $f:A\rightarrow A$ is a *closure operator* if
 In this case, $x$ is *closed* if $f(x)=x$.
 :::
 
-Fix an antitone Galois connection. From the result $GFG(y)=G(y)$ in [Proposition 7](#prop7), substituting $y=F(x)$ for any $x\in A$ gives
+Fix an antitone Galois connection. From the result $GFG(y)=G(y)$ in [Proposition 7](#prop7){: data-relation="required" }, substituting $y=F(x)$ for any $x\in A$ gives
 
 $$GFGF(x)=GF(x)$$
 
 Thus the function $GF$ satisfies all the conditions above and is therefore a closure operator. Similarly, in an antitone Galois connection, $FG$ is also a closure operator.
 
-By definition, $x$ and $y$ being closed with respect to $GF$ and $FG$, respectively, means that $GF(x)=x$ and $FG(y)=y$. From [Proposition 7](#prop7), we know that all elements in the images of $F$ and $G$ are closed. Conversely, if an arbitrary element $x$ is closed with respect to $GF$, then $GF(x)=x$ implies that $x$ belongs to the image of $G$, and the corresponding statement for $FG$ is proved similarly.
+By definition, $x$ and $y$ being closed with respect to $GF$ and $FG$, respectively, means that $GF(x)=x$ and $FG(y)=y$. From [Proposition 7](#prop7){: data-relation="required" }, we know that all elements in the images of $F$ and $G$ are closed. Conversely, if an arbitrary element $x$ is closed with respect to $GF$, then $GF(x)=x$ implies that $x$ belongs to the image of $G$, and the corresponding statement for $FG$ is proved similarly.
 
 Through this process, for a Galois connection between ordered sets $A$ and $B$, we can construct collections $A'\subseteq A$ and $B'\subseteq B$ of closed subsets, and the restrictions of $F$ and $G$ to these collections are well defined. Moreover, these restrictions $F\vert_{A'}$ and $G\vert_{B'}$ are bijections and form an *anti-isomorphism*. These are specifically called *Galois correspondences*.
 
