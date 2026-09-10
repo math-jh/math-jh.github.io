@@ -15,9 +15,9 @@ published: false
 
 ---
 
-앞선 글에서 우리는 quiver $Q$의 representation들이 이루는 category $\Rep(Q)$가 path algebra $kQ$ 위의 left module들이 이루는 category와 동치임을 보였다 ([§Quiver와 경로대수, ⁋정리 12](/ko/math/representation_theory/path_algebras#thm12)). 이 동치 아래에서 유한차원 representation은 $k$ 위에서 유한차원인, 따라서 유한 길이를 갖는 $kQ$-module에 대응한다. 표현론의 첫 번째 목표는 이러한 대상들을 가능한 한 작은 조각으로 쪼개고 그 조각들을 분류하는 것이다. 이 글에서 우리는 그러한 분해가 존재하며 본질적으로 유일하다는 것, 곧 *Krull–Schmidt 정리*를 증명한다.
+앞선 글에서 우리는 quiver $Q$의 representation들이 이루는 category $\Rep(Q)$가 path algebra $kQ$ 위의 left module들이 이루는 category와 동치임을 보였다 ([§Quiver와 경로대수, ⁋정리 12](/ko/math/representation_theory/path_algebras#thm12){: data-relation="required" }). 이 동치 아래에서 유한차원 representation은 $k$ 위에서 유한차원인, 따라서 유한 길이를 갖는 $kQ$-module에 대응한다. 표현론의 첫 번째 목표는 이러한 대상들을 가능한 한 작은 조각으로 쪼개고 그 조각들을 분류하는 것이다. 이 글에서 우리는 그러한 분해가 존재하며 본질적으로 유일하다는 것, 곧 *Krull–Schmidt 정리*를 증명한다.
 
-분해의 더 이상 쪼갤 수 없는 단위는 *indecomposable* 대상이다. 분해의 존재성은 길이에 대한 귀납으로 어렵지 않게 얻어지지만, 유일성은 그렇지 않다. 유일성의 핵심은 indecomposable 대상의 endomorphism ring이 *local ring*이라는 사실이며, 이는 다시 *Fitting의 보조정리*로부터 따라온다. 이 글에서 $k$는 field이고, module이라 하면 별다른 언급이 없는 한 left module을 뜻한다. 길이와 composition series의 일반론은 [\[가환대수학\] §조르단-횔더 정리, ⁋정의 2](/ko/math/commutative_algebra/Jordan-Holder_theorem#def2)에서 다룬 것을 따른다. $\Rep(Q)\cong\lMod{kQ}$의 동치 덕분에 우리는 representation과 module을 자유롭게 오가며, 결과는 어느 쪽 언어로 적어도 무방하다.
+분해의 더 이상 쪼갤 수 없는 단위는 *indecomposable* 대상이다. 분해의 존재성은 길이에 대한 귀납으로 어렵지 않게 얻어지지만, 유일성은 그렇지 않다. 유일성의 핵심은 indecomposable 대상의 endomorphism ring이 *local ring*이라는 사실이며, 이는 다시 *Fitting의 보조정리*로부터 따라온다. 이 글에서 $k$는 field이고, module이라 하면 별다른 언급이 없는 한 left module을 뜻한다. 길이와 composition series의 일반론은 [\[가환대수학\] §조르단-횔더 정리, ⁋정의 2](/ko/math/commutative_algebra/Jordan-Holder_theorem#def2){: data-relation="required" }에서 다룬 것을 따른다. $\Rep(Q)\cong\lMod{kQ}$의 동치 덕분에 우리는 representation과 module을 자유롭게 오가며, 결과는 어느 쪽 언어로 적어도 무방하다.
 
 ## Indecomposable
 
@@ -27,12 +27,12 @@ published: false
 $A$-module $M$이 *indecomposable<sub>분해불가능</sub>*이라는 것은 $M\neq 0$이며, $M=M_1\oplus M_2$이도록 하는 nonzero submodule $M_1,M_2$가 존재하지 않는 것이다. 곧 $M$이 두 submodule의 direct sum으로 적힐 때마다 그중 하나는 반드시 $0$이어야 한다. Quiver $Q$의 representation $V$가 indecomposable이라는 것도 같은 방식으로, $V\neq 0$이며 $V=V_1\oplus V_2$가 nonzero representation들의 direct sum이 될 수 없다는 것으로 정의한다.
 :::
 
-$\Rep(Q)\cong\lMod{kQ}$ 아래에서 representation의 direct sum이 module의 direct sum에 대응하므로 ([§Quiver와 경로대수, ⁋정의 11](/ko/math/representation_theory/path_algebras#def11)), representation $V$가 indecomposable인 것과 대응하는 $kQ$-module이 indecomposable인 것은 동치이다. 따라서 두 정의는 동치의 양변에서 같은 개념을 가리킨다.
+$\Rep(Q)\cong\lMod{kQ}$ 아래에서 representation의 direct sum이 module의 direct sum에 대응하므로 ([§Quiver와 경로대수, ⁋정의 11](/ko/math/representation_theory/path_algebras#def11){: data-relation="weak" }), representation $V$가 indecomposable인 것과 대응하는 $kQ$-module이 indecomposable인 것은 동치이다. 따라서 두 정의는 동치의 양변에서 같은 개념을 가리킨다.
 
-한 module이 둘 이상의 submodule의 direct sum $M=M_1\oplus\cdots\oplus M_r$로 적힐 때, 각 $M_i$가 다시 indecomposable이면 이를 $M$의 *indecomposable decomposition*라 부른다. Indecomposable의 정의는 이러한 분해를 더 이상 정련할 수 없게 만드는 최소 단위를 골라낸 것이다. Direct sum의 projection과 포함을 통해, $M=M_1\oplus M_2$인 nonzero 분해가 존재한다는 것은 $M$ 위에 $\id_M$도 $0$도 아닌 idempotent endomorphism이 존재한다는 것과 동치인데, 이 관점은 [보조정리 3](#lem3) 이후에 다시 쓰인다.
+한 module이 둘 이상의 submodule의 direct sum $M=M_1\oplus\cdots\oplus M_r$로 적힐 때, 각 $M_i$가 다시 indecomposable이면 이를 $M$의 *indecomposable decomposition*라 부른다. Indecomposable의 정의는 이러한 분해를 더 이상 정련할 수 없게 만드는 최소 단위를 골라낸 것이다. Direct sum의 projection과 포함을 통해, $M=M_1\oplus M_2$인 nonzero 분해가 존재한다는 것은 $M$ 위에 $\id_M$도 $0$도 아닌 idempotent endomorphism이 존재한다는 것과 동치인데, 이 관점은 [보조정리 3](#lem3){: data-relation="forward" } 이후에 다시 쓰인다.
 
 ::: 예시 2
-Simple module은 indecomposable이다. $M$이 simple이면 ([\[가환대수학\] §조르단-횔더 정리, ⁋정의 1](/ko/math/commutative_algebra/Jordan-Holder_theorem#def1)) submodule이 $0$과 $M$ 뿐이므로 $M=M_1\oplus M_2$일 때 $M_1,M_2$ 각각이 $0$ 또는 $M$이고, 둘이 direct sum을 이루려면 그중 하나는 $0$이어야 한다. 그러나 그 역은 성립하지 않는다. 선형 $A_2$ quiver $1\xrightarrow{\ \alpha\ }2$ ([§Quiver와 경로대수, ⁋예시 6](/ko/math/representation_theory/path_algebras#ex6)) 에서 representation
+Simple module은 indecomposable이다. $M$이 simple이면 ([\[가환대수학\] §조르단-횔더 정리, ⁋정의 1](/ko/math/commutative_algebra/Jordan-Holder_theorem#def1){: data-relation="required" }) submodule이 $0$과 $M$ 뿐이므로 $M=M_1\oplus M_2$일 때 $M_1,M_2$ 각각이 $0$ 또는 $M$이고, 둘이 direct sum을 이루려면 그중 하나는 $0$이어야 한다. 그러나 그 역은 성립하지 않는다. 선형 $A_2$ quiver $1\xrightarrow{\ \alpha\ }2$ ([§Quiver와 경로대수, ⁋예시 6](/ko/math/representation_theory/path_algebras#ex6){: data-relation="weak" }) 에서 representation
 
 $$V:\quad k\xrightarrow{\ 1\ }k$$
 
@@ -57,7 +57,7 @@ Image들의 사슬과 kernel들의 사슬
 
 $$\im\varphi\supseteq\im\varphi^2\supseteq\im\varphi^3\supseteq\cdots,\qquad \ker\varphi\subseteq\ker\varphi^2\subseteq\ker\varphi^3\subseteq\cdots$$
 
-을 생각하자. $M$이 유한 길이를 가지므로 Artinian인 동시에 Noetherian이고 ([\[가환대수학\] §조르단-횔더 정리, ⁋정리 3](/ko/math/commutative_algebra/Jordan-Holder_theorem#thm3)), 따라서 첫째 내림사슬과 둘째 오름사슬은 모두 어느 단계에서 멈춘다. 곧 적당한 $n$이 있어 $m\geq n$이면
+을 생각하자. $M$이 유한 길이를 가지므로 Artinian인 동시에 Noetherian이고 ([\[가환대수학\] §조르단-횔더 정리, ⁋정리 3](/ko/math/commutative_algebra/Jordan-Holder_theorem#thm3){: data-relation="required" }), 따라서 첫째 내림사슬과 둘째 오름사슬은 모두 어느 단계에서 멈춘다. 곧 적당한 $n$이 있어 $m\geq n$이면
 
 $$\im\varphi^m=\im\varphi^n,\qquad \ker\varphi^m=\ker\varphi^n$$
 
@@ -78,9 +78,9 @@ $$x=\bigl(x-\varphi^n(z)\bigr)+\varphi^n(z)$$
 $M$이 유한 길이를 갖는 indecomposable $A$-module이면, endomorphism ring $\End_A(M)$은 *local ring*이다. 곧 가역이 아닌 원소들의 집합 $\mathfrak{m}=\{\varphi\in\End_A(M)\mid \varphi\text{ is not an automorphism}\}$이 양측 ideal을 이루며, 이것이 $\End_A(M)$의 유일한 maximal left ideal이다.
 :::
 ::: 증명
-[보조정리 3](#lem3)에 의하여 $\mathfrak{m}$은 정확히 nilpotent endomorphism들의 집합이다. Local ring임을 보이려면 $\mathfrak{m}$이 양측 ideal이고 두 비가역원의 합이 다시 비가역임을 보이면 충분하다. 비가역원들의 집합이 ideal을 이루면 그것이 모든 proper left ideal을 포함하므로 유일한 maximal left ideal이 되기 때문이다.
+[보조정리 3](#lem3){: data-relation="required" }에 의하여 $\mathfrak{m}$은 정확히 nilpotent endomorphism들의 집합이다. Local ring임을 보이려면 $\mathfrak{m}$이 양측 ideal이고 두 비가역원의 합이 다시 비가역임을 보이면 충분하다. 비가역원들의 집합이 ideal을 이루면 그것이 모든 proper left ideal을 포함하므로 유일한 maximal left ideal이 되기 때문이다.
 
-$\varphi\in\mathfrak{m}$이고 $\psi\in\End_A(M)$이라 하자. $\psi\varphi$가 automorphism이라 가정하면 $\varphi$가 단사이고, [보조정리 3](#lem3)의 증명에서 보았듯 유한 길이 module 위의 injective endomorphism은 전사이므로 $\varphi$가 automorphism이 되어 가정에 모순이다. 따라서 $\psi\varphi\in\mathfrak{m}$이다. 마찬가지로 $\varphi\psi$가 automorphism이면 $\varphi$가 전사이고, 유한 길이 module 위의 surjective endomorphism은 단사이므로 ($\length(\im\varphi)=\length(M)$이려면 $\ker\varphi=0$이어야 한다) $\varphi$가 automorphism이 되어 모순이다. 따라서 $\varphi\psi\in\mathfrak{m}$이며, $\mathfrak{m}$은 곱셈에 대하여 닫혀 있다.
+$\varphi\in\mathfrak{m}$이고 $\psi\in\End_A(M)$이라 하자. $\psi\varphi$가 automorphism이라 가정하면 $\varphi$가 단사이고, [보조정리 3](#lem3){: data-relation="required" }의 증명에서 보았듯 유한 길이 module 위의 injective endomorphism은 전사이므로 $\varphi$가 automorphism이 되어 가정에 모순이다. 따라서 $\psi\varphi\in\mathfrak{m}$이다. 마찬가지로 $\varphi\psi$가 automorphism이면 $\varphi$가 전사이고, 유한 길이 module 위의 surjective endomorphism은 단사이므로 ($\length(\im\varphi)=\length(M)$이려면 $\ker\varphi=0$이어야 한다) $\varphi$가 automorphism이 되어 모순이다. 따라서 $\varphi\psi\in\mathfrak{m}$이며, $\mathfrak{m}$은 곱셈에 대하여 닫혀 있다.
 
 이제 $\varphi,\psi\in\mathfrak{m}$이고 $\varphi+\psi$가 automorphism이라 가정하여 모순을 이끈다. $\eta=(\varphi+\psi)^{-1}$로 두면 $\eta\varphi+\eta\psi=\id_M$이다. 앞 문단에서 보인 대로 $\eta\varphi,\eta\psi\in\mathfrak{m}$, 곧 둘 다 nilpotent이다. $\rho=\eta\varphi$로 두면 $\eta\psi=\id_M-\rho$이다. $\rho$가 nilpotent, 곧 적당한 $N$에 대하여 $\rho^N=0$이면
 
@@ -99,7 +99,7 @@ $$(\id_M-\rho)(\id_M+\rho+\rho^2+\cdots+\rho^{N-1})=\id_M-\rho^N=\id_M$$
 $M$이 유한 길이를 갖는 indecomposable $A$-module이라 하자. $M\cong N_1\oplus\cdots\oplus N_s$인 isomorphism이 주어지고, 이 분해에 대한 projection $\pi_j:M\rightarrow N_j$와 포함 $\iota_j:N_j\rightarrow M$을 생각하면 $\sum_{j=1}^s\iota_j\pi_j=\id_M$이다. 그럼 어떤 $j$가 존재하여 $\pi_j:M\rightarrow N_j$가 split monomorphism, 곧 왼쪽 역을 가지는 단사사상이고, 그 image $\pi_j(M)$은 $N_j$의 한 direct summand이다. 특히 그 $N_j$가 indecomposable이면 $\pi_j:M\rightarrow N_j$는 isomorphism이다.
 :::
 ::: 증명
-분해 $M\cong N_1\oplus\cdots\oplus N_s$를 동일시하면 projection과 포함의 정의로부터 $\sum_{j=1}^s\iota_j\pi_j=\id_M$이다. $\id_M$은 $\End_A(M)$의 가역원이고, $M$이 유한 길이 indecomposable이므로 [따름정리 4](#cor4)에 의하여 $\End_A(M)$은 local ring이다. 따름정리 4 직후에 관찰한 대로, local ring에서 가역원이 유한개의 합으로 적히면 그 합의 항 중 적어도 하나가 가역이다. 따라서 어떤 $j$에 대하여 $\theta:=\iota_j\pi_j\in\End_A(M)$이 automorphism이다.
+분해 $M\cong N_1\oplus\cdots\oplus N_s$를 동일시하면 projection과 포함의 정의로부터 $\sum_{j=1}^s\iota_j\pi_j=\id_M$이다. $\id_M$은 $\End_A(M)$의 가역원이고, $M$이 유한 길이 indecomposable이므로 [따름정리 4](#cor4){: data-relation="required" }에 의하여 $\End_A(M)$은 local ring이다. 따름정리 4 직후에 관찰한 대로, local ring에서 가역원이 유한개의 합으로 적히면 그 합의 항 중 적어도 하나가 가역이다. 따라서 어떤 $j$에 대하여 $\theta:=\iota_j\pi_j\in\End_A(M)$이 automorphism이다.
 
 이 $j$를 고정하자. $\theta=\iota_j\pi_j$가 가역이므로
 
@@ -132,9 +132,9 @@ $$M=M_1\oplus\cdots\oplus M_r=N_1\oplus\cdots\oplus N_s$$
 
 $$\sum_{j=1}^s (p\iota_j)(\pi_j q)=p\Bigl(\sum_{j=1}^s\iota_j\pi_j\Bigr)q=pq=\id_{M_1}$$
 
-이 성립한다. 여기서 각 $p\iota_j\pi_j q$는 $M_1$의 endomorphism이다. $M_1$이 유한 길이 indecomposable이므로 [따름정리 4](#cor4)에 의하여 $\End_A(M_1)$은 local ring이고, 가역원 $\id_{M_1}$이 위와 같이 $s$개의 합으로 적혔으므로 어떤 $j$에 대하여 $g:=(p\iota_j)(\pi_j q)\in\End_A(M_1)$이 automorphism이다. 순서를 바꾸어 $j=1$이라 해도 좋다.
+이 성립한다. 여기서 각 $p\iota_j\pi_j q$는 $M_1$의 endomorphism이다. $M_1$이 유한 길이 indecomposable이므로 [따름정리 4](#cor4){: data-relation="required" }에 의하여 $\End_A(M_1)$은 local ring이고, 가역원 $\id_{M_1}$이 위와 같이 $s$개의 합으로 적혔으므로 어떤 $j$에 대하여 $g:=(p\iota_j)(\pi_j q)\in\End_A(M_1)$이 automorphism이다. 순서를 바꾸어 $j=1$이라 해도 좋다.
 
-이제 $f:=\pi_1 q:M_1\rightarrow N_1$과 $h:=p\iota_1:N_1\rightarrow M_1$을 보면 $hf=g$가 automorphism이다. 따라서 $f$는 단사이고 $g^{-1}h$가 $f$의 왼쪽 역이므로 $f$는 split monomorphism이며, $f(M_1)$은 $N_1$의 direct summand이다. 그런데 $N_1$이 indecomposable이고 $f(M_1)\cong M_1\neq 0$이므로, [보조정리 5](#lem5)의 마지막 결론과 같은 논법에 의하여 $f:M_1\rightarrow N_1$이 isomorphism이다.
+이제 $f:=\pi_1 q:M_1\rightarrow N_1$과 $h:=p\iota_1:N_1\rightarrow M_1$을 보면 $hf=g$가 automorphism이다. 따라서 $f$는 단사이고 $g^{-1}h$가 $f$의 왼쪽 역이므로 $f$는 split monomorphism이며, $f(M_1)$은 $N_1$의 direct summand이다. 그런데 $N_1$이 indecomposable이고 $f(M_1)\cong M_1\neq 0$이므로, [보조정리 5](#lem5){: data-relation="required" }의 마지막 결론과 같은 논법에 의하여 $f:M_1\rightarrow N_1$이 isomorphism이다.
 
 이로부터 $M_1\cong N_1$을 얻었다. 남은 것은 $M_1$을 떼어낸 나머지가 다시 같은 형태의 두 분해를 이룬다는 것이며, 이를 위해 $N_1$이 $M_2\oplus\cdots\oplus M_r$의 보충으로 $M_1$을 대신할 수 있음을 보인다. $M''=M_2\oplus\cdots\oplus M_r$로 두면 $M=M_1\oplus M''$이고 $p:M\rightarrow M_1$은 $M''$을 따른 projection이다. 합성
 
@@ -150,10 +150,10 @@ $$M_2\oplus\cdots\oplus M_r\cong N_2\oplus\cdots\oplus N_s$$
 
 를 얻는다. 좌변은 $r-1$개의 indecomposable 분해이므로 귀납가정에 의하여 $r-1=s-1$, 곧 $r=s$이고, $\{2,\ldots,r\}$ 위의 permutation $\sigma'$가 존재하여 $M_i\cong N_{\sigma'(i)}$이다. 여기에 $M_1\cong N_1$을 더하면 원하는 permutation $\sigma$를 얻는다.
 
-마지막으로 representation에 대한 진술은 $\Rep(Q)\cong\lMod{kQ}$의 동치에서 따라온다 ([§Quiver와 경로대수, ⁋정리 12](/ko/math/representation_theory/path_algebras#thm12)). 유한차원 representation은 $k$ 위에서 유한차원, 따라서 유한 길이인 $kQ$-module에 대응하고, indecomposable representation은 indecomposable module에 대응하며 direct sum이 보존되므로, module에 대한 위의 결과가 그대로 옮겨진다.
+마지막으로 representation에 대한 진술은 $\Rep(Q)\cong\lMod{kQ}$의 동치에서 따라온다 ([§Quiver와 경로대수, ⁋정리 12](/ko/math/representation_theory/path_algebras#thm12){: data-relation="required" }). 유한차원 representation은 $k$ 위에서 유한차원, 따라서 유한 길이인 $kQ$-module에 대응하고, indecomposable representation은 indecomposable module에 대응하며 direct sum이 보존되므로, module에 대한 위의 결과가 그대로 옮겨진다.
 :::
 
-위 증명의 핵심은 첫째 분해의 indecomposable 조각 $M_1$을 둘째 분해의 어떤 조각 $N_1$과 맞바꾸어 $M=N_1\oplus M_2\oplus\cdots\oplus M_r$를 얻은 데에 있다. 이렇게 한 분해의 한 조각을 다른 분해의 조각으로 교체할 수 있다는 성질을 *exchange property*라 부르며, [따름정리 4](#cor4)가 보장하는 local endomorphism ring이 정확히 이 교체를 가능케 하는 조건이다. 일단 $M_1$을 $N_1$로 바꾸고 나면 양쪽 분해에서 $N_1$을 소거하여 $M_2\oplus\cdots\oplus M_r\cong N_2\oplus\cdots\oplus N_s$를 얻고, 귀납이 이를 마무리한다.
+위 증명의 핵심은 첫째 분해의 indecomposable 조각 $M_1$을 둘째 분해의 어떤 조각 $N_1$과 맞바꾸어 $M=N_1\oplus M_2\oplus\cdots\oplus M_r$를 얻은 데에 있다. 이렇게 한 분해의 한 조각을 다른 분해의 조각으로 교체할 수 있다는 성질을 *exchange property*라 부르며, [따름정리 4](#cor4){: data-relation="required" }가 보장하는 local endomorphism ring이 정확히 이 교체를 가능케 하는 조건이다. 일단 $M_1$을 $N_1$로 바꾸고 나면 양쪽 분해에서 $N_1$을 소거하여 $M_2\oplus\cdots\oplus M_r\cong N_2\oplus\cdots\oplus N_s$를 얻고, 귀납이 이를 마무리한다.
 
 이 정리가 보장하는 유일성 덕분에, 유한차원 representation $V$에 대하여 그 분해에 나타나는 indecomposable들의 isomorphism class와 각각의 중복도가 $V$의 불변량으로 잘 정의된다. 따라서 $\Rep(Q)$의 유한차원 대상을 이해하는 문제는 indecomposable representation들을 isomorphism을 무시하고 분류하는 문제로 환원된다. 예시 2에서 본 $V$까지 포함하여 선형 $A_2$ quiver의 indecomposable은 두 simple representation과 한 개의 비simple indecomposable로 이루어지며, 이러한 분류가 모든 quiver에 대하여 가능한지, 가능하다면 그 목록이 무엇인지가 다음 논의의 주제이다.
 
